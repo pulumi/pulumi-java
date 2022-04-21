@@ -6,8 +6,8 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleActionAllowCustomRequestHandlingGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WebAclRuleActionAllowGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="customRequestHandling")
-      private final @Nullable Output<WebAclRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
+    private @Nullable Output<WebAclRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
 
-    public Output<WebAclRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling() {
-        return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
+    public Optional<Output<WebAclRuleActionAllowCustomRequestHandlingGetArgs>> customRequestHandling() {
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public WebAclRuleActionAllowGetArgs(@Nullable Output<WebAclRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private WebAclRuleActionAllowGetArgs() {}
 
-    private WebAclRuleActionAllowGetArgs() {
-        this.customRequestHandling = Codegen.empty();
+    private WebAclRuleActionAllowGetArgs(WebAclRuleActionAllowGetArgs $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleActionAllowGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
+        private WebAclRuleActionAllowGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleActionAllowGetArgs();
         }
 
         public Builder(WebAclRuleActionAllowGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new WebAclRuleActionAllowGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable Output<WebAclRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
         }
-        public Builder customRequestHandling(@Nullable WebAclRuleActionAllowCustomRequestHandlingGetArgs customRequestHandling) {
-            this.customRequestHandling = Codegen.ofNullable(customRequestHandling);
-            return this;
-        }        public WebAclRuleActionAllowGetArgs build() {
-            return new WebAclRuleActionAllowGetArgs(customRequestHandling);
+
+        public Builder customRequestHandling(WebAclRuleActionAllowCustomRequestHandlingGetArgs customRequestHandling) {
+            return customRequestHandling(Output.of(customRequestHandling));
+        }
+
+        public WebAclRuleActionAllowGetArgs build() {
+            return $;
         }
     }
+
 }

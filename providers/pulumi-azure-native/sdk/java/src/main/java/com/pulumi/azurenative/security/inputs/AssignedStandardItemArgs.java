@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AssignedStandardItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public AssignedStandardItemArgs(@Nullable Output<String> id) {
-        this.id = id;
-    }
+    private AssignedStandardItemArgs() {}
 
-    private AssignedStandardItemArgs() {
-        this.id = Codegen.empty();
+    private AssignedStandardItemArgs(AssignedStandardItemArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignedStandardItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
+        private AssignedStandardItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignedStandardItemArgs();
         }
 
         public Builder(AssignedStandardItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new AssignedStandardItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public AssignedStandardItemArgs build() {
-            return new AssignedStandardItemArgs(id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public AssignedStandardItemArgs build() {
+            return $;
         }
     }
+
 }

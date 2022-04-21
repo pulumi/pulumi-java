@@ -17,7 +17,7 @@ public final class GetLaunchConfigurationEphemeralBlockDevice extends com.pulumi
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -28,55 +28,52 @@ public final class GetLaunchConfigurationEphemeralBlockDevice extends com.pulumi
      * 
      */
     @Import(name="virtualName", required=true)
-      private final String virtualName;
+    private String virtualName;
 
     public String virtualName() {
         return this.virtualName;
     }
 
-    public GetLaunchConfigurationEphemeralBlockDevice(
-        String deviceName,
-        String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.virtualName = Objects.requireNonNull(virtualName, "expected parameter 'virtualName' to be non-null");
-    }
+    private GetLaunchConfigurationEphemeralBlockDevice() {}
 
-    private GetLaunchConfigurationEphemeralBlockDevice() {
-        this.deviceName = null;
-        this.virtualName = null;
+    private GetLaunchConfigurationEphemeralBlockDevice(GetLaunchConfigurationEphemeralBlockDevice $) {
+        this.deviceName = $.deviceName;
+        this.virtualName = $.virtualName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchConfigurationEphemeralBlockDevice defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private String virtualName;
+        private GetLaunchConfigurationEphemeralBlockDevice $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchConfigurationEphemeralBlockDevice();
         }
 
         public Builder(GetLaunchConfigurationEphemeralBlockDevice defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.virtualName = defaults.virtualName;
+            $ = new GetLaunchConfigurationEphemeralBlockDevice(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder virtualName(String virtualName) {
-            this.virtualName = Objects.requireNonNull(virtualName);
+            $.virtualName = virtualName;
             return this;
-        }        public GetLaunchConfigurationEphemeralBlockDevice build() {
-            return new GetLaunchConfigurationEphemeralBlockDevice(deviceName, virtualName);
+        }
+
+        public GetLaunchConfigurationEphemeralBlockDevice build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.virtualName = Objects.requireNonNull($.virtualName, "expected parameter 'virtualName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="parent")
-      private final @Nullable ParentGroupInfoResponse parent;
+    private @Nullable ParentGroupInfoResponse parent;
 
     public Optional<ParentGroupInfoResponse> parent() {
-        return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="path")
-      private final @Nullable List<ManagementGroupPathElementResponse> path;
+    private @Nullable List<ManagementGroupPathElementResponse> path;
 
-    public List<ManagementGroupPathElementResponse> path() {
-        return this.path == null ? List.of() : this.path;
+    public Optional<List<ManagementGroupPathElementResponse>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="updatedBy")
-      private final @Nullable String updatedBy;
+    private @Nullable String updatedBy;
 
     public Optional<String> updatedBy() {
-        return this.updatedBy == null ? Optional.empty() : Optional.ofNullable(this.updatedBy);
+        return Optional.ofNullable(this.updatedBy);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="updatedTime")
-      private final @Nullable String updatedTime;
+    private @Nullable String updatedTime;
 
     public Optional<String> updatedTime() {
-        return this.updatedTime == null ? Optional.empty() : Optional.ofNullable(this.updatedTime);
+        return Optional.ofNullable(this.updatedTime);
     }
 
     /**
@@ -71,85 +71,72 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="version")
-      private final @Nullable Double version;
+    private @Nullable Double version;
 
     public Optional<Double> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ManagementGroupDetailsResponse(
-        @Nullable ParentGroupInfoResponse parent,
-        @Nullable List<ManagementGroupPathElementResponse> path,
-        @Nullable String updatedBy,
-        @Nullable String updatedTime,
-        @Nullable Double version) {
-        this.parent = parent;
-        this.path = path;
-        this.updatedBy = updatedBy;
-        this.updatedTime = updatedTime;
-        this.version = version;
-    }
+    private ManagementGroupDetailsResponse() {}
 
-    private ManagementGroupDetailsResponse() {
-        this.parent = null;
-        this.path = List.of();
-        this.updatedBy = null;
-        this.updatedTime = null;
-        this.version = null;
+    private ManagementGroupDetailsResponse(ManagementGroupDetailsResponse $) {
+        this.parent = $.parent;
+        this.path = $.path;
+        this.updatedBy = $.updatedBy;
+        this.updatedTime = $.updatedTime;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementGroupDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ParentGroupInfoResponse parent;
-        private @Nullable List<ManagementGroupPathElementResponse> path;
-        private @Nullable String updatedBy;
-        private @Nullable String updatedTime;
-        private @Nullable Double version;
+        private ManagementGroupDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementGroupDetailsResponse();
         }
 
         public Builder(ManagementGroupDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parent = defaults.parent;
-    	      this.path = defaults.path;
-    	      this.updatedBy = defaults.updatedBy;
-    	      this.updatedTime = defaults.updatedTime;
-    	      this.version = defaults.version;
+            $ = new ManagementGroupDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parent(@Nullable ParentGroupInfoResponse parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
+
         public Builder path(@Nullable List<ManagementGroupPathElementResponse> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder path(ManagementGroupPathElementResponse... path) {
             return path(List.of(path));
         }
+
         public Builder updatedBy(@Nullable String updatedBy) {
-            this.updatedBy = updatedBy;
+            $.updatedBy = updatedBy;
             return this;
         }
+
         public Builder updatedTime(@Nullable String updatedTime) {
-            this.updatedTime = updatedTime;
+            $.updatedTime = updatedTime;
             return this;
         }
+
         public Builder version(@Nullable Double version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ManagementGroupDetailsResponse build() {
-            return new ManagementGroupDetailsResponse(parent, path, updatedBy, updatedTime, version);
+        }
+
+        public ManagementGroupDetailsResponse build() {
+            return $;
         }
     }
+
 }

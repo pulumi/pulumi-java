@@ -7,10 +7,10 @@ import com.pulumi.awsnative.groundstation.inputs.ConfigDataArgs;
 import com.pulumi.awsnative.groundstation.inputs.ConfigTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,93 +19,87 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final ConfigArgs Empty = new ConfigArgs();
 
     @Import(name="configData", required=true)
-      private final Output<ConfigDataArgs> configData;
+    private Output<ConfigDataArgs> configData;
 
     public Output<ConfigDataArgs> configData() {
         return this.configData;
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ConfigTagArgs>> tags;
+    private @Nullable Output<List<ConfigTagArgs>> tags;
 
-    public Output<List<ConfigTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ConfigTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ConfigArgs(
-        Output<ConfigDataArgs> configData,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ConfigTagArgs>> tags) {
-        this.configData = Objects.requireNonNull(configData, "expected parameter 'configData' to be non-null");
-        this.name = name;
-        this.tags = tags;
-    }
+    private ConfigArgs() {}
 
-    private ConfigArgs() {
-        this.configData = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ConfigArgs(ConfigArgs $) {
+        this.configData = $.configData;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConfigDataArgs> configData;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ConfigTagArgs>> tags;
+        private ConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigArgs();
         }
 
         public Builder(ConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configData = defaults.configData;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new ConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configData(Output<ConfigDataArgs> configData) {
-            this.configData = Objects.requireNonNull(configData);
+            $.configData = configData;
             return this;
         }
+
         public Builder configData(ConfigDataArgs configData) {
-            this.configData = Output.of(Objects.requireNonNull(configData));
-            return this;
+            return configData(Output.of(configData));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<ConfigTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ConfigTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ConfigTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ConfigTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ConfigArgs build() {
-            return new ConfigArgs(configData, name, tags);
+        }
+
+        public ConfigArgs build() {
+            $.configData = Objects.requireNonNull($.configData, "expected parameter 'configData' to be non-null");
+            return $;
         }
     }
+
 }

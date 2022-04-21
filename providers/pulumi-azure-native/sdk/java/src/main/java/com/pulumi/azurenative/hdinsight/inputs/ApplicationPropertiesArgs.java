@@ -10,10 +10,10 @@ import com.pulumi.azurenative.hdinsight.inputs.ErrorsArgs;
 import com.pulumi.azurenative.hdinsight.inputs.RuntimeScriptActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="applicationType")
-      private final @Nullable Output<String> applicationType;
+    private @Nullable Output<String> applicationType;
 
-    public Output<String> applicationType() {
-        return this.applicationType == null ? Codegen.empty() : this.applicationType;
+    public Optional<Output<String>> applicationType() {
+        return Optional.ofNullable(this.applicationType);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="computeProfile")
-      private final @Nullable Output<ComputeProfileArgs> computeProfile;
+    private @Nullable Output<ComputeProfileArgs> computeProfile;
 
-    public Output<ComputeProfileArgs> computeProfile() {
-        return this.computeProfile == null ? Codegen.empty() : this.computeProfile;
+    public Optional<Output<ComputeProfileArgs>> computeProfile() {
+        return Optional.ofNullable(this.computeProfile);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="errors")
-      private final @Nullable Output<List<ErrorsArgs>> errors;
+    private @Nullable Output<List<ErrorsArgs>> errors;
 
-    public Output<List<ErrorsArgs>> errors() {
-        return this.errors == null ? Codegen.empty() : this.errors;
+    public Optional<Output<List<ErrorsArgs>>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="httpsEndpoints")
-      private final @Nullable Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints;
+    private @Nullable Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints;
 
-    public Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints() {
-        return this.httpsEndpoints == null ? Codegen.empty() : this.httpsEndpoints;
+    public Optional<Output<List<ApplicationGetHttpsEndpointArgs>>> httpsEndpoints() {
+        return Optional.ofNullable(this.httpsEndpoints);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="installScriptActions")
-      private final @Nullable Output<List<RuntimeScriptActionArgs>> installScriptActions;
+    private @Nullable Output<List<RuntimeScriptActionArgs>> installScriptActions;
 
-    public Output<List<RuntimeScriptActionArgs>> installScriptActions() {
-        return this.installScriptActions == null ? Codegen.empty() : this.installScriptActions;
+    public Optional<Output<List<RuntimeScriptActionArgs>>> installScriptActions() {
+        return Optional.ofNullable(this.installScriptActions);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sshEndpoints")
-      private final @Nullable Output<List<ApplicationGetEndpointArgs>> sshEndpoints;
+    private @Nullable Output<List<ApplicationGetEndpointArgs>> sshEndpoints;
 
-    public Output<List<ApplicationGetEndpointArgs>> sshEndpoints() {
-        return this.sshEndpoints == null ? Codegen.empty() : this.sshEndpoints;
+    public Optional<Output<List<ApplicationGetEndpointArgs>>> sshEndpoints() {
+        return Optional.ofNullable(this.sshEndpoints);
     }
 
     /**
@@ -96,143 +96,128 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="uninstallScriptActions")
-      private final @Nullable Output<List<RuntimeScriptActionArgs>> uninstallScriptActions;
+    private @Nullable Output<List<RuntimeScriptActionArgs>> uninstallScriptActions;
 
-    public Output<List<RuntimeScriptActionArgs>> uninstallScriptActions() {
-        return this.uninstallScriptActions == null ? Codegen.empty() : this.uninstallScriptActions;
+    public Optional<Output<List<RuntimeScriptActionArgs>>> uninstallScriptActions() {
+        return Optional.ofNullable(this.uninstallScriptActions);
     }
 
-    public ApplicationPropertiesArgs(
-        @Nullable Output<String> applicationType,
-        @Nullable Output<ComputeProfileArgs> computeProfile,
-        @Nullable Output<List<ErrorsArgs>> errors,
-        @Nullable Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints,
-        @Nullable Output<List<RuntimeScriptActionArgs>> installScriptActions,
-        @Nullable Output<List<ApplicationGetEndpointArgs>> sshEndpoints,
-        @Nullable Output<List<RuntimeScriptActionArgs>> uninstallScriptActions) {
-        this.applicationType = applicationType;
-        this.computeProfile = computeProfile;
-        this.errors = errors;
-        this.httpsEndpoints = httpsEndpoints;
-        this.installScriptActions = installScriptActions;
-        this.sshEndpoints = sshEndpoints;
-        this.uninstallScriptActions = uninstallScriptActions;
-    }
+    private ApplicationPropertiesArgs() {}
 
-    private ApplicationPropertiesArgs() {
-        this.applicationType = Codegen.empty();
-        this.computeProfile = Codegen.empty();
-        this.errors = Codegen.empty();
-        this.httpsEndpoints = Codegen.empty();
-        this.installScriptActions = Codegen.empty();
-        this.sshEndpoints = Codegen.empty();
-        this.uninstallScriptActions = Codegen.empty();
+    private ApplicationPropertiesArgs(ApplicationPropertiesArgs $) {
+        this.applicationType = $.applicationType;
+        this.computeProfile = $.computeProfile;
+        this.errors = $.errors;
+        this.httpsEndpoints = $.httpsEndpoints;
+        this.installScriptActions = $.installScriptActions;
+        this.sshEndpoints = $.sshEndpoints;
+        this.uninstallScriptActions = $.uninstallScriptActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationType;
-        private @Nullable Output<ComputeProfileArgs> computeProfile;
-        private @Nullable Output<List<ErrorsArgs>> errors;
-        private @Nullable Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints;
-        private @Nullable Output<List<RuntimeScriptActionArgs>> installScriptActions;
-        private @Nullable Output<List<ApplicationGetEndpointArgs>> sshEndpoints;
-        private @Nullable Output<List<RuntimeScriptActionArgs>> uninstallScriptActions;
+        private ApplicationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPropertiesArgs();
         }
 
         public Builder(ApplicationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationType = defaults.applicationType;
-    	      this.computeProfile = defaults.computeProfile;
-    	      this.errors = defaults.errors;
-    	      this.httpsEndpoints = defaults.httpsEndpoints;
-    	      this.installScriptActions = defaults.installScriptActions;
-    	      this.sshEndpoints = defaults.sshEndpoints;
-    	      this.uninstallScriptActions = defaults.uninstallScriptActions;
+            $ = new ApplicationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationType(@Nullable Output<String> applicationType) {
-            this.applicationType = applicationType;
+            $.applicationType = applicationType;
             return this;
         }
-        public Builder applicationType(@Nullable String applicationType) {
-            this.applicationType = Codegen.ofNullable(applicationType);
-            return this;
+
+        public Builder applicationType(String applicationType) {
+            return applicationType(Output.of(applicationType));
         }
+
         public Builder computeProfile(@Nullable Output<ComputeProfileArgs> computeProfile) {
-            this.computeProfile = computeProfile;
+            $.computeProfile = computeProfile;
             return this;
         }
-        public Builder computeProfile(@Nullable ComputeProfileArgs computeProfile) {
-            this.computeProfile = Codegen.ofNullable(computeProfile);
-            return this;
+
+        public Builder computeProfile(ComputeProfileArgs computeProfile) {
+            return computeProfile(Output.of(computeProfile));
         }
+
         public Builder errors(@Nullable Output<List<ErrorsArgs>> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
-        public Builder errors(@Nullable List<ErrorsArgs> errors) {
-            this.errors = Codegen.ofNullable(errors);
-            return this;
+
+        public Builder errors(List<ErrorsArgs> errors) {
+            return errors(Output.of(errors));
         }
+
         public Builder errors(ErrorsArgs... errors) {
             return errors(List.of(errors));
         }
+
         public Builder httpsEndpoints(@Nullable Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints) {
-            this.httpsEndpoints = httpsEndpoints;
+            $.httpsEndpoints = httpsEndpoints;
             return this;
         }
-        public Builder httpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointArgs> httpsEndpoints) {
-            this.httpsEndpoints = Codegen.ofNullable(httpsEndpoints);
-            return this;
+
+        public Builder httpsEndpoints(List<ApplicationGetHttpsEndpointArgs> httpsEndpoints) {
+            return httpsEndpoints(Output.of(httpsEndpoints));
         }
+
         public Builder httpsEndpoints(ApplicationGetHttpsEndpointArgs... httpsEndpoints) {
             return httpsEndpoints(List.of(httpsEndpoints));
         }
+
         public Builder installScriptActions(@Nullable Output<List<RuntimeScriptActionArgs>> installScriptActions) {
-            this.installScriptActions = installScriptActions;
+            $.installScriptActions = installScriptActions;
             return this;
         }
-        public Builder installScriptActions(@Nullable List<RuntimeScriptActionArgs> installScriptActions) {
-            this.installScriptActions = Codegen.ofNullable(installScriptActions);
-            return this;
+
+        public Builder installScriptActions(List<RuntimeScriptActionArgs> installScriptActions) {
+            return installScriptActions(Output.of(installScriptActions));
         }
+
         public Builder installScriptActions(RuntimeScriptActionArgs... installScriptActions) {
             return installScriptActions(List.of(installScriptActions));
         }
+
         public Builder sshEndpoints(@Nullable Output<List<ApplicationGetEndpointArgs>> sshEndpoints) {
-            this.sshEndpoints = sshEndpoints;
+            $.sshEndpoints = sshEndpoints;
             return this;
         }
-        public Builder sshEndpoints(@Nullable List<ApplicationGetEndpointArgs> sshEndpoints) {
-            this.sshEndpoints = Codegen.ofNullable(sshEndpoints);
-            return this;
+
+        public Builder sshEndpoints(List<ApplicationGetEndpointArgs> sshEndpoints) {
+            return sshEndpoints(Output.of(sshEndpoints));
         }
+
         public Builder sshEndpoints(ApplicationGetEndpointArgs... sshEndpoints) {
             return sshEndpoints(List.of(sshEndpoints));
         }
+
         public Builder uninstallScriptActions(@Nullable Output<List<RuntimeScriptActionArgs>> uninstallScriptActions) {
-            this.uninstallScriptActions = uninstallScriptActions;
+            $.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
-        public Builder uninstallScriptActions(@Nullable List<RuntimeScriptActionArgs> uninstallScriptActions) {
-            this.uninstallScriptActions = Codegen.ofNullable(uninstallScriptActions);
-            return this;
+
+        public Builder uninstallScriptActions(List<RuntimeScriptActionArgs> uninstallScriptActions) {
+            return uninstallScriptActions(Output.of(uninstallScriptActions));
         }
+
         public Builder uninstallScriptActions(RuntimeScriptActionArgs... uninstallScriptActions) {
             return uninstallScriptActions(List.of(uninstallScriptActions));
-        }        public ApplicationPropertiesArgs build() {
-            return new ApplicationPropertiesArgs(applicationType, computeProfile, errors, httpsEndpoints, installScriptActions, sshEndpoints, uninstallScriptActions);
+        }
+
+        public ApplicationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

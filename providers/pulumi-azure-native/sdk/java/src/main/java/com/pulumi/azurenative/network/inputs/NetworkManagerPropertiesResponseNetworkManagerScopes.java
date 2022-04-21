@@ -24,10 +24,10 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
      * 
      */
     @Import(name="managementGroups")
-      private final @Nullable List<String> managementGroups;
+    private @Nullable List<String> managementGroups;
 
-    public List<String> managementGroups() {
-        return this.managementGroups == null ? List.of() : this.managementGroups;
+    public Optional<List<String>> managementGroups() {
+        return Optional.ofNullable(this.managementGroups);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
      * 
      */
     @Import(name="subscriptions")
-      private final @Nullable List<String> subscriptions;
+    private @Nullable List<String> subscriptions;
 
-    public List<String> subscriptions() {
-        return this.subscriptions == null ? List.of() : this.subscriptions;
+    public Optional<List<String>> subscriptions() {
+        return Optional.ofNullable(this.subscriptions);
     }
 
-    public NetworkManagerPropertiesResponseNetworkManagerScopes(
-        @Nullable List<String> managementGroups,
-        @Nullable List<String> subscriptions) {
-        this.managementGroups = managementGroups;
-        this.subscriptions = subscriptions;
-    }
+    private NetworkManagerPropertiesResponseNetworkManagerScopes() {}
 
-    private NetworkManagerPropertiesResponseNetworkManagerScopes() {
-        this.managementGroups = List.of();
-        this.subscriptions = List.of();
+    private NetworkManagerPropertiesResponseNetworkManagerScopes(NetworkManagerPropertiesResponseNetworkManagerScopes $) {
+        this.managementGroups = $.managementGroups;
+        this.subscriptions = $.subscriptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkManagerPropertiesResponseNetworkManagerScopes defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> managementGroups;
-        private @Nullable List<String> subscriptions;
+        private NetworkManagerPropertiesResponseNetworkManagerScopes $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkManagerPropertiesResponseNetworkManagerScopes();
         }
 
         public Builder(NetworkManagerPropertiesResponseNetworkManagerScopes defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managementGroups = defaults.managementGroups;
-    	      this.subscriptions = defaults.subscriptions;
+            $ = new NetworkManagerPropertiesResponseNetworkManagerScopes(Objects.requireNonNull(defaults));
         }
 
         public Builder managementGroups(@Nullable List<String> managementGroups) {
-            this.managementGroups = managementGroups;
+            $.managementGroups = managementGroups;
             return this;
         }
+
         public Builder managementGroups(String... managementGroups) {
             return managementGroups(List.of(managementGroups));
         }
+
         public Builder subscriptions(@Nullable List<String> subscriptions) {
-            this.subscriptions = subscriptions;
+            $.subscriptions = subscriptions;
             return this;
         }
+
         public Builder subscriptions(String... subscriptions) {
             return subscriptions(List.of(subscriptions));
-        }        public NetworkManagerPropertiesResponseNetworkManagerScopes build() {
-            return new NetworkManagerPropertiesResponseNetworkManagerScopes(managementGroups, subscriptions);
+        }
+
+        public NetworkManagerPropertiesResponseNetworkManagerScopes build() {
+            return $;
         }
     }
+
 }

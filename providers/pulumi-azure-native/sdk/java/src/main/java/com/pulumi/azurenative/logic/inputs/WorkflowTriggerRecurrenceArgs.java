@@ -8,10 +8,10 @@ import com.pulumi.azurenative.logic.inputs.RecurrenceScheduleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class WorkflowTriggerRecurrenceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class WorkflowTriggerRecurrenceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="frequency")
-      private final @Nullable Output<Either<String,RecurrenceFrequency>> frequency;
+    private @Nullable Output<Either<String,RecurrenceFrequency>> frequency;
 
-    public Output<Either<String,RecurrenceFrequency>> frequency() {
-        return this.frequency == null ? Codegen.empty() : this.frequency;
+    public Optional<Output<Either<String,RecurrenceFrequency>>> frequency() {
+        return Optional.ofNullable(this.frequency);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class WorkflowTriggerRecurrenceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Integer> interval;
+    private @Nullable Output<Integer> interval;
 
-    public Output<Integer> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Integer>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class WorkflowTriggerRecurrenceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<RecurrenceScheduleArgs> schedule;
+    private @Nullable Output<RecurrenceScheduleArgs> schedule;
 
-    public Output<RecurrenceScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<RecurrenceScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class WorkflowTriggerRecurrenceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -83,115 +83,98 @@ public final class WorkflowTriggerRecurrenceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public WorkflowTriggerRecurrenceArgs(
-        @Nullable Output<String> endTime,
-        @Nullable Output<Either<String,RecurrenceFrequency>> frequency,
-        @Nullable Output<Integer> interval,
-        @Nullable Output<RecurrenceScheduleArgs> schedule,
-        @Nullable Output<String> startTime,
-        @Nullable Output<String> timeZone) {
-        this.endTime = endTime;
-        this.frequency = frequency;
-        this.interval = interval;
-        this.schedule = schedule;
-        this.startTime = startTime;
-        this.timeZone = timeZone;
-    }
+    private WorkflowTriggerRecurrenceArgs() {}
 
-    private WorkflowTriggerRecurrenceArgs() {
-        this.endTime = Codegen.empty();
-        this.frequency = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private WorkflowTriggerRecurrenceArgs(WorkflowTriggerRecurrenceArgs $) {
+        this.endTime = $.endTime;
+        this.frequency = $.frequency;
+        this.interval = $.interval;
+        this.schedule = $.schedule;
+        this.startTime = $.startTime;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTriggerRecurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<Either<String,RecurrenceFrequency>> frequency;
-        private @Nullable Output<Integer> interval;
-        private @Nullable Output<RecurrenceScheduleArgs> schedule;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<String> timeZone;
+        private WorkflowTriggerRecurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTriggerRecurrenceArgs();
         }
 
         public Builder(WorkflowTriggerRecurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
-    	      this.schedule = defaults.schedule;
-    	      this.startTime = defaults.startTime;
-    	      this.timeZone = defaults.timeZone;
+            $ = new WorkflowTriggerRecurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder frequency(@Nullable Output<Either<String,RecurrenceFrequency>> frequency) {
-            this.frequency = frequency;
+            $.frequency = frequency;
             return this;
         }
-        public Builder frequency(@Nullable Either<String,RecurrenceFrequency> frequency) {
-            this.frequency = Codegen.ofNullable(frequency);
-            return this;
+
+        public Builder frequency(Either<String,RecurrenceFrequency> frequency) {
+            return frequency(Output.of(frequency));
         }
+
         public Builder interval(@Nullable Output<Integer> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Integer interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(Integer interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder schedule(@Nullable Output<RecurrenceScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable RecurrenceScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(RecurrenceScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public WorkflowTriggerRecurrenceArgs build() {
-            return new WorkflowTriggerRecurrenceArgs(endTime, frequency, interval, schedule, startTime, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public WorkflowTriggerRecurrenceArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.batch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -32,10 +32,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowUpdates")
-      private final @Nullable Output<Boolean> allowUpdates;
+    private @Nullable Output<Boolean> allowUpdates;
 
-    public Output<Boolean> allowUpdates() {
-        return this.allowUpdates == null ? Codegen.empty() : this.allowUpdates;
+    public Optional<Output<Boolean>> allowUpdates() {
+        return Optional.ofNullable(this.allowUpdates);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationName")
-      private final @Nullable Output<String> applicationName;
+    private @Nullable Output<String> applicationName;
 
-    public Output<String> applicationName() {
-        return this.applicationName == null ? Codegen.empty() : this.applicationName;
+    public Optional<Output<String>> applicationName() {
+        return Optional.ofNullable(this.applicationName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultVersion")
-      private final @Nullable Output<String> defaultVersion;
+    private @Nullable Output<String> defaultVersion;
 
-    public Output<String> defaultVersion() {
-        return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
+    public Optional<Output<String>> defaultVersion() {
+        return Optional.ofNullable(this.defaultVersion);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -76,115 +76,100 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ApplicationArgs(
-        Output<String> accountName,
-        @Nullable Output<Boolean> allowUpdates,
-        @Nullable Output<String> applicationName,
-        @Nullable Output<String> defaultVersion,
-        @Nullable Output<String> displayName,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.allowUpdates = allowUpdates;
-        this.applicationName = applicationName;
-        this.defaultVersion = defaultVersion;
-        this.displayName = displayName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ApplicationArgs() {}
 
-    private ApplicationArgs() {
-        this.accountName = Codegen.empty();
-        this.allowUpdates = Codegen.empty();
-        this.applicationName = Codegen.empty();
-        this.defaultVersion = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ApplicationArgs(ApplicationArgs $) {
+        this.accountName = $.accountName;
+        this.allowUpdates = $.allowUpdates;
+        this.applicationName = $.applicationName;
+        this.defaultVersion = $.defaultVersion;
+        this.displayName = $.displayName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<Boolean> allowUpdates;
-        private @Nullable Output<String> applicationName;
-        private @Nullable Output<String> defaultVersion;
-        private @Nullable Output<String> displayName;
-        private Output<String> resourceGroupName;
+        private ApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationArgs();
         }
 
         public Builder(ApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.allowUpdates = defaults.allowUpdates;
-    	      this.applicationName = defaults.applicationName;
-    	      this.defaultVersion = defaults.defaultVersion;
-    	      this.displayName = defaults.displayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder allowUpdates(@Nullable Output<Boolean> allowUpdates) {
-            this.allowUpdates = allowUpdates;
+            $.allowUpdates = allowUpdates;
             return this;
         }
-        public Builder allowUpdates(@Nullable Boolean allowUpdates) {
-            this.allowUpdates = Codegen.ofNullable(allowUpdates);
-            return this;
+
+        public Builder allowUpdates(Boolean allowUpdates) {
+            return allowUpdates(Output.of(allowUpdates));
         }
+
         public Builder applicationName(@Nullable Output<String> applicationName) {
-            this.applicationName = applicationName;
+            $.applicationName = applicationName;
             return this;
         }
-        public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Codegen.ofNullable(applicationName);
-            return this;
+
+        public Builder applicationName(String applicationName) {
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder defaultVersion(@Nullable Output<String> defaultVersion) {
-            this.defaultVersion = defaultVersion;
+            $.defaultVersion = defaultVersion;
             return this;
         }
-        public Builder defaultVersion(@Nullable String defaultVersion) {
-            this.defaultVersion = Codegen.ofNullable(defaultVersion);
-            return this;
+
+        public Builder defaultVersion(String defaultVersion) {
+            return defaultVersion(Output.of(defaultVersion));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ApplicationArgs build() {
-            return new ApplicationArgs(accountName, allowUpdates, applicationName, defaultVersion, displayName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ApplicationArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.ContainerServiceSshConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class ContainerServiceLinuxProfileArgs extends com.pulumi.resources
      * 
      */
     @Import(name="adminUsername", required=true)
-      private final Output<String> adminUsername;
+    private Output<String> adminUsername;
 
     public Output<String> adminUsername() {
         return this.adminUsername;
@@ -35,63 +34,60 @@ public final class ContainerServiceLinuxProfileArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ssh", required=true)
-      private final Output<ContainerServiceSshConfigurationArgs> ssh;
+    private Output<ContainerServiceSshConfigurationArgs> ssh;
 
     public Output<ContainerServiceSshConfigurationArgs> ssh() {
         return this.ssh;
     }
 
-    public ContainerServiceLinuxProfileArgs(
-        Output<String> adminUsername,
-        Output<ContainerServiceSshConfigurationArgs> ssh) {
-        this.adminUsername = Objects.requireNonNull(adminUsername, "expected parameter 'adminUsername' to be non-null");
-        this.ssh = Objects.requireNonNull(ssh, "expected parameter 'ssh' to be non-null");
-    }
+    private ContainerServiceLinuxProfileArgs() {}
 
-    private ContainerServiceLinuxProfileArgs() {
-        this.adminUsername = Codegen.empty();
-        this.ssh = Codegen.empty();
+    private ContainerServiceLinuxProfileArgs(ContainerServiceLinuxProfileArgs $) {
+        this.adminUsername = $.adminUsername;
+        this.ssh = $.ssh;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceLinuxProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> adminUsername;
-        private Output<ContainerServiceSshConfigurationArgs> ssh;
+        private ContainerServiceLinuxProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceLinuxProfileArgs();
         }
 
         public Builder(ContainerServiceLinuxProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.ssh = defaults.ssh;
+            $ = new ContainerServiceLinuxProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminUsername(Output<String> adminUsername) {
-            this.adminUsername = Objects.requireNonNull(adminUsername);
+            $.adminUsername = adminUsername;
             return this;
         }
+
         public Builder adminUsername(String adminUsername) {
-            this.adminUsername = Output.of(Objects.requireNonNull(adminUsername));
-            return this;
+            return adminUsername(Output.of(adminUsername));
         }
+
         public Builder ssh(Output<ContainerServiceSshConfigurationArgs> ssh) {
-            this.ssh = Objects.requireNonNull(ssh);
+            $.ssh = ssh;
             return this;
         }
+
         public Builder ssh(ContainerServiceSshConfigurationArgs ssh) {
-            this.ssh = Output.of(Objects.requireNonNull(ssh));
-            return this;
-        }        public ContainerServiceLinuxProfileArgs build() {
-            return new ContainerServiceLinuxProfileArgs(adminUsername, ssh);
+            return ssh(Output.of(ssh));
+        }
+
+        public ContainerServiceLinuxProfileArgs build() {
+            $.adminUsername = Objects.requireNonNull($.adminUsername, "expected parameter 'adminUsername' to be non-null");
+            $.ssh = Objects.requireNonNull($.ssh, "expected parameter 'ssh' to be non-null");
+            return $;
         }
     }
+
 }

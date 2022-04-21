@@ -5,11 +5,11 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="advertisedCommunities")
-      private final @Nullable Output<List<String>> advertisedCommunities;
+    private @Nullable Output<List<String>> advertisedCommunities;
 
-    public Output<List<String>> advertisedCommunities() {
-        return this.advertisedCommunities == null ? Codegen.empty() : this.advertisedCommunities;
+    public Optional<Output<List<String>>> advertisedCommunities() {
+        return Optional.ofNullable(this.advertisedCommunities);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="advertisedPublicPrefixes")
-      private final @Nullable Output<List<String>> advertisedPublicPrefixes;
+    private @Nullable Output<List<String>> advertisedPublicPrefixes;
 
-    public Output<List<String>> advertisedPublicPrefixes() {
-        return this.advertisedPublicPrefixes == null ? Codegen.empty() : this.advertisedPublicPrefixes;
+    public Optional<Output<List<String>>> advertisedPublicPrefixes() {
+        return Optional.ofNullable(this.advertisedPublicPrefixes);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="customerASN")
-      private final @Nullable Output<Integer> customerASN;
+    private @Nullable Output<Integer> customerASN;
 
-    public Output<Integer> customerASN() {
-        return this.customerASN == null ? Codegen.empty() : this.customerASN;
+    public Optional<Output<Integer>> customerASN() {
+        return Optional.ofNullable(this.customerASN);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="legacyMode")
-      private final @Nullable Output<Integer> legacyMode;
+    private @Nullable Output<Integer> legacyMode;
 
-    public Output<Integer> legacyMode() {
-        return this.legacyMode == null ? Codegen.empty() : this.legacyMode;
+    public Optional<Output<Integer>> legacyMode() {
+        return Optional.ofNullable(this.legacyMode);
     }
 
     /**
@@ -70,108 +70,96 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="routingRegistryName")
-      private final @Nullable Output<String> routingRegistryName;
+    private @Nullable Output<String> routingRegistryName;
 
-    public Output<String> routingRegistryName() {
-        return this.routingRegistryName == null ? Codegen.empty() : this.routingRegistryName;
+    public Optional<Output<String>> routingRegistryName() {
+        return Optional.ofNullable(this.routingRegistryName);
     }
 
-    public ExpressRouteCircuitPeeringConfigArgs(
-        @Nullable Output<List<String>> advertisedCommunities,
-        @Nullable Output<List<String>> advertisedPublicPrefixes,
-        @Nullable Output<Integer> customerASN,
-        @Nullable Output<Integer> legacyMode,
-        @Nullable Output<String> routingRegistryName) {
-        this.advertisedCommunities = advertisedCommunities;
-        this.advertisedPublicPrefixes = advertisedPublicPrefixes;
-        this.customerASN = customerASN;
-        this.legacyMode = legacyMode;
-        this.routingRegistryName = routingRegistryName;
-    }
+    private ExpressRouteCircuitPeeringConfigArgs() {}
 
-    private ExpressRouteCircuitPeeringConfigArgs() {
-        this.advertisedCommunities = Codegen.empty();
-        this.advertisedPublicPrefixes = Codegen.empty();
-        this.customerASN = Codegen.empty();
-        this.legacyMode = Codegen.empty();
-        this.routingRegistryName = Codegen.empty();
+    private ExpressRouteCircuitPeeringConfigArgs(ExpressRouteCircuitPeeringConfigArgs $) {
+        this.advertisedCommunities = $.advertisedCommunities;
+        this.advertisedPublicPrefixes = $.advertisedPublicPrefixes;
+        this.customerASN = $.customerASN;
+        this.legacyMode = $.legacyMode;
+        this.routingRegistryName = $.routingRegistryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitPeeringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> advertisedCommunities;
-        private @Nullable Output<List<String>> advertisedPublicPrefixes;
-        private @Nullable Output<Integer> customerASN;
-        private @Nullable Output<Integer> legacyMode;
-        private @Nullable Output<String> routingRegistryName;
+        private ExpressRouteCircuitPeeringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitPeeringConfigArgs();
         }
 
         public Builder(ExpressRouteCircuitPeeringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advertisedCommunities = defaults.advertisedCommunities;
-    	      this.advertisedPublicPrefixes = defaults.advertisedPublicPrefixes;
-    	      this.customerASN = defaults.customerASN;
-    	      this.legacyMode = defaults.legacyMode;
-    	      this.routingRegistryName = defaults.routingRegistryName;
+            $ = new ExpressRouteCircuitPeeringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advertisedCommunities(@Nullable Output<List<String>> advertisedCommunities) {
-            this.advertisedCommunities = advertisedCommunities;
+            $.advertisedCommunities = advertisedCommunities;
             return this;
         }
-        public Builder advertisedCommunities(@Nullable List<String> advertisedCommunities) {
-            this.advertisedCommunities = Codegen.ofNullable(advertisedCommunities);
-            return this;
+
+        public Builder advertisedCommunities(List<String> advertisedCommunities) {
+            return advertisedCommunities(Output.of(advertisedCommunities));
         }
+
         public Builder advertisedCommunities(String... advertisedCommunities) {
             return advertisedCommunities(List.of(advertisedCommunities));
         }
+
         public Builder advertisedPublicPrefixes(@Nullable Output<List<String>> advertisedPublicPrefixes) {
-            this.advertisedPublicPrefixes = advertisedPublicPrefixes;
+            $.advertisedPublicPrefixes = advertisedPublicPrefixes;
             return this;
         }
-        public Builder advertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
-            this.advertisedPublicPrefixes = Codegen.ofNullable(advertisedPublicPrefixes);
-            return this;
+
+        public Builder advertisedPublicPrefixes(List<String> advertisedPublicPrefixes) {
+            return advertisedPublicPrefixes(Output.of(advertisedPublicPrefixes));
         }
+
         public Builder advertisedPublicPrefixes(String... advertisedPublicPrefixes) {
             return advertisedPublicPrefixes(List.of(advertisedPublicPrefixes));
         }
+
         public Builder customerASN(@Nullable Output<Integer> customerASN) {
-            this.customerASN = customerASN;
+            $.customerASN = customerASN;
             return this;
         }
-        public Builder customerASN(@Nullable Integer customerASN) {
-            this.customerASN = Codegen.ofNullable(customerASN);
-            return this;
+
+        public Builder customerASN(Integer customerASN) {
+            return customerASN(Output.of(customerASN));
         }
+
         public Builder legacyMode(@Nullable Output<Integer> legacyMode) {
-            this.legacyMode = legacyMode;
+            $.legacyMode = legacyMode;
             return this;
         }
-        public Builder legacyMode(@Nullable Integer legacyMode) {
-            this.legacyMode = Codegen.ofNullable(legacyMode);
-            return this;
+
+        public Builder legacyMode(Integer legacyMode) {
+            return legacyMode(Output.of(legacyMode));
         }
+
         public Builder routingRegistryName(@Nullable Output<String> routingRegistryName) {
-            this.routingRegistryName = routingRegistryName;
+            $.routingRegistryName = routingRegistryName;
             return this;
         }
-        public Builder routingRegistryName(@Nullable String routingRegistryName) {
-            this.routingRegistryName = Codegen.ofNullable(routingRegistryName);
-            return this;
-        }        public ExpressRouteCircuitPeeringConfigArgs build() {
-            return new ExpressRouteCircuitPeeringConfigArgs(advertisedCommunities, advertisedPublicPrefixes, customerASN, legacyMode, routingRegistryName);
+
+        public Builder routingRegistryName(String routingRegistryName) {
+            return routingRegistryName(Output.of(routingRegistryName));
+        }
+
+        public ExpressRouteCircuitPeeringConfigArgs build() {
+            return $;
         }
     }
+
 }

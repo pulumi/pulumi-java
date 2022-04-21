@@ -5,9 +5,9 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.notebooks_v1.inputs.VirtualMachineConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="virtualMachineConfig")
-      private final @Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig;
+    private @Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig;
 
-    public Output<VirtualMachineConfigArgs> virtualMachineConfig() {
-        return this.virtualMachineConfig == null ? Codegen.empty() : this.virtualMachineConfig;
+    public Optional<Output<VirtualMachineConfigArgs>> virtualMachineConfig() {
+        return Optional.ofNullable(this.virtualMachineConfig);
     }
 
-    public VirtualMachineArgs(@Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig) {
-        this.virtualMachineConfig = virtualMachineConfig;
-    }
+    private VirtualMachineArgs() {}
 
-    private VirtualMachineArgs() {
-        this.virtualMachineConfig = Codegen.empty();
+    private VirtualMachineArgs(VirtualMachineArgs $) {
+        this.virtualMachineConfig = $.virtualMachineConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig;
+        private VirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineArgs();
         }
 
         public Builder(VirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualMachineConfig = defaults.virtualMachineConfig;
+            $ = new VirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualMachineConfig(@Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig) {
-            this.virtualMachineConfig = virtualMachineConfig;
+            $.virtualMachineConfig = virtualMachineConfig;
             return this;
         }
-        public Builder virtualMachineConfig(@Nullable VirtualMachineConfigArgs virtualMachineConfig) {
-            this.virtualMachineConfig = Codegen.ofNullable(virtualMachineConfig);
-            return this;
-        }        public VirtualMachineArgs build() {
-            return new VirtualMachineArgs(virtualMachineConfig);
+
+        public Builder virtualMachineConfig(VirtualMachineConfigArgs virtualMachineConfig) {
+            return virtualMachineConfig(Output.of(virtualMachineConfig));
+        }
+
+        public VirtualMachineArgs build() {
+            return $;
         }
     }
+
 }

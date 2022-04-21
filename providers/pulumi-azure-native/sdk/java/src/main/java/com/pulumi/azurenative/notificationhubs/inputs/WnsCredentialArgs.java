@@ -5,9 +5,9 @@ package com.pulumi.azurenative.notificationhubs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WnsCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packageSid")
-      private final @Nullable Output<String> packageSid;
+    private @Nullable Output<String> packageSid;
 
-    public Output<String> packageSid() {
-        return this.packageSid == null ? Codegen.empty() : this.packageSid;
+    public Optional<Output<String>> packageSid() {
+        return Optional.ofNullable(this.packageSid);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WnsCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretKey")
-      private final @Nullable Output<String> secretKey;
+    private @Nullable Output<String> secretKey;
 
-    public Output<String> secretKey() {
-        return this.secretKey == null ? Codegen.empty() : this.secretKey;
+    public Optional<Output<String>> secretKey() {
+        return Optional.ofNullable(this.secretKey);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class WnsCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowsLiveEndpoint")
-      private final @Nullable Output<String> windowsLiveEndpoint;
+    private @Nullable Output<String> windowsLiveEndpoint;
 
-    public Output<String> windowsLiveEndpoint() {
-        return this.windowsLiveEndpoint == null ? Codegen.empty() : this.windowsLiveEndpoint;
+    public Optional<Output<String>> windowsLiveEndpoint() {
+        return Optional.ofNullable(this.windowsLiveEndpoint);
     }
 
-    public WnsCredentialArgs(
-        @Nullable Output<String> packageSid,
-        @Nullable Output<String> secretKey,
-        @Nullable Output<String> windowsLiveEndpoint) {
-        this.packageSid = packageSid;
-        this.secretKey = secretKey;
-        this.windowsLiveEndpoint = windowsLiveEndpoint;
-    }
+    private WnsCredentialArgs() {}
 
-    private WnsCredentialArgs() {
-        this.packageSid = Codegen.empty();
-        this.secretKey = Codegen.empty();
-        this.windowsLiveEndpoint = Codegen.empty();
+    private WnsCredentialArgs(WnsCredentialArgs $) {
+        this.packageSid = $.packageSid;
+        this.secretKey = $.secretKey;
+        this.windowsLiveEndpoint = $.windowsLiveEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WnsCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> packageSid;
-        private @Nullable Output<String> secretKey;
-        private @Nullable Output<String> windowsLiveEndpoint;
+        private WnsCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WnsCredentialArgs();
         }
 
         public Builder(WnsCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packageSid = defaults.packageSid;
-    	      this.secretKey = defaults.secretKey;
-    	      this.windowsLiveEndpoint = defaults.windowsLiveEndpoint;
+            $ = new WnsCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder packageSid(@Nullable Output<String> packageSid) {
-            this.packageSid = packageSid;
+            $.packageSid = packageSid;
             return this;
         }
-        public Builder packageSid(@Nullable String packageSid) {
-            this.packageSid = Codegen.ofNullable(packageSid);
-            return this;
+
+        public Builder packageSid(String packageSid) {
+            return packageSid(Output.of(packageSid));
         }
+
         public Builder secretKey(@Nullable Output<String> secretKey) {
-            this.secretKey = secretKey;
+            $.secretKey = secretKey;
             return this;
         }
-        public Builder secretKey(@Nullable String secretKey) {
-            this.secretKey = Codegen.ofNullable(secretKey);
-            return this;
+
+        public Builder secretKey(String secretKey) {
+            return secretKey(Output.of(secretKey));
         }
+
         public Builder windowsLiveEndpoint(@Nullable Output<String> windowsLiveEndpoint) {
-            this.windowsLiveEndpoint = windowsLiveEndpoint;
+            $.windowsLiveEndpoint = windowsLiveEndpoint;
             return this;
         }
-        public Builder windowsLiveEndpoint(@Nullable String windowsLiveEndpoint) {
-            this.windowsLiveEndpoint = Codegen.ofNullable(windowsLiveEndpoint);
-            return this;
-        }        public WnsCredentialArgs build() {
-            return new WnsCredentialArgs(packageSid, secretKey, windowsLiveEndpoint);
+
+        public Builder windowsLiveEndpoint(String windowsLiveEndpoint) {
+            return windowsLiveEndpoint(Output.of(windowsLiveEndpoint));
+        }
+
+        public WnsCredentialArgs build() {
+            return $;
         }
     }
+
 }

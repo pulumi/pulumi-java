@@ -8,10 +8,10 @@ import com.pulumi.azurenative.documentdb.enums.ServiceType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -35,10 +35,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceCount")
-      private final @Nullable Output<Integer> instanceCount;
+    private @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> instanceCount() {
-        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
+    public Optional<Output<Integer>> instanceCount() {
+        return Optional.ofNullable(this.instanceCount);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceSize")
-      private final @Nullable Output<Either<String,ServiceSize>> instanceSize;
+    private @Nullable Output<Either<String,ServiceSize>> instanceSize;
 
-    public Output<Either<String,ServiceSize>> instanceSize() {
-        return this.instanceSize == null ? Codegen.empty() : this.instanceSize;
+    public Optional<Output<Either<String,ServiceSize>>> instanceSize() {
+        return Optional.ofNullable(this.instanceSize);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -68,10 +68,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -79,115 +79,100 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceType")
-      private final @Nullable Output<Either<String,ServiceType>> serviceType;
+    private @Nullable Output<Either<String,ServiceType>> serviceType;
 
-    public Output<Either<String,ServiceType>> serviceType() {
-        return this.serviceType == null ? Codegen.empty() : this.serviceType;
+    public Optional<Output<Either<String,ServiceType>>> serviceType() {
+        return Optional.ofNullable(this.serviceType);
     }
 
-    public ServiceArgs(
-        Output<String> accountName,
-        @Nullable Output<Integer> instanceCount,
-        @Nullable Output<Either<String,ServiceSize>> instanceSize,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> serviceName,
-        @Nullable Output<Either<String,ServiceType>> serviceType) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.instanceCount = instanceCount;
-        this.instanceSize = instanceSize;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = serviceName;
-        this.serviceType = serviceType;
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.accountName = Codegen.empty();
-        this.instanceCount = Codegen.empty();
-        this.instanceSize = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.serviceType = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.accountName = $.accountName;
+        this.instanceCount = $.instanceCount;
+        this.instanceSize = $.instanceSize;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.serviceType = $.serviceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<Integer> instanceCount;
-        private @Nullable Output<Either<String,ServiceSize>> instanceSize;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> serviceName;
-        private @Nullable Output<Either<String,ServiceType>> serviceType;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceSize = defaults.instanceSize;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceType = defaults.serviceType;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
         }
-        public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Codegen.ofNullable(instanceCount);
-            return this;
+
+        public Builder instanceCount(Integer instanceCount) {
+            return instanceCount(Output.of(instanceCount));
         }
+
         public Builder instanceSize(@Nullable Output<Either<String,ServiceSize>> instanceSize) {
-            this.instanceSize = instanceSize;
+            $.instanceSize = instanceSize;
             return this;
         }
-        public Builder instanceSize(@Nullable Either<String,ServiceSize> instanceSize) {
-            this.instanceSize = Codegen.ofNullable(instanceSize);
-            return this;
+
+        public Builder instanceSize(Either<String,ServiceSize> instanceSize) {
+            return instanceSize(Output.of(instanceSize));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder serviceType(@Nullable Output<Either<String,ServiceType>> serviceType) {
-            this.serviceType = serviceType;
+            $.serviceType = serviceType;
             return this;
         }
-        public Builder serviceType(@Nullable Either<String,ServiceType> serviceType) {
-            this.serviceType = Codegen.ofNullable(serviceType);
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(accountName, instanceCount, instanceSize, resourceGroupName, serviceName, serviceType);
+
+        public Builder serviceType(Either<String,ServiceType> serviceType) {
+            return serviceType(Output.of(serviceType));
+        }
+
+        public ServiceArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

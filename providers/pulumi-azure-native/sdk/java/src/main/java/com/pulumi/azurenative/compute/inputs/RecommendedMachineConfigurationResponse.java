@@ -23,10 +23,10 @@ public final class RecommendedMachineConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="memory")
-      private final @Nullable ResourceRangeResponse memory;
+    private @Nullable ResourceRangeResponse memory;
 
     public Optional<ResourceRangeResponse> memory() {
-        return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
+        return Optional.ofNullable(this.memory);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class RecommendedMachineConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="vCPUs")
-      private final @Nullable ResourceRangeResponse vCPUs;
+    private @Nullable ResourceRangeResponse vCPUs;
 
     public Optional<ResourceRangeResponse> vCPUs() {
-        return this.vCPUs == null ? Optional.empty() : Optional.ofNullable(this.vCPUs);
+        return Optional.ofNullable(this.vCPUs);
     }
 
-    public RecommendedMachineConfigurationResponse(
-        @Nullable ResourceRangeResponse memory,
-        @Nullable ResourceRangeResponse vCPUs) {
-        this.memory = memory;
-        this.vCPUs = vCPUs;
-    }
+    private RecommendedMachineConfigurationResponse() {}
 
-    private RecommendedMachineConfigurationResponse() {
-        this.memory = null;
-        this.vCPUs = null;
+    private RecommendedMachineConfigurationResponse(RecommendedMachineConfigurationResponse $) {
+        this.memory = $.memory;
+        this.vCPUs = $.vCPUs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecommendedMachineConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ResourceRangeResponse memory;
-        private @Nullable ResourceRangeResponse vCPUs;
+        private RecommendedMachineConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecommendedMachineConfigurationResponse();
         }
 
         public Builder(RecommendedMachineConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.memory = defaults.memory;
-    	      this.vCPUs = defaults.vCPUs;
+            $ = new RecommendedMachineConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder memory(@Nullable ResourceRangeResponse memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
         }
+
         public Builder vCPUs(@Nullable ResourceRangeResponse vCPUs) {
-            this.vCPUs = vCPUs;
+            $.vCPUs = vCPUs;
             return this;
-        }        public RecommendedMachineConfigurationResponse build() {
-            return new RecommendedMachineConfigurationResponse(memory, vCPUs);
+        }
+
+        public RecommendedMachineConfigurationResponse build() {
+            return $;
         }
     }
+
 }

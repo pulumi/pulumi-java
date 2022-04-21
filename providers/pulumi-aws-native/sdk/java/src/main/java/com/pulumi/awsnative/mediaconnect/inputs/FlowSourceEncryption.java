@@ -25,7 +25,7 @@ public final class FlowSourceEncryption extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="algorithm", required=true)
-      private final FlowSourceEncryptionAlgorithm algorithm;
+    private FlowSourceEncryptionAlgorithm algorithm;
 
     public FlowSourceEncryptionAlgorithm algorithm() {
         return this.algorithm;
@@ -36,10 +36,10 @@ public final class FlowSourceEncryption extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="constantInitializationVector")
-      private final @Nullable String constantInitializationVector;
+    private @Nullable String constantInitializationVector;
 
     public Optional<String> constantInitializationVector() {
-        return this.constantInitializationVector == null ? Optional.empty() : Optional.ofNullable(this.constantInitializationVector);
+        return Optional.ofNullable(this.constantInitializationVector);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FlowSourceEncryption extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="deviceId")
-      private final @Nullable String deviceId;
+    private @Nullable String deviceId;
 
     public Optional<String> deviceId() {
-        return this.deviceId == null ? Optional.empty() : Optional.ofNullable(this.deviceId);
+        return Optional.ofNullable(this.deviceId);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FlowSourceEncryption extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="keyType")
-      private final @Nullable FlowSourceEncryptionKeyType keyType;
+    private @Nullable FlowSourceEncryptionKeyType keyType;
 
     public Optional<FlowSourceEncryptionKeyType> keyType() {
-        return this.keyType == null ? Optional.empty() : Optional.ofNullable(this.keyType);
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class FlowSourceEncryption extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FlowSourceEncryption extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class FlowSourceEncryption extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
@@ -102,10 +102,10 @@ public final class FlowSourceEncryption extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secretArn")
-      private final @Nullable String secretArn;
+    private @Nullable String secretArn;
 
     public Optional<String> secretArn() {
-        return this.secretArn == null ? Optional.empty() : Optional.ofNullable(this.secretArn);
+        return Optional.ofNullable(this.secretArn);
     }
 
     /**
@@ -113,118 +113,94 @@ public final class FlowSourceEncryption extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public FlowSourceEncryption(
-        FlowSourceEncryptionAlgorithm algorithm,
-        @Nullable String constantInitializationVector,
-        @Nullable String deviceId,
-        @Nullable FlowSourceEncryptionKeyType keyType,
-        @Nullable String region,
-        @Nullable String resourceId,
-        String roleArn,
-        @Nullable String secretArn,
-        @Nullable String url) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.constantInitializationVector = constantInitializationVector;
-        this.deviceId = deviceId;
-        this.keyType = keyType;
-        this.region = region;
-        this.resourceId = resourceId;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.secretArn = secretArn;
-        this.url = url;
-    }
+    private FlowSourceEncryption() {}
 
-    private FlowSourceEncryption() {
-        this.algorithm = null;
-        this.constantInitializationVector = null;
-        this.deviceId = null;
-        this.keyType = null;
-        this.region = null;
-        this.resourceId = null;
-        this.roleArn = null;
-        this.secretArn = null;
-        this.url = null;
+    private FlowSourceEncryption(FlowSourceEncryption $) {
+        this.algorithm = $.algorithm;
+        this.constantInitializationVector = $.constantInitializationVector;
+        this.deviceId = $.deviceId;
+        this.keyType = $.keyType;
+        this.region = $.region;
+        this.resourceId = $.resourceId;
+        this.roleArn = $.roleArn;
+        this.secretArn = $.secretArn;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSourceEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FlowSourceEncryptionAlgorithm algorithm;
-        private @Nullable String constantInitializationVector;
-        private @Nullable String deviceId;
-        private @Nullable FlowSourceEncryptionKeyType keyType;
-        private @Nullable String region;
-        private @Nullable String resourceId;
-        private String roleArn;
-        private @Nullable String secretArn;
-        private @Nullable String url;
+        private FlowSourceEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSourceEncryption();
         }
 
         public Builder(FlowSourceEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.constantInitializationVector = defaults.constantInitializationVector;
-    	      this.deviceId = defaults.deviceId;
-    	      this.keyType = defaults.keyType;
-    	      this.region = defaults.region;
-    	      this.resourceId = defaults.resourceId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.secretArn = defaults.secretArn;
-    	      this.url = defaults.url;
+            $ = new FlowSourceEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(FlowSourceEncryptionAlgorithm algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = constantInitializationVector;
+            $.constantInitializationVector = constantInitializationVector;
             return this;
         }
+
         public Builder deviceId(@Nullable String deviceId) {
-            this.deviceId = deviceId;
+            $.deviceId = deviceId;
             return this;
         }
+
         public Builder keyType(@Nullable FlowSourceEncryptionKeyType keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = secretArn;
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public FlowSourceEncryption build() {
-            return new FlowSourceEncryption(algorithm, constantInitializationVector, deviceId, keyType, region, resourceId, roleArn, secretArn, url);
+        }
+
+        public FlowSourceEncryption build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

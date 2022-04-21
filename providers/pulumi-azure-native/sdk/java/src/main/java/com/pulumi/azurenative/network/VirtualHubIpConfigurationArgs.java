@@ -9,9 +9,9 @@ import com.pulumi.azurenative.network.inputs.SubnetArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualHubIpConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualHubIpConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ipConfigName")
-      private final @Nullable Output<String> ipConfigName;
+    private @Nullable Output<String> ipConfigName;
 
-    public Output<String> ipConfigName() {
-        return this.ipConfigName == null ? Codegen.empty() : this.ipConfigName;
+    public Optional<Output<String>> ipConfigName() {
+        return Optional.ofNullable(this.ipConfigName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualHubIpConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VirtualHubIpConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable Output<String> privateIPAddress;
+    private @Nullable Output<String> privateIPAddress;
 
-    public Output<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
+    public Optional<Output<String>> privateIPAddress() {
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class VirtualHubIpConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateIPAllocationMethod")
-      private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+    private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
+    public Optional<Output<Either<String,IPAllocationMethod>>> privateIPAllocationMethod() {
+        return Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class VirtualHubIpConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="publicIPAddress")
-      private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
+    private @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
-    public Output<PublicIPAddressArgs> publicIPAddress() {
-        return this.publicIPAddress == null ? Codegen.empty() : this.publicIPAddress;
+    public Optional<Output<PublicIPAddressArgs>> publicIPAddress() {
+        return Optional.ofNullable(this.publicIPAddress);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class VirtualHubIpConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -101,10 +101,10 @@ public final class VirtualHubIpConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<SubnetArgs> subnet;
+    private @Nullable Output<SubnetArgs> subnet;
 
-    public Output<SubnetArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<SubnetArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -112,154 +112,130 @@ public final class VirtualHubIpConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="virtualHubName", required=true)
-      private final Output<String> virtualHubName;
+    private Output<String> virtualHubName;
 
     public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 
-    public VirtualHubIpConfigurationArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> ipConfigName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> privateIPAddress,
-        @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod,
-        @Nullable Output<PublicIPAddressArgs> publicIPAddress,
-        Output<String> resourceGroupName,
-        @Nullable Output<SubnetArgs> subnet,
-        Output<String> virtualHubName) {
-        this.id = id;
-        this.ipConfigName = ipConfigName;
-        this.name = name;
-        this.privateIPAddress = privateIPAddress;
-        this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.publicIPAddress = publicIPAddress;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subnet = subnet;
-        this.virtualHubName = Objects.requireNonNull(virtualHubName, "expected parameter 'virtualHubName' to be non-null");
-    }
+    private VirtualHubIpConfigurationArgs() {}
 
-    private VirtualHubIpConfigurationArgs() {
-        this.id = Codegen.empty();
-        this.ipConfigName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.privateIPAddress = Codegen.empty();
-        this.privateIPAllocationMethod = Codegen.empty();
-        this.publicIPAddress = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.subnet = Codegen.empty();
-        this.virtualHubName = Codegen.empty();
+    private VirtualHubIpConfigurationArgs(VirtualHubIpConfigurationArgs $) {
+        this.id = $.id;
+        this.ipConfigName = $.ipConfigName;
+        this.name = $.name;
+        this.privateIPAddress = $.privateIPAddress;
+        this.privateIPAllocationMethod = $.privateIPAllocationMethod;
+        this.publicIPAddress = $.publicIPAddress;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subnet = $.subnet;
+        this.virtualHubName = $.virtualHubName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubIpConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> ipConfigName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> privateIPAddress;
-        private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
-        private @Nullable Output<PublicIPAddressArgs> publicIPAddress;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SubnetArgs> subnet;
-        private Output<String> virtualHubName;
+        private VirtualHubIpConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubIpConfigurationArgs();
         }
 
         public Builder(VirtualHubIpConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.ipConfigName = defaults.ipConfigName;
-    	      this.name = defaults.name;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.privateIPAllocationMethod = defaults.privateIPAllocationMethod;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subnet = defaults.subnet;
-    	      this.virtualHubName = defaults.virtualHubName;
+            $ = new VirtualHubIpConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipConfigName(@Nullable Output<String> ipConfigName) {
-            this.ipConfigName = ipConfigName;
+            $.ipConfigName = ipConfigName;
             return this;
         }
-        public Builder ipConfigName(@Nullable String ipConfigName) {
-            this.ipConfigName = Codegen.ofNullable(ipConfigName);
-            return this;
+
+        public Builder ipConfigName(String ipConfigName) {
+            return ipConfigName(Output.of(ipConfigName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
-        public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
-            return this;
+
+        public Builder privateIPAddress(String privateIPAddress) {
+            return privateIPAddress(Output.of(privateIPAddress));
         }
+
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = privateIPAllocationMethod;
+            $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-        public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = Codegen.ofNullable(privateIPAllocationMethod);
-            return this;
+
+        public Builder privateIPAllocationMethod(Either<String,IPAllocationMethod> privateIPAllocationMethod) {
+            return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
         }
+
         public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
-            this.publicIPAddress = publicIPAddress;
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
-        public Builder publicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
-            this.publicIPAddress = Codegen.ofNullable(publicIPAddress);
-            return this;
+
+        public Builder publicIPAddress(PublicIPAddressArgs publicIPAddress) {
+            return publicIPAddress(Output.of(publicIPAddress));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
+
+        public Builder subnet(SubnetArgs subnet) {
+            return subnet(Output.of(subnet));
         }
+
         public Builder virtualHubName(Output<String> virtualHubName) {
-            this.virtualHubName = Objects.requireNonNull(virtualHubName);
+            $.virtualHubName = virtualHubName;
             return this;
         }
+
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
-            return this;
-        }        public VirtualHubIpConfigurationArgs build() {
-            return new VirtualHubIpConfigurationArgs(id, ipConfigName, name, privateIPAddress, privateIPAllocationMethod, publicIPAddress, resourceGroupName, subnet, virtualHubName);
+            return virtualHubName(Output.of(virtualHubName));
+        }
+
+        public VirtualHubIpConfigurationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualHubName = Objects.requireNonNull($.virtualHubName, "expected parameter 'virtualHubName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class DaprResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appId")
-      private final @Nullable String appId;
+    private @Nullable String appId;
 
     public Optional<String> appId() {
-        return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DaprResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appPort")
-      private final @Nullable Integer appPort;
+    private @Nullable Integer appPort;
 
     public Optional<Integer> appPort() {
-        return this.appPort == null ? Optional.empty() : Optional.ofNullable(this.appPort);
+        return Optional.ofNullable(this.appPort);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DaprResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="components")
-      private final @Nullable List<DaprComponentResponse> components;
+    private @Nullable List<DaprComponentResponse> components;
 
-    public List<DaprComponentResponse> components() {
-        return this.components == null ? List.of() : this.components;
+    public Optional<List<DaprComponentResponse>> components() {
+        return Optional.ofNullable(this.components);
     }
 
     /**
@@ -60,76 +60,66 @@ public final class DaprResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public DaprResponse(
-        @Nullable String appId,
-        @Nullable Integer appPort,
-        @Nullable List<DaprComponentResponse> components,
-        @Nullable Boolean enabled) {
-        this.appId = appId;
-        this.appPort = appPort;
-        this.components = components;
-        this.enabled = enabled;
-    }
+    private DaprResponse() {}
 
-    private DaprResponse() {
-        this.appId = null;
-        this.appPort = null;
-        this.components = List.of();
-        this.enabled = null;
+    private DaprResponse(DaprResponse $) {
+        this.appId = $.appId;
+        this.appPort = $.appPort;
+        this.components = $.components;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DaprResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String appId;
-        private @Nullable Integer appPort;
-        private @Nullable List<DaprComponentResponse> components;
-        private @Nullable Boolean enabled;
+        private DaprResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DaprResponse();
         }
 
         public Builder(DaprResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.appPort = defaults.appPort;
-    	      this.components = defaults.components;
-    	      this.enabled = defaults.enabled;
+            $ = new DaprResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
+
         public Builder appPort(@Nullable Integer appPort) {
-            this.appPort = appPort;
+            $.appPort = appPort;
             return this;
         }
+
         public Builder components(@Nullable List<DaprComponentResponse> components) {
-            this.components = components;
+            $.components = components;
             return this;
         }
+
         public Builder components(DaprComponentResponse... components) {
             return components(List.of(components));
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public DaprResponse build() {
-            return new DaprResponse(appId, appPort, components, enabled);
+        }
+
+        public DaprResponse build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class FailurePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="retry", required=true)
-      private final RetryResponse retry;
+    private RetryResponse retry;
 
     public RetryResponse retry() {
         return this.retry;
     }
 
-    public FailurePolicyResponse(RetryResponse retry) {
-        this.retry = Objects.requireNonNull(retry, "expected parameter 'retry' to be non-null");
-    }
+    private FailurePolicyResponse() {}
 
-    private FailurePolicyResponse() {
-        this.retry = null;
+    private FailurePolicyResponse(FailurePolicyResponse $) {
+        this.retry = $.retry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FailurePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RetryResponse retry;
+        private FailurePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FailurePolicyResponse();
         }
 
         public Builder(FailurePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retry = defaults.retry;
+            $ = new FailurePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder retry(RetryResponse retry) {
-            this.retry = Objects.requireNonNull(retry);
+            $.retry = retry;
             return this;
-        }        public FailurePolicyResponse build() {
-            return new FailurePolicyResponse(retry);
+        }
+
+        public FailurePolicyResponse build() {
+            $.retry = Objects.requireNonNull($.retry, "expected parameter 'retry' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,62 +16,58 @@ public final class GlobalTableSSESpecification extends com.pulumi.resources.Invo
     public static final GlobalTableSSESpecification Empty = new GlobalTableSSESpecification();
 
     @Import(name="sSEEnabled", required=true)
-      private final Boolean sSEEnabled;
+    private Boolean sSEEnabled;
 
     public Boolean sSEEnabled() {
         return this.sSEEnabled;
     }
 
     @Import(name="sSEType")
-      private final @Nullable String sSEType;
+    private @Nullable String sSEType;
 
     public Optional<String> sSEType() {
-        return this.sSEType == null ? Optional.empty() : Optional.ofNullable(this.sSEType);
+        return Optional.ofNullable(this.sSEType);
     }
 
-    public GlobalTableSSESpecification(
-        Boolean sSEEnabled,
-        @Nullable String sSEType) {
-        this.sSEEnabled = Objects.requireNonNull(sSEEnabled, "expected parameter 'sSEEnabled' to be non-null");
-        this.sSEType = sSEType;
-    }
+    private GlobalTableSSESpecification() {}
 
-    private GlobalTableSSESpecification() {
-        this.sSEEnabled = null;
-        this.sSEType = null;
+    private GlobalTableSSESpecification(GlobalTableSSESpecification $) {
+        this.sSEEnabled = $.sSEEnabled;
+        this.sSEType = $.sSEType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableSSESpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean sSEEnabled;
-        private @Nullable String sSEType;
+        private GlobalTableSSESpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableSSESpecification();
         }
 
         public Builder(GlobalTableSSESpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sSEEnabled = defaults.sSEEnabled;
-    	      this.sSEType = defaults.sSEType;
+            $ = new GlobalTableSSESpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder sSEEnabled(Boolean sSEEnabled) {
-            this.sSEEnabled = Objects.requireNonNull(sSEEnabled);
+            $.sSEEnabled = sSEEnabled;
             return this;
         }
+
         public Builder sSEType(@Nullable String sSEType) {
-            this.sSEType = sSEType;
+            $.sSEType = sSEType;
             return this;
-        }        public GlobalTableSSESpecification build() {
-            return new GlobalTableSSESpecification(sSEEnabled, sSEType);
+        }
+
+        public GlobalTableSSESpecification build() {
+            $.sSEEnabled = Objects.requireNonNull($.sSEEnabled, "expected parameter 'sSEEnabled' to be non-null");
+            return $;
         }
     }
+
 }

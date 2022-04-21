@@ -21,17 +21,17 @@ public final class SchedulingPolicyFairsharePolicy extends com.pulumi.resources.
     public static final SchedulingPolicyFairsharePolicy Empty = new SchedulingPolicyFairsharePolicy();
 
     @Import(name="computeReservation")
-      private final @Nullable Double computeReservation;
+    private @Nullable Double computeReservation;
 
     public Optional<Double> computeReservation() {
-        return this.computeReservation == null ? Optional.empty() : Optional.ofNullable(this.computeReservation);
+        return Optional.ofNullable(this.computeReservation);
     }
 
     @Import(name="shareDecaySeconds")
-      private final @Nullable Double shareDecaySeconds;
+    private @Nullable Double shareDecaySeconds;
 
     public Optional<Double> shareDecaySeconds() {
-        return this.shareDecaySeconds == null ? Optional.empty() : Optional.ofNullable(this.shareDecaySeconds);
+        return Optional.ofNullable(this.shareDecaySeconds);
     }
 
     /**
@@ -39,67 +39,60 @@ public final class SchedulingPolicyFairsharePolicy extends com.pulumi.resources.
      * 
      */
     @Import(name="shareDistribution")
-      private final @Nullable List<SchedulingPolicyShareAttributes> shareDistribution;
+    private @Nullable List<SchedulingPolicyShareAttributes> shareDistribution;
 
-    public List<SchedulingPolicyShareAttributes> shareDistribution() {
-        return this.shareDistribution == null ? List.of() : this.shareDistribution;
+    public Optional<List<SchedulingPolicyShareAttributes>> shareDistribution() {
+        return Optional.ofNullable(this.shareDistribution);
     }
 
-    public SchedulingPolicyFairsharePolicy(
-        @Nullable Double computeReservation,
-        @Nullable Double shareDecaySeconds,
-        @Nullable List<SchedulingPolicyShareAttributes> shareDistribution) {
-        this.computeReservation = computeReservation;
-        this.shareDecaySeconds = shareDecaySeconds;
-        this.shareDistribution = shareDistribution;
-    }
+    private SchedulingPolicyFairsharePolicy() {}
 
-    private SchedulingPolicyFairsharePolicy() {
-        this.computeReservation = null;
-        this.shareDecaySeconds = null;
-        this.shareDistribution = List.of();
+    private SchedulingPolicyFairsharePolicy(SchedulingPolicyFairsharePolicy $) {
+        this.computeReservation = $.computeReservation;
+        this.shareDecaySeconds = $.shareDecaySeconds;
+        this.shareDistribution = $.shareDistribution;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingPolicyFairsharePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double computeReservation;
-        private @Nullable Double shareDecaySeconds;
-        private @Nullable List<SchedulingPolicyShareAttributes> shareDistribution;
+        private SchedulingPolicyFairsharePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingPolicyFairsharePolicy();
         }
 
         public Builder(SchedulingPolicyFairsharePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeReservation = defaults.computeReservation;
-    	      this.shareDecaySeconds = defaults.shareDecaySeconds;
-    	      this.shareDistribution = defaults.shareDistribution;
+            $ = new SchedulingPolicyFairsharePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder computeReservation(@Nullable Double computeReservation) {
-            this.computeReservation = computeReservation;
+            $.computeReservation = computeReservation;
             return this;
         }
+
         public Builder shareDecaySeconds(@Nullable Double shareDecaySeconds) {
-            this.shareDecaySeconds = shareDecaySeconds;
+            $.shareDecaySeconds = shareDecaySeconds;
             return this;
         }
+
         public Builder shareDistribution(@Nullable List<SchedulingPolicyShareAttributes> shareDistribution) {
-            this.shareDistribution = shareDistribution;
+            $.shareDistribution = shareDistribution;
             return this;
         }
+
         public Builder shareDistribution(SchedulingPolicyShareAttributes... shareDistribution) {
             return shareDistribution(List.of(shareDistribution));
-        }        public SchedulingPolicyFairsharePolicy build() {
-            return new SchedulingPolicyFairsharePolicy(computeReservation, shareDecaySeconds, shareDistribution);
+        }
+
+        public SchedulingPolicyFairsharePolicy build() {
+            return $;
         }
     }
+
 }

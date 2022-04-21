@@ -20,7 +20,7 @@ public final class GetHoursOfOperationConfig extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="day", required=true)
-      private final String day;
+    private String day;
 
     public String day() {
         return this.day;
@@ -31,7 +31,7 @@ public final class GetHoursOfOperationConfig extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endTimes", required=true)
-      private final List<GetHoursOfOperationConfigEndTime> endTimes;
+    private List<GetHoursOfOperationConfigEndTime> endTimes;
 
     public List<GetHoursOfOperationConfigEndTime> endTimes() {
         return this.endTimes;
@@ -42,70 +42,67 @@ public final class GetHoursOfOperationConfig extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startTimes", required=true)
-      private final List<GetHoursOfOperationConfigStartTime> startTimes;
+    private List<GetHoursOfOperationConfigStartTime> startTimes;
 
     public List<GetHoursOfOperationConfigStartTime> startTimes() {
         return this.startTimes;
     }
 
-    public GetHoursOfOperationConfig(
-        String day,
-        List<GetHoursOfOperationConfigEndTime> endTimes,
-        List<GetHoursOfOperationConfigStartTime> startTimes) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.endTimes = Objects.requireNonNull(endTimes, "expected parameter 'endTimes' to be non-null");
-        this.startTimes = Objects.requireNonNull(startTimes, "expected parameter 'startTimes' to be non-null");
-    }
+    private GetHoursOfOperationConfig() {}
 
-    private GetHoursOfOperationConfig() {
-        this.day = null;
-        this.endTimes = List.of();
-        this.startTimes = List.of();
+    private GetHoursOfOperationConfig(GetHoursOfOperationConfig $) {
+        this.day = $.day;
+        this.endTimes = $.endTimes;
+        this.startTimes = $.startTimes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHoursOfOperationConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String day;
-        private List<GetHoursOfOperationConfigEndTime> endTimes;
-        private List<GetHoursOfOperationConfigStartTime> startTimes;
+        private GetHoursOfOperationConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHoursOfOperationConfig();
         }
 
         public Builder(GetHoursOfOperationConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.endTimes = defaults.endTimes;
-    	      this.startTimes = defaults.startTimes;
+            $ = new GetHoursOfOperationConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder day(String day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder endTimes(List<GetHoursOfOperationConfigEndTime> endTimes) {
-            this.endTimes = Objects.requireNonNull(endTimes);
+            $.endTimes = endTimes;
             return this;
         }
+
         public Builder endTimes(GetHoursOfOperationConfigEndTime... endTimes) {
             return endTimes(List.of(endTimes));
         }
+
         public Builder startTimes(List<GetHoursOfOperationConfigStartTime> startTimes) {
-            this.startTimes = Objects.requireNonNull(startTimes);
+            $.startTimes = startTimes;
             return this;
         }
+
         public Builder startTimes(GetHoursOfOperationConfigStartTime... startTimes) {
             return startTimes(List.of(startTimes));
-        }        public GetHoursOfOperationConfig build() {
-            return new GetHoursOfOperationConfig(day, endTimes, startTimes);
+        }
+
+        public GetHoursOfOperationConfig build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.endTimes = Objects.requireNonNull($.endTimes, "expected parameter 'endTimes' to be non-null");
+            $.startTimes = Objects.requireNonNull($.startTimes, "expected parameter 'startTimes' to be non-null");
+            return $;
         }
     }
+
 }

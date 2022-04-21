@@ -15,94 +15,86 @@ public final class PipelineMath extends com.pulumi.resources.InvokeArgs {
     public static final PipelineMath Empty = new PipelineMath();
 
     @Import(name="attribute", required=true)
-      private final String attribute;
+    private String attribute;
 
     public String attribute() {
         return this.attribute;
     }
 
     @Import(name="math", required=true)
-      private final String math;
+    private String math;
 
     public String math() {
         return this.math;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable String next;
+    private @Nullable String next;
 
     public Optional<String> next() {
-        return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
+        return Optional.ofNullable(this.next);
     }
 
-    public PipelineMath(
-        String attribute,
-        String math,
-        String name,
-        @Nullable String next) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.math = Objects.requireNonNull(math, "expected parameter 'math' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-    }
+    private PipelineMath() {}
 
-    private PipelineMath() {
-        this.attribute = null;
-        this.math = null;
-        this.name = null;
-        this.next = null;
+    private PipelineMath(PipelineMath $) {
+        this.attribute = $.attribute;
+        this.math = $.math;
+        this.name = $.name;
+        this.next = $.next;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineMath defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attribute;
-        private String math;
-        private String name;
-        private @Nullable String next;
+        private PipelineMath $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineMath();
         }
 
         public Builder(PipelineMath defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.math = defaults.math;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
+            $ = new PipelineMath(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(String attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder math(String math) {
-            this.math = Objects.requireNonNull(math);
+            $.math = math;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder next(@Nullable String next) {
-            this.next = next;
+            $.next = next;
             return this;
-        }        public PipelineMath build() {
-            return new PipelineMath(attribute, math, name, next);
+        }
+
+        public PipelineMath build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.math = Objects.requireNonNull($.math, "expected parameter 'math' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

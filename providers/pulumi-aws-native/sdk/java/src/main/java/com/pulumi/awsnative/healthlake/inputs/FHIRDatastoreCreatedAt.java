@@ -22,7 +22,7 @@ public final class FHIRDatastoreCreatedAt extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="nanos", required=true)
-      private final Integer nanos;
+    private Integer nanos;
 
     public Integer nanos() {
         return this.nanos;
@@ -33,55 +33,52 @@ public final class FHIRDatastoreCreatedAt extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="seconds", required=true)
-      private final String seconds;
+    private String seconds;
 
     public String seconds() {
         return this.seconds;
     }
 
-    public FHIRDatastoreCreatedAt(
-        Integer nanos,
-        String seconds) {
-        this.nanos = Objects.requireNonNull(nanos, "expected parameter 'nanos' to be non-null");
-        this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
-    }
+    private FHIRDatastoreCreatedAt() {}
 
-    private FHIRDatastoreCreatedAt() {
-        this.nanos = null;
-        this.seconds = null;
+    private FHIRDatastoreCreatedAt(FHIRDatastoreCreatedAt $) {
+        this.nanos = $.nanos;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FHIRDatastoreCreatedAt defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer nanos;
-        private String seconds;
+        private FHIRDatastoreCreatedAt $;
 
         public Builder() {
-    	      // Empty
+            $ = new FHIRDatastoreCreatedAt();
         }
 
         public Builder(FHIRDatastoreCreatedAt defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nanos = defaults.nanos;
-    	      this.seconds = defaults.seconds;
+            $ = new FHIRDatastoreCreatedAt(Objects.requireNonNull(defaults));
         }
 
         public Builder nanos(Integer nanos) {
-            this.nanos = Objects.requireNonNull(nanos);
+            $.nanos = nanos;
             return this;
         }
+
         public Builder seconds(String seconds) {
-            this.seconds = Objects.requireNonNull(seconds);
+            $.seconds = seconds;
             return this;
-        }        public FHIRDatastoreCreatedAt build() {
-            return new FHIRDatastoreCreatedAt(nanos, seconds);
+        }
+
+        public FHIRDatastoreCreatedAt build() {
+            $.nanos = Objects.requireNonNull($.nanos, "expected parameter 'nanos' to be non-null");
+            $.seconds = Objects.requireNonNull($.seconds, "expected parameter 'seconds' to be non-null");
+            return $;
         }
     }
+
 }

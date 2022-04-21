@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.ServerBindingType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ServerBindingArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServerBindingArgs Empty = new ServerBindingArgs();
 
     @Import(name="type")
-      private final @Nullable Output<ServerBindingType> type;
+    private @Nullable Output<ServerBindingType> type;
 
-    public Output<ServerBindingType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ServerBindingType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ServerBindingArgs(@Nullable Output<ServerBindingType> type) {
-        this.type = type;
-    }
+    private ServerBindingArgs() {}
 
-    private ServerBindingArgs() {
-        this.type = Codegen.empty();
+    private ServerBindingArgs(ServerBindingArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServerBindingType> type;
+        private ServerBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerBindingArgs();
         }
 
         public Builder(ServerBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ServerBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<ServerBindingType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ServerBindingType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ServerBindingArgs build() {
-            return new ServerBindingArgs(type);
+
+        public Builder type(ServerBindingType type) {
+            return type(Output.of(type));
+        }
+
+        public ServerBindingArgs build() {
+            return $;
         }
     }
+
 }

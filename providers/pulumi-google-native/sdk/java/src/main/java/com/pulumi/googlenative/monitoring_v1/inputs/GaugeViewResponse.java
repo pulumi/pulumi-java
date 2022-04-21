@@ -21,7 +21,7 @@ public final class GaugeViewResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lowerBound", required=true)
-      private final Double lowerBound;
+    private Double lowerBound;
 
     public Double lowerBound() {
         return this.lowerBound;
@@ -32,55 +32,52 @@ public final class GaugeViewResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="upperBound", required=true)
-      private final Double upperBound;
+    private Double upperBound;
 
     public Double upperBound() {
         return this.upperBound;
     }
 
-    public GaugeViewResponse(
-        Double lowerBound,
-        Double upperBound) {
-        this.lowerBound = Objects.requireNonNull(lowerBound, "expected parameter 'lowerBound' to be non-null");
-        this.upperBound = Objects.requireNonNull(upperBound, "expected parameter 'upperBound' to be non-null");
-    }
+    private GaugeViewResponse() {}
 
-    private GaugeViewResponse() {
-        this.lowerBound = null;
-        this.upperBound = null;
+    private GaugeViewResponse(GaugeViewResponse $) {
+        this.lowerBound = $.lowerBound;
+        this.upperBound = $.upperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GaugeViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double lowerBound;
-        private Double upperBound;
+        private GaugeViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GaugeViewResponse();
         }
 
         public Builder(GaugeViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lowerBound = defaults.lowerBound;
-    	      this.upperBound = defaults.upperBound;
+            $ = new GaugeViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lowerBound(Double lowerBound) {
-            this.lowerBound = Objects.requireNonNull(lowerBound);
+            $.lowerBound = lowerBound;
             return this;
         }
+
         public Builder upperBound(Double upperBound) {
-            this.upperBound = Objects.requireNonNull(upperBound);
+            $.upperBound = upperBound;
             return this;
-        }        public GaugeViewResponse build() {
-            return new GaugeViewResponse(lowerBound, upperBound);
+        }
+
+        public GaugeViewResponse build() {
+            $.lowerBound = Objects.requireNonNull($.lowerBound, "expected parameter 'lowerBound' to be non-null");
+            $.upperBound = Objects.requireNonNull($.upperBound, "expected parameter 'upperBound' to be non-null");
+            return $;
         }
     }
+
 }

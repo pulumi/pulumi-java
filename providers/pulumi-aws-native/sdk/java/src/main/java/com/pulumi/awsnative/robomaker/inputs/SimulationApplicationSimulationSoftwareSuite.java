@@ -24,7 +24,7 @@ public final class SimulationApplicationSimulationSoftwareSuite extends com.pulu
      * 
      */
     @Import(name="name", required=true)
-      private final SimulationApplicationSimulationSoftwareSuiteName name;
+    private SimulationApplicationSimulationSoftwareSuiteName name;
 
     public SimulationApplicationSimulationSoftwareSuiteName name() {
         return this.name;
@@ -35,55 +35,51 @@ public final class SimulationApplicationSimulationSoftwareSuite extends com.pulu
      * 
      */
     @Import(name="version")
-      private final @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
+    private @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
 
     public Optional<SimulationApplicationSimulationSoftwareSuiteVersion> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public SimulationApplicationSimulationSoftwareSuite(
-        SimulationApplicationSimulationSoftwareSuiteName name,
-        @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = version;
-    }
+    private SimulationApplicationSimulationSoftwareSuite() {}
 
-    private SimulationApplicationSimulationSoftwareSuite() {
-        this.name = null;
-        this.version = null;
+    private SimulationApplicationSimulationSoftwareSuite(SimulationApplicationSimulationSoftwareSuite $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SimulationApplicationSimulationSoftwareSuite defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SimulationApplicationSimulationSoftwareSuiteName name;
-        private @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
+        private SimulationApplicationSimulationSoftwareSuite $;
 
         public Builder() {
-    	      // Empty
+            $ = new SimulationApplicationSimulationSoftwareSuite();
         }
 
         public Builder(SimulationApplicationSimulationSoftwareSuite defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new SimulationApplicationSimulationSoftwareSuite(Objects.requireNonNull(defaults));
         }
 
         public Builder name(SimulationApplicationSimulationSoftwareSuiteName name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder version(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public SimulationApplicationSimulationSoftwareSuite build() {
-            return new SimulationApplicationSimulationSoftwareSuite(name, version);
+        }
+
+        public SimulationApplicationSimulationSoftwareSuite build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

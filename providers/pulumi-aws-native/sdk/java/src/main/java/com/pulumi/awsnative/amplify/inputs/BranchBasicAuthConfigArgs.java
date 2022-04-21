@@ -5,10 +5,10 @@ package com.pulumi.awsnative.amplify.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,84 @@ public final class BranchBasicAuthConfigArgs extends com.pulumi.resources.Resour
     public static final BranchBasicAuthConfigArgs Empty = new BranchBasicAuthConfigArgs();
 
     @Import(name="enableBasicAuth")
-      private final @Nullable Output<Boolean> enableBasicAuth;
+    private @Nullable Output<Boolean> enableBasicAuth;
 
-    public Output<Boolean> enableBasicAuth() {
-        return this.enableBasicAuth == null ? Codegen.empty() : this.enableBasicAuth;
+    public Optional<Output<Boolean>> enableBasicAuth() {
+        return Optional.ofNullable(this.enableBasicAuth);
     }
 
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
     }
 
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public BranchBasicAuthConfigArgs(
-        @Nullable Output<Boolean> enableBasicAuth,
-        Output<String> password,
-        Output<String> username) {
-        this.enableBasicAuth = enableBasicAuth;
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private BranchBasicAuthConfigArgs() {}
 
-    private BranchBasicAuthConfigArgs() {
-        this.enableBasicAuth = Codegen.empty();
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private BranchBasicAuthConfigArgs(BranchBasicAuthConfigArgs $) {
+        this.enableBasicAuth = $.enableBasicAuth;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BranchBasicAuthConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableBasicAuth;
-        private Output<String> password;
-        private Output<String> username;
+        private BranchBasicAuthConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BranchBasicAuthConfigArgs();
         }
 
         public Builder(BranchBasicAuthConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableBasicAuth = defaults.enableBasicAuth;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new BranchBasicAuthConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
-            this.enableBasicAuth = enableBasicAuth;
+            $.enableBasicAuth = enableBasicAuth;
             return this;
         }
-        public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Codegen.ofNullable(enableBasicAuth);
-            return this;
+
+        public Builder enableBasicAuth(Boolean enableBasicAuth) {
+            return enableBasicAuth(Output.of(enableBasicAuth));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public BranchBasicAuthConfigArgs build() {
-            return new BranchBasicAuthConfigArgs(enableBasicAuth, password, username);
+            return username(Output.of(username));
+        }
+
+        public BranchBasicAuthConfigArgs build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

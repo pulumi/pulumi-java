@@ -17,7 +17,7 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="customerGatewayArn", required=true)
-      private final String customerGatewayArn;
+    private String customerGatewayArn;
 
     public String customerGatewayArn() {
         return this.customerGatewayArn;
@@ -28,55 +28,52 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="globalNetworkId", required=true)
-      private final String globalNetworkId;
+    private String globalNetworkId;
 
     public String globalNetworkId() {
         return this.globalNetworkId;
     }
 
-    public GetCustomerGatewayAssociationArgs(
-        String customerGatewayArn,
-        String globalNetworkId) {
-        this.customerGatewayArn = Objects.requireNonNull(customerGatewayArn, "expected parameter 'customerGatewayArn' to be non-null");
-        this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
-    }
+    private GetCustomerGatewayAssociationArgs() {}
 
-    private GetCustomerGatewayAssociationArgs() {
-        this.customerGatewayArn = null;
-        this.globalNetworkId = null;
+    private GetCustomerGatewayAssociationArgs(GetCustomerGatewayAssociationArgs $) {
+        this.customerGatewayArn = $.customerGatewayArn;
+        this.globalNetworkId = $.globalNetworkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomerGatewayAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customerGatewayArn;
-        private String globalNetworkId;
+        private GetCustomerGatewayAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomerGatewayAssociationArgs();
         }
 
         public Builder(GetCustomerGatewayAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerGatewayArn = defaults.customerGatewayArn;
-    	      this.globalNetworkId = defaults.globalNetworkId;
+            $ = new GetCustomerGatewayAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerGatewayArn(String customerGatewayArn) {
-            this.customerGatewayArn = Objects.requireNonNull(customerGatewayArn);
+            $.customerGatewayArn = customerGatewayArn;
             return this;
         }
+
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
+            $.globalNetworkId = globalNetworkId;
             return this;
-        }        public GetCustomerGatewayAssociationArgs build() {
-            return new GetCustomerGatewayAssociationArgs(customerGatewayArn, globalNetworkId);
+        }
+
+        public GetCustomerGatewayAssociationArgs build() {
+            $.customerGatewayArn = Objects.requireNonNull($.customerGatewayArn, "expected parameter 'customerGatewayArn' to be non-null");
+            $.globalNetworkId = Objects.requireNonNull($.globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
+            return $;
         }
     }
+
 }

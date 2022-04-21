@@ -17,7 +17,7 @@ public final class GetVCenterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVCenterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vcenterName", required=true)
-      private final String vcenterName;
+    private String vcenterName;
 
     public String vcenterName() {
         return this.vcenterName;
     }
 
-    public GetVCenterArgs(
-        String resourceGroupName,
-        String vcenterName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vcenterName = Objects.requireNonNull(vcenterName, "expected parameter 'vcenterName' to be non-null");
-    }
+    private GetVCenterArgs() {}
 
-    private GetVCenterArgs() {
-        this.resourceGroupName = null;
-        this.vcenterName = null;
+    private GetVCenterArgs(GetVCenterArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.vcenterName = $.vcenterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVCenterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String vcenterName;
+        private GetVCenterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVCenterArgs();
         }
 
         public Builder(GetVCenterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vcenterName = defaults.vcenterName;
+            $ = new GetVCenterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vcenterName(String vcenterName) {
-            this.vcenterName = Objects.requireNonNull(vcenterName);
+            $.vcenterName = vcenterName;
             return this;
-        }        public GetVCenterArgs build() {
-            return new GetVCenterArgs(resourceGroupName, vcenterName);
+        }
+
+        public GetVCenterArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vcenterName = Objects.requireNonNull($.vcenterName, "expected parameter 'vcenterName' to be non-null");
+            return $;
         }
     }
+
 }

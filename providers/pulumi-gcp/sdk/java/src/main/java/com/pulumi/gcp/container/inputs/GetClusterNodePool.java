@@ -20,42 +20,42 @@ public final class GetClusterNodePool extends com.pulumi.resources.InvokeArgs {
     public static final GetClusterNodePool Empty = new GetClusterNodePool();
 
     @Import(name="autoscalings", required=true)
-      private final List<GetClusterNodePoolAutoscaling> autoscalings;
+    private List<GetClusterNodePoolAutoscaling> autoscalings;
 
     public List<GetClusterNodePoolAutoscaling> autoscalings() {
         return this.autoscalings;
     }
 
     @Import(name="initialNodeCount", required=true)
-      private final Integer initialNodeCount;
+    private Integer initialNodeCount;
 
     public Integer initialNodeCount() {
         return this.initialNodeCount;
     }
 
     @Import(name="instanceGroupUrls", required=true)
-      private final List<String> instanceGroupUrls;
+    private List<String> instanceGroupUrls;
 
     public List<String> instanceGroupUrls() {
         return this.instanceGroupUrls;
     }
 
     @Import(name="managedInstanceGroupUrls", required=true)
-      private final List<String> managedInstanceGroupUrls;
+    private List<String> managedInstanceGroupUrls;
 
     public List<String> managedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls;
     }
 
     @Import(name="managements", required=true)
-      private final List<GetClusterNodePoolManagement> managements;
+    private List<GetClusterNodePoolManagement> managements;
 
     public List<GetClusterNodePoolManagement> managements() {
         return this.managements;
     }
 
     @Import(name="maxPodsPerNode", required=true)
-      private final Integer maxPodsPerNode;
+    private Integer maxPodsPerNode;
 
     public Integer maxPodsPerNode() {
         return this.maxPodsPerNode;
@@ -66,236 +66,217 @@ public final class GetClusterNodePool extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="namePrefix", required=true)
-      private final String namePrefix;
+    private String namePrefix;
 
     public String namePrefix() {
         return this.namePrefix;
     }
 
     @Import(name="networkConfigs", required=true)
-      private final List<GetClusterNodePoolNetworkConfig> networkConfigs;
+    private List<GetClusterNodePoolNetworkConfig> networkConfigs;
 
     public List<GetClusterNodePoolNetworkConfig> networkConfigs() {
         return this.networkConfigs;
     }
 
     @Import(name="nodeConfigs", required=true)
-      private final List<GetClusterNodePoolNodeConfig> nodeConfigs;
+    private List<GetClusterNodePoolNodeConfig> nodeConfigs;
 
     public List<GetClusterNodePoolNodeConfig> nodeConfigs() {
         return this.nodeConfigs;
     }
 
     @Import(name="nodeCount", required=true)
-      private final Integer nodeCount;
+    private Integer nodeCount;
 
     public Integer nodeCount() {
         return this.nodeCount;
     }
 
     @Import(name="nodeLocations", required=true)
-      private final List<String> nodeLocations;
+    private List<String> nodeLocations;
 
     public List<String> nodeLocations() {
         return this.nodeLocations;
     }
 
     @Import(name="upgradeSettings", required=true)
-      private final List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
+    private List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
 
     public List<GetClusterNodePoolUpgradeSetting> upgradeSettings() {
         return this.upgradeSettings;
     }
 
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public GetClusterNodePool(
-        List<GetClusterNodePoolAutoscaling> autoscalings,
-        Integer initialNodeCount,
-        List<String> instanceGroupUrls,
-        List<String> managedInstanceGroupUrls,
-        List<GetClusterNodePoolManagement> managements,
-        Integer maxPodsPerNode,
-        String name,
-        String namePrefix,
-        List<GetClusterNodePoolNetworkConfig> networkConfigs,
-        List<GetClusterNodePoolNodeConfig> nodeConfigs,
-        Integer nodeCount,
-        List<String> nodeLocations,
-        List<GetClusterNodePoolUpgradeSetting> upgradeSettings,
-        String version) {
-        this.autoscalings = Objects.requireNonNull(autoscalings, "expected parameter 'autoscalings' to be non-null");
-        this.initialNodeCount = Objects.requireNonNull(initialNodeCount, "expected parameter 'initialNodeCount' to be non-null");
-        this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls, "expected parameter 'instanceGroupUrls' to be non-null");
-        this.managedInstanceGroupUrls = Objects.requireNonNull(managedInstanceGroupUrls, "expected parameter 'managedInstanceGroupUrls' to be non-null");
-        this.managements = Objects.requireNonNull(managements, "expected parameter 'managements' to be non-null");
-        this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode, "expected parameter 'maxPodsPerNode' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namePrefix = Objects.requireNonNull(namePrefix, "expected parameter 'namePrefix' to be non-null");
-        this.networkConfigs = Objects.requireNonNull(networkConfigs, "expected parameter 'networkConfigs' to be non-null");
-        this.nodeConfigs = Objects.requireNonNull(nodeConfigs, "expected parameter 'nodeConfigs' to be non-null");
-        this.nodeCount = Objects.requireNonNull(nodeCount, "expected parameter 'nodeCount' to be non-null");
-        this.nodeLocations = Objects.requireNonNull(nodeLocations, "expected parameter 'nodeLocations' to be non-null");
-        this.upgradeSettings = Objects.requireNonNull(upgradeSettings, "expected parameter 'upgradeSettings' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private GetClusterNodePool() {}
 
-    private GetClusterNodePool() {
-        this.autoscalings = List.of();
-        this.initialNodeCount = null;
-        this.instanceGroupUrls = List.of();
-        this.managedInstanceGroupUrls = List.of();
-        this.managements = List.of();
-        this.maxPodsPerNode = null;
-        this.name = null;
-        this.namePrefix = null;
-        this.networkConfigs = List.of();
-        this.nodeConfigs = List.of();
-        this.nodeCount = null;
-        this.nodeLocations = List.of();
-        this.upgradeSettings = List.of();
-        this.version = null;
+    private GetClusterNodePool(GetClusterNodePool $) {
+        this.autoscalings = $.autoscalings;
+        this.initialNodeCount = $.initialNodeCount;
+        this.instanceGroupUrls = $.instanceGroupUrls;
+        this.managedInstanceGroupUrls = $.managedInstanceGroupUrls;
+        this.managements = $.managements;
+        this.maxPodsPerNode = $.maxPodsPerNode;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.networkConfigs = $.networkConfigs;
+        this.nodeConfigs = $.nodeConfigs;
+        this.nodeCount = $.nodeCount;
+        this.nodeLocations = $.nodeLocations;
+        this.upgradeSettings = $.upgradeSettings;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePool defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetClusterNodePoolAutoscaling> autoscalings;
-        private Integer initialNodeCount;
-        private List<String> instanceGroupUrls;
-        private List<String> managedInstanceGroupUrls;
-        private List<GetClusterNodePoolManagement> managements;
-        private Integer maxPodsPerNode;
-        private String name;
-        private String namePrefix;
-        private List<GetClusterNodePoolNetworkConfig> networkConfigs;
-        private List<GetClusterNodePoolNodeConfig> nodeConfigs;
-        private Integer nodeCount;
-        private List<String> nodeLocations;
-        private List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
-        private String version;
+        private GetClusterNodePool $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePool();
         }
 
         public Builder(GetClusterNodePool defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalings = defaults.autoscalings;
-    	      this.initialNodeCount = defaults.initialNodeCount;
-    	      this.instanceGroupUrls = defaults.instanceGroupUrls;
-    	      this.managedInstanceGroupUrls = defaults.managedInstanceGroupUrls;
-    	      this.managements = defaults.managements;
-    	      this.maxPodsPerNode = defaults.maxPodsPerNode;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.networkConfigs = defaults.networkConfigs;
-    	      this.nodeConfigs = defaults.nodeConfigs;
-    	      this.nodeCount = defaults.nodeCount;
-    	      this.nodeLocations = defaults.nodeLocations;
-    	      this.upgradeSettings = defaults.upgradeSettings;
-    	      this.version = defaults.version;
+            $ = new GetClusterNodePool(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalings(List<GetClusterNodePoolAutoscaling> autoscalings) {
-            this.autoscalings = Objects.requireNonNull(autoscalings);
+            $.autoscalings = autoscalings;
             return this;
         }
+
         public Builder autoscalings(GetClusterNodePoolAutoscaling... autoscalings) {
             return autoscalings(List.of(autoscalings));
         }
+
         public Builder initialNodeCount(Integer initialNodeCount) {
-            this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
+            $.initialNodeCount = initialNodeCount;
             return this;
         }
+
         public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
-            this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls);
+            $.instanceGroupUrls = instanceGroupUrls;
             return this;
         }
+
         public Builder instanceGroupUrls(String... instanceGroupUrls) {
             return instanceGroupUrls(List.of(instanceGroupUrls));
         }
+
         public Builder managedInstanceGroupUrls(List<String> managedInstanceGroupUrls) {
-            this.managedInstanceGroupUrls = Objects.requireNonNull(managedInstanceGroupUrls);
+            $.managedInstanceGroupUrls = managedInstanceGroupUrls;
             return this;
         }
+
         public Builder managedInstanceGroupUrls(String... managedInstanceGroupUrls) {
             return managedInstanceGroupUrls(List.of(managedInstanceGroupUrls));
         }
+
         public Builder managements(List<GetClusterNodePoolManagement> managements) {
-            this.managements = Objects.requireNonNull(managements);
+            $.managements = managements;
             return this;
         }
+
         public Builder managements(GetClusterNodePoolManagement... managements) {
             return managements(List.of(managements));
         }
+
         public Builder maxPodsPerNode(Integer maxPodsPerNode) {
-            this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
+            $.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder namePrefix(String namePrefix) {
-            this.namePrefix = Objects.requireNonNull(namePrefix);
+            $.namePrefix = namePrefix;
             return this;
         }
+
         public Builder networkConfigs(List<GetClusterNodePoolNetworkConfig> networkConfigs) {
-            this.networkConfigs = Objects.requireNonNull(networkConfigs);
+            $.networkConfigs = networkConfigs;
             return this;
         }
+
         public Builder networkConfigs(GetClusterNodePoolNetworkConfig... networkConfigs) {
             return networkConfigs(List.of(networkConfigs));
         }
+
         public Builder nodeConfigs(List<GetClusterNodePoolNodeConfig> nodeConfigs) {
-            this.nodeConfigs = Objects.requireNonNull(nodeConfigs);
+            $.nodeConfigs = nodeConfigs;
             return this;
         }
+
         public Builder nodeConfigs(GetClusterNodePoolNodeConfig... nodeConfigs) {
             return nodeConfigs(List.of(nodeConfigs));
         }
+
         public Builder nodeCount(Integer nodeCount) {
-            this.nodeCount = Objects.requireNonNull(nodeCount);
+            $.nodeCount = nodeCount;
             return this;
         }
+
         public Builder nodeLocations(List<String> nodeLocations) {
-            this.nodeLocations = Objects.requireNonNull(nodeLocations);
+            $.nodeLocations = nodeLocations;
             return this;
         }
+
         public Builder nodeLocations(String... nodeLocations) {
             return nodeLocations(List.of(nodeLocations));
         }
+
         public Builder upgradeSettings(List<GetClusterNodePoolUpgradeSetting> upgradeSettings) {
-            this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
+            $.upgradeSettings = upgradeSettings;
             return this;
         }
+
         public Builder upgradeSettings(GetClusterNodePoolUpgradeSetting... upgradeSettings) {
             return upgradeSettings(List.of(upgradeSettings));
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public GetClusterNodePool build() {
-            return new GetClusterNodePool(autoscalings, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, managements, maxPodsPerNode, name, namePrefix, networkConfigs, nodeConfigs, nodeCount, nodeLocations, upgradeSettings, version);
+        }
+
+        public GetClusterNodePool build() {
+            $.autoscalings = Objects.requireNonNull($.autoscalings, "expected parameter 'autoscalings' to be non-null");
+            $.initialNodeCount = Objects.requireNonNull($.initialNodeCount, "expected parameter 'initialNodeCount' to be non-null");
+            $.instanceGroupUrls = Objects.requireNonNull($.instanceGroupUrls, "expected parameter 'instanceGroupUrls' to be non-null");
+            $.managedInstanceGroupUrls = Objects.requireNonNull($.managedInstanceGroupUrls, "expected parameter 'managedInstanceGroupUrls' to be non-null");
+            $.managements = Objects.requireNonNull($.managements, "expected parameter 'managements' to be non-null");
+            $.maxPodsPerNode = Objects.requireNonNull($.maxPodsPerNode, "expected parameter 'maxPodsPerNode' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namePrefix = Objects.requireNonNull($.namePrefix, "expected parameter 'namePrefix' to be non-null");
+            $.networkConfigs = Objects.requireNonNull($.networkConfigs, "expected parameter 'networkConfigs' to be non-null");
+            $.nodeConfigs = Objects.requireNonNull($.nodeConfigs, "expected parameter 'nodeConfigs' to be non-null");
+            $.nodeCount = Objects.requireNonNull($.nodeCount, "expected parameter 'nodeCount' to be non-null");
+            $.nodeLocations = Objects.requireNonNull($.nodeLocations, "expected parameter 'nodeLocations' to be non-null");
+            $.upgradeSettings = Objects.requireNonNull($.upgradeSettings, "expected parameter 'upgradeSettings' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

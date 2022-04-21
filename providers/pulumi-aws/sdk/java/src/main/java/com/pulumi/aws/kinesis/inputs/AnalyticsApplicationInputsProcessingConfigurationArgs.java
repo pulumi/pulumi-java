@@ -6,7 +6,6 @@ package com.pulumi.aws.kinesis.inputs;
 import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsProcessingConfigurationLambdaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class AnalyticsApplicationInputsProcessingConfigurationArgs extends
      * 
      */
     @Import(name="lambda", required=true)
-      private final Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda;
+    private Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda;
 
     public Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda() {
         return this.lambda;
     }
 
-    public AnalyticsApplicationInputsProcessingConfigurationArgs(Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda) {
-        this.lambda = Objects.requireNonNull(lambda, "expected parameter 'lambda' to be non-null");
-    }
+    private AnalyticsApplicationInputsProcessingConfigurationArgs() {}
 
-    private AnalyticsApplicationInputsProcessingConfigurationArgs() {
-        this.lambda = Codegen.empty();
+    private AnalyticsApplicationInputsProcessingConfigurationArgs(AnalyticsApplicationInputsProcessingConfigurationArgs $) {
+        this.lambda = $.lambda;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationInputsProcessingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda;
+        private AnalyticsApplicationInputsProcessingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationInputsProcessingConfigurationArgs();
         }
 
         public Builder(AnalyticsApplicationInputsProcessingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lambda = defaults.lambda;
+            $ = new AnalyticsApplicationInputsProcessingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lambda(Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda) {
-            this.lambda = Objects.requireNonNull(lambda);
+            $.lambda = lambda;
             return this;
         }
+
         public Builder lambda(AnalyticsApplicationInputsProcessingConfigurationLambdaArgs lambda) {
-            this.lambda = Output.of(Objects.requireNonNull(lambda));
-            return this;
-        }        public AnalyticsApplicationInputsProcessingConfigurationArgs build() {
-            return new AnalyticsApplicationInputsProcessingConfigurationArgs(lambda);
+            return lambda(Output.of(lambda));
+        }
+
+        public AnalyticsApplicationInputsProcessingConfigurationArgs build() {
+            $.lambda = Objects.requireNonNull($.lambda, "expected parameter 'lambda' to be non-null");
+            return $;
         }
     }
+
 }

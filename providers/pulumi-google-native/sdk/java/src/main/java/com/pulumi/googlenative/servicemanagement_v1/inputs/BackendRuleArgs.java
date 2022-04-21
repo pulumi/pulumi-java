@@ -5,12 +5,12 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.enums.BackendRulePathTranslation;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BackendRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BackendRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadline")
-      private final @Nullable Output<Double> deadline;
+    private @Nullable Output<Double> deadline;
 
-    public Output<Double> deadline() {
-        return this.deadline == null ? Codegen.empty() : this.deadline;
+    public Optional<Output<Double>> deadline() {
+        return Optional.ofNullable(this.deadline);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BackendRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableAuth")
-      private final @Nullable Output<Boolean> disableAuth;
+    private @Nullable Output<Boolean> disableAuth;
 
-    public Output<Boolean> disableAuth() {
-        return this.disableAuth == null ? Codegen.empty() : this.disableAuth;
+    public Optional<Output<Boolean>> disableAuth() {
+        return Optional.ofNullable(this.disableAuth);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BackendRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jwtAudience")
-      private final @Nullable Output<String> jwtAudience;
+    private @Nullable Output<String> jwtAudience;
 
-    public Output<String> jwtAudience() {
-        return this.jwtAudience == null ? Codegen.empty() : this.jwtAudience;
+    public Optional<Output<String>> jwtAudience() {
+        return Optional.ofNullable(this.jwtAudience);
     }
 
     /**
@@ -71,17 +71,17 @@ public final class BackendRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operationDeadline")
-      private final @Nullable Output<Double> operationDeadline;
+    private @Nullable Output<Double> operationDeadline;
 
-    public Output<Double> operationDeadline() {
-        return this.operationDeadline == null ? Codegen.empty() : this.operationDeadline;
+    public Optional<Output<Double>> operationDeadline() {
+        return Optional.ofNullable(this.operationDeadline);
     }
 
     @Import(name="pathTranslation")
-      private final @Nullable Output<BackendRulePathTranslation> pathTranslation;
+    private @Nullable Output<BackendRulePathTranslation> pathTranslation;
 
-    public Output<BackendRulePathTranslation> pathTranslation() {
-        return this.pathTranslation == null ? Codegen.empty() : this.pathTranslation;
+    public Optional<Output<BackendRulePathTranslation>> pathTranslation() {
+        return Optional.ofNullable(this.pathTranslation);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class BackendRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -100,141 +100,118 @@ public final class BackendRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<String> selector;
+    private @Nullable Output<String> selector;
 
-    public Output<String> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<String>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public BackendRuleArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<Double> deadline,
-        @Nullable Output<Boolean> disableAuth,
-        @Nullable Output<String> jwtAudience,
-        @Nullable Output<Double> operationDeadline,
-        @Nullable Output<BackendRulePathTranslation> pathTranslation,
-        @Nullable Output<String> protocol,
-        @Nullable Output<String> selector) {
-        this.address = address;
-        this.deadline = deadline;
-        this.disableAuth = disableAuth;
-        this.jwtAudience = jwtAudience;
-        this.operationDeadline = operationDeadline;
-        this.pathTranslation = pathTranslation;
-        this.protocol = protocol;
-        this.selector = selector;
-    }
+    private BackendRuleArgs() {}
 
-    private BackendRuleArgs() {
-        this.address = Codegen.empty();
-        this.deadline = Codegen.empty();
-        this.disableAuth = Codegen.empty();
-        this.jwtAudience = Codegen.empty();
-        this.operationDeadline = Codegen.empty();
-        this.pathTranslation = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.selector = Codegen.empty();
+    private BackendRuleArgs(BackendRuleArgs $) {
+        this.address = $.address;
+        this.deadline = $.deadline;
+        this.disableAuth = $.disableAuth;
+        this.jwtAudience = $.jwtAudience;
+        this.operationDeadline = $.operationDeadline;
+        this.pathTranslation = $.pathTranslation;
+        this.protocol = $.protocol;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<Double> deadline;
-        private @Nullable Output<Boolean> disableAuth;
-        private @Nullable Output<String> jwtAudience;
-        private @Nullable Output<Double> operationDeadline;
-        private @Nullable Output<BackendRulePathTranslation> pathTranslation;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<String> selector;
+        private BackendRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendRuleArgs();
         }
 
         public Builder(BackendRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.deadline = defaults.deadline;
-    	      this.disableAuth = defaults.disableAuth;
-    	      this.jwtAudience = defaults.jwtAudience;
-    	      this.operationDeadline = defaults.operationDeadline;
-    	      this.pathTranslation = defaults.pathTranslation;
-    	      this.protocol = defaults.protocol;
-    	      this.selector = defaults.selector;
+            $ = new BackendRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder deadline(@Nullable Output<Double> deadline) {
-            this.deadline = deadline;
+            $.deadline = deadline;
             return this;
         }
-        public Builder deadline(@Nullable Double deadline) {
-            this.deadline = Codegen.ofNullable(deadline);
-            return this;
+
+        public Builder deadline(Double deadline) {
+            return deadline(Output.of(deadline));
         }
+
         public Builder disableAuth(@Nullable Output<Boolean> disableAuth) {
-            this.disableAuth = disableAuth;
+            $.disableAuth = disableAuth;
             return this;
         }
-        public Builder disableAuth(@Nullable Boolean disableAuth) {
-            this.disableAuth = Codegen.ofNullable(disableAuth);
-            return this;
+
+        public Builder disableAuth(Boolean disableAuth) {
+            return disableAuth(Output.of(disableAuth));
         }
+
         public Builder jwtAudience(@Nullable Output<String> jwtAudience) {
-            this.jwtAudience = jwtAudience;
+            $.jwtAudience = jwtAudience;
             return this;
         }
-        public Builder jwtAudience(@Nullable String jwtAudience) {
-            this.jwtAudience = Codegen.ofNullable(jwtAudience);
-            return this;
+
+        public Builder jwtAudience(String jwtAudience) {
+            return jwtAudience(Output.of(jwtAudience));
         }
+
         public Builder operationDeadline(@Nullable Output<Double> operationDeadline) {
-            this.operationDeadline = operationDeadline;
+            $.operationDeadline = operationDeadline;
             return this;
         }
-        public Builder operationDeadline(@Nullable Double operationDeadline) {
-            this.operationDeadline = Codegen.ofNullable(operationDeadline);
-            return this;
+
+        public Builder operationDeadline(Double operationDeadline) {
+            return operationDeadline(Output.of(operationDeadline));
         }
+
         public Builder pathTranslation(@Nullable Output<BackendRulePathTranslation> pathTranslation) {
-            this.pathTranslation = pathTranslation;
+            $.pathTranslation = pathTranslation;
             return this;
         }
-        public Builder pathTranslation(@Nullable BackendRulePathTranslation pathTranslation) {
-            this.pathTranslation = Codegen.ofNullable(pathTranslation);
-            return this;
+
+        public Builder pathTranslation(BackendRulePathTranslation pathTranslation) {
+            return pathTranslation(Output.of(pathTranslation));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder selector(@Nullable Output<String> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable String selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public BackendRuleArgs build() {
-            return new BackendRuleArgs(address, deadline, disableAuth, jwtAudience, operationDeadline, pathTranslation, protocol, selector);
+
+        public Builder selector(String selector) {
+            return selector(Output.of(selector));
+        }
+
+        public BackendRuleArgs build() {
+            return $;
         }
     }
+
 }

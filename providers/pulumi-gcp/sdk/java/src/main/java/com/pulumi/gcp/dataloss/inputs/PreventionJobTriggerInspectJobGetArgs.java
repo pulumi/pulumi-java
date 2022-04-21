@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionGetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigGetArgs;
 import java.lang.String;
@@ -23,7 +22,7 @@ public final class PreventionJobTriggerInspectJobGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<PreventionJobTriggerInspectJobActionGetArgs>> actions;
+    private Output<List<PreventionJobTriggerInspectJobActionGetArgs>> actions;
 
     public Output<List<PreventionJobTriggerInspectJobActionGetArgs>> actions() {
         return this.actions;
@@ -34,7 +33,7 @@ public final class PreventionJobTriggerInspectJobGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="inspectTemplateName", required=true)
-      private final Output<String> inspectTemplateName;
+    private Output<String> inspectTemplateName;
 
     public Output<String> inspectTemplateName() {
         return this.inspectTemplateName;
@@ -46,79 +45,75 @@ public final class PreventionJobTriggerInspectJobGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="storageConfig", required=true)
-      private final Output<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig;
+    private Output<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig;
 
     public Output<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig() {
         return this.storageConfig;
     }
 
-    public PreventionJobTriggerInspectJobGetArgs(
-        Output<List<PreventionJobTriggerInspectJobActionGetArgs>> actions,
-        Output<String> inspectTemplateName,
-        Output<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName, "expected parameter 'inspectTemplateName' to be non-null");
-        this.storageConfig = Objects.requireNonNull(storageConfig, "expected parameter 'storageConfig' to be non-null");
-    }
+    private PreventionJobTriggerInspectJobGetArgs() {}
 
-    private PreventionJobTriggerInspectJobGetArgs() {
-        this.actions = Codegen.empty();
-        this.inspectTemplateName = Codegen.empty();
-        this.storageConfig = Codegen.empty();
+    private PreventionJobTriggerInspectJobGetArgs(PreventionJobTriggerInspectJobGetArgs $) {
+        this.actions = $.actions;
+        this.inspectTemplateName = $.inspectTemplateName;
+        this.storageConfig = $.storageConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerInspectJobGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<PreventionJobTriggerInspectJobActionGetArgs>> actions;
-        private Output<String> inspectTemplateName;
-        private Output<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig;
+        private PreventionJobTriggerInspectJobGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerInspectJobGetArgs();
         }
 
         public Builder(PreventionJobTriggerInspectJobGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.inspectTemplateName = defaults.inspectTemplateName;
-    	      this.storageConfig = defaults.storageConfig;
+            $ = new PreventionJobTriggerInspectJobGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<PreventionJobTriggerInspectJobActionGetArgs>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<PreventionJobTriggerInspectJobActionGetArgs> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(PreventionJobTriggerInspectJobActionGetArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder inspectTemplateName(Output<String> inspectTemplateName) {
-            this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName);
+            $.inspectTemplateName = inspectTemplateName;
             return this;
         }
+
         public Builder inspectTemplateName(String inspectTemplateName) {
-            this.inspectTemplateName = Output.of(Objects.requireNonNull(inspectTemplateName));
-            return this;
+            return inspectTemplateName(Output.of(inspectTemplateName));
         }
+
         public Builder storageConfig(Output<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig) {
-            this.storageConfig = Objects.requireNonNull(storageConfig);
+            $.storageConfig = storageConfig;
             return this;
         }
+
         public Builder storageConfig(PreventionJobTriggerInspectJobStorageConfigGetArgs storageConfig) {
-            this.storageConfig = Output.of(Objects.requireNonNull(storageConfig));
-            return this;
-        }        public PreventionJobTriggerInspectJobGetArgs build() {
-            return new PreventionJobTriggerInspectJobGetArgs(actions, inspectTemplateName, storageConfig);
+            return storageConfig(Output.of(storageConfig));
+        }
+
+        public PreventionJobTriggerInspectJobGetArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.inspectTemplateName = Objects.requireNonNull($.inspectTemplateName, "expected parameter 'inspectTemplateName' to be non-null");
+            $.storageConfig = Objects.requireNonNull($.storageConfig, "expected parameter 'storageConfig' to be non-null");
+            return $;
         }
     }
+
 }

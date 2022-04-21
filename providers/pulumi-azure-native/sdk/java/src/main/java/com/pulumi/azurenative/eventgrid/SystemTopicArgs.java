@@ -6,10 +6,10 @@ package com.pulumi.azurenative.eventgrid;
 import com.pulumi.azurenative.eventgrid.inputs.IdentityInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SystemTopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityInfoArgs> identity;
+    private @Nullable Output<IdentityInfoArgs> identity;
 
-    public Output<IdentityInfoArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityInfoArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SystemTopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class SystemTopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,10 +55,10 @@ public final class SystemTopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SystemTopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="systemTopicName")
-      private final @Nullable Output<String> systemTopicName;
+    private @Nullable Output<String> systemTopicName;
 
-    public Output<String> systemTopicName() {
-        return this.systemTopicName == null ? Codegen.empty() : this.systemTopicName;
+    public Optional<Output<String>> systemTopicName() {
+        return Optional.ofNullable(this.systemTopicName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SystemTopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,128 +88,109 @@ public final class SystemTopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topicType")
-      private final @Nullable Output<String> topicType;
+    private @Nullable Output<String> topicType;
 
-    public Output<String> topicType() {
-        return this.topicType == null ? Codegen.empty() : this.topicType;
+    public Optional<Output<String>> topicType() {
+        return Optional.ofNullable(this.topicType);
     }
 
-    public SystemTopicArgs(
-        @Nullable Output<IdentityInfoArgs> identity,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> source,
-        @Nullable Output<String> systemTopicName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> topicType) {
-        this.identity = identity;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.source = source;
-        this.systemTopicName = systemTopicName;
-        this.tags = tags;
-        this.topicType = topicType;
-    }
+    private SystemTopicArgs() {}
 
-    private SystemTopicArgs() {
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.source = Codegen.empty();
-        this.systemTopicName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.topicType = Codegen.empty();
+    private SystemTopicArgs(SystemTopicArgs $) {
+        this.identity = $.identity;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.source = $.source;
+        this.systemTopicName = $.systemTopicName;
+        this.tags = $.tags;
+        this.topicType = $.topicType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemTopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IdentityInfoArgs> identity;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> source;
-        private @Nullable Output<String> systemTopicName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> topicType;
+        private SystemTopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemTopicArgs();
         }
 
         public Builder(SystemTopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.source = defaults.source;
-    	      this.systemTopicName = defaults.systemTopicName;
-    	      this.tags = defaults.tags;
-    	      this.topicType = defaults.topicType;
+            $ = new SystemTopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<IdentityInfoArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityInfoArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityInfoArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(String source) {
+            return source(Output.of(source));
         }
+
         public Builder systemTopicName(@Nullable Output<String> systemTopicName) {
-            this.systemTopicName = systemTopicName;
+            $.systemTopicName = systemTopicName;
             return this;
         }
-        public Builder systemTopicName(@Nullable String systemTopicName) {
-            this.systemTopicName = Codegen.ofNullable(systemTopicName);
-            return this;
+
+        public Builder systemTopicName(String systemTopicName) {
+            return systemTopicName(Output.of(systemTopicName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder topicType(@Nullable Output<String> topicType) {
-            this.topicType = topicType;
+            $.topicType = topicType;
             return this;
         }
-        public Builder topicType(@Nullable String topicType) {
-            this.topicType = Codegen.ofNullable(topicType);
-            return this;
-        }        public SystemTopicArgs build() {
-            return new SystemTopicArgs(identity, location, resourceGroupName, source, systemTopicName, tags, topicType);
+
+        public Builder topicType(String topicType) {
+            return topicType(Output.of(topicType));
+        }
+
+        public SystemTopicArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

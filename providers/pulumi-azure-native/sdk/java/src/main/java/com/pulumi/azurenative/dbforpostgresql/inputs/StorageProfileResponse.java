@@ -24,10 +24,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="backupRetentionDays")
-      private final @Nullable Integer backupRetentionDays;
+    private @Nullable Integer backupRetentionDays;
 
     public Optional<Integer> backupRetentionDays() {
-        return this.backupRetentionDays == null ? Optional.empty() : Optional.ofNullable(this.backupRetentionDays);
+        return Optional.ofNullable(this.backupRetentionDays);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="geoRedundantBackup")
-      private final @Nullable String geoRedundantBackup;
+    private @Nullable String geoRedundantBackup;
 
     public Optional<String> geoRedundantBackup() {
-        return this.geoRedundantBackup == null ? Optional.empty() : Optional.ofNullable(this.geoRedundantBackup);
+        return Optional.ofNullable(this.geoRedundantBackup);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="storageAutogrow")
-      private final @Nullable String storageAutogrow;
+    private @Nullable String storageAutogrow;
 
     public Optional<String> storageAutogrow() {
-        return this.storageAutogrow == null ? Optional.empty() : Optional.ofNullable(this.storageAutogrow);
+        return Optional.ofNullable(this.storageAutogrow);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="storageMB")
-      private final @Nullable Integer storageMB;
+    private @Nullable Integer storageMB;
 
     public Optional<Integer> storageMB() {
-        return this.storageMB == null ? Optional.empty() : Optional.ofNullable(this.storageMB);
+        return Optional.ofNullable(this.storageMB);
     }
 
-    public StorageProfileResponse(
-        @Nullable Integer backupRetentionDays,
-        @Nullable String geoRedundantBackup,
-        @Nullable String storageAutogrow,
-        @Nullable Integer storageMB) {
-        this.backupRetentionDays = backupRetentionDays;
-        this.geoRedundantBackup = geoRedundantBackup;
-        this.storageAutogrow = storageAutogrow;
-        this.storageMB = storageMB;
-    }
+    private StorageProfileResponse() {}
 
-    private StorageProfileResponse() {
-        this.backupRetentionDays = null;
-        this.geoRedundantBackup = null;
-        this.storageAutogrow = null;
-        this.storageMB = null;
+    private StorageProfileResponse(StorageProfileResponse $) {
+        this.backupRetentionDays = $.backupRetentionDays;
+        this.geoRedundantBackup = $.geoRedundantBackup;
+        this.storageAutogrow = $.storageAutogrow;
+        this.storageMB = $.storageMB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer backupRetentionDays;
-        private @Nullable String geoRedundantBackup;
-        private @Nullable String storageAutogrow;
-        private @Nullable Integer storageMB;
+        private StorageProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageProfileResponse();
         }
 
         public Builder(StorageProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupRetentionDays = defaults.backupRetentionDays;
-    	      this.geoRedundantBackup = defaults.geoRedundantBackup;
-    	      this.storageAutogrow = defaults.storageAutogrow;
-    	      this.storageMB = defaults.storageMB;
+            $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupRetentionDays(@Nullable Integer backupRetentionDays) {
-            this.backupRetentionDays = backupRetentionDays;
+            $.backupRetentionDays = backupRetentionDays;
             return this;
         }
+
         public Builder geoRedundantBackup(@Nullable String geoRedundantBackup) {
-            this.geoRedundantBackup = geoRedundantBackup;
+            $.geoRedundantBackup = geoRedundantBackup;
             return this;
         }
+
         public Builder storageAutogrow(@Nullable String storageAutogrow) {
-            this.storageAutogrow = storageAutogrow;
+            $.storageAutogrow = storageAutogrow;
             return this;
         }
+
         public Builder storageMB(@Nullable Integer storageMB) {
-            this.storageMB = storageMB;
+            $.storageMB = storageMB;
             return this;
-        }        public StorageProfileResponse build() {
-            return new StorageProfileResponse(backupRetentionDays, geoRedundantBackup, storageAutogrow, storageMB);
+        }
+
+        public StorageProfileResponse build() {
+            return $;
         }
     }
+
 }

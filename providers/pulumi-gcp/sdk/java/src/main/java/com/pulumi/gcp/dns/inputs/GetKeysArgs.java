@@ -19,7 +19,7 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managedZone", required=true)
-      private final String managedZone;
+    private String managedZone;
 
     public String managedZone() {
         return this.managedZone;
@@ -30,55 +30,51 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetKeysArgs(
-        String managedZone,
-        @Nullable String project) {
-        this.managedZone = Objects.requireNonNull(managedZone, "expected parameter 'managedZone' to be non-null");
-        this.project = project;
-    }
+    private GetKeysArgs() {}
 
-    private GetKeysArgs() {
-        this.managedZone = null;
-        this.project = null;
+    private GetKeysArgs(GetKeysArgs $) {
+        this.managedZone = $.managedZone;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managedZone;
-        private @Nullable String project;
+        private GetKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeysArgs();
         }
 
         public Builder(GetKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedZone = defaults.managedZone;
-    	      this.project = defaults.project;
+            $ = new GetKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managedZone(String managedZone) {
-            this.managedZone = Objects.requireNonNull(managedZone);
+            $.managedZone = managedZone;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetKeysArgs build() {
-            return new GetKeysArgs(managedZone, project);
+        }
+
+        public GetKeysArgs build() {
+            $.managedZone = Objects.requireNonNull($.managedZone, "expected parameter 'managedZone' to be non-null");
+            return $;
         }
     }
+
 }

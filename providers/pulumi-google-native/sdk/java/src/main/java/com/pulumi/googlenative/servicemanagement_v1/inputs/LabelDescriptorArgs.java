@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.enums.LabelDescriptorValueType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LabelDescriptorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LabelDescriptorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class LabelDescriptorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="valueType")
-      private final @Nullable Output<LabelDescriptorValueType> valueType;
+    private @Nullable Output<LabelDescriptorValueType> valueType;
 
-    public Output<LabelDescriptorValueType> valueType() {
-        return this.valueType == null ? Codegen.empty() : this.valueType;
+    public Optional<Output<LabelDescriptorValueType>> valueType() {
+        return Optional.ofNullable(this.valueType);
     }
 
-    public LabelDescriptorArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> key,
-        @Nullable Output<LabelDescriptorValueType> valueType) {
-        this.description = description;
-        this.key = key;
-        this.valueType = valueType;
-    }
+    private LabelDescriptorArgs() {}
 
-    private LabelDescriptorArgs() {
-        this.description = Codegen.empty();
-        this.key = Codegen.empty();
-        this.valueType = Codegen.empty();
+    private LabelDescriptorArgs(LabelDescriptorArgs $) {
+        this.description = $.description;
+        this.key = $.key;
+        this.valueType = $.valueType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelDescriptorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> key;
-        private @Nullable Output<LabelDescriptorValueType> valueType;
+        private LabelDescriptorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelDescriptorArgs();
         }
 
         public Builder(LabelDescriptorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.key = defaults.key;
-    	      this.valueType = defaults.valueType;
+            $ = new LabelDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder valueType(@Nullable Output<LabelDescriptorValueType> valueType) {
-            this.valueType = valueType;
+            $.valueType = valueType;
             return this;
         }
-        public Builder valueType(@Nullable LabelDescriptorValueType valueType) {
-            this.valueType = Codegen.ofNullable(valueType);
-            return this;
-        }        public LabelDescriptorArgs build() {
-            return new LabelDescriptorArgs(description, key, valueType);
+
+        public Builder valueType(LabelDescriptorValueType valueType) {
+            return valueType(Output.of(valueType));
+        }
+
+        public LabelDescriptorArgs build() {
+            return $;
         }
     }
+
 }

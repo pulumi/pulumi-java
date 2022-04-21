@@ -15,110 +15,100 @@ public final class GetServiceLevelObjectiveArgs extends com.pulumi.resources.Inv
     public static final GetServiceLevelObjectiveArgs Empty = new GetServiceLevelObjectiveArgs();
 
     @Import(name="serviceId", required=true)
-      private final String serviceId;
+    private String serviceId;
 
     public String serviceId() {
         return this.serviceId;
     }
 
     @Import(name="serviceLevelObjectiveId", required=true)
-      private final String serviceLevelObjectiveId;
+    private String serviceLevelObjectiveId;
 
     public String serviceLevelObjectiveId() {
         return this.serviceLevelObjectiveId;
     }
 
     @Import(name="v3Id", required=true)
-      private final String v3Id;
+    private String v3Id;
 
     public String v3Id() {
         return this.v3Id;
     }
 
     @Import(name="v3Id1", required=true)
-      private final String v3Id1;
+    private String v3Id1;
 
     public String v3Id1() {
         return this.v3Id1;
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetServiceLevelObjectiveArgs(
-        String serviceId,
-        String serviceLevelObjectiveId,
-        String v3Id,
-        String v3Id1,
-        @Nullable String view) {
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-        this.serviceLevelObjectiveId = Objects.requireNonNull(serviceLevelObjectiveId, "expected parameter 'serviceLevelObjectiveId' to be non-null");
-        this.v3Id = Objects.requireNonNull(v3Id, "expected parameter 'v3Id' to be non-null");
-        this.v3Id1 = Objects.requireNonNull(v3Id1, "expected parameter 'v3Id1' to be non-null");
-        this.view = view;
-    }
+    private GetServiceLevelObjectiveArgs() {}
 
-    private GetServiceLevelObjectiveArgs() {
-        this.serviceId = null;
-        this.serviceLevelObjectiveId = null;
-        this.v3Id = null;
-        this.v3Id1 = null;
-        this.view = null;
+    private GetServiceLevelObjectiveArgs(GetServiceLevelObjectiveArgs $) {
+        this.serviceId = $.serviceId;
+        this.serviceLevelObjectiveId = $.serviceLevelObjectiveId;
+        this.v3Id = $.v3Id;
+        this.v3Id1 = $.v3Id1;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceLevelObjectiveArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String serviceId;
-        private String serviceLevelObjectiveId;
-        private String v3Id;
-        private String v3Id1;
-        private @Nullable String view;
+        private GetServiceLevelObjectiveArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceLevelObjectiveArgs();
         }
 
         public Builder(GetServiceLevelObjectiveArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceId = defaults.serviceId;
-    	      this.serviceLevelObjectiveId = defaults.serviceLevelObjectiveId;
-    	      this.v3Id = defaults.v3Id;
-    	      this.v3Id1 = defaults.v3Id1;
-    	      this.view = defaults.view;
+            $ = new GetServiceLevelObjectiveArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
         }
+
         public Builder serviceLevelObjectiveId(String serviceLevelObjectiveId) {
-            this.serviceLevelObjectiveId = Objects.requireNonNull(serviceLevelObjectiveId);
+            $.serviceLevelObjectiveId = serviceLevelObjectiveId;
             return this;
         }
+
         public Builder v3Id(String v3Id) {
-            this.v3Id = Objects.requireNonNull(v3Id);
+            $.v3Id = v3Id;
             return this;
         }
+
         public Builder v3Id1(String v3Id1) {
-            this.v3Id1 = Objects.requireNonNull(v3Id1);
+            $.v3Id1 = v3Id1;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetServiceLevelObjectiveArgs build() {
-            return new GetServiceLevelObjectiveArgs(serviceId, serviceLevelObjectiveId, v3Id, v3Id1, view);
+        }
+
+        public GetServiceLevelObjectiveArgs build() {
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            $.serviceLevelObjectiveId = Objects.requireNonNull($.serviceLevelObjectiveId, "expected parameter 'serviceLevelObjectiveId' to be non-null");
+            $.v3Id = Objects.requireNonNull($.v3Id, "expected parameter 'v3Id' to be non-null");
+            $.v3Id1 = Objects.requireNonNull($.v3Id1, "expected parameter 'v3Id1' to be non-null");
+            return $;
         }
     }
+
 }

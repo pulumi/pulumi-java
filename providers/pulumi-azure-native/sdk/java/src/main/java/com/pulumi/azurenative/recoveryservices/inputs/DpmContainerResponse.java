@@ -28,10 +28,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable String backupManagementType;
+    private @Nullable String backupManagementType;
 
     public Optional<String> backupManagementType() {
-        return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="canReRegister")
-      private final @Nullable Boolean canReRegister;
+    private @Nullable Boolean canReRegister;
 
     public Optional<Boolean> canReRegister() {
-        return this.canReRegister == null ? Optional.empty() : Optional.ofNullable(this.canReRegister);
+        return Optional.ofNullable(this.canReRegister);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerId")
-      private final @Nullable String containerId;
+    private @Nullable String containerId;
 
     public Optional<String> containerId() {
-        return this.containerId == null ? Optional.empty() : Optional.ofNullable(this.containerId);
+        return Optional.ofNullable(this.containerId);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerType", required=true)
-      private final String containerType;
+    private String containerType;
 
     public String containerType() {
         return this.containerType;
@@ -76,10 +76,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dpmAgentVersion")
-      private final @Nullable String dpmAgentVersion;
+    private @Nullable String dpmAgentVersion;
 
     public Optional<String> dpmAgentVersion() {
-        return this.dpmAgentVersion == null ? Optional.empty() : Optional.ofNullable(this.dpmAgentVersion);
+        return Optional.ofNullable(this.dpmAgentVersion);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dpmServers")
-      private final @Nullable List<String> dpmServers;
+    private @Nullable List<String> dpmServers;
 
-    public List<String> dpmServers() {
-        return this.dpmServers == null ? List.of() : this.dpmServers;
+    public Optional<List<String>> dpmServers() {
+        return Optional.ofNullable(this.dpmServers);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="extendedInfo")
-      private final @Nullable DPMContainerExtendedInfoResponse extendedInfo;
+    private @Nullable DPMContainerExtendedInfoResponse extendedInfo;
 
     public Optional<DPMContainerExtendedInfoResponse> extendedInfo() {
-        return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
+        return Optional.ofNullable(this.extendedInfo);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable String healthStatus;
+    private @Nullable String healthStatus;
 
     public Optional<String> healthStatus() {
-        return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="protectedItemCount")
-      private final @Nullable Double protectedItemCount;
+    private @Nullable Double protectedItemCount;
 
     public Optional<Double> protectedItemCount() {
-        return this.protectedItemCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemCount);
+        return Optional.ofNullable(this.protectedItemCount);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="protectionStatus")
-      private final @Nullable String protectionStatus;
+    private @Nullable String protectionStatus;
 
     public Optional<String> protectionStatus() {
-        return this.protectionStatus == null ? Optional.empty() : Optional.ofNullable(this.protectionStatus);
+        return Optional.ofNullable(this.protectionStatus);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="registrationStatus")
-      private final @Nullable String registrationStatus;
+    private @Nullable String registrationStatus;
 
     public Optional<String> registrationStatus() {
-        return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
+        return Optional.ofNullable(this.registrationStatus);
     }
 
     /**
@@ -164,157 +164,121 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="upgradeAvailable")
-      private final @Nullable Boolean upgradeAvailable;
+    private @Nullable Boolean upgradeAvailable;
 
     public Optional<Boolean> upgradeAvailable() {
-        return this.upgradeAvailable == null ? Optional.empty() : Optional.ofNullable(this.upgradeAvailable);
+        return Optional.ofNullable(this.upgradeAvailable);
     }
 
-    public DpmContainerResponse(
-        @Nullable String backupManagementType,
-        @Nullable Boolean canReRegister,
-        @Nullable String containerId,
-        String containerType,
-        @Nullable String dpmAgentVersion,
-        @Nullable List<String> dpmServers,
-        @Nullable DPMContainerExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable Double protectedItemCount,
-        @Nullable String protectionStatus,
-        @Nullable String registrationStatus,
-        @Nullable Boolean upgradeAvailable) {
-        this.backupManagementType = backupManagementType;
-        this.canReRegister = canReRegister;
-        this.containerId = containerId;
-        this.containerType = Codegen.stringProp("containerType").arg(containerType).require();
-        this.dpmAgentVersion = dpmAgentVersion;
-        this.dpmServers = dpmServers;
-        this.extendedInfo = extendedInfo;
-        this.friendlyName = friendlyName;
-        this.healthStatus = healthStatus;
-        this.protectedItemCount = protectedItemCount;
-        this.protectionStatus = protectionStatus;
-        this.registrationStatus = registrationStatus;
-        this.upgradeAvailable = upgradeAvailable;
-    }
+    private DpmContainerResponse() {}
 
-    private DpmContainerResponse() {
-        this.backupManagementType = null;
-        this.canReRegister = null;
-        this.containerId = null;
-        this.containerType = null;
-        this.dpmAgentVersion = null;
-        this.dpmServers = List.of();
-        this.extendedInfo = null;
-        this.friendlyName = null;
-        this.healthStatus = null;
-        this.protectedItemCount = null;
-        this.protectionStatus = null;
-        this.registrationStatus = null;
-        this.upgradeAvailable = null;
+    private DpmContainerResponse(DpmContainerResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.canReRegister = $.canReRegister;
+        this.containerId = $.containerId;
+        this.containerType = $.containerType;
+        this.dpmAgentVersion = $.dpmAgentVersion;
+        this.dpmServers = $.dpmServers;
+        this.extendedInfo = $.extendedInfo;
+        this.friendlyName = $.friendlyName;
+        this.healthStatus = $.healthStatus;
+        this.protectedItemCount = $.protectedItemCount;
+        this.protectionStatus = $.protectionStatus;
+        this.registrationStatus = $.registrationStatus;
+        this.upgradeAvailable = $.upgradeAvailable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DpmContainerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupManagementType;
-        private @Nullable Boolean canReRegister;
-        private @Nullable String containerId;
-        private String containerType;
-        private @Nullable String dpmAgentVersion;
-        private @Nullable List<String> dpmServers;
-        private @Nullable DPMContainerExtendedInfoResponse extendedInfo;
-        private @Nullable String friendlyName;
-        private @Nullable String healthStatus;
-        private @Nullable Double protectedItemCount;
-        private @Nullable String protectionStatus;
-        private @Nullable String registrationStatus;
-        private @Nullable Boolean upgradeAvailable;
+        private DpmContainerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DpmContainerResponse();
         }
 
         public Builder(DpmContainerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.canReRegister = defaults.canReRegister;
-    	      this.containerId = defaults.containerId;
-    	      this.containerType = defaults.containerType;
-    	      this.dpmAgentVersion = defaults.dpmAgentVersion;
-    	      this.dpmServers = defaults.dpmServers;
-    	      this.extendedInfo = defaults.extendedInfo;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.protectedItemCount = defaults.protectedItemCount;
-    	      this.protectionStatus = defaults.protectionStatus;
-    	      this.registrationStatus = defaults.registrationStatus;
-    	      this.upgradeAvailable = defaults.upgradeAvailable;
+            $ = new DpmContainerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable String backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder canReRegister(@Nullable Boolean canReRegister) {
-            this.canReRegister = canReRegister;
+            $.canReRegister = canReRegister;
             return this;
         }
+
         public Builder containerId(@Nullable String containerId) {
-            this.containerId = containerId;
+            $.containerId = containerId;
             return this;
         }
+
         public Builder containerType(String containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder dpmAgentVersion(@Nullable String dpmAgentVersion) {
-            this.dpmAgentVersion = dpmAgentVersion;
+            $.dpmAgentVersion = dpmAgentVersion;
             return this;
         }
+
         public Builder dpmServers(@Nullable List<String> dpmServers) {
-            this.dpmServers = dpmServers;
+            $.dpmServers = dpmServers;
             return this;
         }
+
         public Builder dpmServers(String... dpmServers) {
             return dpmServers(List.of(dpmServers));
         }
+
         public Builder extendedInfo(@Nullable DPMContainerExtendedInfoResponse extendedInfo) {
-            this.extendedInfo = extendedInfo;
+            $.extendedInfo = extendedInfo;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
+
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
-            this.protectedItemCount = protectedItemCount;
+            $.protectedItemCount = protectedItemCount;
             return this;
         }
+
         public Builder protectionStatus(@Nullable String protectionStatus) {
-            this.protectionStatus = protectionStatus;
+            $.protectionStatus = protectionStatus;
             return this;
         }
+
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = registrationStatus;
+            $.registrationStatus = registrationStatus;
             return this;
         }
+
         public Builder upgradeAvailable(@Nullable Boolean upgradeAvailable) {
-            this.upgradeAvailable = upgradeAvailable;
+            $.upgradeAvailable = upgradeAvailable;
             return this;
-        }        public DpmContainerResponse build() {
-            return new DpmContainerResponse(backupManagementType, canReRegister, containerId, containerType, dpmAgentVersion, dpmServers, extendedInfo, friendlyName, healthStatus, protectedItemCount, protectionStatus, registrationStatus, upgradeAvailable);
+        }
+
+        public DpmContainerResponse build() {
+            $.containerType = Codegen.stringProp("containerType").arg($.containerType).require();
+            return $;
         }
     }
+
 }

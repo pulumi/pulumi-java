@@ -17,7 +17,7 @@ public final class GetManagedNetworkGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managedNetworkGroupName", required=true)
-      private final String managedNetworkGroupName;
+    private String managedNetworkGroupName;
 
     public String managedNetworkGroupName() {
         return this.managedNetworkGroupName;
@@ -28,7 +28,7 @@ public final class GetManagedNetworkGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managedNetworkName", required=true)
-      private final String managedNetworkName;
+    private String managedNetworkName;
 
     public String managedNetworkName() {
         return this.managedNetworkName;
@@ -39,64 +39,59 @@ public final class GetManagedNetworkGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagedNetworkGroupArgs(
-        String managedNetworkGroupName,
-        String managedNetworkName,
-        String resourceGroupName) {
-        this.managedNetworkGroupName = Objects.requireNonNull(managedNetworkGroupName, "expected parameter 'managedNetworkGroupName' to be non-null");
-        this.managedNetworkName = Objects.requireNonNull(managedNetworkName, "expected parameter 'managedNetworkName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagedNetworkGroupArgs() {}
 
-    private GetManagedNetworkGroupArgs() {
-        this.managedNetworkGroupName = null;
-        this.managedNetworkName = null;
-        this.resourceGroupName = null;
+    private GetManagedNetworkGroupArgs(GetManagedNetworkGroupArgs $) {
+        this.managedNetworkGroupName = $.managedNetworkGroupName;
+        this.managedNetworkName = $.managedNetworkName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedNetworkGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managedNetworkGroupName;
-        private String managedNetworkName;
-        private String resourceGroupName;
+        private GetManagedNetworkGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedNetworkGroupArgs();
         }
 
         public Builder(GetManagedNetworkGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedNetworkGroupName = defaults.managedNetworkGroupName;
-    	      this.managedNetworkName = defaults.managedNetworkName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagedNetworkGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managedNetworkGroupName(String managedNetworkGroupName) {
-            this.managedNetworkGroupName = Objects.requireNonNull(managedNetworkGroupName);
+            $.managedNetworkGroupName = managedNetworkGroupName;
             return this;
         }
+
         public Builder managedNetworkName(String managedNetworkName) {
-            this.managedNetworkName = Objects.requireNonNull(managedNetworkName);
+            $.managedNetworkName = managedNetworkName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagedNetworkGroupArgs build() {
-            return new GetManagedNetworkGroupArgs(managedNetworkGroupName, managedNetworkName, resourceGroupName);
+        }
+
+        public GetManagedNetworkGroupArgs build() {
+            $.managedNetworkGroupName = Objects.requireNonNull($.managedNetworkGroupName, "expected parameter 'managedNetworkGroupName' to be non-null");
+            $.managedNetworkName = Objects.requireNonNull($.managedNetworkName, "expected parameter 'managedNetworkName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

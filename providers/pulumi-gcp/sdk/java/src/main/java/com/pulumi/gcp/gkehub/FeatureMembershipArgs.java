@@ -5,10 +5,10 @@ package com.pulumi.gcp.gkehub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class FeatureMembershipArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="configmanagement", required=true)
-      private final Output<FeatureMembershipConfigmanagementArgs> configmanagement;
+    private Output<FeatureMembershipConfigmanagementArgs> configmanagement;
 
     public Output<FeatureMembershipConfigmanagementArgs> configmanagement() {
         return this.configmanagement;
@@ -32,7 +32,7 @@ public final class FeatureMembershipArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="feature", required=true)
-      private final Output<String> feature;
+    private Output<String> feature;
 
     public Output<String> feature() {
         return this.feature;
@@ -43,7 +43,7 @@ public final class FeatureMembershipArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -54,7 +54,7 @@ public final class FeatureMembershipArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="membership", required=true)
-      private final Output<String> membership;
+    private Output<String> membership;
 
     public Output<String> membership() {
         return this.membership;
@@ -65,102 +65,92 @@ public final class FeatureMembershipArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public FeatureMembershipArgs(
-        Output<FeatureMembershipConfigmanagementArgs> configmanagement,
-        Output<String> feature,
-        Output<String> location,
-        Output<String> membership,
-        @Nullable Output<String> project) {
-        this.configmanagement = Objects.requireNonNull(configmanagement, "expected parameter 'configmanagement' to be non-null");
-        this.feature = Objects.requireNonNull(feature, "expected parameter 'feature' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.membership = Objects.requireNonNull(membership, "expected parameter 'membership' to be non-null");
-        this.project = project;
-    }
+    private FeatureMembershipArgs() {}
 
-    private FeatureMembershipArgs() {
-        this.configmanagement = Codegen.empty();
-        this.feature = Codegen.empty();
-        this.location = Codegen.empty();
-        this.membership = Codegen.empty();
-        this.project = Codegen.empty();
+    private FeatureMembershipArgs(FeatureMembershipArgs $) {
+        this.configmanagement = $.configmanagement;
+        this.feature = $.feature;
+        this.location = $.location;
+        this.membership = $.membership;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureMembershipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FeatureMembershipConfigmanagementArgs> configmanagement;
-        private Output<String> feature;
-        private Output<String> location;
-        private Output<String> membership;
-        private @Nullable Output<String> project;
+        private FeatureMembershipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureMembershipArgs();
         }
 
         public Builder(FeatureMembershipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configmanagement = defaults.configmanagement;
-    	      this.feature = defaults.feature;
-    	      this.location = defaults.location;
-    	      this.membership = defaults.membership;
-    	      this.project = defaults.project;
+            $ = new FeatureMembershipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configmanagement(Output<FeatureMembershipConfigmanagementArgs> configmanagement) {
-            this.configmanagement = Objects.requireNonNull(configmanagement);
+            $.configmanagement = configmanagement;
             return this;
         }
+
         public Builder configmanagement(FeatureMembershipConfigmanagementArgs configmanagement) {
-            this.configmanagement = Output.of(Objects.requireNonNull(configmanagement));
-            return this;
+            return configmanagement(Output.of(configmanagement));
         }
+
         public Builder feature(Output<String> feature) {
-            this.feature = Objects.requireNonNull(feature);
+            $.feature = feature;
             return this;
         }
+
         public Builder feature(String feature) {
-            this.feature = Output.of(Objects.requireNonNull(feature));
-            return this;
+            return feature(Output.of(feature));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder membership(Output<String> membership) {
-            this.membership = Objects.requireNonNull(membership);
+            $.membership = membership;
             return this;
         }
+
         public Builder membership(String membership) {
-            this.membership = Output.of(Objects.requireNonNull(membership));
-            return this;
+            return membership(Output.of(membership));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public FeatureMembershipArgs build() {
-            return new FeatureMembershipArgs(configmanagement, feature, location, membership, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public FeatureMembershipArgs build() {
+            $.configmanagement = Objects.requireNonNull($.configmanagement, "expected parameter 'configmanagement' to be non-null");
+            $.feature = Objects.requireNonNull($.feature, "expected parameter 'feature' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.membership = Objects.requireNonNull($.membership, "expected parameter 'membership' to be non-null");
+            return $;
         }
     }
+
 }

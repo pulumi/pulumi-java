@@ -6,11 +6,11 @@ package com.pulumi.aws.apprunner.inputs;
 import com.pulumi.aws.apprunner.inputs.CustomDomainAssociationCertificateValidationRecordGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="certificateValidationRecords")
-      private final @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
+    private @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
 
-    public Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords() {
-        return this.certificateValidationRecords == null ? Codegen.empty() : this.certificateValidationRecords;
+    public Optional<Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>>> certificateValidationRecords() {
+        return Optional.ofNullable(this.certificateValidationRecords);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dnsTarget")
-      private final @Nullable Output<String> dnsTarget;
+    private @Nullable Output<String> dnsTarget;
 
-    public Output<String> dnsTarget() {
-        return this.dnsTarget == null ? Codegen.empty() : this.dnsTarget;
+    public Optional<Output<String>> dnsTarget() {
+        return Optional.ofNullable(this.dnsTarget);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="enableWwwSubdomain")
-      private final @Nullable Output<Boolean> enableWwwSubdomain;
+    private @Nullable Output<Boolean> enableWwwSubdomain;
 
-    public Output<Boolean> enableWwwSubdomain() {
-        return this.enableWwwSubdomain == null ? Codegen.empty() : this.enableWwwSubdomain;
+    public Optional<Output<Boolean>> enableWwwSubdomain() {
+        return Optional.ofNullable(this.enableWwwSubdomain);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="serviceArn")
-      private final @Nullable Output<String> serviceArn;
+    private @Nullable Output<String> serviceArn;
 
-    public Output<String> serviceArn() {
-        return this.serviceArn == null ? Codegen.empty() : this.serviceArn;
+    public Optional<Output<String>> serviceArn() {
+        return Optional.ofNullable(this.serviceArn);
     }
 
     /**
@@ -78,118 +78,102 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public CustomDomainAssociationState(
-        @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords,
-        @Nullable Output<String> dnsTarget,
-        @Nullable Output<String> domainName,
-        @Nullable Output<Boolean> enableWwwSubdomain,
-        @Nullable Output<String> serviceArn,
-        @Nullable Output<String> status) {
-        this.certificateValidationRecords = certificateValidationRecords;
-        this.dnsTarget = dnsTarget;
-        this.domainName = domainName;
-        this.enableWwwSubdomain = enableWwwSubdomain;
-        this.serviceArn = serviceArn;
-        this.status = status;
-    }
+    private CustomDomainAssociationState() {}
 
-    private CustomDomainAssociationState() {
-        this.certificateValidationRecords = Codegen.empty();
-        this.dnsTarget = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.enableWwwSubdomain = Codegen.empty();
-        this.serviceArn = Codegen.empty();
-        this.status = Codegen.empty();
+    private CustomDomainAssociationState(CustomDomainAssociationState $) {
+        this.certificateValidationRecords = $.certificateValidationRecords;
+        this.dnsTarget = $.dnsTarget;
+        this.domainName = $.domainName;
+        this.enableWwwSubdomain = $.enableWwwSubdomain;
+        this.serviceArn = $.serviceArn;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDomainAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
-        private @Nullable Output<String> dnsTarget;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<Boolean> enableWwwSubdomain;
-        private @Nullable Output<String> serviceArn;
-        private @Nullable Output<String> status;
+        private CustomDomainAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDomainAssociationState();
         }
 
         public Builder(CustomDomainAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateValidationRecords = defaults.certificateValidationRecords;
-    	      this.dnsTarget = defaults.dnsTarget;
-    	      this.domainName = defaults.domainName;
-    	      this.enableWwwSubdomain = defaults.enableWwwSubdomain;
-    	      this.serviceArn = defaults.serviceArn;
-    	      this.status = defaults.status;
+            $ = new CustomDomainAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateValidationRecords(@Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords) {
-            this.certificateValidationRecords = certificateValidationRecords;
+            $.certificateValidationRecords = certificateValidationRecords;
             return this;
         }
-        public Builder certificateValidationRecords(@Nullable List<CustomDomainAssociationCertificateValidationRecordGetArgs> certificateValidationRecords) {
-            this.certificateValidationRecords = Codegen.ofNullable(certificateValidationRecords);
-            return this;
+
+        public Builder certificateValidationRecords(List<CustomDomainAssociationCertificateValidationRecordGetArgs> certificateValidationRecords) {
+            return certificateValidationRecords(Output.of(certificateValidationRecords));
         }
+
         public Builder certificateValidationRecords(CustomDomainAssociationCertificateValidationRecordGetArgs... certificateValidationRecords) {
             return certificateValidationRecords(List.of(certificateValidationRecords));
         }
+
         public Builder dnsTarget(@Nullable Output<String> dnsTarget) {
-            this.dnsTarget = dnsTarget;
+            $.dnsTarget = dnsTarget;
             return this;
         }
-        public Builder dnsTarget(@Nullable String dnsTarget) {
-            this.dnsTarget = Codegen.ofNullable(dnsTarget);
-            return this;
+
+        public Builder dnsTarget(String dnsTarget) {
+            return dnsTarget(Output.of(dnsTarget));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder enableWwwSubdomain(@Nullable Output<Boolean> enableWwwSubdomain) {
-            this.enableWwwSubdomain = enableWwwSubdomain;
+            $.enableWwwSubdomain = enableWwwSubdomain;
             return this;
         }
-        public Builder enableWwwSubdomain(@Nullable Boolean enableWwwSubdomain) {
-            this.enableWwwSubdomain = Codegen.ofNullable(enableWwwSubdomain);
-            return this;
+
+        public Builder enableWwwSubdomain(Boolean enableWwwSubdomain) {
+            return enableWwwSubdomain(Output.of(enableWwwSubdomain));
         }
+
         public Builder serviceArn(@Nullable Output<String> serviceArn) {
-            this.serviceArn = serviceArn;
+            $.serviceArn = serviceArn;
             return this;
         }
-        public Builder serviceArn(@Nullable String serviceArn) {
-            this.serviceArn = Codegen.ofNullable(serviceArn);
-            return this;
+
+        public Builder serviceArn(String serviceArn) {
+            return serviceArn(Output.of(serviceArn));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public CustomDomainAssociationState build() {
-            return new CustomDomainAssociationState(certificateValidationRecords, dnsTarget, domainName, enableWwwSubdomain, serviceArn, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public CustomDomainAssociationState build() {
+            return $;
         }
     }
+
 }

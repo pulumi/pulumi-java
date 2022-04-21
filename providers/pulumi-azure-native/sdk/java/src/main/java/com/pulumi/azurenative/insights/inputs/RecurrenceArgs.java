@@ -7,7 +7,6 @@ import com.pulumi.azurenative.insights.enums.RecurrenceFrequency;
 import com.pulumi.azurenative.insights.inputs.RecurrentScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +23,7 @@ public final class RecurrenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frequency", required=true)
-      private final Output<RecurrenceFrequency> frequency;
+    private Output<RecurrenceFrequency> frequency;
 
     public Output<RecurrenceFrequency> frequency() {
         return this.frequency;
@@ -35,63 +34,60 @@ public final class RecurrenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<RecurrentScheduleArgs> schedule;
+    private Output<RecurrentScheduleArgs> schedule;
 
     public Output<RecurrentScheduleArgs> schedule() {
         return this.schedule;
     }
 
-    public RecurrenceArgs(
-        Output<RecurrenceFrequency> frequency,
-        Output<RecurrentScheduleArgs> schedule) {
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-    }
+    private RecurrenceArgs() {}
 
-    private RecurrenceArgs() {
-        this.frequency = Codegen.empty();
-        this.schedule = Codegen.empty();
+    private RecurrenceArgs(RecurrenceArgs $) {
+        this.frequency = $.frequency;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RecurrenceFrequency> frequency;
-        private Output<RecurrentScheduleArgs> schedule;
+        private RecurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurrenceArgs();
         }
 
         public Builder(RecurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequency = defaults.frequency;
-    	      this.schedule = defaults.schedule;
+            $ = new RecurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frequency(Output<RecurrenceFrequency> frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder frequency(RecurrenceFrequency frequency) {
-            this.frequency = Output.of(Objects.requireNonNull(frequency));
-            return this;
+            return frequency(Output.of(frequency));
         }
+
         public Builder schedule(Output<RecurrentScheduleArgs> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(RecurrentScheduleArgs schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
-        }        public RecurrenceArgs build() {
-            return new RecurrenceArgs(frequency, schedule);
+            return schedule(Output.of(schedule));
+        }
+
+        public RecurrenceArgs build() {
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

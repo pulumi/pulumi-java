@@ -17,45 +17,45 @@ public final class InstanceGroupManagerStatusVersionTargetResponse extends com.p
      * 
      */
     @Import(name="isReached", required=true)
-      private final Boolean isReached;
+    private Boolean isReached;
 
     public Boolean isReached() {
         return this.isReached;
     }
 
-    public InstanceGroupManagerStatusVersionTargetResponse(Boolean isReached) {
-        this.isReached = Objects.requireNonNull(isReached, "expected parameter 'isReached' to be non-null");
-    }
+    private InstanceGroupManagerStatusVersionTargetResponse() {}
 
-    private InstanceGroupManagerStatusVersionTargetResponse() {
-        this.isReached = null;
+    private InstanceGroupManagerStatusVersionTargetResponse(InstanceGroupManagerStatusVersionTargetResponse $) {
+        this.isReached = $.isReached;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerStatusVersionTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isReached;
+        private InstanceGroupManagerStatusVersionTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerStatusVersionTargetResponse();
         }
 
         public Builder(InstanceGroupManagerStatusVersionTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isReached = defaults.isReached;
+            $ = new InstanceGroupManagerStatusVersionTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isReached(Boolean isReached) {
-            this.isReached = Objects.requireNonNull(isReached);
+            $.isReached = isReached;
             return this;
-        }        public InstanceGroupManagerStatusVersionTargetResponse build() {
-            return new InstanceGroupManagerStatusVersionTargetResponse(isReached);
+        }
+
+        public InstanceGroupManagerStatusVersionTargetResponse build() {
+            $.isReached = Objects.requireNonNull($.isReached, "expected parameter 'isReached' to be non-null");
+            return $;
         }
     }
+
 }

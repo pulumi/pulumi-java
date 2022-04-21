@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocationId")
-      private final @Nullable Output<String> allocationId;
+    private @Nullable Output<String> allocationId;
 
-    public Output<String> allocationId() {
-        return this.allocationId == null ? Codegen.empty() : this.allocationId;
+    public Optional<Output<String>> allocationId() {
+        return Optional.ofNullable(this.allocationId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectivityType")
-      private final @Nullable Output<String> connectivityType;
+    private @Nullable Output<String> connectivityType;
 
-    public Output<String> connectivityType() {
-        return this.connectivityType == null ? Codegen.empty() : this.connectivityType;
+    public Optional<Output<String>> connectivityType() {
+        return Optional.ofNullable(this.connectivityType);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable Output<String> networkInterfaceId;
+    private @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
+    public Optional<Output<String>> networkInterfaceId() {
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateIp")
-      private final @Nullable Output<String> privateIp;
+    private @Nullable Output<String> privateIp;
 
-    public Output<String> privateIp() {
-        return this.privateIp == null ? Codegen.empty() : this.privateIp;
+    public Optional<Output<String>> privateIp() {
+        return Optional.ofNullable(this.privateIp);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicIp")
-      private final @Nullable Output<String> publicIp;
+    private @Nullable Output<String> publicIp;
 
-    public Output<String> publicIp() {
-        return this.publicIp == null ? Codegen.empty() : this.publicIp;
+    public Optional<Output<String>> publicIp() {
+        return Optional.ofNullable(this.publicIp);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -98,141 +98,118 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public NatGatewayState(
-        @Nullable Output<String> allocationId,
-        @Nullable Output<String> connectivityType,
-        @Nullable Output<String> networkInterfaceId,
-        @Nullable Output<String> privateIp,
-        @Nullable Output<String> publicIp,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.allocationId = allocationId;
-        this.connectivityType = connectivityType;
-        this.networkInterfaceId = networkInterfaceId;
-        this.privateIp = privateIp;
-        this.publicIp = publicIp;
-        this.subnetId = subnetId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private NatGatewayState() {}
 
-    private NatGatewayState() {
-        this.allocationId = Codegen.empty();
-        this.connectivityType = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
-        this.privateIp = Codegen.empty();
-        this.publicIp = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private NatGatewayState(NatGatewayState $) {
+        this.allocationId = $.allocationId;
+        this.connectivityType = $.connectivityType;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.privateIp = $.privateIp;
+        this.publicIp = $.publicIp;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NatGatewayState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allocationId;
-        private @Nullable Output<String> connectivityType;
-        private @Nullable Output<String> networkInterfaceId;
-        private @Nullable Output<String> privateIp;
-        private @Nullable Output<String> publicIp;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private NatGatewayState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NatGatewayState();
         }
 
         public Builder(NatGatewayState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationId = defaults.allocationId;
-    	      this.connectivityType = defaults.connectivityType;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.privateIp = defaults.privateIp;
-    	      this.publicIp = defaults.publicIp;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new NatGatewayState(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationId(@Nullable Output<String> allocationId) {
-            this.allocationId = allocationId;
+            $.allocationId = allocationId;
             return this;
         }
-        public Builder allocationId(@Nullable String allocationId) {
-            this.allocationId = Codegen.ofNullable(allocationId);
-            return this;
+
+        public Builder allocationId(String allocationId) {
+            return allocationId(Output.of(allocationId));
         }
+
         public Builder connectivityType(@Nullable Output<String> connectivityType) {
-            this.connectivityType = connectivityType;
+            $.connectivityType = connectivityType;
             return this;
         }
-        public Builder connectivityType(@Nullable String connectivityType) {
-            this.connectivityType = Codegen.ofNullable(connectivityType);
-            return this;
+
+        public Builder connectivityType(String connectivityType) {
+            return connectivityType(Output.of(connectivityType));
         }
+
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
-        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
-            return this;
+
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder privateIp(@Nullable Output<String> privateIp) {
-            this.privateIp = privateIp;
+            $.privateIp = privateIp;
             return this;
         }
-        public Builder privateIp(@Nullable String privateIp) {
-            this.privateIp = Codegen.ofNullable(privateIp);
-            return this;
+
+        public Builder privateIp(String privateIp) {
+            return privateIp(Output.of(privateIp));
         }
+
         public Builder publicIp(@Nullable Output<String> publicIp) {
-            this.publicIp = publicIp;
+            $.publicIp = publicIp;
             return this;
         }
-        public Builder publicIp(@Nullable String publicIp) {
-            this.publicIp = Codegen.ofNullable(publicIp);
-            return this;
+
+        public Builder publicIp(String publicIp) {
+            return publicIp(Output.of(publicIp));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public NatGatewayState build() {
-            return new NatGatewayState(allocationId, connectivityType, networkInterfaceId, privateIp, publicIp, subnetId, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public NatGatewayState build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends c
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -28,55 +28,52 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends c
      * 
      */
     @Import(name="intervalSec", required=true)
-      private final Integer intervalSec;
+    private Integer intervalSec;
 
     public Integer intervalSec() {
         return this.intervalSec;
     }
 
-    public SecurityPolicyRuleRateLimitOptionsThresholdResponse(
-        Integer count,
-        Integer intervalSec) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.intervalSec = Objects.requireNonNull(intervalSec, "expected parameter 'intervalSec' to be non-null");
-    }
+    private SecurityPolicyRuleRateLimitOptionsThresholdResponse() {}
 
-    private SecurityPolicyRuleRateLimitOptionsThresholdResponse() {
-        this.count = null;
-        this.intervalSec = null;
+    private SecurityPolicyRuleRateLimitOptionsThresholdResponse(SecurityPolicyRuleRateLimitOptionsThresholdResponse $) {
+        this.count = $.count;
+        this.intervalSec = $.intervalSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleRateLimitOptionsThresholdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private Integer intervalSec;
+        private SecurityPolicyRuleRateLimitOptionsThresholdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleRateLimitOptionsThresholdResponse();
         }
 
         public Builder(SecurityPolicyRuleRateLimitOptionsThresholdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.intervalSec = defaults.intervalSec;
+            $ = new SecurityPolicyRuleRateLimitOptionsThresholdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder intervalSec(Integer intervalSec) {
-            this.intervalSec = Objects.requireNonNull(intervalSec);
+            $.intervalSec = intervalSec;
             return this;
-        }        public SecurityPolicyRuleRateLimitOptionsThresholdResponse build() {
-            return new SecurityPolicyRuleRateLimitOptionsThresholdResponse(count, intervalSec);
+        }
+
+        public SecurityPolicyRuleRateLimitOptionsThresholdResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.intervalSec = Objects.requireNonNull($.intervalSec, "expected parameter 'intervalSec' to be non-null");
+            return $;
         }
     }
+
 }

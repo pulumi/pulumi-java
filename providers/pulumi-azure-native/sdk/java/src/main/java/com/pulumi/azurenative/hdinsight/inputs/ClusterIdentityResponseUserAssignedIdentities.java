@@ -19,7 +19,7 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends com.pul
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -30,7 +30,7 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends com.pul
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -41,64 +41,58 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends com.pul
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ClusterIdentityResponseUserAssignedIdentities(
-        String clientId,
-        String principalId,
-        @Nullable String tenantId) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.tenantId = tenantId;
-    }
+    private ClusterIdentityResponseUserAssignedIdentities() {}
 
-    private ClusterIdentityResponseUserAssignedIdentities() {
-        this.clientId = null;
-        this.principalId = null;
-        this.tenantId = null;
+    private ClusterIdentityResponseUserAssignedIdentities(ClusterIdentityResponseUserAssignedIdentities $) {
+        this.clientId = $.clientId;
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterIdentityResponseUserAssignedIdentities defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientId;
-        private String principalId;
-        private @Nullable String tenantId;
+        private ClusterIdentityResponseUserAssignedIdentities $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterIdentityResponseUserAssignedIdentities();
         }
 
         public Builder(ClusterIdentityResponseUserAssignedIdentities defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new ClusterIdentityResponseUserAssignedIdentities(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public ClusterIdentityResponseUserAssignedIdentities build() {
-            return new ClusterIdentityResponseUserAssignedIdentities(clientId, principalId, tenantId);
+        }
+
+        public ClusterIdentityResponseUserAssignedIdentities build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            return $;
         }
     }
+
 }

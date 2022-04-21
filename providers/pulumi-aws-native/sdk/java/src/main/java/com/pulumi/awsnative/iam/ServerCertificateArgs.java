@@ -6,10 +6,10 @@ package com.pulumi.awsnative.iam;
 import com.pulumi.awsnative.iam.inputs.ServerCertificateTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,153 +18,137 @@ public final class ServerCertificateArgs extends com.pulumi.resources.ResourceAr
     public static final ServerCertificateArgs Empty = new ServerCertificateArgs();
 
     @Import(name="certificateBody")
-      private final @Nullable Output<String> certificateBody;
+    private @Nullable Output<String> certificateBody;
 
-    public Output<String> certificateBody() {
-        return this.certificateBody == null ? Codegen.empty() : this.certificateBody;
+    public Optional<Output<String>> certificateBody() {
+        return Optional.ofNullable(this.certificateBody);
     }
 
     @Import(name="certificateChain")
-      private final @Nullable Output<String> certificateChain;
+    private @Nullable Output<String> certificateChain;
 
-    public Output<String> certificateChain() {
-        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
+    public Optional<Output<String>> certificateChain() {
+        return Optional.ofNullable(this.certificateChain);
     }
 
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     @Import(name="privateKey")
-      private final @Nullable Output<String> privateKey;
+    private @Nullable Output<String> privateKey;
 
-    public Output<String> privateKey() {
-        return this.privateKey == null ? Codegen.empty() : this.privateKey;
+    public Optional<Output<String>> privateKey() {
+        return Optional.ofNullable(this.privateKey);
     }
 
     @Import(name="serverCertificateName")
-      private final @Nullable Output<String> serverCertificateName;
+    private @Nullable Output<String> serverCertificateName;
 
-    public Output<String> serverCertificateName() {
-        return this.serverCertificateName == null ? Codegen.empty() : this.serverCertificateName;
+    public Optional<Output<String>> serverCertificateName() {
+        return Optional.ofNullable(this.serverCertificateName);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ServerCertificateTagArgs>> tags;
+    private @Nullable Output<List<ServerCertificateTagArgs>> tags;
 
-    public Output<List<ServerCertificateTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ServerCertificateTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ServerCertificateArgs(
-        @Nullable Output<String> certificateBody,
-        @Nullable Output<String> certificateChain,
-        @Nullable Output<String> path,
-        @Nullable Output<String> privateKey,
-        @Nullable Output<String> serverCertificateName,
-        @Nullable Output<List<ServerCertificateTagArgs>> tags) {
-        this.certificateBody = certificateBody;
-        this.certificateChain = certificateChain;
-        this.path = path;
-        this.privateKey = privateKey;
-        this.serverCertificateName = serverCertificateName;
-        this.tags = tags;
-    }
+    private ServerCertificateArgs() {}
 
-    private ServerCertificateArgs() {
-        this.certificateBody = Codegen.empty();
-        this.certificateChain = Codegen.empty();
-        this.path = Codegen.empty();
-        this.privateKey = Codegen.empty();
-        this.serverCertificateName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ServerCertificateArgs(ServerCertificateArgs $) {
+        this.certificateBody = $.certificateBody;
+        this.certificateChain = $.certificateChain;
+        this.path = $.path;
+        this.privateKey = $.privateKey;
+        this.serverCertificateName = $.serverCertificateName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateBody;
-        private @Nullable Output<String> certificateChain;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> privateKey;
-        private @Nullable Output<String> serverCertificateName;
-        private @Nullable Output<List<ServerCertificateTagArgs>> tags;
+        private ServerCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerCertificateArgs();
         }
 
         public Builder(ServerCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateBody = defaults.certificateBody;
-    	      this.certificateChain = defaults.certificateChain;
-    	      this.path = defaults.path;
-    	      this.privateKey = defaults.privateKey;
-    	      this.serverCertificateName = defaults.serverCertificateName;
-    	      this.tags = defaults.tags;
+            $ = new ServerCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateBody(@Nullable Output<String> certificateBody) {
-            this.certificateBody = certificateBody;
+            $.certificateBody = certificateBody;
             return this;
         }
-        public Builder certificateBody(@Nullable String certificateBody) {
-            this.certificateBody = Codegen.ofNullable(certificateBody);
-            return this;
+
+        public Builder certificateBody(String certificateBody) {
+            return certificateBody(Output.of(certificateBody));
         }
+
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
-            this.certificateChain = certificateChain;
+            $.certificateChain = certificateChain;
             return this;
         }
-        public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Codegen.ofNullable(certificateChain);
-            return this;
+
+        public Builder certificateChain(String certificateChain) {
+            return certificateChain(Output.of(certificateChain));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder privateKey(@Nullable Output<String> privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
-        public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Codegen.ofNullable(privateKey);
-            return this;
+
+        public Builder privateKey(String privateKey) {
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder serverCertificateName(@Nullable Output<String> serverCertificateName) {
-            this.serverCertificateName = serverCertificateName;
+            $.serverCertificateName = serverCertificateName;
             return this;
         }
-        public Builder serverCertificateName(@Nullable String serverCertificateName) {
-            this.serverCertificateName = Codegen.ofNullable(serverCertificateName);
-            return this;
+
+        public Builder serverCertificateName(String serverCertificateName) {
+            return serverCertificateName(Output.of(serverCertificateName));
         }
+
         public Builder tags(@Nullable Output<List<ServerCertificateTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ServerCertificateTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ServerCertificateTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ServerCertificateTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ServerCertificateArgs build() {
-            return new ServerCertificateArgs(certificateBody, certificateChain, path, privateKey, serverCertificateName, tags);
+        }
+
+        public ServerCertificateArgs build() {
+            return $;
         }
     }
+
 }

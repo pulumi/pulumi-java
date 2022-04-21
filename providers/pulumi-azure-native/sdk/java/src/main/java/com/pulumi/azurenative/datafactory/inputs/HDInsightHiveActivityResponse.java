@@ -32,10 +32,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="arguments")
-      private final @Nullable List<Object> arguments;
+    private @Nullable List<Object> arguments;
 
-    public List<Object> arguments() {
-        return this.arguments == null ? List.of() : this.arguments;
+    public Optional<List<Object>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="defines")
-      private final @Nullable Map<String,Object> defines;
+    private @Nullable Map<String,Object> defines;
 
-    public Map<String,Object> defines() {
-        return this.defines == null ? Map.of() : this.defines;
+    public Optional<Map<String,Object>> defines() {
+        return Optional.ofNullable(this.defines);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="getDebugInfo")
-      private final @Nullable String getDebugInfo;
+    private @Nullable String getDebugInfo;
 
     public Optional<String> getDebugInfo() {
-        return this.getDebugInfo == null ? Optional.empty() : Optional.ofNullable(this.getDebugInfo);
+        return Optional.ofNullable(this.getDebugInfo);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -98,7 +98,7 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -109,10 +109,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="queryTimeout")
-      private final @Nullable Integer queryTimeout;
+    private @Nullable Integer queryTimeout;
 
     public Optional<Integer> queryTimeout() {
-        return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
+        return Optional.ofNullable(this.queryTimeout);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="scriptLinkedService")
-      private final @Nullable LinkedServiceReferenceResponse scriptLinkedService;
+    private @Nullable LinkedServiceReferenceResponse scriptLinkedService;
 
     public Optional<LinkedServiceReferenceResponse> scriptLinkedService() {
-        return this.scriptLinkedService == null ? Optional.empty() : Optional.ofNullable(this.scriptLinkedService);
+        return Optional.ofNullable(this.scriptLinkedService);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="scriptPath")
-      private final @Nullable Object scriptPath;
+    private @Nullable Object scriptPath;
 
     public Optional<Object> scriptPath() {
-        return this.scriptPath == null ? Optional.empty() : Optional.ofNullable(this.scriptPath);
+        return Optional.ofNullable(this.scriptPath);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="storageLinkedServices")
-      private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
+    private @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
-    public List<LinkedServiceReferenceResponse> storageLinkedServices() {
-        return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
+    public Optional<List<LinkedServiceReferenceResponse>> storageLinkedServices() {
+        return Optional.ofNullable(this.storageLinkedServices);
     }
 
     /**
@@ -165,7 +165,7 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -176,10 +176,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
     /**
@@ -187,187 +187,150 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="variables")
-      private final @Nullable List<Object> variables;
+    private @Nullable List<Object> variables;
 
-    public List<Object> variables() {
-        return this.variables == null ? List.of() : this.variables;
+    public Optional<List<Object>> variables() {
+        return Optional.ofNullable(this.variables);
     }
 
-    public HDInsightHiveActivityResponse(
-        @Nullable List<Object> arguments,
-        @Nullable Map<String,Object> defines,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable String getDebugInfo,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Integer queryTimeout,
-        @Nullable LinkedServiceReferenceResponse scriptLinkedService,
-        @Nullable Object scriptPath,
-        @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable List<Object> variables) {
-        this.arguments = arguments;
-        this.defines = defines;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.getDebugInfo = getDebugInfo;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.queryTimeout = queryTimeout;
-        this.scriptLinkedService = scriptLinkedService;
-        this.scriptPath = scriptPath;
-        this.storageLinkedServices = storageLinkedServices;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-        this.variables = variables;
-    }
+    private HDInsightHiveActivityResponse() {}
 
-    private HDInsightHiveActivityResponse() {
-        this.arguments = List.of();
-        this.defines = Map.of();
-        this.dependsOn = List.of();
-        this.description = null;
-        this.getDebugInfo = null;
-        this.linkedServiceName = null;
-        this.name = null;
-        this.policy = null;
-        this.queryTimeout = null;
-        this.scriptLinkedService = null;
-        this.scriptPath = null;
-        this.storageLinkedServices = List.of();
-        this.type = null;
-        this.userProperties = List.of();
-        this.variables = List.of();
+    private HDInsightHiveActivityResponse(HDInsightHiveActivityResponse $) {
+        this.arguments = $.arguments;
+        this.defines = $.defines;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.getDebugInfo = $.getDebugInfo;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.queryTimeout = $.queryTimeout;
+        this.scriptLinkedService = $.scriptLinkedService;
+        this.scriptPath = $.scriptPath;
+        this.storageLinkedServices = $.storageLinkedServices;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
+        this.variables = $.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HDInsightHiveActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> arguments;
-        private @Nullable Map<String,Object> defines;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable String getDebugInfo;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private @Nullable Integer queryTimeout;
-        private @Nullable LinkedServiceReferenceResponse scriptLinkedService;
-        private @Nullable Object scriptPath;
-        private @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
-        private @Nullable List<Object> variables;
+        private HDInsightHiveActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HDInsightHiveActivityResponse();
         }
 
         public Builder(HDInsightHiveActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.defines = defaults.defines;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.getDebugInfo = defaults.getDebugInfo;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.scriptLinkedService = defaults.scriptLinkedService;
-    	      this.scriptPath = defaults.scriptPath;
-    	      this.storageLinkedServices = defaults.storageLinkedServices;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
-    	      this.variables = defaults.variables;
+            $ = new HDInsightHiveActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable List<Object> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
+
         public Builder arguments(Object... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder defines(@Nullable Map<String,Object> defines) {
-            this.defines = defines;
+            $.defines = defines;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder getDebugInfo(@Nullable String getDebugInfo) {
-            this.getDebugInfo = getDebugInfo;
+            $.getDebugInfo = getDebugInfo;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder queryTimeout(@Nullable Integer queryTimeout) {
-            this.queryTimeout = queryTimeout;
+            $.queryTimeout = queryTimeout;
             return this;
         }
+
         public Builder scriptLinkedService(@Nullable LinkedServiceReferenceResponse scriptLinkedService) {
-            this.scriptLinkedService = scriptLinkedService;
+            $.scriptLinkedService = scriptLinkedService;
             return this;
         }
+
         public Builder scriptPath(@Nullable Object scriptPath) {
-            this.scriptPath = scriptPath;
+            $.scriptPath = scriptPath;
             return this;
         }
+
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
-            this.storageLinkedServices = storageLinkedServices;
+            $.storageLinkedServices = storageLinkedServices;
             return this;
         }
+
         public Builder storageLinkedServices(LinkedServiceReferenceResponse... storageLinkedServices) {
             return storageLinkedServices(List.of(storageLinkedServices));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
+
         public Builder variables(@Nullable List<Object> variables) {
-            this.variables = variables;
+            $.variables = variables;
             return this;
         }
+
         public Builder variables(Object... variables) {
             return variables(List.of(variables));
-        }        public HDInsightHiveActivityResponse build() {
-            return new HDInsightHiveActivityResponse(arguments, defines, dependsOn, description, getDebugInfo, linkedServiceName, name, policy, queryTimeout, scriptLinkedService, scriptPath, storageLinkedServices, type, userProperties, variables);
+        }
+
+        public HDInsightHiveActivityResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitArgs extends com
      * 
      */
     @Import(name="period")
-      private final @Nullable Output<String> period;
+    private @Nullable Output<String> period;
 
-    public Output<String> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<String>> period() {
+        return Optional.ofNullable(this.period);
     }
 
-    public AlertPolicyAlertStrategyNotificationRateLimitArgs(@Nullable Output<String> period) {
-        this.period = period;
-    }
+    private AlertPolicyAlertStrategyNotificationRateLimitArgs() {}
 
-    private AlertPolicyAlertStrategyNotificationRateLimitArgs() {
-        this.period = Codegen.empty();
+    private AlertPolicyAlertStrategyNotificationRateLimitArgs(AlertPolicyAlertStrategyNotificationRateLimitArgs $) {
+        this.period = $.period;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertPolicyAlertStrategyNotificationRateLimitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> period;
+        private AlertPolicyAlertStrategyNotificationRateLimitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertPolicyAlertStrategyNotificationRateLimitArgs();
         }
 
         public Builder(AlertPolicyAlertStrategyNotificationRateLimitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.period = defaults.period;
+            $ = new AlertPolicyAlertStrategyNotificationRateLimitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder period(@Nullable Output<String> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable String period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
-        }        public AlertPolicyAlertStrategyNotificationRateLimitArgs build() {
-            return new AlertPolicyAlertStrategyNotificationRateLimitArgs(period);
+
+        public Builder period(String period) {
+            return period(Output.of(period));
+        }
+
+        public AlertPolicyAlertStrategyNotificationRateLimitArgs build() {
+            return $;
         }
     }
+
 }

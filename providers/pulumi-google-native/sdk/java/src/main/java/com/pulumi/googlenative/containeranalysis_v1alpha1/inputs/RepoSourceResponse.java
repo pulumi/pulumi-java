@@ -21,7 +21,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="branchName", required=true)
-      private final String branchName;
+    private String branchName;
 
     public String branchName() {
         return this.branchName;
@@ -32,7 +32,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="commitSha", required=true)
-      private final String commitSha;
+    private String commitSha;
 
     public String commitSha() {
         return this.commitSha;
@@ -43,7 +43,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -54,7 +54,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repoName", required=true)
-      private final String repoName;
+    private String repoName;
 
     public String repoName() {
         return this.repoName;
@@ -65,82 +65,73 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagName", required=true)
-      private final String tagName;
+    private String tagName;
 
     public String tagName() {
         return this.tagName;
     }
 
-    public RepoSourceResponse(
-        String branchName,
-        String commitSha,
-        String project,
-        String repoName,
-        String tagName) {
-        this.branchName = Objects.requireNonNull(branchName, "expected parameter 'branchName' to be non-null");
-        this.commitSha = Objects.requireNonNull(commitSha, "expected parameter 'commitSha' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.repoName = Objects.requireNonNull(repoName, "expected parameter 'repoName' to be non-null");
-        this.tagName = Objects.requireNonNull(tagName, "expected parameter 'tagName' to be non-null");
-    }
+    private RepoSourceResponse() {}
 
-    private RepoSourceResponse() {
-        this.branchName = null;
-        this.commitSha = null;
-        this.project = null;
-        this.repoName = null;
-        this.tagName = null;
+    private RepoSourceResponse(RepoSourceResponse $) {
+        this.branchName = $.branchName;
+        this.commitSha = $.commitSha;
+        this.project = $.project;
+        this.repoName = $.repoName;
+        this.tagName = $.tagName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepoSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String branchName;
-        private String commitSha;
-        private String project;
-        private String repoName;
-        private String tagName;
+        private RepoSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepoSourceResponse();
         }
 
         public Builder(RepoSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchName = defaults.branchName;
-    	      this.commitSha = defaults.commitSha;
-    	      this.project = defaults.project;
-    	      this.repoName = defaults.repoName;
-    	      this.tagName = defaults.tagName;
+            $ = new RepoSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder branchName(String branchName) {
-            this.branchName = Objects.requireNonNull(branchName);
+            $.branchName = branchName;
             return this;
         }
+
         public Builder commitSha(String commitSha) {
-            this.commitSha = Objects.requireNonNull(commitSha);
+            $.commitSha = commitSha;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder repoName(String repoName) {
-            this.repoName = Objects.requireNonNull(repoName);
+            $.repoName = repoName;
             return this;
         }
+
         public Builder tagName(String tagName) {
-            this.tagName = Objects.requireNonNull(tagName);
+            $.tagName = tagName;
             return this;
-        }        public RepoSourceResponse build() {
-            return new RepoSourceResponse(branchName, commitSha, project, repoName, tagName);
+        }
+
+        public RepoSourceResponse build() {
+            $.branchName = Objects.requireNonNull($.branchName, "expected parameter 'branchName' to be non-null");
+            $.commitSha = Objects.requireNonNull($.commitSha, "expected parameter 'commitSha' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.repoName = Objects.requireNonNull($.repoName, "expected parameter 'repoName' to be non-null");
+            $.tagName = Objects.requireNonNull($.tagName, "expected parameter 'tagName' to be non-null");
+            return $;
         }
     }
+
 }

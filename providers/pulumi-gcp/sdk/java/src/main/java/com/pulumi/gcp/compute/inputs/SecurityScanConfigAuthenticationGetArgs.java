@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationCustomAccountGetArgs;
 import com.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationGoogleAccountGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SecurityScanConfigAuthenticationGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="customAccount")
-      private final @Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount;
+    private @Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount;
 
-    public Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount() {
-        return this.customAccount == null ? Codegen.empty() : this.customAccount;
+    public Optional<Output<SecurityScanConfigAuthenticationCustomAccountGetArgs>> customAccount() {
+        return Optional.ofNullable(this.customAccount);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class SecurityScanConfigAuthenticationGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="googleAccount")
-      private final @Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount;
+    private @Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount;
 
-    public Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount() {
-        return this.googleAccount == null ? Codegen.empty() : this.googleAccount;
+    public Optional<Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs>> googleAccount() {
+        return Optional.ofNullable(this.googleAccount);
     }
 
-    public SecurityScanConfigAuthenticationGetArgs(
-        @Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount,
-        @Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount) {
-        this.customAccount = customAccount;
-        this.googleAccount = googleAccount;
-    }
+    private SecurityScanConfigAuthenticationGetArgs() {}
 
-    private SecurityScanConfigAuthenticationGetArgs() {
-        this.customAccount = Codegen.empty();
-        this.googleAccount = Codegen.empty();
+    private SecurityScanConfigAuthenticationGetArgs(SecurityScanConfigAuthenticationGetArgs $) {
+        this.customAccount = $.customAccount;
+        this.googleAccount = $.googleAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityScanConfigAuthenticationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount;
-        private @Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount;
+        private SecurityScanConfigAuthenticationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityScanConfigAuthenticationGetArgs();
         }
 
         public Builder(SecurityScanConfigAuthenticationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customAccount = defaults.customAccount;
-    	      this.googleAccount = defaults.googleAccount;
+            $ = new SecurityScanConfigAuthenticationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customAccount(@Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount) {
-            this.customAccount = customAccount;
+            $.customAccount = customAccount;
             return this;
         }
-        public Builder customAccount(@Nullable SecurityScanConfigAuthenticationCustomAccountGetArgs customAccount) {
-            this.customAccount = Codegen.ofNullable(customAccount);
-            return this;
+
+        public Builder customAccount(SecurityScanConfigAuthenticationCustomAccountGetArgs customAccount) {
+            return customAccount(Output.of(customAccount));
         }
+
         public Builder googleAccount(@Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount) {
-            this.googleAccount = googleAccount;
+            $.googleAccount = googleAccount;
             return this;
         }
-        public Builder googleAccount(@Nullable SecurityScanConfigAuthenticationGoogleAccountGetArgs googleAccount) {
-            this.googleAccount = Codegen.ofNullable(googleAccount);
-            return this;
-        }        public SecurityScanConfigAuthenticationGetArgs build() {
-            return new SecurityScanConfigAuthenticationGetArgs(customAccount, googleAccount);
+
+        public Builder googleAccount(SecurityScanConfigAuthenticationGoogleAccountGetArgs googleAccount) {
+            return googleAccount(Output.of(googleAccount));
+        }
+
+        public SecurityScanConfigAuthenticationGetArgs build() {
+            return $;
         }
     }
+
 }

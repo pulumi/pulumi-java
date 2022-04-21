@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="commandId")
-      private final @Nullable Output<String> commandId;
+    private @Nullable Output<String> commandId;
 
-    public Output<String> commandId() {
-        return this.commandId == null ? Codegen.empty() : this.commandId;
+    public Optional<Output<String>> commandId() {
+        return Optional.ofNullable(this.commandId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<String> script;
+    private @Nullable Output<String> script;
 
-    public Output<String> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<String>> script() {
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="scriptUri")
-      private final @Nullable Output<String> scriptUri;
+    private @Nullable Output<String> scriptUri;
 
-    public Output<String> scriptUri() {
-        return this.scriptUri == null ? Codegen.empty() : this.scriptUri;
+    public Optional<Output<String>> scriptUri() {
+        return Optional.ofNullable(this.scriptUri);
     }
 
-    public VirtualMachineRunCommandScriptSourceArgs(
-        @Nullable Output<String> commandId,
-        @Nullable Output<String> script,
-        @Nullable Output<String> scriptUri) {
-        this.commandId = commandId;
-        this.script = script;
-        this.scriptUri = scriptUri;
-    }
+    private VirtualMachineRunCommandScriptSourceArgs() {}
 
-    private VirtualMachineRunCommandScriptSourceArgs() {
-        this.commandId = Codegen.empty();
-        this.script = Codegen.empty();
-        this.scriptUri = Codegen.empty();
+    private VirtualMachineRunCommandScriptSourceArgs(VirtualMachineRunCommandScriptSourceArgs $) {
+        this.commandId = $.commandId;
+        this.script = $.script;
+        this.scriptUri = $.scriptUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineRunCommandScriptSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> commandId;
-        private @Nullable Output<String> script;
-        private @Nullable Output<String> scriptUri;
+        private VirtualMachineRunCommandScriptSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineRunCommandScriptSourceArgs();
         }
 
         public Builder(VirtualMachineRunCommandScriptSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commandId = defaults.commandId;
-    	      this.script = defaults.script;
-    	      this.scriptUri = defaults.scriptUri;
+            $ = new VirtualMachineRunCommandScriptSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commandId(@Nullable Output<String> commandId) {
-            this.commandId = commandId;
+            $.commandId = commandId;
             return this;
         }
-        public Builder commandId(@Nullable String commandId) {
-            this.commandId = Codegen.ofNullable(commandId);
-            return this;
+
+        public Builder commandId(String commandId) {
+            return commandId(Output.of(commandId));
         }
+
         public Builder script(@Nullable Output<String> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable String script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
+
+        public Builder script(String script) {
+            return script(Output.of(script));
         }
+
         public Builder scriptUri(@Nullable Output<String> scriptUri) {
-            this.scriptUri = scriptUri;
+            $.scriptUri = scriptUri;
             return this;
         }
-        public Builder scriptUri(@Nullable String scriptUri) {
-            this.scriptUri = Codegen.ofNullable(scriptUri);
-            return this;
-        }        public VirtualMachineRunCommandScriptSourceArgs build() {
-            return new VirtualMachineRunCommandScriptSourceArgs(commandId, script, scriptUri);
+
+        public Builder scriptUri(String scriptUri) {
+            return scriptUri(Output.of(scriptUri));
+        }
+
+        public VirtualMachineRunCommandScriptSourceArgs build() {
+            return $;
         }
     }
+
 }

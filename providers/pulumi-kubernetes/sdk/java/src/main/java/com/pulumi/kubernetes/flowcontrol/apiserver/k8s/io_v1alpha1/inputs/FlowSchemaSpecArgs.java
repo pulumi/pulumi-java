@@ -5,13 +5,13 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.FlowDistinguisherMethodArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.PolicyRulesWithSubjectsArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.PriorityLevelConfigurationReferenceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class FlowSchemaSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="distinguisherMethod")
-      private final @Nullable Output<FlowDistinguisherMethodArgs> distinguisherMethod;
+    private @Nullable Output<FlowDistinguisherMethodArgs> distinguisherMethod;
 
-    public Output<FlowDistinguisherMethodArgs> distinguisherMethod() {
-        return this.distinguisherMethod == null ? Codegen.empty() : this.distinguisherMethod;
+    public Optional<Output<FlowDistinguisherMethodArgs>> distinguisherMethod() {
+        return Optional.ofNullable(this.distinguisherMethod);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class FlowSchemaSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="matchingPrecedence")
-      private final @Nullable Output<Integer> matchingPrecedence;
+    private @Nullable Output<Integer> matchingPrecedence;
 
-    public Output<Integer> matchingPrecedence() {
-        return this.matchingPrecedence == null ? Codegen.empty() : this.matchingPrecedence;
+    public Optional<Output<Integer>> matchingPrecedence() {
+        return Optional.ofNullable(this.matchingPrecedence);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class FlowSchemaSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="priorityLevelConfiguration", required=true)
-      private final Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration;
+    private Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration;
 
     public Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration() {
         return this.priorityLevelConfiguration;
@@ -61,92 +61,83 @@ public final class FlowSchemaSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules;
+    private @Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules;
 
-    public Output<List<PolicyRulesWithSubjectsArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<PolicyRulesWithSubjectsArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public FlowSchemaSpecArgs(
-        @Nullable Output<FlowDistinguisherMethodArgs> distinguisherMethod,
-        @Nullable Output<Integer> matchingPrecedence,
-        Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration,
-        @Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules) {
-        this.distinguisherMethod = distinguisherMethod;
-        this.matchingPrecedence = matchingPrecedence;
-        this.priorityLevelConfiguration = Objects.requireNonNull(priorityLevelConfiguration, "expected parameter 'priorityLevelConfiguration' to be non-null");
-        this.rules = rules;
-    }
+    private FlowSchemaSpecArgs() {}
 
-    private FlowSchemaSpecArgs() {
-        this.distinguisherMethod = Codegen.empty();
-        this.matchingPrecedence = Codegen.empty();
-        this.priorityLevelConfiguration = Codegen.empty();
-        this.rules = Codegen.empty();
+    private FlowSchemaSpecArgs(FlowSchemaSpecArgs $) {
+        this.distinguisherMethod = $.distinguisherMethod;
+        this.matchingPrecedence = $.matchingPrecedence;
+        this.priorityLevelConfiguration = $.priorityLevelConfiguration;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSchemaSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowDistinguisherMethodArgs> distinguisherMethod;
-        private @Nullable Output<Integer> matchingPrecedence;
-        private Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration;
-        private @Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules;
+        private FlowSchemaSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSchemaSpecArgs();
         }
 
         public Builder(FlowSchemaSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distinguisherMethod = defaults.distinguisherMethod;
-    	      this.matchingPrecedence = defaults.matchingPrecedence;
-    	      this.priorityLevelConfiguration = defaults.priorityLevelConfiguration;
-    	      this.rules = defaults.rules;
+            $ = new FlowSchemaSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distinguisherMethod(@Nullable Output<FlowDistinguisherMethodArgs> distinguisherMethod) {
-            this.distinguisherMethod = distinguisherMethod;
+            $.distinguisherMethod = distinguisherMethod;
             return this;
         }
-        public Builder distinguisherMethod(@Nullable FlowDistinguisherMethodArgs distinguisherMethod) {
-            this.distinguisherMethod = Codegen.ofNullable(distinguisherMethod);
-            return this;
+
+        public Builder distinguisherMethod(FlowDistinguisherMethodArgs distinguisherMethod) {
+            return distinguisherMethod(Output.of(distinguisherMethod));
         }
+
         public Builder matchingPrecedence(@Nullable Output<Integer> matchingPrecedence) {
-            this.matchingPrecedence = matchingPrecedence;
+            $.matchingPrecedence = matchingPrecedence;
             return this;
         }
-        public Builder matchingPrecedence(@Nullable Integer matchingPrecedence) {
-            this.matchingPrecedence = Codegen.ofNullable(matchingPrecedence);
-            return this;
+
+        public Builder matchingPrecedence(Integer matchingPrecedence) {
+            return matchingPrecedence(Output.of(matchingPrecedence));
         }
+
         public Builder priorityLevelConfiguration(Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration) {
-            this.priorityLevelConfiguration = Objects.requireNonNull(priorityLevelConfiguration);
+            $.priorityLevelConfiguration = priorityLevelConfiguration;
             return this;
         }
+
         public Builder priorityLevelConfiguration(PriorityLevelConfigurationReferenceArgs priorityLevelConfiguration) {
-            this.priorityLevelConfiguration = Output.of(Objects.requireNonNull(priorityLevelConfiguration));
-            return this;
+            return priorityLevelConfiguration(Output.of(priorityLevelConfiguration));
         }
+
         public Builder rules(@Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<PolicyRulesWithSubjectsArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<PolicyRulesWithSubjectsArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(PolicyRulesWithSubjectsArgs... rules) {
             return rules(List.of(rules));
-        }        public FlowSchemaSpecArgs build() {
-            return new FlowSchemaSpecArgs(distinguisherMethod, matchingPrecedence, priorityLevelConfiguration, rules);
+        }
+
+        public FlowSchemaSpecArgs build() {
+            $.priorityLevelConfiguration = Objects.requireNonNull($.priorityLevelConfiguration, "expected parameter 'priorityLevelConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

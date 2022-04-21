@@ -21,7 +21,7 @@ public final class DocumentationRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="deprecationDescription", required=true)
-      private final String deprecationDescription;
+    private String deprecationDescription;
 
     public String deprecationDescription() {
         return this.deprecationDescription;
@@ -32,7 +32,7 @@ public final class DocumentationRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -43,64 +43,59 @@ public final class DocumentationRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="selector", required=true)
-      private final String selector;
+    private String selector;
 
     public String selector() {
         return this.selector;
     }
 
-    public DocumentationRuleResponse(
-        String deprecationDescription,
-        String description,
-        String selector) {
-        this.deprecationDescription = Objects.requireNonNull(deprecationDescription, "expected parameter 'deprecationDescription' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-    }
+    private DocumentationRuleResponse() {}
 
-    private DocumentationRuleResponse() {
-        this.deprecationDescription = null;
-        this.description = null;
-        this.selector = null;
+    private DocumentationRuleResponse(DocumentationRuleResponse $) {
+        this.deprecationDescription = $.deprecationDescription;
+        this.description = $.description;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentationRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deprecationDescription;
-        private String description;
-        private String selector;
+        private DocumentationRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentationRuleResponse();
         }
 
         public Builder(DocumentationRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deprecationDescription = defaults.deprecationDescription;
-    	      this.description = defaults.description;
-    	      this.selector = defaults.selector;
+            $ = new DocumentationRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deprecationDescription(String deprecationDescription) {
-            this.deprecationDescription = Objects.requireNonNull(deprecationDescription);
+            $.deprecationDescription = deprecationDescription;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder selector(String selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
-        }        public DocumentationRuleResponse build() {
-            return new DocumentationRuleResponse(deprecationDescription, description, selector);
+        }
+
+        public DocumentationRuleResponse build() {
+            $.deprecationDescription = Objects.requireNonNull($.deprecationDescription, "expected parameter 'deprecationDescription' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            return $;
         }
     }
+
 }

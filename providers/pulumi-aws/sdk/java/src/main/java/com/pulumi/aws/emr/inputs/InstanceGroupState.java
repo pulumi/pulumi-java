@@ -6,12 +6,12 @@ package com.pulumi.aws.emr.inputs;
 import com.pulumi.aws.emr.inputs.InstanceGroupEbsConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="autoscalingPolicy")
-      private final @Nullable Output<String> autoscalingPolicy;
+    private @Nullable Output<String> autoscalingPolicy;
 
-    public Output<String> autoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
+    public Optional<Output<String>> autoscalingPolicy() {
+        return Optional.ofNullable(this.autoscalingPolicy);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="bidPrice")
-      private final @Nullable Output<String> bidPrice;
+    private @Nullable Output<String> bidPrice;
 
-    public Output<String> bidPrice() {
-        return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
+    public Optional<Output<String>> bidPrice() {
+        return Optional.ofNullable(this.bidPrice);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable Output<String> clusterId;
+    private @Nullable Output<String> clusterId;
 
-    public Output<String> clusterId() {
-        return this.clusterId == null ? Codegen.empty() : this.clusterId;
+    public Optional<Output<String>> clusterId() {
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="configurationsJson")
-      private final @Nullable Output<String> configurationsJson;
+    private @Nullable Output<String> configurationsJson;
 
-    public Output<String> configurationsJson() {
-        return this.configurationsJson == null ? Codegen.empty() : this.configurationsJson;
+    public Optional<Output<String>> configurationsJson() {
+        return Optional.ofNullable(this.configurationsJson);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ebsConfigs")
-      private final @Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs;
+    private @Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs;
 
-    public Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs() {
-        return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
+    public Optional<Output<List<InstanceGroupEbsConfigGetArgs>>> ebsConfigs() {
+        return Optional.ofNullable(this.ebsConfigs);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ebsOptimized")
-      private final @Nullable Output<Boolean> ebsOptimized;
+    private @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> ebsOptimized() {
-        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
+    public Optional<Output<Boolean>> ebsOptimized() {
+        return Optional.ofNullable(this.ebsOptimized);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instanceCount")
-      private final @Nullable Output<Integer> instanceCount;
+    private @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> instanceCount() {
-        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
+    public Optional<Output<Integer>> instanceCount() {
+        return Optional.ofNullable(this.instanceCount);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -112,197 +112,166 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="runningInstanceCount")
-      private final @Nullable Output<Integer> runningInstanceCount;
+    private @Nullable Output<Integer> runningInstanceCount;
 
-    public Output<Integer> runningInstanceCount() {
-        return this.runningInstanceCount == null ? Codegen.empty() : this.runningInstanceCount;
+    public Optional<Output<Integer>> runningInstanceCount() {
+        return Optional.ofNullable(this.runningInstanceCount);
     }
 
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public InstanceGroupState(
-        @Nullable Output<String> autoscalingPolicy,
-        @Nullable Output<String> bidPrice,
-        @Nullable Output<String> clusterId,
-        @Nullable Output<String> configurationsJson,
-        @Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs,
-        @Nullable Output<Boolean> ebsOptimized,
-        @Nullable Output<Integer> instanceCount,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> runningInstanceCount,
-        @Nullable Output<String> status) {
-        this.autoscalingPolicy = autoscalingPolicy;
-        this.bidPrice = bidPrice;
-        this.clusterId = clusterId;
-        this.configurationsJson = configurationsJson;
-        this.ebsConfigs = ebsConfigs;
-        this.ebsOptimized = ebsOptimized;
-        this.instanceCount = instanceCount;
-        this.instanceType = instanceType;
-        this.name = name;
-        this.runningInstanceCount = runningInstanceCount;
-        this.status = status;
-    }
+    private InstanceGroupState() {}
 
-    private InstanceGroupState() {
-        this.autoscalingPolicy = Codegen.empty();
-        this.bidPrice = Codegen.empty();
-        this.clusterId = Codegen.empty();
-        this.configurationsJson = Codegen.empty();
-        this.ebsConfigs = Codegen.empty();
-        this.ebsOptimized = Codegen.empty();
-        this.instanceCount = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.runningInstanceCount = Codegen.empty();
-        this.status = Codegen.empty();
+    private InstanceGroupState(InstanceGroupState $) {
+        this.autoscalingPolicy = $.autoscalingPolicy;
+        this.bidPrice = $.bidPrice;
+        this.clusterId = $.clusterId;
+        this.configurationsJson = $.configurationsJson;
+        this.ebsConfigs = $.ebsConfigs;
+        this.ebsOptimized = $.ebsOptimized;
+        this.instanceCount = $.instanceCount;
+        this.instanceType = $.instanceType;
+        this.name = $.name;
+        this.runningInstanceCount = $.runningInstanceCount;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoscalingPolicy;
-        private @Nullable Output<String> bidPrice;
-        private @Nullable Output<String> clusterId;
-        private @Nullable Output<String> configurationsJson;
-        private @Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs;
-        private @Nullable Output<Boolean> ebsOptimized;
-        private @Nullable Output<Integer> instanceCount;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> runningInstanceCount;
-        private @Nullable Output<String> status;
+        private InstanceGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupState();
         }
 
         public Builder(InstanceGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingPolicy = defaults.autoscalingPolicy;
-    	      this.bidPrice = defaults.bidPrice;
-    	      this.clusterId = defaults.clusterId;
-    	      this.configurationsJson = defaults.configurationsJson;
-    	      this.ebsConfigs = defaults.ebsConfigs;
-    	      this.ebsOptimized = defaults.ebsOptimized;
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceType = defaults.instanceType;
-    	      this.name = defaults.name;
-    	      this.runningInstanceCount = defaults.runningInstanceCount;
-    	      this.status = defaults.status;
+            $ = new InstanceGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingPolicy(@Nullable Output<String> autoscalingPolicy) {
-            this.autoscalingPolicy = autoscalingPolicy;
+            $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-        public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
-            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
-            return this;
+
+        public Builder autoscalingPolicy(String autoscalingPolicy) {
+            return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
+
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
-            this.bidPrice = bidPrice;
+            $.bidPrice = bidPrice;
             return this;
         }
-        public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Codegen.ofNullable(bidPrice);
-            return this;
+
+        public Builder bidPrice(String bidPrice) {
+            return bidPrice(Output.of(bidPrice));
         }
+
         public Builder clusterId(@Nullable Output<String> clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
-        public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Codegen.ofNullable(clusterId);
-            return this;
+
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder configurationsJson(@Nullable Output<String> configurationsJson) {
-            this.configurationsJson = configurationsJson;
+            $.configurationsJson = configurationsJson;
             return this;
         }
-        public Builder configurationsJson(@Nullable String configurationsJson) {
-            this.configurationsJson = Codegen.ofNullable(configurationsJson);
-            return this;
+
+        public Builder configurationsJson(String configurationsJson) {
+            return configurationsJson(Output.of(configurationsJson));
         }
+
         public Builder ebsConfigs(@Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs) {
-            this.ebsConfigs = ebsConfigs;
+            $.ebsConfigs = ebsConfigs;
             return this;
         }
-        public Builder ebsConfigs(@Nullable List<InstanceGroupEbsConfigGetArgs> ebsConfigs) {
-            this.ebsConfigs = Codegen.ofNullable(ebsConfigs);
-            return this;
+
+        public Builder ebsConfigs(List<InstanceGroupEbsConfigGetArgs> ebsConfigs) {
+            return ebsConfigs(Output.of(ebsConfigs));
         }
+
         public Builder ebsConfigs(InstanceGroupEbsConfigGetArgs... ebsConfigs) {
             return ebsConfigs(List.of(ebsConfigs));
         }
+
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
-            this.ebsOptimized = ebsOptimized;
+            $.ebsOptimized = ebsOptimized;
             return this;
         }
-        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
-            return this;
+
+        public Builder ebsOptimized(Boolean ebsOptimized) {
+            return ebsOptimized(Output.of(ebsOptimized));
         }
+
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
         }
-        public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Codegen.ofNullable(instanceCount);
-            return this;
+
+        public Builder instanceCount(Integer instanceCount) {
+            return instanceCount(Output.of(instanceCount));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder runningInstanceCount(@Nullable Output<Integer> runningInstanceCount) {
-            this.runningInstanceCount = runningInstanceCount;
+            $.runningInstanceCount = runningInstanceCount;
             return this;
         }
-        public Builder runningInstanceCount(@Nullable Integer runningInstanceCount) {
-            this.runningInstanceCount = Codegen.ofNullable(runningInstanceCount);
-            return this;
+
+        public Builder runningInstanceCount(Integer runningInstanceCount) {
+            return runningInstanceCount(Output.of(runningInstanceCount));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public InstanceGroupState build() {
-            return new InstanceGroupState(autoscalingPolicy, bidPrice, clusterId, configurationsJson, ebsConfigs, ebsOptimized, instanceCount, instanceType, name, runningInstanceCount, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public InstanceGroupState build() {
+            return $;
         }
     }
+
 }

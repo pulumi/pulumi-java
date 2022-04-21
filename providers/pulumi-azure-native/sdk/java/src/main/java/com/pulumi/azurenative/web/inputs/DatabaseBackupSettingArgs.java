@@ -7,9 +7,9 @@ import com.pulumi.azurenative.web.enums.DatabaseType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DatabaseBackupSettingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Output<String> connectionString;
+    private @Nullable Output<String> connectionString;
 
-    public Output<String> connectionString() {
-        return this.connectionString == null ? Codegen.empty() : this.connectionString;
+    public Optional<Output<String>> connectionString() {
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DatabaseBackupSettingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="connectionStringName")
-      private final @Nullable Output<String> connectionStringName;
+    private @Nullable Output<String> connectionStringName;
 
-    public Output<String> connectionStringName() {
-        return this.connectionStringName == null ? Codegen.empty() : this.connectionStringName;
+    public Optional<Output<String>> connectionStringName() {
+        return Optional.ofNullable(this.connectionStringName);
     }
 
     /**
@@ -49,96 +49,86 @@ public final class DatabaseBackupSettingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="databaseType", required=true)
-      private final Output<Either<String,DatabaseType>> databaseType;
+    private Output<Either<String,DatabaseType>> databaseType;
 
     public Output<Either<String,DatabaseType>> databaseType() {
         return this.databaseType;
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public DatabaseBackupSettingArgs(
-        @Nullable Output<String> connectionString,
-        @Nullable Output<String> connectionStringName,
-        Output<Either<String,DatabaseType>> databaseType,
-        @Nullable Output<String> name) {
-        this.connectionString = connectionString;
-        this.connectionStringName = connectionStringName;
-        this.databaseType = Objects.requireNonNull(databaseType, "expected parameter 'databaseType' to be non-null");
-        this.name = name;
-    }
+    private DatabaseBackupSettingArgs() {}
 
-    private DatabaseBackupSettingArgs() {
-        this.connectionString = Codegen.empty();
-        this.connectionStringName = Codegen.empty();
-        this.databaseType = Codegen.empty();
-        this.name = Codegen.empty();
+    private DatabaseBackupSettingArgs(DatabaseBackupSettingArgs $) {
+        this.connectionString = $.connectionString;
+        this.connectionStringName = $.connectionStringName;
+        this.databaseType = $.databaseType;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseBackupSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectionString;
-        private @Nullable Output<String> connectionStringName;
-        private Output<Either<String,DatabaseType>> databaseType;
-        private @Nullable Output<String> name;
+        private DatabaseBackupSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseBackupSettingArgs();
         }
 
         public Builder(DatabaseBackupSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionString = defaults.connectionString;
-    	      this.connectionStringName = defaults.connectionStringName;
-    	      this.databaseType = defaults.databaseType;
-    	      this.name = defaults.name;
+            $ = new DatabaseBackupSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionString(@Nullable Output<String> connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
-        public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Codegen.ofNullable(connectionString);
-            return this;
+
+        public Builder connectionString(String connectionString) {
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder connectionStringName(@Nullable Output<String> connectionStringName) {
-            this.connectionStringName = connectionStringName;
+            $.connectionStringName = connectionStringName;
             return this;
         }
-        public Builder connectionStringName(@Nullable String connectionStringName) {
-            this.connectionStringName = Codegen.ofNullable(connectionStringName);
-            return this;
+
+        public Builder connectionStringName(String connectionStringName) {
+            return connectionStringName(Output.of(connectionStringName));
         }
+
         public Builder databaseType(Output<Either<String,DatabaseType>> databaseType) {
-            this.databaseType = Objects.requireNonNull(databaseType);
+            $.databaseType = databaseType;
             return this;
         }
+
         public Builder databaseType(Either<String,DatabaseType> databaseType) {
-            this.databaseType = Output.of(Objects.requireNonNull(databaseType));
-            return this;
+            return databaseType(Output.of(databaseType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public DatabaseBackupSettingArgs build() {
-            return new DatabaseBackupSettingArgs(connectionString, connectionStringName, databaseType, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public DatabaseBackupSettingArgs build() {
+            $.databaseType = Objects.requireNonNull($.databaseType, "expected parameter 'databaseType' to be non-null");
+            return $;
         }
     }
+
 }

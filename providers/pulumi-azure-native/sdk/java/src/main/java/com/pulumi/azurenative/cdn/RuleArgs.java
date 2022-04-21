@@ -29,12 +29,12 @@ import com.pulumi.azurenative.cdn.inputs.UrlSigningActionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,7 +47,7 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<Object>> actions;
+    private Output<List<Object>> actions;
 
     public Output<List<Object>> actions() {
         return this.actions;
@@ -58,10 +58,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<Object>> conditions;
+    private @Nullable Output<List<Object>> conditions;
 
-    public Output<List<Object>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<Object>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchProcessingBehavior")
-      private final @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
+    private @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
-    public Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior() {
-        return this.matchProcessingBehavior == null ? Codegen.empty() : this.matchProcessingBehavior;
+    public Optional<Output<Either<String,MatchProcessingBehavior>>> matchProcessingBehavior() {
+        return Optional.ofNullable(this.matchProcessingBehavior);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="order", required=true)
-      private final Output<Integer> order;
+    private Output<Integer> order;
 
     public Output<Integer> order() {
         return this.order;
@@ -91,7 +91,7 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -102,7 +102,7 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -113,10 +113,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
     /**
@@ -124,147 +124,131 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleSetName", required=true)
-      private final Output<String> ruleSetName;
+    private Output<String> ruleSetName;
 
     public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
 
-    public RuleArgs(
-        Output<List<Object>> actions,
-        @Nullable Output<List<Object>> conditions,
-        @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior,
-        Output<Integer> order,
-        Output<String> profileName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleName,
-        Output<String> ruleSetName) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.conditions = conditions;
-        this.matchProcessingBehavior = matchProcessingBehavior;
-        this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleName = ruleName;
-        this.ruleSetName = Objects.requireNonNull(ruleSetName, "expected parameter 'ruleSetName' to be non-null");
-    }
+    private RuleArgs() {}
 
-    private RuleArgs() {
-        this.actions = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.matchProcessingBehavior = Codegen.empty();
-        this.order = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleName = Codegen.empty();
-        this.ruleSetName = Codegen.empty();
+    private RuleArgs(RuleArgs $) {
+        this.actions = $.actions;
+        this.conditions = $.conditions;
+        this.matchProcessingBehavior = $.matchProcessingBehavior;
+        this.order = $.order;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleName = $.ruleName;
+        this.ruleSetName = $.ruleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Object>> actions;
-        private @Nullable Output<List<Object>> conditions;
-        private @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
-        private Output<Integer> order;
-        private Output<String> profileName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleName;
-        private Output<String> ruleSetName;
+        private RuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleArgs();
         }
 
         public Builder(RuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.conditions = defaults.conditions;
-    	      this.matchProcessingBehavior = defaults.matchProcessingBehavior;
-    	      this.order = defaults.order;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleName = defaults.ruleName;
-    	      this.ruleSetName = defaults.ruleSetName;
+            $ = new RuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<Object>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<Object> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
+
         public Builder conditions(@Nullable Output<List<Object>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<Object> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<Object> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(Object... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder matchProcessingBehavior(@Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
-            this.matchProcessingBehavior = matchProcessingBehavior;
+            $.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
-        public Builder matchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
-            this.matchProcessingBehavior = Codegen.ofNullable(matchProcessingBehavior);
-            return this;
+
+        public Builder matchProcessingBehavior(Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
+            return matchProcessingBehavior(Output.of(matchProcessingBehavior));
         }
+
         public Builder order(Output<Integer> order) {
-            this.order = Objects.requireNonNull(order);
+            $.order = order;
             return this;
         }
+
         public Builder order(Integer order) {
-            this.order = Output.of(Objects.requireNonNull(order));
-            return this;
+            return order(Output.of(order));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder ruleSetName(Output<String> ruleSetName) {
-            this.ruleSetName = Objects.requireNonNull(ruleSetName);
+            $.ruleSetName = ruleSetName;
             return this;
         }
+
         public Builder ruleSetName(String ruleSetName) {
-            this.ruleSetName = Output.of(Objects.requireNonNull(ruleSetName));
-            return this;
-        }        public RuleArgs build() {
-            return new RuleArgs(actions, conditions, matchProcessingBehavior, order, profileName, resourceGroupName, ruleName, ruleSetName);
+            return ruleSetName(Output.of(ruleSetName));
+        }
+
+        public RuleArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.order = Objects.requireNonNull($.order, "expected parameter 'order' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleSetName = Objects.requireNonNull($.ruleSetName, "expected parameter 'ruleSetName' to be non-null");
+            return $;
         }
     }
+
 }

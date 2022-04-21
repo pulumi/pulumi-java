@@ -24,10 +24,10 @@ public final class ConnectorMappingErrorManagementResponse extends com.pulumi.re
      * 
      */
     @Import(name="errorLimit")
-      private final @Nullable Integer errorLimit;
+    private @Nullable Integer errorLimit;
 
     public Optional<Integer> errorLimit() {
-        return this.errorLimit == null ? Optional.empty() : Optional.ofNullable(this.errorLimit);
+        return Optional.ofNullable(this.errorLimit);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class ConnectorMappingErrorManagementResponse extends com.pulumi.re
      * 
      */
     @Import(name="errorManagementType", required=true)
-      private final String errorManagementType;
+    private String errorManagementType;
 
     public String errorManagementType() {
         return this.errorManagementType;
     }
 
-    public ConnectorMappingErrorManagementResponse(
-        @Nullable Integer errorLimit,
-        String errorManagementType) {
-        this.errorLimit = errorLimit;
-        this.errorManagementType = Objects.requireNonNull(errorManagementType, "expected parameter 'errorManagementType' to be non-null");
-    }
+    private ConnectorMappingErrorManagementResponse() {}
 
-    private ConnectorMappingErrorManagementResponse() {
-        this.errorLimit = null;
-        this.errorManagementType = null;
+    private ConnectorMappingErrorManagementResponse(ConnectorMappingErrorManagementResponse $) {
+        this.errorLimit = $.errorLimit;
+        this.errorManagementType = $.errorManagementType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingErrorManagementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer errorLimit;
-        private String errorManagementType;
+        private ConnectorMappingErrorManagementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingErrorManagementResponse();
         }
 
         public Builder(ConnectorMappingErrorManagementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorLimit = defaults.errorLimit;
-    	      this.errorManagementType = defaults.errorManagementType;
+            $ = new ConnectorMappingErrorManagementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorLimit(@Nullable Integer errorLimit) {
-            this.errorLimit = errorLimit;
+            $.errorLimit = errorLimit;
             return this;
         }
+
         public Builder errorManagementType(String errorManagementType) {
-            this.errorManagementType = Objects.requireNonNull(errorManagementType);
+            $.errorManagementType = errorManagementType;
             return this;
-        }        public ConnectorMappingErrorManagementResponse build() {
-            return new ConnectorMappingErrorManagementResponse(errorLimit, errorManagementType);
+        }
+
+        public ConnectorMappingErrorManagementResponse build() {
+            $.errorManagementType = Objects.requireNonNull($.errorManagementType, "expected parameter 'errorManagementType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.awsnative.appflow.inputs.FlowIncrementalPullConfigArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowSourceConnectorPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class FlowSourceFlowConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="connectorProfileName")
-      private final @Nullable Output<String> connectorProfileName;
+    private @Nullable Output<String> connectorProfileName;
 
-    public Output<String> connectorProfileName() {
-        return this.connectorProfileName == null ? Codegen.empty() : this.connectorProfileName;
+    public Optional<Output<String>> connectorProfileName() {
+        return Optional.ofNullable(this.connectorProfileName);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class FlowSourceFlowConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="connectorType", required=true)
-      private final Output<FlowConnectorType> connectorType;
+    private Output<FlowConnectorType> connectorType;
 
     public Output<FlowConnectorType> connectorType() {
         return this.connectorType;
@@ -49,10 +49,10 @@ public final class FlowSourceFlowConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="incrementalPullConfig")
-      private final @Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig;
+    private @Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig;
 
-    public Output<FlowIncrementalPullConfigArgs> incrementalPullConfig() {
-        return this.incrementalPullConfig == null ? Codegen.empty() : this.incrementalPullConfig;
+    public Optional<Output<FlowIncrementalPullConfigArgs>> incrementalPullConfig() {
+        return Optional.ofNullable(this.incrementalPullConfig);
     }
 
     /**
@@ -60,89 +60,80 @@ public final class FlowSourceFlowConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceConnectorProperties", required=true)
-      private final Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
+    private Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
 
     public Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties() {
         return this.sourceConnectorProperties;
     }
 
-    public FlowSourceFlowConfigArgs(
-        @Nullable Output<String> connectorProfileName,
-        Output<FlowConnectorType> connectorType,
-        @Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig,
-        Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties) {
-        this.connectorProfileName = connectorProfileName;
-        this.connectorType = Objects.requireNonNull(connectorType, "expected parameter 'connectorType' to be non-null");
-        this.incrementalPullConfig = incrementalPullConfig;
-        this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties, "expected parameter 'sourceConnectorProperties' to be non-null");
-    }
+    private FlowSourceFlowConfigArgs() {}
 
-    private FlowSourceFlowConfigArgs() {
-        this.connectorProfileName = Codegen.empty();
-        this.connectorType = Codegen.empty();
-        this.incrementalPullConfig = Codegen.empty();
-        this.sourceConnectorProperties = Codegen.empty();
+    private FlowSourceFlowConfigArgs(FlowSourceFlowConfigArgs $) {
+        this.connectorProfileName = $.connectorProfileName;
+        this.connectorType = $.connectorType;
+        this.incrementalPullConfig = $.incrementalPullConfig;
+        this.sourceConnectorProperties = $.sourceConnectorProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSourceFlowConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectorProfileName;
-        private Output<FlowConnectorType> connectorType;
-        private @Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig;
-        private Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
+        private FlowSourceFlowConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSourceFlowConfigArgs();
         }
 
         public Builder(FlowSourceFlowConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorProfileName = defaults.connectorProfileName;
-    	      this.connectorType = defaults.connectorType;
-    	      this.incrementalPullConfig = defaults.incrementalPullConfig;
-    	      this.sourceConnectorProperties = defaults.sourceConnectorProperties;
+            $ = new FlowSourceFlowConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorProfileName(@Nullable Output<String> connectorProfileName) {
-            this.connectorProfileName = connectorProfileName;
+            $.connectorProfileName = connectorProfileName;
             return this;
         }
-        public Builder connectorProfileName(@Nullable String connectorProfileName) {
-            this.connectorProfileName = Codegen.ofNullable(connectorProfileName);
-            return this;
+
+        public Builder connectorProfileName(String connectorProfileName) {
+            return connectorProfileName(Output.of(connectorProfileName));
         }
+
         public Builder connectorType(Output<FlowConnectorType> connectorType) {
-            this.connectorType = Objects.requireNonNull(connectorType);
+            $.connectorType = connectorType;
             return this;
         }
+
         public Builder connectorType(FlowConnectorType connectorType) {
-            this.connectorType = Output.of(Objects.requireNonNull(connectorType));
-            return this;
+            return connectorType(Output.of(connectorType));
         }
+
         public Builder incrementalPullConfig(@Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig) {
-            this.incrementalPullConfig = incrementalPullConfig;
+            $.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
-        public Builder incrementalPullConfig(@Nullable FlowIncrementalPullConfigArgs incrementalPullConfig) {
-            this.incrementalPullConfig = Codegen.ofNullable(incrementalPullConfig);
-            return this;
+
+        public Builder incrementalPullConfig(FlowIncrementalPullConfigArgs incrementalPullConfig) {
+            return incrementalPullConfig(Output.of(incrementalPullConfig));
         }
+
         public Builder sourceConnectorProperties(Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties) {
-            this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
+            $.sourceConnectorProperties = sourceConnectorProperties;
             return this;
         }
+
         public Builder sourceConnectorProperties(FlowSourceConnectorPropertiesArgs sourceConnectorProperties) {
-            this.sourceConnectorProperties = Output.of(Objects.requireNonNull(sourceConnectorProperties));
-            return this;
-        }        public FlowSourceFlowConfigArgs build() {
-            return new FlowSourceFlowConfigArgs(connectorProfileName, connectorType, incrementalPullConfig, sourceConnectorProperties);
+            return sourceConnectorProperties(Output.of(sourceConnectorProperties));
+        }
+
+        public FlowSourceFlowConfigArgs build() {
+            $.connectorType = Objects.requireNonNull($.connectorType, "expected parameter 'connectorType' to be non-null");
+            $.sourceConnectorProperties = Objects.requireNonNull($.sourceConnectorProperties, "expected parameter 'sourceConnectorProperties' to be non-null");
+            return $;
         }
     }
+
 }

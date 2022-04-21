@@ -23,10 +23,10 @@ public final class DefaultKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class DefaultKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="policyName")
-      private final @Nullable String policyName;
+    private @Nullable String policyName;
 
     public Optional<String> policyName() {
-        return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
+        return Optional.ofNullable(this.policyName);
     }
 
-    public DefaultKeyResponse(
-        @Nullable String label,
-        @Nullable String policyName) {
-        this.label = label;
-        this.policyName = policyName;
-    }
+    private DefaultKeyResponse() {}
 
-    private DefaultKeyResponse() {
-        this.label = null;
-        this.policyName = null;
+    private DefaultKeyResponse(DefaultKeyResponse $) {
+        this.label = $.label;
+        this.policyName = $.policyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String label;
-        private @Nullable String policyName;
+        private DefaultKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultKeyResponse();
         }
 
         public Builder(DefaultKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.policyName = defaults.policyName;
+            $ = new DefaultKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
-        }        public DefaultKeyResponse build() {
-            return new DefaultKeyResponse(label, policyName);
+        }
+
+        public DefaultKeyResponse build() {
+            return $;
         }
     }
+
 }

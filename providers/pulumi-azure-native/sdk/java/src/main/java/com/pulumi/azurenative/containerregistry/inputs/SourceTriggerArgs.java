@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +30,7 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -40,7 +41,7 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRepository", required=true)
-      private final Output<SourcePropertiesArgs> sourceRepository;
+    private Output<SourcePropertiesArgs> sourceRepository;
 
     public Output<SourcePropertiesArgs> sourceRepository() {
         return this.sourceRepository;
@@ -51,7 +52,7 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceTriggerEvents", required=true)
-      private final Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
+    private Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
 
     public Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents() {
         return this.sourceTriggerEvents;
@@ -62,92 +63,86 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,TriggerStatus>> status;
+    private @Nullable Output<Either<String,TriggerStatus>> status;
 
-    public Output<Either<String,TriggerStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,TriggerStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public SourceTriggerArgs(
-        Output<String> name,
-        Output<SourcePropertiesArgs> sourceRepository,
-        Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents,
-        @Nullable Output<Either<String,TriggerStatus>> status) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.sourceRepository = Objects.requireNonNull(sourceRepository, "expected parameter 'sourceRepository' to be non-null");
-        this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents, "expected parameter 'sourceTriggerEvents' to be non-null");
-        this.status = Codegen.stringProp("status").left(TriggerStatus.class).output().arg(status).def("Enabled").getNullable();
-    }
+    private SourceTriggerArgs() {}
 
-    private SourceTriggerArgs() {
-        this.name = Codegen.empty();
-        this.sourceRepository = Codegen.empty();
-        this.sourceTriggerEvents = Codegen.empty();
-        this.status = Codegen.empty();
+    private SourceTriggerArgs(SourceTriggerArgs $) {
+        this.name = $.name;
+        this.sourceRepository = $.sourceRepository;
+        this.sourceTriggerEvents = $.sourceTriggerEvents;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<SourcePropertiesArgs> sourceRepository;
-        private Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
-        private @Nullable Output<Either<String,TriggerStatus>> status;
+        private SourceTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceTriggerArgs();
         }
 
         public Builder(SourceTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sourceRepository = defaults.sourceRepository;
-    	      this.sourceTriggerEvents = defaults.sourceTriggerEvents;
-    	      this.status = defaults.status;
+            $ = new SourceTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder sourceRepository(Output<SourcePropertiesArgs> sourceRepository) {
-            this.sourceRepository = Objects.requireNonNull(sourceRepository);
+            $.sourceRepository = sourceRepository;
             return this;
         }
+
         public Builder sourceRepository(SourcePropertiesArgs sourceRepository) {
-            this.sourceRepository = Output.of(Objects.requireNonNull(sourceRepository));
-            return this;
+            return sourceRepository(Output.of(sourceRepository));
         }
+
         public Builder sourceTriggerEvents(Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents) {
-            this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents);
+            $.sourceTriggerEvents = sourceTriggerEvents;
             return this;
         }
+
         public Builder sourceTriggerEvents(List<Either<String,SourceTriggerEvent>> sourceTriggerEvents) {
-            this.sourceTriggerEvents = Output.of(Objects.requireNonNull(sourceTriggerEvents));
-            return this;
+            return sourceTriggerEvents(Output.of(sourceTriggerEvents));
         }
+
         public Builder sourceTriggerEvents(Either<String,SourceTriggerEvent>... sourceTriggerEvents) {
             return sourceTriggerEvents(List.of(sourceTriggerEvents));
         }
+
         public Builder status(@Nullable Output<Either<String,TriggerStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,TriggerStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public SourceTriggerArgs build() {
-            return new SourceTriggerArgs(name, sourceRepository, sourceTriggerEvents, status);
+
+        public Builder status(Either<String,TriggerStatus> status) {
+            return status(Output.of(status));
+        }
+
+        public SourceTriggerArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sourceRepository = Objects.requireNonNull($.sourceRepository, "expected parameter 'sourceRepository' to be non-null");
+            $.sourceTriggerEvents = Objects.requireNonNull($.sourceTriggerEvents, "expected parameter 'sourceTriggerEvents' to be non-null");
+            $.status = Codegen.stringProp("status").left(TriggerStatus.class).output().arg($.status).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

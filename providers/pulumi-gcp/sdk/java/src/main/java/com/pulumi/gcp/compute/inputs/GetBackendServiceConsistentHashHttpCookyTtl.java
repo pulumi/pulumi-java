@@ -13,62 +13,59 @@ public final class GetBackendServiceConsistentHashHttpCookyTtl extends com.pulum
     public static final GetBackendServiceConsistentHashHttpCookyTtl Empty = new GetBackendServiceConsistentHashHttpCookyTtl();
 
     @Import(name="nanos", required=true)
-      private final Integer nanos;
+    private Integer nanos;
 
     public Integer nanos() {
         return this.nanos;
     }
 
     @Import(name="seconds", required=true)
-      private final Integer seconds;
+    private Integer seconds;
 
     public Integer seconds() {
         return this.seconds;
     }
 
-    public GetBackendServiceConsistentHashHttpCookyTtl(
-        Integer nanos,
-        Integer seconds) {
-        this.nanos = Objects.requireNonNull(nanos, "expected parameter 'nanos' to be non-null");
-        this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
-    }
+    private GetBackendServiceConsistentHashHttpCookyTtl() {}
 
-    private GetBackendServiceConsistentHashHttpCookyTtl() {
-        this.nanos = null;
-        this.seconds = null;
+    private GetBackendServiceConsistentHashHttpCookyTtl(GetBackendServiceConsistentHashHttpCookyTtl $) {
+        this.nanos = $.nanos;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceConsistentHashHttpCookyTtl defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer nanos;
-        private Integer seconds;
+        private GetBackendServiceConsistentHashHttpCookyTtl $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceConsistentHashHttpCookyTtl();
         }
 
         public Builder(GetBackendServiceConsistentHashHttpCookyTtl defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nanos = defaults.nanos;
-    	      this.seconds = defaults.seconds;
+            $ = new GetBackendServiceConsistentHashHttpCookyTtl(Objects.requireNonNull(defaults));
         }
 
         public Builder nanos(Integer nanos) {
-            this.nanos = Objects.requireNonNull(nanos);
+            $.nanos = nanos;
             return this;
         }
+
         public Builder seconds(Integer seconds) {
-            this.seconds = Objects.requireNonNull(seconds);
+            $.seconds = seconds;
             return this;
-        }        public GetBackendServiceConsistentHashHttpCookyTtl build() {
-            return new GetBackendServiceConsistentHashHttpCookyTtl(nanos, seconds);
+        }
+
+        public GetBackendServiceConsistentHashHttpCookyTtl build() {
+            $.nanos = Objects.requireNonNull($.nanos, "expected parameter 'nanos' to be non-null");
+            $.seconds = Objects.requireNonNull($.seconds, "expected parameter 'seconds' to be non-null");
+            return $;
         }
     }
+
 }

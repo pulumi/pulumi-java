@@ -21,45 +21,45 @@ public final class ResourceProviderDetailsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceProviderNamespace", required=true)
-      private final String resourceProviderNamespace;
+    private String resourceProviderNamespace;
 
     public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
-    public ResourceProviderDetailsResponse(String resourceProviderNamespace) {
-        this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace, "expected parameter 'resourceProviderNamespace' to be non-null");
-    }
+    private ResourceProviderDetailsResponse() {}
 
-    private ResourceProviderDetailsResponse() {
-        this.resourceProviderNamespace = null;
+    private ResourceProviderDetailsResponse(ResourceProviderDetailsResponse $) {
+        this.resourceProviderNamespace = $.resourceProviderNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceProviderDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceProviderNamespace;
+        private ResourceProviderDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceProviderDetailsResponse();
         }
 
         public Builder(ResourceProviderDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceProviderNamespace = defaults.resourceProviderNamespace;
+            $ = new ResourceProviderDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
-            this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
+            $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
-        }        public ResourceProviderDetailsResponse build() {
-            return new ResourceProviderDetailsResponse(resourceProviderNamespace);
+        }
+
+        public ResourceProviderDetailsResponse build() {
+            $.resourceProviderNamespace = Objects.requireNonNull($.resourceProviderNamespace, "expected parameter 'resourceProviderNamespace' to be non-null");
+            return $;
         }
     }
+
 }

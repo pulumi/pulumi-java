@@ -21,45 +21,45 @@ public final class IdentityForCmkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userAssignedIdentity", required=true)
-      private final String userAssignedIdentity;
+    private String userAssignedIdentity;
 
     public String userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 
-    public IdentityForCmkResponse(String userAssignedIdentity) {
-        this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
-    }
+    private IdentityForCmkResponse() {}
 
-    private IdentityForCmkResponse() {
-        this.userAssignedIdentity = null;
+    private IdentityForCmkResponse(IdentityForCmkResponse $) {
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityForCmkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String userAssignedIdentity;
+        private IdentityForCmkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityForCmkResponse();
         }
 
         public Builder(IdentityForCmkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new IdentityForCmkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder userAssignedIdentity(String userAssignedIdentity) {
-            this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }        public IdentityForCmkResponse build() {
-            return new IdentityForCmkResponse(userAssignedIdentity);
+        }
+
+        public IdentityForCmkResponse build() {
+            $.userAssignedIdentity = Objects.requireNonNull($.userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
+            return $;
         }
     }
+
 }

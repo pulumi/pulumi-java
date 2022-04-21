@@ -19,10 +19,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="identityClientId")
-      private final @Nullable String identityClientId;
+    private @Nullable String identityClientId;
 
     public Optional<String> identityClientId() {
-        return this.identityClientId == null ? Optional.empty() : Optional.ofNullable(this.identityClientId);
+        return Optional.ofNullable(this.identityClientId);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyIdentifier", required=true)
-      private final String keyIdentifier;
+    private String keyIdentifier;
 
     public String keyIdentifier() {
         return this.keyIdentifier;
@@ -41,64 +41,58 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyVaultArmId", required=true)
-      private final String keyVaultArmId;
+    private String keyVaultArmId;
 
     public String keyVaultArmId() {
         return this.keyVaultArmId;
     }
 
-    public KeyVaultPropertiesResponse(
-        @Nullable String identityClientId,
-        String keyIdentifier,
-        String keyVaultArmId) {
-        this.identityClientId = identityClientId;
-        this.keyIdentifier = Objects.requireNonNull(keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
-        this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId, "expected parameter 'keyVaultArmId' to be non-null");
-    }
+    private KeyVaultPropertiesResponse() {}
 
-    private KeyVaultPropertiesResponse() {
-        this.identityClientId = null;
-        this.keyIdentifier = null;
-        this.keyVaultArmId = null;
+    private KeyVaultPropertiesResponse(KeyVaultPropertiesResponse $) {
+        this.identityClientId = $.identityClientId;
+        this.keyIdentifier = $.keyIdentifier;
+        this.keyVaultArmId = $.keyVaultArmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String identityClientId;
-        private String keyIdentifier;
-        private String keyVaultArmId;
+        private KeyVaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesResponse();
         }
 
         public Builder(KeyVaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityClientId = defaults.identityClientId;
-    	      this.keyIdentifier = defaults.keyIdentifier;
-    	      this.keyVaultArmId = defaults.keyVaultArmId;
+            $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = identityClientId;
+            $.identityClientId = identityClientId;
             return this;
         }
+
         public Builder keyIdentifier(String keyIdentifier) {
-            this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
+            $.keyIdentifier = keyIdentifier;
             return this;
         }
+
         public Builder keyVaultArmId(String keyVaultArmId) {
-            this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId);
+            $.keyVaultArmId = keyVaultArmId;
             return this;
-        }        public KeyVaultPropertiesResponse build() {
-            return new KeyVaultPropertiesResponse(identityClientId, keyIdentifier, keyVaultArmId);
+        }
+
+        public KeyVaultPropertiesResponse build() {
+            $.keyIdentifier = Objects.requireNonNull($.keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
+            $.keyVaultArmId = Objects.requireNonNull($.keyVaultArmId, "expected parameter 'keyVaultArmId' to be non-null");
+            return $;
         }
     }
+
 }

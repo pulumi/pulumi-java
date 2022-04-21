@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kendra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,84 @@ public final class DataSourceToIndexFieldMappingArgs extends com.pulumi.resource
     public static final DataSourceToIndexFieldMappingArgs Empty = new DataSourceToIndexFieldMappingArgs();
 
     @Import(name="dataSourceFieldName", required=true)
-      private final Output<String> dataSourceFieldName;
+    private Output<String> dataSourceFieldName;
 
     public Output<String> dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @Import(name="dateFieldFormat")
-      private final @Nullable Output<String> dateFieldFormat;
+    private @Nullable Output<String> dateFieldFormat;
 
-    public Output<String> dateFieldFormat() {
-        return this.dateFieldFormat == null ? Codegen.empty() : this.dateFieldFormat;
+    public Optional<Output<String>> dateFieldFormat() {
+        return Optional.ofNullable(this.dateFieldFormat);
     }
 
     @Import(name="indexFieldName", required=true)
-      private final Output<String> indexFieldName;
+    private Output<String> indexFieldName;
 
     public Output<String> indexFieldName() {
         return this.indexFieldName;
     }
 
-    public DataSourceToIndexFieldMappingArgs(
-        Output<String> dataSourceFieldName,
-        @Nullable Output<String> dateFieldFormat,
-        Output<String> indexFieldName) {
-        this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName, "expected parameter 'dataSourceFieldName' to be non-null");
-        this.dateFieldFormat = dateFieldFormat;
-        this.indexFieldName = Objects.requireNonNull(indexFieldName, "expected parameter 'indexFieldName' to be non-null");
-    }
+    private DataSourceToIndexFieldMappingArgs() {}
 
-    private DataSourceToIndexFieldMappingArgs() {
-        this.dataSourceFieldName = Codegen.empty();
-        this.dateFieldFormat = Codegen.empty();
-        this.indexFieldName = Codegen.empty();
+    private DataSourceToIndexFieldMappingArgs(DataSourceToIndexFieldMappingArgs $) {
+        this.dataSourceFieldName = $.dataSourceFieldName;
+        this.dateFieldFormat = $.dateFieldFormat;
+        this.indexFieldName = $.indexFieldName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceToIndexFieldMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataSourceFieldName;
-        private @Nullable Output<String> dateFieldFormat;
-        private Output<String> indexFieldName;
+        private DataSourceToIndexFieldMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceToIndexFieldMappingArgs();
         }
 
         public Builder(DataSourceToIndexFieldMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceFieldName = defaults.dataSourceFieldName;
-    	      this.dateFieldFormat = defaults.dateFieldFormat;
-    	      this.indexFieldName = defaults.indexFieldName;
+            $ = new DataSourceToIndexFieldMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceFieldName(Output<String> dataSourceFieldName) {
-            this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
+            $.dataSourceFieldName = dataSourceFieldName;
             return this;
         }
+
         public Builder dataSourceFieldName(String dataSourceFieldName) {
-            this.dataSourceFieldName = Output.of(Objects.requireNonNull(dataSourceFieldName));
-            return this;
+            return dataSourceFieldName(Output.of(dataSourceFieldName));
         }
+
         public Builder dateFieldFormat(@Nullable Output<String> dateFieldFormat) {
-            this.dateFieldFormat = dateFieldFormat;
+            $.dateFieldFormat = dateFieldFormat;
             return this;
         }
-        public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
-            this.dateFieldFormat = Codegen.ofNullable(dateFieldFormat);
-            return this;
+
+        public Builder dateFieldFormat(String dateFieldFormat) {
+            return dateFieldFormat(Output.of(dateFieldFormat));
         }
+
         public Builder indexFieldName(Output<String> indexFieldName) {
-            this.indexFieldName = Objects.requireNonNull(indexFieldName);
+            $.indexFieldName = indexFieldName;
             return this;
         }
+
         public Builder indexFieldName(String indexFieldName) {
-            this.indexFieldName = Output.of(Objects.requireNonNull(indexFieldName));
-            return this;
-        }        public DataSourceToIndexFieldMappingArgs build() {
-            return new DataSourceToIndexFieldMappingArgs(dataSourceFieldName, dateFieldFormat, indexFieldName);
+            return indexFieldName(Output.of(indexFieldName));
+        }
+
+        public DataSourceToIndexFieldMappingArgs build() {
+            $.dataSourceFieldName = Objects.requireNonNull($.dataSourceFieldName, "expected parameter 'dataSourceFieldName' to be non-null");
+            $.indexFieldName = Objects.requireNonNull($.indexFieldName, "expected parameter 'indexFieldName' to be non-null");
+            return $;
         }
     }
+
 }

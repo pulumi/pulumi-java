@@ -7,10 +7,10 @@ import com.pulumi.azurenative.network.enums.RouteNextHopType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable Output<String> addressPrefix;
+    private @Nullable Output<String> addressPrefix;
 
-    public Output<String> addressPrefix() {
-        return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
+    public Optional<Output<String>> addressPrefix() {
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hasBgpOverride")
-      private final @Nullable Output<Boolean> hasBgpOverride;
+    private @Nullable Output<Boolean> hasBgpOverride;
 
-    public Output<Boolean> hasBgpOverride() {
-        return this.hasBgpOverride == null ? Codegen.empty() : this.hasBgpOverride;
+    public Optional<Output<Boolean>> hasBgpOverride() {
+        return Optional.ofNullable(this.hasBgpOverride);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopIpAddress")
-      private final @Nullable Output<String> nextHopIpAddress;
+    private @Nullable Output<String> nextHopIpAddress;
 
-    public Output<String> nextHopIpAddress() {
-        return this.nextHopIpAddress == null ? Codegen.empty() : this.nextHopIpAddress;
+    public Optional<Output<String>> nextHopIpAddress() {
+        return Optional.ofNullable(this.nextHopIpAddress);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopType", required=true)
-      private final Output<Either<String,RouteNextHopType>> nextHopType;
+    private Output<Either<String,RouteNextHopType>> nextHopType;
 
     public Output<Either<String,RouteNextHopType>> nextHopType() {
         return this.nextHopType;
@@ -93,128 +93,109 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public RouteArgs(
-        @Nullable Output<String> addressPrefix,
-        @Nullable Output<Boolean> hasBgpOverride,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<String> nextHopIpAddress,
-        Output<Either<String,RouteNextHopType>> nextHopType,
-        @Nullable Output<String> type) {
-        this.addressPrefix = addressPrefix;
-        this.hasBgpOverride = hasBgpOverride;
-        this.id = id;
-        this.name = name;
-        this.nextHopIpAddress = nextHopIpAddress;
-        this.nextHopType = Objects.requireNonNull(nextHopType, "expected parameter 'nextHopType' to be non-null");
-        this.type = type;
-    }
+    private RouteArgs() {}
 
-    private RouteArgs() {
-        this.addressPrefix = Codegen.empty();
-        this.hasBgpOverride = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nextHopIpAddress = Codegen.empty();
-        this.nextHopType = Codegen.empty();
-        this.type = Codegen.empty();
+    private RouteArgs(RouteArgs $) {
+        this.addressPrefix = $.addressPrefix;
+        this.hasBgpOverride = $.hasBgpOverride;
+        this.id = $.id;
+        this.name = $.name;
+        this.nextHopIpAddress = $.nextHopIpAddress;
+        this.nextHopType = $.nextHopType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressPrefix;
-        private @Nullable Output<Boolean> hasBgpOverride;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> nextHopIpAddress;
-        private Output<Either<String,RouteNextHopType>> nextHopType;
-        private @Nullable Output<String> type;
+        private RouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteArgs();
         }
 
         public Builder(RouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.hasBgpOverride = defaults.hasBgpOverride;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.nextHopIpAddress = defaults.nextHopIpAddress;
-    	      this.nextHopType = defaults.nextHopType;
-    	      this.type = defaults.type;
+            $ = new RouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
-        public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Codegen.ofNullable(addressPrefix);
-            return this;
+
+        public Builder addressPrefix(String addressPrefix) {
+            return addressPrefix(Output.of(addressPrefix));
         }
+
         public Builder hasBgpOverride(@Nullable Output<Boolean> hasBgpOverride) {
-            this.hasBgpOverride = hasBgpOverride;
+            $.hasBgpOverride = hasBgpOverride;
             return this;
         }
-        public Builder hasBgpOverride(@Nullable Boolean hasBgpOverride) {
-            this.hasBgpOverride = Codegen.ofNullable(hasBgpOverride);
-            return this;
+
+        public Builder hasBgpOverride(Boolean hasBgpOverride) {
+            return hasBgpOverride(Output.of(hasBgpOverride));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
-            this.nextHopIpAddress = nextHopIpAddress;
+            $.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
-        public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
-            this.nextHopIpAddress = Codegen.ofNullable(nextHopIpAddress);
-            return this;
+
+        public Builder nextHopIpAddress(String nextHopIpAddress) {
+            return nextHopIpAddress(Output.of(nextHopIpAddress));
         }
+
         public Builder nextHopType(Output<Either<String,RouteNextHopType>> nextHopType) {
-            this.nextHopType = Objects.requireNonNull(nextHopType);
+            $.nextHopType = nextHopType;
             return this;
         }
+
         public Builder nextHopType(Either<String,RouteNextHopType> nextHopType) {
-            this.nextHopType = Output.of(Objects.requireNonNull(nextHopType));
-            return this;
+            return nextHopType(Output.of(nextHopType));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public RouteArgs build() {
-            return new RouteArgs(addressPrefix, hasBgpOverride, id, name, nextHopIpAddress, nextHopType, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public RouteArgs build() {
+            $.nextHopType = Objects.requireNonNull($.nextHopType, "expected parameter 'nextHopType' to be non-null");
+            return $;
         }
     }
+
 }

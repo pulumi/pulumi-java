@@ -23,45 +23,44 @@ public final class ResourceReference extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public ResourceReference(@Nullable String id) {
-        this.id = id;
-    }
+    private ResourceReference() {}
 
-    private ResourceReference() {
-        this.id = null;
+    private ResourceReference(ResourceReference $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceReference defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private ResourceReference $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceReference();
         }
 
         public Builder(ResourceReference defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ResourceReference(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public ResourceReference build() {
-            return new ResourceReference(id);
+        }
+
+        public ResourceReference build() {
+            return $;
         }
     }
+
 }

@@ -15,94 +15,86 @@ public final class ExperimentTreatmentObject extends com.pulumi.resources.Invoke
     public static final ExperimentTreatmentObject Empty = new ExperimentTreatmentObject();
 
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="feature", required=true)
-      private final String feature;
+    private String feature;
 
     public String feature() {
         return this.feature;
     }
 
     @Import(name="treatmentName", required=true)
-      private final String treatmentName;
+    private String treatmentName;
 
     public String treatmentName() {
         return this.treatmentName;
     }
 
     @Import(name="variation", required=true)
-      private final String variation;
+    private String variation;
 
     public String variation() {
         return this.variation;
     }
 
-    public ExperimentTreatmentObject(
-        @Nullable String description,
-        String feature,
-        String treatmentName,
-        String variation) {
-        this.description = description;
-        this.feature = Objects.requireNonNull(feature, "expected parameter 'feature' to be non-null");
-        this.treatmentName = Objects.requireNonNull(treatmentName, "expected parameter 'treatmentName' to be non-null");
-        this.variation = Objects.requireNonNull(variation, "expected parameter 'variation' to be non-null");
-    }
+    private ExperimentTreatmentObject() {}
 
-    private ExperimentTreatmentObject() {
-        this.description = null;
-        this.feature = null;
-        this.treatmentName = null;
-        this.variation = null;
+    private ExperimentTreatmentObject(ExperimentTreatmentObject $) {
+        this.description = $.description;
+        this.feature = $.feature;
+        this.treatmentName = $.treatmentName;
+        this.variation = $.variation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentTreatmentObject defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String feature;
-        private String treatmentName;
-        private String variation;
+        private ExperimentTreatmentObject $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentTreatmentObject();
         }
 
         public Builder(ExperimentTreatmentObject defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.feature = defaults.feature;
-    	      this.treatmentName = defaults.treatmentName;
-    	      this.variation = defaults.variation;
+            $ = new ExperimentTreatmentObject(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder feature(String feature) {
-            this.feature = Objects.requireNonNull(feature);
+            $.feature = feature;
             return this;
         }
+
         public Builder treatmentName(String treatmentName) {
-            this.treatmentName = Objects.requireNonNull(treatmentName);
+            $.treatmentName = treatmentName;
             return this;
         }
+
         public Builder variation(String variation) {
-            this.variation = Objects.requireNonNull(variation);
+            $.variation = variation;
             return this;
-        }        public ExperimentTreatmentObject build() {
-            return new ExperimentTreatmentObject(description, feature, treatmentName, variation);
+        }
+
+        public ExperimentTreatmentObject build() {
+            $.feature = Objects.requireNonNull($.feature, "expected parameter 'feature' to be non-null");
+            $.treatmentName = Objects.requireNonNull($.treatmentName, "expected parameter 'treatmentName' to be non-null");
+            $.variation = Objects.requireNonNull($.variation, "expected parameter 'variation' to be non-null");
+            return $;
         }
     }
+
 }

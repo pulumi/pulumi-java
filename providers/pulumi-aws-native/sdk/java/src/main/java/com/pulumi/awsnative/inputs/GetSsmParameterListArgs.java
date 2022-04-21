@@ -13,45 +13,45 @@ public final class GetSsmParameterListArgs extends com.pulumi.resources.InvokeAr
     public static final GetSsmParameterListArgs Empty = new GetSsmParameterListArgs();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetSsmParameterListArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetSsmParameterListArgs() {}
 
-    private GetSsmParameterListArgs() {
-        this.name = null;
+    private GetSsmParameterListArgs(GetSsmParameterListArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSsmParameterListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetSsmParameterListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSsmParameterListArgs();
         }
 
         public Builder(GetSsmParameterListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetSsmParameterListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetSsmParameterListArgs build() {
-            return new GetSsmParameterListArgs(name);
+        }
+
+        public GetSsmParameterListArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetInstanceDatabaseIamPolicyArgs extends com.pulumi.resources
     public static final GetInstanceDatabaseIamPolicyArgs Empty = new GetInstanceDatabaseIamPolicyArgs();
 
     @Import(name="databaseId", required=true)
-      private final String databaseId;
+    private String databaseId;
 
     public String databaseId() {
         return this.databaseId;
     }
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetInstanceDatabaseIamPolicyArgs(
-        String databaseId,
-        String instanceId,
-        @Nullable String project) {
-        this.databaseId = Objects.requireNonNull(databaseId, "expected parameter 'databaseId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = project;
-    }
+    private GetInstanceDatabaseIamPolicyArgs() {}
 
-    private GetInstanceDatabaseIamPolicyArgs() {
-        this.databaseId = null;
-        this.instanceId = null;
-        this.project = null;
+    private GetInstanceDatabaseIamPolicyArgs(GetInstanceDatabaseIamPolicyArgs $) {
+        this.databaseId = $.databaseId;
+        this.instanceId = $.instanceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceDatabaseIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseId;
-        private String instanceId;
-        private @Nullable String project;
+        private GetInstanceDatabaseIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceDatabaseIamPolicyArgs();
         }
 
         public Builder(GetInstanceDatabaseIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseId = defaults.databaseId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
+            $ = new GetInstanceDatabaseIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseId(String databaseId) {
-            this.databaseId = Objects.requireNonNull(databaseId);
+            $.databaseId = databaseId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetInstanceDatabaseIamPolicyArgs build() {
-            return new GetInstanceDatabaseIamPolicyArgs(databaseId, instanceId, project);
+        }
+
+        public GetInstanceDatabaseIamPolicyArgs build() {
+            $.databaseId = Objects.requireNonNull($.databaseId, "expected parameter 'databaseId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

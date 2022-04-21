@@ -22,7 +22,7 @@ public final class AutoscalingPolicyScaleInControlResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxScaledInReplicas", required=true)
-      private final FixedOrPercentResponse maxScaledInReplicas;
+    private FixedOrPercentResponse maxScaledInReplicas;
 
     public FixedOrPercentResponse maxScaledInReplicas() {
         return this.maxScaledInReplicas;
@@ -33,55 +33,52 @@ public final class AutoscalingPolicyScaleInControlResponse extends com.pulumi.re
      * 
      */
     @Import(name="timeWindowSec", required=true)
-      private final Integer timeWindowSec;
+    private Integer timeWindowSec;
 
     public Integer timeWindowSec() {
         return this.timeWindowSec;
     }
 
-    public AutoscalingPolicyScaleInControlResponse(
-        FixedOrPercentResponse maxScaledInReplicas,
-        Integer timeWindowSec) {
-        this.maxScaledInReplicas = Objects.requireNonNull(maxScaledInReplicas, "expected parameter 'maxScaledInReplicas' to be non-null");
-        this.timeWindowSec = Objects.requireNonNull(timeWindowSec, "expected parameter 'timeWindowSec' to be non-null");
-    }
+    private AutoscalingPolicyScaleInControlResponse() {}
 
-    private AutoscalingPolicyScaleInControlResponse() {
-        this.maxScaledInReplicas = null;
-        this.timeWindowSec = null;
+    private AutoscalingPolicyScaleInControlResponse(AutoscalingPolicyScaleInControlResponse $) {
+        this.maxScaledInReplicas = $.maxScaledInReplicas;
+        this.timeWindowSec = $.timeWindowSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyScaleInControlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FixedOrPercentResponse maxScaledInReplicas;
-        private Integer timeWindowSec;
+        private AutoscalingPolicyScaleInControlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyScaleInControlResponse();
         }
 
         public Builder(AutoscalingPolicyScaleInControlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxScaledInReplicas = defaults.maxScaledInReplicas;
-    	      this.timeWindowSec = defaults.timeWindowSec;
+            $ = new AutoscalingPolicyScaleInControlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxScaledInReplicas(FixedOrPercentResponse maxScaledInReplicas) {
-            this.maxScaledInReplicas = Objects.requireNonNull(maxScaledInReplicas);
+            $.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
+
         public Builder timeWindowSec(Integer timeWindowSec) {
-            this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
+            $.timeWindowSec = timeWindowSec;
             return this;
-        }        public AutoscalingPolicyScaleInControlResponse build() {
-            return new AutoscalingPolicyScaleInControlResponse(maxScaledInReplicas, timeWindowSec);
+        }
+
+        public AutoscalingPolicyScaleInControlResponse build() {
+            $.maxScaledInReplicas = Objects.requireNonNull($.maxScaledInReplicas, "expected parameter 'maxScaledInReplicas' to be non-null");
+            $.timeWindowSec = Objects.requireNonNull($.timeWindowSec, "expected parameter 'timeWindowSec' to be non-null");
+            return $;
         }
     }
+
 }

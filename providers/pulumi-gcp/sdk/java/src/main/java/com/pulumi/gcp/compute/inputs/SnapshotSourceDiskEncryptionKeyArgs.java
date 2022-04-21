@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SnapshotSourceDiskEncryptionKeyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="kmsKeyServiceAccount")
-      private final @Nullable Output<String> kmsKeyServiceAccount;
+    private @Nullable Output<String> kmsKeyServiceAccount;
 
-    public Output<String> kmsKeyServiceAccount() {
-        return this.kmsKeyServiceAccount == null ? Codegen.empty() : this.kmsKeyServiceAccount;
+    public Optional<Output<String>> kmsKeyServiceAccount() {
+        return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class SnapshotSourceDiskEncryptionKeyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="rawKey")
-      private final @Nullable Output<String> rawKey;
+    private @Nullable Output<String> rawKey;
 
-    public Output<String> rawKey() {
-        return this.rawKey == null ? Codegen.empty() : this.rawKey;
+    public Optional<Output<String>> rawKey() {
+        return Optional.ofNullable(this.rawKey);
     }
 
-    public SnapshotSourceDiskEncryptionKeyArgs(
-        @Nullable Output<String> kmsKeyServiceAccount,
-        @Nullable Output<String> rawKey) {
-        this.kmsKeyServiceAccount = kmsKeyServiceAccount;
-        this.rawKey = rawKey;
-    }
+    private SnapshotSourceDiskEncryptionKeyArgs() {}
 
-    private SnapshotSourceDiskEncryptionKeyArgs() {
-        this.kmsKeyServiceAccount = Codegen.empty();
-        this.rawKey = Codegen.empty();
+    private SnapshotSourceDiskEncryptionKeyArgs(SnapshotSourceDiskEncryptionKeyArgs $) {
+        this.kmsKeyServiceAccount = $.kmsKeyServiceAccount;
+        this.rawKey = $.rawKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotSourceDiskEncryptionKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyServiceAccount;
-        private @Nullable Output<String> rawKey;
+        private SnapshotSourceDiskEncryptionKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotSourceDiskEncryptionKeyArgs();
         }
 
         public Builder(SnapshotSourceDiskEncryptionKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyServiceAccount = defaults.kmsKeyServiceAccount;
-    	      this.rawKey = defaults.rawKey;
+            $ = new SnapshotSourceDiskEncryptionKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyServiceAccount(@Nullable Output<String> kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = kmsKeyServiceAccount;
+            $.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
-        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = Codegen.ofNullable(kmsKeyServiceAccount);
-            return this;
+
+        public Builder kmsKeyServiceAccount(String kmsKeyServiceAccount) {
+            return kmsKeyServiceAccount(Output.of(kmsKeyServiceAccount));
         }
+
         public Builder rawKey(@Nullable Output<String> rawKey) {
-            this.rawKey = rawKey;
+            $.rawKey = rawKey;
             return this;
         }
-        public Builder rawKey(@Nullable String rawKey) {
-            this.rawKey = Codegen.ofNullable(rawKey);
-            return this;
-        }        public SnapshotSourceDiskEncryptionKeyArgs build() {
-            return new SnapshotSourceDiskEncryptionKeyArgs(kmsKeyServiceAccount, rawKey);
+
+        public Builder rawKey(String rawKey) {
+            return rawKey(Output.of(rawKey));
+        }
+
+        public SnapshotSourceDiskEncryptionKeyArgs build() {
+            return $;
         }
     }
+
 }

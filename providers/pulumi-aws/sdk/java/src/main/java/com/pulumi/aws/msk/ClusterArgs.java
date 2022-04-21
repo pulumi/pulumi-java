@@ -11,11 +11,11 @@ import com.pulumi.aws.msk.inputs.ClusterLoggingInfoArgs;
 import com.pulumi.aws.msk.inputs.ClusterOpenMonitoringArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="brokerNodeGroupInfo", required=true)
-      private final Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo;
+    private Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo;
 
     public Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo() {
         return this.brokerNodeGroupInfo;
@@ -39,10 +39,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientAuthentication")
-      private final @Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication;
+    private @Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication;
 
-    public Output<ClusterClientAuthenticationArgs> clientAuthentication() {
-        return this.clientAuthentication == null ? Codegen.empty() : this.clientAuthentication;
+    public Optional<Output<ClusterClientAuthenticationArgs>> clientAuthentication() {
+        return Optional.ofNullable(this.clientAuthentication);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationInfo")
-      private final @Nullable Output<ClusterConfigurationInfoArgs> configurationInfo;
+    private @Nullable Output<ClusterConfigurationInfoArgs> configurationInfo;
 
-    public Output<ClusterConfigurationInfoArgs> configurationInfo() {
-        return this.configurationInfo == null ? Codegen.empty() : this.configurationInfo;
+    public Optional<Output<ClusterConfigurationInfoArgs>> configurationInfo() {
+        return Optional.ofNullable(this.configurationInfo);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionInfo")
-      private final @Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo;
+    private @Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo;
 
-    public Output<ClusterEncryptionInfoArgs> encryptionInfo() {
-        return this.encryptionInfo == null ? Codegen.empty() : this.encryptionInfo;
+    public Optional<Output<ClusterEncryptionInfoArgs>> encryptionInfo() {
+        return Optional.ofNullable(this.encryptionInfo);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enhancedMonitoring")
-      private final @Nullable Output<String> enhancedMonitoring;
+    private @Nullable Output<String> enhancedMonitoring;
 
-    public Output<String> enhancedMonitoring() {
-        return this.enhancedMonitoring == null ? Codegen.empty() : this.enhancedMonitoring;
+    public Optional<Output<String>> enhancedMonitoring() {
+        return Optional.ofNullable(this.enhancedMonitoring);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kafkaVersion", required=true)
-      private final Output<String> kafkaVersion;
+    private Output<String> kafkaVersion;
 
     public Output<String> kafkaVersion() {
         return this.kafkaVersion;
@@ -105,10 +105,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingInfo")
-      private final @Nullable Output<ClusterLoggingInfoArgs> loggingInfo;
+    private @Nullable Output<ClusterLoggingInfoArgs> loggingInfo;
 
-    public Output<ClusterLoggingInfoArgs> loggingInfo() {
-        return this.loggingInfo == null ? Codegen.empty() : this.loggingInfo;
+    public Optional<Output<ClusterLoggingInfoArgs>> loggingInfo() {
+        return Optional.ofNullable(this.loggingInfo);
     }
 
     /**
@@ -116,7 +116,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfBrokerNodes", required=true)
-      private final Output<Integer> numberOfBrokerNodes;
+    private Output<Integer> numberOfBrokerNodes;
 
     public Output<Integer> numberOfBrokerNodes() {
         return this.numberOfBrokerNodes;
@@ -127,10 +127,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="openMonitoring")
-      private final @Nullable Output<ClusterOpenMonitoringArgs> openMonitoring;
+    private @Nullable Output<ClusterOpenMonitoringArgs> openMonitoring;
 
-    public Output<ClusterOpenMonitoringArgs> openMonitoring() {
-        return this.openMonitoring == null ? Codegen.empty() : this.openMonitoring;
+    public Optional<Output<ClusterOpenMonitoringArgs>> openMonitoring() {
+        return Optional.ofNullable(this.openMonitoring);
     }
 
     /**
@@ -138,180 +138,151 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ClusterArgs(
-        Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo,
-        @Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication,
-        @Nullable Output<String> clusterName,
-        @Nullable Output<ClusterConfigurationInfoArgs> configurationInfo,
-        @Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo,
-        @Nullable Output<String> enhancedMonitoring,
-        Output<String> kafkaVersion,
-        @Nullable Output<ClusterLoggingInfoArgs> loggingInfo,
-        Output<Integer> numberOfBrokerNodes,
-        @Nullable Output<ClusterOpenMonitoringArgs> openMonitoring,
-        @Nullable Output<Map<String,String>> tags) {
-        this.brokerNodeGroupInfo = Objects.requireNonNull(brokerNodeGroupInfo, "expected parameter 'brokerNodeGroupInfo' to be non-null");
-        this.clientAuthentication = clientAuthentication;
-        this.clusterName = clusterName;
-        this.configurationInfo = configurationInfo;
-        this.encryptionInfo = encryptionInfo;
-        this.enhancedMonitoring = enhancedMonitoring;
-        this.kafkaVersion = Objects.requireNonNull(kafkaVersion, "expected parameter 'kafkaVersion' to be non-null");
-        this.loggingInfo = loggingInfo;
-        this.numberOfBrokerNodes = Objects.requireNonNull(numberOfBrokerNodes, "expected parameter 'numberOfBrokerNodes' to be non-null");
-        this.openMonitoring = openMonitoring;
-        this.tags = tags;
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.brokerNodeGroupInfo = Codegen.empty();
-        this.clientAuthentication = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.configurationInfo = Codegen.empty();
-        this.encryptionInfo = Codegen.empty();
-        this.enhancedMonitoring = Codegen.empty();
-        this.kafkaVersion = Codegen.empty();
-        this.loggingInfo = Codegen.empty();
-        this.numberOfBrokerNodes = Codegen.empty();
-        this.openMonitoring = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.brokerNodeGroupInfo = $.brokerNodeGroupInfo;
+        this.clientAuthentication = $.clientAuthentication;
+        this.clusterName = $.clusterName;
+        this.configurationInfo = $.configurationInfo;
+        this.encryptionInfo = $.encryptionInfo;
+        this.enhancedMonitoring = $.enhancedMonitoring;
+        this.kafkaVersion = $.kafkaVersion;
+        this.loggingInfo = $.loggingInfo;
+        this.numberOfBrokerNodes = $.numberOfBrokerNodes;
+        this.openMonitoring = $.openMonitoring;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo;
-        private @Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication;
-        private @Nullable Output<String> clusterName;
-        private @Nullable Output<ClusterConfigurationInfoArgs> configurationInfo;
-        private @Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo;
-        private @Nullable Output<String> enhancedMonitoring;
-        private Output<String> kafkaVersion;
-        private @Nullable Output<ClusterLoggingInfoArgs> loggingInfo;
-        private Output<Integer> numberOfBrokerNodes;
-        private @Nullable Output<ClusterOpenMonitoringArgs> openMonitoring;
-        private @Nullable Output<Map<String,String>> tags;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brokerNodeGroupInfo = defaults.brokerNodeGroupInfo;
-    	      this.clientAuthentication = defaults.clientAuthentication;
-    	      this.clusterName = defaults.clusterName;
-    	      this.configurationInfo = defaults.configurationInfo;
-    	      this.encryptionInfo = defaults.encryptionInfo;
-    	      this.enhancedMonitoring = defaults.enhancedMonitoring;
-    	      this.kafkaVersion = defaults.kafkaVersion;
-    	      this.loggingInfo = defaults.loggingInfo;
-    	      this.numberOfBrokerNodes = defaults.numberOfBrokerNodes;
-    	      this.openMonitoring = defaults.openMonitoring;
-    	      this.tags = defaults.tags;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder brokerNodeGroupInfo(Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo) {
-            this.brokerNodeGroupInfo = Objects.requireNonNull(brokerNodeGroupInfo);
+            $.brokerNodeGroupInfo = brokerNodeGroupInfo;
             return this;
         }
+
         public Builder brokerNodeGroupInfo(ClusterBrokerNodeGroupInfoArgs brokerNodeGroupInfo) {
-            this.brokerNodeGroupInfo = Output.of(Objects.requireNonNull(brokerNodeGroupInfo));
-            return this;
+            return brokerNodeGroupInfo(Output.of(brokerNodeGroupInfo));
         }
+
         public Builder clientAuthentication(@Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication) {
-            this.clientAuthentication = clientAuthentication;
+            $.clientAuthentication = clientAuthentication;
             return this;
         }
-        public Builder clientAuthentication(@Nullable ClusterClientAuthenticationArgs clientAuthentication) {
-            this.clientAuthentication = Codegen.ofNullable(clientAuthentication);
-            return this;
+
+        public Builder clientAuthentication(ClusterClientAuthenticationArgs clientAuthentication) {
+            return clientAuthentication(Output.of(clientAuthentication));
         }
+
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder configurationInfo(@Nullable Output<ClusterConfigurationInfoArgs> configurationInfo) {
-            this.configurationInfo = configurationInfo;
+            $.configurationInfo = configurationInfo;
             return this;
         }
-        public Builder configurationInfo(@Nullable ClusterConfigurationInfoArgs configurationInfo) {
-            this.configurationInfo = Codegen.ofNullable(configurationInfo);
-            return this;
+
+        public Builder configurationInfo(ClusterConfigurationInfoArgs configurationInfo) {
+            return configurationInfo(Output.of(configurationInfo));
         }
+
         public Builder encryptionInfo(@Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo) {
-            this.encryptionInfo = encryptionInfo;
+            $.encryptionInfo = encryptionInfo;
             return this;
         }
-        public Builder encryptionInfo(@Nullable ClusterEncryptionInfoArgs encryptionInfo) {
-            this.encryptionInfo = Codegen.ofNullable(encryptionInfo);
-            return this;
+
+        public Builder encryptionInfo(ClusterEncryptionInfoArgs encryptionInfo) {
+            return encryptionInfo(Output.of(encryptionInfo));
         }
+
         public Builder enhancedMonitoring(@Nullable Output<String> enhancedMonitoring) {
-            this.enhancedMonitoring = enhancedMonitoring;
+            $.enhancedMonitoring = enhancedMonitoring;
             return this;
         }
-        public Builder enhancedMonitoring(@Nullable String enhancedMonitoring) {
-            this.enhancedMonitoring = Codegen.ofNullable(enhancedMonitoring);
-            return this;
+
+        public Builder enhancedMonitoring(String enhancedMonitoring) {
+            return enhancedMonitoring(Output.of(enhancedMonitoring));
         }
+
         public Builder kafkaVersion(Output<String> kafkaVersion) {
-            this.kafkaVersion = Objects.requireNonNull(kafkaVersion);
+            $.kafkaVersion = kafkaVersion;
             return this;
         }
+
         public Builder kafkaVersion(String kafkaVersion) {
-            this.kafkaVersion = Output.of(Objects.requireNonNull(kafkaVersion));
-            return this;
+            return kafkaVersion(Output.of(kafkaVersion));
         }
+
         public Builder loggingInfo(@Nullable Output<ClusterLoggingInfoArgs> loggingInfo) {
-            this.loggingInfo = loggingInfo;
+            $.loggingInfo = loggingInfo;
             return this;
         }
-        public Builder loggingInfo(@Nullable ClusterLoggingInfoArgs loggingInfo) {
-            this.loggingInfo = Codegen.ofNullable(loggingInfo);
-            return this;
+
+        public Builder loggingInfo(ClusterLoggingInfoArgs loggingInfo) {
+            return loggingInfo(Output.of(loggingInfo));
         }
+
         public Builder numberOfBrokerNodes(Output<Integer> numberOfBrokerNodes) {
-            this.numberOfBrokerNodes = Objects.requireNonNull(numberOfBrokerNodes);
+            $.numberOfBrokerNodes = numberOfBrokerNodes;
             return this;
         }
+
         public Builder numberOfBrokerNodes(Integer numberOfBrokerNodes) {
-            this.numberOfBrokerNodes = Output.of(Objects.requireNonNull(numberOfBrokerNodes));
-            return this;
+            return numberOfBrokerNodes(Output.of(numberOfBrokerNodes));
         }
+
         public Builder openMonitoring(@Nullable Output<ClusterOpenMonitoringArgs> openMonitoring) {
-            this.openMonitoring = openMonitoring;
+            $.openMonitoring = openMonitoring;
             return this;
         }
-        public Builder openMonitoring(@Nullable ClusterOpenMonitoringArgs openMonitoring) {
-            this.openMonitoring = Codegen.ofNullable(openMonitoring);
-            return this;
+
+        public Builder openMonitoring(ClusterOpenMonitoringArgs openMonitoring) {
+            return openMonitoring(Output.of(openMonitoring));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ClusterArgs build() {
-            return new ClusterArgs(brokerNodeGroupInfo, clientAuthentication, clusterName, configurationInfo, encryptionInfo, enhancedMonitoring, kafkaVersion, loggingInfo, numberOfBrokerNodes, openMonitoring, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ClusterArgs build() {
+            $.brokerNodeGroupInfo = Objects.requireNonNull($.brokerNodeGroupInfo, "expected parameter 'brokerNodeGroupInfo' to be non-null");
+            $.kafkaVersion = Objects.requireNonNull($.kafkaVersion, "expected parameter 'kafkaVersion' to be non-null");
+            $.numberOfBrokerNodes = Objects.requireNonNull($.numberOfBrokerNodes, "expected parameter 'numberOfBrokerNodes' to be non-null");
+            return $;
         }
     }
+
 }

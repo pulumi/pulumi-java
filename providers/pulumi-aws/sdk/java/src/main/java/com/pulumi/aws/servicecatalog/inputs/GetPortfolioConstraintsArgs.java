@@ -19,10 +19,10 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable String acceptLanguage;
+    private @Nullable String acceptLanguage;
 
     public Optional<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="portfolioId", required=true)
-      private final String portfolioId;
+    private String portfolioId;
 
     public String portfolioId() {
         return this.portfolioId;
@@ -41,64 +41,57 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="productId")
-      private final @Nullable String productId;
+    private @Nullable String productId;
 
     public Optional<String> productId() {
-        return this.productId == null ? Optional.empty() : Optional.ofNullable(this.productId);
+        return Optional.ofNullable(this.productId);
     }
 
-    public GetPortfolioConstraintsArgs(
-        @Nullable String acceptLanguage,
-        String portfolioId,
-        @Nullable String productId) {
-        this.acceptLanguage = acceptLanguage;
-        this.portfolioId = Objects.requireNonNull(portfolioId, "expected parameter 'portfolioId' to be non-null");
-        this.productId = productId;
-    }
+    private GetPortfolioConstraintsArgs() {}
 
-    private GetPortfolioConstraintsArgs() {
-        this.acceptLanguage = null;
-        this.portfolioId = null;
-        this.productId = null;
+    private GetPortfolioConstraintsArgs(GetPortfolioConstraintsArgs $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.portfolioId = $.portfolioId;
+        this.productId = $.productId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPortfolioConstraintsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String acceptLanguage;
-        private String portfolioId;
-        private @Nullable String productId;
+        private GetPortfolioConstraintsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPortfolioConstraintsArgs();
         }
 
         public Builder(GetPortfolioConstraintsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.portfolioId = defaults.portfolioId;
-    	      this.productId = defaults.productId;
+            $ = new GetPortfolioConstraintsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
+
         public Builder portfolioId(String portfolioId) {
-            this.portfolioId = Objects.requireNonNull(portfolioId);
+            $.portfolioId = portfolioId;
             return this;
         }
+
         public Builder productId(@Nullable String productId) {
-            this.productId = productId;
+            $.productId = productId;
             return this;
-        }        public GetPortfolioConstraintsArgs build() {
-            return new GetPortfolioConstraintsArgs(acceptLanguage, portfolioId, productId);
+        }
+
+        public GetPortfolioConstraintsArgs build() {
+            $.portfolioId = Objects.requireNonNull($.portfolioId, "expected parameter 'portfolioId' to be non-null");
+            return $;
         }
     }
+
 }

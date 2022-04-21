@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TlsCertificatePathsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="certificatePath")
-      private final @Nullable Output<String> certificatePath;
+    private @Nullable Output<String> certificatePath;
 
-    public Output<String> certificatePath() {
-        return this.certificatePath == null ? Codegen.empty() : this.certificatePath;
+    public Optional<Output<String>> certificatePath() {
+        return Optional.ofNullable(this.certificatePath);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class TlsCertificatePathsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="privateKeyPath")
-      private final @Nullable Output<String> privateKeyPath;
+    private @Nullable Output<String> privateKeyPath;
 
-    public Output<String> privateKeyPath() {
-        return this.privateKeyPath == null ? Codegen.empty() : this.privateKeyPath;
+    public Optional<Output<String>> privateKeyPath() {
+        return Optional.ofNullable(this.privateKeyPath);
     }
 
-    public TlsCertificatePathsArgs(
-        @Nullable Output<String> certificatePath,
-        @Nullable Output<String> privateKeyPath) {
-        this.certificatePath = certificatePath;
-        this.privateKeyPath = privateKeyPath;
-    }
+    private TlsCertificatePathsArgs() {}
 
-    private TlsCertificatePathsArgs() {
-        this.certificatePath = Codegen.empty();
-        this.privateKeyPath = Codegen.empty();
+    private TlsCertificatePathsArgs(TlsCertificatePathsArgs $) {
+        this.certificatePath = $.certificatePath;
+        this.privateKeyPath = $.privateKeyPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsCertificatePathsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificatePath;
-        private @Nullable Output<String> privateKeyPath;
+        private TlsCertificatePathsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsCertificatePathsArgs();
         }
 
         public Builder(TlsCertificatePathsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificatePath = defaults.certificatePath;
-    	      this.privateKeyPath = defaults.privateKeyPath;
+            $ = new TlsCertificatePathsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificatePath(@Nullable Output<String> certificatePath) {
-            this.certificatePath = certificatePath;
+            $.certificatePath = certificatePath;
             return this;
         }
-        public Builder certificatePath(@Nullable String certificatePath) {
-            this.certificatePath = Codegen.ofNullable(certificatePath);
-            return this;
+
+        public Builder certificatePath(String certificatePath) {
+            return certificatePath(Output.of(certificatePath));
         }
+
         public Builder privateKeyPath(@Nullable Output<String> privateKeyPath) {
-            this.privateKeyPath = privateKeyPath;
+            $.privateKeyPath = privateKeyPath;
             return this;
         }
-        public Builder privateKeyPath(@Nullable String privateKeyPath) {
-            this.privateKeyPath = Codegen.ofNullable(privateKeyPath);
-            return this;
-        }        public TlsCertificatePathsArgs build() {
-            return new TlsCertificatePathsArgs(certificatePath, privateKeyPath);
+
+        public Builder privateKeyPath(String privateKeyPath) {
+            return privateKeyPath(Output.of(privateKeyPath));
+        }
+
+        public TlsCertificatePathsArgs build() {
+            return $;
         }
     }
+
 }

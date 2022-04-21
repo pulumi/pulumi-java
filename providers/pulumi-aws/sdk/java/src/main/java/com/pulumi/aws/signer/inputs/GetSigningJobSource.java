@@ -14,48 +14,49 @@ public final class GetSigningJobSource extends com.pulumi.resources.InvokeArgs {
     public static final GetSigningJobSource Empty = new GetSigningJobSource();
 
     @Import(name="s3s", required=true)
-      private final List<GetSigningJobSourceS3> s3s;
+    private List<GetSigningJobSourceS3> s3s;
 
     public List<GetSigningJobSourceS3> s3s() {
         return this.s3s;
     }
 
-    public GetSigningJobSource(List<GetSigningJobSourceS3> s3s) {
-        this.s3s = Objects.requireNonNull(s3s, "expected parameter 's3s' to be non-null");
-    }
+    private GetSigningJobSource() {}
 
-    private GetSigningJobSource() {
-        this.s3s = List.of();
+    private GetSigningJobSource(GetSigningJobSource $) {
+        this.s3s = $.s3s;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSigningJobSource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetSigningJobSourceS3> s3s;
+        private GetSigningJobSource $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSigningJobSource();
         }
 
         public Builder(GetSigningJobSource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3s = defaults.s3s;
+            $ = new GetSigningJobSource(Objects.requireNonNull(defaults));
         }
 
         public Builder s3s(List<GetSigningJobSourceS3> s3s) {
-            this.s3s = Objects.requireNonNull(s3s);
+            $.s3s = s3s;
             return this;
         }
+
         public Builder s3s(GetSigningJobSourceS3... s3s) {
             return s3s(List.of(s3s));
-        }        public GetSigningJobSource build() {
-            return new GetSigningJobSource(s3s);
+        }
+
+        public GetSigningJobSource build() {
+            $.s3s = Objects.requireNonNull($.s3s, "expected parameter 's3s' to be non-null");
+            return $;
         }
     }
+
 }

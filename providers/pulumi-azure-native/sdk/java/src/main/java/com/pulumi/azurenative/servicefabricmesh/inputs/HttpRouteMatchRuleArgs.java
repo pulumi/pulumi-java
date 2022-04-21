@@ -7,9 +7,9 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchHeaderArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchPathArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class HttpRouteMatchRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers;
+    private @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers;
 
-    public Output<List<HttpRouteMatchHeaderArgs>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<List<HttpRouteMatchHeaderArgs>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class HttpRouteMatchRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="path", required=true)
-      private final Output<HttpRouteMatchPathArgs> path;
+    private Output<HttpRouteMatchPathArgs> path;
 
     public Output<HttpRouteMatchPathArgs> path() {
         return this.path;
     }
 
-    public HttpRouteMatchRuleArgs(
-        @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers,
-        Output<HttpRouteMatchPathArgs> path) {
-        this.headers = headers;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private HttpRouteMatchRuleArgs() {}
 
-    private HttpRouteMatchRuleArgs() {
-        this.headers = Codegen.empty();
-        this.path = Codegen.empty();
+    private HttpRouteMatchRuleArgs(HttpRouteMatchRuleArgs $) {
+        this.headers = $.headers;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteMatchRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers;
-        private Output<HttpRouteMatchPathArgs> path;
+        private HttpRouteMatchRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteMatchRuleArgs();
         }
 
         public Builder(HttpRouteMatchRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headers = defaults.headers;
-    	      this.path = defaults.path;
+            $ = new HttpRouteMatchRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headers(@Nullable Output<List<HttpRouteMatchHeaderArgs>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable List<HttpRouteMatchHeaderArgs> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(List<HttpRouteMatchHeaderArgs> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder headers(HttpRouteMatchHeaderArgs... headers) {
             return headers(List.of(headers));
         }
+
         public Builder path(Output<HttpRouteMatchPathArgs> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(HttpRouteMatchPathArgs path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public HttpRouteMatchRuleArgs build() {
-            return new HttpRouteMatchRuleArgs(headers, path);
+            return path(Output.of(path));
+        }
+
+        public HttpRouteMatchRuleArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

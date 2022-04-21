@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConfigConnectorConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public ConfigConnectorConfigArgs(@Nullable Output<Boolean> enabled) {
-        this.enabled = enabled;
-    }
+    private ConfigConnectorConfigArgs() {}
 
-    private ConfigConnectorConfigArgs() {
-        this.enabled = Codegen.empty();
+    private ConfigConnectorConfigArgs(ConfigConnectorConfigArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigConnectorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
+        private ConfigConnectorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigConnectorConfigArgs();
         }
 
         public Builder(ConfigConnectorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new ConfigConnectorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public ConfigConnectorConfigArgs build() {
-            return new ConfigConnectorConfigArgs(enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public ConfigConnectorConfigArgs build() {
+            return $;
         }
     }
+
 }

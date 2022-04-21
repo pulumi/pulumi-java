@@ -7,11 +7,11 @@ import com.pulumi.aws.signer.inputs.SigningProfileRevocationRecordGetArgs;
 import com.pulumi.aws.signer.inputs.SigningProfileSignatureValidityPeriodGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="platformDisplayName")
-      private final @Nullable Output<String> platformDisplayName;
+    private @Nullable Output<String> platformDisplayName;
 
-    public Output<String> platformDisplayName() {
-        return this.platformDisplayName == null ? Codegen.empty() : this.platformDisplayName;
+    public Optional<Output<String>> platformDisplayName() {
+        return Optional.ofNullable(this.platformDisplayName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="platformId")
-      private final @Nullable Output<String> platformId;
+    private @Nullable Output<String> platformId;
 
-    public Output<String> platformId() {
-        return this.platformId == null ? Codegen.empty() : this.platformId;
+    public Optional<Output<String>> platformId() {
+        return Optional.ofNullable(this.platformId);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="revocationRecords")
-      private final @Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
+    private @Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
 
-    public Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords() {
-        return this.revocationRecords == null ? Codegen.empty() : this.revocationRecords;
+    public Optional<Output<List<SigningProfileRevocationRecordGetArgs>>> revocationRecords() {
+        return Optional.ofNullable(this.revocationRecords);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="signatureValidityPeriod")
-      private final @Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
+    private @Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
 
-    public Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod() {
-        return this.signatureValidityPeriod == null ? Codegen.empty() : this.signatureValidityPeriod;
+    public Optional<Output<SigningProfileSignatureValidityPeriodGetArgs>> signatureValidityPeriod() {
+        return Optional.ofNullable(this.signatureValidityPeriod);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -145,196 +145,162 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="versionArn")
-      private final @Nullable Output<String> versionArn;
+    private @Nullable Output<String> versionArn;
 
-    public Output<String> versionArn() {
-        return this.versionArn == null ? Codegen.empty() : this.versionArn;
+    public Optional<Output<String>> versionArn() {
+        return Optional.ofNullable(this.versionArn);
     }
 
-    public SigningProfileState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> platformDisplayName,
-        @Nullable Output<String> platformId,
-        @Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords,
-        @Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod,
-        @Nullable Output<String> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> version,
-        @Nullable Output<String> versionArn) {
-        this.arn = arn;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.platformDisplayName = platformDisplayName;
-        this.platformId = platformId;
-        this.revocationRecords = revocationRecords;
-        this.signatureValidityPeriod = signatureValidityPeriod;
-        this.status = status;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.version = version;
-        this.versionArn = versionArn;
-    }
+    private SigningProfileState() {}
 
-    private SigningProfileState() {
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.platformDisplayName = Codegen.empty();
-        this.platformId = Codegen.empty();
-        this.revocationRecords = Codegen.empty();
-        this.signatureValidityPeriod = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.version = Codegen.empty();
-        this.versionArn = Codegen.empty();
+    private SigningProfileState(SigningProfileState $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.platformDisplayName = $.platformDisplayName;
+        this.platformId = $.platformId;
+        this.revocationRecords = $.revocationRecords;
+        this.signatureValidityPeriod = $.signatureValidityPeriod;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.version = $.version;
+        this.versionArn = $.versionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningProfileState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> platformDisplayName;
-        private @Nullable Output<String> platformId;
-        private @Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
-        private @Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> version;
-        private @Nullable Output<String> versionArn;
+        private SigningProfileState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningProfileState();
         }
 
         public Builder(SigningProfileState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.platformDisplayName = defaults.platformDisplayName;
-    	      this.platformId = defaults.platformId;
-    	      this.revocationRecords = defaults.revocationRecords;
-    	      this.signatureValidityPeriod = defaults.signatureValidityPeriod;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.version = defaults.version;
-    	      this.versionArn = defaults.versionArn;
+            $ = new SigningProfileState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder platformDisplayName(@Nullable Output<String> platformDisplayName) {
-            this.platformDisplayName = platformDisplayName;
+            $.platformDisplayName = platformDisplayName;
             return this;
         }
-        public Builder platformDisplayName(@Nullable String platformDisplayName) {
-            this.platformDisplayName = Codegen.ofNullable(platformDisplayName);
-            return this;
+
+        public Builder platformDisplayName(String platformDisplayName) {
+            return platformDisplayName(Output.of(platformDisplayName));
         }
+
         public Builder platformId(@Nullable Output<String> platformId) {
-            this.platformId = platformId;
+            $.platformId = platformId;
             return this;
         }
-        public Builder platformId(@Nullable String platformId) {
-            this.platformId = Codegen.ofNullable(platformId);
-            return this;
+
+        public Builder platformId(String platformId) {
+            return platformId(Output.of(platformId));
         }
+
         public Builder revocationRecords(@Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords) {
-            this.revocationRecords = revocationRecords;
+            $.revocationRecords = revocationRecords;
             return this;
         }
-        public Builder revocationRecords(@Nullable List<SigningProfileRevocationRecordGetArgs> revocationRecords) {
-            this.revocationRecords = Codegen.ofNullable(revocationRecords);
-            return this;
+
+        public Builder revocationRecords(List<SigningProfileRevocationRecordGetArgs> revocationRecords) {
+            return revocationRecords(Output.of(revocationRecords));
         }
+
         public Builder revocationRecords(SigningProfileRevocationRecordGetArgs... revocationRecords) {
             return revocationRecords(List.of(revocationRecords));
         }
+
         public Builder signatureValidityPeriod(@Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod) {
-            this.signatureValidityPeriod = signatureValidityPeriod;
+            $.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
-        public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodGetArgs signatureValidityPeriod) {
-            this.signatureValidityPeriod = Codegen.ofNullable(signatureValidityPeriod);
-            return this;
+
+        public Builder signatureValidityPeriod(SigningProfileSignatureValidityPeriodGetArgs signatureValidityPeriod) {
+            return signatureValidityPeriod(Output.of(signatureValidityPeriod));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder versionArn(@Nullable Output<String> versionArn) {
-            this.versionArn = versionArn;
+            $.versionArn = versionArn;
             return this;
         }
-        public Builder versionArn(@Nullable String versionArn) {
-            this.versionArn = Codegen.ofNullable(versionArn);
-            return this;
-        }        public SigningProfileState build() {
-            return new SigningProfileState(arn, name, namePrefix, platformDisplayName, platformId, revocationRecords, signatureValidityPeriod, status, tags, tagsAll, version, versionArn);
+
+        public Builder versionArn(String versionArn) {
+            return versionArn(Output.of(versionArn));
+        }
+
+        public SigningProfileState build() {
+            return $;
         }
     }
+
 }

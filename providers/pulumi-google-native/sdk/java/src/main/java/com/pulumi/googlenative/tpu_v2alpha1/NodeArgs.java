@@ -5,7 +5,6 @@ package com.pulumi.googlenative.tpu_v2alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.tpu_v2alpha1.enums.NodeHealth;
 import com.pulumi.googlenative.tpu_v2alpha1.inputs.AttachedDiskArgs;
 import com.pulumi.googlenative.tpu_v2alpha1.inputs.NetworkConfigArgs;
@@ -15,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceleratorType", required=true)
-      private final Output<String> acceleratorType;
+    private Output<String> acceleratorType;
 
     public Output<String> acceleratorType() {
         return this.acceleratorType;
@@ -38,10 +38,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cidrBlock")
-      private final @Nullable Output<String> cidrBlock;
+    private @Nullable Output<String> cidrBlock;
 
-    public Output<String> cidrBlock() {
-        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
+    public Optional<Output<String>> cidrBlock() {
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataDisks")
-      private final @Nullable Output<List<AttachedDiskArgs>> dataDisks;
+    private @Nullable Output<List<AttachedDiskArgs>> dataDisks;
 
-    public Output<List<AttachedDiskArgs>> dataDisks() {
-        return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
+    public Optional<Output<List<AttachedDiskArgs>>> dataDisks() {
+        return Optional.ofNullable(this.dataDisks);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="health")
-      private final @Nullable Output<NodeHealth> health;
+    private @Nullable Output<NodeHealth> health;
 
-    public Output<NodeHealth> health() {
-        return this.health == null ? Codegen.empty() : this.health;
+    public Optional<Output<NodeHealth>> health() {
+        return Optional.ofNullable(this.health);
     }
 
     /**
@@ -82,17 +82,17 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -111,24 +111,24 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-      private final @Nullable Output<NetworkConfigArgs> networkConfig;
+    private @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Output<NetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<NetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     @Import(name="nodeId")
-      private final @Nullable Output<String> nodeId;
+    private @Nullable Output<String> nodeId;
 
-    public Output<String> nodeId() {
-        return this.nodeId == null ? Codegen.empty() : this.nodeId;
+    public Optional<Output<String>> nodeId() {
+        return Optional.ofNullable(this.nodeId);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -136,7 +136,7 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeVersion", required=true)
-      private final Output<String> runtimeVersion;
+    private Output<String> runtimeVersion;
 
     public Output<String> runtimeVersion() {
         return this.runtimeVersion;
@@ -147,10 +147,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedulingConfig")
-      private final @Nullable Output<SchedulingConfigArgs> schedulingConfig;
+    private @Nullable Output<SchedulingConfigArgs> schedulingConfig;
 
-    public Output<SchedulingConfigArgs> schedulingConfig() {
-        return this.schedulingConfig == null ? Codegen.empty() : this.schedulingConfig;
+    public Optional<Output<SchedulingConfigArgs>> schedulingConfig() {
+        return Optional.ofNullable(this.schedulingConfig);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<ServiceAccountArgs> serviceAccount;
+    private @Nullable Output<ServiceAccountArgs> serviceAccount;
 
-    public Output<ServiceAccountArgs> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<ServiceAccountArgs>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -169,238 +169,198 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NodeArgs(
-        Output<String> acceleratorType,
-        @Nullable Output<String> cidrBlock,
-        @Nullable Output<List<AttachedDiskArgs>> dataDisks,
-        @Nullable Output<String> description,
-        @Nullable Output<NodeHealth> health,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<NetworkConfigArgs> networkConfig,
-        @Nullable Output<String> nodeId,
-        @Nullable Output<String> project,
-        Output<String> runtimeVersion,
-        @Nullable Output<SchedulingConfigArgs> schedulingConfig,
-        @Nullable Output<ServiceAccountArgs> serviceAccount,
-        @Nullable Output<List<String>> tags) {
-        this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
-        this.cidrBlock = cidrBlock;
-        this.dataDisks = dataDisks;
-        this.description = description;
-        this.health = health;
-        this.labels = labels;
-        this.location = location;
-        this.metadata = metadata;
-        this.networkConfig = networkConfig;
-        this.nodeId = nodeId;
-        this.project = project;
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
-        this.schedulingConfig = schedulingConfig;
-        this.serviceAccount = serviceAccount;
-        this.tags = tags;
-    }
+    private NodeArgs() {}
 
-    private NodeArgs() {
-        this.acceleratorType = Codegen.empty();
-        this.cidrBlock = Codegen.empty();
-        this.dataDisks = Codegen.empty();
-        this.description = Codegen.empty();
-        this.health = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.networkConfig = Codegen.empty();
-        this.nodeId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.runtimeVersion = Codegen.empty();
-        this.schedulingConfig = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NodeArgs(NodeArgs $) {
+        this.acceleratorType = $.acceleratorType;
+        this.cidrBlock = $.cidrBlock;
+        this.dataDisks = $.dataDisks;
+        this.description = $.description;
+        this.health = $.health;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.networkConfig = $.networkConfig;
+        this.nodeId = $.nodeId;
+        this.project = $.project;
+        this.runtimeVersion = $.runtimeVersion;
+        this.schedulingConfig = $.schedulingConfig;
+        this.serviceAccount = $.serviceAccount;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> acceleratorType;
-        private @Nullable Output<String> cidrBlock;
-        private @Nullable Output<List<AttachedDiskArgs>> dataDisks;
-        private @Nullable Output<String> description;
-        private @Nullable Output<NodeHealth> health;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<NetworkConfigArgs> networkConfig;
-        private @Nullable Output<String> nodeId;
-        private @Nullable Output<String> project;
-        private Output<String> runtimeVersion;
-        private @Nullable Output<SchedulingConfigArgs> schedulingConfig;
-        private @Nullable Output<ServiceAccountArgs> serviceAccount;
-        private @Nullable Output<List<String>> tags;
+        private NodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeArgs();
         }
 
         public Builder(NodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorType = defaults.acceleratorType;
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.description = defaults.description;
-    	      this.health = defaults.health;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.nodeId = defaults.nodeId;
-    	      this.project = defaults.project;
-    	      this.runtimeVersion = defaults.runtimeVersion;
-    	      this.schedulingConfig = defaults.schedulingConfig;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.tags = defaults.tags;
+            $ = new NodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorType(Output<String> acceleratorType) {
-            this.acceleratorType = Objects.requireNonNull(acceleratorType);
+            $.acceleratorType = acceleratorType;
             return this;
         }
+
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Output.of(Objects.requireNonNull(acceleratorType));
-            return this;
+            return acceleratorType(Output.of(acceleratorType));
         }
+
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
-            this.cidrBlock = cidrBlock;
+            $.cidrBlock = cidrBlock;
             return this;
         }
-        public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Codegen.ofNullable(cidrBlock);
-            return this;
+
+        public Builder cidrBlock(String cidrBlock) {
+            return cidrBlock(Output.of(cidrBlock));
         }
+
         public Builder dataDisks(@Nullable Output<List<AttachedDiskArgs>> dataDisks) {
-            this.dataDisks = dataDisks;
+            $.dataDisks = dataDisks;
             return this;
         }
-        public Builder dataDisks(@Nullable List<AttachedDiskArgs> dataDisks) {
-            this.dataDisks = Codegen.ofNullable(dataDisks);
-            return this;
+
+        public Builder dataDisks(List<AttachedDiskArgs> dataDisks) {
+            return dataDisks(Output.of(dataDisks));
         }
+
         public Builder dataDisks(AttachedDiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder health(@Nullable Output<NodeHealth> health) {
-            this.health = health;
+            $.health = health;
             return this;
         }
-        public Builder health(@Nullable NodeHealth health) {
-            this.health = Codegen.ofNullable(health);
-            return this;
+
+        public Builder health(NodeHealth health) {
+            return health(Output.of(health));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(NetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder nodeId(@Nullable Output<String> nodeId) {
-            this.nodeId = nodeId;
+            $.nodeId = nodeId;
             return this;
         }
-        public Builder nodeId(@Nullable String nodeId) {
-            this.nodeId = Codegen.ofNullable(nodeId);
-            return this;
+
+        public Builder nodeId(String nodeId) {
+            return nodeId(Output.of(nodeId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder runtimeVersion(Output<String> runtimeVersion) {
-            this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
+
         public Builder runtimeVersion(String runtimeVersion) {
-            this.runtimeVersion = Output.of(Objects.requireNonNull(runtimeVersion));
-            return this;
+            return runtimeVersion(Output.of(runtimeVersion));
         }
+
         public Builder schedulingConfig(@Nullable Output<SchedulingConfigArgs> schedulingConfig) {
-            this.schedulingConfig = schedulingConfig;
+            $.schedulingConfig = schedulingConfig;
             return this;
         }
-        public Builder schedulingConfig(@Nullable SchedulingConfigArgs schedulingConfig) {
-            this.schedulingConfig = Codegen.ofNullable(schedulingConfig);
-            return this;
+
+        public Builder schedulingConfig(SchedulingConfigArgs schedulingConfig) {
+            return schedulingConfig(Output.of(schedulingConfig));
         }
+
         public Builder serviceAccount(@Nullable Output<ServiceAccountArgs> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable ServiceAccountArgs serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(ServiceAccountArgs serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
-        }        public NodeArgs build() {
-            return new NodeArgs(acceleratorType, cidrBlock, dataDisks, description, health, labels, location, metadata, networkConfig, nodeId, project, runtimeVersion, schedulingConfig, serviceAccount, tags);
+        }
+
+        public NodeArgs build() {
+            $.acceleratorType = Objects.requireNonNull($.acceleratorType, "expected parameter 'acceleratorType' to be non-null");
+            $.runtimeVersion = Objects.requireNonNull($.runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
+            return $;
         }
     }
+
 }

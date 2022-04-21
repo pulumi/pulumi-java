@@ -7,9 +7,9 @@ import com.pulumi.awsnative.location.enums.TrackerPositionFiltering;
 import com.pulumi.awsnative.location.enums.TrackerPricingPlan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,150 +18,133 @@ public final class TrackerArgs extends com.pulumi.resources.ResourceArgs {
     public static final TrackerArgs Empty = new TrackerArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     @Import(name="positionFiltering")
-      private final @Nullable Output<TrackerPositionFiltering> positionFiltering;
+    private @Nullable Output<TrackerPositionFiltering> positionFiltering;
 
-    public Output<TrackerPositionFiltering> positionFiltering() {
-        return this.positionFiltering == null ? Codegen.empty() : this.positionFiltering;
+    public Optional<Output<TrackerPositionFiltering>> positionFiltering() {
+        return Optional.ofNullable(this.positionFiltering);
     }
 
     @Import(name="pricingPlan")
-      private final @Nullable Output<TrackerPricingPlan> pricingPlan;
+    private @Nullable Output<TrackerPricingPlan> pricingPlan;
 
-    public Output<TrackerPricingPlan> pricingPlan() {
-        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
+    public Optional<Output<TrackerPricingPlan>> pricingPlan() {
+        return Optional.ofNullable(this.pricingPlan);
     }
 
     @Import(name="pricingPlanDataSource")
-      private final @Nullable Output<String> pricingPlanDataSource;
+    private @Nullable Output<String> pricingPlanDataSource;
 
-    public Output<String> pricingPlanDataSource() {
-        return this.pricingPlanDataSource == null ? Codegen.empty() : this.pricingPlanDataSource;
+    public Optional<Output<String>> pricingPlanDataSource() {
+        return Optional.ofNullable(this.pricingPlanDataSource);
     }
 
     @Import(name="trackerName")
-      private final @Nullable Output<String> trackerName;
+    private @Nullable Output<String> trackerName;
 
-    public Output<String> trackerName() {
-        return this.trackerName == null ? Codegen.empty() : this.trackerName;
+    public Optional<Output<String>> trackerName() {
+        return Optional.ofNullable(this.trackerName);
     }
 
-    public TrackerArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<TrackerPositionFiltering> positionFiltering,
-        @Nullable Output<TrackerPricingPlan> pricingPlan,
-        @Nullable Output<String> pricingPlanDataSource,
-        @Nullable Output<String> trackerName) {
-        this.description = description;
-        this.kmsKeyId = kmsKeyId;
-        this.positionFiltering = positionFiltering;
-        this.pricingPlan = pricingPlan;
-        this.pricingPlanDataSource = pricingPlanDataSource;
-        this.trackerName = trackerName;
-    }
+    private TrackerArgs() {}
 
-    private TrackerArgs() {
-        this.description = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.positionFiltering = Codegen.empty();
-        this.pricingPlan = Codegen.empty();
-        this.pricingPlanDataSource = Codegen.empty();
-        this.trackerName = Codegen.empty();
+    private TrackerArgs(TrackerArgs $) {
+        this.description = $.description;
+        this.kmsKeyId = $.kmsKeyId;
+        this.positionFiltering = $.positionFiltering;
+        this.pricingPlan = $.pricingPlan;
+        this.pricingPlanDataSource = $.pricingPlanDataSource;
+        this.trackerName = $.trackerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrackerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<TrackerPositionFiltering> positionFiltering;
-        private @Nullable Output<TrackerPricingPlan> pricingPlan;
-        private @Nullable Output<String> pricingPlanDataSource;
-        private @Nullable Output<String> trackerName;
+        private TrackerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrackerArgs();
         }
 
         public Builder(TrackerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.positionFiltering = defaults.positionFiltering;
-    	      this.pricingPlan = defaults.pricingPlan;
-    	      this.pricingPlanDataSource = defaults.pricingPlanDataSource;
-    	      this.trackerName = defaults.trackerName;
+            $ = new TrackerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder positionFiltering(@Nullable Output<TrackerPositionFiltering> positionFiltering) {
-            this.positionFiltering = positionFiltering;
+            $.positionFiltering = positionFiltering;
             return this;
         }
-        public Builder positionFiltering(@Nullable TrackerPositionFiltering positionFiltering) {
-            this.positionFiltering = Codegen.ofNullable(positionFiltering);
-            return this;
+
+        public Builder positionFiltering(TrackerPositionFiltering positionFiltering) {
+            return positionFiltering(Output.of(positionFiltering));
         }
+
         public Builder pricingPlan(@Nullable Output<TrackerPricingPlan> pricingPlan) {
-            this.pricingPlan = pricingPlan;
+            $.pricingPlan = pricingPlan;
             return this;
         }
-        public Builder pricingPlan(@Nullable TrackerPricingPlan pricingPlan) {
-            this.pricingPlan = Codegen.ofNullable(pricingPlan);
-            return this;
+
+        public Builder pricingPlan(TrackerPricingPlan pricingPlan) {
+            return pricingPlan(Output.of(pricingPlan));
         }
+
         public Builder pricingPlanDataSource(@Nullable Output<String> pricingPlanDataSource) {
-            this.pricingPlanDataSource = pricingPlanDataSource;
+            $.pricingPlanDataSource = pricingPlanDataSource;
             return this;
         }
-        public Builder pricingPlanDataSource(@Nullable String pricingPlanDataSource) {
-            this.pricingPlanDataSource = Codegen.ofNullable(pricingPlanDataSource);
-            return this;
+
+        public Builder pricingPlanDataSource(String pricingPlanDataSource) {
+            return pricingPlanDataSource(Output.of(pricingPlanDataSource));
         }
+
         public Builder trackerName(@Nullable Output<String> trackerName) {
-            this.trackerName = trackerName;
+            $.trackerName = trackerName;
             return this;
         }
-        public Builder trackerName(@Nullable String trackerName) {
-            this.trackerName = Codegen.ofNullable(trackerName);
-            return this;
-        }        public TrackerArgs build() {
-            return new TrackerArgs(description, kmsKeyId, positionFiltering, pricingPlan, pricingPlanDataSource, trackerName);
+
+        public Builder trackerName(String trackerName) {
+            return trackerName(Output.of(trackerName));
+        }
+
+        public TrackerArgs build() {
+            return $;
         }
     }
+
 }

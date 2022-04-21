@@ -15,62 +15,58 @@ public final class ProjectS3Destination extends com.pulumi.resources.InvokeArgs 
     public static final ProjectS3Destination Empty = new ProjectS3Destination();
 
     @Import(name="bucketName", required=true)
-      private final String bucketName;
+    private String bucketName;
 
     public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
-    public ProjectS3Destination(
-        String bucketName,
-        @Nullable String prefix) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.prefix = prefix;
-    }
+    private ProjectS3Destination() {}
 
-    private ProjectS3Destination() {
-        this.bucketName = null;
-        this.prefix = null;
+    private ProjectS3Destination(ProjectS3Destination $) {
+        this.bucketName = $.bucketName;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectS3Destination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketName;
-        private @Nullable String prefix;
+        private ProjectS3Destination $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectS3Destination();
         }
 
         public Builder(ProjectS3Destination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.prefix = defaults.prefix;
+            $ = new ProjectS3Destination(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
-        }        public ProjectS3Destination build() {
-            return new ProjectS3Destination(bucketName, prefix);
+        }
+
+        public ProjectS3Destination build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            return $;
         }
     }
+
 }

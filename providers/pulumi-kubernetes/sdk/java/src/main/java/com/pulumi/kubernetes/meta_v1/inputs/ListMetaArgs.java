@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ListMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="continue")
-      private final @Nullable Output<String> continue_;
+    private @Nullable Output<String> continue_;
 
-    public Output<String> continue_() {
-        return this.continue_ == null ? Codegen.empty() : this.continue_;
+    public Optional<Output<String>> continue_() {
+        return Optional.ofNullable(this.continue_);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ListMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remainingItemCount")
-      private final @Nullable Output<Integer> remainingItemCount;
+    private @Nullable Output<Integer> remainingItemCount;
 
-    public Output<Integer> remainingItemCount() {
-        return this.remainingItemCount == null ? Codegen.empty() : this.remainingItemCount;
+    public Optional<Output<Integer>> remainingItemCount() {
+        return Optional.ofNullable(this.remainingItemCount);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ListMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceVersion")
-      private final @Nullable Output<String> resourceVersion;
+    private @Nullable Output<String> resourceVersion;
 
-    public Output<String> resourceVersion() {
-        return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
+    public Optional<Output<String>> resourceVersion() {
+        return Optional.ofNullable(this.resourceVersion);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class ListMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public ListMetaArgs(
-        @Nullable Output<String> continue_,
-        @Nullable Output<Integer> remainingItemCount,
-        @Nullable Output<String> resourceVersion,
-        @Nullable Output<String> selfLink) {
-        this.continue_ = continue_;
-        this.remainingItemCount = remainingItemCount;
-        this.resourceVersion = resourceVersion;
-        this.selfLink = selfLink;
-    }
+    private ListMetaArgs() {}
 
-    private ListMetaArgs() {
-        this.continue_ = Codegen.empty();
-        this.remainingItemCount = Codegen.empty();
-        this.resourceVersion = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private ListMetaArgs(ListMetaArgs $) {
+        this.continue_ = $.continue_;
+        this.remainingItemCount = $.remainingItemCount;
+        this.resourceVersion = $.resourceVersion;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListMetaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> continue_;
-        private @Nullable Output<Integer> remainingItemCount;
-        private @Nullable Output<String> resourceVersion;
-        private @Nullable Output<String> selfLink;
+        private ListMetaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListMetaArgs();
         }
 
         public Builder(ListMetaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.continue_ = defaults.continue_;
-    	      this.remainingItemCount = defaults.remainingItemCount;
-    	      this.resourceVersion = defaults.resourceVersion;
-    	      this.selfLink = defaults.selfLink;
+            $ = new ListMetaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder continue_(@Nullable Output<String> continue_) {
-            this.continue_ = continue_;
+            $.continue_ = continue_;
             return this;
         }
-        public Builder continue_(@Nullable String continue_) {
-            this.continue_ = Codegen.ofNullable(continue_);
-            return this;
+
+        public Builder continue_(String continue_) {
+            return continue_(Output.of(continue_));
         }
+
         public Builder remainingItemCount(@Nullable Output<Integer> remainingItemCount) {
-            this.remainingItemCount = remainingItemCount;
+            $.remainingItemCount = remainingItemCount;
             return this;
         }
-        public Builder remainingItemCount(@Nullable Integer remainingItemCount) {
-            this.remainingItemCount = Codegen.ofNullable(remainingItemCount);
-            return this;
+
+        public Builder remainingItemCount(Integer remainingItemCount) {
+            return remainingItemCount(Output.of(remainingItemCount));
         }
+
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
-            this.resourceVersion = resourceVersion;
+            $.resourceVersion = resourceVersion;
             return this;
         }
-        public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Codegen.ofNullable(resourceVersion);
-            return this;
+
+        public Builder resourceVersion(String resourceVersion) {
+            return resourceVersion(Output.of(resourceVersion));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public ListMetaArgs build() {
-            return new ListMetaArgs(continue_, remainingItemCount, resourceVersion, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public ListMetaArgs build() {
+            return $;
         }
     }
+
 }

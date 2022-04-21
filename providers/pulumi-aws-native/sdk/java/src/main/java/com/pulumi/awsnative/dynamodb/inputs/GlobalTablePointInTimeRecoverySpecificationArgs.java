@@ -5,9 +5,9 @@ package com.pulumi.awsnative.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class GlobalTablePointInTimeRecoverySpecificationArgs extends com.p
     public static final GlobalTablePointInTimeRecoverySpecificationArgs Empty = new GlobalTablePointInTimeRecoverySpecificationArgs();
 
     @Import(name="pointInTimeRecoveryEnabled")
-      private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
+    private @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Output<Boolean> pointInTimeRecoveryEnabled() {
-        return this.pointInTimeRecoveryEnabled == null ? Codegen.empty() : this.pointInTimeRecoveryEnabled;
+    public Optional<Output<Boolean>> pointInTimeRecoveryEnabled() {
+        return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
 
-    public GlobalTablePointInTimeRecoverySpecificationArgs(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
-        this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
-    }
+    private GlobalTablePointInTimeRecoverySpecificationArgs() {}
 
-    private GlobalTablePointInTimeRecoverySpecificationArgs() {
-        this.pointInTimeRecoveryEnabled = Codegen.empty();
+    private GlobalTablePointInTimeRecoverySpecificationArgs(GlobalTablePointInTimeRecoverySpecificationArgs $) {
+        this.pointInTimeRecoveryEnabled = $.pointInTimeRecoveryEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTablePointInTimeRecoverySpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
+        private GlobalTablePointInTimeRecoverySpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTablePointInTimeRecoverySpecificationArgs();
         }
 
         public Builder(GlobalTablePointInTimeRecoverySpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pointInTimeRecoveryEnabled = defaults.pointInTimeRecoveryEnabled;
+            $ = new GlobalTablePointInTimeRecoverySpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
+            $.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
-        public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = Codegen.ofNullable(pointInTimeRecoveryEnabled);
-            return this;
-        }        public GlobalTablePointInTimeRecoverySpecificationArgs build() {
-            return new GlobalTablePointInTimeRecoverySpecificationArgs(pointInTimeRecoveryEnabled);
+
+        public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
+            return pointInTimeRecoveryEnabled(Output.of(pointInTimeRecoveryEnabled));
+        }
+
+        public GlobalTablePointInTimeRecoverySpecificationArgs build() {
+            return $;
         }
     }
+
 }

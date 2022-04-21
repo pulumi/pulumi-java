@@ -17,45 +17,45 @@ public final class AvroOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="useAvroLogicalTypes", required=true)
-      private final Boolean useAvroLogicalTypes;
+    private Boolean useAvroLogicalTypes;
 
     public Boolean useAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
     }
 
-    public AvroOptionsResponse(Boolean useAvroLogicalTypes) {
-        this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes, "expected parameter 'useAvroLogicalTypes' to be non-null");
-    }
+    private AvroOptionsResponse() {}
 
-    private AvroOptionsResponse() {
-        this.useAvroLogicalTypes = null;
+    private AvroOptionsResponse(AvroOptionsResponse $) {
+        this.useAvroLogicalTypes = $.useAvroLogicalTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvroOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean useAvroLogicalTypes;
+        private AvroOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvroOptionsResponse();
         }
 
         public Builder(AvroOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
+            $ = new AvroOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
+            $.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
-        }        public AvroOptionsResponse build() {
-            return new AvroOptionsResponse(useAvroLogicalTypes);
+        }
+
+        public AvroOptionsResponse build() {
+            $.useAvroLogicalTypes = Objects.requireNonNull($.useAvroLogicalTypes, "expected parameter 'useAvroLogicalTypes' to be non-null");
+            return $;
         }
     }
+
 }

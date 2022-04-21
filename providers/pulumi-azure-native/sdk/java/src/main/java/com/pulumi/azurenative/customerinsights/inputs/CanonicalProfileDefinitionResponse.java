@@ -25,10 +25,10 @@ public final class CanonicalProfileDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="canonicalProfileId")
-      private final @Nullable Integer canonicalProfileId;
+    private @Nullable Integer canonicalProfileId;
 
     public Optional<Integer> canonicalProfileId() {
-        return this.canonicalProfileId == null ? Optional.empty() : Optional.ofNullable(this.canonicalProfileId);
+        return Optional.ofNullable(this.canonicalProfileId);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class CanonicalProfileDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="properties")
-      private final @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
+    private @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
 
-    public List<CanonicalProfileDefinitionResponseProperties> properties() {
-        return this.properties == null ? List.of() : this.properties;
+    public Optional<List<CanonicalProfileDefinitionResponseProperties>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public CanonicalProfileDefinitionResponse(
-        @Nullable Integer canonicalProfileId,
-        @Nullable List<CanonicalProfileDefinitionResponseProperties> properties) {
-        this.canonicalProfileId = canonicalProfileId;
-        this.properties = properties;
-    }
+    private CanonicalProfileDefinitionResponse() {}
 
-    private CanonicalProfileDefinitionResponse() {
-        this.canonicalProfileId = null;
-        this.properties = List.of();
+    private CanonicalProfileDefinitionResponse(CanonicalProfileDefinitionResponse $) {
+        this.canonicalProfileId = $.canonicalProfileId;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanonicalProfileDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer canonicalProfileId;
-        private @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
+        private CanonicalProfileDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanonicalProfileDefinitionResponse();
         }
 
         public Builder(CanonicalProfileDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canonicalProfileId = defaults.canonicalProfileId;
-    	      this.properties = defaults.properties;
+            $ = new CanonicalProfileDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canonicalProfileId(@Nullable Integer canonicalProfileId) {
-            this.canonicalProfileId = canonicalProfileId;
+            $.canonicalProfileId = canonicalProfileId;
             return this;
         }
+
         public Builder properties(@Nullable List<CanonicalProfileDefinitionResponseProperties> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(CanonicalProfileDefinitionResponseProperties... properties) {
             return properties(List.of(properties));
-        }        public CanonicalProfileDefinitionResponse build() {
-            return new CanonicalProfileDefinitionResponse(canonicalProfileId, properties);
+        }
+
+        public CanonicalProfileDefinitionResponse build() {
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class MultiplePipelineTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MultiplePipelineTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class MultiplePipelineTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="pipelines")
-      private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
+    private @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
-    public List<TriggerPipelineReferenceResponse> pipelines() {
-        return this.pipelines == null ? List.of() : this.pipelines;
+    public Optional<List<TriggerPipelineReferenceResponse>> pipelines() {
+        return Optional.ofNullable(this.pipelines);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class MultiplePipelineTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="runtimeState", required=true)
-      private final String runtimeState;
+    private String runtimeState;
 
     public String runtimeState() {
         return this.runtimeState;
@@ -72,88 +72,78 @@ public final class MultiplePipelineTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public MultiplePipelineTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable List<TriggerPipelineReferenceResponse> pipelines,
-        String runtimeState,
-        String type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.pipelines = pipelines;
-        this.runtimeState = Objects.requireNonNull(runtimeState, "expected parameter 'runtimeState' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private MultiplePipelineTriggerResponse() {}
 
-    private MultiplePipelineTriggerResponse() {
-        this.annotations = List.of();
-        this.description = null;
-        this.pipelines = List.of();
-        this.runtimeState = null;
-        this.type = null;
+    private MultiplePipelineTriggerResponse(MultiplePipelineTriggerResponse $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.pipelines = $.pipelines;
+        this.runtimeState = $.runtimeState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiplePipelineTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable String description;
-        private @Nullable List<TriggerPipelineReferenceResponse> pipelines;
-        private String runtimeState;
-        private String type;
+        private MultiplePipelineTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiplePipelineTriggerResponse();
         }
 
         public Builder(MultiplePipelineTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.pipelines = defaults.pipelines;
-    	      this.runtimeState = defaults.runtimeState;
-    	      this.type = defaults.type;
+            $ = new MultiplePipelineTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
-            this.pipelines = pipelines;
+            $.pipelines = pipelines;
             return this;
         }
+
         public Builder pipelines(TriggerPipelineReferenceResponse... pipelines) {
             return pipelines(List.of(pipelines));
         }
+
         public Builder runtimeState(String runtimeState) {
-            this.runtimeState = Objects.requireNonNull(runtimeState);
+            $.runtimeState = runtimeState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public MultiplePipelineTriggerResponse build() {
-            return new MultiplePipelineTriggerResponse(annotations, description, pipelines, runtimeState, type);
+        }
+
+        public MultiplePipelineTriggerResponse build() {
+            $.runtimeState = Objects.requireNonNull($.runtimeState, "expected parameter 'runtimeState' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

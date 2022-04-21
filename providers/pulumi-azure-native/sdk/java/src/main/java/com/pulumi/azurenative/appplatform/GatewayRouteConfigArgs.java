@@ -6,9 +6,9 @@ package com.pulumi.azurenative.appplatform;
 import com.pulumi.azurenative.appplatform.inputs.GatewayRouteConfigPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="gatewayName", required=true)
-      private final Output<String> gatewayName;
+    private Output<String> gatewayName;
 
     public Output<String> gatewayName() {
         return this.gatewayName;
@@ -32,10 +32,10 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<GatewayRouteConfigPropertiesArgs> properties;
+    private @Nullable Output<GatewayRouteConfigPropertiesArgs> properties;
 
-    public Output<GatewayRouteConfigPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<GatewayRouteConfigPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,10 +54,10 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="routeConfigName")
-      private final @Nullable Output<String> routeConfigName;
+    private @Nullable Output<String> routeConfigName;
 
-    public Output<String> routeConfigName() {
-        return this.routeConfigName == null ? Codegen.empty() : this.routeConfigName;
+    public Optional<Output<String>> routeConfigName() {
+        return Optional.ofNullable(this.routeConfigName);
     }
 
     /**
@@ -65,102 +65,91 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public GatewayRouteConfigArgs(
-        Output<String> gatewayName,
-        @Nullable Output<GatewayRouteConfigPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> routeConfigName,
-        Output<String> serviceName) {
-        this.gatewayName = Objects.requireNonNull(gatewayName, "expected parameter 'gatewayName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeConfigName = routeConfigName;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GatewayRouteConfigArgs() {}
 
-    private GatewayRouteConfigArgs() {
-        this.gatewayName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.routeConfigName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private GatewayRouteConfigArgs(GatewayRouteConfigArgs $) {
+        this.gatewayName = $.gatewayName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeConfigName = $.routeConfigName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> gatewayName;
-        private @Nullable Output<GatewayRouteConfigPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> routeConfigName;
-        private Output<String> serviceName;
+        private GatewayRouteConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteConfigArgs();
         }
 
         public Builder(GatewayRouteConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeConfigName = defaults.routeConfigName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GatewayRouteConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayName(Output<String> gatewayName) {
-            this.gatewayName = Objects.requireNonNull(gatewayName);
+            $.gatewayName = gatewayName;
             return this;
         }
+
         public Builder gatewayName(String gatewayName) {
-            this.gatewayName = Output.of(Objects.requireNonNull(gatewayName));
-            return this;
+            return gatewayName(Output.of(gatewayName));
         }
+
         public Builder properties(@Nullable Output<GatewayRouteConfigPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable GatewayRouteConfigPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(GatewayRouteConfigPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder routeConfigName(@Nullable Output<String> routeConfigName) {
-            this.routeConfigName = routeConfigName;
+            $.routeConfigName = routeConfigName;
             return this;
         }
-        public Builder routeConfigName(@Nullable String routeConfigName) {
-            this.routeConfigName = Codegen.ofNullable(routeConfigName);
-            return this;
+
+        public Builder routeConfigName(String routeConfigName) {
+            return routeConfigName(Output.of(routeConfigName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public GatewayRouteConfigArgs build() {
-            return new GatewayRouteConfigArgs(gatewayName, properties, resourceGroupName, routeConfigName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public GatewayRouteConfigArgs build() {
+            $.gatewayName = Objects.requireNonNull($.gatewayName, "expected parameter 'gatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

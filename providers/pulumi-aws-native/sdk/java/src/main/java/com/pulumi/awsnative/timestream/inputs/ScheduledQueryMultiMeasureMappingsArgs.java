@@ -6,10 +6,10 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.inputs.ScheduledQueryMultiMeasureAttributeMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,73 +22,70 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends com.pulumi.res
     public static final ScheduledQueryMultiMeasureMappingsArgs Empty = new ScheduledQueryMultiMeasureMappingsArgs();
 
     @Import(name="multiMeasureAttributeMappings", required=true)
-      private final Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
+    private Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
 
     public Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings() {
         return this.multiMeasureAttributeMappings;
     }
 
     @Import(name="targetMultiMeasureName")
-      private final @Nullable Output<String> targetMultiMeasureName;
+    private @Nullable Output<String> targetMultiMeasureName;
 
-    public Output<String> targetMultiMeasureName() {
-        return this.targetMultiMeasureName == null ? Codegen.empty() : this.targetMultiMeasureName;
+    public Optional<Output<String>> targetMultiMeasureName() {
+        return Optional.ofNullable(this.targetMultiMeasureName);
     }
 
-    public ScheduledQueryMultiMeasureMappingsArgs(
-        Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings,
-        @Nullable Output<String> targetMultiMeasureName) {
-        this.multiMeasureAttributeMappings = Objects.requireNonNull(multiMeasureAttributeMappings, "expected parameter 'multiMeasureAttributeMappings' to be non-null");
-        this.targetMultiMeasureName = targetMultiMeasureName;
-    }
+    private ScheduledQueryMultiMeasureMappingsArgs() {}
 
-    private ScheduledQueryMultiMeasureMappingsArgs() {
-        this.multiMeasureAttributeMappings = Codegen.empty();
-        this.targetMultiMeasureName = Codegen.empty();
+    private ScheduledQueryMultiMeasureMappingsArgs(ScheduledQueryMultiMeasureMappingsArgs $) {
+        this.multiMeasureAttributeMappings = $.multiMeasureAttributeMappings;
+        this.targetMultiMeasureName = $.targetMultiMeasureName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledQueryMultiMeasureMappingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
-        private @Nullable Output<String> targetMultiMeasureName;
+        private ScheduledQueryMultiMeasureMappingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledQueryMultiMeasureMappingsArgs();
         }
 
         public Builder(ScheduledQueryMultiMeasureMappingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.multiMeasureAttributeMappings = defaults.multiMeasureAttributeMappings;
-    	      this.targetMultiMeasureName = defaults.targetMultiMeasureName;
+            $ = new ScheduledQueryMultiMeasureMappingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder multiMeasureAttributeMappings(Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings) {
-            this.multiMeasureAttributeMappings = Objects.requireNonNull(multiMeasureAttributeMappings);
+            $.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
             return this;
         }
+
         public Builder multiMeasureAttributeMappings(List<ScheduledQueryMultiMeasureAttributeMappingArgs> multiMeasureAttributeMappings) {
-            this.multiMeasureAttributeMappings = Output.of(Objects.requireNonNull(multiMeasureAttributeMappings));
-            return this;
+            return multiMeasureAttributeMappings(Output.of(multiMeasureAttributeMappings));
         }
+
         public Builder multiMeasureAttributeMappings(ScheduledQueryMultiMeasureAttributeMappingArgs... multiMeasureAttributeMappings) {
             return multiMeasureAttributeMappings(List.of(multiMeasureAttributeMappings));
         }
+
         public Builder targetMultiMeasureName(@Nullable Output<String> targetMultiMeasureName) {
-            this.targetMultiMeasureName = targetMultiMeasureName;
+            $.targetMultiMeasureName = targetMultiMeasureName;
             return this;
         }
-        public Builder targetMultiMeasureName(@Nullable String targetMultiMeasureName) {
-            this.targetMultiMeasureName = Codegen.ofNullable(targetMultiMeasureName);
-            return this;
-        }        public ScheduledQueryMultiMeasureMappingsArgs build() {
-            return new ScheduledQueryMultiMeasureMappingsArgs(multiMeasureAttributeMappings, targetMultiMeasureName);
+
+        public Builder targetMultiMeasureName(String targetMultiMeasureName) {
+            return targetMultiMeasureName(Output.of(targetMultiMeasureName));
+        }
+
+        public ScheduledQueryMultiMeasureMappingsArgs build() {
+            $.multiMeasureAttributeMappings = Objects.requireNonNull($.multiMeasureAttributeMappings, "expected parameter 'multiMeasureAttributeMappings' to be non-null");
+            return $;
         }
     }
+
 }

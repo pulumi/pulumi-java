@@ -5,11 +5,11 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      * 
      */
     @Import(name="allowPlaybackInterruption")
-      private final @Nullable Output<Boolean> allowPlaybackInterruption;
+    private @Nullable Output<Boolean> allowPlaybackInterruption;
 
-    public Output<Boolean> allowPlaybackInterruption() {
-        return this.allowPlaybackInterruption == null ? Codegen.empty() : this.allowPlaybackInterruption;
+    public Optional<Output<Boolean>> allowPlaybackInterruption() {
+        return Optional.ofNullable(this.allowPlaybackInterruption);
     }
 
     /**
@@ -34,66 +34,62 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      * 
      */
     @Import(name="texts")
-      private final @Nullable Output<List<String>> texts;
+    private @Nullable Output<List<String>> texts;
 
-    public Output<List<String>> texts() {
-        return this.texts == null ? Codegen.empty() : this.texts;
+    public Optional<Output<List<String>>> texts() {
+        return Optional.ofNullable(this.texts);
     }
 
-    public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs(
-        @Nullable Output<Boolean> allowPlaybackInterruption,
-        @Nullable Output<List<String>> texts) {
-        this.allowPlaybackInterruption = allowPlaybackInterruption;
-        this.texts = texts;
-    }
+    private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs() {}
 
-    private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs() {
-        this.allowPlaybackInterruption = Codegen.empty();
-        this.texts = Codegen.empty();
+    private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs(CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs $) {
+        this.allowPlaybackInterruption = $.allowPlaybackInterruption;
+        this.texts = $.texts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowPlaybackInterruption;
-        private @Nullable Output<List<String>> texts;
+        private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs();
         }
 
         public Builder(CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPlaybackInterruption = defaults.allowPlaybackInterruption;
-    	      this.texts = defaults.texts;
+            $ = new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPlaybackInterruption(@Nullable Output<Boolean> allowPlaybackInterruption) {
-            this.allowPlaybackInterruption = allowPlaybackInterruption;
+            $.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
-        public Builder allowPlaybackInterruption(@Nullable Boolean allowPlaybackInterruption) {
-            this.allowPlaybackInterruption = Codegen.ofNullable(allowPlaybackInterruption);
-            return this;
+
+        public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
+            return allowPlaybackInterruption(Output.of(allowPlaybackInterruption));
         }
+
         public Builder texts(@Nullable Output<List<String>> texts) {
-            this.texts = texts;
+            $.texts = texts;
             return this;
         }
-        public Builder texts(@Nullable List<String> texts) {
-            this.texts = Codegen.ofNullable(texts);
-            return this;
+
+        public Builder texts(List<String> texts) {
+            return texts(Output.of(texts));
         }
+
         public Builder texts(String... texts) {
             return texts(List.of(texts));
-        }        public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs build() {
-            return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs(allowPlaybackInterruption, texts);
+        }
+
+        public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs build() {
+            return $;
         }
     }
+
 }

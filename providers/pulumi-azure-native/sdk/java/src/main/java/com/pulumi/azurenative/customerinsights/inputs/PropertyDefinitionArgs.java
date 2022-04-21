@@ -6,12 +6,12 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.inputs.ProfileEnumValidValuesFormatArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="arrayValueSeparator")
-      private final @Nullable Output<String> arrayValueSeparator;
+    private @Nullable Output<String> arrayValueSeparator;
 
-    public Output<String> arrayValueSeparator() {
-        return this.arrayValueSeparator == null ? Codegen.empty() : this.arrayValueSeparator;
+    public Optional<Output<String>> arrayValueSeparator() {
+        return Optional.ofNullable(this.arrayValueSeparator);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enumValidValues")
-      private final @Nullable Output<List<ProfileEnumValidValuesFormatArgs>> enumValidValues;
+    private @Nullable Output<List<ProfileEnumValidValuesFormatArgs>> enumValidValues;
 
-    public Output<List<ProfileEnumValidValuesFormatArgs>> enumValidValues() {
-        return this.enumValidValues == null ? Codegen.empty() : this.enumValidValues;
+    public Optional<Output<List<ProfileEnumValidValuesFormatArgs>>> enumValidValues() {
+        return Optional.ofNullable(this.enumValidValues);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fieldName", required=true)
-      private final Output<String> fieldName;
+    private Output<String> fieldName;
 
     public Output<String> fieldName() {
         return this.fieldName;
@@ -61,7 +61,7 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fieldType", required=true)
-      private final Output<String> fieldType;
+    private Output<String> fieldType;
 
     public Output<String> fieldType() {
         return this.fieldType;
@@ -72,10 +72,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isArray")
-      private final @Nullable Output<Boolean> isArray;
+    private @Nullable Output<Boolean> isArray;
 
-    public Output<Boolean> isArray() {
-        return this.isArray == null ? Codegen.empty() : this.isArray;
+    public Optional<Output<Boolean>> isArray() {
+        return Optional.ofNullable(this.isArray);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isAvailableInGraph")
-      private final @Nullable Output<Boolean> isAvailableInGraph;
+    private @Nullable Output<Boolean> isAvailableInGraph;
 
-    public Output<Boolean> isAvailableInGraph() {
-        return this.isAvailableInGraph == null ? Codegen.empty() : this.isAvailableInGraph;
+    public Optional<Output<Boolean>> isAvailableInGraph() {
+        return Optional.ofNullable(this.isAvailableInGraph);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isEnum")
-      private final @Nullable Output<Boolean> isEnum;
+    private @Nullable Output<Boolean> isEnum;
 
-    public Output<Boolean> isEnum() {
-        return this.isEnum == null ? Codegen.empty() : this.isEnum;
+    public Optional<Output<Boolean>> isEnum() {
+        return Optional.ofNullable(this.isEnum);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isFlagEnum")
-      private final @Nullable Output<Boolean> isFlagEnum;
+    private @Nullable Output<Boolean> isFlagEnum;
 
-    public Output<Boolean> isFlagEnum() {
-        return this.isFlagEnum == null ? Codegen.empty() : this.isFlagEnum;
+    public Optional<Output<Boolean>> isFlagEnum() {
+        return Optional.ofNullable(this.isFlagEnum);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isImage")
-      private final @Nullable Output<Boolean> isImage;
+    private @Nullable Output<Boolean> isImage;
 
-    public Output<Boolean> isImage() {
-        return this.isImage == null ? Codegen.empty() : this.isImage;
+    public Optional<Output<Boolean>> isImage() {
+        return Optional.ofNullable(this.isImage);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isLocalizedString")
-      private final @Nullable Output<Boolean> isLocalizedString;
+    private @Nullable Output<Boolean> isLocalizedString;
 
-    public Output<Boolean> isLocalizedString() {
-        return this.isLocalizedString == null ? Codegen.empty() : this.isLocalizedString;
+    public Optional<Output<Boolean>> isLocalizedString() {
+        return Optional.ofNullable(this.isLocalizedString);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isName")
-      private final @Nullable Output<Boolean> isName;
+    private @Nullable Output<Boolean> isName;
 
-    public Output<Boolean> isName() {
-        return this.isName == null ? Codegen.empty() : this.isName;
+    public Optional<Output<Boolean>> isName() {
+        return Optional.ofNullable(this.isName);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isRequired")
-      private final @Nullable Output<Boolean> isRequired;
+    private @Nullable Output<Boolean> isRequired;
 
-    public Output<Boolean> isRequired() {
-        return this.isRequired == null ? Codegen.empty() : this.isRequired;
+    public Optional<Output<Boolean>> isRequired() {
+        return Optional.ofNullable(this.isRequired);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="maxLength")
-      private final @Nullable Output<Integer> maxLength;
+    private @Nullable Output<Integer> maxLength;
 
-    public Output<Integer> maxLength() {
-        return this.maxLength == null ? Codegen.empty() : this.maxLength;
+    public Optional<Output<Integer>> maxLength() {
+        return Optional.ofNullable(this.maxLength);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="propertyId")
-      private final @Nullable Output<String> propertyId;
+    private @Nullable Output<String> propertyId;
 
-    public Output<String> propertyId() {
-        return this.propertyId == null ? Codegen.empty() : this.propertyId;
+    public Optional<Output<String>> propertyId() {
+        return Optional.ofNullable(this.propertyId);
     }
 
     /**
@@ -182,235 +182,194 @@ public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="schemaItemPropLink")
-      private final @Nullable Output<String> schemaItemPropLink;
+    private @Nullable Output<String> schemaItemPropLink;
 
-    public Output<String> schemaItemPropLink() {
-        return this.schemaItemPropLink == null ? Codegen.empty() : this.schemaItemPropLink;
+    public Optional<Output<String>> schemaItemPropLink() {
+        return Optional.ofNullable(this.schemaItemPropLink);
     }
 
-    public PropertyDefinitionArgs(
-        @Nullable Output<String> arrayValueSeparator,
-        @Nullable Output<List<ProfileEnumValidValuesFormatArgs>> enumValidValues,
-        Output<String> fieldName,
-        Output<String> fieldType,
-        @Nullable Output<Boolean> isArray,
-        @Nullable Output<Boolean> isAvailableInGraph,
-        @Nullable Output<Boolean> isEnum,
-        @Nullable Output<Boolean> isFlagEnum,
-        @Nullable Output<Boolean> isImage,
-        @Nullable Output<Boolean> isLocalizedString,
-        @Nullable Output<Boolean> isName,
-        @Nullable Output<Boolean> isRequired,
-        @Nullable Output<Integer> maxLength,
-        @Nullable Output<String> propertyId,
-        @Nullable Output<String> schemaItemPropLink) {
-        this.arrayValueSeparator = arrayValueSeparator;
-        this.enumValidValues = enumValidValues;
-        this.fieldName = Objects.requireNonNull(fieldName, "expected parameter 'fieldName' to be non-null");
-        this.fieldType = Objects.requireNonNull(fieldType, "expected parameter 'fieldType' to be non-null");
-        this.isArray = isArray;
-        this.isAvailableInGraph = isAvailableInGraph;
-        this.isEnum = isEnum;
-        this.isFlagEnum = isFlagEnum;
-        this.isImage = isImage;
-        this.isLocalizedString = isLocalizedString;
-        this.isName = isName;
-        this.isRequired = isRequired;
-        this.maxLength = maxLength;
-        this.propertyId = propertyId;
-        this.schemaItemPropLink = schemaItemPropLink;
-    }
+    private PropertyDefinitionArgs() {}
 
-    private PropertyDefinitionArgs() {
-        this.arrayValueSeparator = Codegen.empty();
-        this.enumValidValues = Codegen.empty();
-        this.fieldName = Codegen.empty();
-        this.fieldType = Codegen.empty();
-        this.isArray = Codegen.empty();
-        this.isAvailableInGraph = Codegen.empty();
-        this.isEnum = Codegen.empty();
-        this.isFlagEnum = Codegen.empty();
-        this.isImage = Codegen.empty();
-        this.isLocalizedString = Codegen.empty();
-        this.isName = Codegen.empty();
-        this.isRequired = Codegen.empty();
-        this.maxLength = Codegen.empty();
-        this.propertyId = Codegen.empty();
-        this.schemaItemPropLink = Codegen.empty();
+    private PropertyDefinitionArgs(PropertyDefinitionArgs $) {
+        this.arrayValueSeparator = $.arrayValueSeparator;
+        this.enumValidValues = $.enumValidValues;
+        this.fieldName = $.fieldName;
+        this.fieldType = $.fieldType;
+        this.isArray = $.isArray;
+        this.isAvailableInGraph = $.isAvailableInGraph;
+        this.isEnum = $.isEnum;
+        this.isFlagEnum = $.isFlagEnum;
+        this.isImage = $.isImage;
+        this.isLocalizedString = $.isLocalizedString;
+        this.isName = $.isName;
+        this.isRequired = $.isRequired;
+        this.maxLength = $.maxLength;
+        this.propertyId = $.propertyId;
+        this.schemaItemPropLink = $.schemaItemPropLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropertyDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arrayValueSeparator;
-        private @Nullable Output<List<ProfileEnumValidValuesFormatArgs>> enumValidValues;
-        private Output<String> fieldName;
-        private Output<String> fieldType;
-        private @Nullable Output<Boolean> isArray;
-        private @Nullable Output<Boolean> isAvailableInGraph;
-        private @Nullable Output<Boolean> isEnum;
-        private @Nullable Output<Boolean> isFlagEnum;
-        private @Nullable Output<Boolean> isImage;
-        private @Nullable Output<Boolean> isLocalizedString;
-        private @Nullable Output<Boolean> isName;
-        private @Nullable Output<Boolean> isRequired;
-        private @Nullable Output<Integer> maxLength;
-        private @Nullable Output<String> propertyId;
-        private @Nullable Output<String> schemaItemPropLink;
+        private PropertyDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropertyDefinitionArgs();
         }
 
         public Builder(PropertyDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arrayValueSeparator = defaults.arrayValueSeparator;
-    	      this.enumValidValues = defaults.enumValidValues;
-    	      this.fieldName = defaults.fieldName;
-    	      this.fieldType = defaults.fieldType;
-    	      this.isArray = defaults.isArray;
-    	      this.isAvailableInGraph = defaults.isAvailableInGraph;
-    	      this.isEnum = defaults.isEnum;
-    	      this.isFlagEnum = defaults.isFlagEnum;
-    	      this.isImage = defaults.isImage;
-    	      this.isLocalizedString = defaults.isLocalizedString;
-    	      this.isName = defaults.isName;
-    	      this.isRequired = defaults.isRequired;
-    	      this.maxLength = defaults.maxLength;
-    	      this.propertyId = defaults.propertyId;
-    	      this.schemaItemPropLink = defaults.schemaItemPropLink;
+            $ = new PropertyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arrayValueSeparator(@Nullable Output<String> arrayValueSeparator) {
-            this.arrayValueSeparator = arrayValueSeparator;
+            $.arrayValueSeparator = arrayValueSeparator;
             return this;
         }
-        public Builder arrayValueSeparator(@Nullable String arrayValueSeparator) {
-            this.arrayValueSeparator = Codegen.ofNullable(arrayValueSeparator);
-            return this;
+
+        public Builder arrayValueSeparator(String arrayValueSeparator) {
+            return arrayValueSeparator(Output.of(arrayValueSeparator));
         }
+
         public Builder enumValidValues(@Nullable Output<List<ProfileEnumValidValuesFormatArgs>> enumValidValues) {
-            this.enumValidValues = enumValidValues;
+            $.enumValidValues = enumValidValues;
             return this;
         }
-        public Builder enumValidValues(@Nullable List<ProfileEnumValidValuesFormatArgs> enumValidValues) {
-            this.enumValidValues = Codegen.ofNullable(enumValidValues);
-            return this;
+
+        public Builder enumValidValues(List<ProfileEnumValidValuesFormatArgs> enumValidValues) {
+            return enumValidValues(Output.of(enumValidValues));
         }
+
         public Builder enumValidValues(ProfileEnumValidValuesFormatArgs... enumValidValues) {
             return enumValidValues(List.of(enumValidValues));
         }
+
         public Builder fieldName(Output<String> fieldName) {
-            this.fieldName = Objects.requireNonNull(fieldName);
+            $.fieldName = fieldName;
             return this;
         }
+
         public Builder fieldName(String fieldName) {
-            this.fieldName = Output.of(Objects.requireNonNull(fieldName));
-            return this;
+            return fieldName(Output.of(fieldName));
         }
+
         public Builder fieldType(Output<String> fieldType) {
-            this.fieldType = Objects.requireNonNull(fieldType);
+            $.fieldType = fieldType;
             return this;
         }
+
         public Builder fieldType(String fieldType) {
-            this.fieldType = Output.of(Objects.requireNonNull(fieldType));
-            return this;
+            return fieldType(Output.of(fieldType));
         }
+
         public Builder isArray(@Nullable Output<Boolean> isArray) {
-            this.isArray = isArray;
+            $.isArray = isArray;
             return this;
         }
-        public Builder isArray(@Nullable Boolean isArray) {
-            this.isArray = Codegen.ofNullable(isArray);
-            return this;
+
+        public Builder isArray(Boolean isArray) {
+            return isArray(Output.of(isArray));
         }
+
         public Builder isAvailableInGraph(@Nullable Output<Boolean> isAvailableInGraph) {
-            this.isAvailableInGraph = isAvailableInGraph;
+            $.isAvailableInGraph = isAvailableInGraph;
             return this;
         }
-        public Builder isAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
-            this.isAvailableInGraph = Codegen.ofNullable(isAvailableInGraph);
-            return this;
+
+        public Builder isAvailableInGraph(Boolean isAvailableInGraph) {
+            return isAvailableInGraph(Output.of(isAvailableInGraph));
         }
+
         public Builder isEnum(@Nullable Output<Boolean> isEnum) {
-            this.isEnum = isEnum;
+            $.isEnum = isEnum;
             return this;
         }
-        public Builder isEnum(@Nullable Boolean isEnum) {
-            this.isEnum = Codegen.ofNullable(isEnum);
-            return this;
+
+        public Builder isEnum(Boolean isEnum) {
+            return isEnum(Output.of(isEnum));
         }
+
         public Builder isFlagEnum(@Nullable Output<Boolean> isFlagEnum) {
-            this.isFlagEnum = isFlagEnum;
+            $.isFlagEnum = isFlagEnum;
             return this;
         }
-        public Builder isFlagEnum(@Nullable Boolean isFlagEnum) {
-            this.isFlagEnum = Codegen.ofNullable(isFlagEnum);
-            return this;
+
+        public Builder isFlagEnum(Boolean isFlagEnum) {
+            return isFlagEnum(Output.of(isFlagEnum));
         }
+
         public Builder isImage(@Nullable Output<Boolean> isImage) {
-            this.isImage = isImage;
+            $.isImage = isImage;
             return this;
         }
-        public Builder isImage(@Nullable Boolean isImage) {
-            this.isImage = Codegen.ofNullable(isImage);
-            return this;
+
+        public Builder isImage(Boolean isImage) {
+            return isImage(Output.of(isImage));
         }
+
         public Builder isLocalizedString(@Nullable Output<Boolean> isLocalizedString) {
-            this.isLocalizedString = isLocalizedString;
+            $.isLocalizedString = isLocalizedString;
             return this;
         }
-        public Builder isLocalizedString(@Nullable Boolean isLocalizedString) {
-            this.isLocalizedString = Codegen.ofNullable(isLocalizedString);
-            return this;
+
+        public Builder isLocalizedString(Boolean isLocalizedString) {
+            return isLocalizedString(Output.of(isLocalizedString));
         }
+
         public Builder isName(@Nullable Output<Boolean> isName) {
-            this.isName = isName;
+            $.isName = isName;
             return this;
         }
-        public Builder isName(@Nullable Boolean isName) {
-            this.isName = Codegen.ofNullable(isName);
-            return this;
+
+        public Builder isName(Boolean isName) {
+            return isName(Output.of(isName));
         }
+
         public Builder isRequired(@Nullable Output<Boolean> isRequired) {
-            this.isRequired = isRequired;
+            $.isRequired = isRequired;
             return this;
         }
-        public Builder isRequired(@Nullable Boolean isRequired) {
-            this.isRequired = Codegen.ofNullable(isRequired);
-            return this;
+
+        public Builder isRequired(Boolean isRequired) {
+            return isRequired(Output.of(isRequired));
         }
+
         public Builder maxLength(@Nullable Output<Integer> maxLength) {
-            this.maxLength = maxLength;
+            $.maxLength = maxLength;
             return this;
         }
-        public Builder maxLength(@Nullable Integer maxLength) {
-            this.maxLength = Codegen.ofNullable(maxLength);
-            return this;
+
+        public Builder maxLength(Integer maxLength) {
+            return maxLength(Output.of(maxLength));
         }
+
         public Builder propertyId(@Nullable Output<String> propertyId) {
-            this.propertyId = propertyId;
+            $.propertyId = propertyId;
             return this;
         }
-        public Builder propertyId(@Nullable String propertyId) {
-            this.propertyId = Codegen.ofNullable(propertyId);
-            return this;
+
+        public Builder propertyId(String propertyId) {
+            return propertyId(Output.of(propertyId));
         }
+
         public Builder schemaItemPropLink(@Nullable Output<String> schemaItemPropLink) {
-            this.schemaItemPropLink = schemaItemPropLink;
+            $.schemaItemPropLink = schemaItemPropLink;
             return this;
         }
-        public Builder schemaItemPropLink(@Nullable String schemaItemPropLink) {
-            this.schemaItemPropLink = Codegen.ofNullable(schemaItemPropLink);
-            return this;
-        }        public PropertyDefinitionArgs build() {
-            return new PropertyDefinitionArgs(arrayValueSeparator, enumValidValues, fieldName, fieldType, isArray, isAvailableInGraph, isEnum, isFlagEnum, isImage, isLocalizedString, isName, isRequired, maxLength, propertyId, schemaItemPropLink);
+
+        public Builder schemaItemPropLink(String schemaItemPropLink) {
+            return schemaItemPropLink(Output.of(schemaItemPropLink));
+        }
+
+        public PropertyDefinitionArgs build() {
+            $.fieldName = Objects.requireNonNull($.fieldName, "expected parameter 'fieldName' to be non-null");
+            $.fieldType = Objects.requireNonNull($.fieldType, "expected parameter 'fieldType' to be non-null");
+            return $;
         }
     }
+
 }

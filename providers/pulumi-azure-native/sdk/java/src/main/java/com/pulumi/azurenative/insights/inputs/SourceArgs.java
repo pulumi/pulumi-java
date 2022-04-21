@@ -7,10 +7,10 @@ import com.pulumi.azurenative.insights.enums.QueryType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizedResources")
-      private final @Nullable Output<List<String>> authorizedResources;
+    private @Nullable Output<List<String>> authorizedResources;
 
-    public Output<List<String>> authorizedResources() {
-        return this.authorizedResources == null ? Codegen.empty() : this.authorizedResources;
+    public Optional<Output<List<String>>> authorizedResources() {
+        return Optional.ofNullable(this.authorizedResources);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSourceId", required=true)
-      private final Output<String> dataSourceId;
+    private Output<String> dataSourceId;
 
     public Output<String> dataSourceId() {
         return this.dataSourceId;
@@ -49,10 +49,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -60,92 +60,83 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryType")
-      private final @Nullable Output<Either<String,QueryType>> queryType;
+    private @Nullable Output<Either<String,QueryType>> queryType;
 
-    public Output<Either<String,QueryType>> queryType() {
-        return this.queryType == null ? Codegen.empty() : this.queryType;
+    public Optional<Output<Either<String,QueryType>>> queryType() {
+        return Optional.ofNullable(this.queryType);
     }
 
-    public SourceArgs(
-        @Nullable Output<List<String>> authorizedResources,
-        Output<String> dataSourceId,
-        @Nullable Output<String> query,
-        @Nullable Output<Either<String,QueryType>> queryType) {
-        this.authorizedResources = authorizedResources;
-        this.dataSourceId = Objects.requireNonNull(dataSourceId, "expected parameter 'dataSourceId' to be non-null");
-        this.query = query;
-        this.queryType = queryType;
-    }
+    private SourceArgs() {}
 
-    private SourceArgs() {
-        this.authorizedResources = Codegen.empty();
-        this.dataSourceId = Codegen.empty();
-        this.query = Codegen.empty();
-        this.queryType = Codegen.empty();
+    private SourceArgs(SourceArgs $) {
+        this.authorizedResources = $.authorizedResources;
+        this.dataSourceId = $.dataSourceId;
+        this.query = $.query;
+        this.queryType = $.queryType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> authorizedResources;
-        private Output<String> dataSourceId;
-        private @Nullable Output<String> query;
-        private @Nullable Output<Either<String,QueryType>> queryType;
+        private SourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceArgs();
         }
 
         public Builder(SourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizedResources = defaults.authorizedResources;
-    	      this.dataSourceId = defaults.dataSourceId;
-    	      this.query = defaults.query;
-    	      this.queryType = defaults.queryType;
+            $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizedResources(@Nullable Output<List<String>> authorizedResources) {
-            this.authorizedResources = authorizedResources;
+            $.authorizedResources = authorizedResources;
             return this;
         }
-        public Builder authorizedResources(@Nullable List<String> authorizedResources) {
-            this.authorizedResources = Codegen.ofNullable(authorizedResources);
-            return this;
+
+        public Builder authorizedResources(List<String> authorizedResources) {
+            return authorizedResources(Output.of(authorizedResources));
         }
+
         public Builder authorizedResources(String... authorizedResources) {
             return authorizedResources(List.of(authorizedResources));
         }
+
         public Builder dataSourceId(Output<String> dataSourceId) {
-            this.dataSourceId = Objects.requireNonNull(dataSourceId);
+            $.dataSourceId = dataSourceId;
             return this;
         }
+
         public Builder dataSourceId(String dataSourceId) {
-            this.dataSourceId = Output.of(Objects.requireNonNull(dataSourceId));
-            return this;
+            return dataSourceId(Output.of(dataSourceId));
         }
+
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
+
+        public Builder query(String query) {
+            return query(Output.of(query));
         }
+
         public Builder queryType(@Nullable Output<Either<String,QueryType>> queryType) {
-            this.queryType = queryType;
+            $.queryType = queryType;
             return this;
         }
-        public Builder queryType(@Nullable Either<String,QueryType> queryType) {
-            this.queryType = Codegen.ofNullable(queryType);
-            return this;
-        }        public SourceArgs build() {
-            return new SourceArgs(authorizedResources, dataSourceId, query, queryType);
+
+        public Builder queryType(Either<String,QueryType> queryType) {
+            return queryType(Output.of(queryType));
+        }
+
+        public SourceArgs build() {
+            $.dataSourceId = Objects.requireNonNull($.dataSourceId, "expected parameter 'dataSourceId' to be non-null");
+            return $;
         }
     }
+
 }

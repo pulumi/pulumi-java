@@ -5,9 +5,9 @@ package com.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
-    public ServiceAccountArgs(@Nullable Output<String> email) {
-        this.email = email;
-    }
+    private ServiceAccountArgs() {}
 
-    private ServiceAccountArgs() {
-        this.email = Codegen.empty();
+    private ServiceAccountArgs(ServiceAccountArgs $) {
+        this.email = $.email;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> email;
+        private ServiceAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAccountArgs();
         }
 
         public Builder(ServiceAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
+            $ = new ServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
-        }        public ServiceAccountArgs build() {
-            return new ServiceAccountArgs(email);
+
+        public Builder email(String email) {
+            return email(Output.of(email));
+        }
+
+        public ServiceAccountArgs build() {
+            return $;
         }
     }
+
 }

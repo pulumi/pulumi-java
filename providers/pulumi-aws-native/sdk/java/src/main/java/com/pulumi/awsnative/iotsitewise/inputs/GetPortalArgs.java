@@ -17,45 +17,45 @@ public final class GetPortalArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="portalId", required=true)
-      private final String portalId;
+    private String portalId;
 
     public String portalId() {
         return this.portalId;
     }
 
-    public GetPortalArgs(String portalId) {
-        this.portalId = Objects.requireNonNull(portalId, "expected parameter 'portalId' to be non-null");
-    }
+    private GetPortalArgs() {}
 
-    private GetPortalArgs() {
-        this.portalId = null;
+    private GetPortalArgs(GetPortalArgs $) {
+        this.portalId = $.portalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPortalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String portalId;
+        private GetPortalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPortalArgs();
         }
 
         public Builder(GetPortalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.portalId = defaults.portalId;
+            $ = new GetPortalArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder portalId(String portalId) {
-            this.portalId = Objects.requireNonNull(portalId);
+            $.portalId = portalId;
             return this;
-        }        public GetPortalArgs build() {
-            return new GetPortalArgs(portalId);
+        }
+
+        public GetPortalArgs build() {
+            $.portalId = Objects.requireNonNull($.portalId, "expected parameter 'portalId' to be non-null");
+            return $;
         }
     }
+
 }

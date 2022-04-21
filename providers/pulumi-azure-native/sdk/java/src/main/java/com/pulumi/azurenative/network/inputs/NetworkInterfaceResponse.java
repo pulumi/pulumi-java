@@ -34,10 +34,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings;
+    private @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings;
 
     public Optional<NetworkInterfaceDnsSettingsResponse> dnsSettings() {
-        return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dscpConfiguration", required=true)
-      private final SubResourceResponse dscpConfiguration;
+    private SubResourceResponse dscpConfiguration;
 
     public SubResourceResponse dscpConfiguration() {
         return this.dscpConfiguration;
@@ -56,10 +56,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enableAcceleratedNetworking")
-      private final @Nullable Boolean enableAcceleratedNetworking;
+    private @Nullable Boolean enableAcceleratedNetworking;
 
     public Optional<Boolean> enableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
+        return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enableIPForwarding")
-      private final @Nullable Boolean enableIPForwarding;
+    private @Nullable Boolean enableIPForwarding;
 
     public Optional<Boolean> enableIPForwarding() {
-        return this.enableIPForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableIPForwarding);
+        return Optional.ofNullable(this.enableIPForwarding);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -89,10 +89,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable ExtendedLocationResponse extendedLocation;
+    private @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="hostedWorkloads", required=true)
-      private final List<String> hostedWorkloads;
+    private List<String> hostedWorkloads;
 
     public List<String> hostedWorkloads() {
         return this.hostedWorkloads;
@@ -111,10 +111,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
+    private @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
-    public List<NetworkInterfaceIPConfigurationResponse> ipConfigurations() {
-        return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
+    public Optional<List<NetworkInterfaceIPConfigurationResponse>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -144,7 +144,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="macAddress", required=true)
-      private final String macAddress;
+    private String macAddress;
 
     public String macAddress() {
         return this.macAddress;
@@ -155,10 +155,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="migrationPhase")
-      private final @Nullable String migrationPhase;
+    private @Nullable String migrationPhase;
 
     public Optional<String> migrationPhase() {
-        return this.migrationPhase == null ? Optional.empty() : Optional.ofNullable(this.migrationPhase);
+        return Optional.ofNullable(this.migrationPhase);
     }
 
     /**
@@ -166,7 +166,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -177,10 +177,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="networkSecurityGroup")
-      private final @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
+    private @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
 
     public Optional<NetworkSecurityGroupResponse> networkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
+        return Optional.ofNullable(this.networkSecurityGroup);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="nicType")
-      private final @Nullable String nicType;
+    private @Nullable String nicType;
 
     public Optional<String> nicType() {
-        return this.nicType == null ? Optional.empty() : Optional.ofNullable(this.nicType);
+        return Optional.ofNullable(this.nicType);
     }
 
     /**
@@ -199,7 +199,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="primary", required=true)
-      private final Boolean primary;
+    private Boolean primary;
 
     public Boolean primary() {
         return this.primary;
@@ -210,7 +210,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="privateEndpoint", required=true)
-      private final PrivateEndpointResponse privateEndpoint;
+    private PrivateEndpointResponse privateEndpoint;
 
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
@@ -221,10 +221,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="privateLinkService")
-      private final @Nullable PrivateLinkServiceResponse privateLinkService;
+    private @Nullable PrivateLinkServiceResponse privateLinkService;
 
     public Optional<PrivateLinkServiceResponse> privateLinkService() {
-        return this.privateLinkService == null ? Optional.empty() : Optional.ofNullable(this.privateLinkService);
+        return Optional.ofNullable(this.privateLinkService);
     }
 
     /**
@@ -232,7 +232,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -243,7 +243,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGuid", required=true)
-      private final String resourceGuid;
+    private String resourceGuid;
 
     public String resourceGuid() {
         return this.resourceGuid;
@@ -254,10 +254,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -265,7 +265,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tapConfigurations", required=true)
-      private final List<NetworkInterfaceTapConfigurationResponse> tapConfigurations;
+    private List<NetworkInterfaceTapConfigurationResponse> tapConfigurations;
 
     public List<NetworkInterfaceTapConfigurationResponse> tapConfigurations() {
         return this.tapConfigurations;
@@ -276,7 +276,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -287,262 +287,206 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="virtualMachine", required=true)
-      private final SubResourceResponse virtualMachine;
+    private SubResourceResponse virtualMachine;
 
     public SubResourceResponse virtualMachine() {
         return this.virtualMachine;
     }
 
-    public NetworkInterfaceResponse(
-        @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings,
-        SubResourceResponse dscpConfiguration,
-        @Nullable Boolean enableAcceleratedNetworking,
-        @Nullable Boolean enableIPForwarding,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        List<String> hostedWorkloads,
-        @Nullable String id,
-        @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations,
-        @Nullable String location,
-        String macAddress,
-        @Nullable String migrationPhase,
-        String name,
-        @Nullable NetworkSecurityGroupResponse networkSecurityGroup,
-        @Nullable String nicType,
-        Boolean primary,
-        PrivateEndpointResponse privateEndpoint,
-        @Nullable PrivateLinkServiceResponse privateLinkService,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        List<NetworkInterfaceTapConfigurationResponse> tapConfigurations,
-        String type,
-        SubResourceResponse virtualMachine) {
-        this.dnsSettings = dnsSettings;
-        this.dscpConfiguration = Objects.requireNonNull(dscpConfiguration, "expected parameter 'dscpConfiguration' to be non-null");
-        this.enableAcceleratedNetworking = enableAcceleratedNetworking;
-        this.enableIPForwarding = enableIPForwarding;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.extendedLocation = extendedLocation;
-        this.hostedWorkloads = Objects.requireNonNull(hostedWorkloads, "expected parameter 'hostedWorkloads' to be non-null");
-        this.id = id;
-        this.ipConfigurations = ipConfigurations;
-        this.location = location;
-        this.macAddress = Objects.requireNonNull(macAddress, "expected parameter 'macAddress' to be non-null");
-        this.migrationPhase = migrationPhase;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.networkSecurityGroup = networkSecurityGroup;
-        this.nicType = nicType;
-        this.primary = Objects.requireNonNull(primary, "expected parameter 'primary' to be non-null");
-        this.privateEndpoint = Objects.requireNonNull(privateEndpoint, "expected parameter 'privateEndpoint' to be non-null");
-        this.privateLinkService = privateLinkService;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceGuid = Objects.requireNonNull(resourceGuid, "expected parameter 'resourceGuid' to be non-null");
-        this.tags = tags;
-        this.tapConfigurations = Objects.requireNonNull(tapConfigurations, "expected parameter 'tapConfigurations' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.virtualMachine = Objects.requireNonNull(virtualMachine, "expected parameter 'virtualMachine' to be non-null");
-    }
+    private NetworkInterfaceResponse() {}
 
-    private NetworkInterfaceResponse() {
-        this.dnsSettings = null;
-        this.dscpConfiguration = null;
-        this.enableAcceleratedNetworking = null;
-        this.enableIPForwarding = null;
-        this.etag = null;
-        this.extendedLocation = null;
-        this.hostedWorkloads = List.of();
-        this.id = null;
-        this.ipConfigurations = List.of();
-        this.location = null;
-        this.macAddress = null;
-        this.migrationPhase = null;
-        this.name = null;
-        this.networkSecurityGroup = null;
-        this.nicType = null;
-        this.primary = null;
-        this.privateEndpoint = null;
-        this.privateLinkService = null;
-        this.provisioningState = null;
-        this.resourceGuid = null;
-        this.tags = Map.of();
-        this.tapConfigurations = List.of();
-        this.type = null;
-        this.virtualMachine = null;
+    private NetworkInterfaceResponse(NetworkInterfaceResponse $) {
+        this.dnsSettings = $.dnsSettings;
+        this.dscpConfiguration = $.dscpConfiguration;
+        this.enableAcceleratedNetworking = $.enableAcceleratedNetworking;
+        this.enableIPForwarding = $.enableIPForwarding;
+        this.etag = $.etag;
+        this.extendedLocation = $.extendedLocation;
+        this.hostedWorkloads = $.hostedWorkloads;
+        this.id = $.id;
+        this.ipConfigurations = $.ipConfigurations;
+        this.location = $.location;
+        this.macAddress = $.macAddress;
+        this.migrationPhase = $.migrationPhase;
+        this.name = $.name;
+        this.networkSecurityGroup = $.networkSecurityGroup;
+        this.nicType = $.nicType;
+        this.primary = $.primary;
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkService = $.privateLinkService;
+        this.provisioningState = $.provisioningState;
+        this.resourceGuid = $.resourceGuid;
+        this.tags = $.tags;
+        this.tapConfigurations = $.tapConfigurations;
+        this.type = $.type;
+        this.virtualMachine = $.virtualMachine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings;
-        private SubResourceResponse dscpConfiguration;
-        private @Nullable Boolean enableAcceleratedNetworking;
-        private @Nullable Boolean enableIPForwarding;
-        private String etag;
-        private @Nullable ExtendedLocationResponse extendedLocation;
-        private List<String> hostedWorkloads;
-        private @Nullable String id;
-        private @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
-        private @Nullable String location;
-        private String macAddress;
-        private @Nullable String migrationPhase;
-        private String name;
-        private @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
-        private @Nullable String nicType;
-        private Boolean primary;
-        private PrivateEndpointResponse privateEndpoint;
-        private @Nullable PrivateLinkServiceResponse privateLinkService;
-        private String provisioningState;
-        private String resourceGuid;
-        private @Nullable Map<String,String> tags;
-        private List<NetworkInterfaceTapConfigurationResponse> tapConfigurations;
-        private String type;
-        private SubResourceResponse virtualMachine;
+        private NetworkInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceResponse();
         }
 
         public Builder(NetworkInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.dscpConfiguration = defaults.dscpConfiguration;
-    	      this.enableAcceleratedNetworking = defaults.enableAcceleratedNetworking;
-    	      this.enableIPForwarding = defaults.enableIPForwarding;
-    	      this.etag = defaults.etag;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.hostedWorkloads = defaults.hostedWorkloads;
-    	      this.id = defaults.id;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.location = defaults.location;
-    	      this.macAddress = defaults.macAddress;
-    	      this.migrationPhase = defaults.migrationPhase;
-    	      this.name = defaults.name;
-    	      this.networkSecurityGroup = defaults.networkSecurityGroup;
-    	      this.nicType = defaults.nicType;
-    	      this.primary = defaults.primary;
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkService = defaults.privateLinkService;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGuid = defaults.resourceGuid;
-    	      this.tags = defaults.tags;
-    	      this.tapConfigurations = defaults.tapConfigurations;
-    	      this.type = defaults.type;
-    	      this.virtualMachine = defaults.virtualMachine;
+            $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsSettings(@Nullable NetworkInterfaceDnsSettingsResponse dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
+
         public Builder dscpConfiguration(SubResourceResponse dscpConfiguration) {
-            this.dscpConfiguration = Objects.requireNonNull(dscpConfiguration);
+            $.dscpConfiguration = dscpConfiguration;
             return this;
         }
+
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = enableAcceleratedNetworking;
+            $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
+
         public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
-            this.enableIPForwarding = enableIPForwarding;
+            $.enableIPForwarding = enableIPForwarding;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
+
         public Builder hostedWorkloads(List<String> hostedWorkloads) {
-            this.hostedWorkloads = Objects.requireNonNull(hostedWorkloads);
+            $.hostedWorkloads = hostedWorkloads;
             return this;
         }
+
         public Builder hostedWorkloads(String... hostedWorkloads) {
             return hostedWorkloads(List.of(hostedWorkloads));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(NetworkInterfaceIPConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder macAddress(String macAddress) {
-            this.macAddress = Objects.requireNonNull(macAddress);
+            $.macAddress = macAddress;
             return this;
         }
+
         public Builder migrationPhase(@Nullable String migrationPhase) {
-            this.migrationPhase = migrationPhase;
+            $.migrationPhase = migrationPhase;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupResponse networkSecurityGroup) {
-            this.networkSecurityGroup = networkSecurityGroup;
+            $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
+
         public Builder nicType(@Nullable String nicType) {
-            this.nicType = nicType;
+            $.nicType = nicType;
             return this;
         }
+
         public Builder primary(Boolean primary) {
-            this.primary = Objects.requireNonNull(primary);
+            $.primary = primary;
             return this;
         }
+
         public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
-            this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkService(@Nullable PrivateLinkServiceResponse privateLinkService) {
-            this.privateLinkService = privateLinkService;
+            $.privateLinkService = privateLinkService;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceGuid(String resourceGuid) {
-            this.resourceGuid = Objects.requireNonNull(resourceGuid);
+            $.resourceGuid = resourceGuid;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder tapConfigurations(List<NetworkInterfaceTapConfigurationResponse> tapConfigurations) {
-            this.tapConfigurations = Objects.requireNonNull(tapConfigurations);
+            $.tapConfigurations = tapConfigurations;
             return this;
         }
+
         public Builder tapConfigurations(NetworkInterfaceTapConfigurationResponse... tapConfigurations) {
             return tapConfigurations(List.of(tapConfigurations));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder virtualMachine(SubResourceResponse virtualMachine) {
-            this.virtualMachine = Objects.requireNonNull(virtualMachine);
+            $.virtualMachine = virtualMachine;
             return this;
-        }        public NetworkInterfaceResponse build() {
-            return new NetworkInterfaceResponse(dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableIPForwarding, etag, extendedLocation, hostedWorkloads, id, ipConfigurations, location, macAddress, migrationPhase, name, networkSecurityGroup, nicType, primary, privateEndpoint, privateLinkService, provisioningState, resourceGuid, tags, tapConfigurations, type, virtualMachine);
+        }
+
+        public NetworkInterfaceResponse build() {
+            $.dscpConfiguration = Objects.requireNonNull($.dscpConfiguration, "expected parameter 'dscpConfiguration' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.hostedWorkloads = Objects.requireNonNull($.hostedWorkloads, "expected parameter 'hostedWorkloads' to be non-null");
+            $.macAddress = Objects.requireNonNull($.macAddress, "expected parameter 'macAddress' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.primary = Objects.requireNonNull($.primary, "expected parameter 'primary' to be non-null");
+            $.privateEndpoint = Objects.requireNonNull($.privateEndpoint, "expected parameter 'privateEndpoint' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceGuid = Objects.requireNonNull($.resourceGuid, "expected parameter 'resourceGuid' to be non-null");
+            $.tapConfigurations = Objects.requireNonNull($.tapConfigurations, "expected parameter 'tapConfigurations' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.virtualMachine = Objects.requireNonNull($.virtualMachine, "expected parameter 'virtualMachine' to be non-null");
+            return $;
         }
     }
+
 }

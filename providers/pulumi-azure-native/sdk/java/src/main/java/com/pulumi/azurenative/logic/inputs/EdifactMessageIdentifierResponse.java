@@ -21,45 +21,45 @@ public final class EdifactMessageIdentifierResponse extends com.pulumi.resources
      * 
      */
     @Import(name="messageId", required=true)
-      private final String messageId;
+    private String messageId;
 
     public String messageId() {
         return this.messageId;
     }
 
-    public EdifactMessageIdentifierResponse(String messageId) {
-        this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
-    }
+    private EdifactMessageIdentifierResponse() {}
 
-    private EdifactMessageIdentifierResponse() {
-        this.messageId = null;
+    private EdifactMessageIdentifierResponse(EdifactMessageIdentifierResponse $) {
+        this.messageId = $.messageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactMessageIdentifierResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String messageId;
+        private EdifactMessageIdentifierResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactMessageIdentifierResponse();
         }
 
         public Builder(EdifactMessageIdentifierResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageId = defaults.messageId;
+            $ = new EdifactMessageIdentifierResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder messageId(String messageId) {
-            this.messageId = Objects.requireNonNull(messageId);
+            $.messageId = messageId;
             return this;
-        }        public EdifactMessageIdentifierResponse build() {
-            return new EdifactMessageIdentifierResponse(messageId);
+        }
+
+        public EdifactMessageIdentifierResponse build() {
+            $.messageId = Objects.requireNonNull($.messageId, "expected parameter 'messageId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class LogConfigDataAccessOptionsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="logMode", required=true)
-      private final String logMode;
+    private String logMode;
 
     public String logMode() {
         return this.logMode;
     }
 
-    public LogConfigDataAccessOptionsResponse(String logMode) {
-        this.logMode = Objects.requireNonNull(logMode, "expected parameter 'logMode' to be non-null");
-    }
+    private LogConfigDataAccessOptionsResponse() {}
 
-    private LogConfigDataAccessOptionsResponse() {
-        this.logMode = null;
+    private LogConfigDataAccessOptionsResponse(LogConfigDataAccessOptionsResponse $) {
+        this.logMode = $.logMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogConfigDataAccessOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String logMode;
+        private LogConfigDataAccessOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogConfigDataAccessOptionsResponse();
         }
 
         public Builder(LogConfigDataAccessOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logMode = defaults.logMode;
+            $ = new LogConfigDataAccessOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder logMode(String logMode) {
-            this.logMode = Objects.requireNonNull(logMode);
+            $.logMode = logMode;
             return this;
-        }        public LogConfigDataAccessOptionsResponse build() {
-            return new LogConfigDataAccessOptionsResponse(logMode);
+        }
+
+        public LogConfigDataAccessOptionsResponse build() {
+            $.logMode = Objects.requireNonNull($.logMode, "expected parameter 'logMode' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetSAMLProviderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetSAMLProviderArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetSAMLProviderArgs() {}
 
-    private GetSAMLProviderArgs() {
-        this.arn = null;
+    private GetSAMLProviderArgs(GetSAMLProviderArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSAMLProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetSAMLProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSAMLProviderArgs();
         }
 
         public Builder(GetSAMLProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetSAMLProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetSAMLProviderArgs build() {
-            return new GetSAMLProviderArgs(arn);
+        }
+
+        public GetSAMLProviderArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

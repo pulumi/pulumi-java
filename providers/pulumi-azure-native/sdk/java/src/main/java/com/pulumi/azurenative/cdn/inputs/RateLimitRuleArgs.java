@@ -9,11 +9,11 @@ import com.pulumi.azurenative.cdn.inputs.MatchConditionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class RateLimitRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action", required=true)
-      private final Output<Either<String,ActionType>> action;
+    private Output<Either<String,ActionType>> action;
 
     public Output<Either<String,ActionType>> action() {
         return this.action;
@@ -41,10 +41,10 @@ public final class RateLimitRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
+    private @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
 
-    public Output<Either<String,CustomRuleEnabledState>> enabledState() {
-        return this.enabledState == null ? Codegen.empty() : this.enabledState;
+    public Optional<Output<Either<String,CustomRuleEnabledState>>> enabledState() {
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class RateLimitRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchConditions", required=true)
-      private final Output<List<MatchConditionArgs>> matchConditions;
+    private Output<List<MatchConditionArgs>> matchConditions;
 
     public Output<List<MatchConditionArgs>> matchConditions() {
         return this.matchConditions;
@@ -63,7 +63,7 @@ public final class RateLimitRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -74,7 +74,7 @@ public final class RateLimitRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -85,7 +85,7 @@ public final class RateLimitRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rateLimitDurationInMinutes", required=true)
-      private final Output<Integer> rateLimitDurationInMinutes;
+    private Output<Integer> rateLimitDurationInMinutes;
 
     public Output<Integer> rateLimitDurationInMinutes() {
         return this.rateLimitDurationInMinutes;
@@ -96,131 +96,118 @@ public final class RateLimitRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rateLimitThreshold", required=true)
-      private final Output<Integer> rateLimitThreshold;
+    private Output<Integer> rateLimitThreshold;
 
     public Output<Integer> rateLimitThreshold() {
         return this.rateLimitThreshold;
     }
 
-    public RateLimitRuleArgs(
-        Output<Either<String,ActionType>> action,
-        @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState,
-        Output<List<MatchConditionArgs>> matchConditions,
-        Output<String> name,
-        Output<Integer> priority,
-        Output<Integer> rateLimitDurationInMinutes,
-        Output<Integer> rateLimitThreshold) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.enabledState = enabledState;
-        this.matchConditions = Objects.requireNonNull(matchConditions, "expected parameter 'matchConditions' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.rateLimitDurationInMinutes = Objects.requireNonNull(rateLimitDurationInMinutes, "expected parameter 'rateLimitDurationInMinutes' to be non-null");
-        this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold, "expected parameter 'rateLimitThreshold' to be non-null");
-    }
+    private RateLimitRuleArgs() {}
 
-    private RateLimitRuleArgs() {
-        this.action = Codegen.empty();
-        this.enabledState = Codegen.empty();
-        this.matchConditions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.rateLimitDurationInMinutes = Codegen.empty();
-        this.rateLimitThreshold = Codegen.empty();
+    private RateLimitRuleArgs(RateLimitRuleArgs $) {
+        this.action = $.action;
+        this.enabledState = $.enabledState;
+        this.matchConditions = $.matchConditions;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.rateLimitDurationInMinutes = $.rateLimitDurationInMinutes;
+        this.rateLimitThreshold = $.rateLimitThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RateLimitRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ActionType>> action;
-        private @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
-        private Output<List<MatchConditionArgs>> matchConditions;
-        private Output<String> name;
-        private Output<Integer> priority;
-        private Output<Integer> rateLimitDurationInMinutes;
-        private Output<Integer> rateLimitThreshold;
+        private RateLimitRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RateLimitRuleArgs();
         }
 
         public Builder(RateLimitRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.enabledState = defaults.enabledState;
-    	      this.matchConditions = defaults.matchConditions;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.rateLimitDurationInMinutes = defaults.rateLimitDurationInMinutes;
-    	      this.rateLimitThreshold = defaults.rateLimitThreshold;
+            $ = new RateLimitRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<Either<String,ActionType>> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(Either<String,ActionType> action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder enabledState(@Nullable Output<Either<String,CustomRuleEnabledState>> enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
-        public Builder enabledState(@Nullable Either<String,CustomRuleEnabledState> enabledState) {
-            this.enabledState = Codegen.ofNullable(enabledState);
-            return this;
+
+        public Builder enabledState(Either<String,CustomRuleEnabledState> enabledState) {
+            return enabledState(Output.of(enabledState));
         }
+
         public Builder matchConditions(Output<List<MatchConditionArgs>> matchConditions) {
-            this.matchConditions = Objects.requireNonNull(matchConditions);
+            $.matchConditions = matchConditions;
             return this;
         }
+
         public Builder matchConditions(List<MatchConditionArgs> matchConditions) {
-            this.matchConditions = Output.of(Objects.requireNonNull(matchConditions));
-            return this;
+            return matchConditions(Output.of(matchConditions));
         }
+
         public Builder matchConditions(MatchConditionArgs... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder rateLimitDurationInMinutes(Output<Integer> rateLimitDurationInMinutes) {
-            this.rateLimitDurationInMinutes = Objects.requireNonNull(rateLimitDurationInMinutes);
+            $.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
             return this;
         }
+
         public Builder rateLimitDurationInMinutes(Integer rateLimitDurationInMinutes) {
-            this.rateLimitDurationInMinutes = Output.of(Objects.requireNonNull(rateLimitDurationInMinutes));
-            return this;
+            return rateLimitDurationInMinutes(Output.of(rateLimitDurationInMinutes));
         }
+
         public Builder rateLimitThreshold(Output<Integer> rateLimitThreshold) {
-            this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
+            $.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
+
         public Builder rateLimitThreshold(Integer rateLimitThreshold) {
-            this.rateLimitThreshold = Output.of(Objects.requireNonNull(rateLimitThreshold));
-            return this;
-        }        public RateLimitRuleArgs build() {
-            return new RateLimitRuleArgs(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold);
+            return rateLimitThreshold(Output.of(rateLimitThreshold));
+        }
+
+        public RateLimitRuleArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.matchConditions = Objects.requireNonNull($.matchConditions, "expected parameter 'matchConditions' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.rateLimitDurationInMinutes = Objects.requireNonNull($.rateLimitDurationInMinutes, "expected parameter 'rateLimitDurationInMinutes' to be non-null");
+            $.rateLimitThreshold = Objects.requireNonNull($.rateLimitThreshold, "expected parameter 'rateLimitThreshold' to be non-null");
+            return $;
         }
     }
+
 }

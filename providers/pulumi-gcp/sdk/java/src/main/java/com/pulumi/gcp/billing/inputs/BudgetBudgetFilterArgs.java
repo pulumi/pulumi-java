@@ -5,11 +5,11 @@ package com.pulumi.gcp.billing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BudgetBudgetFilterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="creditTypes")
-      private final @Nullable Output<List<String>> creditTypes;
+    private @Nullable Output<List<String>> creditTypes;
 
-    public Output<List<String>> creditTypes() {
-        return this.creditTypes == null ? Codegen.empty() : this.creditTypes;
+    public Optional<Output<List<String>>> creditTypes() {
+        return Optional.ofNullable(this.creditTypes);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class BudgetBudgetFilterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="creditTypesTreatment")
-      private final @Nullable Output<String> creditTypesTreatment;
+    private @Nullable Output<String> creditTypesTreatment;
 
-    public Output<String> creditTypesTreatment() {
-        return this.creditTypesTreatment == null ? Codegen.empty() : this.creditTypesTreatment;
+    public Optional<Output<String>> creditTypesTreatment() {
+        return Optional.ofNullable(this.creditTypesTreatment);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class BudgetBudgetFilterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class BudgetBudgetFilterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="projects")
-      private final @Nullable Output<List<String>> projects;
+    private @Nullable Output<List<String>> projects;
 
-    public Output<List<String>> projects() {
-        return this.projects == null ? Codegen.empty() : this.projects;
+    public Optional<Output<List<String>>> projects() {
+        return Optional.ofNullable(this.projects);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class BudgetBudgetFilterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="services")
-      private final @Nullable Output<List<String>> services;
+    private @Nullable Output<List<String>> services;
 
-    public Output<List<String>> services() {
-        return this.services == null ? Codegen.empty() : this.services;
+    public Optional<Output<List<String>>> services() {
+        return Optional.ofNullable(this.services);
     }
 
     /**
@@ -100,127 +100,114 @@ public final class BudgetBudgetFilterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subaccounts")
-      private final @Nullable Output<List<String>> subaccounts;
+    private @Nullable Output<List<String>> subaccounts;
 
-    public Output<List<String>> subaccounts() {
-        return this.subaccounts == null ? Codegen.empty() : this.subaccounts;
+    public Optional<Output<List<String>>> subaccounts() {
+        return Optional.ofNullable(this.subaccounts);
     }
 
-    public BudgetBudgetFilterArgs(
-        @Nullable Output<List<String>> creditTypes,
-        @Nullable Output<String> creditTypesTreatment,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<List<String>> projects,
-        @Nullable Output<List<String>> services,
-        @Nullable Output<List<String>> subaccounts) {
-        this.creditTypes = creditTypes;
-        this.creditTypesTreatment = creditTypesTreatment;
-        this.labels = labels;
-        this.projects = projects;
-        this.services = services;
-        this.subaccounts = subaccounts;
-    }
+    private BudgetBudgetFilterArgs() {}
 
-    private BudgetBudgetFilterArgs() {
-        this.creditTypes = Codegen.empty();
-        this.creditTypesTreatment = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.projects = Codegen.empty();
-        this.services = Codegen.empty();
-        this.subaccounts = Codegen.empty();
+    private BudgetBudgetFilterArgs(BudgetBudgetFilterArgs $) {
+        this.creditTypes = $.creditTypes;
+        this.creditTypesTreatment = $.creditTypesTreatment;
+        this.labels = $.labels;
+        this.projects = $.projects;
+        this.services = $.services;
+        this.subaccounts = $.subaccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetBudgetFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> creditTypes;
-        private @Nullable Output<String> creditTypesTreatment;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<List<String>> projects;
-        private @Nullable Output<List<String>> services;
-        private @Nullable Output<List<String>> subaccounts;
+        private BudgetBudgetFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetBudgetFilterArgs();
         }
 
         public Builder(BudgetBudgetFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creditTypes = defaults.creditTypes;
-    	      this.creditTypesTreatment = defaults.creditTypesTreatment;
-    	      this.labels = defaults.labels;
-    	      this.projects = defaults.projects;
-    	      this.services = defaults.services;
-    	      this.subaccounts = defaults.subaccounts;
+            $ = new BudgetBudgetFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creditTypes(@Nullable Output<List<String>> creditTypes) {
-            this.creditTypes = creditTypes;
+            $.creditTypes = creditTypes;
             return this;
         }
-        public Builder creditTypes(@Nullable List<String> creditTypes) {
-            this.creditTypes = Codegen.ofNullable(creditTypes);
-            return this;
+
+        public Builder creditTypes(List<String> creditTypes) {
+            return creditTypes(Output.of(creditTypes));
         }
+
         public Builder creditTypes(String... creditTypes) {
             return creditTypes(List.of(creditTypes));
         }
+
         public Builder creditTypesTreatment(@Nullable Output<String> creditTypesTreatment) {
-            this.creditTypesTreatment = creditTypesTreatment;
+            $.creditTypesTreatment = creditTypesTreatment;
             return this;
         }
-        public Builder creditTypesTreatment(@Nullable String creditTypesTreatment) {
-            this.creditTypesTreatment = Codegen.ofNullable(creditTypesTreatment);
-            return this;
+
+        public Builder creditTypesTreatment(String creditTypesTreatment) {
+            return creditTypesTreatment(Output.of(creditTypesTreatment));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder projects(@Nullable Output<List<String>> projects) {
-            this.projects = projects;
+            $.projects = projects;
             return this;
         }
-        public Builder projects(@Nullable List<String> projects) {
-            this.projects = Codegen.ofNullable(projects);
-            return this;
+
+        public Builder projects(List<String> projects) {
+            return projects(Output.of(projects));
         }
+
         public Builder projects(String... projects) {
             return projects(List.of(projects));
         }
+
         public Builder services(@Nullable Output<List<String>> services) {
-            this.services = services;
+            $.services = services;
             return this;
         }
-        public Builder services(@Nullable List<String> services) {
-            this.services = Codegen.ofNullable(services);
-            return this;
+
+        public Builder services(List<String> services) {
+            return services(Output.of(services));
         }
+
         public Builder services(String... services) {
             return services(List.of(services));
         }
+
         public Builder subaccounts(@Nullable Output<List<String>> subaccounts) {
-            this.subaccounts = subaccounts;
+            $.subaccounts = subaccounts;
             return this;
         }
-        public Builder subaccounts(@Nullable List<String> subaccounts) {
-            this.subaccounts = Codegen.ofNullable(subaccounts);
-            return this;
+
+        public Builder subaccounts(List<String> subaccounts) {
+            return subaccounts(Output.of(subaccounts));
         }
+
         public Builder subaccounts(String... subaccounts) {
             return subaccounts(List.of(subaccounts));
-        }        public BudgetBudgetFilterArgs build() {
-            return new BudgetBudgetFilterArgs(creditTypes, creditTypesTreatment, labels, projects, services, subaccounts);
+        }
+
+        public BudgetBudgetFilterArgs build() {
+            return $;
         }
     }
+
 }

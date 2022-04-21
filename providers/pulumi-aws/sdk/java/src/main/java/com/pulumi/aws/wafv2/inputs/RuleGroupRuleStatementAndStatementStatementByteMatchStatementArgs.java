@@ -7,10 +7,10 @@ import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementBy
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
      * 
      */
     @Import(name="fieldToMatch")
-      private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
+    private @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch() {
-        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
+    public Optional<Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs>> fieldToMatch() {
+        return Optional.ofNullable(this.fieldToMatch);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
      * 
      */
     @Import(name="positionalConstraint", required=true)
-      private final Output<String> positionalConstraint;
+    private Output<String> positionalConstraint;
 
     public Output<String> positionalConstraint() {
         return this.positionalConstraint;
@@ -45,7 +45,7 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
      * 
      */
     @Import(name="searchString", required=true)
-      private final Output<String> searchString;
+    private Output<String> searchString;
 
     public Output<String> searchString() {
         return this.searchString;
@@ -56,92 +56,85 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
      * 
      */
     @Import(name="textTransformations", required=true)
-      private final Output<List<RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations;
+    private Output<List<RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations;
 
     public Output<List<RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 
-    public RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs(
-        @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch,
-        Output<String> positionalConstraint,
-        Output<String> searchString,
-        Output<List<RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations) {
-        this.fieldToMatch = fieldToMatch;
-        this.positionalConstraint = Objects.requireNonNull(positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
-        this.searchString = Objects.requireNonNull(searchString, "expected parameter 'searchString' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs() {}
 
-    private RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.positionalConstraint = Codegen.empty();
-        this.searchString = Codegen.empty();
-        this.textTransformations = Codegen.empty();
+    private RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs(RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.positionalConstraint = $.positionalConstraint;
+        this.searchString = $.searchString;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
-        private Output<String> positionalConstraint;
-        private Output<String> searchString;
-        private Output<List<RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations;
+        private RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs();
         }
 
         public Builder(RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.positionalConstraint = defaults.positionalConstraint;
-    	      this.searchString = defaults.searchString;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(@Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = fieldToMatch;
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
-        public Builder fieldToMatch(@Nullable RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
-            return this;
+
+        public Builder fieldToMatch(RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs fieldToMatch) {
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder positionalConstraint(Output<String> positionalConstraint) {
-            this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
+            $.positionalConstraint = positionalConstraint;
             return this;
         }
+
         public Builder positionalConstraint(String positionalConstraint) {
-            this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
-            return this;
+            return positionalConstraint(Output.of(positionalConstraint));
         }
+
         public Builder searchString(Output<String> searchString) {
-            this.searchString = Objects.requireNonNull(searchString);
+            $.searchString = searchString;
             return this;
         }
+
         public Builder searchString(String searchString) {
-            this.searchString = Output.of(Objects.requireNonNull(searchString));
-            return this;
+            return searchString(Output.of(searchString));
         }
+
         public Builder textTransformations(Output<List<RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(List<RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs> textTransformations) {
-            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
-            return this;
+            return textTransformations(Output.of(textTransformations));
         }
+
         public Builder textTransformations(RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs build() {
-            return new RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs(fieldToMatch, positionalConstraint, searchString, textTransformations);
+        }
+
+        public RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs build() {
+            $.positionalConstraint = Objects.requireNonNull($.positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
+            $.searchString = Objects.requireNonNull($.searchString, "expected parameter 'searchString' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

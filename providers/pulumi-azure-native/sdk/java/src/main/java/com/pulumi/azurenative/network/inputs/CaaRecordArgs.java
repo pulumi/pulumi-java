@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CaaRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flags")
-      private final @Nullable Output<Integer> flags;
+    private @Nullable Output<Integer> flags;
 
-    public Output<Integer> flags() {
-        return this.flags == null ? Codegen.empty() : this.flags;
+    public Optional<Output<Integer>> flags() {
+        return Optional.ofNullable(this.flags);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CaaRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class CaaRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public CaaRecordArgs(
-        @Nullable Output<Integer> flags,
-        @Nullable Output<String> tag,
-        @Nullable Output<String> value) {
-        this.flags = flags;
-        this.tag = tag;
-        this.value = value;
-    }
+    private CaaRecordArgs() {}
 
-    private CaaRecordArgs() {
-        this.flags = Codegen.empty();
-        this.tag = Codegen.empty();
-        this.value = Codegen.empty();
+    private CaaRecordArgs(CaaRecordArgs $) {
+        this.flags = $.flags;
+        this.tag = $.tag;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaaRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> flags;
-        private @Nullable Output<String> tag;
-        private @Nullable Output<String> value;
+        private CaaRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaaRecordArgs();
         }
 
         public Builder(CaaRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flags = defaults.flags;
-    	      this.tag = defaults.tag;
-    	      this.value = defaults.value;
+            $ = new CaaRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flags(@Nullable Output<Integer> flags) {
-            this.flags = flags;
+            $.flags = flags;
             return this;
         }
-        public Builder flags(@Nullable Integer flags) {
-            this.flags = Codegen.ofNullable(flags);
-            return this;
+
+        public Builder flags(Integer flags) {
+            return flags(Output.of(flags));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public CaaRecordArgs build() {
-            return new CaaRecordArgs(flags, tag, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public CaaRecordArgs build() {
+            return $;
         }
     }
+
 }

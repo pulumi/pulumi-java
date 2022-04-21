@@ -20,62 +20,57 @@ public final class JobTemplateRetryCriteria extends com.pulumi.resources.InvokeA
     public static final JobTemplateRetryCriteria Empty = new JobTemplateRetryCriteria();
 
     @Import(name="failureType")
-      private final @Nullable JobTemplateJobRetryFailureType failureType;
+    private @Nullable JobTemplateJobRetryFailureType failureType;
 
     public Optional<JobTemplateJobRetryFailureType> failureType() {
-        return this.failureType == null ? Optional.empty() : Optional.ofNullable(this.failureType);
+        return Optional.ofNullable(this.failureType);
     }
 
     @Import(name="numberOfRetries")
-      private final @Nullable Integer numberOfRetries;
+    private @Nullable Integer numberOfRetries;
 
     public Optional<Integer> numberOfRetries() {
-        return this.numberOfRetries == null ? Optional.empty() : Optional.ofNullable(this.numberOfRetries);
+        return Optional.ofNullable(this.numberOfRetries);
     }
 
-    public JobTemplateRetryCriteria(
-        @Nullable JobTemplateJobRetryFailureType failureType,
-        @Nullable Integer numberOfRetries) {
-        this.failureType = failureType;
-        this.numberOfRetries = numberOfRetries;
-    }
+    private JobTemplateRetryCriteria() {}
 
-    private JobTemplateRetryCriteria() {
-        this.failureType = null;
-        this.numberOfRetries = null;
+    private JobTemplateRetryCriteria(JobTemplateRetryCriteria $) {
+        this.failureType = $.failureType;
+        this.numberOfRetries = $.numberOfRetries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobTemplateRetryCriteria defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable JobTemplateJobRetryFailureType failureType;
-        private @Nullable Integer numberOfRetries;
+        private JobTemplateRetryCriteria $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobTemplateRetryCriteria();
         }
 
         public Builder(JobTemplateRetryCriteria defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureType = defaults.failureType;
-    	      this.numberOfRetries = defaults.numberOfRetries;
+            $ = new JobTemplateRetryCriteria(Objects.requireNonNull(defaults));
         }
 
         public Builder failureType(@Nullable JobTemplateJobRetryFailureType failureType) {
-            this.failureType = failureType;
+            $.failureType = failureType;
             return this;
         }
+
         public Builder numberOfRetries(@Nullable Integer numberOfRetries) {
-            this.numberOfRetries = numberOfRetries;
+            $.numberOfRetries = numberOfRetries;
             return this;
-        }        public JobTemplateRetryCriteria build() {
-            return new JobTemplateRetryCriteria(failureType, numberOfRetries);
+        }
+
+        public JobTemplateRetryCriteria build() {
+            return $;
         }
     }
+
 }

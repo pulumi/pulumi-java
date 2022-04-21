@@ -23,45 +23,44 @@ public final class CacheResponseSku extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public CacheResponseSku(@Nullable String name) {
-        this.name = name;
-    }
+    private CacheResponseSku() {}
 
-    private CacheResponseSku() {
-        this.name = null;
+    private CacheResponseSku(CacheResponseSku $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheResponseSku defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private CacheResponseSku $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheResponseSku();
         }
 
         public Builder(CacheResponseSku defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new CacheResponseSku(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public CacheResponseSku build() {
-            return new CacheResponseSku(name);
+        }
+
+        public CacheResponseSku build() {
+            return $;
         }
     }
+
 }

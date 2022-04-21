@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceGroupNamedPortGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instances")
-      private final @Nullable Output<List<String>> instances;
+    private @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> instances() {
-        return this.instances == null ? Codegen.empty() : this.instances;
+    public Optional<Output<List<String>>> instances() {
+        return Optional.ofNullable(this.instances);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="namedPorts")
-      private final @Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts;
+    private @Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts;
 
-    public Output<List<InstanceGroupNamedPortGetArgs>> namedPorts() {
-        return this.namedPorts == null ? Codegen.empty() : this.namedPorts;
+    public Optional<Output<List<InstanceGroupNamedPortGetArgs>>> namedPorts() {
+        return Optional.ofNullable(this.namedPorts);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<Integer> size;
+    private @Nullable Output<Integer> size;
 
-    public Output<Integer> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<Integer>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -119,160 +119,136 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceGroupState(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> instances,
-        @Nullable Output<String> name,
-        @Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts,
-        @Nullable Output<String> network,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<Integer> size,
-        @Nullable Output<String> zone) {
-        this.description = description;
-        this.instances = instances;
-        this.name = name;
-        this.namedPorts = namedPorts;
-        this.network = network;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.size = size;
-        this.zone = zone;
-    }
+    private InstanceGroupState() {}
 
-    private InstanceGroupState() {
-        this.description = Codegen.empty();
-        this.instances = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namedPorts = Codegen.empty();
-        this.network = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.size = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceGroupState(InstanceGroupState $) {
+        this.description = $.description;
+        this.instances = $.instances;
+        this.name = $.name;
+        this.namedPorts = $.namedPorts;
+        this.network = $.network;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.size = $.size;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> instances;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<Integer> size;
-        private @Nullable Output<String> zone;
+        private InstanceGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupState();
         }
 
         public Builder(InstanceGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.instances = defaults.instances;
-    	      this.name = defaults.name;
-    	      this.namedPorts = defaults.namedPorts;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.size = defaults.size;
-    	      this.zone = defaults.zone;
+            $ = new InstanceGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder instances(@Nullable Output<List<String>> instances) {
-            this.instances = instances;
+            $.instances = instances;
             return this;
         }
-        public Builder instances(@Nullable List<String> instances) {
-            this.instances = Codegen.ofNullable(instances);
-            return this;
+
+        public Builder instances(List<String> instances) {
+            return instances(Output.of(instances));
         }
+
         public Builder instances(String... instances) {
             return instances(List.of(instances));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namedPorts(@Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts) {
-            this.namedPorts = namedPorts;
+            $.namedPorts = namedPorts;
             return this;
         }
-        public Builder namedPorts(@Nullable List<InstanceGroupNamedPortGetArgs> namedPorts) {
-            this.namedPorts = Codegen.ofNullable(namedPorts);
-            return this;
+
+        public Builder namedPorts(List<InstanceGroupNamedPortGetArgs> namedPorts) {
+            return namedPorts(Output.of(namedPorts));
         }
+
         public Builder namedPorts(InstanceGroupNamedPortGetArgs... namedPorts) {
             return namedPorts(List.of(namedPorts));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder size(@Nullable Output<Integer> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable Integer size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(Integer size) {
+            return size(Output.of(size));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceGroupState build() {
-            return new InstanceGroupState(description, instances, name, namedPorts, network, project, selfLink, size, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceGroupState build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.JSONSchemaPropsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CustomResourceValidationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="openAPIV3Schema")
-      private final @Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema;
+    private @Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema;
 
-    public Output<JSONSchemaPropsArgs> openAPIV3Schema() {
-        return this.openAPIV3Schema == null ? Codegen.empty() : this.openAPIV3Schema;
+    public Optional<Output<JSONSchemaPropsArgs>> openAPIV3Schema() {
+        return Optional.ofNullable(this.openAPIV3Schema);
     }
 
-    public CustomResourceValidationArgs(@Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema) {
-        this.openAPIV3Schema = openAPIV3Schema;
-    }
+    private CustomResourceValidationArgs() {}
 
-    private CustomResourceValidationArgs() {
-        this.openAPIV3Schema = Codegen.empty();
+    private CustomResourceValidationArgs(CustomResourceValidationArgs $) {
+        this.openAPIV3Schema = $.openAPIV3Schema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomResourceValidationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema;
+        private CustomResourceValidationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomResourceValidationArgs();
         }
 
         public Builder(CustomResourceValidationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.openAPIV3Schema = defaults.openAPIV3Schema;
+            $ = new CustomResourceValidationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder openAPIV3Schema(@Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema) {
-            this.openAPIV3Schema = openAPIV3Schema;
+            $.openAPIV3Schema = openAPIV3Schema;
             return this;
         }
-        public Builder openAPIV3Schema(@Nullable JSONSchemaPropsArgs openAPIV3Schema) {
-            this.openAPIV3Schema = Codegen.ofNullable(openAPIV3Schema);
-            return this;
-        }        public CustomResourceValidationArgs build() {
-            return new CustomResourceValidationArgs(openAPIV3Schema);
+
+        public Builder openAPIV3Schema(JSONSchemaPropsArgs openAPIV3Schema) {
+            return openAPIV3Schema(Output.of(openAPIV3Schema));
+        }
+
+        public CustomResourceValidationArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.awsnative.memorydb.inputs.AuthenticationModePropertiesArgs;
 import com.pulumi.awsnative.memorydb.inputs.UserTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +23,14 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessString", required=true)
-      private final Output<String> accessString;
+    private Output<String> accessString;
 
     public Output<String> accessString() {
         return this.accessString;
     }
 
     @Import(name="authenticationMode", required=true)
-      private final Output<AuthenticationModePropertiesArgs> authenticationMode;
+    private Output<AuthenticationModePropertiesArgs> authenticationMode;
 
     public Output<AuthenticationModePropertiesArgs> authenticationMode() {
         return this.authenticationMode;
@@ -41,10 +41,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<UserTagArgs>> tags;
+    private @Nullable Output<List<UserTagArgs>> tags;
 
-    public Output<List<UserTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<UserTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -52,92 +52,84 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public UserArgs(
-        Output<String> accessString,
-        Output<AuthenticationModePropertiesArgs> authenticationMode,
-        @Nullable Output<List<UserTagArgs>> tags,
-        @Nullable Output<String> userName) {
-        this.accessString = Objects.requireNonNull(accessString, "expected parameter 'accessString' to be non-null");
-        this.authenticationMode = Objects.requireNonNull(authenticationMode, "expected parameter 'authenticationMode' to be non-null");
-        this.tags = tags;
-        this.userName = userName;
-    }
+    private UserArgs() {}
 
-    private UserArgs() {
-        this.accessString = Codegen.empty();
-        this.authenticationMode = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userName = Codegen.empty();
+    private UserArgs(UserArgs $) {
+        this.accessString = $.accessString;
+        this.authenticationMode = $.authenticationMode;
+        this.tags = $.tags;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessString;
-        private Output<AuthenticationModePropertiesArgs> authenticationMode;
-        private @Nullable Output<List<UserTagArgs>> tags;
-        private @Nullable Output<String> userName;
+        private UserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArgs();
         }
 
         public Builder(UserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessString = defaults.accessString;
-    	      this.authenticationMode = defaults.authenticationMode;
-    	      this.tags = defaults.tags;
-    	      this.userName = defaults.userName;
+            $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessString(Output<String> accessString) {
-            this.accessString = Objects.requireNonNull(accessString);
+            $.accessString = accessString;
             return this;
         }
+
         public Builder accessString(String accessString) {
-            this.accessString = Output.of(Objects.requireNonNull(accessString));
-            return this;
+            return accessString(Output.of(accessString));
         }
+
         public Builder authenticationMode(Output<AuthenticationModePropertiesArgs> authenticationMode) {
-            this.authenticationMode = Objects.requireNonNull(authenticationMode);
+            $.authenticationMode = authenticationMode;
             return this;
         }
+
         public Builder authenticationMode(AuthenticationModePropertiesArgs authenticationMode) {
-            this.authenticationMode = Output.of(Objects.requireNonNull(authenticationMode));
-            return this;
+            return authenticationMode(Output.of(authenticationMode));
         }
+
         public Builder tags(@Nullable Output<List<UserTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<UserTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<UserTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(UserTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public UserArgs build() {
-            return new UserArgs(accessString, authenticationMode, tags, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public UserArgs build() {
+            $.accessString = Objects.requireNonNull($.accessString, "expected parameter 'accessString' to be non-null");
+            $.authenticationMode = Objects.requireNonNull($.authenticationMode, "expected parameter 'authenticationMode' to be non-null");
+            return $;
         }
     }
+
 }

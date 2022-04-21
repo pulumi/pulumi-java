@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigRespons
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse(String version) {
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse() {
-        this.version = null;
+    private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse(GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String version;
+        private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse(version);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse build() {
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

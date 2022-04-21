@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse ex
      * 
      */
     @Import(name="condition", required=true)
-      private final String condition;
+    private String condition;
 
     public String condition() {
         return this.condition;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse ex
      * 
      */
     @Import(name="versionVariants", required=true)
-      private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
+    private GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
 
     public GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants() {
         return this.versionVariants;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse(
-        String condition,
-        GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.versionVariants = Objects.requireNonNull(versionVariants, "expected parameter 'versionVariants' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse() {
-        this.condition = null;
-        this.versionVariants = null;
+    private GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse(GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse $) {
+        this.condition = $.condition;
+        this.versionVariants = $.versionVariants;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String condition;
-        private GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
+        private GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.versionVariants = defaults.versionVariants;
+            $ = new GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(String condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder versionVariants(GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
-            this.versionVariants = Objects.requireNonNull(versionVariants);
+            $.versionVariants = versionVariants;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse(condition, versionVariants);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse build() {
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.versionVariants = Objects.requireNonNull($.versionVariants, "expected parameter 'versionVariants' to be non-null");
+            return $;
         }
     }
+
 }

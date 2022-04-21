@@ -5,7 +5,6 @@ package com.pulumi.aws.rds;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RoleAssociationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dbInstanceIdentifier", required=true)
-      private final Output<String> dbInstanceIdentifier;
+    private Output<String> dbInstanceIdentifier;
 
     public Output<String> dbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
@@ -30,7 +29,7 @@ public final class RoleAssociationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="featureName", required=true)
-      private final Output<String> featureName;
+    private Output<String> featureName;
 
     public Output<String> featureName() {
         return this.featureName;
@@ -41,76 +40,71 @@ public final class RoleAssociationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public RoleAssociationArgs(
-        Output<String> dbInstanceIdentifier,
-        Output<String> featureName,
-        Output<String> roleArn) {
-        this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier, "expected parameter 'dbInstanceIdentifier' to be non-null");
-        this.featureName = Objects.requireNonNull(featureName, "expected parameter 'featureName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private RoleAssociationArgs() {}
 
-    private RoleAssociationArgs() {
-        this.dbInstanceIdentifier = Codegen.empty();
-        this.featureName = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private RoleAssociationArgs(RoleAssociationArgs $) {
+        this.dbInstanceIdentifier = $.dbInstanceIdentifier;
+        this.featureName = $.featureName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dbInstanceIdentifier;
-        private Output<String> featureName;
-        private Output<String> roleArn;
+        private RoleAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleAssociationArgs();
         }
 
         public Builder(RoleAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbInstanceIdentifier = defaults.dbInstanceIdentifier;
-    	      this.featureName = defaults.featureName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new RoleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dbInstanceIdentifier(Output<String> dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier);
+            $.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
+
         public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Output.of(Objects.requireNonNull(dbInstanceIdentifier));
-            return this;
+            return dbInstanceIdentifier(Output.of(dbInstanceIdentifier));
         }
+
         public Builder featureName(Output<String> featureName) {
-            this.featureName = Objects.requireNonNull(featureName);
+            $.featureName = featureName;
             return this;
         }
+
         public Builder featureName(String featureName) {
-            this.featureName = Output.of(Objects.requireNonNull(featureName));
-            return this;
+            return featureName(Output.of(featureName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public RoleAssociationArgs build() {
-            return new RoleAssociationArgs(dbInstanceIdentifier, featureName, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public RoleAssociationArgs build() {
+            $.dbInstanceIdentifier = Objects.requireNonNull($.dbInstanceIdentifier, "expected parameter 'dbInstanceIdentifier' to be non-null");
+            $.featureName = Objects.requireNonNull($.featureName, "expected parameter 'featureName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

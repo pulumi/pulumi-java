@@ -13,62 +13,59 @@ public final class GetApplicationFleetAssociationArgs extends com.pulumi.resourc
     public static final GetApplicationFleetAssociationArgs Empty = new GetApplicationFleetAssociationArgs();
 
     @Import(name="applicationArn", required=true)
-      private final String applicationArn;
+    private String applicationArn;
 
     public String applicationArn() {
         return this.applicationArn;
     }
 
     @Import(name="fleetName", required=true)
-      private final String fleetName;
+    private String fleetName;
 
     public String fleetName() {
         return this.fleetName;
     }
 
-    public GetApplicationFleetAssociationArgs(
-        String applicationArn,
-        String fleetName) {
-        this.applicationArn = Objects.requireNonNull(applicationArn, "expected parameter 'applicationArn' to be non-null");
-        this.fleetName = Objects.requireNonNull(fleetName, "expected parameter 'fleetName' to be non-null");
-    }
+    private GetApplicationFleetAssociationArgs() {}
 
-    private GetApplicationFleetAssociationArgs() {
-        this.applicationArn = null;
-        this.fleetName = null;
+    private GetApplicationFleetAssociationArgs(GetApplicationFleetAssociationArgs $) {
+        this.applicationArn = $.applicationArn;
+        this.fleetName = $.fleetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationFleetAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationArn;
-        private String fleetName;
+        private GetApplicationFleetAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationFleetAssociationArgs();
         }
 
         public Builder(GetApplicationFleetAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationArn = defaults.applicationArn;
-    	      this.fleetName = defaults.fleetName;
+            $ = new GetApplicationFleetAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationArn(String applicationArn) {
-            this.applicationArn = Objects.requireNonNull(applicationArn);
+            $.applicationArn = applicationArn;
             return this;
         }
+
         public Builder fleetName(String fleetName) {
-            this.fleetName = Objects.requireNonNull(fleetName);
+            $.fleetName = fleetName;
             return this;
-        }        public GetApplicationFleetAssociationArgs build() {
-            return new GetApplicationFleetAssociationArgs(applicationArn, fleetName);
+        }
+
+        public GetApplicationFleetAssociationArgs build() {
+            $.applicationArn = Objects.requireNonNull($.applicationArn, "expected parameter 'applicationArn' to be non-null");
+            $.fleetName = Objects.requireNonNull($.fleetName, "expected parameter 'fleetName' to be non-null");
+            return $;
         }
     }
+
 }

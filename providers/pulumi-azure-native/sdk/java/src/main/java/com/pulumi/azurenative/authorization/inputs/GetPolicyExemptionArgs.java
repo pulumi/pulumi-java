@@ -17,7 +17,7 @@ public final class GetPolicyExemptionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="policyExemptionName", required=true)
-      private final String policyExemptionName;
+    private String policyExemptionName;
 
     public String policyExemptionName() {
         return this.policyExemptionName;
@@ -28,55 +28,52 @@ public final class GetPolicyExemptionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetPolicyExemptionArgs(
-        String policyExemptionName,
-        String scope) {
-        this.policyExemptionName = Objects.requireNonNull(policyExemptionName, "expected parameter 'policyExemptionName' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetPolicyExemptionArgs() {}
 
-    private GetPolicyExemptionArgs() {
-        this.policyExemptionName = null;
-        this.scope = null;
+    private GetPolicyExemptionArgs(GetPolicyExemptionArgs $) {
+        this.policyExemptionName = $.policyExemptionName;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyExemptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyExemptionName;
-        private String scope;
+        private GetPolicyExemptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyExemptionArgs();
         }
 
         public Builder(GetPolicyExemptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyExemptionName = defaults.policyExemptionName;
-    	      this.scope = defaults.scope;
+            $ = new GetPolicyExemptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyExemptionName(String policyExemptionName) {
-            this.policyExemptionName = Objects.requireNonNull(policyExemptionName);
+            $.policyExemptionName = policyExemptionName;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetPolicyExemptionArgs build() {
-            return new GetPolicyExemptionArgs(policyExemptionName, scope);
+        }
+
+        public GetPolicyExemptionArgs build() {
+            $.policyExemptionName = Objects.requireNonNull($.policyExemptionName, "expected parameter 'policyExemptionName' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

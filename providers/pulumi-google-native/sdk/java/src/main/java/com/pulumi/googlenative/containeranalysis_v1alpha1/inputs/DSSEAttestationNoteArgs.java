@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.DSSEHintArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DSSEAttestationNoteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="hint")
-      private final @Nullable Output<DSSEHintArgs> hint;
+    private @Nullable Output<DSSEHintArgs> hint;
 
-    public Output<DSSEHintArgs> hint() {
-        return this.hint == null ? Codegen.empty() : this.hint;
+    public Optional<Output<DSSEHintArgs>> hint() {
+        return Optional.ofNullable(this.hint);
     }
 
-    public DSSEAttestationNoteArgs(@Nullable Output<DSSEHintArgs> hint) {
-        this.hint = hint;
-    }
+    private DSSEAttestationNoteArgs() {}
 
-    private DSSEAttestationNoteArgs() {
-        this.hint = Codegen.empty();
+    private DSSEAttestationNoteArgs(DSSEAttestationNoteArgs $) {
+        this.hint = $.hint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DSSEAttestationNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DSSEHintArgs> hint;
+        private DSSEAttestationNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DSSEAttestationNoteArgs();
         }
 
         public Builder(DSSEAttestationNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hint = defaults.hint;
+            $ = new DSSEAttestationNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hint(@Nullable Output<DSSEHintArgs> hint) {
-            this.hint = hint;
+            $.hint = hint;
             return this;
         }
-        public Builder hint(@Nullable DSSEHintArgs hint) {
-            this.hint = Codegen.ofNullable(hint);
-            return this;
-        }        public DSSEAttestationNoteArgs build() {
-            return new DSSEAttestationNoteArgs(hint);
+
+        public Builder hint(DSSEHintArgs hint) {
+            return hint(Output.of(hint));
+        }
+
+        public DSSEAttestationNoteArgs build() {
+            return $;
         }
     }
+
 }

@@ -16,12 +16,12 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.azurenative.network.inputs.TxtRecordArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +34,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aRecords")
-      private final @Nullable Output<List<ARecordArgs>> aRecords;
+    private @Nullable Output<List<ARecordArgs>> aRecords;
 
-    public Output<List<ARecordArgs>> aRecords() {
-        return this.aRecords == null ? Codegen.empty() : this.aRecords;
+    public Optional<Output<List<ARecordArgs>>> aRecords() {
+        return Optional.ofNullable(this.aRecords);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aaaaRecords")
-      private final @Nullable Output<List<AaaaRecordArgs>> aaaaRecords;
+    private @Nullable Output<List<AaaaRecordArgs>> aaaaRecords;
 
-    public Output<List<AaaaRecordArgs>> aaaaRecords() {
-        return this.aaaaRecords == null ? Codegen.empty() : this.aaaaRecords;
+    public Optional<Output<List<AaaaRecordArgs>>> aaaaRecords() {
+        return Optional.ofNullable(this.aaaaRecords);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="caaRecords")
-      private final @Nullable Output<List<CaaRecordArgs>> caaRecords;
+    private @Nullable Output<List<CaaRecordArgs>> caaRecords;
 
-    public Output<List<CaaRecordArgs>> caaRecords() {
-        return this.caaRecords == null ? Codegen.empty() : this.caaRecords;
+    public Optional<Output<List<CaaRecordArgs>>> caaRecords() {
+        return Optional.ofNullable(this.caaRecords);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cnameRecord")
-      private final @Nullable Output<CnameRecordArgs> cnameRecord;
+    private @Nullable Output<CnameRecordArgs> cnameRecord;
 
-    public Output<CnameRecordArgs> cnameRecord() {
-        return this.cnameRecord == null ? Codegen.empty() : this.cnameRecord;
+    public Optional<Output<CnameRecordArgs>> cnameRecord() {
+        return Optional.ofNullable(this.cnameRecord);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mxRecords")
-      private final @Nullable Output<List<MxRecordArgs>> mxRecords;
+    private @Nullable Output<List<MxRecordArgs>> mxRecords;
 
-    public Output<List<MxRecordArgs>> mxRecords() {
-        return this.mxRecords == null ? Codegen.empty() : this.mxRecords;
+    public Optional<Output<List<MxRecordArgs>>> mxRecords() {
+        return Optional.ofNullable(this.mxRecords);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nsRecords")
-      private final @Nullable Output<List<NsRecordArgs>> nsRecords;
+    private @Nullable Output<List<NsRecordArgs>> nsRecords;
 
-    public Output<List<NsRecordArgs>> nsRecords() {
-        return this.nsRecords == null ? Codegen.empty() : this.nsRecords;
+    public Optional<Output<List<NsRecordArgs>>> nsRecords() {
+        return Optional.ofNullable(this.nsRecords);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ptrRecords")
-      private final @Nullable Output<List<PtrRecordArgs>> ptrRecords;
+    private @Nullable Output<List<PtrRecordArgs>> ptrRecords;
 
-    public Output<List<PtrRecordArgs>> ptrRecords() {
-        return this.ptrRecords == null ? Codegen.empty() : this.ptrRecords;
+    public Optional<Output<List<PtrRecordArgs>>> ptrRecords() {
+        return Optional.ofNullable(this.ptrRecords);
     }
 
     /**
@@ -122,7 +122,7 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recordType", required=true)
-      private final Output<String> recordType;
+    private Output<String> recordType;
 
     public Output<String> recordType() {
         return this.recordType;
@@ -133,10 +133,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relativeRecordSetName")
-      private final @Nullable Output<String> relativeRecordSetName;
+    private @Nullable Output<String> relativeRecordSetName;
 
-    public Output<String> relativeRecordSetName() {
-        return this.relativeRecordSetName == null ? Codegen.empty() : this.relativeRecordSetName;
+    public Optional<Output<String>> relativeRecordSetName() {
+        return Optional.ofNullable(this.relativeRecordSetName);
     }
 
     /**
@@ -144,7 +144,7 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -155,10 +155,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="soaRecord")
-      private final @Nullable Output<SoaRecordArgs> soaRecord;
+    private @Nullable Output<SoaRecordArgs> soaRecord;
 
-    public Output<SoaRecordArgs> soaRecord() {
-        return this.soaRecord == null ? Codegen.empty() : this.soaRecord;
+    public Optional<Output<SoaRecordArgs>> soaRecord() {
+        return Optional.ofNullable(this.soaRecord);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="srvRecords")
-      private final @Nullable Output<List<SrvRecordArgs>> srvRecords;
+    private @Nullable Output<List<SrvRecordArgs>> srvRecords;
 
-    public Output<List<SrvRecordArgs>> srvRecords() {
-        return this.srvRecords == null ? Codegen.empty() : this.srvRecords;
+    public Optional<Output<List<SrvRecordArgs>>> srvRecords() {
+        return Optional.ofNullable(this.srvRecords);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetResource")
-      private final @Nullable Output<SubResourceArgs> targetResource;
+    private @Nullable Output<SubResourceArgs> targetResource;
 
-    public Output<SubResourceArgs> targetResource() {
-        return this.targetResource == null ? Codegen.empty() : this.targetResource;
+    public Optional<Output<SubResourceArgs>> targetResource() {
+        return Optional.ofNullable(this.targetResource);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<Double> ttl;
+    private @Nullable Output<Double> ttl;
 
-    public Output<Double> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<Double>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="txtRecords")
-      private final @Nullable Output<List<TxtRecordArgs>> txtRecords;
+    private @Nullable Output<List<TxtRecordArgs>> txtRecords;
 
-    public Output<List<TxtRecordArgs>> txtRecords() {
-        return this.txtRecords == null ? Codegen.empty() : this.txtRecords;
+    public Optional<Output<List<TxtRecordArgs>>> txtRecords() {
+        return Optional.ofNullable(this.txtRecords);
     }
 
     /**
@@ -210,282 +210,243 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zoneName", required=true)
-      private final Output<String> zoneName;
+    private Output<String> zoneName;
 
     public Output<String> zoneName() {
         return this.zoneName;
     }
 
-    public RecordSetArgs(
-        @Nullable Output<List<ARecordArgs>> aRecords,
-        @Nullable Output<List<AaaaRecordArgs>> aaaaRecords,
-        @Nullable Output<List<CaaRecordArgs>> caaRecords,
-        @Nullable Output<CnameRecordArgs> cnameRecord,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<List<MxRecordArgs>> mxRecords,
-        @Nullable Output<List<NsRecordArgs>> nsRecords,
-        @Nullable Output<List<PtrRecordArgs>> ptrRecords,
-        Output<String> recordType,
-        @Nullable Output<String> relativeRecordSetName,
-        Output<String> resourceGroupName,
-        @Nullable Output<SoaRecordArgs> soaRecord,
-        @Nullable Output<List<SrvRecordArgs>> srvRecords,
-        @Nullable Output<SubResourceArgs> targetResource,
-        @Nullable Output<Double> ttl,
-        @Nullable Output<List<TxtRecordArgs>> txtRecords,
-        Output<String> zoneName) {
-        this.aRecords = aRecords;
-        this.aaaaRecords = aaaaRecords;
-        this.caaRecords = caaRecords;
-        this.cnameRecord = cnameRecord;
-        this.metadata = metadata;
-        this.mxRecords = mxRecords;
-        this.nsRecords = nsRecords;
-        this.ptrRecords = ptrRecords;
-        this.recordType = Objects.requireNonNull(recordType, "expected parameter 'recordType' to be non-null");
-        this.relativeRecordSetName = relativeRecordSetName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.soaRecord = soaRecord;
-        this.srvRecords = srvRecords;
-        this.targetResource = targetResource;
-        this.ttl = ttl;
-        this.txtRecords = txtRecords;
-        this.zoneName = Objects.requireNonNull(zoneName, "expected parameter 'zoneName' to be non-null");
-    }
+    private RecordSetArgs() {}
 
-    private RecordSetArgs() {
-        this.aRecords = Codegen.empty();
-        this.aaaaRecords = Codegen.empty();
-        this.caaRecords = Codegen.empty();
-        this.cnameRecord = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.mxRecords = Codegen.empty();
-        this.nsRecords = Codegen.empty();
-        this.ptrRecords = Codegen.empty();
-        this.recordType = Codegen.empty();
-        this.relativeRecordSetName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.soaRecord = Codegen.empty();
-        this.srvRecords = Codegen.empty();
-        this.targetResource = Codegen.empty();
-        this.ttl = Codegen.empty();
-        this.txtRecords = Codegen.empty();
-        this.zoneName = Codegen.empty();
+    private RecordSetArgs(RecordSetArgs $) {
+        this.aRecords = $.aRecords;
+        this.aaaaRecords = $.aaaaRecords;
+        this.caaRecords = $.caaRecords;
+        this.cnameRecord = $.cnameRecord;
+        this.metadata = $.metadata;
+        this.mxRecords = $.mxRecords;
+        this.nsRecords = $.nsRecords;
+        this.ptrRecords = $.ptrRecords;
+        this.recordType = $.recordType;
+        this.relativeRecordSetName = $.relativeRecordSetName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.soaRecord = $.soaRecord;
+        this.srvRecords = $.srvRecords;
+        this.targetResource = $.targetResource;
+        this.ttl = $.ttl;
+        this.txtRecords = $.txtRecords;
+        this.zoneName = $.zoneName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ARecordArgs>> aRecords;
-        private @Nullable Output<List<AaaaRecordArgs>> aaaaRecords;
-        private @Nullable Output<List<CaaRecordArgs>> caaRecords;
-        private @Nullable Output<CnameRecordArgs> cnameRecord;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<List<MxRecordArgs>> mxRecords;
-        private @Nullable Output<List<NsRecordArgs>> nsRecords;
-        private @Nullable Output<List<PtrRecordArgs>> ptrRecords;
-        private Output<String> recordType;
-        private @Nullable Output<String> relativeRecordSetName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SoaRecordArgs> soaRecord;
-        private @Nullable Output<List<SrvRecordArgs>> srvRecords;
-        private @Nullable Output<SubResourceArgs> targetResource;
-        private @Nullable Output<Double> ttl;
-        private @Nullable Output<List<TxtRecordArgs>> txtRecords;
-        private Output<String> zoneName;
+        private RecordSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordSetArgs();
         }
 
         public Builder(RecordSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aRecords = defaults.aRecords;
-    	      this.aaaaRecords = defaults.aaaaRecords;
-    	      this.caaRecords = defaults.caaRecords;
-    	      this.cnameRecord = defaults.cnameRecord;
-    	      this.metadata = defaults.metadata;
-    	      this.mxRecords = defaults.mxRecords;
-    	      this.nsRecords = defaults.nsRecords;
-    	      this.ptrRecords = defaults.ptrRecords;
-    	      this.recordType = defaults.recordType;
-    	      this.relativeRecordSetName = defaults.relativeRecordSetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.soaRecord = defaults.soaRecord;
-    	      this.srvRecords = defaults.srvRecords;
-    	      this.targetResource = defaults.targetResource;
-    	      this.ttl = defaults.ttl;
-    	      this.txtRecords = defaults.txtRecords;
-    	      this.zoneName = defaults.zoneName;
+            $ = new RecordSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aRecords(@Nullable Output<List<ARecordArgs>> aRecords) {
-            this.aRecords = aRecords;
+            $.aRecords = aRecords;
             return this;
         }
-        public Builder aRecords(@Nullable List<ARecordArgs> aRecords) {
-            this.aRecords = Codegen.ofNullable(aRecords);
-            return this;
+
+        public Builder aRecords(List<ARecordArgs> aRecords) {
+            return aRecords(Output.of(aRecords));
         }
+
         public Builder aRecords(ARecordArgs... aRecords) {
             return aRecords(List.of(aRecords));
         }
+
         public Builder aaaaRecords(@Nullable Output<List<AaaaRecordArgs>> aaaaRecords) {
-            this.aaaaRecords = aaaaRecords;
+            $.aaaaRecords = aaaaRecords;
             return this;
         }
-        public Builder aaaaRecords(@Nullable List<AaaaRecordArgs> aaaaRecords) {
-            this.aaaaRecords = Codegen.ofNullable(aaaaRecords);
-            return this;
+
+        public Builder aaaaRecords(List<AaaaRecordArgs> aaaaRecords) {
+            return aaaaRecords(Output.of(aaaaRecords));
         }
+
         public Builder aaaaRecords(AaaaRecordArgs... aaaaRecords) {
             return aaaaRecords(List.of(aaaaRecords));
         }
+
         public Builder caaRecords(@Nullable Output<List<CaaRecordArgs>> caaRecords) {
-            this.caaRecords = caaRecords;
+            $.caaRecords = caaRecords;
             return this;
         }
-        public Builder caaRecords(@Nullable List<CaaRecordArgs> caaRecords) {
-            this.caaRecords = Codegen.ofNullable(caaRecords);
-            return this;
+
+        public Builder caaRecords(List<CaaRecordArgs> caaRecords) {
+            return caaRecords(Output.of(caaRecords));
         }
+
         public Builder caaRecords(CaaRecordArgs... caaRecords) {
             return caaRecords(List.of(caaRecords));
         }
+
         public Builder cnameRecord(@Nullable Output<CnameRecordArgs> cnameRecord) {
-            this.cnameRecord = cnameRecord;
+            $.cnameRecord = cnameRecord;
             return this;
         }
-        public Builder cnameRecord(@Nullable CnameRecordArgs cnameRecord) {
-            this.cnameRecord = Codegen.ofNullable(cnameRecord);
-            return this;
+
+        public Builder cnameRecord(CnameRecordArgs cnameRecord) {
+            return cnameRecord(Output.of(cnameRecord));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder mxRecords(@Nullable Output<List<MxRecordArgs>> mxRecords) {
-            this.mxRecords = mxRecords;
+            $.mxRecords = mxRecords;
             return this;
         }
-        public Builder mxRecords(@Nullable List<MxRecordArgs> mxRecords) {
-            this.mxRecords = Codegen.ofNullable(mxRecords);
-            return this;
+
+        public Builder mxRecords(List<MxRecordArgs> mxRecords) {
+            return mxRecords(Output.of(mxRecords));
         }
+
         public Builder mxRecords(MxRecordArgs... mxRecords) {
             return mxRecords(List.of(mxRecords));
         }
+
         public Builder nsRecords(@Nullable Output<List<NsRecordArgs>> nsRecords) {
-            this.nsRecords = nsRecords;
+            $.nsRecords = nsRecords;
             return this;
         }
-        public Builder nsRecords(@Nullable List<NsRecordArgs> nsRecords) {
-            this.nsRecords = Codegen.ofNullable(nsRecords);
-            return this;
+
+        public Builder nsRecords(List<NsRecordArgs> nsRecords) {
+            return nsRecords(Output.of(nsRecords));
         }
+
         public Builder nsRecords(NsRecordArgs... nsRecords) {
             return nsRecords(List.of(nsRecords));
         }
+
         public Builder ptrRecords(@Nullable Output<List<PtrRecordArgs>> ptrRecords) {
-            this.ptrRecords = ptrRecords;
+            $.ptrRecords = ptrRecords;
             return this;
         }
-        public Builder ptrRecords(@Nullable List<PtrRecordArgs> ptrRecords) {
-            this.ptrRecords = Codegen.ofNullable(ptrRecords);
-            return this;
+
+        public Builder ptrRecords(List<PtrRecordArgs> ptrRecords) {
+            return ptrRecords(Output.of(ptrRecords));
         }
+
         public Builder ptrRecords(PtrRecordArgs... ptrRecords) {
             return ptrRecords(List.of(ptrRecords));
         }
+
         public Builder recordType(Output<String> recordType) {
-            this.recordType = Objects.requireNonNull(recordType);
+            $.recordType = recordType;
             return this;
         }
+
         public Builder recordType(String recordType) {
-            this.recordType = Output.of(Objects.requireNonNull(recordType));
-            return this;
+            return recordType(Output.of(recordType));
         }
+
         public Builder relativeRecordSetName(@Nullable Output<String> relativeRecordSetName) {
-            this.relativeRecordSetName = relativeRecordSetName;
+            $.relativeRecordSetName = relativeRecordSetName;
             return this;
         }
-        public Builder relativeRecordSetName(@Nullable String relativeRecordSetName) {
-            this.relativeRecordSetName = Codegen.ofNullable(relativeRecordSetName);
-            return this;
+
+        public Builder relativeRecordSetName(String relativeRecordSetName) {
+            return relativeRecordSetName(Output.of(relativeRecordSetName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder soaRecord(@Nullable Output<SoaRecordArgs> soaRecord) {
-            this.soaRecord = soaRecord;
+            $.soaRecord = soaRecord;
             return this;
         }
-        public Builder soaRecord(@Nullable SoaRecordArgs soaRecord) {
-            this.soaRecord = Codegen.ofNullable(soaRecord);
-            return this;
+
+        public Builder soaRecord(SoaRecordArgs soaRecord) {
+            return soaRecord(Output.of(soaRecord));
         }
+
         public Builder srvRecords(@Nullable Output<List<SrvRecordArgs>> srvRecords) {
-            this.srvRecords = srvRecords;
+            $.srvRecords = srvRecords;
             return this;
         }
-        public Builder srvRecords(@Nullable List<SrvRecordArgs> srvRecords) {
-            this.srvRecords = Codegen.ofNullable(srvRecords);
-            return this;
+
+        public Builder srvRecords(List<SrvRecordArgs> srvRecords) {
+            return srvRecords(Output.of(srvRecords));
         }
+
         public Builder srvRecords(SrvRecordArgs... srvRecords) {
             return srvRecords(List.of(srvRecords));
         }
+
         public Builder targetResource(@Nullable Output<SubResourceArgs> targetResource) {
-            this.targetResource = targetResource;
+            $.targetResource = targetResource;
             return this;
         }
-        public Builder targetResource(@Nullable SubResourceArgs targetResource) {
-            this.targetResource = Codegen.ofNullable(targetResource);
-            return this;
+
+        public Builder targetResource(SubResourceArgs targetResource) {
+            return targetResource(Output.of(targetResource));
         }
+
         public Builder ttl(@Nullable Output<Double> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable Double ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
+
+        public Builder ttl(Double ttl) {
+            return ttl(Output.of(ttl));
         }
+
         public Builder txtRecords(@Nullable Output<List<TxtRecordArgs>> txtRecords) {
-            this.txtRecords = txtRecords;
+            $.txtRecords = txtRecords;
             return this;
         }
-        public Builder txtRecords(@Nullable List<TxtRecordArgs> txtRecords) {
-            this.txtRecords = Codegen.ofNullable(txtRecords);
-            return this;
+
+        public Builder txtRecords(List<TxtRecordArgs> txtRecords) {
+            return txtRecords(Output.of(txtRecords));
         }
+
         public Builder txtRecords(TxtRecordArgs... txtRecords) {
             return txtRecords(List.of(txtRecords));
         }
+
         public Builder zoneName(Output<String> zoneName) {
-            this.zoneName = Objects.requireNonNull(zoneName);
+            $.zoneName = zoneName;
             return this;
         }
+
         public Builder zoneName(String zoneName) {
-            this.zoneName = Output.of(Objects.requireNonNull(zoneName));
-            return this;
-        }        public RecordSetArgs build() {
-            return new RecordSetArgs(aRecords, aaaaRecords, caaRecords, cnameRecord, metadata, mxRecords, nsRecords, ptrRecords, recordType, relativeRecordSetName, resourceGroupName, soaRecord, srvRecords, targetResource, ttl, txtRecords, zoneName);
+            return zoneName(Output.of(zoneName));
+        }
+
+        public RecordSetArgs build() {
+            $.recordType = Objects.requireNonNull($.recordType, "expected parameter 'recordType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.zoneName = Objects.requireNonNull($.zoneName, "expected parameter 'zoneName' to be non-null");
+            return $;
         }
     }
+
 }

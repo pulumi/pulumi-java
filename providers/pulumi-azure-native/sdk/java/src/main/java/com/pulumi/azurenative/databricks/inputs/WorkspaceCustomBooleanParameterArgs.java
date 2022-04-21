@@ -5,7 +5,6 @@ package com.pulumi.azurenative.databricks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class WorkspaceCustomBooleanParameterArgs extends com.pulumi.resour
      * 
      */
     @Import(name="value", required=true)
-      private final Output<Boolean> value;
+    private Output<Boolean> value;
 
     public Output<Boolean> value() {
         return this.value;
     }
 
-    public WorkspaceCustomBooleanParameterArgs(Output<Boolean> value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private WorkspaceCustomBooleanParameterArgs() {}
 
-    private WorkspaceCustomBooleanParameterArgs() {
-        this.value = Codegen.empty();
+    private WorkspaceCustomBooleanParameterArgs(WorkspaceCustomBooleanParameterArgs $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceCustomBooleanParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> value;
+        private WorkspaceCustomBooleanParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceCustomBooleanParameterArgs();
         }
 
         public Builder(WorkspaceCustomBooleanParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new WorkspaceCustomBooleanParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(Output<Boolean> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(Boolean value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public WorkspaceCustomBooleanParameterArgs build() {
-            return new WorkspaceCustomBooleanParameterArgs(value);
+            return value(Output.of(value));
+        }
+
+        public WorkspaceCustomBooleanParameterArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

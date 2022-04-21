@@ -23,10 +23,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="appId")
-      private final @Nullable String appId;
+    private @Nullable String appId;
 
     public Optional<String> appId() {
-        return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="appUserModelID")
-      private final @Nullable String appUserModelID;
+    private @Nullable String appUserModelID;
 
     public Optional<String> appUserModelID() {
-        return this.appUserModelID == null ? Optional.empty() : Optional.ofNullable(this.appUserModelID);
+        return Optional.ofNullable(this.appUserModelID);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="iconImageName")
-      private final @Nullable String iconImageName;
+    private @Nullable String iconImageName;
 
     public Optional<String> iconImageName() {
-        return this.iconImageName == null ? Optional.empty() : Optional.ofNullable(this.iconImageName);
+        return Optional.ofNullable(this.iconImageName);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="rawIcon")
-      private final @Nullable String rawIcon;
+    private @Nullable String rawIcon;
 
     public Optional<String> rawIcon() {
-        return this.rawIcon == null ? Optional.empty() : Optional.ofNullable(this.rawIcon);
+        return Optional.ofNullable(this.rawIcon);
     }
 
     /**
@@ -89,100 +89,80 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="rawPng")
-      private final @Nullable String rawPng;
+    private @Nullable String rawPng;
 
     public Optional<String> rawPng() {
-        return this.rawPng == null ? Optional.empty() : Optional.ofNullable(this.rawPng);
+        return Optional.ofNullable(this.rawPng);
     }
 
-    public MsixPackageApplicationsResponse(
-        @Nullable String appId,
-        @Nullable String appUserModelID,
-        @Nullable String description,
-        @Nullable String friendlyName,
-        @Nullable String iconImageName,
-        @Nullable String rawIcon,
-        @Nullable String rawPng) {
-        this.appId = appId;
-        this.appUserModelID = appUserModelID;
-        this.description = description;
-        this.friendlyName = friendlyName;
-        this.iconImageName = iconImageName;
-        this.rawIcon = rawIcon;
-        this.rawPng = rawPng;
-    }
+    private MsixPackageApplicationsResponse() {}
 
-    private MsixPackageApplicationsResponse() {
-        this.appId = null;
-        this.appUserModelID = null;
-        this.description = null;
-        this.friendlyName = null;
-        this.iconImageName = null;
-        this.rawIcon = null;
-        this.rawPng = null;
+    private MsixPackageApplicationsResponse(MsixPackageApplicationsResponse $) {
+        this.appId = $.appId;
+        this.appUserModelID = $.appUserModelID;
+        this.description = $.description;
+        this.friendlyName = $.friendlyName;
+        this.iconImageName = $.iconImageName;
+        this.rawIcon = $.rawIcon;
+        this.rawPng = $.rawPng;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MsixPackageApplicationsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String appId;
-        private @Nullable String appUserModelID;
-        private @Nullable String description;
-        private @Nullable String friendlyName;
-        private @Nullable String iconImageName;
-        private @Nullable String rawIcon;
-        private @Nullable String rawPng;
+        private MsixPackageApplicationsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MsixPackageApplicationsResponse();
         }
 
         public Builder(MsixPackageApplicationsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.appUserModelID = defaults.appUserModelID;
-    	      this.description = defaults.description;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.iconImageName = defaults.iconImageName;
-    	      this.rawIcon = defaults.rawIcon;
-    	      this.rawPng = defaults.rawPng;
+            $ = new MsixPackageApplicationsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
+
         public Builder appUserModelID(@Nullable String appUserModelID) {
-            this.appUserModelID = appUserModelID;
+            $.appUserModelID = appUserModelID;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder iconImageName(@Nullable String iconImageName) {
-            this.iconImageName = iconImageName;
+            $.iconImageName = iconImageName;
             return this;
         }
+
         public Builder rawIcon(@Nullable String rawIcon) {
-            this.rawIcon = rawIcon;
+            $.rawIcon = rawIcon;
             return this;
         }
+
         public Builder rawPng(@Nullable String rawPng) {
-            this.rawPng = rawPng;
+            $.rawPng = rawPng;
             return this;
-        }        public MsixPackageApplicationsResponse build() {
-            return new MsixPackageApplicationsResponse(appId, appUserModelID, description, friendlyName, iconImageName, rawIcon, rawPng);
+        }
+
+        public MsixPackageApplicationsResponse build() {
+            return $;
         }
     }
+
 }

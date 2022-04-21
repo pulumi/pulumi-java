@@ -18,10 +18,10 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
     public static final GetLocalGatewayRouteTableArgs Empty = new GetLocalGatewayRouteTableArgs();
 
     @Import(name="filters")
-      private final @Nullable List<GetLocalGatewayRouteTableFilter> filters;
+    private @Nullable List<GetLocalGatewayRouteTableFilter> filters;
 
-    public List<GetLocalGatewayRouteTableFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetLocalGatewayRouteTableFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="localGatewayId")
-      private final @Nullable String localGatewayId;
+    private @Nullable String localGatewayId;
 
     public Optional<String> localGatewayId() {
-        return this.localGatewayId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayId);
+        return Optional.ofNullable(this.localGatewayId);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="localGatewayRouteTableId")
-      private final @Nullable String localGatewayRouteTableId;
+    private @Nullable String localGatewayRouteTableId;
 
     public Optional<String> localGatewayRouteTableId() {
-        return this.localGatewayRouteTableId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayRouteTableId);
+        return Optional.ofNullable(this.localGatewayRouteTableId);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="outpostArn")
-      private final @Nullable String outpostArn;
+    private @Nullable String outpostArn;
 
     public Optional<String> outpostArn() {
-        return this.outpostArn == null ? Optional.empty() : Optional.ofNullable(this.outpostArn);
+        return Optional.ofNullable(this.outpostArn);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -74,94 +74,78 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetLocalGatewayRouteTableArgs(
-        @Nullable List<GetLocalGatewayRouteTableFilter> filters,
-        @Nullable String localGatewayId,
-        @Nullable String localGatewayRouteTableId,
-        @Nullable String outpostArn,
-        @Nullable String state,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.localGatewayId = localGatewayId;
-        this.localGatewayRouteTableId = localGatewayRouteTableId;
-        this.outpostArn = outpostArn;
-        this.state = state;
-        this.tags = tags;
-    }
+    private GetLocalGatewayRouteTableArgs() {}
 
-    private GetLocalGatewayRouteTableArgs() {
-        this.filters = List.of();
-        this.localGatewayId = null;
-        this.localGatewayRouteTableId = null;
-        this.outpostArn = null;
-        this.state = null;
-        this.tags = Map.of();
+    private GetLocalGatewayRouteTableArgs(GetLocalGatewayRouteTableArgs $) {
+        this.filters = $.filters;
+        this.localGatewayId = $.localGatewayId;
+        this.localGatewayRouteTableId = $.localGatewayRouteTableId;
+        this.outpostArn = $.outpostArn;
+        this.state = $.state;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocalGatewayRouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetLocalGatewayRouteTableFilter> filters;
-        private @Nullable String localGatewayId;
-        private @Nullable String localGatewayRouteTableId;
-        private @Nullable String outpostArn;
-        private @Nullable String state;
-        private @Nullable Map<String,String> tags;
+        private GetLocalGatewayRouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocalGatewayRouteTableArgs();
         }
 
         public Builder(GetLocalGatewayRouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.localGatewayId = defaults.localGatewayId;
-    	      this.localGatewayRouteTableId = defaults.localGatewayRouteTableId;
-    	      this.outpostArn = defaults.outpostArn;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
+            $ = new GetLocalGatewayRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetLocalGatewayRouteTableFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetLocalGatewayRouteTableFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder localGatewayId(@Nullable String localGatewayId) {
-            this.localGatewayId = localGatewayId;
+            $.localGatewayId = localGatewayId;
             return this;
         }
+
         public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = localGatewayRouteTableId;
+            $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
+
         public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = outpostArn;
+            $.outpostArn = outpostArn;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetLocalGatewayRouteTableArgs build() {
-            return new GetLocalGatewayRouteTableArgs(filters, localGatewayId, localGatewayRouteTableId, outpostArn, state, tags);
+        }
+
+        public GetLocalGatewayRouteTableArgs build() {
+            return $;
         }
     }
+
 }

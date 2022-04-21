@@ -28,10 +28,10 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
      * 
      */
     @Import(name="cloudWatchToKinesis")
-      private final @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis;
+    private @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis;
 
     public Optional<DefenderForContainersAwsOfferingResponseCloudWatchToKinesis> cloudWatchToKinesis() {
-        return this.cloudWatchToKinesis == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchToKinesis);
+        return Optional.ofNullable(this.cloudWatchToKinesis);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -50,10 +50,10 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
      * 
      */
     @Import(name="kinesisToS3")
-      private final @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3;
+    private @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3;
 
     public Optional<DefenderForContainersAwsOfferingResponseKinesisToS3> kinesisToS3() {
-        return this.kinesisToS3 == null ? Optional.empty() : Optional.ofNullable(this.kinesisToS3);
+        return Optional.ofNullable(this.kinesisToS3);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
      * 
      */
     @Import(name="kubernetesScubaReader")
-      private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader;
+    private @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader;
 
     public Optional<DefenderForContainersAwsOfferingResponseKubernetesScubaReader> kubernetesScubaReader() {
-        return this.kubernetesScubaReader == null ? Optional.empty() : Optional.ofNullable(this.kubernetesScubaReader);
+        return Optional.ofNullable(this.kubernetesScubaReader);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
      * 
      */
     @Import(name="kubernetesService")
-      private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService;
+    private @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService;
 
     public Optional<DefenderForContainersAwsOfferingResponseKubernetesService> kubernetesService() {
-        return this.kubernetesService == null ? Optional.empty() : Optional.ofNullable(this.kubernetesService);
+        return Optional.ofNullable(this.kubernetesService);
     }
 
     /**
@@ -84,91 +84,76 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
      * 
      */
     @Import(name="offeringType", required=true)
-      private final String offeringType;
+    private String offeringType;
 
     public String offeringType() {
         return this.offeringType;
     }
 
-    public DefenderForContainersAwsOfferingResponse(
-        @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis,
-        String description,
-        @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3,
-        @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader,
-        @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService,
-        String offeringType) {
-        this.cloudWatchToKinesis = cloudWatchToKinesis;
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.kinesisToS3 = kinesisToS3;
-        this.kubernetesScubaReader = kubernetesScubaReader;
-        this.kubernetesService = kubernetesService;
-        this.offeringType = Codegen.stringProp("offeringType").arg(offeringType).require();
-    }
+    private DefenderForContainersAwsOfferingResponse() {}
 
-    private DefenderForContainersAwsOfferingResponse() {
-        this.cloudWatchToKinesis = null;
-        this.description = null;
-        this.kinesisToS3 = null;
-        this.kubernetesScubaReader = null;
-        this.kubernetesService = null;
-        this.offeringType = null;
+    private DefenderForContainersAwsOfferingResponse(DefenderForContainersAwsOfferingResponse $) {
+        this.cloudWatchToKinesis = $.cloudWatchToKinesis;
+        this.description = $.description;
+        this.kinesisToS3 = $.kinesisToS3;
+        this.kubernetesScubaReader = $.kubernetesScubaReader;
+        this.kubernetesService = $.kubernetesService;
+        this.offeringType = $.offeringType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForContainersAwsOfferingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis;
-        private String description;
-        private @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3;
-        private @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader;
-        private @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService;
-        private String offeringType;
+        private DefenderForContainersAwsOfferingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForContainersAwsOfferingResponse();
         }
 
         public Builder(DefenderForContainersAwsOfferingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchToKinesis = defaults.cloudWatchToKinesis;
-    	      this.description = defaults.description;
-    	      this.kinesisToS3 = defaults.kinesisToS3;
-    	      this.kubernetesScubaReader = defaults.kubernetesScubaReader;
-    	      this.kubernetesService = defaults.kubernetesService;
-    	      this.offeringType = defaults.offeringType;
+            $ = new DefenderForContainersAwsOfferingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchToKinesis(@Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis) {
-            this.cloudWatchToKinesis = cloudWatchToKinesis;
+            $.cloudWatchToKinesis = cloudWatchToKinesis;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder kinesisToS3(@Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3) {
-            this.kinesisToS3 = kinesisToS3;
+            $.kinesisToS3 = kinesisToS3;
             return this;
         }
+
         public Builder kubernetesScubaReader(@Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader) {
-            this.kubernetesScubaReader = kubernetesScubaReader;
+            $.kubernetesScubaReader = kubernetesScubaReader;
             return this;
         }
+
         public Builder kubernetesService(@Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService) {
-            this.kubernetesService = kubernetesService;
+            $.kubernetesService = kubernetesService;
             return this;
         }
+
         public Builder offeringType(String offeringType) {
-            this.offeringType = Objects.requireNonNull(offeringType);
+            $.offeringType = offeringType;
             return this;
-        }        public DefenderForContainersAwsOfferingResponse build() {
-            return new DefenderForContainersAwsOfferingResponse(cloudWatchToKinesis, description, kinesisToS3, kubernetesScubaReader, kubernetesService, offeringType);
+        }
+
+        public DefenderForContainersAwsOfferingResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.offeringType = Codegen.stringProp("offeringType").arg($.offeringType).require();
+            return $;
         }
     }
+
 }

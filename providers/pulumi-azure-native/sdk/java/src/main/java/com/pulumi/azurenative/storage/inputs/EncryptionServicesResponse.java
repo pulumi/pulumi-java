@@ -23,10 +23,10 @@ public final class EncryptionServicesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="blob")
-      private final @Nullable EncryptionServiceResponse blob;
+    private @Nullable EncryptionServiceResponse blob;
 
     public Optional<EncryptionServiceResponse> blob() {
-        return this.blob == null ? Optional.empty() : Optional.ofNullable(this.blob);
+        return Optional.ofNullable(this.blob);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EncryptionServicesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="file")
-      private final @Nullable EncryptionServiceResponse file;
+    private @Nullable EncryptionServiceResponse file;
 
     public Optional<EncryptionServiceResponse> file() {
-        return this.file == null ? Optional.empty() : Optional.ofNullable(this.file);
+        return Optional.ofNullable(this.file);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EncryptionServicesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="queue")
-      private final @Nullable EncryptionServiceResponse queue;
+    private @Nullable EncryptionServiceResponse queue;
 
     public Optional<EncryptionServiceResponse> queue() {
-        return this.queue == null ? Optional.empty() : Optional.ofNullable(this.queue);
+        return Optional.ofNullable(this.queue);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class EncryptionServicesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="table")
-      private final @Nullable EncryptionServiceResponse table;
+    private @Nullable EncryptionServiceResponse table;
 
     public Optional<EncryptionServiceResponse> table() {
-        return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
+        return Optional.ofNullable(this.table);
     }
 
-    public EncryptionServicesResponse(
-        @Nullable EncryptionServiceResponse blob,
-        @Nullable EncryptionServiceResponse file,
-        @Nullable EncryptionServiceResponse queue,
-        @Nullable EncryptionServiceResponse table) {
-        this.blob = blob;
-        this.file = file;
-        this.queue = queue;
-        this.table = table;
-    }
+    private EncryptionServicesResponse() {}
 
-    private EncryptionServicesResponse() {
-        this.blob = null;
-        this.file = null;
-        this.queue = null;
-        this.table = null;
+    private EncryptionServicesResponse(EncryptionServicesResponse $) {
+        this.blob = $.blob;
+        this.file = $.file;
+        this.queue = $.queue;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionServicesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EncryptionServiceResponse blob;
-        private @Nullable EncryptionServiceResponse file;
-        private @Nullable EncryptionServiceResponse queue;
-        private @Nullable EncryptionServiceResponse table;
+        private EncryptionServicesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionServicesResponse();
         }
 
         public Builder(EncryptionServicesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blob = defaults.blob;
-    	      this.file = defaults.file;
-    	      this.queue = defaults.queue;
-    	      this.table = defaults.table;
+            $ = new EncryptionServicesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blob(@Nullable EncryptionServiceResponse blob) {
-            this.blob = blob;
+            $.blob = blob;
             return this;
         }
+
         public Builder file(@Nullable EncryptionServiceResponse file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
+
         public Builder queue(@Nullable EncryptionServiceResponse queue) {
-            this.queue = queue;
+            $.queue = queue;
             return this;
         }
+
         public Builder table(@Nullable EncryptionServiceResponse table) {
-            this.table = table;
+            $.table = table;
             return this;
-        }        public EncryptionServicesResponse build() {
-            return new EncryptionServicesResponse(blob, file, queue, table);
+        }
+
+        public EncryptionServicesResponse build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionName", required=true)
-      private final String functionName;
+    private String functionName;
 
     public String functionName() {
         return this.functionName;
@@ -28,55 +28,52 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetAliasArgs(
-        String functionName,
-        String name) {
-        this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetAliasArgs() {}
 
-    private GetAliasArgs() {
-        this.functionName = null;
-        this.name = null;
+    private GetAliasArgs(GetAliasArgs $) {
+        this.functionName = $.functionName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String functionName;
-        private String name;
+        private GetAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAliasArgs();
         }
 
         public Builder(GetAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionName = defaults.functionName;
-    	      this.name = defaults.name;
+            $ = new GetAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionName(String functionName) {
-            this.functionName = Objects.requireNonNull(functionName);
+            $.functionName = functionName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetAliasArgs build() {
-            return new GetAliasArgs(functionName, name);
+        }
+
+        public GetAliasArgs build() {
+            $.functionName = Objects.requireNonNull($.functionName, "expected parameter 'functionName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

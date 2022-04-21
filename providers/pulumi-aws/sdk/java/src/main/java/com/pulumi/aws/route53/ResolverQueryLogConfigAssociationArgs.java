@@ -5,7 +5,6 @@ package com.pulumi.aws.route53;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ResolverQueryLogConfigAssociationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resolverQueryLogConfigId", required=true)
-      private final Output<String> resolverQueryLogConfigId;
+    private Output<String> resolverQueryLogConfigId;
 
     public Output<String> resolverQueryLogConfigId() {
         return this.resolverQueryLogConfigId;
@@ -30,63 +29,60 @@ public final class ResolverQueryLogConfigAssociationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
     }
 
-    public ResolverQueryLogConfigAssociationArgs(
-        Output<String> resolverQueryLogConfigId,
-        Output<String> resourceId) {
-        this.resolverQueryLogConfigId = Objects.requireNonNull(resolverQueryLogConfigId, "expected parameter 'resolverQueryLogConfigId' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private ResolverQueryLogConfigAssociationArgs() {}
 
-    private ResolverQueryLogConfigAssociationArgs() {
-        this.resolverQueryLogConfigId = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private ResolverQueryLogConfigAssociationArgs(ResolverQueryLogConfigAssociationArgs $) {
+        this.resolverQueryLogConfigId = $.resolverQueryLogConfigId;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverQueryLogConfigAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resolverQueryLogConfigId;
-        private Output<String> resourceId;
+        private ResolverQueryLogConfigAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverQueryLogConfigAssociationArgs();
         }
 
         public Builder(ResolverQueryLogConfigAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resolverQueryLogConfigId = defaults.resolverQueryLogConfigId;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ResolverQueryLogConfigAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resolverQueryLogConfigId(Output<String> resolverQueryLogConfigId) {
-            this.resolverQueryLogConfigId = Objects.requireNonNull(resolverQueryLogConfigId);
+            $.resolverQueryLogConfigId = resolverQueryLogConfigId;
             return this;
         }
+
         public Builder resolverQueryLogConfigId(String resolverQueryLogConfigId) {
-            this.resolverQueryLogConfigId = Output.of(Objects.requireNonNull(resolverQueryLogConfigId));
-            return this;
+            return resolverQueryLogConfigId(Output.of(resolverQueryLogConfigId));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
-        }        public ResolverQueryLogConfigAssociationArgs build() {
-            return new ResolverQueryLogConfigAssociationArgs(resolverQueryLogConfigId, resourceId);
+            return resourceId(Output.of(resourceId));
+        }
+
+        public ResolverQueryLogConfigAssociationArgs build() {
+            $.resolverQueryLogConfigId = Objects.requireNonNull($.resolverQueryLogConfigId, "expected parameter 'resolverQueryLogConfigId' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

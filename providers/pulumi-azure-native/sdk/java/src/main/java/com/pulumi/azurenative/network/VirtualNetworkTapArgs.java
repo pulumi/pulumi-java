@@ -7,11 +7,11 @@ import com.pulumi.azurenative.network.inputs.FrontendIPConfigurationArgs;
 import com.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="destinationLoadBalancerFrontEndIPConfiguration")
-      private final @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
+    private @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
 
-    public Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration() {
-        return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Codegen.empty() : this.destinationLoadBalancerFrontEndIPConfiguration;
+    public Optional<Output<FrontendIPConfigurationArgs>> destinationLoadBalancerFrontEndIPConfiguration() {
+        return Optional.ofNullable(this.destinationLoadBalancerFrontEndIPConfiguration);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="destinationNetworkInterfaceIPConfiguration")
-      private final @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
+    private @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
 
-    public Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration() {
-        return this.destinationNetworkInterfaceIPConfiguration == null ? Codegen.empty() : this.destinationNetworkInterfaceIPConfiguration;
+    public Optional<Output<NetworkInterfaceIPConfigurationArgs>> destinationNetworkInterfaceIPConfiguration() {
+        return Optional.ofNullable(this.destinationNetworkInterfaceIPConfiguration);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="destinationPort")
-      private final @Nullable Output<Integer> destinationPort;
+    private @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> destinationPort() {
-        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
+    public Optional<Output<Integer>> destinationPort() {
+        return Optional.ofNullable(this.destinationPort);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,10 +90,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -101,141 +101,119 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tapName")
-      private final @Nullable Output<String> tapName;
+    private @Nullable Output<String> tapName;
 
-    public Output<String> tapName() {
-        return this.tapName == null ? Codegen.empty() : this.tapName;
+    public Optional<Output<String>> tapName() {
+        return Optional.ofNullable(this.tapName);
     }
 
-    public VirtualNetworkTapArgs(
-        @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration,
-        @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration,
-        @Nullable Output<Integer> destinationPort,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> tapName) {
-        this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
-        this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
-        this.destinationPort = destinationPort;
-        this.id = id;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.tapName = tapName;
-    }
+    private VirtualNetworkTapArgs() {}
 
-    private VirtualNetworkTapArgs() {
-        this.destinationLoadBalancerFrontEndIPConfiguration = Codegen.empty();
-        this.destinationNetworkInterfaceIPConfiguration = Codegen.empty();
-        this.destinationPort = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tapName = Codegen.empty();
+    private VirtualNetworkTapArgs(VirtualNetworkTapArgs $) {
+        this.destinationLoadBalancerFrontEndIPConfiguration = $.destinationLoadBalancerFrontEndIPConfiguration;
+        this.destinationNetworkInterfaceIPConfiguration = $.destinationNetworkInterfaceIPConfiguration;
+        this.destinationPort = $.destinationPort;
+        this.id = $.id;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.tapName = $.tapName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkTapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
-        private @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
-        private @Nullable Output<Integer> destinationPort;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> tapName;
+        private VirtualNetworkTapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkTapArgs();
         }
 
         public Builder(VirtualNetworkTapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationLoadBalancerFrontEndIPConfiguration = defaults.destinationLoadBalancerFrontEndIPConfiguration;
-    	      this.destinationNetworkInterfaceIPConfiguration = defaults.destinationNetworkInterfaceIPConfiguration;
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.tapName = defaults.tapName;
+            $ = new VirtualNetworkTapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration) {
-            this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
+            $.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
             return this;
         }
-        public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable FrontendIPConfigurationArgs destinationLoadBalancerFrontEndIPConfiguration) {
-            this.destinationLoadBalancerFrontEndIPConfiguration = Codegen.ofNullable(destinationLoadBalancerFrontEndIPConfiguration);
-            return this;
+
+        public Builder destinationLoadBalancerFrontEndIPConfiguration(FrontendIPConfigurationArgs destinationLoadBalancerFrontEndIPConfiguration) {
+            return destinationLoadBalancerFrontEndIPConfiguration(Output.of(destinationLoadBalancerFrontEndIPConfiguration));
         }
+
         public Builder destinationNetworkInterfaceIPConfiguration(@Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration) {
-            this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
+            $.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
             return this;
         }
-        public Builder destinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationArgs destinationNetworkInterfaceIPConfiguration) {
-            this.destinationNetworkInterfaceIPConfiguration = Codegen.ofNullable(destinationNetworkInterfaceIPConfiguration);
-            return this;
+
+        public Builder destinationNetworkInterfaceIPConfiguration(NetworkInterfaceIPConfigurationArgs destinationNetworkInterfaceIPConfiguration) {
+            return destinationNetworkInterfaceIPConfiguration(Output.of(destinationNetworkInterfaceIPConfiguration));
         }
+
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
-            this.destinationPort = destinationPort;
+            $.destinationPort = destinationPort;
             return this;
         }
-        public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Codegen.ofNullable(destinationPort);
-            return this;
+
+        public Builder destinationPort(Integer destinationPort) {
+            return destinationPort(Output.of(destinationPort));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tapName(@Nullable Output<String> tapName) {
-            this.tapName = tapName;
+            $.tapName = tapName;
             return this;
         }
-        public Builder tapName(@Nullable String tapName) {
-            this.tapName = Codegen.ofNullable(tapName);
-            return this;
-        }        public VirtualNetworkTapArgs build() {
-            return new VirtualNetworkTapArgs(destinationLoadBalancerFrontEndIPConfiguration, destinationNetworkInterfaceIPConfiguration, destinationPort, id, location, resourceGroupName, tags, tapName);
+
+        public Builder tapName(String tapName) {
+            return tapName(Output.of(tapName));
+        }
+
+        public VirtualNetworkTapArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

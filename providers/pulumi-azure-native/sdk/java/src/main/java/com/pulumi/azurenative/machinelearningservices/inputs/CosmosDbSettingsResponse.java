@@ -19,45 +19,44 @@ public final class CosmosDbSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="collectionsThroughput")
-      private final @Nullable Integer collectionsThroughput;
+    private @Nullable Integer collectionsThroughput;
 
     public Optional<Integer> collectionsThroughput() {
-        return this.collectionsThroughput == null ? Optional.empty() : Optional.ofNullable(this.collectionsThroughput);
+        return Optional.ofNullable(this.collectionsThroughput);
     }
 
-    public CosmosDbSettingsResponse(@Nullable Integer collectionsThroughput) {
-        this.collectionsThroughput = collectionsThroughput;
-    }
+    private CosmosDbSettingsResponse() {}
 
-    private CosmosDbSettingsResponse() {
-        this.collectionsThroughput = null;
+    private CosmosDbSettingsResponse(CosmosDbSettingsResponse $) {
+        this.collectionsThroughput = $.collectionsThroughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CosmosDbSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer collectionsThroughput;
+        private CosmosDbSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CosmosDbSettingsResponse();
         }
 
         public Builder(CosmosDbSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collectionsThroughput = defaults.collectionsThroughput;
+            $ = new CosmosDbSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder collectionsThroughput(@Nullable Integer collectionsThroughput) {
-            this.collectionsThroughput = collectionsThroughput;
+            $.collectionsThroughput = collectionsThroughput;
             return this;
-        }        public CosmosDbSettingsResponse build() {
-            return new CosmosDbSettingsResponse(collectionsThroughput);
+        }
+
+        public CosmosDbSettingsResponse build() {
+            return $;
         }
     }
+
 }

@@ -15,12 +15,12 @@ import com.pulumi.azurenative.cdn.inputs.UrlSigningKeyArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentTypesToCompress")
-      private final @Nullable Output<List<String>> contentTypesToCompress;
+    private @Nullable Output<List<String>> contentTypesToCompress;
 
-    public Output<List<String>> contentTypesToCompress() {
-        return this.contentTypesToCompress == null ? Codegen.empty() : this.contentTypesToCompress;
+    public Optional<Output<List<String>>> contentTypesToCompress() {
+        return Optional.ofNullable(this.contentTypesToCompress);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultOriginGroup")
-      private final @Nullable Output<ResourceReferenceArgs> defaultOriginGroup;
+    private @Nullable Output<ResourceReferenceArgs> defaultOriginGroup;
 
-    public Output<ResourceReferenceArgs> defaultOriginGroup() {
-        return this.defaultOriginGroup == null ? Codegen.empty() : this.defaultOriginGroup;
+    public Optional<Output<ResourceReferenceArgs>> defaultOriginGroup() {
+        return Optional.ofNullable(this.defaultOriginGroup);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deliveryPolicy")
-      private final @Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
+    private @Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
 
-    public Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy() {
-        return this.deliveryPolicy == null ? Codegen.empty() : this.deliveryPolicy;
+    public Optional<Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs>> deliveryPolicy() {
+        return Optional.ofNullable(this.deliveryPolicy);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointName")
-      private final @Nullable Output<String> endpointName;
+    private @Nullable Output<String> endpointName;
 
-    public Output<String> endpointName() {
-        return this.endpointName == null ? Codegen.empty() : this.endpointName;
+    public Optional<Output<String>> endpointName() {
+        return Optional.ofNullable(this.endpointName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="geoFilters")
-      private final @Nullable Output<List<GeoFilterArgs>> geoFilters;
+    private @Nullable Output<List<GeoFilterArgs>> geoFilters;
 
-    public Output<List<GeoFilterArgs>> geoFilters() {
-        return this.geoFilters == null ? Codegen.empty() : this.geoFilters;
+    public Optional<Output<List<GeoFilterArgs>>> geoFilters() {
+        return Optional.ofNullable(this.geoFilters);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isCompressionEnabled")
-      private final @Nullable Output<Boolean> isCompressionEnabled;
+    private @Nullable Output<Boolean> isCompressionEnabled;
 
-    public Output<Boolean> isCompressionEnabled() {
-        return this.isCompressionEnabled == null ? Codegen.empty() : this.isCompressionEnabled;
+    public Optional<Output<Boolean>> isCompressionEnabled() {
+        return Optional.ofNullable(this.isCompressionEnabled);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isHttpAllowed")
-      private final @Nullable Output<Boolean> isHttpAllowed;
+    private @Nullable Output<Boolean> isHttpAllowed;
 
-    public Output<Boolean> isHttpAllowed() {
-        return this.isHttpAllowed == null ? Codegen.empty() : this.isHttpAllowed;
+    public Optional<Output<Boolean>> isHttpAllowed() {
+        return Optional.ofNullable(this.isHttpAllowed);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isHttpsAllowed")
-      private final @Nullable Output<Boolean> isHttpsAllowed;
+    private @Nullable Output<Boolean> isHttpsAllowed;
 
-    public Output<Boolean> isHttpsAllowed() {
-        return this.isHttpsAllowed == null ? Codegen.empty() : this.isHttpsAllowed;
+    public Optional<Output<Boolean>> isHttpsAllowed() {
+        return Optional.ofNullable(this.isHttpsAllowed);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="optimizationType")
-      private final @Nullable Output<Either<String,OptimizationType>> optimizationType;
+    private @Nullable Output<Either<String,OptimizationType>> optimizationType;
 
-    public Output<Either<String,OptimizationType>> optimizationType() {
-        return this.optimizationType == null ? Codegen.empty() : this.optimizationType;
+    public Optional<Output<Either<String,OptimizationType>>> optimizationType() {
+        return Optional.ofNullable(this.optimizationType);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="originGroups")
-      private final @Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups;
+    private @Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups;
 
-    public Output<List<DeepCreatedOriginGroupArgs>> originGroups() {
-        return this.originGroups == null ? Codegen.empty() : this.originGroups;
+    public Optional<Output<List<DeepCreatedOriginGroupArgs>>> originGroups() {
+        return Optional.ofNullable(this.originGroups);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="originHostHeader")
-      private final @Nullable Output<String> originHostHeader;
+    private @Nullable Output<String> originHostHeader;
 
-    public Output<String> originHostHeader() {
-        return this.originHostHeader == null ? Codegen.empty() : this.originHostHeader;
+    public Optional<Output<String>> originHostHeader() {
+        return Optional.ofNullable(this.originHostHeader);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="originPath")
-      private final @Nullable Output<String> originPath;
+    private @Nullable Output<String> originPath;
 
-    public Output<String> originPath() {
-        return this.originPath == null ? Codegen.empty() : this.originPath;
+    public Optional<Output<String>> originPath() {
+        return Optional.ofNullable(this.originPath);
     }
 
     /**
@@ -176,7 +176,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="origins", required=true)
-      private final Output<List<DeepCreatedOriginArgs>> origins;
+    private Output<List<DeepCreatedOriginArgs>> origins;
 
     public Output<List<DeepCreatedOriginArgs>> origins() {
         return this.origins;
@@ -187,10 +187,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="probePath")
-      private final @Nullable Output<String> probePath;
+    private @Nullable Output<String> probePath;
 
-    public Output<String> probePath() {
-        return this.probePath == null ? Codegen.empty() : this.probePath;
+    public Optional<Output<String>> probePath() {
+        return Optional.ofNullable(this.probePath);
     }
 
     /**
@@ -198,7 +198,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -209,10 +209,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryStringCachingBehavior")
-      private final @Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior;
+    private @Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior;
 
-    public Output<QueryStringCachingBehavior> queryStringCachingBehavior() {
-        return this.queryStringCachingBehavior == null ? Codegen.empty() : this.queryStringCachingBehavior;
+    public Optional<Output<QueryStringCachingBehavior>> queryStringCachingBehavior() {
+        return Optional.ofNullable(this.queryStringCachingBehavior);
     }
 
     /**
@@ -220,7 +220,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -231,10 +231,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlSigningKeys")
-      private final @Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys;
+    private @Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys;
 
-    public Output<List<UrlSigningKeyArgs>> urlSigningKeys() {
-        return this.urlSigningKeys == null ? Codegen.empty() : this.urlSigningKeys;
+    public Optional<Output<List<UrlSigningKeyArgs>>> urlSigningKeys() {
+        return Optional.ofNullable(this.urlSigningKeys);
     }
 
     /**
@@ -253,325 +253,271 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webApplicationFirewallPolicyLink")
-      private final @Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+    private @Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
-    public Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink() {
-        return this.webApplicationFirewallPolicyLink == null ? Codegen.empty() : this.webApplicationFirewallPolicyLink;
+    public Optional<Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs>> webApplicationFirewallPolicyLink() {
+        return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
 
-    public EndpointArgs(
-        @Nullable Output<List<String>> contentTypesToCompress,
-        @Nullable Output<ResourceReferenceArgs> defaultOriginGroup,
-        @Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy,
-        @Nullable Output<String> endpointName,
-        @Nullable Output<List<GeoFilterArgs>> geoFilters,
-        @Nullable Output<Boolean> isCompressionEnabled,
-        @Nullable Output<Boolean> isHttpAllowed,
-        @Nullable Output<Boolean> isHttpsAllowed,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,OptimizationType>> optimizationType,
-        @Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups,
-        @Nullable Output<String> originHostHeader,
-        @Nullable Output<String> originPath,
-        Output<List<DeepCreatedOriginArgs>> origins,
-        @Nullable Output<String> probePath,
-        Output<String> profileName,
-        @Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys,
-        @Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
-        this.contentTypesToCompress = contentTypesToCompress;
-        this.defaultOriginGroup = defaultOriginGroup;
-        this.deliveryPolicy = deliveryPolicy;
-        this.endpointName = endpointName;
-        this.geoFilters = geoFilters;
-        this.isCompressionEnabled = isCompressionEnabled;
-        this.isHttpAllowed = isHttpAllowed;
-        this.isHttpsAllowed = isHttpsAllowed;
-        this.location = location;
-        this.optimizationType = optimizationType;
-        this.originGroups = originGroups;
-        this.originHostHeader = originHostHeader;
-        this.originPath = originPath;
-        this.origins = Objects.requireNonNull(origins, "expected parameter 'origins' to be non-null");
-        this.probePath = probePath;
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.queryStringCachingBehavior = queryStringCachingBehavior;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.urlSigningKeys = urlSigningKeys;
-        this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
-    }
+    private EndpointArgs() {}
 
-    private EndpointArgs() {
-        this.contentTypesToCompress = Codegen.empty();
-        this.defaultOriginGroup = Codegen.empty();
-        this.deliveryPolicy = Codegen.empty();
-        this.endpointName = Codegen.empty();
-        this.geoFilters = Codegen.empty();
-        this.isCompressionEnabled = Codegen.empty();
-        this.isHttpAllowed = Codegen.empty();
-        this.isHttpsAllowed = Codegen.empty();
-        this.location = Codegen.empty();
-        this.optimizationType = Codegen.empty();
-        this.originGroups = Codegen.empty();
-        this.originHostHeader = Codegen.empty();
-        this.originPath = Codegen.empty();
-        this.origins = Codegen.empty();
-        this.probePath = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.queryStringCachingBehavior = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.urlSigningKeys = Codegen.empty();
-        this.webApplicationFirewallPolicyLink = Codegen.empty();
+    private EndpointArgs(EndpointArgs $) {
+        this.contentTypesToCompress = $.contentTypesToCompress;
+        this.defaultOriginGroup = $.defaultOriginGroup;
+        this.deliveryPolicy = $.deliveryPolicy;
+        this.endpointName = $.endpointName;
+        this.geoFilters = $.geoFilters;
+        this.isCompressionEnabled = $.isCompressionEnabled;
+        this.isHttpAllowed = $.isHttpAllowed;
+        this.isHttpsAllowed = $.isHttpsAllowed;
+        this.location = $.location;
+        this.optimizationType = $.optimizationType;
+        this.originGroups = $.originGroups;
+        this.originHostHeader = $.originHostHeader;
+        this.originPath = $.originPath;
+        this.origins = $.origins;
+        this.probePath = $.probePath;
+        this.profileName = $.profileName;
+        this.queryStringCachingBehavior = $.queryStringCachingBehavior;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.urlSigningKeys = $.urlSigningKeys;
+        this.webApplicationFirewallPolicyLink = $.webApplicationFirewallPolicyLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> contentTypesToCompress;
-        private @Nullable Output<ResourceReferenceArgs> defaultOriginGroup;
-        private @Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
-        private @Nullable Output<String> endpointName;
-        private @Nullable Output<List<GeoFilterArgs>> geoFilters;
-        private @Nullable Output<Boolean> isCompressionEnabled;
-        private @Nullable Output<Boolean> isHttpAllowed;
-        private @Nullable Output<Boolean> isHttpsAllowed;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,OptimizationType>> optimizationType;
-        private @Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups;
-        private @Nullable Output<String> originHostHeader;
-        private @Nullable Output<String> originPath;
-        private Output<List<DeepCreatedOriginArgs>> origins;
-        private @Nullable Output<String> probePath;
-        private Output<String> profileName;
-        private @Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys;
-        private @Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+        private EndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointArgs();
         }
 
         public Builder(EndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentTypesToCompress = defaults.contentTypesToCompress;
-    	      this.defaultOriginGroup = defaults.defaultOriginGroup;
-    	      this.deliveryPolicy = defaults.deliveryPolicy;
-    	      this.endpointName = defaults.endpointName;
-    	      this.geoFilters = defaults.geoFilters;
-    	      this.isCompressionEnabled = defaults.isCompressionEnabled;
-    	      this.isHttpAllowed = defaults.isHttpAllowed;
-    	      this.isHttpsAllowed = defaults.isHttpsAllowed;
-    	      this.location = defaults.location;
-    	      this.optimizationType = defaults.optimizationType;
-    	      this.originGroups = defaults.originGroups;
-    	      this.originHostHeader = defaults.originHostHeader;
-    	      this.originPath = defaults.originPath;
-    	      this.origins = defaults.origins;
-    	      this.probePath = defaults.probePath;
-    	      this.profileName = defaults.profileName;
-    	      this.queryStringCachingBehavior = defaults.queryStringCachingBehavior;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.urlSigningKeys = defaults.urlSigningKeys;
-    	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
+            $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentTypesToCompress(@Nullable Output<List<String>> contentTypesToCompress) {
-            this.contentTypesToCompress = contentTypesToCompress;
+            $.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
-        public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
-            this.contentTypesToCompress = Codegen.ofNullable(contentTypesToCompress);
-            return this;
+
+        public Builder contentTypesToCompress(List<String> contentTypesToCompress) {
+            return contentTypesToCompress(Output.of(contentTypesToCompress));
         }
+
         public Builder contentTypesToCompress(String... contentTypesToCompress) {
             return contentTypesToCompress(List.of(contentTypesToCompress));
         }
+
         public Builder defaultOriginGroup(@Nullable Output<ResourceReferenceArgs> defaultOriginGroup) {
-            this.defaultOriginGroup = defaultOriginGroup;
+            $.defaultOriginGroup = defaultOriginGroup;
             return this;
         }
-        public Builder defaultOriginGroup(@Nullable ResourceReferenceArgs defaultOriginGroup) {
-            this.defaultOriginGroup = Codegen.ofNullable(defaultOriginGroup);
-            return this;
+
+        public Builder defaultOriginGroup(ResourceReferenceArgs defaultOriginGroup) {
+            return defaultOriginGroup(Output.of(defaultOriginGroup));
         }
+
         public Builder deliveryPolicy(@Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy) {
-            this.deliveryPolicy = deliveryPolicy;
+            $.deliveryPolicy = deliveryPolicy;
             return this;
         }
-        public Builder deliveryPolicy(@Nullable EndpointPropertiesUpdateParametersDeliveryPolicyArgs deliveryPolicy) {
-            this.deliveryPolicy = Codegen.ofNullable(deliveryPolicy);
-            return this;
+
+        public Builder deliveryPolicy(EndpointPropertiesUpdateParametersDeliveryPolicyArgs deliveryPolicy) {
+            return deliveryPolicy(Output.of(deliveryPolicy));
         }
+
         public Builder endpointName(@Nullable Output<String> endpointName) {
-            this.endpointName = endpointName;
+            $.endpointName = endpointName;
             return this;
         }
-        public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Codegen.ofNullable(endpointName);
-            return this;
+
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder geoFilters(@Nullable Output<List<GeoFilterArgs>> geoFilters) {
-            this.geoFilters = geoFilters;
+            $.geoFilters = geoFilters;
             return this;
         }
-        public Builder geoFilters(@Nullable List<GeoFilterArgs> geoFilters) {
-            this.geoFilters = Codegen.ofNullable(geoFilters);
-            return this;
+
+        public Builder geoFilters(List<GeoFilterArgs> geoFilters) {
+            return geoFilters(Output.of(geoFilters));
         }
+
         public Builder geoFilters(GeoFilterArgs... geoFilters) {
             return geoFilters(List.of(geoFilters));
         }
+
         public Builder isCompressionEnabled(@Nullable Output<Boolean> isCompressionEnabled) {
-            this.isCompressionEnabled = isCompressionEnabled;
+            $.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
-        public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
-            this.isCompressionEnabled = Codegen.ofNullable(isCompressionEnabled);
-            return this;
+
+        public Builder isCompressionEnabled(Boolean isCompressionEnabled) {
+            return isCompressionEnabled(Output.of(isCompressionEnabled));
         }
+
         public Builder isHttpAllowed(@Nullable Output<Boolean> isHttpAllowed) {
-            this.isHttpAllowed = isHttpAllowed;
+            $.isHttpAllowed = isHttpAllowed;
             return this;
         }
-        public Builder isHttpAllowed(@Nullable Boolean isHttpAllowed) {
-            this.isHttpAllowed = Codegen.ofNullable(isHttpAllowed);
-            return this;
+
+        public Builder isHttpAllowed(Boolean isHttpAllowed) {
+            return isHttpAllowed(Output.of(isHttpAllowed));
         }
+
         public Builder isHttpsAllowed(@Nullable Output<Boolean> isHttpsAllowed) {
-            this.isHttpsAllowed = isHttpsAllowed;
+            $.isHttpsAllowed = isHttpsAllowed;
             return this;
         }
-        public Builder isHttpsAllowed(@Nullable Boolean isHttpsAllowed) {
-            this.isHttpsAllowed = Codegen.ofNullable(isHttpsAllowed);
-            return this;
+
+        public Builder isHttpsAllowed(Boolean isHttpsAllowed) {
+            return isHttpsAllowed(Output.of(isHttpsAllowed));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder optimizationType(@Nullable Output<Either<String,OptimizationType>> optimizationType) {
-            this.optimizationType = optimizationType;
+            $.optimizationType = optimizationType;
             return this;
         }
-        public Builder optimizationType(@Nullable Either<String,OptimizationType> optimizationType) {
-            this.optimizationType = Codegen.ofNullable(optimizationType);
-            return this;
+
+        public Builder optimizationType(Either<String,OptimizationType> optimizationType) {
+            return optimizationType(Output.of(optimizationType));
         }
+
         public Builder originGroups(@Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups) {
-            this.originGroups = originGroups;
+            $.originGroups = originGroups;
             return this;
         }
-        public Builder originGroups(@Nullable List<DeepCreatedOriginGroupArgs> originGroups) {
-            this.originGroups = Codegen.ofNullable(originGroups);
-            return this;
+
+        public Builder originGroups(List<DeepCreatedOriginGroupArgs> originGroups) {
+            return originGroups(Output.of(originGroups));
         }
+
         public Builder originGroups(DeepCreatedOriginGroupArgs... originGroups) {
             return originGroups(List.of(originGroups));
         }
+
         public Builder originHostHeader(@Nullable Output<String> originHostHeader) {
-            this.originHostHeader = originHostHeader;
+            $.originHostHeader = originHostHeader;
             return this;
         }
-        public Builder originHostHeader(@Nullable String originHostHeader) {
-            this.originHostHeader = Codegen.ofNullable(originHostHeader);
-            return this;
+
+        public Builder originHostHeader(String originHostHeader) {
+            return originHostHeader(Output.of(originHostHeader));
         }
+
         public Builder originPath(@Nullable Output<String> originPath) {
-            this.originPath = originPath;
+            $.originPath = originPath;
             return this;
         }
-        public Builder originPath(@Nullable String originPath) {
-            this.originPath = Codegen.ofNullable(originPath);
-            return this;
+
+        public Builder originPath(String originPath) {
+            return originPath(Output.of(originPath));
         }
+
         public Builder origins(Output<List<DeepCreatedOriginArgs>> origins) {
-            this.origins = Objects.requireNonNull(origins);
+            $.origins = origins;
             return this;
         }
+
         public Builder origins(List<DeepCreatedOriginArgs> origins) {
-            this.origins = Output.of(Objects.requireNonNull(origins));
-            return this;
+            return origins(Output.of(origins));
         }
+
         public Builder origins(DeepCreatedOriginArgs... origins) {
             return origins(List.of(origins));
         }
+
         public Builder probePath(@Nullable Output<String> probePath) {
-            this.probePath = probePath;
+            $.probePath = probePath;
             return this;
         }
-        public Builder probePath(@Nullable String probePath) {
-            this.probePath = Codegen.ofNullable(probePath);
-            return this;
+
+        public Builder probePath(String probePath) {
+            return probePath(Output.of(probePath));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder queryStringCachingBehavior(@Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior) {
-            this.queryStringCachingBehavior = queryStringCachingBehavior;
+            $.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
-        public Builder queryStringCachingBehavior(@Nullable QueryStringCachingBehavior queryStringCachingBehavior) {
-            this.queryStringCachingBehavior = Codegen.ofNullable(queryStringCachingBehavior);
-            return this;
+
+        public Builder queryStringCachingBehavior(QueryStringCachingBehavior queryStringCachingBehavior) {
+            return queryStringCachingBehavior(Output.of(queryStringCachingBehavior));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder urlSigningKeys(@Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys) {
-            this.urlSigningKeys = urlSigningKeys;
+            $.urlSigningKeys = urlSigningKeys;
             return this;
         }
-        public Builder urlSigningKeys(@Nullable List<UrlSigningKeyArgs> urlSigningKeys) {
-            this.urlSigningKeys = Codegen.ofNullable(urlSigningKeys);
-            return this;
+
+        public Builder urlSigningKeys(List<UrlSigningKeyArgs> urlSigningKeys) {
+            return urlSigningKeys(Output.of(urlSigningKeys));
         }
+
         public Builder urlSigningKeys(UrlSigningKeyArgs... urlSigningKeys) {
             return urlSigningKeys(List.of(urlSigningKeys));
         }
+
         public Builder webApplicationFirewallPolicyLink(@Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
-            this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
+            $.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-        public Builder webApplicationFirewallPolicyLink(@Nullable EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
-            this.webApplicationFirewallPolicyLink = Codegen.ofNullable(webApplicationFirewallPolicyLink);
-            return this;
-        }        public EndpointArgs build() {
-            return new EndpointArgs(contentTypesToCompress, defaultOriginGroup, deliveryPolicy, endpointName, geoFilters, isCompressionEnabled, isHttpAllowed, isHttpsAllowed, location, optimizationType, originGroups, originHostHeader, originPath, origins, probePath, profileName, queryStringCachingBehavior, resourceGroupName, tags, urlSigningKeys, webApplicationFirewallPolicyLink);
+
+        public Builder webApplicationFirewallPolicyLink(EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
+            return webApplicationFirewallPolicyLink(Output.of(webApplicationFirewallPolicyLink));
+        }
+
+        public EndpointArgs build() {
+            $.origins = Objects.requireNonNull($.origins, "expected parameter 'origins' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

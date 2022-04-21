@@ -22,7 +22,7 @@ public final class TlsContextResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateContext", required=true)
-      private final TlsCertificateContextResponse certificateContext;
+    private TlsCertificateContextResponse certificateContext;
 
     public TlsCertificateContextResponse certificateContext() {
         return this.certificateContext;
@@ -33,55 +33,52 @@ public final class TlsContextResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="validationContext", required=true)
-      private final TlsValidationContextResponse validationContext;
+    private TlsValidationContextResponse validationContext;
 
     public TlsValidationContextResponse validationContext() {
         return this.validationContext;
     }
 
-    public TlsContextResponse(
-        TlsCertificateContextResponse certificateContext,
-        TlsValidationContextResponse validationContext) {
-        this.certificateContext = Objects.requireNonNull(certificateContext, "expected parameter 'certificateContext' to be non-null");
-        this.validationContext = Objects.requireNonNull(validationContext, "expected parameter 'validationContext' to be non-null");
-    }
+    private TlsContextResponse() {}
 
-    private TlsContextResponse() {
-        this.certificateContext = null;
-        this.validationContext = null;
+    private TlsContextResponse(TlsContextResponse $) {
+        this.certificateContext = $.certificateContext;
+        this.validationContext = $.validationContext;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TlsCertificateContextResponse certificateContext;
-        private TlsValidationContextResponse validationContext;
+        private TlsContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsContextResponse();
         }
 
         public Builder(TlsContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateContext = defaults.certificateContext;
-    	      this.validationContext = defaults.validationContext;
+            $ = new TlsContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateContext(TlsCertificateContextResponse certificateContext) {
-            this.certificateContext = Objects.requireNonNull(certificateContext);
+            $.certificateContext = certificateContext;
             return this;
         }
+
         public Builder validationContext(TlsValidationContextResponse validationContext) {
-            this.validationContext = Objects.requireNonNull(validationContext);
+            $.validationContext = validationContext;
             return this;
-        }        public TlsContextResponse build() {
-            return new TlsContextResponse(certificateContext, validationContext);
+        }
+
+        public TlsContextResponse build() {
+            $.certificateContext = Objects.requireNonNull($.certificateContext, "expected parameter 'certificateContext' to be non-null");
+            $.validationContext = Objects.requireNonNull($.validationContext, "expected parameter 'validationContext' to be non-null");
+            return $;
         }
     }
+
 }

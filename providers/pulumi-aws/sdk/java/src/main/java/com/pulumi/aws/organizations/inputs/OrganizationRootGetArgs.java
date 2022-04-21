@@ -6,10 +6,10 @@ package com.pulumi.aws.organizations.inputs;
 import com.pulumi.aws.organizations.inputs.OrganizationRootPolicyTypeGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,92 +55,82 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyTypes")
-      private final @Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes;
+    private @Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes;
 
-    public Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes() {
-        return this.policyTypes == null ? Codegen.empty() : this.policyTypes;
+    public Optional<Output<List<OrganizationRootPolicyTypeGetArgs>>> policyTypes() {
+        return Optional.ofNullable(this.policyTypes);
     }
 
-    public OrganizationRootGetArgs(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes) {
-        this.arn = arn;
-        this.id = id;
-        this.name = name;
-        this.policyTypes = policyTypes;
-    }
+    private OrganizationRootGetArgs() {}
 
-    private OrganizationRootGetArgs() {
-        this.arn = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policyTypes = Codegen.empty();
+    private OrganizationRootGetArgs(OrganizationRootGetArgs $) {
+        this.arn = $.arn;
+        this.id = $.id;
+        this.name = $.name;
+        this.policyTypes = $.policyTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationRootGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes;
+        private OrganizationRootGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationRootGetArgs();
         }
 
         public Builder(OrganizationRootGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.policyTypes = defaults.policyTypes;
+            $ = new OrganizationRootGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policyTypes(@Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes) {
-            this.policyTypes = policyTypes;
+            $.policyTypes = policyTypes;
             return this;
         }
-        public Builder policyTypes(@Nullable List<OrganizationRootPolicyTypeGetArgs> policyTypes) {
-            this.policyTypes = Codegen.ofNullable(policyTypes);
-            return this;
+
+        public Builder policyTypes(List<OrganizationRootPolicyTypeGetArgs> policyTypes) {
+            return policyTypes(Output.of(policyTypes));
         }
+
         public Builder policyTypes(OrganizationRootPolicyTypeGetArgs... policyTypes) {
             return policyTypes(List.of(policyTypes));
-        }        public OrganizationRootGetArgs build() {
-            return new OrganizationRootGetArgs(arn, id, name, policyTypes);
+        }
+
+        public OrganizationRootGetArgs build() {
+            return $;
         }
     }
+
 }

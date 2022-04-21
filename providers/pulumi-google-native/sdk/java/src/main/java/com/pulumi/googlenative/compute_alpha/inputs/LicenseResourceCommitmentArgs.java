@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LicenseResourceCommitmentArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="amount")
-      private final @Nullable Output<String> amount;
+    private @Nullable Output<String> amount;
 
-    public Output<String> amount() {
-        return this.amount == null ? Codegen.empty() : this.amount;
+    public Optional<Output<String>> amount() {
+        return Optional.ofNullable(this.amount);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LicenseResourceCommitmentArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="coresPerLicense")
-      private final @Nullable Output<String> coresPerLicense;
+    private @Nullable Output<String> coresPerLicense;
 
-    public Output<String> coresPerLicense() {
-        return this.coresPerLicense == null ? Codegen.empty() : this.coresPerLicense;
+    public Optional<Output<String>> coresPerLicense() {
+        return Optional.ofNullable(this.coresPerLicense);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class LicenseResourceCommitmentArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="license")
-      private final @Nullable Output<String> license;
+    private @Nullable Output<String> license;
 
-    public Output<String> license() {
-        return this.license == null ? Codegen.empty() : this.license;
+    public Optional<Output<String>> license() {
+        return Optional.ofNullable(this.license);
     }
 
-    public LicenseResourceCommitmentArgs(
-        @Nullable Output<String> amount,
-        @Nullable Output<String> coresPerLicense,
-        @Nullable Output<String> license) {
-        this.amount = amount;
-        this.coresPerLicense = coresPerLicense;
-        this.license = license;
-    }
+    private LicenseResourceCommitmentArgs() {}
 
-    private LicenseResourceCommitmentArgs() {
-        this.amount = Codegen.empty();
-        this.coresPerLicense = Codegen.empty();
-        this.license = Codegen.empty();
+    private LicenseResourceCommitmentArgs(LicenseResourceCommitmentArgs $) {
+        this.amount = $.amount;
+        this.coresPerLicense = $.coresPerLicense;
+        this.license = $.license;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseResourceCommitmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> amount;
-        private @Nullable Output<String> coresPerLicense;
-        private @Nullable Output<String> license;
+        private LicenseResourceCommitmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseResourceCommitmentArgs();
         }
 
         public Builder(LicenseResourceCommitmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amount = defaults.amount;
-    	      this.coresPerLicense = defaults.coresPerLicense;
-    	      this.license = defaults.license;
+            $ = new LicenseResourceCommitmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amount(@Nullable Output<String> amount) {
-            this.amount = amount;
+            $.amount = amount;
             return this;
         }
-        public Builder amount(@Nullable String amount) {
-            this.amount = Codegen.ofNullable(amount);
-            return this;
+
+        public Builder amount(String amount) {
+            return amount(Output.of(amount));
         }
+
         public Builder coresPerLicense(@Nullable Output<String> coresPerLicense) {
-            this.coresPerLicense = coresPerLicense;
+            $.coresPerLicense = coresPerLicense;
             return this;
         }
-        public Builder coresPerLicense(@Nullable String coresPerLicense) {
-            this.coresPerLicense = Codegen.ofNullable(coresPerLicense);
-            return this;
+
+        public Builder coresPerLicense(String coresPerLicense) {
+            return coresPerLicense(Output.of(coresPerLicense));
         }
+
         public Builder license(@Nullable Output<String> license) {
-            this.license = license;
+            $.license = license;
             return this;
         }
-        public Builder license(@Nullable String license) {
-            this.license = Codegen.ofNullable(license);
-            return this;
-        }        public LicenseResourceCommitmentArgs build() {
-            return new LicenseResourceCommitmentArgs(amount, coresPerLicense, license);
+
+        public Builder license(String license) {
+            return license(Output.of(license));
+        }
+
+        public LicenseResourceCommitmentArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class GetTableReplica extends com.pulumi.resources.InvokeArgs {
     public static final GetTableReplica Empty = new GetTableReplica();
 
     @Import(name="kmsKeyArn", required=true)
-      private final String kmsKeyArn;
+    private String kmsKeyArn;
 
     public String kmsKeyArn() {
         return this.kmsKeyArn;
     }
 
     @Import(name="regionName", required=true)
-      private final String regionName;
+    private String regionName;
 
     public String regionName() {
         return this.regionName;
     }
 
-    public GetTableReplica(
-        String kmsKeyArn,
-        String regionName) {
-        this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn, "expected parameter 'kmsKeyArn' to be non-null");
-        this.regionName = Objects.requireNonNull(regionName, "expected parameter 'regionName' to be non-null");
-    }
+    private GetTableReplica() {}
 
-    private GetTableReplica() {
-        this.kmsKeyArn = null;
-        this.regionName = null;
+    private GetTableReplica(GetTableReplica $) {
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.regionName = $.regionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTableReplica defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kmsKeyArn;
-        private String regionName;
+        private GetTableReplica $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTableReplica();
         }
 
         public Builder(GetTableReplica defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.regionName = defaults.regionName;
+            $ = new GetTableReplica(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyArn(String kmsKeyArn) {
-            this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
+
         public Builder regionName(String regionName) {
-            this.regionName = Objects.requireNonNull(regionName);
+            $.regionName = regionName;
             return this;
-        }        public GetTableReplica build() {
-            return new GetTableReplica(kmsKeyArn, regionName);
+        }
+
+        public GetTableReplica build() {
+            $.kmsKeyArn = Objects.requireNonNull($.kmsKeyArn, "expected parameter 'kmsKeyArn' to be non-null");
+            $.regionName = Objects.requireNonNull($.regionName, "expected parameter 'regionName' to be non-null");
+            return $;
         }
     }
+
 }

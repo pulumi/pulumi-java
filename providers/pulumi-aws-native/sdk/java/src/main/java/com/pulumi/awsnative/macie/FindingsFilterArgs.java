@@ -7,10 +7,10 @@ import com.pulumi.awsnative.macie.enums.FindingsFilterFindingFilterAction;
 import com.pulumi.awsnative.macie.inputs.FindingsFilterFindingCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<FindingsFilterFindingFilterAction> action;
+    private @Nullable Output<FindingsFilterFindingFilterAction> action;
 
-    public Output<FindingsFilterFindingFilterAction> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<FindingsFilterFindingFilterAction>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="findingCriteria", required=true)
-      private final Output<FindingsFilterFindingCriteriaArgs> findingCriteria;
+    private Output<FindingsFilterFindingCriteriaArgs> findingCriteria;
 
     public Output<FindingsFilterFindingCriteriaArgs> findingCriteria() {
         return this.findingCriteria;
@@ -56,10 +56,10 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,102 +67,89 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="position")
-      private final @Nullable Output<Integer> position;
+    private @Nullable Output<Integer> position;
 
-    public Output<Integer> position() {
-        return this.position == null ? Codegen.empty() : this.position;
+    public Optional<Output<Integer>> position() {
+        return Optional.ofNullable(this.position);
     }
 
-    public FindingsFilterArgs(
-        @Nullable Output<FindingsFilterFindingFilterAction> action,
-        @Nullable Output<String> description,
-        Output<FindingsFilterFindingCriteriaArgs> findingCriteria,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> position) {
-        this.action = action;
-        this.description = description;
-        this.findingCriteria = Objects.requireNonNull(findingCriteria, "expected parameter 'findingCriteria' to be non-null");
-        this.name = name;
-        this.position = position;
-    }
+    private FindingsFilterArgs() {}
 
-    private FindingsFilterArgs() {
-        this.action = Codegen.empty();
-        this.description = Codegen.empty();
-        this.findingCriteria = Codegen.empty();
-        this.name = Codegen.empty();
-        this.position = Codegen.empty();
+    private FindingsFilterArgs(FindingsFilterArgs $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.findingCriteria = $.findingCriteria;
+        this.name = $.name;
+        this.position = $.position;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FindingsFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FindingsFilterFindingFilterAction> action;
-        private @Nullable Output<String> description;
-        private Output<FindingsFilterFindingCriteriaArgs> findingCriteria;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> position;
+        private FindingsFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FindingsFilterArgs();
         }
 
         public Builder(FindingsFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.findingCriteria = defaults.findingCriteria;
-    	      this.name = defaults.name;
-    	      this.position = defaults.position;
+            $ = new FindingsFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<FindingsFilterFindingFilterAction> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable FindingsFilterFindingFilterAction action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(FindingsFilterFindingFilterAction action) {
+            return action(Output.of(action));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder findingCriteria(Output<FindingsFilterFindingCriteriaArgs> findingCriteria) {
-            this.findingCriteria = Objects.requireNonNull(findingCriteria);
+            $.findingCriteria = findingCriteria;
             return this;
         }
+
         public Builder findingCriteria(FindingsFilterFindingCriteriaArgs findingCriteria) {
-            this.findingCriteria = Output.of(Objects.requireNonNull(findingCriteria));
-            return this;
+            return findingCriteria(Output.of(findingCriteria));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder position(@Nullable Output<Integer> position) {
-            this.position = position;
+            $.position = position;
             return this;
         }
-        public Builder position(@Nullable Integer position) {
-            this.position = Codegen.ofNullable(position);
-            return this;
-        }        public FindingsFilterArgs build() {
-            return new FindingsFilterArgs(action, description, findingCriteria, name, position);
+
+        public Builder position(Integer position) {
+            return position(Output.of(position));
+        }
+
+        public FindingsFilterArgs build() {
+            $.findingCriteria = Objects.requireNonNull($.findingCriteria, "expected parameter 'findingCriteria' to be non-null");
+            return $;
         }
     }
+
 }

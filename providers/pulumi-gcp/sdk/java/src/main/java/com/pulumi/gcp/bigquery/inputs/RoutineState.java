@@ -5,12 +5,12 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.RoutineArgumentGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<List<RoutineArgumentGetArgs>> arguments;
+    private @Nullable Output<List<RoutineArgumentGetArgs>> arguments;
 
-    public Output<List<RoutineArgumentGetArgs>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<List<RoutineArgumentGetArgs>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<Integer> creationTime;
+    private @Nullable Output<Integer> creationTime;
 
-    public Output<Integer> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<Integer>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasetId")
-      private final @Nullable Output<String> datasetId;
+    private @Nullable Output<String> datasetId;
 
-    public Output<String> datasetId() {
-        return this.datasetId == null ? Codegen.empty() : this.datasetId;
+    public Optional<Output<String>> datasetId() {
+        return Optional.ofNullable(this.datasetId);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definitionBody")
-      private final @Nullable Output<String> definitionBody;
+    private @Nullable Output<String> definitionBody;
 
-    public Output<String> definitionBody() {
-        return this.definitionBody == null ? Codegen.empty() : this.definitionBody;
+    public Optional<Output<String>> definitionBody() {
+        return Optional.ofNullable(this.definitionBody);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="determinismLevel")
-      private final @Nullable Output<String> determinismLevel;
+    private @Nullable Output<String> determinismLevel;
 
-    public Output<String> determinismLevel() {
-        return this.determinismLevel == null ? Codegen.empty() : this.determinismLevel;
+    public Optional<Output<String>> determinismLevel() {
+        return Optional.ofNullable(this.determinismLevel);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="importedLibraries")
-      private final @Nullable Output<List<String>> importedLibraries;
+    private @Nullable Output<List<String>> importedLibraries;
 
-    public Output<List<String>> importedLibraries() {
-        return this.importedLibraries == null ? Codegen.empty() : this.importedLibraries;
+    public Optional<Output<List<String>>> importedLibraries() {
+        return Optional.ofNullable(this.importedLibraries);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="language")
-      private final @Nullable Output<String> language;
+    private @Nullable Output<String> language;
 
-    public Output<String> language() {
-        return this.language == null ? Codegen.empty() : this.language;
+    public Optional<Output<String>> language() {
+        return Optional.ofNullable(this.language);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedTime")
-      private final @Nullable Output<Integer> lastModifiedTime;
+    private @Nullable Output<Integer> lastModifiedTime;
 
-    public Output<Integer> lastModifiedTime() {
-        return this.lastModifiedTime == null ? Codegen.empty() : this.lastModifiedTime;
+    public Optional<Output<Integer>> lastModifiedTime() {
+        return Optional.ofNullable(this.lastModifiedTime);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="returnTableType")
-      private final @Nullable Output<String> returnTableType;
+    private @Nullable Output<String> returnTableType;
 
-    public Output<String> returnTableType() {
-        return this.returnTableType == null ? Codegen.empty() : this.returnTableType;
+    public Optional<Output<String>> returnTableType() {
+        return Optional.ofNullable(this.returnTableType);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="returnType")
-      private final @Nullable Output<String> returnType;
+    private @Nullable Output<String> returnType;
 
-    public Output<String> returnType() {
-        return this.returnType == null ? Codegen.empty() : this.returnType;
+    public Optional<Output<String>> returnType() {
+        return Optional.ofNullable(this.returnType);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routineId")
-      private final @Nullable Output<String> routineId;
+    private @Nullable Output<String> routineId;
 
-    public Output<String> routineId() {
-        return this.routineId == null ? Codegen.empty() : this.routineId;
+    public Optional<Output<String>> routineId() {
+        return Optional.ofNullable(this.routineId);
     }
 
     /**
@@ -184,225 +184,186 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routineType")
-      private final @Nullable Output<String> routineType;
+    private @Nullable Output<String> routineType;
 
-    public Output<String> routineType() {
-        return this.routineType == null ? Codegen.empty() : this.routineType;
+    public Optional<Output<String>> routineType() {
+        return Optional.ofNullable(this.routineType);
     }
 
-    public RoutineState(
-        @Nullable Output<List<RoutineArgumentGetArgs>> arguments,
-        @Nullable Output<Integer> creationTime,
-        @Nullable Output<String> datasetId,
-        @Nullable Output<String> definitionBody,
-        @Nullable Output<String> description,
-        @Nullable Output<String> determinismLevel,
-        @Nullable Output<List<String>> importedLibraries,
-        @Nullable Output<String> language,
-        @Nullable Output<Integer> lastModifiedTime,
-        @Nullable Output<String> project,
-        @Nullable Output<String> returnTableType,
-        @Nullable Output<String> returnType,
-        @Nullable Output<String> routineId,
-        @Nullable Output<String> routineType) {
-        this.arguments = arguments;
-        this.creationTime = creationTime;
-        this.datasetId = datasetId;
-        this.definitionBody = definitionBody;
-        this.description = description;
-        this.determinismLevel = determinismLevel;
-        this.importedLibraries = importedLibraries;
-        this.language = language;
-        this.lastModifiedTime = lastModifiedTime;
-        this.project = project;
-        this.returnTableType = returnTableType;
-        this.returnType = returnType;
-        this.routineId = routineId;
-        this.routineType = routineType;
-    }
+    private RoutineState() {}
 
-    private RoutineState() {
-        this.arguments = Codegen.empty();
-        this.creationTime = Codegen.empty();
-        this.datasetId = Codegen.empty();
-        this.definitionBody = Codegen.empty();
-        this.description = Codegen.empty();
-        this.determinismLevel = Codegen.empty();
-        this.importedLibraries = Codegen.empty();
-        this.language = Codegen.empty();
-        this.lastModifiedTime = Codegen.empty();
-        this.project = Codegen.empty();
-        this.returnTableType = Codegen.empty();
-        this.returnType = Codegen.empty();
-        this.routineId = Codegen.empty();
-        this.routineType = Codegen.empty();
+    private RoutineState(RoutineState $) {
+        this.arguments = $.arguments;
+        this.creationTime = $.creationTime;
+        this.datasetId = $.datasetId;
+        this.definitionBody = $.definitionBody;
+        this.description = $.description;
+        this.determinismLevel = $.determinismLevel;
+        this.importedLibraries = $.importedLibraries;
+        this.language = $.language;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.project = $.project;
+        this.returnTableType = $.returnTableType;
+        this.returnType = $.returnType;
+        this.routineId = $.routineId;
+        this.routineType = $.routineType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutineState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RoutineArgumentGetArgs>> arguments;
-        private @Nullable Output<Integer> creationTime;
-        private @Nullable Output<String> datasetId;
-        private @Nullable Output<String> definitionBody;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> determinismLevel;
-        private @Nullable Output<List<String>> importedLibraries;
-        private @Nullable Output<String> language;
-        private @Nullable Output<Integer> lastModifiedTime;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> returnTableType;
-        private @Nullable Output<String> returnType;
-        private @Nullable Output<String> routineId;
-        private @Nullable Output<String> routineType;
+        private RoutineState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutineState();
         }
 
         public Builder(RoutineState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.creationTime = defaults.creationTime;
-    	      this.datasetId = defaults.datasetId;
-    	      this.definitionBody = defaults.definitionBody;
-    	      this.description = defaults.description;
-    	      this.determinismLevel = defaults.determinismLevel;
-    	      this.importedLibraries = defaults.importedLibraries;
-    	      this.language = defaults.language;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.project = defaults.project;
-    	      this.returnTableType = defaults.returnTableType;
-    	      this.returnType = defaults.returnType;
-    	      this.routineId = defaults.routineId;
-    	      this.routineType = defaults.routineType;
+            $ = new RoutineState(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<List<RoutineArgumentGetArgs>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable List<RoutineArgumentGetArgs> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(List<RoutineArgumentGetArgs> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder arguments(RoutineArgumentGetArgs... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder creationTime(@Nullable Output<Integer> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable Integer creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(Integer creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder datasetId(@Nullable Output<String> datasetId) {
-            this.datasetId = datasetId;
+            $.datasetId = datasetId;
             return this;
         }
-        public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Codegen.ofNullable(datasetId);
-            return this;
+
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder definitionBody(@Nullable Output<String> definitionBody) {
-            this.definitionBody = definitionBody;
+            $.definitionBody = definitionBody;
             return this;
         }
-        public Builder definitionBody(@Nullable String definitionBody) {
-            this.definitionBody = Codegen.ofNullable(definitionBody);
-            return this;
+
+        public Builder definitionBody(String definitionBody) {
+            return definitionBody(Output.of(definitionBody));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder determinismLevel(@Nullable Output<String> determinismLevel) {
-            this.determinismLevel = determinismLevel;
+            $.determinismLevel = determinismLevel;
             return this;
         }
-        public Builder determinismLevel(@Nullable String determinismLevel) {
-            this.determinismLevel = Codegen.ofNullable(determinismLevel);
-            return this;
+
+        public Builder determinismLevel(String determinismLevel) {
+            return determinismLevel(Output.of(determinismLevel));
         }
+
         public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
-            this.importedLibraries = importedLibraries;
+            $.importedLibraries = importedLibraries;
             return this;
         }
-        public Builder importedLibraries(@Nullable List<String> importedLibraries) {
-            this.importedLibraries = Codegen.ofNullable(importedLibraries);
-            return this;
+
+        public Builder importedLibraries(List<String> importedLibraries) {
+            return importedLibraries(Output.of(importedLibraries));
         }
+
         public Builder importedLibraries(String... importedLibraries) {
             return importedLibraries(List.of(importedLibraries));
         }
+
         public Builder language(@Nullable Output<String> language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
-        public Builder language(@Nullable String language) {
-            this.language = Codegen.ofNullable(language);
-            return this;
+
+        public Builder language(String language) {
+            return language(Output.of(language));
         }
+
         public Builder lastModifiedTime(@Nullable Output<Integer> lastModifiedTime) {
-            this.lastModifiedTime = lastModifiedTime;
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
-        public Builder lastModifiedTime(@Nullable Integer lastModifiedTime) {
-            this.lastModifiedTime = Codegen.ofNullable(lastModifiedTime);
-            return this;
+
+        public Builder lastModifiedTime(Integer lastModifiedTime) {
+            return lastModifiedTime(Output.of(lastModifiedTime));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder returnTableType(@Nullable Output<String> returnTableType) {
-            this.returnTableType = returnTableType;
+            $.returnTableType = returnTableType;
             return this;
         }
-        public Builder returnTableType(@Nullable String returnTableType) {
-            this.returnTableType = Codegen.ofNullable(returnTableType);
-            return this;
+
+        public Builder returnTableType(String returnTableType) {
+            return returnTableType(Output.of(returnTableType));
         }
+
         public Builder returnType(@Nullable Output<String> returnType) {
-            this.returnType = returnType;
+            $.returnType = returnType;
             return this;
         }
-        public Builder returnType(@Nullable String returnType) {
-            this.returnType = Codegen.ofNullable(returnType);
-            return this;
+
+        public Builder returnType(String returnType) {
+            return returnType(Output.of(returnType));
         }
+
         public Builder routineId(@Nullable Output<String> routineId) {
-            this.routineId = routineId;
+            $.routineId = routineId;
             return this;
         }
-        public Builder routineId(@Nullable String routineId) {
-            this.routineId = Codegen.ofNullable(routineId);
-            return this;
+
+        public Builder routineId(String routineId) {
+            return routineId(Output.of(routineId));
         }
+
         public Builder routineType(@Nullable Output<String> routineType) {
-            this.routineType = routineType;
+            $.routineType = routineType;
             return this;
         }
-        public Builder routineType(@Nullable String routineType) {
-            this.routineType = Codegen.ofNullable(routineType);
-            return this;
-        }        public RoutineState build() {
-            return new RoutineState(arguments, creationTime, datasetId, definitionBody, description, determinismLevel, importedLibraries, language, lastModifiedTime, project, returnTableType, returnType, routineId, routineType);
+
+        public Builder routineType(String routineType) {
+            return routineType(Output.of(routineType));
+        }
+
+        public RoutineState build() {
+            return $;
         }
     }
+
 }

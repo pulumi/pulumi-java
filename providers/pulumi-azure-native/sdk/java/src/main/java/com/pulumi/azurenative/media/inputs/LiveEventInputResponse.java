@@ -26,10 +26,10 @@ public final class LiveEventInputResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accessControl")
-      private final @Nullable LiveEventInputAccessControlResponse accessControl;
+    private @Nullable LiveEventInputAccessControlResponse accessControl;
 
     public Optional<LiveEventInputAccessControlResponse> accessControl() {
-        return this.accessControl == null ? Optional.empty() : Optional.ofNullable(this.accessControl);
+        return Optional.ofNullable(this.accessControl);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LiveEventInputResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable String accessToken;
+    private @Nullable String accessToken;
 
     public Optional<String> accessToken() {
-        return this.accessToken == null ? Optional.empty() : Optional.ofNullable(this.accessToken);
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LiveEventInputResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable List<LiveEventEndpointResponse> endpoints;
+    private @Nullable List<LiveEventEndpointResponse> endpoints;
 
-    public List<LiveEventEndpointResponse> endpoints() {
-        return this.endpoints == null ? List.of() : this.endpoints;
+    public Optional<List<LiveEventEndpointResponse>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class LiveEventInputResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keyFrameIntervalDuration")
-      private final @Nullable String keyFrameIntervalDuration;
+    private @Nullable String keyFrameIntervalDuration;
 
     public Optional<String> keyFrameIntervalDuration() {
-        return this.keyFrameIntervalDuration == null ? Optional.empty() : Optional.ofNullable(this.keyFrameIntervalDuration);
+        return Optional.ofNullable(this.keyFrameIntervalDuration);
     }
 
     /**
@@ -70,85 +70,73 @@ public final class LiveEventInputResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="streamingProtocol", required=true)
-      private final String streamingProtocol;
+    private String streamingProtocol;
 
     public String streamingProtocol() {
         return this.streamingProtocol;
     }
 
-    public LiveEventInputResponse(
-        @Nullable LiveEventInputAccessControlResponse accessControl,
-        @Nullable String accessToken,
-        @Nullable List<LiveEventEndpointResponse> endpoints,
-        @Nullable String keyFrameIntervalDuration,
-        String streamingProtocol) {
-        this.accessControl = accessControl;
-        this.accessToken = accessToken;
-        this.endpoints = endpoints;
-        this.keyFrameIntervalDuration = keyFrameIntervalDuration;
-        this.streamingProtocol = Objects.requireNonNull(streamingProtocol, "expected parameter 'streamingProtocol' to be non-null");
-    }
+    private LiveEventInputResponse() {}
 
-    private LiveEventInputResponse() {
-        this.accessControl = null;
-        this.accessToken = null;
-        this.endpoints = List.of();
-        this.keyFrameIntervalDuration = null;
-        this.streamingProtocol = null;
+    private LiveEventInputResponse(LiveEventInputResponse $) {
+        this.accessControl = $.accessControl;
+        this.accessToken = $.accessToken;
+        this.endpoints = $.endpoints;
+        this.keyFrameIntervalDuration = $.keyFrameIntervalDuration;
+        this.streamingProtocol = $.streamingProtocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LiveEventInputAccessControlResponse accessControl;
-        private @Nullable String accessToken;
-        private @Nullable List<LiveEventEndpointResponse> endpoints;
-        private @Nullable String keyFrameIntervalDuration;
-        private String streamingProtocol;
+        private LiveEventInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventInputResponse();
         }
 
         public Builder(LiveEventInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControl = defaults.accessControl;
-    	      this.accessToken = defaults.accessToken;
-    	      this.endpoints = defaults.endpoints;
-    	      this.keyFrameIntervalDuration = defaults.keyFrameIntervalDuration;
-    	      this.streamingProtocol = defaults.streamingProtocol;
+            $ = new LiveEventInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControl(@Nullable LiveEventInputAccessControlResponse accessControl) {
-            this.accessControl = accessControl;
+            $.accessControl = accessControl;
             return this;
         }
+
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
+
         public Builder endpoints(@Nullable List<LiveEventEndpointResponse> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder endpoints(LiveEventEndpointResponse... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder keyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
-            this.keyFrameIntervalDuration = keyFrameIntervalDuration;
+            $.keyFrameIntervalDuration = keyFrameIntervalDuration;
             return this;
         }
+
         public Builder streamingProtocol(String streamingProtocol) {
-            this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
+            $.streamingProtocol = streamingProtocol;
             return this;
-        }        public LiveEventInputResponse build() {
-            return new LiveEventInputResponse(accessControl, accessToken, endpoints, keyFrameIntervalDuration, streamingProtocol);
+        }
+
+        public LiveEventInputResponse build() {
+            $.streamingProtocol = Objects.requireNonNull($.streamingProtocol, "expected parameter 'streamingProtocol' to be non-null");
+            return $;
         }
     }
+
 }

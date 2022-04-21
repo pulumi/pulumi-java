@@ -5,11 +5,11 @@ package com.pulumi.googlenative.file_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.file_v1.inputs.NfsExportOptionsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FileShareConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="capacityGb")
-      private final @Nullable Output<String> capacityGb;
+    private @Nullable Output<String> capacityGb;
 
-    public Output<String> capacityGb() {
-        return this.capacityGb == null ? Codegen.empty() : this.capacityGb;
+    public Optional<Output<String>> capacityGb() {
+        return Optional.ofNullable(this.capacityGb);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FileShareConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FileShareConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="nfsExportOptions")
-      private final @Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions;
+    private @Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions;
 
-    public Output<List<NfsExportOptionsArgs>> nfsExportOptions() {
-        return this.nfsExportOptions == null ? Codegen.empty() : this.nfsExportOptions;
+    public Optional<Output<List<NfsExportOptionsArgs>>> nfsExportOptions() {
+        return Optional.ofNullable(this.nfsExportOptions);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class FileShareConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sourceBackup")
-      private final @Nullable Output<String> sourceBackup;
+    private @Nullable Output<String> sourceBackup;
 
-    public Output<String> sourceBackup() {
-        return this.sourceBackup == null ? Codegen.empty() : this.sourceBackup;
+    public Optional<Output<String>> sourceBackup() {
+        return Optional.ofNullable(this.sourceBackup);
     }
 
-    public FileShareConfigArgs(
-        @Nullable Output<String> capacityGb,
-        @Nullable Output<String> name,
-        @Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions,
-        @Nullable Output<String> sourceBackup) {
-        this.capacityGb = capacityGb;
-        this.name = name;
-        this.nfsExportOptions = nfsExportOptions;
-        this.sourceBackup = sourceBackup;
-    }
+    private FileShareConfigArgs() {}
 
-    private FileShareConfigArgs() {
-        this.capacityGb = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nfsExportOptions = Codegen.empty();
-        this.sourceBackup = Codegen.empty();
+    private FileShareConfigArgs(FileShareConfigArgs $) {
+        this.capacityGb = $.capacityGb;
+        this.name = $.name;
+        this.nfsExportOptions = $.nfsExportOptions;
+        this.sourceBackup = $.sourceBackup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileShareConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> capacityGb;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions;
-        private @Nullable Output<String> sourceBackup;
+        private FileShareConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileShareConfigArgs();
         }
 
         public Builder(FileShareConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityGb = defaults.capacityGb;
-    	      this.name = defaults.name;
-    	      this.nfsExportOptions = defaults.nfsExportOptions;
-    	      this.sourceBackup = defaults.sourceBackup;
+            $ = new FileShareConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityGb(@Nullable Output<String> capacityGb) {
-            this.capacityGb = capacityGb;
+            $.capacityGb = capacityGb;
             return this;
         }
-        public Builder capacityGb(@Nullable String capacityGb) {
-            this.capacityGb = Codegen.ofNullable(capacityGb);
-            return this;
+
+        public Builder capacityGb(String capacityGb) {
+            return capacityGb(Output.of(capacityGb));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nfsExportOptions(@Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions) {
-            this.nfsExportOptions = nfsExportOptions;
+            $.nfsExportOptions = nfsExportOptions;
             return this;
         }
-        public Builder nfsExportOptions(@Nullable List<NfsExportOptionsArgs> nfsExportOptions) {
-            this.nfsExportOptions = Codegen.ofNullable(nfsExportOptions);
-            return this;
+
+        public Builder nfsExportOptions(List<NfsExportOptionsArgs> nfsExportOptions) {
+            return nfsExportOptions(Output.of(nfsExportOptions));
         }
+
         public Builder nfsExportOptions(NfsExportOptionsArgs... nfsExportOptions) {
             return nfsExportOptions(List.of(nfsExportOptions));
         }
+
         public Builder sourceBackup(@Nullable Output<String> sourceBackup) {
-            this.sourceBackup = sourceBackup;
+            $.sourceBackup = sourceBackup;
             return this;
         }
-        public Builder sourceBackup(@Nullable String sourceBackup) {
-            this.sourceBackup = Codegen.ofNullable(sourceBackup);
-            return this;
-        }        public FileShareConfigArgs build() {
-            return new FileShareConfigArgs(capacityGb, name, nfsExportOptions, sourceBackup);
+
+        public Builder sourceBackup(String sourceBackup) {
+            return sourceBackup(Output.of(sourceBackup));
+        }
+
+        public FileShareConfigArgs build() {
+            return $;
         }
     }
+
 }

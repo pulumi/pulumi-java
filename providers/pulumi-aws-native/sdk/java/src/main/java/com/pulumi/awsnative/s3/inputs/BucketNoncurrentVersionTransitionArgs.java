@@ -6,9 +6,9 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketNoncurrentVersionTransitionStorageClass;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BucketNoncurrentVersionTransitionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="newerNoncurrentVersions")
-      private final @Nullable Output<Integer> newerNoncurrentVersions;
+    private @Nullable Output<Integer> newerNoncurrentVersions;
 
-    public Output<Integer> newerNoncurrentVersions() {
-        return this.newerNoncurrentVersions == null ? Codegen.empty() : this.newerNoncurrentVersions;
+    public Optional<Output<Integer>> newerNoncurrentVersions() {
+        return Optional.ofNullable(this.newerNoncurrentVersions);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="storageClass", required=true)
-      private final Output<BucketNoncurrentVersionTransitionStorageClass> storageClass;
+    private Output<BucketNoncurrentVersionTransitionStorageClass> storageClass;
 
     public Output<BucketNoncurrentVersionTransitionStorageClass> storageClass() {
         return this.storageClass;
@@ -47,76 +47,70 @@ public final class BucketNoncurrentVersionTransitionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="transitionInDays", required=true)
-      private final Output<Integer> transitionInDays;
+    private Output<Integer> transitionInDays;
 
     public Output<Integer> transitionInDays() {
         return this.transitionInDays;
     }
 
-    public BucketNoncurrentVersionTransitionArgs(
-        @Nullable Output<Integer> newerNoncurrentVersions,
-        Output<BucketNoncurrentVersionTransitionStorageClass> storageClass,
-        Output<Integer> transitionInDays) {
-        this.newerNoncurrentVersions = newerNoncurrentVersions;
-        this.storageClass = Objects.requireNonNull(storageClass, "expected parameter 'storageClass' to be non-null");
-        this.transitionInDays = Objects.requireNonNull(transitionInDays, "expected parameter 'transitionInDays' to be non-null");
-    }
+    private BucketNoncurrentVersionTransitionArgs() {}
 
-    private BucketNoncurrentVersionTransitionArgs() {
-        this.newerNoncurrentVersions = Codegen.empty();
-        this.storageClass = Codegen.empty();
-        this.transitionInDays = Codegen.empty();
+    private BucketNoncurrentVersionTransitionArgs(BucketNoncurrentVersionTransitionArgs $) {
+        this.newerNoncurrentVersions = $.newerNoncurrentVersions;
+        this.storageClass = $.storageClass;
+        this.transitionInDays = $.transitionInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketNoncurrentVersionTransitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> newerNoncurrentVersions;
-        private Output<BucketNoncurrentVersionTransitionStorageClass> storageClass;
-        private Output<Integer> transitionInDays;
+        private BucketNoncurrentVersionTransitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketNoncurrentVersionTransitionArgs();
         }
 
         public Builder(BucketNoncurrentVersionTransitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.newerNoncurrentVersions = defaults.newerNoncurrentVersions;
-    	      this.storageClass = defaults.storageClass;
-    	      this.transitionInDays = defaults.transitionInDays;
+            $ = new BucketNoncurrentVersionTransitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder newerNoncurrentVersions(@Nullable Output<Integer> newerNoncurrentVersions) {
-            this.newerNoncurrentVersions = newerNoncurrentVersions;
+            $.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
-        public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
-            this.newerNoncurrentVersions = Codegen.ofNullable(newerNoncurrentVersions);
-            return this;
+
+        public Builder newerNoncurrentVersions(Integer newerNoncurrentVersions) {
+            return newerNoncurrentVersions(Output.of(newerNoncurrentVersions));
         }
+
         public Builder storageClass(Output<BucketNoncurrentVersionTransitionStorageClass> storageClass) {
-            this.storageClass = Objects.requireNonNull(storageClass);
+            $.storageClass = storageClass;
             return this;
         }
+
         public Builder storageClass(BucketNoncurrentVersionTransitionStorageClass storageClass) {
-            this.storageClass = Output.of(Objects.requireNonNull(storageClass));
-            return this;
+            return storageClass(Output.of(storageClass));
         }
+
         public Builder transitionInDays(Output<Integer> transitionInDays) {
-            this.transitionInDays = Objects.requireNonNull(transitionInDays);
+            $.transitionInDays = transitionInDays;
             return this;
         }
+
         public Builder transitionInDays(Integer transitionInDays) {
-            this.transitionInDays = Output.of(Objects.requireNonNull(transitionInDays));
-            return this;
-        }        public BucketNoncurrentVersionTransitionArgs build() {
-            return new BucketNoncurrentVersionTransitionArgs(newerNoncurrentVersions, storageClass, transitionInDays);
+            return transitionInDays(Output.of(transitionInDays));
+        }
+
+        public BucketNoncurrentVersionTransitionArgs build() {
+            $.storageClass = Objects.requireNonNull($.storageClass, "expected parameter 'storageClass' to be non-null");
+            $.transitionInDays = Objects.requireNonNull($.transitionInDays, "expected parameter 'transitionInDays' to be non-null");
+            return $;
         }
     }
+
 }

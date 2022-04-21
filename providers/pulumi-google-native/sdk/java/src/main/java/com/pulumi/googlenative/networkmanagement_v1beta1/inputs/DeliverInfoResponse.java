@@ -21,7 +21,7 @@ public final class DeliverInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
@@ -32,55 +32,52 @@ public final class DeliverInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="target", required=true)
-      private final String target;
+    private String target;
 
     public String target() {
         return this.target;
     }
 
-    public DeliverInfoResponse(
-        String resourceUri,
-        String target) {
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private DeliverInfoResponse() {}
 
-    private DeliverInfoResponse() {
-        this.resourceUri = null;
-        this.target = null;
+    private DeliverInfoResponse(DeliverInfoResponse $) {
+        this.resourceUri = $.resourceUri;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliverInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceUri;
-        private String target;
+        private DeliverInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliverInfoResponse();
         }
 
         public Builder(DeliverInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceUri = defaults.resourceUri;
-    	      this.target = defaults.target;
+            $ = new DeliverInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
-        }        public DeliverInfoResponse build() {
-            return new DeliverInfoResponse(resourceUri, target);
+        }
+
+        public DeliverInfoResponse build() {
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

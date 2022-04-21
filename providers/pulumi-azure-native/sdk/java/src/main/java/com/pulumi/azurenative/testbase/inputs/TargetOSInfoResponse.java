@@ -22,7 +22,7 @@ public final class TargetOSInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="osUpdateType", required=true)
-      private final String osUpdateType;
+    private String osUpdateType;
 
     public String osUpdateType() {
         return this.osUpdateType;
@@ -33,58 +33,56 @@ public final class TargetOSInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="targetOSs", required=true)
-      private final List<String> targetOSs;
+    private List<String> targetOSs;
 
     public List<String> targetOSs() {
         return this.targetOSs;
     }
 
-    public TargetOSInfoResponse(
-        String osUpdateType,
-        List<String> targetOSs) {
-        this.osUpdateType = Objects.requireNonNull(osUpdateType, "expected parameter 'osUpdateType' to be non-null");
-        this.targetOSs = Objects.requireNonNull(targetOSs, "expected parameter 'targetOSs' to be non-null");
-    }
+    private TargetOSInfoResponse() {}
 
-    private TargetOSInfoResponse() {
-        this.osUpdateType = null;
-        this.targetOSs = List.of();
+    private TargetOSInfoResponse(TargetOSInfoResponse $) {
+        this.osUpdateType = $.osUpdateType;
+        this.targetOSs = $.targetOSs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetOSInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String osUpdateType;
-        private List<String> targetOSs;
+        private TargetOSInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetOSInfoResponse();
         }
 
         public Builder(TargetOSInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osUpdateType = defaults.osUpdateType;
-    	      this.targetOSs = defaults.targetOSs;
+            $ = new TargetOSInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder osUpdateType(String osUpdateType) {
-            this.osUpdateType = Objects.requireNonNull(osUpdateType);
+            $.osUpdateType = osUpdateType;
             return this;
         }
+
         public Builder targetOSs(List<String> targetOSs) {
-            this.targetOSs = Objects.requireNonNull(targetOSs);
+            $.targetOSs = targetOSs;
             return this;
         }
+
         public Builder targetOSs(String... targetOSs) {
             return targetOSs(List.of(targetOSs));
-        }        public TargetOSInfoResponse build() {
-            return new TargetOSInfoResponse(osUpdateType, targetOSs);
+        }
+
+        public TargetOSInfoResponse build() {
+            $.osUpdateType = Objects.requireNonNull($.osUpdateType, "expected parameter 'osUpdateType' to be non-null");
+            $.targetOSs = Objects.requireNonNull($.targetOSs, "expected parameter 'targetOSs' to be non-null");
+            return $;
         }
     }
+
 }

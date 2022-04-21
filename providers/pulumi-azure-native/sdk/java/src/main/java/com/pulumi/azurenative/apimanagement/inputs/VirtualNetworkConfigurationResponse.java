@@ -23,10 +23,10 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="subnetResourceId")
-      private final @Nullable String subnetResourceId;
+    private @Nullable String subnetResourceId;
 
     public Optional<String> subnetResourceId() {
-        return this.subnetResourceId == null ? Optional.empty() : Optional.ofNullable(this.subnetResourceId);
+        return Optional.ofNullable(this.subnetResourceId);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="subnetname", required=true)
-      private final String subnetname;
+    private String subnetname;
 
     public String subnetname() {
         return this.subnetname;
@@ -45,64 +45,58 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="vnetid", required=true)
-      private final String vnetid;
+    private String vnetid;
 
     public String vnetid() {
         return this.vnetid;
     }
 
-    public VirtualNetworkConfigurationResponse(
-        @Nullable String subnetResourceId,
-        String subnetname,
-        String vnetid) {
-        this.subnetResourceId = subnetResourceId;
-        this.subnetname = Objects.requireNonNull(subnetname, "expected parameter 'subnetname' to be non-null");
-        this.vnetid = Objects.requireNonNull(vnetid, "expected parameter 'vnetid' to be non-null");
-    }
+    private VirtualNetworkConfigurationResponse() {}
 
-    private VirtualNetworkConfigurationResponse() {
-        this.subnetResourceId = null;
-        this.subnetname = null;
-        this.vnetid = null;
+    private VirtualNetworkConfigurationResponse(VirtualNetworkConfigurationResponse $) {
+        this.subnetResourceId = $.subnetResourceId;
+        this.subnetname = $.subnetname;
+        this.vnetid = $.vnetid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String subnetResourceId;
-        private String subnetname;
-        private String vnetid;
+        private VirtualNetworkConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkConfigurationResponse();
         }
 
         public Builder(VirtualNetworkConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetResourceId = defaults.subnetResourceId;
-    	      this.subnetname = defaults.subnetname;
-    	      this.vnetid = defaults.vnetid;
+            $ = new VirtualNetworkConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
-            this.subnetResourceId = subnetResourceId;
+            $.subnetResourceId = subnetResourceId;
             return this;
         }
+
         public Builder subnetname(String subnetname) {
-            this.subnetname = Objects.requireNonNull(subnetname);
+            $.subnetname = subnetname;
             return this;
         }
+
         public Builder vnetid(String vnetid) {
-            this.vnetid = Objects.requireNonNull(vnetid);
+            $.vnetid = vnetid;
             return this;
-        }        public VirtualNetworkConfigurationResponse build() {
-            return new VirtualNetworkConfigurationResponse(subnetResourceId, subnetname, vnetid);
+        }
+
+        public VirtualNetworkConfigurationResponse build() {
+            $.subnetname = Objects.requireNonNull($.subnetname, "expected parameter 'subnetname' to be non-null");
+            $.vnetid = Objects.requireNonNull($.vnetid, "expected parameter 'vnetid' to be non-null");
+            return $;
         }
     }
+
 }

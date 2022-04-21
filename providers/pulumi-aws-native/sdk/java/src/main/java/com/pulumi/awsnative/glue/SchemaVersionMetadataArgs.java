@@ -5,7 +5,6 @@ package com.pulumi.awsnative.glue;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SchemaVersionMetadataArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -30,7 +29,7 @@ public final class SchemaVersionMetadataArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="schemaVersionId", required=true)
-      private final Output<String> schemaVersionId;
+    private Output<String> schemaVersionId;
 
     public Output<String> schemaVersionId() {
         return this.schemaVersionId;
@@ -41,76 +40,71 @@ public final class SchemaVersionMetadataArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public SchemaVersionMetadataArgs(
-        Output<String> key,
-        Output<String> schemaVersionId,
-        Output<String> value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.schemaVersionId = Objects.requireNonNull(schemaVersionId, "expected parameter 'schemaVersionId' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SchemaVersionMetadataArgs() {}
 
-    private SchemaVersionMetadataArgs() {
-        this.key = Codegen.empty();
-        this.schemaVersionId = Codegen.empty();
-        this.value = Codegen.empty();
+    private SchemaVersionMetadataArgs(SchemaVersionMetadataArgs $) {
+        this.key = $.key;
+        this.schemaVersionId = $.schemaVersionId;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaVersionMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private Output<String> schemaVersionId;
-        private Output<String> value;
+        private SchemaVersionMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaVersionMetadataArgs();
         }
 
         public Builder(SchemaVersionMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.schemaVersionId = defaults.schemaVersionId;
-    	      this.value = defaults.value;
+            $ = new SchemaVersionMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder schemaVersionId(Output<String> schemaVersionId) {
-            this.schemaVersionId = Objects.requireNonNull(schemaVersionId);
+            $.schemaVersionId = schemaVersionId;
             return this;
         }
+
         public Builder schemaVersionId(String schemaVersionId) {
-            this.schemaVersionId = Output.of(Objects.requireNonNull(schemaVersionId));
-            return this;
+            return schemaVersionId(Output.of(schemaVersionId));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public SchemaVersionMetadataArgs build() {
-            return new SchemaVersionMetadataArgs(key, schemaVersionId, value);
+            return value(Output.of(value));
+        }
+
+        public SchemaVersionMetadataArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.schemaVersionId = Objects.requireNonNull($.schemaVersionId, "expected parameter 'schemaVersionId' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

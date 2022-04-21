@@ -5,7 +5,6 @@ package com.pulumi.azurenative.storagepool.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class IscsiLunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedDiskAzureResourceId", required=true)
-      private final Output<String> managedDiskAzureResourceId;
+    private Output<String> managedDiskAzureResourceId;
 
     public Output<String> managedDiskAzureResourceId() {
         return this.managedDiskAzureResourceId;
@@ -34,63 +33,60 @@ public final class IscsiLunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public IscsiLunArgs(
-        Output<String> managedDiskAzureResourceId,
-        Output<String> name) {
-        this.managedDiskAzureResourceId = Objects.requireNonNull(managedDiskAzureResourceId, "expected parameter 'managedDiskAzureResourceId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private IscsiLunArgs() {}
 
-    private IscsiLunArgs() {
-        this.managedDiskAzureResourceId = Codegen.empty();
-        this.name = Codegen.empty();
+    private IscsiLunArgs(IscsiLunArgs $) {
+        this.managedDiskAzureResourceId = $.managedDiskAzureResourceId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IscsiLunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> managedDiskAzureResourceId;
-        private Output<String> name;
+        private IscsiLunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IscsiLunArgs();
         }
 
         public Builder(IscsiLunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedDiskAzureResourceId = defaults.managedDiskAzureResourceId;
-    	      this.name = defaults.name;
+            $ = new IscsiLunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managedDiskAzureResourceId(Output<String> managedDiskAzureResourceId) {
-            this.managedDiskAzureResourceId = Objects.requireNonNull(managedDiskAzureResourceId);
+            $.managedDiskAzureResourceId = managedDiskAzureResourceId;
             return this;
         }
+
         public Builder managedDiskAzureResourceId(String managedDiskAzureResourceId) {
-            this.managedDiskAzureResourceId = Output.of(Objects.requireNonNull(managedDiskAzureResourceId));
-            return this;
+            return managedDiskAzureResourceId(Output.of(managedDiskAzureResourceId));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public IscsiLunArgs build() {
-            return new IscsiLunArgs(managedDiskAzureResourceId, name);
+            return name(Output.of(name));
+        }
+
+        public IscsiLunArgs build() {
+            $.managedDiskAzureResourceId = Objects.requireNonNull($.managedDiskAzureResourceId, "expected parameter 'managedDiskAzureResourceId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

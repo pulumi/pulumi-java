@@ -26,10 +26,10 @@ public final class HttpScaleRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="auth")
-      private final @Nullable List<ScaleRuleAuthResponse> auth;
+    private @Nullable List<ScaleRuleAuthResponse> auth;
 
-    public List<ScaleRuleAuthResponse> auth() {
-        return this.auth == null ? List.of() : this.auth;
+    public Optional<List<ScaleRuleAuthResponse>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -37,58 +37,54 @@ public final class HttpScaleRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Map<String,String> metadata;
+    private @Nullable Map<String,String> metadata;
 
-    public Map<String,String> metadata() {
-        return this.metadata == null ? Map.of() : this.metadata;
+    public Optional<Map<String,String>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
-    public HttpScaleRuleResponse(
-        @Nullable List<ScaleRuleAuthResponse> auth,
-        @Nullable Map<String,String> metadata) {
-        this.auth = auth;
-        this.metadata = metadata;
-    }
+    private HttpScaleRuleResponse() {}
 
-    private HttpScaleRuleResponse() {
-        this.auth = List.of();
-        this.metadata = Map.of();
+    private HttpScaleRuleResponse(HttpScaleRuleResponse $) {
+        this.auth = $.auth;
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpScaleRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ScaleRuleAuthResponse> auth;
-        private @Nullable Map<String,String> metadata;
+        private HttpScaleRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpScaleRuleResponse();
         }
 
         public Builder(HttpScaleRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.metadata = defaults.metadata;
+            $ = new HttpScaleRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable List<ScaleRuleAuthResponse> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
+
         public Builder auth(ScaleRuleAuthResponse... auth) {
             return auth(List.of(auth));
         }
+
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
-        }        public HttpScaleRuleResponse build() {
-            return new HttpScaleRuleResponse(auth, metadata);
+        }
+
+        public HttpScaleRuleResponse build() {
+            return $;
         }
     }
+
 }

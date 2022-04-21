@@ -21,45 +21,45 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse extends com.pu
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
+    private PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
     public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
-    public ConnectToSourcePostgreSqlSyncTaskInputResponse(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-    }
+    private ConnectToSourcePostgreSqlSyncTaskInputResponse() {}
 
-    private ConnectToSourcePostgreSqlSyncTaskInputResponse() {
-        this.sourceConnectionInfo = null;
+    private ConnectToSourcePostgreSqlSyncTaskInputResponse(ConnectToSourcePostgreSqlSyncTaskInputResponse $) {
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToSourcePostgreSqlSyncTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PostgreSqlConnectionInfoResponse sourceConnectionInfo;
+        private ConnectToSourcePostgreSqlSyncTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToSourcePostgreSqlSyncTaskInputResponse();
         }
 
         public Builder(ConnectToSourcePostgreSqlSyncTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
+            $ = new ConnectToSourcePostgreSqlSyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
-        }        public ConnectToSourcePostgreSqlSyncTaskInputResponse build() {
-            return new ConnectToSourcePostgreSqlSyncTaskInputResponse(sourceConnectionInfo);
+        }
+
+        public ConnectToSourcePostgreSqlSyncTaskInputResponse build() {
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

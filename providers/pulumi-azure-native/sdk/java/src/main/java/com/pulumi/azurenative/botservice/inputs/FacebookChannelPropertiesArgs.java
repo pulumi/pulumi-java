@@ -6,11 +6,11 @@ package com.pulumi.azurenative.botservice.inputs;
 import com.pulumi.azurenative.botservice.inputs.FacebookPageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -38,10 +38,10 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="appSecret")
-      private final @Nullable Output<String> appSecret;
+    private @Nullable Output<String> appSecret;
 
-    public Output<String> appSecret() {
-        return this.appSecret == null ? Codegen.empty() : this.appSecret;
+    public Optional<Output<String>> appSecret() {
+        return Optional.ofNullable(this.appSecret);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -60,92 +60,84 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="pages")
-      private final @Nullable Output<List<FacebookPageArgs>> pages;
+    private @Nullable Output<List<FacebookPageArgs>> pages;
 
-    public Output<List<FacebookPageArgs>> pages() {
-        return this.pages == null ? Codegen.empty() : this.pages;
+    public Optional<Output<List<FacebookPageArgs>>> pages() {
+        return Optional.ofNullable(this.pages);
     }
 
-    public FacebookChannelPropertiesArgs(
-        Output<String> appId,
-        @Nullable Output<String> appSecret,
-        Output<Boolean> isEnabled,
-        @Nullable Output<List<FacebookPageArgs>> pages) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.appSecret = appSecret;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.pages = pages;
-    }
+    private FacebookChannelPropertiesArgs() {}
 
-    private FacebookChannelPropertiesArgs() {
-        this.appId = Codegen.empty();
-        this.appSecret = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.pages = Codegen.empty();
+    private FacebookChannelPropertiesArgs(FacebookChannelPropertiesArgs $) {
+        this.appId = $.appId;
+        this.appSecret = $.appSecret;
+        this.isEnabled = $.isEnabled;
+        this.pages = $.pages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FacebookChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appId;
-        private @Nullable Output<String> appSecret;
-        private Output<Boolean> isEnabled;
-        private @Nullable Output<List<FacebookPageArgs>> pages;
+        private FacebookChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FacebookChannelPropertiesArgs();
         }
 
         public Builder(FacebookChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.appSecret = defaults.appSecret;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.pages = defaults.pages;
+            $ = new FacebookChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder appSecret(@Nullable Output<String> appSecret) {
-            this.appSecret = appSecret;
+            $.appSecret = appSecret;
             return this;
         }
-        public Builder appSecret(@Nullable String appSecret) {
-            this.appSecret = Codegen.ofNullable(appSecret);
-            return this;
+
+        public Builder appSecret(String appSecret) {
+            return appSecret(Output.of(appSecret));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder pages(@Nullable Output<List<FacebookPageArgs>> pages) {
-            this.pages = pages;
+            $.pages = pages;
             return this;
         }
-        public Builder pages(@Nullable List<FacebookPageArgs> pages) {
-            this.pages = Codegen.ofNullable(pages);
-            return this;
+
+        public Builder pages(List<FacebookPageArgs> pages) {
+            return pages(Output.of(pages));
         }
+
         public Builder pages(FacebookPageArgs... pages) {
             return pages(List.of(pages));
-        }        public FacebookChannelPropertiesArgs build() {
-            return new FacebookChannelPropertiesArgs(appId, appSecret, isEnabled, pages);
+        }
+
+        public FacebookChannelPropertiesArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

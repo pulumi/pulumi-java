@@ -25,10 +25,10 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dnsNameLabel")
-      private final @Nullable String dnsNameLabel;
+    private @Nullable String dnsNameLabel;
 
     public Optional<String> dnsNameLabel() {
-        return this.dnsNameLabel == null ? Optional.empty() : Optional.ofNullable(this.dnsNameLabel);
+        return Optional.ofNullable(this.dnsNameLabel);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fqdn", required=true)
-      private final String fqdn;
+    private String fqdn;
 
     public String fqdn() {
         return this.fqdn;
@@ -47,10 +47,10 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ip")
-      private final @Nullable String ip;
+    private @Nullable String ip;
 
     public Optional<String> ip() {
-        return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
+        return Optional.ofNullable(this.ip);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ports", required=true)
-      private final List<PortResponse> ports;
+    private List<PortResponse> ports;
 
     public List<PortResponse> ports() {
         return this.ports;
@@ -69,85 +69,75 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public IpAddressResponse(
-        @Nullable String dnsNameLabel,
-        String fqdn,
-        @Nullable String ip,
-        List<PortResponse> ports,
-        String type) {
-        this.dnsNameLabel = dnsNameLabel;
-        this.fqdn = Objects.requireNonNull(fqdn, "expected parameter 'fqdn' to be non-null");
-        this.ip = ip;
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private IpAddressResponse() {}
 
-    private IpAddressResponse() {
-        this.dnsNameLabel = null;
-        this.fqdn = null;
-        this.ip = null;
-        this.ports = List.of();
-        this.type = null;
+    private IpAddressResponse(IpAddressResponse $) {
+        this.dnsNameLabel = $.dnsNameLabel;
+        this.fqdn = $.fqdn;
+        this.ip = $.ip;
+        this.ports = $.ports;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpAddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dnsNameLabel;
-        private String fqdn;
-        private @Nullable String ip;
-        private List<PortResponse> ports;
-        private String type;
+        private IpAddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpAddressResponse();
         }
 
         public Builder(IpAddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsNameLabel = defaults.dnsNameLabel;
-    	      this.fqdn = defaults.fqdn;
-    	      this.ip = defaults.ip;
-    	      this.ports = defaults.ports;
-    	      this.type = defaults.type;
+            $ = new IpAddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
-            this.dnsNameLabel = dnsNameLabel;
+            $.dnsNameLabel = dnsNameLabel;
             return this;
         }
+
         public Builder fqdn(String fqdn) {
-            this.fqdn = Objects.requireNonNull(fqdn);
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder ip(@Nullable String ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
+
         public Builder ports(List<PortResponse> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(PortResponse... ports) {
             return ports(List.of(ports));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public IpAddressResponse build() {
-            return new IpAddressResponse(dnsNameLabel, fqdn, ip, ports, type);
+        }
+
+        public IpAddressResponse build() {
+            $.fqdn = Objects.requireNonNull($.fqdn, "expected parameter 'fqdn' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

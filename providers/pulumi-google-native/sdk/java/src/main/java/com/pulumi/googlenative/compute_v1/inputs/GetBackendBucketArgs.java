@@ -15,62 +15,58 @@ public final class GetBackendBucketArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetBackendBucketArgs Empty = new GetBackendBucketArgs();
 
     @Import(name="backendBucket", required=true)
-      private final String backendBucket;
+    private String backendBucket;
 
     public String backendBucket() {
         return this.backendBucket;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetBackendBucketArgs(
-        String backendBucket,
-        @Nullable String project) {
-        this.backendBucket = Objects.requireNonNull(backendBucket, "expected parameter 'backendBucket' to be non-null");
-        this.project = project;
-    }
+    private GetBackendBucketArgs() {}
 
-    private GetBackendBucketArgs() {
-        this.backendBucket = null;
-        this.project = null;
+    private GetBackendBucketArgs(GetBackendBucketArgs $) {
+        this.backendBucket = $.backendBucket;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendBucketArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backendBucket;
-        private @Nullable String project;
+        private GetBackendBucketArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendBucketArgs();
         }
 
         public Builder(GetBackendBucketArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendBucket = defaults.backendBucket;
-    	      this.project = defaults.project;
+            $ = new GetBackendBucketArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendBucket(String backendBucket) {
-            this.backendBucket = Objects.requireNonNull(backendBucket);
+            $.backendBucket = backendBucket;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetBackendBucketArgs build() {
-            return new GetBackendBucketArgs(backendBucket, project);
+        }
+
+        public GetBackendBucketArgs build() {
+            $.backendBucket = Objects.requireNonNull($.backendBucket, "expected parameter 'backendBucket' to be non-null");
+            return $;
         }
     }
+
 }

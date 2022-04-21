@@ -5,7 +5,6 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1beta.enums.RecurringScheduleFrequency;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.MonthlyScheduleArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.TimeOfDayArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.osconfig_v1beta.inputs.TimeZoneArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.WeeklyScheduleArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class RecurringScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class RecurringScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="frequency", required=true)
-      private final Output<RecurringScheduleFrequency> frequency;
+    private Output<RecurringScheduleFrequency> frequency;
 
     public Output<RecurringScheduleFrequency> frequency() {
         return this.frequency;
@@ -51,7 +51,7 @@ public final class RecurringScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="monthly", required=true)
-      private final Output<MonthlyScheduleArgs> monthly;
+    private Output<MonthlyScheduleArgs> monthly;
 
     public Output<MonthlyScheduleArgs> monthly() {
         return this.monthly;
@@ -62,10 +62,10 @@ public final class RecurringScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class RecurringScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timeOfDay", required=true)
-      private final Output<TimeOfDayArgs> timeOfDay;
+    private Output<TimeOfDayArgs> timeOfDay;
 
     public Output<TimeOfDayArgs> timeOfDay() {
         return this.timeOfDay;
@@ -84,7 +84,7 @@ public final class RecurringScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timeZone", required=true)
-      private final Output<TimeZoneArgs> timeZone;
+    private Output<TimeZoneArgs> timeZone;
 
     public Output<TimeZoneArgs> timeZone() {
         return this.timeZone;
@@ -95,128 +95,113 @@ public final class RecurringScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="weekly", required=true)
-      private final Output<WeeklyScheduleArgs> weekly;
+    private Output<WeeklyScheduleArgs> weekly;
 
     public Output<WeeklyScheduleArgs> weekly() {
         return this.weekly;
     }
 
-    public RecurringScheduleArgs(
-        @Nullable Output<String> endTime,
-        Output<RecurringScheduleFrequency> frequency,
-        Output<MonthlyScheduleArgs> monthly,
-        @Nullable Output<String> startTime,
-        Output<TimeOfDayArgs> timeOfDay,
-        Output<TimeZoneArgs> timeZone,
-        Output<WeeklyScheduleArgs> weekly) {
-        this.endTime = endTime;
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.monthly = Objects.requireNonNull(monthly, "expected parameter 'monthly' to be non-null");
-        this.startTime = startTime;
-        this.timeOfDay = Objects.requireNonNull(timeOfDay, "expected parameter 'timeOfDay' to be non-null");
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-        this.weekly = Objects.requireNonNull(weekly, "expected parameter 'weekly' to be non-null");
-    }
+    private RecurringScheduleArgs() {}
 
-    private RecurringScheduleArgs() {
-        this.endTime = Codegen.empty();
-        this.frequency = Codegen.empty();
-        this.monthly = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.timeOfDay = Codegen.empty();
-        this.timeZone = Codegen.empty();
-        this.weekly = Codegen.empty();
+    private RecurringScheduleArgs(RecurringScheduleArgs $) {
+        this.endTime = $.endTime;
+        this.frequency = $.frequency;
+        this.monthly = $.monthly;
+        this.startTime = $.startTime;
+        this.timeOfDay = $.timeOfDay;
+        this.timeZone = $.timeZone;
+        this.weekly = $.weekly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurringScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endTime;
-        private Output<RecurringScheduleFrequency> frequency;
-        private Output<MonthlyScheduleArgs> monthly;
-        private @Nullable Output<String> startTime;
-        private Output<TimeOfDayArgs> timeOfDay;
-        private Output<TimeZoneArgs> timeZone;
-        private Output<WeeklyScheduleArgs> weekly;
+        private RecurringScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurringScheduleArgs();
         }
 
         public Builder(RecurringScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.frequency = defaults.frequency;
-    	      this.monthly = defaults.monthly;
-    	      this.startTime = defaults.startTime;
-    	      this.timeOfDay = defaults.timeOfDay;
-    	      this.timeZone = defaults.timeZone;
-    	      this.weekly = defaults.weekly;
+            $ = new RecurringScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder frequency(Output<RecurringScheduleFrequency> frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder frequency(RecurringScheduleFrequency frequency) {
-            this.frequency = Output.of(Objects.requireNonNull(frequency));
-            return this;
+            return frequency(Output.of(frequency));
         }
+
         public Builder monthly(Output<MonthlyScheduleArgs> monthly) {
-            this.monthly = Objects.requireNonNull(monthly);
+            $.monthly = monthly;
             return this;
         }
+
         public Builder monthly(MonthlyScheduleArgs monthly) {
-            this.monthly = Output.of(Objects.requireNonNull(monthly));
-            return this;
+            return monthly(Output.of(monthly));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder timeOfDay(Output<TimeOfDayArgs> timeOfDay) {
-            this.timeOfDay = Objects.requireNonNull(timeOfDay);
+            $.timeOfDay = timeOfDay;
             return this;
         }
+
         public Builder timeOfDay(TimeOfDayArgs timeOfDay) {
-            this.timeOfDay = Output.of(Objects.requireNonNull(timeOfDay));
-            return this;
+            return timeOfDay(Output.of(timeOfDay));
         }
+
         public Builder timeZone(Output<TimeZoneArgs> timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
         }
+
         public Builder timeZone(TimeZoneArgs timeZone) {
-            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
-            return this;
+            return timeZone(Output.of(timeZone));
         }
+
         public Builder weekly(Output<WeeklyScheduleArgs> weekly) {
-            this.weekly = Objects.requireNonNull(weekly);
+            $.weekly = weekly;
             return this;
         }
+
         public Builder weekly(WeeklyScheduleArgs weekly) {
-            this.weekly = Output.of(Objects.requireNonNull(weekly));
-            return this;
-        }        public RecurringScheduleArgs build() {
-            return new RecurringScheduleArgs(endTime, frequency, monthly, startTime, timeOfDay, timeZone, weekly);
+            return weekly(Output.of(weekly));
+        }
+
+        public RecurringScheduleArgs build() {
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            $.monthly = Objects.requireNonNull($.monthly, "expected parameter 'monthly' to be non-null");
+            $.timeOfDay = Objects.requireNonNull($.timeOfDay, "expected parameter 'timeOfDay' to be non-null");
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            $.weekly = Objects.requireNonNull($.weekly, "expected parameter 'weekly' to be non-null");
+            return $;
         }
     }
+
 }

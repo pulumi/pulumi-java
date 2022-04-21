@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class SimpleRetentionPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="retentionDuration")
-      private final @Nullable Output<RetentionDurationArgs> retentionDuration;
+    private @Nullable Output<RetentionDurationArgs> retentionDuration;
 
-    public Output<RetentionDurationArgs> retentionDuration() {
-        return this.retentionDuration == null ? Codegen.empty() : this.retentionDuration;
+    public Optional<Output<RetentionDurationArgs>> retentionDuration() {
+        return Optional.ofNullable(this.retentionDuration);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class SimpleRetentionPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="retentionPolicyType", required=true)
-      private final Output<String> retentionPolicyType;
+    private Output<String> retentionPolicyType;
 
     public Output<String> retentionPolicyType() {
         return this.retentionPolicyType;
     }
 
-    public SimpleRetentionPolicyArgs(
-        @Nullable Output<RetentionDurationArgs> retentionDuration,
-        Output<String> retentionPolicyType) {
-        this.retentionDuration = retentionDuration;
-        this.retentionPolicyType = Codegen.stringProp("retentionPolicyType").output().arg(retentionPolicyType).require();
-    }
+    private SimpleRetentionPolicyArgs() {}
 
-    private SimpleRetentionPolicyArgs() {
-        this.retentionDuration = Codegen.empty();
-        this.retentionPolicyType = Codegen.empty();
+    private SimpleRetentionPolicyArgs(SimpleRetentionPolicyArgs $) {
+        this.retentionDuration = $.retentionDuration;
+        this.retentionPolicyType = $.retentionPolicyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SimpleRetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RetentionDurationArgs> retentionDuration;
-        private Output<String> retentionPolicyType;
+        private SimpleRetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SimpleRetentionPolicyArgs();
         }
 
         public Builder(SimpleRetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retentionDuration = defaults.retentionDuration;
-    	      this.retentionPolicyType = defaults.retentionPolicyType;
+            $ = new SimpleRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder retentionDuration(@Nullable Output<RetentionDurationArgs> retentionDuration) {
-            this.retentionDuration = retentionDuration;
+            $.retentionDuration = retentionDuration;
             return this;
         }
-        public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
-            this.retentionDuration = Codegen.ofNullable(retentionDuration);
-            return this;
+
+        public Builder retentionDuration(RetentionDurationArgs retentionDuration) {
+            return retentionDuration(Output.of(retentionDuration));
         }
+
         public Builder retentionPolicyType(Output<String> retentionPolicyType) {
-            this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
+            $.retentionPolicyType = retentionPolicyType;
             return this;
         }
+
         public Builder retentionPolicyType(String retentionPolicyType) {
-            this.retentionPolicyType = Output.of(Objects.requireNonNull(retentionPolicyType));
-            return this;
-        }        public SimpleRetentionPolicyArgs build() {
-            return new SimpleRetentionPolicyArgs(retentionDuration, retentionPolicyType);
+            return retentionPolicyType(Output.of(retentionPolicyType));
+        }
+
+        public SimpleRetentionPolicyArgs build() {
+            $.retentionPolicyType = Codegen.stringProp("retentionPolicyType").output().arg($.retentionPolicyType).require();
+            return $;
         }
     }
+
 }

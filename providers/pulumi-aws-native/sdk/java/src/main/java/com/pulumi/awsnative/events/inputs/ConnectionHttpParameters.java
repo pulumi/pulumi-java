@@ -16,87 +16,82 @@ public final class ConnectionHttpParameters extends com.pulumi.resources.InvokeA
     public static final ConnectionHttpParameters Empty = new ConnectionHttpParameters();
 
     @Import(name="bodyParameters")
-      private final @Nullable List<ConnectionParameter> bodyParameters;
+    private @Nullable List<ConnectionParameter> bodyParameters;
 
-    public List<ConnectionParameter> bodyParameters() {
-        return this.bodyParameters == null ? List.of() : this.bodyParameters;
+    public Optional<List<ConnectionParameter>> bodyParameters() {
+        return Optional.ofNullable(this.bodyParameters);
     }
 
     @Import(name="headerParameters")
-      private final @Nullable List<ConnectionParameter> headerParameters;
+    private @Nullable List<ConnectionParameter> headerParameters;
 
-    public List<ConnectionParameter> headerParameters() {
-        return this.headerParameters == null ? List.of() : this.headerParameters;
+    public Optional<List<ConnectionParameter>> headerParameters() {
+        return Optional.ofNullable(this.headerParameters);
     }
 
     @Import(name="queryStringParameters")
-      private final @Nullable List<ConnectionParameter> queryStringParameters;
+    private @Nullable List<ConnectionParameter> queryStringParameters;
 
-    public List<ConnectionParameter> queryStringParameters() {
-        return this.queryStringParameters == null ? List.of() : this.queryStringParameters;
+    public Optional<List<ConnectionParameter>> queryStringParameters() {
+        return Optional.ofNullable(this.queryStringParameters);
     }
 
-    public ConnectionHttpParameters(
-        @Nullable List<ConnectionParameter> bodyParameters,
-        @Nullable List<ConnectionParameter> headerParameters,
-        @Nullable List<ConnectionParameter> queryStringParameters) {
-        this.bodyParameters = bodyParameters;
-        this.headerParameters = headerParameters;
-        this.queryStringParameters = queryStringParameters;
-    }
+    private ConnectionHttpParameters() {}
 
-    private ConnectionHttpParameters() {
-        this.bodyParameters = List.of();
-        this.headerParameters = List.of();
-        this.queryStringParameters = List.of();
+    private ConnectionHttpParameters(ConnectionHttpParameters $) {
+        this.bodyParameters = $.bodyParameters;
+        this.headerParameters = $.headerParameters;
+        this.queryStringParameters = $.queryStringParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionHttpParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ConnectionParameter> bodyParameters;
-        private @Nullable List<ConnectionParameter> headerParameters;
-        private @Nullable List<ConnectionParameter> queryStringParameters;
+        private ConnectionHttpParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionHttpParameters();
         }
 
         public Builder(ConnectionHttpParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bodyParameters = defaults.bodyParameters;
-    	      this.headerParameters = defaults.headerParameters;
-    	      this.queryStringParameters = defaults.queryStringParameters;
+            $ = new ConnectionHttpParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder bodyParameters(@Nullable List<ConnectionParameter> bodyParameters) {
-            this.bodyParameters = bodyParameters;
+            $.bodyParameters = bodyParameters;
             return this;
         }
+
         public Builder bodyParameters(ConnectionParameter... bodyParameters) {
             return bodyParameters(List.of(bodyParameters));
         }
+
         public Builder headerParameters(@Nullable List<ConnectionParameter> headerParameters) {
-            this.headerParameters = headerParameters;
+            $.headerParameters = headerParameters;
             return this;
         }
+
         public Builder headerParameters(ConnectionParameter... headerParameters) {
             return headerParameters(List.of(headerParameters));
         }
+
         public Builder queryStringParameters(@Nullable List<ConnectionParameter> queryStringParameters) {
-            this.queryStringParameters = queryStringParameters;
+            $.queryStringParameters = queryStringParameters;
             return this;
         }
+
         public Builder queryStringParameters(ConnectionParameter... queryStringParameters) {
             return queryStringParameters(List.of(queryStringParameters));
-        }        public ConnectionHttpParameters build() {
-            return new ConnectionHttpParameters(bodyParameters, headerParameters, queryStringParameters);
+        }
+
+        public ConnectionHttpParameters build() {
+            return $;
         }
     }
+
 }

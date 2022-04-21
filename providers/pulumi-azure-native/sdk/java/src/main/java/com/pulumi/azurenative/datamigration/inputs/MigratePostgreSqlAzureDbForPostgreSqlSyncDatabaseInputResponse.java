@@ -24,10 +24,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * 
      */
     @Import(name="migrationSetting")
-      private final @Nullable Map<String,String> migrationSetting;
+    private @Nullable Map<String,String> migrationSetting;
 
-    public Map<String,String> migrationSetting() {
-        return this.migrationSetting == null ? Map.of() : this.migrationSetting;
+    public Optional<Map<String,String>> migrationSetting() {
+        return Optional.ofNullable(this.migrationSetting);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * 
      */
     @Import(name="sourceSetting")
-      private final @Nullable Map<String,String> sourceSetting;
+    private @Nullable Map<String,String> sourceSetting;
 
-    public Map<String,String> sourceSetting() {
-        return this.sourceSetting == null ? Map.of() : this.sourceSetting;
+    public Optional<Map<String,String>> sourceSetting() {
+        return Optional.ofNullable(this.sourceSetting);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * 
      */
     @Import(name="targetDatabaseName")
-      private final @Nullable String targetDatabaseName;
+    private @Nullable String targetDatabaseName;
 
     public Optional<String> targetDatabaseName() {
-        return this.targetDatabaseName == null ? Optional.empty() : Optional.ofNullable(this.targetDatabaseName);
+        return Optional.ofNullable(this.targetDatabaseName);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * 
      */
     @Import(name="targetSetting")
-      private final @Nullable Map<String,String> targetSetting;
+    private @Nullable Map<String,String> targetSetting;
 
-    public Map<String,String> targetSetting() {
-        return this.targetSetting == null ? Map.of() : this.targetSetting;
+    public Optional<Map<String,String>> targetSetting() {
+        return Optional.ofNullable(this.targetSetting);
     }
 
-    public MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse(
-        @Nullable Map<String,String> migrationSetting,
-        @Nullable String name,
-        @Nullable Map<String,String> sourceSetting,
-        @Nullable String targetDatabaseName,
-        @Nullable Map<String,String> targetSetting) {
-        this.migrationSetting = migrationSetting;
-        this.name = name;
-        this.sourceSetting = sourceSetting;
-        this.targetDatabaseName = targetDatabaseName;
-        this.targetSetting = targetSetting;
-    }
+    private MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse() {}
 
-    private MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse() {
-        this.migrationSetting = Map.of();
-        this.name = null;
-        this.sourceSetting = Map.of();
-        this.targetDatabaseName = null;
-        this.targetSetting = Map.of();
+    private MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse(MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse $) {
+        this.migrationSetting = $.migrationSetting;
+        this.name = $.name;
+        this.sourceSetting = $.sourceSetting;
+        this.targetDatabaseName = $.targetDatabaseName;
+        this.targetSetting = $.targetSetting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> migrationSetting;
-        private @Nullable String name;
-        private @Nullable Map<String,String> sourceSetting;
-        private @Nullable String targetDatabaseName;
-        private @Nullable Map<String,String> targetSetting;
+        private MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse();
         }
 
         public Builder(MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.migrationSetting = defaults.migrationSetting;
-    	      this.name = defaults.name;
-    	      this.sourceSetting = defaults.sourceSetting;
-    	      this.targetDatabaseName = defaults.targetDatabaseName;
-    	      this.targetSetting = defaults.targetSetting;
+            $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
-            this.migrationSetting = migrationSetting;
+            $.migrationSetting = migrationSetting;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
-            this.sourceSetting = sourceSetting;
+            $.sourceSetting = sourceSetting;
             return this;
         }
+
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
-            this.targetDatabaseName = targetDatabaseName;
+            $.targetDatabaseName = targetDatabaseName;
             return this;
         }
+
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
-            this.targetSetting = targetSetting;
+            $.targetSetting = targetSetting;
             return this;
-        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse build() {
-            return new MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse(migrationSetting, name, sourceSetting, targetDatabaseName, targetSetting);
+        }
+
+        public MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse build() {
+            return $;
         }
     }
+
 }

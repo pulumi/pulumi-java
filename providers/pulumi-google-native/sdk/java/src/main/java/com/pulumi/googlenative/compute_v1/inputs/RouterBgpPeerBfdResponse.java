@@ -18,7 +18,7 @@ public final class RouterBgpPeerBfdResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="minReceiveInterval", required=true)
-      private final Integer minReceiveInterval;
+    private Integer minReceiveInterval;
 
     public Integer minReceiveInterval() {
         return this.minReceiveInterval;
@@ -29,7 +29,7 @@ public final class RouterBgpPeerBfdResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="minTransmitInterval", required=true)
-      private final Integer minTransmitInterval;
+    private Integer minTransmitInterval;
 
     public Integer minTransmitInterval() {
         return this.minTransmitInterval;
@@ -40,7 +40,7 @@ public final class RouterBgpPeerBfdResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="multiplier", required=true)
-      private final Integer multiplier;
+    private Integer multiplier;
 
     public Integer multiplier() {
         return this.multiplier;
@@ -51,73 +51,66 @@ public final class RouterBgpPeerBfdResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sessionInitializationMode", required=true)
-      private final String sessionInitializationMode;
+    private String sessionInitializationMode;
 
     public String sessionInitializationMode() {
         return this.sessionInitializationMode;
     }
 
-    public RouterBgpPeerBfdResponse(
-        Integer minReceiveInterval,
-        Integer minTransmitInterval,
-        Integer multiplier,
-        String sessionInitializationMode) {
-        this.minReceiveInterval = Objects.requireNonNull(minReceiveInterval, "expected parameter 'minReceiveInterval' to be non-null");
-        this.minTransmitInterval = Objects.requireNonNull(minTransmitInterval, "expected parameter 'minTransmitInterval' to be non-null");
-        this.multiplier = Objects.requireNonNull(multiplier, "expected parameter 'multiplier' to be non-null");
-        this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode, "expected parameter 'sessionInitializationMode' to be non-null");
-    }
+    private RouterBgpPeerBfdResponse() {}
 
-    private RouterBgpPeerBfdResponse() {
-        this.minReceiveInterval = null;
-        this.minTransmitInterval = null;
-        this.multiplier = null;
-        this.sessionInitializationMode = null;
+    private RouterBgpPeerBfdResponse(RouterBgpPeerBfdResponse $) {
+        this.minReceiveInterval = $.minReceiveInterval;
+        this.minTransmitInterval = $.minTransmitInterval;
+        this.multiplier = $.multiplier;
+        this.sessionInitializationMode = $.sessionInitializationMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterBgpPeerBfdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer minReceiveInterval;
-        private Integer minTransmitInterval;
-        private Integer multiplier;
-        private String sessionInitializationMode;
+        private RouterBgpPeerBfdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterBgpPeerBfdResponse();
         }
 
         public Builder(RouterBgpPeerBfdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minReceiveInterval = defaults.minReceiveInterval;
-    	      this.minTransmitInterval = defaults.minTransmitInterval;
-    	      this.multiplier = defaults.multiplier;
-    	      this.sessionInitializationMode = defaults.sessionInitializationMode;
+            $ = new RouterBgpPeerBfdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder minReceiveInterval(Integer minReceiveInterval) {
-            this.minReceiveInterval = Objects.requireNonNull(minReceiveInterval);
+            $.minReceiveInterval = minReceiveInterval;
             return this;
         }
+
         public Builder minTransmitInterval(Integer minTransmitInterval) {
-            this.minTransmitInterval = Objects.requireNonNull(minTransmitInterval);
+            $.minTransmitInterval = minTransmitInterval;
             return this;
         }
+
         public Builder multiplier(Integer multiplier) {
-            this.multiplier = Objects.requireNonNull(multiplier);
+            $.multiplier = multiplier;
             return this;
         }
+
         public Builder sessionInitializationMode(String sessionInitializationMode) {
-            this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
+            $.sessionInitializationMode = sessionInitializationMode;
             return this;
-        }        public RouterBgpPeerBfdResponse build() {
-            return new RouterBgpPeerBfdResponse(minReceiveInterval, minTransmitInterval, multiplier, sessionInitializationMode);
+        }
+
+        public RouterBgpPeerBfdResponse build() {
+            $.minReceiveInterval = Objects.requireNonNull($.minReceiveInterval, "expected parameter 'minReceiveInterval' to be non-null");
+            $.minTransmitInterval = Objects.requireNonNull($.minTransmitInterval, "expected parameter 'minTransmitInterval' to be non-null");
+            $.multiplier = Objects.requireNonNull($.multiplier, "expected parameter 'multiplier' to be non-null");
+            $.sessionInitializationMode = Objects.requireNonNull($.sessionInitializationMode, "expected parameter 'sessionInitializationMode' to be non-null");
+            return $;
         }
     }
+
 }

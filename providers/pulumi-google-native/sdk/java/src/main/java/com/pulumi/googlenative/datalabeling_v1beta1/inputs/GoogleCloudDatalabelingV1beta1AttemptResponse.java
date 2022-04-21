@@ -19,7 +19,7 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends com.pul
     public static final GoogleCloudDatalabelingV1beta1AttemptResponse Empty = new GoogleCloudDatalabelingV1beta1AttemptResponse();
 
     @Import(name="attemptTime", required=true)
-      private final String attemptTime;
+    private String attemptTime;
 
     public String attemptTime() {
         return this.attemptTime;
@@ -30,58 +30,56 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends com.pul
      * 
      */
     @Import(name="partialFailures", required=true)
-      private final List<GoogleRpcStatusResponse> partialFailures;
+    private List<GoogleRpcStatusResponse> partialFailures;
 
     public List<GoogleRpcStatusResponse> partialFailures() {
         return this.partialFailures;
     }
 
-    public GoogleCloudDatalabelingV1beta1AttemptResponse(
-        String attemptTime,
-        List<GoogleRpcStatusResponse> partialFailures) {
-        this.attemptTime = Objects.requireNonNull(attemptTime, "expected parameter 'attemptTime' to be non-null");
-        this.partialFailures = Objects.requireNonNull(partialFailures, "expected parameter 'partialFailures' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1AttemptResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1AttemptResponse() {
-        this.attemptTime = null;
-        this.partialFailures = List.of();
+    private GoogleCloudDatalabelingV1beta1AttemptResponse(GoogleCloudDatalabelingV1beta1AttemptResponse $) {
+        this.attemptTime = $.attemptTime;
+        this.partialFailures = $.partialFailures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1AttemptResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attemptTime;
-        private List<GoogleRpcStatusResponse> partialFailures;
+        private GoogleCloudDatalabelingV1beta1AttemptResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1AttemptResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1AttemptResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attemptTime = defaults.attemptTime;
-    	      this.partialFailures = defaults.partialFailures;
+            $ = new GoogleCloudDatalabelingV1beta1AttemptResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attemptTime(String attemptTime) {
-            this.attemptTime = Objects.requireNonNull(attemptTime);
+            $.attemptTime = attemptTime;
             return this;
         }
+
         public Builder partialFailures(List<GoogleRpcStatusResponse> partialFailures) {
-            this.partialFailures = Objects.requireNonNull(partialFailures);
+            $.partialFailures = partialFailures;
             return this;
         }
+
         public Builder partialFailures(GoogleRpcStatusResponse... partialFailures) {
             return partialFailures(List.of(partialFailures));
-        }        public GoogleCloudDatalabelingV1beta1AttemptResponse build() {
-            return new GoogleCloudDatalabelingV1beta1AttemptResponse(attemptTime, partialFailures);
+        }
+
+        public GoogleCloudDatalabelingV1beta1AttemptResponse build() {
+            $.attemptTime = Objects.requireNonNull($.attemptTime, "expected parameter 'attemptTime' to be non-null");
+            $.partialFailures = Objects.requireNonNull($.partialFailures, "expected parameter 'partialFailures' to be non-null");
+            return $;
         }
     }
+
 }

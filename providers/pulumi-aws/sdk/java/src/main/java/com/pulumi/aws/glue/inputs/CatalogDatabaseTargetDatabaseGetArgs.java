@@ -5,7 +5,6 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="catalogId", required=true)
-      private final Output<String> catalogId;
+    private Output<String> catalogId;
 
     public Output<String> catalogId() {
         return this.catalogId;
@@ -30,63 +29,60 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
     }
 
-    public CatalogDatabaseTargetDatabaseGetArgs(
-        Output<String> catalogId,
-        Output<String> databaseName) {
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-    }
+    private CatalogDatabaseTargetDatabaseGetArgs() {}
 
-    private CatalogDatabaseTargetDatabaseGetArgs() {
-        this.catalogId = Codegen.empty();
-        this.databaseName = Codegen.empty();
+    private CatalogDatabaseTargetDatabaseGetArgs(CatalogDatabaseTargetDatabaseGetArgs $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CatalogDatabaseTargetDatabaseGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> catalogId;
-        private Output<String> databaseName;
+        private CatalogDatabaseTargetDatabaseGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CatalogDatabaseTargetDatabaseGetArgs();
         }
 
         public Builder(CatalogDatabaseTargetDatabaseGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
+            $ = new CatalogDatabaseTargetDatabaseGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(Output<String> catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder catalogId(String catalogId) {
-            this.catalogId = Output.of(Objects.requireNonNull(catalogId));
-            return this;
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
-        }        public CatalogDatabaseTargetDatabaseGetArgs build() {
-            return new CatalogDatabaseTargetDatabaseGetArgs(catalogId, databaseName);
+            return databaseName(Output.of(databaseName));
+        }
+
+        public CatalogDatabaseTargetDatabaseGetArgs build() {
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            return $;
         }
     }
+
 }

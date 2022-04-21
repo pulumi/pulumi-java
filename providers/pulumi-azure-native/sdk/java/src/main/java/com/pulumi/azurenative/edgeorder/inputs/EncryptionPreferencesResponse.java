@@ -23,45 +23,44 @@ public final class EncryptionPreferencesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="doubleEncryptionStatus")
-      private final @Nullable String doubleEncryptionStatus;
+    private @Nullable String doubleEncryptionStatus;
 
     public Optional<String> doubleEncryptionStatus() {
-        return this.doubleEncryptionStatus == null ? Optional.empty() : Optional.ofNullable(this.doubleEncryptionStatus);
+        return Optional.ofNullable(this.doubleEncryptionStatus);
     }
 
-    public EncryptionPreferencesResponse(@Nullable String doubleEncryptionStatus) {
-        this.doubleEncryptionStatus = doubleEncryptionStatus;
-    }
+    private EncryptionPreferencesResponse() {}
 
-    private EncryptionPreferencesResponse() {
-        this.doubleEncryptionStatus = null;
+    private EncryptionPreferencesResponse(EncryptionPreferencesResponse $) {
+        this.doubleEncryptionStatus = $.doubleEncryptionStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPreferencesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String doubleEncryptionStatus;
+        private EncryptionPreferencesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPreferencesResponse();
         }
 
         public Builder(EncryptionPreferencesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.doubleEncryptionStatus = defaults.doubleEncryptionStatus;
+            $ = new EncryptionPreferencesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder doubleEncryptionStatus(@Nullable String doubleEncryptionStatus) {
-            this.doubleEncryptionStatus = doubleEncryptionStatus;
+            $.doubleEncryptionStatus = doubleEncryptionStatus;
             return this;
-        }        public EncryptionPreferencesResponse build() {
-            return new EncryptionPreferencesResponse(doubleEncryptionStatus);
+        }
+
+        public EncryptionPreferencesResponse build() {
+            return $;
         }
     }
+
 }

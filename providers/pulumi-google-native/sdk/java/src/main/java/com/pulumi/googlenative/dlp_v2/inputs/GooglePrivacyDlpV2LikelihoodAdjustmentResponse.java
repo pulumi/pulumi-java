@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends com.pu
      * 
      */
     @Import(name="fixedLikelihood", required=true)
-      private final String fixedLikelihood;
+    private String fixedLikelihood;
 
     public String fixedLikelihood() {
         return this.fixedLikelihood;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends com.pu
      * 
      */
     @Import(name="relativeLikelihood", required=true)
-      private final Integer relativeLikelihood;
+    private Integer relativeLikelihood;
 
     public Integer relativeLikelihood() {
         return this.relativeLikelihood;
     }
 
-    public GooglePrivacyDlpV2LikelihoodAdjustmentResponse(
-        String fixedLikelihood,
-        Integer relativeLikelihood) {
-        this.fixedLikelihood = Objects.requireNonNull(fixedLikelihood, "expected parameter 'fixedLikelihood' to be non-null");
-        this.relativeLikelihood = Objects.requireNonNull(relativeLikelihood, "expected parameter 'relativeLikelihood' to be non-null");
-    }
+    private GooglePrivacyDlpV2LikelihoodAdjustmentResponse() {}
 
-    private GooglePrivacyDlpV2LikelihoodAdjustmentResponse() {
-        this.fixedLikelihood = null;
-        this.relativeLikelihood = null;
+    private GooglePrivacyDlpV2LikelihoodAdjustmentResponse(GooglePrivacyDlpV2LikelihoodAdjustmentResponse $) {
+        this.fixedLikelihood = $.fixedLikelihood;
+        this.relativeLikelihood = $.relativeLikelihood;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2LikelihoodAdjustmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fixedLikelihood;
-        private Integer relativeLikelihood;
+        private GooglePrivacyDlpV2LikelihoodAdjustmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2LikelihoodAdjustmentResponse();
         }
 
         public Builder(GooglePrivacyDlpV2LikelihoodAdjustmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fixedLikelihood = defaults.fixedLikelihood;
-    	      this.relativeLikelihood = defaults.relativeLikelihood;
+            $ = new GooglePrivacyDlpV2LikelihoodAdjustmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fixedLikelihood(String fixedLikelihood) {
-            this.fixedLikelihood = Objects.requireNonNull(fixedLikelihood);
+            $.fixedLikelihood = fixedLikelihood;
             return this;
         }
+
         public Builder relativeLikelihood(Integer relativeLikelihood) {
-            this.relativeLikelihood = Objects.requireNonNull(relativeLikelihood);
+            $.relativeLikelihood = relativeLikelihood;
             return this;
-        }        public GooglePrivacyDlpV2LikelihoodAdjustmentResponse build() {
-            return new GooglePrivacyDlpV2LikelihoodAdjustmentResponse(fixedLikelihood, relativeLikelihood);
+        }
+
+        public GooglePrivacyDlpV2LikelihoodAdjustmentResponse build() {
+            $.fixedLikelihood = Objects.requireNonNull($.fixedLikelihood, "expected parameter 'fixedLikelihood' to be non-null");
+            $.relativeLikelihood = Objects.requireNonNull($.relativeLikelihood, "expected parameter 'relativeLikelihood' to be non-null");
+            return $;
         }
     }
+
 }

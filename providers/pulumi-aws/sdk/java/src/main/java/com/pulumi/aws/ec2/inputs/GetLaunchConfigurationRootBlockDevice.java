@@ -19,7 +19,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
      * 
      */
     @Import(name="deleteOnTermination", required=true)
-      private final Boolean deleteOnTermination;
+    private Boolean deleteOnTermination;
 
     public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
@@ -30,7 +30,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
      * 
      */
     @Import(name="encrypted", required=true)
-      private final Boolean encrypted;
+    private Boolean encrypted;
 
     public Boolean encrypted() {
         return this.encrypted;
@@ -41,7 +41,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
      * 
      */
     @Import(name="iops", required=true)
-      private final Integer iops;
+    private Integer iops;
 
     public Integer iops() {
         return this.iops;
@@ -52,7 +52,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
      * 
      */
     @Import(name="throughput", required=true)
-      private final Boolean throughput;
+    private Boolean throughput;
 
     public Boolean throughput() {
         return this.throughput;
@@ -63,7 +63,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
      * 
      */
     @Import(name="volumeSize", required=true)
-      private final Integer volumeSize;
+    private Integer volumeSize;
 
     public Integer volumeSize() {
         return this.volumeSize;
@@ -74,91 +74,80 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
      * 
      */
     @Import(name="volumeType", required=true)
-      private final String volumeType;
+    private String volumeType;
 
     public String volumeType() {
         return this.volumeType;
     }
 
-    public GetLaunchConfigurationRootBlockDevice(
-        Boolean deleteOnTermination,
-        Boolean encrypted,
-        Integer iops,
-        Boolean throughput,
-        Integer volumeSize,
-        String volumeType) {
-        this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination, "expected parameter 'deleteOnTermination' to be non-null");
-        this.encrypted = Objects.requireNonNull(encrypted, "expected parameter 'encrypted' to be non-null");
-        this.iops = Objects.requireNonNull(iops, "expected parameter 'iops' to be non-null");
-        this.throughput = Objects.requireNonNull(throughput, "expected parameter 'throughput' to be non-null");
-        this.volumeSize = Objects.requireNonNull(volumeSize, "expected parameter 'volumeSize' to be non-null");
-        this.volumeType = Objects.requireNonNull(volumeType, "expected parameter 'volumeType' to be non-null");
-    }
+    private GetLaunchConfigurationRootBlockDevice() {}
 
-    private GetLaunchConfigurationRootBlockDevice() {
-        this.deleteOnTermination = null;
-        this.encrypted = null;
-        this.iops = null;
-        this.throughput = null;
-        this.volumeSize = null;
-        this.volumeType = null;
+    private GetLaunchConfigurationRootBlockDevice(GetLaunchConfigurationRootBlockDevice $) {
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.encrypted = $.encrypted;
+        this.iops = $.iops;
+        this.throughput = $.throughput;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchConfigurationRootBlockDevice defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean deleteOnTermination;
-        private Boolean encrypted;
-        private Integer iops;
-        private Boolean throughput;
-        private Integer volumeSize;
-        private String volumeType;
+        private GetLaunchConfigurationRootBlockDevice $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchConfigurationRootBlockDevice();
         }
 
         public Builder(GetLaunchConfigurationRootBlockDevice defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.encrypted = defaults.encrypted;
-    	      this.iops = defaults.iops;
-    	      this.throughput = defaults.throughput;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new GetLaunchConfigurationRootBlockDevice(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOnTermination(Boolean deleteOnTermination) {
-            this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
+
         public Builder encrypted(Boolean encrypted) {
-            this.encrypted = Objects.requireNonNull(encrypted);
+            $.encrypted = encrypted;
             return this;
         }
+
         public Builder iops(Integer iops) {
-            this.iops = Objects.requireNonNull(iops);
+            $.iops = iops;
             return this;
         }
+
         public Builder throughput(Boolean throughput) {
-            this.throughput = Objects.requireNonNull(throughput);
+            $.throughput = throughput;
             return this;
         }
+
         public Builder volumeSize(Integer volumeSize) {
-            this.volumeSize = Objects.requireNonNull(volumeSize);
+            $.volumeSize = volumeSize;
             return this;
         }
+
         public Builder volumeType(String volumeType) {
-            this.volumeType = Objects.requireNonNull(volumeType);
+            $.volumeType = volumeType;
             return this;
-        }        public GetLaunchConfigurationRootBlockDevice build() {
-            return new GetLaunchConfigurationRootBlockDevice(deleteOnTermination, encrypted, iops, throughput, volumeSize, volumeType);
+        }
+
+        public GetLaunchConfigurationRootBlockDevice build() {
+            $.deleteOnTermination = Objects.requireNonNull($.deleteOnTermination, "expected parameter 'deleteOnTermination' to be non-null");
+            $.encrypted = Objects.requireNonNull($.encrypted, "expected parameter 'encrypted' to be non-null");
+            $.iops = Objects.requireNonNull($.iops, "expected parameter 'iops' to be non-null");
+            $.throughput = Objects.requireNonNull($.throughput, "expected parameter 'throughput' to be non-null");
+            $.volumeSize = Objects.requireNonNull($.volumeSize, "expected parameter 'volumeSize' to be non-null");
+            $.volumeType = Objects.requireNonNull($.volumeType, "expected parameter 'volumeType' to be non-null");
+            return $;
         }
     }
+
 }

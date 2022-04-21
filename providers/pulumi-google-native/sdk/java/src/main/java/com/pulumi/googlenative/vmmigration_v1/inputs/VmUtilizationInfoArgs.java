@@ -5,11 +5,11 @@ package com.pulumi.googlenative.vmmigration_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.vmmigration_v1.inputs.VmUtilizationMetricsArgs;
 import com.pulumi.googlenative.vmmigration_v1.inputs.VmwareVmDetailsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VmUtilizationInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="utilization")
-      private final @Nullable Output<VmUtilizationMetricsArgs> utilization;
+    private @Nullable Output<VmUtilizationMetricsArgs> utilization;
 
-    public Output<VmUtilizationMetricsArgs> utilization() {
-        return this.utilization == null ? Codegen.empty() : this.utilization;
+    public Optional<Output<VmUtilizationMetricsArgs>> utilization() {
+        return Optional.ofNullable(this.utilization);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VmUtilizationInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="vmId")
-      private final @Nullable Output<String> vmId;
+    private @Nullable Output<String> vmId;
 
-    public Output<String> vmId() {
-        return this.vmId == null ? Codegen.empty() : this.vmId;
+    public Optional<Output<String>> vmId() {
+        return Optional.ofNullable(this.vmId);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class VmUtilizationInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="vmwareVmDetails")
-      private final @Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails;
+    private @Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails;
 
-    public Output<VmwareVmDetailsArgs> vmwareVmDetails() {
-        return this.vmwareVmDetails == null ? Codegen.empty() : this.vmwareVmDetails;
+    public Optional<Output<VmwareVmDetailsArgs>> vmwareVmDetails() {
+        return Optional.ofNullable(this.vmwareVmDetails);
     }
 
-    public VmUtilizationInfoArgs(
-        @Nullable Output<VmUtilizationMetricsArgs> utilization,
-        @Nullable Output<String> vmId,
-        @Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails) {
-        this.utilization = utilization;
-        this.vmId = vmId;
-        this.vmwareVmDetails = vmwareVmDetails;
-    }
+    private VmUtilizationInfoArgs() {}
 
-    private VmUtilizationInfoArgs() {
-        this.utilization = Codegen.empty();
-        this.vmId = Codegen.empty();
-        this.vmwareVmDetails = Codegen.empty();
+    private VmUtilizationInfoArgs(VmUtilizationInfoArgs $) {
+        this.utilization = $.utilization;
+        this.vmId = $.vmId;
+        this.vmwareVmDetails = $.vmwareVmDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmUtilizationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VmUtilizationMetricsArgs> utilization;
-        private @Nullable Output<String> vmId;
-        private @Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails;
+        private VmUtilizationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmUtilizationInfoArgs();
         }
 
         public Builder(VmUtilizationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.utilization = defaults.utilization;
-    	      this.vmId = defaults.vmId;
-    	      this.vmwareVmDetails = defaults.vmwareVmDetails;
+            $ = new VmUtilizationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder utilization(@Nullable Output<VmUtilizationMetricsArgs> utilization) {
-            this.utilization = utilization;
+            $.utilization = utilization;
             return this;
         }
-        public Builder utilization(@Nullable VmUtilizationMetricsArgs utilization) {
-            this.utilization = Codegen.ofNullable(utilization);
-            return this;
+
+        public Builder utilization(VmUtilizationMetricsArgs utilization) {
+            return utilization(Output.of(utilization));
         }
+
         public Builder vmId(@Nullable Output<String> vmId) {
-            this.vmId = vmId;
+            $.vmId = vmId;
             return this;
         }
-        public Builder vmId(@Nullable String vmId) {
-            this.vmId = Codegen.ofNullable(vmId);
-            return this;
+
+        public Builder vmId(String vmId) {
+            return vmId(Output.of(vmId));
         }
+
         public Builder vmwareVmDetails(@Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails) {
-            this.vmwareVmDetails = vmwareVmDetails;
+            $.vmwareVmDetails = vmwareVmDetails;
             return this;
         }
-        public Builder vmwareVmDetails(@Nullable VmwareVmDetailsArgs vmwareVmDetails) {
-            this.vmwareVmDetails = Codegen.ofNullable(vmwareVmDetails);
-            return this;
-        }        public VmUtilizationInfoArgs build() {
-            return new VmUtilizationInfoArgs(utilization, vmId, vmwareVmDetails);
+
+        public Builder vmwareVmDetails(VmwareVmDetailsArgs vmwareVmDetails) {
+            return vmwareVmDetails(Output.of(vmwareVmDetails));
+        }
+
+        public VmUtilizationInfoArgs build() {
+            return $;
         }
     }
+
 }

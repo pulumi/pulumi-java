@@ -24,10 +24,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable String databaseName;
+    private @Nullable String databaseName;
 
     public Optional<String> databaseName() {
-        return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elasticPoolName")
-      private final @Nullable String elasticPoolName;
+    private @Nullable String elasticPoolName;
 
     public Optional<String> elasticPoolName() {
-        return this.elasticPoolName == null ? Optional.empty() : Optional.ofNullable(this.elasticPoolName);
+        return Optional.ofNullable(this.elasticPoolName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="membershipType")
-      private final @Nullable String membershipType;
+    private @Nullable String membershipType;
 
     public Optional<String> membershipType() {
-        return this.membershipType == null ? Optional.empty() : Optional.ofNullable(this.membershipType);
+        return Optional.ofNullable(this.membershipType);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="refreshCredential")
-      private final @Nullable String refreshCredential;
+    private @Nullable String refreshCredential;
 
     public Optional<String> refreshCredential() {
-        return this.refreshCredential == null ? Optional.empty() : Optional.ofNullable(this.refreshCredential);
+        return Optional.ofNullable(this.refreshCredential);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName")
-      private final @Nullable String serverName;
+    private @Nullable String serverName;
 
     public Optional<String> serverName() {
-        return this.serverName == null ? Optional.empty() : Optional.ofNullable(this.serverName);
+        return Optional.ofNullable(this.serverName);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shardMapName")
-      private final @Nullable String shardMapName;
+    private @Nullable String shardMapName;
 
     public Optional<String> shardMapName() {
-        return this.shardMapName == null ? Optional.empty() : Optional.ofNullable(this.shardMapName);
+        return Optional.ofNullable(this.shardMapName);
     }
 
     /**
@@ -90,100 +90,82 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public JobTargetResponse(
-        @Nullable String databaseName,
-        @Nullable String elasticPoolName,
-        @Nullable String membershipType,
-        @Nullable String refreshCredential,
-        @Nullable String serverName,
-        @Nullable String shardMapName,
-        String type) {
-        this.databaseName = databaseName;
-        this.elasticPoolName = elasticPoolName;
-        this.membershipType = Codegen.stringProp("membershipType").arg(membershipType).def("Include").getNullable();
-        this.refreshCredential = refreshCredential;
-        this.serverName = serverName;
-        this.shardMapName = shardMapName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private JobTargetResponse() {}
 
-    private JobTargetResponse() {
-        this.databaseName = null;
-        this.elasticPoolName = null;
-        this.membershipType = null;
-        this.refreshCredential = null;
-        this.serverName = null;
-        this.shardMapName = null;
-        this.type = null;
+    private JobTargetResponse(JobTargetResponse $) {
+        this.databaseName = $.databaseName;
+        this.elasticPoolName = $.elasticPoolName;
+        this.membershipType = $.membershipType;
+        this.refreshCredential = $.refreshCredential;
+        this.serverName = $.serverName;
+        this.shardMapName = $.shardMapName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String databaseName;
-        private @Nullable String elasticPoolName;
-        private @Nullable String membershipType;
-        private @Nullable String refreshCredential;
-        private @Nullable String serverName;
-        private @Nullable String shardMapName;
-        private String type;
+        private JobTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobTargetResponse();
         }
 
         public Builder(JobTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.elasticPoolName = defaults.elasticPoolName;
-    	      this.membershipType = defaults.membershipType;
-    	      this.refreshCredential = defaults.refreshCredential;
-    	      this.serverName = defaults.serverName;
-    	      this.shardMapName = defaults.shardMapName;
-    	      this.type = defaults.type;
+            $ = new JobTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder elasticPoolName(@Nullable String elasticPoolName) {
-            this.elasticPoolName = elasticPoolName;
+            $.elasticPoolName = elasticPoolName;
             return this;
         }
+
         public Builder membershipType(@Nullable String membershipType) {
-            this.membershipType = membershipType;
+            $.membershipType = membershipType;
             return this;
         }
+
         public Builder refreshCredential(@Nullable String refreshCredential) {
-            this.refreshCredential = refreshCredential;
+            $.refreshCredential = refreshCredential;
             return this;
         }
+
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = serverName;
+            $.serverName = serverName;
             return this;
         }
+
         public Builder shardMapName(@Nullable String shardMapName) {
-            this.shardMapName = shardMapName;
+            $.shardMapName = shardMapName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public JobTargetResponse build() {
-            return new JobTargetResponse(databaseName, elasticPoolName, membershipType, refreshCredential, serverName, shardMapName, type);
+        }
+
+        public JobTargetResponse build() {
+            $.membershipType = Codegen.stringProp("membershipType").arg($.membershipType).def("Include").getNullable();
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

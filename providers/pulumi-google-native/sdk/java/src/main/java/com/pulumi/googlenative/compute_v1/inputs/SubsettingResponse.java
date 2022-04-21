@@ -17,45 +17,45 @@ public final class SubsettingResponse extends com.pulumi.resources.InvokeArgs {
     public static final SubsettingResponse Empty = new SubsettingResponse();
 
     @Import(name="policy", required=true)
-      private final String policy;
+    private String policy;
 
     public String policy() {
         return this.policy;
     }
 
-    public SubsettingResponse(String policy) {
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private SubsettingResponse() {}
 
-    private SubsettingResponse() {
-        this.policy = null;
+    private SubsettingResponse(SubsettingResponse $) {
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubsettingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policy;
+        private SubsettingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubsettingResponse();
         }
 
         public Builder(SubsettingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
+            $ = new SubsettingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(String policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
-        }        public SubsettingResponse build() {
-            return new SubsettingResponse(policy);
+        }
+
+        public SubsettingResponse build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

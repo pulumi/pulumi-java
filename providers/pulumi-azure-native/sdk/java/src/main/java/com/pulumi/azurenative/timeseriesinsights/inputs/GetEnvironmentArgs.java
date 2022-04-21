@@ -19,7 +19,7 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentName", required=true)
-      private final String environmentName;
+    private String environmentName;
 
     public String environmentName() {
         return this.environmentName;
@@ -30,10 +30,10 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -41,64 +41,58 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetEnvironmentArgs(
-        String environmentName,
-        @Nullable String expand,
-        String resourceGroupName) {
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetEnvironmentArgs() {}
 
-    private GetEnvironmentArgs() {
-        this.environmentName = null;
-        this.expand = null;
-        this.resourceGroupName = null;
+    private GetEnvironmentArgs(GetEnvironmentArgs $) {
+        this.environmentName = $.environmentName;
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentName;
-        private @Nullable String expand;
-        private String resourceGroupName;
+        private GetEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentArgs();
         }
 
         public Builder(GetEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentName = defaults.environmentName;
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentName(String environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetEnvironmentArgs build() {
-            return new GetEnvironmentArgs(environmentName, expand, resourceGroupName);
+        }
+
+        public GetEnvironmentArgs build() {
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

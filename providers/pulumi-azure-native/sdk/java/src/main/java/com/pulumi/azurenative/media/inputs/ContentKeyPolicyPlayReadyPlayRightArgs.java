@@ -8,11 +8,11 @@ import com.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyExplicitAnal
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="agcAndColorStripeRestriction")
-      private final @Nullable Output<Integer> agcAndColorStripeRestriction;
+    private @Nullable Output<Integer> agcAndColorStripeRestriction;
 
-    public Output<Integer> agcAndColorStripeRestriction() {
-        return this.agcAndColorStripeRestriction == null ? Codegen.empty() : this.agcAndColorStripeRestriction;
+    public Optional<Output<Integer>> agcAndColorStripeRestriction() {
+        return Optional.ofNullable(this.agcAndColorStripeRestriction);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="allowPassingVideoContentToUnknownOutput", required=true)
-      private final Output<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput;
+    private Output<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput;
 
     public Output<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput() {
         return this.allowPassingVideoContentToUnknownOutput;
@@ -51,10 +51,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="analogVideoOpl")
-      private final @Nullable Output<Integer> analogVideoOpl;
+    private @Nullable Output<Integer> analogVideoOpl;
 
-    public Output<Integer> analogVideoOpl() {
-        return this.analogVideoOpl == null ? Codegen.empty() : this.analogVideoOpl;
+    public Optional<Output<Integer>> analogVideoOpl() {
+        return Optional.ofNullable(this.analogVideoOpl);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="compressedDigitalAudioOpl")
-      private final @Nullable Output<Integer> compressedDigitalAudioOpl;
+    private @Nullable Output<Integer> compressedDigitalAudioOpl;
 
-    public Output<Integer> compressedDigitalAudioOpl() {
-        return this.compressedDigitalAudioOpl == null ? Codegen.empty() : this.compressedDigitalAudioOpl;
+    public Optional<Output<Integer>> compressedDigitalAudioOpl() {
+        return Optional.ofNullable(this.compressedDigitalAudioOpl);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="compressedDigitalVideoOpl")
-      private final @Nullable Output<Integer> compressedDigitalVideoOpl;
+    private @Nullable Output<Integer> compressedDigitalVideoOpl;
 
-    public Output<Integer> compressedDigitalVideoOpl() {
-        return this.compressedDigitalVideoOpl == null ? Codegen.empty() : this.compressedDigitalVideoOpl;
+    public Optional<Output<Integer>> compressedDigitalVideoOpl() {
+        return Optional.ofNullable(this.compressedDigitalVideoOpl);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="digitalVideoOnlyContentRestriction", required=true)
-      private final Output<Boolean> digitalVideoOnlyContentRestriction;
+    private Output<Boolean> digitalVideoOnlyContentRestriction;
 
     public Output<Boolean> digitalVideoOnlyContentRestriction() {
         return this.digitalVideoOnlyContentRestriction;
@@ -95,10 +95,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="explicitAnalogTelevisionOutputRestriction")
-      private final @Nullable Output<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction;
+    private @Nullable Output<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction;
 
-    public Output<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction() {
-        return this.explicitAnalogTelevisionOutputRestriction == null ? Codegen.empty() : this.explicitAnalogTelevisionOutputRestriction;
+    public Optional<Output<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs>> explicitAnalogTelevisionOutputRestriction() {
+        return Optional.ofNullable(this.explicitAnalogTelevisionOutputRestriction);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="firstPlayExpiration")
-      private final @Nullable Output<String> firstPlayExpiration;
+    private @Nullable Output<String> firstPlayExpiration;
 
-    public Output<String> firstPlayExpiration() {
-        return this.firstPlayExpiration == null ? Codegen.empty() : this.firstPlayExpiration;
+    public Optional<Output<String>> firstPlayExpiration() {
+        return Optional.ofNullable(this.firstPlayExpiration);
     }
 
     /**
@@ -117,7 +117,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="imageConstraintForAnalogComponentVideoRestriction", required=true)
-      private final Output<Boolean> imageConstraintForAnalogComponentVideoRestriction;
+    private Output<Boolean> imageConstraintForAnalogComponentVideoRestriction;
 
     public Output<Boolean> imageConstraintForAnalogComponentVideoRestriction() {
         return this.imageConstraintForAnalogComponentVideoRestriction;
@@ -128,7 +128,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="imageConstraintForAnalogComputerMonitorRestriction", required=true)
-      private final Output<Boolean> imageConstraintForAnalogComputerMonitorRestriction;
+    private Output<Boolean> imageConstraintForAnalogComputerMonitorRestriction;
 
     public Output<Boolean> imageConstraintForAnalogComputerMonitorRestriction() {
         return this.imageConstraintForAnalogComputerMonitorRestriction;
@@ -139,10 +139,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="scmsRestriction")
-      private final @Nullable Output<Integer> scmsRestriction;
+    private @Nullable Output<Integer> scmsRestriction;
 
-    public Output<Integer> scmsRestriction() {
-        return this.scmsRestriction == null ? Codegen.empty() : this.scmsRestriction;
+    public Optional<Output<Integer>> scmsRestriction() {
+        return Optional.ofNullable(this.scmsRestriction);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="uncompressedDigitalAudioOpl")
-      private final @Nullable Output<Integer> uncompressedDigitalAudioOpl;
+    private @Nullable Output<Integer> uncompressedDigitalAudioOpl;
 
-    public Output<Integer> uncompressedDigitalAudioOpl() {
-        return this.uncompressedDigitalAudioOpl == null ? Codegen.empty() : this.uncompressedDigitalAudioOpl;
+    public Optional<Output<Integer>> uncompressedDigitalAudioOpl() {
+        return Optional.ofNullable(this.uncompressedDigitalAudioOpl);
     }
 
     /**
@@ -161,206 +161,172 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
      * 
      */
     @Import(name="uncompressedDigitalVideoOpl")
-      private final @Nullable Output<Integer> uncompressedDigitalVideoOpl;
+    private @Nullable Output<Integer> uncompressedDigitalVideoOpl;
 
-    public Output<Integer> uncompressedDigitalVideoOpl() {
-        return this.uncompressedDigitalVideoOpl == null ? Codegen.empty() : this.uncompressedDigitalVideoOpl;
+    public Optional<Output<Integer>> uncompressedDigitalVideoOpl() {
+        return Optional.ofNullable(this.uncompressedDigitalVideoOpl);
     }
 
-    public ContentKeyPolicyPlayReadyPlayRightArgs(
-        @Nullable Output<Integer> agcAndColorStripeRestriction,
-        Output<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput,
-        @Nullable Output<Integer> analogVideoOpl,
-        @Nullable Output<Integer> compressedDigitalAudioOpl,
-        @Nullable Output<Integer> compressedDigitalVideoOpl,
-        Output<Boolean> digitalVideoOnlyContentRestriction,
-        @Nullable Output<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction,
-        @Nullable Output<String> firstPlayExpiration,
-        Output<Boolean> imageConstraintForAnalogComponentVideoRestriction,
-        Output<Boolean> imageConstraintForAnalogComputerMonitorRestriction,
-        @Nullable Output<Integer> scmsRestriction,
-        @Nullable Output<Integer> uncompressedDigitalAudioOpl,
-        @Nullable Output<Integer> uncompressedDigitalVideoOpl) {
-        this.agcAndColorStripeRestriction = agcAndColorStripeRestriction;
-        this.allowPassingVideoContentToUnknownOutput = Objects.requireNonNull(allowPassingVideoContentToUnknownOutput, "expected parameter 'allowPassingVideoContentToUnknownOutput' to be non-null");
-        this.analogVideoOpl = analogVideoOpl;
-        this.compressedDigitalAudioOpl = compressedDigitalAudioOpl;
-        this.compressedDigitalVideoOpl = compressedDigitalVideoOpl;
-        this.digitalVideoOnlyContentRestriction = Objects.requireNonNull(digitalVideoOnlyContentRestriction, "expected parameter 'digitalVideoOnlyContentRestriction' to be non-null");
-        this.explicitAnalogTelevisionOutputRestriction = explicitAnalogTelevisionOutputRestriction;
-        this.firstPlayExpiration = firstPlayExpiration;
-        this.imageConstraintForAnalogComponentVideoRestriction = Objects.requireNonNull(imageConstraintForAnalogComponentVideoRestriction, "expected parameter 'imageConstraintForAnalogComponentVideoRestriction' to be non-null");
-        this.imageConstraintForAnalogComputerMonitorRestriction = Objects.requireNonNull(imageConstraintForAnalogComputerMonitorRestriction, "expected parameter 'imageConstraintForAnalogComputerMonitorRestriction' to be non-null");
-        this.scmsRestriction = scmsRestriction;
-        this.uncompressedDigitalAudioOpl = uncompressedDigitalAudioOpl;
-        this.uncompressedDigitalVideoOpl = uncompressedDigitalVideoOpl;
-    }
+    private ContentKeyPolicyPlayReadyPlayRightArgs() {}
 
-    private ContentKeyPolicyPlayReadyPlayRightArgs() {
-        this.agcAndColorStripeRestriction = Codegen.empty();
-        this.allowPassingVideoContentToUnknownOutput = Codegen.empty();
-        this.analogVideoOpl = Codegen.empty();
-        this.compressedDigitalAudioOpl = Codegen.empty();
-        this.compressedDigitalVideoOpl = Codegen.empty();
-        this.digitalVideoOnlyContentRestriction = Codegen.empty();
-        this.explicitAnalogTelevisionOutputRestriction = Codegen.empty();
-        this.firstPlayExpiration = Codegen.empty();
-        this.imageConstraintForAnalogComponentVideoRestriction = Codegen.empty();
-        this.imageConstraintForAnalogComputerMonitorRestriction = Codegen.empty();
-        this.scmsRestriction = Codegen.empty();
-        this.uncompressedDigitalAudioOpl = Codegen.empty();
-        this.uncompressedDigitalVideoOpl = Codegen.empty();
+    private ContentKeyPolicyPlayReadyPlayRightArgs(ContentKeyPolicyPlayReadyPlayRightArgs $) {
+        this.agcAndColorStripeRestriction = $.agcAndColorStripeRestriction;
+        this.allowPassingVideoContentToUnknownOutput = $.allowPassingVideoContentToUnknownOutput;
+        this.analogVideoOpl = $.analogVideoOpl;
+        this.compressedDigitalAudioOpl = $.compressedDigitalAudioOpl;
+        this.compressedDigitalVideoOpl = $.compressedDigitalVideoOpl;
+        this.digitalVideoOnlyContentRestriction = $.digitalVideoOnlyContentRestriction;
+        this.explicitAnalogTelevisionOutputRestriction = $.explicitAnalogTelevisionOutputRestriction;
+        this.firstPlayExpiration = $.firstPlayExpiration;
+        this.imageConstraintForAnalogComponentVideoRestriction = $.imageConstraintForAnalogComponentVideoRestriction;
+        this.imageConstraintForAnalogComputerMonitorRestriction = $.imageConstraintForAnalogComputerMonitorRestriction;
+        this.scmsRestriction = $.scmsRestriction;
+        this.uncompressedDigitalAudioOpl = $.uncompressedDigitalAudioOpl;
+        this.uncompressedDigitalVideoOpl = $.uncompressedDigitalVideoOpl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyPlayReadyPlayRightArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> agcAndColorStripeRestriction;
-        private Output<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput;
-        private @Nullable Output<Integer> analogVideoOpl;
-        private @Nullable Output<Integer> compressedDigitalAudioOpl;
-        private @Nullable Output<Integer> compressedDigitalVideoOpl;
-        private Output<Boolean> digitalVideoOnlyContentRestriction;
-        private @Nullable Output<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction;
-        private @Nullable Output<String> firstPlayExpiration;
-        private Output<Boolean> imageConstraintForAnalogComponentVideoRestriction;
-        private Output<Boolean> imageConstraintForAnalogComputerMonitorRestriction;
-        private @Nullable Output<Integer> scmsRestriction;
-        private @Nullable Output<Integer> uncompressedDigitalAudioOpl;
-        private @Nullable Output<Integer> uncompressedDigitalVideoOpl;
+        private ContentKeyPolicyPlayReadyPlayRightArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyPlayReadyPlayRightArgs();
         }
 
         public Builder(ContentKeyPolicyPlayReadyPlayRightArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agcAndColorStripeRestriction = defaults.agcAndColorStripeRestriction;
-    	      this.allowPassingVideoContentToUnknownOutput = defaults.allowPassingVideoContentToUnknownOutput;
-    	      this.analogVideoOpl = defaults.analogVideoOpl;
-    	      this.compressedDigitalAudioOpl = defaults.compressedDigitalAudioOpl;
-    	      this.compressedDigitalVideoOpl = defaults.compressedDigitalVideoOpl;
-    	      this.digitalVideoOnlyContentRestriction = defaults.digitalVideoOnlyContentRestriction;
-    	      this.explicitAnalogTelevisionOutputRestriction = defaults.explicitAnalogTelevisionOutputRestriction;
-    	      this.firstPlayExpiration = defaults.firstPlayExpiration;
-    	      this.imageConstraintForAnalogComponentVideoRestriction = defaults.imageConstraintForAnalogComponentVideoRestriction;
-    	      this.imageConstraintForAnalogComputerMonitorRestriction = defaults.imageConstraintForAnalogComputerMonitorRestriction;
-    	      this.scmsRestriction = defaults.scmsRestriction;
-    	      this.uncompressedDigitalAudioOpl = defaults.uncompressedDigitalAudioOpl;
-    	      this.uncompressedDigitalVideoOpl = defaults.uncompressedDigitalVideoOpl;
+            $ = new ContentKeyPolicyPlayReadyPlayRightArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agcAndColorStripeRestriction(@Nullable Output<Integer> agcAndColorStripeRestriction) {
-            this.agcAndColorStripeRestriction = agcAndColorStripeRestriction;
+            $.agcAndColorStripeRestriction = agcAndColorStripeRestriction;
             return this;
         }
-        public Builder agcAndColorStripeRestriction(@Nullable Integer agcAndColorStripeRestriction) {
-            this.agcAndColorStripeRestriction = Codegen.ofNullable(agcAndColorStripeRestriction);
-            return this;
+
+        public Builder agcAndColorStripeRestriction(Integer agcAndColorStripeRestriction) {
+            return agcAndColorStripeRestriction(Output.of(agcAndColorStripeRestriction));
         }
+
         public Builder allowPassingVideoContentToUnknownOutput(Output<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput) {
-            this.allowPassingVideoContentToUnknownOutput = Objects.requireNonNull(allowPassingVideoContentToUnknownOutput);
+            $.allowPassingVideoContentToUnknownOutput = allowPassingVideoContentToUnknownOutput;
             return this;
         }
+
         public Builder allowPassingVideoContentToUnknownOutput(Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption> allowPassingVideoContentToUnknownOutput) {
-            this.allowPassingVideoContentToUnknownOutput = Output.of(Objects.requireNonNull(allowPassingVideoContentToUnknownOutput));
-            return this;
+            return allowPassingVideoContentToUnknownOutput(Output.of(allowPassingVideoContentToUnknownOutput));
         }
+
         public Builder analogVideoOpl(@Nullable Output<Integer> analogVideoOpl) {
-            this.analogVideoOpl = analogVideoOpl;
+            $.analogVideoOpl = analogVideoOpl;
             return this;
         }
-        public Builder analogVideoOpl(@Nullable Integer analogVideoOpl) {
-            this.analogVideoOpl = Codegen.ofNullable(analogVideoOpl);
-            return this;
+
+        public Builder analogVideoOpl(Integer analogVideoOpl) {
+            return analogVideoOpl(Output.of(analogVideoOpl));
         }
+
         public Builder compressedDigitalAudioOpl(@Nullable Output<Integer> compressedDigitalAudioOpl) {
-            this.compressedDigitalAudioOpl = compressedDigitalAudioOpl;
+            $.compressedDigitalAudioOpl = compressedDigitalAudioOpl;
             return this;
         }
-        public Builder compressedDigitalAudioOpl(@Nullable Integer compressedDigitalAudioOpl) {
-            this.compressedDigitalAudioOpl = Codegen.ofNullable(compressedDigitalAudioOpl);
-            return this;
+
+        public Builder compressedDigitalAudioOpl(Integer compressedDigitalAudioOpl) {
+            return compressedDigitalAudioOpl(Output.of(compressedDigitalAudioOpl));
         }
+
         public Builder compressedDigitalVideoOpl(@Nullable Output<Integer> compressedDigitalVideoOpl) {
-            this.compressedDigitalVideoOpl = compressedDigitalVideoOpl;
+            $.compressedDigitalVideoOpl = compressedDigitalVideoOpl;
             return this;
         }
-        public Builder compressedDigitalVideoOpl(@Nullable Integer compressedDigitalVideoOpl) {
-            this.compressedDigitalVideoOpl = Codegen.ofNullable(compressedDigitalVideoOpl);
-            return this;
+
+        public Builder compressedDigitalVideoOpl(Integer compressedDigitalVideoOpl) {
+            return compressedDigitalVideoOpl(Output.of(compressedDigitalVideoOpl));
         }
+
         public Builder digitalVideoOnlyContentRestriction(Output<Boolean> digitalVideoOnlyContentRestriction) {
-            this.digitalVideoOnlyContentRestriction = Objects.requireNonNull(digitalVideoOnlyContentRestriction);
+            $.digitalVideoOnlyContentRestriction = digitalVideoOnlyContentRestriction;
             return this;
         }
+
         public Builder digitalVideoOnlyContentRestriction(Boolean digitalVideoOnlyContentRestriction) {
-            this.digitalVideoOnlyContentRestriction = Output.of(Objects.requireNonNull(digitalVideoOnlyContentRestriction));
-            return this;
+            return digitalVideoOnlyContentRestriction(Output.of(digitalVideoOnlyContentRestriction));
         }
+
         public Builder explicitAnalogTelevisionOutputRestriction(@Nullable Output<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction) {
-            this.explicitAnalogTelevisionOutputRestriction = explicitAnalogTelevisionOutputRestriction;
+            $.explicitAnalogTelevisionOutputRestriction = explicitAnalogTelevisionOutputRestriction;
             return this;
         }
-        public Builder explicitAnalogTelevisionOutputRestriction(@Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs explicitAnalogTelevisionOutputRestriction) {
-            this.explicitAnalogTelevisionOutputRestriction = Codegen.ofNullable(explicitAnalogTelevisionOutputRestriction);
-            return this;
+
+        public Builder explicitAnalogTelevisionOutputRestriction(ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs explicitAnalogTelevisionOutputRestriction) {
+            return explicitAnalogTelevisionOutputRestriction(Output.of(explicitAnalogTelevisionOutputRestriction));
         }
+
         public Builder firstPlayExpiration(@Nullable Output<String> firstPlayExpiration) {
-            this.firstPlayExpiration = firstPlayExpiration;
+            $.firstPlayExpiration = firstPlayExpiration;
             return this;
         }
-        public Builder firstPlayExpiration(@Nullable String firstPlayExpiration) {
-            this.firstPlayExpiration = Codegen.ofNullable(firstPlayExpiration);
-            return this;
+
+        public Builder firstPlayExpiration(String firstPlayExpiration) {
+            return firstPlayExpiration(Output.of(firstPlayExpiration));
         }
+
         public Builder imageConstraintForAnalogComponentVideoRestriction(Output<Boolean> imageConstraintForAnalogComponentVideoRestriction) {
-            this.imageConstraintForAnalogComponentVideoRestriction = Objects.requireNonNull(imageConstraintForAnalogComponentVideoRestriction);
+            $.imageConstraintForAnalogComponentVideoRestriction = imageConstraintForAnalogComponentVideoRestriction;
             return this;
         }
+
         public Builder imageConstraintForAnalogComponentVideoRestriction(Boolean imageConstraintForAnalogComponentVideoRestriction) {
-            this.imageConstraintForAnalogComponentVideoRestriction = Output.of(Objects.requireNonNull(imageConstraintForAnalogComponentVideoRestriction));
-            return this;
+            return imageConstraintForAnalogComponentVideoRestriction(Output.of(imageConstraintForAnalogComponentVideoRestriction));
         }
+
         public Builder imageConstraintForAnalogComputerMonitorRestriction(Output<Boolean> imageConstraintForAnalogComputerMonitorRestriction) {
-            this.imageConstraintForAnalogComputerMonitorRestriction = Objects.requireNonNull(imageConstraintForAnalogComputerMonitorRestriction);
+            $.imageConstraintForAnalogComputerMonitorRestriction = imageConstraintForAnalogComputerMonitorRestriction;
             return this;
         }
+
         public Builder imageConstraintForAnalogComputerMonitorRestriction(Boolean imageConstraintForAnalogComputerMonitorRestriction) {
-            this.imageConstraintForAnalogComputerMonitorRestriction = Output.of(Objects.requireNonNull(imageConstraintForAnalogComputerMonitorRestriction));
-            return this;
+            return imageConstraintForAnalogComputerMonitorRestriction(Output.of(imageConstraintForAnalogComputerMonitorRestriction));
         }
+
         public Builder scmsRestriction(@Nullable Output<Integer> scmsRestriction) {
-            this.scmsRestriction = scmsRestriction;
+            $.scmsRestriction = scmsRestriction;
             return this;
         }
-        public Builder scmsRestriction(@Nullable Integer scmsRestriction) {
-            this.scmsRestriction = Codegen.ofNullable(scmsRestriction);
-            return this;
+
+        public Builder scmsRestriction(Integer scmsRestriction) {
+            return scmsRestriction(Output.of(scmsRestriction));
         }
+
         public Builder uncompressedDigitalAudioOpl(@Nullable Output<Integer> uncompressedDigitalAudioOpl) {
-            this.uncompressedDigitalAudioOpl = uncompressedDigitalAudioOpl;
+            $.uncompressedDigitalAudioOpl = uncompressedDigitalAudioOpl;
             return this;
         }
-        public Builder uncompressedDigitalAudioOpl(@Nullable Integer uncompressedDigitalAudioOpl) {
-            this.uncompressedDigitalAudioOpl = Codegen.ofNullable(uncompressedDigitalAudioOpl);
-            return this;
+
+        public Builder uncompressedDigitalAudioOpl(Integer uncompressedDigitalAudioOpl) {
+            return uncompressedDigitalAudioOpl(Output.of(uncompressedDigitalAudioOpl));
         }
+
         public Builder uncompressedDigitalVideoOpl(@Nullable Output<Integer> uncompressedDigitalVideoOpl) {
-            this.uncompressedDigitalVideoOpl = uncompressedDigitalVideoOpl;
+            $.uncompressedDigitalVideoOpl = uncompressedDigitalVideoOpl;
             return this;
         }
-        public Builder uncompressedDigitalVideoOpl(@Nullable Integer uncompressedDigitalVideoOpl) {
-            this.uncompressedDigitalVideoOpl = Codegen.ofNullable(uncompressedDigitalVideoOpl);
-            return this;
-        }        public ContentKeyPolicyPlayReadyPlayRightArgs build() {
-            return new ContentKeyPolicyPlayReadyPlayRightArgs(agcAndColorStripeRestriction, allowPassingVideoContentToUnknownOutput, analogVideoOpl, compressedDigitalAudioOpl, compressedDigitalVideoOpl, digitalVideoOnlyContentRestriction, explicitAnalogTelevisionOutputRestriction, firstPlayExpiration, imageConstraintForAnalogComponentVideoRestriction, imageConstraintForAnalogComputerMonitorRestriction, scmsRestriction, uncompressedDigitalAudioOpl, uncompressedDigitalVideoOpl);
+
+        public Builder uncompressedDigitalVideoOpl(Integer uncompressedDigitalVideoOpl) {
+            return uncompressedDigitalVideoOpl(Output.of(uncompressedDigitalVideoOpl));
+        }
+
+        public ContentKeyPolicyPlayReadyPlayRightArgs build() {
+            $.allowPassingVideoContentToUnknownOutput = Objects.requireNonNull($.allowPassingVideoContentToUnknownOutput, "expected parameter 'allowPassingVideoContentToUnknownOutput' to be non-null");
+            $.digitalVideoOnlyContentRestriction = Objects.requireNonNull($.digitalVideoOnlyContentRestriction, "expected parameter 'digitalVideoOnlyContentRestriction' to be non-null");
+            $.imageConstraintForAnalogComponentVideoRestriction = Objects.requireNonNull($.imageConstraintForAnalogComponentVideoRestriction, "expected parameter 'imageConstraintForAnalogComponentVideoRestriction' to be non-null");
+            $.imageConstraintForAnalogComputerMonitorRestriction = Objects.requireNonNull($.imageConstraintForAnalogComputerMonitorRestriction, "expected parameter 'imageConstraintForAnalogComputerMonitorRestriction' to be non-null");
+            return $;
         }
     }
+
 }

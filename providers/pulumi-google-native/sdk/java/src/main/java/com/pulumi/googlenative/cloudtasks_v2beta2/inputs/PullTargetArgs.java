@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class PullTargetArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final PullTargetArgs Empty = new PullTargetArgs();
 
-    public PullTargetArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(PullTargetArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private PullTargetArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(PullTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new PullTargetArgs();
         }
         public PullTargetArgs build() {
-            return new PullTargetArgs();
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
 import com.pulumi.awsnative.databrew.inputs.DatasetPathParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,93 +23,86 @@ public final class DatasetPathOptionsArgs extends com.pulumi.resources.ResourceA
     public static final DatasetPathOptionsArgs Empty = new DatasetPathOptionsArgs();
 
     @Import(name="filesLimit")
-      private final @Nullable Output<DatasetFilesLimitArgs> filesLimit;
+    private @Nullable Output<DatasetFilesLimitArgs> filesLimit;
 
-    public Output<DatasetFilesLimitArgs> filesLimit() {
-        return this.filesLimit == null ? Codegen.empty() : this.filesLimit;
+    public Optional<Output<DatasetFilesLimitArgs>> filesLimit() {
+        return Optional.ofNullable(this.filesLimit);
     }
 
     @Import(name="lastModifiedDateCondition")
-      private final @Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition;
+    private @Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition;
 
-    public Output<DatasetFilterExpressionArgs> lastModifiedDateCondition() {
-        return this.lastModifiedDateCondition == null ? Codegen.empty() : this.lastModifiedDateCondition;
+    public Optional<Output<DatasetFilterExpressionArgs>> lastModifiedDateCondition() {
+        return Optional.ofNullable(this.lastModifiedDateCondition);
     }
 
     @Import(name="parameters")
-      private final @Nullable Output<List<DatasetPathParameterArgs>> parameters;
+    private @Nullable Output<List<DatasetPathParameterArgs>> parameters;
 
-    public Output<List<DatasetPathParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<DatasetPathParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public DatasetPathOptionsArgs(
-        @Nullable Output<DatasetFilesLimitArgs> filesLimit,
-        @Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition,
-        @Nullable Output<List<DatasetPathParameterArgs>> parameters) {
-        this.filesLimit = filesLimit;
-        this.lastModifiedDateCondition = lastModifiedDateCondition;
-        this.parameters = parameters;
-    }
+    private DatasetPathOptionsArgs() {}
 
-    private DatasetPathOptionsArgs() {
-        this.filesLimit = Codegen.empty();
-        this.lastModifiedDateCondition = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private DatasetPathOptionsArgs(DatasetPathOptionsArgs $) {
+        this.filesLimit = $.filesLimit;
+        this.lastModifiedDateCondition = $.lastModifiedDateCondition;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetPathOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetFilesLimitArgs> filesLimit;
-        private @Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition;
-        private @Nullable Output<List<DatasetPathParameterArgs>> parameters;
+        private DatasetPathOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetPathOptionsArgs();
         }
 
         public Builder(DatasetPathOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filesLimit = defaults.filesLimit;
-    	      this.lastModifiedDateCondition = defaults.lastModifiedDateCondition;
-    	      this.parameters = defaults.parameters;
+            $ = new DatasetPathOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filesLimit(@Nullable Output<DatasetFilesLimitArgs> filesLimit) {
-            this.filesLimit = filesLimit;
+            $.filesLimit = filesLimit;
             return this;
         }
-        public Builder filesLimit(@Nullable DatasetFilesLimitArgs filesLimit) {
-            this.filesLimit = Codegen.ofNullable(filesLimit);
-            return this;
+
+        public Builder filesLimit(DatasetFilesLimitArgs filesLimit) {
+            return filesLimit(Output.of(filesLimit));
         }
+
         public Builder lastModifiedDateCondition(@Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition) {
-            this.lastModifiedDateCondition = lastModifiedDateCondition;
+            $.lastModifiedDateCondition = lastModifiedDateCondition;
             return this;
         }
-        public Builder lastModifiedDateCondition(@Nullable DatasetFilterExpressionArgs lastModifiedDateCondition) {
-            this.lastModifiedDateCondition = Codegen.ofNullable(lastModifiedDateCondition);
-            return this;
+
+        public Builder lastModifiedDateCondition(DatasetFilterExpressionArgs lastModifiedDateCondition) {
+            return lastModifiedDateCondition(Output.of(lastModifiedDateCondition));
         }
+
         public Builder parameters(@Nullable Output<List<DatasetPathParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<DatasetPathParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<DatasetPathParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(DatasetPathParameterArgs... parameters) {
             return parameters(List.of(parameters));
-        }        public DatasetPathOptionsArgs build() {
-            return new DatasetPathOptionsArgs(filesLimit, lastModifiedDateCondition, parameters);
+        }
+
+        public DatasetPathOptionsArgs build() {
+            return $;
         }
     }
+
 }

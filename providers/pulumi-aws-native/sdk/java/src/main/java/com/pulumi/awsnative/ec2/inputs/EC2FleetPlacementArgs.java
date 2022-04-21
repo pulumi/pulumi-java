@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,190 +17,167 @@ public final class EC2FleetPlacementArgs extends com.pulumi.resources.ResourceAr
     public static final EC2FleetPlacementArgs Empty = new EC2FleetPlacementArgs();
 
     @Import(name="affinity")
-      private final @Nullable Output<String> affinity;
+    private @Nullable Output<String> affinity;
 
-    public Output<String> affinity() {
-        return this.affinity == null ? Codegen.empty() : this.affinity;
+    public Optional<Output<String>> affinity() {
+        return Optional.ofNullable(this.affinity);
     }
 
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     @Import(name="groupName")
-      private final @Nullable Output<String> groupName;
+    private @Nullable Output<String> groupName;
 
-    public Output<String> groupName() {
-        return this.groupName == null ? Codegen.empty() : this.groupName;
+    public Optional<Output<String>> groupName() {
+        return Optional.ofNullable(this.groupName);
     }
 
     @Import(name="hostId")
-      private final @Nullable Output<String> hostId;
+    private @Nullable Output<String> hostId;
 
-    public Output<String> hostId() {
-        return this.hostId == null ? Codegen.empty() : this.hostId;
+    public Optional<Output<String>> hostId() {
+        return Optional.ofNullable(this.hostId);
     }
 
     @Import(name="hostResourceGroupArn")
-      private final @Nullable Output<String> hostResourceGroupArn;
+    private @Nullable Output<String> hostResourceGroupArn;
 
-    public Output<String> hostResourceGroupArn() {
-        return this.hostResourceGroupArn == null ? Codegen.empty() : this.hostResourceGroupArn;
+    public Optional<Output<String>> hostResourceGroupArn() {
+        return Optional.ofNullable(this.hostResourceGroupArn);
     }
 
     @Import(name="partitionNumber")
-      private final @Nullable Output<Integer> partitionNumber;
+    private @Nullable Output<Integer> partitionNumber;
 
-    public Output<Integer> partitionNumber() {
-        return this.partitionNumber == null ? Codegen.empty() : this.partitionNumber;
+    public Optional<Output<Integer>> partitionNumber() {
+        return Optional.ofNullable(this.partitionNumber);
     }
 
     @Import(name="spreadDomain")
-      private final @Nullable Output<String> spreadDomain;
+    private @Nullable Output<String> spreadDomain;
 
-    public Output<String> spreadDomain() {
-        return this.spreadDomain == null ? Codegen.empty() : this.spreadDomain;
+    public Optional<Output<String>> spreadDomain() {
+        return Optional.ofNullable(this.spreadDomain);
     }
 
     @Import(name="tenancy")
-      private final @Nullable Output<String> tenancy;
+    private @Nullable Output<String> tenancy;
 
-    public Output<String> tenancy() {
-        return this.tenancy == null ? Codegen.empty() : this.tenancy;
+    public Optional<Output<String>> tenancy() {
+        return Optional.ofNullable(this.tenancy);
     }
 
-    public EC2FleetPlacementArgs(
-        @Nullable Output<String> affinity,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> groupName,
-        @Nullable Output<String> hostId,
-        @Nullable Output<String> hostResourceGroupArn,
-        @Nullable Output<Integer> partitionNumber,
-        @Nullable Output<String> spreadDomain,
-        @Nullable Output<String> tenancy) {
-        this.affinity = affinity;
-        this.availabilityZone = availabilityZone;
-        this.groupName = groupName;
-        this.hostId = hostId;
-        this.hostResourceGroupArn = hostResourceGroupArn;
-        this.partitionNumber = partitionNumber;
-        this.spreadDomain = spreadDomain;
-        this.tenancy = tenancy;
-    }
+    private EC2FleetPlacementArgs() {}
 
-    private EC2FleetPlacementArgs() {
-        this.affinity = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.hostId = Codegen.empty();
-        this.hostResourceGroupArn = Codegen.empty();
-        this.partitionNumber = Codegen.empty();
-        this.spreadDomain = Codegen.empty();
-        this.tenancy = Codegen.empty();
+    private EC2FleetPlacementArgs(EC2FleetPlacementArgs $) {
+        this.affinity = $.affinity;
+        this.availabilityZone = $.availabilityZone;
+        this.groupName = $.groupName;
+        this.hostId = $.hostId;
+        this.hostResourceGroupArn = $.hostResourceGroupArn;
+        this.partitionNumber = $.partitionNumber;
+        this.spreadDomain = $.spreadDomain;
+        this.tenancy = $.tenancy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EC2FleetPlacementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> affinity;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> groupName;
-        private @Nullable Output<String> hostId;
-        private @Nullable Output<String> hostResourceGroupArn;
-        private @Nullable Output<Integer> partitionNumber;
-        private @Nullable Output<String> spreadDomain;
-        private @Nullable Output<String> tenancy;
+        private EC2FleetPlacementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EC2FleetPlacementArgs();
         }
 
         public Builder(EC2FleetPlacementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affinity = defaults.affinity;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.groupName = defaults.groupName;
-    	      this.hostId = defaults.hostId;
-    	      this.hostResourceGroupArn = defaults.hostResourceGroupArn;
-    	      this.partitionNumber = defaults.partitionNumber;
-    	      this.spreadDomain = defaults.spreadDomain;
-    	      this.tenancy = defaults.tenancy;
+            $ = new EC2FleetPlacementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder affinity(@Nullable Output<String> affinity) {
-            this.affinity = affinity;
+            $.affinity = affinity;
             return this;
         }
-        public Builder affinity(@Nullable String affinity) {
-            this.affinity = Codegen.ofNullable(affinity);
-            return this;
+
+        public Builder affinity(String affinity) {
+            return affinity(Output.of(affinity));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder groupName(@Nullable Output<String> groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
-        public Builder groupName(@Nullable String groupName) {
-            this.groupName = Codegen.ofNullable(groupName);
-            return this;
+
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
         }
+
         public Builder hostId(@Nullable Output<String> hostId) {
-            this.hostId = hostId;
+            $.hostId = hostId;
             return this;
         }
-        public Builder hostId(@Nullable String hostId) {
-            this.hostId = Codegen.ofNullable(hostId);
-            return this;
+
+        public Builder hostId(String hostId) {
+            return hostId(Output.of(hostId));
         }
+
         public Builder hostResourceGroupArn(@Nullable Output<String> hostResourceGroupArn) {
-            this.hostResourceGroupArn = hostResourceGroupArn;
+            $.hostResourceGroupArn = hostResourceGroupArn;
             return this;
         }
-        public Builder hostResourceGroupArn(@Nullable String hostResourceGroupArn) {
-            this.hostResourceGroupArn = Codegen.ofNullable(hostResourceGroupArn);
-            return this;
+
+        public Builder hostResourceGroupArn(String hostResourceGroupArn) {
+            return hostResourceGroupArn(Output.of(hostResourceGroupArn));
         }
+
         public Builder partitionNumber(@Nullable Output<Integer> partitionNumber) {
-            this.partitionNumber = partitionNumber;
+            $.partitionNumber = partitionNumber;
             return this;
         }
-        public Builder partitionNumber(@Nullable Integer partitionNumber) {
-            this.partitionNumber = Codegen.ofNullable(partitionNumber);
-            return this;
+
+        public Builder partitionNumber(Integer partitionNumber) {
+            return partitionNumber(Output.of(partitionNumber));
         }
+
         public Builder spreadDomain(@Nullable Output<String> spreadDomain) {
-            this.spreadDomain = spreadDomain;
+            $.spreadDomain = spreadDomain;
             return this;
         }
-        public Builder spreadDomain(@Nullable String spreadDomain) {
-            this.spreadDomain = Codegen.ofNullable(spreadDomain);
-            return this;
+
+        public Builder spreadDomain(String spreadDomain) {
+            return spreadDomain(Output.of(spreadDomain));
         }
+
         public Builder tenancy(@Nullable Output<String> tenancy) {
-            this.tenancy = tenancy;
+            $.tenancy = tenancy;
             return this;
         }
-        public Builder tenancy(@Nullable String tenancy) {
-            this.tenancy = Codegen.ofNullable(tenancy);
-            return this;
-        }        public EC2FleetPlacementArgs build() {
-            return new EC2FleetPlacementArgs(affinity, availabilityZone, groupName, hostId, hostResourceGroupArn, partitionNumber, spreadDomain, tenancy);
+
+        public Builder tenancy(String tenancy) {
+            return tenancy(Output.of(tenancy));
+        }
+
+        public EC2FleetPlacementArgs build() {
+            return $;
         }
     }
+
 }

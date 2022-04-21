@@ -9,10 +9,10 @@ import com.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopRequestSourceGetAr
 import com.pulumi.aws.sagemaker.inputs.FlowDefinitionOutputConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="flowDefinitionName")
-      private final @Nullable Output<String> flowDefinitionName;
+    private @Nullable Output<String> flowDefinitionName;
 
-    public Output<String> flowDefinitionName() {
-        return this.flowDefinitionName == null ? Codegen.empty() : this.flowDefinitionName;
+    public Optional<Output<String>> flowDefinitionName() {
+        return Optional.ofNullable(this.flowDefinitionName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="humanLoopActivationConfig")
-      private final @Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
+    private @Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
 
-    public Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig() {
-        return this.humanLoopActivationConfig == null ? Codegen.empty() : this.humanLoopActivationConfig;
+    public Optional<Output<FlowDefinitionHumanLoopActivationConfigGetArgs>> humanLoopActivationConfig() {
+        return Optional.ofNullable(this.humanLoopActivationConfig);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="humanLoopConfig")
-      private final @Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
+    private @Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
 
-    public Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig() {
-        return this.humanLoopConfig == null ? Codegen.empty() : this.humanLoopConfig;
+    public Optional<Output<FlowDefinitionHumanLoopConfigGetArgs>> humanLoopConfig() {
+        return Optional.ofNullable(this.humanLoopConfig);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="humanLoopRequestSource")
-      private final @Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
+    private @Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
 
-    public Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource() {
-        return this.humanLoopRequestSource == null ? Codegen.empty() : this.humanLoopRequestSource;
+    public Optional<Output<FlowDefinitionHumanLoopRequestSourceGetArgs>> humanLoopRequestSource() {
+        return Optional.ofNullable(this.humanLoopRequestSource);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="outputConfig")
-      private final @Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig;
+    private @Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig;
 
-    public Output<FlowDefinitionOutputConfigGetArgs> outputConfig() {
-        return this.outputConfig == null ? Codegen.empty() : this.outputConfig;
+    public Optional<Output<FlowDefinitionOutputConfigGetArgs>> outputConfig() {
+        return Optional.ofNullable(this.outputConfig);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -113,154 +113,128 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public FlowDefinitionState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> flowDefinitionName,
-        @Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig,
-        @Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig,
-        @Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource,
-        @Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.flowDefinitionName = flowDefinitionName;
-        this.humanLoopActivationConfig = humanLoopActivationConfig;
-        this.humanLoopConfig = humanLoopConfig;
-        this.humanLoopRequestSource = humanLoopRequestSource;
-        this.outputConfig = outputConfig;
-        this.roleArn = roleArn;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private FlowDefinitionState() {}
 
-    private FlowDefinitionState() {
-        this.arn = Codegen.empty();
-        this.flowDefinitionName = Codegen.empty();
-        this.humanLoopActivationConfig = Codegen.empty();
-        this.humanLoopConfig = Codegen.empty();
-        this.humanLoopRequestSource = Codegen.empty();
-        this.outputConfig = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private FlowDefinitionState(FlowDefinitionState $) {
+        this.arn = $.arn;
+        this.flowDefinitionName = $.flowDefinitionName;
+        this.humanLoopActivationConfig = $.humanLoopActivationConfig;
+        this.humanLoopConfig = $.humanLoopConfig;
+        this.humanLoopRequestSource = $.humanLoopRequestSource;
+        this.outputConfig = $.outputConfig;
+        this.roleArn = $.roleArn;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowDefinitionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> flowDefinitionName;
-        private @Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
-        private @Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
-        private @Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
-        private @Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private FlowDefinitionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowDefinitionState();
         }
 
         public Builder(FlowDefinitionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.flowDefinitionName = defaults.flowDefinitionName;
-    	      this.humanLoopActivationConfig = defaults.humanLoopActivationConfig;
-    	      this.humanLoopConfig = defaults.humanLoopConfig;
-    	      this.humanLoopRequestSource = defaults.humanLoopRequestSource;
-    	      this.outputConfig = defaults.outputConfig;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new FlowDefinitionState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder flowDefinitionName(@Nullable Output<String> flowDefinitionName) {
-            this.flowDefinitionName = flowDefinitionName;
+            $.flowDefinitionName = flowDefinitionName;
             return this;
         }
-        public Builder flowDefinitionName(@Nullable String flowDefinitionName) {
-            this.flowDefinitionName = Codegen.ofNullable(flowDefinitionName);
-            return this;
+
+        public Builder flowDefinitionName(String flowDefinitionName) {
+            return flowDefinitionName(Output.of(flowDefinitionName));
         }
+
         public Builder humanLoopActivationConfig(@Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig) {
-            this.humanLoopActivationConfig = humanLoopActivationConfig;
+            $.humanLoopActivationConfig = humanLoopActivationConfig;
             return this;
         }
-        public Builder humanLoopActivationConfig(@Nullable FlowDefinitionHumanLoopActivationConfigGetArgs humanLoopActivationConfig) {
-            this.humanLoopActivationConfig = Codegen.ofNullable(humanLoopActivationConfig);
-            return this;
+
+        public Builder humanLoopActivationConfig(FlowDefinitionHumanLoopActivationConfigGetArgs humanLoopActivationConfig) {
+            return humanLoopActivationConfig(Output.of(humanLoopActivationConfig));
         }
+
         public Builder humanLoopConfig(@Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig) {
-            this.humanLoopConfig = humanLoopConfig;
+            $.humanLoopConfig = humanLoopConfig;
             return this;
         }
-        public Builder humanLoopConfig(@Nullable FlowDefinitionHumanLoopConfigGetArgs humanLoopConfig) {
-            this.humanLoopConfig = Codegen.ofNullable(humanLoopConfig);
-            return this;
+
+        public Builder humanLoopConfig(FlowDefinitionHumanLoopConfigGetArgs humanLoopConfig) {
+            return humanLoopConfig(Output.of(humanLoopConfig));
         }
+
         public Builder humanLoopRequestSource(@Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource) {
-            this.humanLoopRequestSource = humanLoopRequestSource;
+            $.humanLoopRequestSource = humanLoopRequestSource;
             return this;
         }
-        public Builder humanLoopRequestSource(@Nullable FlowDefinitionHumanLoopRequestSourceGetArgs humanLoopRequestSource) {
-            this.humanLoopRequestSource = Codegen.ofNullable(humanLoopRequestSource);
-            return this;
+
+        public Builder humanLoopRequestSource(FlowDefinitionHumanLoopRequestSourceGetArgs humanLoopRequestSource) {
+            return humanLoopRequestSource(Output.of(humanLoopRequestSource));
         }
+
         public Builder outputConfig(@Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig) {
-            this.outputConfig = outputConfig;
+            $.outputConfig = outputConfig;
             return this;
         }
-        public Builder outputConfig(@Nullable FlowDefinitionOutputConfigGetArgs outputConfig) {
-            this.outputConfig = Codegen.ofNullable(outputConfig);
-            return this;
+
+        public Builder outputConfig(FlowDefinitionOutputConfigGetArgs outputConfig) {
+            return outputConfig(Output.of(outputConfig));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public FlowDefinitionState build() {
-            return new FlowDefinitionState(arn, flowDefinitionName, humanLoopActivationConfig, humanLoopConfig, humanLoopRequestSource, outputConfig, roleArn, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public FlowDefinitionState build() {
+            return $;
         }
     }
+
 }

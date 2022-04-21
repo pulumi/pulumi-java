@@ -18,7 +18,7 @@ public final class CVSSv3Response extends com.pulumi.resources.InvokeArgs {
     public static final CVSSv3Response Empty = new CVSSv3Response();
 
     @Import(name="attackComplexity", required=true)
-      private final String attackComplexity;
+    private String attackComplexity;
 
     public String attackComplexity() {
         return this.attackComplexity;
@@ -29,14 +29,14 @@ public final class CVSSv3Response extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attackVector", required=true)
-      private final String attackVector;
+    private String attackVector;
 
     public String attackVector() {
         return this.attackVector;
     }
 
     @Import(name="availabilityImpact", required=true)
-      private final String availabilityImpact;
+    private String availabilityImpact;
 
     public String availabilityImpact() {
         return this.availabilityImpact;
@@ -47,185 +47,164 @@ public final class CVSSv3Response extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="baseScore", required=true)
-      private final Double baseScore;
+    private Double baseScore;
 
     public Double baseScore() {
         return this.baseScore;
     }
 
     @Import(name="confidentialityImpact", required=true)
-      private final String confidentialityImpact;
+    private String confidentialityImpact;
 
     public String confidentialityImpact() {
         return this.confidentialityImpact;
     }
 
     @Import(name="exploitabilityScore", required=true)
-      private final Double exploitabilityScore;
+    private Double exploitabilityScore;
 
     public Double exploitabilityScore() {
         return this.exploitabilityScore;
     }
 
     @Import(name="impactScore", required=true)
-      private final Double impactScore;
+    private Double impactScore;
 
     public Double impactScore() {
         return this.impactScore;
     }
 
     @Import(name="integrityImpact", required=true)
-      private final String integrityImpact;
+    private String integrityImpact;
 
     public String integrityImpact() {
         return this.integrityImpact;
     }
 
     @Import(name="privilegesRequired", required=true)
-      private final String privilegesRequired;
+    private String privilegesRequired;
 
     public String privilegesRequired() {
         return this.privilegesRequired;
     }
 
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
     @Import(name="userInteraction", required=true)
-      private final String userInteraction;
+    private String userInteraction;
 
     public String userInteraction() {
         return this.userInteraction;
     }
 
-    public CVSSv3Response(
-        String attackComplexity,
-        String attackVector,
-        String availabilityImpact,
-        Double baseScore,
-        String confidentialityImpact,
-        Double exploitabilityScore,
-        Double impactScore,
-        String integrityImpact,
-        String privilegesRequired,
-        String scope,
-        String userInteraction) {
-        this.attackComplexity = Objects.requireNonNull(attackComplexity, "expected parameter 'attackComplexity' to be non-null");
-        this.attackVector = Objects.requireNonNull(attackVector, "expected parameter 'attackVector' to be non-null");
-        this.availabilityImpact = Objects.requireNonNull(availabilityImpact, "expected parameter 'availabilityImpact' to be non-null");
-        this.baseScore = Objects.requireNonNull(baseScore, "expected parameter 'baseScore' to be non-null");
-        this.confidentialityImpact = Objects.requireNonNull(confidentialityImpact, "expected parameter 'confidentialityImpact' to be non-null");
-        this.exploitabilityScore = Objects.requireNonNull(exploitabilityScore, "expected parameter 'exploitabilityScore' to be non-null");
-        this.impactScore = Objects.requireNonNull(impactScore, "expected parameter 'impactScore' to be non-null");
-        this.integrityImpact = Objects.requireNonNull(integrityImpact, "expected parameter 'integrityImpact' to be non-null");
-        this.privilegesRequired = Objects.requireNonNull(privilegesRequired, "expected parameter 'privilegesRequired' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.userInteraction = Objects.requireNonNull(userInteraction, "expected parameter 'userInteraction' to be non-null");
-    }
+    private CVSSv3Response() {}
 
-    private CVSSv3Response() {
-        this.attackComplexity = null;
-        this.attackVector = null;
-        this.availabilityImpact = null;
-        this.baseScore = null;
-        this.confidentialityImpact = null;
-        this.exploitabilityScore = null;
-        this.impactScore = null;
-        this.integrityImpact = null;
-        this.privilegesRequired = null;
-        this.scope = null;
-        this.userInteraction = null;
+    private CVSSv3Response(CVSSv3Response $) {
+        this.attackComplexity = $.attackComplexity;
+        this.attackVector = $.attackVector;
+        this.availabilityImpact = $.availabilityImpact;
+        this.baseScore = $.baseScore;
+        this.confidentialityImpact = $.confidentialityImpact;
+        this.exploitabilityScore = $.exploitabilityScore;
+        this.impactScore = $.impactScore;
+        this.integrityImpact = $.integrityImpact;
+        this.privilegesRequired = $.privilegesRequired;
+        this.scope = $.scope;
+        this.userInteraction = $.userInteraction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CVSSv3Response defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attackComplexity;
-        private String attackVector;
-        private String availabilityImpact;
-        private Double baseScore;
-        private String confidentialityImpact;
-        private Double exploitabilityScore;
-        private Double impactScore;
-        private String integrityImpact;
-        private String privilegesRequired;
-        private String scope;
-        private String userInteraction;
+        private CVSSv3Response $;
 
         public Builder() {
-    	      // Empty
+            $ = new CVSSv3Response();
         }
 
         public Builder(CVSSv3Response defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attackComplexity = defaults.attackComplexity;
-    	      this.attackVector = defaults.attackVector;
-    	      this.availabilityImpact = defaults.availabilityImpact;
-    	      this.baseScore = defaults.baseScore;
-    	      this.confidentialityImpact = defaults.confidentialityImpact;
-    	      this.exploitabilityScore = defaults.exploitabilityScore;
-    	      this.impactScore = defaults.impactScore;
-    	      this.integrityImpact = defaults.integrityImpact;
-    	      this.privilegesRequired = defaults.privilegesRequired;
-    	      this.scope = defaults.scope;
-    	      this.userInteraction = defaults.userInteraction;
+            $ = new CVSSv3Response(Objects.requireNonNull(defaults));
         }
 
         public Builder attackComplexity(String attackComplexity) {
-            this.attackComplexity = Objects.requireNonNull(attackComplexity);
+            $.attackComplexity = attackComplexity;
             return this;
         }
+
         public Builder attackVector(String attackVector) {
-            this.attackVector = Objects.requireNonNull(attackVector);
+            $.attackVector = attackVector;
             return this;
         }
+
         public Builder availabilityImpact(String availabilityImpact) {
-            this.availabilityImpact = Objects.requireNonNull(availabilityImpact);
+            $.availabilityImpact = availabilityImpact;
             return this;
         }
+
         public Builder baseScore(Double baseScore) {
-            this.baseScore = Objects.requireNonNull(baseScore);
+            $.baseScore = baseScore;
             return this;
         }
+
         public Builder confidentialityImpact(String confidentialityImpact) {
-            this.confidentialityImpact = Objects.requireNonNull(confidentialityImpact);
+            $.confidentialityImpact = confidentialityImpact;
             return this;
         }
+
         public Builder exploitabilityScore(Double exploitabilityScore) {
-            this.exploitabilityScore = Objects.requireNonNull(exploitabilityScore);
+            $.exploitabilityScore = exploitabilityScore;
             return this;
         }
+
         public Builder impactScore(Double impactScore) {
-            this.impactScore = Objects.requireNonNull(impactScore);
+            $.impactScore = impactScore;
             return this;
         }
+
         public Builder integrityImpact(String integrityImpact) {
-            this.integrityImpact = Objects.requireNonNull(integrityImpact);
+            $.integrityImpact = integrityImpact;
             return this;
         }
+
         public Builder privilegesRequired(String privilegesRequired) {
-            this.privilegesRequired = Objects.requireNonNull(privilegesRequired);
+            $.privilegesRequired = privilegesRequired;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder userInteraction(String userInteraction) {
-            this.userInteraction = Objects.requireNonNull(userInteraction);
+            $.userInteraction = userInteraction;
             return this;
-        }        public CVSSv3Response build() {
-            return new CVSSv3Response(attackComplexity, attackVector, availabilityImpact, baseScore, confidentialityImpact, exploitabilityScore, impactScore, integrityImpact, privilegesRequired, scope, userInteraction);
+        }
+
+        public CVSSv3Response build() {
+            $.attackComplexity = Objects.requireNonNull($.attackComplexity, "expected parameter 'attackComplexity' to be non-null");
+            $.attackVector = Objects.requireNonNull($.attackVector, "expected parameter 'attackVector' to be non-null");
+            $.availabilityImpact = Objects.requireNonNull($.availabilityImpact, "expected parameter 'availabilityImpact' to be non-null");
+            $.baseScore = Objects.requireNonNull($.baseScore, "expected parameter 'baseScore' to be non-null");
+            $.confidentialityImpact = Objects.requireNonNull($.confidentialityImpact, "expected parameter 'confidentialityImpact' to be non-null");
+            $.exploitabilityScore = Objects.requireNonNull($.exploitabilityScore, "expected parameter 'exploitabilityScore' to be non-null");
+            $.impactScore = Objects.requireNonNull($.impactScore, "expected parameter 'impactScore' to be non-null");
+            $.integrityImpact = Objects.requireNonNull($.integrityImpact, "expected parameter 'integrityImpact' to be non-null");
+            $.privilegesRequired = Objects.requireNonNull($.privilegesRequired, "expected parameter 'privilegesRequired' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.userInteraction = Objects.requireNonNull($.userInteraction, "expected parameter 'userInteraction' to be non-null");
+            return $;
         }
     }
+
 }

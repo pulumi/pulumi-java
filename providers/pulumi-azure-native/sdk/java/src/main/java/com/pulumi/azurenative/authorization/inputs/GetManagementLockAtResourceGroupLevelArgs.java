@@ -17,7 +17,7 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends com.pulumi.
      * 
      */
     @Import(name="lockName", required=true)
-      private final String lockName;
+    private String lockName;
 
     public String lockName() {
         return this.lockName;
@@ -28,55 +28,52 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagementLockAtResourceGroupLevelArgs(
-        String lockName,
-        String resourceGroupName) {
-        this.lockName = Objects.requireNonNull(lockName, "expected parameter 'lockName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagementLockAtResourceGroupLevelArgs() {}
 
-    private GetManagementLockAtResourceGroupLevelArgs() {
-        this.lockName = null;
-        this.resourceGroupName = null;
+    private GetManagementLockAtResourceGroupLevelArgs(GetManagementLockAtResourceGroupLevelArgs $) {
+        this.lockName = $.lockName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementLockAtResourceGroupLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lockName;
-        private String resourceGroupName;
+        private GetManagementLockAtResourceGroupLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementLockAtResourceGroupLevelArgs();
         }
 
         public Builder(GetManagementLockAtResourceGroupLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lockName = defaults.lockName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagementLockAtResourceGroupLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lockName(String lockName) {
-            this.lockName = Objects.requireNonNull(lockName);
+            $.lockName = lockName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagementLockAtResourceGroupLevelArgs build() {
-            return new GetManagementLockAtResourceGroupLevelArgs(lockName, resourceGroupName);
+        }
+
+        public GetManagementLockAtResourceGroupLevelArgs build() {
+            $.lockName = Objects.requireNonNull($.lockName, "expected parameter 'lockName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

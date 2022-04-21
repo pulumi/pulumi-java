@@ -21,7 +21,7 @@ public final class KeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -32,7 +32,7 @@ public final class KeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="permissions", required=true)
-      private final String permissions;
+    private String permissions;
 
     public String permissions() {
         return this.permissions;
@@ -43,64 +43,59 @@ public final class KeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public KeyResponse(
-        String keyName,
-        String permissions,
-        String value) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private KeyResponse() {}
 
-    private KeyResponse() {
-        this.keyName = null;
-        this.permissions = null;
-        this.value = null;
+    private KeyResponse(KeyResponse $) {
+        this.keyName = $.keyName;
+        this.permissions = $.permissions;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyName;
-        private String permissions;
-        private String value;
+        private KeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyResponse();
         }
 
         public Builder(KeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.permissions = defaults.permissions;
-    	      this.value = defaults.value;
+            $ = new KeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder permissions(String permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public KeyResponse build() {
-            return new KeyResponse(keyName, permissions, value);
+        }
+
+        public KeyResponse build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

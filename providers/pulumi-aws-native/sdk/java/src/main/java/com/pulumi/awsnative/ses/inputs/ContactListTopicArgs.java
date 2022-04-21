@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
     public static final ContactListTopicArgs Empty = new ContactListTopicArgs();
 
     @Import(name="defaultSubscriptionStatus", required=true)
-      private final Output<String> defaultSubscriptionStatus;
+    private Output<String> defaultSubscriptionStatus;
 
     public Output<String> defaultSubscriptionStatus() {
         return this.defaultSubscriptionStatus;
@@ -27,10 +27,10 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -49,89 +49,81 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="topicName", required=true)
-      private final Output<String> topicName;
+    private Output<String> topicName;
 
     public Output<String> topicName() {
         return this.topicName;
     }
 
-    public ContactListTopicArgs(
-        Output<String> defaultSubscriptionStatus,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        Output<String> topicName) {
-        this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus, "expected parameter 'defaultSubscriptionStatus' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.topicName = Objects.requireNonNull(topicName, "expected parameter 'topicName' to be non-null");
-    }
+    private ContactListTopicArgs() {}
 
-    private ContactListTopicArgs() {
-        this.defaultSubscriptionStatus = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.topicName = Codegen.empty();
+    private ContactListTopicArgs(ContactListTopicArgs $) {
+        this.defaultSubscriptionStatus = $.defaultSubscriptionStatus;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactListTopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> defaultSubscriptionStatus;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private Output<String> topicName;
+        private ContactListTopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactListTopicArgs();
         }
 
         public Builder(ContactListTopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultSubscriptionStatus = defaults.defaultSubscriptionStatus;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.topicName = defaults.topicName;
+            $ = new ContactListTopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultSubscriptionStatus(Output<String> defaultSubscriptionStatus) {
-            this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus);
+            $.defaultSubscriptionStatus = defaultSubscriptionStatus;
             return this;
         }
+
         public Builder defaultSubscriptionStatus(String defaultSubscriptionStatus) {
-            this.defaultSubscriptionStatus = Output.of(Objects.requireNonNull(defaultSubscriptionStatus));
-            return this;
+            return defaultSubscriptionStatus(Output.of(defaultSubscriptionStatus));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder topicName(Output<String> topicName) {
-            this.topicName = Objects.requireNonNull(topicName);
+            $.topicName = topicName;
             return this;
         }
+
         public Builder topicName(String topicName) {
-            this.topicName = Output.of(Objects.requireNonNull(topicName));
-            return this;
-        }        public ContactListTopicArgs build() {
-            return new ContactListTopicArgs(defaultSubscriptionStatus, description, displayName, topicName);
+            return topicName(Output.of(topicName));
+        }
+
+        public ContactListTopicArgs build() {
+            $.defaultSubscriptionStatus = Objects.requireNonNull($.defaultSubscriptionStatus, "expected parameter 'defaultSubscriptionStatus' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.topicName = Objects.requireNonNull($.topicName, "expected parameter 'topicName' to be non-null");
+            return $;
         }
     }
+
 }

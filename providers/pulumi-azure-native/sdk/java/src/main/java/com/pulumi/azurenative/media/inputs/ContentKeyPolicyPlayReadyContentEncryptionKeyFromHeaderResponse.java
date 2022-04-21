@@ -23,45 +23,45 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderRespon
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse(String odataType) {
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse() {}
 
-    private ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse() {
-        this.odataType = null;
+    private ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse(ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse $) {
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
+        private ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse();
         }
 
         public Builder(ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
+            $ = new ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse build() {
-            return new ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse(odataType);
+        }
+
+        public ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

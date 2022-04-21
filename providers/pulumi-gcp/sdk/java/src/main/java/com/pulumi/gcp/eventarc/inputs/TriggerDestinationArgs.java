@@ -5,10 +5,10 @@ package com.pulumi.gcp.eventarc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.eventarc.inputs.TriggerDestinationCloudRunServiceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TriggerDestinationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cloudFunction")
-      private final @Nullable Output<String> cloudFunction;
+    private @Nullable Output<String> cloudFunction;
 
-    public Output<String> cloudFunction() {
-        return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
+    public Optional<Output<String>> cloudFunction() {
+        return Optional.ofNullable(this.cloudFunction);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class TriggerDestinationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cloudRunService")
-      private final @Nullable Output<TriggerDestinationCloudRunServiceArgs> cloudRunService;
+    private @Nullable Output<TriggerDestinationCloudRunServiceArgs> cloudRunService;
 
-    public Output<TriggerDestinationCloudRunServiceArgs> cloudRunService() {
-        return this.cloudRunService == null ? Codegen.empty() : this.cloudRunService;
+    public Optional<Output<TriggerDestinationCloudRunServiceArgs>> cloudRunService() {
+        return Optional.ofNullable(this.cloudRunService);
     }
 
-    public TriggerDestinationArgs(
-        @Nullable Output<String> cloudFunction,
-        @Nullable Output<TriggerDestinationCloudRunServiceArgs> cloudRunService) {
-        this.cloudFunction = cloudFunction;
-        this.cloudRunService = cloudRunService;
-    }
+    private TriggerDestinationArgs() {}
 
-    private TriggerDestinationArgs() {
-        this.cloudFunction = Codegen.empty();
-        this.cloudRunService = Codegen.empty();
+    private TriggerDestinationArgs(TriggerDestinationArgs $) {
+        this.cloudFunction = $.cloudFunction;
+        this.cloudRunService = $.cloudRunService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudFunction;
-        private @Nullable Output<TriggerDestinationCloudRunServiceArgs> cloudRunService;
+        private TriggerDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerDestinationArgs();
         }
 
         public Builder(TriggerDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudFunction = defaults.cloudFunction;
-    	      this.cloudRunService = defaults.cloudRunService;
+            $ = new TriggerDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudFunction(@Nullable Output<String> cloudFunction) {
-            this.cloudFunction = cloudFunction;
+            $.cloudFunction = cloudFunction;
             return this;
         }
-        public Builder cloudFunction(@Nullable String cloudFunction) {
-            this.cloudFunction = Codegen.ofNullable(cloudFunction);
-            return this;
+
+        public Builder cloudFunction(String cloudFunction) {
+            return cloudFunction(Output.of(cloudFunction));
         }
+
         public Builder cloudRunService(@Nullable Output<TriggerDestinationCloudRunServiceArgs> cloudRunService) {
-            this.cloudRunService = cloudRunService;
+            $.cloudRunService = cloudRunService;
             return this;
         }
-        public Builder cloudRunService(@Nullable TriggerDestinationCloudRunServiceArgs cloudRunService) {
-            this.cloudRunService = Codegen.ofNullable(cloudRunService);
-            return this;
-        }        public TriggerDestinationArgs build() {
-            return new TriggerDestinationArgs(cloudFunction, cloudRunService);
+
+        public Builder cloudRunService(TriggerDestinationCloudRunServiceArgs cloudRunService) {
+            return cloudRunService(Output.of(cloudRunService));
+        }
+
+        public TriggerDestinationArgs build() {
+            return $;
         }
     }
+
 }

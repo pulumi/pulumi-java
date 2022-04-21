@@ -24,10 +24,10 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable String authenticationType;
+    private @Nullable String authenticationType;
 
     public Optional<String> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdTime", required=true)
-      private final String createdTime;
+    private String createdTime;
 
     public String createdTime() {
         return this.createdTime;
@@ -46,10 +46,10 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deadLetterSecret")
-      private final @Nullable String deadLetterSecret;
+    private @Nullable String deadLetterSecret;
 
     public Optional<String> deadLetterSecret() {
-        return this.deadLetterSecret == null ? Optional.empty() : Optional.ofNullable(this.deadLetterSecret);
+        return Optional.ofNullable(this.deadLetterSecret);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deadLetterUri")
-      private final @Nullable String deadLetterUri;
+    private @Nullable String deadLetterUri;
 
     public Optional<String> deadLetterUri() {
-        return this.deadLetterUri == null ? Optional.empty() : Optional.ofNullable(this.deadLetterUri);
+        return Optional.ofNullable(this.deadLetterUri);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointType", required=true)
-      private final String endpointType;
+    private String endpointType;
 
     public String endpointType() {
         return this.endpointType;
@@ -80,10 +80,10 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointUri")
-      private final @Nullable String endpointUri;
+    private @Nullable String endpointUri;
 
     public Optional<String> endpointUri() {
-        return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
+        return Optional.ofNullable(this.endpointUri);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="entityPath")
-      private final @Nullable String entityPath;
+    private @Nullable String entityPath;
 
     public Optional<String> entityPath() {
-        return this.entityPath == null ? Optional.empty() : Optional.ofNullable(this.entityPath);
+        return Optional.ofNullable(this.entityPath);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="primaryConnectionString")
-      private final @Nullable String primaryConnectionString;
+    private @Nullable String primaryConnectionString;
 
     public Optional<String> primaryConnectionString() {
-        return this.primaryConnectionString == null ? Optional.empty() : Optional.ofNullable(this.primaryConnectionString);
+        return Optional.ofNullable(this.primaryConnectionString);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -124,127 +124,101 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secondaryConnectionString")
-      private final @Nullable String secondaryConnectionString;
+    private @Nullable String secondaryConnectionString;
 
     public Optional<String> secondaryConnectionString() {
-        return this.secondaryConnectionString == null ? Optional.empty() : Optional.ofNullable(this.secondaryConnectionString);
+        return Optional.ofNullable(this.secondaryConnectionString);
     }
 
-    public ServiceBusResponse(
-        @Nullable String authenticationType,
-        String createdTime,
-        @Nullable String deadLetterSecret,
-        @Nullable String deadLetterUri,
-        String endpointType,
-        @Nullable String endpointUri,
-        @Nullable String entityPath,
-        @Nullable String primaryConnectionString,
-        String provisioningState,
-        @Nullable String secondaryConnectionString) {
-        this.authenticationType = authenticationType;
-        this.createdTime = Objects.requireNonNull(createdTime, "expected parameter 'createdTime' to be non-null");
-        this.deadLetterSecret = deadLetterSecret;
-        this.deadLetterUri = deadLetterUri;
-        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
-        this.endpointUri = endpointUri;
-        this.entityPath = entityPath;
-        this.primaryConnectionString = primaryConnectionString;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.secondaryConnectionString = secondaryConnectionString;
-    }
+    private ServiceBusResponse() {}
 
-    private ServiceBusResponse() {
-        this.authenticationType = null;
-        this.createdTime = null;
-        this.deadLetterSecret = null;
-        this.deadLetterUri = null;
-        this.endpointType = null;
-        this.endpointUri = null;
-        this.entityPath = null;
-        this.primaryConnectionString = null;
-        this.provisioningState = null;
-        this.secondaryConnectionString = null;
+    private ServiceBusResponse(ServiceBusResponse $) {
+        this.authenticationType = $.authenticationType;
+        this.createdTime = $.createdTime;
+        this.deadLetterSecret = $.deadLetterSecret;
+        this.deadLetterUri = $.deadLetterUri;
+        this.endpointType = $.endpointType;
+        this.endpointUri = $.endpointUri;
+        this.entityPath = $.entityPath;
+        this.primaryConnectionString = $.primaryConnectionString;
+        this.provisioningState = $.provisioningState;
+        this.secondaryConnectionString = $.secondaryConnectionString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authenticationType;
-        private String createdTime;
-        private @Nullable String deadLetterSecret;
-        private @Nullable String deadLetterUri;
-        private String endpointType;
-        private @Nullable String endpointUri;
-        private @Nullable String entityPath;
-        private @Nullable String primaryConnectionString;
-        private String provisioningState;
-        private @Nullable String secondaryConnectionString;
+        private ServiceBusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBusResponse();
         }
 
         public Builder(ServiceBusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.createdTime = defaults.createdTime;
-    	      this.deadLetterSecret = defaults.deadLetterSecret;
-    	      this.deadLetterUri = defaults.deadLetterUri;
-    	      this.endpointType = defaults.endpointType;
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.entityPath = defaults.entityPath;
-    	      this.primaryConnectionString = defaults.primaryConnectionString;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.secondaryConnectionString = defaults.secondaryConnectionString;
+            $ = new ServiceBusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder createdTime(String createdTime) {
-            this.createdTime = Objects.requireNonNull(createdTime);
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
-            this.deadLetterSecret = deadLetterSecret;
+            $.deadLetterSecret = deadLetterSecret;
             return this;
         }
+
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
-            this.deadLetterUri = deadLetterUri;
+            $.deadLetterUri = deadLetterUri;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = endpointUri;
+            $.endpointUri = endpointUri;
             return this;
         }
+
         public Builder entityPath(@Nullable String entityPath) {
-            this.entityPath = entityPath;
+            $.entityPath = entityPath;
             return this;
         }
+
         public Builder primaryConnectionString(@Nullable String primaryConnectionString) {
-            this.primaryConnectionString = primaryConnectionString;
+            $.primaryConnectionString = primaryConnectionString;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder secondaryConnectionString(@Nullable String secondaryConnectionString) {
-            this.secondaryConnectionString = secondaryConnectionString;
+            $.secondaryConnectionString = secondaryConnectionString;
             return this;
-        }        public ServiceBusResponse build() {
-            return new ServiceBusResponse(authenticationType, createdTime, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath, primaryConnectionString, provisioningState, secondaryConnectionString);
+        }
+
+        public ServiceBusResponse build() {
+            $.createdTime = Objects.requireNonNull($.createdTime, "expected parameter 'createdTime' to be non-null");
+            $.endpointType = Codegen.stringProp("endpointType").arg($.endpointType).require();
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

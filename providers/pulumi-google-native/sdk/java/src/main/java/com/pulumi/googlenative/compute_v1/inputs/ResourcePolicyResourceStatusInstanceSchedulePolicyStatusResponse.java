@@ -17,7 +17,7 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
      * 
      */
     @Import(name="lastRunStartTime", required=true)
-      private final String lastRunStartTime;
+    private String lastRunStartTime;
 
     public String lastRunStartTime() {
         return this.lastRunStartTime;
@@ -28,55 +28,52 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
      * 
      */
     @Import(name="nextRunStartTime", required=true)
-      private final String nextRunStartTime;
+    private String nextRunStartTime;
 
     public String nextRunStartTime() {
         return this.nextRunStartTime;
     }
 
-    public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(
-        String lastRunStartTime,
-        String nextRunStartTime) {
-        this.lastRunStartTime = Objects.requireNonNull(lastRunStartTime, "expected parameter 'lastRunStartTime' to be non-null");
-        this.nextRunStartTime = Objects.requireNonNull(nextRunStartTime, "expected parameter 'nextRunStartTime' to be non-null");
-    }
+    private ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse() {}
 
-    private ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse() {
-        this.lastRunStartTime = null;
-        this.nextRunStartTime = null;
+    private ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse $) {
+        this.lastRunStartTime = $.lastRunStartTime;
+        this.nextRunStartTime = $.nextRunStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastRunStartTime;
-        private String nextRunStartTime;
+        private ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse();
         }
 
         public Builder(ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastRunStartTime = defaults.lastRunStartTime;
-    	      this.nextRunStartTime = defaults.nextRunStartTime;
+            $ = new ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastRunStartTime(String lastRunStartTime) {
-            this.lastRunStartTime = Objects.requireNonNull(lastRunStartTime);
+            $.lastRunStartTime = lastRunStartTime;
             return this;
         }
+
         public Builder nextRunStartTime(String nextRunStartTime) {
-            this.nextRunStartTime = Objects.requireNonNull(nextRunStartTime);
+            $.nextRunStartTime = nextRunStartTime;
             return this;
-        }        public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse build() {
-            return new ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(lastRunStartTime, nextRunStartTime);
+        }
+
+        public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse build() {
+            $.lastRunStartTime = Objects.requireNonNull($.lastRunStartTime, "expected parameter 'lastRunStartTime' to be non-null");
+            $.nextRunStartTime = Objects.requireNonNull($.nextRunStartTime, "expected parameter 'nextRunStartTime' to be non-null");
+            return $;
         }
     }
+
 }

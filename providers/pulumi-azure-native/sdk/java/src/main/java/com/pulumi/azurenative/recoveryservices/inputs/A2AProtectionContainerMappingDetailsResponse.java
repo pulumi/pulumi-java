@@ -24,10 +24,10 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
      * 
      */
     @Import(name="agentAutoUpdateStatus")
-      private final @Nullable String agentAutoUpdateStatus;
+    private @Nullable String agentAutoUpdateStatus;
 
     public Optional<String> agentAutoUpdateStatus() {
-        return this.agentAutoUpdateStatus == null ? Optional.empty() : Optional.ofNullable(this.agentAutoUpdateStatus);
+        return Optional.ofNullable(this.agentAutoUpdateStatus);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
      * 
      */
     @Import(name="automationAccountArmId")
-      private final @Nullable String automationAccountArmId;
+    private @Nullable String automationAccountArmId;
 
     public Optional<String> automationAccountArmId() {
-        return this.automationAccountArmId == null ? Optional.empty() : Optional.ofNullable(this.automationAccountArmId);
+        return Optional.ofNullable(this.automationAccountArmId);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -58,10 +58,10 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
      * 
      */
     @Import(name="jobScheduleName")
-      private final @Nullable String jobScheduleName;
+    private @Nullable String jobScheduleName;
 
     public Optional<String> jobScheduleName() {
-        return this.jobScheduleName == null ? Optional.empty() : Optional.ofNullable(this.jobScheduleName);
+        return Optional.ofNullable(this.jobScheduleName);
     }
 
     /**
@@ -69,82 +69,69 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
      * 
      */
     @Import(name="scheduleName")
-      private final @Nullable String scheduleName;
+    private @Nullable String scheduleName;
 
     public Optional<String> scheduleName() {
-        return this.scheduleName == null ? Optional.empty() : Optional.ofNullable(this.scheduleName);
+        return Optional.ofNullable(this.scheduleName);
     }
 
-    public A2AProtectionContainerMappingDetailsResponse(
-        @Nullable String agentAutoUpdateStatus,
-        @Nullable String automationAccountArmId,
-        String instanceType,
-        @Nullable String jobScheduleName,
-        @Nullable String scheduleName) {
-        this.agentAutoUpdateStatus = agentAutoUpdateStatus;
-        this.automationAccountArmId = automationAccountArmId;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.jobScheduleName = jobScheduleName;
-        this.scheduleName = scheduleName;
-    }
+    private A2AProtectionContainerMappingDetailsResponse() {}
 
-    private A2AProtectionContainerMappingDetailsResponse() {
-        this.agentAutoUpdateStatus = null;
-        this.automationAccountArmId = null;
-        this.instanceType = null;
-        this.jobScheduleName = null;
-        this.scheduleName = null;
+    private A2AProtectionContainerMappingDetailsResponse(A2AProtectionContainerMappingDetailsResponse $) {
+        this.agentAutoUpdateStatus = $.agentAutoUpdateStatus;
+        this.automationAccountArmId = $.automationAccountArmId;
+        this.instanceType = $.instanceType;
+        this.jobScheduleName = $.jobScheduleName;
+        this.scheduleName = $.scheduleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(A2AProtectionContainerMappingDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String agentAutoUpdateStatus;
-        private @Nullable String automationAccountArmId;
-        private String instanceType;
-        private @Nullable String jobScheduleName;
-        private @Nullable String scheduleName;
+        private A2AProtectionContainerMappingDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new A2AProtectionContainerMappingDetailsResponse();
         }
 
         public Builder(A2AProtectionContainerMappingDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentAutoUpdateStatus = defaults.agentAutoUpdateStatus;
-    	      this.automationAccountArmId = defaults.automationAccountArmId;
-    	      this.instanceType = defaults.instanceType;
-    	      this.jobScheduleName = defaults.jobScheduleName;
-    	      this.scheduleName = defaults.scheduleName;
+            $ = new A2AProtectionContainerMappingDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentAutoUpdateStatus(@Nullable String agentAutoUpdateStatus) {
-            this.agentAutoUpdateStatus = agentAutoUpdateStatus;
+            $.agentAutoUpdateStatus = agentAutoUpdateStatus;
             return this;
         }
+
         public Builder automationAccountArmId(@Nullable String automationAccountArmId) {
-            this.automationAccountArmId = automationAccountArmId;
+            $.automationAccountArmId = automationAccountArmId;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder jobScheduleName(@Nullable String jobScheduleName) {
-            this.jobScheduleName = jobScheduleName;
+            $.jobScheduleName = jobScheduleName;
             return this;
         }
+
         public Builder scheduleName(@Nullable String scheduleName) {
-            this.scheduleName = scheduleName;
+            $.scheduleName = scheduleName;
             return this;
-        }        public A2AProtectionContainerMappingDetailsResponse build() {
-            return new A2AProtectionContainerMappingDetailsResponse(agentAutoUpdateStatus, automationAccountArmId, instanceType, jobScheduleName, scheduleName);
+        }
+
+        public A2AProtectionContainerMappingDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

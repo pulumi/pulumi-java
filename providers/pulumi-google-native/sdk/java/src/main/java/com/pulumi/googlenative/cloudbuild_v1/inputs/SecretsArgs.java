@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.InlineSecretArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.SecretManagerSecretArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SecretsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inline")
-      private final @Nullable Output<List<InlineSecretArgs>> inline;
+    private @Nullable Output<List<InlineSecretArgs>> inline;
 
-    public Output<List<InlineSecretArgs>> inline() {
-        return this.inline == null ? Codegen.empty() : this.inline;
+    public Optional<Output<List<InlineSecretArgs>>> inline() {
+        return Optional.ofNullable(this.inline);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class SecretsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretManager")
-      private final @Nullable Output<List<SecretManagerSecretArgs>> secretManager;
+    private @Nullable Output<List<SecretManagerSecretArgs>> secretManager;
 
-    public Output<List<SecretManagerSecretArgs>> secretManager() {
-        return this.secretManager == null ? Codegen.empty() : this.secretManager;
+    public Optional<Output<List<SecretManagerSecretArgs>>> secretManager() {
+        return Optional.ofNullable(this.secretManager);
     }
 
-    public SecretsArgs(
-        @Nullable Output<List<InlineSecretArgs>> inline,
-        @Nullable Output<List<SecretManagerSecretArgs>> secretManager) {
-        this.inline = inline;
-        this.secretManager = secretManager;
-    }
+    private SecretsArgs() {}
 
-    private SecretsArgs() {
-        this.inline = Codegen.empty();
-        this.secretManager = Codegen.empty();
+    private SecretsArgs(SecretsArgs $) {
+        this.inline = $.inline;
+        this.secretManager = $.secretManager;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InlineSecretArgs>> inline;
-        private @Nullable Output<List<SecretManagerSecretArgs>> secretManager;
+        private SecretsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretsArgs();
         }
 
         public Builder(SecretsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inline = defaults.inline;
-    	      this.secretManager = defaults.secretManager;
+            $ = new SecretsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inline(@Nullable Output<List<InlineSecretArgs>> inline) {
-            this.inline = inline;
+            $.inline = inline;
             return this;
         }
-        public Builder inline(@Nullable List<InlineSecretArgs> inline) {
-            this.inline = Codegen.ofNullable(inline);
-            return this;
+
+        public Builder inline(List<InlineSecretArgs> inline) {
+            return inline(Output.of(inline));
         }
+
         public Builder inline(InlineSecretArgs... inline) {
             return inline(List.of(inline));
         }
+
         public Builder secretManager(@Nullable Output<List<SecretManagerSecretArgs>> secretManager) {
-            this.secretManager = secretManager;
+            $.secretManager = secretManager;
             return this;
         }
-        public Builder secretManager(@Nullable List<SecretManagerSecretArgs> secretManager) {
-            this.secretManager = Codegen.ofNullable(secretManager);
-            return this;
+
+        public Builder secretManager(List<SecretManagerSecretArgs> secretManager) {
+            return secretManager(Output.of(secretManager));
         }
+
         public Builder secretManager(SecretManagerSecretArgs... secretManager) {
             return secretManager(List.of(secretManager));
-        }        public SecretsArgs build() {
-            return new SecretsArgs(inline, secretManager);
+        }
+
+        public SecretsArgs build() {
+            return $;
         }
     }
+
 }

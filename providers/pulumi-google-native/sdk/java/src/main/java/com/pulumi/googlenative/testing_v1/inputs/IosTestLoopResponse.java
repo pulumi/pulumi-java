@@ -24,7 +24,7 @@ public final class IosTestLoopResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appBundleId", required=true)
-      private final String appBundleId;
+    private String appBundleId;
 
     public String appBundleId() {
         return this.appBundleId;
@@ -35,7 +35,7 @@ public final class IosTestLoopResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appIpa", required=true)
-      private final FileReferenceResponse appIpa;
+    private FileReferenceResponse appIpa;
 
     public FileReferenceResponse appIpa() {
         return this.appIpa;
@@ -46,67 +46,63 @@ public final class IosTestLoopResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scenarios", required=true)
-      private final List<Integer> scenarios;
+    private List<Integer> scenarios;
 
     public List<Integer> scenarios() {
         return this.scenarios;
     }
 
-    public IosTestLoopResponse(
-        String appBundleId,
-        FileReferenceResponse appIpa,
-        List<Integer> scenarios) {
-        this.appBundleId = Objects.requireNonNull(appBundleId, "expected parameter 'appBundleId' to be non-null");
-        this.appIpa = Objects.requireNonNull(appIpa, "expected parameter 'appIpa' to be non-null");
-        this.scenarios = Objects.requireNonNull(scenarios, "expected parameter 'scenarios' to be non-null");
-    }
+    private IosTestLoopResponse() {}
 
-    private IosTestLoopResponse() {
-        this.appBundleId = null;
-        this.appIpa = null;
-        this.scenarios = List.of();
+    private IosTestLoopResponse(IosTestLoopResponse $) {
+        this.appBundleId = $.appBundleId;
+        this.appIpa = $.appIpa;
+        this.scenarios = $.scenarios;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosTestLoopResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appBundleId;
-        private FileReferenceResponse appIpa;
-        private List<Integer> scenarios;
+        private IosTestLoopResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosTestLoopResponse();
         }
 
         public Builder(IosTestLoopResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appBundleId = defaults.appBundleId;
-    	      this.appIpa = defaults.appIpa;
-    	      this.scenarios = defaults.scenarios;
+            $ = new IosTestLoopResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appBundleId(String appBundleId) {
-            this.appBundleId = Objects.requireNonNull(appBundleId);
+            $.appBundleId = appBundleId;
             return this;
         }
+
         public Builder appIpa(FileReferenceResponse appIpa) {
-            this.appIpa = Objects.requireNonNull(appIpa);
+            $.appIpa = appIpa;
             return this;
         }
+
         public Builder scenarios(List<Integer> scenarios) {
-            this.scenarios = Objects.requireNonNull(scenarios);
+            $.scenarios = scenarios;
             return this;
         }
+
         public Builder scenarios(Integer... scenarios) {
             return scenarios(List.of(scenarios));
-        }        public IosTestLoopResponse build() {
-            return new IosTestLoopResponse(appBundleId, appIpa, scenarios);
+        }
+
+        public IosTestLoopResponse build() {
+            $.appBundleId = Objects.requireNonNull($.appBundleId, "expected parameter 'appBundleId' to be non-null");
+            $.appIpa = Objects.requireNonNull($.appIpa, "expected parameter 'appIpa' to be non-null");
+            $.scenarios = Objects.requireNonNull($.scenarios, "expected parameter 'scenarios' to be non-null");
+            return $;
         }
     }
+
 }

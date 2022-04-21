@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class StackSetAutoDeploymentGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class StackSetAutoDeploymentGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="retainStacksOnAccountRemoval")
-      private final @Nullable Output<Boolean> retainStacksOnAccountRemoval;
+    private @Nullable Output<Boolean> retainStacksOnAccountRemoval;
 
-    public Output<Boolean> retainStacksOnAccountRemoval() {
-        return this.retainStacksOnAccountRemoval == null ? Codegen.empty() : this.retainStacksOnAccountRemoval;
+    public Optional<Output<Boolean>> retainStacksOnAccountRemoval() {
+        return Optional.ofNullable(this.retainStacksOnAccountRemoval);
     }
 
-    public StackSetAutoDeploymentGetArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Boolean> retainStacksOnAccountRemoval) {
-        this.enabled = enabled;
-        this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
-    }
+    private StackSetAutoDeploymentGetArgs() {}
 
-    private StackSetAutoDeploymentGetArgs() {
-        this.enabled = Codegen.empty();
-        this.retainStacksOnAccountRemoval = Codegen.empty();
+    private StackSetAutoDeploymentGetArgs(StackSetAutoDeploymentGetArgs $) {
+        this.enabled = $.enabled;
+        this.retainStacksOnAccountRemoval = $.retainStacksOnAccountRemoval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetAutoDeploymentGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Boolean> retainStacksOnAccountRemoval;
+        private StackSetAutoDeploymentGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetAutoDeploymentGetArgs();
         }
 
         public Builder(StackSetAutoDeploymentGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.retainStacksOnAccountRemoval = defaults.retainStacksOnAccountRemoval;
+            $ = new StackSetAutoDeploymentGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder retainStacksOnAccountRemoval(@Nullable Output<Boolean> retainStacksOnAccountRemoval) {
-            this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
+            $.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
             return this;
         }
-        public Builder retainStacksOnAccountRemoval(@Nullable Boolean retainStacksOnAccountRemoval) {
-            this.retainStacksOnAccountRemoval = Codegen.ofNullable(retainStacksOnAccountRemoval);
-            return this;
-        }        public StackSetAutoDeploymentGetArgs build() {
-            return new StackSetAutoDeploymentGetArgs(enabled, retainStacksOnAccountRemoval);
+
+        public Builder retainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
+            return retainStacksOnAccountRemoval(Output.of(retainStacksOnAccountRemoval));
+        }
+
+        public StackSetAutoDeploymentGetArgs build() {
+            return $;
         }
     }
+
 }

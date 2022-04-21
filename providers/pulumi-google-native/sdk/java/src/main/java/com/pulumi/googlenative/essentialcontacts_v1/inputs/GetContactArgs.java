@@ -15,62 +15,58 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetContactArgs Empty = new GetContactArgs();
 
     @Import(name="contactId", required=true)
-      private final String contactId;
+    private String contactId;
 
     public String contactId() {
         return this.contactId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetContactArgs(
-        String contactId,
-        @Nullable String project) {
-        this.contactId = Objects.requireNonNull(contactId, "expected parameter 'contactId' to be non-null");
-        this.project = project;
-    }
+    private GetContactArgs() {}
 
-    private GetContactArgs() {
-        this.contactId = null;
-        this.project = null;
+    private GetContactArgs(GetContactArgs $) {
+        this.contactId = $.contactId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contactId;
-        private @Nullable String project;
+        private GetContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContactArgs();
         }
 
         public Builder(GetContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactId = defaults.contactId;
-    	      this.project = defaults.project;
+            $ = new GetContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactId(String contactId) {
-            this.contactId = Objects.requireNonNull(contactId);
+            $.contactId = contactId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetContactArgs build() {
-            return new GetContactArgs(contactId, project);
+        }
+
+        public GetContactArgs build() {
+            $.contactId = Objects.requireNonNull($.contactId, "expected parameter 'contactId' to be non-null");
+            return $;
         }
     }
+
 }

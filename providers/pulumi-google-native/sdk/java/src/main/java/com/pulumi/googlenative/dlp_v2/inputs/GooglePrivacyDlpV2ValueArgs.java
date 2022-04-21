@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ValueDayOfWeekValue;
 import com.pulumi.googlenative.dlp_v2.inputs.GoogleTypeDateArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GoogleTypeTimeOfDayArgs;
@@ -13,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="booleanValue")
-      private final @Nullable Output<Boolean> booleanValue;
+    private @Nullable Output<Boolean> booleanValue;
 
-    public Output<Boolean> booleanValue() {
-        return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
+    public Optional<Output<Boolean>> booleanValue() {
+        return Optional.ofNullable(this.booleanValue);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dateValue")
-      private final @Nullable Output<GoogleTypeDateArgs> dateValue;
+    private @Nullable Output<GoogleTypeDateArgs> dateValue;
 
-    public Output<GoogleTypeDateArgs> dateValue() {
-        return this.dateValue == null ? Codegen.empty() : this.dateValue;
+    public Optional<Output<GoogleTypeDateArgs>> dateValue() {
+        return Optional.ofNullable(this.dateValue);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dayOfWeekValue")
-      private final @Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue;
+    private @Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue;
 
-    public Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue() {
-        return this.dayOfWeekValue == null ? Codegen.empty() : this.dayOfWeekValue;
+    public Optional<Output<GooglePrivacyDlpV2ValueDayOfWeekValue>> dayOfWeekValue() {
+        return Optional.ofNullable(this.dayOfWeekValue);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="floatValue")
-      private final @Nullable Output<Double> floatValue;
+    private @Nullable Output<Double> floatValue;
 
-    public Output<Double> floatValue() {
-        return this.floatValue == null ? Codegen.empty() : this.floatValue;
+    public Optional<Output<Double>> floatValue() {
+        return Optional.ofNullable(this.floatValue);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="integerValue")
-      private final @Nullable Output<String> integerValue;
+    private @Nullable Output<String> integerValue;
 
-    public Output<String> integerValue() {
-        return this.integerValue == null ? Codegen.empty() : this.integerValue;
+    public Optional<Output<String>> integerValue() {
+        return Optional.ofNullable(this.integerValue);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="stringValue")
-      private final @Nullable Output<String> stringValue;
+    private @Nullable Output<String> stringValue;
 
-    public Output<String> stringValue() {
-        return this.stringValue == null ? Codegen.empty() : this.stringValue;
+    public Optional<Output<String>> stringValue() {
+        return Optional.ofNullable(this.stringValue);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="timeValue")
-      private final @Nullable Output<GoogleTypeTimeOfDayArgs> timeValue;
+    private @Nullable Output<GoogleTypeTimeOfDayArgs> timeValue;
 
-    public Output<GoogleTypeTimeOfDayArgs> timeValue() {
-        return this.timeValue == null ? Codegen.empty() : this.timeValue;
+    public Optional<Output<GoogleTypeTimeOfDayArgs>> timeValue() {
+        return Optional.ofNullable(this.timeValue);
     }
 
     /**
@@ -106,141 +106,118 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="timestampValue")
-      private final @Nullable Output<String> timestampValue;
+    private @Nullable Output<String> timestampValue;
 
-    public Output<String> timestampValue() {
-        return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
+    public Optional<Output<String>> timestampValue() {
+        return Optional.ofNullable(this.timestampValue);
     }
 
-    public GooglePrivacyDlpV2ValueArgs(
-        @Nullable Output<Boolean> booleanValue,
-        @Nullable Output<GoogleTypeDateArgs> dateValue,
-        @Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue,
-        @Nullable Output<Double> floatValue,
-        @Nullable Output<String> integerValue,
-        @Nullable Output<String> stringValue,
-        @Nullable Output<GoogleTypeTimeOfDayArgs> timeValue,
-        @Nullable Output<String> timestampValue) {
-        this.booleanValue = booleanValue;
-        this.dateValue = dateValue;
-        this.dayOfWeekValue = dayOfWeekValue;
-        this.floatValue = floatValue;
-        this.integerValue = integerValue;
-        this.stringValue = stringValue;
-        this.timeValue = timeValue;
-        this.timestampValue = timestampValue;
-    }
+    private GooglePrivacyDlpV2ValueArgs() {}
 
-    private GooglePrivacyDlpV2ValueArgs() {
-        this.booleanValue = Codegen.empty();
-        this.dateValue = Codegen.empty();
-        this.dayOfWeekValue = Codegen.empty();
-        this.floatValue = Codegen.empty();
-        this.integerValue = Codegen.empty();
-        this.stringValue = Codegen.empty();
-        this.timeValue = Codegen.empty();
-        this.timestampValue = Codegen.empty();
+    private GooglePrivacyDlpV2ValueArgs(GooglePrivacyDlpV2ValueArgs $) {
+        this.booleanValue = $.booleanValue;
+        this.dateValue = $.dateValue;
+        this.dayOfWeekValue = $.dayOfWeekValue;
+        this.floatValue = $.floatValue;
+        this.integerValue = $.integerValue;
+        this.stringValue = $.stringValue;
+        this.timeValue = $.timeValue;
+        this.timestampValue = $.timestampValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> booleanValue;
-        private @Nullable Output<GoogleTypeDateArgs> dateValue;
-        private @Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue;
-        private @Nullable Output<Double> floatValue;
-        private @Nullable Output<String> integerValue;
-        private @Nullable Output<String> stringValue;
-        private @Nullable Output<GoogleTypeTimeOfDayArgs> timeValue;
-        private @Nullable Output<String> timestampValue;
+        private GooglePrivacyDlpV2ValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ValueArgs();
         }
 
         public Builder(GooglePrivacyDlpV2ValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanValue = defaults.booleanValue;
-    	      this.dateValue = defaults.dateValue;
-    	      this.dayOfWeekValue = defaults.dayOfWeekValue;
-    	      this.floatValue = defaults.floatValue;
-    	      this.integerValue = defaults.integerValue;
-    	      this.stringValue = defaults.stringValue;
-    	      this.timeValue = defaults.timeValue;
-    	      this.timestampValue = defaults.timestampValue;
+            $ = new GooglePrivacyDlpV2ValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanValue(@Nullable Output<Boolean> booleanValue) {
-            this.booleanValue = booleanValue;
+            $.booleanValue = booleanValue;
             return this;
         }
-        public Builder booleanValue(@Nullable Boolean booleanValue) {
-            this.booleanValue = Codegen.ofNullable(booleanValue);
-            return this;
+
+        public Builder booleanValue(Boolean booleanValue) {
+            return booleanValue(Output.of(booleanValue));
         }
+
         public Builder dateValue(@Nullable Output<GoogleTypeDateArgs> dateValue) {
-            this.dateValue = dateValue;
+            $.dateValue = dateValue;
             return this;
         }
-        public Builder dateValue(@Nullable GoogleTypeDateArgs dateValue) {
-            this.dateValue = Codegen.ofNullable(dateValue);
-            return this;
+
+        public Builder dateValue(GoogleTypeDateArgs dateValue) {
+            return dateValue(Output.of(dateValue));
         }
+
         public Builder dayOfWeekValue(@Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue) {
-            this.dayOfWeekValue = dayOfWeekValue;
+            $.dayOfWeekValue = dayOfWeekValue;
             return this;
         }
-        public Builder dayOfWeekValue(@Nullable GooglePrivacyDlpV2ValueDayOfWeekValue dayOfWeekValue) {
-            this.dayOfWeekValue = Codegen.ofNullable(dayOfWeekValue);
-            return this;
+
+        public Builder dayOfWeekValue(GooglePrivacyDlpV2ValueDayOfWeekValue dayOfWeekValue) {
+            return dayOfWeekValue(Output.of(dayOfWeekValue));
         }
+
         public Builder floatValue(@Nullable Output<Double> floatValue) {
-            this.floatValue = floatValue;
+            $.floatValue = floatValue;
             return this;
         }
-        public Builder floatValue(@Nullable Double floatValue) {
-            this.floatValue = Codegen.ofNullable(floatValue);
-            return this;
+
+        public Builder floatValue(Double floatValue) {
+            return floatValue(Output.of(floatValue));
         }
+
         public Builder integerValue(@Nullable Output<String> integerValue) {
-            this.integerValue = integerValue;
+            $.integerValue = integerValue;
             return this;
         }
-        public Builder integerValue(@Nullable String integerValue) {
-            this.integerValue = Codegen.ofNullable(integerValue);
-            return this;
+
+        public Builder integerValue(String integerValue) {
+            return integerValue(Output.of(integerValue));
         }
+
         public Builder stringValue(@Nullable Output<String> stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
         }
-        public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Codegen.ofNullable(stringValue);
-            return this;
+
+        public Builder stringValue(String stringValue) {
+            return stringValue(Output.of(stringValue));
         }
+
         public Builder timeValue(@Nullable Output<GoogleTypeTimeOfDayArgs> timeValue) {
-            this.timeValue = timeValue;
+            $.timeValue = timeValue;
             return this;
         }
-        public Builder timeValue(@Nullable GoogleTypeTimeOfDayArgs timeValue) {
-            this.timeValue = Codegen.ofNullable(timeValue);
-            return this;
+
+        public Builder timeValue(GoogleTypeTimeOfDayArgs timeValue) {
+            return timeValue(Output.of(timeValue));
         }
+
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
-            this.timestampValue = timestampValue;
+            $.timestampValue = timestampValue;
             return this;
         }
-        public Builder timestampValue(@Nullable String timestampValue) {
-            this.timestampValue = Codegen.ofNullable(timestampValue);
-            return this;
-        }        public GooglePrivacyDlpV2ValueArgs build() {
-            return new GooglePrivacyDlpV2ValueArgs(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
+
+        public Builder timestampValue(String timestampValue) {
+            return timestampValue(Output.of(timestampValue));
+        }
+
+        public GooglePrivacyDlpV2ValueArgs build() {
+            return $;
         }
     }
+
 }

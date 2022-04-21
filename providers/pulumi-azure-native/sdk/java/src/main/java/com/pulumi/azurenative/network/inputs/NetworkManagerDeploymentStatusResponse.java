@@ -24,10 +24,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
      * 
      */
     @Import(name="commitTime")
-      private final @Nullable String commitTime;
+    private @Nullable String commitTime;
 
     public Optional<String> commitTime() {
-        return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
+        return Optional.ofNullable(this.commitTime);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
      * 
      */
     @Import(name="configurationIds")
-      private final @Nullable List<String> configurationIds;
+    private @Nullable List<String> configurationIds;
 
-    public List<String> configurationIds() {
-        return this.configurationIds == null ? List.of() : this.configurationIds;
+    public Optional<List<String>> configurationIds() {
+        return Optional.ofNullable(this.configurationIds);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
      * 
      */
     @Import(name="deploymentStatus")
-      private final @Nullable String deploymentStatus;
+    private @Nullable String deploymentStatus;
 
     public Optional<String> deploymentStatus() {
-        return this.deploymentStatus == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatus);
+        return Optional.ofNullable(this.deploymentStatus);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
      * 
      */
     @Import(name="deploymentType")
-      private final @Nullable String deploymentType;
+    private @Nullable String deploymentType;
 
     public Optional<String> deploymentType() {
-        return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
+        return Optional.ofNullable(this.deploymentType);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
      * 
      */
     @Import(name="errorMessage")
-      private final @Nullable String errorMessage;
+    private @Nullable String errorMessage;
 
     public Optional<String> errorMessage() {
-        return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
+        return Optional.ofNullable(this.errorMessage);
     }
 
     /**
@@ -79,94 +79,78 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
-    public NetworkManagerDeploymentStatusResponse(
-        @Nullable String commitTime,
-        @Nullable List<String> configurationIds,
-        @Nullable String deploymentStatus,
-        @Nullable String deploymentType,
-        @Nullable String errorMessage,
-        @Nullable String region) {
-        this.commitTime = commitTime;
-        this.configurationIds = configurationIds;
-        this.deploymentStatus = deploymentStatus;
-        this.deploymentType = deploymentType;
-        this.errorMessage = errorMessage;
-        this.region = region;
-    }
+    private NetworkManagerDeploymentStatusResponse() {}
 
-    private NetworkManagerDeploymentStatusResponse() {
-        this.commitTime = null;
-        this.configurationIds = List.of();
-        this.deploymentStatus = null;
-        this.deploymentType = null;
-        this.errorMessage = null;
-        this.region = null;
+    private NetworkManagerDeploymentStatusResponse(NetworkManagerDeploymentStatusResponse $) {
+        this.commitTime = $.commitTime;
+        this.configurationIds = $.configurationIds;
+        this.deploymentStatus = $.deploymentStatus;
+        this.deploymentType = $.deploymentType;
+        this.errorMessage = $.errorMessage;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkManagerDeploymentStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String commitTime;
-        private @Nullable List<String> configurationIds;
-        private @Nullable String deploymentStatus;
-        private @Nullable String deploymentType;
-        private @Nullable String errorMessage;
-        private @Nullable String region;
+        private NetworkManagerDeploymentStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkManagerDeploymentStatusResponse();
         }
 
         public Builder(NetworkManagerDeploymentStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commitTime = defaults.commitTime;
-    	      this.configurationIds = defaults.configurationIds;
-    	      this.deploymentStatus = defaults.deploymentStatus;
-    	      this.deploymentType = defaults.deploymentType;
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.region = defaults.region;
+            $ = new NetworkManagerDeploymentStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commitTime(@Nullable String commitTime) {
-            this.commitTime = commitTime;
+            $.commitTime = commitTime;
             return this;
         }
+
         public Builder configurationIds(@Nullable List<String> configurationIds) {
-            this.configurationIds = configurationIds;
+            $.configurationIds = configurationIds;
             return this;
         }
+
         public Builder configurationIds(String... configurationIds) {
             return configurationIds(List.of(configurationIds));
         }
+
         public Builder deploymentStatus(@Nullable String deploymentStatus) {
-            this.deploymentStatus = deploymentStatus;
+            $.deploymentStatus = deploymentStatus;
             return this;
         }
+
         public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = deploymentType;
+            $.deploymentType = deploymentType;
             return this;
         }
+
         public Builder errorMessage(@Nullable String errorMessage) {
-            this.errorMessage = errorMessage;
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
-        }        public NetworkManagerDeploymentStatusResponse build() {
-            return new NetworkManagerDeploymentStatusResponse(commitTime, configurationIds, deploymentStatus, deploymentType, errorMessage, region);
+        }
+
+        public NetworkManagerDeploymentStatusResponse build() {
+            return $;
         }
     }
+
 }

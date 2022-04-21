@@ -5,10 +5,10 @@ package com.pulumi.aws.pinpoint.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BaiduChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiKey")
-      private final @Nullable Output<String> apiKey;
+    private @Nullable Output<String> apiKey;
 
-    public Output<String> apiKey() {
-        return this.apiKey == null ? Codegen.empty() : this.apiKey;
+    public Optional<Output<String>> apiKey() {
+        return Optional.ofNullable(this.apiKey);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BaiduChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BaiduChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class BaiduChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretKey")
-      private final @Nullable Output<String> secretKey;
+    private @Nullable Output<String> secretKey;
 
-    public Output<String> secretKey() {
-        return this.secretKey == null ? Codegen.empty() : this.secretKey;
+    public Optional<Output<String>> secretKey() {
+        return Optional.ofNullable(this.secretKey);
     }
 
-    public BaiduChannelState(
-        @Nullable Output<String> apiKey,
-        @Nullable Output<String> applicationId,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> secretKey) {
-        this.apiKey = apiKey;
-        this.applicationId = applicationId;
-        this.enabled = enabled;
-        this.secretKey = secretKey;
-    }
+    private BaiduChannelState() {}
 
-    private BaiduChannelState() {
-        this.apiKey = Codegen.empty();
-        this.applicationId = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.secretKey = Codegen.empty();
+    private BaiduChannelState(BaiduChannelState $) {
+        this.apiKey = $.apiKey;
+        this.applicationId = $.applicationId;
+        this.enabled = $.enabled;
+        this.secretKey = $.secretKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BaiduChannelState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiKey;
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> secretKey;
+        private BaiduChannelState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BaiduChannelState();
         }
 
         public Builder(BaiduChannelState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKey = defaults.apiKey;
-    	      this.applicationId = defaults.applicationId;
-    	      this.enabled = defaults.enabled;
-    	      this.secretKey = defaults.secretKey;
+            $ = new BaiduChannelState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKey(@Nullable Output<String> apiKey) {
-            this.apiKey = apiKey;
+            $.apiKey = apiKey;
             return this;
         }
-        public Builder apiKey(@Nullable String apiKey) {
-            this.apiKey = Codegen.ofNullable(apiKey);
-            return this;
+
+        public Builder apiKey(String apiKey) {
+            return apiKey(Output.of(apiKey));
         }
+
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder secretKey(@Nullable Output<String> secretKey) {
-            this.secretKey = secretKey;
+            $.secretKey = secretKey;
             return this;
         }
-        public Builder secretKey(@Nullable String secretKey) {
-            this.secretKey = Codegen.ofNullable(secretKey);
-            return this;
-        }        public BaiduChannelState build() {
-            return new BaiduChannelState(apiKey, applicationId, enabled, secretKey);
+
+        public Builder secretKey(String secretKey) {
+            return secretKey(Output.of(secretKey));
+        }
+
+        public BaiduChannelState build() {
+            return $;
         }
     }
+
 }

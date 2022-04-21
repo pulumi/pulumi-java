@@ -5,10 +5,10 @@ package com.pulumi.azurenative.automation;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -32,10 +32,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isEncrypted")
-      private final @Nullable Output<Boolean> isEncrypted;
+    private @Nullable Output<Boolean> isEncrypted;
 
-    public Output<Boolean> isEncrypted() {
-        return this.isEncrypted == null ? Codegen.empty() : this.isEncrypted;
+    public Optional<Output<Boolean>> isEncrypted() {
+        return Optional.ofNullable(this.isEncrypted);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -65,7 +65,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,10 +76,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -87,128 +87,111 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="variableName")
-      private final @Nullable Output<String> variableName;
+    private @Nullable Output<String> variableName;
 
-    public Output<String> variableName() {
-        return this.variableName == null ? Codegen.empty() : this.variableName;
+    public Optional<Output<String>> variableName() {
+        return Optional.ofNullable(this.variableName);
     }
 
-    public VariableArgs(
-        Output<String> automationAccountName,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> isEncrypted,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> value,
-        @Nullable Output<String> variableName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.description = description;
-        this.isEncrypted = isEncrypted;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.value = value;
-        this.variableName = variableName;
-    }
+    private VariableArgs() {}
 
-    private VariableArgs() {
-        this.automationAccountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.isEncrypted = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.value = Codegen.empty();
-        this.variableName = Codegen.empty();
+    private VariableArgs(VariableArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.description = $.description;
+        this.isEncrypted = $.isEncrypted;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.value = $.value;
+        this.variableName = $.variableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> automationAccountName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> isEncrypted;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> value;
-        private @Nullable Output<String> variableName;
+        private VariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VariableArgs();
         }
 
         public Builder(VariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.description = defaults.description;
-    	      this.isEncrypted = defaults.isEncrypted;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.value = defaults.value;
-    	      this.variableName = defaults.variableName;
+            $ = new VariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
-            this.isEncrypted = isEncrypted;
+            $.isEncrypted = isEncrypted;
             return this;
         }
-        public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = Codegen.ofNullable(isEncrypted);
-            return this;
+
+        public Builder isEncrypted(Boolean isEncrypted) {
+            return isEncrypted(Output.of(isEncrypted));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder variableName(@Nullable Output<String> variableName) {
-            this.variableName = variableName;
+            $.variableName = variableName;
             return this;
         }
-        public Builder variableName(@Nullable String variableName) {
-            this.variableName = Codegen.ofNullable(variableName);
-            return this;
-        }        public VariableArgs build() {
-            return new VariableArgs(automationAccountName, description, isEncrypted, name, resourceGroupName, value, variableName);
+
+        public Builder variableName(String variableName) {
+            return variableName(Output.of(variableName));
+        }
+
+        public VariableArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

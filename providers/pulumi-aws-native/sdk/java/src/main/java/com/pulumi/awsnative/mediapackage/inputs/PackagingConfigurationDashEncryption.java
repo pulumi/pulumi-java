@@ -17,45 +17,45 @@ public final class PackagingConfigurationDashEncryption extends com.pulumi.resou
     public static final PackagingConfigurationDashEncryption Empty = new PackagingConfigurationDashEncryption();
 
     @Import(name="spekeKeyProvider", required=true)
-      private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
+    private PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
     public PackagingConfigurationSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public PackagingConfigurationDashEncryption(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
-    }
+    private PackagingConfigurationDashEncryption() {}
 
-    private PackagingConfigurationDashEncryption() {
-        this.spekeKeyProvider = null;
+    private PackagingConfigurationDashEncryption(PackagingConfigurationDashEncryption $) {
+        this.spekeKeyProvider = $.spekeKeyProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationDashEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
+        private PackagingConfigurationDashEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationDashEncryption();
         }
 
         public Builder(PackagingConfigurationDashEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spekeKeyProvider = defaults.spekeKeyProvider;
+            $ = new PackagingConfigurationDashEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
-            this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+            $.spekeKeyProvider = spekeKeyProvider;
             return this;
-        }        public PackagingConfigurationDashEncryption build() {
-            return new PackagingConfigurationDashEncryption(spekeKeyProvider);
+        }
+
+        public PackagingConfigurationDashEncryption build() {
+            $.spekeKeyProvider = Objects.requireNonNull($.spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
+            return $;
         }
     }
+
 }

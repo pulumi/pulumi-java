@@ -11,6 +11,7 @@ import com.pulumi.kubernetes.node.k8s.io_v1.inputs.OverheadArgs;
 import com.pulumi.kubernetes.node.k8s.io_v1.inputs.SchedulingArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +24,10 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="handler", required=true)
-      private final Output<String> handler;
+    private Output<String> handler;
 
     public Output<String> handler() {
         return this.handler;
@@ -45,10 +46,10 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overhead")
-      private final @Nullable Output<OverheadArgs> overhead;
+    private @Nullable Output<OverheadArgs> overhead;
 
-    public Output<OverheadArgs> overhead() {
-        return this.overhead == null ? Codegen.empty() : this.overhead;
+    public Optional<Output<OverheadArgs>> overhead() {
+        return Optional.ofNullable(this.overhead);
     }
 
     /**
@@ -80,115 +81,101 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduling")
-      private final @Nullable Output<SchedulingArgs> scheduling;
+    private @Nullable Output<SchedulingArgs> scheduling;
 
-    public Output<SchedulingArgs> scheduling() {
-        return this.scheduling == null ? Codegen.empty() : this.scheduling;
+    public Optional<Output<SchedulingArgs>> scheduling() {
+        return Optional.ofNullable(this.scheduling);
     }
 
-    public RuntimeClassArgs(
-        @Nullable Output<String> apiVersion,
-        Output<String> handler,
-        @Nullable Output<String> kind,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<OverheadArgs> overhead,
-        @Nullable Output<SchedulingArgs> scheduling) {
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.handler = Objects.requireNonNull(handler, "expected parameter 'handler' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.metadata = metadata;
-        this.overhead = overhead;
-        this.scheduling = scheduling;
-    }
+    private RuntimeClassArgs() {}
 
-    private RuntimeClassArgs() {
-        this.apiVersion = Codegen.empty();
-        this.handler = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.overhead = Codegen.empty();
-        this.scheduling = Codegen.empty();
+    private RuntimeClassArgs(RuntimeClassArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.handler = $.handler;
+        this.kind = $.kind;
+        this.metadata = $.metadata;
+        this.overhead = $.overhead;
+        this.scheduling = $.scheduling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeClassArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private Output<String> handler;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<OverheadArgs> overhead;
-        private @Nullable Output<SchedulingArgs> scheduling;
+        private RuntimeClassArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeClassArgs();
         }
 
         public Builder(RuntimeClassArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.handler = defaults.handler;
-    	      this.kind = defaults.kind;
-    	      this.metadata = defaults.metadata;
-    	      this.overhead = defaults.overhead;
-    	      this.scheduling = defaults.scheduling;
+            $ = new RuntimeClassArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder handler(Output<String> handler) {
-            this.handler = Objects.requireNonNull(handler);
+            $.handler = handler;
             return this;
         }
+
         public Builder handler(String handler) {
-            this.handler = Output.of(Objects.requireNonNull(handler));
-            return this;
+            return handler(Output.of(handler));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder overhead(@Nullable Output<OverheadArgs> overhead) {
-            this.overhead = overhead;
+            $.overhead = overhead;
             return this;
         }
-        public Builder overhead(@Nullable OverheadArgs overhead) {
-            this.overhead = Codegen.ofNullable(overhead);
-            return this;
+
+        public Builder overhead(OverheadArgs overhead) {
+            return overhead(Output.of(overhead));
         }
+
         public Builder scheduling(@Nullable Output<SchedulingArgs> scheduling) {
-            this.scheduling = scheduling;
+            $.scheduling = scheduling;
             return this;
         }
-        public Builder scheduling(@Nullable SchedulingArgs scheduling) {
-            this.scheduling = Codegen.ofNullable(scheduling);
-            return this;
-        }        public RuntimeClassArgs build() {
-            return new RuntimeClassArgs(apiVersion, handler, kind, metadata, overhead, scheduling);
+
+        public Builder scheduling(SchedulingArgs scheduling) {
+            return scheduling(Output.of(scheduling));
+        }
+
+        public RuntimeClassArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.handler = Objects.requireNonNull($.handler, "expected parameter 'handler' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            return $;
         }
     }
+
 }

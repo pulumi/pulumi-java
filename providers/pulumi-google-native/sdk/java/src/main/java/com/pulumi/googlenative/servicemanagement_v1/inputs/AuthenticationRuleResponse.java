@@ -25,7 +25,7 @@ public final class AuthenticationRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="allowWithoutCredential", required=true)
-      private final Boolean allowWithoutCredential;
+    private Boolean allowWithoutCredential;
 
     public Boolean allowWithoutCredential() {
         return this.allowWithoutCredential;
@@ -36,7 +36,7 @@ public final class AuthenticationRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="oauth", required=true)
-      private final OAuthRequirementsResponse oauth;
+    private OAuthRequirementsResponse oauth;
 
     public OAuthRequirementsResponse oauth() {
         return this.oauth;
@@ -47,7 +47,7 @@ public final class AuthenticationRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="requirements", required=true)
-      private final List<AuthRequirementResponse> requirements;
+    private List<AuthRequirementResponse> requirements;
 
     public List<AuthRequirementResponse> requirements() {
         return this.requirements;
@@ -58,76 +58,70 @@ public final class AuthenticationRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="selector", required=true)
-      private final String selector;
+    private String selector;
 
     public String selector() {
         return this.selector;
     }
 
-    public AuthenticationRuleResponse(
-        Boolean allowWithoutCredential,
-        OAuthRequirementsResponse oauth,
-        List<AuthRequirementResponse> requirements,
-        String selector) {
-        this.allowWithoutCredential = Objects.requireNonNull(allowWithoutCredential, "expected parameter 'allowWithoutCredential' to be non-null");
-        this.oauth = Objects.requireNonNull(oauth, "expected parameter 'oauth' to be non-null");
-        this.requirements = Objects.requireNonNull(requirements, "expected parameter 'requirements' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-    }
+    private AuthenticationRuleResponse() {}
 
-    private AuthenticationRuleResponse() {
-        this.allowWithoutCredential = null;
-        this.oauth = null;
-        this.requirements = List.of();
-        this.selector = null;
+    private AuthenticationRuleResponse(AuthenticationRuleResponse $) {
+        this.allowWithoutCredential = $.allowWithoutCredential;
+        this.oauth = $.oauth;
+        this.requirements = $.requirements;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowWithoutCredential;
-        private OAuthRequirementsResponse oauth;
-        private List<AuthRequirementResponse> requirements;
-        private String selector;
+        private AuthenticationRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationRuleResponse();
         }
 
         public Builder(AuthenticationRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowWithoutCredential = defaults.allowWithoutCredential;
-    	      this.oauth = defaults.oauth;
-    	      this.requirements = defaults.requirements;
-    	      this.selector = defaults.selector;
+            $ = new AuthenticationRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowWithoutCredential(Boolean allowWithoutCredential) {
-            this.allowWithoutCredential = Objects.requireNonNull(allowWithoutCredential);
+            $.allowWithoutCredential = allowWithoutCredential;
             return this;
         }
+
         public Builder oauth(OAuthRequirementsResponse oauth) {
-            this.oauth = Objects.requireNonNull(oauth);
+            $.oauth = oauth;
             return this;
         }
+
         public Builder requirements(List<AuthRequirementResponse> requirements) {
-            this.requirements = Objects.requireNonNull(requirements);
+            $.requirements = requirements;
             return this;
         }
+
         public Builder requirements(AuthRequirementResponse... requirements) {
             return requirements(List.of(requirements));
         }
+
         public Builder selector(String selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
-        }        public AuthenticationRuleResponse build() {
-            return new AuthenticationRuleResponse(allowWithoutCredential, oauth, requirements, selector);
+        }
+
+        public AuthenticationRuleResponse build() {
+            $.allowWithoutCredential = Objects.requireNonNull($.allowWithoutCredential, "expected parameter 'allowWithoutCredential' to be non-null");
+            $.oauth = Objects.requireNonNull($.oauth, "expected parameter 'oauth' to be non-null");
+            $.requirements = Objects.requireNonNull($.requirements, "expected parameter 'requirements' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            return $;
         }
     }
+
 }

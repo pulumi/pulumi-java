@@ -17,7 +17,7 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="applicationTypeName", required=true)
-      private final String applicationTypeName;
+    private String applicationTypeName;
 
     public String applicationTypeName() {
         return this.applicationTypeName;
@@ -28,7 +28,7 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -39,7 +39,7 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public GetApplicationTypeVersionArgs(
-        String applicationTypeName,
-        String clusterName,
-        String resourceGroupName,
-        String version) {
-        this.applicationTypeName = Objects.requireNonNull(applicationTypeName, "expected parameter 'applicationTypeName' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private GetApplicationTypeVersionArgs() {}
 
-    private GetApplicationTypeVersionArgs() {
-        this.applicationTypeName = null;
-        this.clusterName = null;
-        this.resourceGroupName = null;
-        this.version = null;
+    private GetApplicationTypeVersionArgs(GetApplicationTypeVersionArgs $) {
+        this.applicationTypeName = $.applicationTypeName;
+        this.clusterName = $.clusterName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationTypeVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationTypeName;
-        private String clusterName;
-        private String resourceGroupName;
-        private String version;
+        private GetApplicationTypeVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationTypeVersionArgs();
         }
 
         public Builder(GetApplicationTypeVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationTypeName = defaults.applicationTypeName;
-    	      this.clusterName = defaults.clusterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.version = defaults.version;
+            $ = new GetApplicationTypeVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationTypeName(String applicationTypeName) {
-            this.applicationTypeName = Objects.requireNonNull(applicationTypeName);
+            $.applicationTypeName = applicationTypeName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public GetApplicationTypeVersionArgs build() {
-            return new GetApplicationTypeVersionArgs(applicationTypeName, clusterName, resourceGroupName, version);
+        }
+
+        public GetApplicationTypeVersionArgs build() {
+            $.applicationTypeName = Objects.requireNonNull($.applicationTypeName, "expected parameter 'applicationTypeName' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

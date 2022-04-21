@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ClusterAuthenticatorGroupsConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="securityGroup", required=true)
-      private final Output<String> securityGroup;
+    private Output<String> securityGroup;
 
     public Output<String> securityGroup() {
         return this.securityGroup;
     }
 
-    public ClusterAuthenticatorGroupsConfigArgs(Output<String> securityGroup) {
-        this.securityGroup = Objects.requireNonNull(securityGroup, "expected parameter 'securityGroup' to be non-null");
-    }
+    private ClusterAuthenticatorGroupsConfigArgs() {}
 
-    private ClusterAuthenticatorGroupsConfigArgs() {
-        this.securityGroup = Codegen.empty();
+    private ClusterAuthenticatorGroupsConfigArgs(ClusterAuthenticatorGroupsConfigArgs $) {
+        this.securityGroup = $.securityGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAuthenticatorGroupsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> securityGroup;
+        private ClusterAuthenticatorGroupsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAuthenticatorGroupsConfigArgs();
         }
 
         public Builder(ClusterAuthenticatorGroupsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroup = defaults.securityGroup;
+            $ = new ClusterAuthenticatorGroupsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroup(Output<String> securityGroup) {
-            this.securityGroup = Objects.requireNonNull(securityGroup);
+            $.securityGroup = securityGroup;
             return this;
         }
+
         public Builder securityGroup(String securityGroup) {
-            this.securityGroup = Output.of(Objects.requireNonNull(securityGroup));
-            return this;
-        }        public ClusterAuthenticatorGroupsConfigArgs build() {
-            return new ClusterAuthenticatorGroupsConfigArgs(securityGroup);
+            return securityGroup(Output.of(securityGroup));
+        }
+
+        public ClusterAuthenticatorGroupsConfigArgs build() {
+            $.securityGroup = Objects.requireNonNull($.securityGroup, "expected parameter 'securityGroup' to be non-null");
+            return $;
         }
     }
+
 }

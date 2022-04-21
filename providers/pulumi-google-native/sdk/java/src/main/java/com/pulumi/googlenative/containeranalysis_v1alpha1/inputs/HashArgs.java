@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.HashType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HashArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<HashType> type;
+    private @Nullable Output<HashType> type;
 
-    public Output<HashType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<HashType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class HashArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public HashArgs(
-        @Nullable Output<HashType> type,
-        @Nullable Output<String> value) {
-        this.type = type;
-        this.value = value;
-    }
+    private HashArgs() {}
 
-    private HashArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private HashArgs(HashArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HashArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HashType> type;
-        private @Nullable Output<String> value;
+        private HashArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HashArgs();
         }
 
         public Builder(HashArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new HashArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<HashType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable HashType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(HashType type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public HashArgs build() {
-            return new HashArgs(type, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public HashArgs build() {
+            return $;
         }
     }
+
 }

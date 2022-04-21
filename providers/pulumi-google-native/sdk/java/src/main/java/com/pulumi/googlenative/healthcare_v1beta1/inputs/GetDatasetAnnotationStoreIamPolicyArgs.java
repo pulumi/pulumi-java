@@ -15,110 +15,99 @@ public final class GetDatasetAnnotationStoreIamPolicyArgs extends com.pulumi.res
     public static final GetDatasetAnnotationStoreIamPolicyArgs Empty = new GetDatasetAnnotationStoreIamPolicyArgs();
 
     @Import(name="annotationStoreId", required=true)
-      private final String annotationStoreId;
+    private String annotationStoreId;
 
     public String annotationStoreId() {
         return this.annotationStoreId;
     }
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDatasetAnnotationStoreIamPolicyArgs(
-        String annotationStoreId,
-        String datasetId,
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.annotationStoreId = Objects.requireNonNull(annotationStoreId, "expected parameter 'annotationStoreId' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetDatasetAnnotationStoreIamPolicyArgs() {}
 
-    private GetDatasetAnnotationStoreIamPolicyArgs() {
-        this.annotationStoreId = null;
-        this.datasetId = null;
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetDatasetAnnotationStoreIamPolicyArgs(GetDatasetAnnotationStoreIamPolicyArgs $) {
+        this.annotationStoreId = $.annotationStoreId;
+        this.datasetId = $.datasetId;
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatasetAnnotationStoreIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String annotationStoreId;
-        private String datasetId;
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetDatasetAnnotationStoreIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatasetAnnotationStoreIamPolicyArgs();
         }
 
         public Builder(GetDatasetAnnotationStoreIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationStoreId = defaults.annotationStoreId;
-    	      this.datasetId = defaults.datasetId;
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetDatasetAnnotationStoreIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationStoreId(String annotationStoreId) {
-            this.annotationStoreId = Objects.requireNonNull(annotationStoreId);
+            $.annotationStoreId = annotationStoreId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDatasetAnnotationStoreIamPolicyArgs build() {
-            return new GetDatasetAnnotationStoreIamPolicyArgs(annotationStoreId, datasetId, location, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetDatasetAnnotationStoreIamPolicyArgs build() {
+            $.annotationStoreId = Objects.requireNonNull($.annotationStoreId, "expected parameter 'annotationStoreId' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

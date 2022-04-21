@@ -23,113 +23,103 @@ public final class RuleGroupByteMatchStatement extends com.pulumi.resources.Invo
     public static final RuleGroupByteMatchStatement Empty = new RuleGroupByteMatchStatement();
 
     @Import(name="fieldToMatch", required=true)
-      private final RuleGroupFieldToMatch fieldToMatch;
+    private RuleGroupFieldToMatch fieldToMatch;
 
     public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="positionalConstraint", required=true)
-      private final RuleGroupPositionalConstraint positionalConstraint;
+    private RuleGroupPositionalConstraint positionalConstraint;
 
     public RuleGroupPositionalConstraint positionalConstraint() {
         return this.positionalConstraint;
     }
 
     @Import(name="searchString")
-      private final @Nullable String searchString;
+    private @Nullable String searchString;
 
     public Optional<String> searchString() {
-        return this.searchString == null ? Optional.empty() : Optional.ofNullable(this.searchString);
+        return Optional.ofNullable(this.searchString);
     }
 
     @Import(name="searchStringBase64")
-      private final @Nullable String searchStringBase64;
+    private @Nullable String searchStringBase64;
 
     public Optional<String> searchStringBase64() {
-        return this.searchStringBase64 == null ? Optional.empty() : Optional.ofNullable(this.searchStringBase64);
+        return Optional.ofNullable(this.searchStringBase64);
     }
 
     @Import(name="textTransformations", required=true)
-      private final List<RuleGroupTextTransformation> textTransformations;
+    private List<RuleGroupTextTransformation> textTransformations;
 
     public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 
-    public RuleGroupByteMatchStatement(
-        RuleGroupFieldToMatch fieldToMatch,
-        RuleGroupPositionalConstraint positionalConstraint,
-        @Nullable String searchString,
-        @Nullable String searchStringBase64,
-        List<RuleGroupTextTransformation> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.positionalConstraint = Objects.requireNonNull(positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
-        this.searchString = searchString;
-        this.searchStringBase64 = searchStringBase64;
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private RuleGroupByteMatchStatement() {}
 
-    private RuleGroupByteMatchStatement() {
-        this.fieldToMatch = null;
-        this.positionalConstraint = null;
-        this.searchString = null;
-        this.searchStringBase64 = null;
-        this.textTransformations = List.of();
+    private RuleGroupByteMatchStatement(RuleGroupByteMatchStatement $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.positionalConstraint = $.positionalConstraint;
+        this.searchString = $.searchString;
+        this.searchStringBase64 = $.searchStringBase64;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupByteMatchStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RuleGroupFieldToMatch fieldToMatch;
-        private RuleGroupPositionalConstraint positionalConstraint;
-        private @Nullable String searchString;
-        private @Nullable String searchStringBase64;
-        private List<RuleGroupTextTransformation> textTransformations;
+        private RuleGroupByteMatchStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupByteMatchStatement();
         }
 
         public Builder(RuleGroupByteMatchStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.positionalConstraint = defaults.positionalConstraint;
-    	      this.searchString = defaults.searchString;
-    	      this.searchStringBase64 = defaults.searchStringBase64;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new RuleGroupByteMatchStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder positionalConstraint(RuleGroupPositionalConstraint positionalConstraint) {
-            this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
+            $.positionalConstraint = positionalConstraint;
             return this;
         }
+
         public Builder searchString(@Nullable String searchString) {
-            this.searchString = searchString;
+            $.searchString = searchString;
             return this;
         }
+
         public Builder searchStringBase64(@Nullable String searchStringBase64) {
-            this.searchStringBase64 = searchStringBase64;
+            $.searchStringBase64 = searchStringBase64;
             return this;
         }
+
         public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(RuleGroupTextTransformation... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public RuleGroupByteMatchStatement build() {
-            return new RuleGroupByteMatchStatement(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
+        }
+
+        public RuleGroupByteMatchStatement build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.positionalConstraint = Objects.requireNonNull($.positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

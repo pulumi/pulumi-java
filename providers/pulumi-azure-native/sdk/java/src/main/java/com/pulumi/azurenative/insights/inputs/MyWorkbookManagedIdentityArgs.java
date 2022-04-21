@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MyWorkbookManagedIdentityArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public MyWorkbookManagedIdentityArgs(@Nullable Output<String> type) {
-        this.type = type;
-    }
+    private MyWorkbookManagedIdentityArgs() {}
 
-    private MyWorkbookManagedIdentityArgs() {
-        this.type = Codegen.empty();
+    private MyWorkbookManagedIdentityArgs(MyWorkbookManagedIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MyWorkbookManagedIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> type;
+        private MyWorkbookManagedIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MyWorkbookManagedIdentityArgs();
         }
 
         public Builder(MyWorkbookManagedIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new MyWorkbookManagedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public MyWorkbookManagedIdentityArgs build() {
-            return new MyWorkbookManagedIdentityArgs(type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public MyWorkbookManagedIdentityArgs build() {
+            return $;
         }
     }
+
 }

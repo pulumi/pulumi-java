@@ -17,81 +17,74 @@ public final class ResourceGuardProxyBaseResponse extends com.pulumi.resources.I
     public static final ResourceGuardProxyBaseResponse Empty = new ResourceGuardProxyBaseResponse();
 
     @Import(name="lastUpdatedTime")
-      private final @Nullable String lastUpdatedTime;
+    private @Nullable String lastUpdatedTime;
 
     public Optional<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @Import(name="resourceGuardOperationDetails")
-      private final @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
+    private @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
 
-    public List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails() {
-        return this.resourceGuardOperationDetails == null ? List.of() : this.resourceGuardOperationDetails;
+    public Optional<List<ResourceGuardOperationDetailResponse>> resourceGuardOperationDetails() {
+        return Optional.ofNullable(this.resourceGuardOperationDetails);
     }
 
     @Import(name="resourceGuardResourceId")
-      private final @Nullable String resourceGuardResourceId;
+    private @Nullable String resourceGuardResourceId;
 
     public Optional<String> resourceGuardResourceId() {
-        return this.resourceGuardResourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceGuardResourceId);
+        return Optional.ofNullable(this.resourceGuardResourceId);
     }
 
-    public ResourceGuardProxyBaseResponse(
-        @Nullable String lastUpdatedTime,
-        @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails,
-        @Nullable String resourceGuardResourceId) {
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.resourceGuardOperationDetails = resourceGuardOperationDetails;
-        this.resourceGuardResourceId = resourceGuardResourceId;
-    }
+    private ResourceGuardProxyBaseResponse() {}
 
-    private ResourceGuardProxyBaseResponse() {
-        this.lastUpdatedTime = null;
-        this.resourceGuardOperationDetails = List.of();
-        this.resourceGuardResourceId = null;
+    private ResourceGuardProxyBaseResponse(ResourceGuardProxyBaseResponse $) {
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.resourceGuardOperationDetails = $.resourceGuardOperationDetails;
+        this.resourceGuardResourceId = $.resourceGuardResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGuardProxyBaseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String lastUpdatedTime;
-        private @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
-        private @Nullable String resourceGuardResourceId;
+        private ResourceGuardProxyBaseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGuardProxyBaseResponse();
         }
 
         public Builder(ResourceGuardProxyBaseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.resourceGuardOperationDetails = defaults.resourceGuardOperationDetails;
-    	      this.resourceGuardResourceId = defaults.resourceGuardResourceId;
+            $ = new ResourceGuardProxyBaseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
+
         public Builder resourceGuardOperationDetails(@Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails) {
-            this.resourceGuardOperationDetails = resourceGuardOperationDetails;
+            $.resourceGuardOperationDetails = resourceGuardOperationDetails;
             return this;
         }
+
         public Builder resourceGuardOperationDetails(ResourceGuardOperationDetailResponse... resourceGuardOperationDetails) {
             return resourceGuardOperationDetails(List.of(resourceGuardOperationDetails));
         }
+
         public Builder resourceGuardResourceId(@Nullable String resourceGuardResourceId) {
-            this.resourceGuardResourceId = resourceGuardResourceId;
+            $.resourceGuardResourceId = resourceGuardResourceId;
             return this;
-        }        public ResourceGuardProxyBaseResponse build() {
-            return new ResourceGuardProxyBaseResponse(lastUpdatedTime, resourceGuardOperationDetails, resourceGuardResourceId);
+        }
+
+        public ResourceGuardProxyBaseResponse build() {
+            return $;
         }
     }
+
 }

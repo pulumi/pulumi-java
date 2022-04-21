@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +22,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,7 +33,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobAgentName", required=true)
-      private final Output<String> jobAgentName;
+    private Output<String> jobAgentName;
 
     public Output<String> jobAgentName() {
         return this.jobAgentName;
@@ -43,10 +44,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobName")
-      private final @Nullable Output<String> jobName;
+    private @Nullable Output<String> jobName;
 
-    public Output<String> jobName() {
-        return this.jobName == null ? Codegen.empty() : this.jobName;
+    public Optional<Output<String>> jobName() {
+        return Optional.ofNullable(this.jobName);
     }
 
     /**
@@ -54,7 +55,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,10 +66,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<JobScheduleArgs> schedule;
+    private @Nullable Output<JobScheduleArgs> schedule;
 
-    public Output<JobScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<JobScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -76,115 +77,102 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
     }
 
-    public JobArgs(
-        @Nullable Output<String> description,
-        Output<String> jobAgentName,
-        @Nullable Output<String> jobName,
-        Output<String> resourceGroupName,
-        @Nullable Output<JobScheduleArgs> schedule,
-        Output<String> serverName) {
-        this.description = Codegen.stringProp("description").output().arg(description).def("").getNullable();
-        this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
-        this.jobName = jobName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schedule = schedule;
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.description = Codegen.empty();
-        this.jobAgentName = Codegen.empty();
-        this.jobName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.serverName = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.description = $.description;
+        this.jobAgentName = $.jobAgentName;
+        this.jobName = $.jobName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schedule = $.schedule;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> jobAgentName;
-        private @Nullable Output<String> jobName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<JobScheduleArgs> schedule;
-        private Output<String> serverName;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.jobAgentName = defaults.jobAgentName;
-    	      this.jobName = defaults.jobName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schedule = defaults.schedule;
-    	      this.serverName = defaults.serverName;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder jobAgentName(Output<String> jobAgentName) {
-            this.jobAgentName = Objects.requireNonNull(jobAgentName);
+            $.jobAgentName = jobAgentName;
             return this;
         }
+
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Output.of(Objects.requireNonNull(jobAgentName));
-            return this;
+            return jobAgentName(Output.of(jobAgentName));
         }
+
         public Builder jobName(@Nullable Output<String> jobName) {
-            this.jobName = jobName;
+            $.jobName = jobName;
             return this;
         }
-        public Builder jobName(@Nullable String jobName) {
-            this.jobName = Codegen.ofNullable(jobName);
-            return this;
+
+        public Builder jobName(String jobName) {
+            return jobName(Output.of(jobName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder schedule(@Nullable Output<JobScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable JobScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(JobScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
-        }        public JobArgs build() {
-            return new JobArgs(description, jobAgentName, jobName, resourceGroupName, schedule, serverName);
+            return serverName(Output.of(serverName));
+        }
+
+        public JobArgs build() {
+            $.description = Codegen.stringProp("description").output().arg($.description).def("").getNullable();
+            $.jobAgentName = Objects.requireNonNull($.jobAgentName, "expected parameter 'jobAgentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

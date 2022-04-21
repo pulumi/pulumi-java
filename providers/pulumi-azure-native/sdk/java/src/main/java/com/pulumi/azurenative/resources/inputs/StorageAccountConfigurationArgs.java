@@ -5,9 +5,9 @@ package com.pulumi.azurenative.resources.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class StorageAccountConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="storageAccountKey")
-      private final @Nullable Output<String> storageAccountKey;
+    private @Nullable Output<String> storageAccountKey;
 
-    public Output<String> storageAccountKey() {
-        return this.storageAccountKey == null ? Codegen.empty() : this.storageAccountKey;
+    public Optional<Output<String>> storageAccountKey() {
+        return Optional.ofNullable(this.storageAccountKey);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class StorageAccountConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="storageAccountName")
-      private final @Nullable Output<String> storageAccountName;
+    private @Nullable Output<String> storageAccountName;
 
-    public Output<String> storageAccountName() {
-        return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
+    public Optional<Output<String>> storageAccountName() {
+        return Optional.ofNullable(this.storageAccountName);
     }
 
-    public StorageAccountConfigurationArgs(
-        @Nullable Output<String> storageAccountKey,
-        @Nullable Output<String> storageAccountName) {
-        this.storageAccountKey = storageAccountKey;
-        this.storageAccountName = storageAccountName;
-    }
+    private StorageAccountConfigurationArgs() {}
 
-    private StorageAccountConfigurationArgs() {
-        this.storageAccountKey = Codegen.empty();
-        this.storageAccountName = Codegen.empty();
+    private StorageAccountConfigurationArgs(StorageAccountConfigurationArgs $) {
+        this.storageAccountKey = $.storageAccountKey;
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> storageAccountKey;
-        private @Nullable Output<String> storageAccountName;
+        private StorageAccountConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountConfigurationArgs();
         }
 
         public Builder(StorageAccountConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageAccountKey = defaults.storageAccountKey;
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new StorageAccountConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder storageAccountKey(@Nullable Output<String> storageAccountKey) {
-            this.storageAccountKey = storageAccountKey;
+            $.storageAccountKey = storageAccountKey;
             return this;
         }
-        public Builder storageAccountKey(@Nullable String storageAccountKey) {
-            this.storageAccountKey = Codegen.ofNullable(storageAccountKey);
-            return this;
+
+        public Builder storageAccountKey(String storageAccountKey) {
+            return storageAccountKey(Output.of(storageAccountKey));
         }
+
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
-            this.storageAccountName = storageAccountName;
+            $.storageAccountName = storageAccountName;
             return this;
         }
-        public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Codegen.ofNullable(storageAccountName);
-            return this;
-        }        public StorageAccountConfigurationArgs build() {
-            return new StorageAccountConfigurationArgs(storageAccountKey, storageAccountName);
+
+        public Builder storageAccountName(String storageAccountName) {
+            return storageAccountName(Output.of(storageAccountName));
+        }
+
+        public StorageAccountConfigurationArgs build() {
+            return $;
         }
     }
+
 }

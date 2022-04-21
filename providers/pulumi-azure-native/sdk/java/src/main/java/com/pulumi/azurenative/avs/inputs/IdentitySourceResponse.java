@@ -23,10 +23,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="alias")
-      private final @Nullable String alias;
+    private @Nullable String alias;
 
     public Optional<String> alias() {
-        return this.alias == null ? Optional.empty() : Optional.ofNullable(this.alias);
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="baseGroupDN")
-      private final @Nullable String baseGroupDN;
+    private @Nullable String baseGroupDN;
 
     public Optional<String> baseGroupDN() {
-        return this.baseGroupDN == null ? Optional.empty() : Optional.ofNullable(this.baseGroupDN);
+        return Optional.ofNullable(this.baseGroupDN);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="baseUserDN")
-      private final @Nullable String baseUserDN;
+    private @Nullable String baseUserDN;
 
     public Optional<String> baseUserDN() {
-        return this.baseUserDN == null ? Optional.empty() : Optional.ofNullable(this.baseUserDN);
+        return Optional.ofNullable(this.baseUserDN);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="domain")
-      private final @Nullable String domain;
+    private @Nullable String domain;
 
     public Optional<String> domain() {
-        return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="primaryServer")
-      private final @Nullable String primaryServer;
+    private @Nullable String primaryServer;
 
     public Optional<String> primaryServer() {
-        return this.primaryServer == null ? Optional.empty() : Optional.ofNullable(this.primaryServer);
+        return Optional.ofNullable(this.primaryServer);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="secondaryServer")
-      private final @Nullable String secondaryServer;
+    private @Nullable String secondaryServer;
 
     public Optional<String> secondaryServer() {
-        return this.secondaryServer == null ? Optional.empty() : Optional.ofNullable(this.secondaryServer);
+        return Optional.ofNullable(this.secondaryServer);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ssl")
-      private final @Nullable String ssl;
+    private @Nullable String ssl;
 
     public Optional<String> ssl() {
-        return this.ssl == null ? Optional.empty() : Optional.ofNullable(this.ssl);
+        return Optional.ofNullable(this.ssl);
     }
 
     /**
@@ -122,127 +122,98 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public IdentitySourceResponse(
-        @Nullable String alias,
-        @Nullable String baseGroupDN,
-        @Nullable String baseUserDN,
-        @Nullable String domain,
-        @Nullable String name,
-        @Nullable String password,
-        @Nullable String primaryServer,
-        @Nullable String secondaryServer,
-        @Nullable String ssl,
-        @Nullable String username) {
-        this.alias = alias;
-        this.baseGroupDN = baseGroupDN;
-        this.baseUserDN = baseUserDN;
-        this.domain = domain;
-        this.name = name;
-        this.password = password;
-        this.primaryServer = primaryServer;
-        this.secondaryServer = secondaryServer;
-        this.ssl = ssl;
-        this.username = username;
-    }
+    private IdentitySourceResponse() {}
 
-    private IdentitySourceResponse() {
-        this.alias = null;
-        this.baseGroupDN = null;
-        this.baseUserDN = null;
-        this.domain = null;
-        this.name = null;
-        this.password = null;
-        this.primaryServer = null;
-        this.secondaryServer = null;
-        this.ssl = null;
-        this.username = null;
+    private IdentitySourceResponse(IdentitySourceResponse $) {
+        this.alias = $.alias;
+        this.baseGroupDN = $.baseGroupDN;
+        this.baseUserDN = $.baseUserDN;
+        this.domain = $.domain;
+        this.name = $.name;
+        this.password = $.password;
+        this.primaryServer = $.primaryServer;
+        this.secondaryServer = $.secondaryServer;
+        this.ssl = $.ssl;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentitySourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String alias;
-        private @Nullable String baseGroupDN;
-        private @Nullable String baseUserDN;
-        private @Nullable String domain;
-        private @Nullable String name;
-        private @Nullable String password;
-        private @Nullable String primaryServer;
-        private @Nullable String secondaryServer;
-        private @Nullable String ssl;
-        private @Nullable String username;
+        private IdentitySourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentitySourceResponse();
         }
 
         public Builder(IdentitySourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.baseGroupDN = defaults.baseGroupDN;
-    	      this.baseUserDN = defaults.baseUserDN;
-    	      this.domain = defaults.domain;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.primaryServer = defaults.primaryServer;
-    	      this.secondaryServer = defaults.secondaryServer;
-    	      this.ssl = defaults.ssl;
-    	      this.username = defaults.username;
+            $ = new IdentitySourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
+
         public Builder baseGroupDN(@Nullable String baseGroupDN) {
-            this.baseGroupDN = baseGroupDN;
+            $.baseGroupDN = baseGroupDN;
             return this;
         }
+
         public Builder baseUserDN(@Nullable String baseUserDN) {
-            this.baseUserDN = baseUserDN;
+            $.baseUserDN = baseUserDN;
             return this;
         }
+
         public Builder domain(@Nullable String domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder primaryServer(@Nullable String primaryServer) {
-            this.primaryServer = primaryServer;
+            $.primaryServer = primaryServer;
             return this;
         }
+
         public Builder secondaryServer(@Nullable String secondaryServer) {
-            this.secondaryServer = secondaryServer;
+            $.secondaryServer = secondaryServer;
             return this;
         }
+
         public Builder ssl(@Nullable String ssl) {
-            this.ssl = ssl;
+            $.ssl = ssl;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public IdentitySourceResponse build() {
-            return new IdentitySourceResponse(alias, baseGroupDN, baseUserDN, domain, name, password, primaryServer, secondaryServer, ssl, username);
+        }
+
+        public IdentitySourceResponse build() {
+            return $;
         }
     }
+
 }

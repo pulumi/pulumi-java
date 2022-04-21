@@ -22,7 +22,7 @@ public final class HttpQueryParameterMatchResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="exactMatch", required=true)
-      private final String exactMatch;
+    private String exactMatch;
 
     public String exactMatch() {
         return this.exactMatch;
@@ -33,7 +33,7 @@ public final class HttpQueryParameterMatchResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -44,7 +44,7 @@ public final class HttpQueryParameterMatchResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="presentMatch", required=true)
-      private final Boolean presentMatch;
+    private Boolean presentMatch;
 
     public Boolean presentMatch() {
         return this.presentMatch;
@@ -55,73 +55,66 @@ public final class HttpQueryParameterMatchResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="regexMatch", required=true)
-      private final String regexMatch;
+    private String regexMatch;
 
     public String regexMatch() {
         return this.regexMatch;
     }
 
-    public HttpQueryParameterMatchResponse(
-        String exactMatch,
-        String name,
-        Boolean presentMatch,
-        String regexMatch) {
-        this.exactMatch = Objects.requireNonNull(exactMatch, "expected parameter 'exactMatch' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.presentMatch = Objects.requireNonNull(presentMatch, "expected parameter 'presentMatch' to be non-null");
-        this.regexMatch = Objects.requireNonNull(regexMatch, "expected parameter 'regexMatch' to be non-null");
-    }
+    private HttpQueryParameterMatchResponse() {}
 
-    private HttpQueryParameterMatchResponse() {
-        this.exactMatch = null;
-        this.name = null;
-        this.presentMatch = null;
-        this.regexMatch = null;
+    private HttpQueryParameterMatchResponse(HttpQueryParameterMatchResponse $) {
+        this.exactMatch = $.exactMatch;
+        this.name = $.name;
+        this.presentMatch = $.presentMatch;
+        this.regexMatch = $.regexMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpQueryParameterMatchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String exactMatch;
-        private String name;
-        private Boolean presentMatch;
-        private String regexMatch;
+        private HttpQueryParameterMatchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpQueryParameterMatchResponse();
         }
 
         public Builder(HttpQueryParameterMatchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exactMatch = defaults.exactMatch;
-    	      this.name = defaults.name;
-    	      this.presentMatch = defaults.presentMatch;
-    	      this.regexMatch = defaults.regexMatch;
+            $ = new HttpQueryParameterMatchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exactMatch(String exactMatch) {
-            this.exactMatch = Objects.requireNonNull(exactMatch);
+            $.exactMatch = exactMatch;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder presentMatch(Boolean presentMatch) {
-            this.presentMatch = Objects.requireNonNull(presentMatch);
+            $.presentMatch = presentMatch;
             return this;
         }
+
         public Builder regexMatch(String regexMatch) {
-            this.regexMatch = Objects.requireNonNull(regexMatch);
+            $.regexMatch = regexMatch;
             return this;
-        }        public HttpQueryParameterMatchResponse build() {
-            return new HttpQueryParameterMatchResponse(exactMatch, name, presentMatch, regexMatch);
+        }
+
+        public HttpQueryParameterMatchResponse build() {
+            $.exactMatch = Objects.requireNonNull($.exactMatch, "expected parameter 'exactMatch' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.presentMatch = Objects.requireNonNull($.presentMatch, "expected parameter 'presentMatch' to be non-null");
+            $.regexMatch = Objects.requireNonNull($.regexMatch, "expected parameter 'regexMatch' to be non-null");
+            return $;
         }
     }
+
 }

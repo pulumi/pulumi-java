@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +25,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends com.pulumi
      * 
      */
     @Import(name="accessKey", required=true)
-      private final Output<String> accessKey;
+    private Output<String> accessKey;
 
     public Output<String> accessKey() {
         return this.accessKey;
@@ -35,7 +36,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -46,76 +47,71 @@ public final class AddStorageAccountWithAccountParametersArgs extends com.pulumi
      * 
      */
     @Import(name="suffix")
-      private final @Nullable Output<String> suffix;
+    private @Nullable Output<String> suffix;
 
-    public Output<String> suffix() {
-        return this.suffix == null ? Codegen.empty() : this.suffix;
+    public Optional<Output<String>> suffix() {
+        return Optional.ofNullable(this.suffix);
     }
 
-    public AddStorageAccountWithAccountParametersArgs(
-        Output<String> accessKey,
-        Output<String> name,
-        @Nullable Output<String> suffix) {
-        this.accessKey = Objects.requireNonNull(accessKey, "expected parameter 'accessKey' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.suffix = Codegen.stringProp("suffix").output().arg(suffix).def("azuredatalakestore.net").getNullable();
-    }
+    private AddStorageAccountWithAccountParametersArgs() {}
 
-    private AddStorageAccountWithAccountParametersArgs() {
-        this.accessKey = Codegen.empty();
-        this.name = Codegen.empty();
-        this.suffix = Codegen.empty();
+    private AddStorageAccountWithAccountParametersArgs(AddStorageAccountWithAccountParametersArgs $) {
+        this.accessKey = $.accessKey;
+        this.name = $.name;
+        this.suffix = $.suffix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddStorageAccountWithAccountParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessKey;
-        private Output<String> name;
-        private @Nullable Output<String> suffix;
+        private AddStorageAccountWithAccountParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddStorageAccountWithAccountParametersArgs();
         }
 
         public Builder(AddStorageAccountWithAccountParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.name = defaults.name;
-    	      this.suffix = defaults.suffix;
+            $ = new AddStorageAccountWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(Output<String> accessKey) {
-            this.accessKey = Objects.requireNonNull(accessKey);
+            $.accessKey = accessKey;
             return this;
         }
+
         public Builder accessKey(String accessKey) {
-            this.accessKey = Output.of(Objects.requireNonNull(accessKey));
-            return this;
+            return accessKey(Output.of(accessKey));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder suffix(@Nullable Output<String> suffix) {
-            this.suffix = suffix;
+            $.suffix = suffix;
             return this;
         }
-        public Builder suffix(@Nullable String suffix) {
-            this.suffix = Codegen.ofNullable(suffix);
-            return this;
-        }        public AddStorageAccountWithAccountParametersArgs build() {
-            return new AddStorageAccountWithAccountParametersArgs(accessKey, name, suffix);
+
+        public Builder suffix(String suffix) {
+            return suffix(Output.of(suffix));
+        }
+
+        public AddStorageAccountWithAccountParametersArgs build() {
+            $.accessKey = Objects.requireNonNull($.accessKey, "expected parameter 'accessKey' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.suffix = Codegen.stringProp("suffix").output().arg($.suffix).def("azuredatalakestore.net").getNullable();
+            return $;
         }
     }
+
 }

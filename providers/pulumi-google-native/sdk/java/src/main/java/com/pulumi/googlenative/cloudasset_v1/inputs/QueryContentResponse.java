@@ -21,45 +21,45 @@ public final class QueryContentResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="iamPolicyAnalysisQuery", required=true)
-      private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
+    private IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
 
     public IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery;
     }
 
-    public QueryContentResponse(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
-        this.iamPolicyAnalysisQuery = Objects.requireNonNull(iamPolicyAnalysisQuery, "expected parameter 'iamPolicyAnalysisQuery' to be non-null");
-    }
+    private QueryContentResponse() {}
 
-    private QueryContentResponse() {
-        this.iamPolicyAnalysisQuery = null;
+    private QueryContentResponse(QueryContentResponse $) {
+        this.iamPolicyAnalysisQuery = $.iamPolicyAnalysisQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
+        private QueryContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryContentResponse();
         }
 
         public Builder(QueryContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iamPolicyAnalysisQuery = defaults.iamPolicyAnalysisQuery;
+            $ = new QueryContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder iamPolicyAnalysisQuery(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
-            this.iamPolicyAnalysisQuery = Objects.requireNonNull(iamPolicyAnalysisQuery);
+            $.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
             return this;
-        }        public QueryContentResponse build() {
-            return new QueryContentResponse(iamPolicyAnalysisQuery);
+        }
+
+        public QueryContentResponse build() {
+            $.iamPolicyAnalysisQuery = Objects.requireNonNull($.iamPolicyAnalysisQuery, "expected parameter 'iamPolicyAnalysisQuery' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,62 +19,58 @@ public final class DatasetS3Location extends com.pulumi.resources.InvokeArgs {
     public static final DatasetS3Location Empty = new DatasetS3Location();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
-    public DatasetS3Location(
-        String bucket,
-        @Nullable String key) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.key = key;
-    }
+    private DatasetS3Location() {}
 
-    private DatasetS3Location() {
-        this.bucket = null;
-        this.key = null;
+    private DatasetS3Location(DatasetS3Location $) {
+        this.bucket = $.bucket;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetS3Location defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable String key;
+        private DatasetS3Location $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetS3Location();
         }
 
         public Builder(DatasetS3Location defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.key = defaults.key;
+            $ = new DatasetS3Location(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
-        }        public DatasetS3Location build() {
-            return new DatasetS3Location(bucket, key);
+        }
+
+        public DatasetS3Location build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

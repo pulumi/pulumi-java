@@ -21,45 +21,45 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public StorageAccountPropertiesResponse(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private StorageAccountPropertiesResponse() {}
 
-    private StorageAccountPropertiesResponse() {
-        this.id = null;
+    private StorageAccountPropertiesResponse(StorageAccountPropertiesResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private StorageAccountPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountPropertiesResponse();
         }
 
         public Builder(StorageAccountPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new StorageAccountPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public StorageAccountPropertiesResponse build() {
-            return new StorageAccountPropertiesResponse(id);
+        }
+
+        public StorageAccountPropertiesResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -11,10 +11,10 @@ import com.pulumi.awsnative.budgets.inputs.BudgetsActionDefinitionArgs;
 import com.pulumi.awsnative.budgets.inputs.BudgetsActionSubscriberArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,193 +23,178 @@ public final class BudgetsActionArgs extends com.pulumi.resources.ResourceArgs {
     public static final BudgetsActionArgs Empty = new BudgetsActionArgs();
 
     @Import(name="actionThreshold", required=true)
-      private final Output<BudgetsActionActionThresholdArgs> actionThreshold;
+    private Output<BudgetsActionActionThresholdArgs> actionThreshold;
 
     public Output<BudgetsActionActionThresholdArgs> actionThreshold() {
         return this.actionThreshold;
     }
 
     @Import(name="actionType", required=true)
-      private final Output<BudgetsActionActionType> actionType;
+    private Output<BudgetsActionActionType> actionType;
 
     public Output<BudgetsActionActionType> actionType() {
         return this.actionType;
     }
 
     @Import(name="approvalModel")
-      private final @Nullable Output<BudgetsActionApprovalModel> approvalModel;
+    private @Nullable Output<BudgetsActionApprovalModel> approvalModel;
 
-    public Output<BudgetsActionApprovalModel> approvalModel() {
-        return this.approvalModel == null ? Codegen.empty() : this.approvalModel;
+    public Optional<Output<BudgetsActionApprovalModel>> approvalModel() {
+        return Optional.ofNullable(this.approvalModel);
     }
 
     @Import(name="budgetName", required=true)
-      private final Output<String> budgetName;
+    private Output<String> budgetName;
 
     public Output<String> budgetName() {
         return this.budgetName;
     }
 
     @Import(name="definition", required=true)
-      private final Output<BudgetsActionDefinitionArgs> definition;
+    private Output<BudgetsActionDefinitionArgs> definition;
 
     public Output<BudgetsActionDefinitionArgs> definition() {
         return this.definition;
     }
 
     @Import(name="executionRoleArn", required=true)
-      private final Output<String> executionRoleArn;
+    private Output<String> executionRoleArn;
 
     public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
 
     @Import(name="notificationType", required=true)
-      private final Output<BudgetsActionNotificationType> notificationType;
+    private Output<BudgetsActionNotificationType> notificationType;
 
     public Output<BudgetsActionNotificationType> notificationType() {
         return this.notificationType;
     }
 
     @Import(name="subscribers", required=true)
-      private final Output<List<BudgetsActionSubscriberArgs>> subscribers;
+    private Output<List<BudgetsActionSubscriberArgs>> subscribers;
 
     public Output<List<BudgetsActionSubscriberArgs>> subscribers() {
         return this.subscribers;
     }
 
-    public BudgetsActionArgs(
-        Output<BudgetsActionActionThresholdArgs> actionThreshold,
-        Output<BudgetsActionActionType> actionType,
-        @Nullable Output<BudgetsActionApprovalModel> approvalModel,
-        Output<String> budgetName,
-        Output<BudgetsActionDefinitionArgs> definition,
-        Output<String> executionRoleArn,
-        Output<BudgetsActionNotificationType> notificationType,
-        Output<List<BudgetsActionSubscriberArgs>> subscribers) {
-        this.actionThreshold = Objects.requireNonNull(actionThreshold, "expected parameter 'actionThreshold' to be non-null");
-        this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
-        this.approvalModel = approvalModel;
-        this.budgetName = Objects.requireNonNull(budgetName, "expected parameter 'budgetName' to be non-null");
-        this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
-        this.executionRoleArn = Objects.requireNonNull(executionRoleArn, "expected parameter 'executionRoleArn' to be non-null");
-        this.notificationType = Objects.requireNonNull(notificationType, "expected parameter 'notificationType' to be non-null");
-        this.subscribers = Objects.requireNonNull(subscribers, "expected parameter 'subscribers' to be non-null");
-    }
+    private BudgetsActionArgs() {}
 
-    private BudgetsActionArgs() {
-        this.actionThreshold = Codegen.empty();
-        this.actionType = Codegen.empty();
-        this.approvalModel = Codegen.empty();
-        this.budgetName = Codegen.empty();
-        this.definition = Codegen.empty();
-        this.executionRoleArn = Codegen.empty();
-        this.notificationType = Codegen.empty();
-        this.subscribers = Codegen.empty();
+    private BudgetsActionArgs(BudgetsActionArgs $) {
+        this.actionThreshold = $.actionThreshold;
+        this.actionType = $.actionType;
+        this.approvalModel = $.approvalModel;
+        this.budgetName = $.budgetName;
+        this.definition = $.definition;
+        this.executionRoleArn = $.executionRoleArn;
+        this.notificationType = $.notificationType;
+        this.subscribers = $.subscribers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetsActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BudgetsActionActionThresholdArgs> actionThreshold;
-        private Output<BudgetsActionActionType> actionType;
-        private @Nullable Output<BudgetsActionApprovalModel> approvalModel;
-        private Output<String> budgetName;
-        private Output<BudgetsActionDefinitionArgs> definition;
-        private Output<String> executionRoleArn;
-        private Output<BudgetsActionNotificationType> notificationType;
-        private Output<List<BudgetsActionSubscriberArgs>> subscribers;
+        private BudgetsActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetsActionArgs();
         }
 
         public Builder(BudgetsActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionThreshold = defaults.actionThreshold;
-    	      this.actionType = defaults.actionType;
-    	      this.approvalModel = defaults.approvalModel;
-    	      this.budgetName = defaults.budgetName;
-    	      this.definition = defaults.definition;
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.notificationType = defaults.notificationType;
-    	      this.subscribers = defaults.subscribers;
+            $ = new BudgetsActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionThreshold(Output<BudgetsActionActionThresholdArgs> actionThreshold) {
-            this.actionThreshold = Objects.requireNonNull(actionThreshold);
+            $.actionThreshold = actionThreshold;
             return this;
         }
+
         public Builder actionThreshold(BudgetsActionActionThresholdArgs actionThreshold) {
-            this.actionThreshold = Output.of(Objects.requireNonNull(actionThreshold));
-            return this;
+            return actionThreshold(Output.of(actionThreshold));
         }
+
         public Builder actionType(Output<BudgetsActionActionType> actionType) {
-            this.actionType = Objects.requireNonNull(actionType);
+            $.actionType = actionType;
             return this;
         }
+
         public Builder actionType(BudgetsActionActionType actionType) {
-            this.actionType = Output.of(Objects.requireNonNull(actionType));
-            return this;
+            return actionType(Output.of(actionType));
         }
+
         public Builder approvalModel(@Nullable Output<BudgetsActionApprovalModel> approvalModel) {
-            this.approvalModel = approvalModel;
+            $.approvalModel = approvalModel;
             return this;
         }
-        public Builder approvalModel(@Nullable BudgetsActionApprovalModel approvalModel) {
-            this.approvalModel = Codegen.ofNullable(approvalModel);
-            return this;
+
+        public Builder approvalModel(BudgetsActionApprovalModel approvalModel) {
+            return approvalModel(Output.of(approvalModel));
         }
+
         public Builder budgetName(Output<String> budgetName) {
-            this.budgetName = Objects.requireNonNull(budgetName);
+            $.budgetName = budgetName;
             return this;
         }
+
         public Builder budgetName(String budgetName) {
-            this.budgetName = Output.of(Objects.requireNonNull(budgetName));
-            return this;
+            return budgetName(Output.of(budgetName));
         }
+
         public Builder definition(Output<BudgetsActionDefinitionArgs> definition) {
-            this.definition = Objects.requireNonNull(definition);
+            $.definition = definition;
             return this;
         }
+
         public Builder definition(BudgetsActionDefinitionArgs definition) {
-            this.definition = Output.of(Objects.requireNonNull(definition));
-            return this;
+            return definition(Output.of(definition));
         }
+
         public Builder executionRoleArn(Output<String> executionRoleArn) {
-            this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
+
         public Builder executionRoleArn(String executionRoleArn) {
-            this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
-            return this;
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder notificationType(Output<BudgetsActionNotificationType> notificationType) {
-            this.notificationType = Objects.requireNonNull(notificationType);
+            $.notificationType = notificationType;
             return this;
         }
+
         public Builder notificationType(BudgetsActionNotificationType notificationType) {
-            this.notificationType = Output.of(Objects.requireNonNull(notificationType));
-            return this;
+            return notificationType(Output.of(notificationType));
         }
+
         public Builder subscribers(Output<List<BudgetsActionSubscriberArgs>> subscribers) {
-            this.subscribers = Objects.requireNonNull(subscribers);
+            $.subscribers = subscribers;
             return this;
         }
+
         public Builder subscribers(List<BudgetsActionSubscriberArgs> subscribers) {
-            this.subscribers = Output.of(Objects.requireNonNull(subscribers));
-            return this;
+            return subscribers(Output.of(subscribers));
         }
+
         public Builder subscribers(BudgetsActionSubscriberArgs... subscribers) {
             return subscribers(List.of(subscribers));
-        }        public BudgetsActionArgs build() {
-            return new BudgetsActionArgs(actionThreshold, actionType, approvalModel, budgetName, definition, executionRoleArn, notificationType, subscribers);
+        }
+
+        public BudgetsActionArgs build() {
+            $.actionThreshold = Objects.requireNonNull($.actionThreshold, "expected parameter 'actionThreshold' to be non-null");
+            $.actionType = Objects.requireNonNull($.actionType, "expected parameter 'actionType' to be non-null");
+            $.budgetName = Objects.requireNonNull($.budgetName, "expected parameter 'budgetName' to be non-null");
+            $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
+            $.executionRoleArn = Objects.requireNonNull($.executionRoleArn, "expected parameter 'executionRoleArn' to be non-null");
+            $.notificationType = Objects.requireNonNull($.notificationType, "expected parameter 'notificationType' to be non-null");
+            $.subscribers = Objects.requireNonNull($.subscribers, "expected parameter 'subscribers' to be non-null");
+            return $;
         }
     }
+
 }

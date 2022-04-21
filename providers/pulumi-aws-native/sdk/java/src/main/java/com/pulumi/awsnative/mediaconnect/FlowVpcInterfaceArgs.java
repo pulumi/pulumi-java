@@ -5,10 +5,10 @@ package com.pulumi.awsnative.mediaconnect;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="flowArn", required=true)
-      private final Output<String> flowArn;
+    private Output<String> flowArn;
 
     public Output<String> flowArn() {
         return this.flowArn;
@@ -32,10 +32,10 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -54,7 +54,7 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="securityGroupIds", required=true)
-      private final Output<List<String>> securityGroupIds;
+    private Output<List<String>> securityGroupIds;
 
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
@@ -65,105 +65,96 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public FlowVpcInterfaceArgs(
-        Output<String> flowArn,
-        @Nullable Output<String> name,
-        Output<String> roleArn,
-        Output<List<String>> securityGroupIds,
-        Output<String> subnetId) {
-        this.flowArn = Objects.requireNonNull(flowArn, "expected parameter 'flowArn' to be non-null");
-        this.name = name;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private FlowVpcInterfaceArgs() {}
 
-    private FlowVpcInterfaceArgs() {
-        this.flowArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private FlowVpcInterfaceArgs(FlowVpcInterfaceArgs $) {
+        this.flowArn = $.flowArn;
+        this.name = $.name;
+        this.roleArn = $.roleArn;
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowVpcInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> flowArn;
-        private @Nullable Output<String> name;
-        private Output<String> roleArn;
-        private Output<List<String>> securityGroupIds;
-        private Output<String> subnetId;
+        private FlowVpcInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowVpcInterfaceArgs();
         }
 
         public Builder(FlowVpcInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flowArn = defaults.flowArn;
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetId = defaults.subnetId;
+            $ = new FlowVpcInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flowArn(Output<String> flowArn) {
-            this.flowArn = Objects.requireNonNull(flowArn);
+            $.flowArn = flowArn;
             return this;
         }
+
         public Builder flowArn(String flowArn) {
-            this.flowArn = Output.of(Objects.requireNonNull(flowArn));
-            return this;
+            return flowArn(Output.of(flowArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
-            return this;
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public FlowVpcInterfaceArgs build() {
-            return new FlowVpcInterfaceArgs(flowArn, name, roleArn, securityGroupIds, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public FlowVpcInterfaceArgs build() {
+            $.flowArn = Objects.requireNonNull($.flowArn, "expected parameter 'flowArn' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

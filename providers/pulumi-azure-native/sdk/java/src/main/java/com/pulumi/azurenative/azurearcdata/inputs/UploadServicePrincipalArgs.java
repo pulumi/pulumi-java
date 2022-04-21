@@ -5,9 +5,9 @@ package com.pulumi.azurenative.azurearcdata.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UploadServicePrincipalArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="authority")
-      private final @Nullable Output<String> authority;
+    private @Nullable Output<String> authority;
 
-    public Output<String> authority() {
-        return this.authority == null ? Codegen.empty() : this.authority;
+    public Optional<Output<String>> authority() {
+        return Optional.ofNullable(this.authority);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UploadServicePrincipalArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UploadServicePrincipalArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<String> clientSecret;
+    private @Nullable Output<String> clientSecret;
 
-    public Output<String> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<String>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class UploadServicePrincipalArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public UploadServicePrincipalArgs(
-        @Nullable Output<String> authority,
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> clientSecret,
-        @Nullable Output<String> tenantId) {
-        this.authority = authority;
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.tenantId = tenantId;
-    }
+    private UploadServicePrincipalArgs() {}
 
-    private UploadServicePrincipalArgs() {
-        this.authority = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private UploadServicePrincipalArgs(UploadServicePrincipalArgs $) {
+        this.authority = $.authority;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UploadServicePrincipalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authority;
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> clientSecret;
-        private @Nullable Output<String> tenantId;
+        private UploadServicePrincipalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UploadServicePrincipalArgs();
         }
 
         public Builder(UploadServicePrincipalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authority = defaults.authority;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.tenantId = defaults.tenantId;
+            $ = new UploadServicePrincipalArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authority(@Nullable Output<String> authority) {
-            this.authority = authority;
+            $.authority = authority;
             return this;
         }
-        public Builder authority(@Nullable String authority) {
-            this.authority = Codegen.ofNullable(authority);
-            return this;
+
+        public Builder authority(String authority) {
+            return authority(Output.of(authority));
         }
+
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
+
+        public Builder clientSecret(String clientSecret) {
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public UploadServicePrincipalArgs build() {
-            return new UploadServicePrincipalArgs(authority, clientId, clientSecret, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public UploadServicePrincipalArgs build() {
+            return $;
         }
     }
+
 }

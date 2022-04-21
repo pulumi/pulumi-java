@@ -5,10 +5,10 @@ package com.pulumi.aws.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ContactFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ContactFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactFlowId")
-      private final @Nullable Output<String> contactFlowId;
+    private @Nullable Output<String> contactFlowId;
 
-    public Output<String> contactFlowId() {
-        return this.contactFlowId == null ? Codegen.empty() : this.contactFlowId;
+    public Optional<Output<String>> contactFlowId() {
+        return Optional.ofNullable(this.contactFlowId);
     }
 
     /**
@@ -43,17 +43,17 @@ public final class ContactFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     @Import(name="contentHash")
-      private final @Nullable Output<String> contentHash;
+    private @Nullable Output<String> contentHash;
 
-    public Output<String> contentHash() {
-        return this.contentHash == null ? Codegen.empty() : this.contentHash;
+    public Optional<Output<String>> contentHash() {
+        return Optional.ofNullable(this.contentHash);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ContactFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ContactFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filename")
-      private final @Nullable Output<String> filename;
+    private @Nullable Output<String> filename;
 
-    public Output<String> filename() {
-        return this.filename == null ? Codegen.empty() : this.filename;
+    public Optional<Output<String>> filename() {
+        return Optional.ofNullable(this.filename);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ContactFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ContactFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ContactFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ContactFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -127,180 +127,148 @@ public final class ContactFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ContactFlowState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> contactFlowId,
-        @Nullable Output<String> content,
-        @Nullable Output<String> contentHash,
-        @Nullable Output<String> description,
-        @Nullable Output<String> filename,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> type) {
-        this.arn = arn;
-        this.contactFlowId = contactFlowId;
-        this.content = content;
-        this.contentHash = contentHash;
-        this.description = description;
-        this.filename = filename;
-        this.instanceId = instanceId;
-        this.name = name;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.type = type;
-    }
+    private ContactFlowState() {}
 
-    private ContactFlowState() {
-        this.arn = Codegen.empty();
-        this.contactFlowId = Codegen.empty();
-        this.content = Codegen.empty();
-        this.contentHash = Codegen.empty();
-        this.description = Codegen.empty();
-        this.filename = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.type = Codegen.empty();
+    private ContactFlowState(ContactFlowState $) {
+        this.arn = $.arn;
+        this.contactFlowId = $.contactFlowId;
+        this.content = $.content;
+        this.contentHash = $.contentHash;
+        this.description = $.description;
+        this.filename = $.filename;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactFlowState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> contactFlowId;
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> contentHash;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> filename;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> type;
+        private ContactFlowState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactFlowState();
         }
 
         public Builder(ContactFlowState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.contactFlowId = defaults.contactFlowId;
-    	      this.content = defaults.content;
-    	      this.contentHash = defaults.contentHash;
-    	      this.description = defaults.description;
-    	      this.filename = defaults.filename;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.type = defaults.type;
+            $ = new ContactFlowState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder contactFlowId(@Nullable Output<String> contactFlowId) {
-            this.contactFlowId = contactFlowId;
+            $.contactFlowId = contactFlowId;
             return this;
         }
-        public Builder contactFlowId(@Nullable String contactFlowId) {
-            this.contactFlowId = Codegen.ofNullable(contactFlowId);
-            return this;
+
+        public Builder contactFlowId(String contactFlowId) {
+            return contactFlowId(Output.of(contactFlowId));
         }
+
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder contentHash(@Nullable Output<String> contentHash) {
-            this.contentHash = contentHash;
+            $.contentHash = contentHash;
             return this;
         }
-        public Builder contentHash(@Nullable String contentHash) {
-            this.contentHash = Codegen.ofNullable(contentHash);
-            return this;
+
+        public Builder contentHash(String contentHash) {
+            return contentHash(Output.of(contentHash));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder filename(@Nullable Output<String> filename) {
-            this.filename = filename;
+            $.filename = filename;
             return this;
         }
-        public Builder filename(@Nullable String filename) {
-            this.filename = Codegen.ofNullable(filename);
-            return this;
+
+        public Builder filename(String filename) {
+            return filename(Output.of(filename));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ContactFlowState build() {
-            return new ContactFlowState(arn, contactFlowId, content, contentHash, description, filename, instanceId, name, tags, tagsAll, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ContactFlowState build() {
+            return $;
         }
     }
+
 }

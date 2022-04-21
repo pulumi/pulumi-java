@@ -5,9 +5,9 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends com.pulumi.re
      * 
      */
     @Import(name="secret", required=true)
-      private final Output<String> secret;
+    private Output<String> secret;
 
     public Output<String> secret() {
         return this.secret;
@@ -35,63 +35,59 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends com.pulumi.re
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public GoogleCloudRunOpV2SecretKeySelectorArgs(
-        Output<String> secret,
-        @Nullable Output<String> version) {
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-        this.version = version;
-    }
+    private GoogleCloudRunOpV2SecretKeySelectorArgs() {}
 
-    private GoogleCloudRunOpV2SecretKeySelectorArgs() {
-        this.secret = Codegen.empty();
-        this.version = Codegen.empty();
+    private GoogleCloudRunOpV2SecretKeySelectorArgs(GoogleCloudRunOpV2SecretKeySelectorArgs $) {
+        this.secret = $.secret;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2SecretKeySelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> secret;
-        private @Nullable Output<String> version;
+        private GoogleCloudRunOpV2SecretKeySelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2SecretKeySelectorArgs();
         }
 
         public Builder(GoogleCloudRunOpV2SecretKeySelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secret = defaults.secret;
-    	      this.version = defaults.version;
+            $ = new GoogleCloudRunOpV2SecretKeySelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secret(Output<String> secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Output.of(Objects.requireNonNull(secret));
-            return this;
+            return secret(Output.of(secret));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public GoogleCloudRunOpV2SecretKeySelectorArgs build() {
-            return new GoogleCloudRunOpV2SecretKeySelectorArgs(secret, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public GoogleCloudRunOpV2SecretKeySelectorArgs build() {
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

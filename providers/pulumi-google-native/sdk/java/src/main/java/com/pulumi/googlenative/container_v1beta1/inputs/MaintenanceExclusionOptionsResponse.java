@@ -21,45 +21,45 @@ public final class MaintenanceExclusionOptionsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public MaintenanceExclusionOptionsResponse(String scope) {
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private MaintenanceExclusionOptionsResponse() {}
 
-    private MaintenanceExclusionOptionsResponse() {
-        this.scope = null;
+    private MaintenanceExclusionOptionsResponse(MaintenanceExclusionOptionsResponse $) {
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceExclusionOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scope;
+        private MaintenanceExclusionOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceExclusionOptionsResponse();
         }
 
         public Builder(MaintenanceExclusionOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
+            $ = new MaintenanceExclusionOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public MaintenanceExclusionOptionsResponse build() {
-            return new MaintenanceExclusionOptionsResponse(scope);
+        }
+
+        public MaintenanceExclusionOptionsResponse build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

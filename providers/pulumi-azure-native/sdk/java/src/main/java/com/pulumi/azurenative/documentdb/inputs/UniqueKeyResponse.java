@@ -24,48 +24,48 @@ public final class UniqueKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="paths")
-      private final @Nullable List<String> paths;
+    private @Nullable List<String> paths;
 
-    public List<String> paths() {
-        return this.paths == null ? List.of() : this.paths;
+    public Optional<List<String>> paths() {
+        return Optional.ofNullable(this.paths);
     }
 
-    public UniqueKeyResponse(@Nullable List<String> paths) {
-        this.paths = paths;
-    }
+    private UniqueKeyResponse() {}
 
-    private UniqueKeyResponse() {
-        this.paths = List.of();
+    private UniqueKeyResponse(UniqueKeyResponse $) {
+        this.paths = $.paths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UniqueKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> paths;
+        private UniqueKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UniqueKeyResponse();
         }
 
         public Builder(UniqueKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.paths = defaults.paths;
+            $ = new UniqueKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = paths;
+            $.paths = paths;
             return this;
         }
+
         public Builder paths(String... paths) {
             return paths(List.of(paths));
-        }        public UniqueKeyResponse build() {
-            return new UniqueKeyResponse(paths);
+        }
+
+        public UniqueKeyResponse build() {
+            return $;
         }
     }
+
 }

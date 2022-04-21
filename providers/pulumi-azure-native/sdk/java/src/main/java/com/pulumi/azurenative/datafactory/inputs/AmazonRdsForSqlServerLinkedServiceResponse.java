@@ -33,10 +33,10 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
      * 
      */
     @Import(name="alwaysEncryptedSettings")
-      private final @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
+    private @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
 
     public Optional<SqlAlwaysEncryptedPropertiesResponse> alwaysEncryptedSettings() {
-        return this.alwaysEncryptedSettings == null ? Optional.empty() : Optional.ofNullable(this.alwaysEncryptedSettings);
+        return Optional.ofNullable(this.alwaysEncryptedSettings);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
      * 
      */
     @Import(name="connectionString", required=true)
-      private final Object connectionString;
+    private Object connectionString;
 
     public Object connectionString() {
         return this.connectionString;
@@ -77,10 +77,10 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -122,7 +122,7 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -133,130 +133,104 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
      * 
      */
     @Import(name="userName")
-      private final @Nullable Object userName;
+    private @Nullable Object userName;
 
     public Optional<Object> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public AmazonRdsForSqlServerLinkedServiceResponse(
-        @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object connectionString,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        String type,
-        @Nullable Object userName) {
-        this.alwaysEncryptedSettings = alwaysEncryptedSettings;
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.password = password;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userName = userName;
-    }
+    private AmazonRdsForSqlServerLinkedServiceResponse() {}
 
-    private AmazonRdsForSqlServerLinkedServiceResponse() {
-        this.alwaysEncryptedSettings = null;
-        this.annotations = List.of();
-        this.connectVia = null;
-        this.connectionString = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.type = null;
-        this.userName = null;
+    private AmazonRdsForSqlServerLinkedServiceResponse(AmazonRdsForSqlServerLinkedServiceResponse $) {
+        this.alwaysEncryptedSettings = $.alwaysEncryptedSettings;
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.connectionString = $.connectionString;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmazonRdsForSqlServerLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
-        private @Nullable List<Object> annotations;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private Object connectionString;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private String type;
-        private @Nullable Object userName;
+        private AmazonRdsForSqlServerLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmazonRdsForSqlServerLinkedServiceResponse();
         }
 
         public Builder(AmazonRdsForSqlServerLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alwaysEncryptedSettings = defaults.alwaysEncryptedSettings;
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionString = defaults.connectionString;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new AmazonRdsForSqlServerLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alwaysEncryptedSettings(@Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings) {
-            this.alwaysEncryptedSettings = alwaysEncryptedSettings;
+            $.alwaysEncryptedSettings = alwaysEncryptedSettings;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder connectionString(Object connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userName(@Nullable Object userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public AmazonRdsForSqlServerLinkedServiceResponse build() {
-            return new AmazonRdsForSqlServerLinkedServiceResponse(alwaysEncryptedSettings, annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type, userName);
+        }
+
+        public AmazonRdsForSqlServerLinkedServiceResponse build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.diagflow;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.EntityTypeEntityArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -34,10 +34,10 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableFuzzyExtraction")
-      private final @Nullable Output<Boolean> enableFuzzyExtraction;
+    private @Nullable Output<Boolean> enableFuzzyExtraction;
 
-    public Output<Boolean> enableFuzzyExtraction() {
-        return this.enableFuzzyExtraction == null ? Codegen.empty() : this.enableFuzzyExtraction;
+    public Optional<Output<Boolean>> enableFuzzyExtraction() {
+        return Optional.ofNullable(this.enableFuzzyExtraction);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entities")
-      private final @Nullable Output<List<EntityTypeEntityArgs>> entities;
+    private @Nullable Output<List<EntityTypeEntityArgs>> entities;
 
-    public Output<List<EntityTypeEntityArgs>> entities() {
-        return this.entities == null ? Codegen.empty() : this.entities;
+    public Optional<Output<List<EntityTypeEntityArgs>>> entities() {
+        return Optional.ofNullable(this.entities);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -74,105 +74,94 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public EntityTypeArgs(
-        Output<String> displayName,
-        @Nullable Output<Boolean> enableFuzzyExtraction,
-        @Nullable Output<List<EntityTypeEntityArgs>> entities,
-        Output<String> kind,
-        @Nullable Output<String> project) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enableFuzzyExtraction = enableFuzzyExtraction;
-        this.entities = entities;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.project = project;
-    }
+    private EntityTypeArgs() {}
 
-    private EntityTypeArgs() {
-        this.displayName = Codegen.empty();
-        this.enableFuzzyExtraction = Codegen.empty();
-        this.entities = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.project = Codegen.empty();
+    private EntityTypeArgs(EntityTypeArgs $) {
+        this.displayName = $.displayName;
+        this.enableFuzzyExtraction = $.enableFuzzyExtraction;
+        this.entities = $.entities;
+        this.kind = $.kind;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> enableFuzzyExtraction;
-        private @Nullable Output<List<EntityTypeEntityArgs>> entities;
-        private Output<String> kind;
-        private @Nullable Output<String> project;
+        private EntityTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityTypeArgs();
         }
 
         public Builder(EntityTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.enableFuzzyExtraction = defaults.enableFuzzyExtraction;
-    	      this.entities = defaults.entities;
-    	      this.kind = defaults.kind;
-    	      this.project = defaults.project;
+            $ = new EntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
-            this.enableFuzzyExtraction = enableFuzzyExtraction;
+            $.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
-        public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
-            this.enableFuzzyExtraction = Codegen.ofNullable(enableFuzzyExtraction);
-            return this;
+
+        public Builder enableFuzzyExtraction(Boolean enableFuzzyExtraction) {
+            return enableFuzzyExtraction(Output.of(enableFuzzyExtraction));
         }
+
         public Builder entities(@Nullable Output<List<EntityTypeEntityArgs>> entities) {
-            this.entities = entities;
+            $.entities = entities;
             return this;
         }
-        public Builder entities(@Nullable List<EntityTypeEntityArgs> entities) {
-            this.entities = Codegen.ofNullable(entities);
-            return this;
+
+        public Builder entities(List<EntityTypeEntityArgs> entities) {
+            return entities(Output.of(entities));
         }
+
         public Builder entities(EntityTypeEntityArgs... entities) {
             return entities(List.of(entities));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public EntityTypeArgs build() {
-            return new EntityTypeArgs(displayName, enableFuzzyExtraction, entities, kind, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public EntityTypeArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

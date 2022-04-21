@@ -5,11 +5,11 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RecordSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedZone")
-      private final @Nullable Output<String> managedZone;
+    private @Nullable Output<String> managedZone;
 
-    public Output<String> managedZone() {
-        return this.managedZone == null ? Codegen.empty() : this.managedZone;
+    public Optional<Output<String>> managedZone() {
+        return Optional.ofNullable(this.managedZone);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RecordSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RecordSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RecordSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rrdatas")
-      private final @Nullable Output<List<String>> rrdatas;
+    private @Nullable Output<List<String>> rrdatas;
 
-    public Output<List<String>> rrdatas() {
-        return this.rrdatas == null ? Codegen.empty() : this.rrdatas;
+    public Optional<Output<List<String>>> rrdatas() {
+        return Optional.ofNullable(this.rrdatas);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RecordSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<Integer> ttl;
+    private @Nullable Output<Integer> ttl;
 
-    public Output<Integer> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<Integer>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
     /**
@@ -82,118 +82,102 @@ public final class RecordSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public RecordSetState(
-        @Nullable Output<String> managedZone,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<String>> rrdatas,
-        @Nullable Output<Integer> ttl,
-        @Nullable Output<String> type) {
-        this.managedZone = managedZone;
-        this.name = name;
-        this.project = project;
-        this.rrdatas = rrdatas;
-        this.ttl = ttl;
-        this.type = type;
-    }
+    private RecordSetState() {}
 
-    private RecordSetState() {
-        this.managedZone = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rrdatas = Codegen.empty();
-        this.ttl = Codegen.empty();
-        this.type = Codegen.empty();
+    private RecordSetState(RecordSetState $) {
+        this.managedZone = $.managedZone;
+        this.name = $.name;
+        this.project = $.project;
+        this.rrdatas = $.rrdatas;
+        this.ttl = $.ttl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> managedZone;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<String>> rrdatas;
-        private @Nullable Output<Integer> ttl;
-        private @Nullable Output<String> type;
+        private RecordSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordSetState();
         }
 
         public Builder(RecordSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedZone = defaults.managedZone;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rrdatas = defaults.rrdatas;
-    	      this.ttl = defaults.ttl;
-    	      this.type = defaults.type;
+            $ = new RecordSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder managedZone(@Nullable Output<String> managedZone) {
-            this.managedZone = managedZone;
+            $.managedZone = managedZone;
             return this;
         }
-        public Builder managedZone(@Nullable String managedZone) {
-            this.managedZone = Codegen.ofNullable(managedZone);
-            return this;
+
+        public Builder managedZone(String managedZone) {
+            return managedZone(Output.of(managedZone));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
-            this.rrdatas = rrdatas;
+            $.rrdatas = rrdatas;
             return this;
         }
-        public Builder rrdatas(@Nullable List<String> rrdatas) {
-            this.rrdatas = Codegen.ofNullable(rrdatas);
-            return this;
+
+        public Builder rrdatas(List<String> rrdatas) {
+            return rrdatas(Output.of(rrdatas));
         }
+
         public Builder rrdatas(String... rrdatas) {
             return rrdatas(List.of(rrdatas));
         }
+
         public Builder ttl(@Nullable Output<Integer> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
+
+        public Builder ttl(Integer ttl) {
+            return ttl(Output.of(ttl));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public RecordSetState build() {
-            return new RecordSetState(managedZone, name, project, rrdatas, ttl, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public RecordSetState build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.documentdb.inputs;
 import com.pulumi.azurenative.documentdb.inputs.UniqueKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class UniqueKeyPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uniqueKeys")
-      private final @Nullable Output<List<UniqueKeyArgs>> uniqueKeys;
+    private @Nullable Output<List<UniqueKeyArgs>> uniqueKeys;
 
-    public Output<List<UniqueKeyArgs>> uniqueKeys() {
-        return this.uniqueKeys == null ? Codegen.empty() : this.uniqueKeys;
+    public Optional<Output<List<UniqueKeyArgs>>> uniqueKeys() {
+        return Optional.ofNullable(this.uniqueKeys);
     }
 
-    public UniqueKeyPolicyArgs(@Nullable Output<List<UniqueKeyArgs>> uniqueKeys) {
-        this.uniqueKeys = uniqueKeys;
-    }
+    private UniqueKeyPolicyArgs() {}
 
-    private UniqueKeyPolicyArgs() {
-        this.uniqueKeys = Codegen.empty();
+    private UniqueKeyPolicyArgs(UniqueKeyPolicyArgs $) {
+        this.uniqueKeys = $.uniqueKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UniqueKeyPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<UniqueKeyArgs>> uniqueKeys;
+        private UniqueKeyPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UniqueKeyPolicyArgs();
         }
 
         public Builder(UniqueKeyPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uniqueKeys = defaults.uniqueKeys;
+            $ = new UniqueKeyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder uniqueKeys(@Nullable Output<List<UniqueKeyArgs>> uniqueKeys) {
-            this.uniqueKeys = uniqueKeys;
+            $.uniqueKeys = uniqueKeys;
             return this;
         }
-        public Builder uniqueKeys(@Nullable List<UniqueKeyArgs> uniqueKeys) {
-            this.uniqueKeys = Codegen.ofNullable(uniqueKeys);
-            return this;
+
+        public Builder uniqueKeys(List<UniqueKeyArgs> uniqueKeys) {
+            return uniqueKeys(Output.of(uniqueKeys));
         }
+
         public Builder uniqueKeys(UniqueKeyArgs... uniqueKeys) {
             return uniqueKeys(List.of(uniqueKeys));
-        }        public UniqueKeyPolicyArgs build() {
-            return new UniqueKeyPolicyArgs(uniqueKeys);
+        }
+
+        public UniqueKeyPolicyArgs build() {
+            return $;
         }
     }
+
 }

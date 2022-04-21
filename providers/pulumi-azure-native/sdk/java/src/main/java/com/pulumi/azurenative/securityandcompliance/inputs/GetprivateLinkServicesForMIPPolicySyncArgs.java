@@ -17,7 +17,7 @@ public final class GetprivateLinkServicesForMIPPolicySyncArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetprivateLinkServicesForMIPPolicySyncArgs extends com.pulumi
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetprivateLinkServicesForMIPPolicySyncArgs(
-        String resourceGroupName,
-        String resourceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetprivateLinkServicesForMIPPolicySyncArgs() {}
 
-    private GetprivateLinkServicesForMIPPolicySyncArgs() {
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetprivateLinkServicesForMIPPolicySyncArgs(GetprivateLinkServicesForMIPPolicySyncArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetprivateLinkServicesForMIPPolicySyncArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceName;
+        private GetprivateLinkServicesForMIPPolicySyncArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetprivateLinkServicesForMIPPolicySyncArgs();
         }
 
         public Builder(GetprivateLinkServicesForMIPPolicySyncArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetprivateLinkServicesForMIPPolicySyncArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetprivateLinkServicesForMIPPolicySyncArgs build() {
-            return new GetprivateLinkServicesForMIPPolicySyncArgs(resourceGroupName, resourceName);
+        }
+
+        public GetprivateLinkServicesForMIPPolicySyncArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

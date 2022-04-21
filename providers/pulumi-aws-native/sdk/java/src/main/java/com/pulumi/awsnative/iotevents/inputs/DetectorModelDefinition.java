@@ -23,7 +23,7 @@ public final class DetectorModelDefinition extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="initialStateName", required=true)
-      private final String initialStateName;
+    private String initialStateName;
 
     public String initialStateName() {
         return this.initialStateName;
@@ -34,58 +34,56 @@ public final class DetectorModelDefinition extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="states", required=true)
-      private final List<DetectorModelState> states;
+    private List<DetectorModelState> states;
 
     public List<DetectorModelState> states() {
         return this.states;
     }
 
-    public DetectorModelDefinition(
-        String initialStateName,
-        List<DetectorModelState> states) {
-        this.initialStateName = Objects.requireNonNull(initialStateName, "expected parameter 'initialStateName' to be non-null");
-        this.states = Objects.requireNonNull(states, "expected parameter 'states' to be non-null");
-    }
+    private DetectorModelDefinition() {}
 
-    private DetectorModelDefinition() {
-        this.initialStateName = null;
-        this.states = List.of();
+    private DetectorModelDefinition(DetectorModelDefinition $) {
+        this.initialStateName = $.initialStateName;
+        this.states = $.states;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String initialStateName;
-        private List<DetectorModelState> states;
+        private DetectorModelDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelDefinition();
         }
 
         public Builder(DetectorModelDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initialStateName = defaults.initialStateName;
-    	      this.states = defaults.states;
+            $ = new DetectorModelDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder initialStateName(String initialStateName) {
-            this.initialStateName = Objects.requireNonNull(initialStateName);
+            $.initialStateName = initialStateName;
             return this;
         }
+
         public Builder states(List<DetectorModelState> states) {
-            this.states = Objects.requireNonNull(states);
+            $.states = states;
             return this;
         }
+
         public Builder states(DetectorModelState... states) {
             return states(List.of(states));
-        }        public DetectorModelDefinition build() {
-            return new DetectorModelDefinition(initialStateName, states);
+        }
+
+        public DetectorModelDefinition build() {
+            $.initialStateName = Objects.requireNonNull($.initialStateName, "expected parameter 'initialStateName' to be non-null");
+            $.states = Objects.requireNonNull($.states, "expected parameter 'states' to be non-null");
+            return $;
         }
     }
+
 }

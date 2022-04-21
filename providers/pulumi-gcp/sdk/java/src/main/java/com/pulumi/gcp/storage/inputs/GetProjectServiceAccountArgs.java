@@ -19,10 +19,10 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userProject")
-      private final @Nullable String userProject;
+    private @Nullable String userProject;
 
     public Optional<String> userProject() {
-        return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
+        return Optional.ofNullable(this.userProject);
     }
 
-    public GetProjectServiceAccountArgs(
-        @Nullable String project,
-        @Nullable String userProject) {
-        this.project = project;
-        this.userProject = userProject;
-    }
+    private GetProjectServiceAccountArgs() {}
 
-    private GetProjectServiceAccountArgs() {
-        this.project = null;
-        this.userProject = null;
+    private GetProjectServiceAccountArgs(GetProjectServiceAccountArgs $) {
+        this.project = $.project;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProjectServiceAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private @Nullable String userProject;
+        private GetProjectServiceAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProjectServiceAccountArgs();
         }
 
         public Builder(GetProjectServiceAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.userProject = defaults.userProject;
+            $ = new GetProjectServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
-        }        public GetProjectServiceAccountArgs build() {
-            return new GetProjectServiceAccountArgs(project, userProject);
+        }
+
+        public GetProjectServiceAccountArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataset", required=true)
-      private final Output<String> dataset;
+    private Output<String> dataset;
 
     public Output<String> dataset() {
         return this.dataset;
@@ -35,10 +35,10 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultConsentTtl")
-      private final @Nullable Output<String> defaultConsentTtl;
+    private @Nullable Output<String> defaultConsentTtl;
 
-    public Output<String> defaultConsentTtl() {
-        return this.defaultConsentTtl == null ? Codegen.empty() : this.defaultConsentTtl;
+    public Optional<Output<String>> defaultConsentTtl() {
+        return Optional.ofNullable(this.defaultConsentTtl);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableConsentCreateOnUpdate")
-      private final @Nullable Output<Boolean> enableConsentCreateOnUpdate;
+    private @Nullable Output<Boolean> enableConsentCreateOnUpdate;
 
-    public Output<Boolean> enableConsentCreateOnUpdate() {
-        return this.enableConsentCreateOnUpdate == null ? Codegen.empty() : this.enableConsentCreateOnUpdate;
+    public Optional<Output<Boolean>> enableConsentCreateOnUpdate() {
+        return Optional.ofNullable(this.enableConsentCreateOnUpdate);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -76,102 +76,89 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ConsentStoreArgs(
-        Output<String> dataset,
-        @Nullable Output<String> defaultConsentTtl,
-        @Nullable Output<Boolean> enableConsentCreateOnUpdate,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name) {
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.defaultConsentTtl = defaultConsentTtl;
-        this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
-        this.labels = labels;
-        this.name = name;
-    }
+    private ConsentStoreArgs() {}
 
-    private ConsentStoreArgs() {
-        this.dataset = Codegen.empty();
-        this.defaultConsentTtl = Codegen.empty();
-        this.enableConsentCreateOnUpdate = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
+    private ConsentStoreArgs(ConsentStoreArgs $) {
+        this.dataset = $.dataset;
+        this.defaultConsentTtl = $.defaultConsentTtl;
+        this.enableConsentCreateOnUpdate = $.enableConsentCreateOnUpdate;
+        this.labels = $.labels;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsentStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataset;
-        private @Nullable Output<String> defaultConsentTtl;
-        private @Nullable Output<Boolean> enableConsentCreateOnUpdate;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
+        private ConsentStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsentStoreArgs();
         }
 
         public Builder(ConsentStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.defaultConsentTtl = defaults.defaultConsentTtl;
-    	      this.enableConsentCreateOnUpdate = defaults.enableConsentCreateOnUpdate;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
+            $ = new ConsentStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(Output<String> dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder dataset(String dataset) {
-            this.dataset = Output.of(Objects.requireNonNull(dataset));
-            return this;
+            return dataset(Output.of(dataset));
         }
+
         public Builder defaultConsentTtl(@Nullable Output<String> defaultConsentTtl) {
-            this.defaultConsentTtl = defaultConsentTtl;
+            $.defaultConsentTtl = defaultConsentTtl;
             return this;
         }
-        public Builder defaultConsentTtl(@Nullable String defaultConsentTtl) {
-            this.defaultConsentTtl = Codegen.ofNullable(defaultConsentTtl);
-            return this;
+
+        public Builder defaultConsentTtl(String defaultConsentTtl) {
+            return defaultConsentTtl(Output.of(defaultConsentTtl));
         }
+
         public Builder enableConsentCreateOnUpdate(@Nullable Output<Boolean> enableConsentCreateOnUpdate) {
-            this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
+            $.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
             return this;
         }
-        public Builder enableConsentCreateOnUpdate(@Nullable Boolean enableConsentCreateOnUpdate) {
-            this.enableConsentCreateOnUpdate = Codegen.ofNullable(enableConsentCreateOnUpdate);
-            return this;
+
+        public Builder enableConsentCreateOnUpdate(Boolean enableConsentCreateOnUpdate) {
+            return enableConsentCreateOnUpdate(Output.of(enableConsentCreateOnUpdate));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ConsentStoreArgs build() {
-            return new ConsentStoreArgs(dataset, defaultConsentTtl, enableConsentCreateOnUpdate, labels, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ConsentStoreArgs build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            return $;
         }
     }
+
 }

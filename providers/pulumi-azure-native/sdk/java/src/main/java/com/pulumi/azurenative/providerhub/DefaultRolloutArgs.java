@@ -6,9 +6,9 @@ package com.pulumi.azurenative.providerhub;
 import com.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DefaultRolloutArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<DefaultRolloutPropertiesArgs> properties;
+    private @Nullable Output<DefaultRolloutPropertiesArgs> properties;
 
-    public Output<DefaultRolloutPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<DefaultRolloutPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class DefaultRolloutArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final Output<String> providerNamespace;
+    private Output<String> providerNamespace;
 
     public Output<String> providerNamespace() {
         return this.providerNamespace;
@@ -43,76 +43,69 @@ public final class DefaultRolloutArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rolloutName")
-      private final @Nullable Output<String> rolloutName;
+    private @Nullable Output<String> rolloutName;
 
-    public Output<String> rolloutName() {
-        return this.rolloutName == null ? Codegen.empty() : this.rolloutName;
+    public Optional<Output<String>> rolloutName() {
+        return Optional.ofNullable(this.rolloutName);
     }
 
-    public DefaultRolloutArgs(
-        @Nullable Output<DefaultRolloutPropertiesArgs> properties,
-        Output<String> providerNamespace,
-        @Nullable Output<String> rolloutName) {
-        this.properties = properties;
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-        this.rolloutName = rolloutName;
-    }
+    private DefaultRolloutArgs() {}
 
-    private DefaultRolloutArgs() {
-        this.properties = Codegen.empty();
-        this.providerNamespace = Codegen.empty();
-        this.rolloutName = Codegen.empty();
+    private DefaultRolloutArgs(DefaultRolloutArgs $) {
+        this.properties = $.properties;
+        this.providerNamespace = $.providerNamespace;
+        this.rolloutName = $.rolloutName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DefaultRolloutPropertiesArgs> properties;
-        private Output<String> providerNamespace;
-        private @Nullable Output<String> rolloutName;
+        private DefaultRolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutArgs();
         }
 
         public Builder(DefaultRolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.providerNamespace = defaults.providerNamespace;
-    	      this.rolloutName = defaults.rolloutName;
+            $ = new DefaultRolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<DefaultRolloutPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable DefaultRolloutPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(DefaultRolloutPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder providerNamespace(Output<String> providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
         }
+
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
-            return this;
+            return providerNamespace(Output.of(providerNamespace));
         }
+
         public Builder rolloutName(@Nullable Output<String> rolloutName) {
-            this.rolloutName = rolloutName;
+            $.rolloutName = rolloutName;
             return this;
         }
-        public Builder rolloutName(@Nullable String rolloutName) {
-            this.rolloutName = Codegen.ofNullable(rolloutName);
-            return this;
-        }        public DefaultRolloutArgs build() {
-            return new DefaultRolloutArgs(properties, providerNamespace, rolloutName);
+
+        public Builder rolloutName(String rolloutName) {
+            return rolloutName(Output.of(rolloutName));
+        }
+
+        public DefaultRolloutArgs build() {
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,10 +21,10 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dbClusterIdentifier")
-      private final @Nullable String dbClusterIdentifier;
+    private @Nullable String dbClusterIdentifier;
 
     public Optional<String> dbClusterIdentifier() {
-        return this.dbClusterIdentifier == null ? Optional.empty() : Optional.ofNullable(this.dbClusterIdentifier);
+        return Optional.ofNullable(this.dbClusterIdentifier);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dbClusterSnapshotIdentifier")
-      private final @Nullable String dbClusterSnapshotIdentifier;
+    private @Nullable String dbClusterSnapshotIdentifier;
 
     public Optional<String> dbClusterSnapshotIdentifier() {
-        return this.dbClusterSnapshotIdentifier == null ? Optional.empty() : Optional.ofNullable(this.dbClusterSnapshotIdentifier);
+        return Optional.ofNullable(this.dbClusterSnapshotIdentifier);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includePublic")
-      private final @Nullable Boolean includePublic;
+    private @Nullable Boolean includePublic;
 
     public Optional<Boolean> includePublic() {
-        return this.includePublic == null ? Optional.empty() : Optional.ofNullable(this.includePublic);
+        return Optional.ofNullable(this.includePublic);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includeShared")
-      private final @Nullable Boolean includeShared;
+    private @Nullable Boolean includeShared;
 
     public Optional<Boolean> includeShared() {
-        return this.includeShared == null ? Optional.empty() : Optional.ofNullable(this.includeShared);
+        return Optional.ofNullable(this.includeShared);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="mostRecent")
-      private final @Nullable Boolean mostRecent;
+    private @Nullable Boolean mostRecent;
 
     public Optional<Boolean> mostRecent() {
-        return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="snapshotType")
-      private final @Nullable String snapshotType;
+    private @Nullable String snapshotType;
 
     public Optional<String> snapshotType() {
-        return this.snapshotType == null ? Optional.empty() : Optional.ofNullable(this.snapshotType);
+        return Optional.ofNullable(this.snapshotType);
     }
 
     /**
@@ -92,100 +92,80 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetClusterSnapshotArgs(
-        @Nullable String dbClusterIdentifier,
-        @Nullable String dbClusterSnapshotIdentifier,
-        @Nullable Boolean includePublic,
-        @Nullable Boolean includeShared,
-        @Nullable Boolean mostRecent,
-        @Nullable String snapshotType,
-        @Nullable Map<String,String> tags) {
-        this.dbClusterIdentifier = dbClusterIdentifier;
-        this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
-        this.includePublic = includePublic;
-        this.includeShared = includeShared;
-        this.mostRecent = mostRecent;
-        this.snapshotType = snapshotType;
-        this.tags = tags;
-    }
+    private GetClusterSnapshotArgs() {}
 
-    private GetClusterSnapshotArgs() {
-        this.dbClusterIdentifier = null;
-        this.dbClusterSnapshotIdentifier = null;
-        this.includePublic = null;
-        this.includeShared = null;
-        this.mostRecent = null;
-        this.snapshotType = null;
-        this.tags = Map.of();
+    private GetClusterSnapshotArgs(GetClusterSnapshotArgs $) {
+        this.dbClusterIdentifier = $.dbClusterIdentifier;
+        this.dbClusterSnapshotIdentifier = $.dbClusterSnapshotIdentifier;
+        this.includePublic = $.includePublic;
+        this.includeShared = $.includeShared;
+        this.mostRecent = $.mostRecent;
+        this.snapshotType = $.snapshotType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterSnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dbClusterIdentifier;
-        private @Nullable String dbClusterSnapshotIdentifier;
-        private @Nullable Boolean includePublic;
-        private @Nullable Boolean includeShared;
-        private @Nullable Boolean mostRecent;
-        private @Nullable String snapshotType;
-        private @Nullable Map<String,String> tags;
+        private GetClusterSnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterSnapshotArgs();
         }
 
         public Builder(GetClusterSnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbClusterIdentifier = defaults.dbClusterIdentifier;
-    	      this.dbClusterSnapshotIdentifier = defaults.dbClusterSnapshotIdentifier;
-    	      this.includePublic = defaults.includePublic;
-    	      this.includeShared = defaults.includeShared;
-    	      this.mostRecent = defaults.mostRecent;
-    	      this.snapshotType = defaults.snapshotType;
-    	      this.tags = defaults.tags;
+            $ = new GetClusterSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
-            this.dbClusterIdentifier = dbClusterIdentifier;
+            $.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
+
         public Builder dbClusterSnapshotIdentifier(@Nullable String dbClusterSnapshotIdentifier) {
-            this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
+            $.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
             return this;
         }
+
         public Builder includePublic(@Nullable Boolean includePublic) {
-            this.includePublic = includePublic;
+            $.includePublic = includePublic;
             return this;
         }
+
         public Builder includeShared(@Nullable Boolean includeShared) {
-            this.includeShared = includeShared;
+            $.includeShared = includeShared;
             return this;
         }
+
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            this.mostRecent = mostRecent;
+            $.mostRecent = mostRecent;
             return this;
         }
+
         public Builder snapshotType(@Nullable String snapshotType) {
-            this.snapshotType = snapshotType;
+            $.snapshotType = snapshotType;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetClusterSnapshotArgs build() {
-            return new GetClusterSnapshotArgs(dbClusterIdentifier, dbClusterSnapshotIdentifier, includePublic, includeShared, mostRecent, snapshotType, tags);
+        }
+
+        public GetClusterSnapshotArgs build() {
+            return $;
         }
     }
+
 }

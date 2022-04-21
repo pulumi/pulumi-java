@@ -25,10 +25,10 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="adminPublicKey")
-      private final @Nullable String adminPublicKey;
+    private @Nullable String adminPublicKey;
 
     public Optional<String> adminPublicKey() {
-        return this.adminPublicKey == null ? Optional.empty() : Optional.ofNullable(this.adminPublicKey);
+        return Optional.ofNullable(this.adminPublicKey);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="adminUserName", required=true)
-      private final String adminUserName;
+    private String adminUserName;
 
     public String adminUserName() {
         return this.adminUserName;
@@ -47,7 +47,7 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="sshPort", required=true)
-      private final Integer sshPort;
+    private Integer sshPort;
 
     public Integer sshPort() {
         return this.sshPort;
@@ -58,73 +58,65 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="sshPublicAccess")
-      private final @Nullable String sshPublicAccess;
+    private @Nullable String sshPublicAccess;
 
     public Optional<String> sshPublicAccess() {
-        return this.sshPublicAccess == null ? Optional.empty() : Optional.ofNullable(this.sshPublicAccess);
+        return Optional.ofNullable(this.sshPublicAccess);
     }
 
-    public ComputeInstanceSshSettingsResponse(
-        @Nullable String adminPublicKey,
-        String adminUserName,
-        Integer sshPort,
-        @Nullable String sshPublicAccess) {
-        this.adminPublicKey = adminPublicKey;
-        this.adminUserName = Objects.requireNonNull(adminUserName, "expected parameter 'adminUserName' to be non-null");
-        this.sshPort = Objects.requireNonNull(sshPort, "expected parameter 'sshPort' to be non-null");
-        this.sshPublicAccess = Codegen.stringProp("sshPublicAccess").arg(sshPublicAccess).def("Disabled").getNullable();
-    }
+    private ComputeInstanceSshSettingsResponse() {}
 
-    private ComputeInstanceSshSettingsResponse() {
-        this.adminPublicKey = null;
-        this.adminUserName = null;
-        this.sshPort = null;
-        this.sshPublicAccess = null;
+    private ComputeInstanceSshSettingsResponse(ComputeInstanceSshSettingsResponse $) {
+        this.adminPublicKey = $.adminPublicKey;
+        this.adminUserName = $.adminUserName;
+        this.sshPort = $.sshPort;
+        this.sshPublicAccess = $.sshPublicAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeInstanceSshSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String adminPublicKey;
-        private String adminUserName;
-        private Integer sshPort;
-        private @Nullable String sshPublicAccess;
+        private ComputeInstanceSshSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeInstanceSshSettingsResponse();
         }
 
         public Builder(ComputeInstanceSshSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminPublicKey = defaults.adminPublicKey;
-    	      this.adminUserName = defaults.adminUserName;
-    	      this.sshPort = defaults.sshPort;
-    	      this.sshPublicAccess = defaults.sshPublicAccess;
+            $ = new ComputeInstanceSshSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminPublicKey(@Nullable String adminPublicKey) {
-            this.adminPublicKey = adminPublicKey;
+            $.adminPublicKey = adminPublicKey;
             return this;
         }
+
         public Builder adminUserName(String adminUserName) {
-            this.adminUserName = Objects.requireNonNull(adminUserName);
+            $.adminUserName = adminUserName;
             return this;
         }
+
         public Builder sshPort(Integer sshPort) {
-            this.sshPort = Objects.requireNonNull(sshPort);
+            $.sshPort = sshPort;
             return this;
         }
+
         public Builder sshPublicAccess(@Nullable String sshPublicAccess) {
-            this.sshPublicAccess = sshPublicAccess;
+            $.sshPublicAccess = sshPublicAccess;
             return this;
-        }        public ComputeInstanceSshSettingsResponse build() {
-            return new ComputeInstanceSshSettingsResponse(adminPublicKey, adminUserName, sshPort, sshPublicAccess);
+        }
+
+        public ComputeInstanceSshSettingsResponse build() {
+            $.adminUserName = Objects.requireNonNull($.adminUserName, "expected parameter 'adminUserName' to be non-null");
+            $.sshPort = Objects.requireNonNull($.sshPort, "expected parameter 'sshPort' to be non-null");
+            $.sshPublicAccess = Codegen.stringProp("sshPublicAccess").arg($.sshPublicAccess).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

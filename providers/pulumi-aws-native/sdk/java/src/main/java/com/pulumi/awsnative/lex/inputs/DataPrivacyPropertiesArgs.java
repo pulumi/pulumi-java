@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DataPrivacyPropertiesArgs extends com.pulumi.resources.Resour
     public static final DataPrivacyPropertiesArgs Empty = new DataPrivacyPropertiesArgs();
 
     @Import(name="childDirected", required=true)
-      private final Output<Boolean> childDirected;
+    private Output<Boolean> childDirected;
 
     public Output<Boolean> childDirected() {
         return this.childDirected;
     }
 
-    public DataPrivacyPropertiesArgs(Output<Boolean> childDirected) {
-        this.childDirected = Objects.requireNonNull(childDirected, "expected parameter 'childDirected' to be non-null");
-    }
+    private DataPrivacyPropertiesArgs() {}
 
-    private DataPrivacyPropertiesArgs() {
-        this.childDirected = Codegen.empty();
+    private DataPrivacyPropertiesArgs(DataPrivacyPropertiesArgs $) {
+        this.childDirected = $.childDirected;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataPrivacyPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> childDirected;
+        private DataPrivacyPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataPrivacyPropertiesArgs();
         }
 
         public Builder(DataPrivacyPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.childDirected = defaults.childDirected;
+            $ = new DataPrivacyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder childDirected(Output<Boolean> childDirected) {
-            this.childDirected = Objects.requireNonNull(childDirected);
+            $.childDirected = childDirected;
             return this;
         }
+
         public Builder childDirected(Boolean childDirected) {
-            this.childDirected = Output.of(Objects.requireNonNull(childDirected));
-            return this;
-        }        public DataPrivacyPropertiesArgs build() {
-            return new DataPrivacyPropertiesArgs(childDirected);
+            return childDirected(Output.of(childDirected));
+        }
+
+        public DataPrivacyPropertiesArgs build() {
+            $.childDirected = Objects.requireNonNull($.childDirected, "expected parameter 'childDirected' to be non-null");
+            return $;
         }
     }
+
 }

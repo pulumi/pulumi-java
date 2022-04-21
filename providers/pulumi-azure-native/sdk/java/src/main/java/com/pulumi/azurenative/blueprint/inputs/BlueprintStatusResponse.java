@@ -21,7 +21,7 @@ public final class BlueprintStatusResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="lastModified", required=true)
-      private final String lastModified;
+    private String lastModified;
 
     public String lastModified() {
         return this.lastModified;
@@ -32,55 +32,52 @@ public final class BlueprintStatusResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timeCreated", required=true)
-      private final String timeCreated;
+    private String timeCreated;
 
     public String timeCreated() {
         return this.timeCreated;
     }
 
-    public BlueprintStatusResponse(
-        String lastModified,
-        String timeCreated) {
-        this.lastModified = Objects.requireNonNull(lastModified, "expected parameter 'lastModified' to be non-null");
-        this.timeCreated = Objects.requireNonNull(timeCreated, "expected parameter 'timeCreated' to be non-null");
-    }
+    private BlueprintStatusResponse() {}
 
-    private BlueprintStatusResponse() {
-        this.lastModified = null;
-        this.timeCreated = null;
+    private BlueprintStatusResponse(BlueprintStatusResponse $) {
+        this.lastModified = $.lastModified;
+        this.timeCreated = $.timeCreated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlueprintStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastModified;
-        private String timeCreated;
+        private BlueprintStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlueprintStatusResponse();
         }
 
         public Builder(BlueprintStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastModified = defaults.lastModified;
-    	      this.timeCreated = defaults.timeCreated;
+            $ = new BlueprintStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastModified(String lastModified) {
-            this.lastModified = Objects.requireNonNull(lastModified);
+            $.lastModified = lastModified;
             return this;
         }
+
         public Builder timeCreated(String timeCreated) {
-            this.timeCreated = Objects.requireNonNull(timeCreated);
+            $.timeCreated = timeCreated;
             return this;
-        }        public BlueprintStatusResponse build() {
-            return new BlueprintStatusResponse(lastModified, timeCreated);
+        }
+
+        public BlueprintStatusResponse build() {
+            $.lastModified = Objects.requireNonNull($.lastModified, "expected parameter 'lastModified' to be non-null");
+            $.timeCreated = Objects.requireNonNull($.timeCreated, "expected parameter 'timeCreated' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="columnName", required=true)
-      private final String columnName;
+    private String columnName;
 
     public String columnName() {
         return this.columnName;
@@ -28,7 +28,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="schemaName", required=true)
-      private final String schemaName;
+    private String schemaName;
 
     public String schemaName() {
         return this.schemaName;
@@ -50,7 +50,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="sensitivityLabelSource", required=true)
-      private final String sensitivityLabelSource;
+    private String sensitivityLabelSource;
 
     public String sensitivityLabelSource() {
         return this.sensitivityLabelSource;
@@ -61,7 +61,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="sqlPoolName", required=true)
-      private final String sqlPoolName;
+    private String sqlPoolName;
 
     public String sqlPoolName() {
         return this.sqlPoolName;
@@ -72,7 +72,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
@@ -83,100 +83,87 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetSqlPoolSensitivityLabelArgs(
-        String columnName,
-        String resourceGroupName,
-        String schemaName,
-        String sensitivityLabelSource,
-        String sqlPoolName,
-        String tableName,
-        String workspaceName) {
-        this.columnName = Objects.requireNonNull(columnName, "expected parameter 'columnName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-        this.sensitivityLabelSource = Objects.requireNonNull(sensitivityLabelSource, "expected parameter 'sensitivityLabelSource' to be non-null");
-        this.sqlPoolName = Objects.requireNonNull(sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetSqlPoolSensitivityLabelArgs() {}
 
-    private GetSqlPoolSensitivityLabelArgs() {
-        this.columnName = null;
-        this.resourceGroupName = null;
-        this.schemaName = null;
-        this.sensitivityLabelSource = null;
-        this.sqlPoolName = null;
-        this.tableName = null;
-        this.workspaceName = null;
+    private GetSqlPoolSensitivityLabelArgs(GetSqlPoolSensitivityLabelArgs $) {
+        this.columnName = $.columnName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaName = $.schemaName;
+        this.sensitivityLabelSource = $.sensitivityLabelSource;
+        this.sqlPoolName = $.sqlPoolName;
+        this.tableName = $.tableName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlPoolSensitivityLabelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String columnName;
-        private String resourceGroupName;
-        private String schemaName;
-        private String sensitivityLabelSource;
-        private String sqlPoolName;
-        private String tableName;
-        private String workspaceName;
+        private GetSqlPoolSensitivityLabelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlPoolSensitivityLabelArgs();
         }
 
         public Builder(GetSqlPoolSensitivityLabelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnName = defaults.columnName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaName = defaults.schemaName;
-    	      this.sensitivityLabelSource = defaults.sensitivityLabelSource;
-    	      this.sqlPoolName = defaults.sqlPoolName;
-    	      this.tableName = defaults.tableName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetSqlPoolSensitivityLabelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnName(String columnName) {
-            this.columnName = Objects.requireNonNull(columnName);
+            $.columnName = columnName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
         }
+
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
-            this.sensitivityLabelSource = Objects.requireNonNull(sensitivityLabelSource);
+            $.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
+
         public Builder sqlPoolName(String sqlPoolName) {
-            this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetSqlPoolSensitivityLabelArgs build() {
-            return new GetSqlPoolSensitivityLabelArgs(columnName, resourceGroupName, schemaName, sensitivityLabelSource, sqlPoolName, tableName, workspaceName);
+        }
+
+        public GetSqlPoolSensitivityLabelArgs build() {
+            $.columnName = Objects.requireNonNull($.columnName, "expected parameter 'columnName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            $.sensitivityLabelSource = Objects.requireNonNull($.sensitivityLabelSource, "expected parameter 'sensitivityLabelSource' to be non-null");
+            $.sqlPoolName = Objects.requireNonNull($.sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

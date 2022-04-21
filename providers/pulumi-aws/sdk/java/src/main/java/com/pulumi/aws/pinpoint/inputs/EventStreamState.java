@@ -5,9 +5,9 @@ package com.pulumi.aws.pinpoint.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class EventStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EventStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationStreamArn")
-      private final @Nullable Output<String> destinationStreamArn;
+    private @Nullable Output<String> destinationStreamArn;
 
-    public Output<String> destinationStreamArn() {
-        return this.destinationStreamArn == null ? Codegen.empty() : this.destinationStreamArn;
+    public Optional<Output<String>> destinationStreamArn() {
+        return Optional.ofNullable(this.destinationStreamArn);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class EventStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public EventStreamState(
-        @Nullable Output<String> applicationId,
-        @Nullable Output<String> destinationStreamArn,
-        @Nullable Output<String> roleArn) {
-        this.applicationId = applicationId;
-        this.destinationStreamArn = destinationStreamArn;
-        this.roleArn = roleArn;
-    }
+    private EventStreamState() {}
 
-    private EventStreamState() {
-        this.applicationId = Codegen.empty();
-        this.destinationStreamArn = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private EventStreamState(EventStreamState $) {
+        this.applicationId = $.applicationId;
+        this.destinationStreamArn = $.destinationStreamArn;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventStreamState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<String> destinationStreamArn;
-        private @Nullable Output<String> roleArn;
+        private EventStreamState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventStreamState();
         }
 
         public Builder(EventStreamState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.destinationStreamArn = defaults.destinationStreamArn;
-    	      this.roleArn = defaults.roleArn;
+            $ = new EventStreamState(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder destinationStreamArn(@Nullable Output<String> destinationStreamArn) {
-            this.destinationStreamArn = destinationStreamArn;
+            $.destinationStreamArn = destinationStreamArn;
             return this;
         }
-        public Builder destinationStreamArn(@Nullable String destinationStreamArn) {
-            this.destinationStreamArn = Codegen.ofNullable(destinationStreamArn);
-            return this;
+
+        public Builder destinationStreamArn(String destinationStreamArn) {
+            return destinationStreamArn(Output.of(destinationStreamArn));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public EventStreamState build() {
-            return new EventStreamState(applicationId, destinationStreamArn, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public EventStreamState build() {
+            return $;
         }
     }
+
 }

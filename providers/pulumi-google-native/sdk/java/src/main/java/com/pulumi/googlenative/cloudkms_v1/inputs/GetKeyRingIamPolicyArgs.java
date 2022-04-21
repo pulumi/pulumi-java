@@ -15,94 +15,85 @@ public final class GetKeyRingIamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetKeyRingIamPolicyArgs Empty = new GetKeyRingIamPolicyArgs();
 
     @Import(name="keyRingId", required=true)
-      private final String keyRingId;
+    private String keyRingId;
 
     public String keyRingId() {
         return this.keyRingId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetKeyRingIamPolicyArgs(
-        String keyRingId,
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.keyRingId = Objects.requireNonNull(keyRingId, "expected parameter 'keyRingId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetKeyRingIamPolicyArgs() {}
 
-    private GetKeyRingIamPolicyArgs() {
-        this.keyRingId = null;
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetKeyRingIamPolicyArgs(GetKeyRingIamPolicyArgs $) {
+        this.keyRingId = $.keyRingId;
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyRingIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyRingId;
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetKeyRingIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyRingIamPolicyArgs();
         }
 
         public Builder(GetKeyRingIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyRingId = defaults.keyRingId;
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetKeyRingIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyRingId(String keyRingId) {
-            this.keyRingId = Objects.requireNonNull(keyRingId);
+            $.keyRingId = keyRingId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetKeyRingIamPolicyArgs build() {
-            return new GetKeyRingIamPolicyArgs(keyRingId, location, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetKeyRingIamPolicyArgs build() {
+            $.keyRingId = Objects.requireNonNull($.keyRingId, "expected parameter 'keyRingId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

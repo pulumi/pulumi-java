@@ -9,8 +9,8 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerConnectionPoolHttpGe
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerConnectionPoolTcpGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends com.pulu
      * 
      */
     @Import(name="grpc")
-      private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc;
+    private @Nullable Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc() {
-        return this.grpc == null ? Codegen.empty() : this.grpc;
+    public Optional<Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs>> grpc() {
+        return Optional.ofNullable(this.grpc);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends com.pulu
      * 
      */
     @Import(name="http")
-      private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http;
+    private @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http() {
-        return this.http == null ? Codegen.empty() : this.http;
+    public Optional<Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs>> http() {
+        return Optional.ofNullable(this.http);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends com.pulu
      * 
      */
     @Import(name="http2")
-      private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2;
+    private @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2() {
-        return this.http2 == null ? Codegen.empty() : this.http2;
+    public Optional<Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs>> http2() {
+        return Optional.ofNullable(this.http2);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends com.pulu
      * 
      */
     @Import(name="tcp")
-      private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp;
+    private @Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp() {
-        return this.tcp == null ? Codegen.empty() : this.tcp;
+    public Optional<Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs>> tcp() {
+        return Optional.ofNullable(this.tcp);
     }
 
-    public VirtualNodeSpecListenerConnectionPoolGetArgs(
-        @Nullable Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc,
-        @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http,
-        @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2,
-        @Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp) {
-        this.grpc = grpc;
-        this.http = http;
-        this.http2 = http2;
-        this.tcp = tcp;
-    }
+    private VirtualNodeSpecListenerConnectionPoolGetArgs() {}
 
-    private VirtualNodeSpecListenerConnectionPoolGetArgs() {
-        this.grpc = Codegen.empty();
-        this.http = Codegen.empty();
-        this.http2 = Codegen.empty();
-        this.tcp = Codegen.empty();
+    private VirtualNodeSpecListenerConnectionPoolGetArgs(VirtualNodeSpecListenerConnectionPoolGetArgs $) {
+        this.grpc = $.grpc;
+        this.http = $.http;
+        this.http2 = $.http2;
+        this.tcp = $.tcp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerConnectionPoolGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc;
-        private @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http;
-        private @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2;
-        private @Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp;
+        private VirtualNodeSpecListenerConnectionPoolGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerConnectionPoolGetArgs();
         }
 
         public Builder(VirtualNodeSpecListenerConnectionPoolGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grpc = defaults.grpc;
-    	      this.http = defaults.http;
-    	      this.http2 = defaults.http2;
-    	      this.tcp = defaults.tcp;
+            $ = new VirtualNodeSpecListenerConnectionPoolGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder grpc(@Nullable Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc) {
-            this.grpc = grpc;
+            $.grpc = grpc;
             return this;
         }
-        public Builder grpc(@Nullable VirtualNodeSpecListenerConnectionPoolGrpcGetArgs grpc) {
-            this.grpc = Codegen.ofNullable(grpc);
-            return this;
+
+        public Builder grpc(VirtualNodeSpecListenerConnectionPoolGrpcGetArgs grpc) {
+            return grpc(Output.of(grpc));
         }
+
         public Builder http(@Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http) {
-            this.http = http;
+            $.http = http;
             return this;
         }
-        public Builder http(@Nullable VirtualNodeSpecListenerConnectionPoolHttpGetArgs http) {
-            this.http = Codegen.ofNullable(http);
-            return this;
+
+        public Builder http(VirtualNodeSpecListenerConnectionPoolHttpGetArgs http) {
+            return http(Output.of(http));
         }
+
         public Builder http2(@Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2) {
-            this.http2 = http2;
+            $.http2 = http2;
             return this;
         }
-        public Builder http2(@Nullable VirtualNodeSpecListenerConnectionPoolHttp2GetArgs http2) {
-            this.http2 = Codegen.ofNullable(http2);
-            return this;
+
+        public Builder http2(VirtualNodeSpecListenerConnectionPoolHttp2GetArgs http2) {
+            return http2(Output.of(http2));
         }
+
         public Builder tcp(@Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp) {
-            this.tcp = tcp;
+            $.tcp = tcp;
             return this;
         }
-        public Builder tcp(@Nullable VirtualNodeSpecListenerConnectionPoolTcpGetArgs tcp) {
-            this.tcp = Codegen.ofNullable(tcp);
-            return this;
-        }        public VirtualNodeSpecListenerConnectionPoolGetArgs build() {
-            return new VirtualNodeSpecListenerConnectionPoolGetArgs(grpc, http, http2, tcp);
+
+        public Builder tcp(VirtualNodeSpecListenerConnectionPoolTcpGetArgs tcp) {
+            return tcp(Output.of(tcp));
+        }
+
+        public VirtualNodeSpecListenerConnectionPoolGetArgs build() {
+            return $;
         }
     }
+
 }

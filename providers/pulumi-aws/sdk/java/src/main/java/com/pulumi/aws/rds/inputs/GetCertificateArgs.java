@@ -20,10 +20,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="latestValidTill")
-      private final @Nullable Boolean latestValidTill;
+    private @Nullable Boolean latestValidTill;
 
     public Optional<Boolean> latestValidTill() {
-        return this.latestValidTill == null ? Optional.empty() : Optional.ofNullable(this.latestValidTill);
+        return Optional.ofNullable(this.latestValidTill);
     }
 
-    public GetCertificateArgs(
-        @Nullable String id,
-        @Nullable Boolean latestValidTill) {
-        this.id = id;
-        this.latestValidTill = latestValidTill;
-    }
+    private GetCertificateArgs() {}
 
-    private GetCertificateArgs() {
-        this.id = null;
-        this.latestValidTill = null;
+    private GetCertificateArgs(GetCertificateArgs $) {
+        this.id = $.id;
+        this.latestValidTill = $.latestValidTill;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable Boolean latestValidTill;
+        private GetCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCertificateArgs();
         }
 
         public Builder(GetCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.latestValidTill = defaults.latestValidTill;
+            $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder latestValidTill(@Nullable Boolean latestValidTill) {
-            this.latestValidTill = latestValidTill;
+            $.latestValidTill = latestValidTill;
             return this;
-        }        public GetCertificateArgs build() {
-            return new GetCertificateArgs(id, latestValidTill);
+        }
+
+        public GetCertificateArgs build() {
+            return $;
         }
     }
+
 }

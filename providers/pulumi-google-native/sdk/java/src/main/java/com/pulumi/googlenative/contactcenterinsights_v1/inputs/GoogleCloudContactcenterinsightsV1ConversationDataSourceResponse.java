@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
      * 
      */
     @Import(name="dialogflowSource", required=true)
-      private final GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource;
+    private GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource;
 
     public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource() {
         return this.dialogflowSource;
@@ -33,55 +33,52 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
      * 
      */
     @Import(name="gcsSource", required=true)
-      private final GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
+    private GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
 
     public GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource() {
         return this.gcsSource;
     }
 
-    public GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(
-        GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource,
-        GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
-        this.dialogflowSource = Objects.requireNonNull(dialogflowSource, "expected parameter 'dialogflowSource' to be non-null");
-        this.gcsSource = Objects.requireNonNull(gcsSource, "expected parameter 'gcsSource' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse() {
-        this.dialogflowSource = null;
-        this.gcsSource = null;
+    private GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse $) {
+        this.dialogflowSource = $.dialogflowSource;
+        this.gcsSource = $.gcsSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource;
-        private GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
+        private GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dialogflowSource = defaults.dialogflowSource;
-    	      this.gcsSource = defaults.gcsSource;
+            $ = new GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dialogflowSource(GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource) {
-            this.dialogflowSource = Objects.requireNonNull(dialogflowSource);
+            $.dialogflowSource = dialogflowSource;
             return this;
         }
+
         public Builder gcsSource(GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
-            this.gcsSource = Objects.requireNonNull(gcsSource);
+            $.gcsSource = gcsSource;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(dialogflowSource, gcsSource);
+        }
+
+        public GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse build() {
+            $.dialogflowSource = Objects.requireNonNull($.dialogflowSource, "expected parameter 'dialogflowSource' to be non-null");
+            $.gcsSource = Objects.requireNonNull($.gcsSource, "expected parameter 'gcsSource' to be non-null");
+            return $;
         }
     }
+
 }

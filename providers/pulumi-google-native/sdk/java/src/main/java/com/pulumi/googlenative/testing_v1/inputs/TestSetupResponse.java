@@ -27,7 +27,7 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="account", required=true)
-      private final AccountResponse account;
+    private AccountResponse account;
 
     public AccountResponse account() {
         return this.account;
@@ -38,7 +38,7 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalApks", required=true)
-      private final List<ApkResponse> additionalApks;
+    private List<ApkResponse> additionalApks;
 
     public List<ApkResponse> additionalApks() {
         return this.additionalApks;
@@ -49,7 +49,7 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="directoriesToPull", required=true)
-      private final List<String> directoriesToPull;
+    private List<String> directoriesToPull;
 
     public List<String> directoriesToPull() {
         return this.directoriesToPull;
@@ -60,7 +60,7 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dontAutograntPermissions", required=true)
-      private final Boolean dontAutograntPermissions;
+    private Boolean dontAutograntPermissions;
 
     public Boolean dontAutograntPermissions() {
         return this.dontAutograntPermissions;
@@ -71,7 +71,7 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentVariables", required=true)
-      private final List<EnvironmentVariableResponse> environmentVariables;
+    private List<EnvironmentVariableResponse> environmentVariables;
 
     public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables;
@@ -82,7 +82,7 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filesToPush", required=true)
-      private final List<DeviceFileResponse> filesToPush;
+    private List<DeviceFileResponse> filesToPush;
 
     public List<DeviceFileResponse> filesToPush() {
         return this.filesToPush;
@@ -93,112 +93,103 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkProfile", required=true)
-      private final String networkProfile;
+    private String networkProfile;
 
     public String networkProfile() {
         return this.networkProfile;
     }
 
-    public TestSetupResponse(
-        AccountResponse account,
-        List<ApkResponse> additionalApks,
-        List<String> directoriesToPull,
-        Boolean dontAutograntPermissions,
-        List<EnvironmentVariableResponse> environmentVariables,
-        List<DeviceFileResponse> filesToPush,
-        String networkProfile) {
-        this.account = Objects.requireNonNull(account, "expected parameter 'account' to be non-null");
-        this.additionalApks = Objects.requireNonNull(additionalApks, "expected parameter 'additionalApks' to be non-null");
-        this.directoriesToPull = Objects.requireNonNull(directoriesToPull, "expected parameter 'directoriesToPull' to be non-null");
-        this.dontAutograntPermissions = Objects.requireNonNull(dontAutograntPermissions, "expected parameter 'dontAutograntPermissions' to be non-null");
-        this.environmentVariables = Objects.requireNonNull(environmentVariables, "expected parameter 'environmentVariables' to be non-null");
-        this.filesToPush = Objects.requireNonNull(filesToPush, "expected parameter 'filesToPush' to be non-null");
-        this.networkProfile = Objects.requireNonNull(networkProfile, "expected parameter 'networkProfile' to be non-null");
-    }
+    private TestSetupResponse() {}
 
-    private TestSetupResponse() {
-        this.account = null;
-        this.additionalApks = List.of();
-        this.directoriesToPull = List.of();
-        this.dontAutograntPermissions = null;
-        this.environmentVariables = List.of();
-        this.filesToPush = List.of();
-        this.networkProfile = null;
+    private TestSetupResponse(TestSetupResponse $) {
+        this.account = $.account;
+        this.additionalApks = $.additionalApks;
+        this.directoriesToPull = $.directoriesToPull;
+        this.dontAutograntPermissions = $.dontAutograntPermissions;
+        this.environmentVariables = $.environmentVariables;
+        this.filesToPush = $.filesToPush;
+        this.networkProfile = $.networkProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestSetupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AccountResponse account;
-        private List<ApkResponse> additionalApks;
-        private List<String> directoriesToPull;
-        private Boolean dontAutograntPermissions;
-        private List<EnvironmentVariableResponse> environmentVariables;
-        private List<DeviceFileResponse> filesToPush;
-        private String networkProfile;
+        private TestSetupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestSetupResponse();
         }
 
         public Builder(TestSetupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.account = defaults.account;
-    	      this.additionalApks = defaults.additionalApks;
-    	      this.directoriesToPull = defaults.directoriesToPull;
-    	      this.dontAutograntPermissions = defaults.dontAutograntPermissions;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.filesToPush = defaults.filesToPush;
-    	      this.networkProfile = defaults.networkProfile;
+            $ = new TestSetupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder account(AccountResponse account) {
-            this.account = Objects.requireNonNull(account);
+            $.account = account;
             return this;
         }
+
         public Builder additionalApks(List<ApkResponse> additionalApks) {
-            this.additionalApks = Objects.requireNonNull(additionalApks);
+            $.additionalApks = additionalApks;
             return this;
         }
+
         public Builder additionalApks(ApkResponse... additionalApks) {
             return additionalApks(List.of(additionalApks));
         }
+
         public Builder directoriesToPull(List<String> directoriesToPull) {
-            this.directoriesToPull = Objects.requireNonNull(directoriesToPull);
+            $.directoriesToPull = directoriesToPull;
             return this;
         }
+
         public Builder directoriesToPull(String... directoriesToPull) {
             return directoriesToPull(List.of(directoriesToPull));
         }
+
         public Builder dontAutograntPermissions(Boolean dontAutograntPermissions) {
-            this.dontAutograntPermissions = Objects.requireNonNull(dontAutograntPermissions);
+            $.dontAutograntPermissions = dontAutograntPermissions;
             return this;
         }
+
         public Builder environmentVariables(List<EnvironmentVariableResponse> environmentVariables) {
-            this.environmentVariables = Objects.requireNonNull(environmentVariables);
+            $.environmentVariables = environmentVariables;
             return this;
         }
+
         public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
+
         public Builder filesToPush(List<DeviceFileResponse> filesToPush) {
-            this.filesToPush = Objects.requireNonNull(filesToPush);
+            $.filesToPush = filesToPush;
             return this;
         }
+
         public Builder filesToPush(DeviceFileResponse... filesToPush) {
             return filesToPush(List.of(filesToPush));
         }
+
         public Builder networkProfile(String networkProfile) {
-            this.networkProfile = Objects.requireNonNull(networkProfile);
+            $.networkProfile = networkProfile;
             return this;
-        }        public TestSetupResponse build() {
-            return new TestSetupResponse(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile);
+        }
+
+        public TestSetupResponse build() {
+            $.account = Objects.requireNonNull($.account, "expected parameter 'account' to be non-null");
+            $.additionalApks = Objects.requireNonNull($.additionalApks, "expected parameter 'additionalApks' to be non-null");
+            $.directoriesToPull = Objects.requireNonNull($.directoriesToPull, "expected parameter 'directoriesToPull' to be non-null");
+            $.dontAutograntPermissions = Objects.requireNonNull($.dontAutograntPermissions, "expected parameter 'dontAutograntPermissions' to be non-null");
+            $.environmentVariables = Objects.requireNonNull($.environmentVariables, "expected parameter 'environmentVariables' to be non-null");
+            $.filesToPush = Objects.requireNonNull($.filesToPush, "expected parameter 'filesToPush' to be non-null");
+            $.networkProfile = Objects.requireNonNull($.networkProfile, "expected parameter 'networkProfile' to be non-null");
+            return $;
         }
     }
+
 }

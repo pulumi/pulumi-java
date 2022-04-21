@@ -17,7 +17,7 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="siteName", required=true)
-      private final String siteName;
+    private String siteName;
 
     public String siteName() {
         return this.siteName;
     }
 
-    public GetSiteArgs(
-        String resourceGroupName,
-        String siteName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
-    }
+    private GetSiteArgs() {}
 
-    private GetSiteArgs() {
-        this.resourceGroupName = null;
-        this.siteName = null;
+    private GetSiteArgs(GetSiteArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.siteName = $.siteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String siteName;
+        private GetSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSiteArgs();
         }
 
         public Builder(GetSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.siteName = defaults.siteName;
+            $ = new GetSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder siteName(String siteName) {
-            this.siteName = Objects.requireNonNull(siteName);
+            $.siteName = siteName;
             return this;
-        }        public GetSiteArgs build() {
-            return new GetSiteArgs(resourceGroupName, siteName);
+        }
+
+        public GetSiteArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.siteName = Objects.requireNonNull($.siteName, "expected parameter 'siteName' to be non-null");
+            return $;
         }
     }
+
 }

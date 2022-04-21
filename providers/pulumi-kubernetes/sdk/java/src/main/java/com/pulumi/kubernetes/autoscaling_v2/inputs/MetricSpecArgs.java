@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.ContainerResourceMetricSourceArgs;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.ExternalMetricSourceArgs;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.ObjectMetricSourceArgs;
@@ -13,6 +12,7 @@ import com.pulumi.kubernetes.autoscaling_v2.inputs.PodsMetricSourceArgs;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.ResourceMetricSourceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class MetricSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerResource")
-      private final @Nullable Output<ContainerResourceMetricSourceArgs> containerResource;
+    private @Nullable Output<ContainerResourceMetricSourceArgs> containerResource;
 
-    public Output<ContainerResourceMetricSourceArgs> containerResource() {
-        return this.containerResource == null ? Codegen.empty() : this.containerResource;
+    public Optional<Output<ContainerResourceMetricSourceArgs>> containerResource() {
+        return Optional.ofNullable(this.containerResource);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class MetricSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="external")
-      private final @Nullable Output<ExternalMetricSourceArgs> external;
+    private @Nullable Output<ExternalMetricSourceArgs> external;
 
-    public Output<ExternalMetricSourceArgs> external() {
-        return this.external == null ? Codegen.empty() : this.external;
+    public Optional<Output<ExternalMetricSourceArgs>> external() {
+        return Optional.ofNullable(this.external);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class MetricSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="object")
-      private final @Nullable Output<ObjectMetricSourceArgs> object;
+    private @Nullable Output<ObjectMetricSourceArgs> object;
 
-    public Output<ObjectMetricSourceArgs> object() {
-        return this.object == null ? Codegen.empty() : this.object;
+    public Optional<Output<ObjectMetricSourceArgs>> object() {
+        return Optional.ofNullable(this.object);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class MetricSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pods")
-      private final @Nullable Output<PodsMetricSourceArgs> pods;
+    private @Nullable Output<PodsMetricSourceArgs> pods;
 
-    public Output<PodsMetricSourceArgs> pods() {
-        return this.pods == null ? Codegen.empty() : this.pods;
+    public Optional<Output<PodsMetricSourceArgs>> pods() {
+        return Optional.ofNullable(this.pods);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class MetricSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resource")
-      private final @Nullable Output<ResourceMetricSourceArgs> resource;
+    private @Nullable Output<ResourceMetricSourceArgs> resource;
 
-    public Output<ResourceMetricSourceArgs> resource() {
-        return this.resource == null ? Codegen.empty() : this.resource;
+    public Optional<Output<ResourceMetricSourceArgs>> resource() {
+        return Optional.ofNullable(this.resource);
     }
 
     /**
@@ -84,115 +84,99 @@ public final class MetricSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public MetricSpecArgs(
-        @Nullable Output<ContainerResourceMetricSourceArgs> containerResource,
-        @Nullable Output<ExternalMetricSourceArgs> external,
-        @Nullable Output<ObjectMetricSourceArgs> object,
-        @Nullable Output<PodsMetricSourceArgs> pods,
-        @Nullable Output<ResourceMetricSourceArgs> resource,
-        Output<String> type) {
-        this.containerResource = containerResource;
-        this.external = external;
-        this.object = object;
-        this.pods = pods;
-        this.resource = resource;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private MetricSpecArgs() {}
 
-    private MetricSpecArgs() {
-        this.containerResource = Codegen.empty();
-        this.external = Codegen.empty();
-        this.object = Codegen.empty();
-        this.pods = Codegen.empty();
-        this.resource = Codegen.empty();
-        this.type = Codegen.empty();
+    private MetricSpecArgs(MetricSpecArgs $) {
+        this.containerResource = $.containerResource;
+        this.external = $.external;
+        this.object = $.object;
+        this.pods = $.pods;
+        this.resource = $.resource;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContainerResourceMetricSourceArgs> containerResource;
-        private @Nullable Output<ExternalMetricSourceArgs> external;
-        private @Nullable Output<ObjectMetricSourceArgs> object;
-        private @Nullable Output<PodsMetricSourceArgs> pods;
-        private @Nullable Output<ResourceMetricSourceArgs> resource;
-        private Output<String> type;
+        private MetricSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricSpecArgs();
         }
 
         public Builder(MetricSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerResource = defaults.containerResource;
-    	      this.external = defaults.external;
-    	      this.object = defaults.object;
-    	      this.pods = defaults.pods;
-    	      this.resource = defaults.resource;
-    	      this.type = defaults.type;
+            $ = new MetricSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerResource(@Nullable Output<ContainerResourceMetricSourceArgs> containerResource) {
-            this.containerResource = containerResource;
+            $.containerResource = containerResource;
             return this;
         }
-        public Builder containerResource(@Nullable ContainerResourceMetricSourceArgs containerResource) {
-            this.containerResource = Codegen.ofNullable(containerResource);
-            return this;
+
+        public Builder containerResource(ContainerResourceMetricSourceArgs containerResource) {
+            return containerResource(Output.of(containerResource));
         }
+
         public Builder external(@Nullable Output<ExternalMetricSourceArgs> external) {
-            this.external = external;
+            $.external = external;
             return this;
         }
-        public Builder external(@Nullable ExternalMetricSourceArgs external) {
-            this.external = Codegen.ofNullable(external);
-            return this;
+
+        public Builder external(ExternalMetricSourceArgs external) {
+            return external(Output.of(external));
         }
+
         public Builder object(@Nullable Output<ObjectMetricSourceArgs> object) {
-            this.object = object;
+            $.object = object;
             return this;
         }
-        public Builder object(@Nullable ObjectMetricSourceArgs object) {
-            this.object = Codegen.ofNullable(object);
-            return this;
+
+        public Builder object(ObjectMetricSourceArgs object) {
+            return object(Output.of(object));
         }
+
         public Builder pods(@Nullable Output<PodsMetricSourceArgs> pods) {
-            this.pods = pods;
+            $.pods = pods;
             return this;
         }
-        public Builder pods(@Nullable PodsMetricSourceArgs pods) {
-            this.pods = Codegen.ofNullable(pods);
-            return this;
+
+        public Builder pods(PodsMetricSourceArgs pods) {
+            return pods(Output.of(pods));
         }
+
         public Builder resource(@Nullable Output<ResourceMetricSourceArgs> resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
         }
-        public Builder resource(@Nullable ResourceMetricSourceArgs resource) {
-            this.resource = Codegen.ofNullable(resource);
-            return this;
+
+        public Builder resource(ResourceMetricSourceArgs resource) {
+            return resource(Output.of(resource));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public MetricSpecArgs build() {
-            return new MetricSpecArgs(containerResource, external, object, pods, resource, type);
+            return type(Output.of(type));
+        }
+
+        public MetricSpecArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

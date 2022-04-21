@@ -7,8 +7,8 @@ import com.pulumi.azurenative.batch.enums.AutoUserScope;
 import com.pulumi.azurenative.batch.enums.ElevationLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AutoUserSpecificationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="elevationLevel")
-      private final @Nullable Output<ElevationLevel> elevationLevel;
+    private @Nullable Output<ElevationLevel> elevationLevel;
 
-    public Output<ElevationLevel> elevationLevel() {
-        return this.elevationLevel == null ? Codegen.empty() : this.elevationLevel;
+    public Optional<Output<ElevationLevel>> elevationLevel() {
+        return Optional.ofNullable(this.elevationLevel);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class AutoUserSpecificationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<AutoUserScope> scope;
+    private @Nullable Output<AutoUserScope> scope;
 
-    public Output<AutoUserScope> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<AutoUserScope>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public AutoUserSpecificationArgs(
-        @Nullable Output<ElevationLevel> elevationLevel,
-        @Nullable Output<AutoUserScope> scope) {
-        this.elevationLevel = elevationLevel;
-        this.scope = scope;
-    }
+    private AutoUserSpecificationArgs() {}
 
-    private AutoUserSpecificationArgs() {
-        this.elevationLevel = Codegen.empty();
-        this.scope = Codegen.empty();
+    private AutoUserSpecificationArgs(AutoUserSpecificationArgs $) {
+        this.elevationLevel = $.elevationLevel;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoUserSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ElevationLevel> elevationLevel;
-        private @Nullable Output<AutoUserScope> scope;
+        private AutoUserSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoUserSpecificationArgs();
         }
 
         public Builder(AutoUserSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elevationLevel = defaults.elevationLevel;
-    	      this.scope = defaults.scope;
+            $ = new AutoUserSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder elevationLevel(@Nullable Output<ElevationLevel> elevationLevel) {
-            this.elevationLevel = elevationLevel;
+            $.elevationLevel = elevationLevel;
             return this;
         }
-        public Builder elevationLevel(@Nullable ElevationLevel elevationLevel) {
-            this.elevationLevel = Codegen.ofNullable(elevationLevel);
-            return this;
+
+        public Builder elevationLevel(ElevationLevel elevationLevel) {
+            return elevationLevel(Output.of(elevationLevel));
         }
+
         public Builder scope(@Nullable Output<AutoUserScope> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable AutoUserScope scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
-        }        public AutoUserSpecificationArgs build() {
-            return new AutoUserSpecificationArgs(elevationLevel, scope);
+
+        public Builder scope(AutoUserScope scope) {
+            return scope(Output.of(scope));
+        }
+
+        public AutoUserSpecificationArgs build() {
+            return $;
         }
     }
+
 }

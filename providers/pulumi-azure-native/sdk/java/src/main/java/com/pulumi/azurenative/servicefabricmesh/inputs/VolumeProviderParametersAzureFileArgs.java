@@ -5,9 +5,9 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VolumeProviderParametersAzureFileArgs extends com.pulumi.reso
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable Output<String> accountKey;
+    private @Nullable Output<String> accountKey;
 
-    public Output<String> accountKey() {
-        return this.accountKey == null ? Codegen.empty() : this.accountKey;
+    public Optional<Output<String>> accountKey() {
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class VolumeProviderParametersAzureFileArgs extends com.pulumi.reso
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -46,76 +46,70 @@ public final class VolumeProviderParametersAzureFileArgs extends com.pulumi.reso
      * 
      */
     @Import(name="shareName", required=true)
-      private final Output<String> shareName;
+    private Output<String> shareName;
 
     public Output<String> shareName() {
         return this.shareName;
     }
 
-    public VolumeProviderParametersAzureFileArgs(
-        @Nullable Output<String> accountKey,
-        Output<String> accountName,
-        Output<String> shareName) {
-        this.accountKey = accountKey;
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-    }
+    private VolumeProviderParametersAzureFileArgs() {}
 
-    private VolumeProviderParametersAzureFileArgs() {
-        this.accountKey = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.shareName = Codegen.empty();
+    private VolumeProviderParametersAzureFileArgs(VolumeProviderParametersAzureFileArgs $) {
+        this.accountKey = $.accountKey;
+        this.accountName = $.accountName;
+        this.shareName = $.shareName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeProviderParametersAzureFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountKey;
-        private Output<String> accountName;
-        private Output<String> shareName;
+        private VolumeProviderParametersAzureFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeProviderParametersAzureFileArgs();
         }
 
         public Builder(VolumeProviderParametersAzureFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.accountName = defaults.accountName;
-    	      this.shareName = defaults.shareName;
+            $ = new VolumeProviderParametersAzureFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(@Nullable Output<String> accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
-        public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Codegen.ofNullable(accountKey);
-            return this;
+
+        public Builder accountKey(String accountKey) {
+            return accountKey(Output.of(accountKey));
         }
+
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder shareName(Output<String> shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Output.of(Objects.requireNonNull(shareName));
-            return this;
-        }        public VolumeProviderParametersAzureFileArgs build() {
-            return new VolumeProviderParametersAzureFileArgs(accountKey, accountName, shareName);
+            return shareName(Output.of(shareName));
+        }
+
+        public VolumeProviderParametersAzureFileArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

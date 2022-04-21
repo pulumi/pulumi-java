@@ -17,7 +17,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -28,55 +28,52 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateAuthorityArn", required=true)
-      private final String certificateAuthorityArn;
+    private String certificateAuthorityArn;
 
     public String certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 
-    public GetCertificateArgs(
-        String arn,
-        String certificateAuthorityArn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
-    }
+    private GetCertificateArgs() {}
 
-    private GetCertificateArgs() {
-        this.arn = null;
-        this.certificateAuthorityArn = null;
+    private GetCertificateArgs(GetCertificateArgs $) {
+        this.arn = $.arn;
+        this.certificateAuthorityArn = $.certificateAuthorityArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String certificateAuthorityArn;
+        private GetCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCertificateArgs();
         }
 
         public Builder(GetCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.certificateAuthorityArn = defaults.certificateAuthorityArn;
+            $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
+            $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
-        }        public GetCertificateArgs build() {
-            return new GetCertificateArgs(arn, certificateAuthorityArn);
+        }
+
+        public GetCertificateArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.certificateAuthorityArn = Objects.requireNonNull($.certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sqlManagedInstanceName", required=true)
-      private final String sqlManagedInstanceName;
+    private String sqlManagedInstanceName;
 
     public String sqlManagedInstanceName() {
         return this.sqlManagedInstanceName;
     }
 
-    public GetSqlManagedInstanceArgs(
-        String resourceGroupName,
-        String sqlManagedInstanceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlManagedInstanceName = Objects.requireNonNull(sqlManagedInstanceName, "expected parameter 'sqlManagedInstanceName' to be non-null");
-    }
+    private GetSqlManagedInstanceArgs() {}
 
-    private GetSqlManagedInstanceArgs() {
-        this.resourceGroupName = null;
-        this.sqlManagedInstanceName = null;
+    private GetSqlManagedInstanceArgs(GetSqlManagedInstanceArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlManagedInstanceName = $.sqlManagedInstanceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlManagedInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String sqlManagedInstanceName;
+        private GetSqlManagedInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlManagedInstanceArgs();
         }
 
         public Builder(GetSqlManagedInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlManagedInstanceName = defaults.sqlManagedInstanceName;
+            $ = new GetSqlManagedInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlManagedInstanceName(String sqlManagedInstanceName) {
-            this.sqlManagedInstanceName = Objects.requireNonNull(sqlManagedInstanceName);
+            $.sqlManagedInstanceName = sqlManagedInstanceName;
             return this;
-        }        public GetSqlManagedInstanceArgs build() {
-            return new GetSqlManagedInstanceArgs(resourceGroupName, sqlManagedInstanceName);
+        }
+
+        public GetSqlManagedInstanceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlManagedInstanceName = Objects.requireNonNull($.sqlManagedInstanceName, "expected parameter 'sqlManagedInstanceName' to be non-null");
+            return $;
         }
     }
+
 }

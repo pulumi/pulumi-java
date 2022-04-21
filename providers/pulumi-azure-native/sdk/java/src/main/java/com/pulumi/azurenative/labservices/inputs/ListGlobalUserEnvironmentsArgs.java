@@ -19,10 +19,10 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="labId")
-      private final @Nullable String labId;
+    private @Nullable String labId;
 
     public Optional<String> labId() {
-        return this.labId == null ? Optional.empty() : Optional.ofNullable(this.labId);
+        return Optional.ofNullable(this.labId);
     }
 
     /**
@@ -30,55 +30,51 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public ListGlobalUserEnvironmentsArgs(
-        @Nullable String labId,
-        String userName) {
-        this.labId = labId;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private ListGlobalUserEnvironmentsArgs() {}
 
-    private ListGlobalUserEnvironmentsArgs() {
-        this.labId = null;
-        this.userName = null;
+    private ListGlobalUserEnvironmentsArgs(ListGlobalUserEnvironmentsArgs $) {
+        this.labId = $.labId;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListGlobalUserEnvironmentsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String labId;
-        private String userName;
+        private ListGlobalUserEnvironmentsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListGlobalUserEnvironmentsArgs();
         }
 
         public Builder(ListGlobalUserEnvironmentsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labId = defaults.labId;
-    	      this.userName = defaults.userName;
+            $ = new ListGlobalUserEnvironmentsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labId(@Nullable String labId) {
-            this.labId = labId;
+            $.labId = labId;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public ListGlobalUserEnvironmentsArgs build() {
-            return new ListGlobalUserEnvironmentsArgs(labId, userName);
+        }
+
+        public ListGlobalUserEnvironmentsArgs build() {
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,7 +13,7 @@ public final class GetLaunchProfileArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetLaunchProfileArgs Empty = new GetLaunchProfileArgs();
 
     @Import(name="launchProfileId", required=true)
-      private final String launchProfileId;
+    private String launchProfileId;
 
     public String launchProfileId() {
         return this.launchProfileId;
@@ -24,55 +24,52 @@ public final class GetLaunchProfileArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="studioId", required=true)
-      private final String studioId;
+    private String studioId;
 
     public String studioId() {
         return this.studioId;
     }
 
-    public GetLaunchProfileArgs(
-        String launchProfileId,
-        String studioId) {
-        this.launchProfileId = Objects.requireNonNull(launchProfileId, "expected parameter 'launchProfileId' to be non-null");
-        this.studioId = Objects.requireNonNull(studioId, "expected parameter 'studioId' to be non-null");
-    }
+    private GetLaunchProfileArgs() {}
 
-    private GetLaunchProfileArgs() {
-        this.launchProfileId = null;
-        this.studioId = null;
+    private GetLaunchProfileArgs(GetLaunchProfileArgs $) {
+        this.launchProfileId = $.launchProfileId;
+        this.studioId = $.studioId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String launchProfileId;
-        private String studioId;
+        private GetLaunchProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchProfileArgs();
         }
 
         public Builder(GetLaunchProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchProfileId = defaults.launchProfileId;
-    	      this.studioId = defaults.studioId;
+            $ = new GetLaunchProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder launchProfileId(String launchProfileId) {
-            this.launchProfileId = Objects.requireNonNull(launchProfileId);
+            $.launchProfileId = launchProfileId;
             return this;
         }
+
         public Builder studioId(String studioId) {
-            this.studioId = Objects.requireNonNull(studioId);
+            $.studioId = studioId;
             return this;
-        }        public GetLaunchProfileArgs build() {
-            return new GetLaunchProfileArgs(launchProfileId, studioId);
+        }
+
+        public GetLaunchProfileArgs build() {
+            $.launchProfileId = Objects.requireNonNull($.launchProfileId, "expected parameter 'launchProfileId' to be non-null");
+            $.studioId = Objects.requireNonNull($.studioId, "expected parameter 'studioId' to be non-null");
+            return $;
         }
     }
+
 }

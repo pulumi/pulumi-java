@@ -12,10 +12,10 @@ import com.pulumi.azurenative.securityinsights.inputs.MetadataSupportArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="author")
-      private final @Nullable Output<MetadataAuthorArgs> author;
+    private @Nullable Output<MetadataAuthorArgs> author;
 
-    public Output<MetadataAuthorArgs> author() {
-        return this.author == null ? Codegen.empty() : this.author;
+    public Optional<Output<MetadataAuthorArgs>> author() {
+        return Optional.ofNullable(this.author);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="categories")
-      private final @Nullable Output<MetadataCategoriesArgs> categories;
+    private @Nullable Output<MetadataCategoriesArgs> categories;
 
-    public Output<MetadataCategoriesArgs> categories() {
-        return this.categories == null ? Codegen.empty() : this.categories;
+    public Optional<Output<MetadataCategoriesArgs>> categories() {
+        return Optional.ofNullable(this.categories);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentId")
-      private final @Nullable Output<String> contentId;
+    private @Nullable Output<String> contentId;
 
-    public Output<String> contentId() {
-        return this.contentId == null ? Codegen.empty() : this.contentId;
+    public Optional<Output<String>> contentId() {
+        return Optional.ofNullable(this.contentId);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dependencies")
-      private final @Nullable Output<MetadataDependenciesArgs> dependencies;
+    private @Nullable Output<MetadataDependenciesArgs> dependencies;
 
-    public Output<MetadataDependenciesArgs> dependencies() {
-        return this.dependencies == null ? Codegen.empty() : this.dependencies;
+    public Optional<Output<MetadataDependenciesArgs>> dependencies() {
+        return Optional.ofNullable(this.dependencies);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firstPublishDate")
-      private final @Nullable Output<String> firstPublishDate;
+    private @Nullable Output<String> firstPublishDate;
 
-    public Output<String> firstPublishDate() {
-        return this.firstPublishDate == null ? Codegen.empty() : this.firstPublishDate;
+    public Optional<Output<String>> firstPublishDate() {
+        return Optional.ofNullable(this.firstPublishDate);
     }
 
     /**
@@ -83,7 +83,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,Kind>> kind;
+    private Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> kind() {
         return this.kind;
@@ -94,10 +94,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastPublishDate")
-      private final @Nullable Output<String> lastPublishDate;
+    private @Nullable Output<String> lastPublishDate;
 
-    public Output<String> lastPublishDate() {
-        return this.lastPublishDate == null ? Codegen.empty() : this.lastPublishDate;
+    public Optional<Output<String>> lastPublishDate() {
+        return Optional.ofNullable(this.lastPublishDate);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadataName")
-      private final @Nullable Output<String> metadataName;
+    private @Nullable Output<String> metadataName;
 
-    public Output<String> metadataName() {
-        return this.metadataName == null ? Codegen.empty() : this.metadataName;
+    public Optional<Output<String>> metadataName() {
+        return Optional.ofNullable(this.metadataName);
     }
 
     /**
@@ -116,7 +116,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final Output<String> operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -127,7 +127,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentId", required=true)
-      private final Output<String> parentId;
+    private Output<String> parentId;
 
     public Output<String> parentId() {
         return this.parentId;
@@ -138,10 +138,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="providers")
-      private final @Nullable Output<List<String>> providers;
+    private @Nullable Output<List<String>> providers;
 
-    public Output<List<String>> providers() {
-        return this.providers == null ? Codegen.empty() : this.providers;
+    public Optional<Output<List<String>>> providers() {
+        return Optional.ofNullable(this.providers);
     }
 
     /**
@@ -149,7 +149,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -160,10 +160,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<MetadataSourceArgs> source;
+    private @Nullable Output<MetadataSourceArgs> source;
 
-    public Output<MetadataSourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<MetadataSourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="support")
-      private final @Nullable Output<MetadataSupportArgs> support;
+    private @Nullable Output<MetadataSupportArgs> support;
 
-    public Output<MetadataSupportArgs> support() {
-        return this.support == null ? Codegen.empty() : this.support;
+    public Optional<Output<MetadataSupportArgs>> support() {
+        return Optional.ofNullable(this.support);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -193,248 +193,207 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public MetadataArgs(
-        @Nullable Output<MetadataAuthorArgs> author,
-        @Nullable Output<MetadataCategoriesArgs> categories,
-        @Nullable Output<String> contentId,
-        @Nullable Output<MetadataDependenciesArgs> dependencies,
-        @Nullable Output<String> firstPublishDate,
-        Output<Either<String,Kind>> kind,
-        @Nullable Output<String> lastPublishDate,
-        @Nullable Output<String> metadataName,
-        Output<String> operationalInsightsResourceProvider,
-        Output<String> parentId,
-        @Nullable Output<List<String>> providers,
-        Output<String> resourceGroupName,
-        @Nullable Output<MetadataSourceArgs> source,
-        @Nullable Output<MetadataSupportArgs> support,
-        @Nullable Output<String> version,
-        Output<String> workspaceName) {
-        this.author = author;
-        this.categories = categories;
-        this.contentId = contentId;
-        this.dependencies = dependencies;
-        this.firstPublishDate = firstPublishDate;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.lastPublishDate = lastPublishDate;
-        this.metadataName = metadataName;
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.parentId = Objects.requireNonNull(parentId, "expected parameter 'parentId' to be non-null");
-        this.providers = providers;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.source = source;
-        this.support = support;
-        this.version = version;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private MetadataArgs() {}
 
-    private MetadataArgs() {
-        this.author = Codegen.empty();
-        this.categories = Codegen.empty();
-        this.contentId = Codegen.empty();
-        this.dependencies = Codegen.empty();
-        this.firstPublishDate = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.lastPublishDate = Codegen.empty();
-        this.metadataName = Codegen.empty();
-        this.operationalInsightsResourceProvider = Codegen.empty();
-        this.parentId = Codegen.empty();
-        this.providers = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.source = Codegen.empty();
-        this.support = Codegen.empty();
-        this.version = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private MetadataArgs(MetadataArgs $) {
+        this.author = $.author;
+        this.categories = $.categories;
+        this.contentId = $.contentId;
+        this.dependencies = $.dependencies;
+        this.firstPublishDate = $.firstPublishDate;
+        this.kind = $.kind;
+        this.lastPublishDate = $.lastPublishDate;
+        this.metadataName = $.metadataName;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.parentId = $.parentId;
+        this.providers = $.providers;
+        this.resourceGroupName = $.resourceGroupName;
+        this.source = $.source;
+        this.support = $.support;
+        this.version = $.version;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MetadataAuthorArgs> author;
-        private @Nullable Output<MetadataCategoriesArgs> categories;
-        private @Nullable Output<String> contentId;
-        private @Nullable Output<MetadataDependenciesArgs> dependencies;
-        private @Nullable Output<String> firstPublishDate;
-        private Output<Either<String,Kind>> kind;
-        private @Nullable Output<String> lastPublishDate;
-        private @Nullable Output<String> metadataName;
-        private Output<String> operationalInsightsResourceProvider;
-        private Output<String> parentId;
-        private @Nullable Output<List<String>> providers;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<MetadataSourceArgs> source;
-        private @Nullable Output<MetadataSupportArgs> support;
-        private @Nullable Output<String> version;
-        private Output<String> workspaceName;
+        private MetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataArgs();
         }
 
         public Builder(MetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.author = defaults.author;
-    	      this.categories = defaults.categories;
-    	      this.contentId = defaults.contentId;
-    	      this.dependencies = defaults.dependencies;
-    	      this.firstPublishDate = defaults.firstPublishDate;
-    	      this.kind = defaults.kind;
-    	      this.lastPublishDate = defaults.lastPublishDate;
-    	      this.metadataName = defaults.metadataName;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.parentId = defaults.parentId;
-    	      this.providers = defaults.providers;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.source = defaults.source;
-    	      this.support = defaults.support;
-    	      this.version = defaults.version;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new MetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder author(@Nullable Output<MetadataAuthorArgs> author) {
-            this.author = author;
+            $.author = author;
             return this;
         }
-        public Builder author(@Nullable MetadataAuthorArgs author) {
-            this.author = Codegen.ofNullable(author);
-            return this;
+
+        public Builder author(MetadataAuthorArgs author) {
+            return author(Output.of(author));
         }
+
         public Builder categories(@Nullable Output<MetadataCategoriesArgs> categories) {
-            this.categories = categories;
+            $.categories = categories;
             return this;
         }
-        public Builder categories(@Nullable MetadataCategoriesArgs categories) {
-            this.categories = Codegen.ofNullable(categories);
-            return this;
+
+        public Builder categories(MetadataCategoriesArgs categories) {
+            return categories(Output.of(categories));
         }
+
         public Builder contentId(@Nullable Output<String> contentId) {
-            this.contentId = contentId;
+            $.contentId = contentId;
             return this;
         }
-        public Builder contentId(@Nullable String contentId) {
-            this.contentId = Codegen.ofNullable(contentId);
-            return this;
+
+        public Builder contentId(String contentId) {
+            return contentId(Output.of(contentId));
         }
+
         public Builder dependencies(@Nullable Output<MetadataDependenciesArgs> dependencies) {
-            this.dependencies = dependencies;
+            $.dependencies = dependencies;
             return this;
         }
-        public Builder dependencies(@Nullable MetadataDependenciesArgs dependencies) {
-            this.dependencies = Codegen.ofNullable(dependencies);
-            return this;
+
+        public Builder dependencies(MetadataDependenciesArgs dependencies) {
+            return dependencies(Output.of(dependencies));
         }
+
         public Builder firstPublishDate(@Nullable Output<String> firstPublishDate) {
-            this.firstPublishDate = firstPublishDate;
+            $.firstPublishDate = firstPublishDate;
             return this;
         }
-        public Builder firstPublishDate(@Nullable String firstPublishDate) {
-            this.firstPublishDate = Codegen.ofNullable(firstPublishDate);
-            return this;
+
+        public Builder firstPublishDate(String firstPublishDate) {
+            return firstPublishDate(Output.of(firstPublishDate));
         }
+
         public Builder kind(Output<Either<String,Kind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,Kind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder lastPublishDate(@Nullable Output<String> lastPublishDate) {
-            this.lastPublishDate = lastPublishDate;
+            $.lastPublishDate = lastPublishDate;
             return this;
         }
-        public Builder lastPublishDate(@Nullable String lastPublishDate) {
-            this.lastPublishDate = Codegen.ofNullable(lastPublishDate);
-            return this;
+
+        public Builder lastPublishDate(String lastPublishDate) {
+            return lastPublishDate(Output.of(lastPublishDate));
         }
+
         public Builder metadataName(@Nullable Output<String> metadataName) {
-            this.metadataName = metadataName;
+            $.metadataName = metadataName;
             return this;
         }
-        public Builder metadataName(@Nullable String metadataName) {
-            this.metadataName = Codegen.ofNullable(metadataName);
-            return this;
+
+        public Builder metadataName(String metadataName) {
+            return metadataName(Output.of(metadataName));
         }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
-            return this;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
+
         public Builder parentId(Output<String> parentId) {
-            this.parentId = Objects.requireNonNull(parentId);
+            $.parentId = parentId;
             return this;
         }
+
         public Builder parentId(String parentId) {
-            this.parentId = Output.of(Objects.requireNonNull(parentId));
-            return this;
+            return parentId(Output.of(parentId));
         }
+
         public Builder providers(@Nullable Output<List<String>> providers) {
-            this.providers = providers;
+            $.providers = providers;
             return this;
         }
-        public Builder providers(@Nullable List<String> providers) {
-            this.providers = Codegen.ofNullable(providers);
-            return this;
+
+        public Builder providers(List<String> providers) {
+            return providers(Output.of(providers));
         }
+
         public Builder providers(String... providers) {
             return providers(List.of(providers));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder source(@Nullable Output<MetadataSourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable MetadataSourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(MetadataSourceArgs source) {
+            return source(Output.of(source));
         }
+
         public Builder support(@Nullable Output<MetadataSupportArgs> support) {
-            this.support = support;
+            $.support = support;
             return this;
         }
-        public Builder support(@Nullable MetadataSupportArgs support) {
-            this.support = Codegen.ofNullable(support);
-            return this;
+
+        public Builder support(MetadataSupportArgs support) {
+            return support(Output.of(support));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public MetadataArgs build() {
-            return new MetadataArgs(author, categories, contentId, dependencies, firstPublishDate, kind, lastPublishDate, metadataName, operationalInsightsResourceProvider, parentId, providers, resourceGroupName, source, support, version, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public MetadataArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.parentId = Objects.requireNonNull($.parentId, "expected parameter 'parentId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

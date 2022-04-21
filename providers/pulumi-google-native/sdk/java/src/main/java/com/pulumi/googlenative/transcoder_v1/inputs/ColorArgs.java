@@ -5,9 +5,9 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ColorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="brightness")
-      private final @Nullable Output<Double> brightness;
+    private @Nullable Output<Double> brightness;
 
-    public Output<Double> brightness() {
-        return this.brightness == null ? Codegen.empty() : this.brightness;
+    public Optional<Output<Double>> brightness() {
+        return Optional.ofNullable(this.brightness);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ColorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contrast")
-      private final @Nullable Output<Double> contrast;
+    private @Nullable Output<Double> contrast;
 
-    public Output<Double> contrast() {
-        return this.contrast == null ? Codegen.empty() : this.contrast;
+    public Optional<Output<Double>> contrast() {
+        return Optional.ofNullable(this.contrast);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ColorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="saturation")
-      private final @Nullable Output<Double> saturation;
+    private @Nullable Output<Double> saturation;
 
-    public Output<Double> saturation() {
-        return this.saturation == null ? Codegen.empty() : this.saturation;
+    public Optional<Output<Double>> saturation() {
+        return Optional.ofNullable(this.saturation);
     }
 
-    public ColorArgs(
-        @Nullable Output<Double> brightness,
-        @Nullable Output<Double> contrast,
-        @Nullable Output<Double> saturation) {
-        this.brightness = brightness;
-        this.contrast = contrast;
-        this.saturation = saturation;
-    }
+    private ColorArgs() {}
 
-    private ColorArgs() {
-        this.brightness = Codegen.empty();
-        this.contrast = Codegen.empty();
-        this.saturation = Codegen.empty();
+    private ColorArgs(ColorArgs $) {
+        this.brightness = $.brightness;
+        this.contrast = $.contrast;
+        this.saturation = $.saturation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ColorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> brightness;
-        private @Nullable Output<Double> contrast;
-        private @Nullable Output<Double> saturation;
+        private ColorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ColorArgs();
         }
 
         public Builder(ColorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brightness = defaults.brightness;
-    	      this.contrast = defaults.contrast;
-    	      this.saturation = defaults.saturation;
+            $ = new ColorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder brightness(@Nullable Output<Double> brightness) {
-            this.brightness = brightness;
+            $.brightness = brightness;
             return this;
         }
-        public Builder brightness(@Nullable Double brightness) {
-            this.brightness = Codegen.ofNullable(brightness);
-            return this;
+
+        public Builder brightness(Double brightness) {
+            return brightness(Output.of(brightness));
         }
+
         public Builder contrast(@Nullable Output<Double> contrast) {
-            this.contrast = contrast;
+            $.contrast = contrast;
             return this;
         }
-        public Builder contrast(@Nullable Double contrast) {
-            this.contrast = Codegen.ofNullable(contrast);
-            return this;
+
+        public Builder contrast(Double contrast) {
+            return contrast(Output.of(contrast));
         }
+
         public Builder saturation(@Nullable Output<Double> saturation) {
-            this.saturation = saturation;
+            $.saturation = saturation;
             return this;
         }
-        public Builder saturation(@Nullable Double saturation) {
-            this.saturation = Codegen.ofNullable(saturation);
-            return this;
-        }        public ColorArgs build() {
-            return new ColorArgs(brightness, contrast, saturation);
+
+        public Builder saturation(Double saturation) {
+            return saturation(Output.of(saturation));
+        }
+
+        public ColorArgs build() {
+            return $;
         }
     }
+
 }

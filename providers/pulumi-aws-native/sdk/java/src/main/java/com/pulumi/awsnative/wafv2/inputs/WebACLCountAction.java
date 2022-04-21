@@ -19,45 +19,44 @@ public final class WebACLCountAction extends com.pulumi.resources.InvokeArgs {
     public static final WebACLCountAction Empty = new WebACLCountAction();
 
     @Import(name="customRequestHandling")
-      private final @Nullable WebACLCustomRequestHandling customRequestHandling;
+    private @Nullable WebACLCustomRequestHandling customRequestHandling;
 
     public Optional<WebACLCustomRequestHandling> customRequestHandling() {
-        return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public WebACLCountAction(@Nullable WebACLCustomRequestHandling customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private WebACLCountAction() {}
 
-    private WebACLCountAction() {
-        this.customRequestHandling = null;
+    private WebACLCountAction(WebACLCountAction $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLCountAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebACLCustomRequestHandling customRequestHandling;
+        private WebACLCountAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLCountAction();
         }
 
         public Builder(WebACLCountAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new WebACLCountAction(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
-        }        public WebACLCountAction build() {
-            return new WebACLCountAction(customRequestHandling);
+        }
+
+        public WebACLCountAction build() {
+            return $;
         }
     }
+
 }

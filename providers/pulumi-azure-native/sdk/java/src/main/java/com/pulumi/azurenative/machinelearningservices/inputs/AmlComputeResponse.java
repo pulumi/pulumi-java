@@ -28,10 +28,10 @@ public final class AmlComputeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computeLocation")
-      private final @Nullable String computeLocation;
+    private @Nullable String computeLocation;
 
     public Optional<String> computeLocation() {
-        return this.computeLocation == null ? Optional.empty() : Optional.ofNullable(this.computeLocation);
+        return Optional.ofNullable(this.computeLocation);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class AmlComputeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computeType", required=true)
-      private final String computeType;
+    private String computeType;
 
     public String computeType() {
         return this.computeType;
@@ -51,10 +51,10 @@ public final class AmlComputeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class AmlComputeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isAttachedCompute", required=true)
-      private final Boolean isAttachedCompute;
+    private Boolean isAttachedCompute;
 
     public Boolean isAttachedCompute() {
         return this.isAttachedCompute;
@@ -73,10 +73,10 @@ public final class AmlComputeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable AmlComputeResponseProperties properties;
+    private @Nullable AmlComputeResponseProperties properties;
 
     public Optional<AmlComputeResponseProperties> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class AmlComputeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningErrors", required=true)
-      private final List<MachineLearningServiceErrorResponse> provisioningErrors;
+    private List<MachineLearningServiceErrorResponse> provisioningErrors;
 
     public List<MachineLearningServiceErrorResponse> provisioningErrors() {
         return this.provisioningErrors;
@@ -95,7 +95,7 @@ public final class AmlComputeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -106,112 +106,94 @@ public final class AmlComputeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public AmlComputeResponse(
-        @Nullable String computeLocation,
-        String computeType,
-        @Nullable String description,
-        Boolean isAttachedCompute,
-        @Nullable AmlComputeResponseProperties properties,
-        List<MachineLearningServiceErrorResponse> provisioningErrors,
-        String provisioningState,
-        @Nullable String resourceId) {
-        this.computeLocation = computeLocation;
-        this.computeType = Codegen.stringProp("computeType").arg(computeType).require();
-        this.description = description;
-        this.isAttachedCompute = Objects.requireNonNull(isAttachedCompute, "expected parameter 'isAttachedCompute' to be non-null");
-        this.properties = properties;
-        this.provisioningErrors = Objects.requireNonNull(provisioningErrors, "expected parameter 'provisioningErrors' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceId = resourceId;
-    }
+    private AmlComputeResponse() {}
 
-    private AmlComputeResponse() {
-        this.computeLocation = null;
-        this.computeType = null;
-        this.description = null;
-        this.isAttachedCompute = null;
-        this.properties = null;
-        this.provisioningErrors = List.of();
-        this.provisioningState = null;
-        this.resourceId = null;
+    private AmlComputeResponse(AmlComputeResponse $) {
+        this.computeLocation = $.computeLocation;
+        this.computeType = $.computeType;
+        this.description = $.description;
+        this.isAttachedCompute = $.isAttachedCompute;
+        this.properties = $.properties;
+        this.provisioningErrors = $.provisioningErrors;
+        this.provisioningState = $.provisioningState;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmlComputeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String computeLocation;
-        private String computeType;
-        private @Nullable String description;
-        private Boolean isAttachedCompute;
-        private @Nullable AmlComputeResponseProperties properties;
-        private List<MachineLearningServiceErrorResponse> provisioningErrors;
-        private String provisioningState;
-        private @Nullable String resourceId;
+        private AmlComputeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmlComputeResponse();
         }
 
         public Builder(AmlComputeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeLocation = defaults.computeLocation;
-    	      this.computeType = defaults.computeType;
-    	      this.description = defaults.description;
-    	      this.isAttachedCompute = defaults.isAttachedCompute;
-    	      this.properties = defaults.properties;
-    	      this.provisioningErrors = defaults.provisioningErrors;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceId = defaults.resourceId;
+            $ = new AmlComputeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder computeLocation(@Nullable String computeLocation) {
-            this.computeLocation = computeLocation;
+            $.computeLocation = computeLocation;
             return this;
         }
+
         public Builder computeType(String computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder isAttachedCompute(Boolean isAttachedCompute) {
-            this.isAttachedCompute = Objects.requireNonNull(isAttachedCompute);
+            $.isAttachedCompute = isAttachedCompute;
             return this;
         }
+
         public Builder properties(@Nullable AmlComputeResponseProperties properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder provisioningErrors(List<MachineLearningServiceErrorResponse> provisioningErrors) {
-            this.provisioningErrors = Objects.requireNonNull(provisioningErrors);
+            $.provisioningErrors = provisioningErrors;
             return this;
         }
+
         public Builder provisioningErrors(MachineLearningServiceErrorResponse... provisioningErrors) {
             return provisioningErrors(List.of(provisioningErrors));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public AmlComputeResponse build() {
-            return new AmlComputeResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
+        }
+
+        public AmlComputeResponse build() {
+            $.computeType = Codegen.stringProp("computeType").arg($.computeType).require();
+            $.isAttachedCompute = Objects.requireNonNull($.isAttachedCompute, "expected parameter 'isAttachedCompute' to be non-null");
+            $.provisioningErrors = Objects.requireNonNull($.provisioningErrors, "expected parameter 'provisioningErrors' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.cloudtasks_v2beta3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudtasks_v2beta3.enums.QueueType;
 import com.pulumi.googlenative.cloudtasks_v2beta3.inputs.AppEngineHttpQueueArgs;
 import com.pulumi.googlenative.cloudtasks_v2beta3.inputs.RateLimitsArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.cloudtasks_v2beta3.inputs.RetryConfigArgs;
 import com.pulumi.googlenative.cloudtasks_v2beta3.inputs.StackdriverLoggingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,17 +25,17 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appEngineHttpQueue")
-      private final @Nullable Output<AppEngineHttpQueueArgs> appEngineHttpQueue;
+    private @Nullable Output<AppEngineHttpQueueArgs> appEngineHttpQueue;
 
-    public Output<AppEngineHttpQueueArgs> appEngineHttpQueue() {
-        return this.appEngineHttpQueue == null ? Codegen.empty() : this.appEngineHttpQueue;
+    public Optional<Output<AppEngineHttpQueueArgs>> appEngineHttpQueue() {
+        return Optional.ofNullable(this.appEngineHttpQueue);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -43,17 +43,17 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rateLimits")
-      private final @Nullable Output<RateLimitsArgs> rateLimits;
+    private @Nullable Output<RateLimitsArgs> rateLimits;
 
-    public Output<RateLimitsArgs> rateLimits() {
-        return this.rateLimits == null ? Codegen.empty() : this.rateLimits;
+    public Optional<Output<RateLimitsArgs>> rateLimits() {
+        return Optional.ofNullable(this.rateLimits);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryConfig")
-      private final @Nullable Output<RetryConfigArgs> retryConfig;
+    private @Nullable Output<RetryConfigArgs> retryConfig;
 
-    public Output<RetryConfigArgs> retryConfig() {
-        return this.retryConfig == null ? Codegen.empty() : this.retryConfig;
+    public Optional<Output<RetryConfigArgs>> retryConfig() {
+        return Optional.ofNullable(this.retryConfig);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackdriverLoggingConfig")
-      private final @Nullable Output<StackdriverLoggingConfigArgs> stackdriverLoggingConfig;
+    private @Nullable Output<StackdriverLoggingConfigArgs> stackdriverLoggingConfig;
 
-    public Output<StackdriverLoggingConfigArgs> stackdriverLoggingConfig() {
-        return this.stackdriverLoggingConfig == null ? Codegen.empty() : this.stackdriverLoggingConfig;
+    public Optional<Output<StackdriverLoggingConfigArgs>> stackdriverLoggingConfig() {
+        return Optional.ofNullable(this.stackdriverLoggingConfig);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskTtl")
-      private final @Nullable Output<String> taskTtl;
+    private @Nullable Output<String> taskTtl;
 
-    public Output<String> taskTtl() {
-        return this.taskTtl == null ? Codegen.empty() : this.taskTtl;
+    public Optional<Output<String>> taskTtl() {
+        return Optional.ofNullable(this.taskTtl);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tombstoneTtl")
-      private final @Nullable Output<String> tombstoneTtl;
+    private @Nullable Output<String> tombstoneTtl;
 
-    public Output<String> tombstoneTtl() {
-        return this.tombstoneTtl == null ? Codegen.empty() : this.tombstoneTtl;
+    public Optional<Output<String>> tombstoneTtl() {
+        return Optional.ofNullable(this.tombstoneTtl);
     }
 
     /**
@@ -116,167 +116,138 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<QueueType> type;
+    private @Nullable Output<QueueType> type;
 
-    public Output<QueueType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<QueueType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public QueueArgs(
-        @Nullable Output<AppEngineHttpQueueArgs> appEngineHttpQueue,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<RateLimitsArgs> rateLimits,
-        @Nullable Output<RetryConfigArgs> retryConfig,
-        @Nullable Output<StackdriverLoggingConfigArgs> stackdriverLoggingConfig,
-        @Nullable Output<String> taskTtl,
-        @Nullable Output<String> tombstoneTtl,
-        @Nullable Output<QueueType> type) {
-        this.appEngineHttpQueue = appEngineHttpQueue;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.rateLimits = rateLimits;
-        this.retryConfig = retryConfig;
-        this.stackdriverLoggingConfig = stackdriverLoggingConfig;
-        this.taskTtl = taskTtl;
-        this.tombstoneTtl = tombstoneTtl;
-        this.type = type;
-    }
+    private QueueArgs() {}
 
-    private QueueArgs() {
-        this.appEngineHttpQueue = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rateLimits = Codegen.empty();
-        this.retryConfig = Codegen.empty();
-        this.stackdriverLoggingConfig = Codegen.empty();
-        this.taskTtl = Codegen.empty();
-        this.tombstoneTtl = Codegen.empty();
-        this.type = Codegen.empty();
+    private QueueArgs(QueueArgs $) {
+        this.appEngineHttpQueue = $.appEngineHttpQueue;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.rateLimits = $.rateLimits;
+        this.retryConfig = $.retryConfig;
+        this.stackdriverLoggingConfig = $.stackdriverLoggingConfig;
+        this.taskTtl = $.taskTtl;
+        this.tombstoneTtl = $.tombstoneTtl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AppEngineHttpQueueArgs> appEngineHttpQueue;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<RateLimitsArgs> rateLimits;
-        private @Nullable Output<RetryConfigArgs> retryConfig;
-        private @Nullable Output<StackdriverLoggingConfigArgs> stackdriverLoggingConfig;
-        private @Nullable Output<String> taskTtl;
-        private @Nullable Output<String> tombstoneTtl;
-        private @Nullable Output<QueueType> type;
+        private QueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueArgs();
         }
 
         public Builder(QueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngineHttpQueue = defaults.appEngineHttpQueue;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rateLimits = defaults.rateLimits;
-    	      this.retryConfig = defaults.retryConfig;
-    	      this.stackdriverLoggingConfig = defaults.stackdriverLoggingConfig;
-    	      this.taskTtl = defaults.taskTtl;
-    	      this.tombstoneTtl = defaults.tombstoneTtl;
-    	      this.type = defaults.type;
+            $ = new QueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngineHttpQueue(@Nullable Output<AppEngineHttpQueueArgs> appEngineHttpQueue) {
-            this.appEngineHttpQueue = appEngineHttpQueue;
+            $.appEngineHttpQueue = appEngineHttpQueue;
             return this;
         }
-        public Builder appEngineHttpQueue(@Nullable AppEngineHttpQueueArgs appEngineHttpQueue) {
-            this.appEngineHttpQueue = Codegen.ofNullable(appEngineHttpQueue);
-            return this;
+
+        public Builder appEngineHttpQueue(AppEngineHttpQueueArgs appEngineHttpQueue) {
+            return appEngineHttpQueue(Output.of(appEngineHttpQueue));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rateLimits(@Nullable Output<RateLimitsArgs> rateLimits) {
-            this.rateLimits = rateLimits;
+            $.rateLimits = rateLimits;
             return this;
         }
-        public Builder rateLimits(@Nullable RateLimitsArgs rateLimits) {
-            this.rateLimits = Codegen.ofNullable(rateLimits);
-            return this;
+
+        public Builder rateLimits(RateLimitsArgs rateLimits) {
+            return rateLimits(Output.of(rateLimits));
         }
+
         public Builder retryConfig(@Nullable Output<RetryConfigArgs> retryConfig) {
-            this.retryConfig = retryConfig;
+            $.retryConfig = retryConfig;
             return this;
         }
-        public Builder retryConfig(@Nullable RetryConfigArgs retryConfig) {
-            this.retryConfig = Codegen.ofNullable(retryConfig);
-            return this;
+
+        public Builder retryConfig(RetryConfigArgs retryConfig) {
+            return retryConfig(Output.of(retryConfig));
         }
+
         public Builder stackdriverLoggingConfig(@Nullable Output<StackdriverLoggingConfigArgs> stackdriverLoggingConfig) {
-            this.stackdriverLoggingConfig = stackdriverLoggingConfig;
+            $.stackdriverLoggingConfig = stackdriverLoggingConfig;
             return this;
         }
-        public Builder stackdriverLoggingConfig(@Nullable StackdriverLoggingConfigArgs stackdriverLoggingConfig) {
-            this.stackdriverLoggingConfig = Codegen.ofNullable(stackdriverLoggingConfig);
-            return this;
+
+        public Builder stackdriverLoggingConfig(StackdriverLoggingConfigArgs stackdriverLoggingConfig) {
+            return stackdriverLoggingConfig(Output.of(stackdriverLoggingConfig));
         }
+
         public Builder taskTtl(@Nullable Output<String> taskTtl) {
-            this.taskTtl = taskTtl;
+            $.taskTtl = taskTtl;
             return this;
         }
-        public Builder taskTtl(@Nullable String taskTtl) {
-            this.taskTtl = Codegen.ofNullable(taskTtl);
-            return this;
+
+        public Builder taskTtl(String taskTtl) {
+            return taskTtl(Output.of(taskTtl));
         }
+
         public Builder tombstoneTtl(@Nullable Output<String> tombstoneTtl) {
-            this.tombstoneTtl = tombstoneTtl;
+            $.tombstoneTtl = tombstoneTtl;
             return this;
         }
-        public Builder tombstoneTtl(@Nullable String tombstoneTtl) {
-            this.tombstoneTtl = Codegen.ofNullable(tombstoneTtl);
-            return this;
+
+        public Builder tombstoneTtl(String tombstoneTtl) {
+            return tombstoneTtl(Output.of(tombstoneTtl));
         }
+
         public Builder type(@Nullable Output<QueueType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable QueueType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public QueueArgs build() {
-            return new QueueArgs(appEngineHttpQueue, location, name, project, rateLimits, retryConfig, stackdriverLoggingConfig, taskTtl, tombstoneTtl, type);
+
+        public Builder type(QueueType type) {
+            return type(Output.of(type));
+        }
+
+        public QueueArgs build() {
+            return $;
         }
     }
+
 }

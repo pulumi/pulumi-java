@@ -15,62 +15,57 @@ public final class ConfigDataflowEndpointConfig extends com.pulumi.resources.Inv
     public static final ConfigDataflowEndpointConfig Empty = new ConfigDataflowEndpointConfig();
 
     @Import(name="dataflowEndpointName")
-      private final @Nullable String dataflowEndpointName;
+    private @Nullable String dataflowEndpointName;
 
     public Optional<String> dataflowEndpointName() {
-        return this.dataflowEndpointName == null ? Optional.empty() : Optional.ofNullable(this.dataflowEndpointName);
+        return Optional.ofNullable(this.dataflowEndpointName);
     }
 
     @Import(name="dataflowEndpointRegion")
-      private final @Nullable String dataflowEndpointRegion;
+    private @Nullable String dataflowEndpointRegion;
 
     public Optional<String> dataflowEndpointRegion() {
-        return this.dataflowEndpointRegion == null ? Optional.empty() : Optional.ofNullable(this.dataflowEndpointRegion);
+        return Optional.ofNullable(this.dataflowEndpointRegion);
     }
 
-    public ConfigDataflowEndpointConfig(
-        @Nullable String dataflowEndpointName,
-        @Nullable String dataflowEndpointRegion) {
-        this.dataflowEndpointName = dataflowEndpointName;
-        this.dataflowEndpointRegion = dataflowEndpointRegion;
-    }
+    private ConfigDataflowEndpointConfig() {}
 
-    private ConfigDataflowEndpointConfig() {
-        this.dataflowEndpointName = null;
-        this.dataflowEndpointRegion = null;
+    private ConfigDataflowEndpointConfig(ConfigDataflowEndpointConfig $) {
+        this.dataflowEndpointName = $.dataflowEndpointName;
+        this.dataflowEndpointRegion = $.dataflowEndpointRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigDataflowEndpointConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataflowEndpointName;
-        private @Nullable String dataflowEndpointRegion;
+        private ConfigDataflowEndpointConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigDataflowEndpointConfig();
         }
 
         public Builder(ConfigDataflowEndpointConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataflowEndpointName = defaults.dataflowEndpointName;
-    	      this.dataflowEndpointRegion = defaults.dataflowEndpointRegion;
+            $ = new ConfigDataflowEndpointConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder dataflowEndpointName(@Nullable String dataflowEndpointName) {
-            this.dataflowEndpointName = dataflowEndpointName;
+            $.dataflowEndpointName = dataflowEndpointName;
             return this;
         }
+
         public Builder dataflowEndpointRegion(@Nullable String dataflowEndpointRegion) {
-            this.dataflowEndpointRegion = dataflowEndpointRegion;
+            $.dataflowEndpointRegion = dataflowEndpointRegion;
             return this;
-        }        public ConfigDataflowEndpointConfig build() {
-            return new ConfigDataflowEndpointConfig(dataflowEndpointName, dataflowEndpointRegion);
+        }
+
+        public ConfigDataflowEndpointConfig build() {
+            return $;
         }
     }
+
 }

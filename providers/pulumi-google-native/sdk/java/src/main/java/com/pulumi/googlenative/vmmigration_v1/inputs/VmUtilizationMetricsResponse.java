@@ -22,7 +22,7 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="cpuAveragePercent", required=true)
-      private final Integer cpuAveragePercent;
+    private Integer cpuAveragePercent;
 
     public Integer cpuAveragePercent() {
         return this.cpuAveragePercent;
@@ -33,7 +33,7 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="cpuMaxPercent", required=true)
-      private final Integer cpuMaxPercent;
+    private Integer cpuMaxPercent;
 
     public Integer cpuMaxPercent() {
         return this.cpuMaxPercent;
@@ -44,7 +44,7 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="diskIoRateAverageKbps", required=true)
-      private final String diskIoRateAverageKbps;
+    private String diskIoRateAverageKbps;
 
     public String diskIoRateAverageKbps() {
         return this.diskIoRateAverageKbps;
@@ -55,7 +55,7 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="diskIoRateMaxKbps", required=true)
-      private final String diskIoRateMaxKbps;
+    private String diskIoRateMaxKbps;
 
     public String diskIoRateMaxKbps() {
         return this.diskIoRateMaxKbps;
@@ -66,7 +66,7 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="memoryAveragePercent", required=true)
-      private final Integer memoryAveragePercent;
+    private Integer memoryAveragePercent;
 
     public Integer memoryAveragePercent() {
         return this.memoryAveragePercent;
@@ -77,7 +77,7 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="memoryMaxPercent", required=true)
-      private final Integer memoryMaxPercent;
+    private Integer memoryMaxPercent;
 
     public Integer memoryMaxPercent() {
         return this.memoryMaxPercent;
@@ -88,7 +88,7 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="networkThroughputAverageKbps", required=true)
-      private final String networkThroughputAverageKbps;
+    private String networkThroughputAverageKbps;
 
     public String networkThroughputAverageKbps() {
         return this.networkThroughputAverageKbps;
@@ -99,109 +99,94 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="networkThroughputMaxKbps", required=true)
-      private final String networkThroughputMaxKbps;
+    private String networkThroughputMaxKbps;
 
     public String networkThroughputMaxKbps() {
         return this.networkThroughputMaxKbps;
     }
 
-    public VmUtilizationMetricsResponse(
-        Integer cpuAveragePercent,
-        Integer cpuMaxPercent,
-        String diskIoRateAverageKbps,
-        String diskIoRateMaxKbps,
-        Integer memoryAveragePercent,
-        Integer memoryMaxPercent,
-        String networkThroughputAverageKbps,
-        String networkThroughputMaxKbps) {
-        this.cpuAveragePercent = Objects.requireNonNull(cpuAveragePercent, "expected parameter 'cpuAveragePercent' to be non-null");
-        this.cpuMaxPercent = Objects.requireNonNull(cpuMaxPercent, "expected parameter 'cpuMaxPercent' to be non-null");
-        this.diskIoRateAverageKbps = Objects.requireNonNull(diskIoRateAverageKbps, "expected parameter 'diskIoRateAverageKbps' to be non-null");
-        this.diskIoRateMaxKbps = Objects.requireNonNull(diskIoRateMaxKbps, "expected parameter 'diskIoRateMaxKbps' to be non-null");
-        this.memoryAveragePercent = Objects.requireNonNull(memoryAveragePercent, "expected parameter 'memoryAveragePercent' to be non-null");
-        this.memoryMaxPercent = Objects.requireNonNull(memoryMaxPercent, "expected parameter 'memoryMaxPercent' to be non-null");
-        this.networkThroughputAverageKbps = Objects.requireNonNull(networkThroughputAverageKbps, "expected parameter 'networkThroughputAverageKbps' to be non-null");
-        this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps, "expected parameter 'networkThroughputMaxKbps' to be non-null");
-    }
+    private VmUtilizationMetricsResponse() {}
 
-    private VmUtilizationMetricsResponse() {
-        this.cpuAveragePercent = null;
-        this.cpuMaxPercent = null;
-        this.diskIoRateAverageKbps = null;
-        this.diskIoRateMaxKbps = null;
-        this.memoryAveragePercent = null;
-        this.memoryMaxPercent = null;
-        this.networkThroughputAverageKbps = null;
-        this.networkThroughputMaxKbps = null;
+    private VmUtilizationMetricsResponse(VmUtilizationMetricsResponse $) {
+        this.cpuAveragePercent = $.cpuAveragePercent;
+        this.cpuMaxPercent = $.cpuMaxPercent;
+        this.diskIoRateAverageKbps = $.diskIoRateAverageKbps;
+        this.diskIoRateMaxKbps = $.diskIoRateMaxKbps;
+        this.memoryAveragePercent = $.memoryAveragePercent;
+        this.memoryMaxPercent = $.memoryMaxPercent;
+        this.networkThroughputAverageKbps = $.networkThroughputAverageKbps;
+        this.networkThroughputMaxKbps = $.networkThroughputMaxKbps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmUtilizationMetricsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer cpuAveragePercent;
-        private Integer cpuMaxPercent;
-        private String diskIoRateAverageKbps;
-        private String diskIoRateMaxKbps;
-        private Integer memoryAveragePercent;
-        private Integer memoryMaxPercent;
-        private String networkThroughputAverageKbps;
-        private String networkThroughputMaxKbps;
+        private VmUtilizationMetricsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmUtilizationMetricsResponse();
         }
 
         public Builder(VmUtilizationMetricsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuAveragePercent = defaults.cpuAveragePercent;
-    	      this.cpuMaxPercent = defaults.cpuMaxPercent;
-    	      this.diskIoRateAverageKbps = defaults.diskIoRateAverageKbps;
-    	      this.diskIoRateMaxKbps = defaults.diskIoRateMaxKbps;
-    	      this.memoryAveragePercent = defaults.memoryAveragePercent;
-    	      this.memoryMaxPercent = defaults.memoryMaxPercent;
-    	      this.networkThroughputAverageKbps = defaults.networkThroughputAverageKbps;
-    	      this.networkThroughputMaxKbps = defaults.networkThroughputMaxKbps;
+            $ = new VmUtilizationMetricsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuAveragePercent(Integer cpuAveragePercent) {
-            this.cpuAveragePercent = Objects.requireNonNull(cpuAveragePercent);
+            $.cpuAveragePercent = cpuAveragePercent;
             return this;
         }
+
         public Builder cpuMaxPercent(Integer cpuMaxPercent) {
-            this.cpuMaxPercent = Objects.requireNonNull(cpuMaxPercent);
+            $.cpuMaxPercent = cpuMaxPercent;
             return this;
         }
+
         public Builder diskIoRateAverageKbps(String diskIoRateAverageKbps) {
-            this.diskIoRateAverageKbps = Objects.requireNonNull(diskIoRateAverageKbps);
+            $.diskIoRateAverageKbps = diskIoRateAverageKbps;
             return this;
         }
+
         public Builder diskIoRateMaxKbps(String diskIoRateMaxKbps) {
-            this.diskIoRateMaxKbps = Objects.requireNonNull(diskIoRateMaxKbps);
+            $.diskIoRateMaxKbps = diskIoRateMaxKbps;
             return this;
         }
+
         public Builder memoryAveragePercent(Integer memoryAveragePercent) {
-            this.memoryAveragePercent = Objects.requireNonNull(memoryAveragePercent);
+            $.memoryAveragePercent = memoryAveragePercent;
             return this;
         }
+
         public Builder memoryMaxPercent(Integer memoryMaxPercent) {
-            this.memoryMaxPercent = Objects.requireNonNull(memoryMaxPercent);
+            $.memoryMaxPercent = memoryMaxPercent;
             return this;
         }
+
         public Builder networkThroughputAverageKbps(String networkThroughputAverageKbps) {
-            this.networkThroughputAverageKbps = Objects.requireNonNull(networkThroughputAverageKbps);
+            $.networkThroughputAverageKbps = networkThroughputAverageKbps;
             return this;
         }
+
         public Builder networkThroughputMaxKbps(String networkThroughputMaxKbps) {
-            this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
+            $.networkThroughputMaxKbps = networkThroughputMaxKbps;
             return this;
-        }        public VmUtilizationMetricsResponse build() {
-            return new VmUtilizationMetricsResponse(cpuAveragePercent, cpuMaxPercent, diskIoRateAverageKbps, diskIoRateMaxKbps, memoryAveragePercent, memoryMaxPercent, networkThroughputAverageKbps, networkThroughputMaxKbps);
+        }
+
+        public VmUtilizationMetricsResponse build() {
+            $.cpuAveragePercent = Objects.requireNonNull($.cpuAveragePercent, "expected parameter 'cpuAveragePercent' to be non-null");
+            $.cpuMaxPercent = Objects.requireNonNull($.cpuMaxPercent, "expected parameter 'cpuMaxPercent' to be non-null");
+            $.diskIoRateAverageKbps = Objects.requireNonNull($.diskIoRateAverageKbps, "expected parameter 'diskIoRateAverageKbps' to be non-null");
+            $.diskIoRateMaxKbps = Objects.requireNonNull($.diskIoRateMaxKbps, "expected parameter 'diskIoRateMaxKbps' to be non-null");
+            $.memoryAveragePercent = Objects.requireNonNull($.memoryAveragePercent, "expected parameter 'memoryAveragePercent' to be non-null");
+            $.memoryMaxPercent = Objects.requireNonNull($.memoryMaxPercent, "expected parameter 'memoryMaxPercent' to be non-null");
+            $.networkThroughputAverageKbps = Objects.requireNonNull($.networkThroughputAverageKbps, "expected parameter 'networkThroughputAverageKbps' to be non-null");
+            $.networkThroughputMaxKbps = Objects.requireNonNull($.networkThroughputMaxKbps, "expected parameter 'networkThroughputMaxKbps' to be non-null");
+            return $;
         }
     }
+
 }

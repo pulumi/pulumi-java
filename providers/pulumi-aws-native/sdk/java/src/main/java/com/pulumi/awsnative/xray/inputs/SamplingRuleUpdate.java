@@ -22,10 +22,10 @@ public final class SamplingRuleUpdate extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Object attributes;
+    private @Nullable Object attributes;
 
     public Optional<Object> attributes() {
-        return this.attributes == null ? Optional.empty() : Optional.ofNullable(this.attributes);
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SamplingRuleUpdate extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fixedRate")
-      private final @Nullable Double fixedRate;
+    private @Nullable Double fixedRate;
 
     public Optional<Double> fixedRate() {
-        return this.fixedRate == null ? Optional.empty() : Optional.ofNullable(this.fixedRate);
+        return Optional.ofNullable(this.fixedRate);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SamplingRuleUpdate extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hTTPMethod")
-      private final @Nullable String hTTPMethod;
+    private @Nullable String hTTPMethod;
 
     public Optional<String> hTTPMethod() {
-        return this.hTTPMethod == null ? Optional.empty() : Optional.ofNullable(this.hTTPMethod);
+        return Optional.ofNullable(this.hTTPMethod);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SamplingRuleUpdate extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="host")
-      private final @Nullable String host;
+    private @Nullable String host;
 
     public Optional<String> host() {
-        return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SamplingRuleUpdate extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SamplingRuleUpdate extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reservoirSize")
-      private final @Nullable Integer reservoirSize;
+    private @Nullable Integer reservoirSize;
 
     public Optional<Integer> reservoirSize() {
-        return this.reservoirSize == null ? Optional.empty() : Optional.ofNullable(this.reservoirSize);
+        return Optional.ofNullable(this.reservoirSize);
     }
 
     /**
@@ -88,24 +88,24 @@ public final class SamplingRuleUpdate extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceARN")
-      private final @Nullable String resourceARN;
+    private @Nullable String resourceARN;
 
     public Optional<String> resourceARN() {
-        return this.resourceARN == null ? Optional.empty() : Optional.ofNullable(this.resourceARN);
+        return Optional.ofNullable(this.resourceARN);
     }
 
     @Import(name="ruleARN")
-      private final @Nullable String ruleARN;
+    private @Nullable String ruleARN;
 
     public Optional<String> ruleARN() {
-        return this.ruleARN == null ? Optional.empty() : Optional.ofNullable(this.ruleARN);
+        return Optional.ofNullable(this.ruleARN);
     }
 
     @Import(name="ruleName")
-      private final @Nullable String ruleName;
+    private @Nullable String ruleName;
 
     public Optional<String> ruleName() {
-        return this.ruleName == null ? Optional.empty() : Optional.ofNullable(this.ruleName);
+        return Optional.ofNullable(this.ruleName);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class SamplingRuleUpdate extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable String serviceName;
+    private @Nullable String serviceName;
 
     public Optional<String> serviceName() {
-        return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class SamplingRuleUpdate extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceType")
-      private final @Nullable String serviceType;
+    private @Nullable String serviceType;
 
     public Optional<String> serviceType() {
-        return this.serviceType == null ? Optional.empty() : Optional.ofNullable(this.serviceType);
+        return Optional.ofNullable(this.serviceType);
     }
 
     /**
@@ -135,145 +135,110 @@ public final class SamplingRuleUpdate extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uRLPath")
-      private final @Nullable String uRLPath;
+    private @Nullable String uRLPath;
 
     public Optional<String> uRLPath() {
-        return this.uRLPath == null ? Optional.empty() : Optional.ofNullable(this.uRLPath);
+        return Optional.ofNullable(this.uRLPath);
     }
 
-    public SamplingRuleUpdate(
-        @Nullable Object attributes,
-        @Nullable Double fixedRate,
-        @Nullable String hTTPMethod,
-        @Nullable String host,
-        @Nullable Integer priority,
-        @Nullable Integer reservoirSize,
-        @Nullable String resourceARN,
-        @Nullable String ruleARN,
-        @Nullable String ruleName,
-        @Nullable String serviceName,
-        @Nullable String serviceType,
-        @Nullable String uRLPath) {
-        this.attributes = attributes;
-        this.fixedRate = fixedRate;
-        this.hTTPMethod = hTTPMethod;
-        this.host = host;
-        this.priority = priority;
-        this.reservoirSize = reservoirSize;
-        this.resourceARN = resourceARN;
-        this.ruleARN = ruleARN;
-        this.ruleName = ruleName;
-        this.serviceName = serviceName;
-        this.serviceType = serviceType;
-        this.uRLPath = uRLPath;
-    }
+    private SamplingRuleUpdate() {}
 
-    private SamplingRuleUpdate() {
-        this.attributes = null;
-        this.fixedRate = null;
-        this.hTTPMethod = null;
-        this.host = null;
-        this.priority = null;
-        this.reservoirSize = null;
-        this.resourceARN = null;
-        this.ruleARN = null;
-        this.ruleName = null;
-        this.serviceName = null;
-        this.serviceType = null;
-        this.uRLPath = null;
+    private SamplingRuleUpdate(SamplingRuleUpdate $) {
+        this.attributes = $.attributes;
+        this.fixedRate = $.fixedRate;
+        this.hTTPMethod = $.hTTPMethod;
+        this.host = $.host;
+        this.priority = $.priority;
+        this.reservoirSize = $.reservoirSize;
+        this.resourceARN = $.resourceARN;
+        this.ruleARN = $.ruleARN;
+        this.ruleName = $.ruleName;
+        this.serviceName = $.serviceName;
+        this.serviceType = $.serviceType;
+        this.uRLPath = $.uRLPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SamplingRuleUpdate defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object attributes;
-        private @Nullable Double fixedRate;
-        private @Nullable String hTTPMethod;
-        private @Nullable String host;
-        private @Nullable Integer priority;
-        private @Nullable Integer reservoirSize;
-        private @Nullable String resourceARN;
-        private @Nullable String ruleARN;
-        private @Nullable String ruleName;
-        private @Nullable String serviceName;
-        private @Nullable String serviceType;
-        private @Nullable String uRLPath;
+        private SamplingRuleUpdate $;
 
         public Builder() {
-    	      // Empty
+            $ = new SamplingRuleUpdate();
         }
 
         public Builder(SamplingRuleUpdate defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.fixedRate = defaults.fixedRate;
-    	      this.hTTPMethod = defaults.hTTPMethod;
-    	      this.host = defaults.host;
-    	      this.priority = defaults.priority;
-    	      this.reservoirSize = defaults.reservoirSize;
-    	      this.resourceARN = defaults.resourceARN;
-    	      this.ruleARN = defaults.ruleARN;
-    	      this.ruleName = defaults.ruleName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceType = defaults.serviceType;
-    	      this.uRLPath = defaults.uRLPath;
+            $ = new SamplingRuleUpdate(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Object attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
+
         public Builder fixedRate(@Nullable Double fixedRate) {
-            this.fixedRate = fixedRate;
+            $.fixedRate = fixedRate;
             return this;
         }
+
         public Builder hTTPMethod(@Nullable String hTTPMethod) {
-            this.hTTPMethod = hTTPMethod;
+            $.hTTPMethod = hTTPMethod;
             return this;
         }
+
         public Builder host(@Nullable String host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder reservoirSize(@Nullable Integer reservoirSize) {
-            this.reservoirSize = reservoirSize;
+            $.reservoirSize = reservoirSize;
             return this;
         }
+
         public Builder resourceARN(@Nullable String resourceARN) {
-            this.resourceARN = resourceARN;
+            $.resourceARN = resourceARN;
             return this;
         }
+
         public Builder ruleARN(@Nullable String ruleARN) {
-            this.ruleARN = ruleARN;
+            $.ruleARN = ruleARN;
             return this;
         }
+
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
+
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceType(@Nullable String serviceType) {
-            this.serviceType = serviceType;
+            $.serviceType = serviceType;
             return this;
         }
+
         public Builder uRLPath(@Nullable String uRLPath) {
-            this.uRLPath = uRLPath;
+            $.uRLPath = uRLPath;
             return this;
-        }        public SamplingRuleUpdate build() {
-            return new SamplingRuleUpdate(attributes, fixedRate, hTTPMethod, host, priority, reservoirSize, resourceARN, ruleARN, ruleName, serviceName, serviceType, uRLPath);
+        }
+
+        public SamplingRuleUpdate build() {
+            return $;
         }
     }
+
 }

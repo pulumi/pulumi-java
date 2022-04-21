@@ -6,10 +6,10 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetExtensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends com.pulumi
      * 
      */
     @Import(name="extensions")
-      private final @Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions;
+    private @Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions;
 
-    public Output<List<VirtualMachineScaleSetExtensionArgs>> extensions() {
-        return this.extensions == null ? Codegen.empty() : this.extensions;
+    public Optional<Output<List<VirtualMachineScaleSetExtensionArgs>>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends com.pulumi
      * 
      */
     @Import(name="extensionsTimeBudget")
-      private final @Nullable Output<String> extensionsTimeBudget;
+    private @Nullable Output<String> extensionsTimeBudget;
 
-    public Output<String> extensionsTimeBudget() {
-        return this.extensionsTimeBudget == null ? Codegen.empty() : this.extensionsTimeBudget;
+    public Optional<Output<String>> extensionsTimeBudget() {
+        return Optional.ofNullable(this.extensionsTimeBudget);
     }
 
-    public VirtualMachineScaleSetExtensionProfileArgs(
-        @Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions,
-        @Nullable Output<String> extensionsTimeBudget) {
-        this.extensions = extensions;
-        this.extensionsTimeBudget = extensionsTimeBudget;
-    }
+    private VirtualMachineScaleSetExtensionProfileArgs() {}
 
-    private VirtualMachineScaleSetExtensionProfileArgs() {
-        this.extensions = Codegen.empty();
-        this.extensionsTimeBudget = Codegen.empty();
+    private VirtualMachineScaleSetExtensionProfileArgs(VirtualMachineScaleSetExtensionProfileArgs $) {
+        this.extensions = $.extensions;
+        this.extensionsTimeBudget = $.extensionsTimeBudget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetExtensionProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions;
-        private @Nullable Output<String> extensionsTimeBudget;
+        private VirtualMachineScaleSetExtensionProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetExtensionProfileArgs();
         }
 
         public Builder(VirtualMachineScaleSetExtensionProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensions = defaults.extensions;
-    	      this.extensionsTimeBudget = defaults.extensionsTimeBudget;
+            $ = new VirtualMachineScaleSetExtensionProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extensions(@Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
-        public Builder extensions(@Nullable List<VirtualMachineScaleSetExtensionArgs> extensions) {
-            this.extensions = Codegen.ofNullable(extensions);
-            return this;
+
+        public Builder extensions(List<VirtualMachineScaleSetExtensionArgs> extensions) {
+            return extensions(Output.of(extensions));
         }
+
         public Builder extensions(VirtualMachineScaleSetExtensionArgs... extensions) {
             return extensions(List.of(extensions));
         }
+
         public Builder extensionsTimeBudget(@Nullable Output<String> extensionsTimeBudget) {
-            this.extensionsTimeBudget = extensionsTimeBudget;
+            $.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
-        public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
-            this.extensionsTimeBudget = Codegen.ofNullable(extensionsTimeBudget);
-            return this;
-        }        public VirtualMachineScaleSetExtensionProfileArgs build() {
-            return new VirtualMachineScaleSetExtensionProfileArgs(extensions, extensionsTimeBudget);
+
+        public Builder extensionsTimeBudget(String extensionsTimeBudget) {
+            return extensionsTimeBudget(Output.of(extensionsTimeBudget));
+        }
+
+        public VirtualMachineScaleSetExtensionProfileArgs build() {
+            return $;
         }
     }
+
 }

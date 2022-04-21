@@ -26,10 +26,10 @@ public final class QueueScaleRuleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="auth")
-      private final @Nullable List<ScaleRuleAuthResponse> auth;
+    private @Nullable List<ScaleRuleAuthResponse> auth;
 
-    public List<ScaleRuleAuthResponse> auth() {
-        return this.auth == null ? List.of() : this.auth;
+    public Optional<List<ScaleRuleAuthResponse>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class QueueScaleRuleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="queueLength")
-      private final @Nullable Integer queueLength;
+    private @Nullable Integer queueLength;
 
     public Optional<Integer> queueLength() {
-        return this.queueLength == null ? Optional.empty() : Optional.ofNullable(this.queueLength);
+        return Optional.ofNullable(this.queueLength);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class QueueScaleRuleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="queueName")
-      private final @Nullable String queueName;
+    private @Nullable String queueName;
 
     public Optional<String> queueName() {
-        return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
+        return Optional.ofNullable(this.queueName);
     }
 
-    public QueueScaleRuleResponse(
-        @Nullable List<ScaleRuleAuthResponse> auth,
-        @Nullable Integer queueLength,
-        @Nullable String queueName) {
-        this.auth = auth;
-        this.queueLength = queueLength;
-        this.queueName = queueName;
-    }
+    private QueueScaleRuleResponse() {}
 
-    private QueueScaleRuleResponse() {
-        this.auth = List.of();
-        this.queueLength = null;
-        this.queueName = null;
+    private QueueScaleRuleResponse(QueueScaleRuleResponse $) {
+        this.auth = $.auth;
+        this.queueLength = $.queueLength;
+        this.queueName = $.queueName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueScaleRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ScaleRuleAuthResponse> auth;
-        private @Nullable Integer queueLength;
-        private @Nullable String queueName;
+        private QueueScaleRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueScaleRuleResponse();
         }
 
         public Builder(QueueScaleRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.queueLength = defaults.queueLength;
-    	      this.queueName = defaults.queueName;
+            $ = new QueueScaleRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable List<ScaleRuleAuthResponse> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
+
         public Builder auth(ScaleRuleAuthResponse... auth) {
             return auth(List.of(auth));
         }
+
         public Builder queueLength(@Nullable Integer queueLength) {
-            this.queueLength = queueLength;
+            $.queueLength = queueLength;
             return this;
         }
+
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = queueName;
+            $.queueName = queueName;
             return this;
-        }        public QueueScaleRuleResponse build() {
-            return new QueueScaleRuleResponse(auth, queueLength, queueName);
+        }
+
+        public QueueScaleRuleResponse build() {
+            return $;
         }
     }
+
 }

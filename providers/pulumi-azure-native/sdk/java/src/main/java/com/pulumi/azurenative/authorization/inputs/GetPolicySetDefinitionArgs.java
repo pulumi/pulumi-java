@@ -17,45 +17,45 @@ public final class GetPolicySetDefinitionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="policySetDefinitionName", required=true)
-      private final String policySetDefinitionName;
+    private String policySetDefinitionName;
 
     public String policySetDefinitionName() {
         return this.policySetDefinitionName;
     }
 
-    public GetPolicySetDefinitionArgs(String policySetDefinitionName) {
-        this.policySetDefinitionName = Objects.requireNonNull(policySetDefinitionName, "expected parameter 'policySetDefinitionName' to be non-null");
-    }
+    private GetPolicySetDefinitionArgs() {}
 
-    private GetPolicySetDefinitionArgs() {
-        this.policySetDefinitionName = null;
+    private GetPolicySetDefinitionArgs(GetPolicySetDefinitionArgs $) {
+        this.policySetDefinitionName = $.policySetDefinitionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicySetDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policySetDefinitionName;
+        private GetPolicySetDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicySetDefinitionArgs();
         }
 
         public Builder(GetPolicySetDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policySetDefinitionName = defaults.policySetDefinitionName;
+            $ = new GetPolicySetDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policySetDefinitionName(String policySetDefinitionName) {
-            this.policySetDefinitionName = Objects.requireNonNull(policySetDefinitionName);
+            $.policySetDefinitionName = policySetDefinitionName;
             return this;
-        }        public GetPolicySetDefinitionArgs build() {
-            return new GetPolicySetDefinitionArgs(policySetDefinitionName);
+        }
+
+        public GetPolicySetDefinitionArgs build() {
+            $.policySetDefinitionName = Objects.requireNonNull($.policySetDefinitionName, "expected parameter 'policySetDefinitionName' to be non-null");
+            return $;
         }
     }
+
 }

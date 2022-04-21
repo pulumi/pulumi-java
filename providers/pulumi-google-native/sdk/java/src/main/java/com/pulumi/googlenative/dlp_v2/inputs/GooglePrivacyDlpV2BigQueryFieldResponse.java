@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends com.pulumi.re
      * 
      */
     @Import(name="field", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse field;
+    private GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends com.pulumi.re
      * 
      */
     @Import(name="table", required=true)
-      private final GooglePrivacyDlpV2BigQueryTableResponse table;
+    private GooglePrivacyDlpV2BigQueryTableResponse table;
 
     public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }
 
-    public GooglePrivacyDlpV2BigQueryFieldResponse(
-        GooglePrivacyDlpV2FieldIdResponse field,
-        GooglePrivacyDlpV2BigQueryTableResponse table) {
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-    }
+    private GooglePrivacyDlpV2BigQueryFieldResponse() {}
 
-    private GooglePrivacyDlpV2BigQueryFieldResponse() {
-        this.field = null;
-        this.table = null;
+    private GooglePrivacyDlpV2BigQueryFieldResponse(GooglePrivacyDlpV2BigQueryFieldResponse $) {
+        this.field = $.field;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2BigQueryFieldResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2FieldIdResponse field;
-        private GooglePrivacyDlpV2BigQueryTableResponse table;
+        private GooglePrivacyDlpV2BigQueryFieldResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2BigQueryFieldResponse();
         }
 
         public Builder(GooglePrivacyDlpV2BigQueryFieldResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.table = defaults.table;
+            $ = new GooglePrivacyDlpV2BigQueryFieldResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
-        }        public GooglePrivacyDlpV2BigQueryFieldResponse build() {
-            return new GooglePrivacyDlpV2BigQueryFieldResponse(field, table);
+        }
+
+        public GooglePrivacyDlpV2BigQueryFieldResponse build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApiConnectionTestLinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="method")
-      private final @Nullable Output<String> method;
+    private @Nullable Output<String> method;
 
-    public Output<String> method() {
-        return this.method == null ? Codegen.empty() : this.method;
+    public Optional<Output<String>> method() {
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ApiConnectionTestLinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="requestUri")
-      private final @Nullable Output<String> requestUri;
+    private @Nullable Output<String> requestUri;
 
-    public Output<String> requestUri() {
-        return this.requestUri == null ? Codegen.empty() : this.requestUri;
+    public Optional<Output<String>> requestUri() {
+        return Optional.ofNullable(this.requestUri);
     }
 
-    public ApiConnectionTestLinkArgs(
-        @Nullable Output<String> method,
-        @Nullable Output<String> requestUri) {
-        this.method = method;
-        this.requestUri = requestUri;
-    }
+    private ApiConnectionTestLinkArgs() {}
 
-    private ApiConnectionTestLinkArgs() {
-        this.method = Codegen.empty();
-        this.requestUri = Codegen.empty();
+    private ApiConnectionTestLinkArgs(ApiConnectionTestLinkArgs $) {
+        this.method = $.method;
+        this.requestUri = $.requestUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConnectionTestLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> method;
-        private @Nullable Output<String> requestUri;
+        private ApiConnectionTestLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConnectionTestLinkArgs();
         }
 
         public Builder(ApiConnectionTestLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.method = defaults.method;
-    	      this.requestUri = defaults.requestUri;
+            $ = new ApiConnectionTestLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder method(@Nullable Output<String> method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
-        public Builder method(@Nullable String method) {
-            this.method = Codegen.ofNullable(method);
-            return this;
+
+        public Builder method(String method) {
+            return method(Output.of(method));
         }
+
         public Builder requestUri(@Nullable Output<String> requestUri) {
-            this.requestUri = requestUri;
+            $.requestUri = requestUri;
             return this;
         }
-        public Builder requestUri(@Nullable String requestUri) {
-            this.requestUri = Codegen.ofNullable(requestUri);
-            return this;
-        }        public ApiConnectionTestLinkArgs build() {
-            return new ApiConnectionTestLinkArgs(method, requestUri);
+
+        public Builder requestUri(String requestUri) {
+            return requestUri(Output.of(requestUri));
+        }
+
+        public ApiConnectionTestLinkArgs build() {
+            return $;
         }
     }
+
 }

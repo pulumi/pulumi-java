@@ -5,9 +5,9 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DicomStoreIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="dicomStoreId")
-      private final @Nullable Output<String> dicomStoreId;
+    private @Nullable Output<String> dicomStoreId;
 
-    public Output<String> dicomStoreId() {
-        return this.dicomStoreId == null ? Codegen.empty() : this.dicomStoreId;
+    public Optional<Output<String>> dicomStoreId() {
+        return Optional.ofNullable(this.dicomStoreId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DicomStoreIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class DicomStoreIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
-    public DicomStoreIamPolicyState(
-        @Nullable Output<String> dicomStoreId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData) {
-        this.dicomStoreId = dicomStoreId;
-        this.etag = etag;
-        this.policyData = policyData;
-    }
+    private DicomStoreIamPolicyState() {}
 
-    private DicomStoreIamPolicyState() {
-        this.dicomStoreId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private DicomStoreIamPolicyState(DicomStoreIamPolicyState $) {
+        this.dicomStoreId = $.dicomStoreId;
+        this.etag = $.etag;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DicomStoreIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dicomStoreId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
+        private DicomStoreIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DicomStoreIamPolicyState();
         }
 
         public Builder(DicomStoreIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dicomStoreId = defaults.dicomStoreId;
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
+            $ = new DicomStoreIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder dicomStoreId(@Nullable Output<String> dicomStoreId) {
-            this.dicomStoreId = dicomStoreId;
+            $.dicomStoreId = dicomStoreId;
             return this;
         }
-        public Builder dicomStoreId(@Nullable String dicomStoreId) {
-            this.dicomStoreId = Codegen.ofNullable(dicomStoreId);
-            return this;
+
+        public Builder dicomStoreId(String dicomStoreId) {
+            return dicomStoreId(Output.of(dicomStoreId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
-        }        public DicomStoreIamPolicyState build() {
-            return new DicomStoreIamPolicyState(dicomStoreId, etag, policyData);
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
+        }
+
+        public DicomStoreIamPolicyState build() {
+            return $;
         }
     }
+
 }

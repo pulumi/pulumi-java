@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NetworkManagerSecurityGroupItemArgs extends com.pulumi.resour
      * 
      */
     @Import(name="networkGroupId")
-      private final @Nullable Output<String> networkGroupId;
+    private @Nullable Output<String> networkGroupId;
 
-    public Output<String> networkGroupId() {
-        return this.networkGroupId == null ? Codegen.empty() : this.networkGroupId;
+    public Optional<Output<String>> networkGroupId() {
+        return Optional.ofNullable(this.networkGroupId);
     }
 
-    public NetworkManagerSecurityGroupItemArgs(@Nullable Output<String> networkGroupId) {
-        this.networkGroupId = networkGroupId;
-    }
+    private NetworkManagerSecurityGroupItemArgs() {}
 
-    private NetworkManagerSecurityGroupItemArgs() {
-        this.networkGroupId = Codegen.empty();
+    private NetworkManagerSecurityGroupItemArgs(NetworkManagerSecurityGroupItemArgs $) {
+        this.networkGroupId = $.networkGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkManagerSecurityGroupItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> networkGroupId;
+        private NetworkManagerSecurityGroupItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkManagerSecurityGroupItemArgs();
         }
 
         public Builder(NetworkManagerSecurityGroupItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkGroupId = defaults.networkGroupId;
+            $ = new NetworkManagerSecurityGroupItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkGroupId(@Nullable Output<String> networkGroupId) {
-            this.networkGroupId = networkGroupId;
+            $.networkGroupId = networkGroupId;
             return this;
         }
-        public Builder networkGroupId(@Nullable String networkGroupId) {
-            this.networkGroupId = Codegen.ofNullable(networkGroupId);
-            return this;
-        }        public NetworkManagerSecurityGroupItemArgs build() {
-            return new NetworkManagerSecurityGroupItemArgs(networkGroupId);
+
+        public Builder networkGroupId(String networkGroupId) {
+            return networkGroupId(Output.of(networkGroupId));
+        }
+
+        public NetworkManagerSecurityGroupItemArgs build() {
+            return $;
         }
     }
+
 }

@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterArgs extends com.pulum
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterArgs extends com.pulum
      * 
      */
     @Import(name="operatorType", required=true)
-      private final Output<String> operatorType;
+    private Output<String> operatorType;
 
     public Output<String> operatorType() {
         return this.operatorType;
@@ -48,76 +49,69 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterArgs extends com.pulum
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Double> value;
+    private @Nullable Output<Double> value;
 
-    public Output<Double> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Double>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public NumberGreaterThanOrEqualsAdvancedFilterArgs(
-        @Nullable Output<String> key,
-        Output<String> operatorType,
-        @Nullable Output<Double> value) {
-        this.key = key;
-        this.operatorType = Codegen.stringProp("operatorType").output().arg(operatorType).require();
-        this.value = value;
-    }
+    private NumberGreaterThanOrEqualsAdvancedFilterArgs() {}
 
-    private NumberGreaterThanOrEqualsAdvancedFilterArgs() {
-        this.key = Codegen.empty();
-        this.operatorType = Codegen.empty();
-        this.value = Codegen.empty();
+    private NumberGreaterThanOrEqualsAdvancedFilterArgs(NumberGreaterThanOrEqualsAdvancedFilterArgs $) {
+        this.key = $.key;
+        this.operatorType = $.operatorType;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NumberGreaterThanOrEqualsAdvancedFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private Output<String> operatorType;
-        private @Nullable Output<Double> value;
+        private NumberGreaterThanOrEqualsAdvancedFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NumberGreaterThanOrEqualsAdvancedFilterArgs();
         }
 
         public Builder(NumberGreaterThanOrEqualsAdvancedFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.operatorType = defaults.operatorType;
-    	      this.value = defaults.value;
+            $ = new NumberGreaterThanOrEqualsAdvancedFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder operatorType(Output<String> operatorType) {
-            this.operatorType = Objects.requireNonNull(operatorType);
+            $.operatorType = operatorType;
             return this;
         }
+
         public Builder operatorType(String operatorType) {
-            this.operatorType = Output.of(Objects.requireNonNull(operatorType));
-            return this;
+            return operatorType(Output.of(operatorType));
         }
+
         public Builder value(@Nullable Output<Double> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Double value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public NumberGreaterThanOrEqualsAdvancedFilterArgs build() {
-            return new NumberGreaterThanOrEqualsAdvancedFilterArgs(key, operatorType, value);
+
+        public Builder value(Double value) {
+            return value(Output.of(value));
+        }
+
+        public NumberGreaterThanOrEqualsAdvancedFilterArgs build() {
+            $.operatorType = Codegen.stringProp("operatorType").output().arg($.operatorType).require();
+            return $;
         }
     }
+
 }

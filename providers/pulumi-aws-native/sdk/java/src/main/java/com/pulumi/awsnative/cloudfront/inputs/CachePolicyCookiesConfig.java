@@ -16,65 +16,62 @@ public final class CachePolicyCookiesConfig extends com.pulumi.resources.InvokeA
     public static final CachePolicyCookiesConfig Empty = new CachePolicyCookiesConfig();
 
     @Import(name="cookieBehavior", required=true)
-      private final String cookieBehavior;
+    private String cookieBehavior;
 
     public String cookieBehavior() {
         return this.cookieBehavior;
     }
 
     @Import(name="cookies")
-      private final @Nullable List<String> cookies;
+    private @Nullable List<String> cookies;
 
-    public List<String> cookies() {
-        return this.cookies == null ? List.of() : this.cookies;
+    public Optional<List<String>> cookies() {
+        return Optional.ofNullable(this.cookies);
     }
 
-    public CachePolicyCookiesConfig(
-        String cookieBehavior,
-        @Nullable List<String> cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
-        this.cookies = cookies;
-    }
+    private CachePolicyCookiesConfig() {}
 
-    private CachePolicyCookiesConfig() {
-        this.cookieBehavior = null;
-        this.cookies = List.of();
+    private CachePolicyCookiesConfig(CachePolicyCookiesConfig $) {
+        this.cookieBehavior = $.cookieBehavior;
+        this.cookies = $.cookies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachePolicyCookiesConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cookieBehavior;
-        private @Nullable List<String> cookies;
+        private CachePolicyCookiesConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachePolicyCookiesConfig();
         }
 
         public Builder(CachePolicyCookiesConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookieBehavior = defaults.cookieBehavior;
-    	      this.cookies = defaults.cookies;
+            $ = new CachePolicyCookiesConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder cookieBehavior(String cookieBehavior) {
-            this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
+            $.cookieBehavior = cookieBehavior;
             return this;
         }
+
         public Builder cookies(@Nullable List<String> cookies) {
-            this.cookies = cookies;
+            $.cookies = cookies;
             return this;
         }
+
         public Builder cookies(String... cookies) {
             return cookies(List.of(cookies));
-        }        public CachePolicyCookiesConfig build() {
-            return new CachePolicyCookiesConfig(cookieBehavior, cookies);
+        }
+
+        public CachePolicyCookiesConfig build() {
+            $.cookieBehavior = Objects.requireNonNull($.cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
+            return $;
         }
     }
+
 }

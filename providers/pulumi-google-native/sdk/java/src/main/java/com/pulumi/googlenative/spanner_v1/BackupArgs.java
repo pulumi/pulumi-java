@@ -5,9 +5,9 @@ package com.pulumi.googlenative.spanner_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     public static final BackupArgs Empty = new BackupArgs();
 
     @Import(name="backupId", required=true)
-      private final Output<String> backupId;
+    private Output<String> backupId;
 
     public Output<String> backupId() {
         return this.backupId;
@@ -27,24 +27,24 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="database")
-      private final @Nullable Output<String> database;
+    private @Nullable Output<String> database;
 
-    public Output<String> database() {
-        return this.database == null ? Codegen.empty() : this.database;
+    public Optional<Output<String>> database() {
+        return Optional.ofNullable(this.database);
     }
 
     @Import(name="encryptionConfigEncryptionType", required=true)
-      private final Output<String> encryptionConfigEncryptionType;
+    private Output<String> encryptionConfigEncryptionType;
 
     public Output<String> encryptionConfigEncryptionType() {
         return this.encryptionConfigEncryptionType;
     }
 
     @Import(name="encryptionConfigKmsKeyName")
-      private final @Nullable Output<String> encryptionConfigKmsKeyName;
+    private @Nullable Output<String> encryptionConfigKmsKeyName;
 
-    public Output<String> encryptionConfigKmsKeyName() {
-        return this.encryptionConfigKmsKeyName == null ? Codegen.empty() : this.encryptionConfigKmsKeyName;
+    public Optional<Output<String>> encryptionConfigKmsKeyName() {
+        return Optional.ofNullable(this.encryptionConfigKmsKeyName);
     }
 
     /**
@@ -52,14 +52,14 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable Output<String> expireTime;
+    private @Nullable Output<String> expireTime;
 
-    public Output<String> expireTime() {
-        return this.expireTime == null ? Codegen.empty() : this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -70,17 +70,17 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -88,154 +88,131 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionTime")
-      private final @Nullable Output<String> versionTime;
+    private @Nullable Output<String> versionTime;
 
-    public Output<String> versionTime() {
-        return this.versionTime == null ? Codegen.empty() : this.versionTime;
+    public Optional<Output<String>> versionTime() {
+        return Optional.ofNullable(this.versionTime);
     }
 
-    public BackupArgs(
-        Output<String> backupId,
-        @Nullable Output<String> database,
-        Output<String> encryptionConfigEncryptionType,
-        @Nullable Output<String> encryptionConfigKmsKeyName,
-        @Nullable Output<String> expireTime,
-        Output<String> instanceId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> versionTime) {
-        this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
-        this.database = database;
-        this.encryptionConfigEncryptionType = Objects.requireNonNull(encryptionConfigEncryptionType, "expected parameter 'encryptionConfigEncryptionType' to be non-null");
-        this.encryptionConfigKmsKeyName = encryptionConfigKmsKeyName;
-        this.expireTime = expireTime;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.versionTime = versionTime;
-    }
+    private BackupArgs() {}
 
-    private BackupArgs() {
-        this.backupId = Codegen.empty();
-        this.database = Codegen.empty();
-        this.encryptionConfigEncryptionType = Codegen.empty();
-        this.encryptionConfigKmsKeyName = Codegen.empty();
-        this.expireTime = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.versionTime = Codegen.empty();
+    private BackupArgs(BackupArgs $) {
+        this.backupId = $.backupId;
+        this.database = $.database;
+        this.encryptionConfigEncryptionType = $.encryptionConfigEncryptionType;
+        this.encryptionConfigKmsKeyName = $.encryptionConfigKmsKeyName;
+        this.expireTime = $.expireTime;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
+        this.project = $.project;
+        this.versionTime = $.versionTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupId;
-        private @Nullable Output<String> database;
-        private Output<String> encryptionConfigEncryptionType;
-        private @Nullable Output<String> encryptionConfigKmsKeyName;
-        private @Nullable Output<String> expireTime;
-        private Output<String> instanceId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> versionTime;
+        private BackupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupArgs();
         }
 
         public Builder(BackupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupId = defaults.backupId;
-    	      this.database = defaults.database;
-    	      this.encryptionConfigEncryptionType = defaults.encryptionConfigEncryptionType;
-    	      this.encryptionConfigKmsKeyName = defaults.encryptionConfigKmsKeyName;
-    	      this.expireTime = defaults.expireTime;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.versionTime = defaults.versionTime;
+            $ = new BackupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupId(Output<String> backupId) {
-            this.backupId = Objects.requireNonNull(backupId);
+            $.backupId = backupId;
             return this;
         }
+
         public Builder backupId(String backupId) {
-            this.backupId = Output.of(Objects.requireNonNull(backupId));
-            return this;
+            return backupId(Output.of(backupId));
         }
+
         public Builder database(@Nullable Output<String> database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
-        public Builder database(@Nullable String database) {
-            this.database = Codegen.ofNullable(database);
-            return this;
+
+        public Builder database(String database) {
+            return database(Output.of(database));
         }
+
         public Builder encryptionConfigEncryptionType(Output<String> encryptionConfigEncryptionType) {
-            this.encryptionConfigEncryptionType = Objects.requireNonNull(encryptionConfigEncryptionType);
+            $.encryptionConfigEncryptionType = encryptionConfigEncryptionType;
             return this;
         }
+
         public Builder encryptionConfigEncryptionType(String encryptionConfigEncryptionType) {
-            this.encryptionConfigEncryptionType = Output.of(Objects.requireNonNull(encryptionConfigEncryptionType));
-            return this;
+            return encryptionConfigEncryptionType(Output.of(encryptionConfigEncryptionType));
         }
+
         public Builder encryptionConfigKmsKeyName(@Nullable Output<String> encryptionConfigKmsKeyName) {
-            this.encryptionConfigKmsKeyName = encryptionConfigKmsKeyName;
+            $.encryptionConfigKmsKeyName = encryptionConfigKmsKeyName;
             return this;
         }
-        public Builder encryptionConfigKmsKeyName(@Nullable String encryptionConfigKmsKeyName) {
-            this.encryptionConfigKmsKeyName = Codegen.ofNullable(encryptionConfigKmsKeyName);
-            return this;
+
+        public Builder encryptionConfigKmsKeyName(String encryptionConfigKmsKeyName) {
+            return encryptionConfigKmsKeyName(Output.of(encryptionConfigKmsKeyName));
         }
+
         public Builder expireTime(@Nullable Output<String> expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
-        public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Codegen.ofNullable(expireTime);
-            return this;
+
+        public Builder expireTime(String expireTime) {
+            return expireTime(Output.of(expireTime));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder versionTime(@Nullable Output<String> versionTime) {
-            this.versionTime = versionTime;
+            $.versionTime = versionTime;
             return this;
         }
-        public Builder versionTime(@Nullable String versionTime) {
-            this.versionTime = Codegen.ofNullable(versionTime);
-            return this;
-        }        public BackupArgs build() {
-            return new BackupArgs(backupId, database, encryptionConfigEncryptionType, encryptionConfigKmsKeyName, expireTime, instanceId, name, project, versionTime);
+
+        public Builder versionTime(String versionTime) {
+            return versionTime(Output.of(versionTime));
+        }
+
+        public BackupArgs build() {
+            $.backupId = Objects.requireNonNull($.backupId, "expected parameter 'backupId' to be non-null");
+            $.encryptionConfigEncryptionType = Objects.requireNonNull($.encryptionConfigEncryptionType, "expected parameter 'encryptionConfigEncryptionType' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

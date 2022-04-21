@@ -24,10 +24,10 @@ public final class CustomDnsConfigPropertiesFormatResponse extends com.pulumi.re
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable String fqdn;
+    private @Nullable String fqdn;
 
     public Optional<String> fqdn() {
-        return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class CustomDnsConfigPropertiesFormatResponse extends com.pulumi.re
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable List<String> ipAddresses;
+    private @Nullable List<String> ipAddresses;
 
-    public List<String> ipAddresses() {
-        return this.ipAddresses == null ? List.of() : this.ipAddresses;
+    public Optional<List<String>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
-    public CustomDnsConfigPropertiesFormatResponse(
-        @Nullable String fqdn,
-        @Nullable List<String> ipAddresses) {
-        this.fqdn = fqdn;
-        this.ipAddresses = ipAddresses;
-    }
+    private CustomDnsConfigPropertiesFormatResponse() {}
 
-    private CustomDnsConfigPropertiesFormatResponse() {
-        this.fqdn = null;
-        this.ipAddresses = List.of();
+    private CustomDnsConfigPropertiesFormatResponse(CustomDnsConfigPropertiesFormatResponse $) {
+        this.fqdn = $.fqdn;
+        this.ipAddresses = $.ipAddresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDnsConfigPropertiesFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String fqdn;
-        private @Nullable List<String> ipAddresses;
+        private CustomDnsConfigPropertiesFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDnsConfigPropertiesFormatResponse();
         }
 
         public Builder(CustomDnsConfigPropertiesFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdn = defaults.fqdn;
-    	      this.ipAddresses = defaults.ipAddresses;
+            $ = new CustomDnsConfigPropertiesFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
-        }        public CustomDnsConfigPropertiesFormatResponse build() {
-            return new CustomDnsConfigPropertiesFormatResponse(fqdn, ipAddresses);
+        }
+
+        public CustomDnsConfigPropertiesFormatResponse build() {
+            return $;
         }
     }
+
 }

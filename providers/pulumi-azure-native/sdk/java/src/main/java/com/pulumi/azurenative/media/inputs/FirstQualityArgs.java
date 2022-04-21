@@ -5,7 +5,6 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class FirstQualityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bitrate", required=true)
-      private final Output<Integer> bitrate;
+    private Output<Integer> bitrate;
 
     public Output<Integer> bitrate() {
         return this.bitrate;
     }
 
-    public FirstQualityArgs(Output<Integer> bitrate) {
-        this.bitrate = Objects.requireNonNull(bitrate, "expected parameter 'bitrate' to be non-null");
-    }
+    private FirstQualityArgs() {}
 
-    private FirstQualityArgs() {
-        this.bitrate = Codegen.empty();
+    private FirstQualityArgs(FirstQualityArgs $) {
+        this.bitrate = $.bitrate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirstQualityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> bitrate;
+        private FirstQualityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirstQualityArgs();
         }
 
         public Builder(FirstQualityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitrate = defaults.bitrate;
+            $ = new FirstQualityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bitrate(Output<Integer> bitrate) {
-            this.bitrate = Objects.requireNonNull(bitrate);
+            $.bitrate = bitrate;
             return this;
         }
+
         public Builder bitrate(Integer bitrate) {
-            this.bitrate = Output.of(Objects.requireNonNull(bitrate));
-            return this;
-        }        public FirstQualityArgs build() {
-            return new FirstQualityArgs(bitrate);
+            return bitrate(Output.of(bitrate));
+        }
+
+        public FirstQualityArgs build() {
+            $.bitrate = Objects.requireNonNull($.bitrate, "expected parameter 'bitrate' to be non-null");
+            return $;
         }
     }
+
 }

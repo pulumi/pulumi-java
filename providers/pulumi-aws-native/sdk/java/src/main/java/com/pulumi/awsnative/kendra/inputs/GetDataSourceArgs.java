@@ -13,62 +13,59 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="indexId", required=true)
-      private final String indexId;
+    private String indexId;
 
     public String indexId() {
         return this.indexId;
     }
 
-    public GetDataSourceArgs(
-        String id,
-        String indexId) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.indexId = Objects.requireNonNull(indexId, "expected parameter 'indexId' to be non-null");
-    }
+    private GetDataSourceArgs() {}
 
-    private GetDataSourceArgs() {
-        this.id = null;
-        this.indexId = null;
+    private GetDataSourceArgs(GetDataSourceArgs $) {
+        this.id = $.id;
+        this.indexId = $.indexId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String indexId;
+        private GetDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataSourceArgs();
         }
 
         public Builder(GetDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.indexId = defaults.indexId;
+            $ = new GetDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder indexId(String indexId) {
-            this.indexId = Objects.requireNonNull(indexId);
+            $.indexId = indexId;
             return this;
-        }        public GetDataSourceArgs build() {
-            return new GetDataSourceArgs(id, indexId);
+        }
+
+        public GetDataSourceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.indexId = Objects.requireNonNull($.indexId, "expected parameter 'indexId' to be non-null");
+            return $;
         }
     }
+
 }

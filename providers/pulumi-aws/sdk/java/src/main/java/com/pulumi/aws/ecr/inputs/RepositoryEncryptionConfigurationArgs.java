@@ -5,9 +5,9 @@ package com.pulumi.aws.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RepositoryEncryptionConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="encryptionType")
-      private final @Nullable Output<String> encryptionType;
+    private @Nullable Output<String> encryptionType;
 
-    public Output<String> encryptionType() {
-        return this.encryptionType == null ? Codegen.empty() : this.encryptionType;
+    public Optional<Output<String>> encryptionType() {
+        return Optional.ofNullable(this.encryptionType);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class RepositoryEncryptionConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
-    public RepositoryEncryptionConfigurationArgs(
-        @Nullable Output<String> encryptionType,
-        @Nullable Output<String> kmsKey) {
-        this.encryptionType = encryptionType;
-        this.kmsKey = kmsKey;
-    }
+    private RepositoryEncryptionConfigurationArgs() {}
 
-    private RepositoryEncryptionConfigurationArgs() {
-        this.encryptionType = Codegen.empty();
-        this.kmsKey = Codegen.empty();
+    private RepositoryEncryptionConfigurationArgs(RepositoryEncryptionConfigurationArgs $) {
+        this.encryptionType = $.encryptionType;
+        this.kmsKey = $.kmsKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encryptionType;
-        private @Nullable Output<String> kmsKey;
+        private RepositoryEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryEncryptionConfigurationArgs();
         }
 
         public Builder(RepositoryEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionType = defaults.encryptionType;
-    	      this.kmsKey = defaults.kmsKey;
+            $ = new RepositoryEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionType(@Nullable Output<String> encryptionType) {
-            this.encryptionType = encryptionType;
+            $.encryptionType = encryptionType;
             return this;
         }
-        public Builder encryptionType(@Nullable String encryptionType) {
-            this.encryptionType = Codegen.ofNullable(encryptionType);
-            return this;
+
+        public Builder encryptionType(String encryptionType) {
+            return encryptionType(Output.of(encryptionType));
         }
+
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
-        }        public RepositoryEncryptionConfigurationArgs build() {
-            return new RepositoryEncryptionConfigurationArgs(encryptionType, kmsKey);
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
+        }
+
+        public RepositoryEncryptionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

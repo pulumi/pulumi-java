@@ -28,7 +28,7 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="inputs", required=true)
-      private final Output<List<NodeInputArgs>> inputs;
+    private Output<List<NodeInputArgs>> inputs;
 
     public Output<List<NodeInputArgs>> inputs() {
         return this.inputs;
@@ -39,7 +39,7 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -50,7 +50,7 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="preset", required=true)
-      private final Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
+    private Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
 
     public Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset() {
         return this.preset;
@@ -62,92 +62,86 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public EncoderProcessorArgs(
-        Output<List<NodeInputArgs>> inputs,
-        Output<String> name,
-        Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset,
-        Output<String> type) {
-        this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.preset = Objects.requireNonNull(preset, "expected parameter 'preset' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private EncoderProcessorArgs() {}
 
-    private EncoderProcessorArgs() {
-        this.inputs = Codegen.empty();
-        this.name = Codegen.empty();
-        this.preset = Codegen.empty();
-        this.type = Codegen.empty();
+    private EncoderProcessorArgs(EncoderProcessorArgs $) {
+        this.inputs = $.inputs;
+        this.name = $.name;
+        this.preset = $.preset;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncoderProcessorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<NodeInputArgs>> inputs;
-        private Output<String> name;
-        private Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
-        private Output<String> type;
+        private EncoderProcessorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncoderProcessorArgs();
         }
 
         public Builder(EncoderProcessorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputs = defaults.inputs;
-    	      this.name = defaults.name;
-    	      this.preset = defaults.preset;
-    	      this.type = defaults.type;
+            $ = new EncoderProcessorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputs(Output<List<NodeInputArgs>> inputs) {
-            this.inputs = Objects.requireNonNull(inputs);
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(List<NodeInputArgs> inputs) {
-            this.inputs = Output.of(Objects.requireNonNull(inputs));
-            return this;
+            return inputs(Output.of(inputs));
         }
+
         public Builder inputs(NodeInputArgs... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder preset(Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset) {
-            this.preset = Objects.requireNonNull(preset);
+            $.preset = preset;
             return this;
         }
+
         public Builder preset(Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs> preset) {
-            this.preset = Output.of(Objects.requireNonNull(preset));
-            return this;
+            return preset(Output.of(preset));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public EncoderProcessorArgs build() {
-            return new EncoderProcessorArgs(inputs, name, preset, type);
+            return type(Output.of(type));
+        }
+
+        public EncoderProcessorArgs build() {
+            $.inputs = Objects.requireNonNull($.inputs, "expected parameter 'inputs' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.preset = Objects.requireNonNull($.preset, "expected parameter 'preset' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

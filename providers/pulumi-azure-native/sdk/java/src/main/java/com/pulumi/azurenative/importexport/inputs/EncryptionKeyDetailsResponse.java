@@ -24,10 +24,10 @@ public final class EncryptionKeyDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="kekType")
-      private final @Nullable String kekType;
+    private @Nullable String kekType;
 
     public Optional<String> kekType() {
-        return this.kekType == null ? Optional.empty() : Optional.ofNullable(this.kekType);
+        return Optional.ofNullable(this.kekType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EncryptionKeyDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="kekUrl")
-      private final @Nullable String kekUrl;
+    private @Nullable String kekUrl;
 
     public Optional<String> kekUrl() {
-        return this.kekUrl == null ? Optional.empty() : Optional.ofNullable(this.kekUrl);
+        return Optional.ofNullable(this.kekUrl);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class EncryptionKeyDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="kekVaultResourceID")
-      private final @Nullable String kekVaultResourceID;
+    private @Nullable String kekVaultResourceID;
 
     public Optional<String> kekVaultResourceID() {
-        return this.kekVaultResourceID == null ? Optional.empty() : Optional.ofNullable(this.kekVaultResourceID);
+        return Optional.ofNullable(this.kekVaultResourceID);
     }
 
-    public EncryptionKeyDetailsResponse(
-        @Nullable String kekType,
-        @Nullable String kekUrl,
-        @Nullable String kekVaultResourceID) {
-        this.kekType = Codegen.stringProp("kekType").arg(kekType).def("MicrosoftManaged").getNullable();
-        this.kekUrl = kekUrl;
-        this.kekVaultResourceID = kekVaultResourceID;
-    }
+    private EncryptionKeyDetailsResponse() {}
 
-    private EncryptionKeyDetailsResponse() {
-        this.kekType = null;
-        this.kekUrl = null;
-        this.kekVaultResourceID = null;
+    private EncryptionKeyDetailsResponse(EncryptionKeyDetailsResponse $) {
+        this.kekType = $.kekType;
+        this.kekUrl = $.kekUrl;
+        this.kekVaultResourceID = $.kekVaultResourceID;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionKeyDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kekType;
-        private @Nullable String kekUrl;
-        private @Nullable String kekVaultResourceID;
+        private EncryptionKeyDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionKeyDetailsResponse();
         }
 
         public Builder(EncryptionKeyDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kekType = defaults.kekType;
-    	      this.kekUrl = defaults.kekUrl;
-    	      this.kekVaultResourceID = defaults.kekVaultResourceID;
+            $ = new EncryptionKeyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kekType(@Nullable String kekType) {
-            this.kekType = kekType;
+            $.kekType = kekType;
             return this;
         }
+
         public Builder kekUrl(@Nullable String kekUrl) {
-            this.kekUrl = kekUrl;
+            $.kekUrl = kekUrl;
             return this;
         }
+
         public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
-            this.kekVaultResourceID = kekVaultResourceID;
+            $.kekVaultResourceID = kekVaultResourceID;
             return this;
-        }        public EncryptionKeyDetailsResponse build() {
-            return new EncryptionKeyDetailsResponse(kekType, kekUrl, kekVaultResourceID);
+        }
+
+        public EncryptionKeyDetailsResponse build() {
+            $.kekType = Codegen.stringProp("kekType").arg($.kekType).def("MicrosoftManaged").getNullable();
+            return $;
         }
     }
+
 }

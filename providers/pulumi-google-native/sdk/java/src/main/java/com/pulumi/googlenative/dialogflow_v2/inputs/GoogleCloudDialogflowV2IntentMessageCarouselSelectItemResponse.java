@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
      * 
      */
     @Import(name="image", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
+    private GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
      * 
      */
     @Import(name="info", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
+    private GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
 
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info() {
         return this.info;
@@ -56,73 +56,66 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse(
-        String description,
-        GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info,
-        String title) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.info = Objects.requireNonNull(info, "expected parameter 'info' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse() {
-        this.description = null;
-        this.image = null;
-        this.info = null;
-        this.title = null;
+    private GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse(GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse $) {
+        this.description = $.description;
+        this.image = $.image;
+        this.info = $.info;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private GoogleCloudDialogflowV2IntentMessageImageResponse image;
-        private GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
-        private String title;
+        private GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.image = defaults.image;
-    	      this.info = defaults.info;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder info(GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info) {
-            this.info = Objects.requireNonNull(info);
+            $.info = info;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse(description, image, info, title);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.info = Objects.requireNonNull($.info, "expected parameter 'info' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class BastionShareableLink extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vm", required=true)
-      private final VM vm;
+    private VM vm;
 
     public VM vm() {
         return this.vm;
     }
 
-    public BastionShareableLink(VM vm) {
-        this.vm = Objects.requireNonNull(vm, "expected parameter 'vm' to be non-null");
-    }
+    private BastionShareableLink() {}
 
-    private BastionShareableLink() {
-        this.vm = null;
+    private BastionShareableLink(BastionShareableLink $) {
+        this.vm = $.vm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BastionShareableLink defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private VM vm;
+        private BastionShareableLink $;
 
         public Builder() {
-    	      // Empty
+            $ = new BastionShareableLink();
         }
 
         public Builder(BastionShareableLink defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vm = defaults.vm;
+            $ = new BastionShareableLink(Objects.requireNonNull(defaults));
         }
 
         public Builder vm(VM vm) {
-            this.vm = Objects.requireNonNull(vm);
+            $.vm = vm;
             return this;
-        }        public BastionShareableLink build() {
-            return new BastionShareableLink(vm);
+        }
+
+        public BastionShareableLink build() {
+            $.vm = Objects.requireNonNull($.vm, "expected parameter 'vm' to be non-null");
+            return $;
         }
     }
+
 }

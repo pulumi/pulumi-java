@@ -22,7 +22,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iam", required=true)
-      private final String iam;
+    private String iam;
 
     public String iam() {
         return this.iam;
@@ -33,7 +33,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="op", required=true)
-      private final String op;
+    private String op;
 
     public String op() {
         return this.op;
@@ -44,7 +44,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="svc", required=true)
-      private final String svc;
+    private String svc;
 
     public String svc() {
         return this.svc;
@@ -55,7 +55,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sys", required=true)
-      private final String sys;
+    private String sys;
 
     public String sys() {
         return this.sys;
@@ -66,85 +66,77 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public ConditionResponse(
-        String iam,
-        String op,
-        String svc,
-        String sys,
-        List<String> values) {
-        this.iam = Objects.requireNonNull(iam, "expected parameter 'iam' to be non-null");
-        this.op = Objects.requireNonNull(op, "expected parameter 'op' to be non-null");
-        this.svc = Objects.requireNonNull(svc, "expected parameter 'svc' to be non-null");
-        this.sys = Objects.requireNonNull(sys, "expected parameter 'sys' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private ConditionResponse() {}
 
-    private ConditionResponse() {
-        this.iam = null;
-        this.op = null;
-        this.svc = null;
-        this.sys = null;
-        this.values = List.of();
+    private ConditionResponse(ConditionResponse $) {
+        this.iam = $.iam;
+        this.op = $.op;
+        this.svc = $.svc;
+        this.sys = $.sys;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String iam;
-        private String op;
-        private String svc;
-        private String sys;
-        private List<String> values;
+        private ConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionResponse();
         }
 
         public Builder(ConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iam = defaults.iam;
-    	      this.op = defaults.op;
-    	      this.svc = defaults.svc;
-    	      this.sys = defaults.sys;
-    	      this.values = defaults.values;
+            $ = new ConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder iam(String iam) {
-            this.iam = Objects.requireNonNull(iam);
+            $.iam = iam;
             return this;
         }
+
         public Builder op(String op) {
-            this.op = Objects.requireNonNull(op);
+            $.op = op;
             return this;
         }
+
         public Builder svc(String svc) {
-            this.svc = Objects.requireNonNull(svc);
+            $.svc = svc;
             return this;
         }
+
         public Builder sys(String sys) {
-            this.sys = Objects.requireNonNull(sys);
+            $.sys = sys;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ConditionResponse build() {
-            return new ConditionResponse(iam, op, svc, sys, values);
+        }
+
+        public ConditionResponse build() {
+            $.iam = Objects.requireNonNull($.iam, "expected parameter 'iam' to be non-null");
+            $.op = Objects.requireNonNull($.op, "expected parameter 'op' to be non-null");
+            $.svc = Objects.requireNonNull($.svc, "expected parameter 'svc' to be non-null");
+            $.sys = Objects.requireNonNull($.sys, "expected parameter 'sys' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

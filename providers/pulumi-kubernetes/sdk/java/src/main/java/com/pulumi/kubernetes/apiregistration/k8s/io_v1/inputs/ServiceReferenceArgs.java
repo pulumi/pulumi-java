@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.apiregistration.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ServiceReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ServiceReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ServiceReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public ServiceReferenceArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespace,
-        @Nullable Output<Integer> port) {
-        this.name = name;
-        this.namespace = namespace;
-        this.port = port;
-    }
+    private ServiceReferenceArgs() {}
 
-    private ServiceReferenceArgs() {
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.port = Codegen.empty();
+    private ServiceReferenceArgs(ServiceReferenceArgs $) {
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<Integer> port;
+        private ServiceReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceReferenceArgs();
         }
 
         public Builder(ServiceReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.port = defaults.port;
+            $ = new ServiceReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public ServiceReferenceArgs build() {
-            return new ServiceReferenceArgs(name, namespace, port);
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        public ServiceReferenceArgs build() {
+            return $;
         }
     }
+
 }

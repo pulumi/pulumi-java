@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storsimple.inputs;
 import com.pulumi.azurenative.storsimple.enums.EncryptionAlgorithm;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class AsymmetricEncryptedSecretArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="encryptionAlgorithm", required=true)
-      private final Output<EncryptionAlgorithm> encryptionAlgorithm;
+    private Output<EncryptionAlgorithm> encryptionAlgorithm;
 
     public Output<EncryptionAlgorithm> encryptionAlgorithm() {
         return this.encryptionAlgorithm;
@@ -36,10 +36,10 @@ public final class AsymmetricEncryptedSecretArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="encryptionCertThumbprint")
-      private final @Nullable Output<String> encryptionCertThumbprint;
+    private @Nullable Output<String> encryptionCertThumbprint;
 
-    public Output<String> encryptionCertThumbprint() {
-        return this.encryptionCertThumbprint == null ? Codegen.empty() : this.encryptionCertThumbprint;
+    public Optional<Output<String>> encryptionCertThumbprint() {
+        return Optional.ofNullable(this.encryptionCertThumbprint);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class AsymmetricEncryptedSecretArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public AsymmetricEncryptedSecretArgs(
-        Output<EncryptionAlgorithm> encryptionAlgorithm,
-        @Nullable Output<String> encryptionCertThumbprint,
-        Output<String> value) {
-        this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm, "expected parameter 'encryptionAlgorithm' to be non-null");
-        this.encryptionCertThumbprint = encryptionCertThumbprint;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private AsymmetricEncryptedSecretArgs() {}
 
-    private AsymmetricEncryptedSecretArgs() {
-        this.encryptionAlgorithm = Codegen.empty();
-        this.encryptionCertThumbprint = Codegen.empty();
-        this.value = Codegen.empty();
+    private AsymmetricEncryptedSecretArgs(AsymmetricEncryptedSecretArgs $) {
+        this.encryptionAlgorithm = $.encryptionAlgorithm;
+        this.encryptionCertThumbprint = $.encryptionCertThumbprint;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AsymmetricEncryptedSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<EncryptionAlgorithm> encryptionAlgorithm;
-        private @Nullable Output<String> encryptionCertThumbprint;
-        private Output<String> value;
+        private AsymmetricEncryptedSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AsymmetricEncryptedSecretArgs();
         }
 
         public Builder(AsymmetricEncryptedSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionAlgorithm = defaults.encryptionAlgorithm;
-    	      this.encryptionCertThumbprint = defaults.encryptionCertThumbprint;
-    	      this.value = defaults.value;
+            $ = new AsymmetricEncryptedSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionAlgorithm(Output<EncryptionAlgorithm> encryptionAlgorithm) {
-            this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
+            $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
+
         public Builder encryptionAlgorithm(EncryptionAlgorithm encryptionAlgorithm) {
-            this.encryptionAlgorithm = Output.of(Objects.requireNonNull(encryptionAlgorithm));
-            return this;
+            return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
+
         public Builder encryptionCertThumbprint(@Nullable Output<String> encryptionCertThumbprint) {
-            this.encryptionCertThumbprint = encryptionCertThumbprint;
+            $.encryptionCertThumbprint = encryptionCertThumbprint;
             return this;
         }
-        public Builder encryptionCertThumbprint(@Nullable String encryptionCertThumbprint) {
-            this.encryptionCertThumbprint = Codegen.ofNullable(encryptionCertThumbprint);
-            return this;
+
+        public Builder encryptionCertThumbprint(String encryptionCertThumbprint) {
+            return encryptionCertThumbprint(Output.of(encryptionCertThumbprint));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public AsymmetricEncryptedSecretArgs build() {
-            return new AsymmetricEncryptedSecretArgs(encryptionAlgorithm, encryptionCertThumbprint, value);
+            return value(Output.of(value));
+        }
+
+        public AsymmetricEncryptedSecretArgs build() {
+            $.encryptionAlgorithm = Objects.requireNonNull($.encryptionAlgorithm, "expected parameter 'encryptionAlgorithm' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

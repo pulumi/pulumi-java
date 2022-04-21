@@ -7,12 +7,12 @@ import com.pulumi.awsnative.databrew.inputs.RecipeParametersInputPropertiesArgs;
 import com.pulumi.awsnative.databrew.inputs.RecipeSecondaryInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,206 +21,206 @@ public final class RecipeParametersArgs extends com.pulumi.resources.ResourceArg
     public static final RecipeParametersArgs Empty = new RecipeParametersArgs();
 
     @Import(name="aggregateFunction")
-      private final @Nullable Output<String> aggregateFunction;
+    private @Nullable Output<String> aggregateFunction;
 
-    public Output<String> aggregateFunction() {
-        return this.aggregateFunction == null ? Codegen.empty() : this.aggregateFunction;
+    public Optional<Output<String>> aggregateFunction() {
+        return Optional.ofNullable(this.aggregateFunction);
     }
 
     @Import(name="base")
-      private final @Nullable Output<String> base;
+    private @Nullable Output<String> base;
 
-    public Output<String> base() {
-        return this.base == null ? Codegen.empty() : this.base;
+    public Optional<Output<String>> base() {
+        return Optional.ofNullable(this.base);
     }
 
     @Import(name="caseStatement")
-      private final @Nullable Output<String> caseStatement;
+    private @Nullable Output<String> caseStatement;
 
-    public Output<String> caseStatement() {
-        return this.caseStatement == null ? Codegen.empty() : this.caseStatement;
+    public Optional<Output<String>> caseStatement() {
+        return Optional.ofNullable(this.caseStatement);
     }
 
     @Import(name="categoryMap")
-      private final @Nullable Output<String> categoryMap;
+    private @Nullable Output<String> categoryMap;
 
-    public Output<String> categoryMap() {
-        return this.categoryMap == null ? Codegen.empty() : this.categoryMap;
+    public Optional<Output<String>> categoryMap() {
+        return Optional.ofNullable(this.categoryMap);
     }
 
     @Import(name="charsToRemove")
-      private final @Nullable Output<String> charsToRemove;
+    private @Nullable Output<String> charsToRemove;
 
-    public Output<String> charsToRemove() {
-        return this.charsToRemove == null ? Codegen.empty() : this.charsToRemove;
+    public Optional<Output<String>> charsToRemove() {
+        return Optional.ofNullable(this.charsToRemove);
     }
 
     @Import(name="collapseConsecutiveWhitespace")
-      private final @Nullable Output<String> collapseConsecutiveWhitespace;
+    private @Nullable Output<String> collapseConsecutiveWhitespace;
 
-    public Output<String> collapseConsecutiveWhitespace() {
-        return this.collapseConsecutiveWhitespace == null ? Codegen.empty() : this.collapseConsecutiveWhitespace;
+    public Optional<Output<String>> collapseConsecutiveWhitespace() {
+        return Optional.ofNullable(this.collapseConsecutiveWhitespace);
     }
 
     @Import(name="columnDataType")
-      private final @Nullable Output<String> columnDataType;
+    private @Nullable Output<String> columnDataType;
 
-    public Output<String> columnDataType() {
-        return this.columnDataType == null ? Codegen.empty() : this.columnDataType;
+    public Optional<Output<String>> columnDataType() {
+        return Optional.ofNullable(this.columnDataType);
     }
 
     @Import(name="columnRange")
-      private final @Nullable Output<String> columnRange;
+    private @Nullable Output<String> columnRange;
 
-    public Output<String> columnRange() {
-        return this.columnRange == null ? Codegen.empty() : this.columnRange;
+    public Optional<Output<String>> columnRange() {
+        return Optional.ofNullable(this.columnRange);
     }
 
     @Import(name="count")
-      private final @Nullable Output<String> count;
+    private @Nullable Output<String> count;
 
-    public Output<String> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<String>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     @Import(name="customCharacters")
-      private final @Nullable Output<String> customCharacters;
+    private @Nullable Output<String> customCharacters;
 
-    public Output<String> customCharacters() {
-        return this.customCharacters == null ? Codegen.empty() : this.customCharacters;
+    public Optional<Output<String>> customCharacters() {
+        return Optional.ofNullable(this.customCharacters);
     }
 
     @Import(name="customStopWords")
-      private final @Nullable Output<String> customStopWords;
+    private @Nullable Output<String> customStopWords;
 
-    public Output<String> customStopWords() {
-        return this.customStopWords == null ? Codegen.empty() : this.customStopWords;
+    public Optional<Output<String>> customStopWords() {
+        return Optional.ofNullable(this.customStopWords);
     }
 
     @Import(name="customValue")
-      private final @Nullable Output<String> customValue;
+    private @Nullable Output<String> customValue;
 
-    public Output<String> customValue() {
-        return this.customValue == null ? Codegen.empty() : this.customValue;
+    public Optional<Output<String>> customValue() {
+        return Optional.ofNullable(this.customValue);
     }
 
     @Import(name="datasetsColumns")
-      private final @Nullable Output<String> datasetsColumns;
+    private @Nullable Output<String> datasetsColumns;
 
-    public Output<String> datasetsColumns() {
-        return this.datasetsColumns == null ? Codegen.empty() : this.datasetsColumns;
+    public Optional<Output<String>> datasetsColumns() {
+        return Optional.ofNullable(this.datasetsColumns);
     }
 
     @Import(name="dateAddValue")
-      private final @Nullable Output<String> dateAddValue;
+    private @Nullable Output<String> dateAddValue;
 
-    public Output<String> dateAddValue() {
-        return this.dateAddValue == null ? Codegen.empty() : this.dateAddValue;
+    public Optional<Output<String>> dateAddValue() {
+        return Optional.ofNullable(this.dateAddValue);
     }
 
     @Import(name="dateTimeFormat")
-      private final @Nullable Output<String> dateTimeFormat;
+    private @Nullable Output<String> dateTimeFormat;
 
-    public Output<String> dateTimeFormat() {
-        return this.dateTimeFormat == null ? Codegen.empty() : this.dateTimeFormat;
+    public Optional<Output<String>> dateTimeFormat() {
+        return Optional.ofNullable(this.dateTimeFormat);
     }
 
     @Import(name="dateTimeParameters")
-      private final @Nullable Output<String> dateTimeParameters;
+    private @Nullable Output<String> dateTimeParameters;
 
-    public Output<String> dateTimeParameters() {
-        return this.dateTimeParameters == null ? Codegen.empty() : this.dateTimeParameters;
+    public Optional<Output<String>> dateTimeParameters() {
+        return Optional.ofNullable(this.dateTimeParameters);
     }
 
     @Import(name="deleteOtherRows")
-      private final @Nullable Output<String> deleteOtherRows;
+    private @Nullable Output<String> deleteOtherRows;
 
-    public Output<String> deleteOtherRows() {
-        return this.deleteOtherRows == null ? Codegen.empty() : this.deleteOtherRows;
+    public Optional<Output<String>> deleteOtherRows() {
+        return Optional.ofNullable(this.deleteOtherRows);
     }
 
     @Import(name="delimiter")
-      private final @Nullable Output<String> delimiter;
+    private @Nullable Output<String> delimiter;
 
-    public Output<String> delimiter() {
-        return this.delimiter == null ? Codegen.empty() : this.delimiter;
+    public Optional<Output<String>> delimiter() {
+        return Optional.ofNullable(this.delimiter);
     }
 
     @Import(name="endPattern")
-      private final @Nullable Output<String> endPattern;
+    private @Nullable Output<String> endPattern;
 
-    public Output<String> endPattern() {
-        return this.endPattern == null ? Codegen.empty() : this.endPattern;
+    public Optional<Output<String>> endPattern() {
+        return Optional.ofNullable(this.endPattern);
     }
 
     @Import(name="endPosition")
-      private final @Nullable Output<String> endPosition;
+    private @Nullable Output<String> endPosition;
 
-    public Output<String> endPosition() {
-        return this.endPosition == null ? Codegen.empty() : this.endPosition;
+    public Optional<Output<String>> endPosition() {
+        return Optional.ofNullable(this.endPosition);
     }
 
     @Import(name="endValue")
-      private final @Nullable Output<String> endValue;
+    private @Nullable Output<String> endValue;
 
-    public Output<String> endValue() {
-        return this.endValue == null ? Codegen.empty() : this.endValue;
+    public Optional<Output<String>> endValue() {
+        return Optional.ofNullable(this.endValue);
     }
 
     @Import(name="expandContractions")
-      private final @Nullable Output<String> expandContractions;
+    private @Nullable Output<String> expandContractions;
 
-    public Output<String> expandContractions() {
-        return this.expandContractions == null ? Codegen.empty() : this.expandContractions;
+    public Optional<Output<String>> expandContractions() {
+        return Optional.ofNullable(this.expandContractions);
     }
 
     @Import(name="exponent")
-      private final @Nullable Output<String> exponent;
+    private @Nullable Output<String> exponent;
 
-    public Output<String> exponent() {
-        return this.exponent == null ? Codegen.empty() : this.exponent;
+    public Optional<Output<String>> exponent() {
+        return Optional.ofNullable(this.exponent);
     }
 
     @Import(name="falseString")
-      private final @Nullable Output<String> falseString;
+    private @Nullable Output<String> falseString;
 
-    public Output<String> falseString() {
-        return this.falseString == null ? Codegen.empty() : this.falseString;
+    public Optional<Output<String>> falseString() {
+        return Optional.ofNullable(this.falseString);
     }
 
     @Import(name="groupByAggFunctionOptions")
-      private final @Nullable Output<String> groupByAggFunctionOptions;
+    private @Nullable Output<String> groupByAggFunctionOptions;
 
-    public Output<String> groupByAggFunctionOptions() {
-        return this.groupByAggFunctionOptions == null ? Codegen.empty() : this.groupByAggFunctionOptions;
+    public Optional<Output<String>> groupByAggFunctionOptions() {
+        return Optional.ofNullable(this.groupByAggFunctionOptions);
     }
 
     @Import(name="groupByColumns")
-      private final @Nullable Output<String> groupByColumns;
+    private @Nullable Output<String> groupByColumns;
 
-    public Output<String> groupByColumns() {
-        return this.groupByColumns == null ? Codegen.empty() : this.groupByColumns;
+    public Optional<Output<String>> groupByColumns() {
+        return Optional.ofNullable(this.groupByColumns);
     }
 
     @Import(name="hiddenColumns")
-      private final @Nullable Output<String> hiddenColumns;
+    private @Nullable Output<String> hiddenColumns;
 
-    public Output<String> hiddenColumns() {
-        return this.hiddenColumns == null ? Codegen.empty() : this.hiddenColumns;
+    public Optional<Output<String>> hiddenColumns() {
+        return Optional.ofNullable(this.hiddenColumns);
     }
 
     @Import(name="ignoreCase")
-      private final @Nullable Output<String> ignoreCase;
+    private @Nullable Output<String> ignoreCase;
 
-    public Output<String> ignoreCase() {
-        return this.ignoreCase == null ? Codegen.empty() : this.ignoreCase;
+    public Optional<Output<String>> ignoreCase() {
+        return Optional.ofNullable(this.ignoreCase);
     }
 
     @Import(name="includeInSplit")
-      private final @Nullable Output<String> includeInSplit;
+    private @Nullable Output<String> includeInSplit;
 
-    public Output<String> includeInSplit() {
-        return this.includeInSplit == null ? Codegen.empty() : this.includeInSplit;
+    public Optional<Output<String>> includeInSplit() {
+        return Optional.ofNullable(this.includeInSplit);
     }
 
     /**
@@ -228,1856 +228,1557 @@ public final class RecipeParametersArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<RecipeParametersInputPropertiesArgs> input;
+    private @Nullable Output<RecipeParametersInputPropertiesArgs> input;
 
-    public Output<RecipeParametersInputPropertiesArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<RecipeParametersInputPropertiesArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     @Import(name="interval")
-      private final @Nullable Output<String> interval;
+    private @Nullable Output<String> interval;
 
-    public Output<String> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<String>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     @Import(name="isText")
-      private final @Nullable Output<String> isText;
+    private @Nullable Output<String> isText;
 
-    public Output<String> isText() {
-        return this.isText == null ? Codegen.empty() : this.isText;
+    public Optional<Output<String>> isText() {
+        return Optional.ofNullable(this.isText);
     }
 
     @Import(name="joinKeys")
-      private final @Nullable Output<String> joinKeys;
+    private @Nullable Output<String> joinKeys;
 
-    public Output<String> joinKeys() {
-        return this.joinKeys == null ? Codegen.empty() : this.joinKeys;
+    public Optional<Output<String>> joinKeys() {
+        return Optional.ofNullable(this.joinKeys);
     }
 
     @Import(name="joinType")
-      private final @Nullable Output<String> joinType;
+    private @Nullable Output<String> joinType;
 
-    public Output<String> joinType() {
-        return this.joinType == null ? Codegen.empty() : this.joinType;
+    public Optional<Output<String>> joinType() {
+        return Optional.ofNullable(this.joinType);
     }
 
     @Import(name="leftColumns")
-      private final @Nullable Output<String> leftColumns;
+    private @Nullable Output<String> leftColumns;
 
-    public Output<String> leftColumns() {
-        return this.leftColumns == null ? Codegen.empty() : this.leftColumns;
+    public Optional<Output<String>> leftColumns() {
+        return Optional.ofNullable(this.leftColumns);
     }
 
     @Import(name="limit")
-      private final @Nullable Output<String> limit;
+    private @Nullable Output<String> limit;
 
-    public Output<String> limit() {
-        return this.limit == null ? Codegen.empty() : this.limit;
+    public Optional<Output<String>> limit() {
+        return Optional.ofNullable(this.limit);
     }
 
     @Import(name="lowerBound")
-      private final @Nullable Output<String> lowerBound;
+    private @Nullable Output<String> lowerBound;
 
-    public Output<String> lowerBound() {
-        return this.lowerBound == null ? Codegen.empty() : this.lowerBound;
+    public Optional<Output<String>> lowerBound() {
+        return Optional.ofNullable(this.lowerBound);
     }
 
     @Import(name="mapType")
-      private final @Nullable Output<String> mapType;
+    private @Nullable Output<String> mapType;
 
-    public Output<String> mapType() {
-        return this.mapType == null ? Codegen.empty() : this.mapType;
+    public Optional<Output<String>> mapType() {
+        return Optional.ofNullable(this.mapType);
     }
 
     @Import(name="modeType")
-      private final @Nullable Output<String> modeType;
+    private @Nullable Output<String> modeType;
 
-    public Output<String> modeType() {
-        return this.modeType == null ? Codegen.empty() : this.modeType;
+    public Optional<Output<String>> modeType() {
+        return Optional.ofNullable(this.modeType);
     }
 
     @Import(name="multiLine")
-      private final @Nullable Output<Boolean> multiLine;
+    private @Nullable Output<Boolean> multiLine;
 
-    public Output<Boolean> multiLine() {
-        return this.multiLine == null ? Codegen.empty() : this.multiLine;
+    public Optional<Output<Boolean>> multiLine() {
+        return Optional.ofNullable(this.multiLine);
     }
 
     @Import(name="numRows")
-      private final @Nullable Output<String> numRows;
+    private @Nullable Output<String> numRows;
 
-    public Output<String> numRows() {
-        return this.numRows == null ? Codegen.empty() : this.numRows;
+    public Optional<Output<String>> numRows() {
+        return Optional.ofNullable(this.numRows);
     }
 
     @Import(name="numRowsAfter")
-      private final @Nullable Output<String> numRowsAfter;
+    private @Nullable Output<String> numRowsAfter;
 
-    public Output<String> numRowsAfter() {
-        return this.numRowsAfter == null ? Codegen.empty() : this.numRowsAfter;
+    public Optional<Output<String>> numRowsAfter() {
+        return Optional.ofNullable(this.numRowsAfter);
     }
 
     @Import(name="numRowsBefore")
-      private final @Nullable Output<String> numRowsBefore;
+    private @Nullable Output<String> numRowsBefore;
 
-    public Output<String> numRowsBefore() {
-        return this.numRowsBefore == null ? Codegen.empty() : this.numRowsBefore;
+    public Optional<Output<String>> numRowsBefore() {
+        return Optional.ofNullable(this.numRowsBefore);
     }
 
     @Import(name="orderByColumn")
-      private final @Nullable Output<String> orderByColumn;
+    private @Nullable Output<String> orderByColumn;
 
-    public Output<String> orderByColumn() {
-        return this.orderByColumn == null ? Codegen.empty() : this.orderByColumn;
+    public Optional<Output<String>> orderByColumn() {
+        return Optional.ofNullable(this.orderByColumn);
     }
 
     @Import(name="orderByColumns")
-      private final @Nullable Output<String> orderByColumns;
+    private @Nullable Output<String> orderByColumns;
 
-    public Output<String> orderByColumns() {
-        return this.orderByColumns == null ? Codegen.empty() : this.orderByColumns;
+    public Optional<Output<String>> orderByColumns() {
+        return Optional.ofNullable(this.orderByColumns);
     }
 
     @Import(name="other")
-      private final @Nullable Output<String> other;
+    private @Nullable Output<String> other;
 
-    public Output<String> other() {
-        return this.other == null ? Codegen.empty() : this.other;
+    public Optional<Output<String>> other() {
+        return Optional.ofNullable(this.other);
     }
 
     @Import(name="pattern")
-      private final @Nullable Output<String> pattern;
+    private @Nullable Output<String> pattern;
 
-    public Output<String> pattern() {
-        return this.pattern == null ? Codegen.empty() : this.pattern;
+    public Optional<Output<String>> pattern() {
+        return Optional.ofNullable(this.pattern);
     }
 
     @Import(name="patternOption1")
-      private final @Nullable Output<String> patternOption1;
+    private @Nullable Output<String> patternOption1;
 
-    public Output<String> patternOption1() {
-        return this.patternOption1 == null ? Codegen.empty() : this.patternOption1;
+    public Optional<Output<String>> patternOption1() {
+        return Optional.ofNullable(this.patternOption1);
     }
 
     @Import(name="patternOption2")
-      private final @Nullable Output<String> patternOption2;
+    private @Nullable Output<String> patternOption2;
 
-    public Output<String> patternOption2() {
-        return this.patternOption2 == null ? Codegen.empty() : this.patternOption2;
+    public Optional<Output<String>> patternOption2() {
+        return Optional.ofNullable(this.patternOption2);
     }
 
     @Import(name="patternOptions")
-      private final @Nullable Output<String> patternOptions;
+    private @Nullable Output<String> patternOptions;
 
-    public Output<String> patternOptions() {
-        return this.patternOptions == null ? Codegen.empty() : this.patternOptions;
+    public Optional<Output<String>> patternOptions() {
+        return Optional.ofNullable(this.patternOptions);
     }
 
     @Import(name="period")
-      private final @Nullable Output<String> period;
+    private @Nullable Output<String> period;
 
-    public Output<String> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<String>> period() {
+        return Optional.ofNullable(this.period);
     }
 
     @Import(name="position")
-      private final @Nullable Output<String> position;
+    private @Nullable Output<String> position;
 
-    public Output<String> position() {
-        return this.position == null ? Codegen.empty() : this.position;
+    public Optional<Output<String>> position() {
+        return Optional.ofNullable(this.position);
     }
 
     @Import(name="removeAllPunctuation")
-      private final @Nullable Output<String> removeAllPunctuation;
+    private @Nullable Output<String> removeAllPunctuation;
 
-    public Output<String> removeAllPunctuation() {
-        return this.removeAllPunctuation == null ? Codegen.empty() : this.removeAllPunctuation;
+    public Optional<Output<String>> removeAllPunctuation() {
+        return Optional.ofNullable(this.removeAllPunctuation);
     }
 
     @Import(name="removeAllQuotes")
-      private final @Nullable Output<String> removeAllQuotes;
+    private @Nullable Output<String> removeAllQuotes;
 
-    public Output<String> removeAllQuotes() {
-        return this.removeAllQuotes == null ? Codegen.empty() : this.removeAllQuotes;
+    public Optional<Output<String>> removeAllQuotes() {
+        return Optional.ofNullable(this.removeAllQuotes);
     }
 
     @Import(name="removeAllWhitespace")
-      private final @Nullable Output<String> removeAllWhitespace;
+    private @Nullable Output<String> removeAllWhitespace;
 
-    public Output<String> removeAllWhitespace() {
-        return this.removeAllWhitespace == null ? Codegen.empty() : this.removeAllWhitespace;
+    public Optional<Output<String>> removeAllWhitespace() {
+        return Optional.ofNullable(this.removeAllWhitespace);
     }
 
     @Import(name="removeCustomCharacters")
-      private final @Nullable Output<String> removeCustomCharacters;
+    private @Nullable Output<String> removeCustomCharacters;
 
-    public Output<String> removeCustomCharacters() {
-        return this.removeCustomCharacters == null ? Codegen.empty() : this.removeCustomCharacters;
+    public Optional<Output<String>> removeCustomCharacters() {
+        return Optional.ofNullable(this.removeCustomCharacters);
     }
 
     @Import(name="removeCustomValue")
-      private final @Nullable Output<String> removeCustomValue;
+    private @Nullable Output<String> removeCustomValue;
 
-    public Output<String> removeCustomValue() {
-        return this.removeCustomValue == null ? Codegen.empty() : this.removeCustomValue;
+    public Optional<Output<String>> removeCustomValue() {
+        return Optional.ofNullable(this.removeCustomValue);
     }
 
     @Import(name="removeLeadingAndTrailingPunctuation")
-      private final @Nullable Output<String> removeLeadingAndTrailingPunctuation;
+    private @Nullable Output<String> removeLeadingAndTrailingPunctuation;
 
-    public Output<String> removeLeadingAndTrailingPunctuation() {
-        return this.removeLeadingAndTrailingPunctuation == null ? Codegen.empty() : this.removeLeadingAndTrailingPunctuation;
+    public Optional<Output<String>> removeLeadingAndTrailingPunctuation() {
+        return Optional.ofNullable(this.removeLeadingAndTrailingPunctuation);
     }
 
     @Import(name="removeLeadingAndTrailingQuotes")
-      private final @Nullable Output<String> removeLeadingAndTrailingQuotes;
+    private @Nullable Output<String> removeLeadingAndTrailingQuotes;
 
-    public Output<String> removeLeadingAndTrailingQuotes() {
-        return this.removeLeadingAndTrailingQuotes == null ? Codegen.empty() : this.removeLeadingAndTrailingQuotes;
+    public Optional<Output<String>> removeLeadingAndTrailingQuotes() {
+        return Optional.ofNullable(this.removeLeadingAndTrailingQuotes);
     }
 
     @Import(name="removeLeadingAndTrailingWhitespace")
-      private final @Nullable Output<String> removeLeadingAndTrailingWhitespace;
+    private @Nullable Output<String> removeLeadingAndTrailingWhitespace;
 
-    public Output<String> removeLeadingAndTrailingWhitespace() {
-        return this.removeLeadingAndTrailingWhitespace == null ? Codegen.empty() : this.removeLeadingAndTrailingWhitespace;
+    public Optional<Output<String>> removeLeadingAndTrailingWhitespace() {
+        return Optional.ofNullable(this.removeLeadingAndTrailingWhitespace);
     }
 
     @Import(name="removeLetters")
-      private final @Nullable Output<String> removeLetters;
+    private @Nullable Output<String> removeLetters;
 
-    public Output<String> removeLetters() {
-        return this.removeLetters == null ? Codegen.empty() : this.removeLetters;
+    public Optional<Output<String>> removeLetters() {
+        return Optional.ofNullable(this.removeLetters);
     }
 
     @Import(name="removeNumbers")
-      private final @Nullable Output<String> removeNumbers;
+    private @Nullable Output<String> removeNumbers;
 
-    public Output<String> removeNumbers() {
-        return this.removeNumbers == null ? Codegen.empty() : this.removeNumbers;
+    public Optional<Output<String>> removeNumbers() {
+        return Optional.ofNullable(this.removeNumbers);
     }
 
     @Import(name="removeSourceColumn")
-      private final @Nullable Output<String> removeSourceColumn;
+    private @Nullable Output<String> removeSourceColumn;
 
-    public Output<String> removeSourceColumn() {
-        return this.removeSourceColumn == null ? Codegen.empty() : this.removeSourceColumn;
+    public Optional<Output<String>> removeSourceColumn() {
+        return Optional.ofNullable(this.removeSourceColumn);
     }
 
     @Import(name="removeSpecialCharacters")
-      private final @Nullable Output<String> removeSpecialCharacters;
+    private @Nullable Output<String> removeSpecialCharacters;
 
-    public Output<String> removeSpecialCharacters() {
-        return this.removeSpecialCharacters == null ? Codegen.empty() : this.removeSpecialCharacters;
+    public Optional<Output<String>> removeSpecialCharacters() {
+        return Optional.ofNullable(this.removeSpecialCharacters);
     }
 
     @Import(name="rightColumns")
-      private final @Nullable Output<String> rightColumns;
+    private @Nullable Output<String> rightColumns;
 
-    public Output<String> rightColumns() {
-        return this.rightColumns == null ? Codegen.empty() : this.rightColumns;
+    public Optional<Output<String>> rightColumns() {
+        return Optional.ofNullable(this.rightColumns);
     }
 
     @Import(name="sampleSize")
-      private final @Nullable Output<String> sampleSize;
+    private @Nullable Output<String> sampleSize;
 
-    public Output<String> sampleSize() {
-        return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
+    public Optional<Output<String>> sampleSize() {
+        return Optional.ofNullable(this.sampleSize);
     }
 
     @Import(name="sampleType")
-      private final @Nullable Output<String> sampleType;
+    private @Nullable Output<String> sampleType;
 
-    public Output<String> sampleType() {
-        return this.sampleType == null ? Codegen.empty() : this.sampleType;
+    public Optional<Output<String>> sampleType() {
+        return Optional.ofNullable(this.sampleType);
     }
 
     @Import(name="secondInput")
-      private final @Nullable Output<String> secondInput;
+    private @Nullable Output<String> secondInput;
 
-    public Output<String> secondInput() {
-        return this.secondInput == null ? Codegen.empty() : this.secondInput;
+    public Optional<Output<String>> secondInput() {
+        return Optional.ofNullable(this.secondInput);
     }
 
     @Import(name="secondaryInputs")
-      private final @Nullable Output<List<RecipeSecondaryInputArgs>> secondaryInputs;
+    private @Nullable Output<List<RecipeSecondaryInputArgs>> secondaryInputs;
 
-    public Output<List<RecipeSecondaryInputArgs>> secondaryInputs() {
-        return this.secondaryInputs == null ? Codegen.empty() : this.secondaryInputs;
+    public Optional<Output<List<RecipeSecondaryInputArgs>>> secondaryInputs() {
+        return Optional.ofNullable(this.secondaryInputs);
     }
 
     @Import(name="sheetIndexes")
-      private final @Nullable Output<List<Integer>> sheetIndexes;
+    private @Nullable Output<List<Integer>> sheetIndexes;
 
-    public Output<List<Integer>> sheetIndexes() {
-        return this.sheetIndexes == null ? Codegen.empty() : this.sheetIndexes;
+    public Optional<Output<List<Integer>>> sheetIndexes() {
+        return Optional.ofNullable(this.sheetIndexes);
     }
 
     @Import(name="sheetNames")
-      private final @Nullable Output<List<String>> sheetNames;
+    private @Nullable Output<List<String>> sheetNames;
 
-    public Output<List<String>> sheetNames() {
-        return this.sheetNames == null ? Codegen.empty() : this.sheetNames;
+    public Optional<Output<List<String>>> sheetNames() {
+        return Optional.ofNullable(this.sheetNames);
     }
 
     @Import(name="sourceColumn")
-      private final @Nullable Output<String> sourceColumn;
+    private @Nullable Output<String> sourceColumn;
 
-    public Output<String> sourceColumn() {
-        return this.sourceColumn == null ? Codegen.empty() : this.sourceColumn;
+    public Optional<Output<String>> sourceColumn() {
+        return Optional.ofNullable(this.sourceColumn);
     }
 
     @Import(name="sourceColumn1")
-      private final @Nullable Output<String> sourceColumn1;
+    private @Nullable Output<String> sourceColumn1;
 
-    public Output<String> sourceColumn1() {
-        return this.sourceColumn1 == null ? Codegen.empty() : this.sourceColumn1;
+    public Optional<Output<String>> sourceColumn1() {
+        return Optional.ofNullable(this.sourceColumn1);
     }
 
     @Import(name="sourceColumn2")
-      private final @Nullable Output<String> sourceColumn2;
+    private @Nullable Output<String> sourceColumn2;
 
-    public Output<String> sourceColumn2() {
-        return this.sourceColumn2 == null ? Codegen.empty() : this.sourceColumn2;
+    public Optional<Output<String>> sourceColumn2() {
+        return Optional.ofNullable(this.sourceColumn2);
     }
 
     @Import(name="sourceColumns")
-      private final @Nullable Output<String> sourceColumns;
+    private @Nullable Output<String> sourceColumns;
 
-    public Output<String> sourceColumns() {
-        return this.sourceColumns == null ? Codegen.empty() : this.sourceColumns;
+    public Optional<Output<String>> sourceColumns() {
+        return Optional.ofNullable(this.sourceColumns);
     }
 
     @Import(name="startColumnIndex")
-      private final @Nullable Output<String> startColumnIndex;
+    private @Nullable Output<String> startColumnIndex;
 
-    public Output<String> startColumnIndex() {
-        return this.startColumnIndex == null ? Codegen.empty() : this.startColumnIndex;
+    public Optional<Output<String>> startColumnIndex() {
+        return Optional.ofNullable(this.startColumnIndex);
     }
 
     @Import(name="startPattern")
-      private final @Nullable Output<String> startPattern;
+    private @Nullable Output<String> startPattern;
 
-    public Output<String> startPattern() {
-        return this.startPattern == null ? Codegen.empty() : this.startPattern;
+    public Optional<Output<String>> startPattern() {
+        return Optional.ofNullable(this.startPattern);
     }
 
     @Import(name="startPosition")
-      private final @Nullable Output<String> startPosition;
+    private @Nullable Output<String> startPosition;
 
-    public Output<String> startPosition() {
-        return this.startPosition == null ? Codegen.empty() : this.startPosition;
+    public Optional<Output<String>> startPosition() {
+        return Optional.ofNullable(this.startPosition);
     }
 
     @Import(name="startValue")
-      private final @Nullable Output<String> startValue;
+    private @Nullable Output<String> startValue;
 
-    public Output<String> startValue() {
-        return this.startValue == null ? Codegen.empty() : this.startValue;
+    public Optional<Output<String>> startValue() {
+        return Optional.ofNullable(this.startValue);
     }
 
     @Import(name="stemmingMode")
-      private final @Nullable Output<String> stemmingMode;
+    private @Nullable Output<String> stemmingMode;
 
-    public Output<String> stemmingMode() {
-        return this.stemmingMode == null ? Codegen.empty() : this.stemmingMode;
+    public Optional<Output<String>> stemmingMode() {
+        return Optional.ofNullable(this.stemmingMode);
     }
 
     @Import(name="stepCount")
-      private final @Nullable Output<String> stepCount;
+    private @Nullable Output<String> stepCount;
 
-    public Output<String> stepCount() {
-        return this.stepCount == null ? Codegen.empty() : this.stepCount;
+    public Optional<Output<String>> stepCount() {
+        return Optional.ofNullable(this.stepCount);
     }
 
     @Import(name="stepIndex")
-      private final @Nullable Output<String> stepIndex;
+    private @Nullable Output<String> stepIndex;
 
-    public Output<String> stepIndex() {
-        return this.stepIndex == null ? Codegen.empty() : this.stepIndex;
+    public Optional<Output<String>> stepIndex() {
+        return Optional.ofNullable(this.stepIndex);
     }
 
     @Import(name="stopWordsMode")
-      private final @Nullable Output<String> stopWordsMode;
+    private @Nullable Output<String> stopWordsMode;
 
-    public Output<String> stopWordsMode() {
-        return this.stopWordsMode == null ? Codegen.empty() : this.stopWordsMode;
+    public Optional<Output<String>> stopWordsMode() {
+        return Optional.ofNullable(this.stopWordsMode);
     }
 
     @Import(name="strategy")
-      private final @Nullable Output<String> strategy;
+    private @Nullable Output<String> strategy;
 
-    public Output<String> strategy() {
-        return this.strategy == null ? Codegen.empty() : this.strategy;
+    public Optional<Output<String>> strategy() {
+        return Optional.ofNullable(this.strategy);
     }
 
     @Import(name="targetColumn")
-      private final @Nullable Output<String> targetColumn;
+    private @Nullable Output<String> targetColumn;
 
-    public Output<String> targetColumn() {
-        return this.targetColumn == null ? Codegen.empty() : this.targetColumn;
+    public Optional<Output<String>> targetColumn() {
+        return Optional.ofNullable(this.targetColumn);
     }
 
     @Import(name="targetColumnNames")
-      private final @Nullable Output<String> targetColumnNames;
+    private @Nullable Output<String> targetColumnNames;
 
-    public Output<String> targetColumnNames() {
-        return this.targetColumnNames == null ? Codegen.empty() : this.targetColumnNames;
+    public Optional<Output<String>> targetColumnNames() {
+        return Optional.ofNullable(this.targetColumnNames);
     }
 
     @Import(name="targetDateFormat")
-      private final @Nullable Output<String> targetDateFormat;
+    private @Nullable Output<String> targetDateFormat;
 
-    public Output<String> targetDateFormat() {
-        return this.targetDateFormat == null ? Codegen.empty() : this.targetDateFormat;
+    public Optional<Output<String>> targetDateFormat() {
+        return Optional.ofNullable(this.targetDateFormat);
     }
 
     @Import(name="targetIndex")
-      private final @Nullable Output<String> targetIndex;
+    private @Nullable Output<String> targetIndex;
 
-    public Output<String> targetIndex() {
-        return this.targetIndex == null ? Codegen.empty() : this.targetIndex;
+    public Optional<Output<String>> targetIndex() {
+        return Optional.ofNullable(this.targetIndex);
     }
 
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
     @Import(name="tokenizerPattern")
-      private final @Nullable Output<String> tokenizerPattern;
+    private @Nullable Output<String> tokenizerPattern;
 
-    public Output<String> tokenizerPattern() {
-        return this.tokenizerPattern == null ? Codegen.empty() : this.tokenizerPattern;
+    public Optional<Output<String>> tokenizerPattern() {
+        return Optional.ofNullable(this.tokenizerPattern);
     }
 
     @Import(name="trueString")
-      private final @Nullable Output<String> trueString;
+    private @Nullable Output<String> trueString;
 
-    public Output<String> trueString() {
-        return this.trueString == null ? Codegen.empty() : this.trueString;
+    public Optional<Output<String>> trueString() {
+        return Optional.ofNullable(this.trueString);
     }
 
     @Import(name="udfLang")
-      private final @Nullable Output<String> udfLang;
+    private @Nullable Output<String> udfLang;
 
-    public Output<String> udfLang() {
-        return this.udfLang == null ? Codegen.empty() : this.udfLang;
+    public Optional<Output<String>> udfLang() {
+        return Optional.ofNullable(this.udfLang);
     }
 
     @Import(name="units")
-      private final @Nullable Output<String> units;
+    private @Nullable Output<String> units;
 
-    public Output<String> units() {
-        return this.units == null ? Codegen.empty() : this.units;
+    public Optional<Output<String>> units() {
+        return Optional.ofNullable(this.units);
     }
 
     @Import(name="unpivotColumn")
-      private final @Nullable Output<String> unpivotColumn;
+    private @Nullable Output<String> unpivotColumn;
 
-    public Output<String> unpivotColumn() {
-        return this.unpivotColumn == null ? Codegen.empty() : this.unpivotColumn;
+    public Optional<Output<String>> unpivotColumn() {
+        return Optional.ofNullable(this.unpivotColumn);
     }
 
     @Import(name="upperBound")
-      private final @Nullable Output<String> upperBound;
+    private @Nullable Output<String> upperBound;
 
-    public Output<String> upperBound() {
-        return this.upperBound == null ? Codegen.empty() : this.upperBound;
+    public Optional<Output<String>> upperBound() {
+        return Optional.ofNullable(this.upperBound);
     }
 
     @Import(name="useNewDataFrame")
-      private final @Nullable Output<String> useNewDataFrame;
+    private @Nullable Output<String> useNewDataFrame;
 
-    public Output<String> useNewDataFrame() {
-        return this.useNewDataFrame == null ? Codegen.empty() : this.useNewDataFrame;
+    public Optional<Output<String>> useNewDataFrame() {
+        return Optional.ofNullable(this.useNewDataFrame);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     @Import(name="value1")
-      private final @Nullable Output<String> value1;
+    private @Nullable Output<String> value1;
 
-    public Output<String> value1() {
-        return this.value1 == null ? Codegen.empty() : this.value1;
+    public Optional<Output<String>> value1() {
+        return Optional.ofNullable(this.value1);
     }
 
     @Import(name="value2")
-      private final @Nullable Output<String> value2;
+    private @Nullable Output<String> value2;
 
-    public Output<String> value2() {
-        return this.value2 == null ? Codegen.empty() : this.value2;
+    public Optional<Output<String>> value2() {
+        return Optional.ofNullable(this.value2);
     }
 
     @Import(name="valueColumn")
-      private final @Nullable Output<String> valueColumn;
+    private @Nullable Output<String> valueColumn;
 
-    public Output<String> valueColumn() {
-        return this.valueColumn == null ? Codegen.empty() : this.valueColumn;
+    public Optional<Output<String>> valueColumn() {
+        return Optional.ofNullable(this.valueColumn);
     }
 
     @Import(name="viewFrame")
-      private final @Nullable Output<String> viewFrame;
+    private @Nullable Output<String> viewFrame;
 
-    public Output<String> viewFrame() {
-        return this.viewFrame == null ? Codegen.empty() : this.viewFrame;
+    public Optional<Output<String>> viewFrame() {
+        return Optional.ofNullable(this.viewFrame);
     }
 
-    public RecipeParametersArgs(
-        @Nullable Output<String> aggregateFunction,
-        @Nullable Output<String> base,
-        @Nullable Output<String> caseStatement,
-        @Nullable Output<String> categoryMap,
-        @Nullable Output<String> charsToRemove,
-        @Nullable Output<String> collapseConsecutiveWhitespace,
-        @Nullable Output<String> columnDataType,
-        @Nullable Output<String> columnRange,
-        @Nullable Output<String> count,
-        @Nullable Output<String> customCharacters,
-        @Nullable Output<String> customStopWords,
-        @Nullable Output<String> customValue,
-        @Nullable Output<String> datasetsColumns,
-        @Nullable Output<String> dateAddValue,
-        @Nullable Output<String> dateTimeFormat,
-        @Nullable Output<String> dateTimeParameters,
-        @Nullable Output<String> deleteOtherRows,
-        @Nullable Output<String> delimiter,
-        @Nullable Output<String> endPattern,
-        @Nullable Output<String> endPosition,
-        @Nullable Output<String> endValue,
-        @Nullable Output<String> expandContractions,
-        @Nullable Output<String> exponent,
-        @Nullable Output<String> falseString,
-        @Nullable Output<String> groupByAggFunctionOptions,
-        @Nullable Output<String> groupByColumns,
-        @Nullable Output<String> hiddenColumns,
-        @Nullable Output<String> ignoreCase,
-        @Nullable Output<String> includeInSplit,
-        @Nullable Output<RecipeParametersInputPropertiesArgs> input,
-        @Nullable Output<String> interval,
-        @Nullable Output<String> isText,
-        @Nullable Output<String> joinKeys,
-        @Nullable Output<String> joinType,
-        @Nullable Output<String> leftColumns,
-        @Nullable Output<String> limit,
-        @Nullable Output<String> lowerBound,
-        @Nullable Output<String> mapType,
-        @Nullable Output<String> modeType,
-        @Nullable Output<Boolean> multiLine,
-        @Nullable Output<String> numRows,
-        @Nullable Output<String> numRowsAfter,
-        @Nullable Output<String> numRowsBefore,
-        @Nullable Output<String> orderByColumn,
-        @Nullable Output<String> orderByColumns,
-        @Nullable Output<String> other,
-        @Nullable Output<String> pattern,
-        @Nullable Output<String> patternOption1,
-        @Nullable Output<String> patternOption2,
-        @Nullable Output<String> patternOptions,
-        @Nullable Output<String> period,
-        @Nullable Output<String> position,
-        @Nullable Output<String> removeAllPunctuation,
-        @Nullable Output<String> removeAllQuotes,
-        @Nullable Output<String> removeAllWhitespace,
-        @Nullable Output<String> removeCustomCharacters,
-        @Nullable Output<String> removeCustomValue,
-        @Nullable Output<String> removeLeadingAndTrailingPunctuation,
-        @Nullable Output<String> removeLeadingAndTrailingQuotes,
-        @Nullable Output<String> removeLeadingAndTrailingWhitespace,
-        @Nullable Output<String> removeLetters,
-        @Nullable Output<String> removeNumbers,
-        @Nullable Output<String> removeSourceColumn,
-        @Nullable Output<String> removeSpecialCharacters,
-        @Nullable Output<String> rightColumns,
-        @Nullable Output<String> sampleSize,
-        @Nullable Output<String> sampleType,
-        @Nullable Output<String> secondInput,
-        @Nullable Output<List<RecipeSecondaryInputArgs>> secondaryInputs,
-        @Nullable Output<List<Integer>> sheetIndexes,
-        @Nullable Output<List<String>> sheetNames,
-        @Nullable Output<String> sourceColumn,
-        @Nullable Output<String> sourceColumn1,
-        @Nullable Output<String> sourceColumn2,
-        @Nullable Output<String> sourceColumns,
-        @Nullable Output<String> startColumnIndex,
-        @Nullable Output<String> startPattern,
-        @Nullable Output<String> startPosition,
-        @Nullable Output<String> startValue,
-        @Nullable Output<String> stemmingMode,
-        @Nullable Output<String> stepCount,
-        @Nullable Output<String> stepIndex,
-        @Nullable Output<String> stopWordsMode,
-        @Nullable Output<String> strategy,
-        @Nullable Output<String> targetColumn,
-        @Nullable Output<String> targetColumnNames,
-        @Nullable Output<String> targetDateFormat,
-        @Nullable Output<String> targetIndex,
-        @Nullable Output<String> timeZone,
-        @Nullable Output<String> tokenizerPattern,
-        @Nullable Output<String> trueString,
-        @Nullable Output<String> udfLang,
-        @Nullable Output<String> units,
-        @Nullable Output<String> unpivotColumn,
-        @Nullable Output<String> upperBound,
-        @Nullable Output<String> useNewDataFrame,
-        @Nullable Output<String> value,
-        @Nullable Output<String> value1,
-        @Nullable Output<String> value2,
-        @Nullable Output<String> valueColumn,
-        @Nullable Output<String> viewFrame) {
-        this.aggregateFunction = aggregateFunction;
-        this.base = base;
-        this.caseStatement = caseStatement;
-        this.categoryMap = categoryMap;
-        this.charsToRemove = charsToRemove;
-        this.collapseConsecutiveWhitespace = collapseConsecutiveWhitespace;
-        this.columnDataType = columnDataType;
-        this.columnRange = columnRange;
-        this.count = count;
-        this.customCharacters = customCharacters;
-        this.customStopWords = customStopWords;
-        this.customValue = customValue;
-        this.datasetsColumns = datasetsColumns;
-        this.dateAddValue = dateAddValue;
-        this.dateTimeFormat = dateTimeFormat;
-        this.dateTimeParameters = dateTimeParameters;
-        this.deleteOtherRows = deleteOtherRows;
-        this.delimiter = delimiter;
-        this.endPattern = endPattern;
-        this.endPosition = endPosition;
-        this.endValue = endValue;
-        this.expandContractions = expandContractions;
-        this.exponent = exponent;
-        this.falseString = falseString;
-        this.groupByAggFunctionOptions = groupByAggFunctionOptions;
-        this.groupByColumns = groupByColumns;
-        this.hiddenColumns = hiddenColumns;
-        this.ignoreCase = ignoreCase;
-        this.includeInSplit = includeInSplit;
-        this.input = input;
-        this.interval = interval;
-        this.isText = isText;
-        this.joinKeys = joinKeys;
-        this.joinType = joinType;
-        this.leftColumns = leftColumns;
-        this.limit = limit;
-        this.lowerBound = lowerBound;
-        this.mapType = mapType;
-        this.modeType = modeType;
-        this.multiLine = multiLine;
-        this.numRows = numRows;
-        this.numRowsAfter = numRowsAfter;
-        this.numRowsBefore = numRowsBefore;
-        this.orderByColumn = orderByColumn;
-        this.orderByColumns = orderByColumns;
-        this.other = other;
-        this.pattern = pattern;
-        this.patternOption1 = patternOption1;
-        this.patternOption2 = patternOption2;
-        this.patternOptions = patternOptions;
-        this.period = period;
-        this.position = position;
-        this.removeAllPunctuation = removeAllPunctuation;
-        this.removeAllQuotes = removeAllQuotes;
-        this.removeAllWhitespace = removeAllWhitespace;
-        this.removeCustomCharacters = removeCustomCharacters;
-        this.removeCustomValue = removeCustomValue;
-        this.removeLeadingAndTrailingPunctuation = removeLeadingAndTrailingPunctuation;
-        this.removeLeadingAndTrailingQuotes = removeLeadingAndTrailingQuotes;
-        this.removeLeadingAndTrailingWhitespace = removeLeadingAndTrailingWhitespace;
-        this.removeLetters = removeLetters;
-        this.removeNumbers = removeNumbers;
-        this.removeSourceColumn = removeSourceColumn;
-        this.removeSpecialCharacters = removeSpecialCharacters;
-        this.rightColumns = rightColumns;
-        this.sampleSize = sampleSize;
-        this.sampleType = sampleType;
-        this.secondInput = secondInput;
-        this.secondaryInputs = secondaryInputs;
-        this.sheetIndexes = sheetIndexes;
-        this.sheetNames = sheetNames;
-        this.sourceColumn = sourceColumn;
-        this.sourceColumn1 = sourceColumn1;
-        this.sourceColumn2 = sourceColumn2;
-        this.sourceColumns = sourceColumns;
-        this.startColumnIndex = startColumnIndex;
-        this.startPattern = startPattern;
-        this.startPosition = startPosition;
-        this.startValue = startValue;
-        this.stemmingMode = stemmingMode;
-        this.stepCount = stepCount;
-        this.stepIndex = stepIndex;
-        this.stopWordsMode = stopWordsMode;
-        this.strategy = strategy;
-        this.targetColumn = targetColumn;
-        this.targetColumnNames = targetColumnNames;
-        this.targetDateFormat = targetDateFormat;
-        this.targetIndex = targetIndex;
-        this.timeZone = timeZone;
-        this.tokenizerPattern = tokenizerPattern;
-        this.trueString = trueString;
-        this.udfLang = udfLang;
-        this.units = units;
-        this.unpivotColumn = unpivotColumn;
-        this.upperBound = upperBound;
-        this.useNewDataFrame = useNewDataFrame;
-        this.value = value;
-        this.value1 = value1;
-        this.value2 = value2;
-        this.valueColumn = valueColumn;
-        this.viewFrame = viewFrame;
-    }
+    private RecipeParametersArgs() {}
 
-    private RecipeParametersArgs() {
-        this.aggregateFunction = Codegen.empty();
-        this.base = Codegen.empty();
-        this.caseStatement = Codegen.empty();
-        this.categoryMap = Codegen.empty();
-        this.charsToRemove = Codegen.empty();
-        this.collapseConsecutiveWhitespace = Codegen.empty();
-        this.columnDataType = Codegen.empty();
-        this.columnRange = Codegen.empty();
-        this.count = Codegen.empty();
-        this.customCharacters = Codegen.empty();
-        this.customStopWords = Codegen.empty();
-        this.customValue = Codegen.empty();
-        this.datasetsColumns = Codegen.empty();
-        this.dateAddValue = Codegen.empty();
-        this.dateTimeFormat = Codegen.empty();
-        this.dateTimeParameters = Codegen.empty();
-        this.deleteOtherRows = Codegen.empty();
-        this.delimiter = Codegen.empty();
-        this.endPattern = Codegen.empty();
-        this.endPosition = Codegen.empty();
-        this.endValue = Codegen.empty();
-        this.expandContractions = Codegen.empty();
-        this.exponent = Codegen.empty();
-        this.falseString = Codegen.empty();
-        this.groupByAggFunctionOptions = Codegen.empty();
-        this.groupByColumns = Codegen.empty();
-        this.hiddenColumns = Codegen.empty();
-        this.ignoreCase = Codegen.empty();
-        this.includeInSplit = Codegen.empty();
-        this.input = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.isText = Codegen.empty();
-        this.joinKeys = Codegen.empty();
-        this.joinType = Codegen.empty();
-        this.leftColumns = Codegen.empty();
-        this.limit = Codegen.empty();
-        this.lowerBound = Codegen.empty();
-        this.mapType = Codegen.empty();
-        this.modeType = Codegen.empty();
-        this.multiLine = Codegen.empty();
-        this.numRows = Codegen.empty();
-        this.numRowsAfter = Codegen.empty();
-        this.numRowsBefore = Codegen.empty();
-        this.orderByColumn = Codegen.empty();
-        this.orderByColumns = Codegen.empty();
-        this.other = Codegen.empty();
-        this.pattern = Codegen.empty();
-        this.patternOption1 = Codegen.empty();
-        this.patternOption2 = Codegen.empty();
-        this.patternOptions = Codegen.empty();
-        this.period = Codegen.empty();
-        this.position = Codegen.empty();
-        this.removeAllPunctuation = Codegen.empty();
-        this.removeAllQuotes = Codegen.empty();
-        this.removeAllWhitespace = Codegen.empty();
-        this.removeCustomCharacters = Codegen.empty();
-        this.removeCustomValue = Codegen.empty();
-        this.removeLeadingAndTrailingPunctuation = Codegen.empty();
-        this.removeLeadingAndTrailingQuotes = Codegen.empty();
-        this.removeLeadingAndTrailingWhitespace = Codegen.empty();
-        this.removeLetters = Codegen.empty();
-        this.removeNumbers = Codegen.empty();
-        this.removeSourceColumn = Codegen.empty();
-        this.removeSpecialCharacters = Codegen.empty();
-        this.rightColumns = Codegen.empty();
-        this.sampleSize = Codegen.empty();
-        this.sampleType = Codegen.empty();
-        this.secondInput = Codegen.empty();
-        this.secondaryInputs = Codegen.empty();
-        this.sheetIndexes = Codegen.empty();
-        this.sheetNames = Codegen.empty();
-        this.sourceColumn = Codegen.empty();
-        this.sourceColumn1 = Codegen.empty();
-        this.sourceColumn2 = Codegen.empty();
-        this.sourceColumns = Codegen.empty();
-        this.startColumnIndex = Codegen.empty();
-        this.startPattern = Codegen.empty();
-        this.startPosition = Codegen.empty();
-        this.startValue = Codegen.empty();
-        this.stemmingMode = Codegen.empty();
-        this.stepCount = Codegen.empty();
-        this.stepIndex = Codegen.empty();
-        this.stopWordsMode = Codegen.empty();
-        this.strategy = Codegen.empty();
-        this.targetColumn = Codegen.empty();
-        this.targetColumnNames = Codegen.empty();
-        this.targetDateFormat = Codegen.empty();
-        this.targetIndex = Codegen.empty();
-        this.timeZone = Codegen.empty();
-        this.tokenizerPattern = Codegen.empty();
-        this.trueString = Codegen.empty();
-        this.udfLang = Codegen.empty();
-        this.units = Codegen.empty();
-        this.unpivotColumn = Codegen.empty();
-        this.upperBound = Codegen.empty();
-        this.useNewDataFrame = Codegen.empty();
-        this.value = Codegen.empty();
-        this.value1 = Codegen.empty();
-        this.value2 = Codegen.empty();
-        this.valueColumn = Codegen.empty();
-        this.viewFrame = Codegen.empty();
+    private RecipeParametersArgs(RecipeParametersArgs $) {
+        this.aggregateFunction = $.aggregateFunction;
+        this.base = $.base;
+        this.caseStatement = $.caseStatement;
+        this.categoryMap = $.categoryMap;
+        this.charsToRemove = $.charsToRemove;
+        this.collapseConsecutiveWhitespace = $.collapseConsecutiveWhitespace;
+        this.columnDataType = $.columnDataType;
+        this.columnRange = $.columnRange;
+        this.count = $.count;
+        this.customCharacters = $.customCharacters;
+        this.customStopWords = $.customStopWords;
+        this.customValue = $.customValue;
+        this.datasetsColumns = $.datasetsColumns;
+        this.dateAddValue = $.dateAddValue;
+        this.dateTimeFormat = $.dateTimeFormat;
+        this.dateTimeParameters = $.dateTimeParameters;
+        this.deleteOtherRows = $.deleteOtherRows;
+        this.delimiter = $.delimiter;
+        this.endPattern = $.endPattern;
+        this.endPosition = $.endPosition;
+        this.endValue = $.endValue;
+        this.expandContractions = $.expandContractions;
+        this.exponent = $.exponent;
+        this.falseString = $.falseString;
+        this.groupByAggFunctionOptions = $.groupByAggFunctionOptions;
+        this.groupByColumns = $.groupByColumns;
+        this.hiddenColumns = $.hiddenColumns;
+        this.ignoreCase = $.ignoreCase;
+        this.includeInSplit = $.includeInSplit;
+        this.input = $.input;
+        this.interval = $.interval;
+        this.isText = $.isText;
+        this.joinKeys = $.joinKeys;
+        this.joinType = $.joinType;
+        this.leftColumns = $.leftColumns;
+        this.limit = $.limit;
+        this.lowerBound = $.lowerBound;
+        this.mapType = $.mapType;
+        this.modeType = $.modeType;
+        this.multiLine = $.multiLine;
+        this.numRows = $.numRows;
+        this.numRowsAfter = $.numRowsAfter;
+        this.numRowsBefore = $.numRowsBefore;
+        this.orderByColumn = $.orderByColumn;
+        this.orderByColumns = $.orderByColumns;
+        this.other = $.other;
+        this.pattern = $.pattern;
+        this.patternOption1 = $.patternOption1;
+        this.patternOption2 = $.patternOption2;
+        this.patternOptions = $.patternOptions;
+        this.period = $.period;
+        this.position = $.position;
+        this.removeAllPunctuation = $.removeAllPunctuation;
+        this.removeAllQuotes = $.removeAllQuotes;
+        this.removeAllWhitespace = $.removeAllWhitespace;
+        this.removeCustomCharacters = $.removeCustomCharacters;
+        this.removeCustomValue = $.removeCustomValue;
+        this.removeLeadingAndTrailingPunctuation = $.removeLeadingAndTrailingPunctuation;
+        this.removeLeadingAndTrailingQuotes = $.removeLeadingAndTrailingQuotes;
+        this.removeLeadingAndTrailingWhitespace = $.removeLeadingAndTrailingWhitespace;
+        this.removeLetters = $.removeLetters;
+        this.removeNumbers = $.removeNumbers;
+        this.removeSourceColumn = $.removeSourceColumn;
+        this.removeSpecialCharacters = $.removeSpecialCharacters;
+        this.rightColumns = $.rightColumns;
+        this.sampleSize = $.sampleSize;
+        this.sampleType = $.sampleType;
+        this.secondInput = $.secondInput;
+        this.secondaryInputs = $.secondaryInputs;
+        this.sheetIndexes = $.sheetIndexes;
+        this.sheetNames = $.sheetNames;
+        this.sourceColumn = $.sourceColumn;
+        this.sourceColumn1 = $.sourceColumn1;
+        this.sourceColumn2 = $.sourceColumn2;
+        this.sourceColumns = $.sourceColumns;
+        this.startColumnIndex = $.startColumnIndex;
+        this.startPattern = $.startPattern;
+        this.startPosition = $.startPosition;
+        this.startValue = $.startValue;
+        this.stemmingMode = $.stemmingMode;
+        this.stepCount = $.stepCount;
+        this.stepIndex = $.stepIndex;
+        this.stopWordsMode = $.stopWordsMode;
+        this.strategy = $.strategy;
+        this.targetColumn = $.targetColumn;
+        this.targetColumnNames = $.targetColumnNames;
+        this.targetDateFormat = $.targetDateFormat;
+        this.targetIndex = $.targetIndex;
+        this.timeZone = $.timeZone;
+        this.tokenizerPattern = $.tokenizerPattern;
+        this.trueString = $.trueString;
+        this.udfLang = $.udfLang;
+        this.units = $.units;
+        this.unpivotColumn = $.unpivotColumn;
+        this.upperBound = $.upperBound;
+        this.useNewDataFrame = $.useNewDataFrame;
+        this.value = $.value;
+        this.value1 = $.value1;
+        this.value2 = $.value2;
+        this.valueColumn = $.valueColumn;
+        this.viewFrame = $.viewFrame;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aggregateFunction;
-        private @Nullable Output<String> base;
-        private @Nullable Output<String> caseStatement;
-        private @Nullable Output<String> categoryMap;
-        private @Nullable Output<String> charsToRemove;
-        private @Nullable Output<String> collapseConsecutiveWhitespace;
-        private @Nullable Output<String> columnDataType;
-        private @Nullable Output<String> columnRange;
-        private @Nullable Output<String> count;
-        private @Nullable Output<String> customCharacters;
-        private @Nullable Output<String> customStopWords;
-        private @Nullable Output<String> customValue;
-        private @Nullable Output<String> datasetsColumns;
-        private @Nullable Output<String> dateAddValue;
-        private @Nullable Output<String> dateTimeFormat;
-        private @Nullable Output<String> dateTimeParameters;
-        private @Nullable Output<String> deleteOtherRows;
-        private @Nullable Output<String> delimiter;
-        private @Nullable Output<String> endPattern;
-        private @Nullable Output<String> endPosition;
-        private @Nullable Output<String> endValue;
-        private @Nullable Output<String> expandContractions;
-        private @Nullable Output<String> exponent;
-        private @Nullable Output<String> falseString;
-        private @Nullable Output<String> groupByAggFunctionOptions;
-        private @Nullable Output<String> groupByColumns;
-        private @Nullable Output<String> hiddenColumns;
-        private @Nullable Output<String> ignoreCase;
-        private @Nullable Output<String> includeInSplit;
-        private @Nullable Output<RecipeParametersInputPropertiesArgs> input;
-        private @Nullable Output<String> interval;
-        private @Nullable Output<String> isText;
-        private @Nullable Output<String> joinKeys;
-        private @Nullable Output<String> joinType;
-        private @Nullable Output<String> leftColumns;
-        private @Nullable Output<String> limit;
-        private @Nullable Output<String> lowerBound;
-        private @Nullable Output<String> mapType;
-        private @Nullable Output<String> modeType;
-        private @Nullable Output<Boolean> multiLine;
-        private @Nullable Output<String> numRows;
-        private @Nullable Output<String> numRowsAfter;
-        private @Nullable Output<String> numRowsBefore;
-        private @Nullable Output<String> orderByColumn;
-        private @Nullable Output<String> orderByColumns;
-        private @Nullable Output<String> other;
-        private @Nullable Output<String> pattern;
-        private @Nullable Output<String> patternOption1;
-        private @Nullable Output<String> patternOption2;
-        private @Nullable Output<String> patternOptions;
-        private @Nullable Output<String> period;
-        private @Nullable Output<String> position;
-        private @Nullable Output<String> removeAllPunctuation;
-        private @Nullable Output<String> removeAllQuotes;
-        private @Nullable Output<String> removeAllWhitespace;
-        private @Nullable Output<String> removeCustomCharacters;
-        private @Nullable Output<String> removeCustomValue;
-        private @Nullable Output<String> removeLeadingAndTrailingPunctuation;
-        private @Nullable Output<String> removeLeadingAndTrailingQuotes;
-        private @Nullable Output<String> removeLeadingAndTrailingWhitespace;
-        private @Nullable Output<String> removeLetters;
-        private @Nullable Output<String> removeNumbers;
-        private @Nullable Output<String> removeSourceColumn;
-        private @Nullable Output<String> removeSpecialCharacters;
-        private @Nullable Output<String> rightColumns;
-        private @Nullable Output<String> sampleSize;
-        private @Nullable Output<String> sampleType;
-        private @Nullable Output<String> secondInput;
-        private @Nullable Output<List<RecipeSecondaryInputArgs>> secondaryInputs;
-        private @Nullable Output<List<Integer>> sheetIndexes;
-        private @Nullable Output<List<String>> sheetNames;
-        private @Nullable Output<String> sourceColumn;
-        private @Nullable Output<String> sourceColumn1;
-        private @Nullable Output<String> sourceColumn2;
-        private @Nullable Output<String> sourceColumns;
-        private @Nullable Output<String> startColumnIndex;
-        private @Nullable Output<String> startPattern;
-        private @Nullable Output<String> startPosition;
-        private @Nullable Output<String> startValue;
-        private @Nullable Output<String> stemmingMode;
-        private @Nullable Output<String> stepCount;
-        private @Nullable Output<String> stepIndex;
-        private @Nullable Output<String> stopWordsMode;
-        private @Nullable Output<String> strategy;
-        private @Nullable Output<String> targetColumn;
-        private @Nullable Output<String> targetColumnNames;
-        private @Nullable Output<String> targetDateFormat;
-        private @Nullable Output<String> targetIndex;
-        private @Nullable Output<String> timeZone;
-        private @Nullable Output<String> tokenizerPattern;
-        private @Nullable Output<String> trueString;
-        private @Nullable Output<String> udfLang;
-        private @Nullable Output<String> units;
-        private @Nullable Output<String> unpivotColumn;
-        private @Nullable Output<String> upperBound;
-        private @Nullable Output<String> useNewDataFrame;
-        private @Nullable Output<String> value;
-        private @Nullable Output<String> value1;
-        private @Nullable Output<String> value2;
-        private @Nullable Output<String> valueColumn;
-        private @Nullable Output<String> viewFrame;
+        private RecipeParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeParametersArgs();
         }
 
         public Builder(RecipeParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregateFunction = defaults.aggregateFunction;
-    	      this.base = defaults.base;
-    	      this.caseStatement = defaults.caseStatement;
-    	      this.categoryMap = defaults.categoryMap;
-    	      this.charsToRemove = defaults.charsToRemove;
-    	      this.collapseConsecutiveWhitespace = defaults.collapseConsecutiveWhitespace;
-    	      this.columnDataType = defaults.columnDataType;
-    	      this.columnRange = defaults.columnRange;
-    	      this.count = defaults.count;
-    	      this.customCharacters = defaults.customCharacters;
-    	      this.customStopWords = defaults.customStopWords;
-    	      this.customValue = defaults.customValue;
-    	      this.datasetsColumns = defaults.datasetsColumns;
-    	      this.dateAddValue = defaults.dateAddValue;
-    	      this.dateTimeFormat = defaults.dateTimeFormat;
-    	      this.dateTimeParameters = defaults.dateTimeParameters;
-    	      this.deleteOtherRows = defaults.deleteOtherRows;
-    	      this.delimiter = defaults.delimiter;
-    	      this.endPattern = defaults.endPattern;
-    	      this.endPosition = defaults.endPosition;
-    	      this.endValue = defaults.endValue;
-    	      this.expandContractions = defaults.expandContractions;
-    	      this.exponent = defaults.exponent;
-    	      this.falseString = defaults.falseString;
-    	      this.groupByAggFunctionOptions = defaults.groupByAggFunctionOptions;
-    	      this.groupByColumns = defaults.groupByColumns;
-    	      this.hiddenColumns = defaults.hiddenColumns;
-    	      this.ignoreCase = defaults.ignoreCase;
-    	      this.includeInSplit = defaults.includeInSplit;
-    	      this.input = defaults.input;
-    	      this.interval = defaults.interval;
-    	      this.isText = defaults.isText;
-    	      this.joinKeys = defaults.joinKeys;
-    	      this.joinType = defaults.joinType;
-    	      this.leftColumns = defaults.leftColumns;
-    	      this.limit = defaults.limit;
-    	      this.lowerBound = defaults.lowerBound;
-    	      this.mapType = defaults.mapType;
-    	      this.modeType = defaults.modeType;
-    	      this.multiLine = defaults.multiLine;
-    	      this.numRows = defaults.numRows;
-    	      this.numRowsAfter = defaults.numRowsAfter;
-    	      this.numRowsBefore = defaults.numRowsBefore;
-    	      this.orderByColumn = defaults.orderByColumn;
-    	      this.orderByColumns = defaults.orderByColumns;
-    	      this.other = defaults.other;
-    	      this.pattern = defaults.pattern;
-    	      this.patternOption1 = defaults.patternOption1;
-    	      this.patternOption2 = defaults.patternOption2;
-    	      this.patternOptions = defaults.patternOptions;
-    	      this.period = defaults.period;
-    	      this.position = defaults.position;
-    	      this.removeAllPunctuation = defaults.removeAllPunctuation;
-    	      this.removeAllQuotes = defaults.removeAllQuotes;
-    	      this.removeAllWhitespace = defaults.removeAllWhitespace;
-    	      this.removeCustomCharacters = defaults.removeCustomCharacters;
-    	      this.removeCustomValue = defaults.removeCustomValue;
-    	      this.removeLeadingAndTrailingPunctuation = defaults.removeLeadingAndTrailingPunctuation;
-    	      this.removeLeadingAndTrailingQuotes = defaults.removeLeadingAndTrailingQuotes;
-    	      this.removeLeadingAndTrailingWhitespace = defaults.removeLeadingAndTrailingWhitespace;
-    	      this.removeLetters = defaults.removeLetters;
-    	      this.removeNumbers = defaults.removeNumbers;
-    	      this.removeSourceColumn = defaults.removeSourceColumn;
-    	      this.removeSpecialCharacters = defaults.removeSpecialCharacters;
-    	      this.rightColumns = defaults.rightColumns;
-    	      this.sampleSize = defaults.sampleSize;
-    	      this.sampleType = defaults.sampleType;
-    	      this.secondInput = defaults.secondInput;
-    	      this.secondaryInputs = defaults.secondaryInputs;
-    	      this.sheetIndexes = defaults.sheetIndexes;
-    	      this.sheetNames = defaults.sheetNames;
-    	      this.sourceColumn = defaults.sourceColumn;
-    	      this.sourceColumn1 = defaults.sourceColumn1;
-    	      this.sourceColumn2 = defaults.sourceColumn2;
-    	      this.sourceColumns = defaults.sourceColumns;
-    	      this.startColumnIndex = defaults.startColumnIndex;
-    	      this.startPattern = defaults.startPattern;
-    	      this.startPosition = defaults.startPosition;
-    	      this.startValue = defaults.startValue;
-    	      this.stemmingMode = defaults.stemmingMode;
-    	      this.stepCount = defaults.stepCount;
-    	      this.stepIndex = defaults.stepIndex;
-    	      this.stopWordsMode = defaults.stopWordsMode;
-    	      this.strategy = defaults.strategy;
-    	      this.targetColumn = defaults.targetColumn;
-    	      this.targetColumnNames = defaults.targetColumnNames;
-    	      this.targetDateFormat = defaults.targetDateFormat;
-    	      this.targetIndex = defaults.targetIndex;
-    	      this.timeZone = defaults.timeZone;
-    	      this.tokenizerPattern = defaults.tokenizerPattern;
-    	      this.trueString = defaults.trueString;
-    	      this.udfLang = defaults.udfLang;
-    	      this.units = defaults.units;
-    	      this.unpivotColumn = defaults.unpivotColumn;
-    	      this.upperBound = defaults.upperBound;
-    	      this.useNewDataFrame = defaults.useNewDataFrame;
-    	      this.value = defaults.value;
-    	      this.value1 = defaults.value1;
-    	      this.value2 = defaults.value2;
-    	      this.valueColumn = defaults.valueColumn;
-    	      this.viewFrame = defaults.viewFrame;
+            $ = new RecipeParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregateFunction(@Nullable Output<String> aggregateFunction) {
-            this.aggregateFunction = aggregateFunction;
+            $.aggregateFunction = aggregateFunction;
             return this;
         }
-        public Builder aggregateFunction(@Nullable String aggregateFunction) {
-            this.aggregateFunction = Codegen.ofNullable(aggregateFunction);
-            return this;
+
+        public Builder aggregateFunction(String aggregateFunction) {
+            return aggregateFunction(Output.of(aggregateFunction));
         }
+
         public Builder base(@Nullable Output<String> base) {
-            this.base = base;
+            $.base = base;
             return this;
         }
-        public Builder base(@Nullable String base) {
-            this.base = Codegen.ofNullable(base);
-            return this;
+
+        public Builder base(String base) {
+            return base(Output.of(base));
         }
+
         public Builder caseStatement(@Nullable Output<String> caseStatement) {
-            this.caseStatement = caseStatement;
+            $.caseStatement = caseStatement;
             return this;
         }
-        public Builder caseStatement(@Nullable String caseStatement) {
-            this.caseStatement = Codegen.ofNullable(caseStatement);
-            return this;
+
+        public Builder caseStatement(String caseStatement) {
+            return caseStatement(Output.of(caseStatement));
         }
+
         public Builder categoryMap(@Nullable Output<String> categoryMap) {
-            this.categoryMap = categoryMap;
+            $.categoryMap = categoryMap;
             return this;
         }
-        public Builder categoryMap(@Nullable String categoryMap) {
-            this.categoryMap = Codegen.ofNullable(categoryMap);
-            return this;
+
+        public Builder categoryMap(String categoryMap) {
+            return categoryMap(Output.of(categoryMap));
         }
+
         public Builder charsToRemove(@Nullable Output<String> charsToRemove) {
-            this.charsToRemove = charsToRemove;
+            $.charsToRemove = charsToRemove;
             return this;
         }
-        public Builder charsToRemove(@Nullable String charsToRemove) {
-            this.charsToRemove = Codegen.ofNullable(charsToRemove);
-            return this;
+
+        public Builder charsToRemove(String charsToRemove) {
+            return charsToRemove(Output.of(charsToRemove));
         }
+
         public Builder collapseConsecutiveWhitespace(@Nullable Output<String> collapseConsecutiveWhitespace) {
-            this.collapseConsecutiveWhitespace = collapseConsecutiveWhitespace;
+            $.collapseConsecutiveWhitespace = collapseConsecutiveWhitespace;
             return this;
         }
-        public Builder collapseConsecutiveWhitespace(@Nullable String collapseConsecutiveWhitespace) {
-            this.collapseConsecutiveWhitespace = Codegen.ofNullable(collapseConsecutiveWhitespace);
-            return this;
+
+        public Builder collapseConsecutiveWhitespace(String collapseConsecutiveWhitespace) {
+            return collapseConsecutiveWhitespace(Output.of(collapseConsecutiveWhitespace));
         }
+
         public Builder columnDataType(@Nullable Output<String> columnDataType) {
-            this.columnDataType = columnDataType;
+            $.columnDataType = columnDataType;
             return this;
         }
-        public Builder columnDataType(@Nullable String columnDataType) {
-            this.columnDataType = Codegen.ofNullable(columnDataType);
-            return this;
+
+        public Builder columnDataType(String columnDataType) {
+            return columnDataType(Output.of(columnDataType));
         }
+
         public Builder columnRange(@Nullable Output<String> columnRange) {
-            this.columnRange = columnRange;
+            $.columnRange = columnRange;
             return this;
         }
-        public Builder columnRange(@Nullable String columnRange) {
-            this.columnRange = Codegen.ofNullable(columnRange);
-            return this;
+
+        public Builder columnRange(String columnRange) {
+            return columnRange(Output.of(columnRange));
         }
+
         public Builder count(@Nullable Output<String> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable String count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(String count) {
+            return count(Output.of(count));
         }
+
         public Builder customCharacters(@Nullable Output<String> customCharacters) {
-            this.customCharacters = customCharacters;
+            $.customCharacters = customCharacters;
             return this;
         }
-        public Builder customCharacters(@Nullable String customCharacters) {
-            this.customCharacters = Codegen.ofNullable(customCharacters);
-            return this;
+
+        public Builder customCharacters(String customCharacters) {
+            return customCharacters(Output.of(customCharacters));
         }
+
         public Builder customStopWords(@Nullable Output<String> customStopWords) {
-            this.customStopWords = customStopWords;
+            $.customStopWords = customStopWords;
             return this;
         }
-        public Builder customStopWords(@Nullable String customStopWords) {
-            this.customStopWords = Codegen.ofNullable(customStopWords);
-            return this;
+
+        public Builder customStopWords(String customStopWords) {
+            return customStopWords(Output.of(customStopWords));
         }
+
         public Builder customValue(@Nullable Output<String> customValue) {
-            this.customValue = customValue;
+            $.customValue = customValue;
             return this;
         }
-        public Builder customValue(@Nullable String customValue) {
-            this.customValue = Codegen.ofNullable(customValue);
-            return this;
+
+        public Builder customValue(String customValue) {
+            return customValue(Output.of(customValue));
         }
+
         public Builder datasetsColumns(@Nullable Output<String> datasetsColumns) {
-            this.datasetsColumns = datasetsColumns;
+            $.datasetsColumns = datasetsColumns;
             return this;
         }
-        public Builder datasetsColumns(@Nullable String datasetsColumns) {
-            this.datasetsColumns = Codegen.ofNullable(datasetsColumns);
-            return this;
+
+        public Builder datasetsColumns(String datasetsColumns) {
+            return datasetsColumns(Output.of(datasetsColumns));
         }
+
         public Builder dateAddValue(@Nullable Output<String> dateAddValue) {
-            this.dateAddValue = dateAddValue;
+            $.dateAddValue = dateAddValue;
             return this;
         }
-        public Builder dateAddValue(@Nullable String dateAddValue) {
-            this.dateAddValue = Codegen.ofNullable(dateAddValue);
-            return this;
+
+        public Builder dateAddValue(String dateAddValue) {
+            return dateAddValue(Output.of(dateAddValue));
         }
+
         public Builder dateTimeFormat(@Nullable Output<String> dateTimeFormat) {
-            this.dateTimeFormat = dateTimeFormat;
+            $.dateTimeFormat = dateTimeFormat;
             return this;
         }
-        public Builder dateTimeFormat(@Nullable String dateTimeFormat) {
-            this.dateTimeFormat = Codegen.ofNullable(dateTimeFormat);
-            return this;
+
+        public Builder dateTimeFormat(String dateTimeFormat) {
+            return dateTimeFormat(Output.of(dateTimeFormat));
         }
+
         public Builder dateTimeParameters(@Nullable Output<String> dateTimeParameters) {
-            this.dateTimeParameters = dateTimeParameters;
+            $.dateTimeParameters = dateTimeParameters;
             return this;
         }
-        public Builder dateTimeParameters(@Nullable String dateTimeParameters) {
-            this.dateTimeParameters = Codegen.ofNullable(dateTimeParameters);
-            return this;
+
+        public Builder dateTimeParameters(String dateTimeParameters) {
+            return dateTimeParameters(Output.of(dateTimeParameters));
         }
+
         public Builder deleteOtherRows(@Nullable Output<String> deleteOtherRows) {
-            this.deleteOtherRows = deleteOtherRows;
+            $.deleteOtherRows = deleteOtherRows;
             return this;
         }
-        public Builder deleteOtherRows(@Nullable String deleteOtherRows) {
-            this.deleteOtherRows = Codegen.ofNullable(deleteOtherRows);
-            return this;
+
+        public Builder deleteOtherRows(String deleteOtherRows) {
+            return deleteOtherRows(Output.of(deleteOtherRows));
         }
+
         public Builder delimiter(@Nullable Output<String> delimiter) {
-            this.delimiter = delimiter;
+            $.delimiter = delimiter;
             return this;
         }
-        public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Codegen.ofNullable(delimiter);
-            return this;
+
+        public Builder delimiter(String delimiter) {
+            return delimiter(Output.of(delimiter));
         }
+
         public Builder endPattern(@Nullable Output<String> endPattern) {
-            this.endPattern = endPattern;
+            $.endPattern = endPattern;
             return this;
         }
-        public Builder endPattern(@Nullable String endPattern) {
-            this.endPattern = Codegen.ofNullable(endPattern);
-            return this;
+
+        public Builder endPattern(String endPattern) {
+            return endPattern(Output.of(endPattern));
         }
+
         public Builder endPosition(@Nullable Output<String> endPosition) {
-            this.endPosition = endPosition;
+            $.endPosition = endPosition;
             return this;
         }
-        public Builder endPosition(@Nullable String endPosition) {
-            this.endPosition = Codegen.ofNullable(endPosition);
-            return this;
+
+        public Builder endPosition(String endPosition) {
+            return endPosition(Output.of(endPosition));
         }
+
         public Builder endValue(@Nullable Output<String> endValue) {
-            this.endValue = endValue;
+            $.endValue = endValue;
             return this;
         }
-        public Builder endValue(@Nullable String endValue) {
-            this.endValue = Codegen.ofNullable(endValue);
-            return this;
+
+        public Builder endValue(String endValue) {
+            return endValue(Output.of(endValue));
         }
+
         public Builder expandContractions(@Nullable Output<String> expandContractions) {
-            this.expandContractions = expandContractions;
+            $.expandContractions = expandContractions;
             return this;
         }
-        public Builder expandContractions(@Nullable String expandContractions) {
-            this.expandContractions = Codegen.ofNullable(expandContractions);
-            return this;
+
+        public Builder expandContractions(String expandContractions) {
+            return expandContractions(Output.of(expandContractions));
         }
+
         public Builder exponent(@Nullable Output<String> exponent) {
-            this.exponent = exponent;
+            $.exponent = exponent;
             return this;
         }
-        public Builder exponent(@Nullable String exponent) {
-            this.exponent = Codegen.ofNullable(exponent);
-            return this;
+
+        public Builder exponent(String exponent) {
+            return exponent(Output.of(exponent));
         }
+
         public Builder falseString(@Nullable Output<String> falseString) {
-            this.falseString = falseString;
+            $.falseString = falseString;
             return this;
         }
-        public Builder falseString(@Nullable String falseString) {
-            this.falseString = Codegen.ofNullable(falseString);
-            return this;
+
+        public Builder falseString(String falseString) {
+            return falseString(Output.of(falseString));
         }
+
         public Builder groupByAggFunctionOptions(@Nullable Output<String> groupByAggFunctionOptions) {
-            this.groupByAggFunctionOptions = groupByAggFunctionOptions;
+            $.groupByAggFunctionOptions = groupByAggFunctionOptions;
             return this;
         }
-        public Builder groupByAggFunctionOptions(@Nullable String groupByAggFunctionOptions) {
-            this.groupByAggFunctionOptions = Codegen.ofNullable(groupByAggFunctionOptions);
-            return this;
+
+        public Builder groupByAggFunctionOptions(String groupByAggFunctionOptions) {
+            return groupByAggFunctionOptions(Output.of(groupByAggFunctionOptions));
         }
+
         public Builder groupByColumns(@Nullable Output<String> groupByColumns) {
-            this.groupByColumns = groupByColumns;
+            $.groupByColumns = groupByColumns;
             return this;
         }
-        public Builder groupByColumns(@Nullable String groupByColumns) {
-            this.groupByColumns = Codegen.ofNullable(groupByColumns);
-            return this;
+
+        public Builder groupByColumns(String groupByColumns) {
+            return groupByColumns(Output.of(groupByColumns));
         }
+
         public Builder hiddenColumns(@Nullable Output<String> hiddenColumns) {
-            this.hiddenColumns = hiddenColumns;
+            $.hiddenColumns = hiddenColumns;
             return this;
         }
-        public Builder hiddenColumns(@Nullable String hiddenColumns) {
-            this.hiddenColumns = Codegen.ofNullable(hiddenColumns);
-            return this;
+
+        public Builder hiddenColumns(String hiddenColumns) {
+            return hiddenColumns(Output.of(hiddenColumns));
         }
+
         public Builder ignoreCase(@Nullable Output<String> ignoreCase) {
-            this.ignoreCase = ignoreCase;
+            $.ignoreCase = ignoreCase;
             return this;
         }
-        public Builder ignoreCase(@Nullable String ignoreCase) {
-            this.ignoreCase = Codegen.ofNullable(ignoreCase);
-            return this;
+
+        public Builder ignoreCase(String ignoreCase) {
+            return ignoreCase(Output.of(ignoreCase));
         }
+
         public Builder includeInSplit(@Nullable Output<String> includeInSplit) {
-            this.includeInSplit = includeInSplit;
+            $.includeInSplit = includeInSplit;
             return this;
         }
-        public Builder includeInSplit(@Nullable String includeInSplit) {
-            this.includeInSplit = Codegen.ofNullable(includeInSplit);
-            return this;
+
+        public Builder includeInSplit(String includeInSplit) {
+            return includeInSplit(Output.of(includeInSplit));
         }
+
         public Builder input(@Nullable Output<RecipeParametersInputPropertiesArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable RecipeParametersInputPropertiesArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(RecipeParametersInputPropertiesArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder interval(@Nullable Output<String> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable String interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(String interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder isText(@Nullable Output<String> isText) {
-            this.isText = isText;
+            $.isText = isText;
             return this;
         }
-        public Builder isText(@Nullable String isText) {
-            this.isText = Codegen.ofNullable(isText);
-            return this;
+
+        public Builder isText(String isText) {
+            return isText(Output.of(isText));
         }
+
         public Builder joinKeys(@Nullable Output<String> joinKeys) {
-            this.joinKeys = joinKeys;
+            $.joinKeys = joinKeys;
             return this;
         }
-        public Builder joinKeys(@Nullable String joinKeys) {
-            this.joinKeys = Codegen.ofNullable(joinKeys);
-            return this;
+
+        public Builder joinKeys(String joinKeys) {
+            return joinKeys(Output.of(joinKeys));
         }
+
         public Builder joinType(@Nullable Output<String> joinType) {
-            this.joinType = joinType;
+            $.joinType = joinType;
             return this;
         }
-        public Builder joinType(@Nullable String joinType) {
-            this.joinType = Codegen.ofNullable(joinType);
-            return this;
+
+        public Builder joinType(String joinType) {
+            return joinType(Output.of(joinType));
         }
+
         public Builder leftColumns(@Nullable Output<String> leftColumns) {
-            this.leftColumns = leftColumns;
+            $.leftColumns = leftColumns;
             return this;
         }
-        public Builder leftColumns(@Nullable String leftColumns) {
-            this.leftColumns = Codegen.ofNullable(leftColumns);
-            return this;
+
+        public Builder leftColumns(String leftColumns) {
+            return leftColumns(Output.of(leftColumns));
         }
+
         public Builder limit(@Nullable Output<String> limit) {
-            this.limit = limit;
+            $.limit = limit;
             return this;
         }
-        public Builder limit(@Nullable String limit) {
-            this.limit = Codegen.ofNullable(limit);
-            return this;
+
+        public Builder limit(String limit) {
+            return limit(Output.of(limit));
         }
+
         public Builder lowerBound(@Nullable Output<String> lowerBound) {
-            this.lowerBound = lowerBound;
+            $.lowerBound = lowerBound;
             return this;
         }
-        public Builder lowerBound(@Nullable String lowerBound) {
-            this.lowerBound = Codegen.ofNullable(lowerBound);
-            return this;
+
+        public Builder lowerBound(String lowerBound) {
+            return lowerBound(Output.of(lowerBound));
         }
+
         public Builder mapType(@Nullable Output<String> mapType) {
-            this.mapType = mapType;
+            $.mapType = mapType;
             return this;
         }
-        public Builder mapType(@Nullable String mapType) {
-            this.mapType = Codegen.ofNullable(mapType);
-            return this;
+
+        public Builder mapType(String mapType) {
+            return mapType(Output.of(mapType));
         }
+
         public Builder modeType(@Nullable Output<String> modeType) {
-            this.modeType = modeType;
+            $.modeType = modeType;
             return this;
         }
-        public Builder modeType(@Nullable String modeType) {
-            this.modeType = Codegen.ofNullable(modeType);
-            return this;
+
+        public Builder modeType(String modeType) {
+            return modeType(Output.of(modeType));
         }
+
         public Builder multiLine(@Nullable Output<Boolean> multiLine) {
-            this.multiLine = multiLine;
+            $.multiLine = multiLine;
             return this;
         }
-        public Builder multiLine(@Nullable Boolean multiLine) {
-            this.multiLine = Codegen.ofNullable(multiLine);
-            return this;
+
+        public Builder multiLine(Boolean multiLine) {
+            return multiLine(Output.of(multiLine));
         }
+
         public Builder numRows(@Nullable Output<String> numRows) {
-            this.numRows = numRows;
+            $.numRows = numRows;
             return this;
         }
-        public Builder numRows(@Nullable String numRows) {
-            this.numRows = Codegen.ofNullable(numRows);
-            return this;
+
+        public Builder numRows(String numRows) {
+            return numRows(Output.of(numRows));
         }
+
         public Builder numRowsAfter(@Nullable Output<String> numRowsAfter) {
-            this.numRowsAfter = numRowsAfter;
+            $.numRowsAfter = numRowsAfter;
             return this;
         }
-        public Builder numRowsAfter(@Nullable String numRowsAfter) {
-            this.numRowsAfter = Codegen.ofNullable(numRowsAfter);
-            return this;
+
+        public Builder numRowsAfter(String numRowsAfter) {
+            return numRowsAfter(Output.of(numRowsAfter));
         }
+
         public Builder numRowsBefore(@Nullable Output<String> numRowsBefore) {
-            this.numRowsBefore = numRowsBefore;
+            $.numRowsBefore = numRowsBefore;
             return this;
         }
-        public Builder numRowsBefore(@Nullable String numRowsBefore) {
-            this.numRowsBefore = Codegen.ofNullable(numRowsBefore);
-            return this;
+
+        public Builder numRowsBefore(String numRowsBefore) {
+            return numRowsBefore(Output.of(numRowsBefore));
         }
+
         public Builder orderByColumn(@Nullable Output<String> orderByColumn) {
-            this.orderByColumn = orderByColumn;
+            $.orderByColumn = orderByColumn;
             return this;
         }
-        public Builder orderByColumn(@Nullable String orderByColumn) {
-            this.orderByColumn = Codegen.ofNullable(orderByColumn);
-            return this;
+
+        public Builder orderByColumn(String orderByColumn) {
+            return orderByColumn(Output.of(orderByColumn));
         }
+
         public Builder orderByColumns(@Nullable Output<String> orderByColumns) {
-            this.orderByColumns = orderByColumns;
+            $.orderByColumns = orderByColumns;
             return this;
         }
-        public Builder orderByColumns(@Nullable String orderByColumns) {
-            this.orderByColumns = Codegen.ofNullable(orderByColumns);
-            return this;
+
+        public Builder orderByColumns(String orderByColumns) {
+            return orderByColumns(Output.of(orderByColumns));
         }
+
         public Builder other(@Nullable Output<String> other) {
-            this.other = other;
+            $.other = other;
             return this;
         }
-        public Builder other(@Nullable String other) {
-            this.other = Codegen.ofNullable(other);
-            return this;
+
+        public Builder other(String other) {
+            return other(Output.of(other));
         }
+
         public Builder pattern(@Nullable Output<String> pattern) {
-            this.pattern = pattern;
+            $.pattern = pattern;
             return this;
         }
-        public Builder pattern(@Nullable String pattern) {
-            this.pattern = Codegen.ofNullable(pattern);
-            return this;
+
+        public Builder pattern(String pattern) {
+            return pattern(Output.of(pattern));
         }
+
         public Builder patternOption1(@Nullable Output<String> patternOption1) {
-            this.patternOption1 = patternOption1;
+            $.patternOption1 = patternOption1;
             return this;
         }
-        public Builder patternOption1(@Nullable String patternOption1) {
-            this.patternOption1 = Codegen.ofNullable(patternOption1);
-            return this;
+
+        public Builder patternOption1(String patternOption1) {
+            return patternOption1(Output.of(patternOption1));
         }
+
         public Builder patternOption2(@Nullable Output<String> patternOption2) {
-            this.patternOption2 = patternOption2;
+            $.patternOption2 = patternOption2;
             return this;
         }
-        public Builder patternOption2(@Nullable String patternOption2) {
-            this.patternOption2 = Codegen.ofNullable(patternOption2);
-            return this;
+
+        public Builder patternOption2(String patternOption2) {
+            return patternOption2(Output.of(patternOption2));
         }
+
         public Builder patternOptions(@Nullable Output<String> patternOptions) {
-            this.patternOptions = patternOptions;
+            $.patternOptions = patternOptions;
             return this;
         }
-        public Builder patternOptions(@Nullable String patternOptions) {
-            this.patternOptions = Codegen.ofNullable(patternOptions);
-            return this;
+
+        public Builder patternOptions(String patternOptions) {
+            return patternOptions(Output.of(patternOptions));
         }
+
         public Builder period(@Nullable Output<String> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable String period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
+
+        public Builder period(String period) {
+            return period(Output.of(period));
         }
+
         public Builder position(@Nullable Output<String> position) {
-            this.position = position;
+            $.position = position;
             return this;
         }
-        public Builder position(@Nullable String position) {
-            this.position = Codegen.ofNullable(position);
-            return this;
+
+        public Builder position(String position) {
+            return position(Output.of(position));
         }
+
         public Builder removeAllPunctuation(@Nullable Output<String> removeAllPunctuation) {
-            this.removeAllPunctuation = removeAllPunctuation;
+            $.removeAllPunctuation = removeAllPunctuation;
             return this;
         }
-        public Builder removeAllPunctuation(@Nullable String removeAllPunctuation) {
-            this.removeAllPunctuation = Codegen.ofNullable(removeAllPunctuation);
-            return this;
+
+        public Builder removeAllPunctuation(String removeAllPunctuation) {
+            return removeAllPunctuation(Output.of(removeAllPunctuation));
         }
+
         public Builder removeAllQuotes(@Nullable Output<String> removeAllQuotes) {
-            this.removeAllQuotes = removeAllQuotes;
+            $.removeAllQuotes = removeAllQuotes;
             return this;
         }
-        public Builder removeAllQuotes(@Nullable String removeAllQuotes) {
-            this.removeAllQuotes = Codegen.ofNullable(removeAllQuotes);
-            return this;
+
+        public Builder removeAllQuotes(String removeAllQuotes) {
+            return removeAllQuotes(Output.of(removeAllQuotes));
         }
+
         public Builder removeAllWhitespace(@Nullable Output<String> removeAllWhitespace) {
-            this.removeAllWhitespace = removeAllWhitespace;
+            $.removeAllWhitespace = removeAllWhitespace;
             return this;
         }
-        public Builder removeAllWhitespace(@Nullable String removeAllWhitespace) {
-            this.removeAllWhitespace = Codegen.ofNullable(removeAllWhitespace);
-            return this;
+
+        public Builder removeAllWhitespace(String removeAllWhitespace) {
+            return removeAllWhitespace(Output.of(removeAllWhitespace));
         }
+
         public Builder removeCustomCharacters(@Nullable Output<String> removeCustomCharacters) {
-            this.removeCustomCharacters = removeCustomCharacters;
+            $.removeCustomCharacters = removeCustomCharacters;
             return this;
         }
-        public Builder removeCustomCharacters(@Nullable String removeCustomCharacters) {
-            this.removeCustomCharacters = Codegen.ofNullable(removeCustomCharacters);
-            return this;
+
+        public Builder removeCustomCharacters(String removeCustomCharacters) {
+            return removeCustomCharacters(Output.of(removeCustomCharacters));
         }
+
         public Builder removeCustomValue(@Nullable Output<String> removeCustomValue) {
-            this.removeCustomValue = removeCustomValue;
+            $.removeCustomValue = removeCustomValue;
             return this;
         }
-        public Builder removeCustomValue(@Nullable String removeCustomValue) {
-            this.removeCustomValue = Codegen.ofNullable(removeCustomValue);
-            return this;
+
+        public Builder removeCustomValue(String removeCustomValue) {
+            return removeCustomValue(Output.of(removeCustomValue));
         }
+
         public Builder removeLeadingAndTrailingPunctuation(@Nullable Output<String> removeLeadingAndTrailingPunctuation) {
-            this.removeLeadingAndTrailingPunctuation = removeLeadingAndTrailingPunctuation;
+            $.removeLeadingAndTrailingPunctuation = removeLeadingAndTrailingPunctuation;
             return this;
         }
-        public Builder removeLeadingAndTrailingPunctuation(@Nullable String removeLeadingAndTrailingPunctuation) {
-            this.removeLeadingAndTrailingPunctuation = Codegen.ofNullable(removeLeadingAndTrailingPunctuation);
-            return this;
+
+        public Builder removeLeadingAndTrailingPunctuation(String removeLeadingAndTrailingPunctuation) {
+            return removeLeadingAndTrailingPunctuation(Output.of(removeLeadingAndTrailingPunctuation));
         }
+
         public Builder removeLeadingAndTrailingQuotes(@Nullable Output<String> removeLeadingAndTrailingQuotes) {
-            this.removeLeadingAndTrailingQuotes = removeLeadingAndTrailingQuotes;
+            $.removeLeadingAndTrailingQuotes = removeLeadingAndTrailingQuotes;
             return this;
         }
-        public Builder removeLeadingAndTrailingQuotes(@Nullable String removeLeadingAndTrailingQuotes) {
-            this.removeLeadingAndTrailingQuotes = Codegen.ofNullable(removeLeadingAndTrailingQuotes);
-            return this;
+
+        public Builder removeLeadingAndTrailingQuotes(String removeLeadingAndTrailingQuotes) {
+            return removeLeadingAndTrailingQuotes(Output.of(removeLeadingAndTrailingQuotes));
         }
+
         public Builder removeLeadingAndTrailingWhitespace(@Nullable Output<String> removeLeadingAndTrailingWhitespace) {
-            this.removeLeadingAndTrailingWhitespace = removeLeadingAndTrailingWhitespace;
+            $.removeLeadingAndTrailingWhitespace = removeLeadingAndTrailingWhitespace;
             return this;
         }
-        public Builder removeLeadingAndTrailingWhitespace(@Nullable String removeLeadingAndTrailingWhitespace) {
-            this.removeLeadingAndTrailingWhitespace = Codegen.ofNullable(removeLeadingAndTrailingWhitespace);
-            return this;
+
+        public Builder removeLeadingAndTrailingWhitespace(String removeLeadingAndTrailingWhitespace) {
+            return removeLeadingAndTrailingWhitespace(Output.of(removeLeadingAndTrailingWhitespace));
         }
+
         public Builder removeLetters(@Nullable Output<String> removeLetters) {
-            this.removeLetters = removeLetters;
+            $.removeLetters = removeLetters;
             return this;
         }
-        public Builder removeLetters(@Nullable String removeLetters) {
-            this.removeLetters = Codegen.ofNullable(removeLetters);
-            return this;
+
+        public Builder removeLetters(String removeLetters) {
+            return removeLetters(Output.of(removeLetters));
         }
+
         public Builder removeNumbers(@Nullable Output<String> removeNumbers) {
-            this.removeNumbers = removeNumbers;
+            $.removeNumbers = removeNumbers;
             return this;
         }
-        public Builder removeNumbers(@Nullable String removeNumbers) {
-            this.removeNumbers = Codegen.ofNullable(removeNumbers);
-            return this;
+
+        public Builder removeNumbers(String removeNumbers) {
+            return removeNumbers(Output.of(removeNumbers));
         }
+
         public Builder removeSourceColumn(@Nullable Output<String> removeSourceColumn) {
-            this.removeSourceColumn = removeSourceColumn;
+            $.removeSourceColumn = removeSourceColumn;
             return this;
         }
-        public Builder removeSourceColumn(@Nullable String removeSourceColumn) {
-            this.removeSourceColumn = Codegen.ofNullable(removeSourceColumn);
-            return this;
+
+        public Builder removeSourceColumn(String removeSourceColumn) {
+            return removeSourceColumn(Output.of(removeSourceColumn));
         }
+
         public Builder removeSpecialCharacters(@Nullable Output<String> removeSpecialCharacters) {
-            this.removeSpecialCharacters = removeSpecialCharacters;
+            $.removeSpecialCharacters = removeSpecialCharacters;
             return this;
         }
-        public Builder removeSpecialCharacters(@Nullable String removeSpecialCharacters) {
-            this.removeSpecialCharacters = Codegen.ofNullable(removeSpecialCharacters);
-            return this;
+
+        public Builder removeSpecialCharacters(String removeSpecialCharacters) {
+            return removeSpecialCharacters(Output.of(removeSpecialCharacters));
         }
+
         public Builder rightColumns(@Nullable Output<String> rightColumns) {
-            this.rightColumns = rightColumns;
+            $.rightColumns = rightColumns;
             return this;
         }
-        public Builder rightColumns(@Nullable String rightColumns) {
-            this.rightColumns = Codegen.ofNullable(rightColumns);
-            return this;
+
+        public Builder rightColumns(String rightColumns) {
+            return rightColumns(Output.of(rightColumns));
         }
+
         public Builder sampleSize(@Nullable Output<String> sampleSize) {
-            this.sampleSize = sampleSize;
+            $.sampleSize = sampleSize;
             return this;
         }
-        public Builder sampleSize(@Nullable String sampleSize) {
-            this.sampleSize = Codegen.ofNullable(sampleSize);
-            return this;
+
+        public Builder sampleSize(String sampleSize) {
+            return sampleSize(Output.of(sampleSize));
         }
+
         public Builder sampleType(@Nullable Output<String> sampleType) {
-            this.sampleType = sampleType;
+            $.sampleType = sampleType;
             return this;
         }
-        public Builder sampleType(@Nullable String sampleType) {
-            this.sampleType = Codegen.ofNullable(sampleType);
-            return this;
+
+        public Builder sampleType(String sampleType) {
+            return sampleType(Output.of(sampleType));
         }
+
         public Builder secondInput(@Nullable Output<String> secondInput) {
-            this.secondInput = secondInput;
+            $.secondInput = secondInput;
             return this;
         }
-        public Builder secondInput(@Nullable String secondInput) {
-            this.secondInput = Codegen.ofNullable(secondInput);
-            return this;
+
+        public Builder secondInput(String secondInput) {
+            return secondInput(Output.of(secondInput));
         }
+
         public Builder secondaryInputs(@Nullable Output<List<RecipeSecondaryInputArgs>> secondaryInputs) {
-            this.secondaryInputs = secondaryInputs;
+            $.secondaryInputs = secondaryInputs;
             return this;
         }
-        public Builder secondaryInputs(@Nullable List<RecipeSecondaryInputArgs> secondaryInputs) {
-            this.secondaryInputs = Codegen.ofNullable(secondaryInputs);
-            return this;
+
+        public Builder secondaryInputs(List<RecipeSecondaryInputArgs> secondaryInputs) {
+            return secondaryInputs(Output.of(secondaryInputs));
         }
+
         public Builder secondaryInputs(RecipeSecondaryInputArgs... secondaryInputs) {
             return secondaryInputs(List.of(secondaryInputs));
         }
+
         public Builder sheetIndexes(@Nullable Output<List<Integer>> sheetIndexes) {
-            this.sheetIndexes = sheetIndexes;
+            $.sheetIndexes = sheetIndexes;
             return this;
         }
-        public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
-            this.sheetIndexes = Codegen.ofNullable(sheetIndexes);
-            return this;
+
+        public Builder sheetIndexes(List<Integer> sheetIndexes) {
+            return sheetIndexes(Output.of(sheetIndexes));
         }
+
         public Builder sheetIndexes(Integer... sheetIndexes) {
             return sheetIndexes(List.of(sheetIndexes));
         }
+
         public Builder sheetNames(@Nullable Output<List<String>> sheetNames) {
-            this.sheetNames = sheetNames;
+            $.sheetNames = sheetNames;
             return this;
         }
-        public Builder sheetNames(@Nullable List<String> sheetNames) {
-            this.sheetNames = Codegen.ofNullable(sheetNames);
-            return this;
+
+        public Builder sheetNames(List<String> sheetNames) {
+            return sheetNames(Output.of(sheetNames));
         }
+
         public Builder sheetNames(String... sheetNames) {
             return sheetNames(List.of(sheetNames));
         }
+
         public Builder sourceColumn(@Nullable Output<String> sourceColumn) {
-            this.sourceColumn = sourceColumn;
+            $.sourceColumn = sourceColumn;
             return this;
         }
-        public Builder sourceColumn(@Nullable String sourceColumn) {
-            this.sourceColumn = Codegen.ofNullable(sourceColumn);
-            return this;
+
+        public Builder sourceColumn(String sourceColumn) {
+            return sourceColumn(Output.of(sourceColumn));
         }
+
         public Builder sourceColumn1(@Nullable Output<String> sourceColumn1) {
-            this.sourceColumn1 = sourceColumn1;
+            $.sourceColumn1 = sourceColumn1;
             return this;
         }
-        public Builder sourceColumn1(@Nullable String sourceColumn1) {
-            this.sourceColumn1 = Codegen.ofNullable(sourceColumn1);
-            return this;
+
+        public Builder sourceColumn1(String sourceColumn1) {
+            return sourceColumn1(Output.of(sourceColumn1));
         }
+
         public Builder sourceColumn2(@Nullable Output<String> sourceColumn2) {
-            this.sourceColumn2 = sourceColumn2;
+            $.sourceColumn2 = sourceColumn2;
             return this;
         }
-        public Builder sourceColumn2(@Nullable String sourceColumn2) {
-            this.sourceColumn2 = Codegen.ofNullable(sourceColumn2);
-            return this;
+
+        public Builder sourceColumn2(String sourceColumn2) {
+            return sourceColumn2(Output.of(sourceColumn2));
         }
+
         public Builder sourceColumns(@Nullable Output<String> sourceColumns) {
-            this.sourceColumns = sourceColumns;
+            $.sourceColumns = sourceColumns;
             return this;
         }
-        public Builder sourceColumns(@Nullable String sourceColumns) {
-            this.sourceColumns = Codegen.ofNullable(sourceColumns);
-            return this;
+
+        public Builder sourceColumns(String sourceColumns) {
+            return sourceColumns(Output.of(sourceColumns));
         }
+
         public Builder startColumnIndex(@Nullable Output<String> startColumnIndex) {
-            this.startColumnIndex = startColumnIndex;
+            $.startColumnIndex = startColumnIndex;
             return this;
         }
-        public Builder startColumnIndex(@Nullable String startColumnIndex) {
-            this.startColumnIndex = Codegen.ofNullable(startColumnIndex);
-            return this;
+
+        public Builder startColumnIndex(String startColumnIndex) {
+            return startColumnIndex(Output.of(startColumnIndex));
         }
+
         public Builder startPattern(@Nullable Output<String> startPattern) {
-            this.startPattern = startPattern;
+            $.startPattern = startPattern;
             return this;
         }
-        public Builder startPattern(@Nullable String startPattern) {
-            this.startPattern = Codegen.ofNullable(startPattern);
-            return this;
+
+        public Builder startPattern(String startPattern) {
+            return startPattern(Output.of(startPattern));
         }
+
         public Builder startPosition(@Nullable Output<String> startPosition) {
-            this.startPosition = startPosition;
+            $.startPosition = startPosition;
             return this;
         }
-        public Builder startPosition(@Nullable String startPosition) {
-            this.startPosition = Codegen.ofNullable(startPosition);
-            return this;
+
+        public Builder startPosition(String startPosition) {
+            return startPosition(Output.of(startPosition));
         }
+
         public Builder startValue(@Nullable Output<String> startValue) {
-            this.startValue = startValue;
+            $.startValue = startValue;
             return this;
         }
-        public Builder startValue(@Nullable String startValue) {
-            this.startValue = Codegen.ofNullable(startValue);
-            return this;
+
+        public Builder startValue(String startValue) {
+            return startValue(Output.of(startValue));
         }
+
         public Builder stemmingMode(@Nullable Output<String> stemmingMode) {
-            this.stemmingMode = stemmingMode;
+            $.stemmingMode = stemmingMode;
             return this;
         }
-        public Builder stemmingMode(@Nullable String stemmingMode) {
-            this.stemmingMode = Codegen.ofNullable(stemmingMode);
-            return this;
+
+        public Builder stemmingMode(String stemmingMode) {
+            return stemmingMode(Output.of(stemmingMode));
         }
+
         public Builder stepCount(@Nullable Output<String> stepCount) {
-            this.stepCount = stepCount;
+            $.stepCount = stepCount;
             return this;
         }
-        public Builder stepCount(@Nullable String stepCount) {
-            this.stepCount = Codegen.ofNullable(stepCount);
-            return this;
+
+        public Builder stepCount(String stepCount) {
+            return stepCount(Output.of(stepCount));
         }
+
         public Builder stepIndex(@Nullable Output<String> stepIndex) {
-            this.stepIndex = stepIndex;
+            $.stepIndex = stepIndex;
             return this;
         }
-        public Builder stepIndex(@Nullable String stepIndex) {
-            this.stepIndex = Codegen.ofNullable(stepIndex);
-            return this;
+
+        public Builder stepIndex(String stepIndex) {
+            return stepIndex(Output.of(stepIndex));
         }
+
         public Builder stopWordsMode(@Nullable Output<String> stopWordsMode) {
-            this.stopWordsMode = stopWordsMode;
+            $.stopWordsMode = stopWordsMode;
             return this;
         }
-        public Builder stopWordsMode(@Nullable String stopWordsMode) {
-            this.stopWordsMode = Codegen.ofNullable(stopWordsMode);
-            return this;
+
+        public Builder stopWordsMode(String stopWordsMode) {
+            return stopWordsMode(Output.of(stopWordsMode));
         }
+
         public Builder strategy(@Nullable Output<String> strategy) {
-            this.strategy = strategy;
+            $.strategy = strategy;
             return this;
         }
-        public Builder strategy(@Nullable String strategy) {
-            this.strategy = Codegen.ofNullable(strategy);
-            return this;
+
+        public Builder strategy(String strategy) {
+            return strategy(Output.of(strategy));
         }
+
         public Builder targetColumn(@Nullable Output<String> targetColumn) {
-            this.targetColumn = targetColumn;
+            $.targetColumn = targetColumn;
             return this;
         }
-        public Builder targetColumn(@Nullable String targetColumn) {
-            this.targetColumn = Codegen.ofNullable(targetColumn);
-            return this;
+
+        public Builder targetColumn(String targetColumn) {
+            return targetColumn(Output.of(targetColumn));
         }
+
         public Builder targetColumnNames(@Nullable Output<String> targetColumnNames) {
-            this.targetColumnNames = targetColumnNames;
+            $.targetColumnNames = targetColumnNames;
             return this;
         }
-        public Builder targetColumnNames(@Nullable String targetColumnNames) {
-            this.targetColumnNames = Codegen.ofNullable(targetColumnNames);
-            return this;
+
+        public Builder targetColumnNames(String targetColumnNames) {
+            return targetColumnNames(Output.of(targetColumnNames));
         }
+
         public Builder targetDateFormat(@Nullable Output<String> targetDateFormat) {
-            this.targetDateFormat = targetDateFormat;
+            $.targetDateFormat = targetDateFormat;
             return this;
         }
-        public Builder targetDateFormat(@Nullable String targetDateFormat) {
-            this.targetDateFormat = Codegen.ofNullable(targetDateFormat);
-            return this;
+
+        public Builder targetDateFormat(String targetDateFormat) {
+            return targetDateFormat(Output.of(targetDateFormat));
         }
+
         public Builder targetIndex(@Nullable Output<String> targetIndex) {
-            this.targetIndex = targetIndex;
+            $.targetIndex = targetIndex;
             return this;
         }
-        public Builder targetIndex(@Nullable String targetIndex) {
-            this.targetIndex = Codegen.ofNullable(targetIndex);
-            return this;
+
+        public Builder targetIndex(String targetIndex) {
+            return targetIndex(Output.of(targetIndex));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
         }
+
         public Builder tokenizerPattern(@Nullable Output<String> tokenizerPattern) {
-            this.tokenizerPattern = tokenizerPattern;
+            $.tokenizerPattern = tokenizerPattern;
             return this;
         }
-        public Builder tokenizerPattern(@Nullable String tokenizerPattern) {
-            this.tokenizerPattern = Codegen.ofNullable(tokenizerPattern);
-            return this;
+
+        public Builder tokenizerPattern(String tokenizerPattern) {
+            return tokenizerPattern(Output.of(tokenizerPattern));
         }
+
         public Builder trueString(@Nullable Output<String> trueString) {
-            this.trueString = trueString;
+            $.trueString = trueString;
             return this;
         }
-        public Builder trueString(@Nullable String trueString) {
-            this.trueString = Codegen.ofNullable(trueString);
-            return this;
+
+        public Builder trueString(String trueString) {
+            return trueString(Output.of(trueString));
         }
+
         public Builder udfLang(@Nullable Output<String> udfLang) {
-            this.udfLang = udfLang;
+            $.udfLang = udfLang;
             return this;
         }
-        public Builder udfLang(@Nullable String udfLang) {
-            this.udfLang = Codegen.ofNullable(udfLang);
-            return this;
+
+        public Builder udfLang(String udfLang) {
+            return udfLang(Output.of(udfLang));
         }
+
         public Builder units(@Nullable Output<String> units) {
-            this.units = units;
+            $.units = units;
             return this;
         }
-        public Builder units(@Nullable String units) {
-            this.units = Codegen.ofNullable(units);
-            return this;
+
+        public Builder units(String units) {
+            return units(Output.of(units));
         }
+
         public Builder unpivotColumn(@Nullable Output<String> unpivotColumn) {
-            this.unpivotColumn = unpivotColumn;
+            $.unpivotColumn = unpivotColumn;
             return this;
         }
-        public Builder unpivotColumn(@Nullable String unpivotColumn) {
-            this.unpivotColumn = Codegen.ofNullable(unpivotColumn);
-            return this;
+
+        public Builder unpivotColumn(String unpivotColumn) {
+            return unpivotColumn(Output.of(unpivotColumn));
         }
+
         public Builder upperBound(@Nullable Output<String> upperBound) {
-            this.upperBound = upperBound;
+            $.upperBound = upperBound;
             return this;
         }
-        public Builder upperBound(@Nullable String upperBound) {
-            this.upperBound = Codegen.ofNullable(upperBound);
-            return this;
+
+        public Builder upperBound(String upperBound) {
+            return upperBound(Output.of(upperBound));
         }
+
         public Builder useNewDataFrame(@Nullable Output<String> useNewDataFrame) {
-            this.useNewDataFrame = useNewDataFrame;
+            $.useNewDataFrame = useNewDataFrame;
             return this;
         }
-        public Builder useNewDataFrame(@Nullable String useNewDataFrame) {
-            this.useNewDataFrame = Codegen.ofNullable(useNewDataFrame);
-            return this;
+
+        public Builder useNewDataFrame(String useNewDataFrame) {
+            return useNewDataFrame(Output.of(useNewDataFrame));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder value1(@Nullable Output<String> value1) {
-            this.value1 = value1;
+            $.value1 = value1;
             return this;
         }
-        public Builder value1(@Nullable String value1) {
-            this.value1 = Codegen.ofNullable(value1);
-            return this;
+
+        public Builder value1(String value1) {
+            return value1(Output.of(value1));
         }
+
         public Builder value2(@Nullable Output<String> value2) {
-            this.value2 = value2;
+            $.value2 = value2;
             return this;
         }
-        public Builder value2(@Nullable String value2) {
-            this.value2 = Codegen.ofNullable(value2);
-            return this;
+
+        public Builder value2(String value2) {
+            return value2(Output.of(value2));
         }
+
         public Builder valueColumn(@Nullable Output<String> valueColumn) {
-            this.valueColumn = valueColumn;
+            $.valueColumn = valueColumn;
             return this;
         }
-        public Builder valueColumn(@Nullable String valueColumn) {
-            this.valueColumn = Codegen.ofNullable(valueColumn);
-            return this;
+
+        public Builder valueColumn(String valueColumn) {
+            return valueColumn(Output.of(valueColumn));
         }
+
         public Builder viewFrame(@Nullable Output<String> viewFrame) {
-            this.viewFrame = viewFrame;
+            $.viewFrame = viewFrame;
             return this;
         }
-        public Builder viewFrame(@Nullable String viewFrame) {
-            this.viewFrame = Codegen.ofNullable(viewFrame);
-            return this;
-        }        public RecipeParametersArgs build() {
-            return new RecipeParametersArgs(aggregateFunction, base, caseStatement, categoryMap, charsToRemove, collapseConsecutiveWhitespace, columnDataType, columnRange, count, customCharacters, customStopWords, customValue, datasetsColumns, dateAddValue, dateTimeFormat, dateTimeParameters, deleteOtherRows, delimiter, endPattern, endPosition, endValue, expandContractions, exponent, falseString, groupByAggFunctionOptions, groupByColumns, hiddenColumns, ignoreCase, includeInSplit, input, interval, isText, joinKeys, joinType, leftColumns, limit, lowerBound, mapType, modeType, multiLine, numRows, numRowsAfter, numRowsBefore, orderByColumn, orderByColumns, other, pattern, patternOption1, patternOption2, patternOptions, period, position, removeAllPunctuation, removeAllQuotes, removeAllWhitespace, removeCustomCharacters, removeCustomValue, removeLeadingAndTrailingPunctuation, removeLeadingAndTrailingQuotes, removeLeadingAndTrailingWhitespace, removeLetters, removeNumbers, removeSourceColumn, removeSpecialCharacters, rightColumns, sampleSize, sampleType, secondInput, secondaryInputs, sheetIndexes, sheetNames, sourceColumn, sourceColumn1, sourceColumn2, sourceColumns, startColumnIndex, startPattern, startPosition, startValue, stemmingMode, stepCount, stepIndex, stopWordsMode, strategy, targetColumn, targetColumnNames, targetDateFormat, targetIndex, timeZone, tokenizerPattern, trueString, udfLang, units, unpivotColumn, upperBound, useNewDataFrame, value, value1, value2, valueColumn, viewFrame);
+
+        public Builder viewFrame(String viewFrame) {
+            return viewFrame(Output.of(viewFrame));
+        }
+
+        public RecipeParametersArgs build() {
+            return $;
         }
     }
+
 }

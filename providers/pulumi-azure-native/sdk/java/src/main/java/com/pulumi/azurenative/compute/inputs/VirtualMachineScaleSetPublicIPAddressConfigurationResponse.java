@@ -29,10 +29,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable String deleteOption;
+    private @Nullable String deleteOption;
 
     public Optional<String> deleteOption() {
-        return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse dnsSettings;
+    private @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse dnsSettings;
 
     public Optional<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse> dnsSettings() {
-        return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
      * 
      */
     @Import(name="idleTimeoutInMinutes")
-      private final @Nullable Integer idleTimeoutInMinutes;
+    private @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
+        return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
      * 
      */
     @Import(name="ipTags")
-      private final @Nullable List<VirtualMachineScaleSetIpTagResponse> ipTags;
+    private @Nullable List<VirtualMachineScaleSetIpTagResponse> ipTags;
 
-    public List<VirtualMachineScaleSetIpTagResponse> ipTags() {
-        return this.ipTags == null ? List.of() : this.ipTags;
+    public Optional<List<VirtualMachineScaleSetIpTagResponse>> ipTags() {
+        return Optional.ofNullable(this.ipTags);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -84,10 +84,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
      * 
      */
     @Import(name="publicIPAddressVersion")
-      private final @Nullable String publicIPAddressVersion;
+    private @Nullable String publicIPAddressVersion;
 
     public Optional<String> publicIPAddressVersion() {
-        return this.publicIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressVersion);
+        return Optional.ofNullable(this.publicIPAddressVersion);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
      * 
      */
     @Import(name="publicIPPrefix")
-      private final @Nullable SubResourceResponse publicIPPrefix;
+    private @Nullable SubResourceResponse publicIPPrefix;
 
     public Optional<SubResourceResponse> publicIPPrefix() {
-        return this.publicIPPrefix == null ? Optional.empty() : Optional.ofNullable(this.publicIPPrefix);
+        return Optional.ofNullable(this.publicIPPrefix);
     }
 
     /**
@@ -106,112 +106,91 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
      * 
      */
     @Import(name="sku")
-      private final @Nullable PublicIPAddressSkuResponse sku;
+    private @Nullable PublicIPAddressSkuResponse sku;
 
     public Optional<PublicIPAddressSkuResponse> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
-    public VirtualMachineScaleSetPublicIPAddressConfigurationResponse(
-        @Nullable String deleteOption,
-        @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse dnsSettings,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable List<VirtualMachineScaleSetIpTagResponse> ipTags,
-        String name,
-        @Nullable String publicIPAddressVersion,
-        @Nullable SubResourceResponse publicIPPrefix,
-        @Nullable PublicIPAddressSkuResponse sku) {
-        this.deleteOption = deleteOption;
-        this.dnsSettings = dnsSettings;
-        this.idleTimeoutInMinutes = idleTimeoutInMinutes;
-        this.ipTags = ipTags;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.publicIPAddressVersion = publicIPAddressVersion;
-        this.publicIPPrefix = publicIPPrefix;
-        this.sku = sku;
-    }
+    private VirtualMachineScaleSetPublicIPAddressConfigurationResponse() {}
 
-    private VirtualMachineScaleSetPublicIPAddressConfigurationResponse() {
-        this.deleteOption = null;
-        this.dnsSettings = null;
-        this.idleTimeoutInMinutes = null;
-        this.ipTags = List.of();
-        this.name = null;
-        this.publicIPAddressVersion = null;
-        this.publicIPPrefix = null;
-        this.sku = null;
+    private VirtualMachineScaleSetPublicIPAddressConfigurationResponse(VirtualMachineScaleSetPublicIPAddressConfigurationResponse $) {
+        this.deleteOption = $.deleteOption;
+        this.dnsSettings = $.dnsSettings;
+        this.idleTimeoutInMinutes = $.idleTimeoutInMinutes;
+        this.ipTags = $.ipTags;
+        this.name = $.name;
+        this.publicIPAddressVersion = $.publicIPAddressVersion;
+        this.publicIPPrefix = $.publicIPPrefix;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetPublicIPAddressConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String deleteOption;
-        private @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse dnsSettings;
-        private @Nullable Integer idleTimeoutInMinutes;
-        private @Nullable List<VirtualMachineScaleSetIpTagResponse> ipTags;
-        private String name;
-        private @Nullable String publicIPAddressVersion;
-        private @Nullable SubResourceResponse publicIPPrefix;
-        private @Nullable PublicIPAddressSkuResponse sku;
+        private VirtualMachineScaleSetPublicIPAddressConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetPublicIPAddressConfigurationResponse();
         }
 
         public Builder(VirtualMachineScaleSetPublicIPAddressConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.idleTimeoutInMinutes = defaults.idleTimeoutInMinutes;
-    	      this.ipTags = defaults.ipTags;
-    	      this.name = defaults.name;
-    	      this.publicIPAddressVersion = defaults.publicIPAddressVersion;
-    	      this.publicIPPrefix = defaults.publicIPPrefix;
-    	      this.sku = defaults.sku;
+            $ = new VirtualMachineScaleSetPublicIPAddressConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOption(@Nullable String deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
+
         public Builder dnsSettings(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
+
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = idleTimeoutInMinutes;
+            $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
+
         public Builder ipTags(@Nullable List<VirtualMachineScaleSetIpTagResponse> ipTags) {
-            this.ipTags = ipTags;
+            $.ipTags = ipTags;
             return this;
         }
+
         public Builder ipTags(VirtualMachineScaleSetIpTagResponse... ipTags) {
             return ipTags(List.of(ipTags));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
-            this.publicIPAddressVersion = publicIPAddressVersion;
+            $.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
+
         public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
-            this.publicIPPrefix = publicIPPrefix;
+            $.publicIPPrefix = publicIPPrefix;
             return this;
         }
+
         public Builder sku(@Nullable PublicIPAddressSkuResponse sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
-        }        public VirtualMachineScaleSetPublicIPAddressConfigurationResponse build() {
-            return new VirtualMachineScaleSetPublicIPAddressConfigurationResponse(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPPrefix, sku);
+        }
+
+        public VirtualMachineScaleSetPublicIPAddressConfigurationResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

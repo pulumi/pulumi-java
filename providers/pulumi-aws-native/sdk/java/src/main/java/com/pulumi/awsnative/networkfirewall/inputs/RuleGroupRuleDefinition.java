@@ -15,65 +15,63 @@ public final class RuleGroupRuleDefinition extends com.pulumi.resources.InvokeAr
     public static final RuleGroupRuleDefinition Empty = new RuleGroupRuleDefinition();
 
     @Import(name="actions", required=true)
-      private final List<String> actions;
+    private List<String> actions;
 
     public List<String> actions() {
         return this.actions;
     }
 
     @Import(name="matchAttributes", required=true)
-      private final RuleGroupMatchAttributes matchAttributes;
+    private RuleGroupMatchAttributes matchAttributes;
 
     public RuleGroupMatchAttributes matchAttributes() {
         return this.matchAttributes;
     }
 
-    public RuleGroupRuleDefinition(
-        List<String> actions,
-        RuleGroupMatchAttributes matchAttributes) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.matchAttributes = Objects.requireNonNull(matchAttributes, "expected parameter 'matchAttributes' to be non-null");
-    }
+    private RuleGroupRuleDefinition() {}
 
-    private RuleGroupRuleDefinition() {
-        this.actions = List.of();
-        this.matchAttributes = null;
+    private RuleGroupRuleDefinition(RuleGroupRuleDefinition $) {
+        this.actions = $.actions;
+        this.matchAttributes = $.matchAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> actions;
-        private RuleGroupMatchAttributes matchAttributes;
+        private RuleGroupRuleDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleDefinition();
         }
 
         public Builder(RuleGroupRuleDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.matchAttributes = defaults.matchAttributes;
+            $ = new RuleGroupRuleDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(List<String> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder matchAttributes(RuleGroupMatchAttributes matchAttributes) {
-            this.matchAttributes = Objects.requireNonNull(matchAttributes);
+            $.matchAttributes = matchAttributes;
             return this;
-        }        public RuleGroupRuleDefinition build() {
-            return new RuleGroupRuleDefinition(actions, matchAttributes);
+        }
+
+        public RuleGroupRuleDefinition build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.matchAttributes = Objects.requireNonNull($.matchAttributes, "expected parameter 'matchAttributes' to be non-null");
+            return $;
         }
     }
+
 }

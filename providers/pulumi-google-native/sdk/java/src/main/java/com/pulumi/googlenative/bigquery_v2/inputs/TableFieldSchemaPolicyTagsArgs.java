@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class TableFieldSchemaPolicyTagsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="names")
-      private final @Nullable Output<List<String>> names;
+    private @Nullable Output<List<String>> names;
 
-    public Output<List<String>> names() {
-        return this.names == null ? Codegen.empty() : this.names;
+    public Optional<Output<List<String>>> names() {
+        return Optional.ofNullable(this.names);
     }
 
-    public TableFieldSchemaPolicyTagsArgs(@Nullable Output<List<String>> names) {
-        this.names = names;
-    }
+    private TableFieldSchemaPolicyTagsArgs() {}
 
-    private TableFieldSchemaPolicyTagsArgs() {
-        this.names = Codegen.empty();
+    private TableFieldSchemaPolicyTagsArgs(TableFieldSchemaPolicyTagsArgs $) {
+        this.names = $.names;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableFieldSchemaPolicyTagsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> names;
+        private TableFieldSchemaPolicyTagsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableFieldSchemaPolicyTagsArgs();
         }
 
         public Builder(TableFieldSchemaPolicyTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.names = defaults.names;
+            $ = new TableFieldSchemaPolicyTagsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder names(@Nullable Output<List<String>> names) {
-            this.names = names;
+            $.names = names;
             return this;
         }
-        public Builder names(@Nullable List<String> names) {
-            this.names = Codegen.ofNullable(names);
-            return this;
+
+        public Builder names(List<String> names) {
+            return names(Output.of(names));
         }
+
         public Builder names(String... names) {
             return names(List.of(names));
-        }        public TableFieldSchemaPolicyTagsArgs build() {
-            return new TableFieldSchemaPolicyTagsArgs(names);
+        }
+
+        public TableFieldSchemaPolicyTagsArgs build() {
+            return $;
         }
     }
+
 }

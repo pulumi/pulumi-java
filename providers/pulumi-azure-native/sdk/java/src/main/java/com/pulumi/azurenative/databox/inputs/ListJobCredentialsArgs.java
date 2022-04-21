@@ -17,7 +17,7 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="jobName", required=true)
-      private final String jobName;
+    private String jobName;
 
     public String jobName() {
         return this.jobName;
@@ -28,55 +28,52 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListJobCredentialsArgs(
-        String jobName,
-        String resourceGroupName) {
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListJobCredentialsArgs() {}
 
-    private ListJobCredentialsArgs() {
-        this.jobName = null;
-        this.resourceGroupName = null;
+    private ListJobCredentialsArgs(ListJobCredentialsArgs $) {
+        this.jobName = $.jobName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListJobCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobName;
-        private String resourceGroupName;
+        private ListJobCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListJobCredentialsArgs();
         }
 
         public Builder(ListJobCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobName = defaults.jobName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListJobCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobName(String jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListJobCredentialsArgs build() {
-            return new ListJobCredentialsArgs(jobName, resourceGroupName);
+        }
+
+        public ListJobCredentialsArgs build() {
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

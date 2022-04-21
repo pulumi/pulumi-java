@@ -24,48 +24,48 @@ public final class MigrateMISyncCompleteCommandOutputResponse extends com.pulumi
      * 
      */
     @Import(name="errors")
-      private final @Nullable List<ReportableExceptionResponse> errors;
+    private @Nullable List<ReportableExceptionResponse> errors;
 
-    public List<ReportableExceptionResponse> errors() {
-        return this.errors == null ? List.of() : this.errors;
+    public Optional<List<ReportableExceptionResponse>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
-    public MigrateMISyncCompleteCommandOutputResponse(@Nullable List<ReportableExceptionResponse> errors) {
-        this.errors = errors;
-    }
+    private MigrateMISyncCompleteCommandOutputResponse() {}
 
-    private MigrateMISyncCompleteCommandOutputResponse() {
-        this.errors = List.of();
+    private MigrateMISyncCompleteCommandOutputResponse(MigrateMISyncCompleteCommandOutputResponse $) {
+        this.errors = $.errors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateMISyncCompleteCommandOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ReportableExceptionResponse> errors;
+        private MigrateMISyncCompleteCommandOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateMISyncCompleteCommandOutputResponse();
         }
 
         public Builder(MigrateMISyncCompleteCommandOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errors = defaults.errors;
+            $ = new MigrateMISyncCompleteCommandOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errors(@Nullable List<ReportableExceptionResponse> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ReportableExceptionResponse... errors) {
             return errors(List.of(errors));
-        }        public MigrateMISyncCompleteCommandOutputResponse build() {
-            return new MigrateMISyncCompleteCommandOutputResponse(errors);
+        }
+
+        public MigrateMISyncCompleteCommandOutputResponse build() {
+            return $;
         }
     }
+
 }

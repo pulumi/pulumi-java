@@ -6,10 +6,10 @@ package com.pulumi.azurenative.aadiam;
 import com.pulumi.azurenative.aadiam.inputs.LogSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DiagnosticSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="eventHubAuthorizationRuleId")
-      private final @Nullable Output<String> eventHubAuthorizationRuleId;
+    private @Nullable Output<String> eventHubAuthorizationRuleId;
 
-    public Output<String> eventHubAuthorizationRuleId() {
-        return this.eventHubAuthorizationRuleId == null ? Codegen.empty() : this.eventHubAuthorizationRuleId;
+    public Optional<Output<String>> eventHubAuthorizationRuleId() {
+        return Optional.ofNullable(this.eventHubAuthorizationRuleId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DiagnosticSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="eventHubName")
-      private final @Nullable Output<String> eventHubName;
+    private @Nullable Output<String> eventHubName;
 
-    public Output<String> eventHubName() {
-        return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
+    public Optional<Output<String>> eventHubName() {
+        return Optional.ofNullable(this.eventHubName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DiagnosticSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="logs")
-      private final @Nullable Output<List<LogSettingsArgs>> logs;
+    private @Nullable Output<List<LogSettingsArgs>> logs;
 
-    public Output<List<LogSettingsArgs>> logs() {
-        return this.logs == null ? Codegen.empty() : this.logs;
+    public Optional<Output<List<LogSettingsArgs>>> logs() {
+        return Optional.ofNullable(this.logs);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DiagnosticSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DiagnosticSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serviceBusRuleId")
-      private final @Nullable Output<String> serviceBusRuleId;
+    private @Nullable Output<String> serviceBusRuleId;
 
-    public Output<String> serviceBusRuleId() {
-        return this.serviceBusRuleId == null ? Codegen.empty() : this.serviceBusRuleId;
+    public Optional<Output<String>> serviceBusRuleId() {
+        return Optional.ofNullable(this.serviceBusRuleId);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DiagnosticSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="storageAccountId")
-      private final @Nullable Output<String> storageAccountId;
+    private @Nullable Output<String> storageAccountId;
 
-    public Output<String> storageAccountId() {
-        return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
+    public Optional<Output<String>> storageAccountId() {
+        return Optional.ofNullable(this.storageAccountId);
     }
 
     /**
@@ -88,131 +88,112 @@ public final class DiagnosticSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable Output<String> workspaceId;
+    private @Nullable Output<String> workspaceId;
 
-    public Output<String> workspaceId() {
-        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
+    public Optional<Output<String>> workspaceId() {
+        return Optional.ofNullable(this.workspaceId);
     }
 
-    public DiagnosticSettingArgs(
-        @Nullable Output<String> eventHubAuthorizationRuleId,
-        @Nullable Output<String> eventHubName,
-        @Nullable Output<List<LogSettingsArgs>> logs,
-        @Nullable Output<String> name,
-        @Nullable Output<String> serviceBusRuleId,
-        @Nullable Output<String> storageAccountId,
-        @Nullable Output<String> workspaceId) {
-        this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
-        this.eventHubName = eventHubName;
-        this.logs = logs;
-        this.name = name;
-        this.serviceBusRuleId = serviceBusRuleId;
-        this.storageAccountId = storageAccountId;
-        this.workspaceId = workspaceId;
-    }
+    private DiagnosticSettingArgs() {}
 
-    private DiagnosticSettingArgs() {
-        this.eventHubAuthorizationRuleId = Codegen.empty();
-        this.eventHubName = Codegen.empty();
-        this.logs = Codegen.empty();
-        this.name = Codegen.empty();
-        this.serviceBusRuleId = Codegen.empty();
-        this.storageAccountId = Codegen.empty();
-        this.workspaceId = Codegen.empty();
+    private DiagnosticSettingArgs(DiagnosticSettingArgs $) {
+        this.eventHubAuthorizationRuleId = $.eventHubAuthorizationRuleId;
+        this.eventHubName = $.eventHubName;
+        this.logs = $.logs;
+        this.name = $.name;
+        this.serviceBusRuleId = $.serviceBusRuleId;
+        this.storageAccountId = $.storageAccountId;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eventHubAuthorizationRuleId;
-        private @Nullable Output<String> eventHubName;
-        private @Nullable Output<List<LogSettingsArgs>> logs;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> serviceBusRuleId;
-        private @Nullable Output<String> storageAccountId;
-        private @Nullable Output<String> workspaceId;
+        private DiagnosticSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticSettingArgs();
         }
 
         public Builder(DiagnosticSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHubAuthorizationRuleId = defaults.eventHubAuthorizationRuleId;
-    	      this.eventHubName = defaults.eventHubName;
-    	      this.logs = defaults.logs;
-    	      this.name = defaults.name;
-    	      this.serviceBusRuleId = defaults.serviceBusRuleId;
-    	      this.storageAccountId = defaults.storageAccountId;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new DiagnosticSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHubAuthorizationRuleId(@Nullable Output<String> eventHubAuthorizationRuleId) {
-            this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
+            $.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
             return this;
         }
-        public Builder eventHubAuthorizationRuleId(@Nullable String eventHubAuthorizationRuleId) {
-            this.eventHubAuthorizationRuleId = Codegen.ofNullable(eventHubAuthorizationRuleId);
-            return this;
+
+        public Builder eventHubAuthorizationRuleId(String eventHubAuthorizationRuleId) {
+            return eventHubAuthorizationRuleId(Output.of(eventHubAuthorizationRuleId));
         }
+
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
-            this.eventHubName = eventHubName;
+            $.eventHubName = eventHubName;
             return this;
         }
-        public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = Codegen.ofNullable(eventHubName);
-            return this;
+
+        public Builder eventHubName(String eventHubName) {
+            return eventHubName(Output.of(eventHubName));
         }
+
         public Builder logs(@Nullable Output<List<LogSettingsArgs>> logs) {
-            this.logs = logs;
+            $.logs = logs;
             return this;
         }
-        public Builder logs(@Nullable List<LogSettingsArgs> logs) {
-            this.logs = Codegen.ofNullable(logs);
-            return this;
+
+        public Builder logs(List<LogSettingsArgs> logs) {
+            return logs(Output.of(logs));
         }
+
         public Builder logs(LogSettingsArgs... logs) {
             return logs(List.of(logs));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder serviceBusRuleId(@Nullable Output<String> serviceBusRuleId) {
-            this.serviceBusRuleId = serviceBusRuleId;
+            $.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
-        public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
-            this.serviceBusRuleId = Codegen.ofNullable(serviceBusRuleId);
-            return this;
+
+        public Builder serviceBusRuleId(String serviceBusRuleId) {
+            return serviceBusRuleId(Output.of(serviceBusRuleId));
         }
+
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
-            this.storageAccountId = storageAccountId;
+            $.storageAccountId = storageAccountId;
             return this;
         }
-        public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Codegen.ofNullable(storageAccountId);
-            return this;
+
+        public Builder storageAccountId(String storageAccountId) {
+            return storageAccountId(Output.of(storageAccountId));
         }
+
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
         }
-        public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Codegen.ofNullable(workspaceId);
-            return this;
-        }        public DiagnosticSettingArgs build() {
-            return new DiagnosticSettingArgs(eventHubAuthorizationRuleId, eventHubName, logs, name, serviceBusRuleId, storageAccountId, workspaceId);
+
+        public Builder workspaceId(String workspaceId) {
+            return workspaceId(Output.of(workspaceId));
+        }
+
+        public DiagnosticSettingArgs build() {
+            return $;
         }
     }
+
 }

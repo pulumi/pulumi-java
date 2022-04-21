@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,52 +22,52 @@ public final class CertificateCertificateDescriptionConfigValueGetArgs extends c
      * 
      */
     @Import(name="keyUsages")
-      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
+    private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages() {
-        return this.keyUsages == null ? Codegen.empty() : this.keyUsages;
+    public Optional<Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>>> keyUsages() {
+        return Optional.ofNullable(this.keyUsages);
     }
 
-    public CertificateCertificateDescriptionConfigValueGetArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages) {
-        this.keyUsages = keyUsages;
-    }
+    private CertificateCertificateDescriptionConfigValueGetArgs() {}
 
-    private CertificateCertificateDescriptionConfigValueGetArgs() {
-        this.keyUsages = Codegen.empty();
+    private CertificateCertificateDescriptionConfigValueGetArgs(CertificateCertificateDescriptionConfigValueGetArgs $) {
+        this.keyUsages = $.keyUsages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateCertificateDescriptionConfigValueGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
+        private CertificateCertificateDescriptionConfigValueGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateCertificateDescriptionConfigValueGetArgs();
         }
 
         public Builder(CertificateCertificateDescriptionConfigValueGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyUsages = defaults.keyUsages;
+            $ = new CertificateCertificateDescriptionConfigValueGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages) {
-            this.keyUsages = keyUsages;
+            $.keyUsages = keyUsages;
             return this;
         }
-        public Builder keyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs> keyUsages) {
-            this.keyUsages = Codegen.ofNullable(keyUsages);
-            return this;
+
+        public Builder keyUsages(List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs> keyUsages) {
+            return keyUsages(Output.of(keyUsages));
         }
+
         public Builder keyUsages(CertificateCertificateDescriptionConfigValueKeyUsageGetArgs... keyUsages) {
             return keyUsages(List.of(keyUsages));
-        }        public CertificateCertificateDescriptionConfigValueGetArgs build() {
-            return new CertificateCertificateDescriptionConfigValueGetArgs(keyUsages);
+        }
+
+        public CertificateCertificateDescriptionConfigValueGetArgs build() {
+            return $;
         }
     }
+
 }

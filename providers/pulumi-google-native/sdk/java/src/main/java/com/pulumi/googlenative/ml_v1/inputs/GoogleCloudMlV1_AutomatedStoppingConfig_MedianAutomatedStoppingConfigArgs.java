@@ -5,9 +5,9 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
      * 
      */
     @Import(name="useElapsedTime")
-      private final @Nullable Output<Boolean> useElapsedTime;
+    private @Nullable Output<Boolean> useElapsedTime;
 
-    public Output<Boolean> useElapsedTime() {
-        return this.useElapsedTime == null ? Codegen.empty() : this.useElapsedTime;
+    public Optional<Output<Boolean>> useElapsedTime() {
+        return Optional.ofNullable(this.useElapsedTime);
     }
 
-    public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs(@Nullable Output<Boolean> useElapsedTime) {
-        this.useElapsedTime = useElapsedTime;
-    }
+    private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs() {}
 
-    private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs() {
-        this.useElapsedTime = Codegen.empty();
+    private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs(GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs $) {
+        this.useElapsedTime = $.useElapsedTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> useElapsedTime;
+        private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs();
         }
 
         public Builder(GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.useElapsedTime = defaults.useElapsedTime;
+            $ = new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder useElapsedTime(@Nullable Output<Boolean> useElapsedTime) {
-            this.useElapsedTime = useElapsedTime;
+            $.useElapsedTime = useElapsedTime;
             return this;
         }
-        public Builder useElapsedTime(@Nullable Boolean useElapsedTime) {
-            this.useElapsedTime = Codegen.ofNullable(useElapsedTime);
-            return this;
-        }        public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs build() {
-            return new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs(useElapsedTime);
+
+        public Builder useElapsedTime(Boolean useElapsedTime) {
+            return useElapsedTime(Output.of(useElapsedTime));
+        }
+
+        public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs build() {
+            return $;
         }
     }
+
 }

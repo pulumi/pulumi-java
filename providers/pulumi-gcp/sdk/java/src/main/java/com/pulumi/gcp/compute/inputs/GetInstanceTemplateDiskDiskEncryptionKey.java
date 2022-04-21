@@ -17,45 +17,45 @@ public final class GetInstanceTemplateDiskDiskEncryptionKey extends com.pulumi.r
      * 
      */
     @Import(name="kmsKeySelfLink", required=true)
-      private final String kmsKeySelfLink;
+    private String kmsKeySelfLink;
 
     public String kmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
 
-    public GetInstanceTemplateDiskDiskEncryptionKey(String kmsKeySelfLink) {
-        this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink, "expected parameter 'kmsKeySelfLink' to be non-null");
-    }
+    private GetInstanceTemplateDiskDiskEncryptionKey() {}
 
-    private GetInstanceTemplateDiskDiskEncryptionKey() {
-        this.kmsKeySelfLink = null;
+    private GetInstanceTemplateDiskDiskEncryptionKey(GetInstanceTemplateDiskDiskEncryptionKey $) {
+        this.kmsKeySelfLink = $.kmsKeySelfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTemplateDiskDiskEncryptionKey defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kmsKeySelfLink;
+        private GetInstanceTemplateDiskDiskEncryptionKey $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTemplateDiskDiskEncryptionKey();
         }
 
         public Builder(GetInstanceTemplateDiskDiskEncryptionKey defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeySelfLink = defaults.kmsKeySelfLink;
+            $ = new GetInstanceTemplateDiskDiskEncryptionKey(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeySelfLink(String kmsKeySelfLink) {
-            this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
+            $.kmsKeySelfLink = kmsKeySelfLink;
             return this;
-        }        public GetInstanceTemplateDiskDiskEncryptionKey build() {
-            return new GetInstanceTemplateDiskDiskEncryptionKey(kmsKeySelfLink);
+        }
+
+        public GetInstanceTemplateDiskDiskEncryptionKey build() {
+            $.kmsKeySelfLink = Objects.requireNonNull($.kmsKeySelfLink, "expected parameter 'kmsKeySelfLink' to be non-null");
+            return $;
         }
     }
+
 }

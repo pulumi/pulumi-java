@@ -15,190 +15,163 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBucketObjectArgs Empty = new GetBucketObjectArgs();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="generation")
-      private final @Nullable String generation;
+    private @Nullable String generation;
 
     public Optional<String> generation() {
-        return this.generation == null ? Optional.empty() : Optional.ofNullable(this.generation);
+        return Optional.ofNullable(this.generation);
     }
 
     @Import(name="ifGenerationMatch")
-      private final @Nullable String ifGenerationMatch;
+    private @Nullable String ifGenerationMatch;
 
     public Optional<String> ifGenerationMatch() {
-        return this.ifGenerationMatch == null ? Optional.empty() : Optional.ofNullable(this.ifGenerationMatch);
+        return Optional.ofNullable(this.ifGenerationMatch);
     }
 
     @Import(name="ifGenerationNotMatch")
-      private final @Nullable String ifGenerationNotMatch;
+    private @Nullable String ifGenerationNotMatch;
 
     public Optional<String> ifGenerationNotMatch() {
-        return this.ifGenerationNotMatch == null ? Optional.empty() : Optional.ofNullable(this.ifGenerationNotMatch);
+        return Optional.ofNullable(this.ifGenerationNotMatch);
     }
 
     @Import(name="ifMetagenerationMatch")
-      private final @Nullable String ifMetagenerationMatch;
+    private @Nullable String ifMetagenerationMatch;
 
     public Optional<String> ifMetagenerationMatch() {
-        return this.ifMetagenerationMatch == null ? Optional.empty() : Optional.ofNullable(this.ifMetagenerationMatch);
+        return Optional.ofNullable(this.ifMetagenerationMatch);
     }
 
     @Import(name="ifMetagenerationNotMatch")
-      private final @Nullable String ifMetagenerationNotMatch;
+    private @Nullable String ifMetagenerationNotMatch;
 
     public Optional<String> ifMetagenerationNotMatch() {
-        return this.ifMetagenerationNotMatch == null ? Optional.empty() : Optional.ofNullable(this.ifMetagenerationNotMatch);
+        return Optional.ofNullable(this.ifMetagenerationNotMatch);
     }
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
     @Import(name="projection")
-      private final @Nullable String projection;
+    private @Nullable String projection;
 
     public Optional<String> projection() {
-        return this.projection == null ? Optional.empty() : Optional.ofNullable(this.projection);
+        return Optional.ofNullable(this.projection);
     }
 
     @Import(name="provisionalUserProject")
-      private final @Nullable String provisionalUserProject;
+    private @Nullable String provisionalUserProject;
 
     public Optional<String> provisionalUserProject() {
-        return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
+        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     @Import(name="userProject")
-      private final @Nullable String userProject;
+    private @Nullable String userProject;
 
     public Optional<String> userProject() {
-        return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
+        return Optional.ofNullable(this.userProject);
     }
 
-    public GetBucketObjectArgs(
-        String bucket,
-        @Nullable String generation,
-        @Nullable String ifGenerationMatch,
-        @Nullable String ifGenerationNotMatch,
-        @Nullable String ifMetagenerationMatch,
-        @Nullable String ifMetagenerationNotMatch,
-        String object,
-        @Nullable String projection,
-        @Nullable String provisionalUserProject,
-        @Nullable String userProject) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.generation = generation;
-        this.ifGenerationMatch = ifGenerationMatch;
-        this.ifGenerationNotMatch = ifGenerationNotMatch;
-        this.ifMetagenerationMatch = ifMetagenerationMatch;
-        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-        this.projection = projection;
-        this.provisionalUserProject = provisionalUserProject;
-        this.userProject = userProject;
-    }
+    private GetBucketObjectArgs() {}
 
-    private GetBucketObjectArgs() {
-        this.bucket = null;
-        this.generation = null;
-        this.ifGenerationMatch = null;
-        this.ifGenerationNotMatch = null;
-        this.ifMetagenerationMatch = null;
-        this.ifMetagenerationNotMatch = null;
-        this.object = null;
-        this.projection = null;
-        this.provisionalUserProject = null;
-        this.userProject = null;
+    private GetBucketObjectArgs(GetBucketObjectArgs $) {
+        this.bucket = $.bucket;
+        this.generation = $.generation;
+        this.ifGenerationMatch = $.ifGenerationMatch;
+        this.ifGenerationNotMatch = $.ifGenerationNotMatch;
+        this.ifMetagenerationMatch = $.ifMetagenerationMatch;
+        this.ifMetagenerationNotMatch = $.ifMetagenerationNotMatch;
+        this.object = $.object;
+        this.projection = $.projection;
+        this.provisionalUserProject = $.provisionalUserProject;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable String generation;
-        private @Nullable String ifGenerationMatch;
-        private @Nullable String ifGenerationNotMatch;
-        private @Nullable String ifMetagenerationMatch;
-        private @Nullable String ifMetagenerationNotMatch;
-        private String object;
-        private @Nullable String projection;
-        private @Nullable String provisionalUserProject;
-        private @Nullable String userProject;
+        private GetBucketObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketObjectArgs();
         }
 
         public Builder(GetBucketObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.generation = defaults.generation;
-    	      this.ifGenerationMatch = defaults.ifGenerationMatch;
-    	      this.ifGenerationNotMatch = defaults.ifGenerationNotMatch;
-    	      this.ifMetagenerationMatch = defaults.ifMetagenerationMatch;
-    	      this.ifMetagenerationNotMatch = defaults.ifMetagenerationNotMatch;
-    	      this.object = defaults.object;
-    	      this.projection = defaults.projection;
-    	      this.provisionalUserProject = defaults.provisionalUserProject;
-    	      this.userProject = defaults.userProject;
+            $ = new GetBucketObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder generation(@Nullable String generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
+
         public Builder ifGenerationMatch(@Nullable String ifGenerationMatch) {
-            this.ifGenerationMatch = ifGenerationMatch;
+            $.ifGenerationMatch = ifGenerationMatch;
             return this;
         }
+
         public Builder ifGenerationNotMatch(@Nullable String ifGenerationNotMatch) {
-            this.ifGenerationNotMatch = ifGenerationNotMatch;
+            $.ifGenerationNotMatch = ifGenerationNotMatch;
             return this;
         }
+
         public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
-            this.ifMetagenerationMatch = ifMetagenerationMatch;
+            $.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
+
         public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
-            this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+            $.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder projection(@Nullable String projection) {
-            this.projection = projection;
+            $.projection = projection;
             return this;
         }
+
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = provisionalUserProject;
+            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
+
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
-        }        public GetBucketObjectArgs build() {
-            return new GetBucketObjectArgs(bucket, generation, ifGenerationMatch, ifGenerationNotMatch, ifMetagenerationMatch, ifMetagenerationNotMatch, object, projection, provisionalUserProject, userProject);
+        }
+
+        public GetBucketObjectArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

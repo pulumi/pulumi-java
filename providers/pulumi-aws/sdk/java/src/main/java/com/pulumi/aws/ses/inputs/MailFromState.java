@@ -5,9 +5,9 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class MailFromState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="behaviorOnMxFailure")
-      private final @Nullable Output<String> behaviorOnMxFailure;
+    private @Nullable Output<String> behaviorOnMxFailure;
 
-    public Output<String> behaviorOnMxFailure() {
-        return this.behaviorOnMxFailure == null ? Codegen.empty() : this.behaviorOnMxFailure;
+    public Optional<Output<String>> behaviorOnMxFailure() {
+        return Optional.ofNullable(this.behaviorOnMxFailure);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MailFromState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class MailFromState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mailFromDomain")
-      private final @Nullable Output<String> mailFromDomain;
+    private @Nullable Output<String> mailFromDomain;
 
-    public Output<String> mailFromDomain() {
-        return this.mailFromDomain == null ? Codegen.empty() : this.mailFromDomain;
+    public Optional<Output<String>> mailFromDomain() {
+        return Optional.ofNullable(this.mailFromDomain);
     }
 
-    public MailFromState(
-        @Nullable Output<String> behaviorOnMxFailure,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> mailFromDomain) {
-        this.behaviorOnMxFailure = behaviorOnMxFailure;
-        this.domain = domain;
-        this.mailFromDomain = mailFromDomain;
-    }
+    private MailFromState() {}
 
-    private MailFromState() {
-        this.behaviorOnMxFailure = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.mailFromDomain = Codegen.empty();
+    private MailFromState(MailFromState $) {
+        this.behaviorOnMxFailure = $.behaviorOnMxFailure;
+        this.domain = $.domain;
+        this.mailFromDomain = $.mailFromDomain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MailFromState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> behaviorOnMxFailure;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> mailFromDomain;
+        private MailFromState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MailFromState();
         }
 
         public Builder(MailFromState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.behaviorOnMxFailure = defaults.behaviorOnMxFailure;
-    	      this.domain = defaults.domain;
-    	      this.mailFromDomain = defaults.mailFromDomain;
+            $ = new MailFromState(Objects.requireNonNull(defaults));
         }
 
         public Builder behaviorOnMxFailure(@Nullable Output<String> behaviorOnMxFailure) {
-            this.behaviorOnMxFailure = behaviorOnMxFailure;
+            $.behaviorOnMxFailure = behaviorOnMxFailure;
             return this;
         }
-        public Builder behaviorOnMxFailure(@Nullable String behaviorOnMxFailure) {
-            this.behaviorOnMxFailure = Codegen.ofNullable(behaviorOnMxFailure);
-            return this;
+
+        public Builder behaviorOnMxFailure(String behaviorOnMxFailure) {
+            return behaviorOnMxFailure(Output.of(behaviorOnMxFailure));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder mailFromDomain(@Nullable Output<String> mailFromDomain) {
-            this.mailFromDomain = mailFromDomain;
+            $.mailFromDomain = mailFromDomain;
             return this;
         }
-        public Builder mailFromDomain(@Nullable String mailFromDomain) {
-            this.mailFromDomain = Codegen.ofNullable(mailFromDomain);
-            return this;
-        }        public MailFromState build() {
-            return new MailFromState(behaviorOnMxFailure, domain, mailFromDomain);
+
+        public Builder mailFromDomain(String mailFromDomain) {
+            return mailFromDomain(Output.of(mailFromDomain));
+        }
+
+        public MailFromState build() {
+            return $;
         }
     }
+
 }

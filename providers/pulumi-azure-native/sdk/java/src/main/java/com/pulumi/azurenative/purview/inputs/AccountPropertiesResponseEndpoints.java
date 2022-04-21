@@ -21,7 +21,7 @@ public final class AccountPropertiesResponseEndpoints extends com.pulumi.resourc
      * 
      */
     @Import(name="catalog", required=true)
-      private final String catalog;
+    private String catalog;
 
     public String catalog() {
         return this.catalog;
@@ -32,7 +32,7 @@ public final class AccountPropertiesResponseEndpoints extends com.pulumi.resourc
      * 
      */
     @Import(name="guardian", required=true)
-      private final String guardian;
+    private String guardian;
 
     public String guardian() {
         return this.guardian;
@@ -43,64 +43,59 @@ public final class AccountPropertiesResponseEndpoints extends com.pulumi.resourc
      * 
      */
     @Import(name="scan", required=true)
-      private final String scan;
+    private String scan;
 
     public String scan() {
         return this.scan;
     }
 
-    public AccountPropertiesResponseEndpoints(
-        String catalog,
-        String guardian,
-        String scan) {
-        this.catalog = Objects.requireNonNull(catalog, "expected parameter 'catalog' to be non-null");
-        this.guardian = Objects.requireNonNull(guardian, "expected parameter 'guardian' to be non-null");
-        this.scan = Objects.requireNonNull(scan, "expected parameter 'scan' to be non-null");
-    }
+    private AccountPropertiesResponseEndpoints() {}
 
-    private AccountPropertiesResponseEndpoints() {
-        this.catalog = null;
-        this.guardian = null;
-        this.scan = null;
+    private AccountPropertiesResponseEndpoints(AccountPropertiesResponseEndpoints $) {
+        this.catalog = $.catalog;
+        this.guardian = $.guardian;
+        this.scan = $.scan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountPropertiesResponseEndpoints defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String catalog;
-        private String guardian;
-        private String scan;
+        private AccountPropertiesResponseEndpoints $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountPropertiesResponseEndpoints();
         }
 
         public Builder(AccountPropertiesResponseEndpoints defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalog = defaults.catalog;
-    	      this.guardian = defaults.guardian;
-    	      this.scan = defaults.scan;
+            $ = new AccountPropertiesResponseEndpoints(Objects.requireNonNull(defaults));
         }
 
         public Builder catalog(String catalog) {
-            this.catalog = Objects.requireNonNull(catalog);
+            $.catalog = catalog;
             return this;
         }
+
         public Builder guardian(String guardian) {
-            this.guardian = Objects.requireNonNull(guardian);
+            $.guardian = guardian;
             return this;
         }
+
         public Builder scan(String scan) {
-            this.scan = Objects.requireNonNull(scan);
+            $.scan = scan;
             return this;
-        }        public AccountPropertiesResponseEndpoints build() {
-            return new AccountPropertiesResponseEndpoints(catalog, guardian, scan);
+        }
+
+        public AccountPropertiesResponseEndpoints build() {
+            $.catalog = Objects.requireNonNull($.catalog, "expected parameter 'catalog' to be non-null");
+            $.guardian = Objects.requireNonNull($.guardian, "expected parameter 'guardian' to be non-null");
+            $.scan = Objects.requireNonNull($.scan, "expected parameter 'scan' to be non-null");
+            return $;
         }
     }
+
 }

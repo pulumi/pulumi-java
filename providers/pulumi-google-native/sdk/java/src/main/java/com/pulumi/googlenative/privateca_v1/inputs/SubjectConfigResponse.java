@@ -22,7 +22,7 @@ public final class SubjectConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="subject", required=true)
-      private final SubjectResponse subject;
+    private SubjectResponse subject;
 
     public SubjectResponse subject() {
         return this.subject;
@@ -33,55 +33,52 @@ public final class SubjectConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="subjectAltName", required=true)
-      private final SubjectAltNamesResponse subjectAltName;
+    private SubjectAltNamesResponse subjectAltName;
 
     public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }
 
-    public SubjectConfigResponse(
-        SubjectResponse subject,
-        SubjectAltNamesResponse subjectAltName) {
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.subjectAltName = Objects.requireNonNull(subjectAltName, "expected parameter 'subjectAltName' to be non-null");
-    }
+    private SubjectConfigResponse() {}
 
-    private SubjectConfigResponse() {
-        this.subject = null;
-        this.subjectAltName = null;
+    private SubjectConfigResponse(SubjectConfigResponse $) {
+        this.subject = $.subject;
+        this.subjectAltName = $.subjectAltName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubjectConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SubjectResponse subject;
-        private SubjectAltNamesResponse subjectAltName;
+        private SubjectConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubjectConfigResponse();
         }
 
         public Builder(SubjectConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subject = defaults.subject;
-    	      this.subjectAltName = defaults.subjectAltName;
+            $ = new SubjectConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder subject(SubjectResponse subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subjectAltName(SubjectAltNamesResponse subjectAltName) {
-            this.subjectAltName = Objects.requireNonNull(subjectAltName);
+            $.subjectAltName = subjectAltName;
             return this;
-        }        public SubjectConfigResponse build() {
-            return new SubjectConfigResponse(subject, subjectAltName);
+        }
+
+        public SubjectConfigResponse build() {
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.subjectAltName = Objects.requireNonNull($.subjectAltName, "expected parameter 'subjectAltName' to be non-null");
+            return $;
         }
     }
+
 }

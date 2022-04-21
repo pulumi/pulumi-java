@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +30,7 @@ public final class AzureSqlProtectionPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="backupManagementType", required=true)
-      private final Output<String> backupManagementType;
+    private Output<String> backupManagementType;
 
     public Output<String> backupManagementType() {
         return this.backupManagementType;
@@ -40,10 +41,10 @@ public final class AzureSqlProtectionPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="protectedItemsCount")
-      private final @Nullable Output<Integer> protectedItemsCount;
+    private @Nullable Output<Integer> protectedItemsCount;
 
-    public Output<Integer> protectedItemsCount() {
-        return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
+    public Optional<Output<Integer>> protectedItemsCount() {
+        return Optional.ofNullable(this.protectedItemsCount);
     }
 
     /**
@@ -51,76 +52,69 @@ public final class AzureSqlProtectionPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+    private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
-    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy() {
-        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
+    public Optional<Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
-    public AzureSqlProtectionPolicyArgs(
-        Output<String> backupManagementType,
-        @Nullable Output<Integer> protectedItemsCount,
-        @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
-        this.backupManagementType = Codegen.stringProp("backupManagementType").output().arg(backupManagementType).require();
-        this.protectedItemsCount = protectedItemsCount;
-        this.retentionPolicy = retentionPolicy;
-    }
+    private AzureSqlProtectionPolicyArgs() {}
 
-    private AzureSqlProtectionPolicyArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.protectedItemsCount = Codegen.empty();
-        this.retentionPolicy = Codegen.empty();
+    private AzureSqlProtectionPolicyArgs(AzureSqlProtectionPolicyArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.protectedItemsCount = $.protectedItemsCount;
+        this.retentionPolicy = $.retentionPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSqlProtectionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupManagementType;
-        private @Nullable Output<Integer> protectedItemsCount;
-        private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+        private AzureSqlProtectionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSqlProtectionPolicyArgs();
         }
 
         public Builder(AzureSqlProtectionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.protectedItemsCount = defaults.protectedItemsCount;
-    	      this.retentionPolicy = defaults.retentionPolicy;
+            $ = new AzureSqlProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(Output<String> backupManagementType) {
-            this.backupManagementType = Objects.requireNonNull(backupManagementType);
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
-            return this;
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
-            this.protectedItemsCount = protectedItemsCount;
+            $.protectedItemsCount = protectedItemsCount;
             return this;
         }
-        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Codegen.ofNullable(protectedItemsCount);
-            return this;
+
+        public Builder protectedItemsCount(Integer protectedItemsCount) {
+            return protectedItemsCount(Output.of(protectedItemsCount));
         }
+
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
-        public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
-            return this;
-        }        public AzureSqlProtectionPolicyArgs build() {
-            return new AzureSqlProtectionPolicyArgs(backupManagementType, protectedItemsCount, retentionPolicy);
+
+        public Builder retentionPolicy(Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
+            return retentionPolicy(Output.of(retentionPolicy));
+        }
+
+        public AzureSqlProtectionPolicyArgs build() {
+            $.backupManagementType = Codegen.stringProp("backupManagementType").output().arg($.backupManagementType).require();
+            return $;
         }
     }
+
 }

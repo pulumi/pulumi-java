@@ -7,10 +7,10 @@ import com.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentAccessEn
 import com.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="accessEndpoint")
-      private final @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
+    private @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
 
-    public Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint() {
-        return this.accessEndpoint == null ? Codegen.empty() : this.accessEndpoint;
+    public Optional<Output<IntegrationServiceEnvironmentAccessEndpointArgs>> accessEndpoint() {
+        return Optional.ofNullable(this.accessEndpoint);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subnets")
-      private final @Nullable Output<List<ResourceReferenceArgs>> subnets;
+    private @Nullable Output<List<ResourceReferenceArgs>> subnets;
 
-    public Output<List<ResourceReferenceArgs>> subnets() {
-        return this.subnets == null ? Codegen.empty() : this.subnets;
+    public Optional<Output<List<ResourceReferenceArgs>>> subnets() {
+        return Optional.ofNullable(this.subnets);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="virtualNetworkAddressSpace")
-      private final @Nullable Output<String> virtualNetworkAddressSpace;
+    private @Nullable Output<String> virtualNetworkAddressSpace;
 
-    public Output<String> virtualNetworkAddressSpace() {
-        return this.virtualNetworkAddressSpace == null ? Codegen.empty() : this.virtualNetworkAddressSpace;
+    public Optional<Output<String>> virtualNetworkAddressSpace() {
+        return Optional.ofNullable(this.virtualNetworkAddressSpace);
     }
 
-    public NetworkConfigurationArgs(
-        @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint,
-        @Nullable Output<List<ResourceReferenceArgs>> subnets,
-        @Nullable Output<String> virtualNetworkAddressSpace) {
-        this.accessEndpoint = accessEndpoint;
-        this.subnets = subnets;
-        this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
-    }
+    private NetworkConfigurationArgs() {}
 
-    private NetworkConfigurationArgs() {
-        this.accessEndpoint = Codegen.empty();
-        this.subnets = Codegen.empty();
-        this.virtualNetworkAddressSpace = Codegen.empty();
+    private NetworkConfigurationArgs(NetworkConfigurationArgs $) {
+        this.accessEndpoint = $.accessEndpoint;
+        this.subnets = $.subnets;
+        this.virtualNetworkAddressSpace = $.virtualNetworkAddressSpace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
-        private @Nullable Output<List<ResourceReferenceArgs>> subnets;
-        private @Nullable Output<String> virtualNetworkAddressSpace;
+        private NetworkConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigurationArgs();
         }
 
         public Builder(NetworkConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessEndpoint = defaults.accessEndpoint;
-    	      this.subnets = defaults.subnets;
-    	      this.virtualNetworkAddressSpace = defaults.virtualNetworkAddressSpace;
+            $ = new NetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessEndpoint(@Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint) {
-            this.accessEndpoint = accessEndpoint;
+            $.accessEndpoint = accessEndpoint;
             return this;
         }
-        public Builder accessEndpoint(@Nullable IntegrationServiceEnvironmentAccessEndpointArgs accessEndpoint) {
-            this.accessEndpoint = Codegen.ofNullable(accessEndpoint);
-            return this;
+
+        public Builder accessEndpoint(IntegrationServiceEnvironmentAccessEndpointArgs accessEndpoint) {
+            return accessEndpoint(Output.of(accessEndpoint));
         }
+
         public Builder subnets(@Nullable Output<List<ResourceReferenceArgs>> subnets) {
-            this.subnets = subnets;
+            $.subnets = subnets;
             return this;
         }
-        public Builder subnets(@Nullable List<ResourceReferenceArgs> subnets) {
-            this.subnets = Codegen.ofNullable(subnets);
-            return this;
+
+        public Builder subnets(List<ResourceReferenceArgs> subnets) {
+            return subnets(Output.of(subnets));
         }
+
         public Builder subnets(ResourceReferenceArgs... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder virtualNetworkAddressSpace(@Nullable Output<String> virtualNetworkAddressSpace) {
-            this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
+            $.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
             return this;
         }
-        public Builder virtualNetworkAddressSpace(@Nullable String virtualNetworkAddressSpace) {
-            this.virtualNetworkAddressSpace = Codegen.ofNullable(virtualNetworkAddressSpace);
-            return this;
-        }        public NetworkConfigurationArgs build() {
-            return new NetworkConfigurationArgs(accessEndpoint, subnets, virtualNetworkAddressSpace);
+
+        public Builder virtualNetworkAddressSpace(String virtualNetworkAddressSpace) {
+            return virtualNetworkAddressSpace(Output.of(virtualNetworkAddressSpace));
+        }
+
+        public NetworkConfigurationArgs build() {
+            return $;
         }
     }
+
 }

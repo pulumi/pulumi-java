@@ -23,10 +23,10 @@ public final class CertBasedSecurityPrincipalResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="cert")
-      private final @Nullable String cert;
+    private @Nullable String cert;
 
     public Optional<String> cert() {
-        return this.cert == null ? Optional.empty() : Optional.ofNullable(this.cert);
+        return Optional.ofNullable(this.cert);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class CertBasedSecurityPrincipalResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="ledgerRoleName")
-      private final @Nullable String ledgerRoleName;
+    private @Nullable String ledgerRoleName;
 
     public Optional<String> ledgerRoleName() {
-        return this.ledgerRoleName == null ? Optional.empty() : Optional.ofNullable(this.ledgerRoleName);
+        return Optional.ofNullable(this.ledgerRoleName);
     }
 
-    public CertBasedSecurityPrincipalResponse(
-        @Nullable String cert,
-        @Nullable String ledgerRoleName) {
-        this.cert = cert;
-        this.ledgerRoleName = ledgerRoleName;
-    }
+    private CertBasedSecurityPrincipalResponse() {}
 
-    private CertBasedSecurityPrincipalResponse() {
-        this.cert = null;
-        this.ledgerRoleName = null;
+    private CertBasedSecurityPrincipalResponse(CertBasedSecurityPrincipalResponse $) {
+        this.cert = $.cert;
+        this.ledgerRoleName = $.ledgerRoleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertBasedSecurityPrincipalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cert;
-        private @Nullable String ledgerRoleName;
+        private CertBasedSecurityPrincipalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertBasedSecurityPrincipalResponse();
         }
 
         public Builder(CertBasedSecurityPrincipalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cert = defaults.cert;
-    	      this.ledgerRoleName = defaults.ledgerRoleName;
+            $ = new CertBasedSecurityPrincipalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cert(@Nullable String cert) {
-            this.cert = cert;
+            $.cert = cert;
             return this;
         }
+
         public Builder ledgerRoleName(@Nullable String ledgerRoleName) {
-            this.ledgerRoleName = ledgerRoleName;
+            $.ledgerRoleName = ledgerRoleName;
             return this;
-        }        public CertBasedSecurityPrincipalResponse build() {
-            return new CertBasedSecurityPrincipalResponse(cert, ledgerRoleName);
+        }
+
+        public CertBasedSecurityPrincipalResponse build() {
+            return $;
         }
     }
+
 }

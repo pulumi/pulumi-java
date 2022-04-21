@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
      * 
      */
     @Import(name="header", required=true)
-      private final String header;
+    private String header;
 
     public String header() {
         return this.header;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
      * 
      */
     @Import(name="horizontalAlignment", required=true)
-      private final String horizontalAlignment;
+    private String horizontalAlignment;
 
     public String horizontalAlignment() {
         return this.horizontalAlignment;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse(
-        String header,
-        String horizontalAlignment) {
-        this.header = Objects.requireNonNull(header, "expected parameter 'header' to be non-null");
-        this.horizontalAlignment = Objects.requireNonNull(horizontalAlignment, "expected parameter 'horizontalAlignment' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse() {
-        this.header = null;
-        this.horizontalAlignment = null;
+    private GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse(GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse $) {
+        this.header = $.header;
+        this.horizontalAlignment = $.horizontalAlignment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String header;
-        private String horizontalAlignment;
+        private GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.header = defaults.header;
-    	      this.horizontalAlignment = defaults.horizontalAlignment;
+            $ = new GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder header(String header) {
-            this.header = Objects.requireNonNull(header);
+            $.header = header;
             return this;
         }
+
         public Builder horizontalAlignment(String horizontalAlignment) {
-            this.horizontalAlignment = Objects.requireNonNull(horizontalAlignment);
+            $.horizontalAlignment = horizontalAlignment;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse(header, horizontalAlignment);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse build() {
+            $.header = Objects.requireNonNull($.header, "expected parameter 'header' to be non-null");
+            $.horizontalAlignment = Objects.requireNonNull($.horizontalAlignment, "expected parameter 'horizontalAlignment' to be non-null");
+            return $;
         }
     }
+
 }

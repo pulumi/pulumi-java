@@ -7,10 +7,10 @@ import com.pulumi.azurenative.network.enums.FirewallPolicyRuleConditionApplicati
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends co
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends co
      * 
      */
     @Import(name="protocolType")
-      private final @Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType;
+    private @Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType;
 
-    public Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType() {
-        return this.protocolType == null ? Codegen.empty() : this.protocolType;
+    public Optional<Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>>> protocolType() {
+        return Optional.ofNullable(this.protocolType);
     }
 
-    public FirewallPolicyRuleConditionApplicationProtocolArgs(
-        @Nullable Output<Integer> port,
-        @Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType) {
-        this.port = port;
-        this.protocolType = protocolType;
-    }
+    private FirewallPolicyRuleConditionApplicationProtocolArgs() {}
 
-    private FirewallPolicyRuleConditionApplicationProtocolArgs() {
-        this.port = Codegen.empty();
-        this.protocolType = Codegen.empty();
+    private FirewallPolicyRuleConditionApplicationProtocolArgs(FirewallPolicyRuleConditionApplicationProtocolArgs $) {
+        this.port = $.port;
+        this.protocolType = $.protocolType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyRuleConditionApplicationProtocolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType;
+        private FirewallPolicyRuleConditionApplicationProtocolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyRuleConditionApplicationProtocolArgs();
         }
 
         public Builder(FirewallPolicyRuleConditionApplicationProtocolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.protocolType = defaults.protocolType;
+            $ = new FirewallPolicyRuleConditionApplicationProtocolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder protocolType(@Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType) {
-            this.protocolType = protocolType;
+            $.protocolType = protocolType;
             return this;
         }
-        public Builder protocolType(@Nullable Either<String,FirewallPolicyRuleConditionApplicationProtocolType> protocolType) {
-            this.protocolType = Codegen.ofNullable(protocolType);
-            return this;
-        }        public FirewallPolicyRuleConditionApplicationProtocolArgs build() {
-            return new FirewallPolicyRuleConditionApplicationProtocolArgs(port, protocolType);
+
+        public Builder protocolType(Either<String,FirewallPolicyRuleConditionApplicationProtocolType> protocolType) {
+            return protocolType(Output.of(protocolType));
+        }
+
+        public FirewallPolicyRuleConditionApplicationProtocolArgs build() {
+            return $;
         }
     }
+
 }

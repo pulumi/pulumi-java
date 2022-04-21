@@ -21,7 +21,7 @@ public final class ConnectionStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -32,7 +32,7 @@ public final class ConnectionStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -43,64 +43,59 @@ public final class ConnectionStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public ConnectionStatusResponse(
-        String description,
-        String state,
-        String status) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private ConnectionStatusResponse() {}
 
-    private ConnectionStatusResponse() {
-        this.description = null;
-        this.state = null;
-        this.status = null;
+    private ConnectionStatusResponse(ConnectionStatusResponse $) {
+        this.description = $.description;
+        this.state = $.state;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String state;
-        private String status;
+        private ConnectionStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionStatusResponse();
         }
 
         public Builder(ConnectionStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.state = defaults.state;
-    	      this.status = defaults.status;
+            $ = new ConnectionStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public ConnectionStatusResponse build() {
-            return new ConnectionStatusResponse(description, state, status);
+        }
+
+        public ConnectionStatusResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

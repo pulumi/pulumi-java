@@ -6,10 +6,10 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AssetModelCompositeModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="compositeModelProperties")
-      private final @Nullable Output<List<AssetModelPropertyArgs>> compositeModelProperties;
+    private @Nullable Output<List<AssetModelPropertyArgs>> compositeModelProperties;
 
-    public Output<List<AssetModelPropertyArgs>> compositeModelProperties() {
-        return this.compositeModelProperties == null ? Codegen.empty() : this.compositeModelProperties;
+    public Optional<Output<List<AssetModelPropertyArgs>>> compositeModelProperties() {
+        return Optional.ofNullable(this.compositeModelProperties);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AssetModelCompositeModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class AssetModelCompositeModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -59,92 +59,84 @@ public final class AssetModelCompositeModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AssetModelCompositeModelArgs(
-        @Nullable Output<List<AssetModelPropertyArgs>> compositeModelProperties,
-        @Nullable Output<String> description,
-        Output<String> name,
-        Output<String> type) {
-        this.compositeModelProperties = compositeModelProperties;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AssetModelCompositeModelArgs() {}
 
-    private AssetModelCompositeModelArgs() {
-        this.compositeModelProperties = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private AssetModelCompositeModelArgs(AssetModelCompositeModelArgs $) {
+        this.compositeModelProperties = $.compositeModelProperties;
+        this.description = $.description;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelCompositeModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AssetModelPropertyArgs>> compositeModelProperties;
-        private @Nullable Output<String> description;
-        private Output<String> name;
-        private Output<String> type;
+        private AssetModelCompositeModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelCompositeModelArgs();
         }
 
         public Builder(AssetModelCompositeModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compositeModelProperties = defaults.compositeModelProperties;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new AssetModelCompositeModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compositeModelProperties(@Nullable Output<List<AssetModelPropertyArgs>> compositeModelProperties) {
-            this.compositeModelProperties = compositeModelProperties;
+            $.compositeModelProperties = compositeModelProperties;
             return this;
         }
-        public Builder compositeModelProperties(@Nullable List<AssetModelPropertyArgs> compositeModelProperties) {
-            this.compositeModelProperties = Codegen.ofNullable(compositeModelProperties);
-            return this;
+
+        public Builder compositeModelProperties(List<AssetModelPropertyArgs> compositeModelProperties) {
+            return compositeModelProperties(Output.of(compositeModelProperties));
         }
+
         public Builder compositeModelProperties(AssetModelPropertyArgs... compositeModelProperties) {
             return compositeModelProperties(List.of(compositeModelProperties));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AssetModelCompositeModelArgs build() {
-            return new AssetModelCompositeModelArgs(compositeModelProperties, description, name, type);
+            return type(Output.of(type));
+        }
+
+        public AssetModelCompositeModelArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

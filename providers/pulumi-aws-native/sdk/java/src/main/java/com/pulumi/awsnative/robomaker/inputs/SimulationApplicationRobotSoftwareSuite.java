@@ -24,7 +24,7 @@ public final class SimulationApplicationRobotSoftwareSuite extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final SimulationApplicationRobotSoftwareSuiteName name;
+    private SimulationApplicationRobotSoftwareSuiteName name;
 
     public SimulationApplicationRobotSoftwareSuiteName name() {
         return this.name;
@@ -35,55 +35,51 @@ public final class SimulationApplicationRobotSoftwareSuite extends com.pulumi.re
      * 
      */
     @Import(name="version")
-      private final @Nullable SimulationApplicationRobotSoftwareSuiteVersion version;
+    private @Nullable SimulationApplicationRobotSoftwareSuiteVersion version;
 
     public Optional<SimulationApplicationRobotSoftwareSuiteVersion> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public SimulationApplicationRobotSoftwareSuite(
-        SimulationApplicationRobotSoftwareSuiteName name,
-        @Nullable SimulationApplicationRobotSoftwareSuiteVersion version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = version;
-    }
+    private SimulationApplicationRobotSoftwareSuite() {}
 
-    private SimulationApplicationRobotSoftwareSuite() {
-        this.name = null;
-        this.version = null;
+    private SimulationApplicationRobotSoftwareSuite(SimulationApplicationRobotSoftwareSuite $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SimulationApplicationRobotSoftwareSuite defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SimulationApplicationRobotSoftwareSuiteName name;
-        private @Nullable SimulationApplicationRobotSoftwareSuiteVersion version;
+        private SimulationApplicationRobotSoftwareSuite $;
 
         public Builder() {
-    	      // Empty
+            $ = new SimulationApplicationRobotSoftwareSuite();
         }
 
         public Builder(SimulationApplicationRobotSoftwareSuite defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new SimulationApplicationRobotSoftwareSuite(Objects.requireNonNull(defaults));
         }
 
         public Builder name(SimulationApplicationRobotSoftwareSuiteName name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder version(@Nullable SimulationApplicationRobotSoftwareSuiteVersion version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public SimulationApplicationRobotSoftwareSuite build() {
-            return new SimulationApplicationRobotSoftwareSuite(name, version);
+        }
+
+        public SimulationApplicationRobotSoftwareSuite build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

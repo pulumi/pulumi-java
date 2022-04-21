@@ -25,10 +25,10 @@ public final class AlertRuleLeafConditionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="containsAny")
-      private final @Nullable List<String> containsAny;
+    private @Nullable List<String> containsAny;
 
-    public List<String> containsAny() {
-        return this.containsAny == null ? List.of() : this.containsAny;
+    public Optional<List<String>> containsAny() {
+        return Optional.ofNullable(this.containsAny);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AlertRuleLeafConditionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="equals")
-      private final @Nullable String equals;
+    private @Nullable String equals;
 
     public Optional<String> equals_() {
-        return this.equals == null ? Optional.empty() : Optional.ofNullable(this.equals);
+        return Optional.ofNullable(this.equals);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class AlertRuleLeafConditionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="field")
-      private final @Nullable String field;
+    private @Nullable String field;
 
     public Optional<String> field() {
-        return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
+        return Optional.ofNullable(this.field);
     }
 
-    public AlertRuleLeafConditionResponse(
-        @Nullable List<String> containsAny,
-        @Nullable String equals,
-        @Nullable String field) {
-        this.containsAny = containsAny;
-        this.equals = equals;
-        this.field = field;
-    }
+    private AlertRuleLeafConditionResponse() {}
 
-    private AlertRuleLeafConditionResponse() {
-        this.containsAny = List.of();
-        this.equals = null;
-        this.field = null;
+    private AlertRuleLeafConditionResponse(AlertRuleLeafConditionResponse $) {
+        this.containsAny = $.containsAny;
+        this.equals = $.equals;
+        this.field = $.field;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertRuleLeafConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> containsAny;
-        private @Nullable String equals;
-        private @Nullable String field;
+        private AlertRuleLeafConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertRuleLeafConditionResponse();
         }
 
         public Builder(AlertRuleLeafConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containsAny = defaults.containsAny;
-    	      this.equals = defaults.equals;
-    	      this.field = defaults.field;
+            $ = new AlertRuleLeafConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containsAny(@Nullable List<String> containsAny) {
-            this.containsAny = containsAny;
+            $.containsAny = containsAny;
             return this;
         }
+
         public Builder containsAny(String... containsAny) {
             return containsAny(List.of(containsAny));
         }
+
         public Builder equals_(@Nullable String equals) {
-            this.equals = equals;
+            $.equals = equals;
             return this;
         }
+
         public Builder field(@Nullable String field) {
-            this.field = field;
+            $.field = field;
             return this;
-        }        public AlertRuleLeafConditionResponse build() {
-            return new AlertRuleLeafConditionResponse(containsAny, equals, field);
+        }
+
+        public AlertRuleLeafConditionResponse build() {
+            return $;
         }
     }
+
 }

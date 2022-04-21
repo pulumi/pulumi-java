@@ -24,10 +24,10 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
      * 
      */
     @Import(name="oldestRecoveryPoint")
-      private final @Nullable String oldestRecoveryPoint;
+    private @Nullable String oldestRecoveryPoint;
 
     public Optional<String> oldestRecoveryPoint() {
-        return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
+        return Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
      * 
      */
     @Import(name="policyState")
-      private final @Nullable String policyState;
+    private @Nullable String policyState;
 
     public Optional<String> policyState() {
-        return this.policyState == null ? Optional.empty() : Optional.ofNullable(this.policyState);
+        return Optional.ofNullable(this.policyState);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
      * 
      */
     @Import(name="recoveryPointCount")
-      private final @Nullable Integer recoveryPointCount;
+    private @Nullable Integer recoveryPointCount;
 
     public Optional<Integer> recoveryPointCount() {
-        return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
+        return Optional.ofNullable(this.recoveryPointCount);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
      * 
      */
     @Import(name="resourceState", required=true)
-      private final String resourceState;
+    private String resourceState;
 
     public String resourceState() {
         return this.resourceState;
@@ -68,82 +68,70 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
      * 
      */
     @Import(name="resourceStateSyncTime", required=true)
-      private final String resourceStateSyncTime;
+    private String resourceStateSyncTime;
 
     public String resourceStateSyncTime() {
         return this.resourceStateSyncTime;
     }
 
-    public AzureFileshareProtectedItemExtendedInfoResponse(
-        @Nullable String oldestRecoveryPoint,
-        @Nullable String policyState,
-        @Nullable Integer recoveryPointCount,
-        String resourceState,
-        String resourceStateSyncTime) {
-        this.oldestRecoveryPoint = oldestRecoveryPoint;
-        this.policyState = policyState;
-        this.recoveryPointCount = recoveryPointCount;
-        this.resourceState = Objects.requireNonNull(resourceState, "expected parameter 'resourceState' to be non-null");
-        this.resourceStateSyncTime = Objects.requireNonNull(resourceStateSyncTime, "expected parameter 'resourceStateSyncTime' to be non-null");
-    }
+    private AzureFileshareProtectedItemExtendedInfoResponse() {}
 
-    private AzureFileshareProtectedItemExtendedInfoResponse() {
-        this.oldestRecoveryPoint = null;
-        this.policyState = null;
-        this.recoveryPointCount = null;
-        this.resourceState = null;
-        this.resourceStateSyncTime = null;
+    private AzureFileshareProtectedItemExtendedInfoResponse(AzureFileshareProtectedItemExtendedInfoResponse $) {
+        this.oldestRecoveryPoint = $.oldestRecoveryPoint;
+        this.policyState = $.policyState;
+        this.recoveryPointCount = $.recoveryPointCount;
+        this.resourceState = $.resourceState;
+        this.resourceStateSyncTime = $.resourceStateSyncTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFileshareProtectedItemExtendedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String oldestRecoveryPoint;
-        private @Nullable String policyState;
-        private @Nullable Integer recoveryPointCount;
-        private String resourceState;
-        private String resourceStateSyncTime;
+        private AzureFileshareProtectedItemExtendedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFileshareProtectedItemExtendedInfoResponse();
         }
 
         public Builder(AzureFileshareProtectedItemExtendedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oldestRecoveryPoint = defaults.oldestRecoveryPoint;
-    	      this.policyState = defaults.policyState;
-    	      this.recoveryPointCount = defaults.recoveryPointCount;
-    	      this.resourceState = defaults.resourceState;
-    	      this.resourceStateSyncTime = defaults.resourceStateSyncTime;
+            $ = new AzureFileshareProtectedItemExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = oldestRecoveryPoint;
+            $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
+
         public Builder policyState(@Nullable String policyState) {
-            this.policyState = policyState;
+            $.policyState = policyState;
             return this;
         }
+
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
-            this.recoveryPointCount = recoveryPointCount;
+            $.recoveryPointCount = recoveryPointCount;
             return this;
         }
+
         public Builder resourceState(String resourceState) {
-            this.resourceState = Objects.requireNonNull(resourceState);
+            $.resourceState = resourceState;
             return this;
         }
+
         public Builder resourceStateSyncTime(String resourceStateSyncTime) {
-            this.resourceStateSyncTime = Objects.requireNonNull(resourceStateSyncTime);
+            $.resourceStateSyncTime = resourceStateSyncTime;
             return this;
-        }        public AzureFileshareProtectedItemExtendedInfoResponse build() {
-            return new AzureFileshareProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount, resourceState, resourceStateSyncTime);
+        }
+
+        public AzureFileshareProtectedItemExtendedInfoResponse build() {
+            $.resourceState = Objects.requireNonNull($.resourceState, "expected parameter 'resourceState' to be non-null");
+            $.resourceStateSyncTime = Objects.requireNonNull($.resourceStateSyncTime, "expected parameter 'resourceStateSyncTime' to be non-null");
+            return $;
         }
     }
+
 }

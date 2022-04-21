@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketFilterRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class BucketS3KeyFilterArgs extends com.pulumi.resources.ResourceAr
     public static final BucketS3KeyFilterArgs Empty = new BucketS3KeyFilterArgs();
 
     @Import(name="rules", required=true)
-      private final Output<List<BucketFilterRuleArgs>> rules;
+    private Output<List<BucketFilterRuleArgs>> rules;
 
     public Output<List<BucketFilterRuleArgs>> rules() {
         return this.rules;
     }
 
-    public BucketS3KeyFilterArgs(Output<List<BucketFilterRuleArgs>> rules) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private BucketS3KeyFilterArgs() {}
 
-    private BucketS3KeyFilterArgs() {
-        this.rules = Codegen.empty();
+    private BucketS3KeyFilterArgs(BucketS3KeyFilterArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketS3KeyFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<BucketFilterRuleArgs>> rules;
+        private BucketS3KeyFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketS3KeyFilterArgs();
         }
 
         public Builder(BucketS3KeyFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new BucketS3KeyFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(Output<List<BucketFilterRuleArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<BucketFilterRuleArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(BucketFilterRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public BucketS3KeyFilterArgs build() {
-            return new BucketS3KeyFilterArgs(rules);
+        }
+
+        public BucketS3KeyFilterArgs build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

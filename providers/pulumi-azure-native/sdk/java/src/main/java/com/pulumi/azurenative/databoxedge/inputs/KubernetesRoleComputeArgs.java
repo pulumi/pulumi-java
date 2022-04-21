@@ -5,7 +5,6 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class KubernetesRoleComputeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="vmProfile", required=true)
-      private final Output<String> vmProfile;
+    private Output<String> vmProfile;
 
     public Output<String> vmProfile() {
         return this.vmProfile;
     }
 
-    public KubernetesRoleComputeArgs(Output<String> vmProfile) {
-        this.vmProfile = Objects.requireNonNull(vmProfile, "expected parameter 'vmProfile' to be non-null");
-    }
+    private KubernetesRoleComputeArgs() {}
 
-    private KubernetesRoleComputeArgs() {
-        this.vmProfile = Codegen.empty();
+    private KubernetesRoleComputeArgs(KubernetesRoleComputeArgs $) {
+        this.vmProfile = $.vmProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesRoleComputeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> vmProfile;
+        private KubernetesRoleComputeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesRoleComputeArgs();
         }
 
         public Builder(KubernetesRoleComputeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vmProfile = defaults.vmProfile;
+            $ = new KubernetesRoleComputeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vmProfile(Output<String> vmProfile) {
-            this.vmProfile = Objects.requireNonNull(vmProfile);
+            $.vmProfile = vmProfile;
             return this;
         }
+
         public Builder vmProfile(String vmProfile) {
-            this.vmProfile = Output.of(Objects.requireNonNull(vmProfile));
-            return this;
-        }        public KubernetesRoleComputeArgs build() {
-            return new KubernetesRoleComputeArgs(vmProfile);
+            return vmProfile(Output.of(vmProfile));
+        }
+
+        public KubernetesRoleComputeArgs build() {
+            $.vmProfile = Objects.requireNonNull($.vmProfile, "expected parameter 'vmProfile' to be non-null");
+            return $;
         }
     }
+
 }

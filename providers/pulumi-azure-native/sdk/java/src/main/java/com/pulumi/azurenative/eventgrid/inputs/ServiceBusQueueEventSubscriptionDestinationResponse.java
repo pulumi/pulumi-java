@@ -25,7 +25,7 @@ public final class ServiceBusQueueEventSubscriptionDestinationResponse extends c
      * 
      */
     @Import(name="endpointType", required=true)
-      private final String endpointType;
+    private String endpointType;
 
     public String endpointType() {
         return this.endpointType;
@@ -36,55 +36,51 @@ public final class ServiceBusQueueEventSubscriptionDestinationResponse extends c
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public ServiceBusQueueEventSubscriptionDestinationResponse(
-        String endpointType,
-        @Nullable String resourceId) {
-        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
-        this.resourceId = resourceId;
-    }
+    private ServiceBusQueueEventSubscriptionDestinationResponse() {}
 
-    private ServiceBusQueueEventSubscriptionDestinationResponse() {
-        this.endpointType = null;
-        this.resourceId = null;
+    private ServiceBusQueueEventSubscriptionDestinationResponse(ServiceBusQueueEventSubscriptionDestinationResponse $) {
+        this.endpointType = $.endpointType;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBusQueueEventSubscriptionDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointType;
-        private @Nullable String resourceId;
+        private ServiceBusQueueEventSubscriptionDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBusQueueEventSubscriptionDestinationResponse();
         }
 
         public Builder(ServiceBusQueueEventSubscriptionDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ServiceBusQueueEventSubscriptionDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(String endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public ServiceBusQueueEventSubscriptionDestinationResponse build() {
-            return new ServiceBusQueueEventSubscriptionDestinationResponse(endpointType, resourceId);
+        }
+
+        public ServiceBusQueueEventSubscriptionDestinationResponse build() {
+            $.endpointType = Codegen.stringProp("endpointType").arg($.endpointType).require();
+            return $;
         }
     }
+
 }

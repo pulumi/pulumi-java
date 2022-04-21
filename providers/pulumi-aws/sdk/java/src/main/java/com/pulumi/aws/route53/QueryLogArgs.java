@@ -5,7 +5,6 @@ package com.pulumi.aws.route53;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class QueryLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudwatchLogGroupArn", required=true)
-      private final Output<String> cloudwatchLogGroupArn;
+    private Output<String> cloudwatchLogGroupArn;
 
     public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
@@ -30,63 +29,60 @@ public final class QueryLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zoneId", required=true)
-      private final Output<String> zoneId;
+    private Output<String> zoneId;
 
     public Output<String> zoneId() {
         return this.zoneId;
     }
 
-    public QueryLogArgs(
-        Output<String> cloudwatchLogGroupArn,
-        Output<String> zoneId) {
-        this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn, "expected parameter 'cloudwatchLogGroupArn' to be non-null");
-        this.zoneId = Objects.requireNonNull(zoneId, "expected parameter 'zoneId' to be non-null");
-    }
+    private QueryLogArgs() {}
 
-    private QueryLogArgs() {
-        this.cloudwatchLogGroupArn = Codegen.empty();
-        this.zoneId = Codegen.empty();
+    private QueryLogArgs(QueryLogArgs $) {
+        this.cloudwatchLogGroupArn = $.cloudwatchLogGroupArn;
+        this.zoneId = $.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryLogArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cloudwatchLogGroupArn;
-        private Output<String> zoneId;
+        private QueryLogArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryLogArgs();
         }
 
         public Builder(QueryLogArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchLogGroupArn = defaults.cloudwatchLogGroupArn;
-    	      this.zoneId = defaults.zoneId;
+            $ = new QueryLogArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchLogGroupArn(Output<String> cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
+            $.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
+
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Output.of(Objects.requireNonNull(cloudwatchLogGroupArn));
-            return this;
+            return cloudwatchLogGroupArn(Output.of(cloudwatchLogGroupArn));
         }
+
         public Builder zoneId(Output<String> zoneId) {
-            this.zoneId = Objects.requireNonNull(zoneId);
+            $.zoneId = zoneId;
             return this;
         }
+
         public Builder zoneId(String zoneId) {
-            this.zoneId = Output.of(Objects.requireNonNull(zoneId));
-            return this;
-        }        public QueryLogArgs build() {
-            return new QueryLogArgs(cloudwatchLogGroupArn, zoneId);
+            return zoneId(Output.of(zoneId));
+        }
+
+        public QueryLogArgs build() {
+            $.cloudwatchLogGroupArn = Objects.requireNonNull($.cloudwatchLogGroupArn, "expected parameter 'cloudwatchLogGroupArn' to be non-null");
+            $.zoneId = Objects.requireNonNull($.zoneId, "expected parameter 'zoneId' to be non-null");
+            return $;
         }
     }
+
 }

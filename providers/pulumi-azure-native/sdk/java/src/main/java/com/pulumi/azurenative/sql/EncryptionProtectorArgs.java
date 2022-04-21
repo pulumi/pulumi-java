@@ -7,10 +7,10 @@ import com.pulumi.azurenative.sql.enums.ServerKeyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="autoRotationEnabled")
-      private final @Nullable Output<Boolean> autoRotationEnabled;
+    private @Nullable Output<Boolean> autoRotationEnabled;
 
-    public Output<Boolean> autoRotationEnabled() {
-        return this.autoRotationEnabled == null ? Codegen.empty() : this.autoRotationEnabled;
+    public Optional<Output<Boolean>> autoRotationEnabled() {
+        return Optional.ofNullable(this.autoRotationEnabled);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="encryptionProtectorName")
-      private final @Nullable Output<String> encryptionProtectorName;
+    private @Nullable Output<String> encryptionProtectorName;
 
-    public Output<String> encryptionProtectorName() {
-        return this.encryptionProtectorName == null ? Codegen.empty() : this.encryptionProtectorName;
+    public Optional<Output<String>> encryptionProtectorName() {
+        return Optional.ofNullable(this.encryptionProtectorName);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -56,10 +56,10 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serverKeyName")
-      private final @Nullable Output<String> serverKeyName;
+    private @Nullable Output<String> serverKeyName;
 
-    public Output<String> serverKeyName() {
-        return this.serverKeyName == null ? Codegen.empty() : this.serverKeyName;
+    public Optional<Output<String>> serverKeyName() {
+        return Optional.ofNullable(this.serverKeyName);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serverKeyType", required=true)
-      private final Output<Either<String,ServerKeyType>> serverKeyType;
+    private Output<Either<String,ServerKeyType>> serverKeyType;
 
     public Output<Either<String,ServerKeyType>> serverKeyType() {
         return this.serverKeyType;
@@ -78,115 +78,101 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
     }
 
-    public EncryptionProtectorArgs(
-        @Nullable Output<Boolean> autoRotationEnabled,
-        @Nullable Output<String> encryptionProtectorName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> serverKeyName,
-        Output<Either<String,ServerKeyType>> serverKeyType,
-        Output<String> serverName) {
-        this.autoRotationEnabled = autoRotationEnabled;
-        this.encryptionProtectorName = encryptionProtectorName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverKeyName = serverKeyName;
-        this.serverKeyType = Objects.requireNonNull(serverKeyType, "expected parameter 'serverKeyType' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private EncryptionProtectorArgs() {}
 
-    private EncryptionProtectorArgs() {
-        this.autoRotationEnabled = Codegen.empty();
-        this.encryptionProtectorName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverKeyName = Codegen.empty();
-        this.serverKeyType = Codegen.empty();
-        this.serverName = Codegen.empty();
+    private EncryptionProtectorArgs(EncryptionProtectorArgs $) {
+        this.autoRotationEnabled = $.autoRotationEnabled;
+        this.encryptionProtectorName = $.encryptionProtectorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverKeyName = $.serverKeyName;
+        this.serverKeyType = $.serverKeyType;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionProtectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoRotationEnabled;
-        private @Nullable Output<String> encryptionProtectorName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> serverKeyName;
-        private Output<Either<String,ServerKeyType>> serverKeyType;
-        private Output<String> serverName;
+        private EncryptionProtectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionProtectorArgs();
         }
 
         public Builder(EncryptionProtectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoRotationEnabled = defaults.autoRotationEnabled;
-    	      this.encryptionProtectorName = defaults.encryptionProtectorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverKeyName = defaults.serverKeyName;
-    	      this.serverKeyType = defaults.serverKeyType;
-    	      this.serverName = defaults.serverName;
+            $ = new EncryptionProtectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoRotationEnabled(@Nullable Output<Boolean> autoRotationEnabled) {
-            this.autoRotationEnabled = autoRotationEnabled;
+            $.autoRotationEnabled = autoRotationEnabled;
             return this;
         }
-        public Builder autoRotationEnabled(@Nullable Boolean autoRotationEnabled) {
-            this.autoRotationEnabled = Codegen.ofNullable(autoRotationEnabled);
-            return this;
+
+        public Builder autoRotationEnabled(Boolean autoRotationEnabled) {
+            return autoRotationEnabled(Output.of(autoRotationEnabled));
         }
+
         public Builder encryptionProtectorName(@Nullable Output<String> encryptionProtectorName) {
-            this.encryptionProtectorName = encryptionProtectorName;
+            $.encryptionProtectorName = encryptionProtectorName;
             return this;
         }
-        public Builder encryptionProtectorName(@Nullable String encryptionProtectorName) {
-            this.encryptionProtectorName = Codegen.ofNullable(encryptionProtectorName);
-            return this;
+
+        public Builder encryptionProtectorName(String encryptionProtectorName) {
+            return encryptionProtectorName(Output.of(encryptionProtectorName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverKeyName(@Nullable Output<String> serverKeyName) {
-            this.serverKeyName = serverKeyName;
+            $.serverKeyName = serverKeyName;
             return this;
         }
-        public Builder serverKeyName(@Nullable String serverKeyName) {
-            this.serverKeyName = Codegen.ofNullable(serverKeyName);
-            return this;
+
+        public Builder serverKeyName(String serverKeyName) {
+            return serverKeyName(Output.of(serverKeyName));
         }
+
         public Builder serverKeyType(Output<Either<String,ServerKeyType>> serverKeyType) {
-            this.serverKeyType = Objects.requireNonNull(serverKeyType);
+            $.serverKeyType = serverKeyType;
             return this;
         }
+
         public Builder serverKeyType(Either<String,ServerKeyType> serverKeyType) {
-            this.serverKeyType = Output.of(Objects.requireNonNull(serverKeyType));
-            return this;
+            return serverKeyType(Output.of(serverKeyType));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
-        }        public EncryptionProtectorArgs build() {
-            return new EncryptionProtectorArgs(autoRotationEnabled, encryptionProtectorName, resourceGroupName, serverKeyName, serverKeyType, serverName);
+            return serverName(Output.of(serverName));
+        }
+
+        public EncryptionProtectorArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverKeyType = Objects.requireNonNull($.serverKeyType, "expected parameter 'serverKeyType' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

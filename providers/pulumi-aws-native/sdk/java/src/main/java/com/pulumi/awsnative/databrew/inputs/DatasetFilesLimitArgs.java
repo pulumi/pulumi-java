@@ -7,9 +7,9 @@ import com.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrder;
 import com.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrderedBy;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxFiles", required=true)
-      private final Output<Integer> maxFiles;
+    private Output<Integer> maxFiles;
 
     public Output<Integer> maxFiles() {
         return this.maxFiles;
@@ -33,10 +33,10 @@ public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="order")
-      private final @Nullable Output<DatasetFilesLimitOrder> order;
+    private @Nullable Output<DatasetFilesLimitOrder> order;
 
-    public Output<DatasetFilesLimitOrder> order() {
-        return this.order == null ? Codegen.empty() : this.order;
+    public Optional<Output<DatasetFilesLimitOrder>> order() {
+        return Optional.ofNullable(this.order);
     }
 
     /**
@@ -44,76 +44,69 @@ public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="orderedBy")
-      private final @Nullable Output<DatasetFilesLimitOrderedBy> orderedBy;
+    private @Nullable Output<DatasetFilesLimitOrderedBy> orderedBy;
 
-    public Output<DatasetFilesLimitOrderedBy> orderedBy() {
-        return this.orderedBy == null ? Codegen.empty() : this.orderedBy;
+    public Optional<Output<DatasetFilesLimitOrderedBy>> orderedBy() {
+        return Optional.ofNullable(this.orderedBy);
     }
 
-    public DatasetFilesLimitArgs(
-        Output<Integer> maxFiles,
-        @Nullable Output<DatasetFilesLimitOrder> order,
-        @Nullable Output<DatasetFilesLimitOrderedBy> orderedBy) {
-        this.maxFiles = Objects.requireNonNull(maxFiles, "expected parameter 'maxFiles' to be non-null");
-        this.order = order;
-        this.orderedBy = orderedBy;
-    }
+    private DatasetFilesLimitArgs() {}
 
-    private DatasetFilesLimitArgs() {
-        this.maxFiles = Codegen.empty();
-        this.order = Codegen.empty();
-        this.orderedBy = Codegen.empty();
+    private DatasetFilesLimitArgs(DatasetFilesLimitArgs $) {
+        this.maxFiles = $.maxFiles;
+        this.order = $.order;
+        this.orderedBy = $.orderedBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetFilesLimitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxFiles;
-        private @Nullable Output<DatasetFilesLimitOrder> order;
-        private @Nullable Output<DatasetFilesLimitOrderedBy> orderedBy;
+        private DatasetFilesLimitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetFilesLimitArgs();
         }
 
         public Builder(DatasetFilesLimitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxFiles = defaults.maxFiles;
-    	      this.order = defaults.order;
-    	      this.orderedBy = defaults.orderedBy;
+            $ = new DatasetFilesLimitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxFiles(Output<Integer> maxFiles) {
-            this.maxFiles = Objects.requireNonNull(maxFiles);
+            $.maxFiles = maxFiles;
             return this;
         }
+
         public Builder maxFiles(Integer maxFiles) {
-            this.maxFiles = Output.of(Objects.requireNonNull(maxFiles));
-            return this;
+            return maxFiles(Output.of(maxFiles));
         }
+
         public Builder order(@Nullable Output<DatasetFilesLimitOrder> order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
-        public Builder order(@Nullable DatasetFilesLimitOrder order) {
-            this.order = Codegen.ofNullable(order);
-            return this;
+
+        public Builder order(DatasetFilesLimitOrder order) {
+            return order(Output.of(order));
         }
+
         public Builder orderedBy(@Nullable Output<DatasetFilesLimitOrderedBy> orderedBy) {
-            this.orderedBy = orderedBy;
+            $.orderedBy = orderedBy;
             return this;
         }
-        public Builder orderedBy(@Nullable DatasetFilesLimitOrderedBy orderedBy) {
-            this.orderedBy = Codegen.ofNullable(orderedBy);
-            return this;
-        }        public DatasetFilesLimitArgs build() {
-            return new DatasetFilesLimitArgs(maxFiles, order, orderedBy);
+
+        public Builder orderedBy(DatasetFilesLimitOrderedBy orderedBy) {
+            return orderedBy(Output.of(orderedBy));
+        }
+
+        public DatasetFilesLimitArgs build() {
+            $.maxFiles = Objects.requireNonNull($.maxFiles, "expected parameter 'maxFiles' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,65 +17,61 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration extends com.pu
     public static final DeliveryStreamHttpEndpointRequestConfiguration Empty = new DeliveryStreamHttpEndpointRequestConfiguration();
 
     @Import(name="commonAttributes")
-      private final @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes;
+    private @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes;
 
-    public List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes() {
-        return this.commonAttributes == null ? List.of() : this.commonAttributes;
+    public Optional<List<DeliveryStreamHttpEndpointCommonAttribute>> commonAttributes() {
+        return Optional.ofNullable(this.commonAttributes);
     }
 
     @Import(name="contentEncoding")
-      private final @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding;
+    private @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding;
 
     public Optional<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding() {
-        return this.contentEncoding == null ? Optional.empty() : Optional.ofNullable(this.contentEncoding);
+        return Optional.ofNullable(this.contentEncoding);
     }
 
-    public DeliveryStreamHttpEndpointRequestConfiguration(
-        @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes,
-        @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
-        this.commonAttributes = commonAttributes;
-        this.contentEncoding = contentEncoding;
-    }
+    private DeliveryStreamHttpEndpointRequestConfiguration() {}
 
-    private DeliveryStreamHttpEndpointRequestConfiguration() {
-        this.commonAttributes = List.of();
-        this.contentEncoding = null;
+    private DeliveryStreamHttpEndpointRequestConfiguration(DeliveryStreamHttpEndpointRequestConfiguration $) {
+        this.commonAttributes = $.commonAttributes;
+        this.contentEncoding = $.contentEncoding;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamHttpEndpointRequestConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes;
-        private @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding;
+        private DeliveryStreamHttpEndpointRequestConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamHttpEndpointRequestConfiguration();
         }
 
         public Builder(DeliveryStreamHttpEndpointRequestConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commonAttributes = defaults.commonAttributes;
-    	      this.contentEncoding = defaults.contentEncoding;
+            $ = new DeliveryStreamHttpEndpointRequestConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder commonAttributes(@Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes) {
-            this.commonAttributes = commonAttributes;
+            $.commonAttributes = commonAttributes;
             return this;
         }
+
         public Builder commonAttributes(DeliveryStreamHttpEndpointCommonAttribute... commonAttributes) {
             return commonAttributes(List.of(commonAttributes));
         }
+
         public Builder contentEncoding(@Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
-            this.contentEncoding = contentEncoding;
+            $.contentEncoding = contentEncoding;
             return this;
-        }        public DeliveryStreamHttpEndpointRequestConfiguration build() {
-            return new DeliveryStreamHttpEndpointRequestConfiguration(commonAttributes, contentEncoding);
+        }
+
+        public DeliveryStreamHttpEndpointRequestConfiguration build() {
+            return $;
         }
     }
+
 }

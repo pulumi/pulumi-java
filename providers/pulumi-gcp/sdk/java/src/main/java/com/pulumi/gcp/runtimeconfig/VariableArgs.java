@@ -5,9 +5,9 @@ package com.pulumi.gcp.runtimeconfig;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
@@ -45,10 +45,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -59,109 +59,96 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<String> text;
+    private @Nullable Output<String> text;
 
-    public Output<String> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<String>> text() {
+        return Optional.ofNullable(this.text);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public VariableArgs(
-        @Nullable Output<String> name,
-        Output<String> parent,
-        @Nullable Output<String> project,
-        @Nullable Output<String> text,
-        @Nullable Output<String> value) {
-        this.name = name;
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.project = project;
-        this.text = text;
-        this.value = value;
-    }
+    private VariableArgs() {}
 
-    private VariableArgs() {
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.project = Codegen.empty();
-        this.text = Codegen.empty();
-        this.value = Codegen.empty();
+    private VariableArgs(VariableArgs $) {
+        this.name = $.name;
+        this.parent = $.parent;
+        this.project = $.project;
+        this.text = $.text;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> parent;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> text;
-        private @Nullable Output<String> value;
+        private VariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VariableArgs();
         }
 
         public Builder(VariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.project = defaults.project;
-    	      this.text = defaults.text;
-    	      this.value = defaults.value;
+            $ = new VariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
+            return parent(Output.of(parent));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder text(@Nullable Output<String> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable String text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
+
+        public Builder text(String text) {
+            return text(Output.of(text));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public VariableArgs build() {
-            return new VariableArgs(name, parent, project, text, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public VariableArgs build() {
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

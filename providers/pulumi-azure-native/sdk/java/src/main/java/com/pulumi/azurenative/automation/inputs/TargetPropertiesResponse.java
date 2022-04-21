@@ -25,10 +25,10 @@ public final class TargetPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="azureQueries")
-      private final @Nullable List<AzureQueryPropertiesResponse> azureQueries;
+    private @Nullable List<AzureQueryPropertiesResponse> azureQueries;
 
-    public List<AzureQueryPropertiesResponse> azureQueries() {
-        return this.azureQueries == null ? List.of() : this.azureQueries;
+    public Optional<List<AzureQueryPropertiesResponse>> azureQueries() {
+        return Optional.ofNullable(this.azureQueries);
     }
 
     /**
@@ -36,61 +36,58 @@ public final class TargetPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="nonAzureQueries")
-      private final @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
+    private @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
 
-    public List<NonAzureQueryPropertiesResponse> nonAzureQueries() {
-        return this.nonAzureQueries == null ? List.of() : this.nonAzureQueries;
+    public Optional<List<NonAzureQueryPropertiesResponse>> nonAzureQueries() {
+        return Optional.ofNullable(this.nonAzureQueries);
     }
 
-    public TargetPropertiesResponse(
-        @Nullable List<AzureQueryPropertiesResponse> azureQueries,
-        @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
-        this.azureQueries = azureQueries;
-        this.nonAzureQueries = nonAzureQueries;
-    }
+    private TargetPropertiesResponse() {}
 
-    private TargetPropertiesResponse() {
-        this.azureQueries = List.of();
-        this.nonAzureQueries = List.of();
+    private TargetPropertiesResponse(TargetPropertiesResponse $) {
+        this.azureQueries = $.azureQueries;
+        this.nonAzureQueries = $.nonAzureQueries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AzureQueryPropertiesResponse> azureQueries;
-        private @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
+        private TargetPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetPropertiesResponse();
         }
 
         public Builder(TargetPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureQueries = defaults.azureQueries;
-    	      this.nonAzureQueries = defaults.nonAzureQueries;
+            $ = new TargetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureQueries(@Nullable List<AzureQueryPropertiesResponse> azureQueries) {
-            this.azureQueries = azureQueries;
+            $.azureQueries = azureQueries;
             return this;
         }
+
         public Builder azureQueries(AzureQueryPropertiesResponse... azureQueries) {
             return azureQueries(List.of(azureQueries));
         }
+
         public Builder nonAzureQueries(@Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
-            this.nonAzureQueries = nonAzureQueries;
+            $.nonAzureQueries = nonAzureQueries;
             return this;
         }
+
         public Builder nonAzureQueries(NonAzureQueryPropertiesResponse... nonAzureQueries) {
             return nonAzureQueries(List.of(nonAzureQueries));
-        }        public TargetPropertiesResponse build() {
-            return new TargetPropertiesResponse(azureQueries, nonAzureQueries);
+        }
+
+        public TargetPropertiesResponse build() {
+            return $;
         }
     }
+
 }

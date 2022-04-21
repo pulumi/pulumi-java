@@ -29,7 +29,7 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="coolDownPeriodSec", required=true)
-      private final Integer coolDownPeriodSec;
+    private Integer coolDownPeriodSec;
 
     public Integer coolDownPeriodSec() {
         return this.coolDownPeriodSec;
@@ -40,7 +40,7 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="cpuUtilization", required=true)
-      private final AutoscalingPolicyCpuUtilizationResponse cpuUtilization;
+    private AutoscalingPolicyCpuUtilizationResponse cpuUtilization;
 
     public AutoscalingPolicyCpuUtilizationResponse cpuUtilization() {
         return this.cpuUtilization;
@@ -51,7 +51,7 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="customMetricUtilizations", required=true)
-      private final List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations;
+    private List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations;
 
     public List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations() {
         return this.customMetricUtilizations;
@@ -62,7 +62,7 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="loadBalancingUtilization", required=true)
-      private final AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization;
+    private AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization;
 
     public AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization() {
         return this.loadBalancingUtilization;
@@ -73,7 +73,7 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxNumReplicas", required=true)
-      private final Integer maxNumReplicas;
+    private Integer maxNumReplicas;
 
     public Integer maxNumReplicas() {
         return this.maxNumReplicas;
@@ -84,7 +84,7 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="minNumReplicas", required=true)
-      private final Integer minNumReplicas;
+    private Integer minNumReplicas;
 
     public Integer minNumReplicas() {
         return this.minNumReplicas;
@@ -95,21 +95,21 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
     }
 
     @Import(name="scaleDownControl", required=true)
-      private final AutoscalingPolicyScaleDownControlResponse scaleDownControl;
+    private AutoscalingPolicyScaleDownControlResponse scaleDownControl;
 
     public AutoscalingPolicyScaleDownControlResponse scaleDownControl() {
         return this.scaleDownControl;
     }
 
     @Import(name="scaleInControl", required=true)
-      private final AutoscalingPolicyScaleInControlResponse scaleInControl;
+    private AutoscalingPolicyScaleInControlResponse scaleInControl;
 
     public AutoscalingPolicyScaleInControlResponse scaleInControl() {
         return this.scaleInControl;
@@ -120,130 +120,112 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="scalingSchedules", required=true)
-      private final Map<String,String> scalingSchedules;
+    private Map<String,String> scalingSchedules;
 
     public Map<String,String> scalingSchedules() {
         return this.scalingSchedules;
     }
 
-    public AutoscalingPolicyResponse(
-        Integer coolDownPeriodSec,
-        AutoscalingPolicyCpuUtilizationResponse cpuUtilization,
-        List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations,
-        AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization,
-        Integer maxNumReplicas,
-        Integer minNumReplicas,
-        String mode,
-        AutoscalingPolicyScaleDownControlResponse scaleDownControl,
-        AutoscalingPolicyScaleInControlResponse scaleInControl,
-        Map<String,String> scalingSchedules) {
-        this.coolDownPeriodSec = Objects.requireNonNull(coolDownPeriodSec, "expected parameter 'coolDownPeriodSec' to be non-null");
-        this.cpuUtilization = Objects.requireNonNull(cpuUtilization, "expected parameter 'cpuUtilization' to be non-null");
-        this.customMetricUtilizations = Objects.requireNonNull(customMetricUtilizations, "expected parameter 'customMetricUtilizations' to be non-null");
-        this.loadBalancingUtilization = Objects.requireNonNull(loadBalancingUtilization, "expected parameter 'loadBalancingUtilization' to be non-null");
-        this.maxNumReplicas = Objects.requireNonNull(maxNumReplicas, "expected parameter 'maxNumReplicas' to be non-null");
-        this.minNumReplicas = Objects.requireNonNull(minNumReplicas, "expected parameter 'minNumReplicas' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.scaleDownControl = Objects.requireNonNull(scaleDownControl, "expected parameter 'scaleDownControl' to be non-null");
-        this.scaleInControl = Objects.requireNonNull(scaleInControl, "expected parameter 'scaleInControl' to be non-null");
-        this.scalingSchedules = Objects.requireNonNull(scalingSchedules, "expected parameter 'scalingSchedules' to be non-null");
-    }
+    private AutoscalingPolicyResponse() {}
 
-    private AutoscalingPolicyResponse() {
-        this.coolDownPeriodSec = null;
-        this.cpuUtilization = null;
-        this.customMetricUtilizations = List.of();
-        this.loadBalancingUtilization = null;
-        this.maxNumReplicas = null;
-        this.minNumReplicas = null;
-        this.mode = null;
-        this.scaleDownControl = null;
-        this.scaleInControl = null;
-        this.scalingSchedules = Map.of();
+    private AutoscalingPolicyResponse(AutoscalingPolicyResponse $) {
+        this.coolDownPeriodSec = $.coolDownPeriodSec;
+        this.cpuUtilization = $.cpuUtilization;
+        this.customMetricUtilizations = $.customMetricUtilizations;
+        this.loadBalancingUtilization = $.loadBalancingUtilization;
+        this.maxNumReplicas = $.maxNumReplicas;
+        this.minNumReplicas = $.minNumReplicas;
+        this.mode = $.mode;
+        this.scaleDownControl = $.scaleDownControl;
+        this.scaleInControl = $.scaleInControl;
+        this.scalingSchedules = $.scalingSchedules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer coolDownPeriodSec;
-        private AutoscalingPolicyCpuUtilizationResponse cpuUtilization;
-        private List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations;
-        private AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization;
-        private Integer maxNumReplicas;
-        private Integer minNumReplicas;
-        private String mode;
-        private AutoscalingPolicyScaleDownControlResponse scaleDownControl;
-        private AutoscalingPolicyScaleInControlResponse scaleInControl;
-        private Map<String,String> scalingSchedules;
+        private AutoscalingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyResponse();
         }
 
         public Builder(AutoscalingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coolDownPeriodSec = defaults.coolDownPeriodSec;
-    	      this.cpuUtilization = defaults.cpuUtilization;
-    	      this.customMetricUtilizations = defaults.customMetricUtilizations;
-    	      this.loadBalancingUtilization = defaults.loadBalancingUtilization;
-    	      this.maxNumReplicas = defaults.maxNumReplicas;
-    	      this.minNumReplicas = defaults.minNumReplicas;
-    	      this.mode = defaults.mode;
-    	      this.scaleDownControl = defaults.scaleDownControl;
-    	      this.scaleInControl = defaults.scaleInControl;
-    	      this.scalingSchedules = defaults.scalingSchedules;
+            $ = new AutoscalingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder coolDownPeriodSec(Integer coolDownPeriodSec) {
-            this.coolDownPeriodSec = Objects.requireNonNull(coolDownPeriodSec);
+            $.coolDownPeriodSec = coolDownPeriodSec;
             return this;
         }
+
         public Builder cpuUtilization(AutoscalingPolicyCpuUtilizationResponse cpuUtilization) {
-            this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
+            $.cpuUtilization = cpuUtilization;
             return this;
         }
+
         public Builder customMetricUtilizations(List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations) {
-            this.customMetricUtilizations = Objects.requireNonNull(customMetricUtilizations);
+            $.customMetricUtilizations = customMetricUtilizations;
             return this;
         }
+
         public Builder customMetricUtilizations(AutoscalingPolicyCustomMetricUtilizationResponse... customMetricUtilizations) {
             return customMetricUtilizations(List.of(customMetricUtilizations));
         }
+
         public Builder loadBalancingUtilization(AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization) {
-            this.loadBalancingUtilization = Objects.requireNonNull(loadBalancingUtilization);
+            $.loadBalancingUtilization = loadBalancingUtilization;
             return this;
         }
+
         public Builder maxNumReplicas(Integer maxNumReplicas) {
-            this.maxNumReplicas = Objects.requireNonNull(maxNumReplicas);
+            $.maxNumReplicas = maxNumReplicas;
             return this;
         }
+
         public Builder minNumReplicas(Integer minNumReplicas) {
-            this.minNumReplicas = Objects.requireNonNull(minNumReplicas);
+            $.minNumReplicas = minNumReplicas;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder scaleDownControl(AutoscalingPolicyScaleDownControlResponse scaleDownControl) {
-            this.scaleDownControl = Objects.requireNonNull(scaleDownControl);
+            $.scaleDownControl = scaleDownControl;
             return this;
         }
+
         public Builder scaleInControl(AutoscalingPolicyScaleInControlResponse scaleInControl) {
-            this.scaleInControl = Objects.requireNonNull(scaleInControl);
+            $.scaleInControl = scaleInControl;
             return this;
         }
+
         public Builder scalingSchedules(Map<String,String> scalingSchedules) {
-            this.scalingSchedules = Objects.requireNonNull(scalingSchedules);
+            $.scalingSchedules = scalingSchedules;
             return this;
-        }        public AutoscalingPolicyResponse build() {
-            return new AutoscalingPolicyResponse(coolDownPeriodSec, cpuUtilization, customMetricUtilizations, loadBalancingUtilization, maxNumReplicas, minNumReplicas, mode, scaleDownControl, scaleInControl, scalingSchedules);
+        }
+
+        public AutoscalingPolicyResponse build() {
+            $.coolDownPeriodSec = Objects.requireNonNull($.coolDownPeriodSec, "expected parameter 'coolDownPeriodSec' to be non-null");
+            $.cpuUtilization = Objects.requireNonNull($.cpuUtilization, "expected parameter 'cpuUtilization' to be non-null");
+            $.customMetricUtilizations = Objects.requireNonNull($.customMetricUtilizations, "expected parameter 'customMetricUtilizations' to be non-null");
+            $.loadBalancingUtilization = Objects.requireNonNull($.loadBalancingUtilization, "expected parameter 'loadBalancingUtilization' to be non-null");
+            $.maxNumReplicas = Objects.requireNonNull($.maxNumReplicas, "expected parameter 'maxNumReplicas' to be non-null");
+            $.minNumReplicas = Objects.requireNonNull($.minNumReplicas, "expected parameter 'minNumReplicas' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.scaleDownControl = Objects.requireNonNull($.scaleDownControl, "expected parameter 'scaleDownControl' to be non-null");
+            $.scaleInControl = Objects.requireNonNull($.scaleInControl, "expected parameter 'scaleInControl' to be non-null");
+            $.scalingSchedules = Objects.requireNonNull($.scalingSchedules, "expected parameter 'scalingSchedules' to be non-null");
+            return $;
         }
     }
+
 }

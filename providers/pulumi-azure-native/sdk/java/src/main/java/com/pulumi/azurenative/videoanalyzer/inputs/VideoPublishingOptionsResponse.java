@@ -23,10 +23,10 @@ public final class VideoPublishingOptionsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="disableArchive")
-      private final @Nullable String disableArchive;
+    private @Nullable String disableArchive;
 
     public Optional<String> disableArchive() {
-        return this.disableArchive == null ? Optional.empty() : Optional.ofNullable(this.disableArchive);
+        return Optional.ofNullable(this.disableArchive);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class VideoPublishingOptionsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="disableRtspPublishing")
-      private final @Nullable String disableRtspPublishing;
+    private @Nullable String disableRtspPublishing;
 
     public Optional<String> disableRtspPublishing() {
-        return this.disableRtspPublishing == null ? Optional.empty() : Optional.ofNullable(this.disableRtspPublishing);
+        return Optional.ofNullable(this.disableRtspPublishing);
     }
 
-    public VideoPublishingOptionsResponse(
-        @Nullable String disableArchive,
-        @Nullable String disableRtspPublishing) {
-        this.disableArchive = disableArchive;
-        this.disableRtspPublishing = disableRtspPublishing;
-    }
+    private VideoPublishingOptionsResponse() {}
 
-    private VideoPublishingOptionsResponse() {
-        this.disableArchive = null;
-        this.disableRtspPublishing = null;
+    private VideoPublishingOptionsResponse(VideoPublishingOptionsResponse $) {
+        this.disableArchive = $.disableArchive;
+        this.disableRtspPublishing = $.disableRtspPublishing;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoPublishingOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String disableArchive;
-        private @Nullable String disableRtspPublishing;
+        private VideoPublishingOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoPublishingOptionsResponse();
         }
 
         public Builder(VideoPublishingOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableArchive = defaults.disableArchive;
-    	      this.disableRtspPublishing = defaults.disableRtspPublishing;
+            $ = new VideoPublishingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableArchive(@Nullable String disableArchive) {
-            this.disableArchive = disableArchive;
+            $.disableArchive = disableArchive;
             return this;
         }
+
         public Builder disableRtspPublishing(@Nullable String disableRtspPublishing) {
-            this.disableRtspPublishing = disableRtspPublishing;
+            $.disableRtspPublishing = disableRtspPublishing;
             return this;
-        }        public VideoPublishingOptionsResponse build() {
-            return new VideoPublishingOptionsResponse(disableArchive, disableRtspPublishing);
+        }
+
+        public VideoPublishingOptionsResponse build() {
+            return $;
         }
     }
+
 }

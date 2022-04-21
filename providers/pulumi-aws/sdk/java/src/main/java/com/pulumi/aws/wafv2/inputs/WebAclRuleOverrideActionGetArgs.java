@@ -7,8 +7,8 @@ import com.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionCountGetArgs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionNoneGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WebAclRuleOverrideActionGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<WebAclRuleOverrideActionCountGetArgs> count;
+    private @Nullable Output<WebAclRuleOverrideActionCountGetArgs> count;
 
-    public Output<WebAclRuleOverrideActionCountGetArgs> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<WebAclRuleOverrideActionCountGetArgs>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class WebAclRuleOverrideActionGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="none")
-      private final @Nullable Output<WebAclRuleOverrideActionNoneGetArgs> none;
+    private @Nullable Output<WebAclRuleOverrideActionNoneGetArgs> none;
 
-    public Output<WebAclRuleOverrideActionNoneGetArgs> none() {
-        return this.none == null ? Codegen.empty() : this.none;
+    public Optional<Output<WebAclRuleOverrideActionNoneGetArgs>> none() {
+        return Optional.ofNullable(this.none);
     }
 
-    public WebAclRuleOverrideActionGetArgs(
-        @Nullable Output<WebAclRuleOverrideActionCountGetArgs> count,
-        @Nullable Output<WebAclRuleOverrideActionNoneGetArgs> none) {
-        this.count = count;
-        this.none = none;
-    }
+    private WebAclRuleOverrideActionGetArgs() {}
 
-    private WebAclRuleOverrideActionGetArgs() {
-        this.count = Codegen.empty();
-        this.none = Codegen.empty();
+    private WebAclRuleOverrideActionGetArgs(WebAclRuleOverrideActionGetArgs $) {
+        this.count = $.count;
+        this.none = $.none;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleOverrideActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclRuleOverrideActionCountGetArgs> count;
-        private @Nullable Output<WebAclRuleOverrideActionNoneGetArgs> none;
+        private WebAclRuleOverrideActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleOverrideActionGetArgs();
         }
 
         public Builder(WebAclRuleOverrideActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.none = defaults.none;
+            $ = new WebAclRuleOverrideActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<WebAclRuleOverrideActionCountGetArgs> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable WebAclRuleOverrideActionCountGetArgs count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(WebAclRuleOverrideActionCountGetArgs count) {
+            return count(Output.of(count));
         }
+
         public Builder none(@Nullable Output<WebAclRuleOverrideActionNoneGetArgs> none) {
-            this.none = none;
+            $.none = none;
             return this;
         }
-        public Builder none(@Nullable WebAclRuleOverrideActionNoneGetArgs none) {
-            this.none = Codegen.ofNullable(none);
-            return this;
-        }        public WebAclRuleOverrideActionGetArgs build() {
-            return new WebAclRuleOverrideActionGetArgs(count, none);
+
+        public Builder none(WebAclRuleOverrideActionNoneGetArgs none) {
+            return none(Output.of(none));
+        }
+
+        public WebAclRuleOverrideActionGetArgs build() {
+            return $;
         }
     }
+
 }

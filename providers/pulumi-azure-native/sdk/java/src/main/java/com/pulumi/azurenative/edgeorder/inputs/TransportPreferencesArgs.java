@@ -7,7 +7,6 @@ import com.pulumi.azurenative.edgeorder.enums.TransportShipmentTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class TransportPreferencesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="preferredShipmentType", required=true)
-      private final Output<Either<String,TransportShipmentTypes>> preferredShipmentType;
+    private Output<Either<String,TransportShipmentTypes>> preferredShipmentType;
 
     public Output<Either<String,TransportShipmentTypes>> preferredShipmentType() {
         return this.preferredShipmentType;
     }
 
-    public TransportPreferencesArgs(Output<Either<String,TransportShipmentTypes>> preferredShipmentType) {
-        this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType, "expected parameter 'preferredShipmentType' to be non-null");
-    }
+    private TransportPreferencesArgs() {}
 
-    private TransportPreferencesArgs() {
-        this.preferredShipmentType = Codegen.empty();
+    private TransportPreferencesArgs(TransportPreferencesArgs $) {
+        this.preferredShipmentType = $.preferredShipmentType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransportPreferencesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,TransportShipmentTypes>> preferredShipmentType;
+        private TransportPreferencesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransportPreferencesArgs();
         }
 
         public Builder(TransportPreferencesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preferredShipmentType = defaults.preferredShipmentType;
+            $ = new TransportPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preferredShipmentType(Output<Either<String,TransportShipmentTypes>> preferredShipmentType) {
-            this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType);
+            $.preferredShipmentType = preferredShipmentType;
             return this;
         }
+
         public Builder preferredShipmentType(Either<String,TransportShipmentTypes> preferredShipmentType) {
-            this.preferredShipmentType = Output.of(Objects.requireNonNull(preferredShipmentType));
-            return this;
-        }        public TransportPreferencesArgs build() {
-            return new TransportPreferencesArgs(preferredShipmentType);
+            return preferredShipmentType(Output.of(preferredShipmentType));
+        }
+
+        public TransportPreferencesArgs build() {
+            $.preferredShipmentType = Objects.requireNonNull($.preferredShipmentType, "expected parameter 'preferredShipmentType' to be non-null");
+            return $;
         }
     }
+
 }

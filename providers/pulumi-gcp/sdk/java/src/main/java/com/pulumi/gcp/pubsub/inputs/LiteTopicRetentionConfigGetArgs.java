@@ -5,9 +5,9 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class LiteTopicRetentionConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="perPartitionBytes", required=true)
-      private final Output<String> perPartitionBytes;
+    private Output<String> perPartitionBytes;
 
     public Output<String> perPartitionBytes() {
         return this.perPartitionBytes;
@@ -36,63 +36,59 @@ public final class LiteTopicRetentionConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="period")
-      private final @Nullable Output<String> period;
+    private @Nullable Output<String> period;
 
-    public Output<String> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<String>> period() {
+        return Optional.ofNullable(this.period);
     }
 
-    public LiteTopicRetentionConfigGetArgs(
-        Output<String> perPartitionBytes,
-        @Nullable Output<String> period) {
-        this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes, "expected parameter 'perPartitionBytes' to be non-null");
-        this.period = period;
-    }
+    private LiteTopicRetentionConfigGetArgs() {}
 
-    private LiteTopicRetentionConfigGetArgs() {
-        this.perPartitionBytes = Codegen.empty();
-        this.period = Codegen.empty();
+    private LiteTopicRetentionConfigGetArgs(LiteTopicRetentionConfigGetArgs $) {
+        this.perPartitionBytes = $.perPartitionBytes;
+        this.period = $.period;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiteTopicRetentionConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> perPartitionBytes;
-        private @Nullable Output<String> period;
+        private LiteTopicRetentionConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiteTopicRetentionConfigGetArgs();
         }
 
         public Builder(LiteTopicRetentionConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.perPartitionBytes = defaults.perPartitionBytes;
-    	      this.period = defaults.period;
+            $ = new LiteTopicRetentionConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder perPartitionBytes(Output<String> perPartitionBytes) {
-            this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes);
+            $.perPartitionBytes = perPartitionBytes;
             return this;
         }
+
         public Builder perPartitionBytes(String perPartitionBytes) {
-            this.perPartitionBytes = Output.of(Objects.requireNonNull(perPartitionBytes));
-            return this;
+            return perPartitionBytes(Output.of(perPartitionBytes));
         }
+
         public Builder period(@Nullable Output<String> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable String period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
-        }        public LiteTopicRetentionConfigGetArgs build() {
-            return new LiteTopicRetentionConfigGetArgs(perPartitionBytes, period);
+
+        public Builder period(String period) {
+            return period(Output.of(period));
+        }
+
+        public LiteTopicRetentionConfigGetArgs build() {
+            $.perPartitionBytes = Objects.requireNonNull($.perPartitionBytes, "expected parameter 'perPartitionBytes' to be non-null");
+            return $;
         }
     }
+
 }

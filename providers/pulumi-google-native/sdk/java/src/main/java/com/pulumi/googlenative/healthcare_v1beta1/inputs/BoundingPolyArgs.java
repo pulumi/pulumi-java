@@ -5,11 +5,11 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.VertexArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vertices")
-      private final @Nullable Output<List<VertexArgs>> vertices;
+    private @Nullable Output<List<VertexArgs>> vertices;
 
-    public Output<List<VertexArgs>> vertices() {
-        return this.vertices == null ? Codegen.empty() : this.vertices;
+    public Optional<Output<List<VertexArgs>>> vertices() {
+        return Optional.ofNullable(this.vertices);
     }
 
-    public BoundingPolyArgs(
-        @Nullable Output<String> label,
-        @Nullable Output<List<VertexArgs>> vertices) {
-        this.label = label;
-        this.vertices = vertices;
-    }
+    private BoundingPolyArgs() {}
 
-    private BoundingPolyArgs() {
-        this.label = Codegen.empty();
-        this.vertices = Codegen.empty();
+    private BoundingPolyArgs(BoundingPolyArgs $) {
+        this.label = $.label;
+        this.vertices = $.vertices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BoundingPolyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> label;
-        private @Nullable Output<List<VertexArgs>> vertices;
+        private BoundingPolyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BoundingPolyArgs();
         }
 
         public Builder(BoundingPolyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.vertices = defaults.vertices;
+            $ = new BoundingPolyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder vertices(@Nullable Output<List<VertexArgs>> vertices) {
-            this.vertices = vertices;
+            $.vertices = vertices;
             return this;
         }
-        public Builder vertices(@Nullable List<VertexArgs> vertices) {
-            this.vertices = Codegen.ofNullable(vertices);
-            return this;
+
+        public Builder vertices(List<VertexArgs> vertices) {
+            return vertices(Output.of(vertices));
         }
+
         public Builder vertices(VertexArgs... vertices) {
             return vertices(List.of(vertices));
-        }        public BoundingPolyArgs build() {
-            return new BoundingPolyArgs(label, vertices);
+        }
+
+        public BoundingPolyArgs build() {
+            return $;
         }
     }
+
 }

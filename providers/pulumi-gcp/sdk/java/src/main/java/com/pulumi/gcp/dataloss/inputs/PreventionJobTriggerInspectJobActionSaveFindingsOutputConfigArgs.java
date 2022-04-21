@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigA
      * 
      */
     @Import(name="outputSchema")
-      private final @Nullable Output<String> outputSchema;
+    private @Nullable Output<String> outputSchema;
 
-    public Output<String> outputSchema() {
-        return this.outputSchema == null ? Codegen.empty() : this.outputSchema;
+    public Optional<Output<String>> outputSchema() {
+        return Optional.ofNullable(this.outputSchema);
     }
 
     /**
@@ -40,63 +40,59 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigA
      * 
      */
     @Import(name="table", required=true)
-      private final Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs> table;
+    private Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs> table;
 
     public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs> table() {
         return this.table;
     }
 
-    public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs(
-        @Nullable Output<String> outputSchema,
-        Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs> table) {
-        this.outputSchema = outputSchema;
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-    }
+    private PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs() {}
 
-    private PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs() {
-        this.outputSchema = Codegen.empty();
-        this.table = Codegen.empty();
+    private PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs $) {
+        this.outputSchema = $.outputSchema;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> outputSchema;
-        private Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs> table;
+        private PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs();
         }
 
         public Builder(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.outputSchema = defaults.outputSchema;
-    	      this.table = defaults.table;
+            $ = new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder outputSchema(@Nullable Output<String> outputSchema) {
-            this.outputSchema = outputSchema;
+            $.outputSchema = outputSchema;
             return this;
         }
-        public Builder outputSchema(@Nullable String outputSchema) {
-            this.outputSchema = Codegen.ofNullable(outputSchema);
-            return this;
+
+        public Builder outputSchema(String outputSchema) {
+            return outputSchema(Output.of(outputSchema));
         }
+
         public Builder table(Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs> table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
         }
+
         public Builder table(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs table) {
-            this.table = Output.of(Objects.requireNonNull(table));
-            return this;
-        }        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs build() {
-            return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs(outputSchema, table);
+            return table(Output.of(table));
+        }
+
+        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs build() {
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            return $;
         }
     }
+
 }

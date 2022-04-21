@@ -5,9 +5,9 @@ package com.pulumi.azurenative.cdn;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customDomainName")
-      private final @Nullable Output<String> customDomainName;
+    private @Nullable Output<String> customDomainName;
 
-    public Output<String> customDomainName() {
-        return this.customDomainName == null ? Codegen.empty() : this.customDomainName;
+    public Optional<Output<String>> customDomainName() {
+        return Optional.ofNullable(this.customDomainName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointName", required=true)
-      private final Output<String> endpointName;
+    private Output<String> endpointName;
 
     public Output<String> endpointName() {
         return this.endpointName;
@@ -42,7 +42,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostName", required=true)
-      private final Output<String> hostName;
+    private Output<String> hostName;
 
     public Output<String> hostName() {
         return this.hostName;
@@ -53,7 +53,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -64,102 +64,92 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public CustomDomainArgs(
-        @Nullable Output<String> customDomainName,
-        Output<String> endpointName,
-        Output<String> hostName,
-        Output<String> profileName,
-        Output<String> resourceGroupName) {
-        this.customDomainName = customDomainName;
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private CustomDomainArgs() {}
 
-    private CustomDomainArgs() {
-        this.customDomainName = Codegen.empty();
-        this.endpointName = Codegen.empty();
-        this.hostName = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private CustomDomainArgs(CustomDomainArgs $) {
+        this.customDomainName = $.customDomainName;
+        this.endpointName = $.endpointName;
+        this.hostName = $.hostName;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customDomainName;
-        private Output<String> endpointName;
-        private Output<String> hostName;
-        private Output<String> profileName;
-        private Output<String> resourceGroupName;
+        private CustomDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDomainArgs();
         }
 
         public Builder(CustomDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customDomainName = defaults.customDomainName;
-    	      this.endpointName = defaults.endpointName;
-    	      this.hostName = defaults.hostName;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new CustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customDomainName(@Nullable Output<String> customDomainName) {
-            this.customDomainName = customDomainName;
+            $.customDomainName = customDomainName;
             return this;
         }
-        public Builder customDomainName(@Nullable String customDomainName) {
-            this.customDomainName = Codegen.ofNullable(customDomainName);
-            return this;
+
+        public Builder customDomainName(String customDomainName) {
+            return customDomainName(Output.of(customDomainName));
         }
+
         public Builder endpointName(Output<String> endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder endpointName(String endpointName) {
-            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
-            return this;
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder hostName(Output<String> hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder hostName(String hostName) {
-            this.hostName = Output.of(Objects.requireNonNull(hostName));
-            return this;
+            return hostName(Output.of(hostName));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public CustomDomainArgs build() {
-            return new CustomDomainArgs(customDomainName, endpointName, hostName, profileName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public CustomDomainArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

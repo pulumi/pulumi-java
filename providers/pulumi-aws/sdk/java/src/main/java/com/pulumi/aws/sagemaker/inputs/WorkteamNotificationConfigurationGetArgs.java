@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WorkteamNotificationConfigurationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="notificationTopicArn")
-      private final @Nullable Output<String> notificationTopicArn;
+    private @Nullable Output<String> notificationTopicArn;
 
-    public Output<String> notificationTopicArn() {
-        return this.notificationTopicArn == null ? Codegen.empty() : this.notificationTopicArn;
+    public Optional<Output<String>> notificationTopicArn() {
+        return Optional.ofNullable(this.notificationTopicArn);
     }
 
-    public WorkteamNotificationConfigurationGetArgs(@Nullable Output<String> notificationTopicArn) {
-        this.notificationTopicArn = notificationTopicArn;
-    }
+    private WorkteamNotificationConfigurationGetArgs() {}
 
-    private WorkteamNotificationConfigurationGetArgs() {
-        this.notificationTopicArn = Codegen.empty();
+    private WorkteamNotificationConfigurationGetArgs(WorkteamNotificationConfigurationGetArgs $) {
+        this.notificationTopicArn = $.notificationTopicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkteamNotificationConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> notificationTopicArn;
+        private WorkteamNotificationConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkteamNotificationConfigurationGetArgs();
         }
 
         public Builder(WorkteamNotificationConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notificationTopicArn = defaults.notificationTopicArn;
+            $ = new WorkteamNotificationConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
-            this.notificationTopicArn = notificationTopicArn;
+            $.notificationTopicArn = notificationTopicArn;
             return this;
         }
-        public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
-            this.notificationTopicArn = Codegen.ofNullable(notificationTopicArn);
-            return this;
-        }        public WorkteamNotificationConfigurationGetArgs build() {
-            return new WorkteamNotificationConfigurationGetArgs(notificationTopicArn);
+
+        public Builder notificationTopicArn(String notificationTopicArn) {
+            return notificationTopicArn(Output.of(notificationTopicArn));
+        }
+
+        public WorkteamNotificationConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class MosaicLayoutResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="columns", required=true)
-      private final Integer columns;
+    private Integer columns;
 
     public Integer columns() {
         return this.columns;
@@ -34,58 +34,56 @@ public final class MosaicLayoutResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tiles", required=true)
-      private final List<TileResponse> tiles;
+    private List<TileResponse> tiles;
 
     public List<TileResponse> tiles() {
         return this.tiles;
     }
 
-    public MosaicLayoutResponse(
-        Integer columns,
-        List<TileResponse> tiles) {
-        this.columns = Objects.requireNonNull(columns, "expected parameter 'columns' to be non-null");
-        this.tiles = Objects.requireNonNull(tiles, "expected parameter 'tiles' to be non-null");
-    }
+    private MosaicLayoutResponse() {}
 
-    private MosaicLayoutResponse() {
-        this.columns = null;
-        this.tiles = List.of();
+    private MosaicLayoutResponse(MosaicLayoutResponse $) {
+        this.columns = $.columns;
+        this.tiles = $.tiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MosaicLayoutResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer columns;
-        private List<TileResponse> tiles;
+        private MosaicLayoutResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MosaicLayoutResponse();
         }
 
         public Builder(MosaicLayoutResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.tiles = defaults.tiles;
+            $ = new MosaicLayoutResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(Integer columns) {
-            this.columns = Objects.requireNonNull(columns);
+            $.columns = columns;
             return this;
         }
+
         public Builder tiles(List<TileResponse> tiles) {
-            this.tiles = Objects.requireNonNull(tiles);
+            $.tiles = tiles;
             return this;
         }
+
         public Builder tiles(TileResponse... tiles) {
             return tiles(List.of(tiles));
-        }        public MosaicLayoutResponse build() {
-            return new MosaicLayoutResponse(columns, tiles);
+        }
+
+        public MosaicLayoutResponse build() {
+            $.columns = Objects.requireNonNull($.columns, "expected parameter 'columns' to be non-null");
+            $.tiles = Objects.requireNonNull($.tiles, "expected parameter 'tiles' to be non-null");
+            return $;
         }
     }
+
 }

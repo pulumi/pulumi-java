@@ -5,10 +5,10 @@ package com.pulumi.googlenative.metastore_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.metastore_v1beta.inputs.SecretArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class KerberosConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keytab")
-      private final @Nullable Output<SecretArgs> keytab;
+    private @Nullable Output<SecretArgs> keytab;
 
-    public Output<SecretArgs> keytab() {
-        return this.keytab == null ? Codegen.empty() : this.keytab;
+    public Optional<Output<SecretArgs>> keytab() {
+        return Optional.ofNullable(this.keytab);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class KerberosConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="krb5ConfigGcsUri")
-      private final @Nullable Output<String> krb5ConfigGcsUri;
+    private @Nullable Output<String> krb5ConfigGcsUri;
 
-    public Output<String> krb5ConfigGcsUri() {
-        return this.krb5ConfigGcsUri == null ? Codegen.empty() : this.krb5ConfigGcsUri;
+    public Optional<Output<String>> krb5ConfigGcsUri() {
+        return Optional.ofNullable(this.krb5ConfigGcsUri);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class KerberosConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="principal")
-      private final @Nullable Output<String> principal;
+    private @Nullable Output<String> principal;
 
-    public Output<String> principal() {
-        return this.principal == null ? Codegen.empty() : this.principal;
+    public Optional<Output<String>> principal() {
+        return Optional.ofNullable(this.principal);
     }
 
-    public KerberosConfigArgs(
-        @Nullable Output<SecretArgs> keytab,
-        @Nullable Output<String> krb5ConfigGcsUri,
-        @Nullable Output<String> principal) {
-        this.keytab = keytab;
-        this.krb5ConfigGcsUri = krb5ConfigGcsUri;
-        this.principal = principal;
-    }
+    private KerberosConfigArgs() {}
 
-    private KerberosConfigArgs() {
-        this.keytab = Codegen.empty();
-        this.krb5ConfigGcsUri = Codegen.empty();
-        this.principal = Codegen.empty();
+    private KerberosConfigArgs(KerberosConfigArgs $) {
+        this.keytab = $.keytab;
+        this.krb5ConfigGcsUri = $.krb5ConfigGcsUri;
+        this.principal = $.principal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KerberosConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecretArgs> keytab;
-        private @Nullable Output<String> krb5ConfigGcsUri;
-        private @Nullable Output<String> principal;
+        private KerberosConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KerberosConfigArgs();
         }
 
         public Builder(KerberosConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keytab = defaults.keytab;
-    	      this.krb5ConfigGcsUri = defaults.krb5ConfigGcsUri;
-    	      this.principal = defaults.principal;
+            $ = new KerberosConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keytab(@Nullable Output<SecretArgs> keytab) {
-            this.keytab = keytab;
+            $.keytab = keytab;
             return this;
         }
-        public Builder keytab(@Nullable SecretArgs keytab) {
-            this.keytab = Codegen.ofNullable(keytab);
-            return this;
+
+        public Builder keytab(SecretArgs keytab) {
+            return keytab(Output.of(keytab));
         }
+
         public Builder krb5ConfigGcsUri(@Nullable Output<String> krb5ConfigGcsUri) {
-            this.krb5ConfigGcsUri = krb5ConfigGcsUri;
+            $.krb5ConfigGcsUri = krb5ConfigGcsUri;
             return this;
         }
-        public Builder krb5ConfigGcsUri(@Nullable String krb5ConfigGcsUri) {
-            this.krb5ConfigGcsUri = Codegen.ofNullable(krb5ConfigGcsUri);
-            return this;
+
+        public Builder krb5ConfigGcsUri(String krb5ConfigGcsUri) {
+            return krb5ConfigGcsUri(Output.of(krb5ConfigGcsUri));
         }
+
         public Builder principal(@Nullable Output<String> principal) {
-            this.principal = principal;
+            $.principal = principal;
             return this;
         }
-        public Builder principal(@Nullable String principal) {
-            this.principal = Codegen.ofNullable(principal);
-            return this;
-        }        public KerberosConfigArgs build() {
-            return new KerberosConfigArgs(keytab, krb5ConfigGcsUri, principal);
+
+        public Builder principal(String principal) {
+            return principal(Output.of(principal));
+        }
+
+        public KerberosConfigArgs build() {
+            return $;
         }
     }
+
 }

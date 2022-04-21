@@ -6,8 +6,8 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeResourceStatementRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
     public static final NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs Empty = new NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs();
 
     @Import(name="resourceStatement")
-      private final @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
+    private @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
-    public Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement() {
-        return this.resourceStatement == null ? Codegen.empty() : this.resourceStatement;
+    public Optional<Output<NetworkInsightsAccessScopeResourceStatementRequestArgs>> resourceStatement() {
+        return Optional.ofNullable(this.resourceStatement);
     }
 
-    public NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs(@Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
-        this.resourceStatement = resourceStatement;
-    }
+    private NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs() {}
 
-    private NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs() {
-        this.resourceStatement = Codegen.empty();
+    private NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs(NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs $) {
+        this.resourceStatement = $.resourceStatement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
+        private NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs();
         }
 
         public Builder(NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceStatement = defaults.resourceStatement;
+            $ = new NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceStatement(@Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
-            this.resourceStatement = resourceStatement;
+            $.resourceStatement = resourceStatement;
             return this;
         }
-        public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
-            this.resourceStatement = Codegen.ofNullable(resourceStatement);
-            return this;
-        }        public NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs build() {
-            return new NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs(resourceStatement);
+
+        public Builder resourceStatement(NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
+            return resourceStatement(Output.of(resourceStatement));
+        }
+
+        public NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs build() {
+            return $;
         }
     }
+
 }

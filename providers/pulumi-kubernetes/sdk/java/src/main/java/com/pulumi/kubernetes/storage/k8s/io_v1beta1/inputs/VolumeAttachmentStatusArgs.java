@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs.VolumeErrorArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VolumeAttachmentStatusArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="attachError")
-      private final @Nullable Output<VolumeErrorArgs> attachError;
+    private @Nullable Output<VolumeErrorArgs> attachError;
 
-    public Output<VolumeErrorArgs> attachError() {
-        return this.attachError == null ? Codegen.empty() : this.attachError;
+    public Optional<Output<VolumeErrorArgs>> attachError() {
+        return Optional.ofNullable(this.attachError);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class VolumeAttachmentStatusArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="attached", required=true)
-      private final Output<Boolean> attached;
+    private Output<Boolean> attached;
 
     public Output<Boolean> attached() {
         return this.attached;
@@ -49,10 +49,10 @@ public final class VolumeAttachmentStatusArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="attachmentMetadata")
-      private final @Nullable Output<Map<String,String>> attachmentMetadata;
+    private @Nullable Output<Map<String,String>> attachmentMetadata;
 
-    public Output<Map<String,String>> attachmentMetadata() {
-        return this.attachmentMetadata == null ? Codegen.empty() : this.attachmentMetadata;
+    public Optional<Output<Map<String,String>>> attachmentMetadata() {
+        return Optional.ofNullable(this.attachmentMetadata);
     }
 
     /**
@@ -60,89 +60,79 @@ public final class VolumeAttachmentStatusArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="detachError")
-      private final @Nullable Output<VolumeErrorArgs> detachError;
+    private @Nullable Output<VolumeErrorArgs> detachError;
 
-    public Output<VolumeErrorArgs> detachError() {
-        return this.detachError == null ? Codegen.empty() : this.detachError;
+    public Optional<Output<VolumeErrorArgs>> detachError() {
+        return Optional.ofNullable(this.detachError);
     }
 
-    public VolumeAttachmentStatusArgs(
-        @Nullable Output<VolumeErrorArgs> attachError,
-        Output<Boolean> attached,
-        @Nullable Output<Map<String,String>> attachmentMetadata,
-        @Nullable Output<VolumeErrorArgs> detachError) {
-        this.attachError = attachError;
-        this.attached = Objects.requireNonNull(attached, "expected parameter 'attached' to be non-null");
-        this.attachmentMetadata = attachmentMetadata;
-        this.detachError = detachError;
-    }
+    private VolumeAttachmentStatusArgs() {}
 
-    private VolumeAttachmentStatusArgs() {
-        this.attachError = Codegen.empty();
-        this.attached = Codegen.empty();
-        this.attachmentMetadata = Codegen.empty();
-        this.detachError = Codegen.empty();
+    private VolumeAttachmentStatusArgs(VolumeAttachmentStatusArgs $) {
+        this.attachError = $.attachError;
+        this.attached = $.attached;
+        this.attachmentMetadata = $.attachmentMetadata;
+        this.detachError = $.detachError;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeAttachmentStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VolumeErrorArgs> attachError;
-        private Output<Boolean> attached;
-        private @Nullable Output<Map<String,String>> attachmentMetadata;
-        private @Nullable Output<VolumeErrorArgs> detachError;
+        private VolumeAttachmentStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeAttachmentStatusArgs();
         }
 
         public Builder(VolumeAttachmentStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachError = defaults.attachError;
-    	      this.attached = defaults.attached;
-    	      this.attachmentMetadata = defaults.attachmentMetadata;
-    	      this.detachError = defaults.detachError;
+            $ = new VolumeAttachmentStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachError(@Nullable Output<VolumeErrorArgs> attachError) {
-            this.attachError = attachError;
+            $.attachError = attachError;
             return this;
         }
-        public Builder attachError(@Nullable VolumeErrorArgs attachError) {
-            this.attachError = Codegen.ofNullable(attachError);
-            return this;
+
+        public Builder attachError(VolumeErrorArgs attachError) {
+            return attachError(Output.of(attachError));
         }
+
         public Builder attached(Output<Boolean> attached) {
-            this.attached = Objects.requireNonNull(attached);
+            $.attached = attached;
             return this;
         }
+
         public Builder attached(Boolean attached) {
-            this.attached = Output.of(Objects.requireNonNull(attached));
-            return this;
+            return attached(Output.of(attached));
         }
+
         public Builder attachmentMetadata(@Nullable Output<Map<String,String>> attachmentMetadata) {
-            this.attachmentMetadata = attachmentMetadata;
+            $.attachmentMetadata = attachmentMetadata;
             return this;
         }
-        public Builder attachmentMetadata(@Nullable Map<String,String> attachmentMetadata) {
-            this.attachmentMetadata = Codegen.ofNullable(attachmentMetadata);
-            return this;
+
+        public Builder attachmentMetadata(Map<String,String> attachmentMetadata) {
+            return attachmentMetadata(Output.of(attachmentMetadata));
         }
+
         public Builder detachError(@Nullable Output<VolumeErrorArgs> detachError) {
-            this.detachError = detachError;
+            $.detachError = detachError;
             return this;
         }
-        public Builder detachError(@Nullable VolumeErrorArgs detachError) {
-            this.detachError = Codegen.ofNullable(detachError);
-            return this;
-        }        public VolumeAttachmentStatusArgs build() {
-            return new VolumeAttachmentStatusArgs(attachError, attached, attachmentMetadata, detachError);
+
+        public Builder detachError(VolumeErrorArgs detachError) {
+            return detachError(Output.of(detachError));
+        }
+
+        public VolumeAttachmentStatusArgs build() {
+            $.attached = Objects.requireNonNull($.attached, "expected parameter 'attached' to be non-null");
+            return $;
         }
     }
+
 }

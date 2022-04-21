@@ -18,48 +18,49 @@ public final class TableFieldSchemaPolicyTagsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="names", required=true)
-      private final List<String> names;
+    private List<String> names;
 
     public List<String> names() {
         return this.names;
     }
 
-    public TableFieldSchemaPolicyTagsResponse(List<String> names) {
-        this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
-    }
+    private TableFieldSchemaPolicyTagsResponse() {}
 
-    private TableFieldSchemaPolicyTagsResponse() {
-        this.names = List.of();
+    private TableFieldSchemaPolicyTagsResponse(TableFieldSchemaPolicyTagsResponse $) {
+        this.names = $.names;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableFieldSchemaPolicyTagsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> names;
+        private TableFieldSchemaPolicyTagsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableFieldSchemaPolicyTagsResponse();
         }
 
         public Builder(TableFieldSchemaPolicyTagsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.names = defaults.names;
+            $ = new TableFieldSchemaPolicyTagsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder names(List<String> names) {
-            this.names = Objects.requireNonNull(names);
+            $.names = names;
             return this;
         }
+
         public Builder names(String... names) {
             return names(List.of(names));
-        }        public TableFieldSchemaPolicyTagsResponse build() {
-            return new TableFieldSchemaPolicyTagsResponse(names);
+        }
+
+        public TableFieldSchemaPolicyTagsResponse build() {
+            $.names = Objects.requireNonNull($.names, "expected parameter 'names' to be non-null");
+            return $;
         }
     }
+
 }

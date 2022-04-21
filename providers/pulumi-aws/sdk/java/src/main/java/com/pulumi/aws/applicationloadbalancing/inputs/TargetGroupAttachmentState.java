@@ -5,10 +5,10 @@ package com.pulumi.aws.applicationloadbalancing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TargetGroupAttachmentState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TargetGroupAttachmentState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TargetGroupAttachmentState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="targetGroupArn")
-      private final @Nullable Output<String> targetGroupArn;
+    private @Nullable Output<String> targetGroupArn;
 
-    public Output<String> targetGroupArn() {
-        return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
+    public Optional<Output<String>> targetGroupArn() {
+        return Optional.ofNullable(this.targetGroupArn);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class TargetGroupAttachmentState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="targetId")
-      private final @Nullable Output<String> targetId;
+    private @Nullable Output<String> targetId;
 
-    public Output<String> targetId() {
-        return this.targetId == null ? Codegen.empty() : this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
-    public TargetGroupAttachmentState(
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> targetGroupArn,
-        @Nullable Output<String> targetId) {
-        this.availabilityZone = availabilityZone;
-        this.port = port;
-        this.targetGroupArn = targetGroupArn;
-        this.targetId = targetId;
-    }
+    private TargetGroupAttachmentState() {}
 
-    private TargetGroupAttachmentState() {
-        this.availabilityZone = Codegen.empty();
-        this.port = Codegen.empty();
-        this.targetGroupArn = Codegen.empty();
-        this.targetId = Codegen.empty();
+    private TargetGroupAttachmentState(TargetGroupAttachmentState $) {
+        this.availabilityZone = $.availabilityZone;
+        this.port = $.port;
+        this.targetGroupArn = $.targetGroupArn;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetGroupAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> targetGroupArn;
-        private @Nullable Output<String> targetId;
+        private TargetGroupAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetGroupAttachmentState();
         }
 
         public Builder(TargetGroupAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.port = defaults.port;
-    	      this.targetGroupArn = defaults.targetGroupArn;
-    	      this.targetId = defaults.targetId;
+            $ = new TargetGroupAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
-            this.targetGroupArn = targetGroupArn;
+            $.targetGroupArn = targetGroupArn;
             return this;
         }
-        public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Codegen.ofNullable(targetGroupArn);
-            return this;
+
+        public Builder targetGroupArn(String targetGroupArn) {
+            return targetGroupArn(Output.of(targetGroupArn));
         }
+
         public Builder targetId(@Nullable Output<String> targetId) {
-            this.targetId = targetId;
+            $.targetId = targetId;
             return this;
         }
-        public Builder targetId(@Nullable String targetId) {
-            this.targetId = Codegen.ofNullable(targetId);
-            return this;
-        }        public TargetGroupAttachmentState build() {
-            return new TargetGroupAttachmentState(availabilityZone, port, targetGroupArn, targetId);
+
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
+        }
+
+        public TargetGroupAttachmentState build() {
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.ssm.inputs;
 import com.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
      * 
      */
     @Import(name="documentVersion")
-      private final @Nullable Output<String> documentVersion;
+    private @Nullable Output<String> documentVersion;
 
-    public Output<String> documentVersion() {
-        return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
+    public Optional<Output<String>> documentVersion() {
+        return Optional.ofNullable(this.documentVersion);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
+    private @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
 
-    public Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs(
-        @Nullable Output<String> documentVersion,
-        @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters) {
-        this.documentVersion = documentVersion;
-        this.parameters = parameters;
-    }
+    private MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs() {}
 
-    private MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs() {
-        this.documentVersion = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs(MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs $) {
+        this.documentVersion = $.documentVersion;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> documentVersion;
-        private @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
+        private MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs();
         }
 
         public Builder(MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentVersion = defaults.documentVersion;
-    	      this.parameters = defaults.parameters;
+            $ = new MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
-            this.documentVersion = documentVersion;
+            $.documentVersion = documentVersion;
             return this;
         }
-        public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Codegen.ofNullable(documentVersion);
-            return this;
+
+        public Builder documentVersion(String documentVersion) {
+            return documentVersion(Output.of(documentVersion));
         }
+
         public Builder parameters(@Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs... parameters) {
             return parameters(List.of(parameters));
-        }        public MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs build() {
-            return new MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs(documentVersion, parameters);
+        }
+
+        public MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs build() {
+            return $;
         }
     }
+
 }

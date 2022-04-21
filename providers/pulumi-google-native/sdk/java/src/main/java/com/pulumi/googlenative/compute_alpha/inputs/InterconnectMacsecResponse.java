@@ -23,7 +23,7 @@ public final class InterconnectMacsecResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="failOpen", required=true)
-      private final Boolean failOpen;
+    private Boolean failOpen;
 
     public Boolean failOpen() {
         return this.failOpen;
@@ -34,58 +34,56 @@ public final class InterconnectMacsecResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="preSharedKeys", required=true)
-      private final List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys;
+    private List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys;
 
     public List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys() {
         return this.preSharedKeys;
     }
 
-    public InterconnectMacsecResponse(
-        Boolean failOpen,
-        List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
-        this.failOpen = Objects.requireNonNull(failOpen, "expected parameter 'failOpen' to be non-null");
-        this.preSharedKeys = Objects.requireNonNull(preSharedKeys, "expected parameter 'preSharedKeys' to be non-null");
-    }
+    private InterconnectMacsecResponse() {}
 
-    private InterconnectMacsecResponse() {
-        this.failOpen = null;
-        this.preSharedKeys = List.of();
+    private InterconnectMacsecResponse(InterconnectMacsecResponse $) {
+        this.failOpen = $.failOpen;
+        this.preSharedKeys = $.preSharedKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectMacsecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean failOpen;
-        private List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys;
+        private InterconnectMacsecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectMacsecResponse();
         }
 
         public Builder(InterconnectMacsecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failOpen = defaults.failOpen;
-    	      this.preSharedKeys = defaults.preSharedKeys;
+            $ = new InterconnectMacsecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failOpen(Boolean failOpen) {
-            this.failOpen = Objects.requireNonNull(failOpen);
+            $.failOpen = failOpen;
             return this;
         }
+
         public Builder preSharedKeys(List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
-            this.preSharedKeys = Objects.requireNonNull(preSharedKeys);
+            $.preSharedKeys = preSharedKeys;
             return this;
         }
+
         public Builder preSharedKeys(InterconnectMacsecPreSharedKeyResponse... preSharedKeys) {
             return preSharedKeys(List.of(preSharedKeys));
-        }        public InterconnectMacsecResponse build() {
-            return new InterconnectMacsecResponse(failOpen, preSharedKeys);
+        }
+
+        public InterconnectMacsecResponse build() {
+            $.failOpen = Objects.requireNonNull($.failOpen, "expected parameter 'failOpen' to be non-null");
+            $.preSharedKeys = Objects.requireNonNull($.preSharedKeys, "expected parameter 'preSharedKeys' to be non-null");
+            return $;
         }
     }
+
 }

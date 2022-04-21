@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2ScheduleArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="recurrencePeriodDuration")
-      private final @Nullable Output<String> recurrencePeriodDuration;
+    private @Nullable Output<String> recurrencePeriodDuration;
 
-    public Output<String> recurrencePeriodDuration() {
-        return this.recurrencePeriodDuration == null ? Codegen.empty() : this.recurrencePeriodDuration;
+    public Optional<Output<String>> recurrencePeriodDuration() {
+        return Optional.ofNullable(this.recurrencePeriodDuration);
     }
 
-    public GooglePrivacyDlpV2ScheduleArgs(@Nullable Output<String> recurrencePeriodDuration) {
-        this.recurrencePeriodDuration = recurrencePeriodDuration;
-    }
+    private GooglePrivacyDlpV2ScheduleArgs() {}
 
-    private GooglePrivacyDlpV2ScheduleArgs() {
-        this.recurrencePeriodDuration = Codegen.empty();
+    private GooglePrivacyDlpV2ScheduleArgs(GooglePrivacyDlpV2ScheduleArgs $) {
+        this.recurrencePeriodDuration = $.recurrencePeriodDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> recurrencePeriodDuration;
+        private GooglePrivacyDlpV2ScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ScheduleArgs();
         }
 
         public Builder(GooglePrivacyDlpV2ScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrencePeriodDuration = defaults.recurrencePeriodDuration;
+            $ = new GooglePrivacyDlpV2ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrencePeriodDuration(@Nullable Output<String> recurrencePeriodDuration) {
-            this.recurrencePeriodDuration = recurrencePeriodDuration;
+            $.recurrencePeriodDuration = recurrencePeriodDuration;
             return this;
         }
-        public Builder recurrencePeriodDuration(@Nullable String recurrencePeriodDuration) {
-            this.recurrencePeriodDuration = Codegen.ofNullable(recurrencePeriodDuration);
-            return this;
-        }        public GooglePrivacyDlpV2ScheduleArgs build() {
-            return new GooglePrivacyDlpV2ScheduleArgs(recurrencePeriodDuration);
+
+        public Builder recurrencePeriodDuration(String recurrencePeriodDuration) {
+            return recurrencePeriodDuration(Output.of(recurrencePeriodDuration));
+        }
+
+        public GooglePrivacyDlpV2ScheduleArgs build() {
+            return $;
         }
     }
+
 }

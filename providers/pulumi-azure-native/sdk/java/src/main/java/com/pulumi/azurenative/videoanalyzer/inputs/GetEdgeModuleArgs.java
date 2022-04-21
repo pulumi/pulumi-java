@@ -17,7 +17,7 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="edgeModuleName", required=true)
-      private final String edgeModuleName;
+    private String edgeModuleName;
 
     public String edgeModuleName() {
         return this.edgeModuleName;
@@ -39,64 +39,59 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetEdgeModuleArgs(
-        String accountName,
-        String edgeModuleName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.edgeModuleName = Objects.requireNonNull(edgeModuleName, "expected parameter 'edgeModuleName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetEdgeModuleArgs() {}
 
-    private GetEdgeModuleArgs() {
-        this.accountName = null;
-        this.edgeModuleName = null;
-        this.resourceGroupName = null;
+    private GetEdgeModuleArgs(GetEdgeModuleArgs $) {
+        this.accountName = $.accountName;
+        this.edgeModuleName = $.edgeModuleName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEdgeModuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String edgeModuleName;
-        private String resourceGroupName;
+        private GetEdgeModuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEdgeModuleArgs();
         }
 
         public Builder(GetEdgeModuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.edgeModuleName = defaults.edgeModuleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetEdgeModuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder edgeModuleName(String edgeModuleName) {
-            this.edgeModuleName = Objects.requireNonNull(edgeModuleName);
+            $.edgeModuleName = edgeModuleName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetEdgeModuleArgs build() {
-            return new GetEdgeModuleArgs(accountName, edgeModuleName, resourceGroupName);
+        }
+
+        public GetEdgeModuleArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.edgeModuleName = Objects.requireNonNull($.edgeModuleName, "expected parameter 'edgeModuleName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

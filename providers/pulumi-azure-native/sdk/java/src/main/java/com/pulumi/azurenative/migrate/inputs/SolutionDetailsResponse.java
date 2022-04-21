@@ -25,10 +25,10 @@ public final class SolutionDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="assessmentCount")
-      private final @Nullable Integer assessmentCount;
+    private @Nullable Integer assessmentCount;
 
     public Optional<Integer> assessmentCount() {
-        return this.assessmentCount == null ? Optional.empty() : Optional.ofNullable(this.assessmentCount);
+        return Optional.ofNullable(this.assessmentCount);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SolutionDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="extendedDetails")
-      private final @Nullable Map<String,String> extendedDetails;
+    private @Nullable Map<String,String> extendedDetails;
 
-    public Map<String,String> extendedDetails() {
-        return this.extendedDetails == null ? Map.of() : this.extendedDetails;
+    public Optional<Map<String,String>> extendedDetails() {
+        return Optional.ofNullable(this.extendedDetails);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class SolutionDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="groupCount")
-      private final @Nullable Integer groupCount;
+    private @Nullable Integer groupCount;
 
     public Optional<Integer> groupCount() {
-        return this.groupCount == null ? Optional.empty() : Optional.ofNullable(this.groupCount);
+        return Optional.ofNullable(this.groupCount);
     }
 
-    public SolutionDetailsResponse(
-        @Nullable Integer assessmentCount,
-        @Nullable Map<String,String> extendedDetails,
-        @Nullable Integer groupCount) {
-        this.assessmentCount = assessmentCount;
-        this.extendedDetails = extendedDetails;
-        this.groupCount = groupCount;
-    }
+    private SolutionDetailsResponse() {}
 
-    private SolutionDetailsResponse() {
-        this.assessmentCount = null;
-        this.extendedDetails = Map.of();
-        this.groupCount = null;
+    private SolutionDetailsResponse(SolutionDetailsResponse $) {
+        this.assessmentCount = $.assessmentCount;
+        this.extendedDetails = $.extendedDetails;
+        this.groupCount = $.groupCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SolutionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer assessmentCount;
-        private @Nullable Map<String,String> extendedDetails;
-        private @Nullable Integer groupCount;
+        private SolutionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SolutionDetailsResponse();
         }
 
         public Builder(SolutionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentCount = defaults.assessmentCount;
-    	      this.extendedDetails = defaults.extendedDetails;
-    	      this.groupCount = defaults.groupCount;
+            $ = new SolutionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentCount(@Nullable Integer assessmentCount) {
-            this.assessmentCount = assessmentCount;
+            $.assessmentCount = assessmentCount;
             return this;
         }
+
         public Builder extendedDetails(@Nullable Map<String,String> extendedDetails) {
-            this.extendedDetails = extendedDetails;
+            $.extendedDetails = extendedDetails;
             return this;
         }
+
         public Builder groupCount(@Nullable Integer groupCount) {
-            this.groupCount = groupCount;
+            $.groupCount = groupCount;
             return this;
-        }        public SolutionDetailsResponse build() {
-            return new SolutionDetailsResponse(assessmentCount, extendedDetails, groupCount);
+        }
+
+        public SolutionDetailsResponse build() {
+            return $;
         }
     }
+
 }

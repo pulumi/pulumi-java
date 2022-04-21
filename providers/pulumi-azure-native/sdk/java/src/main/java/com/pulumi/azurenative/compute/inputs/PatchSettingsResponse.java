@@ -24,10 +24,10 @@ public final class PatchSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="assessmentMode")
-      private final @Nullable String assessmentMode;
+    private @Nullable String assessmentMode;
 
     public Optional<String> assessmentMode() {
-        return this.assessmentMode == null ? Optional.empty() : Optional.ofNullable(this.assessmentMode);
+        return Optional.ofNullable(this.assessmentMode);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PatchSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enableHotpatching")
-      private final @Nullable Boolean enableHotpatching;
+    private @Nullable Boolean enableHotpatching;
 
     public Optional<Boolean> enableHotpatching() {
-        return this.enableHotpatching == null ? Optional.empty() : Optional.ofNullable(this.enableHotpatching);
+        return Optional.ofNullable(this.enableHotpatching);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class PatchSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="patchMode")
-      private final @Nullable String patchMode;
+    private @Nullable String patchMode;
 
     public Optional<String> patchMode() {
-        return this.patchMode == null ? Optional.empty() : Optional.ofNullable(this.patchMode);
+        return Optional.ofNullable(this.patchMode);
     }
 
-    public PatchSettingsResponse(
-        @Nullable String assessmentMode,
-        @Nullable Boolean enableHotpatching,
-        @Nullable String patchMode) {
-        this.assessmentMode = assessmentMode;
-        this.enableHotpatching = enableHotpatching;
-        this.patchMode = patchMode;
-    }
+    private PatchSettingsResponse() {}
 
-    private PatchSettingsResponse() {
-        this.assessmentMode = null;
-        this.enableHotpatching = null;
-        this.patchMode = null;
+    private PatchSettingsResponse(PatchSettingsResponse $) {
+        this.assessmentMode = $.assessmentMode;
+        this.enableHotpatching = $.enableHotpatching;
+        this.patchMode = $.patchMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String assessmentMode;
-        private @Nullable Boolean enableHotpatching;
-        private @Nullable String patchMode;
+        private PatchSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchSettingsResponse();
         }
 
         public Builder(PatchSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentMode = defaults.assessmentMode;
-    	      this.enableHotpatching = defaults.enableHotpatching;
-    	      this.patchMode = defaults.patchMode;
+            $ = new PatchSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentMode(@Nullable String assessmentMode) {
-            this.assessmentMode = assessmentMode;
+            $.assessmentMode = assessmentMode;
             return this;
         }
+
         public Builder enableHotpatching(@Nullable Boolean enableHotpatching) {
-            this.enableHotpatching = enableHotpatching;
+            $.enableHotpatching = enableHotpatching;
             return this;
         }
+
         public Builder patchMode(@Nullable String patchMode) {
-            this.patchMode = patchMode;
+            $.patchMode = patchMode;
             return this;
-        }        public PatchSettingsResponse build() {
-            return new PatchSettingsResponse(assessmentMode, enableHotpatching, patchMode);
+        }
+
+        public PatchSettingsResponse build() {
+            return $;
         }
     }
+
 }

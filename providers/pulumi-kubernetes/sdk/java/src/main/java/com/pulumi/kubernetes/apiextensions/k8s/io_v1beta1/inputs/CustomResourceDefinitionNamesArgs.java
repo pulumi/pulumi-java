@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CustomResourceDefinitionNamesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="categories")
-      private final @Nullable Output<List<String>> categories;
+    private @Nullable Output<List<String>> categories;
 
-    public Output<List<String>> categories() {
-        return this.categories == null ? Codegen.empty() : this.categories;
+    public Optional<Output<List<String>>> categories() {
+        return Optional.ofNullable(this.categories);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class CustomResourceDefinitionNamesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -47,10 +47,10 @@ public final class CustomResourceDefinitionNamesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="listKind")
-      private final @Nullable Output<String> listKind;
+    private @Nullable Output<String> listKind;
 
-    public Output<String> listKind() {
-        return this.listKind == null ? Codegen.empty() : this.listKind;
+    public Optional<Output<String>> listKind() {
+        return Optional.ofNullable(this.listKind);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class CustomResourceDefinitionNamesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="plural", required=true)
-      private final Output<String> plural;
+    private Output<String> plural;
 
     public Output<String> plural() {
         return this.plural;
@@ -69,10 +69,10 @@ public final class CustomResourceDefinitionNamesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="shortNames")
-      private final @Nullable Output<List<String>> shortNames;
+    private @Nullable Output<List<String>> shortNames;
 
-    public Output<List<String>> shortNames() {
-        return this.shortNames == null ? Codegen.empty() : this.shortNames;
+    public Optional<Output<List<String>>> shortNames() {
+        return Optional.ofNullable(this.shortNames);
     }
 
     /**
@@ -80,121 +80,108 @@ public final class CustomResourceDefinitionNamesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="singular")
-      private final @Nullable Output<String> singular;
+    private @Nullable Output<String> singular;
 
-    public Output<String> singular() {
-        return this.singular == null ? Codegen.empty() : this.singular;
+    public Optional<Output<String>> singular() {
+        return Optional.ofNullable(this.singular);
     }
 
-    public CustomResourceDefinitionNamesArgs(
-        @Nullable Output<List<String>> categories,
-        Output<String> kind,
-        @Nullable Output<String> listKind,
-        Output<String> plural,
-        @Nullable Output<List<String>> shortNames,
-        @Nullable Output<String> singular) {
-        this.categories = categories;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.listKind = listKind;
-        this.plural = Objects.requireNonNull(plural, "expected parameter 'plural' to be non-null");
-        this.shortNames = shortNames;
-        this.singular = singular;
-    }
+    private CustomResourceDefinitionNamesArgs() {}
 
-    private CustomResourceDefinitionNamesArgs() {
-        this.categories = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.listKind = Codegen.empty();
-        this.plural = Codegen.empty();
-        this.shortNames = Codegen.empty();
-        this.singular = Codegen.empty();
+    private CustomResourceDefinitionNamesArgs(CustomResourceDefinitionNamesArgs $) {
+        this.categories = $.categories;
+        this.kind = $.kind;
+        this.listKind = $.listKind;
+        this.plural = $.plural;
+        this.shortNames = $.shortNames;
+        this.singular = $.singular;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomResourceDefinitionNamesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> categories;
-        private Output<String> kind;
-        private @Nullable Output<String> listKind;
-        private Output<String> plural;
-        private @Nullable Output<List<String>> shortNames;
-        private @Nullable Output<String> singular;
+        private CustomResourceDefinitionNamesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomResourceDefinitionNamesArgs();
         }
 
         public Builder(CustomResourceDefinitionNamesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
-    	      this.kind = defaults.kind;
-    	      this.listKind = defaults.listKind;
-    	      this.plural = defaults.plural;
-    	      this.shortNames = defaults.shortNames;
-    	      this.singular = defaults.singular;
+            $ = new CustomResourceDefinitionNamesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(@Nullable Output<List<String>> categories) {
-            this.categories = categories;
+            $.categories = categories;
             return this;
         }
-        public Builder categories(@Nullable List<String> categories) {
-            this.categories = Codegen.ofNullable(categories);
-            return this;
+
+        public Builder categories(List<String> categories) {
+            return categories(Output.of(categories));
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder listKind(@Nullable Output<String> listKind) {
-            this.listKind = listKind;
+            $.listKind = listKind;
             return this;
         }
-        public Builder listKind(@Nullable String listKind) {
-            this.listKind = Codegen.ofNullable(listKind);
-            return this;
+
+        public Builder listKind(String listKind) {
+            return listKind(Output.of(listKind));
         }
+
         public Builder plural(Output<String> plural) {
-            this.plural = Objects.requireNonNull(plural);
+            $.plural = plural;
             return this;
         }
+
         public Builder plural(String plural) {
-            this.plural = Output.of(Objects.requireNonNull(plural));
-            return this;
+            return plural(Output.of(plural));
         }
+
         public Builder shortNames(@Nullable Output<List<String>> shortNames) {
-            this.shortNames = shortNames;
+            $.shortNames = shortNames;
             return this;
         }
-        public Builder shortNames(@Nullable List<String> shortNames) {
-            this.shortNames = Codegen.ofNullable(shortNames);
-            return this;
+
+        public Builder shortNames(List<String> shortNames) {
+            return shortNames(Output.of(shortNames));
         }
+
         public Builder shortNames(String... shortNames) {
             return shortNames(List.of(shortNames));
         }
+
         public Builder singular(@Nullable Output<String> singular) {
-            this.singular = singular;
+            $.singular = singular;
             return this;
         }
-        public Builder singular(@Nullable String singular) {
-            this.singular = Codegen.ofNullable(singular);
-            return this;
-        }        public CustomResourceDefinitionNamesArgs build() {
-            return new CustomResourceDefinitionNamesArgs(categories, kind, listKind, plural, shortNames, singular);
+
+        public Builder singular(String singular) {
+            return singular(Output.of(singular));
+        }
+
+        public CustomResourceDefinitionNamesArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.plural = Objects.requireNonNull($.plural, "expected parameter 'plural' to be non-null");
+            return $;
         }
     }
+
 }

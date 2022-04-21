@@ -24,10 +24,10 @@ public final class JavaScriptFunctionBindingResponse extends com.pulumi.resource
      * 
      */
     @Import(name="script")
-      private final @Nullable String script;
+    private @Nullable String script;
 
     public Optional<String> script() {
-        return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class JavaScriptFunctionBindingResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public JavaScriptFunctionBindingResponse(
-        @Nullable String script,
-        String type) {
-        this.script = script;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private JavaScriptFunctionBindingResponse() {}
 
-    private JavaScriptFunctionBindingResponse() {
-        this.script = null;
-        this.type = null;
+    private JavaScriptFunctionBindingResponse(JavaScriptFunctionBindingResponse $) {
+        this.script = $.script;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JavaScriptFunctionBindingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String script;
-        private String type;
+        private JavaScriptFunctionBindingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JavaScriptFunctionBindingResponse();
         }
 
         public Builder(JavaScriptFunctionBindingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.script = defaults.script;
-    	      this.type = defaults.type;
+            $ = new JavaScriptFunctionBindingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder script(@Nullable String script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public JavaScriptFunctionBindingResponse build() {
-            return new JavaScriptFunctionBindingResponse(script, type);
+        }
+
+        public JavaScriptFunctionBindingResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

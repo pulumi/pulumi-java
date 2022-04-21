@@ -5,9 +5,9 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class StorageLensActivityMetricsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Output<Boolean> isEnabled;
+    private @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> isEnabled() {
-        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
+    public Optional<Output<Boolean>> isEnabled() {
+        return Optional.ofNullable(this.isEnabled);
     }
 
-    public StorageLensActivityMetricsArgs(@Nullable Output<Boolean> isEnabled) {
-        this.isEnabled = isEnabled;
-    }
+    private StorageLensActivityMetricsArgs() {}
 
-    private StorageLensActivityMetricsArgs() {
-        this.isEnabled = Codegen.empty();
+    private StorageLensActivityMetricsArgs(StorageLensActivityMetricsArgs $) {
+        this.isEnabled = $.isEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensActivityMetricsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isEnabled;
+        private StorageLensActivityMetricsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensActivityMetricsArgs();
         }
 
         public Builder(StorageLensActivityMetricsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEnabled = defaults.isEnabled;
+            $ = new StorageLensActivityMetricsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
-        public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Codegen.ofNullable(isEnabled);
-            return this;
-        }        public StorageLensActivityMetricsArgs build() {
-            return new StorageLensActivityMetricsArgs(isEnabled);
+
+        public Builder isEnabled(Boolean isEnabled) {
+            return isEnabled(Output.of(isEnabled));
+        }
+
+        public StorageLensActivityMetricsArgs build() {
+            return $;
         }
     }
+
 }

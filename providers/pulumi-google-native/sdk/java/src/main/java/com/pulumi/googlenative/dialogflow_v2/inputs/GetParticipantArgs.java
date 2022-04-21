@@ -15,94 +15,86 @@ public final class GetParticipantArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetParticipantArgs Empty = new GetParticipantArgs();
 
     @Import(name="conversationId", required=true)
-      private final String conversationId;
+    private String conversationId;
 
     public String conversationId() {
         return this.conversationId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="participantId", required=true)
-      private final String participantId;
+    private String participantId;
 
     public String participantId() {
         return this.participantId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetParticipantArgs(
-        String conversationId,
-        String location,
-        String participantId,
-        @Nullable String project) {
-        this.conversationId = Objects.requireNonNull(conversationId, "expected parameter 'conversationId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.participantId = Objects.requireNonNull(participantId, "expected parameter 'participantId' to be non-null");
-        this.project = project;
-    }
+    private GetParticipantArgs() {}
 
-    private GetParticipantArgs() {
-        this.conversationId = null;
-        this.location = null;
-        this.participantId = null;
-        this.project = null;
+    private GetParticipantArgs(GetParticipantArgs $) {
+        this.conversationId = $.conversationId;
+        this.location = $.location;
+        this.participantId = $.participantId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetParticipantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String conversationId;
-        private String location;
-        private String participantId;
-        private @Nullable String project;
+        private GetParticipantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetParticipantArgs();
         }
 
         public Builder(GetParticipantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conversationId = defaults.conversationId;
-    	      this.location = defaults.location;
-    	      this.participantId = defaults.participantId;
-    	      this.project = defaults.project;
+            $ = new GetParticipantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conversationId(String conversationId) {
-            this.conversationId = Objects.requireNonNull(conversationId);
+            $.conversationId = conversationId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder participantId(String participantId) {
-            this.participantId = Objects.requireNonNull(participantId);
+            $.participantId = participantId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetParticipantArgs build() {
-            return new GetParticipantArgs(conversationId, location, participantId, project);
+        }
+
+        public GetParticipantArgs build() {
+            $.conversationId = Objects.requireNonNull($.conversationId, "expected parameter 'conversationId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.participantId = Objects.requireNonNull($.participantId, "expected parameter 'participantId' to be non-null");
+            return $;
         }
     }
+
 }

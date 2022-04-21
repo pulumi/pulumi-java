@@ -15,94 +15,86 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSnapshotArgs Empty = new GetSnapshotArgs();
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="snapshotId", required=true)
-      private final String snapshotId;
+    private String snapshotId;
 
     public String snapshotId() {
         return this.snapshotId;
     }
 
-    public GetSnapshotArgs(
-        String instanceId,
-        String location,
-        @Nullable String project,
-        String snapshotId) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.snapshotId = Objects.requireNonNull(snapshotId, "expected parameter 'snapshotId' to be non-null");
-    }
+    private GetSnapshotArgs() {}
 
-    private GetSnapshotArgs() {
-        this.instanceId = null;
-        this.location = null;
-        this.project = null;
-        this.snapshotId = null;
+    private GetSnapshotArgs(GetSnapshotArgs $) {
+        this.instanceId = $.instanceId;
+        this.location = $.location;
+        this.project = $.project;
+        this.snapshotId = $.snapshotId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private String location;
-        private @Nullable String project;
-        private String snapshotId;
+        private GetSnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSnapshotArgs();
         }
 
         public Builder(GetSnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.snapshotId = defaults.snapshotId;
+            $ = new GetSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder snapshotId(String snapshotId) {
-            this.snapshotId = Objects.requireNonNull(snapshotId);
+            $.snapshotId = snapshotId;
             return this;
-        }        public GetSnapshotArgs build() {
-            return new GetSnapshotArgs(instanceId, location, project, snapshotId);
+        }
+
+        public GetSnapshotArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.snapshotId = Objects.requireNonNull($.snapshotId, "expected parameter 'snapshotId' to be non-null");
+            return $;
         }
     }
+
 }

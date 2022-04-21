@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * 
      */
     @Import(name="exacts", required=true)
-      private final Output<List<String>> exacts;
+    private Output<List<String>> exacts;
 
     public Output<List<String>> exacts() {
         return this.exacts;
     }
 
-    public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs(Output<List<String>> exacts) {
-        this.exacts = Objects.requireNonNull(exacts, "expected parameter 'exacts' to be non-null");
-    }
+    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs() {}
 
-    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs() {
-        this.exacts = Codegen.empty();
+    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs $) {
+        this.exacts = $.exacts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> exacts;
+        private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs();
         }
 
         public Builder(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exacts = defaults.exacts;
+            $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exacts(Output<List<String>> exacts) {
-            this.exacts = Objects.requireNonNull(exacts);
+            $.exacts = exacts;
             return this;
         }
+
         public Builder exacts(List<String> exacts) {
-            this.exacts = Output.of(Objects.requireNonNull(exacts));
-            return this;
+            return exacts(Output.of(exacts));
         }
+
         public Builder exacts(String... exacts) {
             return exacts(List.of(exacts));
-        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs build() {
-            return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs(exacts);
+        }
+
+        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs build() {
+            $.exacts = Objects.requireNonNull($.exacts, "expected parameter 'exacts' to be non-null");
+            return $;
         }
     }
+
 }

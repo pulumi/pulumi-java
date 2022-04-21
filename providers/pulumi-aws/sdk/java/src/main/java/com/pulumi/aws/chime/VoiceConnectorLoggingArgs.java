@@ -5,10 +5,10 @@ package com.pulumi.aws.chime;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VoiceConnectorLoggingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="enableSipLogs")
-      private final @Nullable Output<Boolean> enableSipLogs;
+    private @Nullable Output<Boolean> enableSipLogs;
 
-    public Output<Boolean> enableSipLogs() {
-        return this.enableSipLogs == null ? Codegen.empty() : this.enableSipLogs;
+    public Optional<Output<Boolean>> enableSipLogs() {
+        return Optional.ofNullable(this.enableSipLogs);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class VoiceConnectorLoggingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="voiceConnectorId", required=true)
-      private final Output<String> voiceConnectorId;
+    private Output<String> voiceConnectorId;
 
     public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 
-    public VoiceConnectorLoggingArgs(
-        @Nullable Output<Boolean> enableSipLogs,
-        Output<String> voiceConnectorId) {
-        this.enableSipLogs = enableSipLogs;
-        this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId, "expected parameter 'voiceConnectorId' to be non-null");
-    }
+    private VoiceConnectorLoggingArgs() {}
 
-    private VoiceConnectorLoggingArgs() {
-        this.enableSipLogs = Codegen.empty();
-        this.voiceConnectorId = Codegen.empty();
+    private VoiceConnectorLoggingArgs(VoiceConnectorLoggingArgs $) {
+        this.enableSipLogs = $.enableSipLogs;
+        this.voiceConnectorId = $.voiceConnectorId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorLoggingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableSipLogs;
-        private Output<String> voiceConnectorId;
+        private VoiceConnectorLoggingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorLoggingArgs();
         }
 
         public Builder(VoiceConnectorLoggingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableSipLogs = defaults.enableSipLogs;
-    	      this.voiceConnectorId = defaults.voiceConnectorId;
+            $ = new VoiceConnectorLoggingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableSipLogs(@Nullable Output<Boolean> enableSipLogs) {
-            this.enableSipLogs = enableSipLogs;
+            $.enableSipLogs = enableSipLogs;
             return this;
         }
-        public Builder enableSipLogs(@Nullable Boolean enableSipLogs) {
-            this.enableSipLogs = Codegen.ofNullable(enableSipLogs);
-            return this;
+
+        public Builder enableSipLogs(Boolean enableSipLogs) {
+            return enableSipLogs(Output.of(enableSipLogs));
         }
+
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {
-            this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
+            $.voiceConnectorId = voiceConnectorId;
             return this;
         }
+
         public Builder voiceConnectorId(String voiceConnectorId) {
-            this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
-            return this;
-        }        public VoiceConnectorLoggingArgs build() {
-            return new VoiceConnectorLoggingArgs(enableSipLogs, voiceConnectorId);
+            return voiceConnectorId(Output.of(voiceConnectorId));
+        }
+
+        public VoiceConnectorLoggingArgs build() {
+            $.voiceConnectorId = Objects.requireNonNull($.voiceConnectorId, "expected parameter 'voiceConnectorId' to be non-null");
+            return $;
         }
     }
+
 }

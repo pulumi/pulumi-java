@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dialogflow_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TestCaseResultArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TestConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class TestCaseArgs extends com.pulumi.resources.ResourceArgs {
     public static final TestCaseArgs Empty = new TestCaseArgs();
 
     @Import(name="agentId", required=true)
-      private final Output<String> agentId;
+    private Output<String> agentId;
 
     public Output<String> agentId() {
         return this.agentId;
@@ -31,7 +31,7 @@ public final class TestCaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -42,17 +42,17 @@ public final class TestCaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastTestResult")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult;
+    private @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult;
 
-    public Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult() {
-        return this.lastTestResult == null ? Codegen.empty() : this.lastTestResult;
+    public Optional<Output<GoogleCloudDialogflowCxV3TestCaseResultArgs>> lastTestResult() {
+        return Optional.ofNullable(this.lastTestResult);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class TestCaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,17 +71,17 @@ public final class TestCaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notes")
-      private final @Nullable Output<String> notes;
+    private @Nullable Output<String> notes;
 
-    public Output<String> notes() {
-        return this.notes == null ? Codegen.empty() : this.notes;
+    public Optional<Output<String>> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class TestCaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class TestCaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testCaseConversationTurns")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns;
 
-    public Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns() {
-        return this.testCaseConversationTurns == null ? Codegen.empty() : this.testCaseConversationTurns;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>>> testCaseConversationTurns() {
+        return Optional.ofNullable(this.testCaseConversationTurns);
     }
 
     /**
@@ -111,173 +111,148 @@ public final class TestCaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testConfig")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig;
+    private @Nullable Output<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig;
 
-    public Output<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig() {
-        return this.testConfig == null ? Codegen.empty() : this.testConfig;
+    public Optional<Output<GoogleCloudDialogflowCxV3TestConfigArgs>> testConfig() {
+        return Optional.ofNullable(this.testConfig);
     }
 
-    public TestCaseArgs(
-        Output<String> agentId,
-        Output<String> displayName,
-        @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> notes,
-        @Nullable Output<String> project,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns,
-        @Nullable Output<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.lastTestResult = lastTestResult;
-        this.location = location;
-        this.name = name;
-        this.notes = notes;
-        this.project = project;
-        this.tags = tags;
-        this.testCaseConversationTurns = testCaseConversationTurns;
-        this.testConfig = testConfig;
-    }
+    private TestCaseArgs() {}
 
-    private TestCaseArgs() {
-        this.agentId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.lastTestResult = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notes = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.testCaseConversationTurns = Codegen.empty();
-        this.testConfig = Codegen.empty();
+    private TestCaseArgs(TestCaseArgs $) {
+        this.agentId = $.agentId;
+        this.displayName = $.displayName;
+        this.lastTestResult = $.lastTestResult;
+        this.location = $.location;
+        this.name = $.name;
+        this.notes = $.notes;
+        this.project = $.project;
+        this.tags = $.tags;
+        this.testCaseConversationTurns = $.testCaseConversationTurns;
+        this.testConfig = $.testConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestCaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> agentId;
-        private Output<String> displayName;
-        private @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> notes;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns;
-        private @Nullable Output<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig;
+        private TestCaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestCaseArgs();
         }
 
         public Builder(TestCaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.displayName = defaults.displayName;
-    	      this.lastTestResult = defaults.lastTestResult;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.notes = defaults.notes;
-    	      this.project = defaults.project;
-    	      this.tags = defaults.tags;
-    	      this.testCaseConversationTurns = defaults.testCaseConversationTurns;
-    	      this.testConfig = defaults.testConfig;
+            $ = new TestCaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(Output<String> agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder agentId(String agentId) {
-            this.agentId = Output.of(Objects.requireNonNull(agentId));
-            return this;
+            return agentId(Output.of(agentId));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder lastTestResult(@Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult) {
-            this.lastTestResult = lastTestResult;
+            $.lastTestResult = lastTestResult;
             return this;
         }
-        public Builder lastTestResult(@Nullable GoogleCloudDialogflowCxV3TestCaseResultArgs lastTestResult) {
-            this.lastTestResult = Codegen.ofNullable(lastTestResult);
-            return this;
+
+        public Builder lastTestResult(GoogleCloudDialogflowCxV3TestCaseResultArgs lastTestResult) {
+            return lastTestResult(Output.of(lastTestResult));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notes(@Nullable Output<String> notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
-        public Builder notes(@Nullable String notes) {
-            this.notes = Codegen.ofNullable(notes);
-            return this;
+
+        public Builder notes(String notes) {
+            return notes(Output.of(notes));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder testCaseConversationTurns(@Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns) {
-            this.testCaseConversationTurns = testCaseConversationTurns;
+            $.testCaseConversationTurns = testCaseConversationTurns;
             return this;
         }
-        public Builder testCaseConversationTurns(@Nullable List<GoogleCloudDialogflowCxV3ConversationTurnArgs> testCaseConversationTurns) {
-            this.testCaseConversationTurns = Codegen.ofNullable(testCaseConversationTurns);
-            return this;
+
+        public Builder testCaseConversationTurns(List<GoogleCloudDialogflowCxV3ConversationTurnArgs> testCaseConversationTurns) {
+            return testCaseConversationTurns(Output.of(testCaseConversationTurns));
         }
+
         public Builder testCaseConversationTurns(GoogleCloudDialogflowCxV3ConversationTurnArgs... testCaseConversationTurns) {
             return testCaseConversationTurns(List.of(testCaseConversationTurns));
         }
+
         public Builder testConfig(@Nullable Output<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig) {
-            this.testConfig = testConfig;
+            $.testConfig = testConfig;
             return this;
         }
-        public Builder testConfig(@Nullable GoogleCloudDialogflowCxV3TestConfigArgs testConfig) {
-            this.testConfig = Codegen.ofNullable(testConfig);
-            return this;
-        }        public TestCaseArgs build() {
-            return new TestCaseArgs(agentId, displayName, lastTestResult, location, name, notes, project, tags, testCaseConversationTurns, testConfig);
+
+        public Builder testConfig(GoogleCloudDialogflowCxV3TestConfigArgs testConfig) {
+            return testConfig(Output.of(testConfig));
+        }
+
+        public TestCaseArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

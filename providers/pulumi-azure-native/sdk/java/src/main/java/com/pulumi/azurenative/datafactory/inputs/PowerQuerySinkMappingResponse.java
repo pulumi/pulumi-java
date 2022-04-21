@@ -25,10 +25,10 @@ public final class PowerQuerySinkMappingResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dataflowSinks")
-      private final @Nullable List<PowerQuerySinkResponse> dataflowSinks;
+    private @Nullable List<PowerQuerySinkResponse> dataflowSinks;
 
-    public List<PowerQuerySinkResponse> dataflowSinks() {
-        return this.dataflowSinks == null ? List.of() : this.dataflowSinks;
+    public Optional<List<PowerQuerySinkResponse>> dataflowSinks() {
+        return Optional.ofNullable(this.dataflowSinks);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class PowerQuerySinkMappingResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="queryName")
-      private final @Nullable String queryName;
+    private @Nullable String queryName;
 
     public Optional<String> queryName() {
-        return this.queryName == null ? Optional.empty() : Optional.ofNullable(this.queryName);
+        return Optional.ofNullable(this.queryName);
     }
 
-    public PowerQuerySinkMappingResponse(
-        @Nullable List<PowerQuerySinkResponse> dataflowSinks,
-        @Nullable String queryName) {
-        this.dataflowSinks = dataflowSinks;
-        this.queryName = queryName;
-    }
+    private PowerQuerySinkMappingResponse() {}
 
-    private PowerQuerySinkMappingResponse() {
-        this.dataflowSinks = List.of();
-        this.queryName = null;
+    private PowerQuerySinkMappingResponse(PowerQuerySinkMappingResponse $) {
+        this.dataflowSinks = $.dataflowSinks;
+        this.queryName = $.queryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PowerQuerySinkMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<PowerQuerySinkResponse> dataflowSinks;
-        private @Nullable String queryName;
+        private PowerQuerySinkMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PowerQuerySinkMappingResponse();
         }
 
         public Builder(PowerQuerySinkMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataflowSinks = defaults.dataflowSinks;
-    	      this.queryName = defaults.queryName;
+            $ = new PowerQuerySinkMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataflowSinks(@Nullable List<PowerQuerySinkResponse> dataflowSinks) {
-            this.dataflowSinks = dataflowSinks;
+            $.dataflowSinks = dataflowSinks;
             return this;
         }
+
         public Builder dataflowSinks(PowerQuerySinkResponse... dataflowSinks) {
             return dataflowSinks(List.of(dataflowSinks));
         }
+
         public Builder queryName(@Nullable String queryName) {
-            this.queryName = queryName;
+            $.queryName = queryName;
             return this;
-        }        public PowerQuerySinkMappingResponse build() {
-            return new PowerQuerySinkMappingResponse(dataflowSinks, queryName);
+        }
+
+        public PowerQuerySinkMappingResponse build() {
+            return $;
         }
     }
+
 }

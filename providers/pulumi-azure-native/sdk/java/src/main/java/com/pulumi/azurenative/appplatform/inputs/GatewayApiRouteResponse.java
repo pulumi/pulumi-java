@@ -26,10 +26,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<String> filters;
+    private @Nullable List<String> filters;
 
-    public List<String> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<String>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="order")
-      private final @Nullable Integer order;
+    private @Nullable Integer order;
 
     public Optional<Integer> order() {
-        return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
+        return Optional.ofNullable(this.order);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="predicates")
-      private final @Nullable List<String> predicates;
+    private @Nullable List<String> predicates;
 
-    public List<String> predicates() {
-        return this.predicates == null ? List.of() : this.predicates;
+    public Optional<List<String>> predicates() {
+        return Optional.ofNullable(this.predicates);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ssoEnabled")
-      private final @Nullable Boolean ssoEnabled;
+    private @Nullable Boolean ssoEnabled;
 
     public Optional<Boolean> ssoEnabled() {
-        return this.ssoEnabled == null ? Optional.empty() : Optional.ofNullable(this.ssoEnabled);
+        return Optional.ofNullable(this.ssoEnabled);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable List<String> tags;
+    private @Nullable List<String> tags;
 
-    public List<String> tags() {
-        return this.tags == null ? List.of() : this.tags;
+    public Optional<List<String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tokenRelay")
-      private final @Nullable Boolean tokenRelay;
+    private @Nullable Boolean tokenRelay;
 
     public Optional<Boolean> tokenRelay() {
-        return this.tokenRelay == null ? Optional.empty() : Optional.ofNullable(this.tokenRelay);
+        return Optional.ofNullable(this.tokenRelay);
     }
 
     /**
@@ -114,127 +114,104 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public GatewayApiRouteResponse(
-        @Nullable String description,
-        @Nullable List<String> filters,
-        @Nullable Integer order,
-        @Nullable List<String> predicates,
-        @Nullable Boolean ssoEnabled,
-        @Nullable List<String> tags,
-        @Nullable String title,
-        @Nullable Boolean tokenRelay,
-        @Nullable String uri) {
-        this.description = description;
-        this.filters = filters;
-        this.order = order;
-        this.predicates = predicates;
-        this.ssoEnabled = ssoEnabled;
-        this.tags = tags;
-        this.title = title;
-        this.tokenRelay = tokenRelay;
-        this.uri = uri;
-    }
+    private GatewayApiRouteResponse() {}
 
-    private GatewayApiRouteResponse() {
-        this.description = null;
-        this.filters = List.of();
-        this.order = null;
-        this.predicates = List.of();
-        this.ssoEnabled = null;
-        this.tags = List.of();
-        this.title = null;
-        this.tokenRelay = null;
-        this.uri = null;
+    private GatewayApiRouteResponse(GatewayApiRouteResponse $) {
+        this.description = $.description;
+        this.filters = $.filters;
+        this.order = $.order;
+        this.predicates = $.predicates;
+        this.ssoEnabled = $.ssoEnabled;
+        this.tags = $.tags;
+        this.title = $.title;
+        this.tokenRelay = $.tokenRelay;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayApiRouteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable List<String> filters;
-        private @Nullable Integer order;
-        private @Nullable List<String> predicates;
-        private @Nullable Boolean ssoEnabled;
-        private @Nullable List<String> tags;
-        private @Nullable String title;
-        private @Nullable Boolean tokenRelay;
-        private @Nullable String uri;
+        private GatewayApiRouteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayApiRouteResponse();
         }
 
         public Builder(GatewayApiRouteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.filters = defaults.filters;
-    	      this.order = defaults.order;
-    	      this.predicates = defaults.predicates;
-    	      this.ssoEnabled = defaults.ssoEnabled;
-    	      this.tags = defaults.tags;
-    	      this.title = defaults.title;
-    	      this.tokenRelay = defaults.tokenRelay;
-    	      this.uri = defaults.uri;
+            $ = new GatewayApiRouteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder filters(@Nullable List<String> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(String... filters) {
             return filters(List.of(filters));
         }
+
         public Builder order(@Nullable Integer order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
+
         public Builder predicates(@Nullable List<String> predicates) {
-            this.predicates = predicates;
+            $.predicates = predicates;
             return this;
         }
+
         public Builder predicates(String... predicates) {
             return predicates(List.of(predicates));
         }
+
         public Builder ssoEnabled(@Nullable Boolean ssoEnabled) {
-            this.ssoEnabled = ssoEnabled;
+            $.ssoEnabled = ssoEnabled;
             return this;
         }
+
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
+
         public Builder tokenRelay(@Nullable Boolean tokenRelay) {
-            this.tokenRelay = tokenRelay;
+            $.tokenRelay = tokenRelay;
             return this;
         }
+
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public GatewayApiRouteResponse build() {
-            return new GatewayApiRouteResponse(description, filters, order, predicates, ssoEnabled, tags, title, tokenRelay, uri);
+        }
+
+        public GatewayApiRouteResponse build() {
+            return $;
         }
     }
+
 }

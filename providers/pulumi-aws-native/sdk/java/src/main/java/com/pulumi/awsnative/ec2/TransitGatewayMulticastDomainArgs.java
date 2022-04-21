@@ -7,10 +7,10 @@ import com.pulumi.awsnative.ec2.inputs.OptionsPropertiesArgs;
 import com.pulumi.awsnative.ec2.inputs.TransitGatewayMulticastDomainTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TransitGatewayMulticastDomainArgs extends com.pulumi.resource
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<OptionsPropertiesArgs> options;
+    private @Nullable Output<OptionsPropertiesArgs> options;
 
-    public Output<OptionsPropertiesArgs> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<OptionsPropertiesArgs>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TransitGatewayMulticastDomainArgs extends com.pulumi.resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags;
+    private @Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags;
 
-    public Output<List<TransitGatewayMulticastDomainTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TransitGatewayMulticastDomainTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -45,79 +45,73 @@ public final class TransitGatewayMulticastDomainArgs extends com.pulumi.resource
      * 
      */
     @Import(name="transitGatewayId", required=true)
-      private final Output<String> transitGatewayId;
+    private Output<String> transitGatewayId;
 
     public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 
-    public TransitGatewayMulticastDomainArgs(
-        @Nullable Output<OptionsPropertiesArgs> options,
-        @Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags,
-        Output<String> transitGatewayId) {
-        this.options = options;
-        this.tags = tags;
-        this.transitGatewayId = Objects.requireNonNull(transitGatewayId, "expected parameter 'transitGatewayId' to be non-null");
-    }
+    private TransitGatewayMulticastDomainArgs() {}
 
-    private TransitGatewayMulticastDomainArgs() {
-        this.options = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transitGatewayId = Codegen.empty();
+    private TransitGatewayMulticastDomainArgs(TransitGatewayMulticastDomainArgs $) {
+        this.options = $.options;
+        this.tags = $.tags;
+        this.transitGatewayId = $.transitGatewayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayMulticastDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OptionsPropertiesArgs> options;
-        private @Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags;
-        private Output<String> transitGatewayId;
+        private TransitGatewayMulticastDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayMulticastDomainArgs();
         }
 
         public Builder(TransitGatewayMulticastDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.options = defaults.options;
-    	      this.tags = defaults.tags;
-    	      this.transitGatewayId = defaults.transitGatewayId;
+            $ = new TransitGatewayMulticastDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder options(@Nullable Output<OptionsPropertiesArgs> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable OptionsPropertiesArgs options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(OptionsPropertiesArgs options) {
+            return options(Output.of(options));
         }
+
         public Builder tags(@Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TransitGatewayMulticastDomainTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TransitGatewayMulticastDomainTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TransitGatewayMulticastDomainTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder transitGatewayId(Output<String> transitGatewayId) {
-            this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
+
         public Builder transitGatewayId(String transitGatewayId) {
-            this.transitGatewayId = Output.of(Objects.requireNonNull(transitGatewayId));
-            return this;
-        }        public TransitGatewayMulticastDomainArgs build() {
-            return new TransitGatewayMulticastDomainArgs(options, tags, transitGatewayId);
+            return transitGatewayId(Output.of(transitGatewayId));
+        }
+
+        public TransitGatewayMulticastDomainArgs build() {
+            $.transitGatewayId = Objects.requireNonNull($.transitGatewayId, "expected parameter 'transitGatewayId' to be non-null");
+            return $;
         }
     }
+
 }

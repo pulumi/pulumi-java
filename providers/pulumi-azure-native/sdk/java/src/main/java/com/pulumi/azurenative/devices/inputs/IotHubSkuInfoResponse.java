@@ -24,10 +24,10 @@ public final class IotHubSkuInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Double capacity;
+    private @Nullable Double capacity;
 
     public Optional<Double> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class IotHubSkuInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -46,64 +46,58 @@ public final class IotHubSkuInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tier", required=true)
-      private final String tier;
+    private String tier;
 
     public String tier() {
         return this.tier;
     }
 
-    public IotHubSkuInfoResponse(
-        @Nullable Double capacity,
-        String name,
-        String tier) {
-        this.capacity = capacity;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private IotHubSkuInfoResponse() {}
 
-    private IotHubSkuInfoResponse() {
-        this.capacity = null;
-        this.name = null;
-        this.tier = null;
+    private IotHubSkuInfoResponse(IotHubSkuInfoResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotHubSkuInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double capacity;
-        private String name;
-        private String tier;
+        private IotHubSkuInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotHubSkuInfoResponse();
         }
 
         public Builder(IotHubSkuInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new IotHubSkuInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Double capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
-        }        public IotHubSkuInfoResponse build() {
-            return new IotHubSkuInfoResponse(capacity, name, tier);
+        }
+
+        public IotHubSkuInfoResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

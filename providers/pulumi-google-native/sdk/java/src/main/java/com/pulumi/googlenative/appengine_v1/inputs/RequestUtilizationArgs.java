@@ -5,9 +5,9 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RequestUtilizationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetConcurrentRequests")
-      private final @Nullable Output<Integer> targetConcurrentRequests;
+    private @Nullable Output<Integer> targetConcurrentRequests;
 
-    public Output<Integer> targetConcurrentRequests() {
-        return this.targetConcurrentRequests == null ? Codegen.empty() : this.targetConcurrentRequests;
+    public Optional<Output<Integer>> targetConcurrentRequests() {
+        return Optional.ofNullable(this.targetConcurrentRequests);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class RequestUtilizationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetRequestCountPerSecond")
-      private final @Nullable Output<Integer> targetRequestCountPerSecond;
+    private @Nullable Output<Integer> targetRequestCountPerSecond;
 
-    public Output<Integer> targetRequestCountPerSecond() {
-        return this.targetRequestCountPerSecond == null ? Codegen.empty() : this.targetRequestCountPerSecond;
+    public Optional<Output<Integer>> targetRequestCountPerSecond() {
+        return Optional.ofNullable(this.targetRequestCountPerSecond);
     }
 
-    public RequestUtilizationArgs(
-        @Nullable Output<Integer> targetConcurrentRequests,
-        @Nullable Output<Integer> targetRequestCountPerSecond) {
-        this.targetConcurrentRequests = targetConcurrentRequests;
-        this.targetRequestCountPerSecond = targetRequestCountPerSecond;
-    }
+    private RequestUtilizationArgs() {}
 
-    private RequestUtilizationArgs() {
-        this.targetConcurrentRequests = Codegen.empty();
-        this.targetRequestCountPerSecond = Codegen.empty();
+    private RequestUtilizationArgs(RequestUtilizationArgs $) {
+        this.targetConcurrentRequests = $.targetConcurrentRequests;
+        this.targetRequestCountPerSecond = $.targetRequestCountPerSecond;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestUtilizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> targetConcurrentRequests;
-        private @Nullable Output<Integer> targetRequestCountPerSecond;
+        private RequestUtilizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestUtilizationArgs();
         }
 
         public Builder(RequestUtilizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetConcurrentRequests = defaults.targetConcurrentRequests;
-    	      this.targetRequestCountPerSecond = defaults.targetRequestCountPerSecond;
+            $ = new RequestUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetConcurrentRequests(@Nullable Output<Integer> targetConcurrentRequests) {
-            this.targetConcurrentRequests = targetConcurrentRequests;
+            $.targetConcurrentRequests = targetConcurrentRequests;
             return this;
         }
-        public Builder targetConcurrentRequests(@Nullable Integer targetConcurrentRequests) {
-            this.targetConcurrentRequests = Codegen.ofNullable(targetConcurrentRequests);
-            return this;
+
+        public Builder targetConcurrentRequests(Integer targetConcurrentRequests) {
+            return targetConcurrentRequests(Output.of(targetConcurrentRequests));
         }
+
         public Builder targetRequestCountPerSecond(@Nullable Output<Integer> targetRequestCountPerSecond) {
-            this.targetRequestCountPerSecond = targetRequestCountPerSecond;
+            $.targetRequestCountPerSecond = targetRequestCountPerSecond;
             return this;
         }
-        public Builder targetRequestCountPerSecond(@Nullable Integer targetRequestCountPerSecond) {
-            this.targetRequestCountPerSecond = Codegen.ofNullable(targetRequestCountPerSecond);
-            return this;
-        }        public RequestUtilizationArgs build() {
-            return new RequestUtilizationArgs(targetConcurrentRequests, targetRequestCountPerSecond);
+
+        public Builder targetRequestCountPerSecond(Integer targetRequestCountPerSecond) {
+            return targetRequestCountPerSecond(Output.of(targetRequestCountPerSecond));
+        }
+
+        public RequestUtilizationArgs build() {
+            return $;
         }
     }
+
 }

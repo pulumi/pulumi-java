@@ -5,10 +5,10 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,83 @@ public final class IntegrationSalesforceSourcePropertiesArgs extends com.pulumi.
     public static final IntegrationSalesforceSourcePropertiesArgs Empty = new IntegrationSalesforceSourcePropertiesArgs();
 
     @Import(name="enableDynamicFieldUpdate")
-      private final @Nullable Output<Boolean> enableDynamicFieldUpdate;
+    private @Nullable Output<Boolean> enableDynamicFieldUpdate;
 
-    public Output<Boolean> enableDynamicFieldUpdate() {
-        return this.enableDynamicFieldUpdate == null ? Codegen.empty() : this.enableDynamicFieldUpdate;
+    public Optional<Output<Boolean>> enableDynamicFieldUpdate() {
+        return Optional.ofNullable(this.enableDynamicFieldUpdate);
     }
 
     @Import(name="includeDeletedRecords")
-      private final @Nullable Output<Boolean> includeDeletedRecords;
+    private @Nullable Output<Boolean> includeDeletedRecords;
 
-    public Output<Boolean> includeDeletedRecords() {
-        return this.includeDeletedRecords == null ? Codegen.empty() : this.includeDeletedRecords;
+    public Optional<Output<Boolean>> includeDeletedRecords() {
+        return Optional.ofNullable(this.includeDeletedRecords);
     }
 
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
     }
 
-    public IntegrationSalesforceSourcePropertiesArgs(
-        @Nullable Output<Boolean> enableDynamicFieldUpdate,
-        @Nullable Output<Boolean> includeDeletedRecords,
-        Output<String> object) {
-        this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
-        this.includeDeletedRecords = includeDeletedRecords;
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private IntegrationSalesforceSourcePropertiesArgs() {}
 
-    private IntegrationSalesforceSourcePropertiesArgs() {
-        this.enableDynamicFieldUpdate = Codegen.empty();
-        this.includeDeletedRecords = Codegen.empty();
-        this.object = Codegen.empty();
+    private IntegrationSalesforceSourcePropertiesArgs(IntegrationSalesforceSourcePropertiesArgs $) {
+        this.enableDynamicFieldUpdate = $.enableDynamicFieldUpdate;
+        this.includeDeletedRecords = $.includeDeletedRecords;
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationSalesforceSourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableDynamicFieldUpdate;
-        private @Nullable Output<Boolean> includeDeletedRecords;
-        private Output<String> object;
+        private IntegrationSalesforceSourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationSalesforceSourcePropertiesArgs();
         }
 
         public Builder(IntegrationSalesforceSourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableDynamicFieldUpdate = defaults.enableDynamicFieldUpdate;
-    	      this.includeDeletedRecords = defaults.includeDeletedRecords;
-    	      this.object = defaults.object;
+            $ = new IntegrationSalesforceSourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableDynamicFieldUpdate(@Nullable Output<Boolean> enableDynamicFieldUpdate) {
-            this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
+            $.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
             return this;
         }
-        public Builder enableDynamicFieldUpdate(@Nullable Boolean enableDynamicFieldUpdate) {
-            this.enableDynamicFieldUpdate = Codegen.ofNullable(enableDynamicFieldUpdate);
-            return this;
+
+        public Builder enableDynamicFieldUpdate(Boolean enableDynamicFieldUpdate) {
+            return enableDynamicFieldUpdate(Output.of(enableDynamicFieldUpdate));
         }
+
         public Builder includeDeletedRecords(@Nullable Output<Boolean> includeDeletedRecords) {
-            this.includeDeletedRecords = includeDeletedRecords;
+            $.includeDeletedRecords = includeDeletedRecords;
             return this;
         }
-        public Builder includeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
-            this.includeDeletedRecords = Codegen.ofNullable(includeDeletedRecords);
-            return this;
+
+        public Builder includeDeletedRecords(Boolean includeDeletedRecords) {
+            return includeDeletedRecords(Output.of(includeDeletedRecords));
         }
+
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
-        }        public IntegrationSalesforceSourcePropertiesArgs build() {
-            return new IntegrationSalesforceSourcePropertiesArgs(enableDynamicFieldUpdate, includeDeletedRecords, object);
+            return object(Output.of(object));
+        }
+
+        public IntegrationSalesforceSourcePropertiesArgs build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

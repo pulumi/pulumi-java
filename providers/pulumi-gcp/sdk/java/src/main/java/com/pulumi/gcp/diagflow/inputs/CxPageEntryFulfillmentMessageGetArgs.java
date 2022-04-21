@@ -5,9 +5,9 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentMessageTextGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CxPageEntryFulfillmentMessageGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text;
+    private @Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text;
 
-    public Output<CxPageEntryFulfillmentMessageTextGetArgs> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<CxPageEntryFulfillmentMessageTextGetArgs>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public CxPageEntryFulfillmentMessageGetArgs(@Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text) {
-        this.text = text;
-    }
+    private CxPageEntryFulfillmentMessageGetArgs() {}
 
-    private CxPageEntryFulfillmentMessageGetArgs() {
-        this.text = Codegen.empty();
+    private CxPageEntryFulfillmentMessageGetArgs(CxPageEntryFulfillmentMessageGetArgs $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxPageEntryFulfillmentMessageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text;
+        private CxPageEntryFulfillmentMessageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxPageEntryFulfillmentMessageGetArgs();
         }
 
         public Builder(CxPageEntryFulfillmentMessageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new CxPageEntryFulfillmentMessageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder text(@Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable CxPageEntryFulfillmentMessageTextGetArgs text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
-        }        public CxPageEntryFulfillmentMessageGetArgs build() {
-            return new CxPageEntryFulfillmentMessageGetArgs(text);
+
+        public Builder text(CxPageEntryFulfillmentMessageTextGetArgs text) {
+            return text(Output.of(text));
+        }
+
+        public CxPageEntryFulfillmentMessageGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class VirtualMachinePatchStatusResponse extends com.pulumi.resource
      * 
      */
     @Import(name="availablePatchSummary")
-      private final @Nullable AvailablePatchSummaryResponse availablePatchSummary;
+    private @Nullable AvailablePatchSummaryResponse availablePatchSummary;
 
     public Optional<AvailablePatchSummaryResponse> availablePatchSummary() {
-        return this.availablePatchSummary == null ? Optional.empty() : Optional.ofNullable(this.availablePatchSummary);
+        return Optional.ofNullable(this.availablePatchSummary);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class VirtualMachinePatchStatusResponse extends com.pulumi.resource
      * 
      */
     @Import(name="configurationStatuses", required=true)
-      private final List<InstanceViewStatusResponse> configurationStatuses;
+    private List<InstanceViewStatusResponse> configurationStatuses;
 
     public List<InstanceViewStatusResponse> configurationStatuses() {
         return this.configurationStatuses;
@@ -48,67 +48,61 @@ public final class VirtualMachinePatchStatusResponse extends com.pulumi.resource
      * 
      */
     @Import(name="lastPatchInstallationSummary")
-      private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
+    private @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 
     public Optional<LastPatchInstallationSummaryResponse> lastPatchInstallationSummary() {
-        return this.lastPatchInstallationSummary == null ? Optional.empty() : Optional.ofNullable(this.lastPatchInstallationSummary);
+        return Optional.ofNullable(this.lastPatchInstallationSummary);
     }
 
-    public VirtualMachinePatchStatusResponse(
-        @Nullable AvailablePatchSummaryResponse availablePatchSummary,
-        List<InstanceViewStatusResponse> configurationStatuses,
-        @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
-        this.availablePatchSummary = availablePatchSummary;
-        this.configurationStatuses = Objects.requireNonNull(configurationStatuses, "expected parameter 'configurationStatuses' to be non-null");
-        this.lastPatchInstallationSummary = lastPatchInstallationSummary;
-    }
+    private VirtualMachinePatchStatusResponse() {}
 
-    private VirtualMachinePatchStatusResponse() {
-        this.availablePatchSummary = null;
-        this.configurationStatuses = List.of();
-        this.lastPatchInstallationSummary = null;
+    private VirtualMachinePatchStatusResponse(VirtualMachinePatchStatusResponse $) {
+        this.availablePatchSummary = $.availablePatchSummary;
+        this.configurationStatuses = $.configurationStatuses;
+        this.lastPatchInstallationSummary = $.lastPatchInstallationSummary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachinePatchStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AvailablePatchSummaryResponse availablePatchSummary;
-        private List<InstanceViewStatusResponse> configurationStatuses;
-        private @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
+        private VirtualMachinePatchStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachinePatchStatusResponse();
         }
 
         public Builder(VirtualMachinePatchStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availablePatchSummary = defaults.availablePatchSummary;
-    	      this.configurationStatuses = defaults.configurationStatuses;
-    	      this.lastPatchInstallationSummary = defaults.lastPatchInstallationSummary;
+            $ = new VirtualMachinePatchStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availablePatchSummary(@Nullable AvailablePatchSummaryResponse availablePatchSummary) {
-            this.availablePatchSummary = availablePatchSummary;
+            $.availablePatchSummary = availablePatchSummary;
             return this;
         }
+
         public Builder configurationStatuses(List<InstanceViewStatusResponse> configurationStatuses) {
-            this.configurationStatuses = Objects.requireNonNull(configurationStatuses);
+            $.configurationStatuses = configurationStatuses;
             return this;
         }
+
         public Builder configurationStatuses(InstanceViewStatusResponse... configurationStatuses) {
             return configurationStatuses(List.of(configurationStatuses));
         }
+
         public Builder lastPatchInstallationSummary(@Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
-            this.lastPatchInstallationSummary = lastPatchInstallationSummary;
+            $.lastPatchInstallationSummary = lastPatchInstallationSummary;
             return this;
-        }        public VirtualMachinePatchStatusResponse build() {
-            return new VirtualMachinePatchStatusResponse(availablePatchSummary, configurationStatuses, lastPatchInstallationSummary);
+        }
+
+        public VirtualMachinePatchStatusResponse build() {
+            $.configurationStatuses = Objects.requireNonNull($.configurationStatuses, "expected parameter 'configurationStatuses' to be non-null");
+            return $;
         }
     }
+
 }

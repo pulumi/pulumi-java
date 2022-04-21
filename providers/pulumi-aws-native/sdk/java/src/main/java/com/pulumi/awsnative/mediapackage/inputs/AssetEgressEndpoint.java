@@ -21,7 +21,7 @@ public final class AssetEgressEndpoint extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="packagingConfigurationId", required=true)
-      private final String packagingConfigurationId;
+    private String packagingConfigurationId;
 
     public String packagingConfigurationId() {
         return this.packagingConfigurationId;
@@ -32,55 +32,52 @@ public final class AssetEgressEndpoint extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public AssetEgressEndpoint(
-        String packagingConfigurationId,
-        String url) {
-        this.packagingConfigurationId = Objects.requireNonNull(packagingConfigurationId, "expected parameter 'packagingConfigurationId' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private AssetEgressEndpoint() {}
 
-    private AssetEgressEndpoint() {
-        this.packagingConfigurationId = null;
-        this.url = null;
+    private AssetEgressEndpoint(AssetEgressEndpoint $) {
+        this.packagingConfigurationId = $.packagingConfigurationId;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetEgressEndpoint defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String packagingConfigurationId;
-        private String url;
+        private AssetEgressEndpoint $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetEgressEndpoint();
         }
 
         public Builder(AssetEgressEndpoint defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packagingConfigurationId = defaults.packagingConfigurationId;
-    	      this.url = defaults.url;
+            $ = new AssetEgressEndpoint(Objects.requireNonNull(defaults));
         }
 
         public Builder packagingConfigurationId(String packagingConfigurationId) {
-            this.packagingConfigurationId = Objects.requireNonNull(packagingConfigurationId);
+            $.packagingConfigurationId = packagingConfigurationId;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public AssetEgressEndpoint build() {
-            return new AssetEgressEndpoint(packagingConfigurationId, url);
+        }
+
+        public AssetEgressEndpoint build() {
+            $.packagingConfigurationId = Objects.requireNonNull($.packagingConfigurationId, "expected parameter 'packagingConfigurationId' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

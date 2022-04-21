@@ -30,10 +30,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="continueOnStepFailure")
-      private final @Nullable Object continueOnStepFailure;
+    private @Nullable Object continueOnStepFailure;
 
     public Optional<Object> continueOnStepFailure() {
-        return this.continueOnStepFailure == null ? Optional.empty() : Optional.ofNullable(this.continueOnStepFailure);
+        return Optional.ofNullable(this.continueOnStepFailure);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="dataPathAssignments")
-      private final @Nullable Object dataPathAssignments;
+    private @Nullable Object dataPathAssignments;
 
     public Optional<Object> dataPathAssignments() {
-        return this.dataPathAssignments == null ? Optional.empty() : Optional.ofNullable(this.dataPathAssignments);
+        return Optional.ofNullable(this.dataPathAssignments);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="experimentName")
-      private final @Nullable Object experimentName;
+    private @Nullable Object experimentName;
 
     public Optional<Object> experimentName() {
-        return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
+        return Optional.ofNullable(this.experimentName);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="mlParentRunId")
-      private final @Nullable Object mlParentRunId;
+    private @Nullable Object mlParentRunId;
 
     public Optional<Object> mlParentRunId() {
-        return this.mlParentRunId == null ? Optional.empty() : Optional.ofNullable(this.mlParentRunId);
+        return Optional.ofNullable(this.mlParentRunId);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="mlPipelineEndpointId")
-      private final @Nullable Object mlPipelineEndpointId;
+    private @Nullable Object mlPipelineEndpointId;
 
     public Optional<Object> mlPipelineEndpointId() {
-        return this.mlPipelineEndpointId == null ? Optional.empty() : Optional.ofNullable(this.mlPipelineEndpointId);
+        return Optional.ofNullable(this.mlPipelineEndpointId);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="mlPipelineId")
-      private final @Nullable Object mlPipelineId;
+    private @Nullable Object mlPipelineId;
 
     public Optional<Object> mlPipelineId() {
-        return this.mlPipelineId == null ? Optional.empty() : Optional.ofNullable(this.mlPipelineId);
+        return Optional.ofNullable(this.mlPipelineId);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="mlPipelineParameters")
-      private final @Nullable Object mlPipelineParameters;
+    private @Nullable Object mlPipelineParameters;
 
     public Optional<Object> mlPipelineParameters() {
-        return this.mlPipelineParameters == null ? Optional.empty() : Optional.ofNullable(this.mlPipelineParameters);
+        return Optional.ofNullable(this.mlPipelineParameters);
     }
 
     /**
@@ -140,7 +140,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -151,10 +151,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -163,7 +163,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -174,10 +174,10 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
     /**
@@ -185,178 +185,138 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
      * 
      */
     @Import(name="version")
-      private final @Nullable Object version;
+    private @Nullable Object version;
 
     public Optional<Object> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public AzureMLExecutePipelineActivityResponse(
-        @Nullable Object continueOnStepFailure,
-        @Nullable Object dataPathAssignments,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object experimentName,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object mlParentRunId,
-        @Nullable Object mlPipelineEndpointId,
-        @Nullable Object mlPipelineId,
-        @Nullable Object mlPipelineParameters,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable Object version) {
-        this.continueOnStepFailure = continueOnStepFailure;
-        this.dataPathAssignments = dataPathAssignments;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.experimentName = experimentName;
-        this.linkedServiceName = linkedServiceName;
-        this.mlParentRunId = mlParentRunId;
-        this.mlPipelineEndpointId = mlPipelineEndpointId;
-        this.mlPipelineId = mlPipelineId;
-        this.mlPipelineParameters = mlPipelineParameters;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-        this.version = version;
-    }
+    private AzureMLExecutePipelineActivityResponse() {}
 
-    private AzureMLExecutePipelineActivityResponse() {
-        this.continueOnStepFailure = null;
-        this.dataPathAssignments = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.experimentName = null;
-        this.linkedServiceName = null;
-        this.mlParentRunId = null;
-        this.mlPipelineEndpointId = null;
-        this.mlPipelineId = null;
-        this.mlPipelineParameters = null;
-        this.name = null;
-        this.policy = null;
-        this.type = null;
-        this.userProperties = List.of();
-        this.version = null;
+    private AzureMLExecutePipelineActivityResponse(AzureMLExecutePipelineActivityResponse $) {
+        this.continueOnStepFailure = $.continueOnStepFailure;
+        this.dataPathAssignments = $.dataPathAssignments;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.experimentName = $.experimentName;
+        this.linkedServiceName = $.linkedServiceName;
+        this.mlParentRunId = $.mlParentRunId;
+        this.mlPipelineEndpointId = $.mlPipelineEndpointId;
+        this.mlPipelineId = $.mlPipelineId;
+        this.mlPipelineParameters = $.mlPipelineParameters;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMLExecutePipelineActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object continueOnStepFailure;
-        private @Nullable Object dataPathAssignments;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable Object experimentName;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Object mlParentRunId;
-        private @Nullable Object mlPipelineEndpointId;
-        private @Nullable Object mlPipelineId;
-        private @Nullable Object mlPipelineParameters;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
-        private @Nullable Object version;
+        private AzureMLExecutePipelineActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMLExecutePipelineActivityResponse();
         }
 
         public Builder(AzureMLExecutePipelineActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.continueOnStepFailure = defaults.continueOnStepFailure;
-    	      this.dataPathAssignments = defaults.dataPathAssignments;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.experimentName = defaults.experimentName;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.mlParentRunId = defaults.mlParentRunId;
-    	      this.mlPipelineEndpointId = defaults.mlPipelineEndpointId;
-    	      this.mlPipelineId = defaults.mlPipelineId;
-    	      this.mlPipelineParameters = defaults.mlPipelineParameters;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
-    	      this.version = defaults.version;
+            $ = new AzureMLExecutePipelineActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder continueOnStepFailure(@Nullable Object continueOnStepFailure) {
-            this.continueOnStepFailure = continueOnStepFailure;
+            $.continueOnStepFailure = continueOnStepFailure;
             return this;
         }
+
         public Builder dataPathAssignments(@Nullable Object dataPathAssignments) {
-            this.dataPathAssignments = dataPathAssignments;
+            $.dataPathAssignments = dataPathAssignments;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder experimentName(@Nullable Object experimentName) {
-            this.experimentName = experimentName;
+            $.experimentName = experimentName;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder mlParentRunId(@Nullable Object mlParentRunId) {
-            this.mlParentRunId = mlParentRunId;
+            $.mlParentRunId = mlParentRunId;
             return this;
         }
+
         public Builder mlPipelineEndpointId(@Nullable Object mlPipelineEndpointId) {
-            this.mlPipelineEndpointId = mlPipelineEndpointId;
+            $.mlPipelineEndpointId = mlPipelineEndpointId;
             return this;
         }
+
         public Builder mlPipelineId(@Nullable Object mlPipelineId) {
-            this.mlPipelineId = mlPipelineId;
+            $.mlPipelineId = mlPipelineId;
             return this;
         }
+
         public Builder mlPipelineParameters(@Nullable Object mlPipelineParameters) {
-            this.mlPipelineParameters = mlPipelineParameters;
+            $.mlPipelineParameters = mlPipelineParameters;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
+
         public Builder version(@Nullable Object version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public AzureMLExecutePipelineActivityResponse build() {
-            return new AzureMLExecutePipelineActivityResponse(continueOnStepFailure, dataPathAssignments, dependsOn, description, experimentName, linkedServiceName, mlParentRunId, mlPipelineEndpointId, mlPipelineId, mlPipelineParameters, name, policy, type, userProperties, version);
+        }
+
+        public AzureMLExecutePipelineActivityResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

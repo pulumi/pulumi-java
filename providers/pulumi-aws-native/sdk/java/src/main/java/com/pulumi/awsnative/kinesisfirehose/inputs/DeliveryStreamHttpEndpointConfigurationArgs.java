@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,83 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends com.pulum
     public static final DeliveryStreamHttpEndpointConfigurationArgs Empty = new DeliveryStreamHttpEndpointConfigurationArgs();
 
     @Import(name="accessKey")
-      private final @Nullable Output<String> accessKey;
+    private @Nullable Output<String> accessKey;
 
-    public Output<String> accessKey() {
-        return this.accessKey == null ? Codegen.empty() : this.accessKey;
+    public Optional<Output<String>> accessKey() {
+        return Optional.ofNullable(this.accessKey);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public DeliveryStreamHttpEndpointConfigurationArgs(
-        @Nullable Output<String> accessKey,
-        @Nullable Output<String> name,
-        Output<String> url) {
-        this.accessKey = accessKey;
-        this.name = name;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private DeliveryStreamHttpEndpointConfigurationArgs() {}
 
-    private DeliveryStreamHttpEndpointConfigurationArgs() {
-        this.accessKey = Codegen.empty();
-        this.name = Codegen.empty();
-        this.url = Codegen.empty();
+    private DeliveryStreamHttpEndpointConfigurationArgs(DeliveryStreamHttpEndpointConfigurationArgs $) {
+        this.accessKey = $.accessKey;
+        this.name = $.name;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamHttpEndpointConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessKey;
-        private @Nullable Output<String> name;
-        private Output<String> url;
+        private DeliveryStreamHttpEndpointConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamHttpEndpointConfigurationArgs();
         }
 
         public Builder(DeliveryStreamHttpEndpointConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.name = defaults.name;
-    	      this.url = defaults.url;
+            $ = new DeliveryStreamHttpEndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(@Nullable Output<String> accessKey) {
-            this.accessKey = accessKey;
+            $.accessKey = accessKey;
             return this;
         }
-        public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = Codegen.ofNullable(accessKey);
-            return this;
+
+        public Builder accessKey(String accessKey) {
+            return accessKey(Output.of(accessKey));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public DeliveryStreamHttpEndpointConfigurationArgs build() {
-            return new DeliveryStreamHttpEndpointConfigurationArgs(accessKey, name, url);
+            return url(Output.of(url));
+        }
+
+        public DeliveryStreamHttpEndpointConfigurationArgs build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

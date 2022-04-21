@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="names", required=true)
-      private final Output<List<String>> names;
+    private Output<List<String>> names;
 
     public Output<List<String>> names() {
         return this.names;
@@ -37,66 +37,63 @@ public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sizeBytes")
-      private final @Nullable Output<Integer> sizeBytes;
+    private @Nullable Output<Integer> sizeBytes;
 
-    public Output<Integer> sizeBytes() {
-        return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
+    public Optional<Output<Integer>> sizeBytes() {
+        return Optional.ofNullable(this.sizeBytes);
     }
 
-    public ContainerImageArgs(
-        Output<List<String>> names,
-        @Nullable Output<Integer> sizeBytes) {
-        this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
-        this.sizeBytes = sizeBytes;
-    }
+    private ContainerImageArgs() {}
 
-    private ContainerImageArgs() {
-        this.names = Codegen.empty();
-        this.sizeBytes = Codegen.empty();
+    private ContainerImageArgs(ContainerImageArgs $) {
+        this.names = $.names;
+        this.sizeBytes = $.sizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> names;
-        private @Nullable Output<Integer> sizeBytes;
+        private ContainerImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerImageArgs();
         }
 
         public Builder(ContainerImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.names = defaults.names;
-    	      this.sizeBytes = defaults.sizeBytes;
+            $ = new ContainerImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder names(Output<List<String>> names) {
-            this.names = Objects.requireNonNull(names);
+            $.names = names;
             return this;
         }
+
         public Builder names(List<String> names) {
-            this.names = Output.of(Objects.requireNonNull(names));
-            return this;
+            return names(Output.of(names));
         }
+
         public Builder names(String... names) {
             return names(List.of(names));
         }
+
         public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
-            this.sizeBytes = sizeBytes;
+            $.sizeBytes = sizeBytes;
             return this;
         }
-        public Builder sizeBytes(@Nullable Integer sizeBytes) {
-            this.sizeBytes = Codegen.ofNullable(sizeBytes);
-            return this;
-        }        public ContainerImageArgs build() {
-            return new ContainerImageArgs(names, sizeBytes);
+
+        public Builder sizeBytes(Integer sizeBytes) {
+            return sizeBytes(Output.of(sizeBytes));
+        }
+
+        public ContainerImageArgs build() {
+            $.names = Objects.requireNonNull($.names, "expected parameter 'names' to be non-null");
+            return $;
         }
     }
+
 }

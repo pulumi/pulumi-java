@@ -6,7 +6,6 @@ package com.pulumi.aws.acmpca.inputs;
 import com.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
      * 
      */
     @Import(name="keyAlgorithm", required=true)
-      private final Output<String> keyAlgorithm;
+    private Output<String> keyAlgorithm;
 
     public Output<String> keyAlgorithm() {
         return this.keyAlgorithm;
@@ -31,7 +30,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
      * 
      */
     @Import(name="signingAlgorithm", required=true)
-      private final Output<String> signingAlgorithm;
+    private Output<String> signingAlgorithm;
 
     public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
@@ -42,76 +41,71 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
      * 
      */
     @Import(name="subject", required=true)
-      private final Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject;
+    private Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject;
 
     public Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject() {
         return this.subject;
     }
 
-    public CertificateAuthorityCertificateAuthorityConfigurationGetArgs(
-        Output<String> keyAlgorithm,
-        Output<String> signingAlgorithm,
-        Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject) {
-        this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm, "expected parameter 'keyAlgorithm' to be non-null");
-        this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm, "expected parameter 'signingAlgorithm' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-    }
+    private CertificateAuthorityCertificateAuthorityConfigurationGetArgs() {}
 
-    private CertificateAuthorityCertificateAuthorityConfigurationGetArgs() {
-        this.keyAlgorithm = Codegen.empty();
-        this.signingAlgorithm = Codegen.empty();
-        this.subject = Codegen.empty();
+    private CertificateAuthorityCertificateAuthorityConfigurationGetArgs(CertificateAuthorityCertificateAuthorityConfigurationGetArgs $) {
+        this.keyAlgorithm = $.keyAlgorithm;
+        this.signingAlgorithm = $.signingAlgorithm;
+        this.subject = $.subject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityCertificateAuthorityConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyAlgorithm;
-        private Output<String> signingAlgorithm;
-        private Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject;
+        private CertificateAuthorityCertificateAuthorityConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityCertificateAuthorityConfigurationGetArgs();
         }
 
         public Builder(CertificateAuthorityCertificateAuthorityConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyAlgorithm = defaults.keyAlgorithm;
-    	      this.signingAlgorithm = defaults.signingAlgorithm;
-    	      this.subject = defaults.subject;
+            $ = new CertificateAuthorityCertificateAuthorityConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyAlgorithm(Output<String> keyAlgorithm) {
-            this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
+            $.keyAlgorithm = keyAlgorithm;
             return this;
         }
+
         public Builder keyAlgorithm(String keyAlgorithm) {
-            this.keyAlgorithm = Output.of(Objects.requireNonNull(keyAlgorithm));
-            return this;
+            return keyAlgorithm(Output.of(keyAlgorithm));
         }
+
         public Builder signingAlgorithm(Output<String> signingAlgorithm) {
-            this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
+            $.signingAlgorithm = signingAlgorithm;
             return this;
         }
+
         public Builder signingAlgorithm(String signingAlgorithm) {
-            this.signingAlgorithm = Output.of(Objects.requireNonNull(signingAlgorithm));
-            return this;
+            return signingAlgorithm(Output.of(signingAlgorithm));
         }
+
         public Builder subject(Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subject(CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs subject) {
-            this.subject = Output.of(Objects.requireNonNull(subject));
-            return this;
-        }        public CertificateAuthorityCertificateAuthorityConfigurationGetArgs build() {
-            return new CertificateAuthorityCertificateAuthorityConfigurationGetArgs(keyAlgorithm, signingAlgorithm, subject);
+            return subject(Output.of(subject));
+        }
+
+        public CertificateAuthorityCertificateAuthorityConfigurationGetArgs build() {
+            $.keyAlgorithm = Objects.requireNonNull($.keyAlgorithm, "expected parameter 'keyAlgorithm' to be non-null");
+            $.signingAlgorithm = Objects.requireNonNull($.signingAlgorithm, "expected parameter 'signingAlgorithm' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            return $;
         }
     }
+
 }

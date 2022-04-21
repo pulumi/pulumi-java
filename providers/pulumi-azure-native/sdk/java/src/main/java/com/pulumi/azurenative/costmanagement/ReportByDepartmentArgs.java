@@ -10,9 +10,9 @@ import com.pulumi.azurenative.costmanagement.inputs.ReportScheduleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ReportByDepartmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="definition", required=true)
-      private final Output<ReportDefinitionArgs> definition;
+    private Output<ReportDefinitionArgs> definition;
 
     public Output<ReportDefinitionArgs> definition() {
         return this.definition;
@@ -36,7 +36,7 @@ public final class ReportByDepartmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="deliveryInfo", required=true)
-      private final Output<ReportDeliveryInfoArgs> deliveryInfo;
+    private Output<ReportDeliveryInfoArgs> deliveryInfo;
 
     public Output<ReportDeliveryInfoArgs> deliveryInfo() {
         return this.deliveryInfo;
@@ -47,7 +47,7 @@ public final class ReportByDepartmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="departmentId", required=true)
-      private final Output<String> departmentId;
+    private Output<String> departmentId;
 
     public Output<String> departmentId() {
         return this.departmentId;
@@ -58,10 +58,10 @@ public final class ReportByDepartmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<Either<String,FormatType>> format;
+    private @Nullable Output<Either<String,FormatType>> format;
 
-    public Output<Either<String,FormatType>> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<Either<String,FormatType>>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ReportByDepartmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="reportName")
-      private final @Nullable Output<String> reportName;
+    private @Nullable Output<String> reportName;
 
-    public Output<String> reportName() {
-        return this.reportName == null ? Codegen.empty() : this.reportName;
+    public Optional<Output<String>> reportName() {
+        return Optional.ofNullable(this.reportName);
     }
 
     /**
@@ -80,115 +80,101 @@ public final class ReportByDepartmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<ReportScheduleArgs> schedule;
+    private @Nullable Output<ReportScheduleArgs> schedule;
 
-    public Output<ReportScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<ReportScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
-    public ReportByDepartmentArgs(
-        Output<ReportDefinitionArgs> definition,
-        Output<ReportDeliveryInfoArgs> deliveryInfo,
-        Output<String> departmentId,
-        @Nullable Output<Either<String,FormatType>> format,
-        @Nullable Output<String> reportName,
-        @Nullable Output<ReportScheduleArgs> schedule) {
-        this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
-        this.deliveryInfo = Objects.requireNonNull(deliveryInfo, "expected parameter 'deliveryInfo' to be non-null");
-        this.departmentId = Objects.requireNonNull(departmentId, "expected parameter 'departmentId' to be non-null");
-        this.format = format;
-        this.reportName = reportName;
-        this.schedule = schedule;
-    }
+    private ReportByDepartmentArgs() {}
 
-    private ReportByDepartmentArgs() {
-        this.definition = Codegen.empty();
-        this.deliveryInfo = Codegen.empty();
-        this.departmentId = Codegen.empty();
-        this.format = Codegen.empty();
-        this.reportName = Codegen.empty();
-        this.schedule = Codegen.empty();
+    private ReportByDepartmentArgs(ReportByDepartmentArgs $) {
+        this.definition = $.definition;
+        this.deliveryInfo = $.deliveryInfo;
+        this.departmentId = $.departmentId;
+        this.format = $.format;
+        this.reportName = $.reportName;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportByDepartmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ReportDefinitionArgs> definition;
-        private Output<ReportDeliveryInfoArgs> deliveryInfo;
-        private Output<String> departmentId;
-        private @Nullable Output<Either<String,FormatType>> format;
-        private @Nullable Output<String> reportName;
-        private @Nullable Output<ReportScheduleArgs> schedule;
+        private ReportByDepartmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportByDepartmentArgs();
         }
 
         public Builder(ReportByDepartmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definition = defaults.definition;
-    	      this.deliveryInfo = defaults.deliveryInfo;
-    	      this.departmentId = defaults.departmentId;
-    	      this.format = defaults.format;
-    	      this.reportName = defaults.reportName;
-    	      this.schedule = defaults.schedule;
+            $ = new ReportByDepartmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder definition(Output<ReportDefinitionArgs> definition) {
-            this.definition = Objects.requireNonNull(definition);
+            $.definition = definition;
             return this;
         }
+
         public Builder definition(ReportDefinitionArgs definition) {
-            this.definition = Output.of(Objects.requireNonNull(definition));
-            return this;
+            return definition(Output.of(definition));
         }
+
         public Builder deliveryInfo(Output<ReportDeliveryInfoArgs> deliveryInfo) {
-            this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
+            $.deliveryInfo = deliveryInfo;
             return this;
         }
+
         public Builder deliveryInfo(ReportDeliveryInfoArgs deliveryInfo) {
-            this.deliveryInfo = Output.of(Objects.requireNonNull(deliveryInfo));
-            return this;
+            return deliveryInfo(Output.of(deliveryInfo));
         }
+
         public Builder departmentId(Output<String> departmentId) {
-            this.departmentId = Objects.requireNonNull(departmentId);
+            $.departmentId = departmentId;
             return this;
         }
+
         public Builder departmentId(String departmentId) {
-            this.departmentId = Output.of(Objects.requireNonNull(departmentId));
-            return this;
+            return departmentId(Output.of(departmentId));
         }
+
         public Builder format(@Nullable Output<Either<String,FormatType>> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable Either<String,FormatType> format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(Either<String,FormatType> format) {
+            return format(Output.of(format));
         }
+
         public Builder reportName(@Nullable Output<String> reportName) {
-            this.reportName = reportName;
+            $.reportName = reportName;
             return this;
         }
-        public Builder reportName(@Nullable String reportName) {
-            this.reportName = Codegen.ofNullable(reportName);
-            return this;
+
+        public Builder reportName(String reportName) {
+            return reportName(Output.of(reportName));
         }
+
         public Builder schedule(@Nullable Output<ReportScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable ReportScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
-        }        public ReportByDepartmentArgs build() {
-            return new ReportByDepartmentArgs(definition, deliveryInfo, departmentId, format, reportName, schedule);
+
+        public Builder schedule(ReportScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
+        }
+
+        public ReportByDepartmentArgs build() {
+            $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
+            $.deliveryInfo = Objects.requireNonNull($.deliveryInfo, "expected parameter 'deliveryInfo' to be non-null");
+            $.departmentId = Objects.requireNonNull($.departmentId, "expected parameter 'departmentId' to be non-null");
+            return $;
         }
     }
+
 }

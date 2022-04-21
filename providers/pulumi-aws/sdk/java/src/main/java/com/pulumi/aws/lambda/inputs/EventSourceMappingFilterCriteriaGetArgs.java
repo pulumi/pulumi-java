@@ -6,9 +6,9 @@ package com.pulumi.aws.lambda.inputs;
 import com.pulumi.aws.lambda.inputs.EventSourceMappingFilterCriteriaFilterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class EventSourceMappingFilterCriteriaGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters;
+    private @Nullable Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters;
 
-    public Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public EventSourceMappingFilterCriteriaGetArgs(@Nullable Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters) {
-        this.filters = filters;
-    }
+    private EventSourceMappingFilterCriteriaGetArgs() {}
 
-    private EventSourceMappingFilterCriteriaGetArgs() {
-        this.filters = Codegen.empty();
+    private EventSourceMappingFilterCriteriaGetArgs(EventSourceMappingFilterCriteriaGetArgs $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingFilterCriteriaGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters;
+        private EventSourceMappingFilterCriteriaGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingFilterCriteriaGetArgs();
         }
 
         public Builder(EventSourceMappingFilterCriteriaGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new EventSourceMappingFilterCriteriaGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable List<EventSourceMappingFilterCriteriaFilterGetArgs> filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(List<EventSourceMappingFilterCriteriaFilterGetArgs> filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder filters(EventSourceMappingFilterCriteriaFilterGetArgs... filters) {
             return filters(List.of(filters));
-        }        public EventSourceMappingFilterCriteriaGetArgs build() {
-            return new EventSourceMappingFilterCriteriaGetArgs(filters);
+        }
+
+        public EventSourceMappingFilterCriteriaGetArgs build() {
+            return $;
         }
     }
+
 }

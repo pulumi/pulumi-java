@@ -24,7 +24,7 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="billingType", required=true)
-      private final String billingType;
+    private String billingType;
 
     public String billingType() {
         return this.billingType;
@@ -35,7 +35,7 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="chargingType", required=true)
-      private final String chargingType;
+    private String chargingType;
 
     public String chargingType() {
         return this.chargingType;
@@ -46,7 +46,7 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="meterGuid", required=true)
-      private final String meterGuid;
+    private String meterGuid;
 
     public String meterGuid() {
         return this.meterGuid;
@@ -57,73 +57,66 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="multiplier", required=true)
-      private final Double multiplier;
+    private Double multiplier;
 
     public Double multiplier() {
         return this.multiplier;
     }
 
-    public Pav2MeterDetailsResponse(
-        String billingType,
-        String chargingType,
-        String meterGuid,
-        Double multiplier) {
-        this.billingType = Codegen.stringProp("billingType").arg(billingType).require();
-        this.chargingType = Objects.requireNonNull(chargingType, "expected parameter 'chargingType' to be non-null");
-        this.meterGuid = Objects.requireNonNull(meterGuid, "expected parameter 'meterGuid' to be non-null");
-        this.multiplier = Objects.requireNonNull(multiplier, "expected parameter 'multiplier' to be non-null");
-    }
+    private Pav2MeterDetailsResponse() {}
 
-    private Pav2MeterDetailsResponse() {
-        this.billingType = null;
-        this.chargingType = null;
-        this.meterGuid = null;
-        this.multiplier = null;
+    private Pav2MeterDetailsResponse(Pav2MeterDetailsResponse $) {
+        this.billingType = $.billingType;
+        this.chargingType = $.chargingType;
+        this.meterGuid = $.meterGuid;
+        this.multiplier = $.multiplier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Pav2MeterDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingType;
-        private String chargingType;
-        private String meterGuid;
-        private Double multiplier;
+        private Pav2MeterDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Pav2MeterDetailsResponse();
         }
 
         public Builder(Pav2MeterDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingType = defaults.billingType;
-    	      this.chargingType = defaults.chargingType;
-    	      this.meterGuid = defaults.meterGuid;
-    	      this.multiplier = defaults.multiplier;
+            $ = new Pav2MeterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder billingType(String billingType) {
-            this.billingType = Objects.requireNonNull(billingType);
+            $.billingType = billingType;
             return this;
         }
+
         public Builder chargingType(String chargingType) {
-            this.chargingType = Objects.requireNonNull(chargingType);
+            $.chargingType = chargingType;
             return this;
         }
+
         public Builder meterGuid(String meterGuid) {
-            this.meterGuid = Objects.requireNonNull(meterGuid);
+            $.meterGuid = meterGuid;
             return this;
         }
+
         public Builder multiplier(Double multiplier) {
-            this.multiplier = Objects.requireNonNull(multiplier);
+            $.multiplier = multiplier;
             return this;
-        }        public Pav2MeterDetailsResponse build() {
-            return new Pav2MeterDetailsResponse(billingType, chargingType, meterGuid, multiplier);
+        }
+
+        public Pav2MeterDetailsResponse build() {
+            $.billingType = Codegen.stringProp("billingType").arg($.billingType).require();
+            $.chargingType = Objects.requireNonNull($.chargingType, "expected parameter 'chargingType' to be non-null");
+            $.meterGuid = Objects.requireNonNull($.meterGuid, "expected parameter 'meterGuid' to be non-null");
+            $.multiplier = Objects.requireNonNull($.multiplier, "expected parameter 'multiplier' to be non-null");
+            return $;
         }
     }
+
 }

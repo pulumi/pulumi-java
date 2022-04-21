@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RequestsBasedTriggerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RequestsBasedTriggerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="timeInterval")
-      private final @Nullable Output<String> timeInterval;
+    private @Nullable Output<String> timeInterval;
 
-    public Output<String> timeInterval() {
-        return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
+    public Optional<Output<String>> timeInterval() {
+        return Optional.ofNullable(this.timeInterval);
     }
 
-    public RequestsBasedTriggerArgs(
-        @Nullable Output<Integer> count,
-        @Nullable Output<String> timeInterval) {
-        this.count = count;
-        this.timeInterval = timeInterval;
-    }
+    private RequestsBasedTriggerArgs() {}
 
-    private RequestsBasedTriggerArgs() {
-        this.count = Codegen.empty();
-        this.timeInterval = Codegen.empty();
+    private RequestsBasedTriggerArgs(RequestsBasedTriggerArgs $) {
+        this.count = $.count;
+        this.timeInterval = $.timeInterval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestsBasedTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<String> timeInterval;
+        private RequestsBasedTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestsBasedTriggerArgs();
         }
 
         public Builder(RequestsBasedTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.timeInterval = defaults.timeInterval;
+            $ = new RequestsBasedTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
-            this.timeInterval = timeInterval;
+            $.timeInterval = timeInterval;
             return this;
         }
-        public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = Codegen.ofNullable(timeInterval);
-            return this;
-        }        public RequestsBasedTriggerArgs build() {
-            return new RequestsBasedTriggerArgs(count, timeInterval);
+
+        public Builder timeInterval(String timeInterval) {
+            return timeInterval(Output.of(timeInterval));
+        }
+
+        public RequestsBasedTriggerArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ElasticPoolPerDatabaseSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="maxCapacity")
-      private final @Nullable Output<Double> maxCapacity;
+    private @Nullable Output<Double> maxCapacity;
 
-    public Output<Double> maxCapacity() {
-        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
+    public Optional<Output<Double>> maxCapacity() {
+        return Optional.ofNullable(this.maxCapacity);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ElasticPoolPerDatabaseSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="minCapacity")
-      private final @Nullable Output<Double> minCapacity;
+    private @Nullable Output<Double> minCapacity;
 
-    public Output<Double> minCapacity() {
-        return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
+    public Optional<Output<Double>> minCapacity() {
+        return Optional.ofNullable(this.minCapacity);
     }
 
-    public ElasticPoolPerDatabaseSettingsArgs(
-        @Nullable Output<Double> maxCapacity,
-        @Nullable Output<Double> minCapacity) {
-        this.maxCapacity = maxCapacity;
-        this.minCapacity = minCapacity;
-    }
+    private ElasticPoolPerDatabaseSettingsArgs() {}
 
-    private ElasticPoolPerDatabaseSettingsArgs() {
-        this.maxCapacity = Codegen.empty();
-        this.minCapacity = Codegen.empty();
+    private ElasticPoolPerDatabaseSettingsArgs(ElasticPoolPerDatabaseSettingsArgs $) {
+        this.maxCapacity = $.maxCapacity;
+        this.minCapacity = $.minCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ElasticPoolPerDatabaseSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> maxCapacity;
-        private @Nullable Output<Double> minCapacity;
+        private ElasticPoolPerDatabaseSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ElasticPoolPerDatabaseSettingsArgs();
         }
 
         public Builder(ElasticPoolPerDatabaseSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxCapacity = defaults.maxCapacity;
-    	      this.minCapacity = defaults.minCapacity;
+            $ = new ElasticPoolPerDatabaseSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxCapacity(@Nullable Output<Double> maxCapacity) {
-            this.maxCapacity = maxCapacity;
+            $.maxCapacity = maxCapacity;
             return this;
         }
-        public Builder maxCapacity(@Nullable Double maxCapacity) {
-            this.maxCapacity = Codegen.ofNullable(maxCapacity);
-            return this;
+
+        public Builder maxCapacity(Double maxCapacity) {
+            return maxCapacity(Output.of(maxCapacity));
         }
+
         public Builder minCapacity(@Nullable Output<Double> minCapacity) {
-            this.minCapacity = minCapacity;
+            $.minCapacity = minCapacity;
             return this;
         }
-        public Builder minCapacity(@Nullable Double minCapacity) {
-            this.minCapacity = Codegen.ofNullable(minCapacity);
-            return this;
-        }        public ElasticPoolPerDatabaseSettingsArgs build() {
-            return new ElasticPoolPerDatabaseSettingsArgs(maxCapacity, minCapacity);
+
+        public Builder minCapacity(Double minCapacity) {
+            return minCapacity(Output.of(minCapacity));
+        }
+
+        public ElasticPoolPerDatabaseSettingsArgs build() {
+            return $;
         }
     }
+
 }

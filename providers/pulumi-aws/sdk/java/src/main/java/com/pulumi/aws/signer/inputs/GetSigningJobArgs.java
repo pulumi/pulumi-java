@@ -17,45 +17,45 @@ public final class GetSigningJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobId", required=true)
-      private final String jobId;
+    private String jobId;
 
     public String jobId() {
         return this.jobId;
     }
 
-    public GetSigningJobArgs(String jobId) {
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-    }
+    private GetSigningJobArgs() {}
 
-    private GetSigningJobArgs() {
-        this.jobId = null;
+    private GetSigningJobArgs(GetSigningJobArgs $) {
+        this.jobId = $.jobId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSigningJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobId;
+        private GetSigningJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSigningJobArgs();
         }
 
         public Builder(GetSigningJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobId = defaults.jobId;
+            $ = new GetSigningJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobId(String jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
-        }        public GetSigningJobArgs build() {
-            return new GetSigningJobArgs(jobId);
+        }
+
+        public GetSigningJobArgs build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            return $;
         }
     }
+
 }

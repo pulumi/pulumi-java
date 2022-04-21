@@ -5,10 +5,10 @@ package com.pulumi.aws.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SlotTypeEnumerationValueArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="synonyms")
-      private final @Nullable Output<List<String>> synonyms;
+    private @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> synonyms() {
-        return this.synonyms == null ? Codegen.empty() : this.synonyms;
+    public Optional<Output<List<String>>> synonyms() {
+        return Optional.ofNullable(this.synonyms);
     }
 
     /**
@@ -32,66 +32,63 @@ public final class SlotTypeEnumerationValueArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public SlotTypeEnumerationValueArgs(
-        @Nullable Output<List<String>> synonyms,
-        Output<String> value) {
-        this.synonyms = synonyms;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SlotTypeEnumerationValueArgs() {}
 
-    private SlotTypeEnumerationValueArgs() {
-        this.synonyms = Codegen.empty();
-        this.value = Codegen.empty();
+    private SlotTypeEnumerationValueArgs(SlotTypeEnumerationValueArgs $) {
+        this.synonyms = $.synonyms;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlotTypeEnumerationValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> synonyms;
-        private Output<String> value;
+        private SlotTypeEnumerationValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlotTypeEnumerationValueArgs();
         }
 
         public Builder(SlotTypeEnumerationValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.synonyms = defaults.synonyms;
-    	      this.value = defaults.value;
+            $ = new SlotTypeEnumerationValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder synonyms(@Nullable Output<List<String>> synonyms) {
-            this.synonyms = synonyms;
+            $.synonyms = synonyms;
             return this;
         }
-        public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Codegen.ofNullable(synonyms);
-            return this;
+
+        public Builder synonyms(List<String> synonyms) {
+            return synonyms(Output.of(synonyms));
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public SlotTypeEnumerationValueArgs build() {
-            return new SlotTypeEnumerationValueArgs(synonyms, value);
+            return value(Output.of(value));
+        }
+
+        public SlotTypeEnumerationValueArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

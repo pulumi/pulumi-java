@@ -5,9 +5,9 @@ package com.pulumi.aws.autoscalingplans.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
      * 
      */
     @Import(name="predefinedLoadMetricType", required=true)
-      private final Output<String> predefinedLoadMetricType;
+    private Output<String> predefinedLoadMetricType;
 
     public Output<String> predefinedLoadMetricType() {
         return this.predefinedLoadMetricType;
@@ -31,63 +31,59 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
      * 
      */
     @Import(name="resourceLabel")
-      private final @Nullable Output<String> resourceLabel;
+    private @Nullable Output<String> resourceLabel;
 
-    public Output<String> resourceLabel() {
-        return this.resourceLabel == null ? Codegen.empty() : this.resourceLabel;
+    public Optional<Output<String>> resourceLabel() {
+        return Optional.ofNullable(this.resourceLabel);
     }
 
-    public ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs(
-        Output<String> predefinedLoadMetricType,
-        @Nullable Output<String> resourceLabel) {
-        this.predefinedLoadMetricType = Objects.requireNonNull(predefinedLoadMetricType, "expected parameter 'predefinedLoadMetricType' to be non-null");
-        this.resourceLabel = resourceLabel;
-    }
+    private ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs() {}
 
-    private ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs() {
-        this.predefinedLoadMetricType = Codegen.empty();
-        this.resourceLabel = Codegen.empty();
+    private ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs(ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs $) {
+        this.predefinedLoadMetricType = $.predefinedLoadMetricType;
+        this.resourceLabel = $.resourceLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> predefinedLoadMetricType;
-        private @Nullable Output<String> resourceLabel;
+        private ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs();
         }
 
         public Builder(ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.predefinedLoadMetricType = defaults.predefinedLoadMetricType;
-    	      this.resourceLabel = defaults.resourceLabel;
+            $ = new ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder predefinedLoadMetricType(Output<String> predefinedLoadMetricType) {
-            this.predefinedLoadMetricType = Objects.requireNonNull(predefinedLoadMetricType);
+            $.predefinedLoadMetricType = predefinedLoadMetricType;
             return this;
         }
+
         public Builder predefinedLoadMetricType(String predefinedLoadMetricType) {
-            this.predefinedLoadMetricType = Output.of(Objects.requireNonNull(predefinedLoadMetricType));
-            return this;
+            return predefinedLoadMetricType(Output.of(predefinedLoadMetricType));
         }
+
         public Builder resourceLabel(@Nullable Output<String> resourceLabel) {
-            this.resourceLabel = resourceLabel;
+            $.resourceLabel = resourceLabel;
             return this;
         }
-        public Builder resourceLabel(@Nullable String resourceLabel) {
-            this.resourceLabel = Codegen.ofNullable(resourceLabel);
-            return this;
-        }        public ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs build() {
-            return new ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs(predefinedLoadMetricType, resourceLabel);
+
+        public Builder resourceLabel(String resourceLabel) {
+            return resourceLabel(Output.of(resourceLabel));
+        }
+
+        public ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs build() {
+            $.predefinedLoadMetricType = Objects.requireNonNull($.predefinedLoadMetricType, "expected parameter 'predefinedLoadMetricType' to be non-null");
+            return $;
         }
     }
+
 }

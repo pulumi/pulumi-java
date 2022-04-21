@@ -13,45 +13,45 @@ public final class GetClusterNodePoolNodeConfigWorkloadMetadataConfig extends co
     public static final GetClusterNodePoolNodeConfigWorkloadMetadataConfig Empty = new GetClusterNodePoolNodeConfigWorkloadMetadataConfig();
 
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
     }
 
-    public GetClusterNodePoolNodeConfigWorkloadMetadataConfig(String mode) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private GetClusterNodePoolNodeConfigWorkloadMetadataConfig() {}
 
-    private GetClusterNodePoolNodeConfigWorkloadMetadataConfig() {
-        this.mode = null;
+    private GetClusterNodePoolNodeConfigWorkloadMetadataConfig(GetClusterNodePoolNodeConfigWorkloadMetadataConfig $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePoolNodeConfigWorkloadMetadataConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mode;
+        private GetClusterNodePoolNodeConfigWorkloadMetadataConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePoolNodeConfigWorkloadMetadataConfig();
         }
 
         public Builder(GetClusterNodePoolNodeConfigWorkloadMetadataConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new GetClusterNodePoolNodeConfigWorkloadMetadataConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
-        }        public GetClusterNodePoolNodeConfigWorkloadMetadataConfig build() {
-            return new GetClusterNodePoolNodeConfigWorkloadMetadataConfig(mode);
+        }
+
+        public GetClusterNodePoolNodeConfigWorkloadMetadataConfig build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

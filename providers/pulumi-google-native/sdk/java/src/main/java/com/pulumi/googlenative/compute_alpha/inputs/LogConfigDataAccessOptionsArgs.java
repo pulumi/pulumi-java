@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.LogConfigDataAccessOptionsLogMode;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LogConfigDataAccessOptionsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="logMode")
-      private final @Nullable Output<LogConfigDataAccessOptionsLogMode> logMode;
+    private @Nullable Output<LogConfigDataAccessOptionsLogMode> logMode;
 
-    public Output<LogConfigDataAccessOptionsLogMode> logMode() {
-        return this.logMode == null ? Codegen.empty() : this.logMode;
+    public Optional<Output<LogConfigDataAccessOptionsLogMode>> logMode() {
+        return Optional.ofNullable(this.logMode);
     }
 
-    public LogConfigDataAccessOptionsArgs(@Nullable Output<LogConfigDataAccessOptionsLogMode> logMode) {
-        this.logMode = logMode;
-    }
+    private LogConfigDataAccessOptionsArgs() {}
 
-    private LogConfigDataAccessOptionsArgs() {
-        this.logMode = Codegen.empty();
+    private LogConfigDataAccessOptionsArgs(LogConfigDataAccessOptionsArgs $) {
+        this.logMode = $.logMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogConfigDataAccessOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LogConfigDataAccessOptionsLogMode> logMode;
+        private LogConfigDataAccessOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogConfigDataAccessOptionsArgs();
         }
 
         public Builder(LogConfigDataAccessOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logMode = defaults.logMode;
+            $ = new LogConfigDataAccessOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logMode(@Nullable Output<LogConfigDataAccessOptionsLogMode> logMode) {
-            this.logMode = logMode;
+            $.logMode = logMode;
             return this;
         }
-        public Builder logMode(@Nullable LogConfigDataAccessOptionsLogMode logMode) {
-            this.logMode = Codegen.ofNullable(logMode);
-            return this;
-        }        public LogConfigDataAccessOptionsArgs build() {
-            return new LogConfigDataAccessOptionsArgs(logMode);
+
+        public Builder logMode(LogConfigDataAccessOptionsLogMode logMode) {
+            return logMode(Output.of(logMode));
+        }
+
+        public LogConfigDataAccessOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="computeSubnetId")
-      private final @Nullable String computeSubnetId;
+    private @Nullable String computeSubnetId;
 
     public Optional<String> computeSubnetId() {
-        return this.computeSubnetId == null ? Optional.empty() : Optional.ofNullable(this.computeSubnetId);
+        return Optional.ofNullable(this.computeSubnetId);
     }
 
-    public VirtualNetworkProfileResponse(@Nullable String computeSubnetId) {
-        this.computeSubnetId = computeSubnetId;
-    }
+    private VirtualNetworkProfileResponse() {}
 
-    private VirtualNetworkProfileResponse() {
-        this.computeSubnetId = null;
+    private VirtualNetworkProfileResponse(VirtualNetworkProfileResponse $) {
+        this.computeSubnetId = $.computeSubnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String computeSubnetId;
+        private VirtualNetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkProfileResponse();
         }
 
         public Builder(VirtualNetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeSubnetId = defaults.computeSubnetId;
+            $ = new VirtualNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder computeSubnetId(@Nullable String computeSubnetId) {
-            this.computeSubnetId = computeSubnetId;
+            $.computeSubnetId = computeSubnetId;
             return this;
-        }        public VirtualNetworkProfileResponse build() {
-            return new VirtualNetworkProfileResponse(computeSubnetId);
+        }
+
+        public VirtualNetworkProfileResponse build() {
+            return $;
         }
     }
+
 }

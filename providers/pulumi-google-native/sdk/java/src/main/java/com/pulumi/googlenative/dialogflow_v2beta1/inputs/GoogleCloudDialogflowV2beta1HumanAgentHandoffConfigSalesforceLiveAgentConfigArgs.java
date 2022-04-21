@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
      * 
      */
     @Import(name="buttonId", required=true)
-      private final Output<String> buttonId;
+    private Output<String> buttonId;
 
     public Output<String> buttonId() {
         return this.buttonId;
@@ -34,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
      * 
      */
     @Import(name="deploymentId", required=true)
-      private final Output<String> deploymentId;
+    private Output<String> deploymentId;
 
     public Output<String> deploymentId() {
         return this.deploymentId;
@@ -45,7 +44,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
      * 
      */
     @Import(name="endpointDomain", required=true)
-      private final Output<String> endpointDomain;
+    private Output<String> endpointDomain;
 
     public Output<String> endpointDomain() {
         return this.endpointDomain;
@@ -56,89 +55,82 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
      * 
      */
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
-    public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs(
-        Output<String> buttonId,
-        Output<String> deploymentId,
-        Output<String> endpointDomain,
-        Output<String> organizationId) {
-        this.buttonId = Objects.requireNonNull(buttonId, "expected parameter 'buttonId' to be non-null");
-        this.deploymentId = Objects.requireNonNull(deploymentId, "expected parameter 'deploymentId' to be non-null");
-        this.endpointDomain = Objects.requireNonNull(endpointDomain, "expected parameter 'endpointDomain' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs() {}
 
-    private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs() {
-        this.buttonId = Codegen.empty();
-        this.deploymentId = Codegen.empty();
-        this.endpointDomain = Codegen.empty();
-        this.organizationId = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs $) {
+        this.buttonId = $.buttonId;
+        this.deploymentId = $.deploymentId;
+        this.endpointDomain = $.endpointDomain;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> buttonId;
-        private Output<String> deploymentId;
-        private Output<String> endpointDomain;
-        private Output<String> organizationId;
+        private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buttonId = defaults.buttonId;
-    	      this.deploymentId = defaults.deploymentId;
-    	      this.endpointDomain = defaults.endpointDomain;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buttonId(Output<String> buttonId) {
-            this.buttonId = Objects.requireNonNull(buttonId);
+            $.buttonId = buttonId;
             return this;
         }
+
         public Builder buttonId(String buttonId) {
-            this.buttonId = Output.of(Objects.requireNonNull(buttonId));
-            return this;
+            return buttonId(Output.of(buttonId));
         }
+
         public Builder deploymentId(Output<String> deploymentId) {
-            this.deploymentId = Objects.requireNonNull(deploymentId);
+            $.deploymentId = deploymentId;
             return this;
         }
+
         public Builder deploymentId(String deploymentId) {
-            this.deploymentId = Output.of(Objects.requireNonNull(deploymentId));
-            return this;
+            return deploymentId(Output.of(deploymentId));
         }
+
         public Builder endpointDomain(Output<String> endpointDomain) {
-            this.endpointDomain = Objects.requireNonNull(endpointDomain);
+            $.endpointDomain = endpointDomain;
             return this;
         }
+
         public Builder endpointDomain(String endpointDomain) {
-            this.endpointDomain = Output.of(Objects.requireNonNull(endpointDomain));
-            return this;
+            return endpointDomain(Output.of(endpointDomain));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
-        }        public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs build() {
-            return new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs(buttonId, deploymentId, endpointDomain, organizationId);
+            return organizationId(Output.of(organizationId));
+        }
+
+        public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs build() {
+            $.buttonId = Objects.requireNonNull($.buttonId, "expected parameter 'buttonId' to be non-null");
+            $.deploymentId = Objects.requireNonNull($.deploymentId, "expected parameter 'deploymentId' to be non-null");
+            $.endpointDomain = Objects.requireNonNull($.endpointDomain, "expected parameter 'endpointDomain' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

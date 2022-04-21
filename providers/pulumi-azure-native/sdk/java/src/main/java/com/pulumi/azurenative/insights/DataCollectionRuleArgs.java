@@ -10,11 +10,11 @@ import com.pulumi.azurenative.insights.inputs.DataFlowArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataCollectionRuleName")
-      private final @Nullable Output<String> dataCollectionRuleName;
+    private @Nullable Output<String> dataCollectionRuleName;
 
-    public Output<String> dataCollectionRuleName() {
-        return this.dataCollectionRuleName == null ? Codegen.empty() : this.dataCollectionRuleName;
+    public Optional<Output<String>> dataCollectionRuleName() {
+        return Optional.ofNullable(this.dataCollectionRuleName);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataFlows")
-      private final @Nullable Output<List<DataFlowArgs>> dataFlows;
+    private @Nullable Output<List<DataFlowArgs>> dataFlows;
 
-    public Output<List<DataFlowArgs>> dataFlows() {
-        return this.dataFlows == null ? Codegen.empty() : this.dataFlows;
+    public Optional<Output<List<DataFlowArgs>>> dataFlows() {
+        return Optional.ofNullable(this.dataFlows);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataSources")
-      private final @Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources;
+    private @Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources;
 
-    public Output<DataCollectionRuleDataSourcesArgs> dataSources() {
-        return this.dataSources == null ? Codegen.empty() : this.dataSources;
+    public Optional<Output<DataCollectionRuleDataSourcesArgs>> dataSources() {
+        return Optional.ofNullable(this.dataSources);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="destinations")
-      private final @Nullable Output<DataCollectionRuleDestinationsArgs> destinations;
+    private @Nullable Output<DataCollectionRuleDestinationsArgs> destinations;
 
-    public Output<DataCollectionRuleDestinationsArgs> destinations() {
-        return this.destinations == null ? Codegen.empty() : this.destinations;
+    public Optional<Output<DataCollectionRuleDestinationsArgs>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind;
+    private @Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind;
 
-    public Output<Either<String,KnownDataCollectionRuleResourceKind>> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Either<String,KnownDataCollectionRuleResourceKind>>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -105,7 +105,7 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -116,157 +116,133 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DataCollectionRuleArgs(
-        @Nullable Output<String> dataCollectionRuleName,
-        @Nullable Output<List<DataFlowArgs>> dataFlows,
-        @Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources,
-        @Nullable Output<String> description,
-        @Nullable Output<DataCollectionRuleDestinationsArgs> destinations,
-        @Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.dataCollectionRuleName = dataCollectionRuleName;
-        this.dataFlows = dataFlows;
-        this.dataSources = dataSources;
-        this.description = description;
-        this.destinations = destinations;
-        this.kind = kind;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private DataCollectionRuleArgs() {}
 
-    private DataCollectionRuleArgs() {
-        this.dataCollectionRuleName = Codegen.empty();
-        this.dataFlows = Codegen.empty();
-        this.dataSources = Codegen.empty();
-        this.description = Codegen.empty();
-        this.destinations = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DataCollectionRuleArgs(DataCollectionRuleArgs $) {
+        this.dataCollectionRuleName = $.dataCollectionRuleName;
+        this.dataFlows = $.dataFlows;
+        this.dataSources = $.dataSources;
+        this.description = $.description;
+        this.destinations = $.destinations;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectionRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataCollectionRuleName;
-        private @Nullable Output<List<DataFlowArgs>> dataFlows;
-        private @Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DataCollectionRuleDestinationsArgs> destinations;
-        private @Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private DataCollectionRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectionRuleArgs();
         }
 
         public Builder(DataCollectionRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCollectionRuleName = defaults.dataCollectionRuleName;
-    	      this.dataFlows = defaults.dataFlows;
-    	      this.dataSources = defaults.dataSources;
-    	      this.description = defaults.description;
-    	      this.destinations = defaults.destinations;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new DataCollectionRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCollectionRuleName(@Nullable Output<String> dataCollectionRuleName) {
-            this.dataCollectionRuleName = dataCollectionRuleName;
+            $.dataCollectionRuleName = dataCollectionRuleName;
             return this;
         }
-        public Builder dataCollectionRuleName(@Nullable String dataCollectionRuleName) {
-            this.dataCollectionRuleName = Codegen.ofNullable(dataCollectionRuleName);
-            return this;
+
+        public Builder dataCollectionRuleName(String dataCollectionRuleName) {
+            return dataCollectionRuleName(Output.of(dataCollectionRuleName));
         }
+
         public Builder dataFlows(@Nullable Output<List<DataFlowArgs>> dataFlows) {
-            this.dataFlows = dataFlows;
+            $.dataFlows = dataFlows;
             return this;
         }
-        public Builder dataFlows(@Nullable List<DataFlowArgs> dataFlows) {
-            this.dataFlows = Codegen.ofNullable(dataFlows);
-            return this;
+
+        public Builder dataFlows(List<DataFlowArgs> dataFlows) {
+            return dataFlows(Output.of(dataFlows));
         }
+
         public Builder dataFlows(DataFlowArgs... dataFlows) {
             return dataFlows(List.of(dataFlows));
         }
+
         public Builder dataSources(@Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources) {
-            this.dataSources = dataSources;
+            $.dataSources = dataSources;
             return this;
         }
-        public Builder dataSources(@Nullable DataCollectionRuleDataSourcesArgs dataSources) {
-            this.dataSources = Codegen.ofNullable(dataSources);
-            return this;
+
+        public Builder dataSources(DataCollectionRuleDataSourcesArgs dataSources) {
+            return dataSources(Output.of(dataSources));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destinations(@Nullable Output<DataCollectionRuleDestinationsArgs> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
-        public Builder destinations(@Nullable DataCollectionRuleDestinationsArgs destinations) {
-            this.destinations = Codegen.ofNullable(destinations);
-            return this;
+
+        public Builder destinations(DataCollectionRuleDestinationsArgs destinations) {
+            return destinations(Output.of(destinations));
         }
+
         public Builder kind(@Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Either<String,KnownDataCollectionRuleResourceKind> kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Either<String,KnownDataCollectionRuleResourceKind> kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DataCollectionRuleArgs build() {
-            return new DataCollectionRuleArgs(dataCollectionRuleName, dataFlows, dataSources, description, destinations, kind, location, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DataCollectionRuleArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

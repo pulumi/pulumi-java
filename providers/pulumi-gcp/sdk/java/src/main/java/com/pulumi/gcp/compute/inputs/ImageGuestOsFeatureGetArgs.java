@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ImageGuestOsFeatureGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ImageGuestOsFeatureGetArgs(Output<String> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ImageGuestOsFeatureGetArgs() {}
 
-    private ImageGuestOsFeatureGetArgs() {
-        this.type = Codegen.empty();
+    private ImageGuestOsFeatureGetArgs(ImageGuestOsFeatureGetArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageGuestOsFeatureGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private ImageGuestOsFeatureGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageGuestOsFeatureGetArgs();
         }
 
         public Builder(ImageGuestOsFeatureGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ImageGuestOsFeatureGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ImageGuestOsFeatureGetArgs build() {
-            return new ImageGuestOsFeatureGetArgs(type);
+            return type(Output.of(type));
+        }
+
+        public ImageGuestOsFeatureGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

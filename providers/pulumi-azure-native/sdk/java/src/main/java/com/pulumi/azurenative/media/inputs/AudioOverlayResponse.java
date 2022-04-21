@@ -25,10 +25,10 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="audioGainLevel")
-      private final @Nullable Double audioGainLevel;
+    private @Nullable Double audioGainLevel;
 
     public Optional<Double> audioGainLevel() {
-        return this.audioGainLevel == null ? Optional.empty() : Optional.ofNullable(this.audioGainLevel);
+        return Optional.ofNullable(this.audioGainLevel);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="end")
-      private final @Nullable String end;
+    private @Nullable String end;
 
     public Optional<String> end() {
-        return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fadeInDuration")
-      private final @Nullable String fadeInDuration;
+    private @Nullable String fadeInDuration;
 
     public Optional<String> fadeInDuration() {
-        return this.fadeInDuration == null ? Optional.empty() : Optional.ofNullable(this.fadeInDuration);
+        return Optional.ofNullable(this.fadeInDuration);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fadeOutDuration")
-      private final @Nullable String fadeOutDuration;
+    private @Nullable String fadeOutDuration;
 
     public Optional<String> fadeOutDuration() {
-        return this.fadeOutDuration == null ? Optional.empty() : Optional.ofNullable(this.fadeOutDuration);
+        return Optional.ofNullable(this.fadeOutDuration);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="inputLabel", required=true)
-      private final String inputLabel;
+    private String inputLabel;
 
     public String inputLabel() {
         return this.inputLabel;
@@ -81,7 +81,7 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -92,100 +92,82 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="start")
-      private final @Nullable String start;
+    private @Nullable String start;
 
     public Optional<String> start() {
-        return this.start == null ? Optional.empty() : Optional.ofNullable(this.start);
+        return Optional.ofNullable(this.start);
     }
 
-    public AudioOverlayResponse(
-        @Nullable Double audioGainLevel,
-        @Nullable String end,
-        @Nullable String fadeInDuration,
-        @Nullable String fadeOutDuration,
-        String inputLabel,
-        String odataType,
-        @Nullable String start) {
-        this.audioGainLevel = audioGainLevel;
-        this.end = end;
-        this.fadeInDuration = fadeInDuration;
-        this.fadeOutDuration = fadeOutDuration;
-        this.inputLabel = Objects.requireNonNull(inputLabel, "expected parameter 'inputLabel' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.start = start;
-    }
+    private AudioOverlayResponse() {}
 
-    private AudioOverlayResponse() {
-        this.audioGainLevel = null;
-        this.end = null;
-        this.fadeInDuration = null;
-        this.fadeOutDuration = null;
-        this.inputLabel = null;
-        this.odataType = null;
-        this.start = null;
+    private AudioOverlayResponse(AudioOverlayResponse $) {
+        this.audioGainLevel = $.audioGainLevel;
+        this.end = $.end;
+        this.fadeInDuration = $.fadeInDuration;
+        this.fadeOutDuration = $.fadeOutDuration;
+        this.inputLabel = $.inputLabel;
+        this.odataType = $.odataType;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioOverlayResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double audioGainLevel;
-        private @Nullable String end;
-        private @Nullable String fadeInDuration;
-        private @Nullable String fadeOutDuration;
-        private String inputLabel;
-        private String odataType;
-        private @Nullable String start;
+        private AudioOverlayResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioOverlayResponse();
         }
 
         public Builder(AudioOverlayResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioGainLevel = defaults.audioGainLevel;
-    	      this.end = defaults.end;
-    	      this.fadeInDuration = defaults.fadeInDuration;
-    	      this.fadeOutDuration = defaults.fadeOutDuration;
-    	      this.inputLabel = defaults.inputLabel;
-    	      this.odataType = defaults.odataType;
-    	      this.start = defaults.start;
+            $ = new AudioOverlayResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audioGainLevel(@Nullable Double audioGainLevel) {
-            this.audioGainLevel = audioGainLevel;
+            $.audioGainLevel = audioGainLevel;
             return this;
         }
+
         public Builder end(@Nullable String end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
+
         public Builder fadeInDuration(@Nullable String fadeInDuration) {
-            this.fadeInDuration = fadeInDuration;
+            $.fadeInDuration = fadeInDuration;
             return this;
         }
+
         public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
-            this.fadeOutDuration = fadeOutDuration;
+            $.fadeOutDuration = fadeOutDuration;
             return this;
         }
+
         public Builder inputLabel(String inputLabel) {
-            this.inputLabel = Objects.requireNonNull(inputLabel);
+            $.inputLabel = inputLabel;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder start(@Nullable String start) {
-            this.start = start;
+            $.start = start;
             return this;
-        }        public AudioOverlayResponse build() {
-            return new AudioOverlayResponse(audioGainLevel, end, fadeInDuration, fadeOutDuration, inputLabel, odataType, start);
+        }
+
+        public AudioOverlayResponse build() {
+            $.inputLabel = Objects.requireNonNull($.inputLabel, "expected parameter 'inputLabel' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

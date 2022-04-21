@@ -20,7 +20,7 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="meshName", required=true)
-      private final String meshName;
+    private String meshName;
 
     public String meshName() {
         return this.meshName;
@@ -31,10 +31,10 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="meshOwner")
-      private final @Nullable String meshOwner;
+    private @Nullable String meshOwner;
 
     public Optional<String> meshOwner() {
-        return this.meshOwner == null ? Optional.empty() : Optional.ofNullable(this.meshOwner);
+        return Optional.ofNullable(this.meshOwner);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -53,73 +53,64 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetVirtualServiceArgs(
-        String meshName,
-        @Nullable String meshOwner,
-        String name,
-        @Nullable Map<String,String> tags) {
-        this.meshName = Objects.requireNonNull(meshName, "expected parameter 'meshName' to be non-null");
-        this.meshOwner = meshOwner;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tags = tags;
-    }
+    private GetVirtualServiceArgs() {}
 
-    private GetVirtualServiceArgs() {
-        this.meshName = null;
-        this.meshOwner = null;
-        this.name = null;
-        this.tags = Map.of();
+    private GetVirtualServiceArgs(GetVirtualServiceArgs $) {
+        this.meshName = $.meshName;
+        this.meshOwner = $.meshOwner;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String meshName;
-        private @Nullable String meshOwner;
-        private String name;
-        private @Nullable Map<String,String> tags;
+        private GetVirtualServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualServiceArgs();
         }
 
         public Builder(GetVirtualServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.meshName = defaults.meshName;
-    	      this.meshOwner = defaults.meshOwner;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetVirtualServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder meshName(String meshName) {
-            this.meshName = Objects.requireNonNull(meshName);
+            $.meshName = meshName;
             return this;
         }
+
         public Builder meshOwner(@Nullable String meshOwner) {
-            this.meshOwner = meshOwner;
+            $.meshOwner = meshOwner;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetVirtualServiceArgs build() {
-            return new GetVirtualServiceArgs(meshName, meshOwner, name, tags);
+        }
+
+        public GetVirtualServiceArgs build() {
+            $.meshName = Objects.requireNonNull($.meshName, "expected parameter 'meshName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

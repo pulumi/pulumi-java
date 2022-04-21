@@ -5,10 +5,10 @@ package com.pulumi.googlenative.sqladmin_v1beta4;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.SqlServerDatabaseDetailsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="charset")
-      private final @Nullable Output<String> charset;
+    private @Nullable Output<String> charset;
 
-    public Output<String> charset() {
-        return this.charset == null ? Codegen.empty() : this.charset;
+    public Optional<Output<String>> charset() {
+        return Optional.ofNullable(this.charset);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collation")
-      private final @Nullable Output<String> collation;
+    private @Nullable Output<String> collation;
 
-    public Output<String> collation() {
-        return this.collation == null ? Codegen.empty() : this.collation;
+    public Optional<Output<String>> collation() {
+        return Optional.ofNullable(this.collation);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
@@ -54,10 +54,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -87,148 +87,126 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     @Import(name="sqlserverDatabaseDetails")
-      private final @Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
+    private @Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
 
-    public Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails() {
-        return this.sqlserverDatabaseDetails == null ? Codegen.empty() : this.sqlserverDatabaseDetails;
+    public Optional<Output<SqlServerDatabaseDetailsArgs>> sqlserverDatabaseDetails() {
+        return Optional.ofNullable(this.sqlserverDatabaseDetails);
     }
 
-    public DatabaseArgs(
-        @Nullable Output<String> charset,
-        @Nullable Output<String> collation,
-        Output<String> instance,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails) {
-        this.charset = charset;
-        this.collation = collation;
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.kind = kind;
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.sqlserverDatabaseDetails = sqlserverDatabaseDetails;
-    }
+    private DatabaseArgs() {}
 
-    private DatabaseArgs() {
-        this.charset = Codegen.empty();
-        this.collation = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.sqlserverDatabaseDetails = Codegen.empty();
+    private DatabaseArgs(DatabaseArgs $) {
+        this.charset = $.charset;
+        this.collation = $.collation;
+        this.instance = $.instance;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.sqlserverDatabaseDetails = $.sqlserverDatabaseDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> charset;
-        private @Nullable Output<String> collation;
-        private Output<String> instance;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
+        private DatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseArgs();
         }
 
         public Builder(DatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charset = defaults.charset;
-    	      this.collation = defaults.collation;
-    	      this.instance = defaults.instance;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.sqlserverDatabaseDetails = defaults.sqlserverDatabaseDetails;
+            $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder charset(@Nullable Output<String> charset) {
-            this.charset = charset;
+            $.charset = charset;
             return this;
         }
-        public Builder charset(@Nullable String charset) {
-            this.charset = Codegen.ofNullable(charset);
-            return this;
+
+        public Builder charset(String charset) {
+            return charset(Output.of(charset));
         }
+
         public Builder collation(@Nullable Output<String> collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
-        public Builder collation(@Nullable String collation) {
-            this.collation = Codegen.ofNullable(collation);
-            return this;
+
+        public Builder collation(String collation) {
+            return collation(Output.of(collation));
         }
+
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder sqlserverDatabaseDetails(@Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails) {
-            this.sqlserverDatabaseDetails = sqlserverDatabaseDetails;
+            $.sqlserverDatabaseDetails = sqlserverDatabaseDetails;
             return this;
         }
-        public Builder sqlserverDatabaseDetails(@Nullable SqlServerDatabaseDetailsArgs sqlserverDatabaseDetails) {
-            this.sqlserverDatabaseDetails = Codegen.ofNullable(sqlserverDatabaseDetails);
-            return this;
-        }        public DatabaseArgs build() {
-            return new DatabaseArgs(charset, collation, instance, kind, name, project, selfLink, sqlserverDatabaseDetails);
+
+        public Builder sqlserverDatabaseDetails(SqlServerDatabaseDetailsArgs sqlserverDatabaseDetails) {
+            return sqlserverDatabaseDetails(Output.of(sqlserverDatabaseDetails));
+        }
+
+        public DatabaseArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            return $;
         }
     }
+
 }

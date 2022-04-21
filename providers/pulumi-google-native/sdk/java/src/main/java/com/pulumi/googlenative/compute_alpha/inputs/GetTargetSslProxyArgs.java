@@ -15,62 +15,58 @@ public final class GetTargetSslProxyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetTargetSslProxyArgs Empty = new GetTargetSslProxyArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="targetSslProxy", required=true)
-      private final String targetSslProxy;
+    private String targetSslProxy;
 
     public String targetSslProxy() {
         return this.targetSslProxy;
     }
 
-    public GetTargetSslProxyArgs(
-        @Nullable String project,
-        String targetSslProxy) {
-        this.project = project;
-        this.targetSslProxy = Objects.requireNonNull(targetSslProxy, "expected parameter 'targetSslProxy' to be non-null");
-    }
+    private GetTargetSslProxyArgs() {}
 
-    private GetTargetSslProxyArgs() {
-        this.project = null;
-        this.targetSslProxy = null;
+    private GetTargetSslProxyArgs(GetTargetSslProxyArgs $) {
+        this.project = $.project;
+        this.targetSslProxy = $.targetSslProxy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetSslProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String targetSslProxy;
+        private GetTargetSslProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetSslProxyArgs();
         }
 
         public Builder(GetTargetSslProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.targetSslProxy = defaults.targetSslProxy;
+            $ = new GetTargetSslProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder targetSslProxy(String targetSslProxy) {
-            this.targetSslProxy = Objects.requireNonNull(targetSslProxy);
+            $.targetSslProxy = targetSslProxy;
             return this;
-        }        public GetTargetSslProxyArgs build() {
-            return new GetTargetSslProxyArgs(project, targetSslProxy);
+        }
+
+        public GetTargetSslProxyArgs build() {
+            $.targetSslProxy = Objects.requireNonNull($.targetSslProxy, "expected parameter 'targetSslProxy' to be non-null");
+            return $;
         }
     }
+
 }

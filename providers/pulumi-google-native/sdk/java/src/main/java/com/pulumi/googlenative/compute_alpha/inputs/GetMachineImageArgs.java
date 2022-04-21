@@ -15,62 +15,58 @@ public final class GetMachineImageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMachineImageArgs Empty = new GetMachineImageArgs();
 
     @Import(name="machineImage", required=true)
-      private final String machineImage;
+    private String machineImage;
 
     public String machineImage() {
         return this.machineImage;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetMachineImageArgs(
-        String machineImage,
-        @Nullable String project) {
-        this.machineImage = Objects.requireNonNull(machineImage, "expected parameter 'machineImage' to be non-null");
-        this.project = project;
-    }
+    private GetMachineImageArgs() {}
 
-    private GetMachineImageArgs() {
-        this.machineImage = null;
-        this.project = null;
+    private GetMachineImageArgs(GetMachineImageArgs $) {
+        this.machineImage = $.machineImage;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMachineImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String machineImage;
-        private @Nullable String project;
+        private GetMachineImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMachineImageArgs();
         }
 
         public Builder(GetMachineImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.machineImage = defaults.machineImage;
-    	      this.project = defaults.project;
+            $ = new GetMachineImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder machineImage(String machineImage) {
-            this.machineImage = Objects.requireNonNull(machineImage);
+            $.machineImage = machineImage;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetMachineImageArgs build() {
-            return new GetMachineImageArgs(machineImage, project);
+        }
+
+        public GetMachineImageArgs build() {
+            $.machineImage = Objects.requireNonNull($.machineImage, "expected parameter 'machineImage' to be non-null");
+            return $;
         }
     }
+
 }

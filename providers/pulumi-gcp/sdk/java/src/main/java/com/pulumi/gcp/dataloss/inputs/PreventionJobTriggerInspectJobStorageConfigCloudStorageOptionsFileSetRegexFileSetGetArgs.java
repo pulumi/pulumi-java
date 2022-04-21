@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
@@ -33,10 +33,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @Import(name="excludeRegexes")
-      private final @Nullable Output<List<String>> excludeRegexes;
+    private @Nullable Output<List<String>> excludeRegexes;
 
-    public Output<List<String>> excludeRegexes() {
-        return this.excludeRegexes == null ? Codegen.empty() : this.excludeRegexes;
+    public Optional<Output<List<String>>> excludeRegexes() {
+        return Optional.ofNullable(this.excludeRegexes);
     }
 
     /**
@@ -47,82 +47,77 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @Import(name="includeRegexes")
-      private final @Nullable Output<List<String>> includeRegexes;
+    private @Nullable Output<List<String>> includeRegexes;
 
-    public Output<List<String>> includeRegexes() {
-        return this.includeRegexes == null ? Codegen.empty() : this.includeRegexes;
+    public Optional<Output<List<String>>> includeRegexes() {
+        return Optional.ofNullable(this.includeRegexes);
     }
 
-    public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs(
-        Output<String> bucketName,
-        @Nullable Output<List<String>> excludeRegexes,
-        @Nullable Output<List<String>> includeRegexes) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.excludeRegexes = excludeRegexes;
-        this.includeRegexes = includeRegexes;
-    }
+    private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs() {}
 
-    private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs() {
-        this.bucketName = Codegen.empty();
-        this.excludeRegexes = Codegen.empty();
-        this.includeRegexes = Codegen.empty();
+    private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs $) {
+        this.bucketName = $.bucketName;
+        this.excludeRegexes = $.excludeRegexes;
+        this.includeRegexes = $.includeRegexes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketName;
-        private @Nullable Output<List<String>> excludeRegexes;
-        private @Nullable Output<List<String>> includeRegexes;
+        private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs();
         }
 
         public Builder(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.excludeRegexes = defaults.excludeRegexes;
-    	      this.includeRegexes = defaults.includeRegexes;
+            $ = new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder excludeRegexes(@Nullable Output<List<String>> excludeRegexes) {
-            this.excludeRegexes = excludeRegexes;
+            $.excludeRegexes = excludeRegexes;
             return this;
         }
-        public Builder excludeRegexes(@Nullable List<String> excludeRegexes) {
-            this.excludeRegexes = Codegen.ofNullable(excludeRegexes);
-            return this;
+
+        public Builder excludeRegexes(List<String> excludeRegexes) {
+            return excludeRegexes(Output.of(excludeRegexes));
         }
+
         public Builder excludeRegexes(String... excludeRegexes) {
             return excludeRegexes(List.of(excludeRegexes));
         }
+
         public Builder includeRegexes(@Nullable Output<List<String>> includeRegexes) {
-            this.includeRegexes = includeRegexes;
+            $.includeRegexes = includeRegexes;
             return this;
         }
-        public Builder includeRegexes(@Nullable List<String> includeRegexes) {
-            this.includeRegexes = Codegen.ofNullable(includeRegexes);
-            return this;
+
+        public Builder includeRegexes(List<String> includeRegexes) {
+            return includeRegexes(Output.of(includeRegexes));
         }
+
         public Builder includeRegexes(String... includeRegexes) {
             return includeRegexes(List.of(includeRegexes));
-        }        public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs build() {
-            return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs(bucketName, excludeRegexes, includeRegexes);
+        }
+
+        public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            return $;
         }
     }
+
 }

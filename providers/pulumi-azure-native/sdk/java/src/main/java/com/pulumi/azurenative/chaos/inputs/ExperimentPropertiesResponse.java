@@ -26,7 +26,7 @@ public final class ExperimentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="selectors", required=true)
-      private final List<SelectorResponse> selectors;
+    private List<SelectorResponse> selectors;
 
     public List<SelectorResponse> selectors() {
         return this.selectors;
@@ -37,10 +37,10 @@ public final class ExperimentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="startOnCreation")
-      private final @Nullable Boolean startOnCreation;
+    private @Nullable Boolean startOnCreation;
 
     public Optional<Boolean> startOnCreation() {
-        return this.startOnCreation == null ? Optional.empty() : Optional.ofNullable(this.startOnCreation);
+        return Optional.ofNullable(this.startOnCreation);
     }
 
     /**
@@ -48,70 +48,66 @@ public final class ExperimentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="steps", required=true)
-      private final List<StepResponse> steps;
+    private List<StepResponse> steps;
 
     public List<StepResponse> steps() {
         return this.steps;
     }
 
-    public ExperimentPropertiesResponse(
-        List<SelectorResponse> selectors,
-        @Nullable Boolean startOnCreation,
-        List<StepResponse> steps) {
-        this.selectors = Objects.requireNonNull(selectors, "expected parameter 'selectors' to be non-null");
-        this.startOnCreation = startOnCreation;
-        this.steps = Objects.requireNonNull(steps, "expected parameter 'steps' to be non-null");
-    }
+    private ExperimentPropertiesResponse() {}
 
-    private ExperimentPropertiesResponse() {
-        this.selectors = List.of();
-        this.startOnCreation = null;
-        this.steps = List.of();
+    private ExperimentPropertiesResponse(ExperimentPropertiesResponse $) {
+        this.selectors = $.selectors;
+        this.startOnCreation = $.startOnCreation;
+        this.steps = $.steps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SelectorResponse> selectors;
-        private @Nullable Boolean startOnCreation;
-        private List<StepResponse> steps;
+        private ExperimentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentPropertiesResponse();
         }
 
         public Builder(ExperimentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.selectors = defaults.selectors;
-    	      this.startOnCreation = defaults.startOnCreation;
-    	      this.steps = defaults.steps;
+            $ = new ExperimentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder selectors(List<SelectorResponse> selectors) {
-            this.selectors = Objects.requireNonNull(selectors);
+            $.selectors = selectors;
             return this;
         }
+
         public Builder selectors(SelectorResponse... selectors) {
             return selectors(List.of(selectors));
         }
+
         public Builder startOnCreation(@Nullable Boolean startOnCreation) {
-            this.startOnCreation = startOnCreation;
+            $.startOnCreation = startOnCreation;
             return this;
         }
+
         public Builder steps(List<StepResponse> steps) {
-            this.steps = Objects.requireNonNull(steps);
+            $.steps = steps;
             return this;
         }
+
         public Builder steps(StepResponse... steps) {
             return steps(List.of(steps));
-        }        public ExperimentPropertiesResponse build() {
-            return new ExperimentPropertiesResponse(selectors, startOnCreation, steps);
+        }
+
+        public ExperimentPropertiesResponse build() {
+            $.selectors = Objects.requireNonNull($.selectors, "expected parameter 'selectors' to be non-null");
+            $.steps = Objects.requireNonNull($.steps, "expected parameter 'steps' to be non-null");
+            return $;
         }
     }
+
 }

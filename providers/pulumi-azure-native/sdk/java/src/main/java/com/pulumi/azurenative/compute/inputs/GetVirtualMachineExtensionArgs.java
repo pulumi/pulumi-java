@@ -19,10 +19,10 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="vmExtensionName", required=true)
-      private final String vmExtensionName;
+    private String vmExtensionName;
 
     public String vmExtensionName() {
         return this.vmExtensionName;
@@ -52,73 +52,65 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="vmName", required=true)
-      private final String vmName;
+    private String vmName;
 
     public String vmName() {
         return this.vmName;
     }
 
-    public GetVirtualMachineExtensionArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String vmExtensionName,
-        String vmName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vmExtensionName = Objects.requireNonNull(vmExtensionName, "expected parameter 'vmExtensionName' to be non-null");
-        this.vmName = Objects.requireNonNull(vmName, "expected parameter 'vmName' to be non-null");
-    }
+    private GetVirtualMachineExtensionArgs() {}
 
-    private GetVirtualMachineExtensionArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.vmExtensionName = null;
-        this.vmName = null;
+    private GetVirtualMachineExtensionArgs(GetVirtualMachineExtensionArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vmExtensionName = $.vmExtensionName;
+        this.vmName = $.vmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualMachineExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String vmExtensionName;
-        private String vmName;
+        private GetVirtualMachineExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualMachineExtensionArgs();
         }
 
         public Builder(GetVirtualMachineExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vmExtensionName = defaults.vmExtensionName;
-    	      this.vmName = defaults.vmName;
+            $ = new GetVirtualMachineExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vmExtensionName(String vmExtensionName) {
-            this.vmExtensionName = Objects.requireNonNull(vmExtensionName);
+            $.vmExtensionName = vmExtensionName;
             return this;
         }
+
         public Builder vmName(String vmName) {
-            this.vmName = Objects.requireNonNull(vmName);
+            $.vmName = vmName;
             return this;
-        }        public GetVirtualMachineExtensionArgs build() {
-            return new GetVirtualMachineExtensionArgs(expand, resourceGroupName, vmExtensionName, vmName);
+        }
+
+        public GetVirtualMachineExtensionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmExtensionName = Objects.requireNonNull($.vmExtensionName, "expected parameter 'vmExtensionName' to be non-null");
+            $.vmName = Objects.requireNonNull($.vmName, "expected parameter 'vmName' to be non-null");
+            return $;
         }
     }
+
 }

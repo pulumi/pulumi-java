@@ -6,11 +6,11 @@ package com.pulumi.azurenative.servicebus;
 import com.pulumi.azurenative.servicebus.enums.EntityStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoDeleteOnIdle")
-      private final @Nullable Output<String> autoDeleteOnIdle;
+    private @Nullable Output<String> autoDeleteOnIdle;
 
-    public Output<String> autoDeleteOnIdle() {
-        return this.autoDeleteOnIdle == null ? Codegen.empty() : this.autoDeleteOnIdle;
+    public Optional<Output<String>> autoDeleteOnIdle() {
+        return Optional.ofNullable(this.autoDeleteOnIdle);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultMessageTimeToLive")
-      private final @Nullable Output<String> defaultMessageTimeToLive;
+    private @Nullable Output<String> defaultMessageTimeToLive;
 
-    public Output<String> defaultMessageTimeToLive() {
-        return this.defaultMessageTimeToLive == null ? Codegen.empty() : this.defaultMessageTimeToLive;
+    public Optional<Output<String>> defaultMessageTimeToLive() {
+        return Optional.ofNullable(this.defaultMessageTimeToLive);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="duplicateDetectionHistoryTimeWindow")
-      private final @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
+    private @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
 
-    public Output<String> duplicateDetectionHistoryTimeWindow() {
-        return this.duplicateDetectionHistoryTimeWindow == null ? Codegen.empty() : this.duplicateDetectionHistoryTimeWindow;
+    public Optional<Output<String>> duplicateDetectionHistoryTimeWindow() {
+        return Optional.ofNullable(this.duplicateDetectionHistoryTimeWindow);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableBatchedOperations")
-      private final @Nullable Output<Boolean> enableBatchedOperations;
+    private @Nullable Output<Boolean> enableBatchedOperations;
 
-    public Output<Boolean> enableBatchedOperations() {
-        return this.enableBatchedOperations == null ? Codegen.empty() : this.enableBatchedOperations;
+    public Optional<Output<Boolean>> enableBatchedOperations() {
+        return Optional.ofNullable(this.enableBatchedOperations);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableExpress")
-      private final @Nullable Output<Boolean> enableExpress;
+    private @Nullable Output<Boolean> enableExpress;
 
-    public Output<Boolean> enableExpress() {
-        return this.enableExpress == null ? Codegen.empty() : this.enableExpress;
+    public Optional<Output<Boolean>> enableExpress() {
+        return Optional.ofNullable(this.enableExpress);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enablePartitioning")
-      private final @Nullable Output<Boolean> enablePartitioning;
+    private @Nullable Output<Boolean> enablePartitioning;
 
-    public Output<Boolean> enablePartitioning() {
-        return this.enablePartitioning == null ? Codegen.empty() : this.enablePartitioning;
+    public Optional<Output<Boolean>> enablePartitioning() {
+        return Optional.ofNullable(this.enablePartitioning);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxSizeInMegabytes")
-      private final @Nullable Output<Integer> maxSizeInMegabytes;
+    private @Nullable Output<Integer> maxSizeInMegabytes;
 
-    public Output<Integer> maxSizeInMegabytes() {
-        return this.maxSizeInMegabytes == null ? Codegen.empty() : this.maxSizeInMegabytes;
+    public Optional<Output<Integer>> maxSizeInMegabytes() {
+        return Optional.ofNullable(this.maxSizeInMegabytes);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -111,10 +111,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requiresDuplicateDetection")
-      private final @Nullable Output<Boolean> requiresDuplicateDetection;
+    private @Nullable Output<Boolean> requiresDuplicateDetection;
 
-    public Output<Boolean> requiresDuplicateDetection() {
-        return this.requiresDuplicateDetection == null ? Codegen.empty() : this.requiresDuplicateDetection;
+    public Optional<Output<Boolean>> requiresDuplicateDetection() {
+        return Optional.ofNullable(this.requiresDuplicateDetection);
     }
 
     /**
@@ -122,7 +122,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -133,10 +133,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<EntityStatus> status;
+    private @Nullable Output<EntityStatus> status;
 
-    public Output<EntityStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<EntityStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportOrdering")
-      private final @Nullable Output<Boolean> supportOrdering;
+    private @Nullable Output<Boolean> supportOrdering;
 
-    public Output<Boolean> supportOrdering() {
-        return this.supportOrdering == null ? Codegen.empty() : this.supportOrdering;
+    public Optional<Output<Boolean>> supportOrdering() {
+        return Optional.ofNullable(this.supportOrdering);
     }
 
     /**
@@ -155,206 +155,170 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topicName")
-      private final @Nullable Output<String> topicName;
+    private @Nullable Output<String> topicName;
 
-    public Output<String> topicName() {
-        return this.topicName == null ? Codegen.empty() : this.topicName;
+    public Optional<Output<String>> topicName() {
+        return Optional.ofNullable(this.topicName);
     }
 
-    public TopicArgs(
-        @Nullable Output<String> autoDeleteOnIdle,
-        @Nullable Output<String> defaultMessageTimeToLive,
-        @Nullable Output<String> duplicateDetectionHistoryTimeWindow,
-        @Nullable Output<Boolean> enableBatchedOperations,
-        @Nullable Output<Boolean> enableExpress,
-        @Nullable Output<Boolean> enablePartitioning,
-        @Nullable Output<Integer> maxSizeInMegabytes,
-        Output<String> namespaceName,
-        @Nullable Output<Boolean> requiresDuplicateDetection,
-        Output<String> resourceGroupName,
-        @Nullable Output<EntityStatus> status,
-        @Nullable Output<Boolean> supportOrdering,
-        @Nullable Output<String> topicName) {
-        this.autoDeleteOnIdle = autoDeleteOnIdle;
-        this.defaultMessageTimeToLive = defaultMessageTimeToLive;
-        this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
-        this.enableBatchedOperations = enableBatchedOperations;
-        this.enableExpress = enableExpress;
-        this.enablePartitioning = enablePartitioning;
-        this.maxSizeInMegabytes = maxSizeInMegabytes;
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.requiresDuplicateDetection = requiresDuplicateDetection;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.status = status;
-        this.supportOrdering = supportOrdering;
-        this.topicName = topicName;
-    }
+    private TopicArgs() {}
 
-    private TopicArgs() {
-        this.autoDeleteOnIdle = Codegen.empty();
-        this.defaultMessageTimeToLive = Codegen.empty();
-        this.duplicateDetectionHistoryTimeWindow = Codegen.empty();
-        this.enableBatchedOperations = Codegen.empty();
-        this.enableExpress = Codegen.empty();
-        this.enablePartitioning = Codegen.empty();
-        this.maxSizeInMegabytes = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.requiresDuplicateDetection = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.status = Codegen.empty();
-        this.supportOrdering = Codegen.empty();
-        this.topicName = Codegen.empty();
+    private TopicArgs(TopicArgs $) {
+        this.autoDeleteOnIdle = $.autoDeleteOnIdle;
+        this.defaultMessageTimeToLive = $.defaultMessageTimeToLive;
+        this.duplicateDetectionHistoryTimeWindow = $.duplicateDetectionHistoryTimeWindow;
+        this.enableBatchedOperations = $.enableBatchedOperations;
+        this.enableExpress = $.enableExpress;
+        this.enablePartitioning = $.enablePartitioning;
+        this.maxSizeInMegabytes = $.maxSizeInMegabytes;
+        this.namespaceName = $.namespaceName;
+        this.requiresDuplicateDetection = $.requiresDuplicateDetection;
+        this.resourceGroupName = $.resourceGroupName;
+        this.status = $.status;
+        this.supportOrdering = $.supportOrdering;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoDeleteOnIdle;
-        private @Nullable Output<String> defaultMessageTimeToLive;
-        private @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
-        private @Nullable Output<Boolean> enableBatchedOperations;
-        private @Nullable Output<Boolean> enableExpress;
-        private @Nullable Output<Boolean> enablePartitioning;
-        private @Nullable Output<Integer> maxSizeInMegabytes;
-        private Output<String> namespaceName;
-        private @Nullable Output<Boolean> requiresDuplicateDetection;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<EntityStatus> status;
-        private @Nullable Output<Boolean> supportOrdering;
-        private @Nullable Output<String> topicName;
+        private TopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicArgs();
         }
 
         public Builder(TopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDeleteOnIdle = defaults.autoDeleteOnIdle;
-    	      this.defaultMessageTimeToLive = defaults.defaultMessageTimeToLive;
-    	      this.duplicateDetectionHistoryTimeWindow = defaults.duplicateDetectionHistoryTimeWindow;
-    	      this.enableBatchedOperations = defaults.enableBatchedOperations;
-    	      this.enableExpress = defaults.enableExpress;
-    	      this.enablePartitioning = defaults.enablePartitioning;
-    	      this.maxSizeInMegabytes = defaults.maxSizeInMegabytes;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.requiresDuplicateDetection = defaults.requiresDuplicateDetection;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.status = defaults.status;
-    	      this.supportOrdering = defaults.supportOrdering;
-    	      this.topicName = defaults.topicName;
+            $ = new TopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDeleteOnIdle(@Nullable Output<String> autoDeleteOnIdle) {
-            this.autoDeleteOnIdle = autoDeleteOnIdle;
+            $.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
-        public Builder autoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
-            this.autoDeleteOnIdle = Codegen.ofNullable(autoDeleteOnIdle);
-            return this;
+
+        public Builder autoDeleteOnIdle(String autoDeleteOnIdle) {
+            return autoDeleteOnIdle(Output.of(autoDeleteOnIdle));
         }
+
         public Builder defaultMessageTimeToLive(@Nullable Output<String> defaultMessageTimeToLive) {
-            this.defaultMessageTimeToLive = defaultMessageTimeToLive;
+            $.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
-        public Builder defaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
-            this.defaultMessageTimeToLive = Codegen.ofNullable(defaultMessageTimeToLive);
-            return this;
+
+        public Builder defaultMessageTimeToLive(String defaultMessageTimeToLive) {
+            return defaultMessageTimeToLive(Output.of(defaultMessageTimeToLive));
         }
+
         public Builder duplicateDetectionHistoryTimeWindow(@Nullable Output<String> duplicateDetectionHistoryTimeWindow) {
-            this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
+            $.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
-        public Builder duplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
-            this.duplicateDetectionHistoryTimeWindow = Codegen.ofNullable(duplicateDetectionHistoryTimeWindow);
-            return this;
+
+        public Builder duplicateDetectionHistoryTimeWindow(String duplicateDetectionHistoryTimeWindow) {
+            return duplicateDetectionHistoryTimeWindow(Output.of(duplicateDetectionHistoryTimeWindow));
         }
+
         public Builder enableBatchedOperations(@Nullable Output<Boolean> enableBatchedOperations) {
-            this.enableBatchedOperations = enableBatchedOperations;
+            $.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
-        public Builder enableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
-            this.enableBatchedOperations = Codegen.ofNullable(enableBatchedOperations);
-            return this;
+
+        public Builder enableBatchedOperations(Boolean enableBatchedOperations) {
+            return enableBatchedOperations(Output.of(enableBatchedOperations));
         }
+
         public Builder enableExpress(@Nullable Output<Boolean> enableExpress) {
-            this.enableExpress = enableExpress;
+            $.enableExpress = enableExpress;
             return this;
         }
-        public Builder enableExpress(@Nullable Boolean enableExpress) {
-            this.enableExpress = Codegen.ofNullable(enableExpress);
-            return this;
+
+        public Builder enableExpress(Boolean enableExpress) {
+            return enableExpress(Output.of(enableExpress));
         }
+
         public Builder enablePartitioning(@Nullable Output<Boolean> enablePartitioning) {
-            this.enablePartitioning = enablePartitioning;
+            $.enablePartitioning = enablePartitioning;
             return this;
         }
-        public Builder enablePartitioning(@Nullable Boolean enablePartitioning) {
-            this.enablePartitioning = Codegen.ofNullable(enablePartitioning);
-            return this;
+
+        public Builder enablePartitioning(Boolean enablePartitioning) {
+            return enablePartitioning(Output.of(enablePartitioning));
         }
+
         public Builder maxSizeInMegabytes(@Nullable Output<Integer> maxSizeInMegabytes) {
-            this.maxSizeInMegabytes = maxSizeInMegabytes;
+            $.maxSizeInMegabytes = maxSizeInMegabytes;
             return this;
         }
-        public Builder maxSizeInMegabytes(@Nullable Integer maxSizeInMegabytes) {
-            this.maxSizeInMegabytes = Codegen.ofNullable(maxSizeInMegabytes);
-            return this;
+
+        public Builder maxSizeInMegabytes(Integer maxSizeInMegabytes) {
+            return maxSizeInMegabytes(Output.of(maxSizeInMegabytes));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder requiresDuplicateDetection(@Nullable Output<Boolean> requiresDuplicateDetection) {
-            this.requiresDuplicateDetection = requiresDuplicateDetection;
+            $.requiresDuplicateDetection = requiresDuplicateDetection;
             return this;
         }
-        public Builder requiresDuplicateDetection(@Nullable Boolean requiresDuplicateDetection) {
-            this.requiresDuplicateDetection = Codegen.ofNullable(requiresDuplicateDetection);
-            return this;
+
+        public Builder requiresDuplicateDetection(Boolean requiresDuplicateDetection) {
+            return requiresDuplicateDetection(Output.of(requiresDuplicateDetection));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder status(@Nullable Output<EntityStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable EntityStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(EntityStatus status) {
+            return status(Output.of(status));
         }
+
         public Builder supportOrdering(@Nullable Output<Boolean> supportOrdering) {
-            this.supportOrdering = supportOrdering;
+            $.supportOrdering = supportOrdering;
             return this;
         }
-        public Builder supportOrdering(@Nullable Boolean supportOrdering) {
-            this.supportOrdering = Codegen.ofNullable(supportOrdering);
-            return this;
+
+        public Builder supportOrdering(Boolean supportOrdering) {
+            return supportOrdering(Output.of(supportOrdering));
         }
+
         public Builder topicName(@Nullable Output<String> topicName) {
-            this.topicName = topicName;
+            $.topicName = topicName;
             return this;
         }
-        public Builder topicName(@Nullable String topicName) {
-            this.topicName = Codegen.ofNullable(topicName);
-            return this;
-        }        public TopicArgs build() {
-            return new TopicArgs(autoDeleteOnIdle, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, enableExpress, enablePartitioning, maxSizeInMegabytes, namespaceName, requiresDuplicateDetection, resourceGroupName, status, supportOrdering, topicName);
+
+        public Builder topicName(String topicName) {
+            return topicName(Output.of(topicName));
+        }
+
+        public TopicArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="additionalLatencyMilliseconds")
-      private final @Nullable Output<Integer> additionalLatencyMilliseconds;
+    private @Nullable Output<Integer> additionalLatencyMilliseconds;
 
-    public Output<Integer> additionalLatencyMilliseconds() {
-        return this.additionalLatencyMilliseconds == null ? Codegen.empty() : this.additionalLatencyMilliseconds;
+    public Optional<Output<Integer>> additionalLatencyMilliseconds() {
+        return Optional.ofNullable(this.additionalLatencyMilliseconds);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="sampleSize")
-      private final @Nullable Output<Integer> sampleSize;
+    private @Nullable Output<Integer> sampleSize;
 
-    public Output<Integer> sampleSize() {
-        return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
+    public Optional<Output<Integer>> sampleSize() {
+        return Optional.ofNullable(this.sampleSize);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="successfulSamplesRequired")
-      private final @Nullable Output<Integer> successfulSamplesRequired;
+    private @Nullable Output<Integer> successfulSamplesRequired;
 
-    public Output<Integer> successfulSamplesRequired() {
-        return this.successfulSamplesRequired == null ? Codegen.empty() : this.successfulSamplesRequired;
+    public Optional<Output<Integer>> successfulSamplesRequired() {
+        return Optional.ofNullable(this.successfulSamplesRequired);
     }
 
-    public LoadBalancingSettingsModelArgs(
-        @Nullable Output<Integer> additionalLatencyMilliseconds,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> sampleSize,
-        @Nullable Output<Integer> successfulSamplesRequired) {
-        this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
-        this.id = id;
-        this.name = name;
-        this.sampleSize = sampleSize;
-        this.successfulSamplesRequired = successfulSamplesRequired;
-    }
+    private LoadBalancingSettingsModelArgs() {}
 
-    private LoadBalancingSettingsModelArgs() {
-        this.additionalLatencyMilliseconds = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.sampleSize = Codegen.empty();
-        this.successfulSamplesRequired = Codegen.empty();
+    private LoadBalancingSettingsModelArgs(LoadBalancingSettingsModelArgs $) {
+        this.additionalLatencyMilliseconds = $.additionalLatencyMilliseconds;
+        this.id = $.id;
+        this.name = $.name;
+        this.sampleSize = $.sampleSize;
+        this.successfulSamplesRequired = $.successfulSamplesRequired;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancingSettingsModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> additionalLatencyMilliseconds;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> sampleSize;
-        private @Nullable Output<Integer> successfulSamplesRequired;
+        private LoadBalancingSettingsModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancingSettingsModelArgs();
         }
 
         public Builder(LoadBalancingSettingsModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalLatencyMilliseconds = defaults.additionalLatencyMilliseconds;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.sampleSize = defaults.sampleSize;
-    	      this.successfulSamplesRequired = defaults.successfulSamplesRequired;
+            $ = new LoadBalancingSettingsModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalLatencyMilliseconds(@Nullable Output<Integer> additionalLatencyMilliseconds) {
-            this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
+            $.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
             return this;
         }
-        public Builder additionalLatencyMilliseconds(@Nullable Integer additionalLatencyMilliseconds) {
-            this.additionalLatencyMilliseconds = Codegen.ofNullable(additionalLatencyMilliseconds);
-            return this;
+
+        public Builder additionalLatencyMilliseconds(Integer additionalLatencyMilliseconds) {
+            return additionalLatencyMilliseconds(Output.of(additionalLatencyMilliseconds));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sampleSize(@Nullable Output<Integer> sampleSize) {
-            this.sampleSize = sampleSize;
+            $.sampleSize = sampleSize;
             return this;
         }
-        public Builder sampleSize(@Nullable Integer sampleSize) {
-            this.sampleSize = Codegen.ofNullable(sampleSize);
-            return this;
+
+        public Builder sampleSize(Integer sampleSize) {
+            return sampleSize(Output.of(sampleSize));
         }
+
         public Builder successfulSamplesRequired(@Nullable Output<Integer> successfulSamplesRequired) {
-            this.successfulSamplesRequired = successfulSamplesRequired;
+            $.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
-        public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
-            this.successfulSamplesRequired = Codegen.ofNullable(successfulSamplesRequired);
-            return this;
-        }        public LoadBalancingSettingsModelArgs build() {
-            return new LoadBalancingSettingsModelArgs(additionalLatencyMilliseconds, id, name, sampleSize, successfulSamplesRequired);
+
+        public Builder successfulSamplesRequired(Integer successfulSamplesRequired) {
+            return successfulSamplesRequired(Output.of(successfulSamplesRequired));
+        }
+
+        public LoadBalancingSettingsModelArgs build() {
+            return $;
         }
     }
+
 }

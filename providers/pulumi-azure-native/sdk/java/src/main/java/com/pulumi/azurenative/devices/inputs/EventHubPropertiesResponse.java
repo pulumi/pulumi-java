@@ -26,7 +26,7 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="endpoint", required=true)
-      private final String endpoint;
+    private String endpoint;
 
     public String endpoint() {
         return this.endpoint;
@@ -37,10 +37,10 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="partitionCount")
-      private final @Nullable Integer partitionCount;
+    private @Nullable Integer partitionCount;
 
     public Optional<Integer> partitionCount() {
-        return this.partitionCount == null ? Optional.empty() : Optional.ofNullable(this.partitionCount);
+        return Optional.ofNullable(this.partitionCount);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="partitionIds", required=true)
-      private final List<String> partitionIds;
+    private List<String> partitionIds;
 
     public List<String> partitionIds() {
         return this.partitionIds;
@@ -59,7 +59,7 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -70,85 +70,75 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="retentionTimeInDays")
-      private final @Nullable Double retentionTimeInDays;
+    private @Nullable Double retentionTimeInDays;
 
     public Optional<Double> retentionTimeInDays() {
-        return this.retentionTimeInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionTimeInDays);
+        return Optional.ofNullable(this.retentionTimeInDays);
     }
 
-    public EventHubPropertiesResponse(
-        String endpoint,
-        @Nullable Integer partitionCount,
-        List<String> partitionIds,
-        String path,
-        @Nullable Double retentionTimeInDays) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.partitionCount = partitionCount;
-        this.partitionIds = Objects.requireNonNull(partitionIds, "expected parameter 'partitionIds' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.retentionTimeInDays = retentionTimeInDays;
-    }
+    private EventHubPropertiesResponse() {}
 
-    private EventHubPropertiesResponse() {
-        this.endpoint = null;
-        this.partitionCount = null;
-        this.partitionIds = List.of();
-        this.path = null;
-        this.retentionTimeInDays = null;
+    private EventHubPropertiesResponse(EventHubPropertiesResponse $) {
+        this.endpoint = $.endpoint;
+        this.partitionCount = $.partitionCount;
+        this.partitionIds = $.partitionIds;
+        this.path = $.path;
+        this.retentionTimeInDays = $.retentionTimeInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHubPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpoint;
-        private @Nullable Integer partitionCount;
-        private List<String> partitionIds;
-        private String path;
-        private @Nullable Double retentionTimeInDays;
+        private EventHubPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHubPropertiesResponse();
         }
 
         public Builder(EventHubPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.partitionCount = defaults.partitionCount;
-    	      this.partitionIds = defaults.partitionIds;
-    	      this.path = defaults.path;
-    	      this.retentionTimeInDays = defaults.retentionTimeInDays;
+            $ = new EventHubPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder partitionCount(@Nullable Integer partitionCount) {
-            this.partitionCount = partitionCount;
+            $.partitionCount = partitionCount;
             return this;
         }
+
         public Builder partitionIds(List<String> partitionIds) {
-            this.partitionIds = Objects.requireNonNull(partitionIds);
+            $.partitionIds = partitionIds;
             return this;
         }
+
         public Builder partitionIds(String... partitionIds) {
             return partitionIds(List.of(partitionIds));
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder retentionTimeInDays(@Nullable Double retentionTimeInDays) {
-            this.retentionTimeInDays = retentionTimeInDays;
+            $.retentionTimeInDays = retentionTimeInDays;
             return this;
-        }        public EventHubPropertiesResponse build() {
-            return new EventHubPropertiesResponse(endpoint, partitionCount, partitionIds, path, retentionTimeInDays);
+        }
+
+        public EventHubPropertiesResponse build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.partitionIds = Objects.requireNonNull($.partitionIds, "expected parameter 'partitionIds' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

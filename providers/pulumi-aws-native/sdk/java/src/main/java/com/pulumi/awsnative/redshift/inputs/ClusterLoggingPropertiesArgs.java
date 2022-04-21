@@ -5,9 +5,9 @@ package com.pulumi.awsnative.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class ClusterLoggingPropertiesArgs extends com.pulumi.resources.Res
     public static final ClusterLoggingPropertiesArgs Empty = new ClusterLoggingPropertiesArgs();
 
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="s3KeyPrefix")
-      private final @Nullable Output<String> s3KeyPrefix;
+    private @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> s3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
+    public Optional<Output<String>> s3KeyPrefix() {
+        return Optional.ofNullable(this.s3KeyPrefix);
     }
 
-    public ClusterLoggingPropertiesArgs(
-        Output<String> bucketName,
-        @Nullable Output<String> s3KeyPrefix) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.s3KeyPrefix = s3KeyPrefix;
-    }
+    private ClusterLoggingPropertiesArgs() {}
 
-    private ClusterLoggingPropertiesArgs() {
-        this.bucketName = Codegen.empty();
-        this.s3KeyPrefix = Codegen.empty();
+    private ClusterLoggingPropertiesArgs(ClusterLoggingPropertiesArgs $) {
+        this.bucketName = $.bucketName;
+        this.s3KeyPrefix = $.s3KeyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterLoggingPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketName;
-        private @Nullable Output<String> s3KeyPrefix;
+        private ClusterLoggingPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterLoggingPropertiesArgs();
         }
 
         public Builder(ClusterLoggingPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.s3KeyPrefix = defaults.s3KeyPrefix;
+            $ = new ClusterLoggingPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
-            this.s3KeyPrefix = s3KeyPrefix;
+            $.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
-            return this;
-        }        public ClusterLoggingPropertiesArgs build() {
-            return new ClusterLoggingPropertiesArgs(bucketName, s3KeyPrefix);
+
+        public Builder s3KeyPrefix(String s3KeyPrefix) {
+            return s3KeyPrefix(Output.of(s3KeyPrefix));
+        }
+
+        public ClusterLoggingPropertiesArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            return $;
         }
     }
+
 }

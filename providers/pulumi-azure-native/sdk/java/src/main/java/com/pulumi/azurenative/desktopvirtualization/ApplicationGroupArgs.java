@@ -11,10 +11,10 @@ import com.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllo
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="applicationGroupName")
-      private final @Nullable Output<String> applicationGroupName;
+    private @Nullable Output<String> applicationGroupName;
 
-    public Output<String> applicationGroupName() {
-        return this.applicationGroupName == null ? Codegen.empty() : this.applicationGroupName;
+    public Optional<Output<String>> applicationGroupName() {
+        return Optional.ofNullable(this.applicationGroupName);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="applicationGroupType", required=true)
-      private final Output<Either<String,ApplicationGroupType>> applicationGroupType;
+    private Output<Either<String,ApplicationGroupType>> applicationGroupType;
 
     public Output<Either<String,ApplicationGroupType>> applicationGroupType() {
         return this.applicationGroupType;
@@ -49,10 +49,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -71,17 +71,17 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="hostPoolArmPath", required=true)
-      private final Output<String> hostPoolArmPath;
+    private Output<String> hostPoolArmPath;
 
     public Output<String> hostPoolArmPath() {
         return this.hostPoolArmPath;
     }
 
     @Import(name="identity")
-      private final @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+    private @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
-    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ResourceModelWithAllowedPropertySetIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="managedBy")
-      private final @Nullable Output<String> managedBy;
+    private @Nullable Output<String> managedBy;
 
-    public Output<String> managedBy() {
-        return this.managedBy == null ? Codegen.empty() : this.managedBy;
+    public Optional<Output<String>> managedBy() {
+        return Optional.ofNullable(this.managedBy);
     }
 
     /**
@@ -122,17 +122,17 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="migrationRequest")
-      private final @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
+    private @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
 
-    public Output<MigrationRequestPropertiesArgs> migrationRequest() {
-        return this.migrationRequest == null ? Codegen.empty() : this.migrationRequest;
+    public Optional<Output<MigrationRequestPropertiesArgs>> migrationRequest() {
+        return Optional.ofNullable(this.migrationRequest);
     }
 
     @Import(name="plan")
-      private final @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+    private @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
-    public Output<ResourceModelWithAllowedPropertySetPlanArgs> plan() {
-        return this.plan == null ? Codegen.empty() : this.plan;
+    public Optional<Output<ResourceModelWithAllowedPropertySetPlanArgs>> plan() {
+        return Optional.ofNullable(this.plan);
     }
 
     /**
@@ -140,17 +140,17 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="sku")
-      private final @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+    private @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
-    public Output<ResourceModelWithAllowedPropertySetSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<ResourceModelWithAllowedPropertySetSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -158,219 +158,181 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ApplicationGroupArgs(
-        @Nullable Output<String> applicationGroupName,
-        Output<Either<String,ApplicationGroupType>> applicationGroupType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> friendlyName,
-        Output<String> hostPoolArmPath,
-        @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> managedBy,
-        @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest,
-        @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan,
-        Output<String> resourceGroupName,
-        @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.applicationGroupName = applicationGroupName;
-        this.applicationGroupType = Objects.requireNonNull(applicationGroupType, "expected parameter 'applicationGroupType' to be non-null");
-        this.description = description;
-        this.friendlyName = friendlyName;
-        this.hostPoolArmPath = Objects.requireNonNull(hostPoolArmPath, "expected parameter 'hostPoolArmPath' to be non-null");
-        this.identity = identity;
-        this.kind = kind;
-        this.location = location;
-        this.managedBy = managedBy;
-        this.migrationRequest = migrationRequest;
-        this.plan = plan;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private ApplicationGroupArgs() {}
 
-    private ApplicationGroupArgs() {
-        this.applicationGroupName = Codegen.empty();
-        this.applicationGroupType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.hostPoolArmPath = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managedBy = Codegen.empty();
-        this.migrationRequest = Codegen.empty();
-        this.plan = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ApplicationGroupArgs(ApplicationGroupArgs $) {
+        this.applicationGroupName = $.applicationGroupName;
+        this.applicationGroupType = $.applicationGroupType;
+        this.description = $.description;
+        this.friendlyName = $.friendlyName;
+        this.hostPoolArmPath = $.hostPoolArmPath;
+        this.identity = $.identity;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.managedBy = $.managedBy;
+        this.migrationRequest = $.migrationRequest;
+        this.plan = $.plan;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationGroupName;
-        private Output<Either<String,ApplicationGroupType>> applicationGroupType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> friendlyName;
-        private Output<String> hostPoolArmPath;
-        private @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> managedBy;
-        private @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
-        private @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private ApplicationGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGroupArgs();
         }
 
         public Builder(ApplicationGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationGroupName = defaults.applicationGroupName;
-    	      this.applicationGroupType = defaults.applicationGroupType;
-    	      this.description = defaults.description;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.hostPoolArmPath = defaults.hostPoolArmPath;
-    	      this.identity = defaults.identity;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.managedBy = defaults.managedBy;
-    	      this.migrationRequest = defaults.migrationRequest;
-    	      this.plan = defaults.plan;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new ApplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationGroupName(@Nullable Output<String> applicationGroupName) {
-            this.applicationGroupName = applicationGroupName;
+            $.applicationGroupName = applicationGroupName;
             return this;
         }
-        public Builder applicationGroupName(@Nullable String applicationGroupName) {
-            this.applicationGroupName = Codegen.ofNullable(applicationGroupName);
-            return this;
+
+        public Builder applicationGroupName(String applicationGroupName) {
+            return applicationGroupName(Output.of(applicationGroupName));
         }
+
         public Builder applicationGroupType(Output<Either<String,ApplicationGroupType>> applicationGroupType) {
-            this.applicationGroupType = Objects.requireNonNull(applicationGroupType);
+            $.applicationGroupType = applicationGroupType;
             return this;
         }
+
         public Builder applicationGroupType(Either<String,ApplicationGroupType> applicationGroupType) {
-            this.applicationGroupType = Output.of(Objects.requireNonNull(applicationGroupType));
-            return this;
+            return applicationGroupType(Output.of(applicationGroupType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder hostPoolArmPath(Output<String> hostPoolArmPath) {
-            this.hostPoolArmPath = Objects.requireNonNull(hostPoolArmPath);
+            $.hostPoolArmPath = hostPoolArmPath;
             return this;
         }
+
         public Builder hostPoolArmPath(String hostPoolArmPath) {
-            this.hostPoolArmPath = Output.of(Objects.requireNonNull(hostPoolArmPath));
-            return this;
+            return hostPoolArmPath(Output.of(hostPoolArmPath));
         }
+
         public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ResourceModelWithAllowedPropertySetIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managedBy(@Nullable Output<String> managedBy) {
-            this.managedBy = managedBy;
+            $.managedBy = managedBy;
             return this;
         }
-        public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Codegen.ofNullable(managedBy);
-            return this;
+
+        public Builder managedBy(String managedBy) {
+            return managedBy(Output.of(managedBy));
         }
+
         public Builder migrationRequest(@Nullable Output<MigrationRequestPropertiesArgs> migrationRequest) {
-            this.migrationRequest = migrationRequest;
+            $.migrationRequest = migrationRequest;
             return this;
         }
-        public Builder migrationRequest(@Nullable MigrationRequestPropertiesArgs migrationRequest) {
-            this.migrationRequest = Codegen.ofNullable(migrationRequest);
-            return this;
+
+        public Builder migrationRequest(MigrationRequestPropertiesArgs migrationRequest) {
+            return migrationRequest(Output.of(migrationRequest));
         }
+
         public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
-        public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
-            this.plan = Codegen.ofNullable(plan);
-            return this;
+
+        public Builder plan(ResourceModelWithAllowedPropertySetPlanArgs plan) {
+            return plan(Output.of(plan));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(ResourceModelWithAllowedPropertySetSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ApplicationGroupArgs build() {
-            return new ApplicationGroupArgs(applicationGroupName, applicationGroupType, description, friendlyName, hostPoolArmPath, identity, kind, location, managedBy, migrationRequest, plan, resourceGroupName, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ApplicationGroupArgs build() {
+            $.applicationGroupType = Objects.requireNonNull($.applicationGroupType, "expected parameter 'applicationGroupType' to be non-null");
+            $.hostPoolArmPath = Objects.requireNonNull($.hostPoolArmPath, "expected parameter 'hostPoolArmPath' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

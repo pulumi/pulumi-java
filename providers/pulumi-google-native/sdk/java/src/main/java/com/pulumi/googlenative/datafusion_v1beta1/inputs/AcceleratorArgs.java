@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datafusion_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datafusion_v1beta1.enums.AcceleratorAcceleratorType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceleratorType")
-      private final @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
+    private @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
 
-    public Output<AcceleratorAcceleratorType> acceleratorType() {
-        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
+    public Optional<Output<AcceleratorAcceleratorType>> acceleratorType() {
+        return Optional.ofNullable(this.acceleratorType);
     }
 
-    public AcceleratorArgs(@Nullable Output<AcceleratorAcceleratorType> acceleratorType) {
-        this.acceleratorType = acceleratorType;
-    }
+    private AcceleratorArgs() {}
 
-    private AcceleratorArgs() {
-        this.acceleratorType = Codegen.empty();
+    private AcceleratorArgs(AcceleratorArgs $) {
+        this.acceleratorType = $.acceleratorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcceleratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
+        private AcceleratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcceleratorArgs();
         }
 
         public Builder(AcceleratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorType = defaults.acceleratorType;
+            $ = new AcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorType(@Nullable Output<AcceleratorAcceleratorType> acceleratorType) {
-            this.acceleratorType = acceleratorType;
+            $.acceleratorType = acceleratorType;
             return this;
         }
-        public Builder acceleratorType(@Nullable AcceleratorAcceleratorType acceleratorType) {
-            this.acceleratorType = Codegen.ofNullable(acceleratorType);
-            return this;
-        }        public AcceleratorArgs build() {
-            return new AcceleratorArgs(acceleratorType);
+
+        public Builder acceleratorType(AcceleratorAcceleratorType acceleratorType) {
+            return acceleratorType(Output.of(acceleratorType));
+        }
+
+        public AcceleratorArgs build() {
+            return $;
         }
     }
+
 }

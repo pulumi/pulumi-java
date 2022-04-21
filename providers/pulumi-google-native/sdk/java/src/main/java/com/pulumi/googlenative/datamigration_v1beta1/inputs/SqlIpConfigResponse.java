@@ -24,7 +24,7 @@ public final class SqlIpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authorizedNetworks", required=true)
-      private final List<SqlAclEntryResponse> authorizedNetworks;
+    private List<SqlAclEntryResponse> authorizedNetworks;
 
     public List<SqlAclEntryResponse> authorizedNetworks() {
         return this.authorizedNetworks;
@@ -35,7 +35,7 @@ public final class SqlIpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enableIpv4", required=true)
-      private final Boolean enableIpv4;
+    private Boolean enableIpv4;
 
     public Boolean enableIpv4() {
         return this.enableIpv4;
@@ -46,7 +46,7 @@ public final class SqlIpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateNetwork", required=true)
-      private final String privateNetwork;
+    private String privateNetwork;
 
     public String privateNetwork() {
         return this.privateNetwork;
@@ -57,76 +57,70 @@ public final class SqlIpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requireSsl", required=true)
-      private final Boolean requireSsl;
+    private Boolean requireSsl;
 
     public Boolean requireSsl() {
         return this.requireSsl;
     }
 
-    public SqlIpConfigResponse(
-        List<SqlAclEntryResponse> authorizedNetworks,
-        Boolean enableIpv4,
-        String privateNetwork,
-        Boolean requireSsl) {
-        this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks, "expected parameter 'authorizedNetworks' to be non-null");
-        this.enableIpv4 = Objects.requireNonNull(enableIpv4, "expected parameter 'enableIpv4' to be non-null");
-        this.privateNetwork = Objects.requireNonNull(privateNetwork, "expected parameter 'privateNetwork' to be non-null");
-        this.requireSsl = Objects.requireNonNull(requireSsl, "expected parameter 'requireSsl' to be non-null");
-    }
+    private SqlIpConfigResponse() {}
 
-    private SqlIpConfigResponse() {
-        this.authorizedNetworks = List.of();
-        this.enableIpv4 = null;
-        this.privateNetwork = null;
-        this.requireSsl = null;
+    private SqlIpConfigResponse(SqlIpConfigResponse $) {
+        this.authorizedNetworks = $.authorizedNetworks;
+        this.enableIpv4 = $.enableIpv4;
+        this.privateNetwork = $.privateNetwork;
+        this.requireSsl = $.requireSsl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlIpConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SqlAclEntryResponse> authorizedNetworks;
-        private Boolean enableIpv4;
-        private String privateNetwork;
-        private Boolean requireSsl;
+        private SqlIpConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlIpConfigResponse();
         }
 
         public Builder(SqlIpConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizedNetworks = defaults.authorizedNetworks;
-    	      this.enableIpv4 = defaults.enableIpv4;
-    	      this.privateNetwork = defaults.privateNetwork;
-    	      this.requireSsl = defaults.requireSsl;
+            $ = new SqlIpConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizedNetworks(List<SqlAclEntryResponse> authorizedNetworks) {
-            this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
+            $.authorizedNetworks = authorizedNetworks;
             return this;
         }
+
         public Builder authorizedNetworks(SqlAclEntryResponse... authorizedNetworks) {
             return authorizedNetworks(List.of(authorizedNetworks));
         }
+
         public Builder enableIpv4(Boolean enableIpv4) {
-            this.enableIpv4 = Objects.requireNonNull(enableIpv4);
+            $.enableIpv4 = enableIpv4;
             return this;
         }
+
         public Builder privateNetwork(String privateNetwork) {
-            this.privateNetwork = Objects.requireNonNull(privateNetwork);
+            $.privateNetwork = privateNetwork;
             return this;
         }
+
         public Builder requireSsl(Boolean requireSsl) {
-            this.requireSsl = Objects.requireNonNull(requireSsl);
+            $.requireSsl = requireSsl;
             return this;
-        }        public SqlIpConfigResponse build() {
-            return new SqlIpConfigResponse(authorizedNetworks, enableIpv4, privateNetwork, requireSsl);
+        }
+
+        public SqlIpConfigResponse build() {
+            $.authorizedNetworks = Objects.requireNonNull($.authorizedNetworks, "expected parameter 'authorizedNetworks' to be non-null");
+            $.enableIpv4 = Objects.requireNonNull($.enableIpv4, "expected parameter 'enableIpv4' to be non-null");
+            $.privateNetwork = Objects.requireNonNull($.privateNetwork, "expected parameter 'privateNetwork' to be non-null");
+            $.requireSsl = Objects.requireNonNull($.requireSsl, "expected parameter 'requireSsl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class WebChatChannelResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="channelName", required=true)
-      private final String channelName;
+    private String channelName;
 
     public String channelName() {
         return this.channelName;
@@ -37,10 +37,10 @@ public final class WebChatChannelResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="etag")
-      private final @Nullable String etag;
+    private @Nullable String etag;
 
     public Optional<String> etag() {
-        return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class WebChatChannelResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class WebChatChannelResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="properties")
-      private final @Nullable WebChatChannelPropertiesResponse properties;
+    private @Nullable WebChatChannelPropertiesResponse properties;
 
     public Optional<WebChatChannelPropertiesResponse> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -70,82 +70,71 @@ public final class WebChatChannelResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public WebChatChannelResponse(
-        String channelName,
-        @Nullable String etag,
-        @Nullable String location,
-        @Nullable WebChatChannelPropertiesResponse properties,
-        String provisioningState) {
-        this.channelName = Codegen.stringProp("channelName").arg(channelName).require();
-        this.etag = etag;
-        this.location = Codegen.stringProp("location").arg(location).def("global").getNullable();
-        this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private WebChatChannelResponse() {}
 
-    private WebChatChannelResponse() {
-        this.channelName = null;
-        this.etag = null;
-        this.location = null;
-        this.properties = null;
-        this.provisioningState = null;
+    private WebChatChannelResponse(WebChatChannelResponse $) {
+        this.channelName = $.channelName;
+        this.etag = $.etag;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebChatChannelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String channelName;
-        private @Nullable String etag;
-        private @Nullable String location;
-        private @Nullable WebChatChannelPropertiesResponse properties;
-        private String provisioningState;
+        private WebChatChannelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebChatChannelResponse();
         }
 
         public Builder(WebChatChannelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelName = defaults.channelName;
-    	      this.etag = defaults.etag;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new WebChatChannelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder channelName(String channelName) {
-            this.channelName = Objects.requireNonNull(channelName);
+            $.channelName = channelName;
             return this;
         }
+
         public Builder etag(@Nullable String etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder properties(@Nullable WebChatChannelPropertiesResponse properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public WebChatChannelResponse build() {
-            return new WebChatChannelResponse(channelName, etag, location, properties, provisioningState);
+        }
+
+        public WebChatChannelResponse build() {
+            $.channelName = Codegen.stringProp("channelName").arg($.channelName).require();
+            $.location = Codegen.stringProp("location").arg($.location).def("global").getNullable();
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

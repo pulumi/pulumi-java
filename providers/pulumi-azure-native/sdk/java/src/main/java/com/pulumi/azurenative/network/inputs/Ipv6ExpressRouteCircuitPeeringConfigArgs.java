@@ -9,9 +9,9 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="microsoftPeeringConfig")
-      private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
+    private @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
-    public Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig() {
-        return this.microsoftPeeringConfig == null ? Codegen.empty() : this.microsoftPeeringConfig;
+    public Optional<Output<ExpressRouteCircuitPeeringConfigArgs>> microsoftPeeringConfig() {
+        return Optional.ofNullable(this.microsoftPeeringConfig);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="primaryPeerAddressPrefix")
-      private final @Nullable Output<String> primaryPeerAddressPrefix;
+    private @Nullable Output<String> primaryPeerAddressPrefix;
 
-    public Output<String> primaryPeerAddressPrefix() {
-        return this.primaryPeerAddressPrefix == null ? Codegen.empty() : this.primaryPeerAddressPrefix;
+    public Optional<Output<String>> primaryPeerAddressPrefix() {
+        return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="routeFilter")
-      private final @Nullable Output<SubResourceArgs> routeFilter;
+    private @Nullable Output<SubResourceArgs> routeFilter;
 
-    public Output<SubResourceArgs> routeFilter() {
-        return this.routeFilter == null ? Codegen.empty() : this.routeFilter;
+    public Optional<Output<SubResourceArgs>> routeFilter() {
+        return Optional.ofNullable(this.routeFilter);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="secondaryPeerAddressPrefix")
-      private final @Nullable Output<String> secondaryPeerAddressPrefix;
+    private @Nullable Output<String> secondaryPeerAddressPrefix;
 
-    public Output<String> secondaryPeerAddressPrefix() {
-        return this.secondaryPeerAddressPrefix == null ? Codegen.empty() : this.secondaryPeerAddressPrefix;
+    public Optional<Output<String>> secondaryPeerAddressPrefix() {
+        return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
 
     /**
@@ -72,102 +72,88 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state;
+    private @Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state;
 
-    public Output<Either<String,ExpressRouteCircuitPeeringState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,ExpressRouteCircuitPeeringState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public Ipv6ExpressRouteCircuitPeeringConfigArgs(
-        @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig,
-        @Nullable Output<String> primaryPeerAddressPrefix,
-        @Nullable Output<SubResourceArgs> routeFilter,
-        @Nullable Output<String> secondaryPeerAddressPrefix,
-        @Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state) {
-        this.microsoftPeeringConfig = microsoftPeeringConfig;
-        this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
-        this.routeFilter = routeFilter;
-        this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
-        this.state = state;
-    }
+    private Ipv6ExpressRouteCircuitPeeringConfigArgs() {}
 
-    private Ipv6ExpressRouteCircuitPeeringConfigArgs() {
-        this.microsoftPeeringConfig = Codegen.empty();
-        this.primaryPeerAddressPrefix = Codegen.empty();
-        this.routeFilter = Codegen.empty();
-        this.secondaryPeerAddressPrefix = Codegen.empty();
-        this.state = Codegen.empty();
+    private Ipv6ExpressRouteCircuitPeeringConfigArgs(Ipv6ExpressRouteCircuitPeeringConfigArgs $) {
+        this.microsoftPeeringConfig = $.microsoftPeeringConfig;
+        this.primaryPeerAddressPrefix = $.primaryPeerAddressPrefix;
+        this.routeFilter = $.routeFilter;
+        this.secondaryPeerAddressPrefix = $.secondaryPeerAddressPrefix;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Ipv6ExpressRouteCircuitPeeringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
-        private @Nullable Output<String> primaryPeerAddressPrefix;
-        private @Nullable Output<SubResourceArgs> routeFilter;
-        private @Nullable Output<String> secondaryPeerAddressPrefix;
-        private @Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state;
+        private Ipv6ExpressRouteCircuitPeeringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Ipv6ExpressRouteCircuitPeeringConfigArgs();
         }
 
         public Builder(Ipv6ExpressRouteCircuitPeeringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.microsoftPeeringConfig = defaults.microsoftPeeringConfig;
-    	      this.primaryPeerAddressPrefix = defaults.primaryPeerAddressPrefix;
-    	      this.routeFilter = defaults.routeFilter;
-    	      this.secondaryPeerAddressPrefix = defaults.secondaryPeerAddressPrefix;
-    	      this.state = defaults.state;
+            $ = new Ipv6ExpressRouteCircuitPeeringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder microsoftPeeringConfig(@Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig) {
-            this.microsoftPeeringConfig = microsoftPeeringConfig;
+            $.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
-        public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
-            this.microsoftPeeringConfig = Codegen.ofNullable(microsoftPeeringConfig);
-            return this;
+
+        public Builder microsoftPeeringConfig(ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
+            return microsoftPeeringConfig(Output.of(microsoftPeeringConfig));
         }
+
         public Builder primaryPeerAddressPrefix(@Nullable Output<String> primaryPeerAddressPrefix) {
-            this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
+            $.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
-        public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
-            this.primaryPeerAddressPrefix = Codegen.ofNullable(primaryPeerAddressPrefix);
-            return this;
+
+        public Builder primaryPeerAddressPrefix(String primaryPeerAddressPrefix) {
+            return primaryPeerAddressPrefix(Output.of(primaryPeerAddressPrefix));
         }
+
         public Builder routeFilter(@Nullable Output<SubResourceArgs> routeFilter) {
-            this.routeFilter = routeFilter;
+            $.routeFilter = routeFilter;
             return this;
         }
-        public Builder routeFilter(@Nullable SubResourceArgs routeFilter) {
-            this.routeFilter = Codegen.ofNullable(routeFilter);
-            return this;
+
+        public Builder routeFilter(SubResourceArgs routeFilter) {
+            return routeFilter(Output.of(routeFilter));
         }
+
         public Builder secondaryPeerAddressPrefix(@Nullable Output<String> secondaryPeerAddressPrefix) {
-            this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
+            $.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
-        public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
-            this.secondaryPeerAddressPrefix = Codegen.ofNullable(secondaryPeerAddressPrefix);
-            return this;
+
+        public Builder secondaryPeerAddressPrefix(String secondaryPeerAddressPrefix) {
+            return secondaryPeerAddressPrefix(Output.of(secondaryPeerAddressPrefix));
         }
+
         public Builder state(@Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,ExpressRouteCircuitPeeringState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public Ipv6ExpressRouteCircuitPeeringConfigArgs build() {
-            return new Ipv6ExpressRouteCircuitPeeringConfigArgs(microsoftPeeringConfig, primaryPeerAddressPrefix, routeFilter, secondaryPeerAddressPrefix, state);
+
+        public Builder state(Either<String,ExpressRouteCircuitPeeringState> state) {
+            return state(Output.of(state));
+        }
+
+        public Ipv6ExpressRouteCircuitPeeringConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -24,190 +24,161 @@ public final class DataSourceConfiguration extends com.pulumi.resources.InvokeAr
     public static final DataSourceConfiguration Empty = new DataSourceConfiguration();
 
     @Import(name="confluenceConfiguration")
-      private final @Nullable DataSourceConfluenceConfiguration confluenceConfiguration;
+    private @Nullable DataSourceConfluenceConfiguration confluenceConfiguration;
 
     public Optional<DataSourceConfluenceConfiguration> confluenceConfiguration() {
-        return this.confluenceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.confluenceConfiguration);
+        return Optional.ofNullable(this.confluenceConfiguration);
     }
 
     @Import(name="databaseConfiguration")
-      private final @Nullable DataSourceDatabaseConfiguration databaseConfiguration;
+    private @Nullable DataSourceDatabaseConfiguration databaseConfiguration;
 
     public Optional<DataSourceDatabaseConfiguration> databaseConfiguration() {
-        return this.databaseConfiguration == null ? Optional.empty() : Optional.ofNullable(this.databaseConfiguration);
+        return Optional.ofNullable(this.databaseConfiguration);
     }
 
     @Import(name="googleDriveConfiguration")
-      private final @Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration;
+    private @Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration;
 
     public Optional<DataSourceGoogleDriveConfiguration> googleDriveConfiguration() {
-        return this.googleDriveConfiguration == null ? Optional.empty() : Optional.ofNullable(this.googleDriveConfiguration);
+        return Optional.ofNullable(this.googleDriveConfiguration);
     }
 
     @Import(name="oneDriveConfiguration")
-      private final @Nullable DataSourceOneDriveConfiguration oneDriveConfiguration;
+    private @Nullable DataSourceOneDriveConfiguration oneDriveConfiguration;
 
     public Optional<DataSourceOneDriveConfiguration> oneDriveConfiguration() {
-        return this.oneDriveConfiguration == null ? Optional.empty() : Optional.ofNullable(this.oneDriveConfiguration);
+        return Optional.ofNullable(this.oneDriveConfiguration);
     }
 
     @Import(name="s3Configuration")
-      private final @Nullable DataSourceS3DataSourceConfiguration s3Configuration;
+    private @Nullable DataSourceS3DataSourceConfiguration s3Configuration;
 
     public Optional<DataSourceS3DataSourceConfiguration> s3Configuration() {
-        return this.s3Configuration == null ? Optional.empty() : Optional.ofNullable(this.s3Configuration);
+        return Optional.ofNullable(this.s3Configuration);
     }
 
     @Import(name="salesforceConfiguration")
-      private final @Nullable DataSourceSalesforceConfiguration salesforceConfiguration;
+    private @Nullable DataSourceSalesforceConfiguration salesforceConfiguration;
 
     public Optional<DataSourceSalesforceConfiguration> salesforceConfiguration() {
-        return this.salesforceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.salesforceConfiguration);
+        return Optional.ofNullable(this.salesforceConfiguration);
     }
 
     @Import(name="serviceNowConfiguration")
-      private final @Nullable DataSourceServiceNowConfiguration serviceNowConfiguration;
+    private @Nullable DataSourceServiceNowConfiguration serviceNowConfiguration;
 
     public Optional<DataSourceServiceNowConfiguration> serviceNowConfiguration() {
-        return this.serviceNowConfiguration == null ? Optional.empty() : Optional.ofNullable(this.serviceNowConfiguration);
+        return Optional.ofNullable(this.serviceNowConfiguration);
     }
 
     @Import(name="sharePointConfiguration")
-      private final @Nullable DataSourceSharePointConfiguration sharePointConfiguration;
+    private @Nullable DataSourceSharePointConfiguration sharePointConfiguration;
 
     public Optional<DataSourceSharePointConfiguration> sharePointConfiguration() {
-        return this.sharePointConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharePointConfiguration);
+        return Optional.ofNullable(this.sharePointConfiguration);
     }
 
     @Import(name="webCrawlerConfiguration")
-      private final @Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration;
+    private @Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration;
 
     public Optional<DataSourceWebCrawlerConfiguration> webCrawlerConfiguration() {
-        return this.webCrawlerConfiguration == null ? Optional.empty() : Optional.ofNullable(this.webCrawlerConfiguration);
+        return Optional.ofNullable(this.webCrawlerConfiguration);
     }
 
     @Import(name="workDocsConfiguration")
-      private final @Nullable DataSourceWorkDocsConfiguration workDocsConfiguration;
+    private @Nullable DataSourceWorkDocsConfiguration workDocsConfiguration;
 
     public Optional<DataSourceWorkDocsConfiguration> workDocsConfiguration() {
-        return this.workDocsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.workDocsConfiguration);
+        return Optional.ofNullable(this.workDocsConfiguration);
     }
 
-    public DataSourceConfiguration(
-        @Nullable DataSourceConfluenceConfiguration confluenceConfiguration,
-        @Nullable DataSourceDatabaseConfiguration databaseConfiguration,
-        @Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration,
-        @Nullable DataSourceOneDriveConfiguration oneDriveConfiguration,
-        @Nullable DataSourceS3DataSourceConfiguration s3Configuration,
-        @Nullable DataSourceSalesforceConfiguration salesforceConfiguration,
-        @Nullable DataSourceServiceNowConfiguration serviceNowConfiguration,
-        @Nullable DataSourceSharePointConfiguration sharePointConfiguration,
-        @Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration,
-        @Nullable DataSourceWorkDocsConfiguration workDocsConfiguration) {
-        this.confluenceConfiguration = confluenceConfiguration;
-        this.databaseConfiguration = databaseConfiguration;
-        this.googleDriveConfiguration = googleDriveConfiguration;
-        this.oneDriveConfiguration = oneDriveConfiguration;
-        this.s3Configuration = s3Configuration;
-        this.salesforceConfiguration = salesforceConfiguration;
-        this.serviceNowConfiguration = serviceNowConfiguration;
-        this.sharePointConfiguration = sharePointConfiguration;
-        this.webCrawlerConfiguration = webCrawlerConfiguration;
-        this.workDocsConfiguration = workDocsConfiguration;
-    }
+    private DataSourceConfiguration() {}
 
-    private DataSourceConfiguration() {
-        this.confluenceConfiguration = null;
-        this.databaseConfiguration = null;
-        this.googleDriveConfiguration = null;
-        this.oneDriveConfiguration = null;
-        this.s3Configuration = null;
-        this.salesforceConfiguration = null;
-        this.serviceNowConfiguration = null;
-        this.sharePointConfiguration = null;
-        this.webCrawlerConfiguration = null;
-        this.workDocsConfiguration = null;
+    private DataSourceConfiguration(DataSourceConfiguration $) {
+        this.confluenceConfiguration = $.confluenceConfiguration;
+        this.databaseConfiguration = $.databaseConfiguration;
+        this.googleDriveConfiguration = $.googleDriveConfiguration;
+        this.oneDriveConfiguration = $.oneDriveConfiguration;
+        this.s3Configuration = $.s3Configuration;
+        this.salesforceConfiguration = $.salesforceConfiguration;
+        this.serviceNowConfiguration = $.serviceNowConfiguration;
+        this.sharePointConfiguration = $.sharePointConfiguration;
+        this.webCrawlerConfiguration = $.webCrawlerConfiguration;
+        this.workDocsConfiguration = $.workDocsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataSourceConfluenceConfiguration confluenceConfiguration;
-        private @Nullable DataSourceDatabaseConfiguration databaseConfiguration;
-        private @Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration;
-        private @Nullable DataSourceOneDriveConfiguration oneDriveConfiguration;
-        private @Nullable DataSourceS3DataSourceConfiguration s3Configuration;
-        private @Nullable DataSourceSalesforceConfiguration salesforceConfiguration;
-        private @Nullable DataSourceServiceNowConfiguration serviceNowConfiguration;
-        private @Nullable DataSourceSharePointConfiguration sharePointConfiguration;
-        private @Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration;
-        private @Nullable DataSourceWorkDocsConfiguration workDocsConfiguration;
+        private DataSourceConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfiguration();
         }
 
         public Builder(DataSourceConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confluenceConfiguration = defaults.confluenceConfiguration;
-    	      this.databaseConfiguration = defaults.databaseConfiguration;
-    	      this.googleDriveConfiguration = defaults.googleDriveConfiguration;
-    	      this.oneDriveConfiguration = defaults.oneDriveConfiguration;
-    	      this.s3Configuration = defaults.s3Configuration;
-    	      this.salesforceConfiguration = defaults.salesforceConfiguration;
-    	      this.serviceNowConfiguration = defaults.serviceNowConfiguration;
-    	      this.sharePointConfiguration = defaults.sharePointConfiguration;
-    	      this.webCrawlerConfiguration = defaults.webCrawlerConfiguration;
-    	      this.workDocsConfiguration = defaults.workDocsConfiguration;
+            $ = new DataSourceConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder confluenceConfiguration(@Nullable DataSourceConfluenceConfiguration confluenceConfiguration) {
-            this.confluenceConfiguration = confluenceConfiguration;
+            $.confluenceConfiguration = confluenceConfiguration;
             return this;
         }
+
         public Builder databaseConfiguration(@Nullable DataSourceDatabaseConfiguration databaseConfiguration) {
-            this.databaseConfiguration = databaseConfiguration;
+            $.databaseConfiguration = databaseConfiguration;
             return this;
         }
+
         public Builder googleDriveConfiguration(@Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration) {
-            this.googleDriveConfiguration = googleDriveConfiguration;
+            $.googleDriveConfiguration = googleDriveConfiguration;
             return this;
         }
+
         public Builder oneDriveConfiguration(@Nullable DataSourceOneDriveConfiguration oneDriveConfiguration) {
-            this.oneDriveConfiguration = oneDriveConfiguration;
+            $.oneDriveConfiguration = oneDriveConfiguration;
             return this;
         }
+
         public Builder s3Configuration(@Nullable DataSourceS3DataSourceConfiguration s3Configuration) {
-            this.s3Configuration = s3Configuration;
+            $.s3Configuration = s3Configuration;
             return this;
         }
+
         public Builder salesforceConfiguration(@Nullable DataSourceSalesforceConfiguration salesforceConfiguration) {
-            this.salesforceConfiguration = salesforceConfiguration;
+            $.salesforceConfiguration = salesforceConfiguration;
             return this;
         }
+
         public Builder serviceNowConfiguration(@Nullable DataSourceServiceNowConfiguration serviceNowConfiguration) {
-            this.serviceNowConfiguration = serviceNowConfiguration;
+            $.serviceNowConfiguration = serviceNowConfiguration;
             return this;
         }
+
         public Builder sharePointConfiguration(@Nullable DataSourceSharePointConfiguration sharePointConfiguration) {
-            this.sharePointConfiguration = sharePointConfiguration;
+            $.sharePointConfiguration = sharePointConfiguration;
             return this;
         }
+
         public Builder webCrawlerConfiguration(@Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration) {
-            this.webCrawlerConfiguration = webCrawlerConfiguration;
+            $.webCrawlerConfiguration = webCrawlerConfiguration;
             return this;
         }
+
         public Builder workDocsConfiguration(@Nullable DataSourceWorkDocsConfiguration workDocsConfiguration) {
-            this.workDocsConfiguration = workDocsConfiguration;
+            $.workDocsConfiguration = workDocsConfiguration;
             return this;
-        }        public DataSourceConfiguration build() {
-            return new DataSourceConfiguration(confluenceConfiguration, databaseConfiguration, googleDriveConfiguration, oneDriveConfiguration, s3Configuration, salesforceConfiguration, serviceNowConfiguration, sharePointConfiguration, webCrawlerConfiguration, workDocsConfiguration);
+        }
+
+        public DataSourceConfiguration build() {
+            return $;
         }
     }
+
 }

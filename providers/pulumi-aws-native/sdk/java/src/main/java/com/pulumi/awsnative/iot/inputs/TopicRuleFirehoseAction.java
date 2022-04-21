@@ -16,94 +16,85 @@ public final class TopicRuleFirehoseAction extends com.pulumi.resources.InvokeAr
     public static final TopicRuleFirehoseAction Empty = new TopicRuleFirehoseAction();
 
     @Import(name="batchMode")
-      private final @Nullable Boolean batchMode;
+    private @Nullable Boolean batchMode;
 
     public Optional<Boolean> batchMode() {
-        return this.batchMode == null ? Optional.empty() : Optional.ofNullable(this.batchMode);
+        return Optional.ofNullable(this.batchMode);
     }
 
     @Import(name="deliveryStreamName", required=true)
-      private final String deliveryStreamName;
+    private String deliveryStreamName;
 
     public String deliveryStreamName() {
         return this.deliveryStreamName;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="separator")
-      private final @Nullable String separator;
+    private @Nullable String separator;
 
     public Optional<String> separator() {
-        return this.separator == null ? Optional.empty() : Optional.ofNullable(this.separator);
+        return Optional.ofNullable(this.separator);
     }
 
-    public TopicRuleFirehoseAction(
-        @Nullable Boolean batchMode,
-        String deliveryStreamName,
-        String roleArn,
-        @Nullable String separator) {
-        this.batchMode = batchMode;
-        this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName, "expected parameter 'deliveryStreamName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.separator = separator;
-    }
+    private TopicRuleFirehoseAction() {}
 
-    private TopicRuleFirehoseAction() {
-        this.batchMode = null;
-        this.deliveryStreamName = null;
-        this.roleArn = null;
-        this.separator = null;
+    private TopicRuleFirehoseAction(TopicRuleFirehoseAction $) {
+        this.batchMode = $.batchMode;
+        this.deliveryStreamName = $.deliveryStreamName;
+        this.roleArn = $.roleArn;
+        this.separator = $.separator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleFirehoseAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean batchMode;
-        private String deliveryStreamName;
-        private String roleArn;
-        private @Nullable String separator;
+        private TopicRuleFirehoseAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleFirehoseAction();
         }
 
         public Builder(TopicRuleFirehoseAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchMode = defaults.batchMode;
-    	      this.deliveryStreamName = defaults.deliveryStreamName;
-    	      this.roleArn = defaults.roleArn;
-    	      this.separator = defaults.separator;
+            $ = new TopicRuleFirehoseAction(Objects.requireNonNull(defaults));
         }
 
         public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = batchMode;
+            $.batchMode = batchMode;
             return this;
         }
+
         public Builder deliveryStreamName(String deliveryStreamName) {
-            this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
+            $.deliveryStreamName = deliveryStreamName;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder separator(@Nullable String separator) {
-            this.separator = separator;
+            $.separator = separator;
             return this;
-        }        public TopicRuleFirehoseAction build() {
-            return new TopicRuleFirehoseAction(batchMode, deliveryStreamName, roleArn, separator);
+        }
+
+        public TopicRuleFirehoseAction build() {
+            $.deliveryStreamName = Objects.requireNonNull($.deliveryStreamName, "expected parameter 'deliveryStreamName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

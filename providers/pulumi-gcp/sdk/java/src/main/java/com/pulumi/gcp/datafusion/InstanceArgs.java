@@ -5,12 +5,12 @@ package com.pulumi.gcp.datafusion;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datafusion.inputs.InstanceNetworkConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataprocServiceAccount")
-      private final @Nullable Output<String> dataprocServiceAccount;
+    private @Nullable Output<String> dataprocServiceAccount;
 
-    public Output<String> dataprocServiceAccount() {
-        return this.dataprocServiceAccount == null ? Codegen.empty() : this.dataprocServiceAccount;
+    public Optional<Output<String>> dataprocServiceAccount() {
+        return Optional.ofNullable(this.dataprocServiceAccount);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableStackdriverLogging")
-      private final @Nullable Output<Boolean> enableStackdriverLogging;
+    private @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Output<Boolean> enableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
+    public Optional<Output<Boolean>> enableStackdriverLogging() {
+        return Optional.ofNullable(this.enableStackdriverLogging);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableStackdriverMonitoring")
-      private final @Nullable Output<Boolean> enableStackdriverMonitoring;
+    private @Nullable Output<Boolean> enableStackdriverMonitoring;
 
-    public Output<Boolean> enableStackdriverMonitoring() {
-        return this.enableStackdriverMonitoring == null ? Codegen.empty() : this.enableStackdriverMonitoring;
+    public Optional<Output<Boolean>> enableStackdriverMonitoring() {
+        return Optional.ofNullable(this.enableStackdriverMonitoring);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-      private final @Nullable Output<InstanceNetworkConfigArgs> networkConfig;
+    private @Nullable Output<InstanceNetworkConfigArgs> networkConfig;
 
-    public Output<InstanceNetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<InstanceNetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<Map<String,String>> options;
+    private @Nullable Output<Map<String,String>> options;
 
-    public Output<Map<String,String>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<Map<String,String>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateInstance")
-      private final @Nullable Output<Boolean> privateInstance;
+    private @Nullable Output<Boolean> privateInstance;
 
-    public Output<Boolean> privateInstance() {
-        return this.privateInstance == null ? Codegen.empty() : this.privateInstance;
+    public Optional<Output<Boolean>> privateInstance() {
+        return Optional.ofNullable(this.privateInstance);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -159,7 +159,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -170,206 +170,169 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public InstanceArgs(
-        @Nullable Output<String> dataprocServiceAccount,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enableStackdriverLogging,
-        @Nullable Output<Boolean> enableStackdriverMonitoring,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<InstanceNetworkConfigArgs> networkConfig,
-        @Nullable Output<Map<String,String>> options,
-        @Nullable Output<Boolean> privateInstance,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> type,
-        @Nullable Output<String> version) {
-        this.dataprocServiceAccount = dataprocServiceAccount;
-        this.description = description;
-        this.enableStackdriverLogging = enableStackdriverLogging;
-        this.enableStackdriverMonitoring = enableStackdriverMonitoring;
-        this.labels = labels;
-        this.name = name;
-        this.networkConfig = networkConfig;
-        this.options = options;
-        this.privateInstance = privateInstance;
-        this.project = project;
-        this.region = region;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.version = version;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.dataprocServiceAccount = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enableStackdriverLogging = Codegen.empty();
-        this.enableStackdriverMonitoring = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkConfig = Codegen.empty();
-        this.options = Codegen.empty();
-        this.privateInstance = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.type = Codegen.empty();
-        this.version = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.dataprocServiceAccount = $.dataprocServiceAccount;
+        this.description = $.description;
+        this.enableStackdriverLogging = $.enableStackdriverLogging;
+        this.enableStackdriverMonitoring = $.enableStackdriverMonitoring;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.networkConfig = $.networkConfig;
+        this.options = $.options;
+        this.privateInstance = $.privateInstance;
+        this.project = $.project;
+        this.region = $.region;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataprocServiceAccount;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enableStackdriverLogging;
-        private @Nullable Output<Boolean> enableStackdriverMonitoring;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<InstanceNetworkConfigArgs> networkConfig;
-        private @Nullable Output<Map<String,String>> options;
-        private @Nullable Output<Boolean> privateInstance;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> type;
-        private @Nullable Output<String> version;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataprocServiceAccount = defaults.dataprocServiceAccount;
-    	      this.description = defaults.description;
-    	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
-    	      this.enableStackdriverMonitoring = defaults.enableStackdriverMonitoring;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.options = defaults.options;
-    	      this.privateInstance = defaults.privateInstance;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataprocServiceAccount(@Nullable Output<String> dataprocServiceAccount) {
-            this.dataprocServiceAccount = dataprocServiceAccount;
+            $.dataprocServiceAccount = dataprocServiceAccount;
             return this;
         }
-        public Builder dataprocServiceAccount(@Nullable String dataprocServiceAccount) {
-            this.dataprocServiceAccount = Codegen.ofNullable(dataprocServiceAccount);
-            return this;
+
+        public Builder dataprocServiceAccount(String dataprocServiceAccount) {
+            return dataprocServiceAccount(Output.of(dataprocServiceAccount));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
-            this.enableStackdriverLogging = enableStackdriverLogging;
+            $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
-        public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Codegen.ofNullable(enableStackdriverLogging);
-            return this;
+
+        public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
+            return enableStackdriverLogging(Output.of(enableStackdriverLogging));
         }
+
         public Builder enableStackdriverMonitoring(@Nullable Output<Boolean> enableStackdriverMonitoring) {
-            this.enableStackdriverMonitoring = enableStackdriverMonitoring;
+            $.enableStackdriverMonitoring = enableStackdriverMonitoring;
             return this;
         }
-        public Builder enableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
-            this.enableStackdriverMonitoring = Codegen.ofNullable(enableStackdriverMonitoring);
-            return this;
+
+        public Builder enableStackdriverMonitoring(Boolean enableStackdriverMonitoring) {
+            return enableStackdriverMonitoring(Output.of(enableStackdriverMonitoring));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkConfig(@Nullable Output<InstanceNetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable InstanceNetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(InstanceNetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder options(@Nullable Output<Map<String,String>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable Map<String,String> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(Map<String,String> options) {
+            return options(Output.of(options));
         }
+
         public Builder privateInstance(@Nullable Output<Boolean> privateInstance) {
-            this.privateInstance = privateInstance;
+            $.privateInstance = privateInstance;
             return this;
         }
-        public Builder privateInstance(@Nullable Boolean privateInstance) {
-            this.privateInstance = Codegen.ofNullable(privateInstance);
-            return this;
+
+        public Builder privateInstance(Boolean privateInstance) {
+            return privateInstance(Output.of(privateInstance));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(dataprocServiceAccount, description, enableStackdriverLogging, enableStackdriverMonitoring, labels, name, networkConfig, options, privateInstance, project, region, type, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public InstanceArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

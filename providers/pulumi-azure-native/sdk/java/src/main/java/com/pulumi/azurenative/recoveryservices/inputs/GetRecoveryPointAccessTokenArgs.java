@@ -21,7 +21,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -32,10 +32,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="eTag")
-      private final @Nullable String eTag;
+    private @Nullable String eTag;
 
     public Optional<String> eTag() {
-        return this.eTag == null ? Optional.empty() : Optional.ofNullable(this.eTag);
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="fabricName", required=true)
-      private final String fabricName;
+    private String fabricName;
 
     public String fabricName() {
         return this.fabricName;
@@ -54,10 +54,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="properties")
-      private final @Nullable AADProperties properties;
+    private @Nullable AADProperties properties;
 
     public Optional<AADProperties> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="protectedItemName", required=true)
-      private final String protectedItemName;
+    private String protectedItemName;
 
     public String protectedItemName() {
         return this.protectedItemName;
@@ -87,7 +87,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="recoveryPointId", required=true)
-      private final String recoveryPointId;
+    private String recoveryPointId;
 
     public String recoveryPointId() {
         return this.recoveryPointId;
@@ -98,7 +98,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -109,10 +109,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -120,127 +120,104 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vaultName", required=true)
-      private final String vaultName;
+    private String vaultName;
 
     public String vaultName() {
         return this.vaultName;
     }
 
-    public GetRecoveryPointAccessTokenArgs(
-        String containerName,
-        @Nullable String eTag,
-        String fabricName,
-        @Nullable String location,
-        @Nullable AADProperties properties,
-        String protectedItemName,
-        String recoveryPointId,
-        String resourceGroupName,
-        @Nullable Map<String,String> tags,
-        String vaultName) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.eTag = eTag;
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.location = location;
-        this.properties = properties;
-        this.protectedItemName = Objects.requireNonNull(protectedItemName, "expected parameter 'protectedItemName' to be non-null");
-        this.recoveryPointId = Objects.requireNonNull(recoveryPointId, "expected parameter 'recoveryPointId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private GetRecoveryPointAccessTokenArgs() {}
 
-    private GetRecoveryPointAccessTokenArgs() {
-        this.containerName = null;
-        this.eTag = null;
-        this.fabricName = null;
-        this.location = null;
-        this.properties = null;
-        this.protectedItemName = null;
-        this.recoveryPointId = null;
-        this.resourceGroupName = null;
-        this.tags = Map.of();
-        this.vaultName = null;
+    private GetRecoveryPointAccessTokenArgs(GetRecoveryPointAccessTokenArgs $) {
+        this.containerName = $.containerName;
+        this.eTag = $.eTag;
+        this.fabricName = $.fabricName;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.protectedItemName = $.protectedItemName;
+        this.recoveryPointId = $.recoveryPointId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRecoveryPointAccessTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerName;
-        private @Nullable String eTag;
-        private String fabricName;
-        private @Nullable String location;
-        private @Nullable AADProperties properties;
-        private String protectedItemName;
-        private String recoveryPointId;
-        private String resourceGroupName;
-        private @Nullable Map<String,String> tags;
-        private String vaultName;
+        private GetRecoveryPointAccessTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRecoveryPointAccessTokenArgs();
         }
 
         public Builder(GetRecoveryPointAccessTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.eTag = defaults.eTag;
-    	      this.fabricName = defaults.fabricName;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.protectedItemName = defaults.protectedItemName;
-    	      this.recoveryPointId = defaults.recoveryPointId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.vaultName = defaults.vaultName;
+            $ = new GetRecoveryPointAccessTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
+
         public Builder fabricName(String fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder properties(@Nullable AADProperties properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder protectedItemName(String protectedItemName) {
-            this.protectedItemName = Objects.requireNonNull(protectedItemName);
+            $.protectedItemName = protectedItemName;
             return this;
         }
+
         public Builder recoveryPointId(String recoveryPointId) {
-            this.recoveryPointId = Objects.requireNonNull(recoveryPointId);
+            $.recoveryPointId = recoveryPointId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
-        }        public GetRecoveryPointAccessTokenArgs build() {
-            return new GetRecoveryPointAccessTokenArgs(containerName, eTag, fabricName, location, properties, protectedItemName, recoveryPointId, resourceGroupName, tags, vaultName);
+        }
+
+        public GetRecoveryPointAccessTokenArgs build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.protectedItemName = Objects.requireNonNull($.protectedItemName, "expected parameter 'protectedItemName' to be non-null");
+            $.recoveryPointId = Objects.requireNonNull($.recoveryPointId, "expected parameter 'recoveryPointId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

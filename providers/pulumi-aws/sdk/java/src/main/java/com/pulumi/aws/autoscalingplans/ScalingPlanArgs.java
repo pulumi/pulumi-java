@@ -7,10 +7,10 @@ import com.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceArgs;
 import com.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationSource", required=true)
-      private final Output<ScalingPlanApplicationSourceArgs> applicationSource;
+    private Output<ScalingPlanApplicationSourceArgs> applicationSource;
 
     public Output<ScalingPlanApplicationSourceArgs> applicationSource() {
         return this.applicationSource;
@@ -34,10 +34,10 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,79 +45,74 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalingInstructions", required=true)
-      private final Output<List<ScalingPlanScalingInstructionArgs>> scalingInstructions;
+    private Output<List<ScalingPlanScalingInstructionArgs>> scalingInstructions;
 
     public Output<List<ScalingPlanScalingInstructionArgs>> scalingInstructions() {
         return this.scalingInstructions;
     }
 
-    public ScalingPlanArgs(
-        Output<ScalingPlanApplicationSourceArgs> applicationSource,
-        @Nullable Output<String> name,
-        Output<List<ScalingPlanScalingInstructionArgs>> scalingInstructions) {
-        this.applicationSource = Objects.requireNonNull(applicationSource, "expected parameter 'applicationSource' to be non-null");
-        this.name = name;
-        this.scalingInstructions = Objects.requireNonNull(scalingInstructions, "expected parameter 'scalingInstructions' to be non-null");
-    }
+    private ScalingPlanArgs() {}
 
-    private ScalingPlanArgs() {
-        this.applicationSource = Codegen.empty();
-        this.name = Codegen.empty();
-        this.scalingInstructions = Codegen.empty();
+    private ScalingPlanArgs(ScalingPlanArgs $) {
+        this.applicationSource = $.applicationSource;
+        this.name = $.name;
+        this.scalingInstructions = $.scalingInstructions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ScalingPlanApplicationSourceArgs> applicationSource;
-        private @Nullable Output<String> name;
-        private Output<List<ScalingPlanScalingInstructionArgs>> scalingInstructions;
+        private ScalingPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingPlanArgs();
         }
 
         public Builder(ScalingPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationSource = defaults.applicationSource;
-    	      this.name = defaults.name;
-    	      this.scalingInstructions = defaults.scalingInstructions;
+            $ = new ScalingPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationSource(Output<ScalingPlanApplicationSourceArgs> applicationSource) {
-            this.applicationSource = Objects.requireNonNull(applicationSource);
+            $.applicationSource = applicationSource;
             return this;
         }
+
         public Builder applicationSource(ScalingPlanApplicationSourceArgs applicationSource) {
-            this.applicationSource = Output.of(Objects.requireNonNull(applicationSource));
-            return this;
+            return applicationSource(Output.of(applicationSource));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder scalingInstructions(Output<List<ScalingPlanScalingInstructionArgs>> scalingInstructions) {
-            this.scalingInstructions = Objects.requireNonNull(scalingInstructions);
+            $.scalingInstructions = scalingInstructions;
             return this;
         }
+
         public Builder scalingInstructions(List<ScalingPlanScalingInstructionArgs> scalingInstructions) {
-            this.scalingInstructions = Output.of(Objects.requireNonNull(scalingInstructions));
-            return this;
+            return scalingInstructions(Output.of(scalingInstructions));
         }
+
         public Builder scalingInstructions(ScalingPlanScalingInstructionArgs... scalingInstructions) {
             return scalingInstructions(List.of(scalingInstructions));
-        }        public ScalingPlanArgs build() {
-            return new ScalingPlanArgs(applicationSource, name, scalingInstructions);
+        }
+
+        public ScalingPlanArgs build() {
+            $.applicationSource = Objects.requireNonNull($.applicationSource, "expected parameter 'applicationSource' to be non-null");
+            $.scalingInstructions = Objects.requireNonNull($.scalingInstructions, "expected parameter 'scalingInstructions' to be non-null");
+            return $;
         }
     }
+
 }

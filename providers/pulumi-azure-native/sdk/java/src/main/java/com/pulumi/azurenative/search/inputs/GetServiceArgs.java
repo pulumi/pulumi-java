@@ -17,7 +17,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="searchServiceName", required=true)
-      private final String searchServiceName;
+    private String searchServiceName;
 
     public String searchServiceName() {
         return this.searchServiceName;
     }
 
-    public GetServiceArgs(
-        String resourceGroupName,
-        String searchServiceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.searchServiceName = Objects.requireNonNull(searchServiceName, "expected parameter 'searchServiceName' to be non-null");
-    }
+    private GetServiceArgs() {}
 
-    private GetServiceArgs() {
-        this.resourceGroupName = null;
-        this.searchServiceName = null;
+    private GetServiceArgs(GetServiceArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.searchServiceName = $.searchServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String searchServiceName;
+        private GetServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceArgs();
         }
 
         public Builder(GetServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.searchServiceName = defaults.searchServiceName;
+            $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder searchServiceName(String searchServiceName) {
-            this.searchServiceName = Objects.requireNonNull(searchServiceName);
+            $.searchServiceName = searchServiceName;
             return this;
-        }        public GetServiceArgs build() {
-            return new GetServiceArgs(resourceGroupName, searchServiceName);
+        }
+
+        public GetServiceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.searchServiceName = Objects.requireNonNull($.searchServiceName, "expected parameter 'searchServiceName' to be non-null");
+            return $;
         }
     }
+
 }

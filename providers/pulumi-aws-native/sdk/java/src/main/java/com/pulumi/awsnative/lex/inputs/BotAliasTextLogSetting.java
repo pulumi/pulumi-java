@@ -20,62 +20,57 @@ public final class BotAliasTextLogSetting extends com.pulumi.resources.InvokeArg
     public static final BotAliasTextLogSetting Empty = new BotAliasTextLogSetting();
 
     @Import(name="destination")
-      private final @Nullable BotAliasTextLogDestination destination;
+    private @Nullable BotAliasTextLogDestination destination;
 
     public Optional<BotAliasTextLogDestination> destination() {
-        return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
+        return Optional.ofNullable(this.destination);
     }
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public BotAliasTextLogSetting(
-        @Nullable BotAliasTextLogDestination destination,
-        @Nullable Boolean enabled) {
-        this.destination = destination;
-        this.enabled = enabled;
-    }
+    private BotAliasTextLogSetting() {}
 
-    private BotAliasTextLogSetting() {
-        this.destination = null;
-        this.enabled = null;
+    private BotAliasTextLogSetting(BotAliasTextLogSetting $) {
+        this.destination = $.destination;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasTextLogSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BotAliasTextLogDestination destination;
-        private @Nullable Boolean enabled;
+        private BotAliasTextLogSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasTextLogSetting();
         }
 
         public Builder(BotAliasTextLogSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.enabled = defaults.enabled;
+            $ = new BotAliasTextLogSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable BotAliasTextLogDestination destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public BotAliasTextLogSetting build() {
-            return new BotAliasTextLogSetting(destination, enabled);
+        }
+
+        public BotAliasTextLogSetting build() {
+            return $;
         }
     }
+
 }

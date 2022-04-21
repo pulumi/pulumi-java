@@ -17,45 +17,45 @@ public final class GetResourceCollectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceCollectionType", required=true)
-      private final ResourceCollectionType resourceCollectionType;
+    private ResourceCollectionType resourceCollectionType;
 
     public ResourceCollectionType resourceCollectionType() {
         return this.resourceCollectionType;
     }
 
-    public GetResourceCollectionArgs(ResourceCollectionType resourceCollectionType) {
-        this.resourceCollectionType = Objects.requireNonNull(resourceCollectionType, "expected parameter 'resourceCollectionType' to be non-null");
-    }
+    private GetResourceCollectionArgs() {}
 
-    private GetResourceCollectionArgs() {
-        this.resourceCollectionType = null;
+    private GetResourceCollectionArgs(GetResourceCollectionArgs $) {
+        this.resourceCollectionType = $.resourceCollectionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ResourceCollectionType resourceCollectionType;
+        private GetResourceCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceCollectionArgs();
         }
 
         public Builder(GetResourceCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceCollectionType = defaults.resourceCollectionType;
+            $ = new GetResourceCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceCollectionType(ResourceCollectionType resourceCollectionType) {
-            this.resourceCollectionType = Objects.requireNonNull(resourceCollectionType);
+            $.resourceCollectionType = resourceCollectionType;
             return this;
-        }        public GetResourceCollectionArgs build() {
-            return new GetResourceCollectionArgs(resourceCollectionType);
+        }
+
+        public GetResourceCollectionArgs build() {
+            $.resourceCollectionType = Objects.requireNonNull($.resourceCollectionType, "expected parameter 'resourceCollectionType' to be non-null");
+            return $;
         }
     }
+
 }

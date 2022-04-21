@@ -5,9 +5,9 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class JobQueryDefaultDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
@@ -31,63 +31,59 @@ public final class JobQueryDefaultDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
-    public JobQueryDefaultDatasetArgs(
-        Output<String> datasetId,
-        @Nullable Output<String> projectId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.projectId = projectId;
-    }
+    private JobQueryDefaultDatasetArgs() {}
 
-    private JobQueryDefaultDatasetArgs() {
-        this.datasetId = Codegen.empty();
-        this.projectId = Codegen.empty();
+    private JobQueryDefaultDatasetArgs(JobQueryDefaultDatasetArgs $) {
+        this.datasetId = $.datasetId;
+        this.projectId = $.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobQueryDefaultDatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> datasetId;
-        private @Nullable Output<String> projectId;
+        private JobQueryDefaultDatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobQueryDefaultDatasetArgs();
         }
 
         public Builder(JobQueryDefaultDatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.projectId = defaults.projectId;
+            $ = new JobQueryDefaultDatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
-        }        public JobQueryDefaultDatasetArgs build() {
-            return new JobQueryDefaultDatasetArgs(datasetId, projectId);
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
+        }
+
+        public JobQueryDefaultDatasetArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            return $;
         }
     }
+
 }

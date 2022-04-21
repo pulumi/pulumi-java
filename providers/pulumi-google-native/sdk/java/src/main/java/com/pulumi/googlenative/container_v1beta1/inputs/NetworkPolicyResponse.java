@@ -22,7 +22,7 @@ public final class NetworkPolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -33,55 +33,52 @@ public final class NetworkPolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="provider", required=true)
-      private final String provider;
+    private String provider;
 
     public String provider() {
         return this.provider;
     }
 
-    public NetworkPolicyResponse(
-        Boolean enabled,
-        String provider) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.provider = Objects.requireNonNull(provider, "expected parameter 'provider' to be non-null");
-    }
+    private NetworkPolicyResponse() {}
 
-    private NetworkPolicyResponse() {
-        this.enabled = null;
-        this.provider = null;
+    private NetworkPolicyResponse(NetworkPolicyResponse $) {
+        this.enabled = $.enabled;
+        this.provider = $.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String provider;
+        private NetworkPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPolicyResponse();
         }
 
         public Builder(NetworkPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.provider = defaults.provider;
+            $ = new NetworkPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder provider(String provider) {
-            this.provider = Objects.requireNonNull(provider);
+            $.provider = provider;
             return this;
-        }        public NetworkPolicyResponse build() {
-            return new NetworkPolicyResponse(enabled, provider);
+        }
+
+        public NetworkPolicyResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.provider = Objects.requireNonNull($.provider, "expected parameter 'provider' to be non-null");
+            return $;
         }
     }
+
 }

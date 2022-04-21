@@ -21,7 +21,7 @@ public final class ComputeInstanceCreatedByResponse extends com.pulumi.resources
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
@@ -32,7 +32,7 @@ public final class ComputeInstanceCreatedByResponse extends com.pulumi.resources
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
@@ -43,64 +43,59 @@ public final class ComputeInstanceCreatedByResponse extends com.pulumi.resources
      * 
      */
     @Import(name="userOrgId", required=true)
-      private final String userOrgId;
+    private String userOrgId;
 
     public String userOrgId() {
         return this.userOrgId;
     }
 
-    public ComputeInstanceCreatedByResponse(
-        String userId,
-        String userName,
-        String userOrgId) {
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-        this.userOrgId = Objects.requireNonNull(userOrgId, "expected parameter 'userOrgId' to be non-null");
-    }
+    private ComputeInstanceCreatedByResponse() {}
 
-    private ComputeInstanceCreatedByResponse() {
-        this.userId = null;
-        this.userName = null;
-        this.userOrgId = null;
+    private ComputeInstanceCreatedByResponse(ComputeInstanceCreatedByResponse $) {
+        this.userId = $.userId;
+        this.userName = $.userName;
+        this.userOrgId = $.userOrgId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeInstanceCreatedByResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String userId;
-        private String userName;
-        private String userOrgId;
+        private ComputeInstanceCreatedByResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeInstanceCreatedByResponse();
         }
 
         public Builder(ComputeInstanceCreatedByResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userId = defaults.userId;
-    	      this.userName = defaults.userName;
-    	      this.userOrgId = defaults.userOrgId;
+            $ = new ComputeInstanceCreatedByResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userOrgId(String userOrgId) {
-            this.userOrgId = Objects.requireNonNull(userOrgId);
+            $.userOrgId = userOrgId;
             return this;
-        }        public ComputeInstanceCreatedByResponse build() {
-            return new ComputeInstanceCreatedByResponse(userId, userName, userOrgId);
+        }
+
+        public ComputeInstanceCreatedByResponse build() {
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            $.userOrgId = Objects.requireNonNull($.userOrgId, "expected parameter 'userOrgId' to be non-null");
+            return $;
         }
     }
+
 }

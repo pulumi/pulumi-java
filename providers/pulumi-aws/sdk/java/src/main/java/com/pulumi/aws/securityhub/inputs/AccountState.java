@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.securityhub.inputs;
 
-import java.util.Objects;
+
 
 
 public final class AccountState extends com.pulumi.resources.ResourceArgs {
 
     public static final AccountState Empty = new AccountState();
 
-    public AccountState() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AccountState defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AccountState $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AccountState defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AccountState();
         }
         public AccountState build() {
-            return new AccountState();
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class MetricCounterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="additionalDimensions")
-      private final @Nullable List<MetricDimensionResponse> additionalDimensions;
+    private @Nullable List<MetricDimensionResponse> additionalDimensions;
 
-    public List<MetricDimensionResponse> additionalDimensions() {
-        return this.additionalDimensions == null ? List.of() : this.additionalDimensions;
+    public Optional<List<MetricDimensionResponse>> additionalDimensions() {
+        return Optional.ofNullable(this.additionalDimensions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MetricCounterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dimensionFilter")
-      private final @Nullable List<MetricDimensionResponse> dimensionFilter;
+    private @Nullable List<MetricDimensionResponse> dimensionFilter;
 
-    public List<MetricDimensionResponse> dimensionFilter() {
-        return this.dimensionFilter == null ? List.of() : this.dimensionFilter;
+    public Optional<List<MetricDimensionResponse>> dimensionFilter() {
+        return Optional.ofNullable(this.dimensionFilter);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MetricCounterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="instance")
-      private final @Nullable String instance;
+    private @Nullable String instance;
 
     public Optional<String> instance() {
-        return this.instance == null ? Optional.empty() : Optional.ofNullable(this.instance);
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -58,79 +58,71 @@ public final class MetricCounterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public MetricCounterResponse(
-        @Nullable List<MetricDimensionResponse> additionalDimensions,
-        @Nullable List<MetricDimensionResponse> dimensionFilter,
-        @Nullable String instance,
-        String name) {
-        this.additionalDimensions = additionalDimensions;
-        this.dimensionFilter = dimensionFilter;
-        this.instance = instance;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private MetricCounterResponse() {}
 
-    private MetricCounterResponse() {
-        this.additionalDimensions = List.of();
-        this.dimensionFilter = List.of();
-        this.instance = null;
-        this.name = null;
+    private MetricCounterResponse(MetricCounterResponse $) {
+        this.additionalDimensions = $.additionalDimensions;
+        this.dimensionFilter = $.dimensionFilter;
+        this.instance = $.instance;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricCounterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<MetricDimensionResponse> additionalDimensions;
-        private @Nullable List<MetricDimensionResponse> dimensionFilter;
-        private @Nullable String instance;
-        private String name;
+        private MetricCounterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricCounterResponse();
         }
 
         public Builder(MetricCounterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalDimensions = defaults.additionalDimensions;
-    	      this.dimensionFilter = defaults.dimensionFilter;
-    	      this.instance = defaults.instance;
-    	      this.name = defaults.name;
+            $ = new MetricCounterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalDimensions(@Nullable List<MetricDimensionResponse> additionalDimensions) {
-            this.additionalDimensions = additionalDimensions;
+            $.additionalDimensions = additionalDimensions;
             return this;
         }
+
         public Builder additionalDimensions(MetricDimensionResponse... additionalDimensions) {
             return additionalDimensions(List.of(additionalDimensions));
         }
+
         public Builder dimensionFilter(@Nullable List<MetricDimensionResponse> dimensionFilter) {
-            this.dimensionFilter = dimensionFilter;
+            $.dimensionFilter = dimensionFilter;
             return this;
         }
+
         public Builder dimensionFilter(MetricDimensionResponse... dimensionFilter) {
             return dimensionFilter(List.of(dimensionFilter));
         }
+
         public Builder instance(@Nullable String instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public MetricCounterResponse build() {
-            return new MetricCounterResponse(additionalDimensions, dimensionFilter, instance, name);
+        }
+
+        public MetricCounterResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

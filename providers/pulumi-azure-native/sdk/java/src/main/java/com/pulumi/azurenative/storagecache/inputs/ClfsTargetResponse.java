@@ -23,45 +23,44 @@ public final class ClfsTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public ClfsTargetResponse(@Nullable String target) {
-        this.target = target;
-    }
+    private ClfsTargetResponse() {}
 
-    private ClfsTargetResponse() {
-        this.target = null;
+    private ClfsTargetResponse(ClfsTargetResponse $) {
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClfsTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String target;
+        private ClfsTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClfsTargetResponse();
         }
 
         public Builder(ClfsTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
+            $ = new ClfsTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public ClfsTargetResponse build() {
-            return new ClfsTargetResponse(target);
+        }
+
+        public ClfsTargetResponse build() {
+            return $;
         }
     }
+
 }

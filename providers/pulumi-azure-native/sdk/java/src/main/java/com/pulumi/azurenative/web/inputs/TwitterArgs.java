@@ -6,9 +6,9 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.TwitterRegistrationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TwitterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class TwitterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registration")
-      private final @Nullable Output<TwitterRegistrationArgs> registration;
+    private @Nullable Output<TwitterRegistrationArgs> registration;
 
-    public Output<TwitterRegistrationArgs> registration() {
-        return this.registration == null ? Codegen.empty() : this.registration;
+    public Optional<Output<TwitterRegistrationArgs>> registration() {
+        return Optional.ofNullable(this.registration);
     }
 
-    public TwitterArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<TwitterRegistrationArgs> registration) {
-        this.enabled = enabled;
-        this.registration = registration;
-    }
+    private TwitterArgs() {}
 
-    private TwitterArgs() {
-        this.enabled = Codegen.empty();
-        this.registration = Codegen.empty();
+    private TwitterArgs(TwitterArgs $) {
+        this.enabled = $.enabled;
+        this.registration = $.registration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TwitterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<TwitterRegistrationArgs> registration;
+        private TwitterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TwitterArgs();
         }
 
         public Builder(TwitterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.registration = defaults.registration;
+            $ = new TwitterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder registration(@Nullable Output<TwitterRegistrationArgs> registration) {
-            this.registration = registration;
+            $.registration = registration;
             return this;
         }
-        public Builder registration(@Nullable TwitterRegistrationArgs registration) {
-            this.registration = Codegen.ofNullable(registration);
-            return this;
-        }        public TwitterArgs build() {
-            return new TwitterArgs(enabled, registration);
+
+        public Builder registration(TwitterRegistrationArgs registration) {
+            return registration(Output.of(registration));
+        }
+
+        public TwitterArgs build() {
+            return $;
         }
     }
+
 }

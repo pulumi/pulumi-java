@@ -6,7 +6,6 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleArgs extends com.pu
      * 
      */
     @Import(name="fieldToMatch", required=true)
-      private final Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs> fieldToMatch;
+    private Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs> fieldToMatch;
 
     public Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
@@ -35,63 +34,60 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleArgs extends com.pu
      * 
      */
     @Import(name="textTransformation", required=true)
-      private final Output<String> textTransformation;
+    private Output<String> textTransformation;
 
     public Output<String> textTransformation() {
         return this.textTransformation;
     }
 
-    public SqlInjectionMatchSetSqlInjectionMatchTupleArgs(
-        Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs> fieldToMatch,
-        Output<String> textTransformation) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.textTransformation = Objects.requireNonNull(textTransformation, "expected parameter 'textTransformation' to be non-null");
-    }
+    private SqlInjectionMatchSetSqlInjectionMatchTupleArgs() {}
 
-    private SqlInjectionMatchSetSqlInjectionMatchTupleArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.textTransformation = Codegen.empty();
+    private SqlInjectionMatchSetSqlInjectionMatchTupleArgs(SqlInjectionMatchSetSqlInjectionMatchTupleArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformation = $.textTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlInjectionMatchSetSqlInjectionMatchTupleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs> fieldToMatch;
-        private Output<String> textTransformation;
+        private SqlInjectionMatchSetSqlInjectionMatchTupleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlInjectionMatchSetSqlInjectionMatchTupleArgs();
         }
 
         public Builder(SqlInjectionMatchSetSqlInjectionMatchTupleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformation = defaults.textTransformation;
+            $ = new SqlInjectionMatchSetSqlInjectionMatchTupleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder fieldToMatch(SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
-            return this;
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder textTransformation(Output<String> textTransformation) {
-            this.textTransformation = Objects.requireNonNull(textTransformation);
+            $.textTransformation = textTransformation;
             return this;
         }
+
         public Builder textTransformation(String textTransformation) {
-            this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
-            return this;
-        }        public SqlInjectionMatchSetSqlInjectionMatchTupleArgs build() {
-            return new SqlInjectionMatchSetSqlInjectionMatchTupleArgs(fieldToMatch, textTransformation);
+            return textTransformation(Output.of(textTransformation));
+        }
+
+        public SqlInjectionMatchSetSqlInjectionMatchTupleArgs build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.textTransformation = Objects.requireNonNull($.textTransformation, "expected parameter 'textTransformation' to be non-null");
+            return $;
         }
     }
+
 }

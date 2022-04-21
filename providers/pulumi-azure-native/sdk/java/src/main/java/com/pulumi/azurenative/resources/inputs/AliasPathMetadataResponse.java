@@ -17,7 +17,7 @@ public final class AliasPathMetadataResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="attributes", required=true)
-      private final String attributes;
+    private String attributes;
 
     public String attributes() {
         return this.attributes;
@@ -28,55 +28,52 @@ public final class AliasPathMetadataResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AliasPathMetadataResponse(
-        String attributes,
-        String type) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AliasPathMetadataResponse() {}
 
-    private AliasPathMetadataResponse() {
-        this.attributes = null;
-        this.type = null;
+    private AliasPathMetadataResponse(AliasPathMetadataResponse $) {
+        this.attributes = $.attributes;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasPathMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attributes;
-        private String type;
+        private AliasPathMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasPathMetadataResponse();
         }
 
         public Builder(AliasPathMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.type = defaults.type;
+            $ = new AliasPathMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(String attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AliasPathMetadataResponse build() {
-            return new AliasPathMetadataResponse(attributes, type);
+        }
+
+        public AliasPathMetadataResponse build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

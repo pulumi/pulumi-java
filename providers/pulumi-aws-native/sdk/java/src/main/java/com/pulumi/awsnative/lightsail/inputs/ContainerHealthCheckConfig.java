@@ -24,10 +24,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="healthyThreshold")
-      private final @Nullable Integer healthyThreshold;
+    private @Nullable Integer healthyThreshold;
 
     public Optional<Integer> healthyThreshold() {
-        return this.healthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.healthyThreshold);
+        return Optional.ofNullable(this.healthyThreshold);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="intervalSeconds")
-      private final @Nullable Integer intervalSeconds;
+    private @Nullable Integer intervalSeconds;
 
     public Optional<Integer> intervalSeconds() {
-        return this.intervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalSeconds);
+        return Optional.ofNullable(this.intervalSeconds);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="successCodes")
-      private final @Nullable String successCodes;
+    private @Nullable String successCodes;
 
     public Optional<String> successCodes() {
-        return this.successCodes == null ? Optional.empty() : Optional.ofNullable(this.successCodes);
+        return Optional.ofNullable(this.successCodes);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Integer timeoutSeconds;
+    private @Nullable Integer timeoutSeconds;
 
     public Optional<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
     /**
@@ -79,91 +79,74 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="unhealthyThreshold")
-      private final @Nullable Integer unhealthyThreshold;
+    private @Nullable Integer unhealthyThreshold;
 
     public Optional<Integer> unhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.unhealthyThreshold);
+        return Optional.ofNullable(this.unhealthyThreshold);
     }
 
-    public ContainerHealthCheckConfig(
-        @Nullable Integer healthyThreshold,
-        @Nullable Integer intervalSeconds,
-        @Nullable String path,
-        @Nullable String successCodes,
-        @Nullable Integer timeoutSeconds,
-        @Nullable Integer unhealthyThreshold) {
-        this.healthyThreshold = healthyThreshold;
-        this.intervalSeconds = intervalSeconds;
-        this.path = path;
-        this.successCodes = successCodes;
-        this.timeoutSeconds = timeoutSeconds;
-        this.unhealthyThreshold = unhealthyThreshold;
-    }
+    private ContainerHealthCheckConfig() {}
 
-    private ContainerHealthCheckConfig() {
-        this.healthyThreshold = null;
-        this.intervalSeconds = null;
-        this.path = null;
-        this.successCodes = null;
-        this.timeoutSeconds = null;
-        this.unhealthyThreshold = null;
+    private ContainerHealthCheckConfig(ContainerHealthCheckConfig $) {
+        this.healthyThreshold = $.healthyThreshold;
+        this.intervalSeconds = $.intervalSeconds;
+        this.path = $.path;
+        this.successCodes = $.successCodes;
+        this.timeoutSeconds = $.timeoutSeconds;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerHealthCheckConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer healthyThreshold;
-        private @Nullable Integer intervalSeconds;
-        private @Nullable String path;
-        private @Nullable String successCodes;
-        private @Nullable Integer timeoutSeconds;
-        private @Nullable Integer unhealthyThreshold;
+        private ContainerHealthCheckConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerHealthCheckConfig();
         }
 
         public Builder(ContainerHealthCheckConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthyThreshold = defaults.healthyThreshold;
-    	      this.intervalSeconds = defaults.intervalSeconds;
-    	      this.path = defaults.path;
-    	      this.successCodes = defaults.successCodes;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new ContainerHealthCheckConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = healthyThreshold;
+            $.healthyThreshold = healthyThreshold;
             return this;
         }
+
         public Builder intervalSeconds(@Nullable Integer intervalSeconds) {
-            this.intervalSeconds = intervalSeconds;
+            $.intervalSeconds = intervalSeconds;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder successCodes(@Nullable String successCodes) {
-            this.successCodes = successCodes;
+            $.successCodes = successCodes;
             return this;
         }
+
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
         }
+
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = unhealthyThreshold;
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
-        }        public ContainerHealthCheckConfig build() {
-            return new ContainerHealthCheckConfig(healthyThreshold, intervalSeconds, path, successCodes, timeoutSeconds, unhealthyThreshold);
+        }
+
+        public ContainerHealthCheckConfig build() {
+            return $;
         }
     }
+
 }

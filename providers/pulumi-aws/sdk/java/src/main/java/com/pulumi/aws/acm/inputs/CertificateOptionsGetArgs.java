@@ -5,9 +5,9 @@ package com.pulumi.aws.acm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CertificateOptionsGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificateTransparencyLoggingPreference")
-      private final @Nullable Output<String> certificateTransparencyLoggingPreference;
+    private @Nullable Output<String> certificateTransparencyLoggingPreference;
 
-    public Output<String> certificateTransparencyLoggingPreference() {
-        return this.certificateTransparencyLoggingPreference == null ? Codegen.empty() : this.certificateTransparencyLoggingPreference;
+    public Optional<Output<String>> certificateTransparencyLoggingPreference() {
+        return Optional.ofNullable(this.certificateTransparencyLoggingPreference);
     }
 
-    public CertificateOptionsGetArgs(@Nullable Output<String> certificateTransparencyLoggingPreference) {
-        this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
-    }
+    private CertificateOptionsGetArgs() {}
 
-    private CertificateOptionsGetArgs() {
-        this.certificateTransparencyLoggingPreference = Codegen.empty();
+    private CertificateOptionsGetArgs(CertificateOptionsGetArgs $) {
+        this.certificateTransparencyLoggingPreference = $.certificateTransparencyLoggingPreference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateTransparencyLoggingPreference;
+        private CertificateOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateOptionsGetArgs();
         }
 
         public Builder(CertificateOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateTransparencyLoggingPreference = defaults.certificateTransparencyLoggingPreference;
+            $ = new CertificateOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateTransparencyLoggingPreference(@Nullable Output<String> certificateTransparencyLoggingPreference) {
-            this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
+            $.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
             return this;
         }
-        public Builder certificateTransparencyLoggingPreference(@Nullable String certificateTransparencyLoggingPreference) {
-            this.certificateTransparencyLoggingPreference = Codegen.ofNullable(certificateTransparencyLoggingPreference);
-            return this;
-        }        public CertificateOptionsGetArgs build() {
-            return new CertificateOptionsGetArgs(certificateTransparencyLoggingPreference);
+
+        public Builder certificateTransparencyLoggingPreference(String certificateTransparencyLoggingPreference) {
+            return certificateTransparencyLoggingPreference(Output.of(certificateTransparencyLoggingPreference));
+        }
+
+        public CertificateOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

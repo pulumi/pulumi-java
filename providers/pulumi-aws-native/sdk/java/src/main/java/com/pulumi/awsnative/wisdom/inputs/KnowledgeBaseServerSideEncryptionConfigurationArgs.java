@@ -5,9 +5,9 @@ package com.pulumi.awsnative.wisdom.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class KnowledgeBaseServerSideEncryptionConfigurationArgs extends co
     public static final KnowledgeBaseServerSideEncryptionConfigurationArgs Empty = new KnowledgeBaseServerSideEncryptionConfigurationArgs();
 
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
-    public KnowledgeBaseServerSideEncryptionConfigurationArgs(@Nullable Output<String> kmsKeyId) {
-        this.kmsKeyId = kmsKeyId;
-    }
+    private KnowledgeBaseServerSideEncryptionConfigurationArgs() {}
 
-    private KnowledgeBaseServerSideEncryptionConfigurationArgs() {
-        this.kmsKeyId = Codegen.empty();
+    private KnowledgeBaseServerSideEncryptionConfigurationArgs(KnowledgeBaseServerSideEncryptionConfigurationArgs $) {
+        this.kmsKeyId = $.kmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KnowledgeBaseServerSideEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyId;
+        private KnowledgeBaseServerSideEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KnowledgeBaseServerSideEncryptionConfigurationArgs();
         }
 
         public Builder(KnowledgeBaseServerSideEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
+            $ = new KnowledgeBaseServerSideEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
-        }        public KnowledgeBaseServerSideEncryptionConfigurationArgs build() {
-            return new KnowledgeBaseServerSideEncryptionConfigurationArgs(kmsKeyId);
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
+        }
+
+        public KnowledgeBaseServerSideEncryptionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

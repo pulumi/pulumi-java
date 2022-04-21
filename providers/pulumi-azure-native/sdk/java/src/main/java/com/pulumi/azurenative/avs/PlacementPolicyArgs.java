@@ -8,9 +8,9 @@ import com.pulumi.azurenative.avs.inputs.VmVmPlacementPolicyPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -34,10 +34,10 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="placementPolicyName")
-      private final @Nullable Output<String> placementPolicyName;
+    private @Nullable Output<String> placementPolicyName;
 
-    public Output<String> placementPolicyName() {
-        return this.placementPolicyName == null ? Codegen.empty() : this.placementPolicyName;
+    public Optional<Output<String>> placementPolicyName() {
+        return Optional.ofNullable(this.placementPolicyName);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -56,10 +56,10 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
+    private @Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
 
-    public Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -67,102 +67,91 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public PlacementPolicyArgs(
-        Output<String> clusterName,
-        @Nullable Output<String> placementPolicyName,
-        Output<String> privateCloudName,
-        @Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties,
-        Output<String> resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.placementPolicyName = placementPolicyName;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private PlacementPolicyArgs() {}
 
-    private PlacementPolicyArgs() {
-        this.clusterName = Codegen.empty();
-        this.placementPolicyName = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private PlacementPolicyArgs(PlacementPolicyArgs $) {
+        this.clusterName = $.clusterName;
+        this.placementPolicyName = $.placementPolicyName;
+        this.privateCloudName = $.privateCloudName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlacementPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private @Nullable Output<String> placementPolicyName;
-        private Output<String> privateCloudName;
-        private @Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
-        private Output<String> resourceGroupName;
+        private PlacementPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlacementPolicyArgs();
         }
 
         public Builder(PlacementPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.placementPolicyName = defaults.placementPolicyName;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new PlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder placementPolicyName(@Nullable Output<String> placementPolicyName) {
-            this.placementPolicyName = placementPolicyName;
+            $.placementPolicyName = placementPolicyName;
             return this;
         }
-        public Builder placementPolicyName(@Nullable String placementPolicyName) {
-            this.placementPolicyName = Codegen.ofNullable(placementPolicyName);
-            return this;
+
+        public Builder placementPolicyName(String placementPolicyName) {
+            return placementPolicyName(Output.of(placementPolicyName));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder properties(@Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public PlacementPolicyArgs build() {
-            return new PlacementPolicyArgs(clusterName, placementPolicyName, privateCloudName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public PlacementPolicyArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ClusterClusterNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="nodeRole")
-      private final @Nullable Output<String> nodeRole;
+    private @Nullable Output<String> nodeRole;
 
-    public Output<String> nodeRole() {
-        return this.nodeRole == null ? Codegen.empty() : this.nodeRole;
+    public Optional<Output<String>> nodeRole() {
+        return Optional.ofNullable(this.nodeRole);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ClusterClusterNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable Output<String> privateIpAddress;
+    private @Nullable Output<String> privateIpAddress;
 
-    public Output<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
+    public Optional<Output<String>> privateIpAddress() {
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ClusterClusterNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="publicIpAddress")
-      private final @Nullable Output<String> publicIpAddress;
+    private @Nullable Output<String> publicIpAddress;
 
-    public Output<String> publicIpAddress() {
-        return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
+    public Optional<Output<String>> publicIpAddress() {
+        return Optional.ofNullable(this.publicIpAddress);
     }
 
-    public ClusterClusterNodeArgs(
-        @Nullable Output<String> nodeRole,
-        @Nullable Output<String> privateIpAddress,
-        @Nullable Output<String> publicIpAddress) {
-        this.nodeRole = nodeRole;
-        this.privateIpAddress = privateIpAddress;
-        this.publicIpAddress = publicIpAddress;
-    }
+    private ClusterClusterNodeArgs() {}
 
-    private ClusterClusterNodeArgs() {
-        this.nodeRole = Codegen.empty();
-        this.privateIpAddress = Codegen.empty();
-        this.publicIpAddress = Codegen.empty();
+    private ClusterClusterNodeArgs(ClusterClusterNodeArgs $) {
+        this.nodeRole = $.nodeRole;
+        this.privateIpAddress = $.privateIpAddress;
+        this.publicIpAddress = $.publicIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> nodeRole;
-        private @Nullable Output<String> privateIpAddress;
-        private @Nullable Output<String> publicIpAddress;
+        private ClusterClusterNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterNodeArgs();
         }
 
         public Builder(ClusterClusterNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeRole = defaults.nodeRole;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.publicIpAddress = defaults.publicIpAddress;
+            $ = new ClusterClusterNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeRole(@Nullable Output<String> nodeRole) {
-            this.nodeRole = nodeRole;
+            $.nodeRole = nodeRole;
             return this;
         }
-        public Builder nodeRole(@Nullable String nodeRole) {
-            this.nodeRole = Codegen.ofNullable(nodeRole);
-            return this;
+
+        public Builder nodeRole(String nodeRole) {
+            return nodeRole(Output.of(nodeRole));
         }
+
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
-        public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
-            return this;
+
+        public Builder privateIpAddress(String privateIpAddress) {
+            return privateIpAddress(Output.of(privateIpAddress));
         }
+
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
+            $.publicIpAddress = publicIpAddress;
             return this;
         }
-        public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Codegen.ofNullable(publicIpAddress);
-            return this;
-        }        public ClusterClusterNodeArgs build() {
-            return new ClusterClusterNodeArgs(nodeRole, privateIpAddress, publicIpAddress);
+
+        public Builder publicIpAddress(String publicIpAddress) {
+            return publicIpAddress(Output.of(publicIpAddress));
+        }
+
+        public ClusterClusterNodeArgs build() {
+            return $;
         }
     }
+
 }

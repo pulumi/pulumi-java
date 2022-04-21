@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="kind", required=true)
-      private final GooglePrivacyDlpV2KindExpressionResponse kind;
+    private GooglePrivacyDlpV2KindExpressionResponse kind;
 
     public GooglePrivacyDlpV2KindExpressionResponse kind() {
         return this.kind;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="partitionId", required=true)
-      private final GooglePrivacyDlpV2PartitionIdResponse partitionId;
+    private GooglePrivacyDlpV2PartitionIdResponse partitionId;
 
     public GooglePrivacyDlpV2PartitionIdResponse partitionId() {
         return this.partitionId;
     }
 
-    public GooglePrivacyDlpV2DatastoreOptionsResponse(
-        GooglePrivacyDlpV2KindExpressionResponse kind,
-        GooglePrivacyDlpV2PartitionIdResponse partitionId) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.partitionId = Objects.requireNonNull(partitionId, "expected parameter 'partitionId' to be non-null");
-    }
+    private GooglePrivacyDlpV2DatastoreOptionsResponse() {}
 
-    private GooglePrivacyDlpV2DatastoreOptionsResponse() {
-        this.kind = null;
-        this.partitionId = null;
+    private GooglePrivacyDlpV2DatastoreOptionsResponse(GooglePrivacyDlpV2DatastoreOptionsResponse $) {
+        this.kind = $.kind;
+        this.partitionId = $.partitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DatastoreOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2KindExpressionResponse kind;
-        private GooglePrivacyDlpV2PartitionIdResponse partitionId;
+        private GooglePrivacyDlpV2DatastoreOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DatastoreOptionsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2DatastoreOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.partitionId = defaults.partitionId;
+            $ = new GooglePrivacyDlpV2DatastoreOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(GooglePrivacyDlpV2KindExpressionResponse kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder partitionId(GooglePrivacyDlpV2PartitionIdResponse partitionId) {
-            this.partitionId = Objects.requireNonNull(partitionId);
+            $.partitionId = partitionId;
             return this;
-        }        public GooglePrivacyDlpV2DatastoreOptionsResponse build() {
-            return new GooglePrivacyDlpV2DatastoreOptionsResponse(kind, partitionId);
+        }
+
+        public GooglePrivacyDlpV2DatastoreOptionsResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.partitionId = Objects.requireNonNull($.partitionId, "expected parameter 'partitionId' to be non-null");
+            return $;
         }
     }
+
 }

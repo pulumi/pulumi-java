@@ -5,10 +5,10 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FargateProfileSelectorArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class FargateProfileSelectorArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="namespace", required=true)
-      private final Output<String> namespace;
+    private Output<String> namespace;
 
     public Output<String> namespace() {
         return this.namespace;
     }
 
-    public FargateProfileSelectorArgs(
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> namespace) {
-        this.labels = labels;
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private FargateProfileSelectorArgs() {}
 
-    private FargateProfileSelectorArgs() {
-        this.labels = Codegen.empty();
-        this.namespace = Codegen.empty();
+    private FargateProfileSelectorArgs(FargateProfileSelectorArgs $) {
+        this.labels = $.labels;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FargateProfileSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> namespace;
+        private FargateProfileSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FargateProfileSelectorArgs();
         }
 
         public Builder(FargateProfileSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
-    	      this.namespace = defaults.namespace;
+            $ = new FargateProfileSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder namespace(Output<String> namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Output.of(Objects.requireNonNull(namespace));
-            return this;
-        }        public FargateProfileSelectorArgs build() {
-            return new FargateProfileSelectorArgs(labels, namespace);
+            return namespace(Output.of(namespace));
+        }
+
+        public FargateProfileSelectorArgs build() {
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

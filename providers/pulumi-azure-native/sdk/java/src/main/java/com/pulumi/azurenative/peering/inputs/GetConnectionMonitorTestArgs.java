@@ -17,7 +17,7 @@ public final class GetConnectionMonitorTestArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="connectionMonitorTestName", required=true)
-      private final String connectionMonitorTestName;
+    private String connectionMonitorTestName;
 
     public String connectionMonitorTestName() {
         return this.connectionMonitorTestName;
@@ -28,7 +28,7 @@ public final class GetConnectionMonitorTestArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="peeringServiceName", required=true)
-      private final String peeringServiceName;
+    private String peeringServiceName;
 
     public String peeringServiceName() {
         return this.peeringServiceName;
@@ -39,64 +39,59 @@ public final class GetConnectionMonitorTestArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetConnectionMonitorTestArgs(
-        String connectionMonitorTestName,
-        String peeringServiceName,
-        String resourceGroupName) {
-        this.connectionMonitorTestName = Objects.requireNonNull(connectionMonitorTestName, "expected parameter 'connectionMonitorTestName' to be non-null");
-        this.peeringServiceName = Objects.requireNonNull(peeringServiceName, "expected parameter 'peeringServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetConnectionMonitorTestArgs() {}
 
-    private GetConnectionMonitorTestArgs() {
-        this.connectionMonitorTestName = null;
-        this.peeringServiceName = null;
-        this.resourceGroupName = null;
+    private GetConnectionMonitorTestArgs(GetConnectionMonitorTestArgs $) {
+        this.connectionMonitorTestName = $.connectionMonitorTestName;
+        this.peeringServiceName = $.peeringServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectionMonitorTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionMonitorTestName;
-        private String peeringServiceName;
-        private String resourceGroupName;
+        private GetConnectionMonitorTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectionMonitorTestArgs();
         }
 
         public Builder(GetConnectionMonitorTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionMonitorTestName = defaults.connectionMonitorTestName;
-    	      this.peeringServiceName = defaults.peeringServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetConnectionMonitorTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionMonitorTestName(String connectionMonitorTestName) {
-            this.connectionMonitorTestName = Objects.requireNonNull(connectionMonitorTestName);
+            $.connectionMonitorTestName = connectionMonitorTestName;
             return this;
         }
+
         public Builder peeringServiceName(String peeringServiceName) {
-            this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
+            $.peeringServiceName = peeringServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetConnectionMonitorTestArgs build() {
-            return new GetConnectionMonitorTestArgs(connectionMonitorTestName, peeringServiceName, resourceGroupName);
+        }
+
+        public GetConnectionMonitorTestArgs build() {
+            $.connectionMonitorTestName = Objects.requireNonNull($.connectionMonitorTestName, "expected parameter 'connectionMonitorTestName' to be non-null");
+            $.peeringServiceName = Objects.requireNonNull($.peeringServiceName, "expected parameter 'peeringServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

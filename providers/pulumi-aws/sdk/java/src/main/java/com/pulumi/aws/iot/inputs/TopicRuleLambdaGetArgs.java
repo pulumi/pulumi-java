@@ -5,7 +5,6 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class TopicRuleLambdaGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="functionArn", required=true)
-      private final Output<String> functionArn;
+    private Output<String> functionArn;
 
     public Output<String> functionArn() {
         return this.functionArn;
     }
 
-    public TopicRuleLambdaGetArgs(Output<String> functionArn) {
-        this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
-    }
+    private TopicRuleLambdaGetArgs() {}
 
-    private TopicRuleLambdaGetArgs() {
-        this.functionArn = Codegen.empty();
+    private TopicRuleLambdaGetArgs(TopicRuleLambdaGetArgs $) {
+        this.functionArn = $.functionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleLambdaGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> functionArn;
+        private TopicRuleLambdaGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleLambdaGetArgs();
         }
 
         public Builder(TopicRuleLambdaGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionArn = defaults.functionArn;
+            $ = new TopicRuleLambdaGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionArn(Output<String> functionArn) {
-            this.functionArn = Objects.requireNonNull(functionArn);
+            $.functionArn = functionArn;
             return this;
         }
+
         public Builder functionArn(String functionArn) {
-            this.functionArn = Output.of(Objects.requireNonNull(functionArn));
-            return this;
-        }        public TopicRuleLambdaGetArgs build() {
-            return new TopicRuleLambdaGetArgs(functionArn);
+            return functionArn(Output.of(functionArn));
+        }
+
+        public TopicRuleLambdaGetArgs build() {
+            $.functionArn = Objects.requireNonNull($.functionArn, "expected parameter 'functionArn' to be non-null");
+            return $;
         }
     }
+
 }

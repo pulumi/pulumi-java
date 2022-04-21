@@ -5,9 +5,9 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class AiMetadataStoreStateArgs extends com.pulumi.resources.Resourc
     public static final AiMetadataStoreStateArgs Empty = new AiMetadataStoreStateArgs();
 
     @Import(name="diskUtilizationBytes")
-      private final @Nullable Output<String> diskUtilizationBytes;
+    private @Nullable Output<String> diskUtilizationBytes;
 
-    public Output<String> diskUtilizationBytes() {
-        return this.diskUtilizationBytes == null ? Codegen.empty() : this.diskUtilizationBytes;
+    public Optional<Output<String>> diskUtilizationBytes() {
+        return Optional.ofNullable(this.diskUtilizationBytes);
     }
 
-    public AiMetadataStoreStateArgs(@Nullable Output<String> diskUtilizationBytes) {
-        this.diskUtilizationBytes = diskUtilizationBytes;
-    }
+    private AiMetadataStoreStateArgs() {}
 
-    private AiMetadataStoreStateArgs() {
-        this.diskUtilizationBytes = Codegen.empty();
+    private AiMetadataStoreStateArgs(AiMetadataStoreStateArgs $) {
+        this.diskUtilizationBytes = $.diskUtilizationBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AiMetadataStoreStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskUtilizationBytes;
+        private AiMetadataStoreStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AiMetadataStoreStateArgs();
         }
 
         public Builder(AiMetadataStoreStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskUtilizationBytes = defaults.diskUtilizationBytes;
+            $ = new AiMetadataStoreStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskUtilizationBytes(@Nullable Output<String> diskUtilizationBytes) {
-            this.diskUtilizationBytes = diskUtilizationBytes;
+            $.diskUtilizationBytes = diskUtilizationBytes;
             return this;
         }
-        public Builder diskUtilizationBytes(@Nullable String diskUtilizationBytes) {
-            this.diskUtilizationBytes = Codegen.ofNullable(diskUtilizationBytes);
-            return this;
-        }        public AiMetadataStoreStateArgs build() {
-            return new AiMetadataStoreStateArgs(diskUtilizationBytes);
+
+        public Builder diskUtilizationBytes(String diskUtilizationBytes) {
+            return diskUtilizationBytes(Output.of(diskUtilizationBytes));
+        }
+
+        public AiMetadataStoreStateArgs build() {
+            return $;
         }
     }
+
 }

@@ -14,62 +14,59 @@ public final class RuleGroupCustomAction extends com.pulumi.resources.InvokeArgs
     public static final RuleGroupCustomAction Empty = new RuleGroupCustomAction();
 
     @Import(name="actionDefinition", required=true)
-      private final RuleGroupActionDefinition actionDefinition;
+    private RuleGroupActionDefinition actionDefinition;
 
     public RuleGroupActionDefinition actionDefinition() {
         return this.actionDefinition;
     }
 
     @Import(name="actionName", required=true)
-      private final String actionName;
+    private String actionName;
 
     public String actionName() {
         return this.actionName;
     }
 
-    public RuleGroupCustomAction(
-        RuleGroupActionDefinition actionDefinition,
-        String actionName) {
-        this.actionDefinition = Objects.requireNonNull(actionDefinition, "expected parameter 'actionDefinition' to be non-null");
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-    }
+    private RuleGroupCustomAction() {}
 
-    private RuleGroupCustomAction() {
-        this.actionDefinition = null;
-        this.actionName = null;
+    private RuleGroupCustomAction(RuleGroupCustomAction $) {
+        this.actionDefinition = $.actionDefinition;
+        this.actionName = $.actionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupCustomAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RuleGroupActionDefinition actionDefinition;
-        private String actionName;
+        private RuleGroupCustomAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupCustomAction();
         }
 
         public Builder(RuleGroupCustomAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionDefinition = defaults.actionDefinition;
-    	      this.actionName = defaults.actionName;
+            $ = new RuleGroupCustomAction(Objects.requireNonNull(defaults));
         }
 
         public Builder actionDefinition(RuleGroupActionDefinition actionDefinition) {
-            this.actionDefinition = Objects.requireNonNull(actionDefinition);
+            $.actionDefinition = actionDefinition;
             return this;
         }
+
         public Builder actionName(String actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
-        }        public RuleGroupCustomAction build() {
-            return new RuleGroupCustomAction(actionDefinition, actionName);
+        }
+
+        public RuleGroupCustomAction build() {
+            $.actionDefinition = Objects.requireNonNull($.actionDefinition, "expected parameter 'actionDefinition' to be non-null");
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            return $;
         }
     }
+
 }

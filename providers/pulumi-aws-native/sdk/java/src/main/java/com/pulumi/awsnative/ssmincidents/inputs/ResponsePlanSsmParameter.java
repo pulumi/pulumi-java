@@ -18,65 +18,63 @@ public final class ResponsePlanSsmParameter extends com.pulumi.resources.InvokeA
     public static final ResponsePlanSsmParameter Empty = new ResponsePlanSsmParameter();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public ResponsePlanSsmParameter(
-        String key,
-        List<String> values) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private ResponsePlanSsmParameter() {}
 
-    private ResponsePlanSsmParameter() {
-        this.key = null;
-        this.values = List.of();
+    private ResponsePlanSsmParameter(ResponsePlanSsmParameter $) {
+        this.key = $.key;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanSsmParameter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private List<String> values;
+        private ResponsePlanSsmParameter $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanSsmParameter();
         }
 
         public Builder(ResponsePlanSsmParameter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.values = defaults.values;
+            $ = new ResponsePlanSsmParameter(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ResponsePlanSsmParameter build() {
-            return new ResponsePlanSsmParameter(key, values);
+        }
+
+        public ResponsePlanSsmParameter build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

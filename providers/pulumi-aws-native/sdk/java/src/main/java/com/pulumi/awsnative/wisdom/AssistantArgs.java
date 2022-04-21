@@ -8,10 +8,10 @@ import com.pulumi.awsnative.wisdom.inputs.AssistantServerSideEncryptionConfigura
 import com.pulumi.awsnative.wisdom.inputs.AssistantTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,133 +20,121 @@ public final class AssistantArgs extends com.pulumi.resources.ResourceArgs {
     public static final AssistantArgs Empty = new AssistantArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="serverSideEncryptionConfiguration")
-      private final @Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
+    private @Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
-    public Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration() {
-        return this.serverSideEncryptionConfiguration == null ? Codegen.empty() : this.serverSideEncryptionConfiguration;
+    public Optional<Output<AssistantServerSideEncryptionConfigurationArgs>> serverSideEncryptionConfiguration() {
+        return Optional.ofNullable(this.serverSideEncryptionConfiguration);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<AssistantTagArgs>> tags;
+    private @Nullable Output<List<AssistantTagArgs>> tags;
 
-    public Output<List<AssistantTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<AssistantTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="type", required=true)
-      private final Output<AssistantType> type;
+    private Output<AssistantType> type;
 
     public Output<AssistantType> type() {
         return this.type;
     }
 
-    public AssistantArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration,
-        @Nullable Output<List<AssistantTagArgs>> tags,
-        Output<AssistantType> type) {
-        this.description = description;
-        this.name = name;
-        this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AssistantArgs() {}
 
-    private AssistantArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.serverSideEncryptionConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private AssistantArgs(AssistantArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.serverSideEncryptionConfiguration = $.serverSideEncryptionConfiguration;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssistantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
-        private @Nullable Output<List<AssistantTagArgs>> tags;
-        private Output<AssistantType> type;
+        private AssistantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssistantArgs();
         }
 
         public Builder(AssistantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.serverSideEncryptionConfiguration = defaults.serverSideEncryptionConfiguration;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new AssistantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder serverSideEncryptionConfiguration(@Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
+            $.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
-        public Builder serverSideEncryptionConfiguration(@Nullable AssistantServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Codegen.ofNullable(serverSideEncryptionConfiguration);
-            return this;
+
+        public Builder serverSideEncryptionConfiguration(AssistantServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
+            return serverSideEncryptionConfiguration(Output.of(serverSideEncryptionConfiguration));
         }
+
         public Builder tags(@Nullable Output<List<AssistantTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<AssistantTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<AssistantTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(AssistantTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(Output<AssistantType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(AssistantType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AssistantArgs build() {
-            return new AssistantArgs(description, name, serverSideEncryptionConfiguration, tags, type);
+            return type(Output.of(type));
+        }
+
+        public AssistantArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

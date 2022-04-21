@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class SubnetworkSecondaryIpRangeGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ipCidrRange", required=true)
-      private final Output<String> ipCidrRange;
+    private Output<String> ipCidrRange;
 
     public Output<String> ipCidrRange() {
         return this.ipCidrRange;
@@ -36,63 +35,60 @@ public final class SubnetworkSecondaryIpRangeGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="rangeName", required=true)
-      private final Output<String> rangeName;
+    private Output<String> rangeName;
 
     public Output<String> rangeName() {
         return this.rangeName;
     }
 
-    public SubnetworkSecondaryIpRangeGetArgs(
-        Output<String> ipCidrRange,
-        Output<String> rangeName) {
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
-        this.rangeName = Objects.requireNonNull(rangeName, "expected parameter 'rangeName' to be non-null");
-    }
+    private SubnetworkSecondaryIpRangeGetArgs() {}
 
-    private SubnetworkSecondaryIpRangeGetArgs() {
-        this.ipCidrRange = Codegen.empty();
-        this.rangeName = Codegen.empty();
+    private SubnetworkSecondaryIpRangeGetArgs(SubnetworkSecondaryIpRangeGetArgs $) {
+        this.ipCidrRange = $.ipCidrRange;
+        this.rangeName = $.rangeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetworkSecondaryIpRangeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ipCidrRange;
-        private Output<String> rangeName;
+        private SubnetworkSecondaryIpRangeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetworkSecondaryIpRangeGetArgs();
         }
 
         public Builder(SubnetworkSecondaryIpRangeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.rangeName = defaults.rangeName;
+            $ = new SubnetworkSecondaryIpRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipCidrRange(Output<String> ipCidrRange) {
-            this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
+
         public Builder ipCidrRange(String ipCidrRange) {
-            this.ipCidrRange = Output.of(Objects.requireNonNull(ipCidrRange));
-            return this;
+            return ipCidrRange(Output.of(ipCidrRange));
         }
+
         public Builder rangeName(Output<String> rangeName) {
-            this.rangeName = Objects.requireNonNull(rangeName);
+            $.rangeName = rangeName;
             return this;
         }
+
         public Builder rangeName(String rangeName) {
-            this.rangeName = Output.of(Objects.requireNonNull(rangeName));
-            return this;
-        }        public SubnetworkSecondaryIpRangeGetArgs build() {
-            return new SubnetworkSecondaryIpRangeGetArgs(ipCidrRange, rangeName);
+            return rangeName(Output.of(rangeName));
+        }
+
+        public SubnetworkSecondaryIpRangeGetArgs build() {
+            $.ipCidrRange = Objects.requireNonNull($.ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
+            $.rangeName = Objects.requireNonNull($.rangeName, "expected parameter 'rangeName' to be non-null");
+            return $;
         }
     }
+
 }

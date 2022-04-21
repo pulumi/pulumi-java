@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class TarReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="preserveCompressionFileNameAsFolder")
-      private final @Nullable Output<Object> preserveCompressionFileNameAsFolder;
+    private @Nullable Output<Object> preserveCompressionFileNameAsFolder;
 
-    public Output<Object> preserveCompressionFileNameAsFolder() {
-        return this.preserveCompressionFileNameAsFolder == null ? Codegen.empty() : this.preserveCompressionFileNameAsFolder;
+    public Optional<Output<Object>> preserveCompressionFileNameAsFolder() {
+        return Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class TarReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public TarReadSettingsArgs(
-        @Nullable Output<Object> preserveCompressionFileNameAsFolder,
-        Output<String> type) {
-        this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private TarReadSettingsArgs() {}
 
-    private TarReadSettingsArgs() {
-        this.preserveCompressionFileNameAsFolder = Codegen.empty();
-        this.type = Codegen.empty();
+    private TarReadSettingsArgs(TarReadSettingsArgs $) {
+        this.preserveCompressionFileNameAsFolder = $.preserveCompressionFileNameAsFolder;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TarReadSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> preserveCompressionFileNameAsFolder;
-        private Output<String> type;
+        private TarReadSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TarReadSettingsArgs();
         }
 
         public Builder(TarReadSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preserveCompressionFileNameAsFolder = defaults.preserveCompressionFileNameAsFolder;
-    	      this.type = defaults.type;
+            $ = new TarReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preserveCompressionFileNameAsFolder(@Nullable Output<Object> preserveCompressionFileNameAsFolder) {
-            this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
+            $.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
             return this;
         }
-        public Builder preserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
-            this.preserveCompressionFileNameAsFolder = Codegen.ofNullable(preserveCompressionFileNameAsFolder);
-            return this;
+
+        public Builder preserveCompressionFileNameAsFolder(Object preserveCompressionFileNameAsFolder) {
+            return preserveCompressionFileNameAsFolder(Output.of(preserveCompressionFileNameAsFolder));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TarReadSettingsArgs build() {
-            return new TarReadSettingsArgs(preserveCompressionFileNameAsFolder, type);
+            return type(Output.of(type));
+        }
+
+        public TarReadSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.awsnative.lightsail.inputs.BucketAccessRulesArgs;
 import com.pulumi.awsnative.lightsail.inputs.BucketTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     public static final BucketArgs Empty = new BucketArgs();
 
     @Import(name="accessRules")
-      private final @Nullable Output<BucketAccessRulesArgs> accessRules;
+    private @Nullable Output<BucketAccessRulesArgs> accessRules;
 
-    public Output<BucketAccessRulesArgs> accessRules() {
-        return this.accessRules == null ? Codegen.empty() : this.accessRules;
+    public Optional<Output<BucketAccessRulesArgs>> accessRules() {
+        return Optional.ofNullable(this.accessRules);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bundleId", required=true)
-      private final Output<String> bundleId;
+    private Output<String> bundleId;
 
     public Output<String> bundleId() {
         return this.bundleId;
@@ -53,10 +53,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectVersioning")
-      private final @Nullable Output<Boolean> objectVersioning;
+    private @Nullable Output<Boolean> objectVersioning;
 
-    public Output<Boolean> objectVersioning() {
-        return this.objectVersioning == null ? Codegen.empty() : this.objectVersioning;
+    public Optional<Output<Boolean>> objectVersioning() {
+        return Optional.ofNullable(this.objectVersioning);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readOnlyAccessAccounts")
-      private final @Nullable Output<List<String>> readOnlyAccessAccounts;
+    private @Nullable Output<List<String>> readOnlyAccessAccounts;
 
-    public Output<List<String>> readOnlyAccessAccounts() {
-        return this.readOnlyAccessAccounts == null ? Codegen.empty() : this.readOnlyAccessAccounts;
+    public Optional<Output<List<String>>> readOnlyAccessAccounts() {
+        return Optional.ofNullable(this.readOnlyAccessAccounts);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourcesReceivingAccess")
-      private final @Nullable Output<List<String>> resourcesReceivingAccess;
+    private @Nullable Output<List<String>> resourcesReceivingAccess;
 
-    public Output<List<String>> resourcesReceivingAccess() {
-        return this.resourcesReceivingAccess == null ? Codegen.empty() : this.resourcesReceivingAccess;
+    public Optional<Output<List<String>>> resourcesReceivingAccess() {
+        return Optional.ofNullable(this.resourcesReceivingAccess);
     }
 
     /**
@@ -86,137 +86,121 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<BucketTagArgs>> tags;
+    private @Nullable Output<List<BucketTagArgs>> tags;
 
-    public Output<List<BucketTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<BucketTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public BucketArgs(
-        @Nullable Output<BucketAccessRulesArgs> accessRules,
-        @Nullable Output<String> bucketName,
-        Output<String> bundleId,
-        @Nullable Output<Boolean> objectVersioning,
-        @Nullable Output<List<String>> readOnlyAccessAccounts,
-        @Nullable Output<List<String>> resourcesReceivingAccess,
-        @Nullable Output<List<BucketTagArgs>> tags) {
-        this.accessRules = accessRules;
-        this.bucketName = bucketName;
-        this.bundleId = Objects.requireNonNull(bundleId, "expected parameter 'bundleId' to be non-null");
-        this.objectVersioning = objectVersioning;
-        this.readOnlyAccessAccounts = readOnlyAccessAccounts;
-        this.resourcesReceivingAccess = resourcesReceivingAccess;
-        this.tags = tags;
-    }
+    private BucketArgs() {}
 
-    private BucketArgs() {
-        this.accessRules = Codegen.empty();
-        this.bucketName = Codegen.empty();
-        this.bundleId = Codegen.empty();
-        this.objectVersioning = Codegen.empty();
-        this.readOnlyAccessAccounts = Codegen.empty();
-        this.resourcesReceivingAccess = Codegen.empty();
-        this.tags = Codegen.empty();
+    private BucketArgs(BucketArgs $) {
+        this.accessRules = $.accessRules;
+        this.bucketName = $.bucketName;
+        this.bundleId = $.bundleId;
+        this.objectVersioning = $.objectVersioning;
+        this.readOnlyAccessAccounts = $.readOnlyAccessAccounts;
+        this.resourcesReceivingAccess = $.resourcesReceivingAccess;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketAccessRulesArgs> accessRules;
-        private @Nullable Output<String> bucketName;
-        private Output<String> bundleId;
-        private @Nullable Output<Boolean> objectVersioning;
-        private @Nullable Output<List<String>> readOnlyAccessAccounts;
-        private @Nullable Output<List<String>> resourcesReceivingAccess;
-        private @Nullable Output<List<BucketTagArgs>> tags;
+        private BucketArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketArgs();
         }
 
         public Builder(BucketArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessRules = defaults.accessRules;
-    	      this.bucketName = defaults.bucketName;
-    	      this.bundleId = defaults.bundleId;
-    	      this.objectVersioning = defaults.objectVersioning;
-    	      this.readOnlyAccessAccounts = defaults.readOnlyAccessAccounts;
-    	      this.resourcesReceivingAccess = defaults.resourcesReceivingAccess;
-    	      this.tags = defaults.tags;
+            $ = new BucketArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessRules(@Nullable Output<BucketAccessRulesArgs> accessRules) {
-            this.accessRules = accessRules;
+            $.accessRules = accessRules;
             return this;
         }
-        public Builder accessRules(@Nullable BucketAccessRulesArgs accessRules) {
-            this.accessRules = Codegen.ofNullable(accessRules);
-            return this;
+
+        public Builder accessRules(BucketAccessRulesArgs accessRules) {
+            return accessRules(Output.of(accessRules));
         }
+
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder bundleId(Output<String> bundleId) {
-            this.bundleId = Objects.requireNonNull(bundleId);
+            $.bundleId = bundleId;
             return this;
         }
+
         public Builder bundleId(String bundleId) {
-            this.bundleId = Output.of(Objects.requireNonNull(bundleId));
-            return this;
+            return bundleId(Output.of(bundleId));
         }
+
         public Builder objectVersioning(@Nullable Output<Boolean> objectVersioning) {
-            this.objectVersioning = objectVersioning;
+            $.objectVersioning = objectVersioning;
             return this;
         }
-        public Builder objectVersioning(@Nullable Boolean objectVersioning) {
-            this.objectVersioning = Codegen.ofNullable(objectVersioning);
-            return this;
+
+        public Builder objectVersioning(Boolean objectVersioning) {
+            return objectVersioning(Output.of(objectVersioning));
         }
+
         public Builder readOnlyAccessAccounts(@Nullable Output<List<String>> readOnlyAccessAccounts) {
-            this.readOnlyAccessAccounts = readOnlyAccessAccounts;
+            $.readOnlyAccessAccounts = readOnlyAccessAccounts;
             return this;
         }
-        public Builder readOnlyAccessAccounts(@Nullable List<String> readOnlyAccessAccounts) {
-            this.readOnlyAccessAccounts = Codegen.ofNullable(readOnlyAccessAccounts);
-            return this;
+
+        public Builder readOnlyAccessAccounts(List<String> readOnlyAccessAccounts) {
+            return readOnlyAccessAccounts(Output.of(readOnlyAccessAccounts));
         }
+
         public Builder readOnlyAccessAccounts(String... readOnlyAccessAccounts) {
             return readOnlyAccessAccounts(List.of(readOnlyAccessAccounts));
         }
+
         public Builder resourcesReceivingAccess(@Nullable Output<List<String>> resourcesReceivingAccess) {
-            this.resourcesReceivingAccess = resourcesReceivingAccess;
+            $.resourcesReceivingAccess = resourcesReceivingAccess;
             return this;
         }
-        public Builder resourcesReceivingAccess(@Nullable List<String> resourcesReceivingAccess) {
-            this.resourcesReceivingAccess = Codegen.ofNullable(resourcesReceivingAccess);
-            return this;
+
+        public Builder resourcesReceivingAccess(List<String> resourcesReceivingAccess) {
+            return resourcesReceivingAccess(Output.of(resourcesReceivingAccess));
         }
+
         public Builder resourcesReceivingAccess(String... resourcesReceivingAccess) {
             return resourcesReceivingAccess(List.of(resourcesReceivingAccess));
         }
+
         public Builder tags(@Nullable Output<List<BucketTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<BucketTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<BucketTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(BucketTagArgs... tags) {
             return tags(List.of(tags));
-        }        public BucketArgs build() {
-            return new BucketArgs(accessRules, bucketName, bundleId, objectVersioning, readOnlyAccessAccounts, resourcesReceivingAccess, tags);
+        }
+
+        public BucketArgs build() {
+            $.bundleId = Objects.requireNonNull($.bundleId, "expected parameter 'bundleId' to be non-null");
+            return $;
         }
     }
+
 }

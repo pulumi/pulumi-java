@@ -15,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="libraries")
-      private final @Nullable Output<List<Map<String,Object>>> libraries;
+    private @Nullable Output<List<Map<String,Object>>> libraries;
 
-    public Output<List<Map<String,Object>>> libraries() {
-        return this.libraries == null ? Codegen.empty() : this.libraries;
+    public Optional<Output<List<Map<String,Object>>>> libraries() {
+        return Optional.ofNullable(this.libraries);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
-        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -75,7 +76,7 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -86,10 +87,10 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<Object>> parameters;
+    private @Nullable Output<List<Object>> parameters;
 
-    public Output<List<Object>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<Object>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -97,10 +98,10 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<ActivityPolicyArgs> policy;
+    private @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<ActivityPolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -108,7 +109,7 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="pythonFile", required=true)
-      private final Output<Object> pythonFile;
+    private Output<Object> pythonFile;
 
     public Output<Object> pythonFile() {
         return this.pythonFile;
@@ -120,7 +121,7 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -131,176 +132,157 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public DatabricksSparkPythonActivityArgs(
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<List<Map<String,Object>>> libraries,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
-        Output<String> name,
-        @Nullable Output<List<Object>> parameters,
-        @Nullable Output<ActivityPolicyArgs> policy,
-        Output<Object> pythonFile,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.libraries = libraries;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-        this.policy = policy;
-        this.pythonFile = Objects.requireNonNull(pythonFile, "expected parameter 'pythonFile' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private DatabricksSparkPythonActivityArgs() {}
 
-    private DatabricksSparkPythonActivityArgs() {
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.libraries = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.pythonFile = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private DatabricksSparkPythonActivityArgs(DatabricksSparkPythonActivityArgs $) {
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.libraries = $.libraries;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.policy = $.policy;
+        this.pythonFile = $.pythonFile;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabricksSparkPythonActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<Map<String,Object>>> libraries;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private Output<String> name;
-        private @Nullable Output<List<Object>> parameters;
-        private @Nullable Output<ActivityPolicyArgs> policy;
-        private Output<Object> pythonFile;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private DatabricksSparkPythonActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabricksSparkPythonActivityArgs();
         }
 
         public Builder(DatabricksSparkPythonActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.libraries = defaults.libraries;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.policy = defaults.policy;
-    	      this.pythonFile = defaults.pythonFile;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new DatabricksSparkPythonActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder libraries(@Nullable Output<List<Map<String,Object>>> libraries) {
-            this.libraries = libraries;
+            $.libraries = libraries;
             return this;
         }
-        public Builder libraries(@Nullable List<Map<String,Object>> libraries) {
-            this.libraries = Codegen.ofNullable(libraries);
-            return this;
+
+        public Builder libraries(List<Map<String,Object>> libraries) {
+            return libraries(Output.of(libraries));
         }
+
+        public Builder libraries(Map<String,Object>... libraries) {
+            return libraries(List.of(libraries));
+        }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
-        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
-            return this;
+
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<List<Object>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<Object> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<Object> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(Object... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(ActivityPolicyArgs policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder pythonFile(Output<Object> pythonFile) {
-            this.pythonFile = Objects.requireNonNull(pythonFile);
+            $.pythonFile = pythonFile;
             return this;
         }
+
         public Builder pythonFile(Object pythonFile) {
-            this.pythonFile = Output.of(Objects.requireNonNull(pythonFile));
-            return this;
+            return pythonFile(Output.of(pythonFile));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public DatabricksSparkPythonActivityArgs build() {
-            return new DatabricksSparkPythonActivityArgs(dependsOn, description, libraries, linkedServiceName, name, parameters, policy, pythonFile, type, userProperties);
+        }
+
+        public DatabricksSparkPythonActivityArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.pythonFile = Objects.requireNonNull($.pythonFile, "expected parameter 'pythonFile' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends c
      * 
      */
     @Import(name="configUri", required=true)
-      private final Output<String> configUri;
+    private Output<String> configUri;
 
     public Output<String> configUri() {
         return this.configUri;
@@ -36,10 +36,10 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends c
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<Object> environment;
+    private @Nullable Output<Object> environment;
 
-    public Output<Object> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<Object>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends c
      * 
      */
     @Import(name="imageUri", required=true)
-      private final Output<String> imageUri;
+    private Output<String> imageUri;
 
     public Output<String> imageUri() {
         return this.imageUri;
     }
 
-    public ModelBiasJobDefinitionModelBiasAppSpecificationArgs(
-        Output<String> configUri,
-        @Nullable Output<Object> environment,
-        Output<String> imageUri) {
-        this.configUri = Objects.requireNonNull(configUri, "expected parameter 'configUri' to be non-null");
-        this.environment = environment;
-        this.imageUri = Objects.requireNonNull(imageUri, "expected parameter 'imageUri' to be non-null");
-    }
+    private ModelBiasJobDefinitionModelBiasAppSpecificationArgs() {}
 
-    private ModelBiasJobDefinitionModelBiasAppSpecificationArgs() {
-        this.configUri = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.imageUri = Codegen.empty();
+    private ModelBiasJobDefinitionModelBiasAppSpecificationArgs(ModelBiasJobDefinitionModelBiasAppSpecificationArgs $) {
+        this.configUri = $.configUri;
+        this.environment = $.environment;
+        this.imageUri = $.imageUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelBiasJobDefinitionModelBiasAppSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configUri;
-        private @Nullable Output<Object> environment;
-        private Output<String> imageUri;
+        private ModelBiasJobDefinitionModelBiasAppSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelBiasJobDefinitionModelBiasAppSpecificationArgs();
         }
 
         public Builder(ModelBiasJobDefinitionModelBiasAppSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configUri = defaults.configUri;
-    	      this.environment = defaults.environment;
-    	      this.imageUri = defaults.imageUri;
+            $ = new ModelBiasJobDefinitionModelBiasAppSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configUri(Output<String> configUri) {
-            this.configUri = Objects.requireNonNull(configUri);
+            $.configUri = configUri;
             return this;
         }
+
         public Builder configUri(String configUri) {
-            this.configUri = Output.of(Objects.requireNonNull(configUri));
-            return this;
+            return configUri(Output.of(configUri));
         }
+
         public Builder environment(@Nullable Output<Object> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable Object environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(Object environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder imageUri(Output<String> imageUri) {
-            this.imageUri = Objects.requireNonNull(imageUri);
+            $.imageUri = imageUri;
             return this;
         }
+
         public Builder imageUri(String imageUri) {
-            this.imageUri = Output.of(Objects.requireNonNull(imageUri));
-            return this;
-        }        public ModelBiasJobDefinitionModelBiasAppSpecificationArgs build() {
-            return new ModelBiasJobDefinitionModelBiasAppSpecificationArgs(configUri, environment, imageUri);
+            return imageUri(Output.of(imageUri));
+        }
+
+        public ModelBiasJobDefinitionModelBiasAppSpecificationArgs build() {
+            $.configUri = Objects.requireNonNull($.configUri, "expected parameter 'configUri' to be non-null");
+            $.imageUri = Objects.requireNonNull($.imageUri, "expected parameter 'imageUri' to be non-null");
+            return $;
         }
     }
+
 }

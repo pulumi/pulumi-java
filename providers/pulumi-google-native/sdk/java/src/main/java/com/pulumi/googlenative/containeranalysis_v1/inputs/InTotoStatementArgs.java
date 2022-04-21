@@ -5,13 +5,13 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.InTotoProvenanceArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SlsaProvenanceArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SubjectArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,31 +28,31 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="predicateType")
-      private final @Nullable Output<String> predicateType;
+    private @Nullable Output<String> predicateType;
 
-    public Output<String> predicateType() {
-        return this.predicateType == null ? Codegen.empty() : this.predicateType;
+    public Optional<Output<String>> predicateType() {
+        return Optional.ofNullable(this.predicateType);
     }
 
     @Import(name="provenance")
-      private final @Nullable Output<InTotoProvenanceArgs> provenance;
+    private @Nullable Output<InTotoProvenanceArgs> provenance;
 
-    public Output<InTotoProvenanceArgs> provenance() {
-        return this.provenance == null ? Codegen.empty() : this.provenance;
+    public Optional<Output<InTotoProvenanceArgs>> provenance() {
+        return Optional.ofNullable(this.provenance);
     }
 
     @Import(name="slsaProvenance")
-      private final @Nullable Output<SlsaProvenanceArgs> slsaProvenance;
+    private @Nullable Output<SlsaProvenanceArgs> slsaProvenance;
 
-    public Output<SlsaProvenanceArgs> slsaProvenance() {
-        return this.slsaProvenance == null ? Codegen.empty() : this.slsaProvenance;
+    public Optional<Output<SlsaProvenanceArgs>> slsaProvenance() {
+        return Optional.ofNullable(this.slsaProvenance);
     }
 
     @Import(name="subject")
-      private final @Nullable Output<List<SubjectArgs>> subject;
+    private @Nullable Output<List<SubjectArgs>> subject;
 
-    public Output<List<SubjectArgs>> subject() {
-        return this.subject == null ? Codegen.empty() : this.subject;
+    public Optional<Output<List<SubjectArgs>>> subject() {
+        return Optional.ofNullable(this.subject);
     }
 
     /**
@@ -60,105 +60,92 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public InTotoStatementArgs(
-        @Nullable Output<String> predicateType,
-        @Nullable Output<InTotoProvenanceArgs> provenance,
-        @Nullable Output<SlsaProvenanceArgs> slsaProvenance,
-        @Nullable Output<List<SubjectArgs>> subject,
-        @Nullable Output<String> type) {
-        this.predicateType = predicateType;
-        this.provenance = provenance;
-        this.slsaProvenance = slsaProvenance;
-        this.subject = subject;
-        this.type = type;
-    }
+    private InTotoStatementArgs() {}
 
-    private InTotoStatementArgs() {
-        this.predicateType = Codegen.empty();
-        this.provenance = Codegen.empty();
-        this.slsaProvenance = Codegen.empty();
-        this.subject = Codegen.empty();
-        this.type = Codegen.empty();
+    private InTotoStatementArgs(InTotoStatementArgs $) {
+        this.predicateType = $.predicateType;
+        this.provenance = $.provenance;
+        this.slsaProvenance = $.slsaProvenance;
+        this.subject = $.subject;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InTotoStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> predicateType;
-        private @Nullable Output<InTotoProvenanceArgs> provenance;
-        private @Nullable Output<SlsaProvenanceArgs> slsaProvenance;
-        private @Nullable Output<List<SubjectArgs>> subject;
-        private @Nullable Output<String> type;
+        private InTotoStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InTotoStatementArgs();
         }
 
         public Builder(InTotoStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.predicateType = defaults.predicateType;
-    	      this.provenance = defaults.provenance;
-    	      this.slsaProvenance = defaults.slsaProvenance;
-    	      this.subject = defaults.subject;
-    	      this.type = defaults.type;
+            $ = new InTotoStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder predicateType(@Nullable Output<String> predicateType) {
-            this.predicateType = predicateType;
+            $.predicateType = predicateType;
             return this;
         }
-        public Builder predicateType(@Nullable String predicateType) {
-            this.predicateType = Codegen.ofNullable(predicateType);
-            return this;
+
+        public Builder predicateType(String predicateType) {
+            return predicateType(Output.of(predicateType));
         }
+
         public Builder provenance(@Nullable Output<InTotoProvenanceArgs> provenance) {
-            this.provenance = provenance;
+            $.provenance = provenance;
             return this;
         }
-        public Builder provenance(@Nullable InTotoProvenanceArgs provenance) {
-            this.provenance = Codegen.ofNullable(provenance);
-            return this;
+
+        public Builder provenance(InTotoProvenanceArgs provenance) {
+            return provenance(Output.of(provenance));
         }
+
         public Builder slsaProvenance(@Nullable Output<SlsaProvenanceArgs> slsaProvenance) {
-            this.slsaProvenance = slsaProvenance;
+            $.slsaProvenance = slsaProvenance;
             return this;
         }
-        public Builder slsaProvenance(@Nullable SlsaProvenanceArgs slsaProvenance) {
-            this.slsaProvenance = Codegen.ofNullable(slsaProvenance);
-            return this;
+
+        public Builder slsaProvenance(SlsaProvenanceArgs slsaProvenance) {
+            return slsaProvenance(Output.of(slsaProvenance));
         }
+
         public Builder subject(@Nullable Output<List<SubjectArgs>> subject) {
-            this.subject = subject;
+            $.subject = subject;
             return this;
         }
-        public Builder subject(@Nullable List<SubjectArgs> subject) {
-            this.subject = Codegen.ofNullable(subject);
-            return this;
+
+        public Builder subject(List<SubjectArgs> subject) {
+            return subject(Output.of(subject));
         }
+
         public Builder subject(SubjectArgs... subject) {
             return subject(List.of(subject));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public InTotoStatementArgs build() {
-            return new InTotoStatementArgs(predicateType, provenance, slsaProvenance, subject, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public InTotoStatementArgs build() {
+            return $;
         }
     }
+
 }

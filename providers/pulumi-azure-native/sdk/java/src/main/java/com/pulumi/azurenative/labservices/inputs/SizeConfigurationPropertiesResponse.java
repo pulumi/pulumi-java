@@ -24,48 +24,48 @@ public final class SizeConfigurationPropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="environmentSizes")
-      private final @Nullable List<EnvironmentSizeResponse> environmentSizes;
+    private @Nullable List<EnvironmentSizeResponse> environmentSizes;
 
-    public List<EnvironmentSizeResponse> environmentSizes() {
-        return this.environmentSizes == null ? List.of() : this.environmentSizes;
+    public Optional<List<EnvironmentSizeResponse>> environmentSizes() {
+        return Optional.ofNullable(this.environmentSizes);
     }
 
-    public SizeConfigurationPropertiesResponse(@Nullable List<EnvironmentSizeResponse> environmentSizes) {
-        this.environmentSizes = environmentSizes;
-    }
+    private SizeConfigurationPropertiesResponse() {}
 
-    private SizeConfigurationPropertiesResponse() {
-        this.environmentSizes = List.of();
+    private SizeConfigurationPropertiesResponse(SizeConfigurationPropertiesResponse $) {
+        this.environmentSizes = $.environmentSizes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SizeConfigurationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<EnvironmentSizeResponse> environmentSizes;
+        private SizeConfigurationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SizeConfigurationPropertiesResponse();
         }
 
         public Builder(SizeConfigurationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentSizes = defaults.environmentSizes;
+            $ = new SizeConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentSizes(@Nullable List<EnvironmentSizeResponse> environmentSizes) {
-            this.environmentSizes = environmentSizes;
+            $.environmentSizes = environmentSizes;
             return this;
         }
+
         public Builder environmentSizes(EnvironmentSizeResponse... environmentSizes) {
             return environmentSizes(List.of(environmentSizes));
-        }        public SizeConfigurationPropertiesResponse build() {
-            return new SizeConfigurationPropertiesResponse(environmentSizes);
+        }
+
+        public SizeConfigurationPropertiesResponse build() {
+            return $;
         }
     }
+
 }

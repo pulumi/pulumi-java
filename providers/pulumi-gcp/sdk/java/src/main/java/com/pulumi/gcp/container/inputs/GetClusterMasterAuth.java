@@ -15,97 +15,91 @@ public final class GetClusterMasterAuth extends com.pulumi.resources.InvokeArgs 
     public static final GetClusterMasterAuth Empty = new GetClusterMasterAuth();
 
     @Import(name="clientCertificate", required=true)
-      private final String clientCertificate;
+    private String clientCertificate;
 
     public String clientCertificate() {
         return this.clientCertificate;
     }
 
     @Import(name="clientCertificateConfigs", required=true)
-      private final List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs;
+    private List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs;
 
     public List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs() {
         return this.clientCertificateConfigs;
     }
 
     @Import(name="clientKey", required=true)
-      private final String clientKey;
+    private String clientKey;
 
     public String clientKey() {
         return this.clientKey;
     }
 
     @Import(name="clusterCaCertificate", required=true)
-      private final String clusterCaCertificate;
+    private String clusterCaCertificate;
 
     public String clusterCaCertificate() {
         return this.clusterCaCertificate;
     }
 
-    public GetClusterMasterAuth(
-        String clientCertificate,
-        List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs,
-        String clientKey,
-        String clusterCaCertificate) {
-        this.clientCertificate = Objects.requireNonNull(clientCertificate, "expected parameter 'clientCertificate' to be non-null");
-        this.clientCertificateConfigs = Objects.requireNonNull(clientCertificateConfigs, "expected parameter 'clientCertificateConfigs' to be non-null");
-        this.clientKey = Objects.requireNonNull(clientKey, "expected parameter 'clientKey' to be non-null");
-        this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate, "expected parameter 'clusterCaCertificate' to be non-null");
-    }
+    private GetClusterMasterAuth() {}
 
-    private GetClusterMasterAuth() {
-        this.clientCertificate = null;
-        this.clientCertificateConfigs = List.of();
-        this.clientKey = null;
-        this.clusterCaCertificate = null;
+    private GetClusterMasterAuth(GetClusterMasterAuth $) {
+        this.clientCertificate = $.clientCertificate;
+        this.clientCertificateConfigs = $.clientCertificateConfigs;
+        this.clientKey = $.clientKey;
+        this.clusterCaCertificate = $.clusterCaCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterMasterAuth defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientCertificate;
-        private List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs;
-        private String clientKey;
-        private String clusterCaCertificate;
+        private GetClusterMasterAuth $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterMasterAuth();
         }
 
         public Builder(GetClusterMasterAuth defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientCertificate = defaults.clientCertificate;
-    	      this.clientCertificateConfigs = defaults.clientCertificateConfigs;
-    	      this.clientKey = defaults.clientKey;
-    	      this.clusterCaCertificate = defaults.clusterCaCertificate;
+            $ = new GetClusterMasterAuth(Objects.requireNonNull(defaults));
         }
 
         public Builder clientCertificate(String clientCertificate) {
-            this.clientCertificate = Objects.requireNonNull(clientCertificate);
+            $.clientCertificate = clientCertificate;
             return this;
         }
+
         public Builder clientCertificateConfigs(List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs) {
-            this.clientCertificateConfigs = Objects.requireNonNull(clientCertificateConfigs);
+            $.clientCertificateConfigs = clientCertificateConfigs;
             return this;
         }
+
         public Builder clientCertificateConfigs(GetClusterMasterAuthClientCertificateConfig... clientCertificateConfigs) {
             return clientCertificateConfigs(List.of(clientCertificateConfigs));
         }
+
         public Builder clientKey(String clientKey) {
-            this.clientKey = Objects.requireNonNull(clientKey);
+            $.clientKey = clientKey;
             return this;
         }
+
         public Builder clusterCaCertificate(String clusterCaCertificate) {
-            this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate);
+            $.clusterCaCertificate = clusterCaCertificate;
             return this;
-        }        public GetClusterMasterAuth build() {
-            return new GetClusterMasterAuth(clientCertificate, clientCertificateConfigs, clientKey, clusterCaCertificate);
+        }
+
+        public GetClusterMasterAuth build() {
+            $.clientCertificate = Objects.requireNonNull($.clientCertificate, "expected parameter 'clientCertificate' to be non-null");
+            $.clientCertificateConfigs = Objects.requireNonNull($.clientCertificateConfigs, "expected parameter 'clientCertificateConfigs' to be non-null");
+            $.clientKey = Objects.requireNonNull($.clientKey, "expected parameter 'clientKey' to be non-null");
+            $.clusterCaCertificate = Objects.requireNonNull($.clusterCaCertificate, "expected parameter 'clusterCaCertificate' to be non-null");
+            return $;
         }
     }
+
 }

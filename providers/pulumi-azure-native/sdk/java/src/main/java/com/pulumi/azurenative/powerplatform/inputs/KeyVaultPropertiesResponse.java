@@ -24,10 +24,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="key")
-      private final @Nullable KeyPropertiesResponse key;
+    private @Nullable KeyPropertiesResponse key;
 
     public Optional<KeyPropertiesResponse> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
-    public KeyVaultPropertiesResponse(
-        @Nullable String id,
-        @Nullable KeyPropertiesResponse key) {
-        this.id = id;
-        this.key = key;
-    }
+    private KeyVaultPropertiesResponse() {}
 
-    private KeyVaultPropertiesResponse() {
-        this.id = null;
-        this.key = null;
+    private KeyVaultPropertiesResponse(KeyVaultPropertiesResponse $) {
+        this.id = $.id;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable KeyPropertiesResponse key;
+        private KeyVaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesResponse();
         }
 
         public Builder(KeyVaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.key = defaults.key;
+            $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder key(@Nullable KeyPropertiesResponse key) {
-            this.key = key;
+            $.key = key;
             return this;
-        }        public KeyVaultPropertiesResponse build() {
-            return new KeyVaultPropertiesResponse(id, key);
+        }
+
+        public KeyVaultPropertiesResponse build() {
+            return $;
         }
     }
+
 }

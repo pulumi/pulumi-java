@@ -6,9 +6,9 @@ package com.pulumi.awsnative.cloudformation;
 import com.pulumi.awsnative.cloudformation.inputs.HookVersionLoggingConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class HookVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionRoleArn")
-      private final @Nullable Output<String> executionRoleArn;
+    private @Nullable Output<String> executionRoleArn;
 
-    public Output<String> executionRoleArn() {
-        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
+    public Optional<Output<String>> executionRoleArn() {
+        return Optional.ofNullable(this.executionRoleArn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class HookVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingConfig")
-      private final @Nullable Output<HookVersionLoggingConfigArgs> loggingConfig;
+    private @Nullable Output<HookVersionLoggingConfigArgs> loggingConfig;
 
-    public Output<HookVersionLoggingConfigArgs> loggingConfig() {
-        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
+    public Optional<Output<HookVersionLoggingConfigArgs>> loggingConfig() {
+        return Optional.ofNullable(this.loggingConfig);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class HookVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaHandlerPackage", required=true)
-      private final Output<String> schemaHandlerPackage;
+    private Output<String> schemaHandlerPackage;
 
     public Output<String> schemaHandlerPackage() {
         return this.schemaHandlerPackage;
@@ -58,89 +58,80 @@ public final class HookVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="typeName", required=true)
-      private final Output<String> typeName;
+    private Output<String> typeName;
 
     public Output<String> typeName() {
         return this.typeName;
     }
 
-    public HookVersionArgs(
-        @Nullable Output<String> executionRoleArn,
-        @Nullable Output<HookVersionLoggingConfigArgs> loggingConfig,
-        Output<String> schemaHandlerPackage,
-        Output<String> typeName) {
-        this.executionRoleArn = executionRoleArn;
-        this.loggingConfig = loggingConfig;
-        this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage, "expected parameter 'schemaHandlerPackage' to be non-null");
-        this.typeName = Objects.requireNonNull(typeName, "expected parameter 'typeName' to be non-null");
-    }
+    private HookVersionArgs() {}
 
-    private HookVersionArgs() {
-        this.executionRoleArn = Codegen.empty();
-        this.loggingConfig = Codegen.empty();
-        this.schemaHandlerPackage = Codegen.empty();
-        this.typeName = Codegen.empty();
+    private HookVersionArgs(HookVersionArgs $) {
+        this.executionRoleArn = $.executionRoleArn;
+        this.loggingConfig = $.loggingConfig;
+        this.schemaHandlerPackage = $.schemaHandlerPackage;
+        this.typeName = $.typeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HookVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> executionRoleArn;
-        private @Nullable Output<HookVersionLoggingConfigArgs> loggingConfig;
-        private Output<String> schemaHandlerPackage;
-        private Output<String> typeName;
+        private HookVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HookVersionArgs();
         }
 
         public Builder(HookVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.schemaHandlerPackage = defaults.schemaHandlerPackage;
-    	      this.typeName = defaults.typeName;
+            $ = new HookVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
-            this.executionRoleArn = executionRoleArn;
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
-        public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
-            return this;
+
+        public Builder executionRoleArn(String executionRoleArn) {
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder loggingConfig(@Nullable Output<HookVersionLoggingConfigArgs> loggingConfig) {
-            this.loggingConfig = loggingConfig;
+            $.loggingConfig = loggingConfig;
             return this;
         }
-        public Builder loggingConfig(@Nullable HookVersionLoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Codegen.ofNullable(loggingConfig);
-            return this;
+
+        public Builder loggingConfig(HookVersionLoggingConfigArgs loggingConfig) {
+            return loggingConfig(Output.of(loggingConfig));
         }
+
         public Builder schemaHandlerPackage(Output<String> schemaHandlerPackage) {
-            this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage);
+            $.schemaHandlerPackage = schemaHandlerPackage;
             return this;
         }
+
         public Builder schemaHandlerPackage(String schemaHandlerPackage) {
-            this.schemaHandlerPackage = Output.of(Objects.requireNonNull(schemaHandlerPackage));
-            return this;
+            return schemaHandlerPackage(Output.of(schemaHandlerPackage));
         }
+
         public Builder typeName(Output<String> typeName) {
-            this.typeName = Objects.requireNonNull(typeName);
+            $.typeName = typeName;
             return this;
         }
+
         public Builder typeName(String typeName) {
-            this.typeName = Output.of(Objects.requireNonNull(typeName));
-            return this;
-        }        public HookVersionArgs build() {
-            return new HookVersionArgs(executionRoleArn, loggingConfig, schemaHandlerPackage, typeName);
+            return typeName(Output.of(typeName));
+        }
+
+        public HookVersionArgs build() {
+            $.schemaHandlerPackage = Objects.requireNonNull($.schemaHandlerPackage, "expected parameter 'schemaHandlerPackage' to be non-null");
+            $.typeName = Objects.requireNonNull($.typeName, "expected parameter 'typeName' to be non-null");
+            return $;
         }
     }
+
 }

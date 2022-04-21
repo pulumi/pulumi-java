@@ -15,78 +15,71 @@ public final class DeliveryStreamHttpEndpointConfiguration extends com.pulumi.re
     public static final DeliveryStreamHttpEndpointConfiguration Empty = new DeliveryStreamHttpEndpointConfiguration();
 
     @Import(name="accessKey")
-      private final @Nullable String accessKey;
+    private @Nullable String accessKey;
 
     public Optional<String> accessKey() {
-        return this.accessKey == null ? Optional.empty() : Optional.ofNullable(this.accessKey);
+        return Optional.ofNullable(this.accessKey);
     }
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public DeliveryStreamHttpEndpointConfiguration(
-        @Nullable String accessKey,
-        @Nullable String name,
-        String url) {
-        this.accessKey = accessKey;
-        this.name = name;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private DeliveryStreamHttpEndpointConfiguration() {}
 
-    private DeliveryStreamHttpEndpointConfiguration() {
-        this.accessKey = null;
-        this.name = null;
-        this.url = null;
+    private DeliveryStreamHttpEndpointConfiguration(DeliveryStreamHttpEndpointConfiguration $) {
+        this.accessKey = $.accessKey;
+        this.name = $.name;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamHttpEndpointConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessKey;
-        private @Nullable String name;
-        private String url;
+        private DeliveryStreamHttpEndpointConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamHttpEndpointConfiguration();
         }
 
         public Builder(DeliveryStreamHttpEndpointConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.name = defaults.name;
-    	      this.url = defaults.url;
+            $ = new DeliveryStreamHttpEndpointConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = accessKey;
+            $.accessKey = accessKey;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public DeliveryStreamHttpEndpointConfiguration build() {
-            return new DeliveryStreamHttpEndpointConfiguration(accessKey, name, url);
+        }
+
+        public DeliveryStreamHttpEndpointConfiguration build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

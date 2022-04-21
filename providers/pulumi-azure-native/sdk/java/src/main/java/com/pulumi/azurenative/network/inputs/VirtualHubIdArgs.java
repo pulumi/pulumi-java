@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VirtualHubIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public VirtualHubIdArgs(@Nullable Output<String> id) {
-        this.id = id;
-    }
+    private VirtualHubIdArgs() {}
 
-    private VirtualHubIdArgs() {
-        this.id = Codegen.empty();
+    private VirtualHubIdArgs(VirtualHubIdArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
+        private VirtualHubIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubIdArgs();
         }
 
         public Builder(VirtualHubIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new VirtualHubIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public VirtualHubIdArgs build() {
-            return new VirtualHubIdArgs(id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public VirtualHubIdArgs build() {
+            return $;
         }
     }
+
 }

@@ -19,78 +19,72 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
     public static final PrivateLinkServiceConnectionStateResponse Empty = new PrivateLinkServiceConnectionStateResponse();
 
     @Import(name="actionRequired", required=true)
-      private final String actionRequired;
+    private String actionRequired;
 
     public String actionRequired() {
         return this.actionRequired;
     }
 
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public PrivateLinkServiceConnectionStateResponse(
-        String actionRequired,
-        @Nullable String description,
-        String status) {
-        this.actionRequired = Objects.requireNonNull(actionRequired, "expected parameter 'actionRequired' to be non-null");
-        this.description = description;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private PrivateLinkServiceConnectionStateResponse() {}
 
-    private PrivateLinkServiceConnectionStateResponse() {
-        this.actionRequired = null;
-        this.description = null;
-        this.status = null;
+    private PrivateLinkServiceConnectionStateResponse(PrivateLinkServiceConnectionStateResponse $) {
+        this.actionRequired = $.actionRequired;
+        this.description = $.description;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceConnectionStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionRequired;
-        private @Nullable String description;
-        private String status;
+        private PrivateLinkServiceConnectionStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceConnectionStateResponse();
         }
 
         public Builder(PrivateLinkServiceConnectionStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionRequired = defaults.actionRequired;
-    	      this.description = defaults.description;
-    	      this.status = defaults.status;
+            $ = new PrivateLinkServiceConnectionStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionRequired(String actionRequired) {
-            this.actionRequired = Objects.requireNonNull(actionRequired);
+            $.actionRequired = actionRequired;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public PrivateLinkServiceConnectionStateResponse build() {
-            return new PrivateLinkServiceConnectionStateResponse(actionRequired, description, status);
+        }
+
+        public PrivateLinkServiceConnectionStateResponse build() {
+            $.actionRequired = Objects.requireNonNull($.actionRequired, "expected parameter 'actionRequired' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

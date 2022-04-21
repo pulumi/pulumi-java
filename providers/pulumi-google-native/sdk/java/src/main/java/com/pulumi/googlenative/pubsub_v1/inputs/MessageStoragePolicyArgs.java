@@ -5,10 +5,10 @@ package com.pulumi.googlenative.pubsub_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class MessageStoragePolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allowedPersistenceRegions")
-      private final @Nullable Output<List<String>> allowedPersistenceRegions;
+    private @Nullable Output<List<String>> allowedPersistenceRegions;
 
-    public Output<List<String>> allowedPersistenceRegions() {
-        return this.allowedPersistenceRegions == null ? Codegen.empty() : this.allowedPersistenceRegions;
+    public Optional<Output<List<String>>> allowedPersistenceRegions() {
+        return Optional.ofNullable(this.allowedPersistenceRegions);
     }
 
-    public MessageStoragePolicyArgs(@Nullable Output<List<String>> allowedPersistenceRegions) {
-        this.allowedPersistenceRegions = allowedPersistenceRegions;
-    }
+    private MessageStoragePolicyArgs() {}
 
-    private MessageStoragePolicyArgs() {
-        this.allowedPersistenceRegions = Codegen.empty();
+    private MessageStoragePolicyArgs(MessageStoragePolicyArgs $) {
+        this.allowedPersistenceRegions = $.allowedPersistenceRegions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MessageStoragePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedPersistenceRegions;
+        private MessageStoragePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MessageStoragePolicyArgs();
         }
 
         public Builder(MessageStoragePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedPersistenceRegions = defaults.allowedPersistenceRegions;
+            $ = new MessageStoragePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedPersistenceRegions(@Nullable Output<List<String>> allowedPersistenceRegions) {
-            this.allowedPersistenceRegions = allowedPersistenceRegions;
+            $.allowedPersistenceRegions = allowedPersistenceRegions;
             return this;
         }
-        public Builder allowedPersistenceRegions(@Nullable List<String> allowedPersistenceRegions) {
-            this.allowedPersistenceRegions = Codegen.ofNullable(allowedPersistenceRegions);
-            return this;
+
+        public Builder allowedPersistenceRegions(List<String> allowedPersistenceRegions) {
+            return allowedPersistenceRegions(Output.of(allowedPersistenceRegions));
         }
+
         public Builder allowedPersistenceRegions(String... allowedPersistenceRegions) {
             return allowedPersistenceRegions(List.of(allowedPersistenceRegions));
-        }        public MessageStoragePolicyArgs build() {
-            return new MessageStoragePolicyArgs(allowedPersistenceRegions);
+        }
+
+        public MessageStoragePolicyArgs build() {
+            return $;
         }
     }
+
 }

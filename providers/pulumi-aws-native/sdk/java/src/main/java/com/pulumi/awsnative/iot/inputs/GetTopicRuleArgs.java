@@ -13,45 +13,45 @@ public final class GetTopicRuleArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTopicRuleArgs Empty = new GetTopicRuleArgs();
 
     @Import(name="ruleName", required=true)
-      private final String ruleName;
+    private String ruleName;
 
     public String ruleName() {
         return this.ruleName;
     }
 
-    public GetTopicRuleArgs(String ruleName) {
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-    }
+    private GetTopicRuleArgs() {}
 
-    private GetTopicRuleArgs() {
-        this.ruleName = null;
+    private GetTopicRuleArgs(GetTopicRuleArgs $) {
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTopicRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ruleName;
+        private GetTopicRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTopicRuleArgs();
         }
 
         public Builder(GetTopicRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleName = defaults.ruleName;
+            $ = new GetTopicRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleName(String ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
-        }        public GetTopicRuleArgs build() {
-            return new GetTopicRuleArgs(ruleName);
+        }
+
+        public GetTopicRuleArgs build() {
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            return $;
         }
     }
+
 }

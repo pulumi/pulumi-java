@@ -17,7 +17,7 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateZoneName", required=true)
-      private final String privateZoneName;
+    private String privateZoneName;
 
     public String privateZoneName() {
         return this.privateZoneName;
@@ -28,7 +28,7 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="recordType", required=true)
-      private final String recordType;
+    private String recordType;
 
     public String recordType() {
         return this.recordType;
@@ -39,7 +39,7 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="relativeRecordSetName", required=true)
-      private final String relativeRecordSetName;
+    private String relativeRecordSetName;
 
     public String relativeRecordSetName() {
         return this.relativeRecordSetName;
@@ -50,73 +50,66 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateRecordSetArgs(
-        String privateZoneName,
-        String recordType,
-        String relativeRecordSetName,
-        String resourceGroupName) {
-        this.privateZoneName = Objects.requireNonNull(privateZoneName, "expected parameter 'privateZoneName' to be non-null");
-        this.recordType = Objects.requireNonNull(recordType, "expected parameter 'recordType' to be non-null");
-        this.relativeRecordSetName = Objects.requireNonNull(relativeRecordSetName, "expected parameter 'relativeRecordSetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateRecordSetArgs() {}
 
-    private GetPrivateRecordSetArgs() {
-        this.privateZoneName = null;
-        this.recordType = null;
-        this.relativeRecordSetName = null;
-        this.resourceGroupName = null;
+    private GetPrivateRecordSetArgs(GetPrivateRecordSetArgs $) {
+        this.privateZoneName = $.privateZoneName;
+        this.recordType = $.recordType;
+        this.relativeRecordSetName = $.relativeRecordSetName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateRecordSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateZoneName;
-        private String recordType;
-        private String relativeRecordSetName;
-        private String resourceGroupName;
+        private GetPrivateRecordSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateRecordSetArgs();
         }
 
         public Builder(GetPrivateRecordSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateZoneName = defaults.privateZoneName;
-    	      this.recordType = defaults.recordType;
-    	      this.relativeRecordSetName = defaults.relativeRecordSetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateRecordSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateZoneName(String privateZoneName) {
-            this.privateZoneName = Objects.requireNonNull(privateZoneName);
+            $.privateZoneName = privateZoneName;
             return this;
         }
+
         public Builder recordType(String recordType) {
-            this.recordType = Objects.requireNonNull(recordType);
+            $.recordType = recordType;
             return this;
         }
+
         public Builder relativeRecordSetName(String relativeRecordSetName) {
-            this.relativeRecordSetName = Objects.requireNonNull(relativeRecordSetName);
+            $.relativeRecordSetName = relativeRecordSetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateRecordSetArgs build() {
-            return new GetPrivateRecordSetArgs(privateZoneName, recordType, relativeRecordSetName, resourceGroupName);
+        }
+
+        public GetPrivateRecordSetArgs build() {
+            $.privateZoneName = Objects.requireNonNull($.privateZoneName, "expected parameter 'privateZoneName' to be non-null");
+            $.recordType = Objects.requireNonNull($.recordType, "expected parameter 'recordType' to be non-null");
+            $.relativeRecordSetName = Objects.requireNonNull($.relativeRecordSetName, "expected parameter 'relativeRecordSetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

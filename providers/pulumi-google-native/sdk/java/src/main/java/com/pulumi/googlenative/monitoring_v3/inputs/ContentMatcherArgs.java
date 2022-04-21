@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.enums.ContentMatcherMatcher;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ContentMatcherArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ContentMatcherArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="matcher")
-      private final @Nullable Output<ContentMatcherMatcher> matcher;
+    private @Nullable Output<ContentMatcherMatcher> matcher;
 
-    public Output<ContentMatcherMatcher> matcher() {
-        return this.matcher == null ? Codegen.empty() : this.matcher;
+    public Optional<Output<ContentMatcherMatcher>> matcher() {
+        return Optional.ofNullable(this.matcher);
     }
 
-    public ContentMatcherArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<ContentMatcherMatcher> matcher) {
-        this.content = content;
-        this.matcher = matcher;
-    }
+    private ContentMatcherArgs() {}
 
-    private ContentMatcherArgs() {
-        this.content = Codegen.empty();
-        this.matcher = Codegen.empty();
+    private ContentMatcherArgs(ContentMatcherArgs $) {
+        this.content = $.content;
+        this.matcher = $.matcher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentMatcherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<ContentMatcherMatcher> matcher;
+        private ContentMatcherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentMatcherArgs();
         }
 
         public Builder(ContentMatcherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.matcher = defaults.matcher;
+            $ = new ContentMatcherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder matcher(@Nullable Output<ContentMatcherMatcher> matcher) {
-            this.matcher = matcher;
+            $.matcher = matcher;
             return this;
         }
-        public Builder matcher(@Nullable ContentMatcherMatcher matcher) {
-            this.matcher = Codegen.ofNullable(matcher);
-            return this;
-        }        public ContentMatcherArgs build() {
-            return new ContentMatcherArgs(content, matcher);
+
+        public Builder matcher(ContentMatcherMatcher matcher) {
+            return matcher(Output.of(matcher));
+        }
+
+        public ContentMatcherArgs build() {
+            return $;
         }
     }
+
 }

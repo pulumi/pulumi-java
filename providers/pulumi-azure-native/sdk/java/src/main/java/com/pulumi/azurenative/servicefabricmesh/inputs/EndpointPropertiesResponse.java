@@ -24,7 +24,7 @@ public final class EndpointPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,55 +35,51 @@ public final class EndpointPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
-    public EndpointPropertiesResponse(
-        String name,
-        @Nullable Integer port) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = port;
-    }
+    private EndpointPropertiesResponse() {}
 
-    private EndpointPropertiesResponse() {
-        this.name = null;
-        this.port = null;
+    private EndpointPropertiesResponse(EndpointPropertiesResponse $) {
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable Integer port;
+        private EndpointPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointPropertiesResponse();
         }
 
         public Builder(EndpointPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new EndpointPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
-        }        public EndpointPropertiesResponse build() {
-            return new EndpointPropertiesResponse(name, port);
+        }
+
+        public EndpointPropertiesResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

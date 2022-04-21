@@ -5,10 +5,10 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class BucketLifecycleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rule")
-      private final @Nullable Output<List<BucketLifecycleRuleItemArgs>> rule;
+    private @Nullable Output<List<BucketLifecycleRuleItemArgs>> rule;
 
-    public Output<List<BucketLifecycleRuleItemArgs>> rule() {
-        return this.rule == null ? Codegen.empty() : this.rule;
+    public Optional<Output<List<BucketLifecycleRuleItemArgs>>> rule() {
+        return Optional.ofNullable(this.rule);
     }
 
-    public BucketLifecycleArgs(@Nullable Output<List<BucketLifecycleRuleItemArgs>> rule) {
-        this.rule = rule;
-    }
+    private BucketLifecycleArgs() {}
 
-    private BucketLifecycleArgs() {
-        this.rule = Codegen.empty();
+    private BucketLifecycleArgs(BucketLifecycleArgs $) {
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BucketLifecycleRuleItemArgs>> rule;
+        private BucketLifecycleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleArgs();
         }
 
         public Builder(BucketLifecycleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rule = defaults.rule;
+            $ = new BucketLifecycleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rule(@Nullable Output<List<BucketLifecycleRuleItemArgs>> rule) {
-            this.rule = rule;
+            $.rule = rule;
             return this;
         }
-        public Builder rule(@Nullable List<BucketLifecycleRuleItemArgs> rule) {
-            this.rule = Codegen.ofNullable(rule);
-            return this;
+
+        public Builder rule(List<BucketLifecycleRuleItemArgs> rule) {
+            return rule(Output.of(rule));
         }
+
         public Builder rule(BucketLifecycleRuleItemArgs... rule) {
             return rule(List.of(rule));
-        }        public BucketLifecycleArgs build() {
-            return new BucketLifecycleArgs(rule);
+        }
+
+        public BucketLifecycleArgs build() {
+            return $;
         }
     }
+
 }

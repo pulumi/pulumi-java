@@ -27,10 +27,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
+    private @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
 
-    public List<ScaleRuleMetricDimensionResponse> dimensions() {
-        return this.dimensions == null ? List.of() : this.dimensions;
+    public Optional<List<ScaleRuleMetricDimensionResponse>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dividePerInstance")
-      private final @Nullable Boolean dividePerInstance;
+    private @Nullable Boolean dividePerInstance;
 
     public Optional<Boolean> dividePerInstance() {
-        return this.dividePerInstance == null ? Optional.empty() : Optional.ofNullable(this.dividePerInstance);
+        return Optional.ofNullable(this.dividePerInstance);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="metricName", required=true)
-      private final String metricName;
+    private String metricName;
 
     public String metricName() {
         return this.metricName;
@@ -60,10 +60,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="metricNamespace")
-      private final @Nullable String metricNamespace;
+    private @Nullable String metricNamespace;
 
     public Optional<String> metricNamespace() {
-        return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
+        return Optional.ofNullable(this.metricNamespace);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="metricResourceLocation")
-      private final @Nullable String metricResourceLocation;
+    private @Nullable String metricResourceLocation;
 
     public Optional<String> metricResourceLocation() {
-        return this.metricResourceLocation == null ? Optional.empty() : Optional.ofNullable(this.metricResourceLocation);
+        return Optional.ofNullable(this.metricResourceLocation);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="metricResourceUri", required=true)
-      private final String metricResourceUri;
+    private String metricResourceUri;
 
     public String metricResourceUri() {
         return this.metricResourceUri;
@@ -93,7 +93,7 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="operator", required=true)
-      private final String operator;
+    private String operator;
 
     public String operator() {
         return this.operator;
@@ -104,7 +104,7 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="statistic", required=true)
-      private final String statistic;
+    private String statistic;
 
     public String statistic() {
         return this.statistic;
@@ -115,7 +115,7 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="threshold", required=true)
-      private final Double threshold;
+    private Double threshold;
 
     public Double threshold() {
         return this.threshold;
@@ -126,7 +126,7 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeAggregation", required=true)
-      private final String timeAggregation;
+    private String timeAggregation;
 
     public String timeAggregation() {
         return this.timeAggregation;
@@ -137,7 +137,7 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeGrain", required=true)
-      private final String timeGrain;
+    private String timeGrain;
 
     public String timeGrain() {
         return this.timeGrain;
@@ -148,148 +148,122 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeWindow", required=true)
-      private final String timeWindow;
+    private String timeWindow;
 
     public String timeWindow() {
         return this.timeWindow;
     }
 
-    public MetricTriggerResponse(
-        @Nullable List<ScaleRuleMetricDimensionResponse> dimensions,
-        @Nullable Boolean dividePerInstance,
-        String metricName,
-        @Nullable String metricNamespace,
-        @Nullable String metricResourceLocation,
-        String metricResourceUri,
-        String operator,
-        String statistic,
-        Double threshold,
-        String timeAggregation,
-        String timeGrain,
-        String timeWindow) {
-        this.dimensions = dimensions;
-        this.dividePerInstance = dividePerInstance;
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.metricNamespace = metricNamespace;
-        this.metricResourceLocation = metricResourceLocation;
-        this.metricResourceUri = Objects.requireNonNull(metricResourceUri, "expected parameter 'metricResourceUri' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.statistic = Objects.requireNonNull(statistic, "expected parameter 'statistic' to be non-null");
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.timeAggregation = Objects.requireNonNull(timeAggregation, "expected parameter 'timeAggregation' to be non-null");
-        this.timeGrain = Objects.requireNonNull(timeGrain, "expected parameter 'timeGrain' to be non-null");
-        this.timeWindow = Objects.requireNonNull(timeWindow, "expected parameter 'timeWindow' to be non-null");
-    }
+    private MetricTriggerResponse() {}
 
-    private MetricTriggerResponse() {
-        this.dimensions = List.of();
-        this.dividePerInstance = null;
-        this.metricName = null;
-        this.metricNamespace = null;
-        this.metricResourceLocation = null;
-        this.metricResourceUri = null;
-        this.operator = null;
-        this.statistic = null;
-        this.threshold = null;
-        this.timeAggregation = null;
-        this.timeGrain = null;
-        this.timeWindow = null;
+    private MetricTriggerResponse(MetricTriggerResponse $) {
+        this.dimensions = $.dimensions;
+        this.dividePerInstance = $.dividePerInstance;
+        this.metricName = $.metricName;
+        this.metricNamespace = $.metricNamespace;
+        this.metricResourceLocation = $.metricResourceLocation;
+        this.metricResourceUri = $.metricResourceUri;
+        this.operator = $.operator;
+        this.statistic = $.statistic;
+        this.threshold = $.threshold;
+        this.timeAggregation = $.timeAggregation;
+        this.timeGrain = $.timeGrain;
+        this.timeWindow = $.timeWindow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
-        private @Nullable Boolean dividePerInstance;
-        private String metricName;
-        private @Nullable String metricNamespace;
-        private @Nullable String metricResourceLocation;
-        private String metricResourceUri;
-        private String operator;
-        private String statistic;
-        private Double threshold;
-        private String timeAggregation;
-        private String timeGrain;
-        private String timeWindow;
+        private MetricTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricTriggerResponse();
         }
 
         public Builder(MetricTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
-    	      this.dividePerInstance = defaults.dividePerInstance;
-    	      this.metricName = defaults.metricName;
-    	      this.metricNamespace = defaults.metricNamespace;
-    	      this.metricResourceLocation = defaults.metricResourceLocation;
-    	      this.metricResourceUri = defaults.metricResourceUri;
-    	      this.operator = defaults.operator;
-    	      this.statistic = defaults.statistic;
-    	      this.threshold = defaults.threshold;
-    	      this.timeAggregation = defaults.timeAggregation;
-    	      this.timeGrain = defaults.timeGrain;
-    	      this.timeWindow = defaults.timeWindow;
+            $ = new MetricTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(@Nullable List<ScaleRuleMetricDimensionResponse> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder dimensions(ScaleRuleMetricDimensionResponse... dimensions) {
             return dimensions(List.of(dimensions));
         }
+
         public Builder dividePerInstance(@Nullable Boolean dividePerInstance) {
-            this.dividePerInstance = dividePerInstance;
+            $.dividePerInstance = dividePerInstance;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = metricNamespace;
+            $.metricNamespace = metricNamespace;
             return this;
         }
+
         public Builder metricResourceLocation(@Nullable String metricResourceLocation) {
-            this.metricResourceLocation = metricResourceLocation;
+            $.metricResourceLocation = metricResourceLocation;
             return this;
         }
+
         public Builder metricResourceUri(String metricResourceUri) {
-            this.metricResourceUri = Objects.requireNonNull(metricResourceUri);
+            $.metricResourceUri = metricResourceUri;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder statistic(String statistic) {
-            this.statistic = Objects.requireNonNull(statistic);
+            $.statistic = statistic;
             return this;
         }
+
         public Builder threshold(Double threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
         }
+
         public Builder timeAggregation(String timeAggregation) {
-            this.timeAggregation = Objects.requireNonNull(timeAggregation);
+            $.timeAggregation = timeAggregation;
             return this;
         }
+
         public Builder timeGrain(String timeGrain) {
-            this.timeGrain = Objects.requireNonNull(timeGrain);
+            $.timeGrain = timeGrain;
             return this;
         }
+
         public Builder timeWindow(String timeWindow) {
-            this.timeWindow = Objects.requireNonNull(timeWindow);
+            $.timeWindow = timeWindow;
             return this;
-        }        public MetricTriggerResponse build() {
-            return new MetricTriggerResponse(dimensions, dividePerInstance, metricName, metricNamespace, metricResourceLocation, metricResourceUri, operator, statistic, threshold, timeAggregation, timeGrain, timeWindow);
+        }
+
+        public MetricTriggerResponse build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.metricResourceUri = Objects.requireNonNull($.metricResourceUri, "expected parameter 'metricResourceUri' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.statistic = Objects.requireNonNull($.statistic, "expected parameter 'statistic' to be non-null");
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            $.timeAggregation = Objects.requireNonNull($.timeAggregation, "expected parameter 'timeAggregation' to be non-null");
+            $.timeGrain = Objects.requireNonNull($.timeGrain, "expected parameter 'timeGrain' to be non-null");
+            $.timeWindow = Objects.requireNonNull($.timeWindow, "expected parameter 'timeWindow' to be non-null");
+            return $;
         }
     }
+
 }

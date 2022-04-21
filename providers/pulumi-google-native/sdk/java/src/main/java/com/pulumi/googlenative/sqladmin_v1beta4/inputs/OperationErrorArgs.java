@@ -5,9 +5,9 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OperationErrorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<String> code;
+    private @Nullable Output<String> code;
 
-    public Output<String> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<String>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OperationErrorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class OperationErrorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
-    public OperationErrorArgs(
-        @Nullable Output<String> code,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> message) {
-        this.code = code;
-        this.kind = kind;
-        this.message = message;
-    }
+    private OperationErrorArgs() {}
 
-    private OperationErrorArgs() {
-        this.code = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.message = Codegen.empty();
+    private OperationErrorArgs(OperationErrorArgs $) {
+        this.code = $.code;
+        this.kind = $.kind;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationErrorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> code;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> message;
+        private OperationErrorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationErrorArgs();
         }
 
         public Builder(OperationErrorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.kind = defaults.kind;
-    	      this.message = defaults.message;
+            $ = new OperationErrorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<String> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable String code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(String code) {
+            return code(Output.of(code));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
-        }        public OperationErrorArgs build() {
-            return new OperationErrorArgs(code, kind, message);
+
+        public Builder message(String message) {
+            return message(Output.of(message));
+        }
+
+        public OperationErrorArgs build() {
+            return $;
         }
     }
+
 }

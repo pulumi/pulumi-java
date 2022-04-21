@@ -13,45 +13,45 @@ public final class GetResourceAssociationArgs extends com.pulumi.resources.Invok
     public static final GetResourceAssociationArgs Empty = new GetResourceAssociationArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetResourceAssociationArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetResourceAssociationArgs() {}
 
-    private GetResourceAssociationArgs() {
-        this.id = null;
+    private GetResourceAssociationArgs(GetResourceAssociationArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetResourceAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceAssociationArgs();
         }
 
         public Builder(GetResourceAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetResourceAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetResourceAssociationArgs build() {
-            return new GetResourceAssociationArgs(id);
+        }
+
+        public GetResourceAssociationArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

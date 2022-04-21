@@ -23,10 +23,10 @@ public final class PipelineReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class PipelineReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="referenceName", required=true)
-      private final String referenceName;
+    private String referenceName;
 
     public String referenceName() {
         return this.referenceName;
@@ -45,64 +45,58 @@ public final class PipelineReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PipelineReferenceResponse(
-        @Nullable String name,
-        String referenceName,
-        String type) {
-        this.name = name;
-        this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PipelineReferenceResponse() {}
 
-    private PipelineReferenceResponse() {
-        this.name = null;
-        this.referenceName = null;
-        this.type = null;
+    private PipelineReferenceResponse(PipelineReferenceResponse $) {
+        this.name = $.name;
+        this.referenceName = $.referenceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private String referenceName;
-        private String type;
+        private PipelineReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineReferenceResponse();
         }
 
         public Builder(PipelineReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.referenceName = defaults.referenceName;
-    	      this.type = defaults.type;
+            $ = new PipelineReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder referenceName(String referenceName) {
-            this.referenceName = Objects.requireNonNull(referenceName);
+            $.referenceName = referenceName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PipelineReferenceResponse build() {
-            return new PipelineReferenceResponse(name, referenceName, type);
+        }
+
+        public PipelineReferenceResponse build() {
+            $.referenceName = Objects.requireNonNull($.referenceName, "expected parameter 'referenceName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

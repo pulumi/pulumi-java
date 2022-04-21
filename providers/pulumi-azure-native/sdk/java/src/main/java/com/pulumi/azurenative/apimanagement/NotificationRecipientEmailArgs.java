@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class NotificationRecipientEmailArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class NotificationRecipientEmailArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="notificationName", required=true)
-      private final Output<String> notificationName;
+    private Output<String> notificationName;
 
     public Output<String> notificationName() {
         return this.notificationName;
@@ -42,7 +42,7 @@ public final class NotificationRecipientEmailArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,89 +53,81 @@ public final class NotificationRecipientEmailArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public NotificationRecipientEmailArgs(
-        @Nullable Output<String> email,
-        Output<String> notificationName,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.email = email;
-        this.notificationName = Objects.requireNonNull(notificationName, "expected parameter 'notificationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private NotificationRecipientEmailArgs() {}
 
-    private NotificationRecipientEmailArgs() {
-        this.email = Codegen.empty();
-        this.notificationName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private NotificationRecipientEmailArgs(NotificationRecipientEmailArgs $) {
+        this.email = $.email;
+        this.notificationName = $.notificationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationRecipientEmailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> email;
-        private Output<String> notificationName;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private NotificationRecipientEmailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationRecipientEmailArgs();
         }
 
         public Builder(NotificationRecipientEmailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.notificationName = defaults.notificationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new NotificationRecipientEmailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder notificationName(Output<String> notificationName) {
-            this.notificationName = Objects.requireNonNull(notificationName);
+            $.notificationName = notificationName;
             return this;
         }
+
         public Builder notificationName(String notificationName) {
-            this.notificationName = Output.of(Objects.requireNonNull(notificationName));
-            return this;
+            return notificationName(Output.of(notificationName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public NotificationRecipientEmailArgs build() {
-            return new NotificationRecipientEmailArgs(email, notificationName, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public NotificationRecipientEmailArgs build() {
+            $.notificationName = Objects.requireNonNull($.notificationName, "expected parameter 'notificationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

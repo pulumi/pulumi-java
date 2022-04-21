@@ -9,10 +9,10 @@ import com.pulumi.azurenative.machinelearningservices.inputs.CreateServiceReques
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="computeType", required=true)
-      private final Output<Either<String,ComputeEnvironmentType>> computeType;
+    private Output<Either<String,ComputeEnvironmentType>> computeType;
 
     public Output<Either<String,ComputeEnvironmentType>> computeType() {
         return this.computeType;
@@ -36,10 +36,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="environmentImageRequest")
-      private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
+    private @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
-    public Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest() {
-        return this.environmentImageRequest == null ? Codegen.empty() : this.environmentImageRequest;
+    public Optional<Output<CreateServiceRequestEnvironmentImageRequestArgs>> environmentImageRequest() {
+        return Optional.ofNullable(this.environmentImageRequest);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
+    private @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
-    public Output<CreateServiceRequestKeysArgs> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<CreateServiceRequestKeysArgs>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kvTags")
-      private final @Nullable Output<Map<String,String>> kvTags;
+    private @Nullable Output<Map<String,String>> kvTags;
 
-    public Output<Map<String,String>> kvTags() {
-        return this.kvTags == null ? Codegen.empty() : this.kvTags;
+    public Optional<Output<Map<String,String>>> kvTags() {
+        return Optional.ofNullable(this.kvTags);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -113,10 +113,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -124,167 +124,141 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public MachineLearningServiceArgs(
-        Output<Either<String,ComputeEnvironmentType>> computeType,
-        @Nullable Output<String> description,
-        @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest,
-        @Nullable Output<CreateServiceRequestKeysArgs> keys,
-        @Nullable Output<Map<String,String>> kvTags,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> serviceName,
-        Output<String> workspaceName) {
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
-        this.description = description;
-        this.environmentImageRequest = environmentImageRequest;
-        this.keys = keys;
-        this.kvTags = kvTags;
-        this.location = location;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = serviceName;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private MachineLearningServiceArgs() {}
 
-    private MachineLearningServiceArgs() {
-        this.computeType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.environmentImageRequest = Codegen.empty();
-        this.keys = Codegen.empty();
-        this.kvTags = Codegen.empty();
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private MachineLearningServiceArgs(MachineLearningServiceArgs $) {
+        this.computeType = $.computeType;
+        this.description = $.description;
+        this.environmentImageRequest = $.environmentImageRequest;
+        this.keys = $.keys;
+        this.kvTags = $.kvTags;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachineLearningServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ComputeEnvironmentType>> computeType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
-        private @Nullable Output<CreateServiceRequestKeysArgs> keys;
-        private @Nullable Output<Map<String,String>> kvTags;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> serviceName;
-        private Output<String> workspaceName;
+        private MachineLearningServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachineLearningServiceArgs();
         }
 
         public Builder(MachineLearningServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeType = defaults.computeType;
-    	      this.description = defaults.description;
-    	      this.environmentImageRequest = defaults.environmentImageRequest;
-    	      this.keys = defaults.keys;
-    	      this.kvTags = defaults.kvTags;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new MachineLearningServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeType(Output<Either<String,ComputeEnvironmentType>> computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder computeType(Either<String,ComputeEnvironmentType> computeType) {
-            this.computeType = Output.of(Objects.requireNonNull(computeType));
-            return this;
+            return computeType(Output.of(computeType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
-            this.environmentImageRequest = environmentImageRequest;
+            $.environmentImageRequest = environmentImageRequest;
             return this;
         }
-        public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
-            this.environmentImageRequest = Codegen.ofNullable(environmentImageRequest);
-            return this;
+
+        public Builder environmentImageRequest(CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
+            return environmentImageRequest(Output.of(environmentImageRequest));
         }
+
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(CreateServiceRequestKeysArgs keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
-            this.kvTags = kvTags;
+            $.kvTags = kvTags;
             return this;
         }
-        public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = Codegen.ofNullable(kvTags);
-            return this;
+
+        public Builder kvTags(Map<String,String> kvTags) {
+            return kvTags(Output.of(kvTags));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public MachineLearningServiceArgs build() {
-            return new MachineLearningServiceArgs(computeType, description, environmentImageRequest, keys, kvTags, location, properties, resourceGroupName, serviceName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public MachineLearningServiceArgs build() {
+            $.computeType = Objects.requireNonNull($.computeType, "expected parameter 'computeType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

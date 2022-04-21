@@ -22,48 +22,49 @@ public final class SourceInstanceParamsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="diskConfigs", required=true)
-      private final List<DiskInstantiationConfigResponse> diskConfigs;
+    private List<DiskInstantiationConfigResponse> diskConfigs;
 
     public List<DiskInstantiationConfigResponse> diskConfigs() {
         return this.diskConfigs;
     }
 
-    public SourceInstanceParamsResponse(List<DiskInstantiationConfigResponse> diskConfigs) {
-        this.diskConfigs = Objects.requireNonNull(diskConfigs, "expected parameter 'diskConfigs' to be non-null");
-    }
+    private SourceInstanceParamsResponse() {}
 
-    private SourceInstanceParamsResponse() {
-        this.diskConfigs = List.of();
+    private SourceInstanceParamsResponse(SourceInstanceParamsResponse $) {
+        this.diskConfigs = $.diskConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceInstanceParamsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DiskInstantiationConfigResponse> diskConfigs;
+        private SourceInstanceParamsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceInstanceParamsResponse();
         }
 
         public Builder(SourceInstanceParamsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskConfigs = defaults.diskConfigs;
+            $ = new SourceInstanceParamsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskConfigs(List<DiskInstantiationConfigResponse> diskConfigs) {
-            this.diskConfigs = Objects.requireNonNull(diskConfigs);
+            $.diskConfigs = diskConfigs;
             return this;
         }
+
         public Builder diskConfigs(DiskInstantiationConfigResponse... diskConfigs) {
             return diskConfigs(List.of(diskConfigs));
-        }        public SourceInstanceParamsResponse build() {
-            return new SourceInstanceParamsResponse(diskConfigs);
+        }
+
+        public SourceInstanceParamsResponse build() {
+            $.diskConfigs = Objects.requireNonNull($.diskConfigs, "expected parameter 'diskConfigs' to be non-null");
+            return $;
         }
     }
+
 }

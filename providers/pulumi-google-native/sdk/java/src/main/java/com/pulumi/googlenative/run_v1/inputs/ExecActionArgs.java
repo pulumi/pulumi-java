@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ExecActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
-    public ExecActionArgs(@Nullable Output<List<String>> command) {
-        this.command = command;
-    }
+    private ExecActionArgs() {}
 
-    private ExecActionArgs() {
-        this.command = Codegen.empty();
+    private ExecActionArgs(ExecActionArgs $) {
+        this.command = $.command;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> command;
+        private ExecActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecActionArgs();
         }
 
         public Builder(ExecActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
+            $ = new ExecActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
-        }        public ExecActionArgs build() {
-            return new ExecActionArgs(command);
+        }
+
+        public ExecActionArgs build() {
+            return $;
         }
     }
+
 }

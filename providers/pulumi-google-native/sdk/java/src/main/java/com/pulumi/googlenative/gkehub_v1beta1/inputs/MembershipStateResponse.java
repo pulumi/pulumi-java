@@ -21,7 +21,7 @@ public final class MembershipStateResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,7 +32,7 @@ public final class MembershipStateResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -43,64 +43,59 @@ public final class MembershipStateResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public MembershipStateResponse(
-        String code,
-        String description,
-        String updateTime) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private MembershipStateResponse() {}
 
-    private MembershipStateResponse() {
-        this.code = null;
-        this.description = null;
-        this.updateTime = null;
+    private MembershipStateResponse(MembershipStateResponse $) {
+        this.code = $.code;
+        this.description = $.description;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String description;
-        private String updateTime;
+        private MembershipStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipStateResponse();
         }
 
         public Builder(MembershipStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.description = defaults.description;
-    	      this.updateTime = defaults.updateTime;
+            $ = new MembershipStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public MembershipStateResponse build() {
-            return new MembershipStateResponse(code, description, updateTime);
+        }
+
+        public MembershipStateResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

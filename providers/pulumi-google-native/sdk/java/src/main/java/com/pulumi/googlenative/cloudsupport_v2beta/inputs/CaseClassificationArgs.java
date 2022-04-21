@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudsupport_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CaseClassificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CaseClassificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public CaseClassificationArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> id) {
-        this.displayName = displayName;
-        this.id = id;
-    }
+    private CaseClassificationArgs() {}
 
-    private CaseClassificationArgs() {
-        this.displayName = Codegen.empty();
-        this.id = Codegen.empty();
+    private CaseClassificationArgs(CaseClassificationArgs $) {
+        this.displayName = $.displayName;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaseClassificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> id;
+        private CaseClassificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaseClassificationArgs();
         }
 
         public Builder(CaseClassificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.id = defaults.id;
+            $ = new CaseClassificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public CaseClassificationArgs build() {
-            return new CaseClassificationArgs(displayName, id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public CaseClassificationArgs build() {
+            return $;
         }
     }
+
 }

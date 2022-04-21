@@ -6,9 +6,9 @@ package com.pulumi.aws.mediapackage.inputs;
 import com.pulumi.aws.mediapackage.inputs.ChannelHlsIngestIngestEndpointGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ChannelHlsIngestGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ingestEndpoints")
-      private final @Nullable Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints;
+    private @Nullable Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints;
 
-    public Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints() {
-        return this.ingestEndpoints == null ? Codegen.empty() : this.ingestEndpoints;
+    public Optional<Output<List<ChannelHlsIngestIngestEndpointGetArgs>>> ingestEndpoints() {
+        return Optional.ofNullable(this.ingestEndpoints);
     }
 
-    public ChannelHlsIngestGetArgs(@Nullable Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints) {
-        this.ingestEndpoints = ingestEndpoints;
-    }
+    private ChannelHlsIngestGetArgs() {}
 
-    private ChannelHlsIngestGetArgs() {
-        this.ingestEndpoints = Codegen.empty();
+    private ChannelHlsIngestGetArgs(ChannelHlsIngestGetArgs $) {
+        this.ingestEndpoints = $.ingestEndpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelHlsIngestGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints;
+        private ChannelHlsIngestGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelHlsIngestGetArgs();
         }
 
         public Builder(ChannelHlsIngestGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingestEndpoints = defaults.ingestEndpoints;
+            $ = new ChannelHlsIngestGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ingestEndpoints(@Nullable Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints) {
-            this.ingestEndpoints = ingestEndpoints;
+            $.ingestEndpoints = ingestEndpoints;
             return this;
         }
-        public Builder ingestEndpoints(@Nullable List<ChannelHlsIngestIngestEndpointGetArgs> ingestEndpoints) {
-            this.ingestEndpoints = Codegen.ofNullable(ingestEndpoints);
-            return this;
+
+        public Builder ingestEndpoints(List<ChannelHlsIngestIngestEndpointGetArgs> ingestEndpoints) {
+            return ingestEndpoints(Output.of(ingestEndpoints));
         }
+
         public Builder ingestEndpoints(ChannelHlsIngestIngestEndpointGetArgs... ingestEndpoints) {
             return ingestEndpoints(List.of(ingestEndpoints));
-        }        public ChannelHlsIngestGetArgs build() {
-            return new ChannelHlsIngestGetArgs(ingestEndpoints);
+        }
+
+        public ChannelHlsIngestGetArgs build() {
+            return $;
         }
     }
+
 }

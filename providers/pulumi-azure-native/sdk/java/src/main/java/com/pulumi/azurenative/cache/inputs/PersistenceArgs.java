@@ -8,10 +8,10 @@ import com.pulumi.azurenative.cache.enums.RdbFrequency;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aofEnabled")
-      private final @Nullable Output<Boolean> aofEnabled;
+    private @Nullable Output<Boolean> aofEnabled;
 
-    public Output<Boolean> aofEnabled() {
-        return this.aofEnabled == null ? Codegen.empty() : this.aofEnabled;
+    public Optional<Output<Boolean>> aofEnabled() {
+        return Optional.ofNullable(this.aofEnabled);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aofFrequency")
-      private final @Nullable Output<Either<String,AofFrequency>> aofFrequency;
+    private @Nullable Output<Either<String,AofFrequency>> aofFrequency;
 
-    public Output<Either<String,AofFrequency>> aofFrequency() {
-        return this.aofFrequency == null ? Codegen.empty() : this.aofFrequency;
+    public Optional<Output<Either<String,AofFrequency>>> aofFrequency() {
+        return Optional.ofNullable(this.aofFrequency);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rdbEnabled")
-      private final @Nullable Output<Boolean> rdbEnabled;
+    private @Nullable Output<Boolean> rdbEnabled;
 
-    public Output<Boolean> rdbEnabled() {
-        return this.rdbEnabled == null ? Codegen.empty() : this.rdbEnabled;
+    public Optional<Output<Boolean>> rdbEnabled() {
+        return Optional.ofNullable(this.rdbEnabled);
     }
 
     /**
@@ -61,89 +61,78 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rdbFrequency")
-      private final @Nullable Output<Either<String,RdbFrequency>> rdbFrequency;
+    private @Nullable Output<Either<String,RdbFrequency>> rdbFrequency;
 
-    public Output<Either<String,RdbFrequency>> rdbFrequency() {
-        return this.rdbFrequency == null ? Codegen.empty() : this.rdbFrequency;
+    public Optional<Output<Either<String,RdbFrequency>>> rdbFrequency() {
+        return Optional.ofNullable(this.rdbFrequency);
     }
 
-    public PersistenceArgs(
-        @Nullable Output<Boolean> aofEnabled,
-        @Nullable Output<Either<String,AofFrequency>> aofFrequency,
-        @Nullable Output<Boolean> rdbEnabled,
-        @Nullable Output<Either<String,RdbFrequency>> rdbFrequency) {
-        this.aofEnabled = aofEnabled;
-        this.aofFrequency = aofFrequency;
-        this.rdbEnabled = rdbEnabled;
-        this.rdbFrequency = rdbFrequency;
-    }
+    private PersistenceArgs() {}
 
-    private PersistenceArgs() {
-        this.aofEnabled = Codegen.empty();
-        this.aofFrequency = Codegen.empty();
-        this.rdbEnabled = Codegen.empty();
-        this.rdbFrequency = Codegen.empty();
+    private PersistenceArgs(PersistenceArgs $) {
+        this.aofEnabled = $.aofEnabled;
+        this.aofFrequency = $.aofFrequency;
+        this.rdbEnabled = $.rdbEnabled;
+        this.rdbFrequency = $.rdbFrequency;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> aofEnabled;
-        private @Nullable Output<Either<String,AofFrequency>> aofFrequency;
-        private @Nullable Output<Boolean> rdbEnabled;
-        private @Nullable Output<Either<String,RdbFrequency>> rdbFrequency;
+        private PersistenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistenceArgs();
         }
 
         public Builder(PersistenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aofEnabled = defaults.aofEnabled;
-    	      this.aofFrequency = defaults.aofFrequency;
-    	      this.rdbEnabled = defaults.rdbEnabled;
-    	      this.rdbFrequency = defaults.rdbFrequency;
+            $ = new PersistenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aofEnabled(@Nullable Output<Boolean> aofEnabled) {
-            this.aofEnabled = aofEnabled;
+            $.aofEnabled = aofEnabled;
             return this;
         }
-        public Builder aofEnabled(@Nullable Boolean aofEnabled) {
-            this.aofEnabled = Codegen.ofNullable(aofEnabled);
-            return this;
+
+        public Builder aofEnabled(Boolean aofEnabled) {
+            return aofEnabled(Output.of(aofEnabled));
         }
+
         public Builder aofFrequency(@Nullable Output<Either<String,AofFrequency>> aofFrequency) {
-            this.aofFrequency = aofFrequency;
+            $.aofFrequency = aofFrequency;
             return this;
         }
-        public Builder aofFrequency(@Nullable Either<String,AofFrequency> aofFrequency) {
-            this.aofFrequency = Codegen.ofNullable(aofFrequency);
-            return this;
+
+        public Builder aofFrequency(Either<String,AofFrequency> aofFrequency) {
+            return aofFrequency(Output.of(aofFrequency));
         }
+
         public Builder rdbEnabled(@Nullable Output<Boolean> rdbEnabled) {
-            this.rdbEnabled = rdbEnabled;
+            $.rdbEnabled = rdbEnabled;
             return this;
         }
-        public Builder rdbEnabled(@Nullable Boolean rdbEnabled) {
-            this.rdbEnabled = Codegen.ofNullable(rdbEnabled);
-            return this;
+
+        public Builder rdbEnabled(Boolean rdbEnabled) {
+            return rdbEnabled(Output.of(rdbEnabled));
         }
+
         public Builder rdbFrequency(@Nullable Output<Either<String,RdbFrequency>> rdbFrequency) {
-            this.rdbFrequency = rdbFrequency;
+            $.rdbFrequency = rdbFrequency;
             return this;
         }
-        public Builder rdbFrequency(@Nullable Either<String,RdbFrequency> rdbFrequency) {
-            this.rdbFrequency = Codegen.ofNullable(rdbFrequency);
-            return this;
-        }        public PersistenceArgs build() {
-            return new PersistenceArgs(aofEnabled, aofFrequency, rdbEnabled, rdbFrequency);
+
+        public Builder rdbFrequency(Either<String,RdbFrequency> rdbFrequency) {
+            return rdbFrequency(Output.of(rdbFrequency));
+        }
+
+        public PersistenceArgs build() {
+            return $;
         }
     }
+
 }

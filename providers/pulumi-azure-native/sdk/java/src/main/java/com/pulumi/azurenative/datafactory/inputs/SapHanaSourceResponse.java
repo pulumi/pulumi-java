@@ -26,10 +26,10 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Object additionalColumns;
+    private @Nullable Object additionalColumns;
 
     public Optional<Object> additionalColumns() {
-        return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="packetSize")
-      private final @Nullable Object packetSize;
+    private @Nullable Object packetSize;
 
     public Optional<Object> packetSize() {
-        return this.packetSize == null ? Optional.empty() : Optional.ofNullable(this.packetSize);
+        return Optional.ofNullable(this.packetSize);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="partitionOption")
-      private final @Nullable Object partitionOption;
+    private @Nullable Object partitionOption;
 
     public Optional<Object> partitionOption() {
-        return this.partitionOption == null ? Optional.empty() : Optional.ofNullable(this.partitionOption);
+        return Optional.ofNullable(this.partitionOption);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="partitionSettings")
-      private final @Nullable SapHanaPartitionSettingsResponse partitionSettings;
+    private @Nullable SapHanaPartitionSettingsResponse partitionSettings;
 
     public Optional<SapHanaPartitionSettingsResponse> partitionSettings() {
-        return this.partitionSettings == null ? Optional.empty() : Optional.ofNullable(this.partitionSettings);
+        return Optional.ofNullable(this.partitionSettings);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="query")
-      private final @Nullable Object query;
+    private @Nullable Object query;
 
     public Optional<Object> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="queryTimeout")
-      private final @Nullable Object queryTimeout;
+    private @Nullable Object queryTimeout;
 
     public Optional<Object> queryTimeout() {
-        return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
+        return Optional.ofNullable(this.queryTimeout);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -137,136 +137,105 @@ public final class SapHanaSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SapHanaSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object packetSize,
-        @Nullable Object partitionOption,
-        @Nullable SapHanaPartitionSettingsResponse partitionSettings,
-        @Nullable Object query,
-        @Nullable Object queryTimeout,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
-        this.additionalColumns = additionalColumns;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.packetSize = packetSize;
-        this.partitionOption = partitionOption;
-        this.partitionSettings = partitionSettings;
-        this.query = query;
-        this.queryTimeout = queryTimeout;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private SapHanaSourceResponse() {}
 
-    private SapHanaSourceResponse() {
-        this.additionalColumns = null;
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.packetSize = null;
-        this.partitionOption = null;
-        this.partitionSettings = null;
-        this.query = null;
-        this.queryTimeout = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.type = null;
+    private SapHanaSourceResponse(SapHanaSourceResponse $) {
+        this.additionalColumns = $.additionalColumns;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.packetSize = $.packetSize;
+        this.partitionOption = $.partitionOption;
+        this.partitionSettings = $.partitionSettings;
+        this.query = $.query;
+        this.queryTimeout = $.queryTimeout;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapHanaSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object additionalColumns;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object packetSize;
-        private @Nullable Object partitionOption;
-        private @Nullable SapHanaPartitionSettingsResponse partitionSettings;
-        private @Nullable Object query;
-        private @Nullable Object queryTimeout;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private String type;
+        private SapHanaSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapHanaSourceResponse();
         }
 
         public Builder(SapHanaSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.packetSize = defaults.packetSize;
-    	      this.partitionOption = defaults.partitionOption;
-    	      this.partitionSettings = defaults.partitionSettings;
-    	      this.query = defaults.query;
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new SapHanaSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder packetSize(@Nullable Object packetSize) {
-            this.packetSize = packetSize;
+            $.packetSize = packetSize;
             return this;
         }
+
         public Builder partitionOption(@Nullable Object partitionOption) {
-            this.partitionOption = partitionOption;
+            $.partitionOption = partitionOption;
             return this;
         }
+
         public Builder partitionSettings(@Nullable SapHanaPartitionSettingsResponse partitionSettings) {
-            this.partitionSettings = partitionSettings;
+            $.partitionSettings = partitionSettings;
             return this;
         }
+
         public Builder query(@Nullable Object query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
+
         public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = queryTimeout;
+            $.queryTimeout = queryTimeout;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SapHanaSourceResponse build() {
-            return new SapHanaSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, packetSize, partitionOption, partitionSettings, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
+        }
+
+        public SapHanaSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

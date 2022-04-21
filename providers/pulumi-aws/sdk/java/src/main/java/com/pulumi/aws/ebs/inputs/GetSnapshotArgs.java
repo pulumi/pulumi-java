@@ -25,10 +25,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetSnapshotFilter> filters;
+    private @Nullable List<GetSnapshotFilter> filters;
 
-    public List<GetSnapshotFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetSnapshotFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-      private final @Nullable Boolean mostRecent;
+    private @Nullable Boolean mostRecent;
 
     public Optional<Boolean> mostRecent() {
-        return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owners")
-      private final @Nullable List<String> owners;
+    private @Nullable List<String> owners;
 
-    public List<String> owners() {
-        return this.owners == null ? List.of() : this.owners;
+    public Optional<List<String>> owners() {
+        return Optional.ofNullable(this.owners);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restorableByUserIds")
-      private final @Nullable List<String> restorableByUserIds;
+    private @Nullable List<String> restorableByUserIds;
 
-    public List<String> restorableByUserIds() {
-        return this.restorableByUserIds == null ? List.of() : this.restorableByUserIds;
+    public Optional<List<String>> restorableByUserIds() {
+        return Optional.ofNullable(this.restorableByUserIds);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="snapshotIds")
-      private final @Nullable List<String> snapshotIds;
+    private @Nullable List<String> snapshotIds;
 
-    public List<String> snapshotIds() {
-        return this.snapshotIds == null ? List.of() : this.snapshotIds;
+    public Optional<List<String>> snapshotIds() {
+        return Optional.ofNullable(this.snapshotIds);
     }
 
     /**
@@ -80,103 +80,90 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetSnapshotArgs(
-        @Nullable List<GetSnapshotFilter> filters,
-        @Nullable Boolean mostRecent,
-        @Nullable List<String> owners,
-        @Nullable List<String> restorableByUserIds,
-        @Nullable List<String> snapshotIds,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.mostRecent = mostRecent;
-        this.owners = owners;
-        this.restorableByUserIds = restorableByUserIds;
-        this.snapshotIds = snapshotIds;
-        this.tags = tags;
-    }
+    private GetSnapshotArgs() {}
 
-    private GetSnapshotArgs() {
-        this.filters = List.of();
-        this.mostRecent = null;
-        this.owners = List.of();
-        this.restorableByUserIds = List.of();
-        this.snapshotIds = List.of();
-        this.tags = Map.of();
+    private GetSnapshotArgs(GetSnapshotArgs $) {
+        this.filters = $.filters;
+        this.mostRecent = $.mostRecent;
+        this.owners = $.owners;
+        this.restorableByUserIds = $.restorableByUserIds;
+        this.snapshotIds = $.snapshotIds;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetSnapshotFilter> filters;
-        private @Nullable Boolean mostRecent;
-        private @Nullable List<String> owners;
-        private @Nullable List<String> restorableByUserIds;
-        private @Nullable List<String> snapshotIds;
-        private @Nullable Map<String,String> tags;
+        private GetSnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSnapshotArgs();
         }
 
         public Builder(GetSnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.mostRecent = defaults.mostRecent;
-    	      this.owners = defaults.owners;
-    	      this.restorableByUserIds = defaults.restorableByUserIds;
-    	      this.snapshotIds = defaults.snapshotIds;
-    	      this.tags = defaults.tags;
+            $ = new GetSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetSnapshotFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetSnapshotFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            this.mostRecent = mostRecent;
+            $.mostRecent = mostRecent;
             return this;
         }
+
         public Builder owners(@Nullable List<String> owners) {
-            this.owners = owners;
+            $.owners = owners;
             return this;
         }
+
         public Builder owners(String... owners) {
             return owners(List.of(owners));
         }
+
         public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
-            this.restorableByUserIds = restorableByUserIds;
+            $.restorableByUserIds = restorableByUserIds;
             return this;
         }
+
         public Builder restorableByUserIds(String... restorableByUserIds) {
             return restorableByUserIds(List.of(restorableByUserIds));
         }
+
         public Builder snapshotIds(@Nullable List<String> snapshotIds) {
-            this.snapshotIds = snapshotIds;
+            $.snapshotIds = snapshotIds;
             return this;
         }
+
         public Builder snapshotIds(String... snapshotIds) {
             return snapshotIds(List.of(snapshotIds));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetSnapshotArgs build() {
-            return new GetSnapshotArgs(filters, mostRecent, owners, restorableByUserIds, snapshotIds, tags);
+        }
+
+        public GetSnapshotArgs build() {
+            return $;
         }
     }
+
 }

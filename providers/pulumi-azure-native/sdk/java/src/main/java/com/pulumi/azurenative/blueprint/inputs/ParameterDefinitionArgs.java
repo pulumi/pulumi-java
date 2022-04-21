@@ -7,11 +7,11 @@ import com.pulumi.azurenative.blueprint.enums.TemplateParameterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="allowedValues")
-      private final @Nullable Output<List<Object>> allowedValues;
+    private @Nullable Output<List<Object>> allowedValues;
 
-    public Output<List<Object>> allowedValues() {
-        return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
+    public Optional<Output<List<Object>>> allowedValues() {
+        return Optional.ofNullable(this.allowedValues);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<Object> defaultValue;
+    private @Nullable Output<Object> defaultValue;
 
-    public Output<Object> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<Object>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="strongType")
-      private final @Nullable Output<String> strongType;
+    private @Nullable Output<String> strongType;
 
-    public Output<String> strongType() {
-        return this.strongType == null ? Codegen.empty() : this.strongType;
+    public Optional<Output<String>> strongType() {
+        return Optional.ofNullable(this.strongType);
     }
 
     /**
@@ -83,118 +83,103 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,TemplateParameterType>> type;
+    private Output<Either<String,TemplateParameterType>> type;
 
     public Output<Either<String,TemplateParameterType>> type() {
         return this.type;
     }
 
-    public ParameterDefinitionArgs(
-        @Nullable Output<List<Object>> allowedValues,
-        @Nullable Output<Object> defaultValue,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> strongType,
-        Output<Either<String,TemplateParameterType>> type) {
-        this.allowedValues = allowedValues;
-        this.defaultValue = defaultValue;
-        this.description = description;
-        this.displayName = displayName;
-        this.strongType = strongType;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ParameterDefinitionArgs() {}
 
-    private ParameterDefinitionArgs() {
-        this.allowedValues = Codegen.empty();
-        this.defaultValue = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.strongType = Codegen.empty();
-        this.type = Codegen.empty();
+    private ParameterDefinitionArgs(ParameterDefinitionArgs $) {
+        this.allowedValues = $.allowedValues;
+        this.defaultValue = $.defaultValue;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.strongType = $.strongType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> allowedValues;
-        private @Nullable Output<Object> defaultValue;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> strongType;
-        private Output<Either<String,TemplateParameterType>> type;
+        private ParameterDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterDefinitionArgs();
         }
 
         public Builder(ParameterDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedValues = defaults.allowedValues;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.strongType = defaults.strongType;
-    	      this.type = defaults.type;
+            $ = new ParameterDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedValues(@Nullable Output<List<Object>> allowedValues) {
-            this.allowedValues = allowedValues;
+            $.allowedValues = allowedValues;
             return this;
         }
-        public Builder allowedValues(@Nullable List<Object> allowedValues) {
-            this.allowedValues = Codegen.ofNullable(allowedValues);
-            return this;
+
+        public Builder allowedValues(List<Object> allowedValues) {
+            return allowedValues(Output.of(allowedValues));
         }
+
         public Builder allowedValues(Object... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
+
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(Object defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder strongType(@Nullable Output<String> strongType) {
-            this.strongType = strongType;
+            $.strongType = strongType;
             return this;
         }
-        public Builder strongType(@Nullable String strongType) {
-            this.strongType = Codegen.ofNullable(strongType);
-            return this;
+
+        public Builder strongType(String strongType) {
+            return strongType(Output.of(strongType));
         }
+
         public Builder type(Output<Either<String,TemplateParameterType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,TemplateParameterType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ParameterDefinitionArgs build() {
-            return new ParameterDefinitionArgs(allowedValues, defaultValue, description, displayName, strongType, type);
+            return type(Output.of(type));
+        }
+
+        public ParameterDefinitionArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

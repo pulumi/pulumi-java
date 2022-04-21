@@ -5,9 +5,9 @@ package com.pulumi.awsnative.networkmanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class CustomerGatewayAssociationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="customerGatewayArn", required=true)
-      private final Output<String> customerGatewayArn;
+    private Output<String> customerGatewayArn;
 
     public Output<String> customerGatewayArn() {
         return this.customerGatewayArn;
@@ -31,7 +31,7 @@ public final class CustomerGatewayAssociationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="deviceId", required=true)
-      private final Output<String> deviceId;
+    private Output<String> deviceId;
 
     public Output<String> deviceId() {
         return this.deviceId;
@@ -42,7 +42,7 @@ public final class CustomerGatewayAssociationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="globalNetworkId", required=true)
-      private final Output<String> globalNetworkId;
+    private Output<String> globalNetworkId;
 
     public Output<String> globalNetworkId() {
         return this.globalNetworkId;
@@ -53,89 +53,81 @@ public final class CustomerGatewayAssociationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="linkId")
-      private final @Nullable Output<String> linkId;
+    private @Nullable Output<String> linkId;
 
-    public Output<String> linkId() {
-        return this.linkId == null ? Codegen.empty() : this.linkId;
+    public Optional<Output<String>> linkId() {
+        return Optional.ofNullable(this.linkId);
     }
 
-    public CustomerGatewayAssociationArgs(
-        Output<String> customerGatewayArn,
-        Output<String> deviceId,
-        Output<String> globalNetworkId,
-        @Nullable Output<String> linkId) {
-        this.customerGatewayArn = Objects.requireNonNull(customerGatewayArn, "expected parameter 'customerGatewayArn' to be non-null");
-        this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
-        this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
-        this.linkId = linkId;
-    }
+    private CustomerGatewayAssociationArgs() {}
 
-    private CustomerGatewayAssociationArgs() {
-        this.customerGatewayArn = Codegen.empty();
-        this.deviceId = Codegen.empty();
-        this.globalNetworkId = Codegen.empty();
-        this.linkId = Codegen.empty();
+    private CustomerGatewayAssociationArgs(CustomerGatewayAssociationArgs $) {
+        this.customerGatewayArn = $.customerGatewayArn;
+        this.deviceId = $.deviceId;
+        this.globalNetworkId = $.globalNetworkId;
+        this.linkId = $.linkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerGatewayAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> customerGatewayArn;
-        private Output<String> deviceId;
-        private Output<String> globalNetworkId;
-        private @Nullable Output<String> linkId;
+        private CustomerGatewayAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerGatewayAssociationArgs();
         }
 
         public Builder(CustomerGatewayAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerGatewayArn = defaults.customerGatewayArn;
-    	      this.deviceId = defaults.deviceId;
-    	      this.globalNetworkId = defaults.globalNetworkId;
-    	      this.linkId = defaults.linkId;
+            $ = new CustomerGatewayAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerGatewayArn(Output<String> customerGatewayArn) {
-            this.customerGatewayArn = Objects.requireNonNull(customerGatewayArn);
+            $.customerGatewayArn = customerGatewayArn;
             return this;
         }
+
         public Builder customerGatewayArn(String customerGatewayArn) {
-            this.customerGatewayArn = Output.of(Objects.requireNonNull(customerGatewayArn));
-            return this;
+            return customerGatewayArn(Output.of(customerGatewayArn));
         }
+
         public Builder deviceId(Output<String> deviceId) {
-            this.deviceId = Objects.requireNonNull(deviceId);
+            $.deviceId = deviceId;
             return this;
         }
+
         public Builder deviceId(String deviceId) {
-            this.deviceId = Output.of(Objects.requireNonNull(deviceId));
-            return this;
+            return deviceId(Output.of(deviceId));
         }
+
         public Builder globalNetworkId(Output<String> globalNetworkId) {
-            this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
+
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
-            return this;
+            return globalNetworkId(Output.of(globalNetworkId));
         }
+
         public Builder linkId(@Nullable Output<String> linkId) {
-            this.linkId = linkId;
+            $.linkId = linkId;
             return this;
         }
-        public Builder linkId(@Nullable String linkId) {
-            this.linkId = Codegen.ofNullable(linkId);
-            return this;
-        }        public CustomerGatewayAssociationArgs build() {
-            return new CustomerGatewayAssociationArgs(customerGatewayArn, deviceId, globalNetworkId, linkId);
+
+        public Builder linkId(String linkId) {
+            return linkId(Output.of(linkId));
+        }
+
+        public CustomerGatewayAssociationArgs build() {
+            $.customerGatewayArn = Objects.requireNonNull($.customerGatewayArn, "expected parameter 'customerGatewayArn' to be non-null");
+            $.deviceId = Objects.requireNonNull($.deviceId, "expected parameter 'deviceId' to be non-null");
+            $.globalNetworkId = Objects.requireNonNull($.globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class ListKustoPoolFollowerDatabasesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="kustoPoolName", required=true)
-      private final String kustoPoolName;
+    private String kustoPoolName;
 
     public String kustoPoolName() {
         return this.kustoPoolName;
@@ -28,7 +28,7 @@ public final class ListKustoPoolFollowerDatabasesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListKustoPoolFollowerDatabasesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public ListKustoPoolFollowerDatabasesArgs(
-        String kustoPoolName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.kustoPoolName = Objects.requireNonNull(kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private ListKustoPoolFollowerDatabasesArgs() {}
 
-    private ListKustoPoolFollowerDatabasesArgs() {
-        this.kustoPoolName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private ListKustoPoolFollowerDatabasesArgs(ListKustoPoolFollowerDatabasesArgs $) {
+        this.kustoPoolName = $.kustoPoolName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListKustoPoolFollowerDatabasesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kustoPoolName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private ListKustoPoolFollowerDatabasesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListKustoPoolFollowerDatabasesArgs();
         }
 
         public Builder(ListKustoPoolFollowerDatabasesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kustoPoolName = defaults.kustoPoolName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new ListKustoPoolFollowerDatabasesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kustoPoolName(String kustoPoolName) {
-            this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
+            $.kustoPoolName = kustoPoolName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public ListKustoPoolFollowerDatabasesArgs build() {
-            return new ListKustoPoolFollowerDatabasesArgs(kustoPoolName, resourceGroupName, workspaceName);
+        }
+
+        public ListKustoPoolFollowerDatabasesArgs build() {
+            $.kustoPoolName = Objects.requireNonNull($.kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

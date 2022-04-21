@@ -17,7 +17,7 @@ public final class GetShareSubscriptionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetShareSubscriptionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetShareSubscriptionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-      private final String shareSubscriptionName;
+    private String shareSubscriptionName;
 
     public String shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
-    public GetShareSubscriptionArgs(
-        String accountName,
-        String resourceGroupName,
-        String shareSubscriptionName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
-    }
+    private GetShareSubscriptionArgs() {}
 
-    private GetShareSubscriptionArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.shareSubscriptionName = null;
+    private GetShareSubscriptionArgs(GetShareSubscriptionArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetShareSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String shareSubscriptionName;
+        private GetShareSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetShareSubscriptionArgs();
         }
 
         public Builder(GetShareSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
+            $ = new GetShareSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
-        }        public GetShareSubscriptionArgs build() {
-            return new GetShareSubscriptionArgs(accountName, resourceGroupName, shareSubscriptionName);
+        }
+
+        public GetShareSubscriptionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareSubscriptionName = Objects.requireNonNull($.shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
+            return $;
         }
     }
+
 }

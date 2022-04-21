@@ -15,62 +15,58 @@ public final class GetHistoryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHistoryArgs Empty = new GetHistoryArgs();
 
     @Import(name="historyId", required=true)
-      private final String historyId;
+    private String historyId;
 
     public String historyId() {
         return this.historyId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetHistoryArgs(
-        String historyId,
-        @Nullable String project) {
-        this.historyId = Objects.requireNonNull(historyId, "expected parameter 'historyId' to be non-null");
-        this.project = project;
-    }
+    private GetHistoryArgs() {}
 
-    private GetHistoryArgs() {
-        this.historyId = null;
-        this.project = null;
+    private GetHistoryArgs(GetHistoryArgs $) {
+        this.historyId = $.historyId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHistoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String historyId;
-        private @Nullable String project;
+        private GetHistoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHistoryArgs();
         }
 
         public Builder(GetHistoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.historyId = defaults.historyId;
-    	      this.project = defaults.project;
+            $ = new GetHistoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder historyId(String historyId) {
-            this.historyId = Objects.requireNonNull(historyId);
+            $.historyId = historyId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetHistoryArgs build() {
-            return new GetHistoryArgs(historyId, project);
+        }
+
+        public GetHistoryArgs build() {
+            $.historyId = Objects.requireNonNull($.historyId, "expected parameter 'historyId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -32,55 +32,52 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public PackageResponse(
-        String location,
-        String name) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PackageResponse() {}
 
-    private PackageResponse() {
-        this.location = null;
-        this.name = null;
+    private PackageResponse(PackageResponse $) {
+        this.location = $.location;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String name;
+        private PackageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageResponse();
         }
 
         public Builder(PackageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
+            $ = new PackageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public PackageResponse build() {
-            return new PackageResponse(location, name);
+        }
+
+        public PackageResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

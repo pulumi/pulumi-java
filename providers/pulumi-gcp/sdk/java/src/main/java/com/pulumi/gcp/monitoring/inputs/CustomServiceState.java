@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.CustomServiceTelemetryGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CustomServiceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CustomServiceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CustomServiceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CustomServiceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serviceId")
-      private final @Nullable Output<String> serviceId;
+    private @Nullable Output<String> serviceId;
 
-    public Output<String> serviceId() {
-        return this.serviceId == null ? Codegen.empty() : this.serviceId;
+    public Optional<Output<String>> serviceId() {
+        return Optional.ofNullable(this.serviceId);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class CustomServiceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="telemetry")
-      private final @Nullable Output<CustomServiceTelemetryGetArgs> telemetry;
+    private @Nullable Output<CustomServiceTelemetryGetArgs> telemetry;
 
-    public Output<CustomServiceTelemetryGetArgs> telemetry() {
-        return this.telemetry == null ? Codegen.empty() : this.telemetry;
+    public Optional<Output<CustomServiceTelemetryGetArgs>> telemetry() {
+        return Optional.ofNullable(this.telemetry);
     }
 
-    public CustomServiceState(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> serviceId,
-        @Nullable Output<CustomServiceTelemetryGetArgs> telemetry) {
-        this.displayName = displayName;
-        this.name = name;
-        this.project = project;
-        this.serviceId = serviceId;
-        this.telemetry = telemetry;
-    }
+    private CustomServiceState() {}
 
-    private CustomServiceState() {
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serviceId = Codegen.empty();
-        this.telemetry = Codegen.empty();
+    private CustomServiceState(CustomServiceState $) {
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.project = $.project;
+        this.serviceId = $.serviceId;
+        this.telemetry = $.telemetry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomServiceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> serviceId;
-        private @Nullable Output<CustomServiceTelemetryGetArgs> telemetry;
+        private CustomServiceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomServiceState();
         }
 
         public Builder(CustomServiceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.serviceId = defaults.serviceId;
-    	      this.telemetry = defaults.telemetry;
+            $ = new CustomServiceState(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceId(@Nullable Output<String> serviceId) {
-            this.serviceId = serviceId;
+            $.serviceId = serviceId;
             return this;
         }
-        public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Codegen.ofNullable(serviceId);
-            return this;
+
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
         }
+
         public Builder telemetry(@Nullable Output<CustomServiceTelemetryGetArgs> telemetry) {
-            this.telemetry = telemetry;
+            $.telemetry = telemetry;
             return this;
         }
-        public Builder telemetry(@Nullable CustomServiceTelemetryGetArgs telemetry) {
-            this.telemetry = Codegen.ofNullable(telemetry);
-            return this;
-        }        public CustomServiceState build() {
-            return new CustomServiceState(displayName, name, project, serviceId, telemetry);
+
+        public Builder telemetry(CustomServiceTelemetryGetArgs telemetry) {
+            return telemetry(Output.of(telemetry));
+        }
+
+        public CustomServiceState build() {
+            return $;
         }
     }
+
 }

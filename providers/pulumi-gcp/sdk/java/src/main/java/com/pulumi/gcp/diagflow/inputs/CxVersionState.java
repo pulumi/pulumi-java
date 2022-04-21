@@ -5,11 +5,11 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxVersionNluSettingGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nluSettings")
-      private final @Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings;
+    private @Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings;
 
-    public Output<List<CxVersionNluSettingGetArgs>> nluSettings() {
-        return this.nluSettings == null ? Codegen.empty() : this.nluSettings;
+    public Optional<Output<List<CxVersionNluSettingGetArgs>>> nluSettings() {
+        return Optional.ofNullable(this.nluSettings);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -92,131 +92,112 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public CxVersionState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> state) {
-        this.createTime = createTime;
-        this.description = description;
-        this.displayName = displayName;
-        this.name = name;
-        this.nluSettings = nluSettings;
-        this.parent = parent;
-        this.state = state;
-    }
+    private CxVersionState() {}
 
-    private CxVersionState() {
-        this.createTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nluSettings = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.state = Codegen.empty();
+    private CxVersionState(CxVersionState $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.nluSettings = $.nluSettings;
+        this.parent = $.parent;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxVersionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> state;
+        private CxVersionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxVersionState();
         }
 
         public Builder(CxVersionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.nluSettings = defaults.nluSettings;
-    	      this.parent = defaults.parent;
-    	      this.state = defaults.state;
+            $ = new CxVersionState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nluSettings(@Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings) {
-            this.nluSettings = nluSettings;
+            $.nluSettings = nluSettings;
             return this;
         }
-        public Builder nluSettings(@Nullable List<CxVersionNluSettingGetArgs> nluSettings) {
-            this.nluSettings = Codegen.ofNullable(nluSettings);
-            return this;
+
+        public Builder nluSettings(List<CxVersionNluSettingGetArgs> nluSettings) {
+            return nluSettings(Output.of(nluSettings));
         }
+
         public Builder nluSettings(CxVersionNluSettingGetArgs... nluSettings) {
             return nluSettings(List.of(nluSettings));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public CxVersionState build() {
-            return new CxVersionState(createTime, description, displayName, name, nluSettings, parent, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public CxVersionState build() {
+            return $;
         }
     }
+
 }

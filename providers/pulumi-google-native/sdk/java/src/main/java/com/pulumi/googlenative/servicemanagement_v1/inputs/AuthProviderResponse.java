@@ -23,7 +23,7 @@ public final class AuthProviderResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="audiences", required=true)
-      private final String audiences;
+    private String audiences;
 
     public String audiences() {
         return this.audiences;
@@ -34,7 +34,7 @@ public final class AuthProviderResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="authorizationUrl", required=true)
-      private final String authorizationUrl;
+    private String authorizationUrl;
 
     public String authorizationUrl() {
         return this.authorizationUrl;
@@ -45,7 +45,7 @@ public final class AuthProviderResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
@@ -56,7 +56,7 @@ public final class AuthProviderResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="jwksUri", required=true)
-      private final String jwksUri;
+    private String jwksUri;
 
     public String jwksUri() {
         return this.jwksUri;
@@ -67,85 +67,77 @@ public final class AuthProviderResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="jwtLocations", required=true)
-      private final List<JwtLocationResponse> jwtLocations;
+    private List<JwtLocationResponse> jwtLocations;
 
     public List<JwtLocationResponse> jwtLocations() {
         return this.jwtLocations;
     }
 
-    public AuthProviderResponse(
-        String audiences,
-        String authorizationUrl,
-        String issuer,
-        String jwksUri,
-        List<JwtLocationResponse> jwtLocations) {
-        this.audiences = Objects.requireNonNull(audiences, "expected parameter 'audiences' to be non-null");
-        this.authorizationUrl = Objects.requireNonNull(authorizationUrl, "expected parameter 'authorizationUrl' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.jwksUri = Objects.requireNonNull(jwksUri, "expected parameter 'jwksUri' to be non-null");
-        this.jwtLocations = Objects.requireNonNull(jwtLocations, "expected parameter 'jwtLocations' to be non-null");
-    }
+    private AuthProviderResponse() {}
 
-    private AuthProviderResponse() {
-        this.audiences = null;
-        this.authorizationUrl = null;
-        this.issuer = null;
-        this.jwksUri = null;
-        this.jwtLocations = List.of();
+    private AuthProviderResponse(AuthProviderResponse $) {
+        this.audiences = $.audiences;
+        this.authorizationUrl = $.authorizationUrl;
+        this.issuer = $.issuer;
+        this.jwksUri = $.jwksUri;
+        this.jwtLocations = $.jwtLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthProviderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String audiences;
-        private String authorizationUrl;
-        private String issuer;
-        private String jwksUri;
-        private List<JwtLocationResponse> jwtLocations;
+        private AuthProviderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthProviderResponse();
         }
 
         public Builder(AuthProviderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audiences = defaults.audiences;
-    	      this.authorizationUrl = defaults.authorizationUrl;
-    	      this.issuer = defaults.issuer;
-    	      this.jwksUri = defaults.jwksUri;
-    	      this.jwtLocations = defaults.jwtLocations;
+            $ = new AuthProviderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audiences(String audiences) {
-            this.audiences = Objects.requireNonNull(audiences);
+            $.audiences = audiences;
             return this;
         }
+
         public Builder authorizationUrl(String authorizationUrl) {
-            this.authorizationUrl = Objects.requireNonNull(authorizationUrl);
+            $.authorizationUrl = authorizationUrl;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder jwksUri(String jwksUri) {
-            this.jwksUri = Objects.requireNonNull(jwksUri);
+            $.jwksUri = jwksUri;
             return this;
         }
+
         public Builder jwtLocations(List<JwtLocationResponse> jwtLocations) {
-            this.jwtLocations = Objects.requireNonNull(jwtLocations);
+            $.jwtLocations = jwtLocations;
             return this;
         }
+
         public Builder jwtLocations(JwtLocationResponse... jwtLocations) {
             return jwtLocations(List.of(jwtLocations));
-        }        public AuthProviderResponse build() {
-            return new AuthProviderResponse(audiences, authorizationUrl, issuer, jwksUri, jwtLocations);
+        }
+
+        public AuthProviderResponse build() {
+            $.audiences = Objects.requireNonNull($.audiences, "expected parameter 'audiences' to be non-null");
+            $.authorizationUrl = Objects.requireNonNull($.authorizationUrl, "expected parameter 'authorizationUrl' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.jwksUri = Objects.requireNonNull($.jwksUri, "expected parameter 'jwksUri' to be non-null");
+            $.jwtLocations = Objects.requireNonNull($.jwtLocations, "expected parameter 'jwtLocations' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class RepoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="branches")
-      private final @Nullable List<String> branches;
+    private @Nullable List<String> branches;
 
-    public List<String> branches() {
-        return this.branches == null ? List.of() : this.branches;
+    public Optional<List<String>> branches() {
+        return Optional.ofNullable(this.branches);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RepoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fullName")
-      private final @Nullable String fullName;
+    private @Nullable String fullName;
 
     public Optional<String> fullName() {
-        return this.fullName == null ? Optional.empty() : Optional.ofNullable(this.fullName);
+        return Optional.ofNullable(this.fullName);
     }
 
     /**
@@ -46,67 +46,60 @@ public final class RepoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public RepoResponse(
-        @Nullable List<String> branches,
-        @Nullable String fullName,
-        @Nullable String url) {
-        this.branches = branches;
-        this.fullName = fullName;
-        this.url = url;
-    }
+    private RepoResponse() {}
 
-    private RepoResponse() {
-        this.branches = List.of();
-        this.fullName = null;
-        this.url = null;
+    private RepoResponse(RepoResponse $) {
+        this.branches = $.branches;
+        this.fullName = $.fullName;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> branches;
-        private @Nullable String fullName;
-        private @Nullable String url;
+        private RepoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepoResponse();
         }
 
         public Builder(RepoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branches = defaults.branches;
-    	      this.fullName = defaults.fullName;
-    	      this.url = defaults.url;
+            $ = new RepoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder branches(@Nullable List<String> branches) {
-            this.branches = branches;
+            $.branches = branches;
             return this;
         }
+
         public Builder branches(String... branches) {
             return branches(List.of(branches));
         }
+
         public Builder fullName(@Nullable String fullName) {
-            this.fullName = fullName;
+            $.fullName = fullName;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public RepoResponse build() {
-            return new RepoResponse(branches, fullName, url);
+        }
+
+        public RepoResponse build() {
+            return $;
         }
     }
+
 }

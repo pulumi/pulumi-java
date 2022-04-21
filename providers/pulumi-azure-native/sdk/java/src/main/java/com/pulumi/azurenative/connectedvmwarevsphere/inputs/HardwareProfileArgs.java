@@ -5,9 +5,9 @@ package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="memorySizeMB")
-      private final @Nullable Output<Integer> memorySizeMB;
+    private @Nullable Output<Integer> memorySizeMB;
 
-    public Output<Integer> memorySizeMB() {
-        return this.memorySizeMB == null ? Codegen.empty() : this.memorySizeMB;
+    public Optional<Output<Integer>> memorySizeMB() {
+        return Optional.ofNullable(this.memorySizeMB);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="numCPUs")
-      private final @Nullable Output<Integer> numCPUs;
+    private @Nullable Output<Integer> numCPUs;
 
-    public Output<Integer> numCPUs() {
-        return this.numCPUs == null ? Codegen.empty() : this.numCPUs;
+    public Optional<Output<Integer>> numCPUs() {
+        return Optional.ofNullable(this.numCPUs);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="numCoresPerSocket")
-      private final @Nullable Output<Integer> numCoresPerSocket;
+    private @Nullable Output<Integer> numCoresPerSocket;
 
-    public Output<Integer> numCoresPerSocket() {
-        return this.numCoresPerSocket == null ? Codegen.empty() : this.numCoresPerSocket;
+    public Optional<Output<Integer>> numCoresPerSocket() {
+        return Optional.ofNullable(this.numCoresPerSocket);
     }
 
-    public HardwareProfileArgs(
-        @Nullable Output<Integer> memorySizeMB,
-        @Nullable Output<Integer> numCPUs,
-        @Nullable Output<Integer> numCoresPerSocket) {
-        this.memorySizeMB = memorySizeMB;
-        this.numCPUs = numCPUs;
-        this.numCoresPerSocket = numCoresPerSocket;
-    }
+    private HardwareProfileArgs() {}
 
-    private HardwareProfileArgs() {
-        this.memorySizeMB = Codegen.empty();
-        this.numCPUs = Codegen.empty();
-        this.numCoresPerSocket = Codegen.empty();
+    private HardwareProfileArgs(HardwareProfileArgs $) {
+        this.memorySizeMB = $.memorySizeMB;
+        this.numCPUs = $.numCPUs;
+        this.numCoresPerSocket = $.numCoresPerSocket;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HardwareProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> memorySizeMB;
-        private @Nullable Output<Integer> numCPUs;
-        private @Nullable Output<Integer> numCoresPerSocket;
+        private HardwareProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HardwareProfileArgs();
         }
 
         public Builder(HardwareProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.memorySizeMB = defaults.memorySizeMB;
-    	      this.numCPUs = defaults.numCPUs;
-    	      this.numCoresPerSocket = defaults.numCoresPerSocket;
+            $ = new HardwareProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder memorySizeMB(@Nullable Output<Integer> memorySizeMB) {
-            this.memorySizeMB = memorySizeMB;
+            $.memorySizeMB = memorySizeMB;
             return this;
         }
-        public Builder memorySizeMB(@Nullable Integer memorySizeMB) {
-            this.memorySizeMB = Codegen.ofNullable(memorySizeMB);
-            return this;
+
+        public Builder memorySizeMB(Integer memorySizeMB) {
+            return memorySizeMB(Output.of(memorySizeMB));
         }
+
         public Builder numCPUs(@Nullable Output<Integer> numCPUs) {
-            this.numCPUs = numCPUs;
+            $.numCPUs = numCPUs;
             return this;
         }
-        public Builder numCPUs(@Nullable Integer numCPUs) {
-            this.numCPUs = Codegen.ofNullable(numCPUs);
-            return this;
+
+        public Builder numCPUs(Integer numCPUs) {
+            return numCPUs(Output.of(numCPUs));
         }
+
         public Builder numCoresPerSocket(@Nullable Output<Integer> numCoresPerSocket) {
-            this.numCoresPerSocket = numCoresPerSocket;
+            $.numCoresPerSocket = numCoresPerSocket;
             return this;
         }
-        public Builder numCoresPerSocket(@Nullable Integer numCoresPerSocket) {
-            this.numCoresPerSocket = Codegen.ofNullable(numCoresPerSocket);
-            return this;
-        }        public HardwareProfileArgs build() {
-            return new HardwareProfileArgs(memorySizeMB, numCPUs, numCoresPerSocket);
+
+        public Builder numCoresPerSocket(Integer numCoresPerSocket) {
+            return numCoresPerSocket(Output.of(numCoresPerSocket));
+        }
+
+        public HardwareProfileArgs build() {
+            return $;
         }
     }
+
 }

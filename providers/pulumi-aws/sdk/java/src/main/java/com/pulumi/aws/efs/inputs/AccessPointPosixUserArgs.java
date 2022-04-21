@@ -5,10 +5,10 @@ package com.pulumi.aws.efs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class AccessPointPosixUserArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="gid", required=true)
-      private final Output<Integer> gid;
+    private Output<Integer> gid;
 
     public Output<Integer> gid() {
         return this.gid;
@@ -32,10 +32,10 @@ public final class AccessPointPosixUserArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="secondaryGids")
-      private final @Nullable Output<List<Integer>> secondaryGids;
+    private @Nullable Output<List<Integer>> secondaryGids;
 
-    public Output<List<Integer>> secondaryGids() {
-        return this.secondaryGids == null ? Codegen.empty() : this.secondaryGids;
+    public Optional<Output<List<Integer>>> secondaryGids() {
+        return Optional.ofNullable(this.secondaryGids);
     }
 
     /**
@@ -43,79 +43,74 @@ public final class AccessPointPosixUserArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="uid", required=true)
-      private final Output<Integer> uid;
+    private Output<Integer> uid;
 
     public Output<Integer> uid() {
         return this.uid;
     }
 
-    public AccessPointPosixUserArgs(
-        Output<Integer> gid,
-        @Nullable Output<List<Integer>> secondaryGids,
-        Output<Integer> uid) {
-        this.gid = Objects.requireNonNull(gid, "expected parameter 'gid' to be non-null");
-        this.secondaryGids = secondaryGids;
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-    }
+    private AccessPointPosixUserArgs() {}
 
-    private AccessPointPosixUserArgs() {
-        this.gid = Codegen.empty();
-        this.secondaryGids = Codegen.empty();
-        this.uid = Codegen.empty();
+    private AccessPointPosixUserArgs(AccessPointPosixUserArgs $) {
+        this.gid = $.gid;
+        this.secondaryGids = $.secondaryGids;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointPosixUserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> gid;
-        private @Nullable Output<List<Integer>> secondaryGids;
-        private Output<Integer> uid;
+        private AccessPointPosixUserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointPosixUserArgs();
         }
 
         public Builder(AccessPointPosixUserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gid = defaults.gid;
-    	      this.secondaryGids = defaults.secondaryGids;
-    	      this.uid = defaults.uid;
+            $ = new AccessPointPosixUserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gid(Output<Integer> gid) {
-            this.gid = Objects.requireNonNull(gid);
+            $.gid = gid;
             return this;
         }
+
         public Builder gid(Integer gid) {
-            this.gid = Output.of(Objects.requireNonNull(gid));
-            return this;
+            return gid(Output.of(gid));
         }
+
         public Builder secondaryGids(@Nullable Output<List<Integer>> secondaryGids) {
-            this.secondaryGids = secondaryGids;
+            $.secondaryGids = secondaryGids;
             return this;
         }
-        public Builder secondaryGids(@Nullable List<Integer> secondaryGids) {
-            this.secondaryGids = Codegen.ofNullable(secondaryGids);
-            return this;
+
+        public Builder secondaryGids(List<Integer> secondaryGids) {
+            return secondaryGids(Output.of(secondaryGids));
         }
+
         public Builder secondaryGids(Integer... secondaryGids) {
             return secondaryGids(List.of(secondaryGids));
         }
+
         public Builder uid(Output<Integer> uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
         }
+
         public Builder uid(Integer uid) {
-            this.uid = Output.of(Objects.requireNonNull(uid));
-            return this;
-        }        public AccessPointPosixUserArgs build() {
-            return new AccessPointPosixUserArgs(gid, secondaryGids, uid);
+            return uid(Output.of(uid));
+        }
+
+        public AccessPointPosixUserArgs build() {
+            $.gid = Objects.requireNonNull($.gid, "expected parameter 'gid' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            return $;
         }
     }
+
 }

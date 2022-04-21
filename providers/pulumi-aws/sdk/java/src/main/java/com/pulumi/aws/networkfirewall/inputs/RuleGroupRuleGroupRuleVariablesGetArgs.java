@@ -7,9 +7,9 @@ import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesIpSe
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesPortSetGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RuleGroupRuleGroupRuleVariablesGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="ipSets")
-      private final @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> ipSets;
+    private @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> ipSets;
 
-    public Output<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> ipSets() {
-        return this.ipSets == null ? Codegen.empty() : this.ipSets;
+    public Optional<Output<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>>> ipSets() {
+        return Optional.ofNullable(this.ipSets);
     }
 
     /**
@@ -33,69 +33,66 @@ public final class RuleGroupRuleGroupRuleVariablesGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="portSets")
-      private final @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> portSets;
+    private @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> portSets;
 
-    public Output<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> portSets() {
-        return this.portSets == null ? Codegen.empty() : this.portSets;
+    public Optional<Output<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>>> portSets() {
+        return Optional.ofNullable(this.portSets);
     }
 
-    public RuleGroupRuleGroupRuleVariablesGetArgs(
-        @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> ipSets,
-        @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> portSets) {
-        this.ipSets = ipSets;
-        this.portSets = portSets;
-    }
+    private RuleGroupRuleGroupRuleVariablesGetArgs() {}
 
-    private RuleGroupRuleGroupRuleVariablesGetArgs() {
-        this.ipSets = Codegen.empty();
-        this.portSets = Codegen.empty();
+    private RuleGroupRuleGroupRuleVariablesGetArgs(RuleGroupRuleGroupRuleVariablesGetArgs $) {
+        this.ipSets = $.ipSets;
+        this.portSets = $.portSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRuleVariablesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> ipSets;
-        private @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> portSets;
+        private RuleGroupRuleGroupRuleVariablesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRuleVariablesGetArgs();
         }
 
         public Builder(RuleGroupRuleGroupRuleVariablesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipSets = defaults.ipSets;
-    	      this.portSets = defaults.portSets;
+            $ = new RuleGroupRuleGroupRuleVariablesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipSets(@Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> ipSets) {
-            this.ipSets = ipSets;
+            $.ipSets = ipSets;
             return this;
         }
-        public Builder ipSets(@Nullable List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs> ipSets) {
-            this.ipSets = Codegen.ofNullable(ipSets);
-            return this;
+
+        public Builder ipSets(List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs> ipSets) {
+            return ipSets(Output.of(ipSets));
         }
+
         public Builder ipSets(RuleGroupRuleGroupRuleVariablesIpSetGetArgs... ipSets) {
             return ipSets(List.of(ipSets));
         }
+
         public Builder portSets(@Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> portSets) {
-            this.portSets = portSets;
+            $.portSets = portSets;
             return this;
         }
-        public Builder portSets(@Nullable List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs> portSets) {
-            this.portSets = Codegen.ofNullable(portSets);
-            return this;
+
+        public Builder portSets(List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs> portSets) {
+            return portSets(Output.of(portSets));
         }
+
         public Builder portSets(RuleGroupRuleGroupRuleVariablesPortSetGetArgs... portSets) {
             return portSets(List.of(portSets));
-        }        public RuleGroupRuleGroupRuleVariablesGetArgs build() {
-            return new RuleGroupRuleGroupRuleVariablesGetArgs(ipSets, portSets);
+        }
+
+        public RuleGroupRuleGroupRuleVariablesGetArgs build() {
+            return $;
         }
     }
+
 }

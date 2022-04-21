@@ -20,7 +20,7 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final String networkManagerName;
+    private String networkManagerName;
 
     public String networkManagerName() {
         return this.networkManagerName;
@@ -31,10 +31,10 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="regions")
-      private final @Nullable List<String> regions;
+    private @Nullable List<String> regions;
 
-    public List<String> regions() {
-        return this.regions == null ? List.of() : this.regions;
+    public Optional<List<String>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -53,76 +53,68 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
-    public ListActiveConnectivityConfigurationArgs(
-        String networkManagerName,
-        @Nullable List<String> regions,
-        String resourceGroupName,
-        @Nullable String skipToken) {
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.regions = regions;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.skipToken = skipToken;
-    }
+    private ListActiveConnectivityConfigurationArgs() {}
 
-    private ListActiveConnectivityConfigurationArgs() {
-        this.networkManagerName = null;
-        this.regions = List.of();
-        this.resourceGroupName = null;
-        this.skipToken = null;
+    private ListActiveConnectivityConfigurationArgs(ListActiveConnectivityConfigurationArgs $) {
+        this.networkManagerName = $.networkManagerName;
+        this.regions = $.regions;
+        this.resourceGroupName = $.resourceGroupName;
+        this.skipToken = $.skipToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListActiveConnectivityConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkManagerName;
-        private @Nullable List<String> regions;
-        private String resourceGroupName;
-        private @Nullable String skipToken;
+        private ListActiveConnectivityConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListActiveConnectivityConfigurationArgs();
         }
 
         public Builder(ListActiveConnectivityConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.regions = defaults.regions;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.skipToken = defaults.skipToken;
+            $ = new ListActiveConnectivityConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
-        }        public ListActiveConnectivityConfigurationArgs build() {
-            return new ListActiveConnectivityConfigurationArgs(networkManagerName, regions, resourceGroupName, skipToken);
+        }
+
+        public ListActiveConnectivityConfigurationArgs build() {
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

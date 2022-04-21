@@ -7,9 +7,9 @@ import com.pulumi.azurenative.eventhub.enums.IPAction;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<Either<String,IPAction>> action;
+    private @Nullable Output<Either<String,IPAction>> action;
 
-    public Output<Either<String,IPAction>> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<Either<String,IPAction>>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="filterName")
-      private final @Nullable Output<String> filterName;
+    private @Nullable Output<String> filterName;
 
-    public Output<String> filterName() {
-        return this.filterName == null ? Codegen.empty() : this.filterName;
+    public Optional<Output<String>> filterName() {
+        return Optional.ofNullable(this.filterName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ipFilterRuleName")
-      private final @Nullable Output<String> ipFilterRuleName;
+    private @Nullable Output<String> ipFilterRuleName;
 
-    public Output<String> ipFilterRuleName() {
-        return this.ipFilterRuleName == null ? Codegen.empty() : this.ipFilterRuleName;
+    public Optional<Output<String>> ipFilterRuleName() {
+        return Optional.ofNullable(this.ipFilterRuleName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ipMask")
-      private final @Nullable Output<String> ipMask;
+    private @Nullable Output<String> ipMask;
 
-    public Output<String> ipMask() {
-        return this.ipMask == null ? Codegen.empty() : this.ipMask;
+    public Optional<Output<String>> ipMask() {
+        return Optional.ofNullable(this.ipMask);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -77,115 +77,100 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public NamespaceIpFilterRuleArgs(
-        @Nullable Output<Either<String,IPAction>> action,
-        @Nullable Output<String> filterName,
-        @Nullable Output<String> ipFilterRuleName,
-        @Nullable Output<String> ipMask,
-        Output<String> namespaceName,
-        Output<String> resourceGroupName) {
-        this.action = action;
-        this.filterName = filterName;
-        this.ipFilterRuleName = ipFilterRuleName;
-        this.ipMask = ipMask;
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private NamespaceIpFilterRuleArgs() {}
 
-    private NamespaceIpFilterRuleArgs() {
-        this.action = Codegen.empty();
-        this.filterName = Codegen.empty();
-        this.ipFilterRuleName = Codegen.empty();
-        this.ipMask = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private NamespaceIpFilterRuleArgs(NamespaceIpFilterRuleArgs $) {
+        this.action = $.action;
+        this.filterName = $.filterName;
+        this.ipFilterRuleName = $.ipFilterRuleName;
+        this.ipMask = $.ipMask;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespaceIpFilterRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,IPAction>> action;
-        private @Nullable Output<String> filterName;
-        private @Nullable Output<String> ipFilterRuleName;
-        private @Nullable Output<String> ipMask;
-        private Output<String> namespaceName;
-        private Output<String> resourceGroupName;
+        private NamespaceIpFilterRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespaceIpFilterRuleArgs();
         }
 
         public Builder(NamespaceIpFilterRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.filterName = defaults.filterName;
-    	      this.ipFilterRuleName = defaults.ipFilterRuleName;
-    	      this.ipMask = defaults.ipMask;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new NamespaceIpFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<Either<String,IPAction>> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable Either<String,IPAction> action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(Either<String,IPAction> action) {
+            return action(Output.of(action));
         }
+
         public Builder filterName(@Nullable Output<String> filterName) {
-            this.filterName = filterName;
+            $.filterName = filterName;
             return this;
         }
-        public Builder filterName(@Nullable String filterName) {
-            this.filterName = Codegen.ofNullable(filterName);
-            return this;
+
+        public Builder filterName(String filterName) {
+            return filterName(Output.of(filterName));
         }
+
         public Builder ipFilterRuleName(@Nullable Output<String> ipFilterRuleName) {
-            this.ipFilterRuleName = ipFilterRuleName;
+            $.ipFilterRuleName = ipFilterRuleName;
             return this;
         }
-        public Builder ipFilterRuleName(@Nullable String ipFilterRuleName) {
-            this.ipFilterRuleName = Codegen.ofNullable(ipFilterRuleName);
-            return this;
+
+        public Builder ipFilterRuleName(String ipFilterRuleName) {
+            return ipFilterRuleName(Output.of(ipFilterRuleName));
         }
+
         public Builder ipMask(@Nullable Output<String> ipMask) {
-            this.ipMask = ipMask;
+            $.ipMask = ipMask;
             return this;
         }
-        public Builder ipMask(@Nullable String ipMask) {
-            this.ipMask = Codegen.ofNullable(ipMask);
-            return this;
+
+        public Builder ipMask(String ipMask) {
+            return ipMask(Output.of(ipMask));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public NamespaceIpFilterRuleArgs build() {
-            return new NamespaceIpFilterRuleArgs(action, filterName, ipFilterRuleName, ipMask, namespaceName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public NamespaceIpFilterRuleArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

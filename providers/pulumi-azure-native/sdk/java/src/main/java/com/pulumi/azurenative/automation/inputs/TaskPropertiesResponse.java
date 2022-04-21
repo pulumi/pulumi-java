@@ -24,10 +24,10 @@ public final class TaskPropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,String> parameters;
+    private @Nullable Map<String,String> parameters;
 
-    public Map<String,String> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class TaskPropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="source")
-      private final @Nullable String source;
+    private @Nullable String source;
 
     public Optional<String> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
-    public TaskPropertiesResponse(
-        @Nullable Map<String,String> parameters,
-        @Nullable String source) {
-        this.parameters = parameters;
-        this.source = source;
-    }
+    private TaskPropertiesResponse() {}
 
-    private TaskPropertiesResponse() {
-        this.parameters = Map.of();
-        this.source = null;
+    private TaskPropertiesResponse(TaskPropertiesResponse $) {
+        this.parameters = $.parameters;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> parameters;
-        private @Nullable String source;
+        private TaskPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskPropertiesResponse();
         }
 
         public Builder(TaskPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.source = defaults.source;
+            $ = new TaskPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder source(@Nullable String source) {
-            this.source = source;
+            $.source = source;
             return this;
-        }        public TaskPropertiesResponse build() {
-            return new TaskPropertiesResponse(parameters, source);
+        }
+
+        public TaskPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -20,48 +20,48 @@ public final class GetInfrastructureConfigurationsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetInfrastructureConfigurationsFilter> filters;
+    private @Nullable List<GetInfrastructureConfigurationsFilter> filters;
 
-    public List<GetInfrastructureConfigurationsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetInfrastructureConfigurationsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public GetInfrastructureConfigurationsArgs(@Nullable List<GetInfrastructureConfigurationsFilter> filters) {
-        this.filters = filters;
-    }
+    private GetInfrastructureConfigurationsArgs() {}
 
-    private GetInfrastructureConfigurationsArgs() {
-        this.filters = List.of();
+    private GetInfrastructureConfigurationsArgs(GetInfrastructureConfigurationsArgs $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInfrastructureConfigurationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetInfrastructureConfigurationsFilter> filters;
+        private GetInfrastructureConfigurationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInfrastructureConfigurationsArgs();
         }
 
         public Builder(GetInfrastructureConfigurationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new GetInfrastructureConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetInfrastructureConfigurationsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetInfrastructureConfigurationsFilter... filters) {
             return filters(List.of(filters));
-        }        public GetInfrastructureConfigurationsArgs build() {
-            return new GetInfrastructureConfigurationsArgs(filters);
+        }
+
+        public GetInfrastructureConfigurationsArgs build() {
+            return $;
         }
     }
+
 }

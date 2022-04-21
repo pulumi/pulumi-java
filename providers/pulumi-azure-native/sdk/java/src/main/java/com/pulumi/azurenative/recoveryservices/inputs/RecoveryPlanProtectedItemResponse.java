@@ -23,10 +23,10 @@ public final class RecoveryPlanProtectedItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class RecoveryPlanProtectedItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="virtualMachineId")
-      private final @Nullable String virtualMachineId;
+    private @Nullable String virtualMachineId;
 
     public Optional<String> virtualMachineId() {
-        return this.virtualMachineId == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineId);
+        return Optional.ofNullable(this.virtualMachineId);
     }
 
-    public RecoveryPlanProtectedItemResponse(
-        @Nullable String id,
-        @Nullable String virtualMachineId) {
-        this.id = id;
-        this.virtualMachineId = virtualMachineId;
-    }
+    private RecoveryPlanProtectedItemResponse() {}
 
-    private RecoveryPlanProtectedItemResponse() {
-        this.id = null;
-        this.virtualMachineId = null;
+    private RecoveryPlanProtectedItemResponse(RecoveryPlanProtectedItemResponse $) {
+        this.id = $.id;
+        this.virtualMachineId = $.virtualMachineId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryPlanProtectedItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String virtualMachineId;
+        private RecoveryPlanProtectedItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryPlanProtectedItemResponse();
         }
 
         public Builder(RecoveryPlanProtectedItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.virtualMachineId = defaults.virtualMachineId;
+            $ = new RecoveryPlanProtectedItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
-            this.virtualMachineId = virtualMachineId;
+            $.virtualMachineId = virtualMachineId;
             return this;
-        }        public RecoveryPlanProtectedItemResponse build() {
-            return new RecoveryPlanProtectedItemResponse(id, virtualMachineId);
+        }
+
+        public RecoveryPlanProtectedItemResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,150 +20,133 @@ public final class NotebookResourceSystemDataArgs extends com.pulumi.resources.R
     public static final NotebookResourceSystemDataArgs Empty = new NotebookResourceSystemDataArgs();
 
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     @Import(name="createdBy")
-      private final @Nullable Output<String> createdBy;
+    private @Nullable Output<String> createdBy;
 
-    public Output<String> createdBy() {
-        return this.createdBy == null ? Codegen.empty() : this.createdBy;
+    public Optional<Output<String>> createdBy() {
+        return Optional.ofNullable(this.createdBy);
     }
 
     @Import(name="createdByType")
-      private final @Nullable Output<String> createdByType;
+    private @Nullable Output<String> createdByType;
 
-    public Output<String> createdByType() {
-        return this.createdByType == null ? Codegen.empty() : this.createdByType;
+    public Optional<Output<String>> createdByType() {
+        return Optional.ofNullable(this.createdByType);
     }
 
     @Import(name="lastModifiedAt")
-      private final @Nullable Output<String> lastModifiedAt;
+    private @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> lastModifiedAt() {
-        return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
+    public Optional<Output<String>> lastModifiedAt() {
+        return Optional.ofNullable(this.lastModifiedAt);
     }
 
     @Import(name="lastModifiedBy")
-      private final @Nullable Output<String> lastModifiedBy;
+    private @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> lastModifiedBy() {
-        return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
+    public Optional<Output<String>> lastModifiedBy() {
+        return Optional.ofNullable(this.lastModifiedBy);
     }
 
     @Import(name="lastModifiedByType")
-      private final @Nullable Output<String> lastModifiedByType;
+    private @Nullable Output<String> lastModifiedByType;
 
-    public Output<String> lastModifiedByType() {
-        return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
+    public Optional<Output<String>> lastModifiedByType() {
+        return Optional.ofNullable(this.lastModifiedByType);
     }
 
-    public NotebookResourceSystemDataArgs(
-        @Nullable Output<String> createdAt,
-        @Nullable Output<String> createdBy,
-        @Nullable Output<String> createdByType,
-        @Nullable Output<String> lastModifiedAt,
-        @Nullable Output<String> lastModifiedBy,
-        @Nullable Output<String> lastModifiedByType) {
-        this.createdAt = createdAt;
-        this.createdBy = createdBy;
-        this.createdByType = createdByType;
-        this.lastModifiedAt = lastModifiedAt;
-        this.lastModifiedBy = lastModifiedBy;
-        this.lastModifiedByType = lastModifiedByType;
-    }
+    private NotebookResourceSystemDataArgs() {}
 
-    private NotebookResourceSystemDataArgs() {
-        this.createdAt = Codegen.empty();
-        this.createdBy = Codegen.empty();
-        this.createdByType = Codegen.empty();
-        this.lastModifiedAt = Codegen.empty();
-        this.lastModifiedBy = Codegen.empty();
-        this.lastModifiedByType = Codegen.empty();
+    private NotebookResourceSystemDataArgs(NotebookResourceSystemDataArgs $) {
+        this.createdAt = $.createdAt;
+        this.createdBy = $.createdBy;
+        this.createdByType = $.createdByType;
+        this.lastModifiedAt = $.lastModifiedAt;
+        this.lastModifiedBy = $.lastModifiedBy;
+        this.lastModifiedByType = $.lastModifiedByType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotebookResourceSystemDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<String> createdBy;
-        private @Nullable Output<String> createdByType;
-        private @Nullable Output<String> lastModifiedAt;
-        private @Nullable Output<String> lastModifiedBy;
-        private @Nullable Output<String> lastModifiedByType;
+        private NotebookResourceSystemDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotebookResourceSystemDataArgs();
         }
 
         public Builder(NotebookResourceSystemDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.createdBy = defaults.createdBy;
-    	      this.createdByType = defaults.createdByType;
-    	      this.lastModifiedAt = defaults.lastModifiedAt;
-    	      this.lastModifiedBy = defaults.lastModifiedBy;
-    	      this.lastModifiedByType = defaults.lastModifiedByType;
+            $ = new NotebookResourceSystemDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder createdBy(@Nullable Output<String> createdBy) {
-            this.createdBy = createdBy;
+            $.createdBy = createdBy;
             return this;
         }
-        public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Codegen.ofNullable(createdBy);
-            return this;
+
+        public Builder createdBy(String createdBy) {
+            return createdBy(Output.of(createdBy));
         }
+
         public Builder createdByType(@Nullable Output<String> createdByType) {
-            this.createdByType = createdByType;
+            $.createdByType = createdByType;
             return this;
         }
-        public Builder createdByType(@Nullable String createdByType) {
-            this.createdByType = Codegen.ofNullable(createdByType);
-            return this;
+
+        public Builder createdByType(String createdByType) {
+            return createdByType(Output.of(createdByType));
         }
+
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
-            this.lastModifiedAt = lastModifiedAt;
+            $.lastModifiedAt = lastModifiedAt;
             return this;
         }
-        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Codegen.ofNullable(lastModifiedAt);
-            return this;
+
+        public Builder lastModifiedAt(String lastModifiedAt) {
+            return lastModifiedAt(Output.of(lastModifiedAt));
         }
+
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
-            this.lastModifiedBy = lastModifiedBy;
+            $.lastModifiedBy = lastModifiedBy;
             return this;
         }
-        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Codegen.ofNullable(lastModifiedBy);
-            return this;
+
+        public Builder lastModifiedBy(String lastModifiedBy) {
+            return lastModifiedBy(Output.of(lastModifiedBy));
         }
+
         public Builder lastModifiedByType(@Nullable Output<String> lastModifiedByType) {
-            this.lastModifiedByType = lastModifiedByType;
+            $.lastModifiedByType = lastModifiedByType;
             return this;
         }
-        public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
-            this.lastModifiedByType = Codegen.ofNullable(lastModifiedByType);
-            return this;
-        }        public NotebookResourceSystemDataArgs build() {
-            return new NotebookResourceSystemDataArgs(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
+
+        public Builder lastModifiedByType(String lastModifiedByType) {
+            return lastModifiedByType(Output.of(lastModifiedByType));
+        }
+
+        public NotebookResourceSystemDataArgs build() {
+            return $;
         }
     }
+
 }

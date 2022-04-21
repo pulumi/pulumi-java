@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.AzureFirewallApplicationRuleProtocolArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
      * 
      */
     @Import(name="fqdnTags")
-      private final @Nullable Output<List<String>> fqdnTags;
+    private @Nullable Output<List<String>> fqdnTags;
 
-    public Output<List<String>> fqdnTags() {
-        return this.fqdnTags == null ? Codegen.empty() : this.fqdnTags;
+    public Optional<Output<List<String>>> fqdnTags() {
+        return Optional.ofNullable(this.fqdnTags);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
      * 
      */
     @Import(name="protocols")
-      private final @Nullable Output<List<AzureFirewallApplicationRuleProtocolArgs>> protocols;
+    private @Nullable Output<List<AzureFirewallApplicationRuleProtocolArgs>> protocols;
 
-    public Output<List<AzureFirewallApplicationRuleProtocolArgs>> protocols() {
-        return this.protocols == null ? Codegen.empty() : this.protocols;
+    public Optional<Output<List<AzureFirewallApplicationRuleProtocolArgs>>> protocols() {
+        return Optional.ofNullable(this.protocols);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourceAddresses")
-      private final @Nullable Output<List<String>> sourceAddresses;
+    private @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> sourceAddresses() {
-        return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
+    public Optional<Output<List<String>>> sourceAddresses() {
+        return Optional.ofNullable(this.sourceAddresses);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourceIpGroups")
-      private final @Nullable Output<List<String>> sourceIpGroups;
+    private @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> sourceIpGroups() {
-        return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
+    public Optional<Output<List<String>>> sourceIpGroups() {
+        return Optional.ofNullable(this.sourceIpGroups);
     }
 
     /**
@@ -92,143 +92,128 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
      * 
      */
     @Import(name="targetFqdns")
-      private final @Nullable Output<List<String>> targetFqdns;
+    private @Nullable Output<List<String>> targetFqdns;
 
-    public Output<List<String>> targetFqdns() {
-        return this.targetFqdns == null ? Codegen.empty() : this.targetFqdns;
+    public Optional<Output<List<String>>> targetFqdns() {
+        return Optional.ofNullable(this.targetFqdns);
     }
 
-    public AzureFirewallApplicationRuleArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> fqdnTags,
-        @Nullable Output<String> name,
-        @Nullable Output<List<AzureFirewallApplicationRuleProtocolArgs>> protocols,
-        @Nullable Output<List<String>> sourceAddresses,
-        @Nullable Output<List<String>> sourceIpGroups,
-        @Nullable Output<List<String>> targetFqdns) {
-        this.description = description;
-        this.fqdnTags = fqdnTags;
-        this.name = name;
-        this.protocols = protocols;
-        this.sourceAddresses = sourceAddresses;
-        this.sourceIpGroups = sourceIpGroups;
-        this.targetFqdns = targetFqdns;
-    }
+    private AzureFirewallApplicationRuleArgs() {}
 
-    private AzureFirewallApplicationRuleArgs() {
-        this.description = Codegen.empty();
-        this.fqdnTags = Codegen.empty();
-        this.name = Codegen.empty();
-        this.protocols = Codegen.empty();
-        this.sourceAddresses = Codegen.empty();
-        this.sourceIpGroups = Codegen.empty();
-        this.targetFqdns = Codegen.empty();
+    private AzureFirewallApplicationRuleArgs(AzureFirewallApplicationRuleArgs $) {
+        this.description = $.description;
+        this.fqdnTags = $.fqdnTags;
+        this.name = $.name;
+        this.protocols = $.protocols;
+        this.sourceAddresses = $.sourceAddresses;
+        this.sourceIpGroups = $.sourceIpGroups;
+        this.targetFqdns = $.targetFqdns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallApplicationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> fqdnTags;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<AzureFirewallApplicationRuleProtocolArgs>> protocols;
-        private @Nullable Output<List<String>> sourceAddresses;
-        private @Nullable Output<List<String>> sourceIpGroups;
-        private @Nullable Output<List<String>> targetFqdns;
+        private AzureFirewallApplicationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallApplicationRuleArgs();
         }
 
         public Builder(AzureFirewallApplicationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.fqdnTags = defaults.fqdnTags;
-    	      this.name = defaults.name;
-    	      this.protocols = defaults.protocols;
-    	      this.sourceAddresses = defaults.sourceAddresses;
-    	      this.sourceIpGroups = defaults.sourceIpGroups;
-    	      this.targetFqdns = defaults.targetFqdns;
+            $ = new AzureFirewallApplicationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fqdnTags(@Nullable Output<List<String>> fqdnTags) {
-            this.fqdnTags = fqdnTags;
+            $.fqdnTags = fqdnTags;
             return this;
         }
-        public Builder fqdnTags(@Nullable List<String> fqdnTags) {
-            this.fqdnTags = Codegen.ofNullable(fqdnTags);
-            return this;
+
+        public Builder fqdnTags(List<String> fqdnTags) {
+            return fqdnTags(Output.of(fqdnTags));
         }
+
         public Builder fqdnTags(String... fqdnTags) {
             return fqdnTags(List.of(fqdnTags));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder protocols(@Nullable Output<List<AzureFirewallApplicationRuleProtocolArgs>> protocols) {
-            this.protocols = protocols;
+            $.protocols = protocols;
             return this;
         }
-        public Builder protocols(@Nullable List<AzureFirewallApplicationRuleProtocolArgs> protocols) {
-            this.protocols = Codegen.ofNullable(protocols);
-            return this;
+
+        public Builder protocols(List<AzureFirewallApplicationRuleProtocolArgs> protocols) {
+            return protocols(Output.of(protocols));
         }
+
         public Builder protocols(AzureFirewallApplicationRuleProtocolArgs... protocols) {
             return protocols(List.of(protocols));
         }
+
         public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
-            this.sourceAddresses = sourceAddresses;
+            $.sourceAddresses = sourceAddresses;
             return this;
         }
-        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Codegen.ofNullable(sourceAddresses);
-            return this;
+
+        public Builder sourceAddresses(List<String> sourceAddresses) {
+            return sourceAddresses(Output.of(sourceAddresses));
         }
+
         public Builder sourceAddresses(String... sourceAddresses) {
             return sourceAddresses(List.of(sourceAddresses));
         }
+
         public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
-            this.sourceIpGroups = sourceIpGroups;
+            $.sourceIpGroups = sourceIpGroups;
             return this;
         }
-        public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Codegen.ofNullable(sourceIpGroups);
-            return this;
+
+        public Builder sourceIpGroups(List<String> sourceIpGroups) {
+            return sourceIpGroups(Output.of(sourceIpGroups));
         }
+
         public Builder sourceIpGroups(String... sourceIpGroups) {
             return sourceIpGroups(List.of(sourceIpGroups));
         }
+
         public Builder targetFqdns(@Nullable Output<List<String>> targetFqdns) {
-            this.targetFqdns = targetFqdns;
+            $.targetFqdns = targetFqdns;
             return this;
         }
-        public Builder targetFqdns(@Nullable List<String> targetFqdns) {
-            this.targetFqdns = Codegen.ofNullable(targetFqdns);
-            return this;
+
+        public Builder targetFqdns(List<String> targetFqdns) {
+            return targetFqdns(Output.of(targetFqdns));
         }
+
         public Builder targetFqdns(String... targetFqdns) {
             return targetFqdns(List.of(targetFqdns));
-        }        public AzureFirewallApplicationRuleArgs build() {
-            return new AzureFirewallApplicationRuleArgs(description, fqdnTags, name, protocols, sourceAddresses, sourceIpGroups, targetFqdns);
+        }
+
+        public AzureFirewallApplicationRuleArgs build() {
+            return $;
         }
     }
+
 }

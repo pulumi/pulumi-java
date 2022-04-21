@@ -7,10 +7,10 @@ import com.pulumi.aws.lakeformation.inputs.DataLakeSettingsCreateDatabaseDefault
 import com.pulumi.aws.lakeformation.inputs.DataLakeSettingsCreateTableDefaultPermissionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="admins")
-      private final @Nullable Output<List<String>> admins;
+    private @Nullable Output<List<String>> admins;
 
-    public Output<List<String>> admins() {
-        return this.admins == null ? Codegen.empty() : this.admins;
+    public Optional<Output<List<String>>> admins() {
+        return Optional.ofNullable(this.admins);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="createDatabaseDefaultPermissions")
-      private final @Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions;
+    private @Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions;
 
-    public Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions() {
-        return this.createDatabaseDefaultPermissions == null ? Codegen.empty() : this.createDatabaseDefaultPermissions;
+    public Optional<Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>>> createDatabaseDefaultPermissions() {
+        return Optional.ofNullable(this.createDatabaseDefaultPermissions);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="createTableDefaultPermissions")
-      private final @Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions;
+    private @Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions;
 
-    public Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions() {
-        return this.createTableDefaultPermissions == null ? Codegen.empty() : this.createTableDefaultPermissions;
+    public Optional<Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>>> createTableDefaultPermissions() {
+        return Optional.ofNullable(this.createTableDefaultPermissions);
     }
 
     /**
@@ -67,114 +67,104 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="trustedResourceOwners")
-      private final @Nullable Output<List<String>> trustedResourceOwners;
+    private @Nullable Output<List<String>> trustedResourceOwners;
 
-    public Output<List<String>> trustedResourceOwners() {
-        return this.trustedResourceOwners == null ? Codegen.empty() : this.trustedResourceOwners;
+    public Optional<Output<List<String>>> trustedResourceOwners() {
+        return Optional.ofNullable(this.trustedResourceOwners);
     }
 
-    public DataLakeSettingsState(
-        @Nullable Output<List<String>> admins,
-        @Nullable Output<String> catalogId,
-        @Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions,
-        @Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions,
-        @Nullable Output<List<String>> trustedResourceOwners) {
-        this.admins = admins;
-        this.catalogId = catalogId;
-        this.createDatabaseDefaultPermissions = createDatabaseDefaultPermissions;
-        this.createTableDefaultPermissions = createTableDefaultPermissions;
-        this.trustedResourceOwners = trustedResourceOwners;
-    }
+    private DataLakeSettingsState() {}
 
-    private DataLakeSettingsState() {
-        this.admins = Codegen.empty();
-        this.catalogId = Codegen.empty();
-        this.createDatabaseDefaultPermissions = Codegen.empty();
-        this.createTableDefaultPermissions = Codegen.empty();
-        this.trustedResourceOwners = Codegen.empty();
+    private DataLakeSettingsState(DataLakeSettingsState $) {
+        this.admins = $.admins;
+        this.catalogId = $.catalogId;
+        this.createDatabaseDefaultPermissions = $.createDatabaseDefaultPermissions;
+        this.createTableDefaultPermissions = $.createTableDefaultPermissions;
+        this.trustedResourceOwners = $.trustedResourceOwners;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataLakeSettingsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> admins;
-        private @Nullable Output<String> catalogId;
-        private @Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions;
-        private @Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions;
-        private @Nullable Output<List<String>> trustedResourceOwners;
+        private DataLakeSettingsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataLakeSettingsState();
         }
 
         public Builder(DataLakeSettingsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.admins = defaults.admins;
-    	      this.catalogId = defaults.catalogId;
-    	      this.createDatabaseDefaultPermissions = defaults.createDatabaseDefaultPermissions;
-    	      this.createTableDefaultPermissions = defaults.createTableDefaultPermissions;
-    	      this.trustedResourceOwners = defaults.trustedResourceOwners;
+            $ = new DataLakeSettingsState(Objects.requireNonNull(defaults));
         }
 
         public Builder admins(@Nullable Output<List<String>> admins) {
-            this.admins = admins;
+            $.admins = admins;
             return this;
         }
-        public Builder admins(@Nullable List<String> admins) {
-            this.admins = Codegen.ofNullable(admins);
-            return this;
+
+        public Builder admins(List<String> admins) {
+            return admins(Output.of(admins));
         }
+
         public Builder admins(String... admins) {
             return admins(List.of(admins));
         }
+
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder createDatabaseDefaultPermissions(@Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions) {
-            this.createDatabaseDefaultPermissions = createDatabaseDefaultPermissions;
+            $.createDatabaseDefaultPermissions = createDatabaseDefaultPermissions;
             return this;
         }
-        public Builder createDatabaseDefaultPermissions(@Nullable List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs> createDatabaseDefaultPermissions) {
-            this.createDatabaseDefaultPermissions = Codegen.ofNullable(createDatabaseDefaultPermissions);
-            return this;
+
+        public Builder createDatabaseDefaultPermissions(List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs> createDatabaseDefaultPermissions) {
+            return createDatabaseDefaultPermissions(Output.of(createDatabaseDefaultPermissions));
         }
+
         public Builder createDatabaseDefaultPermissions(DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs... createDatabaseDefaultPermissions) {
             return createDatabaseDefaultPermissions(List.of(createDatabaseDefaultPermissions));
         }
+
         public Builder createTableDefaultPermissions(@Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions) {
-            this.createTableDefaultPermissions = createTableDefaultPermissions;
+            $.createTableDefaultPermissions = createTableDefaultPermissions;
             return this;
         }
-        public Builder createTableDefaultPermissions(@Nullable List<DataLakeSettingsCreateTableDefaultPermissionGetArgs> createTableDefaultPermissions) {
-            this.createTableDefaultPermissions = Codegen.ofNullable(createTableDefaultPermissions);
-            return this;
+
+        public Builder createTableDefaultPermissions(List<DataLakeSettingsCreateTableDefaultPermissionGetArgs> createTableDefaultPermissions) {
+            return createTableDefaultPermissions(Output.of(createTableDefaultPermissions));
         }
+
         public Builder createTableDefaultPermissions(DataLakeSettingsCreateTableDefaultPermissionGetArgs... createTableDefaultPermissions) {
             return createTableDefaultPermissions(List.of(createTableDefaultPermissions));
         }
+
         public Builder trustedResourceOwners(@Nullable Output<List<String>> trustedResourceOwners) {
-            this.trustedResourceOwners = trustedResourceOwners;
+            $.trustedResourceOwners = trustedResourceOwners;
             return this;
         }
-        public Builder trustedResourceOwners(@Nullable List<String> trustedResourceOwners) {
-            this.trustedResourceOwners = Codegen.ofNullable(trustedResourceOwners);
-            return this;
+
+        public Builder trustedResourceOwners(List<String> trustedResourceOwners) {
+            return trustedResourceOwners(Output.of(trustedResourceOwners));
         }
+
         public Builder trustedResourceOwners(String... trustedResourceOwners) {
             return trustedResourceOwners(List.of(trustedResourceOwners));
-        }        public DataLakeSettingsState build() {
-            return new DataLakeSettingsState(admins, catalogId, createDatabaseDefaultPermissions, createTableDefaultPermissions, trustedResourceOwners);
+        }
+
+        public DataLakeSettingsState build() {
+            return $;
         }
     }
+
 }

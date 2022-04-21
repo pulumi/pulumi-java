@@ -15,62 +15,58 @@ public final class NetworkInsightsPathTag extends com.pulumi.resources.InvokeArg
     public static final NetworkInsightsPathTag Empty = new NetworkInsightsPathTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public NetworkInsightsPathTag(
-        String key,
-        @Nullable String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = value;
-    }
+    private NetworkInsightsPathTag() {}
 
-    private NetworkInsightsPathTag() {
-        this.key = null;
-        this.value = null;
+    private NetworkInsightsPathTag(NetworkInsightsPathTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsPathTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private @Nullable String value;
+        private NetworkInsightsPathTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsPathTag();
         }
 
         public Builder(NetworkInsightsPathTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new NetworkInsightsPathTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public NetworkInsightsPathTag build() {
-            return new NetworkInsightsPathTag(key, value);
+        }
+
+        public NetworkInsightsPathTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

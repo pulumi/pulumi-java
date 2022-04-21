@@ -18,84 +18,78 @@ public final class DatasetExcelOptions extends com.pulumi.resources.InvokeArgs {
     public static final DatasetExcelOptions Empty = new DatasetExcelOptions();
 
     @Import(name="headerRow")
-      private final @Nullable Boolean headerRow;
+    private @Nullable Boolean headerRow;
 
     public Optional<Boolean> headerRow() {
-        return this.headerRow == null ? Optional.empty() : Optional.ofNullable(this.headerRow);
+        return Optional.ofNullable(this.headerRow);
     }
 
     @Import(name="sheetIndexes")
-      private final @Nullable List<Integer> sheetIndexes;
+    private @Nullable List<Integer> sheetIndexes;
 
-    public List<Integer> sheetIndexes() {
-        return this.sheetIndexes == null ? List.of() : this.sheetIndexes;
+    public Optional<List<Integer>> sheetIndexes() {
+        return Optional.ofNullable(this.sheetIndexes);
     }
 
     @Import(name="sheetNames")
-      private final @Nullable List<String> sheetNames;
+    private @Nullable List<String> sheetNames;
 
-    public List<String> sheetNames() {
-        return this.sheetNames == null ? List.of() : this.sheetNames;
+    public Optional<List<String>> sheetNames() {
+        return Optional.ofNullable(this.sheetNames);
     }
 
-    public DatasetExcelOptions(
-        @Nullable Boolean headerRow,
-        @Nullable List<Integer> sheetIndexes,
-        @Nullable List<String> sheetNames) {
-        this.headerRow = headerRow;
-        this.sheetIndexes = sheetIndexes;
-        this.sheetNames = sheetNames;
-    }
+    private DatasetExcelOptions() {}
 
-    private DatasetExcelOptions() {
-        this.headerRow = null;
-        this.sheetIndexes = List.of();
-        this.sheetNames = List.of();
+    private DatasetExcelOptions(DatasetExcelOptions $) {
+        this.headerRow = $.headerRow;
+        this.sheetIndexes = $.sheetIndexes;
+        this.sheetNames = $.sheetNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetExcelOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean headerRow;
-        private @Nullable List<Integer> sheetIndexes;
-        private @Nullable List<String> sheetNames;
+        private DatasetExcelOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetExcelOptions();
         }
 
         public Builder(DatasetExcelOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerRow = defaults.headerRow;
-    	      this.sheetIndexes = defaults.sheetIndexes;
-    	      this.sheetNames = defaults.sheetNames;
+            $ = new DatasetExcelOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder headerRow(@Nullable Boolean headerRow) {
-            this.headerRow = headerRow;
+            $.headerRow = headerRow;
             return this;
         }
+
         public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
-            this.sheetIndexes = sheetIndexes;
+            $.sheetIndexes = sheetIndexes;
             return this;
         }
+
         public Builder sheetIndexes(Integer... sheetIndexes) {
             return sheetIndexes(List.of(sheetIndexes));
         }
+
         public Builder sheetNames(@Nullable List<String> sheetNames) {
-            this.sheetNames = sheetNames;
+            $.sheetNames = sheetNames;
             return this;
         }
+
         public Builder sheetNames(String... sheetNames) {
             return sheetNames(List.of(sheetNames));
-        }        public DatasetExcelOptions build() {
-            return new DatasetExcelOptions(headerRow, sheetIndexes, sheetNames);
+        }
+
+        public DatasetExcelOptions build() {
+            return $;
         }
     }
+
 }

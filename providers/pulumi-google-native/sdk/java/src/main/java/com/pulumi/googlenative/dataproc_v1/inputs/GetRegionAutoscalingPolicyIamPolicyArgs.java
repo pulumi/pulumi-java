@@ -15,78 +15,72 @@ public final class GetRegionAutoscalingPolicyIamPolicyArgs extends com.pulumi.re
     public static final GetRegionAutoscalingPolicyIamPolicyArgs Empty = new GetRegionAutoscalingPolicyIamPolicyArgs();
 
     @Import(name="autoscalingPolicyId", required=true)
-      private final String autoscalingPolicyId;
+    private String autoscalingPolicyId;
 
     public String autoscalingPolicyId() {
         return this.autoscalingPolicyId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
-      private final String regionId;
+    private String regionId;
 
     public String regionId() {
         return this.regionId;
     }
 
-    public GetRegionAutoscalingPolicyIamPolicyArgs(
-        String autoscalingPolicyId,
-        @Nullable String project,
-        String regionId) {
-        this.autoscalingPolicyId = Objects.requireNonNull(autoscalingPolicyId, "expected parameter 'autoscalingPolicyId' to be non-null");
-        this.project = project;
-        this.regionId = Objects.requireNonNull(regionId, "expected parameter 'regionId' to be non-null");
-    }
+    private GetRegionAutoscalingPolicyIamPolicyArgs() {}
 
-    private GetRegionAutoscalingPolicyIamPolicyArgs() {
-        this.autoscalingPolicyId = null;
-        this.project = null;
-        this.regionId = null;
+    private GetRegionAutoscalingPolicyIamPolicyArgs(GetRegionAutoscalingPolicyIamPolicyArgs $) {
+        this.autoscalingPolicyId = $.autoscalingPolicyId;
+        this.project = $.project;
+        this.regionId = $.regionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionAutoscalingPolicyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoscalingPolicyId;
-        private @Nullable String project;
-        private String regionId;
+        private GetRegionAutoscalingPolicyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionAutoscalingPolicyIamPolicyArgs();
         }
 
         public Builder(GetRegionAutoscalingPolicyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingPolicyId = defaults.autoscalingPolicyId;
-    	      this.project = defaults.project;
-    	      this.regionId = defaults.regionId;
+            $ = new GetRegionAutoscalingPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingPolicyId(String autoscalingPolicyId) {
-            this.autoscalingPolicyId = Objects.requireNonNull(autoscalingPolicyId);
+            $.autoscalingPolicyId = autoscalingPolicyId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder regionId(String regionId) {
-            this.regionId = Objects.requireNonNull(regionId);
+            $.regionId = regionId;
             return this;
-        }        public GetRegionAutoscalingPolicyIamPolicyArgs build() {
-            return new GetRegionAutoscalingPolicyIamPolicyArgs(autoscalingPolicyId, project, regionId);
+        }
+
+        public GetRegionAutoscalingPolicyIamPolicyArgs build() {
+            $.autoscalingPolicyId = Objects.requireNonNull($.autoscalingPolicyId, "expected parameter 'autoscalingPolicyId' to be non-null");
+            $.regionId = Objects.requireNonNull($.regionId, "expected parameter 'regionId' to be non-null");
+            return $;
         }
     }
+
 }

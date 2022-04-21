@@ -5,9 +5,9 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GroupPropertiesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="groupType")
-      private final @Nullable Output<String> groupType;
+    private @Nullable Output<String> groupType;
 
-    public Output<String> groupType() {
-        return this.groupType == null ? Codegen.empty() : this.groupType;
+    public Optional<Output<String>> groupType() {
+        return Optional.ofNullable(this.groupType);
     }
 
-    public GroupPropertiesArgs(@Nullable Output<String> groupType) {
-        this.groupType = groupType;
-    }
+    private GroupPropertiesArgs() {}
 
-    private GroupPropertiesArgs() {
-        this.groupType = Codegen.empty();
+    private GroupPropertiesArgs(GroupPropertiesArgs $) {
+        this.groupType = $.groupType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupType;
+        private GroupPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupPropertiesArgs();
         }
 
         public Builder(GroupPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupType = defaults.groupType;
+            $ = new GroupPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupType(@Nullable Output<String> groupType) {
-            this.groupType = groupType;
+            $.groupType = groupType;
             return this;
         }
-        public Builder groupType(@Nullable String groupType) {
-            this.groupType = Codegen.ofNullable(groupType);
-            return this;
-        }        public GroupPropertiesArgs build() {
-            return new GroupPropertiesArgs(groupType);
+
+        public Builder groupType(String groupType) {
+            return groupType(Output.of(groupType));
+        }
+
+        public GroupPropertiesArgs build() {
+            return $;
         }
     }
+
 }

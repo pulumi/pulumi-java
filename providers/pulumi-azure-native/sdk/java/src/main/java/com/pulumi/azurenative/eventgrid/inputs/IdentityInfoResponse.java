@@ -25,10 +25,10 @@ public final class IdentityInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="principalId")
-      private final @Nullable String principalId;
+    private @Nullable String principalId;
 
     public Optional<String> principalId() {
-        return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IdentityInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class IdentityInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -60,73 +60,62 @@ public final class IdentityInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
+    private @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
 
-    public Map<String,UserIdentityPropertiesResponse> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
+    public Optional<Map<String,UserIdentityPropertiesResponse>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public IdentityInfoResponse(
-        @Nullable String principalId,
-        @Nullable String tenantId,
-        @Nullable String type,
-        @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities) {
-        this.principalId = principalId;
-        this.tenantId = tenantId;
-        this.type = type;
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private IdentityInfoResponse() {}
 
-    private IdentityInfoResponse() {
-        this.principalId = null;
-        this.tenantId = null;
-        this.type = null;
-        this.userAssignedIdentities = Map.of();
+    private IdentityInfoResponse(IdentityInfoResponse $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String principalId;
-        private @Nullable String tenantId;
-        private @Nullable String type;
-        private @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
+        private IdentityInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityInfoResponse();
         }
 
         public Builder(IdentityInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new IdentityInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder userAssignedIdentities(@Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }        public IdentityInfoResponse build() {
-            return new IdentityInfoResponse(principalId, tenantId, type, userAssignedIdentities);
+        }
+
+        public IdentityInfoResponse build() {
+            return $;
         }
     }
+
 }

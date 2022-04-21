@@ -6,10 +6,10 @@ package com.pulumi.aws.kinesis.inputs;
 import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
      * 
      */
     @Import(name="commonAttributes")
-      private final @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> commonAttributes;
+    private @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> commonAttributes;
 
-    public Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> commonAttributes() {
-        return this.commonAttributes == null ? Codegen.empty() : this.commonAttributes;
+    public Optional<Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>>> commonAttributes() {
+        return Optional.ofNullable(this.commonAttributes);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
      * 
      */
     @Import(name="contentEncoding")
-      private final @Nullable Output<String> contentEncoding;
+    private @Nullable Output<String> contentEncoding;
 
-    public Output<String> contentEncoding() {
-        return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
+    public Optional<Output<String>> contentEncoding() {
+        return Optional.ofNullable(this.contentEncoding);
     }
 
-    public FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs(
-        @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> commonAttributes,
-        @Nullable Output<String> contentEncoding) {
-        this.commonAttributes = commonAttributes;
-        this.contentEncoding = contentEncoding;
-    }
+    private FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs() {}
 
-    private FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs() {
-        this.commonAttributes = Codegen.empty();
-        this.contentEncoding = Codegen.empty();
+    private FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs(FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs $) {
+        this.commonAttributes = $.commonAttributes;
+        this.contentEncoding = $.contentEncoding;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> commonAttributes;
-        private @Nullable Output<String> contentEncoding;
+        private FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs();
         }
 
         public Builder(FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commonAttributes = defaults.commonAttributes;
-    	      this.contentEncoding = defaults.contentEncoding;
+            $ = new FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commonAttributes(@Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> commonAttributes) {
-            this.commonAttributes = commonAttributes;
+            $.commonAttributes = commonAttributes;
             return this;
         }
-        public Builder commonAttributes(@Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs> commonAttributes) {
-            this.commonAttributes = Codegen.ofNullable(commonAttributes);
-            return this;
+
+        public Builder commonAttributes(List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs> commonAttributes) {
+            return commonAttributes(Output.of(commonAttributes));
         }
+
         public Builder commonAttributes(FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs... commonAttributes) {
             return commonAttributes(List.of(commonAttributes));
         }
+
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
-            this.contentEncoding = contentEncoding;
+            $.contentEncoding = contentEncoding;
             return this;
         }
-        public Builder contentEncoding(@Nullable String contentEncoding) {
-            this.contentEncoding = Codegen.ofNullable(contentEncoding);
-            return this;
-        }        public FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs build() {
-            return new FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs(commonAttributes, contentEncoding);
+
+        public Builder contentEncoding(String contentEncoding) {
+            return contentEncoding(Output.of(contentEncoding));
+        }
+
+        public FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs build() {
+            return $;
         }
     }
+
 }

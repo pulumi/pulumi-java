@@ -23,45 +23,44 @@ public final class AccessPolicyIamRole extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
-    public AccessPolicyIamRole(@Nullable String arn) {
-        this.arn = arn;
-    }
+    private AccessPolicyIamRole() {}
 
-    private AccessPolicyIamRole() {
-        this.arn = null;
+    private AccessPolicyIamRole(AccessPolicyIamRole $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyIamRole defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
+        private AccessPolicyIamRole $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyIamRole();
         }
 
         public Builder(AccessPolicyIamRole defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new AccessPolicyIamRole(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
-        }        public AccessPolicyIamRole build() {
-            return new AccessPolicyIamRole(arn);
+        }
+
+        public AccessPolicyIamRole build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.jobs_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.jobs_v3.enums.CompanySize;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="careerSiteUri")
-      private final @Nullable Output<String> careerSiteUri;
+    private @Nullable Output<String> careerSiteUri;
 
-    public Output<String> careerSiteUri() {
-        return this.careerSiteUri == null ? Codegen.empty() : this.careerSiteUri;
+    public Optional<Output<String>> careerSiteUri() {
+        return Optional.ofNullable(this.careerSiteUri);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -45,10 +45,10 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eeoText")
-      private final @Nullable Output<String> eeoText;
+    private @Nullable Output<String> eeoText;
 
-    public Output<String> eeoText() {
-        return this.eeoText == null ? Codegen.empty() : this.eeoText;
+    public Optional<Output<String>> eeoText() {
+        return Optional.ofNullable(this.eeoText);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalId", required=true)
-      private final Output<String> externalId;
+    private Output<String> externalId;
 
     public Output<String> externalId() {
         return this.externalId;
@@ -67,10 +67,10 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="headquartersAddress")
-      private final @Nullable Output<String> headquartersAddress;
+    private @Nullable Output<String> headquartersAddress;
 
-    public Output<String> headquartersAddress() {
-        return this.headquartersAddress == null ? Codegen.empty() : this.headquartersAddress;
+    public Optional<Output<String>> headquartersAddress() {
+        return Optional.ofNullable(this.headquartersAddress);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hiringAgency")
-      private final @Nullable Output<Boolean> hiringAgency;
+    private @Nullable Output<Boolean> hiringAgency;
 
-    public Output<Boolean> hiringAgency() {
-        return this.hiringAgency == null ? Codegen.empty() : this.hiringAgency;
+    public Optional<Output<Boolean>> hiringAgency() {
+        return Optional.ofNullable(this.hiringAgency);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageUri")
-      private final @Nullable Output<String> imageUri;
+    private @Nullable Output<String> imageUri;
 
-    public Output<String> imageUri() {
-        return this.imageUri == null ? Codegen.empty() : this.imageUri;
+    public Optional<Output<String>> imageUri() {
+        return Optional.ofNullable(this.imageUri);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keywordSearchableJobCustomAttributes")
-      private final @Nullable Output<List<String>> keywordSearchableJobCustomAttributes;
+    private @Nullable Output<List<String>> keywordSearchableJobCustomAttributes;
 
-    public Output<List<String>> keywordSearchableJobCustomAttributes() {
-        return this.keywordSearchableJobCustomAttributes == null ? Codegen.empty() : this.keywordSearchableJobCustomAttributes;
+    public Optional<Output<List<String>>> keywordSearchableJobCustomAttributes() {
+        return Optional.ofNullable(this.keywordSearchableJobCustomAttributes);
     }
 
     /**
@@ -111,17 +111,17 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<CompanySize> size;
+    private @Nullable Output<CompanySize> size;
 
-    public Output<CompanySize> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<CompanySize>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -140,196 +140,164 @@ public final class CompanyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="websiteUri")
-      private final @Nullable Output<String> websiteUri;
+    private @Nullable Output<String> websiteUri;
 
-    public Output<String> websiteUri() {
-        return this.websiteUri == null ? Codegen.empty() : this.websiteUri;
+    public Optional<Output<String>> websiteUri() {
+        return Optional.ofNullable(this.websiteUri);
     }
 
-    public CompanyArgs(
-        @Nullable Output<String> careerSiteUri,
-        Output<String> displayName,
-        @Nullable Output<String> eeoText,
-        Output<String> externalId,
-        @Nullable Output<String> headquartersAddress,
-        @Nullable Output<Boolean> hiringAgency,
-        @Nullable Output<String> imageUri,
-        @Nullable Output<List<String>> keywordSearchableJobCustomAttributes,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<CompanySize> size,
-        @Nullable Output<String> websiteUri) {
-        this.careerSiteUri = careerSiteUri;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.eeoText = eeoText;
-        this.externalId = Objects.requireNonNull(externalId, "expected parameter 'externalId' to be non-null");
-        this.headquartersAddress = headquartersAddress;
-        this.hiringAgency = hiringAgency;
-        this.imageUri = imageUri;
-        this.keywordSearchableJobCustomAttributes = keywordSearchableJobCustomAttributes;
-        this.name = name;
-        this.project = project;
-        this.size = size;
-        this.websiteUri = websiteUri;
-    }
+    private CompanyArgs() {}
 
-    private CompanyArgs() {
-        this.careerSiteUri = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.eeoText = Codegen.empty();
-        this.externalId = Codegen.empty();
-        this.headquartersAddress = Codegen.empty();
-        this.hiringAgency = Codegen.empty();
-        this.imageUri = Codegen.empty();
-        this.keywordSearchableJobCustomAttributes = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.size = Codegen.empty();
-        this.websiteUri = Codegen.empty();
+    private CompanyArgs(CompanyArgs $) {
+        this.careerSiteUri = $.careerSiteUri;
+        this.displayName = $.displayName;
+        this.eeoText = $.eeoText;
+        this.externalId = $.externalId;
+        this.headquartersAddress = $.headquartersAddress;
+        this.hiringAgency = $.hiringAgency;
+        this.imageUri = $.imageUri;
+        this.keywordSearchableJobCustomAttributes = $.keywordSearchableJobCustomAttributes;
+        this.name = $.name;
+        this.project = $.project;
+        this.size = $.size;
+        this.websiteUri = $.websiteUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompanyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> careerSiteUri;
-        private Output<String> displayName;
-        private @Nullable Output<String> eeoText;
-        private Output<String> externalId;
-        private @Nullable Output<String> headquartersAddress;
-        private @Nullable Output<Boolean> hiringAgency;
-        private @Nullable Output<String> imageUri;
-        private @Nullable Output<List<String>> keywordSearchableJobCustomAttributes;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<CompanySize> size;
-        private @Nullable Output<String> websiteUri;
+        private CompanyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompanyArgs();
         }
 
         public Builder(CompanyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.careerSiteUri = defaults.careerSiteUri;
-    	      this.displayName = defaults.displayName;
-    	      this.eeoText = defaults.eeoText;
-    	      this.externalId = defaults.externalId;
-    	      this.headquartersAddress = defaults.headquartersAddress;
-    	      this.hiringAgency = defaults.hiringAgency;
-    	      this.imageUri = defaults.imageUri;
-    	      this.keywordSearchableJobCustomAttributes = defaults.keywordSearchableJobCustomAttributes;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.size = defaults.size;
-    	      this.websiteUri = defaults.websiteUri;
+            $ = new CompanyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder careerSiteUri(@Nullable Output<String> careerSiteUri) {
-            this.careerSiteUri = careerSiteUri;
+            $.careerSiteUri = careerSiteUri;
             return this;
         }
-        public Builder careerSiteUri(@Nullable String careerSiteUri) {
-            this.careerSiteUri = Codegen.ofNullable(careerSiteUri);
-            return this;
+
+        public Builder careerSiteUri(String careerSiteUri) {
+            return careerSiteUri(Output.of(careerSiteUri));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder eeoText(@Nullable Output<String> eeoText) {
-            this.eeoText = eeoText;
+            $.eeoText = eeoText;
             return this;
         }
-        public Builder eeoText(@Nullable String eeoText) {
-            this.eeoText = Codegen.ofNullable(eeoText);
-            return this;
+
+        public Builder eeoText(String eeoText) {
+            return eeoText(Output.of(eeoText));
         }
+
         public Builder externalId(Output<String> externalId) {
-            this.externalId = Objects.requireNonNull(externalId);
+            $.externalId = externalId;
             return this;
         }
+
         public Builder externalId(String externalId) {
-            this.externalId = Output.of(Objects.requireNonNull(externalId));
-            return this;
+            return externalId(Output.of(externalId));
         }
+
         public Builder headquartersAddress(@Nullable Output<String> headquartersAddress) {
-            this.headquartersAddress = headquartersAddress;
+            $.headquartersAddress = headquartersAddress;
             return this;
         }
-        public Builder headquartersAddress(@Nullable String headquartersAddress) {
-            this.headquartersAddress = Codegen.ofNullable(headquartersAddress);
-            return this;
+
+        public Builder headquartersAddress(String headquartersAddress) {
+            return headquartersAddress(Output.of(headquartersAddress));
         }
+
         public Builder hiringAgency(@Nullable Output<Boolean> hiringAgency) {
-            this.hiringAgency = hiringAgency;
+            $.hiringAgency = hiringAgency;
             return this;
         }
-        public Builder hiringAgency(@Nullable Boolean hiringAgency) {
-            this.hiringAgency = Codegen.ofNullable(hiringAgency);
-            return this;
+
+        public Builder hiringAgency(Boolean hiringAgency) {
+            return hiringAgency(Output.of(hiringAgency));
         }
+
         public Builder imageUri(@Nullable Output<String> imageUri) {
-            this.imageUri = imageUri;
+            $.imageUri = imageUri;
             return this;
         }
-        public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Codegen.ofNullable(imageUri);
-            return this;
+
+        public Builder imageUri(String imageUri) {
+            return imageUri(Output.of(imageUri));
         }
+
         public Builder keywordSearchableJobCustomAttributes(@Nullable Output<List<String>> keywordSearchableJobCustomAttributes) {
-            this.keywordSearchableJobCustomAttributes = keywordSearchableJobCustomAttributes;
+            $.keywordSearchableJobCustomAttributes = keywordSearchableJobCustomAttributes;
             return this;
         }
-        public Builder keywordSearchableJobCustomAttributes(@Nullable List<String> keywordSearchableJobCustomAttributes) {
-            this.keywordSearchableJobCustomAttributes = Codegen.ofNullable(keywordSearchableJobCustomAttributes);
-            return this;
+
+        public Builder keywordSearchableJobCustomAttributes(List<String> keywordSearchableJobCustomAttributes) {
+            return keywordSearchableJobCustomAttributes(Output.of(keywordSearchableJobCustomAttributes));
         }
+
         public Builder keywordSearchableJobCustomAttributes(String... keywordSearchableJobCustomAttributes) {
             return keywordSearchableJobCustomAttributes(List.of(keywordSearchableJobCustomAttributes));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder size(@Nullable Output<CompanySize> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable CompanySize size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(CompanySize size) {
+            return size(Output.of(size));
         }
+
         public Builder websiteUri(@Nullable Output<String> websiteUri) {
-            this.websiteUri = websiteUri;
+            $.websiteUri = websiteUri;
             return this;
         }
-        public Builder websiteUri(@Nullable String websiteUri) {
-            this.websiteUri = Codegen.ofNullable(websiteUri);
-            return this;
-        }        public CompanyArgs build() {
-            return new CompanyArgs(careerSiteUri, displayName, eeoText, externalId, headquartersAddress, hiringAgency, imageUri, keywordSearchableJobCustomAttributes, name, project, size, websiteUri);
+
+        public Builder websiteUri(String websiteUri) {
+            return websiteUri(Output.of(websiteUri));
+        }
+
+        public CompanyArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.externalId = Objects.requireNonNull($.externalId, "expected parameter 'externalId' to be non-null");
+            return $;
         }
     }
+
 }

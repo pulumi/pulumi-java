@@ -15,78 +15,72 @@ public final class GetProductSetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetProductSetArgs Empty = new GetProductSetArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="productSetId", required=true)
-      private final String productSetId;
+    private String productSetId;
 
     public String productSetId() {
         return this.productSetId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetProductSetArgs(
-        String location,
-        String productSetId,
-        @Nullable String project) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.productSetId = Objects.requireNonNull(productSetId, "expected parameter 'productSetId' to be non-null");
-        this.project = project;
-    }
+    private GetProductSetArgs() {}
 
-    private GetProductSetArgs() {
-        this.location = null;
-        this.productSetId = null;
-        this.project = null;
+    private GetProductSetArgs(GetProductSetArgs $) {
+        this.location = $.location;
+        this.productSetId = $.productSetId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProductSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String productSetId;
-        private @Nullable String project;
+        private GetProductSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProductSetArgs();
         }
 
         public Builder(GetProductSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.productSetId = defaults.productSetId;
-    	      this.project = defaults.project;
+            $ = new GetProductSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder productSetId(String productSetId) {
-            this.productSetId = Objects.requireNonNull(productSetId);
+            $.productSetId = productSetId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetProductSetArgs build() {
-            return new GetProductSetArgs(location, productSetId, project);
+        }
+
+        public GetProductSetArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.productSetId = Objects.requireNonNull($.productSetId, "expected parameter 'productSetId' to be non-null");
+            return $;
         }
     }
+
 }

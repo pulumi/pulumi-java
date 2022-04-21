@@ -6,9 +6,9 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.RateLimitRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class RateLimitRuleListArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<RateLimitRuleArgs>> rules;
+    private @Nullable Output<List<RateLimitRuleArgs>> rules;
 
-    public Output<List<RateLimitRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<RateLimitRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public RateLimitRuleListArgs(@Nullable Output<List<RateLimitRuleArgs>> rules) {
-        this.rules = rules;
-    }
+    private RateLimitRuleListArgs() {}
 
-    private RateLimitRuleListArgs() {
-        this.rules = Codegen.empty();
+    private RateLimitRuleListArgs(RateLimitRuleListArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RateLimitRuleListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RateLimitRuleArgs>> rules;
+        private RateLimitRuleListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RateLimitRuleListArgs();
         }
 
         public Builder(RateLimitRuleListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new RateLimitRuleListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable Output<List<RateLimitRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<RateLimitRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<RateLimitRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(RateLimitRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public RateLimitRuleListArgs build() {
-            return new RateLimitRuleListArgs(rules);
+        }
+
+        public RateLimitRuleListArgs build() {
+            return $;
         }
     }
+
 }

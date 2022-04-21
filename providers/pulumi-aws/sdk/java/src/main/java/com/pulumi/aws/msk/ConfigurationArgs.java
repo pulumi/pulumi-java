@@ -5,10 +5,10 @@ package com.pulumi.aws.msk;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kafkaVersions")
-      private final @Nullable Output<List<String>> kafkaVersions;
+    private @Nullable Output<List<String>> kafkaVersions;
 
-    public Output<List<String>> kafkaVersions() {
-        return this.kafkaVersions == null ? Codegen.empty() : this.kafkaVersions;
+    public Optional<Output<List<String>>> kafkaVersions() {
+        return Optional.ofNullable(this.kafkaVersions);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,92 +54,83 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverProperties", required=true)
-      private final Output<String> serverProperties;
+    private Output<String> serverProperties;
 
     public Output<String> serverProperties() {
         return this.serverProperties;
     }
 
-    public ConfigurationArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> kafkaVersions,
-        @Nullable Output<String> name,
-        Output<String> serverProperties) {
-        this.description = description;
-        this.kafkaVersions = kafkaVersions;
-        this.name = name;
-        this.serverProperties = Objects.requireNonNull(serverProperties, "expected parameter 'serverProperties' to be non-null");
-    }
+    private ConfigurationArgs() {}
 
-    private ConfigurationArgs() {
-        this.description = Codegen.empty();
-        this.kafkaVersions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.serverProperties = Codegen.empty();
+    private ConfigurationArgs(ConfigurationArgs $) {
+        this.description = $.description;
+        this.kafkaVersions = $.kafkaVersions;
+        this.name = $.name;
+        this.serverProperties = $.serverProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> kafkaVersions;
-        private @Nullable Output<String> name;
-        private Output<String> serverProperties;
+        private ConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationArgs();
         }
 
         public Builder(ConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.kafkaVersions = defaults.kafkaVersions;
-    	      this.name = defaults.name;
-    	      this.serverProperties = defaults.serverProperties;
+            $ = new ConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kafkaVersions(@Nullable Output<List<String>> kafkaVersions) {
-            this.kafkaVersions = kafkaVersions;
+            $.kafkaVersions = kafkaVersions;
             return this;
         }
-        public Builder kafkaVersions(@Nullable List<String> kafkaVersions) {
-            this.kafkaVersions = Codegen.ofNullable(kafkaVersions);
-            return this;
+
+        public Builder kafkaVersions(List<String> kafkaVersions) {
+            return kafkaVersions(Output.of(kafkaVersions));
         }
+
         public Builder kafkaVersions(String... kafkaVersions) {
             return kafkaVersions(List.of(kafkaVersions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder serverProperties(Output<String> serverProperties) {
-            this.serverProperties = Objects.requireNonNull(serverProperties);
+            $.serverProperties = serverProperties;
             return this;
         }
+
         public Builder serverProperties(String serverProperties) {
-            this.serverProperties = Output.of(Objects.requireNonNull(serverProperties));
-            return this;
-        }        public ConfigurationArgs build() {
-            return new ConfigurationArgs(description, kafkaVersions, name, serverProperties);
+            return serverProperties(Output.of(serverProperties));
+        }
+
+        public ConfigurationArgs build() {
+            $.serverProperties = Objects.requireNonNull($.serverProperties, "expected parameter 'serverProperties' to be non-null");
+            return $;
         }
     }
+
 }

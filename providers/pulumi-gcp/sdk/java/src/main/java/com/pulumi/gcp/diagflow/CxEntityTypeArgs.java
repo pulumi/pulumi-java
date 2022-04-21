@@ -5,13 +5,13 @@ package com.pulumi.gcp.diagflow;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxEntityTypeEntityArgs;
 import com.pulumi.gcp.diagflow.inputs.CxEntityTypeExcludedPhraseArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoExpansionMode")
-      private final @Nullable Output<String> autoExpansionMode;
+    private @Nullable Output<String> autoExpansionMode;
 
-    public Output<String> autoExpansionMode() {
-        return this.autoExpansionMode == null ? Codegen.empty() : this.autoExpansionMode;
+    public Optional<Output<String>> autoExpansionMode() {
+        return Optional.ofNullable(this.autoExpansionMode);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -49,10 +49,10 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableFuzzyExtraction")
-      private final @Nullable Output<Boolean> enableFuzzyExtraction;
+    private @Nullable Output<Boolean> enableFuzzyExtraction;
 
-    public Output<Boolean> enableFuzzyExtraction() {
-        return this.enableFuzzyExtraction == null ? Codegen.empty() : this.enableFuzzyExtraction;
+    public Optional<Output<Boolean>> enableFuzzyExtraction() {
+        return Optional.ofNullable(this.enableFuzzyExtraction);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entities", required=true)
-      private final Output<List<CxEntityTypeEntityArgs>> entities;
+    private Output<List<CxEntityTypeEntityArgs>> entities;
 
     public Output<List<CxEntityTypeEntityArgs>> entities() {
         return this.entities;
@@ -74,10 +74,10 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludedPhrases")
-      private final @Nullable Output<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases;
+    private @Nullable Output<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases;
 
-    public Output<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases() {
-        return this.excludedPhrases == null ? Codegen.empty() : this.excludedPhrases;
+    public Optional<Output<List<CxEntityTypeExcludedPhraseArgs>>> excludedPhrases() {
+        return Optional.ofNullable(this.excludedPhrases);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -104,10 +104,10 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -127,160 +127,139 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redact")
-      private final @Nullable Output<Boolean> redact;
+    private @Nullable Output<Boolean> redact;
 
-    public Output<Boolean> redact() {
-        return this.redact == null ? Codegen.empty() : this.redact;
+    public Optional<Output<Boolean>> redact() {
+        return Optional.ofNullable(this.redact);
     }
 
-    public CxEntityTypeArgs(
-        @Nullable Output<String> autoExpansionMode,
-        Output<String> displayName,
-        @Nullable Output<Boolean> enableFuzzyExtraction,
-        Output<List<CxEntityTypeEntityArgs>> entities,
-        @Nullable Output<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases,
-        Output<String> kind,
-        @Nullable Output<String> languageCode,
-        @Nullable Output<String> parent,
-        @Nullable Output<Boolean> redact) {
-        this.autoExpansionMode = autoExpansionMode;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enableFuzzyExtraction = enableFuzzyExtraction;
-        this.entities = Objects.requireNonNull(entities, "expected parameter 'entities' to be non-null");
-        this.excludedPhrases = excludedPhrases;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.languageCode = languageCode;
-        this.parent = parent;
-        this.redact = redact;
-    }
+    private CxEntityTypeArgs() {}
 
-    private CxEntityTypeArgs() {
-        this.autoExpansionMode = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enableFuzzyExtraction = Codegen.empty();
-        this.entities = Codegen.empty();
-        this.excludedPhrases = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.languageCode = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.redact = Codegen.empty();
+    private CxEntityTypeArgs(CxEntityTypeArgs $) {
+        this.autoExpansionMode = $.autoExpansionMode;
+        this.displayName = $.displayName;
+        this.enableFuzzyExtraction = $.enableFuzzyExtraction;
+        this.entities = $.entities;
+        this.excludedPhrases = $.excludedPhrases;
+        this.kind = $.kind;
+        this.languageCode = $.languageCode;
+        this.parent = $.parent;
+        this.redact = $.redact;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxEntityTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoExpansionMode;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> enableFuzzyExtraction;
-        private Output<List<CxEntityTypeEntityArgs>> entities;
-        private @Nullable Output<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases;
-        private Output<String> kind;
-        private @Nullable Output<String> languageCode;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<Boolean> redact;
+        private CxEntityTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxEntityTypeArgs();
         }
 
         public Builder(CxEntityTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoExpansionMode = defaults.autoExpansionMode;
-    	      this.displayName = defaults.displayName;
-    	      this.enableFuzzyExtraction = defaults.enableFuzzyExtraction;
-    	      this.entities = defaults.entities;
-    	      this.excludedPhrases = defaults.excludedPhrases;
-    	      this.kind = defaults.kind;
-    	      this.languageCode = defaults.languageCode;
-    	      this.parent = defaults.parent;
-    	      this.redact = defaults.redact;
+            $ = new CxEntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoExpansionMode(@Nullable Output<String> autoExpansionMode) {
-            this.autoExpansionMode = autoExpansionMode;
+            $.autoExpansionMode = autoExpansionMode;
             return this;
         }
-        public Builder autoExpansionMode(@Nullable String autoExpansionMode) {
-            this.autoExpansionMode = Codegen.ofNullable(autoExpansionMode);
-            return this;
+
+        public Builder autoExpansionMode(String autoExpansionMode) {
+            return autoExpansionMode(Output.of(autoExpansionMode));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
-            this.enableFuzzyExtraction = enableFuzzyExtraction;
+            $.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
-        public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
-            this.enableFuzzyExtraction = Codegen.ofNullable(enableFuzzyExtraction);
-            return this;
+
+        public Builder enableFuzzyExtraction(Boolean enableFuzzyExtraction) {
+            return enableFuzzyExtraction(Output.of(enableFuzzyExtraction));
         }
+
         public Builder entities(Output<List<CxEntityTypeEntityArgs>> entities) {
-            this.entities = Objects.requireNonNull(entities);
+            $.entities = entities;
             return this;
         }
+
         public Builder entities(List<CxEntityTypeEntityArgs> entities) {
-            this.entities = Output.of(Objects.requireNonNull(entities));
-            return this;
+            return entities(Output.of(entities));
         }
+
         public Builder entities(CxEntityTypeEntityArgs... entities) {
             return entities(List.of(entities));
         }
+
         public Builder excludedPhrases(@Nullable Output<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases) {
-            this.excludedPhrases = excludedPhrases;
+            $.excludedPhrases = excludedPhrases;
             return this;
         }
-        public Builder excludedPhrases(@Nullable List<CxEntityTypeExcludedPhraseArgs> excludedPhrases) {
-            this.excludedPhrases = Codegen.ofNullable(excludedPhrases);
-            return this;
+
+        public Builder excludedPhrases(List<CxEntityTypeExcludedPhraseArgs> excludedPhrases) {
+            return excludedPhrases(Output.of(excludedPhrases));
         }
+
         public Builder excludedPhrases(CxEntityTypeExcludedPhraseArgs... excludedPhrases) {
             return excludedPhrases(List.of(excludedPhrases));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder redact(@Nullable Output<Boolean> redact) {
-            this.redact = redact;
+            $.redact = redact;
             return this;
         }
-        public Builder redact(@Nullable Boolean redact) {
-            this.redact = Codegen.ofNullable(redact);
-            return this;
-        }        public CxEntityTypeArgs build() {
-            return new CxEntityTypeArgs(autoExpansionMode, displayName, enableFuzzyExtraction, entities, excludedPhrases, kind, languageCode, parent, redact);
+
+        public Builder redact(Boolean redact) {
+            return redact(Output.of(redact));
+        }
+
+        public CxEntityTypeArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.entities = Objects.requireNonNull($.entities, "expected parameter 'entities' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

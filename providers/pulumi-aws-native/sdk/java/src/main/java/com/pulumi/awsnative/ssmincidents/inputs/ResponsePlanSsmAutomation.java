@@ -26,7 +26,7 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="documentName", required=true)
-      private final String documentName;
+    private String documentName;
 
     public String documentName() {
         return this.documentName;
@@ -37,10 +37,10 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="documentVersion")
-      private final @Nullable String documentVersion;
+    private @Nullable String documentVersion;
 
     public Optional<String> documentVersion() {
-        return this.documentVersion == null ? Optional.empty() : Optional.ofNullable(this.documentVersion);
+        return Optional.ofNullable(this.documentVersion);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parameters")
-      private final @Nullable List<ResponsePlanSsmParameter> parameters;
+    private @Nullable List<ResponsePlanSsmParameter> parameters;
 
-    public List<ResponsePlanSsmParameter> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<ResponsePlanSsmParameter>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
@@ -70,85 +70,74 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetAccount")
-      private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
+    private @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
 
     public Optional<ResponsePlanSsmAutomationTargetAccount> targetAccount() {
-        return this.targetAccount == null ? Optional.empty() : Optional.ofNullable(this.targetAccount);
+        return Optional.ofNullable(this.targetAccount);
     }
 
-    public ResponsePlanSsmAutomation(
-        String documentName,
-        @Nullable String documentVersion,
-        @Nullable List<ResponsePlanSsmParameter> parameters,
-        String roleArn,
-        @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
-        this.documentName = Objects.requireNonNull(documentName, "expected parameter 'documentName' to be non-null");
-        this.documentVersion = documentVersion;
-        this.parameters = parameters;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.targetAccount = targetAccount;
-    }
+    private ResponsePlanSsmAutomation() {}
 
-    private ResponsePlanSsmAutomation() {
-        this.documentName = null;
-        this.documentVersion = null;
-        this.parameters = List.of();
-        this.roleArn = null;
-        this.targetAccount = null;
+    private ResponsePlanSsmAutomation(ResponsePlanSsmAutomation $) {
+        this.documentName = $.documentName;
+        this.documentVersion = $.documentVersion;
+        this.parameters = $.parameters;
+        this.roleArn = $.roleArn;
+        this.targetAccount = $.targetAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanSsmAutomation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String documentName;
-        private @Nullable String documentVersion;
-        private @Nullable List<ResponsePlanSsmParameter> parameters;
-        private String roleArn;
-        private @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
+        private ResponsePlanSsmAutomation $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanSsmAutomation();
         }
 
         public Builder(ResponsePlanSsmAutomation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentName = defaults.documentName;
-    	      this.documentVersion = defaults.documentVersion;
-    	      this.parameters = defaults.parameters;
-    	      this.roleArn = defaults.roleArn;
-    	      this.targetAccount = defaults.targetAccount;
+            $ = new ResponsePlanSsmAutomation(Objects.requireNonNull(defaults));
         }
 
         public Builder documentName(String documentName) {
-            this.documentName = Objects.requireNonNull(documentName);
+            $.documentName = documentName;
             return this;
         }
+
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = documentVersion;
+            $.documentVersion = documentVersion;
             return this;
         }
+
         public Builder parameters(@Nullable List<ResponsePlanSsmParameter> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(ResponsePlanSsmParameter... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder targetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
-            this.targetAccount = targetAccount;
+            $.targetAccount = targetAccount;
             return this;
-        }        public ResponsePlanSsmAutomation build() {
-            return new ResponsePlanSsmAutomation(documentName, documentVersion, parameters, roleArn, targetAccount);
+        }
+
+        public ResponsePlanSsmAutomation build() {
+            $.documentName = Objects.requireNonNull($.documentName, "expected parameter 'documentName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

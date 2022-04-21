@@ -5,7 +5,6 @@ package com.pulumi.gcp.spanner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class DatabaseEncryptionConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final Output<String> kmsKeyName;
+    private Output<String> kmsKeyName;
 
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public DatabaseEncryptionConfigArgs(Output<String> kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private DatabaseEncryptionConfigArgs() {}
 
-    private DatabaseEncryptionConfigArgs() {
-        this.kmsKeyName = Codegen.empty();
+    private DatabaseEncryptionConfigArgs(DatabaseEncryptionConfigArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseEncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kmsKeyName;
+        private DatabaseEncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseEncryptionConfigArgs();
         }
 
         public Builder(DatabaseEncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new DatabaseEncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(Output<String> kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
+
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
-            return this;
-        }        public DatabaseEncryptionConfigArgs build() {
-            return new DatabaseEncryptionConfigArgs(kmsKeyName);
+            return kmsKeyName(Output.of(kmsKeyName));
+        }
+
+        public DatabaseEncryptionConfigArgs build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

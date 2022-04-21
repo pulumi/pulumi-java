@@ -5,9 +5,9 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionArgs extends com.pu
      * 
      */
     @Import(name="redirectUri")
-      private final @Nullable Output<String> redirectUri;
+    private @Nullable Output<String> redirectUri;
 
-    public Output<String> redirectUri() {
-        return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
+    public Optional<Output<String>> redirectUri() {
+        return Optional.ofNullable(this.redirectUri);
     }
 
-    public GoogleCloudRetailV2alphaRuleRedirectActionArgs(@Nullable Output<String> redirectUri) {
-        this.redirectUri = redirectUri;
-    }
+    private GoogleCloudRetailV2alphaRuleRedirectActionArgs() {}
 
-    private GoogleCloudRetailV2alphaRuleRedirectActionArgs() {
-        this.redirectUri = Codegen.empty();
+    private GoogleCloudRetailV2alphaRuleRedirectActionArgs(GoogleCloudRetailV2alphaRuleRedirectActionArgs $) {
+        this.redirectUri = $.redirectUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRuleRedirectActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> redirectUri;
+        private GoogleCloudRetailV2alphaRuleRedirectActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRuleRedirectActionArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaRuleRedirectActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.redirectUri = defaults.redirectUri;
+            $ = new GoogleCloudRetailV2alphaRuleRedirectActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder redirectUri(@Nullable Output<String> redirectUri) {
-            this.redirectUri = redirectUri;
+            $.redirectUri = redirectUri;
             return this;
         }
-        public Builder redirectUri(@Nullable String redirectUri) {
-            this.redirectUri = Codegen.ofNullable(redirectUri);
-            return this;
-        }        public GoogleCloudRetailV2alphaRuleRedirectActionArgs build() {
-            return new GoogleCloudRetailV2alphaRuleRedirectActionArgs(redirectUri);
+
+        public Builder redirectUri(String redirectUri) {
+            return redirectUri(Output.of(redirectUri));
+        }
+
+        public GoogleCloudRetailV2alphaRuleRedirectActionArgs build() {
+            return $;
         }
     }
+
 }

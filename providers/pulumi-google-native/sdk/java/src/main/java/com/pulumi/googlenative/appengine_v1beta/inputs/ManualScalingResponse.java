@@ -21,45 +21,45 @@ public final class ManualScalingResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="instances", required=true)
-      private final Integer instances;
+    private Integer instances;
 
     public Integer instances() {
         return this.instances;
     }
 
-    public ManualScalingResponse(Integer instances) {
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-    }
+    private ManualScalingResponse() {}
 
-    private ManualScalingResponse() {
-        this.instances = null;
+    private ManualScalingResponse(ManualScalingResponse $) {
+        this.instances = $.instances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManualScalingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer instances;
+        private ManualScalingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManualScalingResponse();
         }
 
         public Builder(ManualScalingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
+            $ = new ManualScalingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(Integer instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
-        }        public ManualScalingResponse build() {
-            return new ManualScalingResponse(instances);
+        }
+
+        public ManualScalingResponse build() {
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            return $;
         }
     }
+
 }

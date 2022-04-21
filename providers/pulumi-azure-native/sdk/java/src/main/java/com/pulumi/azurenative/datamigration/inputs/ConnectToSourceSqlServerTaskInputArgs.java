@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
      * 
      */
     @Import(name="checkPermissionsGroup")
-      private final @Nullable Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup;
+    private @Nullable Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup;
 
-    public Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup() {
-        return this.checkPermissionsGroup == null ? Codegen.empty() : this.checkPermissionsGroup;
+    public Optional<Output<Either<String,ServerLevelPermissionsGroup>>> checkPermissionsGroup() {
+        return Optional.ofNullable(this.checkPermissionsGroup);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
      * 
      */
     @Import(name="collectAgentJobs")
-      private final @Nullable Output<Boolean> collectAgentJobs;
+    private @Nullable Output<Boolean> collectAgentJobs;
 
-    public Output<Boolean> collectAgentJobs() {
-        return this.collectAgentJobs == null ? Codegen.empty() : this.collectAgentJobs;
+    public Optional<Output<Boolean>> collectAgentJobs() {
+        return Optional.ofNullable(this.collectAgentJobs);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
      * 
      */
     @Import(name="collectLogins")
-      private final @Nullable Output<Boolean> collectLogins;
+    private @Nullable Output<Boolean> collectLogins;
 
-    public Output<Boolean> collectLogins() {
-        return this.collectLogins == null ? Codegen.empty() : this.collectLogins;
+    public Optional<Output<Boolean>> collectLogins() {
+        return Optional.ofNullable(this.collectLogins);
     }
 
     /**
@@ -61,89 +62,81 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
+    private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
-    public ConnectToSourceSqlServerTaskInputArgs(
-        @Nullable Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup,
-        @Nullable Output<Boolean> collectAgentJobs,
-        @Nullable Output<Boolean> collectLogins,
-        Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
-        this.checkPermissionsGroup = checkPermissionsGroup;
-        this.collectAgentJobs = Codegen.booleanProp("collectAgentJobs").output().arg(collectAgentJobs).def(false).getNullable();
-        this.collectLogins = Codegen.booleanProp("collectLogins").output().arg(collectLogins).def(false).getNullable();
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-    }
+    private ConnectToSourceSqlServerTaskInputArgs() {}
 
-    private ConnectToSourceSqlServerTaskInputArgs() {
-        this.checkPermissionsGroup = Codegen.empty();
-        this.collectAgentJobs = Codegen.empty();
-        this.collectLogins = Codegen.empty();
-        this.sourceConnectionInfo = Codegen.empty();
+    private ConnectToSourceSqlServerTaskInputArgs(ConnectToSourceSqlServerTaskInputArgs $) {
+        this.checkPermissionsGroup = $.checkPermissionsGroup;
+        this.collectAgentJobs = $.collectAgentJobs;
+        this.collectLogins = $.collectLogins;
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToSourceSqlServerTaskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup;
-        private @Nullable Output<Boolean> collectAgentJobs;
-        private @Nullable Output<Boolean> collectLogins;
-        private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
+        private ConnectToSourceSqlServerTaskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToSourceSqlServerTaskInputArgs();
         }
 
         public Builder(ConnectToSourceSqlServerTaskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkPermissionsGroup = defaults.checkPermissionsGroup;
-    	      this.collectAgentJobs = defaults.collectAgentJobs;
-    	      this.collectLogins = defaults.collectLogins;
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
+            $ = new ConnectToSourceSqlServerTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checkPermissionsGroup(@Nullable Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup) {
-            this.checkPermissionsGroup = checkPermissionsGroup;
+            $.checkPermissionsGroup = checkPermissionsGroup;
             return this;
         }
-        public Builder checkPermissionsGroup(@Nullable Either<String,ServerLevelPermissionsGroup> checkPermissionsGroup) {
-            this.checkPermissionsGroup = Codegen.ofNullable(checkPermissionsGroup);
-            return this;
+
+        public Builder checkPermissionsGroup(Either<String,ServerLevelPermissionsGroup> checkPermissionsGroup) {
+            return checkPermissionsGroup(Output.of(checkPermissionsGroup));
         }
+
         public Builder collectAgentJobs(@Nullable Output<Boolean> collectAgentJobs) {
-            this.collectAgentJobs = collectAgentJobs;
+            $.collectAgentJobs = collectAgentJobs;
             return this;
         }
-        public Builder collectAgentJobs(@Nullable Boolean collectAgentJobs) {
-            this.collectAgentJobs = Codegen.ofNullable(collectAgentJobs);
-            return this;
+
+        public Builder collectAgentJobs(Boolean collectAgentJobs) {
+            return collectAgentJobs(Output.of(collectAgentJobs));
         }
+
         public Builder collectLogins(@Nullable Output<Boolean> collectLogins) {
-            this.collectLogins = collectLogins;
+            $.collectLogins = collectLogins;
             return this;
         }
-        public Builder collectLogins(@Nullable Boolean collectLogins) {
-            this.collectLogins = Codegen.ofNullable(collectLogins);
-            return this;
+
+        public Builder collectLogins(Boolean collectLogins) {
+            return collectLogins(Output.of(collectLogins));
         }
+
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
-            this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
-            return this;
-        }        public ConnectToSourceSqlServerTaskInputArgs build() {
-            return new ConnectToSourceSqlServerTaskInputArgs(checkPermissionsGroup, collectAgentJobs, collectLogins, sourceConnectionInfo);
+            return sourceConnectionInfo(Output.of(sourceConnectionInfo));
+        }
+
+        public ConnectToSourceSqlServerTaskInputArgs build() {
+            $.collectAgentJobs = Codegen.booleanProp("collectAgentJobs").output().arg($.collectAgentJobs).def(false).getNullable();
+            $.collectLogins = Codegen.booleanProp("collectLogins").output().arg($.collectLogins).def(false).getNullable();
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

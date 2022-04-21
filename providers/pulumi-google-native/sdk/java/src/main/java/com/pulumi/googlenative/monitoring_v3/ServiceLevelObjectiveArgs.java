@@ -5,13 +5,13 @@ package com.pulumi.googlenative.monitoring_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.enums.ServiceLevelObjectiveCalendarPeriod;
 import com.pulumi.googlenative.monitoring_v3.inputs.ServiceLevelIndicatorArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="calendarPeriod")
-      private final @Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
+    private @Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
 
-    public Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod() {
-        return this.calendarPeriod == null ? Codegen.empty() : this.calendarPeriod;
+    public Optional<Output<ServiceLevelObjectiveCalendarPeriod>> calendarPeriod() {
+        return Optional.ofNullable(this.calendarPeriod);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="goal")
-      private final @Nullable Output<Double> goal;
+    private @Nullable Output<Double> goal;
 
-    public Output<Double> goal() {
-        return this.goal == null ? Codegen.empty() : this.goal;
+    public Optional<Output<Double>> goal() {
+        return Optional.ofNullable(this.goal);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,14 +68,14 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="rollingPeriod")
-      private final @Nullable Output<String> rollingPeriod;
+    private @Nullable Output<String> rollingPeriod;
 
-    public Output<String> rollingPeriod() {
-        return this.rollingPeriod == null ? Codegen.empty() : this.rollingPeriod;
+    public Optional<Output<String>> rollingPeriod() {
+        return Optional.ofNullable(this.rollingPeriod);
     }
 
     @Import(name="serviceId", required=true)
-      private final Output<String> serviceId;
+    private Output<String> serviceId;
 
     public Output<String> serviceId() {
         return this.serviceId;
@@ -86,17 +86,17 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serviceLevelIndicator")
-      private final @Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator;
+    private @Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator;
 
-    public Output<ServiceLevelIndicatorArgs> serviceLevelIndicator() {
-        return this.serviceLevelIndicator == null ? Codegen.empty() : this.serviceLevelIndicator;
+    public Optional<Output<ServiceLevelIndicatorArgs>> serviceLevelIndicator() {
+        return Optional.ofNullable(this.serviceLevelIndicator);
     }
 
     @Import(name="serviceLevelObjectiveId")
-      private final @Nullable Output<String> serviceLevelObjectiveId;
+    private @Nullable Output<String> serviceLevelObjectiveId;
 
-    public Output<String> serviceLevelObjectiveId() {
-        return this.serviceLevelObjectiveId == null ? Codegen.empty() : this.serviceLevelObjectiveId;
+    public Optional<Output<String>> serviceLevelObjectiveId() {
+        return Optional.ofNullable(this.serviceLevelObjectiveId);
     }
 
     /**
@@ -104,194 +104,165 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="userLabels")
-      private final @Nullable Output<Map<String,String>> userLabels;
+    private @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> userLabels() {
-        return this.userLabels == null ? Codegen.empty() : this.userLabels;
+    public Optional<Output<Map<String,String>>> userLabels() {
+        return Optional.ofNullable(this.userLabels);
     }
 
     @Import(name="v3Id", required=true)
-      private final Output<String> v3Id;
+    private Output<String> v3Id;
 
     public Output<String> v3Id() {
         return this.v3Id;
     }
 
     @Import(name="v3Id1", required=true)
-      private final Output<String> v3Id1;
+    private Output<String> v3Id1;
 
     public Output<String> v3Id1() {
         return this.v3Id1;
     }
 
-    public ServiceLevelObjectiveArgs(
-        @Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Double> goal,
-        @Nullable Output<String> name,
-        @Nullable Output<String> rollingPeriod,
-        Output<String> serviceId,
-        @Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator,
-        @Nullable Output<String> serviceLevelObjectiveId,
-        @Nullable Output<Map<String,String>> userLabels,
-        Output<String> v3Id,
-        Output<String> v3Id1) {
-        this.calendarPeriod = calendarPeriod;
-        this.displayName = displayName;
-        this.goal = goal;
-        this.name = name;
-        this.rollingPeriod = rollingPeriod;
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-        this.serviceLevelIndicator = serviceLevelIndicator;
-        this.serviceLevelObjectiveId = serviceLevelObjectiveId;
-        this.userLabels = userLabels;
-        this.v3Id = Objects.requireNonNull(v3Id, "expected parameter 'v3Id' to be non-null");
-        this.v3Id1 = Objects.requireNonNull(v3Id1, "expected parameter 'v3Id1' to be non-null");
-    }
+    private ServiceLevelObjectiveArgs() {}
 
-    private ServiceLevelObjectiveArgs() {
-        this.calendarPeriod = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.goal = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rollingPeriod = Codegen.empty();
-        this.serviceId = Codegen.empty();
-        this.serviceLevelIndicator = Codegen.empty();
-        this.serviceLevelObjectiveId = Codegen.empty();
-        this.userLabels = Codegen.empty();
-        this.v3Id = Codegen.empty();
-        this.v3Id1 = Codegen.empty();
+    private ServiceLevelObjectiveArgs(ServiceLevelObjectiveArgs $) {
+        this.calendarPeriod = $.calendarPeriod;
+        this.displayName = $.displayName;
+        this.goal = $.goal;
+        this.name = $.name;
+        this.rollingPeriod = $.rollingPeriod;
+        this.serviceId = $.serviceId;
+        this.serviceLevelIndicator = $.serviceLevelIndicator;
+        this.serviceLevelObjectiveId = $.serviceLevelObjectiveId;
+        this.userLabels = $.userLabels;
+        this.v3Id = $.v3Id;
+        this.v3Id1 = $.v3Id1;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceLevelObjectiveArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Double> goal;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> rollingPeriod;
-        private Output<String> serviceId;
-        private @Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator;
-        private @Nullable Output<String> serviceLevelObjectiveId;
-        private @Nullable Output<Map<String,String>> userLabels;
-        private Output<String> v3Id;
-        private Output<String> v3Id1;
+        private ServiceLevelObjectiveArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceLevelObjectiveArgs();
         }
 
         public Builder(ServiceLevelObjectiveArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.calendarPeriod = defaults.calendarPeriod;
-    	      this.displayName = defaults.displayName;
-    	      this.goal = defaults.goal;
-    	      this.name = defaults.name;
-    	      this.rollingPeriod = defaults.rollingPeriod;
-    	      this.serviceId = defaults.serviceId;
-    	      this.serviceLevelIndicator = defaults.serviceLevelIndicator;
-    	      this.serviceLevelObjectiveId = defaults.serviceLevelObjectiveId;
-    	      this.userLabels = defaults.userLabels;
-    	      this.v3Id = defaults.v3Id;
-    	      this.v3Id1 = defaults.v3Id1;
+            $ = new ServiceLevelObjectiveArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder calendarPeriod(@Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod) {
-            this.calendarPeriod = calendarPeriod;
+            $.calendarPeriod = calendarPeriod;
             return this;
         }
-        public Builder calendarPeriod(@Nullable ServiceLevelObjectiveCalendarPeriod calendarPeriod) {
-            this.calendarPeriod = Codegen.ofNullable(calendarPeriod);
-            return this;
+
+        public Builder calendarPeriod(ServiceLevelObjectiveCalendarPeriod calendarPeriod) {
+            return calendarPeriod(Output.of(calendarPeriod));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder goal(@Nullable Output<Double> goal) {
-            this.goal = goal;
+            $.goal = goal;
             return this;
         }
-        public Builder goal(@Nullable Double goal) {
-            this.goal = Codegen.ofNullable(goal);
-            return this;
+
+        public Builder goal(Double goal) {
+            return goal(Output.of(goal));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rollingPeriod(@Nullable Output<String> rollingPeriod) {
-            this.rollingPeriod = rollingPeriod;
+            $.rollingPeriod = rollingPeriod;
             return this;
         }
-        public Builder rollingPeriod(@Nullable String rollingPeriod) {
-            this.rollingPeriod = Codegen.ofNullable(rollingPeriod);
-            return this;
+
+        public Builder rollingPeriod(String rollingPeriod) {
+            return rollingPeriod(Output.of(rollingPeriod));
         }
+
         public Builder serviceId(Output<String> serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
         }
+
         public Builder serviceId(String serviceId) {
-            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
-            return this;
+            return serviceId(Output.of(serviceId));
         }
+
         public Builder serviceLevelIndicator(@Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator) {
-            this.serviceLevelIndicator = serviceLevelIndicator;
+            $.serviceLevelIndicator = serviceLevelIndicator;
             return this;
         }
-        public Builder serviceLevelIndicator(@Nullable ServiceLevelIndicatorArgs serviceLevelIndicator) {
-            this.serviceLevelIndicator = Codegen.ofNullable(serviceLevelIndicator);
-            return this;
+
+        public Builder serviceLevelIndicator(ServiceLevelIndicatorArgs serviceLevelIndicator) {
+            return serviceLevelIndicator(Output.of(serviceLevelIndicator));
         }
+
         public Builder serviceLevelObjectiveId(@Nullable Output<String> serviceLevelObjectiveId) {
-            this.serviceLevelObjectiveId = serviceLevelObjectiveId;
+            $.serviceLevelObjectiveId = serviceLevelObjectiveId;
             return this;
         }
-        public Builder serviceLevelObjectiveId(@Nullable String serviceLevelObjectiveId) {
-            this.serviceLevelObjectiveId = Codegen.ofNullable(serviceLevelObjectiveId);
-            return this;
+
+        public Builder serviceLevelObjectiveId(String serviceLevelObjectiveId) {
+            return serviceLevelObjectiveId(Output.of(serviceLevelObjectiveId));
         }
+
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
-            this.userLabels = userLabels;
+            $.userLabels = userLabels;
             return this;
         }
-        public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Codegen.ofNullable(userLabels);
-            return this;
+
+        public Builder userLabels(Map<String,String> userLabels) {
+            return userLabels(Output.of(userLabels));
         }
+
         public Builder v3Id(Output<String> v3Id) {
-            this.v3Id = Objects.requireNonNull(v3Id);
+            $.v3Id = v3Id;
             return this;
         }
+
         public Builder v3Id(String v3Id) {
-            this.v3Id = Output.of(Objects.requireNonNull(v3Id));
-            return this;
+            return v3Id(Output.of(v3Id));
         }
+
         public Builder v3Id1(Output<String> v3Id1) {
-            this.v3Id1 = Objects.requireNonNull(v3Id1);
+            $.v3Id1 = v3Id1;
             return this;
         }
+
         public Builder v3Id1(String v3Id1) {
-            this.v3Id1 = Output.of(Objects.requireNonNull(v3Id1));
-            return this;
-        }        public ServiceLevelObjectiveArgs build() {
-            return new ServiceLevelObjectiveArgs(calendarPeriod, displayName, goal, name, rollingPeriod, serviceId, serviceLevelIndicator, serviceLevelObjectiveId, userLabels, v3Id, v3Id1);
+            return v3Id1(Output.of(v3Id1));
+        }
+
+        public ServiceLevelObjectiveArgs build() {
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            $.v3Id = Objects.requireNonNull($.v3Id, "expected parameter 'v3Id' to be non-null");
+            $.v3Id1 = Objects.requireNonNull($.v3Id1, "expected parameter 'v3Id1' to be non-null");
+            return $;
         }
     }
+
 }

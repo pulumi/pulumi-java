@@ -7,9 +7,9 @@ import com.pulumi.azurenative.migrate.enums.ResourceIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ResourceIdentityType>> type;
+    private @Nullable Output<Either<String,ResourceIdentityType>> type;
 
-    public Output<Either<String,ResourceIdentityType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ResourceIdentityType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public IdentityArgs(
-        @Nullable Output<String> principalId,
-        @Nullable Output<String> tenantId,
-        @Nullable Output<Either<String,ResourceIdentityType>> type) {
-        this.principalId = principalId;
-        this.tenantId = tenantId;
-        this.type = type;
-    }
+    private IdentityArgs() {}
 
-    private IdentityArgs() {
-        this.principalId = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.type = Codegen.empty();
+    private IdentityArgs(IdentityArgs $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> principalId;
-        private @Nullable Output<String> tenantId;
-        private @Nullable Output<Either<String,ResourceIdentityType>> type;
+        private IdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityArgs();
         }
 
         public Builder(IdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new IdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder type(@Nullable Output<Either<String,ResourceIdentityType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ResourceIdentityType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public IdentityArgs build() {
-            return new IdentityArgs(principalId, tenantId, type);
+
+        public Builder type(Either<String,ResourceIdentityType> type) {
+            return type(Output.of(type));
+        }
+
+        public IdentityArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class HttpResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fullyDecodeReservedExpansion", required=true)
-      private final Boolean fullyDecodeReservedExpansion;
+    private Boolean fullyDecodeReservedExpansion;
 
     public Boolean fullyDecodeReservedExpansion() {
         return this.fullyDecodeReservedExpansion;
@@ -34,58 +34,56 @@ public final class HttpResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rules", required=true)
-      private final List<HttpRuleResponse> rules;
+    private List<HttpRuleResponse> rules;
 
     public List<HttpRuleResponse> rules() {
         return this.rules;
     }
 
-    public HttpResponse(
-        Boolean fullyDecodeReservedExpansion,
-        List<HttpRuleResponse> rules) {
-        this.fullyDecodeReservedExpansion = Objects.requireNonNull(fullyDecodeReservedExpansion, "expected parameter 'fullyDecodeReservedExpansion' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private HttpResponse() {}
 
-    private HttpResponse() {
-        this.fullyDecodeReservedExpansion = null;
-        this.rules = List.of();
+    private HttpResponse(HttpResponse $) {
+        this.fullyDecodeReservedExpansion = $.fullyDecodeReservedExpansion;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean fullyDecodeReservedExpansion;
-        private List<HttpRuleResponse> rules;
+        private HttpResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpResponse();
         }
 
         public Builder(HttpResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fullyDecodeReservedExpansion = defaults.fullyDecodeReservedExpansion;
-    	      this.rules = defaults.rules;
+            $ = new HttpResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fullyDecodeReservedExpansion(Boolean fullyDecodeReservedExpansion) {
-            this.fullyDecodeReservedExpansion = Objects.requireNonNull(fullyDecodeReservedExpansion);
+            $.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
             return this;
         }
+
         public Builder rules(List<HttpRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(HttpRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public HttpResponse build() {
-            return new HttpResponse(fullyDecodeReservedExpansion, rules);
+        }
+
+        public HttpResponse build() {
+            $.fullyDecodeReservedExpansion = Objects.requireNonNull($.fullyDecodeReservedExpansion, "expected parameter 'fullyDecodeReservedExpansion' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

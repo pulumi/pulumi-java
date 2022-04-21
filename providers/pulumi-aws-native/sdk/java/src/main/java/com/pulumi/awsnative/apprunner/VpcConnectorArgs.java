@@ -6,10 +6,10 @@ package com.pulumi.awsnative.apprunner;
 import com.pulumi.awsnative.apprunner.inputs.VpcConnectorTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VpcConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class VpcConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnets", required=true)
-      private final Output<List<String>> subnets;
+    private Output<List<String>> subnets;
 
     public Output<List<String>> subnets() {
         return this.subnets;
@@ -44,10 +44,10 @@ public final class VpcConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<VpcConnectorTagArgs>> tags;
+    private @Nullable Output<List<VpcConnectorTagArgs>> tags;
 
-    public Output<List<VpcConnectorTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<VpcConnectorTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -55,98 +55,91 @@ public final class VpcConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConnectorName")
-      private final @Nullable Output<String> vpcConnectorName;
+    private @Nullable Output<String> vpcConnectorName;
 
-    public Output<String> vpcConnectorName() {
-        return this.vpcConnectorName == null ? Codegen.empty() : this.vpcConnectorName;
+    public Optional<Output<String>> vpcConnectorName() {
+        return Optional.ofNullable(this.vpcConnectorName);
     }
 
-    public VpcConnectorArgs(
-        @Nullable Output<List<String>> securityGroups,
-        Output<List<String>> subnets,
-        @Nullable Output<List<VpcConnectorTagArgs>> tags,
-        @Nullable Output<String> vpcConnectorName) {
-        this.securityGroups = securityGroups;
-        this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
-        this.tags = tags;
-        this.vpcConnectorName = vpcConnectorName;
-    }
+    private VpcConnectorArgs() {}
 
-    private VpcConnectorArgs() {
-        this.securityGroups = Codegen.empty();
-        this.subnets = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcConnectorName = Codegen.empty();
+    private VpcConnectorArgs(VpcConnectorArgs $) {
+        this.securityGroups = $.securityGroups;
+        this.subnets = $.subnets;
+        this.tags = $.tags;
+        this.vpcConnectorName = $.vpcConnectorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> securityGroups;
-        private Output<List<String>> subnets;
-        private @Nullable Output<List<VpcConnectorTagArgs>> tags;
-        private @Nullable Output<String> vpcConnectorName;
+        private VpcConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcConnectorArgs();
         }
 
         public Builder(VpcConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnets = defaults.subnets;
-    	      this.tags = defaults.tags;
-    	      this.vpcConnectorName = defaults.vpcConnectorName;
+            $ = new VpcConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnets(Output<List<String>> subnets) {
-            this.subnets = Objects.requireNonNull(subnets);
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(List<String> subnets) {
-            this.subnets = Output.of(Objects.requireNonNull(subnets));
-            return this;
+            return subnets(Output.of(subnets));
         }
+
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder tags(@Nullable Output<List<VpcConnectorTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<VpcConnectorTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<VpcConnectorTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(VpcConnectorTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder vpcConnectorName(@Nullable Output<String> vpcConnectorName) {
-            this.vpcConnectorName = vpcConnectorName;
+            $.vpcConnectorName = vpcConnectorName;
             return this;
         }
-        public Builder vpcConnectorName(@Nullable String vpcConnectorName) {
-            this.vpcConnectorName = Codegen.ofNullable(vpcConnectorName);
-            return this;
-        }        public VpcConnectorArgs build() {
-            return new VpcConnectorArgs(securityGroups, subnets, tags, vpcConnectorName);
+
+        public Builder vpcConnectorName(String vpcConnectorName) {
+            return vpcConnectorName(Output.of(vpcConnectorName));
+        }
+
+        public VpcConnectorArgs build() {
+            $.subnets = Objects.requireNonNull($.subnets, "expected parameter 'subnets' to be non-null");
+            return $;
         }
     }
+
 }

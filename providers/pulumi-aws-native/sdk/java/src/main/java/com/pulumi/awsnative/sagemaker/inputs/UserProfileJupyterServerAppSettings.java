@@ -19,45 +19,44 @@ public final class UserProfileJupyterServerAppSettings extends com.pulumi.resour
     public static final UserProfileJupyterServerAppSettings Empty = new UserProfileJupyterServerAppSettings();
 
     @Import(name="defaultResourceSpec")
-      private final @Nullable UserProfileResourceSpec defaultResourceSpec;
+    private @Nullable UserProfileResourceSpec defaultResourceSpec;
 
     public Optional<UserProfileResourceSpec> defaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceSpec);
+        return Optional.ofNullable(this.defaultResourceSpec);
     }
 
-    public UserProfileJupyterServerAppSettings(@Nullable UserProfileResourceSpec defaultResourceSpec) {
-        this.defaultResourceSpec = defaultResourceSpec;
-    }
+    private UserProfileJupyterServerAppSettings() {}
 
-    private UserProfileJupyterServerAppSettings() {
-        this.defaultResourceSpec = null;
+    private UserProfileJupyterServerAppSettings(UserProfileJupyterServerAppSettings $) {
+        this.defaultResourceSpec = $.defaultResourceSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileJupyterServerAppSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable UserProfileResourceSpec defaultResourceSpec;
+        private UserProfileJupyterServerAppSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileJupyterServerAppSettings();
         }
 
         public Builder(UserProfileJupyterServerAppSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultResourceSpec = defaults.defaultResourceSpec;
+            $ = new UserProfileJupyterServerAppSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultResourceSpec(@Nullable UserProfileResourceSpec defaultResourceSpec) {
-            this.defaultResourceSpec = defaultResourceSpec;
+            $.defaultResourceSpec = defaultResourceSpec;
             return this;
-        }        public UserProfileJupyterServerAppSettings build() {
-            return new UserProfileJupyterServerAppSettings(defaultResourceSpec);
+        }
+
+        public UserProfileJupyterServerAppSettings build() {
+            return $;
         }
     }
+
 }

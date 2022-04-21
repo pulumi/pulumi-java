@@ -15,78 +15,71 @@ public final class GetHubIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHubIamPolicyArgs Empty = new GetHubIamPolicyArgs();
 
     @Import(name="hubId", required=true)
-      private final String hubId;
+    private String hubId;
 
     public String hubId() {
         return this.hubId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetHubIamPolicyArgs(
-        String hubId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.hubId = Objects.requireNonNull(hubId, "expected parameter 'hubId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetHubIamPolicyArgs() {}
 
-    private GetHubIamPolicyArgs() {
-        this.hubId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetHubIamPolicyArgs(GetHubIamPolicyArgs $) {
+        this.hubId = $.hubId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHubIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hubId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetHubIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHubIamPolicyArgs();
         }
 
         public Builder(GetHubIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubId = defaults.hubId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetHubIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubId(String hubId) {
-            this.hubId = Objects.requireNonNull(hubId);
+            $.hubId = hubId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetHubIamPolicyArgs build() {
-            return new GetHubIamPolicyArgs(hubId, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetHubIamPolicyArgs build() {
+            $.hubId = Objects.requireNonNull($.hubId, "expected parameter 'hubId' to be non-null");
+            return $;
         }
     }
+
 }

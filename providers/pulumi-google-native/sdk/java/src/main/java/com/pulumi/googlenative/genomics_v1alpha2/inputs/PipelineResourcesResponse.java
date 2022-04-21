@@ -26,7 +26,7 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="acceleratorCount", required=true)
-      private final String acceleratorCount;
+    private String acceleratorCount;
 
     public String acceleratorCount() {
         return this.acceleratorCount;
@@ -37,7 +37,7 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="acceleratorType", required=true)
-      private final String acceleratorType;
+    private String acceleratorType;
 
     public String acceleratorType() {
         return this.acceleratorType;
@@ -48,7 +48,7 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="bootDiskSizeGb", required=true)
-      private final Integer bootDiskSizeGb;
+    private Integer bootDiskSizeGb;
 
     public Integer bootDiskSizeGb() {
         return this.bootDiskSizeGb;
@@ -59,7 +59,7 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="disks", required=true)
-      private final List<DiskResponse> disks;
+    private List<DiskResponse> disks;
 
     public List<DiskResponse> disks() {
         return this.disks;
@@ -70,7 +70,7 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="minimumCpuCores", required=true)
-      private final Integer minimumCpuCores;
+    private Integer minimumCpuCores;
 
     public Integer minimumCpuCores() {
         return this.minimumCpuCores;
@@ -81,7 +81,7 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="minimumRamGb", required=true)
-      private final Double minimumRamGb;
+    private Double minimumRamGb;
 
     public Double minimumRamGb() {
         return this.minimumRamGb;
@@ -92,7 +92,7 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="noAddress", required=true)
-      private final Boolean noAddress;
+    private Boolean noAddress;
 
     public Boolean noAddress() {
         return this.noAddress;
@@ -103,7 +103,7 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="preemptible", required=true)
-      private final Boolean preemptible;
+    private Boolean preemptible;
 
     public Boolean preemptible() {
         return this.preemptible;
@@ -114,124 +114,109 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="zones", required=true)
-      private final List<String> zones;
+    private List<String> zones;
 
     public List<String> zones() {
         return this.zones;
     }
 
-    public PipelineResourcesResponse(
-        String acceleratorCount,
-        String acceleratorType,
-        Integer bootDiskSizeGb,
-        List<DiskResponse> disks,
-        Integer minimumCpuCores,
-        Double minimumRamGb,
-        Boolean noAddress,
-        Boolean preemptible,
-        List<String> zones) {
-        this.acceleratorCount = Objects.requireNonNull(acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
-        this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
-        this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb, "expected parameter 'bootDiskSizeGb' to be non-null");
-        this.disks = Objects.requireNonNull(disks, "expected parameter 'disks' to be non-null");
-        this.minimumCpuCores = Objects.requireNonNull(minimumCpuCores, "expected parameter 'minimumCpuCores' to be non-null");
-        this.minimumRamGb = Objects.requireNonNull(minimumRamGb, "expected parameter 'minimumRamGb' to be non-null");
-        this.noAddress = Objects.requireNonNull(noAddress, "expected parameter 'noAddress' to be non-null");
-        this.preemptible = Objects.requireNonNull(preemptible, "expected parameter 'preemptible' to be non-null");
-        this.zones = Objects.requireNonNull(zones, "expected parameter 'zones' to be non-null");
-    }
+    private PipelineResourcesResponse() {}
 
-    private PipelineResourcesResponse() {
-        this.acceleratorCount = null;
-        this.acceleratorType = null;
-        this.bootDiskSizeGb = null;
-        this.disks = List.of();
-        this.minimumCpuCores = null;
-        this.minimumRamGb = null;
-        this.noAddress = null;
-        this.preemptible = null;
-        this.zones = List.of();
+    private PipelineResourcesResponse(PipelineResourcesResponse $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorType = $.acceleratorType;
+        this.bootDiskSizeGb = $.bootDiskSizeGb;
+        this.disks = $.disks;
+        this.minimumCpuCores = $.minimumCpuCores;
+        this.minimumRamGb = $.minimumRamGb;
+        this.noAddress = $.noAddress;
+        this.preemptible = $.preemptible;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineResourcesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String acceleratorCount;
-        private String acceleratorType;
-        private Integer bootDiskSizeGb;
-        private List<DiskResponse> disks;
-        private Integer minimumCpuCores;
-        private Double minimumRamGb;
-        private Boolean noAddress;
-        private Boolean preemptible;
-        private List<String> zones;
+        private PipelineResourcesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineResourcesResponse();
         }
 
         public Builder(PipelineResourcesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorType = defaults.acceleratorType;
-    	      this.bootDiskSizeGb = defaults.bootDiskSizeGb;
-    	      this.disks = defaults.disks;
-    	      this.minimumCpuCores = defaults.minimumCpuCores;
-    	      this.minimumRamGb = defaults.minimumRamGb;
-    	      this.noAddress = defaults.noAddress;
-    	      this.preemptible = defaults.preemptible;
-    	      this.zones = defaults.zones;
+            $ = new PipelineResourcesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(String acceleratorCount) {
-            this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
+
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Objects.requireNonNull(acceleratorType);
+            $.acceleratorType = acceleratorType;
             return this;
         }
+
         public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
+            $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
+
         public Builder disks(List<DiskResponse> disks) {
-            this.disks = Objects.requireNonNull(disks);
+            $.disks = disks;
             return this;
         }
+
         public Builder disks(DiskResponse... disks) {
             return disks(List.of(disks));
         }
+
         public Builder minimumCpuCores(Integer minimumCpuCores) {
-            this.minimumCpuCores = Objects.requireNonNull(minimumCpuCores);
+            $.minimumCpuCores = minimumCpuCores;
             return this;
         }
+
         public Builder minimumRamGb(Double minimumRamGb) {
-            this.minimumRamGb = Objects.requireNonNull(minimumRamGb);
+            $.minimumRamGb = minimumRamGb;
             return this;
         }
+
         public Builder noAddress(Boolean noAddress) {
-            this.noAddress = Objects.requireNonNull(noAddress);
+            $.noAddress = noAddress;
             return this;
         }
+
         public Builder preemptible(Boolean preemptible) {
-            this.preemptible = Objects.requireNonNull(preemptible);
+            $.preemptible = preemptible;
             return this;
         }
+
         public Builder zones(List<String> zones) {
-            this.zones = Objects.requireNonNull(zones);
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public PipelineResourcesResponse build() {
-            return new PipelineResourcesResponse(acceleratorCount, acceleratorType, bootDiskSizeGb, disks, minimumCpuCores, minimumRamGb, noAddress, preemptible, zones);
+        }
+
+        public PipelineResourcesResponse build() {
+            $.acceleratorCount = Objects.requireNonNull($.acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
+            $.acceleratorType = Objects.requireNonNull($.acceleratorType, "expected parameter 'acceleratorType' to be non-null");
+            $.bootDiskSizeGb = Objects.requireNonNull($.bootDiskSizeGb, "expected parameter 'bootDiskSizeGb' to be non-null");
+            $.disks = Objects.requireNonNull($.disks, "expected parameter 'disks' to be non-null");
+            $.minimumCpuCores = Objects.requireNonNull($.minimumCpuCores, "expected parameter 'minimumCpuCores' to be non-null");
+            $.minimumRamGb = Objects.requireNonNull($.minimumRamGb, "expected parameter 'minimumRamGb' to be non-null");
+            $.noAddress = Objects.requireNonNull($.noAddress, "expected parameter 'noAddress' to be non-null");
+            $.preemptible = Objects.requireNonNull($.preemptible, "expected parameter 'preemptible' to be non-null");
+            $.zones = Objects.requireNonNull($.zones, "expected parameter 'zones' to be non-null");
+            return $;
         }
     }
+
 }

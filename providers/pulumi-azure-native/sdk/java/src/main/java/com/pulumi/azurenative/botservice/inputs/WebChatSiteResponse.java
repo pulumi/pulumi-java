@@ -23,7 +23,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -34,7 +34,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isWebchatPreviewEnabled", required=true)
-      private final Boolean isWebchatPreviewEnabled;
+    private Boolean isWebchatPreviewEnabled;
 
     public Boolean isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
@@ -45,7 +45,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -56,7 +56,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key2", required=true)
-      private final String key2;
+    private String key2;
 
     public String key2() {
         return this.key2;
@@ -67,7 +67,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="siteId", required=true)
-      private final String siteId;
+    private String siteId;
 
     public String siteId() {
         return this.siteId;
@@ -78,91 +78,80 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="siteName", required=true)
-      private final String siteName;
+    private String siteName;
 
     public String siteName() {
         return this.siteName;
     }
 
-    public WebChatSiteResponse(
-        Boolean isEnabled,
-        Boolean isWebchatPreviewEnabled,
-        String key,
-        String key2,
-        String siteId,
-        String siteName) {
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isWebchatPreviewEnabled = Codegen.booleanProp("isWebchatPreviewEnabled").arg(isWebchatPreviewEnabled).def(false).require();
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.key2 = Objects.requireNonNull(key2, "expected parameter 'key2' to be non-null");
-        this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");
-        this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
-    }
+    private WebChatSiteResponse() {}
 
-    private WebChatSiteResponse() {
-        this.isEnabled = null;
-        this.isWebchatPreviewEnabled = null;
-        this.key = null;
-        this.key2 = null;
-        this.siteId = null;
-        this.siteName = null;
+    private WebChatSiteResponse(WebChatSiteResponse $) {
+        this.isEnabled = $.isEnabled;
+        this.isWebchatPreviewEnabled = $.isWebchatPreviewEnabled;
+        this.key = $.key;
+        this.key2 = $.key2;
+        this.siteId = $.siteId;
+        this.siteName = $.siteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebChatSiteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isEnabled;
-        private Boolean isWebchatPreviewEnabled;
-        private String key;
-        private String key2;
-        private String siteId;
-        private String siteName;
+        private WebChatSiteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebChatSiteResponse();
         }
 
         public Builder(WebChatSiteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.isWebchatPreviewEnabled = defaults.isWebchatPreviewEnabled;
-    	      this.key = defaults.key;
-    	      this.key2 = defaults.key2;
-    	      this.siteId = defaults.siteId;
-    	      this.siteName = defaults.siteName;
+            $ = new WebChatSiteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
-            this.isWebchatPreviewEnabled = Objects.requireNonNull(isWebchatPreviewEnabled);
+            $.isWebchatPreviewEnabled = isWebchatPreviewEnabled;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key2(String key2) {
-            this.key2 = Objects.requireNonNull(key2);
+            $.key2 = key2;
             return this;
         }
+
         public Builder siteId(String siteId) {
-            this.siteId = Objects.requireNonNull(siteId);
+            $.siteId = siteId;
             return this;
         }
+
         public Builder siteName(String siteName) {
-            this.siteName = Objects.requireNonNull(siteName);
+            $.siteName = siteName;
             return this;
-        }        public WebChatSiteResponse build() {
-            return new WebChatSiteResponse(isEnabled, isWebchatPreviewEnabled, key, key2, siteId, siteName);
+        }
+
+        public WebChatSiteResponse build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.isWebchatPreviewEnabled = Codegen.booleanProp("isWebchatPreviewEnabled").arg($.isWebchatPreviewEnabled).def(false).require();
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.key2 = Objects.requireNonNull($.key2, "expected parameter 'key2' to be non-null");
+            $.siteId = Objects.requireNonNull($.siteId, "expected parameter 'siteId' to be non-null");
+            $.siteName = Objects.requireNonNull($.siteName, "expected parameter 'siteName' to be non-null");
+            return $;
         }
     }
+
 }

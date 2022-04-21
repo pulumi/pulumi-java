@@ -26,10 +26,10 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
      * 
      */
     @Import(name="properties", required=true)
-      private final Map<String,TableSpecificationResponse> properties;
+    private Map<String,TableSpecificationResponse> properties;
 
     public Map<String,TableSpecificationResponse> properties() {
         return this.properties;
@@ -48,10 +48,10 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -59,73 +59,64 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ServiceInputOutputSpecificationResponse(
-        @Nullable String description,
-        Map<String,TableSpecificationResponse> properties,
-        @Nullable String title,
-        String type) {
-        this.description = description;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.title = title;
-        this.type = Codegen.stringProp("type").arg(type).def("object").require();
-    }
+    private ServiceInputOutputSpecificationResponse() {}
 
-    private ServiceInputOutputSpecificationResponse() {
-        this.description = null;
-        this.properties = Map.of();
-        this.title = null;
-        this.type = null;
+    private ServiceInputOutputSpecificationResponse(ServiceInputOutputSpecificationResponse $) {
+        this.description = $.description;
+        this.properties = $.properties;
+        this.title = $.title;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceInputOutputSpecificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private Map<String,TableSpecificationResponse> properties;
-        private @Nullable String title;
-        private String type;
+        private ServiceInputOutputSpecificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceInputOutputSpecificationResponse();
         }
 
         public Builder(ServiceInputOutputSpecificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.properties = defaults.properties;
-    	      this.title = defaults.title;
-    	      this.type = defaults.type;
+            $ = new ServiceInputOutputSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder properties(Map<String,TableSpecificationResponse> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ServiceInputOutputSpecificationResponse build() {
-            return new ServiceInputOutputSpecificationResponse(description, properties, title, type);
+        }
+
+        public ServiceInputOutputSpecificationResponse build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).def("object").require();
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.awsnative.mediapackage.inputs;
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationStreamSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class PackagingConfigurationMssManifestArgs extends com.pulumi.reso
     public static final PackagingConfigurationMssManifestArgs Empty = new PackagingConfigurationMssManifestArgs();
 
     @Import(name="manifestName")
-      private final @Nullable Output<String> manifestName;
+    private @Nullable Output<String> manifestName;
 
-    public Output<String> manifestName() {
-        return this.manifestName == null ? Codegen.empty() : this.manifestName;
+    public Optional<Output<String>> manifestName() {
+        return Optional.ofNullable(this.manifestName);
     }
 
     @Import(name="streamSelection")
-      private final @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
+    private @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
-    public Output<PackagingConfigurationStreamSelectionArgs> streamSelection() {
-        return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
+    public Optional<Output<PackagingConfigurationStreamSelectionArgs>> streamSelection() {
+        return Optional.ofNullable(this.streamSelection);
     }
 
-    public PackagingConfigurationMssManifestArgs(
-        @Nullable Output<String> manifestName,
-        @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
-        this.manifestName = manifestName;
-        this.streamSelection = streamSelection;
-    }
+    private PackagingConfigurationMssManifestArgs() {}
 
-    private PackagingConfigurationMssManifestArgs() {
-        this.manifestName = Codegen.empty();
-        this.streamSelection = Codegen.empty();
+    private PackagingConfigurationMssManifestArgs(PackagingConfigurationMssManifestArgs $) {
+        this.manifestName = $.manifestName;
+        this.streamSelection = $.streamSelection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationMssManifestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> manifestName;
-        private @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
+        private PackagingConfigurationMssManifestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationMssManifestArgs();
         }
 
         public Builder(PackagingConfigurationMssManifestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.manifestName = defaults.manifestName;
-    	      this.streamSelection = defaults.streamSelection;
+            $ = new PackagingConfigurationMssManifestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder manifestName(@Nullable Output<String> manifestName) {
-            this.manifestName = manifestName;
+            $.manifestName = manifestName;
             return this;
         }
-        public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = Codegen.ofNullable(manifestName);
-            return this;
+
+        public Builder manifestName(String manifestName) {
+            return manifestName(Output.of(manifestName));
         }
+
         public Builder streamSelection(@Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
-            this.streamSelection = streamSelection;
+            $.streamSelection = streamSelection;
             return this;
         }
-        public Builder streamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
-            this.streamSelection = Codegen.ofNullable(streamSelection);
-            return this;
-        }        public PackagingConfigurationMssManifestArgs build() {
-            return new PackagingConfigurationMssManifestArgs(manifestName, streamSelection);
+
+        public Builder streamSelection(PackagingConfigurationStreamSelectionArgs streamSelection) {
+            return streamSelection(Output.of(streamSelection));
+        }
+
+        public PackagingConfigurationMssManifestArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,12 +6,12 @@ package com.pulumi.azurenative.sqlvirtualmachine;
 import com.pulumi.azurenative.sqlvirtualmachine.inputs.LoadBalancerConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="availabilityGroupListenerName")
-      private final @Nullable Output<String> availabilityGroupListenerName;
+    private @Nullable Output<String> availabilityGroupListenerName;
 
-    public Output<String> availabilityGroupListenerName() {
-        return this.availabilityGroupListenerName == null ? Codegen.empty() : this.availabilityGroupListenerName;
+    public Optional<Output<String>> availabilityGroupListenerName() {
+        return Optional.ofNullable(this.availabilityGroupListenerName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="availabilityGroupName")
-      private final @Nullable Output<String> availabilityGroupName;
+    private @Nullable Output<String> availabilityGroupName;
 
-    public Output<String> availabilityGroupName() {
-        return this.availabilityGroupName == null ? Codegen.empty() : this.availabilityGroupName;
+    public Optional<Output<String>> availabilityGroupName() {
+        return Optional.ofNullable(this.availabilityGroupName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="createDefaultAvailabilityGroupIfNotExist")
-      private final @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist;
+    private @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist;
 
-    public Output<Boolean> createDefaultAvailabilityGroupIfNotExist() {
-        return this.createDefaultAvailabilityGroupIfNotExist == null ? Codegen.empty() : this.createDefaultAvailabilityGroupIfNotExist;
+    public Optional<Output<Boolean>> createDefaultAvailabilityGroupIfNotExist() {
+        return Optional.ofNullable(this.createDefaultAvailabilityGroupIfNotExist);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="loadBalancerConfigurations")
-      private final @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
+    private @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
-    public Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations() {
-        return this.loadBalancerConfigurations == null ? Codegen.empty() : this.loadBalancerConfigurations;
+    public Optional<Output<List<LoadBalancerConfigurationArgs>>> loadBalancerConfigurations() {
+        return Optional.ofNullable(this.loadBalancerConfigurations);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,131 +90,114 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sqlVirtualMachineGroupName", required=true)
-      private final Output<String> sqlVirtualMachineGroupName;
+    private Output<String> sqlVirtualMachineGroupName;
 
     public Output<String> sqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
     }
 
-    public AvailabilityGroupListenerArgs(
-        @Nullable Output<String> availabilityGroupListenerName,
-        @Nullable Output<String> availabilityGroupName,
-        @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist,
-        @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations,
-        @Nullable Output<Integer> port,
-        Output<String> resourceGroupName,
-        Output<String> sqlVirtualMachineGroupName) {
-        this.availabilityGroupListenerName = availabilityGroupListenerName;
-        this.availabilityGroupName = availabilityGroupName;
-        this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
-        this.loadBalancerConfigurations = loadBalancerConfigurations;
-        this.port = port;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName, "expected parameter 'sqlVirtualMachineGroupName' to be non-null");
-    }
+    private AvailabilityGroupListenerArgs() {}
 
-    private AvailabilityGroupListenerArgs() {
-        this.availabilityGroupListenerName = Codegen.empty();
-        this.availabilityGroupName = Codegen.empty();
-        this.createDefaultAvailabilityGroupIfNotExist = Codegen.empty();
-        this.loadBalancerConfigurations = Codegen.empty();
-        this.port = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sqlVirtualMachineGroupName = Codegen.empty();
+    private AvailabilityGroupListenerArgs(AvailabilityGroupListenerArgs $) {
+        this.availabilityGroupListenerName = $.availabilityGroupListenerName;
+        this.availabilityGroupName = $.availabilityGroupName;
+        this.createDefaultAvailabilityGroupIfNotExist = $.createDefaultAvailabilityGroupIfNotExist;
+        this.loadBalancerConfigurations = $.loadBalancerConfigurations;
+        this.port = $.port;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlVirtualMachineGroupName = $.sqlVirtualMachineGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvailabilityGroupListenerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityGroupListenerName;
-        private @Nullable Output<String> availabilityGroupName;
-        private @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist;
-        private @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
-        private @Nullable Output<Integer> port;
-        private Output<String> resourceGroupName;
-        private Output<String> sqlVirtualMachineGroupName;
+        private AvailabilityGroupListenerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvailabilityGroupListenerArgs();
         }
 
         public Builder(AvailabilityGroupListenerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityGroupListenerName = defaults.availabilityGroupListenerName;
-    	      this.availabilityGroupName = defaults.availabilityGroupName;
-    	      this.createDefaultAvailabilityGroupIfNotExist = defaults.createDefaultAvailabilityGroupIfNotExist;
-    	      this.loadBalancerConfigurations = defaults.loadBalancerConfigurations;
-    	      this.port = defaults.port;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlVirtualMachineGroupName = defaults.sqlVirtualMachineGroupName;
+            $ = new AvailabilityGroupListenerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityGroupListenerName(@Nullable Output<String> availabilityGroupListenerName) {
-            this.availabilityGroupListenerName = availabilityGroupListenerName;
+            $.availabilityGroupListenerName = availabilityGroupListenerName;
             return this;
         }
-        public Builder availabilityGroupListenerName(@Nullable String availabilityGroupListenerName) {
-            this.availabilityGroupListenerName = Codegen.ofNullable(availabilityGroupListenerName);
-            return this;
+
+        public Builder availabilityGroupListenerName(String availabilityGroupListenerName) {
+            return availabilityGroupListenerName(Output.of(availabilityGroupListenerName));
         }
+
         public Builder availabilityGroupName(@Nullable Output<String> availabilityGroupName) {
-            this.availabilityGroupName = availabilityGroupName;
+            $.availabilityGroupName = availabilityGroupName;
             return this;
         }
-        public Builder availabilityGroupName(@Nullable String availabilityGroupName) {
-            this.availabilityGroupName = Codegen.ofNullable(availabilityGroupName);
-            return this;
+
+        public Builder availabilityGroupName(String availabilityGroupName) {
+            return availabilityGroupName(Output.of(availabilityGroupName));
         }
+
         public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist) {
-            this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
+            $.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
             return this;
         }
-        public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Boolean createDefaultAvailabilityGroupIfNotExist) {
-            this.createDefaultAvailabilityGroupIfNotExist = Codegen.ofNullable(createDefaultAvailabilityGroupIfNotExist);
-            return this;
+
+        public Builder createDefaultAvailabilityGroupIfNotExist(Boolean createDefaultAvailabilityGroupIfNotExist) {
+            return createDefaultAvailabilityGroupIfNotExist(Output.of(createDefaultAvailabilityGroupIfNotExist));
         }
+
         public Builder loadBalancerConfigurations(@Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
-            this.loadBalancerConfigurations = loadBalancerConfigurations;
+            $.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
-        public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
-            this.loadBalancerConfigurations = Codegen.ofNullable(loadBalancerConfigurations);
-            return this;
+
+        public Builder loadBalancerConfigurations(List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
+            return loadBalancerConfigurations(Output.of(loadBalancerConfigurations));
         }
+
         public Builder loadBalancerConfigurations(LoadBalancerConfigurationArgs... loadBalancerConfigurations) {
             return loadBalancerConfigurations(List.of(loadBalancerConfigurations));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sqlVirtualMachineGroupName(Output<String> sqlVirtualMachineGroupName) {
-            this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName);
+            $.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;
         }
+
         public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
-            this.sqlVirtualMachineGroupName = Output.of(Objects.requireNonNull(sqlVirtualMachineGroupName));
-            return this;
-        }        public AvailabilityGroupListenerArgs build() {
-            return new AvailabilityGroupListenerArgs(availabilityGroupListenerName, availabilityGroupName, createDefaultAvailabilityGroupIfNotExist, loadBalancerConfigurations, port, resourceGroupName, sqlVirtualMachineGroupName);
+            return sqlVirtualMachineGroupName(Output.of(sqlVirtualMachineGroupName));
+        }
+
+        public AvailabilityGroupListenerArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlVirtualMachineGroupName = Objects.requireNonNull($.sqlVirtualMachineGroupName, "expected parameter 'sqlVirtualMachineGroupName' to be non-null");
+            return $;
         }
     }
+
 }

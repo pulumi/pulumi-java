@@ -17,7 +17,7 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventChannelName", required=true)
-      private final String eventChannelName;
+    private String eventChannelName;
 
     public String eventChannelName() {
         return this.eventChannelName;
@@ -28,7 +28,7 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="partnerNamespaceName", required=true)
-      private final String partnerNamespaceName;
+    private String partnerNamespaceName;
 
     public String partnerNamespaceName() {
         return this.partnerNamespaceName;
@@ -39,64 +39,59 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetEventChannelArgs(
-        String eventChannelName,
-        String partnerNamespaceName,
-        String resourceGroupName) {
-        this.eventChannelName = Objects.requireNonNull(eventChannelName, "expected parameter 'eventChannelName' to be non-null");
-        this.partnerNamespaceName = Objects.requireNonNull(partnerNamespaceName, "expected parameter 'partnerNamespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetEventChannelArgs() {}
 
-    private GetEventChannelArgs() {
-        this.eventChannelName = null;
-        this.partnerNamespaceName = null;
-        this.resourceGroupName = null;
+    private GetEventChannelArgs(GetEventChannelArgs $) {
+        this.eventChannelName = $.eventChannelName;
+        this.partnerNamespaceName = $.partnerNamespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventChannelName;
-        private String partnerNamespaceName;
-        private String resourceGroupName;
+        private GetEventChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventChannelArgs();
         }
 
         public Builder(GetEventChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventChannelName = defaults.eventChannelName;
-    	      this.partnerNamespaceName = defaults.partnerNamespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetEventChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventChannelName(String eventChannelName) {
-            this.eventChannelName = Objects.requireNonNull(eventChannelName);
+            $.eventChannelName = eventChannelName;
             return this;
         }
+
         public Builder partnerNamespaceName(String partnerNamespaceName) {
-            this.partnerNamespaceName = Objects.requireNonNull(partnerNamespaceName);
+            $.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetEventChannelArgs build() {
-            return new GetEventChannelArgs(eventChannelName, partnerNamespaceName, resourceGroupName);
+        }
+
+        public GetEventChannelArgs build() {
+            $.eventChannelName = Objects.requireNonNull($.eventChannelName, "expected parameter 'eventChannelName' to be non-null");
+            $.partnerNamespaceName = Objects.requireNonNull($.partnerNamespaceName, "expected parameter 'partnerNamespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="header")
-      private final @Nullable Output<Either<String,Header>> header;
+    private @Nullable Output<Either<String,Header>> header;
 
-    public Output<Either<String,Header>> header() {
-        return this.header == null ? Codegen.empty() : this.header;
+    public Optional<Output<Either<String,Header>>> header() {
+        return Optional.ofNullable(this.header);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="includePath")
-      private final @Nullable Output<Boolean> includePath;
+    private @Nullable Output<Boolean> includePath;
 
-    public Output<Boolean> includePath() {
-        return this.includePath == null ? Codegen.empty() : this.includePath;
+    public Optional<Output<Boolean>> includePath() {
+        return Optional.ofNullable(this.includePath);
     }
 
     /**
@@ -48,24 +49,24 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="partitionFormat")
-      private final @Nullable Output<String> partitionFormat;
+    private @Nullable Output<String> partitionFormat;
 
-    public Output<String> partitionFormat() {
-        return this.partitionFormat == null ? Codegen.empty() : this.partitionFormat;
+    public Optional<Output<String>> partitionFormat() {
+        return Optional.ofNullable(this.partitionFormat);
     }
 
     @Import(name="path")
-      private final @Nullable Output<DatasetCreateRequestPathArgs> path;
+    private @Nullable Output<DatasetCreateRequestPathArgs> path;
 
-    public Output<DatasetCreateRequestPathArgs> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<DatasetCreateRequestPathArgs>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     @Import(name="query")
-      private final @Nullable Output<DatasetCreateRequestQueryArgs> query;
+    private @Nullable Output<DatasetCreateRequestQueryArgs> query;
 
-    public Output<DatasetCreateRequestQueryArgs> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<DatasetCreateRequestQueryArgs>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="separator")
-      private final @Nullable Output<String> separator;
+    private @Nullable Output<String> separator;
 
-    public Output<String> separator() {
-        return this.separator == null ? Codegen.empty() : this.separator;
+    public Optional<Output<String>> separator() {
+        return Optional.ofNullable(this.separator);
     }
 
     /**
@@ -84,128 +85,109 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="sourceType")
-      private final @Nullable Output<Either<String,SourceType>> sourceType;
+    private @Nullable Output<Either<String,SourceType>> sourceType;
 
-    public Output<Either<String,SourceType>> sourceType() {
-        return this.sourceType == null ? Codegen.empty() : this.sourceType;
+    public Optional<Output<Either<String,SourceType>>> sourceType() {
+        return Optional.ofNullable(this.sourceType);
     }
 
-    public DatasetCreateRequestParametersArgs(
-        @Nullable Output<Either<String,Header>> header,
-        @Nullable Output<Boolean> includePath,
-        @Nullable Output<String> partitionFormat,
-        @Nullable Output<DatasetCreateRequestPathArgs> path,
-        @Nullable Output<DatasetCreateRequestQueryArgs> query,
-        @Nullable Output<String> separator,
-        @Nullable Output<Either<String,SourceType>> sourceType) {
-        this.header = header;
-        this.includePath = Codegen.booleanProp("includePath").output().arg(includePath).def(false).getNullable();
-        this.partitionFormat = partitionFormat;
-        this.path = path;
-        this.query = query;
-        this.separator = separator;
-        this.sourceType = sourceType;
-    }
+    private DatasetCreateRequestParametersArgs() {}
 
-    private DatasetCreateRequestParametersArgs() {
-        this.header = Codegen.empty();
-        this.includePath = Codegen.empty();
-        this.partitionFormat = Codegen.empty();
-        this.path = Codegen.empty();
-        this.query = Codegen.empty();
-        this.separator = Codegen.empty();
-        this.sourceType = Codegen.empty();
+    private DatasetCreateRequestParametersArgs(DatasetCreateRequestParametersArgs $) {
+        this.header = $.header;
+        this.includePath = $.includePath;
+        this.partitionFormat = $.partitionFormat;
+        this.path = $.path;
+        this.query = $.query;
+        this.separator = $.separator;
+        this.sourceType = $.sourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetCreateRequestParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Header>> header;
-        private @Nullable Output<Boolean> includePath;
-        private @Nullable Output<String> partitionFormat;
-        private @Nullable Output<DatasetCreateRequestPathArgs> path;
-        private @Nullable Output<DatasetCreateRequestQueryArgs> query;
-        private @Nullable Output<String> separator;
-        private @Nullable Output<Either<String,SourceType>> sourceType;
+        private DatasetCreateRequestParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetCreateRequestParametersArgs();
         }
 
         public Builder(DatasetCreateRequestParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.header = defaults.header;
-    	      this.includePath = defaults.includePath;
-    	      this.partitionFormat = defaults.partitionFormat;
-    	      this.path = defaults.path;
-    	      this.query = defaults.query;
-    	      this.separator = defaults.separator;
-    	      this.sourceType = defaults.sourceType;
+            $ = new DatasetCreateRequestParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder header(@Nullable Output<Either<String,Header>> header) {
-            this.header = header;
+            $.header = header;
             return this;
         }
-        public Builder header(@Nullable Either<String,Header> header) {
-            this.header = Codegen.ofNullable(header);
-            return this;
+
+        public Builder header(Either<String,Header> header) {
+            return header(Output.of(header));
         }
+
         public Builder includePath(@Nullable Output<Boolean> includePath) {
-            this.includePath = includePath;
+            $.includePath = includePath;
             return this;
         }
-        public Builder includePath(@Nullable Boolean includePath) {
-            this.includePath = Codegen.ofNullable(includePath);
-            return this;
+
+        public Builder includePath(Boolean includePath) {
+            return includePath(Output.of(includePath));
         }
+
         public Builder partitionFormat(@Nullable Output<String> partitionFormat) {
-            this.partitionFormat = partitionFormat;
+            $.partitionFormat = partitionFormat;
             return this;
         }
-        public Builder partitionFormat(@Nullable String partitionFormat) {
-            this.partitionFormat = Codegen.ofNullable(partitionFormat);
-            return this;
+
+        public Builder partitionFormat(String partitionFormat) {
+            return partitionFormat(Output.of(partitionFormat));
         }
+
         public Builder path(@Nullable Output<DatasetCreateRequestPathArgs> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable DatasetCreateRequestPathArgs path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(DatasetCreateRequestPathArgs path) {
+            return path(Output.of(path));
         }
+
         public Builder query(@Nullable Output<DatasetCreateRequestQueryArgs> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable DatasetCreateRequestQueryArgs query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
+
+        public Builder query(DatasetCreateRequestQueryArgs query) {
+            return query(Output.of(query));
         }
+
         public Builder separator(@Nullable Output<String> separator) {
-            this.separator = separator;
+            $.separator = separator;
             return this;
         }
-        public Builder separator(@Nullable String separator) {
-            this.separator = Codegen.ofNullable(separator);
-            return this;
+
+        public Builder separator(String separator) {
+            return separator(Output.of(separator));
         }
+
         public Builder sourceType(@Nullable Output<Either<String,SourceType>> sourceType) {
-            this.sourceType = sourceType;
+            $.sourceType = sourceType;
             return this;
         }
-        public Builder sourceType(@Nullable Either<String,SourceType> sourceType) {
-            this.sourceType = Codegen.ofNullable(sourceType);
-            return this;
-        }        public DatasetCreateRequestParametersArgs build() {
-            return new DatasetCreateRequestParametersArgs(header, includePath, partitionFormat, path, query, separator, sourceType);
+
+        public Builder sourceType(Either<String,SourceType> sourceType) {
+            return sourceType(Output.of(sourceType));
+        }
+
+        public DatasetCreateRequestParametersArgs build() {
+            $.includePath = Codegen.booleanProp("includePath").output().arg($.includePath).def(false).getNullable();
+            return $;
         }
     }
+
 }

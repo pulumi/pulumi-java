@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends com.p
      * 
      */
     @Import(name="azureAvailabilityZone", required=true)
-      private final Output<String> azureAvailabilityZone;
+    private Output<String> azureAvailabilityZone;
 
     public Output<String> azureAvailabilityZone() {
         return this.azureAvailabilityZone;
@@ -30,63 +29,60 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends com.p
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public AzureClusterControlPlaneReplicaPlacementGetArgs(
-        Output<String> azureAvailabilityZone,
-        Output<String> subnetId) {
-        this.azureAvailabilityZone = Objects.requireNonNull(azureAvailabilityZone, "expected parameter 'azureAvailabilityZone' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private AzureClusterControlPlaneReplicaPlacementGetArgs() {}
 
-    private AzureClusterControlPlaneReplicaPlacementGetArgs() {
-        this.azureAvailabilityZone = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private AzureClusterControlPlaneReplicaPlacementGetArgs(AzureClusterControlPlaneReplicaPlacementGetArgs $) {
+        this.azureAvailabilityZone = $.azureAvailabilityZone;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureClusterControlPlaneReplicaPlacementGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> azureAvailabilityZone;
-        private Output<String> subnetId;
+        private AzureClusterControlPlaneReplicaPlacementGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureClusterControlPlaneReplicaPlacementGetArgs();
         }
 
         public Builder(AzureClusterControlPlaneReplicaPlacementGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureAvailabilityZone = defaults.azureAvailabilityZone;
-    	      this.subnetId = defaults.subnetId;
+            $ = new AzureClusterControlPlaneReplicaPlacementGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureAvailabilityZone(Output<String> azureAvailabilityZone) {
-            this.azureAvailabilityZone = Objects.requireNonNull(azureAvailabilityZone);
+            $.azureAvailabilityZone = azureAvailabilityZone;
             return this;
         }
+
         public Builder azureAvailabilityZone(String azureAvailabilityZone) {
-            this.azureAvailabilityZone = Output.of(Objects.requireNonNull(azureAvailabilityZone));
-            return this;
+            return azureAvailabilityZone(Output.of(azureAvailabilityZone));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public AzureClusterControlPlaneReplicaPlacementGetArgs build() {
-            return new AzureClusterControlPlaneReplicaPlacementGetArgs(azureAvailabilityZone, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public AzureClusterControlPlaneReplicaPlacementGetArgs build() {
+            $.azureAvailabilityZone = Objects.requireNonNull($.azureAvailabilityZone, "expected parameter 'azureAvailabilityZone' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

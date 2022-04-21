@@ -5,13 +5,13 @@ package com.pulumi.googlenative.logging_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.logging_v2.inputs.BigQueryOptionsArgs;
 import com.pulumi.googlenative.logging_v2.inputs.LogExclusionArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,14 +24,14 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bigqueryOptions")
-      private final @Nullable Output<BigQueryOptionsArgs> bigqueryOptions;
+    private @Nullable Output<BigQueryOptionsArgs> bigqueryOptions;
 
-    public Output<BigQueryOptionsArgs> bigqueryOptions() {
-        return this.bigqueryOptions == null ? Codegen.empty() : this.bigqueryOptions;
+    public Optional<Output<BigQueryOptionsArgs>> bigqueryOptions() {
+        return Optional.ofNullable(this.bigqueryOptions);
     }
 
     @Import(name="billingAccountId", required=true)
-      private final Output<String> billingAccountId;
+    private Output<String> billingAccountId;
 
     public Output<String> billingAccountId() {
         return this.billingAccountId;
@@ -42,10 +42,10 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
@@ -64,10 +64,10 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="exclusions")
-      private final @Nullable Output<List<LogExclusionArgs>> exclusions;
+    private @Nullable Output<List<LogExclusionArgs>> exclusions;
 
-    public Output<List<LogExclusionArgs>> exclusions() {
-        return this.exclusions == null ? Codegen.empty() : this.exclusions;
+    public Optional<Output<List<LogExclusionArgs>>> exclusions() {
+        return Optional.ofNullable(this.exclusions);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="includeChildren")
-      private final @Nullable Output<Boolean> includeChildren;
+    private @Nullable Output<Boolean> includeChildren;
 
-    public Output<Boolean> includeChildren() {
-        return this.includeChildren == null ? Codegen.empty() : this.includeChildren;
+    public Optional<Output<Boolean>> includeChildren() {
+        return Optional.ofNullable(this.includeChildren);
     }
 
     /**
@@ -108,177 +108,151 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="uniqueWriterIdentity")
-      private final @Nullable Output<String> uniqueWriterIdentity;
+    private @Nullable Output<String> uniqueWriterIdentity;
 
-    public Output<String> uniqueWriterIdentity() {
-        return this.uniqueWriterIdentity == null ? Codegen.empty() : this.uniqueWriterIdentity;
+    public Optional<Output<String>> uniqueWriterIdentity() {
+        return Optional.ofNullable(this.uniqueWriterIdentity);
     }
 
-    public BillingAccountSinkArgs(
-        @Nullable Output<BigQueryOptionsArgs> bigqueryOptions,
-        Output<String> billingAccountId,
-        @Nullable Output<String> description,
-        Output<String> destination,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<List<LogExclusionArgs>> exclusions,
-        @Nullable Output<String> filter,
-        @Nullable Output<Boolean> includeChildren,
-        @Nullable Output<String> name,
-        @Nullable Output<String> uniqueWriterIdentity) {
-        this.bigqueryOptions = bigqueryOptions;
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.description = description;
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.disabled = disabled;
-        this.exclusions = exclusions;
-        this.filter = filter;
-        this.includeChildren = includeChildren;
-        this.name = name;
-        this.uniqueWriterIdentity = uniqueWriterIdentity;
-    }
+    private BillingAccountSinkArgs() {}
 
-    private BillingAccountSinkArgs() {
-        this.bigqueryOptions = Codegen.empty();
-        this.billingAccountId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.exclusions = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.includeChildren = Codegen.empty();
-        this.name = Codegen.empty();
-        this.uniqueWriterIdentity = Codegen.empty();
+    private BillingAccountSinkArgs(BillingAccountSinkArgs $) {
+        this.bigqueryOptions = $.bigqueryOptions;
+        this.billingAccountId = $.billingAccountId;
+        this.description = $.description;
+        this.destination = $.destination;
+        this.disabled = $.disabled;
+        this.exclusions = $.exclusions;
+        this.filter = $.filter;
+        this.includeChildren = $.includeChildren;
+        this.name = $.name;
+        this.uniqueWriterIdentity = $.uniqueWriterIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingAccountSinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BigQueryOptionsArgs> bigqueryOptions;
-        private Output<String> billingAccountId;
-        private @Nullable Output<String> description;
-        private Output<String> destination;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<List<LogExclusionArgs>> exclusions;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<Boolean> includeChildren;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> uniqueWriterIdentity;
+        private BillingAccountSinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingAccountSinkArgs();
         }
 
         public Builder(BillingAccountSinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryOptions = defaults.bigqueryOptions;
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.description = defaults.description;
-    	      this.destination = defaults.destination;
-    	      this.disabled = defaults.disabled;
-    	      this.exclusions = defaults.exclusions;
-    	      this.filter = defaults.filter;
-    	      this.includeChildren = defaults.includeChildren;
-    	      this.name = defaults.name;
-    	      this.uniqueWriterIdentity = defaults.uniqueWriterIdentity;
+            $ = new BillingAccountSinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryOptions(@Nullable Output<BigQueryOptionsArgs> bigqueryOptions) {
-            this.bigqueryOptions = bigqueryOptions;
+            $.bigqueryOptions = bigqueryOptions;
             return this;
         }
-        public Builder bigqueryOptions(@Nullable BigQueryOptionsArgs bigqueryOptions) {
-            this.bigqueryOptions = Codegen.ofNullable(bigqueryOptions);
-            return this;
+
+        public Builder bigqueryOptions(BigQueryOptionsArgs bigqueryOptions) {
+            return bigqueryOptions(Output.of(bigqueryOptions));
         }
+
         public Builder billingAccountId(Output<String> billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
-            return this;
+            return billingAccountId(Output.of(billingAccountId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder exclusions(@Nullable Output<List<LogExclusionArgs>> exclusions) {
-            this.exclusions = exclusions;
+            $.exclusions = exclusions;
             return this;
         }
-        public Builder exclusions(@Nullable List<LogExclusionArgs> exclusions) {
-            this.exclusions = Codegen.ofNullable(exclusions);
-            return this;
+
+        public Builder exclusions(List<LogExclusionArgs> exclusions) {
+            return exclusions(Output.of(exclusions));
         }
+
         public Builder exclusions(LogExclusionArgs... exclusions) {
             return exclusions(List.of(exclusions));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder includeChildren(@Nullable Output<Boolean> includeChildren) {
-            this.includeChildren = includeChildren;
+            $.includeChildren = includeChildren;
             return this;
         }
-        public Builder includeChildren(@Nullable Boolean includeChildren) {
-            this.includeChildren = Codegen.ofNullable(includeChildren);
-            return this;
+
+        public Builder includeChildren(Boolean includeChildren) {
+            return includeChildren(Output.of(includeChildren));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder uniqueWriterIdentity(@Nullable Output<String> uniqueWriterIdentity) {
-            this.uniqueWriterIdentity = uniqueWriterIdentity;
+            $.uniqueWriterIdentity = uniqueWriterIdentity;
             return this;
         }
-        public Builder uniqueWriterIdentity(@Nullable String uniqueWriterIdentity) {
-            this.uniqueWriterIdentity = Codegen.ofNullable(uniqueWriterIdentity);
-            return this;
-        }        public BillingAccountSinkArgs build() {
-            return new BillingAccountSinkArgs(bigqueryOptions, billingAccountId, description, destination, disabled, exclusions, filter, includeChildren, name, uniqueWriterIdentity);
+
+        public Builder uniqueWriterIdentity(String uniqueWriterIdentity) {
+            return uniqueWriterIdentity(Output.of(uniqueWriterIdentity));
+        }
+
+        public BillingAccountSinkArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            return $;
         }
     }
+
 }

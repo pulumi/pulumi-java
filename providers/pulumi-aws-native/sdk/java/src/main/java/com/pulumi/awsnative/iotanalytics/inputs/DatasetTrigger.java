@@ -16,62 +16,57 @@ public final class DatasetTrigger extends com.pulumi.resources.InvokeArgs {
     public static final DatasetTrigger Empty = new DatasetTrigger();
 
     @Import(name="schedule")
-      private final @Nullable DatasetSchedule schedule;
+    private @Nullable DatasetSchedule schedule;
 
     public Optional<DatasetSchedule> schedule() {
-        return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
+        return Optional.ofNullable(this.schedule);
     }
 
     @Import(name="triggeringDataset")
-      private final @Nullable DatasetTriggeringDataset triggeringDataset;
+    private @Nullable DatasetTriggeringDataset triggeringDataset;
 
     public Optional<DatasetTriggeringDataset> triggeringDataset() {
-        return this.triggeringDataset == null ? Optional.empty() : Optional.ofNullable(this.triggeringDataset);
+        return Optional.ofNullable(this.triggeringDataset);
     }
 
-    public DatasetTrigger(
-        @Nullable DatasetSchedule schedule,
-        @Nullable DatasetTriggeringDataset triggeringDataset) {
-        this.schedule = schedule;
-        this.triggeringDataset = triggeringDataset;
-    }
+    private DatasetTrigger() {}
 
-    private DatasetTrigger() {
-        this.schedule = null;
-        this.triggeringDataset = null;
+    private DatasetTrigger(DatasetTrigger $) {
+        this.schedule = $.schedule;
+        this.triggeringDataset = $.triggeringDataset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetTrigger defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatasetSchedule schedule;
-        private @Nullable DatasetTriggeringDataset triggeringDataset;
+        private DatasetTrigger $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetTrigger();
         }
 
         public Builder(DatasetTrigger defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
-    	      this.triggeringDataset = defaults.triggeringDataset;
+            $ = new DatasetTrigger(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(@Nullable DatasetSchedule schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
+
         public Builder triggeringDataset(@Nullable DatasetTriggeringDataset triggeringDataset) {
-            this.triggeringDataset = triggeringDataset;
+            $.triggeringDataset = triggeringDataset;
             return this;
-        }        public DatasetTrigger build() {
-            return new DatasetTrigger(schedule, triggeringDataset);
+        }
+
+        public DatasetTrigger build() {
+            return $;
         }
     }
+
 }

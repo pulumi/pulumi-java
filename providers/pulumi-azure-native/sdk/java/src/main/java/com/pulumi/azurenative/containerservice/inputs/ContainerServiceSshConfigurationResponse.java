@@ -22,48 +22,49 @@ public final class ContainerServiceSshConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="publicKeys", required=true)
-      private final List<ContainerServiceSshPublicKeyResponse> publicKeys;
+    private List<ContainerServiceSshPublicKeyResponse> publicKeys;
 
     public List<ContainerServiceSshPublicKeyResponse> publicKeys() {
         return this.publicKeys;
     }
 
-    public ContainerServiceSshConfigurationResponse(List<ContainerServiceSshPublicKeyResponse> publicKeys) {
-        this.publicKeys = Objects.requireNonNull(publicKeys, "expected parameter 'publicKeys' to be non-null");
-    }
+    private ContainerServiceSshConfigurationResponse() {}
 
-    private ContainerServiceSshConfigurationResponse() {
-        this.publicKeys = List.of();
+    private ContainerServiceSshConfigurationResponse(ContainerServiceSshConfigurationResponse $) {
+        this.publicKeys = $.publicKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceSshConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ContainerServiceSshPublicKeyResponse> publicKeys;
+        private ContainerServiceSshConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceSshConfigurationResponse();
         }
 
         public Builder(ContainerServiceSshConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeys = defaults.publicKeys;
+            $ = new ContainerServiceSshConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeys(List<ContainerServiceSshPublicKeyResponse> publicKeys) {
-            this.publicKeys = Objects.requireNonNull(publicKeys);
+            $.publicKeys = publicKeys;
             return this;
         }
+
         public Builder publicKeys(ContainerServiceSshPublicKeyResponse... publicKeys) {
             return publicKeys(List.of(publicKeys));
-        }        public ContainerServiceSshConfigurationResponse build() {
-            return new ContainerServiceSshConfigurationResponse(publicKeys);
+        }
+
+        public ContainerServiceSshConfigurationResponse build() {
+            $.publicKeys = Objects.requireNonNull($.publicKeys, "expected parameter 'publicKeys' to be non-null");
+            return $;
         }
     }
+
 }

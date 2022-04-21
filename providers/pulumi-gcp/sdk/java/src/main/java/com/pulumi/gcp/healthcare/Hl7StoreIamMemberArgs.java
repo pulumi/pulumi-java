@@ -5,10 +5,10 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class Hl7StoreIamMemberArgs extends com.pulumi.resources.ResourceAr
     public static final Hl7StoreIamMemberArgs Empty = new Hl7StoreIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<Hl7StoreIamMemberConditionArgs> condition;
+    private @Nullable Output<Hl7StoreIamMemberConditionArgs> condition;
 
-    public Output<Hl7StoreIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<Hl7StoreIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -31,14 +31,14 @@ public final class Hl7StoreIamMemberArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hl7V2StoreId", required=true)
-      private final Output<String> hl7V2StoreId;
+    private Output<String> hl7V2StoreId;
 
     public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -51,89 +51,81 @@ public final class Hl7StoreIamMemberArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public Hl7StoreIamMemberArgs(
-        @Nullable Output<Hl7StoreIamMemberConditionArgs> condition,
-        Output<String> hl7V2StoreId,
-        Output<String> member,
-        Output<String> role) {
-        this.condition = condition;
-        this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private Hl7StoreIamMemberArgs() {}
 
-    private Hl7StoreIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.hl7V2StoreId = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private Hl7StoreIamMemberArgs(Hl7StoreIamMemberArgs $) {
+        this.condition = $.condition;
+        this.hl7V2StoreId = $.hl7V2StoreId;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7StoreIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Hl7StoreIamMemberConditionArgs> condition;
-        private Output<String> hl7V2StoreId;
-        private Output<String> member;
-        private Output<String> role;
+        private Hl7StoreIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7StoreIamMemberArgs();
         }
 
         public Builder(Hl7StoreIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.hl7V2StoreId = defaults.hl7V2StoreId;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new Hl7StoreIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<Hl7StoreIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable Hl7StoreIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(Hl7StoreIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder hl7V2StoreId(Output<String> hl7V2StoreId) {
-            this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
+            $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
+
         public Builder hl7V2StoreId(String hl7V2StoreId) {
-            this.hl7V2StoreId = Output.of(Objects.requireNonNull(hl7V2StoreId));
-            return this;
+            return hl7V2StoreId(Output.of(hl7V2StoreId));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public Hl7StoreIamMemberArgs build() {
-            return new Hl7StoreIamMemberArgs(condition, hl7V2StoreId, member, role);
+            return role(Output.of(role));
+        }
+
+        public Hl7StoreIamMemberArgs build() {
+            $.hl7V2StoreId = Objects.requireNonNull($.hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

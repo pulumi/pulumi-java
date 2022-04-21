@@ -5,9 +5,9 @@ package com.pulumi.gcp.apigee;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionKeyName")
-      private final @Nullable Output<String> diskEncryptionKeyName;
+    private @Nullable Output<String> diskEncryptionKeyName;
 
-    public Output<String> diskEncryptionKeyName() {
-        return this.diskEncryptionKeyName == null ? Codegen.empty() : this.diskEncryptionKeyName;
+    public Optional<Output<String>> diskEncryptionKeyName() {
+        return Optional.ofNullable(this.diskEncryptionKeyName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipRange")
-      private final @Nullable Output<String> ipRange;
+    private @Nullable Output<String> ipRange;
 
-    public Output<String> ipRange() {
-        return this.ipRange == null ? Codegen.empty() : this.ipRange;
+    public Optional<Output<String>> ipRange() {
+        return Optional.ofNullable(this.ipRange);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -84,10 +84,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -96,7 +96,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orgId", required=true)
-      private final Output<String> orgId;
+    private Output<String> orgId;
 
     public Output<String> orgId() {
         return this.orgId;
@@ -108,141 +108,120 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peeringCidrRange")
-      private final @Nullable Output<String> peeringCidrRange;
+    private @Nullable Output<String> peeringCidrRange;
 
-    public Output<String> peeringCidrRange() {
-        return this.peeringCidrRange == null ? Codegen.empty() : this.peeringCidrRange;
+    public Optional<Output<String>> peeringCidrRange() {
+        return Optional.ofNullable(this.peeringCidrRange);
     }
 
-    public InstanceArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> diskEncryptionKeyName,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> ipRange,
-        Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> orgId,
-        @Nullable Output<String> peeringCidrRange) {
-        this.description = description;
-        this.diskEncryptionKeyName = diskEncryptionKeyName;
-        this.displayName = displayName;
-        this.ipRange = ipRange;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-        this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
-        this.peeringCidrRange = peeringCidrRange;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.description = Codegen.empty();
-        this.diskEncryptionKeyName = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.ipRange = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.peeringCidrRange = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.description = $.description;
+        this.diskEncryptionKeyName = $.diskEncryptionKeyName;
+        this.displayName = $.displayName;
+        this.ipRange = $.ipRange;
+        this.location = $.location;
+        this.name = $.name;
+        this.orgId = $.orgId;
+        this.peeringCidrRange = $.peeringCidrRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> diskEncryptionKeyName;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> ipRange;
-        private Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> orgId;
-        private @Nullable Output<String> peeringCidrRange;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.diskEncryptionKeyName = defaults.diskEncryptionKeyName;
-    	      this.displayName = defaults.displayName;
-    	      this.ipRange = defaults.ipRange;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.orgId = defaults.orgId;
-    	      this.peeringCidrRange = defaults.peeringCidrRange;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diskEncryptionKeyName(@Nullable Output<String> diskEncryptionKeyName) {
-            this.diskEncryptionKeyName = diskEncryptionKeyName;
+            $.diskEncryptionKeyName = diskEncryptionKeyName;
             return this;
         }
-        public Builder diskEncryptionKeyName(@Nullable String diskEncryptionKeyName) {
-            this.diskEncryptionKeyName = Codegen.ofNullable(diskEncryptionKeyName);
-            return this;
+
+        public Builder diskEncryptionKeyName(String diskEncryptionKeyName) {
+            return diskEncryptionKeyName(Output.of(diskEncryptionKeyName));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder ipRange(@Nullable Output<String> ipRange) {
-            this.ipRange = ipRange;
+            $.ipRange = ipRange;
             return this;
         }
-        public Builder ipRange(@Nullable String ipRange) {
-            this.ipRange = Codegen.ofNullable(ipRange);
-            return this;
+
+        public Builder ipRange(String ipRange) {
+            return ipRange(Output.of(ipRange));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder orgId(Output<String> orgId) {
-            this.orgId = Objects.requireNonNull(orgId);
+            $.orgId = orgId;
             return this;
         }
+
         public Builder orgId(String orgId) {
-            this.orgId = Output.of(Objects.requireNonNull(orgId));
-            return this;
+            return orgId(Output.of(orgId));
         }
+
         public Builder peeringCidrRange(@Nullable Output<String> peeringCidrRange) {
-            this.peeringCidrRange = peeringCidrRange;
+            $.peeringCidrRange = peeringCidrRange;
             return this;
         }
-        public Builder peeringCidrRange(@Nullable String peeringCidrRange) {
-            this.peeringCidrRange = Codegen.ofNullable(peeringCidrRange);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(description, diskEncryptionKeyName, displayName, ipRange, location, name, orgId, peeringCidrRange);
+
+        public Builder peeringCidrRange(String peeringCidrRange) {
+            return peeringCidrRange(Output.of(peeringCidrRange));
+        }
+
+        public InstanceArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.orgId = Objects.requireNonNull($.orgId, "expected parameter 'orgId' to be non-null");
+            return $;
         }
     }
+
 }

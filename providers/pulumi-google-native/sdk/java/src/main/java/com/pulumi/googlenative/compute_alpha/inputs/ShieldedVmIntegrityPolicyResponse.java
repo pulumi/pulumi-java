@@ -21,45 +21,45 @@ public final class ShieldedVmIntegrityPolicyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="updateAutoLearnPolicy", required=true)
-      private final Boolean updateAutoLearnPolicy;
+    private Boolean updateAutoLearnPolicy;
 
     public Boolean updateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy;
     }
 
-    public ShieldedVmIntegrityPolicyResponse(Boolean updateAutoLearnPolicy) {
-        this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy, "expected parameter 'updateAutoLearnPolicy' to be non-null");
-    }
+    private ShieldedVmIntegrityPolicyResponse() {}
 
-    private ShieldedVmIntegrityPolicyResponse() {
-        this.updateAutoLearnPolicy = null;
+    private ShieldedVmIntegrityPolicyResponse(ShieldedVmIntegrityPolicyResponse $) {
+        this.updateAutoLearnPolicy = $.updateAutoLearnPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShieldedVmIntegrityPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean updateAutoLearnPolicy;
+        private ShieldedVmIntegrityPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShieldedVmIntegrityPolicyResponse();
         }
 
         public Builder(ShieldedVmIntegrityPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.updateAutoLearnPolicy = defaults.updateAutoLearnPolicy;
+            $ = new ShieldedVmIntegrityPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder updateAutoLearnPolicy(Boolean updateAutoLearnPolicy) {
-            this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
+            $.updateAutoLearnPolicy = updateAutoLearnPolicy;
             return this;
-        }        public ShieldedVmIntegrityPolicyResponse build() {
-            return new ShieldedVmIntegrityPolicyResponse(updateAutoLearnPolicy);
+        }
+
+        public ShieldedVmIntegrityPolicyResponse build() {
+            $.updateAutoLearnPolicy = Objects.requireNonNull($.updateAutoLearnPolicy, "expected parameter 'updateAutoLearnPolicy' to be non-null");
+            return $;
         }
     }
+
 }

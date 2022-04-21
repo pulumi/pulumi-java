@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="globalParameters")
-      private final @Nullable Output<Map<String,Object>> globalParameters;
+    private @Nullable Output<Map<String,Object>> globalParameters;
 
-    public Output<Map<String,Object>> globalParameters() {
-        return this.globalParameters == null ? Codegen.empty() : this.globalParameters;
+    public Optional<Output<Map<String,Object>>> globalParameters() {
+        return Optional.ofNullable(this.globalParameters);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
-        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -76,7 +77,7 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -87,10 +88,10 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<ActivityPolicyArgs> policy;
+    private @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<ActivityPolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -99,7 +100,7 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -110,10 +111,10 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
     /**
@@ -121,10 +122,10 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="webServiceInputs")
-      private final @Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs;
+    private @Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs;
 
-    public Output<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs() {
-        return this.webServiceInputs == null ? Codegen.empty() : this.webServiceInputs;
+    public Optional<Output<Map<String,AzureMLWebServiceFileArgs>>> webServiceInputs() {
+        return Optional.ofNullable(this.webServiceInputs);
     }
 
     /**
@@ -132,173 +133,148 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="webServiceOutputs")
-      private final @Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs;
+    private @Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs;
 
-    public Output<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs() {
-        return this.webServiceOutputs == null ? Codegen.empty() : this.webServiceOutputs;
+    public Optional<Output<Map<String,AzureMLWebServiceFileArgs>>> webServiceOutputs() {
+        return Optional.ofNullable(this.webServiceOutputs);
     }
 
-    public AzureMLBatchExecutionActivityArgs(
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<Map<String,Object>> globalParameters,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
-        Output<String> name,
-        @Nullable Output<ActivityPolicyArgs> policy,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties,
-        @Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs,
-        @Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs) {
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.globalParameters = globalParameters;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-        this.webServiceInputs = webServiceInputs;
-        this.webServiceOutputs = webServiceOutputs;
-    }
+    private AzureMLBatchExecutionActivityArgs() {}
 
-    private AzureMLBatchExecutionActivityArgs() {
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.globalParameters = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
-        this.webServiceInputs = Codegen.empty();
-        this.webServiceOutputs = Codegen.empty();
+    private AzureMLBatchExecutionActivityArgs(AzureMLBatchExecutionActivityArgs $) {
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.globalParameters = $.globalParameters;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
+        this.webServiceInputs = $.webServiceInputs;
+        this.webServiceOutputs = $.webServiceOutputs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMLBatchExecutionActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Map<String,Object>> globalParameters;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private Output<String> name;
-        private @Nullable Output<ActivityPolicyArgs> policy;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
-        private @Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs;
-        private @Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs;
+        private AzureMLBatchExecutionActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMLBatchExecutionActivityArgs();
         }
 
         public Builder(AzureMLBatchExecutionActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.globalParameters = defaults.globalParameters;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
-    	      this.webServiceInputs = defaults.webServiceInputs;
-    	      this.webServiceOutputs = defaults.webServiceOutputs;
+            $ = new AzureMLBatchExecutionActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder globalParameters(@Nullable Output<Map<String,Object>> globalParameters) {
-            this.globalParameters = globalParameters;
+            $.globalParameters = globalParameters;
             return this;
         }
-        public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
-            this.globalParameters = Codegen.ofNullable(globalParameters);
-            return this;
+
+        public Builder globalParameters(Map<String,Object> globalParameters) {
+            return globalParameters(Output.of(globalParameters));
         }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
-        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
-            return this;
+
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(ActivityPolicyArgs policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }
+
         public Builder webServiceInputs(@Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs) {
-            this.webServiceInputs = webServiceInputs;
+            $.webServiceInputs = webServiceInputs;
             return this;
         }
-        public Builder webServiceInputs(@Nullable Map<String,AzureMLWebServiceFileArgs> webServiceInputs) {
-            this.webServiceInputs = Codegen.ofNullable(webServiceInputs);
-            return this;
+
+        public Builder webServiceInputs(Map<String,AzureMLWebServiceFileArgs> webServiceInputs) {
+            return webServiceInputs(Output.of(webServiceInputs));
         }
+
         public Builder webServiceOutputs(@Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs) {
-            this.webServiceOutputs = webServiceOutputs;
+            $.webServiceOutputs = webServiceOutputs;
             return this;
         }
-        public Builder webServiceOutputs(@Nullable Map<String,AzureMLWebServiceFileArgs> webServiceOutputs) {
-            this.webServiceOutputs = Codegen.ofNullable(webServiceOutputs);
-            return this;
-        }        public AzureMLBatchExecutionActivityArgs build() {
-            return new AzureMLBatchExecutionActivityArgs(dependsOn, description, globalParameters, linkedServiceName, name, policy, type, userProperties, webServiceInputs, webServiceOutputs);
+
+        public Builder webServiceOutputs(Map<String,AzureMLWebServiceFileArgs> webServiceOutputs) {
+            return webServiceOutputs(Output.of(webServiceOutputs));
+        }
+
+        public AzureMLBatchExecutionActivityArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -7,7 +7,6 @@ import com.pulumi.aws.efs.inputs.FileSystemLifecyclePolicyGetArgs;
 import com.pulumi.aws.efs.inputs.FileSystemSizeInByteGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -15,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZoneId")
-      private final @Nullable Output<String> availabilityZoneId;
+    private @Nullable Output<String> availabilityZoneId;
 
-    public Output<String> availabilityZoneId() {
-        return this.availabilityZoneId == null ? Codegen.empty() : this.availabilityZoneId;
+    public Optional<Output<String>> availabilityZoneId() {
+        return Optional.ofNullable(this.availabilityZoneId);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZoneName")
-      private final @Nullable Output<String> availabilityZoneName;
+    private @Nullable Output<String> availabilityZoneName;
 
-    public Output<String> availabilityZoneName() {
-        return this.availabilityZoneName == null ? Codegen.empty() : this.availabilityZoneName;
+    public Optional<Output<String>> availabilityZoneName() {
+        return Optional.ofNullable(this.availabilityZoneName);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationToken")
-      private final @Nullable Output<String> creationToken;
+    private @Nullable Output<String> creationToken;
 
-    public Output<String> creationToken() {
-        return this.creationToken == null ? Codegen.empty() : this.creationToken;
+    public Optional<Output<String>> creationToken() {
+        return Optional.ofNullable(this.creationToken);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsName")
-      private final @Nullable Output<String> dnsName;
+    private @Nullable Output<String> dnsName;
 
-    public Output<String> dnsName() {
-        return this.dnsName == null ? Codegen.empty() : this.dnsName;
+    public Optional<Output<String>> dnsName() {
+        return Optional.ofNullable(this.dnsName);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecyclePolicy")
-      private final @Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy;
+    private @Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy;
 
-    public Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy() {
-        return this.lifecyclePolicy == null ? Codegen.empty() : this.lifecyclePolicy;
+    public Optional<Output<FileSystemLifecyclePolicyGetArgs>> lifecyclePolicy() {
+        return Optional.ofNullable(this.lifecyclePolicy);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfMountTargets")
-      private final @Nullable Output<Integer> numberOfMountTargets;
+    private @Nullable Output<Integer> numberOfMountTargets;
 
-    public Output<Integer> numberOfMountTargets() {
-        return this.numberOfMountTargets == null ? Codegen.empty() : this.numberOfMountTargets;
+    public Optional<Output<Integer>> numberOfMountTargets() {
+        return Optional.ofNullable(this.numberOfMountTargets);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="performanceMode")
-      private final @Nullable Output<String> performanceMode;
+    private @Nullable Output<String> performanceMode;
 
-    public Output<String> performanceMode() {
-        return this.performanceMode == null ? Codegen.empty() : this.performanceMode;
+    public Optional<Output<String>> performanceMode() {
+        return Optional.ofNullable(this.performanceMode);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisionedThroughputInMibps")
-      private final @Nullable Output<Double> provisionedThroughputInMibps;
+    private @Nullable Output<Double> provisionedThroughputInMibps;
 
-    public Output<Double> provisionedThroughputInMibps() {
-        return this.provisionedThroughputInMibps == null ? Codegen.empty() : this.provisionedThroughputInMibps;
+    public Optional<Output<Double>> provisionedThroughputInMibps() {
+        return Optional.ofNullable(this.provisionedThroughputInMibps);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeInBytes")
-      private final @Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes;
+    private @Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes;
 
-    public Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes() {
-        return this.sizeInBytes == null ? Codegen.empty() : this.sizeInBytes;
+    public Optional<Output<List<FileSystemSizeInByteGetArgs>>> sizeInBytes() {
+        return Optional.ofNullable(this.sizeInBytes);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -195,248 +195,202 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="throughputMode")
-      private final @Nullable Output<String> throughputMode;
+    private @Nullable Output<String> throughputMode;
 
-    public Output<String> throughputMode() {
-        return this.throughputMode == null ? Codegen.empty() : this.throughputMode;
+    public Optional<Output<String>> throughputMode() {
+        return Optional.ofNullable(this.throughputMode);
     }
 
-    public FileSystemState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> availabilityZoneId,
-        @Nullable Output<String> availabilityZoneName,
-        @Nullable Output<String> creationToken,
-        @Nullable Output<String> dnsName,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy,
-        @Nullable Output<Integer> numberOfMountTargets,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<String> performanceMode,
-        @Nullable Output<Double> provisionedThroughputInMibps,
-        @Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> throughputMode) {
-        this.arn = arn;
-        this.availabilityZoneId = availabilityZoneId;
-        this.availabilityZoneName = availabilityZoneName;
-        this.creationToken = creationToken;
-        this.dnsName = dnsName;
-        this.encrypted = encrypted;
-        this.kmsKeyId = kmsKeyId;
-        this.lifecyclePolicy = lifecyclePolicy;
-        this.numberOfMountTargets = numberOfMountTargets;
-        this.ownerId = ownerId;
-        this.performanceMode = performanceMode;
-        this.provisionedThroughputInMibps = provisionedThroughputInMibps;
-        this.sizeInBytes = sizeInBytes;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.throughputMode = throughputMode;
-    }
+    private FileSystemState() {}
 
-    private FileSystemState() {
-        this.arn = Codegen.empty();
-        this.availabilityZoneId = Codegen.empty();
-        this.availabilityZoneName = Codegen.empty();
-        this.creationToken = Codegen.empty();
-        this.dnsName = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.lifecyclePolicy = Codegen.empty();
-        this.numberOfMountTargets = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.performanceMode = Codegen.empty();
-        this.provisionedThroughputInMibps = Codegen.empty();
-        this.sizeInBytes = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.throughputMode = Codegen.empty();
+    private FileSystemState(FileSystemState $) {
+        this.arn = $.arn;
+        this.availabilityZoneId = $.availabilityZoneId;
+        this.availabilityZoneName = $.availabilityZoneName;
+        this.creationToken = $.creationToken;
+        this.dnsName = $.dnsName;
+        this.encrypted = $.encrypted;
+        this.kmsKeyId = $.kmsKeyId;
+        this.lifecyclePolicy = $.lifecyclePolicy;
+        this.numberOfMountTargets = $.numberOfMountTargets;
+        this.ownerId = $.ownerId;
+        this.performanceMode = $.performanceMode;
+        this.provisionedThroughputInMibps = $.provisionedThroughputInMibps;
+        this.sizeInBytes = $.sizeInBytes;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.throughputMode = $.throughputMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> availabilityZoneId;
-        private @Nullable Output<String> availabilityZoneName;
-        private @Nullable Output<String> creationToken;
-        private @Nullable Output<String> dnsName;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy;
-        private @Nullable Output<Integer> numberOfMountTargets;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<String> performanceMode;
-        private @Nullable Output<Double> provisionedThroughputInMibps;
-        private @Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> throughputMode;
+        private FileSystemState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemState();
         }
 
         public Builder(FileSystemState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.availabilityZoneId = defaults.availabilityZoneId;
-    	      this.availabilityZoneName = defaults.availabilityZoneName;
-    	      this.creationToken = defaults.creationToken;
-    	      this.dnsName = defaults.dnsName;
-    	      this.encrypted = defaults.encrypted;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.lifecyclePolicy = defaults.lifecyclePolicy;
-    	      this.numberOfMountTargets = defaults.numberOfMountTargets;
-    	      this.ownerId = defaults.ownerId;
-    	      this.performanceMode = defaults.performanceMode;
-    	      this.provisionedThroughputInMibps = defaults.provisionedThroughputInMibps;
-    	      this.sizeInBytes = defaults.sizeInBytes;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.throughputMode = defaults.throughputMode;
+            $ = new FileSystemState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
-            this.availabilityZoneId = availabilityZoneId;
+            $.availabilityZoneId = availabilityZoneId;
             return this;
         }
-        public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            this.availabilityZoneId = Codegen.ofNullable(availabilityZoneId);
-            return this;
+
+        public Builder availabilityZoneId(String availabilityZoneId) {
+            return availabilityZoneId(Output.of(availabilityZoneId));
         }
+
         public Builder availabilityZoneName(@Nullable Output<String> availabilityZoneName) {
-            this.availabilityZoneName = availabilityZoneName;
+            $.availabilityZoneName = availabilityZoneName;
             return this;
         }
-        public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
-            this.availabilityZoneName = Codegen.ofNullable(availabilityZoneName);
-            return this;
+
+        public Builder availabilityZoneName(String availabilityZoneName) {
+            return availabilityZoneName(Output.of(availabilityZoneName));
         }
+
         public Builder creationToken(@Nullable Output<String> creationToken) {
-            this.creationToken = creationToken;
+            $.creationToken = creationToken;
             return this;
         }
-        public Builder creationToken(@Nullable String creationToken) {
-            this.creationToken = Codegen.ofNullable(creationToken);
-            return this;
+
+        public Builder creationToken(String creationToken) {
+            return creationToken(Output.of(creationToken));
         }
+
         public Builder dnsName(@Nullable Output<String> dnsName) {
-            this.dnsName = dnsName;
+            $.dnsName = dnsName;
             return this;
         }
-        public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Codegen.ofNullable(dnsName);
-            return this;
+
+        public Builder dnsName(String dnsName) {
+            return dnsName(Output.of(dnsName));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder lifecyclePolicy(@Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy) {
-            this.lifecyclePolicy = lifecyclePolicy;
+            $.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
-        public Builder lifecyclePolicy(@Nullable FileSystemLifecyclePolicyGetArgs lifecyclePolicy) {
-            this.lifecyclePolicy = Codegen.ofNullable(lifecyclePolicy);
-            return this;
+
+        public Builder lifecyclePolicy(FileSystemLifecyclePolicyGetArgs lifecyclePolicy) {
+            return lifecyclePolicy(Output.of(lifecyclePolicy));
         }
+
         public Builder numberOfMountTargets(@Nullable Output<Integer> numberOfMountTargets) {
-            this.numberOfMountTargets = numberOfMountTargets;
+            $.numberOfMountTargets = numberOfMountTargets;
             return this;
         }
-        public Builder numberOfMountTargets(@Nullable Integer numberOfMountTargets) {
-            this.numberOfMountTargets = Codegen.ofNullable(numberOfMountTargets);
-            return this;
+
+        public Builder numberOfMountTargets(Integer numberOfMountTargets) {
+            return numberOfMountTargets(Output.of(numberOfMountTargets));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder performanceMode(@Nullable Output<String> performanceMode) {
-            this.performanceMode = performanceMode;
+            $.performanceMode = performanceMode;
             return this;
         }
-        public Builder performanceMode(@Nullable String performanceMode) {
-            this.performanceMode = Codegen.ofNullable(performanceMode);
-            return this;
+
+        public Builder performanceMode(String performanceMode) {
+            return performanceMode(Output.of(performanceMode));
         }
+
         public Builder provisionedThroughputInMibps(@Nullable Output<Double> provisionedThroughputInMibps) {
-            this.provisionedThroughputInMibps = provisionedThroughputInMibps;
+            $.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
-        public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
-            this.provisionedThroughputInMibps = Codegen.ofNullable(provisionedThroughputInMibps);
-            return this;
+
+        public Builder provisionedThroughputInMibps(Double provisionedThroughputInMibps) {
+            return provisionedThroughputInMibps(Output.of(provisionedThroughputInMibps));
         }
+
         public Builder sizeInBytes(@Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes) {
-            this.sizeInBytes = sizeInBytes;
+            $.sizeInBytes = sizeInBytes;
             return this;
         }
-        public Builder sizeInBytes(@Nullable List<FileSystemSizeInByteGetArgs> sizeInBytes) {
-            this.sizeInBytes = Codegen.ofNullable(sizeInBytes);
-            return this;
+
+        public Builder sizeInBytes(List<FileSystemSizeInByteGetArgs> sizeInBytes) {
+            return sizeInBytes(Output.of(sizeInBytes));
         }
+
         public Builder sizeInBytes(FileSystemSizeInByteGetArgs... sizeInBytes) {
             return sizeInBytes(List.of(sizeInBytes));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder throughputMode(@Nullable Output<String> throughputMode) {
-            this.throughputMode = throughputMode;
+            $.throughputMode = throughputMode;
             return this;
         }
-        public Builder throughputMode(@Nullable String throughputMode) {
-            this.throughputMode = Codegen.ofNullable(throughputMode);
-            return this;
-        }        public FileSystemState build() {
-            return new FileSystemState(arn, availabilityZoneId, availabilityZoneName, creationToken, dnsName, encrypted, kmsKeyId, lifecyclePolicy, numberOfMountTargets, ownerId, performanceMode, provisionedThroughputInMibps, sizeInBytes, tags, tagsAll, throughputMode);
+
+        public Builder throughputMode(String throughputMode) {
+            return throughputMode(Output.of(throughputMode));
+        }
+
+        public FileSystemState build() {
+            return $;
         }
     }
+
 }

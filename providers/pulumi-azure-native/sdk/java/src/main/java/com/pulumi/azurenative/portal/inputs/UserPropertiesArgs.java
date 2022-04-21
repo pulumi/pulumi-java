@@ -10,7 +10,6 @@ import com.pulumi.azurenative.portal.inputs.TerminalSettingsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -28,7 +27,7 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="preferredLocation", required=true)
-      private final Output<String> preferredLocation;
+    private Output<String> preferredLocation;
 
     public Output<String> preferredLocation() {
         return this.preferredLocation;
@@ -39,7 +38,7 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="preferredOsType", required=true)
-      private final Output<Either<String,OsType>> preferredOsType;
+    private Output<Either<String,OsType>> preferredOsType;
 
     public Output<Either<String,OsType>> preferredOsType() {
         return this.preferredOsType;
@@ -50,7 +49,7 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="preferredShellType", required=true)
-      private final Output<Either<String,ShellType>> preferredShellType;
+    private Output<Either<String,ShellType>> preferredShellType;
 
     public Output<Either<String,ShellType>> preferredShellType() {
         return this.preferredShellType;
@@ -61,7 +60,7 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="storageProfile", required=true)
-      private final Output<StorageProfileArgs> storageProfile;
+    private Output<StorageProfileArgs> storageProfile;
 
     public Output<StorageProfileArgs> storageProfile() {
         return this.storageProfile;
@@ -72,102 +71,93 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="terminalSettings", required=true)
-      private final Output<TerminalSettingsArgs> terminalSettings;
+    private Output<TerminalSettingsArgs> terminalSettings;
 
     public Output<TerminalSettingsArgs> terminalSettings() {
         return this.terminalSettings;
     }
 
-    public UserPropertiesArgs(
-        Output<String> preferredLocation,
-        Output<Either<String,OsType>> preferredOsType,
-        Output<Either<String,ShellType>> preferredShellType,
-        Output<StorageProfileArgs> storageProfile,
-        Output<TerminalSettingsArgs> terminalSettings) {
-        this.preferredLocation = Objects.requireNonNull(preferredLocation, "expected parameter 'preferredLocation' to be non-null");
-        this.preferredOsType = Objects.requireNonNull(preferredOsType, "expected parameter 'preferredOsType' to be non-null");
-        this.preferredShellType = Objects.requireNonNull(preferredShellType, "expected parameter 'preferredShellType' to be non-null");
-        this.storageProfile = Objects.requireNonNull(storageProfile, "expected parameter 'storageProfile' to be non-null");
-        this.terminalSettings = Objects.requireNonNull(terminalSettings, "expected parameter 'terminalSettings' to be non-null");
-    }
+    private UserPropertiesArgs() {}
 
-    private UserPropertiesArgs() {
-        this.preferredLocation = Codegen.empty();
-        this.preferredOsType = Codegen.empty();
-        this.preferredShellType = Codegen.empty();
-        this.storageProfile = Codegen.empty();
-        this.terminalSettings = Codegen.empty();
+    private UserPropertiesArgs(UserPropertiesArgs $) {
+        this.preferredLocation = $.preferredLocation;
+        this.preferredOsType = $.preferredOsType;
+        this.preferredShellType = $.preferredShellType;
+        this.storageProfile = $.storageProfile;
+        this.terminalSettings = $.terminalSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> preferredLocation;
-        private Output<Either<String,OsType>> preferredOsType;
-        private Output<Either<String,ShellType>> preferredShellType;
-        private Output<StorageProfileArgs> storageProfile;
-        private Output<TerminalSettingsArgs> terminalSettings;
+        private UserPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPropertiesArgs();
         }
 
         public Builder(UserPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preferredLocation = defaults.preferredLocation;
-    	      this.preferredOsType = defaults.preferredOsType;
-    	      this.preferredShellType = defaults.preferredShellType;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.terminalSettings = defaults.terminalSettings;
+            $ = new UserPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preferredLocation(Output<String> preferredLocation) {
-            this.preferredLocation = Objects.requireNonNull(preferredLocation);
+            $.preferredLocation = preferredLocation;
             return this;
         }
+
         public Builder preferredLocation(String preferredLocation) {
-            this.preferredLocation = Output.of(Objects.requireNonNull(preferredLocation));
-            return this;
+            return preferredLocation(Output.of(preferredLocation));
         }
+
         public Builder preferredOsType(Output<Either<String,OsType>> preferredOsType) {
-            this.preferredOsType = Objects.requireNonNull(preferredOsType);
+            $.preferredOsType = preferredOsType;
             return this;
         }
+
         public Builder preferredOsType(Either<String,OsType> preferredOsType) {
-            this.preferredOsType = Output.of(Objects.requireNonNull(preferredOsType));
-            return this;
+            return preferredOsType(Output.of(preferredOsType));
         }
+
         public Builder preferredShellType(Output<Either<String,ShellType>> preferredShellType) {
-            this.preferredShellType = Objects.requireNonNull(preferredShellType);
+            $.preferredShellType = preferredShellType;
             return this;
         }
+
         public Builder preferredShellType(Either<String,ShellType> preferredShellType) {
-            this.preferredShellType = Output.of(Objects.requireNonNull(preferredShellType));
-            return this;
+            return preferredShellType(Output.of(preferredShellType));
         }
+
         public Builder storageProfile(Output<StorageProfileArgs> storageProfile) {
-            this.storageProfile = Objects.requireNonNull(storageProfile);
+            $.storageProfile = storageProfile;
             return this;
         }
+
         public Builder storageProfile(StorageProfileArgs storageProfile) {
-            this.storageProfile = Output.of(Objects.requireNonNull(storageProfile));
-            return this;
+            return storageProfile(Output.of(storageProfile));
         }
+
         public Builder terminalSettings(Output<TerminalSettingsArgs> terminalSettings) {
-            this.terminalSettings = Objects.requireNonNull(terminalSettings);
+            $.terminalSettings = terminalSettings;
             return this;
         }
+
         public Builder terminalSettings(TerminalSettingsArgs terminalSettings) {
-            this.terminalSettings = Output.of(Objects.requireNonNull(terminalSettings));
-            return this;
-        }        public UserPropertiesArgs build() {
-            return new UserPropertiesArgs(preferredLocation, preferredOsType, preferredShellType, storageProfile, terminalSettings);
+            return terminalSettings(Output.of(terminalSettings));
+        }
+
+        public UserPropertiesArgs build() {
+            $.preferredLocation = Objects.requireNonNull($.preferredLocation, "expected parameter 'preferredLocation' to be non-null");
+            $.preferredOsType = Objects.requireNonNull($.preferredOsType, "expected parameter 'preferredOsType' to be non-null");
+            $.preferredShellType = Objects.requireNonNull($.preferredShellType, "expected parameter 'preferredShellType' to be non-null");
+            $.storageProfile = Objects.requireNonNull($.storageProfile, "expected parameter 'storageProfile' to be non-null");
+            $.terminalSettings = Objects.requireNonNull($.terminalSettings, "expected parameter 'terminalSettings' to be non-null");
+            return $;
         }
     }
+
 }

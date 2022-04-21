@@ -23,45 +23,44 @@ public final class ExtendedPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="diskExclusionProperties")
-      private final @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
+    private @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
 
     public Optional<DiskExclusionPropertiesResponse> diskExclusionProperties() {
-        return this.diskExclusionProperties == null ? Optional.empty() : Optional.ofNullable(this.diskExclusionProperties);
+        return Optional.ofNullable(this.diskExclusionProperties);
     }
 
-    public ExtendedPropertiesResponse(@Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
-        this.diskExclusionProperties = diskExclusionProperties;
-    }
+    private ExtendedPropertiesResponse() {}
 
-    private ExtendedPropertiesResponse() {
-        this.diskExclusionProperties = null;
+    private ExtendedPropertiesResponse(ExtendedPropertiesResponse $) {
+        this.diskExclusionProperties = $.diskExclusionProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtendedPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
+        private ExtendedPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtendedPropertiesResponse();
         }
 
         public Builder(ExtendedPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskExclusionProperties = defaults.diskExclusionProperties;
+            $ = new ExtendedPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskExclusionProperties(@Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
-            this.diskExclusionProperties = diskExclusionProperties;
+            $.diskExclusionProperties = diskExclusionProperties;
             return this;
-        }        public ExtendedPropertiesResponse build() {
-            return new ExtendedPropertiesResponse(diskExclusionProperties);
+        }
+
+        public ExtendedPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class JobOutputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datastoreId", required=true)
-      private final String datastoreId;
+    private String datastoreId;
 
     public String datastoreId() {
         return this.datastoreId;
@@ -32,55 +32,52 @@ public final class JobOutputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public JobOutputResponse(
-        String datastoreId,
-        String path) {
-        this.datastoreId = Objects.requireNonNull(datastoreId, "expected parameter 'datastoreId' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private JobOutputResponse() {}
 
-    private JobOutputResponse() {
-        this.datastoreId = null;
-        this.path = null;
+    private JobOutputResponse(JobOutputResponse $) {
+        this.datastoreId = $.datastoreId;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datastoreId;
-        private String path;
+        private JobOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobOutputResponse();
         }
 
         public Builder(JobOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreId = defaults.datastoreId;
-    	      this.path = defaults.path;
+            $ = new JobOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreId(String datastoreId) {
-            this.datastoreId = Objects.requireNonNull(datastoreId);
+            $.datastoreId = datastoreId;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public JobOutputResponse build() {
-            return new JobOutputResponse(datastoreId, path);
+        }
+
+        public JobOutputResponse build() {
+            $.datastoreId = Objects.requireNonNull($.datastoreId, "expected parameter 'datastoreId' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

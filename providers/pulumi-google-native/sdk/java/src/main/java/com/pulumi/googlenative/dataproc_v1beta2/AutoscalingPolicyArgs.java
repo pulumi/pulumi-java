@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dataproc_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.BasicAutoscalingAlgorithmArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.InstanceGroupAutoscalingPolicyConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     public static final AutoscalingPolicyArgs Empty = new AutoscalingPolicyArgs();
 
     @Import(name="basicAlgorithm")
-      private final @Nullable Output<BasicAutoscalingAlgorithmArgs> basicAlgorithm;
+    private @Nullable Output<BasicAutoscalingAlgorithmArgs> basicAlgorithm;
 
-    public Output<BasicAutoscalingAlgorithmArgs> basicAlgorithm() {
-        return this.basicAlgorithm == null ? Codegen.empty() : this.basicAlgorithm;
+    public Optional<Output<BasicAutoscalingAlgorithmArgs>> basicAlgorithm() {
+        return Optional.ofNullable(this.basicAlgorithm);
     }
 
     /**
@@ -29,24 +29,24 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="secondaryWorkerConfig")
-      private final @Nullable Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig;
+    private @Nullable Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig;
 
-    public Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig() {
-        return this.secondaryWorkerConfig == null ? Codegen.empty() : this.secondaryWorkerConfig;
+    public Optional<Output<InstanceGroupAutoscalingPolicyConfigArgs>> secondaryWorkerConfig() {
+        return Optional.ofNullable(this.secondaryWorkerConfig);
     }
 
     /**
@@ -65,115 +65,100 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="workerConfig", required=true)
-      private final Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig;
+    private Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig;
 
     public Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig() {
         return this.workerConfig;
     }
 
-    public AutoscalingPolicyArgs(
-        @Nullable Output<BasicAutoscalingAlgorithmArgs> basicAlgorithm,
-        Output<String> id,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig,
-        Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig) {
-        this.basicAlgorithm = basicAlgorithm;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.location = location;
-        this.project = project;
-        this.secondaryWorkerConfig = secondaryWorkerConfig;
-        this.workerConfig = Objects.requireNonNull(workerConfig, "expected parameter 'workerConfig' to be non-null");
-    }
+    private AutoscalingPolicyArgs() {}
 
-    private AutoscalingPolicyArgs() {
-        this.basicAlgorithm = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.secondaryWorkerConfig = Codegen.empty();
-        this.workerConfig = Codegen.empty();
+    private AutoscalingPolicyArgs(AutoscalingPolicyArgs $) {
+        this.basicAlgorithm = $.basicAlgorithm;
+        this.id = $.id;
+        this.location = $.location;
+        this.project = $.project;
+        this.secondaryWorkerConfig = $.secondaryWorkerConfig;
+        this.workerConfig = $.workerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BasicAutoscalingAlgorithmArgs> basicAlgorithm;
-        private Output<String> id;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig;
-        private Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig;
+        private AutoscalingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyArgs();
         }
 
         public Builder(AutoscalingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicAlgorithm = defaults.basicAlgorithm;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.secondaryWorkerConfig = defaults.secondaryWorkerConfig;
-    	      this.workerConfig = defaults.workerConfig;
+            $ = new AutoscalingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicAlgorithm(@Nullable Output<BasicAutoscalingAlgorithmArgs> basicAlgorithm) {
-            this.basicAlgorithm = basicAlgorithm;
+            $.basicAlgorithm = basicAlgorithm;
             return this;
         }
-        public Builder basicAlgorithm(@Nullable BasicAutoscalingAlgorithmArgs basicAlgorithm) {
-            this.basicAlgorithm = Codegen.ofNullable(basicAlgorithm);
-            return this;
+
+        public Builder basicAlgorithm(BasicAutoscalingAlgorithmArgs basicAlgorithm) {
+            return basicAlgorithm(Output.of(basicAlgorithm));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder secondaryWorkerConfig(@Nullable Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig) {
-            this.secondaryWorkerConfig = secondaryWorkerConfig;
+            $.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
-        public Builder secondaryWorkerConfig(@Nullable InstanceGroupAutoscalingPolicyConfigArgs secondaryWorkerConfig) {
-            this.secondaryWorkerConfig = Codegen.ofNullable(secondaryWorkerConfig);
-            return this;
+
+        public Builder secondaryWorkerConfig(InstanceGroupAutoscalingPolicyConfigArgs secondaryWorkerConfig) {
+            return secondaryWorkerConfig(Output.of(secondaryWorkerConfig));
         }
+
         public Builder workerConfig(Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig) {
-            this.workerConfig = Objects.requireNonNull(workerConfig);
+            $.workerConfig = workerConfig;
             return this;
         }
+
         public Builder workerConfig(InstanceGroupAutoscalingPolicyConfigArgs workerConfig) {
-            this.workerConfig = Output.of(Objects.requireNonNull(workerConfig));
-            return this;
-        }        public AutoscalingPolicyArgs build() {
-            return new AutoscalingPolicyArgs(basicAlgorithm, id, location, project, secondaryWorkerConfig, workerConfig);
+            return workerConfig(Output.of(workerConfig));
+        }
+
+        public AutoscalingPolicyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.workerConfig = Objects.requireNonNull($.workerConfig, "expected parameter 'workerConfig' to be non-null");
+            return $;
         }
     }
+
 }

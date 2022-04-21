@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RangePartitioningRangeArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="end")
-      private final @Nullable Output<String> end;
+    private @Nullable Output<String> end;
 
-    public Output<String> end() {
-        return this.end == null ? Codegen.empty() : this.end;
+    public Optional<Output<String>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RangePartitioningRangeArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<String> interval;
+    private @Nullable Output<String> interval;
 
-    public Output<String> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<String>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class RangePartitioningRangeArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="start")
-      private final @Nullable Output<String> start;
+    private @Nullable Output<String> start;
 
-    public Output<String> start() {
-        return this.start == null ? Codegen.empty() : this.start;
+    public Optional<Output<String>> start() {
+        return Optional.ofNullable(this.start);
     }
 
-    public RangePartitioningRangeArgs(
-        @Nullable Output<String> end,
-        @Nullable Output<String> interval,
-        @Nullable Output<String> start) {
-        this.end = end;
-        this.interval = interval;
-        this.start = start;
-    }
+    private RangePartitioningRangeArgs() {}
 
-    private RangePartitioningRangeArgs() {
-        this.end = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.start = Codegen.empty();
+    private RangePartitioningRangeArgs(RangePartitioningRangeArgs $) {
+        this.end = $.end;
+        this.interval = $.interval;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RangePartitioningRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> end;
-        private @Nullable Output<String> interval;
-        private @Nullable Output<String> start;
+        private RangePartitioningRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RangePartitioningRangeArgs();
         }
 
         public Builder(RangePartitioningRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.interval = defaults.interval;
-    	      this.start = defaults.start;
+            $ = new RangePartitioningRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder end(@Nullable Output<String> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
-        public Builder end(@Nullable String end) {
-            this.end = Codegen.ofNullable(end);
-            return this;
+
+        public Builder end(String end) {
+            return end(Output.of(end));
         }
+
         public Builder interval(@Nullable Output<String> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable String interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(String interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder start(@Nullable Output<String> start) {
-            this.start = start;
+            $.start = start;
             return this;
         }
-        public Builder start(@Nullable String start) {
-            this.start = Codegen.ofNullable(start);
-            return this;
-        }        public RangePartitioningRangeArgs build() {
-            return new RangePartitioningRangeArgs(end, interval, start);
+
+        public Builder start(String start) {
+            return start(Output.of(start));
+        }
+
+        public RangePartitioningRangeArgs build() {
+            return $;
         }
     }
+
 }

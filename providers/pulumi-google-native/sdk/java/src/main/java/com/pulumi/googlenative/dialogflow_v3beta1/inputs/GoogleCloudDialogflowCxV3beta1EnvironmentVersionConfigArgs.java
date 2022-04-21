@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs ex
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs(Output<String> version) {
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs() {
-        this.version = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs(GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> version;
+        private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs(version);
+            return version(Output.of(version));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs build() {
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

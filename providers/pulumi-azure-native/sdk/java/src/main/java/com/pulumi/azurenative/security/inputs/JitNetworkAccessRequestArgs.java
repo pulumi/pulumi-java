@@ -6,10 +6,10 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.azurenative.security.inputs.JitNetworkAccessRequestVirtualMachineArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class JitNetworkAccessRequestArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="justification")
-      private final @Nullable Output<String> justification;
+    private @Nullable Output<String> justification;
 
-    public Output<String> justification() {
-        return this.justification == null ? Codegen.empty() : this.justification;
+    public Optional<Output<String>> justification() {
+        return Optional.ofNullable(this.justification);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class JitNetworkAccessRequestArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="requestor", required=true)
-      private final Output<String> requestor;
+    private Output<String> requestor;
 
     public Output<String> requestor() {
         return this.requestor;
@@ -44,99 +44,92 @@ public final class JitNetworkAccessRequestArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="startTimeUtc", required=true)
-      private final Output<String> startTimeUtc;
+    private Output<String> startTimeUtc;
 
     public Output<String> startTimeUtc() {
         return this.startTimeUtc;
     }
 
     @Import(name="virtualMachines", required=true)
-      private final Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
+    private Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
 
     public Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines() {
         return this.virtualMachines;
     }
 
-    public JitNetworkAccessRequestArgs(
-        @Nullable Output<String> justification,
-        Output<String> requestor,
-        Output<String> startTimeUtc,
-        Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines) {
-        this.justification = justification;
-        this.requestor = Objects.requireNonNull(requestor, "expected parameter 'requestor' to be non-null");
-        this.startTimeUtc = Objects.requireNonNull(startTimeUtc, "expected parameter 'startTimeUtc' to be non-null");
-        this.virtualMachines = Objects.requireNonNull(virtualMachines, "expected parameter 'virtualMachines' to be non-null");
-    }
+    private JitNetworkAccessRequestArgs() {}
 
-    private JitNetworkAccessRequestArgs() {
-        this.justification = Codegen.empty();
-        this.requestor = Codegen.empty();
-        this.startTimeUtc = Codegen.empty();
-        this.virtualMachines = Codegen.empty();
+    private JitNetworkAccessRequestArgs(JitNetworkAccessRequestArgs $) {
+        this.justification = $.justification;
+        this.requestor = $.requestor;
+        this.startTimeUtc = $.startTimeUtc;
+        this.virtualMachines = $.virtualMachines;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitNetworkAccessRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> justification;
-        private Output<String> requestor;
-        private Output<String> startTimeUtc;
-        private Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
+        private JitNetworkAccessRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitNetworkAccessRequestArgs();
         }
 
         public Builder(JitNetworkAccessRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.justification = defaults.justification;
-    	      this.requestor = defaults.requestor;
-    	      this.startTimeUtc = defaults.startTimeUtc;
-    	      this.virtualMachines = defaults.virtualMachines;
+            $ = new JitNetworkAccessRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder justification(@Nullable Output<String> justification) {
-            this.justification = justification;
+            $.justification = justification;
             return this;
         }
-        public Builder justification(@Nullable String justification) {
-            this.justification = Codegen.ofNullable(justification);
-            return this;
+
+        public Builder justification(String justification) {
+            return justification(Output.of(justification));
         }
+
         public Builder requestor(Output<String> requestor) {
-            this.requestor = Objects.requireNonNull(requestor);
+            $.requestor = requestor;
             return this;
         }
+
         public Builder requestor(String requestor) {
-            this.requestor = Output.of(Objects.requireNonNull(requestor));
-            return this;
+            return requestor(Output.of(requestor));
         }
+
         public Builder startTimeUtc(Output<String> startTimeUtc) {
-            this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
+            $.startTimeUtc = startTimeUtc;
             return this;
         }
+
         public Builder startTimeUtc(String startTimeUtc) {
-            this.startTimeUtc = Output.of(Objects.requireNonNull(startTimeUtc));
-            return this;
+            return startTimeUtc(Output.of(startTimeUtc));
         }
+
         public Builder virtualMachines(Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines) {
-            this.virtualMachines = Objects.requireNonNull(virtualMachines);
+            $.virtualMachines = virtualMachines;
             return this;
         }
+
         public Builder virtualMachines(List<JitNetworkAccessRequestVirtualMachineArgs> virtualMachines) {
-            this.virtualMachines = Output.of(Objects.requireNonNull(virtualMachines));
-            return this;
+            return virtualMachines(Output.of(virtualMachines));
         }
+
         public Builder virtualMachines(JitNetworkAccessRequestVirtualMachineArgs... virtualMachines) {
             return virtualMachines(List.of(virtualMachines));
-        }        public JitNetworkAccessRequestArgs build() {
-            return new JitNetworkAccessRequestArgs(justification, requestor, startTimeUtc, virtualMachines);
+        }
+
+        public JitNetworkAccessRequestArgs build() {
+            $.requestor = Objects.requireNonNull($.requestor, "expected parameter 'requestor' to be non-null");
+            $.startTimeUtc = Objects.requireNonNull($.startTimeUtc, "expected parameter 'startTimeUtc' to be non-null");
+            $.virtualMachines = Objects.requireNonNull($.virtualMachines, "expected parameter 'virtualMachines' to be non-null");
+            return $;
         }
     }
+
 }

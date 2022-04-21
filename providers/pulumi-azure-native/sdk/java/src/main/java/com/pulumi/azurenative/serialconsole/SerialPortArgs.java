@@ -6,9 +6,9 @@ package com.pulumi.azurenative.serialconsole;
 import com.pulumi.azurenative.serialconsole.enums.SerialPortState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentResource", required=true)
-      private final Output<String> parentResource;
+    private Output<String> parentResource;
 
     public Output<String> parentResource() {
         return this.parentResource;
@@ -32,7 +32,7 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentResourceType", required=true)
-      private final Output<String> parentResourceType;
+    private Output<String> parentResourceType;
 
     public Output<String> parentResourceType() {
         return this.parentResourceType;
@@ -43,7 +43,7 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceProviderNamespace", required=true)
-      private final Output<String> resourceProviderNamespace;
+    private Output<String> resourceProviderNamespace;
 
     public Output<String> resourceProviderNamespace() {
         return this.resourceProviderNamespace;
@@ -65,10 +65,10 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serialPort")
-      private final @Nullable Output<String> serialPort;
+    private @Nullable Output<String> serialPort;
 
-    public Output<String> serialPort() {
-        return this.serialPort == null ? Codegen.empty() : this.serialPort;
+    public Optional<Output<String>> serialPort() {
+        return Optional.ofNullable(this.serialPort);
     }
 
     /**
@@ -76,115 +76,102 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<SerialPortState> state;
+    private @Nullable Output<SerialPortState> state;
 
-    public Output<SerialPortState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<SerialPortState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public SerialPortArgs(
-        Output<String> parentResource,
-        Output<String> parentResourceType,
-        Output<String> resourceGroupName,
-        Output<String> resourceProviderNamespace,
-        @Nullable Output<String> serialPort,
-        @Nullable Output<SerialPortState> state) {
-        this.parentResource = Objects.requireNonNull(parentResource, "expected parameter 'parentResource' to be non-null");
-        this.parentResourceType = Objects.requireNonNull(parentResourceType, "expected parameter 'parentResourceType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace, "expected parameter 'resourceProviderNamespace' to be non-null");
-        this.serialPort = serialPort;
-        this.state = state;
-    }
+    private SerialPortArgs() {}
 
-    private SerialPortArgs() {
-        this.parentResource = Codegen.empty();
-        this.parentResourceType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceProviderNamespace = Codegen.empty();
-        this.serialPort = Codegen.empty();
-        this.state = Codegen.empty();
+    private SerialPortArgs(SerialPortArgs $) {
+        this.parentResource = $.parentResource;
+        this.parentResourceType = $.parentResourceType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceProviderNamespace = $.resourceProviderNamespace;
+        this.serialPort = $.serialPort;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SerialPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> parentResource;
-        private Output<String> parentResourceType;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceProviderNamespace;
-        private @Nullable Output<String> serialPort;
-        private @Nullable Output<SerialPortState> state;
+        private SerialPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SerialPortArgs();
         }
 
         public Builder(SerialPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parentResource = defaults.parentResource;
-    	      this.parentResourceType = defaults.parentResourceType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceProviderNamespace = defaults.resourceProviderNamespace;
-    	      this.serialPort = defaults.serialPort;
-    	      this.state = defaults.state;
+            $ = new SerialPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parentResource(Output<String> parentResource) {
-            this.parentResource = Objects.requireNonNull(parentResource);
+            $.parentResource = parentResource;
             return this;
         }
+
         public Builder parentResource(String parentResource) {
-            this.parentResource = Output.of(Objects.requireNonNull(parentResource));
-            return this;
+            return parentResource(Output.of(parentResource));
         }
+
         public Builder parentResourceType(Output<String> parentResourceType) {
-            this.parentResourceType = Objects.requireNonNull(parentResourceType);
+            $.parentResourceType = parentResourceType;
             return this;
         }
+
         public Builder parentResourceType(String parentResourceType) {
-            this.parentResourceType = Output.of(Objects.requireNonNull(parentResourceType));
-            return this;
+            return parentResourceType(Output.of(parentResourceType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
-            this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
+            $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
+
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
-            this.resourceProviderNamespace = Output.of(Objects.requireNonNull(resourceProviderNamespace));
-            return this;
+            return resourceProviderNamespace(Output.of(resourceProviderNamespace));
         }
+
         public Builder serialPort(@Nullable Output<String> serialPort) {
-            this.serialPort = serialPort;
+            $.serialPort = serialPort;
             return this;
         }
-        public Builder serialPort(@Nullable String serialPort) {
-            this.serialPort = Codegen.ofNullable(serialPort);
-            return this;
+
+        public Builder serialPort(String serialPort) {
+            return serialPort(Output.of(serialPort));
         }
+
         public Builder state(@Nullable Output<SerialPortState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable SerialPortState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public SerialPortArgs build() {
-            return new SerialPortArgs(parentResource, parentResourceType, resourceGroupName, resourceProviderNamespace, serialPort, state);
+
+        public Builder state(SerialPortState state) {
+            return state(Output.of(state));
+        }
+
+        public SerialPortArgs build() {
+            $.parentResource = Objects.requireNonNull($.parentResource, "expected parameter 'parentResource' to be non-null");
+            $.parentResourceType = Objects.requireNonNull($.parentResourceType, "expected parameter 'parentResourceType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceProviderNamespace = Objects.requireNonNull($.resourceProviderNamespace, "expected parameter 'resourceProviderNamespace' to be non-null");
+            return $;
         }
     }
+
 }

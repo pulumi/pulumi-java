@@ -25,10 +25,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exec")
-      private final @Nullable ContainerExecResponse exec;
+    private @Nullable ContainerExecResponse exec;
 
     public Optional<ContainerExecResponse> exec() {
-        return this.exec == null ? Optional.empty() : Optional.ofNullable(this.exec);
+        return Optional.ofNullable(this.exec);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="failureThreshold")
-      private final @Nullable Integer failureThreshold;
+    private @Nullable Integer failureThreshold;
 
     public Optional<Integer> failureThreshold() {
-        return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
+        return Optional.ofNullable(this.failureThreshold);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="httpGet")
-      private final @Nullable ContainerHttpGetResponse httpGet;
+    private @Nullable ContainerHttpGetResponse httpGet;
 
     public Optional<ContainerHttpGetResponse> httpGet() {
-        return this.httpGet == null ? Optional.empty() : Optional.ofNullable(this.httpGet);
+        return Optional.ofNullable(this.httpGet);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="initialDelaySeconds")
-      private final @Nullable Integer initialDelaySeconds;
+    private @Nullable Integer initialDelaySeconds;
 
     public Optional<Integer> initialDelaySeconds() {
-        return this.initialDelaySeconds == null ? Optional.empty() : Optional.ofNullable(this.initialDelaySeconds);
+        return Optional.ofNullable(this.initialDelaySeconds);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="periodSeconds")
-      private final @Nullable Integer periodSeconds;
+    private @Nullable Integer periodSeconds;
 
     public Optional<Integer> periodSeconds() {
-        return this.periodSeconds == null ? Optional.empty() : Optional.ofNullable(this.periodSeconds);
+        return Optional.ofNullable(this.periodSeconds);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="successThreshold")
-      private final @Nullable Integer successThreshold;
+    private @Nullable Integer successThreshold;
 
     public Optional<Integer> successThreshold() {
-        return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
+        return Optional.ofNullable(this.successThreshold);
     }
 
     /**
@@ -91,100 +91,80 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Integer timeoutSeconds;
+    private @Nullable Integer timeoutSeconds;
 
     public Optional<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
-    public ContainerProbeResponse(
-        @Nullable ContainerExecResponse exec,
-        @Nullable Integer failureThreshold,
-        @Nullable ContainerHttpGetResponse httpGet,
-        @Nullable Integer initialDelaySeconds,
-        @Nullable Integer periodSeconds,
-        @Nullable Integer successThreshold,
-        @Nullable Integer timeoutSeconds) {
-        this.exec = exec;
-        this.failureThreshold = failureThreshold;
-        this.httpGet = httpGet;
-        this.initialDelaySeconds = initialDelaySeconds;
-        this.periodSeconds = periodSeconds;
-        this.successThreshold = successThreshold;
-        this.timeoutSeconds = timeoutSeconds;
-    }
+    private ContainerProbeResponse() {}
 
-    private ContainerProbeResponse() {
-        this.exec = null;
-        this.failureThreshold = null;
-        this.httpGet = null;
-        this.initialDelaySeconds = null;
-        this.periodSeconds = null;
-        this.successThreshold = null;
-        this.timeoutSeconds = null;
+    private ContainerProbeResponse(ContainerProbeResponse $) {
+        this.exec = $.exec;
+        this.failureThreshold = $.failureThreshold;
+        this.httpGet = $.httpGet;
+        this.initialDelaySeconds = $.initialDelaySeconds;
+        this.periodSeconds = $.periodSeconds;
+        this.successThreshold = $.successThreshold;
+        this.timeoutSeconds = $.timeoutSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerProbeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ContainerExecResponse exec;
-        private @Nullable Integer failureThreshold;
-        private @Nullable ContainerHttpGetResponse httpGet;
-        private @Nullable Integer initialDelaySeconds;
-        private @Nullable Integer periodSeconds;
-        private @Nullable Integer successThreshold;
-        private @Nullable Integer timeoutSeconds;
+        private ContainerProbeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerProbeResponse();
         }
 
         public Builder(ContainerProbeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exec = defaults.exec;
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.httpGet = defaults.httpGet;
-    	      this.initialDelaySeconds = defaults.initialDelaySeconds;
-    	      this.periodSeconds = defaults.periodSeconds;
-    	      this.successThreshold = defaults.successThreshold;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
+            $ = new ContainerProbeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exec(@Nullable ContainerExecResponse exec) {
-            this.exec = exec;
+            $.exec = exec;
             return this;
         }
+
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = failureThreshold;
+            $.failureThreshold = failureThreshold;
             return this;
         }
+
         public Builder httpGet(@Nullable ContainerHttpGetResponse httpGet) {
-            this.httpGet = httpGet;
+            $.httpGet = httpGet;
             return this;
         }
+
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
-            this.initialDelaySeconds = initialDelaySeconds;
+            $.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
+
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
-            this.periodSeconds = periodSeconds;
+            $.periodSeconds = periodSeconds;
             return this;
         }
+
         public Builder successThreshold(@Nullable Integer successThreshold) {
-            this.successThreshold = successThreshold;
+            $.successThreshold = successThreshold;
             return this;
         }
+
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
-        }        public ContainerProbeResponse build() {
-            return new ContainerProbeResponse(exec, failureThreshold, httpGet, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
+        }
+
+        public ContainerProbeResponse build() {
+            return $;
         }
     }
+
 }

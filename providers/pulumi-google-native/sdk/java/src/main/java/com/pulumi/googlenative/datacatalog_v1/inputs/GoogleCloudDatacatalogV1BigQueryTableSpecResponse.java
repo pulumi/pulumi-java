@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends com
      * 
      */
     @Import(name="tableSourceType", required=true)
-      private final String tableSourceType;
+    private String tableSourceType;
 
     public String tableSourceType() {
         return this.tableSourceType;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends com
      * 
      */
     @Import(name="tableSpec", required=true)
-      private final GoogleCloudDatacatalogV1TableSpecResponse tableSpec;
+    private GoogleCloudDatacatalogV1TableSpecResponse tableSpec;
 
     public GoogleCloudDatacatalogV1TableSpecResponse tableSpec() {
         return this.tableSpec;
@@ -45,64 +45,59 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends com
      * 
      */
     @Import(name="viewSpec", required=true)
-      private final GoogleCloudDatacatalogV1ViewSpecResponse viewSpec;
+    private GoogleCloudDatacatalogV1ViewSpecResponse viewSpec;
 
     public GoogleCloudDatacatalogV1ViewSpecResponse viewSpec() {
         return this.viewSpec;
     }
 
-    public GoogleCloudDatacatalogV1BigQueryTableSpecResponse(
-        String tableSourceType,
-        GoogleCloudDatacatalogV1TableSpecResponse tableSpec,
-        GoogleCloudDatacatalogV1ViewSpecResponse viewSpec) {
-        this.tableSourceType = Objects.requireNonNull(tableSourceType, "expected parameter 'tableSourceType' to be non-null");
-        this.tableSpec = Objects.requireNonNull(tableSpec, "expected parameter 'tableSpec' to be non-null");
-        this.viewSpec = Objects.requireNonNull(viewSpec, "expected parameter 'viewSpec' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1BigQueryTableSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1BigQueryTableSpecResponse() {
-        this.tableSourceType = null;
-        this.tableSpec = null;
-        this.viewSpec = null;
+    private GoogleCloudDatacatalogV1BigQueryTableSpecResponse(GoogleCloudDatacatalogV1BigQueryTableSpecResponse $) {
+        this.tableSourceType = $.tableSourceType;
+        this.tableSpec = $.tableSpec;
+        this.viewSpec = $.viewSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1BigQueryTableSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String tableSourceType;
-        private GoogleCloudDatacatalogV1TableSpecResponse tableSpec;
-        private GoogleCloudDatacatalogV1ViewSpecResponse viewSpec;
+        private GoogleCloudDatacatalogV1BigQueryTableSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1BigQueryTableSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1BigQueryTableSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableSourceType = defaults.tableSourceType;
-    	      this.tableSpec = defaults.tableSpec;
-    	      this.viewSpec = defaults.viewSpec;
+            $ = new GoogleCloudDatacatalogV1BigQueryTableSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder tableSourceType(String tableSourceType) {
-            this.tableSourceType = Objects.requireNonNull(tableSourceType);
+            $.tableSourceType = tableSourceType;
             return this;
         }
+
         public Builder tableSpec(GoogleCloudDatacatalogV1TableSpecResponse tableSpec) {
-            this.tableSpec = Objects.requireNonNull(tableSpec);
+            $.tableSpec = tableSpec;
             return this;
         }
+
         public Builder viewSpec(GoogleCloudDatacatalogV1ViewSpecResponse viewSpec) {
-            this.viewSpec = Objects.requireNonNull(viewSpec);
+            $.viewSpec = viewSpec;
             return this;
-        }        public GoogleCloudDatacatalogV1BigQueryTableSpecResponse build() {
-            return new GoogleCloudDatacatalogV1BigQueryTableSpecResponse(tableSourceType, tableSpec, viewSpec);
+        }
+
+        public GoogleCloudDatacatalogV1BigQueryTableSpecResponse build() {
+            $.tableSourceType = Objects.requireNonNull($.tableSourceType, "expected parameter 'tableSourceType' to be non-null");
+            $.tableSpec = Objects.requireNonNull($.tableSpec, "expected parameter 'tableSpec' to be non-null");
+            $.viewSpec = Objects.requireNonNull($.viewSpec, "expected parameter 'viewSpec' to be non-null");
+            return $;
         }
     }
+
 }

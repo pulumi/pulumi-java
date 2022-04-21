@@ -7,10 +7,10 @@ import com.pulumi.azurenative.delegatednetwork.inputs.ControllerDetailsArgs;
 import com.pulumi.azurenative.delegatednetwork.inputs.SubnetDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="controllerDetails")
-      private final @Nullable Output<ControllerDetailsArgs> controllerDetails;
+    private @Nullable Output<ControllerDetailsArgs> controllerDetails;
 
-    public Output<ControllerDetailsArgs> controllerDetails() {
-        return this.controllerDetails == null ? Codegen.empty() : this.controllerDetails;
+    public Optional<Output<ControllerDetailsArgs>> controllerDetails() {
+        return Optional.ofNullable(this.controllerDetails);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -56,10 +56,10 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="subnetDetails")
-      private final @Nullable Output<SubnetDetailsArgs> subnetDetails;
+    private @Nullable Output<SubnetDetailsArgs> subnetDetails;
 
-    public Output<SubnetDetailsArgs> subnetDetails() {
-        return this.subnetDetails == null ? Codegen.empty() : this.subnetDetails;
+    public Optional<Output<SubnetDetailsArgs>> subnetDetails() {
+        return Optional.ofNullable(this.subnetDetails);
     }
 
     /**
@@ -78,115 +78,99 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DelegatedSubnetServiceDetailsArgs(
-        @Nullable Output<ControllerDetailsArgs> controllerDetails,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<SubnetDetailsArgs> subnetDetails,
-        @Nullable Output<Map<String,String>> tags) {
-        this.controllerDetails = controllerDetails;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.subnetDetails = subnetDetails;
-        this.tags = tags;
-    }
+    private DelegatedSubnetServiceDetailsArgs() {}
 
-    private DelegatedSubnetServiceDetailsArgs() {
-        this.controllerDetails = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.subnetDetails = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DelegatedSubnetServiceDetailsArgs(DelegatedSubnetServiceDetailsArgs $) {
+        this.controllerDetails = $.controllerDetails;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.subnetDetails = $.subnetDetails;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelegatedSubnetServiceDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ControllerDetailsArgs> controllerDetails;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<SubnetDetailsArgs> subnetDetails;
-        private @Nullable Output<Map<String,String>> tags;
+        private DelegatedSubnetServiceDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelegatedSubnetServiceDetailsArgs();
         }
 
         public Builder(DelegatedSubnetServiceDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controllerDetails = defaults.controllerDetails;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.subnetDetails = defaults.subnetDetails;
-    	      this.tags = defaults.tags;
+            $ = new DelegatedSubnetServiceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder controllerDetails(@Nullable Output<ControllerDetailsArgs> controllerDetails) {
-            this.controllerDetails = controllerDetails;
+            $.controllerDetails = controllerDetails;
             return this;
         }
-        public Builder controllerDetails(@Nullable ControllerDetailsArgs controllerDetails) {
-            this.controllerDetails = Codegen.ofNullable(controllerDetails);
-            return this;
+
+        public Builder controllerDetails(ControllerDetailsArgs controllerDetails) {
+            return controllerDetails(Output.of(controllerDetails));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder subnetDetails(@Nullable Output<SubnetDetailsArgs> subnetDetails) {
-            this.subnetDetails = subnetDetails;
+            $.subnetDetails = subnetDetails;
             return this;
         }
-        public Builder subnetDetails(@Nullable SubnetDetailsArgs subnetDetails) {
-            this.subnetDetails = Codegen.ofNullable(subnetDetails);
-            return this;
+
+        public Builder subnetDetails(SubnetDetailsArgs subnetDetails) {
+            return subnetDetails(Output.of(subnetDetails));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DelegatedSubnetServiceDetailsArgs build() {
-            return new DelegatedSubnetServiceDetailsArgs(controllerDetails, location, resourceGroupName, resourceName, subnetDetails, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DelegatedSubnetServiceDetailsArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

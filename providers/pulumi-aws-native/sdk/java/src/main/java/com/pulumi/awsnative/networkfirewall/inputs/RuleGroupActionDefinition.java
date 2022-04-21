@@ -15,45 +15,44 @@ public final class RuleGroupActionDefinition extends com.pulumi.resources.Invoke
     public static final RuleGroupActionDefinition Empty = new RuleGroupActionDefinition();
 
     @Import(name="publishMetricAction")
-      private final @Nullable RuleGroupPublishMetricAction publishMetricAction;
+    private @Nullable RuleGroupPublishMetricAction publishMetricAction;
 
     public Optional<RuleGroupPublishMetricAction> publishMetricAction() {
-        return this.publishMetricAction == null ? Optional.empty() : Optional.ofNullable(this.publishMetricAction);
+        return Optional.ofNullable(this.publishMetricAction);
     }
 
-    public RuleGroupActionDefinition(@Nullable RuleGroupPublishMetricAction publishMetricAction) {
-        this.publishMetricAction = publishMetricAction;
-    }
+    private RuleGroupActionDefinition() {}
 
-    private RuleGroupActionDefinition() {
-        this.publishMetricAction = null;
+    private RuleGroupActionDefinition(RuleGroupActionDefinition $) {
+        this.publishMetricAction = $.publishMetricAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupActionDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RuleGroupPublishMetricAction publishMetricAction;
+        private RuleGroupActionDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupActionDefinition();
         }
 
         public Builder(RuleGroupActionDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishMetricAction = defaults.publishMetricAction;
+            $ = new RuleGroupActionDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder publishMetricAction(@Nullable RuleGroupPublishMetricAction publishMetricAction) {
-            this.publishMetricAction = publishMetricAction;
+            $.publishMetricAction = publishMetricAction;
             return this;
-        }        public RuleGroupActionDefinition build() {
-            return new RuleGroupActionDefinition(publishMetricAction);
+        }
+
+        public RuleGroupActionDefinition build() {
+            return $;
         }
     }
+
 }

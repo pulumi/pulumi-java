@@ -17,45 +17,45 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetContainerArgs(String serviceName) {
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetContainerArgs() {}
 
-    private GetContainerArgs() {
-        this.serviceName = null;
+    private GetContainerArgs(GetContainerArgs $) {
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String serviceName;
+        private GetContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContainerArgs();
         }
 
         public Builder(GetContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetContainerArgs build() {
-            return new GetContainerArgs(serviceName);
+        }
+
+        public GetContainerArgs build() {
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.avs.enums.SslEnum;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="alias")
-      private final @Nullable Output<String> alias;
+    private @Nullable Output<String> alias;
 
-    public Output<String> alias() {
-        return this.alias == null ? Codegen.empty() : this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="baseGroupDN")
-      private final @Nullable Output<String> baseGroupDN;
+    private @Nullable Output<String> baseGroupDN;
 
-    public Output<String> baseGroupDN() {
-        return this.baseGroupDN == null ? Codegen.empty() : this.baseGroupDN;
+    public Optional<Output<String>> baseGroupDN() {
+        return Optional.ofNullable(this.baseGroupDN);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="baseUserDN")
-      private final @Nullable Output<String> baseUserDN;
+    private @Nullable Output<String> baseUserDN;
 
-    public Output<String> baseUserDN() {
-        return this.baseUserDN == null ? Codegen.empty() : this.baseUserDN;
+    public Optional<Output<String>> baseUserDN() {
+        return Optional.ofNullable(this.baseUserDN);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="primaryServer")
-      private final @Nullable Output<String> primaryServer;
+    private @Nullable Output<String> primaryServer;
 
-    public Output<String> primaryServer() {
-        return this.primaryServer == null ? Codegen.empty() : this.primaryServer;
+    public Optional<Output<String>> primaryServer() {
+        return Optional.ofNullable(this.primaryServer);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secondaryServer")
-      private final @Nullable Output<String> secondaryServer;
+    private @Nullable Output<String> secondaryServer;
 
-    public Output<String> secondaryServer() {
-        return this.secondaryServer == null ? Codegen.empty() : this.secondaryServer;
+    public Optional<Output<String>> secondaryServer() {
+        return Optional.ofNullable(this.secondaryServer);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ssl")
-      private final @Nullable Output<Either<String,SslEnum>> ssl;
+    private @Nullable Output<Either<String,SslEnum>> ssl;
 
-    public Output<Either<String,SslEnum>> ssl() {
-        return this.ssl == null ? Codegen.empty() : this.ssl;
+    public Optional<Output<Either<String,SslEnum>>> ssl() {
+        return Optional.ofNullable(this.ssl);
     }
 
     /**
@@ -125,167 +125,138 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public IdentitySourceArgs(
-        @Nullable Output<String> alias,
-        @Nullable Output<String> baseGroupDN,
-        @Nullable Output<String> baseUserDN,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> name,
-        @Nullable Output<String> password,
-        @Nullable Output<String> primaryServer,
-        @Nullable Output<String> secondaryServer,
-        @Nullable Output<Either<String,SslEnum>> ssl,
-        @Nullable Output<String> username) {
-        this.alias = alias;
-        this.baseGroupDN = baseGroupDN;
-        this.baseUserDN = baseUserDN;
-        this.domain = domain;
-        this.name = name;
-        this.password = password;
-        this.primaryServer = primaryServer;
-        this.secondaryServer = secondaryServer;
-        this.ssl = ssl;
-        this.username = username;
-    }
+    private IdentitySourceArgs() {}
 
-    private IdentitySourceArgs() {
-        this.alias = Codegen.empty();
-        this.baseGroupDN = Codegen.empty();
-        this.baseUserDN = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.name = Codegen.empty();
-        this.password = Codegen.empty();
-        this.primaryServer = Codegen.empty();
-        this.secondaryServer = Codegen.empty();
-        this.ssl = Codegen.empty();
-        this.username = Codegen.empty();
+    private IdentitySourceArgs(IdentitySourceArgs $) {
+        this.alias = $.alias;
+        this.baseGroupDN = $.baseGroupDN;
+        this.baseUserDN = $.baseUserDN;
+        this.domain = $.domain;
+        this.name = $.name;
+        this.password = $.password;
+        this.primaryServer = $.primaryServer;
+        this.secondaryServer = $.secondaryServer;
+        this.ssl = $.ssl;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentitySourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alias;
-        private @Nullable Output<String> baseGroupDN;
-        private @Nullable Output<String> baseUserDN;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> primaryServer;
-        private @Nullable Output<String> secondaryServer;
-        private @Nullable Output<Either<String,SslEnum>> ssl;
-        private @Nullable Output<String> username;
+        private IdentitySourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentitySourceArgs();
         }
 
         public Builder(IdentitySourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.baseGroupDN = defaults.baseGroupDN;
-    	      this.baseUserDN = defaults.baseUserDN;
-    	      this.domain = defaults.domain;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.primaryServer = defaults.primaryServer;
-    	      this.secondaryServer = defaults.secondaryServer;
-    	      this.ssl = defaults.ssl;
-    	      this.username = defaults.username;
+            $ = new IdentitySourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(@Nullable Output<String> alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
-        public Builder alias(@Nullable String alias) {
-            this.alias = Codegen.ofNullable(alias);
-            return this;
+
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
         }
+
         public Builder baseGroupDN(@Nullable Output<String> baseGroupDN) {
-            this.baseGroupDN = baseGroupDN;
+            $.baseGroupDN = baseGroupDN;
             return this;
         }
-        public Builder baseGroupDN(@Nullable String baseGroupDN) {
-            this.baseGroupDN = Codegen.ofNullable(baseGroupDN);
-            return this;
+
+        public Builder baseGroupDN(String baseGroupDN) {
+            return baseGroupDN(Output.of(baseGroupDN));
         }
+
         public Builder baseUserDN(@Nullable Output<String> baseUserDN) {
-            this.baseUserDN = baseUserDN;
+            $.baseUserDN = baseUserDN;
             return this;
         }
-        public Builder baseUserDN(@Nullable String baseUserDN) {
-            this.baseUserDN = Codegen.ofNullable(baseUserDN);
-            return this;
+
+        public Builder baseUserDN(String baseUserDN) {
+            return baseUserDN(Output.of(baseUserDN));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder primaryServer(@Nullable Output<String> primaryServer) {
-            this.primaryServer = primaryServer;
+            $.primaryServer = primaryServer;
             return this;
         }
-        public Builder primaryServer(@Nullable String primaryServer) {
-            this.primaryServer = Codegen.ofNullable(primaryServer);
-            return this;
+
+        public Builder primaryServer(String primaryServer) {
+            return primaryServer(Output.of(primaryServer));
         }
+
         public Builder secondaryServer(@Nullable Output<String> secondaryServer) {
-            this.secondaryServer = secondaryServer;
+            $.secondaryServer = secondaryServer;
             return this;
         }
-        public Builder secondaryServer(@Nullable String secondaryServer) {
-            this.secondaryServer = Codegen.ofNullable(secondaryServer);
-            return this;
+
+        public Builder secondaryServer(String secondaryServer) {
+            return secondaryServer(Output.of(secondaryServer));
         }
+
         public Builder ssl(@Nullable Output<Either<String,SslEnum>> ssl) {
-            this.ssl = ssl;
+            $.ssl = ssl;
             return this;
         }
-        public Builder ssl(@Nullable Either<String,SslEnum> ssl) {
-            this.ssl = Codegen.ofNullable(ssl);
-            return this;
+
+        public Builder ssl(Either<String,SslEnum> ssl) {
+            return ssl(Output.of(ssl));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public IdentitySourceArgs build() {
-            return new IdentitySourceArgs(alias, baseGroupDN, baseUserDN, domain, name, password, primaryServer, secondaryServer, ssl, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public IdentitySourceArgs build() {
+            return $;
         }
     }
+
 }

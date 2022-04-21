@@ -5,10 +5,10 @@ package com.pulumi.aws.directconnect;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="addressFamily", required=true)
-      private final Output<String> addressFamily;
+    private Output<String> addressFamily;
 
     public Output<String> addressFamily() {
         return this.addressFamily;
@@ -32,10 +32,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="amazonAddress")
-      private final @Nullable Output<String> amazonAddress;
+    private @Nullable Output<String> amazonAddress;
 
-    public Output<String> amazonAddress() {
-        return this.amazonAddress == null ? Codegen.empty() : this.amazonAddress;
+    public Optional<Output<String>> amazonAddress() {
+        return Optional.ofNullable(this.amazonAddress);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="bgpAsn", required=true)
-      private final Output<Integer> bgpAsn;
+    private Output<Integer> bgpAsn;
 
     public Output<Integer> bgpAsn() {
         return this.bgpAsn;
@@ -54,10 +54,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="bgpAuthKey")
-      private final @Nullable Output<String> bgpAuthKey;
+    private @Nullable Output<String> bgpAuthKey;
 
-    public Output<String> bgpAuthKey() {
-        return this.bgpAuthKey == null ? Codegen.empty() : this.bgpAuthKey;
+    public Optional<Output<String>> bgpAuthKey() {
+        return Optional.ofNullable(this.bgpAuthKey);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="connectionId", required=true)
-      private final Output<String> connectionId;
+    private Output<String> connectionId;
 
     public Output<String> connectionId() {
         return this.connectionId;
@@ -76,10 +76,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="customerAddress")
-      private final @Nullable Output<String> customerAddress;
+    private @Nullable Output<String> customerAddress;
 
-    public Output<String> customerAddress() {
-        return this.customerAddress == null ? Codegen.empty() : this.customerAddress;
+    public Optional<Output<String>> customerAddress() {
+        return Optional.ofNullable(this.customerAddress);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="mtu")
-      private final @Nullable Output<Integer> mtu;
+    private @Nullable Output<Integer> mtu;
 
-    public Output<Integer> mtu() {
-        return this.mtu == null ? Codegen.empty() : this.mtu;
+    public Optional<Output<Integer>> mtu() {
+        return Optional.ofNullable(this.mtu);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -109,7 +109,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ownerAccountId", required=true)
-      private final Output<String> ownerAccountId;
+    private Output<String> ownerAccountId;
 
     public Output<String> ownerAccountId() {
         return this.ownerAccountId;
@@ -120,167 +120,143 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="vlan", required=true)
-      private final Output<Integer> vlan;
+    private Output<Integer> vlan;
 
     public Output<Integer> vlan() {
         return this.vlan;
     }
 
-    public HostedTransitVirtualInterfaceArgs(
-        Output<String> addressFamily,
-        @Nullable Output<String> amazonAddress,
-        Output<Integer> bgpAsn,
-        @Nullable Output<String> bgpAuthKey,
-        Output<String> connectionId,
-        @Nullable Output<String> customerAddress,
-        @Nullable Output<Integer> mtu,
-        @Nullable Output<String> name,
-        Output<String> ownerAccountId,
-        Output<Integer> vlan) {
-        this.addressFamily = Objects.requireNonNull(addressFamily, "expected parameter 'addressFamily' to be non-null");
-        this.amazonAddress = amazonAddress;
-        this.bgpAsn = Objects.requireNonNull(bgpAsn, "expected parameter 'bgpAsn' to be non-null");
-        this.bgpAuthKey = bgpAuthKey;
-        this.connectionId = Objects.requireNonNull(connectionId, "expected parameter 'connectionId' to be non-null");
-        this.customerAddress = customerAddress;
-        this.mtu = mtu;
-        this.name = name;
-        this.ownerAccountId = Objects.requireNonNull(ownerAccountId, "expected parameter 'ownerAccountId' to be non-null");
-        this.vlan = Objects.requireNonNull(vlan, "expected parameter 'vlan' to be non-null");
-    }
+    private HostedTransitVirtualInterfaceArgs() {}
 
-    private HostedTransitVirtualInterfaceArgs() {
-        this.addressFamily = Codegen.empty();
-        this.amazonAddress = Codegen.empty();
-        this.bgpAsn = Codegen.empty();
-        this.bgpAuthKey = Codegen.empty();
-        this.connectionId = Codegen.empty();
-        this.customerAddress = Codegen.empty();
-        this.mtu = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ownerAccountId = Codegen.empty();
-        this.vlan = Codegen.empty();
+    private HostedTransitVirtualInterfaceArgs(HostedTransitVirtualInterfaceArgs $) {
+        this.addressFamily = $.addressFamily;
+        this.amazonAddress = $.amazonAddress;
+        this.bgpAsn = $.bgpAsn;
+        this.bgpAuthKey = $.bgpAuthKey;
+        this.connectionId = $.connectionId;
+        this.customerAddress = $.customerAddress;
+        this.mtu = $.mtu;
+        this.name = $.name;
+        this.ownerAccountId = $.ownerAccountId;
+        this.vlan = $.vlan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedTransitVirtualInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> addressFamily;
-        private @Nullable Output<String> amazonAddress;
-        private Output<Integer> bgpAsn;
-        private @Nullable Output<String> bgpAuthKey;
-        private Output<String> connectionId;
-        private @Nullable Output<String> customerAddress;
-        private @Nullable Output<Integer> mtu;
-        private @Nullable Output<String> name;
-        private Output<String> ownerAccountId;
-        private Output<Integer> vlan;
+        private HostedTransitVirtualInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedTransitVirtualInterfaceArgs();
         }
 
         public Builder(HostedTransitVirtualInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressFamily = defaults.addressFamily;
-    	      this.amazonAddress = defaults.amazonAddress;
-    	      this.bgpAsn = defaults.bgpAsn;
-    	      this.bgpAuthKey = defaults.bgpAuthKey;
-    	      this.connectionId = defaults.connectionId;
-    	      this.customerAddress = defaults.customerAddress;
-    	      this.mtu = defaults.mtu;
-    	      this.name = defaults.name;
-    	      this.ownerAccountId = defaults.ownerAccountId;
-    	      this.vlan = defaults.vlan;
+            $ = new HostedTransitVirtualInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressFamily(Output<String> addressFamily) {
-            this.addressFamily = Objects.requireNonNull(addressFamily);
+            $.addressFamily = addressFamily;
             return this;
         }
+
         public Builder addressFamily(String addressFamily) {
-            this.addressFamily = Output.of(Objects.requireNonNull(addressFamily));
-            return this;
+            return addressFamily(Output.of(addressFamily));
         }
+
         public Builder amazonAddress(@Nullable Output<String> amazonAddress) {
-            this.amazonAddress = amazonAddress;
+            $.amazonAddress = amazonAddress;
             return this;
         }
-        public Builder amazonAddress(@Nullable String amazonAddress) {
-            this.amazonAddress = Codegen.ofNullable(amazonAddress);
-            return this;
+
+        public Builder amazonAddress(String amazonAddress) {
+            return amazonAddress(Output.of(amazonAddress));
         }
+
         public Builder bgpAsn(Output<Integer> bgpAsn) {
-            this.bgpAsn = Objects.requireNonNull(bgpAsn);
+            $.bgpAsn = bgpAsn;
             return this;
         }
+
         public Builder bgpAsn(Integer bgpAsn) {
-            this.bgpAsn = Output.of(Objects.requireNonNull(bgpAsn));
-            return this;
+            return bgpAsn(Output.of(bgpAsn));
         }
+
         public Builder bgpAuthKey(@Nullable Output<String> bgpAuthKey) {
-            this.bgpAuthKey = bgpAuthKey;
+            $.bgpAuthKey = bgpAuthKey;
             return this;
         }
-        public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
-            this.bgpAuthKey = Codegen.ofNullable(bgpAuthKey);
-            return this;
+
+        public Builder bgpAuthKey(String bgpAuthKey) {
+            return bgpAuthKey(Output.of(bgpAuthKey));
         }
+
         public Builder connectionId(Output<String> connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId);
+            $.connectionId = connectionId;
             return this;
         }
+
         public Builder connectionId(String connectionId) {
-            this.connectionId = Output.of(Objects.requireNonNull(connectionId));
-            return this;
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder customerAddress(@Nullable Output<String> customerAddress) {
-            this.customerAddress = customerAddress;
+            $.customerAddress = customerAddress;
             return this;
         }
-        public Builder customerAddress(@Nullable String customerAddress) {
-            this.customerAddress = Codegen.ofNullable(customerAddress);
-            return this;
+
+        public Builder customerAddress(String customerAddress) {
+            return customerAddress(Output.of(customerAddress));
         }
+
         public Builder mtu(@Nullable Output<Integer> mtu) {
-            this.mtu = mtu;
+            $.mtu = mtu;
             return this;
         }
-        public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Codegen.ofNullable(mtu);
-            return this;
+
+        public Builder mtu(Integer mtu) {
+            return mtu(Output.of(mtu));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ownerAccountId(Output<String> ownerAccountId) {
-            this.ownerAccountId = Objects.requireNonNull(ownerAccountId);
+            $.ownerAccountId = ownerAccountId;
             return this;
         }
+
         public Builder ownerAccountId(String ownerAccountId) {
-            this.ownerAccountId = Output.of(Objects.requireNonNull(ownerAccountId));
-            return this;
+            return ownerAccountId(Output.of(ownerAccountId));
         }
+
         public Builder vlan(Output<Integer> vlan) {
-            this.vlan = Objects.requireNonNull(vlan);
+            $.vlan = vlan;
             return this;
         }
+
         public Builder vlan(Integer vlan) {
-            this.vlan = Output.of(Objects.requireNonNull(vlan));
-            return this;
-        }        public HostedTransitVirtualInterfaceArgs build() {
-            return new HostedTransitVirtualInterfaceArgs(addressFamily, amazonAddress, bgpAsn, bgpAuthKey, connectionId, customerAddress, mtu, name, ownerAccountId, vlan);
+            return vlan(Output.of(vlan));
+        }
+
+        public HostedTransitVirtualInterfaceArgs build() {
+            $.addressFamily = Objects.requireNonNull($.addressFamily, "expected parameter 'addressFamily' to be non-null");
+            $.bgpAsn = Objects.requireNonNull($.bgpAsn, "expected parameter 'bgpAsn' to be non-null");
+            $.connectionId = Objects.requireNonNull($.connectionId, "expected parameter 'connectionId' to be non-null");
+            $.ownerAccountId = Objects.requireNonNull($.ownerAccountId, "expected parameter 'ownerAccountId' to be non-null");
+            $.vlan = Objects.requireNonNull($.vlan, "expected parameter 'vlan' to be non-null");
+            return $;
         }
     }
+
 }

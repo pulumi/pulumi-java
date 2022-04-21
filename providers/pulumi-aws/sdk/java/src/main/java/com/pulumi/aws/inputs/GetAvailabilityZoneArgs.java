@@ -22,10 +22,10 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="allAvailabilityZones")
-      private final @Nullable Boolean allAvailabilityZones;
+    private @Nullable Boolean allAvailabilityZones;
 
     public Optional<Boolean> allAvailabilityZones() {
-        return this.allAvailabilityZones == null ? Optional.empty() : Optional.ofNullable(this.allAvailabilityZones);
+        return Optional.ofNullable(this.allAvailabilityZones);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetAvailabilityZoneFilter> filters;
+    private @Nullable List<GetAvailabilityZoneFilter> filters;
 
-    public List<GetAvailabilityZoneFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetAvailabilityZoneFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -66,85 +66,72 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="zoneId")
-      private final @Nullable String zoneId;
+    private @Nullable String zoneId;
 
     public Optional<String> zoneId() {
-        return this.zoneId == null ? Optional.empty() : Optional.ofNullable(this.zoneId);
+        return Optional.ofNullable(this.zoneId);
     }
 
-    public GetAvailabilityZoneArgs(
-        @Nullable Boolean allAvailabilityZones,
-        @Nullable List<GetAvailabilityZoneFilter> filters,
-        @Nullable String name,
-        @Nullable String state,
-        @Nullable String zoneId) {
-        this.allAvailabilityZones = allAvailabilityZones;
-        this.filters = filters;
-        this.name = name;
-        this.state = state;
-        this.zoneId = zoneId;
-    }
+    private GetAvailabilityZoneArgs() {}
 
-    private GetAvailabilityZoneArgs() {
-        this.allAvailabilityZones = null;
-        this.filters = List.of();
-        this.name = null;
-        this.state = null;
-        this.zoneId = null;
+    private GetAvailabilityZoneArgs(GetAvailabilityZoneArgs $) {
+        this.allAvailabilityZones = $.allAvailabilityZones;
+        this.filters = $.filters;
+        this.name = $.name;
+        this.state = $.state;
+        this.zoneId = $.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAvailabilityZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allAvailabilityZones;
-        private @Nullable List<GetAvailabilityZoneFilter> filters;
-        private @Nullable String name;
-        private @Nullable String state;
-        private @Nullable String zoneId;
+        private GetAvailabilityZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAvailabilityZoneArgs();
         }
 
         public Builder(GetAvailabilityZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allAvailabilityZones = defaults.allAvailabilityZones;
-    	      this.filters = defaults.filters;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
-    	      this.zoneId = defaults.zoneId;
+            $ = new GetAvailabilityZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
-            this.allAvailabilityZones = allAvailabilityZones;
+            $.allAvailabilityZones = allAvailabilityZones;
             return this;
         }
+
         public Builder filters(@Nullable List<GetAvailabilityZoneFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetAvailabilityZoneFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = zoneId;
+            $.zoneId = zoneId;
             return this;
-        }        public GetAvailabilityZoneArgs build() {
-            return new GetAvailabilityZoneArgs(allAvailabilityZones, filters, name, state, zoneId);
+        }
+
+        public GetAvailabilityZoneArgs build() {
+            return $;
         }
     }
+
 }

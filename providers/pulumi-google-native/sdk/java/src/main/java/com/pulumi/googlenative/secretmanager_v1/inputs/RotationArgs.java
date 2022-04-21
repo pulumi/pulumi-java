@@ -5,9 +5,9 @@ package com.pulumi.googlenative.secretmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RotationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextRotationTime")
-      private final @Nullable Output<String> nextRotationTime;
+    private @Nullable Output<String> nextRotationTime;
 
-    public Output<String> nextRotationTime() {
-        return this.nextRotationTime == null ? Codegen.empty() : this.nextRotationTime;
+    public Optional<Output<String>> nextRotationTime() {
+        return Optional.ofNullable(this.nextRotationTime);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class RotationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rotationPeriod")
-      private final @Nullable Output<String> rotationPeriod;
+    private @Nullable Output<String> rotationPeriod;
 
-    public Output<String> rotationPeriod() {
-        return this.rotationPeriod == null ? Codegen.empty() : this.rotationPeriod;
+    public Optional<Output<String>> rotationPeriod() {
+        return Optional.ofNullable(this.rotationPeriod);
     }
 
-    public RotationArgs(
-        @Nullable Output<String> nextRotationTime,
-        @Nullable Output<String> rotationPeriod) {
-        this.nextRotationTime = nextRotationTime;
-        this.rotationPeriod = rotationPeriod;
-    }
+    private RotationArgs() {}
 
-    private RotationArgs() {
-        this.nextRotationTime = Codegen.empty();
-        this.rotationPeriod = Codegen.empty();
+    private RotationArgs(RotationArgs $) {
+        this.nextRotationTime = $.nextRotationTime;
+        this.rotationPeriod = $.rotationPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RotationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> nextRotationTime;
-        private @Nullable Output<String> rotationPeriod;
+        private RotationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RotationArgs();
         }
 
         public Builder(RotationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nextRotationTime = defaults.nextRotationTime;
-    	      this.rotationPeriod = defaults.rotationPeriod;
+            $ = new RotationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nextRotationTime(@Nullable Output<String> nextRotationTime) {
-            this.nextRotationTime = nextRotationTime;
+            $.nextRotationTime = nextRotationTime;
             return this;
         }
-        public Builder nextRotationTime(@Nullable String nextRotationTime) {
-            this.nextRotationTime = Codegen.ofNullable(nextRotationTime);
-            return this;
+
+        public Builder nextRotationTime(String nextRotationTime) {
+            return nextRotationTime(Output.of(nextRotationTime));
         }
+
         public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
-            this.rotationPeriod = rotationPeriod;
+            $.rotationPeriod = rotationPeriod;
             return this;
         }
-        public Builder rotationPeriod(@Nullable String rotationPeriod) {
-            this.rotationPeriod = Codegen.ofNullable(rotationPeriod);
-            return this;
-        }        public RotationArgs build() {
-            return new RotationArgs(nextRotationTime, rotationPeriod);
+
+        public Builder rotationPeriod(String rotationPeriod) {
+            return rotationPeriod(Output.of(rotationPeriod));
+        }
+
+        public RotationArgs build() {
+            return $;
         }
     }
+
 }

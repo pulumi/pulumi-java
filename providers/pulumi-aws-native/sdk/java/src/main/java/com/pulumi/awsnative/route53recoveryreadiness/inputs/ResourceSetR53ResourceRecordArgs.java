@@ -5,9 +5,9 @@ package com.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ResourceSetR53ResourceRecordArgs extends com.pulumi.resources
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ResourceSetR53ResourceRecordArgs extends com.pulumi.resources
      * 
      */
     @Import(name="recordSetId")
-      private final @Nullable Output<String> recordSetId;
+    private @Nullable Output<String> recordSetId;
 
-    public Output<String> recordSetId() {
-        return this.recordSetId == null ? Codegen.empty() : this.recordSetId;
+    public Optional<Output<String>> recordSetId() {
+        return Optional.ofNullable(this.recordSetId);
     }
 
-    public ResourceSetR53ResourceRecordArgs(
-        @Nullable Output<String> domainName,
-        @Nullable Output<String> recordSetId) {
-        this.domainName = domainName;
-        this.recordSetId = recordSetId;
-    }
+    private ResourceSetR53ResourceRecordArgs() {}
 
-    private ResourceSetR53ResourceRecordArgs() {
-        this.domainName = Codegen.empty();
-        this.recordSetId = Codegen.empty();
+    private ResourceSetR53ResourceRecordArgs(ResourceSetR53ResourceRecordArgs $) {
+        this.domainName = $.domainName;
+        this.recordSetId = $.recordSetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetR53ResourceRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<String> recordSetId;
+        private ResourceSetR53ResourceRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetR53ResourceRecordArgs();
         }
 
         public Builder(ResourceSetR53ResourceRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.recordSetId = defaults.recordSetId;
+            $ = new ResourceSetR53ResourceRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
-            this.recordSetId = recordSetId;
+            $.recordSetId = recordSetId;
             return this;
         }
-        public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = Codegen.ofNullable(recordSetId);
-            return this;
-        }        public ResourceSetR53ResourceRecordArgs build() {
-            return new ResourceSetR53ResourceRecordArgs(domainName, recordSetId);
+
+        public Builder recordSetId(String recordSetId) {
+            return recordSetId(Output.of(recordSetId));
+        }
+
+        public ResourceSetR53ResourceRecordArgs build() {
+            return $;
         }
     }
+
 }

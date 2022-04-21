@@ -5,9 +5,9 @@ package com.pulumi.aws.ram.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PrincipalAssociationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="principal")
-      private final @Nullable Output<String> principal;
+    private @Nullable Output<String> principal;
 
-    public Output<String> principal() {
-        return this.principal == null ? Codegen.empty() : this.principal;
+    public Optional<Output<String>> principal() {
+        return Optional.ofNullable(this.principal);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class PrincipalAssociationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceShareArn")
-      private final @Nullable Output<String> resourceShareArn;
+    private @Nullable Output<String> resourceShareArn;
 
-    public Output<String> resourceShareArn() {
-        return this.resourceShareArn == null ? Codegen.empty() : this.resourceShareArn;
+    public Optional<Output<String>> resourceShareArn() {
+        return Optional.ofNullable(this.resourceShareArn);
     }
 
-    public PrincipalAssociationState(
-        @Nullable Output<String> principal,
-        @Nullable Output<String> resourceShareArn) {
-        this.principal = principal;
-        this.resourceShareArn = resourceShareArn;
-    }
+    private PrincipalAssociationState() {}
 
-    private PrincipalAssociationState() {
-        this.principal = Codegen.empty();
-        this.resourceShareArn = Codegen.empty();
+    private PrincipalAssociationState(PrincipalAssociationState $) {
+        this.principal = $.principal;
+        this.resourceShareArn = $.resourceShareArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrincipalAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> principal;
-        private @Nullable Output<String> resourceShareArn;
+        private PrincipalAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrincipalAssociationState();
         }
 
         public Builder(PrincipalAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principal = defaults.principal;
-    	      this.resourceShareArn = defaults.resourceShareArn;
+            $ = new PrincipalAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder principal(@Nullable Output<String> principal) {
-            this.principal = principal;
+            $.principal = principal;
             return this;
         }
-        public Builder principal(@Nullable String principal) {
-            this.principal = Codegen.ofNullable(principal);
-            return this;
+
+        public Builder principal(String principal) {
+            return principal(Output.of(principal));
         }
+
         public Builder resourceShareArn(@Nullable Output<String> resourceShareArn) {
-            this.resourceShareArn = resourceShareArn;
+            $.resourceShareArn = resourceShareArn;
             return this;
         }
-        public Builder resourceShareArn(@Nullable String resourceShareArn) {
-            this.resourceShareArn = Codegen.ofNullable(resourceShareArn);
-            return this;
-        }        public PrincipalAssociationState build() {
-            return new PrincipalAssociationState(principal, resourceShareArn);
+
+        public Builder resourceShareArn(String resourceShareArn) {
+            return resourceShareArn(Output.of(resourceShareArn));
+        }
+
+        public PrincipalAssociationState build() {
+            return $;
         }
     }
+
 }

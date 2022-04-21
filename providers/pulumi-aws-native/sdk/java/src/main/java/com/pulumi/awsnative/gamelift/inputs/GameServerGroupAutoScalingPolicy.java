@@ -20,62 +20,58 @@ public final class GameServerGroupAutoScalingPolicy extends com.pulumi.resources
     public static final GameServerGroupAutoScalingPolicy Empty = new GameServerGroupAutoScalingPolicy();
 
     @Import(name="estimatedInstanceWarmup")
-      private final @Nullable Double estimatedInstanceWarmup;
+    private @Nullable Double estimatedInstanceWarmup;
 
     public Optional<Double> estimatedInstanceWarmup() {
-        return this.estimatedInstanceWarmup == null ? Optional.empty() : Optional.ofNullable(this.estimatedInstanceWarmup);
+        return Optional.ofNullable(this.estimatedInstanceWarmup);
     }
 
     @Import(name="targetTrackingConfiguration", required=true)
-      private final GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration;
+    private GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration;
 
     public GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration() {
         return this.targetTrackingConfiguration;
     }
 
-    public GameServerGroupAutoScalingPolicy(
-        @Nullable Double estimatedInstanceWarmup,
-        GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration) {
-        this.estimatedInstanceWarmup = estimatedInstanceWarmup;
-        this.targetTrackingConfiguration = Objects.requireNonNull(targetTrackingConfiguration, "expected parameter 'targetTrackingConfiguration' to be non-null");
-    }
+    private GameServerGroupAutoScalingPolicy() {}
 
-    private GameServerGroupAutoScalingPolicy() {
-        this.estimatedInstanceWarmup = null;
-        this.targetTrackingConfiguration = null;
+    private GameServerGroupAutoScalingPolicy(GameServerGroupAutoScalingPolicy $) {
+        this.estimatedInstanceWarmup = $.estimatedInstanceWarmup;
+        this.targetTrackingConfiguration = $.targetTrackingConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerGroupAutoScalingPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double estimatedInstanceWarmup;
-        private GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration;
+        private GameServerGroupAutoScalingPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerGroupAutoScalingPolicy();
         }
 
         public Builder(GameServerGroupAutoScalingPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.estimatedInstanceWarmup = defaults.estimatedInstanceWarmup;
-    	      this.targetTrackingConfiguration = defaults.targetTrackingConfiguration;
+            $ = new GameServerGroupAutoScalingPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder estimatedInstanceWarmup(@Nullable Double estimatedInstanceWarmup) {
-            this.estimatedInstanceWarmup = estimatedInstanceWarmup;
+            $.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
+
         public Builder targetTrackingConfiguration(GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration) {
-            this.targetTrackingConfiguration = Objects.requireNonNull(targetTrackingConfiguration);
+            $.targetTrackingConfiguration = targetTrackingConfiguration;
             return this;
-        }        public GameServerGroupAutoScalingPolicy build() {
-            return new GameServerGroupAutoScalingPolicy(estimatedInstanceWarmup, targetTrackingConfiguration);
+        }
+
+        public GameServerGroupAutoScalingPolicy build() {
+            $.targetTrackingConfiguration = Objects.requireNonNull($.targetTrackingConfiguration, "expected parameter 'targetTrackingConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

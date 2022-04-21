@@ -27,7 +27,7 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dcAccessSecurityCode", required=true)
-      private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
+    private DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
     public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
@@ -38,7 +38,7 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="diskSecrets", required=true)
-      private final List<DiskSecretResponse> diskSecrets;
+    private List<DiskSecretResponse> diskSecrets;
 
     public List<DiskSecretResponse> diskSecrets() {
         return this.diskSecrets;
@@ -49,7 +49,7 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="error", required=true)
-      private final CloudErrorResponse error;
+    private CloudErrorResponse error;
 
     public CloudErrorResponse error() {
         return this.error;
@@ -60,7 +60,7 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="isPasskeyUserDefined", required=true)
-      private final Boolean isPasskeyUserDefined;
+    private Boolean isPasskeyUserDefined;
 
     public Boolean isPasskeyUserDefined() {
         return this.isPasskeyUserDefined;
@@ -72,7 +72,7 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="jobSecretsType", required=true)
-      private final String jobSecretsType;
+    private String jobSecretsType;
 
     public String jobSecretsType() {
         return this.jobSecretsType;
@@ -83,94 +83,84 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="passKey", required=true)
-      private final String passKey;
+    private String passKey;
 
     public String passKey() {
         return this.passKey;
     }
 
-    public DataBoxDiskJobSecretsResponse(
-        DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        List<DiskSecretResponse> diskSecrets,
-        CloudErrorResponse error,
-        Boolean isPasskeyUserDefined,
-        String jobSecretsType,
-        String passKey) {
-        this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode, "expected parameter 'dcAccessSecurityCode' to be non-null");
-        this.diskSecrets = Objects.requireNonNull(diskSecrets, "expected parameter 'diskSecrets' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.isPasskeyUserDefined = Objects.requireNonNull(isPasskeyUserDefined, "expected parameter 'isPasskeyUserDefined' to be non-null");
-        this.jobSecretsType = Codegen.stringProp("jobSecretsType").arg(jobSecretsType).require();
-        this.passKey = Objects.requireNonNull(passKey, "expected parameter 'passKey' to be non-null");
-    }
+    private DataBoxDiskJobSecretsResponse() {}
 
-    private DataBoxDiskJobSecretsResponse() {
-        this.dcAccessSecurityCode = null;
-        this.diskSecrets = List.of();
-        this.error = null;
-        this.isPasskeyUserDefined = null;
-        this.jobSecretsType = null;
-        this.passKey = null;
+    private DataBoxDiskJobSecretsResponse(DataBoxDiskJobSecretsResponse $) {
+        this.dcAccessSecurityCode = $.dcAccessSecurityCode;
+        this.diskSecrets = $.diskSecrets;
+        this.error = $.error;
+        this.isPasskeyUserDefined = $.isPasskeyUserDefined;
+        this.jobSecretsType = $.jobSecretsType;
+        this.passKey = $.passKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataBoxDiskJobSecretsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DcAccessSecurityCodeResponse dcAccessSecurityCode;
-        private List<DiskSecretResponse> diskSecrets;
-        private CloudErrorResponse error;
-        private Boolean isPasskeyUserDefined;
-        private String jobSecretsType;
-        private String passKey;
+        private DataBoxDiskJobSecretsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataBoxDiskJobSecretsResponse();
         }
 
         public Builder(DataBoxDiskJobSecretsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dcAccessSecurityCode = defaults.dcAccessSecurityCode;
-    	      this.diskSecrets = defaults.diskSecrets;
-    	      this.error = defaults.error;
-    	      this.isPasskeyUserDefined = defaults.isPasskeyUserDefined;
-    	      this.jobSecretsType = defaults.jobSecretsType;
-    	      this.passKey = defaults.passKey;
+            $ = new DataBoxDiskJobSecretsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
-            this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
+            $.dcAccessSecurityCode = dcAccessSecurityCode;
             return this;
         }
+
         public Builder diskSecrets(List<DiskSecretResponse> diskSecrets) {
-            this.diskSecrets = Objects.requireNonNull(diskSecrets);
+            $.diskSecrets = diskSecrets;
             return this;
         }
+
         public Builder diskSecrets(DiskSecretResponse... diskSecrets) {
             return diskSecrets(List.of(diskSecrets));
         }
+
         public Builder error(CloudErrorResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder isPasskeyUserDefined(Boolean isPasskeyUserDefined) {
-            this.isPasskeyUserDefined = Objects.requireNonNull(isPasskeyUserDefined);
+            $.isPasskeyUserDefined = isPasskeyUserDefined;
             return this;
         }
+
         public Builder jobSecretsType(String jobSecretsType) {
-            this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
+            $.jobSecretsType = jobSecretsType;
             return this;
         }
+
         public Builder passKey(String passKey) {
-            this.passKey = Objects.requireNonNull(passKey);
+            $.passKey = passKey;
             return this;
-        }        public DataBoxDiskJobSecretsResponse build() {
-            return new DataBoxDiskJobSecretsResponse(dcAccessSecurityCode, diskSecrets, error, isPasskeyUserDefined, jobSecretsType, passKey);
+        }
+
+        public DataBoxDiskJobSecretsResponse build() {
+            $.dcAccessSecurityCode = Objects.requireNonNull($.dcAccessSecurityCode, "expected parameter 'dcAccessSecurityCode' to be non-null");
+            $.diskSecrets = Objects.requireNonNull($.diskSecrets, "expected parameter 'diskSecrets' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.isPasskeyUserDefined = Objects.requireNonNull($.isPasskeyUserDefined, "expected parameter 'isPasskeyUserDefined' to be non-null");
+            $.jobSecretsType = Codegen.stringProp("jobSecretsType").arg($.jobSecretsType).require();
+            $.passKey = Objects.requireNonNull($.passKey, "expected parameter 'passKey' to be non-null");
+            return $;
         }
     }
+
 }

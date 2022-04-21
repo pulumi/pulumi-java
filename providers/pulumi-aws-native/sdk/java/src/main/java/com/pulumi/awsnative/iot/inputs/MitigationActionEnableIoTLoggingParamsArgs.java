@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.MitigationActionEnableIoTLoggingParamsLogLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends com.pulumi
      * 
      */
     @Import(name="logLevel", required=true)
-      private final Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
+    private Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
 
     public Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel() {
         return this.logLevel;
@@ -35,63 +34,60 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends com.pulumi
      * 
      */
     @Import(name="roleArnForLogging", required=true)
-      private final Output<String> roleArnForLogging;
+    private Output<String> roleArnForLogging;
 
     public Output<String> roleArnForLogging() {
         return this.roleArnForLogging;
     }
 
-    public MitigationActionEnableIoTLoggingParamsArgs(
-        Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel,
-        Output<String> roleArnForLogging) {
-        this.logLevel = Objects.requireNonNull(logLevel, "expected parameter 'logLevel' to be non-null");
-        this.roleArnForLogging = Objects.requireNonNull(roleArnForLogging, "expected parameter 'roleArnForLogging' to be non-null");
-    }
+    private MitigationActionEnableIoTLoggingParamsArgs() {}
 
-    private MitigationActionEnableIoTLoggingParamsArgs() {
-        this.logLevel = Codegen.empty();
-        this.roleArnForLogging = Codegen.empty();
+    private MitigationActionEnableIoTLoggingParamsArgs(MitigationActionEnableIoTLoggingParamsArgs $) {
+        this.logLevel = $.logLevel;
+        this.roleArnForLogging = $.roleArnForLogging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionEnableIoTLoggingParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
-        private Output<String> roleArnForLogging;
+        private MitigationActionEnableIoTLoggingParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionEnableIoTLoggingParamsArgs();
         }
 
         public Builder(MitigationActionEnableIoTLoggingParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logLevel = defaults.logLevel;
-    	      this.roleArnForLogging = defaults.roleArnForLogging;
+            $ = new MitigationActionEnableIoTLoggingParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logLevel(Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel) {
-            this.logLevel = Objects.requireNonNull(logLevel);
+            $.logLevel = logLevel;
             return this;
         }
+
         public Builder logLevel(MitigationActionEnableIoTLoggingParamsLogLevel logLevel) {
-            this.logLevel = Output.of(Objects.requireNonNull(logLevel));
-            return this;
+            return logLevel(Output.of(logLevel));
         }
+
         public Builder roleArnForLogging(Output<String> roleArnForLogging) {
-            this.roleArnForLogging = Objects.requireNonNull(roleArnForLogging);
+            $.roleArnForLogging = roleArnForLogging;
             return this;
         }
+
         public Builder roleArnForLogging(String roleArnForLogging) {
-            this.roleArnForLogging = Output.of(Objects.requireNonNull(roleArnForLogging));
-            return this;
-        }        public MitigationActionEnableIoTLoggingParamsArgs build() {
-            return new MitigationActionEnableIoTLoggingParamsArgs(logLevel, roleArnForLogging);
+            return roleArnForLogging(Output.of(roleArnForLogging));
+        }
+
+        public MitigationActionEnableIoTLoggingParamsArgs build() {
+            $.logLevel = Objects.requireNonNull($.logLevel, "expected parameter 'logLevel' to be non-null");
+            $.roleArnForLogging = Objects.requireNonNull($.roleArnForLogging, "expected parameter 'roleArnForLogging' to be non-null");
+            return $;
         }
     }
+
 }

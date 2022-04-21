@@ -21,7 +21,7 @@ public final class UpgradeSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxSurge", required=true)
-      private final Integer maxSurge;
+    private Integer maxSurge;
 
     public Integer maxSurge() {
         return this.maxSurge;
@@ -32,55 +32,52 @@ public final class UpgradeSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxUnavailable", required=true)
-      private final Integer maxUnavailable;
+    private Integer maxUnavailable;
 
     public Integer maxUnavailable() {
         return this.maxUnavailable;
     }
 
-    public UpgradeSettingsResponse(
-        Integer maxSurge,
-        Integer maxUnavailable) {
-        this.maxSurge = Objects.requireNonNull(maxSurge, "expected parameter 'maxSurge' to be non-null");
-        this.maxUnavailable = Objects.requireNonNull(maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
-    }
+    private UpgradeSettingsResponse() {}
 
-    private UpgradeSettingsResponse() {
-        this.maxSurge = null;
-        this.maxUnavailable = null;
+    private UpgradeSettingsResponse(UpgradeSettingsResponse $) {
+        this.maxSurge = $.maxSurge;
+        this.maxUnavailable = $.maxUnavailable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradeSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxSurge;
-        private Integer maxUnavailable;
+        private UpgradeSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradeSettingsResponse();
         }
 
         public Builder(UpgradeSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSurge = defaults.maxSurge;
-    	      this.maxUnavailable = defaults.maxUnavailable;
+            $ = new UpgradeSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSurge(Integer maxSurge) {
-            this.maxSurge = Objects.requireNonNull(maxSurge);
+            $.maxSurge = maxSurge;
             return this;
         }
+
         public Builder maxUnavailable(Integer maxUnavailable) {
-            this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
+            $.maxUnavailable = maxUnavailable;
             return this;
-        }        public UpgradeSettingsResponse build() {
-            return new UpgradeSettingsResponse(maxSurge, maxUnavailable);
+        }
+
+        public UpgradeSettingsResponse build() {
+            $.maxSurge = Objects.requireNonNull($.maxSurge, "expected parameter 'maxSurge' to be non-null");
+            $.maxUnavailable = Objects.requireNonNull($.maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
+            return $;
         }
     }
+
 }

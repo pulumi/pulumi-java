@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.IPBlockArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NetworkPolicyPeerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="ipBlock")
-      private final @Nullable Output<IPBlockArgs> ipBlock;
+    private @Nullable Output<IPBlockArgs> ipBlock;
 
-    public Output<IPBlockArgs> ipBlock() {
-        return this.ipBlock == null ? Codegen.empty() : this.ipBlock;
+    public Optional<Output<IPBlockArgs>> ipBlock() {
+        return Optional.ofNullable(this.ipBlock);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkPolicyPeerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="namespaceSelector")
-      private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
+    private @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
-    public Output<LabelSelectorArgs> namespaceSelector() {
-        return this.namespaceSelector == null ? Codegen.empty() : this.namespaceSelector;
+    public Optional<Output<LabelSelectorArgs>> namespaceSelector() {
+        return Optional.ofNullable(this.namespaceSelector);
     }
 
     /**
@@ -51,76 +51,68 @@ public final class NetworkPolicyPeerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="podSelector")
-      private final @Nullable Output<LabelSelectorArgs> podSelector;
+    private @Nullable Output<LabelSelectorArgs> podSelector;
 
-    public Output<LabelSelectorArgs> podSelector() {
-        return this.podSelector == null ? Codegen.empty() : this.podSelector;
+    public Optional<Output<LabelSelectorArgs>> podSelector() {
+        return Optional.ofNullable(this.podSelector);
     }
 
-    public NetworkPolicyPeerArgs(
-        @Nullable Output<IPBlockArgs> ipBlock,
-        @Nullable Output<LabelSelectorArgs> namespaceSelector,
-        @Nullable Output<LabelSelectorArgs> podSelector) {
-        this.ipBlock = ipBlock;
-        this.namespaceSelector = namespaceSelector;
-        this.podSelector = podSelector;
-    }
+    private NetworkPolicyPeerArgs() {}
 
-    private NetworkPolicyPeerArgs() {
-        this.ipBlock = Codegen.empty();
-        this.namespaceSelector = Codegen.empty();
-        this.podSelector = Codegen.empty();
+    private NetworkPolicyPeerArgs(NetworkPolicyPeerArgs $) {
+        this.ipBlock = $.ipBlock;
+        this.namespaceSelector = $.namespaceSelector;
+        this.podSelector = $.podSelector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPolicyPeerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IPBlockArgs> ipBlock;
-        private @Nullable Output<LabelSelectorArgs> namespaceSelector;
-        private @Nullable Output<LabelSelectorArgs> podSelector;
+        private NetworkPolicyPeerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPolicyPeerArgs();
         }
 
         public Builder(NetworkPolicyPeerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipBlock = defaults.ipBlock;
-    	      this.namespaceSelector = defaults.namespaceSelector;
-    	      this.podSelector = defaults.podSelector;
+            $ = new NetworkPolicyPeerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipBlock(@Nullable Output<IPBlockArgs> ipBlock) {
-            this.ipBlock = ipBlock;
+            $.ipBlock = ipBlock;
             return this;
         }
-        public Builder ipBlock(@Nullable IPBlockArgs ipBlock) {
-            this.ipBlock = Codegen.ofNullable(ipBlock);
-            return this;
+
+        public Builder ipBlock(IPBlockArgs ipBlock) {
+            return ipBlock(Output.of(ipBlock));
         }
+
         public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
-            this.namespaceSelector = namespaceSelector;
+            $.namespaceSelector = namespaceSelector;
             return this;
         }
-        public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
-            this.namespaceSelector = Codegen.ofNullable(namespaceSelector);
-            return this;
+
+        public Builder namespaceSelector(LabelSelectorArgs namespaceSelector) {
+            return namespaceSelector(Output.of(namespaceSelector));
         }
+
         public Builder podSelector(@Nullable Output<LabelSelectorArgs> podSelector) {
-            this.podSelector = podSelector;
+            $.podSelector = podSelector;
             return this;
         }
-        public Builder podSelector(@Nullable LabelSelectorArgs podSelector) {
-            this.podSelector = Codegen.ofNullable(podSelector);
-            return this;
-        }        public NetworkPolicyPeerArgs build() {
-            return new NetworkPolicyPeerArgs(ipBlock, namespaceSelector, podSelector);
+
+        public Builder podSelector(LabelSelectorArgs podSelector) {
+            return podSelector(Output.of(podSelector));
+        }
+
+        public NetworkPolicyPeerArgs build() {
+            return $;
         }
     }
+
 }

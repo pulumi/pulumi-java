@@ -17,7 +17,7 @@ public final class GetBackendArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backendId", required=true)
-      private final String backendId;
+    private String backendId;
 
     public String backendId() {
         return this.backendId;
@@ -28,7 +28,7 @@ public final class GetBackendArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetBackendArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetBackendArgs(
-        String backendId,
-        String resourceGroupName,
-        String serviceName) {
-        this.backendId = Objects.requireNonNull(backendId, "expected parameter 'backendId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetBackendArgs() {}
 
-    private GetBackendArgs() {
-        this.backendId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetBackendArgs(GetBackendArgs $) {
+        this.backendId = $.backendId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backendId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetBackendArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendArgs();
         }
 
         public Builder(GetBackendArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendId = defaults.backendId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetBackendArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendId(String backendId) {
-            this.backendId = Objects.requireNonNull(backendId);
+            $.backendId = backendId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetBackendArgs build() {
-            return new GetBackendArgs(backendId, resourceGroupName, serviceName);
+        }
+
+        public GetBackendArgs build() {
+            $.backendId = Objects.requireNonNull($.backendId, "expected parameter 'backendId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

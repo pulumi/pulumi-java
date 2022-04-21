@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonRespo
      * 
      */
     @Import(name="openUriAction", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
+    private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
 
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction() {
         return this.openUriAction;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonRespo
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse(
-        GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction,
-        String title) {
-        this.openUriAction = Objects.requireNonNull(openUriAction, "expected parameter 'openUriAction' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse() {
-        this.openUriAction = null;
-        this.title = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse $) {
+        this.openUriAction = $.openUriAction;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
-        private String title;
+        private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.openUriAction = defaults.openUriAction;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder openUriAction(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction) {
-            this.openUriAction = Objects.requireNonNull(openUriAction);
+            $.openUriAction = openUriAction;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse(openUriAction, title);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse build() {
+            $.openUriAction = Objects.requireNonNull($.openUriAction, "expected parameter 'openUriAction' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

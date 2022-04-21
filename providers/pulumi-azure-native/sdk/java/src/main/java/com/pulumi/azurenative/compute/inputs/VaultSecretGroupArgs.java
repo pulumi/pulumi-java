@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import com.pulumi.azurenative.compute.inputs.VaultCertificateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VaultSecretGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceVault")
-      private final @Nullable Output<SubResourceArgs> sourceVault;
+    private @Nullable Output<SubResourceArgs> sourceVault;
 
-    public Output<SubResourceArgs> sourceVault() {
-        return this.sourceVault == null ? Codegen.empty() : this.sourceVault;
+    public Optional<Output<SubResourceArgs>> sourceVault() {
+        return Optional.ofNullable(this.sourceVault);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class VaultSecretGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="vaultCertificates")
-      private final @Nullable Output<List<VaultCertificateArgs>> vaultCertificates;
+    private @Nullable Output<List<VaultCertificateArgs>> vaultCertificates;
 
-    public Output<List<VaultCertificateArgs>> vaultCertificates() {
-        return this.vaultCertificates == null ? Codegen.empty() : this.vaultCertificates;
+    public Optional<Output<List<VaultCertificateArgs>>> vaultCertificates() {
+        return Optional.ofNullable(this.vaultCertificates);
     }
 
-    public VaultSecretGroupArgs(
-        @Nullable Output<SubResourceArgs> sourceVault,
-        @Nullable Output<List<VaultCertificateArgs>> vaultCertificates) {
-        this.sourceVault = sourceVault;
-        this.vaultCertificates = vaultCertificates;
-    }
+    private VaultSecretGroupArgs() {}
 
-    private VaultSecretGroupArgs() {
-        this.sourceVault = Codegen.empty();
-        this.vaultCertificates = Codegen.empty();
+    private VaultSecretGroupArgs(VaultSecretGroupArgs $) {
+        this.sourceVault = $.sourceVault;
+        this.vaultCertificates = $.vaultCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultSecretGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> sourceVault;
-        private @Nullable Output<List<VaultCertificateArgs>> vaultCertificates;
+        private VaultSecretGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultSecretGroupArgs();
         }
 
         public Builder(VaultSecretGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceVault = defaults.sourceVault;
-    	      this.vaultCertificates = defaults.vaultCertificates;
+            $ = new VaultSecretGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceVault(@Nullable Output<SubResourceArgs> sourceVault) {
-            this.sourceVault = sourceVault;
+            $.sourceVault = sourceVault;
             return this;
         }
-        public Builder sourceVault(@Nullable SubResourceArgs sourceVault) {
-            this.sourceVault = Codegen.ofNullable(sourceVault);
-            return this;
+
+        public Builder sourceVault(SubResourceArgs sourceVault) {
+            return sourceVault(Output.of(sourceVault));
         }
+
         public Builder vaultCertificates(@Nullable Output<List<VaultCertificateArgs>> vaultCertificates) {
-            this.vaultCertificates = vaultCertificates;
+            $.vaultCertificates = vaultCertificates;
             return this;
         }
-        public Builder vaultCertificates(@Nullable List<VaultCertificateArgs> vaultCertificates) {
-            this.vaultCertificates = Codegen.ofNullable(vaultCertificates);
-            return this;
+
+        public Builder vaultCertificates(List<VaultCertificateArgs> vaultCertificates) {
+            return vaultCertificates(Output.of(vaultCertificates));
         }
+
         public Builder vaultCertificates(VaultCertificateArgs... vaultCertificates) {
             return vaultCertificates(List.of(vaultCertificates));
-        }        public VaultSecretGroupArgs build() {
-            return new VaultSecretGroupArgs(sourceVault, vaultCertificates);
+        }
+
+        public VaultSecretGroupArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class JobExecutionPropertyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maxConcurrentRuns")
-      private final @Nullable Output<Integer> maxConcurrentRuns;
+    private @Nullable Output<Integer> maxConcurrentRuns;
 
-    public Output<Integer> maxConcurrentRuns() {
-        return this.maxConcurrentRuns == null ? Codegen.empty() : this.maxConcurrentRuns;
+    public Optional<Output<Integer>> maxConcurrentRuns() {
+        return Optional.ofNullable(this.maxConcurrentRuns);
     }
 
-    public JobExecutionPropertyGetArgs(@Nullable Output<Integer> maxConcurrentRuns) {
-        this.maxConcurrentRuns = maxConcurrentRuns;
-    }
+    private JobExecutionPropertyGetArgs() {}
 
-    private JobExecutionPropertyGetArgs() {
-        this.maxConcurrentRuns = Codegen.empty();
+    private JobExecutionPropertyGetArgs(JobExecutionPropertyGetArgs $) {
+        this.maxConcurrentRuns = $.maxConcurrentRuns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobExecutionPropertyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxConcurrentRuns;
+        private JobExecutionPropertyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobExecutionPropertyGetArgs();
         }
 
         public Builder(JobExecutionPropertyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxConcurrentRuns = defaults.maxConcurrentRuns;
+            $ = new JobExecutionPropertyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxConcurrentRuns(@Nullable Output<Integer> maxConcurrentRuns) {
-            this.maxConcurrentRuns = maxConcurrentRuns;
+            $.maxConcurrentRuns = maxConcurrentRuns;
             return this;
         }
-        public Builder maxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
-            this.maxConcurrentRuns = Codegen.ofNullable(maxConcurrentRuns);
-            return this;
-        }        public JobExecutionPropertyGetArgs build() {
-            return new JobExecutionPropertyGetArgs(maxConcurrentRuns);
+
+        public Builder maxConcurrentRuns(Integer maxConcurrentRuns) {
+            return maxConcurrentRuns(Output.of(maxConcurrentRuns));
+        }
+
+        public JobExecutionPropertyGetArgs build() {
+            return $;
         }
     }
+
 }

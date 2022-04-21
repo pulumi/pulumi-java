@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualServiceSpecProviderVirtualNodeArgs extends com.pulumi.
      * 
      */
     @Import(name="virtualNodeName", required=true)
-      private final Output<String> virtualNodeName;
+    private Output<String> virtualNodeName;
 
     public Output<String> virtualNodeName() {
         return this.virtualNodeName;
     }
 
-    public VirtualServiceSpecProviderVirtualNodeArgs(Output<String> virtualNodeName) {
-        this.virtualNodeName = Objects.requireNonNull(virtualNodeName, "expected parameter 'virtualNodeName' to be non-null");
-    }
+    private VirtualServiceSpecProviderVirtualNodeArgs() {}
 
-    private VirtualServiceSpecProviderVirtualNodeArgs() {
-        this.virtualNodeName = Codegen.empty();
+    private VirtualServiceSpecProviderVirtualNodeArgs(VirtualServiceSpecProviderVirtualNodeArgs $) {
+        this.virtualNodeName = $.virtualNodeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualServiceSpecProviderVirtualNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> virtualNodeName;
+        private VirtualServiceSpecProviderVirtualNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualServiceSpecProviderVirtualNodeArgs();
         }
 
         public Builder(VirtualServiceSpecProviderVirtualNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualNodeName = defaults.virtualNodeName;
+            $ = new VirtualServiceSpecProviderVirtualNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualNodeName(Output<String> virtualNodeName) {
-            this.virtualNodeName = Objects.requireNonNull(virtualNodeName);
+            $.virtualNodeName = virtualNodeName;
             return this;
         }
+
         public Builder virtualNodeName(String virtualNodeName) {
-            this.virtualNodeName = Output.of(Objects.requireNonNull(virtualNodeName));
-            return this;
-        }        public VirtualServiceSpecProviderVirtualNodeArgs build() {
-            return new VirtualServiceSpecProviderVirtualNodeArgs(virtualNodeName);
+            return virtualNodeName(Output.of(virtualNodeName));
+        }
+
+        public VirtualServiceSpecProviderVirtualNodeArgs build() {
+            $.virtualNodeName = Objects.requireNonNull($.virtualNodeName, "expected parameter 'virtualNodeName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class CustomLevelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expr", required=true)
-      private final ExprResponse expr;
+    private ExprResponse expr;
 
     public ExprResponse expr() {
         return this.expr;
     }
 
-    public CustomLevelResponse(ExprResponse expr) {
-        this.expr = Objects.requireNonNull(expr, "expected parameter 'expr' to be non-null");
-    }
+    private CustomLevelResponse() {}
 
-    private CustomLevelResponse() {
-        this.expr = null;
+    private CustomLevelResponse(CustomLevelResponse $) {
+        this.expr = $.expr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ExprResponse expr;
+        private CustomLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomLevelResponse();
         }
 
         public Builder(CustomLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expr = defaults.expr;
+            $ = new CustomLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expr(ExprResponse expr) {
-            this.expr = Objects.requireNonNull(expr);
+            $.expr = expr;
             return this;
-        }        public CustomLevelResponse build() {
-            return new CustomLevelResponse(expr);
+        }
+
+        public CustomLevelResponse build() {
+            $.expr = Objects.requireNonNull($.expr, "expected parameter 'expr' to be non-null");
+            return $;
         }
     }
+
 }

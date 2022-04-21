@@ -22,7 +22,7 @@ public final class GpuResourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -33,55 +33,52 @@ public final class GpuResourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final String sku;
+    private String sku;
 
     public String sku() {
         return this.sku;
     }
 
-    public GpuResourceResponse(
-        Integer count,
-        String sku) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-    }
+    private GpuResourceResponse() {}
 
-    private GpuResourceResponse() {
-        this.count = null;
-        this.sku = null;
+    private GpuResourceResponse(GpuResourceResponse $) {
+        this.count = $.count;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GpuResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private String sku;
+        private GpuResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GpuResourceResponse();
         }
 
         public Builder(GpuResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.sku = defaults.sku;
+            $ = new GpuResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder sku(String sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
-        }        public GpuResourceResponse build() {
-            return new GpuResourceResponse(count, sku);
+        }
+
+        public GpuResourceResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

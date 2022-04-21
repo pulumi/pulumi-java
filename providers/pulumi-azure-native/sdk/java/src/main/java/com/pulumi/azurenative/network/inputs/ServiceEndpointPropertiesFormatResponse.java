@@ -24,10 +24,10 @@ public final class ServiceEndpointPropertiesFormatResponse extends com.pulumi.re
      * 
      */
     @Import(name="locations")
-      private final @Nullable List<String> locations;
+    private @Nullable List<String> locations;
 
-    public List<String> locations() {
-        return this.locations == null ? List.of() : this.locations;
+    public Optional<List<String>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ServiceEndpointPropertiesFormatResponse extends com.pulumi.re
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -46,67 +46,61 @@ public final class ServiceEndpointPropertiesFormatResponse extends com.pulumi.re
      * 
      */
     @Import(name="service")
-      private final @Nullable String service;
+    private @Nullable String service;
 
     public Optional<String> service() {
-        return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
+        return Optional.ofNullable(this.service);
     }
 
-    public ServiceEndpointPropertiesFormatResponse(
-        @Nullable List<String> locations,
-        String provisioningState,
-        @Nullable String service) {
-        this.locations = locations;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.service = service;
-    }
+    private ServiceEndpointPropertiesFormatResponse() {}
 
-    private ServiceEndpointPropertiesFormatResponse() {
-        this.locations = List.of();
-        this.provisioningState = null;
-        this.service = null;
+    private ServiceEndpointPropertiesFormatResponse(ServiceEndpointPropertiesFormatResponse $) {
+        this.locations = $.locations;
+        this.provisioningState = $.provisioningState;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceEndpointPropertiesFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> locations;
-        private String provisioningState;
-        private @Nullable String service;
+        private ServiceEndpointPropertiesFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceEndpointPropertiesFormatResponse();
         }
 
         public Builder(ServiceEndpointPropertiesFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locations = defaults.locations;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.service = defaults.service;
+            $ = new ServiceEndpointPropertiesFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder service(@Nullable String service) {
-            this.service = service;
+            $.service = service;
             return this;
-        }        public ServiceEndpointPropertiesFormatResponse build() {
-            return new ServiceEndpointPropertiesFormatResponse(locations, provisioningState, service);
+        }
+
+        public ServiceEndpointPropertiesFormatResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="cognitiveServiceRegion", required=true)
-      private final Output<String> cognitiveServiceRegion;
+    private Output<String> cognitiveServiceRegion;
 
     public Output<String> cognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
@@ -36,7 +36,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="cognitiveServiceSubscriptionKey", required=true)
-      private final Output<String> cognitiveServiceSubscriptionKey;
+    private Output<String> cognitiveServiceSubscriptionKey;
 
     public Output<String> cognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
@@ -47,10 +47,10 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="customSpeechModelId")
-      private final @Nullable Output<String> customSpeechModelId;
+    private @Nullable Output<String> customSpeechModelId;
 
-    public Output<String> customSpeechModelId() {
-        return this.customSpeechModelId == null ? Codegen.empty() : this.customSpeechModelId;
+    public Optional<Output<String>> customSpeechModelId() {
+        return Optional.ofNullable(this.customSpeechModelId);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="customVoiceDeploymentId")
-      private final @Nullable Output<String> customVoiceDeploymentId;
+    private @Nullable Output<String> customVoiceDeploymentId;
 
-    public Output<String> customVoiceDeploymentId() {
-        return this.customVoiceDeploymentId == null ? Codegen.empty() : this.customVoiceDeploymentId;
+    public Optional<Output<String>> customVoiceDeploymentId() {
+        return Optional.ofNullable(this.customVoiceDeploymentId);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="isDefaultBotForCogSvcAccount")
-      private final @Nullable Output<Boolean> isDefaultBotForCogSvcAccount;
+    private @Nullable Output<Boolean> isDefaultBotForCogSvcAccount;
 
-    public Output<Boolean> isDefaultBotForCogSvcAccount() {
-        return this.isDefaultBotForCogSvcAccount == null ? Codegen.empty() : this.isDefaultBotForCogSvcAccount;
+    public Optional<Output<Boolean>> isDefaultBotForCogSvcAccount() {
+        return Optional.ofNullable(this.isDefaultBotForCogSvcAccount);
     }
 
     /**
@@ -80,115 +80,100 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Output<Boolean> isEnabled;
+    private @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> isEnabled() {
-        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
+    public Optional<Output<Boolean>> isEnabled() {
+        return Optional.ofNullable(this.isEnabled);
     }
 
-    public DirectLineSpeechChannelPropertiesArgs(
-        Output<String> cognitiveServiceRegion,
-        Output<String> cognitiveServiceSubscriptionKey,
-        @Nullable Output<String> customSpeechModelId,
-        @Nullable Output<String> customVoiceDeploymentId,
-        @Nullable Output<Boolean> isDefaultBotForCogSvcAccount,
-        @Nullable Output<Boolean> isEnabled) {
-        this.cognitiveServiceRegion = Objects.requireNonNull(cognitiveServiceRegion, "expected parameter 'cognitiveServiceRegion' to be non-null");
-        this.cognitiveServiceSubscriptionKey = Objects.requireNonNull(cognitiveServiceSubscriptionKey, "expected parameter 'cognitiveServiceSubscriptionKey' to be non-null");
-        this.customSpeechModelId = customSpeechModelId;
-        this.customVoiceDeploymentId = customVoiceDeploymentId;
-        this.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
-        this.isEnabled = isEnabled;
-    }
+    private DirectLineSpeechChannelPropertiesArgs() {}
 
-    private DirectLineSpeechChannelPropertiesArgs() {
-        this.cognitiveServiceRegion = Codegen.empty();
-        this.cognitiveServiceSubscriptionKey = Codegen.empty();
-        this.customSpeechModelId = Codegen.empty();
-        this.customVoiceDeploymentId = Codegen.empty();
-        this.isDefaultBotForCogSvcAccount = Codegen.empty();
-        this.isEnabled = Codegen.empty();
+    private DirectLineSpeechChannelPropertiesArgs(DirectLineSpeechChannelPropertiesArgs $) {
+        this.cognitiveServiceRegion = $.cognitiveServiceRegion;
+        this.cognitiveServiceSubscriptionKey = $.cognitiveServiceSubscriptionKey;
+        this.customSpeechModelId = $.customSpeechModelId;
+        this.customVoiceDeploymentId = $.customVoiceDeploymentId;
+        this.isDefaultBotForCogSvcAccount = $.isDefaultBotForCogSvcAccount;
+        this.isEnabled = $.isEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectLineSpeechChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cognitiveServiceRegion;
-        private Output<String> cognitiveServiceSubscriptionKey;
-        private @Nullable Output<String> customSpeechModelId;
-        private @Nullable Output<String> customVoiceDeploymentId;
-        private @Nullable Output<Boolean> isDefaultBotForCogSvcAccount;
-        private @Nullable Output<Boolean> isEnabled;
+        private DirectLineSpeechChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectLineSpeechChannelPropertiesArgs();
         }
 
         public Builder(DirectLineSpeechChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cognitiveServiceRegion = defaults.cognitiveServiceRegion;
-    	      this.cognitiveServiceSubscriptionKey = defaults.cognitiveServiceSubscriptionKey;
-    	      this.customSpeechModelId = defaults.customSpeechModelId;
-    	      this.customVoiceDeploymentId = defaults.customVoiceDeploymentId;
-    	      this.isDefaultBotForCogSvcAccount = defaults.isDefaultBotForCogSvcAccount;
-    	      this.isEnabled = defaults.isEnabled;
+            $ = new DirectLineSpeechChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cognitiveServiceRegion(Output<String> cognitiveServiceRegion) {
-            this.cognitiveServiceRegion = Objects.requireNonNull(cognitiveServiceRegion);
+            $.cognitiveServiceRegion = cognitiveServiceRegion;
             return this;
         }
+
         public Builder cognitiveServiceRegion(String cognitiveServiceRegion) {
-            this.cognitiveServiceRegion = Output.of(Objects.requireNonNull(cognitiveServiceRegion));
-            return this;
+            return cognitiveServiceRegion(Output.of(cognitiveServiceRegion));
         }
+
         public Builder cognitiveServiceSubscriptionKey(Output<String> cognitiveServiceSubscriptionKey) {
-            this.cognitiveServiceSubscriptionKey = Objects.requireNonNull(cognitiveServiceSubscriptionKey);
+            $.cognitiveServiceSubscriptionKey = cognitiveServiceSubscriptionKey;
             return this;
         }
+
         public Builder cognitiveServiceSubscriptionKey(String cognitiveServiceSubscriptionKey) {
-            this.cognitiveServiceSubscriptionKey = Output.of(Objects.requireNonNull(cognitiveServiceSubscriptionKey));
-            return this;
+            return cognitiveServiceSubscriptionKey(Output.of(cognitiveServiceSubscriptionKey));
         }
+
         public Builder customSpeechModelId(@Nullable Output<String> customSpeechModelId) {
-            this.customSpeechModelId = customSpeechModelId;
+            $.customSpeechModelId = customSpeechModelId;
             return this;
         }
-        public Builder customSpeechModelId(@Nullable String customSpeechModelId) {
-            this.customSpeechModelId = Codegen.ofNullable(customSpeechModelId);
-            return this;
+
+        public Builder customSpeechModelId(String customSpeechModelId) {
+            return customSpeechModelId(Output.of(customSpeechModelId));
         }
+
         public Builder customVoiceDeploymentId(@Nullable Output<String> customVoiceDeploymentId) {
-            this.customVoiceDeploymentId = customVoiceDeploymentId;
+            $.customVoiceDeploymentId = customVoiceDeploymentId;
             return this;
         }
-        public Builder customVoiceDeploymentId(@Nullable String customVoiceDeploymentId) {
-            this.customVoiceDeploymentId = Codegen.ofNullable(customVoiceDeploymentId);
-            return this;
+
+        public Builder customVoiceDeploymentId(String customVoiceDeploymentId) {
+            return customVoiceDeploymentId(Output.of(customVoiceDeploymentId));
         }
+
         public Builder isDefaultBotForCogSvcAccount(@Nullable Output<Boolean> isDefaultBotForCogSvcAccount) {
-            this.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
+            $.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
             return this;
         }
-        public Builder isDefaultBotForCogSvcAccount(@Nullable Boolean isDefaultBotForCogSvcAccount) {
-            this.isDefaultBotForCogSvcAccount = Codegen.ofNullable(isDefaultBotForCogSvcAccount);
-            return this;
+
+        public Builder isDefaultBotForCogSvcAccount(Boolean isDefaultBotForCogSvcAccount) {
+            return isDefaultBotForCogSvcAccount(Output.of(isDefaultBotForCogSvcAccount));
         }
+
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
-        public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Codegen.ofNullable(isEnabled);
-            return this;
-        }        public DirectLineSpeechChannelPropertiesArgs build() {
-            return new DirectLineSpeechChannelPropertiesArgs(cognitiveServiceRegion, cognitiveServiceSubscriptionKey, customSpeechModelId, customVoiceDeploymentId, isDefaultBotForCogSvcAccount, isEnabled);
+
+        public Builder isEnabled(Boolean isEnabled) {
+            return isEnabled(Output.of(isEnabled));
+        }
+
+        public DirectLineSpeechChannelPropertiesArgs build() {
+            $.cognitiveServiceRegion = Objects.requireNonNull($.cognitiveServiceRegion, "expected parameter 'cognitiveServiceRegion' to be non-null");
+            $.cognitiveServiceSubscriptionKey = Objects.requireNonNull($.cognitiveServiceSubscriptionKey, "expected parameter 'cognitiveServiceSubscriptionKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.azurenative.security.inputs.AutomationRuleSetArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AutomationSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="eventSource")
-      private final @Nullable Output<Either<String,EventSource>> eventSource;
+    private @Nullable Output<Either<String,EventSource>> eventSource;
 
-    public Output<Either<String,EventSource>> eventSource() {
-        return this.eventSource == null ? Codegen.empty() : this.eventSource;
+    public Optional<Output<Either<String,EventSource>>> eventSource() {
+        return Optional.ofNullable(this.eventSource);
     }
 
     /**
@@ -39,66 +39,62 @@ public final class AutomationSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ruleSets")
-      private final @Nullable Output<List<AutomationRuleSetArgs>> ruleSets;
+    private @Nullable Output<List<AutomationRuleSetArgs>> ruleSets;
 
-    public Output<List<AutomationRuleSetArgs>> ruleSets() {
-        return this.ruleSets == null ? Codegen.empty() : this.ruleSets;
+    public Optional<Output<List<AutomationRuleSetArgs>>> ruleSets() {
+        return Optional.ofNullable(this.ruleSets);
     }
 
-    public AutomationSourceArgs(
-        @Nullable Output<Either<String,EventSource>> eventSource,
-        @Nullable Output<List<AutomationRuleSetArgs>> ruleSets) {
-        this.eventSource = eventSource;
-        this.ruleSets = ruleSets;
-    }
+    private AutomationSourceArgs() {}
 
-    private AutomationSourceArgs() {
-        this.eventSource = Codegen.empty();
-        this.ruleSets = Codegen.empty();
+    private AutomationSourceArgs(AutomationSourceArgs $) {
+        this.eventSource = $.eventSource;
+        this.ruleSets = $.ruleSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,EventSource>> eventSource;
-        private @Nullable Output<List<AutomationRuleSetArgs>> ruleSets;
+        private AutomationSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationSourceArgs();
         }
 
         public Builder(AutomationSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventSource = defaults.eventSource;
-    	      this.ruleSets = defaults.ruleSets;
+            $ = new AutomationSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventSource(@Nullable Output<Either<String,EventSource>> eventSource) {
-            this.eventSource = eventSource;
+            $.eventSource = eventSource;
             return this;
         }
-        public Builder eventSource(@Nullable Either<String,EventSource> eventSource) {
-            this.eventSource = Codegen.ofNullable(eventSource);
-            return this;
+
+        public Builder eventSource(Either<String,EventSource> eventSource) {
+            return eventSource(Output.of(eventSource));
         }
+
         public Builder ruleSets(@Nullable Output<List<AutomationRuleSetArgs>> ruleSets) {
-            this.ruleSets = ruleSets;
+            $.ruleSets = ruleSets;
             return this;
         }
-        public Builder ruleSets(@Nullable List<AutomationRuleSetArgs> ruleSets) {
-            this.ruleSets = Codegen.ofNullable(ruleSets);
-            return this;
+
+        public Builder ruleSets(List<AutomationRuleSetArgs> ruleSets) {
+            return ruleSets(Output.of(ruleSets));
         }
+
         public Builder ruleSets(AutomationRuleSetArgs... ruleSets) {
             return ruleSets(List.of(ruleSets));
-        }        public AutomationSourceArgs build() {
-            return new AutomationSourceArgs(eventSource, ruleSets);
+        }
+
+        public AutomationSourceArgs build() {
+            return $;
         }
     }
+
 }

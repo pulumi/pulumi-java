@@ -23,10 +23,10 @@ public final class APIServerProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ip")
-      private final @Nullable String ip;
+    private @Nullable String ip;
 
     public Optional<String> ip() {
-        return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
+        return Optional.ofNullable(this.ip);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class APIServerProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class APIServerProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="visibility")
-      private final @Nullable String visibility;
+    private @Nullable String visibility;
 
     public Optional<String> visibility() {
-        return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
+        return Optional.ofNullable(this.visibility);
     }
 
-    public APIServerProfileResponse(
-        @Nullable String ip,
-        @Nullable String url,
-        @Nullable String visibility) {
-        this.ip = ip;
-        this.url = url;
-        this.visibility = visibility;
-    }
+    private APIServerProfileResponse() {}
 
-    private APIServerProfileResponse() {
-        this.ip = null;
-        this.url = null;
-        this.visibility = null;
+    private APIServerProfileResponse(APIServerProfileResponse $) {
+        this.ip = $.ip;
+        this.url = $.url;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(APIServerProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ip;
-        private @Nullable String url;
-        private @Nullable String visibility;
+        private APIServerProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new APIServerProfileResponse();
         }
 
         public Builder(APIServerProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
-    	      this.url = defaults.url;
-    	      this.visibility = defaults.visibility;
+            $ = new APIServerProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
+
         public Builder visibility(@Nullable String visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
-        }        public APIServerProfileResponse build() {
-            return new APIServerProfileResponse(ip, url, visibility);
+        }
+
+        public APIServerProfileResponse build() {
+            return $;
         }
     }
+
 }

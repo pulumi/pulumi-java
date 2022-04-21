@@ -22,45 +22,45 @@ public final class InstanceParamsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceManagerTags", required=true)
-      private final Map<String,String> resourceManagerTags;
+    private Map<String,String> resourceManagerTags;
 
     public Map<String,String> resourceManagerTags() {
         return this.resourceManagerTags;
     }
 
-    public InstanceParamsResponse(Map<String,String> resourceManagerTags) {
-        this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags, "expected parameter 'resourceManagerTags' to be non-null");
-    }
+    private InstanceParamsResponse() {}
 
-    private InstanceParamsResponse() {
-        this.resourceManagerTags = Map.of();
+    private InstanceParamsResponse(InstanceParamsResponse $) {
+        this.resourceManagerTags = $.resourceManagerTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceParamsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> resourceManagerTags;
+        private InstanceParamsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceParamsResponse();
         }
 
         public Builder(InstanceParamsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceManagerTags = defaults.resourceManagerTags;
+            $ = new InstanceParamsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
-            this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
+            $.resourceManagerTags = resourceManagerTags;
             return this;
-        }        public InstanceParamsResponse build() {
-            return new InstanceParamsResponse(resourceManagerTags);
+        }
+
+        public InstanceParamsResponse build() {
+            $.resourceManagerTags = Objects.requireNonNull($.resourceManagerTags, "expected parameter 'resourceManagerTags' to be non-null");
+            return $;
         }
     }
+
 }

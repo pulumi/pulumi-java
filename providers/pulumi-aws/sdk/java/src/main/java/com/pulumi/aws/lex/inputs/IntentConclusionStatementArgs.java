@@ -6,10 +6,10 @@ package com.pulumi.aws.lex.inputs;
 import com.pulumi.aws.lex.inputs.IntentConclusionStatementMessageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class IntentConclusionStatementArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="messages", required=true)
-      private final Output<List<IntentConclusionStatementMessageArgs>> messages;
+    private Output<List<IntentConclusionStatementMessageArgs>> messages;
 
     public Output<List<IntentConclusionStatementMessageArgs>> messages() {
         return this.messages;
@@ -37,66 +37,63 @@ public final class IntentConclusionStatementArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="responseCard")
-      private final @Nullable Output<String> responseCard;
+    private @Nullable Output<String> responseCard;
 
-    public Output<String> responseCard() {
-        return this.responseCard == null ? Codegen.empty() : this.responseCard;
+    public Optional<Output<String>> responseCard() {
+        return Optional.ofNullable(this.responseCard);
     }
 
-    public IntentConclusionStatementArgs(
-        Output<List<IntentConclusionStatementMessageArgs>> messages,
-        @Nullable Output<String> responseCard) {
-        this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
-        this.responseCard = responseCard;
-    }
+    private IntentConclusionStatementArgs() {}
 
-    private IntentConclusionStatementArgs() {
-        this.messages = Codegen.empty();
-        this.responseCard = Codegen.empty();
+    private IntentConclusionStatementArgs(IntentConclusionStatementArgs $) {
+        this.messages = $.messages;
+        this.responseCard = $.responseCard;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentConclusionStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<IntentConclusionStatementMessageArgs>> messages;
-        private @Nullable Output<String> responseCard;
+        private IntentConclusionStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentConclusionStatementArgs();
         }
 
         public Builder(IntentConclusionStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messages = defaults.messages;
-    	      this.responseCard = defaults.responseCard;
+            $ = new IntentConclusionStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messages(Output<List<IntentConclusionStatementMessageArgs>> messages) {
-            this.messages = Objects.requireNonNull(messages);
+            $.messages = messages;
             return this;
         }
+
         public Builder messages(List<IntentConclusionStatementMessageArgs> messages) {
-            this.messages = Output.of(Objects.requireNonNull(messages));
-            return this;
+            return messages(Output.of(messages));
         }
+
         public Builder messages(IntentConclusionStatementMessageArgs... messages) {
             return messages(List.of(messages));
         }
+
         public Builder responseCard(@Nullable Output<String> responseCard) {
-            this.responseCard = responseCard;
+            $.responseCard = responseCard;
             return this;
         }
-        public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Codegen.ofNullable(responseCard);
-            return this;
-        }        public IntentConclusionStatementArgs build() {
-            return new IntentConclusionStatementArgs(messages, responseCard);
+
+        public Builder responseCard(String responseCard) {
+            return responseCard(Output.of(responseCard));
+        }
+
+        public IntentConclusionStatementArgs build() {
+            $.messages = Objects.requireNonNull($.messages, "expected parameter 'messages' to be non-null");
+            return $;
         }
     }
+
 }

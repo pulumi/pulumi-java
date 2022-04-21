@@ -5,10 +5,10 @@ package com.pulumi.googlenative.orgpolicy_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,7 +17,7 @@ public final class FolderPolicyArgs extends com.pulumi.resources.ResourceArgs {
     public static final FolderPolicyArgs Empty = new FolderPolicyArgs();
 
     @Import(name="folderId", required=true)
-      private final Output<String> folderId;
+    private Output<String> folderId;
 
     public Output<String> folderId() {
         return this.folderId;
@@ -28,10 +28,10 @@ public final class FolderPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -39,76 +39,69 @@ public final class FolderPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
+    private @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
-    public Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<GoogleCloudOrgpolicyV2PolicySpecArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
-    public FolderPolicyArgs(
-        Output<String> folderId,
-        @Nullable Output<String> name,
-        @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
-        this.folderId = Objects.requireNonNull(folderId, "expected parameter 'folderId' to be non-null");
-        this.name = name;
-        this.spec = spec;
-    }
+    private FolderPolicyArgs() {}
 
-    private FolderPolicyArgs() {
-        this.folderId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.spec = Codegen.empty();
+    private FolderPolicyArgs(FolderPolicyArgs $) {
+        this.folderId = $.folderId;
+        this.name = $.name;
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FolderPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> folderId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
+        private FolderPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FolderPolicyArgs();
         }
 
         public Builder(FolderPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.folderId = defaults.folderId;
-    	      this.name = defaults.name;
-    	      this.spec = defaults.spec;
+            $ = new FolderPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder folderId(Output<String> folderId) {
-            this.folderId = Objects.requireNonNull(folderId);
+            $.folderId = folderId;
             return this;
         }
+
         public Builder folderId(String folderId) {
-            this.folderId = Output.of(Objects.requireNonNull(folderId));
-            return this;
+            return folderId(Output.of(folderId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder spec(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
-        }        public FolderPolicyArgs build() {
-            return new FolderPolicyArgs(folderId, name, spec);
+
+        public Builder spec(GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
+            return spec(Output.of(spec));
+        }
+
+        public FolderPolicyArgs build() {
+            $.folderId = Objects.requireNonNull($.folderId, "expected parameter 'folderId' to be non-null");
+            return $;
         }
     }
+
 }

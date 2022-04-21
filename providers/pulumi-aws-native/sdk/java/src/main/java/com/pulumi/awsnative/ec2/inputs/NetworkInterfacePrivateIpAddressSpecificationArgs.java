@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,70 +15,67 @@ public final class NetworkInterfacePrivateIpAddressSpecificationArgs extends com
     public static final NetworkInterfacePrivateIpAddressSpecificationArgs Empty = new NetworkInterfacePrivateIpAddressSpecificationArgs();
 
     @Import(name="primary", required=true)
-      private final Output<Boolean> primary;
+    private Output<Boolean> primary;
 
     public Output<Boolean> primary() {
         return this.primary;
     }
 
     @Import(name="privateIpAddress", required=true)
-      private final Output<String> privateIpAddress;
+    private Output<String> privateIpAddress;
 
     public Output<String> privateIpAddress() {
         return this.privateIpAddress;
     }
 
-    public NetworkInterfacePrivateIpAddressSpecificationArgs(
-        Output<Boolean> primary,
-        Output<String> privateIpAddress) {
-        this.primary = Objects.requireNonNull(primary, "expected parameter 'primary' to be non-null");
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-    }
+    private NetworkInterfacePrivateIpAddressSpecificationArgs() {}
 
-    private NetworkInterfacePrivateIpAddressSpecificationArgs() {
-        this.primary = Codegen.empty();
-        this.privateIpAddress = Codegen.empty();
+    private NetworkInterfacePrivateIpAddressSpecificationArgs(NetworkInterfacePrivateIpAddressSpecificationArgs $) {
+        this.primary = $.primary;
+        this.privateIpAddress = $.privateIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfacePrivateIpAddressSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> primary;
-        private Output<String> privateIpAddress;
+        private NetworkInterfacePrivateIpAddressSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfacePrivateIpAddressSpecificationArgs();
         }
 
         public Builder(NetworkInterfacePrivateIpAddressSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primary = defaults.primary;
-    	      this.privateIpAddress = defaults.privateIpAddress;
+            $ = new NetworkInterfacePrivateIpAddressSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder primary(Output<Boolean> primary) {
-            this.primary = Objects.requireNonNull(primary);
+            $.primary = primary;
             return this;
         }
+
         public Builder primary(Boolean primary) {
-            this.primary = Output.of(Objects.requireNonNull(primary));
-            return this;
+            return primary(Output.of(primary));
         }
+
         public Builder privateIpAddress(Output<String> privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Output.of(Objects.requireNonNull(privateIpAddress));
-            return this;
-        }        public NetworkInterfacePrivateIpAddressSpecificationArgs build() {
-            return new NetworkInterfacePrivateIpAddressSpecificationArgs(primary, privateIpAddress);
+            return privateIpAddress(Output.of(privateIpAddress));
+        }
+
+        public NetworkInterfacePrivateIpAddressSpecificationArgs build() {
+            $.primary = Objects.requireNonNull($.primary, "expected parameter 'primary' to be non-null");
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

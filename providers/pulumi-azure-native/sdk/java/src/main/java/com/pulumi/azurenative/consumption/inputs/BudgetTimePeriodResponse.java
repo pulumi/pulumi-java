@@ -23,10 +23,10 @@ public final class BudgetTimePeriodResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="endDate")
-      private final @Nullable String endDate;
+    private @Nullable String endDate;
 
     public Optional<String> endDate() {
-        return this.endDate == null ? Optional.empty() : Optional.ofNullable(this.endDate);
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class BudgetTimePeriodResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="startDate", required=true)
-      private final String startDate;
+    private String startDate;
 
     public String startDate() {
         return this.startDate;
     }
 
-    public BudgetTimePeriodResponse(
-        @Nullable String endDate,
-        String startDate) {
-        this.endDate = endDate;
-        this.startDate = Objects.requireNonNull(startDate, "expected parameter 'startDate' to be non-null");
-    }
+    private BudgetTimePeriodResponse() {}
 
-    private BudgetTimePeriodResponse() {
-        this.endDate = null;
-        this.startDate = null;
+    private BudgetTimePeriodResponse(BudgetTimePeriodResponse $) {
+        this.endDate = $.endDate;
+        this.startDate = $.startDate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetTimePeriodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endDate;
-        private String startDate;
+        private BudgetTimePeriodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetTimePeriodResponse();
         }
 
         public Builder(BudgetTimePeriodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDate = defaults.endDate;
-    	      this.startDate = defaults.startDate;
+            $ = new BudgetTimePeriodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
+
         public Builder startDate(String startDate) {
-            this.startDate = Objects.requireNonNull(startDate);
+            $.startDate = startDate;
             return this;
-        }        public BudgetTimePeriodResponse build() {
-            return new BudgetTimePeriodResponse(endDate, startDate);
+        }
+
+        public BudgetTimePeriodResponse build() {
+            $.startDate = Objects.requireNonNull($.startDate, "expected parameter 'startDate' to be non-null");
+            return $;
         }
     }
+
 }

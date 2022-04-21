@@ -7,9 +7,9 @@ import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypePro
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="callerReference")
-      private final @Nullable Output<String> callerReference;
+    private @Nullable Output<String> callerReference;
 
-    public Output<String> callerReference() {
-        return this.callerReference == null ? Codegen.empty() : this.callerReference;
+    public Optional<Output<String>> callerReference() {
+        return Optional.ofNullable(this.callerReference);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="contentTypeProfileConfig")
-      private final @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
+    private @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
 
-    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig() {
-        return this.contentTypeProfileConfig == null ? Codegen.empty() : this.contentTypeProfileConfig;
+    public Optional<Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs>> contentTypeProfileConfig() {
+        return Optional.ofNullable(this.contentTypeProfileConfig);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="queryArgProfileConfig")
-      private final @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
+    private @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
 
-    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig() {
-        return this.queryArgProfileConfig == null ? Codegen.empty() : this.queryArgProfileConfig;
+    public Optional<Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs>> queryArgProfileConfig() {
+        return Optional.ofNullable(this.queryArgProfileConfig);
     }
 
-    public FieldLevelEncryptionConfigState(
-        @Nullable Output<String> callerReference,
-        @Nullable Output<String> comment,
-        @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig,
-        @Nullable Output<String> etag,
-        @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig) {
-        this.callerReference = callerReference;
-        this.comment = comment;
-        this.contentTypeProfileConfig = contentTypeProfileConfig;
-        this.etag = etag;
-        this.queryArgProfileConfig = queryArgProfileConfig;
-    }
+    private FieldLevelEncryptionConfigState() {}
 
-    private FieldLevelEncryptionConfigState() {
-        this.callerReference = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.contentTypeProfileConfig = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.queryArgProfileConfig = Codegen.empty();
+    private FieldLevelEncryptionConfigState(FieldLevelEncryptionConfigState $) {
+        this.callerReference = $.callerReference;
+        this.comment = $.comment;
+        this.contentTypeProfileConfig = $.contentTypeProfileConfig;
+        this.etag = $.etag;
+        this.queryArgProfileConfig = $.queryArgProfileConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> callerReference;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
+        private FieldLevelEncryptionConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionConfigState();
         }
 
         public Builder(FieldLevelEncryptionConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callerReference = defaults.callerReference;
-    	      this.comment = defaults.comment;
-    	      this.contentTypeProfileConfig = defaults.contentTypeProfileConfig;
-    	      this.etag = defaults.etag;
-    	      this.queryArgProfileConfig = defaults.queryArgProfileConfig;
+            $ = new FieldLevelEncryptionConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder callerReference(@Nullable Output<String> callerReference) {
-            this.callerReference = callerReference;
+            $.callerReference = callerReference;
             return this;
         }
-        public Builder callerReference(@Nullable String callerReference) {
-            this.callerReference = Codegen.ofNullable(callerReference);
-            return this;
+
+        public Builder callerReference(String callerReference) {
+            return callerReference(Output.of(callerReference));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder contentTypeProfileConfig(@Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig) {
-            this.contentTypeProfileConfig = contentTypeProfileConfig;
+            $.contentTypeProfileConfig = contentTypeProfileConfig;
             return this;
         }
-        public Builder contentTypeProfileConfig(@Nullable FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs contentTypeProfileConfig) {
-            this.contentTypeProfileConfig = Codegen.ofNullable(contentTypeProfileConfig);
-            return this;
+
+        public Builder contentTypeProfileConfig(FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs contentTypeProfileConfig) {
+            return contentTypeProfileConfig(Output.of(contentTypeProfileConfig));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder queryArgProfileConfig(@Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig) {
-            this.queryArgProfileConfig = queryArgProfileConfig;
+            $.queryArgProfileConfig = queryArgProfileConfig;
             return this;
         }
-        public Builder queryArgProfileConfig(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs queryArgProfileConfig) {
-            this.queryArgProfileConfig = Codegen.ofNullable(queryArgProfileConfig);
-            return this;
-        }        public FieldLevelEncryptionConfigState build() {
-            return new FieldLevelEncryptionConfigState(callerReference, comment, contentTypeProfileConfig, etag, queryArgProfileConfig);
+
+        public Builder queryArgProfileConfig(FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs queryArgProfileConfig) {
+            return queryArgProfileConfig(Output.of(queryArgProfileConfig));
+        }
+
+        public FieldLevelEncryptionConfigState build() {
+            return $;
         }
     }
+
 }

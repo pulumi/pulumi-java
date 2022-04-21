@@ -20,7 +20,7 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -31,10 +31,10 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable String instanceType;
+    private @Nullable String instanceType;
 
     public Optional<String> instanceType() {
-        return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -42,67 +42,61 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="preferredInstanceTypes")
-      private final @Nullable List<String> preferredInstanceTypes;
+    private @Nullable List<String> preferredInstanceTypes;
 
-    public List<String> preferredInstanceTypes() {
-        return this.preferredInstanceTypes == null ? List.of() : this.preferredInstanceTypes;
+    public Optional<List<String>> preferredInstanceTypes() {
+        return Optional.ofNullable(this.preferredInstanceTypes);
     }
 
-    public GetOutpostInstanceTypeArgs(
-        String arn,
-        @Nullable String instanceType,
-        @Nullable List<String> preferredInstanceTypes) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.instanceType = instanceType;
-        this.preferredInstanceTypes = preferredInstanceTypes;
-    }
+    private GetOutpostInstanceTypeArgs() {}
 
-    private GetOutpostInstanceTypeArgs() {
-        this.arn = null;
-        this.instanceType = null;
-        this.preferredInstanceTypes = List.of();
+    private GetOutpostInstanceTypeArgs(GetOutpostInstanceTypeArgs $) {
+        this.arn = $.arn;
+        this.instanceType = $.instanceType;
+        this.preferredInstanceTypes = $.preferredInstanceTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOutpostInstanceTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private @Nullable String instanceType;
-        private @Nullable List<String> preferredInstanceTypes;
+        private GetOutpostInstanceTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOutpostInstanceTypeArgs();
         }
 
         public Builder(GetOutpostInstanceTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.instanceType = defaults.instanceType;
-    	      this.preferredInstanceTypes = defaults.preferredInstanceTypes;
+            $ = new GetOutpostInstanceTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder preferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
-            this.preferredInstanceTypes = preferredInstanceTypes;
+            $.preferredInstanceTypes = preferredInstanceTypes;
             return this;
         }
+
         public Builder preferredInstanceTypes(String... preferredInstanceTypes) {
             return preferredInstanceTypes(List.of(preferredInstanceTypes));
-        }        public GetOutpostInstanceTypeArgs build() {
-            return new GetOutpostInstanceTypeArgs(arn, instanceType, preferredInstanceTypes);
+        }
+
+        public GetOutpostInstanceTypeArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

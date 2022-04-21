@@ -5,9 +5,9 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class UserPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
@@ -53,85 +53,80 @@ public final class UserPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="user", required=true)
-      private final Output<String> user;
+    private Output<String> user;
 
     public Output<String> user() {
         return this.user;
     }
 
-    public UserPolicyArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        Output<String> policy,
-        Output<String> user) {
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
-    }
+    private UserPolicyArgs() {}
 
-    private UserPolicyArgs() {
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.user = Codegen.empty();
+    private UserPolicyArgs(UserPolicyArgs $) {
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.policy = $.policy;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private Output<String> policy;
-        private Output<String> user;
+        private UserPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPolicyArgs();
         }
 
         public Builder(UserPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.policy = defaults.policy;
-    	      this.user = defaults.user;
+            $ = new UserPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
         public Builder user(Output<String> user) {
-            this.user = Objects.requireNonNull(user);
+            $.user = user;
             return this;
         }
+
         public Builder user(String user) {
-            this.user = Output.of(Objects.requireNonNull(user));
-            return this;
-        }        public UserPolicyArgs build() {
-            return new UserPolicyArgs(name, namePrefix, policy, user);
+            return user(Output.of(user));
+        }
+
+        public UserPolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
+            return $;
         }
     }
+
 }

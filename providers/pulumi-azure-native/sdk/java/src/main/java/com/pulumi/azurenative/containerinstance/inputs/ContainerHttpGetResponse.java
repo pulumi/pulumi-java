@@ -25,10 +25,10 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="httpHeaders")
-      private final @Nullable HttpHeadersResponse httpHeaders;
+    private @Nullable HttpHeadersResponse httpHeaders;
 
     public Optional<HttpHeadersResponse> httpHeaders() {
-        return this.httpHeaders == null ? Optional.empty() : Optional.ofNullable(this.httpHeaders);
+        return Optional.ofNullable(this.httpHeaders);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -58,73 +58,63 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="scheme")
-      private final @Nullable String scheme;
+    private @Nullable String scheme;
 
     public Optional<String> scheme() {
-        return this.scheme == null ? Optional.empty() : Optional.ofNullable(this.scheme);
+        return Optional.ofNullable(this.scheme);
     }
 
-    public ContainerHttpGetResponse(
-        @Nullable HttpHeadersResponse httpHeaders,
-        @Nullable String path,
-        Integer port,
-        @Nullable String scheme) {
-        this.httpHeaders = httpHeaders;
-        this.path = path;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.scheme = scheme;
-    }
+    private ContainerHttpGetResponse() {}
 
-    private ContainerHttpGetResponse() {
-        this.httpHeaders = null;
-        this.path = null;
-        this.port = null;
-        this.scheme = null;
+    private ContainerHttpGetResponse(ContainerHttpGetResponse $) {
+        this.httpHeaders = $.httpHeaders;
+        this.path = $.path;
+        this.port = $.port;
+        this.scheme = $.scheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerHttpGetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable HttpHeadersResponse httpHeaders;
-        private @Nullable String path;
-        private Integer port;
-        private @Nullable String scheme;
+        private ContainerHttpGetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerHttpGetResponse();
         }
 
         public Builder(ContainerHttpGetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpHeaders = defaults.httpHeaders;
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
-    	      this.scheme = defaults.scheme;
+            $ = new ContainerHttpGetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder httpHeaders(@Nullable HttpHeadersResponse httpHeaders) {
-            this.httpHeaders = httpHeaders;
+            $.httpHeaders = httpHeaders;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder scheme(@Nullable String scheme) {
-            this.scheme = scheme;
+            $.scheme = scheme;
             return this;
-        }        public ContainerHttpGetResponse build() {
-            return new ContainerHttpGetResponse(httpHeaders, path, port, scheme);
+        }
+
+        public ContainerHttpGetResponse build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

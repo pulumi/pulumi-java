@@ -10,11 +10,11 @@ import com.pulumi.awsnative.ssm.inputs.DocumentRequiresArgs;
 import com.pulumi.awsnative.ssm.inputs.DocumentTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attachments")
-      private final @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments;
+    private @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments;
 
-    public Output<List<DocumentAttachmentsSourceArgs>> attachments() {
-        return this.attachments == null ? Codegen.empty() : this.attachments;
+    public Optional<Output<List<DocumentAttachmentsSourceArgs>>> attachments() {
+        return Optional.ofNullable(this.attachments);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final Output<Object> content;
+    private Output<Object> content;
 
     public Output<Object> content() {
         return this.content;
@@ -49,10 +49,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentFormat")
-      private final @Nullable Output<DocumentFormat> documentFormat;
+    private @Nullable Output<DocumentFormat> documentFormat;
 
-    public Output<DocumentFormat> documentFormat() {
-        return this.documentFormat == null ? Codegen.empty() : this.documentFormat;
+    public Optional<Output<DocumentFormat>> documentFormat() {
+        return Optional.ofNullable(this.documentFormat);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentType")
-      private final @Nullable Output<DocumentType> documentType;
+    private @Nullable Output<DocumentType> documentType;
 
-    public Output<DocumentType> documentType() {
-        return this.documentType == null ? Codegen.empty() : this.documentType;
+    public Optional<Output<DocumentType>> documentType() {
+        return Optional.ofNullable(this.documentType);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requires")
-      private final @Nullable Output<List<DocumentRequiresArgs>> requires;
+    private @Nullable Output<List<DocumentRequiresArgs>> requires;
 
-    public Output<List<DocumentRequiresArgs>> requires() {
-        return this.requires == null ? Codegen.empty() : this.requires;
+    public Optional<Output<List<DocumentRequiresArgs>>> requires() {
+        return Optional.ofNullable(this.requires);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DocumentTagArgs>> tags;
+    private @Nullable Output<List<DocumentTagArgs>> tags;
 
-    public Output<List<DocumentTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DocumentTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetType")
-      private final @Nullable Output<String> targetType;
+    private @Nullable Output<String> targetType;
 
-    public Output<String> targetType() {
-        return this.targetType == null ? Codegen.empty() : this.targetType;
+    public Optional<Output<String>> targetType() {
+        return Optional.ofNullable(this.targetType);
     }
 
     /**
@@ -115,163 +115,141 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionName")
-      private final @Nullable Output<String> versionName;
+    private @Nullable Output<String> versionName;
 
-    public Output<String> versionName() {
-        return this.versionName == null ? Codegen.empty() : this.versionName;
+    public Optional<Output<String>> versionName() {
+        return Optional.ofNullable(this.versionName);
     }
 
-    public DocumentArgs(
-        @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments,
-        Output<Object> content,
-        @Nullable Output<DocumentFormat> documentFormat,
-        @Nullable Output<DocumentType> documentType,
-        @Nullable Output<String> name,
-        @Nullable Output<List<DocumentRequiresArgs>> requires,
-        @Nullable Output<List<DocumentTagArgs>> tags,
-        @Nullable Output<String> targetType,
-        @Nullable Output<String> versionName) {
-        this.attachments = attachments;
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.documentFormat = documentFormat;
-        this.documentType = documentType;
-        this.name = name;
-        this.requires = requires;
-        this.tags = tags;
-        this.targetType = targetType;
-        this.versionName = versionName;
-    }
+    private DocumentArgs() {}
 
-    private DocumentArgs() {
-        this.attachments = Codegen.empty();
-        this.content = Codegen.empty();
-        this.documentFormat = Codegen.empty();
-        this.documentType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.requires = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetType = Codegen.empty();
-        this.versionName = Codegen.empty();
+    private DocumentArgs(DocumentArgs $) {
+        this.attachments = $.attachments;
+        this.content = $.content;
+        this.documentFormat = $.documentFormat;
+        this.documentType = $.documentType;
+        this.name = $.name;
+        this.requires = $.requires;
+        this.tags = $.tags;
+        this.targetType = $.targetType;
+        this.versionName = $.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments;
-        private Output<Object> content;
-        private @Nullable Output<DocumentFormat> documentFormat;
-        private @Nullable Output<DocumentType> documentType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<DocumentRequiresArgs>> requires;
-        private @Nullable Output<List<DocumentTagArgs>> tags;
-        private @Nullable Output<String> targetType;
-        private @Nullable Output<String> versionName;
+        private DocumentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentArgs();
         }
 
         public Builder(DocumentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachments = defaults.attachments;
-    	      this.content = defaults.content;
-    	      this.documentFormat = defaults.documentFormat;
-    	      this.documentType = defaults.documentType;
-    	      this.name = defaults.name;
-    	      this.requires = defaults.requires;
-    	      this.tags = defaults.tags;
-    	      this.targetType = defaults.targetType;
-    	      this.versionName = defaults.versionName;
+            $ = new DocumentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachments(@Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments) {
-            this.attachments = attachments;
+            $.attachments = attachments;
             return this;
         }
-        public Builder attachments(@Nullable List<DocumentAttachmentsSourceArgs> attachments) {
-            this.attachments = Codegen.ofNullable(attachments);
-            return this;
+
+        public Builder attachments(List<DocumentAttachmentsSourceArgs> attachments) {
+            return attachments(Output.of(attachments));
         }
+
         public Builder attachments(DocumentAttachmentsSourceArgs... attachments) {
             return attachments(List.of(attachments));
         }
+
         public Builder content(Output<Object> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(Object content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder documentFormat(@Nullable Output<DocumentFormat> documentFormat) {
-            this.documentFormat = documentFormat;
+            $.documentFormat = documentFormat;
             return this;
         }
-        public Builder documentFormat(@Nullable DocumentFormat documentFormat) {
-            this.documentFormat = Codegen.ofNullable(documentFormat);
-            return this;
+
+        public Builder documentFormat(DocumentFormat documentFormat) {
+            return documentFormat(Output.of(documentFormat));
         }
+
         public Builder documentType(@Nullable Output<DocumentType> documentType) {
-            this.documentType = documentType;
+            $.documentType = documentType;
             return this;
         }
-        public Builder documentType(@Nullable DocumentType documentType) {
-            this.documentType = Codegen.ofNullable(documentType);
-            return this;
+
+        public Builder documentType(DocumentType documentType) {
+            return documentType(Output.of(documentType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder requires(@Nullable Output<List<DocumentRequiresArgs>> requires) {
-            this.requires = requires;
+            $.requires = requires;
             return this;
         }
-        public Builder requires(@Nullable List<DocumentRequiresArgs> requires) {
-            this.requires = Codegen.ofNullable(requires);
-            return this;
+
+        public Builder requires(List<DocumentRequiresArgs> requires) {
+            return requires(Output.of(requires));
         }
+
         public Builder requires(DocumentRequiresArgs... requires) {
             return requires(List.of(requires));
         }
+
         public Builder tags(@Nullable Output<List<DocumentTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DocumentTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DocumentTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DocumentTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder targetType(@Nullable Output<String> targetType) {
-            this.targetType = targetType;
+            $.targetType = targetType;
             return this;
         }
-        public Builder targetType(@Nullable String targetType) {
-            this.targetType = Codegen.ofNullable(targetType);
-            return this;
+
+        public Builder targetType(String targetType) {
+            return targetType(Output.of(targetType));
         }
+
         public Builder versionName(@Nullable Output<String> versionName) {
-            this.versionName = versionName;
+            $.versionName = versionName;
             return this;
         }
-        public Builder versionName(@Nullable String versionName) {
-            this.versionName = Codegen.ofNullable(versionName);
-            return this;
-        }        public DocumentArgs build() {
-            return new DocumentArgs(attachments, content, documentFormat, documentType, name, requires, tags, targetType, versionName);
+
+        public Builder versionName(String versionName) {
+            return versionName(Output.of(versionName));
+        }
+
+        public DocumentArgs build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            return $;
         }
     }
+
 }

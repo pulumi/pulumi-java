@@ -8,11 +8,11 @@ import com.pulumi.azurenative.desktopvirtualization.enums.RemoteApplicationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationGroupName", required=true)
-      private final Output<String> applicationGroupName;
+    private Output<String> applicationGroupName;
 
     public Output<String> applicationGroupName() {
         return this.applicationGroupName;
@@ -36,10 +36,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationName")
-      private final @Nullable Output<String> applicationName;
+    private @Nullable Output<String> applicationName;
 
-    public Output<String> applicationName() {
-        return this.applicationName == null ? Codegen.empty() : this.applicationName;
+    public Optional<Output<String>> applicationName() {
+        return Optional.ofNullable(this.applicationName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationType")
-      private final @Nullable Output<Either<String,RemoteApplicationType>> applicationType;
+    private @Nullable Output<Either<String,RemoteApplicationType>> applicationType;
 
-    public Output<Either<String,RemoteApplicationType>> applicationType() {
-        return this.applicationType == null ? Codegen.empty() : this.applicationType;
+    public Optional<Output<Either<String,RemoteApplicationType>>> applicationType() {
+        return Optional.ofNullable(this.applicationType);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="commandLineArguments")
-      private final @Nullable Output<String> commandLineArguments;
+    private @Nullable Output<String> commandLineArguments;
 
-    public Output<String> commandLineArguments() {
-        return this.commandLineArguments == null ? Codegen.empty() : this.commandLineArguments;
+    public Optional<Output<String>> commandLineArguments() {
+        return Optional.ofNullable(this.commandLineArguments);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="commandLineSetting", required=true)
-      private final Output<Either<String,CommandLineSetting>> commandLineSetting;
+    private Output<Either<String,CommandLineSetting>> commandLineSetting;
 
     public Output<Either<String,CommandLineSetting>> commandLineSetting() {
         return this.commandLineSetting;
@@ -80,10 +80,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filePath")
-      private final @Nullable Output<String> filePath;
+    private @Nullable Output<String> filePath;
 
-    public Output<String> filePath() {
-        return this.filePath == null ? Codegen.empty() : this.filePath;
+    public Optional<Output<String>> filePath() {
+        return Optional.ofNullable(this.filePath);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iconIndex")
-      private final @Nullable Output<Integer> iconIndex;
+    private @Nullable Output<Integer> iconIndex;
 
-    public Output<Integer> iconIndex() {
-        return this.iconIndex == null ? Codegen.empty() : this.iconIndex;
+    public Optional<Output<Integer>> iconIndex() {
+        return Optional.ofNullable(this.iconIndex);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iconPath")
-      private final @Nullable Output<String> iconPath;
+    private @Nullable Output<String> iconPath;
 
-    public Output<String> iconPath() {
-        return this.iconPath == null ? Codegen.empty() : this.iconPath;
+    public Optional<Output<String>> iconPath() {
+        return Optional.ofNullable(this.iconPath);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="msixPackageApplicationId")
-      private final @Nullable Output<String> msixPackageApplicationId;
+    private @Nullable Output<String> msixPackageApplicationId;
 
-    public Output<String> msixPackageApplicationId() {
-        return this.msixPackageApplicationId == null ? Codegen.empty() : this.msixPackageApplicationId;
+    public Optional<Output<String>> msixPackageApplicationId() {
+        return Optional.ofNullable(this.msixPackageApplicationId);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="msixPackageFamilyName")
-      private final @Nullable Output<String> msixPackageFamilyName;
+    private @Nullable Output<String> msixPackageFamilyName;
 
-    public Output<String> msixPackageFamilyName() {
-        return this.msixPackageFamilyName == null ? Codegen.empty() : this.msixPackageFamilyName;
+    public Optional<Output<String>> msixPackageFamilyName() {
+        return Optional.ofNullable(this.msixPackageFamilyName);
     }
 
     /**
@@ -157,7 +157,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -168,219 +168,181 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="showInPortal")
-      private final @Nullable Output<Boolean> showInPortal;
+    private @Nullable Output<Boolean> showInPortal;
 
-    public Output<Boolean> showInPortal() {
-        return this.showInPortal == null ? Codegen.empty() : this.showInPortal;
+    public Optional<Output<Boolean>> showInPortal() {
+        return Optional.ofNullable(this.showInPortal);
     }
 
-    public ApplicationArgs(
-        Output<String> applicationGroupName,
-        @Nullable Output<String> applicationName,
-        @Nullable Output<Either<String,RemoteApplicationType>> applicationType,
-        @Nullable Output<String> commandLineArguments,
-        Output<Either<String,CommandLineSetting>> commandLineSetting,
-        @Nullable Output<String> description,
-        @Nullable Output<String> filePath,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<Integer> iconIndex,
-        @Nullable Output<String> iconPath,
-        @Nullable Output<String> msixPackageApplicationId,
-        @Nullable Output<String> msixPackageFamilyName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Boolean> showInPortal) {
-        this.applicationGroupName = Objects.requireNonNull(applicationGroupName, "expected parameter 'applicationGroupName' to be non-null");
-        this.applicationName = applicationName;
-        this.applicationType = applicationType;
-        this.commandLineArguments = commandLineArguments;
-        this.commandLineSetting = Objects.requireNonNull(commandLineSetting, "expected parameter 'commandLineSetting' to be non-null");
-        this.description = description;
-        this.filePath = filePath;
-        this.friendlyName = friendlyName;
-        this.iconIndex = iconIndex;
-        this.iconPath = iconPath;
-        this.msixPackageApplicationId = msixPackageApplicationId;
-        this.msixPackageFamilyName = msixPackageFamilyName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.showInPortal = showInPortal;
-    }
+    private ApplicationArgs() {}
 
-    private ApplicationArgs() {
-        this.applicationGroupName = Codegen.empty();
-        this.applicationName = Codegen.empty();
-        this.applicationType = Codegen.empty();
-        this.commandLineArguments = Codegen.empty();
-        this.commandLineSetting = Codegen.empty();
-        this.description = Codegen.empty();
-        this.filePath = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.iconIndex = Codegen.empty();
-        this.iconPath = Codegen.empty();
-        this.msixPackageApplicationId = Codegen.empty();
-        this.msixPackageFamilyName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.showInPortal = Codegen.empty();
+    private ApplicationArgs(ApplicationArgs $) {
+        this.applicationGroupName = $.applicationGroupName;
+        this.applicationName = $.applicationName;
+        this.applicationType = $.applicationType;
+        this.commandLineArguments = $.commandLineArguments;
+        this.commandLineSetting = $.commandLineSetting;
+        this.description = $.description;
+        this.filePath = $.filePath;
+        this.friendlyName = $.friendlyName;
+        this.iconIndex = $.iconIndex;
+        this.iconPath = $.iconPath;
+        this.msixPackageApplicationId = $.msixPackageApplicationId;
+        this.msixPackageFamilyName = $.msixPackageFamilyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.showInPortal = $.showInPortal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationGroupName;
-        private @Nullable Output<String> applicationName;
-        private @Nullable Output<Either<String,RemoteApplicationType>> applicationType;
-        private @Nullable Output<String> commandLineArguments;
-        private Output<Either<String,CommandLineSetting>> commandLineSetting;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> filePath;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<Integer> iconIndex;
-        private @Nullable Output<String> iconPath;
-        private @Nullable Output<String> msixPackageApplicationId;
-        private @Nullable Output<String> msixPackageFamilyName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Boolean> showInPortal;
+        private ApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationArgs();
         }
 
         public Builder(ApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationGroupName = defaults.applicationGroupName;
-    	      this.applicationName = defaults.applicationName;
-    	      this.applicationType = defaults.applicationType;
-    	      this.commandLineArguments = defaults.commandLineArguments;
-    	      this.commandLineSetting = defaults.commandLineSetting;
-    	      this.description = defaults.description;
-    	      this.filePath = defaults.filePath;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.iconIndex = defaults.iconIndex;
-    	      this.iconPath = defaults.iconPath;
-    	      this.msixPackageApplicationId = defaults.msixPackageApplicationId;
-    	      this.msixPackageFamilyName = defaults.msixPackageFamilyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.showInPortal = defaults.showInPortal;
+            $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationGroupName(Output<String> applicationGroupName) {
-            this.applicationGroupName = Objects.requireNonNull(applicationGroupName);
+            $.applicationGroupName = applicationGroupName;
             return this;
         }
+
         public Builder applicationGroupName(String applicationGroupName) {
-            this.applicationGroupName = Output.of(Objects.requireNonNull(applicationGroupName));
-            return this;
+            return applicationGroupName(Output.of(applicationGroupName));
         }
+
         public Builder applicationName(@Nullable Output<String> applicationName) {
-            this.applicationName = applicationName;
+            $.applicationName = applicationName;
             return this;
         }
-        public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Codegen.ofNullable(applicationName);
-            return this;
+
+        public Builder applicationName(String applicationName) {
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder applicationType(@Nullable Output<Either<String,RemoteApplicationType>> applicationType) {
-            this.applicationType = applicationType;
+            $.applicationType = applicationType;
             return this;
         }
-        public Builder applicationType(@Nullable Either<String,RemoteApplicationType> applicationType) {
-            this.applicationType = Codegen.ofNullable(applicationType);
-            return this;
+
+        public Builder applicationType(Either<String,RemoteApplicationType> applicationType) {
+            return applicationType(Output.of(applicationType));
         }
+
         public Builder commandLineArguments(@Nullable Output<String> commandLineArguments) {
-            this.commandLineArguments = commandLineArguments;
+            $.commandLineArguments = commandLineArguments;
             return this;
         }
-        public Builder commandLineArguments(@Nullable String commandLineArguments) {
-            this.commandLineArguments = Codegen.ofNullable(commandLineArguments);
-            return this;
+
+        public Builder commandLineArguments(String commandLineArguments) {
+            return commandLineArguments(Output.of(commandLineArguments));
         }
+
         public Builder commandLineSetting(Output<Either<String,CommandLineSetting>> commandLineSetting) {
-            this.commandLineSetting = Objects.requireNonNull(commandLineSetting);
+            $.commandLineSetting = commandLineSetting;
             return this;
         }
+
         public Builder commandLineSetting(Either<String,CommandLineSetting> commandLineSetting) {
-            this.commandLineSetting = Output.of(Objects.requireNonNull(commandLineSetting));
-            return this;
+            return commandLineSetting(Output.of(commandLineSetting));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder filePath(@Nullable Output<String> filePath) {
-            this.filePath = filePath;
+            $.filePath = filePath;
             return this;
         }
-        public Builder filePath(@Nullable String filePath) {
-            this.filePath = Codegen.ofNullable(filePath);
-            return this;
+
+        public Builder filePath(String filePath) {
+            return filePath(Output.of(filePath));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder iconIndex(@Nullable Output<Integer> iconIndex) {
-            this.iconIndex = iconIndex;
+            $.iconIndex = iconIndex;
             return this;
         }
-        public Builder iconIndex(@Nullable Integer iconIndex) {
-            this.iconIndex = Codegen.ofNullable(iconIndex);
-            return this;
+
+        public Builder iconIndex(Integer iconIndex) {
+            return iconIndex(Output.of(iconIndex));
         }
+
         public Builder iconPath(@Nullable Output<String> iconPath) {
-            this.iconPath = iconPath;
+            $.iconPath = iconPath;
             return this;
         }
-        public Builder iconPath(@Nullable String iconPath) {
-            this.iconPath = Codegen.ofNullable(iconPath);
-            return this;
+
+        public Builder iconPath(String iconPath) {
+            return iconPath(Output.of(iconPath));
         }
+
         public Builder msixPackageApplicationId(@Nullable Output<String> msixPackageApplicationId) {
-            this.msixPackageApplicationId = msixPackageApplicationId;
+            $.msixPackageApplicationId = msixPackageApplicationId;
             return this;
         }
-        public Builder msixPackageApplicationId(@Nullable String msixPackageApplicationId) {
-            this.msixPackageApplicationId = Codegen.ofNullable(msixPackageApplicationId);
-            return this;
+
+        public Builder msixPackageApplicationId(String msixPackageApplicationId) {
+            return msixPackageApplicationId(Output.of(msixPackageApplicationId));
         }
+
         public Builder msixPackageFamilyName(@Nullable Output<String> msixPackageFamilyName) {
-            this.msixPackageFamilyName = msixPackageFamilyName;
+            $.msixPackageFamilyName = msixPackageFamilyName;
             return this;
         }
-        public Builder msixPackageFamilyName(@Nullable String msixPackageFamilyName) {
-            this.msixPackageFamilyName = Codegen.ofNullable(msixPackageFamilyName);
-            return this;
+
+        public Builder msixPackageFamilyName(String msixPackageFamilyName) {
+            return msixPackageFamilyName(Output.of(msixPackageFamilyName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder showInPortal(@Nullable Output<Boolean> showInPortal) {
-            this.showInPortal = showInPortal;
+            $.showInPortal = showInPortal;
             return this;
         }
-        public Builder showInPortal(@Nullable Boolean showInPortal) {
-            this.showInPortal = Codegen.ofNullable(showInPortal);
-            return this;
-        }        public ApplicationArgs build() {
-            return new ApplicationArgs(applicationGroupName, applicationName, applicationType, commandLineArguments, commandLineSetting, description, filePath, friendlyName, iconIndex, iconPath, msixPackageApplicationId, msixPackageFamilyName, resourceGroupName, showInPortal);
+
+        public Builder showInPortal(Boolean showInPortal) {
+            return showInPortal(Output.of(showInPortal));
+        }
+
+        public ApplicationArgs build() {
+            $.applicationGroupName = Objects.requireNonNull($.applicationGroupName, "expected parameter 'applicationGroupName' to be non-null");
+            $.commandLineSetting = Objects.requireNonNull($.commandLineSetting, "expected parameter 'commandLineSetting' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

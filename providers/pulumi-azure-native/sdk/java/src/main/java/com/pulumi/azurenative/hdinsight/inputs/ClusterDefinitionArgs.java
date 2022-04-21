@@ -5,11 +5,11 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ClusterDefinitionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="blueprint")
-      private final @Nullable Output<String> blueprint;
+    private @Nullable Output<String> blueprint;
 
-    public Output<String> blueprint() {
-        return this.blueprint == null ? Codegen.empty() : this.blueprint;
+    public Optional<Output<String>> blueprint() {
+        return Optional.ofNullable(this.blueprint);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ClusterDefinitionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="componentVersion")
-      private final @Nullable Output<Map<String,String>> componentVersion;
+    private @Nullable Output<Map<String,String>> componentVersion;
 
-    public Output<Map<String,String>> componentVersion() {
-        return this.componentVersion == null ? Codegen.empty() : this.componentVersion;
+    public Optional<Output<Map<String,String>>> componentVersion() {
+        return Optional.ofNullable(this.componentVersion);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ClusterDefinitionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="configurations")
-      private final @Nullable Output<Object> configurations;
+    private @Nullable Output<Object> configurations;
 
-    public Output<Object> configurations() {
-        return this.configurations == null ? Codegen.empty() : this.configurations;
+    public Optional<Output<Object>> configurations() {
+        return Optional.ofNullable(this.configurations);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class ClusterDefinitionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public ClusterDefinitionArgs(
-        @Nullable Output<String> blueprint,
-        @Nullable Output<Map<String,String>> componentVersion,
-        @Nullable Output<Object> configurations,
-        @Nullable Output<String> kind) {
-        this.blueprint = blueprint;
-        this.componentVersion = componentVersion;
-        this.configurations = configurations;
-        this.kind = kind;
-    }
+    private ClusterDefinitionArgs() {}
 
-    private ClusterDefinitionArgs() {
-        this.blueprint = Codegen.empty();
-        this.componentVersion = Codegen.empty();
-        this.configurations = Codegen.empty();
-        this.kind = Codegen.empty();
+    private ClusterDefinitionArgs(ClusterDefinitionArgs $) {
+        this.blueprint = $.blueprint;
+        this.componentVersion = $.componentVersion;
+        this.configurations = $.configurations;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> blueprint;
-        private @Nullable Output<Map<String,String>> componentVersion;
-        private @Nullable Output<Object> configurations;
-        private @Nullable Output<String> kind;
+        private ClusterDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterDefinitionArgs();
         }
 
         public Builder(ClusterDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blueprint = defaults.blueprint;
-    	      this.componentVersion = defaults.componentVersion;
-    	      this.configurations = defaults.configurations;
-    	      this.kind = defaults.kind;
+            $ = new ClusterDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blueprint(@Nullable Output<String> blueprint) {
-            this.blueprint = blueprint;
+            $.blueprint = blueprint;
             return this;
         }
-        public Builder blueprint(@Nullable String blueprint) {
-            this.blueprint = Codegen.ofNullable(blueprint);
-            return this;
+
+        public Builder blueprint(String blueprint) {
+            return blueprint(Output.of(blueprint));
         }
+
         public Builder componentVersion(@Nullable Output<Map<String,String>> componentVersion) {
-            this.componentVersion = componentVersion;
+            $.componentVersion = componentVersion;
             return this;
         }
-        public Builder componentVersion(@Nullable Map<String,String> componentVersion) {
-            this.componentVersion = Codegen.ofNullable(componentVersion);
-            return this;
+
+        public Builder componentVersion(Map<String,String> componentVersion) {
+            return componentVersion(Output.of(componentVersion));
         }
+
         public Builder configurations(@Nullable Output<Object> configurations) {
-            this.configurations = configurations;
+            $.configurations = configurations;
             return this;
         }
-        public Builder configurations(@Nullable Object configurations) {
-            this.configurations = Codegen.ofNullable(configurations);
-            return this;
+
+        public Builder configurations(Object configurations) {
+            return configurations(Output.of(configurations));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public ClusterDefinitionArgs build() {
-            return new ClusterDefinitionArgs(blueprint, componentVersion, configurations, kind);
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
+        }
+
+        public ClusterDefinitionArgs build() {
+            return $;
         }
     }
+
 }

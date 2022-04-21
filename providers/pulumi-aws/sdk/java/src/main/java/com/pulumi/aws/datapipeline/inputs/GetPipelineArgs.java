@@ -20,7 +20,7 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pipelineId", required=true)
-      private final String pipelineId;
+    private String pipelineId;
 
     public String pipelineId() {
         return this.pipelineId;
@@ -31,55 +31,51 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetPipelineArgs(
-        String pipelineId,
-        @Nullable Map<String,String> tags) {
-        this.pipelineId = Objects.requireNonNull(pipelineId, "expected parameter 'pipelineId' to be non-null");
-        this.tags = tags;
-    }
+    private GetPipelineArgs() {}
 
-    private GetPipelineArgs() {
-        this.pipelineId = null;
-        this.tags = Map.of();
+    private GetPipelineArgs(GetPipelineArgs $) {
+        this.pipelineId = $.pipelineId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pipelineId;
-        private @Nullable Map<String,String> tags;
+        private GetPipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineArgs();
         }
 
         public Builder(GetPipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pipelineId = defaults.pipelineId;
-    	      this.tags = defaults.tags;
+            $ = new GetPipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pipelineId(String pipelineId) {
-            this.pipelineId = Objects.requireNonNull(pipelineId);
+            $.pipelineId = pipelineId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetPipelineArgs build() {
-            return new GetPipelineArgs(pipelineId, tags);
+        }
+
+        public GetPipelineArgs build() {
+            $.pipelineId = Objects.requireNonNull($.pipelineId, "expected parameter 'pipelineId' to be non-null");
+            return $;
         }
     }
+
 }

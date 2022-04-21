@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="subnetResourceId")
-      private final @Nullable Output<String> subnetResourceId;
+    private @Nullable Output<String> subnetResourceId;
 
-    public Output<String> subnetResourceId() {
-        return this.subnetResourceId == null ? Codegen.empty() : this.subnetResourceId;
+    public Optional<Output<String>> subnetResourceId() {
+        return Optional.ofNullable(this.subnetResourceId);
     }
 
-    public VirtualNetworkConfigurationArgs(@Nullable Output<String> subnetResourceId) {
-        this.subnetResourceId = subnetResourceId;
-    }
+    private VirtualNetworkConfigurationArgs() {}
 
-    private VirtualNetworkConfigurationArgs() {
-        this.subnetResourceId = Codegen.empty();
+    private VirtualNetworkConfigurationArgs(VirtualNetworkConfigurationArgs $) {
+        this.subnetResourceId = $.subnetResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> subnetResourceId;
+        private VirtualNetworkConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkConfigurationArgs();
         }
 
         public Builder(VirtualNetworkConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetResourceId = defaults.subnetResourceId;
+            $ = new VirtualNetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetResourceId(@Nullable Output<String> subnetResourceId) {
-            this.subnetResourceId = subnetResourceId;
+            $.subnetResourceId = subnetResourceId;
             return this;
         }
-        public Builder subnetResourceId(@Nullable String subnetResourceId) {
-            this.subnetResourceId = Codegen.ofNullable(subnetResourceId);
-            return this;
-        }        public VirtualNetworkConfigurationArgs build() {
-            return new VirtualNetworkConfigurationArgs(subnetResourceId);
+
+        public Builder subnetResourceId(String subnetResourceId) {
+            return subnetResourceId(Output.of(subnetResourceId));
+        }
+
+        public VirtualNetworkConfigurationArgs build() {
+            return $;
         }
     }
+
 }

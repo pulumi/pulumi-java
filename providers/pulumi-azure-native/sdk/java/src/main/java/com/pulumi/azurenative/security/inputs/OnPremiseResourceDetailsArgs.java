@@ -23,7 +23,7 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="machineName", required=true)
-      private final Output<String> machineName;
+    private Output<String> machineName;
 
     public Output<String> machineName() {
         return this.machineName;
@@ -35,7 +35,7 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
@@ -46,7 +46,7 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sourceComputerId", required=true)
-      private final Output<String> sourceComputerId;
+    private Output<String> sourceComputerId;
 
     public Output<String> sourceComputerId() {
         return this.sourceComputerId;
@@ -57,7 +57,7 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="vmuuid", required=true)
-      private final Output<String> vmuuid;
+    private Output<String> vmuuid;
 
     public Output<String> vmuuid() {
         return this.vmuuid;
@@ -68,102 +68,93 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="workspaceId", required=true)
-      private final Output<String> workspaceId;
+    private Output<String> workspaceId;
 
     public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
-    public OnPremiseResourceDetailsArgs(
-        Output<String> machineName,
-        Output<String> source,
-        Output<String> sourceComputerId,
-        Output<String> vmuuid,
-        Output<String> workspaceId) {
-        this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
-        this.source = Codegen.stringProp("source").output().arg(source).require();
-        this.sourceComputerId = Objects.requireNonNull(sourceComputerId, "expected parameter 'sourceComputerId' to be non-null");
-        this.vmuuid = Objects.requireNonNull(vmuuid, "expected parameter 'vmuuid' to be non-null");
-        this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
-    }
+    private OnPremiseResourceDetailsArgs() {}
 
-    private OnPremiseResourceDetailsArgs() {
-        this.machineName = Codegen.empty();
-        this.source = Codegen.empty();
-        this.sourceComputerId = Codegen.empty();
-        this.vmuuid = Codegen.empty();
-        this.workspaceId = Codegen.empty();
+    private OnPremiseResourceDetailsArgs(OnPremiseResourceDetailsArgs $) {
+        this.machineName = $.machineName;
+        this.source = $.source;
+        this.sourceComputerId = $.sourceComputerId;
+        this.vmuuid = $.vmuuid;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnPremiseResourceDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> machineName;
-        private Output<String> source;
-        private Output<String> sourceComputerId;
-        private Output<String> vmuuid;
-        private Output<String> workspaceId;
+        private OnPremiseResourceDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnPremiseResourceDetailsArgs();
         }
 
         public Builder(OnPremiseResourceDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.machineName = defaults.machineName;
-    	      this.source = defaults.source;
-    	      this.sourceComputerId = defaults.sourceComputerId;
-    	      this.vmuuid = defaults.vmuuid;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new OnPremiseResourceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder machineName(Output<String> machineName) {
-            this.machineName = Objects.requireNonNull(machineName);
+            $.machineName = machineName;
             return this;
         }
+
         public Builder machineName(String machineName) {
-            this.machineName = Output.of(Objects.requireNonNull(machineName));
-            return this;
+            return machineName(Output.of(machineName));
         }
+
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder sourceComputerId(Output<String> sourceComputerId) {
-            this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
+            $.sourceComputerId = sourceComputerId;
             return this;
         }
+
         public Builder sourceComputerId(String sourceComputerId) {
-            this.sourceComputerId = Output.of(Objects.requireNonNull(sourceComputerId));
-            return this;
+            return sourceComputerId(Output.of(sourceComputerId));
         }
+
         public Builder vmuuid(Output<String> vmuuid) {
-            this.vmuuid = Objects.requireNonNull(vmuuid);
+            $.vmuuid = vmuuid;
             return this;
         }
+
         public Builder vmuuid(String vmuuid) {
-            this.vmuuid = Output.of(Objects.requireNonNull(vmuuid));
-            return this;
+            return vmuuid(Output.of(vmuuid));
         }
+
         public Builder workspaceId(Output<String> workspaceId) {
-            this.workspaceId = Objects.requireNonNull(workspaceId);
+            $.workspaceId = workspaceId;
             return this;
         }
+
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
-            return this;
-        }        public OnPremiseResourceDetailsArgs build() {
-            return new OnPremiseResourceDetailsArgs(machineName, source, sourceComputerId, vmuuid, workspaceId);
+            return workspaceId(Output.of(workspaceId));
+        }
+
+        public OnPremiseResourceDetailsArgs build() {
+            $.machineName = Objects.requireNonNull($.machineName, "expected parameter 'machineName' to be non-null");
+            $.source = Codegen.stringProp("source").output().arg($.source).require();
+            $.sourceComputerId = Objects.requireNonNull($.sourceComputerId, "expected parameter 'sourceComputerId' to be non-null");
+            $.vmuuid = Objects.requireNonNull($.vmuuid, "expected parameter 'vmuuid' to be non-null");
+            $.workspaceId = Objects.requireNonNull($.workspaceId, "expected parameter 'workspaceId' to be non-null");
+            return $;
         }
     }
+
 }

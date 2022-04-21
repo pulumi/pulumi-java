@@ -6,10 +6,10 @@ package com.pulumi.awsnative.apprunner.inputs;
 import com.pulumi.awsnative.apprunner.inputs.ServiceKeyValuePairArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,17 +26,17 @@ public final class ServiceImageConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<String> port;
+    private @Nullable Output<String> port;
 
-    public Output<String> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<String>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="runtimeEnvironmentVariables")
-      private final @Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
+    private @Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
 
-    public Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables() {
-        return this.runtimeEnvironmentVariables == null ? Codegen.empty() : this.runtimeEnvironmentVariables;
+    public Optional<Output<List<ServiceKeyValuePairArgs>>> runtimeEnvironmentVariables() {
+        return Optional.ofNullable(this.runtimeEnvironmentVariables);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class ServiceImageConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="startCommand")
-      private final @Nullable Output<String> startCommand;
+    private @Nullable Output<String> startCommand;
 
-    public Output<String> startCommand() {
-        return this.startCommand == null ? Codegen.empty() : this.startCommand;
+    public Optional<Output<String>> startCommand() {
+        return Optional.ofNullable(this.startCommand);
     }
 
-    public ServiceImageConfigurationArgs(
-        @Nullable Output<String> port,
-        @Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables,
-        @Nullable Output<String> startCommand) {
-        this.port = port;
-        this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
-        this.startCommand = startCommand;
-    }
+    private ServiceImageConfigurationArgs() {}
 
-    private ServiceImageConfigurationArgs() {
-        this.port = Codegen.empty();
-        this.runtimeEnvironmentVariables = Codegen.empty();
-        this.startCommand = Codegen.empty();
+    private ServiceImageConfigurationArgs(ServiceImageConfigurationArgs $) {
+        this.port = $.port;
+        this.runtimeEnvironmentVariables = $.runtimeEnvironmentVariables;
+        this.startCommand = $.startCommand;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceImageConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> port;
-        private @Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
-        private @Nullable Output<String> startCommand;
+        private ServiceImageConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceImageConfigurationArgs();
         }
 
         public Builder(ServiceImageConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.runtimeEnvironmentVariables = defaults.runtimeEnvironmentVariables;
-    	      this.startCommand = defaults.startCommand;
+            $ = new ServiceImageConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Output<String> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable String port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(String port) {
+            return port(Output.of(port));
         }
+
         public Builder runtimeEnvironmentVariables(@Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables) {
-            this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
+            $.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
-        public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePairArgs> runtimeEnvironmentVariables) {
-            this.runtimeEnvironmentVariables = Codegen.ofNullable(runtimeEnvironmentVariables);
-            return this;
+
+        public Builder runtimeEnvironmentVariables(List<ServiceKeyValuePairArgs> runtimeEnvironmentVariables) {
+            return runtimeEnvironmentVariables(Output.of(runtimeEnvironmentVariables));
         }
+
         public Builder runtimeEnvironmentVariables(ServiceKeyValuePairArgs... runtimeEnvironmentVariables) {
             return runtimeEnvironmentVariables(List.of(runtimeEnvironmentVariables));
         }
+
         public Builder startCommand(@Nullable Output<String> startCommand) {
-            this.startCommand = startCommand;
+            $.startCommand = startCommand;
             return this;
         }
-        public Builder startCommand(@Nullable String startCommand) {
-            this.startCommand = Codegen.ofNullable(startCommand);
-            return this;
-        }        public ServiceImageConfigurationArgs build() {
-            return new ServiceImageConfigurationArgs(port, runtimeEnvironmentVariables, startCommand);
+
+        public Builder startCommand(String startCommand) {
+            return startCommand(Output.of(startCommand));
+        }
+
+        public ServiceImageConfigurationArgs build() {
+            return $;
         }
     }
+
 }

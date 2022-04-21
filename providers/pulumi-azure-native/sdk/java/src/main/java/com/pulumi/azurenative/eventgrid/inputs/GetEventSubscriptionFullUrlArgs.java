@@ -17,7 +17,7 @@ public final class GetEventSubscriptionFullUrlArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="eventSubscriptionName", required=true)
-      private final String eventSubscriptionName;
+    private String eventSubscriptionName;
 
     public String eventSubscriptionName() {
         return this.eventSubscriptionName;
@@ -28,55 +28,52 @@ public final class GetEventSubscriptionFullUrlArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetEventSubscriptionFullUrlArgs(
-        String eventSubscriptionName,
-        String scope) {
-        this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName, "expected parameter 'eventSubscriptionName' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetEventSubscriptionFullUrlArgs() {}
 
-    private GetEventSubscriptionFullUrlArgs() {
-        this.eventSubscriptionName = null;
-        this.scope = null;
+    private GetEventSubscriptionFullUrlArgs(GetEventSubscriptionFullUrlArgs $) {
+        this.eventSubscriptionName = $.eventSubscriptionName;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventSubscriptionFullUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventSubscriptionName;
-        private String scope;
+        private GetEventSubscriptionFullUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventSubscriptionFullUrlArgs();
         }
 
         public Builder(GetEventSubscriptionFullUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventSubscriptionName = defaults.eventSubscriptionName;
-    	      this.scope = defaults.scope;
+            $ = new GetEventSubscriptionFullUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventSubscriptionName(String eventSubscriptionName) {
-            this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
+            $.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetEventSubscriptionFullUrlArgs build() {
-            return new GetEventSubscriptionFullUrlArgs(eventSubscriptionName, scope);
+        }
+
+        public GetEventSubscriptionFullUrlArgs build() {
+            $.eventSubscriptionName = Objects.requireNonNull($.eventSubscriptionName, "expected parameter 'eventSubscriptionName' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

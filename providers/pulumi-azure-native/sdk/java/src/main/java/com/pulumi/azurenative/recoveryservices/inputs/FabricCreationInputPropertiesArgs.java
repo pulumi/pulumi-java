@@ -8,9 +8,9 @@ import com.pulumi.azurenative.recoveryservices.inputs.InMageRcmFabricCreationInp
 import com.pulumi.azurenative.recoveryservices.inputs.VMwareV2FabricCreationInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,49 +27,48 @@ public final class FabricCreationInputPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="customDetails")
-      private final @Nullable Output<Object> customDetails;
+    private @Nullable Output<Object> customDetails;
 
-    public Output<Object> customDetails() {
-        return this.customDetails == null ? Codegen.empty() : this.customDetails;
+    public Optional<Output<Object>> customDetails() {
+        return Optional.ofNullable(this.customDetails);
     }
 
-    public FabricCreationInputPropertiesArgs(@Nullable Output<Object> customDetails) {
-        this.customDetails = customDetails;
-    }
+    private FabricCreationInputPropertiesArgs() {}
 
-    private FabricCreationInputPropertiesArgs() {
-        this.customDetails = Codegen.empty();
+    private FabricCreationInputPropertiesArgs(FabricCreationInputPropertiesArgs $) {
+        this.customDetails = $.customDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FabricCreationInputPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> customDetails;
+        private FabricCreationInputPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FabricCreationInputPropertiesArgs();
         }
 
         public Builder(FabricCreationInputPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customDetails = defaults.customDetails;
+            $ = new FabricCreationInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customDetails(@Nullable Output<Object> customDetails) {
-            this.customDetails = customDetails;
+            $.customDetails = customDetails;
             return this;
         }
-        public Builder customDetails(@Nullable Object customDetails) {
-            this.customDetails = Codegen.ofNullable(customDetails);
-            return this;
-        }        public FabricCreationInputPropertiesArgs build() {
-            return new FabricCreationInputPropertiesArgs(customDetails);
+
+        public Builder customDetails(Object customDetails) {
+            return customDetails(Output.of(customDetails));
+        }
+
+        public FabricCreationInputPropertiesArgs build() {
+            return $;
         }
     }
+
 }

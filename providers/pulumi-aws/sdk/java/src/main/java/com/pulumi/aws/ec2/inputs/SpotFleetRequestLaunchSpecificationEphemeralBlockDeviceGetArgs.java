@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArg
     public static final SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs Empty = new SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs();
 
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
     }
 
     @Import(name="virtualName", required=true)
-      private final Output<String> virtualName;
+    private Output<String> virtualName;
 
     public Output<String> virtualName() {
         return this.virtualName;
     }
 
-    public SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs(
-        Output<String> deviceName,
-        Output<String> virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.virtualName = Objects.requireNonNull(virtualName, "expected parameter 'virtualName' to be non-null");
-    }
+    private SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs() {}
 
-    private SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs() {
-        this.deviceName = Codegen.empty();
-        this.virtualName = Codegen.empty();
+    private SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs(SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs $) {
+        this.deviceName = $.deviceName;
+        this.virtualName = $.virtualName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deviceName;
-        private Output<String> virtualName;
+        private SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs();
         }
 
         public Builder(SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.virtualName = defaults.virtualName;
+            $ = new SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder virtualName(Output<String> virtualName) {
-            this.virtualName = Objects.requireNonNull(virtualName);
+            $.virtualName = virtualName;
             return this;
         }
+
         public Builder virtualName(String virtualName) {
-            this.virtualName = Output.of(Objects.requireNonNull(virtualName));
-            return this;
-        }        public SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs build() {
-            return new SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs(deviceName, virtualName);
+            return virtualName(Output.of(virtualName));
+        }
+
+        public SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.virtualName = Objects.requireNonNull($.virtualName, "expected parameter 'virtualName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,62 +19,57 @@ public final class ServiceCatalogProvisionedProductDetailsProperties extends com
     public static final ServiceCatalogProvisionedProductDetailsProperties Empty = new ServiceCatalogProvisionedProductDetailsProperties();
 
     @Import(name="provisionedProductId")
-      private final @Nullable String provisionedProductId;
+    private @Nullable String provisionedProductId;
 
     public Optional<String> provisionedProductId() {
-        return this.provisionedProductId == null ? Optional.empty() : Optional.ofNullable(this.provisionedProductId);
+        return Optional.ofNullable(this.provisionedProductId);
     }
 
     @Import(name="provisionedProductStatusMessage")
-      private final @Nullable String provisionedProductStatusMessage;
+    private @Nullable String provisionedProductStatusMessage;
 
     public Optional<String> provisionedProductStatusMessage() {
-        return this.provisionedProductStatusMessage == null ? Optional.empty() : Optional.ofNullable(this.provisionedProductStatusMessage);
+        return Optional.ofNullable(this.provisionedProductStatusMessage);
     }
 
-    public ServiceCatalogProvisionedProductDetailsProperties(
-        @Nullable String provisionedProductId,
-        @Nullable String provisionedProductStatusMessage) {
-        this.provisionedProductId = provisionedProductId;
-        this.provisionedProductStatusMessage = provisionedProductStatusMessage;
-    }
+    private ServiceCatalogProvisionedProductDetailsProperties() {}
 
-    private ServiceCatalogProvisionedProductDetailsProperties() {
-        this.provisionedProductId = null;
-        this.provisionedProductStatusMessage = null;
+    private ServiceCatalogProvisionedProductDetailsProperties(ServiceCatalogProvisionedProductDetailsProperties $) {
+        this.provisionedProductId = $.provisionedProductId;
+        this.provisionedProductStatusMessage = $.provisionedProductStatusMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCatalogProvisionedProductDetailsProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String provisionedProductId;
-        private @Nullable String provisionedProductStatusMessage;
+        private ServiceCatalogProvisionedProductDetailsProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCatalogProvisionedProductDetailsProperties();
         }
 
         public Builder(ServiceCatalogProvisionedProductDetailsProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisionedProductId = defaults.provisionedProductId;
-    	      this.provisionedProductStatusMessage = defaults.provisionedProductStatusMessage;
+            $ = new ServiceCatalogProvisionedProductDetailsProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder provisionedProductId(@Nullable String provisionedProductId) {
-            this.provisionedProductId = provisionedProductId;
+            $.provisionedProductId = provisionedProductId;
             return this;
         }
+
         public Builder provisionedProductStatusMessage(@Nullable String provisionedProductStatusMessage) {
-            this.provisionedProductStatusMessage = provisionedProductStatusMessage;
+            $.provisionedProductStatusMessage = provisionedProductStatusMessage;
             return this;
-        }        public ServiceCatalogProvisionedProductDetailsProperties build() {
-            return new ServiceCatalogProvisionedProductDetailsProperties(provisionedProductId, provisionedProductStatusMessage);
+        }
+
+        public ServiceCatalogProvisionedProductDetailsProperties build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class DiagnosticsProfileResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="bootDiagnostics")
-      private final @Nullable BootDiagnosticsResponse bootDiagnostics;
+    private @Nullable BootDiagnosticsResponse bootDiagnostics;
 
     public Optional<BootDiagnosticsResponse> bootDiagnostics() {
-        return this.bootDiagnostics == null ? Optional.empty() : Optional.ofNullable(this.bootDiagnostics);
+        return Optional.ofNullable(this.bootDiagnostics);
     }
 
-    public DiagnosticsProfileResponse(@Nullable BootDiagnosticsResponse bootDiagnostics) {
-        this.bootDiagnostics = bootDiagnostics;
-    }
+    private DiagnosticsProfileResponse() {}
 
-    private DiagnosticsProfileResponse() {
-        this.bootDiagnostics = null;
+    private DiagnosticsProfileResponse(DiagnosticsProfileResponse $) {
+        this.bootDiagnostics = $.bootDiagnostics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticsProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BootDiagnosticsResponse bootDiagnostics;
+        private DiagnosticsProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticsProfileResponse();
         }
 
         public Builder(DiagnosticsProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiagnostics = defaults.bootDiagnostics;
+            $ = new DiagnosticsProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiagnostics(@Nullable BootDiagnosticsResponse bootDiagnostics) {
-            this.bootDiagnostics = bootDiagnostics;
+            $.bootDiagnostics = bootDiagnostics;
             return this;
-        }        public DiagnosticsProfileResponse build() {
-            return new DiagnosticsProfileResponse(bootDiagnostics);
+        }
+
+        public DiagnosticsProfileResponse build() {
+            return $;
         }
     }
+
 }

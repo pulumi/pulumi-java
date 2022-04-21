@@ -23,10 +23,10 @@ public final class IotHubLocationDescriptionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class IotHubLocationDescriptionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="role")
-      private final @Nullable String role;
+    private @Nullable String role;
 
     public Optional<String> role() {
-        return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
+        return Optional.ofNullable(this.role);
     }
 
-    public IotHubLocationDescriptionResponse(
-        @Nullable String location,
-        @Nullable String role) {
-        this.location = location;
-        this.role = role;
-    }
+    private IotHubLocationDescriptionResponse() {}
 
-    private IotHubLocationDescriptionResponse() {
-        this.location = null;
-        this.role = null;
+    private IotHubLocationDescriptionResponse(IotHubLocationDescriptionResponse $) {
+        this.location = $.location;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotHubLocationDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String location;
-        private @Nullable String role;
+        private IotHubLocationDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotHubLocationDescriptionResponse();
         }
 
         public Builder(IotHubLocationDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.role = defaults.role;
+            $ = new IotHubLocationDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder role(@Nullable String role) {
-            this.role = role;
+            $.role = role;
             return this;
-        }        public IotHubLocationDescriptionResponse build() {
-            return new IotHubLocationDescriptionResponse(location, role);
+        }
+
+        public IotHubLocationDescriptionResponse build() {
+            return $;
         }
     }
+
 }

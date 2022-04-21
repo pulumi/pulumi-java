@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class SSLCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="certificate", required=true)
-      private final Output<String> certificate;
+    private Output<String> certificate;
 
     public Output<String> certificate() {
         return this.certificate;
@@ -34,10 +34,10 @@ public final class SSLCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SSLCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class SSLCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class SSLCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="privateKey", required=true)
-      private final Output<String> privateKey;
+    private Output<String> privateKey;
 
     public Output<String> privateKey() {
         return this.privateKey;
@@ -87,115 +87,100 @@ public final class SSLCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public SSLCertificateArgs(
-        Output<String> certificate,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        Output<String> privateKey,
-        @Nullable Output<String> project) {
-        this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.privateKey = Objects.requireNonNull(privateKey, "expected parameter 'privateKey' to be non-null");
-        this.project = project;
-    }
+    private SSLCertificateArgs() {}
 
-    private SSLCertificateArgs() {
-        this.certificate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.privateKey = Codegen.empty();
-        this.project = Codegen.empty();
+    private SSLCertificateArgs(SSLCertificateArgs $) {
+        this.certificate = $.certificate;
+        this.description = $.description;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.privateKey = $.privateKey;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSLCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private Output<String> privateKey;
-        private @Nullable Output<String> project;
+        private SSLCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSLCertificateArgs();
         }
 
         public Builder(SSLCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.privateKey = defaults.privateKey;
-    	      this.project = defaults.project;
+            $ = new SSLCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(Output<String> certificate) {
-            this.certificate = Objects.requireNonNull(certificate);
+            $.certificate = certificate;
             return this;
         }
+
         public Builder certificate(String certificate) {
-            this.certificate = Output.of(Objects.requireNonNull(certificate));
-            return this;
+            return certificate(Output.of(certificate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder privateKey(Output<String> privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey);
+            $.privateKey = privateKey;
             return this;
         }
+
         public Builder privateKey(String privateKey) {
-            this.privateKey = Output.of(Objects.requireNonNull(privateKey));
-            return this;
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public SSLCertificateArgs build() {
-            return new SSLCertificateArgs(certificate, description, name, namePrefix, privateKey, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public SSLCertificateArgs build() {
+            $.certificate = Objects.requireNonNull($.certificate, "expected parameter 'certificate' to be non-null");
+            $.privateKey = Objects.requireNonNull($.privateKey, "expected parameter 'privateKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends com.pulumi
      * 
      */
     @Import(name="associationName", required=true)
-      private final String associationName;
+    private String associationName;
 
     public String associationName() {
         return this.associationName;
@@ -28,55 +28,52 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends com.pulumi
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public GetGuestDiagnosticsSettingsAssociationArgs(
-        String associationName,
-        String resourceUri) {
-        this.associationName = Objects.requireNonNull(associationName, "expected parameter 'associationName' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private GetGuestDiagnosticsSettingsAssociationArgs() {}
 
-    private GetGuestDiagnosticsSettingsAssociationArgs() {
-        this.associationName = null;
-        this.resourceUri = null;
+    private GetGuestDiagnosticsSettingsAssociationArgs(GetGuestDiagnosticsSettingsAssociationArgs $) {
+        this.associationName = $.associationName;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGuestDiagnosticsSettingsAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String associationName;
-        private String resourceUri;
+        private GetGuestDiagnosticsSettingsAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGuestDiagnosticsSettingsAssociationArgs();
         }
 
         public Builder(GetGuestDiagnosticsSettingsAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associationName = defaults.associationName;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new GetGuestDiagnosticsSettingsAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associationName(String associationName) {
-            this.associationName = Objects.requireNonNull(associationName);
+            $.associationName = associationName;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public GetGuestDiagnosticsSettingsAssociationArgs build() {
-            return new GetGuestDiagnosticsSettingsAssociationArgs(associationName, resourceUri);
+        }
+
+        public GetGuestDiagnosticsSettingsAssociationArgs build() {
+            $.associationName = Objects.requireNonNull($.associationName, "expected parameter 'associationName' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

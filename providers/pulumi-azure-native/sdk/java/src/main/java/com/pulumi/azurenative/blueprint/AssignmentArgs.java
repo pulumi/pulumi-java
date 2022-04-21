@@ -9,10 +9,10 @@ import com.pulumi.azurenative.blueprint.inputs.ParameterValueArgs;
 import com.pulumi.azurenative.blueprint.inputs.ResourceGroupValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assignmentName")
-      private final @Nullable Output<String> assignmentName;
+    private @Nullable Output<String> assignmentName;
 
-    public Output<String> assignmentName() {
-        return this.assignmentName == null ? Codegen.empty() : this.assignmentName;
+    public Optional<Output<String>> assignmentName() {
+        return Optional.ofNullable(this.assignmentName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blueprintId")
-      private final @Nullable Output<String> blueprintId;
+    private @Nullable Output<String> blueprintId;
 
-    public Output<String> blueprintId() {
-        return this.blueprintId == null ? Codegen.empty() : this.blueprintId;
+    public Optional<Output<String>> blueprintId() {
+        return Optional.ofNullable(this.blueprintId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity", required=true)
-      private final Output<ManagedServiceIdentityArgs> identity;
+    private Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity;
@@ -80,10 +80,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locks")
-      private final @Nullable Output<AssignmentLockSettingsArgs> locks;
+    private @Nullable Output<AssignmentLockSettingsArgs> locks;
 
-    public Output<AssignmentLockSettingsArgs> locks() {
-        return this.locks == null ? Codegen.empty() : this.locks;
+    public Optional<Output<AssignmentLockSettingsArgs>> locks() {
+        return Optional.ofNullable(this.locks);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<Map<String,ParameterValueArgs>> parameters;
+    private Output<Map<String,ParameterValueArgs>> parameters;
 
     public Output<Map<String,ParameterValueArgs>> parameters() {
         return this.parameters;
@@ -113,7 +113,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroups", required=true)
-      private final Output<Map<String,ResourceGroupValueArgs>> resourceGroups;
+    private Output<Map<String,ResourceGroupValueArgs>> resourceGroups;
 
     public Output<Map<String,ResourceGroupValueArgs>> resourceGroups() {
         return this.resourceGroups;
@@ -124,7 +124,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceScope", required=true)
-      private final Output<String> resourceScope;
+    private Output<String> resourceScope;
 
     public Output<String> resourceScope() {
         return this.resourceScope;
@@ -135,180 +135,152 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public AssignmentArgs(
-        @Nullable Output<String> assignmentName,
-        @Nullable Output<String> blueprintId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<ManagedServiceIdentityArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<AssignmentLockSettingsArgs> locks,
-        Output<Map<String,ParameterValueArgs>> parameters,
-        Output<Map<String,ResourceGroupValueArgs>> resourceGroups,
-        Output<String> resourceScope,
-        @Nullable Output<String> scope) {
-        this.assignmentName = assignmentName;
-        this.blueprintId = blueprintId;
-        this.description = description;
-        this.displayName = displayName;
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-        this.location = location;
-        this.locks = locks;
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.resourceGroups = Objects.requireNonNull(resourceGroups, "expected parameter 'resourceGroups' to be non-null");
-        this.resourceScope = Objects.requireNonNull(resourceScope, "expected parameter 'resourceScope' to be non-null");
-        this.scope = scope;
-    }
+    private AssignmentArgs() {}
 
-    private AssignmentArgs() {
-        this.assignmentName = Codegen.empty();
-        this.blueprintId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.locks = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.resourceGroups = Codegen.empty();
-        this.resourceScope = Codegen.empty();
-        this.scope = Codegen.empty();
+    private AssignmentArgs(AssignmentArgs $) {
+        this.assignmentName = $.assignmentName;
+        this.blueprintId = $.blueprintId;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.locks = $.locks;
+        this.parameters = $.parameters;
+        this.resourceGroups = $.resourceGroups;
+        this.resourceScope = $.resourceScope;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assignmentName;
-        private @Nullable Output<String> blueprintId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<ManagedServiceIdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<AssignmentLockSettingsArgs> locks;
-        private Output<Map<String,ParameterValueArgs>> parameters;
-        private Output<Map<String,ResourceGroupValueArgs>> resourceGroups;
-        private Output<String> resourceScope;
-        private @Nullable Output<String> scope;
+        private AssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentArgs();
         }
 
         public Builder(AssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignmentName = defaults.assignmentName;
-    	      this.blueprintId = defaults.blueprintId;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.locks = defaults.locks;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroups = defaults.resourceGroups;
-    	      this.resourceScope = defaults.resourceScope;
-    	      this.scope = defaults.scope;
+            $ = new AssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignmentName(@Nullable Output<String> assignmentName) {
-            this.assignmentName = assignmentName;
+            $.assignmentName = assignmentName;
             return this;
         }
-        public Builder assignmentName(@Nullable String assignmentName) {
-            this.assignmentName = Codegen.ofNullable(assignmentName);
-            return this;
+
+        public Builder assignmentName(String assignmentName) {
+            return assignmentName(Output.of(assignmentName));
         }
+
         public Builder blueprintId(@Nullable Output<String> blueprintId) {
-            this.blueprintId = blueprintId;
+            $.blueprintId = blueprintId;
             return this;
         }
-        public Builder blueprintId(@Nullable String blueprintId) {
-            this.blueprintId = Codegen.ofNullable(blueprintId);
-            return this;
+
+        public Builder blueprintId(String blueprintId) {
+            return blueprintId(Output.of(blueprintId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder identity(Output<ManagedServiceIdentityArgs> identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
         }
+
         public Builder identity(ManagedServiceIdentityArgs identity) {
-            this.identity = Output.of(Objects.requireNonNull(identity));
-            return this;
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder locks(@Nullable Output<AssignmentLockSettingsArgs> locks) {
-            this.locks = locks;
+            $.locks = locks;
             return this;
         }
-        public Builder locks(@Nullable AssignmentLockSettingsArgs locks) {
-            this.locks = Codegen.ofNullable(locks);
-            return this;
+
+        public Builder locks(AssignmentLockSettingsArgs locks) {
+            return locks(Output.of(locks));
         }
+
         public Builder parameters(Output<Map<String,ParameterValueArgs>> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(Map<String,ParameterValueArgs> parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
+            return parameters(Output.of(parameters));
         }
+
         public Builder resourceGroups(Output<Map<String,ResourceGroupValueArgs>> resourceGroups) {
-            this.resourceGroups = Objects.requireNonNull(resourceGroups);
+            $.resourceGroups = resourceGroups;
             return this;
         }
+
         public Builder resourceGroups(Map<String,ResourceGroupValueArgs> resourceGroups) {
-            this.resourceGroups = Output.of(Objects.requireNonNull(resourceGroups));
-            return this;
+            return resourceGroups(Output.of(resourceGroups));
         }
+
         public Builder resourceScope(Output<String> resourceScope) {
-            this.resourceScope = Objects.requireNonNull(resourceScope);
+            $.resourceScope = resourceScope;
             return this;
         }
+
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
-            return this;
+            return resourceScope(Output.of(resourceScope));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
-        }        public AssignmentArgs build() {
-            return new AssignmentArgs(assignmentName, blueprintId, description, displayName, identity, location, locks, parameters, resourceGroups, resourceScope, scope);
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
+        }
+
+        public AssignmentArgs build() {
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.resourceGroups = Objects.requireNonNull($.resourceGroups, "expected parameter 'resourceGroups' to be non-null");
+            $.resourceScope = Objects.requireNonNull($.resourceScope, "expected parameter 'resourceScope' to be non-null");
+            return $;
         }
     }
+
 }

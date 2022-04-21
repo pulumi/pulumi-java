@@ -5,10 +5,10 @@ package com.pulumi.aws.autoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GroupWarmPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxGroupPreparedCapacity")
-      private final @Nullable Output<Integer> maxGroupPreparedCapacity;
+    private @Nullable Output<Integer> maxGroupPreparedCapacity;
 
-    public Output<Integer> maxGroupPreparedCapacity() {
-        return this.maxGroupPreparedCapacity == null ? Codegen.empty() : this.maxGroupPreparedCapacity;
+    public Optional<Output<Integer>> maxGroupPreparedCapacity() {
+        return Optional.ofNullable(this.maxGroupPreparedCapacity);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GroupWarmPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minSize")
-      private final @Nullable Output<Integer> minSize;
+    private @Nullable Output<Integer> minSize;
 
-    public Output<Integer> minSize() {
-        return this.minSize == null ? Codegen.empty() : this.minSize;
+    public Optional<Output<Integer>> minSize() {
+        return Optional.ofNullable(this.minSize);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class GroupWarmPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="poolState")
-      private final @Nullable Output<String> poolState;
+    private @Nullable Output<String> poolState;
 
-    public Output<String> poolState() {
-        return this.poolState == null ? Codegen.empty() : this.poolState;
+    public Optional<Output<String>> poolState() {
+        return Optional.ofNullable(this.poolState);
     }
 
-    public GroupWarmPoolArgs(
-        @Nullable Output<Integer> maxGroupPreparedCapacity,
-        @Nullable Output<Integer> minSize,
-        @Nullable Output<String> poolState) {
-        this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
-        this.minSize = minSize;
-        this.poolState = poolState;
-    }
+    private GroupWarmPoolArgs() {}
 
-    private GroupWarmPoolArgs() {
-        this.maxGroupPreparedCapacity = Codegen.empty();
-        this.minSize = Codegen.empty();
-        this.poolState = Codegen.empty();
+    private GroupWarmPoolArgs(GroupWarmPoolArgs $) {
+        this.maxGroupPreparedCapacity = $.maxGroupPreparedCapacity;
+        this.minSize = $.minSize;
+        this.poolState = $.poolState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupWarmPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxGroupPreparedCapacity;
-        private @Nullable Output<Integer> minSize;
-        private @Nullable Output<String> poolState;
+        private GroupWarmPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupWarmPoolArgs();
         }
 
         public Builder(GroupWarmPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxGroupPreparedCapacity = defaults.maxGroupPreparedCapacity;
-    	      this.minSize = defaults.minSize;
-    	      this.poolState = defaults.poolState;
+            $ = new GroupWarmPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxGroupPreparedCapacity(@Nullable Output<Integer> maxGroupPreparedCapacity) {
-            this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
+            $.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
             return this;
         }
-        public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
-            this.maxGroupPreparedCapacity = Codegen.ofNullable(maxGroupPreparedCapacity);
-            return this;
+
+        public Builder maxGroupPreparedCapacity(Integer maxGroupPreparedCapacity) {
+            return maxGroupPreparedCapacity(Output.of(maxGroupPreparedCapacity));
         }
+
         public Builder minSize(@Nullable Output<Integer> minSize) {
-            this.minSize = minSize;
+            $.minSize = minSize;
             return this;
         }
-        public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Codegen.ofNullable(minSize);
-            return this;
+
+        public Builder minSize(Integer minSize) {
+            return minSize(Output.of(minSize));
         }
+
         public Builder poolState(@Nullable Output<String> poolState) {
-            this.poolState = poolState;
+            $.poolState = poolState;
             return this;
         }
-        public Builder poolState(@Nullable String poolState) {
-            this.poolState = Codegen.ofNullable(poolState);
-            return this;
-        }        public GroupWarmPoolArgs build() {
-            return new GroupWarmPoolArgs(maxGroupPreparedCapacity, minSize, poolState);
+
+        public Builder poolState(String poolState) {
+            return poolState(Output.of(poolState));
+        }
+
+        public GroupWarmPoolArgs build() {
+            return $;
         }
     }
+
 }

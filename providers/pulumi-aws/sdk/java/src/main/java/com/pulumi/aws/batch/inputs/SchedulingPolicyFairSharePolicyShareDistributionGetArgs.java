@@ -5,10 +5,10 @@ package com.pulumi.aws.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionGetArgs exten
      * 
      */
     @Import(name="shareIdentifier", required=true)
-      private final Output<String> shareIdentifier;
+    private Output<String> shareIdentifier;
 
     public Output<String> shareIdentifier() {
         return this.shareIdentifier;
@@ -32,63 +32,59 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionGetArgs exten
      * 
      */
     @Import(name="weightFactor")
-      private final @Nullable Output<Double> weightFactor;
+    private @Nullable Output<Double> weightFactor;
 
-    public Output<Double> weightFactor() {
-        return this.weightFactor == null ? Codegen.empty() : this.weightFactor;
+    public Optional<Output<Double>> weightFactor() {
+        return Optional.ofNullable(this.weightFactor);
     }
 
-    public SchedulingPolicyFairSharePolicyShareDistributionGetArgs(
-        Output<String> shareIdentifier,
-        @Nullable Output<Double> weightFactor) {
-        this.shareIdentifier = Objects.requireNonNull(shareIdentifier, "expected parameter 'shareIdentifier' to be non-null");
-        this.weightFactor = weightFactor;
-    }
+    private SchedulingPolicyFairSharePolicyShareDistributionGetArgs() {}
 
-    private SchedulingPolicyFairSharePolicyShareDistributionGetArgs() {
-        this.shareIdentifier = Codegen.empty();
-        this.weightFactor = Codegen.empty();
+    private SchedulingPolicyFairSharePolicyShareDistributionGetArgs(SchedulingPolicyFairSharePolicyShareDistributionGetArgs $) {
+        this.shareIdentifier = $.shareIdentifier;
+        this.weightFactor = $.weightFactor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingPolicyFairSharePolicyShareDistributionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> shareIdentifier;
-        private @Nullable Output<Double> weightFactor;
+        private SchedulingPolicyFairSharePolicyShareDistributionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingPolicyFairSharePolicyShareDistributionGetArgs();
         }
 
         public Builder(SchedulingPolicyFairSharePolicyShareDistributionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.shareIdentifier = defaults.shareIdentifier;
-    	      this.weightFactor = defaults.weightFactor;
+            $ = new SchedulingPolicyFairSharePolicyShareDistributionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder shareIdentifier(Output<String> shareIdentifier) {
-            this.shareIdentifier = Objects.requireNonNull(shareIdentifier);
+            $.shareIdentifier = shareIdentifier;
             return this;
         }
+
         public Builder shareIdentifier(String shareIdentifier) {
-            this.shareIdentifier = Output.of(Objects.requireNonNull(shareIdentifier));
-            return this;
+            return shareIdentifier(Output.of(shareIdentifier));
         }
+
         public Builder weightFactor(@Nullable Output<Double> weightFactor) {
-            this.weightFactor = weightFactor;
+            $.weightFactor = weightFactor;
             return this;
         }
-        public Builder weightFactor(@Nullable Double weightFactor) {
-            this.weightFactor = Codegen.ofNullable(weightFactor);
-            return this;
-        }        public SchedulingPolicyFairSharePolicyShareDistributionGetArgs build() {
-            return new SchedulingPolicyFairSharePolicyShareDistributionGetArgs(shareIdentifier, weightFactor);
+
+        public Builder weightFactor(Double weightFactor) {
+            return weightFactor(Output.of(weightFactor));
+        }
+
+        public SchedulingPolicyFairSharePolicyShareDistributionGetArgs build() {
+            $.shareIdentifier = Objects.requireNonNull($.shareIdentifier, "expected parameter 'shareIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

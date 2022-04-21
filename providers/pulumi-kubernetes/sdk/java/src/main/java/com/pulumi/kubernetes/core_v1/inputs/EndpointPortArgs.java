@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EndpointPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appProtocol")
-      private final @Nullable Output<String> appProtocol;
+    private @Nullable Output<String> appProtocol;
 
-    public Output<String> appProtocol() {
-        return this.appProtocol == null ? Codegen.empty() : this.appProtocol;
+    public Optional<Output<String>> appProtocol() {
+        return Optional.ofNullable(this.appProtocol);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EndpointPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class EndpointPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -63,89 +63,79 @@ public final class EndpointPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public EndpointPortArgs(
-        @Nullable Output<String> appProtocol,
-        @Nullable Output<String> name,
-        Output<Integer> port,
-        @Nullable Output<String> protocol) {
-        this.appProtocol = appProtocol;
-        this.name = name;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = protocol;
-    }
+    private EndpointPortArgs() {}
 
-    private EndpointPortArgs() {
-        this.appProtocol = Codegen.empty();
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private EndpointPortArgs(EndpointPortArgs $) {
+        this.appProtocol = $.appProtocol;
+        this.name = $.name;
+        this.port = $.port;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appProtocol;
-        private @Nullable Output<String> name;
-        private Output<Integer> port;
-        private @Nullable Output<String> protocol;
+        private EndpointPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointPortArgs();
         }
 
         public Builder(EndpointPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appProtocol = defaults.appProtocol;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
+            $ = new EndpointPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appProtocol(@Nullable Output<String> appProtocol) {
-            this.appProtocol = appProtocol;
+            $.appProtocol = appProtocol;
             return this;
         }
-        public Builder appProtocol(@Nullable String appProtocol) {
-            this.appProtocol = Codegen.ofNullable(appProtocol);
-            return this;
+
+        public Builder appProtocol(String appProtocol) {
+            return appProtocol(Output.of(appProtocol));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public EndpointPortArgs build() {
-            return new EndpointPortArgs(appProtocol, name, port, protocol);
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public EndpointPortArgs build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

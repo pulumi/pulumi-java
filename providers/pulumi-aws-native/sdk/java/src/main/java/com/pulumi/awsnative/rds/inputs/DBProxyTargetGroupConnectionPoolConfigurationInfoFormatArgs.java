@@ -5,11 +5,11 @@ package com.pulumi.awsnative.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
      * 
      */
     @Import(name="connectionBorrowTimeout")
-      private final @Nullable Output<Integer> connectionBorrowTimeout;
+    private @Nullable Output<Integer> connectionBorrowTimeout;
 
-    public Output<Integer> connectionBorrowTimeout() {
-        return this.connectionBorrowTimeout == null ? Codegen.empty() : this.connectionBorrowTimeout;
+    public Optional<Output<Integer>> connectionBorrowTimeout() {
+        return Optional.ofNullable(this.connectionBorrowTimeout);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
      * 
      */
     @Import(name="initQuery")
-      private final @Nullable Output<String> initQuery;
+    private @Nullable Output<String> initQuery;
 
-    public Output<String> initQuery() {
-        return this.initQuery == null ? Codegen.empty() : this.initQuery;
+    public Optional<Output<String>> initQuery() {
+        return Optional.ofNullable(this.initQuery);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
      * 
      */
     @Import(name="maxConnectionsPercent")
-      private final @Nullable Output<Integer> maxConnectionsPercent;
+    private @Nullable Output<Integer> maxConnectionsPercent;
 
-    public Output<Integer> maxConnectionsPercent() {
-        return this.maxConnectionsPercent == null ? Codegen.empty() : this.maxConnectionsPercent;
+    public Optional<Output<Integer>> maxConnectionsPercent() {
+        return Optional.ofNullable(this.maxConnectionsPercent);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
      * 
      */
     @Import(name="maxIdleConnectionsPercent")
-      private final @Nullable Output<Integer> maxIdleConnectionsPercent;
+    private @Nullable Output<Integer> maxIdleConnectionsPercent;
 
-    public Output<Integer> maxIdleConnectionsPercent() {
-        return this.maxIdleConnectionsPercent == null ? Codegen.empty() : this.maxIdleConnectionsPercent;
+    public Optional<Output<Integer>> maxIdleConnectionsPercent() {
+        return Optional.ofNullable(this.maxIdleConnectionsPercent);
     }
 
     /**
@@ -66,105 +66,92 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
      * 
      */
     @Import(name="sessionPinningFilters")
-      private final @Nullable Output<List<String>> sessionPinningFilters;
+    private @Nullable Output<List<String>> sessionPinningFilters;
 
-    public Output<List<String>> sessionPinningFilters() {
-        return this.sessionPinningFilters == null ? Codegen.empty() : this.sessionPinningFilters;
+    public Optional<Output<List<String>>> sessionPinningFilters() {
+        return Optional.ofNullable(this.sessionPinningFilters);
     }
 
-    public DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs(
-        @Nullable Output<Integer> connectionBorrowTimeout,
-        @Nullable Output<String> initQuery,
-        @Nullable Output<Integer> maxConnectionsPercent,
-        @Nullable Output<Integer> maxIdleConnectionsPercent,
-        @Nullable Output<List<String>> sessionPinningFilters) {
-        this.connectionBorrowTimeout = connectionBorrowTimeout;
-        this.initQuery = initQuery;
-        this.maxConnectionsPercent = maxConnectionsPercent;
-        this.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
-        this.sessionPinningFilters = sessionPinningFilters;
-    }
+    private DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs() {}
 
-    private DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs() {
-        this.connectionBorrowTimeout = Codegen.empty();
-        this.initQuery = Codegen.empty();
-        this.maxConnectionsPercent = Codegen.empty();
-        this.maxIdleConnectionsPercent = Codegen.empty();
-        this.sessionPinningFilters = Codegen.empty();
+    private DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs(DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs $) {
+        this.connectionBorrowTimeout = $.connectionBorrowTimeout;
+        this.initQuery = $.initQuery;
+        this.maxConnectionsPercent = $.maxConnectionsPercent;
+        this.maxIdleConnectionsPercent = $.maxIdleConnectionsPercent;
+        this.sessionPinningFilters = $.sessionPinningFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> connectionBorrowTimeout;
-        private @Nullable Output<String> initQuery;
-        private @Nullable Output<Integer> maxConnectionsPercent;
-        private @Nullable Output<Integer> maxIdleConnectionsPercent;
-        private @Nullable Output<List<String>> sessionPinningFilters;
+        private DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs();
         }
 
         public Builder(DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionBorrowTimeout = defaults.connectionBorrowTimeout;
-    	      this.initQuery = defaults.initQuery;
-    	      this.maxConnectionsPercent = defaults.maxConnectionsPercent;
-    	      this.maxIdleConnectionsPercent = defaults.maxIdleConnectionsPercent;
-    	      this.sessionPinningFilters = defaults.sessionPinningFilters;
+            $ = new DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionBorrowTimeout(@Nullable Output<Integer> connectionBorrowTimeout) {
-            this.connectionBorrowTimeout = connectionBorrowTimeout;
+            $.connectionBorrowTimeout = connectionBorrowTimeout;
             return this;
         }
-        public Builder connectionBorrowTimeout(@Nullable Integer connectionBorrowTimeout) {
-            this.connectionBorrowTimeout = Codegen.ofNullable(connectionBorrowTimeout);
-            return this;
+
+        public Builder connectionBorrowTimeout(Integer connectionBorrowTimeout) {
+            return connectionBorrowTimeout(Output.of(connectionBorrowTimeout));
         }
+
         public Builder initQuery(@Nullable Output<String> initQuery) {
-            this.initQuery = initQuery;
+            $.initQuery = initQuery;
             return this;
         }
-        public Builder initQuery(@Nullable String initQuery) {
-            this.initQuery = Codegen.ofNullable(initQuery);
-            return this;
+
+        public Builder initQuery(String initQuery) {
+            return initQuery(Output.of(initQuery));
         }
+
         public Builder maxConnectionsPercent(@Nullable Output<Integer> maxConnectionsPercent) {
-            this.maxConnectionsPercent = maxConnectionsPercent;
+            $.maxConnectionsPercent = maxConnectionsPercent;
             return this;
         }
-        public Builder maxConnectionsPercent(@Nullable Integer maxConnectionsPercent) {
-            this.maxConnectionsPercent = Codegen.ofNullable(maxConnectionsPercent);
-            return this;
+
+        public Builder maxConnectionsPercent(Integer maxConnectionsPercent) {
+            return maxConnectionsPercent(Output.of(maxConnectionsPercent));
         }
+
         public Builder maxIdleConnectionsPercent(@Nullable Output<Integer> maxIdleConnectionsPercent) {
-            this.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
+            $.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
             return this;
         }
-        public Builder maxIdleConnectionsPercent(@Nullable Integer maxIdleConnectionsPercent) {
-            this.maxIdleConnectionsPercent = Codegen.ofNullable(maxIdleConnectionsPercent);
-            return this;
+
+        public Builder maxIdleConnectionsPercent(Integer maxIdleConnectionsPercent) {
+            return maxIdleConnectionsPercent(Output.of(maxIdleConnectionsPercent));
         }
+
         public Builder sessionPinningFilters(@Nullable Output<List<String>> sessionPinningFilters) {
-            this.sessionPinningFilters = sessionPinningFilters;
+            $.sessionPinningFilters = sessionPinningFilters;
             return this;
         }
-        public Builder sessionPinningFilters(@Nullable List<String> sessionPinningFilters) {
-            this.sessionPinningFilters = Codegen.ofNullable(sessionPinningFilters);
-            return this;
+
+        public Builder sessionPinningFilters(List<String> sessionPinningFilters) {
+            return sessionPinningFilters(Output.of(sessionPinningFilters));
         }
+
         public Builder sessionPinningFilters(String... sessionPinningFilters) {
             return sessionPinningFilters(List.of(sessionPinningFilters));
-        }        public DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs build() {
-            return new DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs(connectionBorrowTimeout, initQuery, maxConnectionsPercent, maxIdleConnectionsPercent, sessionPinningFilters);
+        }
+
+        public DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs build() {
+            return $;
         }
     }
+
 }

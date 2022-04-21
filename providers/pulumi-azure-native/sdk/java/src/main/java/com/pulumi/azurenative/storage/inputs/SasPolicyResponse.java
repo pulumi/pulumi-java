@@ -22,7 +22,7 @@ public final class SasPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expirationAction", required=true)
-      private final String expirationAction;
+    private String expirationAction;
 
     public String expirationAction() {
         return this.expirationAction;
@@ -33,55 +33,52 @@ public final class SasPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sasExpirationPeriod", required=true)
-      private final String sasExpirationPeriod;
+    private String sasExpirationPeriod;
 
     public String sasExpirationPeriod() {
         return this.sasExpirationPeriod;
     }
 
-    public SasPolicyResponse(
-        String expirationAction,
-        String sasExpirationPeriod) {
-        this.expirationAction = Codegen.stringProp("expirationAction").arg(expirationAction).def("Log").require();
-        this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod, "expected parameter 'sasExpirationPeriod' to be non-null");
-    }
+    private SasPolicyResponse() {}
 
-    private SasPolicyResponse() {
-        this.expirationAction = null;
-        this.sasExpirationPeriod = null;
+    private SasPolicyResponse(SasPolicyResponse $) {
+        this.expirationAction = $.expirationAction;
+        this.sasExpirationPeriod = $.sasExpirationPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SasPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expirationAction;
-        private String sasExpirationPeriod;
+        private SasPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SasPolicyResponse();
         }
 
         public Builder(SasPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationAction = defaults.expirationAction;
-    	      this.sasExpirationPeriod = defaults.sasExpirationPeriod;
+            $ = new SasPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationAction(String expirationAction) {
-            this.expirationAction = Objects.requireNonNull(expirationAction);
+            $.expirationAction = expirationAction;
             return this;
         }
+
         public Builder sasExpirationPeriod(String sasExpirationPeriod) {
-            this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod);
+            $.sasExpirationPeriod = sasExpirationPeriod;
             return this;
-        }        public SasPolicyResponse build() {
-            return new SasPolicyResponse(expirationAction, sasExpirationPeriod);
+        }
+
+        public SasPolicyResponse build() {
+            $.expirationAction = Codegen.stringProp("expirationAction").arg($.expirationAction).def("Log").require();
+            $.sasExpirationPeriod = Objects.requireNonNull($.sasExpirationPeriod, "expected parameter 'sasExpirationPeriod' to be non-null");
+            return $;
         }
     }
+
 }

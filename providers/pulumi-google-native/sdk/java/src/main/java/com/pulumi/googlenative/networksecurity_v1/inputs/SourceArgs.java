@@ -5,10 +5,10 @@ package com.pulumi.googlenative.networksecurity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipBlocks")
-      private final @Nullable Output<List<String>> ipBlocks;
+    private @Nullable Output<List<String>> ipBlocks;
 
-    public Output<List<String>> ipBlocks() {
-        return this.ipBlocks == null ? Codegen.empty() : this.ipBlocks;
+    public Optional<Output<List<String>>> ipBlocks() {
+        return Optional.ofNullable(this.ipBlocks);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="principals")
-      private final @Nullable Output<List<String>> principals;
+    private @Nullable Output<List<String>> principals;
 
-    public Output<List<String>> principals() {
-        return this.principals == null ? Codegen.empty() : this.principals;
+    public Optional<Output<List<String>>> principals() {
+        return Optional.ofNullable(this.principals);
     }
 
-    public SourceArgs(
-        @Nullable Output<List<String>> ipBlocks,
-        @Nullable Output<List<String>> principals) {
-        this.ipBlocks = ipBlocks;
-        this.principals = principals;
-    }
+    private SourceArgs() {}
 
-    private SourceArgs() {
-        this.ipBlocks = Codegen.empty();
-        this.principals = Codegen.empty();
+    private SourceArgs(SourceArgs $) {
+        this.ipBlocks = $.ipBlocks;
+        this.principals = $.principals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> ipBlocks;
-        private @Nullable Output<List<String>> principals;
+        private SourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceArgs();
         }
 
         public Builder(SourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipBlocks = defaults.ipBlocks;
-    	      this.principals = defaults.principals;
+            $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipBlocks(@Nullable Output<List<String>> ipBlocks) {
-            this.ipBlocks = ipBlocks;
+            $.ipBlocks = ipBlocks;
             return this;
         }
-        public Builder ipBlocks(@Nullable List<String> ipBlocks) {
-            this.ipBlocks = Codegen.ofNullable(ipBlocks);
-            return this;
+
+        public Builder ipBlocks(List<String> ipBlocks) {
+            return ipBlocks(Output.of(ipBlocks));
         }
+
         public Builder ipBlocks(String... ipBlocks) {
             return ipBlocks(List.of(ipBlocks));
         }
+
         public Builder principals(@Nullable Output<List<String>> principals) {
-            this.principals = principals;
+            $.principals = principals;
             return this;
         }
-        public Builder principals(@Nullable List<String> principals) {
-            this.principals = Codegen.ofNullable(principals);
-            return this;
+
+        public Builder principals(List<String> principals) {
+            return principals(Output.of(principals));
         }
+
         public Builder principals(String... principals) {
             return principals(List.of(principals));
-        }        public SourceArgs build() {
-            return new SourceArgs(ipBlocks, principals);
+        }
+
+        public SourceArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.IDRangeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SupplementalGroupsStrategyOptionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="ranges")
-      private final @Nullable Output<List<IDRangeArgs>> ranges;
+    private @Nullable Output<List<IDRangeArgs>> ranges;
 
-    public Output<List<IDRangeArgs>> ranges() {
-        return this.ranges == null ? Codegen.empty() : this.ranges;
+    public Optional<Output<List<IDRangeArgs>>> ranges() {
+        return Optional.ofNullable(this.ranges);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class SupplementalGroupsStrategyOptionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="rule")
-      private final @Nullable Output<String> rule;
+    private @Nullable Output<String> rule;
 
-    public Output<String> rule() {
-        return this.rule == null ? Codegen.empty() : this.rule;
+    public Optional<Output<String>> rule() {
+        return Optional.ofNullable(this.rule);
     }
 
-    public SupplementalGroupsStrategyOptionsArgs(
-        @Nullable Output<List<IDRangeArgs>> ranges,
-        @Nullable Output<String> rule) {
-        this.ranges = ranges;
-        this.rule = rule;
-    }
+    private SupplementalGroupsStrategyOptionsArgs() {}
 
-    private SupplementalGroupsStrategyOptionsArgs() {
-        this.ranges = Codegen.empty();
-        this.rule = Codegen.empty();
+    private SupplementalGroupsStrategyOptionsArgs(SupplementalGroupsStrategyOptionsArgs $) {
+        this.ranges = $.ranges;
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SupplementalGroupsStrategyOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IDRangeArgs>> ranges;
-        private @Nullable Output<String> rule;
+        private SupplementalGroupsStrategyOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SupplementalGroupsStrategyOptionsArgs();
         }
 
         public Builder(SupplementalGroupsStrategyOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ranges = defaults.ranges;
-    	      this.rule = defaults.rule;
+            $ = new SupplementalGroupsStrategyOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ranges(@Nullable Output<List<IDRangeArgs>> ranges) {
-            this.ranges = ranges;
+            $.ranges = ranges;
             return this;
         }
-        public Builder ranges(@Nullable List<IDRangeArgs> ranges) {
-            this.ranges = Codegen.ofNullable(ranges);
-            return this;
+
+        public Builder ranges(List<IDRangeArgs> ranges) {
+            return ranges(Output.of(ranges));
         }
+
         public Builder ranges(IDRangeArgs... ranges) {
             return ranges(List.of(ranges));
         }
+
         public Builder rule(@Nullable Output<String> rule) {
-            this.rule = rule;
+            $.rule = rule;
             return this;
         }
-        public Builder rule(@Nullable String rule) {
-            this.rule = Codegen.ofNullable(rule);
-            return this;
-        }        public SupplementalGroupsStrategyOptionsArgs build() {
-            return new SupplementalGroupsStrategyOptionsArgs(ranges, rule);
+
+        public Builder rule(String rule) {
+            return rule(Output.of(rule));
+        }
+
+        public SupplementalGroupsStrategyOptionsArgs build() {
+            return $;
         }
     }
+
 }

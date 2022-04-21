@@ -13,78 +13,73 @@ public final class GetSigningProfileRevocationRecord extends com.pulumi.resource
     public static final GetSigningProfileRevocationRecord Empty = new GetSigningProfileRevocationRecord();
 
     @Import(name="revocationEffectiveFrom", required=true)
-      private final String revocationEffectiveFrom;
+    private String revocationEffectiveFrom;
 
     public String revocationEffectiveFrom() {
         return this.revocationEffectiveFrom;
     }
 
     @Import(name="revokedAt", required=true)
-      private final String revokedAt;
+    private String revokedAt;
 
     public String revokedAt() {
         return this.revokedAt;
     }
 
     @Import(name="revokedBy", required=true)
-      private final String revokedBy;
+    private String revokedBy;
 
     public String revokedBy() {
         return this.revokedBy;
     }
 
-    public GetSigningProfileRevocationRecord(
-        String revocationEffectiveFrom,
-        String revokedAt,
-        String revokedBy) {
-        this.revocationEffectiveFrom = Objects.requireNonNull(revocationEffectiveFrom, "expected parameter 'revocationEffectiveFrom' to be non-null");
-        this.revokedAt = Objects.requireNonNull(revokedAt, "expected parameter 'revokedAt' to be non-null");
-        this.revokedBy = Objects.requireNonNull(revokedBy, "expected parameter 'revokedBy' to be non-null");
-    }
+    private GetSigningProfileRevocationRecord() {}
 
-    private GetSigningProfileRevocationRecord() {
-        this.revocationEffectiveFrom = null;
-        this.revokedAt = null;
-        this.revokedBy = null;
+    private GetSigningProfileRevocationRecord(GetSigningProfileRevocationRecord $) {
+        this.revocationEffectiveFrom = $.revocationEffectiveFrom;
+        this.revokedAt = $.revokedAt;
+        this.revokedBy = $.revokedBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSigningProfileRevocationRecord defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String revocationEffectiveFrom;
-        private String revokedAt;
-        private String revokedBy;
+        private GetSigningProfileRevocationRecord $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSigningProfileRevocationRecord();
         }
 
         public Builder(GetSigningProfileRevocationRecord defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revocationEffectiveFrom = defaults.revocationEffectiveFrom;
-    	      this.revokedAt = defaults.revokedAt;
-    	      this.revokedBy = defaults.revokedBy;
+            $ = new GetSigningProfileRevocationRecord(Objects.requireNonNull(defaults));
         }
 
         public Builder revocationEffectiveFrom(String revocationEffectiveFrom) {
-            this.revocationEffectiveFrom = Objects.requireNonNull(revocationEffectiveFrom);
+            $.revocationEffectiveFrom = revocationEffectiveFrom;
             return this;
         }
+
         public Builder revokedAt(String revokedAt) {
-            this.revokedAt = Objects.requireNonNull(revokedAt);
+            $.revokedAt = revokedAt;
             return this;
         }
+
         public Builder revokedBy(String revokedBy) {
-            this.revokedBy = Objects.requireNonNull(revokedBy);
+            $.revokedBy = revokedBy;
             return this;
-        }        public GetSigningProfileRevocationRecord build() {
-            return new GetSigningProfileRevocationRecord(revocationEffectiveFrom, revokedAt, revokedBy);
+        }
+
+        public GetSigningProfileRevocationRecord build() {
+            $.revocationEffectiveFrom = Objects.requireNonNull($.revocationEffectiveFrom, "expected parameter 'revocationEffectiveFrom' to be non-null");
+            $.revokedAt = Objects.requireNonNull($.revokedAt, "expected parameter 'revokedAt' to be non-null");
+            $.revokedBy = Objects.requireNonNull($.revokedBy, "expected parameter 'revokedBy' to be non-null");
+            return $;
         }
     }
+
 }

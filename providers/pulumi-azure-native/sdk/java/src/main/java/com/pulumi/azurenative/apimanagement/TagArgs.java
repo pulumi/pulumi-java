@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -31,7 +31,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -53,89 +53,81 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagId")
-      private final @Nullable Output<String> tagId;
+    private @Nullable Output<String> tagId;
 
-    public Output<String> tagId() {
-        return this.tagId == null ? Codegen.empty() : this.tagId;
+    public Optional<Output<String>> tagId() {
+        return Optional.ofNullable(this.tagId);
     }
 
-    public TagArgs(
-        Output<String> displayName,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<String> tagId) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.tagId = tagId;
-    }
+    private TagArgs() {}
 
-    private TagArgs() {
-        this.displayName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.tagId = Codegen.empty();
+    private TagArgs(TagArgs $) {
+        this.displayName = $.displayName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.tagId = $.tagId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<String> tagId;
+        private TagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagArgs();
         }
 
         public Builder(TagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.tagId = defaults.tagId;
+            $ = new TagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder tagId(@Nullable Output<String> tagId) {
-            this.tagId = tagId;
+            $.tagId = tagId;
             return this;
         }
-        public Builder tagId(@Nullable String tagId) {
-            this.tagId = Codegen.ofNullable(tagId);
-            return this;
-        }        public TagArgs build() {
-            return new TagArgs(displayName, resourceGroupName, serviceName, tagId);
+
+        public Builder tagId(String tagId) {
+            return tagId(Output.of(tagId));
+        }
+
+        public TagArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

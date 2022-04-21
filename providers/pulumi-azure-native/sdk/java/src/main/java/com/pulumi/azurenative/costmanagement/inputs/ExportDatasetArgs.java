@@ -8,9 +8,9 @@ import com.pulumi.azurenative.costmanagement.inputs.ExportDatasetConfigurationAr
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ExportDatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configuration")
-      private final @Nullable Output<ExportDatasetConfigurationArgs> configuration;
+    private @Nullable Output<ExportDatasetConfigurationArgs> configuration;
 
-    public Output<ExportDatasetConfigurationArgs> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<ExportDatasetConfigurationArgs>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class ExportDatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="granularity")
-      private final @Nullable Output<Either<String,GranularityType>> granularity;
+    private @Nullable Output<Either<String,GranularityType>> granularity;
 
-    public Output<Either<String,GranularityType>> granularity() {
-        return this.granularity == null ? Codegen.empty() : this.granularity;
+    public Optional<Output<Either<String,GranularityType>>> granularity() {
+        return Optional.ofNullable(this.granularity);
     }
 
-    public ExportDatasetArgs(
-        @Nullable Output<ExportDatasetConfigurationArgs> configuration,
-        @Nullable Output<Either<String,GranularityType>> granularity) {
-        this.configuration = configuration;
-        this.granularity = granularity;
-    }
+    private ExportDatasetArgs() {}
 
-    private ExportDatasetArgs() {
-        this.configuration = Codegen.empty();
-        this.granularity = Codegen.empty();
+    private ExportDatasetArgs(ExportDatasetArgs $) {
+        this.configuration = $.configuration;
+        this.granularity = $.granularity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportDatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExportDatasetConfigurationArgs> configuration;
-        private @Nullable Output<Either<String,GranularityType>> granularity;
+        private ExportDatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportDatasetArgs();
         }
 
         public Builder(ExportDatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.granularity = defaults.granularity;
+            $ = new ExportDatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable Output<ExportDatasetConfigurationArgs> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable ExportDatasetConfigurationArgs configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(ExportDatasetConfigurationArgs configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder granularity(@Nullable Output<Either<String,GranularityType>> granularity) {
-            this.granularity = granularity;
+            $.granularity = granularity;
             return this;
         }
-        public Builder granularity(@Nullable Either<String,GranularityType> granularity) {
-            this.granularity = Codegen.ofNullable(granularity);
-            return this;
-        }        public ExportDatasetArgs build() {
-            return new ExportDatasetArgs(configuration, granularity);
+
+        public Builder granularity(Either<String,GranularityType> granularity) {
+            return granularity(Output.of(granularity));
+        }
+
+        public ExportDatasetArgs build() {
+            return $;
         }
     }
+
 }

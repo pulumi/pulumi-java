@@ -23,45 +23,44 @@ public final class CnameRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cname")
-      private final @Nullable String cname;
+    private @Nullable String cname;
 
     public Optional<String> cname() {
-        return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);
+        return Optional.ofNullable(this.cname);
     }
 
-    public CnameRecordResponse(@Nullable String cname) {
-        this.cname = cname;
-    }
+    private CnameRecordResponse() {}
 
-    private CnameRecordResponse() {
-        this.cname = null;
+    private CnameRecordResponse(CnameRecordResponse $) {
+        this.cname = $.cname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CnameRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cname;
+        private CnameRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CnameRecordResponse();
         }
 
         public Builder(CnameRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cname = defaults.cname;
+            $ = new CnameRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cname(@Nullable String cname) {
-            this.cname = cname;
+            $.cname = cname;
             return this;
-        }        public CnameRecordResponse build() {
-            return new CnameRecordResponse(cname);
+        }
+
+        public CnameRecordResponse build() {
+            return $;
         }
     }
+
 }

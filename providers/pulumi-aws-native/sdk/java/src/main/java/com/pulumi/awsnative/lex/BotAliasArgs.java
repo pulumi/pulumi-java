@@ -9,10 +9,10 @@ import com.pulumi.awsnative.lex.inputs.BotAliasTagArgs;
 import com.pulumi.awsnative.lex.inputs.SentimentAnalysisSettingsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,17 +21,17 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
     public static final BotAliasArgs Empty = new BotAliasArgs();
 
     @Import(name="botAliasLocaleSettings")
-      private final @Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
+    private @Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
 
-    public Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings() {
-        return this.botAliasLocaleSettings == null ? Codegen.empty() : this.botAliasLocaleSettings;
+    public Optional<Output<List<BotAliasLocaleSettingsItemArgs>>> botAliasLocaleSettings() {
+        return Optional.ofNullable(this.botAliasLocaleSettings);
     }
 
     @Import(name="botAliasName")
-      private final @Nullable Output<String> botAliasName;
+    private @Nullable Output<String> botAliasName;
 
-    public Output<String> botAliasName() {
-        return this.botAliasName == null ? Codegen.empty() : this.botAliasName;
+    public Optional<Output<String>> botAliasName() {
+        return Optional.ofNullable(this.botAliasName);
     }
 
     /**
@@ -39,38 +39,38 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="botAliasTags")
-      private final @Nullable Output<List<BotAliasTagArgs>> botAliasTags;
+    private @Nullable Output<List<BotAliasTagArgs>> botAliasTags;
 
-    public Output<List<BotAliasTagArgs>> botAliasTags() {
-        return this.botAliasTags == null ? Codegen.empty() : this.botAliasTags;
+    public Optional<Output<List<BotAliasTagArgs>>> botAliasTags() {
+        return Optional.ofNullable(this.botAliasTags);
     }
 
     @Import(name="botId", required=true)
-      private final Output<String> botId;
+    private Output<String> botId;
 
     public Output<String> botId() {
         return this.botId;
     }
 
     @Import(name="botVersion")
-      private final @Nullable Output<String> botVersion;
+    private @Nullable Output<String> botVersion;
 
-    public Output<String> botVersion() {
-        return this.botVersion == null ? Codegen.empty() : this.botVersion;
+    public Optional<Output<String>> botVersion() {
+        return Optional.ofNullable(this.botVersion);
     }
 
     @Import(name="conversationLogSettings")
-      private final @Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings;
+    private @Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings;
 
-    public Output<BotAliasConversationLogSettingsArgs> conversationLogSettings() {
-        return this.conversationLogSettings == null ? Codegen.empty() : this.conversationLogSettings;
+    public Optional<Output<BotAliasConversationLogSettingsArgs>> conversationLogSettings() {
+        return Optional.ofNullable(this.conversationLogSettings);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -78,147 +78,127 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sentimentAnalysisSettings")
-      private final @Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
+    private @Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
 
-    public Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings() {
-        return this.sentimentAnalysisSettings == null ? Codegen.empty() : this.sentimentAnalysisSettings;
+    public Optional<Output<SentimentAnalysisSettingsPropertiesArgs>> sentimentAnalysisSettings() {
+        return Optional.ofNullable(this.sentimentAnalysisSettings);
     }
 
-    public BotAliasArgs(
-        @Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings,
-        @Nullable Output<String> botAliasName,
-        @Nullable Output<List<BotAliasTagArgs>> botAliasTags,
-        Output<String> botId,
-        @Nullable Output<String> botVersion,
-        @Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings,
-        @Nullable Output<String> description,
-        @Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings) {
-        this.botAliasLocaleSettings = botAliasLocaleSettings;
-        this.botAliasName = botAliasName;
-        this.botAliasTags = botAliasTags;
-        this.botId = Objects.requireNonNull(botId, "expected parameter 'botId' to be non-null");
-        this.botVersion = botVersion;
-        this.conversationLogSettings = conversationLogSettings;
-        this.description = description;
-        this.sentimentAnalysisSettings = sentimentAnalysisSettings;
-    }
+    private BotAliasArgs() {}
 
-    private BotAliasArgs() {
-        this.botAliasLocaleSettings = Codegen.empty();
-        this.botAliasName = Codegen.empty();
-        this.botAliasTags = Codegen.empty();
-        this.botId = Codegen.empty();
-        this.botVersion = Codegen.empty();
-        this.conversationLogSettings = Codegen.empty();
-        this.description = Codegen.empty();
-        this.sentimentAnalysisSettings = Codegen.empty();
+    private BotAliasArgs(BotAliasArgs $) {
+        this.botAliasLocaleSettings = $.botAliasLocaleSettings;
+        this.botAliasName = $.botAliasName;
+        this.botAliasTags = $.botAliasTags;
+        this.botId = $.botId;
+        this.botVersion = $.botVersion;
+        this.conversationLogSettings = $.conversationLogSettings;
+        this.description = $.description;
+        this.sentimentAnalysisSettings = $.sentimentAnalysisSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
-        private @Nullable Output<String> botAliasName;
-        private @Nullable Output<List<BotAliasTagArgs>> botAliasTags;
-        private Output<String> botId;
-        private @Nullable Output<String> botVersion;
-        private @Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings;
-        private @Nullable Output<String> description;
-        private @Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
+        private BotAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasArgs();
         }
 
         public Builder(BotAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.botAliasLocaleSettings = defaults.botAliasLocaleSettings;
-    	      this.botAliasName = defaults.botAliasName;
-    	      this.botAliasTags = defaults.botAliasTags;
-    	      this.botId = defaults.botId;
-    	      this.botVersion = defaults.botVersion;
-    	      this.conversationLogSettings = defaults.conversationLogSettings;
-    	      this.description = defaults.description;
-    	      this.sentimentAnalysisSettings = defaults.sentimentAnalysisSettings;
+            $ = new BotAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder botAliasLocaleSettings(@Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings) {
-            this.botAliasLocaleSettings = botAliasLocaleSettings;
+            $.botAliasLocaleSettings = botAliasLocaleSettings;
             return this;
         }
-        public Builder botAliasLocaleSettings(@Nullable List<BotAliasLocaleSettingsItemArgs> botAliasLocaleSettings) {
-            this.botAliasLocaleSettings = Codegen.ofNullable(botAliasLocaleSettings);
-            return this;
+
+        public Builder botAliasLocaleSettings(List<BotAliasLocaleSettingsItemArgs> botAliasLocaleSettings) {
+            return botAliasLocaleSettings(Output.of(botAliasLocaleSettings));
         }
+
         public Builder botAliasLocaleSettings(BotAliasLocaleSettingsItemArgs... botAliasLocaleSettings) {
             return botAliasLocaleSettings(List.of(botAliasLocaleSettings));
         }
+
         public Builder botAliasName(@Nullable Output<String> botAliasName) {
-            this.botAliasName = botAliasName;
+            $.botAliasName = botAliasName;
             return this;
         }
-        public Builder botAliasName(@Nullable String botAliasName) {
-            this.botAliasName = Codegen.ofNullable(botAliasName);
-            return this;
+
+        public Builder botAliasName(String botAliasName) {
+            return botAliasName(Output.of(botAliasName));
         }
+
         public Builder botAliasTags(@Nullable Output<List<BotAliasTagArgs>> botAliasTags) {
-            this.botAliasTags = botAliasTags;
+            $.botAliasTags = botAliasTags;
             return this;
         }
-        public Builder botAliasTags(@Nullable List<BotAliasTagArgs> botAliasTags) {
-            this.botAliasTags = Codegen.ofNullable(botAliasTags);
-            return this;
+
+        public Builder botAliasTags(List<BotAliasTagArgs> botAliasTags) {
+            return botAliasTags(Output.of(botAliasTags));
         }
+
         public Builder botAliasTags(BotAliasTagArgs... botAliasTags) {
             return botAliasTags(List.of(botAliasTags));
         }
+
         public Builder botId(Output<String> botId) {
-            this.botId = Objects.requireNonNull(botId);
+            $.botId = botId;
             return this;
         }
+
         public Builder botId(String botId) {
-            this.botId = Output.of(Objects.requireNonNull(botId));
-            return this;
+            return botId(Output.of(botId));
         }
+
         public Builder botVersion(@Nullable Output<String> botVersion) {
-            this.botVersion = botVersion;
+            $.botVersion = botVersion;
             return this;
         }
-        public Builder botVersion(@Nullable String botVersion) {
-            this.botVersion = Codegen.ofNullable(botVersion);
-            return this;
+
+        public Builder botVersion(String botVersion) {
+            return botVersion(Output.of(botVersion));
         }
+
         public Builder conversationLogSettings(@Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings) {
-            this.conversationLogSettings = conversationLogSettings;
+            $.conversationLogSettings = conversationLogSettings;
             return this;
         }
-        public Builder conversationLogSettings(@Nullable BotAliasConversationLogSettingsArgs conversationLogSettings) {
-            this.conversationLogSettings = Codegen.ofNullable(conversationLogSettings);
-            return this;
+
+        public Builder conversationLogSettings(BotAliasConversationLogSettingsArgs conversationLogSettings) {
+            return conversationLogSettings(Output.of(conversationLogSettings));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder sentimentAnalysisSettings(@Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings) {
-            this.sentimentAnalysisSettings = sentimentAnalysisSettings;
+            $.sentimentAnalysisSettings = sentimentAnalysisSettings;
             return this;
         }
-        public Builder sentimentAnalysisSettings(@Nullable SentimentAnalysisSettingsPropertiesArgs sentimentAnalysisSettings) {
-            this.sentimentAnalysisSettings = Codegen.ofNullable(sentimentAnalysisSettings);
-            return this;
-        }        public BotAliasArgs build() {
-            return new BotAliasArgs(botAliasLocaleSettings, botAliasName, botAliasTags, botId, botVersion, conversationLogSettings, description, sentimentAnalysisSettings);
+
+        public Builder sentimentAnalysisSettings(SentimentAnalysisSettingsPropertiesArgs sentimentAnalysisSettings) {
+            return sentimentAnalysisSettings(Output.of(sentimentAnalysisSettings));
+        }
+
+        public BotAliasArgs build() {
+            $.botId = Objects.requireNonNull($.botId, "expected parameter 'botId' to be non-null");
+            return $;
         }
     }
+
 }

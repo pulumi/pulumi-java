@@ -5,11 +5,11 @@ package com.pulumi.googlenative.networkconnectivity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LinkedInterconnectAttachmentsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="siteToSiteDataTransfer")
-      private final @Nullable Output<Boolean> siteToSiteDataTransfer;
+    private @Nullable Output<Boolean> siteToSiteDataTransfer;
 
-    public Output<Boolean> siteToSiteDataTransfer() {
-        return this.siteToSiteDataTransfer == null ? Codegen.empty() : this.siteToSiteDataTransfer;
+    public Optional<Output<Boolean>> siteToSiteDataTransfer() {
+        return Optional.ofNullable(this.siteToSiteDataTransfer);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class LinkedInterconnectAttachmentsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="uris")
-      private final @Nullable Output<List<String>> uris;
+    private @Nullable Output<List<String>> uris;
 
-    public Output<List<String>> uris() {
-        return this.uris == null ? Codegen.empty() : this.uris;
+    public Optional<Output<List<String>>> uris() {
+        return Optional.ofNullable(this.uris);
     }
 
-    public LinkedInterconnectAttachmentsArgs(
-        @Nullable Output<Boolean> siteToSiteDataTransfer,
-        @Nullable Output<List<String>> uris) {
-        this.siteToSiteDataTransfer = siteToSiteDataTransfer;
-        this.uris = uris;
-    }
+    private LinkedInterconnectAttachmentsArgs() {}
 
-    private LinkedInterconnectAttachmentsArgs() {
-        this.siteToSiteDataTransfer = Codegen.empty();
-        this.uris = Codegen.empty();
+    private LinkedInterconnectAttachmentsArgs(LinkedInterconnectAttachmentsArgs $) {
+        this.siteToSiteDataTransfer = $.siteToSiteDataTransfer;
+        this.uris = $.uris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedInterconnectAttachmentsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> siteToSiteDataTransfer;
-        private @Nullable Output<List<String>> uris;
+        private LinkedInterconnectAttachmentsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedInterconnectAttachmentsArgs();
         }
 
         public Builder(LinkedInterconnectAttachmentsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
-    	      this.uris = defaults.uris;
+            $ = new LinkedInterconnectAttachmentsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder siteToSiteDataTransfer(@Nullable Output<Boolean> siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = siteToSiteDataTransfer;
+            $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
-        public Builder siteToSiteDataTransfer(@Nullable Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Codegen.ofNullable(siteToSiteDataTransfer);
-            return this;
+
+        public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
+            return siteToSiteDataTransfer(Output.of(siteToSiteDataTransfer));
         }
+
         public Builder uris(@Nullable Output<List<String>> uris) {
-            this.uris = uris;
+            $.uris = uris;
             return this;
         }
-        public Builder uris(@Nullable List<String> uris) {
-            this.uris = Codegen.ofNullable(uris);
-            return this;
+
+        public Builder uris(List<String> uris) {
+            return uris(Output.of(uris));
         }
+
         public Builder uris(String... uris) {
             return uris(List.of(uris));
-        }        public LinkedInterconnectAttachmentsArgs build() {
-            return new LinkedInterconnectAttachmentsArgs(siteToSiteDataTransfer, uris);
+        }
+
+        public LinkedInterconnectAttachmentsArgs build() {
+            return $;
         }
     }
+
 }

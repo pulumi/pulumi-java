@@ -6,10 +6,10 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.DistributionTrustedSignerItemGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DistributionTrustedSignerGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class DistributionTrustedSignerGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<DistributionTrustedSignerItemGetArgs>> items;
+    private @Nullable Output<List<DistributionTrustedSignerItemGetArgs>> items;
 
-    public Output<List<DistributionTrustedSignerItemGetArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<DistributionTrustedSignerItemGetArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public DistributionTrustedSignerGetArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<DistributionTrustedSignerItemGetArgs>> items) {
-        this.enabled = enabled;
-        this.items = items;
-    }
+    private DistributionTrustedSignerGetArgs() {}
 
-    private DistributionTrustedSignerGetArgs() {
-        this.enabled = Codegen.empty();
-        this.items = Codegen.empty();
+    private DistributionTrustedSignerGetArgs(DistributionTrustedSignerGetArgs $) {
+        this.enabled = $.enabled;
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionTrustedSignerGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<DistributionTrustedSignerItemGetArgs>> items;
+        private DistributionTrustedSignerGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionTrustedSignerGetArgs();
         }
 
         public Builder(DistributionTrustedSignerGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.items = defaults.items;
+            $ = new DistributionTrustedSignerGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder items(@Nullable Output<List<DistributionTrustedSignerItemGetArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<DistributionTrustedSignerItemGetArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<DistributionTrustedSignerItemGetArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(DistributionTrustedSignerItemGetArgs... items) {
             return items(List.of(items));
-        }        public DistributionTrustedSignerGetArgs build() {
-            return new DistributionTrustedSignerGetArgs(enabled, items);
+        }
+
+        public DistributionTrustedSignerGetArgs build() {
+            return $;
         }
     }
+
 }

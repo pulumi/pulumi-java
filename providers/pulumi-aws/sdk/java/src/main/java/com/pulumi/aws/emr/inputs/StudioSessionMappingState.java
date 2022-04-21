@@ -5,9 +5,9 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class StudioSessionMappingState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="identityId")
-      private final @Nullable Output<String> identityId;
+    private @Nullable Output<String> identityId;
 
-    public Output<String> identityId() {
-        return this.identityId == null ? Codegen.empty() : this.identityId;
+    public Optional<Output<String>> identityId() {
+        return Optional.ofNullable(this.identityId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class StudioSessionMappingState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="identityName")
-      private final @Nullable Output<String> identityName;
+    private @Nullable Output<String> identityName;
 
-    public Output<String> identityName() {
-        return this.identityName == null ? Codegen.empty() : this.identityName;
+    public Optional<Output<String>> identityName() {
+        return Optional.ofNullable(this.identityName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StudioSessionMappingState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="identityType")
-      private final @Nullable Output<String> identityType;
+    private @Nullable Output<String> identityType;
 
-    public Output<String> identityType() {
-        return this.identityType == null ? Codegen.empty() : this.identityType;
+    public Optional<Output<String>> identityType() {
+        return Optional.ofNullable(this.identityType);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class StudioSessionMappingState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sessionPolicyArn")
-      private final @Nullable Output<String> sessionPolicyArn;
+    private @Nullable Output<String> sessionPolicyArn;
 
-    public Output<String> sessionPolicyArn() {
-        return this.sessionPolicyArn == null ? Codegen.empty() : this.sessionPolicyArn;
+    public Optional<Output<String>> sessionPolicyArn() {
+        return Optional.ofNullable(this.sessionPolicyArn);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class StudioSessionMappingState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="studioId")
-      private final @Nullable Output<String> studioId;
+    private @Nullable Output<String> studioId;
 
-    public Output<String> studioId() {
-        return this.studioId == null ? Codegen.empty() : this.studioId;
+    public Optional<Output<String>> studioId() {
+        return Optional.ofNullable(this.studioId);
     }
 
-    public StudioSessionMappingState(
-        @Nullable Output<String> identityId,
-        @Nullable Output<String> identityName,
-        @Nullable Output<String> identityType,
-        @Nullable Output<String> sessionPolicyArn,
-        @Nullable Output<String> studioId) {
-        this.identityId = identityId;
-        this.identityName = identityName;
-        this.identityType = identityType;
-        this.sessionPolicyArn = sessionPolicyArn;
-        this.studioId = studioId;
-    }
+    private StudioSessionMappingState() {}
 
-    private StudioSessionMappingState() {
-        this.identityId = Codegen.empty();
-        this.identityName = Codegen.empty();
-        this.identityType = Codegen.empty();
-        this.sessionPolicyArn = Codegen.empty();
-        this.studioId = Codegen.empty();
+    private StudioSessionMappingState(StudioSessionMappingState $) {
+        this.identityId = $.identityId;
+        this.identityName = $.identityName;
+        this.identityType = $.identityType;
+        this.sessionPolicyArn = $.sessionPolicyArn;
+        this.studioId = $.studioId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioSessionMappingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identityId;
-        private @Nullable Output<String> identityName;
-        private @Nullable Output<String> identityType;
-        private @Nullable Output<String> sessionPolicyArn;
-        private @Nullable Output<String> studioId;
+        private StudioSessionMappingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioSessionMappingState();
         }
 
         public Builder(StudioSessionMappingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityId = defaults.identityId;
-    	      this.identityName = defaults.identityName;
-    	      this.identityType = defaults.identityType;
-    	      this.sessionPolicyArn = defaults.sessionPolicyArn;
-    	      this.studioId = defaults.studioId;
+            $ = new StudioSessionMappingState(Objects.requireNonNull(defaults));
         }
 
         public Builder identityId(@Nullable Output<String> identityId) {
-            this.identityId = identityId;
+            $.identityId = identityId;
             return this;
         }
-        public Builder identityId(@Nullable String identityId) {
-            this.identityId = Codegen.ofNullable(identityId);
-            return this;
+
+        public Builder identityId(String identityId) {
+            return identityId(Output.of(identityId));
         }
+
         public Builder identityName(@Nullable Output<String> identityName) {
-            this.identityName = identityName;
+            $.identityName = identityName;
             return this;
         }
-        public Builder identityName(@Nullable String identityName) {
-            this.identityName = Codegen.ofNullable(identityName);
-            return this;
+
+        public Builder identityName(String identityName) {
+            return identityName(Output.of(identityName));
         }
+
         public Builder identityType(@Nullable Output<String> identityType) {
-            this.identityType = identityType;
+            $.identityType = identityType;
             return this;
         }
-        public Builder identityType(@Nullable String identityType) {
-            this.identityType = Codegen.ofNullable(identityType);
-            return this;
+
+        public Builder identityType(String identityType) {
+            return identityType(Output.of(identityType));
         }
+
         public Builder sessionPolicyArn(@Nullable Output<String> sessionPolicyArn) {
-            this.sessionPolicyArn = sessionPolicyArn;
+            $.sessionPolicyArn = sessionPolicyArn;
             return this;
         }
-        public Builder sessionPolicyArn(@Nullable String sessionPolicyArn) {
-            this.sessionPolicyArn = Codegen.ofNullable(sessionPolicyArn);
-            return this;
+
+        public Builder sessionPolicyArn(String sessionPolicyArn) {
+            return sessionPolicyArn(Output.of(sessionPolicyArn));
         }
+
         public Builder studioId(@Nullable Output<String> studioId) {
-            this.studioId = studioId;
+            $.studioId = studioId;
             return this;
         }
-        public Builder studioId(@Nullable String studioId) {
-            this.studioId = Codegen.ofNullable(studioId);
-            return this;
-        }        public StudioSessionMappingState build() {
-            return new StudioSessionMappingState(identityId, identityName, identityType, sessionPolicyArn, studioId);
+
+        public Builder studioId(String studioId) {
+            return studioId(Output.of(studioId));
+        }
+
+        public StudioSessionMappingState build() {
+            return $;
         }
     }
+
 }

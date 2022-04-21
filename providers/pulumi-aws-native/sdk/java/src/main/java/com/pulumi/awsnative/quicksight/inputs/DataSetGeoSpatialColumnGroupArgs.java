@@ -6,10 +6,10 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.enums.DataSetGeoSpatialCountryCode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,17 +26,17 @@ public final class DataSetGeoSpatialColumnGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="columns", required=true)
-      private final Output<List<String>> columns;
+    private Output<List<String>> columns;
 
     public Output<List<String>> columns() {
         return this.columns;
     }
 
     @Import(name="countryCode")
-      private final @Nullable Output<DataSetGeoSpatialCountryCode> countryCode;
+    private @Nullable Output<DataSetGeoSpatialCountryCode> countryCode;
 
-    public Output<DataSetGeoSpatialCountryCode> countryCode() {
-        return this.countryCode == null ? Codegen.empty() : this.countryCode;
+    public Optional<Output<DataSetGeoSpatialCountryCode>> countryCode() {
+        return Optional.ofNullable(this.countryCode);
     }
 
     /**
@@ -44,79 +44,74 @@ public final class DataSetGeoSpatialColumnGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public DataSetGeoSpatialColumnGroupArgs(
-        Output<List<String>> columns,
-        @Nullable Output<DataSetGeoSpatialCountryCode> countryCode,
-        Output<String> name) {
-        this.columns = Objects.requireNonNull(columns, "expected parameter 'columns' to be non-null");
-        this.countryCode = countryCode;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private DataSetGeoSpatialColumnGroupArgs() {}
 
-    private DataSetGeoSpatialColumnGroupArgs() {
-        this.columns = Codegen.empty();
-        this.countryCode = Codegen.empty();
-        this.name = Codegen.empty();
+    private DataSetGeoSpatialColumnGroupArgs(DataSetGeoSpatialColumnGroupArgs $) {
+        this.columns = $.columns;
+        this.countryCode = $.countryCode;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetGeoSpatialColumnGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> columns;
-        private @Nullable Output<DataSetGeoSpatialCountryCode> countryCode;
-        private Output<String> name;
+        private DataSetGeoSpatialColumnGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetGeoSpatialColumnGroupArgs();
         }
 
         public Builder(DataSetGeoSpatialColumnGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.countryCode = defaults.countryCode;
-    	      this.name = defaults.name;
+            $ = new DataSetGeoSpatialColumnGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(Output<List<String>> columns) {
-            this.columns = Objects.requireNonNull(columns);
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(List<String> columns) {
-            this.columns = Output.of(Objects.requireNonNull(columns));
-            return this;
+            return columns(Output.of(columns));
         }
+
         public Builder columns(String... columns) {
             return columns(List.of(columns));
         }
+
         public Builder countryCode(@Nullable Output<DataSetGeoSpatialCountryCode> countryCode) {
-            this.countryCode = countryCode;
+            $.countryCode = countryCode;
             return this;
         }
-        public Builder countryCode(@Nullable DataSetGeoSpatialCountryCode countryCode) {
-            this.countryCode = Codegen.ofNullable(countryCode);
-            return this;
+
+        public Builder countryCode(DataSetGeoSpatialCountryCode countryCode) {
+            return countryCode(Output.of(countryCode));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public DataSetGeoSpatialColumnGroupArgs build() {
-            return new DataSetGeoSpatialColumnGroupArgs(columns, countryCode, name);
+            return name(Output.of(name));
+        }
+
+        public DataSetGeoSpatialColumnGroupArgs build() {
+            $.columns = Objects.requireNonNull($.columns, "expected parameter 'columns' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.ec2.inputs;
 import com.pulumi.aws.ec2.inputs.SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SpotInstanceRequestCapacityReservationSpecificationGetArgs ex
      * 
      */
     @Import(name="capacityReservationPreference")
-      private final @Nullable Output<String> capacityReservationPreference;
+    private @Nullable Output<String> capacityReservationPreference;
 
-    public Output<String> capacityReservationPreference() {
-        return this.capacityReservationPreference == null ? Codegen.empty() : this.capacityReservationPreference;
+    public Optional<Output<String>> capacityReservationPreference() {
+        return Optional.ofNullable(this.capacityReservationPreference);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class SpotInstanceRequestCapacityReservationSpecificationGetArgs ex
      * 
      */
     @Import(name="capacityReservationTarget")
-      private final @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
+    private @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
 
-    public Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget() {
-        return this.capacityReservationTarget == null ? Codegen.empty() : this.capacityReservationTarget;
+    public Optional<Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs>> capacityReservationTarget() {
+        return Optional.ofNullable(this.capacityReservationTarget);
     }
 
-    public SpotInstanceRequestCapacityReservationSpecificationGetArgs(
-        @Nullable Output<String> capacityReservationPreference,
-        @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget) {
-        this.capacityReservationPreference = capacityReservationPreference;
-        this.capacityReservationTarget = capacityReservationTarget;
-    }
+    private SpotInstanceRequestCapacityReservationSpecificationGetArgs() {}
 
-    private SpotInstanceRequestCapacityReservationSpecificationGetArgs() {
-        this.capacityReservationPreference = Codegen.empty();
-        this.capacityReservationTarget = Codegen.empty();
+    private SpotInstanceRequestCapacityReservationSpecificationGetArgs(SpotInstanceRequestCapacityReservationSpecificationGetArgs $) {
+        this.capacityReservationPreference = $.capacityReservationPreference;
+        this.capacityReservationTarget = $.capacityReservationTarget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotInstanceRequestCapacityReservationSpecificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> capacityReservationPreference;
-        private @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
+        private SpotInstanceRequestCapacityReservationSpecificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotInstanceRequestCapacityReservationSpecificationGetArgs();
         }
 
         public Builder(SpotInstanceRequestCapacityReservationSpecificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityReservationPreference = defaults.capacityReservationPreference;
-    	      this.capacityReservationTarget = defaults.capacityReservationTarget;
+            $ = new SpotInstanceRequestCapacityReservationSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityReservationPreference(@Nullable Output<String> capacityReservationPreference) {
-            this.capacityReservationPreference = capacityReservationPreference;
+            $.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
-        public Builder capacityReservationPreference(@Nullable String capacityReservationPreference) {
-            this.capacityReservationPreference = Codegen.ofNullable(capacityReservationPreference);
-            return this;
+
+        public Builder capacityReservationPreference(String capacityReservationPreference) {
+            return capacityReservationPreference(Output.of(capacityReservationPreference));
         }
+
         public Builder capacityReservationTarget(@Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget) {
-            this.capacityReservationTarget = capacityReservationTarget;
+            $.capacityReservationTarget = capacityReservationTarget;
             return this;
         }
-        public Builder capacityReservationTarget(@Nullable SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs capacityReservationTarget) {
-            this.capacityReservationTarget = Codegen.ofNullable(capacityReservationTarget);
-            return this;
-        }        public SpotInstanceRequestCapacityReservationSpecificationGetArgs build() {
-            return new SpotInstanceRequestCapacityReservationSpecificationGetArgs(capacityReservationPreference, capacityReservationTarget);
+
+        public Builder capacityReservationTarget(SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs capacityReservationTarget) {
+            return capacityReservationTarget(Output.of(capacityReservationTarget));
+        }
+
+        public SpotInstanceRequestCapacityReservationSpecificationGetArgs build() {
+            return $;
         }
     }
+
 }

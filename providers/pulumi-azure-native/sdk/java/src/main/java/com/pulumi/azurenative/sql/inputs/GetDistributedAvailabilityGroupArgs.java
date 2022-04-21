@@ -17,7 +17,7 @@ public final class GetDistributedAvailabilityGroupArgs extends com.pulumi.resour
      * 
      */
     @Import(name="distributedAvailabilityGroupName", required=true)
-      private final String distributedAvailabilityGroupName;
+    private String distributedAvailabilityGroupName;
 
     public String distributedAvailabilityGroupName() {
         return this.distributedAvailabilityGroupName;
@@ -28,7 +28,7 @@ public final class GetDistributedAvailabilityGroupArgs extends com.pulumi.resour
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final String managedInstanceName;
+    private String managedInstanceName;
 
     public String managedInstanceName() {
         return this.managedInstanceName;
@@ -39,64 +39,59 @@ public final class GetDistributedAvailabilityGroupArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDistributedAvailabilityGroupArgs(
-        String distributedAvailabilityGroupName,
-        String managedInstanceName,
-        String resourceGroupName) {
-        this.distributedAvailabilityGroupName = Objects.requireNonNull(distributedAvailabilityGroupName, "expected parameter 'distributedAvailabilityGroupName' to be non-null");
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDistributedAvailabilityGroupArgs() {}
 
-    private GetDistributedAvailabilityGroupArgs() {
-        this.distributedAvailabilityGroupName = null;
-        this.managedInstanceName = null;
-        this.resourceGroupName = null;
+    private GetDistributedAvailabilityGroupArgs(GetDistributedAvailabilityGroupArgs $) {
+        this.distributedAvailabilityGroupName = $.distributedAvailabilityGroupName;
+        this.managedInstanceName = $.managedInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDistributedAvailabilityGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String distributedAvailabilityGroupName;
-        private String managedInstanceName;
-        private String resourceGroupName;
+        private GetDistributedAvailabilityGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDistributedAvailabilityGroupArgs();
         }
 
         public Builder(GetDistributedAvailabilityGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributedAvailabilityGroupName = defaults.distributedAvailabilityGroupName;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDistributedAvailabilityGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributedAvailabilityGroupName(String distributedAvailabilityGroupName) {
-            this.distributedAvailabilityGroupName = Objects.requireNonNull(distributedAvailabilityGroupName);
+            $.distributedAvailabilityGroupName = distributedAvailabilityGroupName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDistributedAvailabilityGroupArgs build() {
-            return new GetDistributedAvailabilityGroupArgs(distributedAvailabilityGroupName, managedInstanceName, resourceGroupName);
+        }
+
+        public GetDistributedAvailabilityGroupArgs build() {
+            $.distributedAvailabilityGroupName = Objects.requireNonNull($.distributedAvailabilityGroupName, "expected parameter 'distributedAvailabilityGroupName' to be non-null");
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

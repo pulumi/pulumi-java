@@ -23,7 +23,7 @@ public final class TimelineErrorResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -34,7 +34,7 @@ public final class TimelineErrorResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -45,64 +45,58 @@ public final class TimelineErrorResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="queryId")
-      private final @Nullable String queryId;
+    private @Nullable String queryId;
 
     public Optional<String> queryId() {
-        return this.queryId == null ? Optional.empty() : Optional.ofNullable(this.queryId);
+        return Optional.ofNullable(this.queryId);
     }
 
-    public TimelineErrorResponse(
-        String errorMessage,
-        String kind,
-        @Nullable String queryId) {
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.queryId = queryId;
-    }
+    private TimelineErrorResponse() {}
 
-    private TimelineErrorResponse() {
-        this.errorMessage = null;
-        this.kind = null;
-        this.queryId = null;
+    private TimelineErrorResponse(TimelineErrorResponse $) {
+        this.errorMessage = $.errorMessage;
+        this.kind = $.kind;
+        this.queryId = $.queryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimelineErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String errorMessage;
-        private String kind;
-        private @Nullable String queryId;
+        private TimelineErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimelineErrorResponse();
         }
 
         public Builder(TimelineErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.kind = defaults.kind;
-    	      this.queryId = defaults.queryId;
+            $ = new TimelineErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder queryId(@Nullable String queryId) {
-            this.queryId = queryId;
+            $.queryId = queryId;
             return this;
-        }        public TimelineErrorResponse build() {
-            return new TimelineErrorResponse(errorMessage, kind, queryId);
+        }
+
+        public TimelineErrorResponse build() {
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

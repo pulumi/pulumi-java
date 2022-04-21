@@ -5,7 +5,6 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class TrafficSelectorPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="localAddressRanges", required=true)
-      private final Output<List<String>> localAddressRanges;
+    private Output<List<String>> localAddressRanges;
 
     public Output<List<String>> localAddressRanges() {
         return this.localAddressRanges;
@@ -35,69 +34,68 @@ public final class TrafficSelectorPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="remoteAddressRanges", required=true)
-      private final Output<List<String>> remoteAddressRanges;
+    private Output<List<String>> remoteAddressRanges;
 
     public Output<List<String>> remoteAddressRanges() {
         return this.remoteAddressRanges;
     }
 
-    public TrafficSelectorPolicyArgs(
-        Output<List<String>> localAddressRanges,
-        Output<List<String>> remoteAddressRanges) {
-        this.localAddressRanges = Objects.requireNonNull(localAddressRanges, "expected parameter 'localAddressRanges' to be non-null");
-        this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges, "expected parameter 'remoteAddressRanges' to be non-null");
-    }
+    private TrafficSelectorPolicyArgs() {}
 
-    private TrafficSelectorPolicyArgs() {
-        this.localAddressRanges = Codegen.empty();
-        this.remoteAddressRanges = Codegen.empty();
+    private TrafficSelectorPolicyArgs(TrafficSelectorPolicyArgs $) {
+        this.localAddressRanges = $.localAddressRanges;
+        this.remoteAddressRanges = $.remoteAddressRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficSelectorPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> localAddressRanges;
-        private Output<List<String>> remoteAddressRanges;
+        private TrafficSelectorPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficSelectorPolicyArgs();
         }
 
         public Builder(TrafficSelectorPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localAddressRanges = defaults.localAddressRanges;
-    	      this.remoteAddressRanges = defaults.remoteAddressRanges;
+            $ = new TrafficSelectorPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder localAddressRanges(Output<List<String>> localAddressRanges) {
-            this.localAddressRanges = Objects.requireNonNull(localAddressRanges);
+            $.localAddressRanges = localAddressRanges;
             return this;
         }
+
         public Builder localAddressRanges(List<String> localAddressRanges) {
-            this.localAddressRanges = Output.of(Objects.requireNonNull(localAddressRanges));
-            return this;
+            return localAddressRanges(Output.of(localAddressRanges));
         }
+
         public Builder localAddressRanges(String... localAddressRanges) {
             return localAddressRanges(List.of(localAddressRanges));
         }
+
         public Builder remoteAddressRanges(Output<List<String>> remoteAddressRanges) {
-            this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges);
+            $.remoteAddressRanges = remoteAddressRanges;
             return this;
         }
+
         public Builder remoteAddressRanges(List<String> remoteAddressRanges) {
-            this.remoteAddressRanges = Output.of(Objects.requireNonNull(remoteAddressRanges));
-            return this;
+            return remoteAddressRanges(Output.of(remoteAddressRanges));
         }
+
         public Builder remoteAddressRanges(String... remoteAddressRanges) {
             return remoteAddressRanges(List.of(remoteAddressRanges));
-        }        public TrafficSelectorPolicyArgs build() {
-            return new TrafficSelectorPolicyArgs(localAddressRanges, remoteAddressRanges);
+        }
+
+        public TrafficSelectorPolicyArgs build() {
+            $.localAddressRanges = Objects.requireNonNull($.localAddressRanges, "expected parameter 'localAddressRanges' to be non-null");
+            $.remoteAddressRanges = Objects.requireNonNull($.remoteAddressRanges, "expected parameter 'remoteAddressRanges' to be non-null");
+            return $;
         }
     }
+
 }

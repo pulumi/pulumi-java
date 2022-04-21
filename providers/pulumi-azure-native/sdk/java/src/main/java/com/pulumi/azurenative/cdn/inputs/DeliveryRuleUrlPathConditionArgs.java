@@ -25,7 +25,7 @@ public final class DeliveryRuleUrlPathConditionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,60 @@ public final class DeliveryRuleUrlPathConditionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<UrlPathMatchConditionParametersArgs> parameters;
+    private Output<UrlPathMatchConditionParametersArgs> parameters;
 
     public Output<UrlPathMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 
-    public DeliveryRuleUrlPathConditionArgs(
-        Output<String> name,
-        Output<UrlPathMatchConditionParametersArgs> parameters) {
-        this.name = Codegen.stringProp("name").output().arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private DeliveryRuleUrlPathConditionArgs() {}
 
-    private DeliveryRuleUrlPathConditionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private DeliveryRuleUrlPathConditionArgs(DeliveryRuleUrlPathConditionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleUrlPathConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<UrlPathMatchConditionParametersArgs> parameters;
+        private DeliveryRuleUrlPathConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleUrlPathConditionArgs();
         }
 
         public Builder(DeliveryRuleUrlPathConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new DeliveryRuleUrlPathConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<UrlPathMatchConditionParametersArgs> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(UrlPathMatchConditionParametersArgs parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
-        }        public DeliveryRuleUrlPathConditionArgs build() {
-            return new DeliveryRuleUrlPathConditionArgs(name, parameters);
+            return parameters(Output.of(parameters));
+        }
+
+        public DeliveryRuleUrlPathConditionArgs build() {
+            $.name = Codegen.stringProp("name").output().arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

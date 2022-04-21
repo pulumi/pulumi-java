@@ -22,48 +22,49 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse extends com.pulumi
      * 
      */
     @Import(name="equivalenceClassHistogramBuckets", required=true)
-      private final List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets;
+    private List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets;
 
     public List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets() {
         return this.equivalenceClassHistogramBuckets;
     }
 
-    public GooglePrivacyDlpV2KAnonymityResultResponse(List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets) {
-        this.equivalenceClassHistogramBuckets = Objects.requireNonNull(equivalenceClassHistogramBuckets, "expected parameter 'equivalenceClassHistogramBuckets' to be non-null");
-    }
+    private GooglePrivacyDlpV2KAnonymityResultResponse() {}
 
-    private GooglePrivacyDlpV2KAnonymityResultResponse() {
-        this.equivalenceClassHistogramBuckets = List.of();
+    private GooglePrivacyDlpV2KAnonymityResultResponse(GooglePrivacyDlpV2KAnonymityResultResponse $) {
+        this.equivalenceClassHistogramBuckets = $.equivalenceClassHistogramBuckets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2KAnonymityResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets;
+        private GooglePrivacyDlpV2KAnonymityResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2KAnonymityResultResponse();
         }
 
         public Builder(GooglePrivacyDlpV2KAnonymityResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.equivalenceClassHistogramBuckets = defaults.equivalenceClassHistogramBuckets;
+            $ = new GooglePrivacyDlpV2KAnonymityResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder equivalenceClassHistogramBuckets(List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets) {
-            this.equivalenceClassHistogramBuckets = Objects.requireNonNull(equivalenceClassHistogramBuckets);
+            $.equivalenceClassHistogramBuckets = equivalenceClassHistogramBuckets;
             return this;
         }
+
         public Builder equivalenceClassHistogramBuckets(GooglePrivacyDlpV2KAnonymityHistogramBucketResponse... equivalenceClassHistogramBuckets) {
             return equivalenceClassHistogramBuckets(List.of(equivalenceClassHistogramBuckets));
-        }        public GooglePrivacyDlpV2KAnonymityResultResponse build() {
-            return new GooglePrivacyDlpV2KAnonymityResultResponse(equivalenceClassHistogramBuckets);
+        }
+
+        public GooglePrivacyDlpV2KAnonymityResultResponse build() {
+            $.equivalenceClassHistogramBuckets = Objects.requireNonNull($.equivalenceClassHistogramBuckets, "expected parameter 'equivalenceClassHistogramBuckets' to be non-null");
+            return $;
         }
     }
+
 }

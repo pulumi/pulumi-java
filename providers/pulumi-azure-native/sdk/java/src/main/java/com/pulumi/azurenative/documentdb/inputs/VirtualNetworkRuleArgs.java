@@ -5,10 +5,10 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ignoreMissingVNetServiceEndpoint")
-      private final @Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint;
+    private @Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint;
 
-    public Output<Boolean> ignoreMissingVNetServiceEndpoint() {
-        return this.ignoreMissingVNetServiceEndpoint == null ? Codegen.empty() : this.ignoreMissingVNetServiceEndpoint;
+    public Optional<Output<Boolean>> ignoreMissingVNetServiceEndpoint() {
+        return Optional.ofNullable(this.ignoreMissingVNetServiceEndpoint);
     }
 
-    public VirtualNetworkRuleArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint) {
-        this.id = id;
-        this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
-    }
+    private VirtualNetworkRuleArgs() {}
 
-    private VirtualNetworkRuleArgs() {
-        this.id = Codegen.empty();
-        this.ignoreMissingVNetServiceEndpoint = Codegen.empty();
+    private VirtualNetworkRuleArgs(VirtualNetworkRuleArgs $) {
+        this.id = $.id;
+        this.ignoreMissingVNetServiceEndpoint = $.ignoreMissingVNetServiceEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint;
+        private VirtualNetworkRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkRuleArgs();
         }
 
         public Builder(VirtualNetworkRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.ignoreMissingVNetServiceEndpoint = defaults.ignoreMissingVNetServiceEndpoint;
+            $ = new VirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ignoreMissingVNetServiceEndpoint(@Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint) {
-            this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
+            $.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
             return this;
         }
-        public Builder ignoreMissingVNetServiceEndpoint(@Nullable Boolean ignoreMissingVNetServiceEndpoint) {
-            this.ignoreMissingVNetServiceEndpoint = Codegen.ofNullable(ignoreMissingVNetServiceEndpoint);
-            return this;
-        }        public VirtualNetworkRuleArgs build() {
-            return new VirtualNetworkRuleArgs(id, ignoreMissingVNetServiceEndpoint);
+
+        public Builder ignoreMissingVNetServiceEndpoint(Boolean ignoreMissingVNetServiceEndpoint) {
+            return ignoreMissingVNetServiceEndpoint(Output.of(ignoreMissingVNetServiceEndpoint));
+        }
+
+        public VirtualNetworkRuleArgs build() {
+            return $;
         }
     }
+
 }

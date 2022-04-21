@@ -25,10 +25,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="eTag")
-      private final @Nullable String eTag;
+    private @Nullable String eTag;
 
     public Optional<String> eTag() {
-        return this.eTag == null ? Optional.empty() : Optional.ofNullable(this.eTag);
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="error")
-      private final @Nullable ErrorDetailsResponse error;
+    private @Nullable ErrorDetailsResponse error;
 
     public Optional<ErrorDetailsResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="executionType")
-      private final @Nullable String executionType;
+    private @Nullable String executionType;
 
     public Optional<String> executionType() {
-        return this.executionType == null ? Optional.empty() : Optional.ofNullable(this.executionType);
+        return Optional.ofNullable(this.executionType);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="fileName")
-      private final @Nullable String fileName;
+    private @Nullable String fileName;
 
     public Optional<String> fileName() {
-        return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -80,7 +80,7 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -91,10 +91,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="processingEndTime")
-      private final @Nullable String processingEndTime;
+    private @Nullable String processingEndTime;
 
     public Optional<String> processingEndTime() {
-        return this.processingEndTime == null ? Optional.empty() : Optional.ofNullable(this.processingEndTime);
+        return Optional.ofNullable(this.processingEndTime);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="processingStartTime")
-      private final @Nullable String processingStartTime;
+    private @Nullable String processingStartTime;
 
     public Optional<String> processingStartTime() {
-        return this.processingStartTime == null ? Optional.empty() : Optional.ofNullable(this.processingStartTime);
+        return Optional.ofNullable(this.processingStartTime);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="runSettings")
-      private final @Nullable CommonExportPropertiesResponse runSettings;
+    private @Nullable CommonExportPropertiesResponse runSettings;
 
     public Optional<CommonExportPropertiesResponse> runSettings() {
-        return this.runSettings == null ? Optional.empty() : Optional.ofNullable(this.runSettings);
+        return Optional.ofNullable(this.runSettings);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="submittedBy")
-      private final @Nullable String submittedBy;
+    private @Nullable String submittedBy;
 
     public Optional<String> submittedBy() {
-        return this.submittedBy == null ? Optional.empty() : Optional.ofNullable(this.submittedBy);
+        return Optional.ofNullable(this.submittedBy);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="submittedTime")
-      private final @Nullable String submittedTime;
+    private @Nullable String submittedTime;
 
     public Optional<String> submittedTime() {
-        return this.submittedTime == null ? Optional.empty() : Optional.ofNullable(this.submittedTime);
+        return Optional.ofNullable(this.submittedTime);
     }
 
     /**
@@ -157,154 +157,119 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ExportExecutionResponse(
-        @Nullable String eTag,
-        @Nullable ErrorDetailsResponse error,
-        @Nullable String executionType,
-        @Nullable String fileName,
-        String id,
-        String name,
-        @Nullable String processingEndTime,
-        @Nullable String processingStartTime,
-        @Nullable CommonExportPropertiesResponse runSettings,
-        @Nullable String status,
-        @Nullable String submittedBy,
-        @Nullable String submittedTime,
-        String type) {
-        this.eTag = eTag;
-        this.error = error;
-        this.executionType = executionType;
-        this.fileName = fileName;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.processingEndTime = processingEndTime;
-        this.processingStartTime = processingStartTime;
-        this.runSettings = runSettings;
-        this.status = status;
-        this.submittedBy = submittedBy;
-        this.submittedTime = submittedTime;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ExportExecutionResponse() {}
 
-    private ExportExecutionResponse() {
-        this.eTag = null;
-        this.error = null;
-        this.executionType = null;
-        this.fileName = null;
-        this.id = null;
-        this.name = null;
-        this.processingEndTime = null;
-        this.processingStartTime = null;
-        this.runSettings = null;
-        this.status = null;
-        this.submittedBy = null;
-        this.submittedTime = null;
-        this.type = null;
+    private ExportExecutionResponse(ExportExecutionResponse $) {
+        this.eTag = $.eTag;
+        this.error = $.error;
+        this.executionType = $.executionType;
+        this.fileName = $.fileName;
+        this.id = $.id;
+        this.name = $.name;
+        this.processingEndTime = $.processingEndTime;
+        this.processingStartTime = $.processingStartTime;
+        this.runSettings = $.runSettings;
+        this.status = $.status;
+        this.submittedBy = $.submittedBy;
+        this.submittedTime = $.submittedTime;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportExecutionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String eTag;
-        private @Nullable ErrorDetailsResponse error;
-        private @Nullable String executionType;
-        private @Nullable String fileName;
-        private String id;
-        private String name;
-        private @Nullable String processingEndTime;
-        private @Nullable String processingStartTime;
-        private @Nullable CommonExportPropertiesResponse runSettings;
-        private @Nullable String status;
-        private @Nullable String submittedBy;
-        private @Nullable String submittedTime;
-        private String type;
+        private ExportExecutionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportExecutionResponse();
         }
 
         public Builder(ExportExecutionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eTag = defaults.eTag;
-    	      this.error = defaults.error;
-    	      this.executionType = defaults.executionType;
-    	      this.fileName = defaults.fileName;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.processingEndTime = defaults.processingEndTime;
-    	      this.processingStartTime = defaults.processingStartTime;
-    	      this.runSettings = defaults.runSettings;
-    	      this.status = defaults.status;
-    	      this.submittedBy = defaults.submittedBy;
-    	      this.submittedTime = defaults.submittedTime;
-    	      this.type = defaults.type;
+            $ = new ExportExecutionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
+
         public Builder error(@Nullable ErrorDetailsResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
+
         public Builder executionType(@Nullable String executionType) {
-            this.executionType = executionType;
+            $.executionType = executionType;
             return this;
         }
+
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder processingEndTime(@Nullable String processingEndTime) {
-            this.processingEndTime = processingEndTime;
+            $.processingEndTime = processingEndTime;
             return this;
         }
+
         public Builder processingStartTime(@Nullable String processingStartTime) {
-            this.processingStartTime = processingStartTime;
+            $.processingStartTime = processingStartTime;
             return this;
         }
+
         public Builder runSettings(@Nullable CommonExportPropertiesResponse runSettings) {
-            this.runSettings = runSettings;
+            $.runSettings = runSettings;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder submittedBy(@Nullable String submittedBy) {
-            this.submittedBy = submittedBy;
+            $.submittedBy = submittedBy;
             return this;
         }
+
         public Builder submittedTime(@Nullable String submittedTime) {
-            this.submittedTime = submittedTime;
+            $.submittedTime = submittedTime;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ExportExecutionResponse build() {
-            return new ExportExecutionResponse(eTag, error, executionType, fileName, id, name, processingEndTime, processingStartTime, runSettings, status, submittedBy, submittedTime, type);
+        }
+
+        public ExportExecutionResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

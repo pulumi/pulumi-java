@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class DistributionOriginCustomHeaderArgs extends com.pulumi.resourc
     public static final DistributionOriginCustomHeaderArgs Empty = new DistributionOriginCustomHeaderArgs();
 
     @Import(name="headerName", required=true)
-      private final Output<String> headerName;
+    private Output<String> headerName;
 
     public Output<String> headerName() {
         return this.headerName;
     }
 
     @Import(name="headerValue", required=true)
-      private final Output<String> headerValue;
+    private Output<String> headerValue;
 
     public Output<String> headerValue() {
         return this.headerValue;
     }
 
-    public DistributionOriginCustomHeaderArgs(
-        Output<String> headerName,
-        Output<String> headerValue) {
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
-    }
+    private DistributionOriginCustomHeaderArgs() {}
 
-    private DistributionOriginCustomHeaderArgs() {
-        this.headerName = Codegen.empty();
-        this.headerValue = Codegen.empty();
+    private DistributionOriginCustomHeaderArgs(DistributionOriginCustomHeaderArgs $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginCustomHeaderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> headerName;
-        private Output<String> headerValue;
+        private DistributionOriginCustomHeaderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginCustomHeaderArgs();
         }
 
         public Builder(DistributionOriginCustomHeaderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
+            $ = new DistributionOriginCustomHeaderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(Output<String> headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Output.of(Objects.requireNonNull(headerName));
-            return this;
+            return headerName(Output.of(headerName));
         }
+
         public Builder headerValue(Output<String> headerValue) {
-            this.headerValue = Objects.requireNonNull(headerValue);
+            $.headerValue = headerValue;
             return this;
         }
+
         public Builder headerValue(String headerValue) {
-            this.headerValue = Output.of(Objects.requireNonNull(headerValue));
-            return this;
-        }        public DistributionOriginCustomHeaderArgs build() {
-            return new DistributionOriginCustomHeaderArgs(headerName, headerValue);
+            return headerValue(Output.of(headerValue));
+        }
+
+        public DistributionOriginCustomHeaderArgs build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.headerValue = Objects.requireNonNull($.headerValue, "expected parameter 'headerValue' to be non-null");
+            return $;
         }
     }
+
 }

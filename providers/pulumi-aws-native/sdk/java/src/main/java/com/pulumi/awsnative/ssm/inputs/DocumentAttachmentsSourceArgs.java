@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ssm.inputs;
 import com.pulumi.awsnative.ssm.enums.DocumentAttachmentsSourceKey;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DocumentAttachmentsSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<DocumentAttachmentsSourceKey> key;
+    private @Nullable Output<DocumentAttachmentsSourceKey> key;
 
-    public Output<DocumentAttachmentsSourceKey> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<DocumentAttachmentsSourceKey>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DocumentAttachmentsSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class DocumentAttachmentsSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public DocumentAttachmentsSourceArgs(
-        @Nullable Output<DocumentAttachmentsSourceKey> key,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> values) {
-        this.key = key;
-        this.name = name;
-        this.values = values;
-    }
+    private DocumentAttachmentsSourceArgs() {}
 
-    private DocumentAttachmentsSourceArgs() {
-        this.key = Codegen.empty();
-        this.name = Codegen.empty();
-        this.values = Codegen.empty();
+    private DocumentAttachmentsSourceArgs(DocumentAttachmentsSourceArgs $) {
+        this.key = $.key;
+        this.name = $.name;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentAttachmentsSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DocumentAttachmentsSourceKey> key;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> values;
+        private DocumentAttachmentsSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentAttachmentsSourceArgs();
         }
 
         public Builder(DocumentAttachmentsSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.name = defaults.name;
-    	      this.values = defaults.values;
+            $ = new DocumentAttachmentsSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<DocumentAttachmentsSourceKey> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable DocumentAttachmentsSourceKey key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(DocumentAttachmentsSourceKey key) {
+            return key(Output.of(key));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public DocumentAttachmentsSourceArgs build() {
-            return new DocumentAttachmentsSourceArgs(key, name, values);
+        }
+
+        public DocumentAttachmentsSourceArgs build() {
+            return $;
         }
     }
+
 }

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="jobId")
-      private final @Nullable Output<String> jobId;
+    private @Nullable Output<String> jobId;
 
-    public Output<String> jobId() {
-        return this.jobId == null ? Codegen.empty() : this.jobId;
+    public Optional<Output<String>> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -47,76 +48,69 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="referenceType", required=true)
-      private final Output<String> referenceType;
+    private Output<String> referenceType;
 
     public Output<String> referenceType() {
         return this.referenceType;
     }
 
-    public OutputPathAssetReferenceArgs(
-        @Nullable Output<String> jobId,
-        @Nullable Output<String> path,
-        Output<String> referenceType) {
-        this.jobId = jobId;
-        this.path = path;
-        this.referenceType = Codegen.stringProp("referenceType").output().arg(referenceType).require();
-    }
+    private OutputPathAssetReferenceArgs() {}
 
-    private OutputPathAssetReferenceArgs() {
-        this.jobId = Codegen.empty();
-        this.path = Codegen.empty();
-        this.referenceType = Codegen.empty();
+    private OutputPathAssetReferenceArgs(OutputPathAssetReferenceArgs $) {
+        this.jobId = $.jobId;
+        this.path = $.path;
+        this.referenceType = $.referenceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutputPathAssetReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> jobId;
-        private @Nullable Output<String> path;
-        private Output<String> referenceType;
+        private OutputPathAssetReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutputPathAssetReferenceArgs();
         }
 
         public Builder(OutputPathAssetReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobId = defaults.jobId;
-    	      this.path = defaults.path;
-    	      this.referenceType = defaults.referenceType;
+            $ = new OutputPathAssetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobId(@Nullable Output<String> jobId) {
-            this.jobId = jobId;
+            $.jobId = jobId;
             return this;
         }
-        public Builder jobId(@Nullable String jobId) {
-            this.jobId = Codegen.ofNullable(jobId);
-            return this;
+
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder referenceType(Output<String> referenceType) {
-            this.referenceType = Objects.requireNonNull(referenceType);
+            $.referenceType = referenceType;
             return this;
         }
+
         public Builder referenceType(String referenceType) {
-            this.referenceType = Output.of(Objects.requireNonNull(referenceType));
-            return this;
-        }        public OutputPathAssetReferenceArgs build() {
-            return new OutputPathAssetReferenceArgs(jobId, path, referenceType);
+            return referenceType(Output.of(referenceType));
+        }
+
+        public OutputPathAssetReferenceArgs build() {
+            $.referenceType = Codegen.stringProp("referenceType").output().arg($.referenceType).require();
+            return $;
         }
     }
+
 }

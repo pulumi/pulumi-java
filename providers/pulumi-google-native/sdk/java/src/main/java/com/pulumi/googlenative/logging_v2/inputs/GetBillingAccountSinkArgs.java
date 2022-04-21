@@ -13,62 +13,59 @@ public final class GetBillingAccountSinkArgs extends com.pulumi.resources.Invoke
     public static final GetBillingAccountSinkArgs Empty = new GetBillingAccountSinkArgs();
 
     @Import(name="billingAccountId", required=true)
-      private final String billingAccountId;
+    private String billingAccountId;
 
     public String billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="sinkId", required=true)
-      private final String sinkId;
+    private String sinkId;
 
     public String sinkId() {
         return this.sinkId;
     }
 
-    public GetBillingAccountSinkArgs(
-        String billingAccountId,
-        String sinkId) {
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.sinkId = Objects.requireNonNull(sinkId, "expected parameter 'sinkId' to be non-null");
-    }
+    private GetBillingAccountSinkArgs() {}
 
-    private GetBillingAccountSinkArgs() {
-        this.billingAccountId = null;
-        this.sinkId = null;
+    private GetBillingAccountSinkArgs(GetBillingAccountSinkArgs $) {
+        this.billingAccountId = $.billingAccountId;
+        this.sinkId = $.sinkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBillingAccountSinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountId;
-        private String sinkId;
+        private GetBillingAccountSinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBillingAccountSinkArgs();
         }
 
         public Builder(GetBillingAccountSinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.sinkId = defaults.sinkId;
+            $ = new GetBillingAccountSinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder sinkId(String sinkId) {
-            this.sinkId = Objects.requireNonNull(sinkId);
+            $.sinkId = sinkId;
             return this;
-        }        public GetBillingAccountSinkArgs build() {
-            return new GetBillingAccountSinkArgs(billingAccountId, sinkId);
+        }
+
+        public GetBillingAccountSinkArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            $.sinkId = Objects.requireNonNull($.sinkId, "expected parameter 'sinkId' to be non-null");
+            return $;
         }
     }
+
 }

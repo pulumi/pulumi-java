@@ -20,62 +20,57 @@ public final class ProjectDataDeliveryObject extends com.pulumi.resources.Invoke
     public static final ProjectDataDeliveryObject Empty = new ProjectDataDeliveryObject();
 
     @Import(name="logGroup")
-      private final @Nullable String logGroup;
+    private @Nullable String logGroup;
 
     public Optional<String> logGroup() {
-        return this.logGroup == null ? Optional.empty() : Optional.ofNullable(this.logGroup);
+        return Optional.ofNullable(this.logGroup);
     }
 
     @Import(name="s3")
-      private final @Nullable ProjectS3Destination s3;
+    private @Nullable ProjectS3Destination s3;
 
     public Optional<ProjectS3Destination> s3() {
-        return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
+        return Optional.ofNullable(this.s3);
     }
 
-    public ProjectDataDeliveryObject(
-        @Nullable String logGroup,
-        @Nullable ProjectS3Destination s3) {
-        this.logGroup = logGroup;
-        this.s3 = s3;
-    }
+    private ProjectDataDeliveryObject() {}
 
-    private ProjectDataDeliveryObject() {
-        this.logGroup = null;
-        this.s3 = null;
+    private ProjectDataDeliveryObject(ProjectDataDeliveryObject $) {
+        this.logGroup = $.logGroup;
+        this.s3 = $.s3;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectDataDeliveryObject defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String logGroup;
-        private @Nullable ProjectS3Destination s3;
+        private ProjectDataDeliveryObject $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectDataDeliveryObject();
         }
 
         public Builder(ProjectDataDeliveryObject defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroup = defaults.logGroup;
-    	      this.s3 = defaults.s3;
+            $ = new ProjectDataDeliveryObject(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroup(@Nullable String logGroup) {
-            this.logGroup = logGroup;
+            $.logGroup = logGroup;
             return this;
         }
+
         public Builder s3(@Nullable ProjectS3Destination s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
-        }        public ProjectDataDeliveryObject build() {
-            return new ProjectDataDeliveryObject(logGroup, s3);
+        }
+
+        public ProjectDataDeliveryObject build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId
      * 
      */
     @Import(name="objectIdPaths", required=true)
-      private final Output<List<Integer>> objectIdPaths;
+    private Output<List<Integer>> objectIdPaths;
 
     public Output<List<Integer>> objectIdPaths() {
         return this.objectIdPaths;
     }
 
-    public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs(Output<List<Integer>> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths, "expected parameter 'objectIdPaths' to be non-null");
-    }
+    private CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs() {}
 
-    private CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs() {
-        this.objectIdPaths = Codegen.empty();
+    private CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs $) {
+        this.objectIdPaths = $.objectIdPaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Integer>> objectIdPaths;
+        private CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs();
         }
 
         public Builder(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectIdPaths = defaults.objectIdPaths;
+            $ = new CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectIdPaths(Output<List<Integer>> objectIdPaths) {
-            this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+            $.objectIdPaths = objectIdPaths;
             return this;
         }
+
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
-            this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
-            return this;
+            return objectIdPaths(Output.of(objectIdPaths));
         }
+
         public Builder objectIdPaths(Integer... objectIdPaths) {
             return objectIdPaths(List.of(objectIdPaths));
-        }        public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs build() {
-            return new CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs(objectIdPaths);
+        }
+
+        public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs build() {
+            $.objectIdPaths = Objects.requireNonNull($.objectIdPaths, "expected parameter 'objectIdPaths' to be non-null");
+            return $;
         }
     }
+
 }

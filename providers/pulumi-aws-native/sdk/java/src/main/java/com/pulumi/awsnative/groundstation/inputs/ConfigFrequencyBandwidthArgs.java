@@ -6,9 +6,9 @@ package com.pulumi.awsnative.groundstation.inputs;
 import com.pulumi.awsnative.groundstation.enums.ConfigBandwidthUnits;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ConfigFrequencyBandwidthArgs extends com.pulumi.resources.Res
     public static final ConfigFrequencyBandwidthArgs Empty = new ConfigFrequencyBandwidthArgs();
 
     @Import(name="units")
-      private final @Nullable Output<ConfigBandwidthUnits> units;
+    private @Nullable Output<ConfigBandwidthUnits> units;
 
-    public Output<ConfigBandwidthUnits> units() {
-        return this.units == null ? Codegen.empty() : this.units;
+    public Optional<Output<ConfigBandwidthUnits>> units() {
+        return Optional.ofNullable(this.units);
     }
 
     @Import(name="value")
-      private final @Nullable Output<Double> value;
+    private @Nullable Output<Double> value;
 
-    public Output<Double> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Double>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ConfigFrequencyBandwidthArgs(
-        @Nullable Output<ConfigBandwidthUnits> units,
-        @Nullable Output<Double> value) {
-        this.units = units;
-        this.value = value;
-    }
+    private ConfigFrequencyBandwidthArgs() {}
 
-    private ConfigFrequencyBandwidthArgs() {
-        this.units = Codegen.empty();
-        this.value = Codegen.empty();
+    private ConfigFrequencyBandwidthArgs(ConfigFrequencyBandwidthArgs $) {
+        this.units = $.units;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigFrequencyBandwidthArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigBandwidthUnits> units;
-        private @Nullable Output<Double> value;
+        private ConfigFrequencyBandwidthArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigFrequencyBandwidthArgs();
         }
 
         public Builder(ConfigFrequencyBandwidthArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.units = defaults.units;
-    	      this.value = defaults.value;
+            $ = new ConfigFrequencyBandwidthArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder units(@Nullable Output<ConfigBandwidthUnits> units) {
-            this.units = units;
+            $.units = units;
             return this;
         }
-        public Builder units(@Nullable ConfigBandwidthUnits units) {
-            this.units = Codegen.ofNullable(units);
-            return this;
+
+        public Builder units(ConfigBandwidthUnits units) {
+            return units(Output.of(units));
         }
+
         public Builder value(@Nullable Output<Double> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Double value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ConfigFrequencyBandwidthArgs build() {
-            return new ConfigFrequencyBandwidthArgs(units, value);
+
+        public Builder value(Double value) {
+            return value(Output.of(value));
+        }
+
+        public ConfigFrequencyBandwidthArgs build() {
+            return $;
         }
     }
+
 }

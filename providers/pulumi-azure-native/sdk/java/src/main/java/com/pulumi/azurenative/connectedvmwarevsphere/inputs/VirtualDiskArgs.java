@@ -8,10 +8,10 @@ import com.pulumi.azurenative.connectedvmwarevsphere.enums.DiskType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="controllerKey")
-      private final @Nullable Output<Integer> controllerKey;
+    private @Nullable Output<Integer> controllerKey;
 
-    public Output<Integer> controllerKey() {
-        return this.controllerKey == null ? Codegen.empty() : this.controllerKey;
+    public Optional<Output<Integer>> controllerKey() {
+        return Optional.ofNullable(this.controllerKey);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceKey")
-      private final @Nullable Output<Integer> deviceKey;
+    private @Nullable Output<Integer> deviceKey;
 
-    public Output<Integer> deviceKey() {
-        return this.deviceKey == null ? Codegen.empty() : this.deviceKey;
+    public Optional<Output<Integer>> deviceKey() {
+        return Optional.ofNullable(this.deviceKey);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskMode")
-      private final @Nullable Output<Either<String,DiskMode>> diskMode;
+    private @Nullable Output<Either<String,DiskMode>> diskMode;
 
-    public Output<Either<String,DiskMode>> diskMode() {
-        return this.diskMode == null ? Codegen.empty() : this.diskMode;
+    public Optional<Output<Either<String,DiskMode>>> diskMode() {
+        return Optional.ofNullable(this.diskMode);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Output<Integer> diskSizeGB;
+    private @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
+    public Optional<Output<Integer>> diskSizeGB() {
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<Either<String,DiskType>> diskType;
+    private @Nullable Output<Either<String,DiskType>> diskType;
 
-    public Output<Either<String,DiskType>> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<Either<String,DiskType>>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -105,141 +105,118 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="unitNumber")
-      private final @Nullable Output<Integer> unitNumber;
+    private @Nullable Output<Integer> unitNumber;
 
-    public Output<Integer> unitNumber() {
-        return this.unitNumber == null ? Codegen.empty() : this.unitNumber;
+    public Optional<Output<Integer>> unitNumber() {
+        return Optional.ofNullable(this.unitNumber);
     }
 
-    public VirtualDiskArgs(
-        @Nullable Output<Integer> controllerKey,
-        @Nullable Output<Integer> deviceKey,
-        @Nullable Output<String> deviceName,
-        @Nullable Output<Either<String,DiskMode>> diskMode,
-        @Nullable Output<Integer> diskSizeGB,
-        @Nullable Output<Either<String,DiskType>> diskType,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> unitNumber) {
-        this.controllerKey = controllerKey;
-        this.deviceKey = deviceKey;
-        this.deviceName = deviceName;
-        this.diskMode = diskMode;
-        this.diskSizeGB = diskSizeGB;
-        this.diskType = diskType;
-        this.name = name;
-        this.unitNumber = unitNumber;
-    }
+    private VirtualDiskArgs() {}
 
-    private VirtualDiskArgs() {
-        this.controllerKey = Codegen.empty();
-        this.deviceKey = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.diskMode = Codegen.empty();
-        this.diskSizeGB = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.unitNumber = Codegen.empty();
+    private VirtualDiskArgs(VirtualDiskArgs $) {
+        this.controllerKey = $.controllerKey;
+        this.deviceKey = $.deviceKey;
+        this.deviceName = $.deviceName;
+        this.diskMode = $.diskMode;
+        this.diskSizeGB = $.diskSizeGB;
+        this.diskType = $.diskType;
+        this.name = $.name;
+        this.unitNumber = $.unitNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> controllerKey;
-        private @Nullable Output<Integer> deviceKey;
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<Either<String,DiskMode>> diskMode;
-        private @Nullable Output<Integer> diskSizeGB;
-        private @Nullable Output<Either<String,DiskType>> diskType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> unitNumber;
+        private VirtualDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualDiskArgs();
         }
 
         public Builder(VirtualDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controllerKey = defaults.controllerKey;
-    	      this.deviceKey = defaults.deviceKey;
-    	      this.deviceName = defaults.deviceName;
-    	      this.diskMode = defaults.diskMode;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.diskType = defaults.diskType;
-    	      this.name = defaults.name;
-    	      this.unitNumber = defaults.unitNumber;
+            $ = new VirtualDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder controllerKey(@Nullable Output<Integer> controllerKey) {
-            this.controllerKey = controllerKey;
+            $.controllerKey = controllerKey;
             return this;
         }
-        public Builder controllerKey(@Nullable Integer controllerKey) {
-            this.controllerKey = Codegen.ofNullable(controllerKey);
-            return this;
+
+        public Builder controllerKey(Integer controllerKey) {
+            return controllerKey(Output.of(controllerKey));
         }
+
         public Builder deviceKey(@Nullable Output<Integer> deviceKey) {
-            this.deviceKey = deviceKey;
+            $.deviceKey = deviceKey;
             return this;
         }
-        public Builder deviceKey(@Nullable Integer deviceKey) {
-            this.deviceKey = Codegen.ofNullable(deviceKey);
-            return this;
+
+        public Builder deviceKey(Integer deviceKey) {
+            return deviceKey(Output.of(deviceKey));
         }
+
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder diskMode(@Nullable Output<Either<String,DiskMode>> diskMode) {
-            this.diskMode = diskMode;
+            $.diskMode = diskMode;
             return this;
         }
-        public Builder diskMode(@Nullable Either<String,DiskMode> diskMode) {
-            this.diskMode = Codegen.ofNullable(diskMode);
-            return this;
+
+        public Builder diskMode(Either<String,DiskMode> diskMode) {
+            return diskMode(Output.of(diskMode));
         }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
-        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
-            return this;
+
+        public Builder diskSizeGB(Integer diskSizeGB) {
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder diskType(@Nullable Output<Either<String,DiskType>> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable Either<String,DiskType> diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(Either<String,DiskType> diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder unitNumber(@Nullable Output<Integer> unitNumber) {
-            this.unitNumber = unitNumber;
+            $.unitNumber = unitNumber;
             return this;
         }
-        public Builder unitNumber(@Nullable Integer unitNumber) {
-            this.unitNumber = Codegen.ofNullable(unitNumber);
-            return this;
-        }        public VirtualDiskArgs build() {
-            return new VirtualDiskArgs(controllerKey, deviceKey, deviceName, diskMode, diskSizeGB, diskType, name, unitNumber);
+
+        public Builder unitNumber(Integer unitNumber) {
+            return unitNumber(Output.of(unitNumber));
+        }
+
+        public VirtualDiskArgs build() {
+            return $;
         }
     }
+
 }

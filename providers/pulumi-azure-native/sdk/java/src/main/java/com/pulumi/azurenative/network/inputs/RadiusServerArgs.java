@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class RadiusServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="radiusServerAddress", required=true)
-      private final Output<String> radiusServerAddress;
+    private Output<String> radiusServerAddress;
 
     public Output<String> radiusServerAddress() {
         return this.radiusServerAddress;
@@ -36,10 +36,10 @@ public final class RadiusServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="radiusServerScore")
-      private final @Nullable Output<Double> radiusServerScore;
+    private @Nullable Output<Double> radiusServerScore;
 
-    public Output<Double> radiusServerScore() {
-        return this.radiusServerScore == null ? Codegen.empty() : this.radiusServerScore;
+    public Optional<Output<Double>> radiusServerScore() {
+        return Optional.ofNullable(this.radiusServerScore);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class RadiusServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="radiusServerSecret")
-      private final @Nullable Output<String> radiusServerSecret;
+    private @Nullable Output<String> radiusServerSecret;
 
-    public Output<String> radiusServerSecret() {
-        return this.radiusServerSecret == null ? Codegen.empty() : this.radiusServerSecret;
+    public Optional<Output<String>> radiusServerSecret() {
+        return Optional.ofNullable(this.radiusServerSecret);
     }
 
-    public RadiusServerArgs(
-        Output<String> radiusServerAddress,
-        @Nullable Output<Double> radiusServerScore,
-        @Nullable Output<String> radiusServerSecret) {
-        this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress, "expected parameter 'radiusServerAddress' to be non-null");
-        this.radiusServerScore = radiusServerScore;
-        this.radiusServerSecret = radiusServerSecret;
-    }
+    private RadiusServerArgs() {}
 
-    private RadiusServerArgs() {
-        this.radiusServerAddress = Codegen.empty();
-        this.radiusServerScore = Codegen.empty();
-        this.radiusServerSecret = Codegen.empty();
+    private RadiusServerArgs(RadiusServerArgs $) {
+        this.radiusServerAddress = $.radiusServerAddress;
+        this.radiusServerScore = $.radiusServerScore;
+        this.radiusServerSecret = $.radiusServerSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RadiusServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> radiusServerAddress;
-        private @Nullable Output<Double> radiusServerScore;
-        private @Nullable Output<String> radiusServerSecret;
+        private RadiusServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RadiusServerArgs();
         }
 
         public Builder(RadiusServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.radiusServerAddress = defaults.radiusServerAddress;
-    	      this.radiusServerScore = defaults.radiusServerScore;
-    	      this.radiusServerSecret = defaults.radiusServerSecret;
+            $ = new RadiusServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder radiusServerAddress(Output<String> radiusServerAddress) {
-            this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress);
+            $.radiusServerAddress = radiusServerAddress;
             return this;
         }
+
         public Builder radiusServerAddress(String radiusServerAddress) {
-            this.radiusServerAddress = Output.of(Objects.requireNonNull(radiusServerAddress));
-            return this;
+            return radiusServerAddress(Output.of(radiusServerAddress));
         }
+
         public Builder radiusServerScore(@Nullable Output<Double> radiusServerScore) {
-            this.radiusServerScore = radiusServerScore;
+            $.radiusServerScore = radiusServerScore;
             return this;
         }
-        public Builder radiusServerScore(@Nullable Double radiusServerScore) {
-            this.radiusServerScore = Codegen.ofNullable(radiusServerScore);
-            return this;
+
+        public Builder radiusServerScore(Double radiusServerScore) {
+            return radiusServerScore(Output.of(radiusServerScore));
         }
+
         public Builder radiusServerSecret(@Nullable Output<String> radiusServerSecret) {
-            this.radiusServerSecret = radiusServerSecret;
+            $.radiusServerSecret = radiusServerSecret;
             return this;
         }
-        public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
-            this.radiusServerSecret = Codegen.ofNullable(radiusServerSecret);
-            return this;
-        }        public RadiusServerArgs build() {
-            return new RadiusServerArgs(radiusServerAddress, radiusServerScore, radiusServerSecret);
+
+        public Builder radiusServerSecret(String radiusServerSecret) {
+            return radiusServerSecret(Output.of(radiusServerSecret));
+        }
+
+        public RadiusServerArgs build() {
+            $.radiusServerAddress = Objects.requireNonNull($.radiusServerAddress, "expected parameter 'radiusServerAddress' to be non-null");
+            return $;
         }
     }
+
 }

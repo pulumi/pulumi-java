@@ -17,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="allowClaim")
-      private final @Nullable Output<Boolean> allowClaim;
+    private @Nullable Output<Boolean> allowClaim;
 
-    public Output<Boolean> allowClaim() {
-        return this.allowClaim == null ? Codegen.empty() : this.allowClaim;
+    public Optional<Output<Boolean>> allowClaim() {
+        return Optional.ofNullable(this.allowClaim);
     }
 
     /**
@@ -44,10 +45,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="artifacts")
-      private final @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts;
+    private @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts;
 
-    public Output<List<ArtifactInstallPropertiesArgs>> artifacts() {
-        return this.artifacts == null ? Codegen.empty() : this.artifacts;
+    public Optional<Output<List<ArtifactInstallPropertiesArgs>>> artifacts() {
+        return Optional.ofNullable(this.artifacts);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="bulkCreationParameters")
-      private final @Nullable Output<BulkCreationParametersArgs> bulkCreationParameters;
+    private @Nullable Output<BulkCreationParametersArgs> bulkCreationParameters;
 
-    public Output<BulkCreationParametersArgs> bulkCreationParameters() {
-        return this.bulkCreationParameters == null ? Codegen.empty() : this.bulkCreationParameters;
+    public Optional<Output<BulkCreationParametersArgs>> bulkCreationParameters() {
+        return Optional.ofNullable(this.bulkCreationParameters);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="customImageId")
-      private final @Nullable Output<String> customImageId;
+    private @Nullable Output<String> customImageId;
 
-    public Output<String> customImageId() {
-        return this.customImageId == null ? Codegen.empty() : this.customImageId;
+    public Optional<Output<String>> customImageId() {
+        return Optional.ofNullable(this.customImageId);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="dataDiskParameters")
-      private final @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters;
+    private @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters;
 
-    public Output<List<DataDiskPropertiesArgs>> dataDiskParameters() {
-        return this.dataDiskParameters == null ? Codegen.empty() : this.dataDiskParameters;
+    public Optional<Output<List<DataDiskPropertiesArgs>>> dataDiskParameters() {
+        return Optional.ofNullable(this.dataDiskParameters);
     }
 
     /**
@@ -99,10 +100,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="disallowPublicIpAddress")
-      private final @Nullable Output<Boolean> disallowPublicIpAddress;
+    private @Nullable Output<Boolean> disallowPublicIpAddress;
 
-    public Output<Boolean> disallowPublicIpAddress() {
-        return this.disallowPublicIpAddress == null ? Codegen.empty() : this.disallowPublicIpAddress;
+    public Optional<Output<Boolean>> disallowPublicIpAddress() {
+        return Optional.ofNullable(this.disallowPublicIpAddress);
     }
 
     /**
@@ -110,10 +111,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable Output<String> environmentId;
+    private @Nullable Output<String> environmentId;
 
-    public Output<String> environmentId() {
-        return this.environmentId == null ? Codegen.empty() : this.environmentId;
+    public Optional<Output<String>> environmentId() {
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -121,10 +122,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="expirationDate")
-      private final @Nullable Output<String> expirationDate;
+    private @Nullable Output<String> expirationDate;
 
-    public Output<String> expirationDate() {
-        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
+    public Optional<Output<String>> expirationDate() {
+        return Optional.ofNullable(this.expirationDate);
     }
 
     /**
@@ -132,10 +133,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="galleryImageReference")
-      private final @Nullable Output<GalleryImageReferenceArgs> galleryImageReference;
+    private @Nullable Output<GalleryImageReferenceArgs> galleryImageReference;
 
-    public Output<GalleryImageReferenceArgs> galleryImageReference() {
-        return this.galleryImageReference == null ? Codegen.empty() : this.galleryImageReference;
+    public Optional<Output<GalleryImageReferenceArgs>> galleryImageReference() {
+        return Optional.ofNullable(this.galleryImageReference);
     }
 
     /**
@@ -143,10 +144,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="isAuthenticationWithSshKey")
-      private final @Nullable Output<Boolean> isAuthenticationWithSshKey;
+    private @Nullable Output<Boolean> isAuthenticationWithSshKey;
 
-    public Output<Boolean> isAuthenticationWithSshKey() {
-        return this.isAuthenticationWithSshKey == null ? Codegen.empty() : this.isAuthenticationWithSshKey;
+    public Optional<Output<Boolean>> isAuthenticationWithSshKey() {
+        return Optional.ofNullable(this.isAuthenticationWithSshKey);
     }
 
     /**
@@ -154,10 +155,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="labSubnetName")
-      private final @Nullable Output<String> labSubnetName;
+    private @Nullable Output<String> labSubnetName;
 
-    public Output<String> labSubnetName() {
-        return this.labSubnetName == null ? Codegen.empty() : this.labSubnetName;
+    public Optional<Output<String>> labSubnetName() {
+        return Optional.ofNullable(this.labSubnetName);
     }
 
     /**
@@ -165,10 +166,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="labVirtualNetworkId")
-      private final @Nullable Output<String> labVirtualNetworkId;
+    private @Nullable Output<String> labVirtualNetworkId;
 
-    public Output<String> labVirtualNetworkId() {
-        return this.labVirtualNetworkId == null ? Codegen.empty() : this.labVirtualNetworkId;
+    public Optional<Output<String>> labVirtualNetworkId() {
+        return Optional.ofNullable(this.labVirtualNetworkId);
     }
 
     /**
@@ -176,10 +177,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -187,10 +188,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -198,10 +199,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="networkInterface")
-      private final @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface;
+    private @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface;
 
-    public Output<NetworkInterfacePropertiesArgs> networkInterface() {
-        return this.networkInterface == null ? Codegen.empty() : this.networkInterface;
+    public Optional<Output<NetworkInterfacePropertiesArgs>> networkInterface() {
+        return Optional.ofNullable(this.networkInterface);
     }
 
     /**
@@ -209,10 +210,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="notes")
-      private final @Nullable Output<String> notes;
+    private @Nullable Output<String> notes;
 
-    public Output<String> notes() {
-        return this.notes == null ? Codegen.empty() : this.notes;
+    public Optional<Output<String>> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     /**
@@ -220,10 +221,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="ownerObjectId")
-      private final @Nullable Output<String> ownerObjectId;
+    private @Nullable Output<String> ownerObjectId;
 
-    public Output<String> ownerObjectId() {
-        return this.ownerObjectId == null ? Codegen.empty() : this.ownerObjectId;
+    public Optional<Output<String>> ownerObjectId() {
+        return Optional.ofNullable(this.ownerObjectId);
     }
 
     /**
@@ -231,10 +232,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="ownerUserPrincipalName")
-      private final @Nullable Output<String> ownerUserPrincipalName;
+    private @Nullable Output<String> ownerUserPrincipalName;
 
-    public Output<String> ownerUserPrincipalName() {
-        return this.ownerUserPrincipalName == null ? Codegen.empty() : this.ownerUserPrincipalName;
+    public Optional<Output<String>> ownerUserPrincipalName() {
+        return Optional.ofNullable(this.ownerUserPrincipalName);
     }
 
     /**
@@ -242,10 +243,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -253,10 +254,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="planId")
-      private final @Nullable Output<String> planId;
+    private @Nullable Output<String> planId;
 
-    public Output<String> planId() {
-        return this.planId == null ? Codegen.empty() : this.planId;
+    public Optional<Output<String>> planId() {
+        return Optional.ofNullable(this.planId);
     }
 
     /**
@@ -264,10 +265,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="scheduleParameters")
-      private final @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters;
+    private @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters;
 
-    public Output<List<ScheduleCreationParameterArgs>> scheduleParameters() {
-        return this.scheduleParameters == null ? Codegen.empty() : this.scheduleParameters;
+    public Optional<Output<List<ScheduleCreationParameterArgs>>> scheduleParameters() {
+        return Optional.ofNullable(this.scheduleParameters);
     }
 
     /**
@@ -275,10 +276,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<String> size;
+    private @Nullable Output<String> size;
 
-    public Output<String> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<String>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -286,10 +287,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="sshKey")
-      private final @Nullable Output<String> sshKey;
+    private @Nullable Output<String> sshKey;
 
-    public Output<String> sshKey() {
-        return this.sshKey == null ? Codegen.empty() : this.sshKey;
+    public Optional<Output<String>> sshKey() {
+        return Optional.ofNullable(this.sshKey);
     }
 
     /**
@@ -297,10 +298,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="storageType")
-      private final @Nullable Output<String> storageType;
+    private @Nullable Output<String> storageType;
 
-    public Output<String> storageType() {
-        return this.storageType == null ? Codegen.empty() : this.storageType;
+    public Optional<Output<String>> storageType() {
+        return Optional.ofNullable(this.storageType);
     }
 
     /**
@@ -308,10 +309,10 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -319,397 +320,324 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public LabVirtualMachineCreationParameterArgs(
-        @Nullable Output<Boolean> allowClaim,
-        @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts,
-        @Nullable Output<BulkCreationParametersArgs> bulkCreationParameters,
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> customImageId,
-        @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters,
-        @Nullable Output<Boolean> disallowPublicIpAddress,
-        @Nullable Output<String> environmentId,
-        @Nullable Output<String> expirationDate,
-        @Nullable Output<GalleryImageReferenceArgs> galleryImageReference,
-        @Nullable Output<Boolean> isAuthenticationWithSshKey,
-        @Nullable Output<String> labSubnetName,
-        @Nullable Output<String> labVirtualNetworkId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface,
-        @Nullable Output<String> notes,
-        @Nullable Output<String> ownerObjectId,
-        @Nullable Output<String> ownerUserPrincipalName,
-        @Nullable Output<String> password,
-        @Nullable Output<String> planId,
-        @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters,
-        @Nullable Output<String> size,
-        @Nullable Output<String> sshKey,
-        @Nullable Output<String> storageType,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> userName) {
-        this.allowClaim = Codegen.booleanProp("allowClaim").output().arg(allowClaim).def(false).getNullable();
-        this.artifacts = artifacts;
-        this.bulkCreationParameters = bulkCreationParameters;
-        this.createdDate = createdDate;
-        this.customImageId = customImageId;
-        this.dataDiskParameters = dataDiskParameters;
-        this.disallowPublicIpAddress = Codegen.booleanProp("disallowPublicIpAddress").output().arg(disallowPublicIpAddress).def(false).getNullable();
-        this.environmentId = environmentId;
-        this.expirationDate = expirationDate;
-        this.galleryImageReference = galleryImageReference;
-        this.isAuthenticationWithSshKey = isAuthenticationWithSshKey;
-        this.labSubnetName = labSubnetName;
-        this.labVirtualNetworkId = labVirtualNetworkId;
-        this.location = location;
-        this.name = name;
-        this.networkInterface = networkInterface;
-        this.notes = notes;
-        this.ownerObjectId = Codegen.stringProp("ownerObjectId").output().arg(ownerObjectId).def("dynamicValue").getNullable();
-        this.ownerUserPrincipalName = ownerUserPrincipalName;
-        this.password = password;
-        this.planId = planId;
-        this.scheduleParameters = scheduleParameters;
-        this.size = size;
-        this.sshKey = sshKey;
-        this.storageType = Codegen.stringProp("storageType").output().arg(storageType).def("labStorageType").getNullable();
-        this.tags = tags;
-        this.userName = userName;
-    }
+    private LabVirtualMachineCreationParameterArgs() {}
 
-    private LabVirtualMachineCreationParameterArgs() {
-        this.allowClaim = Codegen.empty();
-        this.artifacts = Codegen.empty();
-        this.bulkCreationParameters = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.customImageId = Codegen.empty();
-        this.dataDiskParameters = Codegen.empty();
-        this.disallowPublicIpAddress = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.expirationDate = Codegen.empty();
-        this.galleryImageReference = Codegen.empty();
-        this.isAuthenticationWithSshKey = Codegen.empty();
-        this.labSubnetName = Codegen.empty();
-        this.labVirtualNetworkId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkInterface = Codegen.empty();
-        this.notes = Codegen.empty();
-        this.ownerObjectId = Codegen.empty();
-        this.ownerUserPrincipalName = Codegen.empty();
-        this.password = Codegen.empty();
-        this.planId = Codegen.empty();
-        this.scheduleParameters = Codegen.empty();
-        this.size = Codegen.empty();
-        this.sshKey = Codegen.empty();
-        this.storageType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userName = Codegen.empty();
+    private LabVirtualMachineCreationParameterArgs(LabVirtualMachineCreationParameterArgs $) {
+        this.allowClaim = $.allowClaim;
+        this.artifacts = $.artifacts;
+        this.bulkCreationParameters = $.bulkCreationParameters;
+        this.createdDate = $.createdDate;
+        this.customImageId = $.customImageId;
+        this.dataDiskParameters = $.dataDiskParameters;
+        this.disallowPublicIpAddress = $.disallowPublicIpAddress;
+        this.environmentId = $.environmentId;
+        this.expirationDate = $.expirationDate;
+        this.galleryImageReference = $.galleryImageReference;
+        this.isAuthenticationWithSshKey = $.isAuthenticationWithSshKey;
+        this.labSubnetName = $.labSubnetName;
+        this.labVirtualNetworkId = $.labVirtualNetworkId;
+        this.location = $.location;
+        this.name = $.name;
+        this.networkInterface = $.networkInterface;
+        this.notes = $.notes;
+        this.ownerObjectId = $.ownerObjectId;
+        this.ownerUserPrincipalName = $.ownerUserPrincipalName;
+        this.password = $.password;
+        this.planId = $.planId;
+        this.scheduleParameters = $.scheduleParameters;
+        this.size = $.size;
+        this.sshKey = $.sshKey;
+        this.storageType = $.storageType;
+        this.tags = $.tags;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabVirtualMachineCreationParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowClaim;
-        private @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts;
-        private @Nullable Output<BulkCreationParametersArgs> bulkCreationParameters;
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> customImageId;
-        private @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters;
-        private @Nullable Output<Boolean> disallowPublicIpAddress;
-        private @Nullable Output<String> environmentId;
-        private @Nullable Output<String> expirationDate;
-        private @Nullable Output<GalleryImageReferenceArgs> galleryImageReference;
-        private @Nullable Output<Boolean> isAuthenticationWithSshKey;
-        private @Nullable Output<String> labSubnetName;
-        private @Nullable Output<String> labVirtualNetworkId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface;
-        private @Nullable Output<String> notes;
-        private @Nullable Output<String> ownerObjectId;
-        private @Nullable Output<String> ownerUserPrincipalName;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> planId;
-        private @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters;
-        private @Nullable Output<String> size;
-        private @Nullable Output<String> sshKey;
-        private @Nullable Output<String> storageType;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> userName;
+        private LabVirtualMachineCreationParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabVirtualMachineCreationParameterArgs();
         }
 
         public Builder(LabVirtualMachineCreationParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowClaim = defaults.allowClaim;
-    	      this.artifacts = defaults.artifacts;
-    	      this.bulkCreationParameters = defaults.bulkCreationParameters;
-    	      this.createdDate = defaults.createdDate;
-    	      this.customImageId = defaults.customImageId;
-    	      this.dataDiskParameters = defaults.dataDiskParameters;
-    	      this.disallowPublicIpAddress = defaults.disallowPublicIpAddress;
-    	      this.environmentId = defaults.environmentId;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.galleryImageReference = defaults.galleryImageReference;
-    	      this.isAuthenticationWithSshKey = defaults.isAuthenticationWithSshKey;
-    	      this.labSubnetName = defaults.labSubnetName;
-    	      this.labVirtualNetworkId = defaults.labVirtualNetworkId;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.networkInterface = defaults.networkInterface;
-    	      this.notes = defaults.notes;
-    	      this.ownerObjectId = defaults.ownerObjectId;
-    	      this.ownerUserPrincipalName = defaults.ownerUserPrincipalName;
-    	      this.password = defaults.password;
-    	      this.planId = defaults.planId;
-    	      this.scheduleParameters = defaults.scheduleParameters;
-    	      this.size = defaults.size;
-    	      this.sshKey = defaults.sshKey;
-    	      this.storageType = defaults.storageType;
-    	      this.tags = defaults.tags;
-    	      this.userName = defaults.userName;
+            $ = new LabVirtualMachineCreationParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowClaim(@Nullable Output<Boolean> allowClaim) {
-            this.allowClaim = allowClaim;
+            $.allowClaim = allowClaim;
             return this;
         }
-        public Builder allowClaim(@Nullable Boolean allowClaim) {
-            this.allowClaim = Codegen.ofNullable(allowClaim);
-            return this;
+
+        public Builder allowClaim(Boolean allowClaim) {
+            return allowClaim(Output.of(allowClaim));
         }
+
         public Builder artifacts(@Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts) {
-            this.artifacts = artifacts;
+            $.artifacts = artifacts;
             return this;
         }
-        public Builder artifacts(@Nullable List<ArtifactInstallPropertiesArgs> artifacts) {
-            this.artifacts = Codegen.ofNullable(artifacts);
-            return this;
+
+        public Builder artifacts(List<ArtifactInstallPropertiesArgs> artifacts) {
+            return artifacts(Output.of(artifacts));
         }
+
         public Builder artifacts(ArtifactInstallPropertiesArgs... artifacts) {
             return artifacts(List.of(artifacts));
         }
+
         public Builder bulkCreationParameters(@Nullable Output<BulkCreationParametersArgs> bulkCreationParameters) {
-            this.bulkCreationParameters = bulkCreationParameters;
+            $.bulkCreationParameters = bulkCreationParameters;
             return this;
         }
-        public Builder bulkCreationParameters(@Nullable BulkCreationParametersArgs bulkCreationParameters) {
-            this.bulkCreationParameters = Codegen.ofNullable(bulkCreationParameters);
-            return this;
+
+        public Builder bulkCreationParameters(BulkCreationParametersArgs bulkCreationParameters) {
+            return bulkCreationParameters(Output.of(bulkCreationParameters));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder customImageId(@Nullable Output<String> customImageId) {
-            this.customImageId = customImageId;
+            $.customImageId = customImageId;
             return this;
         }
-        public Builder customImageId(@Nullable String customImageId) {
-            this.customImageId = Codegen.ofNullable(customImageId);
-            return this;
+
+        public Builder customImageId(String customImageId) {
+            return customImageId(Output.of(customImageId));
         }
+
         public Builder dataDiskParameters(@Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters) {
-            this.dataDiskParameters = dataDiskParameters;
+            $.dataDiskParameters = dataDiskParameters;
             return this;
         }
-        public Builder dataDiskParameters(@Nullable List<DataDiskPropertiesArgs> dataDiskParameters) {
-            this.dataDiskParameters = Codegen.ofNullable(dataDiskParameters);
-            return this;
+
+        public Builder dataDiskParameters(List<DataDiskPropertiesArgs> dataDiskParameters) {
+            return dataDiskParameters(Output.of(dataDiskParameters));
         }
+
         public Builder dataDiskParameters(DataDiskPropertiesArgs... dataDiskParameters) {
             return dataDiskParameters(List.of(dataDiskParameters));
         }
+
         public Builder disallowPublicIpAddress(@Nullable Output<Boolean> disallowPublicIpAddress) {
-            this.disallowPublicIpAddress = disallowPublicIpAddress;
+            $.disallowPublicIpAddress = disallowPublicIpAddress;
             return this;
         }
-        public Builder disallowPublicIpAddress(@Nullable Boolean disallowPublicIpAddress) {
-            this.disallowPublicIpAddress = Codegen.ofNullable(disallowPublicIpAddress);
-            return this;
+
+        public Builder disallowPublicIpAddress(Boolean disallowPublicIpAddress) {
+            return disallowPublicIpAddress(Output.of(disallowPublicIpAddress));
         }
+
         public Builder environmentId(@Nullable Output<String> environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
-        public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Codegen.ofNullable(environmentId);
-            return this;
+
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
-            this.expirationDate = expirationDate;
+            $.expirationDate = expirationDate;
             return this;
         }
-        public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Codegen.ofNullable(expirationDate);
-            return this;
+
+        public Builder expirationDate(String expirationDate) {
+            return expirationDate(Output.of(expirationDate));
         }
+
         public Builder galleryImageReference(@Nullable Output<GalleryImageReferenceArgs> galleryImageReference) {
-            this.galleryImageReference = galleryImageReference;
+            $.galleryImageReference = galleryImageReference;
             return this;
         }
-        public Builder galleryImageReference(@Nullable GalleryImageReferenceArgs galleryImageReference) {
-            this.galleryImageReference = Codegen.ofNullable(galleryImageReference);
-            return this;
+
+        public Builder galleryImageReference(GalleryImageReferenceArgs galleryImageReference) {
+            return galleryImageReference(Output.of(galleryImageReference));
         }
+
         public Builder isAuthenticationWithSshKey(@Nullable Output<Boolean> isAuthenticationWithSshKey) {
-            this.isAuthenticationWithSshKey = isAuthenticationWithSshKey;
+            $.isAuthenticationWithSshKey = isAuthenticationWithSshKey;
             return this;
         }
-        public Builder isAuthenticationWithSshKey(@Nullable Boolean isAuthenticationWithSshKey) {
-            this.isAuthenticationWithSshKey = Codegen.ofNullable(isAuthenticationWithSshKey);
-            return this;
+
+        public Builder isAuthenticationWithSshKey(Boolean isAuthenticationWithSshKey) {
+            return isAuthenticationWithSshKey(Output.of(isAuthenticationWithSshKey));
         }
+
         public Builder labSubnetName(@Nullable Output<String> labSubnetName) {
-            this.labSubnetName = labSubnetName;
+            $.labSubnetName = labSubnetName;
             return this;
         }
-        public Builder labSubnetName(@Nullable String labSubnetName) {
-            this.labSubnetName = Codegen.ofNullable(labSubnetName);
-            return this;
+
+        public Builder labSubnetName(String labSubnetName) {
+            return labSubnetName(Output.of(labSubnetName));
         }
+
         public Builder labVirtualNetworkId(@Nullable Output<String> labVirtualNetworkId) {
-            this.labVirtualNetworkId = labVirtualNetworkId;
+            $.labVirtualNetworkId = labVirtualNetworkId;
             return this;
         }
-        public Builder labVirtualNetworkId(@Nullable String labVirtualNetworkId) {
-            this.labVirtualNetworkId = Codegen.ofNullable(labVirtualNetworkId);
-            return this;
+
+        public Builder labVirtualNetworkId(String labVirtualNetworkId) {
+            return labVirtualNetworkId(Output.of(labVirtualNetworkId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkInterface(@Nullable Output<NetworkInterfacePropertiesArgs> networkInterface) {
-            this.networkInterface = networkInterface;
+            $.networkInterface = networkInterface;
             return this;
         }
-        public Builder networkInterface(@Nullable NetworkInterfacePropertiesArgs networkInterface) {
-            this.networkInterface = Codegen.ofNullable(networkInterface);
-            return this;
+
+        public Builder networkInterface(NetworkInterfacePropertiesArgs networkInterface) {
+            return networkInterface(Output.of(networkInterface));
         }
+
         public Builder notes(@Nullable Output<String> notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
-        public Builder notes(@Nullable String notes) {
-            this.notes = Codegen.ofNullable(notes);
-            return this;
+
+        public Builder notes(String notes) {
+            return notes(Output.of(notes));
         }
+
         public Builder ownerObjectId(@Nullable Output<String> ownerObjectId) {
-            this.ownerObjectId = ownerObjectId;
+            $.ownerObjectId = ownerObjectId;
             return this;
         }
-        public Builder ownerObjectId(@Nullable String ownerObjectId) {
-            this.ownerObjectId = Codegen.ofNullable(ownerObjectId);
-            return this;
+
+        public Builder ownerObjectId(String ownerObjectId) {
+            return ownerObjectId(Output.of(ownerObjectId));
         }
+
         public Builder ownerUserPrincipalName(@Nullable Output<String> ownerUserPrincipalName) {
-            this.ownerUserPrincipalName = ownerUserPrincipalName;
+            $.ownerUserPrincipalName = ownerUserPrincipalName;
             return this;
         }
-        public Builder ownerUserPrincipalName(@Nullable String ownerUserPrincipalName) {
-            this.ownerUserPrincipalName = Codegen.ofNullable(ownerUserPrincipalName);
-            return this;
+
+        public Builder ownerUserPrincipalName(String ownerUserPrincipalName) {
+            return ownerUserPrincipalName(Output.of(ownerUserPrincipalName));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder planId(@Nullable Output<String> planId) {
-            this.planId = planId;
+            $.planId = planId;
             return this;
         }
-        public Builder planId(@Nullable String planId) {
-            this.planId = Codegen.ofNullable(planId);
-            return this;
+
+        public Builder planId(String planId) {
+            return planId(Output.of(planId));
         }
+
         public Builder scheduleParameters(@Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters) {
-            this.scheduleParameters = scheduleParameters;
+            $.scheduleParameters = scheduleParameters;
             return this;
         }
-        public Builder scheduleParameters(@Nullable List<ScheduleCreationParameterArgs> scheduleParameters) {
-            this.scheduleParameters = Codegen.ofNullable(scheduleParameters);
-            return this;
+
+        public Builder scheduleParameters(List<ScheduleCreationParameterArgs> scheduleParameters) {
+            return scheduleParameters(Output.of(scheduleParameters));
         }
+
         public Builder scheduleParameters(ScheduleCreationParameterArgs... scheduleParameters) {
             return scheduleParameters(List.of(scheduleParameters));
         }
+
         public Builder size(@Nullable Output<String> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable String size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(String size) {
+            return size(Output.of(size));
         }
+
         public Builder sshKey(@Nullable Output<String> sshKey) {
-            this.sshKey = sshKey;
+            $.sshKey = sshKey;
             return this;
         }
-        public Builder sshKey(@Nullable String sshKey) {
-            this.sshKey = Codegen.ofNullable(sshKey);
-            return this;
+
+        public Builder sshKey(String sshKey) {
+            return sshKey(Output.of(sshKey));
         }
+
         public Builder storageType(@Nullable Output<String> storageType) {
-            this.storageType = storageType;
+            $.storageType = storageType;
             return this;
         }
-        public Builder storageType(@Nullable String storageType) {
-            this.storageType = Codegen.ofNullable(storageType);
-            return this;
+
+        public Builder storageType(String storageType) {
+            return storageType(Output.of(storageType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public LabVirtualMachineCreationParameterArgs build() {
-            return new LabVirtualMachineCreationParameterArgs(allowClaim, artifacts, bulkCreationParameters, createdDate, customImageId, dataDiskParameters, disallowPublicIpAddress, environmentId, expirationDate, galleryImageReference, isAuthenticationWithSshKey, labSubnetName, labVirtualNetworkId, location, name, networkInterface, notes, ownerObjectId, ownerUserPrincipalName, password, planId, scheduleParameters, size, sshKey, storageType, tags, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public LabVirtualMachineCreationParameterArgs build() {
+            $.allowClaim = Codegen.booleanProp("allowClaim").output().arg($.allowClaim).def(false).getNullable();
+            $.disallowPublicIpAddress = Codegen.booleanProp("disallowPublicIpAddress").output().arg($.disallowPublicIpAddress).def(false).getNullable();
+            $.ownerObjectId = Codegen.stringProp("ownerObjectId").output().arg($.ownerObjectId).def("dynamicValue").getNullable();
+            $.storageType = Codegen.stringProp("storageType").output().arg($.storageType).def("labStorageType").getNullable();
+            return $;
         }
     }
+
 }

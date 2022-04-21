@@ -25,7 +25,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -36,10 +36,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
      * 
      */
     @Import(name="linkIdentifier", required=true)
-      private final String linkIdentifier;
+    private String linkIdentifier;
 
     public String linkIdentifier() {
         return this.linkIdentifier;
@@ -58,10 +58,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
      * 
      */
     @Import(name="privateEndpoint", required=true)
-      private final PrivateEndpointResponse privateEndpoint;
+    private PrivateEndpointResponse privateEndpoint;
 
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
@@ -80,10 +80,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -102,109 +102,91 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ApplicationGatewayPrivateEndpointConnectionResponse(
-        String etag,
-        @Nullable String id,
-        String linkIdentifier,
-        @Nullable String name,
-        PrivateEndpointResponse privateEndpoint,
-        @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState,
-        String type) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.linkIdentifier = Objects.requireNonNull(linkIdentifier, "expected parameter 'linkIdentifier' to be non-null");
-        this.name = name;
-        this.privateEndpoint = Objects.requireNonNull(privateEndpoint, "expected parameter 'privateEndpoint' to be non-null");
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationGatewayPrivateEndpointConnectionResponse() {}
 
-    private ApplicationGatewayPrivateEndpointConnectionResponse() {
-        this.etag = null;
-        this.id = null;
-        this.linkIdentifier = null;
-        this.name = null;
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
-        this.provisioningState = null;
-        this.type = null;
+    private ApplicationGatewayPrivateEndpointConnectionResponse(ApplicationGatewayPrivateEndpointConnectionResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.linkIdentifier = $.linkIdentifier;
+        this.name = $.name;
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayPrivateEndpointConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private String linkIdentifier;
-        private @Nullable String name;
-        private PrivateEndpointResponse privateEndpoint;
-        private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-        private String provisioningState;
-        private String type;
+        private ApplicationGatewayPrivateEndpointConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayPrivateEndpointConnectionResponse();
         }
 
         public Builder(ApplicationGatewayPrivateEndpointConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.linkIdentifier = defaults.linkIdentifier;
-    	      this.name = defaults.name;
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new ApplicationGatewayPrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder linkIdentifier(String linkIdentifier) {
-            this.linkIdentifier = Objects.requireNonNull(linkIdentifier);
+            $.linkIdentifier = linkIdentifier;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
-            this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ApplicationGatewayPrivateEndpointConnectionResponse build() {
-            return new ApplicationGatewayPrivateEndpointConnectionResponse(etag, id, linkIdentifier, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
+        }
+
+        public ApplicationGatewayPrivateEndpointConnectionResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.linkIdentifier = Objects.requireNonNull($.linkIdentifier, "expected parameter 'linkIdentifier' to be non-null");
+            $.privateEndpoint = Objects.requireNonNull($.privateEndpoint, "expected parameter 'privateEndpoint' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

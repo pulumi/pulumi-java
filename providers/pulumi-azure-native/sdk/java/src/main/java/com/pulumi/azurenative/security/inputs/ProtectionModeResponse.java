@@ -23,10 +23,10 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exe")
-      private final @Nullable String exe;
+    private @Nullable String exe;
 
     public Optional<String> exe() {
-        return this.exe == null ? Optional.empty() : Optional.ofNullable(this.exe);
+        return Optional.ofNullable(this.exe);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="executable")
-      private final @Nullable String executable;
+    private @Nullable String executable;
 
     public Optional<String> executable() {
-        return this.executable == null ? Optional.empty() : Optional.ofNullable(this.executable);
+        return Optional.ofNullable(this.executable);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="msi")
-      private final @Nullable String msi;
+    private @Nullable String msi;
 
     public Optional<String> msi() {
-        return this.msi == null ? Optional.empty() : Optional.ofNullable(this.msi);
+        return Optional.ofNullable(this.msi);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="script")
-      private final @Nullable String script;
+    private @Nullable String script;
 
     public Optional<String> script() {
-        return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
+        return Optional.ofNullable(this.script);
     }
 
-    public ProtectionModeResponse(
-        @Nullable String exe,
-        @Nullable String executable,
-        @Nullable String msi,
-        @Nullable String script) {
-        this.exe = exe;
-        this.executable = executable;
-        this.msi = msi;
-        this.script = script;
-    }
+    private ProtectionModeResponse() {}
 
-    private ProtectionModeResponse() {
-        this.exe = null;
-        this.executable = null;
-        this.msi = null;
-        this.script = null;
+    private ProtectionModeResponse(ProtectionModeResponse $) {
+        this.exe = $.exe;
+        this.executable = $.executable;
+        this.msi = $.msi;
+        this.script = $.script;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtectionModeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String exe;
-        private @Nullable String executable;
-        private @Nullable String msi;
-        private @Nullable String script;
+        private ProtectionModeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtectionModeResponse();
         }
 
         public Builder(ProtectionModeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exe = defaults.exe;
-    	      this.executable = defaults.executable;
-    	      this.msi = defaults.msi;
-    	      this.script = defaults.script;
+            $ = new ProtectionModeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exe(@Nullable String exe) {
-            this.exe = exe;
+            $.exe = exe;
             return this;
         }
+
         public Builder executable(@Nullable String executable) {
-            this.executable = executable;
+            $.executable = executable;
             return this;
         }
+
         public Builder msi(@Nullable String msi) {
-            this.msi = msi;
+            $.msi = msi;
             return this;
         }
+
         public Builder script(@Nullable String script) {
-            this.script = script;
+            $.script = script;
             return this;
-        }        public ProtectionModeResponse build() {
-            return new ProtectionModeResponse(exe, executable, msi, script);
+        }
+
+        public ProtectionModeResponse build() {
+            return $;
         }
     }
+
 }

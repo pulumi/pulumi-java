@@ -21,10 +21,10 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxInstances")
-      private final @Nullable Integer maxInstances;
+    private @Nullable Integer maxInstances;
 
     public Optional<Integer> maxInstances() {
-        return this.maxInstances == null ? Optional.empty() : Optional.ofNullable(this.maxInstances);
+        return Optional.ofNullable(this.maxInstances);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="minInstances")
-      private final @Nullable Integer minInstances;
+    private @Nullable Integer minInstances;
 
     public Optional<Integer> minInstances() {
-        return this.minInstances == null ? Optional.empty() : Optional.ofNullable(this.minInstances);
+        return Optional.ofNullable(this.minInstances);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pollingInterval")
-      private final @Nullable String pollingInterval;
+    private @Nullable String pollingInterval;
 
     public Optional<String> pollingInterval() {
-        return this.pollingInterval == null ? Optional.empty() : Optional.ofNullable(this.pollingInterval);
+        return Optional.ofNullable(this.pollingInterval);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="scaleType", required=true)
-      private final String scaleType;
+    private String scaleType;
 
     public String scaleType() {
         return this.scaleType;
@@ -65,82 +65,69 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetUtilizationPercentage")
-      private final @Nullable Integer targetUtilizationPercentage;
+    private @Nullable Integer targetUtilizationPercentage;
 
     public Optional<Integer> targetUtilizationPercentage() {
-        return this.targetUtilizationPercentage == null ? Optional.empty() : Optional.ofNullable(this.targetUtilizationPercentage);
+        return Optional.ofNullable(this.targetUtilizationPercentage);
     }
 
-    public AutoScaleSettingsResponse(
-        @Nullable Integer maxInstances,
-        @Nullable Integer minInstances,
-        @Nullable String pollingInterval,
-        String scaleType,
-        @Nullable Integer targetUtilizationPercentage) {
-        this.maxInstances = maxInstances;
-        this.minInstances = minInstances;
-        this.pollingInterval = pollingInterval;
-        this.scaleType = Codegen.stringProp("scaleType").arg(scaleType).require();
-        this.targetUtilizationPercentage = targetUtilizationPercentage;
-    }
+    private AutoScaleSettingsResponse() {}
 
-    private AutoScaleSettingsResponse() {
-        this.maxInstances = null;
-        this.minInstances = null;
-        this.pollingInterval = null;
-        this.scaleType = null;
-        this.targetUtilizationPercentage = null;
+    private AutoScaleSettingsResponse(AutoScaleSettingsResponse $) {
+        this.maxInstances = $.maxInstances;
+        this.minInstances = $.minInstances;
+        this.pollingInterval = $.pollingInterval;
+        this.scaleType = $.scaleType;
+        this.targetUtilizationPercentage = $.targetUtilizationPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScaleSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxInstances;
-        private @Nullable Integer minInstances;
-        private @Nullable String pollingInterval;
-        private String scaleType;
-        private @Nullable Integer targetUtilizationPercentage;
+        private AutoScaleSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScaleSettingsResponse();
         }
 
         public Builder(AutoScaleSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxInstances = defaults.maxInstances;
-    	      this.minInstances = defaults.minInstances;
-    	      this.pollingInterval = defaults.pollingInterval;
-    	      this.scaleType = defaults.scaleType;
-    	      this.targetUtilizationPercentage = defaults.targetUtilizationPercentage;
+            $ = new AutoScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = maxInstances;
+            $.maxInstances = maxInstances;
             return this;
         }
+
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = minInstances;
+            $.minInstances = minInstances;
             return this;
         }
+
         public Builder pollingInterval(@Nullable String pollingInterval) {
-            this.pollingInterval = pollingInterval;
+            $.pollingInterval = pollingInterval;
             return this;
         }
+
         public Builder scaleType(String scaleType) {
-            this.scaleType = Objects.requireNonNull(scaleType);
+            $.scaleType = scaleType;
             return this;
         }
+
         public Builder targetUtilizationPercentage(@Nullable Integer targetUtilizationPercentage) {
-            this.targetUtilizationPercentage = targetUtilizationPercentage;
+            $.targetUtilizationPercentage = targetUtilizationPercentage;
             return this;
-        }        public AutoScaleSettingsResponse build() {
-            return new AutoScaleSettingsResponse(maxInstances, minInstances, pollingInterval, scaleType, targetUtilizationPercentage);
+        }
+
+        public AutoScaleSettingsResponse build() {
+            $.scaleType = Codegen.stringProp("scaleType").arg($.scaleType).require();
+            return $;
         }
     }
+
 }

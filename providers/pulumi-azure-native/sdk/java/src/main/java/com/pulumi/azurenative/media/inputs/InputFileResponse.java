@@ -32,10 +32,10 @@ public final class InputFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filename")
-      private final @Nullable String filename;
+    private @Nullable String filename;
 
     public Optional<String> filename() {
-        return this.filename == null ? Optional.empty() : Optional.ofNullable(this.filename);
+        return Optional.ofNullable(this.filename);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InputFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includedTracks")
-      private final @Nullable List<Object> includedTracks;
+    private @Nullable List<Object> includedTracks;
 
-    public List<Object> includedTracks() {
-        return this.includedTracks == null ? List.of() : this.includedTracks;
+    public Optional<List<Object>> includedTracks() {
+        return Optional.ofNullable(this.includedTracks);
     }
 
     /**
@@ -55,67 +55,61 @@ public final class InputFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public InputFileResponse(
-        @Nullable String filename,
-        @Nullable List<Object> includedTracks,
-        String odataType) {
-        this.filename = filename;
-        this.includedTracks = includedTracks;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private InputFileResponse() {}
 
-    private InputFileResponse() {
-        this.filename = null;
-        this.includedTracks = List.of();
-        this.odataType = null;
+    private InputFileResponse(InputFileResponse $) {
+        this.filename = $.filename;
+        this.includedTracks = $.includedTracks;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String filename;
-        private @Nullable List<Object> includedTracks;
-        private String odataType;
+        private InputFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputFileResponse();
         }
 
         public Builder(InputFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filename = defaults.filename;
-    	      this.includedTracks = defaults.includedTracks;
-    	      this.odataType = defaults.odataType;
+            $ = new InputFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filename(@Nullable String filename) {
-            this.filename = filename;
+            $.filename = filename;
             return this;
         }
+
         public Builder includedTracks(@Nullable List<Object> includedTracks) {
-            this.includedTracks = includedTracks;
+            $.includedTracks = includedTracks;
             return this;
         }
+
         public Builder includedTracks(Object... includedTracks) {
             return includedTracks(List.of(includedTracks));
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public InputFileResponse build() {
-            return new InputFileResponse(filename, includedTracks, odataType);
+        }
+
+        public InputFileResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="contentId")
-      private final @Nullable String contentId;
+    private @Nullable String contentId;
 
     public Optional<String> contentId() {
-        return this.contentId == null ? Optional.empty() : Optional.ofNullable(this.contentId);
+        return Optional.ofNullable(this.contentId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="criteria")
-      private final @Nullable List<MetadataDependenciesResponse> criteria;
+    private @Nullable List<MetadataDependenciesResponse> criteria;
 
-    public List<MetadataDependenciesResponse> criteria() {
-        return this.criteria == null ? List.of() : this.criteria;
+    public Optional<List<MetadataDependenciesResponse>> criteria() {
+        return Optional.ofNullable(this.criteria);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="operator")
-      private final @Nullable String operator;
+    private @Nullable String operator;
 
     public Optional<String> operator() {
-        return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -79,94 +79,78 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public MetadataDependenciesResponse(
-        @Nullable String contentId,
-        @Nullable List<MetadataDependenciesResponse> criteria,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable String operator,
-        @Nullable String version) {
-        this.contentId = contentId;
-        this.criteria = criteria;
-        this.kind = kind;
-        this.name = name;
-        this.operator = operator;
-        this.version = version;
-    }
+    private MetadataDependenciesResponse() {}
 
-    private MetadataDependenciesResponse() {
-        this.contentId = null;
-        this.criteria = List.of();
-        this.kind = null;
-        this.name = null;
-        this.operator = null;
-        this.version = null;
+    private MetadataDependenciesResponse(MetadataDependenciesResponse $) {
+        this.contentId = $.contentId;
+        this.criteria = $.criteria;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.operator = $.operator;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataDependenciesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String contentId;
-        private @Nullable List<MetadataDependenciesResponse> criteria;
-        private @Nullable String kind;
-        private @Nullable String name;
-        private @Nullable String operator;
-        private @Nullable String version;
+        private MetadataDependenciesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataDependenciesResponse();
         }
 
         public Builder(MetadataDependenciesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentId = defaults.contentId;
-    	      this.criteria = defaults.criteria;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.operator = defaults.operator;
-    	      this.version = defaults.version;
+            $ = new MetadataDependenciesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentId(@Nullable String contentId) {
-            this.contentId = contentId;
+            $.contentId = contentId;
             return this;
         }
+
         public Builder criteria(@Nullable List<MetadataDependenciesResponse> criteria) {
-            this.criteria = criteria;
+            $.criteria = criteria;
             return this;
         }
+
         public Builder criteria(MetadataDependenciesResponse... criteria) {
             return criteria(List.of(criteria));
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder operator(@Nullable String operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public MetadataDependenciesResponse build() {
-            return new MetadataDependenciesResponse(contentId, criteria, kind, name, operator, version);
+        }
+
+        public MetadataDependenciesResponse build() {
+            return $;
         }
     }
+
 }

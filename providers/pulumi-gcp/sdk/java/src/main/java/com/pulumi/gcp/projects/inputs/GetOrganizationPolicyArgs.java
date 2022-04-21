@@ -17,7 +17,7 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="constraint", required=true)
-      private final String constraint;
+    private String constraint;
 
     public String constraint() {
         return this.constraint;
@@ -28,55 +28,52 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public GetOrganizationPolicyArgs(
-        String constraint,
-        String project) {
-        this.constraint = Objects.requireNonNull(constraint, "expected parameter 'constraint' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private GetOrganizationPolicyArgs() {}
 
-    private GetOrganizationPolicyArgs() {
-        this.constraint = null;
-        this.project = null;
+    private GetOrganizationPolicyArgs(GetOrganizationPolicyArgs $) {
+        this.constraint = $.constraint;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String constraint;
-        private String project;
+        private GetOrganizationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationPolicyArgs();
         }
 
         public Builder(GetOrganizationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constraint = defaults.constraint;
-    	      this.project = defaults.project;
+            $ = new GetOrganizationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder constraint(String constraint) {
-            this.constraint = Objects.requireNonNull(constraint);
+            $.constraint = constraint;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public GetOrganizationPolicyArgs build() {
-            return new GetOrganizationPolicyArgs(constraint, project);
+        }
+
+        public GetOrganizationPolicyArgs build() {
+            $.constraint = Objects.requireNonNull($.constraint, "expected parameter 'constraint' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

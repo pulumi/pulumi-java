@@ -21,7 +21,7 @@ public final class WarningResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="priority", required=true)
-      private final String priority;
+    private String priority;
 
     public String priority() {
         return this.priority;
@@ -32,55 +32,52 @@ public final class WarningResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public WarningResponse(
-        String priority,
-        String text) {
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private WarningResponse() {}
 
-    private WarningResponse() {
-        this.priority = null;
-        this.text = null;
+    private WarningResponse(WarningResponse $) {
+        this.priority = $.priority;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WarningResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String priority;
-        private String text;
+        private WarningResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WarningResponse();
         }
 
         public Builder(WarningResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.priority = defaults.priority;
-    	      this.text = defaults.text;
+            $ = new WarningResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder priority(String priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public WarningResponse build() {
-            return new WarningResponse(priority, text);
+        }
+
+        public WarningResponse build() {
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

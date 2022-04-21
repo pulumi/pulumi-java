@@ -24,7 +24,7 @@ public final class ContainerPropertiesResponseInstanceView extends com.pulumi.re
      * 
      */
     @Import(name="currentState", required=true)
-      private final ContainerStateResponse currentState;
+    private ContainerStateResponse currentState;
 
     public ContainerStateResponse currentState() {
         return this.currentState;
@@ -35,7 +35,7 @@ public final class ContainerPropertiesResponseInstanceView extends com.pulumi.re
      * 
      */
     @Import(name="events", required=true)
-      private final List<EventResponse> events;
+    private List<EventResponse> events;
 
     public List<EventResponse> events() {
         return this.events;
@@ -46,7 +46,7 @@ public final class ContainerPropertiesResponseInstanceView extends com.pulumi.re
      * 
      */
     @Import(name="previousState", required=true)
-      private final ContainerStateResponse previousState;
+    private ContainerStateResponse previousState;
 
     public ContainerStateResponse previousState() {
         return this.previousState;
@@ -57,76 +57,70 @@ public final class ContainerPropertiesResponseInstanceView extends com.pulumi.re
      * 
      */
     @Import(name="restartCount", required=true)
-      private final Integer restartCount;
+    private Integer restartCount;
 
     public Integer restartCount() {
         return this.restartCount;
     }
 
-    public ContainerPropertiesResponseInstanceView(
-        ContainerStateResponse currentState,
-        List<EventResponse> events,
-        ContainerStateResponse previousState,
-        Integer restartCount) {
-        this.currentState = Objects.requireNonNull(currentState, "expected parameter 'currentState' to be non-null");
-        this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
-        this.previousState = Objects.requireNonNull(previousState, "expected parameter 'previousState' to be non-null");
-        this.restartCount = Objects.requireNonNull(restartCount, "expected parameter 'restartCount' to be non-null");
-    }
+    private ContainerPropertiesResponseInstanceView() {}
 
-    private ContainerPropertiesResponseInstanceView() {
-        this.currentState = null;
-        this.events = List.of();
-        this.previousState = null;
-        this.restartCount = null;
+    private ContainerPropertiesResponseInstanceView(ContainerPropertiesResponseInstanceView $) {
+        this.currentState = $.currentState;
+        this.events = $.events;
+        this.previousState = $.previousState;
+        this.restartCount = $.restartCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPropertiesResponseInstanceView defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ContainerStateResponse currentState;
-        private List<EventResponse> events;
-        private ContainerStateResponse previousState;
-        private Integer restartCount;
+        private ContainerPropertiesResponseInstanceView $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPropertiesResponseInstanceView();
         }
 
         public Builder(ContainerPropertiesResponseInstanceView defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentState = defaults.currentState;
-    	      this.events = defaults.events;
-    	      this.previousState = defaults.previousState;
-    	      this.restartCount = defaults.restartCount;
+            $ = new ContainerPropertiesResponseInstanceView(Objects.requireNonNull(defaults));
         }
 
         public Builder currentState(ContainerStateResponse currentState) {
-            this.currentState = Objects.requireNonNull(currentState);
+            $.currentState = currentState;
             return this;
         }
+
         public Builder events(List<EventResponse> events) {
-            this.events = Objects.requireNonNull(events);
+            $.events = events;
             return this;
         }
+
         public Builder events(EventResponse... events) {
             return events(List.of(events));
         }
+
         public Builder previousState(ContainerStateResponse previousState) {
-            this.previousState = Objects.requireNonNull(previousState);
+            $.previousState = previousState;
             return this;
         }
+
         public Builder restartCount(Integer restartCount) {
-            this.restartCount = Objects.requireNonNull(restartCount);
+            $.restartCount = restartCount;
             return this;
-        }        public ContainerPropertiesResponseInstanceView build() {
-            return new ContainerPropertiesResponseInstanceView(currentState, events, previousState, restartCount);
+        }
+
+        public ContainerPropertiesResponseInstanceView build() {
+            $.currentState = Objects.requireNonNull($.currentState, "expected parameter 'currentState' to be non-null");
+            $.events = Objects.requireNonNull($.events, "expected parameter 'events' to be non-null");
+            $.previousState = Objects.requireNonNull($.previousState, "expected parameter 'previousState' to be non-null");
+            $.restartCount = Objects.requireNonNull($.restartCount, "expected parameter 'restartCount' to be non-null");
+            return $;
         }
     }
+
 }

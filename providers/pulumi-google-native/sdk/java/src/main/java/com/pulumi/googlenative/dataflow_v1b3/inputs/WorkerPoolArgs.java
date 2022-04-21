@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.enums.WorkerPoolDefaultPackageSet;
 import com.pulumi.googlenative.dataflow_v1b3.enums.WorkerPoolIpConfiguration;
 import com.pulumi.googlenative.dataflow_v1b3.enums.WorkerPoolTeardownPolicy;
@@ -19,6 +18,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingSettings")
-      private final @Nullable Output<AutoscalingSettingsArgs> autoscalingSettings;
+    private @Nullable Output<AutoscalingSettingsArgs> autoscalingSettings;
 
-    public Output<AutoscalingSettingsArgs> autoscalingSettings() {
-        return this.autoscalingSettings == null ? Codegen.empty() : this.autoscalingSettings;
+    public Optional<Output<AutoscalingSettingsArgs>> autoscalingSettings() {
+        return Optional.ofNullable(this.autoscalingSettings);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataDisks")
-      private final @Nullable Output<List<DiskArgs>> dataDisks;
+    private @Nullable Output<List<DiskArgs>> dataDisks;
 
-    public Output<List<DiskArgs>> dataDisks() {
-        return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
+    public Optional<Output<List<DiskArgs>>> dataDisks() {
+        return Optional.ofNullable(this.dataDisks);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultPackageSet")
-      private final @Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet;
+    private @Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet;
 
-    public Output<WorkerPoolDefaultPackageSet> defaultPackageSet() {
-        return this.defaultPackageSet == null ? Codegen.empty() : this.defaultPackageSet;
+    public Optional<Output<WorkerPoolDefaultPackageSet>> defaultPackageSet() {
+        return Optional.ofNullable(this.defaultPackageSet);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<Integer> diskSizeGb;
+    private @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<Integer>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSourceImage")
-      private final @Nullable Output<String> diskSourceImage;
+    private @Nullable Output<String> diskSourceImage;
 
-    public Output<String> diskSourceImage() {
-        return this.diskSourceImage == null ? Codegen.empty() : this.diskSourceImage;
+    public Optional<Output<String>> diskSourceImage() {
+        return Optional.ofNullable(this.diskSourceImage);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<String> diskType;
+    private @Nullable Output<String> diskType;
 
-    public Output<String> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<String>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipConfiguration")
-      private final @Nullable Output<WorkerPoolIpConfiguration> ipConfiguration;
+    private @Nullable Output<WorkerPoolIpConfiguration> ipConfiguration;
 
-    public Output<WorkerPoolIpConfiguration> ipConfiguration() {
-        return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
+    public Optional<Output<WorkerPoolIpConfiguration>> ipConfiguration() {
+        return Optional.ofNullable(this.ipConfiguration);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numThreadsPerWorker")
-      private final @Nullable Output<Integer> numThreadsPerWorker;
+    private @Nullable Output<Integer> numThreadsPerWorker;
 
-    public Output<Integer> numThreadsPerWorker() {
-        return this.numThreadsPerWorker == null ? Codegen.empty() : this.numThreadsPerWorker;
+    public Optional<Output<Integer>> numThreadsPerWorker() {
+        return Optional.ofNullable(this.numThreadsPerWorker);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numWorkers")
-      private final @Nullable Output<Integer> numWorkers;
+    private @Nullable Output<Integer> numWorkers;
 
-    public Output<Integer> numWorkers() {
-        return this.numWorkers == null ? Codegen.empty() : this.numWorkers;
+    public Optional<Output<Integer>> numWorkers() {
+        return Optional.ofNullable(this.numWorkers);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onHostMaintenance")
-      private final @Nullable Output<String> onHostMaintenance;
+    private @Nullable Output<String> onHostMaintenance;
 
-    public Output<String> onHostMaintenance() {
-        return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
+    public Optional<Output<String>> onHostMaintenance() {
+        return Optional.ofNullable(this.onHostMaintenance);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packages")
-      private final @Nullable Output<List<PackageArgs>> packages;
+    private @Nullable Output<List<PackageArgs>> packages;
 
-    public Output<List<PackageArgs>> packages() {
-        return this.packages == null ? Codegen.empty() : this.packages;
+    public Optional<Output<List<PackageArgs>>> packages() {
+        return Optional.ofNullable(this.packages);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="poolArgs")
-      private final @Nullable Output<Map<String,String>> poolArgs;
+    private @Nullable Output<Map<String,String>> poolArgs;
 
-    public Output<Map<String,String>> poolArgs() {
-        return this.poolArgs == null ? Codegen.empty() : this.poolArgs;
+    public Optional<Output<Map<String,String>>> poolArgs() {
+        return Optional.ofNullable(this.poolArgs);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sdkHarnessContainerImages")
-      private final @Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
+    private @Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
 
-    public Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages() {
-        return this.sdkHarnessContainerImages == null ? Codegen.empty() : this.sdkHarnessContainerImages;
+    public Optional<Output<List<SdkHarnessContainerImageArgs>>> sdkHarnessContainerImages() {
+        return Optional.ofNullable(this.sdkHarnessContainerImages);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskrunnerSettings")
-      private final @Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings;
+    private @Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings;
 
-    public Output<TaskRunnerSettingsArgs> taskrunnerSettings() {
-        return this.taskrunnerSettings == null ? Codegen.empty() : this.taskrunnerSettings;
+    public Optional<Output<TaskRunnerSettingsArgs>> taskrunnerSettings() {
+        return Optional.ofNullable(this.taskrunnerSettings);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="teardownPolicy")
-      private final @Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy;
+    private @Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy;
 
-    public Output<WorkerPoolTeardownPolicy> teardownPolicy() {
-        return this.teardownPolicy == null ? Codegen.empty() : this.teardownPolicy;
+    public Optional<Output<WorkerPoolTeardownPolicy>> teardownPolicy() {
+        return Optional.ofNullable(this.teardownPolicy);
     }
 
     /**
@@ -255,319 +255,260 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public WorkerPoolArgs(
-        @Nullable Output<AutoscalingSettingsArgs> autoscalingSettings,
-        @Nullable Output<List<DiskArgs>> dataDisks,
-        @Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet,
-        @Nullable Output<Integer> diskSizeGb,
-        @Nullable Output<String> diskSourceImage,
-        @Nullable Output<String> diskType,
-        @Nullable Output<WorkerPoolIpConfiguration> ipConfiguration,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> machineType,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> network,
-        @Nullable Output<Integer> numThreadsPerWorker,
-        @Nullable Output<Integer> numWorkers,
-        @Nullable Output<String> onHostMaintenance,
-        @Nullable Output<List<PackageArgs>> packages,
-        @Nullable Output<Map<String,String>> poolArgs,
-        @Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages,
-        @Nullable Output<String> subnetwork,
-        @Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings,
-        @Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy,
-        @Nullable Output<String> zone) {
-        this.autoscalingSettings = autoscalingSettings;
-        this.dataDisks = dataDisks;
-        this.defaultPackageSet = defaultPackageSet;
-        this.diskSizeGb = diskSizeGb;
-        this.diskSourceImage = diskSourceImage;
-        this.diskType = diskType;
-        this.ipConfiguration = ipConfiguration;
-        this.kind = kind;
-        this.machineType = machineType;
-        this.metadata = metadata;
-        this.network = network;
-        this.numThreadsPerWorker = numThreadsPerWorker;
-        this.numWorkers = numWorkers;
-        this.onHostMaintenance = onHostMaintenance;
-        this.packages = packages;
-        this.poolArgs = poolArgs;
-        this.sdkHarnessContainerImages = sdkHarnessContainerImages;
-        this.subnetwork = subnetwork;
-        this.taskrunnerSettings = taskrunnerSettings;
-        this.teardownPolicy = teardownPolicy;
-        this.zone = zone;
-    }
+    private WorkerPoolArgs() {}
 
-    private WorkerPoolArgs() {
-        this.autoscalingSettings = Codegen.empty();
-        this.dataDisks = Codegen.empty();
-        this.defaultPackageSet = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.diskSourceImage = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.ipConfiguration = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.network = Codegen.empty();
-        this.numThreadsPerWorker = Codegen.empty();
-        this.numWorkers = Codegen.empty();
-        this.onHostMaintenance = Codegen.empty();
-        this.packages = Codegen.empty();
-        this.poolArgs = Codegen.empty();
-        this.sdkHarnessContainerImages = Codegen.empty();
-        this.subnetwork = Codegen.empty();
-        this.taskrunnerSettings = Codegen.empty();
-        this.teardownPolicy = Codegen.empty();
-        this.zone = Codegen.empty();
+    private WorkerPoolArgs(WorkerPoolArgs $) {
+        this.autoscalingSettings = $.autoscalingSettings;
+        this.dataDisks = $.dataDisks;
+        this.defaultPackageSet = $.defaultPackageSet;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskSourceImage = $.diskSourceImage;
+        this.diskType = $.diskType;
+        this.ipConfiguration = $.ipConfiguration;
+        this.kind = $.kind;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.network = $.network;
+        this.numThreadsPerWorker = $.numThreadsPerWorker;
+        this.numWorkers = $.numWorkers;
+        this.onHostMaintenance = $.onHostMaintenance;
+        this.packages = $.packages;
+        this.poolArgs = $.poolArgs;
+        this.sdkHarnessContainerImages = $.sdkHarnessContainerImages;
+        this.subnetwork = $.subnetwork;
+        this.taskrunnerSettings = $.taskrunnerSettings;
+        this.teardownPolicy = $.teardownPolicy;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoscalingSettingsArgs> autoscalingSettings;
-        private @Nullable Output<List<DiskArgs>> dataDisks;
-        private @Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet;
-        private @Nullable Output<Integer> diskSizeGb;
-        private @Nullable Output<String> diskSourceImage;
-        private @Nullable Output<String> diskType;
-        private @Nullable Output<WorkerPoolIpConfiguration> ipConfiguration;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> network;
-        private @Nullable Output<Integer> numThreadsPerWorker;
-        private @Nullable Output<Integer> numWorkers;
-        private @Nullable Output<String> onHostMaintenance;
-        private @Nullable Output<List<PackageArgs>> packages;
-        private @Nullable Output<Map<String,String>> poolArgs;
-        private @Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
-        private @Nullable Output<String> subnetwork;
-        private @Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings;
-        private @Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy;
-        private @Nullable Output<String> zone;
+        private WorkerPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerPoolArgs();
         }
 
         public Builder(WorkerPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingSettings = defaults.autoscalingSettings;
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.defaultPackageSet = defaults.defaultPackageSet;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskSourceImage = defaults.diskSourceImage;
-    	      this.diskType = defaults.diskType;
-    	      this.ipConfiguration = defaults.ipConfiguration;
-    	      this.kind = defaults.kind;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.network = defaults.network;
-    	      this.numThreadsPerWorker = defaults.numThreadsPerWorker;
-    	      this.numWorkers = defaults.numWorkers;
-    	      this.onHostMaintenance = defaults.onHostMaintenance;
-    	      this.packages = defaults.packages;
-    	      this.poolArgs = defaults.poolArgs;
-    	      this.sdkHarnessContainerImages = defaults.sdkHarnessContainerImages;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.taskrunnerSettings = defaults.taskrunnerSettings;
-    	      this.teardownPolicy = defaults.teardownPolicy;
-    	      this.zone = defaults.zone;
+            $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingSettings(@Nullable Output<AutoscalingSettingsArgs> autoscalingSettings) {
-            this.autoscalingSettings = autoscalingSettings;
+            $.autoscalingSettings = autoscalingSettings;
             return this;
         }
-        public Builder autoscalingSettings(@Nullable AutoscalingSettingsArgs autoscalingSettings) {
-            this.autoscalingSettings = Codegen.ofNullable(autoscalingSettings);
-            return this;
+
+        public Builder autoscalingSettings(AutoscalingSettingsArgs autoscalingSettings) {
+            return autoscalingSettings(Output.of(autoscalingSettings));
         }
+
         public Builder dataDisks(@Nullable Output<List<DiskArgs>> dataDisks) {
-            this.dataDisks = dataDisks;
+            $.dataDisks = dataDisks;
             return this;
         }
-        public Builder dataDisks(@Nullable List<DiskArgs> dataDisks) {
-            this.dataDisks = Codegen.ofNullable(dataDisks);
-            return this;
+
+        public Builder dataDisks(List<DiskArgs> dataDisks) {
+            return dataDisks(Output.of(dataDisks));
         }
+
         public Builder dataDisks(DiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder defaultPackageSet(@Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet) {
-            this.defaultPackageSet = defaultPackageSet;
+            $.defaultPackageSet = defaultPackageSet;
             return this;
         }
-        public Builder defaultPackageSet(@Nullable WorkerPoolDefaultPackageSet defaultPackageSet) {
-            this.defaultPackageSet = Codegen.ofNullable(defaultPackageSet);
-            return this;
+
+        public Builder defaultPackageSet(WorkerPoolDefaultPackageSet defaultPackageSet) {
+            return defaultPackageSet(Output.of(defaultPackageSet));
         }
+
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(Integer diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder diskSourceImage(@Nullable Output<String> diskSourceImage) {
-            this.diskSourceImage = diskSourceImage;
+            $.diskSourceImage = diskSourceImage;
             return this;
         }
-        public Builder diskSourceImage(@Nullable String diskSourceImage) {
-            this.diskSourceImage = Codegen.ofNullable(diskSourceImage);
-            return this;
+
+        public Builder diskSourceImage(String diskSourceImage) {
+            return diskSourceImage(Output.of(diskSourceImage));
         }
+
         public Builder diskType(@Nullable Output<String> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable String diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(String diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder ipConfiguration(@Nullable Output<WorkerPoolIpConfiguration> ipConfiguration) {
-            this.ipConfiguration = ipConfiguration;
+            $.ipConfiguration = ipConfiguration;
             return this;
         }
-        public Builder ipConfiguration(@Nullable WorkerPoolIpConfiguration ipConfiguration) {
-            this.ipConfiguration = Codegen.ofNullable(ipConfiguration);
-            return this;
+
+        public Builder ipConfiguration(WorkerPoolIpConfiguration ipConfiguration) {
+            return ipConfiguration(Output.of(ipConfiguration));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder numThreadsPerWorker(@Nullable Output<Integer> numThreadsPerWorker) {
-            this.numThreadsPerWorker = numThreadsPerWorker;
+            $.numThreadsPerWorker = numThreadsPerWorker;
             return this;
         }
-        public Builder numThreadsPerWorker(@Nullable Integer numThreadsPerWorker) {
-            this.numThreadsPerWorker = Codegen.ofNullable(numThreadsPerWorker);
-            return this;
+
+        public Builder numThreadsPerWorker(Integer numThreadsPerWorker) {
+            return numThreadsPerWorker(Output.of(numThreadsPerWorker));
         }
+
         public Builder numWorkers(@Nullable Output<Integer> numWorkers) {
-            this.numWorkers = numWorkers;
+            $.numWorkers = numWorkers;
             return this;
         }
-        public Builder numWorkers(@Nullable Integer numWorkers) {
-            this.numWorkers = Codegen.ofNullable(numWorkers);
-            return this;
+
+        public Builder numWorkers(Integer numWorkers) {
+            return numWorkers(Output.of(numWorkers));
         }
+
         public Builder onHostMaintenance(@Nullable Output<String> onHostMaintenance) {
-            this.onHostMaintenance = onHostMaintenance;
+            $.onHostMaintenance = onHostMaintenance;
             return this;
         }
-        public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
-            this.onHostMaintenance = Codegen.ofNullable(onHostMaintenance);
-            return this;
+
+        public Builder onHostMaintenance(String onHostMaintenance) {
+            return onHostMaintenance(Output.of(onHostMaintenance));
         }
+
         public Builder packages(@Nullable Output<List<PackageArgs>> packages) {
-            this.packages = packages;
+            $.packages = packages;
             return this;
         }
-        public Builder packages(@Nullable List<PackageArgs> packages) {
-            this.packages = Codegen.ofNullable(packages);
-            return this;
+
+        public Builder packages(List<PackageArgs> packages) {
+            return packages(Output.of(packages));
         }
+
         public Builder packages(PackageArgs... packages) {
             return packages(List.of(packages));
         }
+
         public Builder poolArgs(@Nullable Output<Map<String,String>> poolArgs) {
-            this.poolArgs = poolArgs;
+            $.poolArgs = poolArgs;
             return this;
         }
-        public Builder poolArgs(@Nullable Map<String,String> poolArgs) {
-            this.poolArgs = Codegen.ofNullable(poolArgs);
-            return this;
+
+        public Builder poolArgs(Map<String,String> poolArgs) {
+            return poolArgs(Output.of(poolArgs));
         }
+
         public Builder sdkHarnessContainerImages(@Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages) {
-            this.sdkHarnessContainerImages = sdkHarnessContainerImages;
+            $.sdkHarnessContainerImages = sdkHarnessContainerImages;
             return this;
         }
-        public Builder sdkHarnessContainerImages(@Nullable List<SdkHarnessContainerImageArgs> sdkHarnessContainerImages) {
-            this.sdkHarnessContainerImages = Codegen.ofNullable(sdkHarnessContainerImages);
-            return this;
+
+        public Builder sdkHarnessContainerImages(List<SdkHarnessContainerImageArgs> sdkHarnessContainerImages) {
+            return sdkHarnessContainerImages(Output.of(sdkHarnessContainerImages));
         }
+
         public Builder sdkHarnessContainerImages(SdkHarnessContainerImageArgs... sdkHarnessContainerImages) {
             return sdkHarnessContainerImages(List.of(sdkHarnessContainerImages));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
         }
+
         public Builder taskrunnerSettings(@Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings) {
-            this.taskrunnerSettings = taskrunnerSettings;
+            $.taskrunnerSettings = taskrunnerSettings;
             return this;
         }
-        public Builder taskrunnerSettings(@Nullable TaskRunnerSettingsArgs taskrunnerSettings) {
-            this.taskrunnerSettings = Codegen.ofNullable(taskrunnerSettings);
-            return this;
+
+        public Builder taskrunnerSettings(TaskRunnerSettingsArgs taskrunnerSettings) {
+            return taskrunnerSettings(Output.of(taskrunnerSettings));
         }
+
         public Builder teardownPolicy(@Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy) {
-            this.teardownPolicy = teardownPolicy;
+            $.teardownPolicy = teardownPolicy;
             return this;
         }
-        public Builder teardownPolicy(@Nullable WorkerPoolTeardownPolicy teardownPolicy) {
-            this.teardownPolicy = Codegen.ofNullable(teardownPolicy);
-            return this;
+
+        public Builder teardownPolicy(WorkerPoolTeardownPolicy teardownPolicy) {
+            return teardownPolicy(Output.of(teardownPolicy));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public WorkerPoolArgs build() {
-            return new WorkerPoolArgs(autoscalingSettings, dataDisks, defaultPackageSet, diskSizeGb, diskSourceImage, diskType, ipConfiguration, kind, machineType, metadata, network, numThreadsPerWorker, numWorkers, onHostMaintenance, packages, poolArgs, sdkHarnessContainerImages, subnetwork, taskrunnerSettings, teardownPolicy, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public WorkerPoolArgs build() {
+            return $;
         }
     }
+
 }

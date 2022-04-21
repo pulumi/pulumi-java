@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datalakestore;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endIpAddress", required=true)
-      private final Output<String> endIpAddress;
+    private Output<String> endIpAddress;
 
     public Output<String> endIpAddress() {
         return this.endIpAddress;
@@ -42,10 +42,10 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firewallRuleName")
-      private final @Nullable Output<String> firewallRuleName;
+    private @Nullable Output<String> firewallRuleName;
 
-    public Output<String> firewallRuleName() {
-        return this.firewallRuleName == null ? Codegen.empty() : this.firewallRuleName;
+    public Optional<Output<String>> firewallRuleName() {
+        return Optional.ofNullable(this.firewallRuleName);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,102 +64,92 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startIpAddress", required=true)
-      private final Output<String> startIpAddress;
+    private Output<String> startIpAddress;
 
     public Output<String> startIpAddress() {
         return this.startIpAddress;
     }
 
-    public FirewallRuleArgs(
-        Output<String> accountName,
-        Output<String> endIpAddress,
-        @Nullable Output<String> firewallRuleName,
-        Output<String> resourceGroupName,
-        Output<String> startIpAddress) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.endIpAddress = Objects.requireNonNull(endIpAddress, "expected parameter 'endIpAddress' to be non-null");
-        this.firewallRuleName = firewallRuleName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.startIpAddress = Objects.requireNonNull(startIpAddress, "expected parameter 'startIpAddress' to be non-null");
-    }
+    private FirewallRuleArgs() {}
 
-    private FirewallRuleArgs() {
-        this.accountName = Codegen.empty();
-        this.endIpAddress = Codegen.empty();
-        this.firewallRuleName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.startIpAddress = Codegen.empty();
+    private FirewallRuleArgs(FirewallRuleArgs $) {
+        this.accountName = $.accountName;
+        this.endIpAddress = $.endIpAddress;
+        this.firewallRuleName = $.firewallRuleName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.startIpAddress = $.startIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> endIpAddress;
-        private @Nullable Output<String> firewallRuleName;
-        private Output<String> resourceGroupName;
-        private Output<String> startIpAddress;
+        private FirewallRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallRuleArgs();
         }
 
         public Builder(FirewallRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.endIpAddress = defaults.endIpAddress;
-    	      this.firewallRuleName = defaults.firewallRuleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.startIpAddress = defaults.startIpAddress;
+            $ = new FirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder endIpAddress(Output<String> endIpAddress) {
-            this.endIpAddress = Objects.requireNonNull(endIpAddress);
+            $.endIpAddress = endIpAddress;
             return this;
         }
+
         public Builder endIpAddress(String endIpAddress) {
-            this.endIpAddress = Output.of(Objects.requireNonNull(endIpAddress));
-            return this;
+            return endIpAddress(Output.of(endIpAddress));
         }
+
         public Builder firewallRuleName(@Nullable Output<String> firewallRuleName) {
-            this.firewallRuleName = firewallRuleName;
+            $.firewallRuleName = firewallRuleName;
             return this;
         }
-        public Builder firewallRuleName(@Nullable String firewallRuleName) {
-            this.firewallRuleName = Codegen.ofNullable(firewallRuleName);
-            return this;
+
+        public Builder firewallRuleName(String firewallRuleName) {
+            return firewallRuleName(Output.of(firewallRuleName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder startIpAddress(Output<String> startIpAddress) {
-            this.startIpAddress = Objects.requireNonNull(startIpAddress);
+            $.startIpAddress = startIpAddress;
             return this;
         }
+
         public Builder startIpAddress(String startIpAddress) {
-            this.startIpAddress = Output.of(Objects.requireNonNull(startIpAddress));
-            return this;
-        }        public FirewallRuleArgs build() {
-            return new FirewallRuleArgs(accountName, endIpAddress, firewallRuleName, resourceGroupName, startIpAddress);
+            return startIpAddress(Output.of(startIpAddress));
+        }
+
+        public FirewallRuleArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.endIpAddress = Objects.requireNonNull($.endIpAddress, "expected parameter 'endIpAddress' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.startIpAddress = Objects.requireNonNull($.startIpAddress, "expected parameter 'startIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

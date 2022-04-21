@@ -5,7 +5,6 @@ package com.pulumi.gcp.assuredworkloads.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class WorkloadKmsSettingsGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="nextRotationTime", required=true)
-      private final Output<String> nextRotationTime;
+    private Output<String> nextRotationTime;
 
     public Output<String> nextRotationTime() {
         return this.nextRotationTime;
@@ -30,63 +29,60 @@ public final class WorkloadKmsSettingsGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="rotationPeriod", required=true)
-      private final Output<String> rotationPeriod;
+    private Output<String> rotationPeriod;
 
     public Output<String> rotationPeriod() {
         return this.rotationPeriod;
     }
 
-    public WorkloadKmsSettingsGetArgs(
-        Output<String> nextRotationTime,
-        Output<String> rotationPeriod) {
-        this.nextRotationTime = Objects.requireNonNull(nextRotationTime, "expected parameter 'nextRotationTime' to be non-null");
-        this.rotationPeriod = Objects.requireNonNull(rotationPeriod, "expected parameter 'rotationPeriod' to be non-null");
-    }
+    private WorkloadKmsSettingsGetArgs() {}
 
-    private WorkloadKmsSettingsGetArgs() {
-        this.nextRotationTime = Codegen.empty();
-        this.rotationPeriod = Codegen.empty();
+    private WorkloadKmsSettingsGetArgs(WorkloadKmsSettingsGetArgs $) {
+        this.nextRotationTime = $.nextRotationTime;
+        this.rotationPeriod = $.rotationPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadKmsSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> nextRotationTime;
-        private Output<String> rotationPeriod;
+        private WorkloadKmsSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadKmsSettingsGetArgs();
         }
 
         public Builder(WorkloadKmsSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nextRotationTime = defaults.nextRotationTime;
-    	      this.rotationPeriod = defaults.rotationPeriod;
+            $ = new WorkloadKmsSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nextRotationTime(Output<String> nextRotationTime) {
-            this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
+            $.nextRotationTime = nextRotationTime;
             return this;
         }
+
         public Builder nextRotationTime(String nextRotationTime) {
-            this.nextRotationTime = Output.of(Objects.requireNonNull(nextRotationTime));
-            return this;
+            return nextRotationTime(Output.of(nextRotationTime));
         }
+
         public Builder rotationPeriod(Output<String> rotationPeriod) {
-            this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
+            $.rotationPeriod = rotationPeriod;
             return this;
         }
+
         public Builder rotationPeriod(String rotationPeriod) {
-            this.rotationPeriod = Output.of(Objects.requireNonNull(rotationPeriod));
-            return this;
-        }        public WorkloadKmsSettingsGetArgs build() {
-            return new WorkloadKmsSettingsGetArgs(nextRotationTime, rotationPeriod);
+            return rotationPeriod(Output.of(rotationPeriod));
+        }
+
+        public WorkloadKmsSettingsGetArgs build() {
+            $.nextRotationTime = Objects.requireNonNull($.nextRotationTime, "expected parameter 'nextRotationTime' to be non-null");
+            $.rotationPeriod = Objects.requireNonNull($.rotationPeriod, "expected parameter 'rotationPeriod' to be non-null");
+            return $;
         }
     }
+
 }

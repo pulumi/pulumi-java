@@ -23,7 +23,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * 
      */
     @Import(name="databases", required=true)
-      private final List<String> databases;
+    private List<String> databases;
 
     public List<String> databases() {
         return this.databases;
@@ -34,7 +34,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -45,7 +45,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * 
      */
     @Import(name="targetServerBrandVersion", required=true)
-      private final String targetServerBrandVersion;
+    private String targetServerBrandVersion;
 
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -56,7 +56,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * 
      */
     @Import(name="targetServerVersion", required=true)
-      private final String targetServerVersion;
+    private String targetServerVersion;
 
     public String targetServerVersion() {
         return this.targetServerVersion;
@@ -67,88 +67,81 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final List<ReportableExceptionResponse> validationErrors;
+    private List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 
-    public ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse(
-        List<String> databases,
-        String id,
-        String targetServerBrandVersion,
-        String targetServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
-        this.databases = Objects.requireNonNull(databases, "expected parameter 'databases' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse() {}
 
-    private ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse() {
-        this.databases = List.of();
-        this.id = null;
-        this.targetServerBrandVersion = null;
-        this.targetServerVersion = null;
-        this.validationErrors = List.of();
+    private ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse(ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse $) {
+        this.databases = $.databases;
+        this.id = $.id;
+        this.targetServerBrandVersion = $.targetServerBrandVersion;
+        this.targetServerVersion = $.targetServerVersion;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> databases;
-        private String id;
-        private String targetServerBrandVersion;
-        private String targetServerVersion;
-        private List<ReportableExceptionResponse> validationErrors;
+        private ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse();
         }
 
         public Builder(ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databases = defaults.databases;
-    	      this.id = defaults.id;
-    	      this.targetServerBrandVersion = defaults.targetServerBrandVersion;
-    	      this.targetServerVersion = defaults.targetServerVersion;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databases(List<String> databases) {
-            this.databases = Objects.requireNonNull(databases);
+            $.databases = databases;
             return this;
         }
+
         public Builder databases(String... databases) {
             return databases(List.of(databases));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
-            this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
+            $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
+
         public Builder targetServerVersion(String targetServerVersion) {
-            this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+            $.targetServerVersion = targetServerVersion;
             return this;
         }
+
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
-        }        public ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse build() {
-            return new ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse(databases, id, targetServerBrandVersion, targetServerVersion, validationErrors);
+        }
+
+        public ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse build() {
+            $.databases = Objects.requireNonNull($.databases, "expected parameter 'databases' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.targetServerBrandVersion = Objects.requireNonNull($.targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
+            $.targetServerVersion = Objects.requireNonNull($.targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class InstanceAutoSnapshotAddOn extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="snapshotTimeOfDay")
-      private final @Nullable String snapshotTimeOfDay;
+    private @Nullable String snapshotTimeOfDay;
 
     public Optional<String> snapshotTimeOfDay() {
-        return this.snapshotTimeOfDay == null ? Optional.empty() : Optional.ofNullable(this.snapshotTimeOfDay);
+        return Optional.ofNullable(this.snapshotTimeOfDay);
     }
 
-    public InstanceAutoSnapshotAddOn(@Nullable String snapshotTimeOfDay) {
-        this.snapshotTimeOfDay = snapshotTimeOfDay;
-    }
+    private InstanceAutoSnapshotAddOn() {}
 
-    private InstanceAutoSnapshotAddOn() {
-        this.snapshotTimeOfDay = null;
+    private InstanceAutoSnapshotAddOn(InstanceAutoSnapshotAddOn $) {
+        this.snapshotTimeOfDay = $.snapshotTimeOfDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAutoSnapshotAddOn defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String snapshotTimeOfDay;
+        private InstanceAutoSnapshotAddOn $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAutoSnapshotAddOn();
         }
 
         public Builder(InstanceAutoSnapshotAddOn defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.snapshotTimeOfDay = defaults.snapshotTimeOfDay;
+            $ = new InstanceAutoSnapshotAddOn(Objects.requireNonNull(defaults));
         }
 
         public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
-            this.snapshotTimeOfDay = snapshotTimeOfDay;
+            $.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
-        }        public InstanceAutoSnapshotAddOn build() {
-            return new InstanceAutoSnapshotAddOn(snapshotTimeOfDay);
+        }
+
+        public InstanceAutoSnapshotAddOn build() {
+            return $;
         }
     }
+
 }

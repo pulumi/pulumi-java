@@ -6,9 +6,9 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.LinkTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class RelationshipLinkFieldMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="interactionFieldName", required=true)
-      private final Output<String> interactionFieldName;
+    private Output<String> interactionFieldName;
 
     public Output<String> interactionFieldName() {
         return this.interactionFieldName;
@@ -36,10 +36,10 @@ public final class RelationshipLinkFieldMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="linkType")
-      private final @Nullable Output<LinkTypes> linkType;
+    private @Nullable Output<LinkTypes> linkType;
 
-    public Output<LinkTypes> linkType() {
-        return this.linkType == null ? Codegen.empty() : this.linkType;
+    public Optional<Output<LinkTypes>> linkType() {
+        return Optional.ofNullable(this.linkType);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class RelationshipLinkFieldMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="relationshipFieldName", required=true)
-      private final Output<String> relationshipFieldName;
+    private Output<String> relationshipFieldName;
 
     public Output<String> relationshipFieldName() {
         return this.relationshipFieldName;
     }
 
-    public RelationshipLinkFieldMappingArgs(
-        Output<String> interactionFieldName,
-        @Nullable Output<LinkTypes> linkType,
-        Output<String> relationshipFieldName) {
-        this.interactionFieldName = Objects.requireNonNull(interactionFieldName, "expected parameter 'interactionFieldName' to be non-null");
-        this.linkType = linkType;
-        this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName, "expected parameter 'relationshipFieldName' to be non-null");
-    }
+    private RelationshipLinkFieldMappingArgs() {}
 
-    private RelationshipLinkFieldMappingArgs() {
-        this.interactionFieldName = Codegen.empty();
-        this.linkType = Codegen.empty();
-        this.relationshipFieldName = Codegen.empty();
+    private RelationshipLinkFieldMappingArgs(RelationshipLinkFieldMappingArgs $) {
+        this.interactionFieldName = $.interactionFieldName;
+        this.linkType = $.linkType;
+        this.relationshipFieldName = $.relationshipFieldName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipLinkFieldMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> interactionFieldName;
-        private @Nullable Output<LinkTypes> linkType;
-        private Output<String> relationshipFieldName;
+        private RelationshipLinkFieldMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipLinkFieldMappingArgs();
         }
 
         public Builder(RelationshipLinkFieldMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interactionFieldName = defaults.interactionFieldName;
-    	      this.linkType = defaults.linkType;
-    	      this.relationshipFieldName = defaults.relationshipFieldName;
+            $ = new RelationshipLinkFieldMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interactionFieldName(Output<String> interactionFieldName) {
-            this.interactionFieldName = Objects.requireNonNull(interactionFieldName);
+            $.interactionFieldName = interactionFieldName;
             return this;
         }
+
         public Builder interactionFieldName(String interactionFieldName) {
-            this.interactionFieldName = Output.of(Objects.requireNonNull(interactionFieldName));
-            return this;
+            return interactionFieldName(Output.of(interactionFieldName));
         }
+
         public Builder linkType(@Nullable Output<LinkTypes> linkType) {
-            this.linkType = linkType;
+            $.linkType = linkType;
             return this;
         }
-        public Builder linkType(@Nullable LinkTypes linkType) {
-            this.linkType = Codegen.ofNullable(linkType);
-            return this;
+
+        public Builder linkType(LinkTypes linkType) {
+            return linkType(Output.of(linkType));
         }
+
         public Builder relationshipFieldName(Output<String> relationshipFieldName) {
-            this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName);
+            $.relationshipFieldName = relationshipFieldName;
             return this;
         }
+
         public Builder relationshipFieldName(String relationshipFieldName) {
-            this.relationshipFieldName = Output.of(Objects.requireNonNull(relationshipFieldName));
-            return this;
-        }        public RelationshipLinkFieldMappingArgs build() {
-            return new RelationshipLinkFieldMappingArgs(interactionFieldName, linkType, relationshipFieldName);
+            return relationshipFieldName(Output.of(relationshipFieldName));
+        }
+
+        public RelationshipLinkFieldMappingArgs build() {
+            $.interactionFieldName = Objects.requireNonNull($.interactionFieldName, "expected parameter 'interactionFieldName' to be non-null");
+            $.relationshipFieldName = Objects.requireNonNull($.relationshipFieldName, "expected parameter 'relationshipFieldName' to be non-null");
+            return $;
         }
     }
+
 }

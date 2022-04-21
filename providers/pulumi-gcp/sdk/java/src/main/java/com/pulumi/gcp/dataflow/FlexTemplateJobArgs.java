@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataflow;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class FlexTemplateJobArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="containerSpecGcsPath", required=true)
-      private final Output<String> containerSpecGcsPath;
+    private Output<String> containerSpecGcsPath;
 
     public Output<String> containerSpecGcsPath() {
         return this.containerSpecGcsPath;
@@ -44,11 +44,11 @@ public final class FlexTemplateJobArgs extends com.pulumi.resources.ResourceArgs
      */
     @Deprecated /* Deprecated until the API supports this field */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,Object>> labels;
+    private @Nullable Output<Map<String,Object>> labels;
 
     @Deprecated /* Deprecated until the API supports this field */
-    public Output<Map<String,Object>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,Object>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FlexTemplateJobArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class FlexTemplateJobArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="onDelete")
-      private final @Nullable Output<String> onDelete;
+    private @Nullable Output<String> onDelete;
 
-    public Output<String> onDelete() {
-        return this.onDelete == null ? Codegen.empty() : this.onDelete;
+    public Optional<Output<String>> onDelete() {
+        return Optional.ofNullable(this.onDelete);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class FlexTemplateJobArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,Object>> parameters;
+    private @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,Object>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class FlexTemplateJobArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -104,128 +104,109 @@ public final class FlexTemplateJobArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public FlexTemplateJobArgs(
-        Output<String> containerSpecGcsPath,
-        @Nullable Output<Map<String,Object>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> onDelete,
-        @Nullable Output<Map<String,Object>> parameters,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.containerSpecGcsPath = Objects.requireNonNull(containerSpecGcsPath, "expected parameter 'containerSpecGcsPath' to be non-null");
-        this.labels = labels;
-        this.name = name;
-        this.onDelete = onDelete;
-        this.parameters = parameters;
-        this.project = project;
-        this.region = region;
-    }
+    private FlexTemplateJobArgs() {}
 
-    private FlexTemplateJobArgs() {
-        this.containerSpecGcsPath = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.onDelete = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private FlexTemplateJobArgs(FlexTemplateJobArgs $) {
+        this.containerSpecGcsPath = $.containerSpecGcsPath;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.onDelete = $.onDelete;
+        this.parameters = $.parameters;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexTemplateJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> containerSpecGcsPath;
-        private @Nullable Output<Map<String,Object>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> onDelete;
-        private @Nullable Output<Map<String,Object>> parameters;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private FlexTemplateJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexTemplateJobArgs();
         }
 
         public Builder(FlexTemplateJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerSpecGcsPath = defaults.containerSpecGcsPath;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.onDelete = defaults.onDelete;
-    	      this.parameters = defaults.parameters;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new FlexTemplateJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerSpecGcsPath(Output<String> containerSpecGcsPath) {
-            this.containerSpecGcsPath = Objects.requireNonNull(containerSpecGcsPath);
+            $.containerSpecGcsPath = containerSpecGcsPath;
             return this;
         }
+
         public Builder containerSpecGcsPath(String containerSpecGcsPath) {
-            this.containerSpecGcsPath = Output.of(Objects.requireNonNull(containerSpecGcsPath));
-            return this;
+            return containerSpecGcsPath(Output.of(containerSpecGcsPath));
         }
+
         public Builder labels(@Nullable Output<Map<String,Object>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,Object> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,Object> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder onDelete(@Nullable Output<String> onDelete) {
-            this.onDelete = onDelete;
+            $.onDelete = onDelete;
             return this;
         }
-        public Builder onDelete(@Nullable String onDelete) {
-            this.onDelete = Codegen.ofNullable(onDelete);
-            return this;
+
+        public Builder onDelete(String onDelete) {
+            return onDelete(Output.of(onDelete));
         }
+
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,Object> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public FlexTemplateJobArgs build() {
-            return new FlexTemplateJobArgs(containerSpecGcsPath, labels, name, onDelete, parameters, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public FlexTemplateJobArgs build() {
+            $.containerSpecGcsPath = Objects.requireNonNull($.containerSpecGcsPath, "expected parameter 'containerSpecGcsPath' to be non-null");
+            return $;
         }
     }
+
 }

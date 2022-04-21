@@ -25,7 +25,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
      * 
      */
     @Import(name="enableDynamicPosition", required=true)
-      private final Boolean enableDynamicPosition;
+    private Boolean enableDynamicPosition;
 
     public Boolean enableDynamicPosition() {
         return this.enableDynamicPosition;
@@ -36,7 +36,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
      * 
      */
     @Import(name="excludedFilterKeys", required=true)
-      private final List<String> excludedFilterKeys;
+    private List<String> excludedFilterKeys;
 
     public List<String> excludedFilterKeys() {
         return this.excludedFilterKeys;
@@ -47,7 +47,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
      * 
      */
     @Import(name="facetKey", required=true)
-      private final GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey;
+    private GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey;
 
     public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey() {
         return this.facetKey;
@@ -58,76 +58,70 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
      * 
      */
     @Import(name="limit", required=true)
-      private final Integer limit;
+    private Integer limit;
 
     public Integer limit() {
         return this.limit;
     }
 
-    public GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse(
-        Boolean enableDynamicPosition,
-        List<String> excludedFilterKeys,
-        GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey,
-        Integer limit) {
-        this.enableDynamicPosition = Objects.requireNonNull(enableDynamicPosition, "expected parameter 'enableDynamicPosition' to be non-null");
-        this.excludedFilterKeys = Objects.requireNonNull(excludedFilterKeys, "expected parameter 'excludedFilterKeys' to be non-null");
-        this.facetKey = Objects.requireNonNull(facetKey, "expected parameter 'facetKey' to be non-null");
-        this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse() {}
 
-    private GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse() {
-        this.enableDynamicPosition = null;
-        this.excludedFilterKeys = List.of();
-        this.facetKey = null;
-        this.limit = null;
+    private GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse(GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse $) {
+        this.enableDynamicPosition = $.enableDynamicPosition;
+        this.excludedFilterKeys = $.excludedFilterKeys;
+        this.facetKey = $.facetKey;
+        this.limit = $.limit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableDynamicPosition;
-        private List<String> excludedFilterKeys;
-        private GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey;
-        private Integer limit;
+        private GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableDynamicPosition = defaults.enableDynamicPosition;
-    	      this.excludedFilterKeys = defaults.excludedFilterKeys;
-    	      this.facetKey = defaults.facetKey;
-    	      this.limit = defaults.limit;
+            $ = new GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableDynamicPosition(Boolean enableDynamicPosition) {
-            this.enableDynamicPosition = Objects.requireNonNull(enableDynamicPosition);
+            $.enableDynamicPosition = enableDynamicPosition;
             return this;
         }
+
         public Builder excludedFilterKeys(List<String> excludedFilterKeys) {
-            this.excludedFilterKeys = Objects.requireNonNull(excludedFilterKeys);
+            $.excludedFilterKeys = excludedFilterKeys;
             return this;
         }
+
         public Builder excludedFilterKeys(String... excludedFilterKeys) {
             return excludedFilterKeys(List.of(excludedFilterKeys));
         }
+
         public Builder facetKey(GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey) {
-            this.facetKey = Objects.requireNonNull(facetKey);
+            $.facetKey = facetKey;
             return this;
         }
+
         public Builder limit(Integer limit) {
-            this.limit = Objects.requireNonNull(limit);
+            $.limit = limit;
             return this;
-        }        public GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse build() {
-            return new GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse(enableDynamicPosition, excludedFilterKeys, facetKey, limit);
+        }
+
+        public GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse build() {
+            $.enableDynamicPosition = Objects.requireNonNull($.enableDynamicPosition, "expected parameter 'enableDynamicPosition' to be non-null");
+            $.excludedFilterKeys = Objects.requireNonNull($.excludedFilterKeys, "expected parameter 'excludedFilterKeys' to be non-null");
+            $.facetKey = Objects.requireNonNull($.facetKey, "expected parameter 'facetKey' to be non-null");
+            $.limit = Objects.requireNonNull($.limit, "expected parameter 'limit' to be non-null");
+            return $;
         }
     }
+
 }

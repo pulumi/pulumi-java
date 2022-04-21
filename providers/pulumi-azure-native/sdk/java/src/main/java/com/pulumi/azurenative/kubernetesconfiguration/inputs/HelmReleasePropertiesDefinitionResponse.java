@@ -20,10 +20,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="failureCount")
-      private final @Nullable Double failureCount;
+    private @Nullable Double failureCount;
 
     public Optional<Double> failureCount() {
-        return this.failureCount == null ? Optional.empty() : Optional.ofNullable(this.failureCount);
+        return Optional.ofNullable(this.failureCount);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="helmChartRef")
-      private final @Nullable ObjectReferenceDefinitionResponse helmChartRef;
+    private @Nullable ObjectReferenceDefinitionResponse helmChartRef;
 
     public Optional<ObjectReferenceDefinitionResponse> helmChartRef() {
-        return this.helmChartRef == null ? Optional.empty() : Optional.ofNullable(this.helmChartRef);
+        return Optional.ofNullable(this.helmChartRef);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="installFailureCount")
-      private final @Nullable Double installFailureCount;
+    private @Nullable Double installFailureCount;
 
     public Optional<Double> installFailureCount() {
-        return this.installFailureCount == null ? Optional.empty() : Optional.ofNullable(this.installFailureCount);
+        return Optional.ofNullable(this.installFailureCount);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="lastRevisionApplied")
-      private final @Nullable Double lastRevisionApplied;
+    private @Nullable Double lastRevisionApplied;
 
     public Optional<Double> lastRevisionApplied() {
-        return this.lastRevisionApplied == null ? Optional.empty() : Optional.ofNullable(this.lastRevisionApplied);
+        return Optional.ofNullable(this.lastRevisionApplied);
     }
 
     /**
@@ -64,82 +64,68 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="upgradeFailureCount")
-      private final @Nullable Double upgradeFailureCount;
+    private @Nullable Double upgradeFailureCount;
 
     public Optional<Double> upgradeFailureCount() {
-        return this.upgradeFailureCount == null ? Optional.empty() : Optional.ofNullable(this.upgradeFailureCount);
+        return Optional.ofNullable(this.upgradeFailureCount);
     }
 
-    public HelmReleasePropertiesDefinitionResponse(
-        @Nullable Double failureCount,
-        @Nullable ObjectReferenceDefinitionResponse helmChartRef,
-        @Nullable Double installFailureCount,
-        @Nullable Double lastRevisionApplied,
-        @Nullable Double upgradeFailureCount) {
-        this.failureCount = failureCount;
-        this.helmChartRef = helmChartRef;
-        this.installFailureCount = installFailureCount;
-        this.lastRevisionApplied = lastRevisionApplied;
-        this.upgradeFailureCount = upgradeFailureCount;
-    }
+    private HelmReleasePropertiesDefinitionResponse() {}
 
-    private HelmReleasePropertiesDefinitionResponse() {
-        this.failureCount = null;
-        this.helmChartRef = null;
-        this.installFailureCount = null;
-        this.lastRevisionApplied = null;
-        this.upgradeFailureCount = null;
+    private HelmReleasePropertiesDefinitionResponse(HelmReleasePropertiesDefinitionResponse $) {
+        this.failureCount = $.failureCount;
+        this.helmChartRef = $.helmChartRef;
+        this.installFailureCount = $.installFailureCount;
+        this.lastRevisionApplied = $.lastRevisionApplied;
+        this.upgradeFailureCount = $.upgradeFailureCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HelmReleasePropertiesDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double failureCount;
-        private @Nullable ObjectReferenceDefinitionResponse helmChartRef;
-        private @Nullable Double installFailureCount;
-        private @Nullable Double lastRevisionApplied;
-        private @Nullable Double upgradeFailureCount;
+        private HelmReleasePropertiesDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HelmReleasePropertiesDefinitionResponse();
         }
 
         public Builder(HelmReleasePropertiesDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureCount = defaults.failureCount;
-    	      this.helmChartRef = defaults.helmChartRef;
-    	      this.installFailureCount = defaults.installFailureCount;
-    	      this.lastRevisionApplied = defaults.lastRevisionApplied;
-    	      this.upgradeFailureCount = defaults.upgradeFailureCount;
+            $ = new HelmReleasePropertiesDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failureCount(@Nullable Double failureCount) {
-            this.failureCount = failureCount;
+            $.failureCount = failureCount;
             return this;
         }
+
         public Builder helmChartRef(@Nullable ObjectReferenceDefinitionResponse helmChartRef) {
-            this.helmChartRef = helmChartRef;
+            $.helmChartRef = helmChartRef;
             return this;
         }
+
         public Builder installFailureCount(@Nullable Double installFailureCount) {
-            this.installFailureCount = installFailureCount;
+            $.installFailureCount = installFailureCount;
             return this;
         }
+
         public Builder lastRevisionApplied(@Nullable Double lastRevisionApplied) {
-            this.lastRevisionApplied = lastRevisionApplied;
+            $.lastRevisionApplied = lastRevisionApplied;
             return this;
         }
+
         public Builder upgradeFailureCount(@Nullable Double upgradeFailureCount) {
-            this.upgradeFailureCount = upgradeFailureCount;
+            $.upgradeFailureCount = upgradeFailureCount;
             return this;
-        }        public HelmReleasePropertiesDefinitionResponse build() {
-            return new HelmReleasePropertiesDefinitionResponse(failureCount, helmChartRef, installFailureCount, lastRevisionApplied, upgradeFailureCount);
+        }
+
+        public HelmReleasePropertiesDefinitionResponse build() {
+            return $;
         }
     }
+
 }

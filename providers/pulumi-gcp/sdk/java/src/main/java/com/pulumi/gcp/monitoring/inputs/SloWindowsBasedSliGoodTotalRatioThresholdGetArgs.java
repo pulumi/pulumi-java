@@ -5,11 +5,11 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends com.
      * 
      */
     @Import(name="basicSliPerformance")
-      private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance;
+    private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance() {
-        return this.basicSliPerformance == null ? Codegen.empty() : this.basicSliPerformance;
+    public Optional<Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs>> basicSliPerformance() {
+        return Optional.ofNullable(this.basicSliPerformance);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends com.
      * 
      */
     @Import(name="performance")
-      private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance;
+    private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance() {
-        return this.performance == null ? Codegen.empty() : this.performance;
+    public Optional<Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs>> performance() {
+        return Optional.ofNullable(this.performance);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends com.
      * 
      */
     @Import(name="threshold")
-      private final @Nullable Output<Double> threshold;
+    private @Nullable Output<Double> threshold;
 
-    public Output<Double> threshold() {
-        return this.threshold == null ? Codegen.empty() : this.threshold;
+    public Optional<Output<Double>> threshold() {
+        return Optional.ofNullable(this.threshold);
     }
 
-    public SloWindowsBasedSliGoodTotalRatioThresholdGetArgs(
-        @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance,
-        @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance,
-        @Nullable Output<Double> threshold) {
-        this.basicSliPerformance = basicSliPerformance;
-        this.performance = performance;
-        this.threshold = threshold;
-    }
+    private SloWindowsBasedSliGoodTotalRatioThresholdGetArgs() {}
 
-    private SloWindowsBasedSliGoodTotalRatioThresholdGetArgs() {
-        this.basicSliPerformance = Codegen.empty();
-        this.performance = Codegen.empty();
-        this.threshold = Codegen.empty();
+    private SloWindowsBasedSliGoodTotalRatioThresholdGetArgs(SloWindowsBasedSliGoodTotalRatioThresholdGetArgs $) {
+        this.basicSliPerformance = $.basicSliPerformance;
+        this.performance = $.performance;
+        this.threshold = $.threshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloWindowsBasedSliGoodTotalRatioThresholdGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance;
-        private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance;
-        private @Nullable Output<Double> threshold;
+        private SloWindowsBasedSliGoodTotalRatioThresholdGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloWindowsBasedSliGoodTotalRatioThresholdGetArgs();
         }
 
         public Builder(SloWindowsBasedSliGoodTotalRatioThresholdGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicSliPerformance = defaults.basicSliPerformance;
-    	      this.performance = defaults.performance;
-    	      this.threshold = defaults.threshold;
+            $ = new SloWindowsBasedSliGoodTotalRatioThresholdGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicSliPerformance(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance) {
-            this.basicSliPerformance = basicSliPerformance;
+            $.basicSliPerformance = basicSliPerformance;
             return this;
         }
-        public Builder basicSliPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs basicSliPerformance) {
-            this.basicSliPerformance = Codegen.ofNullable(basicSliPerformance);
-            return this;
+
+        public Builder basicSliPerformance(SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs basicSliPerformance) {
+            return basicSliPerformance(Output.of(basicSliPerformance));
         }
+
         public Builder performance(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance) {
-            this.performance = performance;
+            $.performance = performance;
             return this;
         }
-        public Builder performance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs performance) {
-            this.performance = Codegen.ofNullable(performance);
-            return this;
+
+        public Builder performance(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs performance) {
+            return performance(Output.of(performance));
         }
+
         public Builder threshold(@Nullable Output<Double> threshold) {
-            this.threshold = threshold;
+            $.threshold = threshold;
             return this;
         }
-        public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Codegen.ofNullable(threshold);
-            return this;
-        }        public SloWindowsBasedSliGoodTotalRatioThresholdGetArgs build() {
-            return new SloWindowsBasedSliGoodTotalRatioThresholdGetArgs(basicSliPerformance, performance, threshold);
+
+        public Builder threshold(Double threshold) {
+            return threshold(Output.of(threshold));
+        }
+
+        public SloWindowsBasedSliGoodTotalRatioThresholdGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class ServiceProviderParameterResponseConstraints extends com.pulum
      * 
      */
     @Import(name="required")
-      private final @Nullable Boolean required;
+    private @Nullable Boolean required;
 
     public Optional<Boolean> required() {
-        return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
+        return Optional.ofNullable(this.required);
     }
 
-    public ServiceProviderParameterResponseConstraints(@Nullable Boolean required) {
-        this.required = required;
-    }
+    private ServiceProviderParameterResponseConstraints() {}
 
-    private ServiceProviderParameterResponseConstraints() {
-        this.required = null;
+    private ServiceProviderParameterResponseConstraints(ServiceProviderParameterResponseConstraints $) {
+        this.required = $.required;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceProviderParameterResponseConstraints defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean required;
+        private ServiceProviderParameterResponseConstraints $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceProviderParameterResponseConstraints();
         }
 
         public Builder(ServiceProviderParameterResponseConstraints defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.required = defaults.required;
+            $ = new ServiceProviderParameterResponseConstraints(Objects.requireNonNull(defaults));
         }
 
         public Builder required(@Nullable Boolean required) {
-            this.required = required;
+            $.required = required;
             return this;
-        }        public ServiceProviderParameterResponseConstraints build() {
-            return new ServiceProviderParameterResponseConstraints(required);
+        }
+
+        public ServiceProviderParameterResponseConstraints build() {
+            return $;
         }
     }
+
 }

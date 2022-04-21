@@ -21,7 +21,7 @@ public final class TagFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class TagFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="op", required=true)
-      private final String op;
+    private String op;
 
     public String op() {
         return this.op;
@@ -43,64 +43,59 @@ public final class TagFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public TagFilterResponse(
-        String name,
-        String op,
-        String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.op = Objects.requireNonNull(op, "expected parameter 'op' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TagFilterResponse() {}
 
-    private TagFilterResponse() {
-        this.name = null;
-        this.op = null;
-        this.value = null;
+    private TagFilterResponse(TagFilterResponse $) {
+        this.name = $.name;
+        this.op = $.op;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String op;
-        private String value;
+        private TagFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagFilterResponse();
         }
 
         public Builder(TagFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.op = defaults.op;
-    	      this.value = defaults.value;
+            $ = new TagFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder op(String op) {
-            this.op = Objects.requireNonNull(op);
+            $.op = op;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public TagFilterResponse build() {
-            return new TagFilterResponse(name, op, value);
+        }
+
+        public TagFilterResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.op = Objects.requireNonNull($.op, "expected parameter 'op' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchGetArgs extends com.pulumi
      * 
      */
     @Import(name="exact")
-      private final @Nullable Output<String> exact;
+    private @Nullable Output<String> exact;
 
-    public Output<String> exact() {
-        return this.exact == null ? Codegen.empty() : this.exact;
+    public Optional<Output<String>> exact() {
+        return Optional.ofNullable(this.exact);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchGetArgs extends com.pulumi
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchGetArgs extends com.pulumi
      * 
      */
     @Import(name="range")
-      private final @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs> range;
+    private @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs> range;
 
-    public Output<RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs> range() {
-        return this.range == null ? Codegen.empty() : this.range;
+    public Optional<Output<RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs>> range() {
+        return Optional.ofNullable(this.range);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchGetArgs extends com.pulumi
      * 
      */
     @Import(name="regex")
-      private final @Nullable Output<String> regex;
+    private @Nullable Output<String> regex;
 
-    public Output<String> regex() {
-        return this.regex == null ? Codegen.empty() : this.regex;
+    public Optional<Output<String>> regex() {
+        return Optional.ofNullable(this.regex);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchGetArgs extends com.pulumi
      * 
      */
     @Import(name="suffix")
-      private final @Nullable Output<String> suffix;
+    private @Nullable Output<String> suffix;
 
-    public Output<String> suffix() {
-        return this.suffix == null ? Codegen.empty() : this.suffix;
+    public Optional<Output<String>> suffix() {
+        return Optional.ofNullable(this.suffix);
     }
 
-    public RouteSpecHttp2RouteMatchHeaderMatchGetArgs(
-        @Nullable Output<String> exact,
-        @Nullable Output<String> prefix,
-        @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs> range,
-        @Nullable Output<String> regex,
-        @Nullable Output<String> suffix) {
-        this.exact = exact;
-        this.prefix = prefix;
-        this.range = range;
-        this.regex = regex;
-        this.suffix = suffix;
-    }
+    private RouteSpecHttp2RouteMatchHeaderMatchGetArgs() {}
 
-    private RouteSpecHttp2RouteMatchHeaderMatchGetArgs() {
-        this.exact = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.range = Codegen.empty();
-        this.regex = Codegen.empty();
-        this.suffix = Codegen.empty();
+    private RouteSpecHttp2RouteMatchHeaderMatchGetArgs(RouteSpecHttp2RouteMatchHeaderMatchGetArgs $) {
+        this.exact = $.exact;
+        this.prefix = $.prefix;
+        this.range = $.range;
+        this.regex = $.regex;
+        this.suffix = $.suffix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecHttp2RouteMatchHeaderMatchGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exact;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs> range;
-        private @Nullable Output<String> regex;
-        private @Nullable Output<String> suffix;
+        private RouteSpecHttp2RouteMatchHeaderMatchGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecHttp2RouteMatchHeaderMatchGetArgs();
         }
 
         public Builder(RouteSpecHttp2RouteMatchHeaderMatchGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exact = defaults.exact;
-    	      this.prefix = defaults.prefix;
-    	      this.range = defaults.range;
-    	      this.regex = defaults.regex;
-    	      this.suffix = defaults.suffix;
+            $ = new RouteSpecHttp2RouteMatchHeaderMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exact(@Nullable Output<String> exact) {
-            this.exact = exact;
+            $.exact = exact;
             return this;
         }
-        public Builder exact(@Nullable String exact) {
-            this.exact = Codegen.ofNullable(exact);
-            return this;
+
+        public Builder exact(String exact) {
+            return exact(Output.of(exact));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder range(@Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs> range) {
-            this.range = range;
+            $.range = range;
             return this;
         }
-        public Builder range(@Nullable RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs range) {
-            this.range = Codegen.ofNullable(range);
-            return this;
+
+        public Builder range(RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs range) {
+            return range(Output.of(range));
         }
+
         public Builder regex(@Nullable Output<String> regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
         }
-        public Builder regex(@Nullable String regex) {
-            this.regex = Codegen.ofNullable(regex);
-            return this;
+
+        public Builder regex(String regex) {
+            return regex(Output.of(regex));
         }
+
         public Builder suffix(@Nullable Output<String> suffix) {
-            this.suffix = suffix;
+            $.suffix = suffix;
             return this;
         }
-        public Builder suffix(@Nullable String suffix) {
-            this.suffix = Codegen.ofNullable(suffix);
-            return this;
-        }        public RouteSpecHttp2RouteMatchHeaderMatchGetArgs build() {
-            return new RouteSpecHttp2RouteMatchHeaderMatchGetArgs(exact, prefix, range, regex, suffix);
+
+        public Builder suffix(String suffix) {
+            return suffix(Output.of(suffix));
+        }
+
+        public RouteSpecHttp2RouteMatchHeaderMatchGetArgs build() {
+            return $;
         }
     }
+
 }

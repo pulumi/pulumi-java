@@ -20,62 +20,57 @@ public final class CertificateAuthorityRevocationConfiguration extends com.pulum
     public static final CertificateAuthorityRevocationConfiguration Empty = new CertificateAuthorityRevocationConfiguration();
 
     @Import(name="crlConfiguration")
-      private final @Nullable CertificateAuthorityCrlConfiguration crlConfiguration;
+    private @Nullable CertificateAuthorityCrlConfiguration crlConfiguration;
 
     public Optional<CertificateAuthorityCrlConfiguration> crlConfiguration() {
-        return this.crlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.crlConfiguration);
+        return Optional.ofNullable(this.crlConfiguration);
     }
 
     @Import(name="ocspConfiguration")
-      private final @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration;
+    private @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration;
 
     public Optional<CertificateAuthorityOcspConfiguration> ocspConfiguration() {
-        return this.ocspConfiguration == null ? Optional.empty() : Optional.ofNullable(this.ocspConfiguration);
+        return Optional.ofNullable(this.ocspConfiguration);
     }
 
-    public CertificateAuthorityRevocationConfiguration(
-        @Nullable CertificateAuthorityCrlConfiguration crlConfiguration,
-        @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration) {
-        this.crlConfiguration = crlConfiguration;
-        this.ocspConfiguration = ocspConfiguration;
-    }
+    private CertificateAuthorityRevocationConfiguration() {}
 
-    private CertificateAuthorityRevocationConfiguration() {
-        this.crlConfiguration = null;
-        this.ocspConfiguration = null;
+    private CertificateAuthorityRevocationConfiguration(CertificateAuthorityRevocationConfiguration $) {
+        this.crlConfiguration = $.crlConfiguration;
+        this.ocspConfiguration = $.ocspConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityRevocationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CertificateAuthorityCrlConfiguration crlConfiguration;
-        private @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration;
+        private CertificateAuthorityRevocationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityRevocationConfiguration();
         }
 
         public Builder(CertificateAuthorityRevocationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crlConfiguration = defaults.crlConfiguration;
-    	      this.ocspConfiguration = defaults.ocspConfiguration;
+            $ = new CertificateAuthorityRevocationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder crlConfiguration(@Nullable CertificateAuthorityCrlConfiguration crlConfiguration) {
-            this.crlConfiguration = crlConfiguration;
+            $.crlConfiguration = crlConfiguration;
             return this;
         }
+
         public Builder ocspConfiguration(@Nullable CertificateAuthorityOcspConfiguration ocspConfiguration) {
-            this.ocspConfiguration = ocspConfiguration;
+            $.ocspConfiguration = ocspConfiguration;
             return this;
-        }        public CertificateAuthorityRevocationConfiguration build() {
-            return new CertificateAuthorityRevocationConfiguration(crlConfiguration, ocspConfiguration);
+        }
+
+        public CertificateAuthorityRevocationConfiguration build() {
+            return $;
         }
     }
+
 }

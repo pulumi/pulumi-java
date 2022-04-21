@@ -5,10 +5,10 @@ package com.pulumi.aws.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ciphertextBlob")
-      private final @Nullable Output<String> ciphertextBlob;
+    private @Nullable Output<String> ciphertextBlob;
 
-    public Output<String> ciphertextBlob() {
-        return this.ciphertextBlob == null ? Codegen.empty() : this.ciphertextBlob;
+    public Optional<Output<String>> ciphertextBlob() {
+        return Optional.ofNullable(this.ciphertextBlob);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<Map<String,String>> context;
+    private @Nullable Output<Map<String,String>> context;
 
-    public Output<Map<String,String>> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<Map<String,String>>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="plaintext")
-      private final @Nullable Output<String> plaintext;
+    private @Nullable Output<String> plaintext;
 
-    public Output<String> plaintext() {
-        return this.plaintext == null ? Codegen.empty() : this.plaintext;
+    public Optional<Output<String>> plaintext() {
+        return Optional.ofNullable(this.plaintext);
     }
 
-    public CiphertextState(
-        @Nullable Output<String> ciphertextBlob,
-        @Nullable Output<Map<String,String>> context,
-        @Nullable Output<String> keyId,
-        @Nullable Output<String> plaintext) {
-        this.ciphertextBlob = ciphertextBlob;
-        this.context = context;
-        this.keyId = keyId;
-        this.plaintext = plaintext;
-    }
+    private CiphertextState() {}
 
-    private CiphertextState() {
-        this.ciphertextBlob = Codegen.empty();
-        this.context = Codegen.empty();
-        this.keyId = Codegen.empty();
-        this.plaintext = Codegen.empty();
+    private CiphertextState(CiphertextState $) {
+        this.ciphertextBlob = $.ciphertextBlob;
+        this.context = $.context;
+        this.keyId = $.keyId;
+        this.plaintext = $.plaintext;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CiphertextState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ciphertextBlob;
-        private @Nullable Output<Map<String,String>> context;
-        private @Nullable Output<String> keyId;
-        private @Nullable Output<String> plaintext;
+        private CiphertextState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CiphertextState();
         }
 
         public Builder(CiphertextState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ciphertextBlob = defaults.ciphertextBlob;
-    	      this.context = defaults.context;
-    	      this.keyId = defaults.keyId;
-    	      this.plaintext = defaults.plaintext;
+            $ = new CiphertextState(Objects.requireNonNull(defaults));
         }
 
         public Builder ciphertextBlob(@Nullable Output<String> ciphertextBlob) {
-            this.ciphertextBlob = ciphertextBlob;
+            $.ciphertextBlob = ciphertextBlob;
             return this;
         }
-        public Builder ciphertextBlob(@Nullable String ciphertextBlob) {
-            this.ciphertextBlob = Codegen.ofNullable(ciphertextBlob);
-            return this;
+
+        public Builder ciphertextBlob(String ciphertextBlob) {
+            return ciphertextBlob(Output.of(ciphertextBlob));
         }
+
         public Builder context(@Nullable Output<Map<String,String>> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable Map<String,String> context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(Map<String,String> context) {
+            return context(Output.of(context));
         }
+
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
+
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
+
         public Builder plaintext(@Nullable Output<String> plaintext) {
-            this.plaintext = plaintext;
+            $.plaintext = plaintext;
             return this;
         }
-        public Builder plaintext(@Nullable String plaintext) {
-            this.plaintext = Codegen.ofNullable(plaintext);
-            return this;
-        }        public CiphertextState build() {
-            return new CiphertextState(ciphertextBlob, context, keyId, plaintext);
+
+        public Builder plaintext(String plaintext) {
+            return plaintext(Output.of(plaintext));
+        }
+
+        public CiphertextState build() {
+            return $;
         }
     }
+
 }

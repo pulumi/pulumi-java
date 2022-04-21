@@ -15,45 +15,44 @@ public final class FirewallPolicyStatefulEngineOptions extends com.pulumi.resour
     public static final FirewallPolicyStatefulEngineOptions Empty = new FirewallPolicyStatefulEngineOptions();
 
     @Import(name="ruleOrder")
-      private final @Nullable FirewallPolicyRuleOrder ruleOrder;
+    private @Nullable FirewallPolicyRuleOrder ruleOrder;
 
     public Optional<FirewallPolicyRuleOrder> ruleOrder() {
-        return this.ruleOrder == null ? Optional.empty() : Optional.ofNullable(this.ruleOrder);
+        return Optional.ofNullable(this.ruleOrder);
     }
 
-    public FirewallPolicyStatefulEngineOptions(@Nullable FirewallPolicyRuleOrder ruleOrder) {
-        this.ruleOrder = ruleOrder;
-    }
+    private FirewallPolicyStatefulEngineOptions() {}
 
-    private FirewallPolicyStatefulEngineOptions() {
-        this.ruleOrder = null;
+    private FirewallPolicyStatefulEngineOptions(FirewallPolicyStatefulEngineOptions $) {
+        this.ruleOrder = $.ruleOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyStatefulEngineOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FirewallPolicyRuleOrder ruleOrder;
+        private FirewallPolicyStatefulEngineOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyStatefulEngineOptions();
         }
 
         public Builder(FirewallPolicyStatefulEngineOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleOrder = defaults.ruleOrder;
+            $ = new FirewallPolicyStatefulEngineOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleOrder(@Nullable FirewallPolicyRuleOrder ruleOrder) {
-            this.ruleOrder = ruleOrder;
+            $.ruleOrder = ruleOrder;
             return this;
-        }        public FirewallPolicyStatefulEngineOptions build() {
-            return new FirewallPolicyStatefulEngineOptions(ruleOrder);
+        }
+
+        public FirewallPolicyStatefulEngineOptions build() {
+            return $;
         }
     }
+
 }

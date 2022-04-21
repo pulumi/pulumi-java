@@ -25,7 +25,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="acceleratorConfig", required=true)
-      private final SchedulerAcceleratorConfigResponse acceleratorConfig;
+    private SchedulerAcceleratorConfigResponse acceleratorConfig;
 
     public SchedulerAcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
@@ -36,7 +36,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="containerImageUri", required=true)
-      private final String containerImageUri;
+    private String containerImageUri;
 
     public String containerImageUri() {
         return this.containerImageUri;
@@ -47,7 +47,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataprocParameters", required=true)
-      private final DataprocParametersResponse dataprocParameters;
+    private DataprocParametersResponse dataprocParameters;
 
     public DataprocParametersResponse dataprocParameters() {
         return this.dataprocParameters;
@@ -58,7 +58,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="inputNotebookFile", required=true)
-      private final String inputNotebookFile;
+    private String inputNotebookFile;
 
     public String inputNotebookFile() {
         return this.inputNotebookFile;
@@ -69,7 +69,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="jobType", required=true)
-      private final String jobType;
+    private String jobType;
 
     public String jobType() {
         return this.jobType;
@@ -80,7 +80,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="kernelSpec", required=true)
-      private final String kernelSpec;
+    private String kernelSpec;
 
     public String kernelSpec() {
         return this.kernelSpec;
@@ -91,7 +91,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -102,7 +102,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="masterType", required=true)
-      private final String masterType;
+    private String masterType;
 
     public String masterType() {
         return this.masterType;
@@ -113,7 +113,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="outputNotebookFolder", required=true)
-      private final String outputNotebookFolder;
+    private String outputNotebookFolder;
 
     public String outputNotebookFolder() {
         return this.outputNotebookFolder;
@@ -124,7 +124,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parameters", required=true)
-      private final String parameters;
+    private String parameters;
 
     public String parameters() {
         return this.parameters;
@@ -135,7 +135,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="paramsYamlFile", required=true)
-      private final String paramsYamlFile;
+    private String paramsYamlFile;
 
     public String paramsYamlFile() {
         return this.paramsYamlFile;
@@ -146,7 +146,7 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
@@ -157,154 +157,129 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="vertexAiParameters", required=true)
-      private final VertexAIParametersResponse vertexAiParameters;
+    private VertexAIParametersResponse vertexAiParameters;
 
     public VertexAIParametersResponse vertexAiParameters() {
         return this.vertexAiParameters;
     }
 
-    public ExecutionTemplateResponse(
-        SchedulerAcceleratorConfigResponse acceleratorConfig,
-        String containerImageUri,
-        DataprocParametersResponse dataprocParameters,
-        String inputNotebookFile,
-        String jobType,
-        String kernelSpec,
-        Map<String,String> labels,
-        String masterType,
-        String outputNotebookFolder,
-        String parameters,
-        String paramsYamlFile,
-        String serviceAccount,
-        VertexAIParametersResponse vertexAiParameters) {
-        this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig, "expected parameter 'acceleratorConfig' to be non-null");
-        this.containerImageUri = Objects.requireNonNull(containerImageUri, "expected parameter 'containerImageUri' to be non-null");
-        this.dataprocParameters = Objects.requireNonNull(dataprocParameters, "expected parameter 'dataprocParameters' to be non-null");
-        this.inputNotebookFile = Objects.requireNonNull(inputNotebookFile, "expected parameter 'inputNotebookFile' to be non-null");
-        this.jobType = Objects.requireNonNull(jobType, "expected parameter 'jobType' to be non-null");
-        this.kernelSpec = Objects.requireNonNull(kernelSpec, "expected parameter 'kernelSpec' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.masterType = Objects.requireNonNull(masterType, "expected parameter 'masterType' to be non-null");
-        this.outputNotebookFolder = Objects.requireNonNull(outputNotebookFolder, "expected parameter 'outputNotebookFolder' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.paramsYamlFile = Objects.requireNonNull(paramsYamlFile, "expected parameter 'paramsYamlFile' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.vertexAiParameters = Objects.requireNonNull(vertexAiParameters, "expected parameter 'vertexAiParameters' to be non-null");
-    }
+    private ExecutionTemplateResponse() {}
 
-    private ExecutionTemplateResponse() {
-        this.acceleratorConfig = null;
-        this.containerImageUri = null;
-        this.dataprocParameters = null;
-        this.inputNotebookFile = null;
-        this.jobType = null;
-        this.kernelSpec = null;
-        this.labels = Map.of();
-        this.masterType = null;
-        this.outputNotebookFolder = null;
-        this.parameters = null;
-        this.paramsYamlFile = null;
-        this.serviceAccount = null;
-        this.vertexAiParameters = null;
+    private ExecutionTemplateResponse(ExecutionTemplateResponse $) {
+        this.acceleratorConfig = $.acceleratorConfig;
+        this.containerImageUri = $.containerImageUri;
+        this.dataprocParameters = $.dataprocParameters;
+        this.inputNotebookFile = $.inputNotebookFile;
+        this.jobType = $.jobType;
+        this.kernelSpec = $.kernelSpec;
+        this.labels = $.labels;
+        this.masterType = $.masterType;
+        this.outputNotebookFolder = $.outputNotebookFolder;
+        this.parameters = $.parameters;
+        this.paramsYamlFile = $.paramsYamlFile;
+        this.serviceAccount = $.serviceAccount;
+        this.vertexAiParameters = $.vertexAiParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionTemplateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SchedulerAcceleratorConfigResponse acceleratorConfig;
-        private String containerImageUri;
-        private DataprocParametersResponse dataprocParameters;
-        private String inputNotebookFile;
-        private String jobType;
-        private String kernelSpec;
-        private Map<String,String> labels;
-        private String masterType;
-        private String outputNotebookFolder;
-        private String parameters;
-        private String paramsYamlFile;
-        private String serviceAccount;
-        private VertexAIParametersResponse vertexAiParameters;
+        private ExecutionTemplateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionTemplateResponse();
         }
 
         public Builder(ExecutionTemplateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorConfig = defaults.acceleratorConfig;
-    	      this.containerImageUri = defaults.containerImageUri;
-    	      this.dataprocParameters = defaults.dataprocParameters;
-    	      this.inputNotebookFile = defaults.inputNotebookFile;
-    	      this.jobType = defaults.jobType;
-    	      this.kernelSpec = defaults.kernelSpec;
-    	      this.labels = defaults.labels;
-    	      this.masterType = defaults.masterType;
-    	      this.outputNotebookFolder = defaults.outputNotebookFolder;
-    	      this.parameters = defaults.parameters;
-    	      this.paramsYamlFile = defaults.paramsYamlFile;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.vertexAiParameters = defaults.vertexAiParameters;
+            $ = new ExecutionTemplateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorConfig(SchedulerAcceleratorConfigResponse acceleratorConfig) {
-            this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
+            $.acceleratorConfig = acceleratorConfig;
             return this;
         }
+
         public Builder containerImageUri(String containerImageUri) {
-            this.containerImageUri = Objects.requireNonNull(containerImageUri);
+            $.containerImageUri = containerImageUri;
             return this;
         }
+
         public Builder dataprocParameters(DataprocParametersResponse dataprocParameters) {
-            this.dataprocParameters = Objects.requireNonNull(dataprocParameters);
+            $.dataprocParameters = dataprocParameters;
             return this;
         }
+
         public Builder inputNotebookFile(String inputNotebookFile) {
-            this.inputNotebookFile = Objects.requireNonNull(inputNotebookFile);
+            $.inputNotebookFile = inputNotebookFile;
             return this;
         }
+
         public Builder jobType(String jobType) {
-            this.jobType = Objects.requireNonNull(jobType);
+            $.jobType = jobType;
             return this;
         }
+
         public Builder kernelSpec(String kernelSpec) {
-            this.kernelSpec = Objects.requireNonNull(kernelSpec);
+            $.kernelSpec = kernelSpec;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder masterType(String masterType) {
-            this.masterType = Objects.requireNonNull(masterType);
+            $.masterType = masterType;
             return this;
         }
+
         public Builder outputNotebookFolder(String outputNotebookFolder) {
-            this.outputNotebookFolder = Objects.requireNonNull(outputNotebookFolder);
+            $.outputNotebookFolder = outputNotebookFolder;
             return this;
         }
+
         public Builder parameters(String parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder paramsYamlFile(String paramsYamlFile) {
-            this.paramsYamlFile = Objects.requireNonNull(paramsYamlFile);
+            $.paramsYamlFile = paramsYamlFile;
             return this;
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder vertexAiParameters(VertexAIParametersResponse vertexAiParameters) {
-            this.vertexAiParameters = Objects.requireNonNull(vertexAiParameters);
+            $.vertexAiParameters = vertexAiParameters;
             return this;
-        }        public ExecutionTemplateResponse build() {
-            return new ExecutionTemplateResponse(acceleratorConfig, containerImageUri, dataprocParameters, inputNotebookFile, jobType, kernelSpec, labels, masterType, outputNotebookFolder, parameters, paramsYamlFile, serviceAccount, vertexAiParameters);
+        }
+
+        public ExecutionTemplateResponse build() {
+            $.acceleratorConfig = Objects.requireNonNull($.acceleratorConfig, "expected parameter 'acceleratorConfig' to be non-null");
+            $.containerImageUri = Objects.requireNonNull($.containerImageUri, "expected parameter 'containerImageUri' to be non-null");
+            $.dataprocParameters = Objects.requireNonNull($.dataprocParameters, "expected parameter 'dataprocParameters' to be non-null");
+            $.inputNotebookFile = Objects.requireNonNull($.inputNotebookFile, "expected parameter 'inputNotebookFile' to be non-null");
+            $.jobType = Objects.requireNonNull($.jobType, "expected parameter 'jobType' to be non-null");
+            $.kernelSpec = Objects.requireNonNull($.kernelSpec, "expected parameter 'kernelSpec' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.masterType = Objects.requireNonNull($.masterType, "expected parameter 'masterType' to be non-null");
+            $.outputNotebookFolder = Objects.requireNonNull($.outputNotebookFolder, "expected parameter 'outputNotebookFolder' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.paramsYamlFile = Objects.requireNonNull($.paramsYamlFile, "expected parameter 'paramsYamlFile' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.vertexAiParameters = Objects.requireNonNull($.vertexAiParameters, "expected parameter 'vertexAiParameters' to be non-null");
+            return $;
         }
     }
+
 }

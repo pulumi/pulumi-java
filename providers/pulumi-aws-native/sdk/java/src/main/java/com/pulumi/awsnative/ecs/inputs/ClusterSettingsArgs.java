@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class ClusterSettingsArgs extends com.pulumi.resources.ResourceArgs
     public static final ClusterSettingsArgs Empty = new ClusterSettingsArgs();
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ClusterSettingsArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> value) {
-        this.name = name;
-        this.value = value;
-    }
+    private ClusterSettingsArgs() {}
 
-    private ClusterSettingsArgs() {
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
+    private ClusterSettingsArgs(ClusterSettingsArgs $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> value;
+        private ClusterSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterSettingsArgs();
         }
 
         public Builder(ClusterSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new ClusterSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ClusterSettingsArgs build() {
-            return new ClusterSettingsArgs(name, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ClusterSettingsArgs build() {
+            return $;
         }
     }
+
 }

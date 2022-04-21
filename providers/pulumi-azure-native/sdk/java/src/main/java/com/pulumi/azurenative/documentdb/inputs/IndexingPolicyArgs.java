@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="automatic")
-      private final @Nullable Output<Boolean> automatic;
+    private @Nullable Output<Boolean> automatic;
 
-    public Output<Boolean> automatic() {
-        return this.automatic == null ? Codegen.empty() : this.automatic;
+    public Optional<Output<Boolean>> automatic() {
+        return Optional.ofNullable(this.automatic);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="compositeIndexes")
-      private final @Nullable Output<List<List<CompositePathArgs>>> compositeIndexes;
+    private @Nullable Output<List<List<CompositePathArgs>>> compositeIndexes;
 
-    public Output<List<List<CompositePathArgs>>> compositeIndexes() {
-        return this.compositeIndexes == null ? Codegen.empty() : this.compositeIndexes;
+    public Optional<Output<List<List<CompositePathArgs>>>> compositeIndexes() {
+        return Optional.ofNullable(this.compositeIndexes);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="excludedPaths")
-      private final @Nullable Output<List<ExcludedPathArgs>> excludedPaths;
+    private @Nullable Output<List<ExcludedPathArgs>> excludedPaths;
 
-    public Output<List<ExcludedPathArgs>> excludedPaths() {
-        return this.excludedPaths == null ? Codegen.empty() : this.excludedPaths;
+    public Optional<Output<List<ExcludedPathArgs>>> excludedPaths() {
+        return Optional.ofNullable(this.excludedPaths);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="includedPaths")
-      private final @Nullable Output<List<IncludedPathArgs>> includedPaths;
+    private @Nullable Output<List<IncludedPathArgs>> includedPaths;
 
-    public Output<List<IncludedPathArgs>> includedPaths() {
-        return this.includedPaths == null ? Codegen.empty() : this.includedPaths;
+    public Optional<Output<List<IncludedPathArgs>>> includedPaths() {
+        return Optional.ofNullable(this.includedPaths);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="indexingMode")
-      private final @Nullable Output<Either<String,IndexingMode>> indexingMode;
+    private @Nullable Output<Either<String,IndexingMode>> indexingMode;
 
-    public Output<Either<String,IndexingMode>> indexingMode() {
-        return this.indexingMode == null ? Codegen.empty() : this.indexingMode;
+    public Optional<Output<Either<String,IndexingMode>>> indexingMode() {
+        return Optional.ofNullable(this.indexingMode);
     }
 
     /**
@@ -87,124 +88,115 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="spatialIndexes")
-      private final @Nullable Output<List<SpatialSpecArgs>> spatialIndexes;
+    private @Nullable Output<List<SpatialSpecArgs>> spatialIndexes;
 
-    public Output<List<SpatialSpecArgs>> spatialIndexes() {
-        return this.spatialIndexes == null ? Codegen.empty() : this.spatialIndexes;
+    public Optional<Output<List<SpatialSpecArgs>>> spatialIndexes() {
+        return Optional.ofNullable(this.spatialIndexes);
     }
 
-    public IndexingPolicyArgs(
-        @Nullable Output<Boolean> automatic,
-        @Nullable Output<List<List<CompositePathArgs>>> compositeIndexes,
-        @Nullable Output<List<ExcludedPathArgs>> excludedPaths,
-        @Nullable Output<List<IncludedPathArgs>> includedPaths,
-        @Nullable Output<Either<String,IndexingMode>> indexingMode,
-        @Nullable Output<List<SpatialSpecArgs>> spatialIndexes) {
-        this.automatic = automatic;
-        this.compositeIndexes = compositeIndexes;
-        this.excludedPaths = excludedPaths;
-        this.includedPaths = includedPaths;
-        this.indexingMode = Codegen.stringProp("indexingMode").left(IndexingMode.class).output().arg(indexingMode).def("consistent").getNullable();
-        this.spatialIndexes = spatialIndexes;
-    }
+    private IndexingPolicyArgs() {}
 
-    private IndexingPolicyArgs() {
-        this.automatic = Codegen.empty();
-        this.compositeIndexes = Codegen.empty();
-        this.excludedPaths = Codegen.empty();
-        this.includedPaths = Codegen.empty();
-        this.indexingMode = Codegen.empty();
-        this.spatialIndexes = Codegen.empty();
+    private IndexingPolicyArgs(IndexingPolicyArgs $) {
+        this.automatic = $.automatic;
+        this.compositeIndexes = $.compositeIndexes;
+        this.excludedPaths = $.excludedPaths;
+        this.includedPaths = $.includedPaths;
+        this.indexingMode = $.indexingMode;
+        this.spatialIndexes = $.spatialIndexes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> automatic;
-        private @Nullable Output<List<List<CompositePathArgs>>> compositeIndexes;
-        private @Nullable Output<List<ExcludedPathArgs>> excludedPaths;
-        private @Nullable Output<List<IncludedPathArgs>> includedPaths;
-        private @Nullable Output<Either<String,IndexingMode>> indexingMode;
-        private @Nullable Output<List<SpatialSpecArgs>> spatialIndexes;
+        private IndexingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexingPolicyArgs();
         }
 
         public Builder(IndexingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automatic = defaults.automatic;
-    	      this.compositeIndexes = defaults.compositeIndexes;
-    	      this.excludedPaths = defaults.excludedPaths;
-    	      this.includedPaths = defaults.includedPaths;
-    	      this.indexingMode = defaults.indexingMode;
-    	      this.spatialIndexes = defaults.spatialIndexes;
+            $ = new IndexingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automatic(@Nullable Output<Boolean> automatic) {
-            this.automatic = automatic;
+            $.automatic = automatic;
             return this;
         }
-        public Builder automatic(@Nullable Boolean automatic) {
-            this.automatic = Codegen.ofNullable(automatic);
-            return this;
+
+        public Builder automatic(Boolean automatic) {
+            return automatic(Output.of(automatic));
         }
+
         public Builder compositeIndexes(@Nullable Output<List<List<CompositePathArgs>>> compositeIndexes) {
-            this.compositeIndexes = compositeIndexes;
+            $.compositeIndexes = compositeIndexes;
             return this;
         }
-        public Builder compositeIndexes(@Nullable List<List<CompositePathArgs>> compositeIndexes) {
-            this.compositeIndexes = Codegen.ofNullable(compositeIndexes);
-            return this;
+
+        public Builder compositeIndexes(List<List<CompositePathArgs>> compositeIndexes) {
+            return compositeIndexes(Output.of(compositeIndexes));
         }
+
+        public Builder compositeIndexes(List<CompositePathArgs>... compositeIndexes) {
+            return compositeIndexes(List.of(compositeIndexes));
+        }
+
         public Builder excludedPaths(@Nullable Output<List<ExcludedPathArgs>> excludedPaths) {
-            this.excludedPaths = excludedPaths;
+            $.excludedPaths = excludedPaths;
             return this;
         }
-        public Builder excludedPaths(@Nullable List<ExcludedPathArgs> excludedPaths) {
-            this.excludedPaths = Codegen.ofNullable(excludedPaths);
-            return this;
+
+        public Builder excludedPaths(List<ExcludedPathArgs> excludedPaths) {
+            return excludedPaths(Output.of(excludedPaths));
         }
+
         public Builder excludedPaths(ExcludedPathArgs... excludedPaths) {
             return excludedPaths(List.of(excludedPaths));
         }
+
         public Builder includedPaths(@Nullable Output<List<IncludedPathArgs>> includedPaths) {
-            this.includedPaths = includedPaths;
+            $.includedPaths = includedPaths;
             return this;
         }
-        public Builder includedPaths(@Nullable List<IncludedPathArgs> includedPaths) {
-            this.includedPaths = Codegen.ofNullable(includedPaths);
-            return this;
+
+        public Builder includedPaths(List<IncludedPathArgs> includedPaths) {
+            return includedPaths(Output.of(includedPaths));
         }
+
         public Builder includedPaths(IncludedPathArgs... includedPaths) {
             return includedPaths(List.of(includedPaths));
         }
+
         public Builder indexingMode(@Nullable Output<Either<String,IndexingMode>> indexingMode) {
-            this.indexingMode = indexingMode;
+            $.indexingMode = indexingMode;
             return this;
         }
-        public Builder indexingMode(@Nullable Either<String,IndexingMode> indexingMode) {
-            this.indexingMode = Codegen.ofNullable(indexingMode);
-            return this;
+
+        public Builder indexingMode(Either<String,IndexingMode> indexingMode) {
+            return indexingMode(Output.of(indexingMode));
         }
+
         public Builder spatialIndexes(@Nullable Output<List<SpatialSpecArgs>> spatialIndexes) {
-            this.spatialIndexes = spatialIndexes;
+            $.spatialIndexes = spatialIndexes;
             return this;
         }
-        public Builder spatialIndexes(@Nullable List<SpatialSpecArgs> spatialIndexes) {
-            this.spatialIndexes = Codegen.ofNullable(spatialIndexes);
-            return this;
+
+        public Builder spatialIndexes(List<SpatialSpecArgs> spatialIndexes) {
+            return spatialIndexes(Output.of(spatialIndexes));
         }
+
         public Builder spatialIndexes(SpatialSpecArgs... spatialIndexes) {
             return spatialIndexes(List.of(spatialIndexes));
-        }        public IndexingPolicyArgs build() {
-            return new IndexingPolicyArgs(automatic, compositeIndexes, excludedPaths, includedPaths, indexingMode, spatialIndexes);
+        }
+
+        public IndexingPolicyArgs build() {
+            $.indexingMode = Codegen.stringProp("indexingMode").left(IndexingMode.class).output().arg($.indexingMode).def("consistent").getNullable();
+            return $;
         }
     }
+
 }

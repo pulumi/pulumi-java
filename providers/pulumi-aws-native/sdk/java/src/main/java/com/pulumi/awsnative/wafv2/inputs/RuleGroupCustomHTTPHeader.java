@@ -17,62 +17,59 @@ public final class RuleGroupCustomHTTPHeader extends com.pulumi.resources.Invoke
     public static final RuleGroupCustomHTTPHeader Empty = new RuleGroupCustomHTTPHeader();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public RuleGroupCustomHTTPHeader(
-        String name,
-        String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private RuleGroupCustomHTTPHeader() {}
 
-    private RuleGroupCustomHTTPHeader() {
-        this.name = null;
-        this.value = null;
+    private RuleGroupCustomHTTPHeader(RuleGroupCustomHTTPHeader $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupCustomHTTPHeader defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String value;
+        private RuleGroupCustomHTTPHeader $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupCustomHTTPHeader();
         }
 
         public Builder(RuleGroupCustomHTTPHeader defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new RuleGroupCustomHTTPHeader(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public RuleGroupCustomHTTPHeader build() {
-            return new RuleGroupCustomHTTPHeader(name, value);
+        }
+
+        public RuleGroupCustomHTTPHeader build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

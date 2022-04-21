@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1.enums.SoftwareConfigOptionalComponentsItem;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SoftwareConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="imageVersion")
-      private final @Nullable Output<String> imageVersion;
+    private @Nullable Output<String> imageVersion;
 
-    public Output<String> imageVersion() {
-        return this.imageVersion == null ? Codegen.empty() : this.imageVersion;
+    public Optional<Output<String>> imageVersion() {
+        return Optional.ofNullable(this.imageVersion);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SoftwareConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="optionalComponents")
-      private final @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
+    private @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
 
-    public Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents() {
-        return this.optionalComponents == null ? Codegen.empty() : this.optionalComponents;
+    public Optional<Output<List<SoftwareConfigOptionalComponentsItem>>> optionalComponents() {
+        return Optional.ofNullable(this.optionalComponents);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class SoftwareConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public SoftwareConfigArgs(
-        @Nullable Output<String> imageVersion,
-        @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents,
-        @Nullable Output<Map<String,String>> properties) {
-        this.imageVersion = imageVersion;
-        this.optionalComponents = optionalComponents;
-        this.properties = properties;
-    }
+    private SoftwareConfigArgs() {}
 
-    private SoftwareConfigArgs() {
-        this.imageVersion = Codegen.empty();
-        this.optionalComponents = Codegen.empty();
-        this.properties = Codegen.empty();
+    private SoftwareConfigArgs(SoftwareConfigArgs $) {
+        this.imageVersion = $.imageVersion;
+        this.optionalComponents = $.optionalComponents;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> imageVersion;
-        private @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
-        private @Nullable Output<Map<String,String>> properties;
+        private SoftwareConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareConfigArgs();
         }
 
         public Builder(SoftwareConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageVersion = defaults.imageVersion;
-    	      this.optionalComponents = defaults.optionalComponents;
-    	      this.properties = defaults.properties;
+            $ = new SoftwareConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageVersion(@Nullable Output<String> imageVersion) {
-            this.imageVersion = imageVersion;
+            $.imageVersion = imageVersion;
             return this;
         }
-        public Builder imageVersion(@Nullable String imageVersion) {
-            this.imageVersion = Codegen.ofNullable(imageVersion);
-            return this;
+
+        public Builder imageVersion(String imageVersion) {
+            return imageVersion(Output.of(imageVersion));
         }
+
         public Builder optionalComponents(@Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents) {
-            this.optionalComponents = optionalComponents;
+            $.optionalComponents = optionalComponents;
             return this;
         }
-        public Builder optionalComponents(@Nullable List<SoftwareConfigOptionalComponentsItem> optionalComponents) {
-            this.optionalComponents = Codegen.ofNullable(optionalComponents);
-            return this;
+
+        public Builder optionalComponents(List<SoftwareConfigOptionalComponentsItem> optionalComponents) {
+            return optionalComponents(Output.of(optionalComponents));
         }
+
         public Builder optionalComponents(SoftwareConfigOptionalComponentsItem... optionalComponents) {
             return optionalComponents(List.of(optionalComponents));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public SoftwareConfigArgs build() {
-            return new SoftwareConfigArgs(imageVersion, optionalComponents, properties);
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
+        }
+
+        public SoftwareConfigArgs build() {
+            return $;
         }
     }
+
 }

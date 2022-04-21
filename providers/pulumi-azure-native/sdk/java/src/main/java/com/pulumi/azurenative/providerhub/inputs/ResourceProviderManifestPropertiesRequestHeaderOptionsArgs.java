@@ -7,9 +7,9 @@ import com.pulumi.azurenative.providerhub.enums.OptInHeaderType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,49 +18,48 @@ public final class ResourceProviderManifestPropertiesRequestHeaderOptionsArgs ex
     public static final ResourceProviderManifestPropertiesRequestHeaderOptionsArgs Empty = new ResourceProviderManifestPropertiesRequestHeaderOptionsArgs();
 
     @Import(name="optInHeaders")
-      private final @Nullable Output<Either<String,OptInHeaderType>> optInHeaders;
+    private @Nullable Output<Either<String,OptInHeaderType>> optInHeaders;
 
-    public Output<Either<String,OptInHeaderType>> optInHeaders() {
-        return this.optInHeaders == null ? Codegen.empty() : this.optInHeaders;
+    public Optional<Output<Either<String,OptInHeaderType>>> optInHeaders() {
+        return Optional.ofNullable(this.optInHeaders);
     }
 
-    public ResourceProviderManifestPropertiesRequestHeaderOptionsArgs(@Nullable Output<Either<String,OptInHeaderType>> optInHeaders) {
-        this.optInHeaders = optInHeaders;
-    }
+    private ResourceProviderManifestPropertiesRequestHeaderOptionsArgs() {}
 
-    private ResourceProviderManifestPropertiesRequestHeaderOptionsArgs() {
-        this.optInHeaders = Codegen.empty();
+    private ResourceProviderManifestPropertiesRequestHeaderOptionsArgs(ResourceProviderManifestPropertiesRequestHeaderOptionsArgs $) {
+        this.optInHeaders = $.optInHeaders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceProviderManifestPropertiesRequestHeaderOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,OptInHeaderType>> optInHeaders;
+        private ResourceProviderManifestPropertiesRequestHeaderOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceProviderManifestPropertiesRequestHeaderOptionsArgs();
         }
 
         public Builder(ResourceProviderManifestPropertiesRequestHeaderOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optInHeaders = defaults.optInHeaders;
+            $ = new ResourceProviderManifestPropertiesRequestHeaderOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optInHeaders(@Nullable Output<Either<String,OptInHeaderType>> optInHeaders) {
-            this.optInHeaders = optInHeaders;
+            $.optInHeaders = optInHeaders;
             return this;
         }
-        public Builder optInHeaders(@Nullable Either<String,OptInHeaderType> optInHeaders) {
-            this.optInHeaders = Codegen.ofNullable(optInHeaders);
-            return this;
-        }        public ResourceProviderManifestPropertiesRequestHeaderOptionsArgs build() {
-            return new ResourceProviderManifestPropertiesRequestHeaderOptionsArgs(optInHeaders);
+
+        public Builder optInHeaders(Either<String,OptInHeaderType> optInHeaders) {
+            return optInHeaders(Output.of(optInHeaders));
+        }
+
+        public ResourceProviderManifestPropertiesRequestHeaderOptionsArgs build() {
+            return $;
         }
     }
+
 }

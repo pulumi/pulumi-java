@@ -6,9 +6,9 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.inputs.AutoUserSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoUser")
-      private final @Nullable Output<AutoUserSpecificationArgs> autoUser;
+    private @Nullable Output<AutoUserSpecificationArgs> autoUser;
 
-    public Output<AutoUserSpecificationArgs> autoUser() {
-        return this.autoUser == null ? Codegen.empty() : this.autoUser;
+    public Optional<Output<AutoUserSpecificationArgs>> autoUser() {
+        return Optional.ofNullable(this.autoUser);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public UserIdentityArgs(
-        @Nullable Output<AutoUserSpecificationArgs> autoUser,
-        @Nullable Output<String> userName) {
-        this.autoUser = autoUser;
-        this.userName = userName;
-    }
+    private UserIdentityArgs() {}
 
-    private UserIdentityArgs() {
-        this.autoUser = Codegen.empty();
-        this.userName = Codegen.empty();
+    private UserIdentityArgs(UserIdentityArgs $) {
+        this.autoUser = $.autoUser;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoUserSpecificationArgs> autoUser;
-        private @Nullable Output<String> userName;
+        private UserIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserIdentityArgs();
         }
 
         public Builder(UserIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUser = defaults.autoUser;
-    	      this.userName = defaults.userName;
+            $ = new UserIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUser(@Nullable Output<AutoUserSpecificationArgs> autoUser) {
-            this.autoUser = autoUser;
+            $.autoUser = autoUser;
             return this;
         }
-        public Builder autoUser(@Nullable AutoUserSpecificationArgs autoUser) {
-            this.autoUser = Codegen.ofNullable(autoUser);
-            return this;
+
+        public Builder autoUser(AutoUserSpecificationArgs autoUser) {
+            return autoUser(Output.of(autoUser));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public UserIdentityArgs build() {
-            return new UserIdentityArgs(autoUser, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public UserIdentityArgs build() {
+            return $;
         }
     }
+
 }

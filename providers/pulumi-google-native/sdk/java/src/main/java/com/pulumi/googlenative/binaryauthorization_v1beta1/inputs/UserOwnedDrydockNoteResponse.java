@@ -23,7 +23,7 @@ public final class UserOwnedDrydockNoteResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="delegationServiceAccountEmail", required=true)
-      private final String delegationServiceAccountEmail;
+    private String delegationServiceAccountEmail;
 
     public String delegationServiceAccountEmail() {
         return this.delegationServiceAccountEmail;
@@ -34,7 +34,7 @@ public final class UserOwnedDrydockNoteResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="noteReference", required=true)
-      private final String noteReference;
+    private String noteReference;
 
     public String noteReference() {
         return this.noteReference;
@@ -45,67 +45,63 @@ public final class UserOwnedDrydockNoteResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="publicKeys", required=true)
-      private final List<AttestorPublicKeyResponse> publicKeys;
+    private List<AttestorPublicKeyResponse> publicKeys;
 
     public List<AttestorPublicKeyResponse> publicKeys() {
         return this.publicKeys;
     }
 
-    public UserOwnedDrydockNoteResponse(
-        String delegationServiceAccountEmail,
-        String noteReference,
-        List<AttestorPublicKeyResponse> publicKeys) {
-        this.delegationServiceAccountEmail = Objects.requireNonNull(delegationServiceAccountEmail, "expected parameter 'delegationServiceAccountEmail' to be non-null");
-        this.noteReference = Objects.requireNonNull(noteReference, "expected parameter 'noteReference' to be non-null");
-        this.publicKeys = Objects.requireNonNull(publicKeys, "expected parameter 'publicKeys' to be non-null");
-    }
+    private UserOwnedDrydockNoteResponse() {}
 
-    private UserOwnedDrydockNoteResponse() {
-        this.delegationServiceAccountEmail = null;
-        this.noteReference = null;
-        this.publicKeys = List.of();
+    private UserOwnedDrydockNoteResponse(UserOwnedDrydockNoteResponse $) {
+        this.delegationServiceAccountEmail = $.delegationServiceAccountEmail;
+        this.noteReference = $.noteReference;
+        this.publicKeys = $.publicKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserOwnedDrydockNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String delegationServiceAccountEmail;
-        private String noteReference;
-        private List<AttestorPublicKeyResponse> publicKeys;
+        private UserOwnedDrydockNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserOwnedDrydockNoteResponse();
         }
 
         public Builder(UserOwnedDrydockNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delegationServiceAccountEmail = defaults.delegationServiceAccountEmail;
-    	      this.noteReference = defaults.noteReference;
-    	      this.publicKeys = defaults.publicKeys;
+            $ = new UserOwnedDrydockNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder delegationServiceAccountEmail(String delegationServiceAccountEmail) {
-            this.delegationServiceAccountEmail = Objects.requireNonNull(delegationServiceAccountEmail);
+            $.delegationServiceAccountEmail = delegationServiceAccountEmail;
             return this;
         }
+
         public Builder noteReference(String noteReference) {
-            this.noteReference = Objects.requireNonNull(noteReference);
+            $.noteReference = noteReference;
             return this;
         }
+
         public Builder publicKeys(List<AttestorPublicKeyResponse> publicKeys) {
-            this.publicKeys = Objects.requireNonNull(publicKeys);
+            $.publicKeys = publicKeys;
             return this;
         }
+
         public Builder publicKeys(AttestorPublicKeyResponse... publicKeys) {
             return publicKeys(List.of(publicKeys));
-        }        public UserOwnedDrydockNoteResponse build() {
-            return new UserOwnedDrydockNoteResponse(delegationServiceAccountEmail, noteReference, publicKeys);
+        }
+
+        public UserOwnedDrydockNoteResponse build() {
+            $.delegationServiceAccountEmail = Objects.requireNonNull($.delegationServiceAccountEmail, "expected parameter 'delegationServiceAccountEmail' to be non-null");
+            $.noteReference = Objects.requireNonNull($.noteReference, "expected parameter 'noteReference' to be non-null");
+            $.publicKeys = Objects.requireNonNull($.publicKeys, "expected parameter 'publicKeys' to be non-null");
+            return $;
         }
     }
+
 }

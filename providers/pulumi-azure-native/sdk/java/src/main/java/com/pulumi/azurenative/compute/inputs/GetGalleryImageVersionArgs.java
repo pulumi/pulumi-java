@@ -19,10 +19,10 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="galleryImageName", required=true)
-      private final String galleryImageName;
+    private String galleryImageName;
 
     public String galleryImageName() {
         return this.galleryImageName;
@@ -41,7 +41,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="galleryImageVersionName", required=true)
-      private final String galleryImageVersionName;
+    private String galleryImageVersionName;
 
     public String galleryImageVersionName() {
         return this.galleryImageVersionName;
@@ -52,7 +52,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="galleryName", required=true)
-      private final String galleryName;
+    private String galleryName;
 
     public String galleryName() {
         return this.galleryName;
@@ -63,82 +63,72 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetGalleryImageVersionArgs(
-        @Nullable String expand,
-        String galleryImageName,
-        String galleryImageVersionName,
-        String galleryName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.galleryImageName = Objects.requireNonNull(galleryImageName, "expected parameter 'galleryImageName' to be non-null");
-        this.galleryImageVersionName = Objects.requireNonNull(galleryImageVersionName, "expected parameter 'galleryImageVersionName' to be non-null");
-        this.galleryName = Objects.requireNonNull(galleryName, "expected parameter 'galleryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetGalleryImageVersionArgs() {}
 
-    private GetGalleryImageVersionArgs() {
-        this.expand = null;
-        this.galleryImageName = null;
-        this.galleryImageVersionName = null;
-        this.galleryName = null;
-        this.resourceGroupName = null;
+    private GetGalleryImageVersionArgs(GetGalleryImageVersionArgs $) {
+        this.expand = $.expand;
+        this.galleryImageName = $.galleryImageName;
+        this.galleryImageVersionName = $.galleryImageVersionName;
+        this.galleryName = $.galleryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGalleryImageVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String galleryImageName;
-        private String galleryImageVersionName;
-        private String galleryName;
-        private String resourceGroupName;
+        private GetGalleryImageVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGalleryImageVersionArgs();
         }
 
         public Builder(GetGalleryImageVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.galleryImageName = defaults.galleryImageName;
-    	      this.galleryImageVersionName = defaults.galleryImageVersionName;
-    	      this.galleryName = defaults.galleryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetGalleryImageVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder galleryImageName(String galleryImageName) {
-            this.galleryImageName = Objects.requireNonNull(galleryImageName);
+            $.galleryImageName = galleryImageName;
             return this;
         }
+
         public Builder galleryImageVersionName(String galleryImageVersionName) {
-            this.galleryImageVersionName = Objects.requireNonNull(galleryImageVersionName);
+            $.galleryImageVersionName = galleryImageVersionName;
             return this;
         }
+
         public Builder galleryName(String galleryName) {
-            this.galleryName = Objects.requireNonNull(galleryName);
+            $.galleryName = galleryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetGalleryImageVersionArgs build() {
-            return new GetGalleryImageVersionArgs(expand, galleryImageName, galleryImageVersionName, galleryName, resourceGroupName);
+        }
+
+        public GetGalleryImageVersionArgs build() {
+            $.galleryImageName = Objects.requireNonNull($.galleryImageName, "expected parameter 'galleryImageName' to be non-null");
+            $.galleryImageVersionName = Objects.requireNonNull($.galleryImageVersionName, "expected parameter 'galleryImageVersionName' to be non-null");
+            $.galleryName = Objects.requireNonNull($.galleryName, "expected parameter 'galleryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,65 +17,61 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization ex
     public static final ProviderHubMetadataResponseThirdPartyProviderAuthorization Empty = new ProviderHubMetadataResponseThirdPartyProviderAuthorization();
 
     @Import(name="authorizations")
-      private final @Nullable List<LightHouseAuthorizationResponse> authorizations;
+    private @Nullable List<LightHouseAuthorizationResponse> authorizations;
 
-    public List<LightHouseAuthorizationResponse> authorizations() {
-        return this.authorizations == null ? List.of() : this.authorizations;
+    public Optional<List<LightHouseAuthorizationResponse>> authorizations() {
+        return Optional.ofNullable(this.authorizations);
     }
 
     @Import(name="managedByTenantId")
-      private final @Nullable String managedByTenantId;
+    private @Nullable String managedByTenantId;
 
     public Optional<String> managedByTenantId() {
-        return this.managedByTenantId == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantId);
+        return Optional.ofNullable(this.managedByTenantId);
     }
 
-    public ProviderHubMetadataResponseThirdPartyProviderAuthorization(
-        @Nullable List<LightHouseAuthorizationResponse> authorizations,
-        @Nullable String managedByTenantId) {
-        this.authorizations = authorizations;
-        this.managedByTenantId = managedByTenantId;
-    }
+    private ProviderHubMetadataResponseThirdPartyProviderAuthorization() {}
 
-    private ProviderHubMetadataResponseThirdPartyProviderAuthorization() {
-        this.authorizations = List.of();
-        this.managedByTenantId = null;
+    private ProviderHubMetadataResponseThirdPartyProviderAuthorization(ProviderHubMetadataResponseThirdPartyProviderAuthorization $) {
+        this.authorizations = $.authorizations;
+        this.managedByTenantId = $.managedByTenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderHubMetadataResponseThirdPartyProviderAuthorization defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<LightHouseAuthorizationResponse> authorizations;
-        private @Nullable String managedByTenantId;
+        private ProviderHubMetadataResponseThirdPartyProviderAuthorization $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderHubMetadataResponseThirdPartyProviderAuthorization();
         }
 
         public Builder(ProviderHubMetadataResponseThirdPartyProviderAuthorization defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizations = defaults.authorizations;
-    	      this.managedByTenantId = defaults.managedByTenantId;
+            $ = new ProviderHubMetadataResponseThirdPartyProviderAuthorization(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizations(@Nullable List<LightHouseAuthorizationResponse> authorizations) {
-            this.authorizations = authorizations;
+            $.authorizations = authorizations;
             return this;
         }
+
         public Builder authorizations(LightHouseAuthorizationResponse... authorizations) {
             return authorizations(List.of(authorizations));
         }
+
         public Builder managedByTenantId(@Nullable String managedByTenantId) {
-            this.managedByTenantId = managedByTenantId;
+            $.managedByTenantId = managedByTenantId;
             return this;
-        }        public ProviderHubMetadataResponseThirdPartyProviderAuthorization build() {
-            return new ProviderHubMetadataResponseThirdPartyProviderAuthorization(authorizations, managedByTenantId);
+        }
+
+        public ProviderHubMetadataResponseThirdPartyProviderAuthorization build() {
+            return $;
         }
     }
+
 }

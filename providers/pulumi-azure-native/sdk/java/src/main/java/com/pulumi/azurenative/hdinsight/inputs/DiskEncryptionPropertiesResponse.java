@@ -25,10 +25,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="encryptionAlgorithm")
-      private final @Nullable String encryptionAlgorithm;
+    private @Nullable String encryptionAlgorithm;
 
     public Optional<String> encryptionAlgorithm() {
-        return this.encryptionAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.encryptionAlgorithm);
+        return Optional.ofNullable(this.encryptionAlgorithm);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="encryptionAtHost")
-      private final @Nullable Boolean encryptionAtHost;
+    private @Nullable Boolean encryptionAtHost;
 
     public Optional<Boolean> encryptionAtHost() {
-        return this.encryptionAtHost == null ? Optional.empty() : Optional.ofNullable(this.encryptionAtHost);
+        return Optional.ofNullable(this.encryptionAtHost);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="keyName")
-      private final @Nullable String keyName;
+    private @Nullable String keyName;
 
     public Optional<String> keyName() {
-        return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="keyVersion")
-      private final @Nullable String keyVersion;
+    private @Nullable String keyVersion;
 
     public Optional<String> keyVersion() {
-        return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
+        return Optional.ofNullable(this.keyVersion);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="msiResourceId")
-      private final @Nullable String msiResourceId;
+    private @Nullable String msiResourceId;
 
     public Optional<String> msiResourceId() {
-        return this.msiResourceId == null ? Optional.empty() : Optional.ofNullable(this.msiResourceId);
+        return Optional.ofNullable(this.msiResourceId);
     }
 
     /**
@@ -80,91 +80,75 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="vaultUri")
-      private final @Nullable String vaultUri;
+    private @Nullable String vaultUri;
 
     public Optional<String> vaultUri() {
-        return this.vaultUri == null ? Optional.empty() : Optional.ofNullable(this.vaultUri);
+        return Optional.ofNullable(this.vaultUri);
     }
 
-    public DiskEncryptionPropertiesResponse(
-        @Nullable String encryptionAlgorithm,
-        @Nullable Boolean encryptionAtHost,
-        @Nullable String keyName,
-        @Nullable String keyVersion,
-        @Nullable String msiResourceId,
-        @Nullable String vaultUri) {
-        this.encryptionAlgorithm = encryptionAlgorithm;
-        this.encryptionAtHost = Codegen.booleanProp("encryptionAtHost").arg(encryptionAtHost).def(false).getNullable();
-        this.keyName = keyName;
-        this.keyVersion = keyVersion;
-        this.msiResourceId = msiResourceId;
-        this.vaultUri = vaultUri;
-    }
+    private DiskEncryptionPropertiesResponse() {}
 
-    private DiskEncryptionPropertiesResponse() {
-        this.encryptionAlgorithm = null;
-        this.encryptionAtHost = null;
-        this.keyName = null;
-        this.keyVersion = null;
-        this.msiResourceId = null;
-        this.vaultUri = null;
+    private DiskEncryptionPropertiesResponse(DiskEncryptionPropertiesResponse $) {
+        this.encryptionAlgorithm = $.encryptionAlgorithm;
+        this.encryptionAtHost = $.encryptionAtHost;
+        this.keyName = $.keyName;
+        this.keyVersion = $.keyVersion;
+        this.msiResourceId = $.msiResourceId;
+        this.vaultUri = $.vaultUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String encryptionAlgorithm;
-        private @Nullable Boolean encryptionAtHost;
-        private @Nullable String keyName;
-        private @Nullable String keyVersion;
-        private @Nullable String msiResourceId;
-        private @Nullable String vaultUri;
+        private DiskEncryptionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionPropertiesResponse();
         }
 
         public Builder(DiskEncryptionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionAlgorithm = defaults.encryptionAlgorithm;
-    	      this.encryptionAtHost = defaults.encryptionAtHost;
-    	      this.keyName = defaults.keyName;
-    	      this.keyVersion = defaults.keyVersion;
-    	      this.msiResourceId = defaults.msiResourceId;
-    	      this.vaultUri = defaults.vaultUri;
+            $ = new DiskEncryptionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
-            this.encryptionAlgorithm = encryptionAlgorithm;
+            $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
+
         public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
-            this.encryptionAtHost = encryptionAtHost;
+            $.encryptionAtHost = encryptionAtHost;
             return this;
         }
+
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = keyVersion;
+            $.keyVersion = keyVersion;
             return this;
         }
+
         public Builder msiResourceId(@Nullable String msiResourceId) {
-            this.msiResourceId = msiResourceId;
+            $.msiResourceId = msiResourceId;
             return this;
         }
+
         public Builder vaultUri(@Nullable String vaultUri) {
-            this.vaultUri = vaultUri;
+            $.vaultUri = vaultUri;
             return this;
-        }        public DiskEncryptionPropertiesResponse build() {
-            return new DiskEncryptionPropertiesResponse(encryptionAlgorithm, encryptionAtHost, keyName, keyVersion, msiResourceId, vaultUri);
+        }
+
+        public DiskEncryptionPropertiesResponse build() {
+            $.encryptionAtHost = Codegen.booleanProp("encryptionAtHost").arg($.encryptionAtHost).def(false).getNullable();
+            return $;
         }
     }
+
 }

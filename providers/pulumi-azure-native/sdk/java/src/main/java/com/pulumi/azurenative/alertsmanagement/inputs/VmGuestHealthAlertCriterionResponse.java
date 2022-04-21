@@ -26,7 +26,7 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="healthStates", required=true)
-      private final List<HealthStateResponse> healthStates;
+    private List<HealthStateResponse> healthStates;
 
     public List<HealthStateResponse> healthStates() {
         return this.healthStates;
@@ -37,10 +37,10 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="monitorNames")
-      private final @Nullable List<String> monitorNames;
+    private @Nullable List<String> monitorNames;
 
-    public List<String> monitorNames() {
-        return this.monitorNames == null ? List.of() : this.monitorNames;
+    public Optional<List<String>> monitorNames() {
+        return Optional.ofNullable(this.monitorNames);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="monitorTypes")
-      private final @Nullable List<String> monitorTypes;
+    private @Nullable List<String> monitorTypes;
 
-    public List<String> monitorTypes() {
-        return this.monitorTypes == null ? List.of() : this.monitorTypes;
+    public Optional<List<String>> monitorTypes() {
+        return Optional.ofNullable(this.monitorTypes);
     }
 
     /**
@@ -60,82 +60,76 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
     }
 
-    public VmGuestHealthAlertCriterionResponse(
-        List<HealthStateResponse> healthStates,
-        @Nullable List<String> monitorNames,
-        @Nullable List<String> monitorTypes,
-        String namespace) {
-        this.healthStates = Objects.requireNonNull(healthStates, "expected parameter 'healthStates' to be non-null");
-        this.monitorNames = monitorNames;
-        this.monitorTypes = monitorTypes;
-        this.namespace = Codegen.stringProp("namespace").arg(namespace).require();
-    }
+    private VmGuestHealthAlertCriterionResponse() {}
 
-    private VmGuestHealthAlertCriterionResponse() {
-        this.healthStates = List.of();
-        this.monitorNames = List.of();
-        this.monitorTypes = List.of();
-        this.namespace = null;
+    private VmGuestHealthAlertCriterionResponse(VmGuestHealthAlertCriterionResponse $) {
+        this.healthStates = $.healthStates;
+        this.monitorNames = $.monitorNames;
+        this.monitorTypes = $.monitorTypes;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmGuestHealthAlertCriterionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<HealthStateResponse> healthStates;
-        private @Nullable List<String> monitorNames;
-        private @Nullable List<String> monitorTypes;
-        private String namespace;
+        private VmGuestHealthAlertCriterionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmGuestHealthAlertCriterionResponse();
         }
 
         public Builder(VmGuestHealthAlertCriterionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthStates = defaults.healthStates;
-    	      this.monitorNames = defaults.monitorNames;
-    	      this.monitorTypes = defaults.monitorTypes;
-    	      this.namespace = defaults.namespace;
+            $ = new VmGuestHealthAlertCriterionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder healthStates(List<HealthStateResponse> healthStates) {
-            this.healthStates = Objects.requireNonNull(healthStates);
+            $.healthStates = healthStates;
             return this;
         }
+
         public Builder healthStates(HealthStateResponse... healthStates) {
             return healthStates(List.of(healthStates));
         }
+
         public Builder monitorNames(@Nullable List<String> monitorNames) {
-            this.monitorNames = monitorNames;
+            $.monitorNames = monitorNames;
             return this;
         }
+
         public Builder monitorNames(String... monitorNames) {
             return monitorNames(List.of(monitorNames));
         }
+
         public Builder monitorTypes(@Nullable List<String> monitorTypes) {
-            this.monitorTypes = monitorTypes;
+            $.monitorTypes = monitorTypes;
             return this;
         }
+
         public Builder monitorTypes(String... monitorTypes) {
             return monitorTypes(List.of(monitorTypes));
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
-        }        public VmGuestHealthAlertCriterionResponse build() {
-            return new VmGuestHealthAlertCriterionResponse(healthStates, monitorNames, monitorTypes, namespace);
+        }
+
+        public VmGuestHealthAlertCriterionResponse build() {
+            $.healthStates = Objects.requireNonNull($.healthStates, "expected parameter 'healthStates' to be non-null");
+            $.namespace = Codegen.stringProp("namespace").arg($.namespace).require();
+            return $;
         }
     }
+
 }

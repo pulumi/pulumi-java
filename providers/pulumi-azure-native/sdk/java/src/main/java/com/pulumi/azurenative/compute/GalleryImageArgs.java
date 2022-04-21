@@ -14,11 +14,11 @@ import com.pulumi.azurenative.compute.inputs.RecommendedMachineConfigurationArgs
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disallowed")
-      private final @Nullable Output<DisallowedArgs> disallowed;
+    private @Nullable Output<DisallowedArgs> disallowed;
 
-    public Output<DisallowedArgs> disallowed() {
-        return this.disallowed == null ? Codegen.empty() : this.disallowed;
+    public Optional<Output<DisallowedArgs>> disallowed() {
+        return Optional.ofNullable(this.disallowed);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endOfLifeDate")
-      private final @Nullable Output<String> endOfLifeDate;
+    private @Nullable Output<String> endOfLifeDate;
 
-    public Output<String> endOfLifeDate() {
-        return this.endOfLifeDate == null ? Codegen.empty() : this.endOfLifeDate;
+    public Optional<Output<String>> endOfLifeDate() {
+        return Optional.ofNullable(this.endOfLifeDate);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eula")
-      private final @Nullable Output<String> eula;
+    private @Nullable Output<String> eula;
 
-    public Output<String> eula() {
-        return this.eula == null ? Codegen.empty() : this.eula;
+    public Optional<Output<String>> eula() {
+        return Optional.ofNullable(this.eula);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="features")
-      private final @Nullable Output<List<GalleryImageFeatureArgs>> features;
+    private @Nullable Output<List<GalleryImageFeatureArgs>> features;
 
-    public Output<List<GalleryImageFeatureArgs>> features() {
-        return this.features == null ? Codegen.empty() : this.features;
+    public Optional<Output<List<GalleryImageFeatureArgs>>> features() {
+        return Optional.ofNullable(this.features);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="galleryImageName")
-      private final @Nullable Output<String> galleryImageName;
+    private @Nullable Output<String> galleryImageName;
 
-    public Output<String> galleryImageName() {
-        return this.galleryImageName == null ? Codegen.empty() : this.galleryImageName;
+    public Optional<Output<String>> galleryImageName() {
+        return Optional.ofNullable(this.galleryImageName);
     }
 
     /**
@@ -97,7 +97,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="galleryName", required=true)
-      private final Output<String> galleryName;
+    private Output<String> galleryName;
 
     public Output<String> galleryName() {
         return this.galleryName;
@@ -108,10 +108,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hyperVGeneration")
-      private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
+    private @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
-    public Output<Either<String,HyperVGeneration>> hyperVGeneration() {
-        return this.hyperVGeneration == null ? Codegen.empty() : this.hyperVGeneration;
+    public Optional<Output<Either<String,HyperVGeneration>>> hyperVGeneration() {
+        return Optional.ofNullable(this.hyperVGeneration);
     }
 
     /**
@@ -119,7 +119,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identifier", required=true)
-      private final Output<GalleryImageIdentifierArgs> identifier;
+    private Output<GalleryImageIdentifierArgs> identifier;
 
     public Output<GalleryImageIdentifierArgs> identifier() {
         return this.identifier;
@@ -130,10 +130,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -141,7 +141,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osState", required=true)
-      private final Output<OperatingSystemStateTypes> osState;
+    private Output<OperatingSystemStateTypes> osState;
 
     public Output<OperatingSystemStateTypes> osState() {
         return this.osState;
@@ -152,7 +152,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osType", required=true)
-      private final Output<OperatingSystemTypes> osType;
+    private Output<OperatingSystemTypes> osType;
 
     public Output<OperatingSystemTypes> osType() {
         return this.osType;
@@ -163,10 +163,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privacyStatementUri")
-      private final @Nullable Output<String> privacyStatementUri;
+    private @Nullable Output<String> privacyStatementUri;
 
-    public Output<String> privacyStatementUri() {
-        return this.privacyStatementUri == null ? Codegen.empty() : this.privacyStatementUri;
+    public Optional<Output<String>> privacyStatementUri() {
+        return Optional.ofNullable(this.privacyStatementUri);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="purchasePlan")
-      private final @Nullable Output<ImagePurchasePlanArgs> purchasePlan;
+    private @Nullable Output<ImagePurchasePlanArgs> purchasePlan;
 
-    public Output<ImagePurchasePlanArgs> purchasePlan() {
-        return this.purchasePlan == null ? Codegen.empty() : this.purchasePlan;
+    public Optional<Output<ImagePurchasePlanArgs>> purchasePlan() {
+        return Optional.ofNullable(this.purchasePlan);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recommended")
-      private final @Nullable Output<RecommendedMachineConfigurationArgs> recommended;
+    private @Nullable Output<RecommendedMachineConfigurationArgs> recommended;
 
-    public Output<RecommendedMachineConfigurationArgs> recommended() {
-        return this.recommended == null ? Codegen.empty() : this.recommended;
+    public Optional<Output<RecommendedMachineConfigurationArgs>> recommended() {
+        return Optional.ofNullable(this.recommended);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="releaseNoteUri")
-      private final @Nullable Output<String> releaseNoteUri;
+    private @Nullable Output<String> releaseNoteUri;
 
-    public Output<String> releaseNoteUri() {
-        return this.releaseNoteUri == null ? Codegen.empty() : this.releaseNoteUri;
+    public Optional<Output<String>> releaseNoteUri() {
+        return Optional.ofNullable(this.releaseNoteUri);
     }
 
     /**
@@ -207,7 +207,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -218,274 +218,227 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GalleryImageArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<DisallowedArgs> disallowed,
-        @Nullable Output<String> endOfLifeDate,
-        @Nullable Output<String> eula,
-        @Nullable Output<List<GalleryImageFeatureArgs>> features,
-        @Nullable Output<String> galleryImageName,
-        Output<String> galleryName,
-        @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration,
-        Output<GalleryImageIdentifierArgs> identifier,
-        @Nullable Output<String> location,
-        Output<OperatingSystemStateTypes> osState,
-        Output<OperatingSystemTypes> osType,
-        @Nullable Output<String> privacyStatementUri,
-        @Nullable Output<ImagePurchasePlanArgs> purchasePlan,
-        @Nullable Output<RecommendedMachineConfigurationArgs> recommended,
-        @Nullable Output<String> releaseNoteUri,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = description;
-        this.disallowed = disallowed;
-        this.endOfLifeDate = endOfLifeDate;
-        this.eula = eula;
-        this.features = features;
-        this.galleryImageName = galleryImageName;
-        this.galleryName = Objects.requireNonNull(galleryName, "expected parameter 'galleryName' to be non-null");
-        this.hyperVGeneration = hyperVGeneration;
-        this.identifier = Objects.requireNonNull(identifier, "expected parameter 'identifier' to be non-null");
-        this.location = location;
-        this.osState = Objects.requireNonNull(osState, "expected parameter 'osState' to be non-null");
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.privacyStatementUri = privacyStatementUri;
-        this.purchasePlan = purchasePlan;
-        this.recommended = recommended;
-        this.releaseNoteUri = releaseNoteUri;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private GalleryImageArgs() {}
 
-    private GalleryImageArgs() {
-        this.description = Codegen.empty();
-        this.disallowed = Codegen.empty();
-        this.endOfLifeDate = Codegen.empty();
-        this.eula = Codegen.empty();
-        this.features = Codegen.empty();
-        this.galleryImageName = Codegen.empty();
-        this.galleryName = Codegen.empty();
-        this.hyperVGeneration = Codegen.empty();
-        this.identifier = Codegen.empty();
-        this.location = Codegen.empty();
-        this.osState = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.privacyStatementUri = Codegen.empty();
-        this.purchasePlan = Codegen.empty();
-        this.recommended = Codegen.empty();
-        this.releaseNoteUri = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private GalleryImageArgs(GalleryImageArgs $) {
+        this.description = $.description;
+        this.disallowed = $.disallowed;
+        this.endOfLifeDate = $.endOfLifeDate;
+        this.eula = $.eula;
+        this.features = $.features;
+        this.galleryImageName = $.galleryImageName;
+        this.galleryName = $.galleryName;
+        this.hyperVGeneration = $.hyperVGeneration;
+        this.identifier = $.identifier;
+        this.location = $.location;
+        this.osState = $.osState;
+        this.osType = $.osType;
+        this.privacyStatementUri = $.privacyStatementUri;
+        this.purchasePlan = $.purchasePlan;
+        this.recommended = $.recommended;
+        this.releaseNoteUri = $.releaseNoteUri;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<DisallowedArgs> disallowed;
-        private @Nullable Output<String> endOfLifeDate;
-        private @Nullable Output<String> eula;
-        private @Nullable Output<List<GalleryImageFeatureArgs>> features;
-        private @Nullable Output<String> galleryImageName;
-        private Output<String> galleryName;
-        private @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
-        private Output<GalleryImageIdentifierArgs> identifier;
-        private @Nullable Output<String> location;
-        private Output<OperatingSystemStateTypes> osState;
-        private Output<OperatingSystemTypes> osType;
-        private @Nullable Output<String> privacyStatementUri;
-        private @Nullable Output<ImagePurchasePlanArgs> purchasePlan;
-        private @Nullable Output<RecommendedMachineConfigurationArgs> recommended;
-        private @Nullable Output<String> releaseNoteUri;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private GalleryImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryImageArgs();
         }
 
         public Builder(GalleryImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.disallowed = defaults.disallowed;
-    	      this.endOfLifeDate = defaults.endOfLifeDate;
-    	      this.eula = defaults.eula;
-    	      this.features = defaults.features;
-    	      this.galleryImageName = defaults.galleryImageName;
-    	      this.galleryName = defaults.galleryName;
-    	      this.hyperVGeneration = defaults.hyperVGeneration;
-    	      this.identifier = defaults.identifier;
-    	      this.location = defaults.location;
-    	      this.osState = defaults.osState;
-    	      this.osType = defaults.osType;
-    	      this.privacyStatementUri = defaults.privacyStatementUri;
-    	      this.purchasePlan = defaults.purchasePlan;
-    	      this.recommended = defaults.recommended;
-    	      this.releaseNoteUri = defaults.releaseNoteUri;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new GalleryImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disallowed(@Nullable Output<DisallowedArgs> disallowed) {
-            this.disallowed = disallowed;
+            $.disallowed = disallowed;
             return this;
         }
-        public Builder disallowed(@Nullable DisallowedArgs disallowed) {
-            this.disallowed = Codegen.ofNullable(disallowed);
-            return this;
+
+        public Builder disallowed(DisallowedArgs disallowed) {
+            return disallowed(Output.of(disallowed));
         }
+
         public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
-            this.endOfLifeDate = endOfLifeDate;
+            $.endOfLifeDate = endOfLifeDate;
             return this;
         }
-        public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
-            this.endOfLifeDate = Codegen.ofNullable(endOfLifeDate);
-            return this;
+
+        public Builder endOfLifeDate(String endOfLifeDate) {
+            return endOfLifeDate(Output.of(endOfLifeDate));
         }
+
         public Builder eula(@Nullable Output<String> eula) {
-            this.eula = eula;
+            $.eula = eula;
             return this;
         }
-        public Builder eula(@Nullable String eula) {
-            this.eula = Codegen.ofNullable(eula);
-            return this;
+
+        public Builder eula(String eula) {
+            return eula(Output.of(eula));
         }
+
         public Builder features(@Nullable Output<List<GalleryImageFeatureArgs>> features) {
-            this.features = features;
+            $.features = features;
             return this;
         }
-        public Builder features(@Nullable List<GalleryImageFeatureArgs> features) {
-            this.features = Codegen.ofNullable(features);
-            return this;
+
+        public Builder features(List<GalleryImageFeatureArgs> features) {
+            return features(Output.of(features));
         }
+
         public Builder features(GalleryImageFeatureArgs... features) {
             return features(List.of(features));
         }
+
         public Builder galleryImageName(@Nullable Output<String> galleryImageName) {
-            this.galleryImageName = galleryImageName;
+            $.galleryImageName = galleryImageName;
             return this;
         }
-        public Builder galleryImageName(@Nullable String galleryImageName) {
-            this.galleryImageName = Codegen.ofNullable(galleryImageName);
-            return this;
+
+        public Builder galleryImageName(String galleryImageName) {
+            return galleryImageName(Output.of(galleryImageName));
         }
+
         public Builder galleryName(Output<String> galleryName) {
-            this.galleryName = Objects.requireNonNull(galleryName);
+            $.galleryName = galleryName;
             return this;
         }
+
         public Builder galleryName(String galleryName) {
-            this.galleryName = Output.of(Objects.requireNonNull(galleryName));
-            return this;
+            return galleryName(Output.of(galleryName));
         }
+
         public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration) {
-            this.hyperVGeneration = hyperVGeneration;
+            $.hyperVGeneration = hyperVGeneration;
             return this;
         }
-        public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
-            this.hyperVGeneration = Codegen.ofNullable(hyperVGeneration);
-            return this;
+
+        public Builder hyperVGeneration(Either<String,HyperVGeneration> hyperVGeneration) {
+            return hyperVGeneration(Output.of(hyperVGeneration));
         }
+
         public Builder identifier(Output<GalleryImageIdentifierArgs> identifier) {
-            this.identifier = Objects.requireNonNull(identifier);
+            $.identifier = identifier;
             return this;
         }
+
         public Builder identifier(GalleryImageIdentifierArgs identifier) {
-            this.identifier = Output.of(Objects.requireNonNull(identifier));
-            return this;
+            return identifier(Output.of(identifier));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder osState(Output<OperatingSystemStateTypes> osState) {
-            this.osState = Objects.requireNonNull(osState);
+            $.osState = osState;
             return this;
         }
+
         public Builder osState(OperatingSystemStateTypes osState) {
-            this.osState = Output.of(Objects.requireNonNull(osState));
-            return this;
+            return osState(Output.of(osState));
         }
+
         public Builder osType(Output<OperatingSystemTypes> osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder osType(OperatingSystemTypes osType) {
-            this.osType = Output.of(Objects.requireNonNull(osType));
-            return this;
+            return osType(Output.of(osType));
         }
+
         public Builder privacyStatementUri(@Nullable Output<String> privacyStatementUri) {
-            this.privacyStatementUri = privacyStatementUri;
+            $.privacyStatementUri = privacyStatementUri;
             return this;
         }
-        public Builder privacyStatementUri(@Nullable String privacyStatementUri) {
-            this.privacyStatementUri = Codegen.ofNullable(privacyStatementUri);
-            return this;
+
+        public Builder privacyStatementUri(String privacyStatementUri) {
+            return privacyStatementUri(Output.of(privacyStatementUri));
         }
+
         public Builder purchasePlan(@Nullable Output<ImagePurchasePlanArgs> purchasePlan) {
-            this.purchasePlan = purchasePlan;
+            $.purchasePlan = purchasePlan;
             return this;
         }
-        public Builder purchasePlan(@Nullable ImagePurchasePlanArgs purchasePlan) {
-            this.purchasePlan = Codegen.ofNullable(purchasePlan);
-            return this;
+
+        public Builder purchasePlan(ImagePurchasePlanArgs purchasePlan) {
+            return purchasePlan(Output.of(purchasePlan));
         }
+
         public Builder recommended(@Nullable Output<RecommendedMachineConfigurationArgs> recommended) {
-            this.recommended = recommended;
+            $.recommended = recommended;
             return this;
         }
-        public Builder recommended(@Nullable RecommendedMachineConfigurationArgs recommended) {
-            this.recommended = Codegen.ofNullable(recommended);
-            return this;
+
+        public Builder recommended(RecommendedMachineConfigurationArgs recommended) {
+            return recommended(Output.of(recommended));
         }
+
         public Builder releaseNoteUri(@Nullable Output<String> releaseNoteUri) {
-            this.releaseNoteUri = releaseNoteUri;
+            $.releaseNoteUri = releaseNoteUri;
             return this;
         }
-        public Builder releaseNoteUri(@Nullable String releaseNoteUri) {
-            this.releaseNoteUri = Codegen.ofNullable(releaseNoteUri);
-            return this;
+
+        public Builder releaseNoteUri(String releaseNoteUri) {
+            return releaseNoteUri(Output.of(releaseNoteUri));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public GalleryImageArgs build() {
-            return new GalleryImageArgs(description, disallowed, endOfLifeDate, eula, features, galleryImageName, galleryName, hyperVGeneration, identifier, location, osState, osType, privacyStatementUri, purchasePlan, recommended, releaseNoteUri, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public GalleryImageArgs build() {
+            $.galleryName = Objects.requireNonNull($.galleryName, "expected parameter 'galleryName' to be non-null");
+            $.identifier = Objects.requireNonNull($.identifier, "expected parameter 'identifier' to be non-null");
+            $.osState = Objects.requireNonNull($.osState, "expected parameter 'osState' to be non-null");
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

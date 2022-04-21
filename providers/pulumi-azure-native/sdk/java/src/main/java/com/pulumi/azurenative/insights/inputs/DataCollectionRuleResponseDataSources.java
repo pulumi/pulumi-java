@@ -28,10 +28,10 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
      * 
      */
     @Import(name="extensions")
-      private final @Nullable List<ExtensionDataSourceResponse> extensions;
+    private @Nullable List<ExtensionDataSourceResponse> extensions;
 
-    public List<ExtensionDataSourceResponse> extensions() {
-        return this.extensions == null ? List.of() : this.extensions;
+    public Optional<List<ExtensionDataSourceResponse>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
      * 
      */
     @Import(name="performanceCounters")
-      private final @Nullable List<PerfCounterDataSourceResponse> performanceCounters;
+    private @Nullable List<PerfCounterDataSourceResponse> performanceCounters;
 
-    public List<PerfCounterDataSourceResponse> performanceCounters() {
-        return this.performanceCounters == null ? List.of() : this.performanceCounters;
+    public Optional<List<PerfCounterDataSourceResponse>> performanceCounters() {
+        return Optional.ofNullable(this.performanceCounters);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
      * 
      */
     @Import(name="syslog")
-      private final @Nullable List<SyslogDataSourceResponse> syslog;
+    private @Nullable List<SyslogDataSourceResponse> syslog;
 
-    public List<SyslogDataSourceResponse> syslog() {
-        return this.syslog == null ? List.of() : this.syslog;
+    public Optional<List<SyslogDataSourceResponse>> syslog() {
+        return Optional.ofNullable(this.syslog);
     }
 
     /**
@@ -61,85 +61,78 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
      * 
      */
     @Import(name="windowsEventLogs")
-      private final @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
+    private @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
 
-    public List<WindowsEventLogDataSourceResponse> windowsEventLogs() {
-        return this.windowsEventLogs == null ? List.of() : this.windowsEventLogs;
+    public Optional<List<WindowsEventLogDataSourceResponse>> windowsEventLogs() {
+        return Optional.ofNullable(this.windowsEventLogs);
     }
 
-    public DataCollectionRuleResponseDataSources(
-        @Nullable List<ExtensionDataSourceResponse> extensions,
-        @Nullable List<PerfCounterDataSourceResponse> performanceCounters,
-        @Nullable List<SyslogDataSourceResponse> syslog,
-        @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs) {
-        this.extensions = extensions;
-        this.performanceCounters = performanceCounters;
-        this.syslog = syslog;
-        this.windowsEventLogs = windowsEventLogs;
-    }
+    private DataCollectionRuleResponseDataSources() {}
 
-    private DataCollectionRuleResponseDataSources() {
-        this.extensions = List.of();
-        this.performanceCounters = List.of();
-        this.syslog = List.of();
-        this.windowsEventLogs = List.of();
+    private DataCollectionRuleResponseDataSources(DataCollectionRuleResponseDataSources $) {
+        this.extensions = $.extensions;
+        this.performanceCounters = $.performanceCounters;
+        this.syslog = $.syslog;
+        this.windowsEventLogs = $.windowsEventLogs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectionRuleResponseDataSources defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ExtensionDataSourceResponse> extensions;
-        private @Nullable List<PerfCounterDataSourceResponse> performanceCounters;
-        private @Nullable List<SyslogDataSourceResponse> syslog;
-        private @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
+        private DataCollectionRuleResponseDataSources $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectionRuleResponseDataSources();
         }
 
         public Builder(DataCollectionRuleResponseDataSources defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensions = defaults.extensions;
-    	      this.performanceCounters = defaults.performanceCounters;
-    	      this.syslog = defaults.syslog;
-    	      this.windowsEventLogs = defaults.windowsEventLogs;
+            $ = new DataCollectionRuleResponseDataSources(Objects.requireNonNull(defaults));
         }
 
         public Builder extensions(@Nullable List<ExtensionDataSourceResponse> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
+
         public Builder extensions(ExtensionDataSourceResponse... extensions) {
             return extensions(List.of(extensions));
         }
+
         public Builder performanceCounters(@Nullable List<PerfCounterDataSourceResponse> performanceCounters) {
-            this.performanceCounters = performanceCounters;
+            $.performanceCounters = performanceCounters;
             return this;
         }
+
         public Builder performanceCounters(PerfCounterDataSourceResponse... performanceCounters) {
             return performanceCounters(List.of(performanceCounters));
         }
+
         public Builder syslog(@Nullable List<SyslogDataSourceResponse> syslog) {
-            this.syslog = syslog;
+            $.syslog = syslog;
             return this;
         }
+
         public Builder syslog(SyslogDataSourceResponse... syslog) {
             return syslog(List.of(syslog));
         }
+
         public Builder windowsEventLogs(@Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs) {
-            this.windowsEventLogs = windowsEventLogs;
+            $.windowsEventLogs = windowsEventLogs;
             return this;
         }
+
         public Builder windowsEventLogs(WindowsEventLogDataSourceResponse... windowsEventLogs) {
             return windowsEventLogs(List.of(windowsEventLogs));
-        }        public DataCollectionRuleResponseDataSources build() {
-            return new DataCollectionRuleResponseDataSources(extensions, performanceCounters, syslog, windowsEventLogs);
+        }
+
+        public DataCollectionRuleResponseDataSources build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetActivityArgs Empty = new GetActivityArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetActivityArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetActivityArgs() {}
 
-    private GetActivityArgs() {
-        this.arn = null;
+    private GetActivityArgs(GetActivityArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetActivityArgs();
         }
 
         public Builder(GetActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetActivityArgs build() {
-            return new GetActivityArgs(arn);
+        }
+
+        public GetActivityArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

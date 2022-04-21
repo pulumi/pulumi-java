@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class AddressSpaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressPrefixes")
-      private final @Nullable Output<List<String>> addressPrefixes;
+    private @Nullable Output<List<String>> addressPrefixes;
 
-    public Output<List<String>> addressPrefixes() {
-        return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
+    public Optional<Output<List<String>>> addressPrefixes() {
+        return Optional.ofNullable(this.addressPrefixes);
     }
 
-    public AddressSpaceArgs(@Nullable Output<List<String>> addressPrefixes) {
-        this.addressPrefixes = addressPrefixes;
-    }
+    private AddressSpaceArgs() {}
 
-    private AddressSpaceArgs() {
-        this.addressPrefixes = Codegen.empty();
+    private AddressSpaceArgs(AddressSpaceArgs $) {
+        this.addressPrefixes = $.addressPrefixes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressSpaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> addressPrefixes;
+        private AddressSpaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressSpaceArgs();
         }
 
         public Builder(AddressSpaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefixes = defaults.addressPrefixes;
+            $ = new AddressSpaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
-            this.addressPrefixes = addressPrefixes;
+            $.addressPrefixes = addressPrefixes;
             return this;
         }
-        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = Codegen.ofNullable(addressPrefixes);
-            return this;
+
+        public Builder addressPrefixes(List<String> addressPrefixes) {
+            return addressPrefixes(Output.of(addressPrefixes));
         }
+
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
-        }        public AddressSpaceArgs build() {
-            return new AddressSpaceArgs(addressPrefixes);
+        }
+
+        public AddressSpaceArgs build() {
+            return $;
         }
     }
+
 }

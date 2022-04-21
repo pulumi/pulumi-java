@@ -23,7 +23,7 @@ public final class MasterAuthorizedNetworksConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="cidrBlocks", required=true)
-      private final List<CidrBlockResponse> cidrBlocks;
+    private List<CidrBlockResponse> cidrBlocks;
 
     public List<CidrBlockResponse> cidrBlocks() {
         return this.cidrBlocks;
@@ -34,58 +34,56 @@ public final class MasterAuthorizedNetworksConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public MasterAuthorizedNetworksConfigResponse(
-        List<CidrBlockResponse> cidrBlocks,
-        Boolean enabled) {
-        this.cidrBlocks = Objects.requireNonNull(cidrBlocks, "expected parameter 'cidrBlocks' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private MasterAuthorizedNetworksConfigResponse() {}
 
-    private MasterAuthorizedNetworksConfigResponse() {
-        this.cidrBlocks = List.of();
-        this.enabled = null;
+    private MasterAuthorizedNetworksConfigResponse(MasterAuthorizedNetworksConfigResponse $) {
+        this.cidrBlocks = $.cidrBlocks;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MasterAuthorizedNetworksConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<CidrBlockResponse> cidrBlocks;
-        private Boolean enabled;
+        private MasterAuthorizedNetworksConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MasterAuthorizedNetworksConfigResponse();
         }
 
         public Builder(MasterAuthorizedNetworksConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlocks = defaults.cidrBlocks;
-    	      this.enabled = defaults.enabled;
+            $ = new MasterAuthorizedNetworksConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlocks(List<CidrBlockResponse> cidrBlocks) {
-            this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
+            $.cidrBlocks = cidrBlocks;
             return this;
         }
+
         public Builder cidrBlocks(CidrBlockResponse... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public MasterAuthorizedNetworksConfigResponse build() {
-            return new MasterAuthorizedNetworksConfigResponse(cidrBlocks, enabled);
+        }
+
+        public MasterAuthorizedNetworksConfigResponse build() {
+            $.cidrBlocks = Objects.requireNonNull($.cidrBlocks, "expected parameter 'cidrBlocks' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

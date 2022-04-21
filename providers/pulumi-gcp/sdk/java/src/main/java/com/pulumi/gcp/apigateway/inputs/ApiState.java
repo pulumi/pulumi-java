@@ -5,10 +5,10 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId")
-      private final @Nullable Output<String> apiId;
+    private @Nullable Output<String> apiId;
 
-    public Output<String> apiId() {
-        return this.apiId == null ? Codegen.empty() : this.apiId;
+    public Optional<Output<String>> apiId() {
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedService")
-      private final @Nullable Output<String> managedService;
+    private @Nullable Output<String> managedService;
 
-    public Output<String> managedService() {
-        return this.managedService == null ? Codegen.empty() : this.managedService;
+    public Optional<Output<String>> managedService() {
+        return Optional.ofNullable(this.managedService);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,128 +89,108 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ApiState(
-        @Nullable Output<String> apiId,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> managedService,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.apiId = apiId;
-        this.createTime = createTime;
-        this.displayName = displayName;
-        this.labels = labels;
-        this.managedService = managedService;
-        this.name = name;
-        this.project = project;
-    }
+    private ApiState() {}
 
-    private ApiState() {
-        this.apiId = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.managedService = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private ApiState(ApiState $) {
+        this.apiId = $.apiId;
+        this.createTime = $.createTime;
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.managedService = $.managedService;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiId;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> managedService;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private ApiState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiState();
         }
 
         public Builder(ApiState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.createTime = defaults.createTime;
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.managedService = defaults.managedService;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new ApiState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable Output<String> apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
-        public Builder apiId(@Nullable String apiId) {
-            this.apiId = Codegen.ofNullable(apiId);
-            return this;
+
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder managedService(@Nullable Output<String> managedService) {
-            this.managedService = managedService;
+            $.managedService = managedService;
             return this;
         }
-        public Builder managedService(@Nullable String managedService) {
-            this.managedService = Codegen.ofNullable(managedService);
-            return this;
+
+        public Builder managedService(String managedService) {
+            return managedService(Output.of(managedService));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ApiState build() {
-            return new ApiState(apiId, createTime, displayName, labels, managedService, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ApiState build() {
+            return $;
         }
     }
+
 }

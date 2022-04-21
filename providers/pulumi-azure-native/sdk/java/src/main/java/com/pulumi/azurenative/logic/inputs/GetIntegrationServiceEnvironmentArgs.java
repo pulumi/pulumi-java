@@ -17,7 +17,7 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="integrationServiceEnvironmentName", required=true)
-      private final String integrationServiceEnvironmentName;
+    private String integrationServiceEnvironmentName;
 
     public String integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
@@ -28,55 +28,52 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final String resourceGroup;
+    private String resourceGroup;
 
     public String resourceGroup() {
         return this.resourceGroup;
     }
 
-    public GetIntegrationServiceEnvironmentArgs(
-        String integrationServiceEnvironmentName,
-        String resourceGroup) {
-        this.integrationServiceEnvironmentName = Objects.requireNonNull(integrationServiceEnvironmentName, "expected parameter 'integrationServiceEnvironmentName' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-    }
+    private GetIntegrationServiceEnvironmentArgs() {}
 
-    private GetIntegrationServiceEnvironmentArgs() {
-        this.integrationServiceEnvironmentName = null;
-        this.resourceGroup = null;
+    private GetIntegrationServiceEnvironmentArgs(GetIntegrationServiceEnvironmentArgs $) {
+        this.integrationServiceEnvironmentName = $.integrationServiceEnvironmentName;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationServiceEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String integrationServiceEnvironmentName;
-        private String resourceGroup;
+        private GetIntegrationServiceEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationServiceEnvironmentArgs();
         }
 
         public Builder(GetIntegrationServiceEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationServiceEnvironmentName = defaults.integrationServiceEnvironmentName;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new GetIntegrationServiceEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
-            this.integrationServiceEnvironmentName = Objects.requireNonNull(integrationServiceEnvironmentName);
+            $.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
-        }        public GetIntegrationServiceEnvironmentArgs build() {
-            return new GetIntegrationServiceEnvironmentArgs(integrationServiceEnvironmentName, resourceGroup);
+        }
+
+        public GetIntegrationServiceEnvironmentArgs build() {
+            $.integrationServiceEnvironmentName = Objects.requireNonNull($.integrationServiceEnvironmentName, "expected parameter 'integrationServiceEnvironmentName' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

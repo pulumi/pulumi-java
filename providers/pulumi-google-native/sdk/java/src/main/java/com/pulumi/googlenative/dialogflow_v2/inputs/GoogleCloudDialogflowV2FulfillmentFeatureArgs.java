@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2FulfillmentFeatureType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends com.pul
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
+    private @Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
 
-    public Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<GoogleCloudDialogflowV2FulfillmentFeatureType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public GoogleCloudDialogflowV2FulfillmentFeatureArgs(@Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type) {
-        this.type = type;
-    }
+    private GoogleCloudDialogflowV2FulfillmentFeatureArgs() {}
 
-    private GoogleCloudDialogflowV2FulfillmentFeatureArgs() {
-        this.type = Codegen.empty();
+    private GoogleCloudDialogflowV2FulfillmentFeatureArgs(GoogleCloudDialogflowV2FulfillmentFeatureArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2FulfillmentFeatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
+        private GoogleCloudDialogflowV2FulfillmentFeatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2FulfillmentFeatureArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2FulfillmentFeatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDialogflowV2FulfillmentFeatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable GoogleCloudDialogflowV2FulfillmentFeatureType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public GoogleCloudDialogflowV2FulfillmentFeatureArgs build() {
-            return new GoogleCloudDialogflowV2FulfillmentFeatureArgs(type);
+
+        public Builder type(GoogleCloudDialogflowV2FulfillmentFeatureType type) {
+            return type(Output.of(type));
+        }
+
+        public GoogleCloudDialogflowV2FulfillmentFeatureArgs build() {
+            return $;
         }
     }
+
 }

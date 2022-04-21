@@ -26,10 +26,10 @@ public final class ThemeDataColorPalette extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="colors")
-      private final @Nullable List<String> colors;
+    private @Nullable List<String> colors;
 
-    public List<String> colors() {
-        return this.colors == null ? List.of() : this.colors;
+    public Optional<List<String>> colors() {
+        return Optional.ofNullable(this.colors);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ThemeDataColorPalette extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="emptyFillColor")
-      private final @Nullable String emptyFillColor;
+    private @Nullable String emptyFillColor;
 
     public Optional<String> emptyFillColor() {
-        return this.emptyFillColor == null ? Optional.empty() : Optional.ofNullable(this.emptyFillColor);
+        return Optional.ofNullable(this.emptyFillColor);
     }
 
     /**
@@ -49,70 +49,64 @@ public final class ThemeDataColorPalette extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="minMaxGradient")
-      private final @Nullable List<String> minMaxGradient;
+    private @Nullable List<String> minMaxGradient;
 
-    public List<String> minMaxGradient() {
-        return this.minMaxGradient == null ? List.of() : this.minMaxGradient;
+    public Optional<List<String>> minMaxGradient() {
+        return Optional.ofNullable(this.minMaxGradient);
     }
 
-    public ThemeDataColorPalette(
-        @Nullable List<String> colors,
-        @Nullable String emptyFillColor,
-        @Nullable List<String> minMaxGradient) {
-        this.colors = colors;
-        this.emptyFillColor = emptyFillColor;
-        this.minMaxGradient = minMaxGradient;
-    }
+    private ThemeDataColorPalette() {}
 
-    private ThemeDataColorPalette() {
-        this.colors = List.of();
-        this.emptyFillColor = null;
-        this.minMaxGradient = List.of();
+    private ThemeDataColorPalette(ThemeDataColorPalette $) {
+        this.colors = $.colors;
+        this.emptyFillColor = $.emptyFillColor;
+        this.minMaxGradient = $.minMaxGradient;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeDataColorPalette defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> colors;
-        private @Nullable String emptyFillColor;
-        private @Nullable List<String> minMaxGradient;
+        private ThemeDataColorPalette $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeDataColorPalette();
         }
 
         public Builder(ThemeDataColorPalette defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.colors = defaults.colors;
-    	      this.emptyFillColor = defaults.emptyFillColor;
-    	      this.minMaxGradient = defaults.minMaxGradient;
+            $ = new ThemeDataColorPalette(Objects.requireNonNull(defaults));
         }
 
         public Builder colors(@Nullable List<String> colors) {
-            this.colors = colors;
+            $.colors = colors;
             return this;
         }
+
         public Builder colors(String... colors) {
             return colors(List.of(colors));
         }
+
         public Builder emptyFillColor(@Nullable String emptyFillColor) {
-            this.emptyFillColor = emptyFillColor;
+            $.emptyFillColor = emptyFillColor;
             return this;
         }
+
         public Builder minMaxGradient(@Nullable List<String> minMaxGradient) {
-            this.minMaxGradient = minMaxGradient;
+            $.minMaxGradient = minMaxGradient;
             return this;
         }
+
         public Builder minMaxGradient(String... minMaxGradient) {
             return minMaxGradient(List.of(minMaxGradient));
-        }        public ThemeDataColorPalette build() {
-            return new ThemeDataColorPalette(colors, emptyFillColor, minMaxGradient);
+        }
+
+        public ThemeDataColorPalette build() {
+            return $;
         }
     }
+
 }

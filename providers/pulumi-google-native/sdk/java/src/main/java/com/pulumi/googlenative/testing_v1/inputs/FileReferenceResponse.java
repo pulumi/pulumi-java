@@ -21,45 +21,45 @@ public final class FileReferenceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="gcsPath", required=true)
-      private final String gcsPath;
+    private String gcsPath;
 
     public String gcsPath() {
         return this.gcsPath;
     }
 
-    public FileReferenceResponse(String gcsPath) {
-        this.gcsPath = Objects.requireNonNull(gcsPath, "expected parameter 'gcsPath' to be non-null");
-    }
+    private FileReferenceResponse() {}
 
-    private FileReferenceResponse() {
-        this.gcsPath = null;
+    private FileReferenceResponse(FileReferenceResponse $) {
+        this.gcsPath = $.gcsPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gcsPath;
+        private FileReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileReferenceResponse();
         }
 
         public Builder(FileReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsPath = defaults.gcsPath;
+            $ = new FileReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsPath(String gcsPath) {
-            this.gcsPath = Objects.requireNonNull(gcsPath);
+            $.gcsPath = gcsPath;
             return this;
-        }        public FileReferenceResponse build() {
-            return new FileReferenceResponse(gcsPath);
+        }
+
+        public FileReferenceResponse build() {
+            $.gcsPath = Objects.requireNonNull($.gcsPath, "expected parameter 'gcsPath' to be non-null");
+            return $;
         }
     }
+
 }

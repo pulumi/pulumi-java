@@ -22,7 +22,7 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="comment", required=true)
-      private final String comment;
+    private String comment;
 
     public String comment() {
         return this.comment;
@@ -33,7 +33,7 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="filename", required=true)
-      private final String filename;
+    private String filename;
 
     public String filename() {
         return this.filename;
@@ -44,7 +44,7 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="homePage", required=true)
-      private final String homePage;
+    private String homePage;
 
     public String homePage() {
         return this.homePage;
@@ -55,7 +55,7 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="licenseConcluded", required=true)
-      private final LicenseResponse licenseConcluded;
+    private LicenseResponse licenseConcluded;
 
     public LicenseResponse licenseConcluded() {
         return this.licenseConcluded;
@@ -66,7 +66,7 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="packageType", required=true)
-      private final String packageType;
+    private String packageType;
 
     public String packageType() {
         return this.packageType;
@@ -77,7 +77,7 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sourceInfo", required=true)
-      private final String sourceInfo;
+    private String sourceInfo;
 
     public String sourceInfo() {
         return this.sourceInfo;
@@ -88,7 +88,7 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="summaryDescription", required=true)
-      private final String summaryDescription;
+    private String summaryDescription;
 
     public String summaryDescription() {
         return this.summaryDescription;
@@ -99,7 +99,7 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
@@ -110,118 +110,101 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public PackageInfoOccurrenceResponse(
-        String comment,
-        String filename,
-        String homePage,
-        LicenseResponse licenseConcluded,
-        String packageType,
-        String sourceInfo,
-        String summaryDescription,
-        String title,
-        String version) {
-        this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
-        this.filename = Objects.requireNonNull(filename, "expected parameter 'filename' to be non-null");
-        this.homePage = Objects.requireNonNull(homePage, "expected parameter 'homePage' to be non-null");
-        this.licenseConcluded = Objects.requireNonNull(licenseConcluded, "expected parameter 'licenseConcluded' to be non-null");
-        this.packageType = Objects.requireNonNull(packageType, "expected parameter 'packageType' to be non-null");
-        this.sourceInfo = Objects.requireNonNull(sourceInfo, "expected parameter 'sourceInfo' to be non-null");
-        this.summaryDescription = Objects.requireNonNull(summaryDescription, "expected parameter 'summaryDescription' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private PackageInfoOccurrenceResponse() {}
 
-    private PackageInfoOccurrenceResponse() {
-        this.comment = null;
-        this.filename = null;
-        this.homePage = null;
-        this.licenseConcluded = null;
-        this.packageType = null;
-        this.sourceInfo = null;
-        this.summaryDescription = null;
-        this.title = null;
-        this.version = null;
+    private PackageInfoOccurrenceResponse(PackageInfoOccurrenceResponse $) {
+        this.comment = $.comment;
+        this.filename = $.filename;
+        this.homePage = $.homePage;
+        this.licenseConcluded = $.licenseConcluded;
+        this.packageType = $.packageType;
+        this.sourceInfo = $.sourceInfo;
+        this.summaryDescription = $.summaryDescription;
+        this.title = $.title;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageInfoOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String comment;
-        private String filename;
-        private String homePage;
-        private LicenseResponse licenseConcluded;
-        private String packageType;
-        private String sourceInfo;
-        private String summaryDescription;
-        private String title;
-        private String version;
+        private PackageInfoOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageInfoOccurrenceResponse();
         }
 
         public Builder(PackageInfoOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.filename = defaults.filename;
-    	      this.homePage = defaults.homePage;
-    	      this.licenseConcluded = defaults.licenseConcluded;
-    	      this.packageType = defaults.packageType;
-    	      this.sourceInfo = defaults.sourceInfo;
-    	      this.summaryDescription = defaults.summaryDescription;
-    	      this.title = defaults.title;
-    	      this.version = defaults.version;
+            $ = new PackageInfoOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(String comment) {
-            this.comment = Objects.requireNonNull(comment);
+            $.comment = comment;
             return this;
         }
+
         public Builder filename(String filename) {
-            this.filename = Objects.requireNonNull(filename);
+            $.filename = filename;
             return this;
         }
+
         public Builder homePage(String homePage) {
-            this.homePage = Objects.requireNonNull(homePage);
+            $.homePage = homePage;
             return this;
         }
+
         public Builder licenseConcluded(LicenseResponse licenseConcluded) {
-            this.licenseConcluded = Objects.requireNonNull(licenseConcluded);
+            $.licenseConcluded = licenseConcluded;
             return this;
         }
+
         public Builder packageType(String packageType) {
-            this.packageType = Objects.requireNonNull(packageType);
+            $.packageType = packageType;
             return this;
         }
+
         public Builder sourceInfo(String sourceInfo) {
-            this.sourceInfo = Objects.requireNonNull(sourceInfo);
+            $.sourceInfo = sourceInfo;
             return this;
         }
+
         public Builder summaryDescription(String summaryDescription) {
-            this.summaryDescription = Objects.requireNonNull(summaryDescription);
+            $.summaryDescription = summaryDescription;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public PackageInfoOccurrenceResponse build() {
-            return new PackageInfoOccurrenceResponse(comment, filename, homePage, licenseConcluded, packageType, sourceInfo, summaryDescription, title, version);
+        }
+
+        public PackageInfoOccurrenceResponse build() {
+            $.comment = Objects.requireNonNull($.comment, "expected parameter 'comment' to be non-null");
+            $.filename = Objects.requireNonNull($.filename, "expected parameter 'filename' to be non-null");
+            $.homePage = Objects.requireNonNull($.homePage, "expected parameter 'homePage' to be non-null");
+            $.licenseConcluded = Objects.requireNonNull($.licenseConcluded, "expected parameter 'licenseConcluded' to be non-null");
+            $.packageType = Objects.requireNonNull($.packageType, "expected parameter 'packageType' to be non-null");
+            $.sourceInfo = Objects.requireNonNull($.sourceInfo, "expected parameter 'sourceInfo' to be non-null");
+            $.summaryDescription = Objects.requireNonNull($.summaryDescription, "expected parameter 'summaryDescription' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

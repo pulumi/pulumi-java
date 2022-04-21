@@ -21,7 +21,7 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,10 +33,10 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -44,64 +44,57 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicKeyType")
-      private final @Nullable String publicKeyType;
+    private @Nullable String publicKeyType;
 
     public Optional<String> publicKeyType() {
-        return this.publicKeyType == null ? Optional.empty() : Optional.ofNullable(this.publicKeyType);
+        return Optional.ofNullable(this.publicKeyType);
     }
 
-    public GetAccountKeyArgs(
-        String name,
-        @Nullable String project,
-        @Nullable String publicKeyType) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-        this.publicKeyType = publicKeyType;
-    }
+    private GetAccountKeyArgs() {}
 
-    private GetAccountKeyArgs() {
-        this.name = null;
-        this.project = null;
-        this.publicKeyType = null;
+    private GetAccountKeyArgs(GetAccountKeyArgs $) {
+        this.name = $.name;
+        this.project = $.project;
+        this.publicKeyType = $.publicKeyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccountKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String project;
-        private @Nullable String publicKeyType;
+        private GetAccountKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccountKeyArgs();
         }
 
         public Builder(GetAccountKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.publicKeyType = defaults.publicKeyType;
+            $ = new GetAccountKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder publicKeyType(@Nullable String publicKeyType) {
-            this.publicKeyType = publicKeyType;
+            $.publicKeyType = publicKeyType;
             return this;
-        }        public GetAccountKeyArgs build() {
-            return new GetAccountKeyArgs(name, project, publicKeyType);
+        }
+
+        public GetAccountKeyArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

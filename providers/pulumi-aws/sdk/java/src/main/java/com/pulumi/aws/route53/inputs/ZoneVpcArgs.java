@@ -5,9 +5,9 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ZoneVpcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
@@ -31,63 +31,59 @@ public final class ZoneVpcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcRegion")
-      private final @Nullable Output<String> vpcRegion;
+    private @Nullable Output<String> vpcRegion;
 
-    public Output<String> vpcRegion() {
-        return this.vpcRegion == null ? Codegen.empty() : this.vpcRegion;
+    public Optional<Output<String>> vpcRegion() {
+        return Optional.ofNullable(this.vpcRegion);
     }
 
-    public ZoneVpcArgs(
-        Output<String> vpcId,
-        @Nullable Output<String> vpcRegion) {
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-        this.vpcRegion = vpcRegion;
-    }
+    private ZoneVpcArgs() {}
 
-    private ZoneVpcArgs() {
-        this.vpcId = Codegen.empty();
-        this.vpcRegion = Codegen.empty();
+    private ZoneVpcArgs(ZoneVpcArgs $) {
+        this.vpcId = $.vpcId;
+        this.vpcRegion = $.vpcRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ZoneVpcArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> vpcId;
-        private @Nullable Output<String> vpcRegion;
+        private ZoneVpcArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ZoneVpcArgs();
         }
 
         public Builder(ZoneVpcArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcId = defaults.vpcId;
-    	      this.vpcRegion = defaults.vpcRegion;
+            $ = new ZoneVpcArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
+            return vpcId(Output.of(vpcId));
         }
+
         public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
-            this.vpcRegion = vpcRegion;
+            $.vpcRegion = vpcRegion;
             return this;
         }
-        public Builder vpcRegion(@Nullable String vpcRegion) {
-            this.vpcRegion = Codegen.ofNullable(vpcRegion);
-            return this;
-        }        public ZoneVpcArgs build() {
-            return new ZoneVpcArgs(vpcId, vpcRegion);
+
+        public Builder vpcRegion(String vpcRegion) {
+            return vpcRegion(Output.of(vpcRegion));
+        }
+
+        public ZoneVpcArgs build() {
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

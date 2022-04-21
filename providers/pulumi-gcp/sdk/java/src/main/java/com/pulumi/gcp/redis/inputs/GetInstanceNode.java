@@ -13,62 +13,59 @@ public final class GetInstanceNode extends com.pulumi.resources.InvokeArgs {
     public static final GetInstanceNode Empty = new GetInstanceNode();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetInstanceNode(
-        String id,
-        String zone) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetInstanceNode() {}
 
-    private GetInstanceNode() {
-        this.id = null;
-        this.zone = null;
+    private GetInstanceNode(GetInstanceNode $) {
+        this.id = $.id;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceNode defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String zone;
+        private GetInstanceNode $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceNode();
         }
 
         public Builder(GetInstanceNode defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.zone = defaults.zone;
+            $ = new GetInstanceNode(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetInstanceNode build() {
-            return new GetInstanceNode(id, zone);
+        }
+
+        public GetInstanceNode build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

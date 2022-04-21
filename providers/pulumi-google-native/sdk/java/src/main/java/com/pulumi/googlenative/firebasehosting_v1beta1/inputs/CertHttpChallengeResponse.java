@@ -21,7 +21,7 @@ public final class CertHttpChallengeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -32,55 +32,52 @@ public final class CertHttpChallengeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="token", required=true)
-      private final String token;
+    private String token;
 
     public String token() {
         return this.token;
     }
 
-    public CertHttpChallengeResponse(
-        String path,
-        String token) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.token = Objects.requireNonNull(token, "expected parameter 'token' to be non-null");
-    }
+    private CertHttpChallengeResponse() {}
 
-    private CertHttpChallengeResponse() {
-        this.path = null;
-        this.token = null;
+    private CertHttpChallengeResponse(CertHttpChallengeResponse $) {
+        this.path = $.path;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertHttpChallengeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String path;
-        private String token;
+        private CertHttpChallengeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertHttpChallengeResponse();
         }
 
         public Builder(CertHttpChallengeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.token = defaults.token;
+            $ = new CertHttpChallengeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder token(String token) {
-            this.token = Objects.requireNonNull(token);
+            $.token = token;
             return this;
-        }        public CertHttpChallengeResponse build() {
-            return new CertHttpChallengeResponse(path, token);
+        }
+
+        public CertHttpChallengeResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.token = Objects.requireNonNull($.token, "expected parameter 'token' to be non-null");
+            return $;
         }
     }
+
 }

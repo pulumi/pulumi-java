@@ -22,48 +22,49 @@ public final class StandardSqlTableTypeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="columns", required=true)
-      private final List<StandardSqlFieldResponse> columns;
+    private List<StandardSqlFieldResponse> columns;
 
     public List<StandardSqlFieldResponse> columns() {
         return this.columns;
     }
 
-    public StandardSqlTableTypeResponse(List<StandardSqlFieldResponse> columns) {
-        this.columns = Objects.requireNonNull(columns, "expected parameter 'columns' to be non-null");
-    }
+    private StandardSqlTableTypeResponse() {}
 
-    private StandardSqlTableTypeResponse() {
-        this.columns = List.of();
+    private StandardSqlTableTypeResponse(StandardSqlTableTypeResponse $) {
+        this.columns = $.columns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardSqlTableTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<StandardSqlFieldResponse> columns;
+        private StandardSqlTableTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardSqlTableTypeResponse();
         }
 
         public Builder(StandardSqlTableTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
+            $ = new StandardSqlTableTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(List<StandardSqlFieldResponse> columns) {
-            this.columns = Objects.requireNonNull(columns);
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(StandardSqlFieldResponse... columns) {
             return columns(List.of(columns));
-        }        public StandardSqlTableTypeResponse build() {
-            return new StandardSqlTableTypeResponse(columns);
+        }
+
+        public StandardSqlTableTypeResponse build() {
+            $.columns = Objects.requireNonNull($.columns, "expected parameter 'columns' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputResponse extends com.
      * 
      */
     @Import(name="event", required=true)
-      private final String event;
+    private String event;
 
     public String event() {
         return this.event;
     }
 
-    public GoogleCloudDialogflowCxV3beta1EventInputResponse(String event) {
-        this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1EventInputResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1EventInputResponse() {
-        this.event = null;
+    private GoogleCloudDialogflowCxV3beta1EventInputResponse(GoogleCloudDialogflowCxV3beta1EventInputResponse $) {
+        this.event = $.event;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1EventInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String event;
+        private GoogleCloudDialogflowCxV3beta1EventInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1EventInputResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1EventInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
+            $ = new GoogleCloudDialogflowCxV3beta1EventInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder event(String event) {
-            this.event = Objects.requireNonNull(event);
+            $.event = event;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1EventInputResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1EventInputResponse(event);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1EventInputResponse build() {
+            $.event = Objects.requireNonNull($.event, "expected parameter 'event' to be non-null");
+            return $;
         }
     }
+
 }

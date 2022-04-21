@@ -5,9 +5,9 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
      * 
      */
     @Import(name="maxValue")
-      private final @Nullable Output<Double> maxValue;
+    private @Nullable Output<Double> maxValue;
 
-    public Output<Double> maxValue() {
-        return this.maxValue == null ? Codegen.empty() : this.maxValue;
+    public Optional<Output<Double>> maxValue() {
+        return Optional.ofNullable(this.maxValue);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
      * 
      */
     @Import(name="minValue")
-      private final @Nullable Output<Double> minValue;
+    private @Nullable Output<Double> minValue;
 
-    public Output<Double> minValue() {
-        return this.minValue == null ? Codegen.empty() : this.minValue;
+    public Optional<Output<Double>> minValue() {
+        return Optional.ofNullable(this.minValue);
     }
 
-    public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs(
-        @Nullable Output<Double> maxValue,
-        @Nullable Output<Double> minValue) {
-        this.maxValue = maxValue;
-        this.minValue = minValue;
-    }
+    private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs() {}
 
-    private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs() {
-        this.maxValue = Codegen.empty();
-        this.minValue = Codegen.empty();
+    private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs(GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs $) {
+        this.maxValue = $.maxValue;
+        this.minValue = $.minValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> maxValue;
-        private @Nullable Output<Double> minValue;
+        private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs();
         }
 
         public Builder(GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxValue = defaults.maxValue;
-    	      this.minValue = defaults.minValue;
+            $ = new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxValue(@Nullable Output<Double> maxValue) {
-            this.maxValue = maxValue;
+            $.maxValue = maxValue;
             return this;
         }
-        public Builder maxValue(@Nullable Double maxValue) {
-            this.maxValue = Codegen.ofNullable(maxValue);
-            return this;
+
+        public Builder maxValue(Double maxValue) {
+            return maxValue(Output.of(maxValue));
         }
+
         public Builder minValue(@Nullable Output<Double> minValue) {
-            this.minValue = minValue;
+            $.minValue = minValue;
             return this;
         }
-        public Builder minValue(@Nullable Double minValue) {
-            this.minValue = Codegen.ofNullable(minValue);
-            return this;
-        }        public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs build() {
-            return new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs(maxValue, minValue);
+
+        public Builder minValue(Double minValue) {
+            return minValue(Output.of(minValue));
+        }
+
+        public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs build() {
+            return $;
         }
     }
+
 }

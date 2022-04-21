@@ -5,10 +5,10 @@ package com.pulumi.gcp.iap.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iap.inputs.AppEngineVersionIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AppEngineVersionIamMemberState extends com.pulumi.resources.R
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AppEngineVersionIamMemberState extends com.pulumi.resources.R
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<AppEngineVersionIamMemberConditionGetArgs> condition;
+    private @Nullable Output<AppEngineVersionIamMemberConditionGetArgs> condition;
 
-    public Output<AppEngineVersionIamMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<AppEngineVersionIamMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -44,17 +44,17 @@ public final class AppEngineVersionIamMemberState extends com.pulumi.resources.R
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AppEngineVersionIamMemberState extends com.pulumi.resources.R
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AppEngineVersionIamMemberState extends com.pulumi.resources.R
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AppEngineVersionIamMemberState extends com.pulumi.resources.R
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -98,141 +98,118 @@ public final class AppEngineVersionIamMemberState extends com.pulumi.resources.R
      * 
      */
     @Import(name="versionId")
-      private final @Nullable Output<String> versionId;
+    private @Nullable Output<String> versionId;
 
-    public Output<String> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
-    public AppEngineVersionIamMemberState(
-        @Nullable Output<String> appId,
-        @Nullable Output<AppEngineVersionIamMemberConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> member,
-        @Nullable Output<String> project,
-        @Nullable Output<String> role,
-        @Nullable Output<String> service,
-        @Nullable Output<String> versionId) {
-        this.appId = appId;
-        this.condition = condition;
-        this.etag = etag;
-        this.member = member;
-        this.project = project;
-        this.role = role;
-        this.service = service;
-        this.versionId = versionId;
-    }
+    private AppEngineVersionIamMemberState() {}
 
-    private AppEngineVersionIamMemberState() {
-        this.appId = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.service = Codegen.empty();
-        this.versionId = Codegen.empty();
+    private AppEngineVersionIamMemberState(AppEngineVersionIamMemberState $) {
+        this.appId = $.appId;
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
+        this.service = $.service;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppEngineVersionIamMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<AppEngineVersionIamMemberConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> service;
-        private @Nullable Output<String> versionId;
+        private AppEngineVersionIamMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppEngineVersionIamMemberState();
         }
 
         public Builder(AppEngineVersionIamMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.service = defaults.service;
-    	      this.versionId = defaults.versionId;
+            $ = new AppEngineVersionIamMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder condition(@Nullable Output<AppEngineVersionIamMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable AppEngineVersionIamMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(AppEngineVersionIamMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
+
+        public Builder service(String service) {
+            return service(Output.of(service));
         }
+
         public Builder versionId(@Nullable Output<String> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable String versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
-        }        public AppEngineVersionIamMemberState build() {
-            return new AppEngineVersionIamMemberState(appId, condition, etag, member, project, role, service, versionId);
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
+        }
+
+        public AppEngineVersionIamMemberState build() {
+            return $;
         }
     }
+
 }

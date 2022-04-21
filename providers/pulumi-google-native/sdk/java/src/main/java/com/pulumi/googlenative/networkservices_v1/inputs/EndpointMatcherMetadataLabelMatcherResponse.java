@@ -23,7 +23,7 @@ public final class EndpointMatcherMetadataLabelMatcherResponse extends com.pulum
      * 
      */
     @Import(name="metadataLabelMatchCriteria", required=true)
-      private final String metadataLabelMatchCriteria;
+    private String metadataLabelMatchCriteria;
 
     public String metadataLabelMatchCriteria() {
         return this.metadataLabelMatchCriteria;
@@ -34,58 +34,56 @@ public final class EndpointMatcherMetadataLabelMatcherResponse extends com.pulum
      * 
      */
     @Import(name="metadataLabels", required=true)
-      private final List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels;
+    private List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels;
 
     public List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels() {
         return this.metadataLabels;
     }
 
-    public EndpointMatcherMetadataLabelMatcherResponse(
-        String metadataLabelMatchCriteria,
-        List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels) {
-        this.metadataLabelMatchCriteria = Objects.requireNonNull(metadataLabelMatchCriteria, "expected parameter 'metadataLabelMatchCriteria' to be non-null");
-        this.metadataLabels = Objects.requireNonNull(metadataLabels, "expected parameter 'metadataLabels' to be non-null");
-    }
+    private EndpointMatcherMetadataLabelMatcherResponse() {}
 
-    private EndpointMatcherMetadataLabelMatcherResponse() {
-        this.metadataLabelMatchCriteria = null;
-        this.metadataLabels = List.of();
+    private EndpointMatcherMetadataLabelMatcherResponse(EndpointMatcherMetadataLabelMatcherResponse $) {
+        this.metadataLabelMatchCriteria = $.metadataLabelMatchCriteria;
+        this.metadataLabels = $.metadataLabels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointMatcherMetadataLabelMatcherResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metadataLabelMatchCriteria;
-        private List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels;
+        private EndpointMatcherMetadataLabelMatcherResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointMatcherMetadataLabelMatcherResponse();
         }
 
         public Builder(EndpointMatcherMetadataLabelMatcherResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataLabelMatchCriteria = defaults.metadataLabelMatchCriteria;
-    	      this.metadataLabels = defaults.metadataLabels;
+            $ = new EndpointMatcherMetadataLabelMatcherResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataLabelMatchCriteria(String metadataLabelMatchCriteria) {
-            this.metadataLabelMatchCriteria = Objects.requireNonNull(metadataLabelMatchCriteria);
+            $.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
             return this;
         }
+
         public Builder metadataLabels(List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels) {
-            this.metadataLabels = Objects.requireNonNull(metadataLabels);
+            $.metadataLabels = metadataLabels;
             return this;
         }
+
         public Builder metadataLabels(EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse... metadataLabels) {
             return metadataLabels(List.of(metadataLabels));
-        }        public EndpointMatcherMetadataLabelMatcherResponse build() {
-            return new EndpointMatcherMetadataLabelMatcherResponse(metadataLabelMatchCriteria, metadataLabels);
+        }
+
+        public EndpointMatcherMetadataLabelMatcherResponse build() {
+            $.metadataLabelMatchCriteria = Objects.requireNonNull($.metadataLabelMatchCriteria, "expected parameter 'metadataLabelMatchCriteria' to be non-null");
+            $.metadataLabels = Objects.requireNonNull($.metadataLabels, "expected parameter 'metadataLabels' to be non-null");
+            return $;
         }
     }
+
 }

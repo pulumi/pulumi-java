@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TimePartitioningArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="expirationMs")
-      private final @Nullable Output<String> expirationMs;
+    private @Nullable Output<String> expirationMs;
 
-    public Output<String> expirationMs() {
-        return this.expirationMs == null ? Codegen.empty() : this.expirationMs;
+    public Optional<Output<String>> expirationMs() {
+        return Optional.ofNullable(this.expirationMs);
     }
 
     /**
@@ -32,17 +32,17 @@ public final class TimePartitioningArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<String> field;
+    private @Nullable Output<String> field;
 
-    public Output<String> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<String>> field() {
+        return Optional.ofNullable(this.field);
     }
 
     @Import(name="requirePartitionFilter")
-      private final @Nullable Output<Boolean> requirePartitionFilter;
+    private @Nullable Output<Boolean> requirePartitionFilter;
 
-    public Output<Boolean> requirePartitionFilter() {
-        return this.requirePartitionFilter == null ? Codegen.empty() : this.requirePartitionFilter;
+    public Optional<Output<Boolean>> requirePartitionFilter() {
+        return Optional.ofNullable(this.requirePartitionFilter);
     }
 
     /**
@@ -50,89 +50,78 @@ public final class TimePartitioningArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public TimePartitioningArgs(
-        @Nullable Output<String> expirationMs,
-        @Nullable Output<String> field,
-        @Nullable Output<Boolean> requirePartitionFilter,
-        @Nullable Output<String> type) {
-        this.expirationMs = expirationMs;
-        this.field = field;
-        this.requirePartitionFilter = requirePartitionFilter;
-        this.type = type;
-    }
+    private TimePartitioningArgs() {}
 
-    private TimePartitioningArgs() {
-        this.expirationMs = Codegen.empty();
-        this.field = Codegen.empty();
-        this.requirePartitionFilter = Codegen.empty();
-        this.type = Codegen.empty();
+    private TimePartitioningArgs(TimePartitioningArgs $) {
+        this.expirationMs = $.expirationMs;
+        this.field = $.field;
+        this.requirePartitionFilter = $.requirePartitionFilter;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimePartitioningArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expirationMs;
-        private @Nullable Output<String> field;
-        private @Nullable Output<Boolean> requirePartitionFilter;
-        private @Nullable Output<String> type;
+        private TimePartitioningArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimePartitioningArgs();
         }
 
         public Builder(TimePartitioningArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationMs = defaults.expirationMs;
-    	      this.field = defaults.field;
-    	      this.requirePartitionFilter = defaults.requirePartitionFilter;
-    	      this.type = defaults.type;
+            $ = new TimePartitioningArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationMs(@Nullable Output<String> expirationMs) {
-            this.expirationMs = expirationMs;
+            $.expirationMs = expirationMs;
             return this;
         }
-        public Builder expirationMs(@Nullable String expirationMs) {
-            this.expirationMs = Codegen.ofNullable(expirationMs);
-            return this;
+
+        public Builder expirationMs(String expirationMs) {
+            return expirationMs(Output.of(expirationMs));
         }
+
         public Builder field(@Nullable Output<String> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable String field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
+
+        public Builder field(String field) {
+            return field(Output.of(field));
         }
+
         public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
-            this.requirePartitionFilter = requirePartitionFilter;
+            $.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
-        public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
-            this.requirePartitionFilter = Codegen.ofNullable(requirePartitionFilter);
-            return this;
+
+        public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
+            return requirePartitionFilter(Output.of(requirePartitionFilter));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public TimePartitioningArgs build() {
-            return new TimePartitioningArgs(expirationMs, field, requirePartitionFilter, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public TimePartitioningArgs build() {
+            return $;
         }
     }
+
 }

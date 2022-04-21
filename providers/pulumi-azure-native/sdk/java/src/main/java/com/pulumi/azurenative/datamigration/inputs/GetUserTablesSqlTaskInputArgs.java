@@ -6,7 +6,6 @@ package com.pulumi.azurenative.datamigration.inputs;
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public final class GetUserTablesSqlTaskInputArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="connectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> connectionInfo;
+    private Output<SqlConnectionInfoArgs> connectionInfo;
 
     public Output<SqlConnectionInfoArgs> connectionInfo() {
         return this.connectionInfo;
@@ -36,66 +35,64 @@ public final class GetUserTablesSqlTaskInputArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="selectedDatabases", required=true)
-      private final Output<List<String>> selectedDatabases;
+    private Output<List<String>> selectedDatabases;
 
     public Output<List<String>> selectedDatabases() {
         return this.selectedDatabases;
     }
 
-    public GetUserTablesSqlTaskInputArgs(
-        Output<SqlConnectionInfoArgs> connectionInfo,
-        Output<List<String>> selectedDatabases) {
-        this.connectionInfo = Objects.requireNonNull(connectionInfo, "expected parameter 'connectionInfo' to be non-null");
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
-    }
+    private GetUserTablesSqlTaskInputArgs() {}
 
-    private GetUserTablesSqlTaskInputArgs() {
-        this.connectionInfo = Codegen.empty();
-        this.selectedDatabases = Codegen.empty();
+    private GetUserTablesSqlTaskInputArgs(GetUserTablesSqlTaskInputArgs $) {
+        this.connectionInfo = $.connectionInfo;
+        this.selectedDatabases = $.selectedDatabases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserTablesSqlTaskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SqlConnectionInfoArgs> connectionInfo;
-        private Output<List<String>> selectedDatabases;
+        private GetUserTablesSqlTaskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserTablesSqlTaskInputArgs();
         }
 
         public Builder(GetUserTablesSqlTaskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionInfo = defaults.connectionInfo;
-    	      this.selectedDatabases = defaults.selectedDatabases;
+            $ = new GetUserTablesSqlTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionInfo(Output<SqlConnectionInfoArgs> connectionInfo) {
-            this.connectionInfo = Objects.requireNonNull(connectionInfo);
+            $.connectionInfo = connectionInfo;
             return this;
         }
+
         public Builder connectionInfo(SqlConnectionInfoArgs connectionInfo) {
-            this.connectionInfo = Output.of(Objects.requireNonNull(connectionInfo));
-            return this;
+            return connectionInfo(Output.of(connectionInfo));
         }
+
         public Builder selectedDatabases(Output<List<String>> selectedDatabases) {
-            this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+            $.selectedDatabases = selectedDatabases;
             return this;
         }
+
         public Builder selectedDatabases(List<String> selectedDatabases) {
-            this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
-            return this;
+            return selectedDatabases(Output.of(selectedDatabases));
         }
+
         public Builder selectedDatabases(String... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
-        }        public GetUserTablesSqlTaskInputArgs build() {
-            return new GetUserTablesSqlTaskInputArgs(connectionInfo, selectedDatabases);
+        }
+
+        public GetUserTablesSqlTaskInputArgs build() {
+            $.connectionInfo = Objects.requireNonNull($.connectionInfo, "expected parameter 'connectionInfo' to be non-null");
+            $.selectedDatabases = Objects.requireNonNull($.selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
+            return $;
         }
     }
+
 }

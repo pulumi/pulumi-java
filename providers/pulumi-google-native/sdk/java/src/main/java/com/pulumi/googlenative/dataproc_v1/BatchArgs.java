@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataproc_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1.inputs.EnvironmentConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.PySparkBatchArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.RuntimeConfigArgs;
@@ -15,6 +14,7 @@ import com.pulumi.googlenative.dataproc_v1.inputs.SparkSqlBatchArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
     public static final BatchArgs Empty = new BatchArgs();
 
     @Import(name="batchId")
-      private final @Nullable Output<String> batchId;
+    private @Nullable Output<String> batchId;
 
-    public Output<String> batchId() {
-        return this.batchId == null ? Codegen.empty() : this.batchId;
+    public Optional<Output<String>> batchId() {
+        return Optional.ofNullable(this.batchId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentConfig")
-      private final @Nullable Output<EnvironmentConfigArgs> environmentConfig;
+    private @Nullable Output<EnvironmentConfigArgs> environmentConfig;
 
-    public Output<EnvironmentConfigArgs> environmentConfig() {
-        return this.environmentConfig == null ? Codegen.empty() : this.environmentConfig;
+    public Optional<Output<EnvironmentConfigArgs>> environmentConfig() {
+        return Optional.ofNullable(this.environmentConfig);
     }
 
     /**
@@ -45,24 +45,24 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -70,17 +70,17 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pysparkBatch")
-      private final @Nullable Output<PySparkBatchArgs> pysparkBatch;
+    private @Nullable Output<PySparkBatchArgs> pysparkBatch;
 
-    public Output<PySparkBatchArgs> pysparkBatch() {
-        return this.pysparkBatch == null ? Codegen.empty() : this.pysparkBatch;
+    public Optional<Output<PySparkBatchArgs>> pysparkBatch() {
+        return Optional.ofNullable(this.pysparkBatch);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeConfig")
-      private final @Nullable Output<RuntimeConfigArgs> runtimeConfig;
+    private @Nullable Output<RuntimeConfigArgs> runtimeConfig;
 
-    public Output<RuntimeConfigArgs> runtimeConfig() {
-        return this.runtimeConfig == null ? Codegen.empty() : this.runtimeConfig;
+    public Optional<Output<RuntimeConfigArgs>> runtimeConfig() {
+        return Optional.ofNullable(this.runtimeConfig);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkBatch")
-      private final @Nullable Output<SparkBatchArgs> sparkBatch;
+    private @Nullable Output<SparkBatchArgs> sparkBatch;
 
-    public Output<SparkBatchArgs> sparkBatch() {
-        return this.sparkBatch == null ? Codegen.empty() : this.sparkBatch;
+    public Optional<Output<SparkBatchArgs>> sparkBatch() {
+        return Optional.ofNullable(this.sparkBatch);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkRBatch")
-      private final @Nullable Output<SparkRBatchArgs> sparkRBatch;
+    private @Nullable Output<SparkRBatchArgs> sparkRBatch;
 
-    public Output<SparkRBatchArgs> sparkRBatch() {
-        return this.sparkRBatch == null ? Codegen.empty() : this.sparkRBatch;
+    public Optional<Output<SparkRBatchArgs>> sparkRBatch() {
+        return Optional.ofNullable(this.sparkRBatch);
     }
 
     /**
@@ -121,180 +121,148 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkSqlBatch")
-      private final @Nullable Output<SparkSqlBatchArgs> sparkSqlBatch;
+    private @Nullable Output<SparkSqlBatchArgs> sparkSqlBatch;
 
-    public Output<SparkSqlBatchArgs> sparkSqlBatch() {
-        return this.sparkSqlBatch == null ? Codegen.empty() : this.sparkSqlBatch;
+    public Optional<Output<SparkSqlBatchArgs>> sparkSqlBatch() {
+        return Optional.ofNullable(this.sparkSqlBatch);
     }
 
-    public BatchArgs(
-        @Nullable Output<String> batchId,
-        @Nullable Output<EnvironmentConfigArgs> environmentConfig,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<PySparkBatchArgs> pysparkBatch,
-        @Nullable Output<String> requestId,
-        @Nullable Output<RuntimeConfigArgs> runtimeConfig,
-        @Nullable Output<SparkBatchArgs> sparkBatch,
-        @Nullable Output<SparkRBatchArgs> sparkRBatch,
-        @Nullable Output<SparkSqlBatchArgs> sparkSqlBatch) {
-        this.batchId = batchId;
-        this.environmentConfig = environmentConfig;
-        this.labels = labels;
-        this.location = location;
-        this.project = project;
-        this.pysparkBatch = pysparkBatch;
-        this.requestId = requestId;
-        this.runtimeConfig = runtimeConfig;
-        this.sparkBatch = sparkBatch;
-        this.sparkRBatch = sparkRBatch;
-        this.sparkSqlBatch = sparkSqlBatch;
-    }
+    private BatchArgs() {}
 
-    private BatchArgs() {
-        this.batchId = Codegen.empty();
-        this.environmentConfig = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.pysparkBatch = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.runtimeConfig = Codegen.empty();
-        this.sparkBatch = Codegen.empty();
-        this.sparkRBatch = Codegen.empty();
-        this.sparkSqlBatch = Codegen.empty();
+    private BatchArgs(BatchArgs $) {
+        this.batchId = $.batchId;
+        this.environmentConfig = $.environmentConfig;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.project = $.project;
+        this.pysparkBatch = $.pysparkBatch;
+        this.requestId = $.requestId;
+        this.runtimeConfig = $.runtimeConfig;
+        this.sparkBatch = $.sparkBatch;
+        this.sparkRBatch = $.sparkRBatch;
+        this.sparkSqlBatch = $.sparkSqlBatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> batchId;
-        private @Nullable Output<EnvironmentConfigArgs> environmentConfig;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<PySparkBatchArgs> pysparkBatch;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<RuntimeConfigArgs> runtimeConfig;
-        private @Nullable Output<SparkBatchArgs> sparkBatch;
-        private @Nullable Output<SparkRBatchArgs> sparkRBatch;
-        private @Nullable Output<SparkSqlBatchArgs> sparkSqlBatch;
+        private BatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchArgs();
         }
 
         public Builder(BatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchId = defaults.batchId;
-    	      this.environmentConfig = defaults.environmentConfig;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.pysparkBatch = defaults.pysparkBatch;
-    	      this.requestId = defaults.requestId;
-    	      this.runtimeConfig = defaults.runtimeConfig;
-    	      this.sparkBatch = defaults.sparkBatch;
-    	      this.sparkRBatch = defaults.sparkRBatch;
-    	      this.sparkSqlBatch = defaults.sparkSqlBatch;
+            $ = new BatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchId(@Nullable Output<String> batchId) {
-            this.batchId = batchId;
+            $.batchId = batchId;
             return this;
         }
-        public Builder batchId(@Nullable String batchId) {
-            this.batchId = Codegen.ofNullable(batchId);
-            return this;
+
+        public Builder batchId(String batchId) {
+            return batchId(Output.of(batchId));
         }
+
         public Builder environmentConfig(@Nullable Output<EnvironmentConfigArgs> environmentConfig) {
-            this.environmentConfig = environmentConfig;
+            $.environmentConfig = environmentConfig;
             return this;
         }
-        public Builder environmentConfig(@Nullable EnvironmentConfigArgs environmentConfig) {
-            this.environmentConfig = Codegen.ofNullable(environmentConfig);
-            return this;
+
+        public Builder environmentConfig(EnvironmentConfigArgs environmentConfig) {
+            return environmentConfig(Output.of(environmentConfig));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder pysparkBatch(@Nullable Output<PySparkBatchArgs> pysparkBatch) {
-            this.pysparkBatch = pysparkBatch;
+            $.pysparkBatch = pysparkBatch;
             return this;
         }
-        public Builder pysparkBatch(@Nullable PySparkBatchArgs pysparkBatch) {
-            this.pysparkBatch = Codegen.ofNullable(pysparkBatch);
-            return this;
+
+        public Builder pysparkBatch(PySparkBatchArgs pysparkBatch) {
+            return pysparkBatch(Output.of(pysparkBatch));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder runtimeConfig(@Nullable Output<RuntimeConfigArgs> runtimeConfig) {
-            this.runtimeConfig = runtimeConfig;
+            $.runtimeConfig = runtimeConfig;
             return this;
         }
-        public Builder runtimeConfig(@Nullable RuntimeConfigArgs runtimeConfig) {
-            this.runtimeConfig = Codegen.ofNullable(runtimeConfig);
-            return this;
+
+        public Builder runtimeConfig(RuntimeConfigArgs runtimeConfig) {
+            return runtimeConfig(Output.of(runtimeConfig));
         }
+
         public Builder sparkBatch(@Nullable Output<SparkBatchArgs> sparkBatch) {
-            this.sparkBatch = sparkBatch;
+            $.sparkBatch = sparkBatch;
             return this;
         }
-        public Builder sparkBatch(@Nullable SparkBatchArgs sparkBatch) {
-            this.sparkBatch = Codegen.ofNullable(sparkBatch);
-            return this;
+
+        public Builder sparkBatch(SparkBatchArgs sparkBatch) {
+            return sparkBatch(Output.of(sparkBatch));
         }
+
         public Builder sparkRBatch(@Nullable Output<SparkRBatchArgs> sparkRBatch) {
-            this.sparkRBatch = sparkRBatch;
+            $.sparkRBatch = sparkRBatch;
             return this;
         }
-        public Builder sparkRBatch(@Nullable SparkRBatchArgs sparkRBatch) {
-            this.sparkRBatch = Codegen.ofNullable(sparkRBatch);
-            return this;
+
+        public Builder sparkRBatch(SparkRBatchArgs sparkRBatch) {
+            return sparkRBatch(Output.of(sparkRBatch));
         }
+
         public Builder sparkSqlBatch(@Nullable Output<SparkSqlBatchArgs> sparkSqlBatch) {
-            this.sparkSqlBatch = sparkSqlBatch;
+            $.sparkSqlBatch = sparkSqlBatch;
             return this;
         }
-        public Builder sparkSqlBatch(@Nullable SparkSqlBatchArgs sparkSqlBatch) {
-            this.sparkSqlBatch = Codegen.ofNullable(sparkSqlBatch);
-            return this;
-        }        public BatchArgs build() {
-            return new BatchArgs(batchId, environmentConfig, labels, location, project, pysparkBatch, requestId, runtimeConfig, sparkBatch, sparkRBatch, sparkSqlBatch);
+
+        public Builder sparkSqlBatch(SparkSqlBatchArgs sparkSqlBatch) {
+            return sparkSqlBatch(Output.of(sparkSqlBatch));
+        }
+
+        public BatchArgs build() {
+            return $;
         }
     }
+
 }

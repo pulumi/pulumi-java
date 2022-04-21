@@ -14,48 +14,49 @@ public final class ResponseHeadersPolicyAccessControlAllowOrigins extends com.pu
     public static final ResponseHeadersPolicyAccessControlAllowOrigins Empty = new ResponseHeadersPolicyAccessControlAllowOrigins();
 
     @Import(name="items", required=true)
-      private final List<String> items;
+    private List<String> items;
 
     public List<String> items() {
         return this.items;
     }
 
-    public ResponseHeadersPolicyAccessControlAllowOrigins(List<String> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private ResponseHeadersPolicyAccessControlAllowOrigins() {}
 
-    private ResponseHeadersPolicyAccessControlAllowOrigins() {
-        this.items = List.of();
+    private ResponseHeadersPolicyAccessControlAllowOrigins(ResponseHeadersPolicyAccessControlAllowOrigins $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyAccessControlAllowOrigins defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> items;
+        private ResponseHeadersPolicyAccessControlAllowOrigins $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyAccessControlAllowOrigins();
         }
 
         public Builder(ResponseHeadersPolicyAccessControlAllowOrigins defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new ResponseHeadersPolicyAccessControlAllowOrigins(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<String> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public ResponseHeadersPolicyAccessControlAllowOrigins build() {
-            return new ResponseHeadersPolicyAccessControlAllowOrigins(items);
+        }
+
+        public ResponseHeadersPolicyAccessControlAllowOrigins build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

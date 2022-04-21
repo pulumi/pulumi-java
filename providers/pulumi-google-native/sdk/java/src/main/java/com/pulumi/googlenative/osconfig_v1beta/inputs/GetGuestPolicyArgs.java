@@ -15,62 +15,58 @@ public final class GetGuestPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetGuestPolicyArgs Empty = new GetGuestPolicyArgs();
 
     @Import(name="guestPolicyId", required=true)
-      private final String guestPolicyId;
+    private String guestPolicyId;
 
     public String guestPolicyId() {
         return this.guestPolicyId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetGuestPolicyArgs(
-        String guestPolicyId,
-        @Nullable String project) {
-        this.guestPolicyId = Objects.requireNonNull(guestPolicyId, "expected parameter 'guestPolicyId' to be non-null");
-        this.project = project;
-    }
+    private GetGuestPolicyArgs() {}
 
-    private GetGuestPolicyArgs() {
-        this.guestPolicyId = null;
-        this.project = null;
+    private GetGuestPolicyArgs(GetGuestPolicyArgs $) {
+        this.guestPolicyId = $.guestPolicyId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGuestPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String guestPolicyId;
-        private @Nullable String project;
+        private GetGuestPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGuestPolicyArgs();
         }
 
         public Builder(GetGuestPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.guestPolicyId = defaults.guestPolicyId;
-    	      this.project = defaults.project;
+            $ = new GetGuestPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder guestPolicyId(String guestPolicyId) {
-            this.guestPolicyId = Objects.requireNonNull(guestPolicyId);
+            $.guestPolicyId = guestPolicyId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetGuestPolicyArgs build() {
-            return new GetGuestPolicyArgs(guestPolicyId, project);
+        }
+
+        public GetGuestPolicyArgs build() {
+            $.guestPolicyId = Objects.requireNonNull($.guestPolicyId, "expected parameter 'guestPolicyId' to be non-null");
+            return $;
         }
     }
+
 }

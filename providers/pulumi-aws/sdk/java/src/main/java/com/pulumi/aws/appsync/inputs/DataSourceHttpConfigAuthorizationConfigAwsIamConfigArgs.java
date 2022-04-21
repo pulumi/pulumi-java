@@ -5,9 +5,9 @@ package com.pulumi.aws.appsync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
      * 
      */
     @Import(name="signingRegion")
-      private final @Nullable Output<String> signingRegion;
+    private @Nullable Output<String> signingRegion;
 
-    public Output<String> signingRegion() {
-        return this.signingRegion == null ? Codegen.empty() : this.signingRegion;
+    public Optional<Output<String>> signingRegion() {
+        return Optional.ofNullable(this.signingRegion);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
      * 
      */
     @Import(name="signingServiceName")
-      private final @Nullable Output<String> signingServiceName;
+    private @Nullable Output<String> signingServiceName;
 
-    public Output<String> signingServiceName() {
-        return this.signingServiceName == null ? Codegen.empty() : this.signingServiceName;
+    public Optional<Output<String>> signingServiceName() {
+        return Optional.ofNullable(this.signingServiceName);
     }
 
-    public DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs(
-        @Nullable Output<String> signingRegion,
-        @Nullable Output<String> signingServiceName) {
-        this.signingRegion = signingRegion;
-        this.signingServiceName = signingServiceName;
-    }
+    private DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs() {}
 
-    private DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs() {
-        this.signingRegion = Codegen.empty();
-        this.signingServiceName = Codegen.empty();
+    private DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs(DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs $) {
+        this.signingRegion = $.signingRegion;
+        this.signingServiceName = $.signingServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> signingRegion;
-        private @Nullable Output<String> signingServiceName;
+        private DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs();
         }
 
         public Builder(DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.signingRegion = defaults.signingRegion;
-    	      this.signingServiceName = defaults.signingServiceName;
+            $ = new DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder signingRegion(@Nullable Output<String> signingRegion) {
-            this.signingRegion = signingRegion;
+            $.signingRegion = signingRegion;
             return this;
         }
-        public Builder signingRegion(@Nullable String signingRegion) {
-            this.signingRegion = Codegen.ofNullable(signingRegion);
-            return this;
+
+        public Builder signingRegion(String signingRegion) {
+            return signingRegion(Output.of(signingRegion));
         }
+
         public Builder signingServiceName(@Nullable Output<String> signingServiceName) {
-            this.signingServiceName = signingServiceName;
+            $.signingServiceName = signingServiceName;
             return this;
         }
-        public Builder signingServiceName(@Nullable String signingServiceName) {
-            this.signingServiceName = Codegen.ofNullable(signingServiceName);
-            return this;
-        }        public DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs build() {
-            return new DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs(signingRegion, signingServiceName);
+
+        public Builder signingServiceName(String signingServiceName) {
+            return signingServiceName(Output.of(signingServiceName));
+        }
+
+        public DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs build() {
+            return $;
         }
     }
+
 }

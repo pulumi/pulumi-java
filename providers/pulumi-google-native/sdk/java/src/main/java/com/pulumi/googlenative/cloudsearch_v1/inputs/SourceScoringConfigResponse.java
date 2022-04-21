@@ -21,45 +21,45 @@ public final class SourceScoringConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceImportance", required=true)
-      private final String sourceImportance;
+    private String sourceImportance;
 
     public String sourceImportance() {
         return this.sourceImportance;
     }
 
-    public SourceScoringConfigResponse(String sourceImportance) {
-        this.sourceImportance = Objects.requireNonNull(sourceImportance, "expected parameter 'sourceImportance' to be non-null");
-    }
+    private SourceScoringConfigResponse() {}
 
-    private SourceScoringConfigResponse() {
-        this.sourceImportance = null;
+    private SourceScoringConfigResponse(SourceScoringConfigResponse $) {
+        this.sourceImportance = $.sourceImportance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceScoringConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sourceImportance;
+        private SourceScoringConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceScoringConfigResponse();
         }
 
         public Builder(SourceScoringConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceImportance = defaults.sourceImportance;
+            $ = new SourceScoringConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceImportance(String sourceImportance) {
-            this.sourceImportance = Objects.requireNonNull(sourceImportance);
+            $.sourceImportance = sourceImportance;
             return this;
-        }        public SourceScoringConfigResponse build() {
-            return new SourceScoringConfigResponse(sourceImportance);
+        }
+
+        public SourceScoringConfigResponse build() {
+            $.sourceImportance = Objects.requireNonNull($.sourceImportance, "expected parameter 'sourceImportance' to be non-null");
+            return $;
         }
     }
+
 }

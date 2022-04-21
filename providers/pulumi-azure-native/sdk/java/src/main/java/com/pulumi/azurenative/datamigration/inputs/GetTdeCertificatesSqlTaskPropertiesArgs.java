@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class GetTdeCertificatesSqlTaskPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<GetTdeCertificatesSqlTaskInputArgs> input;
+    private @Nullable Output<GetTdeCertificatesSqlTaskInputArgs> input;
 
-    public Output<GetTdeCertificatesSqlTaskInputArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<GetTdeCertificatesSqlTaskInputArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class GetTdeCertificatesSqlTaskPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<String> taskType;
+    private Output<String> taskType;
 
     public Output<String> taskType() {
         return this.taskType;
     }
 
-    public GetTdeCertificatesSqlTaskPropertiesArgs(
-        @Nullable Output<GetTdeCertificatesSqlTaskInputArgs> input,
-        Output<String> taskType) {
-        this.input = input;
-        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
-    }
+    private GetTdeCertificatesSqlTaskPropertiesArgs() {}
 
-    private GetTdeCertificatesSqlTaskPropertiesArgs() {
-        this.input = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private GetTdeCertificatesSqlTaskPropertiesArgs(GetTdeCertificatesSqlTaskPropertiesArgs $) {
+        this.input = $.input;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTdeCertificatesSqlTaskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GetTdeCertificatesSqlTaskInputArgs> input;
-        private Output<String> taskType;
+        private GetTdeCertificatesSqlTaskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTdeCertificatesSqlTaskPropertiesArgs();
         }
 
         public Builder(GetTdeCertificatesSqlTaskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.taskType = defaults.taskType;
+            $ = new GetTdeCertificatesSqlTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<GetTdeCertificatesSqlTaskInputArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable GetTdeCertificatesSqlTaskInputArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(GetTdeCertificatesSqlTaskInputArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder taskType(Output<String> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public GetTdeCertificatesSqlTaskPropertiesArgs build() {
-            return new GetTdeCertificatesSqlTaskPropertiesArgs(input, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public GetTdeCertificatesSqlTaskPropertiesArgs build() {
+            $.taskType = Codegen.stringProp("taskType").output().arg($.taskType).require();
+            return $;
         }
     }
+
 }

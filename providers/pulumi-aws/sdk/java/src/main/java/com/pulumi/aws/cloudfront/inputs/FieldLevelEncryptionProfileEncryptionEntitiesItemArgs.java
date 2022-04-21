@@ -6,7 +6,6 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemArgs extends
      * 
      */
     @Import(name="fieldPatterns", required=true)
-      private final Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns;
+    private Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns;
 
     public Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns() {
         return this.fieldPatterns;
@@ -31,7 +30,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemArgs extends
      * 
      */
     @Import(name="providerId", required=true)
-      private final Output<String> providerId;
+    private Output<String> providerId;
 
     public Output<String> providerId() {
         return this.providerId;
@@ -42,76 +41,71 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemArgs extends
      * 
      */
     @Import(name="publicKeyId", required=true)
-      private final Output<String> publicKeyId;
+    private Output<String> publicKeyId;
 
     public Output<String> publicKeyId() {
         return this.publicKeyId;
     }
 
-    public FieldLevelEncryptionProfileEncryptionEntitiesItemArgs(
-        Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns,
-        Output<String> providerId,
-        Output<String> publicKeyId) {
-        this.fieldPatterns = Objects.requireNonNull(fieldPatterns, "expected parameter 'fieldPatterns' to be non-null");
-        this.providerId = Objects.requireNonNull(providerId, "expected parameter 'providerId' to be non-null");
-        this.publicKeyId = Objects.requireNonNull(publicKeyId, "expected parameter 'publicKeyId' to be non-null");
-    }
+    private FieldLevelEncryptionProfileEncryptionEntitiesItemArgs() {}
 
-    private FieldLevelEncryptionProfileEncryptionEntitiesItemArgs() {
-        this.fieldPatterns = Codegen.empty();
-        this.providerId = Codegen.empty();
-        this.publicKeyId = Codegen.empty();
+    private FieldLevelEncryptionProfileEncryptionEntitiesItemArgs(FieldLevelEncryptionProfileEncryptionEntitiesItemArgs $) {
+        this.fieldPatterns = $.fieldPatterns;
+        this.providerId = $.providerId;
+        this.publicKeyId = $.publicKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionProfileEncryptionEntitiesItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns;
-        private Output<String> providerId;
-        private Output<String> publicKeyId;
+        private FieldLevelEncryptionProfileEncryptionEntitiesItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionProfileEncryptionEntitiesItemArgs();
         }
 
         public Builder(FieldLevelEncryptionProfileEncryptionEntitiesItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldPatterns = defaults.fieldPatterns;
-    	      this.providerId = defaults.providerId;
-    	      this.publicKeyId = defaults.publicKeyId;
+            $ = new FieldLevelEncryptionProfileEncryptionEntitiesItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldPatterns(Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns) {
-            this.fieldPatterns = Objects.requireNonNull(fieldPatterns);
+            $.fieldPatterns = fieldPatterns;
             return this;
         }
+
         public Builder fieldPatterns(FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs fieldPatterns) {
-            this.fieldPatterns = Output.of(Objects.requireNonNull(fieldPatterns));
-            return this;
+            return fieldPatterns(Output.of(fieldPatterns));
         }
+
         public Builder providerId(Output<String> providerId) {
-            this.providerId = Objects.requireNonNull(providerId);
+            $.providerId = providerId;
             return this;
         }
+
         public Builder providerId(String providerId) {
-            this.providerId = Output.of(Objects.requireNonNull(providerId));
-            return this;
+            return providerId(Output.of(providerId));
         }
+
         public Builder publicKeyId(Output<String> publicKeyId) {
-            this.publicKeyId = Objects.requireNonNull(publicKeyId);
+            $.publicKeyId = publicKeyId;
             return this;
         }
+
         public Builder publicKeyId(String publicKeyId) {
-            this.publicKeyId = Output.of(Objects.requireNonNull(publicKeyId));
-            return this;
-        }        public FieldLevelEncryptionProfileEncryptionEntitiesItemArgs build() {
-            return new FieldLevelEncryptionProfileEncryptionEntitiesItemArgs(fieldPatterns, providerId, publicKeyId);
+            return publicKeyId(Output.of(publicKeyId));
+        }
+
+        public FieldLevelEncryptionProfileEncryptionEntitiesItemArgs build() {
+            $.fieldPatterns = Objects.requireNonNull($.fieldPatterns, "expected parameter 'fieldPatterns' to be non-null");
+            $.providerId = Objects.requireNonNull($.providerId, "expected parameter 'providerId' to be non-null");
+            $.publicKeyId = Objects.requireNonNull($.publicKeyId, "expected parameter 'publicKeyId' to be non-null");
+            return $;
         }
     }
+
 }

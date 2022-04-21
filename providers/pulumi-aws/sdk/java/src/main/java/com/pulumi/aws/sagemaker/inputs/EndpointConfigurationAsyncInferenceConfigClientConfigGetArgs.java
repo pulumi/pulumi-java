@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs 
      * 
      */
     @Import(name="maxConcurrentInvocationsPerInstance")
-      private final @Nullable Output<Integer> maxConcurrentInvocationsPerInstance;
+    private @Nullable Output<Integer> maxConcurrentInvocationsPerInstance;
 
-    public Output<Integer> maxConcurrentInvocationsPerInstance() {
-        return this.maxConcurrentInvocationsPerInstance == null ? Codegen.empty() : this.maxConcurrentInvocationsPerInstance;
+    public Optional<Output<Integer>> maxConcurrentInvocationsPerInstance() {
+        return Optional.ofNullable(this.maxConcurrentInvocationsPerInstance);
     }
 
-    public EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs(@Nullable Output<Integer> maxConcurrentInvocationsPerInstance) {
-        this.maxConcurrentInvocationsPerInstance = maxConcurrentInvocationsPerInstance;
-    }
+    private EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs() {}
 
-    private EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs() {
-        this.maxConcurrentInvocationsPerInstance = Codegen.empty();
+    private EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs(EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs $) {
+        this.maxConcurrentInvocationsPerInstance = $.maxConcurrentInvocationsPerInstance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxConcurrentInvocationsPerInstance;
+        private EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs();
         }
 
         public Builder(EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxConcurrentInvocationsPerInstance = defaults.maxConcurrentInvocationsPerInstance;
+            $ = new EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxConcurrentInvocationsPerInstance(@Nullable Output<Integer> maxConcurrentInvocationsPerInstance) {
-            this.maxConcurrentInvocationsPerInstance = maxConcurrentInvocationsPerInstance;
+            $.maxConcurrentInvocationsPerInstance = maxConcurrentInvocationsPerInstance;
             return this;
         }
-        public Builder maxConcurrentInvocationsPerInstance(@Nullable Integer maxConcurrentInvocationsPerInstance) {
-            this.maxConcurrentInvocationsPerInstance = Codegen.ofNullable(maxConcurrentInvocationsPerInstance);
-            return this;
-        }        public EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs build() {
-            return new EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs(maxConcurrentInvocationsPerInstance);
+
+        public Builder maxConcurrentInvocationsPerInstance(Integer maxConcurrentInvocationsPerInstance) {
+            return maxConcurrentInvocationsPerInstance(Output.of(maxConcurrentInvocationsPerInstance));
+        }
+
+        public EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs build() {
+            return $;
         }
     }
+
 }

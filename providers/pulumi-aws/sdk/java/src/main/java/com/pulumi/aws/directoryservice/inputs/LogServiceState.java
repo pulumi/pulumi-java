@@ -5,9 +5,9 @@ package com.pulumi.aws.directoryservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LogServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="directoryId")
-      private final @Nullable Output<String> directoryId;
+    private @Nullable Output<String> directoryId;
 
-    public Output<String> directoryId() {
-        return this.directoryId == null ? Codegen.empty() : this.directoryId;
+    public Optional<Output<String>> directoryId() {
+        return Optional.ofNullable(this.directoryId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class LogServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logGroupName")
-      private final @Nullable Output<String> logGroupName;
+    private @Nullable Output<String> logGroupName;
 
-    public Output<String> logGroupName() {
-        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
+    public Optional<Output<String>> logGroupName() {
+        return Optional.ofNullable(this.logGroupName);
     }
 
-    public LogServiceState(
-        @Nullable Output<String> directoryId,
-        @Nullable Output<String> logGroupName) {
-        this.directoryId = directoryId;
-        this.logGroupName = logGroupName;
-    }
+    private LogServiceState() {}
 
-    private LogServiceState() {
-        this.directoryId = Codegen.empty();
-        this.logGroupName = Codegen.empty();
+    private LogServiceState(LogServiceState $) {
+        this.directoryId = $.directoryId;
+        this.logGroupName = $.logGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogServiceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> directoryId;
-        private @Nullable Output<String> logGroupName;
+        private LogServiceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogServiceState();
         }
 
         public Builder(LogServiceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directoryId = defaults.directoryId;
-    	      this.logGroupName = defaults.logGroupName;
+            $ = new LogServiceState(Objects.requireNonNull(defaults));
         }
 
         public Builder directoryId(@Nullable Output<String> directoryId) {
-            this.directoryId = directoryId;
+            $.directoryId = directoryId;
             return this;
         }
-        public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Codegen.ofNullable(directoryId);
-            return this;
+
+        public Builder directoryId(String directoryId) {
+            return directoryId(Output.of(directoryId));
         }
+
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
         }
-        public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Codegen.ofNullable(logGroupName);
-            return this;
-        }        public LogServiceState build() {
-            return new LogServiceState(directoryId, logGroupName);
+
+        public Builder logGroupName(String logGroupName) {
+            return logGroupName(Output.of(logGroupName));
+        }
+
+        public LogServiceState build() {
+            return $;
         }
     }
+
 }

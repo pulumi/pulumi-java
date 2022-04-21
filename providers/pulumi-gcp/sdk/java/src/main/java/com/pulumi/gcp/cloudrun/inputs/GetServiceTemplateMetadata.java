@@ -15,21 +15,21 @@ public final class GetServiceTemplateMetadata extends com.pulumi.resources.Invok
     public static final GetServiceTemplateMetadata Empty = new GetServiceTemplateMetadata();
 
     @Import(name="annotations", required=true)
-      private final Map<String,String> annotations;
+    private Map<String,String> annotations;
 
     public Map<String,String> annotations() {
         return this.annotations;
     }
 
     @Import(name="generation", required=true)
-      private final Integer generation;
+    private Integer generation;
 
     public Integer generation() {
         return this.generation;
     }
 
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -40,137 +40,122 @@ public final class GetServiceTemplateMetadata extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
     }
 
     @Import(name="resourceVersion", required=true)
-      private final String resourceVersion;
+    private String resourceVersion;
 
     public String resourceVersion() {
         return this.resourceVersion;
     }
 
     @Import(name="selfLink", required=true)
-      private final String selfLink;
+    private String selfLink;
 
     public String selfLink() {
         return this.selfLink;
     }
 
     @Import(name="uid", required=true)
-      private final String uid;
+    private String uid;
 
     public String uid() {
         return this.uid;
     }
 
-    public GetServiceTemplateMetadata(
-        Map<String,String> annotations,
-        Integer generation,
-        Map<String,String> labels,
-        String name,
-        String namespace,
-        String resourceVersion,
-        String selfLink,
-        String uid) {
-        this.annotations = Objects.requireNonNull(annotations, "expected parameter 'annotations' to be non-null");
-        this.generation = Objects.requireNonNull(generation, "expected parameter 'generation' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.resourceVersion = Objects.requireNonNull(resourceVersion, "expected parameter 'resourceVersion' to be non-null");
-        this.selfLink = Objects.requireNonNull(selfLink, "expected parameter 'selfLink' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-    }
+    private GetServiceTemplateMetadata() {}
 
-    private GetServiceTemplateMetadata() {
-        this.annotations = Map.of();
-        this.generation = null;
-        this.labels = Map.of();
-        this.name = null;
-        this.namespace = null;
-        this.resourceVersion = null;
-        this.selfLink = null;
-        this.uid = null;
+    private GetServiceTemplateMetadata(GetServiceTemplateMetadata $) {
+        this.annotations = $.annotations;
+        this.generation = $.generation;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.resourceVersion = $.resourceVersion;
+        this.selfLink = $.selfLink;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateMetadata defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> annotations;
-        private Integer generation;
-        private Map<String,String> labels;
-        private String name;
-        private String namespace;
-        private String resourceVersion;
-        private String selfLink;
-        private String uid;
+        private GetServiceTemplateMetadata $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateMetadata();
         }
 
         public Builder(GetServiceTemplateMetadata defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.generation = defaults.generation;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.resourceVersion = defaults.resourceVersion;
-    	      this.selfLink = defaults.selfLink;
-    	      this.uid = defaults.uid;
+            $ = new GetServiceTemplateMetadata(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(Map<String,String> annotations) {
-            this.annotations = Objects.requireNonNull(annotations);
+            $.annotations = annotations;
             return this;
         }
+
         public Builder generation(Integer generation) {
-            this.generation = Objects.requireNonNull(generation);
+            $.generation = generation;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder resourceVersion(String resourceVersion) {
-            this.resourceVersion = Objects.requireNonNull(resourceVersion);
+            $.resourceVersion = resourceVersion;
             return this;
         }
+
         public Builder selfLink(String selfLink) {
-            this.selfLink = Objects.requireNonNull(selfLink);
+            $.selfLink = selfLink;
             return this;
         }
+
         public Builder uid(String uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
-        }        public GetServiceTemplateMetadata build() {
-            return new GetServiceTemplateMetadata(annotations, generation, labels, name, namespace, resourceVersion, selfLink, uid);
+        }
+
+        public GetServiceTemplateMetadata build() {
+            $.annotations = Objects.requireNonNull($.annotations, "expected parameter 'annotations' to be non-null");
+            $.generation = Objects.requireNonNull($.generation, "expected parameter 'generation' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.resourceVersion = Objects.requireNonNull($.resourceVersion, "expected parameter 'resourceVersion' to be non-null");
+            $.selfLink = Objects.requireNonNull($.selfLink, "expected parameter 'selfLink' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            return $;
         }
     }
+
 }

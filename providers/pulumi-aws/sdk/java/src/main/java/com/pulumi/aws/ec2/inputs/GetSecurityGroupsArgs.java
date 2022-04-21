@@ -22,10 +22,10 @@ public final class GetSecurityGroupsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetSecurityGroupsFilter> filters;
+    private @Nullable List<GetSecurityGroupsFilter> filters;
 
-    public List<GetSecurityGroupsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetSecurityGroupsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,58 +33,54 @@ public final class GetSecurityGroupsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetSecurityGroupsArgs(
-        @Nullable List<GetSecurityGroupsFilter> filters,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.tags = tags;
-    }
+    private GetSecurityGroupsArgs() {}
 
-    private GetSecurityGroupsArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
+    private GetSecurityGroupsArgs(GetSecurityGroupsArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecurityGroupsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetSecurityGroupsFilter> filters;
-        private @Nullable Map<String,String> tags;
+        private GetSecurityGroupsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecurityGroupsArgs();
         }
 
         public Builder(GetSecurityGroupsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
+            $ = new GetSecurityGroupsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetSecurityGroupsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetSecurityGroupsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetSecurityGroupsArgs build() {
-            return new GetSecurityGroupsArgs(filters, tags);
+        }
+
+        public GetSecurityGroupsArgs build() {
+            return $;
         }
     }
+
 }

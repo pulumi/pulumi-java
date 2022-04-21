@@ -13,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +22,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     public static final DomainArgs Empty = new DomainArgs();
 
     @Import(name="authCode")
-      private final @Nullable Output<String> authCode;
+    private @Nullable Output<String> authCode;
 
-    public Output<String> authCode() {
-        return this.authCode == null ? Codegen.empty() : this.authCode;
+    public Optional<Output<String>> authCode() {
+        return Optional.ofNullable(this.authCode);
     }
 
     /**
@@ -32,10 +33,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoRenew")
-      private final @Nullable Output<Boolean> autoRenew;
+    private @Nullable Output<Boolean> autoRenew;
 
-    public Output<Boolean> autoRenew() {
-        return this.autoRenew == null ? Codegen.empty() : this.autoRenew;
+    public Optional<Output<Boolean>> autoRenew() {
+        return Optional.ofNullable(this.autoRenew);
     }
 
     /**
@@ -43,7 +44,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="consent", required=true)
-      private final Output<DomainPurchaseConsentArgs> consent;
+    private Output<DomainPurchaseConsentArgs> consent;
 
     public Output<DomainPurchaseConsentArgs> consent() {
         return this.consent;
@@ -54,7 +55,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactAdmin", required=true)
-      private final Output<ContactArgs> contactAdmin;
+    private Output<ContactArgs> contactAdmin;
 
     public Output<ContactArgs> contactAdmin() {
         return this.contactAdmin;
@@ -65,7 +66,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactBilling", required=true)
-      private final Output<ContactArgs> contactBilling;
+    private Output<ContactArgs> contactBilling;
 
     public Output<ContactArgs> contactBilling() {
         return this.contactBilling;
@@ -76,7 +77,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactRegistrant", required=true)
-      private final Output<ContactArgs> contactRegistrant;
+    private Output<ContactArgs> contactRegistrant;
 
     public Output<ContactArgs> contactRegistrant() {
         return this.contactRegistrant;
@@ -87,7 +88,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactTech", required=true)
-      private final Output<ContactArgs> contactTech;
+    private Output<ContactArgs> contactTech;
 
     public Output<ContactArgs> contactTech() {
         return this.contactTech;
@@ -98,10 +99,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsType")
-      private final @Nullable Output<DnsType> dnsType;
+    private @Nullable Output<DnsType> dnsType;
 
-    public Output<DnsType> dnsType() {
-        return this.dnsType == null ? Codegen.empty() : this.dnsType;
+    public Optional<Output<DnsType>> dnsType() {
+        return Optional.ofNullable(this.dnsType);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsZoneId")
-      private final @Nullable Output<String> dnsZoneId;
+    private @Nullable Output<String> dnsZoneId;
 
-    public Output<String> dnsZoneId() {
-        return this.dnsZoneId == null ? Codegen.empty() : this.dnsZoneId;
+    public Optional<Output<String>> dnsZoneId() {
+        return Optional.ofNullable(this.dnsZoneId);
     }
 
     /**
@@ -120,10 +121,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -131,10 +132,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -142,10 +143,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -153,10 +154,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privacy")
-      private final @Nullable Output<Boolean> privacy;
+    private @Nullable Output<Boolean> privacy;
 
-    public Output<Boolean> privacy() {
-        return this.privacy == null ? Codegen.empty() : this.privacy;
+    public Optional<Output<Boolean>> privacy() {
+        return Optional.ofNullable(this.privacy);
     }
 
     /**
@@ -164,7 +165,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -175,10 +176,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -186,245 +187,205 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetDnsType")
-      private final @Nullable Output<DnsType> targetDnsType;
+    private @Nullable Output<DnsType> targetDnsType;
 
-    public Output<DnsType> targetDnsType() {
-        return this.targetDnsType == null ? Codegen.empty() : this.targetDnsType;
+    public Optional<Output<DnsType>> targetDnsType() {
+        return Optional.ofNullable(this.targetDnsType);
     }
 
-    public DomainArgs(
-        @Nullable Output<String> authCode,
-        @Nullable Output<Boolean> autoRenew,
-        Output<DomainPurchaseConsentArgs> consent,
-        Output<ContactArgs> contactAdmin,
-        Output<ContactArgs> contactBilling,
-        Output<ContactArgs> contactRegistrant,
-        Output<ContactArgs> contactTech,
-        @Nullable Output<DnsType> dnsType,
-        @Nullable Output<String> dnsZoneId,
-        @Nullable Output<String> domainName,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<Boolean> privacy,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<DnsType> targetDnsType) {
-        this.authCode = authCode;
-        this.autoRenew = Codegen.booleanProp("autoRenew").output().arg(autoRenew).def(true).getNullable();
-        this.consent = Objects.requireNonNull(consent, "expected parameter 'consent' to be non-null");
-        this.contactAdmin = Objects.requireNonNull(contactAdmin, "expected parameter 'contactAdmin' to be non-null");
-        this.contactBilling = Objects.requireNonNull(contactBilling, "expected parameter 'contactBilling' to be non-null");
-        this.contactRegistrant = Objects.requireNonNull(contactRegistrant, "expected parameter 'contactRegistrant' to be non-null");
-        this.contactTech = Objects.requireNonNull(contactTech, "expected parameter 'contactTech' to be non-null");
-        this.dnsType = dnsType;
-        this.dnsZoneId = dnsZoneId;
-        this.domainName = domainName;
-        this.kind = kind;
-        this.location = location;
-        this.privacy = privacy;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.targetDnsType = targetDnsType;
-    }
+    private DomainArgs() {}
 
-    private DomainArgs() {
-        this.authCode = Codegen.empty();
-        this.autoRenew = Codegen.empty();
-        this.consent = Codegen.empty();
-        this.contactAdmin = Codegen.empty();
-        this.contactBilling = Codegen.empty();
-        this.contactRegistrant = Codegen.empty();
-        this.contactTech = Codegen.empty();
-        this.dnsType = Codegen.empty();
-        this.dnsZoneId = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.privacy = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetDnsType = Codegen.empty();
+    private DomainArgs(DomainArgs $) {
+        this.authCode = $.authCode;
+        this.autoRenew = $.autoRenew;
+        this.consent = $.consent;
+        this.contactAdmin = $.contactAdmin;
+        this.contactBilling = $.contactBilling;
+        this.contactRegistrant = $.contactRegistrant;
+        this.contactTech = $.contactTech;
+        this.dnsType = $.dnsType;
+        this.dnsZoneId = $.dnsZoneId;
+        this.domainName = $.domainName;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.privacy = $.privacy;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.targetDnsType = $.targetDnsType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authCode;
-        private @Nullable Output<Boolean> autoRenew;
-        private Output<DomainPurchaseConsentArgs> consent;
-        private Output<ContactArgs> contactAdmin;
-        private Output<ContactArgs> contactBilling;
-        private Output<ContactArgs> contactRegistrant;
-        private Output<ContactArgs> contactTech;
-        private @Nullable Output<DnsType> dnsType;
-        private @Nullable Output<String> dnsZoneId;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Boolean> privacy;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<DnsType> targetDnsType;
+        private DomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainArgs();
         }
 
         public Builder(DomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authCode = defaults.authCode;
-    	      this.autoRenew = defaults.autoRenew;
-    	      this.consent = defaults.consent;
-    	      this.contactAdmin = defaults.contactAdmin;
-    	      this.contactBilling = defaults.contactBilling;
-    	      this.contactRegistrant = defaults.contactRegistrant;
-    	      this.contactTech = defaults.contactTech;
-    	      this.dnsType = defaults.dnsType;
-    	      this.dnsZoneId = defaults.dnsZoneId;
-    	      this.domainName = defaults.domainName;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.privacy = defaults.privacy;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.targetDnsType = defaults.targetDnsType;
+            $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authCode(@Nullable Output<String> authCode) {
-            this.authCode = authCode;
+            $.authCode = authCode;
             return this;
         }
-        public Builder authCode(@Nullable String authCode) {
-            this.authCode = Codegen.ofNullable(authCode);
-            return this;
+
+        public Builder authCode(String authCode) {
+            return authCode(Output.of(authCode));
         }
+
         public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
-            this.autoRenew = autoRenew;
+            $.autoRenew = autoRenew;
             return this;
         }
-        public Builder autoRenew(@Nullable Boolean autoRenew) {
-            this.autoRenew = Codegen.ofNullable(autoRenew);
-            return this;
+
+        public Builder autoRenew(Boolean autoRenew) {
+            return autoRenew(Output.of(autoRenew));
         }
+
         public Builder consent(Output<DomainPurchaseConsentArgs> consent) {
-            this.consent = Objects.requireNonNull(consent);
+            $.consent = consent;
             return this;
         }
+
         public Builder consent(DomainPurchaseConsentArgs consent) {
-            this.consent = Output.of(Objects.requireNonNull(consent));
-            return this;
+            return consent(Output.of(consent));
         }
+
         public Builder contactAdmin(Output<ContactArgs> contactAdmin) {
-            this.contactAdmin = Objects.requireNonNull(contactAdmin);
+            $.contactAdmin = contactAdmin;
             return this;
         }
+
         public Builder contactAdmin(ContactArgs contactAdmin) {
-            this.contactAdmin = Output.of(Objects.requireNonNull(contactAdmin));
-            return this;
+            return contactAdmin(Output.of(contactAdmin));
         }
+
         public Builder contactBilling(Output<ContactArgs> contactBilling) {
-            this.contactBilling = Objects.requireNonNull(contactBilling);
+            $.contactBilling = contactBilling;
             return this;
         }
+
         public Builder contactBilling(ContactArgs contactBilling) {
-            this.contactBilling = Output.of(Objects.requireNonNull(contactBilling));
-            return this;
+            return contactBilling(Output.of(contactBilling));
         }
+
         public Builder contactRegistrant(Output<ContactArgs> contactRegistrant) {
-            this.contactRegistrant = Objects.requireNonNull(contactRegistrant);
+            $.contactRegistrant = contactRegistrant;
             return this;
         }
+
         public Builder contactRegistrant(ContactArgs contactRegistrant) {
-            this.contactRegistrant = Output.of(Objects.requireNonNull(contactRegistrant));
-            return this;
+            return contactRegistrant(Output.of(contactRegistrant));
         }
+
         public Builder contactTech(Output<ContactArgs> contactTech) {
-            this.contactTech = Objects.requireNonNull(contactTech);
+            $.contactTech = contactTech;
             return this;
         }
+
         public Builder contactTech(ContactArgs contactTech) {
-            this.contactTech = Output.of(Objects.requireNonNull(contactTech));
-            return this;
+            return contactTech(Output.of(contactTech));
         }
+
         public Builder dnsType(@Nullable Output<DnsType> dnsType) {
-            this.dnsType = dnsType;
+            $.dnsType = dnsType;
             return this;
         }
-        public Builder dnsType(@Nullable DnsType dnsType) {
-            this.dnsType = Codegen.ofNullable(dnsType);
-            return this;
+
+        public Builder dnsType(DnsType dnsType) {
+            return dnsType(Output.of(dnsType));
         }
+
         public Builder dnsZoneId(@Nullable Output<String> dnsZoneId) {
-            this.dnsZoneId = dnsZoneId;
+            $.dnsZoneId = dnsZoneId;
             return this;
         }
-        public Builder dnsZoneId(@Nullable String dnsZoneId) {
-            this.dnsZoneId = Codegen.ofNullable(dnsZoneId);
-            return this;
+
+        public Builder dnsZoneId(String dnsZoneId) {
+            return dnsZoneId(Output.of(dnsZoneId));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder privacy(@Nullable Output<Boolean> privacy) {
-            this.privacy = privacy;
+            $.privacy = privacy;
             return this;
         }
-        public Builder privacy(@Nullable Boolean privacy) {
-            this.privacy = Codegen.ofNullable(privacy);
-            return this;
+
+        public Builder privacy(Boolean privacy) {
+            return privacy(Output.of(privacy));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetDnsType(@Nullable Output<DnsType> targetDnsType) {
-            this.targetDnsType = targetDnsType;
+            $.targetDnsType = targetDnsType;
             return this;
         }
-        public Builder targetDnsType(@Nullable DnsType targetDnsType) {
-            this.targetDnsType = Codegen.ofNullable(targetDnsType);
-            return this;
-        }        public DomainArgs build() {
-            return new DomainArgs(authCode, autoRenew, consent, contactAdmin, contactBilling, contactRegistrant, contactTech, dnsType, dnsZoneId, domainName, kind, location, privacy, resourceGroupName, tags, targetDnsType);
+
+        public Builder targetDnsType(DnsType targetDnsType) {
+            return targetDnsType(Output.of(targetDnsType));
+        }
+
+        public DomainArgs build() {
+            $.autoRenew = Codegen.booleanProp("autoRenew").output().arg($.autoRenew).def(true).getNullable();
+            $.consent = Objects.requireNonNull($.consent, "expected parameter 'consent' to be non-null");
+            $.contactAdmin = Objects.requireNonNull($.contactAdmin, "expected parameter 'contactAdmin' to be non-null");
+            $.contactBilling = Objects.requireNonNull($.contactBilling, "expected parameter 'contactBilling' to be non-null");
+            $.contactRegistrant = Objects.requireNonNull($.contactRegistrant, "expected parameter 'contactRegistrant' to be non-null");
+            $.contactTech = Objects.requireNonNull($.contactTech, "expected parameter 'contactTech' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

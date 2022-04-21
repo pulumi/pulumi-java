@@ -22,7 +22,7 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -33,7 +33,7 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maximum", required=true)
-      private final Integer maximum;
+    private Integer maximum;
 
     public Integer maximum() {
         return this.maximum;
@@ -44,7 +44,7 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="minimum", required=true)
-      private final Integer minimum;
+    private Integer minimum;
 
     public Integer minimum() {
         return this.minimum;
@@ -55,73 +55,66 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="version", required=true)
-      private final Integer version;
+    private Integer version;
 
     public Integer version() {
         return this.version;
     }
 
-    public OptimizedAutoscaleResponse(
-        Boolean isEnabled,
-        Integer maximum,
-        Integer minimum,
-        Integer version) {
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.maximum = Objects.requireNonNull(maximum, "expected parameter 'maximum' to be non-null");
-        this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private OptimizedAutoscaleResponse() {}
 
-    private OptimizedAutoscaleResponse() {
-        this.isEnabled = null;
-        this.maximum = null;
-        this.minimum = null;
-        this.version = null;
+    private OptimizedAutoscaleResponse(OptimizedAutoscaleResponse $) {
+        this.isEnabled = $.isEnabled;
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OptimizedAutoscaleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isEnabled;
-        private Integer maximum;
-        private Integer minimum;
-        private Integer version;
+        private OptimizedAutoscaleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OptimizedAutoscaleResponse();
         }
 
         public Builder(OptimizedAutoscaleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
-    	      this.version = defaults.version;
+            $ = new OptimizedAutoscaleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder maximum(Integer maximum) {
-            this.maximum = Objects.requireNonNull(maximum);
+            $.maximum = maximum;
             return this;
         }
+
         public Builder minimum(Integer minimum) {
-            this.minimum = Objects.requireNonNull(minimum);
+            $.minimum = minimum;
             return this;
         }
+
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public OptimizedAutoscaleResponse build() {
-            return new OptimizedAutoscaleResponse(isEnabled, maximum, minimum, version);
+        }
+
+        public OptimizedAutoscaleResponse build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.maximum = Objects.requireNonNull($.maximum, "expected parameter 'maximum' to be non-null");
+            $.minimum = Objects.requireNonNull($.minimum, "expected parameter 'minimum' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

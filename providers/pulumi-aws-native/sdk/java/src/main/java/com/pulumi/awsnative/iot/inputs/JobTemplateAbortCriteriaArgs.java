@@ -7,7 +7,6 @@ import com.pulumi.awsnative.iot.enums.JobTemplateAction;
 import com.pulumi.awsnative.iot.enums.JobTemplateFailureType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class JobTemplateAbortCriteriaArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="action", required=true)
-      private final Output<JobTemplateAction> action;
+    private Output<JobTemplateAction> action;
 
     public Output<JobTemplateAction> action() {
         return this.action;
@@ -37,7 +36,7 @@ public final class JobTemplateAbortCriteriaArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="failureType", required=true)
-      private final Output<JobTemplateFailureType> failureType;
+    private Output<JobTemplateFailureType> failureType;
 
     public Output<JobTemplateFailureType> failureType() {
         return this.failureType;
@@ -48,7 +47,7 @@ public final class JobTemplateAbortCriteriaArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="minNumberOfExecutedThings", required=true)
-      private final Output<Integer> minNumberOfExecutedThings;
+    private Output<Integer> minNumberOfExecutedThings;
 
     public Output<Integer> minNumberOfExecutedThings() {
         return this.minNumberOfExecutedThings;
@@ -59,89 +58,82 @@ public final class JobTemplateAbortCriteriaArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="thresholdPercentage", required=true)
-      private final Output<Double> thresholdPercentage;
+    private Output<Double> thresholdPercentage;
 
     public Output<Double> thresholdPercentage() {
         return this.thresholdPercentage;
     }
 
-    public JobTemplateAbortCriteriaArgs(
-        Output<JobTemplateAction> action,
-        Output<JobTemplateFailureType> failureType,
-        Output<Integer> minNumberOfExecutedThings,
-        Output<Double> thresholdPercentage) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.failureType = Objects.requireNonNull(failureType, "expected parameter 'failureType' to be non-null");
-        this.minNumberOfExecutedThings = Objects.requireNonNull(minNumberOfExecutedThings, "expected parameter 'minNumberOfExecutedThings' to be non-null");
-        this.thresholdPercentage = Objects.requireNonNull(thresholdPercentage, "expected parameter 'thresholdPercentage' to be non-null");
-    }
+    private JobTemplateAbortCriteriaArgs() {}
 
-    private JobTemplateAbortCriteriaArgs() {
-        this.action = Codegen.empty();
-        this.failureType = Codegen.empty();
-        this.minNumberOfExecutedThings = Codegen.empty();
-        this.thresholdPercentage = Codegen.empty();
+    private JobTemplateAbortCriteriaArgs(JobTemplateAbortCriteriaArgs $) {
+        this.action = $.action;
+        this.failureType = $.failureType;
+        this.minNumberOfExecutedThings = $.minNumberOfExecutedThings;
+        this.thresholdPercentage = $.thresholdPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobTemplateAbortCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<JobTemplateAction> action;
-        private Output<JobTemplateFailureType> failureType;
-        private Output<Integer> minNumberOfExecutedThings;
-        private Output<Double> thresholdPercentage;
+        private JobTemplateAbortCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobTemplateAbortCriteriaArgs();
         }
 
         public Builder(JobTemplateAbortCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.failureType = defaults.failureType;
-    	      this.minNumberOfExecutedThings = defaults.minNumberOfExecutedThings;
-    	      this.thresholdPercentage = defaults.thresholdPercentage;
+            $ = new JobTemplateAbortCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<JobTemplateAction> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(JobTemplateAction action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder failureType(Output<JobTemplateFailureType> failureType) {
-            this.failureType = Objects.requireNonNull(failureType);
+            $.failureType = failureType;
             return this;
         }
+
         public Builder failureType(JobTemplateFailureType failureType) {
-            this.failureType = Output.of(Objects.requireNonNull(failureType));
-            return this;
+            return failureType(Output.of(failureType));
         }
+
         public Builder minNumberOfExecutedThings(Output<Integer> minNumberOfExecutedThings) {
-            this.minNumberOfExecutedThings = Objects.requireNonNull(minNumberOfExecutedThings);
+            $.minNumberOfExecutedThings = minNumberOfExecutedThings;
             return this;
         }
+
         public Builder minNumberOfExecutedThings(Integer minNumberOfExecutedThings) {
-            this.minNumberOfExecutedThings = Output.of(Objects.requireNonNull(minNumberOfExecutedThings));
-            return this;
+            return minNumberOfExecutedThings(Output.of(minNumberOfExecutedThings));
         }
+
         public Builder thresholdPercentage(Output<Double> thresholdPercentage) {
-            this.thresholdPercentage = Objects.requireNonNull(thresholdPercentage);
+            $.thresholdPercentage = thresholdPercentage;
             return this;
         }
+
         public Builder thresholdPercentage(Double thresholdPercentage) {
-            this.thresholdPercentage = Output.of(Objects.requireNonNull(thresholdPercentage));
-            return this;
-        }        public JobTemplateAbortCriteriaArgs build() {
-            return new JobTemplateAbortCriteriaArgs(action, failureType, minNumberOfExecutedThings, thresholdPercentage);
+            return thresholdPercentage(Output.of(thresholdPercentage));
+        }
+
+        public JobTemplateAbortCriteriaArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.failureType = Objects.requireNonNull($.failureType, "expected parameter 'failureType' to be non-null");
+            $.minNumberOfExecutedThings = Objects.requireNonNull($.minNumberOfExecutedThings, "expected parameter 'minNumberOfExecutedThings' to be non-null");
+            $.thresholdPercentage = Objects.requireNonNull($.thresholdPercentage, "expected parameter 'thresholdPercentage' to be non-null");
+            return $;
         }
     }
+
 }

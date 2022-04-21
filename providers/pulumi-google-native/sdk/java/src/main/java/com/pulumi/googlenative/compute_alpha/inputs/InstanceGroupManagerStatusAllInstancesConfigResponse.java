@@ -18,7 +18,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
      * 
      */
     @Import(name="currentRevision", required=true)
-      private final String currentRevision;
+    private String currentRevision;
 
     public String currentRevision() {
         return this.currentRevision;
@@ -29,55 +29,52 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
      * 
      */
     @Import(name="effective", required=true)
-      private final Boolean effective;
+    private Boolean effective;
 
     public Boolean effective() {
         return this.effective;
     }
 
-    public InstanceGroupManagerStatusAllInstancesConfigResponse(
-        String currentRevision,
-        Boolean effective) {
-        this.currentRevision = Objects.requireNonNull(currentRevision, "expected parameter 'currentRevision' to be non-null");
-        this.effective = Objects.requireNonNull(effective, "expected parameter 'effective' to be non-null");
-    }
+    private InstanceGroupManagerStatusAllInstancesConfigResponse() {}
 
-    private InstanceGroupManagerStatusAllInstancesConfigResponse() {
-        this.currentRevision = null;
-        this.effective = null;
+    private InstanceGroupManagerStatusAllInstancesConfigResponse(InstanceGroupManagerStatusAllInstancesConfigResponse $) {
+        this.currentRevision = $.currentRevision;
+        this.effective = $.effective;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerStatusAllInstancesConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String currentRevision;
-        private Boolean effective;
+        private InstanceGroupManagerStatusAllInstancesConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerStatusAllInstancesConfigResponse();
         }
 
         public Builder(InstanceGroupManagerStatusAllInstancesConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentRevision = defaults.currentRevision;
-    	      this.effective = defaults.effective;
+            $ = new InstanceGroupManagerStatusAllInstancesConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentRevision(String currentRevision) {
-            this.currentRevision = Objects.requireNonNull(currentRevision);
+            $.currentRevision = currentRevision;
             return this;
         }
+
         public Builder effective(Boolean effective) {
-            this.effective = Objects.requireNonNull(effective);
+            $.effective = effective;
             return this;
-        }        public InstanceGroupManagerStatusAllInstancesConfigResponse build() {
-            return new InstanceGroupManagerStatusAllInstancesConfigResponse(currentRevision, effective);
+        }
+
+        public InstanceGroupManagerStatusAllInstancesConfigResponse build() {
+            $.currentRevision = Objects.requireNonNull($.currentRevision, "expected parameter 'currentRevision' to be non-null");
+            $.effective = Objects.requireNonNull($.effective, "expected parameter 'effective' to be non-null");
+            return $;
         }
     }
+
 }

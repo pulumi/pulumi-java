@@ -7,9 +7,9 @@ import com.pulumi.azurenative.connectedvmwarevsphere.enums.OsType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminPassword")
-      private final @Nullable Output<String> adminPassword;
+    private @Nullable Output<String> adminPassword;
 
-    public Output<String> adminPassword() {
-        return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
+    public Optional<Output<String>> adminPassword() {
+        return Optional.ofNullable(this.adminPassword);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminUsername")
-      private final @Nullable Output<String> adminUsername;
+    private @Nullable Output<String> adminUsername;
 
-    public Output<String> adminUsername() {
-        return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
+    public Optional<Output<String>> adminUsername() {
+        return Optional.ofNullable(this.adminUsername);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computerName")
-      private final @Nullable Output<String> computerName;
+    private @Nullable Output<String> computerName;
 
-    public Output<String> computerName() {
-        return this.computerName == null ? Codegen.empty() : this.computerName;
+    public Optional<Output<String>> computerName() {
+        return Optional.ofNullable(this.computerName);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<Either<String,OsType>> osType;
+    private @Nullable Output<Either<String,OsType>> osType;
 
-    public Output<Either<String,OsType>> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<Either<String,OsType>>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
-    public OsProfileArgs(
-        @Nullable Output<String> adminPassword,
-        @Nullable Output<String> adminUsername,
-        @Nullable Output<String> computerName,
-        @Nullable Output<Either<String,OsType>> osType) {
-        this.adminPassword = adminPassword;
-        this.adminUsername = adminUsername;
-        this.computerName = computerName;
-        this.osType = osType;
-    }
+    private OsProfileArgs() {}
 
-    private OsProfileArgs() {
-        this.adminPassword = Codegen.empty();
-        this.adminUsername = Codegen.empty();
-        this.computerName = Codegen.empty();
-        this.osType = Codegen.empty();
+    private OsProfileArgs(OsProfileArgs $) {
+        this.adminPassword = $.adminPassword;
+        this.adminUsername = $.adminUsername;
+        this.computerName = $.computerName;
+        this.osType = $.osType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adminPassword;
-        private @Nullable Output<String> adminUsername;
-        private @Nullable Output<String> computerName;
-        private @Nullable Output<Either<String,OsType>> osType;
+        private OsProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsProfileArgs();
         }
 
         public Builder(OsProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminPassword = defaults.adminPassword;
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.computerName = defaults.computerName;
-    	      this.osType = defaults.osType;
+            $ = new OsProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminPassword(@Nullable Output<String> adminPassword) {
-            this.adminPassword = adminPassword;
+            $.adminPassword = adminPassword;
             return this;
         }
-        public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Codegen.ofNullable(adminPassword);
-            return this;
+
+        public Builder adminPassword(String adminPassword) {
+            return adminPassword(Output.of(adminPassword));
         }
+
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
-            this.adminUsername = adminUsername;
+            $.adminUsername = adminUsername;
             return this;
         }
-        public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Codegen.ofNullable(adminUsername);
-            return this;
+
+        public Builder adminUsername(String adminUsername) {
+            return adminUsername(Output.of(adminUsername));
         }
+
         public Builder computerName(@Nullable Output<String> computerName) {
-            this.computerName = computerName;
+            $.computerName = computerName;
             return this;
         }
-        public Builder computerName(@Nullable String computerName) {
-            this.computerName = Codegen.ofNullable(computerName);
-            return this;
+
+        public Builder computerName(String computerName) {
+            return computerName(Output.of(computerName));
         }
+
         public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable Either<String,OsType> osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
-        }        public OsProfileArgs build() {
-            return new OsProfileArgs(adminPassword, adminUsername, computerName, osType);
+
+        public Builder osType(Either<String,OsType> osType) {
+            return osType(Output.of(osType));
+        }
+
+        public OsProfileArgs build() {
+            return $;
         }
     }
+
 }

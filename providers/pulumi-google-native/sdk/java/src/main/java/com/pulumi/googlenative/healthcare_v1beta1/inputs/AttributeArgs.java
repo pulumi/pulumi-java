@@ -5,10 +5,10 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AttributeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributeDefinitionId")
-      private final @Nullable Output<String> attributeDefinitionId;
+    private @Nullable Output<String> attributeDefinitionId;
 
-    public Output<String> attributeDefinitionId() {
-        return this.attributeDefinitionId == null ? Codegen.empty() : this.attributeDefinitionId;
+    public Optional<Output<String>> attributeDefinitionId() {
+        return Optional.ofNullable(this.attributeDefinitionId);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class AttributeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public AttributeArgs(
-        @Nullable Output<String> attributeDefinitionId,
-        @Nullable Output<List<String>> values) {
-        this.attributeDefinitionId = attributeDefinitionId;
-        this.values = values;
-    }
+    private AttributeArgs() {}
 
-    private AttributeArgs() {
-        this.attributeDefinitionId = Codegen.empty();
-        this.values = Codegen.empty();
+    private AttributeArgs(AttributeArgs $) {
+        this.attributeDefinitionId = $.attributeDefinitionId;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttributeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attributeDefinitionId;
-        private @Nullable Output<List<String>> values;
+        private AttributeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttributeArgs();
         }
 
         public Builder(AttributeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeDefinitionId = defaults.attributeDefinitionId;
-    	      this.values = defaults.values;
+            $ = new AttributeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeDefinitionId(@Nullable Output<String> attributeDefinitionId) {
-            this.attributeDefinitionId = attributeDefinitionId;
+            $.attributeDefinitionId = attributeDefinitionId;
             return this;
         }
-        public Builder attributeDefinitionId(@Nullable String attributeDefinitionId) {
-            this.attributeDefinitionId = Codegen.ofNullable(attributeDefinitionId);
-            return this;
+
+        public Builder attributeDefinitionId(String attributeDefinitionId) {
+            return attributeDefinitionId(Output.of(attributeDefinitionId));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public AttributeArgs build() {
-            return new AttributeArgs(attributeDefinitionId, values);
+        }
+
+        public AttributeArgs build() {
+            return $;
         }
     }
+
 }

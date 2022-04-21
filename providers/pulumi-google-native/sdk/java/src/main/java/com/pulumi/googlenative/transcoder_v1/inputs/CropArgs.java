@@ -5,9 +5,9 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CropArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bottomPixels")
-      private final @Nullable Output<Integer> bottomPixels;
+    private @Nullable Output<Integer> bottomPixels;
 
-    public Output<Integer> bottomPixels() {
-        return this.bottomPixels == null ? Codegen.empty() : this.bottomPixels;
+    public Optional<Output<Integer>> bottomPixels() {
+        return Optional.ofNullable(this.bottomPixels);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CropArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="leftPixels")
-      private final @Nullable Output<Integer> leftPixels;
+    private @Nullable Output<Integer> leftPixels;
 
-    public Output<Integer> leftPixels() {
-        return this.leftPixels == null ? Codegen.empty() : this.leftPixels;
+    public Optional<Output<Integer>> leftPixels() {
+        return Optional.ofNullable(this.leftPixels);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CropArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rightPixels")
-      private final @Nullable Output<Integer> rightPixels;
+    private @Nullable Output<Integer> rightPixels;
 
-    public Output<Integer> rightPixels() {
-        return this.rightPixels == null ? Codegen.empty() : this.rightPixels;
+    public Optional<Output<Integer>> rightPixels() {
+        return Optional.ofNullable(this.rightPixels);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class CropArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topPixels")
-      private final @Nullable Output<Integer> topPixels;
+    private @Nullable Output<Integer> topPixels;
 
-    public Output<Integer> topPixels() {
-        return this.topPixels == null ? Codegen.empty() : this.topPixels;
+    public Optional<Output<Integer>> topPixels() {
+        return Optional.ofNullable(this.topPixels);
     }
 
-    public CropArgs(
-        @Nullable Output<Integer> bottomPixels,
-        @Nullable Output<Integer> leftPixels,
-        @Nullable Output<Integer> rightPixels,
-        @Nullable Output<Integer> topPixels) {
-        this.bottomPixels = bottomPixels;
-        this.leftPixels = leftPixels;
-        this.rightPixels = rightPixels;
-        this.topPixels = topPixels;
-    }
+    private CropArgs() {}
 
-    private CropArgs() {
-        this.bottomPixels = Codegen.empty();
-        this.leftPixels = Codegen.empty();
-        this.rightPixels = Codegen.empty();
-        this.topPixels = Codegen.empty();
+    private CropArgs(CropArgs $) {
+        this.bottomPixels = $.bottomPixels;
+        this.leftPixels = $.leftPixels;
+        this.rightPixels = $.rightPixels;
+        this.topPixels = $.topPixels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CropArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> bottomPixels;
-        private @Nullable Output<Integer> leftPixels;
-        private @Nullable Output<Integer> rightPixels;
-        private @Nullable Output<Integer> topPixels;
+        private CropArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CropArgs();
         }
 
         public Builder(CropArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bottomPixels = defaults.bottomPixels;
-    	      this.leftPixels = defaults.leftPixels;
-    	      this.rightPixels = defaults.rightPixels;
-    	      this.topPixels = defaults.topPixels;
+            $ = new CropArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bottomPixels(@Nullable Output<Integer> bottomPixels) {
-            this.bottomPixels = bottomPixels;
+            $.bottomPixels = bottomPixels;
             return this;
         }
-        public Builder bottomPixels(@Nullable Integer bottomPixels) {
-            this.bottomPixels = Codegen.ofNullable(bottomPixels);
-            return this;
+
+        public Builder bottomPixels(Integer bottomPixels) {
+            return bottomPixels(Output.of(bottomPixels));
         }
+
         public Builder leftPixels(@Nullable Output<Integer> leftPixels) {
-            this.leftPixels = leftPixels;
+            $.leftPixels = leftPixels;
             return this;
         }
-        public Builder leftPixels(@Nullable Integer leftPixels) {
-            this.leftPixels = Codegen.ofNullable(leftPixels);
-            return this;
+
+        public Builder leftPixels(Integer leftPixels) {
+            return leftPixels(Output.of(leftPixels));
         }
+
         public Builder rightPixels(@Nullable Output<Integer> rightPixels) {
-            this.rightPixels = rightPixels;
+            $.rightPixels = rightPixels;
             return this;
         }
-        public Builder rightPixels(@Nullable Integer rightPixels) {
-            this.rightPixels = Codegen.ofNullable(rightPixels);
-            return this;
+
+        public Builder rightPixels(Integer rightPixels) {
+            return rightPixels(Output.of(rightPixels));
         }
+
         public Builder topPixels(@Nullable Output<Integer> topPixels) {
-            this.topPixels = topPixels;
+            $.topPixels = topPixels;
             return this;
         }
-        public Builder topPixels(@Nullable Integer topPixels) {
-            this.topPixels = Codegen.ofNullable(topPixels);
-            return this;
-        }        public CropArgs build() {
-            return new CropArgs(bottomPixels, leftPixels, rightPixels, topPixels);
+
+        public Builder topPixels(Integer topPixels) {
+            return topPixels(Output.of(topPixels));
+        }
+
+        public CropArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class PipelineDiagnosticSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="request")
-      private final @Nullable HttpMessageDiagnosticResponse request;
+    private @Nullable HttpMessageDiagnosticResponse request;
 
     public Optional<HttpMessageDiagnosticResponse> request() {
-        return this.request == null ? Optional.empty() : Optional.ofNullable(this.request);
+        return Optional.ofNullable(this.request);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class PipelineDiagnosticSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="response")
-      private final @Nullable HttpMessageDiagnosticResponse response;
+    private @Nullable HttpMessageDiagnosticResponse response;
 
     public Optional<HttpMessageDiagnosticResponse> response() {
-        return this.response == null ? Optional.empty() : Optional.ofNullable(this.response);
+        return Optional.ofNullable(this.response);
     }
 
-    public PipelineDiagnosticSettingsResponse(
-        @Nullable HttpMessageDiagnosticResponse request,
-        @Nullable HttpMessageDiagnosticResponse response) {
-        this.request = request;
-        this.response = response;
-    }
+    private PipelineDiagnosticSettingsResponse() {}
 
-    private PipelineDiagnosticSettingsResponse() {
-        this.request = null;
-        this.response = null;
+    private PipelineDiagnosticSettingsResponse(PipelineDiagnosticSettingsResponse $) {
+        this.request = $.request;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDiagnosticSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable HttpMessageDiagnosticResponse request;
-        private @Nullable HttpMessageDiagnosticResponse response;
+        private PipelineDiagnosticSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDiagnosticSettingsResponse();
         }
 
         public Builder(PipelineDiagnosticSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.request = defaults.request;
-    	      this.response = defaults.response;
+            $ = new PipelineDiagnosticSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder request(@Nullable HttpMessageDiagnosticResponse request) {
-            this.request = request;
+            $.request = request;
             return this;
         }
+
         public Builder response(@Nullable HttpMessageDiagnosticResponse response) {
-            this.response = response;
+            $.response = response;
             return this;
-        }        public PipelineDiagnosticSettingsResponse build() {
-            return new PipelineDiagnosticSettingsResponse(request, response);
+        }
+
+        public PipelineDiagnosticSettingsResponse build() {
+            return $;
         }
     }
+
 }

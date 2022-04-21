@@ -27,7 +27,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="drainNatIps", required=true)
-      private final List<String> drainNatIps;
+    private List<String> drainNatIps;
 
     public List<String> drainNatIps() {
         return this.drainNatIps;
@@ -38,14 +38,14 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enableDynamicPortAllocation", required=true)
-      private final Boolean enableDynamicPortAllocation;
+    private Boolean enableDynamicPortAllocation;
 
     public Boolean enableDynamicPortAllocation() {
         return this.enableDynamicPortAllocation;
     }
 
     @Import(name="enableEndpointIndependentMapping", required=true)
-      private final Boolean enableEndpointIndependentMapping;
+    private Boolean enableEndpointIndependentMapping;
 
     public Boolean enableEndpointIndependentMapping() {
         return this.enableEndpointIndependentMapping;
@@ -56,7 +56,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="icmpIdleTimeoutSec", required=true)
-      private final Integer icmpIdleTimeoutSec;
+    private Integer icmpIdleTimeoutSec;
 
     public Integer icmpIdleTimeoutSec() {
         return this.icmpIdleTimeoutSec;
@@ -67,7 +67,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logConfig", required=true)
-      private final RouterNatLogConfigResponse logConfig;
+    private RouterNatLogConfigResponse logConfig;
 
     public RouterNatLogConfigResponse logConfig() {
         return this.logConfig;
@@ -78,7 +78,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxPortsPerVm", required=true)
-      private final Integer maxPortsPerVm;
+    private Integer maxPortsPerVm;
 
     public Integer maxPortsPerVm() {
         return this.maxPortsPerVm;
@@ -89,7 +89,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minPortsPerVm", required=true)
-      private final Integer minPortsPerVm;
+    private Integer minPortsPerVm;
 
     public Integer minPortsPerVm() {
         return this.minPortsPerVm;
@@ -100,7 +100,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -111,7 +111,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natIpAllocateOption", required=true)
-      private final String natIpAllocateOption;
+    private String natIpAllocateOption;
 
     public String natIpAllocateOption() {
         return this.natIpAllocateOption;
@@ -122,7 +122,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natIps", required=true)
-      private final List<String> natIps;
+    private List<String> natIps;
 
     public List<String> natIps() {
         return this.natIps;
@@ -133,7 +133,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rules", required=true)
-      private final List<RouterNatRuleResponse> rules;
+    private List<RouterNatRuleResponse> rules;
 
     public List<RouterNatRuleResponse> rules() {
         return this.rules;
@@ -144,7 +144,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceSubnetworkIpRangesToNat", required=true)
-      private final String sourceSubnetworkIpRangesToNat;
+    private String sourceSubnetworkIpRangesToNat;
 
     public String sourceSubnetworkIpRangesToNat() {
         return this.sourceSubnetworkIpRangesToNat;
@@ -155,7 +155,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetworks", required=true)
-      private final List<RouterNatSubnetworkToNatResponse> subnetworks;
+    private List<RouterNatSubnetworkToNatResponse> subnetworks;
 
     public List<RouterNatSubnetworkToNatResponse> subnetworks() {
         return this.subnetworks;
@@ -166,7 +166,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tcpEstablishedIdleTimeoutSec", required=true)
-      private final Integer tcpEstablishedIdleTimeoutSec;
+    private Integer tcpEstablishedIdleTimeoutSec;
 
     public Integer tcpEstablishedIdleTimeoutSec() {
         return this.tcpEstablishedIdleTimeoutSec;
@@ -177,7 +177,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tcpTimeWaitTimeoutSec", required=true)
-      private final Integer tcpTimeWaitTimeoutSec;
+    private Integer tcpTimeWaitTimeoutSec;
 
     public Integer tcpTimeWaitTimeoutSec() {
         return this.tcpTimeWaitTimeoutSec;
@@ -188,7 +188,7 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tcpTransitoryIdleTimeoutSec", required=true)
-      private final Integer tcpTransitoryIdleTimeoutSec;
+    private Integer tcpTransitoryIdleTimeoutSec;
 
     public Integer tcpTransitoryIdleTimeoutSec() {
         return this.tcpTransitoryIdleTimeoutSec;
@@ -199,202 +199,173 @@ public final class RouterNatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="udpIdleTimeoutSec", required=true)
-      private final Integer udpIdleTimeoutSec;
+    private Integer udpIdleTimeoutSec;
 
     public Integer udpIdleTimeoutSec() {
         return this.udpIdleTimeoutSec;
     }
 
-    public RouterNatResponse(
-        List<String> drainNatIps,
-        Boolean enableDynamicPortAllocation,
-        Boolean enableEndpointIndependentMapping,
-        Integer icmpIdleTimeoutSec,
-        RouterNatLogConfigResponse logConfig,
-        Integer maxPortsPerVm,
-        Integer minPortsPerVm,
-        String name,
-        String natIpAllocateOption,
-        List<String> natIps,
-        List<RouterNatRuleResponse> rules,
-        String sourceSubnetworkIpRangesToNat,
-        List<RouterNatSubnetworkToNatResponse> subnetworks,
-        Integer tcpEstablishedIdleTimeoutSec,
-        Integer tcpTimeWaitTimeoutSec,
-        Integer tcpTransitoryIdleTimeoutSec,
-        Integer udpIdleTimeoutSec) {
-        this.drainNatIps = Objects.requireNonNull(drainNatIps, "expected parameter 'drainNatIps' to be non-null");
-        this.enableDynamicPortAllocation = Objects.requireNonNull(enableDynamicPortAllocation, "expected parameter 'enableDynamicPortAllocation' to be non-null");
-        this.enableEndpointIndependentMapping = Objects.requireNonNull(enableEndpointIndependentMapping, "expected parameter 'enableEndpointIndependentMapping' to be non-null");
-        this.icmpIdleTimeoutSec = Objects.requireNonNull(icmpIdleTimeoutSec, "expected parameter 'icmpIdleTimeoutSec' to be non-null");
-        this.logConfig = Objects.requireNonNull(logConfig, "expected parameter 'logConfig' to be non-null");
-        this.maxPortsPerVm = Objects.requireNonNull(maxPortsPerVm, "expected parameter 'maxPortsPerVm' to be non-null");
-        this.minPortsPerVm = Objects.requireNonNull(minPortsPerVm, "expected parameter 'minPortsPerVm' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.natIpAllocateOption = Objects.requireNonNull(natIpAllocateOption, "expected parameter 'natIpAllocateOption' to be non-null");
-        this.natIps = Objects.requireNonNull(natIps, "expected parameter 'natIps' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-        this.sourceSubnetworkIpRangesToNat = Objects.requireNonNull(sourceSubnetworkIpRangesToNat, "expected parameter 'sourceSubnetworkIpRangesToNat' to be non-null");
-        this.subnetworks = Objects.requireNonNull(subnetworks, "expected parameter 'subnetworks' to be non-null");
-        this.tcpEstablishedIdleTimeoutSec = Objects.requireNonNull(tcpEstablishedIdleTimeoutSec, "expected parameter 'tcpEstablishedIdleTimeoutSec' to be non-null");
-        this.tcpTimeWaitTimeoutSec = Objects.requireNonNull(tcpTimeWaitTimeoutSec, "expected parameter 'tcpTimeWaitTimeoutSec' to be non-null");
-        this.tcpTransitoryIdleTimeoutSec = Objects.requireNonNull(tcpTransitoryIdleTimeoutSec, "expected parameter 'tcpTransitoryIdleTimeoutSec' to be non-null");
-        this.udpIdleTimeoutSec = Objects.requireNonNull(udpIdleTimeoutSec, "expected parameter 'udpIdleTimeoutSec' to be non-null");
-    }
+    private RouterNatResponse() {}
 
-    private RouterNatResponse() {
-        this.drainNatIps = List.of();
-        this.enableDynamicPortAllocation = null;
-        this.enableEndpointIndependentMapping = null;
-        this.icmpIdleTimeoutSec = null;
-        this.logConfig = null;
-        this.maxPortsPerVm = null;
-        this.minPortsPerVm = null;
-        this.name = null;
-        this.natIpAllocateOption = null;
-        this.natIps = List.of();
-        this.rules = List.of();
-        this.sourceSubnetworkIpRangesToNat = null;
-        this.subnetworks = List.of();
-        this.tcpEstablishedIdleTimeoutSec = null;
-        this.tcpTimeWaitTimeoutSec = null;
-        this.tcpTransitoryIdleTimeoutSec = null;
-        this.udpIdleTimeoutSec = null;
+    private RouterNatResponse(RouterNatResponse $) {
+        this.drainNatIps = $.drainNatIps;
+        this.enableDynamicPortAllocation = $.enableDynamicPortAllocation;
+        this.enableEndpointIndependentMapping = $.enableEndpointIndependentMapping;
+        this.icmpIdleTimeoutSec = $.icmpIdleTimeoutSec;
+        this.logConfig = $.logConfig;
+        this.maxPortsPerVm = $.maxPortsPerVm;
+        this.minPortsPerVm = $.minPortsPerVm;
+        this.name = $.name;
+        this.natIpAllocateOption = $.natIpAllocateOption;
+        this.natIps = $.natIps;
+        this.rules = $.rules;
+        this.sourceSubnetworkIpRangesToNat = $.sourceSubnetworkIpRangesToNat;
+        this.subnetworks = $.subnetworks;
+        this.tcpEstablishedIdleTimeoutSec = $.tcpEstablishedIdleTimeoutSec;
+        this.tcpTimeWaitTimeoutSec = $.tcpTimeWaitTimeoutSec;
+        this.tcpTransitoryIdleTimeoutSec = $.tcpTransitoryIdleTimeoutSec;
+        this.udpIdleTimeoutSec = $.udpIdleTimeoutSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> drainNatIps;
-        private Boolean enableDynamicPortAllocation;
-        private Boolean enableEndpointIndependentMapping;
-        private Integer icmpIdleTimeoutSec;
-        private RouterNatLogConfigResponse logConfig;
-        private Integer maxPortsPerVm;
-        private Integer minPortsPerVm;
-        private String name;
-        private String natIpAllocateOption;
-        private List<String> natIps;
-        private List<RouterNatRuleResponse> rules;
-        private String sourceSubnetworkIpRangesToNat;
-        private List<RouterNatSubnetworkToNatResponse> subnetworks;
-        private Integer tcpEstablishedIdleTimeoutSec;
-        private Integer tcpTimeWaitTimeoutSec;
-        private Integer tcpTransitoryIdleTimeoutSec;
-        private Integer udpIdleTimeoutSec;
+        private RouterNatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatResponse();
         }
 
         public Builder(RouterNatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.drainNatIps = defaults.drainNatIps;
-    	      this.enableDynamicPortAllocation = defaults.enableDynamicPortAllocation;
-    	      this.enableEndpointIndependentMapping = defaults.enableEndpointIndependentMapping;
-    	      this.icmpIdleTimeoutSec = defaults.icmpIdleTimeoutSec;
-    	      this.logConfig = defaults.logConfig;
-    	      this.maxPortsPerVm = defaults.maxPortsPerVm;
-    	      this.minPortsPerVm = defaults.minPortsPerVm;
-    	      this.name = defaults.name;
-    	      this.natIpAllocateOption = defaults.natIpAllocateOption;
-    	      this.natIps = defaults.natIps;
-    	      this.rules = defaults.rules;
-    	      this.sourceSubnetworkIpRangesToNat = defaults.sourceSubnetworkIpRangesToNat;
-    	      this.subnetworks = defaults.subnetworks;
-    	      this.tcpEstablishedIdleTimeoutSec = defaults.tcpEstablishedIdleTimeoutSec;
-    	      this.tcpTimeWaitTimeoutSec = defaults.tcpTimeWaitTimeoutSec;
-    	      this.tcpTransitoryIdleTimeoutSec = defaults.tcpTransitoryIdleTimeoutSec;
-    	      this.udpIdleTimeoutSec = defaults.udpIdleTimeoutSec;
+            $ = new RouterNatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder drainNatIps(List<String> drainNatIps) {
-            this.drainNatIps = Objects.requireNonNull(drainNatIps);
+            $.drainNatIps = drainNatIps;
             return this;
         }
+
         public Builder drainNatIps(String... drainNatIps) {
             return drainNatIps(List.of(drainNatIps));
         }
+
         public Builder enableDynamicPortAllocation(Boolean enableDynamicPortAllocation) {
-            this.enableDynamicPortAllocation = Objects.requireNonNull(enableDynamicPortAllocation);
+            $.enableDynamicPortAllocation = enableDynamicPortAllocation;
             return this;
         }
+
         public Builder enableEndpointIndependentMapping(Boolean enableEndpointIndependentMapping) {
-            this.enableEndpointIndependentMapping = Objects.requireNonNull(enableEndpointIndependentMapping);
+            $.enableEndpointIndependentMapping = enableEndpointIndependentMapping;
             return this;
         }
+
         public Builder icmpIdleTimeoutSec(Integer icmpIdleTimeoutSec) {
-            this.icmpIdleTimeoutSec = Objects.requireNonNull(icmpIdleTimeoutSec);
+            $.icmpIdleTimeoutSec = icmpIdleTimeoutSec;
             return this;
         }
+
         public Builder logConfig(RouterNatLogConfigResponse logConfig) {
-            this.logConfig = Objects.requireNonNull(logConfig);
+            $.logConfig = logConfig;
             return this;
         }
+
         public Builder maxPortsPerVm(Integer maxPortsPerVm) {
-            this.maxPortsPerVm = Objects.requireNonNull(maxPortsPerVm);
+            $.maxPortsPerVm = maxPortsPerVm;
             return this;
         }
+
         public Builder minPortsPerVm(Integer minPortsPerVm) {
-            this.minPortsPerVm = Objects.requireNonNull(minPortsPerVm);
+            $.minPortsPerVm = minPortsPerVm;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder natIpAllocateOption(String natIpAllocateOption) {
-            this.natIpAllocateOption = Objects.requireNonNull(natIpAllocateOption);
+            $.natIpAllocateOption = natIpAllocateOption;
             return this;
         }
+
         public Builder natIps(List<String> natIps) {
-            this.natIps = Objects.requireNonNull(natIps);
+            $.natIps = natIps;
             return this;
         }
+
         public Builder natIps(String... natIps) {
             return natIps(List.of(natIps));
         }
+
         public Builder rules(List<RouterNatRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(RouterNatRuleResponse... rules) {
             return rules(List.of(rules));
         }
+
         public Builder sourceSubnetworkIpRangesToNat(String sourceSubnetworkIpRangesToNat) {
-            this.sourceSubnetworkIpRangesToNat = Objects.requireNonNull(sourceSubnetworkIpRangesToNat);
+            $.sourceSubnetworkIpRangesToNat = sourceSubnetworkIpRangesToNat;
             return this;
         }
+
         public Builder subnetworks(List<RouterNatSubnetworkToNatResponse> subnetworks) {
-            this.subnetworks = Objects.requireNonNull(subnetworks);
+            $.subnetworks = subnetworks;
             return this;
         }
+
         public Builder subnetworks(RouterNatSubnetworkToNatResponse... subnetworks) {
             return subnetworks(List.of(subnetworks));
         }
+
         public Builder tcpEstablishedIdleTimeoutSec(Integer tcpEstablishedIdleTimeoutSec) {
-            this.tcpEstablishedIdleTimeoutSec = Objects.requireNonNull(tcpEstablishedIdleTimeoutSec);
+            $.tcpEstablishedIdleTimeoutSec = tcpEstablishedIdleTimeoutSec;
             return this;
         }
+
         public Builder tcpTimeWaitTimeoutSec(Integer tcpTimeWaitTimeoutSec) {
-            this.tcpTimeWaitTimeoutSec = Objects.requireNonNull(tcpTimeWaitTimeoutSec);
+            $.tcpTimeWaitTimeoutSec = tcpTimeWaitTimeoutSec;
             return this;
         }
+
         public Builder tcpTransitoryIdleTimeoutSec(Integer tcpTransitoryIdleTimeoutSec) {
-            this.tcpTransitoryIdleTimeoutSec = Objects.requireNonNull(tcpTransitoryIdleTimeoutSec);
+            $.tcpTransitoryIdleTimeoutSec = tcpTransitoryIdleTimeoutSec;
             return this;
         }
+
         public Builder udpIdleTimeoutSec(Integer udpIdleTimeoutSec) {
-            this.udpIdleTimeoutSec = Objects.requireNonNull(udpIdleTimeoutSec);
+            $.udpIdleTimeoutSec = udpIdleTimeoutSec;
             return this;
-        }        public RouterNatResponse build() {
-            return new RouterNatResponse(drainNatIps, enableDynamicPortAllocation, enableEndpointIndependentMapping, icmpIdleTimeoutSec, logConfig, maxPortsPerVm, minPortsPerVm, name, natIpAllocateOption, natIps, rules, sourceSubnetworkIpRangesToNat, subnetworks, tcpEstablishedIdleTimeoutSec, tcpTimeWaitTimeoutSec, tcpTransitoryIdleTimeoutSec, udpIdleTimeoutSec);
+        }
+
+        public RouterNatResponse build() {
+            $.drainNatIps = Objects.requireNonNull($.drainNatIps, "expected parameter 'drainNatIps' to be non-null");
+            $.enableDynamicPortAllocation = Objects.requireNonNull($.enableDynamicPortAllocation, "expected parameter 'enableDynamicPortAllocation' to be non-null");
+            $.enableEndpointIndependentMapping = Objects.requireNonNull($.enableEndpointIndependentMapping, "expected parameter 'enableEndpointIndependentMapping' to be non-null");
+            $.icmpIdleTimeoutSec = Objects.requireNonNull($.icmpIdleTimeoutSec, "expected parameter 'icmpIdleTimeoutSec' to be non-null");
+            $.logConfig = Objects.requireNonNull($.logConfig, "expected parameter 'logConfig' to be non-null");
+            $.maxPortsPerVm = Objects.requireNonNull($.maxPortsPerVm, "expected parameter 'maxPortsPerVm' to be non-null");
+            $.minPortsPerVm = Objects.requireNonNull($.minPortsPerVm, "expected parameter 'minPortsPerVm' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.natIpAllocateOption = Objects.requireNonNull($.natIpAllocateOption, "expected parameter 'natIpAllocateOption' to be non-null");
+            $.natIps = Objects.requireNonNull($.natIps, "expected parameter 'natIps' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            $.sourceSubnetworkIpRangesToNat = Objects.requireNonNull($.sourceSubnetworkIpRangesToNat, "expected parameter 'sourceSubnetworkIpRangesToNat' to be non-null");
+            $.subnetworks = Objects.requireNonNull($.subnetworks, "expected parameter 'subnetworks' to be non-null");
+            $.tcpEstablishedIdleTimeoutSec = Objects.requireNonNull($.tcpEstablishedIdleTimeoutSec, "expected parameter 'tcpEstablishedIdleTimeoutSec' to be non-null");
+            $.tcpTimeWaitTimeoutSec = Objects.requireNonNull($.tcpTimeWaitTimeoutSec, "expected parameter 'tcpTimeWaitTimeoutSec' to be non-null");
+            $.tcpTransitoryIdleTimeoutSec = Objects.requireNonNull($.tcpTransitoryIdleTimeoutSec, "expected parameter 'tcpTransitoryIdleTimeoutSec' to be non-null");
+            $.udpIdleTimeoutSec = Objects.requireNonNull($.udpIdleTimeoutSec, "expected parameter 'udpIdleTimeoutSec' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.hdinsight.inputs;
 import com.pulumi.azurenative.hdinsight.inputs.StorageAccountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="storageaccounts")
-      private final @Nullable Output<List<StorageAccountArgs>> storageaccounts;
+    private @Nullable Output<List<StorageAccountArgs>> storageaccounts;
 
-    public Output<List<StorageAccountArgs>> storageaccounts() {
-        return this.storageaccounts == null ? Codegen.empty() : this.storageaccounts;
+    public Optional<Output<List<StorageAccountArgs>>> storageaccounts() {
+        return Optional.ofNullable(this.storageaccounts);
     }
 
-    public StorageProfileArgs(@Nullable Output<List<StorageAccountArgs>> storageaccounts) {
-        this.storageaccounts = storageaccounts;
-    }
+    private StorageProfileArgs() {}
 
-    private StorageProfileArgs() {
-        this.storageaccounts = Codegen.empty();
+    private StorageProfileArgs(StorageProfileArgs $) {
+        this.storageaccounts = $.storageaccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<StorageAccountArgs>> storageaccounts;
+        private StorageProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageProfileArgs();
         }
 
         public Builder(StorageProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageaccounts = defaults.storageaccounts;
+            $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder storageaccounts(@Nullable Output<List<StorageAccountArgs>> storageaccounts) {
-            this.storageaccounts = storageaccounts;
+            $.storageaccounts = storageaccounts;
             return this;
         }
-        public Builder storageaccounts(@Nullable List<StorageAccountArgs> storageaccounts) {
-            this.storageaccounts = Codegen.ofNullable(storageaccounts);
-            return this;
+
+        public Builder storageaccounts(List<StorageAccountArgs> storageaccounts) {
+            return storageaccounts(Output.of(storageaccounts));
         }
+
         public Builder storageaccounts(StorageAccountArgs... storageaccounts) {
             return storageaccounts(List.of(storageaccounts));
-        }        public StorageProfileArgs build() {
-            return new StorageProfileArgs(storageaccounts);
+        }
+
+        public StorageProfileArgs build() {
+            return $;
         }
     }
+
 }

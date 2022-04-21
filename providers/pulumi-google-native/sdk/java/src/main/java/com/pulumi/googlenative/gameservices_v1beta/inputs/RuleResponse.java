@@ -24,7 +24,7 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -35,7 +35,7 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<ConditionResponse> conditions;
+    private List<ConditionResponse> conditions;
 
     public List<ConditionResponse> conditions() {
         return this.conditions;
@@ -46,7 +46,7 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -57,7 +57,7 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="in", required=true)
-      private final List<String> in;
+    private List<String> in;
 
     public List<String> in() {
         return this.in;
@@ -68,7 +68,7 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logConfig", required=true)
-      private final List<LogConfigResponse> logConfig;
+    private List<LogConfigResponse> logConfig;
 
     public List<LogConfigResponse> logConfig() {
         return this.logConfig;
@@ -79,7 +79,7 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="notIn", required=true)
-      private final List<String> notIn;
+    private List<String> notIn;
 
     public List<String> notIn() {
         return this.notIn;
@@ -90,115 +90,107 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="permissions", required=true)
-      private final List<String> permissions;
+    private List<String> permissions;
 
     public List<String> permissions() {
         return this.permissions;
     }
 
-    public RuleResponse(
-        String action,
-        List<ConditionResponse> conditions,
-        String description,
-        List<String> in,
-        List<LogConfigResponse> logConfig,
-        List<String> notIn,
-        List<String> permissions) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.in = Objects.requireNonNull(in, "expected parameter 'in' to be non-null");
-        this.logConfig = Objects.requireNonNull(logConfig, "expected parameter 'logConfig' to be non-null");
-        this.notIn = Objects.requireNonNull(notIn, "expected parameter 'notIn' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-    }
+    private RuleResponse() {}
 
-    private RuleResponse() {
-        this.action = null;
-        this.conditions = List.of();
-        this.description = null;
-        this.in = List.of();
-        this.logConfig = List.of();
-        this.notIn = List.of();
-        this.permissions = List.of();
+    private RuleResponse(RuleResponse $) {
+        this.action = $.action;
+        this.conditions = $.conditions;
+        this.description = $.description;
+        this.in = $.in;
+        this.logConfig = $.logConfig;
+        this.notIn = $.notIn;
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private List<ConditionResponse> conditions;
-        private String description;
-        private List<String> in;
-        private List<LogConfigResponse> logConfig;
-        private List<String> notIn;
-        private List<String> permissions;
+        private RuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleResponse();
         }
 
         public Builder(RuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.conditions = defaults.conditions;
-    	      this.description = defaults.description;
-    	      this.in = defaults.in;
-    	      this.logConfig = defaults.logConfig;
-    	      this.notIn = defaults.notIn;
-    	      this.permissions = defaults.permissions;
+            $ = new RuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder conditions(List<ConditionResponse> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder in(List<String> in) {
-            this.in = Objects.requireNonNull(in);
+            $.in = in;
             return this;
         }
+
         public Builder in(String... in) {
             return in(List.of(in));
         }
+
         public Builder logConfig(List<LogConfigResponse> logConfig) {
-            this.logConfig = Objects.requireNonNull(logConfig);
+            $.logConfig = logConfig;
             return this;
         }
+
         public Builder logConfig(LogConfigResponse... logConfig) {
             return logConfig(List.of(logConfig));
         }
+
         public Builder notIn(List<String> notIn) {
-            this.notIn = Objects.requireNonNull(notIn);
+            $.notIn = notIn;
             return this;
         }
+
         public Builder notIn(String... notIn) {
             return notIn(List.of(notIn));
         }
+
         public Builder permissions(List<String> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
-        }        public RuleResponse build() {
-            return new RuleResponse(action, conditions, description, in, logConfig, notIn, permissions);
+        }
+
+        public RuleResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.in = Objects.requireNonNull($.in, "expected parameter 'in' to be non-null");
+            $.logConfig = Objects.requireNonNull($.logConfig, "expected parameter 'logConfig' to be non-null");
+            $.notIn = Objects.requireNonNull($.notIn, "expected parameter 'notIn' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.IngressBackendArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.IngressRuleArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.IngressTLSArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backend")
-      private final @Nullable Output<IngressBackendArgs> backend;
+    private @Nullable Output<IngressBackendArgs> backend;
 
-    public Output<IngressBackendArgs> backend() {
-        return this.backend == null ? Codegen.empty() : this.backend;
+    public Optional<Output<IngressBackendArgs>> backend() {
+        return Optional.ofNullable(this.backend);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingressClassName")
-      private final @Nullable Output<String> ingressClassName;
+    private @Nullable Output<String> ingressClassName;
 
-    public Output<String> ingressClassName() {
-        return this.ingressClassName == null ? Codegen.empty() : this.ingressClassName;
+    public Optional<Output<String>> ingressClassName() {
+        return Optional.ofNullable(this.ingressClassName);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<IngressRuleArgs>> rules;
+    private @Nullable Output<List<IngressRuleArgs>> rules;
 
-    public Output<List<IngressRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<IngressRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -61,95 +61,86 @@ public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tls")
-      private final @Nullable Output<List<IngressTLSArgs>> tls;
+    private @Nullable Output<List<IngressTLSArgs>> tls;
 
-    public Output<List<IngressTLSArgs>> tls() {
-        return this.tls == null ? Codegen.empty() : this.tls;
+    public Optional<Output<List<IngressTLSArgs>>> tls() {
+        return Optional.ofNullable(this.tls);
     }
 
-    public IngressSpecArgs(
-        @Nullable Output<IngressBackendArgs> backend,
-        @Nullable Output<String> ingressClassName,
-        @Nullable Output<List<IngressRuleArgs>> rules,
-        @Nullable Output<List<IngressTLSArgs>> tls) {
-        this.backend = backend;
-        this.ingressClassName = ingressClassName;
-        this.rules = rules;
-        this.tls = tls;
-    }
+    private IngressSpecArgs() {}
 
-    private IngressSpecArgs() {
-        this.backend = Codegen.empty();
-        this.ingressClassName = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.tls = Codegen.empty();
+    private IngressSpecArgs(IngressSpecArgs $) {
+        this.backend = $.backend;
+        this.ingressClassName = $.ingressClassName;
+        this.rules = $.rules;
+        this.tls = $.tls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IngressBackendArgs> backend;
-        private @Nullable Output<String> ingressClassName;
-        private @Nullable Output<List<IngressRuleArgs>> rules;
-        private @Nullable Output<List<IngressTLSArgs>> tls;
+        private IngressSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressSpecArgs();
         }
 
         public Builder(IngressSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backend = defaults.backend;
-    	      this.ingressClassName = defaults.ingressClassName;
-    	      this.rules = defaults.rules;
-    	      this.tls = defaults.tls;
+            $ = new IngressSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backend(@Nullable Output<IngressBackendArgs> backend) {
-            this.backend = backend;
+            $.backend = backend;
             return this;
         }
-        public Builder backend(@Nullable IngressBackendArgs backend) {
-            this.backend = Codegen.ofNullable(backend);
-            return this;
+
+        public Builder backend(IngressBackendArgs backend) {
+            return backend(Output.of(backend));
         }
+
         public Builder ingressClassName(@Nullable Output<String> ingressClassName) {
-            this.ingressClassName = ingressClassName;
+            $.ingressClassName = ingressClassName;
             return this;
         }
-        public Builder ingressClassName(@Nullable String ingressClassName) {
-            this.ingressClassName = Codegen.ofNullable(ingressClassName);
-            return this;
+
+        public Builder ingressClassName(String ingressClassName) {
+            return ingressClassName(Output.of(ingressClassName));
         }
+
         public Builder rules(@Nullable Output<List<IngressRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<IngressRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<IngressRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(IngressRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder tls(@Nullable Output<List<IngressTLSArgs>> tls) {
-            this.tls = tls;
+            $.tls = tls;
             return this;
         }
-        public Builder tls(@Nullable List<IngressTLSArgs> tls) {
-            this.tls = Codegen.ofNullable(tls);
-            return this;
+
+        public Builder tls(List<IngressTLSArgs> tls) {
+            return tls(Output.of(tls));
         }
+
         public Builder tls(IngressTLSArgs... tls) {
             return tls(List.of(tls));
-        }        public IngressSpecArgs build() {
-            return new IngressSpecArgs(backend, ingressClassName, rules, tls);
+        }
+
+        public IngressSpecArgs build() {
+            return $;
         }
     }
+
 }

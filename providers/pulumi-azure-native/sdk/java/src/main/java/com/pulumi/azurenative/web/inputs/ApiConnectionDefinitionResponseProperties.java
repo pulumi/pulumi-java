@@ -20,10 +20,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     public static final ApiConnectionDefinitionResponseProperties Empty = new ApiConnectionDefinitionResponseProperties();
 
     @Import(name="api")
-      private final @Nullable ApiReferenceResponse api;
+    private @Nullable ApiReferenceResponse api;
 
     public Optional<ApiReferenceResponse> api() {
-        return this.api == null ? Optional.empty() : Optional.ofNullable(this.api);
+        return Optional.ofNullable(this.api);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
      * 
      */
     @Import(name="changedTime")
-      private final @Nullable String changedTime;
+    private @Nullable String changedTime;
 
     public Optional<String> changedTime() {
-        return this.changedTime == null ? Optional.empty() : Optional.ofNullable(this.changedTime);
+        return Optional.ofNullable(this.changedTime);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable String createdTime;
+    private @Nullable String createdTime;
 
     public Optional<String> createdTime() {
-        return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
      * 
      */
     @Import(name="customParameterValues")
-      private final @Nullable Map<String,String> customParameterValues;
+    private @Nullable Map<String,String> customParameterValues;
 
-    public Map<String,String> customParameterValues() {
-        return this.customParameterValues == null ? Map.of() : this.customParameterValues;
+    public Optional<Map<String,String>> customParameterValues() {
+        return Optional.ofNullable(this.customParameterValues);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
      * 
      */
     @Import(name="nonSecretParameterValues")
-      private final @Nullable Map<String,String> nonSecretParameterValues;
+    private @Nullable Map<String,String> nonSecretParameterValues;
 
-    public Map<String,String> nonSecretParameterValues() {
-        return this.nonSecretParameterValues == null ? Map.of() : this.nonSecretParameterValues;
+    public Optional<Map<String,String>> nonSecretParameterValues() {
+        return Optional.ofNullable(this.nonSecretParameterValues);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
      * 
      */
     @Import(name="parameterValues")
-      private final @Nullable Map<String,String> parameterValues;
+    private @Nullable Map<String,String> parameterValues;
 
-    public Map<String,String> parameterValues() {
-        return this.parameterValues == null ? Map.of() : this.parameterValues;
+    public Optional<Map<String,String>> parameterValues() {
+        return Optional.ofNullable(this.parameterValues);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<ConnectionStatusDefinitionResponse> statuses;
+    private @Nullable List<ConnectionStatusDefinitionResponse> statuses;
 
-    public List<ConnectionStatusDefinitionResponse> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<ConnectionStatusDefinitionResponse>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -108,124 +108,100 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
      * 
      */
     @Import(name="testLinks")
-      private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;
+    private @Nullable List<ApiConnectionTestLinkResponse> testLinks;
 
-    public List<ApiConnectionTestLinkResponse> testLinks() {
-        return this.testLinks == null ? List.of() : this.testLinks;
+    public Optional<List<ApiConnectionTestLinkResponse>> testLinks() {
+        return Optional.ofNullable(this.testLinks);
     }
 
-    public ApiConnectionDefinitionResponseProperties(
-        @Nullable ApiReferenceResponse api,
-        @Nullable String changedTime,
-        @Nullable String createdTime,
-        @Nullable Map<String,String> customParameterValues,
-        @Nullable String displayName,
-        @Nullable Map<String,String> nonSecretParameterValues,
-        @Nullable Map<String,String> parameterValues,
-        @Nullable List<ConnectionStatusDefinitionResponse> statuses,
-        @Nullable List<ApiConnectionTestLinkResponse> testLinks) {
-        this.api = api;
-        this.changedTime = changedTime;
-        this.createdTime = createdTime;
-        this.customParameterValues = customParameterValues;
-        this.displayName = displayName;
-        this.nonSecretParameterValues = nonSecretParameterValues;
-        this.parameterValues = parameterValues;
-        this.statuses = statuses;
-        this.testLinks = testLinks;
-    }
+    private ApiConnectionDefinitionResponseProperties() {}
 
-    private ApiConnectionDefinitionResponseProperties() {
-        this.api = null;
-        this.changedTime = null;
-        this.createdTime = null;
-        this.customParameterValues = Map.of();
-        this.displayName = null;
-        this.nonSecretParameterValues = Map.of();
-        this.parameterValues = Map.of();
-        this.statuses = List.of();
-        this.testLinks = List.of();
+    private ApiConnectionDefinitionResponseProperties(ApiConnectionDefinitionResponseProperties $) {
+        this.api = $.api;
+        this.changedTime = $.changedTime;
+        this.createdTime = $.createdTime;
+        this.customParameterValues = $.customParameterValues;
+        this.displayName = $.displayName;
+        this.nonSecretParameterValues = $.nonSecretParameterValues;
+        this.parameterValues = $.parameterValues;
+        this.statuses = $.statuses;
+        this.testLinks = $.testLinks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConnectionDefinitionResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ApiReferenceResponse api;
-        private @Nullable String changedTime;
-        private @Nullable String createdTime;
-        private @Nullable Map<String,String> customParameterValues;
-        private @Nullable String displayName;
-        private @Nullable Map<String,String> nonSecretParameterValues;
-        private @Nullable Map<String,String> parameterValues;
-        private @Nullable List<ConnectionStatusDefinitionResponse> statuses;
-        private @Nullable List<ApiConnectionTestLinkResponse> testLinks;
+        private ApiConnectionDefinitionResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConnectionDefinitionResponseProperties();
         }
 
         public Builder(ApiConnectionDefinitionResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.api = defaults.api;
-    	      this.changedTime = defaults.changedTime;
-    	      this.createdTime = defaults.createdTime;
-    	      this.customParameterValues = defaults.customParameterValues;
-    	      this.displayName = defaults.displayName;
-    	      this.nonSecretParameterValues = defaults.nonSecretParameterValues;
-    	      this.parameterValues = defaults.parameterValues;
-    	      this.statuses = defaults.statuses;
-    	      this.testLinks = defaults.testLinks;
+            $ = new ApiConnectionDefinitionResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder api(@Nullable ApiReferenceResponse api) {
-            this.api = api;
+            $.api = api;
             return this;
         }
+
         public Builder changedTime(@Nullable String changedTime) {
-            this.changedTime = changedTime;
+            $.changedTime = changedTime;
             return this;
         }
+
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder customParameterValues(@Nullable Map<String,String> customParameterValues) {
-            this.customParameterValues = customParameterValues;
+            $.customParameterValues = customParameterValues;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder nonSecretParameterValues(@Nullable Map<String,String> nonSecretParameterValues) {
-            this.nonSecretParameterValues = nonSecretParameterValues;
+            $.nonSecretParameterValues = nonSecretParameterValues;
             return this;
         }
+
         public Builder parameterValues(@Nullable Map<String,String> parameterValues) {
-            this.parameterValues = parameterValues;
+            $.parameterValues = parameterValues;
             return this;
         }
+
         public Builder statuses(@Nullable List<ConnectionStatusDefinitionResponse> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(ConnectionStatusDefinitionResponse... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder testLinks(@Nullable List<ApiConnectionTestLinkResponse> testLinks) {
-            this.testLinks = testLinks;
+            $.testLinks = testLinks;
             return this;
         }
+
         public Builder testLinks(ApiConnectionTestLinkResponse... testLinks) {
             return testLinks(List.of(testLinks));
-        }        public ApiConnectionDefinitionResponseProperties build() {
-            return new ApiConnectionDefinitionResponseProperties(api, changedTime, createdTime, customParameterValues, displayName, nonSecretParameterValues, parameterValues, statuses, testLinks);
+        }
+
+        public ApiConnectionDefinitionResponseProperties build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.healthlake.inputs;
 import com.pulumi.awsnative.healthlake.enums.FHIRDatastorePreloadDataConfigPreloadDataType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class FHIRDatastorePreloadDataConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="preloadDataType", required=true)
-      private final Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType;
+    private Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType;
 
     public Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType() {
         return this.preloadDataType;
     }
 
-    public FHIRDatastorePreloadDataConfigArgs(Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType) {
-        this.preloadDataType = Objects.requireNonNull(preloadDataType, "expected parameter 'preloadDataType' to be non-null");
-    }
+    private FHIRDatastorePreloadDataConfigArgs() {}
 
-    private FHIRDatastorePreloadDataConfigArgs() {
-        this.preloadDataType = Codegen.empty();
+    private FHIRDatastorePreloadDataConfigArgs(FHIRDatastorePreloadDataConfigArgs $) {
+        this.preloadDataType = $.preloadDataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FHIRDatastorePreloadDataConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType;
+        private FHIRDatastorePreloadDataConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FHIRDatastorePreloadDataConfigArgs();
         }
 
         public Builder(FHIRDatastorePreloadDataConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preloadDataType = defaults.preloadDataType;
+            $ = new FHIRDatastorePreloadDataConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preloadDataType(Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType) {
-            this.preloadDataType = Objects.requireNonNull(preloadDataType);
+            $.preloadDataType = preloadDataType;
             return this;
         }
+
         public Builder preloadDataType(FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
-            this.preloadDataType = Output.of(Objects.requireNonNull(preloadDataType));
-            return this;
-        }        public FHIRDatastorePreloadDataConfigArgs build() {
-            return new FHIRDatastorePreloadDataConfigArgs(preloadDataType);
+            return preloadDataType(Output.of(preloadDataType));
+        }
+
+        public FHIRDatastorePreloadDataConfigArgs build() {
+            $.preloadDataType = Objects.requireNonNull($.preloadDataType, "expected parameter 'preloadDataType' to be non-null");
+            return $;
         }
     }
+
 }

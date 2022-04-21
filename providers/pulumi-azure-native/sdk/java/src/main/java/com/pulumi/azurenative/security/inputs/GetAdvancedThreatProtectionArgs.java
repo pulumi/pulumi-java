@@ -17,7 +17,7 @@ public final class GetAdvancedThreatProtectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -28,55 +28,52 @@ public final class GetAdvancedThreatProtectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="settingName", required=true)
-      private final String settingName;
+    private String settingName;
 
     public String settingName() {
         return this.settingName;
     }
 
-    public GetAdvancedThreatProtectionArgs(
-        String resourceId,
-        String settingName) {
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.settingName = Objects.requireNonNull(settingName, "expected parameter 'settingName' to be non-null");
-    }
+    private GetAdvancedThreatProtectionArgs() {}
 
-    private GetAdvancedThreatProtectionArgs() {
-        this.resourceId = null;
-        this.settingName = null;
+    private GetAdvancedThreatProtectionArgs(GetAdvancedThreatProtectionArgs $) {
+        this.resourceId = $.resourceId;
+        this.settingName = $.settingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAdvancedThreatProtectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceId;
-        private String settingName;
+        private GetAdvancedThreatProtectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAdvancedThreatProtectionArgs();
         }
 
         public Builder(GetAdvancedThreatProtectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.settingName = defaults.settingName;
+            $ = new GetAdvancedThreatProtectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder settingName(String settingName) {
-            this.settingName = Objects.requireNonNull(settingName);
+            $.settingName = settingName;
             return this;
-        }        public GetAdvancedThreatProtectionArgs build() {
-            return new GetAdvancedThreatProtectionArgs(resourceId, settingName);
+        }
+
+        public GetAdvancedThreatProtectionArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.settingName = Objects.requireNonNull($.settingName, "expected parameter 'settingName' to be non-null");
+            return $;
         }
     }
+
 }

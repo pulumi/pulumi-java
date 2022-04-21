@@ -5,7 +5,6 @@ package com.pulumi.azurenative.managedservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class RegistrationAssignmentPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="registrationDefinitionId", required=true)
-      private final Output<String> registrationDefinitionId;
+    private Output<String> registrationDefinitionId;
 
     public Output<String> registrationDefinitionId() {
         return this.registrationDefinitionId;
     }
 
-    public RegistrationAssignmentPropertiesArgs(Output<String> registrationDefinitionId) {
-        this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId, "expected parameter 'registrationDefinitionId' to be non-null");
-    }
+    private RegistrationAssignmentPropertiesArgs() {}
 
-    private RegistrationAssignmentPropertiesArgs() {
-        this.registrationDefinitionId = Codegen.empty();
+    private RegistrationAssignmentPropertiesArgs(RegistrationAssignmentPropertiesArgs $) {
+        this.registrationDefinitionId = $.registrationDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationAssignmentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> registrationDefinitionId;
+        private RegistrationAssignmentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationAssignmentPropertiesArgs();
         }
 
         public Builder(RegistrationAssignmentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registrationDefinitionId = defaults.registrationDefinitionId;
+            $ = new RegistrationAssignmentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registrationDefinitionId(Output<String> registrationDefinitionId) {
-            this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
+            $.registrationDefinitionId = registrationDefinitionId;
             return this;
         }
+
         public Builder registrationDefinitionId(String registrationDefinitionId) {
-            this.registrationDefinitionId = Output.of(Objects.requireNonNull(registrationDefinitionId));
-            return this;
-        }        public RegistrationAssignmentPropertiesArgs build() {
-            return new RegistrationAssignmentPropertiesArgs(registrationDefinitionId);
+            return registrationDefinitionId(Output.of(registrationDefinitionId));
+        }
+
+        public RegistrationAssignmentPropertiesArgs build() {
+            $.registrationDefinitionId = Objects.requireNonNull($.registrationDefinitionId, "expected parameter 'registrationDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

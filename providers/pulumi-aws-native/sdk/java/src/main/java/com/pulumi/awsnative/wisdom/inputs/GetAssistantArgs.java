@@ -13,45 +13,45 @@ public final class GetAssistantArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAssistantArgs Empty = new GetAssistantArgs();
 
     @Import(name="assistantId", required=true)
-      private final String assistantId;
+    private String assistantId;
 
     public String assistantId() {
         return this.assistantId;
     }
 
-    public GetAssistantArgs(String assistantId) {
-        this.assistantId = Objects.requireNonNull(assistantId, "expected parameter 'assistantId' to be non-null");
-    }
+    private GetAssistantArgs() {}
 
-    private GetAssistantArgs() {
-        this.assistantId = null;
+    private GetAssistantArgs(GetAssistantArgs $) {
+        this.assistantId = $.assistantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssistantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assistantId;
+        private GetAssistantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssistantArgs();
         }
 
         public Builder(GetAssistantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assistantId = defaults.assistantId;
+            $ = new GetAssistantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assistantId(String assistantId) {
-            this.assistantId = Objects.requireNonNull(assistantId);
+            $.assistantId = assistantId;
             return this;
-        }        public GetAssistantArgs build() {
-            return new GetAssistantArgs(assistantId);
+        }
+
+        public GetAssistantArgs build() {
+            $.assistantId = Objects.requireNonNull($.assistantId, "expected parameter 'assistantId' to be non-null");
+            return $;
         }
     }
+
 }

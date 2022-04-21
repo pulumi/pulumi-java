@@ -22,7 +22,7 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="externalIp", required=true)
-      private final String externalIp;
+    private String externalIp;
 
     public String externalIp() {
         return this.externalIp;
@@ -44,7 +44,7 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="interface", required=true)
-      private final String interface_;
+    private String interface_;
 
     public String interface_() {
         return this.interface_;
@@ -55,7 +55,7 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="internalIp", required=true)
-      private final String internalIp;
+    private String internalIp;
 
     public String internalIp() {
         return this.internalIp;
@@ -66,7 +66,7 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="networkTags", required=true)
-      private final List<String> networkTags;
+    private List<String> networkTags;
 
     public List<String> networkTags() {
         return this.networkTags;
@@ -77,7 +77,7 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="networkUri", required=true)
-      private final String networkUri;
+    private String networkUri;
 
     public String networkUri() {
         return this.networkUri;
@@ -88,7 +88,7 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
@@ -99,112 +99,98 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public InstanceInfoResponse(
-        String displayName,
-        String externalIp,
-        String interface_,
-        String internalIp,
-        List<String> networkTags,
-        String networkUri,
-        String serviceAccount,
-        String uri) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.externalIp = Objects.requireNonNull(externalIp, "expected parameter 'externalIp' to be non-null");
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
-        this.internalIp = Objects.requireNonNull(internalIp, "expected parameter 'internalIp' to be non-null");
-        this.networkTags = Objects.requireNonNull(networkTags, "expected parameter 'networkTags' to be non-null");
-        this.networkUri = Objects.requireNonNull(networkUri, "expected parameter 'networkUri' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private InstanceInfoResponse() {}
 
-    private InstanceInfoResponse() {
-        this.displayName = null;
-        this.externalIp = null;
-        this.interface_ = null;
-        this.internalIp = null;
-        this.networkTags = List.of();
-        this.networkUri = null;
-        this.serviceAccount = null;
-        this.uri = null;
+    private InstanceInfoResponse(InstanceInfoResponse $) {
+        this.displayName = $.displayName;
+        this.externalIp = $.externalIp;
+        this.interface_ = $.interface_;
+        this.internalIp = $.internalIp;
+        this.networkTags = $.networkTags;
+        this.networkUri = $.networkUri;
+        this.serviceAccount = $.serviceAccount;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String externalIp;
-        private String interface_;
-        private String internalIp;
-        private List<String> networkTags;
-        private String networkUri;
-        private String serviceAccount;
-        private String uri;
+        private InstanceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceInfoResponse();
         }
 
         public Builder(InstanceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.externalIp = defaults.externalIp;
-    	      this.interface_ = defaults.interface_;
-    	      this.internalIp = defaults.internalIp;
-    	      this.networkTags = defaults.networkTags;
-    	      this.networkUri = defaults.networkUri;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.uri = defaults.uri;
+            $ = new InstanceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder externalIp(String externalIp) {
-            this.externalIp = Objects.requireNonNull(externalIp);
+            $.externalIp = externalIp;
             return this;
         }
+
         public Builder interface_(String interface_) {
-            this.interface_ = Objects.requireNonNull(interface_);
+            $.interface_ = interface_;
             return this;
         }
+
         public Builder internalIp(String internalIp) {
-            this.internalIp = Objects.requireNonNull(internalIp);
+            $.internalIp = internalIp;
             return this;
         }
+
         public Builder networkTags(List<String> networkTags) {
-            this.networkTags = Objects.requireNonNull(networkTags);
+            $.networkTags = networkTags;
             return this;
         }
+
         public Builder networkTags(String... networkTags) {
             return networkTags(List.of(networkTags));
         }
+
         public Builder networkUri(String networkUri) {
-            this.networkUri = Objects.requireNonNull(networkUri);
+            $.networkUri = networkUri;
             return this;
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public InstanceInfoResponse build() {
-            return new InstanceInfoResponse(displayName, externalIp, interface_, internalIp, networkTags, networkUri, serviceAccount, uri);
+        }
+
+        public InstanceInfoResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.externalIp = Objects.requireNonNull($.externalIp, "expected parameter 'externalIp' to be non-null");
+            $.interface_ = Objects.requireNonNull($.interface_, "expected parameter 'interface' to be non-null");
+            $.internalIp = Objects.requireNonNull($.internalIp, "expected parameter 'internalIp' to be non-null");
+            $.networkTags = Objects.requireNonNull($.networkTags, "expected parameter 'networkTags' to be non-null");
+            $.networkUri = Objects.requireNonNull($.networkUri, "expected parameter 'networkUri' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class DatasetCsvOptionsArgs extends com.pulumi.resources.ResourceAr
     public static final DatasetCsvOptionsArgs Empty = new DatasetCsvOptionsArgs();
 
     @Import(name="delimiter")
-      private final @Nullable Output<String> delimiter;
+    private @Nullable Output<String> delimiter;
 
-    public Output<String> delimiter() {
-        return this.delimiter == null ? Codegen.empty() : this.delimiter;
+    public Optional<Output<String>> delimiter() {
+        return Optional.ofNullable(this.delimiter);
     }
 
     @Import(name="headerRow")
-      private final @Nullable Output<Boolean> headerRow;
+    private @Nullable Output<Boolean> headerRow;
 
-    public Output<Boolean> headerRow() {
-        return this.headerRow == null ? Codegen.empty() : this.headerRow;
+    public Optional<Output<Boolean>> headerRow() {
+        return Optional.ofNullable(this.headerRow);
     }
 
-    public DatasetCsvOptionsArgs(
-        @Nullable Output<String> delimiter,
-        @Nullable Output<Boolean> headerRow) {
-        this.delimiter = delimiter;
-        this.headerRow = headerRow;
-    }
+    private DatasetCsvOptionsArgs() {}
 
-    private DatasetCsvOptionsArgs() {
-        this.delimiter = Codegen.empty();
-        this.headerRow = Codegen.empty();
+    private DatasetCsvOptionsArgs(DatasetCsvOptionsArgs $) {
+        this.delimiter = $.delimiter;
+        this.headerRow = $.headerRow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetCsvOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> delimiter;
-        private @Nullable Output<Boolean> headerRow;
+        private DatasetCsvOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetCsvOptionsArgs();
         }
 
         public Builder(DatasetCsvOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delimiter = defaults.delimiter;
-    	      this.headerRow = defaults.headerRow;
+            $ = new DatasetCsvOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delimiter(@Nullable Output<String> delimiter) {
-            this.delimiter = delimiter;
+            $.delimiter = delimiter;
             return this;
         }
-        public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Codegen.ofNullable(delimiter);
-            return this;
+
+        public Builder delimiter(String delimiter) {
+            return delimiter(Output.of(delimiter));
         }
+
         public Builder headerRow(@Nullable Output<Boolean> headerRow) {
-            this.headerRow = headerRow;
+            $.headerRow = headerRow;
             return this;
         }
-        public Builder headerRow(@Nullable Boolean headerRow) {
-            this.headerRow = Codegen.ofNullable(headerRow);
-            return this;
-        }        public DatasetCsvOptionsArgs build() {
-            return new DatasetCsvOptionsArgs(delimiter, headerRow);
+
+        public Builder headerRow(Boolean headerRow) {
+            return headerRow(Output.of(headerRow));
+        }
+
+        public DatasetCsvOptionsArgs build() {
+            return $;
         }
     }
+
 }

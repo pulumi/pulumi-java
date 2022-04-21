@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.enums.ServiceAwsVpcConfigurationAssignPublicIp;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,96 +18,90 @@ public final class ServiceAwsVpcConfigurationArgs extends com.pulumi.resources.R
     public static final ServiceAwsVpcConfigurationArgs Empty = new ServiceAwsVpcConfigurationArgs();
 
     @Import(name="assignPublicIp")
-      private final @Nullable Output<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp;
+    private @Nullable Output<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp;
 
-    public Output<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp() {
-        return this.assignPublicIp == null ? Codegen.empty() : this.assignPublicIp;
+    public Optional<Output<ServiceAwsVpcConfigurationAssignPublicIp>> assignPublicIp() {
+        return Optional.ofNullable(this.assignPublicIp);
     }
 
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     @Import(name="subnets")
-      private final @Nullable Output<List<String>> subnets;
+    private @Nullable Output<List<String>> subnets;
 
-    public Output<List<String>> subnets() {
-        return this.subnets == null ? Codegen.empty() : this.subnets;
+    public Optional<Output<List<String>>> subnets() {
+        return Optional.ofNullable(this.subnets);
     }
 
-    public ServiceAwsVpcConfigurationArgs(
-        @Nullable Output<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<List<String>> subnets) {
-        this.assignPublicIp = assignPublicIp;
-        this.securityGroups = securityGroups;
-        this.subnets = subnets;
-    }
+    private ServiceAwsVpcConfigurationArgs() {}
 
-    private ServiceAwsVpcConfigurationArgs() {
-        this.assignPublicIp = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.subnets = Codegen.empty();
+    private ServiceAwsVpcConfigurationArgs(ServiceAwsVpcConfigurationArgs $) {
+        this.assignPublicIp = $.assignPublicIp;
+        this.securityGroups = $.securityGroups;
+        this.subnets = $.subnets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAwsVpcConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<List<String>> subnets;
+        private ServiceAwsVpcConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAwsVpcConfigurationArgs();
         }
 
         public Builder(ServiceAwsVpcConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignPublicIp = defaults.assignPublicIp;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnets = defaults.subnets;
+            $ = new ServiceAwsVpcConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignPublicIp(@Nullable Output<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp) {
-            this.assignPublicIp = assignPublicIp;
+            $.assignPublicIp = assignPublicIp;
             return this;
         }
-        public Builder assignPublicIp(@Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp) {
-            this.assignPublicIp = Codegen.ofNullable(assignPublicIp);
-            return this;
+
+        public Builder assignPublicIp(ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp) {
+            return assignPublicIp(Output.of(assignPublicIp));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnets(@Nullable Output<List<String>> subnets) {
-            this.subnets = subnets;
+            $.subnets = subnets;
             return this;
         }
-        public Builder subnets(@Nullable List<String> subnets) {
-            this.subnets = Codegen.ofNullable(subnets);
-            return this;
+
+        public Builder subnets(List<String> subnets) {
+            return subnets(Output.of(subnets));
         }
+
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
-        }        public ServiceAwsVpcConfigurationArgs build() {
-            return new ServiceAwsVpcConfigurationArgs(assignPublicIp, securityGroups, subnets);
+        }
+
+        public ServiceAwsVpcConfigurationArgs build() {
+            return $;
         }
     }
+
 }

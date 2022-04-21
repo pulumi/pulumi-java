@@ -6,10 +6,10 @@ package com.pulumi.azurenative.devices.inputs;
 import com.pulumi.azurenative.devices.inputs.FeedbackPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="defaultTtlAsIso8601")
-      private final @Nullable Output<String> defaultTtlAsIso8601;
+    private @Nullable Output<String> defaultTtlAsIso8601;
 
-    public Output<String> defaultTtlAsIso8601() {
-        return this.defaultTtlAsIso8601 == null ? Codegen.empty() : this.defaultTtlAsIso8601;
+    public Optional<Output<String>> defaultTtlAsIso8601() {
+        return Optional.ofNullable(this.defaultTtlAsIso8601);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="feedback")
-      private final @Nullable Output<FeedbackPropertiesArgs> feedback;
+    private @Nullable Output<FeedbackPropertiesArgs> feedback;
 
-    public Output<FeedbackPropertiesArgs> feedback() {
-        return this.feedback == null ? Codegen.empty() : this.feedback;
+    public Optional<Output<FeedbackPropertiesArgs>> feedback() {
+        return Optional.ofNullable(this.feedback);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maxDeliveryCount")
-      private final @Nullable Output<Integer> maxDeliveryCount;
+    private @Nullable Output<Integer> maxDeliveryCount;
 
-    public Output<Integer> maxDeliveryCount() {
-        return this.maxDeliveryCount == null ? Codegen.empty() : this.maxDeliveryCount;
+    public Optional<Output<Integer>> maxDeliveryCount() {
+        return Optional.ofNullable(this.maxDeliveryCount);
     }
 
-    public CloudToDevicePropertiesArgs(
-        @Nullable Output<String> defaultTtlAsIso8601,
-        @Nullable Output<FeedbackPropertiesArgs> feedback,
-        @Nullable Output<Integer> maxDeliveryCount) {
-        this.defaultTtlAsIso8601 = defaultTtlAsIso8601;
-        this.feedback = feedback;
-        this.maxDeliveryCount = maxDeliveryCount;
-    }
+    private CloudToDevicePropertiesArgs() {}
 
-    private CloudToDevicePropertiesArgs() {
-        this.defaultTtlAsIso8601 = Codegen.empty();
-        this.feedback = Codegen.empty();
-        this.maxDeliveryCount = Codegen.empty();
+    private CloudToDevicePropertiesArgs(CloudToDevicePropertiesArgs $) {
+        this.defaultTtlAsIso8601 = $.defaultTtlAsIso8601;
+        this.feedback = $.feedback;
+        this.maxDeliveryCount = $.maxDeliveryCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudToDevicePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultTtlAsIso8601;
-        private @Nullable Output<FeedbackPropertiesArgs> feedback;
-        private @Nullable Output<Integer> maxDeliveryCount;
+        private CloudToDevicePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudToDevicePropertiesArgs();
         }
 
         public Builder(CloudToDevicePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultTtlAsIso8601 = defaults.defaultTtlAsIso8601;
-    	      this.feedback = defaults.feedback;
-    	      this.maxDeliveryCount = defaults.maxDeliveryCount;
+            $ = new CloudToDevicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultTtlAsIso8601(@Nullable Output<String> defaultTtlAsIso8601) {
-            this.defaultTtlAsIso8601 = defaultTtlAsIso8601;
+            $.defaultTtlAsIso8601 = defaultTtlAsIso8601;
             return this;
         }
-        public Builder defaultTtlAsIso8601(@Nullable String defaultTtlAsIso8601) {
-            this.defaultTtlAsIso8601 = Codegen.ofNullable(defaultTtlAsIso8601);
-            return this;
+
+        public Builder defaultTtlAsIso8601(String defaultTtlAsIso8601) {
+            return defaultTtlAsIso8601(Output.of(defaultTtlAsIso8601));
         }
+
         public Builder feedback(@Nullable Output<FeedbackPropertiesArgs> feedback) {
-            this.feedback = feedback;
+            $.feedback = feedback;
             return this;
         }
-        public Builder feedback(@Nullable FeedbackPropertiesArgs feedback) {
-            this.feedback = Codegen.ofNullable(feedback);
-            return this;
+
+        public Builder feedback(FeedbackPropertiesArgs feedback) {
+            return feedback(Output.of(feedback));
         }
+
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
-            this.maxDeliveryCount = maxDeliveryCount;
+            $.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-        public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
-            this.maxDeliveryCount = Codegen.ofNullable(maxDeliveryCount);
-            return this;
-        }        public CloudToDevicePropertiesArgs build() {
-            return new CloudToDevicePropertiesArgs(defaultTtlAsIso8601, feedback, maxDeliveryCount);
+
+        public Builder maxDeliveryCount(Integer maxDeliveryCount) {
+            return maxDeliveryCount(Output.of(maxDeliveryCount));
+        }
+
+        public CloudToDevicePropertiesArgs build() {
+            return $;
         }
     }
+
 }

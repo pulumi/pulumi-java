@@ -22,7 +22,7 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="allowance", required=true)
-      private final Double allowance;
+    private Double allowance;
 
     public Double allowance() {
         return this.allowance;
@@ -33,7 +33,7 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="amount", required=true)
-      private final Double amount;
+    private Double amount;
 
     public Double amount() {
         return this.amount;
@@ -44,7 +44,7 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="includedQuantityMeter", required=true)
-      private final String includedQuantityMeter;
+    private String includedQuantityMeter;
 
     public String includedQuantityMeter() {
         return this.includedQuantityMeter;
@@ -55,73 +55,66 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="overageMeter", required=true)
-      private final String overageMeter;
+    private String overageMeter;
 
     public String overageMeter() {
         return this.overageMeter;
     }
 
-    public PlanQuantityResponse(
-        Double allowance,
-        Double amount,
-        String includedQuantityMeter,
-        String overageMeter) {
-        this.allowance = Objects.requireNonNull(allowance, "expected parameter 'allowance' to be non-null");
-        this.amount = Objects.requireNonNull(amount, "expected parameter 'amount' to be non-null");
-        this.includedQuantityMeter = Objects.requireNonNull(includedQuantityMeter, "expected parameter 'includedQuantityMeter' to be non-null");
-        this.overageMeter = Objects.requireNonNull(overageMeter, "expected parameter 'overageMeter' to be non-null");
-    }
+    private PlanQuantityResponse() {}
 
-    private PlanQuantityResponse() {
-        this.allowance = null;
-        this.amount = null;
-        this.includedQuantityMeter = null;
-        this.overageMeter = null;
+    private PlanQuantityResponse(PlanQuantityResponse $) {
+        this.allowance = $.allowance;
+        this.amount = $.amount;
+        this.includedQuantityMeter = $.includedQuantityMeter;
+        this.overageMeter = $.overageMeter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanQuantityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double allowance;
-        private Double amount;
-        private String includedQuantityMeter;
-        private String overageMeter;
+        private PlanQuantityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanQuantityResponse();
         }
 
         public Builder(PlanQuantityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowance = defaults.allowance;
-    	      this.amount = defaults.amount;
-    	      this.includedQuantityMeter = defaults.includedQuantityMeter;
-    	      this.overageMeter = defaults.overageMeter;
+            $ = new PlanQuantityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowance(Double allowance) {
-            this.allowance = Objects.requireNonNull(allowance);
+            $.allowance = allowance;
             return this;
         }
+
         public Builder amount(Double amount) {
-            this.amount = Objects.requireNonNull(amount);
+            $.amount = amount;
             return this;
         }
+
         public Builder includedQuantityMeter(String includedQuantityMeter) {
-            this.includedQuantityMeter = Objects.requireNonNull(includedQuantityMeter);
+            $.includedQuantityMeter = includedQuantityMeter;
             return this;
         }
+
         public Builder overageMeter(String overageMeter) {
-            this.overageMeter = Objects.requireNonNull(overageMeter);
+            $.overageMeter = overageMeter;
             return this;
-        }        public PlanQuantityResponse build() {
-            return new PlanQuantityResponse(allowance, amount, includedQuantityMeter, overageMeter);
+        }
+
+        public PlanQuantityResponse build() {
+            $.allowance = Objects.requireNonNull($.allowance, "expected parameter 'allowance' to be non-null");
+            $.amount = Objects.requireNonNull($.amount, "expected parameter 'amount' to be non-null");
+            $.includedQuantityMeter = Objects.requireNonNull($.includedQuantityMeter, "expected parameter 'includedQuantityMeter' to be non-null");
+            $.overageMeter = Objects.requireNonNull($.overageMeter, "expected parameter 'overageMeter' to be non-null");
+            return $;
         }
     }
+
 }

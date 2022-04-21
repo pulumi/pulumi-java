@@ -5,11 +5,11 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.AndroidDeviceListArgs;
 import com.pulumi.googlenative.testing_v1.inputs.AndroidMatrixArgs;
 import com.pulumi.googlenative.testing_v1.inputs.IosDeviceListArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EnvironmentMatrixArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="androidDeviceList")
-      private final @Nullable Output<AndroidDeviceListArgs> androidDeviceList;
+    private @Nullable Output<AndroidDeviceListArgs> androidDeviceList;
 
-    public Output<AndroidDeviceListArgs> androidDeviceList() {
-        return this.androidDeviceList == null ? Codegen.empty() : this.androidDeviceList;
+    public Optional<Output<AndroidDeviceListArgs>> androidDeviceList() {
+        return Optional.ofNullable(this.androidDeviceList);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EnvironmentMatrixArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="androidMatrix")
-      private final @Nullable Output<AndroidMatrixArgs> androidMatrix;
+    private @Nullable Output<AndroidMatrixArgs> androidMatrix;
 
-    public Output<AndroidMatrixArgs> androidMatrix() {
-        return this.androidMatrix == null ? Codegen.empty() : this.androidMatrix;
+    public Optional<Output<AndroidMatrixArgs>> androidMatrix() {
+        return Optional.ofNullable(this.androidMatrix);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class EnvironmentMatrixArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="iosDeviceList")
-      private final @Nullable Output<IosDeviceListArgs> iosDeviceList;
+    private @Nullable Output<IosDeviceListArgs> iosDeviceList;
 
-    public Output<IosDeviceListArgs> iosDeviceList() {
-        return this.iosDeviceList == null ? Codegen.empty() : this.iosDeviceList;
+    public Optional<Output<IosDeviceListArgs>> iosDeviceList() {
+        return Optional.ofNullable(this.iosDeviceList);
     }
 
-    public EnvironmentMatrixArgs(
-        @Nullable Output<AndroidDeviceListArgs> androidDeviceList,
-        @Nullable Output<AndroidMatrixArgs> androidMatrix,
-        @Nullable Output<IosDeviceListArgs> iosDeviceList) {
-        this.androidDeviceList = androidDeviceList;
-        this.androidMatrix = androidMatrix;
-        this.iosDeviceList = iosDeviceList;
-    }
+    private EnvironmentMatrixArgs() {}
 
-    private EnvironmentMatrixArgs() {
-        this.androidDeviceList = Codegen.empty();
-        this.androidMatrix = Codegen.empty();
-        this.iosDeviceList = Codegen.empty();
+    private EnvironmentMatrixArgs(EnvironmentMatrixArgs $) {
+        this.androidDeviceList = $.androidDeviceList;
+        this.androidMatrix = $.androidMatrix;
+        this.iosDeviceList = $.iosDeviceList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentMatrixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AndroidDeviceListArgs> androidDeviceList;
-        private @Nullable Output<AndroidMatrixArgs> androidMatrix;
-        private @Nullable Output<IosDeviceListArgs> iosDeviceList;
+        private EnvironmentMatrixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentMatrixArgs();
         }
 
         public Builder(EnvironmentMatrixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidDeviceList = defaults.androidDeviceList;
-    	      this.androidMatrix = defaults.androidMatrix;
-    	      this.iosDeviceList = defaults.iosDeviceList;
+            $ = new EnvironmentMatrixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder androidDeviceList(@Nullable Output<AndroidDeviceListArgs> androidDeviceList) {
-            this.androidDeviceList = androidDeviceList;
+            $.androidDeviceList = androidDeviceList;
             return this;
         }
-        public Builder androidDeviceList(@Nullable AndroidDeviceListArgs androidDeviceList) {
-            this.androidDeviceList = Codegen.ofNullable(androidDeviceList);
-            return this;
+
+        public Builder androidDeviceList(AndroidDeviceListArgs androidDeviceList) {
+            return androidDeviceList(Output.of(androidDeviceList));
         }
+
         public Builder androidMatrix(@Nullable Output<AndroidMatrixArgs> androidMatrix) {
-            this.androidMatrix = androidMatrix;
+            $.androidMatrix = androidMatrix;
             return this;
         }
-        public Builder androidMatrix(@Nullable AndroidMatrixArgs androidMatrix) {
-            this.androidMatrix = Codegen.ofNullable(androidMatrix);
-            return this;
+
+        public Builder androidMatrix(AndroidMatrixArgs androidMatrix) {
+            return androidMatrix(Output.of(androidMatrix));
         }
+
         public Builder iosDeviceList(@Nullable Output<IosDeviceListArgs> iosDeviceList) {
-            this.iosDeviceList = iosDeviceList;
+            $.iosDeviceList = iosDeviceList;
             return this;
         }
-        public Builder iosDeviceList(@Nullable IosDeviceListArgs iosDeviceList) {
-            this.iosDeviceList = Codegen.ofNullable(iosDeviceList);
-            return this;
-        }        public EnvironmentMatrixArgs build() {
-            return new EnvironmentMatrixArgs(androidDeviceList, androidMatrix, iosDeviceList);
+
+        public Builder iosDeviceList(IosDeviceListArgs iosDeviceList) {
+            return iosDeviceList(Output.of(iosDeviceList));
+        }
+
+        public EnvironmentMatrixArgs build() {
+            return $;
         }
     }
+
 }

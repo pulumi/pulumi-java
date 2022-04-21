@@ -17,7 +17,7 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends com.pulumi.r
      * 
      */
     @Import(name="apiproduct", required=true)
-      private final String apiproduct;
+    private String apiproduct;
 
     public String apiproduct() {
         return this.apiproduct;
@@ -28,55 +28,52 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends com.pulumi.r
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public GoogleCloudApigeeV1ApiProductRefResponse(
-        String apiproduct,
-        String status) {
-        this.apiproduct = Objects.requireNonNull(apiproduct, "expected parameter 'apiproduct' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private GoogleCloudApigeeV1ApiProductRefResponse() {}
 
-    private GoogleCloudApigeeV1ApiProductRefResponse() {
-        this.apiproduct = null;
-        this.status = null;
+    private GoogleCloudApigeeV1ApiProductRefResponse(GoogleCloudApigeeV1ApiProductRefResponse $) {
+        this.apiproduct = $.apiproduct;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1ApiProductRefResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiproduct;
-        private String status;
+        private GoogleCloudApigeeV1ApiProductRefResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1ApiProductRefResponse();
         }
 
         public Builder(GoogleCloudApigeeV1ApiProductRefResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiproduct = defaults.apiproduct;
-    	      this.status = defaults.status;
+            $ = new GoogleCloudApigeeV1ApiProductRefResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiproduct(String apiproduct) {
-            this.apiproduct = Objects.requireNonNull(apiproduct);
+            $.apiproduct = apiproduct;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public GoogleCloudApigeeV1ApiProductRefResponse build() {
-            return new GoogleCloudApigeeV1ApiProductRefResponse(apiproduct, status);
+        }
+
+        public GoogleCloudApigeeV1ApiProductRefResponse build() {
+            $.apiproduct = Objects.requireNonNull($.apiproduct, "expected parameter 'apiproduct' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

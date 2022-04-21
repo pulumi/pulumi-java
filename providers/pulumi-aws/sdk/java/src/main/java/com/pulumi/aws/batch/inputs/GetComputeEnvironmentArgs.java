@@ -20,7 +20,7 @@ public final class GetComputeEnvironmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="computeEnvironmentName", required=true)
-      private final String computeEnvironmentName;
+    private String computeEnvironmentName;
 
     public String computeEnvironmentName() {
         return this.computeEnvironmentName;
@@ -31,55 +31,51 @@ public final class GetComputeEnvironmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetComputeEnvironmentArgs(
-        String computeEnvironmentName,
-        @Nullable Map<String,String> tags) {
-        this.computeEnvironmentName = Objects.requireNonNull(computeEnvironmentName, "expected parameter 'computeEnvironmentName' to be non-null");
-        this.tags = tags;
-    }
+    private GetComputeEnvironmentArgs() {}
 
-    private GetComputeEnvironmentArgs() {
-        this.computeEnvironmentName = null;
-        this.tags = Map.of();
+    private GetComputeEnvironmentArgs(GetComputeEnvironmentArgs $) {
+        this.computeEnvironmentName = $.computeEnvironmentName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetComputeEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String computeEnvironmentName;
-        private @Nullable Map<String,String> tags;
+        private GetComputeEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetComputeEnvironmentArgs();
         }
 
         public Builder(GetComputeEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeEnvironmentName = defaults.computeEnvironmentName;
-    	      this.tags = defaults.tags;
+            $ = new GetComputeEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeEnvironmentName(String computeEnvironmentName) {
-            this.computeEnvironmentName = Objects.requireNonNull(computeEnvironmentName);
+            $.computeEnvironmentName = computeEnvironmentName;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetComputeEnvironmentArgs build() {
-            return new GetComputeEnvironmentArgs(computeEnvironmentName, tags);
+        }
+
+        public GetComputeEnvironmentArgs build() {
+            $.computeEnvironmentName = Objects.requireNonNull($.computeEnvironmentName, "expected parameter 'computeEnvironmentName' to be non-null");
+            return $;
         }
     }
+
 }

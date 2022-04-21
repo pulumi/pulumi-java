@@ -5,7 +5,6 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class FileSourceInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="shareId", required=true)
-      private final Output<String> shareId;
+    private Output<String> shareId;
 
     public Output<String> shareId() {
         return this.shareId;
     }
 
-    public FileSourceInfoArgs(Output<String> shareId) {
-        this.shareId = Objects.requireNonNull(shareId, "expected parameter 'shareId' to be non-null");
-    }
+    private FileSourceInfoArgs() {}
 
-    private FileSourceInfoArgs() {
-        this.shareId = Codegen.empty();
+    private FileSourceInfoArgs(FileSourceInfoArgs $) {
+        this.shareId = $.shareId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSourceInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> shareId;
+        private FileSourceInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSourceInfoArgs();
         }
 
         public Builder(FileSourceInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.shareId = defaults.shareId;
+            $ = new FileSourceInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder shareId(Output<String> shareId) {
-            this.shareId = Objects.requireNonNull(shareId);
+            $.shareId = shareId;
             return this;
         }
+
         public Builder shareId(String shareId) {
-            this.shareId = Output.of(Objects.requireNonNull(shareId));
-            return this;
-        }        public FileSourceInfoArgs build() {
-            return new FileSourceInfoArgs(shareId);
+            return shareId(Output.of(shareId));
+        }
+
+        public FileSourceInfoArgs build() {
+            $.shareId = Objects.requireNonNull($.shareId, "expected parameter 'shareId' to be non-null");
+            return $;
         }
     }
+
 }

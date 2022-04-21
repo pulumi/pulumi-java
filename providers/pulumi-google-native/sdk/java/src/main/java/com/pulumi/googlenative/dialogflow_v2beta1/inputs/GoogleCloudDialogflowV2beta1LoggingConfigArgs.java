@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends com.pul
      * 
      */
     @Import(name="enableStackdriverLogging")
-      private final @Nullable Output<Boolean> enableStackdriverLogging;
+    private @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Output<Boolean> enableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
+    public Optional<Output<Boolean>> enableStackdriverLogging() {
+        return Optional.ofNullable(this.enableStackdriverLogging);
     }
 
-    public GoogleCloudDialogflowV2beta1LoggingConfigArgs(@Nullable Output<Boolean> enableStackdriverLogging) {
-        this.enableStackdriverLogging = enableStackdriverLogging;
-    }
+    private GoogleCloudDialogflowV2beta1LoggingConfigArgs() {}
 
-    private GoogleCloudDialogflowV2beta1LoggingConfigArgs() {
-        this.enableStackdriverLogging = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1LoggingConfigArgs(GoogleCloudDialogflowV2beta1LoggingConfigArgs $) {
+        this.enableStackdriverLogging = $.enableStackdriverLogging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1LoggingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableStackdriverLogging;
+        private GoogleCloudDialogflowV2beta1LoggingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1LoggingConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1LoggingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
+            $ = new GoogleCloudDialogflowV2beta1LoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
-            this.enableStackdriverLogging = enableStackdriverLogging;
+            $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
-        public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Codegen.ofNullable(enableStackdriverLogging);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1LoggingConfigArgs build() {
-            return new GoogleCloudDialogflowV2beta1LoggingConfigArgs(enableStackdriverLogging);
+
+        public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
+            return enableStackdriverLogging(Output.of(enableStackdriverLogging));
+        }
+
+        public GoogleCloudDialogflowV2beta1LoggingConfigArgs build() {
+            return $;
         }
     }
+
 }

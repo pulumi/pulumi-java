@@ -7,9 +7,9 @@ import com.pulumi.azurenative.solutions.enums.ApplicationManagementMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class ApplicationManagementPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,ApplicationManagementMode>> mode;
+    private @Nullable Output<Either<String,ApplicationManagementMode>> mode;
 
-    public Output<Either<String,ApplicationManagementMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,ApplicationManagementMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public ApplicationManagementPolicyArgs(@Nullable Output<Either<String,ApplicationManagementMode>> mode) {
-        this.mode = mode;
-    }
+    private ApplicationManagementPolicyArgs() {}
 
-    private ApplicationManagementPolicyArgs() {
-        this.mode = Codegen.empty();
+    private ApplicationManagementPolicyArgs(ApplicationManagementPolicyArgs $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationManagementPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ApplicationManagementMode>> mode;
+        private ApplicationManagementPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationManagementPolicyArgs();
         }
 
         public Builder(ApplicationManagementPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new ApplicationManagementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<Either<String,ApplicationManagementMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,ApplicationManagementMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public ApplicationManagementPolicyArgs build() {
-            return new ApplicationManagementPolicyArgs(mode);
+
+        public Builder mode(Either<String,ApplicationManagementMode> mode) {
+            return mode(Output.of(mode));
+        }
+
+        public ApplicationManagementPolicyArgs build() {
+            return $;
         }
     }
+
 }

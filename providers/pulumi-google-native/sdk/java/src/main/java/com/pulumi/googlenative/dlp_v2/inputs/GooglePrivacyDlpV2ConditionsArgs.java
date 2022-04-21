@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ConditionArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
+    private @Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
 
-    public Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<GooglePrivacyDlpV2ConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
-    public GooglePrivacyDlpV2ConditionsArgs(@Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions) {
-        this.conditions = conditions;
-    }
+    private GooglePrivacyDlpV2ConditionsArgs() {}
 
-    private GooglePrivacyDlpV2ConditionsArgs() {
-        this.conditions = Codegen.empty();
+    private GooglePrivacyDlpV2ConditionsArgs(GooglePrivacyDlpV2ConditionsArgs $) {
+        this.conditions = $.conditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ConditionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
+        private GooglePrivacyDlpV2ConditionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ConditionsArgs();
         }
 
         public Builder(GooglePrivacyDlpV2ConditionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
+            $ = new GooglePrivacyDlpV2ConditionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<GooglePrivacyDlpV2ConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<GooglePrivacyDlpV2ConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(GooglePrivacyDlpV2ConditionArgs... conditions) {
             return conditions(List.of(conditions));
-        }        public GooglePrivacyDlpV2ConditionsArgs build() {
-            return new GooglePrivacyDlpV2ConditionsArgs(conditions);
+        }
+
+        public GooglePrivacyDlpV2ConditionsArgs build() {
+            return $;
         }
     }
+
 }

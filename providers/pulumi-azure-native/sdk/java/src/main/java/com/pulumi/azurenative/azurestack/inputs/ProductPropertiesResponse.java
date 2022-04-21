@@ -23,45 +23,44 @@ public final class ProductPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ProductPropertiesResponse(@Nullable String version) {
-        this.version = version;
-    }
+    private ProductPropertiesResponse() {}
 
-    private ProductPropertiesResponse() {
-        this.version = null;
+    private ProductPropertiesResponse(ProductPropertiesResponse $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String version;
+        private ProductPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductPropertiesResponse();
         }
 
         public Builder(ProductPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new ProductPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ProductPropertiesResponse build() {
-            return new ProductPropertiesResponse(version);
+        }
+
+        public ProductPropertiesResponse build() {
+            return $;
         }
     }
+
 }

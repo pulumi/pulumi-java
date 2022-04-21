@@ -13,45 +13,45 @@ public final class FlowSlackSourceProperties extends com.pulumi.resources.Invoke
     public static final FlowSlackSourceProperties Empty = new FlowSlackSourceProperties();
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowSlackSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowSlackSourceProperties() {}
 
-    private FlowSlackSourceProperties() {
-        this.object = null;
+    private FlowSlackSourceProperties(FlowSlackSourceProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSlackSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String object;
+        private FlowSlackSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSlackSourceProperties();
         }
 
         public Builder(FlowSlackSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowSlackSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowSlackSourceProperties build() {
-            return new FlowSlackSourceProperties(object);
+        }
+
+        public FlowSlackSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

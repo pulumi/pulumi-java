@@ -24,7 +24,7 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="access", required=true)
-      private final String access;
+    private String access;
 
     public String access() {
         return this.access;
@@ -35,10 +35,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="anonymousGID")
-      private final @Nullable String anonymousGID;
+    private @Nullable String anonymousGID;
 
     public Optional<String> anonymousGID() {
-        return this.anonymousGID == null ? Optional.empty() : Optional.ofNullable(this.anonymousGID);
+        return Optional.ofNullable(this.anonymousGID);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="anonymousUID")
-      private final @Nullable String anonymousUID;
+    private @Nullable String anonymousUID;
 
     public Optional<String> anonymousUID() {
-        return this.anonymousUID == null ? Optional.empty() : Optional.ofNullable(this.anonymousUID);
+        return Optional.ofNullable(this.anonymousUID);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filter")
-      private final @Nullable String filter;
+    private @Nullable String filter;
 
     public Optional<String> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rootSquash")
-      private final @Nullable Boolean rootSquash;
+    private @Nullable Boolean rootSquash;
 
     public Optional<Boolean> rootSquash() {
-        return this.rootSquash == null ? Optional.empty() : Optional.ofNullable(this.rootSquash);
+        return Optional.ofNullable(this.rootSquash);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
@@ -90,10 +90,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="submountAccess")
-      private final @Nullable Boolean submountAccess;
+    private @Nullable Boolean submountAccess;
 
     public Optional<Boolean> submountAccess() {
-        return this.submountAccess == null ? Optional.empty() : Optional.ofNullable(this.submountAccess);
+        return Optional.ofNullable(this.submountAccess);
     }
 
     /**
@@ -101,109 +101,88 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="suid")
-      private final @Nullable Boolean suid;
+    private @Nullable Boolean suid;
 
     public Optional<Boolean> suid() {
-        return this.suid == null ? Optional.empty() : Optional.ofNullable(this.suid);
+        return Optional.ofNullable(this.suid);
     }
 
-    public NfsAccessRuleResponse(
-        String access,
-        @Nullable String anonymousGID,
-        @Nullable String anonymousUID,
-        @Nullable String filter,
-        @Nullable Boolean rootSquash,
-        String scope,
-        @Nullable Boolean submountAccess,
-        @Nullable Boolean suid) {
-        this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
-        this.anonymousGID = anonymousGID;
-        this.anonymousUID = anonymousUID;
-        this.filter = filter;
-        this.rootSquash = rootSquash;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.submountAccess = submountAccess;
-        this.suid = suid;
-    }
+    private NfsAccessRuleResponse() {}
 
-    private NfsAccessRuleResponse() {
-        this.access = null;
-        this.anonymousGID = null;
-        this.anonymousUID = null;
-        this.filter = null;
-        this.rootSquash = null;
-        this.scope = null;
-        this.submountAccess = null;
-        this.suid = null;
+    private NfsAccessRuleResponse(NfsAccessRuleResponse $) {
+        this.access = $.access;
+        this.anonymousGID = $.anonymousGID;
+        this.anonymousUID = $.anonymousUID;
+        this.filter = $.filter;
+        this.rootSquash = $.rootSquash;
+        this.scope = $.scope;
+        this.submountAccess = $.submountAccess;
+        this.suid = $.suid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NfsAccessRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String access;
-        private @Nullable String anonymousGID;
-        private @Nullable String anonymousUID;
-        private @Nullable String filter;
-        private @Nullable Boolean rootSquash;
-        private String scope;
-        private @Nullable Boolean submountAccess;
-        private @Nullable Boolean suid;
+        private NfsAccessRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NfsAccessRuleResponse();
         }
 
         public Builder(NfsAccessRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.access = defaults.access;
-    	      this.anonymousGID = defaults.anonymousGID;
-    	      this.anonymousUID = defaults.anonymousUID;
-    	      this.filter = defaults.filter;
-    	      this.rootSquash = defaults.rootSquash;
-    	      this.scope = defaults.scope;
-    	      this.submountAccess = defaults.submountAccess;
-    	      this.suid = defaults.suid;
+            $ = new NfsAccessRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder access(String access) {
-            this.access = Objects.requireNonNull(access);
+            $.access = access;
             return this;
         }
+
         public Builder anonymousGID(@Nullable String anonymousGID) {
-            this.anonymousGID = anonymousGID;
+            $.anonymousGID = anonymousGID;
             return this;
         }
+
         public Builder anonymousUID(@Nullable String anonymousUID) {
-            this.anonymousUID = anonymousUID;
+            $.anonymousUID = anonymousUID;
             return this;
         }
+
         public Builder filter(@Nullable String filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder rootSquash(@Nullable Boolean rootSquash) {
-            this.rootSquash = rootSquash;
+            $.rootSquash = rootSquash;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder submountAccess(@Nullable Boolean submountAccess) {
-            this.submountAccess = submountAccess;
+            $.submountAccess = submountAccess;
             return this;
         }
+
         public Builder suid(@Nullable Boolean suid) {
-            this.suid = suid;
+            $.suid = suid;
             return this;
-        }        public NfsAccessRuleResponse build() {
-            return new NfsAccessRuleResponse(access, anonymousGID, anonymousUID, filter, rootSquash, scope, submountAccess, suid);
+        }
+
+        public NfsAccessRuleResponse build() {
+            $.access = Objects.requireNonNull($.access, "expected parameter 'access' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

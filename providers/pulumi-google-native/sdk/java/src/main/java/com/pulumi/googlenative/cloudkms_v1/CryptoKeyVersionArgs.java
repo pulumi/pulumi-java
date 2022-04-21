@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudkms_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionState;
 import com.pulumi.googlenative.cloudkms_v1.inputs.ExternalProtectionLevelOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArg
     public static final CryptoKeyVersionArgs Empty = new CryptoKeyVersionArgs();
 
     @Import(name="cryptoKeyId", required=true)
-      private final Output<String> cryptoKeyId;
+    private Output<String> cryptoKeyId;
 
     public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
@@ -29,31 +29,31 @@ public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="externalProtectionLevelOptions")
-      private final @Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions;
+    private @Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions;
 
-    public Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions() {
-        return this.externalProtectionLevelOptions == null ? Codegen.empty() : this.externalProtectionLevelOptions;
+    public Optional<Output<ExternalProtectionLevelOptionsArgs>> externalProtectionLevelOptions() {
+        return Optional.ofNullable(this.externalProtectionLevelOptions);
     }
 
     @Import(name="keyRingId", required=true)
-      private final Output<String> keyRingId;
+    private Output<String> keyRingId;
 
     public Output<String> keyRingId() {
         return this.keyRingId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -61,115 +61,100 @@ public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<CryptoKeyVersionState> state;
+    private @Nullable Output<CryptoKeyVersionState> state;
 
-    public Output<CryptoKeyVersionState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<CryptoKeyVersionState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public CryptoKeyVersionArgs(
-        Output<String> cryptoKeyId,
-        @Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions,
-        Output<String> keyRingId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<CryptoKeyVersionState> state) {
-        this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
-        this.externalProtectionLevelOptions = externalProtectionLevelOptions;
-        this.keyRingId = Objects.requireNonNull(keyRingId, "expected parameter 'keyRingId' to be non-null");
-        this.location = location;
-        this.project = project;
-        this.state = state;
-    }
+    private CryptoKeyVersionArgs() {}
 
-    private CryptoKeyVersionArgs() {
-        this.cryptoKeyId = Codegen.empty();
-        this.externalProtectionLevelOptions = Codegen.empty();
-        this.keyRingId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.state = Codegen.empty();
+    private CryptoKeyVersionArgs(CryptoKeyVersionArgs $) {
+        this.cryptoKeyId = $.cryptoKeyId;
+        this.externalProtectionLevelOptions = $.externalProtectionLevelOptions;
+        this.keyRingId = $.keyRingId;
+        this.location = $.location;
+        this.project = $.project;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cryptoKeyId;
-        private @Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions;
-        private Output<String> keyRingId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<CryptoKeyVersionState> state;
+        private CryptoKeyVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyVersionArgs();
         }
 
         public Builder(CryptoKeyVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cryptoKeyId = defaults.cryptoKeyId;
-    	      this.externalProtectionLevelOptions = defaults.externalProtectionLevelOptions;
-    	      this.keyRingId = defaults.keyRingId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.state = defaults.state;
+            $ = new CryptoKeyVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cryptoKeyId(Output<String> cryptoKeyId) {
-            this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
+            $.cryptoKeyId = cryptoKeyId;
             return this;
         }
+
         public Builder cryptoKeyId(String cryptoKeyId) {
-            this.cryptoKeyId = Output.of(Objects.requireNonNull(cryptoKeyId));
-            return this;
+            return cryptoKeyId(Output.of(cryptoKeyId));
         }
+
         public Builder externalProtectionLevelOptions(@Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions) {
-            this.externalProtectionLevelOptions = externalProtectionLevelOptions;
+            $.externalProtectionLevelOptions = externalProtectionLevelOptions;
             return this;
         }
-        public Builder externalProtectionLevelOptions(@Nullable ExternalProtectionLevelOptionsArgs externalProtectionLevelOptions) {
-            this.externalProtectionLevelOptions = Codegen.ofNullable(externalProtectionLevelOptions);
-            return this;
+
+        public Builder externalProtectionLevelOptions(ExternalProtectionLevelOptionsArgs externalProtectionLevelOptions) {
+            return externalProtectionLevelOptions(Output.of(externalProtectionLevelOptions));
         }
+
         public Builder keyRingId(Output<String> keyRingId) {
-            this.keyRingId = Objects.requireNonNull(keyRingId);
+            $.keyRingId = keyRingId;
             return this;
         }
+
         public Builder keyRingId(String keyRingId) {
-            this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
-            return this;
+            return keyRingId(Output.of(keyRingId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder state(@Nullable Output<CryptoKeyVersionState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable CryptoKeyVersionState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public CryptoKeyVersionArgs build() {
-            return new CryptoKeyVersionArgs(cryptoKeyId, externalProtectionLevelOptions, keyRingId, location, project, state);
+
+        public Builder state(CryptoKeyVersionState state) {
+            return state(Output.of(state));
+        }
+
+        public CryptoKeyVersionArgs build() {
+            $.cryptoKeyId = Objects.requireNonNull($.cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
+            $.keyRingId = Objects.requireNonNull($.keyRingId, "expected parameter 'keyRingId' to be non-null");
+            return $;
         }
     }
+
 }

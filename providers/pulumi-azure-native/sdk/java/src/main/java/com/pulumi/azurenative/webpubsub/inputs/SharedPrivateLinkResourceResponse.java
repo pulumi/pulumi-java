@@ -24,7 +24,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
@@ -35,7 +35,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -46,7 +46,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -57,7 +57,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateLinkResourceId", required=true)
-      private final String privateLinkResourceId;
+    private String privateLinkResourceId;
 
     public String privateLinkResourceId() {
         return this.privateLinkResourceId;
@@ -68,7 +68,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -79,10 +79,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable String requestMessage;
+    private @Nullable String requestMessage;
 
     public Optional<String> requestMessage() {
-        return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
+        return Optional.ofNullable(this.requestMessage);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -101,7 +101,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="systemData", required=true)
-      private final SystemDataResponse systemData;
+    private SystemDataResponse systemData;
 
     public SystemDataResponse systemData() {
         return this.systemData;
@@ -112,118 +112,100 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SharedPrivateLinkResourceResponse(
-        String groupId,
-        String id,
-        String name,
-        String privateLinkResourceId,
-        String provisioningState,
-        @Nullable String requestMessage,
-        String status,
-        SystemDataResponse systemData,
-        String type) {
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId, "expected parameter 'privateLinkResourceId' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.requestMessage = requestMessage;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.systemData = Objects.requireNonNull(systemData, "expected parameter 'systemData' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SharedPrivateLinkResourceResponse() {}
 
-    private SharedPrivateLinkResourceResponse() {
-        this.groupId = null;
-        this.id = null;
-        this.name = null;
-        this.privateLinkResourceId = null;
-        this.provisioningState = null;
-        this.requestMessage = null;
-        this.status = null;
-        this.systemData = null;
-        this.type = null;
+    private SharedPrivateLinkResourceResponse(SharedPrivateLinkResourceResponse $) {
+        this.groupId = $.groupId;
+        this.id = $.id;
+        this.name = $.name;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.provisioningState = $.provisioningState;
+        this.requestMessage = $.requestMessage;
+        this.status = $.status;
+        this.systemData = $.systemData;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedPrivateLinkResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupId;
-        private String id;
-        private String name;
-        private String privateLinkResourceId;
-        private String provisioningState;
-        private @Nullable String requestMessage;
-        private String status;
-        private SystemDataResponse systemData;
-        private String type;
+        private SharedPrivateLinkResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedPrivateLinkResourceResponse();
         }
 
         public Builder(SharedPrivateLinkResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.requestMessage = defaults.requestMessage;
-    	      this.status = defaults.status;
-    	      this.systemData = defaults.systemData;
-    	      this.type = defaults.type;
+            $ = new SharedPrivateLinkResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder privateLinkResourceId(String privateLinkResourceId) {
-            this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId);
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder systemData(SystemDataResponse systemData) {
-            this.systemData = Objects.requireNonNull(systemData);
+            $.systemData = systemData;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SharedPrivateLinkResourceResponse build() {
-            return new SharedPrivateLinkResourceResponse(groupId, id, name, privateLinkResourceId, provisioningState, requestMessage, status, systemData, type);
+        }
+
+        public SharedPrivateLinkResourceResponse build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.privateLinkResourceId = Objects.requireNonNull($.privateLinkResourceId, "expected parameter 'privateLinkResourceId' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.systemData = Objects.requireNonNull($.systemData, "expected parameter 'systemData' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

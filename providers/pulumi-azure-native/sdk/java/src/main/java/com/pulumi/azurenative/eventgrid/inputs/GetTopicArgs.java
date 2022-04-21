@@ -17,7 +17,7 @@ public final class GetTopicArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetTopicArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="topicName", required=true)
-      private final String topicName;
+    private String topicName;
 
     public String topicName() {
         return this.topicName;
     }
 
-    public GetTopicArgs(
-        String resourceGroupName,
-        String topicName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.topicName = Objects.requireNonNull(topicName, "expected parameter 'topicName' to be non-null");
-    }
+    private GetTopicArgs() {}
 
-    private GetTopicArgs() {
-        this.resourceGroupName = null;
-        this.topicName = null;
+    private GetTopicArgs(GetTopicArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String topicName;
+        private GetTopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTopicArgs();
         }
 
         public Builder(GetTopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.topicName = defaults.topicName;
+            $ = new GetTopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder topicName(String topicName) {
-            this.topicName = Objects.requireNonNull(topicName);
+            $.topicName = topicName;
             return this;
-        }        public GetTopicArgs build() {
-            return new GetTopicArgs(resourceGroupName, topicName);
+        }
+
+        public GetTopicArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.topicName = Objects.requireNonNull($.topicName, "expected parameter 'topicName' to be non-null");
+            return $;
         }
     }
+
 }

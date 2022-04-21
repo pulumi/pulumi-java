@@ -19,45 +19,44 @@ public final class InfrastructureConfigurationLogging extends com.pulumi.resourc
     public static final InfrastructureConfigurationLogging Empty = new InfrastructureConfigurationLogging();
 
     @Import(name="s3Logs")
-      private final @Nullable InfrastructureConfigurationS3Logs s3Logs;
+    private @Nullable InfrastructureConfigurationS3Logs s3Logs;
 
     public Optional<InfrastructureConfigurationS3Logs> s3Logs() {
-        return this.s3Logs == null ? Optional.empty() : Optional.ofNullable(this.s3Logs);
+        return Optional.ofNullable(this.s3Logs);
     }
 
-    public InfrastructureConfigurationLogging(@Nullable InfrastructureConfigurationS3Logs s3Logs) {
-        this.s3Logs = s3Logs;
-    }
+    private InfrastructureConfigurationLogging() {}
 
-    private InfrastructureConfigurationLogging() {
-        this.s3Logs = null;
+    private InfrastructureConfigurationLogging(InfrastructureConfigurationLogging $) {
+        this.s3Logs = $.s3Logs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InfrastructureConfigurationLogging defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable InfrastructureConfigurationS3Logs s3Logs;
+        private InfrastructureConfigurationLogging $;
 
         public Builder() {
-    	      // Empty
+            $ = new InfrastructureConfigurationLogging();
         }
 
         public Builder(InfrastructureConfigurationLogging defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Logs = defaults.s3Logs;
+            $ = new InfrastructureConfigurationLogging(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Logs(@Nullable InfrastructureConfigurationS3Logs s3Logs) {
-            this.s3Logs = s3Logs;
+            $.s3Logs = s3Logs;
             return this;
-        }        public InfrastructureConfigurationLogging build() {
-            return new InfrastructureConfigurationLogging(s3Logs);
+        }
+
+        public InfrastructureConfigurationLogging build() {
+            return $;
         }
     }
+
 }

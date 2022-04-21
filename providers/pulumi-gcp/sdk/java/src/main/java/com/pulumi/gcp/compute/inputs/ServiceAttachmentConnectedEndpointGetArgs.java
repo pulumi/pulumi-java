@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ServiceAttachmentConnectedEndpointGetArgs extends com.pulumi.
     public static final ServiceAttachmentConnectedEndpointGetArgs Empty = new ServiceAttachmentConnectedEndpointGetArgs();
 
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public ServiceAttachmentConnectedEndpointGetArgs(
-        @Nullable Output<String> endpoint,
-        @Nullable Output<String> status) {
-        this.endpoint = endpoint;
-        this.status = status;
-    }
+    private ServiceAttachmentConnectedEndpointGetArgs() {}
 
-    private ServiceAttachmentConnectedEndpointGetArgs() {
-        this.endpoint = Codegen.empty();
-        this.status = Codegen.empty();
+    private ServiceAttachmentConnectedEndpointGetArgs(ServiceAttachmentConnectedEndpointGetArgs $) {
+        this.endpoint = $.endpoint;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAttachmentConnectedEndpointGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<String> status;
+        private ServiceAttachmentConnectedEndpointGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAttachmentConnectedEndpointGetArgs();
         }
 
         public Builder(ServiceAttachmentConnectedEndpointGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.status = defaults.status;
+            $ = new ServiceAttachmentConnectedEndpointGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public ServiceAttachmentConnectedEndpointGetArgs build() {
-            return new ServiceAttachmentConnectedEndpointGetArgs(endpoint, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public ServiceAttachmentConnectedEndpointGetArgs build() {
+            return $;
         }
     }
+
 }

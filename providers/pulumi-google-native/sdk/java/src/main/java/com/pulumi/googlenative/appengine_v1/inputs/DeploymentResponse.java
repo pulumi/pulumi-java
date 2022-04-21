@@ -25,7 +25,7 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudBuildOptions", required=true)
-      private final CloudBuildOptionsResponse cloudBuildOptions;
+    private CloudBuildOptionsResponse cloudBuildOptions;
 
     public CloudBuildOptionsResponse cloudBuildOptions() {
         return this.cloudBuildOptions;
@@ -36,7 +36,7 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="container", required=true)
-      private final ContainerInfoResponse container;
+    private ContainerInfoResponse container;
 
     public ContainerInfoResponse container() {
         return this.container;
@@ -47,7 +47,7 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="files", required=true)
-      private final Map<String,String> files;
+    private Map<String,String> files;
 
     public Map<String,String> files() {
         return this.files;
@@ -58,73 +58,66 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zip", required=true)
-      private final ZipInfoResponse zip;
+    private ZipInfoResponse zip;
 
     public ZipInfoResponse zip() {
         return this.zip;
     }
 
-    public DeploymentResponse(
-        CloudBuildOptionsResponse cloudBuildOptions,
-        ContainerInfoResponse container,
-        Map<String,String> files,
-        ZipInfoResponse zip) {
-        this.cloudBuildOptions = Objects.requireNonNull(cloudBuildOptions, "expected parameter 'cloudBuildOptions' to be non-null");
-        this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
-        this.files = Objects.requireNonNull(files, "expected parameter 'files' to be non-null");
-        this.zip = Objects.requireNonNull(zip, "expected parameter 'zip' to be non-null");
-    }
+    private DeploymentResponse() {}
 
-    private DeploymentResponse() {
-        this.cloudBuildOptions = null;
-        this.container = null;
-        this.files = Map.of();
-        this.zip = null;
+    private DeploymentResponse(DeploymentResponse $) {
+        this.cloudBuildOptions = $.cloudBuildOptions;
+        this.container = $.container;
+        this.files = $.files;
+        this.zip = $.zip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CloudBuildOptionsResponse cloudBuildOptions;
-        private ContainerInfoResponse container;
-        private Map<String,String> files;
-        private ZipInfoResponse zip;
+        private DeploymentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentResponse();
         }
 
         public Builder(DeploymentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudBuildOptions = defaults.cloudBuildOptions;
-    	      this.container = defaults.container;
-    	      this.files = defaults.files;
-    	      this.zip = defaults.zip;
+            $ = new DeploymentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudBuildOptions(CloudBuildOptionsResponse cloudBuildOptions) {
-            this.cloudBuildOptions = Objects.requireNonNull(cloudBuildOptions);
+            $.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
+
         public Builder container(ContainerInfoResponse container) {
-            this.container = Objects.requireNonNull(container);
+            $.container = container;
             return this;
         }
+
         public Builder files(Map<String,String> files) {
-            this.files = Objects.requireNonNull(files);
+            $.files = files;
             return this;
         }
+
         public Builder zip(ZipInfoResponse zip) {
-            this.zip = Objects.requireNonNull(zip);
+            $.zip = zip;
             return this;
-        }        public DeploymentResponse build() {
-            return new DeploymentResponse(cloudBuildOptions, container, files, zip);
+        }
+
+        public DeploymentResponse build() {
+            $.cloudBuildOptions = Objects.requireNonNull($.cloudBuildOptions, "expected parameter 'cloudBuildOptions' to be non-null");
+            $.container = Objects.requireNonNull($.container, "expected parameter 'container' to be non-null");
+            $.files = Objects.requireNonNull($.files, "expected parameter 'files' to be non-null");
+            $.zip = Objects.requireNonNull($.zip, "expected parameter 'zip' to be non-null");
+            return $;
         }
     }
+
 }

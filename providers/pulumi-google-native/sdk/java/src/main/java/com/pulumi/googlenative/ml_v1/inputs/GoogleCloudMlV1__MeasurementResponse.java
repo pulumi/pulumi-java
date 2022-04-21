@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__MeasurementResponse extends com.pulumi.resou
      * 
      */
     @Import(name="elapsedTime", required=true)
-      private final String elapsedTime;
+    private String elapsedTime;
 
     public String elapsedTime() {
         return this.elapsedTime;
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__MeasurementResponse extends com.pulumi.resou
      * 
      */
     @Import(name="metrics", required=true)
-      private final List<GoogleCloudMlV1_Measurement_MetricResponse> metrics;
+    private List<GoogleCloudMlV1_Measurement_MetricResponse> metrics;
 
     public List<GoogleCloudMlV1_Measurement_MetricResponse> metrics() {
         return this.metrics;
@@ -45,67 +45,63 @@ public final class GoogleCloudMlV1__MeasurementResponse extends com.pulumi.resou
      * 
      */
     @Import(name="stepCount", required=true)
-      private final String stepCount;
+    private String stepCount;
 
     public String stepCount() {
         return this.stepCount;
     }
 
-    public GoogleCloudMlV1__MeasurementResponse(
-        String elapsedTime,
-        List<GoogleCloudMlV1_Measurement_MetricResponse> metrics,
-        String stepCount) {
-        this.elapsedTime = Objects.requireNonNull(elapsedTime, "expected parameter 'elapsedTime' to be non-null");
-        this.metrics = Objects.requireNonNull(metrics, "expected parameter 'metrics' to be non-null");
-        this.stepCount = Objects.requireNonNull(stepCount, "expected parameter 'stepCount' to be non-null");
-    }
+    private GoogleCloudMlV1__MeasurementResponse() {}
 
-    private GoogleCloudMlV1__MeasurementResponse() {
-        this.elapsedTime = null;
-        this.metrics = List.of();
-        this.stepCount = null;
+    private GoogleCloudMlV1__MeasurementResponse(GoogleCloudMlV1__MeasurementResponse $) {
+        this.elapsedTime = $.elapsedTime;
+        this.metrics = $.metrics;
+        this.stepCount = $.stepCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__MeasurementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String elapsedTime;
-        private List<GoogleCloudMlV1_Measurement_MetricResponse> metrics;
-        private String stepCount;
+        private GoogleCloudMlV1__MeasurementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__MeasurementResponse();
         }
 
         public Builder(GoogleCloudMlV1__MeasurementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elapsedTime = defaults.elapsedTime;
-    	      this.metrics = defaults.metrics;
-    	      this.stepCount = defaults.stepCount;
+            $ = new GoogleCloudMlV1__MeasurementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder elapsedTime(String elapsedTime) {
-            this.elapsedTime = Objects.requireNonNull(elapsedTime);
+            $.elapsedTime = elapsedTime;
             return this;
         }
+
         public Builder metrics(List<GoogleCloudMlV1_Measurement_MetricResponse> metrics) {
-            this.metrics = Objects.requireNonNull(metrics);
+            $.metrics = metrics;
             return this;
         }
+
         public Builder metrics(GoogleCloudMlV1_Measurement_MetricResponse... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder stepCount(String stepCount) {
-            this.stepCount = Objects.requireNonNull(stepCount);
+            $.stepCount = stepCount;
             return this;
-        }        public GoogleCloudMlV1__MeasurementResponse build() {
-            return new GoogleCloudMlV1__MeasurementResponse(elapsedTime, metrics, stepCount);
+        }
+
+        public GoogleCloudMlV1__MeasurementResponse build() {
+            $.elapsedTime = Objects.requireNonNull($.elapsedTime, "expected parameter 'elapsedTime' to be non-null");
+            $.metrics = Objects.requireNonNull($.metrics, "expected parameter 'metrics' to be non-null");
+            $.stepCount = Objects.requireNonNull($.stepCount, "expected parameter 'stepCount' to be non-null");
+            return $;
         }
     }
+
 }

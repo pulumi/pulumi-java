@@ -5,7 +5,6 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class RuleGroupDimensionArgs extends com.pulumi.resources.ResourceA
     public static final RuleGroupDimensionArgs Empty = new RuleGroupDimensionArgs();
 
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public RuleGroupDimensionArgs(Output<String> value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private RuleGroupDimensionArgs() {}
 
-    private RuleGroupDimensionArgs() {
-        this.value = Codegen.empty();
+    private RuleGroupDimensionArgs(RuleGroupDimensionArgs $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupDimensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> value;
+        private RuleGroupDimensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupDimensionArgs();
         }
 
         public Builder(RuleGroupDimensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new RuleGroupDimensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public RuleGroupDimensionArgs build() {
-            return new RuleGroupDimensionArgs(value);
+            return value(Output.of(value));
+        }
+
+        public RuleGroupDimensionArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

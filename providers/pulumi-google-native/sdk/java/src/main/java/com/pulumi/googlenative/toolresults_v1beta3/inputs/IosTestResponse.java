@@ -25,7 +25,7 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iosAppInfo", required=true)
-      private final IosAppInfoResponse iosAppInfo;
+    private IosAppInfoResponse iosAppInfo;
 
     public IosAppInfoResponse iosAppInfo() {
         return this.iosAppInfo;
@@ -36,7 +36,7 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iosRoboTest", required=true)
-      private final IosRoboTestResponse iosRoboTest;
+    private IosRoboTestResponse iosRoboTest;
 
     public IosRoboTestResponse iosRoboTest() {
         return this.iosRoboTest;
@@ -47,7 +47,7 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iosTestLoop", required=true)
-      private final IosTestLoopResponse iosTestLoop;
+    private IosTestLoopResponse iosTestLoop;
 
     public IosTestLoopResponse iosTestLoop() {
         return this.iosTestLoop;
@@ -58,7 +58,7 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iosXcTest", required=true)
-      private final IosXcTestResponse iosXcTest;
+    private IosXcTestResponse iosXcTest;
 
     public IosXcTestResponse iosXcTest() {
         return this.iosXcTest;
@@ -69,82 +69,73 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="testTimeout", required=true)
-      private final DurationResponse testTimeout;
+    private DurationResponse testTimeout;
 
     public DurationResponse testTimeout() {
         return this.testTimeout;
     }
 
-    public IosTestResponse(
-        IosAppInfoResponse iosAppInfo,
-        IosRoboTestResponse iosRoboTest,
-        IosTestLoopResponse iosTestLoop,
-        IosXcTestResponse iosXcTest,
-        DurationResponse testTimeout) {
-        this.iosAppInfo = Objects.requireNonNull(iosAppInfo, "expected parameter 'iosAppInfo' to be non-null");
-        this.iosRoboTest = Objects.requireNonNull(iosRoboTest, "expected parameter 'iosRoboTest' to be non-null");
-        this.iosTestLoop = Objects.requireNonNull(iosTestLoop, "expected parameter 'iosTestLoop' to be non-null");
-        this.iosXcTest = Objects.requireNonNull(iosXcTest, "expected parameter 'iosXcTest' to be non-null");
-        this.testTimeout = Objects.requireNonNull(testTimeout, "expected parameter 'testTimeout' to be non-null");
-    }
+    private IosTestResponse() {}
 
-    private IosTestResponse() {
-        this.iosAppInfo = null;
-        this.iosRoboTest = null;
-        this.iosTestLoop = null;
-        this.iosXcTest = null;
-        this.testTimeout = null;
+    private IosTestResponse(IosTestResponse $) {
+        this.iosAppInfo = $.iosAppInfo;
+        this.iosRoboTest = $.iosRoboTest;
+        this.iosTestLoop = $.iosTestLoop;
+        this.iosXcTest = $.iosXcTest;
+        this.testTimeout = $.testTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosTestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private IosAppInfoResponse iosAppInfo;
-        private IosRoboTestResponse iosRoboTest;
-        private IosTestLoopResponse iosTestLoop;
-        private IosXcTestResponse iosXcTest;
-        private DurationResponse testTimeout;
+        private IosTestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosTestResponse();
         }
 
         public Builder(IosTestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iosAppInfo = defaults.iosAppInfo;
-    	      this.iosRoboTest = defaults.iosRoboTest;
-    	      this.iosTestLoop = defaults.iosTestLoop;
-    	      this.iosXcTest = defaults.iosXcTest;
-    	      this.testTimeout = defaults.testTimeout;
+            $ = new IosTestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder iosAppInfo(IosAppInfoResponse iosAppInfo) {
-            this.iosAppInfo = Objects.requireNonNull(iosAppInfo);
+            $.iosAppInfo = iosAppInfo;
             return this;
         }
+
         public Builder iosRoboTest(IosRoboTestResponse iosRoboTest) {
-            this.iosRoboTest = Objects.requireNonNull(iosRoboTest);
+            $.iosRoboTest = iosRoboTest;
             return this;
         }
+
         public Builder iosTestLoop(IosTestLoopResponse iosTestLoop) {
-            this.iosTestLoop = Objects.requireNonNull(iosTestLoop);
+            $.iosTestLoop = iosTestLoop;
             return this;
         }
+
         public Builder iosXcTest(IosXcTestResponse iosXcTest) {
-            this.iosXcTest = Objects.requireNonNull(iosXcTest);
+            $.iosXcTest = iosXcTest;
             return this;
         }
+
         public Builder testTimeout(DurationResponse testTimeout) {
-            this.testTimeout = Objects.requireNonNull(testTimeout);
+            $.testTimeout = testTimeout;
             return this;
-        }        public IosTestResponse build() {
-            return new IosTestResponse(iosAppInfo, iosRoboTest, iosTestLoop, iosXcTest, testTimeout);
+        }
+
+        public IosTestResponse build() {
+            $.iosAppInfo = Objects.requireNonNull($.iosAppInfo, "expected parameter 'iosAppInfo' to be non-null");
+            $.iosRoboTest = Objects.requireNonNull($.iosRoboTest, "expected parameter 'iosRoboTest' to be non-null");
+            $.iosTestLoop = Objects.requireNonNull($.iosTestLoop, "expected parameter 'iosTestLoop' to be non-null");
+            $.iosXcTest = Objects.requireNonNull($.iosXcTest, "expected parameter 'iosXcTest' to be non-null");
+            $.testTimeout = Objects.requireNonNull($.testTimeout, "expected parameter 'testTimeout' to be non-null");
+            return $;
         }
     }
+
 }

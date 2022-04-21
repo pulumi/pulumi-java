@@ -21,7 +21,7 @@ public final class AllowedIpRangeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -32,55 +32,52 @@ public final class AllowedIpRangeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public AllowedIpRangeResponse(
-        String description,
-        String value) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private AllowedIpRangeResponse() {}
 
-    private AllowedIpRangeResponse() {
-        this.description = null;
-        this.value = null;
+    private AllowedIpRangeResponse(AllowedIpRangeResponse $) {
+        this.description = $.description;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllowedIpRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String value;
+        private AllowedIpRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllowedIpRangeResponse();
         }
 
         public Builder(AllowedIpRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.value = defaults.value;
+            $ = new AllowedIpRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public AllowedIpRangeResponse build() {
-            return new AllowedIpRangeResponse(description, value);
+        }
+
+        public AllowedIpRangeResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

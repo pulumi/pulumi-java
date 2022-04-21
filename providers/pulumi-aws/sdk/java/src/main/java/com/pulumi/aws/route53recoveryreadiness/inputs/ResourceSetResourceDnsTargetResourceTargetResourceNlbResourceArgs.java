@@ -5,9 +5,9 @@ package com.pulumi.aws.route53recoveryreadiness.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
-    public ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs(@Nullable Output<String> arn) {
-        this.arn = arn;
-    }
+    private ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs() {}
 
-    private ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs() {
-        this.arn = Codegen.empty();
+    private ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs(ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
+        private ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs();
         }
 
         public Builder(ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
-        }        public ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs build() {
-            return new ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs(arn);
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        public ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs build() {
+            return $;
         }
     }
+
 }

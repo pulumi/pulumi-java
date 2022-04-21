@@ -21,45 +21,45 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse extends com.pu
      * 
      */
     @Import(name="layer7DdosDefenseConfig", required=true)
-      private final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
+    private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
 
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig;
     }
 
-    public SecurityPolicyAdaptiveProtectionConfigResponse(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig) {
-        this.layer7DdosDefenseConfig = Objects.requireNonNull(layer7DdosDefenseConfig, "expected parameter 'layer7DdosDefenseConfig' to be non-null");
-    }
+    private SecurityPolicyAdaptiveProtectionConfigResponse() {}
 
-    private SecurityPolicyAdaptiveProtectionConfigResponse() {
-        this.layer7DdosDefenseConfig = null;
+    private SecurityPolicyAdaptiveProtectionConfigResponse(SecurityPolicyAdaptiveProtectionConfigResponse $) {
+        this.layer7DdosDefenseConfig = $.layer7DdosDefenseConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyAdaptiveProtectionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
+        private SecurityPolicyAdaptiveProtectionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyAdaptiveProtectionConfigResponse();
         }
 
         public Builder(SecurityPolicyAdaptiveProtectionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.layer7DdosDefenseConfig = defaults.layer7DdosDefenseConfig;
+            $ = new SecurityPolicyAdaptiveProtectionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder layer7DdosDefenseConfig(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig) {
-            this.layer7DdosDefenseConfig = Objects.requireNonNull(layer7DdosDefenseConfig);
+            $.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
             return this;
-        }        public SecurityPolicyAdaptiveProtectionConfigResponse build() {
-            return new SecurityPolicyAdaptiveProtectionConfigResponse(layer7DdosDefenseConfig);
+        }
+
+        public SecurityPolicyAdaptiveProtectionConfigResponse build() {
+            $.layer7DdosDefenseConfig = Objects.requireNonNull($.layer7DdosDefenseConfig, "expected parameter 'layer7DdosDefenseConfig' to be non-null");
+            return $;
         }
     }
+
 }

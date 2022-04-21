@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.inputs.LinuxPatchSettingsArgs;
 import com.pulumi.azurenative.compute.inputs.SshConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="disablePasswordAuthentication")
-      private final @Nullable Output<Boolean> disablePasswordAuthentication;
+    private @Nullable Output<Boolean> disablePasswordAuthentication;
 
-    public Output<Boolean> disablePasswordAuthentication() {
-        return this.disablePasswordAuthentication == null ? Codegen.empty() : this.disablePasswordAuthentication;
+    public Optional<Output<Boolean>> disablePasswordAuthentication() {
+        return Optional.ofNullable(this.disablePasswordAuthentication);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="patchSettings")
-      private final @Nullable Output<LinuxPatchSettingsArgs> patchSettings;
+    private @Nullable Output<LinuxPatchSettingsArgs> patchSettings;
 
-    public Output<LinuxPatchSettingsArgs> patchSettings() {
-        return this.patchSettings == null ? Codegen.empty() : this.patchSettings;
+    public Optional<Output<LinuxPatchSettingsArgs>> patchSettings() {
+        return Optional.ofNullable(this.patchSettings);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="provisionVMAgent")
-      private final @Nullable Output<Boolean> provisionVMAgent;
+    private @Nullable Output<Boolean> provisionVMAgent;
 
-    public Output<Boolean> provisionVMAgent() {
-        return this.provisionVMAgent == null ? Codegen.empty() : this.provisionVMAgent;
+    public Optional<Output<Boolean>> provisionVMAgent() {
+        return Optional.ofNullable(this.provisionVMAgent);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ssh")
-      private final @Nullable Output<SshConfigurationArgs> ssh;
+    private @Nullable Output<SshConfigurationArgs> ssh;
 
-    public Output<SshConfigurationArgs> ssh() {
-        return this.ssh == null ? Codegen.empty() : this.ssh;
+    public Optional<Output<SshConfigurationArgs>> ssh() {
+        return Optional.ofNullable(this.ssh);
     }
 
-    public LinuxConfigurationArgs(
-        @Nullable Output<Boolean> disablePasswordAuthentication,
-        @Nullable Output<LinuxPatchSettingsArgs> patchSettings,
-        @Nullable Output<Boolean> provisionVMAgent,
-        @Nullable Output<SshConfigurationArgs> ssh) {
-        this.disablePasswordAuthentication = disablePasswordAuthentication;
-        this.patchSettings = patchSettings;
-        this.provisionVMAgent = provisionVMAgent;
-        this.ssh = ssh;
-    }
+    private LinuxConfigurationArgs() {}
 
-    private LinuxConfigurationArgs() {
-        this.disablePasswordAuthentication = Codegen.empty();
-        this.patchSettings = Codegen.empty();
-        this.provisionVMAgent = Codegen.empty();
-        this.ssh = Codegen.empty();
+    private LinuxConfigurationArgs(LinuxConfigurationArgs $) {
+        this.disablePasswordAuthentication = $.disablePasswordAuthentication;
+        this.patchSettings = $.patchSettings;
+        this.provisionVMAgent = $.provisionVMAgent;
+        this.ssh = $.ssh;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disablePasswordAuthentication;
-        private @Nullable Output<LinuxPatchSettingsArgs> patchSettings;
-        private @Nullable Output<Boolean> provisionVMAgent;
-        private @Nullable Output<SshConfigurationArgs> ssh;
+        private LinuxConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxConfigurationArgs();
         }
 
         public Builder(LinuxConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disablePasswordAuthentication = defaults.disablePasswordAuthentication;
-    	      this.patchSettings = defaults.patchSettings;
-    	      this.provisionVMAgent = defaults.provisionVMAgent;
-    	      this.ssh = defaults.ssh;
+            $ = new LinuxConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disablePasswordAuthentication(@Nullable Output<Boolean> disablePasswordAuthentication) {
-            this.disablePasswordAuthentication = disablePasswordAuthentication;
+            $.disablePasswordAuthentication = disablePasswordAuthentication;
             return this;
         }
-        public Builder disablePasswordAuthentication(@Nullable Boolean disablePasswordAuthentication) {
-            this.disablePasswordAuthentication = Codegen.ofNullable(disablePasswordAuthentication);
-            return this;
+
+        public Builder disablePasswordAuthentication(Boolean disablePasswordAuthentication) {
+            return disablePasswordAuthentication(Output.of(disablePasswordAuthentication));
         }
+
         public Builder patchSettings(@Nullable Output<LinuxPatchSettingsArgs> patchSettings) {
-            this.patchSettings = patchSettings;
+            $.patchSettings = patchSettings;
             return this;
         }
-        public Builder patchSettings(@Nullable LinuxPatchSettingsArgs patchSettings) {
-            this.patchSettings = Codegen.ofNullable(patchSettings);
-            return this;
+
+        public Builder patchSettings(LinuxPatchSettingsArgs patchSettings) {
+            return patchSettings(Output.of(patchSettings));
         }
+
         public Builder provisionVMAgent(@Nullable Output<Boolean> provisionVMAgent) {
-            this.provisionVMAgent = provisionVMAgent;
+            $.provisionVMAgent = provisionVMAgent;
             return this;
         }
-        public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
-            this.provisionVMAgent = Codegen.ofNullable(provisionVMAgent);
-            return this;
+
+        public Builder provisionVMAgent(Boolean provisionVMAgent) {
+            return provisionVMAgent(Output.of(provisionVMAgent));
         }
+
         public Builder ssh(@Nullable Output<SshConfigurationArgs> ssh) {
-            this.ssh = ssh;
+            $.ssh = ssh;
             return this;
         }
-        public Builder ssh(@Nullable SshConfigurationArgs ssh) {
-            this.ssh = Codegen.ofNullable(ssh);
-            return this;
-        }        public LinuxConfigurationArgs build() {
-            return new LinuxConfigurationArgs(disablePasswordAuthentication, patchSettings, provisionVMAgent, ssh);
+
+        public Builder ssh(SshConfigurationArgs ssh) {
+            return ssh(Output.of(ssh));
+        }
+
+        public LinuxConfigurationArgs build() {
+            return $;
         }
     }
+
 }

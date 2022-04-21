@@ -23,7 +23,7 @@ public final class OracleTableResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oracleColumns", required=true)
-      private final List<OracleColumnResponse> oracleColumns;
+    private List<OracleColumnResponse> oracleColumns;
 
     public List<OracleColumnResponse> oracleColumns() {
         return this.oracleColumns;
@@ -34,58 +34,56 @@ public final class OracleTableResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public OracleTableResponse(
-        List<OracleColumnResponse> oracleColumns,
-        String tableName) {
-        this.oracleColumns = Objects.requireNonNull(oracleColumns, "expected parameter 'oracleColumns' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private OracleTableResponse() {}
 
-    private OracleTableResponse() {
-        this.oracleColumns = List.of();
-        this.tableName = null;
+    private OracleTableResponse(OracleTableResponse $) {
+        this.oracleColumns = $.oracleColumns;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleTableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<OracleColumnResponse> oracleColumns;
-        private String tableName;
+        private OracleTableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleTableResponse();
         }
 
         public Builder(OracleTableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oracleColumns = defaults.oracleColumns;
-    	      this.tableName = defaults.tableName;
+            $ = new OracleTableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder oracleColumns(List<OracleColumnResponse> oracleColumns) {
-            this.oracleColumns = Objects.requireNonNull(oracleColumns);
+            $.oracleColumns = oracleColumns;
             return this;
         }
+
         public Builder oracleColumns(OracleColumnResponse... oracleColumns) {
             return oracleColumns(List.of(oracleColumns));
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public OracleTableResponse build() {
-            return new OracleTableResponse(oracleColumns, tableName);
+        }
+
+        public OracleTableResponse build() {
+            $.oracleColumns = Objects.requireNonNull($.oracleColumns, "expected parameter 'oracleColumns' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

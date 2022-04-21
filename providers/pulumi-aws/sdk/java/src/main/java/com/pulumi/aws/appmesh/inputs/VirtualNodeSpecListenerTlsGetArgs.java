@@ -7,9 +7,9 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateGetArg
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class VirtualNodeSpecListenerTlsGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="certificate", required=true)
-      private final Output<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate;
+    private Output<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate;
 
     public Output<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate() {
         return this.certificate;
@@ -33,7 +33,7 @@ public final class VirtualNodeSpecListenerTlsGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="mode", required=true)
-      private final Output<String> mode;
+    private Output<String> mode;
 
     public Output<String> mode() {
         return this.mode;
@@ -44,76 +44,70 @@ public final class VirtualNodeSpecListenerTlsGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="validation")
-      private final @Nullable Output<VirtualNodeSpecListenerTlsValidationGetArgs> validation;
+    private @Nullable Output<VirtualNodeSpecListenerTlsValidationGetArgs> validation;
 
-    public Output<VirtualNodeSpecListenerTlsValidationGetArgs> validation() {
-        return this.validation == null ? Codegen.empty() : this.validation;
+    public Optional<Output<VirtualNodeSpecListenerTlsValidationGetArgs>> validation() {
+        return Optional.ofNullable(this.validation);
     }
 
-    public VirtualNodeSpecListenerTlsGetArgs(
-        Output<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate,
-        Output<String> mode,
-        @Nullable Output<VirtualNodeSpecListenerTlsValidationGetArgs> validation) {
-        this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.validation = validation;
-    }
+    private VirtualNodeSpecListenerTlsGetArgs() {}
 
-    private VirtualNodeSpecListenerTlsGetArgs() {
-        this.certificate = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.validation = Codegen.empty();
+    private VirtualNodeSpecListenerTlsGetArgs(VirtualNodeSpecListenerTlsGetArgs $) {
+        this.certificate = $.certificate;
+        this.mode = $.mode;
+        this.validation = $.validation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerTlsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate;
-        private Output<String> mode;
-        private @Nullable Output<VirtualNodeSpecListenerTlsValidationGetArgs> validation;
+        private VirtualNodeSpecListenerTlsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerTlsGetArgs();
         }
 
         public Builder(VirtualNodeSpecListenerTlsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.mode = defaults.mode;
-    	      this.validation = defaults.validation;
+            $ = new VirtualNodeSpecListenerTlsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(Output<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate) {
-            this.certificate = Objects.requireNonNull(certificate);
+            $.certificate = certificate;
             return this;
         }
+
         public Builder certificate(VirtualNodeSpecListenerTlsCertificateGetArgs certificate) {
-            this.certificate = Output.of(Objects.requireNonNull(certificate));
-            return this;
+            return certificate(Output.of(certificate));
         }
+
         public Builder mode(Output<String> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
+            return mode(Output.of(mode));
         }
+
         public Builder validation(@Nullable Output<VirtualNodeSpecListenerTlsValidationGetArgs> validation) {
-            this.validation = validation;
+            $.validation = validation;
             return this;
         }
-        public Builder validation(@Nullable VirtualNodeSpecListenerTlsValidationGetArgs validation) {
-            this.validation = Codegen.ofNullable(validation);
-            return this;
-        }        public VirtualNodeSpecListenerTlsGetArgs build() {
-            return new VirtualNodeSpecListenerTlsGetArgs(certificate, mode, validation);
+
+        public Builder validation(VirtualNodeSpecListenerTlsValidationGetArgs validation) {
+            return validation(Output.of(validation));
+        }
+
+        public VirtualNodeSpecListenerTlsGetArgs build() {
+            $.certificate = Objects.requireNonNull($.certificate, "expected parameter 'certificate' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

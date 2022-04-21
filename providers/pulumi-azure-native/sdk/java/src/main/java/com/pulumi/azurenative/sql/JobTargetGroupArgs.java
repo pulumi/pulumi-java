@@ -6,10 +6,10 @@ package com.pulumi.azurenative.sql;
 import com.pulumi.azurenative.sql.inputs.JobTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="jobAgentName", required=true)
-      private final Output<String> jobAgentName;
+    private Output<String> jobAgentName;
 
     public Output<String> jobAgentName() {
         return this.jobAgentName;
@@ -33,7 +33,7 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="members", required=true)
-      private final Output<List<JobTargetArgs>> members;
+    private Output<List<JobTargetArgs>> members;
 
     public Output<List<JobTargetArgs>> members() {
         return this.members;
@@ -44,7 +44,7 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -66,105 +66,96 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="targetGroupName")
-      private final @Nullable Output<String> targetGroupName;
+    private @Nullable Output<String> targetGroupName;
 
-    public Output<String> targetGroupName() {
-        return this.targetGroupName == null ? Codegen.empty() : this.targetGroupName;
+    public Optional<Output<String>> targetGroupName() {
+        return Optional.ofNullable(this.targetGroupName);
     }
 
-    public JobTargetGroupArgs(
-        Output<String> jobAgentName,
-        Output<List<JobTargetArgs>> members,
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        @Nullable Output<String> targetGroupName) {
-        this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.targetGroupName = targetGroupName;
-    }
+    private JobTargetGroupArgs() {}
 
-    private JobTargetGroupArgs() {
-        this.jobAgentName = Codegen.empty();
-        this.members = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.targetGroupName = Codegen.empty();
+    private JobTargetGroupArgs(JobTargetGroupArgs $) {
+        this.jobAgentName = $.jobAgentName;
+        this.members = $.members;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.targetGroupName = $.targetGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobTargetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> jobAgentName;
-        private Output<List<JobTargetArgs>> members;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private @Nullable Output<String> targetGroupName;
+        private JobTargetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobTargetGroupArgs();
         }
 
         public Builder(JobTargetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobAgentName = defaults.jobAgentName;
-    	      this.members = defaults.members;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.targetGroupName = defaults.targetGroupName;
+            $ = new JobTargetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobAgentName(Output<String> jobAgentName) {
-            this.jobAgentName = Objects.requireNonNull(jobAgentName);
+            $.jobAgentName = jobAgentName;
             return this;
         }
+
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Output.of(Objects.requireNonNull(jobAgentName));
-            return this;
+            return jobAgentName(Output.of(jobAgentName));
         }
+
         public Builder members(Output<List<JobTargetArgs>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<JobTargetArgs> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(JobTargetArgs... members) {
             return members(List.of(members));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder targetGroupName(@Nullable Output<String> targetGroupName) {
-            this.targetGroupName = targetGroupName;
+            $.targetGroupName = targetGroupName;
             return this;
         }
-        public Builder targetGroupName(@Nullable String targetGroupName) {
-            this.targetGroupName = Codegen.ofNullable(targetGroupName);
-            return this;
-        }        public JobTargetGroupArgs build() {
-            return new JobTargetGroupArgs(jobAgentName, members, resourceGroupName, serverName, targetGroupName);
+
+        public Builder targetGroupName(String targetGroupName) {
+            return targetGroupName(Output.of(targetGroupName));
+        }
+
+        public JobTargetGroupArgs build() {
+            $.jobAgentName = Objects.requireNonNull($.jobAgentName, "expected parameter 'jobAgentName' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

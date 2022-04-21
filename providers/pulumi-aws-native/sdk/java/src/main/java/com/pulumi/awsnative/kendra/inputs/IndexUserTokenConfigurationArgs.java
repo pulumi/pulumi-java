@@ -7,8 +7,8 @@ import com.pulumi.awsnative.kendra.inputs.IndexJsonTokenTypeConfigurationArgs;
 import com.pulumi.awsnative.kendra.inputs.IndexJwtTokenTypeConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class IndexUserTokenConfigurationArgs extends com.pulumi.resources.
     public static final IndexUserTokenConfigurationArgs Empty = new IndexUserTokenConfigurationArgs();
 
     @Import(name="jsonTokenTypeConfiguration")
-      private final @Nullable Output<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration;
+    private @Nullable Output<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration;
 
-    public Output<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration() {
-        return this.jsonTokenTypeConfiguration == null ? Codegen.empty() : this.jsonTokenTypeConfiguration;
+    public Optional<Output<IndexJsonTokenTypeConfigurationArgs>> jsonTokenTypeConfiguration() {
+        return Optional.ofNullable(this.jsonTokenTypeConfiguration);
     }
 
     @Import(name="jwtTokenTypeConfiguration")
-      private final @Nullable Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration;
+    private @Nullable Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration;
 
-    public Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration() {
-        return this.jwtTokenTypeConfiguration == null ? Codegen.empty() : this.jwtTokenTypeConfiguration;
+    public Optional<Output<IndexJwtTokenTypeConfigurationArgs>> jwtTokenTypeConfiguration() {
+        return Optional.ofNullable(this.jwtTokenTypeConfiguration);
     }
 
-    public IndexUserTokenConfigurationArgs(
-        @Nullable Output<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration,
-        @Nullable Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration) {
-        this.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
-        this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
-    }
+    private IndexUserTokenConfigurationArgs() {}
 
-    private IndexUserTokenConfigurationArgs() {
-        this.jsonTokenTypeConfiguration = Codegen.empty();
-        this.jwtTokenTypeConfiguration = Codegen.empty();
+    private IndexUserTokenConfigurationArgs(IndexUserTokenConfigurationArgs $) {
+        this.jsonTokenTypeConfiguration = $.jsonTokenTypeConfiguration;
+        this.jwtTokenTypeConfiguration = $.jwtTokenTypeConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexUserTokenConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration;
-        private @Nullable Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration;
+        private IndexUserTokenConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexUserTokenConfigurationArgs();
         }
 
         public Builder(IndexUserTokenConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jsonTokenTypeConfiguration = defaults.jsonTokenTypeConfiguration;
-    	      this.jwtTokenTypeConfiguration = defaults.jwtTokenTypeConfiguration;
+            $ = new IndexUserTokenConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jsonTokenTypeConfiguration(@Nullable Output<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration) {
-            this.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
+            $.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
             return this;
         }
-        public Builder jsonTokenTypeConfiguration(@Nullable IndexJsonTokenTypeConfigurationArgs jsonTokenTypeConfiguration) {
-            this.jsonTokenTypeConfiguration = Codegen.ofNullable(jsonTokenTypeConfiguration);
-            return this;
+
+        public Builder jsonTokenTypeConfiguration(IndexJsonTokenTypeConfigurationArgs jsonTokenTypeConfiguration) {
+            return jsonTokenTypeConfiguration(Output.of(jsonTokenTypeConfiguration));
         }
+
         public Builder jwtTokenTypeConfiguration(@Nullable Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration) {
-            this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
+            $.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
             return this;
         }
-        public Builder jwtTokenTypeConfiguration(@Nullable IndexJwtTokenTypeConfigurationArgs jwtTokenTypeConfiguration) {
-            this.jwtTokenTypeConfiguration = Codegen.ofNullable(jwtTokenTypeConfiguration);
-            return this;
-        }        public IndexUserTokenConfigurationArgs build() {
-            return new IndexUserTokenConfigurationArgs(jsonTokenTypeConfiguration, jwtTokenTypeConfiguration);
+
+        public Builder jwtTokenTypeConfiguration(IndexJwtTokenTypeConfigurationArgs jwtTokenTypeConfiguration) {
+            return jwtTokenTypeConfiguration(Output.of(jwtTokenTypeConfiguration));
+        }
+
+        public IndexUserTokenConfigurationArgs build() {
+            return $;
         }
     }
+
 }

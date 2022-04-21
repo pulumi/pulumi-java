@@ -21,7 +21,7 @@ public final class DatabaseAccountConnectionStringResponse extends com.pulumi.re
      * 
      */
     @Import(name="connectionString", required=true)
-      private final String connectionString;
+    private String connectionString;
 
     public String connectionString() {
         return this.connectionString;
@@ -32,55 +32,52 @@ public final class DatabaseAccountConnectionStringResponse extends com.pulumi.re
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
-    public DatabaseAccountConnectionStringResponse(
-        String connectionString,
-        String description) {
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-    }
+    private DatabaseAccountConnectionStringResponse() {}
 
-    private DatabaseAccountConnectionStringResponse() {
-        this.connectionString = null;
-        this.description = null;
+    private DatabaseAccountConnectionStringResponse(DatabaseAccountConnectionStringResponse $) {
+        this.connectionString = $.connectionString;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseAccountConnectionStringResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionString;
-        private String description;
+        private DatabaseAccountConnectionStringResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseAccountConnectionStringResponse();
         }
 
         public Builder(DatabaseAccountConnectionStringResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionString = defaults.connectionString;
-    	      this.description = defaults.description;
+            $ = new DatabaseAccountConnectionStringResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionString(String connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
-        }        public DatabaseAccountConnectionStringResponse build() {
-            return new DatabaseAccountConnectionStringResponse(connectionString, description);
+        }
+
+        public DatabaseAccountConnectionStringResponse build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            return $;
         }
     }
+
 }

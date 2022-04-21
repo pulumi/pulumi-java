@@ -5,10 +5,10 @@ package com.pulumi.aws.synthetics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CanaryScheduleGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="durationInSeconds")
-      private final @Nullable Output<Integer> durationInSeconds;
+    private @Nullable Output<Integer> durationInSeconds;
 
-    public Output<Integer> durationInSeconds() {
-        return this.durationInSeconds == null ? Codegen.empty() : this.durationInSeconds;
+    public Optional<Output<Integer>> durationInSeconds() {
+        return Optional.ofNullable(this.durationInSeconds);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class CanaryScheduleGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="expression", required=true)
-      private final Output<String> expression;
+    private Output<String> expression;
 
     public Output<String> expression() {
         return this.expression;
     }
 
-    public CanaryScheduleGetArgs(
-        @Nullable Output<Integer> durationInSeconds,
-        Output<String> expression) {
-        this.durationInSeconds = durationInSeconds;
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-    }
+    private CanaryScheduleGetArgs() {}
 
-    private CanaryScheduleGetArgs() {
-        this.durationInSeconds = Codegen.empty();
-        this.expression = Codegen.empty();
+    private CanaryScheduleGetArgs(CanaryScheduleGetArgs $) {
+        this.durationInSeconds = $.durationInSeconds;
+        this.expression = $.expression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryScheduleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> durationInSeconds;
-        private Output<String> expression;
+        private CanaryScheduleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryScheduleGetArgs();
         }
 
         public Builder(CanaryScheduleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationInSeconds = defaults.durationInSeconds;
-    	      this.expression = defaults.expression;
+            $ = new CanaryScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder durationInSeconds(@Nullable Output<Integer> durationInSeconds) {
-            this.durationInSeconds = durationInSeconds;
+            $.durationInSeconds = durationInSeconds;
             return this;
         }
-        public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = Codegen.ofNullable(durationInSeconds);
-            return this;
+
+        public Builder durationInSeconds(Integer durationInSeconds) {
+            return durationInSeconds(Output.of(durationInSeconds));
         }
+
         public Builder expression(Output<String> expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Output.of(Objects.requireNonNull(expression));
-            return this;
-        }        public CanaryScheduleGetArgs build() {
-            return new CanaryScheduleGetArgs(durationInSeconds, expression);
+            return expression(Output.of(expression));
+        }
+
+        public CanaryScheduleGetArgs build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            return $;
         }
     }
+
 }

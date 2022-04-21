@@ -5,11 +5,11 @@ package com.pulumi.awsnative.evidently.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,130 +18,116 @@ public final class FeatureVariationObjectArgs extends com.pulumi.resources.Resou
     public static final FeatureVariationObjectArgs Empty = new FeatureVariationObjectArgs();
 
     @Import(name="booleanValue")
-      private final @Nullable Output<Boolean> booleanValue;
+    private @Nullable Output<Boolean> booleanValue;
 
-    public Output<Boolean> booleanValue() {
-        return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
+    public Optional<Output<Boolean>> booleanValue() {
+        return Optional.ofNullable(this.booleanValue);
     }
 
     @Import(name="doubleValue")
-      private final @Nullable Output<Double> doubleValue;
+    private @Nullable Output<Double> doubleValue;
 
-    public Output<Double> doubleValue() {
-        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
+    public Optional<Output<Double>> doubleValue() {
+        return Optional.ofNullable(this.doubleValue);
     }
 
     @Import(name="longValue")
-      private final @Nullable Output<Double> longValue;
+    private @Nullable Output<Double> longValue;
 
-    public Output<Double> longValue() {
-        return this.longValue == null ? Codegen.empty() : this.longValue;
+    public Optional<Output<Double>> longValue() {
+        return Optional.ofNullable(this.longValue);
     }
 
     @Import(name="stringValue")
-      private final @Nullable Output<String> stringValue;
+    private @Nullable Output<String> stringValue;
 
-    public Output<String> stringValue() {
-        return this.stringValue == null ? Codegen.empty() : this.stringValue;
+    public Optional<Output<String>> stringValue() {
+        return Optional.ofNullable(this.stringValue);
     }
 
     @Import(name="variationName")
-      private final @Nullable Output<String> variationName;
+    private @Nullable Output<String> variationName;
 
-    public Output<String> variationName() {
-        return this.variationName == null ? Codegen.empty() : this.variationName;
+    public Optional<Output<String>> variationName() {
+        return Optional.ofNullable(this.variationName);
     }
 
-    public FeatureVariationObjectArgs(
-        @Nullable Output<Boolean> booleanValue,
-        @Nullable Output<Double> doubleValue,
-        @Nullable Output<Double> longValue,
-        @Nullable Output<String> stringValue,
-        @Nullable Output<String> variationName) {
-        this.booleanValue = booleanValue;
-        this.doubleValue = doubleValue;
-        this.longValue = longValue;
-        this.stringValue = stringValue;
-        this.variationName = variationName;
-    }
+    private FeatureVariationObjectArgs() {}
 
-    private FeatureVariationObjectArgs() {
-        this.booleanValue = Codegen.empty();
-        this.doubleValue = Codegen.empty();
-        this.longValue = Codegen.empty();
-        this.stringValue = Codegen.empty();
-        this.variationName = Codegen.empty();
+    private FeatureVariationObjectArgs(FeatureVariationObjectArgs $) {
+        this.booleanValue = $.booleanValue;
+        this.doubleValue = $.doubleValue;
+        this.longValue = $.longValue;
+        this.stringValue = $.stringValue;
+        this.variationName = $.variationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureVariationObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> booleanValue;
-        private @Nullable Output<Double> doubleValue;
-        private @Nullable Output<Double> longValue;
-        private @Nullable Output<String> stringValue;
-        private @Nullable Output<String> variationName;
+        private FeatureVariationObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureVariationObjectArgs();
         }
 
         public Builder(FeatureVariationObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanValue = defaults.booleanValue;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.longValue = defaults.longValue;
-    	      this.stringValue = defaults.stringValue;
-    	      this.variationName = defaults.variationName;
+            $ = new FeatureVariationObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanValue(@Nullable Output<Boolean> booleanValue) {
-            this.booleanValue = booleanValue;
+            $.booleanValue = booleanValue;
             return this;
         }
-        public Builder booleanValue(@Nullable Boolean booleanValue) {
-            this.booleanValue = Codegen.ofNullable(booleanValue);
-            return this;
+
+        public Builder booleanValue(Boolean booleanValue) {
+            return booleanValue(Output.of(booleanValue));
         }
+
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
-            this.doubleValue = doubleValue;
+            $.doubleValue = doubleValue;
             return this;
         }
-        public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Codegen.ofNullable(doubleValue);
-            return this;
+
+        public Builder doubleValue(Double doubleValue) {
+            return doubleValue(Output.of(doubleValue));
         }
+
         public Builder longValue(@Nullable Output<Double> longValue) {
-            this.longValue = longValue;
+            $.longValue = longValue;
             return this;
         }
-        public Builder longValue(@Nullable Double longValue) {
-            this.longValue = Codegen.ofNullable(longValue);
-            return this;
+
+        public Builder longValue(Double longValue) {
+            return longValue(Output.of(longValue));
         }
+
         public Builder stringValue(@Nullable Output<String> stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
         }
-        public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Codegen.ofNullable(stringValue);
-            return this;
+
+        public Builder stringValue(String stringValue) {
+            return stringValue(Output.of(stringValue));
         }
+
         public Builder variationName(@Nullable Output<String> variationName) {
-            this.variationName = variationName;
+            $.variationName = variationName;
             return this;
         }
-        public Builder variationName(@Nullable String variationName) {
-            this.variationName = Codegen.ofNullable(variationName);
-            return this;
-        }        public FeatureVariationObjectArgs build() {
-            return new FeatureVariationObjectArgs(booleanValue, doubleValue, longValue, stringValue, variationName);
+
+        public Builder variationName(String variationName) {
+            return variationName(Output.of(variationName));
+        }
+
+        public FeatureVariationObjectArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2BucketArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="max")
-      private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> max;
+    private @Nullable Output<GooglePrivacyDlpV2ValueArgs> max;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> max() {
-        return this.max == null ? Codegen.empty() : this.max;
+    public Optional<Output<GooglePrivacyDlpV2ValueArgs>> max() {
+        return Optional.ofNullable(this.max);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GooglePrivacyDlpV2BucketArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="min")
-      private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> min;
+    private @Nullable Output<GooglePrivacyDlpV2ValueArgs> min;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> min() {
-        return this.min == null ? Codegen.empty() : this.min;
+    public Optional<Output<GooglePrivacyDlpV2ValueArgs>> min() {
+        return Optional.ofNullable(this.min);
     }
 
     /**
@@ -46,76 +46,69 @@ public final class GooglePrivacyDlpV2BucketArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="replacementValue", required=true)
-      private final Output<GooglePrivacyDlpV2ValueArgs> replacementValue;
+    private Output<GooglePrivacyDlpV2ValueArgs> replacementValue;
 
     public Output<GooglePrivacyDlpV2ValueArgs> replacementValue() {
         return this.replacementValue;
     }
 
-    public GooglePrivacyDlpV2BucketArgs(
-        @Nullable Output<GooglePrivacyDlpV2ValueArgs> max,
-        @Nullable Output<GooglePrivacyDlpV2ValueArgs> min,
-        Output<GooglePrivacyDlpV2ValueArgs> replacementValue) {
-        this.max = max;
-        this.min = min;
-        this.replacementValue = Objects.requireNonNull(replacementValue, "expected parameter 'replacementValue' to be non-null");
-    }
+    private GooglePrivacyDlpV2BucketArgs() {}
 
-    private GooglePrivacyDlpV2BucketArgs() {
-        this.max = Codegen.empty();
-        this.min = Codegen.empty();
-        this.replacementValue = Codegen.empty();
+    private GooglePrivacyDlpV2BucketArgs(GooglePrivacyDlpV2BucketArgs $) {
+        this.max = $.max;
+        this.min = $.min;
+        this.replacementValue = $.replacementValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2BucketArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2ValueArgs> max;
-        private @Nullable Output<GooglePrivacyDlpV2ValueArgs> min;
-        private Output<GooglePrivacyDlpV2ValueArgs> replacementValue;
+        private GooglePrivacyDlpV2BucketArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2BucketArgs();
         }
 
         public Builder(GooglePrivacyDlpV2BucketArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
-    	      this.replacementValue = defaults.replacementValue;
+            $ = new GooglePrivacyDlpV2BucketArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Output<GooglePrivacyDlpV2ValueArgs> max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
-        public Builder max(@Nullable GooglePrivacyDlpV2ValueArgs max) {
-            this.max = Codegen.ofNullable(max);
-            return this;
+
+        public Builder max(GooglePrivacyDlpV2ValueArgs max) {
+            return max(Output.of(max));
         }
+
         public Builder min(@Nullable Output<GooglePrivacyDlpV2ValueArgs> min) {
-            this.min = min;
+            $.min = min;
             return this;
         }
-        public Builder min(@Nullable GooglePrivacyDlpV2ValueArgs min) {
-            this.min = Codegen.ofNullable(min);
-            return this;
+
+        public Builder min(GooglePrivacyDlpV2ValueArgs min) {
+            return min(Output.of(min));
         }
+
         public Builder replacementValue(Output<GooglePrivacyDlpV2ValueArgs> replacementValue) {
-            this.replacementValue = Objects.requireNonNull(replacementValue);
+            $.replacementValue = replacementValue;
             return this;
         }
+
         public Builder replacementValue(GooglePrivacyDlpV2ValueArgs replacementValue) {
-            this.replacementValue = Output.of(Objects.requireNonNull(replacementValue));
-            return this;
-        }        public GooglePrivacyDlpV2BucketArgs build() {
-            return new GooglePrivacyDlpV2BucketArgs(max, min, replacementValue);
+            return replacementValue(Output.of(replacementValue));
+        }
+
+        public GooglePrivacyDlpV2BucketArgs build() {
+            $.replacementValue = Objects.requireNonNull($.replacementValue, "expected parameter 'replacementValue' to be non-null");
+            return $;
         }
     }
+
 }

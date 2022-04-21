@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class OrganizationSecurityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class OrganizationSecurityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -43,7 +43,7 @@ public final class OrganizationSecurityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
@@ -58,89 +58,80 @@ public final class OrganizationSecurityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public OrganizationSecurityPolicyArgs(
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        Output<String> parent,
-        @Nullable Output<String> type) {
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.type = type;
-    }
+    private OrganizationSecurityPolicyArgs() {}
 
-    private OrganizationSecurityPolicyArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.type = Codegen.empty();
+    private OrganizationSecurityPolicyArgs(OrganizationSecurityPolicyArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.parent = $.parent;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationSecurityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private Output<String> parent;
-        private @Nullable Output<String> type;
+        private OrganizationSecurityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationSecurityPolicyArgs();
         }
 
         public Builder(OrganizationSecurityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.parent = defaults.parent;
-    	      this.type = defaults.type;
+            $ = new OrganizationSecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
+            return parent(Output.of(parent));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public OrganizationSecurityPolicyArgs build() {
-            return new OrganizationSecurityPolicyArgs(description, displayName, parent, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public OrganizationSecurityPolicyArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

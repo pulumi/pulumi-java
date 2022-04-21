@@ -6,8 +6,8 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.inputs.InfrastructureConfigurationS3LogsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class InfrastructureConfigurationLoggingArgs extends com.pulumi.res
     public static final InfrastructureConfigurationLoggingArgs Empty = new InfrastructureConfigurationLoggingArgs();
 
     @Import(name="s3Logs")
-      private final @Nullable Output<InfrastructureConfigurationS3LogsArgs> s3Logs;
+    private @Nullable Output<InfrastructureConfigurationS3LogsArgs> s3Logs;
 
-    public Output<InfrastructureConfigurationS3LogsArgs> s3Logs() {
-        return this.s3Logs == null ? Codegen.empty() : this.s3Logs;
+    public Optional<Output<InfrastructureConfigurationS3LogsArgs>> s3Logs() {
+        return Optional.ofNullable(this.s3Logs);
     }
 
-    public InfrastructureConfigurationLoggingArgs(@Nullable Output<InfrastructureConfigurationS3LogsArgs> s3Logs) {
-        this.s3Logs = s3Logs;
-    }
+    private InfrastructureConfigurationLoggingArgs() {}
 
-    private InfrastructureConfigurationLoggingArgs() {
-        this.s3Logs = Codegen.empty();
+    private InfrastructureConfigurationLoggingArgs(InfrastructureConfigurationLoggingArgs $) {
+        this.s3Logs = $.s3Logs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InfrastructureConfigurationLoggingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InfrastructureConfigurationS3LogsArgs> s3Logs;
+        private InfrastructureConfigurationLoggingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InfrastructureConfigurationLoggingArgs();
         }
 
         public Builder(InfrastructureConfigurationLoggingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Logs = defaults.s3Logs;
+            $ = new InfrastructureConfigurationLoggingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Logs(@Nullable Output<InfrastructureConfigurationS3LogsArgs> s3Logs) {
-            this.s3Logs = s3Logs;
+            $.s3Logs = s3Logs;
             return this;
         }
-        public Builder s3Logs(@Nullable InfrastructureConfigurationS3LogsArgs s3Logs) {
-            this.s3Logs = Codegen.ofNullable(s3Logs);
-            return this;
-        }        public InfrastructureConfigurationLoggingArgs build() {
-            return new InfrastructureConfigurationLoggingArgs(s3Logs);
+
+        public Builder s3Logs(InfrastructureConfigurationS3LogsArgs s3Logs) {
+            return s3Logs(Output.of(s3Logs));
+        }
+
+        public InfrastructureConfigurationLoggingArgs build() {
+            return $;
         }
     }
+
 }

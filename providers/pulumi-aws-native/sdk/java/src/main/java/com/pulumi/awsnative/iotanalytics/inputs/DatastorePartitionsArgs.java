@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatastorePartitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class DatastorePartitionsArgs extends com.pulumi.resources.Resource
     public static final DatastorePartitionsArgs Empty = new DatastorePartitionsArgs();
 
     @Import(name="partitions")
-      private final @Nullable Output<List<DatastorePartitionArgs>> partitions;
+    private @Nullable Output<List<DatastorePartitionArgs>> partitions;
 
-    public Output<List<DatastorePartitionArgs>> partitions() {
-        return this.partitions == null ? Codegen.empty() : this.partitions;
+    public Optional<Output<List<DatastorePartitionArgs>>> partitions() {
+        return Optional.ofNullable(this.partitions);
     }
 
-    public DatastorePartitionsArgs(@Nullable Output<List<DatastorePartitionArgs>> partitions) {
-        this.partitions = partitions;
-    }
+    private DatastorePartitionsArgs() {}
 
-    private DatastorePartitionsArgs() {
-        this.partitions = Codegen.empty();
+    private DatastorePartitionsArgs(DatastorePartitionsArgs $) {
+        this.partitions = $.partitions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastorePartitionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DatastorePartitionArgs>> partitions;
+        private DatastorePartitionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastorePartitionsArgs();
         }
 
         public Builder(DatastorePartitionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitions = defaults.partitions;
+            $ = new DatastorePartitionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partitions(@Nullable Output<List<DatastorePartitionArgs>> partitions) {
-            this.partitions = partitions;
+            $.partitions = partitions;
             return this;
         }
-        public Builder partitions(@Nullable List<DatastorePartitionArgs> partitions) {
-            this.partitions = Codegen.ofNullable(partitions);
-            return this;
+
+        public Builder partitions(List<DatastorePartitionArgs> partitions) {
+            return partitions(Output.of(partitions));
         }
+
         public Builder partitions(DatastorePartitionArgs... partitions) {
             return partitions(List.of(partitions));
-        }        public DatastorePartitionsArgs build() {
-            return new DatastorePartitionsArgs(partitions);
+        }
+
+        public DatastorePartitionsArgs build() {
+            return $;
         }
     }
+
 }

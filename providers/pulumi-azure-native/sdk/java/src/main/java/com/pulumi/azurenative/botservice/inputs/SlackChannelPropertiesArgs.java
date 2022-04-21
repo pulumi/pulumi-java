@@ -5,10 +5,10 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<String> clientSecret;
+    private @Nullable Output<String> clientSecret;
 
-    public Output<String> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<String>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -58,10 +58,10 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="landingPageUrl")
-      private final @Nullable Output<String> landingPageUrl;
+    private @Nullable Output<String> landingPageUrl;
 
-    public Output<String> landingPageUrl() {
-        return this.landingPageUrl == null ? Codegen.empty() : this.landingPageUrl;
+    public Optional<Output<String>> landingPageUrl() {
+        return Optional.ofNullable(this.landingPageUrl);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="signingSecret")
-      private final @Nullable Output<String> signingSecret;
+    private @Nullable Output<String> signingSecret;
 
-    public Output<String> signingSecret() {
-        return this.signingSecret == null ? Codegen.empty() : this.signingSecret;
+    public Optional<Output<String>> signingSecret() {
+        return Optional.ofNullable(this.signingSecret);
     }
 
     /**
@@ -80,115 +80,99 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="verificationToken")
-      private final @Nullable Output<String> verificationToken;
+    private @Nullable Output<String> verificationToken;
 
-    public Output<String> verificationToken() {
-        return this.verificationToken == null ? Codegen.empty() : this.verificationToken;
+    public Optional<Output<String>> verificationToken() {
+        return Optional.ofNullable(this.verificationToken);
     }
 
-    public SlackChannelPropertiesArgs(
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> clientSecret,
-        Output<Boolean> isEnabled,
-        @Nullable Output<String> landingPageUrl,
-        @Nullable Output<String> signingSecret,
-        @Nullable Output<String> verificationToken) {
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.landingPageUrl = landingPageUrl;
-        this.signingSecret = signingSecret;
-        this.verificationToken = verificationToken;
-    }
+    private SlackChannelPropertiesArgs() {}
 
-    private SlackChannelPropertiesArgs() {
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.landingPageUrl = Codegen.empty();
-        this.signingSecret = Codegen.empty();
-        this.verificationToken = Codegen.empty();
+    private SlackChannelPropertiesArgs(SlackChannelPropertiesArgs $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.isEnabled = $.isEnabled;
+        this.landingPageUrl = $.landingPageUrl;
+        this.signingSecret = $.signingSecret;
+        this.verificationToken = $.verificationToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlackChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> clientSecret;
-        private Output<Boolean> isEnabled;
-        private @Nullable Output<String> landingPageUrl;
-        private @Nullable Output<String> signingSecret;
-        private @Nullable Output<String> verificationToken;
+        private SlackChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlackChannelPropertiesArgs();
         }
 
         public Builder(SlackChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.landingPageUrl = defaults.landingPageUrl;
-    	      this.signingSecret = defaults.signingSecret;
-    	      this.verificationToken = defaults.verificationToken;
+            $ = new SlackChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
+
+        public Builder clientSecret(String clientSecret) {
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder landingPageUrl(@Nullable Output<String> landingPageUrl) {
-            this.landingPageUrl = landingPageUrl;
+            $.landingPageUrl = landingPageUrl;
             return this;
         }
-        public Builder landingPageUrl(@Nullable String landingPageUrl) {
-            this.landingPageUrl = Codegen.ofNullable(landingPageUrl);
-            return this;
+
+        public Builder landingPageUrl(String landingPageUrl) {
+            return landingPageUrl(Output.of(landingPageUrl));
         }
+
         public Builder signingSecret(@Nullable Output<String> signingSecret) {
-            this.signingSecret = signingSecret;
+            $.signingSecret = signingSecret;
             return this;
         }
-        public Builder signingSecret(@Nullable String signingSecret) {
-            this.signingSecret = Codegen.ofNullable(signingSecret);
-            return this;
+
+        public Builder signingSecret(String signingSecret) {
+            return signingSecret(Output.of(signingSecret));
         }
+
         public Builder verificationToken(@Nullable Output<String> verificationToken) {
-            this.verificationToken = verificationToken;
+            $.verificationToken = verificationToken;
             return this;
         }
-        public Builder verificationToken(@Nullable String verificationToken) {
-            this.verificationToken = Codegen.ofNullable(verificationToken);
-            return this;
-        }        public SlackChannelPropertiesArgs build() {
-            return new SlackChannelPropertiesArgs(clientId, clientSecret, isEnabled, landingPageUrl, signingSecret, verificationToken);
+
+        public Builder verificationToken(String verificationToken) {
+            return verificationToken(Output.of(verificationToken));
+        }
+
+        public SlackChannelPropertiesArgs build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

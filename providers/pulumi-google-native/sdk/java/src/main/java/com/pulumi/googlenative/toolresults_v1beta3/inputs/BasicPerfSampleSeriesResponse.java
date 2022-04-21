@@ -17,78 +17,73 @@ public final class BasicPerfSampleSeriesResponse extends com.pulumi.resources.In
     public static final BasicPerfSampleSeriesResponse Empty = new BasicPerfSampleSeriesResponse();
 
     @Import(name="perfMetricType", required=true)
-      private final String perfMetricType;
+    private String perfMetricType;
 
     public String perfMetricType() {
         return this.perfMetricType;
     }
 
     @Import(name="perfUnit", required=true)
-      private final String perfUnit;
+    private String perfUnit;
 
     public String perfUnit() {
         return this.perfUnit;
     }
 
     @Import(name="sampleSeriesLabel", required=true)
-      private final String sampleSeriesLabel;
+    private String sampleSeriesLabel;
 
     public String sampleSeriesLabel() {
         return this.sampleSeriesLabel;
     }
 
-    public BasicPerfSampleSeriesResponse(
-        String perfMetricType,
-        String perfUnit,
-        String sampleSeriesLabel) {
-        this.perfMetricType = Objects.requireNonNull(perfMetricType, "expected parameter 'perfMetricType' to be non-null");
-        this.perfUnit = Objects.requireNonNull(perfUnit, "expected parameter 'perfUnit' to be non-null");
-        this.sampleSeriesLabel = Objects.requireNonNull(sampleSeriesLabel, "expected parameter 'sampleSeriesLabel' to be non-null");
-    }
+    private BasicPerfSampleSeriesResponse() {}
 
-    private BasicPerfSampleSeriesResponse() {
-        this.perfMetricType = null;
-        this.perfUnit = null;
-        this.sampleSeriesLabel = null;
+    private BasicPerfSampleSeriesResponse(BasicPerfSampleSeriesResponse $) {
+        this.perfMetricType = $.perfMetricType;
+        this.perfUnit = $.perfUnit;
+        this.sampleSeriesLabel = $.sampleSeriesLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicPerfSampleSeriesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String perfMetricType;
-        private String perfUnit;
-        private String sampleSeriesLabel;
+        private BasicPerfSampleSeriesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicPerfSampleSeriesResponse();
         }
 
         public Builder(BasicPerfSampleSeriesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.perfMetricType = defaults.perfMetricType;
-    	      this.perfUnit = defaults.perfUnit;
-    	      this.sampleSeriesLabel = defaults.sampleSeriesLabel;
+            $ = new BasicPerfSampleSeriesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder perfMetricType(String perfMetricType) {
-            this.perfMetricType = Objects.requireNonNull(perfMetricType);
+            $.perfMetricType = perfMetricType;
             return this;
         }
+
         public Builder perfUnit(String perfUnit) {
-            this.perfUnit = Objects.requireNonNull(perfUnit);
+            $.perfUnit = perfUnit;
             return this;
         }
+
         public Builder sampleSeriesLabel(String sampleSeriesLabel) {
-            this.sampleSeriesLabel = Objects.requireNonNull(sampleSeriesLabel);
+            $.sampleSeriesLabel = sampleSeriesLabel;
             return this;
-        }        public BasicPerfSampleSeriesResponse build() {
-            return new BasicPerfSampleSeriesResponse(perfMetricType, perfUnit, sampleSeriesLabel);
+        }
+
+        public BasicPerfSampleSeriesResponse build() {
+            $.perfMetricType = Objects.requireNonNull($.perfMetricType, "expected parameter 'perfMetricType' to be non-null");
+            $.perfUnit = Objects.requireNonNull($.perfUnit, "expected parameter 'perfUnit' to be non-null");
+            $.sampleSeriesLabel = Objects.requireNonNull($.sampleSeriesLabel, "expected parameter 'sampleSeriesLabel' to be non-null");
+            return $;
         }
     }
+
 }

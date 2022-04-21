@@ -15,62 +15,58 @@ public final class GetInstructionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetInstructionArgs Empty = new GetInstructionArgs();
 
     @Import(name="instructionId", required=true)
-      private final String instructionId;
+    private String instructionId;
 
     public String instructionId() {
         return this.instructionId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetInstructionArgs(
-        String instructionId,
-        @Nullable String project) {
-        this.instructionId = Objects.requireNonNull(instructionId, "expected parameter 'instructionId' to be non-null");
-        this.project = project;
-    }
+    private GetInstructionArgs() {}
 
-    private GetInstructionArgs() {
-        this.instructionId = null;
-        this.project = null;
+    private GetInstructionArgs(GetInstructionArgs $) {
+        this.instructionId = $.instructionId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstructionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instructionId;
-        private @Nullable String project;
+        private GetInstructionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstructionArgs();
         }
 
         public Builder(GetInstructionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instructionId = defaults.instructionId;
-    	      this.project = defaults.project;
+            $ = new GetInstructionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instructionId(String instructionId) {
-            this.instructionId = Objects.requireNonNull(instructionId);
+            $.instructionId = instructionId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetInstructionArgs build() {
-            return new GetInstructionArgs(instructionId, project);
+        }
+
+        public GetInstructionArgs build() {
+            $.instructionId = Objects.requireNonNull($.instructionId, "expected parameter 'instructionId' to be non-null");
+            return $;
         }
     }
+
 }

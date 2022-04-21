@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ServerCommunicationLinkArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="communicationLinkName")
-      private final @Nullable Output<String> communicationLinkName;
+    private @Nullable Output<String> communicationLinkName;
 
-    public Output<String> communicationLinkName() {
-        return this.communicationLinkName == null ? Codegen.empty() : this.communicationLinkName;
+    public Optional<Output<String>> communicationLinkName() {
+        return Optional.ofNullable(this.communicationLinkName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ServerCommunicationLinkArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="partnerServer", required=true)
-      private final Output<String> partnerServer;
+    private Output<String> partnerServer;
 
     public Output<String> partnerServer() {
         return this.partnerServer;
@@ -42,7 +42,7 @@ public final class ServerCommunicationLinkArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,89 +53,81 @@ public final class ServerCommunicationLinkArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
     }
 
-    public ServerCommunicationLinkArgs(
-        @Nullable Output<String> communicationLinkName,
-        Output<String> partnerServer,
-        Output<String> resourceGroupName,
-        Output<String> serverName) {
-        this.communicationLinkName = communicationLinkName;
-        this.partnerServer = Objects.requireNonNull(partnerServer, "expected parameter 'partnerServer' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private ServerCommunicationLinkArgs() {}
 
-    private ServerCommunicationLinkArgs() {
-        this.communicationLinkName = Codegen.empty();
-        this.partnerServer = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
+    private ServerCommunicationLinkArgs(ServerCommunicationLinkArgs $) {
+        this.communicationLinkName = $.communicationLinkName;
+        this.partnerServer = $.partnerServer;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerCommunicationLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> communicationLinkName;
-        private Output<String> partnerServer;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
+        private ServerCommunicationLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerCommunicationLinkArgs();
         }
 
         public Builder(ServerCommunicationLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.communicationLinkName = defaults.communicationLinkName;
-    	      this.partnerServer = defaults.partnerServer;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new ServerCommunicationLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder communicationLinkName(@Nullable Output<String> communicationLinkName) {
-            this.communicationLinkName = communicationLinkName;
+            $.communicationLinkName = communicationLinkName;
             return this;
         }
-        public Builder communicationLinkName(@Nullable String communicationLinkName) {
-            this.communicationLinkName = Codegen.ofNullable(communicationLinkName);
-            return this;
+
+        public Builder communicationLinkName(String communicationLinkName) {
+            return communicationLinkName(Output.of(communicationLinkName));
         }
+
         public Builder partnerServer(Output<String> partnerServer) {
-            this.partnerServer = Objects.requireNonNull(partnerServer);
+            $.partnerServer = partnerServer;
             return this;
         }
+
         public Builder partnerServer(String partnerServer) {
-            this.partnerServer = Output.of(Objects.requireNonNull(partnerServer));
-            return this;
+            return partnerServer(Output.of(partnerServer));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
-        }        public ServerCommunicationLinkArgs build() {
-            return new ServerCommunicationLinkArgs(communicationLinkName, partnerServer, resourceGroupName, serverName);
+            return serverName(Output.of(serverName));
+        }
+
+        public ServerCommunicationLinkArgs build() {
+            $.partnerServer = Objects.requireNonNull($.partnerServer, "expected parameter 'partnerServer' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

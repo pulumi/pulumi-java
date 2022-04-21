@@ -17,7 +17,7 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
      * 
      */
     @Import(name="collectionName", required=true)
-      private final String collectionName;
+    private String collectionName;
 
     public String collectionName() {
         return this.collectionName;
@@ -39,7 +39,7 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -50,73 +50,66 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMongoDBResourceMongoDBCollectionArgs(
-        String accountName,
-        String collectionName,
-        String databaseName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.collectionName = Objects.requireNonNull(collectionName, "expected parameter 'collectionName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMongoDBResourceMongoDBCollectionArgs() {}
 
-    private GetMongoDBResourceMongoDBCollectionArgs() {
-        this.accountName = null;
-        this.collectionName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
+    private GetMongoDBResourceMongoDBCollectionArgs(GetMongoDBResourceMongoDBCollectionArgs $) {
+        this.accountName = $.accountName;
+        this.collectionName = $.collectionName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMongoDBResourceMongoDBCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String collectionName;
-        private String databaseName;
-        private String resourceGroupName;
+        private GetMongoDBResourceMongoDBCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMongoDBResourceMongoDBCollectionArgs();
         }
 
         public Builder(GetMongoDBResourceMongoDBCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.collectionName = defaults.collectionName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMongoDBResourceMongoDBCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder collectionName(String collectionName) {
-            this.collectionName = Objects.requireNonNull(collectionName);
+            $.collectionName = collectionName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMongoDBResourceMongoDBCollectionArgs build() {
-            return new GetMongoDBResourceMongoDBCollectionArgs(accountName, collectionName, databaseName, resourceGroupName);
+        }
+
+        public GetMongoDBResourceMongoDBCollectionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.collectionName = Objects.requireNonNull($.collectionName, "expected parameter 'collectionName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

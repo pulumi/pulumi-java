@@ -8,11 +8,11 @@ import com.pulumi.aws.gamelift.inputs.FleetResourceCreationLimitPolicyArgs;
 import com.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildId", required=true)
-      private final Output<String> buildId;
+    private Output<String> buildId;
 
     public Output<String> buildId() {
         return this.buildId;
@@ -36,10 +36,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ec2InboundPermissions")
-      private final @Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
+    private @Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
 
-    public Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions() {
-        return this.ec2InboundPermissions == null ? Codegen.empty() : this.ec2InboundPermissions;
+    public Optional<Output<List<FleetEc2InboundPermissionArgs>>> ec2InboundPermissions() {
+        return Optional.ofNullable(this.ec2InboundPermissions);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ec2InstanceType", required=true)
-      private final Output<String> ec2InstanceType;
+    private Output<String> ec2InstanceType;
 
     public Output<String> ec2InstanceType() {
         return this.ec2InstanceType;
@@ -69,10 +69,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleetType")
-      private final @Nullable Output<String> fleetType;
+    private @Nullable Output<String> fleetType;
 
-    public Output<String> fleetType() {
-        return this.fleetType == null ? Codegen.empty() : this.fleetType;
+    public Optional<Output<String>> fleetType() {
+        return Optional.ofNullable(this.fleetType);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceRoleArn")
-      private final @Nullable Output<String> instanceRoleArn;
+    private @Nullable Output<String> instanceRoleArn;
 
-    public Output<String> instanceRoleArn() {
-        return this.instanceRoleArn == null ? Codegen.empty() : this.instanceRoleArn;
+    public Optional<Output<String>> instanceRoleArn() {
+        return Optional.ofNullable(this.instanceRoleArn);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricGroups")
-      private final @Nullable Output<List<String>> metricGroups;
+    private @Nullable Output<List<String>> metricGroups;
 
-    public Output<List<String>> metricGroups() {
-        return this.metricGroups == null ? Codegen.empty() : this.metricGroups;
+    public Optional<Output<List<String>>> metricGroups() {
+        return Optional.ofNullable(this.metricGroups);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="newGameSessionProtectionPolicy")
-      private final @Nullable Output<String> newGameSessionProtectionPolicy;
+    private @Nullable Output<String> newGameSessionProtectionPolicy;
 
-    public Output<String> newGameSessionProtectionPolicy() {
-        return this.newGameSessionProtectionPolicy == null ? Codegen.empty() : this.newGameSessionProtectionPolicy;
+    public Optional<Output<String>> newGameSessionProtectionPolicy() {
+        return Optional.ofNullable(this.newGameSessionProtectionPolicy);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceCreationLimitPolicy")
-      private final @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
+    private @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
 
-    public Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy() {
-        return this.resourceCreationLimitPolicy == null ? Codegen.empty() : this.resourceCreationLimitPolicy;
+    public Optional<Output<FleetResourceCreationLimitPolicyArgs>> resourceCreationLimitPolicy() {
+        return Optional.ofNullable(this.resourceCreationLimitPolicy);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeConfiguration")
-      private final @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
+    private @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
 
-    public Output<FleetRuntimeConfigurationArgs> runtimeConfiguration() {
-        return this.runtimeConfiguration == null ? Codegen.empty() : this.runtimeConfiguration;
+    public Optional<Output<FleetRuntimeConfigurationArgs>> runtimeConfiguration() {
+        return Optional.ofNullable(this.runtimeConfiguration);
     }
 
     /**
@@ -146,199 +146,168 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FleetArgs(
-        Output<String> buildId,
-        @Nullable Output<String> description,
-        @Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions,
-        Output<String> ec2InstanceType,
-        @Nullable Output<String> fleetType,
-        @Nullable Output<String> instanceRoleArn,
-        @Nullable Output<List<String>> metricGroups,
-        @Nullable Output<String> name,
-        @Nullable Output<String> newGameSessionProtectionPolicy,
-        @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy,
-        @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration,
-        @Nullable Output<Map<String,String>> tags) {
-        this.buildId = Objects.requireNonNull(buildId, "expected parameter 'buildId' to be non-null");
-        this.description = description;
-        this.ec2InboundPermissions = ec2InboundPermissions;
-        this.ec2InstanceType = Objects.requireNonNull(ec2InstanceType, "expected parameter 'ec2InstanceType' to be non-null");
-        this.fleetType = fleetType;
-        this.instanceRoleArn = instanceRoleArn;
-        this.metricGroups = metricGroups;
-        this.name = name;
-        this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
-        this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
-        this.runtimeConfiguration = runtimeConfiguration;
-        this.tags = tags;
-    }
+    private FleetArgs() {}
 
-    private FleetArgs() {
-        this.buildId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ec2InboundPermissions = Codegen.empty();
-        this.ec2InstanceType = Codegen.empty();
-        this.fleetType = Codegen.empty();
-        this.instanceRoleArn = Codegen.empty();
-        this.metricGroups = Codegen.empty();
-        this.name = Codegen.empty();
-        this.newGameSessionProtectionPolicy = Codegen.empty();
-        this.resourceCreationLimitPolicy = Codegen.empty();
-        this.runtimeConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
+    private FleetArgs(FleetArgs $) {
+        this.buildId = $.buildId;
+        this.description = $.description;
+        this.ec2InboundPermissions = $.ec2InboundPermissions;
+        this.ec2InstanceType = $.ec2InstanceType;
+        this.fleetType = $.fleetType;
+        this.instanceRoleArn = $.instanceRoleArn;
+        this.metricGroups = $.metricGroups;
+        this.name = $.name;
+        this.newGameSessionProtectionPolicy = $.newGameSessionProtectionPolicy;
+        this.resourceCreationLimitPolicy = $.resourceCreationLimitPolicy;
+        this.runtimeConfiguration = $.runtimeConfiguration;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> buildId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
-        private Output<String> ec2InstanceType;
-        private @Nullable Output<String> fleetType;
-        private @Nullable Output<String> instanceRoleArn;
-        private @Nullable Output<List<String>> metricGroups;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> newGameSessionProtectionPolicy;
-        private @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
-        private @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
-        private @Nullable Output<Map<String,String>> tags;
+        private FleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetArgs();
         }
 
         public Builder(FleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildId = defaults.buildId;
-    	      this.description = defaults.description;
-    	      this.ec2InboundPermissions = defaults.ec2InboundPermissions;
-    	      this.ec2InstanceType = defaults.ec2InstanceType;
-    	      this.fleetType = defaults.fleetType;
-    	      this.instanceRoleArn = defaults.instanceRoleArn;
-    	      this.metricGroups = defaults.metricGroups;
-    	      this.name = defaults.name;
-    	      this.newGameSessionProtectionPolicy = defaults.newGameSessionProtectionPolicy;
-    	      this.resourceCreationLimitPolicy = defaults.resourceCreationLimitPolicy;
-    	      this.runtimeConfiguration = defaults.runtimeConfiguration;
-    	      this.tags = defaults.tags;
+            $ = new FleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildId(Output<String> buildId) {
-            this.buildId = Objects.requireNonNull(buildId);
+            $.buildId = buildId;
             return this;
         }
+
         public Builder buildId(String buildId) {
-            this.buildId = Output.of(Objects.requireNonNull(buildId));
-            return this;
+            return buildId(Output.of(buildId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ec2InboundPermissions(@Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions) {
-            this.ec2InboundPermissions = ec2InboundPermissions;
+            $.ec2InboundPermissions = ec2InboundPermissions;
             return this;
         }
-        public Builder ec2InboundPermissions(@Nullable List<FleetEc2InboundPermissionArgs> ec2InboundPermissions) {
-            this.ec2InboundPermissions = Codegen.ofNullable(ec2InboundPermissions);
-            return this;
+
+        public Builder ec2InboundPermissions(List<FleetEc2InboundPermissionArgs> ec2InboundPermissions) {
+            return ec2InboundPermissions(Output.of(ec2InboundPermissions));
         }
+
         public Builder ec2InboundPermissions(FleetEc2InboundPermissionArgs... ec2InboundPermissions) {
             return ec2InboundPermissions(List.of(ec2InboundPermissions));
         }
+
         public Builder ec2InstanceType(Output<String> ec2InstanceType) {
-            this.ec2InstanceType = Objects.requireNonNull(ec2InstanceType);
+            $.ec2InstanceType = ec2InstanceType;
             return this;
         }
+
         public Builder ec2InstanceType(String ec2InstanceType) {
-            this.ec2InstanceType = Output.of(Objects.requireNonNull(ec2InstanceType));
-            return this;
+            return ec2InstanceType(Output.of(ec2InstanceType));
         }
+
         public Builder fleetType(@Nullable Output<String> fleetType) {
-            this.fleetType = fleetType;
+            $.fleetType = fleetType;
             return this;
         }
-        public Builder fleetType(@Nullable String fleetType) {
-            this.fleetType = Codegen.ofNullable(fleetType);
-            return this;
+
+        public Builder fleetType(String fleetType) {
+            return fleetType(Output.of(fleetType));
         }
+
         public Builder instanceRoleArn(@Nullable Output<String> instanceRoleArn) {
-            this.instanceRoleArn = instanceRoleArn;
+            $.instanceRoleArn = instanceRoleArn;
             return this;
         }
-        public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
-            this.instanceRoleArn = Codegen.ofNullable(instanceRoleArn);
-            return this;
+
+        public Builder instanceRoleArn(String instanceRoleArn) {
+            return instanceRoleArn(Output.of(instanceRoleArn));
         }
+
         public Builder metricGroups(@Nullable Output<List<String>> metricGroups) {
-            this.metricGroups = metricGroups;
+            $.metricGroups = metricGroups;
             return this;
         }
-        public Builder metricGroups(@Nullable List<String> metricGroups) {
-            this.metricGroups = Codegen.ofNullable(metricGroups);
-            return this;
+
+        public Builder metricGroups(List<String> metricGroups) {
+            return metricGroups(Output.of(metricGroups));
         }
+
         public Builder metricGroups(String... metricGroups) {
             return metricGroups(List.of(metricGroups));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder newGameSessionProtectionPolicy(@Nullable Output<String> newGameSessionProtectionPolicy) {
-            this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
+            $.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
             return this;
         }
-        public Builder newGameSessionProtectionPolicy(@Nullable String newGameSessionProtectionPolicy) {
-            this.newGameSessionProtectionPolicy = Codegen.ofNullable(newGameSessionProtectionPolicy);
-            return this;
+
+        public Builder newGameSessionProtectionPolicy(String newGameSessionProtectionPolicy) {
+            return newGameSessionProtectionPolicy(Output.of(newGameSessionProtectionPolicy));
         }
+
         public Builder resourceCreationLimitPolicy(@Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy) {
-            this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
+            $.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
             return this;
         }
-        public Builder resourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
-            this.resourceCreationLimitPolicy = Codegen.ofNullable(resourceCreationLimitPolicy);
-            return this;
+
+        public Builder resourceCreationLimitPolicy(FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
+            return resourceCreationLimitPolicy(Output.of(resourceCreationLimitPolicy));
         }
+
         public Builder runtimeConfiguration(@Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration) {
-            this.runtimeConfiguration = runtimeConfiguration;
+            $.runtimeConfiguration = runtimeConfiguration;
             return this;
         }
-        public Builder runtimeConfiguration(@Nullable FleetRuntimeConfigurationArgs runtimeConfiguration) {
-            this.runtimeConfiguration = Codegen.ofNullable(runtimeConfiguration);
-            return this;
+
+        public Builder runtimeConfiguration(FleetRuntimeConfigurationArgs runtimeConfiguration) {
+            return runtimeConfiguration(Output.of(runtimeConfiguration));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public FleetArgs build() {
-            return new FleetArgs(buildId, description, ec2InboundPermissions, ec2InstanceType, fleetType, instanceRoleArn, metricGroups, name, newGameSessionProtectionPolicy, resourceCreationLimitPolicy, runtimeConfiguration, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public FleetArgs build() {
+            $.buildId = Objects.requireNonNull($.buildId, "expected parameter 'buildId' to be non-null");
+            $.ec2InstanceType = Objects.requireNonNull($.ec2InstanceType, "expected parameter 'ec2InstanceType' to be non-null");
+            return $;
         }
     }
+
 }

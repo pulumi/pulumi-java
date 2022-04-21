@@ -17,7 +17,7 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="planId", required=true)
-      private final String planId;
+    private String planId;
 
     public String planId() {
         return this.planId;
@@ -28,55 +28,52 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetHybridUseBenefitArgs(
-        String planId,
-        String scope) {
-        this.planId = Objects.requireNonNull(planId, "expected parameter 'planId' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetHybridUseBenefitArgs() {}
 
-    private GetHybridUseBenefitArgs() {
-        this.planId = null;
-        this.scope = null;
+    private GetHybridUseBenefitArgs(GetHybridUseBenefitArgs $) {
+        this.planId = $.planId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHybridUseBenefitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String planId;
-        private String scope;
+        private GetHybridUseBenefitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHybridUseBenefitArgs();
         }
 
         public Builder(GetHybridUseBenefitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.planId = defaults.planId;
-    	      this.scope = defaults.scope;
+            $ = new GetHybridUseBenefitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder planId(String planId) {
-            this.planId = Objects.requireNonNull(planId);
+            $.planId = planId;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetHybridUseBenefitArgs build() {
-            return new GetHybridUseBenefitArgs(planId, scope);
+        }
+
+        public GetHybridUseBenefitArgs build() {
+            $.planId = Objects.requireNonNull($.planId, "expected parameter 'planId' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

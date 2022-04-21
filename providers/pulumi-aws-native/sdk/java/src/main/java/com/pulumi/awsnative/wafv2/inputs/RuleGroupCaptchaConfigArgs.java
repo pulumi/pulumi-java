@@ -6,8 +6,8 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupImmunityTimePropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class RuleGroupCaptchaConfigArgs extends com.pulumi.resources.Resou
     public static final RuleGroupCaptchaConfigArgs Empty = new RuleGroupCaptchaConfigArgs();
 
     @Import(name="immunityTimeProperty")
-      private final @Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
+    private @Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
 
-    public Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty() {
-        return this.immunityTimeProperty == null ? Codegen.empty() : this.immunityTimeProperty;
+    public Optional<Output<RuleGroupImmunityTimePropertyArgs>> immunityTimeProperty() {
+        return Optional.ofNullable(this.immunityTimeProperty);
     }
 
-    public RuleGroupCaptchaConfigArgs(@Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty) {
-        this.immunityTimeProperty = immunityTimeProperty;
-    }
+    private RuleGroupCaptchaConfigArgs() {}
 
-    private RuleGroupCaptchaConfigArgs() {
-        this.immunityTimeProperty = Codegen.empty();
+    private RuleGroupCaptchaConfigArgs(RuleGroupCaptchaConfigArgs $) {
+        this.immunityTimeProperty = $.immunityTimeProperty;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupCaptchaConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
+        private RuleGroupCaptchaConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupCaptchaConfigArgs();
         }
 
         public Builder(RuleGroupCaptchaConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.immunityTimeProperty = defaults.immunityTimeProperty;
+            $ = new RuleGroupCaptchaConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder immunityTimeProperty(@Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty) {
-            this.immunityTimeProperty = immunityTimeProperty;
+            $.immunityTimeProperty = immunityTimeProperty;
             return this;
         }
-        public Builder immunityTimeProperty(@Nullable RuleGroupImmunityTimePropertyArgs immunityTimeProperty) {
-            this.immunityTimeProperty = Codegen.ofNullable(immunityTimeProperty);
-            return this;
-        }        public RuleGroupCaptchaConfigArgs build() {
-            return new RuleGroupCaptchaConfigArgs(immunityTimeProperty);
+
+        public Builder immunityTimeProperty(RuleGroupImmunityTimePropertyArgs immunityTimeProperty) {
+            return immunityTimeProperty(Output.of(immunityTimeProperty));
+        }
+
+        public RuleGroupCaptchaConfigArgs build() {
+            return $;
         }
     }
+
 }

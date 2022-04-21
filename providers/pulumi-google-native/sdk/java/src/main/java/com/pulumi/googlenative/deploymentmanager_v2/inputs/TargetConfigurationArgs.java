@@ -5,11 +5,11 @@ package com.pulumi.googlenative.deploymentmanager_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_v2.inputs.ConfigFileArgs;
 import com.pulumi.googlenative.deploymentmanager_v2.inputs.ImportFileArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TargetConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<ConfigFileArgs> config;
+    private @Nullable Output<ConfigFileArgs> config;
 
-    public Output<ConfigFileArgs> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<ConfigFileArgs>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class TargetConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="imports")
-      private final @Nullable Output<List<ImportFileArgs>> imports;
+    private @Nullable Output<List<ImportFileArgs>> imports;
 
-    public Output<List<ImportFileArgs>> imports() {
-        return this.imports == null ? Codegen.empty() : this.imports;
+    public Optional<Output<List<ImportFileArgs>>> imports() {
+        return Optional.ofNullable(this.imports);
     }
 
-    public TargetConfigurationArgs(
-        @Nullable Output<ConfigFileArgs> config,
-        @Nullable Output<List<ImportFileArgs>> imports) {
-        this.config = config;
-        this.imports = imports;
-    }
+    private TargetConfigurationArgs() {}
 
-    private TargetConfigurationArgs() {
-        this.config = Codegen.empty();
-        this.imports = Codegen.empty();
+    private TargetConfigurationArgs(TargetConfigurationArgs $) {
+        this.config = $.config;
+        this.imports = $.imports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigFileArgs> config;
-        private @Nullable Output<List<ImportFileArgs>> imports;
+        private TargetConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetConfigurationArgs();
         }
 
         public Builder(TargetConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.imports = defaults.imports;
+            $ = new TargetConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(@Nullable Output<ConfigFileArgs> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable ConfigFileArgs config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(ConfigFileArgs config) {
+            return config(Output.of(config));
         }
+
         public Builder imports(@Nullable Output<List<ImportFileArgs>> imports) {
-            this.imports = imports;
+            $.imports = imports;
             return this;
         }
-        public Builder imports(@Nullable List<ImportFileArgs> imports) {
-            this.imports = Codegen.ofNullable(imports);
-            return this;
+
+        public Builder imports(List<ImportFileArgs> imports) {
+            return imports(Output.of(imports));
         }
+
         public Builder imports(ImportFileArgs... imports) {
             return imports(List.of(imports));
-        }        public TargetConfigurationArgs build() {
-            return new TargetConfigurationArgs(config, imports);
+        }
+
+        public TargetConfigurationArgs build() {
+            return $;
         }
     }
+
 }

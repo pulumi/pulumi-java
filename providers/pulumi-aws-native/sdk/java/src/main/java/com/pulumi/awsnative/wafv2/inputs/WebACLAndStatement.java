@@ -14,48 +14,49 @@ public final class WebACLAndStatement extends com.pulumi.resources.InvokeArgs {
     public static final WebACLAndStatement Empty = new WebACLAndStatement();
 
     @Import(name="statements", required=true)
-      private final List<WebACLStatement> statements;
+    private List<WebACLStatement> statements;
 
     public List<WebACLStatement> statements() {
         return this.statements;
     }
 
-    public WebACLAndStatement(List<WebACLStatement> statements) {
-        this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
-    }
+    private WebACLAndStatement() {}
 
-    private WebACLAndStatement() {
-        this.statements = List.of();
+    private WebACLAndStatement(WebACLAndStatement $) {
+        this.statements = $.statements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLAndStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<WebACLStatement> statements;
+        private WebACLAndStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLAndStatement();
         }
 
         public Builder(WebACLAndStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statements = defaults.statements;
+            $ = new WebACLAndStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder statements(List<WebACLStatement> statements) {
-            this.statements = Objects.requireNonNull(statements);
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(WebACLStatement... statements) {
             return statements(List.of(statements));
-        }        public WebACLAndStatement build() {
-            return new WebACLAndStatement(statements);
+        }
+
+        public WebACLAndStatement build() {
+            $.statements = Objects.requireNonNull($.statements, "expected parameter 'statements' to be non-null");
+            return $;
         }
     }
+
 }

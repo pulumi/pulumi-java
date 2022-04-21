@@ -21,7 +21,7 @@ public final class ReportConfigTimePeriodResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="from", required=true)
-      private final String from;
+    private String from;
 
     public String from() {
         return this.from;
@@ -32,55 +32,52 @@ public final class ReportConfigTimePeriodResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="to", required=true)
-      private final String to;
+    private String to;
 
     public String to() {
         return this.to;
     }
 
-    public ReportConfigTimePeriodResponse(
-        String from,
-        String to) {
-        this.from = Objects.requireNonNull(from, "expected parameter 'from' to be non-null");
-        this.to = Objects.requireNonNull(to, "expected parameter 'to' to be non-null");
-    }
+    private ReportConfigTimePeriodResponse() {}
 
-    private ReportConfigTimePeriodResponse() {
-        this.from = null;
-        this.to = null;
+    private ReportConfigTimePeriodResponse(ReportConfigTimePeriodResponse $) {
+        this.from = $.from;
+        this.to = $.to;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportConfigTimePeriodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String from;
-        private String to;
+        private ReportConfigTimePeriodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportConfigTimePeriodResponse();
         }
 
         public Builder(ReportConfigTimePeriodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.from = defaults.from;
-    	      this.to = defaults.to;
+            $ = new ReportConfigTimePeriodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder from(String from) {
-            this.from = Objects.requireNonNull(from);
+            $.from = from;
             return this;
         }
+
         public Builder to(String to) {
-            this.to = Objects.requireNonNull(to);
+            $.to = to;
             return this;
-        }        public ReportConfigTimePeriodResponse build() {
-            return new ReportConfigTimePeriodResponse(from, to);
+        }
+
+        public ReportConfigTimePeriodResponse build() {
+            $.from = Objects.requireNonNull($.from, "expected parameter 'from' to be non-null");
+            $.to = Objects.requireNonNull($.to, "expected parameter 'to' to be non-null");
+            return $;
         }
     }
+
 }

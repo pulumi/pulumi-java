@@ -16,113 +16,105 @@ public final class GetDatabaseInstanceSettingIpConfiguration extends com.pulumi.
     public static final GetDatabaseInstanceSettingIpConfiguration Empty = new GetDatabaseInstanceSettingIpConfiguration();
 
     @Import(name="allocatedIpRange", required=true)
-      private final String allocatedIpRange;
+    private String allocatedIpRange;
 
     public String allocatedIpRange() {
         return this.allocatedIpRange;
     }
 
     @Import(name="authorizedNetworks", required=true)
-      private final List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks;
+    private List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks;
 
     public List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks() {
         return this.authorizedNetworks;
     }
 
     @Import(name="ipv4Enabled", required=true)
-      private final Boolean ipv4Enabled;
+    private Boolean ipv4Enabled;
 
     public Boolean ipv4Enabled() {
         return this.ipv4Enabled;
     }
 
     @Import(name="privateNetwork", required=true)
-      private final String privateNetwork;
+    private String privateNetwork;
 
     public String privateNetwork() {
         return this.privateNetwork;
     }
 
     @Import(name="requireSsl", required=true)
-      private final Boolean requireSsl;
+    private Boolean requireSsl;
 
     public Boolean requireSsl() {
         return this.requireSsl;
     }
 
-    public GetDatabaseInstanceSettingIpConfiguration(
-        String allocatedIpRange,
-        List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks,
-        Boolean ipv4Enabled,
-        String privateNetwork,
-        Boolean requireSsl) {
-        this.allocatedIpRange = Objects.requireNonNull(allocatedIpRange, "expected parameter 'allocatedIpRange' to be non-null");
-        this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks, "expected parameter 'authorizedNetworks' to be non-null");
-        this.ipv4Enabled = Objects.requireNonNull(ipv4Enabled, "expected parameter 'ipv4Enabled' to be non-null");
-        this.privateNetwork = Objects.requireNonNull(privateNetwork, "expected parameter 'privateNetwork' to be non-null");
-        this.requireSsl = Objects.requireNonNull(requireSsl, "expected parameter 'requireSsl' to be non-null");
-    }
+    private GetDatabaseInstanceSettingIpConfiguration() {}
 
-    private GetDatabaseInstanceSettingIpConfiguration() {
-        this.allocatedIpRange = null;
-        this.authorizedNetworks = List.of();
-        this.ipv4Enabled = null;
-        this.privateNetwork = null;
-        this.requireSsl = null;
+    private GetDatabaseInstanceSettingIpConfiguration(GetDatabaseInstanceSettingIpConfiguration $) {
+        this.allocatedIpRange = $.allocatedIpRange;
+        this.authorizedNetworks = $.authorizedNetworks;
+        this.ipv4Enabled = $.ipv4Enabled;
+        this.privateNetwork = $.privateNetwork;
+        this.requireSsl = $.requireSsl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceSettingIpConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String allocatedIpRange;
-        private List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks;
-        private Boolean ipv4Enabled;
-        private String privateNetwork;
-        private Boolean requireSsl;
+        private GetDatabaseInstanceSettingIpConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceSettingIpConfiguration();
         }
 
         public Builder(GetDatabaseInstanceSettingIpConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocatedIpRange = defaults.allocatedIpRange;
-    	      this.authorizedNetworks = defaults.authorizedNetworks;
-    	      this.ipv4Enabled = defaults.ipv4Enabled;
-    	      this.privateNetwork = defaults.privateNetwork;
-    	      this.requireSsl = defaults.requireSsl;
+            $ = new GetDatabaseInstanceSettingIpConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder allocatedIpRange(String allocatedIpRange) {
-            this.allocatedIpRange = Objects.requireNonNull(allocatedIpRange);
+            $.allocatedIpRange = allocatedIpRange;
             return this;
         }
+
         public Builder authorizedNetworks(List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks) {
-            this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
+            $.authorizedNetworks = authorizedNetworks;
             return this;
         }
+
         public Builder authorizedNetworks(GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork... authorizedNetworks) {
             return authorizedNetworks(List.of(authorizedNetworks));
         }
+
         public Builder ipv4Enabled(Boolean ipv4Enabled) {
-            this.ipv4Enabled = Objects.requireNonNull(ipv4Enabled);
+            $.ipv4Enabled = ipv4Enabled;
             return this;
         }
+
         public Builder privateNetwork(String privateNetwork) {
-            this.privateNetwork = Objects.requireNonNull(privateNetwork);
+            $.privateNetwork = privateNetwork;
             return this;
         }
+
         public Builder requireSsl(Boolean requireSsl) {
-            this.requireSsl = Objects.requireNonNull(requireSsl);
+            $.requireSsl = requireSsl;
             return this;
-        }        public GetDatabaseInstanceSettingIpConfiguration build() {
-            return new GetDatabaseInstanceSettingIpConfiguration(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
+        }
+
+        public GetDatabaseInstanceSettingIpConfiguration build() {
+            $.allocatedIpRange = Objects.requireNonNull($.allocatedIpRange, "expected parameter 'allocatedIpRange' to be non-null");
+            $.authorizedNetworks = Objects.requireNonNull($.authorizedNetworks, "expected parameter 'authorizedNetworks' to be non-null");
+            $.ipv4Enabled = Objects.requireNonNull($.ipv4Enabled, "expected parameter 'ipv4Enabled' to be non-null");
+            $.privateNetwork = Objects.requireNonNull($.privateNetwork, "expected parameter 'privateNetwork' to be non-null");
+            $.requireSsl = Objects.requireNonNull($.requireSsl, "expected parameter 'requireSsl' to be non-null");
+            return $;
         }
     }
+
 }

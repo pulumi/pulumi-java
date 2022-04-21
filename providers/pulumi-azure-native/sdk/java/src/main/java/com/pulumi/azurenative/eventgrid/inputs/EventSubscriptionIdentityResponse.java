@@ -23,10 +23,10 @@ public final class EventSubscriptionIdentityResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class EventSubscriptionIdentityResponse extends com.pulumi.resource
      * 
      */
     @Import(name="userAssignedIdentity")
-      private final @Nullable String userAssignedIdentity;
+    private @Nullable String userAssignedIdentity;
 
     public Optional<String> userAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
+        return Optional.ofNullable(this.userAssignedIdentity);
     }
 
-    public EventSubscriptionIdentityResponse(
-        @Nullable String type,
-        @Nullable String userAssignedIdentity) {
-        this.type = type;
-        this.userAssignedIdentity = userAssignedIdentity;
-    }
+    private EventSubscriptionIdentityResponse() {}
 
-    private EventSubscriptionIdentityResponse() {
-        this.type = null;
-        this.userAssignedIdentity = null;
+    private EventSubscriptionIdentityResponse(EventSubscriptionIdentityResponse $) {
+        this.type = $.type;
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSubscriptionIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
-        private @Nullable String userAssignedIdentity;
+        private EventSubscriptionIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSubscriptionIdentityResponse();
         }
 
         public Builder(EventSubscriptionIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new EventSubscriptionIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = userAssignedIdentity;
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }        public EventSubscriptionIdentityResponse build() {
-            return new EventSubscriptionIdentityResponse(type, userAssignedIdentity);
+        }
+
+        public EventSubscriptionIdentityResponse build() {
+            return $;
         }
     }
+
 }

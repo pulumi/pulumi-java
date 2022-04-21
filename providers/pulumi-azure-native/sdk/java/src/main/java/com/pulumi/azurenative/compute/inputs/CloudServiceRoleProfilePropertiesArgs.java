@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.CloudServiceRoleSkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CloudServiceRoleProfilePropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CloudServiceRoleProfilePropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<CloudServiceRoleSkuArgs> sku;
+    private @Nullable Output<CloudServiceRoleSkuArgs> sku;
 
-    public Output<CloudServiceRoleSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<CloudServiceRoleSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
-    public CloudServiceRoleProfilePropertiesArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<CloudServiceRoleSkuArgs> sku) {
-        this.name = name;
-        this.sku = sku;
-    }
+    private CloudServiceRoleProfilePropertiesArgs() {}
 
-    private CloudServiceRoleProfilePropertiesArgs() {
-        this.name = Codegen.empty();
-        this.sku = Codegen.empty();
+    private CloudServiceRoleProfilePropertiesArgs(CloudServiceRoleProfilePropertiesArgs $) {
+        this.name = $.name;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceRoleProfilePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<CloudServiceRoleSkuArgs> sku;
+        private CloudServiceRoleProfilePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceRoleProfilePropertiesArgs();
         }
 
         public Builder(CloudServiceRoleProfilePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sku = defaults.sku;
+            $ = new CloudServiceRoleProfilePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sku(@Nullable Output<CloudServiceRoleSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable CloudServiceRoleSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
-        }        public CloudServiceRoleProfilePropertiesArgs build() {
-            return new CloudServiceRoleProfilePropertiesArgs(name, sku);
+
+        public Builder sku(CloudServiceRoleSkuArgs sku) {
+            return sku(Output.of(sku));
+        }
+
+        public CloudServiceRoleProfilePropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class GooglePrivacyDlpV2ConditionsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<GooglePrivacyDlpV2ConditionResponse> conditions;
+    private List<GooglePrivacyDlpV2ConditionResponse> conditions;
 
     public List<GooglePrivacyDlpV2ConditionResponse> conditions() {
         return this.conditions;
     }
 
-    public GooglePrivacyDlpV2ConditionsResponse(List<GooglePrivacyDlpV2ConditionResponse> conditions) {
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-    }
+    private GooglePrivacyDlpV2ConditionsResponse() {}
 
-    private GooglePrivacyDlpV2ConditionsResponse() {
-        this.conditions = List.of();
+    private GooglePrivacyDlpV2ConditionsResponse(GooglePrivacyDlpV2ConditionsResponse $) {
+        this.conditions = $.conditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ConditionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2ConditionResponse> conditions;
+        private GooglePrivacyDlpV2ConditionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ConditionsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ConditionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
+            $ = new GooglePrivacyDlpV2ConditionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(List<GooglePrivacyDlpV2ConditionResponse> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(GooglePrivacyDlpV2ConditionResponse... conditions) {
             return conditions(List.of(conditions));
-        }        public GooglePrivacyDlpV2ConditionsResponse build() {
-            return new GooglePrivacyDlpV2ConditionsResponse(conditions);
+        }
+
+        public GooglePrivacyDlpV2ConditionsResponse build() {
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            return $;
         }
     }
+
 }

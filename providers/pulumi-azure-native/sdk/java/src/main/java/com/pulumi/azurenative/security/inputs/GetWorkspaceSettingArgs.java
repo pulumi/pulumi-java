@@ -17,45 +17,45 @@ public final class GetWorkspaceSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="workspaceSettingName", required=true)
-      private final String workspaceSettingName;
+    private String workspaceSettingName;
 
     public String workspaceSettingName() {
         return this.workspaceSettingName;
     }
 
-    public GetWorkspaceSettingArgs(String workspaceSettingName) {
-        this.workspaceSettingName = Objects.requireNonNull(workspaceSettingName, "expected parameter 'workspaceSettingName' to be non-null");
-    }
+    private GetWorkspaceSettingArgs() {}
 
-    private GetWorkspaceSettingArgs() {
-        this.workspaceSettingName = null;
+    private GetWorkspaceSettingArgs(GetWorkspaceSettingArgs $) {
+        this.workspaceSettingName = $.workspaceSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkspaceSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String workspaceSettingName;
+        private GetWorkspaceSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkspaceSettingArgs();
         }
 
         public Builder(GetWorkspaceSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workspaceSettingName = defaults.workspaceSettingName;
+            $ = new GetWorkspaceSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder workspaceSettingName(String workspaceSettingName) {
-            this.workspaceSettingName = Objects.requireNonNull(workspaceSettingName);
+            $.workspaceSettingName = workspaceSettingName;
             return this;
-        }        public GetWorkspaceSettingArgs build() {
-            return new GetWorkspaceSettingArgs(workspaceSettingName);
+        }
+
+        public GetWorkspaceSettingArgs build() {
+            $.workspaceSettingName = Objects.requireNonNull($.workspaceSettingName, "expected parameter 'workspaceSettingName' to be non-null");
+            return $;
         }
     }
+
 }

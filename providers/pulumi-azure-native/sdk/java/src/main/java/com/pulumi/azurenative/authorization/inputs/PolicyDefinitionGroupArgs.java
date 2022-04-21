@@ -5,9 +5,9 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="additionalMetadataId")
-      private final @Nullable Output<String> additionalMetadataId;
+    private @Nullable Output<String> additionalMetadataId;
 
-    public Output<String> additionalMetadataId() {
-        return this.additionalMetadataId == null ? Codegen.empty() : this.additionalMetadataId;
+    public Optional<Output<String>> additionalMetadataId() {
+        return Optional.ofNullable(this.additionalMetadataId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="category")
-      private final @Nullable Output<String> category;
+    private @Nullable Output<String> category;
 
-    public Output<String> category() {
-        return this.category == null ? Codegen.empty() : this.category;
+    public Optional<Output<String>> category() {
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -68,102 +68,89 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public PolicyDefinitionGroupArgs(
-        @Nullable Output<String> additionalMetadataId,
-        @Nullable Output<String> category,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> name) {
-        this.additionalMetadataId = additionalMetadataId;
-        this.category = category;
-        this.description = description;
-        this.displayName = displayName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PolicyDefinitionGroupArgs() {}
 
-    private PolicyDefinitionGroupArgs() {
-        this.additionalMetadataId = Codegen.empty();
-        this.category = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
+    private PolicyDefinitionGroupArgs(PolicyDefinitionGroupArgs $) {
+        this.additionalMetadataId = $.additionalMetadataId;
+        this.category = $.category;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyDefinitionGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> additionalMetadataId;
-        private @Nullable Output<String> category;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> name;
+        private PolicyDefinitionGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyDefinitionGroupArgs();
         }
 
         public Builder(PolicyDefinitionGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalMetadataId = defaults.additionalMetadataId;
-    	      this.category = defaults.category;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
+            $ = new PolicyDefinitionGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalMetadataId(@Nullable Output<String> additionalMetadataId) {
-            this.additionalMetadataId = additionalMetadataId;
+            $.additionalMetadataId = additionalMetadataId;
             return this;
         }
-        public Builder additionalMetadataId(@Nullable String additionalMetadataId) {
-            this.additionalMetadataId = Codegen.ofNullable(additionalMetadataId);
-            return this;
+
+        public Builder additionalMetadataId(String additionalMetadataId) {
+            return additionalMetadataId(Output.of(additionalMetadataId));
         }
+
         public Builder category(@Nullable Output<String> category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
-        public Builder category(@Nullable String category) {
-            this.category = Codegen.ofNullable(category);
-            return this;
+
+        public Builder category(String category) {
+            return category(Output.of(category));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public PolicyDefinitionGroupArgs build() {
-            return new PolicyDefinitionGroupArgs(additionalMetadataId, category, description, displayName, name);
+            return name(Output.of(name));
+        }
+
+        public PolicyDefinitionGroupArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

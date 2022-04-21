@@ -7,11 +7,11 @@ import com.pulumi.azurenative.dataprotection.inputs.RetentionTagArgs;
 import com.pulumi.azurenative.dataprotection.inputs.ScheduleBasedBackupCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="criteria")
-      private final @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria;
+    private @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria;
 
-    public Output<List<ScheduleBasedBackupCriteriaArgs>> criteria() {
-        return this.criteria == null ? Codegen.empty() : this.criteria;
+    public Optional<Output<List<ScheduleBasedBackupCriteriaArgs>>> criteria() {
+        return Optional.ofNullable(this.criteria);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="isDefault", required=true)
-      private final Output<Boolean> isDefault;
+    private Output<Boolean> isDefault;
 
     public Output<Boolean> isDefault() {
         return this.isDefault;
@@ -50,7 +50,7 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagInfo", required=true)
-      private final Output<RetentionTagArgs> tagInfo;
+    private Output<RetentionTagArgs> tagInfo;
 
     public Output<RetentionTagArgs> tagInfo() {
         return this.tagInfo;
@@ -61,92 +61,85 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="taggingPriority", required=true)
-      private final Output<Double> taggingPriority;
+    private Output<Double> taggingPriority;
 
     public Output<Double> taggingPriority() {
         return this.taggingPriority;
     }
 
-    public TaggingCriteriaArgs(
-        @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria,
-        Output<Boolean> isDefault,
-        Output<RetentionTagArgs> tagInfo,
-        Output<Double> taggingPriority) {
-        this.criteria = criteria;
-        this.isDefault = Objects.requireNonNull(isDefault, "expected parameter 'isDefault' to be non-null");
-        this.tagInfo = Objects.requireNonNull(tagInfo, "expected parameter 'tagInfo' to be non-null");
-        this.taggingPriority = Objects.requireNonNull(taggingPriority, "expected parameter 'taggingPriority' to be non-null");
-    }
+    private TaggingCriteriaArgs() {}
 
-    private TaggingCriteriaArgs() {
-        this.criteria = Codegen.empty();
-        this.isDefault = Codegen.empty();
-        this.tagInfo = Codegen.empty();
-        this.taggingPriority = Codegen.empty();
+    private TaggingCriteriaArgs(TaggingCriteriaArgs $) {
+        this.criteria = $.criteria;
+        this.isDefault = $.isDefault;
+        this.tagInfo = $.tagInfo;
+        this.taggingPriority = $.taggingPriority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaggingCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria;
-        private Output<Boolean> isDefault;
-        private Output<RetentionTagArgs> tagInfo;
-        private Output<Double> taggingPriority;
+        private TaggingCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaggingCriteriaArgs();
         }
 
         public Builder(TaggingCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.criteria = defaults.criteria;
-    	      this.isDefault = defaults.isDefault;
-    	      this.tagInfo = defaults.tagInfo;
-    	      this.taggingPriority = defaults.taggingPriority;
+            $ = new TaggingCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder criteria(@Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria) {
-            this.criteria = criteria;
+            $.criteria = criteria;
             return this;
         }
-        public Builder criteria(@Nullable List<ScheduleBasedBackupCriteriaArgs> criteria) {
-            this.criteria = Codegen.ofNullable(criteria);
-            return this;
+
+        public Builder criteria(List<ScheduleBasedBackupCriteriaArgs> criteria) {
+            return criteria(Output.of(criteria));
         }
+
         public Builder criteria(ScheduleBasedBackupCriteriaArgs... criteria) {
             return criteria(List.of(criteria));
         }
+
         public Builder isDefault(Output<Boolean> isDefault) {
-            this.isDefault = Objects.requireNonNull(isDefault);
+            $.isDefault = isDefault;
             return this;
         }
+
         public Builder isDefault(Boolean isDefault) {
-            this.isDefault = Output.of(Objects.requireNonNull(isDefault));
-            return this;
+            return isDefault(Output.of(isDefault));
         }
+
         public Builder tagInfo(Output<RetentionTagArgs> tagInfo) {
-            this.tagInfo = Objects.requireNonNull(tagInfo);
+            $.tagInfo = tagInfo;
             return this;
         }
+
         public Builder tagInfo(RetentionTagArgs tagInfo) {
-            this.tagInfo = Output.of(Objects.requireNonNull(tagInfo));
-            return this;
+            return tagInfo(Output.of(tagInfo));
         }
+
         public Builder taggingPriority(Output<Double> taggingPriority) {
-            this.taggingPriority = Objects.requireNonNull(taggingPriority);
+            $.taggingPriority = taggingPriority;
             return this;
         }
+
         public Builder taggingPriority(Double taggingPriority) {
-            this.taggingPriority = Output.of(Objects.requireNonNull(taggingPriority));
-            return this;
-        }        public TaggingCriteriaArgs build() {
-            return new TaggingCriteriaArgs(criteria, isDefault, tagInfo, taggingPriority);
+            return taggingPriority(Output.of(taggingPriority));
+        }
+
+        public TaggingCriteriaArgs build() {
+            $.isDefault = Objects.requireNonNull($.isDefault, "expected parameter 'isDefault' to be non-null");
+            $.tagInfo = Objects.requireNonNull($.tagInfo, "expected parameter 'tagInfo' to be non-null");
+            $.taggingPriority = Objects.requireNonNull($.taggingPriority, "expected parameter 'taggingPriority' to be non-null");
+            return $;
         }
     }
+
 }

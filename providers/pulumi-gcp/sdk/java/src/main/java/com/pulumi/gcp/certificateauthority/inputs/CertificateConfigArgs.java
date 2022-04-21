@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigPublicKeyArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigArgs;
@@ -22,7 +21,7 @@ public final class CertificateConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publicKey", required=true)
-      private final Output<CertificateConfigPublicKeyArgs> publicKey;
+    private Output<CertificateConfigPublicKeyArgs> publicKey;
 
     public Output<CertificateConfigPublicKeyArgs> publicKey() {
         return this.publicKey;
@@ -34,7 +33,7 @@ public final class CertificateConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="subjectConfig", required=true)
-      private final Output<CertificateConfigSubjectConfigArgs> subjectConfig;
+    private Output<CertificateConfigSubjectConfigArgs> subjectConfig;
 
     public Output<CertificateConfigSubjectConfigArgs> subjectConfig() {
         return this.subjectConfig;
@@ -46,76 +45,71 @@ public final class CertificateConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="x509Config", required=true)
-      private final Output<CertificateConfigX509ConfigArgs> x509Config;
+    private Output<CertificateConfigX509ConfigArgs> x509Config;
 
     public Output<CertificateConfigX509ConfigArgs> x509Config() {
         return this.x509Config;
     }
 
-    public CertificateConfigArgs(
-        Output<CertificateConfigPublicKeyArgs> publicKey,
-        Output<CertificateConfigSubjectConfigArgs> subjectConfig,
-        Output<CertificateConfigX509ConfigArgs> x509Config) {
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-        this.subjectConfig = Objects.requireNonNull(subjectConfig, "expected parameter 'subjectConfig' to be non-null");
-        this.x509Config = Objects.requireNonNull(x509Config, "expected parameter 'x509Config' to be non-null");
-    }
+    private CertificateConfigArgs() {}
 
-    private CertificateConfigArgs() {
-        this.publicKey = Codegen.empty();
-        this.subjectConfig = Codegen.empty();
-        this.x509Config = Codegen.empty();
+    private CertificateConfigArgs(CertificateConfigArgs $) {
+        this.publicKey = $.publicKey;
+        this.subjectConfig = $.subjectConfig;
+        this.x509Config = $.x509Config;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CertificateConfigPublicKeyArgs> publicKey;
-        private Output<CertificateConfigSubjectConfigArgs> subjectConfig;
-        private Output<CertificateConfigX509ConfigArgs> x509Config;
+        private CertificateConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateConfigArgs();
         }
 
         public Builder(CertificateConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKey = defaults.publicKey;
-    	      this.subjectConfig = defaults.subjectConfig;
-    	      this.x509Config = defaults.x509Config;
+            $ = new CertificateConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKey(Output<CertificateConfigPublicKeyArgs> publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
         }
+
         public Builder publicKey(CertificateConfigPublicKeyArgs publicKey) {
-            this.publicKey = Output.of(Objects.requireNonNull(publicKey));
-            return this;
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder subjectConfig(Output<CertificateConfigSubjectConfigArgs> subjectConfig) {
-            this.subjectConfig = Objects.requireNonNull(subjectConfig);
+            $.subjectConfig = subjectConfig;
             return this;
         }
+
         public Builder subjectConfig(CertificateConfigSubjectConfigArgs subjectConfig) {
-            this.subjectConfig = Output.of(Objects.requireNonNull(subjectConfig));
-            return this;
+            return subjectConfig(Output.of(subjectConfig));
         }
+
         public Builder x509Config(Output<CertificateConfigX509ConfigArgs> x509Config) {
-            this.x509Config = Objects.requireNonNull(x509Config);
+            $.x509Config = x509Config;
             return this;
         }
+
         public Builder x509Config(CertificateConfigX509ConfigArgs x509Config) {
-            this.x509Config = Output.of(Objects.requireNonNull(x509Config));
-            return this;
-        }        public CertificateConfigArgs build() {
-            return new CertificateConfigArgs(publicKey, subjectConfig, x509Config);
+            return x509Config(Output.of(x509Config));
+        }
+
+        public CertificateConfigArgs build() {
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            $.subjectConfig = Objects.requireNonNull($.subjectConfig, "expected parameter 'subjectConfig' to be non-null");
+            $.x509Config = Objects.requireNonNull($.x509Config, "expected parameter 'x509Config' to be non-null");
+            return $;
         }
     }
+
 }

@@ -29,7 +29,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * 
      */
     @Import(name="categoricalStatsResult", required=true)
-      private final GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult;
+    private GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult;
 
     public GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult() {
         return this.categoricalStatsResult;
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * 
      */
     @Import(name="deltaPresenceEstimationResult", required=true)
-      private final GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult;
+    private GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult;
 
     public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult() {
         return this.deltaPresenceEstimationResult;
@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * 
      */
     @Import(name="kAnonymityResult", required=true)
-      private final GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult;
+    private GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult;
 
     public GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult() {
         return this.kAnonymityResult;
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * 
      */
     @Import(name="kMapEstimationResult", required=true)
-      private final GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult;
+    private GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult;
 
     public GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult() {
         return this.kMapEstimationResult;
@@ -73,7 +73,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * 
      */
     @Import(name="lDiversityResult", required=true)
-      private final GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult;
+    private GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult;
 
     public GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult() {
         return this.lDiversityResult;
@@ -84,7 +84,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * 
      */
     @Import(name="numericalStatsResult", required=true)
-      private final GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult;
+    private GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult;
 
     public GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult() {
         return this.numericalStatsResult;
@@ -95,7 +95,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * 
      */
     @Import(name="requestedOptions", required=true)
-      private final GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions;
+    private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions;
 
     public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions() {
         return this.requestedOptions;
@@ -106,7 +106,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * 
      */
     @Import(name="requestedPrivacyMetric", required=true)
-      private final GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric;
+    private GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric;
 
     public GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric() {
         return this.requestedPrivacyMetric;
@@ -117,118 +117,101 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * 
      */
     @Import(name="requestedSourceTable", required=true)
-      private final GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
+    private GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
 
     public GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable() {
         return this.requestedSourceTable;
     }
 
-    public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse(
-        GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult,
-        GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult,
-        GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult,
-        GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult,
-        GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult,
-        GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult,
-        GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions,
-        GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric,
-        GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable) {
-        this.categoricalStatsResult = Objects.requireNonNull(categoricalStatsResult, "expected parameter 'categoricalStatsResult' to be non-null");
-        this.deltaPresenceEstimationResult = Objects.requireNonNull(deltaPresenceEstimationResult, "expected parameter 'deltaPresenceEstimationResult' to be non-null");
-        this.kAnonymityResult = Objects.requireNonNull(kAnonymityResult, "expected parameter 'kAnonymityResult' to be non-null");
-        this.kMapEstimationResult = Objects.requireNonNull(kMapEstimationResult, "expected parameter 'kMapEstimationResult' to be non-null");
-        this.lDiversityResult = Objects.requireNonNull(lDiversityResult, "expected parameter 'lDiversityResult' to be non-null");
-        this.numericalStatsResult = Objects.requireNonNull(numericalStatsResult, "expected parameter 'numericalStatsResult' to be non-null");
-        this.requestedOptions = Objects.requireNonNull(requestedOptions, "expected parameter 'requestedOptions' to be non-null");
-        this.requestedPrivacyMetric = Objects.requireNonNull(requestedPrivacyMetric, "expected parameter 'requestedPrivacyMetric' to be non-null");
-        this.requestedSourceTable = Objects.requireNonNull(requestedSourceTable, "expected parameter 'requestedSourceTable' to be non-null");
-    }
+    private GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse() {}
 
-    private GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse() {
-        this.categoricalStatsResult = null;
-        this.deltaPresenceEstimationResult = null;
-        this.kAnonymityResult = null;
-        this.kMapEstimationResult = null;
-        this.lDiversityResult = null;
-        this.numericalStatsResult = null;
-        this.requestedOptions = null;
-        this.requestedPrivacyMetric = null;
-        this.requestedSourceTable = null;
+    private GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse(GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse $) {
+        this.categoricalStatsResult = $.categoricalStatsResult;
+        this.deltaPresenceEstimationResult = $.deltaPresenceEstimationResult;
+        this.kAnonymityResult = $.kAnonymityResult;
+        this.kMapEstimationResult = $.kMapEstimationResult;
+        this.lDiversityResult = $.lDiversityResult;
+        this.numericalStatsResult = $.numericalStatsResult;
+        this.requestedOptions = $.requestedOptions;
+        this.requestedPrivacyMetric = $.requestedPrivacyMetric;
+        this.requestedSourceTable = $.requestedSourceTable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult;
-        private GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult;
-        private GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult;
-        private GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult;
-        private GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult;
-        private GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult;
-        private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions;
-        private GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric;
-        private GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
+        private GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categoricalStatsResult = defaults.categoricalStatsResult;
-    	      this.deltaPresenceEstimationResult = defaults.deltaPresenceEstimationResult;
-    	      this.kAnonymityResult = defaults.kAnonymityResult;
-    	      this.kMapEstimationResult = defaults.kMapEstimationResult;
-    	      this.lDiversityResult = defaults.lDiversityResult;
-    	      this.numericalStatsResult = defaults.numericalStatsResult;
-    	      this.requestedOptions = defaults.requestedOptions;
-    	      this.requestedPrivacyMetric = defaults.requestedPrivacyMetric;
-    	      this.requestedSourceTable = defaults.requestedSourceTable;
+            $ = new GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categoricalStatsResult(GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult) {
-            this.categoricalStatsResult = Objects.requireNonNull(categoricalStatsResult);
+            $.categoricalStatsResult = categoricalStatsResult;
             return this;
         }
+
         public Builder deltaPresenceEstimationResult(GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult) {
-            this.deltaPresenceEstimationResult = Objects.requireNonNull(deltaPresenceEstimationResult);
+            $.deltaPresenceEstimationResult = deltaPresenceEstimationResult;
             return this;
         }
+
         public Builder kAnonymityResult(GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult) {
-            this.kAnonymityResult = Objects.requireNonNull(kAnonymityResult);
+            $.kAnonymityResult = kAnonymityResult;
             return this;
         }
+
         public Builder kMapEstimationResult(GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult) {
-            this.kMapEstimationResult = Objects.requireNonNull(kMapEstimationResult);
+            $.kMapEstimationResult = kMapEstimationResult;
             return this;
         }
+
         public Builder lDiversityResult(GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult) {
-            this.lDiversityResult = Objects.requireNonNull(lDiversityResult);
+            $.lDiversityResult = lDiversityResult;
             return this;
         }
+
         public Builder numericalStatsResult(GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult) {
-            this.numericalStatsResult = Objects.requireNonNull(numericalStatsResult);
+            $.numericalStatsResult = numericalStatsResult;
             return this;
         }
+
         public Builder requestedOptions(GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions) {
-            this.requestedOptions = Objects.requireNonNull(requestedOptions);
+            $.requestedOptions = requestedOptions;
             return this;
         }
+
         public Builder requestedPrivacyMetric(GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric) {
-            this.requestedPrivacyMetric = Objects.requireNonNull(requestedPrivacyMetric);
+            $.requestedPrivacyMetric = requestedPrivacyMetric;
             return this;
         }
+
         public Builder requestedSourceTable(GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable) {
-            this.requestedSourceTable = Objects.requireNonNull(requestedSourceTable);
+            $.requestedSourceTable = requestedSourceTable;
             return this;
-        }        public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse build() {
-            return new GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse(categoricalStatsResult, deltaPresenceEstimationResult, kAnonymityResult, kMapEstimationResult, lDiversityResult, numericalStatsResult, requestedOptions, requestedPrivacyMetric, requestedSourceTable);
+        }
+
+        public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse build() {
+            $.categoricalStatsResult = Objects.requireNonNull($.categoricalStatsResult, "expected parameter 'categoricalStatsResult' to be non-null");
+            $.deltaPresenceEstimationResult = Objects.requireNonNull($.deltaPresenceEstimationResult, "expected parameter 'deltaPresenceEstimationResult' to be non-null");
+            $.kAnonymityResult = Objects.requireNonNull($.kAnonymityResult, "expected parameter 'kAnonymityResult' to be non-null");
+            $.kMapEstimationResult = Objects.requireNonNull($.kMapEstimationResult, "expected parameter 'kMapEstimationResult' to be non-null");
+            $.lDiversityResult = Objects.requireNonNull($.lDiversityResult, "expected parameter 'lDiversityResult' to be non-null");
+            $.numericalStatsResult = Objects.requireNonNull($.numericalStatsResult, "expected parameter 'numericalStatsResult' to be non-null");
+            $.requestedOptions = Objects.requireNonNull($.requestedOptions, "expected parameter 'requestedOptions' to be non-null");
+            $.requestedPrivacyMetric = Objects.requireNonNull($.requestedPrivacyMetric, "expected parameter 'requestedPrivacyMetric' to be non-null");
+            $.requestedSourceTable = Objects.requireNonNull($.requestedSourceTable, "expected parameter 'requestedSourceTable' to be non-null");
+            return $;
         }
     }
+
 }

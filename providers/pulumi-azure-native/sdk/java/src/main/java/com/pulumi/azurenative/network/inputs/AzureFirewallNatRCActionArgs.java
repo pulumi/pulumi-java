@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.AzureFirewallNatRCActionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class AzureFirewallNatRCActionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,AzureFirewallNatRCActionType>> type;
+    private @Nullable Output<Either<String,AzureFirewallNatRCActionType>> type;
 
-    public Output<Either<String,AzureFirewallNatRCActionType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,AzureFirewallNatRCActionType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AzureFirewallNatRCActionArgs(@Nullable Output<Either<String,AzureFirewallNatRCActionType>> type) {
-        this.type = type;
-    }
+    private AzureFirewallNatRCActionArgs() {}
 
-    private AzureFirewallNatRCActionArgs() {
-        this.type = Codegen.empty();
+    private AzureFirewallNatRCActionArgs(AzureFirewallNatRCActionArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallNatRCActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AzureFirewallNatRCActionType>> type;
+        private AzureFirewallNatRCActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallNatRCActionArgs();
         }
 
         public Builder(AzureFirewallNatRCActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new AzureFirewallNatRCActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,AzureFirewallNatRCActionType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,AzureFirewallNatRCActionType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AzureFirewallNatRCActionArgs build() {
-            return new AzureFirewallNatRCActionArgs(type);
+
+        public Builder type(Either<String,AzureFirewallNatRCActionType> type) {
+            return type(Output.of(type));
+        }
+
+        public AzureFirewallNatRCActionArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.TriggerActionNotificationPropertyGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TriggerActionGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<Map<String,String>> arguments;
+    private @Nullable Output<Map<String,String>> arguments;
 
-    public Output<Map<String,String>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<Map<String,String>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TriggerActionGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="crawlerName")
-      private final @Nullable Output<String> crawlerName;
+    private @Nullable Output<String> crawlerName;
 
-    public Output<String> crawlerName() {
-        return this.crawlerName == null ? Codegen.empty() : this.crawlerName;
+    public Optional<Output<String>> crawlerName() {
+        return Optional.ofNullable(this.crawlerName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TriggerActionGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="jobName")
-      private final @Nullable Output<String> jobName;
+    private @Nullable Output<String> jobName;
 
-    public Output<String> jobName() {
-        return this.jobName == null ? Codegen.empty() : this.jobName;
+    public Optional<Output<String>> jobName() {
+        return Optional.ofNullable(this.jobName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TriggerActionGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="notificationProperty")
-      private final @Nullable Output<TriggerActionNotificationPropertyGetArgs> notificationProperty;
+    private @Nullable Output<TriggerActionNotificationPropertyGetArgs> notificationProperty;
 
-    public Output<TriggerActionNotificationPropertyGetArgs> notificationProperty() {
-        return this.notificationProperty == null ? Codegen.empty() : this.notificationProperty;
+    public Optional<Output<TriggerActionNotificationPropertyGetArgs>> notificationProperty() {
+        return Optional.ofNullable(this.notificationProperty);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TriggerActionGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="securityConfiguration")
-      private final @Nullable Output<String> securityConfiguration;
+    private @Nullable Output<String> securityConfiguration;
 
-    public Output<String> securityConfiguration() {
-        return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
+    public Optional<Output<String>> securityConfiguration() {
+        return Optional.ofNullable(this.securityConfiguration);
     }
 
     /**
@@ -78,115 +78,98 @@ public final class TriggerActionGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<Integer> timeout;
+    private @Nullable Output<Integer> timeout;
 
-    public Output<Integer> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<Integer>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public TriggerActionGetArgs(
-        @Nullable Output<Map<String,String>> arguments,
-        @Nullable Output<String> crawlerName,
-        @Nullable Output<String> jobName,
-        @Nullable Output<TriggerActionNotificationPropertyGetArgs> notificationProperty,
-        @Nullable Output<String> securityConfiguration,
-        @Nullable Output<Integer> timeout) {
-        this.arguments = arguments;
-        this.crawlerName = crawlerName;
-        this.jobName = jobName;
-        this.notificationProperty = notificationProperty;
-        this.securityConfiguration = securityConfiguration;
-        this.timeout = timeout;
-    }
+    private TriggerActionGetArgs() {}
 
-    private TriggerActionGetArgs() {
-        this.arguments = Codegen.empty();
-        this.crawlerName = Codegen.empty();
-        this.jobName = Codegen.empty();
-        this.notificationProperty = Codegen.empty();
-        this.securityConfiguration = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private TriggerActionGetArgs(TriggerActionGetArgs $) {
+        this.arguments = $.arguments;
+        this.crawlerName = $.crawlerName;
+        this.jobName = $.jobName;
+        this.notificationProperty = $.notificationProperty;
+        this.securityConfiguration = $.securityConfiguration;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> arguments;
-        private @Nullable Output<String> crawlerName;
-        private @Nullable Output<String> jobName;
-        private @Nullable Output<TriggerActionNotificationPropertyGetArgs> notificationProperty;
-        private @Nullable Output<String> securityConfiguration;
-        private @Nullable Output<Integer> timeout;
+        private TriggerActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerActionGetArgs();
         }
 
         public Builder(TriggerActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.crawlerName = defaults.crawlerName;
-    	      this.jobName = defaults.jobName;
-    	      this.notificationProperty = defaults.notificationProperty;
-    	      this.securityConfiguration = defaults.securityConfiguration;
-    	      this.timeout = defaults.timeout;
+            $ = new TriggerActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<Map<String,String>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable Map<String,String> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(Map<String,String> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder crawlerName(@Nullable Output<String> crawlerName) {
-            this.crawlerName = crawlerName;
+            $.crawlerName = crawlerName;
             return this;
         }
-        public Builder crawlerName(@Nullable String crawlerName) {
-            this.crawlerName = Codegen.ofNullable(crawlerName);
-            return this;
+
+        public Builder crawlerName(String crawlerName) {
+            return crawlerName(Output.of(crawlerName));
         }
+
         public Builder jobName(@Nullable Output<String> jobName) {
-            this.jobName = jobName;
+            $.jobName = jobName;
             return this;
         }
-        public Builder jobName(@Nullable String jobName) {
-            this.jobName = Codegen.ofNullable(jobName);
-            return this;
+
+        public Builder jobName(String jobName) {
+            return jobName(Output.of(jobName));
         }
+
         public Builder notificationProperty(@Nullable Output<TriggerActionNotificationPropertyGetArgs> notificationProperty) {
-            this.notificationProperty = notificationProperty;
+            $.notificationProperty = notificationProperty;
             return this;
         }
-        public Builder notificationProperty(@Nullable TriggerActionNotificationPropertyGetArgs notificationProperty) {
-            this.notificationProperty = Codegen.ofNullable(notificationProperty);
-            return this;
+
+        public Builder notificationProperty(TriggerActionNotificationPropertyGetArgs notificationProperty) {
+            return notificationProperty(Output.of(notificationProperty));
         }
+
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
-            this.securityConfiguration = securityConfiguration;
+            $.securityConfiguration = securityConfiguration;
             return this;
         }
-        public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Codegen.ofNullable(securityConfiguration);
-            return this;
+
+        public Builder securityConfiguration(String securityConfiguration) {
+            return securityConfiguration(Output.of(securityConfiguration));
         }
+
         public Builder timeout(@Nullable Output<Integer> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public TriggerActionGetArgs build() {
-            return new TriggerActionGetArgs(arguments, crawlerName, jobName, notificationProperty, securityConfiguration, timeout);
+
+        public Builder timeout(Integer timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public TriggerActionGetArgs build() {
+            return $;
         }
     }
+
 }

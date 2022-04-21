@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends com.pulumi.re
      * 
      */
     @Import(name="count", required=true)
-      private final String count;
+    private String count;
 
     public String count() {
         return this.count;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends com.pulumi.re
      * 
      */
     @Import(name="infoType", required=true)
-      private final GooglePrivacyDlpV2InfoTypeResponse infoType;
+    private GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
     }
 
-    public GooglePrivacyDlpV2InfoTypeStatsResponse(
-        String count,
-        GooglePrivacyDlpV2InfoTypeResponse infoType) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.infoType = Objects.requireNonNull(infoType, "expected parameter 'infoType' to be non-null");
-    }
+    private GooglePrivacyDlpV2InfoTypeStatsResponse() {}
 
-    private GooglePrivacyDlpV2InfoTypeStatsResponse() {
-        this.count = null;
-        this.infoType = null;
+    private GooglePrivacyDlpV2InfoTypeStatsResponse(GooglePrivacyDlpV2InfoTypeStatsResponse $) {
+        this.count = $.count;
+        this.infoType = $.infoType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InfoTypeStatsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String count;
-        private GooglePrivacyDlpV2InfoTypeResponse infoType;
+        private GooglePrivacyDlpV2InfoTypeStatsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InfoTypeStatsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2InfoTypeStatsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.infoType = defaults.infoType;
+            $ = new GooglePrivacyDlpV2InfoTypeStatsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(String count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
-            this.infoType = Objects.requireNonNull(infoType);
+            $.infoType = infoType;
             return this;
-        }        public GooglePrivacyDlpV2InfoTypeStatsResponse build() {
-            return new GooglePrivacyDlpV2InfoTypeStatsResponse(count, infoType);
+        }
+
+        public GooglePrivacyDlpV2InfoTypeStatsResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.infoType = Objects.requireNonNull($.infoType, "expected parameter 'infoType' to be non-null");
+            return $;
         }
     }
+
 }

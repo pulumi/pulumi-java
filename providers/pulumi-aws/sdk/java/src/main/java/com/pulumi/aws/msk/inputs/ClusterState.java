@@ -11,11 +11,11 @@ import com.pulumi.aws.msk.inputs.ClusterLoggingInfoGetArgs;
 import com.pulumi.aws.msk.inputs.ClusterOpenMonitoringGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootstrapBrokers")
-      private final @Nullable Output<String> bootstrapBrokers;
+    private @Nullable Output<String> bootstrapBrokers;
 
-    public Output<String> bootstrapBrokers() {
-        return this.bootstrapBrokers == null ? Codegen.empty() : this.bootstrapBrokers;
+    public Optional<Output<String>> bootstrapBrokers() {
+        return Optional.ofNullable(this.bootstrapBrokers);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootstrapBrokersSaslIam")
-      private final @Nullable Output<String> bootstrapBrokersSaslIam;
+    private @Nullable Output<String> bootstrapBrokersSaslIam;
 
-    public Output<String> bootstrapBrokersSaslIam() {
-        return this.bootstrapBrokersSaslIam == null ? Codegen.empty() : this.bootstrapBrokersSaslIam;
+    public Optional<Output<String>> bootstrapBrokersSaslIam() {
+        return Optional.ofNullable(this.bootstrapBrokersSaslIam);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootstrapBrokersSaslScram")
-      private final @Nullable Output<String> bootstrapBrokersSaslScram;
+    private @Nullable Output<String> bootstrapBrokersSaslScram;
 
-    public Output<String> bootstrapBrokersSaslScram() {
-        return this.bootstrapBrokersSaslScram == null ? Codegen.empty() : this.bootstrapBrokersSaslScram;
+    public Optional<Output<String>> bootstrapBrokersSaslScram() {
+        return Optional.ofNullable(this.bootstrapBrokersSaslScram);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootstrapBrokersTls")
-      private final @Nullable Output<String> bootstrapBrokersTls;
+    private @Nullable Output<String> bootstrapBrokersTls;
 
-    public Output<String> bootstrapBrokersTls() {
-        return this.bootstrapBrokersTls == null ? Codegen.empty() : this.bootstrapBrokersTls;
+    public Optional<Output<String>> bootstrapBrokersTls() {
+        return Optional.ofNullable(this.bootstrapBrokersTls);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="brokerNodeGroupInfo")
-      private final @Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo;
+    private @Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo;
 
-    public Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo() {
-        return this.brokerNodeGroupInfo == null ? Codegen.empty() : this.brokerNodeGroupInfo;
+    public Optional<Output<ClusterBrokerNodeGroupInfoGetArgs>> brokerNodeGroupInfo() {
+        return Optional.ofNullable(this.brokerNodeGroupInfo);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientAuthentication")
-      private final @Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication;
+    private @Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication;
 
-    public Output<ClusterClientAuthenticationGetArgs> clientAuthentication() {
-        return this.clientAuthentication == null ? Codegen.empty() : this.clientAuthentication;
+    public Optional<Output<ClusterClientAuthenticationGetArgs>> clientAuthentication() {
+        return Optional.ofNullable(this.clientAuthentication);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationInfo")
-      private final @Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo;
+    private @Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo;
 
-    public Output<ClusterConfigurationInfoGetArgs> configurationInfo() {
-        return this.configurationInfo == null ? Codegen.empty() : this.configurationInfo;
+    public Optional<Output<ClusterConfigurationInfoGetArgs>> configurationInfo() {
+        return Optional.ofNullable(this.configurationInfo);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="currentVersion")
-      private final @Nullable Output<String> currentVersion;
+    private @Nullable Output<String> currentVersion;
 
-    public Output<String> currentVersion() {
-        return this.currentVersion == null ? Codegen.empty() : this.currentVersion;
+    public Optional<Output<String>> currentVersion() {
+        return Optional.ofNullable(this.currentVersion);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionInfo")
-      private final @Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo;
+    private @Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo;
 
-    public Output<ClusterEncryptionInfoGetArgs> encryptionInfo() {
-        return this.encryptionInfo == null ? Codegen.empty() : this.encryptionInfo;
+    public Optional<Output<ClusterEncryptionInfoGetArgs>> encryptionInfo() {
+        return Optional.ofNullable(this.encryptionInfo);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enhancedMonitoring")
-      private final @Nullable Output<String> enhancedMonitoring;
+    private @Nullable Output<String> enhancedMonitoring;
 
-    public Output<String> enhancedMonitoring() {
-        return this.enhancedMonitoring == null ? Codegen.empty() : this.enhancedMonitoring;
+    public Optional<Output<String>> enhancedMonitoring() {
+        return Optional.ofNullable(this.enhancedMonitoring);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kafkaVersion")
-      private final @Nullable Output<String> kafkaVersion;
+    private @Nullable Output<String> kafkaVersion;
 
-    public Output<String> kafkaVersion() {
-        return this.kafkaVersion == null ? Codegen.empty() : this.kafkaVersion;
+    public Optional<Output<String>> kafkaVersion() {
+        return Optional.ofNullable(this.kafkaVersion);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingInfo")
-      private final @Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo;
+    private @Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo;
 
-    public Output<ClusterLoggingInfoGetArgs> loggingInfo() {
-        return this.loggingInfo == null ? Codegen.empty() : this.loggingInfo;
+    public Optional<Output<ClusterLoggingInfoGetArgs>> loggingInfo() {
+        return Optional.ofNullable(this.loggingInfo);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfBrokerNodes")
-      private final @Nullable Output<Integer> numberOfBrokerNodes;
+    private @Nullable Output<Integer> numberOfBrokerNodes;
 
-    public Output<Integer> numberOfBrokerNodes() {
-        return this.numberOfBrokerNodes == null ? Codegen.empty() : this.numberOfBrokerNodes;
+    public Optional<Output<Integer>> numberOfBrokerNodes() {
+        return Optional.ofNullable(this.numberOfBrokerNodes);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="openMonitoring")
-      private final @Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring;
+    private @Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring;
 
-    public Output<ClusterOpenMonitoringGetArgs> openMonitoring() {
-        return this.openMonitoring == null ? Codegen.empty() : this.openMonitoring;
+    public Optional<Output<ClusterOpenMonitoringGetArgs>> openMonitoring() {
+        return Optional.ofNullable(this.openMonitoring);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zookeeperConnectString")
-      private final @Nullable Output<String> zookeeperConnectString;
+    private @Nullable Output<String> zookeeperConnectString;
 
-    public Output<String> zookeeperConnectString() {
-        return this.zookeeperConnectString == null ? Codegen.empty() : this.zookeeperConnectString;
+    public Optional<Output<String>> zookeeperConnectString() {
+        return Optional.ofNullable(this.zookeeperConnectString);
     }
 
     /**
@@ -238,297 +238,238 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zookeeperConnectStringTls")
-      private final @Nullable Output<String> zookeeperConnectStringTls;
+    private @Nullable Output<String> zookeeperConnectStringTls;
 
-    public Output<String> zookeeperConnectStringTls() {
-        return this.zookeeperConnectStringTls == null ? Codegen.empty() : this.zookeeperConnectStringTls;
+    public Optional<Output<String>> zookeeperConnectStringTls() {
+        return Optional.ofNullable(this.zookeeperConnectStringTls);
     }
 
-    public ClusterState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> bootstrapBrokers,
-        @Nullable Output<String> bootstrapBrokersSaslIam,
-        @Nullable Output<String> bootstrapBrokersSaslScram,
-        @Nullable Output<String> bootstrapBrokersTls,
-        @Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo,
-        @Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication,
-        @Nullable Output<String> clusterName,
-        @Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo,
-        @Nullable Output<String> currentVersion,
-        @Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo,
-        @Nullable Output<String> enhancedMonitoring,
-        @Nullable Output<String> kafkaVersion,
-        @Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo,
-        @Nullable Output<Integer> numberOfBrokerNodes,
-        @Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> zookeeperConnectString,
-        @Nullable Output<String> zookeeperConnectStringTls) {
-        this.arn = arn;
-        this.bootstrapBrokers = bootstrapBrokers;
-        this.bootstrapBrokersSaslIam = bootstrapBrokersSaslIam;
-        this.bootstrapBrokersSaslScram = bootstrapBrokersSaslScram;
-        this.bootstrapBrokersTls = bootstrapBrokersTls;
-        this.brokerNodeGroupInfo = brokerNodeGroupInfo;
-        this.clientAuthentication = clientAuthentication;
-        this.clusterName = clusterName;
-        this.configurationInfo = configurationInfo;
-        this.currentVersion = currentVersion;
-        this.encryptionInfo = encryptionInfo;
-        this.enhancedMonitoring = enhancedMonitoring;
-        this.kafkaVersion = kafkaVersion;
-        this.loggingInfo = loggingInfo;
-        this.numberOfBrokerNodes = numberOfBrokerNodes;
-        this.openMonitoring = openMonitoring;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.zookeeperConnectString = zookeeperConnectString;
-        this.zookeeperConnectStringTls = zookeeperConnectStringTls;
-    }
+    private ClusterState() {}
 
-    private ClusterState() {
-        this.arn = Codegen.empty();
-        this.bootstrapBrokers = Codegen.empty();
-        this.bootstrapBrokersSaslIam = Codegen.empty();
-        this.bootstrapBrokersSaslScram = Codegen.empty();
-        this.bootstrapBrokersTls = Codegen.empty();
-        this.brokerNodeGroupInfo = Codegen.empty();
-        this.clientAuthentication = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.configurationInfo = Codegen.empty();
-        this.currentVersion = Codegen.empty();
-        this.encryptionInfo = Codegen.empty();
-        this.enhancedMonitoring = Codegen.empty();
-        this.kafkaVersion = Codegen.empty();
-        this.loggingInfo = Codegen.empty();
-        this.numberOfBrokerNodes = Codegen.empty();
-        this.openMonitoring = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.zookeeperConnectString = Codegen.empty();
-        this.zookeeperConnectStringTls = Codegen.empty();
+    private ClusterState(ClusterState $) {
+        this.arn = $.arn;
+        this.bootstrapBrokers = $.bootstrapBrokers;
+        this.bootstrapBrokersSaslIam = $.bootstrapBrokersSaslIam;
+        this.bootstrapBrokersSaslScram = $.bootstrapBrokersSaslScram;
+        this.bootstrapBrokersTls = $.bootstrapBrokersTls;
+        this.brokerNodeGroupInfo = $.brokerNodeGroupInfo;
+        this.clientAuthentication = $.clientAuthentication;
+        this.clusterName = $.clusterName;
+        this.configurationInfo = $.configurationInfo;
+        this.currentVersion = $.currentVersion;
+        this.encryptionInfo = $.encryptionInfo;
+        this.enhancedMonitoring = $.enhancedMonitoring;
+        this.kafkaVersion = $.kafkaVersion;
+        this.loggingInfo = $.loggingInfo;
+        this.numberOfBrokerNodes = $.numberOfBrokerNodes;
+        this.openMonitoring = $.openMonitoring;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.zookeeperConnectString = $.zookeeperConnectString;
+        this.zookeeperConnectStringTls = $.zookeeperConnectStringTls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> bootstrapBrokers;
-        private @Nullable Output<String> bootstrapBrokersSaslIam;
-        private @Nullable Output<String> bootstrapBrokersSaslScram;
-        private @Nullable Output<String> bootstrapBrokersTls;
-        private @Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo;
-        private @Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication;
-        private @Nullable Output<String> clusterName;
-        private @Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo;
-        private @Nullable Output<String> currentVersion;
-        private @Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo;
-        private @Nullable Output<String> enhancedMonitoring;
-        private @Nullable Output<String> kafkaVersion;
-        private @Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo;
-        private @Nullable Output<Integer> numberOfBrokerNodes;
-        private @Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> zookeeperConnectString;
-        private @Nullable Output<String> zookeeperConnectStringTls;
+        private ClusterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterState();
         }
 
         public Builder(ClusterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.bootstrapBrokers = defaults.bootstrapBrokers;
-    	      this.bootstrapBrokersSaslIam = defaults.bootstrapBrokersSaslIam;
-    	      this.bootstrapBrokersSaslScram = defaults.bootstrapBrokersSaslScram;
-    	      this.bootstrapBrokersTls = defaults.bootstrapBrokersTls;
-    	      this.brokerNodeGroupInfo = defaults.brokerNodeGroupInfo;
-    	      this.clientAuthentication = defaults.clientAuthentication;
-    	      this.clusterName = defaults.clusterName;
-    	      this.configurationInfo = defaults.configurationInfo;
-    	      this.currentVersion = defaults.currentVersion;
-    	      this.encryptionInfo = defaults.encryptionInfo;
-    	      this.enhancedMonitoring = defaults.enhancedMonitoring;
-    	      this.kafkaVersion = defaults.kafkaVersion;
-    	      this.loggingInfo = defaults.loggingInfo;
-    	      this.numberOfBrokerNodes = defaults.numberOfBrokerNodes;
-    	      this.openMonitoring = defaults.openMonitoring;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.zookeeperConnectString = defaults.zookeeperConnectString;
-    	      this.zookeeperConnectStringTls = defaults.zookeeperConnectStringTls;
+            $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder bootstrapBrokers(@Nullable Output<String> bootstrapBrokers) {
-            this.bootstrapBrokers = bootstrapBrokers;
+            $.bootstrapBrokers = bootstrapBrokers;
             return this;
         }
-        public Builder bootstrapBrokers(@Nullable String bootstrapBrokers) {
-            this.bootstrapBrokers = Codegen.ofNullable(bootstrapBrokers);
-            return this;
+
+        public Builder bootstrapBrokers(String bootstrapBrokers) {
+            return bootstrapBrokers(Output.of(bootstrapBrokers));
         }
+
         public Builder bootstrapBrokersSaslIam(@Nullable Output<String> bootstrapBrokersSaslIam) {
-            this.bootstrapBrokersSaslIam = bootstrapBrokersSaslIam;
+            $.bootstrapBrokersSaslIam = bootstrapBrokersSaslIam;
             return this;
         }
-        public Builder bootstrapBrokersSaslIam(@Nullable String bootstrapBrokersSaslIam) {
-            this.bootstrapBrokersSaslIam = Codegen.ofNullable(bootstrapBrokersSaslIam);
-            return this;
+
+        public Builder bootstrapBrokersSaslIam(String bootstrapBrokersSaslIam) {
+            return bootstrapBrokersSaslIam(Output.of(bootstrapBrokersSaslIam));
         }
+
         public Builder bootstrapBrokersSaslScram(@Nullable Output<String> bootstrapBrokersSaslScram) {
-            this.bootstrapBrokersSaslScram = bootstrapBrokersSaslScram;
+            $.bootstrapBrokersSaslScram = bootstrapBrokersSaslScram;
             return this;
         }
-        public Builder bootstrapBrokersSaslScram(@Nullable String bootstrapBrokersSaslScram) {
-            this.bootstrapBrokersSaslScram = Codegen.ofNullable(bootstrapBrokersSaslScram);
-            return this;
+
+        public Builder bootstrapBrokersSaslScram(String bootstrapBrokersSaslScram) {
+            return bootstrapBrokersSaslScram(Output.of(bootstrapBrokersSaslScram));
         }
+
         public Builder bootstrapBrokersTls(@Nullable Output<String> bootstrapBrokersTls) {
-            this.bootstrapBrokersTls = bootstrapBrokersTls;
+            $.bootstrapBrokersTls = bootstrapBrokersTls;
             return this;
         }
-        public Builder bootstrapBrokersTls(@Nullable String bootstrapBrokersTls) {
-            this.bootstrapBrokersTls = Codegen.ofNullable(bootstrapBrokersTls);
-            return this;
+
+        public Builder bootstrapBrokersTls(String bootstrapBrokersTls) {
+            return bootstrapBrokersTls(Output.of(bootstrapBrokersTls));
         }
+
         public Builder brokerNodeGroupInfo(@Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo) {
-            this.brokerNodeGroupInfo = brokerNodeGroupInfo;
+            $.brokerNodeGroupInfo = brokerNodeGroupInfo;
             return this;
         }
-        public Builder brokerNodeGroupInfo(@Nullable ClusterBrokerNodeGroupInfoGetArgs brokerNodeGroupInfo) {
-            this.brokerNodeGroupInfo = Codegen.ofNullable(brokerNodeGroupInfo);
-            return this;
+
+        public Builder brokerNodeGroupInfo(ClusterBrokerNodeGroupInfoGetArgs brokerNodeGroupInfo) {
+            return brokerNodeGroupInfo(Output.of(brokerNodeGroupInfo));
         }
+
         public Builder clientAuthentication(@Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication) {
-            this.clientAuthentication = clientAuthentication;
+            $.clientAuthentication = clientAuthentication;
             return this;
         }
-        public Builder clientAuthentication(@Nullable ClusterClientAuthenticationGetArgs clientAuthentication) {
-            this.clientAuthentication = Codegen.ofNullable(clientAuthentication);
-            return this;
+
+        public Builder clientAuthentication(ClusterClientAuthenticationGetArgs clientAuthentication) {
+            return clientAuthentication(Output.of(clientAuthentication));
         }
+
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder configurationInfo(@Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo) {
-            this.configurationInfo = configurationInfo;
+            $.configurationInfo = configurationInfo;
             return this;
         }
-        public Builder configurationInfo(@Nullable ClusterConfigurationInfoGetArgs configurationInfo) {
-            this.configurationInfo = Codegen.ofNullable(configurationInfo);
-            return this;
+
+        public Builder configurationInfo(ClusterConfigurationInfoGetArgs configurationInfo) {
+            return configurationInfo(Output.of(configurationInfo));
         }
+
         public Builder currentVersion(@Nullable Output<String> currentVersion) {
-            this.currentVersion = currentVersion;
+            $.currentVersion = currentVersion;
             return this;
         }
-        public Builder currentVersion(@Nullable String currentVersion) {
-            this.currentVersion = Codegen.ofNullable(currentVersion);
-            return this;
+
+        public Builder currentVersion(String currentVersion) {
+            return currentVersion(Output.of(currentVersion));
         }
+
         public Builder encryptionInfo(@Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo) {
-            this.encryptionInfo = encryptionInfo;
+            $.encryptionInfo = encryptionInfo;
             return this;
         }
-        public Builder encryptionInfo(@Nullable ClusterEncryptionInfoGetArgs encryptionInfo) {
-            this.encryptionInfo = Codegen.ofNullable(encryptionInfo);
-            return this;
+
+        public Builder encryptionInfo(ClusterEncryptionInfoGetArgs encryptionInfo) {
+            return encryptionInfo(Output.of(encryptionInfo));
         }
+
         public Builder enhancedMonitoring(@Nullable Output<String> enhancedMonitoring) {
-            this.enhancedMonitoring = enhancedMonitoring;
+            $.enhancedMonitoring = enhancedMonitoring;
             return this;
         }
-        public Builder enhancedMonitoring(@Nullable String enhancedMonitoring) {
-            this.enhancedMonitoring = Codegen.ofNullable(enhancedMonitoring);
-            return this;
+
+        public Builder enhancedMonitoring(String enhancedMonitoring) {
+            return enhancedMonitoring(Output.of(enhancedMonitoring));
         }
+
         public Builder kafkaVersion(@Nullable Output<String> kafkaVersion) {
-            this.kafkaVersion = kafkaVersion;
+            $.kafkaVersion = kafkaVersion;
             return this;
         }
-        public Builder kafkaVersion(@Nullable String kafkaVersion) {
-            this.kafkaVersion = Codegen.ofNullable(kafkaVersion);
-            return this;
+
+        public Builder kafkaVersion(String kafkaVersion) {
+            return kafkaVersion(Output.of(kafkaVersion));
         }
+
         public Builder loggingInfo(@Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo) {
-            this.loggingInfo = loggingInfo;
+            $.loggingInfo = loggingInfo;
             return this;
         }
-        public Builder loggingInfo(@Nullable ClusterLoggingInfoGetArgs loggingInfo) {
-            this.loggingInfo = Codegen.ofNullable(loggingInfo);
-            return this;
+
+        public Builder loggingInfo(ClusterLoggingInfoGetArgs loggingInfo) {
+            return loggingInfo(Output.of(loggingInfo));
         }
+
         public Builder numberOfBrokerNodes(@Nullable Output<Integer> numberOfBrokerNodes) {
-            this.numberOfBrokerNodes = numberOfBrokerNodes;
+            $.numberOfBrokerNodes = numberOfBrokerNodes;
             return this;
         }
-        public Builder numberOfBrokerNodes(@Nullable Integer numberOfBrokerNodes) {
-            this.numberOfBrokerNodes = Codegen.ofNullable(numberOfBrokerNodes);
-            return this;
+
+        public Builder numberOfBrokerNodes(Integer numberOfBrokerNodes) {
+            return numberOfBrokerNodes(Output.of(numberOfBrokerNodes));
         }
+
         public Builder openMonitoring(@Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring) {
-            this.openMonitoring = openMonitoring;
+            $.openMonitoring = openMonitoring;
             return this;
         }
-        public Builder openMonitoring(@Nullable ClusterOpenMonitoringGetArgs openMonitoring) {
-            this.openMonitoring = Codegen.ofNullable(openMonitoring);
-            return this;
+
+        public Builder openMonitoring(ClusterOpenMonitoringGetArgs openMonitoring) {
+            return openMonitoring(Output.of(openMonitoring));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder zookeeperConnectString(@Nullable Output<String> zookeeperConnectString) {
-            this.zookeeperConnectString = zookeeperConnectString;
+            $.zookeeperConnectString = zookeeperConnectString;
             return this;
         }
-        public Builder zookeeperConnectString(@Nullable String zookeeperConnectString) {
-            this.zookeeperConnectString = Codegen.ofNullable(zookeeperConnectString);
-            return this;
+
+        public Builder zookeeperConnectString(String zookeeperConnectString) {
+            return zookeeperConnectString(Output.of(zookeeperConnectString));
         }
+
         public Builder zookeeperConnectStringTls(@Nullable Output<String> zookeeperConnectStringTls) {
-            this.zookeeperConnectStringTls = zookeeperConnectStringTls;
+            $.zookeeperConnectStringTls = zookeeperConnectStringTls;
             return this;
         }
-        public Builder zookeeperConnectStringTls(@Nullable String zookeeperConnectStringTls) {
-            this.zookeeperConnectStringTls = Codegen.ofNullable(zookeeperConnectStringTls);
-            return this;
-        }        public ClusterState build() {
-            return new ClusterState(arn, bootstrapBrokers, bootstrapBrokersSaslIam, bootstrapBrokersSaslScram, bootstrapBrokersTls, brokerNodeGroupInfo, clientAuthentication, clusterName, configurationInfo, currentVersion, encryptionInfo, enhancedMonitoring, kafkaVersion, loggingInfo, numberOfBrokerNodes, openMonitoring, tags, tagsAll, zookeeperConnectString, zookeeperConnectStringTls);
+
+        public Builder zookeeperConnectStringTls(String zookeeperConnectStringTls) {
+            return zookeeperConnectStringTls(Output.of(zookeeperConnectStringTls));
+        }
+
+        public ClusterState build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="statementName", required=true)
-      private final String statementName;
+    private String statementName;
 
     public String statementName() {
         return this.statementName;
@@ -28,55 +28,52 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="workGroup", required=true)
-      private final String workGroup;
+    private String workGroup;
 
     public String workGroup() {
         return this.workGroup;
     }
 
-    public GetPreparedStatementArgs(
-        String statementName,
-        String workGroup) {
-        this.statementName = Objects.requireNonNull(statementName, "expected parameter 'statementName' to be non-null");
-        this.workGroup = Objects.requireNonNull(workGroup, "expected parameter 'workGroup' to be non-null");
-    }
+    private GetPreparedStatementArgs() {}
 
-    private GetPreparedStatementArgs() {
-        this.statementName = null;
-        this.workGroup = null;
+    private GetPreparedStatementArgs(GetPreparedStatementArgs $) {
+        this.statementName = $.statementName;
+        this.workGroup = $.workGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPreparedStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String statementName;
-        private String workGroup;
+        private GetPreparedStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPreparedStatementArgs();
         }
 
         public Builder(GetPreparedStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statementName = defaults.statementName;
-    	      this.workGroup = defaults.workGroup;
+            $ = new GetPreparedStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder statementName(String statementName) {
-            this.statementName = Objects.requireNonNull(statementName);
+            $.statementName = statementName;
             return this;
         }
+
         public Builder workGroup(String workGroup) {
-            this.workGroup = Objects.requireNonNull(workGroup);
+            $.workGroup = workGroup;
             return this;
-        }        public GetPreparedStatementArgs build() {
-            return new GetPreparedStatementArgs(statementName, workGroup);
+        }
+
+        public GetPreparedStatementArgs build() {
+            $.statementName = Objects.requireNonNull($.statementName, "expected parameter 'statementName' to be non-null");
+            $.workGroup = Objects.requireNonNull($.workGroup, "expected parameter 'workGroup' to be non-null");
+            return $;
         }
     }
+
 }

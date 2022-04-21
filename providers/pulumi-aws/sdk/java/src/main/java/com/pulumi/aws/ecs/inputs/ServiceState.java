@@ -13,13 +13,13 @@ import com.pulumi.aws.ecs.inputs.ServicePlacementConstraintGetArgs;
 import com.pulumi.aws.ecs.inputs.ServiceServiceRegistriesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacityProviderStrategies")
-      private final @Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
+    private @Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
 
-    public Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies() {
-        return this.capacityProviderStrategies == null ? Codegen.empty() : this.capacityProviderStrategies;
+    public Optional<Output<List<ServiceCapacityProviderStrategyGetArgs>>> capacityProviderStrategies() {
+        return Optional.ofNullable(this.capacityProviderStrategies);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cluster")
-      private final @Nullable Output<String> cluster;
+    private @Nullable Output<String> cluster;
 
-    public Output<String> cluster() {
-        return this.cluster == null ? Codegen.empty() : this.cluster;
+    public Optional<Output<String>> cluster() {
+        return Optional.ofNullable(this.cluster);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentCircuitBreaker")
-      private final @Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker;
+    private @Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker;
 
-    public Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker() {
-        return this.deploymentCircuitBreaker == null ? Codegen.empty() : this.deploymentCircuitBreaker;
+    public Optional<Output<ServiceDeploymentCircuitBreakerGetArgs>> deploymentCircuitBreaker() {
+        return Optional.ofNullable(this.deploymentCircuitBreaker);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentController")
-      private final @Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController;
+    private @Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController;
 
-    public Output<ServiceDeploymentControllerGetArgs> deploymentController() {
-        return this.deploymentController == null ? Codegen.empty() : this.deploymentController;
+    public Optional<Output<ServiceDeploymentControllerGetArgs>> deploymentController() {
+        return Optional.ofNullable(this.deploymentController);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentMaximumPercent")
-      private final @Nullable Output<Integer> deploymentMaximumPercent;
+    private @Nullable Output<Integer> deploymentMaximumPercent;
 
-    public Output<Integer> deploymentMaximumPercent() {
-        return this.deploymentMaximumPercent == null ? Codegen.empty() : this.deploymentMaximumPercent;
+    public Optional<Output<Integer>> deploymentMaximumPercent() {
+        return Optional.ofNullable(this.deploymentMaximumPercent);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentMinimumHealthyPercent")
-      private final @Nullable Output<Integer> deploymentMinimumHealthyPercent;
+    private @Nullable Output<Integer> deploymentMinimumHealthyPercent;
 
-    public Output<Integer> deploymentMinimumHealthyPercent() {
-        return this.deploymentMinimumHealthyPercent == null ? Codegen.empty() : this.deploymentMinimumHealthyPercent;
+    public Optional<Output<Integer>> deploymentMinimumHealthyPercent() {
+        return Optional.ofNullable(this.deploymentMinimumHealthyPercent);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="desiredCount")
-      private final @Nullable Output<Integer> desiredCount;
+    private @Nullable Output<Integer> desiredCount;
 
-    public Output<Integer> desiredCount() {
-        return this.desiredCount == null ? Codegen.empty() : this.desiredCount;
+    public Optional<Output<Integer>> desiredCount() {
+        return Optional.ofNullable(this.desiredCount);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableEcsManagedTags")
-      private final @Nullable Output<Boolean> enableEcsManagedTags;
+    private @Nullable Output<Boolean> enableEcsManagedTags;
 
-    public Output<Boolean> enableEcsManagedTags() {
-        return this.enableEcsManagedTags == null ? Codegen.empty() : this.enableEcsManagedTags;
+    public Optional<Output<Boolean>> enableEcsManagedTags() {
+        return Optional.ofNullable(this.enableEcsManagedTags);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableExecuteCommand")
-      private final @Nullable Output<Boolean> enableExecuteCommand;
+    private @Nullable Output<Boolean> enableExecuteCommand;
 
-    public Output<Boolean> enableExecuteCommand() {
-        return this.enableExecuteCommand == null ? Codegen.empty() : this.enableExecuteCommand;
+    public Optional<Output<Boolean>> enableExecuteCommand() {
+        return Optional.ofNullable(this.enableExecuteCommand);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceNewDeployment")
-      private final @Nullable Output<Boolean> forceNewDeployment;
+    private @Nullable Output<Boolean> forceNewDeployment;
 
-    public Output<Boolean> forceNewDeployment() {
-        return this.forceNewDeployment == null ? Codegen.empty() : this.forceNewDeployment;
+    public Optional<Output<Boolean>> forceNewDeployment() {
+        return Optional.ofNullable(this.forceNewDeployment);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckGracePeriodSeconds")
-      private final @Nullable Output<Integer> healthCheckGracePeriodSeconds;
+    private @Nullable Output<Integer> healthCheckGracePeriodSeconds;
 
-    public Output<Integer> healthCheckGracePeriodSeconds() {
-        return this.healthCheckGracePeriodSeconds == null ? Codegen.empty() : this.healthCheckGracePeriodSeconds;
+    public Optional<Output<Integer>> healthCheckGracePeriodSeconds() {
+        return Optional.ofNullable(this.healthCheckGracePeriodSeconds);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamRole")
-      private final @Nullable Output<String> iamRole;
+    private @Nullable Output<String> iamRole;
 
-    public Output<String> iamRole() {
-        return this.iamRole == null ? Codegen.empty() : this.iamRole;
+    public Optional<Output<String>> iamRole() {
+        return Optional.ofNullable(this.iamRole);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchType")
-      private final @Nullable Output<String> launchType;
+    private @Nullable Output<String> launchType;
 
-    public Output<String> launchType() {
-        return this.launchType == null ? Codegen.empty() : this.launchType;
+    public Optional<Output<String>> launchType() {
+        return Optional.ofNullable(this.launchType);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancers")
-      private final @Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers;
+    private @Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers;
 
-    public Output<List<ServiceLoadBalancerGetArgs>> loadBalancers() {
-        return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
+    public Optional<Output<List<ServiceLoadBalancerGetArgs>>> loadBalancers() {
+        return Optional.ofNullable(this.loadBalancers);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfiguration")
-      private final @Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration;
+    private @Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration;
 
-    public Output<ServiceNetworkConfigurationGetArgs> networkConfiguration() {
-        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
+    public Optional<Output<ServiceNetworkConfigurationGetArgs>> networkConfiguration() {
+        return Optional.ofNullable(this.networkConfiguration);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orderedPlacementStrategies")
-      private final @Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies;
+    private @Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies;
 
-    public Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies() {
-        return this.orderedPlacementStrategies == null ? Codegen.empty() : this.orderedPlacementStrategies;
+    public Optional<Output<List<ServiceOrderedPlacementStrategyGetArgs>>> orderedPlacementStrategies() {
+        return Optional.ofNullable(this.orderedPlacementStrategies);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="placementConstraints")
-      private final @Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints;
+    private @Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints;
 
-    public Output<List<ServicePlacementConstraintGetArgs>> placementConstraints() {
-        return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
+    public Optional<Output<List<ServicePlacementConstraintGetArgs>>> placementConstraints() {
+        return Optional.ofNullable(this.placementConstraints);
     }
 
     /**
@@ -230,10 +230,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platformVersion")
-      private final @Nullable Output<String> platformVersion;
+    private @Nullable Output<String> platformVersion;
 
-    public Output<String> platformVersion() {
-        return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
+    public Optional<Output<String>> platformVersion() {
+        return Optional.ofNullable(this.platformVersion);
     }
 
     /**
@@ -241,10 +241,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="propagateTags")
-      private final @Nullable Output<String> propagateTags;
+    private @Nullable Output<String> propagateTags;
 
-    public Output<String> propagateTags() {
-        return this.propagateTags == null ? Codegen.empty() : this.propagateTags;
+    public Optional<Output<String>> propagateTags() {
+        return Optional.ofNullable(this.propagateTags);
     }
 
     /**
@@ -252,10 +252,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedulingStrategy")
-      private final @Nullable Output<String> schedulingStrategy;
+    private @Nullable Output<String> schedulingStrategy;
 
-    public Output<String> schedulingStrategy() {
-        return this.schedulingStrategy == null ? Codegen.empty() : this.schedulingStrategy;
+    public Optional<Output<String>> schedulingStrategy() {
+        return Optional.ofNullable(this.schedulingStrategy);
     }
 
     /**
@@ -263,10 +263,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRegistries")
-      private final @Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries;
+    private @Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries;
 
-    public Output<ServiceServiceRegistriesGetArgs> serviceRegistries() {
-        return this.serviceRegistries == null ? Codegen.empty() : this.serviceRegistries;
+    public Optional<Output<ServiceServiceRegistriesGetArgs>> serviceRegistries() {
+        return Optional.ofNullable(this.serviceRegistries);
     }
 
     /**
@@ -274,10 +274,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -285,10 +285,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -296,10 +296,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskDefinition")
-      private final @Nullable Output<String> taskDefinition;
+    private @Nullable Output<String> taskDefinition;
 
-    public Output<String> taskDefinition() {
-        return this.taskDefinition == null ? Codegen.empty() : this.taskDefinition;
+    public Optional<Output<String>> taskDefinition() {
+        return Optional.ofNullable(this.taskDefinition);
     }
 
     /**
@@ -307,387 +307,314 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="waitForSteadyState")
-      private final @Nullable Output<Boolean> waitForSteadyState;
+    private @Nullable Output<Boolean> waitForSteadyState;
 
-    public Output<Boolean> waitForSteadyState() {
-        return this.waitForSteadyState == null ? Codegen.empty() : this.waitForSteadyState;
+    public Optional<Output<Boolean>> waitForSteadyState() {
+        return Optional.ofNullable(this.waitForSteadyState);
     }
 
-    public ServiceState(
-        @Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies,
-        @Nullable Output<String> cluster,
-        @Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker,
-        @Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController,
-        @Nullable Output<Integer> deploymentMaximumPercent,
-        @Nullable Output<Integer> deploymentMinimumHealthyPercent,
-        @Nullable Output<Integer> desiredCount,
-        @Nullable Output<Boolean> enableEcsManagedTags,
-        @Nullable Output<Boolean> enableExecuteCommand,
-        @Nullable Output<Boolean> forceNewDeployment,
-        @Nullable Output<Integer> healthCheckGracePeriodSeconds,
-        @Nullable Output<String> iamRole,
-        @Nullable Output<String> launchType,
-        @Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers,
-        @Nullable Output<String> name,
-        @Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration,
-        @Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies,
-        @Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints,
-        @Nullable Output<String> platformVersion,
-        @Nullable Output<String> propagateTags,
-        @Nullable Output<String> schedulingStrategy,
-        @Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> taskDefinition,
-        @Nullable Output<Boolean> waitForSteadyState) {
-        this.capacityProviderStrategies = capacityProviderStrategies;
-        this.cluster = cluster;
-        this.deploymentCircuitBreaker = deploymentCircuitBreaker;
-        this.deploymentController = deploymentController;
-        this.deploymentMaximumPercent = deploymentMaximumPercent;
-        this.deploymentMinimumHealthyPercent = deploymentMinimumHealthyPercent;
-        this.desiredCount = desiredCount;
-        this.enableEcsManagedTags = enableEcsManagedTags;
-        this.enableExecuteCommand = enableExecuteCommand;
-        this.forceNewDeployment = forceNewDeployment;
-        this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
-        this.iamRole = iamRole;
-        this.launchType = launchType;
-        this.loadBalancers = loadBalancers;
-        this.name = name;
-        this.networkConfiguration = networkConfiguration;
-        this.orderedPlacementStrategies = orderedPlacementStrategies;
-        this.placementConstraints = placementConstraints;
-        this.platformVersion = platformVersion;
-        this.propagateTags = propagateTags;
-        this.schedulingStrategy = schedulingStrategy;
-        this.serviceRegistries = serviceRegistries;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.taskDefinition = taskDefinition;
-        this.waitForSteadyState = waitForSteadyState;
-    }
+    private ServiceState() {}
 
-    private ServiceState() {
-        this.capacityProviderStrategies = Codegen.empty();
-        this.cluster = Codegen.empty();
-        this.deploymentCircuitBreaker = Codegen.empty();
-        this.deploymentController = Codegen.empty();
-        this.deploymentMaximumPercent = Codegen.empty();
-        this.deploymentMinimumHealthyPercent = Codegen.empty();
-        this.desiredCount = Codegen.empty();
-        this.enableEcsManagedTags = Codegen.empty();
-        this.enableExecuteCommand = Codegen.empty();
-        this.forceNewDeployment = Codegen.empty();
-        this.healthCheckGracePeriodSeconds = Codegen.empty();
-        this.iamRole = Codegen.empty();
-        this.launchType = Codegen.empty();
-        this.loadBalancers = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkConfiguration = Codegen.empty();
-        this.orderedPlacementStrategies = Codegen.empty();
-        this.placementConstraints = Codegen.empty();
-        this.platformVersion = Codegen.empty();
-        this.propagateTags = Codegen.empty();
-        this.schedulingStrategy = Codegen.empty();
-        this.serviceRegistries = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.taskDefinition = Codegen.empty();
-        this.waitForSteadyState = Codegen.empty();
+    private ServiceState(ServiceState $) {
+        this.capacityProviderStrategies = $.capacityProviderStrategies;
+        this.cluster = $.cluster;
+        this.deploymentCircuitBreaker = $.deploymentCircuitBreaker;
+        this.deploymentController = $.deploymentController;
+        this.deploymentMaximumPercent = $.deploymentMaximumPercent;
+        this.deploymentMinimumHealthyPercent = $.deploymentMinimumHealthyPercent;
+        this.desiredCount = $.desiredCount;
+        this.enableEcsManagedTags = $.enableEcsManagedTags;
+        this.enableExecuteCommand = $.enableExecuteCommand;
+        this.forceNewDeployment = $.forceNewDeployment;
+        this.healthCheckGracePeriodSeconds = $.healthCheckGracePeriodSeconds;
+        this.iamRole = $.iamRole;
+        this.launchType = $.launchType;
+        this.loadBalancers = $.loadBalancers;
+        this.name = $.name;
+        this.networkConfiguration = $.networkConfiguration;
+        this.orderedPlacementStrategies = $.orderedPlacementStrategies;
+        this.placementConstraints = $.placementConstraints;
+        this.platformVersion = $.platformVersion;
+        this.propagateTags = $.propagateTags;
+        this.schedulingStrategy = $.schedulingStrategy;
+        this.serviceRegistries = $.serviceRegistries;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.taskDefinition = $.taskDefinition;
+        this.waitForSteadyState = $.waitForSteadyState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
-        private @Nullable Output<String> cluster;
-        private @Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker;
-        private @Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController;
-        private @Nullable Output<Integer> deploymentMaximumPercent;
-        private @Nullable Output<Integer> deploymentMinimumHealthyPercent;
-        private @Nullable Output<Integer> desiredCount;
-        private @Nullable Output<Boolean> enableEcsManagedTags;
-        private @Nullable Output<Boolean> enableExecuteCommand;
-        private @Nullable Output<Boolean> forceNewDeployment;
-        private @Nullable Output<Integer> healthCheckGracePeriodSeconds;
-        private @Nullable Output<String> iamRole;
-        private @Nullable Output<String> launchType;
-        private @Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration;
-        private @Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies;
-        private @Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints;
-        private @Nullable Output<String> platformVersion;
-        private @Nullable Output<String> propagateTags;
-        private @Nullable Output<String> schedulingStrategy;
-        private @Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> taskDefinition;
-        private @Nullable Output<Boolean> waitForSteadyState;
+        private ServiceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceState();
         }
 
         public Builder(ServiceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityProviderStrategies = defaults.capacityProviderStrategies;
-    	      this.cluster = defaults.cluster;
-    	      this.deploymentCircuitBreaker = defaults.deploymentCircuitBreaker;
-    	      this.deploymentController = defaults.deploymentController;
-    	      this.deploymentMaximumPercent = defaults.deploymentMaximumPercent;
-    	      this.deploymentMinimumHealthyPercent = defaults.deploymentMinimumHealthyPercent;
-    	      this.desiredCount = defaults.desiredCount;
-    	      this.enableEcsManagedTags = defaults.enableEcsManagedTags;
-    	      this.enableExecuteCommand = defaults.enableExecuteCommand;
-    	      this.forceNewDeployment = defaults.forceNewDeployment;
-    	      this.healthCheckGracePeriodSeconds = defaults.healthCheckGracePeriodSeconds;
-    	      this.iamRole = defaults.iamRole;
-    	      this.launchType = defaults.launchType;
-    	      this.loadBalancers = defaults.loadBalancers;
-    	      this.name = defaults.name;
-    	      this.networkConfiguration = defaults.networkConfiguration;
-    	      this.orderedPlacementStrategies = defaults.orderedPlacementStrategies;
-    	      this.placementConstraints = defaults.placementConstraints;
-    	      this.platformVersion = defaults.platformVersion;
-    	      this.propagateTags = defaults.propagateTags;
-    	      this.schedulingStrategy = defaults.schedulingStrategy;
-    	      this.serviceRegistries = defaults.serviceRegistries;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.taskDefinition = defaults.taskDefinition;
-    	      this.waitForSteadyState = defaults.waitForSteadyState;
+            $ = new ServiceState(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityProviderStrategies(@Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
-            this.capacityProviderStrategies = capacityProviderStrategies;
+            $.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
-        public Builder capacityProviderStrategies(@Nullable List<ServiceCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
-            this.capacityProviderStrategies = Codegen.ofNullable(capacityProviderStrategies);
-            return this;
+
+        public Builder capacityProviderStrategies(List<ServiceCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
+            return capacityProviderStrategies(Output.of(capacityProviderStrategies));
         }
+
         public Builder capacityProviderStrategies(ServiceCapacityProviderStrategyGetArgs... capacityProviderStrategies) {
             return capacityProviderStrategies(List.of(capacityProviderStrategies));
         }
+
         public Builder cluster(@Nullable Output<String> cluster) {
-            this.cluster = cluster;
+            $.cluster = cluster;
             return this;
         }
-        public Builder cluster(@Nullable String cluster) {
-            this.cluster = Codegen.ofNullable(cluster);
-            return this;
+
+        public Builder cluster(String cluster) {
+            return cluster(Output.of(cluster));
         }
+
         public Builder deploymentCircuitBreaker(@Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker) {
-            this.deploymentCircuitBreaker = deploymentCircuitBreaker;
+            $.deploymentCircuitBreaker = deploymentCircuitBreaker;
             return this;
         }
-        public Builder deploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreakerGetArgs deploymentCircuitBreaker) {
-            this.deploymentCircuitBreaker = Codegen.ofNullable(deploymentCircuitBreaker);
-            return this;
+
+        public Builder deploymentCircuitBreaker(ServiceDeploymentCircuitBreakerGetArgs deploymentCircuitBreaker) {
+            return deploymentCircuitBreaker(Output.of(deploymentCircuitBreaker));
         }
+
         public Builder deploymentController(@Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController) {
-            this.deploymentController = deploymentController;
+            $.deploymentController = deploymentController;
             return this;
         }
-        public Builder deploymentController(@Nullable ServiceDeploymentControllerGetArgs deploymentController) {
-            this.deploymentController = Codegen.ofNullable(deploymentController);
-            return this;
+
+        public Builder deploymentController(ServiceDeploymentControllerGetArgs deploymentController) {
+            return deploymentController(Output.of(deploymentController));
         }
+
         public Builder deploymentMaximumPercent(@Nullable Output<Integer> deploymentMaximumPercent) {
-            this.deploymentMaximumPercent = deploymentMaximumPercent;
+            $.deploymentMaximumPercent = deploymentMaximumPercent;
             return this;
         }
-        public Builder deploymentMaximumPercent(@Nullable Integer deploymentMaximumPercent) {
-            this.deploymentMaximumPercent = Codegen.ofNullable(deploymentMaximumPercent);
-            return this;
+
+        public Builder deploymentMaximumPercent(Integer deploymentMaximumPercent) {
+            return deploymentMaximumPercent(Output.of(deploymentMaximumPercent));
         }
+
         public Builder deploymentMinimumHealthyPercent(@Nullable Output<Integer> deploymentMinimumHealthyPercent) {
-            this.deploymentMinimumHealthyPercent = deploymentMinimumHealthyPercent;
+            $.deploymentMinimumHealthyPercent = deploymentMinimumHealthyPercent;
             return this;
         }
-        public Builder deploymentMinimumHealthyPercent(@Nullable Integer deploymentMinimumHealthyPercent) {
-            this.deploymentMinimumHealthyPercent = Codegen.ofNullable(deploymentMinimumHealthyPercent);
-            return this;
+
+        public Builder deploymentMinimumHealthyPercent(Integer deploymentMinimumHealthyPercent) {
+            return deploymentMinimumHealthyPercent(Output.of(deploymentMinimumHealthyPercent));
         }
+
         public Builder desiredCount(@Nullable Output<Integer> desiredCount) {
-            this.desiredCount = desiredCount;
+            $.desiredCount = desiredCount;
             return this;
         }
-        public Builder desiredCount(@Nullable Integer desiredCount) {
-            this.desiredCount = Codegen.ofNullable(desiredCount);
-            return this;
+
+        public Builder desiredCount(Integer desiredCount) {
+            return desiredCount(Output.of(desiredCount));
         }
+
         public Builder enableEcsManagedTags(@Nullable Output<Boolean> enableEcsManagedTags) {
-            this.enableEcsManagedTags = enableEcsManagedTags;
+            $.enableEcsManagedTags = enableEcsManagedTags;
             return this;
         }
-        public Builder enableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
-            this.enableEcsManagedTags = Codegen.ofNullable(enableEcsManagedTags);
-            return this;
+
+        public Builder enableEcsManagedTags(Boolean enableEcsManagedTags) {
+            return enableEcsManagedTags(Output.of(enableEcsManagedTags));
         }
+
         public Builder enableExecuteCommand(@Nullable Output<Boolean> enableExecuteCommand) {
-            this.enableExecuteCommand = enableExecuteCommand;
+            $.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
-        public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
-            this.enableExecuteCommand = Codegen.ofNullable(enableExecuteCommand);
-            return this;
+
+        public Builder enableExecuteCommand(Boolean enableExecuteCommand) {
+            return enableExecuteCommand(Output.of(enableExecuteCommand));
         }
+
         public Builder forceNewDeployment(@Nullable Output<Boolean> forceNewDeployment) {
-            this.forceNewDeployment = forceNewDeployment;
+            $.forceNewDeployment = forceNewDeployment;
             return this;
         }
-        public Builder forceNewDeployment(@Nullable Boolean forceNewDeployment) {
-            this.forceNewDeployment = Codegen.ofNullable(forceNewDeployment);
-            return this;
+
+        public Builder forceNewDeployment(Boolean forceNewDeployment) {
+            return forceNewDeployment(Output.of(forceNewDeployment));
         }
+
         public Builder healthCheckGracePeriodSeconds(@Nullable Output<Integer> healthCheckGracePeriodSeconds) {
-            this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
+            $.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
             return this;
         }
-        public Builder healthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
-            this.healthCheckGracePeriodSeconds = Codegen.ofNullable(healthCheckGracePeriodSeconds);
-            return this;
+
+        public Builder healthCheckGracePeriodSeconds(Integer healthCheckGracePeriodSeconds) {
+            return healthCheckGracePeriodSeconds(Output.of(healthCheckGracePeriodSeconds));
         }
+
         public Builder iamRole(@Nullable Output<String> iamRole) {
-            this.iamRole = iamRole;
+            $.iamRole = iamRole;
             return this;
         }
-        public Builder iamRole(@Nullable String iamRole) {
-            this.iamRole = Codegen.ofNullable(iamRole);
-            return this;
+
+        public Builder iamRole(String iamRole) {
+            return iamRole(Output.of(iamRole));
         }
+
         public Builder launchType(@Nullable Output<String> launchType) {
-            this.launchType = launchType;
+            $.launchType = launchType;
             return this;
         }
-        public Builder launchType(@Nullable String launchType) {
-            this.launchType = Codegen.ofNullable(launchType);
-            return this;
+
+        public Builder launchType(String launchType) {
+            return launchType(Output.of(launchType));
         }
+
         public Builder loadBalancers(@Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers) {
-            this.loadBalancers = loadBalancers;
+            $.loadBalancers = loadBalancers;
             return this;
         }
-        public Builder loadBalancers(@Nullable List<ServiceLoadBalancerGetArgs> loadBalancers) {
-            this.loadBalancers = Codegen.ofNullable(loadBalancers);
-            return this;
+
+        public Builder loadBalancers(List<ServiceLoadBalancerGetArgs> loadBalancers) {
+            return loadBalancers(Output.of(loadBalancers));
         }
+
         public Builder loadBalancers(ServiceLoadBalancerGetArgs... loadBalancers) {
             return loadBalancers(List.of(loadBalancers));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkConfiguration(@Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration) {
-            this.networkConfiguration = networkConfiguration;
+            $.networkConfiguration = networkConfiguration;
             return this;
         }
-        public Builder networkConfiguration(@Nullable ServiceNetworkConfigurationGetArgs networkConfiguration) {
-            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
-            return this;
+
+        public Builder networkConfiguration(ServiceNetworkConfigurationGetArgs networkConfiguration) {
+            return networkConfiguration(Output.of(networkConfiguration));
         }
+
         public Builder orderedPlacementStrategies(@Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies) {
-            this.orderedPlacementStrategies = orderedPlacementStrategies;
+            $.orderedPlacementStrategies = orderedPlacementStrategies;
             return this;
         }
-        public Builder orderedPlacementStrategies(@Nullable List<ServiceOrderedPlacementStrategyGetArgs> orderedPlacementStrategies) {
-            this.orderedPlacementStrategies = Codegen.ofNullable(orderedPlacementStrategies);
-            return this;
+
+        public Builder orderedPlacementStrategies(List<ServiceOrderedPlacementStrategyGetArgs> orderedPlacementStrategies) {
+            return orderedPlacementStrategies(Output.of(orderedPlacementStrategies));
         }
+
         public Builder orderedPlacementStrategies(ServiceOrderedPlacementStrategyGetArgs... orderedPlacementStrategies) {
             return orderedPlacementStrategies(List.of(orderedPlacementStrategies));
         }
+
         public Builder placementConstraints(@Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints) {
-            this.placementConstraints = placementConstraints;
+            $.placementConstraints = placementConstraints;
             return this;
         }
-        public Builder placementConstraints(@Nullable List<ServicePlacementConstraintGetArgs> placementConstraints) {
-            this.placementConstraints = Codegen.ofNullable(placementConstraints);
-            return this;
+
+        public Builder placementConstraints(List<ServicePlacementConstraintGetArgs> placementConstraints) {
+            return placementConstraints(Output.of(placementConstraints));
         }
+
         public Builder placementConstraints(ServicePlacementConstraintGetArgs... placementConstraints) {
             return placementConstraints(List.of(placementConstraints));
         }
+
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
-            this.platformVersion = platformVersion;
+            $.platformVersion = platformVersion;
             return this;
         }
-        public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Codegen.ofNullable(platformVersion);
-            return this;
+
+        public Builder platformVersion(String platformVersion) {
+            return platformVersion(Output.of(platformVersion));
         }
+
         public Builder propagateTags(@Nullable Output<String> propagateTags) {
-            this.propagateTags = propagateTags;
+            $.propagateTags = propagateTags;
             return this;
         }
-        public Builder propagateTags(@Nullable String propagateTags) {
-            this.propagateTags = Codegen.ofNullable(propagateTags);
-            return this;
+
+        public Builder propagateTags(String propagateTags) {
+            return propagateTags(Output.of(propagateTags));
         }
+
         public Builder schedulingStrategy(@Nullable Output<String> schedulingStrategy) {
-            this.schedulingStrategy = schedulingStrategy;
+            $.schedulingStrategy = schedulingStrategy;
             return this;
         }
-        public Builder schedulingStrategy(@Nullable String schedulingStrategy) {
-            this.schedulingStrategy = Codegen.ofNullable(schedulingStrategy);
-            return this;
+
+        public Builder schedulingStrategy(String schedulingStrategy) {
+            return schedulingStrategy(Output.of(schedulingStrategy));
         }
+
         public Builder serviceRegistries(@Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries) {
-            this.serviceRegistries = serviceRegistries;
+            $.serviceRegistries = serviceRegistries;
             return this;
         }
-        public Builder serviceRegistries(@Nullable ServiceServiceRegistriesGetArgs serviceRegistries) {
-            this.serviceRegistries = Codegen.ofNullable(serviceRegistries);
-            return this;
+
+        public Builder serviceRegistries(ServiceServiceRegistriesGetArgs serviceRegistries) {
+            return serviceRegistries(Output.of(serviceRegistries));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder taskDefinition(@Nullable Output<String> taskDefinition) {
-            this.taskDefinition = taskDefinition;
+            $.taskDefinition = taskDefinition;
             return this;
         }
-        public Builder taskDefinition(@Nullable String taskDefinition) {
-            this.taskDefinition = Codegen.ofNullable(taskDefinition);
-            return this;
+
+        public Builder taskDefinition(String taskDefinition) {
+            return taskDefinition(Output.of(taskDefinition));
         }
+
         public Builder waitForSteadyState(@Nullable Output<Boolean> waitForSteadyState) {
-            this.waitForSteadyState = waitForSteadyState;
+            $.waitForSteadyState = waitForSteadyState;
             return this;
         }
-        public Builder waitForSteadyState(@Nullable Boolean waitForSteadyState) {
-            this.waitForSteadyState = Codegen.ofNullable(waitForSteadyState);
-            return this;
-        }        public ServiceState build() {
-            return new ServiceState(capacityProviderStrategies, cluster, deploymentCircuitBreaker, deploymentController, deploymentMaximumPercent, deploymentMinimumHealthyPercent, desiredCount, enableEcsManagedTags, enableExecuteCommand, forceNewDeployment, healthCheckGracePeriodSeconds, iamRole, launchType, loadBalancers, name, networkConfiguration, orderedPlacementStrategies, placementConstraints, platformVersion, propagateTags, schedulingStrategy, serviceRegistries, tags, tagsAll, taskDefinition, waitForSteadyState);
+
+        public Builder waitForSteadyState(Boolean waitForSteadyState) {
+            return waitForSteadyState(Output.of(waitForSteadyState));
+        }
+
+        public ServiceState build() {
+            return $;
         }
     }
+
 }

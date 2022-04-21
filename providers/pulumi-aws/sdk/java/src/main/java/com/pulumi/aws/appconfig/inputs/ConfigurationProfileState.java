@@ -6,11 +6,11 @@ package com.pulumi.aws.appconfig.inputs;
 import com.pulumi.aws.appconfig.inputs.ConfigurationProfileValidatorGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="configurationProfileId")
-      private final @Nullable Output<String> configurationProfileId;
+    private @Nullable Output<String> configurationProfileId;
 
-    public Output<String> configurationProfileId() {
-        return this.configurationProfileId == null ? Codegen.empty() : this.configurationProfileId;
+    public Optional<Output<String>> configurationProfileId() {
+        return Optional.ofNullable(this.configurationProfileId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="locationUri")
-      private final @Nullable Output<String> locationUri;
+    private @Nullable Output<String> locationUri;
 
-    public Output<String> locationUri() {
-        return this.locationUri == null ? Codegen.empty() : this.locationUri;
+    public Optional<Output<String>> locationUri() {
+        return Optional.ofNullable(this.locationUri);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="retrievalRoleArn")
-      private final @Nullable Output<String> retrievalRoleArn;
+    private @Nullable Output<String> retrievalRoleArn;
 
-    public Output<String> retrievalRoleArn() {
-        return this.retrievalRoleArn == null ? Codegen.empty() : this.retrievalRoleArn;
+    public Optional<Output<String>> retrievalRoleArn() {
+        return Optional.ofNullable(this.retrievalRoleArn);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -122,170 +122,142 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="validators")
-      private final @Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators;
+    private @Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators;
 
-    public Output<List<ConfigurationProfileValidatorGetArgs>> validators() {
-        return this.validators == null ? Codegen.empty() : this.validators;
+    public Optional<Output<List<ConfigurationProfileValidatorGetArgs>>> validators() {
+        return Optional.ofNullable(this.validators);
     }
 
-    public ConfigurationProfileState(
-        @Nullable Output<String> applicationId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> configurationProfileId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> locationUri,
-        @Nullable Output<String> name,
-        @Nullable Output<String> retrievalRoleArn,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators) {
-        this.applicationId = applicationId;
-        this.arn = arn;
-        this.configurationProfileId = configurationProfileId;
-        this.description = description;
-        this.locationUri = locationUri;
-        this.name = name;
-        this.retrievalRoleArn = retrievalRoleArn;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.validators = validators;
-    }
+    private ConfigurationProfileState() {}
 
-    private ConfigurationProfileState() {
-        this.applicationId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.configurationProfileId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.locationUri = Codegen.empty();
-        this.name = Codegen.empty();
-        this.retrievalRoleArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.validators = Codegen.empty();
+    private ConfigurationProfileState(ConfigurationProfileState $) {
+        this.applicationId = $.applicationId;
+        this.arn = $.arn;
+        this.configurationProfileId = $.configurationProfileId;
+        this.description = $.description;
+        this.locationUri = $.locationUri;
+        this.name = $.name;
+        this.retrievalRoleArn = $.retrievalRoleArn;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.validators = $.validators;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationProfileState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> configurationProfileId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> locationUri;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> retrievalRoleArn;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators;
+        private ConfigurationProfileState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationProfileState();
         }
 
         public Builder(ConfigurationProfileState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.arn = defaults.arn;
-    	      this.configurationProfileId = defaults.configurationProfileId;
-    	      this.description = defaults.description;
-    	      this.locationUri = defaults.locationUri;
-    	      this.name = defaults.name;
-    	      this.retrievalRoleArn = defaults.retrievalRoleArn;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.validators = defaults.validators;
+            $ = new ConfigurationProfileState(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder configurationProfileId(@Nullable Output<String> configurationProfileId) {
-            this.configurationProfileId = configurationProfileId;
+            $.configurationProfileId = configurationProfileId;
             return this;
         }
-        public Builder configurationProfileId(@Nullable String configurationProfileId) {
-            this.configurationProfileId = Codegen.ofNullable(configurationProfileId);
-            return this;
+
+        public Builder configurationProfileId(String configurationProfileId) {
+            return configurationProfileId(Output.of(configurationProfileId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder locationUri(@Nullable Output<String> locationUri) {
-            this.locationUri = locationUri;
+            $.locationUri = locationUri;
             return this;
         }
-        public Builder locationUri(@Nullable String locationUri) {
-            this.locationUri = Codegen.ofNullable(locationUri);
-            return this;
+
+        public Builder locationUri(String locationUri) {
+            return locationUri(Output.of(locationUri));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder retrievalRoleArn(@Nullable Output<String> retrievalRoleArn) {
-            this.retrievalRoleArn = retrievalRoleArn;
+            $.retrievalRoleArn = retrievalRoleArn;
             return this;
         }
-        public Builder retrievalRoleArn(@Nullable String retrievalRoleArn) {
-            this.retrievalRoleArn = Codegen.ofNullable(retrievalRoleArn);
-            return this;
+
+        public Builder retrievalRoleArn(String retrievalRoleArn) {
+            return retrievalRoleArn(Output.of(retrievalRoleArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder validators(@Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators) {
-            this.validators = validators;
+            $.validators = validators;
             return this;
         }
-        public Builder validators(@Nullable List<ConfigurationProfileValidatorGetArgs> validators) {
-            this.validators = Codegen.ofNullable(validators);
-            return this;
+
+        public Builder validators(List<ConfigurationProfileValidatorGetArgs> validators) {
+            return validators(Output.of(validators));
         }
+
         public Builder validators(ConfigurationProfileValidatorGetArgs... validators) {
             return validators(List.of(validators));
-        }        public ConfigurationProfileState build() {
-            return new ConfigurationProfileState(applicationId, arn, configurationProfileId, description, locationUri, name, retrievalRoleArn, tags, tagsAll, validators);
+        }
+
+        public ConfigurationProfileState build() {
+            return $;
         }
     }
+
 }

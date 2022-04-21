@@ -5,10 +5,10 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class UsagePlanQuotaSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="limit", required=true)
-      private final Output<Integer> limit;
+    private Output<Integer> limit;
 
     public Output<Integer> limit() {
         return this.limit;
@@ -32,10 +32,10 @@ public final class UsagePlanQuotaSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="offset")
-      private final @Nullable Output<Integer> offset;
+    private @Nullable Output<Integer> offset;
 
-    public Output<Integer> offset() {
-        return this.offset == null ? Codegen.empty() : this.offset;
+    public Optional<Output<Integer>> offset() {
+        return Optional.ofNullable(this.offset);
     }
 
     /**
@@ -43,76 +43,70 @@ public final class UsagePlanQuotaSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="period", required=true)
-      private final Output<String> period;
+    private Output<String> period;
 
     public Output<String> period() {
         return this.period;
     }
 
-    public UsagePlanQuotaSettingsArgs(
-        Output<Integer> limit,
-        @Nullable Output<Integer> offset,
-        Output<String> period) {
-        this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
-        this.offset = offset;
-        this.period = Objects.requireNonNull(period, "expected parameter 'period' to be non-null");
-    }
+    private UsagePlanQuotaSettingsArgs() {}
 
-    private UsagePlanQuotaSettingsArgs() {
-        this.limit = Codegen.empty();
-        this.offset = Codegen.empty();
-        this.period = Codegen.empty();
+    private UsagePlanQuotaSettingsArgs(UsagePlanQuotaSettingsArgs $) {
+        this.limit = $.limit;
+        this.offset = $.offset;
+        this.period = $.period;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsagePlanQuotaSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> limit;
-        private @Nullable Output<Integer> offset;
-        private Output<String> period;
+        private UsagePlanQuotaSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsagePlanQuotaSettingsArgs();
         }
 
         public Builder(UsagePlanQuotaSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limit = defaults.limit;
-    	      this.offset = defaults.offset;
-    	      this.period = defaults.period;
+            $ = new UsagePlanQuotaSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder limit(Output<Integer> limit) {
-            this.limit = Objects.requireNonNull(limit);
+            $.limit = limit;
             return this;
         }
+
         public Builder limit(Integer limit) {
-            this.limit = Output.of(Objects.requireNonNull(limit));
-            return this;
+            return limit(Output.of(limit));
         }
+
         public Builder offset(@Nullable Output<Integer> offset) {
-            this.offset = offset;
+            $.offset = offset;
             return this;
         }
-        public Builder offset(@Nullable Integer offset) {
-            this.offset = Codegen.ofNullable(offset);
-            return this;
+
+        public Builder offset(Integer offset) {
+            return offset(Output.of(offset));
         }
+
         public Builder period(Output<String> period) {
-            this.period = Objects.requireNonNull(period);
+            $.period = period;
             return this;
         }
+
         public Builder period(String period) {
-            this.period = Output.of(Objects.requireNonNull(period));
-            return this;
-        }        public UsagePlanQuotaSettingsArgs build() {
-            return new UsagePlanQuotaSettingsArgs(limit, offset, period);
+            return period(Output.of(period));
+        }
+
+        public UsagePlanQuotaSettingsArgs build() {
+            $.limit = Objects.requireNonNull($.limit, "expected parameter 'limit' to be non-null");
+            $.period = Objects.requireNonNull($.period, "expected parameter 'period' to be non-null");
+            return $;
         }
     }
+
 }

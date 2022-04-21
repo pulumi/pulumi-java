@@ -5,9 +5,9 @@ package com.pulumi.aws.codecommit;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApprovalRuleTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="content", required=true)
-      private final Output<String> content;
+    private Output<String> content;
 
     public Output<String> content() {
         return this.content;
@@ -31,10 +31,10 @@ public final class ApprovalRuleTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class ApprovalRuleTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ApprovalRuleTemplateArgs(
-        Output<String> content,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.description = description;
-        this.name = name;
-    }
+    private ApprovalRuleTemplateArgs() {}
 
-    private ApprovalRuleTemplateArgs() {
-        this.content = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
+    private ApprovalRuleTemplateArgs(ApprovalRuleTemplateArgs $) {
+        this.content = $.content;
+        this.description = $.description;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApprovalRuleTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> content;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
+        private ApprovalRuleTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApprovalRuleTemplateArgs();
         }
 
         public Builder(ApprovalRuleTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
+            $ = new ApprovalRuleTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(Output<String> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ApprovalRuleTemplateArgs build() {
-            return new ApprovalRuleTemplateArgs(content, description, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ApprovalRuleTemplateArgs build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            return $;
         }
     }
+
 }

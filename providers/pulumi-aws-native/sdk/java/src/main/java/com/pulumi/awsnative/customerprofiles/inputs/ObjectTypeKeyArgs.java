@@ -6,10 +6,10 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 import com.pulumi.awsnative.customerprofiles.enums.ObjectTypeKeyStandardIdentifiersItem;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ObjectTypeKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fieldNames")
-      private final @Nullable Output<List<String>> fieldNames;
+    private @Nullable Output<List<String>> fieldNames;
 
-    public Output<List<String>> fieldNames() {
-        return this.fieldNames == null ? Codegen.empty() : this.fieldNames;
+    public Optional<Output<List<String>>> fieldNames() {
+        return Optional.ofNullable(this.fieldNames);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class ObjectTypeKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="standardIdentifiers")
-      private final @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
+    private @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
 
-    public Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers() {
-        return this.standardIdentifiers == null ? Codegen.empty() : this.standardIdentifiers;
+    public Optional<Output<List<ObjectTypeKeyStandardIdentifiersItem>>> standardIdentifiers() {
+        return Optional.ofNullable(this.standardIdentifiers);
     }
 
-    public ObjectTypeKeyArgs(
-        @Nullable Output<List<String>> fieldNames,
-        @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers) {
-        this.fieldNames = fieldNames;
-        this.standardIdentifiers = standardIdentifiers;
-    }
+    private ObjectTypeKeyArgs() {}
 
-    private ObjectTypeKeyArgs() {
-        this.fieldNames = Codegen.empty();
-        this.standardIdentifiers = Codegen.empty();
+    private ObjectTypeKeyArgs(ObjectTypeKeyArgs $) {
+        this.fieldNames = $.fieldNames;
+        this.standardIdentifiers = $.standardIdentifiers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectTypeKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> fieldNames;
-        private @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
+        private ObjectTypeKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectTypeKeyArgs();
         }
 
         public Builder(ObjectTypeKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldNames = defaults.fieldNames;
-    	      this.standardIdentifiers = defaults.standardIdentifiers;
+            $ = new ObjectTypeKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldNames(@Nullable Output<List<String>> fieldNames) {
-            this.fieldNames = fieldNames;
+            $.fieldNames = fieldNames;
             return this;
         }
-        public Builder fieldNames(@Nullable List<String> fieldNames) {
-            this.fieldNames = Codegen.ofNullable(fieldNames);
-            return this;
+
+        public Builder fieldNames(List<String> fieldNames) {
+            return fieldNames(Output.of(fieldNames));
         }
+
         public Builder fieldNames(String... fieldNames) {
             return fieldNames(List.of(fieldNames));
         }
+
         public Builder standardIdentifiers(@Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers) {
-            this.standardIdentifiers = standardIdentifiers;
+            $.standardIdentifiers = standardIdentifiers;
             return this;
         }
-        public Builder standardIdentifiers(@Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
-            this.standardIdentifiers = Codegen.ofNullable(standardIdentifiers);
-            return this;
+
+        public Builder standardIdentifiers(List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
+            return standardIdentifiers(Output.of(standardIdentifiers));
         }
+
         public Builder standardIdentifiers(ObjectTypeKeyStandardIdentifiersItem... standardIdentifiers) {
             return standardIdentifiers(List.of(standardIdentifiers));
-        }        public ObjectTypeKeyArgs build() {
-            return new ObjectTypeKeyArgs(fieldNames, standardIdentifiers);
+        }
+
+        public ObjectTypeKeyArgs build() {
+            return $;
         }
     }
+
 }

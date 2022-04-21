@@ -5,11 +5,11 @@ package com.pulumi.aws.sns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="confirmationTimeoutInMinutes")
-      private final @Nullable Output<Integer> confirmationTimeoutInMinutes;
+    private @Nullable Output<Integer> confirmationTimeoutInMinutes;
 
-    public Output<Integer> confirmationTimeoutInMinutes() {
-        return this.confirmationTimeoutInMinutes == null ? Codegen.empty() : this.confirmationTimeoutInMinutes;
+    public Optional<Output<Integer>> confirmationTimeoutInMinutes() {
+        return Optional.ofNullable(this.confirmationTimeoutInMinutes);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="confirmationWasAuthenticated")
-      private final @Nullable Output<Boolean> confirmationWasAuthenticated;
+    private @Nullable Output<Boolean> confirmationWasAuthenticated;
 
-    public Output<Boolean> confirmationWasAuthenticated() {
-        return this.confirmationWasAuthenticated == null ? Codegen.empty() : this.confirmationWasAuthenticated;
+    public Optional<Output<Boolean>> confirmationWasAuthenticated() {
+        return Optional.ofNullable(this.confirmationWasAuthenticated);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="deliveryPolicy")
-      private final @Nullable Output<String> deliveryPolicy;
+    private @Nullable Output<String> deliveryPolicy;
 
-    public Output<String> deliveryPolicy() {
-        return this.deliveryPolicy == null ? Codegen.empty() : this.deliveryPolicy;
+    public Optional<Output<String>> deliveryPolicy() {
+        return Optional.ofNullable(this.deliveryPolicy);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="endpointAutoConfirms")
-      private final @Nullable Output<Boolean> endpointAutoConfirms;
+    private @Nullable Output<Boolean> endpointAutoConfirms;
 
-    public Output<Boolean> endpointAutoConfirms() {
-        return this.endpointAutoConfirms == null ? Codegen.empty() : this.endpointAutoConfirms;
+    public Optional<Output<Boolean>> endpointAutoConfirms() {
+        return Optional.ofNullable(this.endpointAutoConfirms);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="filterPolicy")
-      private final @Nullable Output<String> filterPolicy;
+    private @Nullable Output<String> filterPolicy;
 
-    public Output<String> filterPolicy() {
-        return this.filterPolicy == null ? Codegen.empty() : this.filterPolicy;
+    public Optional<Output<String>> filterPolicy() {
+        return Optional.ofNullable(this.filterPolicy);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="pendingConfirmation")
-      private final @Nullable Output<Boolean> pendingConfirmation;
+    private @Nullable Output<Boolean> pendingConfirmation;
 
-    public Output<Boolean> pendingConfirmation() {
-        return this.pendingConfirmation == null ? Codegen.empty() : this.pendingConfirmation;
+    public Optional<Output<Boolean>> pendingConfirmation() {
+        return Optional.ofNullable(this.pendingConfirmation);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="rawMessageDelivery")
-      private final @Nullable Output<Boolean> rawMessageDelivery;
+    private @Nullable Output<Boolean> rawMessageDelivery;
 
-    public Output<Boolean> rawMessageDelivery() {
-        return this.rawMessageDelivery == null ? Codegen.empty() : this.rawMessageDelivery;
+    public Optional<Output<Boolean>> rawMessageDelivery() {
+        return Optional.ofNullable(this.rawMessageDelivery);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="redrivePolicy")
-      private final @Nullable Output<String> redrivePolicy;
+    private @Nullable Output<String> redrivePolicy;
 
-    public Output<String> redrivePolicy() {
-        return this.redrivePolicy == null ? Codegen.empty() : this.redrivePolicy;
+    public Optional<Output<String>> redrivePolicy() {
+        return Optional.ofNullable(this.redrivePolicy);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subscriptionRoleArn")
-      private final @Nullable Output<String> subscriptionRoleArn;
+    private @Nullable Output<String> subscriptionRoleArn;
 
-    public Output<String> subscriptionRoleArn() {
-        return this.subscriptionRoleArn == null ? Codegen.empty() : this.subscriptionRoleArn;
+    public Optional<Output<String>> subscriptionRoleArn() {
+        return Optional.ofNullable(this.subscriptionRoleArn);
     }
 
     /**
@@ -165,215 +165,178 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public TopicSubscriptionState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Integer> confirmationTimeoutInMinutes,
-        @Nullable Output<Boolean> confirmationWasAuthenticated,
-        @Nullable Output<String> deliveryPolicy,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<Boolean> endpointAutoConfirms,
-        @Nullable Output<String> filterPolicy,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<Boolean> pendingConfirmation,
-        @Nullable Output<String> protocol,
-        @Nullable Output<Boolean> rawMessageDelivery,
-        @Nullable Output<String> redrivePolicy,
-        @Nullable Output<String> subscriptionRoleArn,
-        @Nullable Output<String> topic) {
-        this.arn = arn;
-        this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
-        this.confirmationWasAuthenticated = confirmationWasAuthenticated;
-        this.deliveryPolicy = deliveryPolicy;
-        this.endpoint = endpoint;
-        this.endpointAutoConfirms = endpointAutoConfirms;
-        this.filterPolicy = filterPolicy;
-        this.ownerId = ownerId;
-        this.pendingConfirmation = pendingConfirmation;
-        this.protocol = protocol;
-        this.rawMessageDelivery = rawMessageDelivery;
-        this.redrivePolicy = redrivePolicy;
-        this.subscriptionRoleArn = subscriptionRoleArn;
-        this.topic = topic;
-    }
+    private TopicSubscriptionState() {}
 
-    private TopicSubscriptionState() {
-        this.arn = Codegen.empty();
-        this.confirmationTimeoutInMinutes = Codegen.empty();
-        this.confirmationWasAuthenticated = Codegen.empty();
-        this.deliveryPolicy = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.endpointAutoConfirms = Codegen.empty();
-        this.filterPolicy = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.pendingConfirmation = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.rawMessageDelivery = Codegen.empty();
-        this.redrivePolicy = Codegen.empty();
-        this.subscriptionRoleArn = Codegen.empty();
-        this.topic = Codegen.empty();
+    private TopicSubscriptionState(TopicSubscriptionState $) {
+        this.arn = $.arn;
+        this.confirmationTimeoutInMinutes = $.confirmationTimeoutInMinutes;
+        this.confirmationWasAuthenticated = $.confirmationWasAuthenticated;
+        this.deliveryPolicy = $.deliveryPolicy;
+        this.endpoint = $.endpoint;
+        this.endpointAutoConfirms = $.endpointAutoConfirms;
+        this.filterPolicy = $.filterPolicy;
+        this.ownerId = $.ownerId;
+        this.pendingConfirmation = $.pendingConfirmation;
+        this.protocol = $.protocol;
+        this.rawMessageDelivery = $.rawMessageDelivery;
+        this.redrivePolicy = $.redrivePolicy;
+        this.subscriptionRoleArn = $.subscriptionRoleArn;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicSubscriptionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Integer> confirmationTimeoutInMinutes;
-        private @Nullable Output<Boolean> confirmationWasAuthenticated;
-        private @Nullable Output<String> deliveryPolicy;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<Boolean> endpointAutoConfirms;
-        private @Nullable Output<String> filterPolicy;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<Boolean> pendingConfirmation;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<Boolean> rawMessageDelivery;
-        private @Nullable Output<String> redrivePolicy;
-        private @Nullable Output<String> subscriptionRoleArn;
-        private @Nullable Output<String> topic;
+        private TopicSubscriptionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicSubscriptionState();
         }
 
         public Builder(TopicSubscriptionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.confirmationTimeoutInMinutes = defaults.confirmationTimeoutInMinutes;
-    	      this.confirmationWasAuthenticated = defaults.confirmationWasAuthenticated;
-    	      this.deliveryPolicy = defaults.deliveryPolicy;
-    	      this.endpoint = defaults.endpoint;
-    	      this.endpointAutoConfirms = defaults.endpointAutoConfirms;
-    	      this.filterPolicy = defaults.filterPolicy;
-    	      this.ownerId = defaults.ownerId;
-    	      this.pendingConfirmation = defaults.pendingConfirmation;
-    	      this.protocol = defaults.protocol;
-    	      this.rawMessageDelivery = defaults.rawMessageDelivery;
-    	      this.redrivePolicy = defaults.redrivePolicy;
-    	      this.subscriptionRoleArn = defaults.subscriptionRoleArn;
-    	      this.topic = defaults.topic;
+            $ = new TopicSubscriptionState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder confirmationTimeoutInMinutes(@Nullable Output<Integer> confirmationTimeoutInMinutes) {
-            this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
+            $.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
             return this;
         }
-        public Builder confirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
-            this.confirmationTimeoutInMinutes = Codegen.ofNullable(confirmationTimeoutInMinutes);
-            return this;
+
+        public Builder confirmationTimeoutInMinutes(Integer confirmationTimeoutInMinutes) {
+            return confirmationTimeoutInMinutes(Output.of(confirmationTimeoutInMinutes));
         }
+
         public Builder confirmationWasAuthenticated(@Nullable Output<Boolean> confirmationWasAuthenticated) {
-            this.confirmationWasAuthenticated = confirmationWasAuthenticated;
+            $.confirmationWasAuthenticated = confirmationWasAuthenticated;
             return this;
         }
-        public Builder confirmationWasAuthenticated(@Nullable Boolean confirmationWasAuthenticated) {
-            this.confirmationWasAuthenticated = Codegen.ofNullable(confirmationWasAuthenticated);
-            return this;
+
+        public Builder confirmationWasAuthenticated(Boolean confirmationWasAuthenticated) {
+            return confirmationWasAuthenticated(Output.of(confirmationWasAuthenticated));
         }
+
         public Builder deliveryPolicy(@Nullable Output<String> deliveryPolicy) {
-            this.deliveryPolicy = deliveryPolicy;
+            $.deliveryPolicy = deliveryPolicy;
             return this;
         }
-        public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
-            this.deliveryPolicy = Codegen.ofNullable(deliveryPolicy);
-            return this;
+
+        public Builder deliveryPolicy(String deliveryPolicy) {
+            return deliveryPolicy(Output.of(deliveryPolicy));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder endpointAutoConfirms(@Nullable Output<Boolean> endpointAutoConfirms) {
-            this.endpointAutoConfirms = endpointAutoConfirms;
+            $.endpointAutoConfirms = endpointAutoConfirms;
             return this;
         }
-        public Builder endpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
-            this.endpointAutoConfirms = Codegen.ofNullable(endpointAutoConfirms);
-            return this;
+
+        public Builder endpointAutoConfirms(Boolean endpointAutoConfirms) {
+            return endpointAutoConfirms(Output.of(endpointAutoConfirms));
         }
+
         public Builder filterPolicy(@Nullable Output<String> filterPolicy) {
-            this.filterPolicy = filterPolicy;
+            $.filterPolicy = filterPolicy;
             return this;
         }
-        public Builder filterPolicy(@Nullable String filterPolicy) {
-            this.filterPolicy = Codegen.ofNullable(filterPolicy);
-            return this;
+
+        public Builder filterPolicy(String filterPolicy) {
+            return filterPolicy(Output.of(filterPolicy));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder pendingConfirmation(@Nullable Output<Boolean> pendingConfirmation) {
-            this.pendingConfirmation = pendingConfirmation;
+            $.pendingConfirmation = pendingConfirmation;
             return this;
         }
-        public Builder pendingConfirmation(@Nullable Boolean pendingConfirmation) {
-            this.pendingConfirmation = Codegen.ofNullable(pendingConfirmation);
-            return this;
+
+        public Builder pendingConfirmation(Boolean pendingConfirmation) {
+            return pendingConfirmation(Output.of(pendingConfirmation));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder rawMessageDelivery(@Nullable Output<Boolean> rawMessageDelivery) {
-            this.rawMessageDelivery = rawMessageDelivery;
+            $.rawMessageDelivery = rawMessageDelivery;
             return this;
         }
-        public Builder rawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
-            this.rawMessageDelivery = Codegen.ofNullable(rawMessageDelivery);
-            return this;
+
+        public Builder rawMessageDelivery(Boolean rawMessageDelivery) {
+            return rawMessageDelivery(Output.of(rawMessageDelivery));
         }
+
         public Builder redrivePolicy(@Nullable Output<String> redrivePolicy) {
-            this.redrivePolicy = redrivePolicy;
+            $.redrivePolicy = redrivePolicy;
             return this;
         }
-        public Builder redrivePolicy(@Nullable String redrivePolicy) {
-            this.redrivePolicy = Codegen.ofNullable(redrivePolicy);
-            return this;
+
+        public Builder redrivePolicy(String redrivePolicy) {
+            return redrivePolicy(Output.of(redrivePolicy));
         }
+
         public Builder subscriptionRoleArn(@Nullable Output<String> subscriptionRoleArn) {
-            this.subscriptionRoleArn = subscriptionRoleArn;
+            $.subscriptionRoleArn = subscriptionRoleArn;
             return this;
         }
-        public Builder subscriptionRoleArn(@Nullable String subscriptionRoleArn) {
-            this.subscriptionRoleArn = Codegen.ofNullable(subscriptionRoleArn);
-            return this;
+
+        public Builder subscriptionRoleArn(String subscriptionRoleArn) {
+            return subscriptionRoleArn(Output.of(subscriptionRoleArn));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
-        }        public TopicSubscriptionState build() {
-            return new TopicSubscriptionState(arn, confirmationTimeoutInMinutes, confirmationWasAuthenticated, deliveryPolicy, endpoint, endpointAutoConfirms, filterPolicy, ownerId, pendingConfirmation, protocol, rawMessageDelivery, redrivePolicy, subscriptionRoleArn, topic);
+        }
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public TopicSubscriptionState build() {
+            return $;
         }
     }
+
 }

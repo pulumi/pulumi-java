@@ -5,13 +5,13 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.ServiceAttachmentConnectionPreference;
 import com.pulumi.googlenative.compute_alpha.inputs.ServiceAttachmentConsumerProjectLimitArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="connectionPreference")
-      private final @Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference;
+    private @Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference;
 
-    public Output<ServiceAttachmentConnectionPreference> connectionPreference() {
-        return this.connectionPreference == null ? Codegen.empty() : this.connectionPreference;
+    public Optional<Output<ServiceAttachmentConnectionPreference>> connectionPreference() {
+        return Optional.ofNullable(this.connectionPreference);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="consumerAcceptLists")
-      private final @Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
+    private @Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
 
-    public Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists() {
-        return this.consumerAcceptLists == null ? Codegen.empty() : this.consumerAcceptLists;
+    public Optional<Output<List<ServiceAttachmentConsumerProjectLimitArgs>>> consumerAcceptLists() {
+        return Optional.ofNullable(this.consumerAcceptLists);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="consumerRejectLists")
-      private final @Nullable Output<List<String>> consumerRejectLists;
+    private @Nullable Output<List<String>> consumerRejectLists;
 
-    public Output<List<String>> consumerRejectLists() {
-        return this.consumerRejectLists == null ? Codegen.empty() : this.consumerRejectLists;
+    public Optional<Output<List<String>>> consumerRejectLists() {
+        return Optional.ofNullable(this.consumerRejectLists);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="domainNames")
-      private final @Nullable Output<List<String>> domainNames;
+    private @Nullable Output<List<String>> domainNames;
 
-    public Output<List<String>> domainNames() {
-        return this.domainNames == null ? Codegen.empty() : this.domainNames;
+    public Optional<Output<List<String>>> domainNames() {
+        return Optional.ofNullable(this.domainNames);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enableProxyProtocol")
-      private final @Nullable Output<Boolean> enableProxyProtocol;
+    private @Nullable Output<Boolean> enableProxyProtocol;
 
-    public Output<Boolean> enableProxyProtocol() {
-        return this.enableProxyProtocol == null ? Codegen.empty() : this.enableProxyProtocol;
+    public Optional<Output<Boolean>> enableProxyProtocol() {
+        return Optional.ofNullable(this.enableProxyProtocol);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="natSubnets")
-      private final @Nullable Output<List<String>> natSubnets;
+    private @Nullable Output<List<String>> natSubnets;
 
-    public Output<List<String>> natSubnets() {
-        return this.natSubnets == null ? Codegen.empty() : this.natSubnets;
+    public Optional<Output<List<String>>> natSubnets() {
+        return Optional.ofNullable(this.natSubnets);
     }
 
     /**
@@ -112,31 +112,31 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="producerForwardingRule")
-      private final @Nullable Output<String> producerForwardingRule;
+    private @Nullable Output<String> producerForwardingRule;
 
-    public Output<String> producerForwardingRule() {
-        return this.producerForwardingRule == null ? Codegen.empty() : this.producerForwardingRule;
+    public Optional<Output<String>> producerForwardingRule() {
+        return Optional.ofNullable(this.producerForwardingRule);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -144,218 +144,185 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="targetService")
-      private final @Nullable Output<String> targetService;
+    private @Nullable Output<String> targetService;
 
-    public Output<String> targetService() {
-        return this.targetService == null ? Codegen.empty() : this.targetService;
+    public Optional<Output<String>> targetService() {
+        return Optional.ofNullable(this.targetService);
     }
 
-    public ServiceAttachmentArgs(
-        @Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference,
-        @Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists,
-        @Nullable Output<List<String>> consumerRejectLists,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> domainNames,
-        @Nullable Output<Boolean> enableProxyProtocol,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> natSubnets,
-        @Nullable Output<String> producerForwardingRule,
-        @Nullable Output<String> project,
-        Output<String> region,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> targetService) {
-        this.connectionPreference = connectionPreference;
-        this.consumerAcceptLists = consumerAcceptLists;
-        this.consumerRejectLists = consumerRejectLists;
-        this.description = description;
-        this.domainNames = domainNames;
-        this.enableProxyProtocol = enableProxyProtocol;
-        this.name = name;
-        this.natSubnets = natSubnets;
-        this.producerForwardingRule = producerForwardingRule;
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.requestId = requestId;
-        this.targetService = targetService;
-    }
+    private ServiceAttachmentArgs() {}
 
-    private ServiceAttachmentArgs() {
-        this.connectionPreference = Codegen.empty();
-        this.consumerAcceptLists = Codegen.empty();
-        this.consumerRejectLists = Codegen.empty();
-        this.description = Codegen.empty();
-        this.domainNames = Codegen.empty();
-        this.enableProxyProtocol = Codegen.empty();
-        this.name = Codegen.empty();
-        this.natSubnets = Codegen.empty();
-        this.producerForwardingRule = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.targetService = Codegen.empty();
+    private ServiceAttachmentArgs(ServiceAttachmentArgs $) {
+        this.connectionPreference = $.connectionPreference;
+        this.consumerAcceptLists = $.consumerAcceptLists;
+        this.consumerRejectLists = $.consumerRejectLists;
+        this.description = $.description;
+        this.domainNames = $.domainNames;
+        this.enableProxyProtocol = $.enableProxyProtocol;
+        this.name = $.name;
+        this.natSubnets = $.natSubnets;
+        this.producerForwardingRule = $.producerForwardingRule;
+        this.project = $.project;
+        this.region = $.region;
+        this.requestId = $.requestId;
+        this.targetService = $.targetService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference;
-        private @Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
-        private @Nullable Output<List<String>> consumerRejectLists;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> domainNames;
-        private @Nullable Output<Boolean> enableProxyProtocol;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> natSubnets;
-        private @Nullable Output<String> producerForwardingRule;
-        private @Nullable Output<String> project;
-        private Output<String> region;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> targetService;
+        private ServiceAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAttachmentArgs();
         }
 
         public Builder(ServiceAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionPreference = defaults.connectionPreference;
-    	      this.consumerAcceptLists = defaults.consumerAcceptLists;
-    	      this.consumerRejectLists = defaults.consumerRejectLists;
-    	      this.description = defaults.description;
-    	      this.domainNames = defaults.domainNames;
-    	      this.enableProxyProtocol = defaults.enableProxyProtocol;
-    	      this.name = defaults.name;
-    	      this.natSubnets = defaults.natSubnets;
-    	      this.producerForwardingRule = defaults.producerForwardingRule;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.requestId = defaults.requestId;
-    	      this.targetService = defaults.targetService;
+            $ = new ServiceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionPreference(@Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference) {
-            this.connectionPreference = connectionPreference;
+            $.connectionPreference = connectionPreference;
             return this;
         }
-        public Builder connectionPreference(@Nullable ServiceAttachmentConnectionPreference connectionPreference) {
-            this.connectionPreference = Codegen.ofNullable(connectionPreference);
-            return this;
+
+        public Builder connectionPreference(ServiceAttachmentConnectionPreference connectionPreference) {
+            return connectionPreference(Output.of(connectionPreference));
         }
+
         public Builder consumerAcceptLists(@Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists) {
-            this.consumerAcceptLists = consumerAcceptLists;
+            $.consumerAcceptLists = consumerAcceptLists;
             return this;
         }
-        public Builder consumerAcceptLists(@Nullable List<ServiceAttachmentConsumerProjectLimitArgs> consumerAcceptLists) {
-            this.consumerAcceptLists = Codegen.ofNullable(consumerAcceptLists);
-            return this;
+
+        public Builder consumerAcceptLists(List<ServiceAttachmentConsumerProjectLimitArgs> consumerAcceptLists) {
+            return consumerAcceptLists(Output.of(consumerAcceptLists));
         }
+
         public Builder consumerAcceptLists(ServiceAttachmentConsumerProjectLimitArgs... consumerAcceptLists) {
             return consumerAcceptLists(List.of(consumerAcceptLists));
         }
+
         public Builder consumerRejectLists(@Nullable Output<List<String>> consumerRejectLists) {
-            this.consumerRejectLists = consumerRejectLists;
+            $.consumerRejectLists = consumerRejectLists;
             return this;
         }
-        public Builder consumerRejectLists(@Nullable List<String> consumerRejectLists) {
-            this.consumerRejectLists = Codegen.ofNullable(consumerRejectLists);
-            return this;
+
+        public Builder consumerRejectLists(List<String> consumerRejectLists) {
+            return consumerRejectLists(Output.of(consumerRejectLists));
         }
+
         public Builder consumerRejectLists(String... consumerRejectLists) {
             return consumerRejectLists(List.of(consumerRejectLists));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder domainNames(@Nullable Output<List<String>> domainNames) {
-            this.domainNames = domainNames;
+            $.domainNames = domainNames;
             return this;
         }
-        public Builder domainNames(@Nullable List<String> domainNames) {
-            this.domainNames = Codegen.ofNullable(domainNames);
-            return this;
+
+        public Builder domainNames(List<String> domainNames) {
+            return domainNames(Output.of(domainNames));
         }
+
         public Builder domainNames(String... domainNames) {
             return domainNames(List.of(domainNames));
         }
+
         public Builder enableProxyProtocol(@Nullable Output<Boolean> enableProxyProtocol) {
-            this.enableProxyProtocol = enableProxyProtocol;
+            $.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
-        public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
-            this.enableProxyProtocol = Codegen.ofNullable(enableProxyProtocol);
-            return this;
+
+        public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
+            return enableProxyProtocol(Output.of(enableProxyProtocol));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder natSubnets(@Nullable Output<List<String>> natSubnets) {
-            this.natSubnets = natSubnets;
+            $.natSubnets = natSubnets;
             return this;
         }
-        public Builder natSubnets(@Nullable List<String> natSubnets) {
-            this.natSubnets = Codegen.ofNullable(natSubnets);
-            return this;
+
+        public Builder natSubnets(List<String> natSubnets) {
+            return natSubnets(Output.of(natSubnets));
         }
+
         public Builder natSubnets(String... natSubnets) {
             return natSubnets(List.of(natSubnets));
         }
+
         public Builder producerForwardingRule(@Nullable Output<String> producerForwardingRule) {
-            this.producerForwardingRule = producerForwardingRule;
+            $.producerForwardingRule = producerForwardingRule;
             return this;
         }
-        public Builder producerForwardingRule(@Nullable String producerForwardingRule) {
-            this.producerForwardingRule = Codegen.ofNullable(producerForwardingRule);
-            return this;
+
+        public Builder producerForwardingRule(String producerForwardingRule) {
+            return producerForwardingRule(Output.of(producerForwardingRule));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder targetService(@Nullable Output<String> targetService) {
-            this.targetService = targetService;
+            $.targetService = targetService;
             return this;
         }
-        public Builder targetService(@Nullable String targetService) {
-            this.targetService = Codegen.ofNullable(targetService);
-            return this;
-        }        public ServiceAttachmentArgs build() {
-            return new ServiceAttachmentArgs(connectionPreference, consumerAcceptLists, consumerRejectLists, description, domainNames, enableProxyProtocol, name, natSubnets, producerForwardingRule, project, region, requestId, targetService);
+
+        public Builder targetService(String targetService) {
+            return targetService(Output.of(targetService));
+        }
+
+        public ServiceAttachmentArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

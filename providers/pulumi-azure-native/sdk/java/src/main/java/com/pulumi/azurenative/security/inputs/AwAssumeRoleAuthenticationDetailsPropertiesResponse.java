@@ -23,7 +23,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
      * 
      */
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
@@ -34,7 +34,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
      * 
      */
     @Import(name="authenticationProvisioningState", required=true)
-      private final String authenticationProvisioningState;
+    private String authenticationProvisioningState;
 
     public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
@@ -46,7 +46,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final String authenticationType;
+    private String authenticationType;
 
     public String authenticationType() {
         return this.authenticationType;
@@ -57,7 +57,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
      * 
      */
     @Import(name="awsAssumeRoleArn", required=true)
-      private final String awsAssumeRoleArn;
+    private String awsAssumeRoleArn;
 
     public String awsAssumeRoleArn() {
         return this.awsAssumeRoleArn;
@@ -68,7 +68,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
      * 
      */
     @Import(name="awsExternalId", required=true)
-      private final String awsExternalId;
+    private String awsExternalId;
 
     public String awsExternalId() {
         return this.awsExternalId;
@@ -79,94 +79,84 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
      * 
      */
     @Import(name="grantedPermissions", required=true)
-      private final List<String> grantedPermissions;
+    private List<String> grantedPermissions;
 
     public List<String> grantedPermissions() {
         return this.grantedPermissions;
     }
 
-    public AwAssumeRoleAuthenticationDetailsPropertiesResponse(
-        String accountId,
-        String authenticationProvisioningState,
-        String authenticationType,
-        String awsAssumeRoleArn,
-        String awsExternalId,
-        List<String> grantedPermissions) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState, "expected parameter 'authenticationProvisioningState' to be non-null");
-        this.authenticationType = Codegen.stringProp("authenticationType").arg(authenticationType).require();
-        this.awsAssumeRoleArn = Objects.requireNonNull(awsAssumeRoleArn, "expected parameter 'awsAssumeRoleArn' to be non-null");
-        this.awsExternalId = Objects.requireNonNull(awsExternalId, "expected parameter 'awsExternalId' to be non-null");
-        this.grantedPermissions = Objects.requireNonNull(grantedPermissions, "expected parameter 'grantedPermissions' to be non-null");
-    }
+    private AwAssumeRoleAuthenticationDetailsPropertiesResponse() {}
 
-    private AwAssumeRoleAuthenticationDetailsPropertiesResponse() {
-        this.accountId = null;
-        this.authenticationProvisioningState = null;
-        this.authenticationType = null;
-        this.awsAssumeRoleArn = null;
-        this.awsExternalId = null;
-        this.grantedPermissions = List.of();
+    private AwAssumeRoleAuthenticationDetailsPropertiesResponse(AwAssumeRoleAuthenticationDetailsPropertiesResponse $) {
+        this.accountId = $.accountId;
+        this.authenticationProvisioningState = $.authenticationProvisioningState;
+        this.authenticationType = $.authenticationType;
+        this.awsAssumeRoleArn = $.awsAssumeRoleArn;
+        this.awsExternalId = $.awsExternalId;
+        this.grantedPermissions = $.grantedPermissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwAssumeRoleAuthenticationDetailsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
-        private String authenticationProvisioningState;
-        private String authenticationType;
-        private String awsAssumeRoleArn;
-        private String awsExternalId;
-        private List<String> grantedPermissions;
+        private AwAssumeRoleAuthenticationDetailsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwAssumeRoleAuthenticationDetailsPropertiesResponse();
         }
 
         public Builder(AwAssumeRoleAuthenticationDetailsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.authenticationProvisioningState = defaults.authenticationProvisioningState;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.awsAssumeRoleArn = defaults.awsAssumeRoleArn;
-    	      this.awsExternalId = defaults.awsExternalId;
-    	      this.grantedPermissions = defaults.grantedPermissions;
+            $ = new AwAssumeRoleAuthenticationDetailsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder authenticationProvisioningState(String authenticationProvisioningState) {
-            this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
+            $.authenticationProvisioningState = authenticationProvisioningState;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder awsAssumeRoleArn(String awsAssumeRoleArn) {
-            this.awsAssumeRoleArn = Objects.requireNonNull(awsAssumeRoleArn);
+            $.awsAssumeRoleArn = awsAssumeRoleArn;
             return this;
         }
+
         public Builder awsExternalId(String awsExternalId) {
-            this.awsExternalId = Objects.requireNonNull(awsExternalId);
+            $.awsExternalId = awsExternalId;
             return this;
         }
+
         public Builder grantedPermissions(List<String> grantedPermissions) {
-            this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
+            $.grantedPermissions = grantedPermissions;
             return this;
         }
+
         public Builder grantedPermissions(String... grantedPermissions) {
             return grantedPermissions(List.of(grantedPermissions));
-        }        public AwAssumeRoleAuthenticationDetailsPropertiesResponse build() {
-            return new AwAssumeRoleAuthenticationDetailsPropertiesResponse(accountId, authenticationProvisioningState, authenticationType, awsAssumeRoleArn, awsExternalId, grantedPermissions);
+        }
+
+        public AwAssumeRoleAuthenticationDetailsPropertiesResponse build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.authenticationProvisioningState = Objects.requireNonNull($.authenticationProvisioningState, "expected parameter 'authenticationProvisioningState' to be non-null");
+            $.authenticationType = Codegen.stringProp("authenticationType").arg($.authenticationType).require();
+            $.awsAssumeRoleArn = Objects.requireNonNull($.awsAssumeRoleArn, "expected parameter 'awsAssumeRoleArn' to be non-null");
+            $.awsExternalId = Objects.requireNonNull($.awsExternalId, "expected parameter 'awsExternalId' to be non-null");
+            $.grantedPermissions = Objects.requireNonNull($.grantedPermissions, "expected parameter 'grantedPermissions' to be non-null");
+            return $;
         }
     }
+
 }

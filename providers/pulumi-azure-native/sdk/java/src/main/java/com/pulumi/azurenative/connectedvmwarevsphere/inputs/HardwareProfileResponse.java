@@ -24,7 +24,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="cpuHotAddEnabled", required=true)
-      private final Boolean cpuHotAddEnabled;
+    private Boolean cpuHotAddEnabled;
 
     public Boolean cpuHotAddEnabled() {
         return this.cpuHotAddEnabled;
@@ -35,7 +35,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="cpuHotRemoveEnabled", required=true)
-      private final Boolean cpuHotRemoveEnabled;
+    private Boolean cpuHotRemoveEnabled;
 
     public Boolean cpuHotRemoveEnabled() {
         return this.cpuHotRemoveEnabled;
@@ -46,7 +46,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="memoryHotAddEnabled", required=true)
-      private final Boolean memoryHotAddEnabled;
+    private Boolean memoryHotAddEnabled;
 
     public Boolean memoryHotAddEnabled() {
         return this.memoryHotAddEnabled;
@@ -57,10 +57,10 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="memorySizeMB")
-      private final @Nullable Integer memorySizeMB;
+    private @Nullable Integer memorySizeMB;
 
     public Optional<Integer> memorySizeMB() {
-        return this.memorySizeMB == null ? Optional.empty() : Optional.ofNullable(this.memorySizeMB);
+        return Optional.ofNullable(this.memorySizeMB);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="numCPUs")
-      private final @Nullable Integer numCPUs;
+    private @Nullable Integer numCPUs;
 
     public Optional<Integer> numCPUs() {
-        return this.numCPUs == null ? Optional.empty() : Optional.ofNullable(this.numCPUs);
+        return Optional.ofNullable(this.numCPUs);
     }
 
     /**
@@ -79,91 +79,77 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="numCoresPerSocket")
-      private final @Nullable Integer numCoresPerSocket;
+    private @Nullable Integer numCoresPerSocket;
 
     public Optional<Integer> numCoresPerSocket() {
-        return this.numCoresPerSocket == null ? Optional.empty() : Optional.ofNullable(this.numCoresPerSocket);
+        return Optional.ofNullable(this.numCoresPerSocket);
     }
 
-    public HardwareProfileResponse(
-        Boolean cpuHotAddEnabled,
-        Boolean cpuHotRemoveEnabled,
-        Boolean memoryHotAddEnabled,
-        @Nullable Integer memorySizeMB,
-        @Nullable Integer numCPUs,
-        @Nullable Integer numCoresPerSocket) {
-        this.cpuHotAddEnabled = Objects.requireNonNull(cpuHotAddEnabled, "expected parameter 'cpuHotAddEnabled' to be non-null");
-        this.cpuHotRemoveEnabled = Objects.requireNonNull(cpuHotRemoveEnabled, "expected parameter 'cpuHotRemoveEnabled' to be non-null");
-        this.memoryHotAddEnabled = Objects.requireNonNull(memoryHotAddEnabled, "expected parameter 'memoryHotAddEnabled' to be non-null");
-        this.memorySizeMB = memorySizeMB;
-        this.numCPUs = numCPUs;
-        this.numCoresPerSocket = numCoresPerSocket;
-    }
+    private HardwareProfileResponse() {}
 
-    private HardwareProfileResponse() {
-        this.cpuHotAddEnabled = null;
-        this.cpuHotRemoveEnabled = null;
-        this.memoryHotAddEnabled = null;
-        this.memorySizeMB = null;
-        this.numCPUs = null;
-        this.numCoresPerSocket = null;
+    private HardwareProfileResponse(HardwareProfileResponse $) {
+        this.cpuHotAddEnabled = $.cpuHotAddEnabled;
+        this.cpuHotRemoveEnabled = $.cpuHotRemoveEnabled;
+        this.memoryHotAddEnabled = $.memoryHotAddEnabled;
+        this.memorySizeMB = $.memorySizeMB;
+        this.numCPUs = $.numCPUs;
+        this.numCoresPerSocket = $.numCoresPerSocket;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HardwareProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean cpuHotAddEnabled;
-        private Boolean cpuHotRemoveEnabled;
-        private Boolean memoryHotAddEnabled;
-        private @Nullable Integer memorySizeMB;
-        private @Nullable Integer numCPUs;
-        private @Nullable Integer numCoresPerSocket;
+        private HardwareProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HardwareProfileResponse();
         }
 
         public Builder(HardwareProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuHotAddEnabled = defaults.cpuHotAddEnabled;
-    	      this.cpuHotRemoveEnabled = defaults.cpuHotRemoveEnabled;
-    	      this.memoryHotAddEnabled = defaults.memoryHotAddEnabled;
-    	      this.memorySizeMB = defaults.memorySizeMB;
-    	      this.numCPUs = defaults.numCPUs;
-    	      this.numCoresPerSocket = defaults.numCoresPerSocket;
+            $ = new HardwareProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuHotAddEnabled(Boolean cpuHotAddEnabled) {
-            this.cpuHotAddEnabled = Objects.requireNonNull(cpuHotAddEnabled);
+            $.cpuHotAddEnabled = cpuHotAddEnabled;
             return this;
         }
+
         public Builder cpuHotRemoveEnabled(Boolean cpuHotRemoveEnabled) {
-            this.cpuHotRemoveEnabled = Objects.requireNonNull(cpuHotRemoveEnabled);
+            $.cpuHotRemoveEnabled = cpuHotRemoveEnabled;
             return this;
         }
+
         public Builder memoryHotAddEnabled(Boolean memoryHotAddEnabled) {
-            this.memoryHotAddEnabled = Objects.requireNonNull(memoryHotAddEnabled);
+            $.memoryHotAddEnabled = memoryHotAddEnabled;
             return this;
         }
+
         public Builder memorySizeMB(@Nullable Integer memorySizeMB) {
-            this.memorySizeMB = memorySizeMB;
+            $.memorySizeMB = memorySizeMB;
             return this;
         }
+
         public Builder numCPUs(@Nullable Integer numCPUs) {
-            this.numCPUs = numCPUs;
+            $.numCPUs = numCPUs;
             return this;
         }
+
         public Builder numCoresPerSocket(@Nullable Integer numCoresPerSocket) {
-            this.numCoresPerSocket = numCoresPerSocket;
+            $.numCoresPerSocket = numCoresPerSocket;
             return this;
-        }        public HardwareProfileResponse build() {
-            return new HardwareProfileResponse(cpuHotAddEnabled, cpuHotRemoveEnabled, memoryHotAddEnabled, memorySizeMB, numCPUs, numCoresPerSocket);
+        }
+
+        public HardwareProfileResponse build() {
+            $.cpuHotAddEnabled = Objects.requireNonNull($.cpuHotAddEnabled, "expected parameter 'cpuHotAddEnabled' to be non-null");
+            $.cpuHotRemoveEnabled = Objects.requireNonNull($.cpuHotRemoveEnabled, "expected parameter 'cpuHotRemoveEnabled' to be non-null");
+            $.memoryHotAddEnabled = Objects.requireNonNull($.memoryHotAddEnabled, "expected parameter 'memoryHotAddEnabled' to be non-null");
+            return $;
         }
     }
+
 }

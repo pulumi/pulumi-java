@@ -21,7 +21,7 @@ public final class BucketObjectCustomerEncryptionResponse extends com.pulumi.res
      * 
      */
     @Import(name="encryptionAlgorithm", required=true)
-      private final String encryptionAlgorithm;
+    private String encryptionAlgorithm;
 
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
@@ -32,55 +32,52 @@ public final class BucketObjectCustomerEncryptionResponse extends com.pulumi.res
      * 
      */
     @Import(name="keySha256", required=true)
-      private final String keySha256;
+    private String keySha256;
 
     public String keySha256() {
         return this.keySha256;
     }
 
-    public BucketObjectCustomerEncryptionResponse(
-        String encryptionAlgorithm,
-        String keySha256) {
-        this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm, "expected parameter 'encryptionAlgorithm' to be non-null");
-        this.keySha256 = Objects.requireNonNull(keySha256, "expected parameter 'keySha256' to be non-null");
-    }
+    private BucketObjectCustomerEncryptionResponse() {}
 
-    private BucketObjectCustomerEncryptionResponse() {
-        this.encryptionAlgorithm = null;
-        this.keySha256 = null;
+    private BucketObjectCustomerEncryptionResponse(BucketObjectCustomerEncryptionResponse $) {
+        this.encryptionAlgorithm = $.encryptionAlgorithm;
+        this.keySha256 = $.keySha256;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectCustomerEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String encryptionAlgorithm;
-        private String keySha256;
+        private BucketObjectCustomerEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectCustomerEncryptionResponse();
         }
 
         public Builder(BucketObjectCustomerEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionAlgorithm = defaults.encryptionAlgorithm;
-    	      this.keySha256 = defaults.keySha256;
+            $ = new BucketObjectCustomerEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
-            this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
+            $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
+
         public Builder keySha256(String keySha256) {
-            this.keySha256 = Objects.requireNonNull(keySha256);
+            $.keySha256 = keySha256;
             return this;
-        }        public BucketObjectCustomerEncryptionResponse build() {
-            return new BucketObjectCustomerEncryptionResponse(encryptionAlgorithm, keySha256);
+        }
+
+        public BucketObjectCustomerEncryptionResponse build() {
+            $.encryptionAlgorithm = Objects.requireNonNull($.encryptionAlgorithm, "expected parameter 'encryptionAlgorithm' to be non-null");
+            $.keySha256 = Objects.requireNonNull($.keySha256, "expected parameter 'keySha256' to be non-null");
+            return $;
         }
     }
+
 }

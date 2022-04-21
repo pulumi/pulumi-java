@@ -7,8 +7,8 @@ import com.pulumi.awsnative.inspectorv2.inputs.FilterNumberFilterArgs;
 import com.pulumi.awsnative.inspectorv2.inputs.FilterStringFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,150 +17,133 @@ public final class FilterPackageFilterArgs extends com.pulumi.resources.Resource
     public static final FilterPackageFilterArgs Empty = new FilterPackageFilterArgs();
 
     @Import(name="architecture")
-      private final @Nullable Output<FilterStringFilterArgs> architecture;
+    private @Nullable Output<FilterStringFilterArgs> architecture;
 
-    public Output<FilterStringFilterArgs> architecture() {
-        return this.architecture == null ? Codegen.empty() : this.architecture;
+    public Optional<Output<FilterStringFilterArgs>> architecture() {
+        return Optional.ofNullable(this.architecture);
     }
 
     @Import(name="epoch")
-      private final @Nullable Output<FilterNumberFilterArgs> epoch;
+    private @Nullable Output<FilterNumberFilterArgs> epoch;
 
-    public Output<FilterNumberFilterArgs> epoch() {
-        return this.epoch == null ? Codegen.empty() : this.epoch;
+    public Optional<Output<FilterNumberFilterArgs>> epoch() {
+        return Optional.ofNullable(this.epoch);
     }
 
     @Import(name="name")
-      private final @Nullable Output<FilterStringFilterArgs> name;
+    private @Nullable Output<FilterStringFilterArgs> name;
 
-    public Output<FilterStringFilterArgs> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<FilterStringFilterArgs>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="release")
-      private final @Nullable Output<FilterStringFilterArgs> release;
+    private @Nullable Output<FilterStringFilterArgs> release;
 
-    public Output<FilterStringFilterArgs> release() {
-        return this.release == null ? Codegen.empty() : this.release;
+    public Optional<Output<FilterStringFilterArgs>> release() {
+        return Optional.ofNullable(this.release);
     }
 
     @Import(name="sourceLayerHash")
-      private final @Nullable Output<FilterStringFilterArgs> sourceLayerHash;
+    private @Nullable Output<FilterStringFilterArgs> sourceLayerHash;
 
-    public Output<FilterStringFilterArgs> sourceLayerHash() {
-        return this.sourceLayerHash == null ? Codegen.empty() : this.sourceLayerHash;
+    public Optional<Output<FilterStringFilterArgs>> sourceLayerHash() {
+        return Optional.ofNullable(this.sourceLayerHash);
     }
 
     @Import(name="version")
-      private final @Nullable Output<FilterStringFilterArgs> version;
+    private @Nullable Output<FilterStringFilterArgs> version;
 
-    public Output<FilterStringFilterArgs> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<FilterStringFilterArgs>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public FilterPackageFilterArgs(
-        @Nullable Output<FilterStringFilterArgs> architecture,
-        @Nullable Output<FilterNumberFilterArgs> epoch,
-        @Nullable Output<FilterStringFilterArgs> name,
-        @Nullable Output<FilterStringFilterArgs> release,
-        @Nullable Output<FilterStringFilterArgs> sourceLayerHash,
-        @Nullable Output<FilterStringFilterArgs> version) {
-        this.architecture = architecture;
-        this.epoch = epoch;
-        this.name = name;
-        this.release = release;
-        this.sourceLayerHash = sourceLayerHash;
-        this.version = version;
-    }
+    private FilterPackageFilterArgs() {}
 
-    private FilterPackageFilterArgs() {
-        this.architecture = Codegen.empty();
-        this.epoch = Codegen.empty();
-        this.name = Codegen.empty();
-        this.release = Codegen.empty();
-        this.sourceLayerHash = Codegen.empty();
-        this.version = Codegen.empty();
+    private FilterPackageFilterArgs(FilterPackageFilterArgs $) {
+        this.architecture = $.architecture;
+        this.epoch = $.epoch;
+        this.name = $.name;
+        this.release = $.release;
+        this.sourceLayerHash = $.sourceLayerHash;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterPackageFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FilterStringFilterArgs> architecture;
-        private @Nullable Output<FilterNumberFilterArgs> epoch;
-        private @Nullable Output<FilterStringFilterArgs> name;
-        private @Nullable Output<FilterStringFilterArgs> release;
-        private @Nullable Output<FilterStringFilterArgs> sourceLayerHash;
-        private @Nullable Output<FilterStringFilterArgs> version;
+        private FilterPackageFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterPackageFilterArgs();
         }
 
         public Builder(FilterPackageFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.epoch = defaults.epoch;
-    	      this.name = defaults.name;
-    	      this.release = defaults.release;
-    	      this.sourceLayerHash = defaults.sourceLayerHash;
-    	      this.version = defaults.version;
+            $ = new FilterPackageFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(@Nullable Output<FilterStringFilterArgs> architecture) {
-            this.architecture = architecture;
+            $.architecture = architecture;
             return this;
         }
-        public Builder architecture(@Nullable FilterStringFilterArgs architecture) {
-            this.architecture = Codegen.ofNullable(architecture);
-            return this;
+
+        public Builder architecture(FilterStringFilterArgs architecture) {
+            return architecture(Output.of(architecture));
         }
+
         public Builder epoch(@Nullable Output<FilterNumberFilterArgs> epoch) {
-            this.epoch = epoch;
+            $.epoch = epoch;
             return this;
         }
-        public Builder epoch(@Nullable FilterNumberFilterArgs epoch) {
-            this.epoch = Codegen.ofNullable(epoch);
-            return this;
+
+        public Builder epoch(FilterNumberFilterArgs epoch) {
+            return epoch(Output.of(epoch));
         }
+
         public Builder name(@Nullable Output<FilterStringFilterArgs> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable FilterStringFilterArgs name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(FilterStringFilterArgs name) {
+            return name(Output.of(name));
         }
+
         public Builder release(@Nullable Output<FilterStringFilterArgs> release) {
-            this.release = release;
+            $.release = release;
             return this;
         }
-        public Builder release(@Nullable FilterStringFilterArgs release) {
-            this.release = Codegen.ofNullable(release);
-            return this;
+
+        public Builder release(FilterStringFilterArgs release) {
+            return release(Output.of(release));
         }
+
         public Builder sourceLayerHash(@Nullable Output<FilterStringFilterArgs> sourceLayerHash) {
-            this.sourceLayerHash = sourceLayerHash;
+            $.sourceLayerHash = sourceLayerHash;
             return this;
         }
-        public Builder sourceLayerHash(@Nullable FilterStringFilterArgs sourceLayerHash) {
-            this.sourceLayerHash = Codegen.ofNullable(sourceLayerHash);
-            return this;
+
+        public Builder sourceLayerHash(FilterStringFilterArgs sourceLayerHash) {
+            return sourceLayerHash(Output.of(sourceLayerHash));
         }
+
         public Builder version(@Nullable Output<FilterStringFilterArgs> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable FilterStringFilterArgs version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public FilterPackageFilterArgs build() {
-            return new FilterPackageFilterArgs(architecture, epoch, name, release, sourceLayerHash, version);
+
+        public Builder version(FilterStringFilterArgs version) {
+            return version(Output.of(version));
+        }
+
+        public FilterPackageFilterArgs build() {
+            return $;
         }
     }
+
 }

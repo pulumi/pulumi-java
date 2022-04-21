@@ -5,7 +5,6 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="days", required=true)
-      private final Output<Integer> days;
+    private Output<Integer> days;
 
     public Output<Integer> days() {
         return this.days;
@@ -35,63 +34,60 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public RetentionPolicyArgs(
-        Output<Integer> days,
-        Output<Boolean> enabled) {
-        this.days = Objects.requireNonNull(days, "expected parameter 'days' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private RetentionPolicyArgs() {}
 
-    private RetentionPolicyArgs() {
-        this.days = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private RetentionPolicyArgs(RetentionPolicyArgs $) {
+        this.days = $.days;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> days;
-        private Output<Boolean> enabled;
+        private RetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionPolicyArgs();
         }
 
         public Builder(RetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.enabled = defaults.enabled;
+            $ = new RetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder days(Output<Integer> days) {
-            this.days = Objects.requireNonNull(days);
+            $.days = days;
             return this;
         }
+
         public Builder days(Integer days) {
-            this.days = Output.of(Objects.requireNonNull(days));
-            return this;
+            return days(Output.of(days));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public RetentionPolicyArgs build() {
-            return new RetentionPolicyArgs(days, enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public RetentionPolicyArgs build() {
+            $.days = Objects.requireNonNull($.days, "expected parameter 'days' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

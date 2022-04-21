@@ -17,45 +17,45 @@ public final class GetSubscriptionDiagnosticSettingArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetSubscriptionDiagnosticSettingArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetSubscriptionDiagnosticSettingArgs() {}
 
-    private GetSubscriptionDiagnosticSettingArgs() {
-        this.name = null;
+    private GetSubscriptionDiagnosticSettingArgs(GetSubscriptionDiagnosticSettingArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubscriptionDiagnosticSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetSubscriptionDiagnosticSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubscriptionDiagnosticSettingArgs();
         }
 
         public Builder(GetSubscriptionDiagnosticSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetSubscriptionDiagnosticSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetSubscriptionDiagnosticSettingArgs build() {
-            return new GetSubscriptionDiagnosticSettingArgs(name);
+        }
+
+        public GetSubscriptionDiagnosticSettingArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

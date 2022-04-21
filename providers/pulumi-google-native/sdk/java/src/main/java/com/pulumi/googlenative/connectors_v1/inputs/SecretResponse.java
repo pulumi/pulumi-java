@@ -21,45 +21,45 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretVersion", required=true)
-      private final String secretVersion;
+    private String secretVersion;
 
     public String secretVersion() {
         return this.secretVersion;
     }
 
-    public SecretResponse(String secretVersion) {
-        this.secretVersion = Objects.requireNonNull(secretVersion, "expected parameter 'secretVersion' to be non-null");
-    }
+    private SecretResponse() {}
 
-    private SecretResponse() {
-        this.secretVersion = null;
+    private SecretResponse(SecretResponse $) {
+        this.secretVersion = $.secretVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String secretVersion;
+        private SecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretResponse();
         }
 
         public Builder(SecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretVersion = defaults.secretVersion;
+            $ = new SecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder secretVersion(String secretVersion) {
-            this.secretVersion = Objects.requireNonNull(secretVersion);
+            $.secretVersion = secretVersion;
             return this;
-        }        public SecretResponse build() {
-            return new SecretResponse(secretVersion);
+        }
+
+        public SecretResponse build() {
+            $.secretVersion = Objects.requireNonNull($.secretVersion, "expected parameter 'secretVersion' to be non-null");
+            return $;
         }
     }
+
 }

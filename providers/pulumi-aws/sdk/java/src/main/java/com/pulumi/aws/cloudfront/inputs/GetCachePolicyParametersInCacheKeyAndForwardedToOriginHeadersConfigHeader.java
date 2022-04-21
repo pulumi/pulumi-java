@@ -18,48 +18,49 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
      * 
      */
     @Import(name="items", required=true)
-      private final List<String> items;
+    private List<String> items;
 
     public List<String> items() {
         return this.items;
     }
 
-    public GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader(List<String> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader() {}
 
-    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader() {
-        this.items = List.of();
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader(GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> items;
+        private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader();
         }
 
         public Builder(GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<String> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader build() {
-            return new GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader(items);
+        }
+
+        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

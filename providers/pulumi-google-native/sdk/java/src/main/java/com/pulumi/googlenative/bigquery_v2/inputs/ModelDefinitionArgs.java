@@ -5,11 +5,11 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.ModelDefinitionModelOptionsArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ModelDefinitionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="modelOptions")
-      private final @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions;
+    private @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions;
 
-    public Output<ModelDefinitionModelOptionsArgs> modelOptions() {
-        return this.modelOptions == null ? Codegen.empty() : this.modelOptions;
+    public Optional<Output<ModelDefinitionModelOptionsArgs>> modelOptions() {
+        return Optional.ofNullable(this.modelOptions);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class ModelDefinitionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="trainingRuns")
-      private final @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns;
+    private @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns;
 
-    public Output<List<BqmlTrainingRunArgs>> trainingRuns() {
-        return this.trainingRuns == null ? Codegen.empty() : this.trainingRuns;
+    public Optional<Output<List<BqmlTrainingRunArgs>>> trainingRuns() {
+        return Optional.ofNullable(this.trainingRuns);
     }
 
-    public ModelDefinitionArgs(
-        @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions,
-        @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns) {
-        this.modelOptions = modelOptions;
-        this.trainingRuns = trainingRuns;
-    }
+    private ModelDefinitionArgs() {}
 
-    private ModelDefinitionArgs() {
-        this.modelOptions = Codegen.empty();
-        this.trainingRuns = Codegen.empty();
+    private ModelDefinitionArgs(ModelDefinitionArgs $) {
+        this.modelOptions = $.modelOptions;
+        this.trainingRuns = $.trainingRuns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions;
-        private @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns;
+        private ModelDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelDefinitionArgs();
         }
 
         public Builder(ModelDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modelOptions = defaults.modelOptions;
-    	      this.trainingRuns = defaults.trainingRuns;
+            $ = new ModelDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder modelOptions(@Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions) {
-            this.modelOptions = modelOptions;
+            $.modelOptions = modelOptions;
             return this;
         }
-        public Builder modelOptions(@Nullable ModelDefinitionModelOptionsArgs modelOptions) {
-            this.modelOptions = Codegen.ofNullable(modelOptions);
-            return this;
+
+        public Builder modelOptions(ModelDefinitionModelOptionsArgs modelOptions) {
+            return modelOptions(Output.of(modelOptions));
         }
+
         public Builder trainingRuns(@Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns) {
-            this.trainingRuns = trainingRuns;
+            $.trainingRuns = trainingRuns;
             return this;
         }
-        public Builder trainingRuns(@Nullable List<BqmlTrainingRunArgs> trainingRuns) {
-            this.trainingRuns = Codegen.ofNullable(trainingRuns);
-            return this;
+
+        public Builder trainingRuns(List<BqmlTrainingRunArgs> trainingRuns) {
+            return trainingRuns(Output.of(trainingRuns));
         }
+
         public Builder trainingRuns(BqmlTrainingRunArgs... trainingRuns) {
             return trainingRuns(List.of(trainingRuns));
-        }        public ModelDefinitionArgs build() {
-            return new ModelDefinitionArgs(modelOptions, trainingRuns);
+        }
+
+        public ModelDefinitionArgs build() {
+            return $;
         }
     }
+
 }

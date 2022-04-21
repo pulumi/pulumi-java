@@ -15,158 +15,143 @@ public final class AnomalyDetectorRedshiftSourceConfig extends com.pulumi.resour
     public static final AnomalyDetectorRedshiftSourceConfig Empty = new AnomalyDetectorRedshiftSourceConfig();
 
     @Import(name="clusterIdentifier", required=true)
-      private final String clusterIdentifier;
+    private String clusterIdentifier;
 
     public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
     @Import(name="databaseHost", required=true)
-      private final String databaseHost;
+    private String databaseHost;
 
     public String databaseHost() {
         return this.databaseHost;
     }
 
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databasePort", required=true)
-      private final Integer databasePort;
+    private Integer databasePort;
 
     public Integer databasePort() {
         return this.databasePort;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="secretManagerArn", required=true)
-      private final String secretManagerArn;
+    private String secretManagerArn;
 
     public String secretManagerArn() {
         return this.secretManagerArn;
     }
 
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
     @Import(name="vpcConfiguration", required=true)
-      private final AnomalyDetectorVpcConfiguration vpcConfiguration;
+    private AnomalyDetectorVpcConfiguration vpcConfiguration;
 
     public AnomalyDetectorVpcConfiguration vpcConfiguration() {
         return this.vpcConfiguration;
     }
 
-    public AnomalyDetectorRedshiftSourceConfig(
-        String clusterIdentifier,
-        String databaseHost,
-        String databaseName,
-        Integer databasePort,
-        String roleArn,
-        String secretManagerArn,
-        String tableName,
-        AnomalyDetectorVpcConfiguration vpcConfiguration) {
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
-        this.databaseHost = Objects.requireNonNull(databaseHost, "expected parameter 'databaseHost' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.databasePort = Objects.requireNonNull(databasePort, "expected parameter 'databasePort' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.secretManagerArn = Objects.requireNonNull(secretManagerArn, "expected parameter 'secretManagerArn' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration, "expected parameter 'vpcConfiguration' to be non-null");
-    }
+    private AnomalyDetectorRedshiftSourceConfig() {}
 
-    private AnomalyDetectorRedshiftSourceConfig() {
-        this.clusterIdentifier = null;
-        this.databaseHost = null;
-        this.databaseName = null;
-        this.databasePort = null;
-        this.roleArn = null;
-        this.secretManagerArn = null;
-        this.tableName = null;
-        this.vpcConfiguration = null;
+    private AnomalyDetectorRedshiftSourceConfig(AnomalyDetectorRedshiftSourceConfig $) {
+        this.clusterIdentifier = $.clusterIdentifier;
+        this.databaseHost = $.databaseHost;
+        this.databaseName = $.databaseName;
+        this.databasePort = $.databasePort;
+        this.roleArn = $.roleArn;
+        this.secretManagerArn = $.secretManagerArn;
+        this.tableName = $.tableName;
+        this.vpcConfiguration = $.vpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorRedshiftSourceConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterIdentifier;
-        private String databaseHost;
-        private String databaseName;
-        private Integer databasePort;
-        private String roleArn;
-        private String secretManagerArn;
-        private String tableName;
-        private AnomalyDetectorVpcConfiguration vpcConfiguration;
+        private AnomalyDetectorRedshiftSourceConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorRedshiftSourceConfig();
         }
 
         public Builder(AnomalyDetectorRedshiftSourceConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
-    	      this.databaseHost = defaults.databaseHost;
-    	      this.databaseName = defaults.databaseName;
-    	      this.databasePort = defaults.databasePort;
-    	      this.roleArn = defaults.roleArn;
-    	      this.secretManagerArn = defaults.secretManagerArn;
-    	      this.tableName = defaults.tableName;
-    	      this.vpcConfiguration = defaults.vpcConfiguration;
+            $ = new AnomalyDetectorRedshiftSourceConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
+
         public Builder databaseHost(String databaseHost) {
-            this.databaseHost = Objects.requireNonNull(databaseHost);
+            $.databaseHost = databaseHost;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databasePort(Integer databasePort) {
-            this.databasePort = Objects.requireNonNull(databasePort);
+            $.databasePort = databasePort;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder secretManagerArn(String secretManagerArn) {
-            this.secretManagerArn = Objects.requireNonNull(secretManagerArn);
+            $.secretManagerArn = secretManagerArn;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder vpcConfiguration(AnomalyDetectorVpcConfiguration vpcConfiguration) {
-            this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
+            $.vpcConfiguration = vpcConfiguration;
             return this;
-        }        public AnomalyDetectorRedshiftSourceConfig build() {
-            return new AnomalyDetectorRedshiftSourceConfig(clusterIdentifier, databaseHost, databaseName, databasePort, roleArn, secretManagerArn, tableName, vpcConfiguration);
+        }
+
+        public AnomalyDetectorRedshiftSourceConfig build() {
+            $.clusterIdentifier = Objects.requireNonNull($.clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
+            $.databaseHost = Objects.requireNonNull($.databaseHost, "expected parameter 'databaseHost' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.databasePort = Objects.requireNonNull($.databasePort, "expected parameter 'databasePort' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.secretManagerArn = Objects.requireNonNull($.secretManagerArn, "expected parameter 'secretManagerArn' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            $.vpcConfiguration = Objects.requireNonNull($.vpcConfiguration, "expected parameter 'vpcConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

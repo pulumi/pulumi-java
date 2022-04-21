@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudhsmv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,130 +16,116 @@ public final class ClusterClusterCertificateArgs extends com.pulumi.resources.Re
     public static final ClusterClusterCertificateArgs Empty = new ClusterClusterCertificateArgs();
 
     @Import(name="awsHardwareCertificate")
-      private final @Nullable Output<String> awsHardwareCertificate;
+    private @Nullable Output<String> awsHardwareCertificate;
 
-    public Output<String> awsHardwareCertificate() {
-        return this.awsHardwareCertificate == null ? Codegen.empty() : this.awsHardwareCertificate;
+    public Optional<Output<String>> awsHardwareCertificate() {
+        return Optional.ofNullable(this.awsHardwareCertificate);
     }
 
     @Import(name="clusterCertificate")
-      private final @Nullable Output<String> clusterCertificate;
+    private @Nullable Output<String> clusterCertificate;
 
-    public Output<String> clusterCertificate() {
-        return this.clusterCertificate == null ? Codegen.empty() : this.clusterCertificate;
+    public Optional<Output<String>> clusterCertificate() {
+        return Optional.ofNullable(this.clusterCertificate);
     }
 
     @Import(name="clusterCsr")
-      private final @Nullable Output<String> clusterCsr;
+    private @Nullable Output<String> clusterCsr;
 
-    public Output<String> clusterCsr() {
-        return this.clusterCsr == null ? Codegen.empty() : this.clusterCsr;
+    public Optional<Output<String>> clusterCsr() {
+        return Optional.ofNullable(this.clusterCsr);
     }
 
     @Import(name="hsmCertificate")
-      private final @Nullable Output<String> hsmCertificate;
+    private @Nullable Output<String> hsmCertificate;
 
-    public Output<String> hsmCertificate() {
-        return this.hsmCertificate == null ? Codegen.empty() : this.hsmCertificate;
+    public Optional<Output<String>> hsmCertificate() {
+        return Optional.ofNullable(this.hsmCertificate);
     }
 
     @Import(name="manufacturerHardwareCertificate")
-      private final @Nullable Output<String> manufacturerHardwareCertificate;
+    private @Nullable Output<String> manufacturerHardwareCertificate;
 
-    public Output<String> manufacturerHardwareCertificate() {
-        return this.manufacturerHardwareCertificate == null ? Codegen.empty() : this.manufacturerHardwareCertificate;
+    public Optional<Output<String>> manufacturerHardwareCertificate() {
+        return Optional.ofNullable(this.manufacturerHardwareCertificate);
     }
 
-    public ClusterClusterCertificateArgs(
-        @Nullable Output<String> awsHardwareCertificate,
-        @Nullable Output<String> clusterCertificate,
-        @Nullable Output<String> clusterCsr,
-        @Nullable Output<String> hsmCertificate,
-        @Nullable Output<String> manufacturerHardwareCertificate) {
-        this.awsHardwareCertificate = awsHardwareCertificate;
-        this.clusterCertificate = clusterCertificate;
-        this.clusterCsr = clusterCsr;
-        this.hsmCertificate = hsmCertificate;
-        this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
-    }
+    private ClusterClusterCertificateArgs() {}
 
-    private ClusterClusterCertificateArgs() {
-        this.awsHardwareCertificate = Codegen.empty();
-        this.clusterCertificate = Codegen.empty();
-        this.clusterCsr = Codegen.empty();
-        this.hsmCertificate = Codegen.empty();
-        this.manufacturerHardwareCertificate = Codegen.empty();
+    private ClusterClusterCertificateArgs(ClusterClusterCertificateArgs $) {
+        this.awsHardwareCertificate = $.awsHardwareCertificate;
+        this.clusterCertificate = $.clusterCertificate;
+        this.clusterCsr = $.clusterCsr;
+        this.hsmCertificate = $.hsmCertificate;
+        this.manufacturerHardwareCertificate = $.manufacturerHardwareCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> awsHardwareCertificate;
-        private @Nullable Output<String> clusterCertificate;
-        private @Nullable Output<String> clusterCsr;
-        private @Nullable Output<String> hsmCertificate;
-        private @Nullable Output<String> manufacturerHardwareCertificate;
+        private ClusterClusterCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterCertificateArgs();
         }
 
         public Builder(ClusterClusterCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsHardwareCertificate = defaults.awsHardwareCertificate;
-    	      this.clusterCertificate = defaults.clusterCertificate;
-    	      this.clusterCsr = defaults.clusterCsr;
-    	      this.hsmCertificate = defaults.hsmCertificate;
-    	      this.manufacturerHardwareCertificate = defaults.manufacturerHardwareCertificate;
+            $ = new ClusterClusterCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsHardwareCertificate(@Nullable Output<String> awsHardwareCertificate) {
-            this.awsHardwareCertificate = awsHardwareCertificate;
+            $.awsHardwareCertificate = awsHardwareCertificate;
             return this;
         }
-        public Builder awsHardwareCertificate(@Nullable String awsHardwareCertificate) {
-            this.awsHardwareCertificate = Codegen.ofNullable(awsHardwareCertificate);
-            return this;
+
+        public Builder awsHardwareCertificate(String awsHardwareCertificate) {
+            return awsHardwareCertificate(Output.of(awsHardwareCertificate));
         }
+
         public Builder clusterCertificate(@Nullable Output<String> clusterCertificate) {
-            this.clusterCertificate = clusterCertificate;
+            $.clusterCertificate = clusterCertificate;
             return this;
         }
-        public Builder clusterCertificate(@Nullable String clusterCertificate) {
-            this.clusterCertificate = Codegen.ofNullable(clusterCertificate);
-            return this;
+
+        public Builder clusterCertificate(String clusterCertificate) {
+            return clusterCertificate(Output.of(clusterCertificate));
         }
+
         public Builder clusterCsr(@Nullable Output<String> clusterCsr) {
-            this.clusterCsr = clusterCsr;
+            $.clusterCsr = clusterCsr;
             return this;
         }
-        public Builder clusterCsr(@Nullable String clusterCsr) {
-            this.clusterCsr = Codegen.ofNullable(clusterCsr);
-            return this;
+
+        public Builder clusterCsr(String clusterCsr) {
+            return clusterCsr(Output.of(clusterCsr));
         }
+
         public Builder hsmCertificate(@Nullable Output<String> hsmCertificate) {
-            this.hsmCertificate = hsmCertificate;
+            $.hsmCertificate = hsmCertificate;
             return this;
         }
-        public Builder hsmCertificate(@Nullable String hsmCertificate) {
-            this.hsmCertificate = Codegen.ofNullable(hsmCertificate);
-            return this;
+
+        public Builder hsmCertificate(String hsmCertificate) {
+            return hsmCertificate(Output.of(hsmCertificate));
         }
+
         public Builder manufacturerHardwareCertificate(@Nullable Output<String> manufacturerHardwareCertificate) {
-            this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
+            $.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
             return this;
         }
-        public Builder manufacturerHardwareCertificate(@Nullable String manufacturerHardwareCertificate) {
-            this.manufacturerHardwareCertificate = Codegen.ofNullable(manufacturerHardwareCertificate);
-            return this;
-        }        public ClusterClusterCertificateArgs build() {
-            return new ClusterClusterCertificateArgs(awsHardwareCertificate, clusterCertificate, clusterCsr, hsmCertificate, manufacturerHardwareCertificate);
+
+        public Builder manufacturerHardwareCertificate(String manufacturerHardwareCertificate) {
+            return manufacturerHardwareCertificate(Output.of(manufacturerHardwareCertificate));
+        }
+
+        public ClusterClusterCertificateArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DeploymentAccessLogSettingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="destinationArn")
-      private final @Nullable Output<String> destinationArn;
+    private @Nullable Output<String> destinationArn;
 
-    public Output<String> destinationArn() {
-        return this.destinationArn == null ? Codegen.empty() : this.destinationArn;
+    public Optional<Output<String>> destinationArn() {
+        return Optional.ofNullable(this.destinationArn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DeploymentAccessLogSettingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<String> format;
+    private @Nullable Output<String> format;
 
-    public Output<String> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<String>> format() {
+        return Optional.ofNullable(this.format);
     }
 
-    public DeploymentAccessLogSettingArgs(
-        @Nullable Output<String> destinationArn,
-        @Nullable Output<String> format) {
-        this.destinationArn = destinationArn;
-        this.format = format;
-    }
+    private DeploymentAccessLogSettingArgs() {}
 
-    private DeploymentAccessLogSettingArgs() {
-        this.destinationArn = Codegen.empty();
-        this.format = Codegen.empty();
+    private DeploymentAccessLogSettingArgs(DeploymentAccessLogSettingArgs $) {
+        this.destinationArn = $.destinationArn;
+        this.format = $.format;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentAccessLogSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destinationArn;
-        private @Nullable Output<String> format;
+        private DeploymentAccessLogSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentAccessLogSettingArgs();
         }
 
         public Builder(DeploymentAccessLogSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationArn = defaults.destinationArn;
-    	      this.format = defaults.format;
+            $ = new DeploymentAccessLogSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationArn(@Nullable Output<String> destinationArn) {
-            this.destinationArn = destinationArn;
+            $.destinationArn = destinationArn;
             return this;
         }
-        public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Codegen.ofNullable(destinationArn);
-            return this;
+
+        public Builder destinationArn(String destinationArn) {
+            return destinationArn(Output.of(destinationArn));
         }
+
         public Builder format(@Nullable Output<String> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable String format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
-        }        public DeploymentAccessLogSettingArgs build() {
-            return new DeploymentAccessLogSettingArgs(destinationArn, format);
+
+        public Builder format(String format) {
+            return format(Output.of(format));
+        }
+
+        public DeploymentAccessLogSettingArgs build() {
+            return $;
         }
     }
+
 }

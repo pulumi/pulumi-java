@@ -23,7 +23,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
      * 
      */
     @Import(name="datasetUri", required=true)
-      private final String datasetUri;
+    private String datasetUri;
 
     public String datasetUri() {
         return this.datasetUri;
@@ -34,7 +34,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
      * 
      */
     @Import(name="force", required=true)
-      private final Boolean force;
+    private Boolean force;
 
     public Boolean force() {
         return this.force;
@@ -45,7 +45,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
      * 
      */
     @Import(name="schemaConfig", required=true)
-      private final SchemaConfigResponse schemaConfig;
+    private SchemaConfigResponse schemaConfig;
 
     public SchemaConfigResponse schemaConfig() {
         return this.schemaConfig;
@@ -56,73 +56,66 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
      * 
      */
     @Import(name="writeDisposition", required=true)
-      private final String writeDisposition;
+    private String writeDisposition;
 
     public String writeDisposition() {
         return this.writeDisposition;
     }
 
-    public GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(
-        String datasetUri,
-        Boolean force,
-        SchemaConfigResponse schemaConfig,
-        String writeDisposition) {
-        this.datasetUri = Objects.requireNonNull(datasetUri, "expected parameter 'datasetUri' to be non-null");
-        this.force = Objects.requireNonNull(force, "expected parameter 'force' to be non-null");
-        this.schemaConfig = Objects.requireNonNull(schemaConfig, "expected parameter 'schemaConfig' to be non-null");
-        this.writeDisposition = Objects.requireNonNull(writeDisposition, "expected parameter 'writeDisposition' to be non-null");
-    }
+    private GoogleCloudHealthcareV1FhirBigQueryDestinationResponse() {}
 
-    private GoogleCloudHealthcareV1FhirBigQueryDestinationResponse() {
-        this.datasetUri = null;
-        this.force = null;
-        this.schemaConfig = null;
-        this.writeDisposition = null;
+    private GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(GoogleCloudHealthcareV1FhirBigQueryDestinationResponse $) {
+        this.datasetUri = $.datasetUri;
+        this.force = $.force;
+        this.schemaConfig = $.schemaConfig;
+        this.writeDisposition = $.writeDisposition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudHealthcareV1FhirBigQueryDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetUri;
-        private Boolean force;
-        private SchemaConfigResponse schemaConfig;
-        private String writeDisposition;
+        private GoogleCloudHealthcareV1FhirBigQueryDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudHealthcareV1FhirBigQueryDestinationResponse();
         }
 
         public Builder(GoogleCloudHealthcareV1FhirBigQueryDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetUri = defaults.datasetUri;
-    	      this.force = defaults.force;
-    	      this.schemaConfig = defaults.schemaConfig;
-    	      this.writeDisposition = defaults.writeDisposition;
+            $ = new GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetUri(String datasetUri) {
-            this.datasetUri = Objects.requireNonNull(datasetUri);
+            $.datasetUri = datasetUri;
             return this;
         }
+
         public Builder force(Boolean force) {
-            this.force = Objects.requireNonNull(force);
+            $.force = force;
             return this;
         }
+
         public Builder schemaConfig(SchemaConfigResponse schemaConfig) {
-            this.schemaConfig = Objects.requireNonNull(schemaConfig);
+            $.schemaConfig = schemaConfig;
             return this;
         }
+
         public Builder writeDisposition(String writeDisposition) {
-            this.writeDisposition = Objects.requireNonNull(writeDisposition);
+            $.writeDisposition = writeDisposition;
             return this;
-        }        public GoogleCloudHealthcareV1FhirBigQueryDestinationResponse build() {
-            return new GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(datasetUri, force, schemaConfig, writeDisposition);
+        }
+
+        public GoogleCloudHealthcareV1FhirBigQueryDestinationResponse build() {
+            $.datasetUri = Objects.requireNonNull($.datasetUri, "expected parameter 'datasetUri' to be non-null");
+            $.force = Objects.requireNonNull($.force, "expected parameter 'force' to be non-null");
+            $.schemaConfig = Objects.requireNonNull($.schemaConfig, "expected parameter 'schemaConfig' to be non-null");
+            $.writeDisposition = Objects.requireNonNull($.writeDisposition, "expected parameter 'writeDisposition' to be non-null");
+            return $;
         }
     }
+
 }

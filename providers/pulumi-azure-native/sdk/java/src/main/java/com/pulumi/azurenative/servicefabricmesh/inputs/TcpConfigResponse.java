@@ -23,7 +23,7 @@ public final class TcpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destination", required=true)
-      private final GatewayDestinationResponse destination;
+    private GatewayDestinationResponse destination;
 
     public GatewayDestinationResponse destination() {
         return this.destination;
@@ -34,7 +34,7 @@ public final class TcpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,59 @@ public final class TcpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public TcpConfigResponse(
-        GatewayDestinationResponse destination,
-        String name,
-        Integer port) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private TcpConfigResponse() {}
 
-    private TcpConfigResponse() {
-        this.destination = null;
-        this.name = null;
-        this.port = null;
+    private TcpConfigResponse(TcpConfigResponse $) {
+        this.destination = $.destination;
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TcpConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GatewayDestinationResponse destination;
-        private String name;
-        private Integer port;
+        private TcpConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TcpConfigResponse();
         }
 
         public Builder(TcpConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new TcpConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(GatewayDestinationResponse destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public TcpConfigResponse build() {
-            return new TcpConfigResponse(destination, name, port);
+        }
+
+        public TcpConfigResponse build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

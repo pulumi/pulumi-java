@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dns_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends com.pulu
     public static final RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs Empty = new RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs();
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -32,17 +32,17 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends com.pulu
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="rrdatas")
-      private final @Nullable Output<List<String>> rrdatas;
+    private @Nullable Output<List<String>> rrdatas;
 
-    public Output<List<String>> rrdatas() {
-        return this.rrdatas == null ? Codegen.empty() : this.rrdatas;
+    public Optional<Output<List<String>>> rrdatas() {
+        return Optional.ofNullable(this.rrdatas);
     }
 
     /**
@@ -50,95 +50,86 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends com.pulu
      * 
      */
     @Import(name="signatureRrdatas")
-      private final @Nullable Output<List<String>> signatureRrdatas;
+    private @Nullable Output<List<String>> signatureRrdatas;
 
-    public Output<List<String>> signatureRrdatas() {
-        return this.signatureRrdatas == null ? Codegen.empty() : this.signatureRrdatas;
+    public Optional<Output<List<String>>> signatureRrdatas() {
+        return Optional.ofNullable(this.signatureRrdatas);
     }
 
-    public RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<List<String>> rrdatas,
-        @Nullable Output<List<String>> signatureRrdatas) {
-        this.kind = kind;
-        this.location = location;
-        this.rrdatas = rrdatas;
-        this.signatureRrdatas = signatureRrdatas;
-    }
+    private RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs() {}
 
-    private RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs() {
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.rrdatas = Codegen.empty();
-        this.signatureRrdatas = Codegen.empty();
+    private RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs(RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs $) {
+        this.kind = $.kind;
+        this.location = $.location;
+        this.rrdatas = $.rrdatas;
+        this.signatureRrdatas = $.signatureRrdatas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<String>> rrdatas;
-        private @Nullable Output<List<String>> signatureRrdatas;
+        private RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs();
         }
 
         public Builder(RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.rrdatas = defaults.rrdatas;
-    	      this.signatureRrdatas = defaults.signatureRrdatas;
+            $ = new RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
-            this.rrdatas = rrdatas;
+            $.rrdatas = rrdatas;
             return this;
         }
-        public Builder rrdatas(@Nullable List<String> rrdatas) {
-            this.rrdatas = Codegen.ofNullable(rrdatas);
-            return this;
+
+        public Builder rrdatas(List<String> rrdatas) {
+            return rrdatas(Output.of(rrdatas));
         }
+
         public Builder rrdatas(String... rrdatas) {
             return rrdatas(List.of(rrdatas));
         }
+
         public Builder signatureRrdatas(@Nullable Output<List<String>> signatureRrdatas) {
-            this.signatureRrdatas = signatureRrdatas;
+            $.signatureRrdatas = signatureRrdatas;
             return this;
         }
-        public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
-            this.signatureRrdatas = Codegen.ofNullable(signatureRrdatas);
-            return this;
+
+        public Builder signatureRrdatas(List<String> signatureRrdatas) {
+            return signatureRrdatas(Output.of(signatureRrdatas));
         }
+
         public Builder signatureRrdatas(String... signatureRrdatas) {
             return signatureRrdatas(List.of(signatureRrdatas));
-        }        public RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs build() {
-            return new RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs(kind, location, rrdatas, signatureRrdatas);
+        }
+
+        public RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs build() {
+            return $;
         }
     }
+
 }

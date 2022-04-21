@@ -24,10 +24,10 @@ public final class UserProfileSharingSettings extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="notebookOutputOption")
-      private final @Nullable UserProfileSharingSettingsNotebookOutputOption notebookOutputOption;
+    private @Nullable UserProfileSharingSettingsNotebookOutputOption notebookOutputOption;
 
     public Optional<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption() {
-        return this.notebookOutputOption == null ? Optional.empty() : Optional.ofNullable(this.notebookOutputOption);
+        return Optional.ofNullable(this.notebookOutputOption);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UserProfileSharingSettings extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="s3KmsKeyId")
-      private final @Nullable String s3KmsKeyId;
+    private @Nullable String s3KmsKeyId;
 
     public Optional<String> s3KmsKeyId() {
-        return this.s3KmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.s3KmsKeyId);
+        return Optional.ofNullable(this.s3KmsKeyId);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class UserProfileSharingSettings extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="s3OutputPath")
-      private final @Nullable String s3OutputPath;
+    private @Nullable String s3OutputPath;
 
     public Optional<String> s3OutputPath() {
-        return this.s3OutputPath == null ? Optional.empty() : Optional.ofNullable(this.s3OutputPath);
+        return Optional.ofNullable(this.s3OutputPath);
     }
 
-    public UserProfileSharingSettings(
-        @Nullable UserProfileSharingSettingsNotebookOutputOption notebookOutputOption,
-        @Nullable String s3KmsKeyId,
-        @Nullable String s3OutputPath) {
-        this.notebookOutputOption = notebookOutputOption;
-        this.s3KmsKeyId = s3KmsKeyId;
-        this.s3OutputPath = s3OutputPath;
-    }
+    private UserProfileSharingSettings() {}
 
-    private UserProfileSharingSettings() {
-        this.notebookOutputOption = null;
-        this.s3KmsKeyId = null;
-        this.s3OutputPath = null;
+    private UserProfileSharingSettings(UserProfileSharingSettings $) {
+        this.notebookOutputOption = $.notebookOutputOption;
+        this.s3KmsKeyId = $.s3KmsKeyId;
+        this.s3OutputPath = $.s3OutputPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileSharingSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable UserProfileSharingSettingsNotebookOutputOption notebookOutputOption;
-        private @Nullable String s3KmsKeyId;
-        private @Nullable String s3OutputPath;
+        private UserProfileSharingSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileSharingSettings();
         }
 
         public Builder(UserProfileSharingSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notebookOutputOption = defaults.notebookOutputOption;
-    	      this.s3KmsKeyId = defaults.s3KmsKeyId;
-    	      this.s3OutputPath = defaults.s3OutputPath;
+            $ = new UserProfileSharingSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder notebookOutputOption(@Nullable UserProfileSharingSettingsNotebookOutputOption notebookOutputOption) {
-            this.notebookOutputOption = notebookOutputOption;
+            $.notebookOutputOption = notebookOutputOption;
             return this;
         }
+
         public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
-            this.s3KmsKeyId = s3KmsKeyId;
+            $.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
+
         public Builder s3OutputPath(@Nullable String s3OutputPath) {
-            this.s3OutputPath = s3OutputPath;
+            $.s3OutputPath = s3OutputPath;
             return this;
-        }        public UserProfileSharingSettings build() {
-            return new UserProfileSharingSettings(notebookOutputOption, s3KmsKeyId, s3OutputPath);
+        }
+
+        public UserProfileSharingSettings build() {
+            return $;
         }
     }
+
 }

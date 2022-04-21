@@ -5,9 +5,9 @@ package com.pulumi.googlenative.eventarc_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.eventarc_v1beta1.inputs.CloudRunServiceArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudRunService")
-      private final @Nullable Output<CloudRunServiceArgs> cloudRunService;
+    private @Nullable Output<CloudRunServiceArgs> cloudRunService;
 
-    public Output<CloudRunServiceArgs> cloudRunService() {
-        return this.cloudRunService == null ? Codegen.empty() : this.cloudRunService;
+    public Optional<Output<CloudRunServiceArgs>> cloudRunService() {
+        return Optional.ofNullable(this.cloudRunService);
     }
 
-    public DestinationArgs(@Nullable Output<CloudRunServiceArgs> cloudRunService) {
-        this.cloudRunService = cloudRunService;
-    }
+    private DestinationArgs() {}
 
-    private DestinationArgs() {
-        this.cloudRunService = Codegen.empty();
+    private DestinationArgs(DestinationArgs $) {
+        this.cloudRunService = $.cloudRunService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CloudRunServiceArgs> cloudRunService;
+        private DestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationArgs();
         }
 
         public Builder(DestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudRunService = defaults.cloudRunService;
+            $ = new DestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudRunService(@Nullable Output<CloudRunServiceArgs> cloudRunService) {
-            this.cloudRunService = cloudRunService;
+            $.cloudRunService = cloudRunService;
             return this;
         }
-        public Builder cloudRunService(@Nullable CloudRunServiceArgs cloudRunService) {
-            this.cloudRunService = Codegen.ofNullable(cloudRunService);
-            return this;
-        }        public DestinationArgs build() {
-            return new DestinationArgs(cloudRunService);
+
+        public Builder cloudRunService(CloudRunServiceArgs cloudRunService) {
+            return cloudRunService(Output.of(cloudRunService));
+        }
+
+        public DestinationArgs build() {
+            return $;
         }
     }
+
 }

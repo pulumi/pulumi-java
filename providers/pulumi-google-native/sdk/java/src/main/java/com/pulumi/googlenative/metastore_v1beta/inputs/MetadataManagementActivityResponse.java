@@ -23,7 +23,7 @@ public final class MetadataManagementActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="metadataExports", required=true)
-      private final List<MetadataExportResponse> metadataExports;
+    private List<MetadataExportResponse> metadataExports;
 
     public List<MetadataExportResponse> metadataExports() {
         return this.metadataExports;
@@ -34,61 +34,60 @@ public final class MetadataManagementActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="restores", required=true)
-      private final List<RestoreResponse> restores;
+    private List<RestoreResponse> restores;
 
     public List<RestoreResponse> restores() {
         return this.restores;
     }
 
-    public MetadataManagementActivityResponse(
-        List<MetadataExportResponse> metadataExports,
-        List<RestoreResponse> restores) {
-        this.metadataExports = Objects.requireNonNull(metadataExports, "expected parameter 'metadataExports' to be non-null");
-        this.restores = Objects.requireNonNull(restores, "expected parameter 'restores' to be non-null");
-    }
+    private MetadataManagementActivityResponse() {}
 
-    private MetadataManagementActivityResponse() {
-        this.metadataExports = List.of();
-        this.restores = List.of();
+    private MetadataManagementActivityResponse(MetadataManagementActivityResponse $) {
+        this.metadataExports = $.metadataExports;
+        this.restores = $.restores;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataManagementActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MetadataExportResponse> metadataExports;
-        private List<RestoreResponse> restores;
+        private MetadataManagementActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataManagementActivityResponse();
         }
 
         public Builder(MetadataManagementActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataExports = defaults.metadataExports;
-    	      this.restores = defaults.restores;
+            $ = new MetadataManagementActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataExports(List<MetadataExportResponse> metadataExports) {
-            this.metadataExports = Objects.requireNonNull(metadataExports);
+            $.metadataExports = metadataExports;
             return this;
         }
+
         public Builder metadataExports(MetadataExportResponse... metadataExports) {
             return metadataExports(List.of(metadataExports));
         }
+
         public Builder restores(List<RestoreResponse> restores) {
-            this.restores = Objects.requireNonNull(restores);
+            $.restores = restores;
             return this;
         }
+
         public Builder restores(RestoreResponse... restores) {
             return restores(List.of(restores));
-        }        public MetadataManagementActivityResponse build() {
-            return new MetadataManagementActivityResponse(metadataExports, restores);
+        }
+
+        public MetadataManagementActivityResponse build() {
+            $.metadataExports = Objects.requireNonNull($.metadataExports, "expected parameter 'metadataExports' to be non-null");
+            $.restores = Objects.requireNonNull($.restores, "expected parameter 'restores' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetOnPremiseSensorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="onPremiseSensorName", required=true)
-      private final String onPremiseSensorName;
+    private String onPremiseSensorName;
 
     public String onPremiseSensorName() {
         return this.onPremiseSensorName;
     }
 
-    public GetOnPremiseSensorArgs(String onPremiseSensorName) {
-        this.onPremiseSensorName = Objects.requireNonNull(onPremiseSensorName, "expected parameter 'onPremiseSensorName' to be non-null");
-    }
+    private GetOnPremiseSensorArgs() {}
 
-    private GetOnPremiseSensorArgs() {
-        this.onPremiseSensorName = null;
+    private GetOnPremiseSensorArgs(GetOnPremiseSensorArgs $) {
+        this.onPremiseSensorName = $.onPremiseSensorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOnPremiseSensorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String onPremiseSensorName;
+        private GetOnPremiseSensorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOnPremiseSensorArgs();
         }
 
         public Builder(GetOnPremiseSensorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onPremiseSensorName = defaults.onPremiseSensorName;
+            $ = new GetOnPremiseSensorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onPremiseSensorName(String onPremiseSensorName) {
-            this.onPremiseSensorName = Objects.requireNonNull(onPremiseSensorName);
+            $.onPremiseSensorName = onPremiseSensorName;
             return this;
-        }        public GetOnPremiseSensorArgs build() {
-            return new GetOnPremiseSensorArgs(onPremiseSensorName);
+        }
+
+        public GetOnPremiseSensorArgs build() {
+            $.onPremiseSensorName = Objects.requireNonNull($.onPremiseSensorName, "expected parameter 'onPremiseSensorName' to be non-null");
+            return $;
         }
     }
+
 }

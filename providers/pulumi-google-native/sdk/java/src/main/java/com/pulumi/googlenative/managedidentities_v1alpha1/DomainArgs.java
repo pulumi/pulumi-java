@@ -5,12 +5,12 @@ package com.pulumi.googlenative.managedidentities_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auditLogsEnabled")
-      private final @Nullable Output<Boolean> auditLogsEnabled;
+    private @Nullable Output<Boolean> auditLogsEnabled;
 
-    public Output<Boolean> auditLogsEnabled() {
-        return this.auditLogsEnabled == null ? Codegen.empty() : this.auditLogsEnabled;
+    public Optional<Output<Boolean>> auditLogsEnabled() {
+        return Optional.ofNullable(this.auditLogsEnabled);
     }
 
     /**
@@ -34,17 +34,17 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizedNetworks")
-      private final @Nullable Output<List<String>> authorizedNetworks;
+    private @Nullable Output<List<String>> authorizedNetworks;
 
-    public Output<List<String>> authorizedNetworks() {
-        return this.authorizedNetworks == null ? Codegen.empty() : this.authorizedNetworks;
+    public Optional<Output<List<String>>> authorizedNetworks() {
+        return Optional.ofNullable(this.authorizedNetworks);
     }
 
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -63,7 +63,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locations", required=true)
-      private final Output<List<String>> locations;
+    private Output<List<String>> locations;
 
     public Output<List<String>> locations() {
         return this.locations;
@@ -74,17 +74,17 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedIdentitiesAdminName")
-      private final @Nullable Output<String> managedIdentitiesAdminName;
+    private @Nullable Output<String> managedIdentitiesAdminName;
 
-    public Output<String> managedIdentitiesAdminName() {
-        return this.managedIdentitiesAdminName == null ? Codegen.empty() : this.managedIdentitiesAdminName;
+    public Optional<Output<String>> managedIdentitiesAdminName() {
+        return Optional.ofNullable(this.managedIdentitiesAdminName);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -92,147 +92,128 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservedIpRange", required=true)
-      private final Output<String> reservedIpRange;
+    private Output<String> reservedIpRange;
 
     public Output<String> reservedIpRange() {
         return this.reservedIpRange;
     }
 
-    public DomainArgs(
-        @Nullable Output<Boolean> auditLogsEnabled,
-        @Nullable Output<List<String>> authorizedNetworks,
-        @Nullable Output<String> domainName,
-        @Nullable Output<Map<String,String>> labels,
-        Output<List<String>> locations,
-        @Nullable Output<String> managedIdentitiesAdminName,
-        @Nullable Output<String> project,
-        Output<String> reservedIpRange) {
-        this.auditLogsEnabled = auditLogsEnabled;
-        this.authorizedNetworks = authorizedNetworks;
-        this.domainName = domainName;
-        this.labels = labels;
-        this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
-        this.managedIdentitiesAdminName = managedIdentitiesAdminName;
-        this.project = project;
-        this.reservedIpRange = Objects.requireNonNull(reservedIpRange, "expected parameter 'reservedIpRange' to be non-null");
-    }
+    private DomainArgs() {}
 
-    private DomainArgs() {
-        this.auditLogsEnabled = Codegen.empty();
-        this.authorizedNetworks = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.locations = Codegen.empty();
-        this.managedIdentitiesAdminName = Codegen.empty();
-        this.project = Codegen.empty();
-        this.reservedIpRange = Codegen.empty();
+    private DomainArgs(DomainArgs $) {
+        this.auditLogsEnabled = $.auditLogsEnabled;
+        this.authorizedNetworks = $.authorizedNetworks;
+        this.domainName = $.domainName;
+        this.labels = $.labels;
+        this.locations = $.locations;
+        this.managedIdentitiesAdminName = $.managedIdentitiesAdminName;
+        this.project = $.project;
+        this.reservedIpRange = $.reservedIpRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> auditLogsEnabled;
-        private @Nullable Output<List<String>> authorizedNetworks;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<List<String>> locations;
-        private @Nullable Output<String> managedIdentitiesAdminName;
-        private @Nullable Output<String> project;
-        private Output<String> reservedIpRange;
+        private DomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainArgs();
         }
 
         public Builder(DomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogsEnabled = defaults.auditLogsEnabled;
-    	      this.authorizedNetworks = defaults.authorizedNetworks;
-    	      this.domainName = defaults.domainName;
-    	      this.labels = defaults.labels;
-    	      this.locations = defaults.locations;
-    	      this.managedIdentitiesAdminName = defaults.managedIdentitiesAdminName;
-    	      this.project = defaults.project;
-    	      this.reservedIpRange = defaults.reservedIpRange;
+            $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogsEnabled(@Nullable Output<Boolean> auditLogsEnabled) {
-            this.auditLogsEnabled = auditLogsEnabled;
+            $.auditLogsEnabled = auditLogsEnabled;
             return this;
         }
-        public Builder auditLogsEnabled(@Nullable Boolean auditLogsEnabled) {
-            this.auditLogsEnabled = Codegen.ofNullable(auditLogsEnabled);
-            return this;
+
+        public Builder auditLogsEnabled(Boolean auditLogsEnabled) {
+            return auditLogsEnabled(Output.of(auditLogsEnabled));
         }
+
         public Builder authorizedNetworks(@Nullable Output<List<String>> authorizedNetworks) {
-            this.authorizedNetworks = authorizedNetworks;
+            $.authorizedNetworks = authorizedNetworks;
             return this;
         }
-        public Builder authorizedNetworks(@Nullable List<String> authorizedNetworks) {
-            this.authorizedNetworks = Codegen.ofNullable(authorizedNetworks);
-            return this;
+
+        public Builder authorizedNetworks(List<String> authorizedNetworks) {
+            return authorizedNetworks(Output.of(authorizedNetworks));
         }
+
         public Builder authorizedNetworks(String... authorizedNetworks) {
             return authorizedNetworks(List.of(authorizedNetworks));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder locations(Output<List<String>> locations) {
-            this.locations = Objects.requireNonNull(locations);
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(List<String> locations) {
-            this.locations = Output.of(Objects.requireNonNull(locations));
-            return this;
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder managedIdentitiesAdminName(@Nullable Output<String> managedIdentitiesAdminName) {
-            this.managedIdentitiesAdminName = managedIdentitiesAdminName;
+            $.managedIdentitiesAdminName = managedIdentitiesAdminName;
             return this;
         }
-        public Builder managedIdentitiesAdminName(@Nullable String managedIdentitiesAdminName) {
-            this.managedIdentitiesAdminName = Codegen.ofNullable(managedIdentitiesAdminName);
-            return this;
+
+        public Builder managedIdentitiesAdminName(String managedIdentitiesAdminName) {
+            return managedIdentitiesAdminName(Output.of(managedIdentitiesAdminName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder reservedIpRange(Output<String> reservedIpRange) {
-            this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
+            $.reservedIpRange = reservedIpRange;
             return this;
         }
+
         public Builder reservedIpRange(String reservedIpRange) {
-            this.reservedIpRange = Output.of(Objects.requireNonNull(reservedIpRange));
-            return this;
-        }        public DomainArgs build() {
-            return new DomainArgs(auditLogsEnabled, authorizedNetworks, domainName, labels, locations, managedIdentitiesAdminName, project, reservedIpRange);
+            return reservedIpRange(Output.of(reservedIpRange));
+        }
+
+        public DomainArgs build() {
+            $.locations = Objects.requireNonNull($.locations, "expected parameter 'locations' to be non-null");
+            $.reservedIpRange = Objects.requireNonNull($.reservedIpRange, "expected parameter 'reservedIpRange' to be non-null");
+            return $;
         }
     }
+
 }

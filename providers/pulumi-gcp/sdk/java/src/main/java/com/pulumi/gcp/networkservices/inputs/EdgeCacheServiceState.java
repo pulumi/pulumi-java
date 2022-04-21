@@ -5,7 +5,6 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceLogConfigGetArgs;
 import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingGetArgs;
 import java.lang.Boolean;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="disableQuic")
-      private final @Nullable Output<Boolean> disableQuic;
+    private @Nullable Output<Boolean> disableQuic;
 
-    public Output<Boolean> disableQuic() {
-        return this.disableQuic == null ? Codegen.empty() : this.disableQuic;
+    public Optional<Output<Boolean>> disableQuic() {
+        return Optional.ofNullable(this.disableQuic);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="edgeSecurityPolicy")
-      private final @Nullable Output<String> edgeSecurityPolicy;
+    private @Nullable Output<String> edgeSecurityPolicy;
 
-    public Output<String> edgeSecurityPolicy() {
-        return this.edgeSecurityPolicy == null ? Codegen.empty() : this.edgeSecurityPolicy;
+    public Optional<Output<String>> edgeSecurityPolicy() {
+        return Optional.ofNullable(this.edgeSecurityPolicy);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="edgeSslCertificates")
-      private final @Nullable Output<List<String>> edgeSslCertificates;
+    private @Nullable Output<List<String>> edgeSslCertificates;
 
-    public Output<List<String>> edgeSslCertificates() {
-        return this.edgeSslCertificates == null ? Codegen.empty() : this.edgeSslCertificates;
+    public Optional<Output<List<String>>> edgeSslCertificates() {
+        return Optional.ofNullable(this.edgeSslCertificates);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="ipv4Addresses")
-      private final @Nullable Output<List<String>> ipv4Addresses;
+    private @Nullable Output<List<String>> ipv4Addresses;
 
-    public Output<List<String>> ipv4Addresses() {
-        return this.ipv4Addresses == null ? Codegen.empty() : this.ipv4Addresses;
+    public Optional<Output<List<String>>> ipv4Addresses() {
+        return Optional.ofNullable(this.ipv4Addresses);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="ipv6Addresses")
-      private final @Nullable Output<List<String>> ipv6Addresses;
+    private @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> ipv6Addresses() {
-        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
+    public Optional<Output<List<String>>> ipv6Addresses() {
+        return Optional.ofNullable(this.ipv6Addresses);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="logConfig")
-      private final @Nullable Output<EdgeCacheServiceLogConfigGetArgs> logConfig;
+    private @Nullable Output<EdgeCacheServiceLogConfigGetArgs> logConfig;
 
-    public Output<EdgeCacheServiceLogConfigGetArgs> logConfig() {
-        return this.logConfig == null ? Codegen.empty() : this.logConfig;
+    public Optional<Output<EdgeCacheServiceLogConfigGetArgs>> logConfig() {
+        return Optional.ofNullable(this.logConfig);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="requireTls")
-      private final @Nullable Output<Boolean> requireTls;
+    private @Nullable Output<Boolean> requireTls;
 
-    public Output<Boolean> requireTls() {
-        return this.requireTls == null ? Codegen.empty() : this.requireTls;
+    public Optional<Output<Boolean>> requireTls() {
+        return Optional.ofNullable(this.requireTls);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="routing")
-      private final @Nullable Output<EdgeCacheServiceRoutingGetArgs> routing;
+    private @Nullable Output<EdgeCacheServiceRoutingGetArgs> routing;
 
-    public Output<EdgeCacheServiceRoutingGetArgs> routing() {
-        return this.routing == null ? Codegen.empty() : this.routing;
+    public Optional<Output<EdgeCacheServiceRoutingGetArgs>> routing() {
+        return Optional.ofNullable(this.routing);
     }
 
     /**
@@ -164,215 +164,180 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sslPolicy")
-      private final @Nullable Output<String> sslPolicy;
+    private @Nullable Output<String> sslPolicy;
 
-    public Output<String> sslPolicy() {
-        return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
+    public Optional<Output<String>> sslPolicy() {
+        return Optional.ofNullable(this.sslPolicy);
     }
 
-    public EdgeCacheServiceState(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disableQuic,
-        @Nullable Output<String> edgeSecurityPolicy,
-        @Nullable Output<List<String>> edgeSslCertificates,
-        @Nullable Output<List<String>> ipv4Addresses,
-        @Nullable Output<List<String>> ipv6Addresses,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<EdgeCacheServiceLogConfigGetArgs> logConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> requireTls,
-        @Nullable Output<EdgeCacheServiceRoutingGetArgs> routing,
-        @Nullable Output<String> sslPolicy) {
-        this.description = description;
-        this.disableQuic = disableQuic;
-        this.edgeSecurityPolicy = edgeSecurityPolicy;
-        this.edgeSslCertificates = edgeSslCertificates;
-        this.ipv4Addresses = ipv4Addresses;
-        this.ipv6Addresses = ipv6Addresses;
-        this.labels = labels;
-        this.logConfig = logConfig;
-        this.name = name;
-        this.project = project;
-        this.requireTls = requireTls;
-        this.routing = routing;
-        this.sslPolicy = sslPolicy;
-    }
+    private EdgeCacheServiceState() {}
 
-    private EdgeCacheServiceState() {
-        this.description = Codegen.empty();
-        this.disableQuic = Codegen.empty();
-        this.edgeSecurityPolicy = Codegen.empty();
-        this.edgeSslCertificates = Codegen.empty();
-        this.ipv4Addresses = Codegen.empty();
-        this.ipv6Addresses = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.logConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requireTls = Codegen.empty();
-        this.routing = Codegen.empty();
-        this.sslPolicy = Codegen.empty();
+    private EdgeCacheServiceState(EdgeCacheServiceState $) {
+        this.description = $.description;
+        this.disableQuic = $.disableQuic;
+        this.edgeSecurityPolicy = $.edgeSecurityPolicy;
+        this.edgeSslCertificates = $.edgeSslCertificates;
+        this.ipv4Addresses = $.ipv4Addresses;
+        this.ipv6Addresses = $.ipv6Addresses;
+        this.labels = $.labels;
+        this.logConfig = $.logConfig;
+        this.name = $.name;
+        this.project = $.project;
+        this.requireTls = $.requireTls;
+        this.routing = $.routing;
+        this.sslPolicy = $.sslPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeCacheServiceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disableQuic;
-        private @Nullable Output<String> edgeSecurityPolicy;
-        private @Nullable Output<List<String>> edgeSslCertificates;
-        private @Nullable Output<List<String>> ipv4Addresses;
-        private @Nullable Output<List<String>> ipv6Addresses;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<EdgeCacheServiceLogConfigGetArgs> logConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> requireTls;
-        private @Nullable Output<EdgeCacheServiceRoutingGetArgs> routing;
-        private @Nullable Output<String> sslPolicy;
+        private EdgeCacheServiceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeCacheServiceState();
         }
 
         public Builder(EdgeCacheServiceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.disableQuic = defaults.disableQuic;
-    	      this.edgeSecurityPolicy = defaults.edgeSecurityPolicy;
-    	      this.edgeSslCertificates = defaults.edgeSslCertificates;
-    	      this.ipv4Addresses = defaults.ipv4Addresses;
-    	      this.ipv6Addresses = defaults.ipv6Addresses;
-    	      this.labels = defaults.labels;
-    	      this.logConfig = defaults.logConfig;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requireTls = defaults.requireTls;
-    	      this.routing = defaults.routing;
-    	      this.sslPolicy = defaults.sslPolicy;
+            $ = new EdgeCacheServiceState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disableQuic(@Nullable Output<Boolean> disableQuic) {
-            this.disableQuic = disableQuic;
+            $.disableQuic = disableQuic;
             return this;
         }
-        public Builder disableQuic(@Nullable Boolean disableQuic) {
-            this.disableQuic = Codegen.ofNullable(disableQuic);
-            return this;
+
+        public Builder disableQuic(Boolean disableQuic) {
+            return disableQuic(Output.of(disableQuic));
         }
+
         public Builder edgeSecurityPolicy(@Nullable Output<String> edgeSecurityPolicy) {
-            this.edgeSecurityPolicy = edgeSecurityPolicy;
+            $.edgeSecurityPolicy = edgeSecurityPolicy;
             return this;
         }
-        public Builder edgeSecurityPolicy(@Nullable String edgeSecurityPolicy) {
-            this.edgeSecurityPolicy = Codegen.ofNullable(edgeSecurityPolicy);
-            return this;
+
+        public Builder edgeSecurityPolicy(String edgeSecurityPolicy) {
+            return edgeSecurityPolicy(Output.of(edgeSecurityPolicy));
         }
+
         public Builder edgeSslCertificates(@Nullable Output<List<String>> edgeSslCertificates) {
-            this.edgeSslCertificates = edgeSslCertificates;
+            $.edgeSslCertificates = edgeSslCertificates;
             return this;
         }
-        public Builder edgeSslCertificates(@Nullable List<String> edgeSslCertificates) {
-            this.edgeSslCertificates = Codegen.ofNullable(edgeSslCertificates);
-            return this;
+
+        public Builder edgeSslCertificates(List<String> edgeSslCertificates) {
+            return edgeSslCertificates(Output.of(edgeSslCertificates));
         }
+
         public Builder edgeSslCertificates(String... edgeSslCertificates) {
             return edgeSslCertificates(List.of(edgeSslCertificates));
         }
+
         public Builder ipv4Addresses(@Nullable Output<List<String>> ipv4Addresses) {
-            this.ipv4Addresses = ipv4Addresses;
+            $.ipv4Addresses = ipv4Addresses;
             return this;
         }
-        public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
-            this.ipv4Addresses = Codegen.ofNullable(ipv4Addresses);
-            return this;
+
+        public Builder ipv4Addresses(List<String> ipv4Addresses) {
+            return ipv4Addresses(Output.of(ipv4Addresses));
         }
+
         public Builder ipv4Addresses(String... ipv4Addresses) {
             return ipv4Addresses(List.of(ipv4Addresses));
         }
+
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
-            this.ipv6Addresses = ipv6Addresses;
+            $.ipv6Addresses = ipv6Addresses;
             return this;
         }
-        public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
-            return this;
+
+        public Builder ipv6Addresses(List<String> ipv6Addresses) {
+            return ipv6Addresses(Output.of(ipv6Addresses));
         }
+
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder logConfig(@Nullable Output<EdgeCacheServiceLogConfigGetArgs> logConfig) {
-            this.logConfig = logConfig;
+            $.logConfig = logConfig;
             return this;
         }
-        public Builder logConfig(@Nullable EdgeCacheServiceLogConfigGetArgs logConfig) {
-            this.logConfig = Codegen.ofNullable(logConfig);
-            return this;
+
+        public Builder logConfig(EdgeCacheServiceLogConfigGetArgs logConfig) {
+            return logConfig(Output.of(logConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requireTls(@Nullable Output<Boolean> requireTls) {
-            this.requireTls = requireTls;
+            $.requireTls = requireTls;
             return this;
         }
-        public Builder requireTls(@Nullable Boolean requireTls) {
-            this.requireTls = Codegen.ofNullable(requireTls);
-            return this;
+
+        public Builder requireTls(Boolean requireTls) {
+            return requireTls(Output.of(requireTls));
         }
+
         public Builder routing(@Nullable Output<EdgeCacheServiceRoutingGetArgs> routing) {
-            this.routing = routing;
+            $.routing = routing;
             return this;
         }
-        public Builder routing(@Nullable EdgeCacheServiceRoutingGetArgs routing) {
-            this.routing = Codegen.ofNullable(routing);
-            return this;
+
+        public Builder routing(EdgeCacheServiceRoutingGetArgs routing) {
+            return routing(Output.of(routing));
         }
+
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
-            this.sslPolicy = sslPolicy;
+            $.sslPolicy = sslPolicy;
             return this;
         }
-        public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Codegen.ofNullable(sslPolicy);
-            return this;
-        }        public EdgeCacheServiceState build() {
-            return new EdgeCacheServiceState(description, disableQuic, edgeSecurityPolicy, edgeSslCertificates, ipv4Addresses, ipv6Addresses, labels, logConfig, name, project, requireTls, routing, sslPolicy);
+
+        public Builder sslPolicy(String sslPolicy) {
+            return sslPolicy(Output.of(sslPolicy));
+        }
+
+        public EdgeCacheServiceState build() {
+            return $;
         }
     }
+
 }

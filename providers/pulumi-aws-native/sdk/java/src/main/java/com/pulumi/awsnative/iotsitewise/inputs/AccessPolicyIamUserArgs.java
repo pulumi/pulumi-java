@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AccessPolicyIamUserArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
-    public AccessPolicyIamUserArgs(@Nullable Output<String> arn) {
-        this.arn = arn;
-    }
+    private AccessPolicyIamUserArgs() {}
 
-    private AccessPolicyIamUserArgs() {
-        this.arn = Codegen.empty();
+    private AccessPolicyIamUserArgs(AccessPolicyIamUserArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyIamUserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
+        private AccessPolicyIamUserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyIamUserArgs();
         }
 
         public Builder(AccessPolicyIamUserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new AccessPolicyIamUserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
-        }        public AccessPolicyIamUserArgs build() {
-            return new AccessPolicyIamUserArgs(arn);
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        public AccessPolicyIamUserArgs build() {
+            return $;
         }
     }
+
 }

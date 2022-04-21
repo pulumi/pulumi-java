@@ -23,10 +23,10 @@ public final class LiveEventEncodingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="encodingType")
-      private final @Nullable String encodingType;
+    private @Nullable String encodingType;
 
     public Optional<String> encodingType() {
-        return this.encodingType == null ? Optional.empty() : Optional.ofNullable(this.encodingType);
+        return Optional.ofNullable(this.encodingType);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LiveEventEncodingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keyFrameInterval")
-      private final @Nullable String keyFrameInterval;
+    private @Nullable String keyFrameInterval;
 
     public Optional<String> keyFrameInterval() {
-        return this.keyFrameInterval == null ? Optional.empty() : Optional.ofNullable(this.keyFrameInterval);
+        return Optional.ofNullable(this.keyFrameInterval);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LiveEventEncodingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="presetName")
-      private final @Nullable String presetName;
+    private @Nullable String presetName;
 
     public Optional<String> presetName() {
-        return this.presetName == null ? Optional.empty() : Optional.ofNullable(this.presetName);
+        return Optional.ofNullable(this.presetName);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class LiveEventEncodingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="stretchMode")
-      private final @Nullable String stretchMode;
+    private @Nullable String stretchMode;
 
     public Optional<String> stretchMode() {
-        return this.stretchMode == null ? Optional.empty() : Optional.ofNullable(this.stretchMode);
+        return Optional.ofNullable(this.stretchMode);
     }
 
-    public LiveEventEncodingResponse(
-        @Nullable String encodingType,
-        @Nullable String keyFrameInterval,
-        @Nullable String presetName,
-        @Nullable String stretchMode) {
-        this.encodingType = encodingType;
-        this.keyFrameInterval = keyFrameInterval;
-        this.presetName = presetName;
-        this.stretchMode = stretchMode;
-    }
+    private LiveEventEncodingResponse() {}
 
-    private LiveEventEncodingResponse() {
-        this.encodingType = null;
-        this.keyFrameInterval = null;
-        this.presetName = null;
-        this.stretchMode = null;
+    private LiveEventEncodingResponse(LiveEventEncodingResponse $) {
+        this.encodingType = $.encodingType;
+        this.keyFrameInterval = $.keyFrameInterval;
+        this.presetName = $.presetName;
+        this.stretchMode = $.stretchMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventEncodingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String encodingType;
-        private @Nullable String keyFrameInterval;
-        private @Nullable String presetName;
-        private @Nullable String stretchMode;
+        private LiveEventEncodingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventEncodingResponse();
         }
 
         public Builder(LiveEventEncodingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encodingType = defaults.encodingType;
-    	      this.keyFrameInterval = defaults.keyFrameInterval;
-    	      this.presetName = defaults.presetName;
-    	      this.stretchMode = defaults.stretchMode;
+            $ = new LiveEventEncodingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encodingType(@Nullable String encodingType) {
-            this.encodingType = encodingType;
+            $.encodingType = encodingType;
             return this;
         }
+
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = keyFrameInterval;
+            $.keyFrameInterval = keyFrameInterval;
             return this;
         }
+
         public Builder presetName(@Nullable String presetName) {
-            this.presetName = presetName;
+            $.presetName = presetName;
             return this;
         }
+
         public Builder stretchMode(@Nullable String stretchMode) {
-            this.stretchMode = stretchMode;
+            $.stretchMode = stretchMode;
             return this;
-        }        public LiveEventEncodingResponse build() {
-            return new LiveEventEncodingResponse(encodingType, keyFrameInterval, presetName, stretchMode);
+        }
+
+        public LiveEventEncodingResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.frauddetector;
 import com.pulumi.awsnative.frauddetector.inputs.EntityTypeTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<EntityTypeTagArgs>> tags;
+    private @Nullable Output<List<EntityTypeTagArgs>> tags;
 
-    public Output<List<EntityTypeTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<EntityTypeTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public EntityTypeArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<List<EntityTypeTagArgs>> tags) {
-        this.description = description;
-        this.name = name;
-        this.tags = tags;
-    }
+    private EntityTypeArgs() {}
 
-    private EntityTypeArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private EntityTypeArgs(EntityTypeArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<EntityTypeTagArgs>> tags;
+        private EntityTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityTypeArgs();
         }
 
         public Builder(EntityTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new EntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<EntityTypeTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<EntityTypeTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<EntityTypeTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(EntityTypeTagArgs... tags) {
             return tags(List.of(tags));
-        }        public EntityTypeArgs build() {
-            return new EntityTypeArgs(description, name, tags);
+        }
+
+        public EntityTypeArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageBootDiskInitializeParamsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,190 +18,167 @@ public final class InstanceFromMachineImageBootDiskArgs extends com.pulumi.resou
     public static final InstanceFromMachineImageBootDiskArgs Empty = new InstanceFromMachineImageBootDiskArgs();
 
     @Import(name="autoDelete")
-      private final @Nullable Output<Boolean> autoDelete;
+    private @Nullable Output<Boolean> autoDelete;
 
-    public Output<Boolean> autoDelete() {
-        return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
+    public Optional<Output<Boolean>> autoDelete() {
+        return Optional.ofNullable(this.autoDelete);
     }
 
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     @Import(name="diskEncryptionKeyRaw")
-      private final @Nullable Output<String> diskEncryptionKeyRaw;
+    private @Nullable Output<String> diskEncryptionKeyRaw;
 
-    public Output<String> diskEncryptionKeyRaw() {
-        return this.diskEncryptionKeyRaw == null ? Codegen.empty() : this.diskEncryptionKeyRaw;
+    public Optional<Output<String>> diskEncryptionKeyRaw() {
+        return Optional.ofNullable(this.diskEncryptionKeyRaw);
     }
 
     @Import(name="diskEncryptionKeySha256")
-      private final @Nullable Output<String> diskEncryptionKeySha256;
+    private @Nullable Output<String> diskEncryptionKeySha256;
 
-    public Output<String> diskEncryptionKeySha256() {
-        return this.diskEncryptionKeySha256 == null ? Codegen.empty() : this.diskEncryptionKeySha256;
+    public Optional<Output<String>> diskEncryptionKeySha256() {
+        return Optional.ofNullable(this.diskEncryptionKeySha256);
     }
 
     @Import(name="initializeParams")
-      private final @Nullable Output<InstanceFromMachineImageBootDiskInitializeParamsArgs> initializeParams;
+    private @Nullable Output<InstanceFromMachineImageBootDiskInitializeParamsArgs> initializeParams;
 
-    public Output<InstanceFromMachineImageBootDiskInitializeParamsArgs> initializeParams() {
-        return this.initializeParams == null ? Codegen.empty() : this.initializeParams;
+    public Optional<Output<InstanceFromMachineImageBootDiskInitializeParamsArgs>> initializeParams() {
+        return Optional.ofNullable(this.initializeParams);
     }
 
     @Import(name="kmsKeySelfLink")
-      private final @Nullable Output<String> kmsKeySelfLink;
+    private @Nullable Output<String> kmsKeySelfLink;
 
-    public Output<String> kmsKeySelfLink() {
-        return this.kmsKeySelfLink == null ? Codegen.empty() : this.kmsKeySelfLink;
+    public Optional<Output<String>> kmsKeySelfLink() {
+        return Optional.ofNullable(this.kmsKeySelfLink);
     }
 
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public InstanceFromMachineImageBootDiskArgs(
-        @Nullable Output<Boolean> autoDelete,
-        @Nullable Output<String> deviceName,
-        @Nullable Output<String> diskEncryptionKeyRaw,
-        @Nullable Output<String> diskEncryptionKeySha256,
-        @Nullable Output<InstanceFromMachineImageBootDiskInitializeParamsArgs> initializeParams,
-        @Nullable Output<String> kmsKeySelfLink,
-        @Nullable Output<String> mode,
-        @Nullable Output<String> source) {
-        this.autoDelete = autoDelete;
-        this.deviceName = deviceName;
-        this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
-        this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
-        this.initializeParams = initializeParams;
-        this.kmsKeySelfLink = kmsKeySelfLink;
-        this.mode = mode;
-        this.source = source;
-    }
+    private InstanceFromMachineImageBootDiskArgs() {}
 
-    private InstanceFromMachineImageBootDiskArgs() {
-        this.autoDelete = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.diskEncryptionKeyRaw = Codegen.empty();
-        this.diskEncryptionKeySha256 = Codegen.empty();
-        this.initializeParams = Codegen.empty();
-        this.kmsKeySelfLink = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.source = Codegen.empty();
+    private InstanceFromMachineImageBootDiskArgs(InstanceFromMachineImageBootDiskArgs $) {
+        this.autoDelete = $.autoDelete;
+        this.deviceName = $.deviceName;
+        this.diskEncryptionKeyRaw = $.diskEncryptionKeyRaw;
+        this.diskEncryptionKeySha256 = $.diskEncryptionKeySha256;
+        this.initializeParams = $.initializeParams;
+        this.kmsKeySelfLink = $.kmsKeySelfLink;
+        this.mode = $.mode;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFromMachineImageBootDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoDelete;
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<String> diskEncryptionKeyRaw;
-        private @Nullable Output<String> diskEncryptionKeySha256;
-        private @Nullable Output<InstanceFromMachineImageBootDiskInitializeParamsArgs> initializeParams;
-        private @Nullable Output<String> kmsKeySelfLink;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<String> source;
+        private InstanceFromMachineImageBootDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFromMachineImageBootDiskArgs();
         }
 
         public Builder(InstanceFromMachineImageBootDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDelete = defaults.autoDelete;
-    	      this.deviceName = defaults.deviceName;
-    	      this.diskEncryptionKeyRaw = defaults.diskEncryptionKeyRaw;
-    	      this.diskEncryptionKeySha256 = defaults.diskEncryptionKeySha256;
-    	      this.initializeParams = defaults.initializeParams;
-    	      this.kmsKeySelfLink = defaults.kmsKeySelfLink;
-    	      this.mode = defaults.mode;
-    	      this.source = defaults.source;
+            $ = new InstanceFromMachineImageBootDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDelete(@Nullable Output<Boolean> autoDelete) {
-            this.autoDelete = autoDelete;
+            $.autoDelete = autoDelete;
             return this;
         }
-        public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Codegen.ofNullable(autoDelete);
-            return this;
+
+        public Builder autoDelete(Boolean autoDelete) {
+            return autoDelete(Output.of(autoDelete));
         }
+
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder diskEncryptionKeyRaw(@Nullable Output<String> diskEncryptionKeyRaw) {
-            this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
+            $.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
             return this;
         }
-        public Builder diskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
-            this.diskEncryptionKeyRaw = Codegen.ofNullable(diskEncryptionKeyRaw);
-            return this;
+
+        public Builder diskEncryptionKeyRaw(String diskEncryptionKeyRaw) {
+            return diskEncryptionKeyRaw(Output.of(diskEncryptionKeyRaw));
         }
+
         public Builder diskEncryptionKeySha256(@Nullable Output<String> diskEncryptionKeySha256) {
-            this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
+            $.diskEncryptionKeySha256 = diskEncryptionKeySha256;
             return this;
         }
-        public Builder diskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
-            this.diskEncryptionKeySha256 = Codegen.ofNullable(diskEncryptionKeySha256);
-            return this;
+
+        public Builder diskEncryptionKeySha256(String diskEncryptionKeySha256) {
+            return diskEncryptionKeySha256(Output.of(diskEncryptionKeySha256));
         }
+
         public Builder initializeParams(@Nullable Output<InstanceFromMachineImageBootDiskInitializeParamsArgs> initializeParams) {
-            this.initializeParams = initializeParams;
+            $.initializeParams = initializeParams;
             return this;
         }
-        public Builder initializeParams(@Nullable InstanceFromMachineImageBootDiskInitializeParamsArgs initializeParams) {
-            this.initializeParams = Codegen.ofNullable(initializeParams);
-            return this;
+
+        public Builder initializeParams(InstanceFromMachineImageBootDiskInitializeParamsArgs initializeParams) {
+            return initializeParams(Output.of(initializeParams));
         }
+
         public Builder kmsKeySelfLink(@Nullable Output<String> kmsKeySelfLink) {
-            this.kmsKeySelfLink = kmsKeySelfLink;
+            $.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
-        public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
-            this.kmsKeySelfLink = Codegen.ofNullable(kmsKeySelfLink);
-            return this;
+
+        public Builder kmsKeySelfLink(String kmsKeySelfLink) {
+            return kmsKeySelfLink(Output.of(kmsKeySelfLink));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public InstanceFromMachineImageBootDiskArgs build() {
-            return new InstanceFromMachineImageBootDiskArgs(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
+
+        public Builder source(String source) {
+            return source(Output.of(source));
+        }
+
+        public InstanceFromMachineImageBootDiskArgs build() {
+            return $;
         }
     }
+
 }

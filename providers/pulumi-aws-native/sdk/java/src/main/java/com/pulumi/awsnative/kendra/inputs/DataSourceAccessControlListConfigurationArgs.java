@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kendra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DataSourceAccessControlListConfigurationArgs extends com.pulu
     public static final DataSourceAccessControlListConfigurationArgs Empty = new DataSourceAccessControlListConfigurationArgs();
 
     @Import(name="keyPath")
-      private final @Nullable Output<String> keyPath;
+    private @Nullable Output<String> keyPath;
 
-    public Output<String> keyPath() {
-        return this.keyPath == null ? Codegen.empty() : this.keyPath;
+    public Optional<Output<String>> keyPath() {
+        return Optional.ofNullable(this.keyPath);
     }
 
-    public DataSourceAccessControlListConfigurationArgs(@Nullable Output<String> keyPath) {
-        this.keyPath = keyPath;
-    }
+    private DataSourceAccessControlListConfigurationArgs() {}
 
-    private DataSourceAccessControlListConfigurationArgs() {
-        this.keyPath = Codegen.empty();
+    private DataSourceAccessControlListConfigurationArgs(DataSourceAccessControlListConfigurationArgs $) {
+        this.keyPath = $.keyPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceAccessControlListConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyPath;
+        private DataSourceAccessControlListConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceAccessControlListConfigurationArgs();
         }
 
         public Builder(DataSourceAccessControlListConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyPath = defaults.keyPath;
+            $ = new DataSourceAccessControlListConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyPath(@Nullable Output<String> keyPath) {
-            this.keyPath = keyPath;
+            $.keyPath = keyPath;
             return this;
         }
-        public Builder keyPath(@Nullable String keyPath) {
-            this.keyPath = Codegen.ofNullable(keyPath);
-            return this;
-        }        public DataSourceAccessControlListConfigurationArgs build() {
-            return new DataSourceAccessControlListConfigurationArgs(keyPath);
+
+        public Builder keyPath(String keyPath) {
+            return keyPath(Output.of(keyPath));
+        }
+
+        public DataSourceAccessControlListConfigurationArgs build() {
+            return $;
         }
     }
+
 }

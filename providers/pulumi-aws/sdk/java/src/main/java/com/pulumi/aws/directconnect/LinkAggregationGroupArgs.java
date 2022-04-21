@@ -5,11 +5,11 @@ package com.pulumi.aws.directconnect;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="connectionId")
-      private final @Nullable Output<String> connectionId;
+    private @Nullable Output<String> connectionId;
 
-    public Output<String> connectionId() {
-        return this.connectionId == null ? Codegen.empty() : this.connectionId;
+    public Optional<Output<String>> connectionId() {
+        return Optional.ofNullable(this.connectionId);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="connectionsBandwidth", required=true)
-      private final Output<String> connectionsBandwidth;
+    private Output<String> connectionsBandwidth;
 
     public Output<String> connectionsBandwidth() {
         return this.connectionsBandwidth;
@@ -44,10 +44,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -66,10 +66,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="providerName")
-      private final @Nullable Output<String> providerName;
+    private @Nullable Output<String> providerName;
 
-    public Output<String> providerName() {
-        return this.providerName == null ? Codegen.empty() : this.providerName;
+    public Optional<Output<String>> providerName() {
+        return Optional.ofNullable(this.providerName);
     }
 
     /**
@@ -88,128 +88,110 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LinkAggregationGroupArgs(
-        @Nullable Output<String> connectionId,
-        Output<String> connectionsBandwidth,
-        @Nullable Output<Boolean> forceDestroy,
-        Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> providerName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.connectionId = connectionId;
-        this.connectionsBandwidth = Objects.requireNonNull(connectionsBandwidth, "expected parameter 'connectionsBandwidth' to be non-null");
-        this.forceDestroy = forceDestroy;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-        this.providerName = providerName;
-        this.tags = tags;
-    }
+    private LinkAggregationGroupArgs() {}
 
-    private LinkAggregationGroupArgs() {
-        this.connectionId = Codegen.empty();
-        this.connectionsBandwidth = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.providerName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LinkAggregationGroupArgs(LinkAggregationGroupArgs $) {
+        this.connectionId = $.connectionId;
+        this.connectionsBandwidth = $.connectionsBandwidth;
+        this.forceDestroy = $.forceDestroy;
+        this.location = $.location;
+        this.name = $.name;
+        this.providerName = $.providerName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkAggregationGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectionId;
-        private Output<String> connectionsBandwidth;
-        private @Nullable Output<Boolean> forceDestroy;
-        private Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> providerName;
-        private @Nullable Output<Map<String,String>> tags;
+        private LinkAggregationGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkAggregationGroupArgs();
         }
 
         public Builder(LinkAggregationGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionId = defaults.connectionId;
-    	      this.connectionsBandwidth = defaults.connectionsBandwidth;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.providerName = defaults.providerName;
-    	      this.tags = defaults.tags;
+            $ = new LinkAggregationGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionId(@Nullable Output<String> connectionId) {
-            this.connectionId = connectionId;
+            $.connectionId = connectionId;
             return this;
         }
-        public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Codegen.ofNullable(connectionId);
-            return this;
+
+        public Builder connectionId(String connectionId) {
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder connectionsBandwidth(Output<String> connectionsBandwidth) {
-            this.connectionsBandwidth = Objects.requireNonNull(connectionsBandwidth);
+            $.connectionsBandwidth = connectionsBandwidth;
             return this;
         }
+
         public Builder connectionsBandwidth(String connectionsBandwidth) {
-            this.connectionsBandwidth = Output.of(Objects.requireNonNull(connectionsBandwidth));
-            return this;
+            return connectionsBandwidth(Output.of(connectionsBandwidth));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder providerName(@Nullable Output<String> providerName) {
-            this.providerName = providerName;
+            $.providerName = providerName;
             return this;
         }
-        public Builder providerName(@Nullable String providerName) {
-            this.providerName = Codegen.ofNullable(providerName);
-            return this;
+
+        public Builder providerName(String providerName) {
+            return providerName(Output.of(providerName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LinkAggregationGroupArgs build() {
-            return new LinkAggregationGroupArgs(connectionId, connectionsBandwidth, forceDestroy, location, name, providerName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LinkAggregationGroupArgs build() {
+            $.connectionsBandwidth = Objects.requireNonNull($.connectionsBandwidth, "expected parameter 'connectionsBandwidth' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

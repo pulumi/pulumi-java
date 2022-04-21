@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs extends com.pulumi.
      * 
      */
     @Import(name="cryptoKeyName", required=true)
-      private final Output<String> cryptoKeyName;
+    private Output<String> cryptoKeyName;
 
     public Output<String> cryptoKeyName() {
         return this.cryptoKeyName;
@@ -34,63 +33,60 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs extends com.pulumi.
      * 
      */
     @Import(name="wrappedKey", required=true)
-      private final Output<String> wrappedKey;
+    private Output<String> wrappedKey;
 
     public Output<String> wrappedKey() {
         return this.wrappedKey;
     }
 
-    public GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs(
-        Output<String> cryptoKeyName,
-        Output<String> wrappedKey) {
-        this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName, "expected parameter 'cryptoKeyName' to be non-null");
-        this.wrappedKey = Objects.requireNonNull(wrappedKey, "expected parameter 'wrappedKey' to be non-null");
-    }
+    private GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs() {}
 
-    private GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs() {
-        this.cryptoKeyName = Codegen.empty();
-        this.wrappedKey = Codegen.empty();
+    private GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs(GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs $) {
+        this.cryptoKeyName = $.cryptoKeyName;
+        this.wrappedKey = $.wrappedKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cryptoKeyName;
-        private Output<String> wrappedKey;
+        private GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs();
         }
 
         public Builder(GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cryptoKeyName = defaults.cryptoKeyName;
-    	      this.wrappedKey = defaults.wrappedKey;
+            $ = new GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cryptoKeyName(Output<String> cryptoKeyName) {
-            this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName);
+            $.cryptoKeyName = cryptoKeyName;
             return this;
         }
+
         public Builder cryptoKeyName(String cryptoKeyName) {
-            this.cryptoKeyName = Output.of(Objects.requireNonNull(cryptoKeyName));
-            return this;
+            return cryptoKeyName(Output.of(cryptoKeyName));
         }
+
         public Builder wrappedKey(Output<String> wrappedKey) {
-            this.wrappedKey = Objects.requireNonNull(wrappedKey);
+            $.wrappedKey = wrappedKey;
             return this;
         }
+
         public Builder wrappedKey(String wrappedKey) {
-            this.wrappedKey = Output.of(Objects.requireNonNull(wrappedKey));
-            return this;
-        }        public GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs build() {
-            return new GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs(cryptoKeyName, wrappedKey);
+            return wrappedKey(Output.of(wrappedKey));
+        }
+
+        public GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs build() {
+            $.cryptoKeyName = Objects.requireNonNull($.cryptoKeyName, "expected parameter 'cryptoKeyName' to be non-null");
+            $.wrappedKey = Objects.requireNonNull($.wrappedKey, "expected parameter 'wrappedKey' to be non-null");
+            return $;
         }
     }
+
 }

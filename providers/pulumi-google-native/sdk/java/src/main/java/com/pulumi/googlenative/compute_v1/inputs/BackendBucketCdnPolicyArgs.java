@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.BackendBucketCdnPolicyCacheMode;
 import com.pulumi.googlenative.compute_v1.inputs.BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs;
 import com.pulumi.googlenative.compute_v1.inputs.BackendBucketCdnPolicyCacheKeyPolicyArgs;
@@ -15,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="bypassCacheOnRequestHeaders")
-      private final @Nullable Output<List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders;
+    private @Nullable Output<List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders;
 
-    public Output<List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders() {
-        return this.bypassCacheOnRequestHeaders == null ? Codegen.empty() : this.bypassCacheOnRequestHeaders;
+    public Optional<Output<List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs>>> bypassCacheOnRequestHeaders() {
+        return Optional.ofNullable(this.bypassCacheOnRequestHeaders);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cacheKeyPolicy")
-      private final @Nullable Output<BackendBucketCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy;
+    private @Nullable Output<BackendBucketCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy;
 
-    public Output<BackendBucketCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy() {
-        return this.cacheKeyPolicy == null ? Codegen.empty() : this.cacheKeyPolicy;
+    public Optional<Output<BackendBucketCdnPolicyCacheKeyPolicyArgs>> cacheKeyPolicy() {
+        return Optional.ofNullable(this.cacheKeyPolicy);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cacheMode")
-      private final @Nullable Output<BackendBucketCdnPolicyCacheMode> cacheMode;
+    private @Nullable Output<BackendBucketCdnPolicyCacheMode> cacheMode;
 
-    public Output<BackendBucketCdnPolicyCacheMode> cacheMode() {
-        return this.cacheMode == null ? Codegen.empty() : this.cacheMode;
+    public Optional<Output<BackendBucketCdnPolicyCacheMode>> cacheMode() {
+        return Optional.ofNullable(this.cacheMode);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clientTtl")
-      private final @Nullable Output<Integer> clientTtl;
+    private @Nullable Output<Integer> clientTtl;
 
-    public Output<Integer> clientTtl() {
-        return this.clientTtl == null ? Codegen.empty() : this.clientTtl;
+    public Optional<Output<Integer>> clientTtl() {
+        return Optional.ofNullable(this.clientTtl);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="defaultTtl")
-      private final @Nullable Output<Integer> defaultTtl;
+    private @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> defaultTtl() {
-        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
+    public Optional<Output<Integer>> defaultTtl() {
+        return Optional.ofNullable(this.defaultTtl);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="maxTtl")
-      private final @Nullable Output<Integer> maxTtl;
+    private @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> maxTtl() {
-        return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
+    public Optional<Output<Integer>> maxTtl() {
+        return Optional.ofNullable(this.maxTtl);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="negativeCaching")
-      private final @Nullable Output<Boolean> negativeCaching;
+    private @Nullable Output<Boolean> negativeCaching;
 
-    public Output<Boolean> negativeCaching() {
-        return this.negativeCaching == null ? Codegen.empty() : this.negativeCaching;
+    public Optional<Output<Boolean>> negativeCaching() {
+        return Optional.ofNullable(this.negativeCaching);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="negativeCachingPolicy")
-      private final @Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy;
+    private @Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy;
 
-    public Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy() {
-        return this.negativeCachingPolicy == null ? Codegen.empty() : this.negativeCachingPolicy;
+    public Optional<Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>>> negativeCachingPolicy() {
+        return Optional.ofNullable(this.negativeCachingPolicy);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="requestCoalescing")
-      private final @Nullable Output<Boolean> requestCoalescing;
+    private @Nullable Output<Boolean> requestCoalescing;
 
-    public Output<Boolean> requestCoalescing() {
-        return this.requestCoalescing == null ? Codegen.empty() : this.requestCoalescing;
+    public Optional<Output<Boolean>> requestCoalescing() {
+        return Optional.ofNullable(this.requestCoalescing);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="serveWhileStale")
-      private final @Nullable Output<Integer> serveWhileStale;
+    private @Nullable Output<Integer> serveWhileStale;
 
-    public Output<Integer> serveWhileStale() {
-        return this.serveWhileStale == null ? Codegen.empty() : this.serveWhileStale;
+    public Optional<Output<Integer>> serveWhileStale() {
+        return Optional.ofNullable(this.serveWhileStale);
     }
 
     /**
@@ -141,186 +141,156 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="signedUrlCacheMaxAgeSec")
-      private final @Nullable Output<String> signedUrlCacheMaxAgeSec;
+    private @Nullable Output<String> signedUrlCacheMaxAgeSec;
 
-    public Output<String> signedUrlCacheMaxAgeSec() {
-        return this.signedUrlCacheMaxAgeSec == null ? Codegen.empty() : this.signedUrlCacheMaxAgeSec;
+    public Optional<Output<String>> signedUrlCacheMaxAgeSec() {
+        return Optional.ofNullable(this.signedUrlCacheMaxAgeSec);
     }
 
-    public BackendBucketCdnPolicyArgs(
-        @Nullable Output<List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders,
-        @Nullable Output<BackendBucketCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy,
-        @Nullable Output<BackendBucketCdnPolicyCacheMode> cacheMode,
-        @Nullable Output<Integer> clientTtl,
-        @Nullable Output<Integer> defaultTtl,
-        @Nullable Output<Integer> maxTtl,
-        @Nullable Output<Boolean> negativeCaching,
-        @Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy,
-        @Nullable Output<Boolean> requestCoalescing,
-        @Nullable Output<Integer> serveWhileStale,
-        @Nullable Output<String> signedUrlCacheMaxAgeSec) {
-        this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
-        this.cacheKeyPolicy = cacheKeyPolicy;
-        this.cacheMode = cacheMode;
-        this.clientTtl = clientTtl;
-        this.defaultTtl = defaultTtl;
-        this.maxTtl = maxTtl;
-        this.negativeCaching = negativeCaching;
-        this.negativeCachingPolicy = negativeCachingPolicy;
-        this.requestCoalescing = requestCoalescing;
-        this.serveWhileStale = serveWhileStale;
-        this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
-    }
+    private BackendBucketCdnPolicyArgs() {}
 
-    private BackendBucketCdnPolicyArgs() {
-        this.bypassCacheOnRequestHeaders = Codegen.empty();
-        this.cacheKeyPolicy = Codegen.empty();
-        this.cacheMode = Codegen.empty();
-        this.clientTtl = Codegen.empty();
-        this.defaultTtl = Codegen.empty();
-        this.maxTtl = Codegen.empty();
-        this.negativeCaching = Codegen.empty();
-        this.negativeCachingPolicy = Codegen.empty();
-        this.requestCoalescing = Codegen.empty();
-        this.serveWhileStale = Codegen.empty();
-        this.signedUrlCacheMaxAgeSec = Codegen.empty();
+    private BackendBucketCdnPolicyArgs(BackendBucketCdnPolicyArgs $) {
+        this.bypassCacheOnRequestHeaders = $.bypassCacheOnRequestHeaders;
+        this.cacheKeyPolicy = $.cacheKeyPolicy;
+        this.cacheMode = $.cacheMode;
+        this.clientTtl = $.clientTtl;
+        this.defaultTtl = $.defaultTtl;
+        this.maxTtl = $.maxTtl;
+        this.negativeCaching = $.negativeCaching;
+        this.negativeCachingPolicy = $.negativeCachingPolicy;
+        this.requestCoalescing = $.requestCoalescing;
+        this.serveWhileStale = $.serveWhileStale;
+        this.signedUrlCacheMaxAgeSec = $.signedUrlCacheMaxAgeSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendBucketCdnPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders;
-        private @Nullable Output<BackendBucketCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy;
-        private @Nullable Output<BackendBucketCdnPolicyCacheMode> cacheMode;
-        private @Nullable Output<Integer> clientTtl;
-        private @Nullable Output<Integer> defaultTtl;
-        private @Nullable Output<Integer> maxTtl;
-        private @Nullable Output<Boolean> negativeCaching;
-        private @Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy;
-        private @Nullable Output<Boolean> requestCoalescing;
-        private @Nullable Output<Integer> serveWhileStale;
-        private @Nullable Output<String> signedUrlCacheMaxAgeSec;
+        private BackendBucketCdnPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendBucketCdnPolicyArgs();
         }
 
         public Builder(BackendBucketCdnPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bypassCacheOnRequestHeaders = defaults.bypassCacheOnRequestHeaders;
-    	      this.cacheKeyPolicy = defaults.cacheKeyPolicy;
-    	      this.cacheMode = defaults.cacheMode;
-    	      this.clientTtl = defaults.clientTtl;
-    	      this.defaultTtl = defaults.defaultTtl;
-    	      this.maxTtl = defaults.maxTtl;
-    	      this.negativeCaching = defaults.negativeCaching;
-    	      this.negativeCachingPolicy = defaults.negativeCachingPolicy;
-    	      this.requestCoalescing = defaults.requestCoalescing;
-    	      this.serveWhileStale = defaults.serveWhileStale;
-    	      this.signedUrlCacheMaxAgeSec = defaults.signedUrlCacheMaxAgeSec;
+            $ = new BackendBucketCdnPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bypassCacheOnRequestHeaders(@Nullable Output<List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders) {
-            this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
+            $.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
             return this;
         }
-        public Builder bypassCacheOnRequestHeaders(@Nullable List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs> bypassCacheOnRequestHeaders) {
-            this.bypassCacheOnRequestHeaders = Codegen.ofNullable(bypassCacheOnRequestHeaders);
-            return this;
+
+        public Builder bypassCacheOnRequestHeaders(List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs> bypassCacheOnRequestHeaders) {
+            return bypassCacheOnRequestHeaders(Output.of(bypassCacheOnRequestHeaders));
         }
+
         public Builder bypassCacheOnRequestHeaders(BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs... bypassCacheOnRequestHeaders) {
             return bypassCacheOnRequestHeaders(List.of(bypassCacheOnRequestHeaders));
         }
+
         public Builder cacheKeyPolicy(@Nullable Output<BackendBucketCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy) {
-            this.cacheKeyPolicy = cacheKeyPolicy;
+            $.cacheKeyPolicy = cacheKeyPolicy;
             return this;
         }
-        public Builder cacheKeyPolicy(@Nullable BackendBucketCdnPolicyCacheKeyPolicyArgs cacheKeyPolicy) {
-            this.cacheKeyPolicy = Codegen.ofNullable(cacheKeyPolicy);
-            return this;
+
+        public Builder cacheKeyPolicy(BackendBucketCdnPolicyCacheKeyPolicyArgs cacheKeyPolicy) {
+            return cacheKeyPolicy(Output.of(cacheKeyPolicy));
         }
+
         public Builder cacheMode(@Nullable Output<BackendBucketCdnPolicyCacheMode> cacheMode) {
-            this.cacheMode = cacheMode;
+            $.cacheMode = cacheMode;
             return this;
         }
-        public Builder cacheMode(@Nullable BackendBucketCdnPolicyCacheMode cacheMode) {
-            this.cacheMode = Codegen.ofNullable(cacheMode);
-            return this;
+
+        public Builder cacheMode(BackendBucketCdnPolicyCacheMode cacheMode) {
+            return cacheMode(Output.of(cacheMode));
         }
+
         public Builder clientTtl(@Nullable Output<Integer> clientTtl) {
-            this.clientTtl = clientTtl;
+            $.clientTtl = clientTtl;
             return this;
         }
-        public Builder clientTtl(@Nullable Integer clientTtl) {
-            this.clientTtl = Codegen.ofNullable(clientTtl);
-            return this;
+
+        public Builder clientTtl(Integer clientTtl) {
+            return clientTtl(Output.of(clientTtl));
         }
+
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
-            this.defaultTtl = defaultTtl;
+            $.defaultTtl = defaultTtl;
             return this;
         }
-        public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Codegen.ofNullable(defaultTtl);
-            return this;
+
+        public Builder defaultTtl(Integer defaultTtl) {
+            return defaultTtl(Output.of(defaultTtl));
         }
+
         public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
-            this.maxTtl = maxTtl;
+            $.maxTtl = maxTtl;
             return this;
         }
-        public Builder maxTtl(@Nullable Integer maxTtl) {
-            this.maxTtl = Codegen.ofNullable(maxTtl);
-            return this;
+
+        public Builder maxTtl(Integer maxTtl) {
+            return maxTtl(Output.of(maxTtl));
         }
+
         public Builder negativeCaching(@Nullable Output<Boolean> negativeCaching) {
-            this.negativeCaching = negativeCaching;
+            $.negativeCaching = negativeCaching;
             return this;
         }
-        public Builder negativeCaching(@Nullable Boolean negativeCaching) {
-            this.negativeCaching = Codegen.ofNullable(negativeCaching);
-            return this;
+
+        public Builder negativeCaching(Boolean negativeCaching) {
+            return negativeCaching(Output.of(negativeCaching));
         }
+
         public Builder negativeCachingPolicy(@Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy) {
-            this.negativeCachingPolicy = negativeCachingPolicy;
+            $.negativeCachingPolicy = negativeCachingPolicy;
             return this;
         }
-        public Builder negativeCachingPolicy(@Nullable List<BackendBucketCdnPolicyNegativeCachingPolicyArgs> negativeCachingPolicy) {
-            this.negativeCachingPolicy = Codegen.ofNullable(negativeCachingPolicy);
-            return this;
+
+        public Builder negativeCachingPolicy(List<BackendBucketCdnPolicyNegativeCachingPolicyArgs> negativeCachingPolicy) {
+            return negativeCachingPolicy(Output.of(negativeCachingPolicy));
         }
+
         public Builder negativeCachingPolicy(BackendBucketCdnPolicyNegativeCachingPolicyArgs... negativeCachingPolicy) {
             return negativeCachingPolicy(List.of(negativeCachingPolicy));
         }
+
         public Builder requestCoalescing(@Nullable Output<Boolean> requestCoalescing) {
-            this.requestCoalescing = requestCoalescing;
+            $.requestCoalescing = requestCoalescing;
             return this;
         }
-        public Builder requestCoalescing(@Nullable Boolean requestCoalescing) {
-            this.requestCoalescing = Codegen.ofNullable(requestCoalescing);
-            return this;
+
+        public Builder requestCoalescing(Boolean requestCoalescing) {
+            return requestCoalescing(Output.of(requestCoalescing));
         }
+
         public Builder serveWhileStale(@Nullable Output<Integer> serveWhileStale) {
-            this.serveWhileStale = serveWhileStale;
+            $.serveWhileStale = serveWhileStale;
             return this;
         }
-        public Builder serveWhileStale(@Nullable Integer serveWhileStale) {
-            this.serveWhileStale = Codegen.ofNullable(serveWhileStale);
-            return this;
+
+        public Builder serveWhileStale(Integer serveWhileStale) {
+            return serveWhileStale(Output.of(serveWhileStale));
         }
+
         public Builder signedUrlCacheMaxAgeSec(@Nullable Output<String> signedUrlCacheMaxAgeSec) {
-            this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
+            $.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
         }
-        public Builder signedUrlCacheMaxAgeSec(@Nullable String signedUrlCacheMaxAgeSec) {
-            this.signedUrlCacheMaxAgeSec = Codegen.ofNullable(signedUrlCacheMaxAgeSec);
-            return this;
-        }        public BackendBucketCdnPolicyArgs build() {
-            return new BackendBucketCdnPolicyArgs(bypassCacheOnRequestHeaders, cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicy, requestCoalescing, serveWhileStale, signedUrlCacheMaxAgeSec);
+
+        public Builder signedUrlCacheMaxAgeSec(String signedUrlCacheMaxAgeSec) {
+            return signedUrlCacheMaxAgeSec(Output.of(signedUrlCacheMaxAgeSec));
+        }
+
+        public BackendBucketCdnPolicyArgs build() {
+            return $;
         }
     }
+
 }

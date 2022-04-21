@@ -5,11 +5,11 @@ package com.pulumi.gcp.bigtable;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigtable.inputs.TableColumnFamilyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columnFamilies")
-      private final @Nullable Output<List<TableColumnFamilyArgs>> columnFamilies;
+    private @Nullable Output<List<TableColumnFamilyArgs>> columnFamilies;
 
-    public Output<List<TableColumnFamilyArgs>> columnFamilies() {
-        return this.columnFamilies == null ? Codegen.empty() : this.columnFamilies;
+    public Optional<Output<List<TableColumnFamilyArgs>>> columnFamilies() {
+        return Optional.ofNullable(this.columnFamilies);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceName", required=true)
-      private final Output<String> instanceName;
+    private Output<String> instanceName;
 
     public Output<String> instanceName() {
         return this.instanceName;
@@ -44,10 +44,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -69,108 +69,97 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="splitKeys")
-      private final @Nullable Output<List<String>> splitKeys;
+    private @Nullable Output<List<String>> splitKeys;
 
-    public Output<List<String>> splitKeys() {
-        return this.splitKeys == null ? Codegen.empty() : this.splitKeys;
+    public Optional<Output<List<String>>> splitKeys() {
+        return Optional.ofNullable(this.splitKeys);
     }
 
-    public TableArgs(
-        @Nullable Output<List<TableColumnFamilyArgs>> columnFamilies,
-        Output<String> instanceName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<String>> splitKeys) {
-        this.columnFamilies = columnFamilies;
-        this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.splitKeys = splitKeys;
-    }
+    private TableArgs() {}
 
-    private TableArgs() {
-        this.columnFamilies = Codegen.empty();
-        this.instanceName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.splitKeys = Codegen.empty();
+    private TableArgs(TableArgs $) {
+        this.columnFamilies = $.columnFamilies;
+        this.instanceName = $.instanceName;
+        this.name = $.name;
+        this.project = $.project;
+        this.splitKeys = $.splitKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TableColumnFamilyArgs>> columnFamilies;
-        private Output<String> instanceName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<String>> splitKeys;
+        private TableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableArgs();
         }
 
         public Builder(TableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnFamilies = defaults.columnFamilies;
-    	      this.instanceName = defaults.instanceName;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.splitKeys = defaults.splitKeys;
+            $ = new TableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnFamilies(@Nullable Output<List<TableColumnFamilyArgs>> columnFamilies) {
-            this.columnFamilies = columnFamilies;
+            $.columnFamilies = columnFamilies;
             return this;
         }
-        public Builder columnFamilies(@Nullable List<TableColumnFamilyArgs> columnFamilies) {
-            this.columnFamilies = Codegen.ofNullable(columnFamilies);
-            return this;
+
+        public Builder columnFamilies(List<TableColumnFamilyArgs> columnFamilies) {
+            return columnFamilies(Output.of(columnFamilies));
         }
+
         public Builder columnFamilies(TableColumnFamilyArgs... columnFamilies) {
             return columnFamilies(List.of(columnFamilies));
         }
+
         public Builder instanceName(Output<String> instanceName) {
-            this.instanceName = Objects.requireNonNull(instanceName);
+            $.instanceName = instanceName;
             return this;
         }
+
         public Builder instanceName(String instanceName) {
-            this.instanceName = Output.of(Objects.requireNonNull(instanceName));
-            return this;
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder splitKeys(@Nullable Output<List<String>> splitKeys) {
-            this.splitKeys = splitKeys;
+            $.splitKeys = splitKeys;
             return this;
         }
-        public Builder splitKeys(@Nullable List<String> splitKeys) {
-            this.splitKeys = Codegen.ofNullable(splitKeys);
-            return this;
+
+        public Builder splitKeys(List<String> splitKeys) {
+            return splitKeys(Output.of(splitKeys));
         }
+
         public Builder splitKeys(String... splitKeys) {
             return splitKeys(List.of(splitKeys));
-        }        public TableArgs build() {
-            return new TableArgs(columnFamilies, instanceName, name, project, splitKeys);
+        }
+
+        public TableArgs build() {
+            $.instanceName = Objects.requireNonNull($.instanceName, "expected parameter 'instanceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class MetricRulesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filteringTags")
-      private final @Nullable List<FilteringTagResponse> filteringTags;
+    private @Nullable List<FilteringTagResponse> filteringTags;
 
-    public List<FilteringTagResponse> filteringTags() {
-        return this.filteringTags == null ? List.of() : this.filteringTags;
+    public Optional<List<FilteringTagResponse>> filteringTags() {
+        return Optional.ofNullable(this.filteringTags);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class MetricRulesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public MetricRulesResponse(
-        @Nullable List<FilteringTagResponse> filteringTags,
-        @Nullable String subscriptionId) {
-        this.filteringTags = filteringTags;
-        this.subscriptionId = subscriptionId;
-    }
+    private MetricRulesResponse() {}
 
-    private MetricRulesResponse() {
-        this.filteringTags = List.of();
-        this.subscriptionId = null;
+    private MetricRulesResponse(MetricRulesResponse $) {
+        this.filteringTags = $.filteringTags;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricRulesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<FilteringTagResponse> filteringTags;
-        private @Nullable String subscriptionId;
+        private MetricRulesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricRulesResponse();
         }
 
         public Builder(MetricRulesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filteringTags = defaults.filteringTags;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new MetricRulesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
-            this.filteringTags = filteringTags;
+            $.filteringTags = filteringTags;
             return this;
         }
+
         public Builder filteringTags(FilteringTagResponse... filteringTags) {
             return filteringTags(List.of(filteringTags));
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public MetricRulesResponse build() {
-            return new MetricRulesResponse(filteringTags, subscriptionId);
+        }
+
+        public MetricRulesResponse build() {
+            return $;
         }
     }
+
 }

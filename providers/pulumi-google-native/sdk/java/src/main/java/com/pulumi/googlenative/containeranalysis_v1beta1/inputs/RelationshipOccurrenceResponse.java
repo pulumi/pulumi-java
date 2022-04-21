@@ -21,7 +21,7 @@ public final class RelationshipOccurrenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="comment", required=true)
-      private final String comment;
+    private String comment;
 
     public String comment() {
         return this.comment;
@@ -32,7 +32,7 @@ public final class RelationshipOccurrenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
@@ -43,7 +43,7 @@ public final class RelationshipOccurrenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="target", required=true)
-      private final String target;
+    private String target;
 
     public String target() {
         return this.target;
@@ -54,73 +54,66 @@ public final class RelationshipOccurrenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RelationshipOccurrenceResponse(
-        String comment,
-        String source,
-        String target,
-        String type) {
-        this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RelationshipOccurrenceResponse() {}
 
-    private RelationshipOccurrenceResponse() {
-        this.comment = null;
-        this.source = null;
-        this.target = null;
-        this.type = null;
+    private RelationshipOccurrenceResponse(RelationshipOccurrenceResponse $) {
+        this.comment = $.comment;
+        this.source = $.source;
+        this.target = $.target;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String comment;
-        private String source;
-        private String target;
-        private String type;
+        private RelationshipOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipOccurrenceResponse();
         }
 
         public Builder(RelationshipOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.source = defaults.source;
-    	      this.target = defaults.target;
-    	      this.type = defaults.type;
+            $ = new RelationshipOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(String comment) {
-            this.comment = Objects.requireNonNull(comment);
+            $.comment = comment;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RelationshipOccurrenceResponse build() {
-            return new RelationshipOccurrenceResponse(comment, source, target, type);
+        }
+
+        public RelationshipOccurrenceResponse build() {
+            $.comment = Objects.requireNonNull($.comment, "expected parameter 'comment' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class ListSaasResourceAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
     }
 
-    public ListSaasResourceAccessTokenArgs(String resourceId) {
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private ListSaasResourceAccessTokenArgs() {}
 
-    private ListSaasResourceAccessTokenArgs() {
-        this.resourceId = null;
+    private ListSaasResourceAccessTokenArgs(ListSaasResourceAccessTokenArgs $) {
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListSaasResourceAccessTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceId;
+        private ListSaasResourceAccessTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListSaasResourceAccessTokenArgs();
         }
 
         public Builder(ListSaasResourceAccessTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
+            $ = new ListSaasResourceAccessTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
-        }        public ListSaasResourceAccessTokenArgs build() {
-            return new ListSaasResourceAccessTokenArgs(resourceId);
+        }
+
+        public ListSaasResourceAccessTokenArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

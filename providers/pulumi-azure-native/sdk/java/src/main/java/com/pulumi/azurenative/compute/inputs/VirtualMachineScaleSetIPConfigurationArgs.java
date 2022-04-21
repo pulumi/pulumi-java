@@ -10,11 +10,11 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetPublicIPAddre
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="applicationGatewayBackendAddressPools")
-      private final @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
+    private @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
 
-    public Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools() {
-        return this.applicationGatewayBackendAddressPools == null ? Codegen.empty() : this.applicationGatewayBackendAddressPools;
+    public Optional<Output<List<SubResourceArgs>>> applicationGatewayBackendAddressPools() {
+        return Optional.ofNullable(this.applicationGatewayBackendAddressPools);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="applicationSecurityGroups")
-      private final @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups;
+    private @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups;
 
-    public Output<List<SubResourceArgs>> applicationSecurityGroups() {
-        return this.applicationSecurityGroups == null ? Codegen.empty() : this.applicationSecurityGroups;
+    public Optional<Output<List<SubResourceArgs>>> applicationSecurityGroups() {
+        return Optional.ofNullable(this.applicationSecurityGroups);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="loadBalancerBackendAddressPools")
-      private final @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools;
+    private @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools;
 
-    public Output<List<SubResourceArgs>> loadBalancerBackendAddressPools() {
-        return this.loadBalancerBackendAddressPools == null ? Codegen.empty() : this.loadBalancerBackendAddressPools;
+    public Optional<Output<List<SubResourceArgs>>> loadBalancerBackendAddressPools() {
+        return Optional.ofNullable(this.loadBalancerBackendAddressPools);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="loadBalancerInboundNatPools")
-      private final @Nullable Output<List<SubResourceArgs>> loadBalancerInboundNatPools;
+    private @Nullable Output<List<SubResourceArgs>> loadBalancerInboundNatPools;
 
-    public Output<List<SubResourceArgs>> loadBalancerInboundNatPools() {
-        return this.loadBalancerInboundNatPools == null ? Codegen.empty() : this.loadBalancerInboundNatPools;
+    public Optional<Output<List<SubResourceArgs>>> loadBalancerInboundNatPools() {
+        return Optional.ofNullable(this.loadBalancerInboundNatPools);
     }
 
     /**
@@ -86,7 +86,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -97,10 +97,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="primary")
-      private final @Nullable Output<Boolean> primary;
+    private @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> primary() {
-        return this.primary == null ? Codegen.empty() : this.primary;
+    public Optional<Output<Boolean>> primary() {
+        return Optional.ofNullable(this.primary);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="privateIPAddressVersion")
-      private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
+    private @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
 
-    public Output<Either<String,IPVersion>> privateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Codegen.empty() : this.privateIPAddressVersion;
+    public Optional<Output<Either<String,IPVersion>>> privateIPAddressVersion() {
+        return Optional.ofNullable(this.privateIPAddressVersion);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="publicIPAddressConfiguration")
-      private final @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+    private @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
-    public Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration() {
-        return this.publicIPAddressConfiguration == null ? Codegen.empty() : this.publicIPAddressConfiguration;
+    public Optional<Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs>> publicIPAddressConfiguration() {
+        return Optional.ofNullable(this.publicIPAddressConfiguration);
     }
 
     /**
@@ -130,179 +130,155 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<ApiEntityReferenceArgs> subnet;
+    private @Nullable Output<ApiEntityReferenceArgs> subnet;
 
-    public Output<ApiEntityReferenceArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<ApiEntityReferenceArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
-    public VirtualMachineScaleSetIPConfigurationArgs(
-        @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools,
-        @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups,
-        @Nullable Output<String> id,
-        @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools,
-        @Nullable Output<List<SubResourceArgs>> loadBalancerInboundNatPools,
-        Output<String> name,
-        @Nullable Output<Boolean> primary,
-        @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion,
-        @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration,
-        @Nullable Output<ApiEntityReferenceArgs> subnet) {
-        this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
-        this.applicationSecurityGroups = applicationSecurityGroups;
-        this.id = id;
-        this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
-        this.loadBalancerInboundNatPools = loadBalancerInboundNatPools;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.primary = primary;
-        this.privateIPAddressVersion = privateIPAddressVersion;
-        this.publicIPAddressConfiguration = publicIPAddressConfiguration;
-        this.subnet = subnet;
-    }
+    private VirtualMachineScaleSetIPConfigurationArgs() {}
 
-    private VirtualMachineScaleSetIPConfigurationArgs() {
-        this.applicationGatewayBackendAddressPools = Codegen.empty();
-        this.applicationSecurityGroups = Codegen.empty();
-        this.id = Codegen.empty();
-        this.loadBalancerBackendAddressPools = Codegen.empty();
-        this.loadBalancerInboundNatPools = Codegen.empty();
-        this.name = Codegen.empty();
-        this.primary = Codegen.empty();
-        this.privateIPAddressVersion = Codegen.empty();
-        this.publicIPAddressConfiguration = Codegen.empty();
-        this.subnet = Codegen.empty();
+    private VirtualMachineScaleSetIPConfigurationArgs(VirtualMachineScaleSetIPConfigurationArgs $) {
+        this.applicationGatewayBackendAddressPools = $.applicationGatewayBackendAddressPools;
+        this.applicationSecurityGroups = $.applicationSecurityGroups;
+        this.id = $.id;
+        this.loadBalancerBackendAddressPools = $.loadBalancerBackendAddressPools;
+        this.loadBalancerInboundNatPools = $.loadBalancerInboundNatPools;
+        this.name = $.name;
+        this.primary = $.primary;
+        this.privateIPAddressVersion = $.privateIPAddressVersion;
+        this.publicIPAddressConfiguration = $.publicIPAddressConfiguration;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetIPConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
-        private @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools;
-        private @Nullable Output<List<SubResourceArgs>> loadBalancerInboundNatPools;
-        private Output<String> name;
-        private @Nullable Output<Boolean> primary;
-        private @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
-        private @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
-        private @Nullable Output<ApiEntityReferenceArgs> subnet;
+        private VirtualMachineScaleSetIPConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetIPConfigurationArgs();
         }
 
         public Builder(VirtualMachineScaleSetIPConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationGatewayBackendAddressPools = defaults.applicationGatewayBackendAddressPools;
-    	      this.applicationSecurityGroups = defaults.applicationSecurityGroups;
-    	      this.id = defaults.id;
-    	      this.loadBalancerBackendAddressPools = defaults.loadBalancerBackendAddressPools;
-    	      this.loadBalancerInboundNatPools = defaults.loadBalancerInboundNatPools;
-    	      this.name = defaults.name;
-    	      this.primary = defaults.primary;
-    	      this.privateIPAddressVersion = defaults.privateIPAddressVersion;
-    	      this.publicIPAddressConfiguration = defaults.publicIPAddressConfiguration;
-    	      this.subnet = defaults.subnet;
+            $ = new VirtualMachineScaleSetIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationGatewayBackendAddressPools(@Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools) {
-            this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
+            $.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
-        public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceArgs> applicationGatewayBackendAddressPools) {
-            this.applicationGatewayBackendAddressPools = Codegen.ofNullable(applicationGatewayBackendAddressPools);
-            return this;
+
+        public Builder applicationGatewayBackendAddressPools(List<SubResourceArgs> applicationGatewayBackendAddressPools) {
+            return applicationGatewayBackendAddressPools(Output.of(applicationGatewayBackendAddressPools));
         }
+
         public Builder applicationGatewayBackendAddressPools(SubResourceArgs... applicationGatewayBackendAddressPools) {
             return applicationGatewayBackendAddressPools(List.of(applicationGatewayBackendAddressPools));
         }
+
         public Builder applicationSecurityGroups(@Nullable Output<List<SubResourceArgs>> applicationSecurityGroups) {
-            this.applicationSecurityGroups = applicationSecurityGroups;
+            $.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
-        public Builder applicationSecurityGroups(@Nullable List<SubResourceArgs> applicationSecurityGroups) {
-            this.applicationSecurityGroups = Codegen.ofNullable(applicationSecurityGroups);
-            return this;
+
+        public Builder applicationSecurityGroups(List<SubResourceArgs> applicationSecurityGroups) {
+            return applicationSecurityGroups(Output.of(applicationSecurityGroups));
         }
+
         public Builder applicationSecurityGroups(SubResourceArgs... applicationSecurityGroups) {
             return applicationSecurityGroups(List.of(applicationSecurityGroups));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder loadBalancerBackendAddressPools(@Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
+            $.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
-        public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceArgs> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = Codegen.ofNullable(loadBalancerBackendAddressPools);
-            return this;
+
+        public Builder loadBalancerBackendAddressPools(List<SubResourceArgs> loadBalancerBackendAddressPools) {
+            return loadBalancerBackendAddressPools(Output.of(loadBalancerBackendAddressPools));
         }
+
         public Builder loadBalancerBackendAddressPools(SubResourceArgs... loadBalancerBackendAddressPools) {
             return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
         }
+
         public Builder loadBalancerInboundNatPools(@Nullable Output<List<SubResourceArgs>> loadBalancerInboundNatPools) {
-            this.loadBalancerInboundNatPools = loadBalancerInboundNatPools;
+            $.loadBalancerInboundNatPools = loadBalancerInboundNatPools;
             return this;
         }
-        public Builder loadBalancerInboundNatPools(@Nullable List<SubResourceArgs> loadBalancerInboundNatPools) {
-            this.loadBalancerInboundNatPools = Codegen.ofNullable(loadBalancerInboundNatPools);
-            return this;
+
+        public Builder loadBalancerInboundNatPools(List<SubResourceArgs> loadBalancerInboundNatPools) {
+            return loadBalancerInboundNatPools(Output.of(loadBalancerInboundNatPools));
         }
+
         public Builder loadBalancerInboundNatPools(SubResourceArgs... loadBalancerInboundNatPools) {
             return loadBalancerInboundNatPools(List.of(loadBalancerInboundNatPools));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder primary(@Nullable Output<Boolean> primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
-        public Builder primary(@Nullable Boolean primary) {
-            this.primary = Codegen.ofNullable(primary);
-            return this;
+
+        public Builder primary(Boolean primary) {
+            return primary(Output.of(primary));
         }
+
         public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersion>> privateIPAddressVersion) {
-            this.privateIPAddressVersion = privateIPAddressVersion;
+            $.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
-        public Builder privateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
-            this.privateIPAddressVersion = Codegen.ofNullable(privateIPAddressVersion);
-            return this;
+
+        public Builder privateIPAddressVersion(Either<String,IPVersion> privateIPAddressVersion) {
+            return privateIPAddressVersion(Output.of(privateIPAddressVersion));
         }
+
         public Builder publicIPAddressConfiguration(@Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = publicIPAddressConfiguration;
+            $.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
-        public Builder publicIPAddressConfiguration(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = Codegen.ofNullable(publicIPAddressConfiguration);
-            return this;
+
+        public Builder publicIPAddressConfiguration(VirtualMachineScaleSetPublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
+            return publicIPAddressConfiguration(Output.of(publicIPAddressConfiguration));
         }
+
         public Builder subnet(@Nullable Output<ApiEntityReferenceArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable ApiEntityReferenceArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
-        }        public VirtualMachineScaleSetIPConfigurationArgs build() {
-            return new VirtualMachineScaleSetIPConfigurationArgs(applicationGatewayBackendAddressPools, applicationSecurityGroups, id, loadBalancerBackendAddressPools, loadBalancerInboundNatPools, name, primary, privateIPAddressVersion, publicIPAddressConfiguration, subnet);
+
+        public Builder subnet(ApiEntityReferenceArgs subnet) {
+            return subnet(Output.of(subnet));
+        }
+
+        public VirtualMachineScaleSetIPConfigurationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

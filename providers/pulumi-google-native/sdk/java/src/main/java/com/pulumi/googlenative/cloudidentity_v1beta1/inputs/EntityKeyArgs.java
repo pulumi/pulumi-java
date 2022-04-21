@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EntityKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class EntityKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
-    public EntityKeyArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> namespace) {
-        this.id = id;
-        this.namespace = namespace;
-    }
+    private EntityKeyArgs() {}
 
-    private EntityKeyArgs() {
-        this.id = Codegen.empty();
-        this.namespace = Codegen.empty();
+    private EntityKeyArgs(EntityKeyArgs $) {
+        this.id = $.id;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> namespace;
+        private EntityKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityKeyArgs();
         }
 
         public Builder(EntityKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.namespace = defaults.namespace;
+            $ = new EntityKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
-        }        public EntityKeyArgs build() {
-            return new EntityKeyArgs(id, namespace);
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        public EntityKeyArgs build() {
+            return $;
         }
     }
+
 }

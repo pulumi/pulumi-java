@@ -5,10 +5,10 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs(@Nullable Output<List<String>> values) {
-        this.values = values;
-    }
+    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs() {}
 
-    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs() {
-        this.values = Codegen.empty();
+    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs(GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> values;
+        private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs();
         }
 
         public Builder(GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs build() {
-            return new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs(values);
+        }
+
+        public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs build() {
+            return $;
         }
     }
+
 }

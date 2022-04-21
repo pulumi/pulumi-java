@@ -7,10 +7,10 @@ import com.pulumi.awsnative.refactorspaces.enums.EnvironmentNetworkFabricType;
 import com.pulumi.awsnative.refactorspaces.inputs.EnvironmentTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,24 +19,24 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="networkFabricType")
-      private final @Nullable Output<EnvironmentNetworkFabricType> networkFabricType;
+    private @Nullable Output<EnvironmentNetworkFabricType> networkFabricType;
 
-    public Output<EnvironmentNetworkFabricType> networkFabricType() {
-        return this.networkFabricType == null ? Codegen.empty() : this.networkFabricType;
+    public Optional<Output<EnvironmentNetworkFabricType>> networkFabricType() {
+        return Optional.ofNullable(this.networkFabricType);
     }
 
     /**
@@ -44,92 +44,82 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<EnvironmentTagArgs>> tags;
+    private @Nullable Output<List<EnvironmentTagArgs>> tags;
 
-    public Output<List<EnvironmentTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<EnvironmentTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public EnvironmentArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<EnvironmentNetworkFabricType> networkFabricType,
-        @Nullable Output<List<EnvironmentTagArgs>> tags) {
-        this.description = description;
-        this.name = name;
-        this.networkFabricType = networkFabricType;
-        this.tags = tags;
-    }
+    private EnvironmentArgs() {}
 
-    private EnvironmentArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkFabricType = Codegen.empty();
-        this.tags = Codegen.empty();
+    private EnvironmentArgs(EnvironmentArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.networkFabricType = $.networkFabricType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<EnvironmentNetworkFabricType> networkFabricType;
-        private @Nullable Output<List<EnvironmentTagArgs>> tags;
+        private EnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentArgs();
         }
 
         public Builder(EnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.networkFabricType = defaults.networkFabricType;
-    	      this.tags = defaults.tags;
+            $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkFabricType(@Nullable Output<EnvironmentNetworkFabricType> networkFabricType) {
-            this.networkFabricType = networkFabricType;
+            $.networkFabricType = networkFabricType;
             return this;
         }
-        public Builder networkFabricType(@Nullable EnvironmentNetworkFabricType networkFabricType) {
-            this.networkFabricType = Codegen.ofNullable(networkFabricType);
-            return this;
+
+        public Builder networkFabricType(EnvironmentNetworkFabricType networkFabricType) {
+            return networkFabricType(Output.of(networkFabricType));
         }
+
         public Builder tags(@Nullable Output<List<EnvironmentTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<EnvironmentTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<EnvironmentTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(EnvironmentTagArgs... tags) {
             return tags(List.of(tags));
-        }        public EnvironmentArgs build() {
-            return new EnvironmentArgs(description, name, networkFabricType, tags);
+        }
+
+        public EnvironmentArgs build() {
+            return $;
         }
     }
+
 }

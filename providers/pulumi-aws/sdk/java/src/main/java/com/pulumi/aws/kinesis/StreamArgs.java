@@ -6,13 +6,13 @@ package com.pulumi.aws.kinesis;
 import com.pulumi.aws.kinesis.inputs.StreamStreamModeDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionType")
-      private final @Nullable Output<String> encryptionType;
+    private @Nullable Output<String> encryptionType;
 
-    public Output<String> encryptionType() {
-        return this.encryptionType == null ? Codegen.empty() : this.encryptionType;
+    public Optional<Output<String>> encryptionType() {
+        return Optional.ofNullable(this.encryptionType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enforceConsumerDeletion")
-      private final @Nullable Output<Boolean> enforceConsumerDeletion;
+    private @Nullable Output<Boolean> enforceConsumerDeletion;
 
-    public Output<Boolean> enforceConsumerDeletion() {
-        return this.enforceConsumerDeletion == null ? Codegen.empty() : this.enforceConsumerDeletion;
+    public Optional<Output<Boolean>> enforceConsumerDeletion() {
+        return Optional.ofNullable(this.enforceConsumerDeletion);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionPeriod")
-      private final @Nullable Output<Integer> retentionPeriod;
+    private @Nullable Output<Integer> retentionPeriod;
 
-    public Output<Integer> retentionPeriod() {
-        return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
+    public Optional<Output<Integer>> retentionPeriod() {
+        return Optional.ofNullable(this.retentionPeriod);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shardCount")
-      private final @Nullable Output<Integer> shardCount;
+    private @Nullable Output<Integer> shardCount;
 
-    public Output<Integer> shardCount() {
-        return this.shardCount == null ? Codegen.empty() : this.shardCount;
+    public Optional<Output<Integer>> shardCount() {
+        return Optional.ofNullable(this.shardCount);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shardLevelMetrics")
-      private final @Nullable Output<List<String>> shardLevelMetrics;
+    private @Nullable Output<List<String>> shardLevelMetrics;
 
-    public Output<List<String>> shardLevelMetrics() {
-        return this.shardLevelMetrics == null ? Codegen.empty() : this.shardLevelMetrics;
+    public Optional<Output<List<String>>> shardLevelMetrics() {
+        return Optional.ofNullable(this.shardLevelMetrics);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamModeDetails")
-      private final @Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails;
+    private @Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails;
 
-    public Output<StreamStreamModeDetailsArgs> streamModeDetails() {
-        return this.streamModeDetails == null ? Codegen.empty() : this.streamModeDetails;
+    public Optional<Output<StreamStreamModeDetailsArgs>> streamModeDetails() {
+        return Optional.ofNullable(this.streamModeDetails);
     }
 
     /**
@@ -125,170 +125,142 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public StreamArgs(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> encryptionType,
-        @Nullable Output<Boolean> enforceConsumerDeletion,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> retentionPeriod,
-        @Nullable Output<Integer> shardCount,
-        @Nullable Output<List<String>> shardLevelMetrics,
-        @Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails,
-        @Nullable Output<Map<String,String>> tags) {
-        this.arn = arn;
-        this.encryptionType = encryptionType;
-        this.enforceConsumerDeletion = enforceConsumerDeletion;
-        this.kmsKeyId = kmsKeyId;
-        this.name = name;
-        this.retentionPeriod = retentionPeriod;
-        this.shardCount = shardCount;
-        this.shardLevelMetrics = shardLevelMetrics;
-        this.streamModeDetails = streamModeDetails;
-        this.tags = tags;
-    }
+    private StreamArgs() {}
 
-    private StreamArgs() {
-        this.arn = Codegen.empty();
-        this.encryptionType = Codegen.empty();
-        this.enforceConsumerDeletion = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.retentionPeriod = Codegen.empty();
-        this.shardCount = Codegen.empty();
-        this.shardLevelMetrics = Codegen.empty();
-        this.streamModeDetails = Codegen.empty();
-        this.tags = Codegen.empty();
+    private StreamArgs(StreamArgs $) {
+        this.arn = $.arn;
+        this.encryptionType = $.encryptionType;
+        this.enforceConsumerDeletion = $.enforceConsumerDeletion;
+        this.kmsKeyId = $.kmsKeyId;
+        this.name = $.name;
+        this.retentionPeriod = $.retentionPeriod;
+        this.shardCount = $.shardCount;
+        this.shardLevelMetrics = $.shardLevelMetrics;
+        this.streamModeDetails = $.streamModeDetails;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> encryptionType;
-        private @Nullable Output<Boolean> enforceConsumerDeletion;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> retentionPeriod;
-        private @Nullable Output<Integer> shardCount;
-        private @Nullable Output<List<String>> shardLevelMetrics;
-        private @Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails;
-        private @Nullable Output<Map<String,String>> tags;
+        private StreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamArgs();
         }
 
         public Builder(StreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.encryptionType = defaults.encryptionType;
-    	      this.enforceConsumerDeletion = defaults.enforceConsumerDeletion;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.name = defaults.name;
-    	      this.retentionPeriod = defaults.retentionPeriod;
-    	      this.shardCount = defaults.shardCount;
-    	      this.shardLevelMetrics = defaults.shardLevelMetrics;
-    	      this.streamModeDetails = defaults.streamModeDetails;
-    	      this.tags = defaults.tags;
+            $ = new StreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder encryptionType(@Nullable Output<String> encryptionType) {
-            this.encryptionType = encryptionType;
+            $.encryptionType = encryptionType;
             return this;
         }
-        public Builder encryptionType(@Nullable String encryptionType) {
-            this.encryptionType = Codegen.ofNullable(encryptionType);
-            return this;
+
+        public Builder encryptionType(String encryptionType) {
+            return encryptionType(Output.of(encryptionType));
         }
+
         public Builder enforceConsumerDeletion(@Nullable Output<Boolean> enforceConsumerDeletion) {
-            this.enforceConsumerDeletion = enforceConsumerDeletion;
+            $.enforceConsumerDeletion = enforceConsumerDeletion;
             return this;
         }
-        public Builder enforceConsumerDeletion(@Nullable Boolean enforceConsumerDeletion) {
-            this.enforceConsumerDeletion = Codegen.ofNullable(enforceConsumerDeletion);
-            return this;
+
+        public Builder enforceConsumerDeletion(Boolean enforceConsumerDeletion) {
+            return enforceConsumerDeletion(Output.of(enforceConsumerDeletion));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder retentionPeriod(@Nullable Output<Integer> retentionPeriod) {
-            this.retentionPeriod = retentionPeriod;
+            $.retentionPeriod = retentionPeriod;
             return this;
         }
-        public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
-            this.retentionPeriod = Codegen.ofNullable(retentionPeriod);
-            return this;
+
+        public Builder retentionPeriod(Integer retentionPeriod) {
+            return retentionPeriod(Output.of(retentionPeriod));
         }
+
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
-            this.shardCount = shardCount;
+            $.shardCount = shardCount;
             return this;
         }
-        public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Codegen.ofNullable(shardCount);
-            return this;
+
+        public Builder shardCount(Integer shardCount) {
+            return shardCount(Output.of(shardCount));
         }
+
         public Builder shardLevelMetrics(@Nullable Output<List<String>> shardLevelMetrics) {
-            this.shardLevelMetrics = shardLevelMetrics;
+            $.shardLevelMetrics = shardLevelMetrics;
             return this;
         }
-        public Builder shardLevelMetrics(@Nullable List<String> shardLevelMetrics) {
-            this.shardLevelMetrics = Codegen.ofNullable(shardLevelMetrics);
-            return this;
+
+        public Builder shardLevelMetrics(List<String> shardLevelMetrics) {
+            return shardLevelMetrics(Output.of(shardLevelMetrics));
         }
+
         public Builder shardLevelMetrics(String... shardLevelMetrics) {
             return shardLevelMetrics(List.of(shardLevelMetrics));
         }
+
         public Builder streamModeDetails(@Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails) {
-            this.streamModeDetails = streamModeDetails;
+            $.streamModeDetails = streamModeDetails;
             return this;
         }
-        public Builder streamModeDetails(@Nullable StreamStreamModeDetailsArgs streamModeDetails) {
-            this.streamModeDetails = Codegen.ofNullable(streamModeDetails);
-            return this;
+
+        public Builder streamModeDetails(StreamStreamModeDetailsArgs streamModeDetails) {
+            return streamModeDetails(Output.of(streamModeDetails));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public StreamArgs build() {
-            return new StreamArgs(arn, encryptionType, enforceConsumerDeletion, kmsKeyId, name, retentionPeriod, shardCount, shardLevelMetrics, streamModeDetails, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public StreamArgs build() {
+            return $;
         }
     }
+
 }

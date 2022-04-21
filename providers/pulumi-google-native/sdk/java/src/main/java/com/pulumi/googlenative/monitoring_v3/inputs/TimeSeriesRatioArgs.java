@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TimeSeriesRatioArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="badServiceFilter")
-      private final @Nullable Output<String> badServiceFilter;
+    private @Nullable Output<String> badServiceFilter;
 
-    public Output<String> badServiceFilter() {
-        return this.badServiceFilter == null ? Codegen.empty() : this.badServiceFilter;
+    public Optional<Output<String>> badServiceFilter() {
+        return Optional.ofNullable(this.badServiceFilter);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TimeSeriesRatioArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="goodServiceFilter")
-      private final @Nullable Output<String> goodServiceFilter;
+    private @Nullable Output<String> goodServiceFilter;
 
-    public Output<String> goodServiceFilter() {
-        return this.goodServiceFilter == null ? Codegen.empty() : this.goodServiceFilter;
+    public Optional<Output<String>> goodServiceFilter() {
+        return Optional.ofNullable(this.goodServiceFilter);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class TimeSeriesRatioArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="totalServiceFilter")
-      private final @Nullable Output<String> totalServiceFilter;
+    private @Nullable Output<String> totalServiceFilter;
 
-    public Output<String> totalServiceFilter() {
-        return this.totalServiceFilter == null ? Codegen.empty() : this.totalServiceFilter;
+    public Optional<Output<String>> totalServiceFilter() {
+        return Optional.ofNullable(this.totalServiceFilter);
     }
 
-    public TimeSeriesRatioArgs(
-        @Nullable Output<String> badServiceFilter,
-        @Nullable Output<String> goodServiceFilter,
-        @Nullable Output<String> totalServiceFilter) {
-        this.badServiceFilter = badServiceFilter;
-        this.goodServiceFilter = goodServiceFilter;
-        this.totalServiceFilter = totalServiceFilter;
-    }
+    private TimeSeriesRatioArgs() {}
 
-    private TimeSeriesRatioArgs() {
-        this.badServiceFilter = Codegen.empty();
-        this.goodServiceFilter = Codegen.empty();
-        this.totalServiceFilter = Codegen.empty();
+    private TimeSeriesRatioArgs(TimeSeriesRatioArgs $) {
+        this.badServiceFilter = $.badServiceFilter;
+        this.goodServiceFilter = $.goodServiceFilter;
+        this.totalServiceFilter = $.totalServiceFilter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesRatioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> badServiceFilter;
-        private @Nullable Output<String> goodServiceFilter;
-        private @Nullable Output<String> totalServiceFilter;
+        private TimeSeriesRatioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesRatioArgs();
         }
 
         public Builder(TimeSeriesRatioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.badServiceFilter = defaults.badServiceFilter;
-    	      this.goodServiceFilter = defaults.goodServiceFilter;
-    	      this.totalServiceFilter = defaults.totalServiceFilter;
+            $ = new TimeSeriesRatioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder badServiceFilter(@Nullable Output<String> badServiceFilter) {
-            this.badServiceFilter = badServiceFilter;
+            $.badServiceFilter = badServiceFilter;
             return this;
         }
-        public Builder badServiceFilter(@Nullable String badServiceFilter) {
-            this.badServiceFilter = Codegen.ofNullable(badServiceFilter);
-            return this;
+
+        public Builder badServiceFilter(String badServiceFilter) {
+            return badServiceFilter(Output.of(badServiceFilter));
         }
+
         public Builder goodServiceFilter(@Nullable Output<String> goodServiceFilter) {
-            this.goodServiceFilter = goodServiceFilter;
+            $.goodServiceFilter = goodServiceFilter;
             return this;
         }
-        public Builder goodServiceFilter(@Nullable String goodServiceFilter) {
-            this.goodServiceFilter = Codegen.ofNullable(goodServiceFilter);
-            return this;
+
+        public Builder goodServiceFilter(String goodServiceFilter) {
+            return goodServiceFilter(Output.of(goodServiceFilter));
         }
+
         public Builder totalServiceFilter(@Nullable Output<String> totalServiceFilter) {
-            this.totalServiceFilter = totalServiceFilter;
+            $.totalServiceFilter = totalServiceFilter;
             return this;
         }
-        public Builder totalServiceFilter(@Nullable String totalServiceFilter) {
-            this.totalServiceFilter = Codegen.ofNullable(totalServiceFilter);
-            return this;
-        }        public TimeSeriesRatioArgs build() {
-            return new TimeSeriesRatioArgs(badServiceFilter, goodServiceFilter, totalServiceFilter);
+
+        public Builder totalServiceFilter(String totalServiceFilter) {
+            return totalServiceFilter(Output.of(totalServiceFilter));
+        }
+
+        public TimeSeriesRatioArgs build() {
+            return $;
         }
     }
+
 }

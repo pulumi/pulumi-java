@@ -23,45 +23,44 @@ public final class ConnectionTypeAssociationPropertyResponse extends com.pulumi.
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public ConnectionTypeAssociationPropertyResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private ConnectionTypeAssociationPropertyResponse() {}
 
-    private ConnectionTypeAssociationPropertyResponse() {
-        this.name = null;
+    private ConnectionTypeAssociationPropertyResponse(ConnectionTypeAssociationPropertyResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionTypeAssociationPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private ConnectionTypeAssociationPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionTypeAssociationPropertyResponse();
         }
 
         public Builder(ConnectionTypeAssociationPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new ConnectionTypeAssociationPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public ConnectionTypeAssociationPropertyResponse build() {
-            return new ConnectionTypeAssociationPropertyResponse(name);
+        }
+
+        public ConnectionTypeAssociationPropertyResponse build() {
+            return $;
         }
     }
+
 }

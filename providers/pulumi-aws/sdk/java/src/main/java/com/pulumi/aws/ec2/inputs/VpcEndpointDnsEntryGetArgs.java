@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpcEndpointDnsEntryGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dnsName")
-      private final @Nullable Output<String> dnsName;
+    private @Nullable Output<String> dnsName;
 
-    public Output<String> dnsName() {
-        return this.dnsName == null ? Codegen.empty() : this.dnsName;
+    public Optional<Output<String>> dnsName() {
+        return Optional.ofNullable(this.dnsName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class VpcEndpointDnsEntryGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="hostedZoneId")
-      private final @Nullable Output<String> hostedZoneId;
+    private @Nullable Output<String> hostedZoneId;
 
-    public Output<String> hostedZoneId() {
-        return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
+    public Optional<Output<String>> hostedZoneId() {
+        return Optional.ofNullable(this.hostedZoneId);
     }
 
-    public VpcEndpointDnsEntryGetArgs(
-        @Nullable Output<String> dnsName,
-        @Nullable Output<String> hostedZoneId) {
-        this.dnsName = dnsName;
-        this.hostedZoneId = hostedZoneId;
-    }
+    private VpcEndpointDnsEntryGetArgs() {}
 
-    private VpcEndpointDnsEntryGetArgs() {
-        this.dnsName = Codegen.empty();
-        this.hostedZoneId = Codegen.empty();
+    private VpcEndpointDnsEntryGetArgs(VpcEndpointDnsEntryGetArgs $) {
+        this.dnsName = $.dnsName;
+        this.hostedZoneId = $.hostedZoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointDnsEntryGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dnsName;
-        private @Nullable Output<String> hostedZoneId;
+        private VpcEndpointDnsEntryGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointDnsEntryGetArgs();
         }
 
         public Builder(VpcEndpointDnsEntryGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsName = defaults.dnsName;
-    	      this.hostedZoneId = defaults.hostedZoneId;
+            $ = new VpcEndpointDnsEntryGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsName(@Nullable Output<String> dnsName) {
-            this.dnsName = dnsName;
+            $.dnsName = dnsName;
             return this;
         }
-        public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Codegen.ofNullable(dnsName);
-            return this;
+
+        public Builder dnsName(String dnsName) {
+            return dnsName(Output.of(dnsName));
         }
+
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
-            this.hostedZoneId = hostedZoneId;
+            $.hostedZoneId = hostedZoneId;
             return this;
         }
-        public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Codegen.ofNullable(hostedZoneId);
-            return this;
-        }        public VpcEndpointDnsEntryGetArgs build() {
-            return new VpcEndpointDnsEntryGetArgs(dnsName, hostedZoneId);
+
+        public Builder hostedZoneId(String hostedZoneId) {
+            return hostedZoneId(Output.of(hostedZoneId));
+        }
+
+        public VpcEndpointDnsEntryGetArgs build() {
+            return $;
         }
     }
+
 }

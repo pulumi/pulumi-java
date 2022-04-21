@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,90 +20,84 @@ public final class InstanceAttachmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<String> environment;
+    private @Nullable Output<String> environment;
 
-    public Output<String> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<String>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
-    public InstanceAttachmentArgs(
-        @Nullable Output<String> environment,
-        Output<String> instanceId,
-        Output<String> organizationId) {
-        this.environment = environment;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private InstanceAttachmentArgs() {}
 
-    private InstanceAttachmentArgs() {
-        this.environment = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.organizationId = Codegen.empty();
+    private InstanceAttachmentArgs(InstanceAttachmentArgs $) {
+        this.environment = $.environment;
+        this.instanceId = $.instanceId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> environment;
-        private Output<String> instanceId;
-        private Output<String> organizationId;
+        private InstanceAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAttachmentArgs();
         }
 
         public Builder(InstanceAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environment = defaults.environment;
-    	      this.instanceId = defaults.instanceId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new InstanceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environment(@Nullable Output<String> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable String environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(String environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
-        }        public InstanceAttachmentArgs build() {
-            return new InstanceAttachmentArgs(environment, instanceId, organizationId);
+            return organizationId(Output.of(organizationId));
+        }
+
+        public InstanceAttachmentArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

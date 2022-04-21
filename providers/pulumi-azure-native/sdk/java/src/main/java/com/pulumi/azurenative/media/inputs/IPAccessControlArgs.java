@@ -6,9 +6,9 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.azurenative.media.inputs.IPRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class IPAccessControlArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="allow")
-      private final @Nullable Output<List<IPRangeArgs>> allow;
+    private @Nullable Output<List<IPRangeArgs>> allow;
 
-    public Output<List<IPRangeArgs>> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<List<IPRangeArgs>>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
-    public IPAccessControlArgs(@Nullable Output<List<IPRangeArgs>> allow) {
-        this.allow = allow;
-    }
+    private IPAccessControlArgs() {}
 
-    private IPAccessControlArgs() {
-        this.allow = Codegen.empty();
+    private IPAccessControlArgs(IPAccessControlArgs $) {
+        this.allow = $.allow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IPRangeArgs>> allow;
+        private IPAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPAccessControlArgs();
         }
 
         public Builder(IPAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
+            $ = new IPAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<List<IPRangeArgs>> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable List<IPRangeArgs> allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(List<IPRangeArgs> allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder allow(IPRangeArgs... allow) {
             return allow(List.of(allow));
-        }        public IPAccessControlArgs build() {
-            return new IPAccessControlArgs(allow);
+        }
+
+        public IPAccessControlArgs build() {
+            return $;
         }
     }
+
 }

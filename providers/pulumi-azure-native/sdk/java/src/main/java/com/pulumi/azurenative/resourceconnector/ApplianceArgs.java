@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="distro")
-      private final @Nullable Output<Either<String,Distro>> distro;
+    private @Nullable Output<Either<String,Distro>> distro;
 
-    public Output<Either<String,Distro>> distro() {
-        return this.distro == null ? Codegen.empty() : this.distro;
+    public Optional<Output<Either<String,Distro>>> distro() {
+        return Optional.ofNullable(this.distro);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityArgs> identity;
+    private @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="infrastructureConfig")
-      private final @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
+    private @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
 
-    public Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig() {
-        return this.infrastructureConfig == null ? Codegen.empty() : this.infrastructureConfig;
+    public Optional<Output<AppliancePropertiesInfrastructureConfigArgs>> infrastructureConfig() {
+        return Optional.ofNullable(this.infrastructureConfig);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<String> publicKey;
+    private @Nullable Output<String> publicKey;
 
-    public Output<String> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<String>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -91,10 +92,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -102,141 +103,120 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ApplianceArgs(
-        @Nullable Output<Either<String,Distro>> distro,
-        @Nullable Output<IdentityArgs> identity,
-        @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig,
-        @Nullable Output<String> location,
-        @Nullable Output<String> publicKey,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.distro = Codegen.stringProp("distro").left(Distro.class).output().arg(distro).def("AKSEdge").getNullable();
-        this.identity = identity;
-        this.infrastructureConfig = infrastructureConfig;
-        this.location = location;
-        this.publicKey = publicKey;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.tags = tags;
-    }
+    private ApplianceArgs() {}
 
-    private ApplianceArgs() {
-        this.distro = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.infrastructureConfig = Codegen.empty();
-        this.location = Codegen.empty();
-        this.publicKey = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ApplianceArgs(ApplianceArgs $) {
+        this.distro = $.distro;
+        this.identity = $.identity;
+        this.infrastructureConfig = $.infrastructureConfig;
+        this.location = $.location;
+        this.publicKey = $.publicKey;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplianceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Distro>> distro;
-        private @Nullable Output<IdentityArgs> identity;
-        private @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> publicKey;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<Map<String,String>> tags;
+        private ApplianceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplianceArgs();
         }
 
         public Builder(ApplianceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distro = defaults.distro;
-    	      this.identity = defaults.identity;
-    	      this.infrastructureConfig = defaults.infrastructureConfig;
-    	      this.location = defaults.location;
-    	      this.publicKey = defaults.publicKey;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.tags = defaults.tags;
+            $ = new ApplianceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distro(@Nullable Output<Either<String,Distro>> distro) {
-            this.distro = distro;
+            $.distro = distro;
             return this;
         }
-        public Builder distro(@Nullable Either<String,Distro> distro) {
-            this.distro = Codegen.ofNullable(distro);
-            return this;
+
+        public Builder distro(Either<String,Distro> distro) {
+            return distro(Output.of(distro));
         }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder infrastructureConfig(@Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig) {
-            this.infrastructureConfig = infrastructureConfig;
+            $.infrastructureConfig = infrastructureConfig;
             return this;
         }
-        public Builder infrastructureConfig(@Nullable AppliancePropertiesInfrastructureConfigArgs infrastructureConfig) {
-            this.infrastructureConfig = Codegen.ofNullable(infrastructureConfig);
-            return this;
+
+        public Builder infrastructureConfig(AppliancePropertiesInfrastructureConfigArgs infrastructureConfig) {
+            return infrastructureConfig(Output.of(infrastructureConfig));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder publicKey(@Nullable Output<String> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
+
+        public Builder publicKey(String publicKey) {
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ApplianceArgs build() {
-            return new ApplianceArgs(distro, identity, infrastructureConfig, location, publicKey, resourceGroupName, resourceName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ApplianceArgs build() {
+            $.distro = Codegen.stringProp("distro").left(Distro.class).output().arg($.distro).def("AKSEdge").getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

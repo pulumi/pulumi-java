@@ -15,94 +15,85 @@ public final class GetFunctionIamPolicyArgs extends com.pulumi.resources.InvokeA
     public static final GetFunctionIamPolicyArgs Empty = new GetFunctionIamPolicyArgs();
 
     @Import(name="functionId", required=true)
-      private final String functionId;
+    private String functionId;
 
     public String functionId() {
         return this.functionId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetFunctionIamPolicyArgs(
-        String functionId,
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.functionId = Objects.requireNonNull(functionId, "expected parameter 'functionId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetFunctionIamPolicyArgs() {}
 
-    private GetFunctionIamPolicyArgs() {
-        this.functionId = null;
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetFunctionIamPolicyArgs(GetFunctionIamPolicyArgs $) {
+        this.functionId = $.functionId;
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String functionId;
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetFunctionIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionIamPolicyArgs();
         }
 
         public Builder(GetFunctionIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionId = defaults.functionId;
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetFunctionIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionId(String functionId) {
-            this.functionId = Objects.requireNonNull(functionId);
+            $.functionId = functionId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetFunctionIamPolicyArgs build() {
-            return new GetFunctionIamPolicyArgs(functionId, location, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetFunctionIamPolicyArgs build() {
+            $.functionId = Objects.requireNonNull($.functionId, "expected parameter 'functionId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

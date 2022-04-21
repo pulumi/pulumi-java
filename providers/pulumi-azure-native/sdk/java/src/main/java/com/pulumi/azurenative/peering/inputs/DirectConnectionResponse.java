@@ -26,10 +26,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="bandwidthInMbps")
-      private final @Nullable Integer bandwidthInMbps;
+    private @Nullable Integer bandwidthInMbps;
 
     public Optional<Integer> bandwidthInMbps() {
-        return this.bandwidthInMbps == null ? Optional.empty() : Optional.ofNullable(this.bandwidthInMbps);
+        return Optional.ofNullable(this.bandwidthInMbps);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="bgpSession")
-      private final @Nullable BgpSessionResponse bgpSession;
+    private @Nullable BgpSessionResponse bgpSession;
 
     public Optional<BgpSessionResponse> bgpSession() {
-        return this.bgpSession == null ? Optional.empty() : Optional.ofNullable(this.bgpSession);
+        return Optional.ofNullable(this.bgpSession);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="connectionIdentifier")
-      private final @Nullable String connectionIdentifier;
+    private @Nullable String connectionIdentifier;
 
     public Optional<String> connectionIdentifier() {
-        return this.connectionIdentifier == null ? Optional.empty() : Optional.ofNullable(this.connectionIdentifier);
+        return Optional.ofNullable(this.connectionIdentifier);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="connectionState", required=true)
-      private final String connectionState;
+    private String connectionState;
 
     public String connectionState() {
         return this.connectionState;
@@ -70,7 +70,7 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -81,7 +81,7 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="microsoftTrackingId", required=true)
-      private final String microsoftTrackingId;
+    private String microsoftTrackingId;
 
     public String microsoftTrackingId() {
         return this.microsoftTrackingId;
@@ -92,10 +92,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="peeringDBFacilityId")
-      private final @Nullable Integer peeringDBFacilityId;
+    private @Nullable Integer peeringDBFacilityId;
 
     public Optional<Integer> peeringDBFacilityId() {
-        return this.peeringDBFacilityId == null ? Optional.empty() : Optional.ofNullable(this.peeringDBFacilityId);
+        return Optional.ofNullable(this.peeringDBFacilityId);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="provisionedBandwidthInMbps", required=true)
-      private final Integer provisionedBandwidthInMbps;
+    private Integer provisionedBandwidthInMbps;
 
     public Integer provisionedBandwidthInMbps() {
         return this.provisionedBandwidthInMbps;
@@ -114,10 +114,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sessionAddressProvider")
-      private final @Nullable String sessionAddressProvider;
+    private @Nullable String sessionAddressProvider;
 
     public Optional<String> sessionAddressProvider() {
-        return this.sessionAddressProvider == null ? Optional.empty() : Optional.ofNullable(this.sessionAddressProvider);
+        return Optional.ofNullable(this.sessionAddressProvider);
     }
 
     /**
@@ -125,127 +125,102 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="useForPeeringService")
-      private final @Nullable Boolean useForPeeringService;
+    private @Nullable Boolean useForPeeringService;
 
     public Optional<Boolean> useForPeeringService() {
-        return this.useForPeeringService == null ? Optional.empty() : Optional.ofNullable(this.useForPeeringService);
+        return Optional.ofNullable(this.useForPeeringService);
     }
 
-    public DirectConnectionResponse(
-        @Nullable Integer bandwidthInMbps,
-        @Nullable BgpSessionResponse bgpSession,
-        @Nullable String connectionIdentifier,
-        String connectionState,
-        String errorMessage,
-        String microsoftTrackingId,
-        @Nullable Integer peeringDBFacilityId,
-        Integer provisionedBandwidthInMbps,
-        @Nullable String sessionAddressProvider,
-        @Nullable Boolean useForPeeringService) {
-        this.bandwidthInMbps = bandwidthInMbps;
-        this.bgpSession = bgpSession;
-        this.connectionIdentifier = connectionIdentifier;
-        this.connectionState = Objects.requireNonNull(connectionState, "expected parameter 'connectionState' to be non-null");
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.microsoftTrackingId = Objects.requireNonNull(microsoftTrackingId, "expected parameter 'microsoftTrackingId' to be non-null");
-        this.peeringDBFacilityId = peeringDBFacilityId;
-        this.provisionedBandwidthInMbps = Objects.requireNonNull(provisionedBandwidthInMbps, "expected parameter 'provisionedBandwidthInMbps' to be non-null");
-        this.sessionAddressProvider = sessionAddressProvider;
-        this.useForPeeringService = useForPeeringService;
-    }
+    private DirectConnectionResponse() {}
 
-    private DirectConnectionResponse() {
-        this.bandwidthInMbps = null;
-        this.bgpSession = null;
-        this.connectionIdentifier = null;
-        this.connectionState = null;
-        this.errorMessage = null;
-        this.microsoftTrackingId = null;
-        this.peeringDBFacilityId = null;
-        this.provisionedBandwidthInMbps = null;
-        this.sessionAddressProvider = null;
-        this.useForPeeringService = null;
+    private DirectConnectionResponse(DirectConnectionResponse $) {
+        this.bandwidthInMbps = $.bandwidthInMbps;
+        this.bgpSession = $.bgpSession;
+        this.connectionIdentifier = $.connectionIdentifier;
+        this.connectionState = $.connectionState;
+        this.errorMessage = $.errorMessage;
+        this.microsoftTrackingId = $.microsoftTrackingId;
+        this.peeringDBFacilityId = $.peeringDBFacilityId;
+        this.provisionedBandwidthInMbps = $.provisionedBandwidthInMbps;
+        this.sessionAddressProvider = $.sessionAddressProvider;
+        this.useForPeeringService = $.useForPeeringService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer bandwidthInMbps;
-        private @Nullable BgpSessionResponse bgpSession;
-        private @Nullable String connectionIdentifier;
-        private String connectionState;
-        private String errorMessage;
-        private String microsoftTrackingId;
-        private @Nullable Integer peeringDBFacilityId;
-        private Integer provisionedBandwidthInMbps;
-        private @Nullable String sessionAddressProvider;
-        private @Nullable Boolean useForPeeringService;
+        private DirectConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectConnectionResponse();
         }
 
         public Builder(DirectConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandwidthInMbps = defaults.bandwidthInMbps;
-    	      this.bgpSession = defaults.bgpSession;
-    	      this.connectionIdentifier = defaults.connectionIdentifier;
-    	      this.connectionState = defaults.connectionState;
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.microsoftTrackingId = defaults.microsoftTrackingId;
-    	      this.peeringDBFacilityId = defaults.peeringDBFacilityId;
-    	      this.provisionedBandwidthInMbps = defaults.provisionedBandwidthInMbps;
-    	      this.sessionAddressProvider = defaults.sessionAddressProvider;
-    	      this.useForPeeringService = defaults.useForPeeringService;
+            $ = new DirectConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
-            this.bandwidthInMbps = bandwidthInMbps;
+            $.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
+
         public Builder bgpSession(@Nullable BgpSessionResponse bgpSession) {
-            this.bgpSession = bgpSession;
+            $.bgpSession = bgpSession;
             return this;
         }
+
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
-            this.connectionIdentifier = connectionIdentifier;
+            $.connectionIdentifier = connectionIdentifier;
             return this;
         }
+
         public Builder connectionState(String connectionState) {
-            this.connectionState = Objects.requireNonNull(connectionState);
+            $.connectionState = connectionState;
             return this;
         }
+
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder microsoftTrackingId(String microsoftTrackingId) {
-            this.microsoftTrackingId = Objects.requireNonNull(microsoftTrackingId);
+            $.microsoftTrackingId = microsoftTrackingId;
             return this;
         }
+
         public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
-            this.peeringDBFacilityId = peeringDBFacilityId;
+            $.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
+
         public Builder provisionedBandwidthInMbps(Integer provisionedBandwidthInMbps) {
-            this.provisionedBandwidthInMbps = Objects.requireNonNull(provisionedBandwidthInMbps);
+            $.provisionedBandwidthInMbps = provisionedBandwidthInMbps;
             return this;
         }
+
         public Builder sessionAddressProvider(@Nullable String sessionAddressProvider) {
-            this.sessionAddressProvider = sessionAddressProvider;
+            $.sessionAddressProvider = sessionAddressProvider;
             return this;
         }
+
         public Builder useForPeeringService(@Nullable Boolean useForPeeringService) {
-            this.useForPeeringService = useForPeeringService;
+            $.useForPeeringService = useForPeeringService;
             return this;
-        }        public DirectConnectionResponse build() {
-            return new DirectConnectionResponse(bandwidthInMbps, bgpSession, connectionIdentifier, connectionState, errorMessage, microsoftTrackingId, peeringDBFacilityId, provisionedBandwidthInMbps, sessionAddressProvider, useForPeeringService);
+        }
+
+        public DirectConnectionResponse build() {
+            $.connectionState = Objects.requireNonNull($.connectionState, "expected parameter 'connectionState' to be non-null");
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            $.microsoftTrackingId = Objects.requireNonNull($.microsoftTrackingId, "expected parameter 'microsoftTrackingId' to be non-null");
+            $.provisionedBandwidthInMbps = Objects.requireNonNull($.provisionedBandwidthInMbps, "expected parameter 'provisionedBandwidthInMbps' to be non-null");
+            return $;
         }
     }
+
 }

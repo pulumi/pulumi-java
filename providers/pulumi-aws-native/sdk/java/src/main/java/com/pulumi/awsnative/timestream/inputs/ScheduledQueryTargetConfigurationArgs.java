@@ -6,7 +6,6 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.inputs.ScheduledQueryTimestreamConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ScheduledQueryTargetConfigurationArgs extends com.pulumi.reso
     public static final ScheduledQueryTargetConfigurationArgs Empty = new ScheduledQueryTargetConfigurationArgs();
 
     @Import(name="timestreamConfiguration", required=true)
-      private final Output<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration;
+    private Output<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration;
 
     public Output<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration() {
         return this.timestreamConfiguration;
     }
 
-    public ScheduledQueryTargetConfigurationArgs(Output<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration) {
-        this.timestreamConfiguration = Objects.requireNonNull(timestreamConfiguration, "expected parameter 'timestreamConfiguration' to be non-null");
-    }
+    private ScheduledQueryTargetConfigurationArgs() {}
 
-    private ScheduledQueryTargetConfigurationArgs() {
-        this.timestreamConfiguration = Codegen.empty();
+    private ScheduledQueryTargetConfigurationArgs(ScheduledQueryTargetConfigurationArgs $) {
+        this.timestreamConfiguration = $.timestreamConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledQueryTargetConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration;
+        private ScheduledQueryTargetConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledQueryTargetConfigurationArgs();
         }
 
         public Builder(ScheduledQueryTargetConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timestreamConfiguration = defaults.timestreamConfiguration;
+            $ = new ScheduledQueryTargetConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder timestreamConfiguration(Output<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration) {
-            this.timestreamConfiguration = Objects.requireNonNull(timestreamConfiguration);
+            $.timestreamConfiguration = timestreamConfiguration;
             return this;
         }
+
         public Builder timestreamConfiguration(ScheduledQueryTimestreamConfigurationArgs timestreamConfiguration) {
-            this.timestreamConfiguration = Output.of(Objects.requireNonNull(timestreamConfiguration));
-            return this;
-        }        public ScheduledQueryTargetConfigurationArgs build() {
-            return new ScheduledQueryTargetConfigurationArgs(timestreamConfiguration);
+            return timestreamConfiguration(Output.of(timestreamConfiguration));
+        }
+
+        public ScheduledQueryTargetConfigurationArgs build() {
+            $.timestreamConfiguration = Objects.requireNonNull($.timestreamConfiguration, "expected parameter 'timestreamConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

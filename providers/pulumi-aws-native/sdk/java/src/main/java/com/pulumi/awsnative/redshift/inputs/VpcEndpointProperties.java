@@ -25,10 +25,10 @@ public final class VpcEndpointProperties extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable List<EndpointAccessNetworkInterface> networkInterfaces;
+    private @Nullable List<EndpointAccessNetworkInterface> networkInterfaces;
 
-    public List<EndpointAccessNetworkInterface> networkInterfaces() {
-        return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
+    public Optional<List<EndpointAccessNetworkInterface>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VpcEndpointProperties extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vpcEndpointId")
-      private final @Nullable String vpcEndpointId;
+    private @Nullable String vpcEndpointId;
 
     public Optional<String> vpcEndpointId() {
-        return this.vpcEndpointId == null ? Optional.empty() : Optional.ofNullable(this.vpcEndpointId);
+        return Optional.ofNullable(this.vpcEndpointId);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class VpcEndpointProperties extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable String vpcId;
+    private @Nullable String vpcId;
 
     public Optional<String> vpcId() {
-        return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public VpcEndpointProperties(
-        @Nullable List<EndpointAccessNetworkInterface> networkInterfaces,
-        @Nullable String vpcEndpointId,
-        @Nullable String vpcId) {
-        this.networkInterfaces = networkInterfaces;
-        this.vpcEndpointId = vpcEndpointId;
-        this.vpcId = vpcId;
-    }
+    private VpcEndpointProperties() {}
 
-    private VpcEndpointProperties() {
-        this.networkInterfaces = List.of();
-        this.vpcEndpointId = null;
-        this.vpcId = null;
+    private VpcEndpointProperties(VpcEndpointProperties $) {
+        this.networkInterfaces = $.networkInterfaces;
+        this.vpcEndpointId = $.vpcEndpointId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<EndpointAccessNetworkInterface> networkInterfaces;
-        private @Nullable String vpcEndpointId;
-        private @Nullable String vpcId;
+        private VpcEndpointProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointProperties();
         }
 
         public Builder(VpcEndpointProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.vpcEndpointId = defaults.vpcEndpointId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new VpcEndpointProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaces(@Nullable List<EndpointAccessNetworkInterface> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(EndpointAccessNetworkInterface... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = vpcEndpointId;
+            $.vpcEndpointId = vpcEndpointId;
             return this;
         }
+
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
-        }        public VpcEndpointProperties build() {
-            return new VpcEndpointProperties(networkInterfaces, vpcEndpointId, vpcId);
+        }
+
+        public VpcEndpointProperties build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.DistributionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="distribution")
-      private final @Nullable Output<List<DistributionArgs>> distribution;
+    private @Nullable Output<List<DistributionArgs>> distribution;
 
-    public Output<List<DistributionArgs>> distribution() {
-        return this.distribution == null ? Codegen.empty() : this.distribution;
+    public Optional<Output<List<DistributionArgs>>> distribution() {
+        return Optional.ofNullable(this.distribution);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public PackageArgs(
-        @Nullable Output<List<DistributionArgs>> distribution,
-        Output<String> name) {
-        this.distribution = distribution;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PackageArgs() {}
 
-    private PackageArgs() {
-        this.distribution = Codegen.empty();
-        this.name = Codegen.empty();
+    private PackageArgs(PackageArgs $) {
+        this.distribution = $.distribution;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DistributionArgs>> distribution;
-        private Output<String> name;
+        private PackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageArgs();
         }
 
         public Builder(PackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distribution = defaults.distribution;
-    	      this.name = defaults.name;
+            $ = new PackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distribution(@Nullable Output<List<DistributionArgs>> distribution) {
-            this.distribution = distribution;
+            $.distribution = distribution;
             return this;
         }
-        public Builder distribution(@Nullable List<DistributionArgs> distribution) {
-            this.distribution = Codegen.ofNullable(distribution);
-            return this;
+
+        public Builder distribution(List<DistributionArgs> distribution) {
+            return distribution(Output.of(distribution));
         }
+
         public Builder distribution(DistributionArgs... distribution) {
             return distribution(List.of(distribution));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public PackageArgs build() {
-            return new PackageArgs(distribution, name);
+            return name(Output.of(name));
+        }
+
+        public PackageArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class I18nConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="root", required=true)
-      private final String root;
+    private String root;
 
     public String root() {
         return this.root;
     }
 
-    public I18nConfigResponse(String root) {
-        this.root = Objects.requireNonNull(root, "expected parameter 'root' to be non-null");
-    }
+    private I18nConfigResponse() {}
 
-    private I18nConfigResponse() {
-        this.root = null;
+    private I18nConfigResponse(I18nConfigResponse $) {
+        this.root = $.root;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(I18nConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String root;
+        private I18nConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new I18nConfigResponse();
         }
 
         public Builder(I18nConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.root = defaults.root;
+            $ = new I18nConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder root(String root) {
-            this.root = Objects.requireNonNull(root);
+            $.root = root;
             return this;
-        }        public I18nConfigResponse build() {
-            return new I18nConfigResponse(root);
+        }
+
+        public I18nConfigResponse build() {
+            $.root = Objects.requireNonNull($.root, "expected parameter 'root' to be non-null");
+            return $;
         }
     }
+
 }

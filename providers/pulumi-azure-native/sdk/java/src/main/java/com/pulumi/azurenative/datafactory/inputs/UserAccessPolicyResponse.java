@@ -23,10 +23,10 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accessResourcePath")
-      private final @Nullable String accessResourcePath;
+    private @Nullable String accessResourcePath;
 
     public Optional<String> accessResourcePath() {
-        return this.accessResourcePath == null ? Optional.empty() : Optional.ofNullable(this.accessResourcePath);
+        return Optional.ofNullable(this.accessResourcePath);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable String expireTime;
+    private @Nullable String expireTime;
 
     public Optional<String> expireTime() {
-        return this.expireTime == null ? Optional.empty() : Optional.ofNullable(this.expireTime);
+        return Optional.ofNullable(this.expireTime);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="permissions")
-      private final @Nullable String permissions;
+    private @Nullable String permissions;
 
     public Optional<String> permissions() {
-        return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="profileName")
-      private final @Nullable String profileName;
+    private @Nullable String profileName;
 
     public Optional<String> profileName() {
-        return this.profileName == null ? Optional.empty() : Optional.ofNullable(this.profileName);
+        return Optional.ofNullable(this.profileName);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
-    public UserAccessPolicyResponse(
-        @Nullable String accessResourcePath,
-        @Nullable String expireTime,
-        @Nullable String permissions,
-        @Nullable String profileName,
-        @Nullable String startTime) {
-        this.accessResourcePath = accessResourcePath;
-        this.expireTime = expireTime;
-        this.permissions = permissions;
-        this.profileName = profileName;
-        this.startTime = startTime;
-    }
+    private UserAccessPolicyResponse() {}
 
-    private UserAccessPolicyResponse() {
-        this.accessResourcePath = null;
-        this.expireTime = null;
-        this.permissions = null;
-        this.profileName = null;
-        this.startTime = null;
+    private UserAccessPolicyResponse(UserAccessPolicyResponse $) {
+        this.accessResourcePath = $.accessResourcePath;
+        this.expireTime = $.expireTime;
+        this.permissions = $.permissions;
+        this.profileName = $.profileName;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAccessPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessResourcePath;
-        private @Nullable String expireTime;
-        private @Nullable String permissions;
-        private @Nullable String profileName;
-        private @Nullable String startTime;
+        private UserAccessPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAccessPolicyResponse();
         }
 
         public Builder(UserAccessPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessResourcePath = defaults.accessResourcePath;
-    	      this.expireTime = defaults.expireTime;
-    	      this.permissions = defaults.permissions;
-    	      this.profileName = defaults.profileName;
-    	      this.startTime = defaults.startTime;
+            $ = new UserAccessPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessResourcePath(@Nullable String accessResourcePath) {
-            this.accessResourcePath = accessResourcePath;
+            $.accessResourcePath = accessResourcePath;
             return this;
         }
+
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
+
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
+
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = profileName;
+            $.profileName = profileName;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
-        }        public UserAccessPolicyResponse build() {
-            return new UserAccessPolicyResponse(accessResourcePath, expireTime, permissions, profileName, startTime);
+        }
+
+        public UserAccessPolicyResponse build() {
+            return $;
         }
     }
+
 }

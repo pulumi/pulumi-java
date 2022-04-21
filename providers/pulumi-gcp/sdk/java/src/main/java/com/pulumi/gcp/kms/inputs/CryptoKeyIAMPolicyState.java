@@ -5,9 +5,9 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CryptoKeyIAMPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="cryptoKeyId")
-      private final @Nullable Output<String> cryptoKeyId;
+    private @Nullable Output<String> cryptoKeyId;
 
-    public Output<String> cryptoKeyId() {
-        return this.cryptoKeyId == null ? Codegen.empty() : this.cryptoKeyId;
+    public Optional<Output<String>> cryptoKeyId() {
+        return Optional.ofNullable(this.cryptoKeyId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CryptoKeyIAMPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class CryptoKeyIAMPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
-    public CryptoKeyIAMPolicyState(
-        @Nullable Output<String> cryptoKeyId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData) {
-        this.cryptoKeyId = cryptoKeyId;
-        this.etag = etag;
-        this.policyData = policyData;
-    }
+    private CryptoKeyIAMPolicyState() {}
 
-    private CryptoKeyIAMPolicyState() {
-        this.cryptoKeyId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private CryptoKeyIAMPolicyState(CryptoKeyIAMPolicyState $) {
+        this.cryptoKeyId = $.cryptoKeyId;
+        this.etag = $.etag;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyIAMPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cryptoKeyId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
+        private CryptoKeyIAMPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyIAMPolicyState();
         }
 
         public Builder(CryptoKeyIAMPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cryptoKeyId = defaults.cryptoKeyId;
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
+            $ = new CryptoKeyIAMPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder cryptoKeyId(@Nullable Output<String> cryptoKeyId) {
-            this.cryptoKeyId = cryptoKeyId;
+            $.cryptoKeyId = cryptoKeyId;
             return this;
         }
-        public Builder cryptoKeyId(@Nullable String cryptoKeyId) {
-            this.cryptoKeyId = Codegen.ofNullable(cryptoKeyId);
-            return this;
+
+        public Builder cryptoKeyId(String cryptoKeyId) {
+            return cryptoKeyId(Output.of(cryptoKeyId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
-        }        public CryptoKeyIAMPolicyState build() {
-            return new CryptoKeyIAMPolicyState(cryptoKeyId, etag, policyData);
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
+        }
+
+        public CryptoKeyIAMPolicyState build() {
+            return $;
         }
     }
+
 }

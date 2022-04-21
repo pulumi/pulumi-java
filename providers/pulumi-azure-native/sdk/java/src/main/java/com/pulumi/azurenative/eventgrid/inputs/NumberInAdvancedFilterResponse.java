@@ -26,10 +26,10 @@ public final class NumberInAdvancedFilterResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class NumberInAdvancedFilterResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="operatorType", required=true)
-      private final String operatorType;
+    private String operatorType;
 
     public String operatorType() {
         return this.operatorType;
@@ -49,67 +49,61 @@ public final class NumberInAdvancedFilterResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="values")
-      private final @Nullable List<Double> values;
+    private @Nullable List<Double> values;
 
-    public List<Double> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<Double>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public NumberInAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType,
-        @Nullable List<Double> values) {
-        this.key = key;
-        this.operatorType = Codegen.stringProp("operatorType").arg(operatorType).require();
-        this.values = values;
-    }
+    private NumberInAdvancedFilterResponse() {}
 
-    private NumberInAdvancedFilterResponse() {
-        this.key = null;
-        this.operatorType = null;
-        this.values = List.of();
+    private NumberInAdvancedFilterResponse(NumberInAdvancedFilterResponse $) {
+        this.key = $.key;
+        this.operatorType = $.operatorType;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NumberInAdvancedFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
-        private String operatorType;
-        private @Nullable List<Double> values;
+        private NumberInAdvancedFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NumberInAdvancedFilterResponse();
         }
 
         public Builder(NumberInAdvancedFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.operatorType = defaults.operatorType;
-    	      this.values = defaults.values;
+            $ = new NumberInAdvancedFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder operatorType(String operatorType) {
-            this.operatorType = Objects.requireNonNull(operatorType);
+            $.operatorType = operatorType;
             return this;
         }
+
         public Builder values(@Nullable List<Double> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(Double... values) {
             return values(List.of(values));
-        }        public NumberInAdvancedFilterResponse build() {
-            return new NumberInAdvancedFilterResponse(key, operatorType, values);
+        }
+
+        public NumberInAdvancedFilterResponse build() {
+            $.operatorType = Codegen.stringProp("operatorType").arg($.operatorType).require();
+            return $;
         }
     }
+
 }

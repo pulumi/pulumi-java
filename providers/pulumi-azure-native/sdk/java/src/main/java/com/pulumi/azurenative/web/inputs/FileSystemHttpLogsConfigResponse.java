@@ -24,10 +24,10 @@ public final class FileSystemHttpLogsConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FileSystemHttpLogsConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="retentionInDays")
-      private final @Nullable Integer retentionInDays;
+    private @Nullable Integer retentionInDays;
 
     public Optional<Integer> retentionInDays() {
-        return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
+        return Optional.ofNullable(this.retentionInDays);
     }
 
     /**
@@ -50,64 +50,56 @@ public final class FileSystemHttpLogsConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="retentionInMb")
-      private final @Nullable Integer retentionInMb;
+    private @Nullable Integer retentionInMb;
 
     public Optional<Integer> retentionInMb() {
-        return this.retentionInMb == null ? Optional.empty() : Optional.ofNullable(this.retentionInMb);
+        return Optional.ofNullable(this.retentionInMb);
     }
 
-    public FileSystemHttpLogsConfigResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer retentionInDays,
-        @Nullable Integer retentionInMb) {
-        this.enabled = enabled;
-        this.retentionInDays = retentionInDays;
-        this.retentionInMb = retentionInMb;
-    }
+    private FileSystemHttpLogsConfigResponse() {}
 
-    private FileSystemHttpLogsConfigResponse() {
-        this.enabled = null;
-        this.retentionInDays = null;
-        this.retentionInMb = null;
+    private FileSystemHttpLogsConfigResponse(FileSystemHttpLogsConfigResponse $) {
+        this.enabled = $.enabled;
+        this.retentionInDays = $.retentionInDays;
+        this.retentionInMb = $.retentionInMb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemHttpLogsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable Integer retentionInDays;
-        private @Nullable Integer retentionInMb;
+        private FileSystemHttpLogsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemHttpLogsConfigResponse();
         }
 
         public Builder(FileSystemHttpLogsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.retentionInDays = defaults.retentionInDays;
-    	      this.retentionInMb = defaults.retentionInMb;
+            $ = new FileSystemHttpLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = retentionInDays;
+            $.retentionInDays = retentionInDays;
             return this;
         }
+
         public Builder retentionInMb(@Nullable Integer retentionInMb) {
-            this.retentionInMb = retentionInMb;
+            $.retentionInMb = retentionInMb;
             return this;
-        }        public FileSystemHttpLogsConfigResponse build() {
-            return new FileSystemHttpLogsConfigResponse(enabled, retentionInDays, retentionInMb);
+        }
+
+        public FileSystemHttpLogsConfigResponse build() {
+            return $;
         }
     }
+
 }

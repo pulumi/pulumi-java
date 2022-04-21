@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.PerInstanceConfigPreservedStateArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class PerInstanceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="instanceGroupManager", required=true)
-      private final Output<String> instanceGroupManager;
+    private Output<String> instanceGroupManager;
 
     public Output<String> instanceGroupManager() {
         return this.instanceGroupManager;
@@ -38,10 +38,10 @@ public final class PerInstanceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="minimalAction")
-      private final @Nullable Output<String> minimalAction;
+    private @Nullable Output<String> minimalAction;
 
-    public Output<String> minimalAction() {
-        return this.minimalAction == null ? Codegen.empty() : this.minimalAction;
+    public Optional<Output<String>> minimalAction() {
+        return Optional.ofNullable(this.minimalAction);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PerInstanceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="mostDisruptiveAllowedAction")
-      private final @Nullable Output<String> mostDisruptiveAllowedAction;
+    private @Nullable Output<String> mostDisruptiveAllowedAction;
 
-    public Output<String> mostDisruptiveAllowedAction() {
-        return this.mostDisruptiveAllowedAction == null ? Codegen.empty() : this.mostDisruptiveAllowedAction;
+    public Optional<Output<String>> mostDisruptiveAllowedAction() {
+        return Optional.ofNullable(this.mostDisruptiveAllowedAction);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class PerInstanceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class PerInstanceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="preservedState")
-      private final @Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState;
+    private @Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState;
 
-    public Output<PerInstanceConfigPreservedStateArgs> preservedState() {
-        return this.preservedState == null ? Codegen.empty() : this.preservedState;
+    public Optional<Output<PerInstanceConfigPreservedStateArgs>> preservedState() {
+        return Optional.ofNullable(this.preservedState);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class PerInstanceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class PerInstanceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="removeInstanceStateOnDestroy")
-      private final @Nullable Output<Boolean> removeInstanceStateOnDestroy;
+    private @Nullable Output<Boolean> removeInstanceStateOnDestroy;
 
-    public Output<Boolean> removeInstanceStateOnDestroy() {
-        return this.removeInstanceStateOnDestroy == null ? Codegen.empty() : this.removeInstanceStateOnDestroy;
+    public Optional<Output<Boolean>> removeInstanceStateOnDestroy() {
+        return Optional.ofNullable(this.removeInstanceStateOnDestroy);
     }
 
     /**
@@ -113,141 +113,119 @@ public final class PerInstanceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public PerInstanceConfigArgs(
-        Output<String> instanceGroupManager,
-        @Nullable Output<String> minimalAction,
-        @Nullable Output<String> mostDisruptiveAllowedAction,
-        @Nullable Output<String> name,
-        @Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> removeInstanceStateOnDestroy,
-        @Nullable Output<String> zone) {
-        this.instanceGroupManager = Objects.requireNonNull(instanceGroupManager, "expected parameter 'instanceGroupManager' to be non-null");
-        this.minimalAction = minimalAction;
-        this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
-        this.name = name;
-        this.preservedState = preservedState;
-        this.project = project;
-        this.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
-        this.zone = zone;
-    }
+    private PerInstanceConfigArgs() {}
 
-    private PerInstanceConfigArgs() {
-        this.instanceGroupManager = Codegen.empty();
-        this.minimalAction = Codegen.empty();
-        this.mostDisruptiveAllowedAction = Codegen.empty();
-        this.name = Codegen.empty();
-        this.preservedState = Codegen.empty();
-        this.project = Codegen.empty();
-        this.removeInstanceStateOnDestroy = Codegen.empty();
-        this.zone = Codegen.empty();
+    private PerInstanceConfigArgs(PerInstanceConfigArgs $) {
+        this.instanceGroupManager = $.instanceGroupManager;
+        this.minimalAction = $.minimalAction;
+        this.mostDisruptiveAllowedAction = $.mostDisruptiveAllowedAction;
+        this.name = $.name;
+        this.preservedState = $.preservedState;
+        this.project = $.project;
+        this.removeInstanceStateOnDestroy = $.removeInstanceStateOnDestroy;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerInstanceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceGroupManager;
-        private @Nullable Output<String> minimalAction;
-        private @Nullable Output<String> mostDisruptiveAllowedAction;
-        private @Nullable Output<String> name;
-        private @Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> removeInstanceStateOnDestroy;
-        private @Nullable Output<String> zone;
+        private PerInstanceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerInstanceConfigArgs();
         }
 
         public Builder(PerInstanceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceGroupManager = defaults.instanceGroupManager;
-    	      this.minimalAction = defaults.minimalAction;
-    	      this.mostDisruptiveAllowedAction = defaults.mostDisruptiveAllowedAction;
-    	      this.name = defaults.name;
-    	      this.preservedState = defaults.preservedState;
-    	      this.project = defaults.project;
-    	      this.removeInstanceStateOnDestroy = defaults.removeInstanceStateOnDestroy;
-    	      this.zone = defaults.zone;
+            $ = new PerInstanceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceGroupManager(Output<String> instanceGroupManager) {
-            this.instanceGroupManager = Objects.requireNonNull(instanceGroupManager);
+            $.instanceGroupManager = instanceGroupManager;
             return this;
         }
+
         public Builder instanceGroupManager(String instanceGroupManager) {
-            this.instanceGroupManager = Output.of(Objects.requireNonNull(instanceGroupManager));
-            return this;
+            return instanceGroupManager(Output.of(instanceGroupManager));
         }
+
         public Builder minimalAction(@Nullable Output<String> minimalAction) {
-            this.minimalAction = minimalAction;
+            $.minimalAction = minimalAction;
             return this;
         }
-        public Builder minimalAction(@Nullable String minimalAction) {
-            this.minimalAction = Codegen.ofNullable(minimalAction);
-            return this;
+
+        public Builder minimalAction(String minimalAction) {
+            return minimalAction(Output.of(minimalAction));
         }
+
         public Builder mostDisruptiveAllowedAction(@Nullable Output<String> mostDisruptiveAllowedAction) {
-            this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
+            $.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
-        public Builder mostDisruptiveAllowedAction(@Nullable String mostDisruptiveAllowedAction) {
-            this.mostDisruptiveAllowedAction = Codegen.ofNullable(mostDisruptiveAllowedAction);
-            return this;
+
+        public Builder mostDisruptiveAllowedAction(String mostDisruptiveAllowedAction) {
+            return mostDisruptiveAllowedAction(Output.of(mostDisruptiveAllowedAction));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder preservedState(@Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState) {
-            this.preservedState = preservedState;
+            $.preservedState = preservedState;
             return this;
         }
-        public Builder preservedState(@Nullable PerInstanceConfigPreservedStateArgs preservedState) {
-            this.preservedState = Codegen.ofNullable(preservedState);
-            return this;
+
+        public Builder preservedState(PerInstanceConfigPreservedStateArgs preservedState) {
+            return preservedState(Output.of(preservedState));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder removeInstanceStateOnDestroy(@Nullable Output<Boolean> removeInstanceStateOnDestroy) {
-            this.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
+            $.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
             return this;
         }
-        public Builder removeInstanceStateOnDestroy(@Nullable Boolean removeInstanceStateOnDestroy) {
-            this.removeInstanceStateOnDestroy = Codegen.ofNullable(removeInstanceStateOnDestroy);
-            return this;
+
+        public Builder removeInstanceStateOnDestroy(Boolean removeInstanceStateOnDestroy) {
+            return removeInstanceStateOnDestroy(Output.of(removeInstanceStateOnDestroy));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public PerInstanceConfigArgs build() {
-            return new PerInstanceConfigArgs(instanceGroupManager, minimalAction, mostDisruptiveAllowedAction, name, preservedState, project, removeInstanceStateOnDestroy, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public PerInstanceConfigArgs build() {
+            $.instanceGroupManager = Objects.requireNonNull($.instanceGroupManager, "expected parameter 'instanceGroupManager' to be non-null");
+            return $;
         }
     }
+
 }

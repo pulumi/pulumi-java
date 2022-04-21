@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2ScheduleResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="recurrencePeriodDuration", required=true)
-      private final String recurrencePeriodDuration;
+    private String recurrencePeriodDuration;
 
     public String recurrencePeriodDuration() {
         return this.recurrencePeriodDuration;
     }
 
-    public GooglePrivacyDlpV2ScheduleResponse(String recurrencePeriodDuration) {
-        this.recurrencePeriodDuration = Objects.requireNonNull(recurrencePeriodDuration, "expected parameter 'recurrencePeriodDuration' to be non-null");
-    }
+    private GooglePrivacyDlpV2ScheduleResponse() {}
 
-    private GooglePrivacyDlpV2ScheduleResponse() {
-        this.recurrencePeriodDuration = null;
+    private GooglePrivacyDlpV2ScheduleResponse(GooglePrivacyDlpV2ScheduleResponse $) {
+        this.recurrencePeriodDuration = $.recurrencePeriodDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String recurrencePeriodDuration;
+        private GooglePrivacyDlpV2ScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ScheduleResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrencePeriodDuration = defaults.recurrencePeriodDuration;
+            $ = new GooglePrivacyDlpV2ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrencePeriodDuration(String recurrencePeriodDuration) {
-            this.recurrencePeriodDuration = Objects.requireNonNull(recurrencePeriodDuration);
+            $.recurrencePeriodDuration = recurrencePeriodDuration;
             return this;
-        }        public GooglePrivacyDlpV2ScheduleResponse build() {
-            return new GooglePrivacyDlpV2ScheduleResponse(recurrencePeriodDuration);
+        }
+
+        public GooglePrivacyDlpV2ScheduleResponse build() {
+            $.recurrencePeriodDuration = Objects.requireNonNull($.recurrencePeriodDuration, "expected parameter 'recurrencePeriodDuration' to be non-null");
+            return $;
         }
     }
+
 }

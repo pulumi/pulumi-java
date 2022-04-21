@@ -5,13 +5,13 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleMonthlyGetArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleTimeOfDayGetArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleTimeZoneGetArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleWeeklyGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="lastExecuteTime")
-      private final @Nullable Output<String> lastExecuteTime;
+    private @Nullable Output<String> lastExecuteTime;
 
-    public Output<String> lastExecuteTime() {
-        return this.lastExecuteTime == null ? Codegen.empty() : this.lastExecuteTime;
+    public Optional<Output<String>> lastExecuteTime() {
+        return Optional.ofNullable(this.lastExecuteTime);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="monthly")
-      private final @Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly;
+    private @Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly;
 
-    public Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly() {
-        return this.monthly == null ? Codegen.empty() : this.monthly;
+    public Optional<Output<PatchDeploymentRecurringScheduleMonthlyGetArgs>> monthly() {
+        return Optional.ofNullable(this.monthly);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="nextExecuteTime")
-      private final @Nullable Output<String> nextExecuteTime;
+    private @Nullable Output<String> nextExecuteTime;
 
-    public Output<String> nextExecuteTime() {
-        return this.nextExecuteTime == null ? Codegen.empty() : this.nextExecuteTime;
+    public Optional<Output<String>> nextExecuteTime() {
+        return Optional.ofNullable(this.nextExecuteTime);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="timeOfDay", required=true)
-      private final Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay;
+    private Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay;
 
     public Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay() {
         return this.timeOfDay;
@@ -100,7 +100,7 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="timeZone", required=true)
-      private final Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone;
+    private Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone;
 
     public Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone() {
         return this.timeZone;
@@ -112,141 +112,120 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="weekly")
-      private final @Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly;
+    private @Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly;
 
-    public Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly() {
-        return this.weekly == null ? Codegen.empty() : this.weekly;
+    public Optional<Output<PatchDeploymentRecurringScheduleWeeklyGetArgs>> weekly() {
+        return Optional.ofNullable(this.weekly);
     }
 
-    public PatchDeploymentRecurringScheduleGetArgs(
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> lastExecuteTime,
-        @Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly,
-        @Nullable Output<String> nextExecuteTime,
-        @Nullable Output<String> startTime,
-        Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay,
-        Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone,
-        @Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly) {
-        this.endTime = endTime;
-        this.lastExecuteTime = lastExecuteTime;
-        this.monthly = monthly;
-        this.nextExecuteTime = nextExecuteTime;
-        this.startTime = startTime;
-        this.timeOfDay = Objects.requireNonNull(timeOfDay, "expected parameter 'timeOfDay' to be non-null");
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-        this.weekly = weekly;
-    }
+    private PatchDeploymentRecurringScheduleGetArgs() {}
 
-    private PatchDeploymentRecurringScheduleGetArgs() {
-        this.endTime = Codegen.empty();
-        this.lastExecuteTime = Codegen.empty();
-        this.monthly = Codegen.empty();
-        this.nextExecuteTime = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.timeOfDay = Codegen.empty();
-        this.timeZone = Codegen.empty();
-        this.weekly = Codegen.empty();
+    private PatchDeploymentRecurringScheduleGetArgs(PatchDeploymentRecurringScheduleGetArgs $) {
+        this.endTime = $.endTime;
+        this.lastExecuteTime = $.lastExecuteTime;
+        this.monthly = $.monthly;
+        this.nextExecuteTime = $.nextExecuteTime;
+        this.startTime = $.startTime;
+        this.timeOfDay = $.timeOfDay;
+        this.timeZone = $.timeZone;
+        this.weekly = $.weekly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentRecurringScheduleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> lastExecuteTime;
-        private @Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly;
-        private @Nullable Output<String> nextExecuteTime;
-        private @Nullable Output<String> startTime;
-        private Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay;
-        private Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone;
-        private @Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly;
+        private PatchDeploymentRecurringScheduleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentRecurringScheduleGetArgs();
         }
 
         public Builder(PatchDeploymentRecurringScheduleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.lastExecuteTime = defaults.lastExecuteTime;
-    	      this.monthly = defaults.monthly;
-    	      this.nextExecuteTime = defaults.nextExecuteTime;
-    	      this.startTime = defaults.startTime;
-    	      this.timeOfDay = defaults.timeOfDay;
-    	      this.timeZone = defaults.timeZone;
-    	      this.weekly = defaults.weekly;
+            $ = new PatchDeploymentRecurringScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder lastExecuteTime(@Nullable Output<String> lastExecuteTime) {
-            this.lastExecuteTime = lastExecuteTime;
+            $.lastExecuteTime = lastExecuteTime;
             return this;
         }
-        public Builder lastExecuteTime(@Nullable String lastExecuteTime) {
-            this.lastExecuteTime = Codegen.ofNullable(lastExecuteTime);
-            return this;
+
+        public Builder lastExecuteTime(String lastExecuteTime) {
+            return lastExecuteTime(Output.of(lastExecuteTime));
         }
+
         public Builder monthly(@Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly) {
-            this.monthly = monthly;
+            $.monthly = monthly;
             return this;
         }
-        public Builder monthly(@Nullable PatchDeploymentRecurringScheduleMonthlyGetArgs monthly) {
-            this.monthly = Codegen.ofNullable(monthly);
-            return this;
+
+        public Builder monthly(PatchDeploymentRecurringScheduleMonthlyGetArgs monthly) {
+            return monthly(Output.of(monthly));
         }
+
         public Builder nextExecuteTime(@Nullable Output<String> nextExecuteTime) {
-            this.nextExecuteTime = nextExecuteTime;
+            $.nextExecuteTime = nextExecuteTime;
             return this;
         }
-        public Builder nextExecuteTime(@Nullable String nextExecuteTime) {
-            this.nextExecuteTime = Codegen.ofNullable(nextExecuteTime);
-            return this;
+
+        public Builder nextExecuteTime(String nextExecuteTime) {
+            return nextExecuteTime(Output.of(nextExecuteTime));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder timeOfDay(Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay) {
-            this.timeOfDay = Objects.requireNonNull(timeOfDay);
+            $.timeOfDay = timeOfDay;
             return this;
         }
+
         public Builder timeOfDay(PatchDeploymentRecurringScheduleTimeOfDayGetArgs timeOfDay) {
-            this.timeOfDay = Output.of(Objects.requireNonNull(timeOfDay));
-            return this;
+            return timeOfDay(Output.of(timeOfDay));
         }
+
         public Builder timeZone(Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
         }
+
         public Builder timeZone(PatchDeploymentRecurringScheduleTimeZoneGetArgs timeZone) {
-            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
-            return this;
+            return timeZone(Output.of(timeZone));
         }
+
         public Builder weekly(@Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly) {
-            this.weekly = weekly;
+            $.weekly = weekly;
             return this;
         }
-        public Builder weekly(@Nullable PatchDeploymentRecurringScheduleWeeklyGetArgs weekly) {
-            this.weekly = Codegen.ofNullable(weekly);
-            return this;
-        }        public PatchDeploymentRecurringScheduleGetArgs build() {
-            return new PatchDeploymentRecurringScheduleGetArgs(endTime, lastExecuteTime, monthly, nextExecuteTime, startTime, timeOfDay, timeZone, weekly);
+
+        public Builder weekly(PatchDeploymentRecurringScheduleWeeklyGetArgs weekly) {
+            return weekly(Output.of(weekly));
+        }
+
+        public PatchDeploymentRecurringScheduleGetArgs build() {
+            $.timeOfDay = Objects.requireNonNull($.timeOfDay, "expected parameter 'timeOfDay' to be non-null");
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            return $;
         }
     }
+
 }

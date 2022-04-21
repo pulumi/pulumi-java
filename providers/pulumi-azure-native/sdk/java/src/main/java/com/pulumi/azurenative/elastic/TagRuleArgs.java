@@ -6,9 +6,9 @@ package com.pulumi.azurenative.elastic;
 import com.pulumi.azurenative.elastic.inputs.MonitoringTagRulesPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitorName", required=true)
-      private final Output<String> monitorName;
+    private Output<String> monitorName;
 
     public Output<String> monitorName() {
         return this.monitorName;
@@ -32,10 +32,10 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
+    private @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
 
-    public Output<MonitoringTagRulesPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<MonitoringTagRulesPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,80 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleSetName")
-      private final @Nullable Output<String> ruleSetName;
+    private @Nullable Output<String> ruleSetName;
 
-    public Output<String> ruleSetName() {
-        return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
+    public Optional<Output<String>> ruleSetName() {
+        return Optional.ofNullable(this.ruleSetName);
     }
 
-    public TagRuleArgs(
-        Output<String> monitorName,
-        @Nullable Output<MonitoringTagRulesPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleSetName) {
-        this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleSetName = ruleSetName;
-    }
+    private TagRuleArgs() {}
 
-    private TagRuleArgs() {
-        this.monitorName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleSetName = Codegen.empty();
+    private TagRuleArgs(TagRuleArgs $) {
+        this.monitorName = $.monitorName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleSetName = $.ruleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> monitorName;
-        private @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleSetName;
+        private TagRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagRuleArgs();
         }
 
         public Builder(TagRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monitorName = defaults.monitorName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleSetName = defaults.ruleSetName;
+            $ = new TagRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monitorName(Output<String> monitorName) {
-            this.monitorName = Objects.requireNonNull(monitorName);
+            $.monitorName = monitorName;
             return this;
         }
+
         public Builder monitorName(String monitorName) {
-            this.monitorName = Output.of(Objects.requireNonNull(monitorName));
-            return this;
+            return monitorName(Output.of(monitorName));
         }
+
         public Builder properties(@Nullable Output<MonitoringTagRulesPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable MonitoringTagRulesPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(MonitoringTagRulesPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
-            this.ruleSetName = ruleSetName;
+            $.ruleSetName = ruleSetName;
             return this;
         }
-        public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Codegen.ofNullable(ruleSetName);
-            return this;
-        }        public TagRuleArgs build() {
-            return new TagRuleArgs(monitorName, properties, resourceGroupName, ruleSetName);
+
+        public Builder ruleSetName(String ruleSetName) {
+            return ruleSetName(Output.of(ruleSetName));
+        }
+
+        public TagRuleArgs build() {
+            $.monitorName = Objects.requireNonNull($.monitorName, "expected parameter 'monitorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

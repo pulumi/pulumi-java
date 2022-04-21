@@ -5,10 +5,10 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class SegmentSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="individualSegments", required=true)
-      private final Output<Boolean> individualSegments;
+    private Output<Boolean> individualSegments;
 
     public Output<Boolean> individualSegments() {
         return this.individualSegments;
@@ -36,63 +36,59 @@ public final class SegmentSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="segmentDuration")
-      private final @Nullable Output<String> segmentDuration;
+    private @Nullable Output<String> segmentDuration;
 
-    public Output<String> segmentDuration() {
-        return this.segmentDuration == null ? Codegen.empty() : this.segmentDuration;
+    public Optional<Output<String>> segmentDuration() {
+        return Optional.ofNullable(this.segmentDuration);
     }
 
-    public SegmentSettingsArgs(
-        Output<Boolean> individualSegments,
-        @Nullable Output<String> segmentDuration) {
-        this.individualSegments = Objects.requireNonNull(individualSegments, "expected parameter 'individualSegments' to be non-null");
-        this.segmentDuration = segmentDuration;
-    }
+    private SegmentSettingsArgs() {}
 
-    private SegmentSettingsArgs() {
-        this.individualSegments = Codegen.empty();
-        this.segmentDuration = Codegen.empty();
+    private SegmentSettingsArgs(SegmentSettingsArgs $) {
+        this.individualSegments = $.individualSegments;
+        this.segmentDuration = $.segmentDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SegmentSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> individualSegments;
-        private @Nullable Output<String> segmentDuration;
+        private SegmentSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SegmentSettingsArgs();
         }
 
         public Builder(SegmentSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.individualSegments = defaults.individualSegments;
-    	      this.segmentDuration = defaults.segmentDuration;
+            $ = new SegmentSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder individualSegments(Output<Boolean> individualSegments) {
-            this.individualSegments = Objects.requireNonNull(individualSegments);
+            $.individualSegments = individualSegments;
             return this;
         }
+
         public Builder individualSegments(Boolean individualSegments) {
-            this.individualSegments = Output.of(Objects.requireNonNull(individualSegments));
-            return this;
+            return individualSegments(Output.of(individualSegments));
         }
+
         public Builder segmentDuration(@Nullable Output<String> segmentDuration) {
-            this.segmentDuration = segmentDuration;
+            $.segmentDuration = segmentDuration;
             return this;
         }
-        public Builder segmentDuration(@Nullable String segmentDuration) {
-            this.segmentDuration = Codegen.ofNullable(segmentDuration);
-            return this;
-        }        public SegmentSettingsArgs build() {
-            return new SegmentSettingsArgs(individualSegments, segmentDuration);
+
+        public Builder segmentDuration(String segmentDuration) {
+            return segmentDuration(Output.of(segmentDuration));
+        }
+
+        public SegmentSettingsArgs build() {
+            $.individualSegments = Objects.requireNonNull($.individualSegments, "expected parameter 'individualSegments' to be non-null");
+            return $;
         }
     }
+
 }

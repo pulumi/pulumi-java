@@ -6,7 +6,6 @@ package com.pulumi.awsnative.devopsguru;
 import com.pulumi.awsnative.devopsguru.inputs.NotificationChannelConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     public static final NotificationChannelArgs Empty = new NotificationChannelArgs();
 
     @Import(name="config", required=true)
-      private final Output<NotificationChannelConfigArgs> config;
+    private Output<NotificationChannelConfigArgs> config;
 
     public Output<NotificationChannelConfigArgs> config() {
         return this.config;
     }
 
-    public NotificationChannelArgs(Output<NotificationChannelConfigArgs> config) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-    }
+    private NotificationChannelArgs() {}
 
-    private NotificationChannelArgs() {
-        this.config = Codegen.empty();
+    private NotificationChannelArgs(NotificationChannelArgs $) {
+        this.config = $.config;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<NotificationChannelConfigArgs> config;
+        private NotificationChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationChannelArgs();
         }
 
         public Builder(NotificationChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
+            $ = new NotificationChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(Output<NotificationChannelConfigArgs> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(NotificationChannelConfigArgs config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
-        }        public NotificationChannelArgs build() {
-            return new NotificationChannelArgs(config);
+            return config(Output.of(config));
+        }
+
+        public NotificationChannelArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.acm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CertificateValidationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificateArn", required=true)
-      private final Output<String> certificateArn;
+    private Output<String> certificateArn;
 
     public Output<String> certificateArn() {
         return this.certificateArn;
@@ -32,66 +32,63 @@ public final class CertificateValidationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="validationRecordFqdns")
-      private final @Nullable Output<List<String>> validationRecordFqdns;
+    private @Nullable Output<List<String>> validationRecordFqdns;
 
-    public Output<List<String>> validationRecordFqdns() {
-        return this.validationRecordFqdns == null ? Codegen.empty() : this.validationRecordFqdns;
+    public Optional<Output<List<String>>> validationRecordFqdns() {
+        return Optional.ofNullable(this.validationRecordFqdns);
     }
 
-    public CertificateValidationArgs(
-        Output<String> certificateArn,
-        @Nullable Output<List<String>> validationRecordFqdns) {
-        this.certificateArn = Objects.requireNonNull(certificateArn, "expected parameter 'certificateArn' to be non-null");
-        this.validationRecordFqdns = validationRecordFqdns;
-    }
+    private CertificateValidationArgs() {}
 
-    private CertificateValidationArgs() {
-        this.certificateArn = Codegen.empty();
-        this.validationRecordFqdns = Codegen.empty();
+    private CertificateValidationArgs(CertificateValidationArgs $) {
+        this.certificateArn = $.certificateArn;
+        this.validationRecordFqdns = $.validationRecordFqdns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateValidationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateArn;
-        private @Nullable Output<List<String>> validationRecordFqdns;
+        private CertificateValidationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateValidationArgs();
         }
 
         public Builder(CertificateValidationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.validationRecordFqdns = defaults.validationRecordFqdns;
+            $ = new CertificateValidationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(Output<String> certificateArn) {
-            this.certificateArn = Objects.requireNonNull(certificateArn);
+            $.certificateArn = certificateArn;
             return this;
         }
+
         public Builder certificateArn(String certificateArn) {
-            this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
-            return this;
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder validationRecordFqdns(@Nullable Output<List<String>> validationRecordFqdns) {
-            this.validationRecordFqdns = validationRecordFqdns;
+            $.validationRecordFqdns = validationRecordFqdns;
             return this;
         }
-        public Builder validationRecordFqdns(@Nullable List<String> validationRecordFqdns) {
-            this.validationRecordFqdns = Codegen.ofNullable(validationRecordFqdns);
-            return this;
+
+        public Builder validationRecordFqdns(List<String> validationRecordFqdns) {
+            return validationRecordFqdns(Output.of(validationRecordFqdns));
         }
+
         public Builder validationRecordFqdns(String... validationRecordFqdns) {
             return validationRecordFqdns(List.of(validationRecordFqdns));
-        }        public CertificateValidationArgs build() {
-            return new CertificateValidationArgs(certificateArn, validationRecordFqdns);
+        }
+
+        public CertificateValidationArgs build() {
+            $.certificateArn = Objects.requireNonNull($.certificateArn, "expected parameter 'certificateArn' to be non-null");
+            return $;
         }
     }
+
 }

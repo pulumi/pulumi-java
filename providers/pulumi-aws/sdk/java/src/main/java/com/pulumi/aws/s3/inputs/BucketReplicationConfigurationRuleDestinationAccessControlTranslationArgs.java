@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BucketReplicationConfigurationRuleDestinationAccessControlTra
      * 
      */
     @Import(name="owner", required=true)
-      private final Output<String> owner;
+    private Output<String> owner;
 
     public Output<String> owner() {
         return this.owner;
     }
 
-    public BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs(Output<String> owner) {
-        this.owner = Objects.requireNonNull(owner, "expected parameter 'owner' to be non-null");
-    }
+    private BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs() {}
 
-    private BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs() {
-        this.owner = Codegen.empty();
+    private BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs(BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs $) {
+        this.owner = $.owner;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> owner;
+        private BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs();
         }
 
         public Builder(BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.owner = defaults.owner;
+            $ = new BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder owner(Output<String> owner) {
-            this.owner = Objects.requireNonNull(owner);
+            $.owner = owner;
             return this;
         }
+
         public Builder owner(String owner) {
-            this.owner = Output.of(Objects.requireNonNull(owner));
-            return this;
-        }        public BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs build() {
-            return new BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs(owner);
+            return owner(Output.of(owner));
+        }
+
+        public BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs build() {
+            $.owner = Objects.requireNonNull($.owner, "expected parameter 'owner' to be non-null");
+            return $;
         }
     }
+
 }

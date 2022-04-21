@@ -25,10 +25,10 @@ public final class RetentionDurationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,55 +36,50 @@ public final class RetentionDurationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="durationType")
-      private final @Nullable String durationType;
+    private @Nullable String durationType;
 
     public Optional<String> durationType() {
-        return this.durationType == null ? Optional.empty() : Optional.ofNullable(this.durationType);
+        return Optional.ofNullable(this.durationType);
     }
 
-    public RetentionDurationResponse(
-        @Nullable Integer count,
-        @Nullable String durationType) {
-        this.count = count;
-        this.durationType = durationType;
-    }
+    private RetentionDurationResponse() {}
 
-    private RetentionDurationResponse() {
-        this.count = null;
-        this.durationType = null;
+    private RetentionDurationResponse(RetentionDurationResponse $) {
+        this.count = $.count;
+        this.durationType = $.durationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionDurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer count;
-        private @Nullable String durationType;
+        private RetentionDurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionDurationResponse();
         }
 
         public Builder(RetentionDurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.durationType = defaults.durationType;
+            $ = new RetentionDurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder durationType(@Nullable String durationType) {
-            this.durationType = durationType;
+            $.durationType = durationType;
             return this;
-        }        public RetentionDurationResponse build() {
-            return new RetentionDurationResponse(count, durationType);
+        }
+
+        public RetentionDurationResponse build() {
+            return $;
         }
     }
+
 }

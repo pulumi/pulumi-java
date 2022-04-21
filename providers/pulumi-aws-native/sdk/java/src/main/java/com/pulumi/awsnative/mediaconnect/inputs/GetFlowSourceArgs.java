@@ -17,45 +17,45 @@ public final class GetFlowSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceArn", required=true)
-      private final String sourceArn;
+    private String sourceArn;
 
     public String sourceArn() {
         return this.sourceArn;
     }
 
-    public GetFlowSourceArgs(String sourceArn) {
-        this.sourceArn = Objects.requireNonNull(sourceArn, "expected parameter 'sourceArn' to be non-null");
-    }
+    private GetFlowSourceArgs() {}
 
-    private GetFlowSourceArgs() {
-        this.sourceArn = null;
+    private GetFlowSourceArgs(GetFlowSourceArgs $) {
+        this.sourceArn = $.sourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFlowSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sourceArn;
+        private GetFlowSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFlowSourceArgs();
         }
 
         public Builder(GetFlowSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceArn = defaults.sourceArn;
+            $ = new GetFlowSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceArn(String sourceArn) {
-            this.sourceArn = Objects.requireNonNull(sourceArn);
+            $.sourceArn = sourceArn;
             return this;
-        }        public GetFlowSourceArgs build() {
-            return new GetFlowSourceArgs(sourceArn);
+        }
+
+        public GetFlowSourceArgs build() {
+            $.sourceArn = Objects.requireNonNull($.sourceArn, "expected parameter 'sourceArn' to be non-null");
+            return $;
         }
     }
+
 }

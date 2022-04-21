@@ -16,62 +16,57 @@ public final class DeliveryStreamDynamicPartitioningConfiguration extends com.pu
     public static final DeliveryStreamDynamicPartitioningConfiguration Empty = new DeliveryStreamDynamicPartitioningConfiguration();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="retryOptions")
-      private final @Nullable DeliveryStreamRetryOptions retryOptions;
+    private @Nullable DeliveryStreamRetryOptions retryOptions;
 
     public Optional<DeliveryStreamRetryOptions> retryOptions() {
-        return this.retryOptions == null ? Optional.empty() : Optional.ofNullable(this.retryOptions);
+        return Optional.ofNullable(this.retryOptions);
     }
 
-    public DeliveryStreamDynamicPartitioningConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable DeliveryStreamRetryOptions retryOptions) {
-        this.enabled = enabled;
-        this.retryOptions = retryOptions;
-    }
+    private DeliveryStreamDynamicPartitioningConfiguration() {}
 
-    private DeliveryStreamDynamicPartitioningConfiguration() {
-        this.enabled = null;
-        this.retryOptions = null;
+    private DeliveryStreamDynamicPartitioningConfiguration(DeliveryStreamDynamicPartitioningConfiguration $) {
+        this.enabled = $.enabled;
+        this.retryOptions = $.retryOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamDynamicPartitioningConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable DeliveryStreamRetryOptions retryOptions;
+        private DeliveryStreamDynamicPartitioningConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamDynamicPartitioningConfiguration();
         }
 
         public Builder(DeliveryStreamDynamicPartitioningConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.retryOptions = defaults.retryOptions;
+            $ = new DeliveryStreamDynamicPartitioningConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder retryOptions(@Nullable DeliveryStreamRetryOptions retryOptions) {
-            this.retryOptions = retryOptions;
+            $.retryOptions = retryOptions;
             return this;
-        }        public DeliveryStreamDynamicPartitioningConfiguration build() {
-            return new DeliveryStreamDynamicPartitioningConfiguration(enabled, retryOptions);
+        }
+
+        public DeliveryStreamDynamicPartitioningConfiguration build() {
+            return $;
         }
     }
+
 }

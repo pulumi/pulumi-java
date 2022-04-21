@@ -19,45 +19,44 @@ public final class RuleGroupRuleActionCountProperties extends com.pulumi.resourc
     public static final RuleGroupRuleActionCountProperties Empty = new RuleGroupRuleActionCountProperties();
 
     @Import(name="customRequestHandling")
-      private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
+    private @Nullable RuleGroupCustomRequestHandling customRequestHandling;
 
     public Optional<RuleGroupCustomRequestHandling> customRequestHandling() {
-        return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public RuleGroupRuleActionCountProperties(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private RuleGroupRuleActionCountProperties() {}
 
-    private RuleGroupRuleActionCountProperties() {
-        this.customRequestHandling = null;
+    private RuleGroupRuleActionCountProperties(RuleGroupRuleActionCountProperties $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleActionCountProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RuleGroupCustomRequestHandling customRequestHandling;
+        private RuleGroupRuleActionCountProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleActionCountProperties();
         }
 
         public Builder(RuleGroupRuleActionCountProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new RuleGroupRuleActionCountProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
-        }        public RuleGroupRuleActionCountProperties build() {
-            return new RuleGroupRuleActionCountProperties(customRequestHandling);
+        }
+
+        public RuleGroupRuleActionCountProperties build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class TopologySelectorLabelRequirementArgs extends com.pulumi.resou
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -35,66 +34,64 @@ public final class TopologySelectorLabelRequirementArgs extends com.pulumi.resou
      * 
      */
     @Import(name="values", required=true)
-      private final Output<List<String>> values;
+    private Output<List<String>> values;
 
     public Output<List<String>> values() {
         return this.values;
     }
 
-    public TopologySelectorLabelRequirementArgs(
-        Output<String> key,
-        Output<List<String>> values) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private TopologySelectorLabelRequirementArgs() {}
 
-    private TopologySelectorLabelRequirementArgs() {
-        this.key = Codegen.empty();
-        this.values = Codegen.empty();
+    private TopologySelectorLabelRequirementArgs(TopologySelectorLabelRequirementArgs $) {
+        this.key = $.key;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopologySelectorLabelRequirementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private Output<List<String>> values;
+        private TopologySelectorLabelRequirementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopologySelectorLabelRequirementArgs();
         }
 
         public Builder(TopologySelectorLabelRequirementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.values = defaults.values;
+            $ = new TopologySelectorLabelRequirementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder values(Output<List<String>> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Output.of(Objects.requireNonNull(values));
-            return this;
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public TopologySelectorLabelRequirementArgs build() {
-            return new TopologySelectorLabelRequirementArgs(key, values);
+        }
+
+        public TopologySelectorLabelRequirementArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

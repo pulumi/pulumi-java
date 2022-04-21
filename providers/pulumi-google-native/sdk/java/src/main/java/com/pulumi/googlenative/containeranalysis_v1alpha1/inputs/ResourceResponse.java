@@ -22,7 +22,7 @@ public final class ResourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentHash", required=true)
-      private final HashResponse contentHash;
+    private HashResponse contentHash;
 
     public HashResponse contentHash() {
         return this.contentHash;
@@ -33,7 +33,7 @@ public final class ResourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -44,64 +44,59 @@ public final class ResourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public ResourceResponse(
-        HashResponse contentHash,
-        String name,
-        String uri) {
-        this.contentHash = Objects.requireNonNull(contentHash, "expected parameter 'contentHash' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ResourceResponse() {}
 
-    private ResourceResponse() {
-        this.contentHash = null;
-        this.name = null;
-        this.uri = null;
+    private ResourceResponse(ResourceResponse $) {
+        this.contentHash = $.contentHash;
+        this.name = $.name;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private HashResponse contentHash;
-        private String name;
-        private String uri;
+        private ResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceResponse();
         }
 
         public Builder(ResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentHash = defaults.contentHash;
-    	      this.name = defaults.name;
-    	      this.uri = defaults.uri;
+            $ = new ResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentHash(HashResponse contentHash) {
-            this.contentHash = Objects.requireNonNull(contentHash);
+            $.contentHash = contentHash;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public ResourceResponse build() {
-            return new ResourceResponse(contentHash, name, uri);
+        }
+
+        public ResourceResponse build() {
+            $.contentHash = Objects.requireNonNull($.contentHash, "expected parameter 'contentHash' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DataLakeAnalyticsPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="dataLakeStoreAccountName")
-      private final @Nullable Output<String> dataLakeStoreAccountName;
+    private @Nullable Output<String> dataLakeStoreAccountName;
 
-    public Output<String> dataLakeStoreAccountName() {
-        return this.dataLakeStoreAccountName == null ? Codegen.empty() : this.dataLakeStoreAccountName;
+    public Optional<Output<String>> dataLakeStoreAccountName() {
+        return Optional.ofNullable(this.dataLakeStoreAccountName);
     }
 
-    public DataLakeAnalyticsPropertiesArgs(@Nullable Output<String> dataLakeStoreAccountName) {
-        this.dataLakeStoreAccountName = dataLakeStoreAccountName;
-    }
+    private DataLakeAnalyticsPropertiesArgs() {}
 
-    private DataLakeAnalyticsPropertiesArgs() {
-        this.dataLakeStoreAccountName = Codegen.empty();
+    private DataLakeAnalyticsPropertiesArgs(DataLakeAnalyticsPropertiesArgs $) {
+        this.dataLakeStoreAccountName = $.dataLakeStoreAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataLakeAnalyticsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataLakeStoreAccountName;
+        private DataLakeAnalyticsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataLakeAnalyticsPropertiesArgs();
         }
 
         public Builder(DataLakeAnalyticsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataLakeStoreAccountName = defaults.dataLakeStoreAccountName;
+            $ = new DataLakeAnalyticsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataLakeStoreAccountName(@Nullable Output<String> dataLakeStoreAccountName) {
-            this.dataLakeStoreAccountName = dataLakeStoreAccountName;
+            $.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
         }
-        public Builder dataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
-            this.dataLakeStoreAccountName = Codegen.ofNullable(dataLakeStoreAccountName);
-            return this;
-        }        public DataLakeAnalyticsPropertiesArgs build() {
-            return new DataLakeAnalyticsPropertiesArgs(dataLakeStoreAccountName);
+
+        public Builder dataLakeStoreAccountName(String dataLakeStoreAccountName) {
+            return dataLakeStoreAccountName(Output.of(dataLakeStoreAccountName));
+        }
+
+        public DataLakeAnalyticsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

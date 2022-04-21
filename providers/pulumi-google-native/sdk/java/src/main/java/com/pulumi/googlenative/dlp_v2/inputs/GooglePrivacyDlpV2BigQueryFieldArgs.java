@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends com.pulumi.resour
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
+    private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> field() {
+        return Optional.ofNullable(this.field);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends com.pulumi.resour
      * 
      */
     @Import(name="table")
-      private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
+    private @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
-    public Output<GooglePrivacyDlpV2BigQueryTableArgs> table() {
-        return this.table == null ? Codegen.empty() : this.table;
+    public Optional<Output<GooglePrivacyDlpV2BigQueryTableArgs>> table() {
+        return Optional.ofNullable(this.table);
     }
 
-    public GooglePrivacyDlpV2BigQueryFieldArgs(
-        @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field,
-        @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
-        this.field = field;
-        this.table = table;
-    }
+    private GooglePrivacyDlpV2BigQueryFieldArgs() {}
 
-    private GooglePrivacyDlpV2BigQueryFieldArgs() {
-        this.field = Codegen.empty();
-        this.table = Codegen.empty();
+    private GooglePrivacyDlpV2BigQueryFieldArgs(GooglePrivacyDlpV2BigQueryFieldArgs $) {
+        this.field = $.field;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2BigQueryFieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
-        private @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
+        private GooglePrivacyDlpV2BigQueryFieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2BigQueryFieldArgs();
         }
 
         public Builder(GooglePrivacyDlpV2BigQueryFieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.table = defaults.table;
+            $ = new GooglePrivacyDlpV2BigQueryFieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
+
+        public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
+            return field(Output.of(field));
         }
+
         public Builder table(@Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
-        public Builder table(@Nullable GooglePrivacyDlpV2BigQueryTableArgs table) {
-            this.table = Codegen.ofNullable(table);
-            return this;
-        }        public GooglePrivacyDlpV2BigQueryFieldArgs build() {
-            return new GooglePrivacyDlpV2BigQueryFieldArgs(field, table);
+
+        public Builder table(GooglePrivacyDlpV2BigQueryTableArgs table) {
+            return table(Output.of(table));
+        }
+
+        public GooglePrivacyDlpV2BigQueryFieldArgs build() {
+            return $;
         }
     }
+
 }

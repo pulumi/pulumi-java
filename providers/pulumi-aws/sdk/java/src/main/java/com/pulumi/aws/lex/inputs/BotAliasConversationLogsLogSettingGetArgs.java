@@ -5,9 +5,9 @@ package com.pulumi.aws.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class BotAliasConversationLogsLogSettingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
@@ -31,10 +31,10 @@ public final class BotAliasConversationLogsLogSettingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class BotAliasConversationLogsLogSettingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="logType", required=true)
-      private final Output<String> logType;
+    private Output<String> logType;
 
     public Output<String> logType() {
         return this.logType;
@@ -53,7 +53,7 @@ public final class BotAliasConversationLogsLogSettingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
@@ -64,102 +64,91 @@ public final class BotAliasConversationLogsLogSettingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="resourcePrefix")
-      private final @Nullable Output<String> resourcePrefix;
+    private @Nullable Output<String> resourcePrefix;
 
-    public Output<String> resourcePrefix() {
-        return this.resourcePrefix == null ? Codegen.empty() : this.resourcePrefix;
+    public Optional<Output<String>> resourcePrefix() {
+        return Optional.ofNullable(this.resourcePrefix);
     }
 
-    public BotAliasConversationLogsLogSettingGetArgs(
-        Output<String> destination,
-        @Nullable Output<String> kmsKeyArn,
-        Output<String> logType,
-        Output<String> resourceArn,
-        @Nullable Output<String> resourcePrefix) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.kmsKeyArn = kmsKeyArn;
-        this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-        this.resourcePrefix = resourcePrefix;
-    }
+    private BotAliasConversationLogsLogSettingGetArgs() {}
 
-    private BotAliasConversationLogsLogSettingGetArgs() {
-        this.destination = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
-        this.logType = Codegen.empty();
-        this.resourceArn = Codegen.empty();
-        this.resourcePrefix = Codegen.empty();
+    private BotAliasConversationLogsLogSettingGetArgs(BotAliasConversationLogsLogSettingGetArgs $) {
+        this.destination = $.destination;
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.logType = $.logType;
+        this.resourceArn = $.resourceArn;
+        this.resourcePrefix = $.resourcePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasConversationLogsLogSettingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destination;
-        private @Nullable Output<String> kmsKeyArn;
-        private Output<String> logType;
-        private Output<String> resourceArn;
-        private @Nullable Output<String> resourcePrefix;
+        private BotAliasConversationLogsLogSettingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasConversationLogsLogSettingGetArgs();
         }
 
         public Builder(BotAliasConversationLogsLogSettingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.logType = defaults.logType;
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.resourcePrefix = defaults.resourcePrefix;
+            $ = new BotAliasConversationLogsLogSettingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder logType(Output<String> logType) {
-            this.logType = Objects.requireNonNull(logType);
+            $.logType = logType;
             return this;
         }
+
         public Builder logType(String logType) {
-            this.logType = Output.of(Objects.requireNonNull(logType));
-            return this;
+            return logType(Output.of(logType));
         }
+
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
+            return resourceArn(Output.of(resourceArn));
         }
+
         public Builder resourcePrefix(@Nullable Output<String> resourcePrefix) {
-            this.resourcePrefix = resourcePrefix;
+            $.resourcePrefix = resourcePrefix;
             return this;
         }
-        public Builder resourcePrefix(@Nullable String resourcePrefix) {
-            this.resourcePrefix = Codegen.ofNullable(resourcePrefix);
-            return this;
-        }        public BotAliasConversationLogsLogSettingGetArgs build() {
-            return new BotAliasConversationLogsLogSettingGetArgs(destination, kmsKeyArn, logType, resourceArn, resourcePrefix);
+
+        public Builder resourcePrefix(String resourcePrefix) {
+            return resourcePrefix(Output.of(resourcePrefix));
+        }
+
+        public BotAliasConversationLogsLogSettingGetArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.logType = Objects.requireNonNull($.logType, "expected parameter 'logType' to be non-null");
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            return $;
         }
     }
+
 }

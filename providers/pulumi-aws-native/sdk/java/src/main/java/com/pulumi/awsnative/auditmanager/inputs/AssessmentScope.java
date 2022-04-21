@@ -25,10 +25,10 @@ public final class AssessmentScope extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="awsAccounts")
-      private final @Nullable List<AssessmentAWSAccount> awsAccounts;
+    private @Nullable List<AssessmentAWSAccount> awsAccounts;
 
-    public List<AssessmentAWSAccount> awsAccounts() {
-        return this.awsAccounts == null ? List.of() : this.awsAccounts;
+    public Optional<List<AssessmentAWSAccount>> awsAccounts() {
+        return Optional.ofNullable(this.awsAccounts);
     }
 
     /**
@@ -36,61 +36,58 @@ public final class AssessmentScope extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="awsServices")
-      private final @Nullable List<AssessmentAWSService> awsServices;
+    private @Nullable List<AssessmentAWSService> awsServices;
 
-    public List<AssessmentAWSService> awsServices() {
-        return this.awsServices == null ? List.of() : this.awsServices;
+    public Optional<List<AssessmentAWSService>> awsServices() {
+        return Optional.ofNullable(this.awsServices);
     }
 
-    public AssessmentScope(
-        @Nullable List<AssessmentAWSAccount> awsAccounts,
-        @Nullable List<AssessmentAWSService> awsServices) {
-        this.awsAccounts = awsAccounts;
-        this.awsServices = awsServices;
-    }
+    private AssessmentScope() {}
 
-    private AssessmentScope() {
-        this.awsAccounts = List.of();
-        this.awsServices = List.of();
+    private AssessmentScope(AssessmentScope $) {
+        this.awsAccounts = $.awsAccounts;
+        this.awsServices = $.awsServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentScope defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AssessmentAWSAccount> awsAccounts;
-        private @Nullable List<AssessmentAWSService> awsServices;
+        private AssessmentScope $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentScope();
         }
 
         public Builder(AssessmentScope defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccounts = defaults.awsAccounts;
-    	      this.awsServices = defaults.awsServices;
+            $ = new AssessmentScope(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccounts(@Nullable List<AssessmentAWSAccount> awsAccounts) {
-            this.awsAccounts = awsAccounts;
+            $.awsAccounts = awsAccounts;
             return this;
         }
+
         public Builder awsAccounts(AssessmentAWSAccount... awsAccounts) {
             return awsAccounts(List.of(awsAccounts));
         }
+
         public Builder awsServices(@Nullable List<AssessmentAWSService> awsServices) {
-            this.awsServices = awsServices;
+            $.awsServices = awsServices;
             return this;
         }
+
         public Builder awsServices(AssessmentAWSService... awsServices) {
             return awsServices(List.of(awsServices));
-        }        public AssessmentScope build() {
-            return new AssessmentScope(awsAccounts, awsServices);
+        }
+
+        public AssessmentScope build() {
+            return $;
         }
     }
+
 }

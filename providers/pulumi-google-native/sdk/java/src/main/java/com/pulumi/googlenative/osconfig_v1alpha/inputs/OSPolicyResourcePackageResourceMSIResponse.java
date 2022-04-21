@@ -23,7 +23,7 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends com.pulumi
      * 
      */
     @Import(name="properties", required=true)
-      private final List<String> properties;
+    private List<String> properties;
 
     public List<String> properties() {
         return this.properties;
@@ -34,58 +34,56 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends com.pulumi
      * 
      */
     @Import(name="source", required=true)
-      private final OSPolicyResourceFileResponse source;
+    private OSPolicyResourceFileResponse source;
 
     public OSPolicyResourceFileResponse source() {
         return this.source;
     }
 
-    public OSPolicyResourcePackageResourceMSIResponse(
-        List<String> properties,
-        OSPolicyResourceFileResponse source) {
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private OSPolicyResourcePackageResourceMSIResponse() {}
 
-    private OSPolicyResourcePackageResourceMSIResponse() {
-        this.properties = List.of();
-        this.source = null;
+    private OSPolicyResourcePackageResourceMSIResponse(OSPolicyResourcePackageResourceMSIResponse $) {
+        this.properties = $.properties;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourcePackageResourceMSIResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> properties;
-        private OSPolicyResourceFileResponse source;
+        private OSPolicyResourcePackageResourceMSIResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourcePackageResourceMSIResponse();
         }
 
         public Builder(OSPolicyResourcePackageResourceMSIResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.source = defaults.source;
+            $ = new OSPolicyResourcePackageResourceMSIResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(List<String> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(String... properties) {
             return properties(List.of(properties));
         }
+
         public Builder source(OSPolicyResourceFileResponse source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
-        }        public OSPolicyResourcePackageResourceMSIResponse build() {
-            return new OSPolicyResourcePackageResourceMSIResponse(properties, source);
+        }
+
+        public OSPolicyResourcePackageResourceMSIResponse build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

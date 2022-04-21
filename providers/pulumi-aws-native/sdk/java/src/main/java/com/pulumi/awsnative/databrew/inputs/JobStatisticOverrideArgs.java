@@ -6,7 +6,6 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.JobParameterMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,70 +15,67 @@ public final class JobStatisticOverrideArgs extends com.pulumi.resources.Resourc
     public static final JobStatisticOverrideArgs Empty = new JobStatisticOverrideArgs();
 
     @Import(name="parameters", required=true)
-      private final Output<JobParameterMapArgs> parameters;
+    private Output<JobParameterMapArgs> parameters;
 
     public Output<JobParameterMapArgs> parameters() {
         return this.parameters;
     }
 
     @Import(name="statistic", required=true)
-      private final Output<String> statistic;
+    private Output<String> statistic;
 
     public Output<String> statistic() {
         return this.statistic;
     }
 
-    public JobStatisticOverrideArgs(
-        Output<JobParameterMapArgs> parameters,
-        Output<String> statistic) {
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.statistic = Objects.requireNonNull(statistic, "expected parameter 'statistic' to be non-null");
-    }
+    private JobStatisticOverrideArgs() {}
 
-    private JobStatisticOverrideArgs() {
-        this.parameters = Codegen.empty();
-        this.statistic = Codegen.empty();
+    private JobStatisticOverrideArgs(JobStatisticOverrideArgs $) {
+        this.parameters = $.parameters;
+        this.statistic = $.statistic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatisticOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<JobParameterMapArgs> parameters;
-        private Output<String> statistic;
+        private JobStatisticOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatisticOverrideArgs();
         }
 
         public Builder(JobStatisticOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.statistic = defaults.statistic;
+            $ = new JobStatisticOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(Output<JobParameterMapArgs> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(JobParameterMapArgs parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
+            return parameters(Output.of(parameters));
         }
+
         public Builder statistic(Output<String> statistic) {
-            this.statistic = Objects.requireNonNull(statistic);
+            $.statistic = statistic;
             return this;
         }
+
         public Builder statistic(String statistic) {
-            this.statistic = Output.of(Objects.requireNonNull(statistic));
-            return this;
-        }        public JobStatisticOverrideArgs build() {
-            return new JobStatisticOverrideArgs(parameters, statistic);
+            return statistic(Output.of(statistic));
+        }
+
+        public JobStatisticOverrideArgs build() {
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.statistic = Objects.requireNonNull($.statistic, "expected parameter 'statistic' to be non-null");
+            return $;
         }
     }
+
 }

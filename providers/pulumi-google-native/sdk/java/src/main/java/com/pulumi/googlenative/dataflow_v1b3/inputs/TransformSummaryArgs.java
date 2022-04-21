@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.enums.TransformSummaryKind;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="displayData")
-      private final @Nullable Output<List<DisplayDataArgs>> displayData;
+    private @Nullable Output<List<DisplayDataArgs>> displayData;
 
-    public Output<List<DisplayDataArgs>> displayData() {
-        return this.displayData == null ? Codegen.empty() : this.displayData;
+    public Optional<Output<List<DisplayDataArgs>>> displayData() {
+        return Optional.ofNullable(this.displayData);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="inputCollectionName")
-      private final @Nullable Output<List<String>> inputCollectionName;
+    private @Nullable Output<List<String>> inputCollectionName;
 
-    public Output<List<String>> inputCollectionName() {
-        return this.inputCollectionName == null ? Codegen.empty() : this.inputCollectionName;
+    public Optional<Output<List<String>>> inputCollectionName() {
+        return Optional.ofNullable(this.inputCollectionName);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<TransformSummaryKind> kind;
+    private @Nullable Output<TransformSummaryKind> kind;
 
-    public Output<TransformSummaryKind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<TransformSummaryKind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -82,124 +82,110 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="outputCollectionName")
-      private final @Nullable Output<List<String>> outputCollectionName;
+    private @Nullable Output<List<String>> outputCollectionName;
 
-    public Output<List<String>> outputCollectionName() {
-        return this.outputCollectionName == null ? Codegen.empty() : this.outputCollectionName;
+    public Optional<Output<List<String>>> outputCollectionName() {
+        return Optional.ofNullable(this.outputCollectionName);
     }
 
-    public TransformSummaryArgs(
-        @Nullable Output<List<DisplayDataArgs>> displayData,
-        @Nullable Output<String> id,
-        @Nullable Output<List<String>> inputCollectionName,
-        @Nullable Output<TransformSummaryKind> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> outputCollectionName) {
-        this.displayData = displayData;
-        this.id = id;
-        this.inputCollectionName = inputCollectionName;
-        this.kind = kind;
-        this.name = name;
-        this.outputCollectionName = outputCollectionName;
-    }
+    private TransformSummaryArgs() {}
 
-    private TransformSummaryArgs() {
-        this.displayData = Codegen.empty();
-        this.id = Codegen.empty();
-        this.inputCollectionName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.outputCollectionName = Codegen.empty();
+    private TransformSummaryArgs(TransformSummaryArgs $) {
+        this.displayData = $.displayData;
+        this.id = $.id;
+        this.inputCollectionName = $.inputCollectionName;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.outputCollectionName = $.outputCollectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransformSummaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DisplayDataArgs>> displayData;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<String>> inputCollectionName;
-        private @Nullable Output<TransformSummaryKind> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> outputCollectionName;
+        private TransformSummaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransformSummaryArgs();
         }
 
         public Builder(TransformSummaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayData = defaults.displayData;
-    	      this.id = defaults.id;
-    	      this.inputCollectionName = defaults.inputCollectionName;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.outputCollectionName = defaults.outputCollectionName;
+            $ = new TransformSummaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayData(@Nullable Output<List<DisplayDataArgs>> displayData) {
-            this.displayData = displayData;
+            $.displayData = displayData;
             return this;
         }
-        public Builder displayData(@Nullable List<DisplayDataArgs> displayData) {
-            this.displayData = Codegen.ofNullable(displayData);
-            return this;
+
+        public Builder displayData(List<DisplayDataArgs> displayData) {
+            return displayData(Output.of(displayData));
         }
+
         public Builder displayData(DisplayDataArgs... displayData) {
             return displayData(List.of(displayData));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder inputCollectionName(@Nullable Output<List<String>> inputCollectionName) {
-            this.inputCollectionName = inputCollectionName;
+            $.inputCollectionName = inputCollectionName;
             return this;
         }
-        public Builder inputCollectionName(@Nullable List<String> inputCollectionName) {
-            this.inputCollectionName = Codegen.ofNullable(inputCollectionName);
-            return this;
+
+        public Builder inputCollectionName(List<String> inputCollectionName) {
+            return inputCollectionName(Output.of(inputCollectionName));
         }
+
         public Builder inputCollectionName(String... inputCollectionName) {
             return inputCollectionName(List.of(inputCollectionName));
         }
+
         public Builder kind(@Nullable Output<TransformSummaryKind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable TransformSummaryKind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(TransformSummaryKind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder outputCollectionName(@Nullable Output<List<String>> outputCollectionName) {
-            this.outputCollectionName = outputCollectionName;
+            $.outputCollectionName = outputCollectionName;
             return this;
         }
-        public Builder outputCollectionName(@Nullable List<String> outputCollectionName) {
-            this.outputCollectionName = Codegen.ofNullable(outputCollectionName);
-            return this;
+
+        public Builder outputCollectionName(List<String> outputCollectionName) {
+            return outputCollectionName(Output.of(outputCollectionName));
         }
+
         public Builder outputCollectionName(String... outputCollectionName) {
             return outputCollectionName(List.of(outputCollectionName));
-        }        public TransformSummaryArgs build() {
-            return new TransformSummaryArgs(displayData, id, inputCollectionName, kind, name, outputCollectionName);
+        }
+
+        public TransformSummaryArgs build() {
+            return $;
         }
     }
+
 }

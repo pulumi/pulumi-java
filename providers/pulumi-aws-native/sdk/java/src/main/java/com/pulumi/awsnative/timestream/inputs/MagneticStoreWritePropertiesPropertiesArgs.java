@@ -6,9 +6,9 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.inputs.MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends com.pulumi
      * 
      */
     @Import(name="enableMagneticStoreWrites", required=true)
-      private final Output<Boolean> enableMagneticStoreWrites;
+    private Output<Boolean> enableMagneticStoreWrites;
 
     public Output<Boolean> enableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites;
@@ -36,63 +36,59 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends com.pulumi
      * 
      */
     @Import(name="magneticStoreRejectedDataLocation")
-      private final @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;
+    private @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;
 
-    public Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation() {
-        return this.magneticStoreRejectedDataLocation == null ? Codegen.empty() : this.magneticStoreRejectedDataLocation;
+    public Optional<Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs>> magneticStoreRejectedDataLocation() {
+        return Optional.ofNullable(this.magneticStoreRejectedDataLocation);
     }
 
-    public MagneticStoreWritePropertiesPropertiesArgs(
-        Output<Boolean> enableMagneticStoreWrites,
-        @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation) {
-        this.enableMagneticStoreWrites = Objects.requireNonNull(enableMagneticStoreWrites, "expected parameter 'enableMagneticStoreWrites' to be non-null");
-        this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
-    }
+    private MagneticStoreWritePropertiesPropertiesArgs() {}
 
-    private MagneticStoreWritePropertiesPropertiesArgs() {
-        this.enableMagneticStoreWrites = Codegen.empty();
-        this.magneticStoreRejectedDataLocation = Codegen.empty();
+    private MagneticStoreWritePropertiesPropertiesArgs(MagneticStoreWritePropertiesPropertiesArgs $) {
+        this.enableMagneticStoreWrites = $.enableMagneticStoreWrites;
+        this.magneticStoreRejectedDataLocation = $.magneticStoreRejectedDataLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MagneticStoreWritePropertiesPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enableMagneticStoreWrites;
-        private @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;
+        private MagneticStoreWritePropertiesPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MagneticStoreWritePropertiesPropertiesArgs();
         }
 
         public Builder(MagneticStoreWritePropertiesPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableMagneticStoreWrites = defaults.enableMagneticStoreWrites;
-    	      this.magneticStoreRejectedDataLocation = defaults.magneticStoreRejectedDataLocation;
+            $ = new MagneticStoreWritePropertiesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableMagneticStoreWrites(Output<Boolean> enableMagneticStoreWrites) {
-            this.enableMagneticStoreWrites = Objects.requireNonNull(enableMagneticStoreWrites);
+            $.enableMagneticStoreWrites = enableMagneticStoreWrites;
             return this;
         }
+
         public Builder enableMagneticStoreWrites(Boolean enableMagneticStoreWrites) {
-            this.enableMagneticStoreWrites = Output.of(Objects.requireNonNull(enableMagneticStoreWrites));
-            return this;
+            return enableMagneticStoreWrites(Output.of(enableMagneticStoreWrites));
         }
+
         public Builder magneticStoreRejectedDataLocation(@Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation) {
-            this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
+            $.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
             return this;
         }
-        public Builder magneticStoreRejectedDataLocation(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs magneticStoreRejectedDataLocation) {
-            this.magneticStoreRejectedDataLocation = Codegen.ofNullable(magneticStoreRejectedDataLocation);
-            return this;
-        }        public MagneticStoreWritePropertiesPropertiesArgs build() {
-            return new MagneticStoreWritePropertiesPropertiesArgs(enableMagneticStoreWrites, magneticStoreRejectedDataLocation);
+
+        public Builder magneticStoreRejectedDataLocation(MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs magneticStoreRejectedDataLocation) {
+            return magneticStoreRejectedDataLocation(Output.of(magneticStoreRejectedDataLocation));
+        }
+
+        public MagneticStoreWritePropertiesPropertiesArgs build() {
+            $.enableMagneticStoreWrites = Objects.requireNonNull($.enableMagneticStoreWrites, "expected parameter 'enableMagneticStoreWrites' to be non-null");
+            return $;
         }
     }
+
 }

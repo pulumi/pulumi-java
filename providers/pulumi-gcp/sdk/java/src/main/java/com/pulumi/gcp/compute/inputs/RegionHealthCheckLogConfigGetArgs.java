@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class RegionHealthCheckLogConfigGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
-    public RegionHealthCheckLogConfigGetArgs(@Nullable Output<Boolean> enable) {
-        this.enable = enable;
-    }
+    private RegionHealthCheckLogConfigGetArgs() {}
 
-    private RegionHealthCheckLogConfigGetArgs() {
-        this.enable = Codegen.empty();
+    private RegionHealthCheckLogConfigGetArgs(RegionHealthCheckLogConfigGetArgs $) {
+        this.enable = $.enable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionHealthCheckLogConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enable;
+        private RegionHealthCheckLogConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionHealthCheckLogConfigGetArgs();
         }
 
         public Builder(RegionHealthCheckLogConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
+            $ = new RegionHealthCheckLogConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
-        }        public RegionHealthCheckLogConfigGetArgs build() {
-            return new RegionHealthCheckLogConfigGetArgs(enable);
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
+        }
+
+        public RegionHealthCheckLogConfigGetArgs build() {
+            return $;
         }
     }
+
 }

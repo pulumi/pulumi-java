@@ -13,9 +13,9 @@ import com.pulumi.azurenative.eventgrid.inputs.StorageQueueEventSubscriptionDest
 import com.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class DeliveryWithResourceIdentityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<Object> destination;
+    private @Nullable Output<Object> destination;
 
-    public Output<Object> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<Object>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -44,63 +44,58 @@ public final class DeliveryWithResourceIdentityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<EventSubscriptionIdentityArgs> identity;
+    private @Nullable Output<EventSubscriptionIdentityArgs> identity;
 
-    public Output<EventSubscriptionIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<EventSubscriptionIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
-    public DeliveryWithResourceIdentityArgs(
-        @Nullable Output<Object> destination,
-        @Nullable Output<EventSubscriptionIdentityArgs> identity) {
-        this.destination = destination;
-        this.identity = identity;
-    }
+    private DeliveryWithResourceIdentityArgs() {}
 
-    private DeliveryWithResourceIdentityArgs() {
-        this.destination = Codegen.empty();
-        this.identity = Codegen.empty();
+    private DeliveryWithResourceIdentityArgs(DeliveryWithResourceIdentityArgs $) {
+        this.destination = $.destination;
+        this.identity = $.identity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryWithResourceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> destination;
-        private @Nullable Output<EventSubscriptionIdentityArgs> identity;
+        private DeliveryWithResourceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryWithResourceIdentityArgs();
         }
 
         public Builder(DeliveryWithResourceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.identity = defaults.identity;
+            $ = new DeliveryWithResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Output<Object> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable Object destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(Object destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder identity(@Nullable Output<EventSubscriptionIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable EventSubscriptionIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
-        }        public DeliveryWithResourceIdentityArgs build() {
-            return new DeliveryWithResourceIdentityArgs(destination, identity);
+
+        public Builder identity(EventSubscriptionIdentityArgs identity) {
+            return identity(Output.of(identity));
+        }
+
+        public DeliveryWithResourceIdentityArgs build() {
+            return $;
         }
     }
+
 }

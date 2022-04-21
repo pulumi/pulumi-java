@@ -24,7 +24,7 @@ public final class TimerTriggerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,7 +35,7 @@ public final class TimerTriggerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="schedule", required=true)
-      private final String schedule;
+    private String schedule;
 
     public String schedule() {
         return this.schedule;
@@ -46,64 +46,59 @@ public final class TimerTriggerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public TimerTriggerResponse(
-        String name,
-        String schedule,
-        @Nullable String status) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.status = Codegen.stringProp("status").arg(status).def("Enabled").getNullable();
-    }
+    private TimerTriggerResponse() {}
 
-    private TimerTriggerResponse() {
-        this.name = null;
-        this.schedule = null;
-        this.status = null;
+    private TimerTriggerResponse(TimerTriggerResponse $) {
+        this.name = $.name;
+        this.schedule = $.schedule;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimerTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String schedule;
-        private @Nullable String status;
+        private TimerTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimerTriggerResponse();
         }
 
         public Builder(TimerTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.schedule = defaults.schedule;
-    	      this.status = defaults.status;
+            $ = new TimerTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder schedule(String schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public TimerTriggerResponse build() {
-            return new TimerTriggerResponse(name, schedule, status);
+        }
+
+        public TimerTriggerResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            $.status = Codegen.stringProp("status").arg($.status).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

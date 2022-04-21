@@ -23,45 +23,44 @@ public final class AzureFirewallNatRCActionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public AzureFirewallNatRCActionResponse(@Nullable String type) {
-        this.type = type;
-    }
+    private AzureFirewallNatRCActionResponse() {}
 
-    private AzureFirewallNatRCActionResponse() {
-        this.type = null;
+    private AzureFirewallNatRCActionResponse(AzureFirewallNatRCActionResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallNatRCActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
+        private AzureFirewallNatRCActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallNatRCActionResponse();
         }
 
         public Builder(AzureFirewallNatRCActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new AzureFirewallNatRCActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public AzureFirewallNatRCActionResponse build() {
-            return new AzureFirewallNatRCActionResponse(type);
+        }
+
+        public AzureFirewallNatRCActionResponse build() {
+            return $;
         }
     }
+
 }

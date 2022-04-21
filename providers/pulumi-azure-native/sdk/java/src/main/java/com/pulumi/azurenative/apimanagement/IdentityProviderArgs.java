@@ -7,10 +7,10 @@ import com.pulumi.azurenative.apimanagement.enums.IdentityProviderType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="allowedTenants")
-      private final @Nullable Output<List<String>> allowedTenants;
+    private @Nullable Output<List<String>> allowedTenants;
 
-    public Output<List<String>> allowedTenants() {
-        return this.allowedTenants == null ? Codegen.empty() : this.allowedTenants;
+    public Optional<Output<List<String>>> allowedTenants() {
+        return Optional.ofNullable(this.allowedTenants);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="authority")
-      private final @Nullable Output<String> authority;
+    private @Nullable Output<String> authority;
 
-    public Output<String> authority() {
-        return this.authority == null ? Codegen.empty() : this.authority;
+    public Optional<Output<String>> authority() {
+        return Optional.ofNullable(this.authority);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -56,7 +56,7 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clientSecret", required=true)
-      private final Output<String> clientSecret;
+    private Output<String> clientSecret;
 
     public Output<String> clientSecret() {
         return this.clientSecret;
@@ -67,10 +67,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="identityProviderName")
-      private final @Nullable Output<String> identityProviderName;
+    private @Nullable Output<String> identityProviderName;
 
-    public Output<String> identityProviderName() {
-        return this.identityProviderName == null ? Codegen.empty() : this.identityProviderName;
+    public Optional<Output<String>> identityProviderName() {
+        return Optional.ofNullable(this.identityProviderName);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="passwordResetPolicyName")
-      private final @Nullable Output<String> passwordResetPolicyName;
+    private @Nullable Output<String> passwordResetPolicyName;
 
-    public Output<String> passwordResetPolicyName() {
-        return this.passwordResetPolicyName == null ? Codegen.empty() : this.passwordResetPolicyName;
+    public Optional<Output<String>> passwordResetPolicyName() {
+        return Optional.ofNullable(this.passwordResetPolicyName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="profileEditingPolicyName")
-      private final @Nullable Output<String> profileEditingPolicyName;
+    private @Nullable Output<String> profileEditingPolicyName;
 
-    public Output<String> profileEditingPolicyName() {
-        return this.profileEditingPolicyName == null ? Codegen.empty() : this.profileEditingPolicyName;
+    public Optional<Output<String>> profileEditingPolicyName() {
+        return Optional.ofNullable(this.profileEditingPolicyName);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -122,10 +122,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="signinPolicyName")
-      private final @Nullable Output<String> signinPolicyName;
+    private @Nullable Output<String> signinPolicyName;
 
-    public Output<String> signinPolicyName() {
-        return this.signinPolicyName == null ? Codegen.empty() : this.signinPolicyName;
+    public Optional<Output<String>> signinPolicyName() {
+        return Optional.ofNullable(this.signinPolicyName);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="signinTenant")
-      private final @Nullable Output<String> signinTenant;
+    private @Nullable Output<String> signinTenant;
 
-    public Output<String> signinTenant() {
-        return this.signinTenant == null ? Codegen.empty() : this.signinTenant;
+    public Optional<Output<String>> signinTenant() {
+        return Optional.ofNullable(this.signinTenant);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="signupPolicyName")
-      private final @Nullable Output<String> signupPolicyName;
+    private @Nullable Output<String> signupPolicyName;
 
-    public Output<String> signupPolicyName() {
-        return this.signupPolicyName == null ? Codegen.empty() : this.signupPolicyName;
+    public Optional<Output<String>> signupPolicyName() {
+        return Optional.ofNullable(this.signupPolicyName);
     }
 
     /**
@@ -155,209 +155,176 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,IdentityProviderType>> type;
+    private @Nullable Output<Either<String,IdentityProviderType>> type;
 
-    public Output<Either<String,IdentityProviderType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,IdentityProviderType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public IdentityProviderArgs(
-        @Nullable Output<List<String>> allowedTenants,
-        @Nullable Output<String> authority,
-        Output<String> clientId,
-        Output<String> clientSecret,
-        @Nullable Output<String> identityProviderName,
-        @Nullable Output<String> passwordResetPolicyName,
-        @Nullable Output<String> profileEditingPolicyName,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<String> signinPolicyName,
-        @Nullable Output<String> signinTenant,
-        @Nullable Output<String> signupPolicyName,
-        @Nullable Output<Either<String,IdentityProviderType>> type) {
-        this.allowedTenants = allowedTenants;
-        this.authority = authority;
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
-        this.identityProviderName = identityProviderName;
-        this.passwordResetPolicyName = passwordResetPolicyName;
-        this.profileEditingPolicyName = profileEditingPolicyName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.signinPolicyName = signinPolicyName;
-        this.signinTenant = signinTenant;
-        this.signupPolicyName = signupPolicyName;
-        this.type = type;
-    }
+    private IdentityProviderArgs() {}
 
-    private IdentityProviderArgs() {
-        this.allowedTenants = Codegen.empty();
-        this.authority = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.identityProviderName = Codegen.empty();
-        this.passwordResetPolicyName = Codegen.empty();
-        this.profileEditingPolicyName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.signinPolicyName = Codegen.empty();
-        this.signinTenant = Codegen.empty();
-        this.signupPolicyName = Codegen.empty();
-        this.type = Codegen.empty();
+    private IdentityProviderArgs(IdentityProviderArgs $) {
+        this.allowedTenants = $.allowedTenants;
+        this.authority = $.authority;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.identityProviderName = $.identityProviderName;
+        this.passwordResetPolicyName = $.passwordResetPolicyName;
+        this.profileEditingPolicyName = $.profileEditingPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.signinPolicyName = $.signinPolicyName;
+        this.signinTenant = $.signinTenant;
+        this.signupPolicyName = $.signupPolicyName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedTenants;
-        private @Nullable Output<String> authority;
-        private Output<String> clientId;
-        private Output<String> clientSecret;
-        private @Nullable Output<String> identityProviderName;
-        private @Nullable Output<String> passwordResetPolicyName;
-        private @Nullable Output<String> profileEditingPolicyName;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<String> signinPolicyName;
-        private @Nullable Output<String> signinTenant;
-        private @Nullable Output<String> signupPolicyName;
-        private @Nullable Output<Either<String,IdentityProviderType>> type;
+        private IdentityProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityProviderArgs();
         }
 
         public Builder(IdentityProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedTenants = defaults.allowedTenants;
-    	      this.authority = defaults.authority;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.identityProviderName = defaults.identityProviderName;
-    	      this.passwordResetPolicyName = defaults.passwordResetPolicyName;
-    	      this.profileEditingPolicyName = defaults.profileEditingPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.signinPolicyName = defaults.signinPolicyName;
-    	      this.signinTenant = defaults.signinTenant;
-    	      this.signupPolicyName = defaults.signupPolicyName;
-    	      this.type = defaults.type;
+            $ = new IdentityProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedTenants(@Nullable Output<List<String>> allowedTenants) {
-            this.allowedTenants = allowedTenants;
+            $.allowedTenants = allowedTenants;
             return this;
         }
-        public Builder allowedTenants(@Nullable List<String> allowedTenants) {
-            this.allowedTenants = Codegen.ofNullable(allowedTenants);
-            return this;
+
+        public Builder allowedTenants(List<String> allowedTenants) {
+            return allowedTenants(Output.of(allowedTenants));
         }
+
         public Builder allowedTenants(String... allowedTenants) {
             return allowedTenants(List.of(allowedTenants));
         }
+
         public Builder authority(@Nullable Output<String> authority) {
-            this.authority = authority;
+            $.authority = authority;
             return this;
         }
-        public Builder authority(@Nullable String authority) {
-            this.authority = Codegen.ofNullable(authority);
-            return this;
+
+        public Builder authority(String authority) {
+            return authority(Output.of(authority));
         }
+
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(Output<String> clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret);
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
-            return this;
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder identityProviderName(@Nullable Output<String> identityProviderName) {
-            this.identityProviderName = identityProviderName;
+            $.identityProviderName = identityProviderName;
             return this;
         }
-        public Builder identityProviderName(@Nullable String identityProviderName) {
-            this.identityProviderName = Codegen.ofNullable(identityProviderName);
-            return this;
+
+        public Builder identityProviderName(String identityProviderName) {
+            return identityProviderName(Output.of(identityProviderName));
         }
+
         public Builder passwordResetPolicyName(@Nullable Output<String> passwordResetPolicyName) {
-            this.passwordResetPolicyName = passwordResetPolicyName;
+            $.passwordResetPolicyName = passwordResetPolicyName;
             return this;
         }
-        public Builder passwordResetPolicyName(@Nullable String passwordResetPolicyName) {
-            this.passwordResetPolicyName = Codegen.ofNullable(passwordResetPolicyName);
-            return this;
+
+        public Builder passwordResetPolicyName(String passwordResetPolicyName) {
+            return passwordResetPolicyName(Output.of(passwordResetPolicyName));
         }
+
         public Builder profileEditingPolicyName(@Nullable Output<String> profileEditingPolicyName) {
-            this.profileEditingPolicyName = profileEditingPolicyName;
+            $.profileEditingPolicyName = profileEditingPolicyName;
             return this;
         }
-        public Builder profileEditingPolicyName(@Nullable String profileEditingPolicyName) {
-            this.profileEditingPolicyName = Codegen.ofNullable(profileEditingPolicyName);
-            return this;
+
+        public Builder profileEditingPolicyName(String profileEditingPolicyName) {
+            return profileEditingPolicyName(Output.of(profileEditingPolicyName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder signinPolicyName(@Nullable Output<String> signinPolicyName) {
-            this.signinPolicyName = signinPolicyName;
+            $.signinPolicyName = signinPolicyName;
             return this;
         }
-        public Builder signinPolicyName(@Nullable String signinPolicyName) {
-            this.signinPolicyName = Codegen.ofNullable(signinPolicyName);
-            return this;
+
+        public Builder signinPolicyName(String signinPolicyName) {
+            return signinPolicyName(Output.of(signinPolicyName));
         }
+
         public Builder signinTenant(@Nullable Output<String> signinTenant) {
-            this.signinTenant = signinTenant;
+            $.signinTenant = signinTenant;
             return this;
         }
-        public Builder signinTenant(@Nullable String signinTenant) {
-            this.signinTenant = Codegen.ofNullable(signinTenant);
-            return this;
+
+        public Builder signinTenant(String signinTenant) {
+            return signinTenant(Output.of(signinTenant));
         }
+
         public Builder signupPolicyName(@Nullable Output<String> signupPolicyName) {
-            this.signupPolicyName = signupPolicyName;
+            $.signupPolicyName = signupPolicyName;
             return this;
         }
-        public Builder signupPolicyName(@Nullable String signupPolicyName) {
-            this.signupPolicyName = Codegen.ofNullable(signupPolicyName);
-            return this;
+
+        public Builder signupPolicyName(String signupPolicyName) {
+            return signupPolicyName(Output.of(signupPolicyName));
         }
+
         public Builder type(@Nullable Output<Either<String,IdentityProviderType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,IdentityProviderType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public IdentityProviderArgs build() {
-            return new IdentityProviderArgs(allowedTenants, authority, clientId, clientSecret, identityProviderName, passwordResetPolicyName, profileEditingPolicyName, resourceGroupName, serviceName, signinPolicyName, signinTenant, signupPolicyName, type);
+
+        public Builder type(Either<String,IdentityProviderType> type) {
+            return type(Output.of(type));
+        }
+
+        public IdentityProviderArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.clientSecret = Objects.requireNonNull($.clientSecret, "expected parameter 'clientSecret' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

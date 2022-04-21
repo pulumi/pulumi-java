@@ -23,7 +23,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -34,7 +34,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="product", required=true)
-      private final String product;
+    private String product;
 
     public String product() {
         return this.product;
@@ -45,10 +45,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="promotionCode")
-      private final @Nullable String promotionCode;
+    private @Nullable String promotionCode;
 
     public Optional<String> promotionCode() {
-        return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
+        return Optional.ofNullable(this.promotionCode);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publisher", required=true)
-      private final String publisher;
+    private String publisher;
 
     public String publisher() {
         return this.publisher;
@@ -67,82 +67,72 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public PlanResponse(
-        String name,
-        String product,
-        @Nullable String promotionCode,
-        String publisher,
-        String version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.product = Objects.requireNonNull(product, "expected parameter 'product' to be non-null");
-        this.promotionCode = promotionCode;
-        this.publisher = Objects.requireNonNull(publisher, "expected parameter 'publisher' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private PlanResponse() {}
 
-    private PlanResponse() {
-        this.name = null;
-        this.product = null;
-        this.promotionCode = null;
-        this.publisher = null;
-        this.version = null;
+    private PlanResponse(PlanResponse $) {
+        this.name = $.name;
+        this.product = $.product;
+        this.promotionCode = $.promotionCode;
+        this.publisher = $.publisher;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String product;
-        private @Nullable String promotionCode;
-        private String publisher;
-        private String version;
+        private PlanResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanResponse();
         }
 
         public Builder(PlanResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.product = defaults.product;
-    	      this.promotionCode = defaults.promotionCode;
-    	      this.publisher = defaults.publisher;
-    	      this.version = defaults.version;
+            $ = new PlanResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder product(String product) {
-            this.product = Objects.requireNonNull(product);
+            $.product = product;
             return this;
         }
+
         public Builder promotionCode(@Nullable String promotionCode) {
-            this.promotionCode = promotionCode;
+            $.promotionCode = promotionCode;
             return this;
         }
+
         public Builder publisher(String publisher) {
-            this.publisher = Objects.requireNonNull(publisher);
+            $.publisher = publisher;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public PlanResponse build() {
-            return new PlanResponse(name, product, promotionCode, publisher, version);
+        }
+
+        public PlanResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.product = Objects.requireNonNull($.product, "expected parameter 'product' to be non-null");
+            $.publisher = Objects.requireNonNull($.publisher, "expected parameter 'publisher' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

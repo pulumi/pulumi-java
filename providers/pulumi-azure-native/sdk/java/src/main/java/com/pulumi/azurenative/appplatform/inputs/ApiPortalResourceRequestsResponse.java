@@ -21,7 +21,7 @@ public final class ApiPortalResourceRequestsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="cpu", required=true)
-      private final String cpu;
+    private String cpu;
 
     public String cpu() {
         return this.cpu;
@@ -32,55 +32,52 @@ public final class ApiPortalResourceRequestsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="memory", required=true)
-      private final String memory;
+    private String memory;
 
     public String memory() {
         return this.memory;
     }
 
-    public ApiPortalResourceRequestsResponse(
-        String cpu,
-        String memory) {
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.memory = Objects.requireNonNull(memory, "expected parameter 'memory' to be non-null");
-    }
+    private ApiPortalResourceRequestsResponse() {}
 
-    private ApiPortalResourceRequestsResponse() {
-        this.cpu = null;
-        this.memory = null;
+    private ApiPortalResourceRequestsResponse(ApiPortalResourceRequestsResponse $) {
+        this.cpu = $.cpu;
+        this.memory = $.memory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiPortalResourceRequestsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cpu;
-        private String memory;
+        private ApiPortalResourceRequestsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiPortalResourceRequestsResponse();
         }
 
         public Builder(ApiPortalResourceRequestsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.memory = defaults.memory;
+            $ = new ApiPortalResourceRequestsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(String cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder memory(String memory) {
-            this.memory = Objects.requireNonNull(memory);
+            $.memory = memory;
             return this;
-        }        public ApiPortalResourceRequestsResponse build() {
-            return new ApiPortalResourceRequestsResponse(cpu, memory);
+        }
+
+        public ApiPortalResourceRequestsResponse build() {
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.memory = Objects.requireNonNull($.memory, "expected parameter 'memory' to be non-null");
+            return $;
         }
     }
+
 }

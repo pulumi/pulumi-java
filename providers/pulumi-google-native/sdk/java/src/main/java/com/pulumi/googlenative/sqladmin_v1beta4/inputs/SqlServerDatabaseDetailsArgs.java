@@ -5,10 +5,10 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SqlServerDatabaseDetailsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="compatibilityLevel")
-      private final @Nullable Output<Integer> compatibilityLevel;
+    private @Nullable Output<Integer> compatibilityLevel;
 
-    public Output<Integer> compatibilityLevel() {
-        return this.compatibilityLevel == null ? Codegen.empty() : this.compatibilityLevel;
+    public Optional<Output<Integer>> compatibilityLevel() {
+        return Optional.ofNullable(this.compatibilityLevel);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SqlServerDatabaseDetailsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recoveryModel")
-      private final @Nullable Output<String> recoveryModel;
+    private @Nullable Output<String> recoveryModel;
 
-    public Output<String> recoveryModel() {
-        return this.recoveryModel == null ? Codegen.empty() : this.recoveryModel;
+    public Optional<Output<String>> recoveryModel() {
+        return Optional.ofNullable(this.recoveryModel);
     }
 
-    public SqlServerDatabaseDetailsArgs(
-        @Nullable Output<Integer> compatibilityLevel,
-        @Nullable Output<String> recoveryModel) {
-        this.compatibilityLevel = compatibilityLevel;
-        this.recoveryModel = recoveryModel;
-    }
+    private SqlServerDatabaseDetailsArgs() {}
 
-    private SqlServerDatabaseDetailsArgs() {
-        this.compatibilityLevel = Codegen.empty();
-        this.recoveryModel = Codegen.empty();
+    private SqlServerDatabaseDetailsArgs(SqlServerDatabaseDetailsArgs $) {
+        this.compatibilityLevel = $.compatibilityLevel;
+        this.recoveryModel = $.recoveryModel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerDatabaseDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> compatibilityLevel;
-        private @Nullable Output<String> recoveryModel;
+        private SqlServerDatabaseDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerDatabaseDetailsArgs();
         }
 
         public Builder(SqlServerDatabaseDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compatibilityLevel = defaults.compatibilityLevel;
-    	      this.recoveryModel = defaults.recoveryModel;
+            $ = new SqlServerDatabaseDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compatibilityLevel(@Nullable Output<Integer> compatibilityLevel) {
-            this.compatibilityLevel = compatibilityLevel;
+            $.compatibilityLevel = compatibilityLevel;
             return this;
         }
-        public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
-            this.compatibilityLevel = Codegen.ofNullable(compatibilityLevel);
-            return this;
+
+        public Builder compatibilityLevel(Integer compatibilityLevel) {
+            return compatibilityLevel(Output.of(compatibilityLevel));
         }
+
         public Builder recoveryModel(@Nullable Output<String> recoveryModel) {
-            this.recoveryModel = recoveryModel;
+            $.recoveryModel = recoveryModel;
             return this;
         }
-        public Builder recoveryModel(@Nullable String recoveryModel) {
-            this.recoveryModel = Codegen.ofNullable(recoveryModel);
-            return this;
-        }        public SqlServerDatabaseDetailsArgs build() {
-            return new SqlServerDatabaseDetailsArgs(compatibilityLevel, recoveryModel);
+
+        public Builder recoveryModel(String recoveryModel) {
+            return recoveryModel(Output.of(recoveryModel));
+        }
+
+        public SqlServerDatabaseDetailsArgs build() {
+            return $;
         }
     }
+
 }

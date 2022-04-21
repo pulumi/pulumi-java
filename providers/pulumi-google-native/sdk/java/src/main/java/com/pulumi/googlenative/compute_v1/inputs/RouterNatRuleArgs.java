@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.inputs.RouterNatRuleActionArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RouterNatRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<RouterNatRuleActionArgs> action;
+    private @Nullable Output<RouterNatRuleActionArgs> action;
 
-    public Output<RouterNatRuleActionArgs> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<RouterNatRuleActionArgs>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RouterNatRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RouterNatRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="match")
-      private final @Nullable Output<String> match;
+    private @Nullable Output<String> match;
 
-    public Output<String> match() {
-        return this.match == null ? Codegen.empty() : this.match;
+    public Optional<Output<String>> match() {
+        return Optional.ofNullable(this.match);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class RouterNatRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleNumber")
-      private final @Nullable Output<Integer> ruleNumber;
+    private @Nullable Output<Integer> ruleNumber;
 
-    public Output<Integer> ruleNumber() {
-        return this.ruleNumber == null ? Codegen.empty() : this.ruleNumber;
+    public Optional<Output<Integer>> ruleNumber() {
+        return Optional.ofNullable(this.ruleNumber);
     }
 
-    public RouterNatRuleArgs(
-        @Nullable Output<RouterNatRuleActionArgs> action,
-        @Nullable Output<String> description,
-        @Nullable Output<String> match,
-        @Nullable Output<Integer> ruleNumber) {
-        this.action = action;
-        this.description = description;
-        this.match = match;
-        this.ruleNumber = ruleNumber;
-    }
+    private RouterNatRuleArgs() {}
 
-    private RouterNatRuleArgs() {
-        this.action = Codegen.empty();
-        this.description = Codegen.empty();
-        this.match = Codegen.empty();
-        this.ruleNumber = Codegen.empty();
+    private RouterNatRuleArgs(RouterNatRuleArgs $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.match = $.match;
+        this.ruleNumber = $.ruleNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RouterNatRuleActionArgs> action;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> match;
-        private @Nullable Output<Integer> ruleNumber;
+        private RouterNatRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatRuleArgs();
         }
 
         public Builder(RouterNatRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.match = defaults.match;
-    	      this.ruleNumber = defaults.ruleNumber;
+            $ = new RouterNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<RouterNatRuleActionArgs> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable RouterNatRuleActionArgs action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(RouterNatRuleActionArgs action) {
+            return action(Output.of(action));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder match(@Nullable Output<String> match) {
-            this.match = match;
+            $.match = match;
             return this;
         }
-        public Builder match(@Nullable String match) {
-            this.match = Codegen.ofNullable(match);
-            return this;
+
+        public Builder match(String match) {
+            return match(Output.of(match));
         }
+
         public Builder ruleNumber(@Nullable Output<Integer> ruleNumber) {
-            this.ruleNumber = ruleNumber;
+            $.ruleNumber = ruleNumber;
             return this;
         }
-        public Builder ruleNumber(@Nullable Integer ruleNumber) {
-            this.ruleNumber = Codegen.ofNullable(ruleNumber);
-            return this;
-        }        public RouterNatRuleArgs build() {
-            return new RouterNatRuleArgs(action, description, match, ruleNumber);
+
+        public Builder ruleNumber(Integer ruleNumber) {
+            return ruleNumber(Output.of(ruleNumber));
+        }
+
+        public RouterNatRuleArgs build() {
+            return $;
         }
     }
+
 }

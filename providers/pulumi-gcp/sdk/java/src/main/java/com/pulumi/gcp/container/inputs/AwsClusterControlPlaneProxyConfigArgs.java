@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AwsClusterControlPlaneProxyConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="secretArn", required=true)
-      private final Output<String> secretArn;
+    private Output<String> secretArn;
 
     public Output<String> secretArn() {
         return this.secretArn;
@@ -30,63 +29,60 @@ public final class AwsClusterControlPlaneProxyConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="secretVersion", required=true)
-      private final Output<String> secretVersion;
+    private Output<String> secretVersion;
 
     public Output<String> secretVersion() {
         return this.secretVersion;
     }
 
-    public AwsClusterControlPlaneProxyConfigArgs(
-        Output<String> secretArn,
-        Output<String> secretVersion) {
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-        this.secretVersion = Objects.requireNonNull(secretVersion, "expected parameter 'secretVersion' to be non-null");
-    }
+    private AwsClusterControlPlaneProxyConfigArgs() {}
 
-    private AwsClusterControlPlaneProxyConfigArgs() {
-        this.secretArn = Codegen.empty();
-        this.secretVersion = Codegen.empty();
+    private AwsClusterControlPlaneProxyConfigArgs(AwsClusterControlPlaneProxyConfigArgs $) {
+        this.secretArn = $.secretArn;
+        this.secretVersion = $.secretVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsClusterControlPlaneProxyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> secretArn;
-        private Output<String> secretVersion;
+        private AwsClusterControlPlaneProxyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsClusterControlPlaneProxyConfigArgs();
         }
 
         public Builder(AwsClusterControlPlaneProxyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretArn = defaults.secretArn;
-    	      this.secretVersion = defaults.secretVersion;
+            $ = new AwsClusterControlPlaneProxyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretArn(Output<String> secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
-            return this;
+            return secretArn(Output.of(secretArn));
         }
+
         public Builder secretVersion(Output<String> secretVersion) {
-            this.secretVersion = Objects.requireNonNull(secretVersion);
+            $.secretVersion = secretVersion;
             return this;
         }
+
         public Builder secretVersion(String secretVersion) {
-            this.secretVersion = Output.of(Objects.requireNonNull(secretVersion));
-            return this;
-        }        public AwsClusterControlPlaneProxyConfigArgs build() {
-            return new AwsClusterControlPlaneProxyConfigArgs(secretArn, secretVersion);
+            return secretVersion(Output.of(secretVersion));
+        }
+
+        public AwsClusterControlPlaneProxyConfigArgs build() {
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            $.secretVersion = Objects.requireNonNull($.secretVersion, "expected parameter 'secretVersion' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,10 +9,10 @@ import com.pulumi.azurenative.edgeorder.inputs.ProductDetailsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="notificationEmailList")
-      private final @Nullable Output<List<String>> notificationEmailList;
+    private @Nullable Output<List<String>> notificationEmailList;
 
-    public Output<List<String>> notificationEmailList() {
-        return this.notificationEmailList == null ? Codegen.empty() : this.notificationEmailList;
+    public Optional<Output<List<String>>> notificationEmailList() {
+        return Optional.ofNullable(this.notificationEmailList);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="orderItemType", required=true)
-      private final Output<Either<String,OrderItemType>> orderItemType;
+    private Output<Either<String,OrderItemType>> orderItemType;
 
     public Output<Either<String,OrderItemType>> orderItemType() {
         return this.orderItemType;
@@ -51,10 +51,10 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="preferences")
-      private final @Nullable Output<PreferencesArgs> preferences;
+    private @Nullable Output<PreferencesArgs> preferences;
 
-    public Output<PreferencesArgs> preferences() {
-        return this.preferences == null ? Codegen.empty() : this.preferences;
+    public Optional<Output<PreferencesArgs>> preferences() {
+        return Optional.ofNullable(this.preferences);
     }
 
     /**
@@ -62,92 +62,84 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="productDetails", required=true)
-      private final Output<ProductDetailsArgs> productDetails;
+    private Output<ProductDetailsArgs> productDetails;
 
     public Output<ProductDetailsArgs> productDetails() {
         return this.productDetails;
     }
 
-    public OrderItemDetailsArgs(
-        @Nullable Output<List<String>> notificationEmailList,
-        Output<Either<String,OrderItemType>> orderItemType,
-        @Nullable Output<PreferencesArgs> preferences,
-        Output<ProductDetailsArgs> productDetails) {
-        this.notificationEmailList = notificationEmailList;
-        this.orderItemType = Objects.requireNonNull(orderItemType, "expected parameter 'orderItemType' to be non-null");
-        this.preferences = preferences;
-        this.productDetails = Objects.requireNonNull(productDetails, "expected parameter 'productDetails' to be non-null");
-    }
+    private OrderItemDetailsArgs() {}
 
-    private OrderItemDetailsArgs() {
-        this.notificationEmailList = Codegen.empty();
-        this.orderItemType = Codegen.empty();
-        this.preferences = Codegen.empty();
-        this.productDetails = Codegen.empty();
+    private OrderItemDetailsArgs(OrderItemDetailsArgs $) {
+        this.notificationEmailList = $.notificationEmailList;
+        this.orderItemType = $.orderItemType;
+        this.preferences = $.preferences;
+        this.productDetails = $.productDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrderItemDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> notificationEmailList;
-        private Output<Either<String,OrderItemType>> orderItemType;
-        private @Nullable Output<PreferencesArgs> preferences;
-        private Output<ProductDetailsArgs> productDetails;
+        private OrderItemDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrderItemDetailsArgs();
         }
 
         public Builder(OrderItemDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notificationEmailList = defaults.notificationEmailList;
-    	      this.orderItemType = defaults.orderItemType;
-    	      this.preferences = defaults.preferences;
-    	      this.productDetails = defaults.productDetails;
+            $ = new OrderItemDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notificationEmailList(@Nullable Output<List<String>> notificationEmailList) {
-            this.notificationEmailList = notificationEmailList;
+            $.notificationEmailList = notificationEmailList;
             return this;
         }
-        public Builder notificationEmailList(@Nullable List<String> notificationEmailList) {
-            this.notificationEmailList = Codegen.ofNullable(notificationEmailList);
-            return this;
+
+        public Builder notificationEmailList(List<String> notificationEmailList) {
+            return notificationEmailList(Output.of(notificationEmailList));
         }
+
         public Builder notificationEmailList(String... notificationEmailList) {
             return notificationEmailList(List.of(notificationEmailList));
         }
+
         public Builder orderItemType(Output<Either<String,OrderItemType>> orderItemType) {
-            this.orderItemType = Objects.requireNonNull(orderItemType);
+            $.orderItemType = orderItemType;
             return this;
         }
+
         public Builder orderItemType(Either<String,OrderItemType> orderItemType) {
-            this.orderItemType = Output.of(Objects.requireNonNull(orderItemType));
-            return this;
+            return orderItemType(Output.of(orderItemType));
         }
+
         public Builder preferences(@Nullable Output<PreferencesArgs> preferences) {
-            this.preferences = preferences;
+            $.preferences = preferences;
             return this;
         }
-        public Builder preferences(@Nullable PreferencesArgs preferences) {
-            this.preferences = Codegen.ofNullable(preferences);
-            return this;
+
+        public Builder preferences(PreferencesArgs preferences) {
+            return preferences(Output.of(preferences));
         }
+
         public Builder productDetails(Output<ProductDetailsArgs> productDetails) {
-            this.productDetails = Objects.requireNonNull(productDetails);
+            $.productDetails = productDetails;
             return this;
         }
+
         public Builder productDetails(ProductDetailsArgs productDetails) {
-            this.productDetails = Output.of(Objects.requireNonNull(productDetails));
-            return this;
-        }        public OrderItemDetailsArgs build() {
-            return new OrderItemDetailsArgs(notificationEmailList, orderItemType, preferences, productDetails);
+            return productDetails(Output.of(productDetails));
+        }
+
+        public OrderItemDetailsArgs build() {
+            $.orderItemType = Objects.requireNonNull($.orderItemType, "expected parameter 'orderItemType' to be non-null");
+            $.productDetails = Objects.requireNonNull($.productDetails, "expected parameter 'productDetails' to be non-null");
+            return $;
         }
     }
+
 }

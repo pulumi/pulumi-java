@@ -8,11 +8,11 @@ import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.azurenative.cdn.inputs.ResponseBasedOriginErrorDetectionParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointName", required=true)
-      private final Output<String> endpointName;
+    private Output<String> endpointName;
 
     public Output<String> endpointName() {
         return this.endpointName;
@@ -36,10 +36,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthProbeSettings")
-      private final @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
+    private @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
 
-    public Output<HealthProbeParametersArgs> healthProbeSettings() {
-        return this.healthProbeSettings == null ? Codegen.empty() : this.healthProbeSettings;
+    public Optional<Output<HealthProbeParametersArgs>> healthProbeSettings() {
+        return Optional.ofNullable(this.healthProbeSettings);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="originGroupName")
-      private final @Nullable Output<String> originGroupName;
+    private @Nullable Output<String> originGroupName;
 
-    public Output<String> originGroupName() {
-        return this.originGroupName == null ? Codegen.empty() : this.originGroupName;
+    public Optional<Output<String>> originGroupName() {
+        return Optional.ofNullable(this.originGroupName);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="origins", required=true)
-      private final Output<List<ResourceReferenceArgs>> origins;
+    private Output<List<ResourceReferenceArgs>> origins;
 
     public Output<List<ResourceReferenceArgs>> origins() {
         return this.origins;
@@ -69,7 +69,7 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -80,7 +80,7 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -91,10 +91,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseBasedOriginErrorDetectionSettings")
-      private final @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
+    private @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
 
-    public Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings() {
-        return this.responseBasedOriginErrorDetectionSettings == null ? Codegen.empty() : this.responseBasedOriginErrorDetectionSettings;
+    public Optional<Output<ResponseBasedOriginErrorDetectionParametersArgs>> responseBasedOriginErrorDetectionSettings() {
+        return Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
     }
 
     /**
@@ -102,144 +102,126 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
-      private final @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+    private @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
-    public Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
-        return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Codegen.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+    public Optional<Output<Integer>> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+        return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
 
-    public OriginGroupArgs(
-        Output<String> endpointName,
-        @Nullable Output<HealthProbeParametersArgs> healthProbeSettings,
-        @Nullable Output<String> originGroupName,
-        Output<List<ResourceReferenceArgs>> origins,
-        Output<String> profileName,
-        Output<String> resourceGroupName,
-        @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings,
-        @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.healthProbeSettings = healthProbeSettings;
-        this.originGroupName = originGroupName;
-        this.origins = Objects.requireNonNull(origins, "expected parameter 'origins' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
-        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
-    }
+    private OriginGroupArgs() {}
 
-    private OriginGroupArgs() {
-        this.endpointName = Codegen.empty();
-        this.healthProbeSettings = Codegen.empty();
-        this.originGroupName = Codegen.empty();
-        this.origins = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.responseBasedOriginErrorDetectionSettings = Codegen.empty();
-        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Codegen.empty();
+    private OriginGroupArgs(OriginGroupArgs $) {
+        this.endpointName = $.endpointName;
+        this.healthProbeSettings = $.healthProbeSettings;
+        this.originGroupName = $.originGroupName;
+        this.origins = $.origins;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.responseBasedOriginErrorDetectionSettings = $.responseBasedOriginErrorDetectionSettings;
+        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = $.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> endpointName;
-        private @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
-        private @Nullable Output<String> originGroupName;
-        private Output<List<ResourceReferenceArgs>> origins;
-        private Output<String> profileName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
-        private @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+        private OriginGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginGroupArgs();
         }
 
         public Builder(OriginGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointName = defaults.endpointName;
-    	      this.healthProbeSettings = defaults.healthProbeSettings;
-    	      this.originGroupName = defaults.originGroupName;
-    	      this.origins = defaults.origins;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.responseBasedOriginErrorDetectionSettings = defaults.responseBasedOriginErrorDetectionSettings;
-    	      this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = defaults.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+            $ = new OriginGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointName(Output<String> endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder endpointName(String endpointName) {
-            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
-            return this;
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder healthProbeSettings(@Nullable Output<HealthProbeParametersArgs> healthProbeSettings) {
-            this.healthProbeSettings = healthProbeSettings;
+            $.healthProbeSettings = healthProbeSettings;
             return this;
         }
-        public Builder healthProbeSettings(@Nullable HealthProbeParametersArgs healthProbeSettings) {
-            this.healthProbeSettings = Codegen.ofNullable(healthProbeSettings);
-            return this;
+
+        public Builder healthProbeSettings(HealthProbeParametersArgs healthProbeSettings) {
+            return healthProbeSettings(Output.of(healthProbeSettings));
         }
+
         public Builder originGroupName(@Nullable Output<String> originGroupName) {
-            this.originGroupName = originGroupName;
+            $.originGroupName = originGroupName;
             return this;
         }
-        public Builder originGroupName(@Nullable String originGroupName) {
-            this.originGroupName = Codegen.ofNullable(originGroupName);
-            return this;
+
+        public Builder originGroupName(String originGroupName) {
+            return originGroupName(Output.of(originGroupName));
         }
+
         public Builder origins(Output<List<ResourceReferenceArgs>> origins) {
-            this.origins = Objects.requireNonNull(origins);
+            $.origins = origins;
             return this;
         }
+
         public Builder origins(List<ResourceReferenceArgs> origins) {
-            this.origins = Output.of(Objects.requireNonNull(origins));
-            return this;
+            return origins(Output.of(origins));
         }
+
         public Builder origins(ResourceReferenceArgs... origins) {
             return origins(List.of(origins));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder responseBasedOriginErrorDetectionSettings(@Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings) {
-            this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
+            $.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
             return this;
         }
-        public Builder responseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersArgs responseBasedOriginErrorDetectionSettings) {
-            this.responseBasedOriginErrorDetectionSettings = Codegen.ofNullable(responseBasedOriginErrorDetectionSettings);
-            return this;
+
+        public Builder responseBasedOriginErrorDetectionSettings(ResponseBasedOriginErrorDetectionParametersArgs responseBasedOriginErrorDetectionSettings) {
+            return responseBasedOriginErrorDetectionSettings(Output.of(responseBasedOriginErrorDetectionSettings));
         }
+
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
-            this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+            $.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
-        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
-            this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Codegen.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
-            return this;
-        }        public OriginGroupArgs build() {
-            return new OriginGroupArgs(endpointName, healthProbeSettings, originGroupName, origins, profileName, resourceGroupName, responseBasedOriginErrorDetectionSettings, trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
+
+        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+            return trafficRestorationTimeToHealedOrNewEndpointsInMinutes(Output.of(trafficRestorationTimeToHealedOrNewEndpointsInMinutes));
+        }
+
+        public OriginGroupArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.origins = Objects.requireNonNull($.origins, "expected parameter 'origins' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

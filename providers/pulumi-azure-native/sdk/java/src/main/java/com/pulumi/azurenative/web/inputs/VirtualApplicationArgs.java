@@ -6,11 +6,11 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.VirtualDirectoryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="physicalPath")
-      private final @Nullable Output<String> physicalPath;
+    private @Nullable Output<String> physicalPath;
 
-    public Output<String> physicalPath() {
-        return this.physicalPath == null ? Codegen.empty() : this.physicalPath;
+    public Optional<Output<String>> physicalPath() {
+        return Optional.ofNullable(this.physicalPath);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="preloadEnabled")
-      private final @Nullable Output<Boolean> preloadEnabled;
+    private @Nullable Output<Boolean> preloadEnabled;
 
-    public Output<Boolean> preloadEnabled() {
-        return this.preloadEnabled == null ? Codegen.empty() : this.preloadEnabled;
+    public Optional<Output<Boolean>> preloadEnabled() {
+        return Optional.ofNullable(this.preloadEnabled);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="virtualDirectories")
-      private final @Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories;
+    private @Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories;
 
-    public Output<List<VirtualDirectoryArgs>> virtualDirectories() {
-        return this.virtualDirectories == null ? Codegen.empty() : this.virtualDirectories;
+    public Optional<Output<List<VirtualDirectoryArgs>>> virtualDirectories() {
+        return Optional.ofNullable(this.virtualDirectories);
     }
 
     /**
@@ -60,92 +60,82 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="virtualPath")
-      private final @Nullable Output<String> virtualPath;
+    private @Nullable Output<String> virtualPath;
 
-    public Output<String> virtualPath() {
-        return this.virtualPath == null ? Codegen.empty() : this.virtualPath;
+    public Optional<Output<String>> virtualPath() {
+        return Optional.ofNullable(this.virtualPath);
     }
 
-    public VirtualApplicationArgs(
-        @Nullable Output<String> physicalPath,
-        @Nullable Output<Boolean> preloadEnabled,
-        @Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories,
-        @Nullable Output<String> virtualPath) {
-        this.physicalPath = physicalPath;
-        this.preloadEnabled = preloadEnabled;
-        this.virtualDirectories = virtualDirectories;
-        this.virtualPath = virtualPath;
-    }
+    private VirtualApplicationArgs() {}
 
-    private VirtualApplicationArgs() {
-        this.physicalPath = Codegen.empty();
-        this.preloadEnabled = Codegen.empty();
-        this.virtualDirectories = Codegen.empty();
-        this.virtualPath = Codegen.empty();
+    private VirtualApplicationArgs(VirtualApplicationArgs $) {
+        this.physicalPath = $.physicalPath;
+        this.preloadEnabled = $.preloadEnabled;
+        this.virtualDirectories = $.virtualDirectories;
+        this.virtualPath = $.virtualPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> physicalPath;
-        private @Nullable Output<Boolean> preloadEnabled;
-        private @Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories;
-        private @Nullable Output<String> virtualPath;
+        private VirtualApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualApplicationArgs();
         }
 
         public Builder(VirtualApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.physicalPath = defaults.physicalPath;
-    	      this.preloadEnabled = defaults.preloadEnabled;
-    	      this.virtualDirectories = defaults.virtualDirectories;
-    	      this.virtualPath = defaults.virtualPath;
+            $ = new VirtualApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder physicalPath(@Nullable Output<String> physicalPath) {
-            this.physicalPath = physicalPath;
+            $.physicalPath = physicalPath;
             return this;
         }
-        public Builder physicalPath(@Nullable String physicalPath) {
-            this.physicalPath = Codegen.ofNullable(physicalPath);
-            return this;
+
+        public Builder physicalPath(String physicalPath) {
+            return physicalPath(Output.of(physicalPath));
         }
+
         public Builder preloadEnabled(@Nullable Output<Boolean> preloadEnabled) {
-            this.preloadEnabled = preloadEnabled;
+            $.preloadEnabled = preloadEnabled;
             return this;
         }
-        public Builder preloadEnabled(@Nullable Boolean preloadEnabled) {
-            this.preloadEnabled = Codegen.ofNullable(preloadEnabled);
-            return this;
+
+        public Builder preloadEnabled(Boolean preloadEnabled) {
+            return preloadEnabled(Output.of(preloadEnabled));
         }
+
         public Builder virtualDirectories(@Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories) {
-            this.virtualDirectories = virtualDirectories;
+            $.virtualDirectories = virtualDirectories;
             return this;
         }
-        public Builder virtualDirectories(@Nullable List<VirtualDirectoryArgs> virtualDirectories) {
-            this.virtualDirectories = Codegen.ofNullable(virtualDirectories);
-            return this;
+
+        public Builder virtualDirectories(List<VirtualDirectoryArgs> virtualDirectories) {
+            return virtualDirectories(Output.of(virtualDirectories));
         }
+
         public Builder virtualDirectories(VirtualDirectoryArgs... virtualDirectories) {
             return virtualDirectories(List.of(virtualDirectories));
         }
+
         public Builder virtualPath(@Nullable Output<String> virtualPath) {
-            this.virtualPath = virtualPath;
+            $.virtualPath = virtualPath;
             return this;
         }
-        public Builder virtualPath(@Nullable String virtualPath) {
-            this.virtualPath = Codegen.ofNullable(virtualPath);
-            return this;
-        }        public VirtualApplicationArgs build() {
-            return new VirtualApplicationArgs(physicalPath, preloadEnabled, virtualDirectories, virtualPath);
+
+        public Builder virtualPath(String virtualPath) {
+            return virtualPath(Output.of(virtualPath));
+        }
+
+        public VirtualApplicationArgs build() {
+            return $;
         }
     }
+
 }

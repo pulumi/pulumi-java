@@ -17,45 +17,45 @@ public final class GetSessionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="awsAccountId", required=true)
-      private final String awsAccountId;
+    private String awsAccountId;
 
     public String awsAccountId() {
         return this.awsAccountId;
     }
 
-    public GetSessionArgs(String awsAccountId) {
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-    }
+    private GetSessionArgs() {}
 
-    private GetSessionArgs() {
-        this.awsAccountId = null;
+    private GetSessionArgs(GetSessionArgs $) {
+        this.awsAccountId = $.awsAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSessionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String awsAccountId;
+        private GetSessionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSessionArgs();
         }
 
         public Builder(GetSessionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
+            $ = new GetSessionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
-        }        public GetSessionArgs build() {
-            return new GetSessionArgs(awsAccountId);
+        }
+
+        public GetSessionArgs build() {
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,62 +16,58 @@ public final class GlobalTableTimeToLiveSpecification extends com.pulumi.resourc
     public static final GlobalTableTimeToLiveSpecification Empty = new GlobalTableTimeToLiveSpecification();
 
     @Import(name="attributeName")
-      private final @Nullable String attributeName;
+    private @Nullable String attributeName;
 
     public Optional<String> attributeName() {
-        return this.attributeName == null ? Optional.empty() : Optional.ofNullable(this.attributeName);
+        return Optional.ofNullable(this.attributeName);
     }
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GlobalTableTimeToLiveSpecification(
-        @Nullable String attributeName,
-        Boolean enabled) {
-        this.attributeName = attributeName;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GlobalTableTimeToLiveSpecification() {}
 
-    private GlobalTableTimeToLiveSpecification() {
-        this.attributeName = null;
-        this.enabled = null;
+    private GlobalTableTimeToLiveSpecification(GlobalTableTimeToLiveSpecification $) {
+        this.attributeName = $.attributeName;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableTimeToLiveSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String attributeName;
-        private Boolean enabled;
+        private GlobalTableTimeToLiveSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableTimeToLiveSpecification();
         }
 
         public Builder(GlobalTableTimeToLiveSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.enabled = defaults.enabled;
+            $ = new GlobalTableTimeToLiveSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(@Nullable String attributeName) {
-            this.attributeName = attributeName;
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GlobalTableTimeToLiveSpecification build() {
-            return new GlobalTableTimeToLiveSpecification(attributeName, enabled);
+        }
+
+        public GlobalTableTimeToLiveSpecification build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

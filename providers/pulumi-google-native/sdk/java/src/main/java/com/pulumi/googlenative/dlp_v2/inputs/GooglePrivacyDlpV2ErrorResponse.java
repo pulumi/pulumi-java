@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ErrorResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="details", required=true)
-      private final GoogleRpcStatusResponse details;
+    private GoogleRpcStatusResponse details;
 
     public GoogleRpcStatusResponse details() {
         return this.details;
@@ -34,58 +34,56 @@ public final class GooglePrivacyDlpV2ErrorResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timestamps", required=true)
-      private final List<String> timestamps;
+    private List<String> timestamps;
 
     public List<String> timestamps() {
         return this.timestamps;
     }
 
-    public GooglePrivacyDlpV2ErrorResponse(
-        GoogleRpcStatusResponse details,
-        List<String> timestamps) {
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.timestamps = Objects.requireNonNull(timestamps, "expected parameter 'timestamps' to be non-null");
-    }
+    private GooglePrivacyDlpV2ErrorResponse() {}
 
-    private GooglePrivacyDlpV2ErrorResponse() {
-        this.details = null;
-        this.timestamps = List.of();
+    private GooglePrivacyDlpV2ErrorResponse(GooglePrivacyDlpV2ErrorResponse $) {
+        this.details = $.details;
+        this.timestamps = $.timestamps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleRpcStatusResponse details;
-        private List<String> timestamps;
+        private GooglePrivacyDlpV2ErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ErrorResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.details = defaults.details;
-    	      this.timestamps = defaults.timestamps;
+            $ = new GooglePrivacyDlpV2ErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder details(GoogleRpcStatusResponse details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder timestamps(List<String> timestamps) {
-            this.timestamps = Objects.requireNonNull(timestamps);
+            $.timestamps = timestamps;
             return this;
         }
+
         public Builder timestamps(String... timestamps) {
             return timestamps(List.of(timestamps));
-        }        public GooglePrivacyDlpV2ErrorResponse build() {
-            return new GooglePrivacyDlpV2ErrorResponse(details, timestamps);
+        }
+
+        public GooglePrivacyDlpV2ErrorResponse build() {
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.timestamps = Objects.requireNonNull($.timestamps, "expected parameter 'timestamps' to be non-null");
+            return $;
         }
     }
+
 }

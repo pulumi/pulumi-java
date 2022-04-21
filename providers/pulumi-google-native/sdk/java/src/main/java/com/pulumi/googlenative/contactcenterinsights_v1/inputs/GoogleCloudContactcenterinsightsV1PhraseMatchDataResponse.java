@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -32,55 +32,52 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
      * 
      */
     @Import(name="phraseMatcher", required=true)
-      private final String phraseMatcher;
+    private String phraseMatcher;
 
     public String phraseMatcher() {
         return this.phraseMatcher;
     }
 
-    public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(
-        String displayName,
-        String phraseMatcher) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.phraseMatcher = Objects.requireNonNull(phraseMatcher, "expected parameter 'phraseMatcher' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse() {
-        this.displayName = null;
-        this.phraseMatcher = null;
+    private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse $) {
+        this.displayName = $.displayName;
+        this.phraseMatcher = $.phraseMatcher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String phraseMatcher;
+        private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.phraseMatcher = defaults.phraseMatcher;
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder phraseMatcher(String phraseMatcher) {
-            this.phraseMatcher = Objects.requireNonNull(phraseMatcher);
+            $.phraseMatcher = phraseMatcher;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse build() {
-            return new GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(displayName, phraseMatcher);
+        }
+
+        public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.phraseMatcher = Objects.requireNonNull($.phraseMatcher, "expected parameter 'phraseMatcher' to be non-null");
+            return $;
         }
     }
+
 }

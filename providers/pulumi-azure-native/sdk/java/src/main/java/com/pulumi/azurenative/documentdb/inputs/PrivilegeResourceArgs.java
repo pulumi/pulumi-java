@@ -5,9 +5,9 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PrivilegeResourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="collection")
-      private final @Nullable Output<String> collection;
+    private @Nullable Output<String> collection;
 
-    public Output<String> collection() {
-        return this.collection == null ? Codegen.empty() : this.collection;
+    public Optional<Output<String>> collection() {
+        return Optional.ofNullable(this.collection);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class PrivilegeResourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="db")
-      private final @Nullable Output<String> db;
+    private @Nullable Output<String> db;
 
-    public Output<String> db() {
-        return this.db == null ? Codegen.empty() : this.db;
+    public Optional<Output<String>> db() {
+        return Optional.ofNullable(this.db);
     }
 
-    public PrivilegeResourceArgs(
-        @Nullable Output<String> collection,
-        @Nullable Output<String> db) {
-        this.collection = collection;
-        this.db = db;
-    }
+    private PrivilegeResourceArgs() {}
 
-    private PrivilegeResourceArgs() {
-        this.collection = Codegen.empty();
-        this.db = Codegen.empty();
+    private PrivilegeResourceArgs(PrivilegeResourceArgs $) {
+        this.collection = $.collection;
+        this.db = $.db;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivilegeResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> collection;
-        private @Nullable Output<String> db;
+        private PrivilegeResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivilegeResourceArgs();
         }
 
         public Builder(PrivilegeResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collection = defaults.collection;
-    	      this.db = defaults.db;
+            $ = new PrivilegeResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collection(@Nullable Output<String> collection) {
-            this.collection = collection;
+            $.collection = collection;
             return this;
         }
-        public Builder collection(@Nullable String collection) {
-            this.collection = Codegen.ofNullable(collection);
-            return this;
+
+        public Builder collection(String collection) {
+            return collection(Output.of(collection));
         }
+
         public Builder db(@Nullable Output<String> db) {
-            this.db = db;
+            $.db = db;
             return this;
         }
-        public Builder db(@Nullable String db) {
-            this.db = Codegen.ofNullable(db);
-            return this;
-        }        public PrivilegeResourceArgs build() {
-            return new PrivilegeResourceArgs(collection, db);
+
+        public Builder db(String db) {
+            return db(Output.of(db));
+        }
+
+        public PrivilegeResourceArgs build() {
+            return $;
         }
     }
+
 }

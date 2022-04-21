@@ -24,10 +24,10 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificates")
-      private final @Nullable List<String> certificates;
+    private @Nullable List<String> certificates;
 
-    public List<String> certificates() {
-        return this.certificates == null ? List.of() : this.certificates;
+    public Optional<List<String>> certificates() {
+        return Optional.ofNullable(this.certificates);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keys")
-      private final @Nullable List<String> keys;
+    private @Nullable List<String> keys;
 
-    public List<String> keys() {
-        return this.keys == null ? List.of() : this.keys;
+    public Optional<List<String>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secrets")
-      private final @Nullable List<String> secrets;
+    private @Nullable List<String> secrets;
 
-    public List<String> secrets() {
-        return this.secrets == null ? List.of() : this.secrets;
+    public Optional<List<String>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
     /**
@@ -57,85 +57,78 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storage")
-      private final @Nullable List<String> storage;
+    private @Nullable List<String> storage;
 
-    public List<String> storage() {
-        return this.storage == null ? List.of() : this.storage;
+    public Optional<List<String>> storage() {
+        return Optional.ofNullable(this.storage);
     }
 
-    public PermissionsResponse(
-        @Nullable List<String> certificates,
-        @Nullable List<String> keys,
-        @Nullable List<String> secrets,
-        @Nullable List<String> storage) {
-        this.certificates = certificates;
-        this.keys = keys;
-        this.secrets = secrets;
-        this.storage = storage;
-    }
+    private PermissionsResponse() {}
 
-    private PermissionsResponse() {
-        this.certificates = List.of();
-        this.keys = List.of();
-        this.secrets = List.of();
-        this.storage = List.of();
+    private PermissionsResponse(PermissionsResponse $) {
+        this.certificates = $.certificates;
+        this.keys = $.keys;
+        this.secrets = $.secrets;
+        this.storage = $.storage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> certificates;
-        private @Nullable List<String> keys;
-        private @Nullable List<String> secrets;
-        private @Nullable List<String> storage;
+        private PermissionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionsResponse();
         }
 
         public Builder(PermissionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificates = defaults.certificates;
-    	      this.keys = defaults.keys;
-    	      this.secrets = defaults.secrets;
-    	      this.storage = defaults.storage;
+            $ = new PermissionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificates(@Nullable List<String> certificates) {
-            this.certificates = certificates;
+            $.certificates = certificates;
             return this;
         }
+
         public Builder certificates(String... certificates) {
             return certificates(List.of(certificates));
         }
+
         public Builder keys(@Nullable List<String> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
+
         public Builder keys(String... keys) {
             return keys(List.of(keys));
         }
+
         public Builder secrets(@Nullable List<String> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
+
         public Builder secrets(String... secrets) {
             return secrets(List.of(secrets));
         }
+
         public Builder storage(@Nullable List<String> storage) {
-            this.storage = storage;
+            $.storage = storage;
             return this;
         }
+
         public Builder storage(String... storage) {
             return storage(List.of(storage));
-        }        public PermissionsResponse build() {
-            return new PermissionsResponse(certificates, keys, secrets, storage);
+        }
+
+        public PermissionsResponse build() {
+            return $;
         }
     }
+
 }

@@ -12,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="delegationSetId")
-      private final @Nullable Output<String> delegationSetId;
+    private @Nullable Output<String> delegationSetId;
 
-    public Output<String> delegationSetId() {
-        return this.delegationSetId == null ? Codegen.empty() : this.delegationSetId;
+    public Optional<Output<String>> delegationSetId() {
+        return Optional.ofNullable(this.delegationSetId);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +69,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -79,118 +80,103 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcs")
-      private final @Nullable Output<List<ZoneVpcArgs>> vpcs;
+    private @Nullable Output<List<ZoneVpcArgs>> vpcs;
 
-    public Output<List<ZoneVpcArgs>> vpcs() {
-        return this.vpcs == null ? Codegen.empty() : this.vpcs;
+    public Optional<Output<List<ZoneVpcArgs>>> vpcs() {
+        return Optional.ofNullable(this.vpcs);
     }
 
-    public ZoneArgs(
-        @Nullable Output<String> comment,
-        @Nullable Output<String> delegationSetId,
-        @Nullable Output<Boolean> forceDestroy,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<ZoneVpcArgs>> vpcs) {
-        this.comment = Codegen.stringProp("comment").output().arg(comment).def("Managed by Pulumi").getNullable();
-        this.delegationSetId = delegationSetId;
-        this.forceDestroy = forceDestroy;
-        this.name = name;
-        this.tags = tags;
-        this.vpcs = vpcs;
-    }
+    private ZoneArgs() {}
 
-    private ZoneArgs() {
-        this.comment = Codegen.empty();
-        this.delegationSetId = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcs = Codegen.empty();
+    private ZoneArgs(ZoneArgs $) {
+        this.comment = $.comment;
+        this.delegationSetId = $.delegationSetId;
+        this.forceDestroy = $.forceDestroy;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.vpcs = $.vpcs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> delegationSetId;
-        private @Nullable Output<Boolean> forceDestroy;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<ZoneVpcArgs>> vpcs;
+        private ZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ZoneArgs();
         }
 
         public Builder(ZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.delegationSetId = defaults.delegationSetId;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.vpcs = defaults.vpcs;
+            $ = new ZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder delegationSetId(@Nullable Output<String> delegationSetId) {
-            this.delegationSetId = delegationSetId;
+            $.delegationSetId = delegationSetId;
             return this;
         }
-        public Builder delegationSetId(@Nullable String delegationSetId) {
-            this.delegationSetId = Codegen.ofNullable(delegationSetId);
-            return this;
+
+        public Builder delegationSetId(String delegationSetId) {
+            return delegationSetId(Output.of(delegationSetId));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpcs(@Nullable Output<List<ZoneVpcArgs>> vpcs) {
-            this.vpcs = vpcs;
+            $.vpcs = vpcs;
             return this;
         }
-        public Builder vpcs(@Nullable List<ZoneVpcArgs> vpcs) {
-            this.vpcs = Codegen.ofNullable(vpcs);
-            return this;
+
+        public Builder vpcs(List<ZoneVpcArgs> vpcs) {
+            return vpcs(Output.of(vpcs));
         }
+
         public Builder vpcs(ZoneVpcArgs... vpcs) {
             return vpcs(List.of(vpcs));
-        }        public ZoneArgs build() {
-            return new ZoneArgs(comment, delegationSetId, forceDestroy, name, tags, vpcs);
+        }
+
+        public ZoneArgs build() {
+            $.comment = Codegen.stringProp("comment").output().arg($.comment).def("Managed by Pulumi").getNullable();
+            return $;
         }
     }
+
 }

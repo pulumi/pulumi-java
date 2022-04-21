@@ -5,12 +5,12 @@ package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="chapEnabled")
-      private final @Nullable Output<Boolean> chapEnabled;
+    private @Nullable Output<Boolean> chapEnabled;
 
-    public Output<Boolean> chapEnabled() {
-        return this.chapEnabled == null ? Codegen.empty() : this.chapEnabled;
+    public Optional<Output<Boolean>> chapEnabled() {
+        return Optional.ofNullable(this.chapEnabled);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="diskId")
-      private final @Nullable Output<String> diskId;
+    private @Nullable Output<String> diskId;
 
-    public Output<String> diskId() {
-        return this.diskId == null ? Codegen.empty() : this.diskId;
+    public Optional<Output<String>> diskId() {
+        return Optional.ofNullable(this.diskId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="gatewayArn")
-      private final @Nullable Output<String> gatewayArn;
+    private @Nullable Output<String> gatewayArn;
 
-    public Output<String> gatewayArn() {
-        return this.gatewayArn == null ? Codegen.empty() : this.gatewayArn;
+    public Optional<Output<String>> gatewayArn() {
+        return Optional.ofNullable(this.gatewayArn);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kmsEncrypted")
-      private final @Nullable Output<Boolean> kmsEncrypted;
+    private @Nullable Output<Boolean> kmsEncrypted;
 
-    public Output<Boolean> kmsEncrypted() {
-        return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
+    public Optional<Output<Boolean>> kmsEncrypted() {
+        return Optional.ofNullable(this.kmsEncrypted);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="lunNumber")
-      private final @Nullable Output<Integer> lunNumber;
+    private @Nullable Output<Integer> lunNumber;
 
-    public Output<Integer> lunNumber() {
-        return this.lunNumber == null ? Codegen.empty() : this.lunNumber;
+    public Optional<Output<Integer>> lunNumber() {
+        return Optional.ofNullable(this.lunNumber);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable Output<String> networkInterfaceId;
+    private @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
+    public Optional<Output<String>> networkInterfaceId() {
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="networkInterfacePort")
-      private final @Nullable Output<Integer> networkInterfacePort;
+    private @Nullable Output<Integer> networkInterfacePort;
 
-    public Output<Integer> networkInterfacePort() {
-        return this.networkInterfacePort == null ? Codegen.empty() : this.networkInterfacePort;
+    public Optional<Output<Integer>> networkInterfacePort() {
+        return Optional.ofNullable(this.networkInterfacePort);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="preserveExistingData")
-      private final @Nullable Output<Boolean> preserveExistingData;
+    private @Nullable Output<Boolean> preserveExistingData;
 
-    public Output<Boolean> preserveExistingData() {
-        return this.preserveExistingData == null ? Codegen.empty() : this.preserveExistingData;
+    public Optional<Output<Boolean>> preserveExistingData() {
+        return Optional.ofNullable(this.preserveExistingData);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="snapshotId")
-      private final @Nullable Output<String> snapshotId;
+    private @Nullable Output<String> snapshotId;
 
-    public Output<String> snapshotId() {
-        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
+    public Optional<Output<String>> snapshotId() {
+        return Optional.ofNullable(this.snapshotId);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetArn")
-      private final @Nullable Output<String> targetArn;
+    private @Nullable Output<String> targetArn;
 
-    public Output<String> targetArn() {
-        return this.targetArn == null ? Codegen.empty() : this.targetArn;
+    public Optional<Output<String>> targetArn() {
+        return Optional.ofNullable(this.targetArn);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetName")
-      private final @Nullable Output<String> targetName;
+    private @Nullable Output<String> targetName;
 
-    public Output<String> targetName() {
-        return this.targetName == null ? Codegen.empty() : this.targetName;
+    public Optional<Output<String>> targetName() {
+        return Optional.ofNullable(this.targetName);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="volumeAttachmentStatus")
-      private final @Nullable Output<String> volumeAttachmentStatus;
+    private @Nullable Output<String> volumeAttachmentStatus;
 
-    public Output<String> volumeAttachmentStatus() {
-        return this.volumeAttachmentStatus == null ? Codegen.empty() : this.volumeAttachmentStatus;
+    public Optional<Output<String>> volumeAttachmentStatus() {
+        return Optional.ofNullable(this.volumeAttachmentStatus);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="volumeId")
-      private final @Nullable Output<String> volumeId;
+    private @Nullable Output<String> volumeId;
 
-    public Output<String> volumeId() {
-        return this.volumeId == null ? Codegen.empty() : this.volumeId;
+    public Optional<Output<String>> volumeId() {
+        return Optional.ofNullable(this.volumeId);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="volumeSizeInBytes")
-      private final @Nullable Output<Integer> volumeSizeInBytes;
+    private @Nullable Output<Integer> volumeSizeInBytes;
 
-    public Output<Integer> volumeSizeInBytes() {
-        return this.volumeSizeInBytes == null ? Codegen.empty() : this.volumeSizeInBytes;
+    public Optional<Output<Integer>> volumeSizeInBytes() {
+        return Optional.ofNullable(this.volumeSizeInBytes);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="volumeStatus")
-      private final @Nullable Output<String> volumeStatus;
+    private @Nullable Output<String> volumeStatus;
 
-    public Output<String> volumeStatus() {
-        return this.volumeStatus == null ? Codegen.empty() : this.volumeStatus;
+    public Optional<Output<String>> volumeStatus() {
+        return Optional.ofNullable(this.volumeStatus);
     }
 
     /**
@@ -232,297 +232,238 @@ public final class StoredIscsiVolumeState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="volumeType")
-      private final @Nullable Output<String> volumeType;
+    private @Nullable Output<String> volumeType;
 
-    public Output<String> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<String>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public StoredIscsiVolumeState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Boolean> chapEnabled,
-        @Nullable Output<String> diskId,
-        @Nullable Output<String> gatewayArn,
-        @Nullable Output<Boolean> kmsEncrypted,
-        @Nullable Output<String> kmsKey,
-        @Nullable Output<Integer> lunNumber,
-        @Nullable Output<String> networkInterfaceId,
-        @Nullable Output<Integer> networkInterfacePort,
-        @Nullable Output<Boolean> preserveExistingData,
-        @Nullable Output<String> snapshotId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> targetArn,
-        @Nullable Output<String> targetName,
-        @Nullable Output<String> volumeAttachmentStatus,
-        @Nullable Output<String> volumeId,
-        @Nullable Output<Integer> volumeSizeInBytes,
-        @Nullable Output<String> volumeStatus,
-        @Nullable Output<String> volumeType) {
-        this.arn = arn;
-        this.chapEnabled = chapEnabled;
-        this.diskId = diskId;
-        this.gatewayArn = gatewayArn;
-        this.kmsEncrypted = kmsEncrypted;
-        this.kmsKey = kmsKey;
-        this.lunNumber = lunNumber;
-        this.networkInterfaceId = networkInterfaceId;
-        this.networkInterfacePort = networkInterfacePort;
-        this.preserveExistingData = preserveExistingData;
-        this.snapshotId = snapshotId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.targetArn = targetArn;
-        this.targetName = targetName;
-        this.volumeAttachmentStatus = volumeAttachmentStatus;
-        this.volumeId = volumeId;
-        this.volumeSizeInBytes = volumeSizeInBytes;
-        this.volumeStatus = volumeStatus;
-        this.volumeType = volumeType;
-    }
+    private StoredIscsiVolumeState() {}
 
-    private StoredIscsiVolumeState() {
-        this.arn = Codegen.empty();
-        this.chapEnabled = Codegen.empty();
-        this.diskId = Codegen.empty();
-        this.gatewayArn = Codegen.empty();
-        this.kmsEncrypted = Codegen.empty();
-        this.kmsKey = Codegen.empty();
-        this.lunNumber = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
-        this.networkInterfacePort = Codegen.empty();
-        this.preserveExistingData = Codegen.empty();
-        this.snapshotId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.targetArn = Codegen.empty();
-        this.targetName = Codegen.empty();
-        this.volumeAttachmentStatus = Codegen.empty();
-        this.volumeId = Codegen.empty();
-        this.volumeSizeInBytes = Codegen.empty();
-        this.volumeStatus = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private StoredIscsiVolumeState(StoredIscsiVolumeState $) {
+        this.arn = $.arn;
+        this.chapEnabled = $.chapEnabled;
+        this.diskId = $.diskId;
+        this.gatewayArn = $.gatewayArn;
+        this.kmsEncrypted = $.kmsEncrypted;
+        this.kmsKey = $.kmsKey;
+        this.lunNumber = $.lunNumber;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.networkInterfacePort = $.networkInterfacePort;
+        this.preserveExistingData = $.preserveExistingData;
+        this.snapshotId = $.snapshotId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.targetArn = $.targetArn;
+        this.targetName = $.targetName;
+        this.volumeAttachmentStatus = $.volumeAttachmentStatus;
+        this.volumeId = $.volumeId;
+        this.volumeSizeInBytes = $.volumeSizeInBytes;
+        this.volumeStatus = $.volumeStatus;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StoredIscsiVolumeState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Boolean> chapEnabled;
-        private @Nullable Output<String> diskId;
-        private @Nullable Output<String> gatewayArn;
-        private @Nullable Output<Boolean> kmsEncrypted;
-        private @Nullable Output<String> kmsKey;
-        private @Nullable Output<Integer> lunNumber;
-        private @Nullable Output<String> networkInterfaceId;
-        private @Nullable Output<Integer> networkInterfacePort;
-        private @Nullable Output<Boolean> preserveExistingData;
-        private @Nullable Output<String> snapshotId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> targetArn;
-        private @Nullable Output<String> targetName;
-        private @Nullable Output<String> volumeAttachmentStatus;
-        private @Nullable Output<String> volumeId;
-        private @Nullable Output<Integer> volumeSizeInBytes;
-        private @Nullable Output<String> volumeStatus;
-        private @Nullable Output<String> volumeType;
+        private StoredIscsiVolumeState $;
 
         public Builder() {
-    	      // Empty
+            $ = new StoredIscsiVolumeState();
         }
 
         public Builder(StoredIscsiVolumeState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.chapEnabled = defaults.chapEnabled;
-    	      this.diskId = defaults.diskId;
-    	      this.gatewayArn = defaults.gatewayArn;
-    	      this.kmsEncrypted = defaults.kmsEncrypted;
-    	      this.kmsKey = defaults.kmsKey;
-    	      this.lunNumber = defaults.lunNumber;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.networkInterfacePort = defaults.networkInterfacePort;
-    	      this.preserveExistingData = defaults.preserveExistingData;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.targetArn = defaults.targetArn;
-    	      this.targetName = defaults.targetName;
-    	      this.volumeAttachmentStatus = defaults.volumeAttachmentStatus;
-    	      this.volumeId = defaults.volumeId;
-    	      this.volumeSizeInBytes = defaults.volumeSizeInBytes;
-    	      this.volumeStatus = defaults.volumeStatus;
-    	      this.volumeType = defaults.volumeType;
+            $ = new StoredIscsiVolumeState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder chapEnabled(@Nullable Output<Boolean> chapEnabled) {
-            this.chapEnabled = chapEnabled;
+            $.chapEnabled = chapEnabled;
             return this;
         }
-        public Builder chapEnabled(@Nullable Boolean chapEnabled) {
-            this.chapEnabled = Codegen.ofNullable(chapEnabled);
-            return this;
+
+        public Builder chapEnabled(Boolean chapEnabled) {
+            return chapEnabled(Output.of(chapEnabled));
         }
+
         public Builder diskId(@Nullable Output<String> diskId) {
-            this.diskId = diskId;
+            $.diskId = diskId;
             return this;
         }
-        public Builder diskId(@Nullable String diskId) {
-            this.diskId = Codegen.ofNullable(diskId);
-            return this;
+
+        public Builder diskId(String diskId) {
+            return diskId(Output.of(diskId));
         }
+
         public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
-            this.gatewayArn = gatewayArn;
+            $.gatewayArn = gatewayArn;
             return this;
         }
-        public Builder gatewayArn(@Nullable String gatewayArn) {
-            this.gatewayArn = Codegen.ofNullable(gatewayArn);
-            return this;
+
+        public Builder gatewayArn(String gatewayArn) {
+            return gatewayArn(Output.of(gatewayArn));
         }
+
         public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
-            this.kmsEncrypted = kmsEncrypted;
+            $.kmsEncrypted = kmsEncrypted;
             return this;
         }
-        public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
-            this.kmsEncrypted = Codegen.ofNullable(kmsEncrypted);
-            return this;
+
+        public Builder kmsEncrypted(Boolean kmsEncrypted) {
+            return kmsEncrypted(Output.of(kmsEncrypted));
         }
+
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
         }
+
         public Builder lunNumber(@Nullable Output<Integer> lunNumber) {
-            this.lunNumber = lunNumber;
+            $.lunNumber = lunNumber;
             return this;
         }
-        public Builder lunNumber(@Nullable Integer lunNumber) {
-            this.lunNumber = Codegen.ofNullable(lunNumber);
-            return this;
+
+        public Builder lunNumber(Integer lunNumber) {
+            return lunNumber(Output.of(lunNumber));
         }
+
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
-        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
-            return this;
+
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder networkInterfacePort(@Nullable Output<Integer> networkInterfacePort) {
-            this.networkInterfacePort = networkInterfacePort;
+            $.networkInterfacePort = networkInterfacePort;
             return this;
         }
-        public Builder networkInterfacePort(@Nullable Integer networkInterfacePort) {
-            this.networkInterfacePort = Codegen.ofNullable(networkInterfacePort);
-            return this;
+
+        public Builder networkInterfacePort(Integer networkInterfacePort) {
+            return networkInterfacePort(Output.of(networkInterfacePort));
         }
+
         public Builder preserveExistingData(@Nullable Output<Boolean> preserveExistingData) {
-            this.preserveExistingData = preserveExistingData;
+            $.preserveExistingData = preserveExistingData;
             return this;
         }
-        public Builder preserveExistingData(@Nullable Boolean preserveExistingData) {
-            this.preserveExistingData = Codegen.ofNullable(preserveExistingData);
-            return this;
+
+        public Builder preserveExistingData(Boolean preserveExistingData) {
+            return preserveExistingData(Output.of(preserveExistingData));
         }
+
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
-            this.snapshotId = snapshotId;
+            $.snapshotId = snapshotId;
             return this;
         }
-        public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Codegen.ofNullable(snapshotId);
-            return this;
+
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder targetArn(@Nullable Output<String> targetArn) {
-            this.targetArn = targetArn;
+            $.targetArn = targetArn;
             return this;
         }
-        public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Codegen.ofNullable(targetArn);
-            return this;
+
+        public Builder targetArn(String targetArn) {
+            return targetArn(Output.of(targetArn));
         }
+
         public Builder targetName(@Nullable Output<String> targetName) {
-            this.targetName = targetName;
+            $.targetName = targetName;
             return this;
         }
-        public Builder targetName(@Nullable String targetName) {
-            this.targetName = Codegen.ofNullable(targetName);
-            return this;
+
+        public Builder targetName(String targetName) {
+            return targetName(Output.of(targetName));
         }
+
         public Builder volumeAttachmentStatus(@Nullable Output<String> volumeAttachmentStatus) {
-            this.volumeAttachmentStatus = volumeAttachmentStatus;
+            $.volumeAttachmentStatus = volumeAttachmentStatus;
             return this;
         }
-        public Builder volumeAttachmentStatus(@Nullable String volumeAttachmentStatus) {
-            this.volumeAttachmentStatus = Codegen.ofNullable(volumeAttachmentStatus);
-            return this;
+
+        public Builder volumeAttachmentStatus(String volumeAttachmentStatus) {
+            return volumeAttachmentStatus(Output.of(volumeAttachmentStatus));
         }
+
         public Builder volumeId(@Nullable Output<String> volumeId) {
-            this.volumeId = volumeId;
+            $.volumeId = volumeId;
             return this;
         }
-        public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Codegen.ofNullable(volumeId);
-            return this;
+
+        public Builder volumeId(String volumeId) {
+            return volumeId(Output.of(volumeId));
         }
+
         public Builder volumeSizeInBytes(@Nullable Output<Integer> volumeSizeInBytes) {
-            this.volumeSizeInBytes = volumeSizeInBytes;
+            $.volumeSizeInBytes = volumeSizeInBytes;
             return this;
         }
-        public Builder volumeSizeInBytes(@Nullable Integer volumeSizeInBytes) {
-            this.volumeSizeInBytes = Codegen.ofNullable(volumeSizeInBytes);
-            return this;
+
+        public Builder volumeSizeInBytes(Integer volumeSizeInBytes) {
+            return volumeSizeInBytes(Output.of(volumeSizeInBytes));
         }
+
         public Builder volumeStatus(@Nullable Output<String> volumeStatus) {
-            this.volumeStatus = volumeStatus;
+            $.volumeStatus = volumeStatus;
             return this;
         }
-        public Builder volumeStatus(@Nullable String volumeStatus) {
-            this.volumeStatus = Codegen.ofNullable(volumeStatus);
-            return this;
+
+        public Builder volumeStatus(String volumeStatus) {
+            return volumeStatus(Output.of(volumeStatus));
         }
+
         public Builder volumeType(@Nullable Output<String> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public StoredIscsiVolumeState build() {
-            return new StoredIscsiVolumeState(arn, chapEnabled, diskId, gatewayArn, kmsEncrypted, kmsKey, lunNumber, networkInterfaceId, networkInterfacePort, preserveExistingData, snapshotId, tags, tagsAll, targetArn, targetName, volumeAttachmentStatus, volumeId, volumeSizeInBytes, volumeStatus, volumeType);
+
+        public Builder volumeType(String volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public StoredIscsiVolumeState build() {
+            return $;
         }
     }
+
 }

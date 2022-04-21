@@ -5,11 +5,11 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="boolValue")
-      private final @Nullable Output<Boolean> boolValue;
+    private @Nullable Output<Boolean> boolValue;
 
-    public Output<Boolean> boolValue() {
-        return this.boolValue == null ? Codegen.empty() : this.boolValue;
+    public Optional<Output<Boolean>> boolValue() {
+        return Optional.ofNullable(this.boolValue);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="intValue")
-      private final @Nullable Output<String> intValue;
+    private @Nullable Output<String> intValue;
 
-    public Output<String> intValue() {
-        return this.intValue == null ? Codegen.empty() : this.intValue;
+    public Optional<Output<String>> intValue() {
+        return Optional.ofNullable(this.intValue);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secretValue")
-      private final @Nullable Output<SecretArgs> secretValue;
+    private @Nullable Output<SecretArgs> secretValue;
 
-    public Output<SecretArgs> secretValue() {
-        return this.secretValue == null ? Codegen.empty() : this.secretValue;
+    public Optional<Output<SecretArgs>> secretValue() {
+        return Optional.ofNullable(this.secretValue);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="stringValue")
-      private final @Nullable Output<String> stringValue;
+    private @Nullable Output<String> stringValue;
 
-    public Output<String> stringValue() {
-        return this.stringValue == null ? Codegen.empty() : this.stringValue;
+    public Optional<Output<String>> stringValue() {
+        return Optional.ofNullable(this.stringValue);
     }
 
-    public ConfigVariableArgs(
-        @Nullable Output<Boolean> boolValue,
-        @Nullable Output<String> intValue,
-        @Nullable Output<String> key,
-        @Nullable Output<SecretArgs> secretValue,
-        @Nullable Output<String> stringValue) {
-        this.boolValue = boolValue;
-        this.intValue = intValue;
-        this.key = key;
-        this.secretValue = secretValue;
-        this.stringValue = stringValue;
-    }
+    private ConfigVariableArgs() {}
 
-    private ConfigVariableArgs() {
-        this.boolValue = Codegen.empty();
-        this.intValue = Codegen.empty();
-        this.key = Codegen.empty();
-        this.secretValue = Codegen.empty();
-        this.stringValue = Codegen.empty();
+    private ConfigVariableArgs(ConfigVariableArgs $) {
+        this.boolValue = $.boolValue;
+        this.intValue = $.intValue;
+        this.key = $.key;
+        this.secretValue = $.secretValue;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigVariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> boolValue;
-        private @Nullable Output<String> intValue;
-        private @Nullable Output<String> key;
-        private @Nullable Output<SecretArgs> secretValue;
-        private @Nullable Output<String> stringValue;
+        private ConfigVariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigVariableArgs();
         }
 
         public Builder(ConfigVariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boolValue = defaults.boolValue;
-    	      this.intValue = defaults.intValue;
-    	      this.key = defaults.key;
-    	      this.secretValue = defaults.secretValue;
-    	      this.stringValue = defaults.stringValue;
+            $ = new ConfigVariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder boolValue(@Nullable Output<Boolean> boolValue) {
-            this.boolValue = boolValue;
+            $.boolValue = boolValue;
             return this;
         }
-        public Builder boolValue(@Nullable Boolean boolValue) {
-            this.boolValue = Codegen.ofNullable(boolValue);
-            return this;
+
+        public Builder boolValue(Boolean boolValue) {
+            return boolValue(Output.of(boolValue));
         }
+
         public Builder intValue(@Nullable Output<String> intValue) {
-            this.intValue = intValue;
+            $.intValue = intValue;
             return this;
         }
-        public Builder intValue(@Nullable String intValue) {
-            this.intValue = Codegen.ofNullable(intValue);
-            return this;
+
+        public Builder intValue(String intValue) {
+            return intValue(Output.of(intValue));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder secretValue(@Nullable Output<SecretArgs> secretValue) {
-            this.secretValue = secretValue;
+            $.secretValue = secretValue;
             return this;
         }
-        public Builder secretValue(@Nullable SecretArgs secretValue) {
-            this.secretValue = Codegen.ofNullable(secretValue);
-            return this;
+
+        public Builder secretValue(SecretArgs secretValue) {
+            return secretValue(Output.of(secretValue));
         }
+
         public Builder stringValue(@Nullable Output<String> stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
         }
-        public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Codegen.ofNullable(stringValue);
-            return this;
-        }        public ConfigVariableArgs build() {
-            return new ConfigVariableArgs(boolValue, intValue, key, secretValue, stringValue);
+
+        public Builder stringValue(String stringValue) {
+            return stringValue(Output.of(stringValue));
+        }
+
+        public ConfigVariableArgs build() {
+            return $;
         }
     }
+
 }

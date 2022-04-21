@@ -22,7 +22,7 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="coreCount", required=true)
-      private final Double coreCount;
+    private Double coreCount;
 
     public Double coreCount() {
         return this.coreCount;
@@ -33,7 +33,7 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final Double id;
+    private Double id;
 
     public Double id() {
         return this.id;
@@ -44,7 +44,7 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="manufacturer", required=true)
-      private final String manufacturer;
+    private String manufacturer;
 
     public String manufacturer() {
         return this.manufacturer;
@@ -55,7 +55,7 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="memoryInGiB", required=true)
-      private final Double memoryInGiB;
+    private Double memoryInGiB;
 
     public Double memoryInGiB() {
         return this.memoryInGiB;
@@ -66,7 +66,7 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="model", required=true)
-      private final String model;
+    private String model;
 
     public String model() {
         return this.model;
@@ -77,7 +77,7 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -88,7 +88,7 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="osName", required=true)
-      private final String osName;
+    private String osName;
 
     public String osName() {
         return this.osName;
@@ -99,7 +99,7 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="osVersion", required=true)
-      private final String osVersion;
+    private String osVersion;
 
     public String osVersion() {
         return this.osVersion;
@@ -110,118 +110,101 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serialNumber", required=true)
-      private final String serialNumber;
+    private String serialNumber;
 
     public String serialNumber() {
         return this.serialNumber;
     }
 
-    public ClusterNodeResponse(
-        Double coreCount,
-        Double id,
-        String manufacturer,
-        Double memoryInGiB,
-        String model,
-        String name,
-        String osName,
-        String osVersion,
-        String serialNumber) {
-        this.coreCount = Objects.requireNonNull(coreCount, "expected parameter 'coreCount' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.manufacturer = Objects.requireNonNull(manufacturer, "expected parameter 'manufacturer' to be non-null");
-        this.memoryInGiB = Objects.requireNonNull(memoryInGiB, "expected parameter 'memoryInGiB' to be non-null");
-        this.model = Objects.requireNonNull(model, "expected parameter 'model' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.osName = Objects.requireNonNull(osName, "expected parameter 'osName' to be non-null");
-        this.osVersion = Objects.requireNonNull(osVersion, "expected parameter 'osVersion' to be non-null");
-        this.serialNumber = Objects.requireNonNull(serialNumber, "expected parameter 'serialNumber' to be non-null");
-    }
+    private ClusterNodeResponse() {}
 
-    private ClusterNodeResponse() {
-        this.coreCount = null;
-        this.id = null;
-        this.manufacturer = null;
-        this.memoryInGiB = null;
-        this.model = null;
-        this.name = null;
-        this.osName = null;
-        this.osVersion = null;
-        this.serialNumber = null;
+    private ClusterNodeResponse(ClusterNodeResponse $) {
+        this.coreCount = $.coreCount;
+        this.id = $.id;
+        this.manufacturer = $.manufacturer;
+        this.memoryInGiB = $.memoryInGiB;
+        this.model = $.model;
+        this.name = $.name;
+        this.osName = $.osName;
+        this.osVersion = $.osVersion;
+        this.serialNumber = $.serialNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterNodeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double coreCount;
-        private Double id;
-        private String manufacturer;
-        private Double memoryInGiB;
-        private String model;
-        private String name;
-        private String osName;
-        private String osVersion;
-        private String serialNumber;
+        private ClusterNodeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterNodeResponse();
         }
 
         public Builder(ClusterNodeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coreCount = defaults.coreCount;
-    	      this.id = defaults.id;
-    	      this.manufacturer = defaults.manufacturer;
-    	      this.memoryInGiB = defaults.memoryInGiB;
-    	      this.model = defaults.model;
-    	      this.name = defaults.name;
-    	      this.osName = defaults.osName;
-    	      this.osVersion = defaults.osVersion;
-    	      this.serialNumber = defaults.serialNumber;
+            $ = new ClusterNodeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder coreCount(Double coreCount) {
-            this.coreCount = Objects.requireNonNull(coreCount);
+            $.coreCount = coreCount;
             return this;
         }
+
         public Builder id(Double id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder manufacturer(String manufacturer) {
-            this.manufacturer = Objects.requireNonNull(manufacturer);
+            $.manufacturer = manufacturer;
             return this;
         }
+
         public Builder memoryInGiB(Double memoryInGiB) {
-            this.memoryInGiB = Objects.requireNonNull(memoryInGiB);
+            $.memoryInGiB = memoryInGiB;
             return this;
         }
+
         public Builder model(String model) {
-            this.model = Objects.requireNonNull(model);
+            $.model = model;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder osName(String osName) {
-            this.osName = Objects.requireNonNull(osName);
+            $.osName = osName;
             return this;
         }
+
         public Builder osVersion(String osVersion) {
-            this.osVersion = Objects.requireNonNull(osVersion);
+            $.osVersion = osVersion;
             return this;
         }
+
         public Builder serialNumber(String serialNumber) {
-            this.serialNumber = Objects.requireNonNull(serialNumber);
+            $.serialNumber = serialNumber;
             return this;
-        }        public ClusterNodeResponse build() {
-            return new ClusterNodeResponse(coreCount, id, manufacturer, memoryInGiB, model, name, osName, osVersion, serialNumber);
+        }
+
+        public ClusterNodeResponse build() {
+            $.coreCount = Objects.requireNonNull($.coreCount, "expected parameter 'coreCount' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.manufacturer = Objects.requireNonNull($.manufacturer, "expected parameter 'manufacturer' to be non-null");
+            $.memoryInGiB = Objects.requireNonNull($.memoryInGiB, "expected parameter 'memoryInGiB' to be non-null");
+            $.model = Objects.requireNonNull($.model, "expected parameter 'model' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.osName = Objects.requireNonNull($.osName, "expected parameter 'osName' to be non-null");
+            $.osVersion = Objects.requireNonNull($.osVersion, "expected parameter 'osVersion' to be non-null");
+            $.serialNumber = Objects.requireNonNull($.serialNumber, "expected parameter 'serialNumber' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,65 +15,63 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverride extend
     public static final GetGameServerDeploymentRolloutGameServerConfigOverride Empty = new GetGameServerDeploymentRolloutGameServerConfigOverride();
 
     @Import(name="configVersion", required=true)
-      private final String configVersion;
+    private String configVersion;
 
     public String configVersion() {
         return this.configVersion;
     }
 
     @Import(name="realmsSelectors", required=true)
-      private final List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors;
+    private List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors;
 
     public List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors() {
         return this.realmsSelectors;
     }
 
-    public GetGameServerDeploymentRolloutGameServerConfigOverride(
-        String configVersion,
-        List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors) {
-        this.configVersion = Objects.requireNonNull(configVersion, "expected parameter 'configVersion' to be non-null");
-        this.realmsSelectors = Objects.requireNonNull(realmsSelectors, "expected parameter 'realmsSelectors' to be non-null");
-    }
+    private GetGameServerDeploymentRolloutGameServerConfigOverride() {}
 
-    private GetGameServerDeploymentRolloutGameServerConfigOverride() {
-        this.configVersion = null;
-        this.realmsSelectors = List.of();
+    private GetGameServerDeploymentRolloutGameServerConfigOverride(GetGameServerDeploymentRolloutGameServerConfigOverride $) {
+        this.configVersion = $.configVersion;
+        this.realmsSelectors = $.realmsSelectors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGameServerDeploymentRolloutGameServerConfigOverride defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configVersion;
-        private List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors;
+        private GetGameServerDeploymentRolloutGameServerConfigOverride $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGameServerDeploymentRolloutGameServerConfigOverride();
         }
 
         public Builder(GetGameServerDeploymentRolloutGameServerConfigOverride defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configVersion = defaults.configVersion;
-    	      this.realmsSelectors = defaults.realmsSelectors;
+            $ = new GetGameServerDeploymentRolloutGameServerConfigOverride(Objects.requireNonNull(defaults));
         }
 
         public Builder configVersion(String configVersion) {
-            this.configVersion = Objects.requireNonNull(configVersion);
+            $.configVersion = configVersion;
             return this;
         }
+
         public Builder realmsSelectors(List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors) {
-            this.realmsSelectors = Objects.requireNonNull(realmsSelectors);
+            $.realmsSelectors = realmsSelectors;
             return this;
         }
+
         public Builder realmsSelectors(GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector... realmsSelectors) {
             return realmsSelectors(List.of(realmsSelectors));
-        }        public GetGameServerDeploymentRolloutGameServerConfigOverride build() {
-            return new GetGameServerDeploymentRolloutGameServerConfigOverride(configVersion, realmsSelectors);
+        }
+
+        public GetGameServerDeploymentRolloutGameServerConfigOverride build() {
+            $.configVersion = Objects.requireNonNull($.configVersion, "expected parameter 'configVersion' to be non-null");
+            $.realmsSelectors = Objects.requireNonNull($.realmsSelectors, "expected parameter 'realmsSelectors' to be non-null");
+            return $;
         }
     }
+
 }

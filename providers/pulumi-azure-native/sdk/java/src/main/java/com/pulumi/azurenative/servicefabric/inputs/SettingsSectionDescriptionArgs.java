@@ -6,7 +6,6 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.azurenative.servicefabric.inputs.SettingsParameterDescriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public final class SettingsSectionDescriptionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,66 +35,64 @@ public final class SettingsSectionDescriptionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<List<SettingsParameterDescriptionArgs>> parameters;
+    private Output<List<SettingsParameterDescriptionArgs>> parameters;
 
     public Output<List<SettingsParameterDescriptionArgs>> parameters() {
         return this.parameters;
     }
 
-    public SettingsSectionDescriptionArgs(
-        Output<String> name,
-        Output<List<SettingsParameterDescriptionArgs>> parameters) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private SettingsSectionDescriptionArgs() {}
 
-    private SettingsSectionDescriptionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private SettingsSectionDescriptionArgs(SettingsSectionDescriptionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SettingsSectionDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<List<SettingsParameterDescriptionArgs>> parameters;
+        private SettingsSectionDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SettingsSectionDescriptionArgs();
         }
 
         public Builder(SettingsSectionDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new SettingsSectionDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<List<SettingsParameterDescriptionArgs>> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(List<SettingsParameterDescriptionArgs> parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(SettingsParameterDescriptionArgs... parameters) {
             return parameters(List.of(parameters));
-        }        public SettingsSectionDescriptionArgs build() {
-            return new SettingsSectionDescriptionArgs(name, parameters);
+        }
+
+        public SettingsSectionDescriptionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

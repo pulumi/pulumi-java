@@ -24,7 +24,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends com.pulumi.
      * 
      */
     @Import(name="calendarPeriod", required=true)
-      private final String calendarPeriod;
+    private String calendarPeriod;
 
     public String calendarPeriod() {
         return this.calendarPeriod;
@@ -35,7 +35,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends com.pulumi.
      * 
      */
     @Import(name="creditTypes", required=true)
-      private final List<String> creditTypes;
+    private List<String> creditTypes;
 
     public List<String> creditTypes() {
         return this.creditTypes;
@@ -46,7 +46,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends com.pulumi.
      * 
      */
     @Import(name="creditTypesTreatment", required=true)
-      private final String creditTypesTreatment;
+    private String creditTypesTreatment;
 
     public String creditTypesTreatment() {
         return this.creditTypesTreatment;
@@ -57,7 +57,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends com.pulumi.
      * 
      */
     @Import(name="customPeriod", required=true)
-      private final GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod;
+    private GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod;
 
     public GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod() {
         return this.customPeriod;
@@ -68,7 +68,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends com.pulumi.
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -79,7 +79,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends com.pulumi.
      * 
      */
     @Import(name="projects", required=true)
-      private final List<String> projects;
+    private List<String> projects;
 
     public List<String> projects() {
         return this.projects;
@@ -90,7 +90,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends com.pulumi.
      * 
      */
     @Import(name="services", required=true)
-      private final List<String> services;
+    private List<String> services;
 
     public List<String> services() {
         return this.services;
@@ -101,121 +101,110 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends com.pulumi.
      * 
      */
     @Import(name="subaccounts", required=true)
-      private final List<String> subaccounts;
+    private List<String> subaccounts;
 
     public List<String> subaccounts() {
         return this.subaccounts;
     }
 
-    public GoogleCloudBillingBudgetsV1FilterResponse(
-        String calendarPeriod,
-        List<String> creditTypes,
-        String creditTypesTreatment,
-        GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod,
-        Map<String,String> labels,
-        List<String> projects,
-        List<String> services,
-        List<String> subaccounts) {
-        this.calendarPeriod = Objects.requireNonNull(calendarPeriod, "expected parameter 'calendarPeriod' to be non-null");
-        this.creditTypes = Objects.requireNonNull(creditTypes, "expected parameter 'creditTypes' to be non-null");
-        this.creditTypesTreatment = Objects.requireNonNull(creditTypesTreatment, "expected parameter 'creditTypesTreatment' to be non-null");
-        this.customPeriod = Objects.requireNonNull(customPeriod, "expected parameter 'customPeriod' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.projects = Objects.requireNonNull(projects, "expected parameter 'projects' to be non-null");
-        this.services = Objects.requireNonNull(services, "expected parameter 'services' to be non-null");
-        this.subaccounts = Objects.requireNonNull(subaccounts, "expected parameter 'subaccounts' to be non-null");
-    }
+    private GoogleCloudBillingBudgetsV1FilterResponse() {}
 
-    private GoogleCloudBillingBudgetsV1FilterResponse() {
-        this.calendarPeriod = null;
-        this.creditTypes = List.of();
-        this.creditTypesTreatment = null;
-        this.customPeriod = null;
-        this.labels = Map.of();
-        this.projects = List.of();
-        this.services = List.of();
-        this.subaccounts = List.of();
+    private GoogleCloudBillingBudgetsV1FilterResponse(GoogleCloudBillingBudgetsV1FilterResponse $) {
+        this.calendarPeriod = $.calendarPeriod;
+        this.creditTypes = $.creditTypes;
+        this.creditTypesTreatment = $.creditTypesTreatment;
+        this.customPeriod = $.customPeriod;
+        this.labels = $.labels;
+        this.projects = $.projects;
+        this.services = $.services;
+        this.subaccounts = $.subaccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudBillingBudgetsV1FilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String calendarPeriod;
-        private List<String> creditTypes;
-        private String creditTypesTreatment;
-        private GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod;
-        private Map<String,String> labels;
-        private List<String> projects;
-        private List<String> services;
-        private List<String> subaccounts;
+        private GoogleCloudBillingBudgetsV1FilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudBillingBudgetsV1FilterResponse();
         }
 
         public Builder(GoogleCloudBillingBudgetsV1FilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.calendarPeriod = defaults.calendarPeriod;
-    	      this.creditTypes = defaults.creditTypes;
-    	      this.creditTypesTreatment = defaults.creditTypesTreatment;
-    	      this.customPeriod = defaults.customPeriod;
-    	      this.labels = defaults.labels;
-    	      this.projects = defaults.projects;
-    	      this.services = defaults.services;
-    	      this.subaccounts = defaults.subaccounts;
+            $ = new GoogleCloudBillingBudgetsV1FilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder calendarPeriod(String calendarPeriod) {
-            this.calendarPeriod = Objects.requireNonNull(calendarPeriod);
+            $.calendarPeriod = calendarPeriod;
             return this;
         }
+
         public Builder creditTypes(List<String> creditTypes) {
-            this.creditTypes = Objects.requireNonNull(creditTypes);
+            $.creditTypes = creditTypes;
             return this;
         }
+
         public Builder creditTypes(String... creditTypes) {
             return creditTypes(List.of(creditTypes));
         }
+
         public Builder creditTypesTreatment(String creditTypesTreatment) {
-            this.creditTypesTreatment = Objects.requireNonNull(creditTypesTreatment);
+            $.creditTypesTreatment = creditTypesTreatment;
             return this;
         }
+
         public Builder customPeriod(GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod) {
-            this.customPeriod = Objects.requireNonNull(customPeriod);
+            $.customPeriod = customPeriod;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder projects(List<String> projects) {
-            this.projects = Objects.requireNonNull(projects);
+            $.projects = projects;
             return this;
         }
+
         public Builder projects(String... projects) {
             return projects(List.of(projects));
         }
+
         public Builder services(List<String> services) {
-            this.services = Objects.requireNonNull(services);
+            $.services = services;
             return this;
         }
+
         public Builder services(String... services) {
             return services(List.of(services));
         }
+
         public Builder subaccounts(List<String> subaccounts) {
-            this.subaccounts = Objects.requireNonNull(subaccounts);
+            $.subaccounts = subaccounts;
             return this;
         }
+
         public Builder subaccounts(String... subaccounts) {
             return subaccounts(List.of(subaccounts));
-        }        public GoogleCloudBillingBudgetsV1FilterResponse build() {
-            return new GoogleCloudBillingBudgetsV1FilterResponse(calendarPeriod, creditTypes, creditTypesTreatment, customPeriod, labels, projects, services, subaccounts);
+        }
+
+        public GoogleCloudBillingBudgetsV1FilterResponse build() {
+            $.calendarPeriod = Objects.requireNonNull($.calendarPeriod, "expected parameter 'calendarPeriod' to be non-null");
+            $.creditTypes = Objects.requireNonNull($.creditTypes, "expected parameter 'creditTypes' to be non-null");
+            $.creditTypesTreatment = Objects.requireNonNull($.creditTypesTreatment, "expected parameter 'creditTypesTreatment' to be non-null");
+            $.customPeriod = Objects.requireNonNull($.customPeriod, "expected parameter 'customPeriod' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.projects = Objects.requireNonNull($.projects, "expected parameter 'projects' to be non-null");
+            $.services = Objects.requireNonNull($.services, "expected parameter 'services' to be non-null");
+            $.subaccounts = Objects.requireNonNull($.subaccounts, "expected parameter 'subaccounts' to be non-null");
+            return $;
         }
     }
+
 }

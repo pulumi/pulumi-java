@@ -13,45 +13,45 @@ public final class GetClusterWorkloadIdentityConfig extends com.pulumi.resources
     public static final GetClusterWorkloadIdentityConfig Empty = new GetClusterWorkloadIdentityConfig();
 
     @Import(name="workloadPool", required=true)
-      private final String workloadPool;
+    private String workloadPool;
 
     public String workloadPool() {
         return this.workloadPool;
     }
 
-    public GetClusterWorkloadIdentityConfig(String workloadPool) {
-        this.workloadPool = Objects.requireNonNull(workloadPool, "expected parameter 'workloadPool' to be non-null");
-    }
+    private GetClusterWorkloadIdentityConfig() {}
 
-    private GetClusterWorkloadIdentityConfig() {
-        this.workloadPool = null;
+    private GetClusterWorkloadIdentityConfig(GetClusterWorkloadIdentityConfig $) {
+        this.workloadPool = $.workloadPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterWorkloadIdentityConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String workloadPool;
+        private GetClusterWorkloadIdentityConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterWorkloadIdentityConfig();
         }
 
         public Builder(GetClusterWorkloadIdentityConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workloadPool = defaults.workloadPool;
+            $ = new GetClusterWorkloadIdentityConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder workloadPool(String workloadPool) {
-            this.workloadPool = Objects.requireNonNull(workloadPool);
+            $.workloadPool = workloadPool;
             return this;
-        }        public GetClusterWorkloadIdentityConfig build() {
-            return new GetClusterWorkloadIdentityConfig(workloadPool);
+        }
+
+        public GetClusterWorkloadIdentityConfig build() {
+            $.workloadPool = Objects.requireNonNull($.workloadPool, "expected parameter 'workloadPool' to be non-null");
+            return $;
         }
     }
+
 }

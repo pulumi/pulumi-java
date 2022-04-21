@@ -13,110 +13,101 @@ public final class TopicRuleElasticsearchAction extends com.pulumi.resources.Inv
     public static final TopicRuleElasticsearchAction Empty = new TopicRuleElasticsearchAction();
 
     @Import(name="endpoint", required=true)
-      private final String endpoint;
+    private String endpoint;
 
     public String endpoint() {
         return this.endpoint;
     }
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="index", required=true)
-      private final String index;
+    private String index;
 
     public String index() {
         return this.index;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TopicRuleElasticsearchAction(
-        String endpoint,
-        String id,
-        String index,
-        String roleArn,
-        String type) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TopicRuleElasticsearchAction() {}
 
-    private TopicRuleElasticsearchAction() {
-        this.endpoint = null;
-        this.id = null;
-        this.index = null;
-        this.roleArn = null;
-        this.type = null;
+    private TopicRuleElasticsearchAction(TopicRuleElasticsearchAction $) {
+        this.endpoint = $.endpoint;
+        this.id = $.id;
+        this.index = $.index;
+        this.roleArn = $.roleArn;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleElasticsearchAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpoint;
-        private String id;
-        private String index;
-        private String roleArn;
-        private String type;
+        private TopicRuleElasticsearchAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleElasticsearchAction();
         }
 
         public Builder(TopicRuleElasticsearchAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.id = defaults.id;
-    	      this.index = defaults.index;
-    	      this.roleArn = defaults.roleArn;
-    	      this.type = defaults.type;
+            $ = new TopicRuleElasticsearchAction(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder index(String index) {
-            this.index = Objects.requireNonNull(index);
+            $.index = index;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TopicRuleElasticsearchAction build() {
-            return new TopicRuleElasticsearchAction(endpoint, id, index, roleArn, type);
+        }
+
+        public TopicRuleElasticsearchAction build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.index = Objects.requireNonNull($.index, "expected parameter 'index' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

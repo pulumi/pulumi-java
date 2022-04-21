@@ -5,10 +5,10 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ResponseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseParameters")
-      private final @Nullable Output<Map<String,String>> responseParameters;
+    private @Nullable Output<Map<String,String>> responseParameters;
 
-    public Output<Map<String,String>> responseParameters() {
-        return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
+    public Optional<Output<Map<String,String>>> responseParameters() {
+        return Optional.ofNullable(this.responseParameters);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ResponseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseTemplates")
-      private final @Nullable Output<Map<String,String>> responseTemplates;
+    private @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Output<Map<String,String>> responseTemplates() {
-        return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
+    public Optional<Output<Map<String,String>>> responseTemplates() {
+        return Optional.ofNullable(this.responseTemplates);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResponseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseType")
-      private final @Nullable Output<String> responseType;
+    private @Nullable Output<String> responseType;
 
-    public Output<String> responseType() {
-        return this.responseType == null ? Codegen.empty() : this.responseType;
+    public Optional<Output<String>> responseType() {
+        return Optional.ofNullable(this.responseType);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ResponseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApiId")
-      private final @Nullable Output<String> restApiId;
+    private @Nullable Output<String> restApiId;
 
-    public Output<String> restApiId() {
-        return this.restApiId == null ? Codegen.empty() : this.restApiId;
+    public Optional<Output<String>> restApiId() {
+        return Optional.ofNullable(this.restApiId);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class ResponseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statusCode")
-      private final @Nullable Output<String> statusCode;
+    private @Nullable Output<String> statusCode;
 
-    public Output<String> statusCode() {
-        return this.statusCode == null ? Codegen.empty() : this.statusCode;
+    public Optional<Output<String>> statusCode() {
+        return Optional.ofNullable(this.statusCode);
     }
 
-    public ResponseState(
-        @Nullable Output<Map<String,String>> responseParameters,
-        @Nullable Output<Map<String,String>> responseTemplates,
-        @Nullable Output<String> responseType,
-        @Nullable Output<String> restApiId,
-        @Nullable Output<String> statusCode) {
-        this.responseParameters = responseParameters;
-        this.responseTemplates = responseTemplates;
-        this.responseType = responseType;
-        this.restApiId = restApiId;
-        this.statusCode = statusCode;
-    }
+    private ResponseState() {}
 
-    private ResponseState() {
-        this.responseParameters = Codegen.empty();
-        this.responseTemplates = Codegen.empty();
-        this.responseType = Codegen.empty();
-        this.restApiId = Codegen.empty();
-        this.statusCode = Codegen.empty();
+    private ResponseState(ResponseState $) {
+        this.responseParameters = $.responseParameters;
+        this.responseTemplates = $.responseTemplates;
+        this.responseType = $.responseType;
+        this.restApiId = $.restApiId;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> responseParameters;
-        private @Nullable Output<Map<String,String>> responseTemplates;
-        private @Nullable Output<String> responseType;
-        private @Nullable Output<String> restApiId;
-        private @Nullable Output<String> statusCode;
+        private ResponseState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseState();
         }
 
         public Builder(ResponseState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.responseParameters = defaults.responseParameters;
-    	      this.responseTemplates = defaults.responseTemplates;
-    	      this.responseType = defaults.responseType;
-    	      this.restApiId = defaults.restApiId;
-    	      this.statusCode = defaults.statusCode;
+            $ = new ResponseState(Objects.requireNonNull(defaults));
         }
 
         public Builder responseParameters(@Nullable Output<Map<String,String>> responseParameters) {
-            this.responseParameters = responseParameters;
+            $.responseParameters = responseParameters;
             return this;
         }
-        public Builder responseParameters(@Nullable Map<String,String> responseParameters) {
-            this.responseParameters = Codegen.ofNullable(responseParameters);
-            return this;
+
+        public Builder responseParameters(Map<String,String> responseParameters) {
+            return responseParameters(Output.of(responseParameters));
         }
+
         public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
-            this.responseTemplates = responseTemplates;
+            $.responseTemplates = responseTemplates;
             return this;
         }
-        public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
-            this.responseTemplates = Codegen.ofNullable(responseTemplates);
-            return this;
+
+        public Builder responseTemplates(Map<String,String> responseTemplates) {
+            return responseTemplates(Output.of(responseTemplates));
         }
+
         public Builder responseType(@Nullable Output<String> responseType) {
-            this.responseType = responseType;
+            $.responseType = responseType;
             return this;
         }
-        public Builder responseType(@Nullable String responseType) {
-            this.responseType = Codegen.ofNullable(responseType);
-            return this;
+
+        public Builder responseType(String responseType) {
+            return responseType(Output.of(responseType));
         }
+
         public Builder restApiId(@Nullable Output<String> restApiId) {
-            this.restApiId = restApiId;
+            $.restApiId = restApiId;
             return this;
         }
-        public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Codegen.ofNullable(restApiId);
-            return this;
+
+        public Builder restApiId(String restApiId) {
+            return restApiId(Output.of(restApiId));
         }
+
         public Builder statusCode(@Nullable Output<String> statusCode) {
-            this.statusCode = statusCode;
+            $.statusCode = statusCode;
             return this;
         }
-        public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Codegen.ofNullable(statusCode);
-            return this;
-        }        public ResponseState build() {
-            return new ResponseState(responseParameters, responseTemplates, responseType, restApiId, statusCode);
+
+        public Builder statusCode(String statusCode) {
+            return statusCode(Output.of(statusCode));
+        }
+
+        public ResponseState build() {
+            return $;
         }
     }
+
 }

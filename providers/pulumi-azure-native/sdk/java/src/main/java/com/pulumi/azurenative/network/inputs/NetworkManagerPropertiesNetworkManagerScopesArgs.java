@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends com.
      * 
      */
     @Import(name="managementGroups")
-      private final @Nullable Output<List<String>> managementGroups;
+    private @Nullable Output<List<String>> managementGroups;
 
-    public Output<List<String>> managementGroups() {
-        return this.managementGroups == null ? Codegen.empty() : this.managementGroups;
+    public Optional<Output<List<String>>> managementGroups() {
+        return Optional.ofNullable(this.managementGroups);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends com.
      * 
      */
     @Import(name="subscriptions")
-      private final @Nullable Output<List<String>> subscriptions;
+    private @Nullable Output<List<String>> subscriptions;
 
-    public Output<List<String>> subscriptions() {
-        return this.subscriptions == null ? Codegen.empty() : this.subscriptions;
+    public Optional<Output<List<String>>> subscriptions() {
+        return Optional.ofNullable(this.subscriptions);
     }
 
-    public NetworkManagerPropertiesNetworkManagerScopesArgs(
-        @Nullable Output<List<String>> managementGroups,
-        @Nullable Output<List<String>> subscriptions) {
-        this.managementGroups = managementGroups;
-        this.subscriptions = subscriptions;
-    }
+    private NetworkManagerPropertiesNetworkManagerScopesArgs() {}
 
-    private NetworkManagerPropertiesNetworkManagerScopesArgs() {
-        this.managementGroups = Codegen.empty();
-        this.subscriptions = Codegen.empty();
+    private NetworkManagerPropertiesNetworkManagerScopesArgs(NetworkManagerPropertiesNetworkManagerScopesArgs $) {
+        this.managementGroups = $.managementGroups;
+        this.subscriptions = $.subscriptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkManagerPropertiesNetworkManagerScopesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> managementGroups;
-        private @Nullable Output<List<String>> subscriptions;
+        private NetworkManagerPropertiesNetworkManagerScopesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkManagerPropertiesNetworkManagerScopesArgs();
         }
 
         public Builder(NetworkManagerPropertiesNetworkManagerScopesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managementGroups = defaults.managementGroups;
-    	      this.subscriptions = defaults.subscriptions;
+            $ = new NetworkManagerPropertiesNetworkManagerScopesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managementGroups(@Nullable Output<List<String>> managementGroups) {
-            this.managementGroups = managementGroups;
+            $.managementGroups = managementGroups;
             return this;
         }
-        public Builder managementGroups(@Nullable List<String> managementGroups) {
-            this.managementGroups = Codegen.ofNullable(managementGroups);
-            return this;
+
+        public Builder managementGroups(List<String> managementGroups) {
+            return managementGroups(Output.of(managementGroups));
         }
+
         public Builder managementGroups(String... managementGroups) {
             return managementGroups(List.of(managementGroups));
         }
+
         public Builder subscriptions(@Nullable Output<List<String>> subscriptions) {
-            this.subscriptions = subscriptions;
+            $.subscriptions = subscriptions;
             return this;
         }
-        public Builder subscriptions(@Nullable List<String> subscriptions) {
-            this.subscriptions = Codegen.ofNullable(subscriptions);
-            return this;
+
+        public Builder subscriptions(List<String> subscriptions) {
+            return subscriptions(Output.of(subscriptions));
         }
+
         public Builder subscriptions(String... subscriptions) {
             return subscriptions(List.of(subscriptions));
-        }        public NetworkManagerPropertiesNetworkManagerScopesArgs build() {
-            return new NetworkManagerPropertiesNetworkManagerScopesArgs(managementGroups, subscriptions);
+        }
+
+        public NetworkManagerPropertiesNetworkManagerScopesArgs build() {
+            return $;
         }
     }
+
 }

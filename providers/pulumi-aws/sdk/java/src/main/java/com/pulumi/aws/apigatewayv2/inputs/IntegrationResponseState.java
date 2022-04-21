@@ -5,10 +5,10 @@ package com.pulumi.aws.apigatewayv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="apiId")
-      private final @Nullable Output<String> apiId;
+    private @Nullable Output<String> apiId;
 
-    public Output<String> apiId() {
-        return this.apiId == null ? Codegen.empty() : this.apiId;
+    public Optional<Output<String>> apiId() {
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="contentHandlingStrategy")
-      private final @Nullable Output<String> contentHandlingStrategy;
+    private @Nullable Output<String> contentHandlingStrategy;
 
-    public Output<String> contentHandlingStrategy() {
-        return this.contentHandlingStrategy == null ? Codegen.empty() : this.contentHandlingStrategy;
+    public Optional<Output<String>> contentHandlingStrategy() {
+        return Optional.ofNullable(this.contentHandlingStrategy);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="integrationId")
-      private final @Nullable Output<String> integrationId;
+    private @Nullable Output<String> integrationId;
 
-    public Output<String> integrationId() {
-        return this.integrationId == null ? Codegen.empty() : this.integrationId;
+    public Optional<Output<String>> integrationId() {
+        return Optional.ofNullable(this.integrationId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="integrationResponseKey")
-      private final @Nullable Output<String> integrationResponseKey;
+    private @Nullable Output<String> integrationResponseKey;
 
-    public Output<String> integrationResponseKey() {
-        return this.integrationResponseKey == null ? Codegen.empty() : this.integrationResponseKey;
+    public Optional<Output<String>> integrationResponseKey() {
+        return Optional.ofNullable(this.integrationResponseKey);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="responseTemplates")
-      private final @Nullable Output<Map<String,String>> responseTemplates;
+    private @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Output<Map<String,String>> responseTemplates() {
-        return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
+    public Optional<Output<Map<String,String>>> responseTemplates() {
+        return Optional.ofNullable(this.responseTemplates);
     }
 
     /**
@@ -76,115 +76,98 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="templateSelectionExpression")
-      private final @Nullable Output<String> templateSelectionExpression;
+    private @Nullable Output<String> templateSelectionExpression;
 
-    public Output<String> templateSelectionExpression() {
-        return this.templateSelectionExpression == null ? Codegen.empty() : this.templateSelectionExpression;
+    public Optional<Output<String>> templateSelectionExpression() {
+        return Optional.ofNullable(this.templateSelectionExpression);
     }
 
-    public IntegrationResponseState(
-        @Nullable Output<String> apiId,
-        @Nullable Output<String> contentHandlingStrategy,
-        @Nullable Output<String> integrationId,
-        @Nullable Output<String> integrationResponseKey,
-        @Nullable Output<Map<String,String>> responseTemplates,
-        @Nullable Output<String> templateSelectionExpression) {
-        this.apiId = apiId;
-        this.contentHandlingStrategy = contentHandlingStrategy;
-        this.integrationId = integrationId;
-        this.integrationResponseKey = integrationResponseKey;
-        this.responseTemplates = responseTemplates;
-        this.templateSelectionExpression = templateSelectionExpression;
-    }
+    private IntegrationResponseState() {}
 
-    private IntegrationResponseState() {
-        this.apiId = Codegen.empty();
-        this.contentHandlingStrategy = Codegen.empty();
-        this.integrationId = Codegen.empty();
-        this.integrationResponseKey = Codegen.empty();
-        this.responseTemplates = Codegen.empty();
-        this.templateSelectionExpression = Codegen.empty();
+    private IntegrationResponseState(IntegrationResponseState $) {
+        this.apiId = $.apiId;
+        this.contentHandlingStrategy = $.contentHandlingStrategy;
+        this.integrationId = $.integrationId;
+        this.integrationResponseKey = $.integrationResponseKey;
+        this.responseTemplates = $.responseTemplates;
+        this.templateSelectionExpression = $.templateSelectionExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationResponseState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiId;
-        private @Nullable Output<String> contentHandlingStrategy;
-        private @Nullable Output<String> integrationId;
-        private @Nullable Output<String> integrationResponseKey;
-        private @Nullable Output<Map<String,String>> responseTemplates;
-        private @Nullable Output<String> templateSelectionExpression;
+        private IntegrationResponseState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationResponseState();
         }
 
         public Builder(IntegrationResponseState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.contentHandlingStrategy = defaults.contentHandlingStrategy;
-    	      this.integrationId = defaults.integrationId;
-    	      this.integrationResponseKey = defaults.integrationResponseKey;
-    	      this.responseTemplates = defaults.responseTemplates;
-    	      this.templateSelectionExpression = defaults.templateSelectionExpression;
+            $ = new IntegrationResponseState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable Output<String> apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
-        public Builder apiId(@Nullable String apiId) {
-            this.apiId = Codegen.ofNullable(apiId);
-            return this;
+
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
+
         public Builder contentHandlingStrategy(@Nullable Output<String> contentHandlingStrategy) {
-            this.contentHandlingStrategy = contentHandlingStrategy;
+            $.contentHandlingStrategy = contentHandlingStrategy;
             return this;
         }
-        public Builder contentHandlingStrategy(@Nullable String contentHandlingStrategy) {
-            this.contentHandlingStrategy = Codegen.ofNullable(contentHandlingStrategy);
-            return this;
+
+        public Builder contentHandlingStrategy(String contentHandlingStrategy) {
+            return contentHandlingStrategy(Output.of(contentHandlingStrategy));
         }
+
         public Builder integrationId(@Nullable Output<String> integrationId) {
-            this.integrationId = integrationId;
+            $.integrationId = integrationId;
             return this;
         }
-        public Builder integrationId(@Nullable String integrationId) {
-            this.integrationId = Codegen.ofNullable(integrationId);
-            return this;
+
+        public Builder integrationId(String integrationId) {
+            return integrationId(Output.of(integrationId));
         }
+
         public Builder integrationResponseKey(@Nullable Output<String> integrationResponseKey) {
-            this.integrationResponseKey = integrationResponseKey;
+            $.integrationResponseKey = integrationResponseKey;
             return this;
         }
-        public Builder integrationResponseKey(@Nullable String integrationResponseKey) {
-            this.integrationResponseKey = Codegen.ofNullable(integrationResponseKey);
-            return this;
+
+        public Builder integrationResponseKey(String integrationResponseKey) {
+            return integrationResponseKey(Output.of(integrationResponseKey));
         }
+
         public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
-            this.responseTemplates = responseTemplates;
+            $.responseTemplates = responseTemplates;
             return this;
         }
-        public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
-            this.responseTemplates = Codegen.ofNullable(responseTemplates);
-            return this;
+
+        public Builder responseTemplates(Map<String,String> responseTemplates) {
+            return responseTemplates(Output.of(responseTemplates));
         }
+
         public Builder templateSelectionExpression(@Nullable Output<String> templateSelectionExpression) {
-            this.templateSelectionExpression = templateSelectionExpression;
+            $.templateSelectionExpression = templateSelectionExpression;
             return this;
         }
-        public Builder templateSelectionExpression(@Nullable String templateSelectionExpression) {
-            this.templateSelectionExpression = Codegen.ofNullable(templateSelectionExpression);
-            return this;
-        }        public IntegrationResponseState build() {
-            return new IntegrationResponseState(apiId, contentHandlingStrategy, integrationId, integrationResponseKey, responseTemplates, templateSelectionExpression);
+
+        public Builder templateSelectionExpression(String templateSelectionExpression) {
+            return templateSelectionExpression(Output.of(templateSelectionExpression));
+        }
+
+        public IntegrationResponseState build() {
+            return $;
         }
     }
+
 }

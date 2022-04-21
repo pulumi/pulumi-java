@@ -23,45 +23,44 @@ public final class StorageClassificationMappingPropertiesResponse extends com.pu
      * 
      */
     @Import(name="targetStorageClassificationId")
-      private final @Nullable String targetStorageClassificationId;
+    private @Nullable String targetStorageClassificationId;
 
     public Optional<String> targetStorageClassificationId() {
-        return this.targetStorageClassificationId == null ? Optional.empty() : Optional.ofNullable(this.targetStorageClassificationId);
+        return Optional.ofNullable(this.targetStorageClassificationId);
     }
 
-    public StorageClassificationMappingPropertiesResponse(@Nullable String targetStorageClassificationId) {
-        this.targetStorageClassificationId = targetStorageClassificationId;
-    }
+    private StorageClassificationMappingPropertiesResponse() {}
 
-    private StorageClassificationMappingPropertiesResponse() {
-        this.targetStorageClassificationId = null;
+    private StorageClassificationMappingPropertiesResponse(StorageClassificationMappingPropertiesResponse $) {
+        this.targetStorageClassificationId = $.targetStorageClassificationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageClassificationMappingPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String targetStorageClassificationId;
+        private StorageClassificationMappingPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageClassificationMappingPropertiesResponse();
         }
 
         public Builder(StorageClassificationMappingPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetStorageClassificationId = defaults.targetStorageClassificationId;
+            $ = new StorageClassificationMappingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetStorageClassificationId(@Nullable String targetStorageClassificationId) {
-            this.targetStorageClassificationId = targetStorageClassificationId;
+            $.targetStorageClassificationId = targetStorageClassificationId;
             return this;
-        }        public StorageClassificationMappingPropertiesResponse build() {
-            return new StorageClassificationMappingPropertiesResponse(targetStorageClassificationId);
+        }
+
+        public StorageClassificationMappingPropertiesResponse build() {
+            return $;
         }
     }
+
 }

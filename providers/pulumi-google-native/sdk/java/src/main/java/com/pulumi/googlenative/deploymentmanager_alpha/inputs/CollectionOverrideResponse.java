@@ -23,7 +23,7 @@ public final class CollectionOverrideResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="collection", required=true)
-      private final String collection;
+    private String collection;
 
     public String collection() {
         return this.collection;
@@ -34,7 +34,7 @@ public final class CollectionOverrideResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="methodMap", required=true)
-      private final MethodMapResponse methodMap;
+    private MethodMapResponse methodMap;
 
     public MethodMapResponse methodMap() {
         return this.methodMap;
@@ -45,64 +45,59 @@ public final class CollectionOverrideResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="options", required=true)
-      private final OptionsResponse options;
+    private OptionsResponse options;
 
     public OptionsResponse options() {
         return this.options;
     }
 
-    public CollectionOverrideResponse(
-        String collection,
-        MethodMapResponse methodMap,
-        OptionsResponse options) {
-        this.collection = Objects.requireNonNull(collection, "expected parameter 'collection' to be non-null");
-        this.methodMap = Objects.requireNonNull(methodMap, "expected parameter 'methodMap' to be non-null");
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-    }
+    private CollectionOverrideResponse() {}
 
-    private CollectionOverrideResponse() {
-        this.collection = null;
-        this.methodMap = null;
-        this.options = null;
+    private CollectionOverrideResponse(CollectionOverrideResponse $) {
+        this.collection = $.collection;
+        this.methodMap = $.methodMap;
+        this.options = $.options;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CollectionOverrideResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String collection;
-        private MethodMapResponse methodMap;
-        private OptionsResponse options;
+        private CollectionOverrideResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CollectionOverrideResponse();
         }
 
         public Builder(CollectionOverrideResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collection = defaults.collection;
-    	      this.methodMap = defaults.methodMap;
-    	      this.options = defaults.options;
+            $ = new CollectionOverrideResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder collection(String collection) {
-            this.collection = Objects.requireNonNull(collection);
+            $.collection = collection;
             return this;
         }
+
         public Builder methodMap(MethodMapResponse methodMap) {
-            this.methodMap = Objects.requireNonNull(methodMap);
+            $.methodMap = methodMap;
             return this;
         }
+
         public Builder options(OptionsResponse options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
-        }        public CollectionOverrideResponse build() {
-            return new CollectionOverrideResponse(collection, methodMap, options);
+        }
+
+        public CollectionOverrideResponse build() {
+            $.collection = Objects.requireNonNull($.collection, "expected parameter 'collection' to be non-null");
+            $.methodMap = Objects.requireNonNull($.methodMap, "expected parameter 'methodMap' to be non-null");
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            return $;
         }
     }
+
 }

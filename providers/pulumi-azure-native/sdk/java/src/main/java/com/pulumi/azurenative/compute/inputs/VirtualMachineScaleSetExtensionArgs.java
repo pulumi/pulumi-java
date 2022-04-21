@@ -5,12 +5,12 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="autoUpgradeMinorVersion")
-      private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
+    private @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
+    public Optional<Output<Boolean>> autoUpgradeMinorVersion() {
+        return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="enableAutomaticUpgrade")
-      private final @Nullable Output<Boolean> enableAutomaticUpgrade;
+    private @Nullable Output<Boolean> enableAutomaticUpgrade;
 
-    public Output<Boolean> enableAutomaticUpgrade() {
-        return this.enableAutomaticUpgrade == null ? Codegen.empty() : this.enableAutomaticUpgrade;
+    public Optional<Output<Boolean>> enableAutomaticUpgrade() {
+        return Optional.ofNullable(this.enableAutomaticUpgrade);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="forceUpdateTag")
-      private final @Nullable Output<String> forceUpdateTag;
+    private @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> forceUpdateTag() {
-        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
+    public Optional<Output<String>> forceUpdateTag() {
+        return Optional.ofNullable(this.forceUpdateTag);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="protectedSettings")
-      private final @Nullable Output<Object> protectedSettings;
+    private @Nullable Output<Object> protectedSettings;
 
-    public Output<Object> protectedSettings() {
-        return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
+    public Optional<Output<Object>> protectedSettings() {
+        return Optional.ofNullable(this.protectedSettings);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="provisionAfterExtensions")
-      private final @Nullable Output<List<String>> provisionAfterExtensions;
+    private @Nullable Output<List<String>> provisionAfterExtensions;
 
-    public Output<List<String>> provisionAfterExtensions() {
-        return this.provisionAfterExtensions == null ? Codegen.empty() : this.provisionAfterExtensions;
+    public Optional<Output<List<String>>> provisionAfterExtensions() {
+        return Optional.ofNullable(this.provisionAfterExtensions);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="publisher")
-      private final @Nullable Output<String> publisher;
+    private @Nullable Output<String> publisher;
 
-    public Output<String> publisher() {
-        return this.publisher == null ? Codegen.empty() : this.publisher;
+    public Optional<Output<String>> publisher() {
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<Object> settings;
+    private @Nullable Output<Object> settings;
 
-    public Output<Object> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<Object>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -126,170 +126,142 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="typeHandlerVersion")
-      private final @Nullable Output<String> typeHandlerVersion;
+    private @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> typeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
+    public Optional<Output<String>> typeHandlerVersion() {
+        return Optional.ofNullable(this.typeHandlerVersion);
     }
 
-    public VirtualMachineScaleSetExtensionArgs(
-        @Nullable Output<Boolean> autoUpgradeMinorVersion,
-        @Nullable Output<Boolean> enableAutomaticUpgrade,
-        @Nullable Output<String> forceUpdateTag,
-        @Nullable Output<String> name,
-        @Nullable Output<Object> protectedSettings,
-        @Nullable Output<List<String>> provisionAfterExtensions,
-        @Nullable Output<String> publisher,
-        @Nullable Output<Object> settings,
-        @Nullable Output<String> type,
-        @Nullable Output<String> typeHandlerVersion) {
-        this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
-        this.enableAutomaticUpgrade = enableAutomaticUpgrade;
-        this.forceUpdateTag = forceUpdateTag;
-        this.name = name;
-        this.protectedSettings = protectedSettings;
-        this.provisionAfterExtensions = provisionAfterExtensions;
-        this.publisher = publisher;
-        this.settings = settings;
-        this.type = type;
-        this.typeHandlerVersion = typeHandlerVersion;
-    }
+    private VirtualMachineScaleSetExtensionArgs() {}
 
-    private VirtualMachineScaleSetExtensionArgs() {
-        this.autoUpgradeMinorVersion = Codegen.empty();
-        this.enableAutomaticUpgrade = Codegen.empty();
-        this.forceUpdateTag = Codegen.empty();
-        this.name = Codegen.empty();
-        this.protectedSettings = Codegen.empty();
-        this.provisionAfterExtensions = Codegen.empty();
-        this.publisher = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.type = Codegen.empty();
-        this.typeHandlerVersion = Codegen.empty();
+    private VirtualMachineScaleSetExtensionArgs(VirtualMachineScaleSetExtensionArgs $) {
+        this.autoUpgradeMinorVersion = $.autoUpgradeMinorVersion;
+        this.enableAutomaticUpgrade = $.enableAutomaticUpgrade;
+        this.forceUpdateTag = $.forceUpdateTag;
+        this.name = $.name;
+        this.protectedSettings = $.protectedSettings;
+        this.provisionAfterExtensions = $.provisionAfterExtensions;
+        this.publisher = $.publisher;
+        this.settings = $.settings;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoUpgradeMinorVersion;
-        private @Nullable Output<Boolean> enableAutomaticUpgrade;
-        private @Nullable Output<String> forceUpdateTag;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Object> protectedSettings;
-        private @Nullable Output<List<String>> provisionAfterExtensions;
-        private @Nullable Output<String> publisher;
-        private @Nullable Output<Object> settings;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> typeHandlerVersion;
+        private VirtualMachineScaleSetExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetExtensionArgs();
         }
 
         public Builder(VirtualMachineScaleSetExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUpgradeMinorVersion = defaults.autoUpgradeMinorVersion;
-    	      this.enableAutomaticUpgrade = defaults.enableAutomaticUpgrade;
-    	      this.forceUpdateTag = defaults.forceUpdateTag;
-    	      this.name = defaults.name;
-    	      this.protectedSettings = defaults.protectedSettings;
-    	      this.provisionAfterExtensions = defaults.provisionAfterExtensions;
-    	      this.publisher = defaults.publisher;
-    	      this.settings = defaults.settings;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
+            $ = new VirtualMachineScaleSetExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+            $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Codegen.ofNullable(autoUpgradeMinorVersion);
-            return this;
+
+        public Builder autoUpgradeMinorVersion(Boolean autoUpgradeMinorVersion) {
+            return autoUpgradeMinorVersion(Output.of(autoUpgradeMinorVersion));
         }
+
         public Builder enableAutomaticUpgrade(@Nullable Output<Boolean> enableAutomaticUpgrade) {
-            this.enableAutomaticUpgrade = enableAutomaticUpgrade;
+            $.enableAutomaticUpgrade = enableAutomaticUpgrade;
             return this;
         }
-        public Builder enableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
-            this.enableAutomaticUpgrade = Codegen.ofNullable(enableAutomaticUpgrade);
-            return this;
+
+        public Builder enableAutomaticUpgrade(Boolean enableAutomaticUpgrade) {
+            return enableAutomaticUpgrade(Output.of(enableAutomaticUpgrade));
         }
+
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
-            this.forceUpdateTag = forceUpdateTag;
+            $.forceUpdateTag = forceUpdateTag;
             return this;
         }
-        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
-            return this;
+
+        public Builder forceUpdateTag(String forceUpdateTag) {
+            return forceUpdateTag(Output.of(forceUpdateTag));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
-            this.protectedSettings = protectedSettings;
+            $.protectedSettings = protectedSettings;
             return this;
         }
-        public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Codegen.ofNullable(protectedSettings);
-            return this;
+
+        public Builder protectedSettings(Object protectedSettings) {
+            return protectedSettings(Output.of(protectedSettings));
         }
+
         public Builder provisionAfterExtensions(@Nullable Output<List<String>> provisionAfterExtensions) {
-            this.provisionAfterExtensions = provisionAfterExtensions;
+            $.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
-        public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
-            this.provisionAfterExtensions = Codegen.ofNullable(provisionAfterExtensions);
-            return this;
+
+        public Builder provisionAfterExtensions(List<String> provisionAfterExtensions) {
+            return provisionAfterExtensions(Output.of(provisionAfterExtensions));
         }
+
         public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
             return provisionAfterExtensions(List.of(provisionAfterExtensions));
         }
+
         public Builder publisher(@Nullable Output<String> publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
-        public Builder publisher(@Nullable String publisher) {
-            this.publisher = Codegen.ofNullable(publisher);
-            return this;
+
+        public Builder publisher(String publisher) {
+            return publisher(Output.of(publisher));
         }
+
         public Builder settings(@Nullable Output<Object> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable Object settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(Object settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
-            this.typeHandlerVersion = typeHandlerVersion;
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Codegen.ofNullable(typeHandlerVersion);
-            return this;
-        }        public VirtualMachineScaleSetExtensionArgs build() {
-            return new VirtualMachineScaleSetExtensionArgs(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, name, protectedSettings, provisionAfterExtensions, publisher, settings, type, typeHandlerVersion);
+
+        public Builder typeHandlerVersion(String typeHandlerVersion) {
+            return typeHandlerVersion(Output.of(typeHandlerVersion));
+        }
+
+        public VirtualMachineScaleSetExtensionArgs build() {
+            return $;
         }
     }
+
 }

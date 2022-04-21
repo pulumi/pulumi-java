@@ -5,12 +5,12 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class EnumValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class EnumValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="number")
-      private final @Nullable Output<Integer> number;
+    private @Nullable Output<Integer> number;
 
-    public Output<Integer> number() {
-        return this.number == null ? Codegen.empty() : this.number;
+    public Optional<Output<Integer>> number() {
+        return Optional.ofNullable(this.number);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class EnumValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<List<OptionArgs>> options;
+    private @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<List<OptionArgs>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
-    public EnumValueArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> number,
-        @Nullable Output<List<OptionArgs>> options) {
-        this.name = name;
-        this.number = number;
-        this.options = options;
-    }
+    private EnumValueArgs() {}
 
-    private EnumValueArgs() {
-        this.name = Codegen.empty();
-        this.number = Codegen.empty();
-        this.options = Codegen.empty();
+    private EnumValueArgs(EnumValueArgs $) {
+        this.name = $.name;
+        this.number = $.number;
+        this.options = $.options;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnumValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> number;
-        private @Nullable Output<List<OptionArgs>> options;
+        private EnumValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnumValueArgs();
         }
 
         public Builder(EnumValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.number = defaults.number;
-    	      this.options = defaults.options;
+            $ = new EnumValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder number(@Nullable Output<Integer> number) {
-            this.number = number;
+            $.number = number;
             return this;
         }
-        public Builder number(@Nullable Integer number) {
-            this.number = Codegen.ofNullable(number);
-            return this;
+
+        public Builder number(Integer number) {
+            return number(Output.of(number));
         }
+
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(List<OptionArgs> options) {
+            return options(Output.of(options));
         }
+
         public Builder options(OptionArgs... options) {
             return options(List.of(options));
-        }        public EnumValueArgs build() {
-            return new EnumValueArgs(name, number, options);
+        }
+
+        public EnumValueArgs build() {
+            return $;
         }
     }
+
 }

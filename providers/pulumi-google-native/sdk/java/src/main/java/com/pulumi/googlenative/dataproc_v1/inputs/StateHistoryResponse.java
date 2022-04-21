@@ -21,7 +21,7 @@ public final class StateHistoryResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -32,7 +32,7 @@ public final class StateHistoryResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="stateMessage", required=true)
-      private final String stateMessage;
+    private String stateMessage;
 
     public String stateMessage() {
         return this.stateMessage;
@@ -43,64 +43,59 @@ public final class StateHistoryResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="stateStartTime", required=true)
-      private final String stateStartTime;
+    private String stateStartTime;
 
     public String stateStartTime() {
         return this.stateStartTime;
     }
 
-    public StateHistoryResponse(
-        String state,
-        String stateMessage,
-        String stateStartTime) {
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.stateMessage = Objects.requireNonNull(stateMessage, "expected parameter 'stateMessage' to be non-null");
-        this.stateStartTime = Objects.requireNonNull(stateStartTime, "expected parameter 'stateStartTime' to be non-null");
-    }
+    private StateHistoryResponse() {}
 
-    private StateHistoryResponse() {
-        this.state = null;
-        this.stateMessage = null;
-        this.stateStartTime = null;
+    private StateHistoryResponse(StateHistoryResponse $) {
+        this.state = $.state;
+        this.stateMessage = $.stateMessage;
+        this.stateStartTime = $.stateStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateHistoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String state;
-        private String stateMessage;
-        private String stateStartTime;
+        private StateHistoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateHistoryResponse();
         }
 
         public Builder(StateHistoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.state = defaults.state;
-    	      this.stateMessage = defaults.stateMessage;
-    	      this.stateStartTime = defaults.stateStartTime;
+            $ = new StateHistoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder stateMessage(String stateMessage) {
-            this.stateMessage = Objects.requireNonNull(stateMessage);
+            $.stateMessage = stateMessage;
             return this;
         }
+
         public Builder stateStartTime(String stateStartTime) {
-            this.stateStartTime = Objects.requireNonNull(stateStartTime);
+            $.stateStartTime = stateStartTime;
             return this;
-        }        public StateHistoryResponse build() {
-            return new StateHistoryResponse(state, stateMessage, stateStartTime);
+        }
+
+        public StateHistoryResponse build() {
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.stateMessage = Objects.requireNonNull($.stateMessage, "expected parameter 'stateMessage' to be non-null");
+            $.stateStartTime = Objects.requireNonNull($.stateStartTime, "expected parameter 'stateStartTime' to be non-null");
+            return $;
         }
     }
+
 }

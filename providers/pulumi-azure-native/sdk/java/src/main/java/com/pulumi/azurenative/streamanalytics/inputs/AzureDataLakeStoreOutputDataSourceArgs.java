@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Output<String> accountName;
+    private @Nullable Output<String> accountName;
 
-    public Output<String> accountName() {
-        return this.accountName == null ? Codegen.empty() : this.accountName;
+    public Optional<Output<String>> accountName() {
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="dateFormat")
-      private final @Nullable Output<String> dateFormat;
+    private @Nullable Output<String> dateFormat;
 
-    public Output<String> dateFormat() {
-        return this.dateFormat == null ? Codegen.empty() : this.dateFormat;
+    public Optional<Output<String>> dateFormat() {
+        return Optional.ofNullable(this.dateFormat);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="filePathPrefix")
-      private final @Nullable Output<String> filePathPrefix;
+    private @Nullable Output<String> filePathPrefix;
 
-    public Output<String> filePathPrefix() {
-        return this.filePathPrefix == null ? Codegen.empty() : this.filePathPrefix;
+    public Optional<Output<String>> filePathPrefix() {
+        return Optional.ofNullable(this.filePathPrefix);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="refreshToken")
-      private final @Nullable Output<String> refreshToken;
+    private @Nullable Output<String> refreshToken;
 
-    public Output<String> refreshToken() {
-        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
+    public Optional<Output<String>> refreshToken() {
+        return Optional.ofNullable(this.refreshToken);
     }
 
     /**
@@ -68,10 +69,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -79,10 +80,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="timeFormat")
-      private final @Nullable Output<String> timeFormat;
+    private @Nullable Output<String> timeFormat;
 
-    public Output<String> timeFormat() {
-        return this.timeFormat == null ? Codegen.empty() : this.timeFormat;
+    public Optional<Output<String>> timeFormat() {
+        return Optional.ofNullable(this.timeFormat);
     }
 
     /**
@@ -90,10 +91,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="tokenUserDisplayName")
-      private final @Nullable Output<String> tokenUserDisplayName;
+    private @Nullable Output<String> tokenUserDisplayName;
 
-    public Output<String> tokenUserDisplayName() {
-        return this.tokenUserDisplayName == null ? Codegen.empty() : this.tokenUserDisplayName;
+    public Optional<Output<String>> tokenUserDisplayName() {
+        return Optional.ofNullable(this.tokenUserDisplayName);
     }
 
     /**
@@ -101,10 +102,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="tokenUserPrincipalName")
-      private final @Nullable Output<String> tokenUserPrincipalName;
+    private @Nullable Output<String> tokenUserPrincipalName;
 
-    public Output<String> tokenUserPrincipalName() {
-        return this.tokenUserPrincipalName == null ? Codegen.empty() : this.tokenUserPrincipalName;
+    public Optional<Output<String>> tokenUserPrincipalName() {
+        return Optional.ofNullable(this.tokenUserPrincipalName);
     }
 
     /**
@@ -113,154 +114,129 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AzureDataLakeStoreOutputDataSourceArgs(
-        @Nullable Output<String> accountName,
-        @Nullable Output<String> dateFormat,
-        @Nullable Output<String> filePathPrefix,
-        @Nullable Output<String> refreshToken,
-        @Nullable Output<String> tenantId,
-        @Nullable Output<String> timeFormat,
-        @Nullable Output<String> tokenUserDisplayName,
-        @Nullable Output<String> tokenUserPrincipalName,
-        Output<String> type) {
-        this.accountName = accountName;
-        this.dateFormat = dateFormat;
-        this.filePathPrefix = filePathPrefix;
-        this.refreshToken = refreshToken;
-        this.tenantId = tenantId;
-        this.timeFormat = timeFormat;
-        this.tokenUserDisplayName = tokenUserDisplayName;
-        this.tokenUserPrincipalName = tokenUserPrincipalName;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AzureDataLakeStoreOutputDataSourceArgs() {}
 
-    private AzureDataLakeStoreOutputDataSourceArgs() {
-        this.accountName = Codegen.empty();
-        this.dateFormat = Codegen.empty();
-        this.filePathPrefix = Codegen.empty();
-        this.refreshToken = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.timeFormat = Codegen.empty();
-        this.tokenUserDisplayName = Codegen.empty();
-        this.tokenUserPrincipalName = Codegen.empty();
-        this.type = Codegen.empty();
+    private AzureDataLakeStoreOutputDataSourceArgs(AzureDataLakeStoreOutputDataSourceArgs $) {
+        this.accountName = $.accountName;
+        this.dateFormat = $.dateFormat;
+        this.filePathPrefix = $.filePathPrefix;
+        this.refreshToken = $.refreshToken;
+        this.tenantId = $.tenantId;
+        this.timeFormat = $.timeFormat;
+        this.tokenUserDisplayName = $.tokenUserDisplayName;
+        this.tokenUserPrincipalName = $.tokenUserPrincipalName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDataLakeStoreOutputDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountName;
-        private @Nullable Output<String> dateFormat;
-        private @Nullable Output<String> filePathPrefix;
-        private @Nullable Output<String> refreshToken;
-        private @Nullable Output<String> tenantId;
-        private @Nullable Output<String> timeFormat;
-        private @Nullable Output<String> tokenUserDisplayName;
-        private @Nullable Output<String> tokenUserPrincipalName;
-        private Output<String> type;
+        private AzureDataLakeStoreOutputDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDataLakeStoreOutputDataSourceArgs();
         }
 
         public Builder(AzureDataLakeStoreOutputDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dateFormat = defaults.dateFormat;
-    	      this.filePathPrefix = defaults.filePathPrefix;
-    	      this.refreshToken = defaults.refreshToken;
-    	      this.tenantId = defaults.tenantId;
-    	      this.timeFormat = defaults.timeFormat;
-    	      this.tokenUserDisplayName = defaults.tokenUserDisplayName;
-    	      this.tokenUserPrincipalName = defaults.tokenUserPrincipalName;
-    	      this.type = defaults.type;
+            $ = new AzureDataLakeStoreOutputDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable Output<String> accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
-        public Builder accountName(@Nullable String accountName) {
-            this.accountName = Codegen.ofNullable(accountName);
-            return this;
+
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
         }
+
         public Builder dateFormat(@Nullable Output<String> dateFormat) {
-            this.dateFormat = dateFormat;
+            $.dateFormat = dateFormat;
             return this;
         }
-        public Builder dateFormat(@Nullable String dateFormat) {
-            this.dateFormat = Codegen.ofNullable(dateFormat);
-            return this;
+
+        public Builder dateFormat(String dateFormat) {
+            return dateFormat(Output.of(dateFormat));
         }
+
         public Builder filePathPrefix(@Nullable Output<String> filePathPrefix) {
-            this.filePathPrefix = filePathPrefix;
+            $.filePathPrefix = filePathPrefix;
             return this;
         }
-        public Builder filePathPrefix(@Nullable String filePathPrefix) {
-            this.filePathPrefix = Codegen.ofNullable(filePathPrefix);
-            return this;
+
+        public Builder filePathPrefix(String filePathPrefix) {
+            return filePathPrefix(Output.of(filePathPrefix));
         }
+
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
-            this.refreshToken = refreshToken;
+            $.refreshToken = refreshToken;
             return this;
         }
-        public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Codegen.ofNullable(refreshToken);
-            return this;
+
+        public Builder refreshToken(String refreshToken) {
+            return refreshToken(Output.of(refreshToken));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder timeFormat(@Nullable Output<String> timeFormat) {
-            this.timeFormat = timeFormat;
+            $.timeFormat = timeFormat;
             return this;
         }
-        public Builder timeFormat(@Nullable String timeFormat) {
-            this.timeFormat = Codegen.ofNullable(timeFormat);
-            return this;
+
+        public Builder timeFormat(String timeFormat) {
+            return timeFormat(Output.of(timeFormat));
         }
+
         public Builder tokenUserDisplayName(@Nullable Output<String> tokenUserDisplayName) {
-            this.tokenUserDisplayName = tokenUserDisplayName;
+            $.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
-        public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
-            this.tokenUserDisplayName = Codegen.ofNullable(tokenUserDisplayName);
-            return this;
+
+        public Builder tokenUserDisplayName(String tokenUserDisplayName) {
+            return tokenUserDisplayName(Output.of(tokenUserDisplayName));
         }
+
         public Builder tokenUserPrincipalName(@Nullable Output<String> tokenUserPrincipalName) {
-            this.tokenUserPrincipalName = tokenUserPrincipalName;
+            $.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
-        public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
-            this.tokenUserPrincipalName = Codegen.ofNullable(tokenUserPrincipalName);
-            return this;
+
+        public Builder tokenUserPrincipalName(String tokenUserPrincipalName) {
+            return tokenUserPrincipalName(Output.of(tokenUserPrincipalName));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AzureDataLakeStoreOutputDataSourceArgs build() {
-            return new AzureDataLakeStoreOutputDataSourceArgs(accountName, dateFormat, filePathPrefix, refreshToken, tenantId, timeFormat, tokenUserDisplayName, tokenUserPrincipalName, type);
+            return type(Output.of(type));
+        }
+
+        public AzureDataLakeStoreOutputDataSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.SparkMavenPackageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ModelEnvironmentDefinitionSparkArgs extends com.pulumi.resour
      * 
      */
     @Import(name="packages")
-      private final @Nullable Output<List<SparkMavenPackageArgs>> packages;
+    private @Nullable Output<List<SparkMavenPackageArgs>> packages;
 
-    public Output<List<SparkMavenPackageArgs>> packages() {
-        return this.packages == null ? Codegen.empty() : this.packages;
+    public Optional<Output<List<SparkMavenPackageArgs>>> packages() {
+        return Optional.ofNullable(this.packages);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ModelEnvironmentDefinitionSparkArgs extends com.pulumi.resour
      * 
      */
     @Import(name="precachePackages")
-      private final @Nullable Output<Boolean> precachePackages;
+    private @Nullable Output<Boolean> precachePackages;
 
-    public Output<Boolean> precachePackages() {
-        return this.precachePackages == null ? Codegen.empty() : this.precachePackages;
+    public Optional<Output<Boolean>> precachePackages() {
+        return Optional.ofNullable(this.precachePackages);
     }
 
     /**
@@ -49,82 +49,76 @@ public final class ModelEnvironmentDefinitionSparkArgs extends com.pulumi.resour
      * 
      */
     @Import(name="repositories")
-      private final @Nullable Output<List<String>> repositories;
+    private @Nullable Output<List<String>> repositories;
 
-    public Output<List<String>> repositories() {
-        return this.repositories == null ? Codegen.empty() : this.repositories;
+    public Optional<Output<List<String>>> repositories() {
+        return Optional.ofNullable(this.repositories);
     }
 
-    public ModelEnvironmentDefinitionSparkArgs(
-        @Nullable Output<List<SparkMavenPackageArgs>> packages,
-        @Nullable Output<Boolean> precachePackages,
-        @Nullable Output<List<String>> repositories) {
-        this.packages = packages;
-        this.precachePackages = precachePackages;
-        this.repositories = repositories;
-    }
+    private ModelEnvironmentDefinitionSparkArgs() {}
 
-    private ModelEnvironmentDefinitionSparkArgs() {
-        this.packages = Codegen.empty();
-        this.precachePackages = Codegen.empty();
-        this.repositories = Codegen.empty();
+    private ModelEnvironmentDefinitionSparkArgs(ModelEnvironmentDefinitionSparkArgs $) {
+        this.packages = $.packages;
+        this.precachePackages = $.precachePackages;
+        this.repositories = $.repositories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelEnvironmentDefinitionSparkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SparkMavenPackageArgs>> packages;
-        private @Nullable Output<Boolean> precachePackages;
-        private @Nullable Output<List<String>> repositories;
+        private ModelEnvironmentDefinitionSparkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelEnvironmentDefinitionSparkArgs();
         }
 
         public Builder(ModelEnvironmentDefinitionSparkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packages = defaults.packages;
-    	      this.precachePackages = defaults.precachePackages;
-    	      this.repositories = defaults.repositories;
+            $ = new ModelEnvironmentDefinitionSparkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder packages(@Nullable Output<List<SparkMavenPackageArgs>> packages) {
-            this.packages = packages;
+            $.packages = packages;
             return this;
         }
-        public Builder packages(@Nullable List<SparkMavenPackageArgs> packages) {
-            this.packages = Codegen.ofNullable(packages);
-            return this;
+
+        public Builder packages(List<SparkMavenPackageArgs> packages) {
+            return packages(Output.of(packages));
         }
+
         public Builder packages(SparkMavenPackageArgs... packages) {
             return packages(List.of(packages));
         }
+
         public Builder precachePackages(@Nullable Output<Boolean> precachePackages) {
-            this.precachePackages = precachePackages;
+            $.precachePackages = precachePackages;
             return this;
         }
-        public Builder precachePackages(@Nullable Boolean precachePackages) {
-            this.precachePackages = Codegen.ofNullable(precachePackages);
-            return this;
+
+        public Builder precachePackages(Boolean precachePackages) {
+            return precachePackages(Output.of(precachePackages));
         }
+
         public Builder repositories(@Nullable Output<List<String>> repositories) {
-            this.repositories = repositories;
+            $.repositories = repositories;
             return this;
         }
-        public Builder repositories(@Nullable List<String> repositories) {
-            this.repositories = Codegen.ofNullable(repositories);
-            return this;
+
+        public Builder repositories(List<String> repositories) {
+            return repositories(Output.of(repositories));
         }
+
         public Builder repositories(String... repositories) {
             return repositories(List.of(repositories));
-        }        public ModelEnvironmentDefinitionSparkArgs build() {
-            return new ModelEnvironmentDefinitionSparkArgs(packages, precachePackages, repositories);
+        }
+
+        public ModelEnvironmentDefinitionSparkArgs build() {
+            return $;
         }
     }
+
 }

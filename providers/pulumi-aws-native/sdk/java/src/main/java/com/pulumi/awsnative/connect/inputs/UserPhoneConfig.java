@@ -22,94 +22,84 @@ public final class UserPhoneConfig extends com.pulumi.resources.InvokeArgs {
     public static final UserPhoneConfig Empty = new UserPhoneConfig();
 
     @Import(name="afterContactWorkTimeLimit")
-      private final @Nullable Integer afterContactWorkTimeLimit;
+    private @Nullable Integer afterContactWorkTimeLimit;
 
     public Optional<Integer> afterContactWorkTimeLimit() {
-        return this.afterContactWorkTimeLimit == null ? Optional.empty() : Optional.ofNullable(this.afterContactWorkTimeLimit);
+        return Optional.ofNullable(this.afterContactWorkTimeLimit);
     }
 
     @Import(name="autoAccept")
-      private final @Nullable Boolean autoAccept;
+    private @Nullable Boolean autoAccept;
 
     public Optional<Boolean> autoAccept() {
-        return this.autoAccept == null ? Optional.empty() : Optional.ofNullable(this.autoAccept);
+        return Optional.ofNullable(this.autoAccept);
     }
 
     @Import(name="deskPhoneNumber")
-      private final @Nullable String deskPhoneNumber;
+    private @Nullable String deskPhoneNumber;
 
     public Optional<String> deskPhoneNumber() {
-        return this.deskPhoneNumber == null ? Optional.empty() : Optional.ofNullable(this.deskPhoneNumber);
+        return Optional.ofNullable(this.deskPhoneNumber);
     }
 
     @Import(name="phoneType", required=true)
-      private final UserPhoneType phoneType;
+    private UserPhoneType phoneType;
 
     public UserPhoneType phoneType() {
         return this.phoneType;
     }
 
-    public UserPhoneConfig(
-        @Nullable Integer afterContactWorkTimeLimit,
-        @Nullable Boolean autoAccept,
-        @Nullable String deskPhoneNumber,
-        UserPhoneType phoneType) {
-        this.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
-        this.autoAccept = autoAccept;
-        this.deskPhoneNumber = deskPhoneNumber;
-        this.phoneType = Objects.requireNonNull(phoneType, "expected parameter 'phoneType' to be non-null");
-    }
+    private UserPhoneConfig() {}
 
-    private UserPhoneConfig() {
-        this.afterContactWorkTimeLimit = null;
-        this.autoAccept = null;
-        this.deskPhoneNumber = null;
-        this.phoneType = null;
+    private UserPhoneConfig(UserPhoneConfig $) {
+        this.afterContactWorkTimeLimit = $.afterContactWorkTimeLimit;
+        this.autoAccept = $.autoAccept;
+        this.deskPhoneNumber = $.deskPhoneNumber;
+        this.phoneType = $.phoneType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPhoneConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer afterContactWorkTimeLimit;
-        private @Nullable Boolean autoAccept;
-        private @Nullable String deskPhoneNumber;
-        private UserPhoneType phoneType;
+        private UserPhoneConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPhoneConfig();
         }
 
         public Builder(UserPhoneConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.afterContactWorkTimeLimit = defaults.afterContactWorkTimeLimit;
-    	      this.autoAccept = defaults.autoAccept;
-    	      this.deskPhoneNumber = defaults.deskPhoneNumber;
-    	      this.phoneType = defaults.phoneType;
+            $ = new UserPhoneConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder afterContactWorkTimeLimit(@Nullable Integer afterContactWorkTimeLimit) {
-            this.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
+            $.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
             return this;
         }
+
         public Builder autoAccept(@Nullable Boolean autoAccept) {
-            this.autoAccept = autoAccept;
+            $.autoAccept = autoAccept;
             return this;
         }
+
         public Builder deskPhoneNumber(@Nullable String deskPhoneNumber) {
-            this.deskPhoneNumber = deskPhoneNumber;
+            $.deskPhoneNumber = deskPhoneNumber;
             return this;
         }
+
         public Builder phoneType(UserPhoneType phoneType) {
-            this.phoneType = Objects.requireNonNull(phoneType);
+            $.phoneType = phoneType;
             return this;
-        }        public UserPhoneConfig build() {
-            return new UserPhoneConfig(afterContactWorkTimeLimit, autoAccept, deskPhoneNumber, phoneType);
+        }
+
+        public UserPhoneConfig build() {
+            $.phoneType = Objects.requireNonNull($.phoneType, "expected parameter 'phoneType' to be non-null");
+            return $;
         }
     }
+
 }

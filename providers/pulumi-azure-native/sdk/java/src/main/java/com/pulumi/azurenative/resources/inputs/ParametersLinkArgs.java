@@ -5,9 +5,9 @@ package com.pulumi.azurenative.resources.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ParametersLinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="contentVersion")
-      private final @Nullable Output<String> contentVersion;
+    private @Nullable Output<String> contentVersion;
 
-    public Output<String> contentVersion() {
-        return this.contentVersion == null ? Codegen.empty() : this.contentVersion;
+    public Optional<Output<String>> contentVersion() {
+        return Optional.ofNullable(this.contentVersion);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class ParametersLinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public ParametersLinkArgs(
-        @Nullable Output<String> contentVersion,
-        Output<String> uri) {
-        this.contentVersion = contentVersion;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ParametersLinkArgs() {}
 
-    private ParametersLinkArgs() {
-        this.contentVersion = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ParametersLinkArgs(ParametersLinkArgs $) {
+        this.contentVersion = $.contentVersion;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParametersLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contentVersion;
-        private Output<String> uri;
+        private ParametersLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParametersLinkArgs();
         }
 
         public Builder(ParametersLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentVersion = defaults.contentVersion;
-    	      this.uri = defaults.uri;
+            $ = new ParametersLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentVersion(@Nullable Output<String> contentVersion) {
-            this.contentVersion = contentVersion;
+            $.contentVersion = contentVersion;
             return this;
         }
-        public Builder contentVersion(@Nullable String contentVersion) {
-            this.contentVersion = Codegen.ofNullable(contentVersion);
-            return this;
+
+        public Builder contentVersion(String contentVersion) {
+            return contentVersion(Output.of(contentVersion));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public ParametersLinkArgs build() {
-            return new ParametersLinkArgs(contentVersion, uri);
+            return uri(Output.of(uri));
+        }
+
+        public ParametersLinkArgs build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

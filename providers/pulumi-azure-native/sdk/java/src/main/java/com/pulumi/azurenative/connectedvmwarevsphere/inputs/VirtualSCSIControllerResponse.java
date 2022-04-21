@@ -24,10 +24,10 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="busNumber")
-      private final @Nullable Integer busNumber;
+    private @Nullable Integer busNumber;
 
     public Optional<Integer> busNumber() {
-        return this.busNumber == null ? Optional.empty() : Optional.ofNullable(this.busNumber);
+        return Optional.ofNullable(this.busNumber);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="controllerKey")
-      private final @Nullable Integer controllerKey;
+    private @Nullable Integer controllerKey;
 
     public Optional<Integer> controllerKey() {
-        return this.controllerKey == null ? Optional.empty() : Optional.ofNullable(this.controllerKey);
+        return Optional.ofNullable(this.controllerKey);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="scsiCtlrUnitNumber")
-      private final @Nullable Integer scsiCtlrUnitNumber;
+    private @Nullable Integer scsiCtlrUnitNumber;
 
     public Optional<Integer> scsiCtlrUnitNumber() {
-        return this.scsiCtlrUnitNumber == null ? Optional.empty() : Optional.ofNullable(this.scsiCtlrUnitNumber);
+        return Optional.ofNullable(this.scsiCtlrUnitNumber);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sharing")
-      private final @Nullable String sharing;
+    private @Nullable String sharing;
 
     public Optional<String> sharing() {
-        return this.sharing == null ? Optional.empty() : Optional.ofNullable(this.sharing);
+        return Optional.ofNullable(this.sharing);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public VirtualSCSIControllerResponse(
-        @Nullable Integer busNumber,
-        @Nullable Integer controllerKey,
-        @Nullable Integer scsiCtlrUnitNumber,
-        @Nullable String sharing,
-        @Nullable String type) {
-        this.busNumber = busNumber;
-        this.controllerKey = controllerKey;
-        this.scsiCtlrUnitNumber = scsiCtlrUnitNumber;
-        this.sharing = sharing;
-        this.type = type;
-    }
+    private VirtualSCSIControllerResponse() {}
 
-    private VirtualSCSIControllerResponse() {
-        this.busNumber = null;
-        this.controllerKey = null;
-        this.scsiCtlrUnitNumber = null;
-        this.sharing = null;
-        this.type = null;
+    private VirtualSCSIControllerResponse(VirtualSCSIControllerResponse $) {
+        this.busNumber = $.busNumber;
+        this.controllerKey = $.controllerKey;
+        this.scsiCtlrUnitNumber = $.scsiCtlrUnitNumber;
+        this.sharing = $.sharing;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualSCSIControllerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer busNumber;
-        private @Nullable Integer controllerKey;
-        private @Nullable Integer scsiCtlrUnitNumber;
-        private @Nullable String sharing;
-        private @Nullable String type;
+        private VirtualSCSIControllerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualSCSIControllerResponse();
         }
 
         public Builder(VirtualSCSIControllerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.busNumber = defaults.busNumber;
-    	      this.controllerKey = defaults.controllerKey;
-    	      this.scsiCtlrUnitNumber = defaults.scsiCtlrUnitNumber;
-    	      this.sharing = defaults.sharing;
-    	      this.type = defaults.type;
+            $ = new VirtualSCSIControllerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder busNumber(@Nullable Integer busNumber) {
-            this.busNumber = busNumber;
+            $.busNumber = busNumber;
             return this;
         }
+
         public Builder controllerKey(@Nullable Integer controllerKey) {
-            this.controllerKey = controllerKey;
+            $.controllerKey = controllerKey;
             return this;
         }
+
         public Builder scsiCtlrUnitNumber(@Nullable Integer scsiCtlrUnitNumber) {
-            this.scsiCtlrUnitNumber = scsiCtlrUnitNumber;
+            $.scsiCtlrUnitNumber = scsiCtlrUnitNumber;
             return this;
         }
+
         public Builder sharing(@Nullable String sharing) {
-            this.sharing = sharing;
+            $.sharing = sharing;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public VirtualSCSIControllerResponse build() {
-            return new VirtualSCSIControllerResponse(busNumber, controllerKey, scsiCtlrUnitNumber, sharing, type);
+        }
+
+        public VirtualSCSIControllerResponse build() {
+            return $;
         }
     }
+
 }

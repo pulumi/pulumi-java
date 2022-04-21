@@ -25,7 +25,7 @@ public final class ScheduleRecurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="recurrenceType", required=true)
-      private final String recurrenceType;
+    private String recurrenceType;
 
     public String recurrenceType() {
         return this.recurrenceType;
@@ -36,7 +36,7 @@ public final class ScheduleRecurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="recurrenceValue", required=true)
-      private final Integer recurrenceValue;
+    private Integer recurrenceValue;
 
     public Integer recurrenceValue() {
         return this.recurrenceValue;
@@ -47,67 +47,62 @@ public final class ScheduleRecurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="weeklyDaysList")
-      private final @Nullable List<String> weeklyDaysList;
+    private @Nullable List<String> weeklyDaysList;
 
-    public List<String> weeklyDaysList() {
-        return this.weeklyDaysList == null ? List.of() : this.weeklyDaysList;
+    public Optional<List<String>> weeklyDaysList() {
+        return Optional.ofNullable(this.weeklyDaysList);
     }
 
-    public ScheduleRecurrenceResponse(
-        String recurrenceType,
-        Integer recurrenceValue,
-        @Nullable List<String> weeklyDaysList) {
-        this.recurrenceType = Objects.requireNonNull(recurrenceType, "expected parameter 'recurrenceType' to be non-null");
-        this.recurrenceValue = Objects.requireNonNull(recurrenceValue, "expected parameter 'recurrenceValue' to be non-null");
-        this.weeklyDaysList = weeklyDaysList;
-    }
+    private ScheduleRecurrenceResponse() {}
 
-    private ScheduleRecurrenceResponse() {
-        this.recurrenceType = null;
-        this.recurrenceValue = null;
-        this.weeklyDaysList = List.of();
+    private ScheduleRecurrenceResponse(ScheduleRecurrenceResponse $) {
+        this.recurrenceType = $.recurrenceType;
+        this.recurrenceValue = $.recurrenceValue;
+        this.weeklyDaysList = $.weeklyDaysList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleRecurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String recurrenceType;
-        private Integer recurrenceValue;
-        private @Nullable List<String> weeklyDaysList;
+        private ScheduleRecurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleRecurrenceResponse();
         }
 
         public Builder(ScheduleRecurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrenceType = defaults.recurrenceType;
-    	      this.recurrenceValue = defaults.recurrenceValue;
-    	      this.weeklyDaysList = defaults.weeklyDaysList;
+            $ = new ScheduleRecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrenceType(String recurrenceType) {
-            this.recurrenceType = Objects.requireNonNull(recurrenceType);
+            $.recurrenceType = recurrenceType;
             return this;
         }
+
         public Builder recurrenceValue(Integer recurrenceValue) {
-            this.recurrenceValue = Objects.requireNonNull(recurrenceValue);
+            $.recurrenceValue = recurrenceValue;
             return this;
         }
+
         public Builder weeklyDaysList(@Nullable List<String> weeklyDaysList) {
-            this.weeklyDaysList = weeklyDaysList;
+            $.weeklyDaysList = weeklyDaysList;
             return this;
         }
+
         public Builder weeklyDaysList(String... weeklyDaysList) {
             return weeklyDaysList(List.of(weeklyDaysList));
-        }        public ScheduleRecurrenceResponse build() {
-            return new ScheduleRecurrenceResponse(recurrenceType, recurrenceValue, weeklyDaysList);
+        }
+
+        public ScheduleRecurrenceResponse build() {
+            $.recurrenceType = Objects.requireNonNull($.recurrenceType, "expected parameter 'recurrenceType' to be non-null");
+            $.recurrenceValue = Objects.requireNonNull($.recurrenceValue, "expected parameter 'recurrenceValue' to be non-null");
+            return $;
         }
     }
+
 }

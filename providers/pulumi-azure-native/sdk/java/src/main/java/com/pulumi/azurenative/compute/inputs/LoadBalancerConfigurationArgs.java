@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.LoadBalancerConfigurationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -47,76 +47,70 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<LoadBalancerConfigurationPropertiesArgs> properties;
+    private Output<LoadBalancerConfigurationPropertiesArgs> properties;
 
     public Output<LoadBalancerConfigurationPropertiesArgs> properties() {
         return this.properties;
     }
 
-    public LoadBalancerConfigurationArgs(
-        @Nullable Output<String> id,
-        Output<String> name,
-        Output<LoadBalancerConfigurationPropertiesArgs> properties) {
-        this.id = id;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private LoadBalancerConfigurationArgs() {}
 
-    private LoadBalancerConfigurationArgs() {
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
+    private LoadBalancerConfigurationArgs(LoadBalancerConfigurationArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private Output<String> name;
-        private Output<LoadBalancerConfigurationPropertiesArgs> properties;
+        private LoadBalancerConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerConfigurationArgs();
         }
 
         public Builder(LoadBalancerConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new LoadBalancerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder properties(Output<LoadBalancerConfigurationPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(LoadBalancerConfigurationPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
-        }        public LoadBalancerConfigurationArgs build() {
-            return new LoadBalancerConfigurationArgs(id, name, properties);
+            return properties(Output.of(properties));
+        }
+
+        public LoadBalancerConfigurationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

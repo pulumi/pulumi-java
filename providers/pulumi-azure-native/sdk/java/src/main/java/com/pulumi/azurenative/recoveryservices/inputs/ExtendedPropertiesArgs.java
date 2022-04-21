@@ -6,8 +6,8 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.DiskExclusionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ExtendedPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="diskExclusionProperties")
-      private final @Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties;
+    private @Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties;
 
-    public Output<DiskExclusionPropertiesArgs> diskExclusionProperties() {
-        return this.diskExclusionProperties == null ? Codegen.empty() : this.diskExclusionProperties;
+    public Optional<Output<DiskExclusionPropertiesArgs>> diskExclusionProperties() {
+        return Optional.ofNullable(this.diskExclusionProperties);
     }
 
-    public ExtendedPropertiesArgs(@Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties) {
-        this.diskExclusionProperties = diskExclusionProperties;
-    }
+    private ExtendedPropertiesArgs() {}
 
-    private ExtendedPropertiesArgs() {
-        this.diskExclusionProperties = Codegen.empty();
+    private ExtendedPropertiesArgs(ExtendedPropertiesArgs $) {
+        this.diskExclusionProperties = $.diskExclusionProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtendedPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties;
+        private ExtendedPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtendedPropertiesArgs();
         }
 
         public Builder(ExtendedPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskExclusionProperties = defaults.diskExclusionProperties;
+            $ = new ExtendedPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskExclusionProperties(@Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties) {
-            this.diskExclusionProperties = diskExclusionProperties;
+            $.diskExclusionProperties = diskExclusionProperties;
             return this;
         }
-        public Builder diskExclusionProperties(@Nullable DiskExclusionPropertiesArgs diskExclusionProperties) {
-            this.diskExclusionProperties = Codegen.ofNullable(diskExclusionProperties);
-            return this;
-        }        public ExtendedPropertiesArgs build() {
-            return new ExtendedPropertiesArgs(diskExclusionProperties);
+
+        public Builder diskExclusionProperties(DiskExclusionPropertiesArgs diskExclusionProperties) {
+            return diskExclusionProperties(Output.of(diskExclusionProperties));
+        }
+
+        public ExtendedPropertiesArgs build() {
+            return $;
         }
     }
+
 }

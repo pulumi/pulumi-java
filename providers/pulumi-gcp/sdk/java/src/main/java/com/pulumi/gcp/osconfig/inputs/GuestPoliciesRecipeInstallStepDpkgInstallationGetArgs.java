@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs extends
      * 
      */
     @Import(name="artifactId", required=true)
-      private final Output<String> artifactId;
+    private Output<String> artifactId;
 
     public Output<String> artifactId() {
         return this.artifactId;
     }
 
-    public GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs(Output<String> artifactId) {
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-    }
+    private GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs() {}
 
-    private GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs() {
-        this.artifactId = Codegen.empty();
+    private GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs(GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs $) {
+        this.artifactId = $.artifactId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> artifactId;
+        private GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs();
         }
 
         public Builder(GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactId = defaults.artifactId;
+            $ = new GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactId(Output<String> artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
         }
+
         public Builder artifactId(String artifactId) {
-            this.artifactId = Output.of(Objects.requireNonNull(artifactId));
-            return this;
-        }        public GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs build() {
-            return new GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs(artifactId);
+            return artifactId(Output.of(artifactId));
+        }
+
+        public GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs build() {
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            return $;
         }
     }
+
 }

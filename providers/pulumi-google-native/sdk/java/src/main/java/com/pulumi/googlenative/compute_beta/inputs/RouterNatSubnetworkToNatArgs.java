@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.RouterNatSubnetworkToNatSourceIpRangesToNatItem;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RouterNatSubnetworkToNatArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RouterNatSubnetworkToNatArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="secondaryIpRangeNames")
-      private final @Nullable Output<List<String>> secondaryIpRangeNames;
+    private @Nullable Output<List<String>> secondaryIpRangeNames;
 
-    public Output<List<String>> secondaryIpRangeNames() {
-        return this.secondaryIpRangeNames == null ? Codegen.empty() : this.secondaryIpRangeNames;
+    public Optional<Output<List<String>>> secondaryIpRangeNames() {
+        return Optional.ofNullable(this.secondaryIpRangeNames);
     }
 
     /**
@@ -48,82 +48,76 @@ public final class RouterNatSubnetworkToNatArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sourceIpRangesToNat")
-      private final @Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
+    private @Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
 
-    public Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat() {
-        return this.sourceIpRangesToNat == null ? Codegen.empty() : this.sourceIpRangesToNat;
+    public Optional<Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>>> sourceIpRangesToNat() {
+        return Optional.ofNullable(this.sourceIpRangesToNat);
     }
 
-    public RouterNatSubnetworkToNatArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> secondaryIpRangeNames,
-        @Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat) {
-        this.name = name;
-        this.secondaryIpRangeNames = secondaryIpRangeNames;
-        this.sourceIpRangesToNat = sourceIpRangesToNat;
-    }
+    private RouterNatSubnetworkToNatArgs() {}
 
-    private RouterNatSubnetworkToNatArgs() {
-        this.name = Codegen.empty();
-        this.secondaryIpRangeNames = Codegen.empty();
-        this.sourceIpRangesToNat = Codegen.empty();
+    private RouterNatSubnetworkToNatArgs(RouterNatSubnetworkToNatArgs $) {
+        this.name = $.name;
+        this.secondaryIpRangeNames = $.secondaryIpRangeNames;
+        this.sourceIpRangesToNat = $.sourceIpRangesToNat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatSubnetworkToNatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> secondaryIpRangeNames;
-        private @Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
+        private RouterNatSubnetworkToNatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatSubnetworkToNatArgs();
         }
 
         public Builder(RouterNatSubnetworkToNatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.secondaryIpRangeNames = defaults.secondaryIpRangeNames;
-    	      this.sourceIpRangesToNat = defaults.sourceIpRangesToNat;
+            $ = new RouterNatSubnetworkToNatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder secondaryIpRangeNames(@Nullable Output<List<String>> secondaryIpRangeNames) {
-            this.secondaryIpRangeNames = secondaryIpRangeNames;
+            $.secondaryIpRangeNames = secondaryIpRangeNames;
             return this;
         }
-        public Builder secondaryIpRangeNames(@Nullable List<String> secondaryIpRangeNames) {
-            this.secondaryIpRangeNames = Codegen.ofNullable(secondaryIpRangeNames);
-            return this;
+
+        public Builder secondaryIpRangeNames(List<String> secondaryIpRangeNames) {
+            return secondaryIpRangeNames(Output.of(secondaryIpRangeNames));
         }
+
         public Builder secondaryIpRangeNames(String... secondaryIpRangeNames) {
             return secondaryIpRangeNames(List.of(secondaryIpRangeNames));
         }
+
         public Builder sourceIpRangesToNat(@Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat) {
-            this.sourceIpRangesToNat = sourceIpRangesToNat;
+            $.sourceIpRangesToNat = sourceIpRangesToNat;
             return this;
         }
-        public Builder sourceIpRangesToNat(@Nullable List<RouterNatSubnetworkToNatSourceIpRangesToNatItem> sourceIpRangesToNat) {
-            this.sourceIpRangesToNat = Codegen.ofNullable(sourceIpRangesToNat);
-            return this;
+
+        public Builder sourceIpRangesToNat(List<RouterNatSubnetworkToNatSourceIpRangesToNatItem> sourceIpRangesToNat) {
+            return sourceIpRangesToNat(Output.of(sourceIpRangesToNat));
         }
+
         public Builder sourceIpRangesToNat(RouterNatSubnetworkToNatSourceIpRangesToNatItem... sourceIpRangesToNat) {
             return sourceIpRangesToNat(List.of(sourceIpRangesToNat));
-        }        public RouterNatSubnetworkToNatArgs build() {
-            return new RouterNatSubnetworkToNatArgs(name, secondaryIpRangeNames, sourceIpRangesToNat);
+        }
+
+        public RouterNatSubnetworkToNatArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RateLimitsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxBurstSize")
-      private final @Nullable Output<Integer> maxBurstSize;
+    private @Nullable Output<Integer> maxBurstSize;
 
-    public Output<Integer> maxBurstSize() {
-        return this.maxBurstSize == null ? Codegen.empty() : this.maxBurstSize;
+    public Optional<Output<Integer>> maxBurstSize() {
+        return Optional.ofNullable(this.maxBurstSize);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RateLimitsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxConcurrentTasks")
-      private final @Nullable Output<Integer> maxConcurrentTasks;
+    private @Nullable Output<Integer> maxConcurrentTasks;
 
-    public Output<Integer> maxConcurrentTasks() {
-        return this.maxConcurrentTasks == null ? Codegen.empty() : this.maxConcurrentTasks;
+    public Optional<Output<Integer>> maxConcurrentTasks() {
+        return Optional.ofNullable(this.maxConcurrentTasks);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class RateLimitsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxTasksDispatchedPerSecond")
-      private final @Nullable Output<Double> maxTasksDispatchedPerSecond;
+    private @Nullable Output<Double> maxTasksDispatchedPerSecond;
 
-    public Output<Double> maxTasksDispatchedPerSecond() {
-        return this.maxTasksDispatchedPerSecond == null ? Codegen.empty() : this.maxTasksDispatchedPerSecond;
+    public Optional<Output<Double>> maxTasksDispatchedPerSecond() {
+        return Optional.ofNullable(this.maxTasksDispatchedPerSecond);
     }
 
-    public RateLimitsArgs(
-        @Nullable Output<Integer> maxBurstSize,
-        @Nullable Output<Integer> maxConcurrentTasks,
-        @Nullable Output<Double> maxTasksDispatchedPerSecond) {
-        this.maxBurstSize = maxBurstSize;
-        this.maxConcurrentTasks = maxConcurrentTasks;
-        this.maxTasksDispatchedPerSecond = maxTasksDispatchedPerSecond;
-    }
+    private RateLimitsArgs() {}
 
-    private RateLimitsArgs() {
-        this.maxBurstSize = Codegen.empty();
-        this.maxConcurrentTasks = Codegen.empty();
-        this.maxTasksDispatchedPerSecond = Codegen.empty();
+    private RateLimitsArgs(RateLimitsArgs $) {
+        this.maxBurstSize = $.maxBurstSize;
+        this.maxConcurrentTasks = $.maxConcurrentTasks;
+        this.maxTasksDispatchedPerSecond = $.maxTasksDispatchedPerSecond;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RateLimitsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxBurstSize;
-        private @Nullable Output<Integer> maxConcurrentTasks;
-        private @Nullable Output<Double> maxTasksDispatchedPerSecond;
+        private RateLimitsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RateLimitsArgs();
         }
 
         public Builder(RateLimitsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxBurstSize = defaults.maxBurstSize;
-    	      this.maxConcurrentTasks = defaults.maxConcurrentTasks;
-    	      this.maxTasksDispatchedPerSecond = defaults.maxTasksDispatchedPerSecond;
+            $ = new RateLimitsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxBurstSize(@Nullable Output<Integer> maxBurstSize) {
-            this.maxBurstSize = maxBurstSize;
+            $.maxBurstSize = maxBurstSize;
             return this;
         }
-        public Builder maxBurstSize(@Nullable Integer maxBurstSize) {
-            this.maxBurstSize = Codegen.ofNullable(maxBurstSize);
-            return this;
+
+        public Builder maxBurstSize(Integer maxBurstSize) {
+            return maxBurstSize(Output.of(maxBurstSize));
         }
+
         public Builder maxConcurrentTasks(@Nullable Output<Integer> maxConcurrentTasks) {
-            this.maxConcurrentTasks = maxConcurrentTasks;
+            $.maxConcurrentTasks = maxConcurrentTasks;
             return this;
         }
-        public Builder maxConcurrentTasks(@Nullable Integer maxConcurrentTasks) {
-            this.maxConcurrentTasks = Codegen.ofNullable(maxConcurrentTasks);
-            return this;
+
+        public Builder maxConcurrentTasks(Integer maxConcurrentTasks) {
+            return maxConcurrentTasks(Output.of(maxConcurrentTasks));
         }
+
         public Builder maxTasksDispatchedPerSecond(@Nullable Output<Double> maxTasksDispatchedPerSecond) {
-            this.maxTasksDispatchedPerSecond = maxTasksDispatchedPerSecond;
+            $.maxTasksDispatchedPerSecond = maxTasksDispatchedPerSecond;
             return this;
         }
-        public Builder maxTasksDispatchedPerSecond(@Nullable Double maxTasksDispatchedPerSecond) {
-            this.maxTasksDispatchedPerSecond = Codegen.ofNullable(maxTasksDispatchedPerSecond);
-            return this;
-        }        public RateLimitsArgs build() {
-            return new RateLimitsArgs(maxBurstSize, maxConcurrentTasks, maxTasksDispatchedPerSecond);
+
+        public Builder maxTasksDispatchedPerSecond(Double maxTasksDispatchedPerSecond) {
+            return maxTasksDispatchedPerSecond(Output.of(maxTasksDispatchedPerSecond));
+        }
+
+        public RateLimitsArgs build() {
+            return $;
         }
     }
+
 }

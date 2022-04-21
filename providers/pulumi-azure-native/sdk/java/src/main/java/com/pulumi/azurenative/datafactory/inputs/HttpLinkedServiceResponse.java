@@ -32,10 +32,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="authHeaders")
-      private final @Nullable Object authHeaders;
+    private @Nullable Object authHeaders;
 
     public Optional<Object> authHeaders() {
-        return this.authHeaders == null ? Optional.empty() : Optional.ofNullable(this.authHeaders);
+        return Optional.ofNullable(this.authHeaders);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable String authenticationType;
+    private @Nullable String authenticationType;
 
     public Optional<String> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="certThumbprint")
-      private final @Nullable Object certThumbprint;
+    private @Nullable Object certThumbprint;
 
     public Optional<Object> certThumbprint() {
-        return this.certThumbprint == null ? Optional.empty() : Optional.ofNullable(this.certThumbprint);
+        return Optional.ofNullable(this.certThumbprint);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="embeddedCertData")
-      private final @Nullable Object embeddedCertData;
+    private @Nullable Object embeddedCertData;
 
     public Optional<Object> embeddedCertData() {
-        return this.embeddedCertData == null ? Optional.empty() : Optional.ofNullable(this.embeddedCertData);
+        return Optional.ofNullable(this.embeddedCertData);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enableServerCertificateValidation")
-      private final @Nullable Object enableServerCertificateValidation;
+    private @Nullable Object enableServerCertificateValidation;
 
     public Optional<Object> enableServerCertificateValidation() {
-        return this.enableServerCertificateValidation == null ? Optional.empty() : Optional.ofNullable(this.enableServerCertificateValidation);
+        return Optional.ofNullable(this.enableServerCertificateValidation);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -154,7 +154,7 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -165,7 +165,7 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="url", required=true)
-      private final Object url;
+    private Object url;
 
     public Object url() {
         return this.url;
@@ -176,166 +176,128 @@ public final class HttpLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="userName")
-      private final @Nullable Object userName;
+    private @Nullable Object userName;
 
     public Optional<Object> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public HttpLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object authHeaders,
-        @Nullable String authenticationType,
-        @Nullable Object certThumbprint,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object embeddedCertData,
-        @Nullable Object enableServerCertificateValidation,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        String type,
-        Object url,
-        @Nullable Object userName) {
-        this.annotations = annotations;
-        this.authHeaders = authHeaders;
-        this.authenticationType = authenticationType;
-        this.certThumbprint = certThumbprint;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.embeddedCertData = embeddedCertData;
-        this.enableServerCertificateValidation = enableServerCertificateValidation;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.password = password;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.userName = userName;
-    }
+    private HttpLinkedServiceResponse() {}
 
-    private HttpLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.authHeaders = null;
-        this.authenticationType = null;
-        this.certThumbprint = null;
-        this.connectVia = null;
-        this.description = null;
-        this.embeddedCertData = null;
-        this.enableServerCertificateValidation = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.type = null;
-        this.url = null;
-        this.userName = null;
+    private HttpLinkedServiceResponse(HttpLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.authHeaders = $.authHeaders;
+        this.authenticationType = $.authenticationType;
+        this.certThumbprint = $.certThumbprint;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.embeddedCertData = $.embeddedCertData;
+        this.enableServerCertificateValidation = $.enableServerCertificateValidation;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.type = $.type;
+        this.url = $.url;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable Object authHeaders;
-        private @Nullable String authenticationType;
-        private @Nullable Object certThumbprint;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object embeddedCertData;
-        private @Nullable Object enableServerCertificateValidation;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private String type;
-        private Object url;
-        private @Nullable Object userName;
+        private HttpLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpLinkedServiceResponse();
         }
 
         public Builder(HttpLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.authHeaders = defaults.authHeaders;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.certThumbprint = defaults.certThumbprint;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.embeddedCertData = defaults.embeddedCertData;
-    	      this.enableServerCertificateValidation = defaults.enableServerCertificateValidation;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
-    	      this.userName = defaults.userName;
+            $ = new HttpLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authHeaders(@Nullable Object authHeaders) {
-            this.authHeaders = authHeaders;
+            $.authHeaders = authHeaders;
             return this;
         }
+
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder certThumbprint(@Nullable Object certThumbprint) {
-            this.certThumbprint = certThumbprint;
+            $.certThumbprint = certThumbprint;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder embeddedCertData(@Nullable Object embeddedCertData) {
-            this.embeddedCertData = embeddedCertData;
+            $.embeddedCertData = embeddedCertData;
             return this;
         }
+
         public Builder enableServerCertificateValidation(@Nullable Object enableServerCertificateValidation) {
-            this.enableServerCertificateValidation = enableServerCertificateValidation;
+            $.enableServerCertificateValidation = enableServerCertificateValidation;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder userName(@Nullable Object userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public HttpLinkedServiceResponse build() {
-            return new HttpLinkedServiceResponse(annotations, authHeaders, authenticationType, certThumbprint, connectVia, description, embeddedCertData, enableServerCertificateValidation, encryptedCredential, parameters, password, type, url, userName);
+        }
+
+        public HttpLinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

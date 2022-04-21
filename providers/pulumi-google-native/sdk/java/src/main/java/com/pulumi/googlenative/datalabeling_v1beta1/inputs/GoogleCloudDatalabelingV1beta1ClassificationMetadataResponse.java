@@ -21,45 +21,45 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
      * 
      */
     @Import(name="isMultiLabel", required=true)
-      private final Boolean isMultiLabel;
+    private Boolean isMultiLabel;
 
     public Boolean isMultiLabel() {
         return this.isMultiLabel;
     }
 
-    public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(Boolean isMultiLabel) {
-        this.isMultiLabel = Objects.requireNonNull(isMultiLabel, "expected parameter 'isMultiLabel' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse() {
-        this.isMultiLabel = null;
+    private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse $) {
+        this.isMultiLabel = $.isMultiLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isMultiLabel;
+        private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isMultiLabel = defaults.isMultiLabel;
+            $ = new GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isMultiLabel(Boolean isMultiLabel) {
-            this.isMultiLabel = Objects.requireNonNull(isMultiLabel);
+            $.isMultiLabel = isMultiLabel;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse build() {
-            return new GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(isMultiLabel);
+        }
+
+        public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse build() {
+            $.isMultiLabel = Objects.requireNonNull($.isMultiLabel, "expected parameter 'isMultiLabel' to be non-null");
+            return $;
         }
     }
+
 }

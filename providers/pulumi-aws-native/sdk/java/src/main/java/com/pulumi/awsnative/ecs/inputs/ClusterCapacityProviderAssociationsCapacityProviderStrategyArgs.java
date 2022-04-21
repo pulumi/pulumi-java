@@ -7,10 +7,10 @@ import com.pulumi.awsnative.ecs.enums.ClusterCapacityProviderAssociationsCapacit
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,90 +19,83 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategyAr
     public static final ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs Empty = new ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs();
 
     @Import(name="base")
-      private final @Nullable Output<Integer> base;
+    private @Nullable Output<Integer> base;
 
-    public Output<Integer> base() {
-        return this.base == null ? Codegen.empty() : this.base;
+    public Optional<Output<Integer>> base() {
+        return Optional.ofNullable(this.base);
     }
 
     @Import(name="capacityProvider", required=true)
-      private final Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider;
+    private Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider;
 
     public Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider() {
         return this.capacityProvider;
     }
 
     @Import(name="weight")
-      private final @Nullable Output<Integer> weight;
+    private @Nullable Output<Integer> weight;
 
-    public Output<Integer> weight() {
-        return this.weight == null ? Codegen.empty() : this.weight;
+    public Optional<Output<Integer>> weight() {
+        return Optional.ofNullable(this.weight);
     }
 
-    public ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(
-        @Nullable Output<Integer> base,
-        Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider,
-        @Nullable Output<Integer> weight) {
-        this.base = base;
-        this.capacityProvider = Objects.requireNonNull(capacityProvider, "expected parameter 'capacityProvider' to be non-null");
-        this.weight = weight;
-    }
+    private ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs() {}
 
-    private ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs() {
-        this.base = Codegen.empty();
-        this.capacityProvider = Codegen.empty();
-        this.weight = Codegen.empty();
+    private ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs $) {
+        this.base = $.base;
+        this.capacityProvider = $.capacityProvider;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> base;
-        private Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider;
-        private @Nullable Output<Integer> weight;
+        private ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs();
         }
 
         public Builder(ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.base = defaults.base;
-    	      this.capacityProvider = defaults.capacityProvider;
-    	      this.weight = defaults.weight;
+            $ = new ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder base(@Nullable Output<Integer> base) {
-            this.base = base;
+            $.base = base;
             return this;
         }
-        public Builder base(@Nullable Integer base) {
-            this.base = Codegen.ofNullable(base);
-            return this;
+
+        public Builder base(Integer base) {
+            return base(Output.of(base));
         }
+
         public Builder capacityProvider(Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider) {
-            this.capacityProvider = Objects.requireNonNull(capacityProvider);
+            $.capacityProvider = capacityProvider;
             return this;
         }
+
         public Builder capacityProvider(Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider) {
-            this.capacityProvider = Output.of(Objects.requireNonNull(capacityProvider));
-            return this;
+            return capacityProvider(Output.of(capacityProvider));
         }
+
         public Builder weight(@Nullable Output<Integer> weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
         }
-        public Builder weight(@Nullable Integer weight) {
-            this.weight = Codegen.ofNullable(weight);
-            return this;
-        }        public ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs build() {
-            return new ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(base, capacityProvider, weight);
+
+        public Builder weight(Integer weight) {
+            return weight(Output.of(weight));
+        }
+
+        public ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs build() {
+            $.capacityProvider = Objects.requireNonNull($.capacityProvider, "expected parameter 'capacityProvider' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.datamigration;
 import com.pulumi.azurenative.datamigration.inputs.ProjectFilePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Output<String> fileName;
+    private @Nullable Output<String> fileName;
 
-    public Output<String> fileName() {
-        return this.fileName == null ? Codegen.empty() : this.fileName;
+    public Optional<Output<String>> fileName() {
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupName", required=true)
-      private final Output<String> groupName;
+    private Output<String> groupName;
 
     public Output<String> groupName() {
         return this.groupName;
@@ -43,7 +43,7 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName", required=true)
-      private final Output<String> projectName;
+    private Output<String> projectName;
 
     public Output<String> projectName() {
         return this.projectName;
@@ -54,10 +54,10 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ProjectFilePropertiesArgs> properties;
+    private @Nullable Output<ProjectFilePropertiesArgs> properties;
 
-    public Output<ProjectFilePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ProjectFilePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -65,102 +65,91 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public FileArgs(
-        @Nullable Output<String> fileName,
-        Output<String> groupName,
-        Output<String> projectName,
-        @Nullable Output<ProjectFilePropertiesArgs> properties,
-        Output<String> serviceName) {
-        this.fileName = fileName;
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.properties = properties;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private FileArgs() {}
 
-    private FileArgs() {
-        this.fileName = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private FileArgs(FileArgs $) {
+        this.fileName = $.fileName;
+        this.groupName = $.groupName;
+        this.projectName = $.projectName;
+        this.properties = $.properties;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fileName;
-        private Output<String> groupName;
-        private Output<String> projectName;
-        private @Nullable Output<ProjectFilePropertiesArgs> properties;
-        private Output<String> serviceName;
+        private FileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileArgs();
         }
 
         public Builder(FileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
-    	      this.groupName = defaults.groupName;
-    	      this.projectName = defaults.projectName;
-    	      this.properties = defaults.properties;
-    	      this.serviceName = defaults.serviceName;
+            $ = new FileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(@Nullable Output<String> fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
-        public Builder fileName(@Nullable String fileName) {
-            this.fileName = Codegen.ofNullable(fileName);
-            return this;
+
+        public Builder fileName(String fileName) {
+            return fileName(Output.of(fileName));
         }
+
         public Builder groupName(Output<String> groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Output.of(Objects.requireNonNull(groupName));
-            return this;
+            return groupName(Output.of(groupName));
         }
+
         public Builder projectName(Output<String> projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Output.of(Objects.requireNonNull(projectName));
-            return this;
+            return projectName(Output.of(projectName));
         }
+
         public Builder properties(@Nullable Output<ProjectFilePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ProjectFilePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ProjectFilePropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public FileArgs build() {
-            return new FileArgs(fileName, groupName, projectName, properties, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public FileArgs build() {
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

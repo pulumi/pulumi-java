@@ -5,10 +5,10 @@ package com.pulumi.azurenative.healthcareapis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ServiceAcrConfigurationInfoArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="loginServers")
-      private final @Nullable Output<List<String>> loginServers;
+    private @Nullable Output<List<String>> loginServers;
 
-    public Output<List<String>> loginServers() {
-        return this.loginServers == null ? Codegen.empty() : this.loginServers;
+    public Optional<Output<List<String>>> loginServers() {
+        return Optional.ofNullable(this.loginServers);
     }
 
-    public ServiceAcrConfigurationInfoArgs(@Nullable Output<List<String>> loginServers) {
-        this.loginServers = loginServers;
-    }
+    private ServiceAcrConfigurationInfoArgs() {}
 
-    private ServiceAcrConfigurationInfoArgs() {
-        this.loginServers = Codegen.empty();
+    private ServiceAcrConfigurationInfoArgs(ServiceAcrConfigurationInfoArgs $) {
+        this.loginServers = $.loginServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAcrConfigurationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> loginServers;
+        private ServiceAcrConfigurationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAcrConfigurationInfoArgs();
         }
 
         public Builder(ServiceAcrConfigurationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loginServers = defaults.loginServers;
+            $ = new ServiceAcrConfigurationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loginServers(@Nullable Output<List<String>> loginServers) {
-            this.loginServers = loginServers;
+            $.loginServers = loginServers;
             return this;
         }
-        public Builder loginServers(@Nullable List<String> loginServers) {
-            this.loginServers = Codegen.ofNullable(loginServers);
-            return this;
+
+        public Builder loginServers(List<String> loginServers) {
+            return loginServers(Output.of(loginServers));
         }
+
         public Builder loginServers(String... loginServers) {
             return loginServers(List.of(loginServers));
-        }        public ServiceAcrConfigurationInfoArgs build() {
-            return new ServiceAcrConfigurationInfoArgs(loginServers);
+        }
+
+        public ServiceAcrConfigurationInfoArgs build() {
+            return $;
         }
     }
+
 }

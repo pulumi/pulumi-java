@@ -5,10 +5,10 @@ package com.pulumi.aws.route53recoveryreadiness;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="readinessCheckName", required=true)
-      private final Output<String> readinessCheckName;
+    private Output<String> readinessCheckName;
 
     public Output<String> readinessCheckName() {
         return this.readinessCheckName;
@@ -32,7 +32,7 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceSetName", required=true)
-      private final Output<String> resourceSetName;
+    private Output<String> resourceSetName;
 
     public Output<String> resourceSetName() {
         return this.resourceSetName;
@@ -43,76 +43,70 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ReadinessCheckArgs(
-        Output<String> readinessCheckName,
-        Output<String> resourceSetName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.readinessCheckName = Objects.requireNonNull(readinessCheckName, "expected parameter 'readinessCheckName' to be non-null");
-        this.resourceSetName = Objects.requireNonNull(resourceSetName, "expected parameter 'resourceSetName' to be non-null");
-        this.tags = tags;
-    }
+    private ReadinessCheckArgs() {}
 
-    private ReadinessCheckArgs() {
-        this.readinessCheckName = Codegen.empty();
-        this.resourceSetName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ReadinessCheckArgs(ReadinessCheckArgs $) {
+        this.readinessCheckName = $.readinessCheckName;
+        this.resourceSetName = $.resourceSetName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReadinessCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> readinessCheckName;
-        private Output<String> resourceSetName;
-        private @Nullable Output<Map<String,String>> tags;
+        private ReadinessCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReadinessCheckArgs();
         }
 
         public Builder(ReadinessCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readinessCheckName = defaults.readinessCheckName;
-    	      this.resourceSetName = defaults.resourceSetName;
-    	      this.tags = defaults.tags;
+            $ = new ReadinessCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder readinessCheckName(Output<String> readinessCheckName) {
-            this.readinessCheckName = Objects.requireNonNull(readinessCheckName);
+            $.readinessCheckName = readinessCheckName;
             return this;
         }
+
         public Builder readinessCheckName(String readinessCheckName) {
-            this.readinessCheckName = Output.of(Objects.requireNonNull(readinessCheckName));
-            return this;
+            return readinessCheckName(Output.of(readinessCheckName));
         }
+
         public Builder resourceSetName(Output<String> resourceSetName) {
-            this.resourceSetName = Objects.requireNonNull(resourceSetName);
+            $.resourceSetName = resourceSetName;
             return this;
         }
+
         public Builder resourceSetName(String resourceSetName) {
-            this.resourceSetName = Output.of(Objects.requireNonNull(resourceSetName));
-            return this;
+            return resourceSetName(Output.of(resourceSetName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ReadinessCheckArgs build() {
-            return new ReadinessCheckArgs(readinessCheckName, resourceSetName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ReadinessCheckArgs build() {
+            $.readinessCheckName = Objects.requireNonNull($.readinessCheckName, "expected parameter 'readinessCheckName' to be non-null");
+            $.resourceSetName = Objects.requireNonNull($.resourceSetName, "expected parameter 'resourceSetName' to be non-null");
+            return $;
         }
     }
+
 }

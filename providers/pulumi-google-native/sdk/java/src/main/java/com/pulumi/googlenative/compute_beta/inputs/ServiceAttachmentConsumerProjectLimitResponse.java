@@ -18,7 +18,7 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends com.pul
      * 
      */
     @Import(name="connectionLimit", required=true)
-      private final Integer connectionLimit;
+    private Integer connectionLimit;
 
     public Integer connectionLimit() {
         return this.connectionLimit;
@@ -29,55 +29,52 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends com.pul
      * 
      */
     @Import(name="projectIdOrNum", required=true)
-      private final String projectIdOrNum;
+    private String projectIdOrNum;
 
     public String projectIdOrNum() {
         return this.projectIdOrNum;
     }
 
-    public ServiceAttachmentConsumerProjectLimitResponse(
-        Integer connectionLimit,
-        String projectIdOrNum) {
-        this.connectionLimit = Objects.requireNonNull(connectionLimit, "expected parameter 'connectionLimit' to be non-null");
-        this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum, "expected parameter 'projectIdOrNum' to be non-null");
-    }
+    private ServiceAttachmentConsumerProjectLimitResponse() {}
 
-    private ServiceAttachmentConsumerProjectLimitResponse() {
-        this.connectionLimit = null;
-        this.projectIdOrNum = null;
+    private ServiceAttachmentConsumerProjectLimitResponse(ServiceAttachmentConsumerProjectLimitResponse $) {
+        this.connectionLimit = $.connectionLimit;
+        this.projectIdOrNum = $.projectIdOrNum;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAttachmentConsumerProjectLimitResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer connectionLimit;
-        private String projectIdOrNum;
+        private ServiceAttachmentConsumerProjectLimitResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAttachmentConsumerProjectLimitResponse();
         }
 
         public Builder(ServiceAttachmentConsumerProjectLimitResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionLimit = defaults.connectionLimit;
-    	      this.projectIdOrNum = defaults.projectIdOrNum;
+            $ = new ServiceAttachmentConsumerProjectLimitResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionLimit(Integer connectionLimit) {
-            this.connectionLimit = Objects.requireNonNull(connectionLimit);
+            $.connectionLimit = connectionLimit;
             return this;
         }
+
         public Builder projectIdOrNum(String projectIdOrNum) {
-            this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
+            $.projectIdOrNum = projectIdOrNum;
             return this;
-        }        public ServiceAttachmentConsumerProjectLimitResponse build() {
-            return new ServiceAttachmentConsumerProjectLimitResponse(connectionLimit, projectIdOrNum);
+        }
+
+        public ServiceAttachmentConsumerProjectLimitResponse build() {
+            $.connectionLimit = Objects.requireNonNull($.connectionLimit, "expected parameter 'connectionLimit' to be non-null");
+            $.projectIdOrNum = Objects.requireNonNull($.projectIdOrNum, "expected parameter 'projectIdOrNum' to be non-null");
+            return $;
         }
     }
+
 }

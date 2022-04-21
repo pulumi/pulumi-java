@@ -5,10 +5,10 @@ package com.pulumi.awsnative.opensearchservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,76 +17,73 @@ public final class DomainVPCOptionsArgs extends com.pulumi.resources.ResourceArg
     public static final DomainVPCOptionsArgs Empty = new DomainVPCOptionsArgs();
 
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
-    public DomainVPCOptionsArgs(
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<List<String>> subnetIds) {
-        this.securityGroupIds = securityGroupIds;
-        this.subnetIds = subnetIds;
-    }
+    private DomainVPCOptionsArgs() {}
 
-    private DomainVPCOptionsArgs() {
-        this.securityGroupIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
+    private DomainVPCOptionsArgs(DomainVPCOptionsArgs $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainVPCOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<List<String>> subnetIds;
+        private DomainVPCOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainVPCOptionsArgs();
         }
 
         public Builder(DomainVPCOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
+            $ = new DomainVPCOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
-        }        public DomainVPCOptionsArgs build() {
-            return new DomainVPCOptionsArgs(securityGroupIds, subnetIds);
+        }
+
+        public DomainVPCOptionsArgs build() {
+            return $;
         }
     }
+
 }

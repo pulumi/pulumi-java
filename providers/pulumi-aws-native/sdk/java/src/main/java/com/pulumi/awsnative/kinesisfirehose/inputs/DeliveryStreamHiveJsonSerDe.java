@@ -16,48 +16,48 @@ public final class DeliveryStreamHiveJsonSerDe extends com.pulumi.resources.Invo
     public static final DeliveryStreamHiveJsonSerDe Empty = new DeliveryStreamHiveJsonSerDe();
 
     @Import(name="timestampFormats")
-      private final @Nullable List<String> timestampFormats;
+    private @Nullable List<String> timestampFormats;
 
-    public List<String> timestampFormats() {
-        return this.timestampFormats == null ? List.of() : this.timestampFormats;
+    public Optional<List<String>> timestampFormats() {
+        return Optional.ofNullable(this.timestampFormats);
     }
 
-    public DeliveryStreamHiveJsonSerDe(@Nullable List<String> timestampFormats) {
-        this.timestampFormats = timestampFormats;
-    }
+    private DeliveryStreamHiveJsonSerDe() {}
 
-    private DeliveryStreamHiveJsonSerDe() {
-        this.timestampFormats = List.of();
+    private DeliveryStreamHiveJsonSerDe(DeliveryStreamHiveJsonSerDe $) {
+        this.timestampFormats = $.timestampFormats;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamHiveJsonSerDe defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> timestampFormats;
+        private DeliveryStreamHiveJsonSerDe $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamHiveJsonSerDe();
         }
 
         public Builder(DeliveryStreamHiveJsonSerDe defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timestampFormats = defaults.timestampFormats;
+            $ = new DeliveryStreamHiveJsonSerDe(Objects.requireNonNull(defaults));
         }
 
         public Builder timestampFormats(@Nullable List<String> timestampFormats) {
-            this.timestampFormats = timestampFormats;
+            $.timestampFormats = timestampFormats;
             return this;
         }
+
         public Builder timestampFormats(String... timestampFormats) {
             return timestampFormats(List.of(timestampFormats));
-        }        public DeliveryStreamHiveJsonSerDe build() {
-            return new DeliveryStreamHiveJsonSerDe(timestampFormats);
+        }
+
+        public DeliveryStreamHiveJsonSerDe build() {
+            return $;
         }
     }
+
 }

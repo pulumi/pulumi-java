@@ -5,11 +5,11 @@ package com.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TargetGroupStickinessArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cookieDuration")
-      private final @Nullable Output<Integer> cookieDuration;
+    private @Nullable Output<Integer> cookieDuration;
 
-    public Output<Integer> cookieDuration() {
-        return this.cookieDuration == null ? Codegen.empty() : this.cookieDuration;
+    public Optional<Output<Integer>> cookieDuration() {
+        return Optional.ofNullable(this.cookieDuration);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TargetGroupStickinessArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cookieName")
-      private final @Nullable Output<String> cookieName;
+    private @Nullable Output<String> cookieName;
 
-    public Output<String> cookieName() {
-        return this.cookieName == null ? Codegen.empty() : this.cookieName;
+    public Optional<Output<String>> cookieName() {
+        return Optional.ofNullable(this.cookieName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TargetGroupStickinessArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -55,89 +55,79 @@ public final class TargetGroupStickinessArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public TargetGroupStickinessArgs(
-        @Nullable Output<Integer> cookieDuration,
-        @Nullable Output<String> cookieName,
-        @Nullable Output<Boolean> enabled,
-        Output<String> type) {
-        this.cookieDuration = cookieDuration;
-        this.cookieName = cookieName;
-        this.enabled = enabled;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TargetGroupStickinessArgs() {}
 
-    private TargetGroupStickinessArgs() {
-        this.cookieDuration = Codegen.empty();
-        this.cookieName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.type = Codegen.empty();
+    private TargetGroupStickinessArgs(TargetGroupStickinessArgs $) {
+        this.cookieDuration = $.cookieDuration;
+        this.cookieName = $.cookieName;
+        this.enabled = $.enabled;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetGroupStickinessArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cookieDuration;
-        private @Nullable Output<String> cookieName;
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> type;
+        private TargetGroupStickinessArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetGroupStickinessArgs();
         }
 
         public Builder(TargetGroupStickinessArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookieDuration = defaults.cookieDuration;
-    	      this.cookieName = defaults.cookieName;
-    	      this.enabled = defaults.enabled;
-    	      this.type = defaults.type;
+            $ = new TargetGroupStickinessArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cookieDuration(@Nullable Output<Integer> cookieDuration) {
-            this.cookieDuration = cookieDuration;
+            $.cookieDuration = cookieDuration;
             return this;
         }
-        public Builder cookieDuration(@Nullable Integer cookieDuration) {
-            this.cookieDuration = Codegen.ofNullable(cookieDuration);
-            return this;
+
+        public Builder cookieDuration(Integer cookieDuration) {
+            return cookieDuration(Output.of(cookieDuration));
         }
+
         public Builder cookieName(@Nullable Output<String> cookieName) {
-            this.cookieName = cookieName;
+            $.cookieName = cookieName;
             return this;
         }
-        public Builder cookieName(@Nullable String cookieName) {
-            this.cookieName = Codegen.ofNullable(cookieName);
-            return this;
+
+        public Builder cookieName(String cookieName) {
+            return cookieName(Output.of(cookieName));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TargetGroupStickinessArgs build() {
-            return new TargetGroupStickinessArgs(cookieDuration, cookieName, enabled, type);
+            return type(Output.of(type));
+        }
+
+        public TargetGroupStickinessArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

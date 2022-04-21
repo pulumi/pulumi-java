@@ -22,7 +22,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse extends
      * 
      */
     @Import(name="projectRepoId", required=true)
-      private final GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId;
+    private GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId;
 
     public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId() {
         return this.projectRepoId;
@@ -33,55 +33,52 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse extends
      * 
      */
     @Import(name="uid", required=true)
-      private final String uid;
+    private String uid;
 
     public String uid() {
         return this.uid;
     }
 
-    public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse(
-        GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId,
-        String uid) {
-        this.projectRepoId = Objects.requireNonNull(projectRepoId, "expected parameter 'projectRepoId' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-    }
+    private GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse() {}
 
-    private GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse() {
-        this.projectRepoId = null;
-        this.uid = null;
+    private GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse(GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse $) {
+        this.projectRepoId = $.projectRepoId;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId;
-        private String uid;
+        private GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse();
         }
 
         public Builder(GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectRepoId = defaults.projectRepoId;
-    	      this.uid = defaults.uid;
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder projectRepoId(GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId) {
-            this.projectRepoId = Objects.requireNonNull(projectRepoId);
+            $.projectRepoId = projectRepoId;
             return this;
         }
+
         public Builder uid(String uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
-        }        public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse build() {
-            return new GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse(projectRepoId, uid);
+        }
+
+        public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse build() {
+            $.projectRepoId = Objects.requireNonNull($.projectRepoId, "expected parameter 'projectRepoId' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            return $;
         }
     }
+
 }

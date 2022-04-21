@@ -13,45 +13,45 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     public static final GetServerCertificateArgs Empty = new GetServerCertificateArgs();
 
     @Import(name="serverCertificateName", required=true)
-      private final String serverCertificateName;
+    private String serverCertificateName;
 
     public String serverCertificateName() {
         return this.serverCertificateName;
     }
 
-    public GetServerCertificateArgs(String serverCertificateName) {
-        this.serverCertificateName = Objects.requireNonNull(serverCertificateName, "expected parameter 'serverCertificateName' to be non-null");
-    }
+    private GetServerCertificateArgs() {}
 
-    private GetServerCertificateArgs() {
-        this.serverCertificateName = null;
+    private GetServerCertificateArgs(GetServerCertificateArgs $) {
+        this.serverCertificateName = $.serverCertificateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String serverCertificateName;
+        private GetServerCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerCertificateArgs();
         }
 
         public Builder(GetServerCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverCertificateName = defaults.serverCertificateName;
+            $ = new GetServerCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serverCertificateName(String serverCertificateName) {
-            this.serverCertificateName = Objects.requireNonNull(serverCertificateName);
+            $.serverCertificateName = serverCertificateName;
             return this;
-        }        public GetServerCertificateArgs build() {
-            return new GetServerCertificateArgs(serverCertificateName);
+        }
+
+        public GetServerCertificateArgs build() {
+            $.serverCertificateName = Objects.requireNonNull($.serverCertificateName, "expected parameter 'serverCertificateName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse extends com.
      * 
      */
     @Import(name="ignoreTerms", required=true)
-      private final List<String> ignoreTerms;
+    private List<String> ignoreTerms;
 
     public List<String> ignoreTerms() {
         return this.ignoreTerms;
     }
 
-    public GoogleCloudRetailV2alphaRuleIgnoreActionResponse(List<String> ignoreTerms) {
-        this.ignoreTerms = Objects.requireNonNull(ignoreTerms, "expected parameter 'ignoreTerms' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaRuleIgnoreActionResponse() {}
 
-    private GoogleCloudRetailV2alphaRuleIgnoreActionResponse() {
-        this.ignoreTerms = List.of();
+    private GoogleCloudRetailV2alphaRuleIgnoreActionResponse(GoogleCloudRetailV2alphaRuleIgnoreActionResponse $) {
+        this.ignoreTerms = $.ignoreTerms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRuleIgnoreActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> ignoreTerms;
+        private GoogleCloudRetailV2alphaRuleIgnoreActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRuleIgnoreActionResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaRuleIgnoreActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreTerms = defaults.ignoreTerms;
+            $ = new GoogleCloudRetailV2alphaRuleIgnoreActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreTerms(List<String> ignoreTerms) {
-            this.ignoreTerms = Objects.requireNonNull(ignoreTerms);
+            $.ignoreTerms = ignoreTerms;
             return this;
         }
+
         public Builder ignoreTerms(String... ignoreTerms) {
             return ignoreTerms(List.of(ignoreTerms));
-        }        public GoogleCloudRetailV2alphaRuleIgnoreActionResponse build() {
-            return new GoogleCloudRetailV2alphaRuleIgnoreActionResponse(ignoreTerms);
+        }
+
+        public GoogleCloudRetailV2alphaRuleIgnoreActionResponse build() {
+            $.ignoreTerms = Objects.requireNonNull($.ignoreTerms, "expected parameter 'ignoreTerms' to be non-null");
+            return $;
         }
     }
+
 }

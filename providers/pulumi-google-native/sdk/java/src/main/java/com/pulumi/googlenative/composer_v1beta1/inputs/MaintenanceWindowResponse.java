@@ -21,7 +21,7 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -32,7 +32,7 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="recurrence", required=true)
-      private final String recurrence;
+    private String recurrence;
 
     public String recurrence() {
         return this.recurrence;
@@ -43,64 +43,59 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public MaintenanceWindowResponse(
-        String endTime,
-        String recurrence,
-        String startTime) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.recurrence = Objects.requireNonNull(recurrence, "expected parameter 'recurrence' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private MaintenanceWindowResponse() {}
 
-    private MaintenanceWindowResponse() {
-        this.endTime = null;
-        this.recurrence = null;
-        this.startTime = null;
+    private MaintenanceWindowResponse(MaintenanceWindowResponse $) {
+        this.endTime = $.endTime;
+        this.recurrence = $.recurrence;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private String recurrence;
-        private String startTime;
+        private MaintenanceWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowResponse();
         }
 
         public Builder(MaintenanceWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.recurrence = defaults.recurrence;
-    	      this.startTime = defaults.startTime;
+            $ = new MaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder recurrence(String recurrence) {
-            this.recurrence = Objects.requireNonNull(recurrence);
+            $.recurrence = recurrence;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public MaintenanceWindowResponse build() {
-            return new MaintenanceWindowResponse(endTime, recurrence, startTime);
+        }
+
+        public MaintenanceWindowResponse build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.recurrence = Objects.requireNonNull($.recurrence, "expected parameter 'recurrence' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,9 +9,9 @@ import com.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteGetArgs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RouteSpecGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grpcRoute")
-      private final @Nullable Output<RouteSpecGrpcRouteGetArgs> grpcRoute;
+    private @Nullable Output<RouteSpecGrpcRouteGetArgs> grpcRoute;
 
-    public Output<RouteSpecGrpcRouteGetArgs> grpcRoute() {
-        return this.grpcRoute == null ? Codegen.empty() : this.grpcRoute;
+    public Optional<Output<RouteSpecGrpcRouteGetArgs>> grpcRoute() {
+        return Optional.ofNullable(this.grpcRoute);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RouteSpecGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="http2Route")
-      private final @Nullable Output<RouteSpecHttp2RouteGetArgs> http2Route;
+    private @Nullable Output<RouteSpecHttp2RouteGetArgs> http2Route;
 
-    public Output<RouteSpecHttp2RouteGetArgs> http2Route() {
-        return this.http2Route == null ? Codegen.empty() : this.http2Route;
+    public Optional<Output<RouteSpecHttp2RouteGetArgs>> http2Route() {
+        return Optional.ofNullable(this.http2Route);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RouteSpecGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpRoute")
-      private final @Nullable Output<RouteSpecHttpRouteGetArgs> httpRoute;
+    private @Nullable Output<RouteSpecHttpRouteGetArgs> httpRoute;
 
-    public Output<RouteSpecHttpRouteGetArgs> httpRoute() {
-        return this.httpRoute == null ? Codegen.empty() : this.httpRoute;
+    public Optional<Output<RouteSpecHttpRouteGetArgs>> httpRoute() {
+        return Optional.ofNullable(this.httpRoute);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RouteSpecGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class RouteSpecGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tcpRoute")
-      private final @Nullable Output<RouteSpecTcpRouteGetArgs> tcpRoute;
+    private @Nullable Output<RouteSpecTcpRouteGetArgs> tcpRoute;
 
-    public Output<RouteSpecTcpRouteGetArgs> tcpRoute() {
-        return this.tcpRoute == null ? Codegen.empty() : this.tcpRoute;
+    public Optional<Output<RouteSpecTcpRouteGetArgs>> tcpRoute() {
+        return Optional.ofNullable(this.tcpRoute);
     }
 
-    public RouteSpecGetArgs(
-        @Nullable Output<RouteSpecGrpcRouteGetArgs> grpcRoute,
-        @Nullable Output<RouteSpecHttp2RouteGetArgs> http2Route,
-        @Nullable Output<RouteSpecHttpRouteGetArgs> httpRoute,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<RouteSpecTcpRouteGetArgs> tcpRoute) {
-        this.grpcRoute = grpcRoute;
-        this.http2Route = http2Route;
-        this.httpRoute = httpRoute;
-        this.priority = priority;
-        this.tcpRoute = tcpRoute;
-    }
+    private RouteSpecGetArgs() {}
 
-    private RouteSpecGetArgs() {
-        this.grpcRoute = Codegen.empty();
-        this.http2Route = Codegen.empty();
-        this.httpRoute = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.tcpRoute = Codegen.empty();
+    private RouteSpecGetArgs(RouteSpecGetArgs $) {
+        this.grpcRoute = $.grpcRoute;
+        this.http2Route = $.http2Route;
+        this.httpRoute = $.httpRoute;
+        this.priority = $.priority;
+        this.tcpRoute = $.tcpRoute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RouteSpecGrpcRouteGetArgs> grpcRoute;
-        private @Nullable Output<RouteSpecHttp2RouteGetArgs> http2Route;
-        private @Nullable Output<RouteSpecHttpRouteGetArgs> httpRoute;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<RouteSpecTcpRouteGetArgs> tcpRoute;
+        private RouteSpecGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecGetArgs();
         }
 
         public Builder(RouteSpecGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grpcRoute = defaults.grpcRoute;
-    	      this.http2Route = defaults.http2Route;
-    	      this.httpRoute = defaults.httpRoute;
-    	      this.priority = defaults.priority;
-    	      this.tcpRoute = defaults.tcpRoute;
+            $ = new RouteSpecGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder grpcRoute(@Nullable Output<RouteSpecGrpcRouteGetArgs> grpcRoute) {
-            this.grpcRoute = grpcRoute;
+            $.grpcRoute = grpcRoute;
             return this;
         }
-        public Builder grpcRoute(@Nullable RouteSpecGrpcRouteGetArgs grpcRoute) {
-            this.grpcRoute = Codegen.ofNullable(grpcRoute);
-            return this;
+
+        public Builder grpcRoute(RouteSpecGrpcRouteGetArgs grpcRoute) {
+            return grpcRoute(Output.of(grpcRoute));
         }
+
         public Builder http2Route(@Nullable Output<RouteSpecHttp2RouteGetArgs> http2Route) {
-            this.http2Route = http2Route;
+            $.http2Route = http2Route;
             return this;
         }
-        public Builder http2Route(@Nullable RouteSpecHttp2RouteGetArgs http2Route) {
-            this.http2Route = Codegen.ofNullable(http2Route);
-            return this;
+
+        public Builder http2Route(RouteSpecHttp2RouteGetArgs http2Route) {
+            return http2Route(Output.of(http2Route));
         }
+
         public Builder httpRoute(@Nullable Output<RouteSpecHttpRouteGetArgs> httpRoute) {
-            this.httpRoute = httpRoute;
+            $.httpRoute = httpRoute;
             return this;
         }
-        public Builder httpRoute(@Nullable RouteSpecHttpRouteGetArgs httpRoute) {
-            this.httpRoute = Codegen.ofNullable(httpRoute);
-            return this;
+
+        public Builder httpRoute(RouteSpecHttpRouteGetArgs httpRoute) {
+            return httpRoute(Output.of(httpRoute));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder tcpRoute(@Nullable Output<RouteSpecTcpRouteGetArgs> tcpRoute) {
-            this.tcpRoute = tcpRoute;
+            $.tcpRoute = tcpRoute;
             return this;
         }
-        public Builder tcpRoute(@Nullable RouteSpecTcpRouteGetArgs tcpRoute) {
-            this.tcpRoute = Codegen.ofNullable(tcpRoute);
-            return this;
-        }        public RouteSpecGetArgs build() {
-            return new RouteSpecGetArgs(grpcRoute, http2Route, httpRoute, priority, tcpRoute);
+
+        public Builder tcpRoute(RouteSpecTcpRouteGetArgs tcpRoute) {
+            return tcpRoute(Output.of(tcpRoute));
+        }
+
+        public RouteSpecGetArgs build() {
+            return $;
         }
     }
+
 }

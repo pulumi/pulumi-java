@@ -23,45 +23,44 @@ public final class LinkedResourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public LinkedResourceResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private LinkedResourceResponse() {}
 
-    private LinkedResourceResponse() {
-        this.id = null;
+    private LinkedResourceResponse(LinkedResourceResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private LinkedResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedResourceResponse();
         }
 
         public Builder(LinkedResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new LinkedResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public LinkedResourceResponse build() {
-            return new LinkedResourceResponse(id);
+        }
+
+        public LinkedResourceResponse build() {
+            return $;
         }
     }
+
 }

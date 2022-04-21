@@ -25,10 +25,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="hostKey")
-      private final @Nullable String hostKey;
+    private @Nullable String hostKey;
 
     public Optional<String> hostKey() {
-        return this.hostKey == null ? Optional.empty() : Optional.ofNullable(this.hostKey);
+        return Optional.ofNullable(this.hostKey);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="hostKeyAlgorithm")
-      private final @Nullable String hostKeyAlgorithm;
+    private @Nullable String hostKeyAlgorithm;
 
     public Optional<String> hostKeyAlgorithm() {
-        return this.hostKeyAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.hostKeyAlgorithm);
+        return Optional.ofNullable(this.hostKeyAlgorithm);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
@@ -58,7 +58,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -69,10 +69,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="patterns", required=true)
-      private final List<String> patterns;
+    private List<String> patterns;
 
     public List<String> patterns() {
         return this.patterns;
@@ -91,10 +91,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="privateKey")
-      private final @Nullable String privateKey;
+    private @Nullable String privateKey;
 
     public Optional<String> privateKey() {
-        return this.privateKey == null ? Optional.empty() : Optional.ofNullable(this.privateKey);
+        return Optional.ofNullable(this.privateKey);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="searchPaths")
-      private final @Nullable List<String> searchPaths;
+    private @Nullable List<String> searchPaths;
 
-    public List<String> searchPaths() {
-        return this.searchPaths == null ? List.of() : this.searchPaths;
+    public Optional<List<String>> searchPaths() {
+        return Optional.ofNullable(this.searchPaths);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="strictHostKeyChecking")
-      private final @Nullable Boolean strictHostKeyChecking;
+    private @Nullable Boolean strictHostKeyChecking;
 
     public Optional<Boolean> strictHostKeyChecking() {
-        return this.strictHostKeyChecking == null ? Optional.empty() : Optional.ofNullable(this.strictHostKeyChecking);
+        return Optional.ofNullable(this.strictHostKeyChecking);
     }
 
     /**
@@ -124,7 +124,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
@@ -135,142 +135,116 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public ConfigurationServiceGitRepositoryResponse(
-        @Nullable String hostKey,
-        @Nullable String hostKeyAlgorithm,
-        String label,
-        String name,
-        @Nullable String password,
-        List<String> patterns,
-        @Nullable String privateKey,
-        @Nullable List<String> searchPaths,
-        @Nullable Boolean strictHostKeyChecking,
-        String uri,
-        @Nullable String username) {
-        this.hostKey = hostKey;
-        this.hostKeyAlgorithm = hostKeyAlgorithm;
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.password = password;
-        this.patterns = Objects.requireNonNull(patterns, "expected parameter 'patterns' to be non-null");
-        this.privateKey = privateKey;
-        this.searchPaths = searchPaths;
-        this.strictHostKeyChecking = strictHostKeyChecking;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.username = username;
-    }
+    private ConfigurationServiceGitRepositoryResponse() {}
 
-    private ConfigurationServiceGitRepositoryResponse() {
-        this.hostKey = null;
-        this.hostKeyAlgorithm = null;
-        this.label = null;
-        this.name = null;
-        this.password = null;
-        this.patterns = List.of();
-        this.privateKey = null;
-        this.searchPaths = List.of();
-        this.strictHostKeyChecking = null;
-        this.uri = null;
-        this.username = null;
+    private ConfigurationServiceGitRepositoryResponse(ConfigurationServiceGitRepositoryResponse $) {
+        this.hostKey = $.hostKey;
+        this.hostKeyAlgorithm = $.hostKeyAlgorithm;
+        this.label = $.label;
+        this.name = $.name;
+        this.password = $.password;
+        this.patterns = $.patterns;
+        this.privateKey = $.privateKey;
+        this.searchPaths = $.searchPaths;
+        this.strictHostKeyChecking = $.strictHostKeyChecking;
+        this.uri = $.uri;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationServiceGitRepositoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String hostKey;
-        private @Nullable String hostKeyAlgorithm;
-        private String label;
-        private String name;
-        private @Nullable String password;
-        private List<String> patterns;
-        private @Nullable String privateKey;
-        private @Nullable List<String> searchPaths;
-        private @Nullable Boolean strictHostKeyChecking;
-        private String uri;
-        private @Nullable String username;
+        private ConfigurationServiceGitRepositoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationServiceGitRepositoryResponse();
         }
 
         public Builder(ConfigurationServiceGitRepositoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostKey = defaults.hostKey;
-    	      this.hostKeyAlgorithm = defaults.hostKeyAlgorithm;
-    	      this.label = defaults.label;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.patterns = defaults.patterns;
-    	      this.privateKey = defaults.privateKey;
-    	      this.searchPaths = defaults.searchPaths;
-    	      this.strictHostKeyChecking = defaults.strictHostKeyChecking;
-    	      this.uri = defaults.uri;
-    	      this.username = defaults.username;
+            $ = new ConfigurationServiceGitRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostKey(@Nullable String hostKey) {
-            this.hostKey = hostKey;
+            $.hostKey = hostKey;
             return this;
         }
+
         public Builder hostKeyAlgorithm(@Nullable String hostKeyAlgorithm) {
-            this.hostKeyAlgorithm = hostKeyAlgorithm;
+            $.hostKeyAlgorithm = hostKeyAlgorithm;
             return this;
         }
+
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder patterns(List<String> patterns) {
-            this.patterns = Objects.requireNonNull(patterns);
+            $.patterns = patterns;
             return this;
         }
+
         public Builder patterns(String... patterns) {
             return patterns(List.of(patterns));
         }
+
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
+
         public Builder searchPaths(@Nullable List<String> searchPaths) {
-            this.searchPaths = searchPaths;
+            $.searchPaths = searchPaths;
             return this;
         }
+
         public Builder searchPaths(String... searchPaths) {
             return searchPaths(List.of(searchPaths));
         }
+
         public Builder strictHostKeyChecking(@Nullable Boolean strictHostKeyChecking) {
-            this.strictHostKeyChecking = strictHostKeyChecking;
+            $.strictHostKeyChecking = strictHostKeyChecking;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public ConfigurationServiceGitRepositoryResponse build() {
-            return new ConfigurationServiceGitRepositoryResponse(hostKey, hostKeyAlgorithm, label, name, password, patterns, privateKey, searchPaths, strictHostKeyChecking, uri, username);
+        }
+
+        public ConfigurationServiceGitRepositoryResponse build() {
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.patterns = Objects.requireNonNull($.patterns, "expected parameter 'patterns' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

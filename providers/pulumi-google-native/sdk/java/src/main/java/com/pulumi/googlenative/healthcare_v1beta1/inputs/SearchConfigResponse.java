@@ -22,48 +22,49 @@ public final class SearchConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="searchParameters", required=true)
-      private final List<SearchParameterResponse> searchParameters;
+    private List<SearchParameterResponse> searchParameters;
 
     public List<SearchParameterResponse> searchParameters() {
         return this.searchParameters;
     }
 
-    public SearchConfigResponse(List<SearchParameterResponse> searchParameters) {
-        this.searchParameters = Objects.requireNonNull(searchParameters, "expected parameter 'searchParameters' to be non-null");
-    }
+    private SearchConfigResponse() {}
 
-    private SearchConfigResponse() {
-        this.searchParameters = List.of();
+    private SearchConfigResponse(SearchConfigResponse $) {
+        this.searchParameters = $.searchParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SearchConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SearchParameterResponse> searchParameters;
+        private SearchConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SearchConfigResponse();
         }
 
         public Builder(SearchConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.searchParameters = defaults.searchParameters;
+            $ = new SearchConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder searchParameters(List<SearchParameterResponse> searchParameters) {
-            this.searchParameters = Objects.requireNonNull(searchParameters);
+            $.searchParameters = searchParameters;
             return this;
         }
+
         public Builder searchParameters(SearchParameterResponse... searchParameters) {
             return searchParameters(List.of(searchParameters));
-        }        public SearchConfigResponse build() {
-            return new SearchConfigResponse(searchParameters);
+        }
+
+        public SearchConfigResponse build() {
+            $.searchParameters = Objects.requireNonNull($.searchParameters, "expected parameter 'searchParameters' to be non-null");
+            return $;
         }
     }
+
 }

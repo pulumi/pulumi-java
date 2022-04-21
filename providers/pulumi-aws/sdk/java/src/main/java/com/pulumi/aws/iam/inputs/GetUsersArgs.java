@@ -21,10 +21,10 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameRegex")
-      private final @Nullable String nameRegex;
+    private @Nullable String nameRegex;
 
     public Optional<String> nameRegex() {
-        return this.nameRegex == null ? Optional.empty() : Optional.ofNullable(this.nameRegex);
+        return Optional.ofNullable(this.nameRegex);
     }
 
     /**
@@ -32,55 +32,50 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pathPrefix")
-      private final @Nullable String pathPrefix;
+    private @Nullable String pathPrefix;
 
     public Optional<String> pathPrefix() {
-        return this.pathPrefix == null ? Optional.empty() : Optional.ofNullable(this.pathPrefix);
+        return Optional.ofNullable(this.pathPrefix);
     }
 
-    public GetUsersArgs(
-        @Nullable String nameRegex,
-        @Nullable String pathPrefix) {
-        this.nameRegex = nameRegex;
-        this.pathPrefix = pathPrefix;
-    }
+    private GetUsersArgs() {}
 
-    private GetUsersArgs() {
-        this.nameRegex = null;
-        this.pathPrefix = null;
+    private GetUsersArgs(GetUsersArgs $) {
+        this.nameRegex = $.nameRegex;
+        this.pathPrefix = $.pathPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUsersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String nameRegex;
-        private @Nullable String pathPrefix;
+        private GetUsersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUsersArgs();
         }
 
         public Builder(GetUsersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nameRegex = defaults.nameRegex;
-    	      this.pathPrefix = defaults.pathPrefix;
+            $ = new GetUsersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nameRegex(@Nullable String nameRegex) {
-            this.nameRegex = nameRegex;
+            $.nameRegex = nameRegex;
             return this;
         }
+
         public Builder pathPrefix(@Nullable String pathPrefix) {
-            this.pathPrefix = pathPrefix;
+            $.pathPrefix = pathPrefix;
             return this;
-        }        public GetUsersArgs build() {
-            return new GetUsersArgs(nameRegex, pathPrefix);
+        }
+
+        public GetUsersArgs build() {
+            return $;
         }
     }
+
 }

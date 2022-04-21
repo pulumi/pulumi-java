@@ -5,9 +5,9 @@ package com.pulumi.googlenative.eventarc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CloudRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class CloudRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
@@ -46,76 +46,70 @@ public final class CloudRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
-    public CloudRunArgs(
-        @Nullable Output<String> path,
-        Output<String> region,
-        Output<String> service) {
-        this.path = path;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private CloudRunArgs() {}
 
-    private CloudRunArgs() {
-        this.path = Codegen.empty();
-        this.region = Codegen.empty();
-        this.service = Codegen.empty();
+    private CloudRunArgs(CloudRunArgs $) {
+        this.path = $.path;
+        this.region = $.region;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudRunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> path;
-        private Output<String> region;
-        private Output<String> service;
+        private CloudRunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudRunArgs();
         }
 
         public Builder(CloudRunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.region = defaults.region;
-    	      this.service = defaults.service;
+            $ = new CloudRunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
-        }        public CloudRunArgs build() {
-            return new CloudRunArgs(path, region, service);
+            return service(Output.of(service));
+        }
+
+        public CloudRunArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GkeClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cluster")
-      private final @Nullable Output<String> cluster;
+    private @Nullable Output<String> cluster;
 
-    public Output<String> cluster() {
-        return this.cluster == null ? Codegen.empty() : this.cluster;
+    public Optional<Output<String>> cluster() {
+        return Optional.ofNullable(this.cluster);
     }
 
-    public GkeClusterArgs(@Nullable Output<String> cluster) {
-        this.cluster = cluster;
-    }
+    private GkeClusterArgs() {}
 
-    private GkeClusterArgs() {
-        this.cluster = Codegen.empty();
+    private GkeClusterArgs(GkeClusterArgs $) {
+        this.cluster = $.cluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GkeClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cluster;
+        private GkeClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GkeClusterArgs();
         }
 
         public Builder(GkeClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
+            $ = new GkeClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(@Nullable Output<String> cluster) {
-            this.cluster = cluster;
+            $.cluster = cluster;
             return this;
         }
-        public Builder cluster(@Nullable String cluster) {
-            this.cluster = Codegen.ofNullable(cluster);
-            return this;
-        }        public GkeClusterArgs build() {
-            return new GkeClusterArgs(cluster);
+
+        public Builder cluster(String cluster) {
+            return cluster(Output.of(cluster));
+        }
+
+        public GkeClusterArgs build() {
+            return $;
         }
     }
+
 }

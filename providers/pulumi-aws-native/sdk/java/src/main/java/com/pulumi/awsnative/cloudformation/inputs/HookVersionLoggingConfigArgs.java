@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class HookVersionLoggingConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="logGroupName")
-      private final @Nullable Output<String> logGroupName;
+    private @Nullable Output<String> logGroupName;
 
-    public Output<String> logGroupName() {
-        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
+    public Optional<Output<String>> logGroupName() {
+        return Optional.ofNullable(this.logGroupName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class HookVersionLoggingConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="logRoleArn")
-      private final @Nullable Output<String> logRoleArn;
+    private @Nullable Output<String> logRoleArn;
 
-    public Output<String> logRoleArn() {
-        return this.logRoleArn == null ? Codegen.empty() : this.logRoleArn;
+    public Optional<Output<String>> logRoleArn() {
+        return Optional.ofNullable(this.logRoleArn);
     }
 
-    public HookVersionLoggingConfigArgs(
-        @Nullable Output<String> logGroupName,
-        @Nullable Output<String> logRoleArn) {
-        this.logGroupName = logGroupName;
-        this.logRoleArn = logRoleArn;
-    }
+    private HookVersionLoggingConfigArgs() {}
 
-    private HookVersionLoggingConfigArgs() {
-        this.logGroupName = Codegen.empty();
-        this.logRoleArn = Codegen.empty();
+    private HookVersionLoggingConfigArgs(HookVersionLoggingConfigArgs $) {
+        this.logGroupName = $.logGroupName;
+        this.logRoleArn = $.logRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HookVersionLoggingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> logGroupName;
-        private @Nullable Output<String> logRoleArn;
+        private HookVersionLoggingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HookVersionLoggingConfigArgs();
         }
 
         public Builder(HookVersionLoggingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.logRoleArn = defaults.logRoleArn;
+            $ = new HookVersionLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
         }
-        public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Codegen.ofNullable(logGroupName);
-            return this;
+
+        public Builder logGroupName(String logGroupName) {
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder logRoleArn(@Nullable Output<String> logRoleArn) {
-            this.logRoleArn = logRoleArn;
+            $.logRoleArn = logRoleArn;
             return this;
         }
-        public Builder logRoleArn(@Nullable String logRoleArn) {
-            this.logRoleArn = Codegen.ofNullable(logRoleArn);
-            return this;
-        }        public HookVersionLoggingConfigArgs build() {
-            return new HookVersionLoggingConfigArgs(logGroupName, logRoleArn);
+
+        public Builder logRoleArn(String logRoleArn) {
+            return logRoleArn(Output.of(logRoleArn));
+        }
+
+        public HookVersionLoggingConfigArgs build() {
+            return $;
         }
     }
+
 }

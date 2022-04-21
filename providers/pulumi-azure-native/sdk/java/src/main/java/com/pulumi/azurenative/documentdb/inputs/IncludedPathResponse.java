@@ -25,10 +25,10 @@ public final class IncludedPathResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="indexes")
-      private final @Nullable List<IndexesResponse> indexes;
+    private @Nullable List<IndexesResponse> indexes;
 
-    public List<IndexesResponse> indexes() {
-        return this.indexes == null ? List.of() : this.indexes;
+    public Optional<List<IndexesResponse>> indexes() {
+        return Optional.ofNullable(this.indexes);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class IncludedPathResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
-    public IncludedPathResponse(
-        @Nullable List<IndexesResponse> indexes,
-        @Nullable String path) {
-        this.indexes = indexes;
-        this.path = path;
-    }
+    private IncludedPathResponse() {}
 
-    private IncludedPathResponse() {
-        this.indexes = List.of();
-        this.path = null;
+    private IncludedPathResponse(IncludedPathResponse $) {
+        this.indexes = $.indexes;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncludedPathResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<IndexesResponse> indexes;
-        private @Nullable String path;
+        private IncludedPathResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncludedPathResponse();
         }
 
         public Builder(IncludedPathResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.indexes = defaults.indexes;
-    	      this.path = defaults.path;
+            $ = new IncludedPathResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder indexes(@Nullable List<IndexesResponse> indexes) {
-            this.indexes = indexes;
+            $.indexes = indexes;
             return this;
         }
+
         public Builder indexes(IndexesResponse... indexes) {
             return indexes(List.of(indexes));
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
-        }        public IncludedPathResponse build() {
-            return new IncludedPathResponse(indexes, path);
+        }
+
+        public IncludedPathResponse build() {
+            return $;
         }
     }
+
 }

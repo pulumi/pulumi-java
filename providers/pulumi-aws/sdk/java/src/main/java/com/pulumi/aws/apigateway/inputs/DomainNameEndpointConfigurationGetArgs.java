@@ -5,7 +5,6 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DomainNameEndpointConfigurationGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="types", required=true)
-      private final Output<String> types;
+    private Output<String> types;
 
     public Output<String> types() {
         return this.types;
     }
 
-    public DomainNameEndpointConfigurationGetArgs(Output<String> types) {
-        this.types = Objects.requireNonNull(types, "expected parameter 'types' to be non-null");
-    }
+    private DomainNameEndpointConfigurationGetArgs() {}
 
-    private DomainNameEndpointConfigurationGetArgs() {
-        this.types = Codegen.empty();
+    private DomainNameEndpointConfigurationGetArgs(DomainNameEndpointConfigurationGetArgs $) {
+        this.types = $.types;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNameEndpointConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> types;
+        private DomainNameEndpointConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNameEndpointConfigurationGetArgs();
         }
 
         public Builder(DomainNameEndpointConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.types = defaults.types;
+            $ = new DomainNameEndpointConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder types(Output<String> types) {
-            this.types = Objects.requireNonNull(types);
+            $.types = types;
             return this;
         }
+
         public Builder types(String types) {
-            this.types = Output.of(Objects.requireNonNull(types));
-            return this;
-        }        public DomainNameEndpointConfigurationGetArgs build() {
-            return new DomainNameEndpointConfigurationGetArgs(types);
+            return types(Output.of(types));
+        }
+
+        public DomainNameEndpointConfigurationGetArgs build() {
+            $.types = Objects.requireNonNull($.types, "expected parameter 'types' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class ObjectTypeKey extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fieldNames")
-      private final @Nullable List<String> fieldNames;
+    private @Nullable List<String> fieldNames;
 
-    public List<String> fieldNames() {
-        return this.fieldNames == null ? List.of() : this.fieldNames;
+    public Optional<List<String>> fieldNames() {
+        return Optional.ofNullable(this.fieldNames);
     }
 
     /**
@@ -36,61 +36,58 @@ public final class ObjectTypeKey extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="standardIdentifiers")
-      private final @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers;
+    private @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers;
 
-    public List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers() {
-        return this.standardIdentifiers == null ? List.of() : this.standardIdentifiers;
+    public Optional<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers() {
+        return Optional.ofNullable(this.standardIdentifiers);
     }
 
-    public ObjectTypeKey(
-        @Nullable List<String> fieldNames,
-        @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
-        this.fieldNames = fieldNames;
-        this.standardIdentifiers = standardIdentifiers;
-    }
+    private ObjectTypeKey() {}
 
-    private ObjectTypeKey() {
-        this.fieldNames = List.of();
-        this.standardIdentifiers = List.of();
+    private ObjectTypeKey(ObjectTypeKey $) {
+        this.fieldNames = $.fieldNames;
+        this.standardIdentifiers = $.standardIdentifiers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectTypeKey defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> fieldNames;
-        private @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers;
+        private ObjectTypeKey $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectTypeKey();
         }
 
         public Builder(ObjectTypeKey defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldNames = defaults.fieldNames;
-    	      this.standardIdentifiers = defaults.standardIdentifiers;
+            $ = new ObjectTypeKey(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldNames(@Nullable List<String> fieldNames) {
-            this.fieldNames = fieldNames;
+            $.fieldNames = fieldNames;
             return this;
         }
+
         public Builder fieldNames(String... fieldNames) {
             return fieldNames(List.of(fieldNames));
         }
+
         public Builder standardIdentifiers(@Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
-            this.standardIdentifiers = standardIdentifiers;
+            $.standardIdentifiers = standardIdentifiers;
             return this;
         }
+
         public Builder standardIdentifiers(ObjectTypeKeyStandardIdentifiersItem... standardIdentifiers) {
             return standardIdentifiers(List.of(standardIdentifiers));
-        }        public ObjectTypeKey build() {
-            return new ObjectTypeKey(fieldNames, standardIdentifiers);
+        }
+
+        public ObjectTypeKey build() {
+            return $;
         }
     }
+
 }

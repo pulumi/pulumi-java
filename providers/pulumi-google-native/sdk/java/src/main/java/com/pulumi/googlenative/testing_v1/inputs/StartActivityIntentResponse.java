@@ -22,7 +22,7 @@ public final class StartActivityIntentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -33,7 +33,7 @@ public final class StartActivityIntentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="categories", required=true)
-      private final List<String> categories;
+    private List<String> categories;
 
     public List<String> categories() {
         return this.categories;
@@ -44,67 +44,63 @@ public final class StartActivityIntentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public StartActivityIntentResponse(
-        String action,
-        List<String> categories,
-        String uri) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private StartActivityIntentResponse() {}
 
-    private StartActivityIntentResponse() {
-        this.action = null;
-        this.categories = List.of();
-        this.uri = null;
+    private StartActivityIntentResponse(StartActivityIntentResponse $) {
+        this.action = $.action;
+        this.categories = $.categories;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StartActivityIntentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private List<String> categories;
-        private String uri;
+        private StartActivityIntentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StartActivityIntentResponse();
         }
 
         public Builder(StartActivityIntentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.categories = defaults.categories;
-    	      this.uri = defaults.uri;
+            $ = new StartActivityIntentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder categories(List<String> categories) {
-            this.categories = Objects.requireNonNull(categories);
+            $.categories = categories;
             return this;
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public StartActivityIntentResponse build() {
-            return new StartActivityIntentResponse(action, categories, uri);
+        }
+
+        public StartActivityIntentResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.categories = Objects.requireNonNull($.categories, "expected parameter 'categories' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

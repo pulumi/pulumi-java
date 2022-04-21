@@ -5,9 +5,9 @@ package com.pulumi.azurenative.labservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LabPlanNetworkProfileArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public LabPlanNetworkProfileArgs(@Nullable Output<String> subnetId) {
-        this.subnetId = subnetId;
-    }
+    private LabPlanNetworkProfileArgs() {}
 
-    private LabPlanNetworkProfileArgs() {
-        this.subnetId = Codegen.empty();
+    private LabPlanNetworkProfileArgs(LabPlanNetworkProfileArgs $) {
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabPlanNetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> subnetId;
+        private LabPlanNetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabPlanNetworkProfileArgs();
         }
 
         public Builder(LabPlanNetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
+            $ = new LabPlanNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
-        }        public LabPlanNetworkProfileArgs build() {
-            return new LabPlanNetworkProfileArgs(subnetId);
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        public LabPlanNetworkProfileArgs build() {
+            return $;
         }
     }
+
 }

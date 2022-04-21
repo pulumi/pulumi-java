@@ -5,7 +5,6 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class OneTimeScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="executeTime", required=true)
-      private final Output<String> executeTime;
+    private Output<String> executeTime;
 
     public Output<String> executeTime() {
         return this.executeTime;
     }
 
-    public OneTimeScheduleArgs(Output<String> executeTime) {
-        this.executeTime = Objects.requireNonNull(executeTime, "expected parameter 'executeTime' to be non-null");
-    }
+    private OneTimeScheduleArgs() {}
 
-    private OneTimeScheduleArgs() {
-        this.executeTime = Codegen.empty();
+    private OneTimeScheduleArgs(OneTimeScheduleArgs $) {
+        this.executeTime = $.executeTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OneTimeScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> executeTime;
+        private OneTimeScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OneTimeScheduleArgs();
         }
 
         public Builder(OneTimeScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executeTime = defaults.executeTime;
+            $ = new OneTimeScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executeTime(Output<String> executeTime) {
-            this.executeTime = Objects.requireNonNull(executeTime);
+            $.executeTime = executeTime;
             return this;
         }
+
         public Builder executeTime(String executeTime) {
-            this.executeTime = Output.of(Objects.requireNonNull(executeTime));
-            return this;
-        }        public OneTimeScheduleArgs build() {
-            return new OneTimeScheduleArgs(executeTime);
+            return executeTime(Output.of(executeTime));
+        }
+
+        public OneTimeScheduleArgs build() {
+            $.executeTime = Objects.requireNonNull($.executeTime, "expected parameter 'executeTime' to be non-null");
+            return $;
         }
     }
+
 }

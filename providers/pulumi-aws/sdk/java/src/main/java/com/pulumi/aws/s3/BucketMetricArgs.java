@@ -6,9 +6,9 @@ package com.pulumi.aws.s3;
 import com.pulumi.aws.s3.inputs.BucketMetricFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BucketMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -32,10 +32,10 @@ public final class BucketMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<BucketMetricFilterArgs> filter;
+    private @Nullable Output<BucketMetricFilterArgs> filter;
 
-    public Output<BucketMetricFilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<BucketMetricFilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class BucketMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public BucketMetricArgs(
-        Output<String> bucket,
-        @Nullable Output<BucketMetricFilterArgs> filter,
-        @Nullable Output<String> name) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.filter = filter;
-        this.name = name;
-    }
+    private BucketMetricArgs() {}
 
-    private BucketMetricArgs() {
-        this.bucket = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
+    private BucketMetricArgs(BucketMetricArgs $) {
+        this.bucket = $.bucket;
+        this.filter = $.filter;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<BucketMetricFilterArgs> filter;
-        private @Nullable Output<String> name;
+        private BucketMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketMetricArgs();
         }
 
         public Builder(BucketMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
+            $ = new BucketMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder filter(@Nullable Output<BucketMetricFilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable BucketMetricFilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(BucketMetricFilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public BucketMetricArgs build() {
-            return new BucketMetricArgs(bucket, filter, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public BucketMetricArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

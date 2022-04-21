@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class QosIpRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endIP")
-      private final @Nullable Output<String> endIP;
+    private @Nullable Output<String> endIP;
 
-    public Output<String> endIP() {
-        return this.endIP == null ? Codegen.empty() : this.endIP;
+    public Optional<Output<String>> endIP() {
+        return Optional.ofNullable(this.endIP);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class QosIpRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startIP")
-      private final @Nullable Output<String> startIP;
+    private @Nullable Output<String> startIP;
 
-    public Output<String> startIP() {
-        return this.startIP == null ? Codegen.empty() : this.startIP;
+    public Optional<Output<String>> startIP() {
+        return Optional.ofNullable(this.startIP);
     }
 
-    public QosIpRangeArgs(
-        @Nullable Output<String> endIP,
-        @Nullable Output<String> startIP) {
-        this.endIP = endIP;
-        this.startIP = startIP;
-    }
+    private QosIpRangeArgs() {}
 
-    private QosIpRangeArgs() {
-        this.endIP = Codegen.empty();
-        this.startIP = Codegen.empty();
+    private QosIpRangeArgs(QosIpRangeArgs $) {
+        this.endIP = $.endIP;
+        this.startIP = $.startIP;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QosIpRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endIP;
-        private @Nullable Output<String> startIP;
+        private QosIpRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QosIpRangeArgs();
         }
 
         public Builder(QosIpRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endIP = defaults.endIP;
-    	      this.startIP = defaults.startIP;
+            $ = new QosIpRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endIP(@Nullable Output<String> endIP) {
-            this.endIP = endIP;
+            $.endIP = endIP;
             return this;
         }
-        public Builder endIP(@Nullable String endIP) {
-            this.endIP = Codegen.ofNullable(endIP);
-            return this;
+
+        public Builder endIP(String endIP) {
+            return endIP(Output.of(endIP));
         }
+
         public Builder startIP(@Nullable Output<String> startIP) {
-            this.startIP = startIP;
+            $.startIP = startIP;
             return this;
         }
-        public Builder startIP(@Nullable String startIP) {
-            this.startIP = Codegen.ofNullable(startIP);
-            return this;
-        }        public QosIpRangeArgs build() {
-            return new QosIpRangeArgs(endIP, startIP);
+
+        public Builder startIP(String startIP) {
+            return startIP(Output.of(startIP));
+        }
+
+        public QosIpRangeArgs build() {
+            return $;
         }
     }
+
 }

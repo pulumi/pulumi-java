@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoPlacement")
-      private final @Nullable Output<String> autoPlacement;
+    private @Nullable Output<String> autoPlacement;
 
-    public Output<String> autoPlacement() {
-        return this.autoPlacement == null ? Codegen.empty() : this.autoPlacement;
+    public Optional<Output<String>> autoPlacement() {
+        return Optional.ofNullable(this.autoPlacement);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone", required=true)
-      private final Output<String> availabilityZone;
+    private Output<String> availabilityZone;
 
     public Output<String> availabilityZone() {
         return this.availabilityZone;
@@ -42,10 +42,10 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostRecovery")
-      private final @Nullable Output<String> hostRecovery;
+    private @Nullable Output<String> hostRecovery;
 
-    public Output<String> hostRecovery() {
-        return this.hostRecovery == null ? Codegen.empty() : this.hostRecovery;
+    public Optional<Output<String>> hostRecovery() {
+        return Optional.ofNullable(this.hostRecovery);
     }
 
     /**
@@ -53,89 +53,80 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
     }
 
-    public HostArgs(
-        @Nullable Output<String> autoPlacement,
-        Output<String> availabilityZone,
-        @Nullable Output<String> hostRecovery,
-        Output<String> instanceType) {
-        this.autoPlacement = autoPlacement;
-        this.availabilityZone = Objects.requireNonNull(availabilityZone, "expected parameter 'availabilityZone' to be non-null");
-        this.hostRecovery = hostRecovery;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-    }
+    private HostArgs() {}
 
-    private HostArgs() {
-        this.autoPlacement = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.hostRecovery = Codegen.empty();
-        this.instanceType = Codegen.empty();
+    private HostArgs(HostArgs $) {
+        this.autoPlacement = $.autoPlacement;
+        this.availabilityZone = $.availabilityZone;
+        this.hostRecovery = $.hostRecovery;
+        this.instanceType = $.instanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoPlacement;
-        private Output<String> availabilityZone;
-        private @Nullable Output<String> hostRecovery;
-        private Output<String> instanceType;
+        private HostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostArgs();
         }
 
         public Builder(HostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoPlacement = defaults.autoPlacement;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.hostRecovery = defaults.hostRecovery;
-    	      this.instanceType = defaults.instanceType;
+            $ = new HostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoPlacement(@Nullable Output<String> autoPlacement) {
-            this.autoPlacement = autoPlacement;
+            $.autoPlacement = autoPlacement;
             return this;
         }
-        public Builder autoPlacement(@Nullable String autoPlacement) {
-            this.autoPlacement = Codegen.ofNullable(autoPlacement);
-            return this;
+
+        public Builder autoPlacement(String autoPlacement) {
+            return autoPlacement(Output.of(autoPlacement));
         }
+
         public Builder availabilityZone(Output<String> availabilityZone) {
-            this.availabilityZone = Objects.requireNonNull(availabilityZone);
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder availabilityZone(String availabilityZone) {
-            this.availabilityZone = Output.of(Objects.requireNonNull(availabilityZone));
-            return this;
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder hostRecovery(@Nullable Output<String> hostRecovery) {
-            this.hostRecovery = hostRecovery;
+            $.hostRecovery = hostRecovery;
             return this;
         }
-        public Builder hostRecovery(@Nullable String hostRecovery) {
-            this.hostRecovery = Codegen.ofNullable(hostRecovery);
-            return this;
+
+        public Builder hostRecovery(String hostRecovery) {
+            return hostRecovery(Output.of(hostRecovery));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
-        }        public HostArgs build() {
-            return new HostArgs(autoPlacement, availabilityZone, hostRecovery, instanceType);
+            return instanceType(Output.of(instanceType));
+        }
+
+        public HostArgs build() {
+            $.availabilityZone = Objects.requireNonNull($.availabilityZone, "expected parameter 'availabilityZone' to be non-null");
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            return $;
         }
     }
+
 }

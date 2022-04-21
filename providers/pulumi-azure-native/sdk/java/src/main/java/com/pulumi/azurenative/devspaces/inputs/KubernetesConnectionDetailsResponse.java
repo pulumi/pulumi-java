@@ -25,7 +25,7 @@ public final class KubernetesConnectionDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -36,55 +36,51 @@ public final class KubernetesConnectionDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="kubeConfig")
-      private final @Nullable String kubeConfig;
+    private @Nullable String kubeConfig;
 
     public Optional<String> kubeConfig() {
-        return this.kubeConfig == null ? Optional.empty() : Optional.ofNullable(this.kubeConfig);
+        return Optional.ofNullable(this.kubeConfig);
     }
 
-    public KubernetesConnectionDetailsResponse(
-        String instanceType,
-        @Nullable String kubeConfig) {
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.kubeConfig = kubeConfig;
-    }
+    private KubernetesConnectionDetailsResponse() {}
 
-    private KubernetesConnectionDetailsResponse() {
-        this.instanceType = null;
-        this.kubeConfig = null;
+    private KubernetesConnectionDetailsResponse(KubernetesConnectionDetailsResponse $) {
+        this.instanceType = $.instanceType;
+        this.kubeConfig = $.kubeConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesConnectionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceType;
-        private @Nullable String kubeConfig;
+        private KubernetesConnectionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesConnectionDetailsResponse();
         }
 
         public Builder(KubernetesConnectionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.kubeConfig = defaults.kubeConfig;
+            $ = new KubernetesConnectionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder kubeConfig(@Nullable String kubeConfig) {
-            this.kubeConfig = kubeConfig;
+            $.kubeConfig = kubeConfig;
             return this;
-        }        public KubernetesConnectionDetailsResponse build() {
-            return new KubernetesConnectionDetailsResponse(instanceType, kubeConfig);
+        }
+
+        public KubernetesConnectionDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

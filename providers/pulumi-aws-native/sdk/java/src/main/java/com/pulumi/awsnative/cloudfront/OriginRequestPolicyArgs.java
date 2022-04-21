@@ -6,7 +6,6 @@ package com.pulumi.awsnative.cloudfront;
 import com.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class OriginRequestPolicyArgs extends com.pulumi.resources.Resource
     public static final OriginRequestPolicyArgs Empty = new OriginRequestPolicyArgs();
 
     @Import(name="originRequestPolicyConfig", required=true)
-      private final Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig;
+    private Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig;
 
     public Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig() {
         return this.originRequestPolicyConfig;
     }
 
-    public OriginRequestPolicyArgs(Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig) {
-        this.originRequestPolicyConfig = Objects.requireNonNull(originRequestPolicyConfig, "expected parameter 'originRequestPolicyConfig' to be non-null");
-    }
+    private OriginRequestPolicyArgs() {}
 
-    private OriginRequestPolicyArgs() {
-        this.originRequestPolicyConfig = Codegen.empty();
+    private OriginRequestPolicyArgs(OriginRequestPolicyArgs $) {
+        this.originRequestPolicyConfig = $.originRequestPolicyConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginRequestPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig;
+        private OriginRequestPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginRequestPolicyArgs();
         }
 
         public Builder(OriginRequestPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.originRequestPolicyConfig = defaults.originRequestPolicyConfig;
+            $ = new OriginRequestPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder originRequestPolicyConfig(Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig) {
-            this.originRequestPolicyConfig = Objects.requireNonNull(originRequestPolicyConfig);
+            $.originRequestPolicyConfig = originRequestPolicyConfig;
             return this;
         }
+
         public Builder originRequestPolicyConfig(OriginRequestPolicyConfigArgs originRequestPolicyConfig) {
-            this.originRequestPolicyConfig = Output.of(Objects.requireNonNull(originRequestPolicyConfig));
-            return this;
-        }        public OriginRequestPolicyArgs build() {
-            return new OriginRequestPolicyArgs(originRequestPolicyConfig);
+            return originRequestPolicyConfig(Output.of(originRequestPolicyConfig));
+        }
+
+        public OriginRequestPolicyArgs build() {
+            $.originRequestPolicyConfig = Objects.requireNonNull($.originRequestPolicyConfig, "expected parameter 'originRequestPolicyConfig' to be non-null");
+            return $;
         }
     }
+
 }

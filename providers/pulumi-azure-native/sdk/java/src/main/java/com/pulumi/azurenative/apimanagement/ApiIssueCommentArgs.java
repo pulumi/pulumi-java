@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -31,10 +31,10 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="commentId")
-      private final @Nullable Output<String> commentId;
+    private @Nullable Output<String> commentId;
 
-    public Output<String> commentId() {
-        return this.commentId == null ? Codegen.empty() : this.commentId;
+    public Optional<Output<String>> commentId() {
+        return Optional.ofNullable(this.commentId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="issueId", required=true)
-      private final Output<String> issueId;
+    private Output<String> issueId;
 
     public Output<String> issueId() {
         return this.issueId;
@@ -64,7 +64,7 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -86,7 +86,7 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="text", required=true)
-      private final Output<String> text;
+    private Output<String> text;
 
     public Output<String> text() {
         return this.text;
@@ -97,141 +97,124 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
     }
 
-    public ApiIssueCommentArgs(
-        Output<String> apiId,
-        @Nullable Output<String> commentId,
-        @Nullable Output<String> createdDate,
-        Output<String> issueId,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        Output<String> text,
-        Output<String> userId) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.commentId = commentId;
-        this.createdDate = createdDate;
-        this.issueId = Objects.requireNonNull(issueId, "expected parameter 'issueId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private ApiIssueCommentArgs() {}
 
-    private ApiIssueCommentArgs() {
-        this.apiId = Codegen.empty();
-        this.commentId = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.issueId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.text = Codegen.empty();
-        this.userId = Codegen.empty();
+    private ApiIssueCommentArgs(ApiIssueCommentArgs $) {
+        this.apiId = $.apiId;
+        this.commentId = $.commentId;
+        this.createdDate = $.createdDate;
+        this.issueId = $.issueId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.text = $.text;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiIssueCommentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<String> commentId;
-        private @Nullable Output<String> createdDate;
-        private Output<String> issueId;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private Output<String> text;
-        private Output<String> userId;
+        private ApiIssueCommentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiIssueCommentArgs();
         }
 
         public Builder(ApiIssueCommentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.commentId = defaults.commentId;
-    	      this.createdDate = defaults.createdDate;
-    	      this.issueId = defaults.issueId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.text = defaults.text;
-    	      this.userId = defaults.userId;
+            $ = new ApiIssueCommentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder commentId(@Nullable Output<String> commentId) {
-            this.commentId = commentId;
+            $.commentId = commentId;
             return this;
         }
-        public Builder commentId(@Nullable String commentId) {
-            this.commentId = Codegen.ofNullable(commentId);
-            return this;
+
+        public Builder commentId(String commentId) {
+            return commentId(Output.of(commentId));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder issueId(Output<String> issueId) {
-            this.issueId = Objects.requireNonNull(issueId);
+            $.issueId = issueId;
             return this;
         }
+
         public Builder issueId(String issueId) {
-            this.issueId = Output.of(Objects.requireNonNull(issueId));
-            return this;
+            return issueId(Output.of(issueId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder text(Output<String> text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Output.of(Objects.requireNonNull(text));
-            return this;
+            return text(Output.of(text));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
-        }        public ApiIssueCommentArgs build() {
-            return new ApiIssueCommentArgs(apiId, commentId, createdDate, issueId, resourceGroupName, serviceName, text, userId);
+            return userId(Output.of(userId));
+        }
+
+        public ApiIssueCommentArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.issueId = Objects.requireNonNull($.issueId, "expected parameter 'issueId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

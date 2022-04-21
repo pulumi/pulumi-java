@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.DeploymentPlatform;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<String> config;
+    private @Nullable Output<String> config;
 
-    public Output<String> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<String>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deployTime")
-      private final @Nullable Output<String> deployTime;
+    private @Nullable Output<String> deployTime;
 
-    public Output<String> deployTime() {
-        return this.deployTime == null ? Codegen.empty() : this.deployTime;
+    public Optional<Output<String>> deployTime() {
+        return Optional.ofNullable(this.deployTime);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platform")
-      private final @Nullable Output<DeploymentPlatform> platform;
+    private @Nullable Output<DeploymentPlatform> platform;
 
-    public Output<DeploymentPlatform> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<DeploymentPlatform>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="undeployTime")
-      private final @Nullable Output<String> undeployTime;
+    private @Nullable Output<String> undeployTime;
 
-    public Output<String> undeployTime() {
-        return this.undeployTime == null ? Codegen.empty() : this.undeployTime;
+    public Optional<Output<String>> undeployTime() {
+        return Optional.ofNullable(this.undeployTime);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userEmail")
-      private final @Nullable Output<String> userEmail;
+    private @Nullable Output<String> userEmail;
 
-    public Output<String> userEmail() {
-        return this.userEmail == null ? Codegen.empty() : this.userEmail;
+    public Optional<Output<String>> userEmail() {
+        return Optional.ofNullable(this.userEmail);
     }
 
-    public DeploymentArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<String> config,
-        @Nullable Output<String> deployTime,
-        @Nullable Output<DeploymentPlatform> platform,
-        @Nullable Output<String> undeployTime,
-        @Nullable Output<String> userEmail) {
-        this.address = address;
-        this.config = config;
-        this.deployTime = deployTime;
-        this.platform = platform;
-        this.undeployTime = undeployTime;
-        this.userEmail = userEmail;
-    }
+    private DeploymentArgs() {}
 
-    private DeploymentArgs() {
-        this.address = Codegen.empty();
-        this.config = Codegen.empty();
-        this.deployTime = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.undeployTime = Codegen.empty();
-        this.userEmail = Codegen.empty();
+    private DeploymentArgs(DeploymentArgs $) {
+        this.address = $.address;
+        this.config = $.config;
+        this.deployTime = $.deployTime;
+        this.platform = $.platform;
+        this.undeployTime = $.undeployTime;
+        this.userEmail = $.userEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<String> config;
-        private @Nullable Output<String> deployTime;
-        private @Nullable Output<DeploymentPlatform> platform;
-        private @Nullable Output<String> undeployTime;
-        private @Nullable Output<String> userEmail;
+        private DeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentArgs();
         }
 
         public Builder(DeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.config = defaults.config;
-    	      this.deployTime = defaults.deployTime;
-    	      this.platform = defaults.platform;
-    	      this.undeployTime = defaults.undeployTime;
-    	      this.userEmail = defaults.userEmail;
+            $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder config(@Nullable Output<String> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable String config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(String config) {
+            return config(Output.of(config));
         }
+
         public Builder deployTime(@Nullable Output<String> deployTime) {
-            this.deployTime = deployTime;
+            $.deployTime = deployTime;
             return this;
         }
-        public Builder deployTime(@Nullable String deployTime) {
-            this.deployTime = Codegen.ofNullable(deployTime);
-            return this;
+
+        public Builder deployTime(String deployTime) {
+            return deployTime(Output.of(deployTime));
         }
+
         public Builder platform(@Nullable Output<DeploymentPlatform> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable DeploymentPlatform platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(DeploymentPlatform platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder undeployTime(@Nullable Output<String> undeployTime) {
-            this.undeployTime = undeployTime;
+            $.undeployTime = undeployTime;
             return this;
         }
-        public Builder undeployTime(@Nullable String undeployTime) {
-            this.undeployTime = Codegen.ofNullable(undeployTime);
-            return this;
+
+        public Builder undeployTime(String undeployTime) {
+            return undeployTime(Output.of(undeployTime));
         }
+
         public Builder userEmail(@Nullable Output<String> userEmail) {
-            this.userEmail = userEmail;
+            $.userEmail = userEmail;
             return this;
         }
-        public Builder userEmail(@Nullable String userEmail) {
-            this.userEmail = Codegen.ofNullable(userEmail);
-            return this;
-        }        public DeploymentArgs build() {
-            return new DeploymentArgs(address, config, deployTime, platform, undeployTime, userEmail);
+
+        public Builder userEmail(String userEmail) {
+            return userEmail(Output.of(userEmail));
+        }
+
+        public DeploymentArgs build() {
+            return $;
         }
     }
+
 }

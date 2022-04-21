@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * 
      */
     @Import(name="dataset", required=true)
-      private final String dataset;
+    private String dataset;
 
     public String dataset() {
         return this.dataset;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * 
      */
     @Import(name="latestShardResource", required=true)
-      private final String latestShardResource;
+    private String latestShardResource;
 
     public String latestShardResource() {
         return this.latestShardResource;
@@ -43,7 +43,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * 
      */
     @Import(name="shardCount", required=true)
-      private final String shardCount;
+    private String shardCount;
 
     public String shardCount() {
         return this.shardCount;
@@ -54,73 +54,66 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * 
      */
     @Import(name="tablePrefix", required=true)
-      private final String tablePrefix;
+    private String tablePrefix;
 
     public String tablePrefix() {
         return this.tablePrefix;
     }
 
-    public GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse(
-        String dataset,
-        String latestShardResource,
-        String shardCount,
-        String tablePrefix) {
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.latestShardResource = Objects.requireNonNull(latestShardResource, "expected parameter 'latestShardResource' to be non-null");
-        this.shardCount = Objects.requireNonNull(shardCount, "expected parameter 'shardCount' to be non-null");
-        this.tablePrefix = Objects.requireNonNull(tablePrefix, "expected parameter 'tablePrefix' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse() {
-        this.dataset = null;
-        this.latestShardResource = null;
-        this.shardCount = null;
-        this.tablePrefix = null;
+    private GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse(GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse $) {
+        this.dataset = $.dataset;
+        this.latestShardResource = $.latestShardResource;
+        this.shardCount = $.shardCount;
+        this.tablePrefix = $.tablePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataset;
-        private String latestShardResource;
-        private String shardCount;
-        private String tablePrefix;
+        private GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.latestShardResource = defaults.latestShardResource;
-    	      this.shardCount = defaults.shardCount;
-    	      this.tablePrefix = defaults.tablePrefix;
+            $ = new GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(String dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder latestShardResource(String latestShardResource) {
-            this.latestShardResource = Objects.requireNonNull(latestShardResource);
+            $.latestShardResource = latestShardResource;
             return this;
         }
+
         public Builder shardCount(String shardCount) {
-            this.shardCount = Objects.requireNonNull(shardCount);
+            $.shardCount = shardCount;
             return this;
         }
+
         public Builder tablePrefix(String tablePrefix) {
-            this.tablePrefix = Objects.requireNonNull(tablePrefix);
+            $.tablePrefix = tablePrefix;
             return this;
-        }        public GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse build() {
-            return new GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse(dataset, latestShardResource, shardCount, tablePrefix);
+        }
+
+        public GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.latestShardResource = Objects.requireNonNull($.latestShardResource, "expected parameter 'latestShardResource' to be non-null");
+            $.shardCount = Objects.requireNonNull($.shardCount, "expected parameter 'shardCount' to be non-null");
+            $.tablePrefix = Objects.requireNonNull($.tablePrefix, "expected parameter 'tablePrefix' to be non-null");
+            return $;
         }
     }
+
 }

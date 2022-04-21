@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datalakestore;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
@@ -53,89 +53,81 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="virtualNetworkRuleName")
-      private final @Nullable Output<String> virtualNetworkRuleName;
+    private @Nullable Output<String> virtualNetworkRuleName;
 
-    public Output<String> virtualNetworkRuleName() {
-        return this.virtualNetworkRuleName == null ? Codegen.empty() : this.virtualNetworkRuleName;
+    public Optional<Output<String>> virtualNetworkRuleName() {
+        return Optional.ofNullable(this.virtualNetworkRuleName);
     }
 
-    public VirtualNetworkRuleArgs(
-        Output<String> accountName,
-        Output<String> resourceGroupName,
-        Output<String> subnetId,
-        @Nullable Output<String> virtualNetworkRuleName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.virtualNetworkRuleName = virtualNetworkRuleName;
-    }
+    private VirtualNetworkRuleArgs() {}
 
-    private VirtualNetworkRuleArgs() {
-        this.accountName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.virtualNetworkRuleName = Codegen.empty();
+    private VirtualNetworkRuleArgs(VirtualNetworkRuleArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subnetId = $.subnetId;
+        this.virtualNetworkRuleName = $.virtualNetworkRuleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> resourceGroupName;
-        private Output<String> subnetId;
-        private @Nullable Output<String> virtualNetworkRuleName;
+        private VirtualNetworkRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkRuleArgs();
         }
 
         public Builder(VirtualNetworkRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subnetId = defaults.subnetId;
-    	      this.virtualNetworkRuleName = defaults.virtualNetworkRuleName;
+            $ = new VirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder virtualNetworkRuleName(@Nullable Output<String> virtualNetworkRuleName) {
-            this.virtualNetworkRuleName = virtualNetworkRuleName;
+            $.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
-        public Builder virtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
-            this.virtualNetworkRuleName = Codegen.ofNullable(virtualNetworkRuleName);
-            return this;
-        }        public VirtualNetworkRuleArgs build() {
-            return new VirtualNetworkRuleArgs(accountName, resourceGroupName, subnetId, virtualNetworkRuleName);
+
+        public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
+            return virtualNetworkRuleName(Output.of(virtualNetworkRuleName));
+        }
+
+        public VirtualNetworkRuleArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

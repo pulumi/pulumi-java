@@ -17,45 +17,45 @@ public final class GetUserSettingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userSettingsName", required=true)
-      private final String userSettingsName;
+    private String userSettingsName;
 
     public String userSettingsName() {
         return this.userSettingsName;
     }
 
-    public GetUserSettingsArgs(String userSettingsName) {
-        this.userSettingsName = Objects.requireNonNull(userSettingsName, "expected parameter 'userSettingsName' to be non-null");
-    }
+    private GetUserSettingsArgs() {}
 
-    private GetUserSettingsArgs() {
-        this.userSettingsName = null;
+    private GetUserSettingsArgs(GetUserSettingsArgs $) {
+        this.userSettingsName = $.userSettingsName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String userSettingsName;
+        private GetUserSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserSettingsArgs();
         }
 
         public Builder(GetUserSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userSettingsName = defaults.userSettingsName;
+            $ = new GetUserSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userSettingsName(String userSettingsName) {
-            this.userSettingsName = Objects.requireNonNull(userSettingsName);
+            $.userSettingsName = userSettingsName;
             return this;
-        }        public GetUserSettingsArgs build() {
-            return new GetUserSettingsArgs(userSettingsName);
+        }
+
+        public GetUserSettingsArgs build() {
+            $.userSettingsName = Objects.requireNonNull($.userSettingsName, "expected parameter 'userSettingsName' to be non-null");
+            return $;
         }
     }
+
 }

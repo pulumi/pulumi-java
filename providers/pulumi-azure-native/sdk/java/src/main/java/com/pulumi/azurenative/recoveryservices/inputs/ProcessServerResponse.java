@@ -29,10 +29,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="agentExpiryDate")
-      private final @Nullable String agentExpiryDate;
+    private @Nullable String agentExpiryDate;
 
     public Optional<String> agentExpiryDate() {
-        return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
+        return Optional.ofNullable(this.agentExpiryDate);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable String agentVersion;
+    private @Nullable String agentVersion;
 
     public Optional<String> agentVersion() {
-        return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
+        return Optional.ofNullable(this.agentVersion);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="agentVersionDetails")
-      private final @Nullable VersionDetailsResponse agentVersionDetails;
+    private @Nullable VersionDetailsResponse agentVersionDetails;
 
     public Optional<VersionDetailsResponse> agentVersionDetails() {
-        return this.agentVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.agentVersionDetails);
+        return Optional.ofNullable(this.agentVersionDetails);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="availableMemoryInBytes")
-      private final @Nullable Double availableMemoryInBytes;
+    private @Nullable Double availableMemoryInBytes;
 
     public Optional<Double> availableMemoryInBytes() {
-        return this.availableMemoryInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableMemoryInBytes);
+        return Optional.ofNullable(this.availableMemoryInBytes);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="availableSpaceInBytes")
-      private final @Nullable Double availableSpaceInBytes;
+    private @Nullable Double availableSpaceInBytes;
 
     public Optional<Double> availableSpaceInBytes() {
-        return this.availableSpaceInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableSpaceInBytes);
+        return Optional.ofNullable(this.availableSpaceInBytes);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cpuLoad")
-      private final @Nullable String cpuLoad;
+    private @Nullable String cpuLoad;
 
     public Optional<String> cpuLoad() {
-        return this.cpuLoad == null ? Optional.empty() : Optional.ofNullable(this.cpuLoad);
+        return Optional.ofNullable(this.cpuLoad);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cpuLoadStatus")
-      private final @Nullable String cpuLoadStatus;
+    private @Nullable String cpuLoadStatus;
 
     public Optional<String> cpuLoadStatus() {
-        return this.cpuLoadStatus == null ? Optional.empty() : Optional.ofNullable(this.cpuLoadStatus);
+        return Optional.ofNullable(this.cpuLoadStatus);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -117,7 +117,7 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="health", required=true)
-      private final String health;
+    private String health;
 
     public String health() {
         return this.health;
@@ -128,10 +128,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="healthErrors")
-      private final @Nullable List<HealthErrorResponse> healthErrors;
+    private @Nullable List<HealthErrorResponse> healthErrors;
 
-    public List<HealthErrorResponse> healthErrors() {
-        return this.healthErrors == null ? List.of() : this.healthErrors;
+    public Optional<List<HealthErrorResponse>> healthErrors() {
+        return Optional.ofNullable(this.healthErrors);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hostId")
-      private final @Nullable String hostId;
+    private @Nullable String hostId;
 
     public Optional<String> hostId() {
-        return this.hostId == null ? Optional.empty() : Optional.ofNullable(this.hostId);
+        return Optional.ofNullable(this.hostId);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lastHeartbeat")
-      private final @Nullable String lastHeartbeat;
+    private @Nullable String lastHeartbeat;
 
     public Optional<String> lastHeartbeat() {
-        return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
+        return Optional.ofNullable(this.lastHeartbeat);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="machineCount")
-      private final @Nullable String machineCount;
+    private @Nullable String machineCount;
 
     public Optional<String> machineCount() {
-        return this.machineCount == null ? Optional.empty() : Optional.ofNullable(this.machineCount);
+        return Optional.ofNullable(this.machineCount);
     }
 
     /**
@@ -194,7 +194,7 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="marsCommunicationStatus", required=true)
-      private final String marsCommunicationStatus;
+    private String marsCommunicationStatus;
 
     public String marsCommunicationStatus() {
         return this.marsCommunicationStatus;
@@ -205,7 +205,7 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="marsRegistrationStatus", required=true)
-      private final String marsRegistrationStatus;
+    private String marsRegistrationStatus;
 
     public String marsRegistrationStatus() {
         return this.marsRegistrationStatus;
@@ -216,10 +216,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="memoryUsageStatus")
-      private final @Nullable String memoryUsageStatus;
+    private @Nullable String memoryUsageStatus;
 
     public Optional<String> memoryUsageStatus() {
-        return this.memoryUsageStatus == null ? Optional.empty() : Optional.ofNullable(this.memoryUsageStatus);
+        return Optional.ofNullable(this.memoryUsageStatus);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="mobilityServiceUpdates")
-      private final @Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates;
+    private @Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates;
 
-    public List<MobilityServiceUpdateResponse> mobilityServiceUpdates() {
-        return this.mobilityServiceUpdates == null ? List.of() : this.mobilityServiceUpdates;
+    public Optional<List<MobilityServiceUpdateResponse>> mobilityServiceUpdates() {
+        return Optional.ofNullable(this.mobilityServiceUpdates);
     }
 
     /**
@@ -238,10 +238,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -249,10 +249,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="osVersion")
-      private final @Nullable String osVersion;
+    private @Nullable String osVersion;
 
     public Optional<String> osVersion() {
-        return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
+        return Optional.ofNullable(this.osVersion);
     }
 
     /**
@@ -260,10 +260,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="psServiceStatus")
-      private final @Nullable String psServiceStatus;
+    private @Nullable String psServiceStatus;
 
     public Optional<String> psServiceStatus() {
-        return this.psServiceStatus == null ? Optional.empty() : Optional.ofNullable(this.psServiceStatus);
+        return Optional.ofNullable(this.psServiceStatus);
     }
 
     /**
@@ -271,7 +271,7 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="psStatsRefreshTime", required=true)
-      private final String psStatsRefreshTime;
+    private String psStatsRefreshTime;
 
     public String psStatsRefreshTime() {
         return this.psStatsRefreshTime;
@@ -282,10 +282,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="replicationPairCount")
-      private final @Nullable String replicationPairCount;
+    private @Nullable String replicationPairCount;
 
     public Optional<String> replicationPairCount() {
-        return this.replicationPairCount == null ? Optional.empty() : Optional.ofNullable(this.replicationPairCount);
+        return Optional.ofNullable(this.replicationPairCount);
     }
 
     /**
@@ -293,10 +293,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="spaceUsageStatus")
-      private final @Nullable String spaceUsageStatus;
+    private @Nullable String spaceUsageStatus;
 
     public Optional<String> spaceUsageStatus() {
-        return this.spaceUsageStatus == null ? Optional.empty() : Optional.ofNullable(this.spaceUsageStatus);
+        return Optional.ofNullable(this.spaceUsageStatus);
     }
 
     /**
@@ -304,10 +304,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sslCertExpiryDate")
-      private final @Nullable String sslCertExpiryDate;
+    private @Nullable String sslCertExpiryDate;
 
     public Optional<String> sslCertExpiryDate() {
-        return this.sslCertExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.sslCertExpiryDate);
+        return Optional.ofNullable(this.sslCertExpiryDate);
     }
 
     /**
@@ -315,10 +315,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sslCertExpiryRemainingDays")
-      private final @Nullable Integer sslCertExpiryRemainingDays;
+    private @Nullable Integer sslCertExpiryRemainingDays;
 
     public Optional<Integer> sslCertExpiryRemainingDays() {
-        return this.sslCertExpiryRemainingDays == null ? Optional.empty() : Optional.ofNullable(this.sslCertExpiryRemainingDays);
+        return Optional.ofNullable(this.sslCertExpiryRemainingDays);
     }
 
     /**
@@ -326,10 +326,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="systemLoad")
-      private final @Nullable String systemLoad;
+    private @Nullable String systemLoad;
 
     public Optional<String> systemLoad() {
-        return this.systemLoad == null ? Optional.empty() : Optional.ofNullable(this.systemLoad);
+        return Optional.ofNullable(this.systemLoad);
     }
 
     /**
@@ -337,10 +337,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="systemLoadStatus")
-      private final @Nullable String systemLoadStatus;
+    private @Nullable String systemLoadStatus;
 
     public Optional<String> systemLoadStatus() {
-        return this.systemLoadStatus == null ? Optional.empty() : Optional.ofNullable(this.systemLoadStatus);
+        return Optional.ofNullable(this.systemLoadStatus);
     }
 
     /**
@@ -348,7 +348,7 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="throughputInBytes", required=true)
-      private final Double throughputInBytes;
+    private Double throughputInBytes;
 
     public Double throughputInBytes() {
         return this.throughputInBytes;
@@ -359,7 +359,7 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="throughputInMBps", required=true)
-      private final Double throughputInMBps;
+    private Double throughputInMBps;
 
     public Double throughputInMBps() {
         return this.throughputInMBps;
@@ -370,7 +370,7 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="throughputStatus", required=true)
-      private final String throughputStatus;
+    private String throughputStatus;
 
     public String throughputStatus() {
         return this.throughputStatus;
@@ -381,7 +381,7 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="throughputUploadPendingDataInBytes", required=true)
-      private final Double throughputUploadPendingDataInBytes;
+    private Double throughputUploadPendingDataInBytes;
 
     public Double throughputUploadPendingDataInBytes() {
         return this.throughputUploadPendingDataInBytes;
@@ -392,10 +392,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="totalMemoryInBytes")
-      private final @Nullable Double totalMemoryInBytes;
+    private @Nullable Double totalMemoryInBytes;
 
     public Optional<Double> totalMemoryInBytes() {
-        return this.totalMemoryInBytes == null ? Optional.empty() : Optional.ofNullable(this.totalMemoryInBytes);
+        return Optional.ofNullable(this.totalMemoryInBytes);
     }
 
     /**
@@ -403,10 +403,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="totalSpaceInBytes")
-      private final @Nullable Double totalSpaceInBytes;
+    private @Nullable Double totalSpaceInBytes;
 
     public Optional<Double> totalSpaceInBytes() {
-        return this.totalSpaceInBytes == null ? Optional.empty() : Optional.ofNullable(this.totalSpaceInBytes);
+        return Optional.ofNullable(this.totalSpaceInBytes);
     }
 
     /**
@@ -414,367 +414,270 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="versionStatus")
-      private final @Nullable String versionStatus;
+    private @Nullable String versionStatus;
 
     public Optional<String> versionStatus() {
-        return this.versionStatus == null ? Optional.empty() : Optional.ofNullable(this.versionStatus);
+        return Optional.ofNullable(this.versionStatus);
     }
 
-    public ProcessServerResponse(
-        @Nullable String agentExpiryDate,
-        @Nullable String agentVersion,
-        @Nullable VersionDetailsResponse agentVersionDetails,
-        @Nullable Double availableMemoryInBytes,
-        @Nullable Double availableSpaceInBytes,
-        @Nullable String cpuLoad,
-        @Nullable String cpuLoadStatus,
-        @Nullable String friendlyName,
-        String health,
-        @Nullable List<HealthErrorResponse> healthErrors,
-        @Nullable String hostId,
-        @Nullable String id,
-        @Nullable String ipAddress,
-        @Nullable String lastHeartbeat,
-        @Nullable String machineCount,
-        String marsCommunicationStatus,
-        String marsRegistrationStatus,
-        @Nullable String memoryUsageStatus,
-        @Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates,
-        @Nullable String osType,
-        @Nullable String osVersion,
-        @Nullable String psServiceStatus,
-        String psStatsRefreshTime,
-        @Nullable String replicationPairCount,
-        @Nullable String spaceUsageStatus,
-        @Nullable String sslCertExpiryDate,
-        @Nullable Integer sslCertExpiryRemainingDays,
-        @Nullable String systemLoad,
-        @Nullable String systemLoadStatus,
-        Double throughputInBytes,
-        Double throughputInMBps,
-        String throughputStatus,
-        Double throughputUploadPendingDataInBytes,
-        @Nullable Double totalMemoryInBytes,
-        @Nullable Double totalSpaceInBytes,
-        @Nullable String versionStatus) {
-        this.agentExpiryDate = agentExpiryDate;
-        this.agentVersion = agentVersion;
-        this.agentVersionDetails = agentVersionDetails;
-        this.availableMemoryInBytes = availableMemoryInBytes;
-        this.availableSpaceInBytes = availableSpaceInBytes;
-        this.cpuLoad = cpuLoad;
-        this.cpuLoadStatus = cpuLoadStatus;
-        this.friendlyName = friendlyName;
-        this.health = Objects.requireNonNull(health, "expected parameter 'health' to be non-null");
-        this.healthErrors = healthErrors;
-        this.hostId = hostId;
-        this.id = id;
-        this.ipAddress = ipAddress;
-        this.lastHeartbeat = lastHeartbeat;
-        this.machineCount = machineCount;
-        this.marsCommunicationStatus = Objects.requireNonNull(marsCommunicationStatus, "expected parameter 'marsCommunicationStatus' to be non-null");
-        this.marsRegistrationStatus = Objects.requireNonNull(marsRegistrationStatus, "expected parameter 'marsRegistrationStatus' to be non-null");
-        this.memoryUsageStatus = memoryUsageStatus;
-        this.mobilityServiceUpdates = mobilityServiceUpdates;
-        this.osType = osType;
-        this.osVersion = osVersion;
-        this.psServiceStatus = psServiceStatus;
-        this.psStatsRefreshTime = Objects.requireNonNull(psStatsRefreshTime, "expected parameter 'psStatsRefreshTime' to be non-null");
-        this.replicationPairCount = replicationPairCount;
-        this.spaceUsageStatus = spaceUsageStatus;
-        this.sslCertExpiryDate = sslCertExpiryDate;
-        this.sslCertExpiryRemainingDays = sslCertExpiryRemainingDays;
-        this.systemLoad = systemLoad;
-        this.systemLoadStatus = systemLoadStatus;
-        this.throughputInBytes = Objects.requireNonNull(throughputInBytes, "expected parameter 'throughputInBytes' to be non-null");
-        this.throughputInMBps = Objects.requireNonNull(throughputInMBps, "expected parameter 'throughputInMBps' to be non-null");
-        this.throughputStatus = Objects.requireNonNull(throughputStatus, "expected parameter 'throughputStatus' to be non-null");
-        this.throughputUploadPendingDataInBytes = Objects.requireNonNull(throughputUploadPendingDataInBytes, "expected parameter 'throughputUploadPendingDataInBytes' to be non-null");
-        this.totalMemoryInBytes = totalMemoryInBytes;
-        this.totalSpaceInBytes = totalSpaceInBytes;
-        this.versionStatus = versionStatus;
-    }
+    private ProcessServerResponse() {}
 
-    private ProcessServerResponse() {
-        this.agentExpiryDate = null;
-        this.agentVersion = null;
-        this.agentVersionDetails = null;
-        this.availableMemoryInBytes = null;
-        this.availableSpaceInBytes = null;
-        this.cpuLoad = null;
-        this.cpuLoadStatus = null;
-        this.friendlyName = null;
-        this.health = null;
-        this.healthErrors = List.of();
-        this.hostId = null;
-        this.id = null;
-        this.ipAddress = null;
-        this.lastHeartbeat = null;
-        this.machineCount = null;
-        this.marsCommunicationStatus = null;
-        this.marsRegistrationStatus = null;
-        this.memoryUsageStatus = null;
-        this.mobilityServiceUpdates = List.of();
-        this.osType = null;
-        this.osVersion = null;
-        this.psServiceStatus = null;
-        this.psStatsRefreshTime = null;
-        this.replicationPairCount = null;
-        this.spaceUsageStatus = null;
-        this.sslCertExpiryDate = null;
-        this.sslCertExpiryRemainingDays = null;
-        this.systemLoad = null;
-        this.systemLoadStatus = null;
-        this.throughputInBytes = null;
-        this.throughputInMBps = null;
-        this.throughputStatus = null;
-        this.throughputUploadPendingDataInBytes = null;
-        this.totalMemoryInBytes = null;
-        this.totalSpaceInBytes = null;
-        this.versionStatus = null;
+    private ProcessServerResponse(ProcessServerResponse $) {
+        this.agentExpiryDate = $.agentExpiryDate;
+        this.agentVersion = $.agentVersion;
+        this.agentVersionDetails = $.agentVersionDetails;
+        this.availableMemoryInBytes = $.availableMemoryInBytes;
+        this.availableSpaceInBytes = $.availableSpaceInBytes;
+        this.cpuLoad = $.cpuLoad;
+        this.cpuLoadStatus = $.cpuLoadStatus;
+        this.friendlyName = $.friendlyName;
+        this.health = $.health;
+        this.healthErrors = $.healthErrors;
+        this.hostId = $.hostId;
+        this.id = $.id;
+        this.ipAddress = $.ipAddress;
+        this.lastHeartbeat = $.lastHeartbeat;
+        this.machineCount = $.machineCount;
+        this.marsCommunicationStatus = $.marsCommunicationStatus;
+        this.marsRegistrationStatus = $.marsRegistrationStatus;
+        this.memoryUsageStatus = $.memoryUsageStatus;
+        this.mobilityServiceUpdates = $.mobilityServiceUpdates;
+        this.osType = $.osType;
+        this.osVersion = $.osVersion;
+        this.psServiceStatus = $.psServiceStatus;
+        this.psStatsRefreshTime = $.psStatsRefreshTime;
+        this.replicationPairCount = $.replicationPairCount;
+        this.spaceUsageStatus = $.spaceUsageStatus;
+        this.sslCertExpiryDate = $.sslCertExpiryDate;
+        this.sslCertExpiryRemainingDays = $.sslCertExpiryRemainingDays;
+        this.systemLoad = $.systemLoad;
+        this.systemLoadStatus = $.systemLoadStatus;
+        this.throughputInBytes = $.throughputInBytes;
+        this.throughputInMBps = $.throughputInMBps;
+        this.throughputStatus = $.throughputStatus;
+        this.throughputUploadPendingDataInBytes = $.throughputUploadPendingDataInBytes;
+        this.totalMemoryInBytes = $.totalMemoryInBytes;
+        this.totalSpaceInBytes = $.totalSpaceInBytes;
+        this.versionStatus = $.versionStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProcessServerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String agentExpiryDate;
-        private @Nullable String agentVersion;
-        private @Nullable VersionDetailsResponse agentVersionDetails;
-        private @Nullable Double availableMemoryInBytes;
-        private @Nullable Double availableSpaceInBytes;
-        private @Nullable String cpuLoad;
-        private @Nullable String cpuLoadStatus;
-        private @Nullable String friendlyName;
-        private String health;
-        private @Nullable List<HealthErrorResponse> healthErrors;
-        private @Nullable String hostId;
-        private @Nullable String id;
-        private @Nullable String ipAddress;
-        private @Nullable String lastHeartbeat;
-        private @Nullable String machineCount;
-        private String marsCommunicationStatus;
-        private String marsRegistrationStatus;
-        private @Nullable String memoryUsageStatus;
-        private @Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates;
-        private @Nullable String osType;
-        private @Nullable String osVersion;
-        private @Nullable String psServiceStatus;
-        private String psStatsRefreshTime;
-        private @Nullable String replicationPairCount;
-        private @Nullable String spaceUsageStatus;
-        private @Nullable String sslCertExpiryDate;
-        private @Nullable Integer sslCertExpiryRemainingDays;
-        private @Nullable String systemLoad;
-        private @Nullable String systemLoadStatus;
-        private Double throughputInBytes;
-        private Double throughputInMBps;
-        private String throughputStatus;
-        private Double throughputUploadPendingDataInBytes;
-        private @Nullable Double totalMemoryInBytes;
-        private @Nullable Double totalSpaceInBytes;
-        private @Nullable String versionStatus;
+        private ProcessServerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProcessServerResponse();
         }
 
         public Builder(ProcessServerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentExpiryDate = defaults.agentExpiryDate;
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.agentVersionDetails = defaults.agentVersionDetails;
-    	      this.availableMemoryInBytes = defaults.availableMemoryInBytes;
-    	      this.availableSpaceInBytes = defaults.availableSpaceInBytes;
-    	      this.cpuLoad = defaults.cpuLoad;
-    	      this.cpuLoadStatus = defaults.cpuLoadStatus;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.health = defaults.health;
-    	      this.healthErrors = defaults.healthErrors;
-    	      this.hostId = defaults.hostId;
-    	      this.id = defaults.id;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.lastHeartbeat = defaults.lastHeartbeat;
-    	      this.machineCount = defaults.machineCount;
-    	      this.marsCommunicationStatus = defaults.marsCommunicationStatus;
-    	      this.marsRegistrationStatus = defaults.marsRegistrationStatus;
-    	      this.memoryUsageStatus = defaults.memoryUsageStatus;
-    	      this.mobilityServiceUpdates = defaults.mobilityServiceUpdates;
-    	      this.osType = defaults.osType;
-    	      this.osVersion = defaults.osVersion;
-    	      this.psServiceStatus = defaults.psServiceStatus;
-    	      this.psStatsRefreshTime = defaults.psStatsRefreshTime;
-    	      this.replicationPairCount = defaults.replicationPairCount;
-    	      this.spaceUsageStatus = defaults.spaceUsageStatus;
-    	      this.sslCertExpiryDate = defaults.sslCertExpiryDate;
-    	      this.sslCertExpiryRemainingDays = defaults.sslCertExpiryRemainingDays;
-    	      this.systemLoad = defaults.systemLoad;
-    	      this.systemLoadStatus = defaults.systemLoadStatus;
-    	      this.throughputInBytes = defaults.throughputInBytes;
-    	      this.throughputInMBps = defaults.throughputInMBps;
-    	      this.throughputStatus = defaults.throughputStatus;
-    	      this.throughputUploadPendingDataInBytes = defaults.throughputUploadPendingDataInBytes;
-    	      this.totalMemoryInBytes = defaults.totalMemoryInBytes;
-    	      this.totalSpaceInBytes = defaults.totalSpaceInBytes;
-    	      this.versionStatus = defaults.versionStatus;
+            $ = new ProcessServerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
-            this.agentExpiryDate = agentExpiryDate;
+            $.agentExpiryDate = agentExpiryDate;
             return this;
         }
+
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
+
         public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
-            this.agentVersionDetails = agentVersionDetails;
+            $.agentVersionDetails = agentVersionDetails;
             return this;
         }
+
         public Builder availableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
-            this.availableMemoryInBytes = availableMemoryInBytes;
+            $.availableMemoryInBytes = availableMemoryInBytes;
             return this;
         }
+
         public Builder availableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
-            this.availableSpaceInBytes = availableSpaceInBytes;
+            $.availableSpaceInBytes = availableSpaceInBytes;
             return this;
         }
+
         public Builder cpuLoad(@Nullable String cpuLoad) {
-            this.cpuLoad = cpuLoad;
+            $.cpuLoad = cpuLoad;
             return this;
         }
+
         public Builder cpuLoadStatus(@Nullable String cpuLoadStatus) {
-            this.cpuLoadStatus = cpuLoadStatus;
+            $.cpuLoadStatus = cpuLoadStatus;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder health(String health) {
-            this.health = Objects.requireNonNull(health);
+            $.health = health;
             return this;
         }
+
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
-            this.healthErrors = healthErrors;
+            $.healthErrors = healthErrors;
             return this;
         }
+
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
+
         public Builder hostId(@Nullable String hostId) {
-            this.hostId = hostId;
+            $.hostId = hostId;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
-            this.lastHeartbeat = lastHeartbeat;
+            $.lastHeartbeat = lastHeartbeat;
             return this;
         }
+
         public Builder machineCount(@Nullable String machineCount) {
-            this.machineCount = machineCount;
+            $.machineCount = machineCount;
             return this;
         }
+
         public Builder marsCommunicationStatus(String marsCommunicationStatus) {
-            this.marsCommunicationStatus = Objects.requireNonNull(marsCommunicationStatus);
+            $.marsCommunicationStatus = marsCommunicationStatus;
             return this;
         }
+
         public Builder marsRegistrationStatus(String marsRegistrationStatus) {
-            this.marsRegistrationStatus = Objects.requireNonNull(marsRegistrationStatus);
+            $.marsRegistrationStatus = marsRegistrationStatus;
             return this;
         }
+
         public Builder memoryUsageStatus(@Nullable String memoryUsageStatus) {
-            this.memoryUsageStatus = memoryUsageStatus;
+            $.memoryUsageStatus = memoryUsageStatus;
             return this;
         }
+
         public Builder mobilityServiceUpdates(@Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates) {
-            this.mobilityServiceUpdates = mobilityServiceUpdates;
+            $.mobilityServiceUpdates = mobilityServiceUpdates;
             return this;
         }
+
         public Builder mobilityServiceUpdates(MobilityServiceUpdateResponse... mobilityServiceUpdates) {
             return mobilityServiceUpdates(List.of(mobilityServiceUpdates));
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = osVersion;
+            $.osVersion = osVersion;
             return this;
         }
+
         public Builder psServiceStatus(@Nullable String psServiceStatus) {
-            this.psServiceStatus = psServiceStatus;
+            $.psServiceStatus = psServiceStatus;
             return this;
         }
+
         public Builder psStatsRefreshTime(String psStatsRefreshTime) {
-            this.psStatsRefreshTime = Objects.requireNonNull(psStatsRefreshTime);
+            $.psStatsRefreshTime = psStatsRefreshTime;
             return this;
         }
+
         public Builder replicationPairCount(@Nullable String replicationPairCount) {
-            this.replicationPairCount = replicationPairCount;
+            $.replicationPairCount = replicationPairCount;
             return this;
         }
+
         public Builder spaceUsageStatus(@Nullable String spaceUsageStatus) {
-            this.spaceUsageStatus = spaceUsageStatus;
+            $.spaceUsageStatus = spaceUsageStatus;
             return this;
         }
+
         public Builder sslCertExpiryDate(@Nullable String sslCertExpiryDate) {
-            this.sslCertExpiryDate = sslCertExpiryDate;
+            $.sslCertExpiryDate = sslCertExpiryDate;
             return this;
         }
+
         public Builder sslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
-            this.sslCertExpiryRemainingDays = sslCertExpiryRemainingDays;
+            $.sslCertExpiryRemainingDays = sslCertExpiryRemainingDays;
             return this;
         }
+
         public Builder systemLoad(@Nullable String systemLoad) {
-            this.systemLoad = systemLoad;
+            $.systemLoad = systemLoad;
             return this;
         }
+
         public Builder systemLoadStatus(@Nullable String systemLoadStatus) {
-            this.systemLoadStatus = systemLoadStatus;
+            $.systemLoadStatus = systemLoadStatus;
             return this;
         }
+
         public Builder throughputInBytes(Double throughputInBytes) {
-            this.throughputInBytes = Objects.requireNonNull(throughputInBytes);
+            $.throughputInBytes = throughputInBytes;
             return this;
         }
+
         public Builder throughputInMBps(Double throughputInMBps) {
-            this.throughputInMBps = Objects.requireNonNull(throughputInMBps);
+            $.throughputInMBps = throughputInMBps;
             return this;
         }
+
         public Builder throughputStatus(String throughputStatus) {
-            this.throughputStatus = Objects.requireNonNull(throughputStatus);
+            $.throughputStatus = throughputStatus;
             return this;
         }
+
         public Builder throughputUploadPendingDataInBytes(Double throughputUploadPendingDataInBytes) {
-            this.throughputUploadPendingDataInBytes = Objects.requireNonNull(throughputUploadPendingDataInBytes);
+            $.throughputUploadPendingDataInBytes = throughputUploadPendingDataInBytes;
             return this;
         }
+
         public Builder totalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
-            this.totalMemoryInBytes = totalMemoryInBytes;
+            $.totalMemoryInBytes = totalMemoryInBytes;
             return this;
         }
+
         public Builder totalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
-            this.totalSpaceInBytes = totalSpaceInBytes;
+            $.totalSpaceInBytes = totalSpaceInBytes;
             return this;
         }
+
         public Builder versionStatus(@Nullable String versionStatus) {
-            this.versionStatus = versionStatus;
+            $.versionStatus = versionStatus;
             return this;
-        }        public ProcessServerResponse build() {
-            return new ProcessServerResponse(agentExpiryDate, agentVersion, agentVersionDetails, availableMemoryInBytes, availableSpaceInBytes, cpuLoad, cpuLoadStatus, friendlyName, health, healthErrors, hostId, id, ipAddress, lastHeartbeat, machineCount, marsCommunicationStatus, marsRegistrationStatus, memoryUsageStatus, mobilityServiceUpdates, osType, osVersion, psServiceStatus, psStatsRefreshTime, replicationPairCount, spaceUsageStatus, sslCertExpiryDate, sslCertExpiryRemainingDays, systemLoad, systemLoadStatus, throughputInBytes, throughputInMBps, throughputStatus, throughputUploadPendingDataInBytes, totalMemoryInBytes, totalSpaceInBytes, versionStatus);
+        }
+
+        public ProcessServerResponse build() {
+            $.health = Objects.requireNonNull($.health, "expected parameter 'health' to be non-null");
+            $.marsCommunicationStatus = Objects.requireNonNull($.marsCommunicationStatus, "expected parameter 'marsCommunicationStatus' to be non-null");
+            $.marsRegistrationStatus = Objects.requireNonNull($.marsRegistrationStatus, "expected parameter 'marsRegistrationStatus' to be non-null");
+            $.psStatsRefreshTime = Objects.requireNonNull($.psStatsRefreshTime, "expected parameter 'psStatsRefreshTime' to be non-null");
+            $.throughputInBytes = Objects.requireNonNull($.throughputInBytes, "expected parameter 'throughputInBytes' to be non-null");
+            $.throughputInMBps = Objects.requireNonNull($.throughputInMBps, "expected parameter 'throughputInMBps' to be non-null");
+            $.throughputStatus = Objects.requireNonNull($.throughputStatus, "expected parameter 'throughputStatus' to be non-null");
+            $.throughputUploadPendingDataInBytes = Objects.requireNonNull($.throughputUploadPendingDataInBytes, "expected parameter 'throughputUploadPendingDataInBytes' to be non-null");
+            return $;
         }
     }
+
 }

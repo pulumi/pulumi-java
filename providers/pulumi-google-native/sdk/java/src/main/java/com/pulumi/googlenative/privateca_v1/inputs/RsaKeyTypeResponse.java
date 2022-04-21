@@ -21,7 +21,7 @@ public final class RsaKeyTypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxModulusSize", required=true)
-      private final String maxModulusSize;
+    private String maxModulusSize;
 
     public String maxModulusSize() {
         return this.maxModulusSize;
@@ -32,55 +32,52 @@ public final class RsaKeyTypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minModulusSize", required=true)
-      private final String minModulusSize;
+    private String minModulusSize;
 
     public String minModulusSize() {
         return this.minModulusSize;
     }
 
-    public RsaKeyTypeResponse(
-        String maxModulusSize,
-        String minModulusSize) {
-        this.maxModulusSize = Objects.requireNonNull(maxModulusSize, "expected parameter 'maxModulusSize' to be non-null");
-        this.minModulusSize = Objects.requireNonNull(minModulusSize, "expected parameter 'minModulusSize' to be non-null");
-    }
+    private RsaKeyTypeResponse() {}
 
-    private RsaKeyTypeResponse() {
-        this.maxModulusSize = null;
-        this.minModulusSize = null;
+    private RsaKeyTypeResponse(RsaKeyTypeResponse $) {
+        this.maxModulusSize = $.maxModulusSize;
+        this.minModulusSize = $.minModulusSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RsaKeyTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String maxModulusSize;
-        private String minModulusSize;
+        private RsaKeyTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RsaKeyTypeResponse();
         }
 
         public Builder(RsaKeyTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxModulusSize = defaults.maxModulusSize;
-    	      this.minModulusSize = defaults.minModulusSize;
+            $ = new RsaKeyTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxModulusSize(String maxModulusSize) {
-            this.maxModulusSize = Objects.requireNonNull(maxModulusSize);
+            $.maxModulusSize = maxModulusSize;
             return this;
         }
+
         public Builder minModulusSize(String minModulusSize) {
-            this.minModulusSize = Objects.requireNonNull(minModulusSize);
+            $.minModulusSize = minModulusSize;
             return this;
-        }        public RsaKeyTypeResponse build() {
-            return new RsaKeyTypeResponse(maxModulusSize, minModulusSize);
+        }
+
+        public RsaKeyTypeResponse build() {
+            $.maxModulusSize = Objects.requireNonNull($.maxModulusSize, "expected parameter 'maxModulusSize' to be non-null");
+            $.minModulusSize = Objects.requireNonNull($.minModulusSize, "expected parameter 'minModulusSize' to be non-null");
+            return $;
         }
     }
+
 }

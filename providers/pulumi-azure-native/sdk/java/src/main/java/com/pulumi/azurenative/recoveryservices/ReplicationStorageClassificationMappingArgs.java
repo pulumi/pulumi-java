@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices;
 import com.pulumi.azurenative.recoveryservices.inputs.StorageMappingInputPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
      * 
      */
     @Import(name="fabricName", required=true)
-      private final Output<String> fabricName;
+    private Output<String> fabricName;
 
     public Output<String> fabricName() {
         return this.fabricName;
@@ -32,10 +32,10 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<StorageMappingInputPropertiesArgs> properties;
+    private @Nullable Output<StorageMappingInputPropertiesArgs> properties;
 
-    public Output<StorageMappingInputPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<StorageMappingInputPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -65,10 +65,10 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
      * 
      */
     @Import(name="storageClassificationMappingName")
-      private final @Nullable Output<String> storageClassificationMappingName;
+    private @Nullable Output<String> storageClassificationMappingName;
 
-    public Output<String> storageClassificationMappingName() {
-        return this.storageClassificationMappingName == null ? Codegen.empty() : this.storageClassificationMappingName;
+    public Optional<Output<String>> storageClassificationMappingName() {
+        return Optional.ofNullable(this.storageClassificationMappingName);
     }
 
     /**
@@ -76,115 +76,102 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
      * 
      */
     @Import(name="storageClassificationName", required=true)
-      private final Output<String> storageClassificationName;
+    private Output<String> storageClassificationName;
 
     public Output<String> storageClassificationName() {
         return this.storageClassificationName;
     }
 
-    public ReplicationStorageClassificationMappingArgs(
-        Output<String> fabricName,
-        @Nullable Output<StorageMappingInputPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        @Nullable Output<String> storageClassificationMappingName,
-        Output<String> storageClassificationName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.storageClassificationMappingName = storageClassificationMappingName;
-        this.storageClassificationName = Objects.requireNonNull(storageClassificationName, "expected parameter 'storageClassificationName' to be non-null");
-    }
+    private ReplicationStorageClassificationMappingArgs() {}
 
-    private ReplicationStorageClassificationMappingArgs() {
-        this.fabricName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.storageClassificationMappingName = Codegen.empty();
-        this.storageClassificationName = Codegen.empty();
+    private ReplicationStorageClassificationMappingArgs(ReplicationStorageClassificationMappingArgs $) {
+        this.fabricName = $.fabricName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.storageClassificationMappingName = $.storageClassificationMappingName;
+        this.storageClassificationName = $.storageClassificationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationStorageClassificationMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fabricName;
-        private @Nullable Output<StorageMappingInputPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private @Nullable Output<String> storageClassificationMappingName;
-        private Output<String> storageClassificationName;
+        private ReplicationStorageClassificationMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationStorageClassificationMappingArgs();
         }
 
         public Builder(ReplicationStorageClassificationMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.storageClassificationMappingName = defaults.storageClassificationMappingName;
-    	      this.storageClassificationName = defaults.storageClassificationName;
+            $ = new ReplicationStorageClassificationMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(Output<String> fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder fabricName(String fabricName) {
-            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
-            return this;
+            return fabricName(Output.of(fabricName));
         }
+
         public Builder properties(@Nullable Output<StorageMappingInputPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable StorageMappingInputPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(StorageMappingInputPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder storageClassificationMappingName(@Nullable Output<String> storageClassificationMappingName) {
-            this.storageClassificationMappingName = storageClassificationMappingName;
+            $.storageClassificationMappingName = storageClassificationMappingName;
             return this;
         }
-        public Builder storageClassificationMappingName(@Nullable String storageClassificationMappingName) {
-            this.storageClassificationMappingName = Codegen.ofNullable(storageClassificationMappingName);
-            return this;
+
+        public Builder storageClassificationMappingName(String storageClassificationMappingName) {
+            return storageClassificationMappingName(Output.of(storageClassificationMappingName));
         }
+
         public Builder storageClassificationName(Output<String> storageClassificationName) {
-            this.storageClassificationName = Objects.requireNonNull(storageClassificationName);
+            $.storageClassificationName = storageClassificationName;
             return this;
         }
+
         public Builder storageClassificationName(String storageClassificationName) {
-            this.storageClassificationName = Output.of(Objects.requireNonNull(storageClassificationName));
-            return this;
-        }        public ReplicationStorageClassificationMappingArgs build() {
-            return new ReplicationStorageClassificationMappingArgs(fabricName, properties, resourceGroupName, resourceName, storageClassificationMappingName, storageClassificationName);
+            return storageClassificationName(Output.of(storageClassificationName));
+        }
+
+        public ReplicationStorageClassificationMappingArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.storageClassificationName = Objects.requireNonNull($.storageClassificationName, "expected parameter 'storageClassificationName' to be non-null");
+            return $;
         }
     }
+
 }

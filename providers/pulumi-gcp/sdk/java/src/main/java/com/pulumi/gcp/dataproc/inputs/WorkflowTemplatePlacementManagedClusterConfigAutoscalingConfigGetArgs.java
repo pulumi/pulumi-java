@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs(@Nullable Output<String> policy) {
-        this.policy = policy;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs() {
-        this.policy = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs(WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs $) {
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> policy;
+        private WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs(policy);
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.RowArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class RowLayoutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rows")
-      private final @Nullable Output<List<RowArgs>> rows;
+    private @Nullable Output<List<RowArgs>> rows;
 
-    public Output<List<RowArgs>> rows() {
-        return this.rows == null ? Codegen.empty() : this.rows;
+    public Optional<Output<List<RowArgs>>> rows() {
+        return Optional.ofNullable(this.rows);
     }
 
-    public RowLayoutArgs(@Nullable Output<List<RowArgs>> rows) {
-        this.rows = rows;
-    }
+    private RowLayoutArgs() {}
 
-    private RowLayoutArgs() {
-        this.rows = Codegen.empty();
+    private RowLayoutArgs(RowLayoutArgs $) {
+        this.rows = $.rows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RowLayoutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RowArgs>> rows;
+        private RowLayoutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RowLayoutArgs();
         }
 
         public Builder(RowLayoutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rows = defaults.rows;
+            $ = new RowLayoutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rows(@Nullable Output<List<RowArgs>> rows) {
-            this.rows = rows;
+            $.rows = rows;
             return this;
         }
-        public Builder rows(@Nullable List<RowArgs> rows) {
-            this.rows = Codegen.ofNullable(rows);
-            return this;
+
+        public Builder rows(List<RowArgs> rows) {
+            return rows(Output.of(rows));
         }
+
         public Builder rows(RowArgs... rows) {
             return rows(List.of(rows));
-        }        public RowLayoutArgs build() {
-            return new RowLayoutArgs(rows);
+        }
+
+        public RowLayoutArgs build() {
+            return $;
         }
     }
+
 }

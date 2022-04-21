@@ -22,10 +22,10 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="containerType")
-      private final @Nullable Either<String,ContainerType> containerType;
+    private @Nullable Either<String,ContainerType> containerType;
 
-    public Either<String,ContainerType> containerType() {
-        return this.containerType == null ? null : this.containerType;
+    public Optional<Either<String,ContainerType>> containerType() {
+        return Optional.ofNullable(this.containerType);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="deploymentName", required=true)
-      private final String deploymentName;
+    private String deploymentName;
 
     public String deploymentName() {
         return this.deploymentName;
@@ -44,7 +44,7 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endpointName", required=true)
-      private final String endpointName;
+    private String endpointName;
 
     public String endpointName() {
         return this.endpointName;
@@ -55,7 +55,7 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -66,10 +66,10 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tail")
-      private final @Nullable Integer tail;
+    private @Nullable Integer tail;
 
     public Optional<Integer> tail() {
-        return this.tail == null ? Optional.empty() : Optional.ofNullable(this.tail);
+        return Optional.ofNullable(this.tail);
     }
 
     /**
@@ -77,91 +77,78 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetOnlineDeploymentLogsArgs(
-        @Nullable Either<String,ContainerType> containerType,
-        String deploymentName,
-        String endpointName,
-        String resourceGroupName,
-        @Nullable Integer tail,
-        String workspaceName) {
-        this.containerType = containerType;
-        this.deploymentName = Objects.requireNonNull(deploymentName, "expected parameter 'deploymentName' to be non-null");
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tail = tail;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetOnlineDeploymentLogsArgs() {}
 
-    private GetOnlineDeploymentLogsArgs() {
-        this.containerType = null;
-        this.deploymentName = null;
-        this.endpointName = null;
-        this.resourceGroupName = null;
-        this.tail = null;
-        this.workspaceName = null;
+    private GetOnlineDeploymentLogsArgs(GetOnlineDeploymentLogsArgs $) {
+        this.containerType = $.containerType;
+        this.deploymentName = $.deploymentName;
+        this.endpointName = $.endpointName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tail = $.tail;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOnlineDeploymentLogsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Either<String,ContainerType> containerType;
-        private String deploymentName;
-        private String endpointName;
-        private String resourceGroupName;
-        private @Nullable Integer tail;
-        private String workspaceName;
+        private GetOnlineDeploymentLogsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOnlineDeploymentLogsArgs();
         }
 
         public Builder(GetOnlineDeploymentLogsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerType = defaults.containerType;
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.endpointName = defaults.endpointName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tail = defaults.tail;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetOnlineDeploymentLogsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerType(@Nullable Either<String,ContainerType> containerType) {
-            this.containerType = containerType;
+            $.containerType = containerType;
             return this;
         }
+
         public Builder deploymentName(String deploymentName) {
-            this.deploymentName = Objects.requireNonNull(deploymentName);
+            $.deploymentName = deploymentName;
             return this;
         }
+
         public Builder endpointName(String endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder tail(@Nullable Integer tail) {
-            this.tail = tail;
+            $.tail = tail;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetOnlineDeploymentLogsArgs build() {
-            return new GetOnlineDeploymentLogsArgs(containerType, deploymentName, endpointName, resourceGroupName, tail, workspaceName);
+        }
+
+        public GetOnlineDeploymentLogsArgs build() {
+            $.deploymentName = Objects.requireNonNull($.deploymentName, "expected parameter 'deploymentName' to be non-null");
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

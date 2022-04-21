@@ -23,10 +23,10 @@ public final class DistcpSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="distcpOptions")
-      private final @Nullable Object distcpOptions;
+    private @Nullable Object distcpOptions;
 
     public Optional<Object> distcpOptions() {
-        return this.distcpOptions == null ? Optional.empty() : Optional.ofNullable(this.distcpOptions);
+        return Optional.ofNullable(this.distcpOptions);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class DistcpSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceManagerEndpoint", required=true)
-      private final Object resourceManagerEndpoint;
+    private Object resourceManagerEndpoint;
 
     public Object resourceManagerEndpoint() {
         return this.resourceManagerEndpoint;
@@ -45,64 +45,58 @@ public final class DistcpSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tempScriptPath", required=true)
-      private final Object tempScriptPath;
+    private Object tempScriptPath;
 
     public Object tempScriptPath() {
         return this.tempScriptPath;
     }
 
-    public DistcpSettingsResponse(
-        @Nullable Object distcpOptions,
-        Object resourceManagerEndpoint,
-        Object tempScriptPath) {
-        this.distcpOptions = distcpOptions;
-        this.resourceManagerEndpoint = Objects.requireNonNull(resourceManagerEndpoint, "expected parameter 'resourceManagerEndpoint' to be non-null");
-        this.tempScriptPath = Objects.requireNonNull(tempScriptPath, "expected parameter 'tempScriptPath' to be non-null");
-    }
+    private DistcpSettingsResponse() {}
 
-    private DistcpSettingsResponse() {
-        this.distcpOptions = null;
-        this.resourceManagerEndpoint = null;
-        this.tempScriptPath = null;
+    private DistcpSettingsResponse(DistcpSettingsResponse $) {
+        this.distcpOptions = $.distcpOptions;
+        this.resourceManagerEndpoint = $.resourceManagerEndpoint;
+        this.tempScriptPath = $.tempScriptPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistcpSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object distcpOptions;
-        private Object resourceManagerEndpoint;
-        private Object tempScriptPath;
+        private DistcpSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistcpSettingsResponse();
         }
 
         public Builder(DistcpSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distcpOptions = defaults.distcpOptions;
-    	      this.resourceManagerEndpoint = defaults.resourceManagerEndpoint;
-    	      this.tempScriptPath = defaults.tempScriptPath;
+            $ = new DistcpSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distcpOptions(@Nullable Object distcpOptions) {
-            this.distcpOptions = distcpOptions;
+            $.distcpOptions = distcpOptions;
             return this;
         }
+
         public Builder resourceManagerEndpoint(Object resourceManagerEndpoint) {
-            this.resourceManagerEndpoint = Objects.requireNonNull(resourceManagerEndpoint);
+            $.resourceManagerEndpoint = resourceManagerEndpoint;
             return this;
         }
+
         public Builder tempScriptPath(Object tempScriptPath) {
-            this.tempScriptPath = Objects.requireNonNull(tempScriptPath);
+            $.tempScriptPath = tempScriptPath;
             return this;
-        }        public DistcpSettingsResponse build() {
-            return new DistcpSettingsResponse(distcpOptions, resourceManagerEndpoint, tempScriptPath);
+        }
+
+        public DistcpSettingsResponse build() {
+            $.resourceManagerEndpoint = Objects.requireNonNull($.resourceManagerEndpoint, "expected parameter 'resourceManagerEndpoint' to be non-null");
+            $.tempScriptPath = Objects.requireNonNull($.tempScriptPath, "expected parameter 'tempScriptPath' to be non-null");
+            return $;
         }
     }
+
 }

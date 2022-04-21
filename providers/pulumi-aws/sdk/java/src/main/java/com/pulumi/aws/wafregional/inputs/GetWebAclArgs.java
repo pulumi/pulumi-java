@@ -17,45 +17,45 @@ public final class GetWebAclArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetWebAclArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetWebAclArgs() {}
 
-    private GetWebAclArgs() {
-        this.name = null;
+    private GetWebAclArgs(GetWebAclArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAclArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetWebAclArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAclArgs();
         }
 
         public Builder(GetWebAclArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetWebAclArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetWebAclArgs build() {
-            return new GetWebAclArgs(name);
+        }
+
+        public GetWebAclArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

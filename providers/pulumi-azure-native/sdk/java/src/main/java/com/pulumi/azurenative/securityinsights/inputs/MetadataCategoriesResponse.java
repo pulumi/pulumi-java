@@ -24,10 +24,10 @@ public final class MetadataCategoriesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="domains")
-      private final @Nullable List<String> domains;
+    private @Nullable List<String> domains;
 
-    public List<String> domains() {
-        return this.domains == null ? List.of() : this.domains;
+    public Optional<List<String>> domains() {
+        return Optional.ofNullable(this.domains);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class MetadataCategoriesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="verticals")
-      private final @Nullable List<String> verticals;
+    private @Nullable List<String> verticals;
 
-    public List<String> verticals() {
-        return this.verticals == null ? List.of() : this.verticals;
+    public Optional<List<String>> verticals() {
+        return Optional.ofNullable(this.verticals);
     }
 
-    public MetadataCategoriesResponse(
-        @Nullable List<String> domains,
-        @Nullable List<String> verticals) {
-        this.domains = domains;
-        this.verticals = verticals;
-    }
+    private MetadataCategoriesResponse() {}
 
-    private MetadataCategoriesResponse() {
-        this.domains = List.of();
-        this.verticals = List.of();
+    private MetadataCategoriesResponse(MetadataCategoriesResponse $) {
+        this.domains = $.domains;
+        this.verticals = $.verticals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataCategoriesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> domains;
-        private @Nullable List<String> verticals;
+        private MetadataCategoriesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataCategoriesResponse();
         }
 
         public Builder(MetadataCategoriesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domains = defaults.domains;
-    	      this.verticals = defaults.verticals;
+            $ = new MetadataCategoriesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domains(@Nullable List<String> domains) {
-            this.domains = domains;
+            $.domains = domains;
             return this;
         }
+
         public Builder domains(String... domains) {
             return domains(List.of(domains));
         }
+
         public Builder verticals(@Nullable List<String> verticals) {
-            this.verticals = verticals;
+            $.verticals = verticals;
             return this;
         }
+
         public Builder verticals(String... verticals) {
             return verticals(List.of(verticals));
-        }        public MetadataCategoriesResponse build() {
-            return new MetadataCategoriesResponse(domains, verticals);
+        }
+
+        public MetadataCategoriesResponse build() {
+            return $;
         }
     }
+
 }

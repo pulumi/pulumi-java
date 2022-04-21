@@ -19,10 +19,10 @@ public final class GetOutpostsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable String availabilityZone;
+    private @Nullable String availabilityZone;
 
     public Optional<String> availabilityZone() {
-        return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetOutpostsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZoneId")
-      private final @Nullable String availabilityZoneId;
+    private @Nullable String availabilityZoneId;
 
     public Optional<String> availabilityZoneId() {
-        return this.availabilityZoneId == null ? Optional.empty() : Optional.ofNullable(this.availabilityZoneId);
+        return Optional.ofNullable(this.availabilityZoneId);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GetOutpostsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable String ownerId;
+    private @Nullable String ownerId;
 
     public Optional<String> ownerId() {
-        return this.ownerId == null ? Optional.empty() : Optional.ofNullable(this.ownerId);
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -52,73 +52,62 @@ public final class GetOutpostsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="siteId")
-      private final @Nullable String siteId;
+    private @Nullable String siteId;
 
     public Optional<String> siteId() {
-        return this.siteId == null ? Optional.empty() : Optional.ofNullable(this.siteId);
+        return Optional.ofNullable(this.siteId);
     }
 
-    public GetOutpostsArgs(
-        @Nullable String availabilityZone,
-        @Nullable String availabilityZoneId,
-        @Nullable String ownerId,
-        @Nullable String siteId) {
-        this.availabilityZone = availabilityZone;
-        this.availabilityZoneId = availabilityZoneId;
-        this.ownerId = ownerId;
-        this.siteId = siteId;
-    }
+    private GetOutpostsArgs() {}
 
-    private GetOutpostsArgs() {
-        this.availabilityZone = null;
-        this.availabilityZoneId = null;
-        this.ownerId = null;
-        this.siteId = null;
+    private GetOutpostsArgs(GetOutpostsArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.availabilityZoneId = $.availabilityZoneId;
+        this.ownerId = $.ownerId;
+        this.siteId = $.siteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOutpostsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String availabilityZone;
-        private @Nullable String availabilityZoneId;
-        private @Nullable String ownerId;
-        private @Nullable String siteId;
+        private GetOutpostsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOutpostsArgs();
         }
 
         public Builder(GetOutpostsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.availabilityZoneId = defaults.availabilityZoneId;
-    	      this.ownerId = defaults.ownerId;
-    	      this.siteId = defaults.siteId;
+            $ = new GetOutpostsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            this.availabilityZoneId = availabilityZoneId;
+            $.availabilityZoneId = availabilityZoneId;
             return this;
         }
+
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
+
         public Builder siteId(@Nullable String siteId) {
-            this.siteId = siteId;
+            $.siteId = siteId;
             return this;
-        }        public GetOutpostsArgs build() {
-            return new GetOutpostsArgs(availabilityZone, availabilityZoneId, ownerId, siteId);
+        }
+
+        public GetOutpostsArgs build() {
+            return $;
         }
     }
+
 }

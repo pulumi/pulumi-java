@@ -21,45 +21,45 @@ public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse extends com.pul
      * 
      */
     @Import(name="viewQuery", required=true)
-      private final String viewQuery;
+    private String viewQuery;
 
     public String viewQuery() {
         return this.viewQuery;
     }
 
-    public GoogleCloudDatacatalogV1beta1ViewSpecResponse(String viewQuery) {
-        this.viewQuery = Objects.requireNonNull(viewQuery, "expected parameter 'viewQuery' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1beta1ViewSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1beta1ViewSpecResponse() {
-        this.viewQuery = null;
+    private GoogleCloudDatacatalogV1beta1ViewSpecResponse(GoogleCloudDatacatalogV1beta1ViewSpecResponse $) {
+        this.viewQuery = $.viewQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1beta1ViewSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String viewQuery;
+        private GoogleCloudDatacatalogV1beta1ViewSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1beta1ViewSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1beta1ViewSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.viewQuery = defaults.viewQuery;
+            $ = new GoogleCloudDatacatalogV1beta1ViewSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder viewQuery(String viewQuery) {
-            this.viewQuery = Objects.requireNonNull(viewQuery);
+            $.viewQuery = viewQuery;
             return this;
-        }        public GoogleCloudDatacatalogV1beta1ViewSpecResponse build() {
-            return new GoogleCloudDatacatalogV1beta1ViewSpecResponse(viewQuery);
+        }
+
+        public GoogleCloudDatacatalogV1beta1ViewSpecResponse build() {
+            $.viewQuery = Objects.requireNonNull($.viewQuery, "expected parameter 'viewQuery' to be non-null");
+            return $;
         }
     }
+
 }

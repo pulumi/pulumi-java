@@ -26,7 +26,7 @@ public final class CapacityReservationInstanceViewWithNameResponse extends com.p
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -37,10 +37,10 @@ public final class CapacityReservationInstanceViewWithNameResponse extends com.p
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<InstanceViewStatusResponse> statuses;
+    private @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<InstanceViewStatusResponse>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -48,67 +48,61 @@ public final class CapacityReservationInstanceViewWithNameResponse extends com.p
      * 
      */
     @Import(name="utilizationInfo")
-      private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
+    private @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
     public Optional<CapacityReservationUtilizationResponse> utilizationInfo() {
-        return this.utilizationInfo == null ? Optional.empty() : Optional.ofNullable(this.utilizationInfo);
+        return Optional.ofNullable(this.utilizationInfo);
     }
 
-    public CapacityReservationInstanceViewWithNameResponse(
-        String name,
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable CapacityReservationUtilizationResponse utilizationInfo) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.statuses = statuses;
-        this.utilizationInfo = utilizationInfo;
-    }
+    private CapacityReservationInstanceViewWithNameResponse() {}
 
-    private CapacityReservationInstanceViewWithNameResponse() {
-        this.name = null;
-        this.statuses = List.of();
-        this.utilizationInfo = null;
+    private CapacityReservationInstanceViewWithNameResponse(CapacityReservationInstanceViewWithNameResponse $) {
+        this.name = $.name;
+        this.statuses = $.statuses;
+        this.utilizationInfo = $.utilizationInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityReservationInstanceViewWithNameResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable List<InstanceViewStatusResponse> statuses;
-        private @Nullable CapacityReservationUtilizationResponse utilizationInfo;
+        private CapacityReservationInstanceViewWithNameResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityReservationInstanceViewWithNameResponse();
         }
 
         public Builder(CapacityReservationInstanceViewWithNameResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.statuses = defaults.statuses;
-    	      this.utilizationInfo = defaults.utilizationInfo;
+            $ = new CapacityReservationInstanceViewWithNameResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder utilizationInfo(@Nullable CapacityReservationUtilizationResponse utilizationInfo) {
-            this.utilizationInfo = utilizationInfo;
+            $.utilizationInfo = utilizationInfo;
             return this;
-        }        public CapacityReservationInstanceViewWithNameResponse build() {
-            return new CapacityReservationInstanceViewWithNameResponse(name, statuses, utilizationInfo);
+        }
+
+        public CapacityReservationInstanceViewWithNameResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

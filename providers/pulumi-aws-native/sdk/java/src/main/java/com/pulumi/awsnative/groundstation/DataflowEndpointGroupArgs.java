@@ -7,9 +7,9 @@ import com.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupEndpointDe
 import com.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,76 +18,74 @@ public final class DataflowEndpointGroupArgs extends com.pulumi.resources.Resour
     public static final DataflowEndpointGroupArgs Empty = new DataflowEndpointGroupArgs();
 
     @Import(name="endpointDetails", required=true)
-      private final Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
+    private Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
 
     public Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails() {
         return this.endpointDetails;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<DataflowEndpointGroupTagArgs>> tags;
+    private @Nullable Output<List<DataflowEndpointGroupTagArgs>> tags;
 
-    public Output<List<DataflowEndpointGroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DataflowEndpointGroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DataflowEndpointGroupArgs(
-        Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails,
-        @Nullable Output<List<DataflowEndpointGroupTagArgs>> tags) {
-        this.endpointDetails = Objects.requireNonNull(endpointDetails, "expected parameter 'endpointDetails' to be non-null");
-        this.tags = tags;
-    }
+    private DataflowEndpointGroupArgs() {}
 
-    private DataflowEndpointGroupArgs() {
-        this.endpointDetails = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DataflowEndpointGroupArgs(DataflowEndpointGroupArgs $) {
+        this.endpointDetails = $.endpointDetails;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataflowEndpointGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
-        private @Nullable Output<List<DataflowEndpointGroupTagArgs>> tags;
+        private DataflowEndpointGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataflowEndpointGroupArgs();
         }
 
         public Builder(DataflowEndpointGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointDetails = defaults.endpointDetails;
-    	      this.tags = defaults.tags;
+            $ = new DataflowEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointDetails(Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails) {
-            this.endpointDetails = Objects.requireNonNull(endpointDetails);
+            $.endpointDetails = endpointDetails;
             return this;
         }
+
         public Builder endpointDetails(List<DataflowEndpointGroupEndpointDetailsArgs> endpointDetails) {
-            this.endpointDetails = Output.of(Objects.requireNonNull(endpointDetails));
-            return this;
+            return endpointDetails(Output.of(endpointDetails));
         }
+
         public Builder endpointDetails(DataflowEndpointGroupEndpointDetailsArgs... endpointDetails) {
             return endpointDetails(List.of(endpointDetails));
         }
+
         public Builder tags(@Nullable Output<List<DataflowEndpointGroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DataflowEndpointGroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DataflowEndpointGroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DataflowEndpointGroupTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DataflowEndpointGroupArgs build() {
-            return new DataflowEndpointGroupArgs(endpointDetails, tags);
+        }
+
+        public DataflowEndpointGroupArgs build() {
+            $.endpointDetails = Objects.requireNonNull($.endpointDetails, "expected parameter 'endpointDetails' to be non-null");
+            return $;
         }
     }
+
 }

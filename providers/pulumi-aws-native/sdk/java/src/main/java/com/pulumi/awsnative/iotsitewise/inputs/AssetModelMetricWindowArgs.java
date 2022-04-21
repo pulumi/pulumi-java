@@ -6,8 +6,8 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelTumblingWindowArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AssetModelMetricWindowArgs extends com.pulumi.resources.Resou
     public static final AssetModelMetricWindowArgs Empty = new AssetModelMetricWindowArgs();
 
     @Import(name="tumbling")
-      private final @Nullable Output<AssetModelTumblingWindowArgs> tumbling;
+    private @Nullable Output<AssetModelTumblingWindowArgs> tumbling;
 
-    public Output<AssetModelTumblingWindowArgs> tumbling() {
-        return this.tumbling == null ? Codegen.empty() : this.tumbling;
+    public Optional<Output<AssetModelTumblingWindowArgs>> tumbling() {
+        return Optional.ofNullable(this.tumbling);
     }
 
-    public AssetModelMetricWindowArgs(@Nullable Output<AssetModelTumblingWindowArgs> tumbling) {
-        this.tumbling = tumbling;
-    }
+    private AssetModelMetricWindowArgs() {}
 
-    private AssetModelMetricWindowArgs() {
-        this.tumbling = Codegen.empty();
+    private AssetModelMetricWindowArgs(AssetModelMetricWindowArgs $) {
+        this.tumbling = $.tumbling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelMetricWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AssetModelTumblingWindowArgs> tumbling;
+        private AssetModelMetricWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelMetricWindowArgs();
         }
 
         public Builder(AssetModelMetricWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tumbling = defaults.tumbling;
+            $ = new AssetModelMetricWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tumbling(@Nullable Output<AssetModelTumblingWindowArgs> tumbling) {
-            this.tumbling = tumbling;
+            $.tumbling = tumbling;
             return this;
         }
-        public Builder tumbling(@Nullable AssetModelTumblingWindowArgs tumbling) {
-            this.tumbling = Codegen.ofNullable(tumbling);
-            return this;
-        }        public AssetModelMetricWindowArgs build() {
-            return new AssetModelMetricWindowArgs(tumbling);
+
+        public Builder tumbling(AssetModelTumblingWindowArgs tumbling) {
+            return tumbling(Output.of(tumbling));
+        }
+
+        public AssetModelMetricWindowArgs build() {
+            return $;
         }
     }
+
 }

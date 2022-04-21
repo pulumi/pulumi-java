@@ -18,110 +18,97 @@ public final class ResponseHeadersPolicyConfig extends com.pulumi.resources.Invo
     public static final ResponseHeadersPolicyConfig Empty = new ResponseHeadersPolicyConfig();
 
     @Import(name="comment")
-      private final @Nullable String comment;
+    private @Nullable String comment;
 
     public Optional<String> comment() {
-        return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
+        return Optional.ofNullable(this.comment);
     }
 
     @Import(name="corsConfig")
-      private final @Nullable ResponseHeadersPolicyCorsConfig corsConfig;
+    private @Nullable ResponseHeadersPolicyCorsConfig corsConfig;
 
     public Optional<ResponseHeadersPolicyCorsConfig> corsConfig() {
-        return this.corsConfig == null ? Optional.empty() : Optional.ofNullable(this.corsConfig);
+        return Optional.ofNullable(this.corsConfig);
     }
 
     @Import(name="customHeadersConfig")
-      private final @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig;
+    private @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig;
 
     public Optional<ResponseHeadersPolicyCustomHeadersConfig> customHeadersConfig() {
-        return this.customHeadersConfig == null ? Optional.empty() : Optional.ofNullable(this.customHeadersConfig);
+        return Optional.ofNullable(this.customHeadersConfig);
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="securityHeadersConfig")
-      private final @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig;
+    private @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig;
 
     public Optional<ResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfig() {
-        return this.securityHeadersConfig == null ? Optional.empty() : Optional.ofNullable(this.securityHeadersConfig);
+        return Optional.ofNullable(this.securityHeadersConfig);
     }
 
-    public ResponseHeadersPolicyConfig(
-        @Nullable String comment,
-        @Nullable ResponseHeadersPolicyCorsConfig corsConfig,
-        @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig,
-        String name,
-        @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig) {
-        this.comment = comment;
-        this.corsConfig = corsConfig;
-        this.customHeadersConfig = customHeadersConfig;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.securityHeadersConfig = securityHeadersConfig;
-    }
+    private ResponseHeadersPolicyConfig() {}
 
-    private ResponseHeadersPolicyConfig() {
-        this.comment = null;
-        this.corsConfig = null;
-        this.customHeadersConfig = null;
-        this.name = null;
-        this.securityHeadersConfig = null;
+    private ResponseHeadersPolicyConfig(ResponseHeadersPolicyConfig $) {
+        this.comment = $.comment;
+        this.corsConfig = $.corsConfig;
+        this.customHeadersConfig = $.customHeadersConfig;
+        this.name = $.name;
+        this.securityHeadersConfig = $.securityHeadersConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String comment;
-        private @Nullable ResponseHeadersPolicyCorsConfig corsConfig;
-        private @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig;
-        private String name;
-        private @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig;
+        private ResponseHeadersPolicyConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyConfig();
         }
 
         public Builder(ResponseHeadersPolicyConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.corsConfig = defaults.corsConfig;
-    	      this.customHeadersConfig = defaults.customHeadersConfig;
-    	      this.name = defaults.name;
-    	      this.securityHeadersConfig = defaults.securityHeadersConfig;
+            $ = new ResponseHeadersPolicyConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
+
         public Builder corsConfig(@Nullable ResponseHeadersPolicyCorsConfig corsConfig) {
-            this.corsConfig = corsConfig;
+            $.corsConfig = corsConfig;
             return this;
         }
+
         public Builder customHeadersConfig(@Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig) {
-            this.customHeadersConfig = customHeadersConfig;
+            $.customHeadersConfig = customHeadersConfig;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder securityHeadersConfig(@Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig) {
-            this.securityHeadersConfig = securityHeadersConfig;
+            $.securityHeadersConfig = securityHeadersConfig;
             return this;
-        }        public ResponseHeadersPolicyConfig build() {
-            return new ResponseHeadersPolicyConfig(comment, corsConfig, customHeadersConfig, name, securityHeadersConfig);
+        }
+
+        public ResponseHeadersPolicyConfig build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

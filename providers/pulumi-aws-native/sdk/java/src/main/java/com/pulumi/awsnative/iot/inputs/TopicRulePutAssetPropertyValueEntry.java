@@ -17,113 +17,101 @@ public final class TopicRulePutAssetPropertyValueEntry extends com.pulumi.resour
     public static final TopicRulePutAssetPropertyValueEntry Empty = new TopicRulePutAssetPropertyValueEntry();
 
     @Import(name="assetId")
-      private final @Nullable String assetId;
+    private @Nullable String assetId;
 
     public Optional<String> assetId() {
-        return this.assetId == null ? Optional.empty() : Optional.ofNullable(this.assetId);
+        return Optional.ofNullable(this.assetId);
     }
 
     @Import(name="entryId")
-      private final @Nullable String entryId;
+    private @Nullable String entryId;
 
     public Optional<String> entryId() {
-        return this.entryId == null ? Optional.empty() : Optional.ofNullable(this.entryId);
+        return Optional.ofNullable(this.entryId);
     }
 
     @Import(name="propertyAlias")
-      private final @Nullable String propertyAlias;
+    private @Nullable String propertyAlias;
 
     public Optional<String> propertyAlias() {
-        return this.propertyAlias == null ? Optional.empty() : Optional.ofNullable(this.propertyAlias);
+        return Optional.ofNullable(this.propertyAlias);
     }
 
     @Import(name="propertyId")
-      private final @Nullable String propertyId;
+    private @Nullable String propertyId;
 
     public Optional<String> propertyId() {
-        return this.propertyId == null ? Optional.empty() : Optional.ofNullable(this.propertyId);
+        return Optional.ofNullable(this.propertyId);
     }
 
     @Import(name="propertyValues", required=true)
-      private final List<TopicRuleAssetPropertyValue> propertyValues;
+    private List<TopicRuleAssetPropertyValue> propertyValues;
 
     public List<TopicRuleAssetPropertyValue> propertyValues() {
         return this.propertyValues;
     }
 
-    public TopicRulePutAssetPropertyValueEntry(
-        @Nullable String assetId,
-        @Nullable String entryId,
-        @Nullable String propertyAlias,
-        @Nullable String propertyId,
-        List<TopicRuleAssetPropertyValue> propertyValues) {
-        this.assetId = assetId;
-        this.entryId = entryId;
-        this.propertyAlias = propertyAlias;
-        this.propertyId = propertyId;
-        this.propertyValues = Objects.requireNonNull(propertyValues, "expected parameter 'propertyValues' to be non-null");
-    }
+    private TopicRulePutAssetPropertyValueEntry() {}
 
-    private TopicRulePutAssetPropertyValueEntry() {
-        this.assetId = null;
-        this.entryId = null;
-        this.propertyAlias = null;
-        this.propertyId = null;
-        this.propertyValues = List.of();
+    private TopicRulePutAssetPropertyValueEntry(TopicRulePutAssetPropertyValueEntry $) {
+        this.assetId = $.assetId;
+        this.entryId = $.entryId;
+        this.propertyAlias = $.propertyAlias;
+        this.propertyId = $.propertyId;
+        this.propertyValues = $.propertyValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRulePutAssetPropertyValueEntry defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String assetId;
-        private @Nullable String entryId;
-        private @Nullable String propertyAlias;
-        private @Nullable String propertyId;
-        private List<TopicRuleAssetPropertyValue> propertyValues;
+        private TopicRulePutAssetPropertyValueEntry $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRulePutAssetPropertyValueEntry();
         }
 
         public Builder(TopicRulePutAssetPropertyValueEntry defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetId = defaults.assetId;
-    	      this.entryId = defaults.entryId;
-    	      this.propertyAlias = defaults.propertyAlias;
-    	      this.propertyId = defaults.propertyId;
-    	      this.propertyValues = defaults.propertyValues;
+            $ = new TopicRulePutAssetPropertyValueEntry(Objects.requireNonNull(defaults));
         }
 
         public Builder assetId(@Nullable String assetId) {
-            this.assetId = assetId;
+            $.assetId = assetId;
             return this;
         }
+
         public Builder entryId(@Nullable String entryId) {
-            this.entryId = entryId;
+            $.entryId = entryId;
             return this;
         }
+
         public Builder propertyAlias(@Nullable String propertyAlias) {
-            this.propertyAlias = propertyAlias;
+            $.propertyAlias = propertyAlias;
             return this;
         }
+
         public Builder propertyId(@Nullable String propertyId) {
-            this.propertyId = propertyId;
+            $.propertyId = propertyId;
             return this;
         }
+
         public Builder propertyValues(List<TopicRuleAssetPropertyValue> propertyValues) {
-            this.propertyValues = Objects.requireNonNull(propertyValues);
+            $.propertyValues = propertyValues;
             return this;
         }
+
         public Builder propertyValues(TopicRuleAssetPropertyValue... propertyValues) {
             return propertyValues(List.of(propertyValues));
-        }        public TopicRulePutAssetPropertyValueEntry build() {
-            return new TopicRulePutAssetPropertyValueEntry(assetId, entryId, propertyAlias, propertyId, propertyValues);
+        }
+
+        public TopicRulePutAssetPropertyValueEntry build() {
+            $.propertyValues = Objects.requireNonNull($.propertyValues, "expected parameter 'propertyValues' to be non-null");
+            return $;
         }
     }
+
 }

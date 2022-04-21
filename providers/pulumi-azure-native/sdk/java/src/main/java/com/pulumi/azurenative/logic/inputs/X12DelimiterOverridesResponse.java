@@ -25,7 +25,7 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="componentSeparator", required=true)
-      private final Integer componentSeparator;
+    private Integer componentSeparator;
 
     public Integer componentSeparator() {
         return this.componentSeparator;
@@ -36,7 +36,7 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dataElementSeparator", required=true)
-      private final Integer dataElementSeparator;
+    private Integer dataElementSeparator;
 
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
@@ -47,10 +47,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="messageId")
-      private final @Nullable String messageId;
+    private @Nullable String messageId;
 
     public Optional<String> messageId() {
-        return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
+        return Optional.ofNullable(this.messageId);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="protocolVersion")
-      private final @Nullable String protocolVersion;
+    private @Nullable String protocolVersion;
 
     public Optional<String> protocolVersion() {
-        return this.protocolVersion == null ? Optional.empty() : Optional.ofNullable(this.protocolVersion);
+        return Optional.ofNullable(this.protocolVersion);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="replaceCharacter", required=true)
-      private final Integer replaceCharacter;
+    private Integer replaceCharacter;
 
     public Integer replaceCharacter() {
         return this.replaceCharacter;
@@ -80,7 +80,7 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="replaceSeparatorsInPayload", required=true)
-      private final Boolean replaceSeparatorsInPayload;
+    private Boolean replaceSeparatorsInPayload;
 
     public Boolean replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
@@ -91,7 +91,7 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="segmentTerminator", required=true)
-      private final Integer segmentTerminator;
+    private Integer segmentTerminator;
 
     public Integer segmentTerminator() {
         return this.segmentTerminator;
@@ -102,7 +102,7 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="segmentTerminatorSuffix", required=true)
-      private final String segmentTerminatorSuffix;
+    private String segmentTerminatorSuffix;
 
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
@@ -113,118 +113,98 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="targetNamespace")
-      private final @Nullable String targetNamespace;
+    private @Nullable String targetNamespace;
 
     public Optional<String> targetNamespace() {
-        return this.targetNamespace == null ? Optional.empty() : Optional.ofNullable(this.targetNamespace);
+        return Optional.ofNullable(this.targetNamespace);
     }
 
-    public X12DelimiterOverridesResponse(
-        Integer componentSeparator,
-        Integer dataElementSeparator,
-        @Nullable String messageId,
-        @Nullable String protocolVersion,
-        Integer replaceCharacter,
-        Boolean replaceSeparatorsInPayload,
-        Integer segmentTerminator,
-        String segmentTerminatorSuffix,
-        @Nullable String targetNamespace) {
-        this.componentSeparator = Objects.requireNonNull(componentSeparator, "expected parameter 'componentSeparator' to be non-null");
-        this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
-        this.messageId = messageId;
-        this.protocolVersion = protocolVersion;
-        this.replaceCharacter = Objects.requireNonNull(replaceCharacter, "expected parameter 'replaceCharacter' to be non-null");
-        this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload, "expected parameter 'replaceSeparatorsInPayload' to be non-null");
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
-        this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix, "expected parameter 'segmentTerminatorSuffix' to be non-null");
-        this.targetNamespace = targetNamespace;
-    }
+    private X12DelimiterOverridesResponse() {}
 
-    private X12DelimiterOverridesResponse() {
-        this.componentSeparator = null;
-        this.dataElementSeparator = null;
-        this.messageId = null;
-        this.protocolVersion = null;
-        this.replaceCharacter = null;
-        this.replaceSeparatorsInPayload = null;
-        this.segmentTerminator = null;
-        this.segmentTerminatorSuffix = null;
-        this.targetNamespace = null;
+    private X12DelimiterOverridesResponse(X12DelimiterOverridesResponse $) {
+        this.componentSeparator = $.componentSeparator;
+        this.dataElementSeparator = $.dataElementSeparator;
+        this.messageId = $.messageId;
+        this.protocolVersion = $.protocolVersion;
+        this.replaceCharacter = $.replaceCharacter;
+        this.replaceSeparatorsInPayload = $.replaceSeparatorsInPayload;
+        this.segmentTerminator = $.segmentTerminator;
+        this.segmentTerminatorSuffix = $.segmentTerminatorSuffix;
+        this.targetNamespace = $.targetNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12DelimiterOverridesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer componentSeparator;
-        private Integer dataElementSeparator;
-        private @Nullable String messageId;
-        private @Nullable String protocolVersion;
-        private Integer replaceCharacter;
-        private Boolean replaceSeparatorsInPayload;
-        private Integer segmentTerminator;
-        private String segmentTerminatorSuffix;
-        private @Nullable String targetNamespace;
+        private X12DelimiterOverridesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12DelimiterOverridesResponse();
         }
 
         public Builder(X12DelimiterOverridesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentSeparator = defaults.componentSeparator;
-    	      this.dataElementSeparator = defaults.dataElementSeparator;
-    	      this.messageId = defaults.messageId;
-    	      this.protocolVersion = defaults.protocolVersion;
-    	      this.replaceCharacter = defaults.replaceCharacter;
-    	      this.replaceSeparatorsInPayload = defaults.replaceSeparatorsInPayload;
-    	      this.segmentTerminator = defaults.segmentTerminator;
-    	      this.segmentTerminatorSuffix = defaults.segmentTerminatorSuffix;
-    	      this.targetNamespace = defaults.targetNamespace;
+            $ = new X12DelimiterOverridesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder componentSeparator(Integer componentSeparator) {
-            this.componentSeparator = Objects.requireNonNull(componentSeparator);
+            $.componentSeparator = componentSeparator;
             return this;
         }
+
         public Builder dataElementSeparator(Integer dataElementSeparator) {
-            this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
+            $.dataElementSeparator = dataElementSeparator;
             return this;
         }
+
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = messageId;
+            $.messageId = messageId;
             return this;
         }
+
         public Builder protocolVersion(@Nullable String protocolVersion) {
-            this.protocolVersion = protocolVersion;
+            $.protocolVersion = protocolVersion;
             return this;
         }
+
         public Builder replaceCharacter(Integer replaceCharacter) {
-            this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
+            $.replaceCharacter = replaceCharacter;
             return this;
         }
+
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
-            this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
+            $.replaceSeparatorsInPayload = replaceSeparatorsInPayload;
             return this;
         }
+
         public Builder segmentTerminator(Integer segmentTerminator) {
-            this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
+            $.segmentTerminator = segmentTerminator;
             return this;
         }
+
         public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
-            this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
+            $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
         }
+
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = targetNamespace;
+            $.targetNamespace = targetNamespace;
             return this;
-        }        public X12DelimiterOverridesResponse build() {
-            return new X12DelimiterOverridesResponse(componentSeparator, dataElementSeparator, messageId, protocolVersion, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
+        }
+
+        public X12DelimiterOverridesResponse build() {
+            $.componentSeparator = Objects.requireNonNull($.componentSeparator, "expected parameter 'componentSeparator' to be non-null");
+            $.dataElementSeparator = Objects.requireNonNull($.dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
+            $.replaceCharacter = Objects.requireNonNull($.replaceCharacter, "expected parameter 'replaceCharacter' to be non-null");
+            $.replaceSeparatorsInPayload = Objects.requireNonNull($.replaceSeparatorsInPayload, "expected parameter 'replaceSeparatorsInPayload' to be non-null");
+            $.segmentTerminator = Objects.requireNonNull($.segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
+            $.segmentTerminatorSuffix = Objects.requireNonNull($.segmentTerminatorSuffix, "expected parameter 'segmentTerminatorSuffix' to be non-null");
+            return $;
         }
     }
+
 }

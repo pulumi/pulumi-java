@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class WebAppSiteExtensionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -31,7 +31,7 @@ public final class WebAppSiteExtensionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,76 +42,70 @@ public final class WebAppSiteExtensionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="siteExtensionId")
-      private final @Nullable Output<String> siteExtensionId;
+    private @Nullable Output<String> siteExtensionId;
 
-    public Output<String> siteExtensionId() {
-        return this.siteExtensionId == null ? Codegen.empty() : this.siteExtensionId;
+    public Optional<Output<String>> siteExtensionId() {
+        return Optional.ofNullable(this.siteExtensionId);
     }
 
-    public WebAppSiteExtensionArgs(
-        Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> siteExtensionId) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.siteExtensionId = siteExtensionId;
-    }
+    private WebAppSiteExtensionArgs() {}
 
-    private WebAppSiteExtensionArgs() {
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.siteExtensionId = Codegen.empty();
+    private WebAppSiteExtensionArgs(WebAppSiteExtensionArgs $) {
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.siteExtensionId = $.siteExtensionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppSiteExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> siteExtensionId;
+        private WebAppSiteExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppSiteExtensionArgs();
         }
 
         public Builder(WebAppSiteExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.siteExtensionId = defaults.siteExtensionId;
+            $ = new WebAppSiteExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder siteExtensionId(@Nullable Output<String> siteExtensionId) {
-            this.siteExtensionId = siteExtensionId;
+            $.siteExtensionId = siteExtensionId;
             return this;
         }
-        public Builder siteExtensionId(@Nullable String siteExtensionId) {
-            this.siteExtensionId = Codegen.ofNullable(siteExtensionId);
-            return this;
-        }        public WebAppSiteExtensionArgs build() {
-            return new WebAppSiteExtensionArgs(name, resourceGroupName, siteExtensionId);
+
+        public Builder siteExtensionId(String siteExtensionId) {
+            return siteExtensionId(Output.of(siteExtensionId));
+        }
+
+        public WebAppSiteExtensionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

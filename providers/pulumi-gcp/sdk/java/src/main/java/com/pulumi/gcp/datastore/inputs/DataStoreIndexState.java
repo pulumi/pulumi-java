@@ -5,11 +5,11 @@ package com.pulumi.gcp.datastore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datastore.inputs.DataStoreIndexPropertyGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ancestor")
-      private final @Nullable Output<String> ancestor;
+    private @Nullable Output<String> ancestor;
 
-    public Output<String> ancestor() {
-        return this.ancestor == null ? Codegen.empty() : this.ancestor;
+    public Optional<Output<String>> ancestor() {
+        return Optional.ofNullable(this.ancestor);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="indexId")
-      private final @Nullable Output<String> indexId;
+    private @Nullable Output<String> indexId;
 
-    public Output<String> indexId() {
-        return this.indexId == null ? Codegen.empty() : this.indexId;
+    public Optional<Output<String>> indexId() {
+        return Optional.ofNullable(this.indexId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -70,105 +70,92 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties;
+    private @Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties;
 
-    public Output<List<DataStoreIndexPropertyGetArgs>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<List<DataStoreIndexPropertyGetArgs>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public DataStoreIndexState(
-        @Nullable Output<String> ancestor,
-        @Nullable Output<String> indexId,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> project,
-        @Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties) {
-        this.ancestor = ancestor;
-        this.indexId = indexId;
-        this.kind = kind;
-        this.project = project;
-        this.properties = properties;
-    }
+    private DataStoreIndexState() {}
 
-    private DataStoreIndexState() {
-        this.ancestor = Codegen.empty();
-        this.indexId = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.project = Codegen.empty();
-        this.properties = Codegen.empty();
+    private DataStoreIndexState(DataStoreIndexState $) {
+        this.ancestor = $.ancestor;
+        this.indexId = $.indexId;
+        this.kind = $.kind;
+        this.project = $.project;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataStoreIndexState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ancestor;
-        private @Nullable Output<String> indexId;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties;
+        private DataStoreIndexState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataStoreIndexState();
         }
 
         public Builder(DataStoreIndexState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ancestor = defaults.ancestor;
-    	      this.indexId = defaults.indexId;
-    	      this.kind = defaults.kind;
-    	      this.project = defaults.project;
-    	      this.properties = defaults.properties;
+            $ = new DataStoreIndexState(Objects.requireNonNull(defaults));
         }
 
         public Builder ancestor(@Nullable Output<String> ancestor) {
-            this.ancestor = ancestor;
+            $.ancestor = ancestor;
             return this;
         }
-        public Builder ancestor(@Nullable String ancestor) {
-            this.ancestor = Codegen.ofNullable(ancestor);
-            return this;
+
+        public Builder ancestor(String ancestor) {
+            return ancestor(Output.of(ancestor));
         }
+
         public Builder indexId(@Nullable Output<String> indexId) {
-            this.indexId = indexId;
+            $.indexId = indexId;
             return this;
         }
-        public Builder indexId(@Nullable String indexId) {
-            this.indexId = Codegen.ofNullable(indexId);
-            return this;
+
+        public Builder indexId(String indexId) {
+            return indexId(Output.of(indexId));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder properties(@Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable List<DataStoreIndexPropertyGetArgs> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(List<DataStoreIndexPropertyGetArgs> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder properties(DataStoreIndexPropertyGetArgs... properties) {
             return properties(List.of(properties));
-        }        public DataStoreIndexState build() {
-            return new DataStoreIndexState(ancestor, indexId, kind, project, properties);
+        }
+
+        public DataStoreIndexState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
      * 
      */
     @Import(name="aliasContext")
-      private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
+    private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext() {
-        return this.aliasContext == null ? Codegen.empty() : this.aliasContext;
+    public Optional<Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs>> aliasContext() {
+        return Optional.ofNullable(this.aliasContext);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
      * 
      */
     @Import(name="gerritProject")
-      private final @Nullable Output<String> gerritProject;
+    private @Nullable Output<String> gerritProject;
 
-    public Output<String> gerritProject() {
-        return this.gerritProject == null ? Codegen.empty() : this.gerritProject;
+    public Optional<Output<String>> gerritProject() {
+        return Optional.ofNullable(this.gerritProject);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
      * 
      */
     @Import(name="hostUri")
-      private final @Nullable Output<String> hostUri;
+    private @Nullable Output<String> hostUri;
 
-    public Output<String> hostUri() {
-        return this.hostUri == null ? Codegen.empty() : this.hostUri;
+    public Optional<Output<String>> hostUri() {
+        return Optional.ofNullable(this.hostUri);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
      * 
      */
     @Import(name="revisionId")
-      private final @Nullable Output<String> revisionId;
+    private @Nullable Output<String> revisionId;
 
-    public Output<String> revisionId() {
-        return this.revisionId == null ? Codegen.empty() : this.revisionId;
+    public Optional<Output<String>> revisionId() {
+        return Optional.ofNullable(this.revisionId);
     }
 
-    public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs(
-        @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext,
-        @Nullable Output<String> gerritProject,
-        @Nullable Output<String> hostUri,
-        @Nullable Output<String> revisionId) {
-        this.aliasContext = aliasContext;
-        this.gerritProject = gerritProject;
-        this.hostUri = hostUri;
-        this.revisionId = revisionId;
-    }
+    private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs() {}
 
-    private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs() {
-        this.aliasContext = Codegen.empty();
-        this.gerritProject = Codegen.empty();
-        this.hostUri = Codegen.empty();
-        this.revisionId = Codegen.empty();
+    private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs $) {
+        this.aliasContext = $.aliasContext;
+        this.gerritProject = $.gerritProject;
+        this.hostUri = $.hostUri;
+        this.revisionId = $.revisionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
-        private @Nullable Output<String> gerritProject;
-        private @Nullable Output<String> hostUri;
-        private @Nullable Output<String> revisionId;
+        private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs();
         }
 
         public Builder(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasContext = defaults.aliasContext;
-    	      this.gerritProject = defaults.gerritProject;
-    	      this.hostUri = defaults.hostUri;
-    	      this.revisionId = defaults.revisionId;
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasContext(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext) {
-            this.aliasContext = aliasContext;
+            $.aliasContext = aliasContext;
             return this;
         }
-        public Builder aliasContext(@Nullable GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs aliasContext) {
-            this.aliasContext = Codegen.ofNullable(aliasContext);
-            return this;
+
+        public Builder aliasContext(GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs aliasContext) {
+            return aliasContext(Output.of(aliasContext));
         }
+
         public Builder gerritProject(@Nullable Output<String> gerritProject) {
-            this.gerritProject = gerritProject;
+            $.gerritProject = gerritProject;
             return this;
         }
-        public Builder gerritProject(@Nullable String gerritProject) {
-            this.gerritProject = Codegen.ofNullable(gerritProject);
-            return this;
+
+        public Builder gerritProject(String gerritProject) {
+            return gerritProject(Output.of(gerritProject));
         }
+
         public Builder hostUri(@Nullable Output<String> hostUri) {
-            this.hostUri = hostUri;
+            $.hostUri = hostUri;
             return this;
         }
-        public Builder hostUri(@Nullable String hostUri) {
-            this.hostUri = Codegen.ofNullable(hostUri);
-            return this;
+
+        public Builder hostUri(String hostUri) {
+            return hostUri(Output.of(hostUri));
         }
+
         public Builder revisionId(@Nullable Output<String> revisionId) {
-            this.revisionId = revisionId;
+            $.revisionId = revisionId;
             return this;
         }
-        public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Codegen.ofNullable(revisionId);
-            return this;
-        }        public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs build() {
-            return new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs(aliasContext, gerritProject, hostUri, revisionId);
+
+        public Builder revisionId(String revisionId) {
+            return revisionId(Output.of(revisionId));
+        }
+
+        public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs build() {
+            return $;
         }
     }
+
 }

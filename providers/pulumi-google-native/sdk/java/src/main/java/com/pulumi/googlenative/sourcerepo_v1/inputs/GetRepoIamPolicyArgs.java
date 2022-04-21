@@ -15,78 +15,71 @@ public final class GetRepoIamPolicyArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRepoIamPolicyArgs Empty = new GetRepoIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="repoId", required=true)
-      private final String repoId;
+    private String repoId;
 
     public String repoId() {
         return this.repoId;
     }
 
-    public GetRepoIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project,
-        String repoId) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-        this.repoId = Objects.requireNonNull(repoId, "expected parameter 'repoId' to be non-null");
-    }
+    private GetRepoIamPolicyArgs() {}
 
-    private GetRepoIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
-        this.repoId = null;
+    private GetRepoIamPolicyArgs(GetRepoIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
+        this.repoId = $.repoId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRepoIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
-        private String repoId;
+        private GetRepoIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRepoIamPolicyArgs();
         }
 
         public Builder(GetRepoIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
-    	      this.repoId = defaults.repoId;
+            $ = new GetRepoIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder repoId(String repoId) {
-            this.repoId = Objects.requireNonNull(repoId);
+            $.repoId = repoId;
             return this;
-        }        public GetRepoIamPolicyArgs build() {
-            return new GetRepoIamPolicyArgs(optionsRequestedPolicyVersion, project, repoId);
+        }
+
+        public GetRepoIamPolicyArgs build() {
+            $.repoId = Objects.requireNonNull($.repoId, "expected parameter 'repoId' to be non-null");
+            return $;
         }
     }
+
 }

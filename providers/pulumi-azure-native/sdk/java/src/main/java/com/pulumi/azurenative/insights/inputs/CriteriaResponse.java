@@ -25,10 +25,10 @@ public final class CriteriaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable List<DimensionResponse> dimensions;
+    private @Nullable List<DimensionResponse> dimensions;
 
-    public List<DimensionResponse> dimensions() {
-        return this.dimensions == null ? List.of() : this.dimensions;
+    public Optional<List<DimensionResponse>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -36,58 +36,55 @@ public final class CriteriaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metricName", required=true)
-      private final String metricName;
+    private String metricName;
 
     public String metricName() {
         return this.metricName;
     }
 
-    public CriteriaResponse(
-        @Nullable List<DimensionResponse> dimensions,
-        String metricName) {
-        this.dimensions = dimensions;
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-    }
+    private CriteriaResponse() {}
 
-    private CriteriaResponse() {
-        this.dimensions = List.of();
-        this.metricName = null;
+    private CriteriaResponse(CriteriaResponse $) {
+        this.dimensions = $.dimensions;
+        this.metricName = $.metricName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CriteriaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DimensionResponse> dimensions;
-        private String metricName;
+        private CriteriaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CriteriaResponse();
         }
 
         public Builder(CriteriaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
-    	      this.metricName = defaults.metricName;
+            $ = new CriteriaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(@Nullable List<DimensionResponse> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder dimensions(DimensionResponse... dimensions) {
             return dimensions(List.of(dimensions));
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
-        }        public CriteriaResponse build() {
-            return new CriteriaResponse(dimensions, metricName);
+        }
+
+        public CriteriaResponse build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            return $;
         }
     }
+
 }

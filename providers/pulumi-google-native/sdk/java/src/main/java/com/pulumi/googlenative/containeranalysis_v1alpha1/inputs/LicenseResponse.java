@@ -21,7 +21,7 @@ public final class LicenseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="comments", required=true)
-      private final String comments;
+    private String comments;
 
     public String comments() {
         return this.comments;
@@ -32,55 +32,52 @@ public final class LicenseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expression", required=true)
-      private final String expression;
+    private String expression;
 
     public String expression() {
         return this.expression;
     }
 
-    public LicenseResponse(
-        String comments,
-        String expression) {
-        this.comments = Objects.requireNonNull(comments, "expected parameter 'comments' to be non-null");
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-    }
+    private LicenseResponse() {}
 
-    private LicenseResponse() {
-        this.comments = null;
-        this.expression = null;
+    private LicenseResponse(LicenseResponse $) {
+        this.comments = $.comments;
+        this.expression = $.expression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String comments;
-        private String expression;
+        private LicenseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseResponse();
         }
 
         public Builder(LicenseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comments = defaults.comments;
-    	      this.expression = defaults.expression;
+            $ = new LicenseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder comments(String comments) {
-            this.comments = Objects.requireNonNull(comments);
+            $.comments = comments;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
-        }        public LicenseResponse build() {
-            return new LicenseResponse(comments, expression);
+        }
+
+        public LicenseResponse build() {
+            $.comments = Objects.requireNonNull($.comments, "expected parameter 'comments' to be non-null");
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class V2BrowserKeyRestrictionsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="allowedReferrers", required=true)
-      private final List<String> allowedReferrers;
+    private List<String> allowedReferrers;
 
     public List<String> allowedReferrers() {
         return this.allowedReferrers;
     }
 
-    public V2BrowserKeyRestrictionsResponse(List<String> allowedReferrers) {
-        this.allowedReferrers = Objects.requireNonNull(allowedReferrers, "expected parameter 'allowedReferrers' to be non-null");
-    }
+    private V2BrowserKeyRestrictionsResponse() {}
 
-    private V2BrowserKeyRestrictionsResponse() {
-        this.allowedReferrers = List.of();
+    private V2BrowserKeyRestrictionsResponse(V2BrowserKeyRestrictionsResponse $) {
+        this.allowedReferrers = $.allowedReferrers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2BrowserKeyRestrictionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedReferrers;
+        private V2BrowserKeyRestrictionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2BrowserKeyRestrictionsResponse();
         }
 
         public Builder(V2BrowserKeyRestrictionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedReferrers = defaults.allowedReferrers;
+            $ = new V2BrowserKeyRestrictionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedReferrers(List<String> allowedReferrers) {
-            this.allowedReferrers = Objects.requireNonNull(allowedReferrers);
+            $.allowedReferrers = allowedReferrers;
             return this;
         }
+
         public Builder allowedReferrers(String... allowedReferrers) {
             return allowedReferrers(List.of(allowedReferrers));
-        }        public V2BrowserKeyRestrictionsResponse build() {
-            return new V2BrowserKeyRestrictionsResponse(allowedReferrers);
+        }
+
+        public V2BrowserKeyRestrictionsResponse build() {
+            $.allowedReferrers = Objects.requireNonNull($.allowedReferrers, "expected parameter 'allowedReferrers' to be non-null");
+            return $;
         }
     }
+
 }

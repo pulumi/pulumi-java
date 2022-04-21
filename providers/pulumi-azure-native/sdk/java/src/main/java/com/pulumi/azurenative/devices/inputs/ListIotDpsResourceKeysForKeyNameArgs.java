@@ -17,7 +17,7 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -28,7 +28,7 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningServiceName", required=true)
-      private final String provisioningServiceName;
+    private String provisioningServiceName;
 
     public String provisioningServiceName() {
         return this.provisioningServiceName;
@@ -39,64 +39,59 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListIotDpsResourceKeysForKeyNameArgs(
-        String keyName,
-        String provisioningServiceName,
-        String resourceGroupName) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName, "expected parameter 'provisioningServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListIotDpsResourceKeysForKeyNameArgs() {}
 
-    private ListIotDpsResourceKeysForKeyNameArgs() {
-        this.keyName = null;
-        this.provisioningServiceName = null;
-        this.resourceGroupName = null;
+    private ListIotDpsResourceKeysForKeyNameArgs(ListIotDpsResourceKeysForKeyNameArgs $) {
+        this.keyName = $.keyName;
+        this.provisioningServiceName = $.provisioningServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListIotDpsResourceKeysForKeyNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyName;
-        private String provisioningServiceName;
-        private String resourceGroupName;
+        private ListIotDpsResourceKeysForKeyNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListIotDpsResourceKeysForKeyNameArgs();
         }
 
         public Builder(ListIotDpsResourceKeysForKeyNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.provisioningServiceName = defaults.provisioningServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListIotDpsResourceKeysForKeyNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder provisioningServiceName(String provisioningServiceName) {
-            this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
+            $.provisioningServiceName = provisioningServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListIotDpsResourceKeysForKeyNameArgs build() {
-            return new ListIotDpsResourceKeysForKeyNameArgs(keyName, provisioningServiceName, resourceGroupName);
+        }
+
+        public ListIotDpsResourceKeysForKeyNameArgs build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.provisioningServiceName = Objects.requireNonNull($.provisioningServiceName, "expected parameter 'provisioningServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
      * 
      */
     @Import(name="agentChannel", required=true)
-      private final Integer agentChannel;
+    private Integer agentChannel;
 
     public Integer agentChannel() {
         return this.agentChannel;
@@ -32,55 +32,52 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
      * 
      */
     @Import(name="customerChannel", required=true)
-      private final Integer customerChannel;
+    private Integer customerChannel;
 
     public Integer customerChannel() {
         return this.customerChannel;
     }
 
-    public GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(
-        Integer agentChannel,
-        Integer customerChannel) {
-        this.agentChannel = Objects.requireNonNull(agentChannel, "expected parameter 'agentChannel' to be non-null");
-        this.customerChannel = Objects.requireNonNull(customerChannel, "expected parameter 'customerChannel' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse() {
-        this.agentChannel = null;
-        this.customerChannel = null;
+    private GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse $) {
+        this.agentChannel = $.agentChannel;
+        this.customerChannel = $.customerChannel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer agentChannel;
-        private Integer customerChannel;
+        private GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentChannel = defaults.agentChannel;
-    	      this.customerChannel = defaults.customerChannel;
+            $ = new GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentChannel(Integer agentChannel) {
-            this.agentChannel = Objects.requireNonNull(agentChannel);
+            $.agentChannel = agentChannel;
             return this;
         }
+
         public Builder customerChannel(Integer customerChannel) {
-            this.customerChannel = Objects.requireNonNull(customerChannel);
+            $.customerChannel = customerChannel;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(agentChannel, customerChannel);
+        }
+
+        public GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse build() {
+            $.agentChannel = Objects.requireNonNull($.agentChannel, "expected parameter 'agentChannel' to be non-null");
+            $.customerChannel = Objects.requireNonNull($.customerChannel, "expected parameter 'customerChannel' to be non-null");
+            return $;
         }
     }
+
 }

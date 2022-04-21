@@ -15,62 +15,58 @@ public final class GetNoteIamPolicyArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetNoteIamPolicyArgs Empty = new GetNoteIamPolicyArgs();
 
     @Import(name="noteId", required=true)
-      private final String noteId;
+    private String noteId;
 
     public String noteId() {
         return this.noteId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetNoteIamPolicyArgs(
-        String noteId,
-        @Nullable String project) {
-        this.noteId = Objects.requireNonNull(noteId, "expected parameter 'noteId' to be non-null");
-        this.project = project;
-    }
+    private GetNoteIamPolicyArgs() {}
 
-    private GetNoteIamPolicyArgs() {
-        this.noteId = null;
-        this.project = null;
+    private GetNoteIamPolicyArgs(GetNoteIamPolicyArgs $) {
+        this.noteId = $.noteId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNoteIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String noteId;
-        private @Nullable String project;
+        private GetNoteIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNoteIamPolicyArgs();
         }
 
         public Builder(GetNoteIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.noteId = defaults.noteId;
-    	      this.project = defaults.project;
+            $ = new GetNoteIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder noteId(String noteId) {
-            this.noteId = Objects.requireNonNull(noteId);
+            $.noteId = noteId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetNoteIamPolicyArgs build() {
-            return new GetNoteIamPolicyArgs(noteId, project);
+        }
+
+        public GetNoteIamPolicyArgs build() {
+            $.noteId = Objects.requireNonNull($.noteId, "expected parameter 'noteId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.apigee.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionKeyName")
-      private final @Nullable Output<String> diskEncryptionKeyName;
+    private @Nullable Output<String> diskEncryptionKeyName;
 
-    public Output<String> diskEncryptionKeyName() {
-        return this.diskEncryptionKeyName == null ? Codegen.empty() : this.diskEncryptionKeyName;
+    public Optional<Output<String>> diskEncryptionKeyName() {
+        return Optional.ofNullable(this.diskEncryptionKeyName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipRange")
-      private final @Nullable Output<String> ipRange;
+    private @Nullable Output<String> ipRange;
 
-    public Output<String> ipRange() {
-        return this.ipRange == null ? Codegen.empty() : this.ipRange;
+    public Optional<Output<String>> ipRange() {
+        return Optional.ofNullable(this.ipRange);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orgId")
-      private final @Nullable Output<String> orgId;
+    private @Nullable Output<String> orgId;
 
-    public Output<String> orgId() {
-        return this.orgId == null ? Codegen.empty() : this.orgId;
+    public Optional<Output<String>> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peeringCidrRange")
-      private final @Nullable Output<String> peeringCidrRange;
+    private @Nullable Output<String> peeringCidrRange;
 
-    public Output<String> peeringCidrRange() {
-        return this.peeringCidrRange == null ? Codegen.empty() : this.peeringCidrRange;
+    public Optional<Output<String>> peeringCidrRange() {
+        return Optional.ofNullable(this.peeringCidrRange);
     }
 
     /**
@@ -130,167 +130,138 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<String> port;
+    private @Nullable Output<String> port;
 
-    public Output<String> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<String>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public InstanceState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> diskEncryptionKeyName,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> host,
-        @Nullable Output<String> ipRange,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> orgId,
-        @Nullable Output<String> peeringCidrRange,
-        @Nullable Output<String> port) {
-        this.description = description;
-        this.diskEncryptionKeyName = diskEncryptionKeyName;
-        this.displayName = displayName;
-        this.host = host;
-        this.ipRange = ipRange;
-        this.location = location;
-        this.name = name;
-        this.orgId = orgId;
-        this.peeringCidrRange = peeringCidrRange;
-        this.port = port;
-    }
+    private InstanceState() {}
 
-    private InstanceState() {
-        this.description = Codegen.empty();
-        this.diskEncryptionKeyName = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.host = Codegen.empty();
-        this.ipRange = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.peeringCidrRange = Codegen.empty();
-        this.port = Codegen.empty();
+    private InstanceState(InstanceState $) {
+        this.description = $.description;
+        this.diskEncryptionKeyName = $.diskEncryptionKeyName;
+        this.displayName = $.displayName;
+        this.host = $.host;
+        this.ipRange = $.ipRange;
+        this.location = $.location;
+        this.name = $.name;
+        this.orgId = $.orgId;
+        this.peeringCidrRange = $.peeringCidrRange;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> diskEncryptionKeyName;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> host;
-        private @Nullable Output<String> ipRange;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> orgId;
-        private @Nullable Output<String> peeringCidrRange;
-        private @Nullable Output<String> port;
+        private InstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceState();
         }
 
         public Builder(InstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.diskEncryptionKeyName = defaults.diskEncryptionKeyName;
-    	      this.displayName = defaults.displayName;
-    	      this.host = defaults.host;
-    	      this.ipRange = defaults.ipRange;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.orgId = defaults.orgId;
-    	      this.peeringCidrRange = defaults.peeringCidrRange;
-    	      this.port = defaults.port;
+            $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diskEncryptionKeyName(@Nullable Output<String> diskEncryptionKeyName) {
-            this.diskEncryptionKeyName = diskEncryptionKeyName;
+            $.diskEncryptionKeyName = diskEncryptionKeyName;
             return this;
         }
-        public Builder diskEncryptionKeyName(@Nullable String diskEncryptionKeyName) {
-            this.diskEncryptionKeyName = Codegen.ofNullable(diskEncryptionKeyName);
-            return this;
+
+        public Builder diskEncryptionKeyName(String diskEncryptionKeyName) {
+            return diskEncryptionKeyName(Output.of(diskEncryptionKeyName));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder ipRange(@Nullable Output<String> ipRange) {
-            this.ipRange = ipRange;
+            $.ipRange = ipRange;
             return this;
         }
-        public Builder ipRange(@Nullable String ipRange) {
-            this.ipRange = Codegen.ofNullable(ipRange);
-            return this;
+
+        public Builder ipRange(String ipRange) {
+            return ipRange(Output.of(ipRange));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder orgId(@Nullable Output<String> orgId) {
-            this.orgId = orgId;
+            $.orgId = orgId;
             return this;
         }
-        public Builder orgId(@Nullable String orgId) {
-            this.orgId = Codegen.ofNullable(orgId);
-            return this;
+
+        public Builder orgId(String orgId) {
+            return orgId(Output.of(orgId));
         }
+
         public Builder peeringCidrRange(@Nullable Output<String> peeringCidrRange) {
-            this.peeringCidrRange = peeringCidrRange;
+            $.peeringCidrRange = peeringCidrRange;
             return this;
         }
-        public Builder peeringCidrRange(@Nullable String peeringCidrRange) {
-            this.peeringCidrRange = Codegen.ofNullable(peeringCidrRange);
-            return this;
+
+        public Builder peeringCidrRange(String peeringCidrRange) {
+            return peeringCidrRange(Output.of(peeringCidrRange));
         }
+
         public Builder port(@Nullable Output<String> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable String port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public InstanceState build() {
-            return new InstanceState(description, diskEncryptionKeyName, displayName, host, ipRange, location, name, orgId, peeringCidrRange, port);
+
+        public Builder port(String port) {
+            return port(Output.of(port));
+        }
+
+        public InstanceState build() {
+            return $;
         }
     }
+
 }

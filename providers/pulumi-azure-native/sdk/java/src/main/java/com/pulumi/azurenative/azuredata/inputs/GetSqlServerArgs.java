@@ -19,10 +19,10 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sqlServerName", required=true)
-      private final String sqlServerName;
+    private String sqlServerName;
 
     public String sqlServerName() {
         return this.sqlServerName;
@@ -52,73 +52,65 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sqlServerRegistrationName", required=true)
-      private final String sqlServerRegistrationName;
+    private String sqlServerRegistrationName;
 
     public String sqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
     }
 
-    public GetSqlServerArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String sqlServerName,
-        String sqlServerRegistrationName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlServerName = Objects.requireNonNull(sqlServerName, "expected parameter 'sqlServerName' to be non-null");
-        this.sqlServerRegistrationName = Objects.requireNonNull(sqlServerRegistrationName, "expected parameter 'sqlServerRegistrationName' to be non-null");
-    }
+    private GetSqlServerArgs() {}
 
-    private GetSqlServerArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.sqlServerName = null;
-        this.sqlServerRegistrationName = null;
+    private GetSqlServerArgs(GetSqlServerArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlServerName = $.sqlServerName;
+        this.sqlServerRegistrationName = $.sqlServerRegistrationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String sqlServerName;
-        private String sqlServerRegistrationName;
+        private GetSqlServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlServerArgs();
         }
 
         public Builder(GetSqlServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlServerName = defaults.sqlServerName;
-    	      this.sqlServerRegistrationName = defaults.sqlServerRegistrationName;
+            $ = new GetSqlServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlServerName(String sqlServerName) {
-            this.sqlServerName = Objects.requireNonNull(sqlServerName);
+            $.sqlServerName = sqlServerName;
             return this;
         }
+
         public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
-            this.sqlServerRegistrationName = Objects.requireNonNull(sqlServerRegistrationName);
+            $.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;
-        }        public GetSqlServerArgs build() {
-            return new GetSqlServerArgs(expand, resourceGroupName, sqlServerName, sqlServerRegistrationName);
+        }
+
+        public GetSqlServerArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlServerName = Objects.requireNonNull($.sqlServerName, "expected parameter 'sqlServerName' to be non-null");
+            $.sqlServerRegistrationName = Objects.requireNonNull($.sqlServerRegistrationName, "expected parameter 'sqlServerRegistrationName' to be non-null");
+            return $;
         }
     }
+
 }

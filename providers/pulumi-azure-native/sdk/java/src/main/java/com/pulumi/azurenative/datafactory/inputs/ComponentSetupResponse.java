@@ -27,7 +27,7 @@ public final class ComponentSetupResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="componentName", required=true)
-      private final String componentName;
+    private String componentName;
 
     public String componentName() {
         return this.componentName;
@@ -38,10 +38,10 @@ public final class ComponentSetupResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="licenseKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey() {
-        return this.licenseKey == null ? null : this.licenseKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> licenseKey() {
+        return Optional.ofNullable(this.licenseKey);
     }
 
     /**
@@ -50,64 +50,58 @@ public final class ComponentSetupResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ComponentSetupResponse(
-        String componentName,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey,
-        String type) {
-        this.componentName = Objects.requireNonNull(componentName, "expected parameter 'componentName' to be non-null");
-        this.licenseKey = licenseKey;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ComponentSetupResponse() {}
 
-    private ComponentSetupResponse() {
-        this.componentName = null;
-        this.licenseKey = null;
-        this.type = null;
+    private ComponentSetupResponse(ComponentSetupResponse $) {
+        this.componentName = $.componentName;
+        this.licenseKey = $.licenseKey;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentSetupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String componentName;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey;
-        private String type;
+        private ComponentSetupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentSetupResponse();
         }
 
         public Builder(ComponentSetupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentName = defaults.componentName;
-    	      this.licenseKey = defaults.licenseKey;
-    	      this.type = defaults.type;
+            $ = new ComponentSetupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder componentName(String componentName) {
-            this.componentName = Objects.requireNonNull(componentName);
+            $.componentName = componentName;
             return this;
         }
+
         public Builder licenseKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey) {
-            this.licenseKey = licenseKey;
+            $.licenseKey = licenseKey;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ComponentSetupResponse build() {
-            return new ComponentSetupResponse(componentName, licenseKey, type);
+        }
+
+        public ComponentSetupResponse build() {
+            $.componentName = Objects.requireNonNull($.componentName, "expected parameter 'componentName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

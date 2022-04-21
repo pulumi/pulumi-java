@@ -27,10 +27,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="capabilities")
-      private final @Nullable List<CapabilityResponse> capabilities;
+    private @Nullable List<CapabilityResponse> capabilities;
 
-    public List<CapabilityResponse> capabilities() {
-        return this.capabilities == null ? List.of() : this.capabilities;
+    public Optional<List<CapabilityResponse>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="family")
-      private final @Nullable String family;
+    private @Nullable String family;
 
     public Optional<String> family() {
-        return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="locations")
-      private final @Nullable List<String> locations;
+    private @Nullable List<String> locations;
 
-    public List<String> locations() {
-        return this.locations == null ? List.of() : this.locations;
+    public Optional<List<String>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="size")
-      private final @Nullable String size;
+    private @Nullable String size;
 
     public Optional<String> size() {
-        return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="skuCapacity")
-      private final @Nullable SkuCapacityResponse skuCapacity;
+    private @Nullable SkuCapacityResponse skuCapacity;
 
     public Optional<SkuCapacityResponse> skuCapacity() {
-        return this.skuCapacity == null ? Optional.empty() : Optional.ofNullable(this.skuCapacity);
+        return Optional.ofNullable(this.skuCapacity);
     }
 
     /**
@@ -104,115 +104,94 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public SkuDescriptionResponse(
-        @Nullable List<CapabilityResponse> capabilities,
-        @Nullable Integer capacity,
-        @Nullable String family,
-        @Nullable List<String> locations,
-        @Nullable String name,
-        @Nullable String size,
-        @Nullable SkuCapacityResponse skuCapacity,
-        @Nullable String tier) {
-        this.capabilities = capabilities;
-        this.capacity = capacity;
-        this.family = family;
-        this.locations = locations;
-        this.name = name;
-        this.size = size;
-        this.skuCapacity = skuCapacity;
-        this.tier = tier;
-    }
+    private SkuDescriptionResponse() {}
 
-    private SkuDescriptionResponse() {
-        this.capabilities = List.of();
-        this.capacity = null;
-        this.family = null;
-        this.locations = List.of();
-        this.name = null;
-        this.size = null;
-        this.skuCapacity = null;
-        this.tier = null;
+    private SkuDescriptionResponse(SkuDescriptionResponse $) {
+        this.capabilities = $.capabilities;
+        this.capacity = $.capacity;
+        this.family = $.family;
+        this.locations = $.locations;
+        this.name = $.name;
+        this.size = $.size;
+        this.skuCapacity = $.skuCapacity;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<CapabilityResponse> capabilities;
-        private @Nullable Integer capacity;
-        private @Nullable String family;
-        private @Nullable List<String> locations;
-        private @Nullable String name;
-        private @Nullable String size;
-        private @Nullable SkuCapacityResponse skuCapacity;
-        private @Nullable String tier;
+        private SkuDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuDescriptionResponse();
         }
 
         public Builder(SkuDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capabilities = defaults.capabilities;
-    	      this.capacity = defaults.capacity;
-    	      this.family = defaults.family;
-    	      this.locations = defaults.locations;
-    	      this.name = defaults.name;
-    	      this.size = defaults.size;
-    	      this.skuCapacity = defaults.skuCapacity;
-    	      this.tier = defaults.tier;
+            $ = new SkuDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capabilities(@Nullable List<CapabilityResponse> capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
+
         public Builder capabilities(CapabilityResponse... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder family(@Nullable String family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
+
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder size(@Nullable String size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
+
         public Builder skuCapacity(@Nullable SkuCapacityResponse skuCapacity) {
-            this.skuCapacity = skuCapacity;
+            $.skuCapacity = skuCapacity;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public SkuDescriptionResponse build() {
-            return new SkuDescriptionResponse(capabilities, capacity, family, locations, name, size, skuCapacity, tier);
+        }
+
+        public SkuDescriptionResponse build() {
+            return $;
         }
     }
+
 }

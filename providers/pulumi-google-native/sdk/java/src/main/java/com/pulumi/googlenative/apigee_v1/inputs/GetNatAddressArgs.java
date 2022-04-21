@@ -13,78 +13,73 @@ public final class GetNatAddressArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNatAddressArgs Empty = new GetNatAddressArgs();
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="natAddressId", required=true)
-      private final String natAddressId;
+    private String natAddressId;
 
     public String natAddressId() {
         return this.natAddressId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetNatAddressArgs(
-        String instanceId,
-        String natAddressId,
-        String organizationId) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.natAddressId = Objects.requireNonNull(natAddressId, "expected parameter 'natAddressId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetNatAddressArgs() {}
 
-    private GetNatAddressArgs() {
-        this.instanceId = null;
-        this.natAddressId = null;
-        this.organizationId = null;
+    private GetNatAddressArgs(GetNatAddressArgs $) {
+        this.instanceId = $.instanceId;
+        this.natAddressId = $.natAddressId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNatAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private String natAddressId;
-        private String organizationId;
+        private GetNatAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNatAddressArgs();
         }
 
         public Builder(GetNatAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.natAddressId = defaults.natAddressId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetNatAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder natAddressId(String natAddressId) {
-            this.natAddressId = Objects.requireNonNull(natAddressId);
+            $.natAddressId = natAddressId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetNatAddressArgs build() {
-            return new GetNatAddressArgs(instanceId, natAddressId, organizationId);
+        }
+
+        public GetNatAddressArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.natAddressId = Objects.requireNonNull($.natAddressId, "expected parameter 'natAddressId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

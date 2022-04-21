@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.resiliencehub.inputs;
 
-import java.util.Objects;
+
 
 
 public final class AppTagMap extends com.pulumi.resources.InvokeArgs {
 
     public static final AppTagMap Empty = new AppTagMap();
 
-    public AppTagMap() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AppTagMap defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AppTagMap $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AppTagMap defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AppTagMap();
         }
         public AppTagMap build() {
-            return new AppTagMap();
+            return $;
         }
     }
+
 }

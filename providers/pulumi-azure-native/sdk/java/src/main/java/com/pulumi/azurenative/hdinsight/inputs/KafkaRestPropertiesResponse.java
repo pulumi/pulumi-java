@@ -25,10 +25,10 @@ public final class KafkaRestPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="clientGroupInfo")
-      private final @Nullable ClientGroupInfoResponse clientGroupInfo;
+    private @Nullable ClientGroupInfoResponse clientGroupInfo;
 
     public Optional<ClientGroupInfoResponse> clientGroupInfo() {
-        return this.clientGroupInfo == null ? Optional.empty() : Optional.ofNullable(this.clientGroupInfo);
+        return Optional.ofNullable(this.clientGroupInfo);
     }
 
     /**
@@ -36,55 +36,50 @@ public final class KafkaRestPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="configurationOverride")
-      private final @Nullable Map<String,String> configurationOverride;
+    private @Nullable Map<String,String> configurationOverride;
 
-    public Map<String,String> configurationOverride() {
-        return this.configurationOverride == null ? Map.of() : this.configurationOverride;
+    public Optional<Map<String,String>> configurationOverride() {
+        return Optional.ofNullable(this.configurationOverride);
     }
 
-    public KafkaRestPropertiesResponse(
-        @Nullable ClientGroupInfoResponse clientGroupInfo,
-        @Nullable Map<String,String> configurationOverride) {
-        this.clientGroupInfo = clientGroupInfo;
-        this.configurationOverride = configurationOverride;
-    }
+    private KafkaRestPropertiesResponse() {}
 
-    private KafkaRestPropertiesResponse() {
-        this.clientGroupInfo = null;
-        this.configurationOverride = Map.of();
+    private KafkaRestPropertiesResponse(KafkaRestPropertiesResponse $) {
+        this.clientGroupInfo = $.clientGroupInfo;
+        this.configurationOverride = $.configurationOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KafkaRestPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ClientGroupInfoResponse clientGroupInfo;
-        private @Nullable Map<String,String> configurationOverride;
+        private KafkaRestPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KafkaRestPropertiesResponse();
         }
 
         public Builder(KafkaRestPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientGroupInfo = defaults.clientGroupInfo;
-    	      this.configurationOverride = defaults.configurationOverride;
+            $ = new KafkaRestPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientGroupInfo(@Nullable ClientGroupInfoResponse clientGroupInfo) {
-            this.clientGroupInfo = clientGroupInfo;
+            $.clientGroupInfo = clientGroupInfo;
             return this;
         }
+
         public Builder configurationOverride(@Nullable Map<String,String> configurationOverride) {
-            this.configurationOverride = configurationOverride;
+            $.configurationOverride = configurationOverride;
             return this;
-        }        public KafkaRestPropertiesResponse build() {
-            return new KafkaRestPropertiesResponse(clientGroupInfo, configurationOverride);
+        }
+
+        public KafkaRestPropertiesResponse build() {
+            return $;
         }
     }
+
 }

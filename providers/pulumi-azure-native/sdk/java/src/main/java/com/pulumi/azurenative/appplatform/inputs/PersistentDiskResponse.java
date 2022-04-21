@@ -24,10 +24,10 @@ public final class PersistentDiskResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="mountPath")
-      private final @Nullable String mountPath;
+    private @Nullable String mountPath;
 
     public Optional<String> mountPath() {
-        return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
+        return Optional.ofNullable(this.mountPath);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PersistentDiskResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sizeInGB")
-      private final @Nullable Integer sizeInGB;
+    private @Nullable Integer sizeInGB;
 
     public Optional<Integer> sizeInGB() {
-        return this.sizeInGB == null ? Optional.empty() : Optional.ofNullable(this.sizeInGB);
+        return Optional.ofNullable(this.sizeInGB);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class PersistentDiskResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="usedInGB", required=true)
-      private final Integer usedInGB;
+    private Integer usedInGB;
 
     public Integer usedInGB() {
         return this.usedInGB;
     }
 
-    public PersistentDiskResponse(
-        @Nullable String mountPath,
-        @Nullable Integer sizeInGB,
-        Integer usedInGB) {
-        this.mountPath = mountPath;
-        this.sizeInGB = sizeInGB;
-        this.usedInGB = Objects.requireNonNull(usedInGB, "expected parameter 'usedInGB' to be non-null");
-    }
+    private PersistentDiskResponse() {}
 
-    private PersistentDiskResponse() {
-        this.mountPath = null;
-        this.sizeInGB = null;
-        this.usedInGB = null;
+    private PersistentDiskResponse(PersistentDiskResponse $) {
+        this.mountPath = $.mountPath;
+        this.sizeInGB = $.sizeInGB;
+        this.usedInGB = $.usedInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistentDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String mountPath;
-        private @Nullable Integer sizeInGB;
-        private Integer usedInGB;
+        private PersistentDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistentDiskResponse();
         }
 
         public Builder(PersistentDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.sizeInGB = defaults.sizeInGB;
-    	      this.usedInGB = defaults.usedInGB;
+            $ = new PersistentDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = mountPath;
+            $.mountPath = mountPath;
             return this;
         }
+
         public Builder sizeInGB(@Nullable Integer sizeInGB) {
-            this.sizeInGB = sizeInGB;
+            $.sizeInGB = sizeInGB;
             return this;
         }
+
         public Builder usedInGB(Integer usedInGB) {
-            this.usedInGB = Objects.requireNonNull(usedInGB);
+            $.usedInGB = usedInGB;
             return this;
-        }        public PersistentDiskResponse build() {
-            return new PersistentDiskResponse(mountPath, sizeInGB, usedInGB);
+        }
+
+        public PersistentDiskResponse build() {
+            $.usedInGB = Objects.requireNonNull($.usedInGB, "expected parameter 'usedInGB' to be non-null");
+            return $;
         }
     }
+
 }

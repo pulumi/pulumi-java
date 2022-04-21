@@ -5,11 +5,11 @@ package com.pulumi.gcp.apigee.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.apigee.inputs.EnvironmentIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class EnvironmentIamBindingState extends com.pulumi.resources.Resou
     public static final EnvironmentIamBindingState Empty = new EnvironmentIamBindingState();
 
     @Import(name="condition")
-      private final @Nullable Output<EnvironmentIamBindingConditionGetArgs> condition;
+    private @Nullable Output<EnvironmentIamBindingConditionGetArgs> condition;
 
-    public Output<EnvironmentIamBindingConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<EnvironmentIamBindingConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class EnvironmentIamBindingState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="envId")
-      private final @Nullable Output<String> envId;
+    private @Nullable Output<String> envId;
 
-    public Output<String> envId() {
-        return this.envId == null ? Codegen.empty() : this.envId;
+    public Optional<Output<String>> envId() {
+        return Optional.ofNullable(this.envId);
     }
 
     /**
@@ -40,24 +40,24 @@ public final class EnvironmentIamBindingState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     @Import(name="orgId")
-      private final @Nullable Output<String> orgId;
+    private @Nullable Output<String> orgId;
 
-    public Output<String> orgId() {
-        return this.orgId == null ? Codegen.empty() : this.orgId;
+    public Optional<Output<String>> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -67,118 +67,102 @@ public final class EnvironmentIamBindingState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public EnvironmentIamBindingState(
-        @Nullable Output<EnvironmentIamBindingConditionGetArgs> condition,
-        @Nullable Output<String> envId,
-        @Nullable Output<String> etag,
-        @Nullable Output<List<String>> members,
-        @Nullable Output<String> orgId,
-        @Nullable Output<String> role) {
-        this.condition = condition;
-        this.envId = envId;
-        this.etag = etag;
-        this.members = members;
-        this.orgId = orgId;
-        this.role = role;
-    }
+    private EnvironmentIamBindingState() {}
 
-    private EnvironmentIamBindingState() {
-        this.condition = Codegen.empty();
-        this.envId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.members = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.role = Codegen.empty();
+    private EnvironmentIamBindingState(EnvironmentIamBindingState $) {
+        this.condition = $.condition;
+        this.envId = $.envId;
+        this.etag = $.etag;
+        this.members = $.members;
+        this.orgId = $.orgId;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentIamBindingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EnvironmentIamBindingConditionGetArgs> condition;
-        private @Nullable Output<String> envId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<List<String>> members;
-        private @Nullable Output<String> orgId;
-        private @Nullable Output<String> role;
+        private EnvironmentIamBindingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentIamBindingState();
         }
 
         public Builder(EnvironmentIamBindingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.envId = defaults.envId;
-    	      this.etag = defaults.etag;
-    	      this.members = defaults.members;
-    	      this.orgId = defaults.orgId;
-    	      this.role = defaults.role;
+            $ = new EnvironmentIamBindingState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<EnvironmentIamBindingConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable EnvironmentIamBindingConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(EnvironmentIamBindingConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder envId(@Nullable Output<String> envId) {
-            this.envId = envId;
+            $.envId = envId;
             return this;
         }
-        public Builder envId(@Nullable String envId) {
-            this.envId = Codegen.ofNullable(envId);
-            return this;
+
+        public Builder envId(String envId) {
+            return envId(Output.of(envId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder orgId(@Nullable Output<String> orgId) {
-            this.orgId = orgId;
+            $.orgId = orgId;
             return this;
         }
-        public Builder orgId(@Nullable String orgId) {
-            this.orgId = Codegen.ofNullable(orgId);
-            return this;
+
+        public Builder orgId(String orgId) {
+            return orgId(Output.of(orgId));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public EnvironmentIamBindingState build() {
-            return new EnvironmentIamBindingState(condition, envId, etag, members, orgId, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public EnvironmentIamBindingState build() {
+            return $;
         }
     }
+
 }

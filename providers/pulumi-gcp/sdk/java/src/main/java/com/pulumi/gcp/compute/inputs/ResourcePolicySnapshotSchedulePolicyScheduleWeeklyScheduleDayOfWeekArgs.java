@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * 
      */
     @Import(name="day", required=true)
-      private final Output<String> day;
+    private Output<String> day;
 
     public Output<String> day() {
         return this.day;
@@ -31,63 +30,60 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * 
      */
     @Import(name="startTime", required=true)
-      private final Output<String> startTime;
+    private Output<String> startTime;
 
     public Output<String> startTime() {
         return this.startTime;
     }
 
-    public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs(
-        Output<String> day,
-        Output<String> startTime) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs() {}
 
-    private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs() {
-        this.day = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs $) {
+        this.day = $.day;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> day;
-        private Output<String> startTime;
+        private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.startTime = defaults.startTime;
+            $ = new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(Output<String> day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder day(String day) {
-            this.day = Output.of(Objects.requireNonNull(day));
-            return this;
+            return day(Output.of(day));
         }
+
         public Builder startTime(Output<String> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
-        }        public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs build() {
-            return new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs(day, startTime);
+            return startTime(Output.of(startTime));
+        }
+
+        public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

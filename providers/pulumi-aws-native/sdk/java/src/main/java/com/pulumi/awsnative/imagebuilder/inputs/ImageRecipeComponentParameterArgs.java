@@ -5,7 +5,6 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ImageRecipeComponentParameterArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -35,66 +34,64 @@ public final class ImageRecipeComponentParameterArgs extends com.pulumi.resource
      * 
      */
     @Import(name="value", required=true)
-      private final Output<List<String>> value;
+    private Output<List<String>> value;
 
     public Output<List<String>> value() {
         return this.value;
     }
 
-    public ImageRecipeComponentParameterArgs(
-        Output<String> name,
-        Output<List<String>> value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ImageRecipeComponentParameterArgs() {}
 
-    private ImageRecipeComponentParameterArgs() {
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
+    private ImageRecipeComponentParameterArgs(ImageRecipeComponentParameterArgs $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRecipeComponentParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<List<String>> value;
+        private ImageRecipeComponentParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRecipeComponentParameterArgs();
         }
 
         public Builder(ImageRecipeComponentParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new ImageRecipeComponentParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder value(Output<List<String>> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(List<String> value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
+            return value(Output.of(value));
         }
+
         public Builder value(String... value) {
             return value(List.of(value));
-        }        public ImageRecipeComponentParameterArgs build() {
-            return new ImageRecipeComponentParameterArgs(name, value);
+        }
+
+        public ImageRecipeComponentParameterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.PolicyArgs;
 import com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookArgs;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class AuditSinkSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<PolicyArgs> policy;
+    private Output<PolicyArgs> policy;
 
     public Output<PolicyArgs> policy() {
         return this.policy;
@@ -35,63 +34,60 @@ public final class AuditSinkSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webhook", required=true)
-      private final Output<WebhookArgs> webhook;
+    private Output<WebhookArgs> webhook;
 
     public Output<WebhookArgs> webhook() {
         return this.webhook;
     }
 
-    public AuditSinkSpecArgs(
-        Output<PolicyArgs> policy,
-        Output<WebhookArgs> webhook) {
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.webhook = Objects.requireNonNull(webhook, "expected parameter 'webhook' to be non-null");
-    }
+    private AuditSinkSpecArgs() {}
 
-    private AuditSinkSpecArgs() {
-        this.policy = Codegen.empty();
-        this.webhook = Codegen.empty();
+    private AuditSinkSpecArgs(AuditSinkSpecArgs $) {
+        this.policy = $.policy;
+        this.webhook = $.webhook;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuditSinkSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PolicyArgs> policy;
-        private Output<WebhookArgs> webhook;
+        private AuditSinkSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuditSinkSpecArgs();
         }
 
         public Builder(AuditSinkSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.webhook = defaults.webhook;
+            $ = new AuditSinkSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(Output<PolicyArgs> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(PolicyArgs policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
+            return policy(Output.of(policy));
         }
+
         public Builder webhook(Output<WebhookArgs> webhook) {
-            this.webhook = Objects.requireNonNull(webhook);
+            $.webhook = webhook;
             return this;
         }
+
         public Builder webhook(WebhookArgs webhook) {
-            this.webhook = Output.of(Objects.requireNonNull(webhook));
-            return this;
-        }        public AuditSinkSpecArgs build() {
-            return new AuditSinkSpecArgs(policy, webhook);
+            return webhook(Output.of(webhook));
+        }
+
+        public AuditSinkSpecArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.webhook = Objects.requireNonNull($.webhook, "expected parameter 'webhook' to be non-null");
+            return $;
         }
     }
+
 }

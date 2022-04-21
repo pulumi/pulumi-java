@@ -5,10 +5,10 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="category")
-      private final @Nullable Output<String> category;
+    private @Nullable Output<String> category;
 
-    public Output<String> category() {
-        return this.category == null ? Codegen.empty() : this.category;
+    public Optional<Output<String>> category() {
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="order")
-      private final @Nullable Output<Integer> order;
+    private @Nullable Output<Integer> order;
 
-    public Output<Integer> order() {
-        return this.order == null ? Codegen.empty() : this.order;
+    public Optional<Output<Integer>> order() {
+        return Optional.ofNullable(this.order);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public WorkbookTemplateGalleryArgs(
-        @Nullable Output<String> category,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> order,
-        @Nullable Output<String> resourceType,
-        @Nullable Output<String> type) {
-        this.category = category;
-        this.name = name;
-        this.order = order;
-        this.resourceType = resourceType;
-        this.type = type;
-    }
+    private WorkbookTemplateGalleryArgs() {}
 
-    private WorkbookTemplateGalleryArgs() {
-        this.category = Codegen.empty();
-        this.name = Codegen.empty();
-        this.order = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.type = Codegen.empty();
+    private WorkbookTemplateGalleryArgs(WorkbookTemplateGalleryArgs $) {
+        this.category = $.category;
+        this.name = $.name;
+        this.order = $.order;
+        this.resourceType = $.resourceType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkbookTemplateGalleryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> category;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> order;
-        private @Nullable Output<String> resourceType;
-        private @Nullable Output<String> type;
+        private WorkbookTemplateGalleryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkbookTemplateGalleryArgs();
         }
 
         public Builder(WorkbookTemplateGalleryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.name = defaults.name;
-    	      this.order = defaults.order;
-    	      this.resourceType = defaults.resourceType;
-    	      this.type = defaults.type;
+            $ = new WorkbookTemplateGalleryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder category(@Nullable Output<String> category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
-        public Builder category(@Nullable String category) {
-            this.category = Codegen.ofNullable(category);
-            return this;
+
+        public Builder category(String category) {
+            return category(Output.of(category));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder order(@Nullable Output<Integer> order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
-        public Builder order(@Nullable Integer order) {
-            this.order = Codegen.ofNullable(order);
-            return this;
+
+        public Builder order(Integer order) {
+            return order(Output.of(order));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public WorkbookTemplateGalleryArgs build() {
-            return new WorkbookTemplateGalleryArgs(category, name, order, resourceType, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public WorkbookTemplateGalleryArgs build() {
+            return $;
         }
     }
+
 }

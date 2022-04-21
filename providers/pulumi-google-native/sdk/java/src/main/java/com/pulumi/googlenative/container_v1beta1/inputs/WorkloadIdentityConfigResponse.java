@@ -21,7 +21,7 @@ public final class WorkloadIdentityConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="identityNamespace", required=true)
-      private final String identityNamespace;
+    private String identityNamespace;
 
     public String identityNamespace() {
         return this.identityNamespace;
@@ -32,7 +32,7 @@ public final class WorkloadIdentityConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="identityProvider", required=true)
-      private final String identityProvider;
+    private String identityProvider;
 
     public String identityProvider() {
         return this.identityProvider;
@@ -43,64 +43,59 @@ public final class WorkloadIdentityConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="workloadPool", required=true)
-      private final String workloadPool;
+    private String workloadPool;
 
     public String workloadPool() {
         return this.workloadPool;
     }
 
-    public WorkloadIdentityConfigResponse(
-        String identityNamespace,
-        String identityProvider,
-        String workloadPool) {
-        this.identityNamespace = Objects.requireNonNull(identityNamespace, "expected parameter 'identityNamespace' to be non-null");
-        this.identityProvider = Objects.requireNonNull(identityProvider, "expected parameter 'identityProvider' to be non-null");
-        this.workloadPool = Objects.requireNonNull(workloadPool, "expected parameter 'workloadPool' to be non-null");
-    }
+    private WorkloadIdentityConfigResponse() {}
 
-    private WorkloadIdentityConfigResponse() {
-        this.identityNamespace = null;
-        this.identityProvider = null;
-        this.workloadPool = null;
+    private WorkloadIdentityConfigResponse(WorkloadIdentityConfigResponse $) {
+        this.identityNamespace = $.identityNamespace;
+        this.identityProvider = $.identityProvider;
+        this.workloadPool = $.workloadPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadIdentityConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String identityNamespace;
-        private String identityProvider;
-        private String workloadPool;
+        private WorkloadIdentityConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadIdentityConfigResponse();
         }
 
         public Builder(WorkloadIdentityConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityNamespace = defaults.identityNamespace;
-    	      this.identityProvider = defaults.identityProvider;
-    	      this.workloadPool = defaults.workloadPool;
+            $ = new WorkloadIdentityConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identityNamespace(String identityNamespace) {
-            this.identityNamespace = Objects.requireNonNull(identityNamespace);
+            $.identityNamespace = identityNamespace;
             return this;
         }
+
         public Builder identityProvider(String identityProvider) {
-            this.identityProvider = Objects.requireNonNull(identityProvider);
+            $.identityProvider = identityProvider;
             return this;
         }
+
         public Builder workloadPool(String workloadPool) {
-            this.workloadPool = Objects.requireNonNull(workloadPool);
+            $.workloadPool = workloadPool;
             return this;
-        }        public WorkloadIdentityConfigResponse build() {
-            return new WorkloadIdentityConfigResponse(identityNamespace, identityProvider, workloadPool);
+        }
+
+        public WorkloadIdentityConfigResponse build() {
+            $.identityNamespace = Objects.requireNonNull($.identityNamespace, "expected parameter 'identityNamespace' to be non-null");
+            $.identityProvider = Objects.requireNonNull($.identityProvider, "expected parameter 'identityProvider' to be non-null");
+            $.workloadPool = Objects.requireNonNull($.workloadPool, "expected parameter 'workloadPool' to be non-null");
+            return $;
         }
     }
+
 }

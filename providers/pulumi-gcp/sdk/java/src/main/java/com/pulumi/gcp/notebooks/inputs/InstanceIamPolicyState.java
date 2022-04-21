@@ -5,9 +5,9 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InstanceIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InstanceIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable Output<String> instanceName;
+    private @Nullable Output<String> instanceName;
 
-    public Output<String> instanceName() {
-        return this.instanceName == null ? Codegen.empty() : this.instanceName;
+    public Optional<Output<String>> instanceName() {
+        return Optional.ofNullable(this.instanceName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class InstanceIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class InstanceIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class InstanceIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public InstanceIamPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> instanceName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project) {
-        this.etag = etag;
-        this.instanceName = instanceName;
-        this.location = location;
-        this.policyData = policyData;
-        this.project = project;
-    }
+    private InstanceIamPolicyState() {}
 
-    private InstanceIamPolicyState() {
-        this.etag = Codegen.empty();
-        this.instanceName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
+    private InstanceIamPolicyState(InstanceIamPolicyState $) {
+        this.etag = $.etag;
+        this.instanceName = $.instanceName;
+        this.location = $.location;
+        this.policyData = $.policyData;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> instanceName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
+        private InstanceIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceIamPolicyState();
         }
 
         public Builder(InstanceIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.instanceName = defaults.instanceName;
-    	      this.location = defaults.location;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
+            $ = new InstanceIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder instanceName(@Nullable Output<String> instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
-        public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Codegen.ofNullable(instanceName);
-            return this;
+
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public InstanceIamPolicyState build() {
-            return new InstanceIamPolicyState(etag, instanceName, location, policyData, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public InstanceIamPolicyState build() {
+            return $;
         }
     }
+
 }

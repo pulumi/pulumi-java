@@ -5,10 +5,10 @@ package com.pulumi.gcp.datacatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.PolicyTagIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,14 +17,14 @@ public final class PolicyTagIamMemberArgs extends com.pulumi.resources.ResourceA
     public static final PolicyTagIamMemberArgs Empty = new PolicyTagIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<PolicyTagIamMemberConditionArgs> condition;
+    private @Nullable Output<PolicyTagIamMemberConditionArgs> condition;
 
-    public Output<PolicyTagIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<PolicyTagIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -35,7 +35,7 @@ public final class PolicyTagIamMemberArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policyTag", required=true)
-      private final Output<String> policyTag;
+    private Output<String> policyTag;
 
     public Output<String> policyTag() {
         return this.policyTag;
@@ -48,89 +48,81 @@ public final class PolicyTagIamMemberArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public PolicyTagIamMemberArgs(
-        @Nullable Output<PolicyTagIamMemberConditionArgs> condition,
-        Output<String> member,
-        Output<String> policyTag,
-        Output<String> role) {
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.policyTag = Objects.requireNonNull(policyTag, "expected parameter 'policyTag' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private PolicyTagIamMemberArgs() {}
 
-    private PolicyTagIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.policyTag = Codegen.empty();
-        this.role = Codegen.empty();
+    private PolicyTagIamMemberArgs(PolicyTagIamMemberArgs $) {
+        this.condition = $.condition;
+        this.member = $.member;
+        this.policyTag = $.policyTag;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyTagIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PolicyTagIamMemberConditionArgs> condition;
-        private Output<String> member;
-        private Output<String> policyTag;
-        private Output<String> role;
+        private PolicyTagIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyTagIamMemberArgs();
         }
 
         public Builder(PolicyTagIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.policyTag = defaults.policyTag;
-    	      this.role = defaults.role;
+            $ = new PolicyTagIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<PolicyTagIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable PolicyTagIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(PolicyTagIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder policyTag(Output<String> policyTag) {
-            this.policyTag = Objects.requireNonNull(policyTag);
+            $.policyTag = policyTag;
             return this;
         }
+
         public Builder policyTag(String policyTag) {
-            this.policyTag = Output.of(Objects.requireNonNull(policyTag));
-            return this;
+            return policyTag(Output.of(policyTag));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public PolicyTagIamMemberArgs build() {
-            return new PolicyTagIamMemberArgs(condition, member, policyTag, role);
+            return role(Output.of(role));
+        }
+
+        public PolicyTagIamMemberArgs build() {
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.policyTag = Objects.requireNonNull($.policyTag, "expected parameter 'policyTag' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

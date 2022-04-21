@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class TarGZipReadSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="preserveCompressionFileNameAsFolder")
-      private final @Nullable Output<Object> preserveCompressionFileNameAsFolder;
+    private @Nullable Output<Object> preserveCompressionFileNameAsFolder;
 
-    public Output<Object> preserveCompressionFileNameAsFolder() {
-        return this.preserveCompressionFileNameAsFolder == null ? Codegen.empty() : this.preserveCompressionFileNameAsFolder;
+    public Optional<Output<Object>> preserveCompressionFileNameAsFolder() {
+        return Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class TarGZipReadSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public TarGZipReadSettingsArgs(
-        @Nullable Output<Object> preserveCompressionFileNameAsFolder,
-        Output<String> type) {
-        this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private TarGZipReadSettingsArgs() {}
 
-    private TarGZipReadSettingsArgs() {
-        this.preserveCompressionFileNameAsFolder = Codegen.empty();
-        this.type = Codegen.empty();
+    private TarGZipReadSettingsArgs(TarGZipReadSettingsArgs $) {
+        this.preserveCompressionFileNameAsFolder = $.preserveCompressionFileNameAsFolder;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TarGZipReadSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> preserveCompressionFileNameAsFolder;
-        private Output<String> type;
+        private TarGZipReadSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TarGZipReadSettingsArgs();
         }
 
         public Builder(TarGZipReadSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preserveCompressionFileNameAsFolder = defaults.preserveCompressionFileNameAsFolder;
-    	      this.type = defaults.type;
+            $ = new TarGZipReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preserveCompressionFileNameAsFolder(@Nullable Output<Object> preserveCompressionFileNameAsFolder) {
-            this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
+            $.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
             return this;
         }
-        public Builder preserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
-            this.preserveCompressionFileNameAsFolder = Codegen.ofNullable(preserveCompressionFileNameAsFolder);
-            return this;
+
+        public Builder preserveCompressionFileNameAsFolder(Object preserveCompressionFileNameAsFolder) {
+            return preserveCompressionFileNameAsFolder(Output.of(preserveCompressionFileNameAsFolder));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TarGZipReadSettingsArgs build() {
-            return new TarGZipReadSettingsArgs(preserveCompressionFileNameAsFolder, type);
+            return type(Output.of(type));
+        }
+
+        public TarGZipReadSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

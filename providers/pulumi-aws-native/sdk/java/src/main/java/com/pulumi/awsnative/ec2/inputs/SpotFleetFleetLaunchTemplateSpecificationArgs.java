@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,83 @@ public final class SpotFleetFleetLaunchTemplateSpecificationArgs extends com.pul
     public static final SpotFleetFleetLaunchTemplateSpecificationArgs Empty = new SpotFleetFleetLaunchTemplateSpecificationArgs();
 
     @Import(name="launchTemplateId")
-      private final @Nullable Output<String> launchTemplateId;
+    private @Nullable Output<String> launchTemplateId;
 
-    public Output<String> launchTemplateId() {
-        return this.launchTemplateId == null ? Codegen.empty() : this.launchTemplateId;
+    public Optional<Output<String>> launchTemplateId() {
+        return Optional.ofNullable(this.launchTemplateId);
     }
 
     @Import(name="launchTemplateName")
-      private final @Nullable Output<String> launchTemplateName;
+    private @Nullable Output<String> launchTemplateName;
 
-    public Output<String> launchTemplateName() {
-        return this.launchTemplateName == null ? Codegen.empty() : this.launchTemplateName;
+    public Optional<Output<String>> launchTemplateName() {
+        return Optional.ofNullable(this.launchTemplateName);
     }
 
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public SpotFleetFleetLaunchTemplateSpecificationArgs(
-        @Nullable Output<String> launchTemplateId,
-        @Nullable Output<String> launchTemplateName,
-        Output<String> version) {
-        this.launchTemplateId = launchTemplateId;
-        this.launchTemplateName = launchTemplateName;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SpotFleetFleetLaunchTemplateSpecificationArgs() {}
 
-    private SpotFleetFleetLaunchTemplateSpecificationArgs() {
-        this.launchTemplateId = Codegen.empty();
-        this.launchTemplateName = Codegen.empty();
-        this.version = Codegen.empty();
+    private SpotFleetFleetLaunchTemplateSpecificationArgs(SpotFleetFleetLaunchTemplateSpecificationArgs $) {
+        this.launchTemplateId = $.launchTemplateId;
+        this.launchTemplateName = $.launchTemplateName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetFleetLaunchTemplateSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> launchTemplateId;
-        private @Nullable Output<String> launchTemplateName;
-        private Output<String> version;
+        private SpotFleetFleetLaunchTemplateSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetFleetLaunchTemplateSpecificationArgs();
         }
 
         public Builder(SpotFleetFleetLaunchTemplateSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchTemplateId = defaults.launchTemplateId;
-    	      this.launchTemplateName = defaults.launchTemplateName;
-    	      this.version = defaults.version;
+            $ = new SpotFleetFleetLaunchTemplateSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder launchTemplateId(@Nullable Output<String> launchTemplateId) {
-            this.launchTemplateId = launchTemplateId;
+            $.launchTemplateId = launchTemplateId;
             return this;
         }
-        public Builder launchTemplateId(@Nullable String launchTemplateId) {
-            this.launchTemplateId = Codegen.ofNullable(launchTemplateId);
-            return this;
+
+        public Builder launchTemplateId(String launchTemplateId) {
+            return launchTemplateId(Output.of(launchTemplateId));
         }
+
         public Builder launchTemplateName(@Nullable Output<String> launchTemplateName) {
-            this.launchTemplateName = launchTemplateName;
+            $.launchTemplateName = launchTemplateName;
             return this;
         }
-        public Builder launchTemplateName(@Nullable String launchTemplateName) {
-            this.launchTemplateName = Codegen.ofNullable(launchTemplateName);
-            return this;
+
+        public Builder launchTemplateName(String launchTemplateName) {
+            return launchTemplateName(Output.of(launchTemplateName));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public SpotFleetFleetLaunchTemplateSpecificationArgs build() {
-            return new SpotFleetFleetLaunchTemplateSpecificationArgs(launchTemplateId, launchTemplateName, version);
+            return version(Output.of(version));
+        }
+
+        public SpotFleetFleetLaunchTemplateSpecificationArgs build() {
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

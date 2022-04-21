@@ -23,10 +23,10 @@ public final class ClusterProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="domain")
-      private final @Nullable String domain;
+    private @Nullable String domain;
 
     public Optional<String> domain() {
-        return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClusterProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="pullSecret")
-      private final @Nullable String pullSecret;
+    private @Nullable String pullSecret;
 
     public Optional<String> pullSecret() {
-        return this.pullSecret == null ? Optional.empty() : Optional.ofNullable(this.pullSecret);
+        return Optional.ofNullable(this.pullSecret);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ClusterProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupId")
-      private final @Nullable String resourceGroupId;
+    private @Nullable String resourceGroupId;
 
     public Optional<String> resourceGroupId() {
-        return this.resourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupId);
+        return Optional.ofNullable(this.resourceGroupId);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ClusterProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ClusterProfileResponse(
-        @Nullable String domain,
-        @Nullable String pullSecret,
-        @Nullable String resourceGroupId,
-        @Nullable String version) {
-        this.domain = domain;
-        this.pullSecret = pullSecret;
-        this.resourceGroupId = resourceGroupId;
-        this.version = version;
-    }
+    private ClusterProfileResponse() {}
 
-    private ClusterProfileResponse() {
-        this.domain = null;
-        this.pullSecret = null;
-        this.resourceGroupId = null;
-        this.version = null;
+    private ClusterProfileResponse(ClusterProfileResponse $) {
+        this.domain = $.domain;
+        this.pullSecret = $.pullSecret;
+        this.resourceGroupId = $.resourceGroupId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String domain;
-        private @Nullable String pullSecret;
-        private @Nullable String resourceGroupId;
-        private @Nullable String version;
+        private ClusterProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterProfileResponse();
         }
 
         public Builder(ClusterProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.pullSecret = defaults.pullSecret;
-    	      this.resourceGroupId = defaults.resourceGroupId;
-    	      this.version = defaults.version;
+            $ = new ClusterProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
+
         public Builder pullSecret(@Nullable String pullSecret) {
-            this.pullSecret = pullSecret;
+            $.pullSecret = pullSecret;
             return this;
         }
+
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+            $.resourceGroupId = resourceGroupId;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ClusterProfileResponse build() {
-            return new ClusterProfileResponse(domain, pullSecret, resourceGroupId, version);
+        }
+
+        public ClusterProfileResponse build() {
+            return $;
         }
     }
+
 }

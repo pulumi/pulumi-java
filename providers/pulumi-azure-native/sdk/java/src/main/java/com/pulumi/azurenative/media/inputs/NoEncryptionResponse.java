@@ -23,45 +23,44 @@ public final class NoEncryptionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="enabledProtocols")
-      private final @Nullable EnabledProtocolsResponse enabledProtocols;
+    private @Nullable EnabledProtocolsResponse enabledProtocols;
 
     public Optional<EnabledProtocolsResponse> enabledProtocols() {
-        return this.enabledProtocols == null ? Optional.empty() : Optional.ofNullable(this.enabledProtocols);
+        return Optional.ofNullable(this.enabledProtocols);
     }
 
-    public NoEncryptionResponse(@Nullable EnabledProtocolsResponse enabledProtocols) {
-        this.enabledProtocols = enabledProtocols;
-    }
+    private NoEncryptionResponse() {}
 
-    private NoEncryptionResponse() {
-        this.enabledProtocols = null;
+    private NoEncryptionResponse(NoEncryptionResponse $) {
+        this.enabledProtocols = $.enabledProtocols;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NoEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EnabledProtocolsResponse enabledProtocols;
+        private NoEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NoEncryptionResponse();
         }
 
         public Builder(NoEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabledProtocols = defaults.enabledProtocols;
+            $ = new NoEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
-            this.enabledProtocols = enabledProtocols;
+            $.enabledProtocols = enabledProtocols;
             return this;
-        }        public NoEncryptionResponse build() {
-            return new NoEncryptionResponse(enabledProtocols);
+        }
+
+        public NoEncryptionResponse build() {
+            return $;
         }
     }
+
 }

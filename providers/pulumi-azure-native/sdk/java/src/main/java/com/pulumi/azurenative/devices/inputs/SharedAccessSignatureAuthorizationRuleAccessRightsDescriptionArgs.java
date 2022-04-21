@@ -7,9 +7,9 @@ import com.pulumi.azurenative.devices.enums.AccessRightsDescription;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @Import(name="keyName", required=true)
-      private final Output<String> keyName;
+    private Output<String> keyName;
 
     public Output<String> keyName() {
         return this.keyName;
@@ -37,10 +37,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @Import(name="primaryKey")
-      private final @Nullable Output<String> primaryKey;
+    private @Nullable Output<String> primaryKey;
 
-    public Output<String> primaryKey() {
-        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
+    public Optional<Output<String>> primaryKey() {
+        return Optional.ofNullable(this.primaryKey);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @Import(name="rights", required=true)
-      private final Output<Either<String,AccessRightsDescription>> rights;
+    private Output<Either<String,AccessRightsDescription>> rights;
 
     public Output<Either<String,AccessRightsDescription>> rights() {
         return this.rights;
@@ -59,89 +59,80 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @Import(name="secondaryKey")
-      private final @Nullable Output<String> secondaryKey;
+    private @Nullable Output<String> secondaryKey;
 
-    public Output<String> secondaryKey() {
-        return this.secondaryKey == null ? Codegen.empty() : this.secondaryKey;
+    public Optional<Output<String>> secondaryKey() {
+        return Optional.ofNullable(this.secondaryKey);
     }
 
-    public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs(
-        Output<String> keyName,
-        @Nullable Output<String> primaryKey,
-        Output<Either<String,AccessRightsDescription>> rights,
-        @Nullable Output<String> secondaryKey) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.primaryKey = primaryKey;
-        this.rights = Objects.requireNonNull(rights, "expected parameter 'rights' to be non-null");
-        this.secondaryKey = secondaryKey;
-    }
+    private SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs() {}
 
-    private SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs() {
-        this.keyName = Codegen.empty();
-        this.primaryKey = Codegen.empty();
-        this.rights = Codegen.empty();
-        this.secondaryKey = Codegen.empty();
+    private SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs(SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs $) {
+        this.keyName = $.keyName;
+        this.primaryKey = $.primaryKey;
+        this.rights = $.rights;
+        this.secondaryKey = $.secondaryKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyName;
-        private @Nullable Output<String> primaryKey;
-        private Output<Either<String,AccessRightsDescription>> rights;
-        private @Nullable Output<String> secondaryKey;
+        private SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs();
         }
 
         public Builder(SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.primaryKey = defaults.primaryKey;
-    	      this.rights = defaults.rights;
-    	      this.secondaryKey = defaults.secondaryKey;
+            $ = new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(Output<String> keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyName(String keyName) {
-            this.keyName = Output.of(Objects.requireNonNull(keyName));
-            return this;
+            return keyName(Output.of(keyName));
         }
+
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
-            this.primaryKey = primaryKey;
+            $.primaryKey = primaryKey;
             return this;
         }
-        public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Codegen.ofNullable(primaryKey);
-            return this;
+
+        public Builder primaryKey(String primaryKey) {
+            return primaryKey(Output.of(primaryKey));
         }
+
         public Builder rights(Output<Either<String,AccessRightsDescription>> rights) {
-            this.rights = Objects.requireNonNull(rights);
+            $.rights = rights;
             return this;
         }
+
         public Builder rights(Either<String,AccessRightsDescription> rights) {
-            this.rights = Output.of(Objects.requireNonNull(rights));
-            return this;
+            return rights(Output.of(rights));
         }
+
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
-            this.secondaryKey = secondaryKey;
+            $.secondaryKey = secondaryKey;
             return this;
         }
-        public Builder secondaryKey(@Nullable String secondaryKey) {
-            this.secondaryKey = Codegen.ofNullable(secondaryKey);
-            return this;
-        }        public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs build() {
-            return new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs(keyName, primaryKey, rights, secondaryKey);
+
+        public Builder secondaryKey(String secondaryKey) {
+            return secondaryKey(Output.of(secondaryKey));
+        }
+
+        public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.rights = Objects.requireNonNull($.rights, "expected parameter 'rights' to be non-null");
+            return $;
         }
     }
+
 }

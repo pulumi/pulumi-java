@@ -7,11 +7,11 @@ import com.pulumi.aws.ec2.inputs.NetworkAclEgressArgs;
 import com.pulumi.aws.ec2.inputs.NetworkAclIngressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkAclArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="egress")
-      private final @Nullable Output<List<NetworkAclEgressArgs>> egress;
+    private @Nullable Output<List<NetworkAclEgressArgs>> egress;
 
-    public Output<List<NetworkAclEgressArgs>> egress() {
-        return this.egress == null ? Codegen.empty() : this.egress;
+    public Optional<Output<List<NetworkAclEgressArgs>>> egress() {
+        return Optional.ofNullable(this.egress);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkAclArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingress")
-      private final @Nullable Output<List<NetworkAclIngressArgs>> ingress;
+    private @Nullable Output<List<NetworkAclIngressArgs>> ingress;
 
-    public Output<List<NetworkAclIngressArgs>> ingress() {
-        return this.ingress == null ? Codegen.empty() : this.ingress;
+    public Optional<Output<List<NetworkAclIngressArgs>>> ingress() {
+        return Optional.ofNullable(this.ingress);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkAclArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NetworkAclArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -68,111 +68,101 @@ public final class NetworkAclArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public NetworkAclArgs(
-        @Nullable Output<List<NetworkAclEgressArgs>> egress,
-        @Nullable Output<List<NetworkAclIngressArgs>> ingress,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> vpcId) {
-        this.egress = egress;
-        this.ingress = ingress;
-        this.subnetIds = subnetIds;
-        this.tags = tags;
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private NetworkAclArgs() {}
 
-    private NetworkAclArgs() {
-        this.egress = Codegen.empty();
-        this.ingress = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private NetworkAclArgs(NetworkAclArgs $) {
+        this.egress = $.egress;
+        this.ingress = $.ingress;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkAclArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NetworkAclEgressArgs>> egress;
-        private @Nullable Output<List<NetworkAclIngressArgs>> ingress;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> vpcId;
+        private NetworkAclArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkAclArgs();
         }
 
         public Builder(NetworkAclArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egress = defaults.egress;
-    	      this.ingress = defaults.ingress;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new NetworkAclArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder egress(@Nullable Output<List<NetworkAclEgressArgs>> egress) {
-            this.egress = egress;
+            $.egress = egress;
             return this;
         }
-        public Builder egress(@Nullable List<NetworkAclEgressArgs> egress) {
-            this.egress = Codegen.ofNullable(egress);
-            return this;
+
+        public Builder egress(List<NetworkAclEgressArgs> egress) {
+            return egress(Output.of(egress));
         }
+
         public Builder egress(NetworkAclEgressArgs... egress) {
             return egress(List.of(egress));
         }
+
         public Builder ingress(@Nullable Output<List<NetworkAclIngressArgs>> ingress) {
-            this.ingress = ingress;
+            $.ingress = ingress;
             return this;
         }
-        public Builder ingress(@Nullable List<NetworkAclIngressArgs> ingress) {
-            this.ingress = Codegen.ofNullable(ingress);
-            return this;
+
+        public Builder ingress(List<NetworkAclIngressArgs> ingress) {
+            return ingress(Output.of(ingress));
         }
+
         public Builder ingress(NetworkAclIngressArgs... ingress) {
             return ingress(List.of(ingress));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public NetworkAclArgs build() {
-            return new NetworkAclArgs(egress, ingress, subnetIds, tags, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public NetworkAclArgs build() {
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

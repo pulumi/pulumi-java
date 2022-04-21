@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @Import(name="mediaObjects", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects() {
         return this.mediaObjects;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @Import(name="mediaType", required=true)
-      private final String mediaType;
+    private String mediaType;
 
     public String mediaType() {
         return this.mediaType;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects,
-        String mediaType) {
-        this.mediaObjects = Objects.requireNonNull(mediaObjects, "expected parameter 'mediaObjects' to be non-null");
-        this.mediaType = Objects.requireNonNull(mediaType, "expected parameter 'mediaType' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse() {
-        this.mediaObjects = List.of();
-        this.mediaType = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse $) {
+        this.mediaObjects = $.mediaObjects;
+        this.mediaType = $.mediaType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
-        private String mediaType;
+        private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mediaObjects = defaults.mediaObjects;
-    	      this.mediaType = defaults.mediaType;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mediaObjects(List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects) {
-            this.mediaObjects = Objects.requireNonNull(mediaObjects);
+            $.mediaObjects = mediaObjects;
             return this;
         }
+
         public Builder mediaObjects(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse... mediaObjects) {
             return mediaObjects(List.of(mediaObjects));
         }
+
         public Builder mediaType(String mediaType) {
-            this.mediaType = Objects.requireNonNull(mediaType);
+            $.mediaType = mediaType;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse(mediaObjects, mediaType);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse build() {
+            $.mediaObjects = Objects.requireNonNull($.mediaObjects, "expected parameter 'mediaObjects' to be non-null");
+            $.mediaType = Objects.requireNonNull($.mediaType, "expected parameter 'mediaType' to be non-null");
+            return $;
         }
     }
+
 }

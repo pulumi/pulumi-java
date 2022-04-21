@@ -19,45 +19,44 @@ public final class DomainJupyterServerAppSettings extends com.pulumi.resources.I
     public static final DomainJupyterServerAppSettings Empty = new DomainJupyterServerAppSettings();
 
     @Import(name="defaultResourceSpec")
-      private final @Nullable DomainResourceSpec defaultResourceSpec;
+    private @Nullable DomainResourceSpec defaultResourceSpec;
 
     public Optional<DomainResourceSpec> defaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceSpec);
+        return Optional.ofNullable(this.defaultResourceSpec);
     }
 
-    public DomainJupyterServerAppSettings(@Nullable DomainResourceSpec defaultResourceSpec) {
-        this.defaultResourceSpec = defaultResourceSpec;
-    }
+    private DomainJupyterServerAppSettings() {}
 
-    private DomainJupyterServerAppSettings() {
-        this.defaultResourceSpec = null;
+    private DomainJupyterServerAppSettings(DomainJupyterServerAppSettings $) {
+        this.defaultResourceSpec = $.defaultResourceSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainJupyterServerAppSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DomainResourceSpec defaultResourceSpec;
+        private DomainJupyterServerAppSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainJupyterServerAppSettings();
         }
 
         public Builder(DomainJupyterServerAppSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultResourceSpec = defaults.defaultResourceSpec;
+            $ = new DomainJupyterServerAppSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultResourceSpec(@Nullable DomainResourceSpec defaultResourceSpec) {
-            this.defaultResourceSpec = defaultResourceSpec;
+            $.defaultResourceSpec = defaultResourceSpec;
             return this;
-        }        public DomainJupyterServerAppSettings build() {
-            return new DomainJupyterServerAppSettings(defaultResourceSpec);
+        }
+
+        public DomainJupyterServerAppSettings build() {
+            return $;
         }
     }
+
 }

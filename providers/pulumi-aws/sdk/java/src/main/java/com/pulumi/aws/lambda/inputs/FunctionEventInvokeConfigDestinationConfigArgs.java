@@ -7,8 +7,8 @@ import com.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigOn
 import com.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigOnSuccessArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FunctionEventInvokeConfigDestinationConfigArgs extends com.pu
      * 
      */
     @Import(name="onFailure")
-      private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> onFailure;
+    private @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> onFailure;
 
-    public Output<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> onFailure() {
-        return this.onFailure == null ? Codegen.empty() : this.onFailure;
+    public Optional<Output<FunctionEventInvokeConfigDestinationConfigOnFailureArgs>> onFailure() {
+        return Optional.ofNullable(this.onFailure);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class FunctionEventInvokeConfigDestinationConfigArgs extends com.pu
      * 
      */
     @Import(name="onSuccess")
-      private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess;
+    private @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess;
 
-    public Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess() {
-        return this.onSuccess == null ? Codegen.empty() : this.onSuccess;
+    public Optional<Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs>> onSuccess() {
+        return Optional.ofNullable(this.onSuccess);
     }
 
-    public FunctionEventInvokeConfigDestinationConfigArgs(
-        @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> onFailure,
-        @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess) {
-        this.onFailure = onFailure;
-        this.onSuccess = onSuccess;
-    }
+    private FunctionEventInvokeConfigDestinationConfigArgs() {}
 
-    private FunctionEventInvokeConfigDestinationConfigArgs() {
-        this.onFailure = Codegen.empty();
-        this.onSuccess = Codegen.empty();
+    private FunctionEventInvokeConfigDestinationConfigArgs(FunctionEventInvokeConfigDestinationConfigArgs $) {
+        this.onFailure = $.onFailure;
+        this.onSuccess = $.onSuccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionEventInvokeConfigDestinationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> onFailure;
-        private @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess;
+        private FunctionEventInvokeConfigDestinationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionEventInvokeConfigDestinationConfigArgs();
         }
 
         public Builder(FunctionEventInvokeConfigDestinationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onFailure = defaults.onFailure;
-    	      this.onSuccess = defaults.onSuccess;
+            $ = new FunctionEventInvokeConfigDestinationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onFailure(@Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> onFailure) {
-            this.onFailure = onFailure;
+            $.onFailure = onFailure;
             return this;
         }
-        public Builder onFailure(@Nullable FunctionEventInvokeConfigDestinationConfigOnFailureArgs onFailure) {
-            this.onFailure = Codegen.ofNullable(onFailure);
-            return this;
+
+        public Builder onFailure(FunctionEventInvokeConfigDestinationConfigOnFailureArgs onFailure) {
+            return onFailure(Output.of(onFailure));
         }
+
         public Builder onSuccess(@Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess) {
-            this.onSuccess = onSuccess;
+            $.onSuccess = onSuccess;
             return this;
         }
-        public Builder onSuccess(@Nullable FunctionEventInvokeConfigDestinationConfigOnSuccessArgs onSuccess) {
-            this.onSuccess = Codegen.ofNullable(onSuccess);
-            return this;
-        }        public FunctionEventInvokeConfigDestinationConfigArgs build() {
-            return new FunctionEventInvokeConfigDestinationConfigArgs(onFailure, onSuccess);
+
+        public Builder onSuccess(FunctionEventInvokeConfigDestinationConfigOnSuccessArgs onSuccess) {
+            return onSuccess(Output.of(onSuccess));
+        }
+
+        public FunctionEventInvokeConfigDestinationConfigArgs build() {
+            return $;
         }
     }
+
 }

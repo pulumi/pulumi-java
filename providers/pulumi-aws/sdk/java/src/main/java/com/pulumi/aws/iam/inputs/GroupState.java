@@ -5,9 +5,9 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uniqueId")
-      private final @Nullable Output<String> uniqueId;
+    private @Nullable Output<String> uniqueId;
 
-    public Output<String> uniqueId() {
-        return this.uniqueId == null ? Codegen.empty() : this.uniqueId;
+    public Optional<Output<String>> uniqueId() {
+        return Optional.ofNullable(this.uniqueId);
     }
 
-    public GroupState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> path,
-        @Nullable Output<String> uniqueId) {
-        this.arn = arn;
-        this.name = name;
-        this.path = path;
-        this.uniqueId = uniqueId;
-    }
+    private GroupState() {}
 
-    private GroupState() {
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.path = Codegen.empty();
-        this.uniqueId = Codegen.empty();
+    private GroupState(GroupState $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.path = $.path;
+        this.uniqueId = $.uniqueId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> uniqueId;
+        private GroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupState();
         }
 
         public Builder(GroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.uniqueId = defaults.uniqueId;
+            $ = new GroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
-            this.uniqueId = uniqueId;
+            $.uniqueId = uniqueId;
             return this;
         }
-        public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Codegen.ofNullable(uniqueId);
-            return this;
-        }        public GroupState build() {
-            return new GroupState(arn, name, path, uniqueId);
+
+        public Builder uniqueId(String uniqueId) {
+            return uniqueId(Output.of(uniqueId));
+        }
+
+        public GroupState build() {
+            return $;
         }
     }
+
 }

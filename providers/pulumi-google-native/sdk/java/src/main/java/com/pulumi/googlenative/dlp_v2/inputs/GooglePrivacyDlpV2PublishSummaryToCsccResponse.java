@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GooglePrivacyDlpV2PublishSummaryToCsccResponse extends com.pu
 
     public static final GooglePrivacyDlpV2PublishSummaryToCsccResponse Empty = new GooglePrivacyDlpV2PublishSummaryToCsccResponse();
 
-    public GooglePrivacyDlpV2PublishSummaryToCsccResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GooglePrivacyDlpV2PublishSummaryToCsccResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GooglePrivacyDlpV2PublishSummaryToCsccResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GooglePrivacyDlpV2PublishSummaryToCsccResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GooglePrivacyDlpV2PublishSummaryToCsccResponse();
         }
         public GooglePrivacyDlpV2PublishSummaryToCsccResponse build() {
-            return new GooglePrivacyDlpV2PublishSummaryToCsccResponse();
+            return $;
         }
     }
+
 }

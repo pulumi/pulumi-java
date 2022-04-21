@@ -23,10 +23,10 @@ public final class DaprMetadataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DaprMetadataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secretRef")
-      private final @Nullable String secretRef;
+    private @Nullable String secretRef;
 
     public Optional<String> secretRef() {
-        return this.secretRef == null ? Optional.empty() : Optional.ofNullable(this.secretRef);
+        return Optional.ofNullable(this.secretRef);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class DaprMetadataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public DaprMetadataResponse(
-        @Nullable String name,
-        @Nullable String secretRef,
-        @Nullable String value) {
-        this.name = name;
-        this.secretRef = secretRef;
-        this.value = value;
-    }
+    private DaprMetadataResponse() {}
 
-    private DaprMetadataResponse() {
-        this.name = null;
-        this.secretRef = null;
-        this.value = null;
+    private DaprMetadataResponse(DaprMetadataResponse $) {
+        this.name = $.name;
+        this.secretRef = $.secretRef;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DaprMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String secretRef;
-        private @Nullable String value;
+        private DaprMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DaprMetadataResponse();
         }
 
         public Builder(DaprMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.secretRef = defaults.secretRef;
-    	      this.value = defaults.value;
+            $ = new DaprMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder secretRef(@Nullable String secretRef) {
-            this.secretRef = secretRef;
+            $.secretRef = secretRef;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public DaprMetadataResponse build() {
-            return new DaprMetadataResponse(name, secretRef, value);
+        }
+
+        public DaprMetadataResponse build() {
+            return $;
         }
     }
+
 }

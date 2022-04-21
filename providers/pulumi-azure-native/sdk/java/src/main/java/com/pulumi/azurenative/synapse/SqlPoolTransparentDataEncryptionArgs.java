@@ -7,9 +7,9 @@ import com.pulumi.azurenative.synapse.enums.TransparentDataEncryptionStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -33,7 +33,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="sqlPoolName", required=true)
-      private final Output<String> sqlPoolName;
+    private Output<String> sqlPoolName;
 
     public Output<String> sqlPoolName() {
         return this.sqlPoolName;
@@ -44,10 +44,10 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
+    private @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
-    public Output<Either<String,TransparentDataEncryptionStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,TransparentDataEncryptionStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="transparentDataEncryptionName")
-      private final @Nullable Output<String> transparentDataEncryptionName;
+    private @Nullable Output<String> transparentDataEncryptionName;
 
-    public Output<String> transparentDataEncryptionName() {
-        return this.transparentDataEncryptionName == null ? Codegen.empty() : this.transparentDataEncryptionName;
+    public Optional<Output<String>> transparentDataEncryptionName() {
+        return Optional.ofNullable(this.transparentDataEncryptionName);
     }
 
     /**
@@ -66,102 +66,91 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public SqlPoolTransparentDataEncryptionArgs(
-        Output<String> resourceGroupName,
-        Output<String> sqlPoolName,
-        @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status,
-        @Nullable Output<String> transparentDataEncryptionName,
-        Output<String> workspaceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlPoolName = Objects.requireNonNull(sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
-        this.status = status;
-        this.transparentDataEncryptionName = transparentDataEncryptionName;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private SqlPoolTransparentDataEncryptionArgs() {}
 
-    private SqlPoolTransparentDataEncryptionArgs() {
-        this.resourceGroupName = Codegen.empty();
-        this.sqlPoolName = Codegen.empty();
-        this.status = Codegen.empty();
-        this.transparentDataEncryptionName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private SqlPoolTransparentDataEncryptionArgs(SqlPoolTransparentDataEncryptionArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlPoolName = $.sqlPoolName;
+        this.status = $.status;
+        this.transparentDataEncryptionName = $.transparentDataEncryptionName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlPoolTransparentDataEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceGroupName;
-        private Output<String> sqlPoolName;
-        private @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
-        private @Nullable Output<String> transparentDataEncryptionName;
-        private Output<String> workspaceName;
+        private SqlPoolTransparentDataEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlPoolTransparentDataEncryptionArgs();
         }
 
         public Builder(SqlPoolTransparentDataEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlPoolName = defaults.sqlPoolName;
-    	      this.status = defaults.status;
-    	      this.transparentDataEncryptionName = defaults.transparentDataEncryptionName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new SqlPoolTransparentDataEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sqlPoolName(Output<String> sqlPoolName) {
-            this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
+
         public Builder sqlPoolName(String sqlPoolName) {
-            this.sqlPoolName = Output.of(Objects.requireNonNull(sqlPoolName));
-            return this;
+            return sqlPoolName(Output.of(sqlPoolName));
         }
+
         public Builder status(@Nullable Output<Either<String,TransparentDataEncryptionStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Either<String,TransparentDataEncryptionStatus> status) {
+            return status(Output.of(status));
         }
+
         public Builder transparentDataEncryptionName(@Nullable Output<String> transparentDataEncryptionName) {
-            this.transparentDataEncryptionName = transparentDataEncryptionName;
+            $.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
         }
-        public Builder transparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
-            this.transparentDataEncryptionName = Codegen.ofNullable(transparentDataEncryptionName);
-            return this;
+
+        public Builder transparentDataEncryptionName(String transparentDataEncryptionName) {
+            return transparentDataEncryptionName(Output.of(transparentDataEncryptionName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public SqlPoolTransparentDataEncryptionArgs build() {
-            return new SqlPoolTransparentDataEncryptionArgs(resourceGroupName, sqlPoolName, status, transparentDataEncryptionName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public SqlPoolTransparentDataEncryptionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlPoolName = Objects.requireNonNull($.sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

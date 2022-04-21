@@ -14,10 +14,10 @@ import com.pulumi.awsnative.dynamodb.inputs.GlobalTableTimeToLiveSpecificationAr
 import com.pulumi.awsnative.dynamodb.inputs.GlobalTableWriteProvisionedThroughputSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,265 +26,241 @@ public final class GlobalTableArgs extends com.pulumi.resources.ResourceArgs {
     public static final GlobalTableArgs Empty = new GlobalTableArgs();
 
     @Import(name="attributeDefinitions", required=true)
-      private final Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions;
+    private Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions;
 
     public Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions() {
         return this.attributeDefinitions;
     }
 
     @Import(name="billingMode")
-      private final @Nullable Output<String> billingMode;
+    private @Nullable Output<String> billingMode;
 
-    public Output<String> billingMode() {
-        return this.billingMode == null ? Codegen.empty() : this.billingMode;
+    public Optional<Output<String>> billingMode() {
+        return Optional.ofNullable(this.billingMode);
     }
 
     @Import(name="globalSecondaryIndexes")
-      private final @Nullable Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
+    private @Nullable Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
 
-    public Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes() {
-        return this.globalSecondaryIndexes == null ? Codegen.empty() : this.globalSecondaryIndexes;
+    public Optional<Output<List<GlobalTableGlobalSecondaryIndexArgs>>> globalSecondaryIndexes() {
+        return Optional.ofNullable(this.globalSecondaryIndexes);
     }
 
     @Import(name="keySchema", required=true)
-      private final Output<List<GlobalTableKeySchemaArgs>> keySchema;
+    private Output<List<GlobalTableKeySchemaArgs>> keySchema;
 
     public Output<List<GlobalTableKeySchemaArgs>> keySchema() {
         return this.keySchema;
     }
 
     @Import(name="localSecondaryIndexes")
-      private final @Nullable Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes;
+    private @Nullable Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes;
 
-    public Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes() {
-        return this.localSecondaryIndexes == null ? Codegen.empty() : this.localSecondaryIndexes;
+    public Optional<Output<List<GlobalTableLocalSecondaryIndexArgs>>> localSecondaryIndexes() {
+        return Optional.ofNullable(this.localSecondaryIndexes);
     }
 
     @Import(name="replicas", required=true)
-      private final Output<List<GlobalTableReplicaSpecificationArgs>> replicas;
+    private Output<List<GlobalTableReplicaSpecificationArgs>> replicas;
 
     public Output<List<GlobalTableReplicaSpecificationArgs>> replicas() {
         return this.replicas;
     }
 
     @Import(name="sSESpecification")
-      private final @Nullable Output<GlobalTableSSESpecificationArgs> sSESpecification;
+    private @Nullable Output<GlobalTableSSESpecificationArgs> sSESpecification;
 
-    public Output<GlobalTableSSESpecificationArgs> sSESpecification() {
-        return this.sSESpecification == null ? Codegen.empty() : this.sSESpecification;
+    public Optional<Output<GlobalTableSSESpecificationArgs>> sSESpecification() {
+        return Optional.ofNullable(this.sSESpecification);
     }
 
     @Import(name="streamSpecification")
-      private final @Nullable Output<GlobalTableStreamSpecificationArgs> streamSpecification;
+    private @Nullable Output<GlobalTableStreamSpecificationArgs> streamSpecification;
 
-    public Output<GlobalTableStreamSpecificationArgs> streamSpecification() {
-        return this.streamSpecification == null ? Codegen.empty() : this.streamSpecification;
+    public Optional<Output<GlobalTableStreamSpecificationArgs>> streamSpecification() {
+        return Optional.ofNullable(this.streamSpecification);
     }
 
     @Import(name="tableName")
-      private final @Nullable Output<String> tableName;
+    private @Nullable Output<String> tableName;
 
-    public Output<String> tableName() {
-        return this.tableName == null ? Codegen.empty() : this.tableName;
+    public Optional<Output<String>> tableName() {
+        return Optional.ofNullable(this.tableName);
     }
 
     @Import(name="timeToLiveSpecification")
-      private final @Nullable Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification;
+    private @Nullable Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification;
 
-    public Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification() {
-        return this.timeToLiveSpecification == null ? Codegen.empty() : this.timeToLiveSpecification;
+    public Optional<Output<GlobalTableTimeToLiveSpecificationArgs>> timeToLiveSpecification() {
+        return Optional.ofNullable(this.timeToLiveSpecification);
     }
 
     @Import(name="writeProvisionedThroughputSettings")
-      private final @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
+    private @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
 
-    public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings() {
-        return this.writeProvisionedThroughputSettings == null ? Codegen.empty() : this.writeProvisionedThroughputSettings;
+    public Optional<Output<GlobalTableWriteProvisionedThroughputSettingsArgs>> writeProvisionedThroughputSettings() {
+        return Optional.ofNullable(this.writeProvisionedThroughputSettings);
     }
 
-    public GlobalTableArgs(
-        Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions,
-        @Nullable Output<String> billingMode,
-        @Nullable Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes,
-        Output<List<GlobalTableKeySchemaArgs>> keySchema,
-        @Nullable Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes,
-        Output<List<GlobalTableReplicaSpecificationArgs>> replicas,
-        @Nullable Output<GlobalTableSSESpecificationArgs> sSESpecification,
-        @Nullable Output<GlobalTableStreamSpecificationArgs> streamSpecification,
-        @Nullable Output<String> tableName,
-        @Nullable Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification,
-        @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
-        this.attributeDefinitions = Objects.requireNonNull(attributeDefinitions, "expected parameter 'attributeDefinitions' to be non-null");
-        this.billingMode = billingMode;
-        this.globalSecondaryIndexes = globalSecondaryIndexes;
-        this.keySchema = Objects.requireNonNull(keySchema, "expected parameter 'keySchema' to be non-null");
-        this.localSecondaryIndexes = localSecondaryIndexes;
-        this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
-        this.sSESpecification = sSESpecification;
-        this.streamSpecification = streamSpecification;
-        this.tableName = tableName;
-        this.timeToLiveSpecification = timeToLiveSpecification;
-        this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
-    }
+    private GlobalTableArgs() {}
 
-    private GlobalTableArgs() {
-        this.attributeDefinitions = Codegen.empty();
-        this.billingMode = Codegen.empty();
-        this.globalSecondaryIndexes = Codegen.empty();
-        this.keySchema = Codegen.empty();
-        this.localSecondaryIndexes = Codegen.empty();
-        this.replicas = Codegen.empty();
-        this.sSESpecification = Codegen.empty();
-        this.streamSpecification = Codegen.empty();
-        this.tableName = Codegen.empty();
-        this.timeToLiveSpecification = Codegen.empty();
-        this.writeProvisionedThroughputSettings = Codegen.empty();
+    private GlobalTableArgs(GlobalTableArgs $) {
+        this.attributeDefinitions = $.attributeDefinitions;
+        this.billingMode = $.billingMode;
+        this.globalSecondaryIndexes = $.globalSecondaryIndexes;
+        this.keySchema = $.keySchema;
+        this.localSecondaryIndexes = $.localSecondaryIndexes;
+        this.replicas = $.replicas;
+        this.sSESpecification = $.sSESpecification;
+        this.streamSpecification = $.streamSpecification;
+        this.tableName = $.tableName;
+        this.timeToLiveSpecification = $.timeToLiveSpecification;
+        this.writeProvisionedThroughputSettings = $.writeProvisionedThroughputSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions;
-        private @Nullable Output<String> billingMode;
-        private @Nullable Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
-        private Output<List<GlobalTableKeySchemaArgs>> keySchema;
-        private @Nullable Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes;
-        private Output<List<GlobalTableReplicaSpecificationArgs>> replicas;
-        private @Nullable Output<GlobalTableSSESpecificationArgs> sSESpecification;
-        private @Nullable Output<GlobalTableStreamSpecificationArgs> streamSpecification;
-        private @Nullable Output<String> tableName;
-        private @Nullable Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification;
-        private @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
+        private GlobalTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableArgs();
         }
 
         public Builder(GlobalTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeDefinitions = defaults.attributeDefinitions;
-    	      this.billingMode = defaults.billingMode;
-    	      this.globalSecondaryIndexes = defaults.globalSecondaryIndexes;
-    	      this.keySchema = defaults.keySchema;
-    	      this.localSecondaryIndexes = defaults.localSecondaryIndexes;
-    	      this.replicas = defaults.replicas;
-    	      this.sSESpecification = defaults.sSESpecification;
-    	      this.streamSpecification = defaults.streamSpecification;
-    	      this.tableName = defaults.tableName;
-    	      this.timeToLiveSpecification = defaults.timeToLiveSpecification;
-    	      this.writeProvisionedThroughputSettings = defaults.writeProvisionedThroughputSettings;
+            $ = new GlobalTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeDefinitions(Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions) {
-            this.attributeDefinitions = Objects.requireNonNull(attributeDefinitions);
+            $.attributeDefinitions = attributeDefinitions;
             return this;
         }
+
         public Builder attributeDefinitions(List<GlobalTableAttributeDefinitionArgs> attributeDefinitions) {
-            this.attributeDefinitions = Output.of(Objects.requireNonNull(attributeDefinitions));
-            return this;
+            return attributeDefinitions(Output.of(attributeDefinitions));
         }
+
         public Builder attributeDefinitions(GlobalTableAttributeDefinitionArgs... attributeDefinitions) {
             return attributeDefinitions(List.of(attributeDefinitions));
         }
+
         public Builder billingMode(@Nullable Output<String> billingMode) {
-            this.billingMode = billingMode;
+            $.billingMode = billingMode;
             return this;
         }
-        public Builder billingMode(@Nullable String billingMode) {
-            this.billingMode = Codegen.ofNullable(billingMode);
-            return this;
+
+        public Builder billingMode(String billingMode) {
+            return billingMode(Output.of(billingMode));
         }
+
         public Builder globalSecondaryIndexes(@Nullable Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = globalSecondaryIndexes;
+            $.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
-        public Builder globalSecondaryIndexes(@Nullable List<GlobalTableGlobalSecondaryIndexArgs> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = Codegen.ofNullable(globalSecondaryIndexes);
-            return this;
+
+        public Builder globalSecondaryIndexes(List<GlobalTableGlobalSecondaryIndexArgs> globalSecondaryIndexes) {
+            return globalSecondaryIndexes(Output.of(globalSecondaryIndexes));
         }
+
         public Builder globalSecondaryIndexes(GlobalTableGlobalSecondaryIndexArgs... globalSecondaryIndexes) {
             return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
         }
+
         public Builder keySchema(Output<List<GlobalTableKeySchemaArgs>> keySchema) {
-            this.keySchema = Objects.requireNonNull(keySchema);
+            $.keySchema = keySchema;
             return this;
         }
+
         public Builder keySchema(List<GlobalTableKeySchemaArgs> keySchema) {
-            this.keySchema = Output.of(Objects.requireNonNull(keySchema));
-            return this;
+            return keySchema(Output.of(keySchema));
         }
+
         public Builder keySchema(GlobalTableKeySchemaArgs... keySchema) {
             return keySchema(List.of(keySchema));
         }
+
         public Builder localSecondaryIndexes(@Nullable Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes) {
-            this.localSecondaryIndexes = localSecondaryIndexes;
+            $.localSecondaryIndexes = localSecondaryIndexes;
             return this;
         }
-        public Builder localSecondaryIndexes(@Nullable List<GlobalTableLocalSecondaryIndexArgs> localSecondaryIndexes) {
-            this.localSecondaryIndexes = Codegen.ofNullable(localSecondaryIndexes);
-            return this;
+
+        public Builder localSecondaryIndexes(List<GlobalTableLocalSecondaryIndexArgs> localSecondaryIndexes) {
+            return localSecondaryIndexes(Output.of(localSecondaryIndexes));
         }
+
         public Builder localSecondaryIndexes(GlobalTableLocalSecondaryIndexArgs... localSecondaryIndexes) {
             return localSecondaryIndexes(List.of(localSecondaryIndexes));
         }
+
         public Builder replicas(Output<List<GlobalTableReplicaSpecificationArgs>> replicas) {
-            this.replicas = Objects.requireNonNull(replicas);
+            $.replicas = replicas;
             return this;
         }
+
         public Builder replicas(List<GlobalTableReplicaSpecificationArgs> replicas) {
-            this.replicas = Output.of(Objects.requireNonNull(replicas));
-            return this;
+            return replicas(Output.of(replicas));
         }
+
         public Builder replicas(GlobalTableReplicaSpecificationArgs... replicas) {
             return replicas(List.of(replicas));
         }
+
         public Builder sSESpecification(@Nullable Output<GlobalTableSSESpecificationArgs> sSESpecification) {
-            this.sSESpecification = sSESpecification;
+            $.sSESpecification = sSESpecification;
             return this;
         }
-        public Builder sSESpecification(@Nullable GlobalTableSSESpecificationArgs sSESpecification) {
-            this.sSESpecification = Codegen.ofNullable(sSESpecification);
-            return this;
+
+        public Builder sSESpecification(GlobalTableSSESpecificationArgs sSESpecification) {
+            return sSESpecification(Output.of(sSESpecification));
         }
+
         public Builder streamSpecification(@Nullable Output<GlobalTableStreamSpecificationArgs> streamSpecification) {
-            this.streamSpecification = streamSpecification;
+            $.streamSpecification = streamSpecification;
             return this;
         }
-        public Builder streamSpecification(@Nullable GlobalTableStreamSpecificationArgs streamSpecification) {
-            this.streamSpecification = Codegen.ofNullable(streamSpecification);
-            return this;
+
+        public Builder streamSpecification(GlobalTableStreamSpecificationArgs streamSpecification) {
+            return streamSpecification(Output.of(streamSpecification));
         }
+
         public Builder tableName(@Nullable Output<String> tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
-        public Builder tableName(@Nullable String tableName) {
-            this.tableName = Codegen.ofNullable(tableName);
-            return this;
+
+        public Builder tableName(String tableName) {
+            return tableName(Output.of(tableName));
         }
+
         public Builder timeToLiveSpecification(@Nullable Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification) {
-            this.timeToLiveSpecification = timeToLiveSpecification;
+            $.timeToLiveSpecification = timeToLiveSpecification;
             return this;
         }
-        public Builder timeToLiveSpecification(@Nullable GlobalTableTimeToLiveSpecificationArgs timeToLiveSpecification) {
-            this.timeToLiveSpecification = Codegen.ofNullable(timeToLiveSpecification);
-            return this;
+
+        public Builder timeToLiveSpecification(GlobalTableTimeToLiveSpecificationArgs timeToLiveSpecification) {
+            return timeToLiveSpecification(Output.of(timeToLiveSpecification));
         }
+
         public Builder writeProvisionedThroughputSettings(@Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
-            this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
+            $.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }
-        public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
-            this.writeProvisionedThroughputSettings = Codegen.ofNullable(writeProvisionedThroughputSettings);
-            return this;
-        }        public GlobalTableArgs build() {
-            return new GlobalTableArgs(attributeDefinitions, billingMode, globalSecondaryIndexes, keySchema, localSecondaryIndexes, replicas, sSESpecification, streamSpecification, tableName, timeToLiveSpecification, writeProvisionedThroughputSettings);
+
+        public Builder writeProvisionedThroughputSettings(GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
+            return writeProvisionedThroughputSettings(Output.of(writeProvisionedThroughputSettings));
+        }
+
+        public GlobalTableArgs build() {
+            $.attributeDefinitions = Objects.requireNonNull($.attributeDefinitions, "expected parameter 'attributeDefinitions' to be non-null");
+            $.keySchema = Objects.requireNonNull($.keySchema, "expected parameter 'keySchema' to be non-null");
+            $.replicas = Objects.requireNonNull($.replicas, "expected parameter 'replicas' to be non-null");
+            return $;
         }
     }
+
 }

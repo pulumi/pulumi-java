@@ -17,7 +17,7 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="networkVirtualApplianceName", required=true)
-      private final String networkVirtualApplianceName;
+    private String networkVirtualApplianceName;
 
     public String networkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
@@ -28,7 +28,7 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="siteName", required=true)
-      private final String siteName;
+    private String siteName;
 
     public String siteName() {
         return this.siteName;
     }
 
-    public GetVirtualApplianceSiteArgs(
-        String networkVirtualApplianceName,
-        String resourceGroupName,
-        String siteName) {
-        this.networkVirtualApplianceName = Objects.requireNonNull(networkVirtualApplianceName, "expected parameter 'networkVirtualApplianceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
-    }
+    private GetVirtualApplianceSiteArgs() {}
 
-    private GetVirtualApplianceSiteArgs() {
-        this.networkVirtualApplianceName = null;
-        this.resourceGroupName = null;
-        this.siteName = null;
+    private GetVirtualApplianceSiteArgs(GetVirtualApplianceSiteArgs $) {
+        this.networkVirtualApplianceName = $.networkVirtualApplianceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.siteName = $.siteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualApplianceSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkVirtualApplianceName;
-        private String resourceGroupName;
-        private String siteName;
+        private GetVirtualApplianceSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualApplianceSiteArgs();
         }
 
         public Builder(GetVirtualApplianceSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkVirtualApplianceName = defaults.networkVirtualApplianceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.siteName = defaults.siteName;
+            $ = new GetVirtualApplianceSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
-            this.networkVirtualApplianceName = Objects.requireNonNull(networkVirtualApplianceName);
+            $.networkVirtualApplianceName = networkVirtualApplianceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder siteName(String siteName) {
-            this.siteName = Objects.requireNonNull(siteName);
+            $.siteName = siteName;
             return this;
-        }        public GetVirtualApplianceSiteArgs build() {
-            return new GetVirtualApplianceSiteArgs(networkVirtualApplianceName, resourceGroupName, siteName);
+        }
+
+        public GetVirtualApplianceSiteArgs build() {
+            $.networkVirtualApplianceName = Objects.requireNonNull($.networkVirtualApplianceName, "expected parameter 'networkVirtualApplianceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.siteName = Objects.requireNonNull($.siteName, "expected parameter 'siteName' to be non-null");
+            return $;
         }
     }
+
 }

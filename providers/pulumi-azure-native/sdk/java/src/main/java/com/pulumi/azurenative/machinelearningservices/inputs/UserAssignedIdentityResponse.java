@@ -21,7 +21,7 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -32,7 +32,7 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -43,64 +43,59 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
     }
 
-    public UserAssignedIdentityResponse(
-        String clientId,
-        String principalId,
-        String tenantId) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private UserAssignedIdentityResponse() {}
 
-    private UserAssignedIdentityResponse() {
-        this.clientId = null;
-        this.principalId = null;
-        this.tenantId = null;
+    private UserAssignedIdentityResponse(UserAssignedIdentityResponse $) {
+        this.clientId = $.clientId;
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAssignedIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientId;
-        private String principalId;
-        private String tenantId;
+        private UserAssignedIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAssignedIdentityResponse();
         }
 
         public Builder(UserAssignedIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new UserAssignedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
-        }        public UserAssignedIdentityResponse build() {
-            return new UserAssignedIdentityResponse(clientId, principalId, tenantId);
+        }
+
+        public UserAssignedIdentityResponse build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

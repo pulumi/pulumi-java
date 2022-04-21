@@ -5,7 +5,6 @@ package com.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunExecutionState;
 import com.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunResultState;
 import com.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScanRunErrorTraceArgs;
@@ -15,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="errorTrace")
-      private final @Nullable Output<ScanRunErrorTraceArgs> errorTrace;
+    private @Nullable Output<ScanRunErrorTraceArgs> errorTrace;
 
-    public Output<ScanRunErrorTraceArgs> errorTrace() {
-        return this.errorTrace == null ? Codegen.empty() : this.errorTrace;
+    public Optional<Output<ScanRunErrorTraceArgs>> errorTrace() {
+        return Optional.ofNullable(this.errorTrace);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionState")
-      private final @Nullable Output<ScanRunExecutionState> executionState;
+    private @Nullable Output<ScanRunExecutionState> executionState;
 
-    public Output<ScanRunExecutionState> executionState() {
-        return this.executionState == null ? Codegen.empty() : this.executionState;
+    public Optional<Output<ScanRunExecutionState>> executionState() {
+        return Optional.ofNullable(this.executionState);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hasVulnerabilities")
-      private final @Nullable Output<Boolean> hasVulnerabilities;
+    private @Nullable Output<Boolean> hasVulnerabilities;
 
-    public Output<Boolean> hasVulnerabilities() {
-        return this.hasVulnerabilities == null ? Codegen.empty() : this.hasVulnerabilities;
+    public Optional<Output<Boolean>> hasVulnerabilities() {
+        return Optional.ofNullable(this.hasVulnerabilities);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="progressPercent")
-      private final @Nullable Output<Integer> progressPercent;
+    private @Nullable Output<Integer> progressPercent;
 
-    public Output<Integer> progressPercent() {
-        return this.progressPercent == null ? Codegen.empty() : this.progressPercent;
+    public Optional<Output<Integer>> progressPercent() {
+        return Optional.ofNullable(this.progressPercent);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resultState")
-      private final @Nullable Output<ScanRunResultState> resultState;
+    private @Nullable Output<ScanRunResultState> resultState;
 
-    public Output<ScanRunResultState> resultState() {
-        return this.resultState == null ? Codegen.empty() : this.resultState;
+    public Optional<Output<ScanRunResultState>> resultState() {
+        return Optional.ofNullable(this.resultState);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlsCrawledCount")
-      private final @Nullable Output<String> urlsCrawledCount;
+    private @Nullable Output<String> urlsCrawledCount;
 
-    public Output<String> urlsCrawledCount() {
-        return this.urlsCrawledCount == null ? Codegen.empty() : this.urlsCrawledCount;
+    public Optional<Output<String>> urlsCrawledCount() {
+        return Optional.ofNullable(this.urlsCrawledCount);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlsTestedCount")
-      private final @Nullable Output<String> urlsTestedCount;
+    private @Nullable Output<String> urlsTestedCount;
 
-    public Output<String> urlsTestedCount() {
-        return this.urlsTestedCount == null ? Codegen.empty() : this.urlsTestedCount;
+    public Optional<Output<String>> urlsTestedCount() {
+        return Optional.ofNullable(this.urlsTestedCount);
     }
 
     /**
@@ -141,183 +141,152 @@ public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="warningTraces")
-      private final @Nullable Output<List<ScanRunWarningTraceArgs>> warningTraces;
+    private @Nullable Output<List<ScanRunWarningTraceArgs>> warningTraces;
 
-    public Output<List<ScanRunWarningTraceArgs>> warningTraces() {
-        return this.warningTraces == null ? Codegen.empty() : this.warningTraces;
+    public Optional<Output<List<ScanRunWarningTraceArgs>>> warningTraces() {
+        return Optional.ofNullable(this.warningTraces);
     }
 
-    public ScanRunArgs(
-        @Nullable Output<String> endTime,
-        @Nullable Output<ScanRunErrorTraceArgs> errorTrace,
-        @Nullable Output<ScanRunExecutionState> executionState,
-        @Nullable Output<Boolean> hasVulnerabilities,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> progressPercent,
-        @Nullable Output<ScanRunResultState> resultState,
-        @Nullable Output<String> startTime,
-        @Nullable Output<String> urlsCrawledCount,
-        @Nullable Output<String> urlsTestedCount,
-        @Nullable Output<List<ScanRunWarningTraceArgs>> warningTraces) {
-        this.endTime = endTime;
-        this.errorTrace = errorTrace;
-        this.executionState = executionState;
-        this.hasVulnerabilities = hasVulnerabilities;
-        this.name = name;
-        this.progressPercent = progressPercent;
-        this.resultState = resultState;
-        this.startTime = startTime;
-        this.urlsCrawledCount = urlsCrawledCount;
-        this.urlsTestedCount = urlsTestedCount;
-        this.warningTraces = warningTraces;
-    }
+    private ScanRunArgs() {}
 
-    private ScanRunArgs() {
-        this.endTime = Codegen.empty();
-        this.errorTrace = Codegen.empty();
-        this.executionState = Codegen.empty();
-        this.hasVulnerabilities = Codegen.empty();
-        this.name = Codegen.empty();
-        this.progressPercent = Codegen.empty();
-        this.resultState = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.urlsCrawledCount = Codegen.empty();
-        this.urlsTestedCount = Codegen.empty();
-        this.warningTraces = Codegen.empty();
+    private ScanRunArgs(ScanRunArgs $) {
+        this.endTime = $.endTime;
+        this.errorTrace = $.errorTrace;
+        this.executionState = $.executionState;
+        this.hasVulnerabilities = $.hasVulnerabilities;
+        this.name = $.name;
+        this.progressPercent = $.progressPercent;
+        this.resultState = $.resultState;
+        this.startTime = $.startTime;
+        this.urlsCrawledCount = $.urlsCrawledCount;
+        this.urlsTestedCount = $.urlsTestedCount;
+        this.warningTraces = $.warningTraces;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScanRunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<ScanRunErrorTraceArgs> errorTrace;
-        private @Nullable Output<ScanRunExecutionState> executionState;
-        private @Nullable Output<Boolean> hasVulnerabilities;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> progressPercent;
-        private @Nullable Output<ScanRunResultState> resultState;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<String> urlsCrawledCount;
-        private @Nullable Output<String> urlsTestedCount;
-        private @Nullable Output<List<ScanRunWarningTraceArgs>> warningTraces;
+        private ScanRunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScanRunArgs();
         }
 
         public Builder(ScanRunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.errorTrace = defaults.errorTrace;
-    	      this.executionState = defaults.executionState;
-    	      this.hasVulnerabilities = defaults.hasVulnerabilities;
-    	      this.name = defaults.name;
-    	      this.progressPercent = defaults.progressPercent;
-    	      this.resultState = defaults.resultState;
-    	      this.startTime = defaults.startTime;
-    	      this.urlsCrawledCount = defaults.urlsCrawledCount;
-    	      this.urlsTestedCount = defaults.urlsTestedCount;
-    	      this.warningTraces = defaults.warningTraces;
+            $ = new ScanRunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder errorTrace(@Nullable Output<ScanRunErrorTraceArgs> errorTrace) {
-            this.errorTrace = errorTrace;
+            $.errorTrace = errorTrace;
             return this;
         }
-        public Builder errorTrace(@Nullable ScanRunErrorTraceArgs errorTrace) {
-            this.errorTrace = Codegen.ofNullable(errorTrace);
-            return this;
+
+        public Builder errorTrace(ScanRunErrorTraceArgs errorTrace) {
+            return errorTrace(Output.of(errorTrace));
         }
+
         public Builder executionState(@Nullable Output<ScanRunExecutionState> executionState) {
-            this.executionState = executionState;
+            $.executionState = executionState;
             return this;
         }
-        public Builder executionState(@Nullable ScanRunExecutionState executionState) {
-            this.executionState = Codegen.ofNullable(executionState);
-            return this;
+
+        public Builder executionState(ScanRunExecutionState executionState) {
+            return executionState(Output.of(executionState));
         }
+
         public Builder hasVulnerabilities(@Nullable Output<Boolean> hasVulnerabilities) {
-            this.hasVulnerabilities = hasVulnerabilities;
+            $.hasVulnerabilities = hasVulnerabilities;
             return this;
         }
-        public Builder hasVulnerabilities(@Nullable Boolean hasVulnerabilities) {
-            this.hasVulnerabilities = Codegen.ofNullable(hasVulnerabilities);
-            return this;
+
+        public Builder hasVulnerabilities(Boolean hasVulnerabilities) {
+            return hasVulnerabilities(Output.of(hasVulnerabilities));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder progressPercent(@Nullable Output<Integer> progressPercent) {
-            this.progressPercent = progressPercent;
+            $.progressPercent = progressPercent;
             return this;
         }
-        public Builder progressPercent(@Nullable Integer progressPercent) {
-            this.progressPercent = Codegen.ofNullable(progressPercent);
-            return this;
+
+        public Builder progressPercent(Integer progressPercent) {
+            return progressPercent(Output.of(progressPercent));
         }
+
         public Builder resultState(@Nullable Output<ScanRunResultState> resultState) {
-            this.resultState = resultState;
+            $.resultState = resultState;
             return this;
         }
-        public Builder resultState(@Nullable ScanRunResultState resultState) {
-            this.resultState = Codegen.ofNullable(resultState);
-            return this;
+
+        public Builder resultState(ScanRunResultState resultState) {
+            return resultState(Output.of(resultState));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder urlsCrawledCount(@Nullable Output<String> urlsCrawledCount) {
-            this.urlsCrawledCount = urlsCrawledCount;
+            $.urlsCrawledCount = urlsCrawledCount;
             return this;
         }
-        public Builder urlsCrawledCount(@Nullable String urlsCrawledCount) {
-            this.urlsCrawledCount = Codegen.ofNullable(urlsCrawledCount);
-            return this;
+
+        public Builder urlsCrawledCount(String urlsCrawledCount) {
+            return urlsCrawledCount(Output.of(urlsCrawledCount));
         }
+
         public Builder urlsTestedCount(@Nullable Output<String> urlsTestedCount) {
-            this.urlsTestedCount = urlsTestedCount;
+            $.urlsTestedCount = urlsTestedCount;
             return this;
         }
-        public Builder urlsTestedCount(@Nullable String urlsTestedCount) {
-            this.urlsTestedCount = Codegen.ofNullable(urlsTestedCount);
-            return this;
+
+        public Builder urlsTestedCount(String urlsTestedCount) {
+            return urlsTestedCount(Output.of(urlsTestedCount));
         }
+
         public Builder warningTraces(@Nullable Output<List<ScanRunWarningTraceArgs>> warningTraces) {
-            this.warningTraces = warningTraces;
+            $.warningTraces = warningTraces;
             return this;
         }
-        public Builder warningTraces(@Nullable List<ScanRunWarningTraceArgs> warningTraces) {
-            this.warningTraces = Codegen.ofNullable(warningTraces);
-            return this;
+
+        public Builder warningTraces(List<ScanRunWarningTraceArgs> warningTraces) {
+            return warningTraces(Output.of(warningTraces));
         }
+
         public Builder warningTraces(ScanRunWarningTraceArgs... warningTraces) {
             return warningTraces(List.of(warningTraces));
-        }        public ScanRunArgs build() {
-            return new ScanRunArgs(endTime, errorTrace, executionState, hasVulnerabilities, name, progressPercent, resultState, startTime, urlsCrawledCount, urlsTestedCount, warningTraces);
+        }
+
+        public ScanRunArgs build() {
+            return $;
         }
     }
+
 }

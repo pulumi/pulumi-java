@@ -6,8 +6,8 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.TerminateNotificationProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ScheduledEventsProfileArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="terminateNotificationProfile")
-      private final @Nullable Output<TerminateNotificationProfileArgs> terminateNotificationProfile;
+    private @Nullable Output<TerminateNotificationProfileArgs> terminateNotificationProfile;
 
-    public Output<TerminateNotificationProfileArgs> terminateNotificationProfile() {
-        return this.terminateNotificationProfile == null ? Codegen.empty() : this.terminateNotificationProfile;
+    public Optional<Output<TerminateNotificationProfileArgs>> terminateNotificationProfile() {
+        return Optional.ofNullable(this.terminateNotificationProfile);
     }
 
-    public ScheduledEventsProfileArgs(@Nullable Output<TerminateNotificationProfileArgs> terminateNotificationProfile) {
-        this.terminateNotificationProfile = terminateNotificationProfile;
-    }
+    private ScheduledEventsProfileArgs() {}
 
-    private ScheduledEventsProfileArgs() {
-        this.terminateNotificationProfile = Codegen.empty();
+    private ScheduledEventsProfileArgs(ScheduledEventsProfileArgs $) {
+        this.terminateNotificationProfile = $.terminateNotificationProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledEventsProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TerminateNotificationProfileArgs> terminateNotificationProfile;
+        private ScheduledEventsProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledEventsProfileArgs();
         }
 
         public Builder(ScheduledEventsProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.terminateNotificationProfile = defaults.terminateNotificationProfile;
+            $ = new ScheduledEventsProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder terminateNotificationProfile(@Nullable Output<TerminateNotificationProfileArgs> terminateNotificationProfile) {
-            this.terminateNotificationProfile = terminateNotificationProfile;
+            $.terminateNotificationProfile = terminateNotificationProfile;
             return this;
         }
-        public Builder terminateNotificationProfile(@Nullable TerminateNotificationProfileArgs terminateNotificationProfile) {
-            this.terminateNotificationProfile = Codegen.ofNullable(terminateNotificationProfile);
-            return this;
-        }        public ScheduledEventsProfileArgs build() {
-            return new ScheduledEventsProfileArgs(terminateNotificationProfile);
+
+        public Builder terminateNotificationProfile(TerminateNotificationProfileArgs terminateNotificationProfile) {
+            return terminateNotificationProfile(Output.of(terminateNotificationProfile));
+        }
+
+        public ScheduledEventsProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.FirewallPolicyIntrusionDetectionStat
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
+    private @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
-    public Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,FirewallPolicyIntrusionDetectionStateType>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
-        this.id = id;
-        this.mode = mode;
-    }
+    private FirewallPolicyIntrusionDetectionSignatureSpecificationArgs() {}
 
-    private FirewallPolicyIntrusionDetectionSignatureSpecificationArgs() {
-        this.id = Codegen.empty();
-        this.mode = Codegen.empty();
+    private FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(FirewallPolicyIntrusionDetectionSignatureSpecificationArgs $) {
+        this.id = $.id;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyIntrusionDetectionSignatureSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
+        private FirewallPolicyIntrusionDetectionSignatureSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyIntrusionDetectionSignatureSpecificationArgs();
         }
 
         public Builder(FirewallPolicyIntrusionDetectionSignatureSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.mode = defaults.mode;
+            $ = new FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder mode(@Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public FirewallPolicyIntrusionDetectionSignatureSpecificationArgs build() {
-            return new FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(id, mode);
+
+        public Builder mode(Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
+            return mode(Output.of(mode));
+        }
+
+        public FirewallPolicyIntrusionDetectionSignatureSpecificationArgs build() {
+            return $;
         }
     }
+
 }

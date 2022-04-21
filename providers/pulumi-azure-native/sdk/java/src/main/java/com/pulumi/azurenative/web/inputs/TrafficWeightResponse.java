@@ -26,10 +26,10 @@ public final class TrafficWeightResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="latestRevision")
-      private final @Nullable Boolean latestRevision;
+    private @Nullable Boolean latestRevision;
 
     public Optional<Boolean> latestRevision() {
-        return this.latestRevision == null ? Optional.empty() : Optional.ofNullable(this.latestRevision);
+        return Optional.ofNullable(this.latestRevision);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TrafficWeightResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="revisionName")
-      private final @Nullable String revisionName;
+    private @Nullable String revisionName;
 
     public Optional<String> revisionName() {
-        return this.revisionName == null ? Optional.empty() : Optional.ofNullable(this.revisionName);
+        return Optional.ofNullable(this.revisionName);
     }
 
     /**
@@ -48,64 +48,57 @@ public final class TrafficWeightResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="weight")
-      private final @Nullable Integer weight;
+    private @Nullable Integer weight;
 
     public Optional<Integer> weight() {
-        return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
+        return Optional.ofNullable(this.weight);
     }
 
-    public TrafficWeightResponse(
-        @Nullable Boolean latestRevision,
-        @Nullable String revisionName,
-        @Nullable Integer weight) {
-        this.latestRevision = Codegen.booleanProp("latestRevision").arg(latestRevision).def(false).getNullable();
-        this.revisionName = revisionName;
-        this.weight = weight;
-    }
+    private TrafficWeightResponse() {}
 
-    private TrafficWeightResponse() {
-        this.latestRevision = null;
-        this.revisionName = null;
-        this.weight = null;
+    private TrafficWeightResponse(TrafficWeightResponse $) {
+        this.latestRevision = $.latestRevision;
+        this.revisionName = $.revisionName;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficWeightResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean latestRevision;
-        private @Nullable String revisionName;
-        private @Nullable Integer weight;
+        private TrafficWeightResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficWeightResponse();
         }
 
         public Builder(TrafficWeightResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.latestRevision = defaults.latestRevision;
-    	      this.revisionName = defaults.revisionName;
-    	      this.weight = defaults.weight;
+            $ = new TrafficWeightResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder latestRevision(@Nullable Boolean latestRevision) {
-            this.latestRevision = latestRevision;
+            $.latestRevision = latestRevision;
             return this;
         }
+
         public Builder revisionName(@Nullable String revisionName) {
-            this.revisionName = revisionName;
+            $.revisionName = revisionName;
             return this;
         }
+
         public Builder weight(@Nullable Integer weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
-        }        public TrafficWeightResponse build() {
-            return new TrafficWeightResponse(latestRevision, revisionName, weight);
+        }
+
+        public TrafficWeightResponse build() {
+            $.latestRevision = Codegen.booleanProp("latestRevision").arg($.latestRevision).def(false).getNullable();
+            return $;
         }
     }
+
 }

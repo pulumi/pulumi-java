@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class TransitGatewayConnectOptionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public TransitGatewayConnectOptionsArgs(@Nullable Output<String> protocol) {
-        this.protocol = protocol;
-    }
+    private TransitGatewayConnectOptionsArgs() {}
 
-    private TransitGatewayConnectOptionsArgs() {
-        this.protocol = Codegen.empty();
+    private TransitGatewayConnectOptionsArgs(TransitGatewayConnectOptionsArgs $) {
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayConnectOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> protocol;
+        private TransitGatewayConnectOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayConnectOptionsArgs();
         }
 
         public Builder(TransitGatewayConnectOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.protocol = defaults.protocol;
+            $ = new TransitGatewayConnectOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public TransitGatewayConnectOptionsArgs build() {
-            return new TransitGatewayConnectOptionsArgs(protocol);
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public TransitGatewayConnectOptionsArgs build() {
+            return $;
         }
     }
+
 }

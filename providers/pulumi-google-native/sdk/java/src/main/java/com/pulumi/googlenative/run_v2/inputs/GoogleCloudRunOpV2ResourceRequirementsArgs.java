@@ -5,11 +5,11 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends com.pulumi
      * 
      */
     @Import(name="cpuIdle")
-      private final @Nullable Output<Boolean> cpuIdle;
+    private @Nullable Output<Boolean> cpuIdle;
 
-    public Output<Boolean> cpuIdle() {
-        return this.cpuIdle == null ? Codegen.empty() : this.cpuIdle;
+    public Optional<Output<Boolean>> cpuIdle() {
+        return Optional.ofNullable(this.cpuIdle);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends com.pulumi
      * 
      */
     @Import(name="limits")
-      private final @Nullable Output<Map<String,String>> limits;
+    private @Nullable Output<Map<String,String>> limits;
 
-    public Output<Map<String,String>> limits() {
-        return this.limits == null ? Codegen.empty() : this.limits;
+    public Optional<Output<Map<String,String>>> limits() {
+        return Optional.ofNullable(this.limits);
     }
 
-    public GoogleCloudRunOpV2ResourceRequirementsArgs(
-        @Nullable Output<Boolean> cpuIdle,
-        @Nullable Output<Map<String,String>> limits) {
-        this.cpuIdle = cpuIdle;
-        this.limits = limits;
-    }
+    private GoogleCloudRunOpV2ResourceRequirementsArgs() {}
 
-    private GoogleCloudRunOpV2ResourceRequirementsArgs() {
-        this.cpuIdle = Codegen.empty();
-        this.limits = Codegen.empty();
+    private GoogleCloudRunOpV2ResourceRequirementsArgs(GoogleCloudRunOpV2ResourceRequirementsArgs $) {
+        this.cpuIdle = $.cpuIdle;
+        this.limits = $.limits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2ResourceRequirementsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> cpuIdle;
-        private @Nullable Output<Map<String,String>> limits;
+        private GoogleCloudRunOpV2ResourceRequirementsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2ResourceRequirementsArgs();
         }
 
         public Builder(GoogleCloudRunOpV2ResourceRequirementsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuIdle = defaults.cpuIdle;
-    	      this.limits = defaults.limits;
+            $ = new GoogleCloudRunOpV2ResourceRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuIdle(@Nullable Output<Boolean> cpuIdle) {
-            this.cpuIdle = cpuIdle;
+            $.cpuIdle = cpuIdle;
             return this;
         }
-        public Builder cpuIdle(@Nullable Boolean cpuIdle) {
-            this.cpuIdle = Codegen.ofNullable(cpuIdle);
-            return this;
+
+        public Builder cpuIdle(Boolean cpuIdle) {
+            return cpuIdle(Output.of(cpuIdle));
         }
+
         public Builder limits(@Nullable Output<Map<String,String>> limits) {
-            this.limits = limits;
+            $.limits = limits;
             return this;
         }
-        public Builder limits(@Nullable Map<String,String> limits) {
-            this.limits = Codegen.ofNullable(limits);
-            return this;
-        }        public GoogleCloudRunOpV2ResourceRequirementsArgs build() {
-            return new GoogleCloudRunOpV2ResourceRequirementsArgs(cpuIdle, limits);
+
+        public Builder limits(Map<String,String> limits) {
+            return limits(Output.of(limits));
+        }
+
+        public GoogleCloudRunOpV2ResourceRequirementsArgs build() {
+            return $;
         }
     }
+
 }

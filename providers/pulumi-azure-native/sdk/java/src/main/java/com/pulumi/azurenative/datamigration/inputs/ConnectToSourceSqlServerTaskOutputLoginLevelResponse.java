@@ -24,7 +24,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @Import(name="defaultDatabase", required=true)
-      private final String defaultDatabase;
+    private String defaultDatabase;
 
     public String defaultDatabase() {
         return this.defaultDatabase;
@@ -35,7 +35,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -46,7 +46,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -57,7 +57,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @Import(name="loginType", required=true)
-      private final String loginType;
+    private String loginType;
 
     public String loginType() {
         return this.loginType;
@@ -68,7 +68,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @Import(name="migrationEligibility", required=true)
-      private final MigrationEligibilityInfoResponse migrationEligibility;
+    private MigrationEligibilityInfoResponse migrationEligibility;
 
     public MigrationEligibilityInfoResponse migrationEligibility() {
         return this.migrationEligibility;
@@ -79,7 +79,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -91,100 +91,87 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
     }
 
-    public ConnectToSourceSqlServerTaskOutputLoginLevelResponse(
-        String defaultDatabase,
-        String id,
-        Boolean isEnabled,
-        String loginType,
-        MigrationEligibilityInfoResponse migrationEligibility,
-        String name,
-        String resultType) {
-        this.defaultDatabase = Objects.requireNonNull(defaultDatabase, "expected parameter 'defaultDatabase' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.loginType = Objects.requireNonNull(loginType, "expected parameter 'loginType' to be non-null");
-        this.migrationEligibility = Objects.requireNonNull(migrationEligibility, "expected parameter 'migrationEligibility' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-    }
+    private ConnectToSourceSqlServerTaskOutputLoginLevelResponse() {}
 
-    private ConnectToSourceSqlServerTaskOutputLoginLevelResponse() {
-        this.defaultDatabase = null;
-        this.id = null;
-        this.isEnabled = null;
-        this.loginType = null;
-        this.migrationEligibility = null;
-        this.name = null;
-        this.resultType = null;
+    private ConnectToSourceSqlServerTaskOutputLoginLevelResponse(ConnectToSourceSqlServerTaskOutputLoginLevelResponse $) {
+        this.defaultDatabase = $.defaultDatabase;
+        this.id = $.id;
+        this.isEnabled = $.isEnabled;
+        this.loginType = $.loginType;
+        this.migrationEligibility = $.migrationEligibility;
+        this.name = $.name;
+        this.resultType = $.resultType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToSourceSqlServerTaskOutputLoginLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String defaultDatabase;
-        private String id;
-        private Boolean isEnabled;
-        private String loginType;
-        private MigrationEligibilityInfoResponse migrationEligibility;
-        private String name;
-        private String resultType;
+        private ConnectToSourceSqlServerTaskOutputLoginLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToSourceSqlServerTaskOutputLoginLevelResponse();
         }
 
         public Builder(ConnectToSourceSqlServerTaskOutputLoginLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultDatabase = defaults.defaultDatabase;
-    	      this.id = defaults.id;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.loginType = defaults.loginType;
-    	      this.migrationEligibility = defaults.migrationEligibility;
-    	      this.name = defaults.name;
-    	      this.resultType = defaults.resultType;
+            $ = new ConnectToSourceSqlServerTaskOutputLoginLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultDatabase(String defaultDatabase) {
-            this.defaultDatabase = Objects.requireNonNull(defaultDatabase);
+            $.defaultDatabase = defaultDatabase;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder loginType(String loginType) {
-            this.loginType = Objects.requireNonNull(loginType);
+            $.loginType = loginType;
             return this;
         }
+
         public Builder migrationEligibility(MigrationEligibilityInfoResponse migrationEligibility) {
-            this.migrationEligibility = Objects.requireNonNull(migrationEligibility);
+            $.migrationEligibility = migrationEligibility;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
-        }        public ConnectToSourceSqlServerTaskOutputLoginLevelResponse build() {
-            return new ConnectToSourceSqlServerTaskOutputLoginLevelResponse(defaultDatabase, id, isEnabled, loginType, migrationEligibility, name, resultType);
+        }
+
+        public ConnectToSourceSqlServerTaskOutputLoginLevelResponse build() {
+            $.defaultDatabase = Objects.requireNonNull($.defaultDatabase, "expected parameter 'defaultDatabase' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.loginType = Objects.requireNonNull($.loginType, "expected parameter 'loginType' to be non-null");
+            $.migrationEligibility = Objects.requireNonNull($.migrationEligibility, "expected parameter 'migrationEligibility' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            return $;
         }
     }
+
 }

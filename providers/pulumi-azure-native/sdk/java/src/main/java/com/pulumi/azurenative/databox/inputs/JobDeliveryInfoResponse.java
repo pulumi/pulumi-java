@@ -23,45 +23,44 @@ public final class JobDeliveryInfoResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scheduledDateTime")
-      private final @Nullable String scheduledDateTime;
+    private @Nullable String scheduledDateTime;
 
     public Optional<String> scheduledDateTime() {
-        return this.scheduledDateTime == null ? Optional.empty() : Optional.ofNullable(this.scheduledDateTime);
+        return Optional.ofNullable(this.scheduledDateTime);
     }
 
-    public JobDeliveryInfoResponse(@Nullable String scheduledDateTime) {
-        this.scheduledDateTime = scheduledDateTime;
-    }
+    private JobDeliveryInfoResponse() {}
 
-    private JobDeliveryInfoResponse() {
-        this.scheduledDateTime = null;
+    private JobDeliveryInfoResponse(JobDeliveryInfoResponse $) {
+        this.scheduledDateTime = $.scheduledDateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDeliveryInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String scheduledDateTime;
+        private JobDeliveryInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDeliveryInfoResponse();
         }
 
         public Builder(JobDeliveryInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduledDateTime = defaults.scheduledDateTime;
+            $ = new JobDeliveryInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduledDateTime(@Nullable String scheduledDateTime) {
-            this.scheduledDateTime = scheduledDateTime;
+            $.scheduledDateTime = scheduledDateTime;
             return this;
-        }        public JobDeliveryInfoResponse build() {
-            return new JobDeliveryInfoResponse(scheduledDateTime);
+        }
+
+        public JobDeliveryInfoResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolUICustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserPoolUICustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="css")
-      private final @Nullable Output<String> css;
+    private @Nullable Output<String> css;
 
-    public Output<String> css() {
-        return this.css == null ? Codegen.empty() : this.css;
+    public Optional<Output<String>> css() {
+        return Optional.ofNullable(this.css);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserPoolUICustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="imageFile")
-      private final @Nullable Output<String> imageFile;
+    private @Nullable Output<String> imageFile;
 
-    public Output<String> imageFile() {
-        return this.imageFile == null ? Codegen.empty() : this.imageFile;
+    public Optional<Output<String>> imageFile() {
+        return Optional.ofNullable(this.imageFile);
     }
 
     /**
@@ -53,89 +53,79 @@ public final class UserPoolUICustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="userPoolId", required=true)
-      private final Output<String> userPoolId;
+    private Output<String> userPoolId;
 
     public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
-    public UserPoolUICustomizationArgs(
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> css,
-        @Nullable Output<String> imageFile,
-        Output<String> userPoolId) {
-        this.clientId = clientId;
-        this.css = css;
-        this.imageFile = imageFile;
-        this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
-    }
+    private UserPoolUICustomizationArgs() {}
 
-    private UserPoolUICustomizationArgs() {
-        this.clientId = Codegen.empty();
-        this.css = Codegen.empty();
-        this.imageFile = Codegen.empty();
-        this.userPoolId = Codegen.empty();
+    private UserPoolUICustomizationArgs(UserPoolUICustomizationArgs $) {
+        this.clientId = $.clientId;
+        this.css = $.css;
+        this.imageFile = $.imageFile;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolUICustomizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> css;
-        private @Nullable Output<String> imageFile;
-        private Output<String> userPoolId;
+        private UserPoolUICustomizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolUICustomizationArgs();
         }
 
         public Builder(UserPoolUICustomizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.css = defaults.css;
-    	      this.imageFile = defaults.imageFile;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new UserPoolUICustomizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder css(@Nullable Output<String> css) {
-            this.css = css;
+            $.css = css;
             return this;
         }
-        public Builder css(@Nullable String css) {
-            this.css = Codegen.ofNullable(css);
-            return this;
+
+        public Builder css(String css) {
+            return css(Output.of(css));
         }
+
         public Builder imageFile(@Nullable Output<String> imageFile) {
-            this.imageFile = imageFile;
+            $.imageFile = imageFile;
             return this;
         }
-        public Builder imageFile(@Nullable String imageFile) {
-            this.imageFile = Codegen.ofNullable(imageFile);
-            return this;
+
+        public Builder imageFile(String imageFile) {
+            return imageFile(Output.of(imageFile));
         }
+
         public Builder userPoolId(Output<String> userPoolId) {
-            this.userPoolId = Objects.requireNonNull(userPoolId);
+            $.userPoolId = userPoolId;
             return this;
         }
+
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
-            return this;
-        }        public UserPoolUICustomizationArgs build() {
-            return new UserPoolUICustomizationArgs(clientId, css, imageFile, userPoolId);
+            return userPoolId(Output.of(userPoolId));
+        }
+
+        public UserPoolUICustomizationArgs build() {
+            $.userPoolId = Objects.requireNonNull($.userPoolId, "expected parameter 'userPoolId' to be non-null");
+            return $;
         }
     }
+
 }

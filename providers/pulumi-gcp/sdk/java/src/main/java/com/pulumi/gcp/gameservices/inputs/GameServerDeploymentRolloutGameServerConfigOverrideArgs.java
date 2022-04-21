@@ -5,10 +5,10 @@ package com.pulumi.gcp.gameservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
      * 
      */
     @Import(name="configVersion")
-      private final @Nullable Output<String> configVersion;
+    private @Nullable Output<String> configVersion;
 
-    public Output<String> configVersion() {
-        return this.configVersion == null ? Codegen.empty() : this.configVersion;
+    public Optional<Output<String>> configVersion() {
+        return Optional.ofNullable(this.configVersion);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
      * 
      */
     @Import(name="realmsSelector")
-      private final @Nullable Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector;
+    private @Nullable Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector;
 
-    public Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector() {
-        return this.realmsSelector == null ? Codegen.empty() : this.realmsSelector;
+    public Optional<Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs>> realmsSelector() {
+        return Optional.ofNullable(this.realmsSelector);
     }
 
-    public GameServerDeploymentRolloutGameServerConfigOverrideArgs(
-        @Nullable Output<String> configVersion,
-        @Nullable Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector) {
-        this.configVersion = configVersion;
-        this.realmsSelector = realmsSelector;
-    }
+    private GameServerDeploymentRolloutGameServerConfigOverrideArgs() {}
 
-    private GameServerDeploymentRolloutGameServerConfigOverrideArgs() {
-        this.configVersion = Codegen.empty();
-        this.realmsSelector = Codegen.empty();
+    private GameServerDeploymentRolloutGameServerConfigOverrideArgs(GameServerDeploymentRolloutGameServerConfigOverrideArgs $) {
+        this.configVersion = $.configVersion;
+        this.realmsSelector = $.realmsSelector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerDeploymentRolloutGameServerConfigOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configVersion;
-        private @Nullable Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector;
+        private GameServerDeploymentRolloutGameServerConfigOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerDeploymentRolloutGameServerConfigOverrideArgs();
         }
 
         public Builder(GameServerDeploymentRolloutGameServerConfigOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configVersion = defaults.configVersion;
-    	      this.realmsSelector = defaults.realmsSelector;
+            $ = new GameServerDeploymentRolloutGameServerConfigOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configVersion(@Nullable Output<String> configVersion) {
-            this.configVersion = configVersion;
+            $.configVersion = configVersion;
             return this;
         }
-        public Builder configVersion(@Nullable String configVersion) {
-            this.configVersion = Codegen.ofNullable(configVersion);
-            return this;
+
+        public Builder configVersion(String configVersion) {
+            return configVersion(Output.of(configVersion));
         }
+
         public Builder realmsSelector(@Nullable Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector) {
-            this.realmsSelector = realmsSelector;
+            $.realmsSelector = realmsSelector;
             return this;
         }
-        public Builder realmsSelector(@Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs realmsSelector) {
-            this.realmsSelector = Codegen.ofNullable(realmsSelector);
-            return this;
-        }        public GameServerDeploymentRolloutGameServerConfigOverrideArgs build() {
-            return new GameServerDeploymentRolloutGameServerConfigOverrideArgs(configVersion, realmsSelector);
+
+        public Builder realmsSelector(GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs realmsSelector) {
+            return realmsSelector(Output.of(realmsSelector));
+        }
+
+        public GameServerDeploymentRolloutGameServerConfigOverrideArgs build() {
+            return $;
         }
     }
+
 }

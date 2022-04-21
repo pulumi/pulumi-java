@@ -23,10 +23,10 @@ public final class MigrateSyncCompleteCommandInputResponse extends com.pulumi.re
      * 
      */
     @Import(name="commitTimeStamp")
-      private final @Nullable String commitTimeStamp;
+    private @Nullable String commitTimeStamp;
 
     public Optional<String> commitTimeStamp() {
-        return this.commitTimeStamp == null ? Optional.empty() : Optional.ofNullable(this.commitTimeStamp);
+        return Optional.ofNullable(this.commitTimeStamp);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class MigrateSyncCompleteCommandInputResponse extends com.pulumi.re
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
     }
 
-    public MigrateSyncCompleteCommandInputResponse(
-        @Nullable String commitTimeStamp,
-        String databaseName) {
-        this.commitTimeStamp = commitTimeStamp;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-    }
+    private MigrateSyncCompleteCommandInputResponse() {}
 
-    private MigrateSyncCompleteCommandInputResponse() {
-        this.commitTimeStamp = null;
-        this.databaseName = null;
+    private MigrateSyncCompleteCommandInputResponse(MigrateSyncCompleteCommandInputResponse $) {
+        this.commitTimeStamp = $.commitTimeStamp;
+        this.databaseName = $.databaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSyncCompleteCommandInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String commitTimeStamp;
-        private String databaseName;
+        private MigrateSyncCompleteCommandInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSyncCompleteCommandInputResponse();
         }
 
         public Builder(MigrateSyncCompleteCommandInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commitTimeStamp = defaults.commitTimeStamp;
-    	      this.databaseName = defaults.databaseName;
+            $ = new MigrateSyncCompleteCommandInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commitTimeStamp(@Nullable String commitTimeStamp) {
-            this.commitTimeStamp = commitTimeStamp;
+            $.commitTimeStamp = commitTimeStamp;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
-        }        public MigrateSyncCompleteCommandInputResponse build() {
-            return new MigrateSyncCompleteCommandInputResponse(commitTimeStamp, databaseName);
+        }
+
+        public MigrateSyncCompleteCommandInputResponse build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            return $;
         }
     }
+
 }

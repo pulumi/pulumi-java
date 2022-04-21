@@ -5,13 +5,13 @@ package com.pulumi.googlenative.gameservices_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gameservices_v1.enums.RuleAction;
 import com.pulumi.googlenative.gameservices_v1.inputs.ConditionArgs;
 import com.pulumi.googlenative.gameservices_v1.inputs.LogConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<RuleAction> action;
+    private @Nullable Output<RuleAction> action;
 
-    public Output<RuleAction> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<RuleAction>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<ConditionArgs>> conditions;
+    private @Nullable Output<List<ConditionArgs>> conditions;
 
-    public Output<List<ConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<ConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="in")
-      private final @Nullable Output<List<String>> in;
+    private @Nullable Output<List<String>> in;
 
-    public Output<List<String>> in() {
-        return this.in == null ? Codegen.empty() : this.in;
+    public Optional<Output<List<String>>> in() {
+        return Optional.ofNullable(this.in);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logConfig")
-      private final @Nullable Output<List<LogConfigArgs>> logConfig;
+    private @Nullable Output<List<LogConfigArgs>> logConfig;
 
-    public Output<List<LogConfigArgs>> logConfig() {
-        return this.logConfig == null ? Codegen.empty() : this.logConfig;
+    public Optional<Output<List<LogConfigArgs>>> logConfig() {
+        return Optional.ofNullable(this.logConfig);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notIn")
-      private final @Nullable Output<List<String>> notIn;
+    private @Nullable Output<List<String>> notIn;
 
-    public Output<List<String>> notIn() {
-        return this.notIn == null ? Codegen.empty() : this.notIn;
+    public Optional<Output<List<String>>> notIn() {
+        return Optional.ofNullable(this.notIn);
     }
 
     /**
@@ -94,143 +94,128 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<String>> permissions;
+    private @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<String>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
-    public RuleArgs(
-        @Nullable Output<RuleAction> action,
-        @Nullable Output<List<ConditionArgs>> conditions,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> in,
-        @Nullable Output<List<LogConfigArgs>> logConfig,
-        @Nullable Output<List<String>> notIn,
-        @Nullable Output<List<String>> permissions) {
-        this.action = action;
-        this.conditions = conditions;
-        this.description = description;
-        this.in = in;
-        this.logConfig = logConfig;
-        this.notIn = notIn;
-        this.permissions = permissions;
-    }
+    private RuleArgs() {}
 
-    private RuleArgs() {
-        this.action = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.in = Codegen.empty();
-        this.logConfig = Codegen.empty();
-        this.notIn = Codegen.empty();
-        this.permissions = Codegen.empty();
+    private RuleArgs(RuleArgs $) {
+        this.action = $.action;
+        this.conditions = $.conditions;
+        this.description = $.description;
+        this.in = $.in;
+        this.logConfig = $.logConfig;
+        this.notIn = $.notIn;
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleAction> action;
-        private @Nullable Output<List<ConditionArgs>> conditions;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> in;
-        private @Nullable Output<List<LogConfigArgs>> logConfig;
-        private @Nullable Output<List<String>> notIn;
-        private @Nullable Output<List<String>> permissions;
+        private RuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleArgs();
         }
 
         public Builder(RuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.conditions = defaults.conditions;
-    	      this.description = defaults.description;
-    	      this.in = defaults.in;
-    	      this.logConfig = defaults.logConfig;
-    	      this.notIn = defaults.notIn;
-    	      this.permissions = defaults.permissions;
+            $ = new RuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<RuleAction> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable RuleAction action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(RuleAction action) {
+            return action(Output.of(action));
         }
+
         public Builder conditions(@Nullable Output<List<ConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<ConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<ConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(ConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder in(@Nullable Output<List<String>> in) {
-            this.in = in;
+            $.in = in;
             return this;
         }
-        public Builder in(@Nullable List<String> in) {
-            this.in = Codegen.ofNullable(in);
-            return this;
+
+        public Builder in(List<String> in) {
+            return in(Output.of(in));
         }
+
         public Builder in(String... in) {
             return in(List.of(in));
         }
+
         public Builder logConfig(@Nullable Output<List<LogConfigArgs>> logConfig) {
-            this.logConfig = logConfig;
+            $.logConfig = logConfig;
             return this;
         }
-        public Builder logConfig(@Nullable List<LogConfigArgs> logConfig) {
-            this.logConfig = Codegen.ofNullable(logConfig);
-            return this;
+
+        public Builder logConfig(List<LogConfigArgs> logConfig) {
+            return logConfig(Output.of(logConfig));
         }
+
         public Builder logConfig(LogConfigArgs... logConfig) {
             return logConfig(List.of(logConfig));
         }
+
         public Builder notIn(@Nullable Output<List<String>> notIn) {
-            this.notIn = notIn;
+            $.notIn = notIn;
             return this;
         }
-        public Builder notIn(@Nullable List<String> notIn) {
-            this.notIn = Codegen.ofNullable(notIn);
-            return this;
+
+        public Builder notIn(List<String> notIn) {
+            return notIn(Output.of(notIn));
         }
+
         public Builder notIn(String... notIn) {
             return notIn(List.of(notIn));
         }
+
         public Builder permissions(@Nullable Output<List<String>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<String> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
-        }        public RuleArgs build() {
-            return new RuleArgs(action, conditions, description, in, logConfig, notIn, permissions);
+        }
+
+        public RuleArgs build() {
+            return $;
         }
     }
+
 }

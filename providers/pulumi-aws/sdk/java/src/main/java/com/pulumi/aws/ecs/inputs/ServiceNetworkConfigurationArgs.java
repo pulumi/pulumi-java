@@ -5,11 +5,11 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ServiceNetworkConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="assignPublicIp")
-      private final @Nullable Output<Boolean> assignPublicIp;
+    private @Nullable Output<Boolean> assignPublicIp;
 
-    public Output<Boolean> assignPublicIp() {
-        return this.assignPublicIp == null ? Codegen.empty() : this.assignPublicIp;
+    public Optional<Output<Boolean>> assignPublicIp() {
+        return Optional.ofNullable(this.assignPublicIp);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ServiceNetworkConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -44,82 +44,77 @@ public final class ServiceNetworkConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="subnets", required=true)
-      private final Output<List<String>> subnets;
+    private Output<List<String>> subnets;
 
     public Output<List<String>> subnets() {
         return this.subnets;
     }
 
-    public ServiceNetworkConfigurationArgs(
-        @Nullable Output<Boolean> assignPublicIp,
-        @Nullable Output<List<String>> securityGroups,
-        Output<List<String>> subnets) {
-        this.assignPublicIp = assignPublicIp;
-        this.securityGroups = securityGroups;
-        this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
-    }
+    private ServiceNetworkConfigurationArgs() {}
 
-    private ServiceNetworkConfigurationArgs() {
-        this.assignPublicIp = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.subnets = Codegen.empty();
+    private ServiceNetworkConfigurationArgs(ServiceNetworkConfigurationArgs $) {
+        this.assignPublicIp = $.assignPublicIp;
+        this.securityGroups = $.securityGroups;
+        this.subnets = $.subnets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceNetworkConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> assignPublicIp;
-        private @Nullable Output<List<String>> securityGroups;
-        private Output<List<String>> subnets;
+        private ServiceNetworkConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceNetworkConfigurationArgs();
         }
 
         public Builder(ServiceNetworkConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignPublicIp = defaults.assignPublicIp;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnets = defaults.subnets;
+            $ = new ServiceNetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignPublicIp(@Nullable Output<Boolean> assignPublicIp) {
-            this.assignPublicIp = assignPublicIp;
+            $.assignPublicIp = assignPublicIp;
             return this;
         }
-        public Builder assignPublicIp(@Nullable Boolean assignPublicIp) {
-            this.assignPublicIp = Codegen.ofNullable(assignPublicIp);
-            return this;
+
+        public Builder assignPublicIp(Boolean assignPublicIp) {
+            return assignPublicIp(Output.of(assignPublicIp));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnets(Output<List<String>> subnets) {
-            this.subnets = Objects.requireNonNull(subnets);
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(List<String> subnets) {
-            this.subnets = Output.of(Objects.requireNonNull(subnets));
-            return this;
+            return subnets(Output.of(subnets));
         }
+
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
-        }        public ServiceNetworkConfigurationArgs build() {
-            return new ServiceNetworkConfigurationArgs(assignPublicIp, securityGroups, subnets);
+        }
+
+        public ServiceNetworkConfigurationArgs build() {
+            $.subnets = Objects.requireNonNull($.subnets, "expected parameter 'subnets' to be non-null");
+            return $;
         }
     }
+
 }

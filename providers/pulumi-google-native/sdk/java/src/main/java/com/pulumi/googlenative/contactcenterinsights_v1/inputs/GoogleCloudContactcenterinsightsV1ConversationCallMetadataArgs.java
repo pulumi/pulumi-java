@@ -5,9 +5,9 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
      * 
      */
     @Import(name="agentChannel")
-      private final @Nullable Output<Integer> agentChannel;
+    private @Nullable Output<Integer> agentChannel;
 
-    public Output<Integer> agentChannel() {
-        return this.agentChannel == null ? Codegen.empty() : this.agentChannel;
+    public Optional<Output<Integer>> agentChannel() {
+        return Optional.ofNullable(this.agentChannel);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
      * 
      */
     @Import(name="customerChannel")
-      private final @Nullable Output<Integer> customerChannel;
+    private @Nullable Output<Integer> customerChannel;
 
-    public Output<Integer> customerChannel() {
-        return this.customerChannel == null ? Codegen.empty() : this.customerChannel;
+    public Optional<Output<Integer>> customerChannel() {
+        return Optional.ofNullable(this.customerChannel);
     }
 
-    public GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs(
-        @Nullable Output<Integer> agentChannel,
-        @Nullable Output<Integer> customerChannel) {
-        this.agentChannel = agentChannel;
-        this.customerChannel = customerChannel;
-    }
+    private GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs() {}
 
-    private GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs() {
-        this.agentChannel = Codegen.empty();
-        this.customerChannel = Codegen.empty();
+    private GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs(GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs $) {
+        this.agentChannel = $.agentChannel;
+        this.customerChannel = $.customerChannel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> agentChannel;
-        private @Nullable Output<Integer> customerChannel;
+        private GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentChannel = defaults.agentChannel;
-    	      this.customerChannel = defaults.customerChannel;
+            $ = new GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentChannel(@Nullable Output<Integer> agentChannel) {
-            this.agentChannel = agentChannel;
+            $.agentChannel = agentChannel;
             return this;
         }
-        public Builder agentChannel(@Nullable Integer agentChannel) {
-            this.agentChannel = Codegen.ofNullable(agentChannel);
-            return this;
+
+        public Builder agentChannel(Integer agentChannel) {
+            return agentChannel(Output.of(agentChannel));
         }
+
         public Builder customerChannel(@Nullable Output<Integer> customerChannel) {
-            this.customerChannel = customerChannel;
+            $.customerChannel = customerChannel;
             return this;
         }
-        public Builder customerChannel(@Nullable Integer customerChannel) {
-            this.customerChannel = Codegen.ofNullable(customerChannel);
-            return this;
-        }        public GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs(agentChannel, customerChannel);
+
+        public Builder customerChannel(Integer customerChannel) {
+            return customerChannel(Output.of(customerChannel));
+        }
+
+        public GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs build() {
+            return $;
         }
     }
+
 }

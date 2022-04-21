@@ -15,62 +15,57 @@ public final class DestinationTag extends com.pulumi.resources.InvokeArgs {
     public static final DestinationTag Empty = new DestinationTag();
 
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public DestinationTag(
-        @Nullable String key,
-        @Nullable String value) {
-        this.key = key;
-        this.value = value;
-    }
+    private DestinationTag() {}
 
-    private DestinationTag() {
-        this.key = null;
-        this.value = null;
+    private DestinationTag(DestinationTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
-        private @Nullable String value;
+        private DestinationTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationTag();
         }
 
         public Builder(DestinationTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new DestinationTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public DestinationTag build() {
-            return new DestinationTag(key, value);
+        }
+
+        public DestinationTag build() {
+            return $;
         }
     }
+
 }

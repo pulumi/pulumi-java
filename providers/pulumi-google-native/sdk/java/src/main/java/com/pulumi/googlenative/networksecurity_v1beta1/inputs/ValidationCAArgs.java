@@ -5,10 +5,10 @@ package com.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.CertificateProviderInstanceArgs;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ValidationCAArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateProviderInstance")
-      private final @Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance;
+    private @Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance;
 
-    public Output<CertificateProviderInstanceArgs> certificateProviderInstance() {
-        return this.certificateProviderInstance == null ? Codegen.empty() : this.certificateProviderInstance;
+    public Optional<Output<CertificateProviderInstanceArgs>> certificateProviderInstance() {
+        return Optional.ofNullable(this.certificateProviderInstance);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ValidationCAArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grpcEndpoint")
-      private final @Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
+    private @Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
 
-    public Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint() {
-        return this.grpcEndpoint == null ? Codegen.empty() : this.grpcEndpoint;
+    public Optional<Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs>> grpcEndpoint() {
+        return Optional.ofNullable(this.grpcEndpoint);
     }
 
-    public ValidationCAArgs(
-        @Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance,
-        @Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint) {
-        this.certificateProviderInstance = certificateProviderInstance;
-        this.grpcEndpoint = grpcEndpoint;
-    }
+    private ValidationCAArgs() {}
 
-    private ValidationCAArgs() {
-        this.certificateProviderInstance = Codegen.empty();
-        this.grpcEndpoint = Codegen.empty();
+    private ValidationCAArgs(ValidationCAArgs $) {
+        this.certificateProviderInstance = $.certificateProviderInstance;
+        this.grpcEndpoint = $.grpcEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidationCAArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance;
-        private @Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
+        private ValidationCAArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidationCAArgs();
         }
 
         public Builder(ValidationCAArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateProviderInstance = defaults.certificateProviderInstance;
-    	      this.grpcEndpoint = defaults.grpcEndpoint;
+            $ = new ValidationCAArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateProviderInstance(@Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance) {
-            this.certificateProviderInstance = certificateProviderInstance;
+            $.certificateProviderInstance = certificateProviderInstance;
             return this;
         }
-        public Builder certificateProviderInstance(@Nullable CertificateProviderInstanceArgs certificateProviderInstance) {
-            this.certificateProviderInstance = Codegen.ofNullable(certificateProviderInstance);
-            return this;
+
+        public Builder certificateProviderInstance(CertificateProviderInstanceArgs certificateProviderInstance) {
+            return certificateProviderInstance(Output.of(certificateProviderInstance));
         }
+
         public Builder grpcEndpoint(@Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint) {
-            this.grpcEndpoint = grpcEndpoint;
+            $.grpcEndpoint = grpcEndpoint;
             return this;
         }
-        public Builder grpcEndpoint(@Nullable GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs grpcEndpoint) {
-            this.grpcEndpoint = Codegen.ofNullable(grpcEndpoint);
-            return this;
-        }        public ValidationCAArgs build() {
-            return new ValidationCAArgs(certificateProviderInstance, grpcEndpoint);
+
+        public Builder grpcEndpoint(GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs grpcEndpoint) {
+            return grpcEndpoint(Output.of(grpcEndpoint));
+        }
+
+        public ValidationCAArgs build() {
+            return $;
         }
     }
+
 }

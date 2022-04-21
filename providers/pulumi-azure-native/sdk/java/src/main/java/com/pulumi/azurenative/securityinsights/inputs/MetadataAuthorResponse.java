@@ -23,10 +23,10 @@ public final class MetadataAuthorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="email")
-      private final @Nullable String email;
+    private @Nullable String email;
 
     public Optional<String> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MetadataAuthorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="link")
-      private final @Nullable String link;
+    private @Nullable String link;
 
     public Optional<String> link() {
-        return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
+        return Optional.ofNullable(this.link);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class MetadataAuthorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public MetadataAuthorResponse(
-        @Nullable String email,
-        @Nullable String link,
-        @Nullable String name) {
-        this.email = email;
-        this.link = link;
-        this.name = name;
-    }
+    private MetadataAuthorResponse() {}
 
-    private MetadataAuthorResponse() {
-        this.email = null;
-        this.link = null;
-        this.name = null;
+    private MetadataAuthorResponse(MetadataAuthorResponse $) {
+        this.email = $.email;
+        this.link = $.link;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataAuthorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String email;
-        private @Nullable String link;
-        private @Nullable String name;
+        private MetadataAuthorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataAuthorResponse();
         }
 
         public Builder(MetadataAuthorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.link = defaults.link;
-    	      this.name = defaults.name;
+            $ = new MetadataAuthorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable String email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder link(@Nullable String link) {
-            this.link = link;
+            $.link = link;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public MetadataAuthorResponse build() {
-            return new MetadataAuthorResponse(email, link, name);
+        }
+
+        public MetadataAuthorResponse build() {
+            return $;
         }
     }
+
 }

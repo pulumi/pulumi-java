@@ -21,7 +21,7 @@ public final class VpcAccessConnectorResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="egressSetting", required=true)
-      private final String egressSetting;
+    private String egressSetting;
 
     public String egressSetting() {
         return this.egressSetting;
@@ -32,55 +32,52 @@ public final class VpcAccessConnectorResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public VpcAccessConnectorResponse(
-        String egressSetting,
-        String name) {
-        this.egressSetting = Objects.requireNonNull(egressSetting, "expected parameter 'egressSetting' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private VpcAccessConnectorResponse() {}
 
-    private VpcAccessConnectorResponse() {
-        this.egressSetting = null;
-        this.name = null;
+    private VpcAccessConnectorResponse(VpcAccessConnectorResponse $) {
+        this.egressSetting = $.egressSetting;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcAccessConnectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String egressSetting;
-        private String name;
+        private VpcAccessConnectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcAccessConnectorResponse();
         }
 
         public Builder(VpcAccessConnectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egressSetting = defaults.egressSetting;
-    	      this.name = defaults.name;
+            $ = new VpcAccessConnectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder egressSetting(String egressSetting) {
-            this.egressSetting = Objects.requireNonNull(egressSetting);
+            $.egressSetting = egressSetting;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public VpcAccessConnectorResponse build() {
-            return new VpcAccessConnectorResponse(egressSetting, name);
+        }
+
+        public VpcAccessConnectorResponse build() {
+            $.egressSetting = Objects.requireNonNull($.egressSetting, "expected parameter 'egressSetting' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,62 +14,59 @@ public final class GetBucketRetentionPolicy extends com.pulumi.resources.InvokeA
     public static final GetBucketRetentionPolicy Empty = new GetBucketRetentionPolicy();
 
     @Import(name="isLocked", required=true)
-      private final Boolean isLocked;
+    private Boolean isLocked;
 
     public Boolean isLocked() {
         return this.isLocked;
     }
 
     @Import(name="retentionPeriod", required=true)
-      private final Integer retentionPeriod;
+    private Integer retentionPeriod;
 
     public Integer retentionPeriod() {
         return this.retentionPeriod;
     }
 
-    public GetBucketRetentionPolicy(
-        Boolean isLocked,
-        Integer retentionPeriod) {
-        this.isLocked = Objects.requireNonNull(isLocked, "expected parameter 'isLocked' to be non-null");
-        this.retentionPeriod = Objects.requireNonNull(retentionPeriod, "expected parameter 'retentionPeriod' to be non-null");
-    }
+    private GetBucketRetentionPolicy() {}
 
-    private GetBucketRetentionPolicy() {
-        this.isLocked = null;
-        this.retentionPeriod = null;
+    private GetBucketRetentionPolicy(GetBucketRetentionPolicy $) {
+        this.isLocked = $.isLocked;
+        this.retentionPeriod = $.retentionPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketRetentionPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isLocked;
-        private Integer retentionPeriod;
+        private GetBucketRetentionPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketRetentionPolicy();
         }
 
         public Builder(GetBucketRetentionPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isLocked = defaults.isLocked;
-    	      this.retentionPeriod = defaults.retentionPeriod;
+            $ = new GetBucketRetentionPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder isLocked(Boolean isLocked) {
-            this.isLocked = Objects.requireNonNull(isLocked);
+            $.isLocked = isLocked;
             return this;
         }
+
         public Builder retentionPeriod(Integer retentionPeriod) {
-            this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
+            $.retentionPeriod = retentionPeriod;
             return this;
-        }        public GetBucketRetentionPolicy build() {
-            return new GetBucketRetentionPolicy(isLocked, retentionPeriod);
+        }
+
+        public GetBucketRetentionPolicy build() {
+            $.isLocked = Objects.requireNonNull($.isLocked, "expected parameter 'isLocked' to be non-null");
+            $.retentionPeriod = Objects.requireNonNull($.retentionPeriod, "expected parameter 'retentionPeriod' to be non-null");
+            return $;
         }
     }
+
 }

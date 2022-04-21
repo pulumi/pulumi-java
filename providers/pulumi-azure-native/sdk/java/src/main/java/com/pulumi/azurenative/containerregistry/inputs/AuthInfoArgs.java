@@ -7,10 +7,10 @@ import com.pulumi.azurenative.containerregistry.enums.TokenType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expiresIn")
-      private final @Nullable Output<Integer> expiresIn;
+    private @Nullable Output<Integer> expiresIn;
 
-    public Output<Integer> expiresIn() {
-        return this.expiresIn == null ? Codegen.empty() : this.expiresIn;
+    public Optional<Output<Integer>> expiresIn() {
+        return Optional.ofNullable(this.expiresIn);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="refreshToken")
-      private final @Nullable Output<String> refreshToken;
+    private @Nullable Output<String> refreshToken;
 
-    public Output<String> refreshToken() {
-        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
+    public Optional<Output<String>> refreshToken() {
+        return Optional.ofNullable(this.refreshToken);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="token", required=true)
-      private final Output<String> token;
+    private Output<String> token;
 
     public Output<String> token() {
         return this.token;
@@ -71,102 +71,90 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tokenType", required=true)
-      private final Output<Either<String,TokenType>> tokenType;
+    private Output<Either<String,TokenType>> tokenType;
 
     public Output<Either<String,TokenType>> tokenType() {
         return this.tokenType;
     }
 
-    public AuthInfoArgs(
-        @Nullable Output<Integer> expiresIn,
-        @Nullable Output<String> refreshToken,
-        @Nullable Output<String> scope,
-        Output<String> token,
-        Output<Either<String,TokenType>> tokenType) {
-        this.expiresIn = expiresIn;
-        this.refreshToken = refreshToken;
-        this.scope = scope;
-        this.token = Objects.requireNonNull(token, "expected parameter 'token' to be non-null");
-        this.tokenType = Objects.requireNonNull(tokenType, "expected parameter 'tokenType' to be non-null");
-    }
+    private AuthInfoArgs() {}
 
-    private AuthInfoArgs() {
-        this.expiresIn = Codegen.empty();
-        this.refreshToken = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.token = Codegen.empty();
-        this.tokenType = Codegen.empty();
+    private AuthInfoArgs(AuthInfoArgs $) {
+        this.expiresIn = $.expiresIn;
+        this.refreshToken = $.refreshToken;
+        this.scope = $.scope;
+        this.token = $.token;
+        this.tokenType = $.tokenType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> expiresIn;
-        private @Nullable Output<String> refreshToken;
-        private @Nullable Output<String> scope;
-        private Output<String> token;
-        private Output<Either<String,TokenType>> tokenType;
+        private AuthInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthInfoArgs();
         }
 
         public Builder(AuthInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiresIn = defaults.expiresIn;
-    	      this.refreshToken = defaults.refreshToken;
-    	      this.scope = defaults.scope;
-    	      this.token = defaults.token;
-    	      this.tokenType = defaults.tokenType;
+            $ = new AuthInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expiresIn(@Nullable Output<Integer> expiresIn) {
-            this.expiresIn = expiresIn;
+            $.expiresIn = expiresIn;
             return this;
         }
-        public Builder expiresIn(@Nullable Integer expiresIn) {
-            this.expiresIn = Codegen.ofNullable(expiresIn);
-            return this;
+
+        public Builder expiresIn(Integer expiresIn) {
+            return expiresIn(Output.of(expiresIn));
         }
+
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
-            this.refreshToken = refreshToken;
+            $.refreshToken = refreshToken;
             return this;
         }
-        public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Codegen.ofNullable(refreshToken);
-            return this;
+
+        public Builder refreshToken(String refreshToken) {
+            return refreshToken(Output.of(refreshToken));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder token(Output<String> token) {
-            this.token = Objects.requireNonNull(token);
+            $.token = token;
             return this;
         }
+
         public Builder token(String token) {
-            this.token = Output.of(Objects.requireNonNull(token));
-            return this;
+            return token(Output.of(token));
         }
+
         public Builder tokenType(Output<Either<String,TokenType>> tokenType) {
-            this.tokenType = Objects.requireNonNull(tokenType);
+            $.tokenType = tokenType;
             return this;
         }
+
         public Builder tokenType(Either<String,TokenType> tokenType) {
-            this.tokenType = Output.of(Objects.requireNonNull(tokenType));
-            return this;
-        }        public AuthInfoArgs build() {
-            return new AuthInfoArgs(expiresIn, refreshToken, scope, token, tokenType);
+            return tokenType(Output.of(tokenType));
+        }
+
+        public AuthInfoArgs build() {
+            $.token = Objects.requireNonNull($.token, "expected parameter 'token' to be non-null");
+            $.tokenType = Objects.requireNonNull($.tokenType, "expected parameter 'tokenType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MysqlColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collation")
-      private final @Nullable Output<String> collation;
+    private @Nullable Output<String> collation;
 
-    public Output<String> collation() {
-        return this.collation == null ? Codegen.empty() : this.collation;
+    public Optional<Output<String>> collation() {
+        return Optional.ofNullable(this.collation);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MysqlColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="column")
-      private final @Nullable Output<String> column;
+    private @Nullable Output<String> column;
 
-    public Output<String> column() {
-        return this.column == null ? Codegen.empty() : this.column;
+    public Optional<Output<String>> column() {
+        return Optional.ofNullable(this.column);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MysqlColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<String> dataType;
+    private @Nullable Output<String> dataType;
 
-    public Output<String> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<String>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class MysqlColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="length")
-      private final @Nullable Output<Integer> length;
+    private @Nullable Output<Integer> length;
 
-    public Output<Integer> length() {
-        return this.length == null ? Codegen.empty() : this.length;
+    public Optional<Output<Integer>> length() {
+        return Optional.ofNullable(this.length);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class MysqlColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nullable")
-      private final @Nullable Output<Boolean> nullable;
+    private @Nullable Output<Boolean> nullable;
 
-    public Output<Boolean> nullable() {
-        return this.nullable == null ? Codegen.empty() : this.nullable;
+    public Optional<Output<Boolean>> nullable() {
+        return Optional.ofNullable(this.nullable);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class MysqlColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ordinalPosition")
-      private final @Nullable Output<Integer> ordinalPosition;
+    private @Nullable Output<Integer> ordinalPosition;
 
-    public Output<Integer> ordinalPosition() {
-        return this.ordinalPosition == null ? Codegen.empty() : this.ordinalPosition;
+    public Optional<Output<Integer>> ordinalPosition() {
+        return Optional.ofNullable(this.ordinalPosition);
     }
 
     /**
@@ -92,128 +92,108 @@ public final class MysqlColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryKey")
-      private final @Nullable Output<Boolean> primaryKey;
+    private @Nullable Output<Boolean> primaryKey;
 
-    public Output<Boolean> primaryKey() {
-        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
+    public Optional<Output<Boolean>> primaryKey() {
+        return Optional.ofNullable(this.primaryKey);
     }
 
-    public MysqlColumnArgs(
-        @Nullable Output<String> collation,
-        @Nullable Output<String> column,
-        @Nullable Output<String> dataType,
-        @Nullable Output<Integer> length,
-        @Nullable Output<Boolean> nullable,
-        @Nullable Output<Integer> ordinalPosition,
-        @Nullable Output<Boolean> primaryKey) {
-        this.collation = collation;
-        this.column = column;
-        this.dataType = dataType;
-        this.length = length;
-        this.nullable = nullable;
-        this.ordinalPosition = ordinalPosition;
-        this.primaryKey = primaryKey;
-    }
+    private MysqlColumnArgs() {}
 
-    private MysqlColumnArgs() {
-        this.collation = Codegen.empty();
-        this.column = Codegen.empty();
-        this.dataType = Codegen.empty();
-        this.length = Codegen.empty();
-        this.nullable = Codegen.empty();
-        this.ordinalPosition = Codegen.empty();
-        this.primaryKey = Codegen.empty();
+    private MysqlColumnArgs(MysqlColumnArgs $) {
+        this.collation = $.collation;
+        this.column = $.column;
+        this.dataType = $.dataType;
+        this.length = $.length;
+        this.nullable = $.nullable;
+        this.ordinalPosition = $.ordinalPosition;
+        this.primaryKey = $.primaryKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlColumnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> collation;
-        private @Nullable Output<String> column;
-        private @Nullable Output<String> dataType;
-        private @Nullable Output<Integer> length;
-        private @Nullable Output<Boolean> nullable;
-        private @Nullable Output<Integer> ordinalPosition;
-        private @Nullable Output<Boolean> primaryKey;
+        private MysqlColumnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlColumnArgs();
         }
 
         public Builder(MysqlColumnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collation = defaults.collation;
-    	      this.column = defaults.column;
-    	      this.dataType = defaults.dataType;
-    	      this.length = defaults.length;
-    	      this.nullable = defaults.nullable;
-    	      this.ordinalPosition = defaults.ordinalPosition;
-    	      this.primaryKey = defaults.primaryKey;
+            $ = new MysqlColumnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collation(@Nullable Output<String> collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
-        public Builder collation(@Nullable String collation) {
-            this.collation = Codegen.ofNullable(collation);
-            return this;
+
+        public Builder collation(String collation) {
+            return collation(Output.of(collation));
         }
+
         public Builder column(@Nullable Output<String> column) {
-            this.column = column;
+            $.column = column;
             return this;
         }
-        public Builder column(@Nullable String column) {
-            this.column = Codegen.ofNullable(column);
-            return this;
+
+        public Builder column(String column) {
+            return column(Output.of(column));
         }
+
         public Builder dataType(@Nullable Output<String> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable String dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(String dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder length(@Nullable Output<Integer> length) {
-            this.length = length;
+            $.length = length;
             return this;
         }
-        public Builder length(@Nullable Integer length) {
-            this.length = Codegen.ofNullable(length);
-            return this;
+
+        public Builder length(Integer length) {
+            return length(Output.of(length));
         }
+
         public Builder nullable(@Nullable Output<Boolean> nullable) {
-            this.nullable = nullable;
+            $.nullable = nullable;
             return this;
         }
-        public Builder nullable(@Nullable Boolean nullable) {
-            this.nullable = Codegen.ofNullable(nullable);
-            return this;
+
+        public Builder nullable(Boolean nullable) {
+            return nullable(Output.of(nullable));
         }
+
         public Builder ordinalPosition(@Nullable Output<Integer> ordinalPosition) {
-            this.ordinalPosition = ordinalPosition;
+            $.ordinalPosition = ordinalPosition;
             return this;
         }
-        public Builder ordinalPosition(@Nullable Integer ordinalPosition) {
-            this.ordinalPosition = Codegen.ofNullable(ordinalPosition);
-            return this;
+
+        public Builder ordinalPosition(Integer ordinalPosition) {
+            return ordinalPosition(Output.of(ordinalPosition));
         }
+
         public Builder primaryKey(@Nullable Output<Boolean> primaryKey) {
-            this.primaryKey = primaryKey;
+            $.primaryKey = primaryKey;
             return this;
         }
-        public Builder primaryKey(@Nullable Boolean primaryKey) {
-            this.primaryKey = Codegen.ofNullable(primaryKey);
-            return this;
-        }        public MysqlColumnArgs build() {
-            return new MysqlColumnArgs(collation, column, dataType, length, nullable, ordinalPosition, primaryKey);
+
+        public Builder primaryKey(Boolean primaryKey) {
+            return primaryKey(Output.of(primaryKey));
+        }
+
+        public MysqlColumnArgs build() {
+            return $;
         }
     }
+
 }

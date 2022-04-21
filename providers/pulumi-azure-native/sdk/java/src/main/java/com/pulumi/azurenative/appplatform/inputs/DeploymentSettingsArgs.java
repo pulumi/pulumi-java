@@ -12,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Output<Integer> cpu;
+    private @Nullable Output<Integer> cpu;
 
-    public Output<Integer> cpu() {
-        return this.cpu == null ? Codegen.empty() : this.cpu;
+    public Optional<Output<Integer>> cpu() {
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<Map<String,String>> environmentVariables;
+    private @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<Map<String,String>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="jvmOptions")
-      private final @Nullable Output<String> jvmOptions;
+    private @Nullable Output<String> jvmOptions;
 
-    public Output<String> jvmOptions() {
-        return this.jvmOptions == null ? Codegen.empty() : this.jvmOptions;
+    public Optional<Output<String>> jvmOptions() {
+        return Optional.ofNullable(this.jvmOptions);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="memoryInGB")
-      private final @Nullable Output<Integer> memoryInGB;
+    private @Nullable Output<Integer> memoryInGB;
 
-    public Output<Integer> memoryInGB() {
-        return this.memoryInGB == null ? Codegen.empty() : this.memoryInGB;
+    public Optional<Output<Integer>> memoryInGB() {
+        return Optional.ofNullable(this.memoryInGB);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="netCoreMainEntryPath")
-      private final @Nullable Output<String> netCoreMainEntryPath;
+    private @Nullable Output<String> netCoreMainEntryPath;
 
-    public Output<String> netCoreMainEntryPath() {
-        return this.netCoreMainEntryPath == null ? Codegen.empty() : this.netCoreMainEntryPath;
+    public Optional<Output<String>> netCoreMainEntryPath() {
+        return Optional.ofNullable(this.netCoreMainEntryPath);
     }
 
     /**
@@ -83,115 +84,101 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="runtimeVersion")
-      private final @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion;
+    private @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion;
 
-    public Output<Either<String,RuntimeVersion>> runtimeVersion() {
-        return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
+    public Optional<Output<Either<String,RuntimeVersion>>> runtimeVersion() {
+        return Optional.ofNullable(this.runtimeVersion);
     }
 
-    public DeploymentSettingsArgs(
-        @Nullable Output<Integer> cpu,
-        @Nullable Output<Map<String,String>> environmentVariables,
-        @Nullable Output<String> jvmOptions,
-        @Nullable Output<Integer> memoryInGB,
-        @Nullable Output<String> netCoreMainEntryPath,
-        @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion) {
-        this.cpu = Codegen.integerProp("cpu").output().arg(cpu).def(1).getNullable();
-        this.environmentVariables = environmentVariables;
-        this.jvmOptions = jvmOptions;
-        this.memoryInGB = Codegen.integerProp("memoryInGB").output().arg(memoryInGB).def(1).getNullable();
-        this.netCoreMainEntryPath = netCoreMainEntryPath;
-        this.runtimeVersion = Codegen.stringProp("runtimeVersion").left(RuntimeVersion.class).output().arg(runtimeVersion).def("Java_8").getNullable();
-    }
+    private DeploymentSettingsArgs() {}
 
-    private DeploymentSettingsArgs() {
-        this.cpu = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.jvmOptions = Codegen.empty();
-        this.memoryInGB = Codegen.empty();
-        this.netCoreMainEntryPath = Codegen.empty();
-        this.runtimeVersion = Codegen.empty();
+    private DeploymentSettingsArgs(DeploymentSettingsArgs $) {
+        this.cpu = $.cpu;
+        this.environmentVariables = $.environmentVariables;
+        this.jvmOptions = $.jvmOptions;
+        this.memoryInGB = $.memoryInGB;
+        this.netCoreMainEntryPath = $.netCoreMainEntryPath;
+        this.runtimeVersion = $.runtimeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cpu;
-        private @Nullable Output<Map<String,String>> environmentVariables;
-        private @Nullable Output<String> jvmOptions;
-        private @Nullable Output<Integer> memoryInGB;
-        private @Nullable Output<String> netCoreMainEntryPath;
-        private @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion;
+        private DeploymentSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentSettingsArgs();
         }
 
         public Builder(DeploymentSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.jvmOptions = defaults.jvmOptions;
-    	      this.memoryInGB = defaults.memoryInGB;
-    	      this.netCoreMainEntryPath = defaults.netCoreMainEntryPath;
-    	      this.runtimeVersion = defaults.runtimeVersion;
+            $ = new DeploymentSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Output<Integer> cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
-        public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = Codegen.ofNullable(cpu);
-            return this;
+
+        public Builder cpu(Integer cpu) {
+            return cpu(Output.of(cpu));
         }
+
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(Map<String,String> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder jvmOptions(@Nullable Output<String> jvmOptions) {
-            this.jvmOptions = jvmOptions;
+            $.jvmOptions = jvmOptions;
             return this;
         }
-        public Builder jvmOptions(@Nullable String jvmOptions) {
-            this.jvmOptions = Codegen.ofNullable(jvmOptions);
-            return this;
+
+        public Builder jvmOptions(String jvmOptions) {
+            return jvmOptions(Output.of(jvmOptions));
         }
+
         public Builder memoryInGB(@Nullable Output<Integer> memoryInGB) {
-            this.memoryInGB = memoryInGB;
+            $.memoryInGB = memoryInGB;
             return this;
         }
-        public Builder memoryInGB(@Nullable Integer memoryInGB) {
-            this.memoryInGB = Codegen.ofNullable(memoryInGB);
-            return this;
+
+        public Builder memoryInGB(Integer memoryInGB) {
+            return memoryInGB(Output.of(memoryInGB));
         }
+
         public Builder netCoreMainEntryPath(@Nullable Output<String> netCoreMainEntryPath) {
-            this.netCoreMainEntryPath = netCoreMainEntryPath;
+            $.netCoreMainEntryPath = netCoreMainEntryPath;
             return this;
         }
-        public Builder netCoreMainEntryPath(@Nullable String netCoreMainEntryPath) {
-            this.netCoreMainEntryPath = Codegen.ofNullable(netCoreMainEntryPath);
-            return this;
+
+        public Builder netCoreMainEntryPath(String netCoreMainEntryPath) {
+            return netCoreMainEntryPath(Output.of(netCoreMainEntryPath));
         }
+
         public Builder runtimeVersion(@Nullable Output<Either<String,RuntimeVersion>> runtimeVersion) {
-            this.runtimeVersion = runtimeVersion;
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
-        public Builder runtimeVersion(@Nullable Either<String,RuntimeVersion> runtimeVersion) {
-            this.runtimeVersion = Codegen.ofNullable(runtimeVersion);
-            return this;
-        }        public DeploymentSettingsArgs build() {
-            return new DeploymentSettingsArgs(cpu, environmentVariables, jvmOptions, memoryInGB, netCoreMainEntryPath, runtimeVersion);
+
+        public Builder runtimeVersion(Either<String,RuntimeVersion> runtimeVersion) {
+            return runtimeVersion(Output.of(runtimeVersion));
+        }
+
+        public DeploymentSettingsArgs build() {
+            $.cpu = Codegen.integerProp("cpu").output().arg($.cpu).def(1).getNullable();
+            $.memoryInGB = Codegen.integerProp("memoryInGB").output().arg($.memoryInGB).def(1).getNullable();
+            $.runtimeVersion = Codegen.stringProp("runtimeVersion").left(RuntimeVersion.class).output().arg($.runtimeVersion).def("Java_8").getNullable();
+            return $;
         }
     }
+
 }

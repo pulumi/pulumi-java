@@ -21,45 +21,45 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="peeredNetwork", required=true)
-      private final String peeredNetwork;
+    private String peeredNetwork;
 
     public String peeredNetwork() {
         return this.peeredNetwork;
     }
 
-    public NetworkConfigResponse(String peeredNetwork) {
-        this.peeredNetwork = Objects.requireNonNull(peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
-    }
+    private NetworkConfigResponse() {}
 
-    private NetworkConfigResponse() {
-        this.peeredNetwork = null;
+    private NetworkConfigResponse(NetworkConfigResponse $) {
+        this.peeredNetwork = $.peeredNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String peeredNetwork;
+        private NetworkConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigResponse();
         }
 
         public Builder(NetworkConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peeredNetwork = defaults.peeredNetwork;
+            $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder peeredNetwork(String peeredNetwork) {
-            this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
+            $.peeredNetwork = peeredNetwork;
             return this;
-        }        public NetworkConfigResponse build() {
-            return new NetworkConfigResponse(peeredNetwork);
+        }
+
+        public NetworkConfigResponse build() {
+            $.peeredNetwork = Objects.requireNonNull($.peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionMonitoringOutputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends com.
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends com.
      * 
      */
     @Import(name="monitoringOutputs", required=true)
-      private final Output<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+    private Output<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
     public Output<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs() {
         return this.monitoringOutputs;
     }
 
-    public ModelBiasJobDefinitionMonitoringOutputConfigArgs(
-        @Nullable Output<String> kmsKeyId,
-        Output<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
-        this.kmsKeyId = kmsKeyId;
-        this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs, "expected parameter 'monitoringOutputs' to be non-null");
-    }
+    private ModelBiasJobDefinitionMonitoringOutputConfigArgs() {}
 
-    private ModelBiasJobDefinitionMonitoringOutputConfigArgs() {
-        this.kmsKeyId = Codegen.empty();
-        this.monitoringOutputs = Codegen.empty();
+    private ModelBiasJobDefinitionMonitoringOutputConfigArgs(ModelBiasJobDefinitionMonitoringOutputConfigArgs $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.monitoringOutputs = $.monitoringOutputs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelBiasJobDefinitionMonitoringOutputConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyId;
-        private Output<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+        private ModelBiasJobDefinitionMonitoringOutputConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelBiasJobDefinitionMonitoringOutputConfigArgs();
         }
 
         public Builder(ModelBiasJobDefinitionMonitoringOutputConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.monitoringOutputs = defaults.monitoringOutputs;
+            $ = new ModelBiasJobDefinitionMonitoringOutputConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder monitoringOutputs(Output<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
-            this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
+            $.monitoringOutputs = monitoringOutputs;
             return this;
         }
+
         public Builder monitoringOutputs(List<ModelBiasJobDefinitionMonitoringOutputArgs> monitoringOutputs) {
-            this.monitoringOutputs = Output.of(Objects.requireNonNull(monitoringOutputs));
-            return this;
+            return monitoringOutputs(Output.of(monitoringOutputs));
         }
+
         public Builder monitoringOutputs(ModelBiasJobDefinitionMonitoringOutputArgs... monitoringOutputs) {
             return monitoringOutputs(List.of(monitoringOutputs));
-        }        public ModelBiasJobDefinitionMonitoringOutputConfigArgs build() {
-            return new ModelBiasJobDefinitionMonitoringOutputConfigArgs(kmsKeyId, monitoringOutputs);
+        }
+
+        public ModelBiasJobDefinitionMonitoringOutputConfigArgs build() {
+            $.monitoringOutputs = Objects.requireNonNull($.monitoringOutputs, "expected parameter 'monitoringOutputs' to be non-null");
+            return $;
         }
     }
+
 }

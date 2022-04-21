@@ -23,7 +23,7 @@ public final class TimeSeriesFilterResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="aggregation", required=true)
-      private final AggregationResponse aggregation;
+    private AggregationResponse aggregation;
 
     public AggregationResponse aggregation() {
         return this.aggregation;
@@ -34,7 +34,7 @@ public final class TimeSeriesFilterResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -45,7 +45,7 @@ public final class TimeSeriesFilterResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="pickTimeSeriesFilter", required=true)
-      private final PickTimeSeriesFilterResponse pickTimeSeriesFilter;
+    private PickTimeSeriesFilterResponse pickTimeSeriesFilter;
 
     public PickTimeSeriesFilterResponse pickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter;
@@ -56,73 +56,66 @@ public final class TimeSeriesFilterResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="secondaryAggregation", required=true)
-      private final AggregationResponse secondaryAggregation;
+    private AggregationResponse secondaryAggregation;
 
     public AggregationResponse secondaryAggregation() {
         return this.secondaryAggregation;
     }
 
-    public TimeSeriesFilterResponse(
-        AggregationResponse aggregation,
-        String filter,
-        PickTimeSeriesFilterResponse pickTimeSeriesFilter,
-        AggregationResponse secondaryAggregation) {
-        this.aggregation = Objects.requireNonNull(aggregation, "expected parameter 'aggregation' to be non-null");
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter, "expected parameter 'pickTimeSeriesFilter' to be non-null");
-        this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation, "expected parameter 'secondaryAggregation' to be non-null");
-    }
+    private TimeSeriesFilterResponse() {}
 
-    private TimeSeriesFilterResponse() {
-        this.aggregation = null;
-        this.filter = null;
-        this.pickTimeSeriesFilter = null;
-        this.secondaryAggregation = null;
+    private TimeSeriesFilterResponse(TimeSeriesFilterResponse $) {
+        this.aggregation = $.aggregation;
+        this.filter = $.filter;
+        this.pickTimeSeriesFilter = $.pickTimeSeriesFilter;
+        this.secondaryAggregation = $.secondaryAggregation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AggregationResponse aggregation;
-        private String filter;
-        private PickTimeSeriesFilterResponse pickTimeSeriesFilter;
-        private AggregationResponse secondaryAggregation;
+        private TimeSeriesFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesFilterResponse();
         }
 
         public Builder(TimeSeriesFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregation = defaults.aggregation;
-    	      this.filter = defaults.filter;
-    	      this.pickTimeSeriesFilter = defaults.pickTimeSeriesFilter;
-    	      this.secondaryAggregation = defaults.secondaryAggregation;
+            $ = new TimeSeriesFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregation(AggregationResponse aggregation) {
-            this.aggregation = Objects.requireNonNull(aggregation);
+            $.aggregation = aggregation;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder pickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
-            this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter);
+            $.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
+
         public Builder secondaryAggregation(AggregationResponse secondaryAggregation) {
-            this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
+            $.secondaryAggregation = secondaryAggregation;
             return this;
-        }        public TimeSeriesFilterResponse build() {
-            return new TimeSeriesFilterResponse(aggregation, filter, pickTimeSeriesFilter, secondaryAggregation);
+        }
+
+        public TimeSeriesFilterResponse build() {
+            $.aggregation = Objects.requireNonNull($.aggregation, "expected parameter 'aggregation' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.pickTimeSeriesFilter = Objects.requireNonNull($.pickTimeSeriesFilter, "expected parameter 'pickTimeSeriesFilter' to be non-null");
+            $.secondaryAggregation = Objects.requireNonNull($.secondaryAggregation, "expected parameter 'secondaryAggregation' to be non-null");
+            return $;
         }
     }
+
 }

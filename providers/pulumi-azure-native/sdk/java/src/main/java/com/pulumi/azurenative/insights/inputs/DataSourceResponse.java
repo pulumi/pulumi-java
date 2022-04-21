@@ -20,7 +20,7 @@ public final class DataSourceResponse extends com.pulumi.resources.InvokeArgs {
     public static final DataSourceResponse Empty = new DataSourceResponse();
 
     @Import(name="configuration", required=true)
-      private final DataSourceConfigurationResponse configuration;
+    private DataSourceConfigurationResponse configuration;
 
     public DataSourceConfigurationResponse configuration() {
         return this.configuration;
@@ -31,74 +31,70 @@ public final class DataSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
     @Import(name="sinks", required=true)
-      private final List<SinkConfigurationResponse> sinks;
+    private List<SinkConfigurationResponse> sinks;
 
     public List<SinkConfigurationResponse> sinks() {
         return this.sinks;
     }
 
-    public DataSourceResponse(
-        DataSourceConfigurationResponse configuration,
-        String kind,
-        List<SinkConfigurationResponse> sinks) {
-        this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.sinks = Objects.requireNonNull(sinks, "expected parameter 'sinks' to be non-null");
-    }
+    private DataSourceResponse() {}
 
-    private DataSourceResponse() {
-        this.configuration = null;
-        this.kind = null;
-        this.sinks = List.of();
+    private DataSourceResponse(DataSourceResponse $) {
+        this.configuration = $.configuration;
+        this.kind = $.kind;
+        this.sinks = $.sinks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DataSourceConfigurationResponse configuration;
-        private String kind;
-        private List<SinkConfigurationResponse> sinks;
+        private DataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceResponse();
         }
 
         public Builder(DataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.kind = defaults.kind;
-    	      this.sinks = defaults.sinks;
+            $ = new DataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(DataSourceConfigurationResponse configuration) {
-            this.configuration = Objects.requireNonNull(configuration);
+            $.configuration = configuration;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder sinks(List<SinkConfigurationResponse> sinks) {
-            this.sinks = Objects.requireNonNull(sinks);
+            $.sinks = sinks;
             return this;
         }
+
         public Builder sinks(SinkConfigurationResponse... sinks) {
             return sinks(List.of(sinks));
-        }        public DataSourceResponse build() {
-            return new DataSourceResponse(configuration, kind, sinks);
+        }
+
+        public DataSourceResponse build() {
+            $.configuration = Objects.requireNonNull($.configuration, "expected parameter 'configuration' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.sinks = Objects.requireNonNull($.sinks, "expected parameter 'sinks' to be non-null");
+            return $;
         }
     }
+
 }

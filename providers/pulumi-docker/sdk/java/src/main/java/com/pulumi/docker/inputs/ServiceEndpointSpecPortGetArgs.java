@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,130 +17,117 @@ public final class ServiceEndpointSpecPortGetArgs extends com.pulumi.resources.R
     public static final ServiceEndpointSpecPortGetArgs Empty = new ServiceEndpointSpecPortGetArgs();
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     @Import(name="publishMode")
-      private final @Nullable Output<String> publishMode;
+    private @Nullable Output<String> publishMode;
 
-    public Output<String> publishMode() {
-        return this.publishMode == null ? Codegen.empty() : this.publishMode;
+    public Optional<Output<String>> publishMode() {
+        return Optional.ofNullable(this.publishMode);
     }
 
     @Import(name="publishedPort")
-      private final @Nullable Output<Integer> publishedPort;
+    private @Nullable Output<Integer> publishedPort;
 
-    public Output<Integer> publishedPort() {
-        return this.publishedPort == null ? Codegen.empty() : this.publishedPort;
+    public Optional<Output<Integer>> publishedPort() {
+        return Optional.ofNullable(this.publishedPort);
     }
 
     @Import(name="targetPort", required=true)
-      private final Output<Integer> targetPort;
+    private Output<Integer> targetPort;
 
     public Output<Integer> targetPort() {
         return this.targetPort;
     }
 
-    public ServiceEndpointSpecPortGetArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> protocol,
-        @Nullable Output<String> publishMode,
-        @Nullable Output<Integer> publishedPort,
-        Output<Integer> targetPort) {
-        this.name = name;
-        this.protocol = protocol;
-        this.publishMode = publishMode;
-        this.publishedPort = publishedPort;
-        this.targetPort = Objects.requireNonNull(targetPort, "expected parameter 'targetPort' to be non-null");
-    }
+    private ServiceEndpointSpecPortGetArgs() {}
 
-    private ServiceEndpointSpecPortGetArgs() {
-        this.name = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.publishMode = Codegen.empty();
-        this.publishedPort = Codegen.empty();
-        this.targetPort = Codegen.empty();
+    private ServiceEndpointSpecPortGetArgs(ServiceEndpointSpecPortGetArgs $) {
+        this.name = $.name;
+        this.protocol = $.protocol;
+        this.publishMode = $.publishMode;
+        this.publishedPort = $.publishedPort;
+        this.targetPort = $.targetPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceEndpointSpecPortGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<String> publishMode;
-        private @Nullable Output<Integer> publishedPort;
-        private Output<Integer> targetPort;
+        private ServiceEndpointSpecPortGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceEndpointSpecPortGetArgs();
         }
 
         public Builder(ServiceEndpointSpecPortGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.protocol = defaults.protocol;
-    	      this.publishMode = defaults.publishMode;
-    	      this.publishedPort = defaults.publishedPort;
-    	      this.targetPort = defaults.targetPort;
+            $ = new ServiceEndpointSpecPortGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder publishMode(@Nullable Output<String> publishMode) {
-            this.publishMode = publishMode;
+            $.publishMode = publishMode;
             return this;
         }
-        public Builder publishMode(@Nullable String publishMode) {
-            this.publishMode = Codegen.ofNullable(publishMode);
-            return this;
+
+        public Builder publishMode(String publishMode) {
+            return publishMode(Output.of(publishMode));
         }
+
         public Builder publishedPort(@Nullable Output<Integer> publishedPort) {
-            this.publishedPort = publishedPort;
+            $.publishedPort = publishedPort;
             return this;
         }
-        public Builder publishedPort(@Nullable Integer publishedPort) {
-            this.publishedPort = Codegen.ofNullable(publishedPort);
-            return this;
+
+        public Builder publishedPort(Integer publishedPort) {
+            return publishedPort(Output.of(publishedPort));
         }
+
         public Builder targetPort(Output<Integer> targetPort) {
-            this.targetPort = Objects.requireNonNull(targetPort);
+            $.targetPort = targetPort;
             return this;
         }
+
         public Builder targetPort(Integer targetPort) {
-            this.targetPort = Output.of(Objects.requireNonNull(targetPort));
-            return this;
-        }        public ServiceEndpointSpecPortGetArgs build() {
-            return new ServiceEndpointSpecPortGetArgs(name, protocol, publishMode, publishedPort, targetPort);
+            return targetPort(Output.of(targetPort));
+        }
+
+        public ServiceEndpointSpecPortGetArgs build() {
+            $.targetPort = Objects.requireNonNull($.targetPort, "expected parameter 'targetPort' to be non-null");
+            return $;
         }
     }
+
 }

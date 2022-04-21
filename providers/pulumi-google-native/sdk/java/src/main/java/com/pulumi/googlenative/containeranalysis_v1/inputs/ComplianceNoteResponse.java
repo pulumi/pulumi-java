@@ -16,7 +16,7 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
     public static final ComplianceNoteResponse Empty = new ComplianceNoteResponse();
 
     @Import(name="cisBenchmark", required=true)
-      private final CisBenchmarkResponse cisBenchmark;
+    private CisBenchmarkResponse cisBenchmark;
 
     public CisBenchmarkResponse cisBenchmark() {
         return this.cisBenchmark;
@@ -27,7 +27,7 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -38,7 +38,7 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rationale", required=true)
-      private final String rationale;
+    private String rationale;
 
     public String rationale() {
         return this.rationale;
@@ -49,7 +49,7 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="remediation", required=true)
-      private final String remediation;
+    private String remediation;
 
     public String remediation() {
         return this.remediation;
@@ -60,7 +60,7 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scanInstructions", required=true)
-      private final String scanInstructions;
+    private String scanInstructions;
 
     public String scanInstructions() {
         return this.scanInstructions;
@@ -71,7 +71,7 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
@@ -82,103 +82,91 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="version", required=true)
-      private final List<ComplianceVersionResponse> version;
+    private List<ComplianceVersionResponse> version;
 
     public List<ComplianceVersionResponse> version() {
         return this.version;
     }
 
-    public ComplianceNoteResponse(
-        CisBenchmarkResponse cisBenchmark,
-        String description,
-        String rationale,
-        String remediation,
-        String scanInstructions,
-        String title,
-        List<ComplianceVersionResponse> version) {
-        this.cisBenchmark = Objects.requireNonNull(cisBenchmark, "expected parameter 'cisBenchmark' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.rationale = Objects.requireNonNull(rationale, "expected parameter 'rationale' to be non-null");
-        this.remediation = Objects.requireNonNull(remediation, "expected parameter 'remediation' to be non-null");
-        this.scanInstructions = Objects.requireNonNull(scanInstructions, "expected parameter 'scanInstructions' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private ComplianceNoteResponse() {}
 
-    private ComplianceNoteResponse() {
-        this.cisBenchmark = null;
-        this.description = null;
-        this.rationale = null;
-        this.remediation = null;
-        this.scanInstructions = null;
-        this.title = null;
-        this.version = List.of();
+    private ComplianceNoteResponse(ComplianceNoteResponse $) {
+        this.cisBenchmark = $.cisBenchmark;
+        this.description = $.description;
+        this.rationale = $.rationale;
+        this.remediation = $.remediation;
+        this.scanInstructions = $.scanInstructions;
+        this.title = $.title;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComplianceNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CisBenchmarkResponse cisBenchmark;
-        private String description;
-        private String rationale;
-        private String remediation;
-        private String scanInstructions;
-        private String title;
-        private List<ComplianceVersionResponse> version;
+        private ComplianceNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComplianceNoteResponse();
         }
 
         public Builder(ComplianceNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cisBenchmark = defaults.cisBenchmark;
-    	      this.description = defaults.description;
-    	      this.rationale = defaults.rationale;
-    	      this.remediation = defaults.remediation;
-    	      this.scanInstructions = defaults.scanInstructions;
-    	      this.title = defaults.title;
-    	      this.version = defaults.version;
+            $ = new ComplianceNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cisBenchmark(CisBenchmarkResponse cisBenchmark) {
-            this.cisBenchmark = Objects.requireNonNull(cisBenchmark);
+            $.cisBenchmark = cisBenchmark;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder rationale(String rationale) {
-            this.rationale = Objects.requireNonNull(rationale);
+            $.rationale = rationale;
             return this;
         }
+
         public Builder remediation(String remediation) {
-            this.remediation = Objects.requireNonNull(remediation);
+            $.remediation = remediation;
             return this;
         }
+
         public Builder scanInstructions(String scanInstructions) {
-            this.scanInstructions = Objects.requireNonNull(scanInstructions);
+            $.scanInstructions = scanInstructions;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder version(List<ComplianceVersionResponse> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(ComplianceVersionResponse... version) {
             return version(List.of(version));
-        }        public ComplianceNoteResponse build() {
-            return new ComplianceNoteResponse(cisBenchmark, description, rationale, remediation, scanInstructions, title, version);
+        }
+
+        public ComplianceNoteResponse build() {
+            $.cisBenchmark = Objects.requireNonNull($.cisBenchmark, "expected parameter 'cisBenchmark' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.rationale = Objects.requireNonNull($.rationale, "expected parameter 'rationale' to be non-null");
+            $.remediation = Objects.requireNonNull($.remediation, "expected parameter 'remediation' to be non-null");
+            $.scanInstructions = Objects.requireNonNull($.scanInstructions, "expected parameter 'scanInstructions' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

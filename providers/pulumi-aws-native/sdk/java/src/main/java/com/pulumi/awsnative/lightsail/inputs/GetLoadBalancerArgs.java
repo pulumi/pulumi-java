@@ -17,45 +17,45 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancerName", required=true)
-      private final String loadBalancerName;
+    private String loadBalancerName;
 
     public String loadBalancerName() {
         return this.loadBalancerName;
     }
 
-    public GetLoadBalancerArgs(String loadBalancerName) {
-        this.loadBalancerName = Objects.requireNonNull(loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
-    }
+    private GetLoadBalancerArgs() {}
 
-    private GetLoadBalancerArgs() {
-        this.loadBalancerName = null;
+    private GetLoadBalancerArgs(GetLoadBalancerArgs $) {
+        this.loadBalancerName = $.loadBalancerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoadBalancerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String loadBalancerName;
+        private GetLoadBalancerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoadBalancerArgs();
         }
 
         public Builder(GetLoadBalancerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loadBalancerName = defaults.loadBalancerName;
+            $ = new GetLoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
+            $.loadBalancerName = loadBalancerName;
             return this;
-        }        public GetLoadBalancerArgs build() {
-            return new GetLoadBalancerArgs(loadBalancerName);
+        }
+
+        public GetLoadBalancerArgs build() {
+            $.loadBalancerName = Objects.requireNonNull($.loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
+            return $;
         }
     }
+
 }

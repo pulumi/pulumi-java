@@ -7,9 +7,9 @@ import com.pulumi.azurenative.datashare.enums.DataSetMappingKind;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,10 +33,10 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dataSetMappingName")
-      private final @Nullable Output<String> dataSetMappingName;
+    private @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> dataSetMappingName() {
-        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
+    public Optional<Output<String>> dataSetMappingName() {
+        return Optional.ofNullable(this.dataSetMappingName);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,DataSetMappingKind>> kind;
+    private Output<Either<String,DataSetMappingKind>> kind;
 
     public Output<Either<String,DataSetMappingKind>> kind() {
         return this.kind;
@@ -55,7 +55,7 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,102 +66,92 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-      private final Output<String> shareSubscriptionName;
+    private Output<String> shareSubscriptionName;
 
     public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
-    public DataSetMappingArgs(
-        Output<String> accountName,
-        @Nullable Output<String> dataSetMappingName,
-        Output<Either<String,DataSetMappingKind>> kind,
-        Output<String> resourceGroupName,
-        Output<String> shareSubscriptionName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dataSetMappingName = dataSetMappingName;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
-    }
+    private DataSetMappingArgs() {}
 
-    private DataSetMappingArgs() {
-        this.accountName = Codegen.empty();
-        this.dataSetMappingName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareSubscriptionName = Codegen.empty();
+    private DataSetMappingArgs(DataSetMappingArgs $) {
+        this.accountName = $.accountName;
+        this.dataSetMappingName = $.dataSetMappingName;
+        this.kind = $.kind;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> dataSetMappingName;
-        private Output<Either<String,DataSetMappingKind>> kind;
-        private Output<String> resourceGroupName;
-        private Output<String> shareSubscriptionName;
+        private DataSetMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetMappingArgs();
         }
 
         public Builder(DataSetMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dataSetMappingName = defaults.dataSetMappingName;
-    	      this.kind = defaults.kind;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
+            $ = new DataSetMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
-            this.dataSetMappingName = dataSetMappingName;
+            $.dataSetMappingName = dataSetMappingName;
             return this;
         }
-        public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
-            return this;
+
+        public Builder dataSetMappingName(String dataSetMappingName) {
+            return dataSetMappingName(Output.of(dataSetMappingName));
         }
+
         public Builder kind(Output<Either<String,DataSetMappingKind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,DataSetMappingKind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
-            this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
+
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
-            return this;
-        }        public DataSetMappingArgs build() {
-            return new DataSetMappingArgs(accountName, dataSetMappingName, kind, resourceGroupName, shareSubscriptionName);
+            return shareSubscriptionName(Output.of(shareSubscriptionName));
+        }
+
+        public DataSetMappingArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareSubscriptionName = Objects.requireNonNull($.shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
+            return $;
         }
     }
+
 }

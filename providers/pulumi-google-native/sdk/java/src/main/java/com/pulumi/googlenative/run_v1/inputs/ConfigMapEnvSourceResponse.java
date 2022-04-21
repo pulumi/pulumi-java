@@ -23,7 +23,7 @@ public final class ConfigMapEnvSourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="localObjectReference", required=true)
-      private final LocalObjectReferenceResponse localObjectReference;
+    private LocalObjectReferenceResponse localObjectReference;
 
     public LocalObjectReferenceResponse localObjectReference() {
         return this.localObjectReference;
@@ -34,7 +34,7 @@ public final class ConfigMapEnvSourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,59 @@ public final class ConfigMapEnvSourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="optional", required=true)
-      private final Boolean optional;
+    private Boolean optional;
 
     public Boolean optional() {
         return this.optional;
     }
 
-    public ConfigMapEnvSourceResponse(
-        LocalObjectReferenceResponse localObjectReference,
-        String name,
-        Boolean optional) {
-        this.localObjectReference = Objects.requireNonNull(localObjectReference, "expected parameter 'localObjectReference' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.optional = Objects.requireNonNull(optional, "expected parameter 'optional' to be non-null");
-    }
+    private ConfigMapEnvSourceResponse() {}
 
-    private ConfigMapEnvSourceResponse() {
-        this.localObjectReference = null;
-        this.name = null;
-        this.optional = null;
+    private ConfigMapEnvSourceResponse(ConfigMapEnvSourceResponse $) {
+        this.localObjectReference = $.localObjectReference;
+        this.name = $.name;
+        this.optional = $.optional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigMapEnvSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private LocalObjectReferenceResponse localObjectReference;
-        private String name;
-        private Boolean optional;
+        private ConfigMapEnvSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigMapEnvSourceResponse();
         }
 
         public Builder(ConfigMapEnvSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localObjectReference = defaults.localObjectReference;
-    	      this.name = defaults.name;
-    	      this.optional = defaults.optional;
+            $ = new ConfigMapEnvSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder localObjectReference(LocalObjectReferenceResponse localObjectReference) {
-            this.localObjectReference = Objects.requireNonNull(localObjectReference);
+            $.localObjectReference = localObjectReference;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder optional(Boolean optional) {
-            this.optional = Objects.requireNonNull(optional);
+            $.optional = optional;
             return this;
-        }        public ConfigMapEnvSourceResponse build() {
-            return new ConfigMapEnvSourceResponse(localObjectReference, name, optional);
+        }
+
+        public ConfigMapEnvSourceResponse build() {
+            $.localObjectReference = Objects.requireNonNull($.localObjectReference, "expected parameter 'localObjectReference' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.optional = Objects.requireNonNull($.optional, "expected parameter 'optional' to be non-null");
+            return $;
         }
     }
+
 }

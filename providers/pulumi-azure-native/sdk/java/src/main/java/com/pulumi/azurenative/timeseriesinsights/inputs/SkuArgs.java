@@ -7,7 +7,6 @@ import com.pulumi.azurenative.timeseriesinsights.enums.SkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity", required=true)
-      private final Output<Integer> capacity;
+    private Output<Integer> capacity;
 
     public Output<Integer> capacity() {
         return this.capacity;
@@ -37,63 +36,60 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,SkuName>> name;
+    private Output<Either<String,SkuName>> name;
 
     public Output<Either<String,SkuName>> name() {
         return this.name;
     }
 
-    public SkuArgs(
-        Output<Integer> capacity,
-        Output<Either<String,SkuName>> name) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private SkuArgs() {}
 
-    private SkuArgs() {
-        this.capacity = Codegen.empty();
-        this.name = Codegen.empty();
+    private SkuArgs(SkuArgs $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> capacity;
-        private Output<Either<String,SkuName>> name;
+        private SkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuArgs();
         }
 
         public Builder(SkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
+            $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(Output<Integer> capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
         }
+
         public Builder capacity(Integer capacity) {
-            this.capacity = Output.of(Objects.requireNonNull(capacity));
-            return this;
+            return capacity(Output.of(capacity));
         }
+
         public Builder name(Output<Either<String,SkuName>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,SkuName> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public SkuArgs build() {
-            return new SkuArgs(capacity, name);
+            return name(Output.of(name));
+        }
+
+        public SkuArgs build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

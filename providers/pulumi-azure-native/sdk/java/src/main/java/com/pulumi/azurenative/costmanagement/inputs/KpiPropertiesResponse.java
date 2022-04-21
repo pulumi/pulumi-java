@@ -24,10 +24,10 @@ public final class KpiPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class KpiPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class KpiPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public KpiPropertiesResponse(
-        @Nullable Boolean enabled,
-        @Nullable String id,
-        @Nullable String type) {
-        this.enabled = enabled;
-        this.id = id;
-        this.type = type;
-    }
+    private KpiPropertiesResponse() {}
 
-    private KpiPropertiesResponse() {
-        this.enabled = null;
-        this.id = null;
-        this.type = null;
+    private KpiPropertiesResponse(KpiPropertiesResponse $) {
+        this.enabled = $.enabled;
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KpiPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String id;
-        private @Nullable String type;
+        private KpiPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KpiPropertiesResponse();
         }
 
         public Builder(KpiPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new KpiPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public KpiPropertiesResponse build() {
-            return new KpiPropertiesResponse(enabled, id, type);
+        }
+
+        public KpiPropertiesResponse build() {
+            return $;
         }
     }
+
 }

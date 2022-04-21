@@ -5,11 +5,11 @@ package com.pulumi.googlenative.pubsub_v1beta1a;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.pubsub_v1beta1a.inputs.PushConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ackDeadlineSeconds")
-      private final @Nullable Output<Integer> ackDeadlineSeconds;
+    private @Nullable Output<Integer> ackDeadlineSeconds;
 
-    public Output<Integer> ackDeadlineSeconds() {
-        return this.ackDeadlineSeconds == null ? Codegen.empty() : this.ackDeadlineSeconds;
+    public Optional<Output<Integer>> ackDeadlineSeconds() {
+        return Optional.ofNullable(this.ackDeadlineSeconds);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pushConfig")
-      private final @Nullable Output<PushConfigArgs> pushConfig;
+    private @Nullable Output<PushConfigArgs> pushConfig;
 
-    public Output<PushConfigArgs> pushConfig() {
-        return this.pushConfig == null ? Codegen.empty() : this.pushConfig;
+    public Optional<Output<PushConfigArgs>> pushConfig() {
+        return Optional.ofNullable(this.pushConfig);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public SubscriptionArgs(
-        @Nullable Output<Integer> ackDeadlineSeconds,
-        @Nullable Output<String> name,
-        @Nullable Output<PushConfigArgs> pushConfig,
-        @Nullable Output<String> topic) {
-        this.ackDeadlineSeconds = ackDeadlineSeconds;
-        this.name = name;
-        this.pushConfig = pushConfig;
-        this.topic = topic;
-    }
+    private SubscriptionArgs() {}
 
-    private SubscriptionArgs() {
-        this.ackDeadlineSeconds = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pushConfig = Codegen.empty();
-        this.topic = Codegen.empty();
+    private SubscriptionArgs(SubscriptionArgs $) {
+        this.ackDeadlineSeconds = $.ackDeadlineSeconds;
+        this.name = $.name;
+        this.pushConfig = $.pushConfig;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> ackDeadlineSeconds;
-        private @Nullable Output<String> name;
-        private @Nullable Output<PushConfigArgs> pushConfig;
-        private @Nullable Output<String> topic;
+        private SubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionArgs();
         }
 
         public Builder(SubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ackDeadlineSeconds = defaults.ackDeadlineSeconds;
-    	      this.name = defaults.name;
-    	      this.pushConfig = defaults.pushConfig;
-    	      this.topic = defaults.topic;
+            $ = new SubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ackDeadlineSeconds(@Nullable Output<Integer> ackDeadlineSeconds) {
-            this.ackDeadlineSeconds = ackDeadlineSeconds;
+            $.ackDeadlineSeconds = ackDeadlineSeconds;
             return this;
         }
-        public Builder ackDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
-            this.ackDeadlineSeconds = Codegen.ofNullable(ackDeadlineSeconds);
-            return this;
+
+        public Builder ackDeadlineSeconds(Integer ackDeadlineSeconds) {
+            return ackDeadlineSeconds(Output.of(ackDeadlineSeconds));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pushConfig(@Nullable Output<PushConfigArgs> pushConfig) {
-            this.pushConfig = pushConfig;
+            $.pushConfig = pushConfig;
             return this;
         }
-        public Builder pushConfig(@Nullable PushConfigArgs pushConfig) {
-            this.pushConfig = Codegen.ofNullable(pushConfig);
-            return this;
+
+        public Builder pushConfig(PushConfigArgs pushConfig) {
+            return pushConfig(Output.of(pushConfig));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public SubscriptionArgs build() {
-            return new SubscriptionArgs(ackDeadlineSeconds, name, pushConfig, topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public SubscriptionArgs build() {
+            return $;
         }
     }
+
 }

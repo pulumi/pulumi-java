@@ -25,10 +25,10 @@ public final class PredictionDistributionDefinitionResponse extends com.pulumi.r
      * 
      */
     @Import(name="distributions")
-      private final @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
+    private @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
 
-    public List<PredictionDistributionDefinitionResponseDistributions> distributions() {
-        return this.distributions == null ? List.of() : this.distributions;
+    public Optional<List<PredictionDistributionDefinitionResponseDistributions>> distributions() {
+        return Optional.ofNullable(this.distributions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PredictionDistributionDefinitionResponse extends com.pulumi.r
      * 
      */
     @Import(name="totalNegatives")
-      private final @Nullable Double totalNegatives;
+    private @Nullable Double totalNegatives;
 
     public Optional<Double> totalNegatives() {
-        return this.totalNegatives == null ? Optional.empty() : Optional.ofNullable(this.totalNegatives);
+        return Optional.ofNullable(this.totalNegatives);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class PredictionDistributionDefinitionResponse extends com.pulumi.r
      * 
      */
     @Import(name="totalPositives")
-      private final @Nullable Double totalPositives;
+    private @Nullable Double totalPositives;
 
     public Optional<Double> totalPositives() {
-        return this.totalPositives == null ? Optional.empty() : Optional.ofNullable(this.totalPositives);
+        return Optional.ofNullable(this.totalPositives);
     }
 
-    public PredictionDistributionDefinitionResponse(
-        @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions,
-        @Nullable Double totalNegatives,
-        @Nullable Double totalPositives) {
-        this.distributions = distributions;
-        this.totalNegatives = totalNegatives;
-        this.totalPositives = totalPositives;
-    }
+    private PredictionDistributionDefinitionResponse() {}
 
-    private PredictionDistributionDefinitionResponse() {
-        this.distributions = List.of();
-        this.totalNegatives = null;
-        this.totalPositives = null;
+    private PredictionDistributionDefinitionResponse(PredictionDistributionDefinitionResponse $) {
+        this.distributions = $.distributions;
+        this.totalNegatives = $.totalNegatives;
+        this.totalPositives = $.totalPositives;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PredictionDistributionDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
-        private @Nullable Double totalNegatives;
-        private @Nullable Double totalPositives;
+        private PredictionDistributionDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PredictionDistributionDefinitionResponse();
         }
 
         public Builder(PredictionDistributionDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributions = defaults.distributions;
-    	      this.totalNegatives = defaults.totalNegatives;
-    	      this.totalPositives = defaults.totalPositives;
+            $ = new PredictionDistributionDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distributions(@Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions) {
-            this.distributions = distributions;
+            $.distributions = distributions;
             return this;
         }
+
         public Builder distributions(PredictionDistributionDefinitionResponseDistributions... distributions) {
             return distributions(List.of(distributions));
         }
+
         public Builder totalNegatives(@Nullable Double totalNegatives) {
-            this.totalNegatives = totalNegatives;
+            $.totalNegatives = totalNegatives;
             return this;
         }
+
         public Builder totalPositives(@Nullable Double totalPositives) {
-            this.totalPositives = totalPositives;
+            $.totalPositives = totalPositives;
             return this;
-        }        public PredictionDistributionDefinitionResponse build() {
-            return new PredictionDistributionDefinitionResponse(distributions, totalNegatives, totalPositives);
+        }
+
+        public PredictionDistributionDefinitionResponse build() {
+            return $;
         }
     }
+
 }

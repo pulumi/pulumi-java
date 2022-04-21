@@ -6,8 +6,8 @@ package com.pulumi.azurenative.management.inputs;
 import com.pulumi.azurenative.management.inputs.CreateParentGroupInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CreateManagementGroupDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<CreateParentGroupInfoArgs> parent;
+    private @Nullable Output<CreateParentGroupInfoArgs> parent;
 
-    public Output<CreateParentGroupInfoArgs> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<CreateParentGroupInfoArgs>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
-    public CreateManagementGroupDetailsArgs(@Nullable Output<CreateParentGroupInfoArgs> parent) {
-        this.parent = parent;
-    }
+    private CreateManagementGroupDetailsArgs() {}
 
-    private CreateManagementGroupDetailsArgs() {
-        this.parent = Codegen.empty();
+    private CreateManagementGroupDetailsArgs(CreateManagementGroupDetailsArgs $) {
+        this.parent = $.parent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreateManagementGroupDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CreateParentGroupInfoArgs> parent;
+        private CreateManagementGroupDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreateManagementGroupDetailsArgs();
         }
 
         public Builder(CreateManagementGroupDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parent = defaults.parent;
+            $ = new CreateManagementGroupDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parent(@Nullable Output<CreateParentGroupInfoArgs> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable CreateParentGroupInfoArgs parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
-        }        public CreateManagementGroupDetailsArgs build() {
-            return new CreateManagementGroupDetailsArgs(parent);
+
+        public Builder parent(CreateParentGroupInfoArgs parent) {
+            return parent(Output.of(parent));
+        }
+
+        public CreateManagementGroupDetailsArgs build() {
+            return $;
         }
     }
+
 }

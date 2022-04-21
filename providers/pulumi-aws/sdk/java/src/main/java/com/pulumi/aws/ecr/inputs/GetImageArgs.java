@@ -19,10 +19,10 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageDigest")
-      private final @Nullable String imageDigest;
+    private @Nullable String imageDigest;
 
     public Optional<String> imageDigest() {
-        return this.imageDigest == null ? Optional.empty() : Optional.ofNullable(this.imageDigest);
+        return Optional.ofNullable(this.imageDigest);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageTag")
-      private final @Nullable String imageTag;
+    private @Nullable String imageTag;
 
     public Optional<String> imageTag() {
-        return this.imageTag == null ? Optional.empty() : Optional.ofNullable(this.imageTag);
+        return Optional.ofNullable(this.imageTag);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryId")
-      private final @Nullable String registryId;
+    private @Nullable String registryId;
 
     public Optional<String> registryId() {
-        return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);
+        return Optional.ofNullable(this.registryId);
     }
 
     /**
@@ -52,73 +52,63 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repositoryName", required=true)
-      private final String repositoryName;
+    private String repositoryName;
 
     public String repositoryName() {
         return this.repositoryName;
     }
 
-    public GetImageArgs(
-        @Nullable String imageDigest,
-        @Nullable String imageTag,
-        @Nullable String registryId,
-        String repositoryName) {
-        this.imageDigest = imageDigest;
-        this.imageTag = imageTag;
-        this.registryId = registryId;
-        this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
-    }
+    private GetImageArgs() {}
 
-    private GetImageArgs() {
-        this.imageDigest = null;
-        this.imageTag = null;
-        this.registryId = null;
-        this.repositoryName = null;
+    private GetImageArgs(GetImageArgs $) {
+        this.imageDigest = $.imageDigest;
+        this.imageTag = $.imageTag;
+        this.registryId = $.registryId;
+        this.repositoryName = $.repositoryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String imageDigest;
-        private @Nullable String imageTag;
-        private @Nullable String registryId;
-        private String repositoryName;
+        private GetImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageArgs();
         }
 
         public Builder(GetImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageDigest = defaults.imageDigest;
-    	      this.imageTag = defaults.imageTag;
-    	      this.registryId = defaults.registryId;
-    	      this.repositoryName = defaults.repositoryName;
+            $ = new GetImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageDigest(@Nullable String imageDigest) {
-            this.imageDigest = imageDigest;
+            $.imageDigest = imageDigest;
             return this;
         }
+
         public Builder imageTag(@Nullable String imageTag) {
-            this.imageTag = imageTag;
+            $.imageTag = imageTag;
             return this;
         }
+
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = registryId;
+            $.registryId = registryId;
             return this;
         }
+
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Objects.requireNonNull(repositoryName);
+            $.repositoryName = repositoryName;
             return this;
-        }        public GetImageArgs build() {
-            return new GetImageArgs(imageDigest, imageTag, registryId, repositoryName);
+        }
+
+        public GetImageArgs build() {
+            $.repositoryName = Objects.requireNonNull($.repositoryName, "expected parameter 'repositoryName' to be non-null");
+            return $;
         }
     }
+
 }

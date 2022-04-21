@@ -6,8 +6,8 @@ package com.pulumi.azurenative.dataprotection.inputs;
 import com.pulumi.azurenative.dataprotection.inputs.RetentionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AdhocBasedTaggingCriteriaArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tagInfo")
-      private final @Nullable Output<RetentionTagArgs> tagInfo;
+    private @Nullable Output<RetentionTagArgs> tagInfo;
 
-    public Output<RetentionTagArgs> tagInfo() {
-        return this.tagInfo == null ? Codegen.empty() : this.tagInfo;
+    public Optional<Output<RetentionTagArgs>> tagInfo() {
+        return Optional.ofNullable(this.tagInfo);
     }
 
-    public AdhocBasedTaggingCriteriaArgs(@Nullable Output<RetentionTagArgs> tagInfo) {
-        this.tagInfo = tagInfo;
-    }
+    private AdhocBasedTaggingCriteriaArgs() {}
 
-    private AdhocBasedTaggingCriteriaArgs() {
-        this.tagInfo = Codegen.empty();
+    private AdhocBasedTaggingCriteriaArgs(AdhocBasedTaggingCriteriaArgs $) {
+        this.tagInfo = $.tagInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdhocBasedTaggingCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RetentionTagArgs> tagInfo;
+        private AdhocBasedTaggingCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdhocBasedTaggingCriteriaArgs();
         }
 
         public Builder(AdhocBasedTaggingCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tagInfo = defaults.tagInfo;
+            $ = new AdhocBasedTaggingCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tagInfo(@Nullable Output<RetentionTagArgs> tagInfo) {
-            this.tagInfo = tagInfo;
+            $.tagInfo = tagInfo;
             return this;
         }
-        public Builder tagInfo(@Nullable RetentionTagArgs tagInfo) {
-            this.tagInfo = Codegen.ofNullable(tagInfo);
-            return this;
-        }        public AdhocBasedTaggingCriteriaArgs build() {
-            return new AdhocBasedTaggingCriteriaArgs(tagInfo);
+
+        public Builder tagInfo(RetentionTagArgs tagInfo) {
+            return tagInfo(Output.of(tagInfo));
+        }
+
+        public AdhocBasedTaggingCriteriaArgs build() {
+            return $;
         }
     }
+
 }

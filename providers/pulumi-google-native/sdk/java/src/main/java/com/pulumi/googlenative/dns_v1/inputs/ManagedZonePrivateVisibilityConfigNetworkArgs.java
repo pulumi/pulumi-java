@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dns_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends com.pul
     public static final ManagedZonePrivateVisibilityConfigNetworkArgs Empty = new ManagedZonePrivateVisibilityConfigNetworkArgs();
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -27,63 +27,58 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends com.pul
      * 
      */
     @Import(name="networkUrl")
-      private final @Nullable Output<String> networkUrl;
+    private @Nullable Output<String> networkUrl;
 
-    public Output<String> networkUrl() {
-        return this.networkUrl == null ? Codegen.empty() : this.networkUrl;
+    public Optional<Output<String>> networkUrl() {
+        return Optional.ofNullable(this.networkUrl);
     }
 
-    public ManagedZonePrivateVisibilityConfigNetworkArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<String> networkUrl) {
-        this.kind = kind;
-        this.networkUrl = networkUrl;
-    }
+    private ManagedZonePrivateVisibilityConfigNetworkArgs() {}
 
-    private ManagedZonePrivateVisibilityConfigNetworkArgs() {
-        this.kind = Codegen.empty();
-        this.networkUrl = Codegen.empty();
+    private ManagedZonePrivateVisibilityConfigNetworkArgs(ManagedZonePrivateVisibilityConfigNetworkArgs $) {
+        this.kind = $.kind;
+        this.networkUrl = $.networkUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePrivateVisibilityConfigNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> networkUrl;
+        private ManagedZonePrivateVisibilityConfigNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePrivateVisibilityConfigNetworkArgs();
         }
 
         public Builder(ManagedZonePrivateVisibilityConfigNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.networkUrl = defaults.networkUrl;
+            $ = new ManagedZonePrivateVisibilityConfigNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder networkUrl(@Nullable Output<String> networkUrl) {
-            this.networkUrl = networkUrl;
+            $.networkUrl = networkUrl;
             return this;
         }
-        public Builder networkUrl(@Nullable String networkUrl) {
-            this.networkUrl = Codegen.ofNullable(networkUrl);
-            return this;
-        }        public ManagedZonePrivateVisibilityConfigNetworkArgs build() {
-            return new ManagedZonePrivateVisibilityConfigNetworkArgs(kind, networkUrl);
+
+        public Builder networkUrl(String networkUrl) {
+            return networkUrl(Output.of(networkUrl));
+        }
+
+        public ManagedZonePrivateVisibilityConfigNetworkArgs build() {
+            return $;
         }
     }
+
 }

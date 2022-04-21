@@ -5,10 +5,10 @@ package com.pulumi.gcp.projects;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class IAMCustomRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class IAMCustomRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissions", required=true)
-      private final Output<List<String>> permissions;
+    private Output<List<String>> permissions;
 
     public Output<List<String>> permissions() {
         return this.permissions;
@@ -44,10 +44,10 @@ public final class IAMCustomRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class IAMCustomRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleId", required=true)
-      private final Output<String> roleId;
+    private Output<String> roleId;
 
     public Output<String> roleId() {
         return this.roleId;
@@ -68,10 +68,10 @@ public final class IAMCustomRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stage")
-      private final @Nullable Output<String> stage;
+    private @Nullable Output<String> stage;
 
-    public Output<String> stage() {
-        return this.stage == null ? Codegen.empty() : this.stage;
+    public Optional<Output<String>> stage() {
+        return Optional.ofNullable(this.stage);
     }
 
     /**
@@ -79,118 +79,105 @@ public final class IAMCustomRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public IAMCustomRoleArgs(
-        @Nullable Output<String> description,
-        Output<List<String>> permissions,
-        @Nullable Output<String> project,
-        Output<String> roleId,
-        @Nullable Output<String> stage,
-        Output<String> title) {
-        this.description = description;
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.project = project;
-        this.roleId = Objects.requireNonNull(roleId, "expected parameter 'roleId' to be non-null");
-        this.stage = stage;
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private IAMCustomRoleArgs() {}
 
-    private IAMCustomRoleArgs() {
-        this.description = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.project = Codegen.empty();
-        this.roleId = Codegen.empty();
-        this.stage = Codegen.empty();
-        this.title = Codegen.empty();
+    private IAMCustomRoleArgs(IAMCustomRoleArgs $) {
+        this.description = $.description;
+        this.permissions = $.permissions;
+        this.project = $.project;
+        this.roleId = $.roleId;
+        this.stage = $.stage;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IAMCustomRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<String>> permissions;
-        private @Nullable Output<String> project;
-        private Output<String> roleId;
-        private @Nullable Output<String> stage;
-        private Output<String> title;
+        private IAMCustomRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IAMCustomRoleArgs();
         }
 
         public Builder(IAMCustomRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.permissions = defaults.permissions;
-    	      this.project = defaults.project;
-    	      this.roleId = defaults.roleId;
-    	      this.stage = defaults.stage;
-    	      this.title = defaults.title;
+            $ = new IAMCustomRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder permissions(Output<List<String>> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder permissions(List<String> permissions) {
-            this.permissions = Output.of(Objects.requireNonNull(permissions));
-            return this;
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder roleId(Output<String> roleId) {
-            this.roleId = Objects.requireNonNull(roleId);
+            $.roleId = roleId;
             return this;
         }
+
         public Builder roleId(String roleId) {
-            this.roleId = Output.of(Objects.requireNonNull(roleId));
-            return this;
+            return roleId(Output.of(roleId));
         }
+
         public Builder stage(@Nullable Output<String> stage) {
-            this.stage = stage;
+            $.stage = stage;
             return this;
         }
-        public Builder stage(@Nullable String stage) {
-            this.stage = Codegen.ofNullable(stage);
-            return this;
+
+        public Builder stage(String stage) {
+            return stage(Output.of(stage));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public IAMCustomRoleArgs build() {
-            return new IAMCustomRoleArgs(description, permissions, project, roleId, stage, title);
+            return title(Output.of(title));
+        }
+
+        public IAMCustomRoleArgs build() {
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.roleId = Objects.requireNonNull($.roleId, "expected parameter 'roleId' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

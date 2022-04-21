@@ -5,11 +5,11 @@ package com.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends co
      * 
      */
     @Import(name="allowAllBundleIds")
-      private final @Nullable Output<Boolean> allowAllBundleIds;
+    private @Nullable Output<Boolean> allowAllBundleIds;
 
-    public Output<Boolean> allowAllBundleIds() {
-        return this.allowAllBundleIds == null ? Codegen.empty() : this.allowAllBundleIds;
+    public Optional<Output<Boolean>> allowAllBundleIds() {
+        return Optional.ofNullable(this.allowAllBundleIds);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends co
      * 
      */
     @Import(name="allowedBundleIds")
-      private final @Nullable Output<List<String>> allowedBundleIds;
+    private @Nullable Output<List<String>> allowedBundleIds;
 
-    public Output<List<String>> allowedBundleIds() {
-        return this.allowedBundleIds == null ? Codegen.empty() : this.allowedBundleIds;
+    public Optional<Output<List<String>>> allowedBundleIds() {
+        return Optional.ofNullable(this.allowedBundleIds);
     }
 
-    public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs(
-        @Nullable Output<Boolean> allowAllBundleIds,
-        @Nullable Output<List<String>> allowedBundleIds) {
-        this.allowAllBundleIds = allowAllBundleIds;
-        this.allowedBundleIds = allowedBundleIds;
-    }
+    private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs() {}
 
-    private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs() {
-        this.allowAllBundleIds = Codegen.empty();
-        this.allowedBundleIds = Codegen.empty();
+    private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs(GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs $) {
+        this.allowAllBundleIds = $.allowAllBundleIds;
+        this.allowedBundleIds = $.allowedBundleIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowAllBundleIds;
-        private @Nullable Output<List<String>> allowedBundleIds;
+        private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs();
         }
 
         public Builder(GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAllBundleIds = defaults.allowAllBundleIds;
-    	      this.allowedBundleIds = defaults.allowedBundleIds;
+            $ = new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAllBundleIds(@Nullable Output<Boolean> allowAllBundleIds) {
-            this.allowAllBundleIds = allowAllBundleIds;
+            $.allowAllBundleIds = allowAllBundleIds;
             return this;
         }
-        public Builder allowAllBundleIds(@Nullable Boolean allowAllBundleIds) {
-            this.allowAllBundleIds = Codegen.ofNullable(allowAllBundleIds);
-            return this;
+
+        public Builder allowAllBundleIds(Boolean allowAllBundleIds) {
+            return allowAllBundleIds(Output.of(allowAllBundleIds));
         }
+
         public Builder allowedBundleIds(@Nullable Output<List<String>> allowedBundleIds) {
-            this.allowedBundleIds = allowedBundleIds;
+            $.allowedBundleIds = allowedBundleIds;
             return this;
         }
-        public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
-            this.allowedBundleIds = Codegen.ofNullable(allowedBundleIds);
-            return this;
+
+        public Builder allowedBundleIds(List<String> allowedBundleIds) {
+            return allowedBundleIds(Output.of(allowedBundleIds));
         }
+
         public Builder allowedBundleIds(String... allowedBundleIds) {
             return allowedBundleIds(List.of(allowedBundleIds));
-        }        public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs build() {
-            return new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs(allowAllBundleIds, allowedBundleIds);
+        }
+
+        public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +25,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="adxDatabaseName", required=true)
-      private final Output<String> adxDatabaseName;
+    private Output<String> adxDatabaseName;
 
     public Output<String> adxDatabaseName() {
         return this.adxDatabaseName;
@@ -35,7 +36,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="adxEndpointUri", required=true)
-      private final Output<String> adxEndpointUri;
+    private Output<String> adxEndpointUri;
 
     public Output<String> adxEndpointUri() {
         return this.adxEndpointUri;
@@ -46,7 +47,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="adxResourceId", required=true)
-      private final Output<String> adxResourceId;
+    private Output<String> adxResourceId;
 
     public Output<String> adxResourceId() {
         return this.adxResourceId;
@@ -57,10 +58,10 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="adxTableName")
-      private final @Nullable Output<String> adxTableName;
+    private @Nullable Output<String> adxTableName;
 
-    public Output<String> adxTableName() {
-        return this.adxTableName == null ? Codegen.empty() : this.adxTableName;
+    public Optional<Output<String>> adxTableName() {
+        return Optional.ofNullable(this.adxTableName);
     }
 
     /**
@@ -69,7 +70,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="connectionType", required=true)
-      private final Output<String> connectionType;
+    private Output<String> connectionType;
 
     public Output<String> connectionType() {
         return this.connectionType;
@@ -80,10 +81,10 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="eventHubConsumerGroup")
-      private final @Nullable Output<String> eventHubConsumerGroup;
+    private @Nullable Output<String> eventHubConsumerGroup;
 
-    public Output<String> eventHubConsumerGroup() {
-        return this.eventHubConsumerGroup == null ? Codegen.empty() : this.eventHubConsumerGroup;
+    public Optional<Output<String>> eventHubConsumerGroup() {
+        return Optional.ofNullable(this.eventHubConsumerGroup);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="eventHubEndpointUri", required=true)
-      private final Output<String> eventHubEndpointUri;
+    private Output<String> eventHubEndpointUri;
 
     public Output<String> eventHubEndpointUri() {
         return this.eventHubEndpointUri;
@@ -102,7 +103,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="eventHubEntityPath", required=true)
-      private final Output<String> eventHubEntityPath;
+    private Output<String> eventHubEntityPath;
 
     public Output<String> eventHubEntityPath() {
         return this.eventHubEntityPath;
@@ -113,154 +114,135 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="eventHubNamespaceResourceId", required=true)
-      private final Output<String> eventHubNamespaceResourceId;
+    private Output<String> eventHubNamespaceResourceId;
 
     public Output<String> eventHubNamespaceResourceId() {
         return this.eventHubNamespaceResourceId;
     }
 
-    public AzureDataExplorerConnectionPropertiesArgs(
-        Output<String> adxDatabaseName,
-        Output<String> adxEndpointUri,
-        Output<String> adxResourceId,
-        @Nullable Output<String> adxTableName,
-        Output<String> connectionType,
-        @Nullable Output<String> eventHubConsumerGroup,
-        Output<String> eventHubEndpointUri,
-        Output<String> eventHubEntityPath,
-        Output<String> eventHubNamespaceResourceId) {
-        this.adxDatabaseName = Objects.requireNonNull(adxDatabaseName, "expected parameter 'adxDatabaseName' to be non-null");
-        this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri, "expected parameter 'adxEndpointUri' to be non-null");
-        this.adxResourceId = Objects.requireNonNull(adxResourceId, "expected parameter 'adxResourceId' to be non-null");
-        this.adxTableName = adxTableName;
-        this.connectionType = Codegen.stringProp("connectionType").output().arg(connectionType).require();
-        this.eventHubConsumerGroup = eventHubConsumerGroup;
-        this.eventHubEndpointUri = Objects.requireNonNull(eventHubEndpointUri, "expected parameter 'eventHubEndpointUri' to be non-null");
-        this.eventHubEntityPath = Objects.requireNonNull(eventHubEntityPath, "expected parameter 'eventHubEntityPath' to be non-null");
-        this.eventHubNamespaceResourceId = Objects.requireNonNull(eventHubNamespaceResourceId, "expected parameter 'eventHubNamespaceResourceId' to be non-null");
-    }
+    private AzureDataExplorerConnectionPropertiesArgs() {}
 
-    private AzureDataExplorerConnectionPropertiesArgs() {
-        this.adxDatabaseName = Codegen.empty();
-        this.adxEndpointUri = Codegen.empty();
-        this.adxResourceId = Codegen.empty();
-        this.adxTableName = Codegen.empty();
-        this.connectionType = Codegen.empty();
-        this.eventHubConsumerGroup = Codegen.empty();
-        this.eventHubEndpointUri = Codegen.empty();
-        this.eventHubEntityPath = Codegen.empty();
-        this.eventHubNamespaceResourceId = Codegen.empty();
+    private AzureDataExplorerConnectionPropertiesArgs(AzureDataExplorerConnectionPropertiesArgs $) {
+        this.adxDatabaseName = $.adxDatabaseName;
+        this.adxEndpointUri = $.adxEndpointUri;
+        this.adxResourceId = $.adxResourceId;
+        this.adxTableName = $.adxTableName;
+        this.connectionType = $.connectionType;
+        this.eventHubConsumerGroup = $.eventHubConsumerGroup;
+        this.eventHubEndpointUri = $.eventHubEndpointUri;
+        this.eventHubEntityPath = $.eventHubEntityPath;
+        this.eventHubNamespaceResourceId = $.eventHubNamespaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDataExplorerConnectionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> adxDatabaseName;
-        private Output<String> adxEndpointUri;
-        private Output<String> adxResourceId;
-        private @Nullable Output<String> adxTableName;
-        private Output<String> connectionType;
-        private @Nullable Output<String> eventHubConsumerGroup;
-        private Output<String> eventHubEndpointUri;
-        private Output<String> eventHubEntityPath;
-        private Output<String> eventHubNamespaceResourceId;
+        private AzureDataExplorerConnectionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDataExplorerConnectionPropertiesArgs();
         }
 
         public Builder(AzureDataExplorerConnectionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adxDatabaseName = defaults.adxDatabaseName;
-    	      this.adxEndpointUri = defaults.adxEndpointUri;
-    	      this.adxResourceId = defaults.adxResourceId;
-    	      this.adxTableName = defaults.adxTableName;
-    	      this.connectionType = defaults.connectionType;
-    	      this.eventHubConsumerGroup = defaults.eventHubConsumerGroup;
-    	      this.eventHubEndpointUri = defaults.eventHubEndpointUri;
-    	      this.eventHubEntityPath = defaults.eventHubEntityPath;
-    	      this.eventHubNamespaceResourceId = defaults.eventHubNamespaceResourceId;
+            $ = new AzureDataExplorerConnectionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adxDatabaseName(Output<String> adxDatabaseName) {
-            this.adxDatabaseName = Objects.requireNonNull(adxDatabaseName);
+            $.adxDatabaseName = adxDatabaseName;
             return this;
         }
+
         public Builder adxDatabaseName(String adxDatabaseName) {
-            this.adxDatabaseName = Output.of(Objects.requireNonNull(adxDatabaseName));
-            return this;
+            return adxDatabaseName(Output.of(adxDatabaseName));
         }
+
         public Builder adxEndpointUri(Output<String> adxEndpointUri) {
-            this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri);
+            $.adxEndpointUri = adxEndpointUri;
             return this;
         }
+
         public Builder adxEndpointUri(String adxEndpointUri) {
-            this.adxEndpointUri = Output.of(Objects.requireNonNull(adxEndpointUri));
-            return this;
+            return adxEndpointUri(Output.of(adxEndpointUri));
         }
+
         public Builder adxResourceId(Output<String> adxResourceId) {
-            this.adxResourceId = Objects.requireNonNull(adxResourceId);
+            $.adxResourceId = adxResourceId;
             return this;
         }
+
         public Builder adxResourceId(String adxResourceId) {
-            this.adxResourceId = Output.of(Objects.requireNonNull(adxResourceId));
-            return this;
+            return adxResourceId(Output.of(adxResourceId));
         }
+
         public Builder adxTableName(@Nullable Output<String> adxTableName) {
-            this.adxTableName = adxTableName;
+            $.adxTableName = adxTableName;
             return this;
         }
-        public Builder adxTableName(@Nullable String adxTableName) {
-            this.adxTableName = Codegen.ofNullable(adxTableName);
-            return this;
+
+        public Builder adxTableName(String adxTableName) {
+            return adxTableName(Output.of(adxTableName));
         }
+
         public Builder connectionType(Output<String> connectionType) {
-            this.connectionType = Objects.requireNonNull(connectionType);
+            $.connectionType = connectionType;
             return this;
         }
+
         public Builder connectionType(String connectionType) {
-            this.connectionType = Output.of(Objects.requireNonNull(connectionType));
-            return this;
+            return connectionType(Output.of(connectionType));
         }
+
         public Builder eventHubConsumerGroup(@Nullable Output<String> eventHubConsumerGroup) {
-            this.eventHubConsumerGroup = eventHubConsumerGroup;
+            $.eventHubConsumerGroup = eventHubConsumerGroup;
             return this;
         }
-        public Builder eventHubConsumerGroup(@Nullable String eventHubConsumerGroup) {
-            this.eventHubConsumerGroup = Codegen.ofNullable(eventHubConsumerGroup);
-            return this;
+
+        public Builder eventHubConsumerGroup(String eventHubConsumerGroup) {
+            return eventHubConsumerGroup(Output.of(eventHubConsumerGroup));
         }
+
         public Builder eventHubEndpointUri(Output<String> eventHubEndpointUri) {
-            this.eventHubEndpointUri = Objects.requireNonNull(eventHubEndpointUri);
+            $.eventHubEndpointUri = eventHubEndpointUri;
             return this;
         }
+
         public Builder eventHubEndpointUri(String eventHubEndpointUri) {
-            this.eventHubEndpointUri = Output.of(Objects.requireNonNull(eventHubEndpointUri));
-            return this;
+            return eventHubEndpointUri(Output.of(eventHubEndpointUri));
         }
+
         public Builder eventHubEntityPath(Output<String> eventHubEntityPath) {
-            this.eventHubEntityPath = Objects.requireNonNull(eventHubEntityPath);
+            $.eventHubEntityPath = eventHubEntityPath;
             return this;
         }
+
         public Builder eventHubEntityPath(String eventHubEntityPath) {
-            this.eventHubEntityPath = Output.of(Objects.requireNonNull(eventHubEntityPath));
-            return this;
+            return eventHubEntityPath(Output.of(eventHubEntityPath));
         }
+
         public Builder eventHubNamespaceResourceId(Output<String> eventHubNamespaceResourceId) {
-            this.eventHubNamespaceResourceId = Objects.requireNonNull(eventHubNamespaceResourceId);
+            $.eventHubNamespaceResourceId = eventHubNamespaceResourceId;
             return this;
         }
+
         public Builder eventHubNamespaceResourceId(String eventHubNamespaceResourceId) {
-            this.eventHubNamespaceResourceId = Output.of(Objects.requireNonNull(eventHubNamespaceResourceId));
-            return this;
-        }        public AzureDataExplorerConnectionPropertiesArgs build() {
-            return new AzureDataExplorerConnectionPropertiesArgs(adxDatabaseName, adxEndpointUri, adxResourceId, adxTableName, connectionType, eventHubConsumerGroup, eventHubEndpointUri, eventHubEntityPath, eventHubNamespaceResourceId);
+            return eventHubNamespaceResourceId(Output.of(eventHubNamespaceResourceId));
+        }
+
+        public AzureDataExplorerConnectionPropertiesArgs build() {
+            $.adxDatabaseName = Objects.requireNonNull($.adxDatabaseName, "expected parameter 'adxDatabaseName' to be non-null");
+            $.adxEndpointUri = Objects.requireNonNull($.adxEndpointUri, "expected parameter 'adxEndpointUri' to be non-null");
+            $.adxResourceId = Objects.requireNonNull($.adxResourceId, "expected parameter 'adxResourceId' to be non-null");
+            $.connectionType = Codegen.stringProp("connectionType").output().arg($.connectionType).require();
+            $.eventHubEndpointUri = Objects.requireNonNull($.eventHubEndpointUri, "expected parameter 'eventHubEndpointUri' to be non-null");
+            $.eventHubEntityPath = Objects.requireNonNull($.eventHubEntityPath, "expected parameter 'eventHubEntityPath' to be non-null");
+            $.eventHubNamespaceResourceId = Objects.requireNonNull($.eventHubNamespaceResourceId, "expected parameter 'eventHubNamespaceResourceId' to be non-null");
+            return $;
         }
     }
+
 }

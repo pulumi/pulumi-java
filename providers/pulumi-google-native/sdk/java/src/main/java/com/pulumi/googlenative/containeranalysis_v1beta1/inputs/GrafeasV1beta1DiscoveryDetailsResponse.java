@@ -21,45 +21,45 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="discovered", required=true)
-      private final DiscoveredResponse discovered;
+    private DiscoveredResponse discovered;
 
     public DiscoveredResponse discovered() {
         return this.discovered;
     }
 
-    public GrafeasV1beta1DiscoveryDetailsResponse(DiscoveredResponse discovered) {
-        this.discovered = Objects.requireNonNull(discovered, "expected parameter 'discovered' to be non-null");
-    }
+    private GrafeasV1beta1DiscoveryDetailsResponse() {}
 
-    private GrafeasV1beta1DiscoveryDetailsResponse() {
-        this.discovered = null;
+    private GrafeasV1beta1DiscoveryDetailsResponse(GrafeasV1beta1DiscoveryDetailsResponse $) {
+        this.discovered = $.discovered;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1DiscoveryDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DiscoveredResponse discovered;
+        private GrafeasV1beta1DiscoveryDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1DiscoveryDetailsResponse();
         }
 
         public Builder(GrafeasV1beta1DiscoveryDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.discovered = defaults.discovered;
+            $ = new GrafeasV1beta1DiscoveryDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder discovered(DiscoveredResponse discovered) {
-            this.discovered = Objects.requireNonNull(discovered);
+            $.discovered = discovered;
             return this;
-        }        public GrafeasV1beta1DiscoveryDetailsResponse build() {
-            return new GrafeasV1beta1DiscoveryDetailsResponse(discovered);
+        }
+
+        public GrafeasV1beta1DiscoveryDetailsResponse build() {
+            $.discovered = Objects.requireNonNull($.discovered, "expected parameter 'discovered' to be non-null");
+            return $;
         }
     }
+
 }

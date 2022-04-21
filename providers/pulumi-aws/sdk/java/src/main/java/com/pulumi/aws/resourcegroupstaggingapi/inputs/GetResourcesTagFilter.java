@@ -20,7 +20,7 @@ public final class GetResourcesTagFilter extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -31,58 +31,55 @@ public final class GetResourcesTagFilter extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public GetResourcesTagFilter(
-        String key,
-        @Nullable List<String> values) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.values = values;
-    }
+    private GetResourcesTagFilter() {}
 
-    private GetResourcesTagFilter() {
-        this.key = null;
-        this.values = List.of();
+    private GetResourcesTagFilter(GetResourcesTagFilter $) {
+        this.key = $.key;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcesTagFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private @Nullable List<String> values;
+        private GetResourcesTagFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcesTagFilter();
         }
 
         public Builder(GetResourcesTagFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.values = defaults.values;
+            $ = new GetResourcesTagFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public GetResourcesTagFilter build() {
-            return new GetResourcesTagFilter(key, values);
+        }
+
+        public GetResourcesTagFilter build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

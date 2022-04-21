@@ -6,10 +6,10 @@ package com.pulumi.azurenative.automation.inputs;
 import com.pulumi.azurenative.automation.inputs.TagSettingsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AzureQueryPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="locations")
-      private final @Nullable Output<List<String>> locations;
+    private @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> locations() {
-        return this.locations == null ? Codegen.empty() : this.locations;
+    public Optional<Output<List<String>>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AzureQueryPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<List<String>> scope;
+    private @Nullable Output<List<String>> scope;
 
-    public Output<List<String>> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<List<String>>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -48,82 +48,76 @@ public final class AzureQueryPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tagSettings")
-      private final @Nullable Output<TagSettingsPropertiesArgs> tagSettings;
+    private @Nullable Output<TagSettingsPropertiesArgs> tagSettings;
 
-    public Output<TagSettingsPropertiesArgs> tagSettings() {
-        return this.tagSettings == null ? Codegen.empty() : this.tagSettings;
+    public Optional<Output<TagSettingsPropertiesArgs>> tagSettings() {
+        return Optional.ofNullable(this.tagSettings);
     }
 
-    public AzureQueryPropertiesArgs(
-        @Nullable Output<List<String>> locations,
-        @Nullable Output<List<String>> scope,
-        @Nullable Output<TagSettingsPropertiesArgs> tagSettings) {
-        this.locations = locations;
-        this.scope = scope;
-        this.tagSettings = tagSettings;
-    }
+    private AzureQueryPropertiesArgs() {}
 
-    private AzureQueryPropertiesArgs() {
-        this.locations = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.tagSettings = Codegen.empty();
+    private AzureQueryPropertiesArgs(AzureQueryPropertiesArgs $) {
+        this.locations = $.locations;
+        this.scope = $.scope;
+        this.tagSettings = $.tagSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureQueryPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> locations;
-        private @Nullable Output<List<String>> scope;
-        private @Nullable Output<TagSettingsPropertiesArgs> tagSettings;
+        private AzureQueryPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureQueryPropertiesArgs();
         }
 
         public Builder(AzureQueryPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locations = defaults.locations;
-    	      this.scope = defaults.scope;
-    	      this.tagSettings = defaults.tagSettings;
+            $ = new AzureQueryPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locations(@Nullable Output<List<String>> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
-        public Builder locations(@Nullable List<String> locations) {
-            this.locations = Codegen.ofNullable(locations);
-            return this;
+
+        public Builder locations(List<String> locations) {
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder scope(@Nullable Output<List<String>> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable List<String> scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(List<String> scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder scope(String... scope) {
             return scope(List.of(scope));
         }
+
         public Builder tagSettings(@Nullable Output<TagSettingsPropertiesArgs> tagSettings) {
-            this.tagSettings = tagSettings;
+            $.tagSettings = tagSettings;
             return this;
         }
-        public Builder tagSettings(@Nullable TagSettingsPropertiesArgs tagSettings) {
-            this.tagSettings = Codegen.ofNullable(tagSettings);
-            return this;
-        }        public AzureQueryPropertiesArgs build() {
-            return new AzureQueryPropertiesArgs(locations, scope, tagSettings);
+
+        public Builder tagSettings(TagSettingsPropertiesArgs tagSettings) {
+            return tagSettings(Output.of(tagSettings));
+        }
+
+        public AzureQueryPropertiesArgs build() {
+            return $;
         }
     }
+
 }

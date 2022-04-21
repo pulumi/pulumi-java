@@ -5,9 +5,9 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.CloudHealthcareSourceArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AnnotationSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloudHealthcareSource")
-      private final @Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource;
+    private @Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource;
 
-    public Output<CloudHealthcareSourceArgs> cloudHealthcareSource() {
-        return this.cloudHealthcareSource == null ? Codegen.empty() : this.cloudHealthcareSource;
+    public Optional<Output<CloudHealthcareSourceArgs>> cloudHealthcareSource() {
+        return Optional.ofNullable(this.cloudHealthcareSource);
     }
 
-    public AnnotationSourceArgs(@Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource) {
-        this.cloudHealthcareSource = cloudHealthcareSource;
-    }
+    private AnnotationSourceArgs() {}
 
-    private AnnotationSourceArgs() {
-        this.cloudHealthcareSource = Codegen.empty();
+    private AnnotationSourceArgs(AnnotationSourceArgs $) {
+        this.cloudHealthcareSource = $.cloudHealthcareSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnnotationSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource;
+        private AnnotationSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnnotationSourceArgs();
         }
 
         public Builder(AnnotationSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudHealthcareSource = defaults.cloudHealthcareSource;
+            $ = new AnnotationSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudHealthcareSource(@Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource) {
-            this.cloudHealthcareSource = cloudHealthcareSource;
+            $.cloudHealthcareSource = cloudHealthcareSource;
             return this;
         }
-        public Builder cloudHealthcareSource(@Nullable CloudHealthcareSourceArgs cloudHealthcareSource) {
-            this.cloudHealthcareSource = Codegen.ofNullable(cloudHealthcareSource);
-            return this;
-        }        public AnnotationSourceArgs build() {
-            return new AnnotationSourceArgs(cloudHealthcareSource);
+
+        public Builder cloudHealthcareSource(CloudHealthcareSourceArgs cloudHealthcareSource) {
+            return cloudHealthcareSource(Output.of(cloudHealthcareSource));
+        }
+
+        public AnnotationSourceArgs build() {
+            return $;
         }
     }
+
 }

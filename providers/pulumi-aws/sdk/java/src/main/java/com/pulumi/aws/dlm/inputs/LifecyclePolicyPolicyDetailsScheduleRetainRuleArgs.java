@@ -5,7 +5,6 @@ package com.pulumi.aws.dlm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs extends co
      * 
      */
     @Import(name="count", required=true)
-      private final Output<Integer> count;
+    private Output<Integer> count;
 
     public Output<Integer> count() {
         return this.count;
     }
 
-    public LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs(Output<Integer> count) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-    }
+    private LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs() {}
 
-    private LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs() {
-        this.count = Codegen.empty();
+    private LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs(LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs $) {
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> count;
+        private LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs();
         }
 
         public Builder(LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
+            $ = new LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Output<Integer> count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Output.of(Objects.requireNonNull(count));
-            return this;
-        }        public LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs build() {
-            return new LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs(count);
+            return count(Output.of(count));
+        }
+
+        public LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            return $;
         }
     }
+
 }

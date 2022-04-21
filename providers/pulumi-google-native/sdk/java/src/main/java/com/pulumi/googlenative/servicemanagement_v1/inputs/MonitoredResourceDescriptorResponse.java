@@ -23,7 +23,7 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -34,7 +34,7 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -45,7 +45,7 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
      * 
      */
     @Import(name="labels", required=true)
-      private final List<LabelDescriptorResponse> labels;
+    private List<LabelDescriptorResponse> labels;
 
     public List<LabelDescriptorResponse> labels() {
         return this.labels;
@@ -56,7 +56,7 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
      * 
      */
     @Import(name="launchStage", required=true)
-      private final String launchStage;
+    private String launchStage;
 
     public String launchStage() {
         return this.launchStage;
@@ -67,7 +67,7 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -78,94 +78,84 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public MonitoredResourceDescriptorResponse(
-        String description,
-        String displayName,
-        List<LabelDescriptorResponse> labels,
-        String launchStage,
-        String name,
-        String type) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.launchStage = Objects.requireNonNull(launchStage, "expected parameter 'launchStage' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private MonitoredResourceDescriptorResponse() {}
 
-    private MonitoredResourceDescriptorResponse() {
-        this.description = null;
-        this.displayName = null;
-        this.labels = List.of();
-        this.launchStage = null;
-        this.name = null;
-        this.type = null;
+    private MonitoredResourceDescriptorResponse(MonitoredResourceDescriptorResponse $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.launchStage = $.launchStage;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoredResourceDescriptorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String displayName;
-        private List<LabelDescriptorResponse> labels;
-        private String launchStage;
-        private String name;
-        private String type;
+        private MonitoredResourceDescriptorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoredResourceDescriptorResponse();
         }
 
         public Builder(MonitoredResourceDescriptorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.launchStage = defaults.launchStage;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new MonitoredResourceDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder labels(List<LabelDescriptorResponse> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(LabelDescriptorResponse... labels) {
             return labels(List.of(labels));
         }
+
         public Builder launchStage(String launchStage) {
-            this.launchStage = Objects.requireNonNull(launchStage);
+            $.launchStage = launchStage;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public MonitoredResourceDescriptorResponse build() {
-            return new MonitoredResourceDescriptorResponse(description, displayName, labels, launchStage, name, type);
+        }
+
+        public MonitoredResourceDescriptorResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.launchStage = Objects.requireNonNull($.launchStage, "expected parameter 'launchStage' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

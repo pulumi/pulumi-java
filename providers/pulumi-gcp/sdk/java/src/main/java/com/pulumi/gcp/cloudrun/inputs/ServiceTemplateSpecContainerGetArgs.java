@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromGetArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvGetArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerPortGetArgs;
@@ -14,6 +13,7 @@ import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerVolumeMountGet
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +34,10 @@ public final class ServiceTemplateSpecContainerGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ServiceTemplateSpecContainerGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="commands")
-      private final @Nullable Output<List<String>> commands;
+    private @Nullable Output<List<String>> commands;
 
-    public Output<List<String>> commands() {
-        return this.commands == null ? Codegen.empty() : this.commands;
+    public Optional<Output<List<String>>> commands() {
+        return Optional.ofNullable(this.commands);
     }
 
     /**
@@ -75,11 +75,11 @@ public final class ServiceTemplateSpecContainerGetArgs extends com.pulumi.resour
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @Import(name="envFroms")
-      private final @Nullable Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms;
+    private @Nullable Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms() {
-        return this.envFroms == null ? Codegen.empty() : this.envFroms;
+    public Optional<Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>>> envFroms() {
+        return Optional.ofNullable(this.envFroms);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ServiceTemplateSpecContainerGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="envs")
-      private final @Nullable Output<List<ServiceTemplateSpecContainerEnvGetArgs>> envs;
+    private @Nullable Output<List<ServiceTemplateSpecContainerEnvGetArgs>> envs;
 
-    public Output<List<ServiceTemplateSpecContainerEnvGetArgs>> envs() {
-        return this.envs == null ? Codegen.empty() : this.envs;
+    public Optional<Output<List<ServiceTemplateSpecContainerEnvGetArgs>>> envs() {
+        return Optional.ofNullable(this.envs);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
@@ -115,10 +115,10 @@ public final class ServiceTemplateSpecContainerGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<ServiceTemplateSpecContainerPortGetArgs>> ports;
+    private @Nullable Output<List<ServiceTemplateSpecContainerPortGetArgs>> ports;
 
-    public Output<List<ServiceTemplateSpecContainerPortGetArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<ServiceTemplateSpecContainerPortGetArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ServiceTemplateSpecContainerGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<ServiceTemplateSpecContainerResourcesGetArgs> resources;
+    private @Nullable Output<ServiceTemplateSpecContainerResourcesGetArgs> resources;
 
-    public Output<ServiceTemplateSpecContainerResourcesGetArgs> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<ServiceTemplateSpecContainerResourcesGetArgs>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class ServiceTemplateSpecContainerGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="volumeMounts")
-      private final @Nullable Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts;
+    private @Nullable Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts;
 
-    public Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts() {
-        return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
+    public Optional<Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>>> volumeMounts() {
+        return Optional.ofNullable(this.volumeMounts);
     }
 
     /**
@@ -161,173 +161,154 @@ public final class ServiceTemplateSpecContainerGetArgs extends com.pulumi.resour
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @Import(name="workingDir")
-      private final @Nullable Output<String> workingDir;
+    private @Nullable Output<String> workingDir;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Output<String> workingDir() {
-        return this.workingDir == null ? Codegen.empty() : this.workingDir;
+    public Optional<Output<String>> workingDir() {
+        return Optional.ofNullable(this.workingDir);
     }
 
-    public ServiceTemplateSpecContainerGetArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> commands,
-        @Nullable Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms,
-        @Nullable Output<List<ServiceTemplateSpecContainerEnvGetArgs>> envs,
-        Output<String> image,
-        @Nullable Output<List<ServiceTemplateSpecContainerPortGetArgs>> ports,
-        @Nullable Output<ServiceTemplateSpecContainerResourcesGetArgs> resources,
-        @Nullable Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts,
-        @Nullable Output<String> workingDir) {
-        this.args = args;
-        this.commands = commands;
-        this.envFroms = envFroms;
-        this.envs = envs;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.ports = ports;
-        this.resources = resources;
-        this.volumeMounts = volumeMounts;
-        this.workingDir = workingDir;
-    }
+    private ServiceTemplateSpecContainerGetArgs() {}
 
-    private ServiceTemplateSpecContainerGetArgs() {
-        this.args = Codegen.empty();
-        this.commands = Codegen.empty();
-        this.envFroms = Codegen.empty();
-        this.envs = Codegen.empty();
-        this.image = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.volumeMounts = Codegen.empty();
-        this.workingDir = Codegen.empty();
+    private ServiceTemplateSpecContainerGetArgs(ServiceTemplateSpecContainerGetArgs $) {
+        this.args = $.args;
+        this.commands = $.commands;
+        this.envFroms = $.envFroms;
+        this.envs = $.envs;
+        this.image = $.image;
+        this.ports = $.ports;
+        this.resources = $.resources;
+        this.volumeMounts = $.volumeMounts;
+        this.workingDir = $.workingDir;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateSpecContainerGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> commands;
-        private @Nullable Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms;
-        private @Nullable Output<List<ServiceTemplateSpecContainerEnvGetArgs>> envs;
-        private Output<String> image;
-        private @Nullable Output<List<ServiceTemplateSpecContainerPortGetArgs>> ports;
-        private @Nullable Output<ServiceTemplateSpecContainerResourcesGetArgs> resources;
-        private @Nullable Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts;
-        private @Nullable Output<String> workingDir;
+        private ServiceTemplateSpecContainerGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateSpecContainerGetArgs();
         }
 
         public Builder(ServiceTemplateSpecContainerGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.commands = defaults.commands;
-    	      this.envFroms = defaults.envFroms;
-    	      this.envs = defaults.envs;
-    	      this.image = defaults.image;
-    	      this.ports = defaults.ports;
-    	      this.resources = defaults.resources;
-    	      this.volumeMounts = defaults.volumeMounts;
-    	      this.workingDir = defaults.workingDir;
+            $ = new ServiceTemplateSpecContainerGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder commands(@Nullable Output<List<String>> commands) {
-            this.commands = commands;
+            $.commands = commands;
             return this;
         }
-        public Builder commands(@Nullable List<String> commands) {
-            this.commands = Codegen.ofNullable(commands);
-            return this;
+
+        public Builder commands(List<String> commands) {
+            return commands(Output.of(commands));
         }
+
         public Builder commands(String... commands) {
             return commands(List.of(commands));
         }
+
         public Builder envFroms(@Nullable Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms) {
-            this.envFroms = envFroms;
+            $.envFroms = envFroms;
             return this;
         }
-        public Builder envFroms(@Nullable List<ServiceTemplateSpecContainerEnvFromGetArgs> envFroms) {
-            this.envFroms = Codegen.ofNullable(envFroms);
-            return this;
+
+        public Builder envFroms(List<ServiceTemplateSpecContainerEnvFromGetArgs> envFroms) {
+            return envFroms(Output.of(envFroms));
         }
+
         public Builder envFroms(ServiceTemplateSpecContainerEnvFromGetArgs... envFroms) {
             return envFroms(List.of(envFroms));
         }
+
         public Builder envs(@Nullable Output<List<ServiceTemplateSpecContainerEnvGetArgs>> envs) {
-            this.envs = envs;
+            $.envs = envs;
             return this;
         }
-        public Builder envs(@Nullable List<ServiceTemplateSpecContainerEnvGetArgs> envs) {
-            this.envs = Codegen.ofNullable(envs);
-            return this;
+
+        public Builder envs(List<ServiceTemplateSpecContainerEnvGetArgs> envs) {
+            return envs(Output.of(envs));
         }
+
         public Builder envs(ServiceTemplateSpecContainerEnvGetArgs... envs) {
             return envs(List.of(envs));
         }
+
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder ports(@Nullable Output<List<ServiceTemplateSpecContainerPortGetArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<ServiceTemplateSpecContainerPortGetArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<ServiceTemplateSpecContainerPortGetArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(ServiceTemplateSpecContainerPortGetArgs... ports) {
             return ports(List.of(ports));
         }
+
         public Builder resources(@Nullable Output<ServiceTemplateSpecContainerResourcesGetArgs> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable ServiceTemplateSpecContainerResourcesGetArgs resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(ServiceTemplateSpecContainerResourcesGetArgs resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder volumeMounts(@Nullable Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts) {
-            this.volumeMounts = volumeMounts;
+            $.volumeMounts = volumeMounts;
             return this;
         }
-        public Builder volumeMounts(@Nullable List<ServiceTemplateSpecContainerVolumeMountGetArgs> volumeMounts) {
-            this.volumeMounts = Codegen.ofNullable(volumeMounts);
-            return this;
+
+        public Builder volumeMounts(List<ServiceTemplateSpecContainerVolumeMountGetArgs> volumeMounts) {
+            return volumeMounts(Output.of(volumeMounts));
         }
+
         public Builder volumeMounts(ServiceTemplateSpecContainerVolumeMountGetArgs... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
         }
+
         public Builder workingDir(@Nullable Output<String> workingDir) {
-            this.workingDir = workingDir;
+            $.workingDir = workingDir;
             return this;
         }
-        public Builder workingDir(@Nullable String workingDir) {
-            this.workingDir = Codegen.ofNullable(workingDir);
-            return this;
-        }        public ServiceTemplateSpecContainerGetArgs build() {
-            return new ServiceTemplateSpecContainerGetArgs(args, commands, envFroms, envs, image, ports, resources, volumeMounts, workingDir);
+
+        public Builder workingDir(String workingDir) {
+            return workingDir(Output.of(workingDir));
+        }
+
+        public ServiceTemplateSpecContainerGetArgs build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            return $;
         }
     }
+
 }

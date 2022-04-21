@@ -5,11 +5,11 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @Import(name="auditIntervalSeconds")
-      private final @Nullable Output<String> auditIntervalSeconds;
+    private @Nullable Output<String> auditIntervalSeconds;
 
-    public Output<String> auditIntervalSeconds() {
-        return this.auditIntervalSeconds == null ? Codegen.empty() : this.auditIntervalSeconds;
+    public Optional<Output<String>> auditIntervalSeconds() {
+        return Optional.ofNullable(this.auditIntervalSeconds);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @Import(name="exemptableNamespaces")
-      private final @Nullable Output<List<String>> exemptableNamespaces;
+    private @Nullable Output<List<String>> exemptableNamespaces;
 
-    public Output<List<String>> exemptableNamespaces() {
-        return this.exemptableNamespaces == null ? Codegen.empty() : this.exemptableNamespaces;
+    public Optional<Output<List<String>>> exemptableNamespaces() {
+        return Optional.ofNullable(this.exemptableNamespaces);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @Import(name="logDeniesEnabled")
-      private final @Nullable Output<Boolean> logDeniesEnabled;
+    private @Nullable Output<Boolean> logDeniesEnabled;
 
-    public Output<Boolean> logDeniesEnabled() {
-        return this.logDeniesEnabled == null ? Codegen.empty() : this.logDeniesEnabled;
+    public Optional<Output<Boolean>> logDeniesEnabled() {
+        return Optional.ofNullable(this.logDeniesEnabled);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @Import(name="referentialRulesEnabled")
-      private final @Nullable Output<Boolean> referentialRulesEnabled;
+    private @Nullable Output<Boolean> referentialRulesEnabled;
 
-    public Output<Boolean> referentialRulesEnabled() {
-        return this.referentialRulesEnabled == null ? Codegen.empty() : this.referentialRulesEnabled;
+    public Optional<Output<Boolean>> referentialRulesEnabled() {
+        return Optional.ofNullable(this.referentialRulesEnabled);
     }
 
     /**
@@ -77,118 +77,102 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @Import(name="templateLibraryInstalled")
-      private final @Nullable Output<Boolean> templateLibraryInstalled;
+    private @Nullable Output<Boolean> templateLibraryInstalled;
 
-    public Output<Boolean> templateLibraryInstalled() {
-        return this.templateLibraryInstalled == null ? Codegen.empty() : this.templateLibraryInstalled;
+    public Optional<Output<Boolean>> templateLibraryInstalled() {
+        return Optional.ofNullable(this.templateLibraryInstalled);
     }
 
-    public FeatureMembershipConfigmanagementPolicyControllerArgs(
-        @Nullable Output<String> auditIntervalSeconds,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<String>> exemptableNamespaces,
-        @Nullable Output<Boolean> logDeniesEnabled,
-        @Nullable Output<Boolean> referentialRulesEnabled,
-        @Nullable Output<Boolean> templateLibraryInstalled) {
-        this.auditIntervalSeconds = auditIntervalSeconds;
-        this.enabled = enabled;
-        this.exemptableNamespaces = exemptableNamespaces;
-        this.logDeniesEnabled = logDeniesEnabled;
-        this.referentialRulesEnabled = referentialRulesEnabled;
-        this.templateLibraryInstalled = templateLibraryInstalled;
-    }
+    private FeatureMembershipConfigmanagementPolicyControllerArgs() {}
 
-    private FeatureMembershipConfigmanagementPolicyControllerArgs() {
-        this.auditIntervalSeconds = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.exemptableNamespaces = Codegen.empty();
-        this.logDeniesEnabled = Codegen.empty();
-        this.referentialRulesEnabled = Codegen.empty();
-        this.templateLibraryInstalled = Codegen.empty();
+    private FeatureMembershipConfigmanagementPolicyControllerArgs(FeatureMembershipConfigmanagementPolicyControllerArgs $) {
+        this.auditIntervalSeconds = $.auditIntervalSeconds;
+        this.enabled = $.enabled;
+        this.exemptableNamespaces = $.exemptableNamespaces;
+        this.logDeniesEnabled = $.logDeniesEnabled;
+        this.referentialRulesEnabled = $.referentialRulesEnabled;
+        this.templateLibraryInstalled = $.templateLibraryInstalled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureMembershipConfigmanagementPolicyControllerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> auditIntervalSeconds;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<String>> exemptableNamespaces;
-        private @Nullable Output<Boolean> logDeniesEnabled;
-        private @Nullable Output<Boolean> referentialRulesEnabled;
-        private @Nullable Output<Boolean> templateLibraryInstalled;
+        private FeatureMembershipConfigmanagementPolicyControllerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureMembershipConfigmanagementPolicyControllerArgs();
         }
 
         public Builder(FeatureMembershipConfigmanagementPolicyControllerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditIntervalSeconds = defaults.auditIntervalSeconds;
-    	      this.enabled = defaults.enabled;
-    	      this.exemptableNamespaces = defaults.exemptableNamespaces;
-    	      this.logDeniesEnabled = defaults.logDeniesEnabled;
-    	      this.referentialRulesEnabled = defaults.referentialRulesEnabled;
-    	      this.templateLibraryInstalled = defaults.templateLibraryInstalled;
+            $ = new FeatureMembershipConfigmanagementPolicyControllerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditIntervalSeconds(@Nullable Output<String> auditIntervalSeconds) {
-            this.auditIntervalSeconds = auditIntervalSeconds;
+            $.auditIntervalSeconds = auditIntervalSeconds;
             return this;
         }
-        public Builder auditIntervalSeconds(@Nullable String auditIntervalSeconds) {
-            this.auditIntervalSeconds = Codegen.ofNullable(auditIntervalSeconds);
-            return this;
+
+        public Builder auditIntervalSeconds(String auditIntervalSeconds) {
+            return auditIntervalSeconds(Output.of(auditIntervalSeconds));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder exemptableNamespaces(@Nullable Output<List<String>> exemptableNamespaces) {
-            this.exemptableNamespaces = exemptableNamespaces;
+            $.exemptableNamespaces = exemptableNamespaces;
             return this;
         }
-        public Builder exemptableNamespaces(@Nullable List<String> exemptableNamespaces) {
-            this.exemptableNamespaces = Codegen.ofNullable(exemptableNamespaces);
-            return this;
+
+        public Builder exemptableNamespaces(List<String> exemptableNamespaces) {
+            return exemptableNamespaces(Output.of(exemptableNamespaces));
         }
+
         public Builder exemptableNamespaces(String... exemptableNamespaces) {
             return exemptableNamespaces(List.of(exemptableNamespaces));
         }
+
         public Builder logDeniesEnabled(@Nullable Output<Boolean> logDeniesEnabled) {
-            this.logDeniesEnabled = logDeniesEnabled;
+            $.logDeniesEnabled = logDeniesEnabled;
             return this;
         }
-        public Builder logDeniesEnabled(@Nullable Boolean logDeniesEnabled) {
-            this.logDeniesEnabled = Codegen.ofNullable(logDeniesEnabled);
-            return this;
+
+        public Builder logDeniesEnabled(Boolean logDeniesEnabled) {
+            return logDeniesEnabled(Output.of(logDeniesEnabled));
         }
+
         public Builder referentialRulesEnabled(@Nullable Output<Boolean> referentialRulesEnabled) {
-            this.referentialRulesEnabled = referentialRulesEnabled;
+            $.referentialRulesEnabled = referentialRulesEnabled;
             return this;
         }
-        public Builder referentialRulesEnabled(@Nullable Boolean referentialRulesEnabled) {
-            this.referentialRulesEnabled = Codegen.ofNullable(referentialRulesEnabled);
-            return this;
+
+        public Builder referentialRulesEnabled(Boolean referentialRulesEnabled) {
+            return referentialRulesEnabled(Output.of(referentialRulesEnabled));
         }
+
         public Builder templateLibraryInstalled(@Nullable Output<Boolean> templateLibraryInstalled) {
-            this.templateLibraryInstalled = templateLibraryInstalled;
+            $.templateLibraryInstalled = templateLibraryInstalled;
             return this;
         }
-        public Builder templateLibraryInstalled(@Nullable Boolean templateLibraryInstalled) {
-            this.templateLibraryInstalled = Codegen.ofNullable(templateLibraryInstalled);
-            return this;
-        }        public FeatureMembershipConfigmanagementPolicyControllerArgs build() {
-            return new FeatureMembershipConfigmanagementPolicyControllerArgs(auditIntervalSeconds, enabled, exemptableNamespaces, logDeniesEnabled, referentialRulesEnabled, templateLibraryInstalled);
+
+        public Builder templateLibraryInstalled(Boolean templateLibraryInstalled) {
+            return templateLibraryInstalled(Output.of(templateLibraryInstalled));
+        }
+
+        public FeatureMembershipConfigmanagementPolicyControllerArgs build() {
+            return $;
         }
     }
+
 }

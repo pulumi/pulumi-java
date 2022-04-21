@@ -20,7 +20,7 @@ public final class MulticastGroupLoRaWAN extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dlClass", required=true)
-      private final String dlClass;
+    private String dlClass;
 
     public String dlClass() {
         return this.dlClass;
@@ -31,10 +31,10 @@ public final class MulticastGroupLoRaWAN extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="numberOfDevicesInGroup")
-      private final @Nullable Integer numberOfDevicesInGroup;
+    private @Nullable Integer numberOfDevicesInGroup;
 
     public Optional<Integer> numberOfDevicesInGroup() {
-        return this.numberOfDevicesInGroup == null ? Optional.empty() : Optional.ofNullable(this.numberOfDevicesInGroup);
+        return Optional.ofNullable(this.numberOfDevicesInGroup);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MulticastGroupLoRaWAN extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="numberOfDevicesRequested")
-      private final @Nullable Integer numberOfDevicesRequested;
+    private @Nullable Integer numberOfDevicesRequested;
 
     public Optional<Integer> numberOfDevicesRequested() {
-        return this.numberOfDevicesRequested == null ? Optional.empty() : Optional.ofNullable(this.numberOfDevicesRequested);
+        return Optional.ofNullable(this.numberOfDevicesRequested);
     }
 
     /**
@@ -53,73 +53,64 @@ public final class MulticastGroupLoRaWAN extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rfRegion", required=true)
-      private final String rfRegion;
+    private String rfRegion;
 
     public String rfRegion() {
         return this.rfRegion;
     }
 
-    public MulticastGroupLoRaWAN(
-        String dlClass,
-        @Nullable Integer numberOfDevicesInGroup,
-        @Nullable Integer numberOfDevicesRequested,
-        String rfRegion) {
-        this.dlClass = Objects.requireNonNull(dlClass, "expected parameter 'dlClass' to be non-null");
-        this.numberOfDevicesInGroup = numberOfDevicesInGroup;
-        this.numberOfDevicesRequested = numberOfDevicesRequested;
-        this.rfRegion = Objects.requireNonNull(rfRegion, "expected parameter 'rfRegion' to be non-null");
-    }
+    private MulticastGroupLoRaWAN() {}
 
-    private MulticastGroupLoRaWAN() {
-        this.dlClass = null;
-        this.numberOfDevicesInGroup = null;
-        this.numberOfDevicesRequested = null;
-        this.rfRegion = null;
+    private MulticastGroupLoRaWAN(MulticastGroupLoRaWAN $) {
+        this.dlClass = $.dlClass;
+        this.numberOfDevicesInGroup = $.numberOfDevicesInGroup;
+        this.numberOfDevicesRequested = $.numberOfDevicesRequested;
+        this.rfRegion = $.rfRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MulticastGroupLoRaWAN defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dlClass;
-        private @Nullable Integer numberOfDevicesInGroup;
-        private @Nullable Integer numberOfDevicesRequested;
-        private String rfRegion;
+        private MulticastGroupLoRaWAN $;
 
         public Builder() {
-    	      // Empty
+            $ = new MulticastGroupLoRaWAN();
         }
 
         public Builder(MulticastGroupLoRaWAN defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dlClass = defaults.dlClass;
-    	      this.numberOfDevicesInGroup = defaults.numberOfDevicesInGroup;
-    	      this.numberOfDevicesRequested = defaults.numberOfDevicesRequested;
-    	      this.rfRegion = defaults.rfRegion;
+            $ = new MulticastGroupLoRaWAN(Objects.requireNonNull(defaults));
         }
 
         public Builder dlClass(String dlClass) {
-            this.dlClass = Objects.requireNonNull(dlClass);
+            $.dlClass = dlClass;
             return this;
         }
+
         public Builder numberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
-            this.numberOfDevicesInGroup = numberOfDevicesInGroup;
+            $.numberOfDevicesInGroup = numberOfDevicesInGroup;
             return this;
         }
+
         public Builder numberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
-            this.numberOfDevicesRequested = numberOfDevicesRequested;
+            $.numberOfDevicesRequested = numberOfDevicesRequested;
             return this;
         }
+
         public Builder rfRegion(String rfRegion) {
-            this.rfRegion = Objects.requireNonNull(rfRegion);
+            $.rfRegion = rfRegion;
             return this;
-        }        public MulticastGroupLoRaWAN build() {
-            return new MulticastGroupLoRaWAN(dlClass, numberOfDevicesInGroup, numberOfDevicesRequested, rfRegion);
+        }
+
+        public MulticastGroupLoRaWAN build() {
+            $.dlClass = Objects.requireNonNull($.dlClass, "expected parameter 'dlClass' to be non-null");
+            $.rfRegion = Objects.requireNonNull($.rfRegion, "expected parameter 'rfRegion' to be non-null");
+            return $;
         }
     }
+
 }

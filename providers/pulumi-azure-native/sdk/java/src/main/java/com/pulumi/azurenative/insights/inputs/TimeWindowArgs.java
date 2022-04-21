@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class TimeWindowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="end", required=true)
-      private final Output<String> end;
+    private Output<String> end;
 
     public Output<String> end() {
         return this.end;
@@ -35,7 +35,7 @@ public final class TimeWindowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="start", required=true)
-      private final Output<String> start;
+    private Output<String> start;
 
     public Output<String> start() {
         return this.start;
@@ -46,76 +46,70 @@ public final class TimeWindowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public TimeWindowArgs(
-        Output<String> end,
-        Output<String> start,
-        @Nullable Output<String> timeZone) {
-        this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
-        this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
-        this.timeZone = timeZone;
-    }
+    private TimeWindowArgs() {}
 
-    private TimeWindowArgs() {
-        this.end = Codegen.empty();
-        this.start = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private TimeWindowArgs(TimeWindowArgs $) {
+        this.end = $.end;
+        this.start = $.start;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> end;
-        private Output<String> start;
-        private @Nullable Output<String> timeZone;
+        private TimeWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeWindowArgs();
         }
 
         public Builder(TimeWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.start = defaults.start;
-    	      this.timeZone = defaults.timeZone;
+            $ = new TimeWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder end(Output<String> end) {
-            this.end = Objects.requireNonNull(end);
+            $.end = end;
             return this;
         }
+
         public Builder end(String end) {
-            this.end = Output.of(Objects.requireNonNull(end));
-            return this;
+            return end(Output.of(end));
         }
+
         public Builder start(Output<String> start) {
-            this.start = Objects.requireNonNull(start);
+            $.start = start;
             return this;
         }
+
         public Builder start(String start) {
-            this.start = Output.of(Objects.requireNonNull(start));
-            return this;
+            return start(Output.of(start));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public TimeWindowArgs build() {
-            return new TimeWindowArgs(end, start, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public TimeWindowArgs build() {
+            $.end = Objects.requireNonNull($.end, "expected parameter 'end' to be non-null");
+            $.start = Objects.requireNonNull($.start, "expected parameter 'start' to be non-null");
+            return $;
         }
     }
+
 }

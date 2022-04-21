@@ -21,7 +21,7 @@ public final class DeviceDetailsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="managementResourceId", required=true)
-      private final String managementResourceId;
+    private String managementResourceId;
 
     public String managementResourceId() {
         return this.managementResourceId;
@@ -32,7 +32,7 @@ public final class DeviceDetailsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="managementResourceTenantId", required=true)
-      private final String managementResourceTenantId;
+    private String managementResourceTenantId;
 
     public String managementResourceTenantId() {
         return this.managementResourceTenantId;
@@ -43,64 +43,59 @@ public final class DeviceDetailsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="serialNumber", required=true)
-      private final String serialNumber;
+    private String serialNumber;
 
     public String serialNumber() {
         return this.serialNumber;
     }
 
-    public DeviceDetailsResponse(
-        String managementResourceId,
-        String managementResourceTenantId,
-        String serialNumber) {
-        this.managementResourceId = Objects.requireNonNull(managementResourceId, "expected parameter 'managementResourceId' to be non-null");
-        this.managementResourceTenantId = Objects.requireNonNull(managementResourceTenantId, "expected parameter 'managementResourceTenantId' to be non-null");
-        this.serialNumber = Objects.requireNonNull(serialNumber, "expected parameter 'serialNumber' to be non-null");
-    }
+    private DeviceDetailsResponse() {}
 
-    private DeviceDetailsResponse() {
-        this.managementResourceId = null;
-        this.managementResourceTenantId = null;
-        this.serialNumber = null;
+    private DeviceDetailsResponse(DeviceDetailsResponse $) {
+        this.managementResourceId = $.managementResourceId;
+        this.managementResourceTenantId = $.managementResourceTenantId;
+        this.serialNumber = $.serialNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managementResourceId;
-        private String managementResourceTenantId;
-        private String serialNumber;
+        private DeviceDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceDetailsResponse();
         }
 
         public Builder(DeviceDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managementResourceId = defaults.managementResourceId;
-    	      this.managementResourceTenantId = defaults.managementResourceTenantId;
-    	      this.serialNumber = defaults.serialNumber;
+            $ = new DeviceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder managementResourceId(String managementResourceId) {
-            this.managementResourceId = Objects.requireNonNull(managementResourceId);
+            $.managementResourceId = managementResourceId;
             return this;
         }
+
         public Builder managementResourceTenantId(String managementResourceTenantId) {
-            this.managementResourceTenantId = Objects.requireNonNull(managementResourceTenantId);
+            $.managementResourceTenantId = managementResourceTenantId;
             return this;
         }
+
         public Builder serialNumber(String serialNumber) {
-            this.serialNumber = Objects.requireNonNull(serialNumber);
+            $.serialNumber = serialNumber;
             return this;
-        }        public DeviceDetailsResponse build() {
-            return new DeviceDetailsResponse(managementResourceId, managementResourceTenantId, serialNumber);
+        }
+
+        public DeviceDetailsResponse build() {
+            $.managementResourceId = Objects.requireNonNull($.managementResourceId, "expected parameter 'managementResourceId' to be non-null");
+            $.managementResourceTenantId = Objects.requireNonNull($.managementResourceTenantId, "expected parameter 'managementResourceTenantId' to be non-null");
+            $.serialNumber = Objects.requireNonNull($.serialNumber, "expected parameter 'serialNumber' to be non-null");
+            return $;
         }
     }
+
 }

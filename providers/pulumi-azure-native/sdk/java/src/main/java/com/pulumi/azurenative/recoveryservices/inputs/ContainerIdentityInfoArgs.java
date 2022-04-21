@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ContainerIdentityInfoArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="aadTenantId")
-      private final @Nullable Output<String> aadTenantId;
+    private @Nullable Output<String> aadTenantId;
 
-    public Output<String> aadTenantId() {
-        return this.aadTenantId == null ? Codegen.empty() : this.aadTenantId;
+    public Optional<Output<String>> aadTenantId() {
+        return Optional.ofNullable(this.aadTenantId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ContainerIdentityInfoArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="audience")
-      private final @Nullable Output<String> audience;
+    private @Nullable Output<String> audience;
 
-    public Output<String> audience() {
-        return this.audience == null ? Codegen.empty() : this.audience;
+    public Optional<Output<String>> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContainerIdentityInfoArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="servicePrincipalClientId")
-      private final @Nullable Output<String> servicePrincipalClientId;
+    private @Nullable Output<String> servicePrincipalClientId;
 
-    public Output<String> servicePrincipalClientId() {
-        return this.servicePrincipalClientId == null ? Codegen.empty() : this.servicePrincipalClientId;
+    public Optional<Output<String>> servicePrincipalClientId() {
+        return Optional.ofNullable(this.servicePrincipalClientId);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class ContainerIdentityInfoArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="uniqueName")
-      private final @Nullable Output<String> uniqueName;
+    private @Nullable Output<String> uniqueName;
 
-    public Output<String> uniqueName() {
-        return this.uniqueName == null ? Codegen.empty() : this.uniqueName;
+    public Optional<Output<String>> uniqueName() {
+        return Optional.ofNullable(this.uniqueName);
     }
 
-    public ContainerIdentityInfoArgs(
-        @Nullable Output<String> aadTenantId,
-        @Nullable Output<String> audience,
-        @Nullable Output<String> servicePrincipalClientId,
-        @Nullable Output<String> uniqueName) {
-        this.aadTenantId = aadTenantId;
-        this.audience = audience;
-        this.servicePrincipalClientId = servicePrincipalClientId;
-        this.uniqueName = uniqueName;
-    }
+    private ContainerIdentityInfoArgs() {}
 
-    private ContainerIdentityInfoArgs() {
-        this.aadTenantId = Codegen.empty();
-        this.audience = Codegen.empty();
-        this.servicePrincipalClientId = Codegen.empty();
-        this.uniqueName = Codegen.empty();
+    private ContainerIdentityInfoArgs(ContainerIdentityInfoArgs $) {
+        this.aadTenantId = $.aadTenantId;
+        this.audience = $.audience;
+        this.servicePrincipalClientId = $.servicePrincipalClientId;
+        this.uniqueName = $.uniqueName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerIdentityInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aadTenantId;
-        private @Nullable Output<String> audience;
-        private @Nullable Output<String> servicePrincipalClientId;
-        private @Nullable Output<String> uniqueName;
+        private ContainerIdentityInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerIdentityInfoArgs();
         }
 
         public Builder(ContainerIdentityInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadTenantId = defaults.aadTenantId;
-    	      this.audience = defaults.audience;
-    	      this.servicePrincipalClientId = defaults.servicePrincipalClientId;
-    	      this.uniqueName = defaults.uniqueName;
+            $ = new ContainerIdentityInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aadTenantId(@Nullable Output<String> aadTenantId) {
-            this.aadTenantId = aadTenantId;
+            $.aadTenantId = aadTenantId;
             return this;
         }
-        public Builder aadTenantId(@Nullable String aadTenantId) {
-            this.aadTenantId = Codegen.ofNullable(aadTenantId);
-            return this;
+
+        public Builder aadTenantId(String aadTenantId) {
+            return aadTenantId(Output.of(aadTenantId));
         }
+
         public Builder audience(@Nullable Output<String> audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
-        public Builder audience(@Nullable String audience) {
-            this.audience = Codegen.ofNullable(audience);
-            return this;
+
+        public Builder audience(String audience) {
+            return audience(Output.of(audience));
         }
+
         public Builder servicePrincipalClientId(@Nullable Output<String> servicePrincipalClientId) {
-            this.servicePrincipalClientId = servicePrincipalClientId;
+            $.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
-        public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
-            this.servicePrincipalClientId = Codegen.ofNullable(servicePrincipalClientId);
-            return this;
+
+        public Builder servicePrincipalClientId(String servicePrincipalClientId) {
+            return servicePrincipalClientId(Output.of(servicePrincipalClientId));
         }
+
         public Builder uniqueName(@Nullable Output<String> uniqueName) {
-            this.uniqueName = uniqueName;
+            $.uniqueName = uniqueName;
             return this;
         }
-        public Builder uniqueName(@Nullable String uniqueName) {
-            this.uniqueName = Codegen.ofNullable(uniqueName);
-            return this;
-        }        public ContainerIdentityInfoArgs build() {
-            return new ContainerIdentityInfoArgs(aadTenantId, audience, servicePrincipalClientId, uniqueName);
+
+        public Builder uniqueName(String uniqueName) {
+            return uniqueName(Output.of(uniqueName));
+        }
+
+        public ContainerIdentityInfoArgs build() {
+            return $;
         }
     }
+
 }

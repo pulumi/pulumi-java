@@ -7,9 +7,9 @@ import com.pulumi.azurenative.datashare.enums.Type;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,Type>> type;
+    private @Nullable Output<Either<String,Type>> type;
 
-    public Output<Either<String,Type>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,Type>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public IdentityArgs(@Nullable Output<Either<String,Type>> type) {
-        this.type = type;
-    }
+    private IdentityArgs() {}
 
-    private IdentityArgs() {
-        this.type = Codegen.empty();
+    private IdentityArgs(IdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Type>> type;
+        private IdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityArgs();
         }
 
         public Builder(IdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new IdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,Type>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,Type> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public IdentityArgs build() {
-            return new IdentityArgs(type);
+
+        public Builder type(Either<String,Type> type) {
+            return type(Output.of(type));
+        }
+
+        public IdentityArgs build() {
+            return $;
         }
     }
+
 }

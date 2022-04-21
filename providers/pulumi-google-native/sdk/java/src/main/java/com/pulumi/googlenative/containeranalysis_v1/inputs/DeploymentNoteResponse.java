@@ -22,48 +22,49 @@ public final class DeploymentNoteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final List<String> resourceUri;
+    private List<String> resourceUri;
 
     public List<String> resourceUri() {
         return this.resourceUri;
     }
 
-    public DeploymentNoteResponse(List<String> resourceUri) {
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private DeploymentNoteResponse() {}
 
-    private DeploymentNoteResponse() {
-        this.resourceUri = List.of();
+    private DeploymentNoteResponse(DeploymentNoteResponse $) {
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> resourceUri;
+        private DeploymentNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentNoteResponse();
         }
 
         public Builder(DeploymentNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new DeploymentNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceUri(List<String> resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder resourceUri(String... resourceUri) {
             return resourceUri(List.of(resourceUri));
-        }        public DeploymentNoteResponse build() {
-            return new DeploymentNoteResponse(resourceUri);
+        }
+
+        public DeploymentNoteResponse build() {
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

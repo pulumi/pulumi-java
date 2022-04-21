@@ -5,9 +5,9 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,90 +20,82 @@ public final class DomainMappingStatusResourceRecordArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="rrdata")
-      private final @Nullable Output<String> rrdata;
+    private @Nullable Output<String> rrdata;
 
-    public Output<String> rrdata() {
-        return this.rrdata == null ? Codegen.empty() : this.rrdata;
+    public Optional<Output<String>> rrdata() {
+        return Optional.ofNullable(this.rrdata);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public DomainMappingStatusResourceRecordArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> rrdata,
-        @Nullable Output<String> type) {
-        this.name = name;
-        this.rrdata = rrdata;
-        this.type = type;
-    }
+    private DomainMappingStatusResourceRecordArgs() {}
 
-    private DomainMappingStatusResourceRecordArgs() {
-        this.name = Codegen.empty();
-        this.rrdata = Codegen.empty();
-        this.type = Codegen.empty();
+    private DomainMappingStatusResourceRecordArgs(DomainMappingStatusResourceRecordArgs $) {
+        this.name = $.name;
+        this.rrdata = $.rrdata;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMappingStatusResourceRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> rrdata;
-        private @Nullable Output<String> type;
+        private DomainMappingStatusResourceRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMappingStatusResourceRecordArgs();
         }
 
         public Builder(DomainMappingStatusResourceRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.rrdata = defaults.rrdata;
-    	      this.type = defaults.type;
+            $ = new DomainMappingStatusResourceRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rrdata(@Nullable Output<String> rrdata) {
-            this.rrdata = rrdata;
+            $.rrdata = rrdata;
             return this;
         }
-        public Builder rrdata(@Nullable String rrdata) {
-            this.rrdata = Codegen.ofNullable(rrdata);
-            return this;
+
+        public Builder rrdata(String rrdata) {
+            return rrdata(Output.of(rrdata));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public DomainMappingStatusResourceRecordArgs build() {
-            return new DomainMappingStatusResourceRecordArgs(name, rrdata, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public DomainMappingStatusResourceRecordArgs build() {
+            return $;
         }
     }
+
 }

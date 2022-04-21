@@ -8,10 +8,10 @@ import com.pulumi.awsnative.refactorspaces.inputs.RouteTagArgs;
 import com.pulumi.awsnative.refactorspaces.inputs.RouteUriPathRouteInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,28 +20,28 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     public static final RouteArgs Empty = new RouteArgs();
 
     @Import(name="applicationIdentifier", required=true)
-      private final Output<String> applicationIdentifier;
+    private Output<String> applicationIdentifier;
 
     public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="environmentIdentifier", required=true)
-      private final Output<String> environmentIdentifier;
+    private Output<String> environmentIdentifier;
 
     public Output<String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @Import(name="routeType")
-      private final @Nullable Output<RouteType> routeType;
+    private @Nullable Output<RouteType> routeType;
 
-    public Output<RouteType> routeType() {
-        return this.routeType == null ? Codegen.empty() : this.routeType;
+    public Optional<Output<RouteType>> routeType() {
+        return Optional.ofNullable(this.routeType);
     }
 
     @Import(name="serviceIdentifier", required=true)
-      private final Output<String> serviceIdentifier;
+    private Output<String> serviceIdentifier;
 
     public Output<String> serviceIdentifier() {
         return this.serviceIdentifier;
@@ -52,125 +52,112 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<RouteTagArgs>> tags;
+    private @Nullable Output<List<RouteTagArgs>> tags;
 
-    public Output<List<RouteTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RouteTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="uriPathRoute")
-      private final @Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute;
+    private @Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute;
 
-    public Output<RouteUriPathRouteInputArgs> uriPathRoute() {
-        return this.uriPathRoute == null ? Codegen.empty() : this.uriPathRoute;
+    public Optional<Output<RouteUriPathRouteInputArgs>> uriPathRoute() {
+        return Optional.ofNullable(this.uriPathRoute);
     }
 
-    public RouteArgs(
-        Output<String> applicationIdentifier,
-        Output<String> environmentIdentifier,
-        @Nullable Output<RouteType> routeType,
-        Output<String> serviceIdentifier,
-        @Nullable Output<List<RouteTagArgs>> tags,
-        @Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute) {
-        this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
-        this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
-        this.routeType = routeType;
-        this.serviceIdentifier = Objects.requireNonNull(serviceIdentifier, "expected parameter 'serviceIdentifier' to be non-null");
-        this.tags = tags;
-        this.uriPathRoute = uriPathRoute;
-    }
+    private RouteArgs() {}
 
-    private RouteArgs() {
-        this.applicationIdentifier = Codegen.empty();
-        this.environmentIdentifier = Codegen.empty();
-        this.routeType = Codegen.empty();
-        this.serviceIdentifier = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.uriPathRoute = Codegen.empty();
+    private RouteArgs(RouteArgs $) {
+        this.applicationIdentifier = $.applicationIdentifier;
+        this.environmentIdentifier = $.environmentIdentifier;
+        this.routeType = $.routeType;
+        this.serviceIdentifier = $.serviceIdentifier;
+        this.tags = $.tags;
+        this.uriPathRoute = $.uriPathRoute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationIdentifier;
-        private Output<String> environmentIdentifier;
-        private @Nullable Output<RouteType> routeType;
-        private Output<String> serviceIdentifier;
-        private @Nullable Output<List<RouteTagArgs>> tags;
-        private @Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute;
+        private RouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteArgs();
         }
 
         public Builder(RouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationIdentifier = defaults.applicationIdentifier;
-    	      this.environmentIdentifier = defaults.environmentIdentifier;
-    	      this.routeType = defaults.routeType;
-    	      this.serviceIdentifier = defaults.serviceIdentifier;
-    	      this.tags = defaults.tags;
-    	      this.uriPathRoute = defaults.uriPathRoute;
+            $ = new RouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationIdentifier(Output<String> applicationIdentifier) {
-            this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
+            $.applicationIdentifier = applicationIdentifier;
             return this;
         }
+
         public Builder applicationIdentifier(String applicationIdentifier) {
-            this.applicationIdentifier = Output.of(Objects.requireNonNull(applicationIdentifier));
-            return this;
+            return applicationIdentifier(Output.of(applicationIdentifier));
         }
+
         public Builder environmentIdentifier(Output<String> environmentIdentifier) {
-            this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
+            $.environmentIdentifier = environmentIdentifier;
             return this;
         }
+
         public Builder environmentIdentifier(String environmentIdentifier) {
-            this.environmentIdentifier = Output.of(Objects.requireNonNull(environmentIdentifier));
-            return this;
+            return environmentIdentifier(Output.of(environmentIdentifier));
         }
+
         public Builder routeType(@Nullable Output<RouteType> routeType) {
-            this.routeType = routeType;
+            $.routeType = routeType;
             return this;
         }
-        public Builder routeType(@Nullable RouteType routeType) {
-            this.routeType = Codegen.ofNullable(routeType);
-            return this;
+
+        public Builder routeType(RouteType routeType) {
+            return routeType(Output.of(routeType));
         }
+
         public Builder serviceIdentifier(Output<String> serviceIdentifier) {
-            this.serviceIdentifier = Objects.requireNonNull(serviceIdentifier);
+            $.serviceIdentifier = serviceIdentifier;
             return this;
         }
+
         public Builder serviceIdentifier(String serviceIdentifier) {
-            this.serviceIdentifier = Output.of(Objects.requireNonNull(serviceIdentifier));
-            return this;
+            return serviceIdentifier(Output.of(serviceIdentifier));
         }
+
         public Builder tags(@Nullable Output<List<RouteTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RouteTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RouteTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RouteTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder uriPathRoute(@Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute) {
-            this.uriPathRoute = uriPathRoute;
+            $.uriPathRoute = uriPathRoute;
             return this;
         }
-        public Builder uriPathRoute(@Nullable RouteUriPathRouteInputArgs uriPathRoute) {
-            this.uriPathRoute = Codegen.ofNullable(uriPathRoute);
-            return this;
-        }        public RouteArgs build() {
-            return new RouteArgs(applicationIdentifier, environmentIdentifier, routeType, serviceIdentifier, tags, uriPathRoute);
+
+        public Builder uriPathRoute(RouteUriPathRouteInputArgs uriPathRoute) {
+            return uriPathRoute(Output.of(uriPathRoute));
+        }
+
+        public RouteArgs build() {
+            $.applicationIdentifier = Objects.requireNonNull($.applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
+            $.environmentIdentifier = Objects.requireNonNull($.environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
+            $.serviceIdentifier = Objects.requireNonNull($.serviceIdentifier, "expected parameter 'serviceIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

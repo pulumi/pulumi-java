@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datastore_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastore_v1.enums.GoogleDatastoreAdminV1IndexedPropertyDirection;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends com.pulumi.
      * 
      */
     @Import(name="direction", required=true)
-      private final Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
+    private Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
 
     public Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction() {
         return this.direction;
@@ -35,63 +34,60 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public GoogleDatastoreAdminV1IndexedPropertyArgs(
-        Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction,
-        Output<String> name) {
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GoogleDatastoreAdminV1IndexedPropertyArgs() {}
 
-    private GoogleDatastoreAdminV1IndexedPropertyArgs() {
-        this.direction = Codegen.empty();
-        this.name = Codegen.empty();
+    private GoogleDatastoreAdminV1IndexedPropertyArgs(GoogleDatastoreAdminV1IndexedPropertyArgs $) {
+        this.direction = $.direction;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDatastoreAdminV1IndexedPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
-        private Output<String> name;
+        private GoogleDatastoreAdminV1IndexedPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDatastoreAdminV1IndexedPropertyArgs();
         }
 
         public Builder(GoogleDatastoreAdminV1IndexedPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.direction = defaults.direction;
-    	      this.name = defaults.name;
+            $ = new GoogleDatastoreAdminV1IndexedPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder direction(Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder direction(GoogleDatastoreAdminV1IndexedPropertyDirection direction) {
-            this.direction = Output.of(Objects.requireNonNull(direction));
-            return this;
+            return direction(Output.of(direction));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public GoogleDatastoreAdminV1IndexedPropertyArgs build() {
-            return new GoogleDatastoreAdminV1IndexedPropertyArgs(direction, name);
+            return name(Output.of(name));
+        }
+
+        public GoogleDatastoreAdminV1IndexedPropertyArgs build() {
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

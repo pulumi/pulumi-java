@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.helm.sh_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RepositoryOptsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="caFile")
-      private final @Nullable Output<String> caFile;
+    private @Nullable Output<String> caFile;
 
-    public Output<String> caFile() {
-        return this.caFile == null ? Codegen.empty() : this.caFile;
+    public Optional<Output<String>> caFile() {
+        return Optional.ofNullable(this.caFile);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RepositoryOptsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="certFile")
-      private final @Nullable Output<String> certFile;
+    private @Nullable Output<String> certFile;
 
-    public Output<String> certFile() {
-        return this.certFile == null ? Codegen.empty() : this.certFile;
+    public Optional<Output<String>> certFile() {
+        return Optional.ofNullable(this.certFile);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RepositoryOptsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keyFile")
-      private final @Nullable Output<String> keyFile;
+    private @Nullable Output<String> keyFile;
 
-    public Output<String> keyFile() {
-        return this.keyFile == null ? Codegen.empty() : this.keyFile;
+    public Optional<Output<String>> keyFile() {
+        return Optional.ofNullable(this.keyFile);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RepositoryOptsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RepositoryOptsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="repo")
-      private final @Nullable Output<String> repo;
+    private @Nullable Output<String> repo;
 
-    public Output<String> repo() {
-        return this.repo == null ? Codegen.empty() : this.repo;
+    public Optional<Output<String>> repo() {
+        return Optional.ofNullable(this.repo);
     }
 
     /**
@@ -79,115 +79,98 @@ public final class RepositoryOptsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public RepositoryOptsArgs(
-        @Nullable Output<String> caFile,
-        @Nullable Output<String> certFile,
-        @Nullable Output<String> keyFile,
-        @Nullable Output<String> password,
-        @Nullable Output<String> repo,
-        @Nullable Output<String> username) {
-        this.caFile = caFile;
-        this.certFile = certFile;
-        this.keyFile = keyFile;
-        this.password = password;
-        this.repo = repo;
-        this.username = username;
-    }
+    private RepositoryOptsArgs() {}
 
-    private RepositoryOptsArgs() {
-        this.caFile = Codegen.empty();
-        this.certFile = Codegen.empty();
-        this.keyFile = Codegen.empty();
-        this.password = Codegen.empty();
-        this.repo = Codegen.empty();
-        this.username = Codegen.empty();
+    private RepositoryOptsArgs(RepositoryOptsArgs $) {
+        this.caFile = $.caFile;
+        this.certFile = $.certFile;
+        this.keyFile = $.keyFile;
+        this.password = $.password;
+        this.repo = $.repo;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryOptsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> caFile;
-        private @Nullable Output<String> certFile;
-        private @Nullable Output<String> keyFile;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> repo;
-        private @Nullable Output<String> username;
+        private RepositoryOptsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryOptsArgs();
         }
 
         public Builder(RepositoryOptsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caFile = defaults.caFile;
-    	      this.certFile = defaults.certFile;
-    	      this.keyFile = defaults.keyFile;
-    	      this.password = defaults.password;
-    	      this.repo = defaults.repo;
-    	      this.username = defaults.username;
+            $ = new RepositoryOptsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caFile(@Nullable Output<String> caFile) {
-            this.caFile = caFile;
+            $.caFile = caFile;
             return this;
         }
-        public Builder caFile(@Nullable String caFile) {
-            this.caFile = Codegen.ofNullable(caFile);
-            return this;
+
+        public Builder caFile(String caFile) {
+            return caFile(Output.of(caFile));
         }
+
         public Builder certFile(@Nullable Output<String> certFile) {
-            this.certFile = certFile;
+            $.certFile = certFile;
             return this;
         }
-        public Builder certFile(@Nullable String certFile) {
-            this.certFile = Codegen.ofNullable(certFile);
-            return this;
+
+        public Builder certFile(String certFile) {
+            return certFile(Output.of(certFile));
         }
+
         public Builder keyFile(@Nullable Output<String> keyFile) {
-            this.keyFile = keyFile;
+            $.keyFile = keyFile;
             return this;
         }
-        public Builder keyFile(@Nullable String keyFile) {
-            this.keyFile = Codegen.ofNullable(keyFile);
-            return this;
+
+        public Builder keyFile(String keyFile) {
+            return keyFile(Output.of(keyFile));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = Codegen.secret(password);
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.secret(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder repo(@Nullable Output<String> repo) {
-            this.repo = repo;
+            $.repo = repo;
             return this;
         }
-        public Builder repo(@Nullable String repo) {
-            this.repo = Codegen.ofNullable(repo);
-            return this;
+
+        public Builder repo(String repo) {
+            return repo(Output.of(repo));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public RepositoryOptsArgs build() {
-            return new RepositoryOptsArgs(caFile, certFile, keyFile, password, repo, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public RepositoryOptsArgs build() {
+            return $;
         }
     }
+
 }

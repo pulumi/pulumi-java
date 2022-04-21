@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="bucketArn", required=true)
-      private final Output<String> bucketArn;
+    private Output<String> bucketArn;
 
     public Output<String> bucketArn() {
         return this.bucketArn;
@@ -30,63 +29,60 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="fileKey", required=true)
-      private final Output<String> fileKey;
+    private Output<String> fileKey;
 
     public Output<String> fileKey() {
         return this.fileKey;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs(
-        Output<String> bucketArn,
-        Output<String> fileKey) {
-        this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
-        this.fileKey = Objects.requireNonNull(fileKey, "expected parameter 'fileKey' to be non-null");
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs() {
-        this.bucketArn = Codegen.empty();
-        this.fileKey = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs $) {
+        this.bucketArn = $.bucketArn;
+        this.fileKey = $.fileKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketArn;
-        private Output<String> fileKey;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketArn = defaults.bucketArn;
-    	      this.fileKey = defaults.fileKey;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketArn(Output<String> bucketArn) {
-            this.bucketArn = Objects.requireNonNull(bucketArn);
+            $.bucketArn = bucketArn;
             return this;
         }
+
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
-            return this;
+            return bucketArn(Output.of(bucketArn));
         }
+
         public Builder fileKey(Output<String> fileKey) {
-            this.fileKey = Objects.requireNonNull(fileKey);
+            $.fileKey = fileKey;
             return this;
         }
+
         public Builder fileKey(String fileKey) {
-            this.fileKey = Output.of(Objects.requireNonNull(fileKey));
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs(bucketArn, fileKey);
+            return fileKey(Output.of(fileKey));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs build() {
+            $.bucketArn = Objects.requireNonNull($.bucketArn, "expected parameter 'bucketArn' to be non-null");
+            $.fileKey = Objects.requireNonNull($.fileKey, "expected parameter 'fileKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class JobLoadTimePartitioningArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="expirationMs")
-      private final @Nullable Output<String> expirationMs;
+    private @Nullable Output<String> expirationMs;
 
-    public Output<String> expirationMs() {
-        return this.expirationMs == null ? Codegen.empty() : this.expirationMs;
+    public Optional<Output<String>> expirationMs() {
+        return Optional.ofNullable(this.expirationMs);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class JobLoadTimePartitioningArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<String> field;
+    private @Nullable Output<String> field;
 
-    public Output<String> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<String>> field() {
+        return Optional.ofNullable(this.field);
     }
 
     /**
@@ -45,76 +45,69 @@ public final class JobLoadTimePartitioningArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public JobLoadTimePartitioningArgs(
-        @Nullable Output<String> expirationMs,
-        @Nullable Output<String> field,
-        Output<String> type) {
-        this.expirationMs = expirationMs;
-        this.field = field;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private JobLoadTimePartitioningArgs() {}
 
-    private JobLoadTimePartitioningArgs() {
-        this.expirationMs = Codegen.empty();
-        this.field = Codegen.empty();
-        this.type = Codegen.empty();
+    private JobLoadTimePartitioningArgs(JobLoadTimePartitioningArgs $) {
+        this.expirationMs = $.expirationMs;
+        this.field = $.field;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobLoadTimePartitioningArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expirationMs;
-        private @Nullable Output<String> field;
-        private Output<String> type;
+        private JobLoadTimePartitioningArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobLoadTimePartitioningArgs();
         }
 
         public Builder(JobLoadTimePartitioningArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationMs = defaults.expirationMs;
-    	      this.field = defaults.field;
-    	      this.type = defaults.type;
+            $ = new JobLoadTimePartitioningArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationMs(@Nullable Output<String> expirationMs) {
-            this.expirationMs = expirationMs;
+            $.expirationMs = expirationMs;
             return this;
         }
-        public Builder expirationMs(@Nullable String expirationMs) {
-            this.expirationMs = Codegen.ofNullable(expirationMs);
-            return this;
+
+        public Builder expirationMs(String expirationMs) {
+            return expirationMs(Output.of(expirationMs));
         }
+
         public Builder field(@Nullable Output<String> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable String field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
+
+        public Builder field(String field) {
+            return field(Output.of(field));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JobLoadTimePartitioningArgs build() {
-            return new JobLoadTimePartitioningArgs(expirationMs, field, type);
+            return type(Output.of(type));
+        }
+
+        public JobLoadTimePartitioningArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

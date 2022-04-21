@@ -21,45 +21,45 @@ public final class AccountResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="googleAuto", required=true)
-      private final GoogleAutoResponse googleAuto;
+    private GoogleAutoResponse googleAuto;
 
     public GoogleAutoResponse googleAuto() {
         return this.googleAuto;
     }
 
-    public AccountResponse(GoogleAutoResponse googleAuto) {
-        this.googleAuto = Objects.requireNonNull(googleAuto, "expected parameter 'googleAuto' to be non-null");
-    }
+    private AccountResponse() {}
 
-    private AccountResponse() {
-        this.googleAuto = null;
+    private AccountResponse(AccountResponse $) {
+        this.googleAuto = $.googleAuto;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleAutoResponse googleAuto;
+        private AccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountResponse();
         }
 
         public Builder(AccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.googleAuto = defaults.googleAuto;
+            $ = new AccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder googleAuto(GoogleAutoResponse googleAuto) {
-            this.googleAuto = Objects.requireNonNull(googleAuto);
+            $.googleAuto = googleAuto;
             return this;
-        }        public AccountResponse build() {
-            return new AccountResponse(googleAuto);
+        }
+
+        public AccountResponse build() {
+            $.googleAuto = Objects.requireNonNull($.googleAuto, "expected parameter 'googleAuto' to be non-null");
+            return $;
         }
     }
+
 }

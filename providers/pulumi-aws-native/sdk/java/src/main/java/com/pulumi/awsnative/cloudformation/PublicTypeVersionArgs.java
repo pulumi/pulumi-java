@@ -6,9 +6,9 @@ package com.pulumi.awsnative.cloudformation;
 import com.pulumi.awsnative.cloudformation.enums.PublicTypeVersionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PublicTypeVersionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PublicTypeVersionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="logDeliveryBucket")
-      private final @Nullable Output<String> logDeliveryBucket;
+    private @Nullable Output<String> logDeliveryBucket;
 
-    public Output<String> logDeliveryBucket() {
-        return this.logDeliveryBucket == null ? Codegen.empty() : this.logDeliveryBucket;
+    public Optional<Output<String>> logDeliveryBucket() {
+        return Optional.ofNullable(this.logDeliveryBucket);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PublicTypeVersionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publicVersionNumber")
-      private final @Nullable Output<String> publicVersionNumber;
+    private @Nullable Output<String> publicVersionNumber;
 
-    public Output<String> publicVersionNumber() {
-        return this.publicVersionNumber == null ? Codegen.empty() : this.publicVersionNumber;
+    public Optional<Output<String>> publicVersionNumber() {
+        return Optional.ofNullable(this.publicVersionNumber);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PublicTypeVersionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<PublicTypeVersionType> type;
+    private @Nullable Output<PublicTypeVersionType> type;
 
-    public Output<PublicTypeVersionType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<PublicTypeVersionType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -67,102 +67,88 @@ public final class PublicTypeVersionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="typeName")
-      private final @Nullable Output<String> typeName;
+    private @Nullable Output<String> typeName;
 
-    public Output<String> typeName() {
-        return this.typeName == null ? Codegen.empty() : this.typeName;
+    public Optional<Output<String>> typeName() {
+        return Optional.ofNullable(this.typeName);
     }
 
-    public PublicTypeVersionArgs(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> logDeliveryBucket,
-        @Nullable Output<String> publicVersionNumber,
-        @Nullable Output<PublicTypeVersionType> type,
-        @Nullable Output<String> typeName) {
-        this.arn = arn;
-        this.logDeliveryBucket = logDeliveryBucket;
-        this.publicVersionNumber = publicVersionNumber;
-        this.type = type;
-        this.typeName = typeName;
-    }
+    private PublicTypeVersionArgs() {}
 
-    private PublicTypeVersionArgs() {
-        this.arn = Codegen.empty();
-        this.logDeliveryBucket = Codegen.empty();
-        this.publicVersionNumber = Codegen.empty();
-        this.type = Codegen.empty();
-        this.typeName = Codegen.empty();
+    private PublicTypeVersionArgs(PublicTypeVersionArgs $) {
+        this.arn = $.arn;
+        this.logDeliveryBucket = $.logDeliveryBucket;
+        this.publicVersionNumber = $.publicVersionNumber;
+        this.type = $.type;
+        this.typeName = $.typeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicTypeVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> logDeliveryBucket;
-        private @Nullable Output<String> publicVersionNumber;
-        private @Nullable Output<PublicTypeVersionType> type;
-        private @Nullable Output<String> typeName;
+        private PublicTypeVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicTypeVersionArgs();
         }
 
         public Builder(PublicTypeVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.logDeliveryBucket = defaults.logDeliveryBucket;
-    	      this.publicVersionNumber = defaults.publicVersionNumber;
-    	      this.type = defaults.type;
-    	      this.typeName = defaults.typeName;
+            $ = new PublicTypeVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder logDeliveryBucket(@Nullable Output<String> logDeliveryBucket) {
-            this.logDeliveryBucket = logDeliveryBucket;
+            $.logDeliveryBucket = logDeliveryBucket;
             return this;
         }
-        public Builder logDeliveryBucket(@Nullable String logDeliveryBucket) {
-            this.logDeliveryBucket = Codegen.ofNullable(logDeliveryBucket);
-            return this;
+
+        public Builder logDeliveryBucket(String logDeliveryBucket) {
+            return logDeliveryBucket(Output.of(logDeliveryBucket));
         }
+
         public Builder publicVersionNumber(@Nullable Output<String> publicVersionNumber) {
-            this.publicVersionNumber = publicVersionNumber;
+            $.publicVersionNumber = publicVersionNumber;
             return this;
         }
-        public Builder publicVersionNumber(@Nullable String publicVersionNumber) {
-            this.publicVersionNumber = Codegen.ofNullable(publicVersionNumber);
-            return this;
+
+        public Builder publicVersionNumber(String publicVersionNumber) {
+            return publicVersionNumber(Output.of(publicVersionNumber));
         }
+
         public Builder type(@Nullable Output<PublicTypeVersionType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable PublicTypeVersionType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(PublicTypeVersionType type) {
+            return type(Output.of(type));
         }
+
         public Builder typeName(@Nullable Output<String> typeName) {
-            this.typeName = typeName;
+            $.typeName = typeName;
             return this;
         }
-        public Builder typeName(@Nullable String typeName) {
-            this.typeName = Codegen.ofNullable(typeName);
-            return this;
-        }        public PublicTypeVersionArgs build() {
-            return new PublicTypeVersionArgs(arn, logDeliveryBucket, publicVersionNumber, type, typeName);
+
+        public Builder typeName(String typeName) {
+            return typeName(Output.of(typeName));
+        }
+
+        public PublicTypeVersionArgs build() {
+            return $;
         }
     }
+
 }

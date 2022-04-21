@@ -23,7 +23,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="epoch", required=true)
-      private final Integer epoch;
+    private Integer epoch;
 
     public Integer epoch() {
         return this.epoch;
@@ -34,7 +34,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inclusive", required=true)
-      private final Boolean inclusive;
+    private Boolean inclusive;
 
     public Boolean inclusive() {
         return this.inclusive;
@@ -45,7 +45,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -56,7 +56,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -67,82 +67,73 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="revision", required=true)
-      private final String revision;
+    private String revision;
 
     public String revision() {
         return this.revision;
     }
 
-    public VersionResponse(
-        Integer epoch,
-        Boolean inclusive,
-        String kind,
-        String name,
-        String revision) {
-        this.epoch = Objects.requireNonNull(epoch, "expected parameter 'epoch' to be non-null");
-        this.inclusive = Objects.requireNonNull(inclusive, "expected parameter 'inclusive' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-    }
+    private VersionResponse() {}
 
-    private VersionResponse() {
-        this.epoch = null;
-        this.inclusive = null;
-        this.kind = null;
-        this.name = null;
-        this.revision = null;
+    private VersionResponse(VersionResponse $) {
+        this.epoch = $.epoch;
+        this.inclusive = $.inclusive;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.revision = $.revision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer epoch;
-        private Boolean inclusive;
-        private String kind;
-        private String name;
-        private String revision;
+        private VersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VersionResponse();
         }
 
         public Builder(VersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.epoch = defaults.epoch;
-    	      this.inclusive = defaults.inclusive;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.revision = defaults.revision;
+            $ = new VersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder epoch(Integer epoch) {
-            this.epoch = Objects.requireNonNull(epoch);
+            $.epoch = epoch;
             return this;
         }
+
         public Builder inclusive(Boolean inclusive) {
-            this.inclusive = Objects.requireNonNull(inclusive);
+            $.inclusive = inclusive;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder revision(String revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
-        }        public VersionResponse build() {
-            return new VersionResponse(epoch, inclusive, kind, name, revision);
+        }
+
+        public VersionResponse build() {
+            $.epoch = Objects.requireNonNull($.epoch, "expected parameter 'epoch' to be non-null");
+            $.inclusive = Objects.requireNonNull($.inclusive, "expected parameter 'inclusive' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            return $;
         }
     }
+
 }

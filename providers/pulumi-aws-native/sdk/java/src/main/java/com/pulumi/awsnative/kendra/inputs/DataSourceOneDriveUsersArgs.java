@@ -6,10 +6,10 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceS3PathArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class DataSourceOneDriveUsersArgs extends com.pulumi.resources.Reso
     public static final DataSourceOneDriveUsersArgs Empty = new DataSourceOneDriveUsersArgs();
 
     @Import(name="oneDriveUserList")
-      private final @Nullable Output<List<String>> oneDriveUserList;
+    private @Nullable Output<List<String>> oneDriveUserList;
 
-    public Output<List<String>> oneDriveUserList() {
-        return this.oneDriveUserList == null ? Codegen.empty() : this.oneDriveUserList;
+    public Optional<Output<List<String>>> oneDriveUserList() {
+        return Optional.ofNullable(this.oneDriveUserList);
     }
 
     @Import(name="oneDriveUserS3Path")
-      private final @Nullable Output<DataSourceS3PathArgs> oneDriveUserS3Path;
+    private @Nullable Output<DataSourceS3PathArgs> oneDriveUserS3Path;
 
-    public Output<DataSourceS3PathArgs> oneDriveUserS3Path() {
-        return this.oneDriveUserS3Path == null ? Codegen.empty() : this.oneDriveUserS3Path;
+    public Optional<Output<DataSourceS3PathArgs>> oneDriveUserS3Path() {
+        return Optional.ofNullable(this.oneDriveUserS3Path);
     }
 
-    public DataSourceOneDriveUsersArgs(
-        @Nullable Output<List<String>> oneDriveUserList,
-        @Nullable Output<DataSourceS3PathArgs> oneDriveUserS3Path) {
-        this.oneDriveUserList = oneDriveUserList;
-        this.oneDriveUserS3Path = oneDriveUserS3Path;
-    }
+    private DataSourceOneDriveUsersArgs() {}
 
-    private DataSourceOneDriveUsersArgs() {
-        this.oneDriveUserList = Codegen.empty();
-        this.oneDriveUserS3Path = Codegen.empty();
+    private DataSourceOneDriveUsersArgs(DataSourceOneDriveUsersArgs $) {
+        this.oneDriveUserList = $.oneDriveUserList;
+        this.oneDriveUserS3Path = $.oneDriveUserS3Path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceOneDriveUsersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> oneDriveUserList;
-        private @Nullable Output<DataSourceS3PathArgs> oneDriveUserS3Path;
+        private DataSourceOneDriveUsersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceOneDriveUsersArgs();
         }
 
         public Builder(DataSourceOneDriveUsersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oneDriveUserList = defaults.oneDriveUserList;
-    	      this.oneDriveUserS3Path = defaults.oneDriveUserS3Path;
+            $ = new DataSourceOneDriveUsersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder oneDriveUserList(@Nullable Output<List<String>> oneDriveUserList) {
-            this.oneDriveUserList = oneDriveUserList;
+            $.oneDriveUserList = oneDriveUserList;
             return this;
         }
-        public Builder oneDriveUserList(@Nullable List<String> oneDriveUserList) {
-            this.oneDriveUserList = Codegen.ofNullable(oneDriveUserList);
-            return this;
+
+        public Builder oneDriveUserList(List<String> oneDriveUserList) {
+            return oneDriveUserList(Output.of(oneDriveUserList));
         }
+
         public Builder oneDriveUserList(String... oneDriveUserList) {
             return oneDriveUserList(List.of(oneDriveUserList));
         }
+
         public Builder oneDriveUserS3Path(@Nullable Output<DataSourceS3PathArgs> oneDriveUserS3Path) {
-            this.oneDriveUserS3Path = oneDriveUserS3Path;
+            $.oneDriveUserS3Path = oneDriveUserS3Path;
             return this;
         }
-        public Builder oneDriveUserS3Path(@Nullable DataSourceS3PathArgs oneDriveUserS3Path) {
-            this.oneDriveUserS3Path = Codegen.ofNullable(oneDriveUserS3Path);
-            return this;
-        }        public DataSourceOneDriveUsersArgs build() {
-            return new DataSourceOneDriveUsersArgs(oneDriveUserList, oneDriveUserS3Path);
+
+        public Builder oneDriveUserS3Path(DataSourceS3PathArgs oneDriveUserS3Path) {
+            return oneDriveUserS3Path(Output.of(oneDriveUserS3Path));
+        }
+
+        public DataSourceOneDriveUsersArgs build() {
+            return $;
         }
     }
+
 }

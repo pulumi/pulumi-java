@@ -5,11 +5,11 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.inputs.TypeArgs;
 import com.pulumi.googlenative.healthcare_v1.inputs.VersionSourceArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class Hl7TypesConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<List<TypeArgs>> type;
+    private @Nullable Output<List<TypeArgs>> type;
 
-    public Output<List<TypeArgs>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<List<TypeArgs>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class Hl7TypesConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<List<VersionSourceArgs>> version;
+    private @Nullable Output<List<VersionSourceArgs>> version;
 
-    public Output<List<VersionSourceArgs>> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<List<VersionSourceArgs>>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public Hl7TypesConfigArgs(
-        @Nullable Output<List<TypeArgs>> type,
-        @Nullable Output<List<VersionSourceArgs>> version) {
-        this.type = type;
-        this.version = version;
-    }
+    private Hl7TypesConfigArgs() {}
 
-    private Hl7TypesConfigArgs() {
-        this.type = Codegen.empty();
-        this.version = Codegen.empty();
+    private Hl7TypesConfigArgs(Hl7TypesConfigArgs $) {
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7TypesConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TypeArgs>> type;
-        private @Nullable Output<List<VersionSourceArgs>> version;
+        private Hl7TypesConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7TypesConfigArgs();
         }
 
         public Builder(Hl7TypesConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new Hl7TypesConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<List<TypeArgs>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable List<TypeArgs> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(List<TypeArgs> type) {
+            return type(Output.of(type));
         }
+
         public Builder type(TypeArgs... type) {
             return type(List.of(type));
         }
+
         public Builder version(@Nullable Output<List<VersionSourceArgs>> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable List<VersionSourceArgs> version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(List<VersionSourceArgs> version) {
+            return version(Output.of(version));
         }
+
         public Builder version(VersionSourceArgs... version) {
             return version(List.of(version));
-        }        public Hl7TypesConfigArgs build() {
-            return new Hl7TypesConfigArgs(type, version);
+        }
+
+        public Hl7TypesConfigArgs build() {
+            return $;
         }
     }
+
 }

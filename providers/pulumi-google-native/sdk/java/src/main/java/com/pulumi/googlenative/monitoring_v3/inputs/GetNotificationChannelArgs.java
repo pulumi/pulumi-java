@@ -15,62 +15,58 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
     @Import(name="notificationChannelId", required=true)
-      private final String notificationChannelId;
+    private String notificationChannelId;
 
     public String notificationChannelId() {
         return this.notificationChannelId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetNotificationChannelArgs(
-        String notificationChannelId,
-        @Nullable String project) {
-        this.notificationChannelId = Objects.requireNonNull(notificationChannelId, "expected parameter 'notificationChannelId' to be non-null");
-        this.project = project;
-    }
+    private GetNotificationChannelArgs() {}
 
-    private GetNotificationChannelArgs() {
-        this.notificationChannelId = null;
-        this.project = null;
+    private GetNotificationChannelArgs(GetNotificationChannelArgs $) {
+        this.notificationChannelId = $.notificationChannelId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotificationChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String notificationChannelId;
-        private @Nullable String project;
+        private GetNotificationChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotificationChannelArgs();
         }
 
         public Builder(GetNotificationChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notificationChannelId = defaults.notificationChannelId;
-    	      this.project = defaults.project;
+            $ = new GetNotificationChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notificationChannelId(String notificationChannelId) {
-            this.notificationChannelId = Objects.requireNonNull(notificationChannelId);
+            $.notificationChannelId = notificationChannelId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetNotificationChannelArgs build() {
-            return new GetNotificationChannelArgs(notificationChannelId, project);
+        }
+
+        public GetNotificationChannelArgs build() {
+            $.notificationChannelId = Objects.requireNonNull($.notificationChannelId, "expected parameter 'notificationChannelId' to be non-null");
+            return $;
         }
     }
+
 }

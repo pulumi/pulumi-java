@@ -5,9 +5,9 @@ package com.pulumi.awsnative.panorama.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ApplicationInstanceManifestPayloadArgs extends com.pulumi.res
     public static final ApplicationInstanceManifestPayloadArgs Empty = new ApplicationInstanceManifestPayloadArgs();
 
     @Import(name="payloadData")
-      private final @Nullable Output<String> payloadData;
+    private @Nullable Output<String> payloadData;
 
-    public Output<String> payloadData() {
-        return this.payloadData == null ? Codegen.empty() : this.payloadData;
+    public Optional<Output<String>> payloadData() {
+        return Optional.ofNullable(this.payloadData);
     }
 
-    public ApplicationInstanceManifestPayloadArgs(@Nullable Output<String> payloadData) {
-        this.payloadData = payloadData;
-    }
+    private ApplicationInstanceManifestPayloadArgs() {}
 
-    private ApplicationInstanceManifestPayloadArgs() {
-        this.payloadData = Codegen.empty();
+    private ApplicationInstanceManifestPayloadArgs(ApplicationInstanceManifestPayloadArgs $) {
+        this.payloadData = $.payloadData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationInstanceManifestPayloadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> payloadData;
+        private ApplicationInstanceManifestPayloadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationInstanceManifestPayloadArgs();
         }
 
         public Builder(ApplicationInstanceManifestPayloadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.payloadData = defaults.payloadData;
+            $ = new ApplicationInstanceManifestPayloadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder payloadData(@Nullable Output<String> payloadData) {
-            this.payloadData = payloadData;
+            $.payloadData = payloadData;
             return this;
         }
-        public Builder payloadData(@Nullable String payloadData) {
-            this.payloadData = Codegen.ofNullable(payloadData);
-            return this;
-        }        public ApplicationInstanceManifestPayloadArgs build() {
-            return new ApplicationInstanceManifestPayloadArgs(payloadData);
+
+        public Builder payloadData(String payloadData) {
+            return payloadData(Output.of(payloadData));
+        }
+
+        public ApplicationInstanceManifestPayloadArgs build() {
+            return $;
         }
     }
+
 }

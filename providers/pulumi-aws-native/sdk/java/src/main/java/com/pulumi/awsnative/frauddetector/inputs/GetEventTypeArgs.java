@@ -17,45 +17,45 @@ public final class GetEventTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetEventTypeArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetEventTypeArgs() {}
 
-    private GetEventTypeArgs() {
-        this.arn = null;
+    private GetEventTypeArgs(GetEventTypeArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetEventTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventTypeArgs();
         }
 
         public Builder(GetEventTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetEventTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetEventTypeArgs build() {
-            return new GetEventTypeArgs(arn);
+        }
+
+        public GetEventTypeArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

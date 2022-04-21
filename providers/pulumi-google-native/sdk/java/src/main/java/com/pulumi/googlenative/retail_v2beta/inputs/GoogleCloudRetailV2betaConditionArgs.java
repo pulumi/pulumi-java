@@ -5,11 +5,11 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaConditionQueryTermArgs;
 import com.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaConditionTimeRangeArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudRetailV2betaConditionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="activeTimeRange")
-      private final @Nullable Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange;
+    private @Nullable Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange;
 
-    public Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange() {
-        return this.activeTimeRange == null ? Codegen.empty() : this.activeTimeRange;
+    public Optional<Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>>> activeTimeRange() {
+        return Optional.ofNullable(this.activeTimeRange);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class GoogleCloudRetailV2betaConditionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="queryTerms")
-      private final @Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms;
+    private @Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms;
 
-    public Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms() {
-        return this.queryTerms == null ? Codegen.empty() : this.queryTerms;
+    public Optional<Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>>> queryTerms() {
+        return Optional.ofNullable(this.queryTerms);
     }
 
-    public GoogleCloudRetailV2betaConditionArgs(
-        @Nullable Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange,
-        @Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms) {
-        this.activeTimeRange = activeTimeRange;
-        this.queryTerms = queryTerms;
-    }
+    private GoogleCloudRetailV2betaConditionArgs() {}
 
-    private GoogleCloudRetailV2betaConditionArgs() {
-        this.activeTimeRange = Codegen.empty();
-        this.queryTerms = Codegen.empty();
+    private GoogleCloudRetailV2betaConditionArgs(GoogleCloudRetailV2betaConditionArgs $) {
+        this.activeTimeRange = $.activeTimeRange;
+        this.queryTerms = $.queryTerms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange;
-        private @Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms;
+        private GoogleCloudRetailV2betaConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaConditionArgs();
         }
 
         public Builder(GoogleCloudRetailV2betaConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeTimeRange = defaults.activeTimeRange;
-    	      this.queryTerms = defaults.queryTerms;
+            $ = new GoogleCloudRetailV2betaConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeTimeRange(@Nullable Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange) {
-            this.activeTimeRange = activeTimeRange;
+            $.activeTimeRange = activeTimeRange;
             return this;
         }
-        public Builder activeTimeRange(@Nullable List<GoogleCloudRetailV2betaConditionTimeRangeArgs> activeTimeRange) {
-            this.activeTimeRange = Codegen.ofNullable(activeTimeRange);
-            return this;
+
+        public Builder activeTimeRange(List<GoogleCloudRetailV2betaConditionTimeRangeArgs> activeTimeRange) {
+            return activeTimeRange(Output.of(activeTimeRange));
         }
+
         public Builder activeTimeRange(GoogleCloudRetailV2betaConditionTimeRangeArgs... activeTimeRange) {
             return activeTimeRange(List.of(activeTimeRange));
         }
+
         public Builder queryTerms(@Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms) {
-            this.queryTerms = queryTerms;
+            $.queryTerms = queryTerms;
             return this;
         }
-        public Builder queryTerms(@Nullable List<GoogleCloudRetailV2betaConditionQueryTermArgs> queryTerms) {
-            this.queryTerms = Codegen.ofNullable(queryTerms);
-            return this;
+
+        public Builder queryTerms(List<GoogleCloudRetailV2betaConditionQueryTermArgs> queryTerms) {
+            return queryTerms(Output.of(queryTerms));
         }
+
         public Builder queryTerms(GoogleCloudRetailV2betaConditionQueryTermArgs... queryTerms) {
             return queryTerms(List.of(queryTerms));
-        }        public GoogleCloudRetailV2betaConditionArgs build() {
-            return new GoogleCloudRetailV2betaConditionArgs(activeTimeRange, queryTerms);
+        }
+
+        public GoogleCloudRetailV2betaConditionArgs build() {
+            return $;
         }
     }
+
 }

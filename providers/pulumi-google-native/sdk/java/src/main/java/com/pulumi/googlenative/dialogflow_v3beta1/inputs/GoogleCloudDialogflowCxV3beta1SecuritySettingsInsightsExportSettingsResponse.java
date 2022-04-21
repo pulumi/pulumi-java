@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
      * 
      */
     @Import(name="enableInsightsExport", required=true)
-      private final Boolean enableInsightsExport;
+    private Boolean enableInsightsExport;
 
     public Boolean enableInsightsExport() {
         return this.enableInsightsExport;
     }
 
-    public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse(Boolean enableInsightsExport) {
-        this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport, "expected parameter 'enableInsightsExport' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse() {
-        this.enableInsightsExport = null;
+    private GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse(GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse $) {
+        this.enableInsightsExport = $.enableInsightsExport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableInsightsExport;
+        private GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableInsightsExport = defaults.enableInsightsExport;
+            $ = new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableInsightsExport(Boolean enableInsightsExport) {
-            this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport);
+            $.enableInsightsExport = enableInsightsExport;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse(enableInsightsExport);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse build() {
+            $.enableInsightsExport = Objects.requireNonNull($.enableInsightsExport, "expected parameter 'enableInsightsExport' to be non-null");
+            return $;
         }
     }
+
 }

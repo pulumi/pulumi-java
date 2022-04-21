@@ -5,7 +5,6 @@ package com.pulumi.awsnative.sso.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,52 +15,53 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     public static final InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs Empty = new InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs();
 
     @Import(name="source", required=true)
-      private final Output<List<String>> source;
+    private Output<List<String>> source;
 
     public Output<List<String>> source() {
         return this.source;
     }
 
-    public InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs(Output<List<String>> source) {
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs() {}
 
-    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs() {
-        this.source = Codegen.empty();
+    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs(InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs $) {
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> source;
+        private InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs();
         }
 
         public Builder(InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
+            $ = new InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder source(Output<List<String>> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(List<String> source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder source(String... source) {
             return source(List.of(source));
-        }        public InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs build() {
-            return new InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs(source);
+        }
+
+        public InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

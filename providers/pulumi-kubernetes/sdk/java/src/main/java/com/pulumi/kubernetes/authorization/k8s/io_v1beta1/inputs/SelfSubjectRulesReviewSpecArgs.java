@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class SelfSubjectRulesReviewSpecArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
-    public SelfSubjectRulesReviewSpecArgs(@Nullable Output<String> namespace) {
-        this.namespace = namespace;
-    }
+    private SelfSubjectRulesReviewSpecArgs() {}
 
-    private SelfSubjectRulesReviewSpecArgs() {
-        this.namespace = Codegen.empty();
+    private SelfSubjectRulesReviewSpecArgs(SelfSubjectRulesReviewSpecArgs $) {
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelfSubjectRulesReviewSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> namespace;
+        private SelfSubjectRulesReviewSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelfSubjectRulesReviewSpecArgs();
         }
 
         public Builder(SelfSubjectRulesReviewSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespace = defaults.namespace;
+            $ = new SelfSubjectRulesReviewSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
-        }        public SelfSubjectRulesReviewSpecArgs build() {
-            return new SelfSubjectRulesReviewSpecArgs(namespace);
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        public SelfSubjectRulesReviewSpecArgs build() {
+            return $;
         }
     }
+
 }

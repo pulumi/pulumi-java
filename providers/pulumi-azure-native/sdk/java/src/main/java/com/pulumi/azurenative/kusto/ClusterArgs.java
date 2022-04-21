@@ -19,6 +19,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDiskEncryption")
-      private final @Nullable Output<Boolean> enableDiskEncryption;
+    private @Nullable Output<Boolean> enableDiskEncryption;
 
-    public Output<Boolean> enableDiskEncryption() {
-        return this.enableDiskEncryption == null ? Codegen.empty() : this.enableDiskEncryption;
+    public Optional<Output<Boolean>> enableDiskEncryption() {
+        return Optional.ofNullable(this.enableDiskEncryption);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDoubleEncryption")
-      private final @Nullable Output<Boolean> enableDoubleEncryption;
+    private @Nullable Output<Boolean> enableDoubleEncryption;
 
-    public Output<Boolean> enableDoubleEncryption() {
-        return this.enableDoubleEncryption == null ? Codegen.empty() : this.enableDoubleEncryption;
+    public Optional<Output<Boolean>> enableDoubleEncryption() {
+        return Optional.ofNullable(this.enableDoubleEncryption);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enablePurge")
-      private final @Nullable Output<Boolean> enablePurge;
+    private @Nullable Output<Boolean> enablePurge;
 
-    public Output<Boolean> enablePurge() {
-        return this.enablePurge == null ? Codegen.empty() : this.enablePurge;
+    public Optional<Output<Boolean>> enablePurge() {
+        return Optional.ofNullable(this.enablePurge);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableStreamingIngest")
-      private final @Nullable Output<Boolean> enableStreamingIngest;
+    private @Nullable Output<Boolean> enableStreamingIngest;
 
-    public Output<Boolean> enableStreamingIngest() {
-        return this.enableStreamingIngest == null ? Codegen.empty() : this.enableStreamingIngest;
+    public Optional<Output<Boolean>> enableStreamingIngest() {
+        return Optional.ofNullable(this.enableStreamingIngest);
     }
 
     /**
@@ -86,10 +87,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engineType")
-      private final @Nullable Output<Either<String,EngineType>> engineType;
+    private @Nullable Output<Either<String,EngineType>> engineType;
 
-    public Output<Either<String,EngineType>> engineType() {
-        return this.engineType == null ? Codegen.empty() : this.engineType;
+    public Optional<Output<Either<String,EngineType>>> engineType() {
+        return Optional.ofNullable(this.engineType);
     }
 
     /**
@@ -97,10 +98,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityArgs> identity;
+    private @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -108,10 +109,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
+    private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
+    public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
     /**
@@ -119,10 +120,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -130,10 +131,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="optimizedAutoscale")
-      private final @Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale;
+    private @Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale;
 
-    public Output<OptimizedAutoscaleArgs> optimizedAutoscale() {
-        return this.optimizedAutoscale == null ? Codegen.empty() : this.optimizedAutoscale;
+    public Optional<Output<OptimizedAutoscaleArgs>> optimizedAutoscale() {
+        return Optional.ofNullable(this.optimizedAutoscale);
     }
 
     /**
@@ -141,7 +142,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -152,7 +153,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<AzureSkuArgs> sku;
+    private Output<AzureSkuArgs> sku;
 
     public Output<AzureSkuArgs> sku() {
         return this.sku;
@@ -163,10 +164,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -174,10 +175,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trustedExternalTenants")
-      private final @Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants;
+    private @Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants;
 
-    public Output<List<TrustedExternalTenantArgs>> trustedExternalTenants() {
-        return this.trustedExternalTenants == null ? Codegen.empty() : this.trustedExternalTenants;
+    public Optional<Output<List<TrustedExternalTenantArgs>>> trustedExternalTenants() {
+        return Optional.ofNullable(this.trustedExternalTenants);
     }
 
     /**
@@ -185,10 +186,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualNetworkConfiguration")
-      private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
+    private @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
-    public Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration() {
-        return this.virtualNetworkConfiguration == null ? Codegen.empty() : this.virtualNetworkConfiguration;
+    public Optional<Output<VirtualNetworkConfigurationArgs>> virtualNetworkConfiguration() {
+        return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
 
     /**
@@ -196,251 +197,213 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public ClusterArgs(
-        @Nullable Output<String> clusterName,
-        @Nullable Output<Boolean> enableDiskEncryption,
-        @Nullable Output<Boolean> enableDoubleEncryption,
-        @Nullable Output<Boolean> enablePurge,
-        @Nullable Output<Boolean> enableStreamingIngest,
-        @Nullable Output<Either<String,EngineType>> engineType,
-        @Nullable Output<IdentityArgs> identity,
-        @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties,
-        @Nullable Output<String> location,
-        @Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale,
-        Output<String> resourceGroupName,
-        Output<AzureSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants,
-        @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration,
-        @Nullable Output<List<String>> zones) {
-        this.clusterName = clusterName;
-        this.enableDiskEncryption = Codegen.booleanProp("enableDiskEncryption").output().arg(enableDiskEncryption).def(false).getNullable();
-        this.enableDoubleEncryption = Codegen.booleanProp("enableDoubleEncryption").output().arg(enableDoubleEncryption).def(false).getNullable();
-        this.enablePurge = Codegen.booleanProp("enablePurge").output().arg(enablePurge).def(false).getNullable();
-        this.enableStreamingIngest = Codegen.booleanProp("enableStreamingIngest").output().arg(enableStreamingIngest).def(false).getNullable();
-        this.engineType = Codegen.stringProp("engineType").left(EngineType.class).output().arg(engineType).def("V3").getNullable();
-        this.identity = identity;
-        this.keyVaultProperties = keyVaultProperties;
-        this.location = location;
-        this.optimizedAutoscale = optimizedAutoscale;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.tags = tags;
-        this.trustedExternalTenants = trustedExternalTenants;
-        this.virtualNetworkConfiguration = virtualNetworkConfiguration;
-        this.zones = zones;
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.clusterName = Codegen.empty();
-        this.enableDiskEncryption = Codegen.empty();
-        this.enableDoubleEncryption = Codegen.empty();
-        this.enablePurge = Codegen.empty();
-        this.enableStreamingIngest = Codegen.empty();
-        this.engineType = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.keyVaultProperties = Codegen.empty();
-        this.location = Codegen.empty();
-        this.optimizedAutoscale = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.trustedExternalTenants = Codegen.empty();
-        this.virtualNetworkConfiguration = Codegen.empty();
-        this.zones = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.clusterName = $.clusterName;
+        this.enableDiskEncryption = $.enableDiskEncryption;
+        this.enableDoubleEncryption = $.enableDoubleEncryption;
+        this.enablePurge = $.enablePurge;
+        this.enableStreamingIngest = $.enableStreamingIngest;
+        this.engineType = $.engineType;
+        this.identity = $.identity;
+        this.keyVaultProperties = $.keyVaultProperties;
+        this.location = $.location;
+        this.optimizedAutoscale = $.optimizedAutoscale;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.trustedExternalTenants = $.trustedExternalTenants;
+        this.virtualNetworkConfiguration = $.virtualNetworkConfiguration;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterName;
-        private @Nullable Output<Boolean> enableDiskEncryption;
-        private @Nullable Output<Boolean> enableDoubleEncryption;
-        private @Nullable Output<Boolean> enablePurge;
-        private @Nullable Output<Boolean> enableStreamingIngest;
-        private @Nullable Output<Either<String,EngineType>> engineType;
-        private @Nullable Output<IdentityArgs> identity;
-        private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
-        private @Nullable Output<String> location;
-        private @Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale;
-        private Output<String> resourceGroupName;
-        private Output<AzureSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants;
-        private @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
-        private @Nullable Output<List<String>> zones;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.enableDiskEncryption = defaults.enableDiskEncryption;
-    	      this.enableDoubleEncryption = defaults.enableDoubleEncryption;
-    	      this.enablePurge = defaults.enablePurge;
-    	      this.enableStreamingIngest = defaults.enableStreamingIngest;
-    	      this.engineType = defaults.engineType;
-    	      this.identity = defaults.identity;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
-    	      this.location = defaults.location;
-    	      this.optimizedAutoscale = defaults.optimizedAutoscale;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.trustedExternalTenants = defaults.trustedExternalTenants;
-    	      this.virtualNetworkConfiguration = defaults.virtualNetworkConfiguration;
-    	      this.zones = defaults.zones;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder enableDiskEncryption(@Nullable Output<Boolean> enableDiskEncryption) {
-            this.enableDiskEncryption = enableDiskEncryption;
+            $.enableDiskEncryption = enableDiskEncryption;
             return this;
         }
-        public Builder enableDiskEncryption(@Nullable Boolean enableDiskEncryption) {
-            this.enableDiskEncryption = Codegen.ofNullable(enableDiskEncryption);
-            return this;
+
+        public Builder enableDiskEncryption(Boolean enableDiskEncryption) {
+            return enableDiskEncryption(Output.of(enableDiskEncryption));
         }
+
         public Builder enableDoubleEncryption(@Nullable Output<Boolean> enableDoubleEncryption) {
-            this.enableDoubleEncryption = enableDoubleEncryption;
+            $.enableDoubleEncryption = enableDoubleEncryption;
             return this;
         }
-        public Builder enableDoubleEncryption(@Nullable Boolean enableDoubleEncryption) {
-            this.enableDoubleEncryption = Codegen.ofNullable(enableDoubleEncryption);
-            return this;
+
+        public Builder enableDoubleEncryption(Boolean enableDoubleEncryption) {
+            return enableDoubleEncryption(Output.of(enableDoubleEncryption));
         }
+
         public Builder enablePurge(@Nullable Output<Boolean> enablePurge) {
-            this.enablePurge = enablePurge;
+            $.enablePurge = enablePurge;
             return this;
         }
-        public Builder enablePurge(@Nullable Boolean enablePurge) {
-            this.enablePurge = Codegen.ofNullable(enablePurge);
-            return this;
+
+        public Builder enablePurge(Boolean enablePurge) {
+            return enablePurge(Output.of(enablePurge));
         }
+
         public Builder enableStreamingIngest(@Nullable Output<Boolean> enableStreamingIngest) {
-            this.enableStreamingIngest = enableStreamingIngest;
+            $.enableStreamingIngest = enableStreamingIngest;
             return this;
         }
-        public Builder enableStreamingIngest(@Nullable Boolean enableStreamingIngest) {
-            this.enableStreamingIngest = Codegen.ofNullable(enableStreamingIngest);
-            return this;
+
+        public Builder enableStreamingIngest(Boolean enableStreamingIngest) {
+            return enableStreamingIngest(Output.of(enableStreamingIngest));
         }
+
         public Builder engineType(@Nullable Output<Either<String,EngineType>> engineType) {
-            this.engineType = engineType;
+            $.engineType = engineType;
             return this;
         }
-        public Builder engineType(@Nullable Either<String,EngineType> engineType) {
-            this.engineType = Codegen.ofNullable(engineType);
-            return this;
+
+        public Builder engineType(Either<String,EngineType> engineType) {
+            return engineType(Output.of(engineType));
         }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
-        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
-            return this;
+
+        public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
+            return keyVaultProperties(Output.of(keyVaultProperties));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder optimizedAutoscale(@Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale) {
-            this.optimizedAutoscale = optimizedAutoscale;
+            $.optimizedAutoscale = optimizedAutoscale;
             return this;
         }
-        public Builder optimizedAutoscale(@Nullable OptimizedAutoscaleArgs optimizedAutoscale) {
-            this.optimizedAutoscale = Codegen.ofNullable(optimizedAutoscale);
-            return this;
+
+        public Builder optimizedAutoscale(OptimizedAutoscaleArgs optimizedAutoscale) {
+            return optimizedAutoscale(Output.of(optimizedAutoscale));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(Output<AzureSkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(AzureSkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder trustedExternalTenants(@Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants) {
-            this.trustedExternalTenants = trustedExternalTenants;
+            $.trustedExternalTenants = trustedExternalTenants;
             return this;
         }
-        public Builder trustedExternalTenants(@Nullable List<TrustedExternalTenantArgs> trustedExternalTenants) {
-            this.trustedExternalTenants = Codegen.ofNullable(trustedExternalTenants);
-            return this;
+
+        public Builder trustedExternalTenants(List<TrustedExternalTenantArgs> trustedExternalTenants) {
+            return trustedExternalTenants(Output.of(trustedExternalTenants));
         }
+
         public Builder trustedExternalTenants(TrustedExternalTenantArgs... trustedExternalTenants) {
             return trustedExternalTenants(List.of(trustedExternalTenants));
         }
+
         public Builder virtualNetworkConfiguration(@Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = virtualNetworkConfiguration;
+            $.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
-        public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = Codegen.ofNullable(virtualNetworkConfiguration);
-            return this;
+
+        public Builder virtualNetworkConfiguration(VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
+            return virtualNetworkConfiguration(Output.of(virtualNetworkConfiguration));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public ClusterArgs build() {
-            return new ClusterArgs(clusterName, enableDiskEncryption, enableDoubleEncryption, enablePurge, enableStreamingIngest, engineType, identity, keyVaultProperties, location, optimizedAutoscale, resourceGroupName, sku, tags, trustedExternalTenants, virtualNetworkConfiguration, zones);
+        }
+
+        public ClusterArgs build() {
+            $.enableDiskEncryption = Codegen.booleanProp("enableDiskEncryption").output().arg($.enableDiskEncryption).def(false).getNullable();
+            $.enableDoubleEncryption = Codegen.booleanProp("enableDoubleEncryption").output().arg($.enableDoubleEncryption).def(false).getNullable();
+            $.enablePurge = Codegen.booleanProp("enablePurge").output().arg($.enablePurge).def(false).getNullable();
+            $.enableStreamingIngest = Codegen.booleanProp("enableStreamingIngest").output().arg($.enableStreamingIngest).def(false).getNullable();
+            $.engineType = Codegen.stringProp("engineType").left(EngineType.class).output().arg($.engineType).def("V3").getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

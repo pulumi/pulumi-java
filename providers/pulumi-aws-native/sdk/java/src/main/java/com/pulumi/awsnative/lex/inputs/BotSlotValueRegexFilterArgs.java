@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class BotSlotValueRegexFilterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="pattern", required=true)
-      private final Output<String> pattern;
+    private Output<String> pattern;
 
     public Output<String> pattern() {
         return this.pattern;
     }
 
-    public BotSlotValueRegexFilterArgs(Output<String> pattern) {
-        this.pattern = Objects.requireNonNull(pattern, "expected parameter 'pattern' to be non-null");
-    }
+    private BotSlotValueRegexFilterArgs() {}
 
-    private BotSlotValueRegexFilterArgs() {
-        this.pattern = Codegen.empty();
+    private BotSlotValueRegexFilterArgs(BotSlotValueRegexFilterArgs $) {
+        this.pattern = $.pattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotSlotValueRegexFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> pattern;
+        private BotSlotValueRegexFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotSlotValueRegexFilterArgs();
         }
 
         public Builder(BotSlotValueRegexFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pattern = defaults.pattern;
+            $ = new BotSlotValueRegexFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pattern(Output<String> pattern) {
-            this.pattern = Objects.requireNonNull(pattern);
+            $.pattern = pattern;
             return this;
         }
+
         public Builder pattern(String pattern) {
-            this.pattern = Output.of(Objects.requireNonNull(pattern));
-            return this;
-        }        public BotSlotValueRegexFilterArgs build() {
-            return new BotSlotValueRegexFilterArgs(pattern);
+            return pattern(Output.of(pattern));
+        }
+
+        public BotSlotValueRegexFilterArgs build() {
+            $.pattern = Objects.requireNonNull($.pattern, "expected parameter 'pattern' to be non-null");
+            return $;
         }
     }
+
 }

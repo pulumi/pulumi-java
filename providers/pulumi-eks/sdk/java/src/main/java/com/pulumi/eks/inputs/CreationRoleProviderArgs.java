@@ -7,7 +7,6 @@ import com.pulumi.aws.Provider;
 import com.pulumi.aws.iam.Role;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,70 +19,67 @@ public final class CreationRoleProviderArgs extends com.pulumi.resources.Resourc
     public static final CreationRoleProviderArgs Empty = new CreationRoleProviderArgs();
 
     @Import(name="provider", required=true)
-      private final Output<Provider> provider;
+    private Output<Provider> provider;
 
     public Output<Provider> provider() {
         return this.provider;
     }
 
     @Import(name="role", required=true)
-      private final Output<Role> role;
+    private Output<Role> role;
 
     public Output<Role> role() {
         return this.role;
     }
 
-    public CreationRoleProviderArgs(
-        Output<Provider> provider,
-        Output<Role> role) {
-        this.provider = Objects.requireNonNull(provider, "expected parameter 'provider' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private CreationRoleProviderArgs() {}
 
-    private CreationRoleProviderArgs() {
-        this.provider = Codegen.empty();
-        this.role = Codegen.empty();
+    private CreationRoleProviderArgs(CreationRoleProviderArgs $) {
+        this.provider = $.provider;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreationRoleProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Provider> provider;
-        private Output<Role> role;
+        private CreationRoleProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreationRoleProviderArgs();
         }
 
         public Builder(CreationRoleProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provider = defaults.provider;
-    	      this.role = defaults.role;
+            $ = new CreationRoleProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provider(Output<Provider> provider) {
-            this.provider = Objects.requireNonNull(provider);
+            $.provider = provider;
             return this;
         }
+
         public Builder provider(Provider provider) {
-            this.provider = Output.of(Objects.requireNonNull(provider));
-            return this;
+            return provider(Output.of(provider));
         }
+
         public Builder role(Output<Role> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(Role role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public CreationRoleProviderArgs build() {
-            return new CreationRoleProviderArgs(provider, role);
+            return role(Output.of(role));
+        }
+
+        public CreationRoleProviderArgs build() {
+            $.provider = Objects.requireNonNull($.provider, "expected parameter 'provider' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

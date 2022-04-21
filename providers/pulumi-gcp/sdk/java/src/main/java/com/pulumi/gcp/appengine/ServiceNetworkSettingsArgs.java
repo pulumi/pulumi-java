@@ -5,10 +5,10 @@ package com.pulumi.gcp.appengine;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsNetworkSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ServiceNetworkSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="networkSettings", required=true)
-      private final Output<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings;
+    private Output<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings;
 
     public Output<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings() {
         return this.networkSettings;
@@ -34,10 +34,10 @@ public final class ServiceNetworkSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -45,76 +45,70 @@ public final class ServiceNetworkSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
-    public ServiceNetworkSettingsArgs(
-        Output<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings,
-        @Nullable Output<String> project,
-        Output<String> service) {
-        this.networkSettings = Objects.requireNonNull(networkSettings, "expected parameter 'networkSettings' to be non-null");
-        this.project = project;
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private ServiceNetworkSettingsArgs() {}
 
-    private ServiceNetworkSettingsArgs() {
-        this.networkSettings = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
+    private ServiceNetworkSettingsArgs(ServiceNetworkSettingsArgs $) {
+        this.networkSettings = $.networkSettings;
+        this.project = $.project;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceNetworkSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings;
-        private @Nullable Output<String> project;
-        private Output<String> service;
+        private ServiceNetworkSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceNetworkSettingsArgs();
         }
 
         public Builder(ServiceNetworkSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkSettings = defaults.networkSettings;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
+            $ = new ServiceNetworkSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkSettings(Output<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings) {
-            this.networkSettings = Objects.requireNonNull(networkSettings);
+            $.networkSettings = networkSettings;
             return this;
         }
+
         public Builder networkSettings(ServiceNetworkSettingsNetworkSettingsArgs networkSettings) {
-            this.networkSettings = Output.of(Objects.requireNonNull(networkSettings));
-            return this;
+            return networkSettings(Output.of(networkSettings));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
-        }        public ServiceNetworkSettingsArgs build() {
-            return new ServiceNetworkSettingsArgs(networkSettings, project, service);
+            return service(Output.of(service));
+        }
+
+        public ServiceNetworkSettingsArgs build() {
+            $.networkSettings = Objects.requireNonNull($.networkSettings, "expected parameter 'networkSettings' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

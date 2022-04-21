@@ -20,7 +20,7 @@ public final class GetSchedulingPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -31,55 +31,51 @@ public final class GetSchedulingPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetSchedulingPolicyArgs(
-        String arn,
-        @Nullable Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.tags = tags;
-    }
+    private GetSchedulingPolicyArgs() {}
 
-    private GetSchedulingPolicyArgs() {
-        this.arn = null;
-        this.tags = Map.of();
+    private GetSchedulingPolicyArgs(GetSchedulingPolicyArgs $) {
+        this.arn = $.arn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSchedulingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private @Nullable Map<String,String> tags;
+        private GetSchedulingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSchedulingPolicyArgs();
         }
 
         public Builder(GetSchedulingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.tags = defaults.tags;
+            $ = new GetSchedulingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetSchedulingPolicyArgs build() {
-            return new GetSchedulingPolicyArgs(arn, tags);
+        }
+
+        public GetSchedulingPolicyArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

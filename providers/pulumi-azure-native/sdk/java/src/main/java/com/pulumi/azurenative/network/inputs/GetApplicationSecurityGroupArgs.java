@@ -17,7 +17,7 @@ public final class GetApplicationSecurityGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="applicationSecurityGroupName", required=true)
-      private final String applicationSecurityGroupName;
+    private String applicationSecurityGroupName;
 
     public String applicationSecurityGroupName() {
         return this.applicationSecurityGroupName;
@@ -28,55 +28,52 @@ public final class GetApplicationSecurityGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetApplicationSecurityGroupArgs(
-        String applicationSecurityGroupName,
-        String resourceGroupName) {
-        this.applicationSecurityGroupName = Objects.requireNonNull(applicationSecurityGroupName, "expected parameter 'applicationSecurityGroupName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetApplicationSecurityGroupArgs() {}
 
-    private GetApplicationSecurityGroupArgs() {
-        this.applicationSecurityGroupName = null;
-        this.resourceGroupName = null;
+    private GetApplicationSecurityGroupArgs(GetApplicationSecurityGroupArgs $) {
+        this.applicationSecurityGroupName = $.applicationSecurityGroupName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationSecurityGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationSecurityGroupName;
-        private String resourceGroupName;
+        private GetApplicationSecurityGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationSecurityGroupArgs();
         }
 
         public Builder(GetApplicationSecurityGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationSecurityGroupName = defaults.applicationSecurityGroupName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetApplicationSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationSecurityGroupName(String applicationSecurityGroupName) {
-            this.applicationSecurityGroupName = Objects.requireNonNull(applicationSecurityGroupName);
+            $.applicationSecurityGroupName = applicationSecurityGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetApplicationSecurityGroupArgs build() {
-            return new GetApplicationSecurityGroupArgs(applicationSecurityGroupName, resourceGroupName);
+        }
+
+        public GetApplicationSecurityGroupArgs build() {
+            $.applicationSecurityGroupName = Objects.requireNonNull($.applicationSecurityGroupName, "expected parameter 'applicationSecurityGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

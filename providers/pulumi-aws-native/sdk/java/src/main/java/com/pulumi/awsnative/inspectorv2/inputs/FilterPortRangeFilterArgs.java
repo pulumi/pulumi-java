@@ -5,9 +5,9 @@ package com.pulumi.awsnative.inspectorv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class FilterPortRangeFilterArgs extends com.pulumi.resources.Resour
     public static final FilterPortRangeFilterArgs Empty = new FilterPortRangeFilterArgs();
 
     @Import(name="beginInclusive")
-      private final @Nullable Output<Integer> beginInclusive;
+    private @Nullable Output<Integer> beginInclusive;
 
-    public Output<Integer> beginInclusive() {
-        return this.beginInclusive == null ? Codegen.empty() : this.beginInclusive;
+    public Optional<Output<Integer>> beginInclusive() {
+        return Optional.ofNullable(this.beginInclusive);
     }
 
     @Import(name="endInclusive")
-      private final @Nullable Output<Integer> endInclusive;
+    private @Nullable Output<Integer> endInclusive;
 
-    public Output<Integer> endInclusive() {
-        return this.endInclusive == null ? Codegen.empty() : this.endInclusive;
+    public Optional<Output<Integer>> endInclusive() {
+        return Optional.ofNullable(this.endInclusive);
     }
 
-    public FilterPortRangeFilterArgs(
-        @Nullable Output<Integer> beginInclusive,
-        @Nullable Output<Integer> endInclusive) {
-        this.beginInclusive = beginInclusive;
-        this.endInclusive = endInclusive;
-    }
+    private FilterPortRangeFilterArgs() {}
 
-    private FilterPortRangeFilterArgs() {
-        this.beginInclusive = Codegen.empty();
-        this.endInclusive = Codegen.empty();
+    private FilterPortRangeFilterArgs(FilterPortRangeFilterArgs $) {
+        this.beginInclusive = $.beginInclusive;
+        this.endInclusive = $.endInclusive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterPortRangeFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> beginInclusive;
-        private @Nullable Output<Integer> endInclusive;
+        private FilterPortRangeFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterPortRangeFilterArgs();
         }
 
         public Builder(FilterPortRangeFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.beginInclusive = defaults.beginInclusive;
-    	      this.endInclusive = defaults.endInclusive;
+            $ = new FilterPortRangeFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder beginInclusive(@Nullable Output<Integer> beginInclusive) {
-            this.beginInclusive = beginInclusive;
+            $.beginInclusive = beginInclusive;
             return this;
         }
-        public Builder beginInclusive(@Nullable Integer beginInclusive) {
-            this.beginInclusive = Codegen.ofNullable(beginInclusive);
-            return this;
+
+        public Builder beginInclusive(Integer beginInclusive) {
+            return beginInclusive(Output.of(beginInclusive));
         }
+
         public Builder endInclusive(@Nullable Output<Integer> endInclusive) {
-            this.endInclusive = endInclusive;
+            $.endInclusive = endInclusive;
             return this;
         }
-        public Builder endInclusive(@Nullable Integer endInclusive) {
-            this.endInclusive = Codegen.ofNullable(endInclusive);
-            return this;
-        }        public FilterPortRangeFilterArgs build() {
-            return new FilterPortRangeFilterArgs(beginInclusive, endInclusive);
+
+        public Builder endInclusive(Integer endInclusive) {
+            return endInclusive(Output.of(endInclusive));
+        }
+
+        public FilterPortRangeFilterArgs build() {
+            return $;
         }
     }
+
 }

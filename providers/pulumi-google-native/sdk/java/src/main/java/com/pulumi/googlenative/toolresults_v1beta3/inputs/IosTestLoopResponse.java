@@ -21,45 +21,45 @@ public final class IosTestLoopResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bundleId", required=true)
-      private final String bundleId;
+    private String bundleId;
 
     public String bundleId() {
         return this.bundleId;
     }
 
-    public IosTestLoopResponse(String bundleId) {
-        this.bundleId = Objects.requireNonNull(bundleId, "expected parameter 'bundleId' to be non-null");
-    }
+    private IosTestLoopResponse() {}
 
-    private IosTestLoopResponse() {
-        this.bundleId = null;
+    private IosTestLoopResponse(IosTestLoopResponse $) {
+        this.bundleId = $.bundleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosTestLoopResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bundleId;
+        private IosTestLoopResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosTestLoopResponse();
         }
 
         public Builder(IosTestLoopResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundleId = defaults.bundleId;
+            $ = new IosTestLoopResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bundleId(String bundleId) {
-            this.bundleId = Objects.requireNonNull(bundleId);
+            $.bundleId = bundleId;
             return this;
-        }        public IosTestLoopResponse build() {
-            return new IosTestLoopResponse(bundleId);
+        }
+
+        public IosTestLoopResponse build() {
+            $.bundleId = Objects.requireNonNull($.bundleId, "expected parameter 'bundleId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class GalleryImageIdentifierArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="offer", required=true)
-      private final Output<String> offer;
+    private Output<String> offer;
 
     public Output<String> offer() {
         return this.offer;
@@ -34,7 +33,7 @@ public final class GalleryImageIdentifierArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="publisher", required=true)
-      private final Output<String> publisher;
+    private Output<String> publisher;
 
     public Output<String> publisher() {
         return this.publisher;
@@ -45,76 +44,71 @@ public final class GalleryImageIdentifierArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<String> sku;
+    private Output<String> sku;
 
     public Output<String> sku() {
         return this.sku;
     }
 
-    public GalleryImageIdentifierArgs(
-        Output<String> offer,
-        Output<String> publisher,
-        Output<String> sku) {
-        this.offer = Objects.requireNonNull(offer, "expected parameter 'offer' to be non-null");
-        this.publisher = Objects.requireNonNull(publisher, "expected parameter 'publisher' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-    }
+    private GalleryImageIdentifierArgs() {}
 
-    private GalleryImageIdentifierArgs() {
-        this.offer = Codegen.empty();
-        this.publisher = Codegen.empty();
-        this.sku = Codegen.empty();
+    private GalleryImageIdentifierArgs(GalleryImageIdentifierArgs $) {
+        this.offer = $.offer;
+        this.publisher = $.publisher;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryImageIdentifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> offer;
-        private Output<String> publisher;
-        private Output<String> sku;
+        private GalleryImageIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryImageIdentifierArgs();
         }
 
         public Builder(GalleryImageIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offer = defaults.offer;
-    	      this.publisher = defaults.publisher;
-    	      this.sku = defaults.sku;
+            $ = new GalleryImageIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder offer(Output<String> offer) {
-            this.offer = Objects.requireNonNull(offer);
+            $.offer = offer;
             return this;
         }
+
         public Builder offer(String offer) {
-            this.offer = Output.of(Objects.requireNonNull(offer));
-            return this;
+            return offer(Output.of(offer));
         }
+
         public Builder publisher(Output<String> publisher) {
-            this.publisher = Objects.requireNonNull(publisher);
+            $.publisher = publisher;
             return this;
         }
+
         public Builder publisher(String publisher) {
-            this.publisher = Output.of(Objects.requireNonNull(publisher));
-            return this;
+            return publisher(Output.of(publisher));
         }
+
         public Builder sku(Output<String> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(String sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
-        }        public GalleryImageIdentifierArgs build() {
-            return new GalleryImageIdentifierArgs(offer, publisher, sku);
+            return sku(Output.of(sku));
+        }
+
+        public GalleryImageIdentifierArgs build() {
+            $.offer = Objects.requireNonNull($.offer, "expected parameter 'offer' to be non-null");
+            $.publisher = Objects.requireNonNull($.publisher, "expected parameter 'publisher' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

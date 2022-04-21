@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs(Output<String> url) {
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs() {}
 
-    private PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs() {
-        this.url = Codegen.empty();
+    private PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs(PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs $) {
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> url;
+        private PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs();
         }
 
         public Builder(PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.url = defaults.url;
+            $ = new PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs build() {
-            return new PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs(url);
+            return url(Output.of(url));
+        }
+
+        public PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

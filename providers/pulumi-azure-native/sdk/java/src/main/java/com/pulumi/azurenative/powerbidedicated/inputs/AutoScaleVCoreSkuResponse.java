@@ -24,10 +24,10 @@ public final class AutoScaleVCoreSkuResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class AutoScaleVCoreSkuResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -46,64 +46,57 @@ public final class AutoScaleVCoreSkuResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public AutoScaleVCoreSkuResponse(
-        @Nullable Integer capacity,
-        String name,
-        @Nullable String tier) {
-        this.capacity = capacity;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tier = tier;
-    }
+    private AutoScaleVCoreSkuResponse() {}
 
-    private AutoScaleVCoreSkuResponse() {
-        this.capacity = null;
-        this.name = null;
-        this.tier = null;
+    private AutoScaleVCoreSkuResponse(AutoScaleVCoreSkuResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScaleVCoreSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer capacity;
-        private String name;
-        private @Nullable String tier;
+        private AutoScaleVCoreSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScaleVCoreSkuResponse();
         }
 
         public Builder(AutoScaleVCoreSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new AutoScaleVCoreSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public AutoScaleVCoreSkuResponse build() {
-            return new AutoScaleVCoreSkuResponse(capacity, name, tier);
+        }
+
+        public AutoScaleVCoreSkuResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

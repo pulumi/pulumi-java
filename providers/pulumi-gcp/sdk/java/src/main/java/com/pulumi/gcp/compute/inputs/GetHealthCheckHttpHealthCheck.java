@@ -14,142 +14,129 @@ public final class GetHealthCheckHttpHealthCheck extends com.pulumi.resources.In
     public static final GetHealthCheckHttpHealthCheck Empty = new GetHealthCheckHttpHealthCheck();
 
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
     }
 
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
     @Import(name="portName", required=true)
-      private final String portName;
+    private String portName;
 
     public String portName() {
         return this.portName;
     }
 
     @Import(name="portSpecification", required=true)
-      private final String portSpecification;
+    private String portSpecification;
 
     public String portSpecification() {
         return this.portSpecification;
     }
 
     @Import(name="proxyHeader", required=true)
-      private final String proxyHeader;
+    private String proxyHeader;
 
     public String proxyHeader() {
         return this.proxyHeader;
     }
 
     @Import(name="requestPath", required=true)
-      private final String requestPath;
+    private String requestPath;
 
     public String requestPath() {
         return this.requestPath;
     }
 
     @Import(name="response", required=true)
-      private final String response;
+    private String response;
 
     public String response() {
         return this.response;
     }
 
-    public GetHealthCheckHttpHealthCheck(
-        String host,
-        Integer port,
-        String portName,
-        String portSpecification,
-        String proxyHeader,
-        String requestPath,
-        String response) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.portName = Objects.requireNonNull(portName, "expected parameter 'portName' to be non-null");
-        this.portSpecification = Objects.requireNonNull(portSpecification, "expected parameter 'portSpecification' to be non-null");
-        this.proxyHeader = Objects.requireNonNull(proxyHeader, "expected parameter 'proxyHeader' to be non-null");
-        this.requestPath = Objects.requireNonNull(requestPath, "expected parameter 'requestPath' to be non-null");
-        this.response = Objects.requireNonNull(response, "expected parameter 'response' to be non-null");
-    }
+    private GetHealthCheckHttpHealthCheck() {}
 
-    private GetHealthCheckHttpHealthCheck() {
-        this.host = null;
-        this.port = null;
-        this.portName = null;
-        this.portSpecification = null;
-        this.proxyHeader = null;
-        this.requestPath = null;
-        this.response = null;
+    private GetHealthCheckHttpHealthCheck(GetHealthCheckHttpHealthCheck $) {
+        this.host = $.host;
+        this.port = $.port;
+        this.portName = $.portName;
+        this.portSpecification = $.portSpecification;
+        this.proxyHeader = $.proxyHeader;
+        this.requestPath = $.requestPath;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHealthCheckHttpHealthCheck defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String host;
-        private Integer port;
-        private String portName;
-        private String portSpecification;
-        private String proxyHeader;
-        private String requestPath;
-        private String response;
+        private GetHealthCheckHttpHealthCheck $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHealthCheckHttpHealthCheck();
         }
 
         public Builder(GetHealthCheckHttpHealthCheck defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
-    	      this.portName = defaults.portName;
-    	      this.portSpecification = defaults.portSpecification;
-    	      this.proxyHeader = defaults.proxyHeader;
-    	      this.requestPath = defaults.requestPath;
-    	      this.response = defaults.response;
+            $ = new GetHealthCheckHttpHealthCheck(Objects.requireNonNull(defaults));
         }
 
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder portName(String portName) {
-            this.portName = Objects.requireNonNull(portName);
+            $.portName = portName;
             return this;
         }
+
         public Builder portSpecification(String portSpecification) {
-            this.portSpecification = Objects.requireNonNull(portSpecification);
+            $.portSpecification = portSpecification;
             return this;
         }
+
         public Builder proxyHeader(String proxyHeader) {
-            this.proxyHeader = Objects.requireNonNull(proxyHeader);
+            $.proxyHeader = proxyHeader;
             return this;
         }
+
         public Builder requestPath(String requestPath) {
-            this.requestPath = Objects.requireNonNull(requestPath);
+            $.requestPath = requestPath;
             return this;
         }
+
         public Builder response(String response) {
-            this.response = Objects.requireNonNull(response);
+            $.response = response;
             return this;
-        }        public GetHealthCheckHttpHealthCheck build() {
-            return new GetHealthCheckHttpHealthCheck(host, port, portName, portSpecification, proxyHeader, requestPath, response);
+        }
+
+        public GetHealthCheckHttpHealthCheck build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.portName = Objects.requireNonNull($.portName, "expected parameter 'portName' to be non-null");
+            $.portSpecification = Objects.requireNonNull($.portSpecification, "expected parameter 'portSpecification' to be non-null");
+            $.proxyHeader = Objects.requireNonNull($.proxyHeader, "expected parameter 'proxyHeader' to be non-null");
+            $.requestPath = Objects.requireNonNull($.requestPath, "expected parameter 'requestPath' to be non-null");
+            $.response = Objects.requireNonNull($.response, "expected parameter 'response' to be non-null");
+            return $;
         }
     }
+
 }

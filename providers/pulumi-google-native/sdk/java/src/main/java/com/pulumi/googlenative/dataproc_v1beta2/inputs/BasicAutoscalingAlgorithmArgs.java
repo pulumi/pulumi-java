@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.BasicYarnAutoscalingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BasicAutoscalingAlgorithmArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="cooldownPeriod")
-      private final @Nullable Output<String> cooldownPeriod;
+    private @Nullable Output<String> cooldownPeriod;
 
-    public Output<String> cooldownPeriod() {
-        return this.cooldownPeriod == null ? Codegen.empty() : this.cooldownPeriod;
+    public Optional<Output<String>> cooldownPeriod() {
+        return Optional.ofNullable(this.cooldownPeriod);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class BasicAutoscalingAlgorithmArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="yarnConfig")
-      private final @Nullable Output<BasicYarnAutoscalingConfigArgs> yarnConfig;
+    private @Nullable Output<BasicYarnAutoscalingConfigArgs> yarnConfig;
 
-    public Output<BasicYarnAutoscalingConfigArgs> yarnConfig() {
-        return this.yarnConfig == null ? Codegen.empty() : this.yarnConfig;
+    public Optional<Output<BasicYarnAutoscalingConfigArgs>> yarnConfig() {
+        return Optional.ofNullable(this.yarnConfig);
     }
 
-    public BasicAutoscalingAlgorithmArgs(
-        @Nullable Output<String> cooldownPeriod,
-        @Nullable Output<BasicYarnAutoscalingConfigArgs> yarnConfig) {
-        this.cooldownPeriod = cooldownPeriod;
-        this.yarnConfig = yarnConfig;
-    }
+    private BasicAutoscalingAlgorithmArgs() {}
 
-    private BasicAutoscalingAlgorithmArgs() {
-        this.cooldownPeriod = Codegen.empty();
-        this.yarnConfig = Codegen.empty();
+    private BasicAutoscalingAlgorithmArgs(BasicAutoscalingAlgorithmArgs $) {
+        this.cooldownPeriod = $.cooldownPeriod;
+        this.yarnConfig = $.yarnConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicAutoscalingAlgorithmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cooldownPeriod;
-        private @Nullable Output<BasicYarnAutoscalingConfigArgs> yarnConfig;
+        private BasicAutoscalingAlgorithmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicAutoscalingAlgorithmArgs();
         }
 
         public Builder(BasicAutoscalingAlgorithmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cooldownPeriod = defaults.cooldownPeriod;
-    	      this.yarnConfig = defaults.yarnConfig;
+            $ = new BasicAutoscalingAlgorithmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cooldownPeriod(@Nullable Output<String> cooldownPeriod) {
-            this.cooldownPeriod = cooldownPeriod;
+            $.cooldownPeriod = cooldownPeriod;
             return this;
         }
-        public Builder cooldownPeriod(@Nullable String cooldownPeriod) {
-            this.cooldownPeriod = Codegen.ofNullable(cooldownPeriod);
-            return this;
+
+        public Builder cooldownPeriod(String cooldownPeriod) {
+            return cooldownPeriod(Output.of(cooldownPeriod));
         }
+
         public Builder yarnConfig(@Nullable Output<BasicYarnAutoscalingConfigArgs> yarnConfig) {
-            this.yarnConfig = yarnConfig;
+            $.yarnConfig = yarnConfig;
             return this;
         }
-        public Builder yarnConfig(@Nullable BasicYarnAutoscalingConfigArgs yarnConfig) {
-            this.yarnConfig = Codegen.ofNullable(yarnConfig);
-            return this;
-        }        public BasicAutoscalingAlgorithmArgs build() {
-            return new BasicAutoscalingAlgorithmArgs(cooldownPeriod, yarnConfig);
+
+        public Builder yarnConfig(BasicYarnAutoscalingConfigArgs yarnConfig) {
+            return yarnConfig(Output.of(yarnConfig));
+        }
+
+        public BasicAutoscalingAlgorithmArgs build() {
+            return $;
         }
     }
+
 }

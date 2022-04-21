@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayF
      * 
      */
     @Import(name="nanos")
-      private final @Nullable Output<Integer> nanos;
+    private @Nullable Output<Integer> nanos;
 
-    public Output<Integer> nanos() {
-        return this.nanos == null ? Codegen.empty() : this.nanos;
+    public Optional<Output<Integer>> nanos() {
+        return Optional.ofNullable(this.nanos);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayF
      * 
      */
     @Import(name="seconds")
-      private final @Nullable Output<String> seconds;
+    private @Nullable Output<String> seconds;
 
-    public Output<String> seconds() {
-        return this.seconds == null ? Codegen.empty() : this.seconds;
+    public Optional<Output<String>> seconds() {
+        return Optional.ofNullable(this.seconds);
     }
 
-    public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs(
-        @Nullable Output<Integer> nanos,
-        @Nullable Output<String> seconds) {
-        this.nanos = nanos;
-        this.seconds = seconds;
-    }
+    private URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs() {}
 
-    private URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs() {
-        this.nanos = Codegen.empty();
-        this.seconds = Codegen.empty();
+    private URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs(URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs $) {
+        this.nanos = $.nanos;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> nanos;
-        private @Nullable Output<String> seconds;
+        private URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs();
         }
 
         public Builder(URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nanos = defaults.nanos;
-    	      this.seconds = defaults.seconds;
+            $ = new URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nanos(@Nullable Output<Integer> nanos) {
-            this.nanos = nanos;
+            $.nanos = nanos;
             return this;
         }
-        public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Codegen.ofNullable(nanos);
-            return this;
+
+        public Builder nanos(Integer nanos) {
+            return nanos(Output.of(nanos));
         }
+
         public Builder seconds(@Nullable Output<String> seconds) {
-            this.seconds = seconds;
+            $.seconds = seconds;
             return this;
         }
-        public Builder seconds(@Nullable String seconds) {
-            this.seconds = Codegen.ofNullable(seconds);
-            return this;
-        }        public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs build() {
-            return new URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs(nanos, seconds);
+
+        public Builder seconds(String seconds) {
+            return seconds(Output.of(seconds));
+        }
+
+        public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs build() {
+            return $;
         }
     }
+
 }

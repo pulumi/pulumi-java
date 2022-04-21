@@ -23,7 +23,7 @@ public final class CompensationInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="annualizedBaseCompensationRange", required=true)
-      private final CompensationRangeResponse annualizedBaseCompensationRange;
+    private CompensationRangeResponse annualizedBaseCompensationRange;
 
     public CompensationRangeResponse annualizedBaseCompensationRange() {
         return this.annualizedBaseCompensationRange;
@@ -34,7 +34,7 @@ public final class CompensationInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="annualizedTotalCompensationRange", required=true)
-      private final CompensationRangeResponse annualizedTotalCompensationRange;
+    private CompensationRangeResponse annualizedTotalCompensationRange;
 
     public CompensationRangeResponse annualizedTotalCompensationRange() {
         return this.annualizedTotalCompensationRange;
@@ -45,67 +45,63 @@ public final class CompensationInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="entries", required=true)
-      private final List<CompensationEntryResponse> entries;
+    private List<CompensationEntryResponse> entries;
 
     public List<CompensationEntryResponse> entries() {
         return this.entries;
     }
 
-    public CompensationInfoResponse(
-        CompensationRangeResponse annualizedBaseCompensationRange,
-        CompensationRangeResponse annualizedTotalCompensationRange,
-        List<CompensationEntryResponse> entries) {
-        this.annualizedBaseCompensationRange = Objects.requireNonNull(annualizedBaseCompensationRange, "expected parameter 'annualizedBaseCompensationRange' to be non-null");
-        this.annualizedTotalCompensationRange = Objects.requireNonNull(annualizedTotalCompensationRange, "expected parameter 'annualizedTotalCompensationRange' to be non-null");
-        this.entries = Objects.requireNonNull(entries, "expected parameter 'entries' to be non-null");
-    }
+    private CompensationInfoResponse() {}
 
-    private CompensationInfoResponse() {
-        this.annualizedBaseCompensationRange = null;
-        this.annualizedTotalCompensationRange = null;
-        this.entries = List.of();
+    private CompensationInfoResponse(CompensationInfoResponse $) {
+        this.annualizedBaseCompensationRange = $.annualizedBaseCompensationRange;
+        this.annualizedTotalCompensationRange = $.annualizedTotalCompensationRange;
+        this.entries = $.entries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompensationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CompensationRangeResponse annualizedBaseCompensationRange;
-        private CompensationRangeResponse annualizedTotalCompensationRange;
-        private List<CompensationEntryResponse> entries;
+        private CompensationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompensationInfoResponse();
         }
 
         public Builder(CompensationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annualizedBaseCompensationRange = defaults.annualizedBaseCompensationRange;
-    	      this.annualizedTotalCompensationRange = defaults.annualizedTotalCompensationRange;
-    	      this.entries = defaults.entries;
+            $ = new CompensationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annualizedBaseCompensationRange(CompensationRangeResponse annualizedBaseCompensationRange) {
-            this.annualizedBaseCompensationRange = Objects.requireNonNull(annualizedBaseCompensationRange);
+            $.annualizedBaseCompensationRange = annualizedBaseCompensationRange;
             return this;
         }
+
         public Builder annualizedTotalCompensationRange(CompensationRangeResponse annualizedTotalCompensationRange) {
-            this.annualizedTotalCompensationRange = Objects.requireNonNull(annualizedTotalCompensationRange);
+            $.annualizedTotalCompensationRange = annualizedTotalCompensationRange;
             return this;
         }
+
         public Builder entries(List<CompensationEntryResponse> entries) {
-            this.entries = Objects.requireNonNull(entries);
+            $.entries = entries;
             return this;
         }
+
         public Builder entries(CompensationEntryResponse... entries) {
             return entries(List.of(entries));
-        }        public CompensationInfoResponse build() {
-            return new CompensationInfoResponse(annualizedBaseCompensationRange, annualizedTotalCompensationRange, entries);
+        }
+
+        public CompensationInfoResponse build() {
+            $.annualizedBaseCompensationRange = Objects.requireNonNull($.annualizedBaseCompensationRange, "expected parameter 'annualizedBaseCompensationRange' to be non-null");
+            $.annualizedTotalCompensationRange = Objects.requireNonNull($.annualizedTotalCompensationRange, "expected parameter 'annualizedTotalCompensationRange' to be non-null");
+            $.entries = Objects.requireNonNull($.entries, "expected parameter 'entries' to be non-null");
+            return $;
         }
     }
+
 }

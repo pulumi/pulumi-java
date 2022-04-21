@@ -22,10 +22,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse exte
      * 
      */
     @Import(name="errorMessage")
-      private final @Nullable String errorMessage;
+    private @Nullable String errorMessage;
 
     public Optional<String> errorMessage() {
-        return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
+        return Optional.ofNullable(this.errorMessage);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse exte
      * 
      */
     @Import(name="events")
-      private final @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
+    private @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
 
-    public List<SyncMigrationDatabaseErrorEventResponse> events() {
-        return this.events == null ? List.of() : this.events;
+    public Optional<List<SyncMigrationDatabaseErrorEventResponse>> events() {
+        return Optional.ofNullable(this.events);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse exte
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -56,76 +56,68 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse exte
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
     }
 
-    public MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse(
-        @Nullable String errorMessage,
-        @Nullable List<SyncMigrationDatabaseErrorEventResponse> events,
-        String id,
-        String resultType) {
-        this.errorMessage = errorMessage;
-        this.events = events;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-    }
+    private MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse() {}
 
-    private MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse() {
-        this.errorMessage = null;
-        this.events = List.of();
-        this.id = null;
-        this.resultType = null;
+    private MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse(MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse $) {
+        this.errorMessage = $.errorMessage;
+        this.events = $.events;
+        this.id = $.id;
+        this.resultType = $.resultType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String errorMessage;
-        private @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
-        private String id;
-        private String resultType;
+        private MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse();
         }
 
         public Builder(MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.events = defaults.events;
-    	      this.id = defaults.id;
-    	      this.resultType = defaults.resultType;
+            $ = new MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorMessage(@Nullable String errorMessage) {
-            this.errorMessage = errorMessage;
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder events(@Nullable List<SyncMigrationDatabaseErrorEventResponse> events) {
-            this.events = events;
+            $.events = events;
             return this;
         }
+
         public Builder events(SyncMigrationDatabaseErrorEventResponse... events) {
             return events(List.of(events));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
-        }        public MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse build() {
-            return new MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse(errorMessage, events, id, resultType);
+        }
+
+        public MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            return $;
         }
     }
+
 }

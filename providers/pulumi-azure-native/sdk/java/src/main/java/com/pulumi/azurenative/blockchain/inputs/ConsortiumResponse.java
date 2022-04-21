@@ -23,10 +23,10 @@ public final class ConsortiumResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ConsortiumResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
-    public ConsortiumResponse(
-        @Nullable String name,
-        @Nullable String protocol) {
-        this.name = name;
-        this.protocol = protocol;
-    }
+    private ConsortiumResponse() {}
 
-    private ConsortiumResponse() {
-        this.name = null;
-        this.protocol = null;
+    private ConsortiumResponse(ConsortiumResponse $) {
+        this.name = $.name;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsortiumResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String protocol;
+        private ConsortiumResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsortiumResponse();
         }
 
         public Builder(ConsortiumResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.protocol = defaults.protocol;
+            $ = new ConsortiumResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
-        }        public ConsortiumResponse build() {
-            return new ConsortiumResponse(name, protocol);
+        }
+
+        public ConsortiumResponse build() {
+            return $;
         }
     }
+
 }

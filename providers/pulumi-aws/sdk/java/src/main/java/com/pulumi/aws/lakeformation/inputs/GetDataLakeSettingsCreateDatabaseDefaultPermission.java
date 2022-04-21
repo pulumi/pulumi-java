@@ -18,7 +18,7 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission extends co
      * 
      */
     @Import(name="permissions", required=true)
-      private final List<String> permissions;
+    private List<String> permissions;
 
     public List<String> permissions() {
         return this.permissions;
@@ -29,58 +29,56 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission extends co
      * 
      */
     @Import(name="principal", required=true)
-      private final String principal;
+    private String principal;
 
     public String principal() {
         return this.principal;
     }
 
-    public GetDataLakeSettingsCreateDatabaseDefaultPermission(
-        List<String> permissions,
-        String principal) {
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-    }
+    private GetDataLakeSettingsCreateDatabaseDefaultPermission() {}
 
-    private GetDataLakeSettingsCreateDatabaseDefaultPermission() {
-        this.permissions = List.of();
-        this.principal = null;
+    private GetDataLakeSettingsCreateDatabaseDefaultPermission(GetDataLakeSettingsCreateDatabaseDefaultPermission $) {
+        this.permissions = $.permissions;
+        this.principal = $.principal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataLakeSettingsCreateDatabaseDefaultPermission defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> permissions;
-        private String principal;
+        private GetDataLakeSettingsCreateDatabaseDefaultPermission $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataLakeSettingsCreateDatabaseDefaultPermission();
         }
 
         public Builder(GetDataLakeSettingsCreateDatabaseDefaultPermission defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.permissions = defaults.permissions;
-    	      this.principal = defaults.principal;
+            $ = new GetDataLakeSettingsCreateDatabaseDefaultPermission(Objects.requireNonNull(defaults));
         }
 
         public Builder permissions(List<String> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder principal(String principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
-        }        public GetDataLakeSettingsCreateDatabaseDefaultPermission build() {
-            return new GetDataLakeSettingsCreateDatabaseDefaultPermission(permissions, principal);
+        }
+
+        public GetDataLakeSettingsCreateDatabaseDefaultPermission build() {
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            return $;
         }
     }
+
 }

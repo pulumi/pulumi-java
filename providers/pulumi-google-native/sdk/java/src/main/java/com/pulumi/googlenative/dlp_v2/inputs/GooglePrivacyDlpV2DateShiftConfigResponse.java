@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends com.pulumi.
      * 
      */
     @Import(name="context", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse context;
+    private GooglePrivacyDlpV2FieldIdResponse context;
 
     public GooglePrivacyDlpV2FieldIdResponse context() {
         return this.context;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends com.pulumi.
      * 
      */
     @Import(name="cryptoKey", required=true)
-      private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
+    private GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
     public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends com.pulumi.
      * 
      */
     @Import(name="lowerBoundDays", required=true)
-      private final Integer lowerBoundDays;
+    private Integer lowerBoundDays;
 
     public Integer lowerBoundDays() {
         return this.lowerBoundDays;
@@ -56,73 +56,66 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends com.pulumi.
      * 
      */
     @Import(name="upperBoundDays", required=true)
-      private final Integer upperBoundDays;
+    private Integer upperBoundDays;
 
     public Integer upperBoundDays() {
         return this.upperBoundDays;
     }
 
-    public GooglePrivacyDlpV2DateShiftConfigResponse(
-        GooglePrivacyDlpV2FieldIdResponse context,
-        GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        Integer lowerBoundDays,
-        Integer upperBoundDays) {
-        this.context = Objects.requireNonNull(context, "expected parameter 'context' to be non-null");
-        this.cryptoKey = Objects.requireNonNull(cryptoKey, "expected parameter 'cryptoKey' to be non-null");
-        this.lowerBoundDays = Objects.requireNonNull(lowerBoundDays, "expected parameter 'lowerBoundDays' to be non-null");
-        this.upperBoundDays = Objects.requireNonNull(upperBoundDays, "expected parameter 'upperBoundDays' to be non-null");
-    }
+    private GooglePrivacyDlpV2DateShiftConfigResponse() {}
 
-    private GooglePrivacyDlpV2DateShiftConfigResponse() {
-        this.context = null;
-        this.cryptoKey = null;
-        this.lowerBoundDays = null;
-        this.upperBoundDays = null;
+    private GooglePrivacyDlpV2DateShiftConfigResponse(GooglePrivacyDlpV2DateShiftConfigResponse $) {
+        this.context = $.context;
+        this.cryptoKey = $.cryptoKey;
+        this.lowerBoundDays = $.lowerBoundDays;
+        this.upperBoundDays = $.upperBoundDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DateShiftConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2FieldIdResponse context;
-        private GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
-        private Integer lowerBoundDays;
-        private Integer upperBoundDays;
+        private GooglePrivacyDlpV2DateShiftConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DateShiftConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2DateShiftConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.cryptoKey = defaults.cryptoKey;
-    	      this.lowerBoundDays = defaults.lowerBoundDays;
-    	      this.upperBoundDays = defaults.upperBoundDays;
+            $ = new GooglePrivacyDlpV2DateShiftConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder context(GooglePrivacyDlpV2FieldIdResponse context) {
-            this.context = Objects.requireNonNull(context);
+            $.context = context;
             return this;
         }
+
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
-            this.cryptoKey = Objects.requireNonNull(cryptoKey);
+            $.cryptoKey = cryptoKey;
             return this;
         }
+
         public Builder lowerBoundDays(Integer lowerBoundDays) {
-            this.lowerBoundDays = Objects.requireNonNull(lowerBoundDays);
+            $.lowerBoundDays = lowerBoundDays;
             return this;
         }
+
         public Builder upperBoundDays(Integer upperBoundDays) {
-            this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
+            $.upperBoundDays = upperBoundDays;
             return this;
-        }        public GooglePrivacyDlpV2DateShiftConfigResponse build() {
-            return new GooglePrivacyDlpV2DateShiftConfigResponse(context, cryptoKey, lowerBoundDays, upperBoundDays);
+        }
+
+        public GooglePrivacyDlpV2DateShiftConfigResponse build() {
+            $.context = Objects.requireNonNull($.context, "expected parameter 'context' to be non-null");
+            $.cryptoKey = Objects.requireNonNull($.cryptoKey, "expected parameter 'cryptoKey' to be non-null");
+            $.lowerBoundDays = Objects.requireNonNull($.lowerBoundDays, "expected parameter 'lowerBoundDays' to be non-null");
+            $.upperBoundDays = Objects.requireNonNull($.upperBoundDays, "expected parameter 'upperBoundDays' to be non-null");
+            return $;
         }
     }
+
 }

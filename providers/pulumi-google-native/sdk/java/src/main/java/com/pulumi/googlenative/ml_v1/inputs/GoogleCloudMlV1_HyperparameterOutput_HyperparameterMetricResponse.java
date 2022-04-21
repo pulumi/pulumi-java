@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
      * 
      */
     @Import(name="objectiveValue", required=true)
-      private final Double objectiveValue;
+    private Double objectiveValue;
 
     public Double objectiveValue() {
         return this.objectiveValue;
@@ -33,55 +33,52 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
      * 
      */
     @Import(name="trainingStep", required=true)
-      private final String trainingStep;
+    private String trainingStep;
 
     public String trainingStep() {
         return this.trainingStep;
     }
 
-    public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(
-        Double objectiveValue,
-        String trainingStep) {
-        this.objectiveValue = Objects.requireNonNull(objectiveValue, "expected parameter 'objectiveValue' to be non-null");
-        this.trainingStep = Objects.requireNonNull(trainingStep, "expected parameter 'trainingStep' to be non-null");
-    }
+    private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse() {}
 
-    private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse() {
-        this.objectiveValue = null;
-        this.trainingStep = null;
+    private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse $) {
+        this.objectiveValue = $.objectiveValue;
+        this.trainingStep = $.trainingStep;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double objectiveValue;
-        private String trainingStep;
+        private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse();
         }
 
         public Builder(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectiveValue = defaults.objectiveValue;
-    	      this.trainingStep = defaults.trainingStep;
+            $ = new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder objectiveValue(Double objectiveValue) {
-            this.objectiveValue = Objects.requireNonNull(objectiveValue);
+            $.objectiveValue = objectiveValue;
             return this;
         }
+
         public Builder trainingStep(String trainingStep) {
-            this.trainingStep = Objects.requireNonNull(trainingStep);
+            $.trainingStep = trainingStep;
             return this;
-        }        public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse build() {
-            return new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(objectiveValue, trainingStep);
+        }
+
+        public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse build() {
+            $.objectiveValue = Objects.requireNonNull($.objectiveValue, "expected parameter 'objectiveValue' to be non-null");
+            $.trainingStep = Objects.requireNonNull($.trainingStep, "expected parameter 'trainingStep' to be non-null");
+            return $;
         }
     }
+
 }

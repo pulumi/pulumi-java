@@ -9,10 +9,10 @@ import com.pulumi.azurenative.connectedvmwarevsphere.inputs.NicIPSettingsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deviceKey")
-      private final @Nullable Output<Integer> deviceKey;
+    private @Nullable Output<Integer> deviceKey;
 
-    public Output<Integer> deviceKey() {
-        return this.deviceKey == null ? Codegen.empty() : this.deviceKey;
+    public Optional<Output<Integer>> deviceKey() {
+        return Optional.ofNullable(this.deviceKey);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipSettings")
-      private final @Nullable Output<NicIPSettingsArgs> ipSettings;
+    private @Nullable Output<NicIPSettingsArgs> ipSettings;
 
-    public Output<NicIPSettingsArgs> ipSettings() {
-        return this.ipSettings == null ? Codegen.empty() : this.ipSettings;
+    public Optional<Output<NicIPSettingsArgs>> ipSettings() {
+        return Optional.ofNullable(this.ipSettings);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="networkId")
-      private final @Nullable Output<String> networkId;
+    private @Nullable Output<String> networkId;
 
-    public Output<String> networkId() {
-        return this.networkId == null ? Codegen.empty() : this.networkId;
+    public Optional<Output<String>> networkId() {
+        return Optional.ofNullable(this.networkId);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="nicType")
-      private final @Nullable Output<Either<String,NICType>> nicType;
+    private @Nullable Output<Either<String,NICType>> nicType;
 
-    public Output<Either<String,NICType>> nicType() {
-        return this.nicType == null ? Codegen.empty() : this.nicType;
+    public Optional<Output<Either<String,NICType>>> nicType() {
+        return Optional.ofNullable(this.nicType);
     }
 
     /**
@@ -84,115 +84,98 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="powerOnBoot")
-      private final @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot;
+    private @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot;
 
-    public Output<Either<String,PowerOnBootOption>> powerOnBoot() {
-        return this.powerOnBoot == null ? Codegen.empty() : this.powerOnBoot;
+    public Optional<Output<Either<String,PowerOnBootOption>>> powerOnBoot() {
+        return Optional.ofNullable(this.powerOnBoot);
     }
 
-    public NetworkInterfaceArgs(
-        @Nullable Output<Integer> deviceKey,
-        @Nullable Output<NicIPSettingsArgs> ipSettings,
-        @Nullable Output<String> name,
-        @Nullable Output<String> networkId,
-        @Nullable Output<Either<String,NICType>> nicType,
-        @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot) {
-        this.deviceKey = deviceKey;
-        this.ipSettings = ipSettings;
-        this.name = name;
-        this.networkId = networkId;
-        this.nicType = nicType;
-        this.powerOnBoot = powerOnBoot;
-    }
+    private NetworkInterfaceArgs() {}
 
-    private NetworkInterfaceArgs() {
-        this.deviceKey = Codegen.empty();
-        this.ipSettings = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkId = Codegen.empty();
-        this.nicType = Codegen.empty();
-        this.powerOnBoot = Codegen.empty();
+    private NetworkInterfaceArgs(NetworkInterfaceArgs $) {
+        this.deviceKey = $.deviceKey;
+        this.ipSettings = $.ipSettings;
+        this.name = $.name;
+        this.networkId = $.networkId;
+        this.nicType = $.nicType;
+        this.powerOnBoot = $.powerOnBoot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> deviceKey;
-        private @Nullable Output<NicIPSettingsArgs> ipSettings;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> networkId;
-        private @Nullable Output<Either<String,NICType>> nicType;
-        private @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot;
+        private NetworkInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceArgs();
         }
 
         public Builder(NetworkInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceKey = defaults.deviceKey;
-    	      this.ipSettings = defaults.ipSettings;
-    	      this.name = defaults.name;
-    	      this.networkId = defaults.networkId;
-    	      this.nicType = defaults.nicType;
-    	      this.powerOnBoot = defaults.powerOnBoot;
+            $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceKey(@Nullable Output<Integer> deviceKey) {
-            this.deviceKey = deviceKey;
+            $.deviceKey = deviceKey;
             return this;
         }
-        public Builder deviceKey(@Nullable Integer deviceKey) {
-            this.deviceKey = Codegen.ofNullable(deviceKey);
-            return this;
+
+        public Builder deviceKey(Integer deviceKey) {
+            return deviceKey(Output.of(deviceKey));
         }
+
         public Builder ipSettings(@Nullable Output<NicIPSettingsArgs> ipSettings) {
-            this.ipSettings = ipSettings;
+            $.ipSettings = ipSettings;
             return this;
         }
-        public Builder ipSettings(@Nullable NicIPSettingsArgs ipSettings) {
-            this.ipSettings = Codegen.ofNullable(ipSettings);
-            return this;
+
+        public Builder ipSettings(NicIPSettingsArgs ipSettings) {
+            return ipSettings(Output.of(ipSettings));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkId(@Nullable Output<String> networkId) {
-            this.networkId = networkId;
+            $.networkId = networkId;
             return this;
         }
-        public Builder networkId(@Nullable String networkId) {
-            this.networkId = Codegen.ofNullable(networkId);
-            return this;
+
+        public Builder networkId(String networkId) {
+            return networkId(Output.of(networkId));
         }
+
         public Builder nicType(@Nullable Output<Either<String,NICType>> nicType) {
-            this.nicType = nicType;
+            $.nicType = nicType;
             return this;
         }
-        public Builder nicType(@Nullable Either<String,NICType> nicType) {
-            this.nicType = Codegen.ofNullable(nicType);
-            return this;
+
+        public Builder nicType(Either<String,NICType> nicType) {
+            return nicType(Output.of(nicType));
         }
+
         public Builder powerOnBoot(@Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot) {
-            this.powerOnBoot = powerOnBoot;
+            $.powerOnBoot = powerOnBoot;
             return this;
         }
-        public Builder powerOnBoot(@Nullable Either<String,PowerOnBootOption> powerOnBoot) {
-            this.powerOnBoot = Codegen.ofNullable(powerOnBoot);
-            return this;
-        }        public NetworkInterfaceArgs build() {
-            return new NetworkInterfaceArgs(deviceKey, ipSettings, name, networkId, nicType, powerOnBoot);
+
+        public Builder powerOnBoot(Either<String,PowerOnBootOption> powerOnBoot) {
+            return powerOnBoot(Output.of(powerOnBoot));
+        }
+
+        public NetworkInterfaceArgs build() {
+            return $;
         }
     }
+
 }

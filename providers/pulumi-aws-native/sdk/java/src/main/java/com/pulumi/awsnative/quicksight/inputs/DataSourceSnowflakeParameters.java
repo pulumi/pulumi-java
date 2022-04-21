@@ -21,7 +21,7 @@ public final class DataSourceSnowflakeParameters extends com.pulumi.resources.In
      * 
      */
     @Import(name="database", required=true)
-      private final String database;
+    private String database;
 
     public String database() {
         return this.database;
@@ -32,7 +32,7 @@ public final class DataSourceSnowflakeParameters extends com.pulumi.resources.In
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -43,64 +43,59 @@ public final class DataSourceSnowflakeParameters extends com.pulumi.resources.In
      * 
      */
     @Import(name="warehouse", required=true)
-      private final String warehouse;
+    private String warehouse;
 
     public String warehouse() {
         return this.warehouse;
     }
 
-    public DataSourceSnowflakeParameters(
-        String database,
-        String host,
-        String warehouse) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.warehouse = Objects.requireNonNull(warehouse, "expected parameter 'warehouse' to be non-null");
-    }
+    private DataSourceSnowflakeParameters() {}
 
-    private DataSourceSnowflakeParameters() {
-        this.database = null;
-        this.host = null;
-        this.warehouse = null;
+    private DataSourceSnowflakeParameters(DataSourceSnowflakeParameters $) {
+        this.database = $.database;
+        this.host = $.host;
+        this.warehouse = $.warehouse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSnowflakeParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String database;
-        private String host;
-        private String warehouse;
+        private DataSourceSnowflakeParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSnowflakeParameters();
         }
 
         public Builder(DataSourceSnowflakeParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.host = defaults.host;
-    	      this.warehouse = defaults.warehouse;
+            $ = new DataSourceSnowflakeParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder database(String database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder warehouse(String warehouse) {
-            this.warehouse = Objects.requireNonNull(warehouse);
+            $.warehouse = warehouse;
             return this;
-        }        public DataSourceSnowflakeParameters build() {
-            return new DataSourceSnowflakeParameters(database, host, warehouse);
+        }
+
+        public DataSourceSnowflakeParameters build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.warehouse = Objects.requireNonNull($.warehouse, "expected parameter 'warehouse' to be non-null");
+            return $;
         }
     }
+
 }

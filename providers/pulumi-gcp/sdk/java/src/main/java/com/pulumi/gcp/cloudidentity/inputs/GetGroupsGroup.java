@@ -16,49 +16,49 @@ public final class GetGroupsGroup extends com.pulumi.resources.InvokeArgs {
     public static final GetGroupsGroup Empty = new GetGroupsGroup();
 
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
     }
 
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
     }
 
     @Import(name="groupKeys", required=true)
-      private final List<GetGroupsGroupGroupKey> groupKeys;
+    private List<GetGroupsGroupGroupKey> groupKeys;
 
     public List<GetGroupsGroupGroupKey> groupKeys() {
         return this.groupKeys;
     }
 
     @Import(name="initialGroupConfig", required=true)
-      private final String initialGroupConfig;
+    private String initialGroupConfig;
 
     public String initialGroupConfig() {
         return this.initialGroupConfig;
     }
 
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -69,128 +69,112 @@ public final class GetGroupsGroup extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final String parent;
+    private String parent;
 
     public String parent() {
         return this.parent;
     }
 
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public GetGroupsGroup(
-        String createTime,
-        String description,
-        String displayName,
-        List<GetGroupsGroupGroupKey> groupKeys,
-        String initialGroupConfig,
-        Map<String,String> labels,
-        String name,
-        String parent,
-        String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.groupKeys = Objects.requireNonNull(groupKeys, "expected parameter 'groupKeys' to be non-null");
-        this.initialGroupConfig = Objects.requireNonNull(initialGroupConfig, "expected parameter 'initialGroupConfig' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private GetGroupsGroup() {}
 
-    private GetGroupsGroup() {
-        this.createTime = null;
-        this.description = null;
-        this.displayName = null;
-        this.groupKeys = List.of();
-        this.initialGroupConfig = null;
-        this.labels = Map.of();
-        this.name = null;
-        this.parent = null;
-        this.updateTime = null;
+    private GetGroupsGroup(GetGroupsGroup $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.groupKeys = $.groupKeys;
+        this.initialGroupConfig = $.initialGroupConfig;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupsGroup defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String description;
-        private String displayName;
-        private List<GetGroupsGroupGroupKey> groupKeys;
-        private String initialGroupConfig;
-        private Map<String,String> labels;
-        private String name;
-        private String parent;
-        private String updateTime;
+        private GetGroupsGroup $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupsGroup();
         }
 
         public Builder(GetGroupsGroup defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.groupKeys = defaults.groupKeys;
-    	      this.initialGroupConfig = defaults.initialGroupConfig;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.updateTime = defaults.updateTime;
+            $ = new GetGroupsGroup(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder groupKeys(List<GetGroupsGroupGroupKey> groupKeys) {
-            this.groupKeys = Objects.requireNonNull(groupKeys);
+            $.groupKeys = groupKeys;
             return this;
         }
+
         public Builder groupKeys(GetGroupsGroupGroupKey... groupKeys) {
             return groupKeys(List.of(groupKeys));
         }
+
         public Builder initialGroupConfig(String initialGroupConfig) {
-            this.initialGroupConfig = Objects.requireNonNull(initialGroupConfig);
+            $.initialGroupConfig = initialGroupConfig;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public GetGroupsGroup build() {
-            return new GetGroupsGroup(createTime, description, displayName, groupKeys, initialGroupConfig, labels, name, parent, updateTime);
+        }
+
+        public GetGroupsGroup build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.groupKeys = Objects.requireNonNull($.groupKeys, "expected parameter 'groupKeys' to be non-null");
+            $.initialGroupConfig = Objects.requireNonNull($.initialGroupConfig, "expected parameter 'initialGroupConfig' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

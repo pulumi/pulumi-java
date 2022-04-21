@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
      * 
      */
     @Import(name="noSmalltalk", required=true)
-      private final Boolean noSmalltalk;
+    private Boolean noSmalltalk;
 
     public Boolean noSmalltalk() {
         return this.noSmalltalk;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
      * 
      */
     @Import(name="onlyEndUser", required=true)
-      private final Boolean onlyEndUser;
+    private Boolean onlyEndUser;
 
     public Boolean onlyEndUser() {
         return this.onlyEndUser;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(
-        Boolean noSmalltalk,
-        Boolean onlyEndUser) {
-        this.noSmalltalk = Objects.requireNonNull(noSmalltalk, "expected parameter 'noSmalltalk' to be non-null");
-        this.onlyEndUser = Objects.requireNonNull(onlyEndUser, "expected parameter 'onlyEndUser' to be non-null");
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse() {
-        this.noSmalltalk = null;
-        this.onlyEndUser = null;
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse $) {
+        this.noSmalltalk = $.noSmalltalk;
+        this.onlyEndUser = $.onlyEndUser;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean noSmalltalk;
-        private Boolean onlyEndUser;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.noSmalltalk = defaults.noSmalltalk;
-    	      this.onlyEndUser = defaults.onlyEndUser;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder noSmalltalk(Boolean noSmalltalk) {
-            this.noSmalltalk = Objects.requireNonNull(noSmalltalk);
+            $.noSmalltalk = noSmalltalk;
             return this;
         }
+
         public Builder onlyEndUser(Boolean onlyEndUser) {
-            this.onlyEndUser = Objects.requireNonNull(onlyEndUser);
+            $.onlyEndUser = onlyEndUser;
             return this;
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(noSmalltalk, onlyEndUser);
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse build() {
+            $.noSmalltalk = Objects.requireNonNull($.noSmalltalk, "expected parameter 'noSmalltalk' to be non-null");
+            $.onlyEndUser = Objects.requireNonNull($.onlyEndUser, "expected parameter 'onlyEndUser' to be non-null");
+            return $;
         }
     }
+
 }

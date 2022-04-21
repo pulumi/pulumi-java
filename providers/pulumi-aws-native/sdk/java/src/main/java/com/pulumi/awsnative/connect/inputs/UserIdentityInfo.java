@@ -19,78 +19,70 @@ public final class UserIdentityInfo extends com.pulumi.resources.InvokeArgs {
     public static final UserIdentityInfo Empty = new UserIdentityInfo();
 
     @Import(name="email")
-      private final @Nullable String email;
+    private @Nullable String email;
 
     public Optional<String> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     @Import(name="firstName")
-      private final @Nullable String firstName;
+    private @Nullable String firstName;
 
     public Optional<String> firstName() {
-        return this.firstName == null ? Optional.empty() : Optional.ofNullable(this.firstName);
+        return Optional.ofNullable(this.firstName);
     }
 
     @Import(name="lastName")
-      private final @Nullable String lastName;
+    private @Nullable String lastName;
 
     public Optional<String> lastName() {
-        return this.lastName == null ? Optional.empty() : Optional.ofNullable(this.lastName);
+        return Optional.ofNullable(this.lastName);
     }
 
-    public UserIdentityInfo(
-        @Nullable String email,
-        @Nullable String firstName,
-        @Nullable String lastName) {
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+    private UserIdentityInfo() {}
 
-    private UserIdentityInfo() {
-        this.email = null;
-        this.firstName = null;
-        this.lastName = null;
+    private UserIdentityInfo(UserIdentityInfo $) {
+        this.email = $.email;
+        this.firstName = $.firstName;
+        this.lastName = $.lastName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserIdentityInfo defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String email;
-        private @Nullable String firstName;
-        private @Nullable String lastName;
+        private UserIdentityInfo $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserIdentityInfo();
         }
 
         public Builder(UserIdentityInfo defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.firstName = defaults.firstName;
-    	      this.lastName = defaults.lastName;
+            $ = new UserIdentityInfo(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable String email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = firstName;
+            $.firstName = firstName;
             return this;
         }
+
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = lastName;
+            $.lastName = lastName;
             return this;
-        }        public UserIdentityInfo build() {
-            return new UserIdentityInfo(email, firstName, lastName);
+        }
+
+        public UserIdentityInfo build() {
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="identityName", required=true)
-      private final String identityName;
+    private String identityName;
 
     public String identityName() {
         return this.identityName;
@@ -29,7 +29,7 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="identityType", required=true)
-      private final StudioSessionMappingIdentityType identityType;
+    private StudioSessionMappingIdentityType identityType;
 
     public StudioSessionMappingIdentityType identityType() {
         return this.identityType;
@@ -40,64 +40,59 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="studioId", required=true)
-      private final String studioId;
+    private String studioId;
 
     public String studioId() {
         return this.studioId;
     }
 
-    public GetStudioSessionMappingArgs(
-        String identityName,
-        StudioSessionMappingIdentityType identityType,
-        String studioId) {
-        this.identityName = Objects.requireNonNull(identityName, "expected parameter 'identityName' to be non-null");
-        this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
-        this.studioId = Objects.requireNonNull(studioId, "expected parameter 'studioId' to be non-null");
-    }
+    private GetStudioSessionMappingArgs() {}
 
-    private GetStudioSessionMappingArgs() {
-        this.identityName = null;
-        this.identityType = null;
-        this.studioId = null;
+    private GetStudioSessionMappingArgs(GetStudioSessionMappingArgs $) {
+        this.identityName = $.identityName;
+        this.identityType = $.identityType;
+        this.studioId = $.studioId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStudioSessionMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String identityName;
-        private StudioSessionMappingIdentityType identityType;
-        private String studioId;
+        private GetStudioSessionMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStudioSessionMappingArgs();
         }
 
         public Builder(GetStudioSessionMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityName = defaults.identityName;
-    	      this.identityType = defaults.identityType;
-    	      this.studioId = defaults.studioId;
+            $ = new GetStudioSessionMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identityName(String identityName) {
-            this.identityName = Objects.requireNonNull(identityName);
+            $.identityName = identityName;
             return this;
         }
+
         public Builder identityType(StudioSessionMappingIdentityType identityType) {
-            this.identityType = Objects.requireNonNull(identityType);
+            $.identityType = identityType;
             return this;
         }
+
         public Builder studioId(String studioId) {
-            this.studioId = Objects.requireNonNull(studioId);
+            $.studioId = studioId;
             return this;
-        }        public GetStudioSessionMappingArgs build() {
-            return new GetStudioSessionMappingArgs(identityName, identityType, studioId);
+        }
+
+        public GetStudioSessionMappingArgs build() {
+            $.identityName = Objects.requireNonNull($.identityName, "expected parameter 'identityName' to be non-null");
+            $.identityType = Objects.requireNonNull($.identityType, "expected parameter 'identityType' to be non-null");
+            $.studioId = Objects.requireNonNull($.studioId, "expected parameter 'studioId' to be non-null");
+            return $;
         }
     }
+
 }

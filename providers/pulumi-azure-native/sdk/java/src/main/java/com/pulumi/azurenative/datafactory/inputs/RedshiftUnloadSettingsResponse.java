@@ -22,7 +22,7 @@ public final class RedshiftUnloadSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Object bucketName;
+    private Object bucketName;
 
     public Object bucketName() {
         return this.bucketName;
@@ -33,55 +33,52 @@ public final class RedshiftUnloadSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="s3LinkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse s3LinkedServiceName;
+    private LinkedServiceReferenceResponse s3LinkedServiceName;
 
     public LinkedServiceReferenceResponse s3LinkedServiceName() {
         return this.s3LinkedServiceName;
     }
 
-    public RedshiftUnloadSettingsResponse(
-        Object bucketName,
-        LinkedServiceReferenceResponse s3LinkedServiceName) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName, "expected parameter 's3LinkedServiceName' to be non-null");
-    }
+    private RedshiftUnloadSettingsResponse() {}
 
-    private RedshiftUnloadSettingsResponse() {
-        this.bucketName = null;
-        this.s3LinkedServiceName = null;
+    private RedshiftUnloadSettingsResponse(RedshiftUnloadSettingsResponse $) {
+        this.bucketName = $.bucketName;
+        this.s3LinkedServiceName = $.s3LinkedServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedshiftUnloadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object bucketName;
-        private LinkedServiceReferenceResponse s3LinkedServiceName;
+        private RedshiftUnloadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedshiftUnloadSettingsResponse();
         }
 
         public Builder(RedshiftUnloadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.s3LinkedServiceName = defaults.s3LinkedServiceName;
+            $ = new RedshiftUnloadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(Object bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder s3LinkedServiceName(LinkedServiceReferenceResponse s3LinkedServiceName) {
-            this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName);
+            $.s3LinkedServiceName = s3LinkedServiceName;
             return this;
-        }        public RedshiftUnloadSettingsResponse build() {
-            return new RedshiftUnloadSettingsResponse(bucketName, s3LinkedServiceName);
+        }
+
+        public RedshiftUnloadSettingsResponse build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.s3LinkedServiceName = Objects.requireNonNull($.s3LinkedServiceName, "expected parameter 's3LinkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

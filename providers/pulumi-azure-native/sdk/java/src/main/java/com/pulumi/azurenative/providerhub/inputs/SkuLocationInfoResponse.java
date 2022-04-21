@@ -17,119 +17,109 @@ public final class SkuLocationInfoResponse extends com.pulumi.resources.InvokeAr
     public static final SkuLocationInfoResponse Empty = new SkuLocationInfoResponse();
 
     @Import(name="extendedLocations")
-      private final @Nullable List<String> extendedLocations;
+    private @Nullable List<String> extendedLocations;
 
-    public List<String> extendedLocations() {
-        return this.extendedLocations == null ? List.of() : this.extendedLocations;
+    public Optional<List<String>> extendedLocations() {
+        return Optional.ofNullable(this.extendedLocations);
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="zoneDetails")
-      private final @Nullable List<SkuZoneDetailResponse> zoneDetails;
+    private @Nullable List<SkuZoneDetailResponse> zoneDetails;
 
-    public List<SkuZoneDetailResponse> zoneDetails() {
-        return this.zoneDetails == null ? List.of() : this.zoneDetails;
+    public Optional<List<SkuZoneDetailResponse>> zoneDetails() {
+        return Optional.ofNullable(this.zoneDetails);
     }
 
     @Import(name="zones")
-      private final @Nullable List<String> zones;
+    private @Nullable List<String> zones;
 
-    public List<String> zones() {
-        return this.zones == null ? List.of() : this.zones;
+    public Optional<List<String>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public SkuLocationInfoResponse(
-        @Nullable List<String> extendedLocations,
-        String location,
-        @Nullable String type,
-        @Nullable List<SkuZoneDetailResponse> zoneDetails,
-        @Nullable List<String> zones) {
-        this.extendedLocations = extendedLocations;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.type = type;
-        this.zoneDetails = zoneDetails;
-        this.zones = zones;
-    }
+    private SkuLocationInfoResponse() {}
 
-    private SkuLocationInfoResponse() {
-        this.extendedLocations = List.of();
-        this.location = null;
-        this.type = null;
-        this.zoneDetails = List.of();
-        this.zones = List.of();
+    private SkuLocationInfoResponse(SkuLocationInfoResponse $) {
+        this.extendedLocations = $.extendedLocations;
+        this.location = $.location;
+        this.type = $.type;
+        this.zoneDetails = $.zoneDetails;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuLocationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> extendedLocations;
-        private String location;
-        private @Nullable String type;
-        private @Nullable List<SkuZoneDetailResponse> zoneDetails;
-        private @Nullable List<String> zones;
+        private SkuLocationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuLocationInfoResponse();
         }
 
         public Builder(SkuLocationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extendedLocations = defaults.extendedLocations;
-    	      this.location = defaults.location;
-    	      this.type = defaults.type;
-    	      this.zoneDetails = defaults.zoneDetails;
-    	      this.zones = defaults.zones;
+            $ = new SkuLocationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder extendedLocations(@Nullable List<String> extendedLocations) {
-            this.extendedLocations = extendedLocations;
+            $.extendedLocations = extendedLocations;
             return this;
         }
+
         public Builder extendedLocations(String... extendedLocations) {
             return extendedLocations(List.of(extendedLocations));
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder zoneDetails(@Nullable List<SkuZoneDetailResponse> zoneDetails) {
-            this.zoneDetails = zoneDetails;
+            $.zoneDetails = zoneDetails;
             return this;
         }
+
         public Builder zoneDetails(SkuZoneDetailResponse... zoneDetails) {
             return zoneDetails(List.of(zoneDetails));
         }
+
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public SkuLocationInfoResponse build() {
-            return new SkuLocationInfoResponse(extendedLocations, location, type, zoneDetails, zones);
+        }
+
+        public SkuLocationInfoResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

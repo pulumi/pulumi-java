@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="archiveUris")
-      private final @Nullable Output<List<String>> archiveUris;
+    private @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> archiveUris() {
-        return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
+    public Optional<Output<List<String>>> archiveUris() {
+        return Optional.ofNullable(this.archiveUris);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileUris")
-      private final @Nullable Output<List<String>> fileUris;
+    private @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> fileUris() {
-        return this.fileUris == null ? Codegen.empty() : this.fileUris;
+    public Optional<Output<List<String>>> fileUris() {
+        return Optional.ofNullable(this.fileUris);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jarFileUris")
-      private final @Nullable Output<List<String>> jarFileUris;
+    private @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> jarFileUris() {
-        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
+    public Optional<Output<List<String>>> jarFileUris() {
+        return Optional.ofNullable(this.jarFileUris);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mainClass")
-      private final @Nullable Output<String> mainClass;
+    private @Nullable Output<String> mainClass;
 
-    public Output<String> mainClass() {
-        return this.mainClass == null ? Codegen.empty() : this.mainClass;
+    public Optional<Output<String>> mainClass() {
+        return Optional.ofNullable(this.mainClass);
     }
 
     /**
@@ -80,127 +80,114 @@ public final class SparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mainJarFileUri")
-      private final @Nullable Output<String> mainJarFileUri;
+    private @Nullable Output<String> mainJarFileUri;
 
-    public Output<String> mainJarFileUri() {
-        return this.mainJarFileUri == null ? Codegen.empty() : this.mainJarFileUri;
+    public Optional<Output<String>> mainJarFileUri() {
+        return Optional.ofNullable(this.mainJarFileUri);
     }
 
-    public SparkBatchArgs(
-        @Nullable Output<List<String>> archiveUris,
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> fileUris,
-        @Nullable Output<List<String>> jarFileUris,
-        @Nullable Output<String> mainClass,
-        @Nullable Output<String> mainJarFileUri) {
-        this.archiveUris = archiveUris;
-        this.args = args;
-        this.fileUris = fileUris;
-        this.jarFileUris = jarFileUris;
-        this.mainClass = mainClass;
-        this.mainJarFileUri = mainJarFileUri;
-    }
+    private SparkBatchArgs() {}
 
-    private SparkBatchArgs() {
-        this.archiveUris = Codegen.empty();
-        this.args = Codegen.empty();
-        this.fileUris = Codegen.empty();
-        this.jarFileUris = Codegen.empty();
-        this.mainClass = Codegen.empty();
-        this.mainJarFileUri = Codegen.empty();
+    private SparkBatchArgs(SparkBatchArgs $) {
+        this.archiveUris = $.archiveUris;
+        this.args = $.args;
+        this.fileUris = $.fileUris;
+        this.jarFileUris = $.jarFileUris;
+        this.mainClass = $.mainClass;
+        this.mainJarFileUri = $.mainJarFileUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkBatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> archiveUris;
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> fileUris;
-        private @Nullable Output<List<String>> jarFileUris;
-        private @Nullable Output<String> mainClass;
-        private @Nullable Output<String> mainJarFileUri;
+        private SparkBatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkBatchArgs();
         }
 
         public Builder(SparkBatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveUris = defaults.archiveUris;
-    	      this.args = defaults.args;
-    	      this.fileUris = defaults.fileUris;
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.mainClass = defaults.mainClass;
-    	      this.mainJarFileUri = defaults.mainJarFileUri;
+            $ = new SparkBatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
-            this.archiveUris = archiveUris;
+            $.archiveUris = archiveUris;
             return this;
         }
-        public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Codegen.ofNullable(archiveUris);
-            return this;
+
+        public Builder archiveUris(List<String> archiveUris) {
+            return archiveUris(Output.of(archiveUris));
         }
+
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
+
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder fileUris(@Nullable Output<List<String>> fileUris) {
-            this.fileUris = fileUris;
+            $.fileUris = fileUris;
             return this;
         }
-        public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Codegen.ofNullable(fileUris);
-            return this;
+
+        public Builder fileUris(List<String> fileUris) {
+            return fileUris(Output.of(fileUris));
         }
+
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
+
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
-            this.jarFileUris = jarFileUris;
+            $.jarFileUris = jarFileUris;
             return this;
         }
-        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Codegen.ofNullable(jarFileUris);
-            return this;
+
+        public Builder jarFileUris(List<String> jarFileUris) {
+            return jarFileUris(Output.of(jarFileUris));
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder mainClass(@Nullable Output<String> mainClass) {
-            this.mainClass = mainClass;
+            $.mainClass = mainClass;
             return this;
         }
-        public Builder mainClass(@Nullable String mainClass) {
-            this.mainClass = Codegen.ofNullable(mainClass);
-            return this;
+
+        public Builder mainClass(String mainClass) {
+            return mainClass(Output.of(mainClass));
         }
+
         public Builder mainJarFileUri(@Nullable Output<String> mainJarFileUri) {
-            this.mainJarFileUri = mainJarFileUri;
+            $.mainJarFileUri = mainJarFileUri;
             return this;
         }
-        public Builder mainJarFileUri(@Nullable String mainJarFileUri) {
-            this.mainJarFileUri = Codegen.ofNullable(mainJarFileUri);
-            return this;
-        }        public SparkBatchArgs build() {
-            return new SparkBatchArgs(archiveUris, args, fileUris, jarFileUris, mainClass, mainJarFileUri);
+
+        public Builder mainJarFileUri(String mainJarFileUri) {
+            return mainJarFileUri(Output.of(mainJarFileUri));
+        }
+
+        public SparkBatchArgs build() {
+            return $;
         }
     }
+
 }

@@ -27,7 +27,7 @@ public final class CertificateAuthorityPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="allowedCommonNames", required=true)
-      private final List<String> allowedCommonNames;
+    private List<String> allowedCommonNames;
 
     public List<String> allowedCommonNames() {
         return this.allowedCommonNames;
@@ -38,7 +38,7 @@ public final class CertificateAuthorityPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="allowedConfigList", required=true)
-      private final AllowedConfigListResponse allowedConfigList;
+    private AllowedConfigListResponse allowedConfigList;
 
     public AllowedConfigListResponse allowedConfigList() {
         return this.allowedConfigList;
@@ -49,7 +49,7 @@ public final class CertificateAuthorityPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="allowedIssuanceModes", required=true)
-      private final IssuanceModesResponse allowedIssuanceModes;
+    private IssuanceModesResponse allowedIssuanceModes;
 
     public IssuanceModesResponse allowedIssuanceModes() {
         return this.allowedIssuanceModes;
@@ -60,7 +60,7 @@ public final class CertificateAuthorityPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="allowedLocationsAndOrganizations", required=true)
-      private final List<SubjectResponse> allowedLocationsAndOrganizations;
+    private List<SubjectResponse> allowedLocationsAndOrganizations;
 
     public List<SubjectResponse> allowedLocationsAndOrganizations() {
         return this.allowedLocationsAndOrganizations;
@@ -71,7 +71,7 @@ public final class CertificateAuthorityPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="allowedSans", required=true)
-      private final AllowedSubjectAltNamesResponse allowedSans;
+    private AllowedSubjectAltNamesResponse allowedSans;
 
     public AllowedSubjectAltNamesResponse allowedSans() {
         return this.allowedSans;
@@ -82,7 +82,7 @@ public final class CertificateAuthorityPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="maximumLifetime", required=true)
-      private final String maximumLifetime;
+    private String maximumLifetime;
 
     public String maximumLifetime() {
         return this.maximumLifetime;
@@ -93,106 +93,95 @@ public final class CertificateAuthorityPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="overwriteConfigValues", required=true)
-      private final ReusableConfigWrapperResponse overwriteConfigValues;
+    private ReusableConfigWrapperResponse overwriteConfigValues;
 
     public ReusableConfigWrapperResponse overwriteConfigValues() {
         return this.overwriteConfigValues;
     }
 
-    public CertificateAuthorityPolicyResponse(
-        List<String> allowedCommonNames,
-        AllowedConfigListResponse allowedConfigList,
-        IssuanceModesResponse allowedIssuanceModes,
-        List<SubjectResponse> allowedLocationsAndOrganizations,
-        AllowedSubjectAltNamesResponse allowedSans,
-        String maximumLifetime,
-        ReusableConfigWrapperResponse overwriteConfigValues) {
-        this.allowedCommonNames = Objects.requireNonNull(allowedCommonNames, "expected parameter 'allowedCommonNames' to be non-null");
-        this.allowedConfigList = Objects.requireNonNull(allowedConfigList, "expected parameter 'allowedConfigList' to be non-null");
-        this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes, "expected parameter 'allowedIssuanceModes' to be non-null");
-        this.allowedLocationsAndOrganizations = Objects.requireNonNull(allowedLocationsAndOrganizations, "expected parameter 'allowedLocationsAndOrganizations' to be non-null");
-        this.allowedSans = Objects.requireNonNull(allowedSans, "expected parameter 'allowedSans' to be non-null");
-        this.maximumLifetime = Objects.requireNonNull(maximumLifetime, "expected parameter 'maximumLifetime' to be non-null");
-        this.overwriteConfigValues = Objects.requireNonNull(overwriteConfigValues, "expected parameter 'overwriteConfigValues' to be non-null");
-    }
+    private CertificateAuthorityPolicyResponse() {}
 
-    private CertificateAuthorityPolicyResponse() {
-        this.allowedCommonNames = List.of();
-        this.allowedConfigList = null;
-        this.allowedIssuanceModes = null;
-        this.allowedLocationsAndOrganizations = List.of();
-        this.allowedSans = null;
-        this.maximumLifetime = null;
-        this.overwriteConfigValues = null;
+    private CertificateAuthorityPolicyResponse(CertificateAuthorityPolicyResponse $) {
+        this.allowedCommonNames = $.allowedCommonNames;
+        this.allowedConfigList = $.allowedConfigList;
+        this.allowedIssuanceModes = $.allowedIssuanceModes;
+        this.allowedLocationsAndOrganizations = $.allowedLocationsAndOrganizations;
+        this.allowedSans = $.allowedSans;
+        this.maximumLifetime = $.maximumLifetime;
+        this.overwriteConfigValues = $.overwriteConfigValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedCommonNames;
-        private AllowedConfigListResponse allowedConfigList;
-        private IssuanceModesResponse allowedIssuanceModes;
-        private List<SubjectResponse> allowedLocationsAndOrganizations;
-        private AllowedSubjectAltNamesResponse allowedSans;
-        private String maximumLifetime;
-        private ReusableConfigWrapperResponse overwriteConfigValues;
+        private CertificateAuthorityPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityPolicyResponse();
         }
 
         public Builder(CertificateAuthorityPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedCommonNames = defaults.allowedCommonNames;
-    	      this.allowedConfigList = defaults.allowedConfigList;
-    	      this.allowedIssuanceModes = defaults.allowedIssuanceModes;
-    	      this.allowedLocationsAndOrganizations = defaults.allowedLocationsAndOrganizations;
-    	      this.allowedSans = defaults.allowedSans;
-    	      this.maximumLifetime = defaults.maximumLifetime;
-    	      this.overwriteConfigValues = defaults.overwriteConfigValues;
+            $ = new CertificateAuthorityPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedCommonNames(List<String> allowedCommonNames) {
-            this.allowedCommonNames = Objects.requireNonNull(allowedCommonNames);
+            $.allowedCommonNames = allowedCommonNames;
             return this;
         }
+
         public Builder allowedCommonNames(String... allowedCommonNames) {
             return allowedCommonNames(List.of(allowedCommonNames));
         }
+
         public Builder allowedConfigList(AllowedConfigListResponse allowedConfigList) {
-            this.allowedConfigList = Objects.requireNonNull(allowedConfigList);
+            $.allowedConfigList = allowedConfigList;
             return this;
         }
+
         public Builder allowedIssuanceModes(IssuanceModesResponse allowedIssuanceModes) {
-            this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes);
+            $.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
+
         public Builder allowedLocationsAndOrganizations(List<SubjectResponse> allowedLocationsAndOrganizations) {
-            this.allowedLocationsAndOrganizations = Objects.requireNonNull(allowedLocationsAndOrganizations);
+            $.allowedLocationsAndOrganizations = allowedLocationsAndOrganizations;
             return this;
         }
+
         public Builder allowedLocationsAndOrganizations(SubjectResponse... allowedLocationsAndOrganizations) {
             return allowedLocationsAndOrganizations(List.of(allowedLocationsAndOrganizations));
         }
+
         public Builder allowedSans(AllowedSubjectAltNamesResponse allowedSans) {
-            this.allowedSans = Objects.requireNonNull(allowedSans);
+            $.allowedSans = allowedSans;
             return this;
         }
+
         public Builder maximumLifetime(String maximumLifetime) {
-            this.maximumLifetime = Objects.requireNonNull(maximumLifetime);
+            $.maximumLifetime = maximumLifetime;
             return this;
         }
+
         public Builder overwriteConfigValues(ReusableConfigWrapperResponse overwriteConfigValues) {
-            this.overwriteConfigValues = Objects.requireNonNull(overwriteConfigValues);
+            $.overwriteConfigValues = overwriteConfigValues;
             return this;
-        }        public CertificateAuthorityPolicyResponse build() {
-            return new CertificateAuthorityPolicyResponse(allowedCommonNames, allowedConfigList, allowedIssuanceModes, allowedLocationsAndOrganizations, allowedSans, maximumLifetime, overwriteConfigValues);
+        }
+
+        public CertificateAuthorityPolicyResponse build() {
+            $.allowedCommonNames = Objects.requireNonNull($.allowedCommonNames, "expected parameter 'allowedCommonNames' to be non-null");
+            $.allowedConfigList = Objects.requireNonNull($.allowedConfigList, "expected parameter 'allowedConfigList' to be non-null");
+            $.allowedIssuanceModes = Objects.requireNonNull($.allowedIssuanceModes, "expected parameter 'allowedIssuanceModes' to be non-null");
+            $.allowedLocationsAndOrganizations = Objects.requireNonNull($.allowedLocationsAndOrganizations, "expected parameter 'allowedLocationsAndOrganizations' to be non-null");
+            $.allowedSans = Objects.requireNonNull($.allowedSans, "expected parameter 'allowedSans' to be non-null");
+            $.maximumLifetime = Objects.requireNonNull($.maximumLifetime, "expected parameter 'maximumLifetime' to be non-null");
+            $.overwriteConfigValues = Objects.requireNonNull($.overwriteConfigValues, "expected parameter 'overwriteConfigValues' to be non-null");
+            return $;
         }
     }
+
 }

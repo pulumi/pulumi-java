@@ -5,7 +5,6 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionAutomaticScalingGetArgs;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionBasicScalingGetArgs;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentGetArgs;
@@ -19,6 +18,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="automaticScaling")
-      private final @Nullable Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling;
+    private @Nullable Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling;
 
-    public Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling() {
-        return this.automaticScaling == null ? Codegen.empty() : this.automaticScaling;
+    public Optional<Output<StandardAppVersionAutomaticScalingGetArgs>> automaticScaling() {
+        return Optional.ofNullable(this.automaticScaling);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="basicScaling")
-      private final @Nullable Output<StandardAppVersionBasicScalingGetArgs> basicScaling;
+    private @Nullable Output<StandardAppVersionBasicScalingGetArgs> basicScaling;
 
-    public Output<StandardAppVersionBasicScalingGetArgs> basicScaling() {
-        return this.basicScaling == null ? Codegen.empty() : this.basicScaling;
+    public Optional<Output<StandardAppVersionBasicScalingGetArgs>> basicScaling() {
+        return Optional.ofNullable(this.basicScaling);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="deleteServiceOnDestroy")
-      private final @Nullable Output<Boolean> deleteServiceOnDestroy;
+    private @Nullable Output<Boolean> deleteServiceOnDestroy;
 
-    public Output<Boolean> deleteServiceOnDestroy() {
-        return this.deleteServiceOnDestroy == null ? Codegen.empty() : this.deleteServiceOnDestroy;
+    public Optional<Output<Boolean>> deleteServiceOnDestroy() {
+        return Optional.ofNullable(this.deleteServiceOnDestroy);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="deployment")
-      private final @Nullable Output<StandardAppVersionDeploymentGetArgs> deployment;
+    private @Nullable Output<StandardAppVersionDeploymentGetArgs> deployment;
 
-    public Output<StandardAppVersionDeploymentGetArgs> deployment() {
-        return this.deployment == null ? Codegen.empty() : this.deployment;
+    public Optional<Output<StandardAppVersionDeploymentGetArgs>> deployment() {
+        return Optional.ofNullable(this.deployment);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="entrypoint")
-      private final @Nullable Output<StandardAppVersionEntrypointGetArgs> entrypoint;
+    private @Nullable Output<StandardAppVersionEntrypointGetArgs> entrypoint;
 
-    public Output<StandardAppVersionEntrypointGetArgs> entrypoint() {
-        return this.entrypoint == null ? Codegen.empty() : this.entrypoint;
+    public Optional<Output<StandardAppVersionEntrypointGetArgs>> entrypoint() {
+        return Optional.ofNullable(this.entrypoint);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="envVariables")
-      private final @Nullable Output<Map<String,String>> envVariables;
+    private @Nullable Output<Map<String,String>> envVariables;
 
-    public Output<Map<String,String>> envVariables() {
-        return this.envVariables == null ? Codegen.empty() : this.envVariables;
+    public Optional<Output<Map<String,String>>> envVariables() {
+        return Optional.ofNullable(this.envVariables);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="handlers")
-      private final @Nullable Output<List<StandardAppVersionHandlerGetArgs>> handlers;
+    private @Nullable Output<List<StandardAppVersionHandlerGetArgs>> handlers;
 
-    public Output<List<StandardAppVersionHandlerGetArgs>> handlers() {
-        return this.handlers == null ? Codegen.empty() : this.handlers;
+    public Optional<Output<List<StandardAppVersionHandlerGetArgs>>> handlers() {
+        return Optional.ofNullable(this.handlers);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="inboundServices")
-      private final @Nullable Output<List<String>> inboundServices;
+    private @Nullable Output<List<String>> inboundServices;
 
-    public Output<List<String>> inboundServices() {
-        return this.inboundServices == null ? Codegen.empty() : this.inboundServices;
+    public Optional<Output<List<String>>> inboundServices() {
+        return Optional.ofNullable(this.inboundServices);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceClass")
-      private final @Nullable Output<String> instanceClass;
+    private @Nullable Output<String> instanceClass;
 
-    public Output<String> instanceClass() {
-        return this.instanceClass == null ? Codegen.empty() : this.instanceClass;
+    public Optional<Output<String>> instanceClass() {
+        return Optional.ofNullable(this.instanceClass);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="libraries")
-      private final @Nullable Output<List<StandardAppVersionLibraryGetArgs>> libraries;
+    private @Nullable Output<List<StandardAppVersionLibraryGetArgs>> libraries;
 
-    public Output<List<StandardAppVersionLibraryGetArgs>> libraries() {
-        return this.libraries == null ? Codegen.empty() : this.libraries;
+    public Optional<Output<List<StandardAppVersionLibraryGetArgs>>> libraries() {
+        return Optional.ofNullable(this.libraries);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="manualScaling")
-      private final @Nullable Output<StandardAppVersionManualScalingGetArgs> manualScaling;
+    private @Nullable Output<StandardAppVersionManualScalingGetArgs> manualScaling;
 
-    public Output<StandardAppVersionManualScalingGetArgs> manualScaling() {
-        return this.manualScaling == null ? Codegen.empty() : this.manualScaling;
+    public Optional<Output<StandardAppVersionManualScalingGetArgs>> manualScaling() {
+        return Optional.ofNullable(this.manualScaling);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="noopOnDestroy")
-      private final @Nullable Output<Boolean> noopOnDestroy;
+    private @Nullable Output<Boolean> noopOnDestroy;
 
-    public Output<Boolean> noopOnDestroy() {
-        return this.noopOnDestroy == null ? Codegen.empty() : this.noopOnDestroy;
+    public Optional<Output<Boolean>> noopOnDestroy() {
+        return Optional.ofNullable(this.noopOnDestroy);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="runtime")
-      private final @Nullable Output<String> runtime;
+    private @Nullable Output<String> runtime;
 
-    public Output<String> runtime() {
-        return this.runtime == null ? Codegen.empty() : this.runtime;
+    public Optional<Output<String>> runtime() {
+        return Optional.ofNullable(this.runtime);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="runtimeApiVersion")
-      private final @Nullable Output<String> runtimeApiVersion;
+    private @Nullable Output<String> runtimeApiVersion;
 
-    public Output<String> runtimeApiVersion() {
-        return this.runtimeApiVersion == null ? Codegen.empty() : this.runtimeApiVersion;
+    public Optional<Output<String>> runtimeApiVersion() {
+        return Optional.ofNullable(this.runtimeApiVersion);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="threadsafe")
-      private final @Nullable Output<Boolean> threadsafe;
+    private @Nullable Output<Boolean> threadsafe;
 
-    public Output<Boolean> threadsafe() {
-        return this.threadsafe == null ? Codegen.empty() : this.threadsafe;
+    public Optional<Output<Boolean>> threadsafe() {
+        return Optional.ofNullable(this.threadsafe);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="versionId")
-      private final @Nullable Output<String> versionId;
+    private @Nullable Output<String> versionId;
 
-    public Output<String> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
     /**
@@ -256,306 +256,250 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vpcAccessConnector")
-      private final @Nullable Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
+    private @Nullable Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
 
-    public Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector() {
-        return this.vpcAccessConnector == null ? Codegen.empty() : this.vpcAccessConnector;
+    public Optional<Output<StandardAppVersionVpcAccessConnectorGetArgs>> vpcAccessConnector() {
+        return Optional.ofNullable(this.vpcAccessConnector);
     }
 
-    public StandardAppVersionState(
-        @Nullable Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling,
-        @Nullable Output<StandardAppVersionBasicScalingGetArgs> basicScaling,
-        @Nullable Output<Boolean> deleteServiceOnDestroy,
-        @Nullable Output<StandardAppVersionDeploymentGetArgs> deployment,
-        @Nullable Output<StandardAppVersionEntrypointGetArgs> entrypoint,
-        @Nullable Output<Map<String,String>> envVariables,
-        @Nullable Output<List<StandardAppVersionHandlerGetArgs>> handlers,
-        @Nullable Output<List<String>> inboundServices,
-        @Nullable Output<String> instanceClass,
-        @Nullable Output<List<StandardAppVersionLibraryGetArgs>> libraries,
-        @Nullable Output<StandardAppVersionManualScalingGetArgs> manualScaling,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> noopOnDestroy,
-        @Nullable Output<String> project,
-        @Nullable Output<String> runtime,
-        @Nullable Output<String> runtimeApiVersion,
-        @Nullable Output<String> service,
-        @Nullable Output<Boolean> threadsafe,
-        @Nullable Output<String> versionId,
-        @Nullable Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector) {
-        this.automaticScaling = automaticScaling;
-        this.basicScaling = basicScaling;
-        this.deleteServiceOnDestroy = deleteServiceOnDestroy;
-        this.deployment = deployment;
-        this.entrypoint = entrypoint;
-        this.envVariables = envVariables;
-        this.handlers = handlers;
-        this.inboundServices = inboundServices;
-        this.instanceClass = instanceClass;
-        this.libraries = libraries;
-        this.manualScaling = manualScaling;
-        this.name = name;
-        this.noopOnDestroy = noopOnDestroy;
-        this.project = project;
-        this.runtime = runtime;
-        this.runtimeApiVersion = runtimeApiVersion;
-        this.service = service;
-        this.threadsafe = threadsafe;
-        this.versionId = versionId;
-        this.vpcAccessConnector = vpcAccessConnector;
-    }
+    private StandardAppVersionState() {}
 
-    private StandardAppVersionState() {
-        this.automaticScaling = Codegen.empty();
-        this.basicScaling = Codegen.empty();
-        this.deleteServiceOnDestroy = Codegen.empty();
-        this.deployment = Codegen.empty();
-        this.entrypoint = Codegen.empty();
-        this.envVariables = Codegen.empty();
-        this.handlers = Codegen.empty();
-        this.inboundServices = Codegen.empty();
-        this.instanceClass = Codegen.empty();
-        this.libraries = Codegen.empty();
-        this.manualScaling = Codegen.empty();
-        this.name = Codegen.empty();
-        this.noopOnDestroy = Codegen.empty();
-        this.project = Codegen.empty();
-        this.runtime = Codegen.empty();
-        this.runtimeApiVersion = Codegen.empty();
-        this.service = Codegen.empty();
-        this.threadsafe = Codegen.empty();
-        this.versionId = Codegen.empty();
-        this.vpcAccessConnector = Codegen.empty();
+    private StandardAppVersionState(StandardAppVersionState $) {
+        this.automaticScaling = $.automaticScaling;
+        this.basicScaling = $.basicScaling;
+        this.deleteServiceOnDestroy = $.deleteServiceOnDestroy;
+        this.deployment = $.deployment;
+        this.entrypoint = $.entrypoint;
+        this.envVariables = $.envVariables;
+        this.handlers = $.handlers;
+        this.inboundServices = $.inboundServices;
+        this.instanceClass = $.instanceClass;
+        this.libraries = $.libraries;
+        this.manualScaling = $.manualScaling;
+        this.name = $.name;
+        this.noopOnDestroy = $.noopOnDestroy;
+        this.project = $.project;
+        this.runtime = $.runtime;
+        this.runtimeApiVersion = $.runtimeApiVersion;
+        this.service = $.service;
+        this.threadsafe = $.threadsafe;
+        this.versionId = $.versionId;
+        this.vpcAccessConnector = $.vpcAccessConnector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardAppVersionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling;
-        private @Nullable Output<StandardAppVersionBasicScalingGetArgs> basicScaling;
-        private @Nullable Output<Boolean> deleteServiceOnDestroy;
-        private @Nullable Output<StandardAppVersionDeploymentGetArgs> deployment;
-        private @Nullable Output<StandardAppVersionEntrypointGetArgs> entrypoint;
-        private @Nullable Output<Map<String,String>> envVariables;
-        private @Nullable Output<List<StandardAppVersionHandlerGetArgs>> handlers;
-        private @Nullable Output<List<String>> inboundServices;
-        private @Nullable Output<String> instanceClass;
-        private @Nullable Output<List<StandardAppVersionLibraryGetArgs>> libraries;
-        private @Nullable Output<StandardAppVersionManualScalingGetArgs> manualScaling;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> noopOnDestroy;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> runtime;
-        private @Nullable Output<String> runtimeApiVersion;
-        private @Nullable Output<String> service;
-        private @Nullable Output<Boolean> threadsafe;
-        private @Nullable Output<String> versionId;
-        private @Nullable Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
+        private StandardAppVersionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardAppVersionState();
         }
 
         public Builder(StandardAppVersionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticScaling = defaults.automaticScaling;
-    	      this.basicScaling = defaults.basicScaling;
-    	      this.deleteServiceOnDestroy = defaults.deleteServiceOnDestroy;
-    	      this.deployment = defaults.deployment;
-    	      this.entrypoint = defaults.entrypoint;
-    	      this.envVariables = defaults.envVariables;
-    	      this.handlers = defaults.handlers;
-    	      this.inboundServices = defaults.inboundServices;
-    	      this.instanceClass = defaults.instanceClass;
-    	      this.libraries = defaults.libraries;
-    	      this.manualScaling = defaults.manualScaling;
-    	      this.name = defaults.name;
-    	      this.noopOnDestroy = defaults.noopOnDestroy;
-    	      this.project = defaults.project;
-    	      this.runtime = defaults.runtime;
-    	      this.runtimeApiVersion = defaults.runtimeApiVersion;
-    	      this.service = defaults.service;
-    	      this.threadsafe = defaults.threadsafe;
-    	      this.versionId = defaults.versionId;
-    	      this.vpcAccessConnector = defaults.vpcAccessConnector;
+            $ = new StandardAppVersionState(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticScaling(@Nullable Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling) {
-            this.automaticScaling = automaticScaling;
+            $.automaticScaling = automaticScaling;
             return this;
         }
-        public Builder automaticScaling(@Nullable StandardAppVersionAutomaticScalingGetArgs automaticScaling) {
-            this.automaticScaling = Codegen.ofNullable(automaticScaling);
-            return this;
+
+        public Builder automaticScaling(StandardAppVersionAutomaticScalingGetArgs automaticScaling) {
+            return automaticScaling(Output.of(automaticScaling));
         }
+
         public Builder basicScaling(@Nullable Output<StandardAppVersionBasicScalingGetArgs> basicScaling) {
-            this.basicScaling = basicScaling;
+            $.basicScaling = basicScaling;
             return this;
         }
-        public Builder basicScaling(@Nullable StandardAppVersionBasicScalingGetArgs basicScaling) {
-            this.basicScaling = Codegen.ofNullable(basicScaling);
-            return this;
+
+        public Builder basicScaling(StandardAppVersionBasicScalingGetArgs basicScaling) {
+            return basicScaling(Output.of(basicScaling));
         }
+
         public Builder deleteServiceOnDestroy(@Nullable Output<Boolean> deleteServiceOnDestroy) {
-            this.deleteServiceOnDestroy = deleteServiceOnDestroy;
+            $.deleteServiceOnDestroy = deleteServiceOnDestroy;
             return this;
         }
-        public Builder deleteServiceOnDestroy(@Nullable Boolean deleteServiceOnDestroy) {
-            this.deleteServiceOnDestroy = Codegen.ofNullable(deleteServiceOnDestroy);
-            return this;
+
+        public Builder deleteServiceOnDestroy(Boolean deleteServiceOnDestroy) {
+            return deleteServiceOnDestroy(Output.of(deleteServiceOnDestroy));
         }
+
         public Builder deployment(@Nullable Output<StandardAppVersionDeploymentGetArgs> deployment) {
-            this.deployment = deployment;
+            $.deployment = deployment;
             return this;
         }
-        public Builder deployment(@Nullable StandardAppVersionDeploymentGetArgs deployment) {
-            this.deployment = Codegen.ofNullable(deployment);
-            return this;
+
+        public Builder deployment(StandardAppVersionDeploymentGetArgs deployment) {
+            return deployment(Output.of(deployment));
         }
+
         public Builder entrypoint(@Nullable Output<StandardAppVersionEntrypointGetArgs> entrypoint) {
-            this.entrypoint = entrypoint;
+            $.entrypoint = entrypoint;
             return this;
         }
-        public Builder entrypoint(@Nullable StandardAppVersionEntrypointGetArgs entrypoint) {
-            this.entrypoint = Codegen.ofNullable(entrypoint);
-            return this;
+
+        public Builder entrypoint(StandardAppVersionEntrypointGetArgs entrypoint) {
+            return entrypoint(Output.of(entrypoint));
         }
+
         public Builder envVariables(@Nullable Output<Map<String,String>> envVariables) {
-            this.envVariables = envVariables;
+            $.envVariables = envVariables;
             return this;
         }
-        public Builder envVariables(@Nullable Map<String,String> envVariables) {
-            this.envVariables = Codegen.ofNullable(envVariables);
-            return this;
+
+        public Builder envVariables(Map<String,String> envVariables) {
+            return envVariables(Output.of(envVariables));
         }
+
         public Builder handlers(@Nullable Output<List<StandardAppVersionHandlerGetArgs>> handlers) {
-            this.handlers = handlers;
+            $.handlers = handlers;
             return this;
         }
-        public Builder handlers(@Nullable List<StandardAppVersionHandlerGetArgs> handlers) {
-            this.handlers = Codegen.ofNullable(handlers);
-            return this;
+
+        public Builder handlers(List<StandardAppVersionHandlerGetArgs> handlers) {
+            return handlers(Output.of(handlers));
         }
+
         public Builder handlers(StandardAppVersionHandlerGetArgs... handlers) {
             return handlers(List.of(handlers));
         }
+
         public Builder inboundServices(@Nullable Output<List<String>> inboundServices) {
-            this.inboundServices = inboundServices;
+            $.inboundServices = inboundServices;
             return this;
         }
-        public Builder inboundServices(@Nullable List<String> inboundServices) {
-            this.inboundServices = Codegen.ofNullable(inboundServices);
-            return this;
+
+        public Builder inboundServices(List<String> inboundServices) {
+            return inboundServices(Output.of(inboundServices));
         }
+
         public Builder inboundServices(String... inboundServices) {
             return inboundServices(List.of(inboundServices));
         }
+
         public Builder instanceClass(@Nullable Output<String> instanceClass) {
-            this.instanceClass = instanceClass;
+            $.instanceClass = instanceClass;
             return this;
         }
-        public Builder instanceClass(@Nullable String instanceClass) {
-            this.instanceClass = Codegen.ofNullable(instanceClass);
-            return this;
+
+        public Builder instanceClass(String instanceClass) {
+            return instanceClass(Output.of(instanceClass));
         }
+
         public Builder libraries(@Nullable Output<List<StandardAppVersionLibraryGetArgs>> libraries) {
-            this.libraries = libraries;
+            $.libraries = libraries;
             return this;
         }
-        public Builder libraries(@Nullable List<StandardAppVersionLibraryGetArgs> libraries) {
-            this.libraries = Codegen.ofNullable(libraries);
-            return this;
+
+        public Builder libraries(List<StandardAppVersionLibraryGetArgs> libraries) {
+            return libraries(Output.of(libraries));
         }
+
         public Builder libraries(StandardAppVersionLibraryGetArgs... libraries) {
             return libraries(List.of(libraries));
         }
+
         public Builder manualScaling(@Nullable Output<StandardAppVersionManualScalingGetArgs> manualScaling) {
-            this.manualScaling = manualScaling;
+            $.manualScaling = manualScaling;
             return this;
         }
-        public Builder manualScaling(@Nullable StandardAppVersionManualScalingGetArgs manualScaling) {
-            this.manualScaling = Codegen.ofNullable(manualScaling);
-            return this;
+
+        public Builder manualScaling(StandardAppVersionManualScalingGetArgs manualScaling) {
+            return manualScaling(Output.of(manualScaling));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder noopOnDestroy(@Nullable Output<Boolean> noopOnDestroy) {
-            this.noopOnDestroy = noopOnDestroy;
+            $.noopOnDestroy = noopOnDestroy;
             return this;
         }
-        public Builder noopOnDestroy(@Nullable Boolean noopOnDestroy) {
-            this.noopOnDestroy = Codegen.ofNullable(noopOnDestroy);
-            return this;
+
+        public Builder noopOnDestroy(Boolean noopOnDestroy) {
+            return noopOnDestroy(Output.of(noopOnDestroy));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder runtime(@Nullable Output<String> runtime) {
-            this.runtime = runtime;
+            $.runtime = runtime;
             return this;
         }
-        public Builder runtime(@Nullable String runtime) {
-            this.runtime = Codegen.ofNullable(runtime);
-            return this;
+
+        public Builder runtime(String runtime) {
+            return runtime(Output.of(runtime));
         }
+
         public Builder runtimeApiVersion(@Nullable Output<String> runtimeApiVersion) {
-            this.runtimeApiVersion = runtimeApiVersion;
+            $.runtimeApiVersion = runtimeApiVersion;
             return this;
         }
-        public Builder runtimeApiVersion(@Nullable String runtimeApiVersion) {
-            this.runtimeApiVersion = Codegen.ofNullable(runtimeApiVersion);
-            return this;
+
+        public Builder runtimeApiVersion(String runtimeApiVersion) {
+            return runtimeApiVersion(Output.of(runtimeApiVersion));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
+
+        public Builder service(String service) {
+            return service(Output.of(service));
         }
+
         public Builder threadsafe(@Nullable Output<Boolean> threadsafe) {
-            this.threadsafe = threadsafe;
+            $.threadsafe = threadsafe;
             return this;
         }
-        public Builder threadsafe(@Nullable Boolean threadsafe) {
-            this.threadsafe = Codegen.ofNullable(threadsafe);
-            return this;
+
+        public Builder threadsafe(Boolean threadsafe) {
+            return threadsafe(Output.of(threadsafe));
         }
+
         public Builder versionId(@Nullable Output<String> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable String versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
         }
+
         public Builder vpcAccessConnector(@Nullable Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector) {
-            this.vpcAccessConnector = vpcAccessConnector;
+            $.vpcAccessConnector = vpcAccessConnector;
             return this;
         }
-        public Builder vpcAccessConnector(@Nullable StandardAppVersionVpcAccessConnectorGetArgs vpcAccessConnector) {
-            this.vpcAccessConnector = Codegen.ofNullable(vpcAccessConnector);
-            return this;
-        }        public StandardAppVersionState build() {
-            return new StandardAppVersionState(automaticScaling, basicScaling, deleteServiceOnDestroy, deployment, entrypoint, envVariables, handlers, inboundServices, instanceClass, libraries, manualScaling, name, noopOnDestroy, project, runtime, runtimeApiVersion, service, threadsafe, versionId, vpcAccessConnector);
+
+        public Builder vpcAccessConnector(StandardAppVersionVpcAccessConnectorGetArgs vpcAccessConnector) {
+            return vpcAccessConnector(Output.of(vpcAccessConnector));
+        }
+
+        public StandardAppVersionState build() {
+            return $;
         }
     }
+
 }

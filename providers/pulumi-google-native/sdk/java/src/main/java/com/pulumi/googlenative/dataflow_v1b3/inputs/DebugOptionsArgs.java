@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DebugOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableHotKeyLogging")
-      private final @Nullable Output<Boolean> enableHotKeyLogging;
+    private @Nullable Output<Boolean> enableHotKeyLogging;
 
-    public Output<Boolean> enableHotKeyLogging() {
-        return this.enableHotKeyLogging == null ? Codegen.empty() : this.enableHotKeyLogging;
+    public Optional<Output<Boolean>> enableHotKeyLogging() {
+        return Optional.ofNullable(this.enableHotKeyLogging);
     }
 
-    public DebugOptionsArgs(@Nullable Output<Boolean> enableHotKeyLogging) {
-        this.enableHotKeyLogging = enableHotKeyLogging;
-    }
+    private DebugOptionsArgs() {}
 
-    private DebugOptionsArgs() {
-        this.enableHotKeyLogging = Codegen.empty();
+    private DebugOptionsArgs(DebugOptionsArgs $) {
+        this.enableHotKeyLogging = $.enableHotKeyLogging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DebugOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableHotKeyLogging;
+        private DebugOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DebugOptionsArgs();
         }
 
         public Builder(DebugOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableHotKeyLogging = defaults.enableHotKeyLogging;
+            $ = new DebugOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableHotKeyLogging(@Nullable Output<Boolean> enableHotKeyLogging) {
-            this.enableHotKeyLogging = enableHotKeyLogging;
+            $.enableHotKeyLogging = enableHotKeyLogging;
             return this;
         }
-        public Builder enableHotKeyLogging(@Nullable Boolean enableHotKeyLogging) {
-            this.enableHotKeyLogging = Codegen.ofNullable(enableHotKeyLogging);
-            return this;
-        }        public DebugOptionsArgs build() {
-            return new DebugOptionsArgs(enableHotKeyLogging);
+
+        public Builder enableHotKeyLogging(Boolean enableHotKeyLogging) {
+            return enableHotKeyLogging(Output.of(enableHotKeyLogging));
+        }
+
+        public DebugOptionsArgs build() {
+            return $;
         }
     }
+
 }

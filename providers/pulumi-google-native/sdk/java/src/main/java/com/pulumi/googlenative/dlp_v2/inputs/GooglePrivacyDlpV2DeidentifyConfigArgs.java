@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordTransformationsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TransformationErrorHandlingArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="infoTypeTransformations")
-      private final @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
+    private @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
 
-    public Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations() {
-        return this.infoTypeTransformations == null ? Codegen.empty() : this.infoTypeTransformations;
+    public Optional<Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs>> infoTypeTransformations() {
+        return Optional.ofNullable(this.infoTypeTransformations);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="recordTransformations")
-      private final @Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations;
+    private @Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations;
 
-    public Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations() {
-        return this.recordTransformations == null ? Codegen.empty() : this.recordTransformations;
+    public Optional<Output<GooglePrivacyDlpV2RecordTransformationsArgs>> recordTransformations() {
+        return Optional.ofNullable(this.recordTransformations);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="transformationErrorHandling")
-      private final @Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling;
+    private @Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling;
 
-    public Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling() {
-        return this.transformationErrorHandling == null ? Codegen.empty() : this.transformationErrorHandling;
+    public Optional<Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs>> transformationErrorHandling() {
+        return Optional.ofNullable(this.transformationErrorHandling);
     }
 
-    public GooglePrivacyDlpV2DeidentifyConfigArgs(
-        @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations,
-        @Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations,
-        @Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling) {
-        this.infoTypeTransformations = infoTypeTransformations;
-        this.recordTransformations = recordTransformations;
-        this.transformationErrorHandling = transformationErrorHandling;
-    }
+    private GooglePrivacyDlpV2DeidentifyConfigArgs() {}
 
-    private GooglePrivacyDlpV2DeidentifyConfigArgs() {
-        this.infoTypeTransformations = Codegen.empty();
-        this.recordTransformations = Codegen.empty();
-        this.transformationErrorHandling = Codegen.empty();
+    private GooglePrivacyDlpV2DeidentifyConfigArgs(GooglePrivacyDlpV2DeidentifyConfigArgs $) {
+        this.infoTypeTransformations = $.infoTypeTransformations;
+        this.recordTransformations = $.recordTransformations;
+        this.transformationErrorHandling = $.transformationErrorHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DeidentifyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
-        private @Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations;
-        private @Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling;
+        private GooglePrivacyDlpV2DeidentifyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DeidentifyConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2DeidentifyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoTypeTransformations = defaults.infoTypeTransformations;
-    	      this.recordTransformations = defaults.recordTransformations;
-    	      this.transformationErrorHandling = defaults.transformationErrorHandling;
+            $ = new GooglePrivacyDlpV2DeidentifyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder infoTypeTransformations(@Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations) {
-            this.infoTypeTransformations = infoTypeTransformations;
+            $.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
-        public Builder infoTypeTransformations(@Nullable GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
-            this.infoTypeTransformations = Codegen.ofNullable(infoTypeTransformations);
-            return this;
+
+        public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
+            return infoTypeTransformations(Output.of(infoTypeTransformations));
         }
+
         public Builder recordTransformations(@Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations) {
-            this.recordTransformations = recordTransformations;
+            $.recordTransformations = recordTransformations;
             return this;
         }
-        public Builder recordTransformations(@Nullable GooglePrivacyDlpV2RecordTransformationsArgs recordTransformations) {
-            this.recordTransformations = Codegen.ofNullable(recordTransformations);
-            return this;
+
+        public Builder recordTransformations(GooglePrivacyDlpV2RecordTransformationsArgs recordTransformations) {
+            return recordTransformations(Output.of(recordTransformations));
         }
+
         public Builder transformationErrorHandling(@Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling) {
-            this.transformationErrorHandling = transformationErrorHandling;
+            $.transformationErrorHandling = transformationErrorHandling;
             return this;
         }
-        public Builder transformationErrorHandling(@Nullable GooglePrivacyDlpV2TransformationErrorHandlingArgs transformationErrorHandling) {
-            this.transformationErrorHandling = Codegen.ofNullable(transformationErrorHandling);
-            return this;
-        }        public GooglePrivacyDlpV2DeidentifyConfigArgs build() {
-            return new GooglePrivacyDlpV2DeidentifyConfigArgs(infoTypeTransformations, recordTransformations, transformationErrorHandling);
+
+        public Builder transformationErrorHandling(GooglePrivacyDlpV2TransformationErrorHandlingArgs transformationErrorHandling) {
+            return transformationErrorHandling(Output.of(transformationErrorHandling));
+        }
+
+        public GooglePrivacyDlpV2DeidentifyConfigArgs build() {
+            return $;
         }
     }
+
 }

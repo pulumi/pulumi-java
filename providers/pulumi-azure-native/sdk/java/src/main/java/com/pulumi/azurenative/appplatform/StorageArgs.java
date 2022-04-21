@@ -6,9 +6,9 @@ package com.pulumi.azurenative.appplatform;
 import com.pulumi.azurenative.appplatform.inputs.StorageAccountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class StorageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<StorageAccountArgs> properties;
+    private @Nullable Output<StorageAccountArgs> properties;
 
-    public Output<StorageAccountArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<StorageAccountArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class StorageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class StorageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -54,89 +54,80 @@ public final class StorageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageName")
-      private final @Nullable Output<String> storageName;
+    private @Nullable Output<String> storageName;
 
-    public Output<String> storageName() {
-        return this.storageName == null ? Codegen.empty() : this.storageName;
+    public Optional<Output<String>> storageName() {
+        return Optional.ofNullable(this.storageName);
     }
 
-    public StorageArgs(
-        @Nullable Output<StorageAccountArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<String> storageName) {
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.storageName = storageName;
-    }
+    private StorageArgs() {}
 
-    private StorageArgs() {
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.storageName = Codegen.empty();
+    private StorageArgs(StorageArgs $) {
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.storageName = $.storageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StorageAccountArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<String> storageName;
+        private StorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageArgs();
         }
 
         public Builder(StorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.storageName = defaults.storageName;
+            $ = new StorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<StorageAccountArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable StorageAccountArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(StorageAccountArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder storageName(@Nullable Output<String> storageName) {
-            this.storageName = storageName;
+            $.storageName = storageName;
             return this;
         }
-        public Builder storageName(@Nullable String storageName) {
-            this.storageName = Codegen.ofNullable(storageName);
-            return this;
-        }        public StorageArgs build() {
-            return new StorageArgs(properties, resourceGroupName, serviceName, storageName);
+
+        public Builder storageName(String storageName) {
+            return storageName(Output.of(storageName));
+        }
+
+        public StorageArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

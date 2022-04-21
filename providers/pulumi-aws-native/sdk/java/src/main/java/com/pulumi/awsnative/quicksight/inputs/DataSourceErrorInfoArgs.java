@@ -6,9 +6,9 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.enums.DataSourceErrorInfoType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,70 +25,65 @@ public final class DataSourceErrorInfoArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     @Import(name="type")
-      private final @Nullable Output<DataSourceErrorInfoType> type;
+    private @Nullable Output<DataSourceErrorInfoType> type;
 
-    public Output<DataSourceErrorInfoType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<DataSourceErrorInfoType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public DataSourceErrorInfoArgs(
-        @Nullable Output<String> message,
-        @Nullable Output<DataSourceErrorInfoType> type) {
-        this.message = message;
-        this.type = type;
-    }
+    private DataSourceErrorInfoArgs() {}
 
-    private DataSourceErrorInfoArgs() {
-        this.message = Codegen.empty();
-        this.type = Codegen.empty();
+    private DataSourceErrorInfoArgs(DataSourceErrorInfoArgs $) {
+        this.message = $.message;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceErrorInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> message;
-        private @Nullable Output<DataSourceErrorInfoType> type;
+        private DataSourceErrorInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceErrorInfoArgs();
         }
 
         public Builder(DataSourceErrorInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.type = defaults.type;
+            $ = new DataSourceErrorInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder type(@Nullable Output<DataSourceErrorInfoType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable DataSourceErrorInfoType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public DataSourceErrorInfoArgs build() {
-            return new DataSourceErrorInfoArgs(message, type);
+
+        public Builder type(DataSourceErrorInfoType type) {
+            return type(Output.of(type));
+        }
+
+        public DataSourceErrorInfoArgs build() {
+            return $;
         }
     }
+
 }

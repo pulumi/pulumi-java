@@ -6,8 +6,8 @@ package com.pulumi.azurenative.containerinstance.inputs;
 import com.pulumi.azurenative.containerinstance.inputs.LogAnalyticsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ContainerGroupDiagnosticsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="logAnalytics")
-      private final @Nullable Output<LogAnalyticsArgs> logAnalytics;
+    private @Nullable Output<LogAnalyticsArgs> logAnalytics;
 
-    public Output<LogAnalyticsArgs> logAnalytics() {
-        return this.logAnalytics == null ? Codegen.empty() : this.logAnalytics;
+    public Optional<Output<LogAnalyticsArgs>> logAnalytics() {
+        return Optional.ofNullable(this.logAnalytics);
     }
 
-    public ContainerGroupDiagnosticsArgs(@Nullable Output<LogAnalyticsArgs> logAnalytics) {
-        this.logAnalytics = logAnalytics;
-    }
+    private ContainerGroupDiagnosticsArgs() {}
 
-    private ContainerGroupDiagnosticsArgs() {
-        this.logAnalytics = Codegen.empty();
+    private ContainerGroupDiagnosticsArgs(ContainerGroupDiagnosticsArgs $) {
+        this.logAnalytics = $.logAnalytics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerGroupDiagnosticsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LogAnalyticsArgs> logAnalytics;
+        private ContainerGroupDiagnosticsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerGroupDiagnosticsArgs();
         }
 
         public Builder(ContainerGroupDiagnosticsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logAnalytics = defaults.logAnalytics;
+            $ = new ContainerGroupDiagnosticsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logAnalytics(@Nullable Output<LogAnalyticsArgs> logAnalytics) {
-            this.logAnalytics = logAnalytics;
+            $.logAnalytics = logAnalytics;
             return this;
         }
-        public Builder logAnalytics(@Nullable LogAnalyticsArgs logAnalytics) {
-            this.logAnalytics = Codegen.ofNullable(logAnalytics);
-            return this;
-        }        public ContainerGroupDiagnosticsArgs build() {
-            return new ContainerGroupDiagnosticsArgs(logAnalytics);
+
+        public Builder logAnalytics(LogAnalyticsArgs logAnalytics) {
+            return logAnalytics(Output.of(logAnalytics));
+        }
+
+        public ContainerGroupDiagnosticsArgs build() {
+            return $;
         }
     }
+
 }

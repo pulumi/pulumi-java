@@ -13,45 +13,45 @@ public final class GetFirewallArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFirewallArgs Empty = new GetFirewallArgs();
 
     @Import(name="firewallArn", required=true)
-      private final String firewallArn;
+    private String firewallArn;
 
     public String firewallArn() {
         return this.firewallArn;
     }
 
-    public GetFirewallArgs(String firewallArn) {
-        this.firewallArn = Objects.requireNonNull(firewallArn, "expected parameter 'firewallArn' to be non-null");
-    }
+    private GetFirewallArgs() {}
 
-    private GetFirewallArgs() {
-        this.firewallArn = null;
+    private GetFirewallArgs(GetFirewallArgs $) {
+        this.firewallArn = $.firewallArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String firewallArn;
+        private GetFirewallArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallArgs();
         }
 
         public Builder(GetFirewallArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallArn = defaults.firewallArn;
+            $ = new GetFirewallArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallArn(String firewallArn) {
-            this.firewallArn = Objects.requireNonNull(firewallArn);
+            $.firewallArn = firewallArn;
             return this;
-        }        public GetFirewallArgs build() {
-            return new GetFirewallArgs(firewallArn);
+        }
+
+        public GetFirewallArgs build() {
+            $.firewallArn = Objects.requireNonNull($.firewallArn, "expected parameter 'firewallArn' to be non-null");
+            return $;
         }
     }
+
 }

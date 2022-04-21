@@ -19,10 +19,10 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="documentFormat")
-      private final @Nullable String documentFormat;
+    private @Nullable String documentFormat;
 
     public Optional<String> documentFormat() {
-        return this.documentFormat == null ? Optional.empty() : Optional.ofNullable(this.documentFormat);
+        return Optional.ofNullable(this.documentFormat);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="documentVersion")
-      private final @Nullable String documentVersion;
+    private @Nullable String documentVersion;
 
     public Optional<String> documentVersion() {
-        return this.documentVersion == null ? Optional.empty() : Optional.ofNullable(this.documentVersion);
+        return Optional.ofNullable(this.documentVersion);
     }
 
     /**
@@ -41,64 +41,57 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetDocumentArgs(
-        @Nullable String documentFormat,
-        @Nullable String documentVersion,
-        String name) {
-        this.documentFormat = documentFormat;
-        this.documentVersion = documentVersion;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetDocumentArgs() {}
 
-    private GetDocumentArgs() {
-        this.documentFormat = null;
-        this.documentVersion = null;
-        this.name = null;
+    private GetDocumentArgs(GetDocumentArgs $) {
+        this.documentFormat = $.documentFormat;
+        this.documentVersion = $.documentVersion;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDocumentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String documentFormat;
-        private @Nullable String documentVersion;
-        private String name;
+        private GetDocumentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDocumentArgs();
         }
 
         public Builder(GetDocumentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentFormat = defaults.documentFormat;
-    	      this.documentVersion = defaults.documentVersion;
-    	      this.name = defaults.name;
+            $ = new GetDocumentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder documentFormat(@Nullable String documentFormat) {
-            this.documentFormat = documentFormat;
+            $.documentFormat = documentFormat;
             return this;
         }
+
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = documentVersion;
+            $.documentVersion = documentVersion;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetDocumentArgs build() {
-            return new GetDocumentArgs(documentFormat, documentVersion, name);
+        }
+
+        public GetDocumentArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetIndexArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIndexArgs Empty = new GetIndexArgs();
 
     @Import(name="databaseId", required=true)
-      private final String databaseId;
+    private String databaseId;
 
     public String databaseId() {
         return this.databaseId;
     }
 
     @Import(name="indexId", required=true)
-      private final String indexId;
+    private String indexId;
 
     public String indexId() {
         return this.indexId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetIndexArgs(
-        String databaseId,
-        String indexId,
-        @Nullable String project) {
-        this.databaseId = Objects.requireNonNull(databaseId, "expected parameter 'databaseId' to be non-null");
-        this.indexId = Objects.requireNonNull(indexId, "expected parameter 'indexId' to be non-null");
-        this.project = project;
-    }
+    private GetIndexArgs() {}
 
-    private GetIndexArgs() {
-        this.databaseId = null;
-        this.indexId = null;
-        this.project = null;
+    private GetIndexArgs(GetIndexArgs $) {
+        this.databaseId = $.databaseId;
+        this.indexId = $.indexId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseId;
-        private String indexId;
-        private @Nullable String project;
+        private GetIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIndexArgs();
         }
 
         public Builder(GetIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseId = defaults.databaseId;
-    	      this.indexId = defaults.indexId;
-    	      this.project = defaults.project;
+            $ = new GetIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseId(String databaseId) {
-            this.databaseId = Objects.requireNonNull(databaseId);
+            $.databaseId = databaseId;
             return this;
         }
+
         public Builder indexId(String indexId) {
-            this.indexId = Objects.requireNonNull(indexId);
+            $.indexId = indexId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetIndexArgs build() {
-            return new GetIndexArgs(databaseId, indexId, project);
+        }
+
+        public GetIndexArgs build() {
+            $.databaseId = Objects.requireNonNull($.databaseId, "expected parameter 'databaseId' to be non-null");
+            $.indexId = Objects.requireNonNull($.indexId, "expected parameter 'indexId' to be non-null");
+            return $;
         }
     }
+
 }

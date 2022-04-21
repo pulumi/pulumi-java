@@ -21,45 +21,45 @@ public final class DatabaseInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceDatabaseName", required=true)
-      private final String sourceDatabaseName;
+    private String sourceDatabaseName;
 
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
 
-    public DatabaseInfoResponse(String sourceDatabaseName) {
-        this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
-    }
+    private DatabaseInfoResponse() {}
 
-    private DatabaseInfoResponse() {
-        this.sourceDatabaseName = null;
+    private DatabaseInfoResponse(DatabaseInfoResponse $) {
+        this.sourceDatabaseName = $.sourceDatabaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sourceDatabaseName;
+        private DatabaseInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInfoResponse();
         }
 
         public Builder(DatabaseInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceDatabaseName = defaults.sourceDatabaseName;
+            $ = new DatabaseInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceDatabaseName(String sourceDatabaseName) {
-            this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
+            $.sourceDatabaseName = sourceDatabaseName;
             return this;
-        }        public DatabaseInfoResponse build() {
-            return new DatabaseInfoResponse(sourceDatabaseName);
+        }
+
+        public DatabaseInfoResponse build() {
+            $.sourceDatabaseName = Objects.requireNonNull($.sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
+            return $;
         }
     }
+
 }

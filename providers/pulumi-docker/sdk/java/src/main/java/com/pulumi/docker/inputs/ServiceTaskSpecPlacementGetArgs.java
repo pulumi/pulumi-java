@@ -5,12 +5,12 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.ServiceTaskSpecPlacementPlatformGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,119 +19,111 @@ public final class ServiceTaskSpecPlacementGetArgs extends com.pulumi.resources.
     public static final ServiceTaskSpecPlacementGetArgs Empty = new ServiceTaskSpecPlacementGetArgs();
 
     @Import(name="constraints")
-      private final @Nullable Output<List<String>> constraints;
+    private @Nullable Output<List<String>> constraints;
 
-    public Output<List<String>> constraints() {
-        return this.constraints == null ? Codegen.empty() : this.constraints;
+    public Optional<Output<List<String>>> constraints() {
+        return Optional.ofNullable(this.constraints);
     }
 
     @Import(name="maxReplicas")
-      private final @Nullable Output<Integer> maxReplicas;
+    private @Nullable Output<Integer> maxReplicas;
 
-    public Output<Integer> maxReplicas() {
-        return this.maxReplicas == null ? Codegen.empty() : this.maxReplicas;
+    public Optional<Output<Integer>> maxReplicas() {
+        return Optional.ofNullable(this.maxReplicas);
     }
 
     @Import(name="platforms")
-      private final @Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms;
+    private @Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms;
 
-    public Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms() {
-        return this.platforms == null ? Codegen.empty() : this.platforms;
+    public Optional<Output<List<ServiceTaskSpecPlacementPlatformGetArgs>>> platforms() {
+        return Optional.ofNullable(this.platforms);
     }
 
     @Import(name="prefs")
-      private final @Nullable Output<List<String>> prefs;
+    private @Nullable Output<List<String>> prefs;
 
-    public Output<List<String>> prefs() {
-        return this.prefs == null ? Codegen.empty() : this.prefs;
+    public Optional<Output<List<String>>> prefs() {
+        return Optional.ofNullable(this.prefs);
     }
 
-    public ServiceTaskSpecPlacementGetArgs(
-        @Nullable Output<List<String>> constraints,
-        @Nullable Output<Integer> maxReplicas,
-        @Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms,
-        @Nullable Output<List<String>> prefs) {
-        this.constraints = constraints;
-        this.maxReplicas = maxReplicas;
-        this.platforms = platforms;
-        this.prefs = prefs;
-    }
+    private ServiceTaskSpecPlacementGetArgs() {}
 
-    private ServiceTaskSpecPlacementGetArgs() {
-        this.constraints = Codegen.empty();
-        this.maxReplicas = Codegen.empty();
-        this.platforms = Codegen.empty();
-        this.prefs = Codegen.empty();
+    private ServiceTaskSpecPlacementGetArgs(ServiceTaskSpecPlacementGetArgs $) {
+        this.constraints = $.constraints;
+        this.maxReplicas = $.maxReplicas;
+        this.platforms = $.platforms;
+        this.prefs = $.prefs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecPlacementGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> constraints;
-        private @Nullable Output<Integer> maxReplicas;
-        private @Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms;
-        private @Nullable Output<List<String>> prefs;
+        private ServiceTaskSpecPlacementGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecPlacementGetArgs();
         }
 
         public Builder(ServiceTaskSpecPlacementGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constraints = defaults.constraints;
-    	      this.maxReplicas = defaults.maxReplicas;
-    	      this.platforms = defaults.platforms;
-    	      this.prefs = defaults.prefs;
+            $ = new ServiceTaskSpecPlacementGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder constraints(@Nullable Output<List<String>> constraints) {
-            this.constraints = constraints;
+            $.constraints = constraints;
             return this;
         }
-        public Builder constraints(@Nullable List<String> constraints) {
-            this.constraints = Codegen.ofNullable(constraints);
-            return this;
+
+        public Builder constraints(List<String> constraints) {
+            return constraints(Output.of(constraints));
         }
+
         public Builder constraints(String... constraints) {
             return constraints(List.of(constraints));
         }
+
         public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
-            this.maxReplicas = maxReplicas;
+            $.maxReplicas = maxReplicas;
             return this;
         }
-        public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = Codegen.ofNullable(maxReplicas);
-            return this;
+
+        public Builder maxReplicas(Integer maxReplicas) {
+            return maxReplicas(Output.of(maxReplicas));
         }
+
         public Builder platforms(@Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms) {
-            this.platforms = platforms;
+            $.platforms = platforms;
             return this;
         }
-        public Builder platforms(@Nullable List<ServiceTaskSpecPlacementPlatformGetArgs> platforms) {
-            this.platforms = Codegen.ofNullable(platforms);
-            return this;
+
+        public Builder platforms(List<ServiceTaskSpecPlacementPlatformGetArgs> platforms) {
+            return platforms(Output.of(platforms));
         }
+
         public Builder platforms(ServiceTaskSpecPlacementPlatformGetArgs... platforms) {
             return platforms(List.of(platforms));
         }
+
         public Builder prefs(@Nullable Output<List<String>> prefs) {
-            this.prefs = prefs;
+            $.prefs = prefs;
             return this;
         }
-        public Builder prefs(@Nullable List<String> prefs) {
-            this.prefs = Codegen.ofNullable(prefs);
-            return this;
+
+        public Builder prefs(List<String> prefs) {
+            return prefs(Output.of(prefs));
         }
+
         public Builder prefs(String... prefs) {
             return prefs(List.of(prefs));
-        }        public ServiceTaskSpecPlacementGetArgs build() {
-            return new ServiceTaskSpecPlacementGetArgs(constraints, maxReplicas, platforms, prefs);
+        }
+
+        public ServiceTaskSpecPlacementGetArgs build() {
+            return $;
         }
     }
+
 }

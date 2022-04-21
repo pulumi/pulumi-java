@@ -21,45 +21,45 @@ public final class DiscoveryNoteResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="analysisKind", required=true)
-      private final String analysisKind;
+    private String analysisKind;
 
     public String analysisKind() {
         return this.analysisKind;
     }
 
-    public DiscoveryNoteResponse(String analysisKind) {
-        this.analysisKind = Objects.requireNonNull(analysisKind, "expected parameter 'analysisKind' to be non-null");
-    }
+    private DiscoveryNoteResponse() {}
 
-    private DiscoveryNoteResponse() {
-        this.analysisKind = null;
+    private DiscoveryNoteResponse(DiscoveryNoteResponse $) {
+        this.analysisKind = $.analysisKind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiscoveryNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String analysisKind;
+        private DiscoveryNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiscoveryNoteResponse();
         }
 
         public Builder(DiscoveryNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisKind = defaults.analysisKind;
+            $ = new DiscoveryNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisKind(String analysisKind) {
-            this.analysisKind = Objects.requireNonNull(analysisKind);
+            $.analysisKind = analysisKind;
             return this;
-        }        public DiscoveryNoteResponse build() {
-            return new DiscoveryNoteResponse(analysisKind);
+        }
+
+        public DiscoveryNoteResponse build() {
+            $.analysisKind = Objects.requireNonNull($.analysisKind, "expected parameter 'analysisKind' to be non-null");
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="parentTrigger", required=true)
-      private final Object parentTrigger;
+    private Object parentTrigger;
 
     public Object parentTrigger() {
         return this.parentTrigger;
@@ -60,7 +60,7 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="requestedEndTime", required=true)
-      private final String requestedEndTime;
+    private String requestedEndTime;
 
     public String requestedEndTime() {
         return this.requestedEndTime;
@@ -71,7 +71,7 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="requestedStartTime", required=true)
-      private final String requestedStartTime;
+    private String requestedStartTime;
 
     public String requestedStartTime() {
         return this.requestedStartTime;
@@ -82,7 +82,7 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="rerunConcurrency", required=true)
-      private final Integer rerunConcurrency;
+    private Integer rerunConcurrency;
 
     public Integer rerunConcurrency() {
         return this.rerunConcurrency;
@@ -93,7 +93,7 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="runtimeState", required=true)
-      private final String runtimeState;
+    private String runtimeState;
 
     public String runtimeState() {
         return this.runtimeState;
@@ -105,112 +105,96 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RerunTumblingWindowTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        Object parentTrigger,
-        String requestedEndTime,
-        String requestedStartTime,
-        Integer rerunConcurrency,
-        String runtimeState,
-        String type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.parentTrigger = Objects.requireNonNull(parentTrigger, "expected parameter 'parentTrigger' to be non-null");
-        this.requestedEndTime = Objects.requireNonNull(requestedEndTime, "expected parameter 'requestedEndTime' to be non-null");
-        this.requestedStartTime = Objects.requireNonNull(requestedStartTime, "expected parameter 'requestedStartTime' to be non-null");
-        this.rerunConcurrency = Objects.requireNonNull(rerunConcurrency, "expected parameter 'rerunConcurrency' to be non-null");
-        this.runtimeState = Objects.requireNonNull(runtimeState, "expected parameter 'runtimeState' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private RerunTumblingWindowTriggerResponse() {}
 
-    private RerunTumblingWindowTriggerResponse() {
-        this.annotations = List.of();
-        this.description = null;
-        this.parentTrigger = null;
-        this.requestedEndTime = null;
-        this.requestedStartTime = null;
-        this.rerunConcurrency = null;
-        this.runtimeState = null;
-        this.type = null;
+    private RerunTumblingWindowTriggerResponse(RerunTumblingWindowTriggerResponse $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.parentTrigger = $.parentTrigger;
+        this.requestedEndTime = $.requestedEndTime;
+        this.requestedStartTime = $.requestedStartTime;
+        this.rerunConcurrency = $.rerunConcurrency;
+        this.runtimeState = $.runtimeState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RerunTumblingWindowTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable String description;
-        private Object parentTrigger;
-        private String requestedEndTime;
-        private String requestedStartTime;
-        private Integer rerunConcurrency;
-        private String runtimeState;
-        private String type;
+        private RerunTumblingWindowTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RerunTumblingWindowTriggerResponse();
         }
 
         public Builder(RerunTumblingWindowTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.parentTrigger = defaults.parentTrigger;
-    	      this.requestedEndTime = defaults.requestedEndTime;
-    	      this.requestedStartTime = defaults.requestedStartTime;
-    	      this.rerunConcurrency = defaults.rerunConcurrency;
-    	      this.runtimeState = defaults.runtimeState;
-    	      this.type = defaults.type;
+            $ = new RerunTumblingWindowTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder parentTrigger(Object parentTrigger) {
-            this.parentTrigger = Objects.requireNonNull(parentTrigger);
+            $.parentTrigger = parentTrigger;
             return this;
         }
+
         public Builder requestedEndTime(String requestedEndTime) {
-            this.requestedEndTime = Objects.requireNonNull(requestedEndTime);
+            $.requestedEndTime = requestedEndTime;
             return this;
         }
+
         public Builder requestedStartTime(String requestedStartTime) {
-            this.requestedStartTime = Objects.requireNonNull(requestedStartTime);
+            $.requestedStartTime = requestedStartTime;
             return this;
         }
+
         public Builder rerunConcurrency(Integer rerunConcurrency) {
-            this.rerunConcurrency = Objects.requireNonNull(rerunConcurrency);
+            $.rerunConcurrency = rerunConcurrency;
             return this;
         }
+
         public Builder runtimeState(String runtimeState) {
-            this.runtimeState = Objects.requireNonNull(runtimeState);
+            $.runtimeState = runtimeState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RerunTumblingWindowTriggerResponse build() {
-            return new RerunTumblingWindowTriggerResponse(annotations, description, parentTrigger, requestedEndTime, requestedStartTime, rerunConcurrency, runtimeState, type);
+        }
+
+        public RerunTumblingWindowTriggerResponse build() {
+            $.parentTrigger = Objects.requireNonNull($.parentTrigger, "expected parameter 'parentTrigger' to be non-null");
+            $.requestedEndTime = Objects.requireNonNull($.requestedEndTime, "expected parameter 'requestedEndTime' to be non-null");
+            $.requestedStartTime = Objects.requireNonNull($.requestedStartTime, "expected parameter 'requestedStartTime' to be non-null");
+            $.rerunConcurrency = Objects.requireNonNull($.rerunConcurrency, "expected parameter 'rerunConcurrency' to be non-null");
+            $.runtimeState = Objects.requireNonNull($.runtimeState, "expected parameter 'runtimeState' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

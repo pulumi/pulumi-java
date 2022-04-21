@@ -21,45 +21,45 @@ public final class VirtualMachineImageResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public VirtualMachineImageResponse(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private VirtualMachineImageResponse() {}
 
-    private VirtualMachineImageResponse() {
-        this.id = null;
+    private VirtualMachineImageResponse(VirtualMachineImageResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private VirtualMachineImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineImageResponse();
         }
 
         public Builder(VirtualMachineImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new VirtualMachineImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public VirtualMachineImageResponse build() {
-            return new VirtualMachineImageResponse(id);
+        }
+
+        public VirtualMachineImageResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

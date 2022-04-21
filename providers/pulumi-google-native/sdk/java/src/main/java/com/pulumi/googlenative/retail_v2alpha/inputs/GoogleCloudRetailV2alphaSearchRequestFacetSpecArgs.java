@@ -5,13 +5,13 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends co
      * 
      */
     @Import(name="enableDynamicPosition")
-      private final @Nullable Output<Boolean> enableDynamicPosition;
+    private @Nullable Output<Boolean> enableDynamicPosition;
 
-    public Output<Boolean> enableDynamicPosition() {
-        return this.enableDynamicPosition == null ? Codegen.empty() : this.enableDynamicPosition;
+    public Optional<Output<Boolean>> enableDynamicPosition() {
+        return Optional.ofNullable(this.enableDynamicPosition);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends co
      * 
      */
     @Import(name="excludedFilterKeys")
-      private final @Nullable Output<List<String>> excludedFilterKeys;
+    private @Nullable Output<List<String>> excludedFilterKeys;
 
-    public Output<List<String>> excludedFilterKeys() {
-        return this.excludedFilterKeys == null ? Codegen.empty() : this.excludedFilterKeys;
+    public Optional<Output<List<String>>> excludedFilterKeys() {
+        return Optional.ofNullable(this.excludedFilterKeys);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends co
      * 
      */
     @Import(name="facetKey", required=true)
-      private final Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey;
+    private Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey;
 
     public Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey() {
         return this.facetKey;
@@ -61,92 +61,83 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends co
      * 
      */
     @Import(name="limit")
-      private final @Nullable Output<Integer> limit;
+    private @Nullable Output<Integer> limit;
 
-    public Output<Integer> limit() {
-        return this.limit == null ? Codegen.empty() : this.limit;
+    public Optional<Output<Integer>> limit() {
+        return Optional.ofNullable(this.limit);
     }
 
-    public GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs(
-        @Nullable Output<Boolean> enableDynamicPosition,
-        @Nullable Output<List<String>> excludedFilterKeys,
-        Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey,
-        @Nullable Output<Integer> limit) {
-        this.enableDynamicPosition = enableDynamicPosition;
-        this.excludedFilterKeys = excludedFilterKeys;
-        this.facetKey = Objects.requireNonNull(facetKey, "expected parameter 'facetKey' to be non-null");
-        this.limit = limit;
-    }
+    private GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs() {}
 
-    private GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs() {
-        this.enableDynamicPosition = Codegen.empty();
-        this.excludedFilterKeys = Codegen.empty();
-        this.facetKey = Codegen.empty();
-        this.limit = Codegen.empty();
+    private GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs(GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs $) {
+        this.enableDynamicPosition = $.enableDynamicPosition;
+        this.excludedFilterKeys = $.excludedFilterKeys;
+        this.facetKey = $.facetKey;
+        this.limit = $.limit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableDynamicPosition;
-        private @Nullable Output<List<String>> excludedFilterKeys;
-        private Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey;
-        private @Nullable Output<Integer> limit;
+        private GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableDynamicPosition = defaults.enableDynamicPosition;
-    	      this.excludedFilterKeys = defaults.excludedFilterKeys;
-    	      this.facetKey = defaults.facetKey;
-    	      this.limit = defaults.limit;
+            $ = new GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableDynamicPosition(@Nullable Output<Boolean> enableDynamicPosition) {
-            this.enableDynamicPosition = enableDynamicPosition;
+            $.enableDynamicPosition = enableDynamicPosition;
             return this;
         }
-        public Builder enableDynamicPosition(@Nullable Boolean enableDynamicPosition) {
-            this.enableDynamicPosition = Codegen.ofNullable(enableDynamicPosition);
-            return this;
+
+        public Builder enableDynamicPosition(Boolean enableDynamicPosition) {
+            return enableDynamicPosition(Output.of(enableDynamicPosition));
         }
+
         public Builder excludedFilterKeys(@Nullable Output<List<String>> excludedFilterKeys) {
-            this.excludedFilterKeys = excludedFilterKeys;
+            $.excludedFilterKeys = excludedFilterKeys;
             return this;
         }
-        public Builder excludedFilterKeys(@Nullable List<String> excludedFilterKeys) {
-            this.excludedFilterKeys = Codegen.ofNullable(excludedFilterKeys);
-            return this;
+
+        public Builder excludedFilterKeys(List<String> excludedFilterKeys) {
+            return excludedFilterKeys(Output.of(excludedFilterKeys));
         }
+
         public Builder excludedFilterKeys(String... excludedFilterKeys) {
             return excludedFilterKeys(List.of(excludedFilterKeys));
         }
+
         public Builder facetKey(Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey) {
-            this.facetKey = Objects.requireNonNull(facetKey);
+            $.facetKey = facetKey;
             return this;
         }
+
         public Builder facetKey(GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs facetKey) {
-            this.facetKey = Output.of(Objects.requireNonNull(facetKey));
-            return this;
+            return facetKey(Output.of(facetKey));
         }
+
         public Builder limit(@Nullable Output<Integer> limit) {
-            this.limit = limit;
+            $.limit = limit;
             return this;
         }
-        public Builder limit(@Nullable Integer limit) {
-            this.limit = Codegen.ofNullable(limit);
-            return this;
-        }        public GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs build() {
-            return new GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs(enableDynamicPosition, excludedFilterKeys, facetKey, limit);
+
+        public Builder limit(Integer limit) {
+            return limit(Output.of(limit));
+        }
+
+        public GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs build() {
+            $.facetKey = Objects.requireNonNull($.facetKey, "expected parameter 'facetKey' to be non-null");
+            return $;
         }
     }
+
 }

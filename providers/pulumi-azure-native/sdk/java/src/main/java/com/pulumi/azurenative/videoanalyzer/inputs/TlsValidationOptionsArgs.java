@@ -5,9 +5,9 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TlsValidationOptionsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ignoreHostname")
-      private final @Nullable Output<String> ignoreHostname;
+    private @Nullable Output<String> ignoreHostname;
 
-    public Output<String> ignoreHostname() {
-        return this.ignoreHostname == null ? Codegen.empty() : this.ignoreHostname;
+    public Optional<Output<String>> ignoreHostname() {
+        return Optional.ofNullable(this.ignoreHostname);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class TlsValidationOptionsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ignoreSignature")
-      private final @Nullable Output<String> ignoreSignature;
+    private @Nullable Output<String> ignoreSignature;
 
-    public Output<String> ignoreSignature() {
-        return this.ignoreSignature == null ? Codegen.empty() : this.ignoreSignature;
+    public Optional<Output<String>> ignoreSignature() {
+        return Optional.ofNullable(this.ignoreSignature);
     }
 
-    public TlsValidationOptionsArgs(
-        @Nullable Output<String> ignoreHostname,
-        @Nullable Output<String> ignoreSignature) {
-        this.ignoreHostname = ignoreHostname;
-        this.ignoreSignature = ignoreSignature;
-    }
+    private TlsValidationOptionsArgs() {}
 
-    private TlsValidationOptionsArgs() {
-        this.ignoreHostname = Codegen.empty();
-        this.ignoreSignature = Codegen.empty();
+    private TlsValidationOptionsArgs(TlsValidationOptionsArgs $) {
+        this.ignoreHostname = $.ignoreHostname;
+        this.ignoreSignature = $.ignoreSignature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsValidationOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ignoreHostname;
-        private @Nullable Output<String> ignoreSignature;
+        private TlsValidationOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsValidationOptionsArgs();
         }
 
         public Builder(TlsValidationOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreHostname = defaults.ignoreHostname;
-    	      this.ignoreSignature = defaults.ignoreSignature;
+            $ = new TlsValidationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreHostname(@Nullable Output<String> ignoreHostname) {
-            this.ignoreHostname = ignoreHostname;
+            $.ignoreHostname = ignoreHostname;
             return this;
         }
-        public Builder ignoreHostname(@Nullable String ignoreHostname) {
-            this.ignoreHostname = Codegen.ofNullable(ignoreHostname);
-            return this;
+
+        public Builder ignoreHostname(String ignoreHostname) {
+            return ignoreHostname(Output.of(ignoreHostname));
         }
+
         public Builder ignoreSignature(@Nullable Output<String> ignoreSignature) {
-            this.ignoreSignature = ignoreSignature;
+            $.ignoreSignature = ignoreSignature;
             return this;
         }
-        public Builder ignoreSignature(@Nullable String ignoreSignature) {
-            this.ignoreSignature = Codegen.ofNullable(ignoreSignature);
-            return this;
-        }        public TlsValidationOptionsArgs build() {
-            return new TlsValidationOptionsArgs(ignoreHostname, ignoreSignature);
+
+        public Builder ignoreSignature(String ignoreSignature) {
+            return ignoreSignature(Output.of(ignoreSignature));
+        }
+
+        public TlsValidationOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="hosts", required=true)
-      private final Output<List<String>> hosts;
+    private Output<List<String>> hosts;
 
     public Output<List<String>> hosts() {
         return this.hosts;
@@ -46,79 +46,74 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="pathMatcher", required=true)
-      private final Output<String> pathMatcher;
+    private Output<String> pathMatcher;
 
     public Output<String> pathMatcher() {
         return this.pathMatcher;
     }
 
-    public EdgeCacheServiceRoutingHostRuleGetArgs(
-        @Nullable Output<String> description,
-        Output<List<String>> hosts,
-        Output<String> pathMatcher) {
-        this.description = description;
-        this.hosts = Objects.requireNonNull(hosts, "expected parameter 'hosts' to be non-null");
-        this.pathMatcher = Objects.requireNonNull(pathMatcher, "expected parameter 'pathMatcher' to be non-null");
-    }
+    private EdgeCacheServiceRoutingHostRuleGetArgs() {}
 
-    private EdgeCacheServiceRoutingHostRuleGetArgs() {
-        this.description = Codegen.empty();
-        this.hosts = Codegen.empty();
-        this.pathMatcher = Codegen.empty();
+    private EdgeCacheServiceRoutingHostRuleGetArgs(EdgeCacheServiceRoutingHostRuleGetArgs $) {
+        this.description = $.description;
+        this.hosts = $.hosts;
+        this.pathMatcher = $.pathMatcher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeCacheServiceRoutingHostRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<String>> hosts;
-        private Output<String> pathMatcher;
+        private EdgeCacheServiceRoutingHostRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeCacheServiceRoutingHostRuleGetArgs();
         }
 
         public Builder(EdgeCacheServiceRoutingHostRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.hosts = defaults.hosts;
-    	      this.pathMatcher = defaults.pathMatcher;
+            $ = new EdgeCacheServiceRoutingHostRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder hosts(Output<List<String>> hosts) {
-            this.hosts = Objects.requireNonNull(hosts);
+            $.hosts = hosts;
             return this;
         }
+
         public Builder hosts(List<String> hosts) {
-            this.hosts = Output.of(Objects.requireNonNull(hosts));
-            return this;
+            return hosts(Output.of(hosts));
         }
+
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder pathMatcher(Output<String> pathMatcher) {
-            this.pathMatcher = Objects.requireNonNull(pathMatcher);
+            $.pathMatcher = pathMatcher;
             return this;
         }
+
         public Builder pathMatcher(String pathMatcher) {
-            this.pathMatcher = Output.of(Objects.requireNonNull(pathMatcher));
-            return this;
-        }        public EdgeCacheServiceRoutingHostRuleGetArgs build() {
-            return new EdgeCacheServiceRoutingHostRuleGetArgs(description, hosts, pathMatcher);
+            return pathMatcher(Output.of(pathMatcher));
+        }
+
+        public EdgeCacheServiceRoutingHostRuleGetArgs build() {
+            $.hosts = Objects.requireNonNull($.hosts, "expected parameter 'hosts' to be non-null");
+            $.pathMatcher = Objects.requireNonNull($.pathMatcher, "expected parameter 'pathMatcher' to be non-null");
+            return $;
         }
     }
+
 }

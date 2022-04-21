@@ -26,7 +26,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @Import(name="annotations", required=true)
-      private final List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations;
+    private List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations;
 
     public List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations() {
         return this.annotations;
@@ -37,7 +37,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @Import(name="entities", required=true)
-      private final Map<String,String> entities;
+    private Map<String,String> entities;
 
     public Map<String,String> entities() {
         return this.entities;
@@ -48,7 +48,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @Import(name="intents", required=true)
-      private final Map<String,String> intents;
+    private Map<String,String> intents;
 
     public Map<String,String> intents() {
         return this.intents;
@@ -59,7 +59,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @Import(name="issueModelResult", required=true)
-      private final GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult;
+    private GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult;
 
     public GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult() {
         return this.issueModelResult;
@@ -70,7 +70,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @Import(name="phraseMatchers", required=true)
-      private final Map<String,String> phraseMatchers;
+    private Map<String,String> phraseMatchers;
 
     public Map<String,String> phraseMatchers() {
         return this.phraseMatchers;
@@ -81,97 +81,88 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @Import(name="sentiments", required=true)
-      private final List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
+    private List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
 
     public List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments() {
         return this.sentiments;
     }
 
-    public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(
-        List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations,
-        Map<String,String> entities,
-        Map<String,String> intents,
-        GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult,
-        Map<String,String> phraseMatchers,
-        List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
-        this.annotations = Objects.requireNonNull(annotations, "expected parameter 'annotations' to be non-null");
-        this.entities = Objects.requireNonNull(entities, "expected parameter 'entities' to be non-null");
-        this.intents = Objects.requireNonNull(intents, "expected parameter 'intents' to be non-null");
-        this.issueModelResult = Objects.requireNonNull(issueModelResult, "expected parameter 'issueModelResult' to be non-null");
-        this.phraseMatchers = Objects.requireNonNull(phraseMatchers, "expected parameter 'phraseMatchers' to be non-null");
-        this.sentiments = Objects.requireNonNull(sentiments, "expected parameter 'sentiments' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse() {
-        this.annotations = List.of();
-        this.entities = Map.of();
-        this.intents = Map.of();
-        this.issueModelResult = null;
-        this.phraseMatchers = Map.of();
-        this.sentiments = List.of();
+    private GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse $) {
+        this.annotations = $.annotations;
+        this.entities = $.entities;
+        this.intents = $.intents;
+        this.issueModelResult = $.issueModelResult;
+        this.phraseMatchers = $.phraseMatchers;
+        this.sentiments = $.sentiments;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations;
-        private Map<String,String> entities;
-        private Map<String,String> intents;
-        private GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult;
-        private Map<String,String> phraseMatchers;
-        private List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
+        private GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.entities = defaults.entities;
-    	      this.intents = defaults.intents;
-    	      this.issueModelResult = defaults.issueModelResult;
-    	      this.phraseMatchers = defaults.phraseMatchers;
-    	      this.sentiments = defaults.sentiments;
+            $ = new GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations) {
-            this.annotations = Objects.requireNonNull(annotations);
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(GoogleCloudContactcenterinsightsV1CallAnnotationResponse... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder entities(Map<String,String> entities) {
-            this.entities = Objects.requireNonNull(entities);
+            $.entities = entities;
             return this;
         }
+
         public Builder intents(Map<String,String> intents) {
-            this.intents = Objects.requireNonNull(intents);
+            $.intents = intents;
             return this;
         }
+
         public Builder issueModelResult(GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult) {
-            this.issueModelResult = Objects.requireNonNull(issueModelResult);
+            $.issueModelResult = issueModelResult;
             return this;
         }
+
         public Builder phraseMatchers(Map<String,String> phraseMatchers) {
-            this.phraseMatchers = Objects.requireNonNull(phraseMatchers);
+            $.phraseMatchers = phraseMatchers;
             return this;
         }
+
         public Builder sentiments(List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
-            this.sentiments = Objects.requireNonNull(sentiments);
+            $.sentiments = sentiments;
             return this;
         }
+
         public Builder sentiments(GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse... sentiments) {
             return sentiments(List.of(sentiments));
-        }        public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse build() {
-            return new GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(annotations, entities, intents, issueModelResult, phraseMatchers, sentiments);
+        }
+
+        public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse build() {
+            $.annotations = Objects.requireNonNull($.annotations, "expected parameter 'annotations' to be non-null");
+            $.entities = Objects.requireNonNull($.entities, "expected parameter 'entities' to be non-null");
+            $.intents = Objects.requireNonNull($.intents, "expected parameter 'intents' to be non-null");
+            $.issueModelResult = Objects.requireNonNull($.issueModelResult, "expected parameter 'issueModelResult' to be non-null");
+            $.phraseMatchers = Objects.requireNonNull($.phraseMatchers, "expected parameter 'phraseMatchers' to be non-null");
+            $.sentiments = Objects.requireNonNull($.sentiments, "expected parameter 'sentiments' to be non-null");
+            return $;
         }
     }
+
 }

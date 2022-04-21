@@ -5,9 +5,9 @@ package com.pulumi.aws.route53recoverycontrol;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ControlPanelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterArn", required=true)
-      private final Output<String> clusterArn;
+    private Output<String> clusterArn;
 
     public Output<String> clusterArn() {
         return this.clusterArn;
@@ -31,63 +31,59 @@ public final class ControlPanelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ControlPanelArgs(
-        Output<String> clusterArn,
-        @Nullable Output<String> name) {
-        this.clusterArn = Objects.requireNonNull(clusterArn, "expected parameter 'clusterArn' to be non-null");
-        this.name = name;
-    }
+    private ControlPanelArgs() {}
 
-    private ControlPanelArgs() {
-        this.clusterArn = Codegen.empty();
-        this.name = Codegen.empty();
+    private ControlPanelArgs(ControlPanelArgs $) {
+        this.clusterArn = $.clusterArn;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ControlPanelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterArn;
-        private @Nullable Output<String> name;
+        private ControlPanelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ControlPanelArgs();
         }
 
         public Builder(ControlPanelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterArn = defaults.clusterArn;
-    	      this.name = defaults.name;
+            $ = new ControlPanelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterArn(Output<String> clusterArn) {
-            this.clusterArn = Objects.requireNonNull(clusterArn);
+            $.clusterArn = clusterArn;
             return this;
         }
+
         public Builder clusterArn(String clusterArn) {
-            this.clusterArn = Output.of(Objects.requireNonNull(clusterArn));
-            return this;
+            return clusterArn(Output.of(clusterArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ControlPanelArgs build() {
-            return new ControlPanelArgs(clusterArn, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ControlPanelArgs build() {
+            $.clusterArn = Objects.requireNonNull($.clusterArn, "expected parameter 'clusterArn' to be non-null");
+            return $;
         }
     }
+
 }

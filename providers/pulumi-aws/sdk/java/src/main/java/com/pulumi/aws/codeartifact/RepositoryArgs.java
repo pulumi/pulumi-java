@@ -7,11 +7,11 @@ import com.pulumi.aws.codeartifact.inputs.RepositoryExternalConnectionsArgs;
 import com.pulumi.aws.codeartifact.inputs.RepositoryUpstreamArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<String> domain;
+    private Output<String> domain;
 
     public Output<String> domain() {
         return this.domain;
@@ -46,10 +46,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainOwner")
-      private final @Nullable Output<String> domainOwner;
+    private @Nullable Output<String> domainOwner;
 
-    public Output<String> domainOwner() {
-        return this.domainOwner == null ? Codegen.empty() : this.domainOwner;
+    public Optional<Output<String>> domainOwner() {
+        return Optional.ofNullable(this.domainOwner);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalConnections")
-      private final @Nullable Output<RepositoryExternalConnectionsArgs> externalConnections;
+    private @Nullable Output<RepositoryExternalConnectionsArgs> externalConnections;
 
-    public Output<RepositoryExternalConnectionsArgs> externalConnections() {
-        return this.externalConnections == null ? Codegen.empty() : this.externalConnections;
+    public Optional<Output<RepositoryExternalConnectionsArgs>> externalConnections() {
+        return Optional.ofNullable(this.externalConnections);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repository", required=true)
-      private final Output<String> repository;
+    private Output<String> repository;
 
     public Output<String> repository() {
         return this.repository;
@@ -79,10 +79,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -90,131 +90,114 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upstreams")
-      private final @Nullable Output<List<RepositoryUpstreamArgs>> upstreams;
+    private @Nullable Output<List<RepositoryUpstreamArgs>> upstreams;
 
-    public Output<List<RepositoryUpstreamArgs>> upstreams() {
-        return this.upstreams == null ? Codegen.empty() : this.upstreams;
+    public Optional<Output<List<RepositoryUpstreamArgs>>> upstreams() {
+        return Optional.ofNullable(this.upstreams);
     }
 
-    public RepositoryArgs(
-        @Nullable Output<String> description,
-        Output<String> domain,
-        @Nullable Output<String> domainOwner,
-        @Nullable Output<RepositoryExternalConnectionsArgs> externalConnections,
-        Output<String> repository,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<RepositoryUpstreamArgs>> upstreams) {
-        this.description = description;
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.domainOwner = domainOwner;
-        this.externalConnections = externalConnections;
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-        this.tags = tags;
-        this.upstreams = upstreams;
-    }
+    private RepositoryArgs() {}
 
-    private RepositoryArgs() {
-        this.description = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.domainOwner = Codegen.empty();
-        this.externalConnections = Codegen.empty();
-        this.repository = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.upstreams = Codegen.empty();
+    private RepositoryArgs(RepositoryArgs $) {
+        this.description = $.description;
+        this.domain = $.domain;
+        this.domainOwner = $.domainOwner;
+        this.externalConnections = $.externalConnections;
+        this.repository = $.repository;
+        this.tags = $.tags;
+        this.upstreams = $.upstreams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> domain;
-        private @Nullable Output<String> domainOwner;
-        private @Nullable Output<RepositoryExternalConnectionsArgs> externalConnections;
-        private Output<String> repository;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<RepositoryUpstreamArgs>> upstreams;
+        private RepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryArgs();
         }
 
         public Builder(RepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.domain = defaults.domain;
-    	      this.domainOwner = defaults.domainOwner;
-    	      this.externalConnections = defaults.externalConnections;
-    	      this.repository = defaults.repository;
-    	      this.tags = defaults.tags;
-    	      this.upstreams = defaults.upstreams;
+            $ = new RepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder domain(Output<String> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
+            return domain(Output.of(domain));
         }
+
         public Builder domainOwner(@Nullable Output<String> domainOwner) {
-            this.domainOwner = domainOwner;
+            $.domainOwner = domainOwner;
             return this;
         }
-        public Builder domainOwner(@Nullable String domainOwner) {
-            this.domainOwner = Codegen.ofNullable(domainOwner);
-            return this;
+
+        public Builder domainOwner(String domainOwner) {
+            return domainOwner(Output.of(domainOwner));
         }
+
         public Builder externalConnections(@Nullable Output<RepositoryExternalConnectionsArgs> externalConnections) {
-            this.externalConnections = externalConnections;
+            $.externalConnections = externalConnections;
             return this;
         }
-        public Builder externalConnections(@Nullable RepositoryExternalConnectionsArgs externalConnections) {
-            this.externalConnections = Codegen.ofNullable(externalConnections);
-            return this;
+
+        public Builder externalConnections(RepositoryExternalConnectionsArgs externalConnections) {
+            return externalConnections(Output.of(externalConnections));
         }
+
         public Builder repository(Output<String> repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
         }
+
         public Builder repository(String repository) {
-            this.repository = Output.of(Objects.requireNonNull(repository));
-            return this;
+            return repository(Output.of(repository));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder upstreams(@Nullable Output<List<RepositoryUpstreamArgs>> upstreams) {
-            this.upstreams = upstreams;
+            $.upstreams = upstreams;
             return this;
         }
-        public Builder upstreams(@Nullable List<RepositoryUpstreamArgs> upstreams) {
-            this.upstreams = Codegen.ofNullable(upstreams);
-            return this;
+
+        public Builder upstreams(List<RepositoryUpstreamArgs> upstreams) {
+            return upstreams(Output.of(upstreams));
         }
+
         public Builder upstreams(RepositoryUpstreamArgs... upstreams) {
             return upstreams(List.of(upstreams));
-        }        public RepositoryArgs build() {
-            return new RepositoryArgs(description, domain, domainOwner, externalConnections, repository, tags, upstreams);
+        }
+
+        public RepositoryArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            return $;
         }
     }
+
 }

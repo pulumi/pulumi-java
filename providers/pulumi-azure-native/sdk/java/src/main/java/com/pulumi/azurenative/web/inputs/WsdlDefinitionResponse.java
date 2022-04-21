@@ -24,10 +24,10 @@ public final class WsdlDefinitionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="content")
-      private final @Nullable String content;
+    private @Nullable String content;
 
     public Optional<String> content() {
-        return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WsdlDefinitionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="importMethod")
-      private final @Nullable String importMethod;
+    private @Nullable String importMethod;
 
     public Optional<String> importMethod() {
-        return this.importMethod == null ? Optional.empty() : Optional.ofNullable(this.importMethod);
+        return Optional.ofNullable(this.importMethod);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WsdlDefinitionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="service")
-      private final @Nullable WsdlServiceResponse service;
+    private @Nullable WsdlServiceResponse service;
 
     public Optional<WsdlServiceResponse> service() {
-        return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class WsdlDefinitionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public WsdlDefinitionResponse(
-        @Nullable String content,
-        @Nullable String importMethod,
-        @Nullable WsdlServiceResponse service,
-        @Nullable String url) {
-        this.content = content;
-        this.importMethod = importMethod;
-        this.service = service;
-        this.url = url;
-    }
+    private WsdlDefinitionResponse() {}
 
-    private WsdlDefinitionResponse() {
-        this.content = null;
-        this.importMethod = null;
-        this.service = null;
-        this.url = null;
+    private WsdlDefinitionResponse(WsdlDefinitionResponse $) {
+        this.content = $.content;
+        this.importMethod = $.importMethod;
+        this.service = $.service;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WsdlDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String content;
-        private @Nullable String importMethod;
-        private @Nullable WsdlServiceResponse service;
-        private @Nullable String url;
+        private WsdlDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WsdlDefinitionResponse();
         }
 
         public Builder(WsdlDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.importMethod = defaults.importMethod;
-    	      this.service = defaults.service;
-    	      this.url = defaults.url;
+            $ = new WsdlDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable String content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
+
         public Builder importMethod(@Nullable String importMethod) {
-            this.importMethod = importMethod;
+            $.importMethod = importMethod;
             return this;
         }
+
         public Builder service(@Nullable WsdlServiceResponse service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public WsdlDefinitionResponse build() {
-            return new WsdlDefinitionResponse(content, importMethod, service, url);
+        }
+
+        public WsdlDefinitionResponse build() {
+            return $;
         }
     }
+
 }

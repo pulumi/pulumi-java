@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="compressionProperties")
-      private final @Nullable Output<Object> compressionProperties;
+    private @Nullable Output<Object> compressionProperties;
 
-    public Output<Object> compressionProperties() {
-        return this.compressionProperties == null ? Codegen.empty() : this.compressionProperties;
+    public Optional<Output<Object>> compressionProperties() {
+        return Optional.ofNullable(this.compressionProperties);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="detectDataType")
-      private final @Nullable Output<Object> detectDataType;
+    private @Nullable Output<Object> detectDataType;
 
-    public Output<Object> detectDataType() {
-        return this.detectDataType == null ? Codegen.empty() : this.detectDataType;
+    public Optional<Output<Object>> detectDataType() {
+        return Optional.ofNullable(this.detectDataType);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="namespacePrefixes")
-      private final @Nullable Output<Object> namespacePrefixes;
+    private @Nullable Output<Object> namespacePrefixes;
 
-    public Output<Object> namespacePrefixes() {
-        return this.namespacePrefixes == null ? Codegen.empty() : this.namespacePrefixes;
+    public Optional<Output<Object>> namespacePrefixes() {
+        return Optional.ofNullable(this.namespacePrefixes);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="namespaces")
-      private final @Nullable Output<Object> namespaces;
+    private @Nullable Output<Object> namespaces;
 
-    public Output<Object> namespaces() {
-        return this.namespaces == null ? Codegen.empty() : this.namespaces;
+    public Optional<Output<Object>> namespaces() {
+        return Optional.ofNullable(this.namespaces);
     }
 
     /**
@@ -73,7 +74,7 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -84,115 +85,99 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="validationMode")
-      private final @Nullable Output<Object> validationMode;
+    private @Nullable Output<Object> validationMode;
 
-    public Output<Object> validationMode() {
-        return this.validationMode == null ? Codegen.empty() : this.validationMode;
+    public Optional<Output<Object>> validationMode() {
+        return Optional.ofNullable(this.validationMode);
     }
 
-    public XmlReadSettingsArgs(
-        @Nullable Output<Object> compressionProperties,
-        @Nullable Output<Object> detectDataType,
-        @Nullable Output<Object> namespacePrefixes,
-        @Nullable Output<Object> namespaces,
-        Output<String> type,
-        @Nullable Output<Object> validationMode) {
-        this.compressionProperties = compressionProperties;
-        this.detectDataType = detectDataType;
-        this.namespacePrefixes = namespacePrefixes;
-        this.namespaces = namespaces;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.validationMode = validationMode;
-    }
+    private XmlReadSettingsArgs() {}
 
-    private XmlReadSettingsArgs() {
-        this.compressionProperties = Codegen.empty();
-        this.detectDataType = Codegen.empty();
-        this.namespacePrefixes = Codegen.empty();
-        this.namespaces = Codegen.empty();
-        this.type = Codegen.empty();
-        this.validationMode = Codegen.empty();
+    private XmlReadSettingsArgs(XmlReadSettingsArgs $) {
+        this.compressionProperties = $.compressionProperties;
+        this.detectDataType = $.detectDataType;
+        this.namespacePrefixes = $.namespacePrefixes;
+        this.namespaces = $.namespaces;
+        this.type = $.type;
+        this.validationMode = $.validationMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(XmlReadSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> compressionProperties;
-        private @Nullable Output<Object> detectDataType;
-        private @Nullable Output<Object> namespacePrefixes;
-        private @Nullable Output<Object> namespaces;
-        private Output<String> type;
-        private @Nullable Output<Object> validationMode;
+        private XmlReadSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new XmlReadSettingsArgs();
         }
 
         public Builder(XmlReadSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compressionProperties = defaults.compressionProperties;
-    	      this.detectDataType = defaults.detectDataType;
-    	      this.namespacePrefixes = defaults.namespacePrefixes;
-    	      this.namespaces = defaults.namespaces;
-    	      this.type = defaults.type;
-    	      this.validationMode = defaults.validationMode;
+            $ = new XmlReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compressionProperties(@Nullable Output<Object> compressionProperties) {
-            this.compressionProperties = compressionProperties;
+            $.compressionProperties = compressionProperties;
             return this;
         }
-        public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = Codegen.ofNullable(compressionProperties);
-            return this;
+
+        public Builder compressionProperties(Object compressionProperties) {
+            return compressionProperties(Output.of(compressionProperties));
         }
+
         public Builder detectDataType(@Nullable Output<Object> detectDataType) {
-            this.detectDataType = detectDataType;
+            $.detectDataType = detectDataType;
             return this;
         }
-        public Builder detectDataType(@Nullable Object detectDataType) {
-            this.detectDataType = Codegen.ofNullable(detectDataType);
-            return this;
+
+        public Builder detectDataType(Object detectDataType) {
+            return detectDataType(Output.of(detectDataType));
         }
+
         public Builder namespacePrefixes(@Nullable Output<Object> namespacePrefixes) {
-            this.namespacePrefixes = namespacePrefixes;
+            $.namespacePrefixes = namespacePrefixes;
             return this;
         }
-        public Builder namespacePrefixes(@Nullable Object namespacePrefixes) {
-            this.namespacePrefixes = Codegen.ofNullable(namespacePrefixes);
-            return this;
+
+        public Builder namespacePrefixes(Object namespacePrefixes) {
+            return namespacePrefixes(Output.of(namespacePrefixes));
         }
+
         public Builder namespaces(@Nullable Output<Object> namespaces) {
-            this.namespaces = namespaces;
+            $.namespaces = namespaces;
             return this;
         }
-        public Builder namespaces(@Nullable Object namespaces) {
-            this.namespaces = Codegen.ofNullable(namespaces);
-            return this;
+
+        public Builder namespaces(Object namespaces) {
+            return namespaces(Output.of(namespaces));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder validationMode(@Nullable Output<Object> validationMode) {
-            this.validationMode = validationMode;
+            $.validationMode = validationMode;
             return this;
         }
-        public Builder validationMode(@Nullable Object validationMode) {
-            this.validationMode = Codegen.ofNullable(validationMode);
-            return this;
-        }        public XmlReadSettingsArgs build() {
-            return new XmlReadSettingsArgs(compressionProperties, detectDataType, namespacePrefixes, namespaces, type, validationMode);
+
+        public Builder validationMode(Object validationMode) {
+            return validationMode(Output.of(validationMode));
+        }
+
+        public XmlReadSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

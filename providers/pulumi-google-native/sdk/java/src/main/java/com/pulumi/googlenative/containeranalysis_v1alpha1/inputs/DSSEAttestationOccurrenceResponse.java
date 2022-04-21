@@ -22,62 +22,59 @@ public final class DSSEAttestationOccurrenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="envelope", required=true)
-      private final EnvelopeResponse envelope;
+    private EnvelopeResponse envelope;
 
     public EnvelopeResponse envelope() {
         return this.envelope;
     }
 
     @Import(name="statement", required=true)
-      private final InTotoStatementResponse statement;
+    private InTotoStatementResponse statement;
 
     public InTotoStatementResponse statement() {
         return this.statement;
     }
 
-    public DSSEAttestationOccurrenceResponse(
-        EnvelopeResponse envelope,
-        InTotoStatementResponse statement) {
-        this.envelope = Objects.requireNonNull(envelope, "expected parameter 'envelope' to be non-null");
-        this.statement = Objects.requireNonNull(statement, "expected parameter 'statement' to be non-null");
-    }
+    private DSSEAttestationOccurrenceResponse() {}
 
-    private DSSEAttestationOccurrenceResponse() {
-        this.envelope = null;
-        this.statement = null;
+    private DSSEAttestationOccurrenceResponse(DSSEAttestationOccurrenceResponse $) {
+        this.envelope = $.envelope;
+        this.statement = $.statement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DSSEAttestationOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private EnvelopeResponse envelope;
-        private InTotoStatementResponse statement;
+        private DSSEAttestationOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DSSEAttestationOccurrenceResponse();
         }
 
         public Builder(DSSEAttestationOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.envelope = defaults.envelope;
-    	      this.statement = defaults.statement;
+            $ = new DSSEAttestationOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder envelope(EnvelopeResponse envelope) {
-            this.envelope = Objects.requireNonNull(envelope);
+            $.envelope = envelope;
             return this;
         }
+
         public Builder statement(InTotoStatementResponse statement) {
-            this.statement = Objects.requireNonNull(statement);
+            $.statement = statement;
             return this;
-        }        public DSSEAttestationOccurrenceResponse build() {
-            return new DSSEAttestationOccurrenceResponse(envelope, statement);
+        }
+
+        public DSSEAttestationOccurrenceResponse build() {
+            $.envelope = Objects.requireNonNull($.envelope, "expected parameter 'envelope' to be non-null");
+            $.statement = Objects.requireNonNull($.statement, "expected parameter 'statement' to be non-null");
+            return $;
         }
     }
+
 }

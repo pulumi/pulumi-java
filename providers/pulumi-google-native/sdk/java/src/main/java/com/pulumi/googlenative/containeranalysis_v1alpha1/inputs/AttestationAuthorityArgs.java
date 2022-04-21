@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.AttestationAuthorityHintArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AttestationAuthorityArgs extends com.pulumi.resources.Resourc
     public static final AttestationAuthorityArgs Empty = new AttestationAuthorityArgs();
 
     @Import(name="hint")
-      private final @Nullable Output<AttestationAuthorityHintArgs> hint;
+    private @Nullable Output<AttestationAuthorityHintArgs> hint;
 
-    public Output<AttestationAuthorityHintArgs> hint() {
-        return this.hint == null ? Codegen.empty() : this.hint;
+    public Optional<Output<AttestationAuthorityHintArgs>> hint() {
+        return Optional.ofNullable(this.hint);
     }
 
-    public AttestationAuthorityArgs(@Nullable Output<AttestationAuthorityHintArgs> hint) {
-        this.hint = hint;
-    }
+    private AttestationAuthorityArgs() {}
 
-    private AttestationAuthorityArgs() {
-        this.hint = Codegen.empty();
+    private AttestationAuthorityArgs(AttestationAuthorityArgs $) {
+        this.hint = $.hint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationAuthorityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AttestationAuthorityHintArgs> hint;
+        private AttestationAuthorityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationAuthorityArgs();
         }
 
         public Builder(AttestationAuthorityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hint = defaults.hint;
+            $ = new AttestationAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hint(@Nullable Output<AttestationAuthorityHintArgs> hint) {
-            this.hint = hint;
+            $.hint = hint;
             return this;
         }
-        public Builder hint(@Nullable AttestationAuthorityHintArgs hint) {
-            this.hint = Codegen.ofNullable(hint);
-            return this;
-        }        public AttestationAuthorityArgs build() {
-            return new AttestationAuthorityArgs(hint);
+
+        public Builder hint(AttestationAuthorityHintArgs hint) {
+            return hint(Output.of(hint));
+        }
+
+        public AttestationAuthorityArgs build() {
+            return $;
         }
     }
+
 }

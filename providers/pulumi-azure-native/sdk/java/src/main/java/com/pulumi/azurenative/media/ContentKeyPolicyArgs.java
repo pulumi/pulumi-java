@@ -6,10 +6,10 @@ package com.pulumi.azurenative.media;
 import com.pulumi.azurenative.media.inputs.ContentKeyPolicyOptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,10 +33,10 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="contentKeyPolicyName")
-      private final @Nullable Output<String> contentKeyPolicyName;
+    private @Nullable Output<String> contentKeyPolicyName;
 
-    public Output<String> contentKeyPolicyName() {
-        return this.contentKeyPolicyName == null ? Codegen.empty() : this.contentKeyPolicyName;
+    public Optional<Output<String>> contentKeyPolicyName() {
+        return Optional.ofNullable(this.contentKeyPolicyName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="options", required=true)
-      private final Output<List<ContentKeyPolicyOptionArgs>> options;
+    private Output<List<ContentKeyPolicyOptionArgs>> options;
 
     public Output<List<ContentKeyPolicyOptionArgs>> options() {
         return this.options;
@@ -66,105 +66,95 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ContentKeyPolicyArgs(
-        Output<String> accountName,
-        @Nullable Output<String> contentKeyPolicyName,
-        @Nullable Output<String> description,
-        Output<List<ContentKeyPolicyOptionArgs>> options,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.contentKeyPolicyName = contentKeyPolicyName;
-        this.description = description;
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ContentKeyPolicyArgs() {}
 
-    private ContentKeyPolicyArgs() {
-        this.accountName = Codegen.empty();
-        this.contentKeyPolicyName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.options = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ContentKeyPolicyArgs(ContentKeyPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.contentKeyPolicyName = $.contentKeyPolicyName;
+        this.description = $.description;
+        this.options = $.options;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> contentKeyPolicyName;
-        private @Nullable Output<String> description;
-        private Output<List<ContentKeyPolicyOptionArgs>> options;
-        private Output<String> resourceGroupName;
+        private ContentKeyPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyArgs();
         }
 
         public Builder(ContentKeyPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.contentKeyPolicyName = defaults.contentKeyPolicyName;
-    	      this.description = defaults.description;
-    	      this.options = defaults.options;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ContentKeyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder contentKeyPolicyName(@Nullable Output<String> contentKeyPolicyName) {
-            this.contentKeyPolicyName = contentKeyPolicyName;
+            $.contentKeyPolicyName = contentKeyPolicyName;
             return this;
         }
-        public Builder contentKeyPolicyName(@Nullable String contentKeyPolicyName) {
-            this.contentKeyPolicyName = Codegen.ofNullable(contentKeyPolicyName);
-            return this;
+
+        public Builder contentKeyPolicyName(String contentKeyPolicyName) {
+            return contentKeyPolicyName(Output.of(contentKeyPolicyName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder options(Output<List<ContentKeyPolicyOptionArgs>> options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
         }
+
         public Builder options(List<ContentKeyPolicyOptionArgs> options) {
-            this.options = Output.of(Objects.requireNonNull(options));
-            return this;
+            return options(Output.of(options));
         }
+
         public Builder options(ContentKeyPolicyOptionArgs... options) {
             return options(List.of(options));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ContentKeyPolicyArgs build() {
-            return new ContentKeyPolicyArgs(accountName, contentKeyPolicyName, description, options, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ContentKeyPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

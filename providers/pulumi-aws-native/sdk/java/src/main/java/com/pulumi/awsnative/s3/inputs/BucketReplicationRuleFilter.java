@@ -17,78 +17,70 @@ public final class BucketReplicationRuleFilter extends com.pulumi.resources.Invo
     public static final BucketReplicationRuleFilter Empty = new BucketReplicationRuleFilter();
 
     @Import(name="and")
-      private final @Nullable BucketReplicationRuleAndOperator and;
+    private @Nullable BucketReplicationRuleAndOperator and;
 
     public Optional<BucketReplicationRuleAndOperator> and() {
-        return this.and == null ? Optional.empty() : Optional.ofNullable(this.and);
+        return Optional.ofNullable(this.and);
     }
 
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
     @Import(name="tagFilter")
-      private final @Nullable BucketTagFilter tagFilter;
+    private @Nullable BucketTagFilter tagFilter;
 
     public Optional<BucketTagFilter> tagFilter() {
-        return this.tagFilter == null ? Optional.empty() : Optional.ofNullable(this.tagFilter);
+        return Optional.ofNullable(this.tagFilter);
     }
 
-    public BucketReplicationRuleFilter(
-        @Nullable BucketReplicationRuleAndOperator and,
-        @Nullable String prefix,
-        @Nullable BucketTagFilter tagFilter) {
-        this.and = and;
-        this.prefix = prefix;
-        this.tagFilter = tagFilter;
-    }
+    private BucketReplicationRuleFilter() {}
 
-    private BucketReplicationRuleFilter() {
-        this.and = null;
-        this.prefix = null;
-        this.tagFilter = null;
+    private BucketReplicationRuleFilter(BucketReplicationRuleFilter $) {
+        this.and = $.and;
+        this.prefix = $.prefix;
+        this.tagFilter = $.tagFilter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationRuleFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketReplicationRuleAndOperator and;
-        private @Nullable String prefix;
-        private @Nullable BucketTagFilter tagFilter;
+        private BucketReplicationRuleFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationRuleFilter();
         }
 
         public Builder(BucketReplicationRuleFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.and = defaults.and;
-    	      this.prefix = defaults.prefix;
-    	      this.tagFilter = defaults.tagFilter;
+            $ = new BucketReplicationRuleFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder and(@Nullable BucketReplicationRuleAndOperator and) {
-            this.and = and;
+            $.and = and;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
+
         public Builder tagFilter(@Nullable BucketTagFilter tagFilter) {
-            this.tagFilter = tagFilter;
+            $.tagFilter = tagFilter;
             return this;
-        }        public BucketReplicationRuleFilter build() {
-            return new BucketReplicationRuleFilter(and, prefix, tagFilter);
+        }
+
+        public BucketReplicationRuleFilter build() {
+            return $;
         }
     }
+
 }

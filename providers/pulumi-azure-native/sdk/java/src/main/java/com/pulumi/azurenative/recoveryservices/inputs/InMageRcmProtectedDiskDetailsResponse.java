@@ -22,7 +22,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="capacityInBytes", required=true)
-      private final Double capacityInBytes;
+    private Double capacityInBytes;
 
     public Double capacityInBytes() {
         return this.capacityInBytes;
@@ -33,7 +33,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="diskEncryptionSetId", required=true)
-      private final String diskEncryptionSetId;
+    private String diskEncryptionSetId;
 
     public String diskEncryptionSetId() {
         return this.diskEncryptionSetId;
@@ -44,7 +44,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="diskId", required=true)
-      private final String diskId;
+    private String diskId;
 
     public String diskId() {
         return this.diskId;
@@ -55,7 +55,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="diskName", required=true)
-      private final String diskName;
+    private String diskName;
 
     public String diskName() {
         return this.diskName;
@@ -66,7 +66,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
@@ -77,7 +77,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="isOSDisk", required=true)
-      private final String isOSDisk;
+    private String isOSDisk;
 
     public String isOSDisk() {
         return this.isOSDisk;
@@ -88,7 +88,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="logStorageAccountId", required=true)
-      private final String logStorageAccountId;
+    private String logStorageAccountId;
 
     public String logStorageAccountId() {
         return this.logStorageAccountId;
@@ -99,7 +99,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="seedManagedDiskId", required=true)
-      private final String seedManagedDiskId;
+    private String seedManagedDiskId;
 
     public String seedManagedDiskId() {
         return this.seedManagedDiskId;
@@ -110,118 +110,101 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="targetManagedDiskId", required=true)
-      private final String targetManagedDiskId;
+    private String targetManagedDiskId;
 
     public String targetManagedDiskId() {
         return this.targetManagedDiskId;
     }
 
-    public InMageRcmProtectedDiskDetailsResponse(
-        Double capacityInBytes,
-        String diskEncryptionSetId,
-        String diskId,
-        String diskName,
-        String diskType,
-        String isOSDisk,
-        String logStorageAccountId,
-        String seedManagedDiskId,
-        String targetManagedDiskId) {
-        this.capacityInBytes = Objects.requireNonNull(capacityInBytes, "expected parameter 'capacityInBytes' to be non-null");
-        this.diskEncryptionSetId = Objects.requireNonNull(diskEncryptionSetId, "expected parameter 'diskEncryptionSetId' to be non-null");
-        this.diskId = Objects.requireNonNull(diskId, "expected parameter 'diskId' to be non-null");
-        this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.isOSDisk = Objects.requireNonNull(isOSDisk, "expected parameter 'isOSDisk' to be non-null");
-        this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId, "expected parameter 'logStorageAccountId' to be non-null");
-        this.seedManagedDiskId = Objects.requireNonNull(seedManagedDiskId, "expected parameter 'seedManagedDiskId' to be non-null");
-        this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId, "expected parameter 'targetManagedDiskId' to be non-null");
-    }
+    private InMageRcmProtectedDiskDetailsResponse() {}
 
-    private InMageRcmProtectedDiskDetailsResponse() {
-        this.capacityInBytes = null;
-        this.diskEncryptionSetId = null;
-        this.diskId = null;
-        this.diskName = null;
-        this.diskType = null;
-        this.isOSDisk = null;
-        this.logStorageAccountId = null;
-        this.seedManagedDiskId = null;
-        this.targetManagedDiskId = null;
+    private InMageRcmProtectedDiskDetailsResponse(InMageRcmProtectedDiskDetailsResponse $) {
+        this.capacityInBytes = $.capacityInBytes;
+        this.diskEncryptionSetId = $.diskEncryptionSetId;
+        this.diskId = $.diskId;
+        this.diskName = $.diskName;
+        this.diskType = $.diskType;
+        this.isOSDisk = $.isOSDisk;
+        this.logStorageAccountId = $.logStorageAccountId;
+        this.seedManagedDiskId = $.seedManagedDiskId;
+        this.targetManagedDiskId = $.targetManagedDiskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageRcmProtectedDiskDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double capacityInBytes;
-        private String diskEncryptionSetId;
-        private String diskId;
-        private String diskName;
-        private String diskType;
-        private String isOSDisk;
-        private String logStorageAccountId;
-        private String seedManagedDiskId;
-        private String targetManagedDiskId;
+        private InMageRcmProtectedDiskDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageRcmProtectedDiskDetailsResponse();
         }
 
         public Builder(InMageRcmProtectedDiskDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityInBytes = defaults.capacityInBytes;
-    	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
-    	      this.diskId = defaults.diskId;
-    	      this.diskName = defaults.diskName;
-    	      this.diskType = defaults.diskType;
-    	      this.isOSDisk = defaults.isOSDisk;
-    	      this.logStorageAccountId = defaults.logStorageAccountId;
-    	      this.seedManagedDiskId = defaults.seedManagedDiskId;
-    	      this.targetManagedDiskId = defaults.targetManagedDiskId;
+            $ = new InMageRcmProtectedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityInBytes(Double capacityInBytes) {
-            this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
+            $.capacityInBytes = capacityInBytes;
             return this;
         }
+
         public Builder diskEncryptionSetId(String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Objects.requireNonNull(diskEncryptionSetId);
+            $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
+
         public Builder diskId(String diskId) {
-            this.diskId = Objects.requireNonNull(diskId);
+            $.diskId = diskId;
             return this;
         }
+
         public Builder diskName(String diskName) {
-            this.diskName = Objects.requireNonNull(diskName);
+            $.diskName = diskName;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder isOSDisk(String isOSDisk) {
-            this.isOSDisk = Objects.requireNonNull(isOSDisk);
+            $.isOSDisk = isOSDisk;
             return this;
         }
+
         public Builder logStorageAccountId(String logStorageAccountId) {
-            this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
+            $.logStorageAccountId = logStorageAccountId;
             return this;
         }
+
         public Builder seedManagedDiskId(String seedManagedDiskId) {
-            this.seedManagedDiskId = Objects.requireNonNull(seedManagedDiskId);
+            $.seedManagedDiskId = seedManagedDiskId;
             return this;
         }
+
         public Builder targetManagedDiskId(String targetManagedDiskId) {
-            this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
+            $.targetManagedDiskId = targetManagedDiskId;
             return this;
-        }        public InMageRcmProtectedDiskDetailsResponse build() {
-            return new InMageRcmProtectedDiskDetailsResponse(capacityInBytes, diskEncryptionSetId, diskId, diskName, diskType, isOSDisk, logStorageAccountId, seedManagedDiskId, targetManagedDiskId);
+        }
+
+        public InMageRcmProtectedDiskDetailsResponse build() {
+            $.capacityInBytes = Objects.requireNonNull($.capacityInBytes, "expected parameter 'capacityInBytes' to be non-null");
+            $.diskEncryptionSetId = Objects.requireNonNull($.diskEncryptionSetId, "expected parameter 'diskEncryptionSetId' to be non-null");
+            $.diskId = Objects.requireNonNull($.diskId, "expected parameter 'diskId' to be non-null");
+            $.diskName = Objects.requireNonNull($.diskName, "expected parameter 'diskName' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.isOSDisk = Objects.requireNonNull($.isOSDisk, "expected parameter 'isOSDisk' to be non-null");
+            $.logStorageAccountId = Objects.requireNonNull($.logStorageAccountId, "expected parameter 'logStorageAccountId' to be non-null");
+            $.seedManagedDiskId = Objects.requireNonNull($.seedManagedDiskId, "expected parameter 'seedManagedDiskId' to be non-null");
+            $.targetManagedDiskId = Objects.requireNonNull($.targetManagedDiskId, "expected parameter 'targetManagedDiskId' to be non-null");
+            return $;
         }
     }
+
 }

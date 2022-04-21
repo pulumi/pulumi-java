@@ -24,10 +24,10 @@ public final class WeeklyRetentionFormatResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="daysOfTheWeek")
-      private final @Nullable List<String> daysOfTheWeek;
+    private @Nullable List<String> daysOfTheWeek;
 
-    public List<String> daysOfTheWeek() {
-        return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
+    public Optional<List<String>> daysOfTheWeek() {
+        return Optional.ofNullable(this.daysOfTheWeek);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class WeeklyRetentionFormatResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="weeksOfTheMonth")
-      private final @Nullable List<String> weeksOfTheMonth;
+    private @Nullable List<String> weeksOfTheMonth;
 
-    public List<String> weeksOfTheMonth() {
-        return this.weeksOfTheMonth == null ? List.of() : this.weeksOfTheMonth;
+    public Optional<List<String>> weeksOfTheMonth() {
+        return Optional.ofNullable(this.weeksOfTheMonth);
     }
 
-    public WeeklyRetentionFormatResponse(
-        @Nullable List<String> daysOfTheWeek,
-        @Nullable List<String> weeksOfTheMonth) {
-        this.daysOfTheWeek = daysOfTheWeek;
-        this.weeksOfTheMonth = weeksOfTheMonth;
-    }
+    private WeeklyRetentionFormatResponse() {}
 
-    private WeeklyRetentionFormatResponse() {
-        this.daysOfTheWeek = List.of();
-        this.weeksOfTheMonth = List.of();
+    private WeeklyRetentionFormatResponse(WeeklyRetentionFormatResponse $) {
+        this.daysOfTheWeek = $.daysOfTheWeek;
+        this.weeksOfTheMonth = $.weeksOfTheMonth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeeklyRetentionFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> daysOfTheWeek;
-        private @Nullable List<String> weeksOfTheMonth;
+        private WeeklyRetentionFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeeklyRetentionFormatResponse();
         }
 
         public Builder(WeeklyRetentionFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysOfTheWeek = defaults.daysOfTheWeek;
-    	      this.weeksOfTheMonth = defaults.weeksOfTheMonth;
+            $ = new WeeklyRetentionFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder daysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
-            this.daysOfTheWeek = daysOfTheWeek;
+            $.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
+
         public Builder daysOfTheWeek(String... daysOfTheWeek) {
             return daysOfTheWeek(List.of(daysOfTheWeek));
         }
+
         public Builder weeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
-            this.weeksOfTheMonth = weeksOfTheMonth;
+            $.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
+
         public Builder weeksOfTheMonth(String... weeksOfTheMonth) {
             return weeksOfTheMonth(List.of(weeksOfTheMonth));
-        }        public WeeklyRetentionFormatResponse build() {
-            return new WeeklyRetentionFormatResponse(daysOfTheWeek, weeksOfTheMonth);
+        }
+
+        public WeeklyRetentionFormatResponse build() {
+            return $;
         }
     }
+
 }

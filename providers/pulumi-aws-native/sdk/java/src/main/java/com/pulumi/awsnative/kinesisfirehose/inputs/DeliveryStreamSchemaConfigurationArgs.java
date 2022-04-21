@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,150 +16,133 @@ public final class DeliveryStreamSchemaConfigurationArgs extends com.pulumi.reso
     public static final DeliveryStreamSchemaConfigurationArgs Empty = new DeliveryStreamSchemaConfigurationArgs();
 
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     @Import(name="roleARN")
-      private final @Nullable Output<String> roleARN;
+    private @Nullable Output<String> roleARN;
 
-    public Output<String> roleARN() {
-        return this.roleARN == null ? Codegen.empty() : this.roleARN;
+    public Optional<Output<String>> roleARN() {
+        return Optional.ofNullable(this.roleARN);
     }
 
     @Import(name="tableName")
-      private final @Nullable Output<String> tableName;
+    private @Nullable Output<String> tableName;
 
-    public Output<String> tableName() {
-        return this.tableName == null ? Codegen.empty() : this.tableName;
+    public Optional<Output<String>> tableName() {
+        return Optional.ofNullable(this.tableName);
     }
 
     @Import(name="versionId")
-      private final @Nullable Output<String> versionId;
+    private @Nullable Output<String> versionId;
 
-    public Output<String> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
-    public DeliveryStreamSchemaConfigurationArgs(
-        @Nullable Output<String> catalogId,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> region,
-        @Nullable Output<String> roleARN,
-        @Nullable Output<String> tableName,
-        @Nullable Output<String> versionId) {
-        this.catalogId = catalogId;
-        this.databaseName = databaseName;
-        this.region = region;
-        this.roleARN = roleARN;
-        this.tableName = tableName;
-        this.versionId = versionId;
-    }
+    private DeliveryStreamSchemaConfigurationArgs() {}
 
-    private DeliveryStreamSchemaConfigurationArgs() {
-        this.catalogId = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.region = Codegen.empty();
-        this.roleARN = Codegen.empty();
-        this.tableName = Codegen.empty();
-        this.versionId = Codegen.empty();
+    private DeliveryStreamSchemaConfigurationArgs(DeliveryStreamSchemaConfigurationArgs $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.region = $.region;
+        this.roleARN = $.roleARN;
+        this.tableName = $.tableName;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamSchemaConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> roleARN;
-        private @Nullable Output<String> tableName;
-        private @Nullable Output<String> versionId;
+        private DeliveryStreamSchemaConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamSchemaConfigurationArgs();
         }
 
         public Builder(DeliveryStreamSchemaConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.region = defaults.region;
-    	      this.roleARN = defaults.roleARN;
-    	      this.tableName = defaults.tableName;
-    	      this.versionId = defaults.versionId;
+            $ = new DeliveryStreamSchemaConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder roleARN(@Nullable Output<String> roleARN) {
-            this.roleARN = roleARN;
+            $.roleARN = roleARN;
             return this;
         }
-        public Builder roleARN(@Nullable String roleARN) {
-            this.roleARN = Codegen.ofNullable(roleARN);
-            return this;
+
+        public Builder roleARN(String roleARN) {
+            return roleARN(Output.of(roleARN));
         }
+
         public Builder tableName(@Nullable Output<String> tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
-        public Builder tableName(@Nullable String tableName) {
-            this.tableName = Codegen.ofNullable(tableName);
-            return this;
+
+        public Builder tableName(String tableName) {
+            return tableName(Output.of(tableName));
         }
+
         public Builder versionId(@Nullable Output<String> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable String versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
-        }        public DeliveryStreamSchemaConfigurationArgs build() {
-            return new DeliveryStreamSchemaConfigurationArgs(catalogId, databaseName, region, roleARN, tableName, versionId);
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
+        }
+
+        public DeliveryStreamSchemaConfigurationArgs build() {
+            return $;
         }
     }
+
 }

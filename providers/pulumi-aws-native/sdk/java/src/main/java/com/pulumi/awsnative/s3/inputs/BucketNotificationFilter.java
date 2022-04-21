@@ -17,45 +17,45 @@ public final class BucketNotificationFilter extends com.pulumi.resources.InvokeA
     public static final BucketNotificationFilter Empty = new BucketNotificationFilter();
 
     @Import(name="s3Key", required=true)
-      private final BucketS3KeyFilter s3Key;
+    private BucketS3KeyFilter s3Key;
 
     public BucketS3KeyFilter s3Key() {
         return this.s3Key;
     }
 
-    public BucketNotificationFilter(BucketS3KeyFilter s3Key) {
-        this.s3Key = Objects.requireNonNull(s3Key, "expected parameter 's3Key' to be non-null");
-    }
+    private BucketNotificationFilter() {}
 
-    private BucketNotificationFilter() {
-        this.s3Key = null;
+    private BucketNotificationFilter(BucketNotificationFilter $) {
+        this.s3Key = $.s3Key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketNotificationFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketS3KeyFilter s3Key;
+        private BucketNotificationFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketNotificationFilter();
         }
 
         public Builder(BucketNotificationFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Key = defaults.s3Key;
+            $ = new BucketNotificationFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Key(BucketS3KeyFilter s3Key) {
-            this.s3Key = Objects.requireNonNull(s3Key);
+            $.s3Key = s3Key;
             return this;
-        }        public BucketNotificationFilter build() {
-            return new BucketNotificationFilter(s3Key);
+        }
+
+        public BucketNotificationFilter build() {
+            $.s3Key = Objects.requireNonNull($.s3Key, "expected parameter 's3Key' to be non-null");
+            return $;
         }
     }
+
 }

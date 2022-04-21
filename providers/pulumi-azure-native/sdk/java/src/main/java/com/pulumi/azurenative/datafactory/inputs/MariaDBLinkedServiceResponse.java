@@ -30,10 +30,10 @@ public final class MariaDBLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class MariaDBLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class MariaDBLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Object connectionString;
+    private @Nullable Object connectionString;
 
     public Optional<Object> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class MariaDBLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class MariaDBLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class MariaDBLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class MariaDBLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="pwd")
-      private final @Nullable AzureKeyVaultSecretReferenceResponse pwd;
+    private @Nullable AzureKeyVaultSecretReferenceResponse pwd;
 
     public Optional<AzureKeyVaultSecretReferenceResponse> pwd() {
-        return this.pwd == null ? Optional.empty() : Optional.ofNullable(this.pwd);
+        return Optional.ofNullable(this.pwd);
     }
 
     /**
@@ -108,112 +108,91 @@ public final class MariaDBLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public MariaDBLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionString,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable AzureKeyVaultSecretReferenceResponse pwd,
-        String type) {
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.connectionString = connectionString;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.pwd = pwd;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private MariaDBLinkedServiceResponse() {}
 
-    private MariaDBLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.connectVia = null;
-        this.connectionString = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.pwd = null;
-        this.type = null;
+    private MariaDBLinkedServiceResponse(MariaDBLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.connectionString = $.connectionString;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.pwd = $.pwd;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MariaDBLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable Object connectionString;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable AzureKeyVaultSecretReferenceResponse pwd;
-        private String type;
+        private MariaDBLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MariaDBLinkedServiceResponse();
         }
 
         public Builder(MariaDBLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionString = defaults.connectionString;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.pwd = defaults.pwd;
-    	      this.type = defaults.type;
+            $ = new MariaDBLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder connectionString(@Nullable Object connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder pwd(@Nullable AzureKeyVaultSecretReferenceResponse pwd) {
-            this.pwd = pwd;
+            $.pwd = pwd;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public MariaDBLinkedServiceResponse build() {
-            return new MariaDBLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, pwd, type);
+        }
+
+        public MariaDBLinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

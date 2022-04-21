@@ -5,7 +5,6 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.enums.TypeSyntax;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.FieldArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.servicemanagement_v1.inputs.SourceContextArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<FieldArgs>> fields;
+    private @Nullable Output<List<FieldArgs>> fields;
 
-    public Output<List<FieldArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<FieldArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oneofs")
-      private final @Nullable Output<List<String>> oneofs;
+    private @Nullable Output<List<String>> oneofs;
 
-    public Output<List<String>> oneofs() {
-        return this.oneofs == null ? Codegen.empty() : this.oneofs;
+    public Optional<Output<List<String>>> oneofs() {
+        return Optional.ofNullable(this.oneofs);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<List<OptionArgs>> options;
+    private @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<List<OptionArgs>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceContext")
-      private final @Nullable Output<SourceContextArgs> sourceContext;
+    private @Nullable Output<SourceContextArgs> sourceContext;
 
-    public Output<SourceContextArgs> sourceContext() {
-        return this.sourceContext == null ? Codegen.empty() : this.sourceContext;
+    public Optional<Output<SourceContextArgs>> sourceContext() {
+        return Optional.ofNullable(this.sourceContext);
     }
 
     /**
@@ -84,124 +84,110 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syntax")
-      private final @Nullable Output<TypeSyntax> syntax;
+    private @Nullable Output<TypeSyntax> syntax;
 
-    public Output<TypeSyntax> syntax() {
-        return this.syntax == null ? Codegen.empty() : this.syntax;
+    public Optional<Output<TypeSyntax>> syntax() {
+        return Optional.ofNullable(this.syntax);
     }
 
-    public TypeArgs(
-        @Nullable Output<List<FieldArgs>> fields,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> oneofs,
-        @Nullable Output<List<OptionArgs>> options,
-        @Nullable Output<SourceContextArgs> sourceContext,
-        @Nullable Output<TypeSyntax> syntax) {
-        this.fields = fields;
-        this.name = name;
-        this.oneofs = oneofs;
-        this.options = options;
-        this.sourceContext = sourceContext;
-        this.syntax = syntax;
-    }
+    private TypeArgs() {}
 
-    private TypeArgs() {
-        this.fields = Codegen.empty();
-        this.name = Codegen.empty();
-        this.oneofs = Codegen.empty();
-        this.options = Codegen.empty();
-        this.sourceContext = Codegen.empty();
-        this.syntax = Codegen.empty();
+    private TypeArgs(TypeArgs $) {
+        this.fields = $.fields;
+        this.name = $.name;
+        this.oneofs = $.oneofs;
+        this.options = $.options;
+        this.sourceContext = $.sourceContext;
+        this.syntax = $.syntax;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FieldArgs>> fields;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> oneofs;
-        private @Nullable Output<List<OptionArgs>> options;
-        private @Nullable Output<SourceContextArgs> sourceContext;
-        private @Nullable Output<TypeSyntax> syntax;
+        private TypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TypeArgs();
         }
 
         public Builder(TypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.oneofs = defaults.oneofs;
-    	      this.options = defaults.options;
-    	      this.sourceContext = defaults.sourceContext;
-    	      this.syntax = defaults.syntax;
+            $ = new TypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(@Nullable Output<List<FieldArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<FieldArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<FieldArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(FieldArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder oneofs(@Nullable Output<List<String>> oneofs) {
-            this.oneofs = oneofs;
+            $.oneofs = oneofs;
             return this;
         }
-        public Builder oneofs(@Nullable List<String> oneofs) {
-            this.oneofs = Codegen.ofNullable(oneofs);
-            return this;
+
+        public Builder oneofs(List<String> oneofs) {
+            return oneofs(Output.of(oneofs));
         }
+
         public Builder oneofs(String... oneofs) {
             return oneofs(List.of(oneofs));
         }
+
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(List<OptionArgs> options) {
+            return options(Output.of(options));
         }
+
         public Builder options(OptionArgs... options) {
             return options(List.of(options));
         }
+
         public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
-            this.sourceContext = sourceContext;
+            $.sourceContext = sourceContext;
             return this;
         }
-        public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
-            this.sourceContext = Codegen.ofNullable(sourceContext);
-            return this;
+
+        public Builder sourceContext(SourceContextArgs sourceContext) {
+            return sourceContext(Output.of(sourceContext));
         }
+
         public Builder syntax(@Nullable Output<TypeSyntax> syntax) {
-            this.syntax = syntax;
+            $.syntax = syntax;
             return this;
         }
-        public Builder syntax(@Nullable TypeSyntax syntax) {
-            this.syntax = Codegen.ofNullable(syntax);
-            return this;
-        }        public TypeArgs build() {
-            return new TypeArgs(fields, name, oneofs, options, sourceContext, syntax);
+
+        public Builder syntax(TypeSyntax syntax) {
+            return syntax(Output.of(syntax));
+        }
+
+        public TypeArgs build() {
+            return $;
         }
     }
+
 }

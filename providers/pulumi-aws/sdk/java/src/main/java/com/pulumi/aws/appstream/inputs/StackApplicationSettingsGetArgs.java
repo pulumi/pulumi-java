@@ -5,10 +5,10 @@ package com.pulumi.aws.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class StackApplicationSettingsGetArgs extends com.pulumi.resources.
     public static final StackApplicationSettingsGetArgs Empty = new StackApplicationSettingsGetArgs();
 
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="settingsGroup")
-      private final @Nullable Output<String> settingsGroup;
+    private @Nullable Output<String> settingsGroup;
 
-    public Output<String> settingsGroup() {
-        return this.settingsGroup == null ? Codegen.empty() : this.settingsGroup;
+    public Optional<Output<String>> settingsGroup() {
+        return Optional.ofNullable(this.settingsGroup);
     }
 
-    public StackApplicationSettingsGetArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> settingsGroup) {
-        this.enabled = enabled;
-        this.settingsGroup = settingsGroup;
-    }
+    private StackApplicationSettingsGetArgs() {}
 
-    private StackApplicationSettingsGetArgs() {
-        this.enabled = Codegen.empty();
-        this.settingsGroup = Codegen.empty();
+    private StackApplicationSettingsGetArgs(StackApplicationSettingsGetArgs $) {
+        this.enabled = $.enabled;
+        this.settingsGroup = $.settingsGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackApplicationSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> settingsGroup;
+        private StackApplicationSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackApplicationSettingsGetArgs();
         }
 
         public Builder(StackApplicationSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.settingsGroup = defaults.settingsGroup;
+            $ = new StackApplicationSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder settingsGroup(@Nullable Output<String> settingsGroup) {
-            this.settingsGroup = settingsGroup;
+            $.settingsGroup = settingsGroup;
             return this;
         }
-        public Builder settingsGroup(@Nullable String settingsGroup) {
-            this.settingsGroup = Codegen.ofNullable(settingsGroup);
-            return this;
-        }        public StackApplicationSettingsGetArgs build() {
-            return new StackApplicationSettingsGetArgs(enabled, settingsGroup);
+
+        public Builder settingsGroup(String settingsGroup) {
+            return settingsGroup(Output.of(settingsGroup));
+        }
+
+        public StackApplicationSettingsGetArgs build() {
+            return $;
         }
     }
+
 }

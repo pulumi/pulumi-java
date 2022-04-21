@@ -21,31 +21,31 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessString")
-      private final @Nullable String accessString;
+    private @Nullable String accessString;
 
     public Optional<String> accessString() {
-        return this.accessString == null ? Optional.empty() : Optional.ofNullable(this.accessString);
+        return Optional.ofNullable(this.accessString);
     }
 
     @Import(name="engine")
-      private final @Nullable String engine;
+    private @Nullable String engine;
 
     public Optional<String> engine() {
-        return this.engine == null ? Optional.empty() : Optional.ofNullable(this.engine);
+        return Optional.ofNullable(this.engine);
     }
 
     @Import(name="noPasswordRequired")
-      private final @Nullable Boolean noPasswordRequired;
+    private @Nullable Boolean noPasswordRequired;
 
     public Optional<Boolean> noPasswordRequired() {
-        return this.noPasswordRequired == null ? Optional.empty() : Optional.ofNullable(this.noPasswordRequired);
+        return Optional.ofNullable(this.noPasswordRequired);
     }
 
     @Import(name="passwords")
-      private final @Nullable List<String> passwords;
+    private @Nullable List<String> passwords;
 
-    public List<String> passwords() {
-        return this.passwords == null ? List.of() : this.passwords;
+    public Optional<List<String>> passwords() {
+        return Optional.ofNullable(this.passwords);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
@@ -64,94 +64,79 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable String userName;
+    private @Nullable String userName;
 
     public Optional<String> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public GetUserArgs(
-        @Nullable String accessString,
-        @Nullable String engine,
-        @Nullable Boolean noPasswordRequired,
-        @Nullable List<String> passwords,
-        String userId,
-        @Nullable String userName) {
-        this.accessString = accessString;
-        this.engine = engine;
-        this.noPasswordRequired = noPasswordRequired;
-        this.passwords = passwords;
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-        this.userName = userName;
-    }
+    private GetUserArgs() {}
 
-    private GetUserArgs() {
-        this.accessString = null;
-        this.engine = null;
-        this.noPasswordRequired = null;
-        this.passwords = List.of();
-        this.userId = null;
-        this.userName = null;
+    private GetUserArgs(GetUserArgs $) {
+        this.accessString = $.accessString;
+        this.engine = $.engine;
+        this.noPasswordRequired = $.noPasswordRequired;
+        this.passwords = $.passwords;
+        this.userId = $.userId;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessString;
-        private @Nullable String engine;
-        private @Nullable Boolean noPasswordRequired;
-        private @Nullable List<String> passwords;
-        private String userId;
-        private @Nullable String userName;
+        private GetUserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserArgs();
         }
 
         public Builder(GetUserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessString = defaults.accessString;
-    	      this.engine = defaults.engine;
-    	      this.noPasswordRequired = defaults.noPasswordRequired;
-    	      this.passwords = defaults.passwords;
-    	      this.userId = defaults.userId;
-    	      this.userName = defaults.userName;
+            $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessString(@Nullable String accessString) {
-            this.accessString = accessString;
+            $.accessString = accessString;
             return this;
         }
+
         public Builder engine(@Nullable String engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
+
         public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
-            this.noPasswordRequired = noPasswordRequired;
+            $.noPasswordRequired = noPasswordRequired;
             return this;
         }
+
         public Builder passwords(@Nullable List<String> passwords) {
-            this.passwords = passwords;
+            $.passwords = passwords;
             return this;
         }
+
         public Builder passwords(String... passwords) {
             return passwords(List.of(passwords));
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userName(@Nullable String userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public GetUserArgs build() {
-            return new GetUserArgs(accessString, engine, noPasswordRequired, passwords, userId, userName);
+        }
+
+        public GetUserArgs build() {
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

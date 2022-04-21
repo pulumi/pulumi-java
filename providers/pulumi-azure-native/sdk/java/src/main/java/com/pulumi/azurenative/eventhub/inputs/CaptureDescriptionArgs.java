@@ -7,10 +7,10 @@ import com.pulumi.azurenative.eventhub.enums.EncodingCaptureDescription;
 import com.pulumi.azurenative.eventhub.inputs.DestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<DestinationArgs> destination;
+    private @Nullable Output<DestinationArgs> destination;
 
-    public Output<DestinationArgs> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<DestinationArgs>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<EncodingCaptureDescription> encoding;
+    private @Nullable Output<EncodingCaptureDescription> encoding;
 
-    public Output<EncodingCaptureDescription> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<EncodingCaptureDescription>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="intervalInSeconds")
-      private final @Nullable Output<Integer> intervalInSeconds;
+    private @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
+    public Optional<Output<Integer>> intervalInSeconds() {
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sizeLimitInBytes")
-      private final @Nullable Output<Integer> sizeLimitInBytes;
+    private @Nullable Output<Integer> sizeLimitInBytes;
 
-    public Output<Integer> sizeLimitInBytes() {
-        return this.sizeLimitInBytes == null ? Codegen.empty() : this.sizeLimitInBytes;
+    public Optional<Output<Integer>> sizeLimitInBytes() {
+        return Optional.ofNullable(this.sizeLimitInBytes);
     }
 
     /**
@@ -82,115 +82,98 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="skipEmptyArchives")
-      private final @Nullable Output<Boolean> skipEmptyArchives;
+    private @Nullable Output<Boolean> skipEmptyArchives;
 
-    public Output<Boolean> skipEmptyArchives() {
-        return this.skipEmptyArchives == null ? Codegen.empty() : this.skipEmptyArchives;
+    public Optional<Output<Boolean>> skipEmptyArchives() {
+        return Optional.ofNullable(this.skipEmptyArchives);
     }
 
-    public CaptureDescriptionArgs(
-        @Nullable Output<DestinationArgs> destination,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<EncodingCaptureDescription> encoding,
-        @Nullable Output<Integer> intervalInSeconds,
-        @Nullable Output<Integer> sizeLimitInBytes,
-        @Nullable Output<Boolean> skipEmptyArchives) {
-        this.destination = destination;
-        this.enabled = enabled;
-        this.encoding = encoding;
-        this.intervalInSeconds = intervalInSeconds;
-        this.sizeLimitInBytes = sizeLimitInBytes;
-        this.skipEmptyArchives = skipEmptyArchives;
-    }
+    private CaptureDescriptionArgs() {}
 
-    private CaptureDescriptionArgs() {
-        this.destination = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.encoding = Codegen.empty();
-        this.intervalInSeconds = Codegen.empty();
-        this.sizeLimitInBytes = Codegen.empty();
-        this.skipEmptyArchives = Codegen.empty();
+    private CaptureDescriptionArgs(CaptureDescriptionArgs $) {
+        this.destination = $.destination;
+        this.enabled = $.enabled;
+        this.encoding = $.encoding;
+        this.intervalInSeconds = $.intervalInSeconds;
+        this.sizeLimitInBytes = $.sizeLimitInBytes;
+        this.skipEmptyArchives = $.skipEmptyArchives;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaptureDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DestinationArgs> destination;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<EncodingCaptureDescription> encoding;
-        private @Nullable Output<Integer> intervalInSeconds;
-        private @Nullable Output<Integer> sizeLimitInBytes;
-        private @Nullable Output<Boolean> skipEmptyArchives;
+        private CaptureDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaptureDescriptionArgs();
         }
 
         public Builder(CaptureDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.enabled = defaults.enabled;
-    	      this.encoding = defaults.encoding;
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
-    	      this.sizeLimitInBytes = defaults.sizeLimitInBytes;
-    	      this.skipEmptyArchives = defaults.skipEmptyArchives;
+            $ = new CaptureDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Output<DestinationArgs> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable DestinationArgs destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(DestinationArgs destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder encoding(@Nullable Output<EncodingCaptureDescription> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable EncodingCaptureDescription encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(EncodingCaptureDescription encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
-        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Codegen.ofNullable(intervalInSeconds);
-            return this;
+
+        public Builder intervalInSeconds(Integer intervalInSeconds) {
+            return intervalInSeconds(Output.of(intervalInSeconds));
         }
+
         public Builder sizeLimitInBytes(@Nullable Output<Integer> sizeLimitInBytes) {
-            this.sizeLimitInBytes = sizeLimitInBytes;
+            $.sizeLimitInBytes = sizeLimitInBytes;
             return this;
         }
-        public Builder sizeLimitInBytes(@Nullable Integer sizeLimitInBytes) {
-            this.sizeLimitInBytes = Codegen.ofNullable(sizeLimitInBytes);
-            return this;
+
+        public Builder sizeLimitInBytes(Integer sizeLimitInBytes) {
+            return sizeLimitInBytes(Output.of(sizeLimitInBytes));
         }
+
         public Builder skipEmptyArchives(@Nullable Output<Boolean> skipEmptyArchives) {
-            this.skipEmptyArchives = skipEmptyArchives;
+            $.skipEmptyArchives = skipEmptyArchives;
             return this;
         }
-        public Builder skipEmptyArchives(@Nullable Boolean skipEmptyArchives) {
-            this.skipEmptyArchives = Codegen.ofNullable(skipEmptyArchives);
-            return this;
-        }        public CaptureDescriptionArgs build() {
-            return new CaptureDescriptionArgs(destination, enabled, encoding, intervalInSeconds, sizeLimitInBytes, skipEmptyArchives);
+
+        public Builder skipEmptyArchives(Boolean skipEmptyArchives) {
+            return skipEmptyArchives(Output.of(skipEmptyArchives));
+        }
+
+        public CaptureDescriptionArgs build() {
+            return $;
         }
     }
+
 }

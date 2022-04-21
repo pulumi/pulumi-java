@@ -17,7 +17,7 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serverId", required=true)
-      private final String serverId;
+    private String serverId;
 
     public String serverId() {
         return this.serverId;
@@ -39,64 +39,59 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="storageSyncServiceName", required=true)
-      private final String storageSyncServiceName;
+    private String storageSyncServiceName;
 
     public String storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
-    public GetRegisteredServerArgs(
-        String resourceGroupName,
-        String serverId,
-        String storageSyncServiceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverId = Objects.requireNonNull(serverId, "expected parameter 'serverId' to be non-null");
-        this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
-    }
+    private GetRegisteredServerArgs() {}
 
-    private GetRegisteredServerArgs() {
-        this.resourceGroupName = null;
-        this.serverId = null;
-        this.storageSyncServiceName = null;
+    private GetRegisteredServerArgs(GetRegisteredServerArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverId = $.serverId;
+        this.storageSyncServiceName = $.storageSyncServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegisteredServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serverId;
-        private String storageSyncServiceName;
+        private GetRegisteredServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegisteredServerArgs();
         }
 
         public Builder(GetRegisteredServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverId = defaults.serverId;
-    	      this.storageSyncServiceName = defaults.storageSyncServiceName;
+            $ = new GetRegisteredServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverId(String serverId) {
-            this.serverId = Objects.requireNonNull(serverId);
+            $.serverId = serverId;
             return this;
         }
+
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
+            $.storageSyncServiceName = storageSyncServiceName;
             return this;
-        }        public GetRegisteredServerArgs build() {
-            return new GetRegisteredServerArgs(resourceGroupName, serverId, storageSyncServiceName);
+        }
+
+        public GetRegisteredServerArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverId = Objects.requireNonNull($.serverId, "expected parameter 'serverId' to be non-null");
+            $.storageSyncServiceName = Objects.requireNonNull($.storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
+            return $;
         }
     }
+
 }

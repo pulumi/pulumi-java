@@ -33,10 +33,10 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authentication")
-      private final @Nullable WebActivityAuthenticationResponse authentication;
+    private @Nullable WebActivityAuthenticationResponse authentication;
 
     public Optional<WebActivityAuthenticationResponse> authentication() {
-        return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="body")
-      private final @Nullable Object body;
+    private @Nullable Object body;
 
     public Optional<Object> body() {
-        return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasets")
-      private final @Nullable List<DatasetReferenceResponse> datasets;
+    private @Nullable List<DatasetReferenceResponse> datasets;
 
-    public List<DatasetReferenceResponse> datasets() {
-        return this.datasets == null ? List.of() : this.datasets;
+    public Optional<List<DatasetReferenceResponse>> datasets() {
+        return Optional.ofNullable(this.datasets);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="headers")
-      private final @Nullable Object headers;
+    private @Nullable Object headers;
 
     public Optional<Object> headers() {
-        return this.headers == null ? Optional.empty() : Optional.ofNullable(this.headers);
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkedServices")
-      private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
+    private @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 
-    public List<LinkedServiceReferenceResponse> linkedServices() {
-        return this.linkedServices == null ? List.of() : this.linkedServices;
+    public Optional<List<LinkedServiceReferenceResponse>> linkedServices() {
+        return Optional.ofNullable(this.linkedServices);
     }
 
     /**
@@ -132,7 +132,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="method", required=true)
-      private final String method;
+    private String method;
 
     public String method() {
         return this.method;
@@ -143,7 +143,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -154,10 +154,10 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -166,7 +166,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -177,7 +177,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url", required=true)
-      private final Object url;
+    private Object url;
 
     public Object url() {
         return this.url;
@@ -188,184 +188,148 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public WebActivityResponse(
-        @Nullable WebActivityAuthenticationResponse authentication,
-        @Nullable Object body,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable List<DatasetReferenceResponse> datasets,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object headers,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable List<LinkedServiceReferenceResponse> linkedServices,
-        String method,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        Object url,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.authentication = authentication;
-        this.body = body;
-        this.connectVia = connectVia;
-        this.datasets = datasets;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.headers = headers;
-        this.linkedServiceName = linkedServiceName;
-        this.linkedServices = linkedServices;
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.userProperties = userProperties;
-    }
+    private WebActivityResponse() {}
 
-    private WebActivityResponse() {
-        this.authentication = null;
-        this.body = null;
-        this.connectVia = null;
-        this.datasets = List.of();
-        this.dependsOn = List.of();
-        this.description = null;
-        this.headers = null;
-        this.linkedServiceName = null;
-        this.linkedServices = List.of();
-        this.method = null;
-        this.name = null;
-        this.policy = null;
-        this.type = null;
-        this.url = null;
-        this.userProperties = List.of();
+    private WebActivityResponse(WebActivityResponse $) {
+        this.authentication = $.authentication;
+        this.body = $.body;
+        this.connectVia = $.connectVia;
+        this.datasets = $.datasets;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.headers = $.headers;
+        this.linkedServiceName = $.linkedServiceName;
+        this.linkedServices = $.linkedServices;
+        this.method = $.method;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.type = $.type;
+        this.url = $.url;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebActivityAuthenticationResponse authentication;
-        private @Nullable Object body;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable List<DatasetReferenceResponse> datasets;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable Object headers;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable List<LinkedServiceReferenceResponse> linkedServices;
-        private String method;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private String type;
-        private Object url;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private WebActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebActivityResponse();
         }
 
         public Builder(WebActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.body = defaults.body;
-    	      this.connectVia = defaults.connectVia;
-    	      this.datasets = defaults.datasets;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.headers = defaults.headers;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.linkedServices = defaults.linkedServices;
-    	      this.method = defaults.method;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
-    	      this.userProperties = defaults.userProperties;
+            $ = new WebActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(@Nullable WebActivityAuthenticationResponse authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
+
         public Builder body(@Nullable Object body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder datasets(@Nullable List<DatasetReferenceResponse> datasets) {
-            this.datasets = datasets;
+            $.datasets = datasets;
             return this;
         }
+
         public Builder datasets(DatasetReferenceResponse... datasets) {
             return datasets(List.of(datasets));
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder headers(@Nullable Object headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder linkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
-            this.linkedServices = linkedServices;
+            $.linkedServices = linkedServices;
             return this;
         }
+
         public Builder linkedServices(LinkedServiceReferenceResponse... linkedServices) {
             return linkedServices(List.of(linkedServices));
         }
+
         public Builder method(String method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public WebActivityResponse build() {
-            return new WebActivityResponse(authentication, body, connectVia, datasets, dependsOn, description, headers, linkedServiceName, linkedServices, method, name, policy, type, url, userProperties);
+        }
+
+        public WebActivityResponse build() {
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

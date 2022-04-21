@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends com.pulu
      * 
      */
     @Import(name="newValue", required=true)
-      private final GooglePrivacyDlpV2ValueResponse newValue;
+    private GooglePrivacyDlpV2ValueResponse newValue;
 
     public GooglePrivacyDlpV2ValueResponse newValue() {
         return this.newValue;
     }
 
-    public GooglePrivacyDlpV2ReplaceValueConfigResponse(GooglePrivacyDlpV2ValueResponse newValue) {
-        this.newValue = Objects.requireNonNull(newValue, "expected parameter 'newValue' to be non-null");
-    }
+    private GooglePrivacyDlpV2ReplaceValueConfigResponse() {}
 
-    private GooglePrivacyDlpV2ReplaceValueConfigResponse() {
-        this.newValue = null;
+    private GooglePrivacyDlpV2ReplaceValueConfigResponse(GooglePrivacyDlpV2ReplaceValueConfigResponse $) {
+        this.newValue = $.newValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ReplaceValueConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2ValueResponse newValue;
+        private GooglePrivacyDlpV2ReplaceValueConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ReplaceValueConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ReplaceValueConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.newValue = defaults.newValue;
+            $ = new GooglePrivacyDlpV2ReplaceValueConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder newValue(GooglePrivacyDlpV2ValueResponse newValue) {
-            this.newValue = Objects.requireNonNull(newValue);
+            $.newValue = newValue;
             return this;
-        }        public GooglePrivacyDlpV2ReplaceValueConfigResponse build() {
-            return new GooglePrivacyDlpV2ReplaceValueConfigResponse(newValue);
+        }
+
+        public GooglePrivacyDlpV2ReplaceValueConfigResponse build() {
+            $.newValue = Objects.requireNonNull($.newValue, "expected parameter 'newValue' to be non-null");
+            return $;
         }
     }
+
 }

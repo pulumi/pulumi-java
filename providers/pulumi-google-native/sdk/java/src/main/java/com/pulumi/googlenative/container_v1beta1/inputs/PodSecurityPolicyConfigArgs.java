@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PodSecurityPolicyConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public PodSecurityPolicyConfigArgs(@Nullable Output<Boolean> enabled) {
-        this.enabled = enabled;
-    }
+    private PodSecurityPolicyConfigArgs() {}
 
-    private PodSecurityPolicyConfigArgs() {
-        this.enabled = Codegen.empty();
+    private PodSecurityPolicyConfigArgs(PodSecurityPolicyConfigArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodSecurityPolicyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
+        private PodSecurityPolicyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodSecurityPolicyConfigArgs();
         }
 
         public Builder(PodSecurityPolicyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new PodSecurityPolicyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public PodSecurityPolicyConfigArgs build() {
-            return new PodSecurityPolicyConfigArgs(enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public PodSecurityPolicyConfigArgs build() {
+            return $;
         }
     }
+
 }

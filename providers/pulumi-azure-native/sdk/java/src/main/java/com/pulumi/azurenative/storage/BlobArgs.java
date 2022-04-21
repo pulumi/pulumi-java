@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessTier")
-      private final @Nullable Output<BlobAccessTier> accessTier;
+    private @Nullable Output<BlobAccessTier> accessTier;
 
-    public Output<BlobAccessTier> accessTier() {
-        return this.accessTier == null ? Codegen.empty() : this.accessTier;
+    public Optional<Output<BlobAccessTier>> accessTier() {
+        return Optional.ofNullable(this.accessTier);
     }
 
     /**
@@ -35,7 +36,7 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -46,10 +47,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blobName")
-      private final @Nullable Output<String> blobName;
+    private @Nullable Output<String> blobName;
 
-    public Output<String> blobName() {
-        return this.blobName == null ? Codegen.empty() : this.blobName;
+    public Optional<Output<String>> blobName() {
+        return Optional.ofNullable(this.blobName);
     }
 
     /**
@@ -57,7 +58,7 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerName", required=true)
-      private final Output<String> containerName;
+    private Output<String> containerName;
 
     public Output<String> containerName() {
         return this.containerName;
@@ -68,10 +69,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentMd5")
-      private final @Nullable Output<String> contentMd5;
+    private @Nullable Output<String> contentMd5;
 
-    public Output<String> contentMd5() {
-        return this.contentMd5 == null ? Codegen.empty() : this.contentMd5;
+    public Optional<Output<String>> contentMd5() {
+        return Optional.ofNullable(this.contentMd5);
     }
 
     /**
@@ -79,10 +80,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -90,10 +91,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -101,7 +102,7 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -112,10 +113,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<AssetOrArchive> source;
+    private @Nullable Output<AssetOrArchive> source;
 
-    public Output<AssetOrArchive> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<AssetOrArchive>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -123,167 +124,142 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<BlobType> type;
+    private @Nullable Output<BlobType> type;
 
-    public Output<BlobType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<BlobType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public BlobArgs(
-        @Nullable Output<BlobAccessTier> accessTier,
-        Output<String> accountName,
-        @Nullable Output<String> blobName,
-        Output<String> containerName,
-        @Nullable Output<String> contentMd5,
-        @Nullable Output<String> contentType,
-        @Nullable Output<Map<String,String>> metadata,
-        Output<String> resourceGroupName,
-        @Nullable Output<AssetOrArchive> source,
-        @Nullable Output<BlobType> type) {
-        this.accessTier = accessTier;
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.blobName = blobName;
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.contentMd5 = contentMd5;
-        this.contentType = contentType;
-        this.metadata = metadata;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.source = source;
-        this.type = Codegen.objectProp("type", BlobType.class).output().arg(type).def(BlobType.Block).getNullable();
-    }
+    private BlobArgs() {}
 
-    private BlobArgs() {
-        this.accessTier = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.blobName = Codegen.empty();
-        this.containerName = Codegen.empty();
-        this.contentMd5 = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.source = Codegen.empty();
-        this.type = Codegen.empty();
+    private BlobArgs(BlobArgs $) {
+        this.accessTier = $.accessTier;
+        this.accountName = $.accountName;
+        this.blobName = $.blobName;
+        this.containerName = $.containerName;
+        this.contentMd5 = $.contentMd5;
+        this.contentType = $.contentType;
+        this.metadata = $.metadata;
+        this.resourceGroupName = $.resourceGroupName;
+        this.source = $.source;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BlobAccessTier> accessTier;
-        private Output<String> accountName;
-        private @Nullable Output<String> blobName;
-        private Output<String> containerName;
-        private @Nullable Output<String> contentMd5;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<Map<String,String>> metadata;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<AssetOrArchive> source;
-        private @Nullable Output<BlobType> type;
+        private BlobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobArgs();
         }
 
         public Builder(BlobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTier = defaults.accessTier;
-    	      this.accountName = defaults.accountName;
-    	      this.blobName = defaults.blobName;
-    	      this.containerName = defaults.containerName;
-    	      this.contentMd5 = defaults.contentMd5;
-    	      this.contentType = defaults.contentType;
-    	      this.metadata = defaults.metadata;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.source = defaults.source;
-    	      this.type = defaults.type;
+            $ = new BlobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessTier(@Nullable Output<BlobAccessTier> accessTier) {
-            this.accessTier = accessTier;
+            $.accessTier = accessTier;
             return this;
         }
-        public Builder accessTier(@Nullable BlobAccessTier accessTier) {
-            this.accessTier = Codegen.ofNullable(accessTier);
-            return this;
+
+        public Builder accessTier(BlobAccessTier accessTier) {
+            return accessTier(Output.of(accessTier));
         }
+
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder blobName(@Nullable Output<String> blobName) {
-            this.blobName = blobName;
+            $.blobName = blobName;
             return this;
         }
-        public Builder blobName(@Nullable String blobName) {
-            this.blobName = Codegen.ofNullable(blobName);
-            return this;
+
+        public Builder blobName(String blobName) {
+            return blobName(Output.of(blobName));
         }
+
         public Builder containerName(Output<String> containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Output.of(Objects.requireNonNull(containerName));
-            return this;
+            return containerName(Output.of(containerName));
         }
+
         public Builder contentMd5(@Nullable Output<String> contentMd5) {
-            this.contentMd5 = contentMd5;
+            $.contentMd5 = contentMd5;
             return this;
         }
-        public Builder contentMd5(@Nullable String contentMd5) {
-            this.contentMd5 = Codegen.ofNullable(contentMd5);
-            return this;
+
+        public Builder contentMd5(String contentMd5) {
+            return contentMd5(Output.of(contentMd5));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder source(@Nullable Output<AssetOrArchive> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(AssetOrArchive source) {
+            return source(Output.of(source));
         }
+
         public Builder type(@Nullable Output<BlobType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable BlobType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public BlobArgs build() {
-            return new BlobArgs(accessTier, accountName, blobName, containerName, contentMd5, contentType, metadata, resourceGroupName, source, type);
+
+        public Builder type(BlobType type) {
+            return type(Output.of(type));
+        }
+
+        public BlobArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.type = Codegen.objectProp("type", BlobType.class).output().arg($.type).def(BlobType.Block).getNullable();
+            return $;
         }
     }
+
 }

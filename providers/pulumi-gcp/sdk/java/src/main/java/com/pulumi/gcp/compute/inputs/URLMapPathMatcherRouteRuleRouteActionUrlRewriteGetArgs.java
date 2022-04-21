@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs extend
      * 
      */
     @Import(name="hostRewrite")
-      private final @Nullable Output<String> hostRewrite;
+    private @Nullable Output<String> hostRewrite;
 
-    public Output<String> hostRewrite() {
-        return this.hostRewrite == null ? Codegen.empty() : this.hostRewrite;
+    public Optional<Output<String>> hostRewrite() {
+        return Optional.ofNullable(this.hostRewrite);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs extend
      * 
      */
     @Import(name="pathPrefixRewrite")
-      private final @Nullable Output<String> pathPrefixRewrite;
+    private @Nullable Output<String> pathPrefixRewrite;
 
-    public Output<String> pathPrefixRewrite() {
-        return this.pathPrefixRewrite == null ? Codegen.empty() : this.pathPrefixRewrite;
+    public Optional<Output<String>> pathPrefixRewrite() {
+        return Optional.ofNullable(this.pathPrefixRewrite);
     }
 
-    public URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs(
-        @Nullable Output<String> hostRewrite,
-        @Nullable Output<String> pathPrefixRewrite) {
-        this.hostRewrite = hostRewrite;
-        this.pathPrefixRewrite = pathPrefixRewrite;
-    }
+    private URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs() {}
 
-    private URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs() {
-        this.hostRewrite = Codegen.empty();
-        this.pathPrefixRewrite = Codegen.empty();
+    private URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs(URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs $) {
+        this.hostRewrite = $.hostRewrite;
+        this.pathPrefixRewrite = $.pathPrefixRewrite;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hostRewrite;
-        private @Nullable Output<String> pathPrefixRewrite;
+        private URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs();
         }
 
         public Builder(URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostRewrite = defaults.hostRewrite;
-    	      this.pathPrefixRewrite = defaults.pathPrefixRewrite;
+            $ = new URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostRewrite(@Nullable Output<String> hostRewrite) {
-            this.hostRewrite = hostRewrite;
+            $.hostRewrite = hostRewrite;
             return this;
         }
-        public Builder hostRewrite(@Nullable String hostRewrite) {
-            this.hostRewrite = Codegen.ofNullable(hostRewrite);
-            return this;
+
+        public Builder hostRewrite(String hostRewrite) {
+            return hostRewrite(Output.of(hostRewrite));
         }
+
         public Builder pathPrefixRewrite(@Nullable Output<String> pathPrefixRewrite) {
-            this.pathPrefixRewrite = pathPrefixRewrite;
+            $.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
-        public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
-            this.pathPrefixRewrite = Codegen.ofNullable(pathPrefixRewrite);
-            return this;
-        }        public URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs build() {
-            return new URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs(hostRewrite, pathPrefixRewrite);
+
+        public Builder pathPrefixRewrite(String pathPrefixRewrite) {
+            return pathPrefixRewrite(Output.of(pathPrefixRewrite));
+        }
+
+        public URLMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,7 +7,6 @@ import com.pulumi.azurenative.logic.enums.MessageFilterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class EdifactMessageFilterArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="messageFilterType", required=true)
-      private final Output<Either<String,MessageFilterType>> messageFilterType;
+    private Output<Either<String,MessageFilterType>> messageFilterType;
 
     public Output<Either<String,MessageFilterType>> messageFilterType() {
         return this.messageFilterType;
     }
 
-    public EdifactMessageFilterArgs(Output<Either<String,MessageFilterType>> messageFilterType) {
-        this.messageFilterType = Objects.requireNonNull(messageFilterType, "expected parameter 'messageFilterType' to be non-null");
-    }
+    private EdifactMessageFilterArgs() {}
 
-    private EdifactMessageFilterArgs() {
-        this.messageFilterType = Codegen.empty();
+    private EdifactMessageFilterArgs(EdifactMessageFilterArgs $) {
+        this.messageFilterType = $.messageFilterType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactMessageFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,MessageFilterType>> messageFilterType;
+        private EdifactMessageFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactMessageFilterArgs();
         }
 
         public Builder(EdifactMessageFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageFilterType = defaults.messageFilterType;
+            $ = new EdifactMessageFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageFilterType(Output<Either<String,MessageFilterType>> messageFilterType) {
-            this.messageFilterType = Objects.requireNonNull(messageFilterType);
+            $.messageFilterType = messageFilterType;
             return this;
         }
+
         public Builder messageFilterType(Either<String,MessageFilterType> messageFilterType) {
-            this.messageFilterType = Output.of(Objects.requireNonNull(messageFilterType));
-            return this;
-        }        public EdifactMessageFilterArgs build() {
-            return new EdifactMessageFilterArgs(messageFilterType);
+            return messageFilterType(Output.of(messageFilterType));
+        }
+
+        public EdifactMessageFilterArgs build() {
+            $.messageFilterType = Objects.requireNonNull($.messageFilterType, "expected parameter 'messageFilterType' to be non-null");
+            return $;
         }
     }
+
 }

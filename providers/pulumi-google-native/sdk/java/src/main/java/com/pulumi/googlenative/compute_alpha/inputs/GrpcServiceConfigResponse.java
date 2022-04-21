@@ -23,7 +23,7 @@ public final class GrpcServiceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="callCredentials", required=true)
-      private final CallCredentialsResponse callCredentials;
+    private CallCredentialsResponse callCredentials;
 
     public CallCredentialsResponse callCredentials() {
         return this.callCredentials;
@@ -34,7 +34,7 @@ public final class GrpcServiceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="channelCredentials", required=true)
-      private final ChannelCredentialsResponse channelCredentials;
+    private ChannelCredentialsResponse channelCredentials;
 
     public ChannelCredentialsResponse channelCredentials() {
         return this.channelCredentials;
@@ -45,64 +45,59 @@ public final class GrpcServiceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetUri", required=true)
-      private final String targetUri;
+    private String targetUri;
 
     public String targetUri() {
         return this.targetUri;
     }
 
-    public GrpcServiceConfigResponse(
-        CallCredentialsResponse callCredentials,
-        ChannelCredentialsResponse channelCredentials,
-        String targetUri) {
-        this.callCredentials = Objects.requireNonNull(callCredentials, "expected parameter 'callCredentials' to be non-null");
-        this.channelCredentials = Objects.requireNonNull(channelCredentials, "expected parameter 'channelCredentials' to be non-null");
-        this.targetUri = Objects.requireNonNull(targetUri, "expected parameter 'targetUri' to be non-null");
-    }
+    private GrpcServiceConfigResponse() {}
 
-    private GrpcServiceConfigResponse() {
-        this.callCredentials = null;
-        this.channelCredentials = null;
-        this.targetUri = null;
+    private GrpcServiceConfigResponse(GrpcServiceConfigResponse $) {
+        this.callCredentials = $.callCredentials;
+        this.channelCredentials = $.channelCredentials;
+        this.targetUri = $.targetUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrpcServiceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CallCredentialsResponse callCredentials;
-        private ChannelCredentialsResponse channelCredentials;
-        private String targetUri;
+        private GrpcServiceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrpcServiceConfigResponse();
         }
 
         public Builder(GrpcServiceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callCredentials = defaults.callCredentials;
-    	      this.channelCredentials = defaults.channelCredentials;
-    	      this.targetUri = defaults.targetUri;
+            $ = new GrpcServiceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder callCredentials(CallCredentialsResponse callCredentials) {
-            this.callCredentials = Objects.requireNonNull(callCredentials);
+            $.callCredentials = callCredentials;
             return this;
         }
+
         public Builder channelCredentials(ChannelCredentialsResponse channelCredentials) {
-            this.channelCredentials = Objects.requireNonNull(channelCredentials);
+            $.channelCredentials = channelCredentials;
             return this;
         }
+
         public Builder targetUri(String targetUri) {
-            this.targetUri = Objects.requireNonNull(targetUri);
+            $.targetUri = targetUri;
             return this;
-        }        public GrpcServiceConfigResponse build() {
-            return new GrpcServiceConfigResponse(callCredentials, channelCredentials, targetUri);
+        }
+
+        public GrpcServiceConfigResponse build() {
+            $.callCredentials = Objects.requireNonNull($.callCredentials, "expected parameter 'callCredentials' to be non-null");
+            $.channelCredentials = Objects.requireNonNull($.channelCredentials, "expected parameter 'channelCredentials' to be non-null");
+            $.targetUri = Objects.requireNonNull($.targetUri, "expected parameter 'targetUri' to be non-null");
+            return $;
         }
     }
+
 }

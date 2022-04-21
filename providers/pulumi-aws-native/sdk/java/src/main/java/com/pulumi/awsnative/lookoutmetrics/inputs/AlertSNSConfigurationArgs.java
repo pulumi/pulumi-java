@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class AlertSNSConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -34,63 +33,60 @@ public final class AlertSNSConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="snsTopicArn", required=true)
-      private final Output<String> snsTopicArn;
+    private Output<String> snsTopicArn;
 
     public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
 
-    public AlertSNSConfigurationArgs(
-        Output<String> roleArn,
-        Output<String> snsTopicArn) {
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.snsTopicArn = Objects.requireNonNull(snsTopicArn, "expected parameter 'snsTopicArn' to be non-null");
-    }
+    private AlertSNSConfigurationArgs() {}
 
-    private AlertSNSConfigurationArgs() {
-        this.roleArn = Codegen.empty();
-        this.snsTopicArn = Codegen.empty();
+    private AlertSNSConfigurationArgs(AlertSNSConfigurationArgs $) {
+        this.roleArn = $.roleArn;
+        this.snsTopicArn = $.snsTopicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertSNSConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> roleArn;
-        private Output<String> snsTopicArn;
+        private AlertSNSConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertSNSConfigurationArgs();
         }
 
         public Builder(AlertSNSConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.snsTopicArn = defaults.snsTopicArn;
+            $ = new AlertSNSConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder snsTopicArn(Output<String> snsTopicArn) {
-            this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
+            $.snsTopicArn = snsTopicArn;
             return this;
         }
+
         public Builder snsTopicArn(String snsTopicArn) {
-            this.snsTopicArn = Output.of(Objects.requireNonNull(snsTopicArn));
-            return this;
-        }        public AlertSNSConfigurationArgs build() {
-            return new AlertSNSConfigurationArgs(roleArn, snsTopicArn);
+            return snsTopicArn(Output.of(snsTopicArn));
+        }
+
+        public AlertSNSConfigurationArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.snsTopicArn = Objects.requireNonNull($.snsTopicArn, "expected parameter 'snsTopicArn' to be non-null");
+            return $;
         }
     }
+
 }

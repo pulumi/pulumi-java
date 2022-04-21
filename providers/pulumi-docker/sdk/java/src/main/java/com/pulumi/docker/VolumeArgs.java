@@ -5,13 +5,13 @@ package com.pulumi.docker;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.VolumeLabelArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="driver")
-      private final @Nullable Output<String> driver;
+    private @Nullable Output<String> driver;
 
-    public Output<String> driver() {
-        return this.driver == null ? Codegen.empty() : this.driver;
+    public Optional<Output<String>> driver() {
+        return Optional.ofNullable(this.driver);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="driverOpts")
-      private final @Nullable Output<Map<String,Object>> driverOpts;
+    private @Nullable Output<Map<String,Object>> driverOpts;
 
-    public Output<Map<String,Object>> driverOpts() {
-        return this.driverOpts == null ? Codegen.empty() : this.driverOpts;
+    public Optional<Output<Map<String,Object>>> driverOpts() {
+        return Optional.ofNullable(this.driverOpts);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<VolumeLabelArgs>> labels;
+    private @Nullable Output<List<VolumeLabelArgs>> labels;
 
-    public Output<List<VolumeLabelArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<VolumeLabelArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -57,92 +57,82 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public VolumeArgs(
-        @Nullable Output<String> driver,
-        @Nullable Output<Map<String,Object>> driverOpts,
-        @Nullable Output<List<VolumeLabelArgs>> labels,
-        @Nullable Output<String> name) {
-        this.driver = driver;
-        this.driverOpts = driverOpts;
-        this.labels = labels;
-        this.name = name;
-    }
+    private VolumeArgs() {}
 
-    private VolumeArgs() {
-        this.driver = Codegen.empty();
-        this.driverOpts = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
+    private VolumeArgs(VolumeArgs $) {
+        this.driver = $.driver;
+        this.driverOpts = $.driverOpts;
+        this.labels = $.labels;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> driver;
-        private @Nullable Output<Map<String,Object>> driverOpts;
-        private @Nullable Output<List<VolumeLabelArgs>> labels;
-        private @Nullable Output<String> name;
+        private VolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeArgs();
         }
 
         public Builder(VolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.driver = defaults.driver;
-    	      this.driverOpts = defaults.driverOpts;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
+            $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder driver(@Nullable Output<String> driver) {
-            this.driver = driver;
+            $.driver = driver;
             return this;
         }
-        public Builder driver(@Nullable String driver) {
-            this.driver = Codegen.ofNullable(driver);
-            return this;
+
+        public Builder driver(String driver) {
+            return driver(Output.of(driver));
         }
+
         public Builder driverOpts(@Nullable Output<Map<String,Object>> driverOpts) {
-            this.driverOpts = driverOpts;
+            $.driverOpts = driverOpts;
             return this;
         }
-        public Builder driverOpts(@Nullable Map<String,Object> driverOpts) {
-            this.driverOpts = Codegen.ofNullable(driverOpts);
-            return this;
+
+        public Builder driverOpts(Map<String,Object> driverOpts) {
+            return driverOpts(Output.of(driverOpts));
         }
+
         public Builder labels(@Nullable Output<List<VolumeLabelArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<VolumeLabelArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<VolumeLabelArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(VolumeLabelArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public VolumeArgs build() {
-            return new VolumeArgs(driver, driverOpts, labels, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public VolumeArgs build() {
+            return $;
         }
     }
+
 }

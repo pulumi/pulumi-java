@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * 
      */
     @Import(name="urlTypeHint", required=true)
-      private final String urlTypeHint;
+    private String urlTypeHint;
 
     public String urlTypeHint() {
         return this.urlTypeHint;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(
-        String url,
-        String urlTypeHint) {
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.urlTypeHint = Objects.requireNonNull(urlTypeHint, "expected parameter 'urlTypeHint' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse() {
-        this.url = null;
-        this.urlTypeHint = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse $) {
+        this.url = $.url;
+        this.urlTypeHint = $.urlTypeHint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String url;
-        private String urlTypeHint;
+        private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.url = defaults.url;
-    	      this.urlTypeHint = defaults.urlTypeHint;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder urlTypeHint(String urlTypeHint) {
-            this.urlTypeHint = Objects.requireNonNull(urlTypeHint);
+            $.urlTypeHint = urlTypeHint;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(url, urlTypeHint);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            $.urlTypeHint = Objects.requireNonNull($.urlTypeHint, "expected parameter 'urlTypeHint' to be non-null");
+            return $;
         }
     }
+
 }

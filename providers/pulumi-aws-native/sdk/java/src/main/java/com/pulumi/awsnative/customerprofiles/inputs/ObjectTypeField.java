@@ -24,10 +24,10 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable ObjectTypeFieldContentType contentType;
+    private @Nullable ObjectTypeFieldContentType contentType;
 
     public Optional<ObjectTypeFieldContentType> contentType() {
-        return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable String source;
+    private @Nullable String source;
 
     public Optional<String> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public ObjectTypeField(
-        @Nullable ObjectTypeFieldContentType contentType,
-        @Nullable String source,
-        @Nullable String target) {
-        this.contentType = contentType;
-        this.source = source;
-        this.target = target;
-    }
+    private ObjectTypeField() {}
 
-    private ObjectTypeField() {
-        this.contentType = null;
-        this.source = null;
-        this.target = null;
+    private ObjectTypeField(ObjectTypeField $) {
+        this.contentType = $.contentType;
+        this.source = $.source;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectTypeField defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ObjectTypeFieldContentType contentType;
-        private @Nullable String source;
-        private @Nullable String target;
+        private ObjectTypeField $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectTypeField();
         }
 
         public Builder(ObjectTypeField defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.source = defaults.source;
-    	      this.target = defaults.target;
+            $ = new ObjectTypeField(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable ObjectTypeFieldContentType contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
+
         public Builder source(@Nullable String source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public ObjectTypeField build() {
-            return new ObjectTypeField(contentType, source, target);
+        }
+
+        public ObjectTypeField build() {
+            return $;
         }
     }
+
 }

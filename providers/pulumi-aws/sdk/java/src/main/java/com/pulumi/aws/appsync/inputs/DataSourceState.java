@@ -10,9 +10,9 @@ import com.pulumi.aws.appsync.inputs.DataSourceLambdaConfigGetArgs;
 import com.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId")
-      private final @Nullable Output<String> apiId;
+    private @Nullable Output<String> apiId;
 
-    public Output<String> apiId() {
-        return this.apiId == null ? Codegen.empty() : this.apiId;
+    public Optional<Output<String>> apiId() {
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dynamodbConfig")
-      private final @Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig;
+    private @Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig;
 
-    public Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig() {
-        return this.dynamodbConfig == null ? Codegen.empty() : this.dynamodbConfig;
+    public Optional<Output<DataSourceDynamodbConfigGetArgs>> dynamodbConfig() {
+        return Optional.ofNullable(this.dynamodbConfig);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elasticsearchConfig")
-      private final @Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig;
+    private @Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig;
 
-    public Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig() {
-        return this.elasticsearchConfig == null ? Codegen.empty() : this.elasticsearchConfig;
+    public Optional<Output<DataSourceElasticsearchConfigGetArgs>> elasticsearchConfig() {
+        return Optional.ofNullable(this.elasticsearchConfig);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpConfig")
-      private final @Nullable Output<DataSourceHttpConfigGetArgs> httpConfig;
+    private @Nullable Output<DataSourceHttpConfigGetArgs> httpConfig;
 
-    public Output<DataSourceHttpConfigGetArgs> httpConfig() {
-        return this.httpConfig == null ? Codegen.empty() : this.httpConfig;
+    public Optional<Output<DataSourceHttpConfigGetArgs>> httpConfig() {
+        return Optional.ofNullable(this.httpConfig);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lambdaConfig")
-      private final @Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig;
+    private @Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig;
 
-    public Output<DataSourceLambdaConfigGetArgs> lambdaConfig() {
-        return this.lambdaConfig == null ? Codegen.empty() : this.lambdaConfig;
+    public Optional<Output<DataSourceLambdaConfigGetArgs>> lambdaConfig() {
+        return Optional.ofNullable(this.lambdaConfig);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relationalDatabaseConfig")
-      private final @Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig;
+    private @Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig;
 
-    public Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig() {
-        return this.relationalDatabaseConfig == null ? Codegen.empty() : this.relationalDatabaseConfig;
+    public Optional<Output<DataSourceRelationalDatabaseConfigGetArgs>> relationalDatabaseConfig() {
+        return Optional.ofNullable(this.relationalDatabaseConfig);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRoleArn")
-      private final @Nullable Output<String> serviceRoleArn;
+    private @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> serviceRoleArn() {
-        return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
+    public Optional<Output<String>> serviceRoleArn() {
+        return Optional.ofNullable(this.serviceRoleArn);
     }
 
     /**
@@ -135,180 +135,148 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public DataSourceState(
-        @Nullable Output<String> apiId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig,
-        @Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig,
-        @Nullable Output<DataSourceHttpConfigGetArgs> httpConfig,
-        @Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig,
-        @Nullable Output<String> serviceRoleArn,
-        @Nullable Output<String> type) {
-        this.apiId = apiId;
-        this.arn = arn;
-        this.description = description;
-        this.dynamodbConfig = dynamodbConfig;
-        this.elasticsearchConfig = elasticsearchConfig;
-        this.httpConfig = httpConfig;
-        this.lambdaConfig = lambdaConfig;
-        this.name = name;
-        this.relationalDatabaseConfig = relationalDatabaseConfig;
-        this.serviceRoleArn = serviceRoleArn;
-        this.type = type;
-    }
+    private DataSourceState() {}
 
-    private DataSourceState() {
-        this.apiId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.dynamodbConfig = Codegen.empty();
-        this.elasticsearchConfig = Codegen.empty();
-        this.httpConfig = Codegen.empty();
-        this.lambdaConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.relationalDatabaseConfig = Codegen.empty();
-        this.serviceRoleArn = Codegen.empty();
-        this.type = Codegen.empty();
+    private DataSourceState(DataSourceState $) {
+        this.apiId = $.apiId;
+        this.arn = $.arn;
+        this.description = $.description;
+        this.dynamodbConfig = $.dynamodbConfig;
+        this.elasticsearchConfig = $.elasticsearchConfig;
+        this.httpConfig = $.httpConfig;
+        this.lambdaConfig = $.lambdaConfig;
+        this.name = $.name;
+        this.relationalDatabaseConfig = $.relationalDatabaseConfig;
+        this.serviceRoleArn = $.serviceRoleArn;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig;
-        private @Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig;
-        private @Nullable Output<DataSourceHttpConfigGetArgs> httpConfig;
-        private @Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig;
-        private @Nullable Output<String> serviceRoleArn;
-        private @Nullable Output<String> type;
+        private DataSourceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceState();
         }
 
         public Builder(DataSourceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.dynamodbConfig = defaults.dynamodbConfig;
-    	      this.elasticsearchConfig = defaults.elasticsearchConfig;
-    	      this.httpConfig = defaults.httpConfig;
-    	      this.lambdaConfig = defaults.lambdaConfig;
-    	      this.name = defaults.name;
-    	      this.relationalDatabaseConfig = defaults.relationalDatabaseConfig;
-    	      this.serviceRoleArn = defaults.serviceRoleArn;
-    	      this.type = defaults.type;
+            $ = new DataSourceState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable Output<String> apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
-        public Builder apiId(@Nullable String apiId) {
-            this.apiId = Codegen.ofNullable(apiId);
-            return this;
+
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dynamodbConfig(@Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig) {
-            this.dynamodbConfig = dynamodbConfig;
+            $.dynamodbConfig = dynamodbConfig;
             return this;
         }
-        public Builder dynamodbConfig(@Nullable DataSourceDynamodbConfigGetArgs dynamodbConfig) {
-            this.dynamodbConfig = Codegen.ofNullable(dynamodbConfig);
-            return this;
+
+        public Builder dynamodbConfig(DataSourceDynamodbConfigGetArgs dynamodbConfig) {
+            return dynamodbConfig(Output.of(dynamodbConfig));
         }
+
         public Builder elasticsearchConfig(@Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig) {
-            this.elasticsearchConfig = elasticsearchConfig;
+            $.elasticsearchConfig = elasticsearchConfig;
             return this;
         }
-        public Builder elasticsearchConfig(@Nullable DataSourceElasticsearchConfigGetArgs elasticsearchConfig) {
-            this.elasticsearchConfig = Codegen.ofNullable(elasticsearchConfig);
-            return this;
+
+        public Builder elasticsearchConfig(DataSourceElasticsearchConfigGetArgs elasticsearchConfig) {
+            return elasticsearchConfig(Output.of(elasticsearchConfig));
         }
+
         public Builder httpConfig(@Nullable Output<DataSourceHttpConfigGetArgs> httpConfig) {
-            this.httpConfig = httpConfig;
+            $.httpConfig = httpConfig;
             return this;
         }
-        public Builder httpConfig(@Nullable DataSourceHttpConfigGetArgs httpConfig) {
-            this.httpConfig = Codegen.ofNullable(httpConfig);
-            return this;
+
+        public Builder httpConfig(DataSourceHttpConfigGetArgs httpConfig) {
+            return httpConfig(Output.of(httpConfig));
         }
+
         public Builder lambdaConfig(@Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig) {
-            this.lambdaConfig = lambdaConfig;
+            $.lambdaConfig = lambdaConfig;
             return this;
         }
-        public Builder lambdaConfig(@Nullable DataSourceLambdaConfigGetArgs lambdaConfig) {
-            this.lambdaConfig = Codegen.ofNullable(lambdaConfig);
-            return this;
+
+        public Builder lambdaConfig(DataSourceLambdaConfigGetArgs lambdaConfig) {
+            return lambdaConfig(Output.of(lambdaConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder relationalDatabaseConfig(@Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig) {
-            this.relationalDatabaseConfig = relationalDatabaseConfig;
+            $.relationalDatabaseConfig = relationalDatabaseConfig;
             return this;
         }
-        public Builder relationalDatabaseConfig(@Nullable DataSourceRelationalDatabaseConfigGetArgs relationalDatabaseConfig) {
-            this.relationalDatabaseConfig = Codegen.ofNullable(relationalDatabaseConfig);
-            return this;
+
+        public Builder relationalDatabaseConfig(DataSourceRelationalDatabaseConfigGetArgs relationalDatabaseConfig) {
+            return relationalDatabaseConfig(Output.of(relationalDatabaseConfig));
         }
+
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
-            this.serviceRoleArn = serviceRoleArn;
+            $.serviceRoleArn = serviceRoleArn;
             return this;
         }
-        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
-            this.serviceRoleArn = Codegen.ofNullable(serviceRoleArn);
-            return this;
+
+        public Builder serviceRoleArn(String serviceRoleArn) {
+            return serviceRoleArn(Output.of(serviceRoleArn));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public DataSourceState build() {
-            return new DataSourceState(apiId, arn, description, dynamodbConfig, elasticsearchConfig, httpConfig, lambdaConfig, name, relationalDatabaseConfig, serviceRoleArn, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public DataSourceState build() {
+            return $;
         }
     }
+
 }

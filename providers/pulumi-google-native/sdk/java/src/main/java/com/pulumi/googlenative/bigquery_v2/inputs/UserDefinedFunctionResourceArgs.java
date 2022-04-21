@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UserDefinedFunctionResourceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="inlineCode")
-      private final @Nullable Output<String> inlineCode;
+    private @Nullable Output<String> inlineCode;
 
-    public Output<String> inlineCode() {
-        return this.inlineCode == null ? Codegen.empty() : this.inlineCode;
+    public Optional<Output<String>> inlineCode() {
+        return Optional.ofNullable(this.inlineCode);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class UserDefinedFunctionResourceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceUri")
-      private final @Nullable Output<String> resourceUri;
+    private @Nullable Output<String> resourceUri;
 
-    public Output<String> resourceUri() {
-        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
+    public Optional<Output<String>> resourceUri() {
+        return Optional.ofNullable(this.resourceUri);
     }
 
-    public UserDefinedFunctionResourceArgs(
-        @Nullable Output<String> inlineCode,
-        @Nullable Output<String> resourceUri) {
-        this.inlineCode = inlineCode;
-        this.resourceUri = resourceUri;
-    }
+    private UserDefinedFunctionResourceArgs() {}
 
-    private UserDefinedFunctionResourceArgs() {
-        this.inlineCode = Codegen.empty();
-        this.resourceUri = Codegen.empty();
+    private UserDefinedFunctionResourceArgs(UserDefinedFunctionResourceArgs $) {
+        this.inlineCode = $.inlineCode;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserDefinedFunctionResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> inlineCode;
-        private @Nullable Output<String> resourceUri;
+        private UserDefinedFunctionResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserDefinedFunctionResourceArgs();
         }
 
         public Builder(UserDefinedFunctionResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inlineCode = defaults.inlineCode;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new UserDefinedFunctionResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inlineCode(@Nullable Output<String> inlineCode) {
-            this.inlineCode = inlineCode;
+            $.inlineCode = inlineCode;
             return this;
         }
-        public Builder inlineCode(@Nullable String inlineCode) {
-            this.inlineCode = Codegen.ofNullable(inlineCode);
-            return this;
+
+        public Builder inlineCode(String inlineCode) {
+            return inlineCode(Output.of(inlineCode));
         }
+
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
-            this.resourceUri = resourceUri;
+            $.resourceUri = resourceUri;
             return this;
         }
-        public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Codegen.ofNullable(resourceUri);
-            return this;
-        }        public UserDefinedFunctionResourceArgs build() {
-            return new UserDefinedFunctionResourceArgs(inlineCode, resourceUri);
+
+        public Builder resourceUri(String resourceUri) {
+            return resourceUri(Output.of(resourceUri));
+        }
+
+        public UserDefinedFunctionResourceArgs build() {
+            return $;
         }
     }
+
 }

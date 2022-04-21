@@ -23,10 +23,10 @@ public final class ACIServiceResponseResponseVnetConfiguration extends com.pulum
      * 
      */
     @Import(name="subnetName")
-      private final @Nullable String subnetName;
+    private @Nullable String subnetName;
 
     public Optional<String> subnetName() {
-        return this.subnetName == null ? Optional.empty() : Optional.ofNullable(this.subnetName);
+        return Optional.ofNullable(this.subnetName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ACIServiceResponseResponseVnetConfiguration extends com.pulum
      * 
      */
     @Import(name="vnetName")
-      private final @Nullable String vnetName;
+    private @Nullable String vnetName;
 
     public Optional<String> vnetName() {
-        return this.vnetName == null ? Optional.empty() : Optional.ofNullable(this.vnetName);
+        return Optional.ofNullable(this.vnetName);
     }
 
-    public ACIServiceResponseResponseVnetConfiguration(
-        @Nullable String subnetName,
-        @Nullable String vnetName) {
-        this.subnetName = subnetName;
-        this.vnetName = vnetName;
-    }
+    private ACIServiceResponseResponseVnetConfiguration() {}
 
-    private ACIServiceResponseResponseVnetConfiguration() {
-        this.subnetName = null;
-        this.vnetName = null;
+    private ACIServiceResponseResponseVnetConfiguration(ACIServiceResponseResponseVnetConfiguration $) {
+        this.subnetName = $.subnetName;
+        this.vnetName = $.vnetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ACIServiceResponseResponseVnetConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String subnetName;
-        private @Nullable String vnetName;
+        private ACIServiceResponseResponseVnetConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ACIServiceResponseResponseVnetConfiguration();
         }
 
         public Builder(ACIServiceResponseResponseVnetConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetName = defaults.subnetName;
-    	      this.vnetName = defaults.vnetName;
+            $ = new ACIServiceResponseResponseVnetConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetName(@Nullable String subnetName) {
-            this.subnetName = subnetName;
+            $.subnetName = subnetName;
             return this;
         }
+
         public Builder vnetName(@Nullable String vnetName) {
-            this.vnetName = vnetName;
+            $.vnetName = vnetName;
             return this;
-        }        public ACIServiceResponseResponseVnetConfiguration build() {
-            return new ACIServiceResponseResponseVnetConfiguration(subnetName, vnetName);
+        }
+
+        public ACIServiceResponseResponseVnetConfiguration build() {
+            return $;
         }
     }
+
 }

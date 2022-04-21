@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class RetryArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final RetryArgs Empty = new RetryArgs();
 
-    public RetryArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(RetryArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private RetryArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(RetryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new RetryArgs();
         }
         public RetryArgs build() {
-            return new RetryArgs();
+            return $;
         }
     }
+
 }

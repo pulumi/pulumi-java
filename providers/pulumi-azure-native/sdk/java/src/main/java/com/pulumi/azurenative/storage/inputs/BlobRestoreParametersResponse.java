@@ -23,7 +23,7 @@ public final class BlobRestoreParametersResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="blobRanges", required=true)
-      private final List<BlobRestoreRangeResponse> blobRanges;
+    private List<BlobRestoreRangeResponse> blobRanges;
 
     public List<BlobRestoreRangeResponse> blobRanges() {
         return this.blobRanges;
@@ -34,58 +34,56 @@ public final class BlobRestoreParametersResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="timeToRestore", required=true)
-      private final String timeToRestore;
+    private String timeToRestore;
 
     public String timeToRestore() {
         return this.timeToRestore;
     }
 
-    public BlobRestoreParametersResponse(
-        List<BlobRestoreRangeResponse> blobRanges,
-        String timeToRestore) {
-        this.blobRanges = Objects.requireNonNull(blobRanges, "expected parameter 'blobRanges' to be non-null");
-        this.timeToRestore = Objects.requireNonNull(timeToRestore, "expected parameter 'timeToRestore' to be non-null");
-    }
+    private BlobRestoreParametersResponse() {}
 
-    private BlobRestoreParametersResponse() {
-        this.blobRanges = List.of();
-        this.timeToRestore = null;
+    private BlobRestoreParametersResponse(BlobRestoreParametersResponse $) {
+        this.blobRanges = $.blobRanges;
+        this.timeToRestore = $.timeToRestore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobRestoreParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BlobRestoreRangeResponse> blobRanges;
-        private String timeToRestore;
+        private BlobRestoreParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobRestoreParametersResponse();
         }
 
         public Builder(BlobRestoreParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobRanges = defaults.blobRanges;
-    	      this.timeToRestore = defaults.timeToRestore;
+            $ = new BlobRestoreParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blobRanges(List<BlobRestoreRangeResponse> blobRanges) {
-            this.blobRanges = Objects.requireNonNull(blobRanges);
+            $.blobRanges = blobRanges;
             return this;
         }
+
         public Builder blobRanges(BlobRestoreRangeResponse... blobRanges) {
             return blobRanges(List.of(blobRanges));
         }
+
         public Builder timeToRestore(String timeToRestore) {
-            this.timeToRestore = Objects.requireNonNull(timeToRestore);
+            $.timeToRestore = timeToRestore;
             return this;
-        }        public BlobRestoreParametersResponse build() {
-            return new BlobRestoreParametersResponse(blobRanges, timeToRestore);
+        }
+
+        public BlobRestoreParametersResponse build() {
+            $.blobRanges = Objects.requireNonNull($.blobRanges, "expected parameter 'blobRanges' to be non-null");
+            $.timeToRestore = Objects.requireNonNull($.timeToRestore, "expected parameter 'timeToRestore' to be non-null");
+            return $;
         }
     }
+
 }

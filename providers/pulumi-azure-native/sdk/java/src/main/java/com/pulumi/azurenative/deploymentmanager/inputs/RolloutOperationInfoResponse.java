@@ -24,7 +24,7 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -35,7 +35,7 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="error", required=true)
-      private final CloudErrorBodyResponse error;
+    private CloudErrorBodyResponse error;
 
     public CloudErrorBodyResponse error() {
         return this.error;
@@ -46,7 +46,7 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="retryAttempt", required=true)
-      private final Integer retryAttempt;
+    private Integer retryAttempt;
 
     public Integer retryAttempt() {
         return this.retryAttempt;
@@ -57,7 +57,7 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="skipSucceededOnRetry", required=true)
-      private final Boolean skipSucceededOnRetry;
+    private Boolean skipSucceededOnRetry;
 
     public Boolean skipSucceededOnRetry() {
         return this.skipSucceededOnRetry;
@@ -68,82 +68,73 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public RolloutOperationInfoResponse(
-        String endTime,
-        CloudErrorBodyResponse error,
-        Integer retryAttempt,
-        Boolean skipSucceededOnRetry,
-        String startTime) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.retryAttempt = Objects.requireNonNull(retryAttempt, "expected parameter 'retryAttempt' to be non-null");
-        this.skipSucceededOnRetry = Objects.requireNonNull(skipSucceededOnRetry, "expected parameter 'skipSucceededOnRetry' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private RolloutOperationInfoResponse() {}
 
-    private RolloutOperationInfoResponse() {
-        this.endTime = null;
-        this.error = null;
-        this.retryAttempt = null;
-        this.skipSucceededOnRetry = null;
-        this.startTime = null;
+    private RolloutOperationInfoResponse(RolloutOperationInfoResponse $) {
+        this.endTime = $.endTime;
+        this.error = $.error;
+        this.retryAttempt = $.retryAttempt;
+        this.skipSucceededOnRetry = $.skipSucceededOnRetry;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolloutOperationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private CloudErrorBodyResponse error;
-        private Integer retryAttempt;
-        private Boolean skipSucceededOnRetry;
-        private String startTime;
+        private RolloutOperationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolloutOperationInfoResponse();
         }
 
         public Builder(RolloutOperationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.error = defaults.error;
-    	      this.retryAttempt = defaults.retryAttempt;
-    	      this.skipSucceededOnRetry = defaults.skipSucceededOnRetry;
-    	      this.startTime = defaults.startTime;
+            $ = new RolloutOperationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder error(CloudErrorBodyResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder retryAttempt(Integer retryAttempt) {
-            this.retryAttempt = Objects.requireNonNull(retryAttempt);
+            $.retryAttempt = retryAttempt;
             return this;
         }
+
         public Builder skipSucceededOnRetry(Boolean skipSucceededOnRetry) {
-            this.skipSucceededOnRetry = Objects.requireNonNull(skipSucceededOnRetry);
+            $.skipSucceededOnRetry = skipSucceededOnRetry;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public RolloutOperationInfoResponse build() {
-            return new RolloutOperationInfoResponse(endTime, error, retryAttempt, skipSucceededOnRetry, startTime);
+        }
+
+        public RolloutOperationInfoResponse build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.retryAttempt = Objects.requireNonNull($.retryAttempt, "expected parameter 'retryAttempt' to be non-null");
+            $.skipSucceededOnRetry = Objects.requireNonNull($.skipSucceededOnRetry, "expected parameter 'skipSucceededOnRetry' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

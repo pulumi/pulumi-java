@@ -5,10 +5,10 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="columnName", required=true)
-      private final Output<String> columnName;
+    private Output<String> columnName;
 
     public Output<String> columnName() {
         return this.columnName;
@@ -36,10 +36,10 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="customFormatSpecifier")
-      private final @Nullable Output<String> customFormatSpecifier;
+    private @Nullable Output<String> customFormatSpecifier;
 
-    public Output<String> customFormatSpecifier() {
-        return this.customFormatSpecifier == null ? Codegen.empty() : this.customFormatSpecifier;
+    public Optional<Output<String>> customFormatSpecifier() {
+        return Optional.ofNullable(this.customFormatSpecifier);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="isEncrypted")
-      private final @Nullable Output<Boolean> isEncrypted;
+    private @Nullable Output<Boolean> isEncrypted;
 
-    public Output<Boolean> isEncrypted() {
-        return this.isEncrypted == null ? Codegen.empty() : this.isEncrypted;
+    public Optional<Output<Boolean>> isEncrypted() {
+        return Optional.ofNullable(this.isEncrypted);
     }
 
     /**
@@ -58,89 +58,80 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="propertyName", required=true)
-      private final Output<String> propertyName;
+    private Output<String> propertyName;
 
     public Output<String> propertyName() {
         return this.propertyName;
     }
 
-    public ConnectorMappingStructureArgs(
-        Output<String> columnName,
-        @Nullable Output<String> customFormatSpecifier,
-        @Nullable Output<Boolean> isEncrypted,
-        Output<String> propertyName) {
-        this.columnName = Objects.requireNonNull(columnName, "expected parameter 'columnName' to be non-null");
-        this.customFormatSpecifier = customFormatSpecifier;
-        this.isEncrypted = isEncrypted;
-        this.propertyName = Objects.requireNonNull(propertyName, "expected parameter 'propertyName' to be non-null");
-    }
+    private ConnectorMappingStructureArgs() {}
 
-    private ConnectorMappingStructureArgs() {
-        this.columnName = Codegen.empty();
-        this.customFormatSpecifier = Codegen.empty();
-        this.isEncrypted = Codegen.empty();
-        this.propertyName = Codegen.empty();
+    private ConnectorMappingStructureArgs(ConnectorMappingStructureArgs $) {
+        this.columnName = $.columnName;
+        this.customFormatSpecifier = $.customFormatSpecifier;
+        this.isEncrypted = $.isEncrypted;
+        this.propertyName = $.propertyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingStructureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> columnName;
-        private @Nullable Output<String> customFormatSpecifier;
-        private @Nullable Output<Boolean> isEncrypted;
-        private Output<String> propertyName;
+        private ConnectorMappingStructureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingStructureArgs();
         }
 
         public Builder(ConnectorMappingStructureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnName = defaults.columnName;
-    	      this.customFormatSpecifier = defaults.customFormatSpecifier;
-    	      this.isEncrypted = defaults.isEncrypted;
-    	      this.propertyName = defaults.propertyName;
+            $ = new ConnectorMappingStructureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnName(Output<String> columnName) {
-            this.columnName = Objects.requireNonNull(columnName);
+            $.columnName = columnName;
             return this;
         }
+
         public Builder columnName(String columnName) {
-            this.columnName = Output.of(Objects.requireNonNull(columnName));
-            return this;
+            return columnName(Output.of(columnName));
         }
+
         public Builder customFormatSpecifier(@Nullable Output<String> customFormatSpecifier) {
-            this.customFormatSpecifier = customFormatSpecifier;
+            $.customFormatSpecifier = customFormatSpecifier;
             return this;
         }
-        public Builder customFormatSpecifier(@Nullable String customFormatSpecifier) {
-            this.customFormatSpecifier = Codegen.ofNullable(customFormatSpecifier);
-            return this;
+
+        public Builder customFormatSpecifier(String customFormatSpecifier) {
+            return customFormatSpecifier(Output.of(customFormatSpecifier));
         }
+
         public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
-            this.isEncrypted = isEncrypted;
+            $.isEncrypted = isEncrypted;
             return this;
         }
-        public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = Codegen.ofNullable(isEncrypted);
-            return this;
+
+        public Builder isEncrypted(Boolean isEncrypted) {
+            return isEncrypted(Output.of(isEncrypted));
         }
+
         public Builder propertyName(Output<String> propertyName) {
-            this.propertyName = Objects.requireNonNull(propertyName);
+            $.propertyName = propertyName;
             return this;
         }
+
         public Builder propertyName(String propertyName) {
-            this.propertyName = Output.of(Objects.requireNonNull(propertyName));
-            return this;
-        }        public ConnectorMappingStructureArgs build() {
-            return new ConnectorMappingStructureArgs(columnName, customFormatSpecifier, isEncrypted, propertyName);
+            return propertyName(Output.of(propertyName));
+        }
+
+        public ConnectorMappingStructureArgs build() {
+            $.columnName = Objects.requireNonNull($.columnName, "expected parameter 'columnName' to be non-null");
+            $.propertyName = Objects.requireNonNull($.propertyName, "expected parameter 'propertyName' to be non-null");
+            return $;
         }
     }
+
 }

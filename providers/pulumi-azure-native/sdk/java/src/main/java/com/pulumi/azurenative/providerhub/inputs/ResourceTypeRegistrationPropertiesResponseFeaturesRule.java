@@ -13,45 +13,45 @@ public final class ResourceTypeRegistrationPropertiesResponseFeaturesRule extend
     public static final ResourceTypeRegistrationPropertiesResponseFeaturesRule Empty = new ResourceTypeRegistrationPropertiesResponseFeaturesRule();
 
     @Import(name="requiredFeaturesPolicy", required=true)
-      private final String requiredFeaturesPolicy;
+    private String requiredFeaturesPolicy;
 
     public String requiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
     }
 
-    public ResourceTypeRegistrationPropertiesResponseFeaturesRule(String requiredFeaturesPolicy) {
-        this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy, "expected parameter 'requiredFeaturesPolicy' to be non-null");
-    }
+    private ResourceTypeRegistrationPropertiesResponseFeaturesRule() {}
 
-    private ResourceTypeRegistrationPropertiesResponseFeaturesRule() {
-        this.requiredFeaturesPolicy = null;
+    private ResourceTypeRegistrationPropertiesResponseFeaturesRule(ResourceTypeRegistrationPropertiesResponseFeaturesRule $) {
+        this.requiredFeaturesPolicy = $.requiredFeaturesPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationPropertiesResponseFeaturesRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String requiredFeaturesPolicy;
+        private ResourceTypeRegistrationPropertiesResponseFeaturesRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationPropertiesResponseFeaturesRule();
         }
 
         public Builder(ResourceTypeRegistrationPropertiesResponseFeaturesRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requiredFeaturesPolicy = defaults.requiredFeaturesPolicy;
+            $ = new ResourceTypeRegistrationPropertiesResponseFeaturesRule(Objects.requireNonNull(defaults));
         }
 
         public Builder requiredFeaturesPolicy(String requiredFeaturesPolicy) {
-            this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
+            $.requiredFeaturesPolicy = requiredFeaturesPolicy;
             return this;
-        }        public ResourceTypeRegistrationPropertiesResponseFeaturesRule build() {
-            return new ResourceTypeRegistrationPropertiesResponseFeaturesRule(requiredFeaturesPolicy);
+        }
+
+        public ResourceTypeRegistrationPropertiesResponseFeaturesRule build() {
+            $.requiredFeaturesPolicy = Objects.requireNonNull($.requiredFeaturesPolicy, "expected parameter 'requiredFeaturesPolicy' to be non-null");
+            return $;
         }
     }
+
 }

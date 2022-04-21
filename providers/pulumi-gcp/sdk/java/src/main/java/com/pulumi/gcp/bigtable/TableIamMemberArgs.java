@@ -5,10 +5,10 @@ package com.pulumi.gcp.bigtable;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigtable.inputs.TableIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class TableIamMemberArgs extends com.pulumi.resources.ResourceArgs 
     public static final TableIamMemberArgs Empty = new TableIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<TableIamMemberConditionArgs> condition;
+    private @Nullable Output<TableIamMemberConditionArgs> condition;
 
-    public Output<TableIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TableIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -28,14 +28,14 @@ public final class TableIamMemberArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -47,10 +47,10 @@ public final class TableIamMemberArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class TableIamMemberArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -71,115 +71,102 @@ public final class TableIamMemberArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="table", required=true)
-      private final Output<String> table;
+    private Output<String> table;
 
     public Output<String> table() {
         return this.table;
     }
 
-    public TableIamMemberArgs(
-        @Nullable Output<TableIamMemberConditionArgs> condition,
-        Output<String> instance,
-        Output<String> member,
-        @Nullable Output<String> project,
-        Output<String> role,
-        Output<String> table) {
-        this.condition = condition;
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-    }
+    private TableIamMemberArgs() {}
 
-    private TableIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.table = Codegen.empty();
+    private TableIamMemberArgs(TableIamMemberArgs $) {
+        this.condition = $.condition;
+        this.instance = $.instance;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TableIamMemberConditionArgs> condition;
-        private Output<String> instance;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private Output<String> role;
-        private Output<String> table;
+        private TableIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableIamMemberArgs();
         }
 
         public Builder(TableIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.instance = defaults.instance;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.table = defaults.table;
+            $ = new TableIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TableIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TableIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TableIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder table(Output<String> table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
         }
+
         public Builder table(String table) {
-            this.table = Output.of(Objects.requireNonNull(table));
-            return this;
-        }        public TableIamMemberArgs build() {
-            return new TableIamMemberArgs(condition, instance, member, project, role, table);
+            return table(Output.of(table));
+        }
+
+        public TableIamMemberArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            return $;
         }
     }
+
 }

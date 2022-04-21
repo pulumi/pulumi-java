@@ -20,7 +20,7 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends com.pulu
      * 
      */
     @Import(name="remediationName", required=true)
-      private final String remediationName;
+    private String remediationName;
 
     public String remediationName() {
         return this.remediationName;
@@ -31,55 +31,51 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends com.pulu
      * 
      */
     @Import(name="top")
-      private final @Nullable Integer top;
+    private @Nullable Integer top;
 
     public Optional<Integer> top() {
-        return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
+        return Optional.ofNullable(this.top);
     }
 
-    public ListRemediationDeploymentsAtSubscriptionArgs(
-        String remediationName,
-        @Nullable Integer top) {
-        this.remediationName = Objects.requireNonNull(remediationName, "expected parameter 'remediationName' to be non-null");
-        this.top = top;
-    }
+    private ListRemediationDeploymentsAtSubscriptionArgs() {}
 
-    private ListRemediationDeploymentsAtSubscriptionArgs() {
-        this.remediationName = null;
-        this.top = null;
+    private ListRemediationDeploymentsAtSubscriptionArgs(ListRemediationDeploymentsAtSubscriptionArgs $) {
+        this.remediationName = $.remediationName;
+        this.top = $.top;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListRemediationDeploymentsAtSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String remediationName;
-        private @Nullable Integer top;
+        private ListRemediationDeploymentsAtSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListRemediationDeploymentsAtSubscriptionArgs();
         }
 
         public Builder(ListRemediationDeploymentsAtSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.remediationName = defaults.remediationName;
-    	      this.top = defaults.top;
+            $ = new ListRemediationDeploymentsAtSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder remediationName(String remediationName) {
-            this.remediationName = Objects.requireNonNull(remediationName);
+            $.remediationName = remediationName;
             return this;
         }
+
         public Builder top(@Nullable Integer top) {
-            this.top = top;
+            $.top = top;
             return this;
-        }        public ListRemediationDeploymentsAtSubscriptionArgs build() {
-            return new ListRemediationDeploymentsAtSubscriptionArgs(remediationName, top);
+        }
+
+        public ListRemediationDeploymentsAtSubscriptionArgs build() {
+            $.remediationName = Objects.requireNonNull($.remediationName, "expected parameter 'remediationName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends com
      * 
      */
     @Import(name="blobContainerUri")
-      private final @Nullable Output<String> blobContainerUri;
+    private @Nullable Output<String> blobContainerUri;
 
-    public Output<String> blobContainerUri() {
-        return this.blobContainerUri == null ? Codegen.empty() : this.blobContainerUri;
+    public Optional<Output<String>> blobContainerUri() {
+        return Optional.ofNullable(this.blobContainerUri);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends com
      * 
      */
     @Import(name="sasToken")
-      private final @Nullable Output<SecureStringArgs> sasToken;
+    private @Nullable Output<SecureStringArgs> sasToken;
 
-    public Output<SecureStringArgs> sasToken() {
-        return this.sasToken == null ? Codegen.empty() : this.sasToken;
+    public Optional<Output<SecureStringArgs>> sasToken() {
+        return Optional.ofNullable(this.sasToken);
     }
 
-    public IntegrationRuntimeCustomSetupScriptPropertiesArgs(
-        @Nullable Output<String> blobContainerUri,
-        @Nullable Output<SecureStringArgs> sasToken) {
-        this.blobContainerUri = blobContainerUri;
-        this.sasToken = sasToken;
-    }
+    private IntegrationRuntimeCustomSetupScriptPropertiesArgs() {}
 
-    private IntegrationRuntimeCustomSetupScriptPropertiesArgs() {
-        this.blobContainerUri = Codegen.empty();
-        this.sasToken = Codegen.empty();
+    private IntegrationRuntimeCustomSetupScriptPropertiesArgs(IntegrationRuntimeCustomSetupScriptPropertiesArgs $) {
+        this.blobContainerUri = $.blobContainerUri;
+        this.sasToken = $.sasToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeCustomSetupScriptPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> blobContainerUri;
-        private @Nullable Output<SecureStringArgs> sasToken;
+        private IntegrationRuntimeCustomSetupScriptPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeCustomSetupScriptPropertiesArgs();
         }
 
         public Builder(IntegrationRuntimeCustomSetupScriptPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobContainerUri = defaults.blobContainerUri;
-    	      this.sasToken = defaults.sasToken;
+            $ = new IntegrationRuntimeCustomSetupScriptPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobContainerUri(@Nullable Output<String> blobContainerUri) {
-            this.blobContainerUri = blobContainerUri;
+            $.blobContainerUri = blobContainerUri;
             return this;
         }
-        public Builder blobContainerUri(@Nullable String blobContainerUri) {
-            this.blobContainerUri = Codegen.ofNullable(blobContainerUri);
-            return this;
+
+        public Builder blobContainerUri(String blobContainerUri) {
+            return blobContainerUri(Output.of(blobContainerUri));
         }
+
         public Builder sasToken(@Nullable Output<SecureStringArgs> sasToken) {
-            this.sasToken = sasToken;
+            $.sasToken = sasToken;
             return this;
         }
-        public Builder sasToken(@Nullable SecureStringArgs sasToken) {
-            this.sasToken = Codegen.ofNullable(sasToken);
-            return this;
-        }        public IntegrationRuntimeCustomSetupScriptPropertiesArgs build() {
-            return new IntegrationRuntimeCustomSetupScriptPropertiesArgs(blobContainerUri, sasToken);
+
+        public Builder sasToken(SecureStringArgs sasToken) {
+            return sasToken(Output.of(sasToken));
+        }
+
+        public IntegrationRuntimeCustomSetupScriptPropertiesArgs build() {
+            return $;
         }
     }
+
 }

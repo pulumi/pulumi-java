@@ -6,8 +6,8 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends com.pulum
      * 
      */
     @Import(name="humanLoopActivationConditionsConfig")
-      private final @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
+    private @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
 
-    public Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig() {
-        return this.humanLoopActivationConditionsConfig == null ? Codegen.empty() : this.humanLoopActivationConditionsConfig;
+    public Optional<Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs>> humanLoopActivationConditionsConfig() {
+        return Optional.ofNullable(this.humanLoopActivationConditionsConfig);
     }
 
-    public FlowDefinitionHumanLoopActivationConfigArgs(@Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig) {
-        this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
-    }
+    private FlowDefinitionHumanLoopActivationConfigArgs() {}
 
-    private FlowDefinitionHumanLoopActivationConfigArgs() {
-        this.humanLoopActivationConditionsConfig = Codegen.empty();
+    private FlowDefinitionHumanLoopActivationConfigArgs(FlowDefinitionHumanLoopActivationConfigArgs $) {
+        this.humanLoopActivationConditionsConfig = $.humanLoopActivationConditionsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowDefinitionHumanLoopActivationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
+        private FlowDefinitionHumanLoopActivationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowDefinitionHumanLoopActivationConfigArgs();
         }
 
         public Builder(FlowDefinitionHumanLoopActivationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.humanLoopActivationConditionsConfig = defaults.humanLoopActivationConditionsConfig;
+            $ = new FlowDefinitionHumanLoopActivationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder humanLoopActivationConditionsConfig(@Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig) {
-            this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
+            $.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
             return this;
         }
-        public Builder humanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs humanLoopActivationConditionsConfig) {
-            this.humanLoopActivationConditionsConfig = Codegen.ofNullable(humanLoopActivationConditionsConfig);
-            return this;
-        }        public FlowDefinitionHumanLoopActivationConfigArgs build() {
-            return new FlowDefinitionHumanLoopActivationConfigArgs(humanLoopActivationConditionsConfig);
+
+        public Builder humanLoopActivationConditionsConfig(FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs humanLoopActivationConditionsConfig) {
+            return humanLoopActivationConditionsConfig(Output.of(humanLoopActivationConditionsConfig));
+        }
+
+        public FlowDefinitionHumanLoopActivationConfigArgs build() {
+            return $;
         }
     }
+
 }

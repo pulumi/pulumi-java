@@ -13,62 +13,59 @@ public final class IndexJsonTokenTypeConfiguration extends com.pulumi.resources.
     public static final IndexJsonTokenTypeConfiguration Empty = new IndexJsonTokenTypeConfiguration();
 
     @Import(name="groupAttributeField", required=true)
-      private final String groupAttributeField;
+    private String groupAttributeField;
 
     public String groupAttributeField() {
         return this.groupAttributeField;
     }
 
     @Import(name="userNameAttributeField", required=true)
-      private final String userNameAttributeField;
+    private String userNameAttributeField;
 
     public String userNameAttributeField() {
         return this.userNameAttributeField;
     }
 
-    public IndexJsonTokenTypeConfiguration(
-        String groupAttributeField,
-        String userNameAttributeField) {
-        this.groupAttributeField = Objects.requireNonNull(groupAttributeField, "expected parameter 'groupAttributeField' to be non-null");
-        this.userNameAttributeField = Objects.requireNonNull(userNameAttributeField, "expected parameter 'userNameAttributeField' to be non-null");
-    }
+    private IndexJsonTokenTypeConfiguration() {}
 
-    private IndexJsonTokenTypeConfiguration() {
-        this.groupAttributeField = null;
-        this.userNameAttributeField = null;
+    private IndexJsonTokenTypeConfiguration(IndexJsonTokenTypeConfiguration $) {
+        this.groupAttributeField = $.groupAttributeField;
+        this.userNameAttributeField = $.userNameAttributeField;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexJsonTokenTypeConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupAttributeField;
-        private String userNameAttributeField;
+        private IndexJsonTokenTypeConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexJsonTokenTypeConfiguration();
         }
 
         public Builder(IndexJsonTokenTypeConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupAttributeField = defaults.groupAttributeField;
-    	      this.userNameAttributeField = defaults.userNameAttributeField;
+            $ = new IndexJsonTokenTypeConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder groupAttributeField(String groupAttributeField) {
-            this.groupAttributeField = Objects.requireNonNull(groupAttributeField);
+            $.groupAttributeField = groupAttributeField;
             return this;
         }
+
         public Builder userNameAttributeField(String userNameAttributeField) {
-            this.userNameAttributeField = Objects.requireNonNull(userNameAttributeField);
+            $.userNameAttributeField = userNameAttributeField;
             return this;
-        }        public IndexJsonTokenTypeConfiguration build() {
-            return new IndexJsonTokenTypeConfiguration(groupAttributeField, userNameAttributeField);
+        }
+
+        public IndexJsonTokenTypeConfiguration build() {
+            $.groupAttributeField = Objects.requireNonNull($.groupAttributeField, "expected parameter 'groupAttributeField' to be non-null");
+            $.userNameAttributeField = Objects.requireNonNull($.userNameAttributeField, "expected parameter 'userNameAttributeField' to be non-null");
+            return $;
         }
     }
+
 }

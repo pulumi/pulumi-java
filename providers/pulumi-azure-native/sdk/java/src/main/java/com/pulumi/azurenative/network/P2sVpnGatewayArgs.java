@@ -7,13 +7,13 @@ import com.pulumi.azurenative.network.inputs.P2SConnectionConfigurationArgs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customDnsServers")
-      private final @Nullable Output<List<String>> customDnsServers;
+    private @Nullable Output<List<String>> customDnsServers;
 
-    public Output<List<String>> customDnsServers() {
-        return this.customDnsServers == null ? Codegen.empty() : this.customDnsServers;
+    public Optional<Output<List<String>>> customDnsServers() {
+        return Optional.ofNullable(this.customDnsServers);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayName")
-      private final @Nullable Output<String> gatewayName;
+    private @Nullable Output<String> gatewayName;
 
-    public Output<String> gatewayName() {
-        return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
+    public Optional<Output<String>> gatewayName() {
+        return Optional.ofNullable(this.gatewayName);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isRoutingPreferenceInternet")
-      private final @Nullable Output<Boolean> isRoutingPreferenceInternet;
+    private @Nullable Output<Boolean> isRoutingPreferenceInternet;
 
-    public Output<Boolean> isRoutingPreferenceInternet() {
-        return this.isRoutingPreferenceInternet == null ? Codegen.empty() : this.isRoutingPreferenceInternet;
+    public Optional<Output<Boolean>> isRoutingPreferenceInternet() {
+        return Optional.ofNullable(this.isRoutingPreferenceInternet);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="p2SConnectionConfigurations")
-      private final @Nullable Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations;
+    private @Nullable Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations;
 
-    public Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations() {
-        return this.p2SConnectionConfigurations == null ? Codegen.empty() : this.p2SConnectionConfigurations;
+    public Optional<Output<List<P2SConnectionConfigurationArgs>>> p2SConnectionConfigurations() {
+        return Optional.ofNullable(this.p2SConnectionConfigurations);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -103,10 +103,10 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualHub")
-      private final @Nullable Output<SubResourceArgs> virtualHub;
+    private @Nullable Output<SubResourceArgs> virtualHub;
 
-    public Output<SubResourceArgs> virtualHub() {
-        return this.virtualHub == null ? Codegen.empty() : this.virtualHub;
+    public Optional<Output<SubResourceArgs>> virtualHub() {
+        return Optional.ofNullable(this.virtualHub);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpnGatewayScaleUnit")
-      private final @Nullable Output<Integer> vpnGatewayScaleUnit;
+    private @Nullable Output<Integer> vpnGatewayScaleUnit;
 
-    public Output<Integer> vpnGatewayScaleUnit() {
-        return this.vpnGatewayScaleUnit == null ? Codegen.empty() : this.vpnGatewayScaleUnit;
+    public Optional<Output<Integer>> vpnGatewayScaleUnit() {
+        return Optional.ofNullable(this.vpnGatewayScaleUnit);
     }
 
     /**
@@ -136,186 +136,157 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpnServerConfiguration")
-      private final @Nullable Output<SubResourceArgs> vpnServerConfiguration;
+    private @Nullable Output<SubResourceArgs> vpnServerConfiguration;
 
-    public Output<SubResourceArgs> vpnServerConfiguration() {
-        return this.vpnServerConfiguration == null ? Codegen.empty() : this.vpnServerConfiguration;
+    public Optional<Output<SubResourceArgs>> vpnServerConfiguration() {
+        return Optional.ofNullable(this.vpnServerConfiguration);
     }
 
-    public P2sVpnGatewayArgs(
-        @Nullable Output<List<String>> customDnsServers,
-        @Nullable Output<String> gatewayName,
-        @Nullable Output<String> id,
-        @Nullable Output<Boolean> isRoutingPreferenceInternet,
-        @Nullable Output<String> location,
-        @Nullable Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<SubResourceArgs> virtualHub,
-        @Nullable Output<Integer> vpnGatewayScaleUnit,
-        @Nullable Output<SubResourceArgs> vpnServerConfiguration) {
-        this.customDnsServers = customDnsServers;
-        this.gatewayName = gatewayName;
-        this.id = id;
-        this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
-        this.location = location;
-        this.p2SConnectionConfigurations = p2SConnectionConfigurations;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.virtualHub = virtualHub;
-        this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
-        this.vpnServerConfiguration = vpnServerConfiguration;
-    }
+    private P2sVpnGatewayArgs() {}
 
-    private P2sVpnGatewayArgs() {
-        this.customDnsServers = Codegen.empty();
-        this.gatewayName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.isRoutingPreferenceInternet = Codegen.empty();
-        this.location = Codegen.empty();
-        this.p2SConnectionConfigurations = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualHub = Codegen.empty();
-        this.vpnGatewayScaleUnit = Codegen.empty();
-        this.vpnServerConfiguration = Codegen.empty();
+    private P2sVpnGatewayArgs(P2sVpnGatewayArgs $) {
+        this.customDnsServers = $.customDnsServers;
+        this.gatewayName = $.gatewayName;
+        this.id = $.id;
+        this.isRoutingPreferenceInternet = $.isRoutingPreferenceInternet;
+        this.location = $.location;
+        this.p2SConnectionConfigurations = $.p2SConnectionConfigurations;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.virtualHub = $.virtualHub;
+        this.vpnGatewayScaleUnit = $.vpnGatewayScaleUnit;
+        this.vpnServerConfiguration = $.vpnServerConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(P2sVpnGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> customDnsServers;
-        private @Nullable Output<String> gatewayName;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Boolean> isRoutingPreferenceInternet;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<SubResourceArgs> virtualHub;
-        private @Nullable Output<Integer> vpnGatewayScaleUnit;
-        private @Nullable Output<SubResourceArgs> vpnServerConfiguration;
+        private P2sVpnGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new P2sVpnGatewayArgs();
         }
 
         public Builder(P2sVpnGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customDnsServers = defaults.customDnsServers;
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.id = defaults.id;
-    	      this.isRoutingPreferenceInternet = defaults.isRoutingPreferenceInternet;
-    	      this.location = defaults.location;
-    	      this.p2SConnectionConfigurations = defaults.p2SConnectionConfigurations;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.virtualHub = defaults.virtualHub;
-    	      this.vpnGatewayScaleUnit = defaults.vpnGatewayScaleUnit;
-    	      this.vpnServerConfiguration = defaults.vpnServerConfiguration;
+            $ = new P2sVpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customDnsServers(@Nullable Output<List<String>> customDnsServers) {
-            this.customDnsServers = customDnsServers;
+            $.customDnsServers = customDnsServers;
             return this;
         }
-        public Builder customDnsServers(@Nullable List<String> customDnsServers) {
-            this.customDnsServers = Codegen.ofNullable(customDnsServers);
-            return this;
+
+        public Builder customDnsServers(List<String> customDnsServers) {
+            return customDnsServers(Output.of(customDnsServers));
         }
+
         public Builder customDnsServers(String... customDnsServers) {
             return customDnsServers(List.of(customDnsServers));
         }
+
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
-            this.gatewayName = gatewayName;
+            $.gatewayName = gatewayName;
             return this;
         }
-        public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Codegen.ofNullable(gatewayName);
-            return this;
+
+        public Builder gatewayName(String gatewayName) {
+            return gatewayName(Output.of(gatewayName));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder isRoutingPreferenceInternet(@Nullable Output<Boolean> isRoutingPreferenceInternet) {
-            this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
+            $.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
-        public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
-            this.isRoutingPreferenceInternet = Codegen.ofNullable(isRoutingPreferenceInternet);
-            return this;
+
+        public Builder isRoutingPreferenceInternet(Boolean isRoutingPreferenceInternet) {
+            return isRoutingPreferenceInternet(Output.of(isRoutingPreferenceInternet));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder p2SConnectionConfigurations(@Nullable Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations) {
-            this.p2SConnectionConfigurations = p2SConnectionConfigurations;
+            $.p2SConnectionConfigurations = p2SConnectionConfigurations;
             return this;
         }
-        public Builder p2SConnectionConfigurations(@Nullable List<P2SConnectionConfigurationArgs> p2SConnectionConfigurations) {
-            this.p2SConnectionConfigurations = Codegen.ofNullable(p2SConnectionConfigurations);
-            return this;
+
+        public Builder p2SConnectionConfigurations(List<P2SConnectionConfigurationArgs> p2SConnectionConfigurations) {
+            return p2SConnectionConfigurations(Output.of(p2SConnectionConfigurations));
         }
+
         public Builder p2SConnectionConfigurations(P2SConnectionConfigurationArgs... p2SConnectionConfigurations) {
             return p2SConnectionConfigurations(List.of(p2SConnectionConfigurations));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
-            this.virtualHub = virtualHub;
+            $.virtualHub = virtualHub;
             return this;
         }
-        public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
-            this.virtualHub = Codegen.ofNullable(virtualHub);
-            return this;
+
+        public Builder virtualHub(SubResourceArgs virtualHub) {
+            return virtualHub(Output.of(virtualHub));
         }
+
         public Builder vpnGatewayScaleUnit(@Nullable Output<Integer> vpnGatewayScaleUnit) {
-            this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
+            $.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
-        public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
-            this.vpnGatewayScaleUnit = Codegen.ofNullable(vpnGatewayScaleUnit);
-            return this;
+
+        public Builder vpnGatewayScaleUnit(Integer vpnGatewayScaleUnit) {
+            return vpnGatewayScaleUnit(Output.of(vpnGatewayScaleUnit));
         }
+
         public Builder vpnServerConfiguration(@Nullable Output<SubResourceArgs> vpnServerConfiguration) {
-            this.vpnServerConfiguration = vpnServerConfiguration;
+            $.vpnServerConfiguration = vpnServerConfiguration;
             return this;
         }
-        public Builder vpnServerConfiguration(@Nullable SubResourceArgs vpnServerConfiguration) {
-            this.vpnServerConfiguration = Codegen.ofNullable(vpnServerConfiguration);
-            return this;
-        }        public P2sVpnGatewayArgs build() {
-            return new P2sVpnGatewayArgs(customDnsServers, gatewayName, id, isRoutingPreferenceInternet, location, p2SConnectionConfigurations, resourceGroupName, tags, virtualHub, vpnGatewayScaleUnit, vpnServerConfiguration);
+
+        public Builder vpnServerConfiguration(SubResourceArgs vpnServerConfiguration) {
+            return vpnServerConfiguration(Output.of(vpnServerConfiguration));
+        }
+
+        public P2sVpnGatewayArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

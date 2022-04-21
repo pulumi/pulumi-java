@@ -19,7 +19,7 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="apiId", required=true)
-      private final String apiId;
+    private String apiId;
 
     public String apiId() {
         return this.apiId;
@@ -30,10 +30,10 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="format")
-      private final @Nullable String format;
+    private @Nullable String format;
 
     public Optional<String> format() {
-        return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="operationId", required=true)
-      private final String operationId;
+    private String operationId;
 
     public String operationId() {
         return this.operationId;
@@ -52,7 +52,7 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="policyId", required=true)
-      private final String policyId;
+    private String policyId;
 
     public String policyId() {
         return this.policyId;
@@ -63,7 +63,7 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -74,91 +74,79 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetApiOperationPolicyArgs(
-        String apiId,
-        @Nullable String format,
-        String operationId,
-        String policyId,
-        String resourceGroupName,
-        String serviceName) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.format = format;
-        this.operationId = Objects.requireNonNull(operationId, "expected parameter 'operationId' to be non-null");
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetApiOperationPolicyArgs() {}
 
-    private GetApiOperationPolicyArgs() {
-        this.apiId = null;
-        this.format = null;
-        this.operationId = null;
-        this.policyId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetApiOperationPolicyArgs(GetApiOperationPolicyArgs $) {
+        this.apiId = $.apiId;
+        this.format = $.format;
+        this.operationId = $.operationId;
+        this.policyId = $.policyId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiOperationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiId;
-        private @Nullable String format;
-        private String operationId;
-        private String policyId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetApiOperationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiOperationPolicyArgs();
         }
 
         public Builder(GetApiOperationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.format = defaults.format;
-    	      this.operationId = defaults.operationId;
-    	      this.policyId = defaults.policyId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetApiOperationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder format(@Nullable String format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
+
         public Builder operationId(String operationId) {
-            this.operationId = Objects.requireNonNull(operationId);
+            $.operationId = operationId;
             return this;
         }
+
         public Builder policyId(String policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetApiOperationPolicyArgs build() {
-            return new GetApiOperationPolicyArgs(apiId, format, operationId, policyId, resourceGroupName, serviceName);
+        }
+
+        public GetApiOperationPolicyArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.operationId = Objects.requireNonNull($.operationId, "expected parameter 'operationId' to be non-null");
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

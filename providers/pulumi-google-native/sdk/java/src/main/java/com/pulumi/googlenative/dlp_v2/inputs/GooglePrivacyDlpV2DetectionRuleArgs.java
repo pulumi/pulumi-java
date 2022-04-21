@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HotwordRuleArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends com.pulumi.resour
      * 
      */
     @Import(name="hotwordRule")
-      private final @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
+    private @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 
-    public Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule() {
-        return this.hotwordRule == null ? Codegen.empty() : this.hotwordRule;
+    public Optional<Output<GooglePrivacyDlpV2HotwordRuleArgs>> hotwordRule() {
+        return Optional.ofNullable(this.hotwordRule);
     }
 
-    public GooglePrivacyDlpV2DetectionRuleArgs(@Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
-        this.hotwordRule = hotwordRule;
-    }
+    private GooglePrivacyDlpV2DetectionRuleArgs() {}
 
-    private GooglePrivacyDlpV2DetectionRuleArgs() {
-        this.hotwordRule = Codegen.empty();
+    private GooglePrivacyDlpV2DetectionRuleArgs(GooglePrivacyDlpV2DetectionRuleArgs $) {
+        this.hotwordRule = $.hotwordRule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DetectionRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
+        private GooglePrivacyDlpV2DetectionRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DetectionRuleArgs();
         }
 
         public Builder(GooglePrivacyDlpV2DetectionRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hotwordRule = defaults.hotwordRule;
+            $ = new GooglePrivacyDlpV2DetectionRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hotwordRule(@Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
-            this.hotwordRule = hotwordRule;
+            $.hotwordRule = hotwordRule;
             return this;
         }
-        public Builder hotwordRule(@Nullable GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
-            this.hotwordRule = Codegen.ofNullable(hotwordRule);
-            return this;
-        }        public GooglePrivacyDlpV2DetectionRuleArgs build() {
-            return new GooglePrivacyDlpV2DetectionRuleArgs(hotwordRule);
+
+        public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
+            return hotwordRule(Output.of(hotwordRule));
+        }
+
+        public GooglePrivacyDlpV2DetectionRuleArgs build() {
+            return $;
         }
     }
+
 }

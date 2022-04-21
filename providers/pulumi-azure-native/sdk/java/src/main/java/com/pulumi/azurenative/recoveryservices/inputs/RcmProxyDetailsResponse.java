@@ -23,7 +23,7 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="health", required=true)
-      private final String health;
+    private String health;
 
     public String health() {
         return this.health;
@@ -34,7 +34,7 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="healthErrors", required=true)
-      private final List<HealthErrorResponse> healthErrors;
+    private List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
@@ -45,7 +45,7 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -56,7 +56,7 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="lastHeartbeatUtc", required=true)
-      private final String lastHeartbeatUtc;
+    private String lastHeartbeatUtc;
 
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
@@ -67,7 +67,7 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -78,94 +78,84 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public RcmProxyDetailsResponse(
-        String health,
-        List<HealthErrorResponse> healthErrors,
-        String id,
-        String lastHeartbeatUtc,
-        String name,
-        String version) {
-        this.health = Objects.requireNonNull(health, "expected parameter 'health' to be non-null");
-        this.healthErrors = Objects.requireNonNull(healthErrors, "expected parameter 'healthErrors' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc, "expected parameter 'lastHeartbeatUtc' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private RcmProxyDetailsResponse() {}
 
-    private RcmProxyDetailsResponse() {
-        this.health = null;
-        this.healthErrors = List.of();
-        this.id = null;
-        this.lastHeartbeatUtc = null;
-        this.name = null;
-        this.version = null;
+    private RcmProxyDetailsResponse(RcmProxyDetailsResponse $) {
+        this.health = $.health;
+        this.healthErrors = $.healthErrors;
+        this.id = $.id;
+        this.lastHeartbeatUtc = $.lastHeartbeatUtc;
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RcmProxyDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String health;
-        private List<HealthErrorResponse> healthErrors;
-        private String id;
-        private String lastHeartbeatUtc;
-        private String name;
-        private String version;
+        private RcmProxyDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RcmProxyDetailsResponse();
         }
 
         public Builder(RcmProxyDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.health = defaults.health;
-    	      this.healthErrors = defaults.healthErrors;
-    	      this.id = defaults.id;
-    	      this.lastHeartbeatUtc = defaults.lastHeartbeatUtc;
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new RcmProxyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder health(String health) {
-            this.health = Objects.requireNonNull(health);
+            $.health = health;
             return this;
         }
+
         public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
-            this.healthErrors = Objects.requireNonNull(healthErrors);
+            $.healthErrors = healthErrors;
             return this;
         }
+
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
-            this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
+            $.lastHeartbeatUtc = lastHeartbeatUtc;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public RcmProxyDetailsResponse build() {
-            return new RcmProxyDetailsResponse(health, healthErrors, id, lastHeartbeatUtc, name, version);
+        }
+
+        public RcmProxyDetailsResponse build() {
+            $.health = Objects.requireNonNull($.health, "expected parameter 'health' to be non-null");
+            $.healthErrors = Objects.requireNonNull($.healthErrors, "expected parameter 'healthErrors' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.lastHeartbeatUtc = Objects.requireNonNull($.lastHeartbeatUtc, "expected parameter 'lastHeartbeatUtc' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

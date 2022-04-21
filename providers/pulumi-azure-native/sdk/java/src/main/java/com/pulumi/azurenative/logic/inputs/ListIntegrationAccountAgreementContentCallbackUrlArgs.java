@@ -21,7 +21,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @Import(name="agreementName", required=true)
-      private final String agreementName;
+    private String agreementName;
 
     public String agreementName() {
         return this.agreementName;
@@ -32,7 +32,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -43,10 +43,10 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Either<String,KeyType> keyType;
+    private @Nullable Either<String,KeyType> keyType;
 
-    public Either<String,KeyType> keyType() {
-        return this.keyType == null ? null : this.keyType;
+    public Optional<Either<String,KeyType>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @Import(name="notAfter")
-      private final @Nullable String notAfter;
+    private @Nullable String notAfter;
 
     public Optional<String> notAfter() {
-        return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
+        return Optional.ofNullable(this.notAfter);
     }
 
     /**
@@ -65,82 +65,71 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListIntegrationAccountAgreementContentCallbackUrlArgs(
-        String agreementName,
-        String integrationAccountName,
-        @Nullable Either<String,KeyType> keyType,
-        @Nullable String notAfter,
-        String resourceGroupName) {
-        this.agreementName = Objects.requireNonNull(agreementName, "expected parameter 'agreementName' to be non-null");
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.keyType = keyType;
-        this.notAfter = notAfter;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListIntegrationAccountAgreementContentCallbackUrlArgs() {}
 
-    private ListIntegrationAccountAgreementContentCallbackUrlArgs() {
-        this.agreementName = null;
-        this.integrationAccountName = null;
-        this.keyType = null;
-        this.notAfter = null;
-        this.resourceGroupName = null;
+    private ListIntegrationAccountAgreementContentCallbackUrlArgs(ListIntegrationAccountAgreementContentCallbackUrlArgs $) {
+        this.agreementName = $.agreementName;
+        this.integrationAccountName = $.integrationAccountName;
+        this.keyType = $.keyType;
+        this.notAfter = $.notAfter;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListIntegrationAccountAgreementContentCallbackUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agreementName;
-        private String integrationAccountName;
-        private @Nullable Either<String,KeyType> keyType;
-        private @Nullable String notAfter;
-        private String resourceGroupName;
+        private ListIntegrationAccountAgreementContentCallbackUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListIntegrationAccountAgreementContentCallbackUrlArgs();
         }
 
         public Builder(ListIntegrationAccountAgreementContentCallbackUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agreementName = defaults.agreementName;
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.keyType = defaults.keyType;
-    	      this.notAfter = defaults.notAfter;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListIntegrationAccountAgreementContentCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agreementName(String agreementName) {
-            this.agreementName = Objects.requireNonNull(agreementName);
+            $.agreementName = agreementName;
             return this;
         }
+
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
+
         public Builder notAfter(@Nullable String notAfter) {
-            this.notAfter = notAfter;
+            $.notAfter = notAfter;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListIntegrationAccountAgreementContentCallbackUrlArgs build() {
-            return new ListIntegrationAccountAgreementContentCallbackUrlArgs(agreementName, integrationAccountName, keyType, notAfter, resourceGroupName);
+        }
+
+        public ListIntegrationAccountAgreementContentCallbackUrlArgs build() {
+            $.agreementName = Objects.requireNonNull($.agreementName, "expected parameter 'agreementName' to be non-null");
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

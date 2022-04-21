@@ -5,7 +5,6 @@ package com.pulumi.awsnative;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +20,7 @@ public final class ExtensionResourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<Map<String,Object>> properties;
+    private Output<Map<String,Object>> properties;
 
     public Output<Map<String,Object>> properties() {
         return this.properties;
@@ -32,63 +31,60 @@ public final class ExtensionResourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ExtensionResourceArgs(
-        Output<Map<String,Object>> properties,
-        Output<String> type) {
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ExtensionResourceArgs() {}
 
-    private ExtensionResourceArgs() {
-        this.properties = Codegen.empty();
-        this.type = Codegen.empty();
+    private ExtensionResourceArgs(ExtensionResourceArgs $) {
+        this.properties = $.properties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,Object>> properties;
-        private Output<String> type;
+        private ExtensionResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionResourceArgs();
         }
 
         public Builder(ExtensionResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.type = defaults.type;
+            $ = new ExtensionResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(Output<Map<String,Object>> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(Map<String,Object> properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ExtensionResourceArgs build() {
-            return new ExtensionResourceArgs(properties, type);
+            return type(Output.of(type));
+        }
+
+        public ExtensionResourceArgs build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable Output<String> clusterId;
+    private @Nullable Output<String> clusterId;
 
-    public Output<String> clusterId() {
-        return this.clusterId == null ? Codegen.empty() : this.clusterId;
+    public Optional<Output<String>> clusterId() {
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="database", required=true)
-      private final Output<String> database;
+    private Output<String> database;
 
     public Output<String> database() {
         return this.database;
@@ -50,10 +50,10 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -61,89 +61,79 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Double> port;
+    private @Nullable Output<Double> port;
 
-    public Output<Double> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Double>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public DataSourceRedshiftParametersArgs(
-        @Nullable Output<String> clusterId,
-        Output<String> database,
-        @Nullable Output<String> host,
-        @Nullable Output<Double> port) {
-        this.clusterId = clusterId;
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.host = host;
-        this.port = port;
-    }
+    private DataSourceRedshiftParametersArgs() {}
 
-    private DataSourceRedshiftParametersArgs() {
-        this.clusterId = Codegen.empty();
-        this.database = Codegen.empty();
-        this.host = Codegen.empty();
-        this.port = Codegen.empty();
+    private DataSourceRedshiftParametersArgs(DataSourceRedshiftParametersArgs $) {
+        this.clusterId = $.clusterId;
+        this.database = $.database;
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceRedshiftParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterId;
-        private Output<String> database;
-        private @Nullable Output<String> host;
-        private @Nullable Output<Double> port;
+        private DataSourceRedshiftParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceRedshiftParametersArgs();
         }
 
         public Builder(DataSourceRedshiftParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.database = defaults.database;
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new DataSourceRedshiftParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(@Nullable Output<String> clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
-        public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Codegen.ofNullable(clusterId);
-            return this;
+
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder database(Output<String> database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Output.of(Objects.requireNonNull(database));
-            return this;
+            return database(Output.of(database));
         }
+
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder port(@Nullable Output<Double> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Double port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public DataSourceRedshiftParametersArgs build() {
-            return new DataSourceRedshiftParametersArgs(clusterId, database, host, port);
+
+        public Builder port(Double port) {
+            return port(Output.of(port));
+        }
+
+        public DataSourceRedshiftParametersArgs build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            return $;
         }
     }
+
 }

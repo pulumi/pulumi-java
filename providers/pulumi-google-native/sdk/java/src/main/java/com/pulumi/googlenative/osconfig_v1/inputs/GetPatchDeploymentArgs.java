@@ -15,62 +15,58 @@ public final class GetPatchDeploymentArgs extends com.pulumi.resources.InvokeArg
     public static final GetPatchDeploymentArgs Empty = new GetPatchDeploymentArgs();
 
     @Import(name="patchDeploymentId", required=true)
-      private final String patchDeploymentId;
+    private String patchDeploymentId;
 
     public String patchDeploymentId() {
         return this.patchDeploymentId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetPatchDeploymentArgs(
-        String patchDeploymentId,
-        @Nullable String project) {
-        this.patchDeploymentId = Objects.requireNonNull(patchDeploymentId, "expected parameter 'patchDeploymentId' to be non-null");
-        this.project = project;
-    }
+    private GetPatchDeploymentArgs() {}
 
-    private GetPatchDeploymentArgs() {
-        this.patchDeploymentId = null;
-        this.project = null;
+    private GetPatchDeploymentArgs(GetPatchDeploymentArgs $) {
+        this.patchDeploymentId = $.patchDeploymentId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPatchDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String patchDeploymentId;
-        private @Nullable String project;
+        private GetPatchDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPatchDeploymentArgs();
         }
 
         public Builder(GetPatchDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.patchDeploymentId = defaults.patchDeploymentId;
-    	      this.project = defaults.project;
+            $ = new GetPatchDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder patchDeploymentId(String patchDeploymentId) {
-            this.patchDeploymentId = Objects.requireNonNull(patchDeploymentId);
+            $.patchDeploymentId = patchDeploymentId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetPatchDeploymentArgs build() {
-            return new GetPatchDeploymentArgs(patchDeploymentId, project);
+        }
+
+        public GetPatchDeploymentArgs build() {
+            $.patchDeploymentId = Objects.requireNonNull($.patchDeploymentId, "expected parameter 'patchDeploymentId' to be non-null");
+            return $;
         }
     }
+
 }

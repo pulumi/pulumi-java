@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class InstanceLocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class InstanceLocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="regionName")
-      private final @Nullable Output<String> regionName;
+    private @Nullable Output<String> regionName;
 
-    public Output<String> regionName() {
-        return this.regionName == null ? Codegen.empty() : this.regionName;
+    public Optional<Output<String>> regionName() {
+        return Optional.ofNullable(this.regionName);
     }
 
-    public InstanceLocationArgs(
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> regionName) {
-        this.availabilityZone = availabilityZone;
-        this.regionName = regionName;
-    }
+    private InstanceLocationArgs() {}
 
-    private InstanceLocationArgs() {
-        this.availabilityZone = Codegen.empty();
-        this.regionName = Codegen.empty();
+    private InstanceLocationArgs(InstanceLocationArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.regionName = $.regionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> regionName;
+        private InstanceLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceLocationArgs();
         }
 
         public Builder(InstanceLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.regionName = defaults.regionName;
+            $ = new InstanceLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder regionName(@Nullable Output<String> regionName) {
-            this.regionName = regionName;
+            $.regionName = regionName;
             return this;
         }
-        public Builder regionName(@Nullable String regionName) {
-            this.regionName = Codegen.ofNullable(regionName);
-            return this;
-        }        public InstanceLocationArgs build() {
-            return new InstanceLocationArgs(availabilityZone, regionName);
+
+        public Builder regionName(String regionName) {
+            return regionName(Output.of(regionName));
+        }
+
+        public InstanceLocationArgs build() {
+            return $;
         }
     }
+
 }

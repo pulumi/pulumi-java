@@ -22,7 +22,7 @@ public final class MoveCollectionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="errors", required=true)
-      private final MoveCollectionPropertiesResponseErrors errors;
+    private MoveCollectionPropertiesResponseErrors errors;
 
     public MoveCollectionPropertiesResponseErrors errors() {
         return this.errors;
@@ -33,7 +33,7 @@ public final class MoveCollectionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -44,7 +44,7 @@ public final class MoveCollectionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sourceRegion", required=true)
-      private final String sourceRegion;
+    private String sourceRegion;
 
     public String sourceRegion() {
         return this.sourceRegion;
@@ -55,73 +55,66 @@ public final class MoveCollectionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="targetRegion", required=true)
-      private final String targetRegion;
+    private String targetRegion;
 
     public String targetRegion() {
         return this.targetRegion;
     }
 
-    public MoveCollectionPropertiesResponse(
-        MoveCollectionPropertiesResponseErrors errors,
-        String provisioningState,
-        String sourceRegion,
-        String targetRegion) {
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.sourceRegion = Objects.requireNonNull(sourceRegion, "expected parameter 'sourceRegion' to be non-null");
-        this.targetRegion = Objects.requireNonNull(targetRegion, "expected parameter 'targetRegion' to be non-null");
-    }
+    private MoveCollectionPropertiesResponse() {}
 
-    private MoveCollectionPropertiesResponse() {
-        this.errors = null;
-        this.provisioningState = null;
-        this.sourceRegion = null;
-        this.targetRegion = null;
+    private MoveCollectionPropertiesResponse(MoveCollectionPropertiesResponse $) {
+        this.errors = $.errors;
+        this.provisioningState = $.provisioningState;
+        this.sourceRegion = $.sourceRegion;
+        this.targetRegion = $.targetRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveCollectionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MoveCollectionPropertiesResponseErrors errors;
-        private String provisioningState;
-        private String sourceRegion;
-        private String targetRegion;
+        private MoveCollectionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveCollectionPropertiesResponse();
         }
 
         public Builder(MoveCollectionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errors = defaults.errors;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.sourceRegion = defaults.sourceRegion;
-    	      this.targetRegion = defaults.targetRegion;
+            $ = new MoveCollectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errors(MoveCollectionPropertiesResponseErrors errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder sourceRegion(String sourceRegion) {
-            this.sourceRegion = Objects.requireNonNull(sourceRegion);
+            $.sourceRegion = sourceRegion;
             return this;
         }
+
         public Builder targetRegion(String targetRegion) {
-            this.targetRegion = Objects.requireNonNull(targetRegion);
+            $.targetRegion = targetRegion;
             return this;
-        }        public MoveCollectionPropertiesResponse build() {
-            return new MoveCollectionPropertiesResponse(errors, provisioningState, sourceRegion, targetRegion);
+        }
+
+        public MoveCollectionPropertiesResponse build() {
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.sourceRegion = Objects.requireNonNull($.sourceRegion, "expected parameter 'sourceRegion' to be non-null");
+            $.targetRegion = Objects.requireNonNull($.targetRegion, "expected parameter 'targetRegion' to be non-null");
+            return $;
         }
     }
+
 }

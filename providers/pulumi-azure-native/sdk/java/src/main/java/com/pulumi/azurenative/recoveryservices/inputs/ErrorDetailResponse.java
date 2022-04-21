@@ -22,7 +22,7 @@ public final class ErrorDetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -33,7 +33,7 @@ public final class ErrorDetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -44,67 +44,63 @@ public final class ErrorDetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recommendations", required=true)
-      private final List<String> recommendations;
+    private List<String> recommendations;
 
     public List<String> recommendations() {
         return this.recommendations;
     }
 
-    public ErrorDetailResponse(
-        String code,
-        String message,
-        List<String> recommendations) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.recommendations = Objects.requireNonNull(recommendations, "expected parameter 'recommendations' to be non-null");
-    }
+    private ErrorDetailResponse() {}
 
-    private ErrorDetailResponse() {
-        this.code = null;
-        this.message = null;
-        this.recommendations = List.of();
+    private ErrorDetailResponse(ErrorDetailResponse $) {
+        this.code = $.code;
+        this.message = $.message;
+        this.recommendations = $.recommendations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String message;
-        private List<String> recommendations;
+        private ErrorDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorDetailResponse();
         }
 
         public Builder(ErrorDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.message = defaults.message;
-    	      this.recommendations = defaults.recommendations;
+            $ = new ErrorDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder recommendations(List<String> recommendations) {
-            this.recommendations = Objects.requireNonNull(recommendations);
+            $.recommendations = recommendations;
             return this;
         }
+
         public Builder recommendations(String... recommendations) {
             return recommendations(List.of(recommendations));
-        }        public ErrorDetailResponse build() {
-            return new ErrorDetailResponse(code, message, recommendations);
+        }
+
+        public ErrorDetailResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.recommendations = Objects.requireNonNull($.recommendations, "expected parameter 'recommendations' to be non-null");
+            return $;
         }
     }
+
 }

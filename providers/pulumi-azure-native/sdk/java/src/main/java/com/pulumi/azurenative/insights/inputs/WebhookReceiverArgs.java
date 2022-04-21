@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="identifierUri")
-      private final @Nullable Output<String> identifierUri;
+    private @Nullable Output<String> identifierUri;
 
-    public Output<String> identifierUri() {
-        return this.identifierUri == null ? Codegen.empty() : this.identifierUri;
+    public Optional<Output<String>> identifierUri() {
+        return Optional.ofNullable(this.identifierUri);
     }
 
     /**
@@ -36,7 +37,7 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -47,10 +48,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -58,7 +59,7 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serviceUri", required=true)
-      private final Output<String> serviceUri;
+    private Output<String> serviceUri;
 
     public Output<String> serviceUri() {
         return this.serviceUri;
@@ -69,10 +70,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="useAadAuth")
-      private final @Nullable Output<Boolean> useAadAuth;
+    private @Nullable Output<Boolean> useAadAuth;
 
-    public Output<Boolean> useAadAuth() {
-        return this.useAadAuth == null ? Codegen.empty() : this.useAadAuth;
+    public Optional<Output<Boolean>> useAadAuth() {
+        return Optional.ofNullable(this.useAadAuth);
     }
 
     /**
@@ -91,128 +92,112 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="useCommonAlertSchema")
-      private final @Nullable Output<Boolean> useCommonAlertSchema;
+    private @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> useCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
+    public Optional<Output<Boolean>> useCommonAlertSchema() {
+        return Optional.ofNullable(this.useCommonAlertSchema);
     }
 
-    public WebhookReceiverArgs(
-        @Nullable Output<String> identifierUri,
-        Output<String> name,
-        @Nullable Output<String> objectId,
-        Output<String> serviceUri,
-        @Nullable Output<String> tenantId,
-        @Nullable Output<Boolean> useAadAuth,
-        @Nullable Output<Boolean> useCommonAlertSchema) {
-        this.identifierUri = identifierUri;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.objectId = objectId;
-        this.serviceUri = Objects.requireNonNull(serviceUri, "expected parameter 'serviceUri' to be non-null");
-        this.tenantId = tenantId;
-        this.useAadAuth = Codegen.booleanProp("useAadAuth").output().arg(useAadAuth).def(false).getNullable();
-        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg(useCommonAlertSchema).def(false).getNullable();
-    }
+    private WebhookReceiverArgs() {}
 
-    private WebhookReceiverArgs() {
-        this.identifierUri = Codegen.empty();
-        this.name = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.serviceUri = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.useAadAuth = Codegen.empty();
-        this.useCommonAlertSchema = Codegen.empty();
+    private WebhookReceiverArgs(WebhookReceiverArgs $) {
+        this.identifierUri = $.identifierUri;
+        this.name = $.name;
+        this.objectId = $.objectId;
+        this.serviceUri = $.serviceUri;
+        this.tenantId = $.tenantId;
+        this.useAadAuth = $.useAadAuth;
+        this.useCommonAlertSchema = $.useCommonAlertSchema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookReceiverArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identifierUri;
-        private Output<String> name;
-        private @Nullable Output<String> objectId;
-        private Output<String> serviceUri;
-        private @Nullable Output<String> tenantId;
-        private @Nullable Output<Boolean> useAadAuth;
-        private @Nullable Output<Boolean> useCommonAlertSchema;
+        private WebhookReceiverArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookReceiverArgs();
         }
 
         public Builder(WebhookReceiverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identifierUri = defaults.identifierUri;
-    	      this.name = defaults.name;
-    	      this.objectId = defaults.objectId;
-    	      this.serviceUri = defaults.serviceUri;
-    	      this.tenantId = defaults.tenantId;
-    	      this.useAadAuth = defaults.useAadAuth;
-    	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
+            $ = new WebhookReceiverArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identifierUri(@Nullable Output<String> identifierUri) {
-            this.identifierUri = identifierUri;
+            $.identifierUri = identifierUri;
             return this;
         }
-        public Builder identifierUri(@Nullable String identifierUri) {
-            this.identifierUri = Codegen.ofNullable(identifierUri);
-            return this;
+
+        public Builder identifierUri(String identifierUri) {
+            return identifierUri(Output.of(identifierUri));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
         public Builder serviceUri(Output<String> serviceUri) {
-            this.serviceUri = Objects.requireNonNull(serviceUri);
+            $.serviceUri = serviceUri;
             return this;
         }
+
         public Builder serviceUri(String serviceUri) {
-            this.serviceUri = Output.of(Objects.requireNonNull(serviceUri));
-            return this;
+            return serviceUri(Output.of(serviceUri));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder useAadAuth(@Nullable Output<Boolean> useAadAuth) {
-            this.useAadAuth = useAadAuth;
+            $.useAadAuth = useAadAuth;
             return this;
         }
-        public Builder useAadAuth(@Nullable Boolean useAadAuth) {
-            this.useAadAuth = Codegen.ofNullable(useAadAuth);
-            return this;
+
+        public Builder useAadAuth(Boolean useAadAuth) {
+            return useAadAuth(Output.of(useAadAuth));
         }
+
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
-            this.useCommonAlertSchema = useCommonAlertSchema;
+            $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Codegen.ofNullable(useCommonAlertSchema);
-            return this;
-        }        public WebhookReceiverArgs build() {
-            return new WebhookReceiverArgs(identifierUri, name, objectId, serviceUri, tenantId, useAadAuth, useCommonAlertSchema);
+
+        public Builder useCommonAlertSchema(Boolean useCommonAlertSchema) {
+            return useCommonAlertSchema(Output.of(useCommonAlertSchema));
+        }
+
+        public WebhookReceiverArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.serviceUri = Objects.requireNonNull($.serviceUri, "expected parameter 'serviceUri' to be non-null");
+            $.useAadAuth = Codegen.booleanProp("useAadAuth").output().arg($.useAadAuth).def(false).getNullable();
+            $.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg($.useCommonAlertSchema).def(false).getNullable();
+            return $;
         }
     }
+
 }

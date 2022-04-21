@@ -23,45 +23,44 @@ public final class RuleManagementEventClaimsDataSourceResponse extends com.pulum
      * 
      */
     @Import(name="emailAddress")
-      private final @Nullable String emailAddress;
+    private @Nullable String emailAddress;
 
     public Optional<String> emailAddress() {
-        return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
+        return Optional.ofNullable(this.emailAddress);
     }
 
-    public RuleManagementEventClaimsDataSourceResponse(@Nullable String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
+    private RuleManagementEventClaimsDataSourceResponse() {}
 
-    private RuleManagementEventClaimsDataSourceResponse() {
-        this.emailAddress = null;
+    private RuleManagementEventClaimsDataSourceResponse(RuleManagementEventClaimsDataSourceResponse $) {
+        this.emailAddress = $.emailAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleManagementEventClaimsDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String emailAddress;
+        private RuleManagementEventClaimsDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleManagementEventClaimsDataSourceResponse();
         }
 
         public Builder(RuleManagementEventClaimsDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
+            $ = new RuleManagementEventClaimsDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = emailAddress;
+            $.emailAddress = emailAddress;
             return this;
-        }        public RuleManagementEventClaimsDataSourceResponse build() {
-            return new RuleManagementEventClaimsDataSourceResponse(emailAddress);
+        }
+
+        public RuleManagementEventClaimsDataSourceResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ArtifactRuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final ArtifactRuleArgs Empty = new ArtifactRuleArgs();
 
     @Import(name="artifactRule")
-      private final @Nullable Output<List<String>> artifactRule;
+    private @Nullable Output<List<String>> artifactRule;
 
-    public Output<List<String>> artifactRule() {
-        return this.artifactRule == null ? Codegen.empty() : this.artifactRule;
+    public Optional<Output<List<String>>> artifactRule() {
+        return Optional.ofNullable(this.artifactRule);
     }
 
-    public ArtifactRuleArgs(@Nullable Output<List<String>> artifactRule) {
-        this.artifactRule = artifactRule;
-    }
+    private ArtifactRuleArgs() {}
 
-    private ArtifactRuleArgs() {
-        this.artifactRule = Codegen.empty();
+    private ArtifactRuleArgs(ArtifactRuleArgs $) {
+        this.artifactRule = $.artifactRule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> artifactRule;
+        private ArtifactRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactRuleArgs();
         }
 
         public Builder(ArtifactRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactRule = defaults.artifactRule;
+            $ = new ArtifactRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactRule(@Nullable Output<List<String>> artifactRule) {
-            this.artifactRule = artifactRule;
+            $.artifactRule = artifactRule;
             return this;
         }
-        public Builder artifactRule(@Nullable List<String> artifactRule) {
-            this.artifactRule = Codegen.ofNullable(artifactRule);
-            return this;
+
+        public Builder artifactRule(List<String> artifactRule) {
+            return artifactRule(Output.of(artifactRule));
         }
+
         public Builder artifactRule(String... artifactRule) {
             return artifactRule(List.of(artifactRule));
-        }        public ArtifactRuleArgs build() {
-            return new ArtifactRuleArgs(artifactRule);
+        }
+
+        public ArtifactRuleArgs build() {
+            return $;
         }
     }
+
 }

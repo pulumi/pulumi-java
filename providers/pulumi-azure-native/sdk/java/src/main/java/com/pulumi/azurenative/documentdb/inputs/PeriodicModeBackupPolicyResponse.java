@@ -25,10 +25,10 @@ public final class PeriodicModeBackupPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="periodicModeProperties")
-      private final @Nullable PeriodicModePropertiesResponse periodicModeProperties;
+    private @Nullable PeriodicModePropertiesResponse periodicModeProperties;
 
     public Optional<PeriodicModePropertiesResponse> periodicModeProperties() {
-        return this.periodicModeProperties == null ? Optional.empty() : Optional.ofNullable(this.periodicModeProperties);
+        return Optional.ofNullable(this.periodicModeProperties);
     }
 
     /**
@@ -37,55 +37,51 @@ public final class PeriodicModeBackupPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PeriodicModeBackupPolicyResponse(
-        @Nullable PeriodicModePropertiesResponse periodicModeProperties,
-        String type) {
-        this.periodicModeProperties = periodicModeProperties;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private PeriodicModeBackupPolicyResponse() {}
 
-    private PeriodicModeBackupPolicyResponse() {
-        this.periodicModeProperties = null;
-        this.type = null;
+    private PeriodicModeBackupPolicyResponse(PeriodicModeBackupPolicyResponse $) {
+        this.periodicModeProperties = $.periodicModeProperties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeriodicModeBackupPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable PeriodicModePropertiesResponse periodicModeProperties;
-        private String type;
+        private PeriodicModeBackupPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeriodicModeBackupPolicyResponse();
         }
 
         public Builder(PeriodicModeBackupPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.periodicModeProperties = defaults.periodicModeProperties;
-    	      this.type = defaults.type;
+            $ = new PeriodicModeBackupPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder periodicModeProperties(@Nullable PeriodicModePropertiesResponse periodicModeProperties) {
-            this.periodicModeProperties = periodicModeProperties;
+            $.periodicModeProperties = periodicModeProperties;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PeriodicModeBackupPolicyResponse build() {
-            return new PeriodicModeBackupPolicyResponse(periodicModeProperties, type);
+        }
+
+        public PeriodicModeBackupPolicyResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

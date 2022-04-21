@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DiskResourcePolicyAttachmentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="disk", required=true)
-      private final Output<String> disk;
+    private Output<String> disk;
 
     public Output<String> disk() {
         return this.disk;
@@ -32,10 +32,10 @@ public final class DiskResourcePolicyAttachmentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DiskResourcePolicyAttachmentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -55,89 +55,79 @@ public final class DiskResourcePolicyAttachmentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public DiskResourcePolicyAttachmentArgs(
-        Output<String> disk,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> zone) {
-        this.disk = Objects.requireNonNull(disk, "expected parameter 'disk' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.zone = zone;
-    }
+    private DiskResourcePolicyAttachmentArgs() {}
 
-    private DiskResourcePolicyAttachmentArgs() {
-        this.disk = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.zone = Codegen.empty();
+    private DiskResourcePolicyAttachmentArgs(DiskResourcePolicyAttachmentArgs $) {
+        this.disk = $.disk;
+        this.name = $.name;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskResourcePolicyAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> disk;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> zone;
+        private DiskResourcePolicyAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskResourcePolicyAttachmentArgs();
         }
 
         public Builder(DiskResourcePolicyAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disk = defaults.disk;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new DiskResourcePolicyAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disk(Output<String> disk) {
-            this.disk = Objects.requireNonNull(disk);
+            $.disk = disk;
             return this;
         }
+
         public Builder disk(String disk) {
-            this.disk = Output.of(Objects.requireNonNull(disk));
-            return this;
+            return disk(Output.of(disk));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public DiskResourcePolicyAttachmentArgs build() {
-            return new DiskResourcePolicyAttachmentArgs(disk, name, project, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public DiskResourcePolicyAttachmentArgs build() {
+            $.disk = Objects.requireNonNull($.disk, "expected parameter 'disk' to be non-null");
+            return $;
         }
     }
+
 }

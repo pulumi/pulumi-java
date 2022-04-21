@@ -17,7 +17,7 @@ public final class GetCloudFormationTypeLoggingConfig extends com.pulumi.resourc
      * 
      */
     @Import(name="logGroupName", required=true)
-      private final String logGroupName;
+    private String logGroupName;
 
     public String logGroupName() {
         return this.logGroupName;
@@ -28,55 +28,52 @@ public final class GetCloudFormationTypeLoggingConfig extends com.pulumi.resourc
      * 
      */
     @Import(name="logRoleArn", required=true)
-      private final String logRoleArn;
+    private String logRoleArn;
 
     public String logRoleArn() {
         return this.logRoleArn;
     }
 
-    public GetCloudFormationTypeLoggingConfig(
-        String logGroupName,
-        String logRoleArn) {
-        this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
-        this.logRoleArn = Objects.requireNonNull(logRoleArn, "expected parameter 'logRoleArn' to be non-null");
-    }
+    private GetCloudFormationTypeLoggingConfig() {}
 
-    private GetCloudFormationTypeLoggingConfig() {
-        this.logGroupName = null;
-        this.logRoleArn = null;
+    private GetCloudFormationTypeLoggingConfig(GetCloudFormationTypeLoggingConfig $) {
+        this.logGroupName = $.logGroupName;
+        this.logRoleArn = $.logRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCloudFormationTypeLoggingConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String logGroupName;
-        private String logRoleArn;
+        private GetCloudFormationTypeLoggingConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCloudFormationTypeLoggingConfig();
         }
 
         public Builder(GetCloudFormationTypeLoggingConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.logRoleArn = defaults.logRoleArn;
+            $ = new GetCloudFormationTypeLoggingConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Objects.requireNonNull(logGroupName);
+            $.logGroupName = logGroupName;
             return this;
         }
+
         public Builder logRoleArn(String logRoleArn) {
-            this.logRoleArn = Objects.requireNonNull(logRoleArn);
+            $.logRoleArn = logRoleArn;
             return this;
-        }        public GetCloudFormationTypeLoggingConfig build() {
-            return new GetCloudFormationTypeLoggingConfig(logGroupName, logRoleArn);
+        }
+
+        public GetCloudFormationTypeLoggingConfig build() {
+            $.logGroupName = Objects.requireNonNull($.logGroupName, "expected parameter 'logGroupName' to be non-null");
+            $.logRoleArn = Objects.requireNonNull($.logRoleArn, "expected parameter 'logRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

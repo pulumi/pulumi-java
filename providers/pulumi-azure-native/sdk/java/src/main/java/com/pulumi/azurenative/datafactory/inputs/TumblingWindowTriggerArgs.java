@@ -18,6 +18,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +35,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -45,10 +46,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="delay")
-      private final @Nullable Output<Object> delay;
+    private @Nullable Output<Object> delay;
 
-    public Output<Object> delay() {
-        return this.delay == null ? Codegen.empty() : this.delay;
+    public Optional<Output<Object>> delay() {
+        return Optional.ofNullable(this.delay);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<Object>> dependsOn;
+    private @Nullable Output<List<Object>> dependsOn;
 
-    public Output<List<Object>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<Object>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -67,10 +68,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -78,10 +79,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -89,7 +90,7 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="frequency", required=true)
-      private final Output<Either<String,TumblingWindowFrequency>> frequency;
+    private Output<Either<String,TumblingWindowFrequency>> frequency;
 
     public Output<Either<String,TumblingWindowFrequency>> frequency() {
         return this.frequency;
@@ -100,7 +101,7 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="interval", required=true)
-      private final Output<Integer> interval;
+    private Output<Integer> interval;
 
     public Output<Integer> interval() {
         return this.interval;
@@ -111,7 +112,7 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="maxConcurrency", required=true)
-      private final Output<Integer> maxConcurrency;
+    private Output<Integer> maxConcurrency;
 
     public Output<Integer> maxConcurrency() {
         return this.maxConcurrency;
@@ -122,7 +123,7 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="pipeline", required=true)
-      private final Output<TriggerPipelineReferenceArgs> pipeline;
+    private Output<TriggerPipelineReferenceArgs> pipeline;
 
     public Output<TriggerPipelineReferenceArgs> pipeline() {
         return this.pipeline;
@@ -133,10 +134,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="retryPolicy")
-      private final @Nullable Output<RetryPolicyArgs> retryPolicy;
+    private @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Output<RetryPolicyArgs> retryPolicy() {
-        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
+    public Optional<Output<RetryPolicyArgs>> retryPolicy() {
+        return Optional.ofNullable(this.retryPolicy);
     }
 
     /**
@@ -144,7 +145,7 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="startTime", required=true)
-      private final Output<String> startTime;
+    private Output<String> startTime;
 
     public Output<String> startTime() {
         return this.startTime;
@@ -156,199 +157,172 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public TumblingWindowTriggerArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<Object> delay,
-        @Nullable Output<List<Object>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> endTime,
-        Output<Either<String,TumblingWindowFrequency>> frequency,
-        Output<Integer> interval,
-        Output<Integer> maxConcurrency,
-        Output<TriggerPipelineReferenceArgs> pipeline,
-        @Nullable Output<RetryPolicyArgs> retryPolicy,
-        Output<String> startTime,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.delay = delay;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.endTime = endTime;
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.maxConcurrency = Objects.requireNonNull(maxConcurrency, "expected parameter 'maxConcurrency' to be non-null");
-        this.pipeline = Objects.requireNonNull(pipeline, "expected parameter 'pipeline' to be non-null");
-        this.retryPolicy = retryPolicy;
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private TumblingWindowTriggerArgs() {}
 
-    private TumblingWindowTriggerArgs() {
-        this.annotations = Codegen.empty();
-        this.delay = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.frequency = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.maxConcurrency = Codegen.empty();
-        this.pipeline = Codegen.empty();
-        this.retryPolicy = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.type = Codegen.empty();
+    private TumblingWindowTriggerArgs(TumblingWindowTriggerArgs $) {
+        this.annotations = $.annotations;
+        this.delay = $.delay;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.endTime = $.endTime;
+        this.frequency = $.frequency;
+        this.interval = $.interval;
+        this.maxConcurrency = $.maxConcurrency;
+        this.pipeline = $.pipeline;
+        this.retryPolicy = $.retryPolicy;
+        this.startTime = $.startTime;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TumblingWindowTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<Object> delay;
-        private @Nullable Output<List<Object>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> endTime;
-        private Output<Either<String,TumblingWindowFrequency>> frequency;
-        private Output<Integer> interval;
-        private Output<Integer> maxConcurrency;
-        private Output<TriggerPipelineReferenceArgs> pipeline;
-        private @Nullable Output<RetryPolicyArgs> retryPolicy;
-        private Output<String> startTime;
-        private Output<String> type;
+        private TumblingWindowTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TumblingWindowTriggerArgs();
         }
 
         public Builder(TumblingWindowTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.delay = defaults.delay;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.endTime = defaults.endTime;
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
-    	      this.maxConcurrency = defaults.maxConcurrency;
-    	      this.pipeline = defaults.pipeline;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.startTime = defaults.startTime;
-    	      this.type = defaults.type;
+            $ = new TumblingWindowTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder delay(@Nullable Output<Object> delay) {
-            this.delay = delay;
+            $.delay = delay;
             return this;
         }
-        public Builder delay(@Nullable Object delay) {
-            this.delay = Codegen.ofNullable(delay);
-            return this;
+
+        public Builder delay(Object delay) {
+            return delay(Output.of(delay));
         }
+
         public Builder dependsOn(@Nullable Output<List<Object>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<Object> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<Object> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(Object... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder frequency(Output<Either<String,TumblingWindowFrequency>> frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder frequency(Either<String,TumblingWindowFrequency> frequency) {
-            this.frequency = Output.of(Objects.requireNonNull(frequency));
-            return this;
+            return frequency(Output.of(frequency));
         }
+
         public Builder interval(Output<Integer> interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder interval(Integer interval) {
-            this.interval = Output.of(Objects.requireNonNull(interval));
-            return this;
+            return interval(Output.of(interval));
         }
+
         public Builder maxConcurrency(Output<Integer> maxConcurrency) {
-            this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
+            $.maxConcurrency = maxConcurrency;
             return this;
         }
+
         public Builder maxConcurrency(Integer maxConcurrency) {
-            this.maxConcurrency = Output.of(Objects.requireNonNull(maxConcurrency));
-            return this;
+            return maxConcurrency(Output.of(maxConcurrency));
         }
+
         public Builder pipeline(Output<TriggerPipelineReferenceArgs> pipeline) {
-            this.pipeline = Objects.requireNonNull(pipeline);
+            $.pipeline = pipeline;
             return this;
         }
+
         public Builder pipeline(TriggerPipelineReferenceArgs pipeline) {
-            this.pipeline = Output.of(Objects.requireNonNull(pipeline));
-            return this;
+            return pipeline(Output.of(pipeline));
         }
+
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
-            this.retryPolicy = retryPolicy;
+            $.retryPolicy = retryPolicy;
             return this;
         }
-        public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Codegen.ofNullable(retryPolicy);
-            return this;
+
+        public Builder retryPolicy(RetryPolicyArgs retryPolicy) {
+            return retryPolicy(Output.of(retryPolicy));
         }
+
         public Builder startTime(Output<String> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
+            return startTime(Output.of(startTime));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TumblingWindowTriggerArgs build() {
-            return new TumblingWindowTriggerArgs(annotations, delay, dependsOn, description, endTime, frequency, interval, maxConcurrency, pipeline, retryPolicy, startTime, type);
+            return type(Output.of(type));
+        }
+
+        public TumblingWindowTriggerArgs build() {
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            $.maxConcurrency = Objects.requireNonNull($.maxConcurrency, "expected parameter 'maxConcurrency' to be non-null");
+            $.pipeline = Objects.requireNonNull($.pipeline, "expected parameter 'pipeline' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

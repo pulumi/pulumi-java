@@ -5,9 +5,9 @@ package com.pulumi.aws.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @Import(name="fromPort", required=true)
-      private final Output<Integer> fromPort;
+    private Output<Integer> fromPort;
 
     public Output<Integer> fromPort() {
         return this.fromPort;
@@ -31,63 +31,59 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @Import(name="toPort")
-      private final @Nullable Output<Integer> toPort;
+    private @Nullable Output<Integer> toPort;
 
-    public Output<Integer> toPort() {
-        return this.toPort == null ? Codegen.empty() : this.toPort;
+    public Optional<Output<Integer>> toPort() {
+        return Optional.ofNullable(this.toPort);
     }
 
-    public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs(
-        Output<Integer> fromPort,
-        @Nullable Output<Integer> toPort) {
-        this.fromPort = Objects.requireNonNull(fromPort, "expected parameter 'fromPort' to be non-null");
-        this.toPort = toPort;
-    }
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs() {}
 
-    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs() {
-        this.fromPort = Codegen.empty();
-        this.toPort = Codegen.empty();
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs $) {
+        this.fromPort = $.fromPort;
+        this.toPort = $.toPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> fromPort;
-        private @Nullable Output<Integer> toPort;
+        private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs();
         }
 
         public Builder(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fromPort = defaults.fromPort;
-    	      this.toPort = defaults.toPort;
+            $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fromPort(Output<Integer> fromPort) {
-            this.fromPort = Objects.requireNonNull(fromPort);
+            $.fromPort = fromPort;
             return this;
         }
+
         public Builder fromPort(Integer fromPort) {
-            this.fromPort = Output.of(Objects.requireNonNull(fromPort));
-            return this;
+            return fromPort(Output.of(fromPort));
         }
+
         public Builder toPort(@Nullable Output<Integer> toPort) {
-            this.toPort = toPort;
+            $.toPort = toPort;
             return this;
         }
-        public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Codegen.ofNullable(toPort);
-            return this;
-        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs build() {
-            return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs(fromPort, toPort);
+
+        public Builder toPort(Integer toPort) {
+            return toPort(Output.of(toPort));
+        }
+
+        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs build() {
+            $.fromPort = Objects.requireNonNull($.fromPort, "expected parameter 'fromPort' to be non-null");
+            return $;
         }
     }
+
 }

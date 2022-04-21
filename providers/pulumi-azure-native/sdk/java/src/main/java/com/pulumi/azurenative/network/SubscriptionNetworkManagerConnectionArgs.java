@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SubscriptionNetworkManagerConnectionArgs extends com.pulumi.r
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SubscriptionNetworkManagerConnectionArgs extends com.pulumi.r
      * 
      */
     @Import(name="networkManagerConnectionName")
-      private final @Nullable Output<String> networkManagerConnectionName;
+    private @Nullable Output<String> networkManagerConnectionName;
 
-    public Output<String> networkManagerConnectionName() {
-        return this.networkManagerConnectionName == null ? Codegen.empty() : this.networkManagerConnectionName;
+    public Optional<Output<String>> networkManagerConnectionName() {
+        return Optional.ofNullable(this.networkManagerConnectionName);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class SubscriptionNetworkManagerConnectionArgs extends com.pulumi.r
      * 
      */
     @Import(name="networkManagerId")
-      private final @Nullable Output<String> networkManagerId;
+    private @Nullable Output<String> networkManagerId;
 
-    public Output<String> networkManagerId() {
-        return this.networkManagerId == null ? Codegen.empty() : this.networkManagerId;
+    public Optional<Output<String>> networkManagerId() {
+        return Optional.ofNullable(this.networkManagerId);
     }
 
-    public SubscriptionNetworkManagerConnectionArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> networkManagerConnectionName,
-        @Nullable Output<String> networkManagerId) {
-        this.description = description;
-        this.networkManagerConnectionName = networkManagerConnectionName;
-        this.networkManagerId = networkManagerId;
-    }
+    private SubscriptionNetworkManagerConnectionArgs() {}
 
-    private SubscriptionNetworkManagerConnectionArgs() {
-        this.description = Codegen.empty();
-        this.networkManagerConnectionName = Codegen.empty();
-        this.networkManagerId = Codegen.empty();
+    private SubscriptionNetworkManagerConnectionArgs(SubscriptionNetworkManagerConnectionArgs $) {
+        this.description = $.description;
+        this.networkManagerConnectionName = $.networkManagerConnectionName;
+        this.networkManagerId = $.networkManagerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionNetworkManagerConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> networkManagerConnectionName;
-        private @Nullable Output<String> networkManagerId;
+        private SubscriptionNetworkManagerConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionNetworkManagerConnectionArgs();
         }
 
         public Builder(SubscriptionNetworkManagerConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.networkManagerConnectionName = defaults.networkManagerConnectionName;
-    	      this.networkManagerId = defaults.networkManagerId;
+            $ = new SubscriptionNetworkManagerConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder networkManagerConnectionName(@Nullable Output<String> networkManagerConnectionName) {
-            this.networkManagerConnectionName = networkManagerConnectionName;
+            $.networkManagerConnectionName = networkManagerConnectionName;
             return this;
         }
-        public Builder networkManagerConnectionName(@Nullable String networkManagerConnectionName) {
-            this.networkManagerConnectionName = Codegen.ofNullable(networkManagerConnectionName);
-            return this;
+
+        public Builder networkManagerConnectionName(String networkManagerConnectionName) {
+            return networkManagerConnectionName(Output.of(networkManagerConnectionName));
         }
+
         public Builder networkManagerId(@Nullable Output<String> networkManagerId) {
-            this.networkManagerId = networkManagerId;
+            $.networkManagerId = networkManagerId;
             return this;
         }
-        public Builder networkManagerId(@Nullable String networkManagerId) {
-            this.networkManagerId = Codegen.ofNullable(networkManagerId);
-            return this;
-        }        public SubscriptionNetworkManagerConnectionArgs build() {
-            return new SubscriptionNetworkManagerConnectionArgs(description, networkManagerConnectionName, networkManagerId);
+
+        public Builder networkManagerId(String networkManagerId) {
+            return networkManagerId(Output.of(networkManagerId));
+        }
+
+        public SubscriptionNetworkManagerConnectionArgs build() {
+            return $;
         }
     }
+
 }

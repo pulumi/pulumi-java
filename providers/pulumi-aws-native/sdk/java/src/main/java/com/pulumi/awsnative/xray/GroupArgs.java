@@ -7,10 +7,10 @@ import com.pulumi.awsnative.xray.inputs.GroupInsightsConfigurationArgs;
 import com.pulumi.awsnative.xray.inputs.TagsItemPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filterExpression")
-      private final @Nullable Output<String> filterExpression;
+    private @Nullable Output<String> filterExpression;
 
-    public Output<String> filterExpression() {
-        return this.filterExpression == null ? Codegen.empty() : this.filterExpression;
+    public Optional<Output<String>> filterExpression() {
+        return Optional.ofNullable(this.filterExpression);
     }
 
     /**
@@ -34,106 +34,96 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupName")
-      private final @Nullable Output<String> groupName;
+    private @Nullable Output<String> groupName;
 
-    public Output<String> groupName() {
-        return this.groupName == null ? Codegen.empty() : this.groupName;
+    public Optional<Output<String>> groupName() {
+        return Optional.ofNullable(this.groupName);
     }
 
     @Import(name="insightsConfiguration")
-      private final @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration;
+    private @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration;
 
-    public Output<GroupInsightsConfigurationArgs> insightsConfiguration() {
-        return this.insightsConfiguration == null ? Codegen.empty() : this.insightsConfiguration;
+    public Optional<Output<GroupInsightsConfigurationArgs>> insightsConfiguration() {
+        return Optional.ofNullable(this.insightsConfiguration);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
+    private @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
-    public Output<List<TagsItemPropertiesArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TagsItemPropertiesArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GroupArgs(
-        @Nullable Output<String> filterExpression,
-        @Nullable Output<String> groupName,
-        @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration,
-        @Nullable Output<List<TagsItemPropertiesArgs>> tags) {
-        this.filterExpression = filterExpression;
-        this.groupName = groupName;
-        this.insightsConfiguration = insightsConfiguration;
-        this.tags = tags;
-    }
+    private GroupArgs() {}
 
-    private GroupArgs() {
-        this.filterExpression = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.insightsConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
+    private GroupArgs(GroupArgs $) {
+        this.filterExpression = $.filterExpression;
+        this.groupName = $.groupName;
+        this.insightsConfiguration = $.insightsConfiguration;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filterExpression;
-        private @Nullable Output<String> groupName;
-        private @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration;
-        private @Nullable Output<List<TagsItemPropertiesArgs>> tags;
+        private GroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupArgs();
         }
 
         public Builder(GroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterExpression = defaults.filterExpression;
-    	      this.groupName = defaults.groupName;
-    	      this.insightsConfiguration = defaults.insightsConfiguration;
-    	      this.tags = defaults.tags;
+            $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterExpression(@Nullable Output<String> filterExpression) {
-            this.filterExpression = filterExpression;
+            $.filterExpression = filterExpression;
             return this;
         }
-        public Builder filterExpression(@Nullable String filterExpression) {
-            this.filterExpression = Codegen.ofNullable(filterExpression);
-            return this;
+
+        public Builder filterExpression(String filterExpression) {
+            return filterExpression(Output.of(filterExpression));
         }
+
         public Builder groupName(@Nullable Output<String> groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
-        public Builder groupName(@Nullable String groupName) {
-            this.groupName = Codegen.ofNullable(groupName);
-            return this;
+
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
         }
+
         public Builder insightsConfiguration(@Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration) {
-            this.insightsConfiguration = insightsConfiguration;
+            $.insightsConfiguration = insightsConfiguration;
             return this;
         }
-        public Builder insightsConfiguration(@Nullable GroupInsightsConfigurationArgs insightsConfiguration) {
-            this.insightsConfiguration = Codegen.ofNullable(insightsConfiguration);
-            return this;
+
+        public Builder insightsConfiguration(GroupInsightsConfigurationArgs insightsConfiguration) {
+            return insightsConfiguration(Output.of(insightsConfiguration));
         }
+
         public Builder tags(@Nullable Output<List<TagsItemPropertiesArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TagsItemPropertiesArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TagsItemPropertiesArgs... tags) {
             return tags(List.of(tags));
-        }        public GroupArgs build() {
-            return new GroupArgs(filterExpression, groupName, insightsConfiguration, tags);
+        }
+
+        public GroupArgs build() {
+            return $;
         }
     }
+
 }

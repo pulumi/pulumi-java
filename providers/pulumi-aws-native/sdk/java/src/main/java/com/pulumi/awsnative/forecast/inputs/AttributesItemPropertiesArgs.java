@@ -6,9 +6,9 @@ package com.pulumi.awsnative.forecast.inputs;
 import com.pulumi.awsnative.forecast.enums.DatasetAttributesItemPropertiesAttributeType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AttributesItemPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="attributeName")
-      private final @Nullable Output<String> attributeName;
+    private @Nullable Output<String> attributeName;
 
-    public Output<String> attributeName() {
-        return this.attributeName == null ? Codegen.empty() : this.attributeName;
+    public Optional<Output<String>> attributeName() {
+        return Optional.ofNullable(this.attributeName);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class AttributesItemPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="attributeType")
-      private final @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType;
+    private @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType;
 
-    public Output<DatasetAttributesItemPropertiesAttributeType> attributeType() {
-        return this.attributeType == null ? Codegen.empty() : this.attributeType;
+    public Optional<Output<DatasetAttributesItemPropertiesAttributeType>> attributeType() {
+        return Optional.ofNullable(this.attributeType);
     }
 
-    public AttributesItemPropertiesArgs(
-        @Nullable Output<String> attributeName,
-        @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType) {
-        this.attributeName = attributeName;
-        this.attributeType = attributeType;
-    }
+    private AttributesItemPropertiesArgs() {}
 
-    private AttributesItemPropertiesArgs() {
-        this.attributeName = Codegen.empty();
-        this.attributeType = Codegen.empty();
+    private AttributesItemPropertiesArgs(AttributesItemPropertiesArgs $) {
+        this.attributeName = $.attributeName;
+        this.attributeType = $.attributeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttributesItemPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attributeName;
-        private @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType;
+        private AttributesItemPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttributesItemPropertiesArgs();
         }
 
         public Builder(AttributesItemPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.attributeType = defaults.attributeType;
+            $ = new AttributesItemPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(@Nullable Output<String> attributeName) {
-            this.attributeName = attributeName;
+            $.attributeName = attributeName;
             return this;
         }
-        public Builder attributeName(@Nullable String attributeName) {
-            this.attributeName = Codegen.ofNullable(attributeName);
-            return this;
+
+        public Builder attributeName(String attributeName) {
+            return attributeName(Output.of(attributeName));
         }
+
         public Builder attributeType(@Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType) {
-            this.attributeType = attributeType;
+            $.attributeType = attributeType;
             return this;
         }
-        public Builder attributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
-            this.attributeType = Codegen.ofNullable(attributeType);
-            return this;
-        }        public AttributesItemPropertiesArgs build() {
-            return new AttributesItemPropertiesArgs(attributeName, attributeType);
+
+        public Builder attributeType(DatasetAttributesItemPropertiesAttributeType attributeType) {
+            return attributeType(Output.of(attributeType));
+        }
+
+        public AttributesItemPropertiesArgs build() {
+            return $;
         }
     }
+
 }

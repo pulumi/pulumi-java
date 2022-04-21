@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +23,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<String> condition;
+    private @Nullable Output<String> condition;
 
-    public Output<String> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<String>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -33,10 +34,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="conditionVersion")
-      private final @Nullable Output<String> conditionVersion;
+    private @Nullable Output<String> conditionVersion;
 
-    public Output<String> conditionVersion() {
-        return this.conditionVersion == null ? Codegen.empty() : this.conditionVersion;
+    public Optional<Output<String>> conditionVersion() {
+        return Optional.ofNullable(this.conditionVersion);
     }
 
     /**
@@ -44,10 +45,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="delegatedManagedIdentityResourceId")
-      private final @Nullable Output<String> delegatedManagedIdentityResourceId;
+    private @Nullable Output<String> delegatedManagedIdentityResourceId;
 
-    public Output<String> delegatedManagedIdentityResourceId() {
-        return this.delegatedManagedIdentityResourceId == null ? Codegen.empty() : this.delegatedManagedIdentityResourceId;
+    public Optional<Output<String>> delegatedManagedIdentityResourceId() {
+        return Optional.ofNullable(this.delegatedManagedIdentityResourceId);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,7 +67,7 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="principalId", required=true)
-      private final Output<String> principalId;
+    private Output<String> principalId;
 
     public Output<String> principalId() {
         return this.principalId;
@@ -77,10 +78,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="principalType")
-      private final @Nullable Output<Either<String,PrincipalType>> principalType;
+    private @Nullable Output<Either<String,PrincipalType>> principalType;
 
-    public Output<Either<String,PrincipalType>> principalType() {
-        return this.principalType == null ? Codegen.empty() : this.principalType;
+    public Optional<Output<Either<String,PrincipalType>>> principalType() {
+        return Optional.ofNullable(this.principalType);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roleAssignmentName")
-      private final @Nullable Output<String> roleAssignmentName;
+    private @Nullable Output<String> roleAssignmentName;
 
-    public Output<String> roleAssignmentName() {
-        return this.roleAssignmentName == null ? Codegen.empty() : this.roleAssignmentName;
+    public Optional<Output<String>> roleAssignmentName() {
+        return Optional.ofNullable(this.roleAssignmentName);
     }
 
     /**
@@ -99,7 +100,7 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roleDefinitionId", required=true)
-      private final Output<String> roleDefinitionId;
+    private Output<String> roleDefinitionId;
 
     public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
@@ -110,154 +111,132 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
     }
 
-    public RoleAssignmentArgs(
-        @Nullable Output<String> condition,
-        @Nullable Output<String> conditionVersion,
-        @Nullable Output<String> delegatedManagedIdentityResourceId,
-        @Nullable Output<String> description,
-        Output<String> principalId,
-        @Nullable Output<Either<String,PrincipalType>> principalType,
-        @Nullable Output<String> roleAssignmentName,
-        Output<String> roleDefinitionId,
-        Output<String> scope) {
-        this.condition = condition;
-        this.conditionVersion = conditionVersion;
-        this.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
-        this.description = description;
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalType = Codegen.stringProp("principalType").left(PrincipalType.class).output().arg(principalType).def("User").getNullable();
-        this.roleAssignmentName = roleAssignmentName;
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private RoleAssignmentArgs() {}
 
-    private RoleAssignmentArgs() {
-        this.condition = Codegen.empty();
-        this.conditionVersion = Codegen.empty();
-        this.delegatedManagedIdentityResourceId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.principalType = Codegen.empty();
-        this.roleAssignmentName = Codegen.empty();
-        this.roleDefinitionId = Codegen.empty();
-        this.scope = Codegen.empty();
+    private RoleAssignmentArgs(RoleAssignmentArgs $) {
+        this.condition = $.condition;
+        this.conditionVersion = $.conditionVersion;
+        this.delegatedManagedIdentityResourceId = $.delegatedManagedIdentityResourceId;
+        this.description = $.description;
+        this.principalId = $.principalId;
+        this.principalType = $.principalType;
+        this.roleAssignmentName = $.roleAssignmentName;
+        this.roleDefinitionId = $.roleDefinitionId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> condition;
-        private @Nullable Output<String> conditionVersion;
-        private @Nullable Output<String> delegatedManagedIdentityResourceId;
-        private @Nullable Output<String> description;
-        private Output<String> principalId;
-        private @Nullable Output<Either<String,PrincipalType>> principalType;
-        private @Nullable Output<String> roleAssignmentName;
-        private Output<String> roleDefinitionId;
-        private Output<String> scope;
+        private RoleAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleAssignmentArgs();
         }
 
         public Builder(RoleAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.conditionVersion = defaults.conditionVersion;
-    	      this.delegatedManagedIdentityResourceId = defaults.delegatedManagedIdentityResourceId;
-    	      this.description = defaults.description;
-    	      this.principalId = defaults.principalId;
-    	      this.principalType = defaults.principalType;
-    	      this.roleAssignmentName = defaults.roleAssignmentName;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
-    	      this.scope = defaults.scope;
+            $ = new RoleAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<String> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable String condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(String condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder conditionVersion(@Nullable Output<String> conditionVersion) {
-            this.conditionVersion = conditionVersion;
+            $.conditionVersion = conditionVersion;
             return this;
         }
-        public Builder conditionVersion(@Nullable String conditionVersion) {
-            this.conditionVersion = Codegen.ofNullable(conditionVersion);
-            return this;
+
+        public Builder conditionVersion(String conditionVersion) {
+            return conditionVersion(Output.of(conditionVersion));
         }
+
         public Builder delegatedManagedIdentityResourceId(@Nullable Output<String> delegatedManagedIdentityResourceId) {
-            this.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
+            $.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
             return this;
         }
-        public Builder delegatedManagedIdentityResourceId(@Nullable String delegatedManagedIdentityResourceId) {
-            this.delegatedManagedIdentityResourceId = Codegen.ofNullable(delegatedManagedIdentityResourceId);
-            return this;
+
+        public Builder delegatedManagedIdentityResourceId(String delegatedManagedIdentityResourceId) {
+            return delegatedManagedIdentityResourceId(Output.of(delegatedManagedIdentityResourceId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder principalId(Output<String> principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Output.of(Objects.requireNonNull(principalId));
-            return this;
+            return principalId(Output.of(principalId));
         }
+
         public Builder principalType(@Nullable Output<Either<String,PrincipalType>> principalType) {
-            this.principalType = principalType;
+            $.principalType = principalType;
             return this;
         }
-        public Builder principalType(@Nullable Either<String,PrincipalType> principalType) {
-            this.principalType = Codegen.ofNullable(principalType);
-            return this;
+
+        public Builder principalType(Either<String,PrincipalType> principalType) {
+            return principalType(Output.of(principalType));
         }
+
         public Builder roleAssignmentName(@Nullable Output<String> roleAssignmentName) {
-            this.roleAssignmentName = roleAssignmentName;
+            $.roleAssignmentName = roleAssignmentName;
             return this;
         }
-        public Builder roleAssignmentName(@Nullable String roleAssignmentName) {
-            this.roleAssignmentName = Codegen.ofNullable(roleAssignmentName);
-            return this;
+
+        public Builder roleAssignmentName(String roleAssignmentName) {
+            return roleAssignmentName(Output.of(roleAssignmentName));
         }
+
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
-            this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+            $.roleDefinitionId = roleDefinitionId;
             return this;
         }
+
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
-            return this;
+            return roleDefinitionId(Output.of(roleDefinitionId));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
-        }        public RoleAssignmentArgs build() {
-            return new RoleAssignmentArgs(condition, conditionVersion, delegatedManagedIdentityResourceId, description, principalId, principalType, roleAssignmentName, roleDefinitionId, scope);
+            return scope(Output.of(scope));
+        }
+
+        public RoleAssignmentArgs build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.principalType = Codegen.stringProp("principalType").left(PrincipalType.class).output().arg($.principalType).def("User").getNullable();
+            $.roleDefinitionId = Objects.requireNonNull($.roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

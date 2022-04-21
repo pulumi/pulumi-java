@@ -15,45 +15,44 @@ public final class FlowS3InputFormatConfig extends com.pulumi.resources.InvokeAr
     public static final FlowS3InputFormatConfig Empty = new FlowS3InputFormatConfig();
 
     @Import(name="s3InputFileType")
-      private final @Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType;
+    private @Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType;
 
     public Optional<FlowS3InputFormatConfigS3InputFileType> s3InputFileType() {
-        return this.s3InputFileType == null ? Optional.empty() : Optional.ofNullable(this.s3InputFileType);
+        return Optional.ofNullable(this.s3InputFileType);
     }
 
-    public FlowS3InputFormatConfig(@Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType) {
-        this.s3InputFileType = s3InputFileType;
-    }
+    private FlowS3InputFormatConfig() {}
 
-    private FlowS3InputFormatConfig() {
-        this.s3InputFileType = null;
+    private FlowS3InputFormatConfig(FlowS3InputFormatConfig $) {
+        this.s3InputFileType = $.s3InputFileType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowS3InputFormatConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType;
+        private FlowS3InputFormatConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowS3InputFormatConfig();
         }
 
         public Builder(FlowS3InputFormatConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3InputFileType = defaults.s3InputFileType;
+            $ = new FlowS3InputFormatConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder s3InputFileType(@Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType) {
-            this.s3InputFileType = s3InputFileType;
+            $.s3InputFileType = s3InputFileType;
             return this;
-        }        public FlowS3InputFormatConfig build() {
-            return new FlowS3InputFormatConfig(s3InputFileType);
+        }
+
+        public FlowS3InputFormatConfig build() {
+            return $;
         }
     }
+
 }

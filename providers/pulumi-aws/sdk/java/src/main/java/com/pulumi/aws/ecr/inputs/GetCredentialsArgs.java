@@ -13,45 +13,45 @@ public final class GetCredentialsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCredentialsArgs Empty = new GetCredentialsArgs();
 
     @Import(name="registryId", required=true)
-      private final String registryId;
+    private String registryId;
 
     public String registryId() {
         return this.registryId;
     }
 
-    public GetCredentialsArgs(String registryId) {
-        this.registryId = Objects.requireNonNull(registryId, "expected parameter 'registryId' to be non-null");
-    }
+    private GetCredentialsArgs() {}
 
-    private GetCredentialsArgs() {
-        this.registryId = null;
+    private GetCredentialsArgs(GetCredentialsArgs $) {
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registryId;
+        private GetCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCredentialsArgs();
         }
 
         public Builder(GetCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryId = defaults.registryId;
+            $ = new GetCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryId(String registryId) {
-            this.registryId = Objects.requireNonNull(registryId);
+            $.registryId = registryId;
             return this;
-        }        public GetCredentialsArgs build() {
-            return new GetCredentialsArgs(registryId);
+        }
+
+        public GetCredentialsArgs build() {
+            $.registryId = Objects.requireNonNull($.registryId, "expected parameter 'registryId' to be non-null");
+            return $;
         }
     }
+
 }

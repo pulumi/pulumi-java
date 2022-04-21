@@ -24,10 +24,10 @@ public final class MongoIndexOptionsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="expireAfterSeconds")
-      private final @Nullable Integer expireAfterSeconds;
+    private @Nullable Integer expireAfterSeconds;
 
     public Optional<Integer> expireAfterSeconds() {
-        return this.expireAfterSeconds == null ? Optional.empty() : Optional.ofNullable(this.expireAfterSeconds);
+        return Optional.ofNullable(this.expireAfterSeconds);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class MongoIndexOptionsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="unique")
-      private final @Nullable Boolean unique;
+    private @Nullable Boolean unique;
 
     public Optional<Boolean> unique() {
-        return this.unique == null ? Optional.empty() : Optional.ofNullable(this.unique);
+        return Optional.ofNullable(this.unique);
     }
 
-    public MongoIndexOptionsResponse(
-        @Nullable Integer expireAfterSeconds,
-        @Nullable Boolean unique) {
-        this.expireAfterSeconds = expireAfterSeconds;
-        this.unique = unique;
-    }
+    private MongoIndexOptionsResponse() {}
 
-    private MongoIndexOptionsResponse() {
-        this.expireAfterSeconds = null;
-        this.unique = null;
+    private MongoIndexOptionsResponse(MongoIndexOptionsResponse $) {
+        this.expireAfterSeconds = $.expireAfterSeconds;
+        this.unique = $.unique;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoIndexOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer expireAfterSeconds;
-        private @Nullable Boolean unique;
+        private MongoIndexOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoIndexOptionsResponse();
         }
 
         public Builder(MongoIndexOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expireAfterSeconds = defaults.expireAfterSeconds;
-    	      this.unique = defaults.unique;
+            $ = new MongoIndexOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expireAfterSeconds(@Nullable Integer expireAfterSeconds) {
-            this.expireAfterSeconds = expireAfterSeconds;
+            $.expireAfterSeconds = expireAfterSeconds;
             return this;
         }
+
         public Builder unique(@Nullable Boolean unique) {
-            this.unique = unique;
+            $.unique = unique;
             return this;
-        }        public MongoIndexOptionsResponse build() {
-            return new MongoIndexOptionsResponse(expireAfterSeconds, unique);
+        }
+
+        public MongoIndexOptionsResponse build() {
+            return $;
         }
     }
+
 }

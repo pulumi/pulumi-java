@@ -20,10 +20,10 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="latest")
-      private final @Nullable Boolean latest;
+    private @Nullable Boolean latest;
 
     public Optional<Boolean> latest() {
-        return this.latest == null ? Optional.empty() : Optional.ofNullable(this.latest);
+        return Optional.ofNullable(this.latest);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable String namePrefix;
+    private @Nullable String namePrefix;
 
     public Optional<String> namePrefix() {
-        return this.namePrefix == null ? Optional.empty() : Optional.ofNullable(this.namePrefix);
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -53,73 +53,62 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="pathPrefix")
-      private final @Nullable String pathPrefix;
+    private @Nullable String pathPrefix;
 
     public Optional<String> pathPrefix() {
-        return this.pathPrefix == null ? Optional.empty() : Optional.ofNullable(this.pathPrefix);
+        return Optional.ofNullable(this.pathPrefix);
     }
 
-    public GetServerCertificateArgs(
-        @Nullable Boolean latest,
-        @Nullable String name,
-        @Nullable String namePrefix,
-        @Nullable String pathPrefix) {
-        this.latest = latest;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.pathPrefix = pathPrefix;
-    }
+    private GetServerCertificateArgs() {}
 
-    private GetServerCertificateArgs() {
-        this.latest = null;
-        this.name = null;
-        this.namePrefix = null;
-        this.pathPrefix = null;
+    private GetServerCertificateArgs(GetServerCertificateArgs $) {
+        this.latest = $.latest;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.pathPrefix = $.pathPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean latest;
-        private @Nullable String name;
-        private @Nullable String namePrefix;
-        private @Nullable String pathPrefix;
+        private GetServerCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerCertificateArgs();
         }
 
         public Builder(GetServerCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.latest = defaults.latest;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.pathPrefix = defaults.pathPrefix;
+            $ = new GetServerCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder latest(@Nullable Boolean latest) {
-            this.latest = latest;
+            $.latest = latest;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
+
         public Builder pathPrefix(@Nullable String pathPrefix) {
-            this.pathPrefix = pathPrefix;
+            $.pathPrefix = pathPrefix;
             return this;
-        }        public GetServerCertificateArgs build() {
-            return new GetServerCertificateArgs(latest, name, namePrefix, pathPrefix);
+        }
+
+        public GetServerCertificateArgs build() {
+            return $;
         }
     }
+
 }

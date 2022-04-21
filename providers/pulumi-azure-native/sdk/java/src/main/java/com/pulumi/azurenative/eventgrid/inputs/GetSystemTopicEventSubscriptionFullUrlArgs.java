@@ -17,7 +17,7 @@ public final class GetSystemTopicEventSubscriptionFullUrlArgs extends com.pulumi
      * 
      */
     @Import(name="eventSubscriptionName", required=true)
-      private final String eventSubscriptionName;
+    private String eventSubscriptionName;
 
     public String eventSubscriptionName() {
         return this.eventSubscriptionName;
@@ -28,7 +28,7 @@ public final class GetSystemTopicEventSubscriptionFullUrlArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetSystemTopicEventSubscriptionFullUrlArgs extends com.pulumi
      * 
      */
     @Import(name="systemTopicName", required=true)
-      private final String systemTopicName;
+    private String systemTopicName;
 
     public String systemTopicName() {
         return this.systemTopicName;
     }
 
-    public GetSystemTopicEventSubscriptionFullUrlArgs(
-        String eventSubscriptionName,
-        String resourceGroupName,
-        String systemTopicName) {
-        this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName, "expected parameter 'eventSubscriptionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.systemTopicName = Objects.requireNonNull(systemTopicName, "expected parameter 'systemTopicName' to be non-null");
-    }
+    private GetSystemTopicEventSubscriptionFullUrlArgs() {}
 
-    private GetSystemTopicEventSubscriptionFullUrlArgs() {
-        this.eventSubscriptionName = null;
-        this.resourceGroupName = null;
-        this.systemTopicName = null;
+    private GetSystemTopicEventSubscriptionFullUrlArgs(GetSystemTopicEventSubscriptionFullUrlArgs $) {
+        this.eventSubscriptionName = $.eventSubscriptionName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.systemTopicName = $.systemTopicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSystemTopicEventSubscriptionFullUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventSubscriptionName;
-        private String resourceGroupName;
-        private String systemTopicName;
+        private GetSystemTopicEventSubscriptionFullUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSystemTopicEventSubscriptionFullUrlArgs();
         }
 
         public Builder(GetSystemTopicEventSubscriptionFullUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventSubscriptionName = defaults.eventSubscriptionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.systemTopicName = defaults.systemTopicName;
+            $ = new GetSystemTopicEventSubscriptionFullUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventSubscriptionName(String eventSubscriptionName) {
-            this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
+            $.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder systemTopicName(String systemTopicName) {
-            this.systemTopicName = Objects.requireNonNull(systemTopicName);
+            $.systemTopicName = systemTopicName;
             return this;
-        }        public GetSystemTopicEventSubscriptionFullUrlArgs build() {
-            return new GetSystemTopicEventSubscriptionFullUrlArgs(eventSubscriptionName, resourceGroupName, systemTopicName);
+        }
+
+        public GetSystemTopicEventSubscriptionFullUrlArgs build() {
+            $.eventSubscriptionName = Objects.requireNonNull($.eventSubscriptionName, "expected parameter 'eventSubscriptionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.systemTopicName = Objects.requireNonNull($.systemTopicName, "expected parameter 'systemTopicName' to be non-null");
+            return $;
         }
     }
+
 }

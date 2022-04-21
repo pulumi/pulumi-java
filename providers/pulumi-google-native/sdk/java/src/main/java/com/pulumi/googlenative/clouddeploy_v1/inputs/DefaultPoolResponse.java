@@ -21,7 +21,7 @@ public final class DefaultPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="artifactStorage", required=true)
-      private final String artifactStorage;
+    private String artifactStorage;
 
     public String artifactStorage() {
         return this.artifactStorage;
@@ -32,55 +32,52 @@ public final class DefaultPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
     }
 
-    public DefaultPoolResponse(
-        String artifactStorage,
-        String serviceAccount) {
-        this.artifactStorage = Objects.requireNonNull(artifactStorage, "expected parameter 'artifactStorage' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-    }
+    private DefaultPoolResponse() {}
 
-    private DefaultPoolResponse() {
-        this.artifactStorage = null;
-        this.serviceAccount = null;
+    private DefaultPoolResponse(DefaultPoolResponse $) {
+        this.artifactStorage = $.artifactStorage;
+        this.serviceAccount = $.serviceAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultPoolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String artifactStorage;
-        private String serviceAccount;
+        private DefaultPoolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultPoolResponse();
         }
 
         public Builder(DefaultPoolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactStorage = defaults.artifactStorage;
-    	      this.serviceAccount = defaults.serviceAccount;
+            $ = new DefaultPoolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactStorage(String artifactStorage) {
-            this.artifactStorage = Objects.requireNonNull(artifactStorage);
+            $.artifactStorage = artifactStorage;
             return this;
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
-        }        public DefaultPoolResponse build() {
-            return new DefaultPoolResponse(artifactStorage, serviceAccount);
+        }
+
+        public DefaultPoolResponse build() {
+            $.artifactStorage = Objects.requireNonNull($.artifactStorage, "expected parameter 'artifactStorage' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            return $;
         }
     }
+
 }

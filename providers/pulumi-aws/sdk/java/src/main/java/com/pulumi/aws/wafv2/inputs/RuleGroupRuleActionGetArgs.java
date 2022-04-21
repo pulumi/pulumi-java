@@ -8,8 +8,8 @@ import com.pulumi.aws.wafv2.inputs.RuleGroupRuleActionBlockGetArgs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleActionCountGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RuleGroupRuleActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allow")
-      private final @Nullable Output<RuleGroupRuleActionAllowGetArgs> allow;
+    private @Nullable Output<RuleGroupRuleActionAllowGetArgs> allow;
 
-    public Output<RuleGroupRuleActionAllowGetArgs> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<RuleGroupRuleActionAllowGetArgs>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RuleGroupRuleActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="block")
-      private final @Nullable Output<RuleGroupRuleActionBlockGetArgs> block;
+    private @Nullable Output<RuleGroupRuleActionBlockGetArgs> block;
 
-    public Output<RuleGroupRuleActionBlockGetArgs> block() {
-        return this.block == null ? Codegen.empty() : this.block;
+    public Optional<Output<RuleGroupRuleActionBlockGetArgs>> block() {
+        return Optional.ofNullable(this.block);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class RuleGroupRuleActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<RuleGroupRuleActionCountGetArgs> count;
+    private @Nullable Output<RuleGroupRuleActionCountGetArgs> count;
 
-    public Output<RuleGroupRuleActionCountGetArgs> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<RuleGroupRuleActionCountGetArgs>> count() {
+        return Optional.ofNullable(this.count);
     }
 
-    public RuleGroupRuleActionGetArgs(
-        @Nullable Output<RuleGroupRuleActionAllowGetArgs> allow,
-        @Nullable Output<RuleGroupRuleActionBlockGetArgs> block,
-        @Nullable Output<RuleGroupRuleActionCountGetArgs> count) {
-        this.allow = allow;
-        this.block = block;
-        this.count = count;
-    }
+    private RuleGroupRuleActionGetArgs() {}
 
-    private RuleGroupRuleActionGetArgs() {
-        this.allow = Codegen.empty();
-        this.block = Codegen.empty();
-        this.count = Codegen.empty();
+    private RuleGroupRuleActionGetArgs(RuleGroupRuleActionGetArgs $) {
+        this.allow = $.allow;
+        this.block = $.block;
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupRuleActionAllowGetArgs> allow;
-        private @Nullable Output<RuleGroupRuleActionBlockGetArgs> block;
-        private @Nullable Output<RuleGroupRuleActionCountGetArgs> count;
+        private RuleGroupRuleActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleActionGetArgs();
         }
 
         public Builder(RuleGroupRuleActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.block = defaults.block;
-    	      this.count = defaults.count;
+            $ = new RuleGroupRuleActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<RuleGroupRuleActionAllowGetArgs> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable RuleGroupRuleActionAllowGetArgs allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(RuleGroupRuleActionAllowGetArgs allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder block(@Nullable Output<RuleGroupRuleActionBlockGetArgs> block) {
-            this.block = block;
+            $.block = block;
             return this;
         }
-        public Builder block(@Nullable RuleGroupRuleActionBlockGetArgs block) {
-            this.block = Codegen.ofNullable(block);
-            return this;
+
+        public Builder block(RuleGroupRuleActionBlockGetArgs block) {
+            return block(Output.of(block));
         }
+
         public Builder count(@Nullable Output<RuleGroupRuleActionCountGetArgs> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable RuleGroupRuleActionCountGetArgs count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
-        }        public RuleGroupRuleActionGetArgs build() {
-            return new RuleGroupRuleActionGetArgs(allow, block, count);
+
+        public Builder count(RuleGroupRuleActionCountGetArgs count) {
+            return count(Output.of(count));
+        }
+
+        public RuleGroupRuleActionGetArgs build() {
+            return $;
         }
     }
+
 }

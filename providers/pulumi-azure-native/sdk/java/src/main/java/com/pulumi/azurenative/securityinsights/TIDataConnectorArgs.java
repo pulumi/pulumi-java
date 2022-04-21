@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +22,10 @@ public final class TIDataConnectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dataConnectorId")
-      private final @Nullable Output<String> dataConnectorId;
+    private @Nullable Output<String> dataConnectorId;
 
-    public Output<String> dataConnectorId() {
-        return this.dataConnectorId == null ? Codegen.empty() : this.dataConnectorId;
+    public Optional<Output<String>> dataConnectorId() {
+        return Optional.ofNullable(this.dataConnectorId);
     }
 
     /**
@@ -32,10 +33,10 @@ public final class TIDataConnectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dataTypes")
-      private final @Nullable Output<TIDataConnectorDataTypesArgs> dataTypes;
+    private @Nullable Output<TIDataConnectorDataTypesArgs> dataTypes;
 
-    public Output<TIDataConnectorDataTypesArgs> dataTypes() {
-        return this.dataTypes == null ? Codegen.empty() : this.dataTypes;
+    public Optional<Output<TIDataConnectorDataTypesArgs>> dataTypes() {
+        return Optional.ofNullable(this.dataTypes);
     }
 
     /**
@@ -44,7 +45,7 @@ public final class TIDataConnectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -55,7 +56,7 @@ public final class TIDataConnectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,10 +67,10 @@ public final class TIDataConnectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class TIDataConnectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tipLookbackPeriod")
-      private final @Nullable Output<String> tipLookbackPeriod;
+    private @Nullable Output<String> tipLookbackPeriod;
 
-    public Output<String> tipLookbackPeriod() {
-        return this.tipLookbackPeriod == null ? Codegen.empty() : this.tipLookbackPeriod;
+    public Optional<Output<String>> tipLookbackPeriod() {
+        return Optional.ofNullable(this.tipLookbackPeriod);
     }
 
     /**
@@ -88,128 +89,111 @@ public final class TIDataConnectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public TIDataConnectorArgs(
-        @Nullable Output<String> dataConnectorId,
-        @Nullable Output<TIDataConnectorDataTypesArgs> dataTypes,
-        Output<String> kind,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> tenantId,
-        @Nullable Output<String> tipLookbackPeriod,
-        Output<String> workspaceName) {
-        this.dataConnectorId = dataConnectorId;
-        this.dataTypes = dataTypes;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tenantId = tenantId;
-        this.tipLookbackPeriod = tipLookbackPeriod;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private TIDataConnectorArgs() {}
 
-    private TIDataConnectorArgs() {
-        this.dataConnectorId = Codegen.empty();
-        this.dataTypes = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.tipLookbackPeriod = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private TIDataConnectorArgs(TIDataConnectorArgs $) {
+        this.dataConnectorId = $.dataConnectorId;
+        this.dataTypes = $.dataTypes;
+        this.kind = $.kind;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tenantId = $.tenantId;
+        this.tipLookbackPeriod = $.tipLookbackPeriod;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TIDataConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataConnectorId;
-        private @Nullable Output<TIDataConnectorDataTypesArgs> dataTypes;
-        private Output<String> kind;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> tenantId;
-        private @Nullable Output<String> tipLookbackPeriod;
-        private Output<String> workspaceName;
+        private TIDataConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TIDataConnectorArgs();
         }
 
         public Builder(TIDataConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataConnectorId = defaults.dataConnectorId;
-    	      this.dataTypes = defaults.dataTypes;
-    	      this.kind = defaults.kind;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tenantId = defaults.tenantId;
-    	      this.tipLookbackPeriod = defaults.tipLookbackPeriod;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new TIDataConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataConnectorId(@Nullable Output<String> dataConnectorId) {
-            this.dataConnectorId = dataConnectorId;
+            $.dataConnectorId = dataConnectorId;
             return this;
         }
-        public Builder dataConnectorId(@Nullable String dataConnectorId) {
-            this.dataConnectorId = Codegen.ofNullable(dataConnectorId);
-            return this;
+
+        public Builder dataConnectorId(String dataConnectorId) {
+            return dataConnectorId(Output.of(dataConnectorId));
         }
+
         public Builder dataTypes(@Nullable Output<TIDataConnectorDataTypesArgs> dataTypes) {
-            this.dataTypes = dataTypes;
+            $.dataTypes = dataTypes;
             return this;
         }
-        public Builder dataTypes(@Nullable TIDataConnectorDataTypesArgs dataTypes) {
-            this.dataTypes = Codegen.ofNullable(dataTypes);
-            return this;
+
+        public Builder dataTypes(TIDataConnectorDataTypesArgs dataTypes) {
+            return dataTypes(Output.of(dataTypes));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder tipLookbackPeriod(@Nullable Output<String> tipLookbackPeriod) {
-            this.tipLookbackPeriod = tipLookbackPeriod;
+            $.tipLookbackPeriod = tipLookbackPeriod;
             return this;
         }
-        public Builder tipLookbackPeriod(@Nullable String tipLookbackPeriod) {
-            this.tipLookbackPeriod = Codegen.ofNullable(tipLookbackPeriod);
-            return this;
+
+        public Builder tipLookbackPeriod(String tipLookbackPeriod) {
+            return tipLookbackPeriod(Output.of(tipLookbackPeriod));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public TIDataConnectorArgs build() {
-            return new TIDataConnectorArgs(dataConnectorId, dataTypes, kind, resourceGroupName, tenantId, tipLookbackPeriod, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public TIDataConnectorArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

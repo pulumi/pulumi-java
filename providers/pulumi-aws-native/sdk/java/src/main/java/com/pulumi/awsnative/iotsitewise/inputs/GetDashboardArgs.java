@@ -17,45 +17,45 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dashboardId", required=true)
-      private final String dashboardId;
+    private String dashboardId;
 
     public String dashboardId() {
         return this.dashboardId;
     }
 
-    public GetDashboardArgs(String dashboardId) {
-        this.dashboardId = Objects.requireNonNull(dashboardId, "expected parameter 'dashboardId' to be non-null");
-    }
+    private GetDashboardArgs() {}
 
-    private GetDashboardArgs() {
-        this.dashboardId = null;
+    private GetDashboardArgs(GetDashboardArgs $) {
+        this.dashboardId = $.dashboardId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDashboardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dashboardId;
+        private GetDashboardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDashboardArgs();
         }
 
         public Builder(GetDashboardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dashboardId = defaults.dashboardId;
+            $ = new GetDashboardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dashboardId(String dashboardId) {
-            this.dashboardId = Objects.requireNonNull(dashboardId);
+            $.dashboardId = dashboardId;
             return this;
-        }        public GetDashboardArgs build() {
-            return new GetDashboardArgs(dashboardId);
+        }
+
+        public GetDashboardArgs build() {
+            $.dashboardId = Objects.requireNonNull($.dashboardId, "expected parameter 'dashboardId' to be non-null");
+            return $;
         }
     }
+
 }

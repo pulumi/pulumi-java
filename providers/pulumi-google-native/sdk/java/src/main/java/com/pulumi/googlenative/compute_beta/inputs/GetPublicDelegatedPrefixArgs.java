@@ -15,78 +15,72 @@ public final class GetPublicDelegatedPrefixArgs extends com.pulumi.resources.Inv
     public static final GetPublicDelegatedPrefixArgs Empty = new GetPublicDelegatedPrefixArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="publicDelegatedPrefix", required=true)
-      private final String publicDelegatedPrefix;
+    private String publicDelegatedPrefix;
 
     public String publicDelegatedPrefix() {
         return this.publicDelegatedPrefix;
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetPublicDelegatedPrefixArgs(
-        @Nullable String project,
-        String publicDelegatedPrefix,
-        String region) {
-        this.project = project;
-        this.publicDelegatedPrefix = Objects.requireNonNull(publicDelegatedPrefix, "expected parameter 'publicDelegatedPrefix' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetPublicDelegatedPrefixArgs() {}
 
-    private GetPublicDelegatedPrefixArgs() {
-        this.project = null;
-        this.publicDelegatedPrefix = null;
-        this.region = null;
+    private GetPublicDelegatedPrefixArgs(GetPublicDelegatedPrefixArgs $) {
+        this.project = $.project;
+        this.publicDelegatedPrefix = $.publicDelegatedPrefix;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPublicDelegatedPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String publicDelegatedPrefix;
-        private String region;
+        private GetPublicDelegatedPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPublicDelegatedPrefixArgs();
         }
 
         public Builder(GetPublicDelegatedPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.publicDelegatedPrefix = defaults.publicDelegatedPrefix;
-    	      this.region = defaults.region;
+            $ = new GetPublicDelegatedPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder publicDelegatedPrefix(String publicDelegatedPrefix) {
-            this.publicDelegatedPrefix = Objects.requireNonNull(publicDelegatedPrefix);
+            $.publicDelegatedPrefix = publicDelegatedPrefix;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetPublicDelegatedPrefixArgs build() {
-            return new GetPublicDelegatedPrefixArgs(project, publicDelegatedPrefix, region);
+        }
+
+        public GetPublicDelegatedPrefixArgs build() {
+            $.publicDelegatedPrefix = Objects.requireNonNull($.publicDelegatedPrefix, "expected parameter 'publicDelegatedPrefix' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

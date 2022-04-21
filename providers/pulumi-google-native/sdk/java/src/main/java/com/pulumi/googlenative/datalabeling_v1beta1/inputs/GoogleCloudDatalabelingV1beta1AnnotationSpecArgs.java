@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends com.
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends com.
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
-    public GoogleCloudDatalabelingV1beta1AnnotationSpecArgs(
-        @Nullable Output<String> description,
-        Output<String> displayName) {
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1AnnotationSpecArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1AnnotationSpecArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1AnnotationSpecArgs(GoogleCloudDatalabelingV1beta1AnnotationSpecArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1AnnotationSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
+        private GoogleCloudDatalabelingV1beta1AnnotationSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1AnnotationSpecArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1AnnotationSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
+            $ = new GoogleCloudDatalabelingV1beta1AnnotationSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1AnnotationSpecArgs build() {
-            return new GoogleCloudDatalabelingV1beta1AnnotationSpecArgs(description, displayName);
+            return displayName(Output.of(displayName));
+        }
+
+        public GoogleCloudDatalabelingV1beta1AnnotationSpecArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

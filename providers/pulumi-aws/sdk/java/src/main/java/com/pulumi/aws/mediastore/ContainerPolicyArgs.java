@@ -5,7 +5,6 @@ package com.pulumi.aws.mediastore;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ContainerPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="containerName", required=true)
-      private final Output<String> containerName;
+    private Output<String> containerName;
 
     public Output<String> containerName() {
         return this.containerName;
@@ -30,63 +29,60 @@ public final class ContainerPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public ContainerPolicyArgs(
-        Output<String> containerName,
-        Output<String> policy) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private ContainerPolicyArgs() {}
 
-    private ContainerPolicyArgs() {
-        this.containerName = Codegen.empty();
-        this.policy = Codegen.empty();
+    private ContainerPolicyArgs(ContainerPolicyArgs $) {
+        this.containerName = $.containerName;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> containerName;
-        private Output<String> policy;
+        private ContainerPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPolicyArgs();
         }
 
         public Builder(ContainerPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.policy = defaults.policy;
+            $ = new ContainerPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(Output<String> containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Output.of(Objects.requireNonNull(containerName));
-            return this;
+            return containerName(Output.of(containerName));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public ContainerPolicyArgs build() {
-            return new ContainerPolicyArgs(containerName, policy);
+            return policy(Output.of(policy));
+        }
+
+        public ContainerPolicyArgs build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,62 +14,59 @@ public final class GetJobQueueComputeEnvironmentOrder extends com.pulumi.resourc
     public static final GetJobQueueComputeEnvironmentOrder Empty = new GetJobQueueComputeEnvironmentOrder();
 
     @Import(name="computeEnvironment", required=true)
-      private final String computeEnvironment;
+    private String computeEnvironment;
 
     public String computeEnvironment() {
         return this.computeEnvironment;
     }
 
     @Import(name="order", required=true)
-      private final Integer order;
+    private Integer order;
 
     public Integer order() {
         return this.order;
     }
 
-    public GetJobQueueComputeEnvironmentOrder(
-        String computeEnvironment,
-        Integer order) {
-        this.computeEnvironment = Objects.requireNonNull(computeEnvironment, "expected parameter 'computeEnvironment' to be non-null");
-        this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
-    }
+    private GetJobQueueComputeEnvironmentOrder() {}
 
-    private GetJobQueueComputeEnvironmentOrder() {
-        this.computeEnvironment = null;
-        this.order = null;
+    private GetJobQueueComputeEnvironmentOrder(GetJobQueueComputeEnvironmentOrder $) {
+        this.computeEnvironment = $.computeEnvironment;
+        this.order = $.order;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobQueueComputeEnvironmentOrder defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String computeEnvironment;
-        private Integer order;
+        private GetJobQueueComputeEnvironmentOrder $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobQueueComputeEnvironmentOrder();
         }
 
         public Builder(GetJobQueueComputeEnvironmentOrder defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeEnvironment = defaults.computeEnvironment;
-    	      this.order = defaults.order;
+            $ = new GetJobQueueComputeEnvironmentOrder(Objects.requireNonNull(defaults));
         }
 
         public Builder computeEnvironment(String computeEnvironment) {
-            this.computeEnvironment = Objects.requireNonNull(computeEnvironment);
+            $.computeEnvironment = computeEnvironment;
             return this;
         }
+
         public Builder order(Integer order) {
-            this.order = Objects.requireNonNull(order);
+            $.order = order;
             return this;
-        }        public GetJobQueueComputeEnvironmentOrder build() {
-            return new GetJobQueueComputeEnvironmentOrder(computeEnvironment, order);
+        }
+
+        public GetJobQueueComputeEnvironmentOrder build() {
+            $.computeEnvironment = Objects.requireNonNull($.computeEnvironment, "expected parameter 'computeEnvironment' to be non-null");
+            $.order = Objects.requireNonNull($.order, "expected parameter 'order' to be non-null");
+            return $;
         }
     }
+
 }

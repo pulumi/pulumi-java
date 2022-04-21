@@ -18,7 +18,7 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends com.pulumi.re
      * 
      */
     @Import(name="natIp", required=true)
-      private final String natIp;
+    private String natIp;
 
     public String natIp() {
         return this.natIp;
@@ -29,7 +29,7 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends com.pulumi.re
      * 
      */
     @Import(name="networkTier", required=true)
-      private final String networkTier;
+    private String networkTier;
 
     public String networkTier() {
         return this.networkTier;
@@ -40,64 +40,59 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends com.pulumi.re
      * 
      */
     @Import(name="publicPtrDomainName", required=true)
-      private final String publicPtrDomainName;
+    private String publicPtrDomainName;
 
     public String publicPtrDomainName() {
         return this.publicPtrDomainName;
     }
 
-    public GetInstanceNetworkInterfaceAccessConfig(
-        String natIp,
-        String networkTier,
-        String publicPtrDomainName) {
-        this.natIp = Objects.requireNonNull(natIp, "expected parameter 'natIp' to be non-null");
-        this.networkTier = Objects.requireNonNull(networkTier, "expected parameter 'networkTier' to be non-null");
-        this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName, "expected parameter 'publicPtrDomainName' to be non-null");
-    }
+    private GetInstanceNetworkInterfaceAccessConfig() {}
 
-    private GetInstanceNetworkInterfaceAccessConfig() {
-        this.natIp = null;
-        this.networkTier = null;
-        this.publicPtrDomainName = null;
+    private GetInstanceNetworkInterfaceAccessConfig(GetInstanceNetworkInterfaceAccessConfig $) {
+        this.natIp = $.natIp;
+        this.networkTier = $.networkTier;
+        this.publicPtrDomainName = $.publicPtrDomainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceNetworkInterfaceAccessConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String natIp;
-        private String networkTier;
-        private String publicPtrDomainName;
+        private GetInstanceNetworkInterfaceAccessConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceNetworkInterfaceAccessConfig();
         }
 
         public Builder(GetInstanceNetworkInterfaceAccessConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.natIp = defaults.natIp;
-    	      this.networkTier = defaults.networkTier;
-    	      this.publicPtrDomainName = defaults.publicPtrDomainName;
+            $ = new GetInstanceNetworkInterfaceAccessConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder natIp(String natIp) {
-            this.natIp = Objects.requireNonNull(natIp);
+            $.natIp = natIp;
             return this;
         }
+
         public Builder networkTier(String networkTier) {
-            this.networkTier = Objects.requireNonNull(networkTier);
+            $.networkTier = networkTier;
             return this;
         }
+
         public Builder publicPtrDomainName(String publicPtrDomainName) {
-            this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
+            $.publicPtrDomainName = publicPtrDomainName;
             return this;
-        }        public GetInstanceNetworkInterfaceAccessConfig build() {
-            return new GetInstanceNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
+        }
+
+        public GetInstanceNetworkInterfaceAccessConfig build() {
+            $.natIp = Objects.requireNonNull($.natIp, "expected parameter 'natIp' to be non-null");
+            $.networkTier = Objects.requireNonNull($.networkTier, "expected parameter 'networkTier' to be non-null");
+            $.publicPtrDomainName = Objects.requireNonNull($.publicPtrDomainName, "expected parameter 'publicPtrDomainName' to be non-null");
+            return $;
         }
     }
+
 }

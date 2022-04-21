@@ -21,7 +21,7 @@ public final class NormalizedVertexResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="x", required=true)
-      private final Double x;
+    private Double x;
 
     public Double x() {
         return this.x;
@@ -32,55 +32,52 @@ public final class NormalizedVertexResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="y", required=true)
-      private final Double y;
+    private Double y;
 
     public Double y() {
         return this.y;
     }
 
-    public NormalizedVertexResponse(
-        Double x,
-        Double y) {
-        this.x = Objects.requireNonNull(x, "expected parameter 'x' to be non-null");
-        this.y = Objects.requireNonNull(y, "expected parameter 'y' to be non-null");
-    }
+    private NormalizedVertexResponse() {}
 
-    private NormalizedVertexResponse() {
-        this.x = null;
-        this.y = null;
+    private NormalizedVertexResponse(NormalizedVertexResponse $) {
+        this.x = $.x;
+        this.y = $.y;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NormalizedVertexResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double x;
-        private Double y;
+        private NormalizedVertexResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NormalizedVertexResponse();
         }
 
         public Builder(NormalizedVertexResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.x = defaults.x;
-    	      this.y = defaults.y;
+            $ = new NormalizedVertexResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder x(Double x) {
-            this.x = Objects.requireNonNull(x);
+            $.x = x;
             return this;
         }
+
         public Builder y(Double y) {
-            this.y = Objects.requireNonNull(y);
+            $.y = y;
             return this;
-        }        public NormalizedVertexResponse build() {
-            return new NormalizedVertexResponse(x, y);
+        }
+
+        public NormalizedVertexResponse build() {
+            $.x = Objects.requireNonNull($.x, "expected parameter 'x' to be non-null");
+            $.y = Objects.requireNonNull($.y, "expected parameter 'y' to be non-null");
+            return $;
         }
     }
+
 }

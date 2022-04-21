@@ -20,10 +20,10 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expandRegistrationDefinition")
-      private final @Nullable Boolean expandRegistrationDefinition;
+    private @Nullable Boolean expandRegistrationDefinition;
 
     public Optional<Boolean> expandRegistrationDefinition() {
-        return this.expandRegistrationDefinition == null ? Optional.empty() : Optional.ofNullable(this.expandRegistrationDefinition);
+        return Optional.ofNullable(this.expandRegistrationDefinition);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="registrationAssignmentId", required=true)
-      private final String registrationAssignmentId;
+    private String registrationAssignmentId;
 
     public String registrationAssignmentId() {
         return this.registrationAssignmentId;
@@ -42,64 +42,58 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetRegistrationAssignmentArgs(
-        @Nullable Boolean expandRegistrationDefinition,
-        String registrationAssignmentId,
-        String scope) {
-        this.expandRegistrationDefinition = expandRegistrationDefinition;
-        this.registrationAssignmentId = Objects.requireNonNull(registrationAssignmentId, "expected parameter 'registrationAssignmentId' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetRegistrationAssignmentArgs() {}
 
-    private GetRegistrationAssignmentArgs() {
-        this.expandRegistrationDefinition = null;
-        this.registrationAssignmentId = null;
-        this.scope = null;
+    private GetRegistrationAssignmentArgs(GetRegistrationAssignmentArgs $) {
+        this.expandRegistrationDefinition = $.expandRegistrationDefinition;
+        this.registrationAssignmentId = $.registrationAssignmentId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegistrationAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean expandRegistrationDefinition;
-        private String registrationAssignmentId;
-        private String scope;
+        private GetRegistrationAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegistrationAssignmentArgs();
         }
 
         public Builder(GetRegistrationAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expandRegistrationDefinition = defaults.expandRegistrationDefinition;
-    	      this.registrationAssignmentId = defaults.registrationAssignmentId;
-    	      this.scope = defaults.scope;
+            $ = new GetRegistrationAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expandRegistrationDefinition(@Nullable Boolean expandRegistrationDefinition) {
-            this.expandRegistrationDefinition = expandRegistrationDefinition;
+            $.expandRegistrationDefinition = expandRegistrationDefinition;
             return this;
         }
+
         public Builder registrationAssignmentId(String registrationAssignmentId) {
-            this.registrationAssignmentId = Objects.requireNonNull(registrationAssignmentId);
+            $.registrationAssignmentId = registrationAssignmentId;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetRegistrationAssignmentArgs build() {
-            return new GetRegistrationAssignmentArgs(expandRegistrationDefinition, registrationAssignmentId, scope);
+        }
+
+        public GetRegistrationAssignmentArgs build() {
+            $.registrationAssignmentId = Objects.requireNonNull($.registrationAssignmentId, "expected parameter 'registrationAssignmentId' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

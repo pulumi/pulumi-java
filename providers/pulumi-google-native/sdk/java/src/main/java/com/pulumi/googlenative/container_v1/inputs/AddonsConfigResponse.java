@@ -29,7 +29,7 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="cloudRunConfig", required=true)
-      private final CloudRunConfigResponse cloudRunConfig;
+    private CloudRunConfigResponse cloudRunConfig;
 
     public CloudRunConfigResponse cloudRunConfig() {
         return this.cloudRunConfig;
@@ -40,7 +40,7 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="configConnectorConfig", required=true)
-      private final ConfigConnectorConfigResponse configConnectorConfig;
+    private ConfigConnectorConfigResponse configConnectorConfig;
 
     public ConfigConnectorConfigResponse configConnectorConfig() {
         return this.configConnectorConfig;
@@ -51,7 +51,7 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dnsCacheConfig", required=true)
-      private final DnsCacheConfigResponse dnsCacheConfig;
+    private DnsCacheConfigResponse dnsCacheConfig;
 
     public DnsCacheConfigResponse dnsCacheConfig() {
         return this.dnsCacheConfig;
@@ -62,7 +62,7 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="gcePersistentDiskCsiDriverConfig", required=true)
-      private final GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig;
+    private GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig;
 
     public GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig() {
         return this.gcePersistentDiskCsiDriverConfig;
@@ -73,7 +73,7 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="gcpFilestoreCsiDriverConfig", required=true)
-      private final GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig;
+    private GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig;
 
     public GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig() {
         return this.gcpFilestoreCsiDriverConfig;
@@ -84,7 +84,7 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="horizontalPodAutoscaling", required=true)
-      private final HorizontalPodAutoscalingResponse horizontalPodAutoscaling;
+    private HorizontalPodAutoscalingResponse horizontalPodAutoscaling;
 
     public HorizontalPodAutoscalingResponse horizontalPodAutoscaling() {
         return this.horizontalPodAutoscaling;
@@ -95,7 +95,7 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="httpLoadBalancing", required=true)
-      private final HttpLoadBalancingResponse httpLoadBalancing;
+    private HttpLoadBalancingResponse httpLoadBalancing;
 
     public HttpLoadBalancingResponse httpLoadBalancing() {
         return this.httpLoadBalancing;
@@ -106,7 +106,7 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="kubernetesDashboard", required=true)
-      private final KubernetesDashboardResponse kubernetesDashboard;
+    private KubernetesDashboardResponse kubernetesDashboard;
 
     public KubernetesDashboardResponse kubernetesDashboard() {
         return this.kubernetesDashboard;
@@ -117,118 +117,101 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="networkPolicyConfig", required=true)
-      private final NetworkPolicyConfigResponse networkPolicyConfig;
+    private NetworkPolicyConfigResponse networkPolicyConfig;
 
     public NetworkPolicyConfigResponse networkPolicyConfig() {
         return this.networkPolicyConfig;
     }
 
-    public AddonsConfigResponse(
-        CloudRunConfigResponse cloudRunConfig,
-        ConfigConnectorConfigResponse configConnectorConfig,
-        DnsCacheConfigResponse dnsCacheConfig,
-        GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig,
-        GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig,
-        HorizontalPodAutoscalingResponse horizontalPodAutoscaling,
-        HttpLoadBalancingResponse httpLoadBalancing,
-        KubernetesDashboardResponse kubernetesDashboard,
-        NetworkPolicyConfigResponse networkPolicyConfig) {
-        this.cloudRunConfig = Objects.requireNonNull(cloudRunConfig, "expected parameter 'cloudRunConfig' to be non-null");
-        this.configConnectorConfig = Objects.requireNonNull(configConnectorConfig, "expected parameter 'configConnectorConfig' to be non-null");
-        this.dnsCacheConfig = Objects.requireNonNull(dnsCacheConfig, "expected parameter 'dnsCacheConfig' to be non-null");
-        this.gcePersistentDiskCsiDriverConfig = Objects.requireNonNull(gcePersistentDiskCsiDriverConfig, "expected parameter 'gcePersistentDiskCsiDriverConfig' to be non-null");
-        this.gcpFilestoreCsiDriverConfig = Objects.requireNonNull(gcpFilestoreCsiDriverConfig, "expected parameter 'gcpFilestoreCsiDriverConfig' to be non-null");
-        this.horizontalPodAutoscaling = Objects.requireNonNull(horizontalPodAutoscaling, "expected parameter 'horizontalPodAutoscaling' to be non-null");
-        this.httpLoadBalancing = Objects.requireNonNull(httpLoadBalancing, "expected parameter 'httpLoadBalancing' to be non-null");
-        this.kubernetesDashboard = Objects.requireNonNull(kubernetesDashboard, "expected parameter 'kubernetesDashboard' to be non-null");
-        this.networkPolicyConfig = Objects.requireNonNull(networkPolicyConfig, "expected parameter 'networkPolicyConfig' to be non-null");
-    }
+    private AddonsConfigResponse() {}
 
-    private AddonsConfigResponse() {
-        this.cloudRunConfig = null;
-        this.configConnectorConfig = null;
-        this.dnsCacheConfig = null;
-        this.gcePersistentDiskCsiDriverConfig = null;
-        this.gcpFilestoreCsiDriverConfig = null;
-        this.horizontalPodAutoscaling = null;
-        this.httpLoadBalancing = null;
-        this.kubernetesDashboard = null;
-        this.networkPolicyConfig = null;
+    private AddonsConfigResponse(AddonsConfigResponse $) {
+        this.cloudRunConfig = $.cloudRunConfig;
+        this.configConnectorConfig = $.configConnectorConfig;
+        this.dnsCacheConfig = $.dnsCacheConfig;
+        this.gcePersistentDiskCsiDriverConfig = $.gcePersistentDiskCsiDriverConfig;
+        this.gcpFilestoreCsiDriverConfig = $.gcpFilestoreCsiDriverConfig;
+        this.horizontalPodAutoscaling = $.horizontalPodAutoscaling;
+        this.httpLoadBalancing = $.httpLoadBalancing;
+        this.kubernetesDashboard = $.kubernetesDashboard;
+        this.networkPolicyConfig = $.networkPolicyConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddonsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CloudRunConfigResponse cloudRunConfig;
-        private ConfigConnectorConfigResponse configConnectorConfig;
-        private DnsCacheConfigResponse dnsCacheConfig;
-        private GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig;
-        private GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig;
-        private HorizontalPodAutoscalingResponse horizontalPodAutoscaling;
-        private HttpLoadBalancingResponse httpLoadBalancing;
-        private KubernetesDashboardResponse kubernetesDashboard;
-        private NetworkPolicyConfigResponse networkPolicyConfig;
+        private AddonsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddonsConfigResponse();
         }
 
         public Builder(AddonsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudRunConfig = defaults.cloudRunConfig;
-    	      this.configConnectorConfig = defaults.configConnectorConfig;
-    	      this.dnsCacheConfig = defaults.dnsCacheConfig;
-    	      this.gcePersistentDiskCsiDriverConfig = defaults.gcePersistentDiskCsiDriverConfig;
-    	      this.gcpFilestoreCsiDriverConfig = defaults.gcpFilestoreCsiDriverConfig;
-    	      this.horizontalPodAutoscaling = defaults.horizontalPodAutoscaling;
-    	      this.httpLoadBalancing = defaults.httpLoadBalancing;
-    	      this.kubernetesDashboard = defaults.kubernetesDashboard;
-    	      this.networkPolicyConfig = defaults.networkPolicyConfig;
+            $ = new AddonsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudRunConfig(CloudRunConfigResponse cloudRunConfig) {
-            this.cloudRunConfig = Objects.requireNonNull(cloudRunConfig);
+            $.cloudRunConfig = cloudRunConfig;
             return this;
         }
+
         public Builder configConnectorConfig(ConfigConnectorConfigResponse configConnectorConfig) {
-            this.configConnectorConfig = Objects.requireNonNull(configConnectorConfig);
+            $.configConnectorConfig = configConnectorConfig;
             return this;
         }
+
         public Builder dnsCacheConfig(DnsCacheConfigResponse dnsCacheConfig) {
-            this.dnsCacheConfig = Objects.requireNonNull(dnsCacheConfig);
+            $.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
+
         public Builder gcePersistentDiskCsiDriverConfig(GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig) {
-            this.gcePersistentDiskCsiDriverConfig = Objects.requireNonNull(gcePersistentDiskCsiDriverConfig);
+            $.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
+
         public Builder gcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig) {
-            this.gcpFilestoreCsiDriverConfig = Objects.requireNonNull(gcpFilestoreCsiDriverConfig);
+            $.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
+
         public Builder horizontalPodAutoscaling(HorizontalPodAutoscalingResponse horizontalPodAutoscaling) {
-            this.horizontalPodAutoscaling = Objects.requireNonNull(horizontalPodAutoscaling);
+            $.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
+
         public Builder httpLoadBalancing(HttpLoadBalancingResponse httpLoadBalancing) {
-            this.httpLoadBalancing = Objects.requireNonNull(httpLoadBalancing);
+            $.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
+
         public Builder kubernetesDashboard(KubernetesDashboardResponse kubernetesDashboard) {
-            this.kubernetesDashboard = Objects.requireNonNull(kubernetesDashboard);
+            $.kubernetesDashboard = kubernetesDashboard;
             return this;
         }
+
         public Builder networkPolicyConfig(NetworkPolicyConfigResponse networkPolicyConfig) {
-            this.networkPolicyConfig = Objects.requireNonNull(networkPolicyConfig);
+            $.networkPolicyConfig = networkPolicyConfig;
             return this;
-        }        public AddonsConfigResponse build() {
-            return new AddonsConfigResponse(cloudRunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, horizontalPodAutoscaling, httpLoadBalancing, kubernetesDashboard, networkPolicyConfig);
+        }
+
+        public AddonsConfigResponse build() {
+            $.cloudRunConfig = Objects.requireNonNull($.cloudRunConfig, "expected parameter 'cloudRunConfig' to be non-null");
+            $.configConnectorConfig = Objects.requireNonNull($.configConnectorConfig, "expected parameter 'configConnectorConfig' to be non-null");
+            $.dnsCacheConfig = Objects.requireNonNull($.dnsCacheConfig, "expected parameter 'dnsCacheConfig' to be non-null");
+            $.gcePersistentDiskCsiDriverConfig = Objects.requireNonNull($.gcePersistentDiskCsiDriverConfig, "expected parameter 'gcePersistentDiskCsiDriverConfig' to be non-null");
+            $.gcpFilestoreCsiDriverConfig = Objects.requireNonNull($.gcpFilestoreCsiDriverConfig, "expected parameter 'gcpFilestoreCsiDriverConfig' to be non-null");
+            $.horizontalPodAutoscaling = Objects.requireNonNull($.horizontalPodAutoscaling, "expected parameter 'horizontalPodAutoscaling' to be non-null");
+            $.httpLoadBalancing = Objects.requireNonNull($.httpLoadBalancing, "expected parameter 'httpLoadBalancing' to be non-null");
+            $.kubernetesDashboard = Objects.requireNonNull($.kubernetesDashboard, "expected parameter 'kubernetesDashboard' to be non-null");
+            $.networkPolicyConfig = Objects.requireNonNull($.networkPolicyConfig, "expected parameter 'networkPolicyConfig' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="badRecords", required=true)
-      private final String badRecords;
+    private String badRecords;
 
     public String badRecords() {
         return this.badRecords;
@@ -28,7 +28,7 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="inputFileBytes", required=true)
-      private final String inputFileBytes;
+    private String inputFileBytes;
 
     public String inputFileBytes() {
         return this.inputFileBytes;
@@ -39,7 +39,7 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="inputFiles", required=true)
-      private final String inputFiles;
+    private String inputFiles;
 
     public String inputFiles() {
         return this.inputFiles;
@@ -50,7 +50,7 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="outputBytes", required=true)
-      private final String outputBytes;
+    private String outputBytes;
 
     public String outputBytes() {
         return this.outputBytes;
@@ -61,82 +61,73 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="outputRows", required=true)
-      private final String outputRows;
+    private String outputRows;
 
     public String outputRows() {
         return this.outputRows;
     }
 
-    public JobStatistics3Response(
-        String badRecords,
-        String inputFileBytes,
-        String inputFiles,
-        String outputBytes,
-        String outputRows) {
-        this.badRecords = Objects.requireNonNull(badRecords, "expected parameter 'badRecords' to be non-null");
-        this.inputFileBytes = Objects.requireNonNull(inputFileBytes, "expected parameter 'inputFileBytes' to be non-null");
-        this.inputFiles = Objects.requireNonNull(inputFiles, "expected parameter 'inputFiles' to be non-null");
-        this.outputBytes = Objects.requireNonNull(outputBytes, "expected parameter 'outputBytes' to be non-null");
-        this.outputRows = Objects.requireNonNull(outputRows, "expected parameter 'outputRows' to be non-null");
-    }
+    private JobStatistics3Response() {}
 
-    private JobStatistics3Response() {
-        this.badRecords = null;
-        this.inputFileBytes = null;
-        this.inputFiles = null;
-        this.outputBytes = null;
-        this.outputRows = null;
+    private JobStatistics3Response(JobStatistics3Response $) {
+        this.badRecords = $.badRecords;
+        this.inputFileBytes = $.inputFileBytes;
+        this.inputFiles = $.inputFiles;
+        this.outputBytes = $.outputBytes;
+        this.outputRows = $.outputRows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatistics3Response defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String badRecords;
-        private String inputFileBytes;
-        private String inputFiles;
-        private String outputBytes;
-        private String outputRows;
+        private JobStatistics3Response $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatistics3Response();
         }
 
         public Builder(JobStatistics3Response defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.badRecords = defaults.badRecords;
-    	      this.inputFileBytes = defaults.inputFileBytes;
-    	      this.inputFiles = defaults.inputFiles;
-    	      this.outputBytes = defaults.outputBytes;
-    	      this.outputRows = defaults.outputRows;
+            $ = new JobStatistics3Response(Objects.requireNonNull(defaults));
         }
 
         public Builder badRecords(String badRecords) {
-            this.badRecords = Objects.requireNonNull(badRecords);
+            $.badRecords = badRecords;
             return this;
         }
+
         public Builder inputFileBytes(String inputFileBytes) {
-            this.inputFileBytes = Objects.requireNonNull(inputFileBytes);
+            $.inputFileBytes = inputFileBytes;
             return this;
         }
+
         public Builder inputFiles(String inputFiles) {
-            this.inputFiles = Objects.requireNonNull(inputFiles);
+            $.inputFiles = inputFiles;
             return this;
         }
+
         public Builder outputBytes(String outputBytes) {
-            this.outputBytes = Objects.requireNonNull(outputBytes);
+            $.outputBytes = outputBytes;
             return this;
         }
+
         public Builder outputRows(String outputRows) {
-            this.outputRows = Objects.requireNonNull(outputRows);
+            $.outputRows = outputRows;
             return this;
-        }        public JobStatistics3Response build() {
-            return new JobStatistics3Response(badRecords, inputFileBytes, inputFiles, outputBytes, outputRows);
+        }
+
+        public JobStatistics3Response build() {
+            $.badRecords = Objects.requireNonNull($.badRecords, "expected parameter 'badRecords' to be non-null");
+            $.inputFileBytes = Objects.requireNonNull($.inputFileBytes, "expected parameter 'inputFileBytes' to be non-null");
+            $.inputFiles = Objects.requireNonNull($.inputFiles, "expected parameter 'inputFiles' to be non-null");
+            $.outputBytes = Objects.requireNonNull($.outputBytes, "expected parameter 'outputBytes' to be non-null");
+            $.outputRows = Objects.requireNonNull($.outputRows, "expected parameter 'outputRows' to be non-null");
+            return $;
         }
     }
+
 }

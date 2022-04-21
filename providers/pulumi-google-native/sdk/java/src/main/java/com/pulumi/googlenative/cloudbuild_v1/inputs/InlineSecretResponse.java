@@ -22,7 +22,7 @@ public final class InlineSecretResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="envMap", required=true)
-      private final Map<String,String> envMap;
+    private Map<String,String> envMap;
 
     public Map<String,String> envMap() {
         return this.envMap;
@@ -33,55 +33,52 @@ public final class InlineSecretResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final String kmsKeyName;
+    private String kmsKeyName;
 
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public InlineSecretResponse(
-        Map<String,String> envMap,
-        String kmsKeyName) {
-        this.envMap = Objects.requireNonNull(envMap, "expected parameter 'envMap' to be non-null");
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private InlineSecretResponse() {}
 
-    private InlineSecretResponse() {
-        this.envMap = Map.of();
-        this.kmsKeyName = null;
+    private InlineSecretResponse(InlineSecretResponse $) {
+        this.envMap = $.envMap;
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InlineSecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> envMap;
-        private String kmsKeyName;
+        private InlineSecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InlineSecretResponse();
         }
 
         public Builder(InlineSecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.envMap = defaults.envMap;
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new InlineSecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder envMap(Map<String,String> envMap) {
-            this.envMap = Objects.requireNonNull(envMap);
+            $.envMap = envMap;
             return this;
         }
+
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
-        }        public InlineSecretResponse build() {
-            return new InlineSecretResponse(envMap, kmsKeyName);
+        }
+
+        public InlineSecretResponse build() {
+            $.envMap = Objects.requireNonNull($.envMap, "expected parameter 'envMap' to be non-null");
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,14 +16,14 @@ public final class AutoScaleRunResponse extends com.pulumi.resources.InvokeArgs 
     public static final AutoScaleRunResponse Empty = new AutoScaleRunResponse();
 
     @Import(name="error")
-      private final @Nullable AutoScaleRunErrorResponse error;
+    private @Nullable AutoScaleRunErrorResponse error;
 
     public Optional<AutoScaleRunErrorResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
     @Import(name="evaluationTime", required=true)
-      private final String evaluationTime;
+    private String evaluationTime;
 
     public String evaluationTime() {
         return this.evaluationTime;
@@ -34,64 +34,57 @@ public final class AutoScaleRunResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="results")
-      private final @Nullable String results;
+    private @Nullable String results;
 
     public Optional<String> results() {
-        return this.results == null ? Optional.empty() : Optional.ofNullable(this.results);
+        return Optional.ofNullable(this.results);
     }
 
-    public AutoScaleRunResponse(
-        @Nullable AutoScaleRunErrorResponse error,
-        String evaluationTime,
-        @Nullable String results) {
-        this.error = error;
-        this.evaluationTime = Objects.requireNonNull(evaluationTime, "expected parameter 'evaluationTime' to be non-null");
-        this.results = results;
-    }
+    private AutoScaleRunResponse() {}
 
-    private AutoScaleRunResponse() {
-        this.error = null;
-        this.evaluationTime = null;
-        this.results = null;
+    private AutoScaleRunResponse(AutoScaleRunResponse $) {
+        this.error = $.error;
+        this.evaluationTime = $.evaluationTime;
+        this.results = $.results;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScaleRunResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutoScaleRunErrorResponse error;
-        private String evaluationTime;
-        private @Nullable String results;
+        private AutoScaleRunResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScaleRunResponse();
         }
 
         public Builder(AutoScaleRunResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.evaluationTime = defaults.evaluationTime;
-    	      this.results = defaults.results;
+            $ = new AutoScaleRunResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(@Nullable AutoScaleRunErrorResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
+
         public Builder evaluationTime(String evaluationTime) {
-            this.evaluationTime = Objects.requireNonNull(evaluationTime);
+            $.evaluationTime = evaluationTime;
             return this;
         }
+
         public Builder results(@Nullable String results) {
-            this.results = results;
+            $.results = results;
             return this;
-        }        public AutoScaleRunResponse build() {
-            return new AutoScaleRunResponse(error, evaluationTime, results);
+        }
+
+        public AutoScaleRunResponse build() {
+            $.evaluationTime = Objects.requireNonNull($.evaluationTime, "expected parameter 'evaluationTime' to be non-null");
+            return $;
         }
     }
+
 }

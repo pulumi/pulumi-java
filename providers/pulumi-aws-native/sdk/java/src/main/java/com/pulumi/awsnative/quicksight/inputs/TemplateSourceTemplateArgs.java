@@ -5,7 +5,6 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class TemplateSourceTemplateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
     }
 
-    public TemplateSourceTemplateArgs(Output<String> arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private TemplateSourceTemplateArgs() {}
 
-    private TemplateSourceTemplateArgs() {
-        this.arn = Codegen.empty();
+    private TemplateSourceTemplateArgs(TemplateSourceTemplateArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateSourceTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
+        private TemplateSourceTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateSourceTemplateArgs();
         }
 
         public Builder(TemplateSourceTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new TemplateSourceTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
-        }        public TemplateSourceTemplateArgs build() {
-            return new TemplateSourceTemplateArgs(arn);
+            return arn(Output.of(arn));
+        }
+
+        public TemplateSourceTemplateArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

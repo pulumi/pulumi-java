@@ -22,7 +22,7 @@ public final class ProcessingOptionsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="disableStreetAddressResolution", required=true)
-      private final Boolean disableStreetAddressResolution;
+    private Boolean disableStreetAddressResolution;
 
     public Boolean disableStreetAddressResolution() {
         return this.disableStreetAddressResolution;
@@ -33,55 +33,52 @@ public final class ProcessingOptionsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="htmlSanitization", required=true)
-      private final String htmlSanitization;
+    private String htmlSanitization;
 
     public String htmlSanitization() {
         return this.htmlSanitization;
     }
 
-    public ProcessingOptionsResponse(
-        Boolean disableStreetAddressResolution,
-        String htmlSanitization) {
-        this.disableStreetAddressResolution = Objects.requireNonNull(disableStreetAddressResolution, "expected parameter 'disableStreetAddressResolution' to be non-null");
-        this.htmlSanitization = Objects.requireNonNull(htmlSanitization, "expected parameter 'htmlSanitization' to be non-null");
-    }
+    private ProcessingOptionsResponse() {}
 
-    private ProcessingOptionsResponse() {
-        this.disableStreetAddressResolution = null;
-        this.htmlSanitization = null;
+    private ProcessingOptionsResponse(ProcessingOptionsResponse $) {
+        this.disableStreetAddressResolution = $.disableStreetAddressResolution;
+        this.htmlSanitization = $.htmlSanitization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProcessingOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disableStreetAddressResolution;
-        private String htmlSanitization;
+        private ProcessingOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProcessingOptionsResponse();
         }
 
         public Builder(ProcessingOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableStreetAddressResolution = defaults.disableStreetAddressResolution;
-    	      this.htmlSanitization = defaults.htmlSanitization;
+            $ = new ProcessingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableStreetAddressResolution(Boolean disableStreetAddressResolution) {
-            this.disableStreetAddressResolution = Objects.requireNonNull(disableStreetAddressResolution);
+            $.disableStreetAddressResolution = disableStreetAddressResolution;
             return this;
         }
+
         public Builder htmlSanitization(String htmlSanitization) {
-            this.htmlSanitization = Objects.requireNonNull(htmlSanitization);
+            $.htmlSanitization = htmlSanitization;
             return this;
-        }        public ProcessingOptionsResponse build() {
-            return new ProcessingOptionsResponse(disableStreetAddressResolution, htmlSanitization);
+        }
+
+        public ProcessingOptionsResponse build() {
+            $.disableStreetAddressResolution = Objects.requireNonNull($.disableStreetAddressResolution, "expected parameter 'disableStreetAddressResolution' to be non-null");
+            $.htmlSanitization = Objects.requireNonNull($.htmlSanitization, "expected parameter 'htmlSanitization' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetPrivateLinkScopeArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetPrivateLinkScopeArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scopeName", required=true)
-      private final String scopeName;
+    private String scopeName;
 
     public String scopeName() {
         return this.scopeName;
     }
 
-    public GetPrivateLinkScopeArgs(
-        String resourceGroupName,
-        String scopeName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scopeName = Objects.requireNonNull(scopeName, "expected parameter 'scopeName' to be non-null");
-    }
+    private GetPrivateLinkScopeArgs() {}
 
-    private GetPrivateLinkScopeArgs() {
-        this.resourceGroupName = null;
-        this.scopeName = null;
+    private GetPrivateLinkScopeArgs(GetPrivateLinkScopeArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.scopeName = $.scopeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateLinkScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String scopeName;
+        private GetPrivateLinkScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateLinkScopeArgs();
         }
 
         public Builder(GetPrivateLinkScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scopeName = defaults.scopeName;
+            $ = new GetPrivateLinkScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder scopeName(String scopeName) {
-            this.scopeName = Objects.requireNonNull(scopeName);
+            $.scopeName = scopeName;
             return this;
-        }        public GetPrivateLinkScopeArgs build() {
-            return new GetPrivateLinkScopeArgs(resourceGroupName, scopeName);
+        }
+
+        public GetPrivateLinkScopeArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scopeName = Objects.requireNonNull($.scopeName, "expected parameter 'scopeName' to be non-null");
+            return $;
         }
     }
+
 }

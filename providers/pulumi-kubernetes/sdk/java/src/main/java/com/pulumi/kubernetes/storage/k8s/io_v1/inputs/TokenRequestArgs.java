@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class TokenRequestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audience", required=true)
-      private final Output<String> audience;
+    private Output<String> audience;
 
     public Output<String> audience() {
         return this.audience;
@@ -36,63 +36,59 @@ public final class TokenRequestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationSeconds")
-      private final @Nullable Output<Integer> expirationSeconds;
+    private @Nullable Output<Integer> expirationSeconds;
 
-    public Output<Integer> expirationSeconds() {
-        return this.expirationSeconds == null ? Codegen.empty() : this.expirationSeconds;
+    public Optional<Output<Integer>> expirationSeconds() {
+        return Optional.ofNullable(this.expirationSeconds);
     }
 
-    public TokenRequestArgs(
-        Output<String> audience,
-        @Nullable Output<Integer> expirationSeconds) {
-        this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
-        this.expirationSeconds = expirationSeconds;
-    }
+    private TokenRequestArgs() {}
 
-    private TokenRequestArgs() {
-        this.audience = Codegen.empty();
-        this.expirationSeconds = Codegen.empty();
+    private TokenRequestArgs(TokenRequestArgs $) {
+        this.audience = $.audience;
+        this.expirationSeconds = $.expirationSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TokenRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> audience;
-        private @Nullable Output<Integer> expirationSeconds;
+        private TokenRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TokenRequestArgs();
         }
 
         public Builder(TokenRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.expirationSeconds = defaults.expirationSeconds;
+            $ = new TokenRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(Output<String> audience) {
-            this.audience = Objects.requireNonNull(audience);
+            $.audience = audience;
             return this;
         }
+
         public Builder audience(String audience) {
-            this.audience = Output.of(Objects.requireNonNull(audience));
-            return this;
+            return audience(Output.of(audience));
         }
+
         public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
-            this.expirationSeconds = expirationSeconds;
+            $.expirationSeconds = expirationSeconds;
             return this;
         }
-        public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
-            this.expirationSeconds = Codegen.ofNullable(expirationSeconds);
-            return this;
-        }        public TokenRequestArgs build() {
-            return new TokenRequestArgs(audience, expirationSeconds);
+
+        public Builder expirationSeconds(Integer expirationSeconds) {
+            return expirationSeconds(Output.of(expirationSeconds));
+        }
+
+        public TokenRequestArgs build() {
+            $.audience = Objects.requireNonNull($.audience, "expected parameter 'audience' to be non-null");
+            return $;
         }
     }
+
 }

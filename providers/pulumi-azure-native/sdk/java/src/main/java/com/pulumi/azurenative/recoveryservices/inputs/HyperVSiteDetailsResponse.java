@@ -23,45 +23,45 @@ public final class HyperVSiteDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
     }
 
-    public HyperVSiteDetailsResponse(String instanceType) {
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-    }
+    private HyperVSiteDetailsResponse() {}
 
-    private HyperVSiteDetailsResponse() {
-        this.instanceType = null;
+    private HyperVSiteDetailsResponse(HyperVSiteDetailsResponse $) {
+        this.instanceType = $.instanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HyperVSiteDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceType;
+        private HyperVSiteDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HyperVSiteDetailsResponse();
         }
 
         public Builder(HyperVSiteDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
+            $ = new HyperVSiteDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
-        }        public HyperVSiteDetailsResponse build() {
-            return new HyperVSiteDetailsResponse(instanceType);
+        }
+
+        public HyperVSiteDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

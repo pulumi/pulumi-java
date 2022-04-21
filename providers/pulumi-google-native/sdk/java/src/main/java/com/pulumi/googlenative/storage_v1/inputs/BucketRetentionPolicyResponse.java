@@ -22,7 +22,7 @@ public final class BucketRetentionPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="effectiveTime", required=true)
-      private final String effectiveTime;
+    private String effectiveTime;
 
     public String effectiveTime() {
         return this.effectiveTime;
@@ -33,7 +33,7 @@ public final class BucketRetentionPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="isLocked", required=true)
-      private final Boolean isLocked;
+    private Boolean isLocked;
 
     public Boolean isLocked() {
         return this.isLocked;
@@ -44,64 +44,59 @@ public final class BucketRetentionPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="retentionPeriod", required=true)
-      private final String retentionPeriod;
+    private String retentionPeriod;
 
     public String retentionPeriod() {
         return this.retentionPeriod;
     }
 
-    public BucketRetentionPolicyResponse(
-        String effectiveTime,
-        Boolean isLocked,
-        String retentionPeriod) {
-        this.effectiveTime = Objects.requireNonNull(effectiveTime, "expected parameter 'effectiveTime' to be non-null");
-        this.isLocked = Objects.requireNonNull(isLocked, "expected parameter 'isLocked' to be non-null");
-        this.retentionPeriod = Objects.requireNonNull(retentionPeriod, "expected parameter 'retentionPeriod' to be non-null");
-    }
+    private BucketRetentionPolicyResponse() {}
 
-    private BucketRetentionPolicyResponse() {
-        this.effectiveTime = null;
-        this.isLocked = null;
-        this.retentionPeriod = null;
+    private BucketRetentionPolicyResponse(BucketRetentionPolicyResponse $) {
+        this.effectiveTime = $.effectiveTime;
+        this.isLocked = $.isLocked;
+        this.retentionPeriod = $.retentionPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRetentionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String effectiveTime;
-        private Boolean isLocked;
-        private String retentionPeriod;
+        private BucketRetentionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRetentionPolicyResponse();
         }
 
         public Builder(BucketRetentionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effectiveTime = defaults.effectiveTime;
-    	      this.isLocked = defaults.isLocked;
-    	      this.retentionPeriod = defaults.retentionPeriod;
+            $ = new BucketRetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder effectiveTime(String effectiveTime) {
-            this.effectiveTime = Objects.requireNonNull(effectiveTime);
+            $.effectiveTime = effectiveTime;
             return this;
         }
+
         public Builder isLocked(Boolean isLocked) {
-            this.isLocked = Objects.requireNonNull(isLocked);
+            $.isLocked = isLocked;
             return this;
         }
+
         public Builder retentionPeriod(String retentionPeriod) {
-            this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
+            $.retentionPeriod = retentionPeriod;
             return this;
-        }        public BucketRetentionPolicyResponse build() {
-            return new BucketRetentionPolicyResponse(effectiveTime, isLocked, retentionPeriod);
+        }
+
+        public BucketRetentionPolicyResponse build() {
+            $.effectiveTime = Objects.requireNonNull($.effectiveTime, "expected parameter 'effectiveTime' to be non-null");
+            $.isLocked = Objects.requireNonNull($.isLocked, "expected parameter 'isLocked' to be non-null");
+            $.retentionPeriod = Objects.requireNonNull($.retentionPeriod, "expected parameter 'retentionPeriod' to be non-null");
+            return $;
         }
     }
+
 }

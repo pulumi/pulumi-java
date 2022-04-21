@@ -5,7 +5,6 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1.inputs.AllowedKeyTypeArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.CertificateExtensionConstraintsArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.CertificateIdentityConstraintsArgs;
@@ -14,6 +13,7 @@ import com.pulumi.googlenative.privateca_v1.inputs.X509ParametersArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class IssuancePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowedIssuanceModes")
-      private final @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
+    private @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
 
-    public Output<IssuanceModesArgs> allowedIssuanceModes() {
-        return this.allowedIssuanceModes == null ? Codegen.empty() : this.allowedIssuanceModes;
+    public Optional<Output<IssuanceModesArgs>> allowedIssuanceModes() {
+        return Optional.ofNullable(this.allowedIssuanceModes);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class IssuancePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowedKeyTypes")
-      private final @Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes;
+    private @Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes;
 
-    public Output<List<AllowedKeyTypeArgs>> allowedKeyTypes() {
-        return this.allowedKeyTypes == null ? Codegen.empty() : this.allowedKeyTypes;
+    public Optional<Output<List<AllowedKeyTypeArgs>>> allowedKeyTypes() {
+        return Optional.ofNullable(this.allowedKeyTypes);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class IssuancePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="baselineValues")
-      private final @Nullable Output<X509ParametersArgs> baselineValues;
+    private @Nullable Output<X509ParametersArgs> baselineValues;
 
-    public Output<X509ParametersArgs> baselineValues() {
-        return this.baselineValues == null ? Codegen.empty() : this.baselineValues;
+    public Optional<Output<X509ParametersArgs>> baselineValues() {
+        return Optional.ofNullable(this.baselineValues);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class IssuancePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="identityConstraints")
-      private final @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints;
+    private @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints;
 
-    public Output<CertificateIdentityConstraintsArgs> identityConstraints() {
-        return this.identityConstraints == null ? Codegen.empty() : this.identityConstraints;
+    public Optional<Output<CertificateIdentityConstraintsArgs>> identityConstraints() {
+        return Optional.ofNullable(this.identityConstraints);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class IssuancePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maximumLifetime")
-      private final @Nullable Output<String> maximumLifetime;
+    private @Nullable Output<String> maximumLifetime;
 
-    public Output<String> maximumLifetime() {
-        return this.maximumLifetime == null ? Codegen.empty() : this.maximumLifetime;
+    public Optional<Output<String>> maximumLifetime() {
+        return Optional.ofNullable(this.maximumLifetime);
     }
 
     /**
@@ -85,118 +85,102 @@ public final class IssuancePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="passthroughExtensions")
-      private final @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions;
+    private @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions;
 
-    public Output<CertificateExtensionConstraintsArgs> passthroughExtensions() {
-        return this.passthroughExtensions == null ? Codegen.empty() : this.passthroughExtensions;
+    public Optional<Output<CertificateExtensionConstraintsArgs>> passthroughExtensions() {
+        return Optional.ofNullable(this.passthroughExtensions);
     }
 
-    public IssuancePolicyArgs(
-        @Nullable Output<IssuanceModesArgs> allowedIssuanceModes,
-        @Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes,
-        @Nullable Output<X509ParametersArgs> baselineValues,
-        @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints,
-        @Nullable Output<String> maximumLifetime,
-        @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions) {
-        this.allowedIssuanceModes = allowedIssuanceModes;
-        this.allowedKeyTypes = allowedKeyTypes;
-        this.baselineValues = baselineValues;
-        this.identityConstraints = identityConstraints;
-        this.maximumLifetime = maximumLifetime;
-        this.passthroughExtensions = passthroughExtensions;
-    }
+    private IssuancePolicyArgs() {}
 
-    private IssuancePolicyArgs() {
-        this.allowedIssuanceModes = Codegen.empty();
-        this.allowedKeyTypes = Codegen.empty();
-        this.baselineValues = Codegen.empty();
-        this.identityConstraints = Codegen.empty();
-        this.maximumLifetime = Codegen.empty();
-        this.passthroughExtensions = Codegen.empty();
+    private IssuancePolicyArgs(IssuancePolicyArgs $) {
+        this.allowedIssuanceModes = $.allowedIssuanceModes;
+        this.allowedKeyTypes = $.allowedKeyTypes;
+        this.baselineValues = $.baselineValues;
+        this.identityConstraints = $.identityConstraints;
+        this.maximumLifetime = $.maximumLifetime;
+        this.passthroughExtensions = $.passthroughExtensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IssuancePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
-        private @Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes;
-        private @Nullable Output<X509ParametersArgs> baselineValues;
-        private @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints;
-        private @Nullable Output<String> maximumLifetime;
-        private @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions;
+        private IssuancePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IssuancePolicyArgs();
         }
 
         public Builder(IssuancePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIssuanceModes = defaults.allowedIssuanceModes;
-    	      this.allowedKeyTypes = defaults.allowedKeyTypes;
-    	      this.baselineValues = defaults.baselineValues;
-    	      this.identityConstraints = defaults.identityConstraints;
-    	      this.maximumLifetime = defaults.maximumLifetime;
-    	      this.passthroughExtensions = defaults.passthroughExtensions;
+            $ = new IssuancePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIssuanceModes(@Nullable Output<IssuanceModesArgs> allowedIssuanceModes) {
-            this.allowedIssuanceModes = allowedIssuanceModes;
+            $.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
-        public Builder allowedIssuanceModes(@Nullable IssuanceModesArgs allowedIssuanceModes) {
-            this.allowedIssuanceModes = Codegen.ofNullable(allowedIssuanceModes);
-            return this;
+
+        public Builder allowedIssuanceModes(IssuanceModesArgs allowedIssuanceModes) {
+            return allowedIssuanceModes(Output.of(allowedIssuanceModes));
         }
+
         public Builder allowedKeyTypes(@Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes) {
-            this.allowedKeyTypes = allowedKeyTypes;
+            $.allowedKeyTypes = allowedKeyTypes;
             return this;
         }
-        public Builder allowedKeyTypes(@Nullable List<AllowedKeyTypeArgs> allowedKeyTypes) {
-            this.allowedKeyTypes = Codegen.ofNullable(allowedKeyTypes);
-            return this;
+
+        public Builder allowedKeyTypes(List<AllowedKeyTypeArgs> allowedKeyTypes) {
+            return allowedKeyTypes(Output.of(allowedKeyTypes));
         }
+
         public Builder allowedKeyTypes(AllowedKeyTypeArgs... allowedKeyTypes) {
             return allowedKeyTypes(List.of(allowedKeyTypes));
         }
+
         public Builder baselineValues(@Nullable Output<X509ParametersArgs> baselineValues) {
-            this.baselineValues = baselineValues;
+            $.baselineValues = baselineValues;
             return this;
         }
-        public Builder baselineValues(@Nullable X509ParametersArgs baselineValues) {
-            this.baselineValues = Codegen.ofNullable(baselineValues);
-            return this;
+
+        public Builder baselineValues(X509ParametersArgs baselineValues) {
+            return baselineValues(Output.of(baselineValues));
         }
+
         public Builder identityConstraints(@Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints) {
-            this.identityConstraints = identityConstraints;
+            $.identityConstraints = identityConstraints;
             return this;
         }
-        public Builder identityConstraints(@Nullable CertificateIdentityConstraintsArgs identityConstraints) {
-            this.identityConstraints = Codegen.ofNullable(identityConstraints);
-            return this;
+
+        public Builder identityConstraints(CertificateIdentityConstraintsArgs identityConstraints) {
+            return identityConstraints(Output.of(identityConstraints));
         }
+
         public Builder maximumLifetime(@Nullable Output<String> maximumLifetime) {
-            this.maximumLifetime = maximumLifetime;
+            $.maximumLifetime = maximumLifetime;
             return this;
         }
-        public Builder maximumLifetime(@Nullable String maximumLifetime) {
-            this.maximumLifetime = Codegen.ofNullable(maximumLifetime);
-            return this;
+
+        public Builder maximumLifetime(String maximumLifetime) {
+            return maximumLifetime(Output.of(maximumLifetime));
         }
+
         public Builder passthroughExtensions(@Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions) {
-            this.passthroughExtensions = passthroughExtensions;
+            $.passthroughExtensions = passthroughExtensions;
             return this;
         }
-        public Builder passthroughExtensions(@Nullable CertificateExtensionConstraintsArgs passthroughExtensions) {
-            this.passthroughExtensions = Codegen.ofNullable(passthroughExtensions);
-            return this;
-        }        public IssuancePolicyArgs build() {
-            return new IssuancePolicyArgs(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime, passthroughExtensions);
+
+        public Builder passthroughExtensions(CertificateExtensionConstraintsArgs passthroughExtensions) {
+            return passthroughExtensions(Output.of(passthroughExtensions));
+        }
+
+        public IssuancePolicyArgs build() {
+            return $;
         }
     }
+
 }

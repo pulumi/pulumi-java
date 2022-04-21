@@ -15,62 +15,58 @@ public final class GetSearchApplicationArgs extends com.pulumi.resources.InvokeA
     public static final GetSearchApplicationArgs Empty = new GetSearchApplicationArgs();
 
     @Import(name="debugOptionsEnableDebugging")
-      private final @Nullable String debugOptionsEnableDebugging;
+    private @Nullable String debugOptionsEnableDebugging;
 
     public Optional<String> debugOptionsEnableDebugging() {
-        return this.debugOptionsEnableDebugging == null ? Optional.empty() : Optional.ofNullable(this.debugOptionsEnableDebugging);
+        return Optional.ofNullable(this.debugOptionsEnableDebugging);
     }
 
     @Import(name="searchapplicationId", required=true)
-      private final String searchapplicationId;
+    private String searchapplicationId;
 
     public String searchapplicationId() {
         return this.searchapplicationId;
     }
 
-    public GetSearchApplicationArgs(
-        @Nullable String debugOptionsEnableDebugging,
-        String searchapplicationId) {
-        this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
-        this.searchapplicationId = Objects.requireNonNull(searchapplicationId, "expected parameter 'searchapplicationId' to be non-null");
-    }
+    private GetSearchApplicationArgs() {}
 
-    private GetSearchApplicationArgs() {
-        this.debugOptionsEnableDebugging = null;
-        this.searchapplicationId = null;
+    private GetSearchApplicationArgs(GetSearchApplicationArgs $) {
+        this.debugOptionsEnableDebugging = $.debugOptionsEnableDebugging;
+        this.searchapplicationId = $.searchapplicationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSearchApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String debugOptionsEnableDebugging;
-        private String searchapplicationId;
+        private GetSearchApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSearchApplicationArgs();
         }
 
         public Builder(GetSearchApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.debugOptionsEnableDebugging = defaults.debugOptionsEnableDebugging;
-    	      this.searchapplicationId = defaults.searchapplicationId;
+            $ = new GetSearchApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder debugOptionsEnableDebugging(@Nullable String debugOptionsEnableDebugging) {
-            this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
+            $.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
             return this;
         }
+
         public Builder searchapplicationId(String searchapplicationId) {
-            this.searchapplicationId = Objects.requireNonNull(searchapplicationId);
+            $.searchapplicationId = searchapplicationId;
             return this;
-        }        public GetSearchApplicationArgs build() {
-            return new GetSearchApplicationArgs(debugOptionsEnableDebugging, searchapplicationId);
+        }
+
+        public GetSearchApplicationArgs build() {
+            $.searchapplicationId = Objects.requireNonNull($.searchapplicationId, "expected parameter 'searchapplicationId' to be non-null");
+            return $;
         }
     }
+
 }

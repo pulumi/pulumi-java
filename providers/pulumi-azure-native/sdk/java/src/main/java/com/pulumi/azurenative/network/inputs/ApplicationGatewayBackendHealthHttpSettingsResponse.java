@@ -25,10 +25,10 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends c
      * 
      */
     @Import(name="backendHttpSettings")
-      private final @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
+    private @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
 
     public Optional<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettings() {
-        return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
+        return Optional.ofNullable(this.backendHttpSettings);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends c
      * 
      */
     @Import(name="servers")
-      private final @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
+    private @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
 
-    public List<ApplicationGatewayBackendHealthServerResponse> servers() {
-        return this.servers == null ? List.of() : this.servers;
+    public Optional<List<ApplicationGatewayBackendHealthServerResponse>> servers() {
+        return Optional.ofNullable(this.servers);
     }
 
-    public ApplicationGatewayBackendHealthHttpSettingsResponse(
-        @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings,
-        @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers) {
-        this.backendHttpSettings = backendHttpSettings;
-        this.servers = servers;
-    }
+    private ApplicationGatewayBackendHealthHttpSettingsResponse() {}
 
-    private ApplicationGatewayBackendHealthHttpSettingsResponse() {
-        this.backendHttpSettings = null;
-        this.servers = List.of();
+    private ApplicationGatewayBackendHealthHttpSettingsResponse(ApplicationGatewayBackendHealthHttpSettingsResponse $) {
+        this.backendHttpSettings = $.backendHttpSettings;
+        this.servers = $.servers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayBackendHealthHttpSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
-        private @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
+        private ApplicationGatewayBackendHealthHttpSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayBackendHealthHttpSettingsResponse();
         }
 
         public Builder(ApplicationGatewayBackendHealthHttpSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendHttpSettings = defaults.backendHttpSettings;
-    	      this.servers = defaults.servers;
+            $ = new ApplicationGatewayBackendHealthHttpSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendHttpSettings(@Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings) {
-            this.backendHttpSettings = backendHttpSettings;
+            $.backendHttpSettings = backendHttpSettings;
             return this;
         }
+
         public Builder servers(@Nullable List<ApplicationGatewayBackendHealthServerResponse> servers) {
-            this.servers = servers;
+            $.servers = servers;
             return this;
         }
+
         public Builder servers(ApplicationGatewayBackendHealthServerResponse... servers) {
             return servers(List.of(servers));
-        }        public ApplicationGatewayBackendHealthHttpSettingsResponse build() {
-            return new ApplicationGatewayBackendHealthHttpSettingsResponse(backendHttpSettings, servers);
+        }
+
+        public ApplicationGatewayBackendHealthHttpSettingsResponse build() {
+            return $;
         }
     }
+
 }

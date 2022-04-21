@@ -5,10 +5,10 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends com.pulumi.reso
      * 
      */
     @Import(name="oldestRecoveryPoint")
-      private final @Nullable Output<String> oldestRecoveryPoint;
+    private @Nullable Output<String> oldestRecoveryPoint;
 
-    public Output<String> oldestRecoveryPoint() {
-        return this.oldestRecoveryPoint == null ? Codegen.empty() : this.oldestRecoveryPoint;
+    public Optional<Output<String>> oldestRecoveryPoint() {
+        return Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends com.pulumi.reso
      * 
      */
     @Import(name="policyState")
-      private final @Nullable Output<String> policyState;
+    private @Nullable Output<String> policyState;
 
-    public Output<String> policyState() {
-        return this.policyState == null ? Codegen.empty() : this.policyState;
+    public Optional<Output<String>> policyState() {
+        return Optional.ofNullable(this.policyState);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends com.pulumi.reso
      * 
      */
     @Import(name="recoveryPointCount")
-      private final @Nullable Output<Integer> recoveryPointCount;
+    private @Nullable Output<Integer> recoveryPointCount;
 
-    public Output<Integer> recoveryPointCount() {
-        return this.recoveryPointCount == null ? Codegen.empty() : this.recoveryPointCount;
+    public Optional<Output<Integer>> recoveryPointCount() {
+        return Optional.ofNullable(this.recoveryPointCount);
     }
 
-    public AzureSqlProtectedItemExtendedInfoArgs(
-        @Nullable Output<String> oldestRecoveryPoint,
-        @Nullable Output<String> policyState,
-        @Nullable Output<Integer> recoveryPointCount) {
-        this.oldestRecoveryPoint = oldestRecoveryPoint;
-        this.policyState = policyState;
-        this.recoveryPointCount = recoveryPointCount;
-    }
+    private AzureSqlProtectedItemExtendedInfoArgs() {}
 
-    private AzureSqlProtectedItemExtendedInfoArgs() {
-        this.oldestRecoveryPoint = Codegen.empty();
-        this.policyState = Codegen.empty();
-        this.recoveryPointCount = Codegen.empty();
+    private AzureSqlProtectedItemExtendedInfoArgs(AzureSqlProtectedItemExtendedInfoArgs $) {
+        this.oldestRecoveryPoint = $.oldestRecoveryPoint;
+        this.policyState = $.policyState;
+        this.recoveryPointCount = $.recoveryPointCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSqlProtectedItemExtendedInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> oldestRecoveryPoint;
-        private @Nullable Output<String> policyState;
-        private @Nullable Output<Integer> recoveryPointCount;
+        private AzureSqlProtectedItemExtendedInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSqlProtectedItemExtendedInfoArgs();
         }
 
         public Builder(AzureSqlProtectedItemExtendedInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oldestRecoveryPoint = defaults.oldestRecoveryPoint;
-    	      this.policyState = defaults.policyState;
-    	      this.recoveryPointCount = defaults.recoveryPointCount;
+            $ = new AzureSqlProtectedItemExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder oldestRecoveryPoint(@Nullable Output<String> oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = oldestRecoveryPoint;
+            $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
-        public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = Codegen.ofNullable(oldestRecoveryPoint);
-            return this;
+
+        public Builder oldestRecoveryPoint(String oldestRecoveryPoint) {
+            return oldestRecoveryPoint(Output.of(oldestRecoveryPoint));
         }
+
         public Builder policyState(@Nullable Output<String> policyState) {
-            this.policyState = policyState;
+            $.policyState = policyState;
             return this;
         }
-        public Builder policyState(@Nullable String policyState) {
-            this.policyState = Codegen.ofNullable(policyState);
-            return this;
+
+        public Builder policyState(String policyState) {
+            return policyState(Output.of(policyState));
         }
+
         public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
-            this.recoveryPointCount = recoveryPointCount;
+            $.recoveryPointCount = recoveryPointCount;
             return this;
         }
-        public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
-            this.recoveryPointCount = Codegen.ofNullable(recoveryPointCount);
-            return this;
-        }        public AzureSqlProtectedItemExtendedInfoArgs build() {
-            return new AzureSqlProtectedItemExtendedInfoArgs(oldestRecoveryPoint, policyState, recoveryPointCount);
+
+        public Builder recoveryPointCount(Integer recoveryPointCount) {
+            return recoveryPointCount(Output.of(recoveryPointCount));
+        }
+
+        public AzureSqlProtectedItemExtendedInfoArgs build() {
+            return $;
         }
     }
+
 }

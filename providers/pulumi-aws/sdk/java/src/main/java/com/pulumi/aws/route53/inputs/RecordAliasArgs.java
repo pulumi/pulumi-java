@@ -5,7 +5,6 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class RecordAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="evaluateTargetHealth", required=true)
-      private final Output<Boolean> evaluateTargetHealth;
+    private Output<Boolean> evaluateTargetHealth;
 
     public Output<Boolean> evaluateTargetHealth() {
         return this.evaluateTargetHealth;
@@ -31,7 +30,7 @@ public final class RecordAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -42,76 +41,71 @@ public final class RecordAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zoneId", required=true)
-      private final Output<String> zoneId;
+    private Output<String> zoneId;
 
     public Output<String> zoneId() {
         return this.zoneId;
     }
 
-    public RecordAliasArgs(
-        Output<Boolean> evaluateTargetHealth,
-        Output<String> name,
-        Output<String> zoneId) {
-        this.evaluateTargetHealth = Objects.requireNonNull(evaluateTargetHealth, "expected parameter 'evaluateTargetHealth' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.zoneId = Objects.requireNonNull(zoneId, "expected parameter 'zoneId' to be non-null");
-    }
+    private RecordAliasArgs() {}
 
-    private RecordAliasArgs() {
-        this.evaluateTargetHealth = Codegen.empty();
-        this.name = Codegen.empty();
-        this.zoneId = Codegen.empty();
+    private RecordAliasArgs(RecordAliasArgs $) {
+        this.evaluateTargetHealth = $.evaluateTargetHealth;
+        this.name = $.name;
+        this.zoneId = $.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> evaluateTargetHealth;
-        private Output<String> name;
-        private Output<String> zoneId;
+        private RecordAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordAliasArgs();
         }
 
         public Builder(RecordAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.evaluateTargetHealth = defaults.evaluateTargetHealth;
-    	      this.name = defaults.name;
-    	      this.zoneId = defaults.zoneId;
+            $ = new RecordAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder evaluateTargetHealth(Output<Boolean> evaluateTargetHealth) {
-            this.evaluateTargetHealth = Objects.requireNonNull(evaluateTargetHealth);
+            $.evaluateTargetHealth = evaluateTargetHealth;
             return this;
         }
+
         public Builder evaluateTargetHealth(Boolean evaluateTargetHealth) {
-            this.evaluateTargetHealth = Output.of(Objects.requireNonNull(evaluateTargetHealth));
-            return this;
+            return evaluateTargetHealth(Output.of(evaluateTargetHealth));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder zoneId(Output<String> zoneId) {
-            this.zoneId = Objects.requireNonNull(zoneId);
+            $.zoneId = zoneId;
             return this;
         }
+
         public Builder zoneId(String zoneId) {
-            this.zoneId = Output.of(Objects.requireNonNull(zoneId));
-            return this;
-        }        public RecordAliasArgs build() {
-            return new RecordAliasArgs(evaluateTargetHealth, name, zoneId);
+            return zoneId(Output.of(zoneId));
+        }
+
+        public RecordAliasArgs build() {
+            $.evaluateTargetHealth = Objects.requireNonNull($.evaluateTargetHealth, "expected parameter 'evaluateTargetHealth' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.zoneId = Objects.requireNonNull($.zoneId, "expected parameter 'zoneId' to be non-null");
+            return $;
         }
     }
+
 }

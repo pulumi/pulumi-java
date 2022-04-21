@@ -15,62 +15,58 @@ public final class GetModelArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetModelArgs Empty = new GetModelArgs();
 
     @Import(name="modelId", required=true)
-      private final String modelId;
+    private String modelId;
 
     public String modelId() {
         return this.modelId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetModelArgs(
-        String modelId,
-        @Nullable String project) {
-        this.modelId = Objects.requireNonNull(modelId, "expected parameter 'modelId' to be non-null");
-        this.project = project;
-    }
+    private GetModelArgs() {}
 
-    private GetModelArgs() {
-        this.modelId = null;
-        this.project = null;
+    private GetModelArgs(GetModelArgs $) {
+        this.modelId = $.modelId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String modelId;
-        private @Nullable String project;
+        private GetModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetModelArgs();
         }
 
         public Builder(GetModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modelId = defaults.modelId;
-    	      this.project = defaults.project;
+            $ = new GetModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder modelId(String modelId) {
-            this.modelId = Objects.requireNonNull(modelId);
+            $.modelId = modelId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetModelArgs build() {
-            return new GetModelArgs(modelId, project);
+        }
+
+        public GetModelArgs build() {
+            $.modelId = Objects.requireNonNull($.modelId, "expected parameter 'modelId' to be non-null");
+            return $;
         }
     }
+
 }

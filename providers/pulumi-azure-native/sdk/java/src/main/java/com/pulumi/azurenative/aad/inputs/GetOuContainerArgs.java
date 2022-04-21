@@ -17,7 +17,7 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainServiceName", required=true)
-      private final String domainServiceName;
+    private String domainServiceName;
 
     public String domainServiceName() {
         return this.domainServiceName;
@@ -28,7 +28,7 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ouContainerName", required=true)
-      private final String ouContainerName;
+    private String ouContainerName;
 
     public String ouContainerName() {
         return this.ouContainerName;
@@ -39,64 +39,59 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetOuContainerArgs(
-        String domainServiceName,
-        String ouContainerName,
-        String resourceGroupName) {
-        this.domainServiceName = Objects.requireNonNull(domainServiceName, "expected parameter 'domainServiceName' to be non-null");
-        this.ouContainerName = Objects.requireNonNull(ouContainerName, "expected parameter 'ouContainerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetOuContainerArgs() {}
 
-    private GetOuContainerArgs() {
-        this.domainServiceName = null;
-        this.ouContainerName = null;
-        this.resourceGroupName = null;
+    private GetOuContainerArgs(GetOuContainerArgs $) {
+        this.domainServiceName = $.domainServiceName;
+        this.ouContainerName = $.ouContainerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOuContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainServiceName;
-        private String ouContainerName;
-        private String resourceGroupName;
+        private GetOuContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOuContainerArgs();
         }
 
         public Builder(GetOuContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainServiceName = defaults.domainServiceName;
-    	      this.ouContainerName = defaults.ouContainerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetOuContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainServiceName(String domainServiceName) {
-            this.domainServiceName = Objects.requireNonNull(domainServiceName);
+            $.domainServiceName = domainServiceName;
             return this;
         }
+
         public Builder ouContainerName(String ouContainerName) {
-            this.ouContainerName = Objects.requireNonNull(ouContainerName);
+            $.ouContainerName = ouContainerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetOuContainerArgs build() {
-            return new GetOuContainerArgs(domainServiceName, ouContainerName, resourceGroupName);
+        }
+
+        public GetOuContainerArgs build() {
+            $.domainServiceName = Objects.requireNonNull($.domainServiceName, "expected parameter 'domainServiceName' to be non-null");
+            $.ouContainerName = Objects.requireNonNull($.ouContainerName, "expected parameter 'ouContainerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ManagementPolicyVersionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="delete")
-      private final @Nullable DateAfterCreationResponse delete;
+    private @Nullable DateAfterCreationResponse delete;
 
     public Optional<DateAfterCreationResponse> delete() {
-        return this.delete == null ? Optional.empty() : Optional.ofNullable(this.delete);
+        return Optional.ofNullable(this.delete);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ManagementPolicyVersionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="tierToArchive")
-      private final @Nullable DateAfterCreationResponse tierToArchive;
+    private @Nullable DateAfterCreationResponse tierToArchive;
 
     public Optional<DateAfterCreationResponse> tierToArchive() {
-        return this.tierToArchive == null ? Optional.empty() : Optional.ofNullable(this.tierToArchive);
+        return Optional.ofNullable(this.tierToArchive);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ManagementPolicyVersionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="tierToCool")
-      private final @Nullable DateAfterCreationResponse tierToCool;
+    private @Nullable DateAfterCreationResponse tierToCool;
 
     public Optional<DateAfterCreationResponse> tierToCool() {
-        return this.tierToCool == null ? Optional.empty() : Optional.ofNullable(this.tierToCool);
+        return Optional.ofNullable(this.tierToCool);
     }
 
-    public ManagementPolicyVersionResponse(
-        @Nullable DateAfterCreationResponse delete,
-        @Nullable DateAfterCreationResponse tierToArchive,
-        @Nullable DateAfterCreationResponse tierToCool) {
-        this.delete = delete;
-        this.tierToArchive = tierToArchive;
-        this.tierToCool = tierToCool;
-    }
+    private ManagementPolicyVersionResponse() {}
 
-    private ManagementPolicyVersionResponse() {
-        this.delete = null;
-        this.tierToArchive = null;
-        this.tierToCool = null;
+    private ManagementPolicyVersionResponse(ManagementPolicyVersionResponse $) {
+        this.delete = $.delete;
+        this.tierToArchive = $.tierToArchive;
+        this.tierToCool = $.tierToCool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyVersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DateAfterCreationResponse delete;
-        private @Nullable DateAfterCreationResponse tierToArchive;
-        private @Nullable DateAfterCreationResponse tierToCool;
+        private ManagementPolicyVersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyVersionResponse();
         }
 
         public Builder(ManagementPolicyVersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delete = defaults.delete;
-    	      this.tierToArchive = defaults.tierToArchive;
-    	      this.tierToCool = defaults.tierToCool;
+            $ = new ManagementPolicyVersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder delete(@Nullable DateAfterCreationResponse delete) {
-            this.delete = delete;
+            $.delete = delete;
             return this;
         }
+
         public Builder tierToArchive(@Nullable DateAfterCreationResponse tierToArchive) {
-            this.tierToArchive = tierToArchive;
+            $.tierToArchive = tierToArchive;
             return this;
         }
+
         public Builder tierToCool(@Nullable DateAfterCreationResponse tierToCool) {
-            this.tierToCool = tierToCool;
+            $.tierToCool = tierToCool;
             return this;
-        }        public ManagementPolicyVersionResponse build() {
-            return new ManagementPolicyVersionResponse(delete, tierToArchive, tierToCool);
+        }
+
+        public ManagementPolicyVersionResponse build() {
+            return $;
         }
     }
+
 }

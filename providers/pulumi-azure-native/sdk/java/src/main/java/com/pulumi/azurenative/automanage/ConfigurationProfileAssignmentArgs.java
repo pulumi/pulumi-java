@@ -6,9 +6,9 @@ package com.pulumi.azurenative.automanage;
 import com.pulumi.azurenative.automanage.inputs.ConfigurationProfileAssignmentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConfigurationProfileAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="configurationProfileAssignmentName")
-      private final @Nullable Output<String> configurationProfileAssignmentName;
+    private @Nullable Output<String> configurationProfileAssignmentName;
 
-    public Output<String> configurationProfileAssignmentName() {
-        return this.configurationProfileAssignmentName == null ? Codegen.empty() : this.configurationProfileAssignmentName;
+    public Optional<Output<String>> configurationProfileAssignmentName() {
+        return Optional.ofNullable(this.configurationProfileAssignmentName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConfigurationProfileAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties;
+    private @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties;
 
-    public Output<ConfigurationProfileAssignmentPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ConfigurationProfileAssignmentPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ConfigurationProfileAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,80 @@ public final class ConfigurationProfileAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="vmName", required=true)
-      private final Output<String> vmName;
+    private Output<String> vmName;
 
     public Output<String> vmName() {
         return this.vmName;
     }
 
-    public ConfigurationProfileAssignmentArgs(
-        @Nullable Output<String> configurationProfileAssignmentName,
-        @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> vmName) {
-        this.configurationProfileAssignmentName = configurationProfileAssignmentName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vmName = Objects.requireNonNull(vmName, "expected parameter 'vmName' to be non-null");
-    }
+    private ConfigurationProfileAssignmentArgs() {}
 
-    private ConfigurationProfileAssignmentArgs() {
-        this.configurationProfileAssignmentName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.vmName = Codegen.empty();
+    private ConfigurationProfileAssignmentArgs(ConfigurationProfileAssignmentArgs $) {
+        this.configurationProfileAssignmentName = $.configurationProfileAssignmentName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vmName = $.vmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationProfileAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configurationProfileAssignmentName;
-        private @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> vmName;
+        private ConfigurationProfileAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationProfileAssignmentArgs();
         }
 
         public Builder(ConfigurationProfileAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationProfileAssignmentName = defaults.configurationProfileAssignmentName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vmName = defaults.vmName;
+            $ = new ConfigurationProfileAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationProfileAssignmentName(@Nullable Output<String> configurationProfileAssignmentName) {
-            this.configurationProfileAssignmentName = configurationProfileAssignmentName;
+            $.configurationProfileAssignmentName = configurationProfileAssignmentName;
             return this;
         }
-        public Builder configurationProfileAssignmentName(@Nullable String configurationProfileAssignmentName) {
-            this.configurationProfileAssignmentName = Codegen.ofNullable(configurationProfileAssignmentName);
-            return this;
+
+        public Builder configurationProfileAssignmentName(String configurationProfileAssignmentName) {
+            return configurationProfileAssignmentName(Output.of(configurationProfileAssignmentName));
         }
+
         public Builder properties(@Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ConfigurationProfileAssignmentPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ConfigurationProfileAssignmentPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder vmName(Output<String> vmName) {
-            this.vmName = Objects.requireNonNull(vmName);
+            $.vmName = vmName;
             return this;
         }
+
         public Builder vmName(String vmName) {
-            this.vmName = Output.of(Objects.requireNonNull(vmName));
-            return this;
-        }        public ConfigurationProfileAssignmentArgs build() {
-            return new ConfigurationProfileAssignmentArgs(configurationProfileAssignmentName, properties, resourceGroupName, vmName);
+            return vmName(Output.of(vmName));
+        }
+
+        public ConfigurationProfileAssignmentArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmName = Objects.requireNonNull($.vmName, "expected parameter 'vmName' to be non-null");
+            return $;
         }
     }
+
 }

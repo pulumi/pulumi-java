@@ -25,10 +25,10 @@ public final class BuildArgumentResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isSecret")
-      private final @Nullable Boolean isSecret;
+    private @Nullable Boolean isSecret;
 
     public Optional<Boolean> isSecret() {
-        return this.isSecret == null ? Optional.empty() : Optional.ofNullable(this.isSecret);
+        return Optional.ofNullable(this.isSecret);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class BuildArgumentResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -47,7 +47,7 @@ public final class BuildArgumentResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -58,73 +58,66 @@ public final class BuildArgumentResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public BuildArgumentResponse(
-        @Nullable Boolean isSecret,
-        String name,
-        String type,
-        String value) {
-        this.isSecret = Codegen.booleanProp("isSecret").arg(isSecret).def(false).getNullable();
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private BuildArgumentResponse() {}
 
-    private BuildArgumentResponse() {
-        this.isSecret = null;
-        this.name = null;
-        this.type = null;
-        this.value = null;
+    private BuildArgumentResponse(BuildArgumentResponse $) {
+        this.isSecret = $.isSecret;
+        this.name = $.name;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildArgumentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isSecret;
-        private String name;
-        private String type;
-        private String value;
+        private BuildArgumentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildArgumentResponse();
         }
 
         public Builder(BuildArgumentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isSecret = defaults.isSecret;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new BuildArgumentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isSecret(@Nullable Boolean isSecret) {
-            this.isSecret = isSecret;
+            $.isSecret = isSecret;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public BuildArgumentResponse build() {
-            return new BuildArgumentResponse(isSecret, name, type, value);
+        }
+
+        public BuildArgumentResponse build() {
+            $.isSecret = Codegen.booleanProp("isSecret").arg($.isSecret).def(false).getNullable();
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

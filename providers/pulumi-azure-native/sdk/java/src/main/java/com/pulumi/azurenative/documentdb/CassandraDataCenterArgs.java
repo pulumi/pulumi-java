@@ -6,9 +6,9 @@ package com.pulumi.azurenative.documentdb;
 import com.pulumi.azurenative.documentdb.inputs.DataCenterResourcePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -32,10 +32,10 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dataCenterName")
-      private final @Nullable Output<String> dataCenterName;
+    private @Nullable Output<String> dataCenterName;
 
-    public Output<String> dataCenterName() {
-        return this.dataCenterName == null ? Codegen.empty() : this.dataCenterName;
+    public Optional<Output<String>> dataCenterName() {
+        return Optional.ofNullable(this.dataCenterName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<DataCenterResourcePropertiesArgs> properties;
+    private @Nullable Output<DataCenterResourcePropertiesArgs> properties;
 
-    public Output<DataCenterResourcePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<DataCenterResourcePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -54,89 +54,80 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public CassandraDataCenterArgs(
-        Output<String> clusterName,
-        @Nullable Output<String> dataCenterName,
-        @Nullable Output<DataCenterResourcePropertiesArgs> properties,
-        Output<String> resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.dataCenterName = dataCenterName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private CassandraDataCenterArgs() {}
 
-    private CassandraDataCenterArgs() {
-        this.clusterName = Codegen.empty();
-        this.dataCenterName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private CassandraDataCenterArgs(CassandraDataCenterArgs $) {
+        this.clusterName = $.clusterName;
+        this.dataCenterName = $.dataCenterName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CassandraDataCenterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private @Nullable Output<String> dataCenterName;
-        private @Nullable Output<DataCenterResourcePropertiesArgs> properties;
-        private Output<String> resourceGroupName;
+        private CassandraDataCenterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CassandraDataCenterArgs();
         }
 
         public Builder(CassandraDataCenterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.dataCenterName = defaults.dataCenterName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new CassandraDataCenterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder dataCenterName(@Nullable Output<String> dataCenterName) {
-            this.dataCenterName = dataCenterName;
+            $.dataCenterName = dataCenterName;
             return this;
         }
-        public Builder dataCenterName(@Nullable String dataCenterName) {
-            this.dataCenterName = Codegen.ofNullable(dataCenterName);
-            return this;
+
+        public Builder dataCenterName(String dataCenterName) {
+            return dataCenterName(Output.of(dataCenterName));
         }
+
         public Builder properties(@Nullable Output<DataCenterResourcePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable DataCenterResourcePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(DataCenterResourcePropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public CassandraDataCenterArgs build() {
-            return new CassandraDataCenterArgs(clusterName, dataCenterName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public CassandraDataCenterArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

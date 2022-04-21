@@ -5,9 +5,9 @@ package com.pulumi.googlenative.gkehub_v1alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -31,103 +31,92 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleetName")
-      private final @Nullable Output<String> fleetName;
+    private @Nullable Output<String> fleetName;
 
-    public Output<String> fleetName() {
-        return this.fleetName == null ? Codegen.empty() : this.fleetName;
+    public Optional<Output<String>> fleetName() {
+        return Optional.ofNullable(this.fleetName);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public FleetArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> fleetName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project) {
-        this.displayName = displayName;
-        this.fleetName = fleetName;
-        this.location = location;
-        this.project = project;
-    }
+    private FleetArgs() {}
 
-    private FleetArgs() {
-        this.displayName = Codegen.empty();
-        this.fleetName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
+    private FleetArgs(FleetArgs $) {
+        this.displayName = $.displayName;
+        this.fleetName = $.fleetName;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> fleetName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
+        private FleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetArgs();
         }
 
         public Builder(FleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.fleetName = defaults.fleetName;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new FleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder fleetName(@Nullable Output<String> fleetName) {
-            this.fleetName = fleetName;
+            $.fleetName = fleetName;
             return this;
         }
-        public Builder fleetName(@Nullable String fleetName) {
-            this.fleetName = Codegen.ofNullable(fleetName);
-            return this;
+
+        public Builder fleetName(String fleetName) {
+            return fleetName(Output.of(fleetName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public FleetArgs build() {
-            return new FleetArgs(displayName, fleetName, location, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public FleetArgs build() {
+            return $;
         }
     }
+
 }

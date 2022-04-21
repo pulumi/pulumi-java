@@ -5,9 +5,9 @@ package com.pulumi.aws.servicecatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProductPortfolioAssociationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ProductPortfolioAssociationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="portfolioId", required=true)
-      private final Output<String> portfolioId;
+    private Output<String> portfolioId;
 
     public Output<String> portfolioId() {
         return this.portfolioId;
@@ -42,7 +42,7 @@ public final class ProductPortfolioAssociationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="productId", required=true)
-      private final Output<String> productId;
+    private Output<String> productId;
 
     public Output<String> productId() {
         return this.productId;
@@ -53,89 +53,80 @@ public final class ProductPortfolioAssociationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sourcePortfolioId")
-      private final @Nullable Output<String> sourcePortfolioId;
+    private @Nullable Output<String> sourcePortfolioId;
 
-    public Output<String> sourcePortfolioId() {
-        return this.sourcePortfolioId == null ? Codegen.empty() : this.sourcePortfolioId;
+    public Optional<Output<String>> sourcePortfolioId() {
+        return Optional.ofNullable(this.sourcePortfolioId);
     }
 
-    public ProductPortfolioAssociationArgs(
-        @Nullable Output<String> acceptLanguage,
-        Output<String> portfolioId,
-        Output<String> productId,
-        @Nullable Output<String> sourcePortfolioId) {
-        this.acceptLanguage = acceptLanguage;
-        this.portfolioId = Objects.requireNonNull(portfolioId, "expected parameter 'portfolioId' to be non-null");
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.sourcePortfolioId = sourcePortfolioId;
-    }
+    private ProductPortfolioAssociationArgs() {}
 
-    private ProductPortfolioAssociationArgs() {
-        this.acceptLanguage = Codegen.empty();
-        this.portfolioId = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.sourcePortfolioId = Codegen.empty();
+    private ProductPortfolioAssociationArgs(ProductPortfolioAssociationArgs $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.portfolioId = $.portfolioId;
+        this.productId = $.productId;
+        this.sourcePortfolioId = $.sourcePortfolioId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductPortfolioAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private Output<String> portfolioId;
-        private Output<String> productId;
-        private @Nullable Output<String> sourcePortfolioId;
+        private ProductPortfolioAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductPortfolioAssociationArgs();
         }
 
         public Builder(ProductPortfolioAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.portfolioId = defaults.portfolioId;
-    	      this.productId = defaults.productId;
-    	      this.sourcePortfolioId = defaults.sourcePortfolioId;
+            $ = new ProductPortfolioAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder portfolioId(Output<String> portfolioId) {
-            this.portfolioId = Objects.requireNonNull(portfolioId);
+            $.portfolioId = portfolioId;
             return this;
         }
+
         public Builder portfolioId(String portfolioId) {
-            this.portfolioId = Output.of(Objects.requireNonNull(portfolioId));
-            return this;
+            return portfolioId(Output.of(portfolioId));
         }
+
         public Builder productId(Output<String> productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder productId(String productId) {
-            this.productId = Output.of(Objects.requireNonNull(productId));
-            return this;
+            return productId(Output.of(productId));
         }
+
         public Builder sourcePortfolioId(@Nullable Output<String> sourcePortfolioId) {
-            this.sourcePortfolioId = sourcePortfolioId;
+            $.sourcePortfolioId = sourcePortfolioId;
             return this;
         }
-        public Builder sourcePortfolioId(@Nullable String sourcePortfolioId) {
-            this.sourcePortfolioId = Codegen.ofNullable(sourcePortfolioId);
-            return this;
-        }        public ProductPortfolioAssociationArgs build() {
-            return new ProductPortfolioAssociationArgs(acceptLanguage, portfolioId, productId, sourcePortfolioId);
+
+        public Builder sourcePortfolioId(String sourcePortfolioId) {
+            return sourcePortfolioId(Output.of(sourcePortfolioId));
+        }
+
+        public ProductPortfolioAssociationArgs build() {
+            $.portfolioId = Objects.requireNonNull($.portfolioId, "expected parameter 'portfolioId' to be non-null");
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            return $;
         }
     }
+
 }

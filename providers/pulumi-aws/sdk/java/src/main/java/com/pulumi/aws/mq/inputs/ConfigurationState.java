@@ -5,11 +5,11 @@ package com.pulumi.aws.mq.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="authenticationStrategy")
-      private final @Nullable Output<String> authenticationStrategy;
+    private @Nullable Output<String> authenticationStrategy;
 
-    public Output<String> authenticationStrategy() {
-        return this.authenticationStrategy == null ? Codegen.empty() : this.authenticationStrategy;
+    public Optional<Output<String>> authenticationStrategy() {
+        return Optional.ofNullable(this.authenticationStrategy);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="engineType")
-      private final @Nullable Output<String> engineType;
+    private @Nullable Output<String> engineType;
 
-    public Output<String> engineType() {
-        return this.engineType == null ? Codegen.empty() : this.engineType;
+    public Optional<Output<String>> engineType() {
+        return Optional.ofNullable(this.engineType);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="latestRevision")
-      private final @Nullable Output<Integer> latestRevision;
+    private @Nullable Output<Integer> latestRevision;
 
-    public Output<Integer> latestRevision() {
-        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
+    public Optional<Output<Integer>> latestRevision() {
+        return Optional.ofNullable(this.latestRevision);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -121,167 +121,138 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ConfigurationState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> authenticationStrategy,
-        @Nullable Output<String> data,
-        @Nullable Output<String> description,
-        @Nullable Output<String> engineType,
-        @Nullable Output<String> engineVersion,
-        @Nullable Output<Integer> latestRevision,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.authenticationStrategy = authenticationStrategy;
-        this.data = data;
-        this.description = description;
-        this.engineType = engineType;
-        this.engineVersion = engineVersion;
-        this.latestRevision = latestRevision;
-        this.name = name;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ConfigurationState() {}
 
-    private ConfigurationState() {
-        this.arn = Codegen.empty();
-        this.authenticationStrategy = Codegen.empty();
-        this.data = Codegen.empty();
-        this.description = Codegen.empty();
-        this.engineType = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.latestRevision = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ConfigurationState(ConfigurationState $) {
+        this.arn = $.arn;
+        this.authenticationStrategy = $.authenticationStrategy;
+        this.data = $.data;
+        this.description = $.description;
+        this.engineType = $.engineType;
+        this.engineVersion = $.engineVersion;
+        this.latestRevision = $.latestRevision;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> authenticationStrategy;
-        private @Nullable Output<String> data;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> engineType;
-        private @Nullable Output<String> engineVersion;
-        private @Nullable Output<Integer> latestRevision;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationState();
         }
 
         public Builder(ConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.authenticationStrategy = defaults.authenticationStrategy;
-    	      this.data = defaults.data;
-    	      this.description = defaults.description;
-    	      this.engineType = defaults.engineType;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.latestRevision = defaults.latestRevision;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder authenticationStrategy(@Nullable Output<String> authenticationStrategy) {
-            this.authenticationStrategy = authenticationStrategy;
+            $.authenticationStrategy = authenticationStrategy;
             return this;
         }
-        public Builder authenticationStrategy(@Nullable String authenticationStrategy) {
-            this.authenticationStrategy = Codegen.ofNullable(authenticationStrategy);
-            return this;
+
+        public Builder authenticationStrategy(String authenticationStrategy) {
+            return authenticationStrategy(Output.of(authenticationStrategy));
         }
+
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder engineType(@Nullable Output<String> engineType) {
-            this.engineType = engineType;
+            $.engineType = engineType;
             return this;
         }
-        public Builder engineType(@Nullable String engineType) {
-            this.engineType = Codegen.ofNullable(engineType);
-            return this;
+
+        public Builder engineType(String engineType) {
+            return engineType(Output.of(engineType));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
-            this.latestRevision = latestRevision;
+            $.latestRevision = latestRevision;
             return this;
         }
-        public Builder latestRevision(@Nullable Integer latestRevision) {
-            this.latestRevision = Codegen.ofNullable(latestRevision);
-            return this;
+
+        public Builder latestRevision(Integer latestRevision) {
+            return latestRevision(Output.of(latestRevision));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ConfigurationState build() {
-            return new ConfigurationState(arn, authenticationStrategy, data, description, engineType, engineVersion, latestRevision, name, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ConfigurationState build() {
+            return $;
         }
     }
+
 }

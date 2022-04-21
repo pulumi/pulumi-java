@@ -5,10 +5,10 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,73 +17,69 @@ public final class SwaggerSpecificationArgs extends com.pulumi.resources.Resourc
     public static final SwaggerSpecificationArgs Empty = new SwaggerSpecificationArgs();
 
     @Import(name="apiVersions")
-      private final @Nullable Output<List<String>> apiVersions;
+    private @Nullable Output<List<String>> apiVersions;
 
-    public Output<List<String>> apiVersions() {
-        return this.apiVersions == null ? Codegen.empty() : this.apiVersions;
+    public Optional<Output<List<String>>> apiVersions() {
+        return Optional.ofNullable(this.apiVersions);
     }
 
     @Import(name="swaggerSpecFolderUri")
-      private final @Nullable Output<String> swaggerSpecFolderUri;
+    private @Nullable Output<String> swaggerSpecFolderUri;
 
-    public Output<String> swaggerSpecFolderUri() {
-        return this.swaggerSpecFolderUri == null ? Codegen.empty() : this.swaggerSpecFolderUri;
+    public Optional<Output<String>> swaggerSpecFolderUri() {
+        return Optional.ofNullable(this.swaggerSpecFolderUri);
     }
 
-    public SwaggerSpecificationArgs(
-        @Nullable Output<List<String>> apiVersions,
-        @Nullable Output<String> swaggerSpecFolderUri) {
-        this.apiVersions = apiVersions;
-        this.swaggerSpecFolderUri = swaggerSpecFolderUri;
-    }
+    private SwaggerSpecificationArgs() {}
 
-    private SwaggerSpecificationArgs() {
-        this.apiVersions = Codegen.empty();
-        this.swaggerSpecFolderUri = Codegen.empty();
+    private SwaggerSpecificationArgs(SwaggerSpecificationArgs $) {
+        this.apiVersions = $.apiVersions;
+        this.swaggerSpecFolderUri = $.swaggerSpecFolderUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SwaggerSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> apiVersions;
-        private @Nullable Output<String> swaggerSpecFolderUri;
+        private SwaggerSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SwaggerSpecificationArgs();
         }
 
         public Builder(SwaggerSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersions = defaults.apiVersions;
-    	      this.swaggerSpecFolderUri = defaults.swaggerSpecFolderUri;
+            $ = new SwaggerSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersions(@Nullable Output<List<String>> apiVersions) {
-            this.apiVersions = apiVersions;
+            $.apiVersions = apiVersions;
             return this;
         }
-        public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = Codegen.ofNullable(apiVersions);
-            return this;
+
+        public Builder apiVersions(List<String> apiVersions) {
+            return apiVersions(Output.of(apiVersions));
         }
+
         public Builder apiVersions(String... apiVersions) {
             return apiVersions(List.of(apiVersions));
         }
+
         public Builder swaggerSpecFolderUri(@Nullable Output<String> swaggerSpecFolderUri) {
-            this.swaggerSpecFolderUri = swaggerSpecFolderUri;
+            $.swaggerSpecFolderUri = swaggerSpecFolderUri;
             return this;
         }
-        public Builder swaggerSpecFolderUri(@Nullable String swaggerSpecFolderUri) {
-            this.swaggerSpecFolderUri = Codegen.ofNullable(swaggerSpecFolderUri);
-            return this;
-        }        public SwaggerSpecificationArgs build() {
-            return new SwaggerSpecificationArgs(apiVersions, swaggerSpecFolderUri);
+
+        public Builder swaggerSpecFolderUri(String swaggerSpecFolderUri) {
+            return swaggerSpecFolderUri(Output.of(swaggerSpecFolderUri));
+        }
+
+        public SwaggerSpecificationArgs build() {
+            return $;
         }
     }
+
 }

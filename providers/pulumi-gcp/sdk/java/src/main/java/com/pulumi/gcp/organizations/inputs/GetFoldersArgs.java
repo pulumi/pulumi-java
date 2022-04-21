@@ -17,45 +17,45 @@ public final class GetFoldersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentId", required=true)
-      private final String parentId;
+    private String parentId;
 
     public String parentId() {
         return this.parentId;
     }
 
-    public GetFoldersArgs(String parentId) {
-        this.parentId = Objects.requireNonNull(parentId, "expected parameter 'parentId' to be non-null");
-    }
+    private GetFoldersArgs() {}
 
-    private GetFoldersArgs() {
-        this.parentId = null;
+    private GetFoldersArgs(GetFoldersArgs $) {
+        this.parentId = $.parentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFoldersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parentId;
+        private GetFoldersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFoldersArgs();
         }
 
         public Builder(GetFoldersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parentId = defaults.parentId;
+            $ = new GetFoldersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parentId(String parentId) {
-            this.parentId = Objects.requireNonNull(parentId);
+            $.parentId = parentId;
             return this;
-        }        public GetFoldersArgs build() {
-            return new GetFoldersArgs(parentId);
+        }
+
+        public GetFoldersArgs build() {
+            $.parentId = Objects.requireNonNull($.parentId, "expected parameter 'parentId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,10 +10,10 @@ import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssPackage
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cmafPackage")
-      private final @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage;
+    private @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage;
 
-    public Output<PackagingConfigurationCmafPackageArgs> cmafPackage() {
-        return this.cmafPackage == null ? Codegen.empty() : this.cmafPackage;
+    public Optional<Output<PackagingConfigurationCmafPackageArgs>> cmafPackage() {
+        return Optional.ofNullable(this.cmafPackage);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dashPackage")
-      private final @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage;
+    private @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage;
 
-    public Output<PackagingConfigurationDashPackageArgs> dashPackage() {
-        return this.dashPackage == null ? Codegen.empty() : this.dashPackage;
+    public Optional<Output<PackagingConfigurationDashPackageArgs>> dashPackage() {
+        return Optional.ofNullable(this.dashPackage);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="hlsPackage")
-      private final @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage;
+    private @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage;
 
-    public Output<PackagingConfigurationHlsPackageArgs> hlsPackage() {
-        return this.hlsPackage == null ? Codegen.empty() : this.hlsPackage;
+    public Optional<Output<PackagingConfigurationHlsPackageArgs>> hlsPackage() {
+        return Optional.ofNullable(this.hlsPackage);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="mssPackage")
-      private final @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage;
+    private @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage;
 
-    public Output<PackagingConfigurationMssPackageArgs> mssPackage() {
-        return this.mssPackage == null ? Codegen.empty() : this.mssPackage;
+    public Optional<Output<PackagingConfigurationMssPackageArgs>> mssPackage() {
+        return Optional.ofNullable(this.mssPackage);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="packagingGroupId", required=true)
-      private final Output<String> packagingGroupId;
+    private Output<String> packagingGroupId;
 
     public Output<String> packagingGroupId() {
         return this.packagingGroupId;
@@ -81,118 +81,103 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<PackagingConfigurationTagArgs>> tags;
+    private @Nullable Output<List<PackagingConfigurationTagArgs>> tags;
 
-    public Output<List<PackagingConfigurationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<PackagingConfigurationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PackagingConfigurationArgs(
-        @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage,
-        @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage,
-        @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage,
-        @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage,
-        Output<String> packagingGroupId,
-        @Nullable Output<List<PackagingConfigurationTagArgs>> tags) {
-        this.cmafPackage = cmafPackage;
-        this.dashPackage = dashPackage;
-        this.hlsPackage = hlsPackage;
-        this.mssPackage = mssPackage;
-        this.packagingGroupId = Objects.requireNonNull(packagingGroupId, "expected parameter 'packagingGroupId' to be non-null");
-        this.tags = tags;
-    }
+    private PackagingConfigurationArgs() {}
 
-    private PackagingConfigurationArgs() {
-        this.cmafPackage = Codegen.empty();
-        this.dashPackage = Codegen.empty();
-        this.hlsPackage = Codegen.empty();
-        this.mssPackage = Codegen.empty();
-        this.packagingGroupId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PackagingConfigurationArgs(PackagingConfigurationArgs $) {
+        this.cmafPackage = $.cmafPackage;
+        this.dashPackage = $.dashPackage;
+        this.hlsPackage = $.hlsPackage;
+        this.mssPackage = $.mssPackage;
+        this.packagingGroupId = $.packagingGroupId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage;
-        private @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage;
-        private @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage;
-        private @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage;
-        private Output<String> packagingGroupId;
-        private @Nullable Output<List<PackagingConfigurationTagArgs>> tags;
+        private PackagingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationArgs();
         }
 
         public Builder(PackagingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cmafPackage = defaults.cmafPackage;
-    	      this.dashPackage = defaults.dashPackage;
-    	      this.hlsPackage = defaults.hlsPackage;
-    	      this.mssPackage = defaults.mssPackage;
-    	      this.packagingGroupId = defaults.packagingGroupId;
-    	      this.tags = defaults.tags;
+            $ = new PackagingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cmafPackage(@Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage) {
-            this.cmafPackage = cmafPackage;
+            $.cmafPackage = cmafPackage;
             return this;
         }
-        public Builder cmafPackage(@Nullable PackagingConfigurationCmafPackageArgs cmafPackage) {
-            this.cmafPackage = Codegen.ofNullable(cmafPackage);
-            return this;
+
+        public Builder cmafPackage(PackagingConfigurationCmafPackageArgs cmafPackage) {
+            return cmafPackage(Output.of(cmafPackage));
         }
+
         public Builder dashPackage(@Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage) {
-            this.dashPackage = dashPackage;
+            $.dashPackage = dashPackage;
             return this;
         }
-        public Builder dashPackage(@Nullable PackagingConfigurationDashPackageArgs dashPackage) {
-            this.dashPackage = Codegen.ofNullable(dashPackage);
-            return this;
+
+        public Builder dashPackage(PackagingConfigurationDashPackageArgs dashPackage) {
+            return dashPackage(Output.of(dashPackage));
         }
+
         public Builder hlsPackage(@Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage) {
-            this.hlsPackage = hlsPackage;
+            $.hlsPackage = hlsPackage;
             return this;
         }
-        public Builder hlsPackage(@Nullable PackagingConfigurationHlsPackageArgs hlsPackage) {
-            this.hlsPackage = Codegen.ofNullable(hlsPackage);
-            return this;
+
+        public Builder hlsPackage(PackagingConfigurationHlsPackageArgs hlsPackage) {
+            return hlsPackage(Output.of(hlsPackage));
         }
+
         public Builder mssPackage(@Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage) {
-            this.mssPackage = mssPackage;
+            $.mssPackage = mssPackage;
             return this;
         }
-        public Builder mssPackage(@Nullable PackagingConfigurationMssPackageArgs mssPackage) {
-            this.mssPackage = Codegen.ofNullable(mssPackage);
-            return this;
+
+        public Builder mssPackage(PackagingConfigurationMssPackageArgs mssPackage) {
+            return mssPackage(Output.of(mssPackage));
         }
+
         public Builder packagingGroupId(Output<String> packagingGroupId) {
-            this.packagingGroupId = Objects.requireNonNull(packagingGroupId);
+            $.packagingGroupId = packagingGroupId;
             return this;
         }
+
         public Builder packagingGroupId(String packagingGroupId) {
-            this.packagingGroupId = Output.of(Objects.requireNonNull(packagingGroupId));
-            return this;
+            return packagingGroupId(Output.of(packagingGroupId));
         }
+
         public Builder tags(@Nullable Output<List<PackagingConfigurationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<PackagingConfigurationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<PackagingConfigurationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(PackagingConfigurationTagArgs... tags) {
             return tags(List.of(tags));
-        }        public PackagingConfigurationArgs build() {
-            return new PackagingConfigurationArgs(cmafPackage, dashPackage, hlsPackage, mssPackage, packagingGroupId, tags);
+        }
+
+        public PackagingConfigurationArgs build() {
+            $.packagingGroupId = Objects.requireNonNull($.packagingGroupId, "expected parameter 'packagingGroupId' to be non-null");
+            return $;
         }
     }
+
 }

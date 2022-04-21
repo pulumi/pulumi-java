@@ -5,7 +5,6 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.notebooks.inputs.InstanceAcceleratorConfigGetArgs;
 import com.pulumi.gcp.notebooks.inputs.InstanceContainerImageGetArgs;
 import com.pulumi.gcp.notebooks.inputs.InstanceReservationAffinityGetArgs;
@@ -17,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceleratorConfig")
-      private final @Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig;
+    private @Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig;
 
-    public Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig() {
-        return this.acceleratorConfig == null ? Codegen.empty() : this.acceleratorConfig;
+    public Optional<Output<InstanceAcceleratorConfigGetArgs>> acceleratorConfig() {
+        return Optional.ofNullable(this.acceleratorConfig);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootDiskSizeGb")
-      private final @Nullable Output<Integer> bootDiskSizeGb;
+    private @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Output<Integer> bootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
+    public Optional<Output<Integer>> bootDiskSizeGb() {
+        return Optional.ofNullable(this.bootDiskSizeGb);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootDiskType")
-      private final @Nullable Output<String> bootDiskType;
+    private @Nullable Output<String> bootDiskType;
 
-    public Output<String> bootDiskType() {
-        return this.bootDiskType == null ? Codegen.empty() : this.bootDiskType;
+    public Optional<Output<String>> bootDiskType() {
+        return Optional.ofNullable(this.bootDiskType);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerImage")
-      private final @Nullable Output<InstanceContainerImageGetArgs> containerImage;
+    private @Nullable Output<InstanceContainerImageGetArgs> containerImage;
 
-    public Output<InstanceContainerImageGetArgs> containerImage() {
-        return this.containerImage == null ? Codegen.empty() : this.containerImage;
+    public Optional<Output<InstanceContainerImageGetArgs>> containerImage() {
+        return Optional.ofNullable(this.containerImage);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customGpuDriverPath")
-      private final @Nullable Output<String> customGpuDriverPath;
+    private @Nullable Output<String> customGpuDriverPath;
 
-    public Output<String> customGpuDriverPath() {
-        return this.customGpuDriverPath == null ? Codegen.empty() : this.customGpuDriverPath;
+    public Optional<Output<String>> customGpuDriverPath() {
+        return Optional.ofNullable(this.customGpuDriverPath);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataDiskSizeGb")
-      private final @Nullable Output<Integer> dataDiskSizeGb;
+    private @Nullable Output<Integer> dataDiskSizeGb;
 
-    public Output<Integer> dataDiskSizeGb() {
-        return this.dataDiskSizeGb == null ? Codegen.empty() : this.dataDiskSizeGb;
+    public Optional<Output<Integer>> dataDiskSizeGb() {
+        return Optional.ofNullable(this.dataDiskSizeGb);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataDiskType")
-      private final @Nullable Output<String> dataDiskType;
+    private @Nullable Output<String> dataDiskType;
 
-    public Output<String> dataDiskType() {
-        return this.dataDiskType == null ? Codegen.empty() : this.dataDiskType;
+    public Optional<Output<String>> dataDiskType() {
+        return Optional.ofNullable(this.dataDiskType);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryption")
-      private final @Nullable Output<String> diskEncryption;
+    private @Nullable Output<String> diskEncryption;
 
-    public Output<String> diskEncryption() {
-        return this.diskEncryption == null ? Codegen.empty() : this.diskEncryption;
+    public Optional<Output<String>> diskEncryption() {
+        return Optional.ofNullable(this.diskEncryption);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="installGpuDriver")
-      private final @Nullable Output<Boolean> installGpuDriver;
+    private @Nullable Output<Boolean> installGpuDriver;
 
-    public Output<Boolean> installGpuDriver() {
-        return this.installGpuDriver == null ? Codegen.empty() : this.installGpuDriver;
+    public Optional<Output<Boolean>> installGpuDriver() {
+        return Optional.ofNullable(this.installGpuDriver);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceOwners")
-      private final @Nullable Output<List<String>> instanceOwners;
+    private @Nullable Output<List<String>> instanceOwners;
 
-    public Output<List<String>> instanceOwners() {
-        return this.instanceOwners == null ? Codegen.empty() : this.instanceOwners;
+    public Optional<Output<List<String>>> instanceOwners() {
+        return Optional.ofNullable(this.instanceOwners);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -239,10 +239,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -251,10 +251,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nicType")
-      private final @Nullable Output<String> nicType;
+    private @Nullable Output<String> nicType;
 
-    public Output<String> nicType() {
-        return this.nicType == null ? Codegen.empty() : this.nicType;
+    public Optional<Output<String>> nicType() {
+        return Optional.ofNullable(this.nicType);
     }
 
     /**
@@ -262,10 +262,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="noProxyAccess")
-      private final @Nullable Output<Boolean> noProxyAccess;
+    private @Nullable Output<Boolean> noProxyAccess;
 
-    public Output<Boolean> noProxyAccess() {
-        return this.noProxyAccess == null ? Codegen.empty() : this.noProxyAccess;
+    public Optional<Output<Boolean>> noProxyAccess() {
+        return Optional.ofNullable(this.noProxyAccess);
     }
 
     /**
@@ -273,10 +273,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="noPublicIp")
-      private final @Nullable Output<Boolean> noPublicIp;
+    private @Nullable Output<Boolean> noPublicIp;
 
-    public Output<Boolean> noPublicIp() {
-        return this.noPublicIp == null ? Codegen.empty() : this.noPublicIp;
+    public Optional<Output<Boolean>> noPublicIp() {
+        return Optional.ofNullable(this.noPublicIp);
     }
 
     /**
@@ -284,10 +284,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="noRemoveDataDisk")
-      private final @Nullable Output<Boolean> noRemoveDataDisk;
+    private @Nullable Output<Boolean> noRemoveDataDisk;
 
-    public Output<Boolean> noRemoveDataDisk() {
-        return this.noRemoveDataDisk == null ? Codegen.empty() : this.noRemoveDataDisk;
+    public Optional<Output<Boolean>> noRemoveDataDisk() {
+        return Optional.ofNullable(this.noRemoveDataDisk);
     }
 
     /**
@@ -297,10 +297,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postStartupScript")
-      private final @Nullable Output<String> postStartupScript;
+    private @Nullable Output<String> postStartupScript;
 
-    public Output<String> postStartupScript() {
-        return this.postStartupScript == null ? Codegen.empty() : this.postStartupScript;
+    public Optional<Output<String>> postStartupScript() {
+        return Optional.ofNullable(this.postStartupScript);
     }
 
     /**
@@ -309,10 +309,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -320,10 +320,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="proxyUri")
-      private final @Nullable Output<String> proxyUri;
+    private @Nullable Output<String> proxyUri;
 
-    public Output<String> proxyUri() {
-        return this.proxyUri == null ? Codegen.empty() : this.proxyUri;
+    public Optional<Output<String>> proxyUri() {
+        return Optional.ofNullable(this.proxyUri);
     }
 
     /**
@@ -332,10 +332,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservationAffinity")
-      private final @Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity;
+    private @Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity;
 
-    public Output<InstanceReservationAffinityGetArgs> reservationAffinity() {
-        return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
+    public Optional<Output<InstanceReservationAffinityGetArgs>> reservationAffinity() {
+        return Optional.ofNullable(this.reservationAffinity);
     }
 
     /**
@@ -347,10 +347,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -361,10 +361,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountScopes")
-      private final @Nullable Output<List<String>> serviceAccountScopes;
+    private @Nullable Output<List<String>> serviceAccountScopes;
 
-    public Output<List<String>> serviceAccountScopes() {
-        return this.serviceAccountScopes == null ? Codegen.empty() : this.serviceAccountScopes;
+    public Optional<Output<List<String>>> serviceAccountScopes() {
+        return Optional.ofNullable(this.serviceAccountScopes);
     }
 
     /**
@@ -374,10 +374,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shieldedInstanceConfig")
-      private final @Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
+    private @Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
-    public Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
+    public Optional<Output<InstanceShieldedInstanceConfigGetArgs>> shieldedInstanceConfig() {
+        return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
     /**
@@ -385,10 +385,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -397,10 +397,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<String> subnet;
+    private @Nullable Output<String> subnet;
 
-    public Output<String> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<String>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -408,10 +408,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -419,10 +419,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     /**
@@ -431,488 +431,390 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmImage")
-      private final @Nullable Output<InstanceVmImageGetArgs> vmImage;
+    private @Nullable Output<InstanceVmImageGetArgs> vmImage;
 
-    public Output<InstanceVmImageGetArgs> vmImage() {
-        return this.vmImage == null ? Codegen.empty() : this.vmImage;
+    public Optional<Output<InstanceVmImageGetArgs>> vmImage() {
+        return Optional.ofNullable(this.vmImage);
     }
 
-    public InstanceState(
-        @Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig,
-        @Nullable Output<Integer> bootDiskSizeGb,
-        @Nullable Output<String> bootDiskType,
-        @Nullable Output<InstanceContainerImageGetArgs> containerImage,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> customGpuDriverPath,
-        @Nullable Output<Integer> dataDiskSizeGb,
-        @Nullable Output<String> dataDiskType,
-        @Nullable Output<String> diskEncryption,
-        @Nullable Output<Boolean> installGpuDriver,
-        @Nullable Output<List<String>> instanceOwners,
-        @Nullable Output<String> kmsKey,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> machineType,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<String> nicType,
-        @Nullable Output<Boolean> noProxyAccess,
-        @Nullable Output<Boolean> noPublicIp,
-        @Nullable Output<Boolean> noRemoveDataDisk,
-        @Nullable Output<String> postStartupScript,
-        @Nullable Output<String> project,
-        @Nullable Output<String> proxyUri,
-        @Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<List<String>> serviceAccountScopes,
-        @Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig,
-        @Nullable Output<String> state,
-        @Nullable Output<String> subnet,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> updateTime,
-        @Nullable Output<InstanceVmImageGetArgs> vmImage) {
-        this.acceleratorConfig = acceleratorConfig;
-        this.bootDiskSizeGb = bootDiskSizeGb;
-        this.bootDiskType = bootDiskType;
-        this.containerImage = containerImage;
-        this.createTime = createTime;
-        this.customGpuDriverPath = customGpuDriverPath;
-        this.dataDiskSizeGb = dataDiskSizeGb;
-        this.dataDiskType = dataDiskType;
-        this.diskEncryption = diskEncryption;
-        this.installGpuDriver = installGpuDriver;
-        this.instanceOwners = instanceOwners;
-        this.kmsKey = kmsKey;
-        this.labels = labels;
-        this.location = location;
-        this.machineType = machineType;
-        this.metadata = metadata;
-        this.name = name;
-        this.network = network;
-        this.nicType = nicType;
-        this.noProxyAccess = noProxyAccess;
-        this.noPublicIp = noPublicIp;
-        this.noRemoveDataDisk = noRemoveDataDisk;
-        this.postStartupScript = postStartupScript;
-        this.project = project;
-        this.proxyUri = proxyUri;
-        this.reservationAffinity = reservationAffinity;
-        this.serviceAccount = serviceAccount;
-        this.serviceAccountScopes = serviceAccountScopes;
-        this.shieldedInstanceConfig = shieldedInstanceConfig;
-        this.state = state;
-        this.subnet = subnet;
-        this.tags = tags;
-        this.updateTime = updateTime;
-        this.vmImage = vmImage;
-    }
+    private InstanceState() {}
 
-    private InstanceState() {
-        this.acceleratorConfig = Codegen.empty();
-        this.bootDiskSizeGb = Codegen.empty();
-        this.bootDiskType = Codegen.empty();
-        this.containerImage = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.customGpuDriverPath = Codegen.empty();
-        this.dataDiskSizeGb = Codegen.empty();
-        this.dataDiskType = Codegen.empty();
-        this.diskEncryption = Codegen.empty();
-        this.installGpuDriver = Codegen.empty();
-        this.instanceOwners = Codegen.empty();
-        this.kmsKey = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.nicType = Codegen.empty();
-        this.noProxyAccess = Codegen.empty();
-        this.noPublicIp = Codegen.empty();
-        this.noRemoveDataDisk = Codegen.empty();
-        this.postStartupScript = Codegen.empty();
-        this.project = Codegen.empty();
-        this.proxyUri = Codegen.empty();
-        this.reservationAffinity = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.serviceAccountScopes = Codegen.empty();
-        this.shieldedInstanceConfig = Codegen.empty();
-        this.state = Codegen.empty();
-        this.subnet = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.updateTime = Codegen.empty();
-        this.vmImage = Codegen.empty();
+    private InstanceState(InstanceState $) {
+        this.acceleratorConfig = $.acceleratorConfig;
+        this.bootDiskSizeGb = $.bootDiskSizeGb;
+        this.bootDiskType = $.bootDiskType;
+        this.containerImage = $.containerImage;
+        this.createTime = $.createTime;
+        this.customGpuDriverPath = $.customGpuDriverPath;
+        this.dataDiskSizeGb = $.dataDiskSizeGb;
+        this.dataDiskType = $.dataDiskType;
+        this.diskEncryption = $.diskEncryption;
+        this.installGpuDriver = $.installGpuDriver;
+        this.instanceOwners = $.instanceOwners;
+        this.kmsKey = $.kmsKey;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.network = $.network;
+        this.nicType = $.nicType;
+        this.noProxyAccess = $.noProxyAccess;
+        this.noPublicIp = $.noPublicIp;
+        this.noRemoveDataDisk = $.noRemoveDataDisk;
+        this.postStartupScript = $.postStartupScript;
+        this.project = $.project;
+        this.proxyUri = $.proxyUri;
+        this.reservationAffinity = $.reservationAffinity;
+        this.serviceAccount = $.serviceAccount;
+        this.serviceAccountScopes = $.serviceAccountScopes;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.state = $.state;
+        this.subnet = $.subnet;
+        this.tags = $.tags;
+        this.updateTime = $.updateTime;
+        this.vmImage = $.vmImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig;
-        private @Nullable Output<Integer> bootDiskSizeGb;
-        private @Nullable Output<String> bootDiskType;
-        private @Nullable Output<InstanceContainerImageGetArgs> containerImage;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> customGpuDriverPath;
-        private @Nullable Output<Integer> dataDiskSizeGb;
-        private @Nullable Output<String> dataDiskType;
-        private @Nullable Output<String> diskEncryption;
-        private @Nullable Output<Boolean> installGpuDriver;
-        private @Nullable Output<List<String>> instanceOwners;
-        private @Nullable Output<String> kmsKey;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> nicType;
-        private @Nullable Output<Boolean> noProxyAccess;
-        private @Nullable Output<Boolean> noPublicIp;
-        private @Nullable Output<Boolean> noRemoveDataDisk;
-        private @Nullable Output<String> postStartupScript;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> proxyUri;
-        private @Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<List<String>> serviceAccountScopes;
-        private @Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> subnet;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<InstanceVmImageGetArgs> vmImage;
+        private InstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceState();
         }
 
         public Builder(InstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorConfig = defaults.acceleratorConfig;
-    	      this.bootDiskSizeGb = defaults.bootDiskSizeGb;
-    	      this.bootDiskType = defaults.bootDiskType;
-    	      this.containerImage = defaults.containerImage;
-    	      this.createTime = defaults.createTime;
-    	      this.customGpuDriverPath = defaults.customGpuDriverPath;
-    	      this.dataDiskSizeGb = defaults.dataDiskSizeGb;
-    	      this.dataDiskType = defaults.dataDiskType;
-    	      this.diskEncryption = defaults.diskEncryption;
-    	      this.installGpuDriver = defaults.installGpuDriver;
-    	      this.instanceOwners = defaults.instanceOwners;
-    	      this.kmsKey = defaults.kmsKey;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.nicType = defaults.nicType;
-    	      this.noProxyAccess = defaults.noProxyAccess;
-    	      this.noPublicIp = defaults.noPublicIp;
-    	      this.noRemoveDataDisk = defaults.noRemoveDataDisk;
-    	      this.postStartupScript = defaults.postStartupScript;
-    	      this.project = defaults.project;
-    	      this.proxyUri = defaults.proxyUri;
-    	      this.reservationAffinity = defaults.reservationAffinity;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.serviceAccountScopes = defaults.serviceAccountScopes;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.state = defaults.state;
-    	      this.subnet = defaults.subnet;
-    	      this.tags = defaults.tags;
-    	      this.updateTime = defaults.updateTime;
-    	      this.vmImage = defaults.vmImage;
+            $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorConfig(@Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig) {
-            this.acceleratorConfig = acceleratorConfig;
+            $.acceleratorConfig = acceleratorConfig;
             return this;
         }
-        public Builder acceleratorConfig(@Nullable InstanceAcceleratorConfigGetArgs acceleratorConfig) {
-            this.acceleratorConfig = Codegen.ofNullable(acceleratorConfig);
-            return this;
+
+        public Builder acceleratorConfig(InstanceAcceleratorConfigGetArgs acceleratorConfig) {
+            return acceleratorConfig(Output.of(acceleratorConfig));
         }
+
         public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
-            this.bootDiskSizeGb = bootDiskSizeGb;
+            $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
-        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Codegen.ofNullable(bootDiskSizeGb);
-            return this;
+
+        public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
+            return bootDiskSizeGb(Output.of(bootDiskSizeGb));
         }
+
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
-            this.bootDiskType = bootDiskType;
+            $.bootDiskType = bootDiskType;
             return this;
         }
-        public Builder bootDiskType(@Nullable String bootDiskType) {
-            this.bootDiskType = Codegen.ofNullable(bootDiskType);
-            return this;
+
+        public Builder bootDiskType(String bootDiskType) {
+            return bootDiskType(Output.of(bootDiskType));
         }
+
         public Builder containerImage(@Nullable Output<InstanceContainerImageGetArgs> containerImage) {
-            this.containerImage = containerImage;
+            $.containerImage = containerImage;
             return this;
         }
-        public Builder containerImage(@Nullable InstanceContainerImageGetArgs containerImage) {
-            this.containerImage = Codegen.ofNullable(containerImage);
-            return this;
+
+        public Builder containerImage(InstanceContainerImageGetArgs containerImage) {
+            return containerImage(Output.of(containerImage));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder customGpuDriverPath(@Nullable Output<String> customGpuDriverPath) {
-            this.customGpuDriverPath = customGpuDriverPath;
+            $.customGpuDriverPath = customGpuDriverPath;
             return this;
         }
-        public Builder customGpuDriverPath(@Nullable String customGpuDriverPath) {
-            this.customGpuDriverPath = Codegen.ofNullable(customGpuDriverPath);
-            return this;
+
+        public Builder customGpuDriverPath(String customGpuDriverPath) {
+            return customGpuDriverPath(Output.of(customGpuDriverPath));
         }
+
         public Builder dataDiskSizeGb(@Nullable Output<Integer> dataDiskSizeGb) {
-            this.dataDiskSizeGb = dataDiskSizeGb;
+            $.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
-        public Builder dataDiskSizeGb(@Nullable Integer dataDiskSizeGb) {
-            this.dataDiskSizeGb = Codegen.ofNullable(dataDiskSizeGb);
-            return this;
+
+        public Builder dataDiskSizeGb(Integer dataDiskSizeGb) {
+            return dataDiskSizeGb(Output.of(dataDiskSizeGb));
         }
+
         public Builder dataDiskType(@Nullable Output<String> dataDiskType) {
-            this.dataDiskType = dataDiskType;
+            $.dataDiskType = dataDiskType;
             return this;
         }
-        public Builder dataDiskType(@Nullable String dataDiskType) {
-            this.dataDiskType = Codegen.ofNullable(dataDiskType);
-            return this;
+
+        public Builder dataDiskType(String dataDiskType) {
+            return dataDiskType(Output.of(dataDiskType));
         }
+
         public Builder diskEncryption(@Nullable Output<String> diskEncryption) {
-            this.diskEncryption = diskEncryption;
+            $.diskEncryption = diskEncryption;
             return this;
         }
-        public Builder diskEncryption(@Nullable String diskEncryption) {
-            this.diskEncryption = Codegen.ofNullable(diskEncryption);
-            return this;
+
+        public Builder diskEncryption(String diskEncryption) {
+            return diskEncryption(Output.of(diskEncryption));
         }
+
         public Builder installGpuDriver(@Nullable Output<Boolean> installGpuDriver) {
-            this.installGpuDriver = installGpuDriver;
+            $.installGpuDriver = installGpuDriver;
             return this;
         }
-        public Builder installGpuDriver(@Nullable Boolean installGpuDriver) {
-            this.installGpuDriver = Codegen.ofNullable(installGpuDriver);
-            return this;
+
+        public Builder installGpuDriver(Boolean installGpuDriver) {
+            return installGpuDriver(Output.of(installGpuDriver));
         }
+
         public Builder instanceOwners(@Nullable Output<List<String>> instanceOwners) {
-            this.instanceOwners = instanceOwners;
+            $.instanceOwners = instanceOwners;
             return this;
         }
-        public Builder instanceOwners(@Nullable List<String> instanceOwners) {
-            this.instanceOwners = Codegen.ofNullable(instanceOwners);
-            return this;
+
+        public Builder instanceOwners(List<String> instanceOwners) {
+            return instanceOwners(Output.of(instanceOwners));
         }
+
         public Builder instanceOwners(String... instanceOwners) {
             return instanceOwners(List.of(instanceOwners));
         }
+
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder nicType(@Nullable Output<String> nicType) {
-            this.nicType = nicType;
+            $.nicType = nicType;
             return this;
         }
-        public Builder nicType(@Nullable String nicType) {
-            this.nicType = Codegen.ofNullable(nicType);
-            return this;
+
+        public Builder nicType(String nicType) {
+            return nicType(Output.of(nicType));
         }
+
         public Builder noProxyAccess(@Nullable Output<Boolean> noProxyAccess) {
-            this.noProxyAccess = noProxyAccess;
+            $.noProxyAccess = noProxyAccess;
             return this;
         }
-        public Builder noProxyAccess(@Nullable Boolean noProxyAccess) {
-            this.noProxyAccess = Codegen.ofNullable(noProxyAccess);
-            return this;
+
+        public Builder noProxyAccess(Boolean noProxyAccess) {
+            return noProxyAccess(Output.of(noProxyAccess));
         }
+
         public Builder noPublicIp(@Nullable Output<Boolean> noPublicIp) {
-            this.noPublicIp = noPublicIp;
+            $.noPublicIp = noPublicIp;
             return this;
         }
-        public Builder noPublicIp(@Nullable Boolean noPublicIp) {
-            this.noPublicIp = Codegen.ofNullable(noPublicIp);
-            return this;
+
+        public Builder noPublicIp(Boolean noPublicIp) {
+            return noPublicIp(Output.of(noPublicIp));
         }
+
         public Builder noRemoveDataDisk(@Nullable Output<Boolean> noRemoveDataDisk) {
-            this.noRemoveDataDisk = noRemoveDataDisk;
+            $.noRemoveDataDisk = noRemoveDataDisk;
             return this;
         }
-        public Builder noRemoveDataDisk(@Nullable Boolean noRemoveDataDisk) {
-            this.noRemoveDataDisk = Codegen.ofNullable(noRemoveDataDisk);
-            return this;
+
+        public Builder noRemoveDataDisk(Boolean noRemoveDataDisk) {
+            return noRemoveDataDisk(Output.of(noRemoveDataDisk));
         }
+
         public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
-            this.postStartupScript = postStartupScript;
+            $.postStartupScript = postStartupScript;
             return this;
         }
-        public Builder postStartupScript(@Nullable String postStartupScript) {
-            this.postStartupScript = Codegen.ofNullable(postStartupScript);
-            return this;
+
+        public Builder postStartupScript(String postStartupScript) {
+            return postStartupScript(Output.of(postStartupScript));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder proxyUri(@Nullable Output<String> proxyUri) {
-            this.proxyUri = proxyUri;
+            $.proxyUri = proxyUri;
             return this;
         }
-        public Builder proxyUri(@Nullable String proxyUri) {
-            this.proxyUri = Codegen.ofNullable(proxyUri);
-            return this;
+
+        public Builder proxyUri(String proxyUri) {
+            return proxyUri(Output.of(proxyUri));
         }
+
         public Builder reservationAffinity(@Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity) {
-            this.reservationAffinity = reservationAffinity;
+            $.reservationAffinity = reservationAffinity;
             return this;
         }
-        public Builder reservationAffinity(@Nullable InstanceReservationAffinityGetArgs reservationAffinity) {
-            this.reservationAffinity = Codegen.ofNullable(reservationAffinity);
-            return this;
+
+        public Builder reservationAffinity(InstanceReservationAffinityGetArgs reservationAffinity) {
+            return reservationAffinity(Output.of(reservationAffinity));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder serviceAccountScopes(@Nullable Output<List<String>> serviceAccountScopes) {
-            this.serviceAccountScopes = serviceAccountScopes;
+            $.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
-        public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
-            this.serviceAccountScopes = Codegen.ofNullable(serviceAccountScopes);
-            return this;
+
+        public Builder serviceAccountScopes(List<String> serviceAccountScopes) {
+            return serviceAccountScopes(Output.of(serviceAccountScopes));
         }
+
         public Builder serviceAccountScopes(String... serviceAccountScopes) {
             return serviceAccountScopes(List.of(serviceAccountScopes));
         }
+
         public Builder shieldedInstanceConfig(@Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = shieldedInstanceConfig;
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-        public Builder shieldedInstanceConfig(@Nullable InstanceShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
-            return this;
+
+        public Builder shieldedInstanceConfig(InstanceShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
+            return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder subnet(@Nullable Output<String> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable String subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
+
+        public Builder subnet(String subnet) {
+            return subnet(Output.of(subnet));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder vmImage(@Nullable Output<InstanceVmImageGetArgs> vmImage) {
-            this.vmImage = vmImage;
+            $.vmImage = vmImage;
             return this;
         }
-        public Builder vmImage(@Nullable InstanceVmImageGetArgs vmImage) {
-            this.vmImage = Codegen.ofNullable(vmImage);
-            return this;
-        }        public InstanceState build() {
-            return new InstanceState(acceleratorConfig, bootDiskSizeGb, bootDiskType, containerImage, createTime, customGpuDriverPath, dataDiskSizeGb, dataDiskType, diskEncryption, installGpuDriver, instanceOwners, kmsKey, labels, location, machineType, metadata, name, network, nicType, noProxyAccess, noPublicIp, noRemoveDataDisk, postStartupScript, project, proxyUri, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, state, subnet, tags, updateTime, vmImage);
+
+        public Builder vmImage(InstanceVmImageGetArgs vmImage) {
+            return vmImage(Output.of(vmImage));
+        }
+
+        public InstanceState build() {
+            return $;
         }
     }
+
 }

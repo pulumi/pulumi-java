@@ -20,7 +20,7 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endpointName", required=true)
-      private final String endpointName;
+    private String endpointName;
 
     public String endpointName() {
         return this.endpointName;
@@ -31,10 +31,10 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="expiresin")
-      private final @Nullable Integer expiresin;
+    private @Nullable Integer expiresin;
 
     public Optional<Integer> expiresin() {
-        return this.expiresin == null ? Optional.empty() : Optional.ofNullable(this.expiresin);
+        return Optional.ofNullable(this.expiresin);
     }
 
     /**
@@ -42,64 +42,58 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public ListEndpointCredentialsArgs(
-        String endpointName,
-        @Nullable Integer expiresin,
-        String resourceUri) {
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.expiresin = expiresin;
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private ListEndpointCredentialsArgs() {}
 
-    private ListEndpointCredentialsArgs() {
-        this.endpointName = null;
-        this.expiresin = null;
-        this.resourceUri = null;
+    private ListEndpointCredentialsArgs(ListEndpointCredentialsArgs $) {
+        this.endpointName = $.endpointName;
+        this.expiresin = $.expiresin;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListEndpointCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointName;
-        private @Nullable Integer expiresin;
-        private String resourceUri;
+        private ListEndpointCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListEndpointCredentialsArgs();
         }
 
         public Builder(ListEndpointCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointName = defaults.endpointName;
-    	      this.expiresin = defaults.expiresin;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new ListEndpointCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder expiresin(@Nullable Integer expiresin) {
-            this.expiresin = expiresin;
+            $.expiresin = expiresin;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public ListEndpointCredentialsArgs build() {
-            return new ListEndpointCredentialsArgs(endpointName, expiresin, resourceUri);
+        }
+
+        public ListEndpointCredentialsArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="isPrimaryNic", required=true)
-      private final String isPrimaryNic;
+    private String isPrimaryNic;
 
     public String isPrimaryNic() {
         return this.isPrimaryNic;
@@ -32,7 +32,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="isSelectedForFailover", required=true)
-      private final String isSelectedForFailover;
+    private String isSelectedForFailover;
 
     public String isSelectedForFailover() {
         return this.isSelectedForFailover;
@@ -43,7 +43,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="nicId", required=true)
-      private final String nicId;
+    private String nicId;
 
     public String nicId() {
         return this.nicId;
@@ -54,7 +54,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceIPAddress", required=true)
-      private final String sourceIPAddress;
+    private String sourceIPAddress;
 
     public String sourceIPAddress() {
         return this.sourceIPAddress;
@@ -65,7 +65,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceIPAddressType", required=true)
-      private final String sourceIPAddressType;
+    private String sourceIPAddressType;
 
     public String sourceIPAddressType() {
         return this.sourceIPAddressType;
@@ -76,7 +76,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceNetworkId", required=true)
-      private final String sourceNetworkId;
+    private String sourceNetworkId;
 
     public String sourceNetworkId() {
         return this.sourceNetworkId;
@@ -87,7 +87,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceSubnetName", required=true)
-      private final String sourceSubnetName;
+    private String sourceSubnetName;
 
     public String sourceSubnetName() {
         return this.sourceSubnetName;
@@ -98,7 +98,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="targetIPAddress", required=true)
-      private final String targetIPAddress;
+    private String targetIPAddress;
 
     public String targetIPAddress() {
         return this.targetIPAddress;
@@ -109,7 +109,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="targetIPAddressType", required=true)
-      private final String targetIPAddressType;
+    private String targetIPAddressType;
 
     public String targetIPAddressType() {
         return this.targetIPAddressType;
@@ -120,7 +120,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="targetSubnetName", required=true)
-      private final String targetSubnetName;
+    private String targetSubnetName;
 
     public String targetSubnetName() {
         return this.targetSubnetName;
@@ -131,7 +131,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="testIPAddress", required=true)
-      private final String testIPAddress;
+    private String testIPAddress;
 
     public String testIPAddress() {
         return this.testIPAddress;
@@ -142,7 +142,7 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="testIPAddressType", required=true)
-      private final String testIPAddressType;
+    private String testIPAddressType;
 
     public String testIPAddressType() {
         return this.testIPAddressType;
@@ -153,154 +153,129 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="testSubnetName", required=true)
-      private final String testSubnetName;
+    private String testSubnetName;
 
     public String testSubnetName() {
         return this.testSubnetName;
     }
 
-    public InMageRcmNicDetailsResponse(
-        String isPrimaryNic,
-        String isSelectedForFailover,
-        String nicId,
-        String sourceIPAddress,
-        String sourceIPAddressType,
-        String sourceNetworkId,
-        String sourceSubnetName,
-        String targetIPAddress,
-        String targetIPAddressType,
-        String targetSubnetName,
-        String testIPAddress,
-        String testIPAddressType,
-        String testSubnetName) {
-        this.isPrimaryNic = Objects.requireNonNull(isPrimaryNic, "expected parameter 'isPrimaryNic' to be non-null");
-        this.isSelectedForFailover = Objects.requireNonNull(isSelectedForFailover, "expected parameter 'isSelectedForFailover' to be non-null");
-        this.nicId = Objects.requireNonNull(nicId, "expected parameter 'nicId' to be non-null");
-        this.sourceIPAddress = Objects.requireNonNull(sourceIPAddress, "expected parameter 'sourceIPAddress' to be non-null");
-        this.sourceIPAddressType = Objects.requireNonNull(sourceIPAddressType, "expected parameter 'sourceIPAddressType' to be non-null");
-        this.sourceNetworkId = Objects.requireNonNull(sourceNetworkId, "expected parameter 'sourceNetworkId' to be non-null");
-        this.sourceSubnetName = Objects.requireNonNull(sourceSubnetName, "expected parameter 'sourceSubnetName' to be non-null");
-        this.targetIPAddress = Objects.requireNonNull(targetIPAddress, "expected parameter 'targetIPAddress' to be non-null");
-        this.targetIPAddressType = Objects.requireNonNull(targetIPAddressType, "expected parameter 'targetIPAddressType' to be non-null");
-        this.targetSubnetName = Objects.requireNonNull(targetSubnetName, "expected parameter 'targetSubnetName' to be non-null");
-        this.testIPAddress = Objects.requireNonNull(testIPAddress, "expected parameter 'testIPAddress' to be non-null");
-        this.testIPAddressType = Objects.requireNonNull(testIPAddressType, "expected parameter 'testIPAddressType' to be non-null");
-        this.testSubnetName = Objects.requireNonNull(testSubnetName, "expected parameter 'testSubnetName' to be non-null");
-    }
+    private InMageRcmNicDetailsResponse() {}
 
-    private InMageRcmNicDetailsResponse() {
-        this.isPrimaryNic = null;
-        this.isSelectedForFailover = null;
-        this.nicId = null;
-        this.sourceIPAddress = null;
-        this.sourceIPAddressType = null;
-        this.sourceNetworkId = null;
-        this.sourceSubnetName = null;
-        this.targetIPAddress = null;
-        this.targetIPAddressType = null;
-        this.targetSubnetName = null;
-        this.testIPAddress = null;
-        this.testIPAddressType = null;
-        this.testSubnetName = null;
+    private InMageRcmNicDetailsResponse(InMageRcmNicDetailsResponse $) {
+        this.isPrimaryNic = $.isPrimaryNic;
+        this.isSelectedForFailover = $.isSelectedForFailover;
+        this.nicId = $.nicId;
+        this.sourceIPAddress = $.sourceIPAddress;
+        this.sourceIPAddressType = $.sourceIPAddressType;
+        this.sourceNetworkId = $.sourceNetworkId;
+        this.sourceSubnetName = $.sourceSubnetName;
+        this.targetIPAddress = $.targetIPAddress;
+        this.targetIPAddressType = $.targetIPAddressType;
+        this.targetSubnetName = $.targetSubnetName;
+        this.testIPAddress = $.testIPAddress;
+        this.testIPAddressType = $.testIPAddressType;
+        this.testSubnetName = $.testSubnetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageRcmNicDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String isPrimaryNic;
-        private String isSelectedForFailover;
-        private String nicId;
-        private String sourceIPAddress;
-        private String sourceIPAddressType;
-        private String sourceNetworkId;
-        private String sourceSubnetName;
-        private String targetIPAddress;
-        private String targetIPAddressType;
-        private String targetSubnetName;
-        private String testIPAddress;
-        private String testIPAddressType;
-        private String testSubnetName;
+        private InMageRcmNicDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageRcmNicDetailsResponse();
         }
 
         public Builder(InMageRcmNicDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isPrimaryNic = defaults.isPrimaryNic;
-    	      this.isSelectedForFailover = defaults.isSelectedForFailover;
-    	      this.nicId = defaults.nicId;
-    	      this.sourceIPAddress = defaults.sourceIPAddress;
-    	      this.sourceIPAddressType = defaults.sourceIPAddressType;
-    	      this.sourceNetworkId = defaults.sourceNetworkId;
-    	      this.sourceSubnetName = defaults.sourceSubnetName;
-    	      this.targetIPAddress = defaults.targetIPAddress;
-    	      this.targetIPAddressType = defaults.targetIPAddressType;
-    	      this.targetSubnetName = defaults.targetSubnetName;
-    	      this.testIPAddress = defaults.testIPAddress;
-    	      this.testIPAddressType = defaults.testIPAddressType;
-    	      this.testSubnetName = defaults.testSubnetName;
+            $ = new InMageRcmNicDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isPrimaryNic(String isPrimaryNic) {
-            this.isPrimaryNic = Objects.requireNonNull(isPrimaryNic);
+            $.isPrimaryNic = isPrimaryNic;
             return this;
         }
+
         public Builder isSelectedForFailover(String isSelectedForFailover) {
-            this.isSelectedForFailover = Objects.requireNonNull(isSelectedForFailover);
+            $.isSelectedForFailover = isSelectedForFailover;
             return this;
         }
+
         public Builder nicId(String nicId) {
-            this.nicId = Objects.requireNonNull(nicId);
+            $.nicId = nicId;
             return this;
         }
+
         public Builder sourceIPAddress(String sourceIPAddress) {
-            this.sourceIPAddress = Objects.requireNonNull(sourceIPAddress);
+            $.sourceIPAddress = sourceIPAddress;
             return this;
         }
+
         public Builder sourceIPAddressType(String sourceIPAddressType) {
-            this.sourceIPAddressType = Objects.requireNonNull(sourceIPAddressType);
+            $.sourceIPAddressType = sourceIPAddressType;
             return this;
         }
+
         public Builder sourceNetworkId(String sourceNetworkId) {
-            this.sourceNetworkId = Objects.requireNonNull(sourceNetworkId);
+            $.sourceNetworkId = sourceNetworkId;
             return this;
         }
+
         public Builder sourceSubnetName(String sourceSubnetName) {
-            this.sourceSubnetName = Objects.requireNonNull(sourceSubnetName);
+            $.sourceSubnetName = sourceSubnetName;
             return this;
         }
+
         public Builder targetIPAddress(String targetIPAddress) {
-            this.targetIPAddress = Objects.requireNonNull(targetIPAddress);
+            $.targetIPAddress = targetIPAddress;
             return this;
         }
+
         public Builder targetIPAddressType(String targetIPAddressType) {
-            this.targetIPAddressType = Objects.requireNonNull(targetIPAddressType);
+            $.targetIPAddressType = targetIPAddressType;
             return this;
         }
+
         public Builder targetSubnetName(String targetSubnetName) {
-            this.targetSubnetName = Objects.requireNonNull(targetSubnetName);
+            $.targetSubnetName = targetSubnetName;
             return this;
         }
+
         public Builder testIPAddress(String testIPAddress) {
-            this.testIPAddress = Objects.requireNonNull(testIPAddress);
+            $.testIPAddress = testIPAddress;
             return this;
         }
+
         public Builder testIPAddressType(String testIPAddressType) {
-            this.testIPAddressType = Objects.requireNonNull(testIPAddressType);
+            $.testIPAddressType = testIPAddressType;
             return this;
         }
+
         public Builder testSubnetName(String testSubnetName) {
-            this.testSubnetName = Objects.requireNonNull(testSubnetName);
+            $.testSubnetName = testSubnetName;
             return this;
-        }        public InMageRcmNicDetailsResponse build() {
-            return new InMageRcmNicDetailsResponse(isPrimaryNic, isSelectedForFailover, nicId, sourceIPAddress, sourceIPAddressType, sourceNetworkId, sourceSubnetName, targetIPAddress, targetIPAddressType, targetSubnetName, testIPAddress, testIPAddressType, testSubnetName);
+        }
+
+        public InMageRcmNicDetailsResponse build() {
+            $.isPrimaryNic = Objects.requireNonNull($.isPrimaryNic, "expected parameter 'isPrimaryNic' to be non-null");
+            $.isSelectedForFailover = Objects.requireNonNull($.isSelectedForFailover, "expected parameter 'isSelectedForFailover' to be non-null");
+            $.nicId = Objects.requireNonNull($.nicId, "expected parameter 'nicId' to be non-null");
+            $.sourceIPAddress = Objects.requireNonNull($.sourceIPAddress, "expected parameter 'sourceIPAddress' to be non-null");
+            $.sourceIPAddressType = Objects.requireNonNull($.sourceIPAddressType, "expected parameter 'sourceIPAddressType' to be non-null");
+            $.sourceNetworkId = Objects.requireNonNull($.sourceNetworkId, "expected parameter 'sourceNetworkId' to be non-null");
+            $.sourceSubnetName = Objects.requireNonNull($.sourceSubnetName, "expected parameter 'sourceSubnetName' to be non-null");
+            $.targetIPAddress = Objects.requireNonNull($.targetIPAddress, "expected parameter 'targetIPAddress' to be non-null");
+            $.targetIPAddressType = Objects.requireNonNull($.targetIPAddressType, "expected parameter 'targetIPAddressType' to be non-null");
+            $.targetSubnetName = Objects.requireNonNull($.targetSubnetName, "expected parameter 'targetSubnetName' to be non-null");
+            $.testIPAddress = Objects.requireNonNull($.testIPAddress, "expected parameter 'testIPAddress' to be non-null");
+            $.testIPAddressType = Objects.requireNonNull($.testIPAddressType, "expected parameter 'testIPAddressType' to be non-null");
+            $.testSubnetName = Objects.requireNonNull($.testSubnetName, "expected parameter 'testSubnetName' to be non-null");
+            return $;
         }
     }
+
 }

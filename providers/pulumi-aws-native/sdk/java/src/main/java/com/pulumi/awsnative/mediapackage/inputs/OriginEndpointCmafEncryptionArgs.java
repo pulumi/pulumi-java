@@ -6,10 +6,10 @@ package com.pulumi.awsnative.mediapackage.inputs;
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OriginEndpointCmafEncryptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="constantInitializationVector")
-      private final @Nullable Output<String> constantInitializationVector;
+    private @Nullable Output<String> constantInitializationVector;
 
-    public Output<String> constantInitializationVector() {
-        return this.constantInitializationVector == null ? Codegen.empty() : this.constantInitializationVector;
+    public Optional<Output<String>> constantInitializationVector() {
+        return Optional.ofNullable(this.constantInitializationVector);
     }
 
     /**
@@ -37,83 +37,76 @@ public final class OriginEndpointCmafEncryptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="keyRotationIntervalSeconds")
-      private final @Nullable Output<Integer> keyRotationIntervalSeconds;
+    private @Nullable Output<Integer> keyRotationIntervalSeconds;
 
-    public Output<Integer> keyRotationIntervalSeconds() {
-        return this.keyRotationIntervalSeconds == null ? Codegen.empty() : this.keyRotationIntervalSeconds;
+    public Optional<Output<Integer>> keyRotationIntervalSeconds() {
+        return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
 
     @Import(name="spekeKeyProvider", required=true)
-      private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+    private Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public OriginEndpointCmafEncryptionArgs(
-        @Nullable Output<String> constantInitializationVector,
-        @Nullable Output<Integer> keyRotationIntervalSeconds,
-        Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
-        this.constantInitializationVector = constantInitializationVector;
-        this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
-    }
+    private OriginEndpointCmafEncryptionArgs() {}
 
-    private OriginEndpointCmafEncryptionArgs() {
-        this.constantInitializationVector = Codegen.empty();
-        this.keyRotationIntervalSeconds = Codegen.empty();
-        this.spekeKeyProvider = Codegen.empty();
+    private OriginEndpointCmafEncryptionArgs(OriginEndpointCmafEncryptionArgs $) {
+        this.constantInitializationVector = $.constantInitializationVector;
+        this.keyRotationIntervalSeconds = $.keyRotationIntervalSeconds;
+        this.spekeKeyProvider = $.spekeKeyProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointCmafEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> constantInitializationVector;
-        private @Nullable Output<Integer> keyRotationIntervalSeconds;
-        private Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+        private OriginEndpointCmafEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointCmafEncryptionArgs();
         }
 
         public Builder(OriginEndpointCmafEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constantInitializationVector = defaults.constantInitializationVector;
-    	      this.keyRotationIntervalSeconds = defaults.keyRotationIntervalSeconds;
-    	      this.spekeKeyProvider = defaults.spekeKeyProvider;
+            $ = new OriginEndpointCmafEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder constantInitializationVector(@Nullable Output<String> constantInitializationVector) {
-            this.constantInitializationVector = constantInitializationVector;
+            $.constantInitializationVector = constantInitializationVector;
             return this;
         }
-        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = Codegen.ofNullable(constantInitializationVector);
-            return this;
+
+        public Builder constantInitializationVector(String constantInitializationVector) {
+            return constantInitializationVector(Output.of(constantInitializationVector));
         }
+
         public Builder keyRotationIntervalSeconds(@Nullable Output<Integer> keyRotationIntervalSeconds) {
-            this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
+            $.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
-        public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
-            this.keyRotationIntervalSeconds = Codegen.ofNullable(keyRotationIntervalSeconds);
-            return this;
+
+        public Builder keyRotationIntervalSeconds(Integer keyRotationIntervalSeconds) {
+            return keyRotationIntervalSeconds(Output.of(keyRotationIntervalSeconds));
         }
+
         public Builder spekeKeyProvider(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
-            this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+            $.spekeKeyProvider = spekeKeyProvider;
             return this;
         }
+
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
-            this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
-            return this;
-        }        public OriginEndpointCmafEncryptionArgs build() {
-            return new OriginEndpointCmafEncryptionArgs(constantInitializationVector, keyRotationIntervalSeconds, spekeKeyProvider);
+            return spekeKeyProvider(Output.of(spekeKeyProvider));
+        }
+
+        public OriginEndpointCmafEncryptionArgs build() {
+            $.spekeKeyProvider = Objects.requireNonNull($.spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
+            return $;
         }
     }
+
 }

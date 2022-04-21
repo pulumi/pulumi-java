@@ -25,10 +25,10 @@ public final class DeploymentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="model")
-      private final @Nullable DeploymentModelResponse model;
+    private @Nullable DeploymentModelResponse model;
 
     public Optional<DeploymentModelResponse> model() {
-        return this.model == null ? Optional.empty() : Optional.ofNullable(this.model);
+        return Optional.ofNullable(this.model);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class DeploymentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -47,64 +47,57 @@ public final class DeploymentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scaleSettings")
-      private final @Nullable DeploymentScaleSettingsResponse scaleSettings;
+    private @Nullable DeploymentScaleSettingsResponse scaleSettings;
 
     public Optional<DeploymentScaleSettingsResponse> scaleSettings() {
-        return this.scaleSettings == null ? Optional.empty() : Optional.ofNullable(this.scaleSettings);
+        return Optional.ofNullable(this.scaleSettings);
     }
 
-    public DeploymentPropertiesResponse(
-        @Nullable DeploymentModelResponse model,
-        String provisioningState,
-        @Nullable DeploymentScaleSettingsResponse scaleSettings) {
-        this.model = model;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.scaleSettings = scaleSettings;
-    }
+    private DeploymentPropertiesResponse() {}
 
-    private DeploymentPropertiesResponse() {
-        this.model = null;
-        this.provisioningState = null;
-        this.scaleSettings = null;
+    private DeploymentPropertiesResponse(DeploymentPropertiesResponse $) {
+        this.model = $.model;
+        this.provisioningState = $.provisioningState;
+        this.scaleSettings = $.scaleSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DeploymentModelResponse model;
-        private String provisioningState;
-        private @Nullable DeploymentScaleSettingsResponse scaleSettings;
+        private DeploymentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentPropertiesResponse();
         }
 
         public Builder(DeploymentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.model = defaults.model;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.scaleSettings = defaults.scaleSettings;
+            $ = new DeploymentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder model(@Nullable DeploymentModelResponse model) {
-            this.model = model;
+            $.model = model;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder scaleSettings(@Nullable DeploymentScaleSettingsResponse scaleSettings) {
-            this.scaleSettings = scaleSettings;
+            $.scaleSettings = scaleSettings;
             return this;
-        }        public DeploymentPropertiesResponse build() {
-            return new DeploymentPropertiesResponse(model, provisioningState, scaleSettings);
+        }
+
+        public DeploymentPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

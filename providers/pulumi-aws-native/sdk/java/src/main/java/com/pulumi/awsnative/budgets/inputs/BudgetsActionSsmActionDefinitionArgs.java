@@ -6,7 +6,6 @@ package com.pulumi.awsnative.budgets.inputs;
 import com.pulumi.awsnative.budgets.enums.BudgetsActionSsmActionDefinitionSubtype;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,93 +16,89 @@ public final class BudgetsActionSsmActionDefinitionArgs extends com.pulumi.resou
     public static final BudgetsActionSsmActionDefinitionArgs Empty = new BudgetsActionSsmActionDefinitionArgs();
 
     @Import(name="instanceIds", required=true)
-      private final Output<List<String>> instanceIds;
+    private Output<List<String>> instanceIds;
 
     public Output<List<String>> instanceIds() {
         return this.instanceIds;
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="subtype", required=true)
-      private final Output<BudgetsActionSsmActionDefinitionSubtype> subtype;
+    private Output<BudgetsActionSsmActionDefinitionSubtype> subtype;
 
     public Output<BudgetsActionSsmActionDefinitionSubtype> subtype() {
         return this.subtype;
     }
 
-    public BudgetsActionSsmActionDefinitionArgs(
-        Output<List<String>> instanceIds,
-        Output<String> region,
-        Output<BudgetsActionSsmActionDefinitionSubtype> subtype) {
-        this.instanceIds = Objects.requireNonNull(instanceIds, "expected parameter 'instanceIds' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.subtype = Objects.requireNonNull(subtype, "expected parameter 'subtype' to be non-null");
-    }
+    private BudgetsActionSsmActionDefinitionArgs() {}
 
-    private BudgetsActionSsmActionDefinitionArgs() {
-        this.instanceIds = Codegen.empty();
-        this.region = Codegen.empty();
-        this.subtype = Codegen.empty();
+    private BudgetsActionSsmActionDefinitionArgs(BudgetsActionSsmActionDefinitionArgs $) {
+        this.instanceIds = $.instanceIds;
+        this.region = $.region;
+        this.subtype = $.subtype;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetsActionSsmActionDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> instanceIds;
-        private Output<String> region;
-        private Output<BudgetsActionSsmActionDefinitionSubtype> subtype;
+        private BudgetsActionSsmActionDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetsActionSsmActionDefinitionArgs();
         }
 
         public Builder(BudgetsActionSsmActionDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceIds = defaults.instanceIds;
-    	      this.region = defaults.region;
-    	      this.subtype = defaults.subtype;
+            $ = new BudgetsActionSsmActionDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceIds(Output<List<String>> instanceIds) {
-            this.instanceIds = Objects.requireNonNull(instanceIds);
+            $.instanceIds = instanceIds;
             return this;
         }
+
         public Builder instanceIds(List<String> instanceIds) {
-            this.instanceIds = Output.of(Objects.requireNonNull(instanceIds));
-            return this;
+            return instanceIds(Output.of(instanceIds));
         }
+
         public Builder instanceIds(String... instanceIds) {
             return instanceIds(List.of(instanceIds));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder subtype(Output<BudgetsActionSsmActionDefinitionSubtype> subtype) {
-            this.subtype = Objects.requireNonNull(subtype);
+            $.subtype = subtype;
             return this;
         }
+
         public Builder subtype(BudgetsActionSsmActionDefinitionSubtype subtype) {
-            this.subtype = Output.of(Objects.requireNonNull(subtype));
-            return this;
-        }        public BudgetsActionSsmActionDefinitionArgs build() {
-            return new BudgetsActionSsmActionDefinitionArgs(instanceIds, region, subtype);
+            return subtype(Output.of(subtype));
+        }
+
+        public BudgetsActionSsmActionDefinitionArgs build() {
+            $.instanceIds = Objects.requireNonNull($.instanceIds, "expected parameter 'instanceIds' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.subtype = Objects.requireNonNull($.subtype, "expected parameter 'subtype' to be non-null");
+            return $;
         }
     }
+
 }

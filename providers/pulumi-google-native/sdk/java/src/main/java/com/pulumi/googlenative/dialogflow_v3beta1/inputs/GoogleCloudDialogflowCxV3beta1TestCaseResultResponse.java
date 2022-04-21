@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
      * 
      */
     @Import(name="conversationTurns", required=true)
-      private final List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> conversationTurns;
+    private List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> conversationTurns;
 
     public List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> conversationTurns() {
         return this.conversationTurns;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
      * 
      */
     @Import(name="environment", required=true)
-      private final String environment;
+    private String environment;
 
     public String environment() {
         return this.environment;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
      * 
      */
     @Import(name="testResult", required=true)
-      private final String testResult;
+    private String testResult;
 
     public String testResult() {
         return this.testResult;
@@ -67,85 +67,77 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
      * 
      */
     @Import(name="testTime", required=true)
-      private final String testTime;
+    private String testTime;
 
     public String testTime() {
         return this.testTime;
     }
 
-    public GoogleCloudDialogflowCxV3beta1TestCaseResultResponse(
-        List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> conversationTurns,
-        String environment,
-        String name,
-        String testResult,
-        String testTime) {
-        this.conversationTurns = Objects.requireNonNull(conversationTurns, "expected parameter 'conversationTurns' to be non-null");
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.testResult = Objects.requireNonNull(testResult, "expected parameter 'testResult' to be non-null");
-        this.testTime = Objects.requireNonNull(testTime, "expected parameter 'testTime' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1TestCaseResultResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1TestCaseResultResponse() {
-        this.conversationTurns = List.of();
-        this.environment = null;
-        this.name = null;
-        this.testResult = null;
-        this.testTime = null;
+    private GoogleCloudDialogflowCxV3beta1TestCaseResultResponse(GoogleCloudDialogflowCxV3beta1TestCaseResultResponse $) {
+        this.conversationTurns = $.conversationTurns;
+        this.environment = $.environment;
+        this.name = $.name;
+        this.testResult = $.testResult;
+        this.testTime = $.testTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1TestCaseResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> conversationTurns;
-        private String environment;
-        private String name;
-        private String testResult;
-        private String testTime;
+        private GoogleCloudDialogflowCxV3beta1TestCaseResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1TestCaseResultResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1TestCaseResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conversationTurns = defaults.conversationTurns;
-    	      this.environment = defaults.environment;
-    	      this.name = defaults.name;
-    	      this.testResult = defaults.testResult;
-    	      this.testTime = defaults.testTime;
+            $ = new GoogleCloudDialogflowCxV3beta1TestCaseResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conversationTurns(List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> conversationTurns) {
-            this.conversationTurns = Objects.requireNonNull(conversationTurns);
+            $.conversationTurns = conversationTurns;
             return this;
         }
+
         public Builder conversationTurns(GoogleCloudDialogflowCxV3beta1ConversationTurnResponse... conversationTurns) {
             return conversationTurns(List.of(conversationTurns));
         }
+
         public Builder environment(String environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder testResult(String testResult) {
-            this.testResult = Objects.requireNonNull(testResult);
+            $.testResult = testResult;
             return this;
         }
+
         public Builder testTime(String testTime) {
-            this.testTime = Objects.requireNonNull(testTime);
+            $.testTime = testTime;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1TestCaseResultResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1TestCaseResultResponse(conversationTurns, environment, name, testResult, testTime);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1TestCaseResultResponse build() {
+            $.conversationTurns = Objects.requireNonNull($.conversationTurns, "expected parameter 'conversationTurns' to be non-null");
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.testResult = Objects.requireNonNull($.testResult, "expected parameter 'testResult' to be non-null");
+            $.testTime = Objects.requireNonNull($.testTime, "expected parameter 'testTime' to be non-null");
+            return $;
         }
     }
+
 }

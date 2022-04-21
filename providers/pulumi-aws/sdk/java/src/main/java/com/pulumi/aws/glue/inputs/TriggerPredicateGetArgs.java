@@ -6,10 +6,10 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.TriggerPredicateConditionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class TriggerPredicateGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="conditions", required=true)
-      private final Output<List<TriggerPredicateConditionGetArgs>> conditions;
+    private Output<List<TriggerPredicateConditionGetArgs>> conditions;
 
     public Output<List<TriggerPredicateConditionGetArgs>> conditions() {
         return this.conditions;
@@ -33,66 +33,63 @@ public final class TriggerPredicateGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="logical")
-      private final @Nullable Output<String> logical;
+    private @Nullable Output<String> logical;
 
-    public Output<String> logical() {
-        return this.logical == null ? Codegen.empty() : this.logical;
+    public Optional<Output<String>> logical() {
+        return Optional.ofNullable(this.logical);
     }
 
-    public TriggerPredicateGetArgs(
-        Output<List<TriggerPredicateConditionGetArgs>> conditions,
-        @Nullable Output<String> logical) {
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.logical = logical;
-    }
+    private TriggerPredicateGetArgs() {}
 
-    private TriggerPredicateGetArgs() {
-        this.conditions = Codegen.empty();
-        this.logical = Codegen.empty();
+    private TriggerPredicateGetArgs(TriggerPredicateGetArgs $) {
+        this.conditions = $.conditions;
+        this.logical = $.logical;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerPredicateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<TriggerPredicateConditionGetArgs>> conditions;
-        private @Nullable Output<String> logical;
+        private TriggerPredicateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerPredicateGetArgs();
         }
 
         public Builder(TriggerPredicateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.logical = defaults.logical;
+            $ = new TriggerPredicateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(Output<List<TriggerPredicateConditionGetArgs>> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(List<TriggerPredicateConditionGetArgs> conditions) {
-            this.conditions = Output.of(Objects.requireNonNull(conditions));
-            return this;
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(TriggerPredicateConditionGetArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder logical(@Nullable Output<String> logical) {
-            this.logical = logical;
+            $.logical = logical;
             return this;
         }
-        public Builder logical(@Nullable String logical) {
-            this.logical = Codegen.ofNullable(logical);
-            return this;
-        }        public TriggerPredicateGetArgs build() {
-            return new TriggerPredicateGetArgs(conditions, logical);
+
+        public Builder logical(String logical) {
+            return logical(Output.of(logical));
+        }
+
+        public TriggerPredicateGetArgs build() {
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="assignable", required=true)
-      private final Boolean assignable;
+    private Boolean assignable;
 
     public Boolean assignable() {
         return this.assignable;
@@ -33,7 +33,7 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -44,7 +44,7 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -55,7 +55,7 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -66,7 +66,7 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="privateCloudId", required=true)
-      private final String privateCloudId;
+    private String privateCloudId;
 
     public String privateCloudId() {
         return this.privateCloudId;
@@ -77,91 +77,80 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public VirtualNetworkResponse(
-        Boolean assignable,
-        String id,
-        String location,
-        String name,
-        String privateCloudId,
-        String type) {
-        this.assignable = Objects.requireNonNull(assignable, "expected parameter 'assignable' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.privateCloudId = Objects.requireNonNull(privateCloudId, "expected parameter 'privateCloudId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private VirtualNetworkResponse() {}
 
-    private VirtualNetworkResponse() {
-        this.assignable = null;
-        this.id = null;
-        this.location = null;
-        this.name = null;
-        this.privateCloudId = null;
-        this.type = null;
+    private VirtualNetworkResponse(VirtualNetworkResponse $) {
+        this.assignable = $.assignable;
+        this.id = $.id;
+        this.location = $.location;
+        this.name = $.name;
+        this.privateCloudId = $.privateCloudId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean assignable;
-        private String id;
-        private String location;
-        private String name;
-        private String privateCloudId;
-        private String type;
+        private VirtualNetworkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkResponse();
         }
 
         public Builder(VirtualNetworkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignable = defaults.assignable;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.privateCloudId = defaults.privateCloudId;
-    	      this.type = defaults.type;
+            $ = new VirtualNetworkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assignable(Boolean assignable) {
-            this.assignable = Objects.requireNonNull(assignable);
+            $.assignable = assignable;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder privateCloudId(String privateCloudId) {
-            this.privateCloudId = Objects.requireNonNull(privateCloudId);
+            $.privateCloudId = privateCloudId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public VirtualNetworkResponse build() {
-            return new VirtualNetworkResponse(assignable, id, location, name, privateCloudId, type);
+        }
+
+        public VirtualNetworkResponse build() {
+            $.assignable = Objects.requireNonNull($.assignable, "expected parameter 'assignable' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.privateCloudId = Objects.requireNonNull($.privateCloudId, "expected parameter 'privateCloudId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

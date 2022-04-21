@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.discovery.k8s.io_v1.inputs.ForZoneArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class EndpointHintsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forZones")
-      private final @Nullable Output<List<ForZoneArgs>> forZones;
+    private @Nullable Output<List<ForZoneArgs>> forZones;
 
-    public Output<List<ForZoneArgs>> forZones() {
-        return this.forZones == null ? Codegen.empty() : this.forZones;
+    public Optional<Output<List<ForZoneArgs>>> forZones() {
+        return Optional.ofNullable(this.forZones);
     }
 
-    public EndpointHintsArgs(@Nullable Output<List<ForZoneArgs>> forZones) {
-        this.forZones = forZones;
-    }
+    private EndpointHintsArgs() {}
 
-    private EndpointHintsArgs() {
-        this.forZones = Codegen.empty();
+    private EndpointHintsArgs(EndpointHintsArgs $) {
+        this.forZones = $.forZones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointHintsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ForZoneArgs>> forZones;
+        private EndpointHintsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointHintsArgs();
         }
 
         public Builder(EndpointHintsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forZones = defaults.forZones;
+            $ = new EndpointHintsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forZones(@Nullable Output<List<ForZoneArgs>> forZones) {
-            this.forZones = forZones;
+            $.forZones = forZones;
             return this;
         }
-        public Builder forZones(@Nullable List<ForZoneArgs> forZones) {
-            this.forZones = Codegen.ofNullable(forZones);
-            return this;
+
+        public Builder forZones(List<ForZoneArgs> forZones) {
+            return forZones(Output.of(forZones));
         }
+
         public Builder forZones(ForZoneArgs... forZones) {
             return forZones(List.of(forZones));
-        }        public EndpointHintsArgs build() {
-            return new EndpointHintsArgs(forZones);
+        }
+
+        public EndpointHintsArgs build() {
+            return $;
         }
     }
+
 }

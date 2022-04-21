@@ -6,9 +6,9 @@ package com.pulumi.awsnative.backup.inputs;
 import com.pulumi.awsnative.backup.inputs.BackupSelectionConditionParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,122 +17,115 @@ public final class BackupSelectionResourceTypeConditionsPropertiesArgs extends c
     public static final BackupSelectionResourceTypeConditionsPropertiesArgs Empty = new BackupSelectionResourceTypeConditionsPropertiesArgs();
 
     @Import(name="stringEquals")
-      private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringEquals;
+    private @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringEquals;
 
-    public Output<List<BackupSelectionConditionParameterArgs>> stringEquals() {
-        return this.stringEquals == null ? Codegen.empty() : this.stringEquals;
+    public Optional<Output<List<BackupSelectionConditionParameterArgs>>> stringEquals() {
+        return Optional.ofNullable(this.stringEquals);
     }
 
     @Import(name="stringLike")
-      private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringLike;
+    private @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringLike;
 
-    public Output<List<BackupSelectionConditionParameterArgs>> stringLike() {
-        return this.stringLike == null ? Codegen.empty() : this.stringLike;
+    public Optional<Output<List<BackupSelectionConditionParameterArgs>>> stringLike() {
+        return Optional.ofNullable(this.stringLike);
     }
 
     @Import(name="stringNotEquals")
-      private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotEquals;
+    private @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotEquals;
 
-    public Output<List<BackupSelectionConditionParameterArgs>> stringNotEquals() {
-        return this.stringNotEquals == null ? Codegen.empty() : this.stringNotEquals;
+    public Optional<Output<List<BackupSelectionConditionParameterArgs>>> stringNotEquals() {
+        return Optional.ofNullable(this.stringNotEquals);
     }
 
     @Import(name="stringNotLike")
-      private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotLike;
+    private @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotLike;
 
-    public Output<List<BackupSelectionConditionParameterArgs>> stringNotLike() {
-        return this.stringNotLike == null ? Codegen.empty() : this.stringNotLike;
+    public Optional<Output<List<BackupSelectionConditionParameterArgs>>> stringNotLike() {
+        return Optional.ofNullable(this.stringNotLike);
     }
 
-    public BackupSelectionResourceTypeConditionsPropertiesArgs(
-        @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringEquals,
-        @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringLike,
-        @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotEquals,
-        @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotLike) {
-        this.stringEquals = stringEquals;
-        this.stringLike = stringLike;
-        this.stringNotEquals = stringNotEquals;
-        this.stringNotLike = stringNotLike;
-    }
+    private BackupSelectionResourceTypeConditionsPropertiesArgs() {}
 
-    private BackupSelectionResourceTypeConditionsPropertiesArgs() {
-        this.stringEquals = Codegen.empty();
-        this.stringLike = Codegen.empty();
-        this.stringNotEquals = Codegen.empty();
-        this.stringNotLike = Codegen.empty();
+    private BackupSelectionResourceTypeConditionsPropertiesArgs(BackupSelectionResourceTypeConditionsPropertiesArgs $) {
+        this.stringEquals = $.stringEquals;
+        this.stringLike = $.stringLike;
+        this.stringNotEquals = $.stringNotEquals;
+        this.stringNotLike = $.stringNotLike;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupSelectionResourceTypeConditionsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringEquals;
-        private @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringLike;
-        private @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotEquals;
-        private @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotLike;
+        private BackupSelectionResourceTypeConditionsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupSelectionResourceTypeConditionsPropertiesArgs();
         }
 
         public Builder(BackupSelectionResourceTypeConditionsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.stringEquals = defaults.stringEquals;
-    	      this.stringLike = defaults.stringLike;
-    	      this.stringNotEquals = defaults.stringNotEquals;
-    	      this.stringNotLike = defaults.stringNotLike;
+            $ = new BackupSelectionResourceTypeConditionsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder stringEquals(@Nullable Output<List<BackupSelectionConditionParameterArgs>> stringEquals) {
-            this.stringEquals = stringEquals;
+            $.stringEquals = stringEquals;
             return this;
         }
-        public Builder stringEquals(@Nullable List<BackupSelectionConditionParameterArgs> stringEquals) {
-            this.stringEquals = Codegen.ofNullable(stringEquals);
-            return this;
+
+        public Builder stringEquals(List<BackupSelectionConditionParameterArgs> stringEquals) {
+            return stringEquals(Output.of(stringEquals));
         }
+
         public Builder stringEquals(BackupSelectionConditionParameterArgs... stringEquals) {
             return stringEquals(List.of(stringEquals));
         }
+
         public Builder stringLike(@Nullable Output<List<BackupSelectionConditionParameterArgs>> stringLike) {
-            this.stringLike = stringLike;
+            $.stringLike = stringLike;
             return this;
         }
-        public Builder stringLike(@Nullable List<BackupSelectionConditionParameterArgs> stringLike) {
-            this.stringLike = Codegen.ofNullable(stringLike);
-            return this;
+
+        public Builder stringLike(List<BackupSelectionConditionParameterArgs> stringLike) {
+            return stringLike(Output.of(stringLike));
         }
+
         public Builder stringLike(BackupSelectionConditionParameterArgs... stringLike) {
             return stringLike(List.of(stringLike));
         }
+
         public Builder stringNotEquals(@Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotEquals) {
-            this.stringNotEquals = stringNotEquals;
+            $.stringNotEquals = stringNotEquals;
             return this;
         }
-        public Builder stringNotEquals(@Nullable List<BackupSelectionConditionParameterArgs> stringNotEquals) {
-            this.stringNotEquals = Codegen.ofNullable(stringNotEquals);
-            return this;
+
+        public Builder stringNotEquals(List<BackupSelectionConditionParameterArgs> stringNotEquals) {
+            return stringNotEquals(Output.of(stringNotEquals));
         }
+
         public Builder stringNotEquals(BackupSelectionConditionParameterArgs... stringNotEquals) {
             return stringNotEquals(List.of(stringNotEquals));
         }
+
         public Builder stringNotLike(@Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotLike) {
-            this.stringNotLike = stringNotLike;
+            $.stringNotLike = stringNotLike;
             return this;
         }
-        public Builder stringNotLike(@Nullable List<BackupSelectionConditionParameterArgs> stringNotLike) {
-            this.stringNotLike = Codegen.ofNullable(stringNotLike);
-            return this;
+
+        public Builder stringNotLike(List<BackupSelectionConditionParameterArgs> stringNotLike) {
+            return stringNotLike(Output.of(stringNotLike));
         }
+
         public Builder stringNotLike(BackupSelectionConditionParameterArgs... stringNotLike) {
             return stringNotLike(List.of(stringNotLike));
-        }        public BackupSelectionResourceTypeConditionsPropertiesArgs build() {
-            return new BackupSelectionResourceTypeConditionsPropertiesArgs(stringEquals, stringLike, stringNotEquals, stringNotLike);
+        }
+
+        public BackupSelectionResourceTypeConditionsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,62 +15,57 @@ public final class DeviceProfileTag extends com.pulumi.resources.InvokeArgs {
     public static final DeviceProfileTag Empty = new DeviceProfileTag();
 
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public DeviceProfileTag(
-        @Nullable String key,
-        @Nullable String value) {
-        this.key = key;
-        this.value = value;
-    }
+    private DeviceProfileTag() {}
 
-    private DeviceProfileTag() {
-        this.key = null;
-        this.value = null;
+    private DeviceProfileTag(DeviceProfileTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceProfileTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
-        private @Nullable String value;
+        private DeviceProfileTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceProfileTag();
         }
 
         public Builder(DeviceProfileTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new DeviceProfileTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public DeviceProfileTag build() {
-            return new DeviceProfileTag(key, value);
+        }
+
+        public DeviceProfileTag build() {
+            return $;
         }
     }
+
 }

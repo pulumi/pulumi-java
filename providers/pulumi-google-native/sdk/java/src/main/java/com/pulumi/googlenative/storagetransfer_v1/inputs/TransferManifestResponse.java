@@ -21,45 +21,45 @@ public final class TransferManifestResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
-    public TransferManifestResponse(String location) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private TransferManifestResponse() {}
 
-    private TransferManifestResponse() {
-        this.location = null;
+    private TransferManifestResponse(TransferManifestResponse $) {
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferManifestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
+        private TransferManifestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferManifestResponse();
         }
 
         public Builder(TransferManifestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
+            $ = new TransferManifestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
-        }        public TransferManifestResponse build() {
-            return new TransferManifestResponse(location);
+        }
+
+        public TransferManifestResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

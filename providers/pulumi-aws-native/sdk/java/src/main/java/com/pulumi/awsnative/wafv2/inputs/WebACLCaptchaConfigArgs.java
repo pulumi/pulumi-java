@@ -6,8 +6,8 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLImmunityTimePropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class WebACLCaptchaConfigArgs extends com.pulumi.resources.Resource
     public static final WebACLCaptchaConfigArgs Empty = new WebACLCaptchaConfigArgs();
 
     @Import(name="immunityTimeProperty")
-      private final @Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty;
+    private @Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty;
 
-    public Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty() {
-        return this.immunityTimeProperty == null ? Codegen.empty() : this.immunityTimeProperty;
+    public Optional<Output<WebACLImmunityTimePropertyArgs>> immunityTimeProperty() {
+        return Optional.ofNullable(this.immunityTimeProperty);
     }
 
-    public WebACLCaptchaConfigArgs(@Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty) {
-        this.immunityTimeProperty = immunityTimeProperty;
-    }
+    private WebACLCaptchaConfigArgs() {}
 
-    private WebACLCaptchaConfigArgs() {
-        this.immunityTimeProperty = Codegen.empty();
+    private WebACLCaptchaConfigArgs(WebACLCaptchaConfigArgs $) {
+        this.immunityTimeProperty = $.immunityTimeProperty;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLCaptchaConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty;
+        private WebACLCaptchaConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLCaptchaConfigArgs();
         }
 
         public Builder(WebACLCaptchaConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.immunityTimeProperty = defaults.immunityTimeProperty;
+            $ = new WebACLCaptchaConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder immunityTimeProperty(@Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty) {
-            this.immunityTimeProperty = immunityTimeProperty;
+            $.immunityTimeProperty = immunityTimeProperty;
             return this;
         }
-        public Builder immunityTimeProperty(@Nullable WebACLImmunityTimePropertyArgs immunityTimeProperty) {
-            this.immunityTimeProperty = Codegen.ofNullable(immunityTimeProperty);
-            return this;
-        }        public WebACLCaptchaConfigArgs build() {
-            return new WebACLCaptchaConfigArgs(immunityTimeProperty);
+
+        public Builder immunityTimeProperty(WebACLImmunityTimePropertyArgs immunityTimeProperty) {
+            return immunityTimeProperty(Output.of(immunityTimeProperty));
+        }
+
+        public WebACLCaptchaConfigArgs build() {
+            return $;
         }
     }
+
 }

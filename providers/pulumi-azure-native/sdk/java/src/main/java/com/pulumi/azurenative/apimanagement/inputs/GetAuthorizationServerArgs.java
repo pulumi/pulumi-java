@@ -17,7 +17,7 @@ public final class GetAuthorizationServerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="authsid", required=true)
-      private final String authsid;
+    private String authsid;
 
     public String authsid() {
         return this.authsid;
@@ -28,7 +28,7 @@ public final class GetAuthorizationServerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetAuthorizationServerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetAuthorizationServerArgs(
-        String authsid,
-        String resourceGroupName,
-        String serviceName) {
-        this.authsid = Objects.requireNonNull(authsid, "expected parameter 'authsid' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetAuthorizationServerArgs() {}
 
-    private GetAuthorizationServerArgs() {
-        this.authsid = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetAuthorizationServerArgs(GetAuthorizationServerArgs $) {
+        this.authsid = $.authsid;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAuthorizationServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authsid;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetAuthorizationServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAuthorizationServerArgs();
         }
 
         public Builder(GetAuthorizationServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authsid = defaults.authsid;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetAuthorizationServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authsid(String authsid) {
-            this.authsid = Objects.requireNonNull(authsid);
+            $.authsid = authsid;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetAuthorizationServerArgs build() {
-            return new GetAuthorizationServerArgs(authsid, resourceGroupName, serviceName);
+        }
+
+        public GetAuthorizationServerArgs build() {
+            $.authsid = Objects.requireNonNull($.authsid, "expected parameter 'authsid' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

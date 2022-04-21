@@ -20,10 +20,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="authorityUrl")
-      private final @Nullable String authorityUrl;
+    private @Nullable String authorityUrl;
 
     public Optional<String> authorityUrl() {
-        return this.authorityUrl == null ? Optional.empty() : Optional.ofNullable(this.authorityUrl);
+        return Optional.ofNullable(this.authorityUrl);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="certificate")
-      private final @Nullable String certificate;
+    private @Nullable String certificate;
 
     public Optional<String> certificate() {
-        return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable String clientSecret;
+    private @Nullable String clientSecret;
 
     public Optional<String> clientSecret() {
-        return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="credentialType")
-      private final @Nullable String credentialType;
+    private @Nullable String credentialType;
 
     public Optional<String> credentialType() {
-        return this.credentialType == null ? Optional.empty() : Optional.ofNullable(this.credentialType);
+        return Optional.ofNullable(this.credentialType);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable String databaseName;
+    private @Nullable String databaseName;
 
     public Optional<String> databaseName() {
-        return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="enableSsl")
-      private final @Nullable Boolean enableSsl;
+    private @Nullable Boolean enableSsl;
 
     public Optional<Boolean> enableSsl() {
-        return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
+        return Optional.ofNullable(this.enableSsl);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="isCertAuth")
-      private final @Nullable Boolean isCertAuth;
+    private @Nullable Boolean isCertAuth;
 
     public Optional<Boolean> isCertAuth() {
-        return this.isCertAuth == null ? Optional.empty() : Optional.ofNullable(this.isCertAuth);
+        return Optional.ofNullable(this.isCertAuth);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="portNumber")
-      private final @Nullable String portNumber;
+    private @Nullable String portNumber;
 
     public Optional<String> portNumber() {
-        return this.portNumber == null ? Optional.empty() : Optional.ofNullable(this.portNumber);
+        return Optional.ofNullable(this.portNumber);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable String resourceGroup;
+    private @Nullable String resourceGroup;
 
     public Optional<String> resourceGroup() {
-        return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceUri")
-      private final @Nullable String resourceUri;
+    private @Nullable String resourceUri;
 
     public Optional<String> resourceUri() {
-        return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
+        return Optional.ofNullable(this.resourceUri);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="serverName")
-      private final @Nullable String serverName;
+    private @Nullable String serverName;
 
     public Optional<String> serverName() {
-        return this.serverName == null ? Optional.empty() : Optional.ofNullable(this.serverName);
+        return Optional.ofNullable(this.serverName);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="serviceDataAccessAuthIdentity")
-      private final @Nullable String serviceDataAccessAuthIdentity;
+    private @Nullable String serviceDataAccessAuthIdentity;
 
     public Optional<String> serviceDataAccessAuthIdentity() {
-        return this.serviceDataAccessAuthIdentity == null ? Optional.empty() : Optional.ofNullable(this.serviceDataAccessAuthIdentity);
+        return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="userId")
-      private final @Nullable String userId;
+    private @Nullable String userId;
 
     public Optional<String> userId() {
-        return this.userId == null ? Optional.empty() : Optional.ofNullable(this.userId);
+        return Optional.ofNullable(this.userId);
     }
 
     /**
@@ -218,208 +218,152 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="userPassword")
-      private final @Nullable String userPassword;
+    private @Nullable String userPassword;
 
     public Optional<String> userPassword() {
-        return this.userPassword == null ? Optional.empty() : Optional.ofNullable(this.userPassword);
+        return Optional.ofNullable(this.userPassword);
     }
 
-    public AzurePostgreSqlSectionResponse(
-        @Nullable String authorityUrl,
-        @Nullable String certificate,
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable String credentialType,
-        @Nullable String databaseName,
-        @Nullable Boolean enableSsl,
-        @Nullable String endpoint,
-        @Nullable Boolean isCertAuth,
-        @Nullable String portNumber,
-        @Nullable String resourceGroup,
-        @Nullable String resourceUri,
-        @Nullable String serverName,
-        @Nullable String serviceDataAccessAuthIdentity,
-        @Nullable String subscriptionId,
-        @Nullable String tenantId,
-        @Nullable String thumbprint,
-        @Nullable String userId,
-        @Nullable String userPassword) {
-        this.authorityUrl = authorityUrl;
-        this.certificate = certificate;
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.credentialType = credentialType;
-        this.databaseName = databaseName;
-        this.enableSsl = enableSsl;
-        this.endpoint = endpoint;
-        this.isCertAuth = isCertAuth;
-        this.portNumber = portNumber;
-        this.resourceGroup = resourceGroup;
-        this.resourceUri = resourceUri;
-        this.serverName = serverName;
-        this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
-        this.subscriptionId = subscriptionId;
-        this.tenantId = tenantId;
-        this.thumbprint = thumbprint;
-        this.userId = userId;
-        this.userPassword = userPassword;
-    }
+    private AzurePostgreSqlSectionResponse() {}
 
-    private AzurePostgreSqlSectionResponse() {
-        this.authorityUrl = null;
-        this.certificate = null;
-        this.clientId = null;
-        this.clientSecret = null;
-        this.credentialType = null;
-        this.databaseName = null;
-        this.enableSsl = null;
-        this.endpoint = null;
-        this.isCertAuth = null;
-        this.portNumber = null;
-        this.resourceGroup = null;
-        this.resourceUri = null;
-        this.serverName = null;
-        this.serviceDataAccessAuthIdentity = null;
-        this.subscriptionId = null;
-        this.tenantId = null;
-        this.thumbprint = null;
-        this.userId = null;
-        this.userPassword = null;
+    private AzurePostgreSqlSectionResponse(AzurePostgreSqlSectionResponse $) {
+        this.authorityUrl = $.authorityUrl;
+        this.certificate = $.certificate;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.credentialType = $.credentialType;
+        this.databaseName = $.databaseName;
+        this.enableSsl = $.enableSsl;
+        this.endpoint = $.endpoint;
+        this.isCertAuth = $.isCertAuth;
+        this.portNumber = $.portNumber;
+        this.resourceGroup = $.resourceGroup;
+        this.resourceUri = $.resourceUri;
+        this.serverName = $.serverName;
+        this.serviceDataAccessAuthIdentity = $.serviceDataAccessAuthIdentity;
+        this.subscriptionId = $.subscriptionId;
+        this.tenantId = $.tenantId;
+        this.thumbprint = $.thumbprint;
+        this.userId = $.userId;
+        this.userPassword = $.userPassword;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzurePostgreSqlSectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authorityUrl;
-        private @Nullable String certificate;
-        private @Nullable String clientId;
-        private @Nullable String clientSecret;
-        private @Nullable String credentialType;
-        private @Nullable String databaseName;
-        private @Nullable Boolean enableSsl;
-        private @Nullable String endpoint;
-        private @Nullable Boolean isCertAuth;
-        private @Nullable String portNumber;
-        private @Nullable String resourceGroup;
-        private @Nullable String resourceUri;
-        private @Nullable String serverName;
-        private @Nullable String serviceDataAccessAuthIdentity;
-        private @Nullable String subscriptionId;
-        private @Nullable String tenantId;
-        private @Nullable String thumbprint;
-        private @Nullable String userId;
-        private @Nullable String userPassword;
+        private AzurePostgreSqlSectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzurePostgreSqlSectionResponse();
         }
 
         public Builder(AzurePostgreSqlSectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorityUrl = defaults.authorityUrl;
-    	      this.certificate = defaults.certificate;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.credentialType = defaults.credentialType;
-    	      this.databaseName = defaults.databaseName;
-    	      this.enableSsl = defaults.enableSsl;
-    	      this.endpoint = defaults.endpoint;
-    	      this.isCertAuth = defaults.isCertAuth;
-    	      this.portNumber = defaults.portNumber;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.resourceUri = defaults.resourceUri;
-    	      this.serverName = defaults.serverName;
-    	      this.serviceDataAccessAuthIdentity = defaults.serviceDataAccessAuthIdentity;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.userId = defaults.userId;
-    	      this.userPassword = defaults.userPassword;
+            $ = new AzurePostgreSqlSectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorityUrl(@Nullable String authorityUrl) {
-            this.authorityUrl = authorityUrl;
+            $.authorityUrl = authorityUrl;
             return this;
         }
+
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
+
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder credentialType(@Nullable String credentialType) {
-            this.credentialType = credentialType;
+            $.credentialType = credentialType;
             return this;
         }
+
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder enableSsl(@Nullable Boolean enableSsl) {
-            this.enableSsl = enableSsl;
+            $.enableSsl = enableSsl;
             return this;
         }
+
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder isCertAuth(@Nullable Boolean isCertAuth) {
-            this.isCertAuth = isCertAuth;
+            $.isCertAuth = isCertAuth;
             return this;
         }
+
         public Builder portNumber(@Nullable String portNumber) {
-            this.portNumber = portNumber;
+            $.portNumber = portNumber;
             return this;
         }
+
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = resourceUri;
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = serverName;
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
-            this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
+            $.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder userId(@Nullable String userId) {
-            this.userId = userId;
+            $.userId = userId;
             return this;
         }
+
         public Builder userPassword(@Nullable String userPassword) {
-            this.userPassword = userPassword;
+            $.userPassword = userPassword;
             return this;
-        }        public AzurePostgreSqlSectionResponse build() {
-            return new AzurePostgreSqlSectionResponse(authorityUrl, certificate, clientId, clientSecret, credentialType, databaseName, enableSsl, endpoint, isCertAuth, portNumber, resourceGroup, resourceUri, serverName, serviceDataAccessAuthIdentity, subscriptionId, tenantId, thumbprint, userId, userPassword);
+        }
+
+        public AzurePostgreSqlSectionResponse build() {
+            return $;
         }
     }
+
 }

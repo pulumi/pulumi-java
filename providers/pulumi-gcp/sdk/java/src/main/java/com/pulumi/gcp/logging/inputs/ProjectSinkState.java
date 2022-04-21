@@ -5,13 +5,13 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.logging.inputs.ProjectSinkBigqueryOptionsGetArgs;
 import com.pulumi.gcp.logging.inputs.ProjectSinkExclusionGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ProjectSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bigqueryOptions")
-      private final @Nullable Output<ProjectSinkBigqueryOptionsGetArgs> bigqueryOptions;
+    private @Nullable Output<ProjectSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
-    public Output<ProjectSinkBigqueryOptionsGetArgs> bigqueryOptions() {
-        return this.bigqueryOptions == null ? Codegen.empty() : this.bigqueryOptions;
+    public Optional<Output<ProjectSinkBigqueryOptionsGetArgs>> bigqueryOptions() {
+        return Optional.ofNullable(this.bigqueryOptions);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ProjectSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ProjectSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ProjectSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ProjectSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exclusions")
-      private final @Nullable Output<List<ProjectSinkExclusionGetArgs>> exclusions;
+    private @Nullable Output<List<ProjectSinkExclusionGetArgs>> exclusions;
 
-    public Output<List<ProjectSinkExclusionGetArgs>> exclusions() {
-        return this.exclusions == null ? Codegen.empty() : this.exclusions;
+    public Optional<Output<List<ProjectSinkExclusionGetArgs>>> exclusions() {
+        return Optional.ofNullable(this.exclusions);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ProjectSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ProjectSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ProjectSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ProjectSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uniqueWriterIdentity")
-      private final @Nullable Output<Boolean> uniqueWriterIdentity;
+    private @Nullable Output<Boolean> uniqueWriterIdentity;
 
-    public Output<Boolean> uniqueWriterIdentity() {
-        return this.uniqueWriterIdentity == null ? Codegen.empty() : this.uniqueWriterIdentity;
+    public Optional<Output<Boolean>> uniqueWriterIdentity() {
+        return Optional.ofNullable(this.uniqueWriterIdentity);
     }
 
     /**
@@ -132,170 +132,142 @@ public final class ProjectSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="writerIdentity")
-      private final @Nullable Output<String> writerIdentity;
+    private @Nullable Output<String> writerIdentity;
 
-    public Output<String> writerIdentity() {
-        return this.writerIdentity == null ? Codegen.empty() : this.writerIdentity;
+    public Optional<Output<String>> writerIdentity() {
+        return Optional.ofNullable(this.writerIdentity);
     }
 
-    public ProjectSinkState(
-        @Nullable Output<ProjectSinkBigqueryOptionsGetArgs> bigqueryOptions,
-        @Nullable Output<String> description,
-        @Nullable Output<String> destination,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<List<ProjectSinkExclusionGetArgs>> exclusions,
-        @Nullable Output<String> filter,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> uniqueWriterIdentity,
-        @Nullable Output<String> writerIdentity) {
-        this.bigqueryOptions = bigqueryOptions;
-        this.description = description;
-        this.destination = destination;
-        this.disabled = disabled;
-        this.exclusions = exclusions;
-        this.filter = filter;
-        this.name = name;
-        this.project = project;
-        this.uniqueWriterIdentity = uniqueWriterIdentity;
-        this.writerIdentity = writerIdentity;
-    }
+    private ProjectSinkState() {}
 
-    private ProjectSinkState() {
-        this.bigqueryOptions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.exclusions = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.uniqueWriterIdentity = Codegen.empty();
-        this.writerIdentity = Codegen.empty();
+    private ProjectSinkState(ProjectSinkState $) {
+        this.bigqueryOptions = $.bigqueryOptions;
+        this.description = $.description;
+        this.destination = $.destination;
+        this.disabled = $.disabled;
+        this.exclusions = $.exclusions;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.project = $.project;
+        this.uniqueWriterIdentity = $.uniqueWriterIdentity;
+        this.writerIdentity = $.writerIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectSinkState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ProjectSinkBigqueryOptionsGetArgs> bigqueryOptions;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> destination;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<List<ProjectSinkExclusionGetArgs>> exclusions;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> uniqueWriterIdentity;
-        private @Nullable Output<String> writerIdentity;
+        private ProjectSinkState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectSinkState();
         }
 
         public Builder(ProjectSinkState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryOptions = defaults.bigqueryOptions;
-    	      this.description = defaults.description;
-    	      this.destination = defaults.destination;
-    	      this.disabled = defaults.disabled;
-    	      this.exclusions = defaults.exclusions;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.uniqueWriterIdentity = defaults.uniqueWriterIdentity;
-    	      this.writerIdentity = defaults.writerIdentity;
+            $ = new ProjectSinkState(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryOptions(@Nullable Output<ProjectSinkBigqueryOptionsGetArgs> bigqueryOptions) {
-            this.bigqueryOptions = bigqueryOptions;
+            $.bigqueryOptions = bigqueryOptions;
             return this;
         }
-        public Builder bigqueryOptions(@Nullable ProjectSinkBigqueryOptionsGetArgs bigqueryOptions) {
-            this.bigqueryOptions = Codegen.ofNullable(bigqueryOptions);
-            return this;
+
+        public Builder bigqueryOptions(ProjectSinkBigqueryOptionsGetArgs bigqueryOptions) {
+            return bigqueryOptions(Output.of(bigqueryOptions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder exclusions(@Nullable Output<List<ProjectSinkExclusionGetArgs>> exclusions) {
-            this.exclusions = exclusions;
+            $.exclusions = exclusions;
             return this;
         }
-        public Builder exclusions(@Nullable List<ProjectSinkExclusionGetArgs> exclusions) {
-            this.exclusions = Codegen.ofNullable(exclusions);
-            return this;
+
+        public Builder exclusions(List<ProjectSinkExclusionGetArgs> exclusions) {
+            return exclusions(Output.of(exclusions));
         }
+
         public Builder exclusions(ProjectSinkExclusionGetArgs... exclusions) {
             return exclusions(List.of(exclusions));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder uniqueWriterIdentity(@Nullable Output<Boolean> uniqueWriterIdentity) {
-            this.uniqueWriterIdentity = uniqueWriterIdentity;
+            $.uniqueWriterIdentity = uniqueWriterIdentity;
             return this;
         }
-        public Builder uniqueWriterIdentity(@Nullable Boolean uniqueWriterIdentity) {
-            this.uniqueWriterIdentity = Codegen.ofNullable(uniqueWriterIdentity);
-            return this;
+
+        public Builder uniqueWriterIdentity(Boolean uniqueWriterIdentity) {
+            return uniqueWriterIdentity(Output.of(uniqueWriterIdentity));
         }
+
         public Builder writerIdentity(@Nullable Output<String> writerIdentity) {
-            this.writerIdentity = writerIdentity;
+            $.writerIdentity = writerIdentity;
             return this;
         }
-        public Builder writerIdentity(@Nullable String writerIdentity) {
-            this.writerIdentity = Codegen.ofNullable(writerIdentity);
-            return this;
-        }        public ProjectSinkState build() {
-            return new ProjectSinkState(bigqueryOptions, description, destination, disabled, exclusions, filter, name, project, uniqueWriterIdentity, writerIdentity);
+
+        public Builder writerIdentity(String writerIdentity) {
+            return writerIdentity(Output.of(writerIdentity));
+        }
+
+        public ProjectSinkState build() {
+            return $;
         }
     }
+
 }

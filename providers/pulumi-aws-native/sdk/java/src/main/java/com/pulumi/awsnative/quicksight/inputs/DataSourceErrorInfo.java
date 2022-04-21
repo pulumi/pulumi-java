@@ -24,62 +24,57 @@ public final class DataSourceErrorInfo extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     @Import(name="type")
-      private final @Nullable DataSourceErrorInfoType type;
+    private @Nullable DataSourceErrorInfoType type;
 
     public Optional<DataSourceErrorInfoType> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public DataSourceErrorInfo(
-        @Nullable String message,
-        @Nullable DataSourceErrorInfoType type) {
-        this.message = message;
-        this.type = type;
-    }
+    private DataSourceErrorInfo() {}
 
-    private DataSourceErrorInfo() {
-        this.message = null;
-        this.type = null;
+    private DataSourceErrorInfo(DataSourceErrorInfo $) {
+        this.message = $.message;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceErrorInfo defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String message;
-        private @Nullable DataSourceErrorInfoType type;
+        private DataSourceErrorInfo $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceErrorInfo();
         }
 
         public Builder(DataSourceErrorInfo defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.type = defaults.type;
+            $ = new DataSourceErrorInfo(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder type(@Nullable DataSourceErrorInfoType type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public DataSourceErrorInfo build() {
-            return new DataSourceErrorInfo(message, type);
+        }
+
+        public DataSourceErrorInfo build() {
+            return $;
         }
     }
+
 }

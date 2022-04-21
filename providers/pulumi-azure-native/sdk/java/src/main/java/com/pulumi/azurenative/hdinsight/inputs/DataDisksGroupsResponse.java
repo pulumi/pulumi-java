@@ -24,7 +24,7 @@ public final class DataDisksGroupsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="diskSizeGB", required=true)
-      private final Integer diskSizeGB;
+    private Integer diskSizeGB;
 
     public Integer diskSizeGB() {
         return this.diskSizeGB;
@@ -35,10 +35,10 @@ public final class DataDisksGroupsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="disksPerNode")
-      private final @Nullable Integer disksPerNode;
+    private @Nullable Integer disksPerNode;
 
     public Optional<Integer> disksPerNode() {
-        return this.disksPerNode == null ? Optional.empty() : Optional.ofNullable(this.disksPerNode);
+        return Optional.ofNullable(this.disksPerNode);
     }
 
     /**
@@ -46,64 +46,58 @@ public final class DataDisksGroupsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="storageAccountType", required=true)
-      private final String storageAccountType;
+    private String storageAccountType;
 
     public String storageAccountType() {
         return this.storageAccountType;
     }
 
-    public DataDisksGroupsResponse(
-        Integer diskSizeGB,
-        @Nullable Integer disksPerNode,
-        String storageAccountType) {
-        this.diskSizeGB = Objects.requireNonNull(diskSizeGB, "expected parameter 'diskSizeGB' to be non-null");
-        this.disksPerNode = disksPerNode;
-        this.storageAccountType = Objects.requireNonNull(storageAccountType, "expected parameter 'storageAccountType' to be non-null");
-    }
+    private DataDisksGroupsResponse() {}
 
-    private DataDisksGroupsResponse() {
-        this.diskSizeGB = null;
-        this.disksPerNode = null;
-        this.storageAccountType = null;
+    private DataDisksGroupsResponse(DataDisksGroupsResponse $) {
+        this.diskSizeGB = $.diskSizeGB;
+        this.disksPerNode = $.disksPerNode;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDisksGroupsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer diskSizeGB;
-        private @Nullable Integer disksPerNode;
-        private String storageAccountType;
+        private DataDisksGroupsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDisksGroupsResponse();
         }
 
         public Builder(DataDisksGroupsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.disksPerNode = defaults.disksPerNode;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new DataDisksGroupsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGB(Integer diskSizeGB) {
-            this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder disksPerNode(@Nullable Integer disksPerNode) {
-            this.disksPerNode = disksPerNode;
+            $.disksPerNode = disksPerNode;
             return this;
         }
+
         public Builder storageAccountType(String storageAccountType) {
-            this.storageAccountType = Objects.requireNonNull(storageAccountType);
+            $.storageAccountType = storageAccountType;
             return this;
-        }        public DataDisksGroupsResponse build() {
-            return new DataDisksGroupsResponse(diskSizeGB, disksPerNode, storageAccountType);
+        }
+
+        public DataDisksGroupsResponse build() {
+            $.diskSizeGB = Objects.requireNonNull($.diskSizeGB, "expected parameter 'diskSizeGB' to be non-null");
+            $.storageAccountType = Objects.requireNonNull($.storageAccountType, "expected parameter 'storageAccountType' to be non-null");
+            return $;
         }
     }
+
 }

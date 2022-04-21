@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
      * 
      */
     @Import(name="metrics")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics() {
-        return this.metrics == null ? Codegen.empty() : this.metrics;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>>> metrics() {
+        return Optional.ofNullable(this.metrics);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
      * 
      */
     @Import(name="sessionCount")
-      private final @Nullable Output<Integer> sessionCount;
+    private @Nullable Output<Integer> sessionCount;
 
-    public Output<Integer> sessionCount() {
-        return this.sessionCount == null ? Codegen.empty() : this.sessionCount;
+    public Optional<Output<Integer>> sessionCount() {
+        return Optional.ofNullable(this.sessionCount);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs(
-        @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics,
-        @Nullable Output<Integer> sessionCount,
-        @Nullable Output<String> version) {
-        this.metrics = metrics;
-        this.sessionCount = sessionCount;
-        this.version = version;
-    }
+    private GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs() {
-        this.metrics = Codegen.empty();
-        this.sessionCount = Codegen.empty();
-        this.version = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs(GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs $) {
+        this.metrics = $.metrics;
+        this.sessionCount = $.sessionCount;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics;
-        private @Nullable Output<Integer> sessionCount;
-        private @Nullable Output<String> version;
+        private GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metrics = defaults.metrics;
-    	      this.sessionCount = defaults.sessionCount;
-    	      this.version = defaults.version;
+            $ = new GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metrics(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
-        public Builder metrics(@Nullable List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs> metrics) {
-            this.metrics = Codegen.ofNullable(metrics);
-            return this;
+
+        public Builder metrics(List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs> metrics) {
+            return metrics(Output.of(metrics));
         }
+
         public Builder metrics(GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder sessionCount(@Nullable Output<Integer> sessionCount) {
-            this.sessionCount = sessionCount;
+            $.sessionCount = sessionCount;
             return this;
         }
-        public Builder sessionCount(@Nullable Integer sessionCount) {
-            this.sessionCount = Codegen.ofNullable(sessionCount);
-            return this;
+
+        public Builder sessionCount(Integer sessionCount) {
+            return sessionCount(Output.of(sessionCount));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs(metrics, sessionCount, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs build() {
+            return $;
         }
     }
+
 }

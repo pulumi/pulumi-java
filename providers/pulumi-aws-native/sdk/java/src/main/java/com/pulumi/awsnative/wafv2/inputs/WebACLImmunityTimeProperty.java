@@ -13,45 +13,45 @@ public final class WebACLImmunityTimeProperty extends com.pulumi.resources.Invok
     public static final WebACLImmunityTimeProperty Empty = new WebACLImmunityTimeProperty();
 
     @Import(name="immunityTime", required=true)
-      private final Integer immunityTime;
+    private Integer immunityTime;
 
     public Integer immunityTime() {
         return this.immunityTime;
     }
 
-    public WebACLImmunityTimeProperty(Integer immunityTime) {
-        this.immunityTime = Objects.requireNonNull(immunityTime, "expected parameter 'immunityTime' to be non-null");
-    }
+    private WebACLImmunityTimeProperty() {}
 
-    private WebACLImmunityTimeProperty() {
-        this.immunityTime = null;
+    private WebACLImmunityTimeProperty(WebACLImmunityTimeProperty $) {
+        this.immunityTime = $.immunityTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLImmunityTimeProperty defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer immunityTime;
+        private WebACLImmunityTimeProperty $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLImmunityTimeProperty();
         }
 
         public Builder(WebACLImmunityTimeProperty defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.immunityTime = defaults.immunityTime;
+            $ = new WebACLImmunityTimeProperty(Objects.requireNonNull(defaults));
         }
 
         public Builder immunityTime(Integer immunityTime) {
-            this.immunityTime = Objects.requireNonNull(immunityTime);
+            $.immunityTime = immunityTime;
             return this;
-        }        public WebACLImmunityTimeProperty build() {
-            return new WebACLImmunityTimeProperty(immunityTime);
+        }
+
+        public WebACLImmunityTimeProperty build() {
+            $.immunityTime = Objects.requireNonNull($.immunityTime, "expected parameter 'immunityTime' to be non-null");
+            return $;
         }
     }
+
 }

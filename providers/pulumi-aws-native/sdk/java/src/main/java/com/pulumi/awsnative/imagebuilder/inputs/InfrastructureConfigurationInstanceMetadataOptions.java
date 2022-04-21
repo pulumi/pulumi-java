@@ -24,10 +24,10 @@ public final class InfrastructureConfigurationInstanceMetadataOptions extends co
      * 
      */
     @Import(name="httpPutResponseHopLimit")
-      private final @Nullable Integer httpPutResponseHopLimit;
+    private @Nullable Integer httpPutResponseHopLimit;
 
     public Optional<Integer> httpPutResponseHopLimit() {
-        return this.httpPutResponseHopLimit == null ? Optional.empty() : Optional.ofNullable(this.httpPutResponseHopLimit);
+        return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class InfrastructureConfigurationInstanceMetadataOptions extends co
      * 
      */
     @Import(name="httpTokens")
-      private final @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens;
+    private @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens;
 
     public Optional<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens() {
-        return this.httpTokens == null ? Optional.empty() : Optional.ofNullable(this.httpTokens);
+        return Optional.ofNullable(this.httpTokens);
     }
 
-    public InfrastructureConfigurationInstanceMetadataOptions(
-        @Nullable Integer httpPutResponseHopLimit,
-        @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
-        this.httpPutResponseHopLimit = httpPutResponseHopLimit;
-        this.httpTokens = httpTokens;
-    }
+    private InfrastructureConfigurationInstanceMetadataOptions() {}
 
-    private InfrastructureConfigurationInstanceMetadataOptions() {
-        this.httpPutResponseHopLimit = null;
-        this.httpTokens = null;
+    private InfrastructureConfigurationInstanceMetadataOptions(InfrastructureConfigurationInstanceMetadataOptions $) {
+        this.httpPutResponseHopLimit = $.httpPutResponseHopLimit;
+        this.httpTokens = $.httpTokens;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InfrastructureConfigurationInstanceMetadataOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer httpPutResponseHopLimit;
-        private @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens;
+        private InfrastructureConfigurationInstanceMetadataOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new InfrastructureConfigurationInstanceMetadataOptions();
         }
 
         public Builder(InfrastructureConfigurationInstanceMetadataOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpPutResponseHopLimit = defaults.httpPutResponseHopLimit;
-    	      this.httpTokens = defaults.httpTokens;
+            $ = new InfrastructureConfigurationInstanceMetadataOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+            $.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
+
         public Builder httpTokens(@Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
-            this.httpTokens = httpTokens;
+            $.httpTokens = httpTokens;
             return this;
-        }        public InfrastructureConfigurationInstanceMetadataOptions build() {
-            return new InfrastructureConfigurationInstanceMetadataOptions(httpPutResponseHopLimit, httpTokens);
+        }
+
+        public InfrastructureConfigurationInstanceMetadataOptions build() {
+            return $;
         }
     }
+
 }

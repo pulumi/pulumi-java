@@ -5,7 +5,6 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class GroupPolicyAttachmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="group", required=true)
-      private final Output<String> group;
+    private Output<String> group;
 
     public Output<String> group() {
         return this.group;
@@ -30,59 +29,60 @@ public final class GroupPolicyAttachmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="policyArn", required=true)
-      private final Output<String> policyArn;
+    private Output<String> policyArn;
 
     public Output<String> policyArn() {
         return this.policyArn;
     }
 
-    public GroupPolicyAttachmentArgs(
-        Output<String> group,
-        Output<String> policyArn) {
-        this.group = Objects.requireNonNull(group, "expected parameter 'group' to be non-null");
-        this.policyArn = Objects.requireNonNull(policyArn, "expected parameter 'policyArn' to be non-null");
-    }
+    private GroupPolicyAttachmentArgs() {}
 
-    private GroupPolicyAttachmentArgs() {
-        this.group = Codegen.empty();
-        this.policyArn = Codegen.empty();
+    private GroupPolicyAttachmentArgs(GroupPolicyAttachmentArgs $) {
+        this.group = $.group;
+        this.policyArn = $.policyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupPolicyAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> group;
-        private Output<String> policyArn;
+        private GroupPolicyAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupPolicyAttachmentArgs();
         }
 
         public Builder(GroupPolicyAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.group = defaults.group;
-    	      this.policyArn = defaults.policyArn;
+            $ = new GroupPolicyAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder group(Output<String> group) {
-            this.group = Objects.requireNonNull(group);
+            $.group = group;
             return this;
         }
+
+        public Builder group(String group) {
+            return group(Output.of(group));
+        }
+
         public Builder policyArn(Output<String> policyArn) {
-            this.policyArn = Objects.requireNonNull(policyArn);
+            $.policyArn = policyArn;
             return this;
         }
+
         public Builder policyArn(String policyArn) {
-            this.policyArn = Output.of(Objects.requireNonNull(policyArn));
-            return this;
-        }        public GroupPolicyAttachmentArgs build() {
-            return new GroupPolicyAttachmentArgs(group, policyArn);
+            return policyArn(Output.of(policyArn));
+        }
+
+        public GroupPolicyAttachmentArgs build() {
+            $.group = Objects.requireNonNull($.group, "expected parameter 'group' to be non-null");
+            $.policyArn = Objects.requireNonNull($.policyArn, "expected parameter 'policyArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetOrganizationSecurityPolicyArgs extends com.pulumi.resource
     public static final GetOrganizationSecurityPolicyArgs Empty = new GetOrganizationSecurityPolicyArgs();
 
     @Import(name="securityPolicy", required=true)
-      private final String securityPolicy;
+    private String securityPolicy;
 
     public String securityPolicy() {
         return this.securityPolicy;
     }
 
-    public GetOrganizationSecurityPolicyArgs(String securityPolicy) {
-        this.securityPolicy = Objects.requireNonNull(securityPolicy, "expected parameter 'securityPolicy' to be non-null");
-    }
+    private GetOrganizationSecurityPolicyArgs() {}
 
-    private GetOrganizationSecurityPolicyArgs() {
-        this.securityPolicy = null;
+    private GetOrganizationSecurityPolicyArgs(GetOrganizationSecurityPolicyArgs $) {
+        this.securityPolicy = $.securityPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationSecurityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String securityPolicy;
+        private GetOrganizationSecurityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationSecurityPolicyArgs();
         }
 
         public Builder(GetOrganizationSecurityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityPolicy = defaults.securityPolicy;
+            $ = new GetOrganizationSecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityPolicy(String securityPolicy) {
-            this.securityPolicy = Objects.requireNonNull(securityPolicy);
+            $.securityPolicy = securityPolicy;
             return this;
-        }        public GetOrganizationSecurityPolicyArgs build() {
-            return new GetOrganizationSecurityPolicyArgs(securityPolicy);
+        }
+
+        public GetOrganizationSecurityPolicyArgs build() {
+            $.securityPolicy = Objects.requireNonNull($.securityPolicy, "expected parameter 'securityPolicy' to be non-null");
+            return $;
         }
     }
+
 }

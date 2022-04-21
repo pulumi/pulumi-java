@@ -13,45 +13,45 @@ public final class GetAccessPolicyIamPolicyArgs extends com.pulumi.resources.Inv
     public static final GetAccessPolicyIamPolicyArgs Empty = new GetAccessPolicyIamPolicyArgs();
 
     @Import(name="accessPolicyId", required=true)
-      private final String accessPolicyId;
+    private String accessPolicyId;
 
     public String accessPolicyId() {
         return this.accessPolicyId;
     }
 
-    public GetAccessPolicyIamPolicyArgs(String accessPolicyId) {
-        this.accessPolicyId = Objects.requireNonNull(accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
-    }
+    private GetAccessPolicyIamPolicyArgs() {}
 
-    private GetAccessPolicyIamPolicyArgs() {
-        this.accessPolicyId = null;
+    private GetAccessPolicyIamPolicyArgs(GetAccessPolicyIamPolicyArgs $) {
+        this.accessPolicyId = $.accessPolicyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessPolicyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessPolicyId;
+        private GetAccessPolicyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessPolicyIamPolicyArgs();
         }
 
         public Builder(GetAccessPolicyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicyId = defaults.accessPolicyId;
+            $ = new GetAccessPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicyId(String accessPolicyId) {
-            this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
+            $.accessPolicyId = accessPolicyId;
             return this;
-        }        public GetAccessPolicyIamPolicyArgs build() {
-            return new GetAccessPolicyIamPolicyArgs(accessPolicyId);
+        }
+
+        public GetAccessPolicyIamPolicyArgs build() {
+            $.accessPolicyId = Objects.requireNonNull($.accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
+            return $;
         }
     }
+
 }

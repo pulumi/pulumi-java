@@ -8,10 +8,10 @@ import com.pulumi.awsnative.datasync.inputs.LocationS3S3ConfigArgs;
 import com.pulumi.awsnative.datasync.inputs.LocationS3TagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,14 +24,14 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3BucketArn", required=true)
-      private final Output<String> s3BucketArn;
+    private Output<String> s3BucketArn;
 
     public Output<String> s3BucketArn() {
         return this.s3BucketArn;
     }
 
     @Import(name="s3Config", required=true)
-      private final Output<LocationS3S3ConfigArgs> s3Config;
+    private Output<LocationS3S3ConfigArgs> s3Config;
 
     public Output<LocationS3S3ConfigArgs> s3Config() {
         return this.s3Config;
@@ -42,10 +42,10 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3StorageClass")
-      private final @Nullable Output<LocationS3S3StorageClass> s3StorageClass;
+    private @Nullable Output<LocationS3S3StorageClass> s3StorageClass;
 
-    public Output<LocationS3S3StorageClass> s3StorageClass() {
-        return this.s3StorageClass == null ? Codegen.empty() : this.s3StorageClass;
+    public Optional<Output<LocationS3S3StorageClass>> s3StorageClass() {
+        return Optional.ofNullable(this.s3StorageClass);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subdirectory")
-      private final @Nullable Output<String> subdirectory;
+    private @Nullable Output<String> subdirectory;
 
-    public Output<String> subdirectory() {
-        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
+    public Optional<Output<String>> subdirectory() {
+        return Optional.ofNullable(this.subdirectory);
     }
 
     /**
@@ -64,105 +64,94 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<LocationS3TagArgs>> tags;
+    private @Nullable Output<List<LocationS3TagArgs>> tags;
 
-    public Output<List<LocationS3TagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<LocationS3TagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LocationS3Args(
-        Output<String> s3BucketArn,
-        Output<LocationS3S3ConfigArgs> s3Config,
-        @Nullable Output<LocationS3S3StorageClass> s3StorageClass,
-        @Nullable Output<String> subdirectory,
-        @Nullable Output<List<LocationS3TagArgs>> tags) {
-        this.s3BucketArn = Objects.requireNonNull(s3BucketArn, "expected parameter 's3BucketArn' to be non-null");
-        this.s3Config = Objects.requireNonNull(s3Config, "expected parameter 's3Config' to be non-null");
-        this.s3StorageClass = s3StorageClass;
-        this.subdirectory = subdirectory;
-        this.tags = tags;
-    }
+    private LocationS3Args() {}
 
-    private LocationS3Args() {
-        this.s3BucketArn = Codegen.empty();
-        this.s3Config = Codegen.empty();
-        this.s3StorageClass = Codegen.empty();
-        this.subdirectory = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LocationS3Args(LocationS3Args $) {
+        this.s3BucketArn = $.s3BucketArn;
+        this.s3Config = $.s3Config;
+        this.s3StorageClass = $.s3StorageClass;
+        this.subdirectory = $.subdirectory;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationS3Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> s3BucketArn;
-        private Output<LocationS3S3ConfigArgs> s3Config;
-        private @Nullable Output<LocationS3S3StorageClass> s3StorageClass;
-        private @Nullable Output<String> subdirectory;
-        private @Nullable Output<List<LocationS3TagArgs>> tags;
+        private LocationS3Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationS3Args();
         }
 
         public Builder(LocationS3Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3BucketArn = defaults.s3BucketArn;
-    	      this.s3Config = defaults.s3Config;
-    	      this.s3StorageClass = defaults.s3StorageClass;
-    	      this.subdirectory = defaults.subdirectory;
-    	      this.tags = defaults.tags;
+            $ = new LocationS3Args(Objects.requireNonNull(defaults));
         }
 
         public Builder s3BucketArn(Output<String> s3BucketArn) {
-            this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
+            $.s3BucketArn = s3BucketArn;
             return this;
         }
+
         public Builder s3BucketArn(String s3BucketArn) {
-            this.s3BucketArn = Output.of(Objects.requireNonNull(s3BucketArn));
-            return this;
+            return s3BucketArn(Output.of(s3BucketArn));
         }
+
         public Builder s3Config(Output<LocationS3S3ConfigArgs> s3Config) {
-            this.s3Config = Objects.requireNonNull(s3Config);
+            $.s3Config = s3Config;
             return this;
         }
+
         public Builder s3Config(LocationS3S3ConfigArgs s3Config) {
-            this.s3Config = Output.of(Objects.requireNonNull(s3Config));
-            return this;
+            return s3Config(Output.of(s3Config));
         }
+
         public Builder s3StorageClass(@Nullable Output<LocationS3S3StorageClass> s3StorageClass) {
-            this.s3StorageClass = s3StorageClass;
+            $.s3StorageClass = s3StorageClass;
             return this;
         }
-        public Builder s3StorageClass(@Nullable LocationS3S3StorageClass s3StorageClass) {
-            this.s3StorageClass = Codegen.ofNullable(s3StorageClass);
-            return this;
+
+        public Builder s3StorageClass(LocationS3S3StorageClass s3StorageClass) {
+            return s3StorageClass(Output.of(s3StorageClass));
         }
+
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
-            this.subdirectory = subdirectory;
+            $.subdirectory = subdirectory;
             return this;
         }
-        public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Codegen.ofNullable(subdirectory);
-            return this;
+
+        public Builder subdirectory(String subdirectory) {
+            return subdirectory(Output.of(subdirectory));
         }
+
         public Builder tags(@Nullable Output<List<LocationS3TagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<LocationS3TagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<LocationS3TagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(LocationS3TagArgs... tags) {
             return tags(List.of(tags));
-        }        public LocationS3Args build() {
-            return new LocationS3Args(s3BucketArn, s3Config, s3StorageClass, subdirectory, tags);
+        }
+
+        public LocationS3Args build() {
+            $.s3BucketArn = Objects.requireNonNull($.s3BucketArn, "expected parameter 's3BucketArn' to be non-null");
+            $.s3Config = Objects.requireNonNull($.s3Config, "expected parameter 's3Config' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class WeeklyRetentionScheduleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="daysOfTheWeek")
-      private final @Nullable List<String> daysOfTheWeek;
+    private @Nullable List<String> daysOfTheWeek;
 
-    public List<String> daysOfTheWeek() {
-        return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
+    public Optional<List<String>> daysOfTheWeek() {
+        return Optional.ofNullable(this.daysOfTheWeek);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WeeklyRetentionScheduleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionDuration")
-      private final @Nullable RetentionDurationResponse retentionDuration;
+    private @Nullable RetentionDurationResponse retentionDuration;
 
     public Optional<RetentionDurationResponse> retentionDuration() {
-        return this.retentionDuration == null ? Optional.empty() : Optional.ofNullable(this.retentionDuration);
+        return Optional.ofNullable(this.retentionDuration);
     }
 
     /**
@@ -47,70 +47,64 @@ public final class WeeklyRetentionScheduleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionTimes")
-      private final @Nullable List<String> retentionTimes;
+    private @Nullable List<String> retentionTimes;
 
-    public List<String> retentionTimes() {
-        return this.retentionTimes == null ? List.of() : this.retentionTimes;
+    public Optional<List<String>> retentionTimes() {
+        return Optional.ofNullable(this.retentionTimes);
     }
 
-    public WeeklyRetentionScheduleResponse(
-        @Nullable List<String> daysOfTheWeek,
-        @Nullable RetentionDurationResponse retentionDuration,
-        @Nullable List<String> retentionTimes) {
-        this.daysOfTheWeek = daysOfTheWeek;
-        this.retentionDuration = retentionDuration;
-        this.retentionTimes = retentionTimes;
-    }
+    private WeeklyRetentionScheduleResponse() {}
 
-    private WeeklyRetentionScheduleResponse() {
-        this.daysOfTheWeek = List.of();
-        this.retentionDuration = null;
-        this.retentionTimes = List.of();
+    private WeeklyRetentionScheduleResponse(WeeklyRetentionScheduleResponse $) {
+        this.daysOfTheWeek = $.daysOfTheWeek;
+        this.retentionDuration = $.retentionDuration;
+        this.retentionTimes = $.retentionTimes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeeklyRetentionScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> daysOfTheWeek;
-        private @Nullable RetentionDurationResponse retentionDuration;
-        private @Nullable List<String> retentionTimes;
+        private WeeklyRetentionScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeeklyRetentionScheduleResponse();
         }
 
         public Builder(WeeklyRetentionScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysOfTheWeek = defaults.daysOfTheWeek;
-    	      this.retentionDuration = defaults.retentionDuration;
-    	      this.retentionTimes = defaults.retentionTimes;
+            $ = new WeeklyRetentionScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder daysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
-            this.daysOfTheWeek = daysOfTheWeek;
+            $.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
+
         public Builder daysOfTheWeek(String... daysOfTheWeek) {
             return daysOfTheWeek(List.of(daysOfTheWeek));
         }
+
         public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
-            this.retentionDuration = retentionDuration;
+            $.retentionDuration = retentionDuration;
             return this;
         }
+
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
-            this.retentionTimes = retentionTimes;
+            $.retentionTimes = retentionTimes;
             return this;
         }
+
         public Builder retentionTimes(String... retentionTimes) {
             return retentionTimes(List.of(retentionTimes));
-        }        public WeeklyRetentionScheduleResponse build() {
-            return new WeeklyRetentionScheduleResponse(daysOfTheWeek, retentionDuration, retentionTimes);
+        }
+
+        public WeeklyRetentionScheduleResponse build() {
+            return $;
         }
     }
+
 }

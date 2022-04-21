@@ -5,9 +5,9 @@ package com.pulumi.googlenative.iap_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class IdentityAwareProxyClientArgs extends com.pulumi.resources.Res
     public static final IdentityAwareProxyClientArgs Empty = new IdentityAwareProxyClientArgs();
 
     @Import(name="brandId", required=true)
-      private final Output<String> brandId;
+    private Output<String> brandId;
 
     public Output<String> brandId() {
         return this.brandId;
@@ -27,83 +27,76 @@ public final class IdentityAwareProxyClientArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public IdentityAwareProxyClientArgs(
-        Output<String> brandId,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> project) {
-        this.brandId = Objects.requireNonNull(brandId, "expected parameter 'brandId' to be non-null");
-        this.displayName = displayName;
-        this.project = project;
-    }
+    private IdentityAwareProxyClientArgs() {}
 
-    private IdentityAwareProxyClientArgs() {
-        this.brandId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.project = Codegen.empty();
+    private IdentityAwareProxyClientArgs(IdentityAwareProxyClientArgs $) {
+        this.brandId = $.brandId;
+        this.displayName = $.displayName;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityAwareProxyClientArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> brandId;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> project;
+        private IdentityAwareProxyClientArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityAwareProxyClientArgs();
         }
 
         public Builder(IdentityAwareProxyClientArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brandId = defaults.brandId;
-    	      this.displayName = defaults.displayName;
-    	      this.project = defaults.project;
+            $ = new IdentityAwareProxyClientArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder brandId(Output<String> brandId) {
-            this.brandId = Objects.requireNonNull(brandId);
+            $.brandId = brandId;
             return this;
         }
+
         public Builder brandId(String brandId) {
-            this.brandId = Output.of(Objects.requireNonNull(brandId));
-            return this;
+            return brandId(Output.of(brandId));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public IdentityAwareProxyClientArgs build() {
-            return new IdentityAwareProxyClientArgs(brandId, displayName, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public IdentityAwareProxyClientArgs build() {
+            $.brandId = Objects.requireNonNull($.brandId, "expected parameter 'brandId' to be non-null");
+            return $;
         }
     }
+
 }

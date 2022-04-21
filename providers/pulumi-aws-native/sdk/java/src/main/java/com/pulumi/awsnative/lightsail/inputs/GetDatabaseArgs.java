@@ -17,45 +17,45 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="relationalDatabaseName", required=true)
-      private final String relationalDatabaseName;
+    private String relationalDatabaseName;
 
     public String relationalDatabaseName() {
         return this.relationalDatabaseName;
     }
 
-    public GetDatabaseArgs(String relationalDatabaseName) {
-        this.relationalDatabaseName = Objects.requireNonNull(relationalDatabaseName, "expected parameter 'relationalDatabaseName' to be non-null");
-    }
+    private GetDatabaseArgs() {}
 
-    private GetDatabaseArgs() {
-        this.relationalDatabaseName = null;
+    private GetDatabaseArgs(GetDatabaseArgs $) {
+        this.relationalDatabaseName = $.relationalDatabaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String relationalDatabaseName;
+        private GetDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseArgs();
         }
 
         public Builder(GetDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.relationalDatabaseName = defaults.relationalDatabaseName;
+            $ = new GetDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder relationalDatabaseName(String relationalDatabaseName) {
-            this.relationalDatabaseName = Objects.requireNonNull(relationalDatabaseName);
+            $.relationalDatabaseName = relationalDatabaseName;
             return this;
-        }        public GetDatabaseArgs build() {
-            return new GetDatabaseArgs(relationalDatabaseName);
+        }
+
+        public GetDatabaseArgs build() {
+            $.relationalDatabaseName = Objects.requireNonNull($.relationalDatabaseName, "expected parameter 'relationalDatabaseName' to be non-null");
+            return $;
         }
     }
+
 }

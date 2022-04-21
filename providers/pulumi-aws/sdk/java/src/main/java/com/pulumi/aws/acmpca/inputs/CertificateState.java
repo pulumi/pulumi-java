@@ -6,9 +6,9 @@ package com.pulumi.aws.acmpca.inputs;
 import com.pulumi.aws.acmpca.inputs.CertificateValidityGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<String> certificate;
+    private @Nullable Output<String> certificate;
 
-    public Output<String> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateAuthorityArn")
-      private final @Nullable Output<String> certificateAuthorityArn;
+    private @Nullable Output<String> certificateAuthorityArn;
 
-    public Output<String> certificateAuthorityArn() {
-        return this.certificateAuthorityArn == null ? Codegen.empty() : this.certificateAuthorityArn;
+    public Optional<Output<String>> certificateAuthorityArn() {
+        return Optional.ofNullable(this.certificateAuthorityArn);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateChain")
-      private final @Nullable Output<String> certificateChain;
+    private @Nullable Output<String> certificateChain;
 
-    public Output<String> certificateChain() {
-        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
+    public Optional<Output<String>> certificateChain() {
+        return Optional.ofNullable(this.certificateChain);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateSigningRequest")
-      private final @Nullable Output<String> certificateSigningRequest;
+    private @Nullable Output<String> certificateSigningRequest;
 
-    public Output<String> certificateSigningRequest() {
-        return this.certificateSigningRequest == null ? Codegen.empty() : this.certificateSigningRequest;
+    public Optional<Output<String>> certificateSigningRequest() {
+        return Optional.ofNullable(this.certificateSigningRequest);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="signingAlgorithm")
-      private final @Nullable Output<String> signingAlgorithm;
+    private @Nullable Output<String> signingAlgorithm;
 
-    public Output<String> signingAlgorithm() {
-        return this.signingAlgorithm == null ? Codegen.empty() : this.signingAlgorithm;
+    public Optional<Output<String>> signingAlgorithm() {
+        return Optional.ofNullable(this.signingAlgorithm);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateArn")
-      private final @Nullable Output<String> templateArn;
+    private @Nullable Output<String> templateArn;
 
-    public Output<String> templateArn() {
-        return this.templateArn == null ? Codegen.empty() : this.templateArn;
+    public Optional<Output<String>> templateArn() {
+        return Optional.ofNullable(this.templateArn);
     }
 
     /**
@@ -98,141 +98,118 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validity")
-      private final @Nullable Output<CertificateValidityGetArgs> validity;
+    private @Nullable Output<CertificateValidityGetArgs> validity;
 
-    public Output<CertificateValidityGetArgs> validity() {
-        return this.validity == null ? Codegen.empty() : this.validity;
+    public Optional<Output<CertificateValidityGetArgs>> validity() {
+        return Optional.ofNullable(this.validity);
     }
 
-    public CertificateState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> certificate,
-        @Nullable Output<String> certificateAuthorityArn,
-        @Nullable Output<String> certificateChain,
-        @Nullable Output<String> certificateSigningRequest,
-        @Nullable Output<String> signingAlgorithm,
-        @Nullable Output<String> templateArn,
-        @Nullable Output<CertificateValidityGetArgs> validity) {
-        this.arn = arn;
-        this.certificate = certificate;
-        this.certificateAuthorityArn = certificateAuthorityArn;
-        this.certificateChain = certificateChain;
-        this.certificateSigningRequest = certificateSigningRequest;
-        this.signingAlgorithm = signingAlgorithm;
-        this.templateArn = templateArn;
-        this.validity = validity;
-    }
+    private CertificateState() {}
 
-    private CertificateState() {
-        this.arn = Codegen.empty();
-        this.certificate = Codegen.empty();
-        this.certificateAuthorityArn = Codegen.empty();
-        this.certificateChain = Codegen.empty();
-        this.certificateSigningRequest = Codegen.empty();
-        this.signingAlgorithm = Codegen.empty();
-        this.templateArn = Codegen.empty();
-        this.validity = Codegen.empty();
+    private CertificateState(CertificateState $) {
+        this.arn = $.arn;
+        this.certificate = $.certificate;
+        this.certificateAuthorityArn = $.certificateAuthorityArn;
+        this.certificateChain = $.certificateChain;
+        this.certificateSigningRequest = $.certificateSigningRequest;
+        this.signingAlgorithm = $.signingAlgorithm;
+        this.templateArn = $.templateArn;
+        this.validity = $.validity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> certificate;
-        private @Nullable Output<String> certificateAuthorityArn;
-        private @Nullable Output<String> certificateChain;
-        private @Nullable Output<String> certificateSigningRequest;
-        private @Nullable Output<String> signingAlgorithm;
-        private @Nullable Output<String> templateArn;
-        private @Nullable Output<CertificateValidityGetArgs> validity;
+        private CertificateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateState();
         }
 
         public Builder(CertificateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.certificate = defaults.certificate;
-    	      this.certificateAuthorityArn = defaults.certificateAuthorityArn;
-    	      this.certificateChain = defaults.certificateChain;
-    	      this.certificateSigningRequest = defaults.certificateSigningRequest;
-    	      this.signingAlgorithm = defaults.signingAlgorithm;
-    	      this.templateArn = defaults.templateArn;
-    	      this.validity = defaults.validity;
+            $ = new CertificateState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder certificate(@Nullable Output<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable String certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(String certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder certificateAuthorityArn(@Nullable Output<String> certificateAuthorityArn) {
-            this.certificateAuthorityArn = certificateAuthorityArn;
+            $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
-        public Builder certificateAuthorityArn(@Nullable String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Codegen.ofNullable(certificateAuthorityArn);
-            return this;
+
+        public Builder certificateAuthorityArn(String certificateAuthorityArn) {
+            return certificateAuthorityArn(Output.of(certificateAuthorityArn));
         }
+
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
-            this.certificateChain = certificateChain;
+            $.certificateChain = certificateChain;
             return this;
         }
-        public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Codegen.ofNullable(certificateChain);
-            return this;
+
+        public Builder certificateChain(String certificateChain) {
+            return certificateChain(Output.of(certificateChain));
         }
+
         public Builder certificateSigningRequest(@Nullable Output<String> certificateSigningRequest) {
-            this.certificateSigningRequest = certificateSigningRequest;
+            $.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
-        public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
-            this.certificateSigningRequest = Codegen.ofNullable(certificateSigningRequest);
-            return this;
+
+        public Builder certificateSigningRequest(String certificateSigningRequest) {
+            return certificateSigningRequest(Output.of(certificateSigningRequest));
         }
+
         public Builder signingAlgorithm(@Nullable Output<String> signingAlgorithm) {
-            this.signingAlgorithm = signingAlgorithm;
+            $.signingAlgorithm = signingAlgorithm;
             return this;
         }
-        public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
-            this.signingAlgorithm = Codegen.ofNullable(signingAlgorithm);
-            return this;
+
+        public Builder signingAlgorithm(String signingAlgorithm) {
+            return signingAlgorithm(Output.of(signingAlgorithm));
         }
+
         public Builder templateArn(@Nullable Output<String> templateArn) {
-            this.templateArn = templateArn;
+            $.templateArn = templateArn;
             return this;
         }
-        public Builder templateArn(@Nullable String templateArn) {
-            this.templateArn = Codegen.ofNullable(templateArn);
-            return this;
+
+        public Builder templateArn(String templateArn) {
+            return templateArn(Output.of(templateArn));
         }
+
         public Builder validity(@Nullable Output<CertificateValidityGetArgs> validity) {
-            this.validity = validity;
+            $.validity = validity;
             return this;
         }
-        public Builder validity(@Nullable CertificateValidityGetArgs validity) {
-            this.validity = Codegen.ofNullable(validity);
-            return this;
-        }        public CertificateState build() {
-            return new CertificateState(arn, certificate, certificateAuthorityArn, certificateChain, certificateSigningRequest, signingAlgorithm, templateArn, validity);
+
+        public Builder validity(CertificateValidityGetArgs validity) {
+            return validity(Output.of(validity));
+        }
+
+        public CertificateState build() {
+            return $;
         }
     }
+
 }

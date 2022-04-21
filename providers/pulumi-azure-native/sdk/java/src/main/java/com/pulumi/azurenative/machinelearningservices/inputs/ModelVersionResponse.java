@@ -26,10 +26,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="datastoreId")
-      private final @Nullable String datastoreId;
+    private @Nullable String datastoreId;
 
     public Optional<String> datastoreId() {
-        return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
+        return Optional.ofNullable(this.datastoreId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="flavors")
-      private final @Nullable Map<String,FlavorDataResponse> flavors;
+    private @Nullable Map<String,FlavorDataResponse> flavors;
 
-    public Map<String,FlavorDataResponse> flavors() {
-        return this.flavors == null ? Map.of() : this.flavors;
+    public Optional<Map<String,FlavorDataResponse>> flavors() {
+        return Optional.ofNullable(this.flavors);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="isAnonymous")
-      private final @Nullable Boolean isAnonymous;
+    private @Nullable Boolean isAnonymous;
 
     public Optional<Boolean> isAnonymous() {
-        return this.isAnonymous == null ? Optional.empty() : Optional.ofNullable(this.isAnonymous);
+        return Optional.ofNullable(this.isAnonymous);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -81,10 +81,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -92,100 +92,81 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ModelVersionResponse(
-        @Nullable String datastoreId,
-        @Nullable String description,
-        @Nullable Map<String,FlavorDataResponse> flavors,
-        @Nullable Boolean isAnonymous,
-        String path,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
-        this.datastoreId = datastoreId;
-        this.description = description;
-        this.flavors = flavors;
-        this.isAnonymous = isAnonymous;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.properties = properties;
-        this.tags = tags;
-    }
+    private ModelVersionResponse() {}
 
-    private ModelVersionResponse() {
-        this.datastoreId = null;
-        this.description = null;
-        this.flavors = Map.of();
-        this.isAnonymous = null;
-        this.path = null;
-        this.properties = Map.of();
-        this.tags = Map.of();
+    private ModelVersionResponse(ModelVersionResponse $) {
+        this.datastoreId = $.datastoreId;
+        this.description = $.description;
+        this.flavors = $.flavors;
+        this.isAnonymous = $.isAnonymous;
+        this.path = $.path;
+        this.properties = $.properties;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelVersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String datastoreId;
-        private @Nullable String description;
-        private @Nullable Map<String,FlavorDataResponse> flavors;
-        private @Nullable Boolean isAnonymous;
-        private String path;
-        private @Nullable Map<String,String> properties;
-        private @Nullable Map<String,String> tags;
+        private ModelVersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelVersionResponse();
         }
 
         public Builder(ModelVersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreId = defaults.datastoreId;
-    	      this.description = defaults.description;
-    	      this.flavors = defaults.flavors;
-    	      this.isAnonymous = defaults.isAnonymous;
-    	      this.path = defaults.path;
-    	      this.properties = defaults.properties;
-    	      this.tags = defaults.tags;
+            $ = new ModelVersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = datastoreId;
+            $.datastoreId = datastoreId;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder flavors(@Nullable Map<String,FlavorDataResponse> flavors) {
-            this.flavors = flavors;
+            $.flavors = flavors;
             return this;
         }
+
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
-            this.isAnonymous = isAnonymous;
+            $.isAnonymous = isAnonymous;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public ModelVersionResponse build() {
-            return new ModelVersionResponse(datastoreId, description, flavors, isAnonymous, path, properties, tags);
+        }
+
+        public ModelVersionResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

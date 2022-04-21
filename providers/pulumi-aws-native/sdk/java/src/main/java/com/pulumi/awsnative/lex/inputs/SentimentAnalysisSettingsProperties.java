@@ -21,45 +21,45 @@ public final class SentimentAnalysisSettingsProperties extends com.pulumi.resour
      * 
      */
     @Import(name="detectSentiment", required=true)
-      private final Boolean detectSentiment;
+    private Boolean detectSentiment;
 
     public Boolean detectSentiment() {
         return this.detectSentiment;
     }
 
-    public SentimentAnalysisSettingsProperties(Boolean detectSentiment) {
-        this.detectSentiment = Objects.requireNonNull(detectSentiment, "expected parameter 'detectSentiment' to be non-null");
-    }
+    private SentimentAnalysisSettingsProperties() {}
 
-    private SentimentAnalysisSettingsProperties() {
-        this.detectSentiment = null;
+    private SentimentAnalysisSettingsProperties(SentimentAnalysisSettingsProperties $) {
+        this.detectSentiment = $.detectSentiment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SentimentAnalysisSettingsProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean detectSentiment;
+        private SentimentAnalysisSettingsProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new SentimentAnalysisSettingsProperties();
         }
 
         public Builder(SentimentAnalysisSettingsProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detectSentiment = defaults.detectSentiment;
+            $ = new SentimentAnalysisSettingsProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder detectSentiment(Boolean detectSentiment) {
-            this.detectSentiment = Objects.requireNonNull(detectSentiment);
+            $.detectSentiment = detectSentiment;
             return this;
-        }        public SentimentAnalysisSettingsProperties build() {
-            return new SentimentAnalysisSettingsProperties(detectSentiment);
+        }
+
+        public SentimentAnalysisSettingsProperties build() {
+            $.detectSentiment = Objects.requireNonNull($.detectSentiment, "expected parameter 'detectSentiment' to be non-null");
+            return $;
         }
     }
+
 }

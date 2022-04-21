@@ -7,9 +7,9 @@ import com.pulumi.azurenative.videoanalyzer.enums.ParameterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ParameterDeclarationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="default")
-      private final @Nullable Output<String> default_;
+    private @Nullable Output<String> default_;
 
-    public Output<String> default_() {
-        return this.default_ == null ? Codegen.empty() : this.default_;
+    public Optional<Output<String>> default_() {
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ParameterDeclarationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ParameterDeclarationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -59,89 +59,80 @@ public final class ParameterDeclarationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ParameterType>> type;
+    private Output<Either<String,ParameterType>> type;
 
     public Output<Either<String,ParameterType>> type() {
         return this.type;
     }
 
-    public ParameterDeclarationArgs(
-        @Nullable Output<String> default_,
-        @Nullable Output<String> description,
-        Output<String> name,
-        Output<Either<String,ParameterType>> type) {
-        this.default_ = default_;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ParameterDeclarationArgs() {}
 
-    private ParameterDeclarationArgs() {
-        this.default_ = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private ParameterDeclarationArgs(ParameterDeclarationArgs $) {
+        this.default_ = $.default_;
+        this.description = $.description;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterDeclarationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> default_;
-        private @Nullable Output<String> description;
-        private Output<String> name;
-        private Output<Either<String,ParameterType>> type;
+        private ParameterDeclarationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterDeclarationArgs();
         }
 
         public Builder(ParameterDeclarationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ParameterDeclarationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(@Nullable Output<String> default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
-        public Builder default_(@Nullable String default_) {
-            this.default_ = Codegen.ofNullable(default_);
-            return this;
+
+        public Builder default_(String default_) {
+            return default_(Output.of(default_));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<Either<String,ParameterType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ParameterType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ParameterDeclarationArgs build() {
-            return new ParameterDeclarationArgs(default_, description, name, type);
+            return type(Output.of(type));
+        }
+
+        public ParameterDeclarationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

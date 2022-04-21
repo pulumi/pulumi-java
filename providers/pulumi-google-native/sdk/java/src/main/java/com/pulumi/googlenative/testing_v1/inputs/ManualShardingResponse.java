@@ -22,48 +22,49 @@ public final class ManualShardingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="testTargetsForShard", required=true)
-      private final List<TestTargetsForShardResponse> testTargetsForShard;
+    private List<TestTargetsForShardResponse> testTargetsForShard;
 
     public List<TestTargetsForShardResponse> testTargetsForShard() {
         return this.testTargetsForShard;
     }
 
-    public ManualShardingResponse(List<TestTargetsForShardResponse> testTargetsForShard) {
-        this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard, "expected parameter 'testTargetsForShard' to be non-null");
-    }
+    private ManualShardingResponse() {}
 
-    private ManualShardingResponse() {
-        this.testTargetsForShard = List.of();
+    private ManualShardingResponse(ManualShardingResponse $) {
+        this.testTargetsForShard = $.testTargetsForShard;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManualShardingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<TestTargetsForShardResponse> testTargetsForShard;
+        private ManualShardingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManualShardingResponse();
         }
 
         public Builder(ManualShardingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testTargetsForShard = defaults.testTargetsForShard;
+            $ = new ManualShardingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder testTargetsForShard(List<TestTargetsForShardResponse> testTargetsForShard) {
-            this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
+            $.testTargetsForShard = testTargetsForShard;
             return this;
         }
+
         public Builder testTargetsForShard(TestTargetsForShardResponse... testTargetsForShard) {
             return testTargetsForShard(List.of(testTargetsForShard));
-        }        public ManualShardingResponse build() {
-            return new ManualShardingResponse(testTargetsForShard);
+        }
+
+        public ManualShardingResponse build() {
+            $.testTargetsForShard = Objects.requireNonNull($.testTargetsForShard, "expected parameter 'testTargetsForShard' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.wafregional;
 import com.pulumi.aws.wafregional.inputs.IpSetIpSetDescriptorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IpSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipSetDescriptors")
-      private final @Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors;
+    private @Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors;
 
-    public Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors() {
-        return this.ipSetDescriptors == null ? Codegen.empty() : this.ipSetDescriptors;
+    public Optional<Output<List<IpSetIpSetDescriptorArgs>>> ipSetDescriptors() {
+        return Optional.ofNullable(this.ipSetDescriptors);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class IpSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public IpSetArgs(
-        @Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors,
-        @Nullable Output<String> name) {
-        this.ipSetDescriptors = ipSetDescriptors;
-        this.name = name;
-    }
+    private IpSetArgs() {}
 
-    private IpSetArgs() {
-        this.ipSetDescriptors = Codegen.empty();
-        this.name = Codegen.empty();
+    private IpSetArgs(IpSetArgs $) {
+        this.ipSetDescriptors = $.ipSetDescriptors;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors;
-        private @Nullable Output<String> name;
+        private IpSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpSetArgs();
         }
 
         public Builder(IpSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipSetDescriptors = defaults.ipSetDescriptors;
-    	      this.name = defaults.name;
+            $ = new IpSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipSetDescriptors(@Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors) {
-            this.ipSetDescriptors = ipSetDescriptors;
+            $.ipSetDescriptors = ipSetDescriptors;
             return this;
         }
-        public Builder ipSetDescriptors(@Nullable List<IpSetIpSetDescriptorArgs> ipSetDescriptors) {
-            this.ipSetDescriptors = Codegen.ofNullable(ipSetDescriptors);
-            return this;
+
+        public Builder ipSetDescriptors(List<IpSetIpSetDescriptorArgs> ipSetDescriptors) {
+            return ipSetDescriptors(Output.of(ipSetDescriptors));
         }
+
         public Builder ipSetDescriptors(IpSetIpSetDescriptorArgs... ipSetDescriptors) {
             return ipSetDescriptors(List.of(ipSetDescriptors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public IpSetArgs build() {
-            return new IpSetArgs(ipSetDescriptors, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public IpSetArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.awsnative.ivs.inputs;
 import com.pulumi.awsnative.ivs.enums.RecordingConfigurationThumbnailConfigurationRecordingMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends com.
      * 
      */
     @Import(name="recordingMode", required=true)
-      private final Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
+    private Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
 
     public Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode() {
         return this.recordingMode;
@@ -36,63 +36,59 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends com.
      * 
      */
     @Import(name="targetIntervalSeconds")
-      private final @Nullable Output<Integer> targetIntervalSeconds;
+    private @Nullable Output<Integer> targetIntervalSeconds;
 
-    public Output<Integer> targetIntervalSeconds() {
-        return this.targetIntervalSeconds == null ? Codegen.empty() : this.targetIntervalSeconds;
+    public Optional<Output<Integer>> targetIntervalSeconds() {
+        return Optional.ofNullable(this.targetIntervalSeconds);
     }
 
-    public RecordingConfigurationThumbnailConfigurationArgs(
-        Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode,
-        @Nullable Output<Integer> targetIntervalSeconds) {
-        this.recordingMode = Objects.requireNonNull(recordingMode, "expected parameter 'recordingMode' to be non-null");
-        this.targetIntervalSeconds = targetIntervalSeconds;
-    }
+    private RecordingConfigurationThumbnailConfigurationArgs() {}
 
-    private RecordingConfigurationThumbnailConfigurationArgs() {
-        this.recordingMode = Codegen.empty();
-        this.targetIntervalSeconds = Codegen.empty();
+    private RecordingConfigurationThumbnailConfigurationArgs(RecordingConfigurationThumbnailConfigurationArgs $) {
+        this.recordingMode = $.recordingMode;
+        this.targetIntervalSeconds = $.targetIntervalSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordingConfigurationThumbnailConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
-        private @Nullable Output<Integer> targetIntervalSeconds;
+        private RecordingConfigurationThumbnailConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordingConfigurationThumbnailConfigurationArgs();
         }
 
         public Builder(RecordingConfigurationThumbnailConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recordingMode = defaults.recordingMode;
-    	      this.targetIntervalSeconds = defaults.targetIntervalSeconds;
+            $ = new RecordingConfigurationThumbnailConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recordingMode(Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode) {
-            this.recordingMode = Objects.requireNonNull(recordingMode);
+            $.recordingMode = recordingMode;
             return this;
         }
+
         public Builder recordingMode(RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode) {
-            this.recordingMode = Output.of(Objects.requireNonNull(recordingMode));
-            return this;
+            return recordingMode(Output.of(recordingMode));
         }
+
         public Builder targetIntervalSeconds(@Nullable Output<Integer> targetIntervalSeconds) {
-            this.targetIntervalSeconds = targetIntervalSeconds;
+            $.targetIntervalSeconds = targetIntervalSeconds;
             return this;
         }
-        public Builder targetIntervalSeconds(@Nullable Integer targetIntervalSeconds) {
-            this.targetIntervalSeconds = Codegen.ofNullable(targetIntervalSeconds);
-            return this;
-        }        public RecordingConfigurationThumbnailConfigurationArgs build() {
-            return new RecordingConfigurationThumbnailConfigurationArgs(recordingMode, targetIntervalSeconds);
+
+        public Builder targetIntervalSeconds(Integer targetIntervalSeconds) {
+            return targetIntervalSeconds(Output.of(targetIntervalSeconds));
+        }
+
+        public RecordingConfigurationThumbnailConfigurationArgs build() {
+            $.recordingMode = Objects.requireNonNull($.recordingMode, "expected parameter 'recordingMode' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ObjectReplicationPolicyFilterArgs extends com.pulumi.resource
      * 
      */
     @Import(name="minCreationTime")
-      private final @Nullable Output<String> minCreationTime;
+    private @Nullable Output<String> minCreationTime;
 
-    public Output<String> minCreationTime() {
-        return this.minCreationTime == null ? Codegen.empty() : this.minCreationTime;
+    public Optional<Output<String>> minCreationTime() {
+        return Optional.ofNullable(this.minCreationTime);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class ObjectReplicationPolicyFilterArgs extends com.pulumi.resource
      * 
      */
     @Import(name="prefixMatch")
-      private final @Nullable Output<List<String>> prefixMatch;
+    private @Nullable Output<List<String>> prefixMatch;
 
-    public Output<List<String>> prefixMatch() {
-        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
+    public Optional<Output<List<String>>> prefixMatch() {
+        return Optional.ofNullable(this.prefixMatch);
     }
 
-    public ObjectReplicationPolicyFilterArgs(
-        @Nullable Output<String> minCreationTime,
-        @Nullable Output<List<String>> prefixMatch) {
-        this.minCreationTime = minCreationTime;
-        this.prefixMatch = prefixMatch;
-    }
+    private ObjectReplicationPolicyFilterArgs() {}
 
-    private ObjectReplicationPolicyFilterArgs() {
-        this.minCreationTime = Codegen.empty();
-        this.prefixMatch = Codegen.empty();
+    private ObjectReplicationPolicyFilterArgs(ObjectReplicationPolicyFilterArgs $) {
+        this.minCreationTime = $.minCreationTime;
+        this.prefixMatch = $.prefixMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectReplicationPolicyFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> minCreationTime;
-        private @Nullable Output<List<String>> prefixMatch;
+        private ObjectReplicationPolicyFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectReplicationPolicyFilterArgs();
         }
 
         public Builder(ObjectReplicationPolicyFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minCreationTime = defaults.minCreationTime;
-    	      this.prefixMatch = defaults.prefixMatch;
+            $ = new ObjectReplicationPolicyFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minCreationTime(@Nullable Output<String> minCreationTime) {
-            this.minCreationTime = minCreationTime;
+            $.minCreationTime = minCreationTime;
             return this;
         }
-        public Builder minCreationTime(@Nullable String minCreationTime) {
-            this.minCreationTime = Codegen.ofNullable(minCreationTime);
-            return this;
+
+        public Builder minCreationTime(String minCreationTime) {
+            return minCreationTime(Output.of(minCreationTime));
         }
+
         public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
-            this.prefixMatch = prefixMatch;
+            $.prefixMatch = prefixMatch;
             return this;
         }
-        public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = Codegen.ofNullable(prefixMatch);
-            return this;
+
+        public Builder prefixMatch(List<String> prefixMatch) {
+            return prefixMatch(Output.of(prefixMatch));
         }
+
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
-        }        public ObjectReplicationPolicyFilterArgs build() {
-            return new ObjectReplicationPolicyFilterArgs(minCreationTime, prefixMatch);
+        }
+
+        public ObjectReplicationPolicyFilterArgs build() {
+            return $;
         }
     }
+
 }

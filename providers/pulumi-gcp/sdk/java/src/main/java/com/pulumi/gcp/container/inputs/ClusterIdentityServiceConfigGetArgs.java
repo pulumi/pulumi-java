@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class ClusterIdentityServiceConfigGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public ClusterIdentityServiceConfigGetArgs(@Nullable Output<Boolean> enabled) {
-        this.enabled = enabled;
-    }
+    private ClusterIdentityServiceConfigGetArgs() {}
 
-    private ClusterIdentityServiceConfigGetArgs() {
-        this.enabled = Codegen.empty();
+    private ClusterIdentityServiceConfigGetArgs(ClusterIdentityServiceConfigGetArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterIdentityServiceConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
+        private ClusterIdentityServiceConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterIdentityServiceConfigGetArgs();
         }
 
         public Builder(ClusterIdentityServiceConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new ClusterIdentityServiceConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public ClusterIdentityServiceConfigGetArgs build() {
-            return new ClusterIdentityServiceConfigGetArgs(enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public ClusterIdentityServiceConfigGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class AnthosClusterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="membership", required=true)
-      private final String membership;
+    private String membership;
 
     public String membership() {
         return this.membership;
     }
 
-    public AnthosClusterResponse(String membership) {
-        this.membership = Objects.requireNonNull(membership, "expected parameter 'membership' to be non-null");
-    }
+    private AnthosClusterResponse() {}
 
-    private AnthosClusterResponse() {
-        this.membership = null;
+    private AnthosClusterResponse(AnthosClusterResponse $) {
+        this.membership = $.membership;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnthosClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String membership;
+        private AnthosClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnthosClusterResponse();
         }
 
         public Builder(AnthosClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.membership = defaults.membership;
+            $ = new AnthosClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder membership(String membership) {
-            this.membership = Objects.requireNonNull(membership);
+            $.membership = membership;
             return this;
-        }        public AnthosClusterResponse build() {
-            return new AnthosClusterResponse(membership);
+        }
+
+        public AnthosClusterResponse build() {
+            $.membership = Objects.requireNonNull($.membership, "expected parameter 'membership' to be non-null");
+            return $;
         }
     }
+
 }

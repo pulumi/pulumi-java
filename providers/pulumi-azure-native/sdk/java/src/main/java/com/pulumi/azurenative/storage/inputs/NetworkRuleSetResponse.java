@@ -28,10 +28,10 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="bypass")
-      private final @Nullable String bypass;
+    private @Nullable String bypass;
 
     public Optional<String> bypass() {
-        return this.bypass == null ? Optional.empty() : Optional.ofNullable(this.bypass);
+        return Optional.ofNullable(this.bypass);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="defaultAction", required=true)
-      private final String defaultAction;
+    private String defaultAction;
 
     public String defaultAction() {
         return this.defaultAction;
@@ -50,10 +50,10 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ipRules")
-      private final @Nullable List<IPRuleResponse> ipRules;
+    private @Nullable List<IPRuleResponse> ipRules;
 
-    public List<IPRuleResponse> ipRules() {
-        return this.ipRules == null ? List.of() : this.ipRules;
+    public Optional<List<IPRuleResponse>> ipRules() {
+        return Optional.ofNullable(this.ipRules);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceAccessRules")
-      private final @Nullable List<ResourceAccessRuleResponse> resourceAccessRules;
+    private @Nullable List<ResourceAccessRuleResponse> resourceAccessRules;
 
-    public List<ResourceAccessRuleResponse> resourceAccessRules() {
-        return this.resourceAccessRules == null ? List.of() : this.resourceAccessRules;
+    public Optional<List<ResourceAccessRuleResponse>> resourceAccessRules() {
+        return Optional.ofNullable(this.resourceAccessRules);
     }
 
     /**
@@ -72,91 +72,82 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="virtualNetworkRules")
-      private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
+    private @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
-        return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
+    public Optional<List<VirtualNetworkRuleResponse>> virtualNetworkRules() {
+        return Optional.ofNullable(this.virtualNetworkRules);
     }
 
-    public NetworkRuleSetResponse(
-        @Nullable String bypass,
-        String defaultAction,
-        @Nullable List<IPRuleResponse> ipRules,
-        @Nullable List<ResourceAccessRuleResponse> resourceAccessRules,
-        @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
-        this.bypass = Codegen.stringProp("bypass").arg(bypass).def("AzureServices").getNullable();
-        this.defaultAction = Codegen.stringProp("defaultAction").arg(defaultAction).def("Allow").require();
-        this.ipRules = ipRules;
-        this.resourceAccessRules = resourceAccessRules;
-        this.virtualNetworkRules = virtualNetworkRules;
-    }
+    private NetworkRuleSetResponse() {}
 
-    private NetworkRuleSetResponse() {
-        this.bypass = null;
-        this.defaultAction = null;
-        this.ipRules = List.of();
-        this.resourceAccessRules = List.of();
-        this.virtualNetworkRules = List.of();
+    private NetworkRuleSetResponse(NetworkRuleSetResponse $) {
+        this.bypass = $.bypass;
+        this.defaultAction = $.defaultAction;
+        this.ipRules = $.ipRules;
+        this.resourceAccessRules = $.resourceAccessRules;
+        this.virtualNetworkRules = $.virtualNetworkRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRuleSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bypass;
-        private String defaultAction;
-        private @Nullable List<IPRuleResponse> ipRules;
-        private @Nullable List<ResourceAccessRuleResponse> resourceAccessRules;
-        private @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
+        private NetworkRuleSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRuleSetResponse();
         }
 
         public Builder(NetworkRuleSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bypass = defaults.bypass;
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.ipRules = defaults.ipRules;
-    	      this.resourceAccessRules = defaults.resourceAccessRules;
-    	      this.virtualNetworkRules = defaults.virtualNetworkRules;
+            $ = new NetworkRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bypass(@Nullable String bypass) {
-            this.bypass = bypass;
+            $.bypass = bypass;
             return this;
         }
+
         public Builder defaultAction(String defaultAction) {
-            this.defaultAction = Objects.requireNonNull(defaultAction);
+            $.defaultAction = defaultAction;
             return this;
         }
+
         public Builder ipRules(@Nullable List<IPRuleResponse> ipRules) {
-            this.ipRules = ipRules;
+            $.ipRules = ipRules;
             return this;
         }
+
         public Builder ipRules(IPRuleResponse... ipRules) {
             return ipRules(List.of(ipRules));
         }
+
         public Builder resourceAccessRules(@Nullable List<ResourceAccessRuleResponse> resourceAccessRules) {
-            this.resourceAccessRules = resourceAccessRules;
+            $.resourceAccessRules = resourceAccessRules;
             return this;
         }
+
         public Builder resourceAccessRules(ResourceAccessRuleResponse... resourceAccessRules) {
             return resourceAccessRules(List.of(resourceAccessRules));
         }
+
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
-            this.virtualNetworkRules = virtualNetworkRules;
+            $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
+
         public Builder virtualNetworkRules(VirtualNetworkRuleResponse... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
-        }        public NetworkRuleSetResponse build() {
-            return new NetworkRuleSetResponse(bypass, defaultAction, ipRules, resourceAccessRules, virtualNetworkRules);
+        }
+
+        public NetworkRuleSetResponse build() {
+            $.bypass = Codegen.stringProp("bypass").arg($.bypass).def("AzureServices").getNullable();
+            $.defaultAction = Codegen.stringProp("defaultAction").arg($.defaultAction).def("Allow").require();
+            return $;
         }
     }
+
 }

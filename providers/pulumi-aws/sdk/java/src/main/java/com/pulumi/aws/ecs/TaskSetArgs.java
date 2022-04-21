@@ -10,12 +10,12 @@ import com.pulumi.aws.ecs.inputs.TaskSetScaleArgs;
 import com.pulumi.aws.ecs.inputs.TaskSetServiceRegistriesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacityProviderStrategies")
-      private final @Nullable Output<List<TaskSetCapacityProviderStrategyArgs>> capacityProviderStrategies;
+    private @Nullable Output<List<TaskSetCapacityProviderStrategyArgs>> capacityProviderStrategies;
 
-    public Output<List<TaskSetCapacityProviderStrategyArgs>> capacityProviderStrategies() {
-        return this.capacityProviderStrategies == null ? Codegen.empty() : this.capacityProviderStrategies;
+    public Optional<Output<List<TaskSetCapacityProviderStrategyArgs>>> capacityProviderStrategies() {
+        return Optional.ofNullable(this.capacityProviderStrategies);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cluster", required=true)
-      private final Output<String> cluster;
+    private Output<String> cluster;
 
     public Output<String> cluster() {
         return this.cluster;
@@ -50,17 +50,17 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalId")
-      private final @Nullable Output<String> externalId;
+    private @Nullable Output<String> externalId;
 
-    public Output<String> externalId() {
-        return this.externalId == null ? Codegen.empty() : this.externalId;
+    public Optional<Output<String>> externalId() {
+        return Optional.ofNullable(this.externalId);
     }
 
     @Import(name="forceDelete")
-      private final @Nullable Output<Boolean> forceDelete;
+    private @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> forceDelete() {
-        return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
+    public Optional<Output<Boolean>> forceDelete() {
+        return Optional.ofNullable(this.forceDelete);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchType")
-      private final @Nullable Output<String> launchType;
+    private @Nullable Output<String> launchType;
 
-    public Output<String> launchType() {
-        return this.launchType == null ? Codegen.empty() : this.launchType;
+    public Optional<Output<String>> launchType() {
+        return Optional.ofNullable(this.launchType);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancers")
-      private final @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers;
+    private @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers;
 
-    public Output<List<TaskSetLoadBalancerArgs>> loadBalancers() {
-        return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
+    public Optional<Output<List<TaskSetLoadBalancerArgs>>> loadBalancers() {
+        return Optional.ofNullable(this.loadBalancers);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfiguration")
-      private final @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration;
+    private @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration;
 
-    public Output<TaskSetNetworkConfigurationArgs> networkConfiguration() {
-        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
+    public Optional<Output<TaskSetNetworkConfigurationArgs>> networkConfiguration() {
+        return Optional.ofNullable(this.networkConfiguration);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platformVersion")
-      private final @Nullable Output<String> platformVersion;
+    private @Nullable Output<String> platformVersion;
 
-    public Output<String> platformVersion() {
-        return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
+    public Optional<Output<String>> platformVersion() {
+        return Optional.ofNullable(this.platformVersion);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scale")
-      private final @Nullable Output<TaskSetScaleArgs> scale;
+    private @Nullable Output<TaskSetScaleArgs> scale;
 
-    public Output<TaskSetScaleArgs> scale() {
-        return this.scale == null ? Codegen.empty() : this.scale;
+    public Optional<Output<TaskSetScaleArgs>> scale() {
+        return Optional.ofNullable(this.scale);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
@@ -134,10 +134,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRegistries")
-      private final @Nullable Output<TaskSetServiceRegistriesArgs> serviceRegistries;
+    private @Nullable Output<TaskSetServiceRegistriesArgs> serviceRegistries;
 
-    public Output<TaskSetServiceRegistriesArgs> serviceRegistries() {
-        return this.serviceRegistries == null ? Codegen.empty() : this.serviceRegistries;
+    public Optional<Output<TaskSetServiceRegistriesArgs>> serviceRegistries() {
+        return Optional.ofNullable(this.serviceRegistries);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -167,17 +167,17 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskDefinition", required=true)
-      private final Output<String> taskDefinition;
+    private Output<String> taskDefinition;
 
     public Output<String> taskDefinition() {
         return this.taskDefinition;
     }
 
     @Import(name="waitUntilStable")
-      private final @Nullable Output<Boolean> waitUntilStable;
+    private @Nullable Output<Boolean> waitUntilStable;
 
-    public Output<Boolean> waitUntilStable() {
-        return this.waitUntilStable == null ? Codegen.empty() : this.waitUntilStable;
+    public Optional<Output<Boolean>> waitUntilStable() {
+        return Optional.ofNullable(this.waitUntilStable);
     }
 
     /**
@@ -185,251 +185,209 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="waitUntilStableTimeout")
-      private final @Nullable Output<String> waitUntilStableTimeout;
+    private @Nullable Output<String> waitUntilStableTimeout;
 
-    public Output<String> waitUntilStableTimeout() {
-        return this.waitUntilStableTimeout == null ? Codegen.empty() : this.waitUntilStableTimeout;
+    public Optional<Output<String>> waitUntilStableTimeout() {
+        return Optional.ofNullable(this.waitUntilStableTimeout);
     }
 
-    public TaskSetArgs(
-        @Nullable Output<List<TaskSetCapacityProviderStrategyArgs>> capacityProviderStrategies,
-        Output<String> cluster,
-        @Nullable Output<String> externalId,
-        @Nullable Output<Boolean> forceDelete,
-        @Nullable Output<String> launchType,
-        @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers,
-        @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration,
-        @Nullable Output<String> platformVersion,
-        @Nullable Output<TaskSetScaleArgs> scale,
-        Output<String> service,
-        @Nullable Output<TaskSetServiceRegistriesArgs> serviceRegistries,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        Output<String> taskDefinition,
-        @Nullable Output<Boolean> waitUntilStable,
-        @Nullable Output<String> waitUntilStableTimeout) {
-        this.capacityProviderStrategies = capacityProviderStrategies;
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-        this.externalId = externalId;
-        this.forceDelete = forceDelete;
-        this.launchType = launchType;
-        this.loadBalancers = loadBalancers;
-        this.networkConfiguration = networkConfiguration;
-        this.platformVersion = platformVersion;
-        this.scale = scale;
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.serviceRegistries = serviceRegistries;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.taskDefinition = Objects.requireNonNull(taskDefinition, "expected parameter 'taskDefinition' to be non-null");
-        this.waitUntilStable = waitUntilStable;
-        this.waitUntilStableTimeout = waitUntilStableTimeout;
-    }
+    private TaskSetArgs() {}
 
-    private TaskSetArgs() {
-        this.capacityProviderStrategies = Codegen.empty();
-        this.cluster = Codegen.empty();
-        this.externalId = Codegen.empty();
-        this.forceDelete = Codegen.empty();
-        this.launchType = Codegen.empty();
-        this.loadBalancers = Codegen.empty();
-        this.networkConfiguration = Codegen.empty();
-        this.platformVersion = Codegen.empty();
-        this.scale = Codegen.empty();
-        this.service = Codegen.empty();
-        this.serviceRegistries = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.taskDefinition = Codegen.empty();
-        this.waitUntilStable = Codegen.empty();
-        this.waitUntilStableTimeout = Codegen.empty();
+    private TaskSetArgs(TaskSetArgs $) {
+        this.capacityProviderStrategies = $.capacityProviderStrategies;
+        this.cluster = $.cluster;
+        this.externalId = $.externalId;
+        this.forceDelete = $.forceDelete;
+        this.launchType = $.launchType;
+        this.loadBalancers = $.loadBalancers;
+        this.networkConfiguration = $.networkConfiguration;
+        this.platformVersion = $.platformVersion;
+        this.scale = $.scale;
+        this.service = $.service;
+        this.serviceRegistries = $.serviceRegistries;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.taskDefinition = $.taskDefinition;
+        this.waitUntilStable = $.waitUntilStable;
+        this.waitUntilStableTimeout = $.waitUntilStableTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TaskSetCapacityProviderStrategyArgs>> capacityProviderStrategies;
-        private Output<String> cluster;
-        private @Nullable Output<String> externalId;
-        private @Nullable Output<Boolean> forceDelete;
-        private @Nullable Output<String> launchType;
-        private @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers;
-        private @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration;
-        private @Nullable Output<String> platformVersion;
-        private @Nullable Output<TaskSetScaleArgs> scale;
-        private Output<String> service;
-        private @Nullable Output<TaskSetServiceRegistriesArgs> serviceRegistries;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private Output<String> taskDefinition;
-        private @Nullable Output<Boolean> waitUntilStable;
-        private @Nullable Output<String> waitUntilStableTimeout;
+        private TaskSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskSetArgs();
         }
 
         public Builder(TaskSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityProviderStrategies = defaults.capacityProviderStrategies;
-    	      this.cluster = defaults.cluster;
-    	      this.externalId = defaults.externalId;
-    	      this.forceDelete = defaults.forceDelete;
-    	      this.launchType = defaults.launchType;
-    	      this.loadBalancers = defaults.loadBalancers;
-    	      this.networkConfiguration = defaults.networkConfiguration;
-    	      this.platformVersion = defaults.platformVersion;
-    	      this.scale = defaults.scale;
-    	      this.service = defaults.service;
-    	      this.serviceRegistries = defaults.serviceRegistries;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.taskDefinition = defaults.taskDefinition;
-    	      this.waitUntilStable = defaults.waitUntilStable;
-    	      this.waitUntilStableTimeout = defaults.waitUntilStableTimeout;
+            $ = new TaskSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityProviderStrategies(@Nullable Output<List<TaskSetCapacityProviderStrategyArgs>> capacityProviderStrategies) {
-            this.capacityProviderStrategies = capacityProviderStrategies;
+            $.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
-        public Builder capacityProviderStrategies(@Nullable List<TaskSetCapacityProviderStrategyArgs> capacityProviderStrategies) {
-            this.capacityProviderStrategies = Codegen.ofNullable(capacityProviderStrategies);
-            return this;
+
+        public Builder capacityProviderStrategies(List<TaskSetCapacityProviderStrategyArgs> capacityProviderStrategies) {
+            return capacityProviderStrategies(Output.of(capacityProviderStrategies));
         }
+
         public Builder capacityProviderStrategies(TaskSetCapacityProviderStrategyArgs... capacityProviderStrategies) {
             return capacityProviderStrategies(List.of(capacityProviderStrategies));
         }
+
         public Builder cluster(Output<String> cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
         }
+
         public Builder cluster(String cluster) {
-            this.cluster = Output.of(Objects.requireNonNull(cluster));
-            return this;
+            return cluster(Output.of(cluster));
         }
+
         public Builder externalId(@Nullable Output<String> externalId) {
-            this.externalId = externalId;
+            $.externalId = externalId;
             return this;
         }
-        public Builder externalId(@Nullable String externalId) {
-            this.externalId = Codegen.ofNullable(externalId);
-            return this;
+
+        public Builder externalId(String externalId) {
+            return externalId(Output.of(externalId));
         }
+
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
-            this.forceDelete = forceDelete;
+            $.forceDelete = forceDelete;
             return this;
         }
-        public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Codegen.ofNullable(forceDelete);
-            return this;
+
+        public Builder forceDelete(Boolean forceDelete) {
+            return forceDelete(Output.of(forceDelete));
         }
+
         public Builder launchType(@Nullable Output<String> launchType) {
-            this.launchType = launchType;
+            $.launchType = launchType;
             return this;
         }
-        public Builder launchType(@Nullable String launchType) {
-            this.launchType = Codegen.ofNullable(launchType);
-            return this;
+
+        public Builder launchType(String launchType) {
+            return launchType(Output.of(launchType));
         }
+
         public Builder loadBalancers(@Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers) {
-            this.loadBalancers = loadBalancers;
+            $.loadBalancers = loadBalancers;
             return this;
         }
-        public Builder loadBalancers(@Nullable List<TaskSetLoadBalancerArgs> loadBalancers) {
-            this.loadBalancers = Codegen.ofNullable(loadBalancers);
-            return this;
+
+        public Builder loadBalancers(List<TaskSetLoadBalancerArgs> loadBalancers) {
+            return loadBalancers(Output.of(loadBalancers));
         }
+
         public Builder loadBalancers(TaskSetLoadBalancerArgs... loadBalancers) {
             return loadBalancers(List.of(loadBalancers));
         }
+
         public Builder networkConfiguration(@Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration) {
-            this.networkConfiguration = networkConfiguration;
+            $.networkConfiguration = networkConfiguration;
             return this;
         }
-        public Builder networkConfiguration(@Nullable TaskSetNetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
-            return this;
+
+        public Builder networkConfiguration(TaskSetNetworkConfigurationArgs networkConfiguration) {
+            return networkConfiguration(Output.of(networkConfiguration));
         }
+
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
-            this.platformVersion = platformVersion;
+            $.platformVersion = platformVersion;
             return this;
         }
-        public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Codegen.ofNullable(platformVersion);
-            return this;
+
+        public Builder platformVersion(String platformVersion) {
+            return platformVersion(Output.of(platformVersion));
         }
+
         public Builder scale(@Nullable Output<TaskSetScaleArgs> scale) {
-            this.scale = scale;
+            $.scale = scale;
             return this;
         }
-        public Builder scale(@Nullable TaskSetScaleArgs scale) {
-            this.scale = Codegen.ofNullable(scale);
-            return this;
+
+        public Builder scale(TaskSetScaleArgs scale) {
+            return scale(Output.of(scale));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
+            return service(Output.of(service));
         }
+
         public Builder serviceRegistries(@Nullable Output<TaskSetServiceRegistriesArgs> serviceRegistries) {
-            this.serviceRegistries = serviceRegistries;
+            $.serviceRegistries = serviceRegistries;
             return this;
         }
-        public Builder serviceRegistries(@Nullable TaskSetServiceRegistriesArgs serviceRegistries) {
-            this.serviceRegistries = Codegen.ofNullable(serviceRegistries);
-            return this;
+
+        public Builder serviceRegistries(TaskSetServiceRegistriesArgs serviceRegistries) {
+            return serviceRegistries(Output.of(serviceRegistries));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder taskDefinition(Output<String> taskDefinition) {
-            this.taskDefinition = Objects.requireNonNull(taskDefinition);
+            $.taskDefinition = taskDefinition;
             return this;
         }
+
         public Builder taskDefinition(String taskDefinition) {
-            this.taskDefinition = Output.of(Objects.requireNonNull(taskDefinition));
-            return this;
+            return taskDefinition(Output.of(taskDefinition));
         }
+
         public Builder waitUntilStable(@Nullable Output<Boolean> waitUntilStable) {
-            this.waitUntilStable = waitUntilStable;
+            $.waitUntilStable = waitUntilStable;
             return this;
         }
-        public Builder waitUntilStable(@Nullable Boolean waitUntilStable) {
-            this.waitUntilStable = Codegen.ofNullable(waitUntilStable);
-            return this;
+
+        public Builder waitUntilStable(Boolean waitUntilStable) {
+            return waitUntilStable(Output.of(waitUntilStable));
         }
+
         public Builder waitUntilStableTimeout(@Nullable Output<String> waitUntilStableTimeout) {
-            this.waitUntilStableTimeout = waitUntilStableTimeout;
+            $.waitUntilStableTimeout = waitUntilStableTimeout;
             return this;
         }
-        public Builder waitUntilStableTimeout(@Nullable String waitUntilStableTimeout) {
-            this.waitUntilStableTimeout = Codegen.ofNullable(waitUntilStableTimeout);
-            return this;
-        }        public TaskSetArgs build() {
-            return new TaskSetArgs(capacityProviderStrategies, cluster, externalId, forceDelete, launchType, loadBalancers, networkConfiguration, platformVersion, scale, service, serviceRegistries, tags, tagsAll, taskDefinition, waitUntilStable, waitUntilStableTimeout);
+
+        public Builder waitUntilStableTimeout(String waitUntilStableTimeout) {
+            return waitUntilStableTimeout(Output.of(waitUntilStableTimeout));
+        }
+
+        public TaskSetArgs build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.taskDefinition = Objects.requireNonNull($.taskDefinition, "expected parameter 'taskDefinition' to be non-null");
+            return $;
         }
     }
+
 }

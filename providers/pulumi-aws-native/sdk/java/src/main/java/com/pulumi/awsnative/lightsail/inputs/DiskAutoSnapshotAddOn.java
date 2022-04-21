@@ -23,45 +23,44 @@ public final class DiskAutoSnapshotAddOn extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="snapshotTimeOfDay")
-      private final @Nullable String snapshotTimeOfDay;
+    private @Nullable String snapshotTimeOfDay;
 
     public Optional<String> snapshotTimeOfDay() {
-        return this.snapshotTimeOfDay == null ? Optional.empty() : Optional.ofNullable(this.snapshotTimeOfDay);
+        return Optional.ofNullable(this.snapshotTimeOfDay);
     }
 
-    public DiskAutoSnapshotAddOn(@Nullable String snapshotTimeOfDay) {
-        this.snapshotTimeOfDay = snapshotTimeOfDay;
-    }
+    private DiskAutoSnapshotAddOn() {}
 
-    private DiskAutoSnapshotAddOn() {
-        this.snapshotTimeOfDay = null;
+    private DiskAutoSnapshotAddOn(DiskAutoSnapshotAddOn $) {
+        this.snapshotTimeOfDay = $.snapshotTimeOfDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskAutoSnapshotAddOn defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String snapshotTimeOfDay;
+        private DiskAutoSnapshotAddOn $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskAutoSnapshotAddOn();
         }
 
         public Builder(DiskAutoSnapshotAddOn defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.snapshotTimeOfDay = defaults.snapshotTimeOfDay;
+            $ = new DiskAutoSnapshotAddOn(Objects.requireNonNull(defaults));
         }
 
         public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
-            this.snapshotTimeOfDay = snapshotTimeOfDay;
+            $.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
-        }        public DiskAutoSnapshotAddOn build() {
-            return new DiskAutoSnapshotAddOn(snapshotTimeOfDay);
+        }
+
+        public DiskAutoSnapshotAddOn build() {
+            return $;
         }
     }
+
 }

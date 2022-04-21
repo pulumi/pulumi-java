@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigArgs;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="adaptiveProtectionConfig")
-      private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
+    private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
-    public Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig() {
-        return this.adaptiveProtectionConfig == null ? Codegen.empty() : this.adaptiveProtectionConfig;
+    public Optional<Output<SecurityPolicyAdaptiveProtectionConfigArgs>> adaptiveProtectionConfig() {
+        return Optional.ofNullable(this.adaptiveProtectionConfig);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -70,105 +70,92 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
+    private @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
-    public Output<List<SecurityPolicyRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<SecurityPolicyRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public SecurityPolicyArgs(
-        @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
-        this.adaptiveProtectionConfig = adaptiveProtectionConfig;
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.rules = rules;
-    }
+    private SecurityPolicyArgs() {}
 
-    private SecurityPolicyArgs() {
-        this.adaptiveProtectionConfig = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rules = Codegen.empty();
+    private SecurityPolicyArgs(SecurityPolicyArgs $) {
+        this.adaptiveProtectionConfig = $.adaptiveProtectionConfig;
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
+        private SecurityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyArgs();
         }
 
         public Builder(SecurityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adaptiveProtectionConfig = defaults.adaptiveProtectionConfig;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rules = defaults.rules;
+            $ = new SecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adaptiveProtectionConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = adaptiveProtectionConfig;
+            $.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
-        public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = Codegen.ofNullable(adaptiveProtectionConfig);
-            return this;
+
+        public Builder adaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
+            return adaptiveProtectionConfig(Output.of(adaptiveProtectionConfig));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<SecurityPolicyRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<SecurityPolicyRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(SecurityPolicyRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public SecurityPolicyArgs build() {
-            return new SecurityPolicyArgs(adaptiveProtectionConfig, description, name, project, rules);
+        }
+
+        public SecurityPolicyArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class FlexibleAppVersionDeploymentFileArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -31,10 +31,10 @@ public final class FlexibleAppVersionDeploymentFileArgs extends com.pulumi.resou
      * 
      */
     @Import(name="sha1Sum")
-      private final @Nullable Output<String> sha1Sum;
+    private @Nullable Output<String> sha1Sum;
 
-    public Output<String> sha1Sum() {
-        return this.sha1Sum == null ? Codegen.empty() : this.sha1Sum;
+    public Optional<Output<String>> sha1Sum() {
+        return Optional.ofNullable(this.sha1Sum);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class FlexibleAppVersionDeploymentFileArgs extends com.pulumi.resou
      * 
      */
     @Import(name="sourceUrl", required=true)
-      private final Output<String> sourceUrl;
+    private Output<String> sourceUrl;
 
     public Output<String> sourceUrl() {
         return this.sourceUrl;
     }
 
-    public FlexibleAppVersionDeploymentFileArgs(
-        Output<String> name,
-        @Nullable Output<String> sha1Sum,
-        Output<String> sourceUrl) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.sha1Sum = sha1Sum;
-        this.sourceUrl = Objects.requireNonNull(sourceUrl, "expected parameter 'sourceUrl' to be non-null");
-    }
+    private FlexibleAppVersionDeploymentFileArgs() {}
 
-    private FlexibleAppVersionDeploymentFileArgs() {
-        this.name = Codegen.empty();
-        this.sha1Sum = Codegen.empty();
-        this.sourceUrl = Codegen.empty();
+    private FlexibleAppVersionDeploymentFileArgs(FlexibleAppVersionDeploymentFileArgs $) {
+        this.name = $.name;
+        this.sha1Sum = $.sha1Sum;
+        this.sourceUrl = $.sourceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionDeploymentFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<String> sha1Sum;
-        private Output<String> sourceUrl;
+        private FlexibleAppVersionDeploymentFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionDeploymentFileArgs();
         }
 
         public Builder(FlexibleAppVersionDeploymentFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sha1Sum = defaults.sha1Sum;
-    	      this.sourceUrl = defaults.sourceUrl;
+            $ = new FlexibleAppVersionDeploymentFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder sha1Sum(@Nullable Output<String> sha1Sum) {
-            this.sha1Sum = sha1Sum;
+            $.sha1Sum = sha1Sum;
             return this;
         }
-        public Builder sha1Sum(@Nullable String sha1Sum) {
-            this.sha1Sum = Codegen.ofNullable(sha1Sum);
-            return this;
+
+        public Builder sha1Sum(String sha1Sum) {
+            return sha1Sum(Output.of(sha1Sum));
         }
+
         public Builder sourceUrl(Output<String> sourceUrl) {
-            this.sourceUrl = Objects.requireNonNull(sourceUrl);
+            $.sourceUrl = sourceUrl;
             return this;
         }
+
         public Builder sourceUrl(String sourceUrl) {
-            this.sourceUrl = Output.of(Objects.requireNonNull(sourceUrl));
-            return this;
-        }        public FlexibleAppVersionDeploymentFileArgs build() {
-            return new FlexibleAppVersionDeploymentFileArgs(name, sha1Sum, sourceUrl);
+            return sourceUrl(Output.of(sourceUrl));
+        }
+
+        public FlexibleAppVersionDeploymentFileArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sourceUrl = Objects.requireNonNull($.sourceUrl, "expected parameter 'sourceUrl' to be non-null");
+            return $;
         }
     }
+
 }

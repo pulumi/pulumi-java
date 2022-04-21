@@ -24,45 +24,44 @@ public final class DataSourceSslProperties extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="disableSsl")
-      private final @Nullable Boolean disableSsl;
+    private @Nullable Boolean disableSsl;
 
     public Optional<Boolean> disableSsl() {
-        return this.disableSsl == null ? Optional.empty() : Optional.ofNullable(this.disableSsl);
+        return Optional.ofNullable(this.disableSsl);
     }
 
-    public DataSourceSslProperties(@Nullable Boolean disableSsl) {
-        this.disableSsl = disableSsl;
-    }
+    private DataSourceSslProperties() {}
 
-    private DataSourceSslProperties() {
-        this.disableSsl = null;
+    private DataSourceSslProperties(DataSourceSslProperties $) {
+        this.disableSsl = $.disableSsl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSslProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean disableSsl;
+        private DataSourceSslProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSslProperties();
         }
 
         public Builder(DataSourceSslProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableSsl = defaults.disableSsl;
+            $ = new DataSourceSslProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder disableSsl(@Nullable Boolean disableSsl) {
-            this.disableSsl = disableSsl;
+            $.disableSsl = disableSsl;
             return this;
-        }        public DataSourceSslProperties build() {
-            return new DataSourceSslProperties(disableSsl);
+        }
+
+        public DataSourceSslProperties build() {
+            return $;
         }
     }
+
 }

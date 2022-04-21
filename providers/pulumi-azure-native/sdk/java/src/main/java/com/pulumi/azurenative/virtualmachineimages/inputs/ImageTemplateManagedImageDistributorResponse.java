@@ -25,10 +25,10 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
      * 
      */
     @Import(name="artifactTags")
-      private final @Nullable Map<String,String> artifactTags;
+    private @Nullable Map<String,String> artifactTags;
 
-    public Map<String,String> artifactTags() {
-        return this.artifactTags == null ? Map.of() : this.artifactTags;
+    public Optional<Map<String,String>> artifactTags() {
+        return Optional.ofNullable(this.artifactTags);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
      * 
      */
     @Import(name="imageId", required=true)
-      private final String imageId;
+    private String imageId;
 
     public String imageId() {
         return this.imageId;
@@ -47,7 +47,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -58,7 +58,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
      * 
      */
     @Import(name="runOutputName", required=true)
-      private final String runOutputName;
+    private String runOutputName;
 
     public String runOutputName() {
         return this.runOutputName;
@@ -70,82 +70,72 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ImageTemplateManagedImageDistributorResponse(
-        @Nullable Map<String,String> artifactTags,
-        String imageId,
-        String location,
-        String runOutputName,
-        String type) {
-        this.artifactTags = artifactTags;
-        this.imageId = Objects.requireNonNull(imageId, "expected parameter 'imageId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ImageTemplateManagedImageDistributorResponse() {}
 
-    private ImageTemplateManagedImageDistributorResponse() {
-        this.artifactTags = Map.of();
-        this.imageId = null;
-        this.location = null;
-        this.runOutputName = null;
-        this.type = null;
+    private ImageTemplateManagedImageDistributorResponse(ImageTemplateManagedImageDistributorResponse $) {
+        this.artifactTags = $.artifactTags;
+        this.imageId = $.imageId;
+        this.location = $.location;
+        this.runOutputName = $.runOutputName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateManagedImageDistributorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> artifactTags;
-        private String imageId;
-        private String location;
-        private String runOutputName;
-        private String type;
+        private ImageTemplateManagedImageDistributorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateManagedImageDistributorResponse();
         }
 
         public Builder(ImageTemplateManagedImageDistributorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactTags = defaults.artifactTags;
-    	      this.imageId = defaults.imageId;
-    	      this.location = defaults.location;
-    	      this.runOutputName = defaults.runOutputName;
-    	      this.type = defaults.type;
+            $ = new ImageTemplateManagedImageDistributorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
-            this.artifactTags = artifactTags;
+            $.artifactTags = artifactTags;
             return this;
         }
+
         public Builder imageId(String imageId) {
-            this.imageId = Objects.requireNonNull(imageId);
+            $.imageId = imageId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder runOutputName(String runOutputName) {
-            this.runOutputName = Objects.requireNonNull(runOutputName);
+            $.runOutputName = runOutputName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ImageTemplateManagedImageDistributorResponse build() {
-            return new ImageTemplateManagedImageDistributorResponse(artifactTags, imageId, location, runOutputName, type);
+        }
+
+        public ImageTemplateManagedImageDistributorResponse build() {
+            $.imageId = Objects.requireNonNull($.imageId, "expected parameter 'imageId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.runOutputName = Objects.requireNonNull($.runOutputName, "expected parameter 'runOutputName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

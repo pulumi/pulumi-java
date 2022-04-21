@@ -11,12 +11,12 @@ import com.pulumi.azurenative.operationalinsights.inputs.WorkspaceSkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="features")
-      private final @Nullable Output<WorkspaceFeaturesArgs> features;
+    private @Nullable Output<WorkspaceFeaturesArgs> features;
 
-    public Output<WorkspaceFeaturesArgs> features() {
-        return this.features == null ? Codegen.empty() : this.features;
+    public Optional<Output<WorkspaceFeaturesArgs>> features() {
+        return Optional.ofNullable(this.features);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceCmkForQuery")
-      private final @Nullable Output<Boolean> forceCmkForQuery;
+    private @Nullable Output<Boolean> forceCmkForQuery;
 
-    public Output<Boolean> forceCmkForQuery() {
-        return this.forceCmkForQuery == null ? Codegen.empty() : this.forceCmkForQuery;
+    public Optional<Output<Boolean>> forceCmkForQuery() {
+        return Optional.ofNullable(this.forceCmkForQuery);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState;
+    private @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState;
 
-    public Output<Either<String,WorkspaceEntityStatus>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,WorkspaceEntityStatus>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccessForIngestion")
-      private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
+    private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
 
-    public Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion() {
-        return this.publicNetworkAccessForIngestion == null ? Codegen.empty() : this.publicNetworkAccessForIngestion;
+    public Optional<Output<Either<String,PublicNetworkAccessType>>> publicNetworkAccessForIngestion() {
+        return Optional.ofNullable(this.publicNetworkAccessForIngestion);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccessForQuery")
-      private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
+    private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
 
-    public Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery() {
-        return this.publicNetworkAccessForQuery == null ? Codegen.empty() : this.publicNetworkAccessForQuery;
+    public Optional<Output<Either<String,PublicNetworkAccessType>>> publicNetworkAccessForQuery() {
+        return Optional.ofNullable(this.publicNetworkAccessForQuery);
     }
 
     /**
@@ -106,7 +106,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -117,10 +117,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionInDays")
-      private final @Nullable Output<Integer> retentionInDays;
+    private @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> retentionInDays() {
-        return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
+    public Optional<Output<Integer>> retentionInDays() {
+        return Optional.ofNullable(this.retentionInDays);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<WorkspaceSkuArgs> sku;
+    private @Nullable Output<WorkspaceSkuArgs> sku;
 
-    public Output<WorkspaceSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<WorkspaceSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceCapping")
-      private final @Nullable Output<WorkspaceCappingArgs> workspaceCapping;
+    private @Nullable Output<WorkspaceCappingArgs> workspaceCapping;
 
-    public Output<WorkspaceCappingArgs> workspaceCapping() {
-        return this.workspaceCapping == null ? Codegen.empty() : this.workspaceCapping;
+    public Optional<Output<WorkspaceCappingArgs>> workspaceCapping() {
+        return Optional.ofNullable(this.workspaceCapping);
     }
 
     /**
@@ -161,206 +161,169 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName")
-      private final @Nullable Output<String> workspaceName;
+    private @Nullable Output<String> workspaceName;
 
-    public Output<String> workspaceName() {
-        return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
+    public Optional<Output<String>> workspaceName() {
+        return Optional.ofNullable(this.workspaceName);
     }
 
-    public WorkspaceArgs(
-        @Nullable Output<String> eTag,
-        @Nullable Output<WorkspaceFeaturesArgs> features,
-        @Nullable Output<Boolean> forceCmkForQuery,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState,
-        @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion,
-        @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery,
-        Output<String> resourceGroupName,
-        @Nullable Output<Integer> retentionInDays,
-        @Nullable Output<WorkspaceSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<WorkspaceCappingArgs> workspaceCapping,
-        @Nullable Output<String> workspaceName) {
-        this.eTag = eTag;
-        this.features = features;
-        this.forceCmkForQuery = forceCmkForQuery;
-        this.location = location;
-        this.provisioningState = provisioningState;
-        this.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
-        this.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.retentionInDays = retentionInDays;
-        this.sku = sku;
-        this.tags = tags;
-        this.workspaceCapping = workspaceCapping;
-        this.workspaceName = workspaceName;
-    }
+    private WorkspaceArgs() {}
 
-    private WorkspaceArgs() {
-        this.eTag = Codegen.empty();
-        this.features = Codegen.empty();
-        this.forceCmkForQuery = Codegen.empty();
-        this.location = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.publicNetworkAccessForIngestion = Codegen.empty();
-        this.publicNetworkAccessForQuery = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.retentionInDays = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspaceCapping = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private WorkspaceArgs(WorkspaceArgs $) {
+        this.eTag = $.eTag;
+        this.features = $.features;
+        this.forceCmkForQuery = $.forceCmkForQuery;
+        this.location = $.location;
+        this.provisioningState = $.provisioningState;
+        this.publicNetworkAccessForIngestion = $.publicNetworkAccessForIngestion;
+        this.publicNetworkAccessForQuery = $.publicNetworkAccessForQuery;
+        this.resourceGroupName = $.resourceGroupName;
+        this.retentionInDays = $.retentionInDays;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.workspaceCapping = $.workspaceCapping;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eTag;
-        private @Nullable Output<WorkspaceFeaturesArgs> features;
-        private @Nullable Output<Boolean> forceCmkForQuery;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState;
-        private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
-        private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Integer> retentionInDays;
-        private @Nullable Output<WorkspaceSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<WorkspaceCappingArgs> workspaceCapping;
-        private @Nullable Output<String> workspaceName;
+        private WorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceArgs();
         }
 
         public Builder(WorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eTag = defaults.eTag;
-    	      this.features = defaults.features;
-    	      this.forceCmkForQuery = defaults.forceCmkForQuery;
-    	      this.location = defaults.location;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicNetworkAccessForIngestion = defaults.publicNetworkAccessForIngestion;
-    	      this.publicNetworkAccessForQuery = defaults.publicNetworkAccessForQuery;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.retentionInDays = defaults.retentionInDays;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.workspaceCapping = defaults.workspaceCapping;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder features(@Nullable Output<WorkspaceFeaturesArgs> features) {
-            this.features = features;
+            $.features = features;
             return this;
         }
-        public Builder features(@Nullable WorkspaceFeaturesArgs features) {
-            this.features = Codegen.ofNullable(features);
-            return this;
+
+        public Builder features(WorkspaceFeaturesArgs features) {
+            return features(Output.of(features));
         }
+
         public Builder forceCmkForQuery(@Nullable Output<Boolean> forceCmkForQuery) {
-            this.forceCmkForQuery = forceCmkForQuery;
+            $.forceCmkForQuery = forceCmkForQuery;
             return this;
         }
-        public Builder forceCmkForQuery(@Nullable Boolean forceCmkForQuery) {
-            this.forceCmkForQuery = Codegen.ofNullable(forceCmkForQuery);
-            return this;
+
+        public Builder forceCmkForQuery(Boolean forceCmkForQuery) {
+            return forceCmkForQuery(Output.of(forceCmkForQuery));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,WorkspaceEntityStatus> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,WorkspaceEntityStatus> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder publicNetworkAccessForIngestion(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion) {
-            this.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
+            $.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
             return this;
         }
-        public Builder publicNetworkAccessForIngestion(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccessForIngestion) {
-            this.publicNetworkAccessForIngestion = Codegen.ofNullable(publicNetworkAccessForIngestion);
-            return this;
+
+        public Builder publicNetworkAccessForIngestion(Either<String,PublicNetworkAccessType> publicNetworkAccessForIngestion) {
+            return publicNetworkAccessForIngestion(Output.of(publicNetworkAccessForIngestion));
         }
+
         public Builder publicNetworkAccessForQuery(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery) {
-            this.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
+            $.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
             return this;
         }
-        public Builder publicNetworkAccessForQuery(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccessForQuery) {
-            this.publicNetworkAccessForQuery = Codegen.ofNullable(publicNetworkAccessForQuery);
-            return this;
+
+        public Builder publicNetworkAccessForQuery(Either<String,PublicNetworkAccessType> publicNetworkAccessForQuery) {
+            return publicNetworkAccessForQuery(Output.of(publicNetworkAccessForQuery));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
-            this.retentionInDays = retentionInDays;
+            $.retentionInDays = retentionInDays;
             return this;
         }
-        public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Codegen.ofNullable(retentionInDays);
-            return this;
+
+        public Builder retentionInDays(Integer retentionInDays) {
+            return retentionInDays(Output.of(retentionInDays));
         }
+
         public Builder sku(@Nullable Output<WorkspaceSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable WorkspaceSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(WorkspaceSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workspaceCapping(@Nullable Output<WorkspaceCappingArgs> workspaceCapping) {
-            this.workspaceCapping = workspaceCapping;
+            $.workspaceCapping = workspaceCapping;
             return this;
         }
-        public Builder workspaceCapping(@Nullable WorkspaceCappingArgs workspaceCapping) {
-            this.workspaceCapping = Codegen.ofNullable(workspaceCapping);
-            return this;
+
+        public Builder workspaceCapping(WorkspaceCappingArgs workspaceCapping) {
+            return workspaceCapping(Output.of(workspaceCapping));
         }
+
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
-            this.workspaceName = workspaceName;
+            $.workspaceName = workspaceName;
             return this;
         }
-        public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Codegen.ofNullable(workspaceName);
-            return this;
-        }        public WorkspaceArgs build() {
-            return new WorkspaceArgs(eTag, features, forceCmkForQuery, location, provisioningState, publicNetworkAccessForIngestion, publicNetworkAccessForQuery, resourceGroupName, retentionInDays, sku, tags, workspaceCapping, workspaceName);
+
+        public Builder workspaceName(String workspaceName) {
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public WorkspaceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

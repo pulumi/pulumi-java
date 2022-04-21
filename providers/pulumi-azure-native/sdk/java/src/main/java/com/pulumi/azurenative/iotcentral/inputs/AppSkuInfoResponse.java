@@ -21,45 +21,45 @@ public final class AppSkuInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public AppSkuInfoResponse(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private AppSkuInfoResponse() {}
 
-    private AppSkuInfoResponse() {
-        this.name = null;
+    private AppSkuInfoResponse(AppSkuInfoResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppSkuInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private AppSkuInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppSkuInfoResponse();
         }
 
         public Builder(AppSkuInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new AppSkuInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public AppSkuInfoResponse build() {
-            return new AppSkuInfoResponse(name);
+        }
+
+        public AppSkuInfoResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

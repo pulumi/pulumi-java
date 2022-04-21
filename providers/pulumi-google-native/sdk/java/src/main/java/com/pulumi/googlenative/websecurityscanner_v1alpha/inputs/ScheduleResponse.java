@@ -22,7 +22,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="intervalDurationDays", required=true)
-      private final Integer intervalDurationDays;
+    private Integer intervalDurationDays;
 
     public Integer intervalDurationDays() {
         return this.intervalDurationDays;
@@ -33,55 +33,52 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scheduleTime", required=true)
-      private final String scheduleTime;
+    private String scheduleTime;
 
     public String scheduleTime() {
         return this.scheduleTime;
     }
 
-    public ScheduleResponse(
-        Integer intervalDurationDays,
-        String scheduleTime) {
-        this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays, "expected parameter 'intervalDurationDays' to be non-null");
-        this.scheduleTime = Objects.requireNonNull(scheduleTime, "expected parameter 'scheduleTime' to be non-null");
-    }
+    private ScheduleResponse() {}
 
-    private ScheduleResponse() {
-        this.intervalDurationDays = null;
-        this.scheduleTime = null;
+    private ScheduleResponse(ScheduleResponse $) {
+        this.intervalDurationDays = $.intervalDurationDays;
+        this.scheduleTime = $.scheduleTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer intervalDurationDays;
-        private String scheduleTime;
+        private ScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleResponse();
         }
 
         public Builder(ScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intervalDurationDays = defaults.intervalDurationDays;
-    	      this.scheduleTime = defaults.scheduleTime;
+            $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder intervalDurationDays(Integer intervalDurationDays) {
-            this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
+            $.intervalDurationDays = intervalDurationDays;
             return this;
         }
+
         public Builder scheduleTime(String scheduleTime) {
-            this.scheduleTime = Objects.requireNonNull(scheduleTime);
+            $.scheduleTime = scheduleTime;
             return this;
-        }        public ScheduleResponse build() {
-            return new ScheduleResponse(intervalDurationDays, scheduleTime);
+        }
+
+        public ScheduleResponse build() {
+            $.intervalDurationDays = Objects.requireNonNull($.intervalDurationDays, "expected parameter 'intervalDurationDays' to be non-null");
+            $.scheduleTime = Objects.requireNonNull($.scheduleTime, "expected parameter 'scheduleTime' to be non-null");
+            return $;
         }
     }
+
 }

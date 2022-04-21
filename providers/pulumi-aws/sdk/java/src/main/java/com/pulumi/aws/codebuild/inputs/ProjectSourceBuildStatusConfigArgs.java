@@ -5,9 +5,9 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProjectSourceBuildStatusConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<String> context;
+    private @Nullable Output<String> context;
 
-    public Output<String> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<String>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ProjectSourceBuildStatusConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetUrl")
-      private final @Nullable Output<String> targetUrl;
+    private @Nullable Output<String> targetUrl;
 
-    public Output<String> targetUrl() {
-        return this.targetUrl == null ? Codegen.empty() : this.targetUrl;
+    public Optional<Output<String>> targetUrl() {
+        return Optional.ofNullable(this.targetUrl);
     }
 
-    public ProjectSourceBuildStatusConfigArgs(
-        @Nullable Output<String> context,
-        @Nullable Output<String> targetUrl) {
-        this.context = context;
-        this.targetUrl = targetUrl;
-    }
+    private ProjectSourceBuildStatusConfigArgs() {}
 
-    private ProjectSourceBuildStatusConfigArgs() {
-        this.context = Codegen.empty();
-        this.targetUrl = Codegen.empty();
+    private ProjectSourceBuildStatusConfigArgs(ProjectSourceBuildStatusConfigArgs $) {
+        this.context = $.context;
+        this.targetUrl = $.targetUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectSourceBuildStatusConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> context;
-        private @Nullable Output<String> targetUrl;
+        private ProjectSourceBuildStatusConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectSourceBuildStatusConfigArgs();
         }
 
         public Builder(ProjectSourceBuildStatusConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.targetUrl = defaults.targetUrl;
+            $ = new ProjectSourceBuildStatusConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder context(@Nullable Output<String> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable String context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(String context) {
+            return context(Output.of(context));
         }
+
         public Builder targetUrl(@Nullable Output<String> targetUrl) {
-            this.targetUrl = targetUrl;
+            $.targetUrl = targetUrl;
             return this;
         }
-        public Builder targetUrl(@Nullable String targetUrl) {
-            this.targetUrl = Codegen.ofNullable(targetUrl);
-            return this;
-        }        public ProjectSourceBuildStatusConfigArgs build() {
-            return new ProjectSourceBuildStatusConfigArgs(context, targetUrl);
+
+        public Builder targetUrl(String targetUrl) {
+            return targetUrl(Output.of(targetUrl));
+        }
+
+        public ProjectSourceBuildStatusConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class SourceRepositoryResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deployedUrl", required=true)
-      private final String deployedUrl;
+    private String deployedUrl;
 
     public String deployedUrl() {
         return this.deployedUrl;
@@ -32,55 +32,52 @@ public final class SourceRepositoryResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public SourceRepositoryResponse(
-        String deployedUrl,
-        String url) {
-        this.deployedUrl = Objects.requireNonNull(deployedUrl, "expected parameter 'deployedUrl' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private SourceRepositoryResponse() {}
 
-    private SourceRepositoryResponse() {
-        this.deployedUrl = null;
-        this.url = null;
+    private SourceRepositoryResponse(SourceRepositoryResponse $) {
+        this.deployedUrl = $.deployedUrl;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceRepositoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deployedUrl;
-        private String url;
+        private SourceRepositoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceRepositoryResponse();
         }
 
         public Builder(SourceRepositoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deployedUrl = defaults.deployedUrl;
-    	      this.url = defaults.url;
+            $ = new SourceRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deployedUrl(String deployedUrl) {
-            this.deployedUrl = Objects.requireNonNull(deployedUrl);
+            $.deployedUrl = deployedUrl;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public SourceRepositoryResponse build() {
-            return new SourceRepositoryResponse(deployedUrl, url);
+        }
+
+        public SourceRepositoryResponse build() {
+            $.deployedUrl = Objects.requireNonNull($.deployedUrl, "expected parameter 'deployedUrl' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

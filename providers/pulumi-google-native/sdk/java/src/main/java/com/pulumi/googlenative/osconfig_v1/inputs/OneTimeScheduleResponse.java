@@ -21,45 +21,45 @@ public final class OneTimeScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="executeTime", required=true)
-      private final String executeTime;
+    private String executeTime;
 
     public String executeTime() {
         return this.executeTime;
     }
 
-    public OneTimeScheduleResponse(String executeTime) {
-        this.executeTime = Objects.requireNonNull(executeTime, "expected parameter 'executeTime' to be non-null");
-    }
+    private OneTimeScheduleResponse() {}
 
-    private OneTimeScheduleResponse() {
-        this.executeTime = null;
+    private OneTimeScheduleResponse(OneTimeScheduleResponse $) {
+        this.executeTime = $.executeTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OneTimeScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String executeTime;
+        private OneTimeScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OneTimeScheduleResponse();
         }
 
         public Builder(OneTimeScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executeTime = defaults.executeTime;
+            $ = new OneTimeScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder executeTime(String executeTime) {
-            this.executeTime = Objects.requireNonNull(executeTime);
+            $.executeTime = executeTime;
             return this;
-        }        public OneTimeScheduleResponse build() {
-            return new OneTimeScheduleResponse(executeTime);
+        }
+
+        public OneTimeScheduleResponse build() {
+            $.executeTime = Objects.requireNonNull($.executeTime, "expected parameter 'executeTime' to be non-null");
+            return $;
         }
     }
+
 }

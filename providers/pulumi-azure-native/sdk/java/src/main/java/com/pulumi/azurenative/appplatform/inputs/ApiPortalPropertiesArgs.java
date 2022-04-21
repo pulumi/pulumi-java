@@ -6,11 +6,11 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.SsoPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ApiPortalPropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="gatewayIds")
-      private final @Nullable Output<List<String>> gatewayIds;
+    private @Nullable Output<List<String>> gatewayIds;
 
-    public Output<List<String>> gatewayIds() {
-        return this.gatewayIds == null ? Codegen.empty() : this.gatewayIds;
+    public Optional<Output<List<String>>> gatewayIds() {
+        return Optional.ofNullable(this.gatewayIds);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ApiPortalPropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="httpsOnly")
-      private final @Nullable Output<Boolean> httpsOnly;
+    private @Nullable Output<Boolean> httpsOnly;
 
-    public Output<Boolean> httpsOnly() {
-        return this.httpsOnly == null ? Codegen.empty() : this.httpsOnly;
+    public Optional<Output<Boolean>> httpsOnly() {
+        return Optional.ofNullable(this.httpsOnly);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ApiPortalPropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="public")
-      private final @Nullable Output<Boolean> public_;
+    private @Nullable Output<Boolean> public_;
 
-    public Output<Boolean> public_() {
-        return this.public_ == null ? Codegen.empty() : this.public_;
+    public Optional<Output<Boolean>> public_() {
+        return Optional.ofNullable(this.public_);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApiPortalPropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sourceUrls")
-      private final @Nullable Output<List<String>> sourceUrls;
+    private @Nullable Output<List<String>> sourceUrls;
 
-    public Output<List<String>> sourceUrls() {
-        return this.sourceUrls == null ? Codegen.empty() : this.sourceUrls;
+    public Optional<Output<List<String>>> sourceUrls() {
+        return Optional.ofNullable(this.sourceUrls);
     }
 
     /**
@@ -71,108 +71,96 @@ public final class ApiPortalPropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ssoProperties")
-      private final @Nullable Output<SsoPropertiesArgs> ssoProperties;
+    private @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
-    public Output<SsoPropertiesArgs> ssoProperties() {
-        return this.ssoProperties == null ? Codegen.empty() : this.ssoProperties;
+    public Optional<Output<SsoPropertiesArgs>> ssoProperties() {
+        return Optional.ofNullable(this.ssoProperties);
     }
 
-    public ApiPortalPropertiesArgs(
-        @Nullable Output<List<String>> gatewayIds,
-        @Nullable Output<Boolean> httpsOnly,
-        @Nullable Output<Boolean> public_,
-        @Nullable Output<List<String>> sourceUrls,
-        @Nullable Output<SsoPropertiesArgs> ssoProperties) {
-        this.gatewayIds = gatewayIds;
-        this.httpsOnly = httpsOnly;
-        this.public_ = public_;
-        this.sourceUrls = sourceUrls;
-        this.ssoProperties = ssoProperties;
-    }
+    private ApiPortalPropertiesArgs() {}
 
-    private ApiPortalPropertiesArgs() {
-        this.gatewayIds = Codegen.empty();
-        this.httpsOnly = Codegen.empty();
-        this.public_ = Codegen.empty();
-        this.sourceUrls = Codegen.empty();
-        this.ssoProperties = Codegen.empty();
+    private ApiPortalPropertiesArgs(ApiPortalPropertiesArgs $) {
+        this.gatewayIds = $.gatewayIds;
+        this.httpsOnly = $.httpsOnly;
+        this.public_ = $.public_;
+        this.sourceUrls = $.sourceUrls;
+        this.ssoProperties = $.ssoProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiPortalPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> gatewayIds;
-        private @Nullable Output<Boolean> httpsOnly;
-        private @Nullable Output<Boolean> public_;
-        private @Nullable Output<List<String>> sourceUrls;
-        private @Nullable Output<SsoPropertiesArgs> ssoProperties;
+        private ApiPortalPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiPortalPropertiesArgs();
         }
 
         public Builder(ApiPortalPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayIds = defaults.gatewayIds;
-    	      this.httpsOnly = defaults.httpsOnly;
-    	      this.public_ = defaults.public_;
-    	      this.sourceUrls = defaults.sourceUrls;
-    	      this.ssoProperties = defaults.ssoProperties;
+            $ = new ApiPortalPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayIds(@Nullable Output<List<String>> gatewayIds) {
-            this.gatewayIds = gatewayIds;
+            $.gatewayIds = gatewayIds;
             return this;
         }
-        public Builder gatewayIds(@Nullable List<String> gatewayIds) {
-            this.gatewayIds = Codegen.ofNullable(gatewayIds);
-            return this;
+
+        public Builder gatewayIds(List<String> gatewayIds) {
+            return gatewayIds(Output.of(gatewayIds));
         }
+
         public Builder gatewayIds(String... gatewayIds) {
             return gatewayIds(List.of(gatewayIds));
         }
+
         public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
-            this.httpsOnly = httpsOnly;
+            $.httpsOnly = httpsOnly;
             return this;
         }
-        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
-            this.httpsOnly = Codegen.ofNullable(httpsOnly);
-            return this;
+
+        public Builder httpsOnly(Boolean httpsOnly) {
+            return httpsOnly(Output.of(httpsOnly));
         }
+
         public Builder public_(@Nullable Output<Boolean> public_) {
-            this.public_ = public_;
+            $.public_ = public_;
             return this;
         }
-        public Builder public_(@Nullable Boolean public_) {
-            this.public_ = Codegen.ofNullable(public_);
-            return this;
+
+        public Builder public_(Boolean public_) {
+            return public_(Output.of(public_));
         }
+
         public Builder sourceUrls(@Nullable Output<List<String>> sourceUrls) {
-            this.sourceUrls = sourceUrls;
+            $.sourceUrls = sourceUrls;
             return this;
         }
-        public Builder sourceUrls(@Nullable List<String> sourceUrls) {
-            this.sourceUrls = Codegen.ofNullable(sourceUrls);
-            return this;
+
+        public Builder sourceUrls(List<String> sourceUrls) {
+            return sourceUrls(Output.of(sourceUrls));
         }
+
         public Builder sourceUrls(String... sourceUrls) {
             return sourceUrls(List.of(sourceUrls));
         }
+
         public Builder ssoProperties(@Nullable Output<SsoPropertiesArgs> ssoProperties) {
-            this.ssoProperties = ssoProperties;
+            $.ssoProperties = ssoProperties;
             return this;
         }
-        public Builder ssoProperties(@Nullable SsoPropertiesArgs ssoProperties) {
-            this.ssoProperties = Codegen.ofNullable(ssoProperties);
-            return this;
-        }        public ApiPortalPropertiesArgs build() {
-            return new ApiPortalPropertiesArgs(gatewayIds, httpsOnly, public_, sourceUrls, ssoProperties);
+
+        public Builder ssoProperties(SsoPropertiesArgs ssoProperties) {
+            return ssoProperties(Output.of(ssoProperties));
+        }
+
+        public ApiPortalPropertiesArgs build() {
+            return $;
         }
     }
+
 }

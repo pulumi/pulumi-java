@@ -5,11 +5,11 @@ package com.pulumi.aws.dms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
     public static final ReplicationSubnetGroupState Empty = new ReplicationSubnetGroupState();
 
     @Import(name="replicationSubnetGroupArn")
-      private final @Nullable Output<String> replicationSubnetGroupArn;
+    private @Nullable Output<String> replicationSubnetGroupArn;
 
-    public Output<String> replicationSubnetGroupArn() {
-        return this.replicationSubnetGroupArn == null ? Codegen.empty() : this.replicationSubnetGroupArn;
+    public Optional<Output<String>> replicationSubnetGroupArn() {
+        return Optional.ofNullable(this.replicationSubnetGroupArn);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="replicationSubnetGroupDescription")
-      private final @Nullable Output<String> replicationSubnetGroupDescription;
+    private @Nullable Output<String> replicationSubnetGroupDescription;
 
-    public Output<String> replicationSubnetGroupDescription() {
-        return this.replicationSubnetGroupDescription == null ? Codegen.empty() : this.replicationSubnetGroupDescription;
+    public Optional<Output<String>> replicationSubnetGroupDescription() {
+        return Optional.ofNullable(this.replicationSubnetGroupDescription);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="replicationSubnetGroupId")
-      private final @Nullable Output<String> replicationSubnetGroupId;
+    private @Nullable Output<String> replicationSubnetGroupId;
 
-    public Output<String> replicationSubnetGroupId() {
-        return this.replicationSubnetGroupId == null ? Codegen.empty() : this.replicationSubnetGroupId;
+    public Optional<Output<String>> replicationSubnetGroupId() {
+        return Optional.ofNullable(this.replicationSubnetGroupId);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -84,131 +84,112 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public ReplicationSubnetGroupState(
-        @Nullable Output<String> replicationSubnetGroupArn,
-        @Nullable Output<String> replicationSubnetGroupDescription,
-        @Nullable Output<String> replicationSubnetGroupId,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> vpcId) {
-        this.replicationSubnetGroupArn = replicationSubnetGroupArn;
-        this.replicationSubnetGroupDescription = replicationSubnetGroupDescription;
-        this.replicationSubnetGroupId = replicationSubnetGroupId;
-        this.subnetIds = subnetIds;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpcId = vpcId;
-    }
+    private ReplicationSubnetGroupState() {}
 
-    private ReplicationSubnetGroupState() {
-        this.replicationSubnetGroupArn = Codegen.empty();
-        this.replicationSubnetGroupDescription = Codegen.empty();
-        this.replicationSubnetGroupId = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private ReplicationSubnetGroupState(ReplicationSubnetGroupState $) {
+        this.replicationSubnetGroupArn = $.replicationSubnetGroupArn;
+        this.replicationSubnetGroupDescription = $.replicationSubnetGroupDescription;
+        this.replicationSubnetGroupId = $.replicationSubnetGroupId;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationSubnetGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> replicationSubnetGroupArn;
-        private @Nullable Output<String> replicationSubnetGroupDescription;
-        private @Nullable Output<String> replicationSubnetGroupId;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> vpcId;
+        private ReplicationSubnetGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationSubnetGroupState();
         }
 
         public Builder(ReplicationSubnetGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicationSubnetGroupArn = defaults.replicationSubnetGroupArn;
-    	      this.replicationSubnetGroupDescription = defaults.replicationSubnetGroupDescription;
-    	      this.replicationSubnetGroupId = defaults.replicationSubnetGroupId;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpcId = defaults.vpcId;
+            $ = new ReplicationSubnetGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder replicationSubnetGroupArn(@Nullable Output<String> replicationSubnetGroupArn) {
-            this.replicationSubnetGroupArn = replicationSubnetGroupArn;
+            $.replicationSubnetGroupArn = replicationSubnetGroupArn;
             return this;
         }
-        public Builder replicationSubnetGroupArn(@Nullable String replicationSubnetGroupArn) {
-            this.replicationSubnetGroupArn = Codegen.ofNullable(replicationSubnetGroupArn);
-            return this;
+
+        public Builder replicationSubnetGroupArn(String replicationSubnetGroupArn) {
+            return replicationSubnetGroupArn(Output.of(replicationSubnetGroupArn));
         }
+
         public Builder replicationSubnetGroupDescription(@Nullable Output<String> replicationSubnetGroupDescription) {
-            this.replicationSubnetGroupDescription = replicationSubnetGroupDescription;
+            $.replicationSubnetGroupDescription = replicationSubnetGroupDescription;
             return this;
         }
-        public Builder replicationSubnetGroupDescription(@Nullable String replicationSubnetGroupDescription) {
-            this.replicationSubnetGroupDescription = Codegen.ofNullable(replicationSubnetGroupDescription);
-            return this;
+
+        public Builder replicationSubnetGroupDescription(String replicationSubnetGroupDescription) {
+            return replicationSubnetGroupDescription(Output.of(replicationSubnetGroupDescription));
         }
+
         public Builder replicationSubnetGroupId(@Nullable Output<String> replicationSubnetGroupId) {
-            this.replicationSubnetGroupId = replicationSubnetGroupId;
+            $.replicationSubnetGroupId = replicationSubnetGroupId;
             return this;
         }
-        public Builder replicationSubnetGroupId(@Nullable String replicationSubnetGroupId) {
-            this.replicationSubnetGroupId = Codegen.ofNullable(replicationSubnetGroupId);
-            return this;
+
+        public Builder replicationSubnetGroupId(String replicationSubnetGroupId) {
+            return replicationSubnetGroupId(Output.of(replicationSubnetGroupId));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public ReplicationSubnetGroupState build() {
-            return new ReplicationSubnetGroupState(replicationSubnetGroupArn, replicationSubnetGroupDescription, replicationSubnetGroupId, subnetIds, tags, tagsAll, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public ReplicationSubnetGroupState build() {
+            return $;
         }
     }
+
 }

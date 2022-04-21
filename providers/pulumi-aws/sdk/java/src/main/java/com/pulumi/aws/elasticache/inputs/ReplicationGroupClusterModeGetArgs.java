@@ -5,9 +5,9 @@ package com.pulumi.aws.elasticache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ReplicationGroupClusterModeGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="numNodeGroups")
-      private final @Nullable Output<Integer> numNodeGroups;
+    private @Nullable Output<Integer> numNodeGroups;
 
-    public Output<Integer> numNodeGroups() {
-        return this.numNodeGroups == null ? Codegen.empty() : this.numNodeGroups;
+    public Optional<Output<Integer>> numNodeGroups() {
+        return Optional.ofNullable(this.numNodeGroups);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class ReplicationGroupClusterModeGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="replicasPerNodeGroup", required=true)
-      private final Output<Integer> replicasPerNodeGroup;
+    private Output<Integer> replicasPerNodeGroup;
 
     public Output<Integer> replicasPerNodeGroup() {
         return this.replicasPerNodeGroup;
     }
 
-    public ReplicationGroupClusterModeGetArgs(
-        @Nullable Output<Integer> numNodeGroups,
-        Output<Integer> replicasPerNodeGroup) {
-        this.numNodeGroups = numNodeGroups;
-        this.replicasPerNodeGroup = Objects.requireNonNull(replicasPerNodeGroup, "expected parameter 'replicasPerNodeGroup' to be non-null");
-    }
+    private ReplicationGroupClusterModeGetArgs() {}
 
-    private ReplicationGroupClusterModeGetArgs() {
-        this.numNodeGroups = Codegen.empty();
-        this.replicasPerNodeGroup = Codegen.empty();
+    private ReplicationGroupClusterModeGetArgs(ReplicationGroupClusterModeGetArgs $) {
+        this.numNodeGroups = $.numNodeGroups;
+        this.replicasPerNodeGroup = $.replicasPerNodeGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationGroupClusterModeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> numNodeGroups;
-        private Output<Integer> replicasPerNodeGroup;
+        private ReplicationGroupClusterModeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationGroupClusterModeGetArgs();
         }
 
         public Builder(ReplicationGroupClusterModeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numNodeGroups = defaults.numNodeGroups;
-    	      this.replicasPerNodeGroup = defaults.replicasPerNodeGroup;
+            $ = new ReplicationGroupClusterModeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numNodeGroups(@Nullable Output<Integer> numNodeGroups) {
-            this.numNodeGroups = numNodeGroups;
+            $.numNodeGroups = numNodeGroups;
             return this;
         }
-        public Builder numNodeGroups(@Nullable Integer numNodeGroups) {
-            this.numNodeGroups = Codegen.ofNullable(numNodeGroups);
-            return this;
+
+        public Builder numNodeGroups(Integer numNodeGroups) {
+            return numNodeGroups(Output.of(numNodeGroups));
         }
+
         public Builder replicasPerNodeGroup(Output<Integer> replicasPerNodeGroup) {
-            this.replicasPerNodeGroup = Objects.requireNonNull(replicasPerNodeGroup);
+            $.replicasPerNodeGroup = replicasPerNodeGroup;
             return this;
         }
+
         public Builder replicasPerNodeGroup(Integer replicasPerNodeGroup) {
-            this.replicasPerNodeGroup = Output.of(Objects.requireNonNull(replicasPerNodeGroup));
-            return this;
-        }        public ReplicationGroupClusterModeGetArgs build() {
-            return new ReplicationGroupClusterModeGetArgs(numNodeGroups, replicasPerNodeGroup);
+            return replicasPerNodeGroup(Output.of(replicasPerNodeGroup));
+        }
+
+        public ReplicationGroupClusterModeGetArgs build() {
+            $.replicasPerNodeGroup = Objects.requireNonNull($.replicasPerNodeGroup, "expected parameter 'replicasPerNodeGroup' to be non-null");
+            return $;
         }
     }
+
 }

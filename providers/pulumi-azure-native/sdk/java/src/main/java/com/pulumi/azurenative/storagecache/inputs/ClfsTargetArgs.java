@@ -5,9 +5,9 @@ package com.pulumi.azurenative.storagecache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ClfsTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public ClfsTargetArgs(@Nullable Output<String> target) {
-        this.target = target;
-    }
+    private ClfsTargetArgs() {}
 
-    private ClfsTargetArgs() {
-        this.target = Codegen.empty();
+    private ClfsTargetArgs(ClfsTargetArgs $) {
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClfsTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> target;
+        private ClfsTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClfsTargetArgs();
         }
 
         public Builder(ClfsTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
+            $ = new ClfsTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public ClfsTargetArgs build() {
-            return new ClfsTargetArgs(target);
+
+        public Builder target(String target) {
+            return target(Output.of(target));
+        }
+
+        public ClfsTargetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
      * 
      */
     @Import(name="rangeEnd", required=true)
-      private final Output<Integer> rangeEnd;
+    private Output<Integer> rangeEnd;
 
     public Output<Integer> rangeEnd() {
         return this.rangeEnd;
@@ -30,63 +29,60 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
      * 
      */
     @Import(name="rangeStart", required=true)
-      private final Output<Integer> rangeStart;
+    private Output<Integer> rangeStart;
 
     public Output<Integer> rangeStart() {
         return this.rangeStart;
     }
 
-    public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs(
-        Output<Integer> rangeEnd,
-        Output<Integer> rangeStart) {
-        this.rangeEnd = Objects.requireNonNull(rangeEnd, "expected parameter 'rangeEnd' to be non-null");
-        this.rangeStart = Objects.requireNonNull(rangeStart, "expected parameter 'rangeStart' to be non-null");
-    }
+    private RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs() {}
 
-    private RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs() {
-        this.rangeEnd = Codegen.empty();
-        this.rangeStart = Codegen.empty();
+    private RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs(RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs $) {
+        this.rangeEnd = $.rangeEnd;
+        this.rangeStart = $.rangeStart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> rangeEnd;
-        private Output<Integer> rangeStart;
+        private RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs();
         }
 
         public Builder(RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rangeEnd = defaults.rangeEnd;
-    	      this.rangeStart = defaults.rangeStart;
+            $ = new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rangeEnd(Output<Integer> rangeEnd) {
-            this.rangeEnd = Objects.requireNonNull(rangeEnd);
+            $.rangeEnd = rangeEnd;
             return this;
         }
+
         public Builder rangeEnd(Integer rangeEnd) {
-            this.rangeEnd = Output.of(Objects.requireNonNull(rangeEnd));
-            return this;
+            return rangeEnd(Output.of(rangeEnd));
         }
+
         public Builder rangeStart(Output<Integer> rangeStart) {
-            this.rangeStart = Objects.requireNonNull(rangeStart);
+            $.rangeStart = rangeStart;
             return this;
         }
+
         public Builder rangeStart(Integer rangeStart) {
-            this.rangeStart = Output.of(Objects.requireNonNull(rangeStart));
-            return this;
-        }        public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs build() {
-            return new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs(rangeEnd, rangeStart);
+            return rangeStart(Output.of(rangeStart));
+        }
+
+        public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs build() {
+            $.rangeEnd = Objects.requireNonNull($.rangeEnd, "expected parameter 'rangeEnd' to be non-null");
+            $.rangeStart = Objects.requireNonNull($.rangeStart, "expected parameter 'rangeStart' to be non-null");
+            return $;
         }
     }
+
 }

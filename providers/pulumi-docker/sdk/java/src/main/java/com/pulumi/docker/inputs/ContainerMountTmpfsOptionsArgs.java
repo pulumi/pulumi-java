@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ContainerMountTmpfsOptionsArgs extends com.pulumi.resources.R
     public static final ContainerMountTmpfsOptionsArgs Empty = new ContainerMountTmpfsOptionsArgs();
 
     @Import(name="mode")
-      private final @Nullable Output<Integer> mode;
+    private @Nullable Output<Integer> mode;
 
-    public Output<Integer> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Integer>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     @Import(name="sizeBytes")
-      private final @Nullable Output<Integer> sizeBytes;
+    private @Nullable Output<Integer> sizeBytes;
 
-    public Output<Integer> sizeBytes() {
-        return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
+    public Optional<Output<Integer>> sizeBytes() {
+        return Optional.ofNullable(this.sizeBytes);
     }
 
-    public ContainerMountTmpfsOptionsArgs(
-        @Nullable Output<Integer> mode,
-        @Nullable Output<Integer> sizeBytes) {
-        this.mode = mode;
-        this.sizeBytes = sizeBytes;
-    }
+    private ContainerMountTmpfsOptionsArgs() {}
 
-    private ContainerMountTmpfsOptionsArgs() {
-        this.mode = Codegen.empty();
-        this.sizeBytes = Codegen.empty();
+    private ContainerMountTmpfsOptionsArgs(ContainerMountTmpfsOptionsArgs $) {
+        this.mode = $.mode;
+        this.sizeBytes = $.sizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerMountTmpfsOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> mode;
-        private @Nullable Output<Integer> sizeBytes;
+        private ContainerMountTmpfsOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerMountTmpfsOptionsArgs();
         }
 
         public Builder(ContainerMountTmpfsOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.sizeBytes = defaults.sizeBytes;
+            $ = new ContainerMountTmpfsOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<Integer> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Integer mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Integer mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
-            this.sizeBytes = sizeBytes;
+            $.sizeBytes = sizeBytes;
             return this;
         }
-        public Builder sizeBytes(@Nullable Integer sizeBytes) {
-            this.sizeBytes = Codegen.ofNullable(sizeBytes);
-            return this;
-        }        public ContainerMountTmpfsOptionsArgs build() {
-            return new ContainerMountTmpfsOptionsArgs(mode, sizeBytes);
+
+        public Builder sizeBytes(Integer sizeBytes) {
+            return sizeBytes(Output.of(sizeBytes));
+        }
+
+        public ContainerMountTmpfsOptionsArgs build() {
+            return $;
         }
     }
+
 }

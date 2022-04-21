@@ -17,7 +17,7 @@ public final class GetIntegrationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -28,55 +28,52 @@ public final class GetIntegrationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public GetIntegrationArgs(
-        String domainName,
-        String uri) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private GetIntegrationArgs() {}
 
-    private GetIntegrationArgs() {
-        this.domainName = null;
-        this.uri = null;
+    private GetIntegrationArgs(GetIntegrationArgs $) {
+        this.domainName = $.domainName;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
-        private String uri;
+        private GetIntegrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationArgs();
         }
 
         public Builder(GetIntegrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.uri = defaults.uri;
+            $ = new GetIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public GetIntegrationArgs build() {
-            return new GetIntegrationArgs(domainName, uri);
+        }
+
+        public GetIntegrationArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

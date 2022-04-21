@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LiveEventEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class LiveEventEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public LiveEventEndpointArgs(
-        @Nullable Output<String> protocol,
-        @Nullable Output<String> url) {
-        this.protocol = protocol;
-        this.url = url;
-    }
+    private LiveEventEndpointArgs() {}
 
-    private LiveEventEndpointArgs() {
-        this.protocol = Codegen.empty();
-        this.url = Codegen.empty();
+    private LiveEventEndpointArgs(LiveEventEndpointArgs $) {
+        this.protocol = $.protocol;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<String> url;
+        private LiveEventEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventEndpointArgs();
         }
 
         public Builder(LiveEventEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.protocol = defaults.protocol;
-    	      this.url = defaults.url;
+            $ = new LiveEventEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public LiveEventEndpointArgs build() {
-            return new LiveEventEndpointArgs(protocol, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public LiveEventEndpointArgs build() {
+            return $;
         }
     }
+
 }

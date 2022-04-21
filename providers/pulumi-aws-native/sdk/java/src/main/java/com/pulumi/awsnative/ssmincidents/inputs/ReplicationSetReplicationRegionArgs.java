@@ -6,9 +6,9 @@ package com.pulumi.awsnative.ssmincidents.inputs;
 import com.pulumi.awsnative.ssmincidents.inputs.ReplicationSetRegionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class ReplicationSetReplicationRegionArgs extends com.pulumi.resour
     public static final ReplicationSetReplicationRegionArgs Empty = new ReplicationSetReplicationRegionArgs();
 
     @Import(name="regionConfiguration")
-      private final @Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration;
+    private @Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration;
 
-    public Output<ReplicationSetRegionConfigurationArgs> regionConfiguration() {
-        return this.regionConfiguration == null ? Codegen.empty() : this.regionConfiguration;
+    public Optional<Output<ReplicationSetRegionConfigurationArgs>> regionConfiguration() {
+        return Optional.ofNullable(this.regionConfiguration);
     }
 
     @Import(name="regionName")
-      private final @Nullable Output<String> regionName;
+    private @Nullable Output<String> regionName;
 
-    public Output<String> regionName() {
-        return this.regionName == null ? Codegen.empty() : this.regionName;
+    public Optional<Output<String>> regionName() {
+        return Optional.ofNullable(this.regionName);
     }
 
-    public ReplicationSetReplicationRegionArgs(
-        @Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration,
-        @Nullable Output<String> regionName) {
-        this.regionConfiguration = regionConfiguration;
-        this.regionName = regionName;
-    }
+    private ReplicationSetReplicationRegionArgs() {}
 
-    private ReplicationSetReplicationRegionArgs() {
-        this.regionConfiguration = Codegen.empty();
-        this.regionName = Codegen.empty();
+    private ReplicationSetReplicationRegionArgs(ReplicationSetReplicationRegionArgs $) {
+        this.regionConfiguration = $.regionConfiguration;
+        this.regionName = $.regionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationSetReplicationRegionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration;
-        private @Nullable Output<String> regionName;
+        private ReplicationSetReplicationRegionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationSetReplicationRegionArgs();
         }
 
         public Builder(ReplicationSetReplicationRegionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regionConfiguration = defaults.regionConfiguration;
-    	      this.regionName = defaults.regionName;
+            $ = new ReplicationSetReplicationRegionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regionConfiguration(@Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration) {
-            this.regionConfiguration = regionConfiguration;
+            $.regionConfiguration = regionConfiguration;
             return this;
         }
-        public Builder regionConfiguration(@Nullable ReplicationSetRegionConfigurationArgs regionConfiguration) {
-            this.regionConfiguration = Codegen.ofNullable(regionConfiguration);
-            return this;
+
+        public Builder regionConfiguration(ReplicationSetRegionConfigurationArgs regionConfiguration) {
+            return regionConfiguration(Output.of(regionConfiguration));
         }
+
         public Builder regionName(@Nullable Output<String> regionName) {
-            this.regionName = regionName;
+            $.regionName = regionName;
             return this;
         }
-        public Builder regionName(@Nullable String regionName) {
-            this.regionName = Codegen.ofNullable(regionName);
-            return this;
-        }        public ReplicationSetReplicationRegionArgs build() {
-            return new ReplicationSetReplicationRegionArgs(regionConfiguration, regionName);
+
+        public Builder regionName(String regionName) {
+            return regionName(Output.of(regionName));
+        }
+
+        public ReplicationSetReplicationRegionArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class NonCompliantFileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="displayCommand", required=true)
-      private final String displayCommand;
+    private String displayCommand;
 
     public String displayCommand() {
         return this.displayCommand;
@@ -32,7 +32,7 @@ public final class NonCompliantFileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -43,64 +43,59 @@ public final class NonCompliantFileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="reason", required=true)
-      private final String reason;
+    private String reason;
 
     public String reason() {
         return this.reason;
     }
 
-    public NonCompliantFileResponse(
-        String displayCommand,
-        String path,
-        String reason) {
-        this.displayCommand = Objects.requireNonNull(displayCommand, "expected parameter 'displayCommand' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-    }
+    private NonCompliantFileResponse() {}
 
-    private NonCompliantFileResponse() {
-        this.displayCommand = null;
-        this.path = null;
-        this.reason = null;
+    private NonCompliantFileResponse(NonCompliantFileResponse $) {
+        this.displayCommand = $.displayCommand;
+        this.path = $.path;
+        this.reason = $.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NonCompliantFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayCommand;
-        private String path;
-        private String reason;
+        private NonCompliantFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NonCompliantFileResponse();
         }
 
         public Builder(NonCompliantFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayCommand = defaults.displayCommand;
-    	      this.path = defaults.path;
-    	      this.reason = defaults.reason;
+            $ = new NonCompliantFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayCommand(String displayCommand) {
-            this.displayCommand = Objects.requireNonNull(displayCommand);
+            $.displayCommand = displayCommand;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
-        }        public NonCompliantFileResponse build() {
-            return new NonCompliantFileResponse(displayCommand, path, reason);
+        }
+
+        public NonCompliantFileResponse build() {
+            $.displayCommand = Objects.requireNonNull($.displayCommand, "expected parameter 'displayCommand' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            return $;
         }
     }
+
 }

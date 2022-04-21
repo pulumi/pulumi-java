@@ -5,13 +5,13 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigGetArgs;
 import com.pulumi.gcp.dataproc.inputs.MetastoreServiceMaintenanceWindowGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="artifactGcsUri")
-      private final @Nullable Output<String> artifactGcsUri;
+    private @Nullable Output<String> artifactGcsUri;
 
-    public Output<String> artifactGcsUri() {
-        return this.artifactGcsUri == null ? Codegen.empty() : this.artifactGcsUri;
+    public Optional<Output<String>> artifactGcsUri() {
+        return Optional.ofNullable(this.artifactGcsUri);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="endpointUri")
-      private final @Nullable Output<String> endpointUri;
+    private @Nullable Output<String> endpointUri;
 
-    public Output<String> endpointUri() {
-        return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
+    public Optional<Output<String>> endpointUri() {
+        return Optional.ofNullable(this.endpointUri);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hiveMetastoreConfig")
-      private final @Nullable Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig;
+    private @Nullable Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig;
 
-    public Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig() {
-        return this.hiveMetastoreConfig == null ? Codegen.empty() : this.hiveMetastoreConfig;
+    public Optional<Output<MetastoreServiceHiveMetastoreConfigGetArgs>> hiveMetastoreConfig() {
+        return Optional.ofNullable(this.hiveMetastoreConfig);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maintenanceWindow")
-      private final @Nullable Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow;
+    private @Nullable Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow;
 
-    public Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
+    public Optional<Output<MetastoreServiceMaintenanceWindowGetArgs>> maintenanceWindow() {
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serviceId")
-      private final @Nullable Output<String> serviceId;
+    private @Nullable Output<String> serviceId;
 
-    public Output<String> serviceId() {
-        return this.serviceId == null ? Codegen.empty() : this.serviceId;
+    public Optional<Output<String>> serviceId() {
+        return Optional.ofNullable(this.serviceId);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="stateMessage")
-      private final @Nullable Output<String> stateMessage;
+    private @Nullable Output<String> stateMessage;
 
-    public Output<String> stateMessage() {
-        return this.stateMessage == null ? Codegen.empty() : this.stateMessage;
+    public Optional<Output<String>> stateMessage() {
+        return Optional.ofNullable(this.stateMessage);
     }
 
     /**
@@ -176,219 +176,178 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<String> tier;
+    private @Nullable Output<String> tier;
 
-    public Output<String> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<String>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public MetastoreServiceState(
-        @Nullable Output<String> artifactGcsUri,
-        @Nullable Output<String> endpointUri,
-        @Nullable Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> project,
-        @Nullable Output<String> serviceId,
-        @Nullable Output<String> state,
-        @Nullable Output<String> stateMessage,
-        @Nullable Output<String> tier) {
-        this.artifactGcsUri = artifactGcsUri;
-        this.endpointUri = endpointUri;
-        this.hiveMetastoreConfig = hiveMetastoreConfig;
-        this.labels = labels;
-        this.location = location;
-        this.maintenanceWindow = maintenanceWindow;
-        this.name = name;
-        this.network = network;
-        this.port = port;
-        this.project = project;
-        this.serviceId = serviceId;
-        this.state = state;
-        this.stateMessage = stateMessage;
-        this.tier = tier;
-    }
+    private MetastoreServiceState() {}
 
-    private MetastoreServiceState() {
-        this.artifactGcsUri = Codegen.empty();
-        this.endpointUri = Codegen.empty();
-        this.hiveMetastoreConfig = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maintenanceWindow = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serviceId = Codegen.empty();
-        this.state = Codegen.empty();
-        this.stateMessage = Codegen.empty();
-        this.tier = Codegen.empty();
+    private MetastoreServiceState(MetastoreServiceState $) {
+        this.artifactGcsUri = $.artifactGcsUri;
+        this.endpointUri = $.endpointUri;
+        this.hiveMetastoreConfig = $.hiveMetastoreConfig;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.name = $.name;
+        this.network = $.network;
+        this.port = $.port;
+        this.project = $.project;
+        this.serviceId = $.serviceId;
+        this.state = $.state;
+        this.stateMessage = $.stateMessage;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetastoreServiceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactGcsUri;
-        private @Nullable Output<String> endpointUri;
-        private @Nullable Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> serviceId;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> stateMessage;
-        private @Nullable Output<String> tier;
+        private MetastoreServiceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetastoreServiceState();
         }
 
         public Builder(MetastoreServiceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactGcsUri = defaults.artifactGcsUri;
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.hiveMetastoreConfig = defaults.hiveMetastoreConfig;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.serviceId = defaults.serviceId;
-    	      this.state = defaults.state;
-    	      this.stateMessage = defaults.stateMessage;
-    	      this.tier = defaults.tier;
+            $ = new MetastoreServiceState(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactGcsUri(@Nullable Output<String> artifactGcsUri) {
-            this.artifactGcsUri = artifactGcsUri;
+            $.artifactGcsUri = artifactGcsUri;
             return this;
         }
-        public Builder artifactGcsUri(@Nullable String artifactGcsUri) {
-            this.artifactGcsUri = Codegen.ofNullable(artifactGcsUri);
-            return this;
+
+        public Builder artifactGcsUri(String artifactGcsUri) {
+            return artifactGcsUri(Output.of(artifactGcsUri));
         }
+
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
-            this.endpointUri = endpointUri;
+            $.endpointUri = endpointUri;
             return this;
         }
-        public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Codegen.ofNullable(endpointUri);
-            return this;
+
+        public Builder endpointUri(String endpointUri) {
+            return endpointUri(Output.of(endpointUri));
         }
+
         public Builder hiveMetastoreConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig) {
-            this.hiveMetastoreConfig = hiveMetastoreConfig;
+            $.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
-        public Builder hiveMetastoreConfig(@Nullable MetastoreServiceHiveMetastoreConfigGetArgs hiveMetastoreConfig) {
-            this.hiveMetastoreConfig = Codegen.ofNullable(hiveMetastoreConfig);
-            return this;
+
+        public Builder hiveMetastoreConfig(MetastoreServiceHiveMetastoreConfigGetArgs hiveMetastoreConfig) {
+            return hiveMetastoreConfig(Output.of(hiveMetastoreConfig));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maintenanceWindow(@Nullable Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
-        public Builder maintenanceWindow(@Nullable MetastoreServiceMaintenanceWindowGetArgs maintenanceWindow) {
-            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
-            return this;
+
+        public Builder maintenanceWindow(MetastoreServiceMaintenanceWindowGetArgs maintenanceWindow) {
+            return maintenanceWindow(Output.of(maintenanceWindow));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceId(@Nullable Output<String> serviceId) {
-            this.serviceId = serviceId;
+            $.serviceId = serviceId;
             return this;
         }
-        public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Codegen.ofNullable(serviceId);
-            return this;
+
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder stateMessage(@Nullable Output<String> stateMessage) {
-            this.stateMessage = stateMessage;
+            $.stateMessage = stateMessage;
             return this;
         }
-        public Builder stateMessage(@Nullable String stateMessage) {
-            this.stateMessage = Codegen.ofNullable(stateMessage);
-            return this;
+
+        public Builder stateMessage(String stateMessage) {
+            return stateMessage(Output.of(stateMessage));
         }
+
         public Builder tier(@Nullable Output<String> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable String tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public MetastoreServiceState build() {
-            return new MetastoreServiceState(artifactGcsUri, endpointUri, hiveMetastoreConfig, labels, location, maintenanceWindow, name, network, port, project, serviceId, state, stateMessage, tier);
+
+        public Builder tier(String tier) {
+            return tier(Output.of(tier));
+        }
+
+        public MetastoreServiceState build() {
+            return $;
         }
     }
+
 }

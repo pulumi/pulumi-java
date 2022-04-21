@@ -23,10 +23,10 @@ public final class HttpErrorRangeParametersResponse extends com.pulumi.resources
      * 
      */
     @Import(name="begin")
-      private final @Nullable Integer begin;
+    private @Nullable Integer begin;
 
     public Optional<Integer> begin() {
-        return this.begin == null ? Optional.empty() : Optional.ofNullable(this.begin);
+        return Optional.ofNullable(this.begin);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class HttpErrorRangeParametersResponse extends com.pulumi.resources
      * 
      */
     @Import(name="end")
-      private final @Nullable Integer end;
+    private @Nullable Integer end;
 
     public Optional<Integer> end() {
-        return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
+        return Optional.ofNullable(this.end);
     }
 
-    public HttpErrorRangeParametersResponse(
-        @Nullable Integer begin,
-        @Nullable Integer end) {
-        this.begin = begin;
-        this.end = end;
-    }
+    private HttpErrorRangeParametersResponse() {}
 
-    private HttpErrorRangeParametersResponse() {
-        this.begin = null;
-        this.end = null;
+    private HttpErrorRangeParametersResponse(HttpErrorRangeParametersResponse $) {
+        this.begin = $.begin;
+        this.end = $.end;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpErrorRangeParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer begin;
-        private @Nullable Integer end;
+        private HttpErrorRangeParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpErrorRangeParametersResponse();
         }
 
         public Builder(HttpErrorRangeParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.begin = defaults.begin;
-    	      this.end = defaults.end;
+            $ = new HttpErrorRangeParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder begin(@Nullable Integer begin) {
-            this.begin = begin;
+            $.begin = begin;
             return this;
         }
+
         public Builder end(@Nullable Integer end) {
-            this.end = end;
+            $.end = end;
             return this;
-        }        public HttpErrorRangeParametersResponse build() {
-            return new HttpErrorRangeParametersResponse(begin, end);
+        }
+
+        public HttpErrorRangeParametersResponse build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iotanalytics.inputs.DatasetContentVersionValueArgs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatasetOutputFileUriValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,130 +19,117 @@ public final class DatasetVariableArgs extends com.pulumi.resources.ResourceArgs
     public static final DatasetVariableArgs Empty = new DatasetVariableArgs();
 
     @Import(name="datasetContentVersionValue")
-      private final @Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue;
+    private @Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue;
 
-    public Output<DatasetContentVersionValueArgs> datasetContentVersionValue() {
-        return this.datasetContentVersionValue == null ? Codegen.empty() : this.datasetContentVersionValue;
+    public Optional<Output<DatasetContentVersionValueArgs>> datasetContentVersionValue() {
+        return Optional.ofNullable(this.datasetContentVersionValue);
     }
 
     @Import(name="doubleValue")
-      private final @Nullable Output<Double> doubleValue;
+    private @Nullable Output<Double> doubleValue;
 
-    public Output<Double> doubleValue() {
-        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
+    public Optional<Output<Double>> doubleValue() {
+        return Optional.ofNullable(this.doubleValue);
     }
 
     @Import(name="outputFileUriValue")
-      private final @Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue;
+    private @Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue;
 
-    public Output<DatasetOutputFileUriValueArgs> outputFileUriValue() {
-        return this.outputFileUriValue == null ? Codegen.empty() : this.outputFileUriValue;
+    public Optional<Output<DatasetOutputFileUriValueArgs>> outputFileUriValue() {
+        return Optional.ofNullable(this.outputFileUriValue);
     }
 
     @Import(name="stringValue")
-      private final @Nullable Output<String> stringValue;
+    private @Nullable Output<String> stringValue;
 
-    public Output<String> stringValue() {
-        return this.stringValue == null ? Codegen.empty() : this.stringValue;
+    public Optional<Output<String>> stringValue() {
+        return Optional.ofNullable(this.stringValue);
     }
 
     @Import(name="variableName", required=true)
-      private final Output<String> variableName;
+    private Output<String> variableName;
 
     public Output<String> variableName() {
         return this.variableName;
     }
 
-    public DatasetVariableArgs(
-        @Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue,
-        @Nullable Output<Double> doubleValue,
-        @Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue,
-        @Nullable Output<String> stringValue,
-        Output<String> variableName) {
-        this.datasetContentVersionValue = datasetContentVersionValue;
-        this.doubleValue = doubleValue;
-        this.outputFileUriValue = outputFileUriValue;
-        this.stringValue = stringValue;
-        this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
-    }
+    private DatasetVariableArgs() {}
 
-    private DatasetVariableArgs() {
-        this.datasetContentVersionValue = Codegen.empty();
-        this.doubleValue = Codegen.empty();
-        this.outputFileUriValue = Codegen.empty();
-        this.stringValue = Codegen.empty();
-        this.variableName = Codegen.empty();
+    private DatasetVariableArgs(DatasetVariableArgs $) {
+        this.datasetContentVersionValue = $.datasetContentVersionValue;
+        this.doubleValue = $.doubleValue;
+        this.outputFileUriValue = $.outputFileUriValue;
+        this.stringValue = $.stringValue;
+        this.variableName = $.variableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetVariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue;
-        private @Nullable Output<Double> doubleValue;
-        private @Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue;
-        private @Nullable Output<String> stringValue;
-        private Output<String> variableName;
+        private DatasetVariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetVariableArgs();
         }
 
         public Builder(DatasetVariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetContentVersionValue = defaults.datasetContentVersionValue;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.outputFileUriValue = defaults.outputFileUriValue;
-    	      this.stringValue = defaults.stringValue;
-    	      this.variableName = defaults.variableName;
+            $ = new DatasetVariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetContentVersionValue(@Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue) {
-            this.datasetContentVersionValue = datasetContentVersionValue;
+            $.datasetContentVersionValue = datasetContentVersionValue;
             return this;
         }
-        public Builder datasetContentVersionValue(@Nullable DatasetContentVersionValueArgs datasetContentVersionValue) {
-            this.datasetContentVersionValue = Codegen.ofNullable(datasetContentVersionValue);
-            return this;
+
+        public Builder datasetContentVersionValue(DatasetContentVersionValueArgs datasetContentVersionValue) {
+            return datasetContentVersionValue(Output.of(datasetContentVersionValue));
         }
+
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
-            this.doubleValue = doubleValue;
+            $.doubleValue = doubleValue;
             return this;
         }
-        public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Codegen.ofNullable(doubleValue);
-            return this;
+
+        public Builder doubleValue(Double doubleValue) {
+            return doubleValue(Output.of(doubleValue));
         }
+
         public Builder outputFileUriValue(@Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue) {
-            this.outputFileUriValue = outputFileUriValue;
+            $.outputFileUriValue = outputFileUriValue;
             return this;
         }
-        public Builder outputFileUriValue(@Nullable DatasetOutputFileUriValueArgs outputFileUriValue) {
-            this.outputFileUriValue = Codegen.ofNullable(outputFileUriValue);
-            return this;
+
+        public Builder outputFileUriValue(DatasetOutputFileUriValueArgs outputFileUriValue) {
+            return outputFileUriValue(Output.of(outputFileUriValue));
         }
+
         public Builder stringValue(@Nullable Output<String> stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
         }
-        public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Codegen.ofNullable(stringValue);
-            return this;
+
+        public Builder stringValue(String stringValue) {
+            return stringValue(Output.of(stringValue));
         }
+
         public Builder variableName(Output<String> variableName) {
-            this.variableName = Objects.requireNonNull(variableName);
+            $.variableName = variableName;
             return this;
         }
+
         public Builder variableName(String variableName) {
-            this.variableName = Output.of(Objects.requireNonNull(variableName));
-            return this;
-        }        public DatasetVariableArgs build() {
-            return new DatasetVariableArgs(datasetContentVersionValue, doubleValue, outputFileUriValue, stringValue, variableName);
+            return variableName(Output.of(variableName));
+        }
+
+        public DatasetVariableArgs build() {
+            $.variableName = Objects.requireNonNull($.variableName, "expected parameter 'variableName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterEc2AttributesGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="additionalMasterSecurityGroups")
-      private final @Nullable Output<String> additionalMasterSecurityGroups;
+    private @Nullable Output<String> additionalMasterSecurityGroups;
 
-    public Output<String> additionalMasterSecurityGroups() {
-        return this.additionalMasterSecurityGroups == null ? Codegen.empty() : this.additionalMasterSecurityGroups;
+    public Optional<Output<String>> additionalMasterSecurityGroups() {
+        return Optional.ofNullable(this.additionalMasterSecurityGroups);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ClusterEc2AttributesGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="additionalSlaveSecurityGroups")
-      private final @Nullable Output<String> additionalSlaveSecurityGroups;
+    private @Nullable Output<String> additionalSlaveSecurityGroups;
 
-    public Output<String> additionalSlaveSecurityGroups() {
-        return this.additionalSlaveSecurityGroups == null ? Codegen.empty() : this.additionalSlaveSecurityGroups;
+    public Optional<Output<String>> additionalSlaveSecurityGroups() {
+        return Optional.ofNullable(this.additionalSlaveSecurityGroups);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ClusterEc2AttributesGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="emrManagedMasterSecurityGroup")
-      private final @Nullable Output<String> emrManagedMasterSecurityGroup;
+    private @Nullable Output<String> emrManagedMasterSecurityGroup;
 
-    public Output<String> emrManagedMasterSecurityGroup() {
-        return this.emrManagedMasterSecurityGroup == null ? Codegen.empty() : this.emrManagedMasterSecurityGroup;
+    public Optional<Output<String>> emrManagedMasterSecurityGroup() {
+        return Optional.ofNullable(this.emrManagedMasterSecurityGroup);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ClusterEc2AttributesGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="emrManagedSlaveSecurityGroup")
-      private final @Nullable Output<String> emrManagedSlaveSecurityGroup;
+    private @Nullable Output<String> emrManagedSlaveSecurityGroup;
 
-    public Output<String> emrManagedSlaveSecurityGroup() {
-        return this.emrManagedSlaveSecurityGroup == null ? Codegen.empty() : this.emrManagedSlaveSecurityGroup;
+    public Optional<Output<String>> emrManagedSlaveSecurityGroup() {
+        return Optional.ofNullable(this.emrManagedSlaveSecurityGroup);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class ClusterEc2AttributesGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="instanceProfile", required=true)
-      private final Output<String> instanceProfile;
+    private Output<String> instanceProfile;
 
     public Output<String> instanceProfile() {
         return this.instanceProfile;
@@ -76,10 +76,10 @@ public final class ClusterEc2AttributesGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ClusterEc2AttributesGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="serviceAccessSecurityGroup")
-      private final @Nullable Output<String> serviceAccessSecurityGroup;
+    private @Nullable Output<String> serviceAccessSecurityGroup;
 
-    public Output<String> serviceAccessSecurityGroup() {
-        return this.serviceAccessSecurityGroup == null ? Codegen.empty() : this.serviceAccessSecurityGroup;
+    public Optional<Output<String>> serviceAccessSecurityGroup() {
+        return Optional.ofNullable(this.serviceAccessSecurityGroup);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ClusterEc2AttributesGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -109,157 +109,133 @@ public final class ClusterEc2AttributesGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
-    public ClusterEc2AttributesGetArgs(
-        @Nullable Output<String> additionalMasterSecurityGroups,
-        @Nullable Output<String> additionalSlaveSecurityGroups,
-        @Nullable Output<String> emrManagedMasterSecurityGroup,
-        @Nullable Output<String> emrManagedSlaveSecurityGroup,
-        Output<String> instanceProfile,
-        @Nullable Output<String> keyName,
-        @Nullable Output<String> serviceAccessSecurityGroup,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<List<String>> subnetIds) {
-        this.additionalMasterSecurityGroups = additionalMasterSecurityGroups;
-        this.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
-        this.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;
-        this.emrManagedSlaveSecurityGroup = emrManagedSlaveSecurityGroup;
-        this.instanceProfile = Objects.requireNonNull(instanceProfile, "expected parameter 'instanceProfile' to be non-null");
-        this.keyName = keyName;
-        this.serviceAccessSecurityGroup = serviceAccessSecurityGroup;
-        this.subnetId = subnetId;
-        this.subnetIds = subnetIds;
-    }
+    private ClusterEc2AttributesGetArgs() {}
 
-    private ClusterEc2AttributesGetArgs() {
-        this.additionalMasterSecurityGroups = Codegen.empty();
-        this.additionalSlaveSecurityGroups = Codegen.empty();
-        this.emrManagedMasterSecurityGroup = Codegen.empty();
-        this.emrManagedSlaveSecurityGroup = Codegen.empty();
-        this.instanceProfile = Codegen.empty();
-        this.keyName = Codegen.empty();
-        this.serviceAccessSecurityGroup = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.subnetIds = Codegen.empty();
+    private ClusterEc2AttributesGetArgs(ClusterEc2AttributesGetArgs $) {
+        this.additionalMasterSecurityGroups = $.additionalMasterSecurityGroups;
+        this.additionalSlaveSecurityGroups = $.additionalSlaveSecurityGroups;
+        this.emrManagedMasterSecurityGroup = $.emrManagedMasterSecurityGroup;
+        this.emrManagedSlaveSecurityGroup = $.emrManagedSlaveSecurityGroup;
+        this.instanceProfile = $.instanceProfile;
+        this.keyName = $.keyName;
+        this.serviceAccessSecurityGroup = $.serviceAccessSecurityGroup;
+        this.subnetId = $.subnetId;
+        this.subnetIds = $.subnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEc2AttributesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> additionalMasterSecurityGroups;
-        private @Nullable Output<String> additionalSlaveSecurityGroups;
-        private @Nullable Output<String> emrManagedMasterSecurityGroup;
-        private @Nullable Output<String> emrManagedSlaveSecurityGroup;
-        private Output<String> instanceProfile;
-        private @Nullable Output<String> keyName;
-        private @Nullable Output<String> serviceAccessSecurityGroup;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<List<String>> subnetIds;
+        private ClusterEc2AttributesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEc2AttributesGetArgs();
         }
 
         public Builder(ClusterEc2AttributesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalMasterSecurityGroups = defaults.additionalMasterSecurityGroups;
-    	      this.additionalSlaveSecurityGroups = defaults.additionalSlaveSecurityGroups;
-    	      this.emrManagedMasterSecurityGroup = defaults.emrManagedMasterSecurityGroup;
-    	      this.emrManagedSlaveSecurityGroup = defaults.emrManagedSlaveSecurityGroup;
-    	      this.instanceProfile = defaults.instanceProfile;
-    	      this.keyName = defaults.keyName;
-    	      this.serviceAccessSecurityGroup = defaults.serviceAccessSecurityGroup;
-    	      this.subnetId = defaults.subnetId;
-    	      this.subnetIds = defaults.subnetIds;
+            $ = new ClusterEc2AttributesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalMasterSecurityGroups(@Nullable Output<String> additionalMasterSecurityGroups) {
-            this.additionalMasterSecurityGroups = additionalMasterSecurityGroups;
+            $.additionalMasterSecurityGroups = additionalMasterSecurityGroups;
             return this;
         }
-        public Builder additionalMasterSecurityGroups(@Nullable String additionalMasterSecurityGroups) {
-            this.additionalMasterSecurityGroups = Codegen.ofNullable(additionalMasterSecurityGroups);
-            return this;
+
+        public Builder additionalMasterSecurityGroups(String additionalMasterSecurityGroups) {
+            return additionalMasterSecurityGroups(Output.of(additionalMasterSecurityGroups));
         }
+
         public Builder additionalSlaveSecurityGroups(@Nullable Output<String> additionalSlaveSecurityGroups) {
-            this.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
+            $.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
             return this;
         }
-        public Builder additionalSlaveSecurityGroups(@Nullable String additionalSlaveSecurityGroups) {
-            this.additionalSlaveSecurityGroups = Codegen.ofNullable(additionalSlaveSecurityGroups);
-            return this;
+
+        public Builder additionalSlaveSecurityGroups(String additionalSlaveSecurityGroups) {
+            return additionalSlaveSecurityGroups(Output.of(additionalSlaveSecurityGroups));
         }
+
         public Builder emrManagedMasterSecurityGroup(@Nullable Output<String> emrManagedMasterSecurityGroup) {
-            this.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;
+            $.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;
             return this;
         }
-        public Builder emrManagedMasterSecurityGroup(@Nullable String emrManagedMasterSecurityGroup) {
-            this.emrManagedMasterSecurityGroup = Codegen.ofNullable(emrManagedMasterSecurityGroup);
-            return this;
+
+        public Builder emrManagedMasterSecurityGroup(String emrManagedMasterSecurityGroup) {
+            return emrManagedMasterSecurityGroup(Output.of(emrManagedMasterSecurityGroup));
         }
+
         public Builder emrManagedSlaveSecurityGroup(@Nullable Output<String> emrManagedSlaveSecurityGroup) {
-            this.emrManagedSlaveSecurityGroup = emrManagedSlaveSecurityGroup;
+            $.emrManagedSlaveSecurityGroup = emrManagedSlaveSecurityGroup;
             return this;
         }
-        public Builder emrManagedSlaveSecurityGroup(@Nullable String emrManagedSlaveSecurityGroup) {
-            this.emrManagedSlaveSecurityGroup = Codegen.ofNullable(emrManagedSlaveSecurityGroup);
-            return this;
+
+        public Builder emrManagedSlaveSecurityGroup(String emrManagedSlaveSecurityGroup) {
+            return emrManagedSlaveSecurityGroup(Output.of(emrManagedSlaveSecurityGroup));
         }
+
         public Builder instanceProfile(Output<String> instanceProfile) {
-            this.instanceProfile = Objects.requireNonNull(instanceProfile);
+            $.instanceProfile = instanceProfile;
             return this;
         }
+
         public Builder instanceProfile(String instanceProfile) {
-            this.instanceProfile = Output.of(Objects.requireNonNull(instanceProfile));
-            return this;
+            return instanceProfile(Output.of(instanceProfile));
         }
+
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder serviceAccessSecurityGroup(@Nullable Output<String> serviceAccessSecurityGroup) {
-            this.serviceAccessSecurityGroup = serviceAccessSecurityGroup;
+            $.serviceAccessSecurityGroup = serviceAccessSecurityGroup;
             return this;
         }
-        public Builder serviceAccessSecurityGroup(@Nullable String serviceAccessSecurityGroup) {
-            this.serviceAccessSecurityGroup = Codegen.ofNullable(serviceAccessSecurityGroup);
-            return this;
+
+        public Builder serviceAccessSecurityGroup(String serviceAccessSecurityGroup) {
+            return serviceAccessSecurityGroup(Output.of(serviceAccessSecurityGroup));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
-        }        public ClusterEc2AttributesGetArgs build() {
-            return new ClusterEc2AttributesGetArgs(additionalMasterSecurityGroups, additionalSlaveSecurityGroups, emrManagedMasterSecurityGroup, emrManagedSlaveSecurityGroup, instanceProfile, keyName, serviceAccessSecurityGroup, subnetId, subnetIds);
+        }
+
+        public ClusterEc2AttributesGetArgs build() {
+            $.instanceProfile = Objects.requireNonNull($.instanceProfile, "expected parameter 'instanceProfile' to be non-null");
+            return $;
         }
     }
+
 }

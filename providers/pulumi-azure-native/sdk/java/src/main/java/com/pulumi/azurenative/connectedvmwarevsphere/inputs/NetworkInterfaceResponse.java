@@ -26,10 +26,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deviceKey")
-      private final @Nullable Integer deviceKey;
+    private @Nullable Integer deviceKey;
 
     public Optional<Integer> deviceKey() {
-        return this.deviceKey == null ? Optional.empty() : Optional.ofNullable(this.deviceKey);
+        return Optional.ofNullable(this.deviceKey);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipAddresses", required=true)
-      private final List<String> ipAddresses;
+    private List<String> ipAddresses;
 
     public List<String> ipAddresses() {
         return this.ipAddresses;
@@ -48,10 +48,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipSettings")
-      private final @Nullable NicIPSettingsResponse ipSettings;
+    private @Nullable NicIPSettingsResponse ipSettings;
 
     public Optional<NicIPSettingsResponse> ipSettings() {
-        return this.ipSettings == null ? Optional.empty() : Optional.ofNullable(this.ipSettings);
+        return Optional.ofNullable(this.ipSettings);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
@@ -70,7 +70,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="macAddress", required=true)
-      private final String macAddress;
+    private String macAddress;
 
     public String macAddress() {
         return this.macAddress;
@@ -81,10 +81,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="networkId")
-      private final @Nullable String networkId;
+    private @Nullable String networkId;
 
     public Optional<String> networkId() {
-        return this.networkId == null ? Optional.empty() : Optional.ofNullable(this.networkId);
+        return Optional.ofNullable(this.networkId);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="networkMoName", required=true)
-      private final String networkMoName;
+    private String networkMoName;
 
     public String networkMoName() {
         return this.networkMoName;
@@ -115,7 +115,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="networkMoRefId", required=true)
-      private final String networkMoRefId;
+    private String networkMoRefId;
 
     public String networkMoRefId() {
         return this.networkMoRefId;
@@ -126,10 +126,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="nicType")
-      private final @Nullable String nicType;
+    private @Nullable String nicType;
 
     public Optional<String> nicType() {
-        return this.nicType == null ? Optional.empty() : Optional.ofNullable(this.nicType);
+        return Optional.ofNullable(this.nicType);
     }
 
     /**
@@ -137,139 +137,113 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="powerOnBoot")
-      private final @Nullable String powerOnBoot;
+    private @Nullable String powerOnBoot;
 
     public Optional<String> powerOnBoot() {
-        return this.powerOnBoot == null ? Optional.empty() : Optional.ofNullable(this.powerOnBoot);
+        return Optional.ofNullable(this.powerOnBoot);
     }
 
-    public NetworkInterfaceResponse(
-        @Nullable Integer deviceKey,
-        List<String> ipAddresses,
-        @Nullable NicIPSettingsResponse ipSettings,
-        String label,
-        String macAddress,
-        @Nullable String name,
-        @Nullable String networkId,
-        String networkMoName,
-        String networkMoRefId,
-        @Nullable String nicType,
-        @Nullable String powerOnBoot) {
-        this.deviceKey = deviceKey;
-        this.ipAddresses = Objects.requireNonNull(ipAddresses, "expected parameter 'ipAddresses' to be non-null");
-        this.ipSettings = ipSettings;
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.macAddress = Objects.requireNonNull(macAddress, "expected parameter 'macAddress' to be non-null");
-        this.name = name;
-        this.networkId = networkId;
-        this.networkMoName = Objects.requireNonNull(networkMoName, "expected parameter 'networkMoName' to be non-null");
-        this.networkMoRefId = Objects.requireNonNull(networkMoRefId, "expected parameter 'networkMoRefId' to be non-null");
-        this.nicType = nicType;
-        this.powerOnBoot = powerOnBoot;
-    }
+    private NetworkInterfaceResponse() {}
 
-    private NetworkInterfaceResponse() {
-        this.deviceKey = null;
-        this.ipAddresses = List.of();
-        this.ipSettings = null;
-        this.label = null;
-        this.macAddress = null;
-        this.name = null;
-        this.networkId = null;
-        this.networkMoName = null;
-        this.networkMoRefId = null;
-        this.nicType = null;
-        this.powerOnBoot = null;
+    private NetworkInterfaceResponse(NetworkInterfaceResponse $) {
+        this.deviceKey = $.deviceKey;
+        this.ipAddresses = $.ipAddresses;
+        this.ipSettings = $.ipSettings;
+        this.label = $.label;
+        this.macAddress = $.macAddress;
+        this.name = $.name;
+        this.networkId = $.networkId;
+        this.networkMoName = $.networkMoName;
+        this.networkMoRefId = $.networkMoRefId;
+        this.nicType = $.nicType;
+        this.powerOnBoot = $.powerOnBoot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer deviceKey;
-        private List<String> ipAddresses;
-        private @Nullable NicIPSettingsResponse ipSettings;
-        private String label;
-        private String macAddress;
-        private @Nullable String name;
-        private @Nullable String networkId;
-        private String networkMoName;
-        private String networkMoRefId;
-        private @Nullable String nicType;
-        private @Nullable String powerOnBoot;
+        private NetworkInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceResponse();
         }
 
         public Builder(NetworkInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceKey = defaults.deviceKey;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.ipSettings = defaults.ipSettings;
-    	      this.label = defaults.label;
-    	      this.macAddress = defaults.macAddress;
-    	      this.name = defaults.name;
-    	      this.networkId = defaults.networkId;
-    	      this.networkMoName = defaults.networkMoName;
-    	      this.networkMoRefId = defaults.networkMoRefId;
-    	      this.nicType = defaults.nicType;
-    	      this.powerOnBoot = defaults.powerOnBoot;
+            $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceKey(@Nullable Integer deviceKey) {
-            this.deviceKey = deviceKey;
+            $.deviceKey = deviceKey;
             return this;
         }
+
         public Builder ipAddresses(List<String> ipAddresses) {
-            this.ipAddresses = Objects.requireNonNull(ipAddresses);
+            $.ipAddresses = ipAddresses;
             return this;
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder ipSettings(@Nullable NicIPSettingsResponse ipSettings) {
-            this.ipSettings = ipSettings;
+            $.ipSettings = ipSettings;
             return this;
         }
+
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder macAddress(String macAddress) {
-            this.macAddress = Objects.requireNonNull(macAddress);
+            $.macAddress = macAddress;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder networkId(@Nullable String networkId) {
-            this.networkId = networkId;
+            $.networkId = networkId;
             return this;
         }
+
         public Builder networkMoName(String networkMoName) {
-            this.networkMoName = Objects.requireNonNull(networkMoName);
+            $.networkMoName = networkMoName;
             return this;
         }
+
         public Builder networkMoRefId(String networkMoRefId) {
-            this.networkMoRefId = Objects.requireNonNull(networkMoRefId);
+            $.networkMoRefId = networkMoRefId;
             return this;
         }
+
         public Builder nicType(@Nullable String nicType) {
-            this.nicType = nicType;
+            $.nicType = nicType;
             return this;
         }
+
         public Builder powerOnBoot(@Nullable String powerOnBoot) {
-            this.powerOnBoot = powerOnBoot;
+            $.powerOnBoot = powerOnBoot;
             return this;
-        }        public NetworkInterfaceResponse build() {
-            return new NetworkInterfaceResponse(deviceKey, ipAddresses, ipSettings, label, macAddress, name, networkId, networkMoName, networkMoRefId, nicType, powerOnBoot);
+        }
+
+        public NetworkInterfaceResponse build() {
+            $.ipAddresses = Objects.requireNonNull($.ipAddresses, "expected parameter 'ipAddresses' to be non-null");
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.macAddress = Objects.requireNonNull($.macAddress, "expected parameter 'macAddress' to be non-null");
+            $.networkMoName = Objects.requireNonNull($.networkMoName, "expected parameter 'networkMoName' to be non-null");
+            $.networkMoRefId = Objects.requireNonNull($.networkMoRefId, "expected parameter 'networkMoRefId' to be non-null");
+            return $;
         }
     }
+
 }

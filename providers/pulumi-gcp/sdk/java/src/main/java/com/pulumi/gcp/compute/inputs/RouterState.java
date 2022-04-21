@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RouterBgpGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bgp")
-      private final @Nullable Output<RouterBgpGetArgs> bgp;
+    private @Nullable Output<RouterBgpGetArgs> bgp;
 
-    public Output<RouterBgpGetArgs> bgp() {
-        return this.bgp == null ? Codegen.empty() : this.bgp;
+    public Optional<Output<RouterBgpGetArgs>> bgp() {
+        return Optional.ofNullable(this.bgp);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptedInterconnectRouter")
-      private final @Nullable Output<Boolean> encryptedInterconnectRouter;
+    private @Nullable Output<Boolean> encryptedInterconnectRouter;
 
-    public Output<Boolean> encryptedInterconnectRouter() {
-        return this.encryptedInterconnectRouter == null ? Codegen.empty() : this.encryptedInterconnectRouter;
+    public Optional<Output<Boolean>> encryptedInterconnectRouter() {
+        return Optional.ofNullable(this.encryptedInterconnectRouter);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -119,154 +119,128 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public RouterState(
-        @Nullable Output<RouterBgpGetArgs> bgp,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> encryptedInterconnectRouter,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> selfLink) {
-        this.bgp = bgp;
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.encryptedInterconnectRouter = encryptedInterconnectRouter;
-        this.name = name;
-        this.network = network;
-        this.project = project;
-        this.region = region;
-        this.selfLink = selfLink;
-    }
+    private RouterState() {}
 
-    private RouterState() {
-        this.bgp = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedInterconnectRouter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private RouterState(RouterState $) {
+        this.bgp = $.bgp;
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.encryptedInterconnectRouter = $.encryptedInterconnectRouter;
+        this.name = $.name;
+        this.network = $.network;
+        this.project = $.project;
+        this.region = $.region;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RouterBgpGetArgs> bgp;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> encryptedInterconnectRouter;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> selfLink;
+        private RouterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterState();
         }
 
         public Builder(RouterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bgp = defaults.bgp;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.encryptedInterconnectRouter = defaults.encryptedInterconnectRouter;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.selfLink = defaults.selfLink;
+            $ = new RouterState(Objects.requireNonNull(defaults));
         }
 
         public Builder bgp(@Nullable Output<RouterBgpGetArgs> bgp) {
-            this.bgp = bgp;
+            $.bgp = bgp;
             return this;
         }
-        public Builder bgp(@Nullable RouterBgpGetArgs bgp) {
-            this.bgp = Codegen.ofNullable(bgp);
-            return this;
+
+        public Builder bgp(RouterBgpGetArgs bgp) {
+            return bgp(Output.of(bgp));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedInterconnectRouter(@Nullable Output<Boolean> encryptedInterconnectRouter) {
-            this.encryptedInterconnectRouter = encryptedInterconnectRouter;
+            $.encryptedInterconnectRouter = encryptedInterconnectRouter;
             return this;
         }
-        public Builder encryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
-            this.encryptedInterconnectRouter = Codegen.ofNullable(encryptedInterconnectRouter);
-            return this;
+
+        public Builder encryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
+            return encryptedInterconnectRouter(Output.of(encryptedInterconnectRouter));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public RouterState build() {
-            return new RouterState(bgp, creationTimestamp, description, encryptedInterconnectRouter, name, network, project, region, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public RouterState build() {
+            return $;
         }
     }
+
 }

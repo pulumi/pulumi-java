@@ -24,10 +24,10 @@ public final class UpstreamAuthSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="managedIdentity")
-      private final @Nullable ManagedIdentitySettingsResponse managedIdentity;
+    private @Nullable ManagedIdentitySettingsResponse managedIdentity;
 
     public Optional<ManagedIdentitySettingsResponse> managedIdentity() {
-        return this.managedIdentity == null ? Optional.empty() : Optional.ofNullable(this.managedIdentity);
+        return Optional.ofNullable(this.managedIdentity);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class UpstreamAuthSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public UpstreamAuthSettingsResponse(
-        @Nullable ManagedIdentitySettingsResponse managedIdentity,
-        @Nullable String type) {
-        this.managedIdentity = managedIdentity;
-        this.type = type;
-    }
+    private UpstreamAuthSettingsResponse() {}
 
-    private UpstreamAuthSettingsResponse() {
-        this.managedIdentity = null;
-        this.type = null;
+    private UpstreamAuthSettingsResponse(UpstreamAuthSettingsResponse $) {
+        this.managedIdentity = $.managedIdentity;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpstreamAuthSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ManagedIdentitySettingsResponse managedIdentity;
-        private @Nullable String type;
+        private UpstreamAuthSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpstreamAuthSettingsResponse();
         }
 
         public Builder(UpstreamAuthSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedIdentity = defaults.managedIdentity;
-    	      this.type = defaults.type;
+            $ = new UpstreamAuthSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder managedIdentity(@Nullable ManagedIdentitySettingsResponse managedIdentity) {
-            this.managedIdentity = managedIdentity;
+            $.managedIdentity = managedIdentity;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public UpstreamAuthSettingsResponse build() {
-            return new UpstreamAuthSettingsResponse(managedIdentity, type);
+        }
+
+        public UpstreamAuthSettingsResponse build() {
+            return $;
         }
     }
+
 }

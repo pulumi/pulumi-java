@@ -6,7 +6,6 @@ package com.pulumi.awsnative.cloudfront;
 import com.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class ResponseHeadersPolicyArgs extends com.pulumi.resources.Resour
     public static final ResponseHeadersPolicyArgs Empty = new ResponseHeadersPolicyArgs();
 
     @Import(name="responseHeadersPolicyConfig", required=true)
-      private final Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
+    private Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
 
     public Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig() {
         return this.responseHeadersPolicyConfig;
     }
 
-    public ResponseHeadersPolicyArgs(Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig) {
-        this.responseHeadersPolicyConfig = Objects.requireNonNull(responseHeadersPolicyConfig, "expected parameter 'responseHeadersPolicyConfig' to be non-null");
-    }
+    private ResponseHeadersPolicyArgs() {}
 
-    private ResponseHeadersPolicyArgs() {
-        this.responseHeadersPolicyConfig = Codegen.empty();
+    private ResponseHeadersPolicyArgs(ResponseHeadersPolicyArgs $) {
+        this.responseHeadersPolicyConfig = $.responseHeadersPolicyConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
+        private ResponseHeadersPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyArgs();
         }
 
         public Builder(ResponseHeadersPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.responseHeadersPolicyConfig = defaults.responseHeadersPolicyConfig;
+            $ = new ResponseHeadersPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder responseHeadersPolicyConfig(Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig) {
-            this.responseHeadersPolicyConfig = Objects.requireNonNull(responseHeadersPolicyConfig);
+            $.responseHeadersPolicyConfig = responseHeadersPolicyConfig;
             return this;
         }
+
         public Builder responseHeadersPolicyConfig(ResponseHeadersPolicyConfigArgs responseHeadersPolicyConfig) {
-            this.responseHeadersPolicyConfig = Output.of(Objects.requireNonNull(responseHeadersPolicyConfig));
-            return this;
-        }        public ResponseHeadersPolicyArgs build() {
-            return new ResponseHeadersPolicyArgs(responseHeadersPolicyConfig);
+            return responseHeadersPolicyConfig(Output.of(responseHeadersPolicyConfig));
+        }
+
+        public ResponseHeadersPolicyArgs build() {
+            $.responseHeadersPolicyConfig = Objects.requireNonNull($.responseHeadersPolicyConfig, "expected parameter 'responseHeadersPolicyConfig' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="active")
-      private final @Nullable Output<Boolean> active;
+    private @Nullable Output<Boolean> active;
 
-    public Output<Boolean> active() {
-        return this.active == null ? Codegen.empty() : this.active;
+    public Optional<Output<Boolean>> active() {
+        return Optional.ofNullable(this.active);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="disableTemplateValidation")
-      private final @Nullable Output<Boolean> disableTemplateValidation;
+    private @Nullable Output<Boolean> disableTemplateValidation;
 
-    public Output<Boolean> disableTemplateValidation() {
-        return this.disableTemplateValidation == null ? Codegen.empty() : this.disableTemplateValidation;
+    public Optional<Output<Boolean>> disableTemplateValidation() {
+        return Optional.ofNullable(this.disableTemplateValidation);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="guidance")
-      private final @Nullable Output<String> guidance;
+    private @Nullable Output<String> guidance;
 
-    public Output<String> guidance() {
-        return this.guidance == null ? Codegen.empty() : this.guidance;
+    public Optional<Output<String>> guidance() {
+        return Optional.ofNullable(this.guidance);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="productId")
-      private final @Nullable Output<String> productId;
+    private @Nullable Output<String> productId;
 
-    public Output<String> productId() {
-        return this.productId == null ? Codegen.empty() : this.productId;
+    public Optional<Output<String>> productId() {
+        return Optional.ofNullable(this.productId);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="templatePhysicalId")
-      private final @Nullable Output<String> templatePhysicalId;
+    private @Nullable Output<String> templatePhysicalId;
 
-    public Output<String> templatePhysicalId() {
-        return this.templatePhysicalId == null ? Codegen.empty() : this.templatePhysicalId;
+    public Optional<Output<String>> templatePhysicalId() {
+        return Optional.ofNullable(this.templatePhysicalId);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="templateUrl")
-      private final @Nullable Output<String> templateUrl;
+    private @Nullable Output<String> templateUrl;
 
-    public Output<String> templateUrl() {
-        return this.templateUrl == null ? Codegen.empty() : this.templateUrl;
+    public Optional<Output<String>> templateUrl() {
+        return Optional.ofNullable(this.templateUrl);
     }
 
     /**
@@ -131,180 +131,148 @@ public final class ProvisioningArtifactState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ProvisioningArtifactState(
-        @Nullable Output<String> acceptLanguage,
-        @Nullable Output<Boolean> active,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disableTemplateValidation,
-        @Nullable Output<String> guidance,
-        @Nullable Output<String> name,
-        @Nullable Output<String> productId,
-        @Nullable Output<String> templatePhysicalId,
-        @Nullable Output<String> templateUrl,
-        @Nullable Output<String> type) {
-        this.acceptLanguage = acceptLanguage;
-        this.active = active;
-        this.createdTime = createdTime;
-        this.description = description;
-        this.disableTemplateValidation = disableTemplateValidation;
-        this.guidance = guidance;
-        this.name = name;
-        this.productId = productId;
-        this.templatePhysicalId = templatePhysicalId;
-        this.templateUrl = templateUrl;
-        this.type = type;
-    }
+    private ProvisioningArtifactState() {}
 
-    private ProvisioningArtifactState() {
-        this.acceptLanguage = Codegen.empty();
-        this.active = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.disableTemplateValidation = Codegen.empty();
-        this.guidance = Codegen.empty();
-        this.name = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.templatePhysicalId = Codegen.empty();
-        this.templateUrl = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProvisioningArtifactState(ProvisioningArtifactState $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.active = $.active;
+        this.createdTime = $.createdTime;
+        this.description = $.description;
+        this.disableTemplateValidation = $.disableTemplateValidation;
+        this.guidance = $.guidance;
+        this.name = $.name;
+        this.productId = $.productId;
+        this.templatePhysicalId = $.templatePhysicalId;
+        this.templateUrl = $.templateUrl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProvisioningArtifactState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private @Nullable Output<Boolean> active;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disableTemplateValidation;
-        private @Nullable Output<String> guidance;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> productId;
-        private @Nullable Output<String> templatePhysicalId;
-        private @Nullable Output<String> templateUrl;
-        private @Nullable Output<String> type;
+        private ProvisioningArtifactState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProvisioningArtifactState();
         }
 
         public Builder(ProvisioningArtifactState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.active = defaults.active;
-    	      this.createdTime = defaults.createdTime;
-    	      this.description = defaults.description;
-    	      this.disableTemplateValidation = defaults.disableTemplateValidation;
-    	      this.guidance = defaults.guidance;
-    	      this.name = defaults.name;
-    	      this.productId = defaults.productId;
-    	      this.templatePhysicalId = defaults.templatePhysicalId;
-    	      this.templateUrl = defaults.templateUrl;
-    	      this.type = defaults.type;
+            $ = new ProvisioningArtifactState(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder active(@Nullable Output<Boolean> active) {
-            this.active = active;
+            $.active = active;
             return this;
         }
-        public Builder active(@Nullable Boolean active) {
-            this.active = Codegen.ofNullable(active);
-            return this;
+
+        public Builder active(Boolean active) {
+            return active(Output.of(active));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disableTemplateValidation(@Nullable Output<Boolean> disableTemplateValidation) {
-            this.disableTemplateValidation = disableTemplateValidation;
+            $.disableTemplateValidation = disableTemplateValidation;
             return this;
         }
-        public Builder disableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
-            this.disableTemplateValidation = Codegen.ofNullable(disableTemplateValidation);
-            return this;
+
+        public Builder disableTemplateValidation(Boolean disableTemplateValidation) {
+            return disableTemplateValidation(Output.of(disableTemplateValidation));
         }
+
         public Builder guidance(@Nullable Output<String> guidance) {
-            this.guidance = guidance;
+            $.guidance = guidance;
             return this;
         }
-        public Builder guidance(@Nullable String guidance) {
-            this.guidance = Codegen.ofNullable(guidance);
-            return this;
+
+        public Builder guidance(String guidance) {
+            return guidance(Output.of(guidance));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder productId(@Nullable Output<String> productId) {
-            this.productId = productId;
+            $.productId = productId;
             return this;
         }
-        public Builder productId(@Nullable String productId) {
-            this.productId = Codegen.ofNullable(productId);
-            return this;
+
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
         }
+
         public Builder templatePhysicalId(@Nullable Output<String> templatePhysicalId) {
-            this.templatePhysicalId = templatePhysicalId;
+            $.templatePhysicalId = templatePhysicalId;
             return this;
         }
-        public Builder templatePhysicalId(@Nullable String templatePhysicalId) {
-            this.templatePhysicalId = Codegen.ofNullable(templatePhysicalId);
-            return this;
+
+        public Builder templatePhysicalId(String templatePhysicalId) {
+            return templatePhysicalId(Output.of(templatePhysicalId));
         }
+
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
-            this.templateUrl = templateUrl;
+            $.templateUrl = templateUrl;
             return this;
         }
-        public Builder templateUrl(@Nullable String templateUrl) {
-            this.templateUrl = Codegen.ofNullable(templateUrl);
-            return this;
+
+        public Builder templateUrl(String templateUrl) {
+            return templateUrl(Output.of(templateUrl));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ProvisioningArtifactState build() {
-            return new ProvisioningArtifactState(acceptLanguage, active, createdTime, description, disableTemplateValidation, guidance, name, productId, templatePhysicalId, templateUrl, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ProvisioningArtifactState build() {
+            return $;
         }
     }
+
 }

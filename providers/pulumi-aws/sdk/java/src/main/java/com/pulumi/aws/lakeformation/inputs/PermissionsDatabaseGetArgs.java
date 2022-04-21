@@ -5,9 +5,9 @@ package com.pulumi.aws.lakeformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PermissionsDatabaseGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class PermissionsDatabaseGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public PermissionsDatabaseGetArgs(
-        @Nullable Output<String> catalogId,
-        Output<String> name) {
-        this.catalogId = catalogId;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PermissionsDatabaseGetArgs() {}
 
-    private PermissionsDatabaseGetArgs() {
-        this.catalogId = Codegen.empty();
-        this.name = Codegen.empty();
+    private PermissionsDatabaseGetArgs(PermissionsDatabaseGetArgs $) {
+        this.catalogId = $.catalogId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionsDatabaseGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private Output<String> name;
+        private PermissionsDatabaseGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionsDatabaseGetArgs();
         }
 
         public Builder(PermissionsDatabaseGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.name = defaults.name;
+            $ = new PermissionsDatabaseGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public PermissionsDatabaseGetArgs build() {
-            return new PermissionsDatabaseGetArgs(catalogId, name);
+            return name(Output.of(name));
+        }
+
+        public PermissionsDatabaseGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

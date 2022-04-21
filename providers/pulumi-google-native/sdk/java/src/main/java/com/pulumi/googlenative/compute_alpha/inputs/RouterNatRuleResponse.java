@@ -19,7 +19,7 @@ public final class RouterNatRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="action", required=true)
-      private final RouterNatRuleActionResponse action;
+    private RouterNatRuleActionResponse action;
 
     public RouterNatRuleActionResponse action() {
         return this.action;
@@ -30,7 +30,7 @@ public final class RouterNatRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -41,7 +41,7 @@ public final class RouterNatRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="match", required=true)
-      private final String match;
+    private String match;
 
     public String match() {
         return this.match;
@@ -52,73 +52,66 @@ public final class RouterNatRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ruleNumber", required=true)
-      private final Integer ruleNumber;
+    private Integer ruleNumber;
 
     public Integer ruleNumber() {
         return this.ruleNumber;
     }
 
-    public RouterNatRuleResponse(
-        RouterNatRuleActionResponse action,
-        String description,
-        String match,
-        Integer ruleNumber) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
-        this.ruleNumber = Objects.requireNonNull(ruleNumber, "expected parameter 'ruleNumber' to be non-null");
-    }
+    private RouterNatRuleResponse() {}
 
-    private RouterNatRuleResponse() {
-        this.action = null;
-        this.description = null;
-        this.match = null;
-        this.ruleNumber = null;
+    private RouterNatRuleResponse(RouterNatRuleResponse $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.match = $.match;
+        this.ruleNumber = $.ruleNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RouterNatRuleActionResponse action;
-        private String description;
-        private String match;
-        private Integer ruleNumber;
+        private RouterNatRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatRuleResponse();
         }
 
         public Builder(RouterNatRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.match = defaults.match;
-    	      this.ruleNumber = defaults.ruleNumber;
+            $ = new RouterNatRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(RouterNatRuleActionResponse action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder match(String match) {
-            this.match = Objects.requireNonNull(match);
+            $.match = match;
             return this;
         }
+
         public Builder ruleNumber(Integer ruleNumber) {
-            this.ruleNumber = Objects.requireNonNull(ruleNumber);
+            $.ruleNumber = ruleNumber;
             return this;
-        }        public RouterNatRuleResponse build() {
-            return new RouterNatRuleResponse(action, description, match, ruleNumber);
+        }
+
+        public RouterNatRuleResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.match = Objects.requireNonNull($.match, "expected parameter 'match' to be non-null");
+            $.ruleNumber = Objects.requireNonNull($.ruleNumber, "expected parameter 'ruleNumber' to be non-null");
+            return $;
         }
     }
+
 }

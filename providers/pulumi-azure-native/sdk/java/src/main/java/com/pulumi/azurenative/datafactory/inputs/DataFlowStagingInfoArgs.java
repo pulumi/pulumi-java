@@ -6,9 +6,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DataFlowStagingInfoArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Output<Object> folderPath;
+    private @Nullable Output<Object> folderPath;
 
-    public Output<Object> folderPath() {
-        return this.folderPath == null ? Codegen.empty() : this.folderPath;
+    public Optional<Output<Object>> folderPath() {
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DataFlowStagingInfoArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="linkedService")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
-    public Output<LinkedServiceReferenceArgs> linkedService() {
-        return this.linkedService == null ? Codegen.empty() : this.linkedService;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedService() {
+        return Optional.ofNullable(this.linkedService);
     }
 
-    public DataFlowStagingInfoArgs(
-        @Nullable Output<Object> folderPath,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedService) {
-        this.folderPath = folderPath;
-        this.linkedService = linkedService;
-    }
+    private DataFlowStagingInfoArgs() {}
 
-    private DataFlowStagingInfoArgs() {
-        this.folderPath = Codegen.empty();
-        this.linkedService = Codegen.empty();
+    private DataFlowStagingInfoArgs(DataFlowStagingInfoArgs $) {
+        this.folderPath = $.folderPath;
+        this.linkedService = $.linkedService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataFlowStagingInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> folderPath;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedService;
+        private DataFlowStagingInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataFlowStagingInfoArgs();
         }
 
         public Builder(DataFlowStagingInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.folderPath = defaults.folderPath;
-    	      this.linkedService = defaults.linkedService;
+            $ = new DataFlowStagingInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder folderPath(@Nullable Output<Object> folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
-        public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Codegen.ofNullable(folderPath);
-            return this;
+
+        public Builder folderPath(Object folderPath) {
+            return folderPath(Output.of(folderPath));
         }
+
         public Builder linkedService(@Nullable Output<LinkedServiceReferenceArgs> linkedService) {
-            this.linkedService = linkedService;
+            $.linkedService = linkedService;
             return this;
         }
-        public Builder linkedService(@Nullable LinkedServiceReferenceArgs linkedService) {
-            this.linkedService = Codegen.ofNullable(linkedService);
-            return this;
-        }        public DataFlowStagingInfoArgs build() {
-            return new DataFlowStagingInfoArgs(folderPath, linkedService);
+
+        public Builder linkedService(LinkedServiceReferenceArgs linkedService) {
+            return linkedService(Output.of(linkedService));
+        }
+
+        public DataFlowStagingInfoArgs build() {
+            return $;
         }
     }
+
 }

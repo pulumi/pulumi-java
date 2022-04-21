@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DeviceDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class DeviceDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -42,76 +42,69 @@ public final class DeviceDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iotThingName")
-      private final @Nullable Output<String> iotThingName;
+    private @Nullable Output<String> iotThingName;
 
-    public Output<String> iotThingName() {
-        return this.iotThingName == null ? Codegen.empty() : this.iotThingName;
+    public Optional<Output<String>> iotThingName() {
+        return Optional.ofNullable(this.iotThingName);
     }
 
-    public DeviceDeviceArgs(
-        @Nullable Output<String> description,
-        Output<String> deviceName,
-        @Nullable Output<String> iotThingName) {
-        this.description = description;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.iotThingName = iotThingName;
-    }
+    private DeviceDeviceArgs() {}
 
-    private DeviceDeviceArgs() {
-        this.description = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.iotThingName = Codegen.empty();
+    private DeviceDeviceArgs(DeviceDeviceArgs $) {
+        this.description = $.description;
+        this.deviceName = $.deviceName;
+        this.iotThingName = $.iotThingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> deviceName;
-        private @Nullable Output<String> iotThingName;
+        private DeviceDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceDeviceArgs();
         }
 
         public Builder(DeviceDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.deviceName = defaults.deviceName;
-    	      this.iotThingName = defaults.iotThingName;
+            $ = new DeviceDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder iotThingName(@Nullable Output<String> iotThingName) {
-            this.iotThingName = iotThingName;
+            $.iotThingName = iotThingName;
             return this;
         }
-        public Builder iotThingName(@Nullable String iotThingName) {
-            this.iotThingName = Codegen.ofNullable(iotThingName);
-            return this;
-        }        public DeviceDeviceArgs build() {
-            return new DeviceDeviceArgs(description, deviceName, iotThingName);
+
+        public Builder iotThingName(String iotThingName) {
+            return iotThingName(Output.of(iotThingName));
+        }
+
+        public DeviceDeviceArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            return $;
         }
     }
+
 }

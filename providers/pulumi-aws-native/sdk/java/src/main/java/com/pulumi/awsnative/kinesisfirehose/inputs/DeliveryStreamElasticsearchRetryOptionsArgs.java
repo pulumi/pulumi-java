@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DeliveryStreamElasticsearchRetryOptionsArgs extends com.pulum
     public static final DeliveryStreamElasticsearchRetryOptionsArgs Empty = new DeliveryStreamElasticsearchRetryOptionsArgs();
 
     @Import(name="durationInSeconds")
-      private final @Nullable Output<Integer> durationInSeconds;
+    private @Nullable Output<Integer> durationInSeconds;
 
-    public Output<Integer> durationInSeconds() {
-        return this.durationInSeconds == null ? Codegen.empty() : this.durationInSeconds;
+    public Optional<Output<Integer>> durationInSeconds() {
+        return Optional.ofNullable(this.durationInSeconds);
     }
 
-    public DeliveryStreamElasticsearchRetryOptionsArgs(@Nullable Output<Integer> durationInSeconds) {
-        this.durationInSeconds = durationInSeconds;
-    }
+    private DeliveryStreamElasticsearchRetryOptionsArgs() {}
 
-    private DeliveryStreamElasticsearchRetryOptionsArgs() {
-        this.durationInSeconds = Codegen.empty();
+    private DeliveryStreamElasticsearchRetryOptionsArgs(DeliveryStreamElasticsearchRetryOptionsArgs $) {
+        this.durationInSeconds = $.durationInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamElasticsearchRetryOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> durationInSeconds;
+        private DeliveryStreamElasticsearchRetryOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamElasticsearchRetryOptionsArgs();
         }
 
         public Builder(DeliveryStreamElasticsearchRetryOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationInSeconds = defaults.durationInSeconds;
+            $ = new DeliveryStreamElasticsearchRetryOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder durationInSeconds(@Nullable Output<Integer> durationInSeconds) {
-            this.durationInSeconds = durationInSeconds;
+            $.durationInSeconds = durationInSeconds;
             return this;
         }
-        public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = Codegen.ofNullable(durationInSeconds);
-            return this;
-        }        public DeliveryStreamElasticsearchRetryOptionsArgs build() {
-            return new DeliveryStreamElasticsearchRetryOptionsArgs(durationInSeconds);
+
+        public Builder durationInSeconds(Integer durationInSeconds) {
+            return durationInSeconds(Output.of(durationInSeconds));
+        }
+
+        public DeliveryStreamElasticsearchRetryOptionsArgs build() {
+            return $;
         }
     }
+
 }

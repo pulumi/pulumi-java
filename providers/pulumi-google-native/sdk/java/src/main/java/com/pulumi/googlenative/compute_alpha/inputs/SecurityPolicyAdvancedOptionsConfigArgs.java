@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.SecurityPolicyAdvancedOptionsConfigJsonParsing;
 import com.pulumi.googlenative.compute_alpha.enums.SecurityPolicyAdvancedOptionsConfigLogLevel;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class SecurityPolicyAdvancedOptionsConfigArgs extends com.pulumi.re
     public static final SecurityPolicyAdvancedOptionsConfigArgs Empty = new SecurityPolicyAdvancedOptionsConfigArgs();
 
     @Import(name="jsonParsing")
-      private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing;
+    private @Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing;
 
-    public Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing() {
-        return this.jsonParsing == null ? Codegen.empty() : this.jsonParsing;
+    public Optional<Output<SecurityPolicyAdvancedOptionsConfigJsonParsing>> jsonParsing() {
+        return Optional.ofNullable(this.jsonParsing);
     }
 
     @Import(name="logLevel")
-      private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel;
+    private @Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel;
 
-    public Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel() {
-        return this.logLevel == null ? Codegen.empty() : this.logLevel;
+    public Optional<Output<SecurityPolicyAdvancedOptionsConfigLogLevel>> logLevel() {
+        return Optional.ofNullable(this.logLevel);
     }
 
-    public SecurityPolicyAdvancedOptionsConfigArgs(
-        @Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing,
-        @Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel) {
-        this.jsonParsing = jsonParsing;
-        this.logLevel = logLevel;
-    }
+    private SecurityPolicyAdvancedOptionsConfigArgs() {}
 
-    private SecurityPolicyAdvancedOptionsConfigArgs() {
-        this.jsonParsing = Codegen.empty();
-        this.logLevel = Codegen.empty();
+    private SecurityPolicyAdvancedOptionsConfigArgs(SecurityPolicyAdvancedOptionsConfigArgs $) {
+        this.jsonParsing = $.jsonParsing;
+        this.logLevel = $.logLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyAdvancedOptionsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing;
-        private @Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel;
+        private SecurityPolicyAdvancedOptionsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyAdvancedOptionsConfigArgs();
         }
 
         public Builder(SecurityPolicyAdvancedOptionsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jsonParsing = defaults.jsonParsing;
-    	      this.logLevel = defaults.logLevel;
+            $ = new SecurityPolicyAdvancedOptionsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jsonParsing(@Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing) {
-            this.jsonParsing = jsonParsing;
+            $.jsonParsing = jsonParsing;
             return this;
         }
-        public Builder jsonParsing(@Nullable SecurityPolicyAdvancedOptionsConfigJsonParsing jsonParsing) {
-            this.jsonParsing = Codegen.ofNullable(jsonParsing);
-            return this;
+
+        public Builder jsonParsing(SecurityPolicyAdvancedOptionsConfigJsonParsing jsonParsing) {
+            return jsonParsing(Output.of(jsonParsing));
         }
+
         public Builder logLevel(@Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
-        public Builder logLevel(@Nullable SecurityPolicyAdvancedOptionsConfigLogLevel logLevel) {
-            this.logLevel = Codegen.ofNullable(logLevel);
-            return this;
-        }        public SecurityPolicyAdvancedOptionsConfigArgs build() {
-            return new SecurityPolicyAdvancedOptionsConfigArgs(jsonParsing, logLevel);
+
+        public Builder logLevel(SecurityPolicyAdvancedOptionsConfigLogLevel logLevel) {
+            return logLevel(Output.of(logLevel));
+        }
+
+        public SecurityPolicyAdvancedOptionsConfigArgs build() {
+            return $;
         }
     }
+
 }

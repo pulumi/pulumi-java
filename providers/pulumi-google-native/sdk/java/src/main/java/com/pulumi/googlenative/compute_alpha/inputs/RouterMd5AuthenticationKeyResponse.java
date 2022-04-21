@@ -17,7 +17,7 @@ public final class RouterMd5AuthenticationKeyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -28,55 +28,52 @@ public final class RouterMd5AuthenticationKeyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public RouterMd5AuthenticationKeyResponse(
-        String key,
-        String name) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private RouterMd5AuthenticationKeyResponse() {}
 
-    private RouterMd5AuthenticationKeyResponse() {
-        this.key = null;
-        this.name = null;
+    private RouterMd5AuthenticationKeyResponse(RouterMd5AuthenticationKeyResponse $) {
+        this.key = $.key;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterMd5AuthenticationKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String name;
+        private RouterMd5AuthenticationKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterMd5AuthenticationKeyResponse();
         }
 
         public Builder(RouterMd5AuthenticationKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.name = defaults.name;
+            $ = new RouterMd5AuthenticationKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public RouterMd5AuthenticationKeyResponse build() {
-            return new RouterMd5AuthenticationKeyResponse(key, name);
+        }
+
+        public RouterMd5AuthenticationKeyResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

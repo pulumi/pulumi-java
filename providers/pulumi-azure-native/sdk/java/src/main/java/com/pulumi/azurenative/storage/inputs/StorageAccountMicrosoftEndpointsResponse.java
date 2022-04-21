@@ -21,7 +21,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
      * 
      */
     @Import(name="blob", required=true)
-      private final String blob;
+    private String blob;
 
     public String blob() {
         return this.blob;
@@ -32,7 +32,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
      * 
      */
     @Import(name="dfs", required=true)
-      private final String dfs;
+    private String dfs;
 
     public String dfs() {
         return this.dfs;
@@ -43,7 +43,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
      * 
      */
     @Import(name="file", required=true)
-      private final String file;
+    private String file;
 
     public String file() {
         return this.file;
@@ -54,7 +54,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
      * 
      */
     @Import(name="queue", required=true)
-      private final String queue;
+    private String queue;
 
     public String queue() {
         return this.queue;
@@ -65,7 +65,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
      * 
      */
     @Import(name="table", required=true)
-      private final String table;
+    private String table;
 
     public String table() {
         return this.table;
@@ -76,91 +76,80 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
      * 
      */
     @Import(name="web", required=true)
-      private final String web;
+    private String web;
 
     public String web() {
         return this.web;
     }
 
-    public StorageAccountMicrosoftEndpointsResponse(
-        String blob,
-        String dfs,
-        String file,
-        String queue,
-        String table,
-        String web) {
-        this.blob = Objects.requireNonNull(blob, "expected parameter 'blob' to be non-null");
-        this.dfs = Objects.requireNonNull(dfs, "expected parameter 'dfs' to be non-null");
-        this.file = Objects.requireNonNull(file, "expected parameter 'file' to be non-null");
-        this.queue = Objects.requireNonNull(queue, "expected parameter 'queue' to be non-null");
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-        this.web = Objects.requireNonNull(web, "expected parameter 'web' to be non-null");
-    }
+    private StorageAccountMicrosoftEndpointsResponse() {}
 
-    private StorageAccountMicrosoftEndpointsResponse() {
-        this.blob = null;
-        this.dfs = null;
-        this.file = null;
-        this.queue = null;
-        this.table = null;
-        this.web = null;
+    private StorageAccountMicrosoftEndpointsResponse(StorageAccountMicrosoftEndpointsResponse $) {
+        this.blob = $.blob;
+        this.dfs = $.dfs;
+        this.file = $.file;
+        this.queue = $.queue;
+        this.table = $.table;
+        this.web = $.web;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountMicrosoftEndpointsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blob;
-        private String dfs;
-        private String file;
-        private String queue;
-        private String table;
-        private String web;
+        private StorageAccountMicrosoftEndpointsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountMicrosoftEndpointsResponse();
         }
 
         public Builder(StorageAccountMicrosoftEndpointsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blob = defaults.blob;
-    	      this.dfs = defaults.dfs;
-    	      this.file = defaults.file;
-    	      this.queue = defaults.queue;
-    	      this.table = defaults.table;
-    	      this.web = defaults.web;
+            $ = new StorageAccountMicrosoftEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blob(String blob) {
-            this.blob = Objects.requireNonNull(blob);
+            $.blob = blob;
             return this;
         }
+
         public Builder dfs(String dfs) {
-            this.dfs = Objects.requireNonNull(dfs);
+            $.dfs = dfs;
             return this;
         }
+
         public Builder file(String file) {
-            this.file = Objects.requireNonNull(file);
+            $.file = file;
             return this;
         }
+
         public Builder queue(String queue) {
-            this.queue = Objects.requireNonNull(queue);
+            $.queue = queue;
             return this;
         }
+
         public Builder table(String table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
         }
+
         public Builder web(String web) {
-            this.web = Objects.requireNonNull(web);
+            $.web = web;
             return this;
-        }        public StorageAccountMicrosoftEndpointsResponse build() {
-            return new StorageAccountMicrosoftEndpointsResponse(blob, dfs, file, queue, table, web);
+        }
+
+        public StorageAccountMicrosoftEndpointsResponse build() {
+            $.blob = Objects.requireNonNull($.blob, "expected parameter 'blob' to be non-null");
+            $.dfs = Objects.requireNonNull($.dfs, "expected parameter 'dfs' to be non-null");
+            $.file = Objects.requireNonNull($.file, "expected parameter 'file' to be non-null");
+            $.queue = Objects.requireNonNull($.queue, "expected parameter 'queue' to be non-null");
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            $.web = Objects.requireNonNull($.web, "expected parameter 'web' to be non-null");
+            return $;
         }
     }
+
 }

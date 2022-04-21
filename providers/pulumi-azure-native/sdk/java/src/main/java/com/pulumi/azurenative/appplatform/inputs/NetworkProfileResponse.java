@@ -26,10 +26,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="appNetworkResourceGroup")
-      private final @Nullable String appNetworkResourceGroup;
+    private @Nullable String appNetworkResourceGroup;
 
     public Optional<String> appNetworkResourceGroup() {
-        return this.appNetworkResourceGroup == null ? Optional.empty() : Optional.ofNullable(this.appNetworkResourceGroup);
+        return Optional.ofNullable(this.appNetworkResourceGroup);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="appSubnetId")
-      private final @Nullable String appSubnetId;
+    private @Nullable String appSubnetId;
 
     public Optional<String> appSubnetId() {
-        return this.appSubnetId == null ? Optional.empty() : Optional.ofNullable(this.appSubnetId);
+        return Optional.ofNullable(this.appSubnetId);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="outboundIPs", required=true)
-      private final NetworkProfileResponseOutboundIPs outboundIPs;
+    private NetworkProfileResponseOutboundIPs outboundIPs;
 
     public NetworkProfileResponseOutboundIPs outboundIPs() {
         return this.outboundIPs;
@@ -59,7 +59,7 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="requiredTraffics", required=true)
-      private final List<RequiredTrafficResponse> requiredTraffics;
+    private List<RequiredTrafficResponse> requiredTraffics;
 
     public List<RequiredTrafficResponse> requiredTraffics() {
         return this.requiredTraffics;
@@ -70,10 +70,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceCidr")
-      private final @Nullable String serviceCidr;
+    private @Nullable String serviceCidr;
 
     public Optional<String> serviceCidr() {
-        return this.serviceCidr == null ? Optional.empty() : Optional.ofNullable(this.serviceCidr);
+        return Optional.ofNullable(this.serviceCidr);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceRuntimeNetworkResourceGroup")
-      private final @Nullable String serviceRuntimeNetworkResourceGroup;
+    private @Nullable String serviceRuntimeNetworkResourceGroup;
 
     public Optional<String> serviceRuntimeNetworkResourceGroup() {
-        return this.serviceRuntimeNetworkResourceGroup == null ? Optional.empty() : Optional.ofNullable(this.serviceRuntimeNetworkResourceGroup);
+        return Optional.ofNullable(this.serviceRuntimeNetworkResourceGroup);
     }
 
     /**
@@ -92,103 +92,86 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceRuntimeSubnetId")
-      private final @Nullable String serviceRuntimeSubnetId;
+    private @Nullable String serviceRuntimeSubnetId;
 
     public Optional<String> serviceRuntimeSubnetId() {
-        return this.serviceRuntimeSubnetId == null ? Optional.empty() : Optional.ofNullable(this.serviceRuntimeSubnetId);
+        return Optional.ofNullable(this.serviceRuntimeSubnetId);
     }
 
-    public NetworkProfileResponse(
-        @Nullable String appNetworkResourceGroup,
-        @Nullable String appSubnetId,
-        NetworkProfileResponseOutboundIPs outboundIPs,
-        List<RequiredTrafficResponse> requiredTraffics,
-        @Nullable String serviceCidr,
-        @Nullable String serviceRuntimeNetworkResourceGroup,
-        @Nullable String serviceRuntimeSubnetId) {
-        this.appNetworkResourceGroup = appNetworkResourceGroup;
-        this.appSubnetId = appSubnetId;
-        this.outboundIPs = Objects.requireNonNull(outboundIPs, "expected parameter 'outboundIPs' to be non-null");
-        this.requiredTraffics = Objects.requireNonNull(requiredTraffics, "expected parameter 'requiredTraffics' to be non-null");
-        this.serviceCidr = serviceCidr;
-        this.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
-        this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
-    }
+    private NetworkProfileResponse() {}
 
-    private NetworkProfileResponse() {
-        this.appNetworkResourceGroup = null;
-        this.appSubnetId = null;
-        this.outboundIPs = null;
-        this.requiredTraffics = List.of();
-        this.serviceCidr = null;
-        this.serviceRuntimeNetworkResourceGroup = null;
-        this.serviceRuntimeSubnetId = null;
+    private NetworkProfileResponse(NetworkProfileResponse $) {
+        this.appNetworkResourceGroup = $.appNetworkResourceGroup;
+        this.appSubnetId = $.appSubnetId;
+        this.outboundIPs = $.outboundIPs;
+        this.requiredTraffics = $.requiredTraffics;
+        this.serviceCidr = $.serviceCidr;
+        this.serviceRuntimeNetworkResourceGroup = $.serviceRuntimeNetworkResourceGroup;
+        this.serviceRuntimeSubnetId = $.serviceRuntimeSubnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String appNetworkResourceGroup;
-        private @Nullable String appSubnetId;
-        private NetworkProfileResponseOutboundIPs outboundIPs;
-        private List<RequiredTrafficResponse> requiredTraffics;
-        private @Nullable String serviceCidr;
-        private @Nullable String serviceRuntimeNetworkResourceGroup;
-        private @Nullable String serviceRuntimeSubnetId;
+        private NetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileResponse();
         }
 
         public Builder(NetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appNetworkResourceGroup = defaults.appNetworkResourceGroup;
-    	      this.appSubnetId = defaults.appSubnetId;
-    	      this.outboundIPs = defaults.outboundIPs;
-    	      this.requiredTraffics = defaults.requiredTraffics;
-    	      this.serviceCidr = defaults.serviceCidr;
-    	      this.serviceRuntimeNetworkResourceGroup = defaults.serviceRuntimeNetworkResourceGroup;
-    	      this.serviceRuntimeSubnetId = defaults.serviceRuntimeSubnetId;
+            $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appNetworkResourceGroup(@Nullable String appNetworkResourceGroup) {
-            this.appNetworkResourceGroup = appNetworkResourceGroup;
+            $.appNetworkResourceGroup = appNetworkResourceGroup;
             return this;
         }
+
         public Builder appSubnetId(@Nullable String appSubnetId) {
-            this.appSubnetId = appSubnetId;
+            $.appSubnetId = appSubnetId;
             return this;
         }
+
         public Builder outboundIPs(NetworkProfileResponseOutboundIPs outboundIPs) {
-            this.outboundIPs = Objects.requireNonNull(outboundIPs);
+            $.outboundIPs = outboundIPs;
             return this;
         }
+
         public Builder requiredTraffics(List<RequiredTrafficResponse> requiredTraffics) {
-            this.requiredTraffics = Objects.requireNonNull(requiredTraffics);
+            $.requiredTraffics = requiredTraffics;
             return this;
         }
+
         public Builder requiredTraffics(RequiredTrafficResponse... requiredTraffics) {
             return requiredTraffics(List.of(requiredTraffics));
         }
+
         public Builder serviceCidr(@Nullable String serviceCidr) {
-            this.serviceCidr = serviceCidr;
+            $.serviceCidr = serviceCidr;
             return this;
         }
+
         public Builder serviceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
-            this.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
+            $.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
             return this;
         }
+
         public Builder serviceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
-            this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
+            $.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
             return this;
-        }        public NetworkProfileResponse build() {
-            return new NetworkProfileResponse(appNetworkResourceGroup, appSubnetId, outboundIPs, requiredTraffics, serviceCidr, serviceRuntimeNetworkResourceGroup, serviceRuntimeSubnetId);
+        }
+
+        public NetworkProfileResponse build() {
+            $.outboundIPs = Objects.requireNonNull($.outboundIPs, "expected parameter 'outboundIPs' to be non-null");
+            $.requiredTraffics = Objects.requireNonNull($.requiredTraffics, "expected parameter 'requiredTraffics' to be non-null");
+            return $;
         }
     }
+
 }

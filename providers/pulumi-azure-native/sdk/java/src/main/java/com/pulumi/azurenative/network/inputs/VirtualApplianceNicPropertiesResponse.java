@@ -21,7 +21,7 @@ public final class VirtualApplianceNicPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class VirtualApplianceNicPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
@@ -43,64 +43,59 @@ public final class VirtualApplianceNicPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="publicIpAddress", required=true)
-      private final String publicIpAddress;
+    private String publicIpAddress;
 
     public String publicIpAddress() {
         return this.publicIpAddress;
     }
 
-    public VirtualApplianceNicPropertiesResponse(
-        String name,
-        String privateIpAddress,
-        String publicIpAddress) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress, "expected parameter 'publicIpAddress' to be non-null");
-    }
+    private VirtualApplianceNicPropertiesResponse() {}
 
-    private VirtualApplianceNicPropertiesResponse() {
-        this.name = null;
-        this.privateIpAddress = null;
-        this.publicIpAddress = null;
+    private VirtualApplianceNicPropertiesResponse(VirtualApplianceNicPropertiesResponse $) {
+        this.name = $.name;
+        this.privateIpAddress = $.privateIpAddress;
+        this.publicIpAddress = $.publicIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualApplianceNicPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String privateIpAddress;
-        private String publicIpAddress;
+        private VirtualApplianceNicPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualApplianceNicPropertiesResponse();
         }
 
         public Builder(VirtualApplianceNicPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.publicIpAddress = defaults.publicIpAddress;
+            $ = new VirtualApplianceNicPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder publicIpAddress(String publicIpAddress) {
-            this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
+            $.publicIpAddress = publicIpAddress;
             return this;
-        }        public VirtualApplianceNicPropertiesResponse build() {
-            return new VirtualApplianceNicPropertiesResponse(name, privateIpAddress, publicIpAddress);
+        }
+
+        public VirtualApplianceNicPropertiesResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            $.publicIpAddress = Objects.requireNonNull($.publicIpAddress, "expected parameter 'publicIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CustomDomainPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="certName")
-      private final @Nullable Output<String> certName;
+    private @Nullable Output<String> certName;
 
-    public Output<String> certName() {
-        return this.certName == null ? Codegen.empty() : this.certName;
+    public Optional<Output<String>> certName() {
+        return Optional.ofNullable(this.certName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CustomDomainPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public CustomDomainPropertiesArgs(
-        @Nullable Output<String> certName,
-        @Nullable Output<String> thumbprint) {
-        this.certName = certName;
-        this.thumbprint = thumbprint;
-    }
+    private CustomDomainPropertiesArgs() {}
 
-    private CustomDomainPropertiesArgs() {
-        this.certName = Codegen.empty();
-        this.thumbprint = Codegen.empty();
+    private CustomDomainPropertiesArgs(CustomDomainPropertiesArgs $) {
+        this.certName = $.certName;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDomainPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certName;
-        private @Nullable Output<String> thumbprint;
+        private CustomDomainPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDomainPropertiesArgs();
         }
 
         public Builder(CustomDomainPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certName = defaults.certName;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new CustomDomainPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certName(@Nullable Output<String> certName) {
-            this.certName = certName;
+            $.certName = certName;
             return this;
         }
-        public Builder certName(@Nullable String certName) {
-            this.certName = Codegen.ofNullable(certName);
-            return this;
+
+        public Builder certName(String certName) {
+            return certName(Output.of(certName));
         }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
-        }        public CustomDomainPropertiesArgs build() {
-            return new CustomDomainPropertiesArgs(certName, thumbprint);
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
+        }
+
+        public CustomDomainPropertiesArgs build() {
+            return $;
         }
     }
+
 }

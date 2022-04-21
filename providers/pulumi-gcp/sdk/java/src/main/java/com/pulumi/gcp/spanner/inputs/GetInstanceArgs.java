@@ -15,17 +15,17 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetInstanceArgs Empty = new GetInstanceArgs();
 
     @Import(name="config")
-      private final @Nullable String config;
+    private @Nullable String config;
 
     public Optional<String> config() {
-        return this.config == null ? Optional.empty() : Optional.ofNullable(this.config);
+        return Optional.ofNullable(this.config);
     }
 
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,73 +45,63 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetInstanceArgs(
-        @Nullable String config,
-        @Nullable String displayName,
-        String name,
-        @Nullable String project) {
-        this.config = config;
-        this.displayName = displayName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-    }
+    private GetInstanceArgs() {}
 
-    private GetInstanceArgs() {
-        this.config = null;
-        this.displayName = null;
-        this.name = null;
-        this.project = null;
+    private GetInstanceArgs(GetInstanceArgs $) {
+        this.config = $.config;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String config;
-        private @Nullable String displayName;
-        private String name;
-        private @Nullable String project;
+        private GetInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceArgs();
         }
 
         public Builder(GetInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(@Nullable String config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetInstanceArgs build() {
-            return new GetInstanceArgs(config, displayName, name, project);
+        }
+
+        public GetInstanceArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

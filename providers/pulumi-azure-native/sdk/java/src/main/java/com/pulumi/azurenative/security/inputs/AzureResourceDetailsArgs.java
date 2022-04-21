@@ -24,49 +24,49 @@ public final class AzureResourceDetailsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
     }
 
-    public AzureResourceDetailsArgs(Output<String> source) {
-        this.source = Codegen.stringProp("source").output().arg(source).require();
-    }
+    private AzureResourceDetailsArgs() {}
 
-    private AzureResourceDetailsArgs() {
-        this.source = Codegen.empty();
+    private AzureResourceDetailsArgs(AzureResourceDetailsArgs $) {
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureResourceDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> source;
+        private AzureResourceDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureResourceDetailsArgs();
         }
 
         public Builder(AzureResourceDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
+            $ = new AzureResourceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public AzureResourceDetailsArgs build() {
-            return new AzureResourceDetailsArgs(source);
+            return source(Output.of(source));
+        }
+
+        public AzureResourceDetailsArgs build() {
+            $.source = Codegen.stringProp("source").output().arg($.source).require();
+            return $;
         }
     }
+
 }

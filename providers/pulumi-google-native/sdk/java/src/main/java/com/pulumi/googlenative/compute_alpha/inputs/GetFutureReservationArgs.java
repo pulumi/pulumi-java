@@ -15,78 +15,72 @@ public final class GetFutureReservationArgs extends com.pulumi.resources.InvokeA
     public static final GetFutureReservationArgs Empty = new GetFutureReservationArgs();
 
     @Import(name="futureReservation", required=true)
-      private final String futureReservation;
+    private String futureReservation;
 
     public String futureReservation() {
         return this.futureReservation;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetFutureReservationArgs(
-        String futureReservation,
-        @Nullable String project,
-        String zone) {
-        this.futureReservation = Objects.requireNonNull(futureReservation, "expected parameter 'futureReservation' to be non-null");
-        this.project = project;
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetFutureReservationArgs() {}
 
-    private GetFutureReservationArgs() {
-        this.futureReservation = null;
-        this.project = null;
-        this.zone = null;
+    private GetFutureReservationArgs(GetFutureReservationArgs $) {
+        this.futureReservation = $.futureReservation;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFutureReservationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String futureReservation;
-        private @Nullable String project;
-        private String zone;
+        private GetFutureReservationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFutureReservationArgs();
         }
 
         public Builder(GetFutureReservationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.futureReservation = defaults.futureReservation;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new GetFutureReservationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder futureReservation(String futureReservation) {
-            this.futureReservation = Objects.requireNonNull(futureReservation);
+            $.futureReservation = futureReservation;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetFutureReservationArgs build() {
-            return new GetFutureReservationArgs(futureReservation, project, zone);
+        }
+
+        public GetFutureReservationArgs build() {
+            $.futureReservation = Objects.requireNonNull($.futureReservation, "expected parameter 'futureReservation' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

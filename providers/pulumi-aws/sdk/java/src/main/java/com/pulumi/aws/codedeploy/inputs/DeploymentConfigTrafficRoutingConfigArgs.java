@@ -7,9 +7,9 @@ import com.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigTime
 import com.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="timeBasedCanary")
-      private final @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary;
+    private @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary;
 
-    public Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary() {
-        return this.timeBasedCanary == null ? Codegen.empty() : this.timeBasedCanary;
+    public Optional<Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs>> timeBasedCanary() {
+        return Optional.ofNullable(this.timeBasedCanary);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="timeBasedLinear")
-      private final @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear;
+    private @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear;
 
-    public Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear() {
-        return this.timeBasedLinear == null ? Codegen.empty() : this.timeBasedLinear;
+    public Optional<Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs>> timeBasedLinear() {
+        return Optional.ofNullable(this.timeBasedLinear);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public DeploymentConfigTrafficRoutingConfigArgs(
-        @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary,
-        @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear,
-        @Nullable Output<String> type) {
-        this.timeBasedCanary = timeBasedCanary;
-        this.timeBasedLinear = timeBasedLinear;
-        this.type = type;
-    }
+    private DeploymentConfigTrafficRoutingConfigArgs() {}
 
-    private DeploymentConfigTrafficRoutingConfigArgs() {
-        this.timeBasedCanary = Codegen.empty();
-        this.timeBasedLinear = Codegen.empty();
-        this.type = Codegen.empty();
+    private DeploymentConfigTrafficRoutingConfigArgs(DeploymentConfigTrafficRoutingConfigArgs $) {
+        this.timeBasedCanary = $.timeBasedCanary;
+        this.timeBasedLinear = $.timeBasedLinear;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentConfigTrafficRoutingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary;
-        private @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear;
-        private @Nullable Output<String> type;
+        private DeploymentConfigTrafficRoutingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentConfigTrafficRoutingConfigArgs();
         }
 
         public Builder(DeploymentConfigTrafficRoutingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timeBasedCanary = defaults.timeBasedCanary;
-    	      this.timeBasedLinear = defaults.timeBasedLinear;
-    	      this.type = defaults.type;
+            $ = new DeploymentConfigTrafficRoutingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder timeBasedCanary(@Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary) {
-            this.timeBasedCanary = timeBasedCanary;
+            $.timeBasedCanary = timeBasedCanary;
             return this;
         }
-        public Builder timeBasedCanary(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs timeBasedCanary) {
-            this.timeBasedCanary = Codegen.ofNullable(timeBasedCanary);
-            return this;
+
+        public Builder timeBasedCanary(DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs timeBasedCanary) {
+            return timeBasedCanary(Output.of(timeBasedCanary));
         }
+
         public Builder timeBasedLinear(@Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear) {
-            this.timeBasedLinear = timeBasedLinear;
+            $.timeBasedLinear = timeBasedLinear;
             return this;
         }
-        public Builder timeBasedLinear(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs timeBasedLinear) {
-            this.timeBasedLinear = Codegen.ofNullable(timeBasedLinear);
-            return this;
+
+        public Builder timeBasedLinear(DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs timeBasedLinear) {
+            return timeBasedLinear(Output.of(timeBasedLinear));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public DeploymentConfigTrafficRoutingConfigArgs build() {
-            return new DeploymentConfigTrafficRoutingConfigArgs(timeBasedCanary, timeBasedLinear, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public DeploymentConfigTrafficRoutingConfigArgs build() {
+            return $;
         }
     }
+
 }

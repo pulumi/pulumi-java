@@ -5,10 +5,10 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.ObbFileArgs;
 import com.pulumi.googlenative.testing_v1.inputs.RegularFileArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DeviceFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="obbFile")
-      private final @Nullable Output<ObbFileArgs> obbFile;
+    private @Nullable Output<ObbFileArgs> obbFile;
 
-    public Output<ObbFileArgs> obbFile() {
-        return this.obbFile == null ? Codegen.empty() : this.obbFile;
+    public Optional<Output<ObbFileArgs>> obbFile() {
+        return Optional.ofNullable(this.obbFile);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DeviceFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="regularFile")
-      private final @Nullable Output<RegularFileArgs> regularFile;
+    private @Nullable Output<RegularFileArgs> regularFile;
 
-    public Output<RegularFileArgs> regularFile() {
-        return this.regularFile == null ? Codegen.empty() : this.regularFile;
+    public Optional<Output<RegularFileArgs>> regularFile() {
+        return Optional.ofNullable(this.regularFile);
     }
 
-    public DeviceFileArgs(
-        @Nullable Output<ObbFileArgs> obbFile,
-        @Nullable Output<RegularFileArgs> regularFile) {
-        this.obbFile = obbFile;
-        this.regularFile = regularFile;
-    }
+    private DeviceFileArgs() {}
 
-    private DeviceFileArgs() {
-        this.obbFile = Codegen.empty();
-        this.regularFile = Codegen.empty();
+    private DeviceFileArgs(DeviceFileArgs $) {
+        this.obbFile = $.obbFile;
+        this.regularFile = $.regularFile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ObbFileArgs> obbFile;
-        private @Nullable Output<RegularFileArgs> regularFile;
+        private DeviceFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceFileArgs();
         }
 
         public Builder(DeviceFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.obbFile = defaults.obbFile;
-    	      this.regularFile = defaults.regularFile;
+            $ = new DeviceFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder obbFile(@Nullable Output<ObbFileArgs> obbFile) {
-            this.obbFile = obbFile;
+            $.obbFile = obbFile;
             return this;
         }
-        public Builder obbFile(@Nullable ObbFileArgs obbFile) {
-            this.obbFile = Codegen.ofNullable(obbFile);
-            return this;
+
+        public Builder obbFile(ObbFileArgs obbFile) {
+            return obbFile(Output.of(obbFile));
         }
+
         public Builder regularFile(@Nullable Output<RegularFileArgs> regularFile) {
-            this.regularFile = regularFile;
+            $.regularFile = regularFile;
             return this;
         }
-        public Builder regularFile(@Nullable RegularFileArgs regularFile) {
-            this.regularFile = Codegen.ofNullable(regularFile);
-            return this;
-        }        public DeviceFileArgs build() {
-            return new DeviceFileArgs(obbFile, regularFile);
+
+        public Builder regularFile(RegularFileArgs regularFile) {
+            return regularFile(Output.of(regularFile));
+        }
+
+        public DeviceFileArgs build() {
+            return $;
         }
     }
+
 }

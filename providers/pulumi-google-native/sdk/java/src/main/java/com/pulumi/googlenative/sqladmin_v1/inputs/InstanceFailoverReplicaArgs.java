@@ -5,10 +5,10 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InstanceFailoverReplicaArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="available")
-      private final @Nullable Output<Boolean> available;
+    private @Nullable Output<Boolean> available;
 
-    public Output<Boolean> available() {
-        return this.available == null ? Codegen.empty() : this.available;
+    public Optional<Output<Boolean>> available() {
+        return Optional.ofNullable(this.available);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class InstanceFailoverReplicaArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public InstanceFailoverReplicaArgs(
-        @Nullable Output<Boolean> available,
-        @Nullable Output<String> name) {
-        this.available = available;
-        this.name = name;
-    }
+    private InstanceFailoverReplicaArgs() {}
 
-    private InstanceFailoverReplicaArgs() {
-        this.available = Codegen.empty();
-        this.name = Codegen.empty();
+    private InstanceFailoverReplicaArgs(InstanceFailoverReplicaArgs $) {
+        this.available = $.available;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFailoverReplicaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> available;
-        private @Nullable Output<String> name;
+        private InstanceFailoverReplicaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFailoverReplicaArgs();
         }
 
         public Builder(InstanceFailoverReplicaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.available = defaults.available;
-    	      this.name = defaults.name;
+            $ = new InstanceFailoverReplicaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder available(@Nullable Output<Boolean> available) {
-            this.available = available;
+            $.available = available;
             return this;
         }
-        public Builder available(@Nullable Boolean available) {
-            this.available = Codegen.ofNullable(available);
-            return this;
+
+        public Builder available(Boolean available) {
+            return available(Output.of(available));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public InstanceFailoverReplicaArgs build() {
-            return new InstanceFailoverReplicaArgs(available, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public InstanceFailoverReplicaArgs build() {
+            return $;
         }
     }
+
 }

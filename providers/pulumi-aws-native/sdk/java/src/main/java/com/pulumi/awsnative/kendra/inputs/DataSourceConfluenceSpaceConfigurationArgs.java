@@ -6,11 +6,11 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceConfluenceSpaceToIndexFieldMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,139 +19,128 @@ public final class DataSourceConfluenceSpaceConfigurationArgs extends com.pulumi
     public static final DataSourceConfluenceSpaceConfigurationArgs Empty = new DataSourceConfluenceSpaceConfigurationArgs();
 
     @Import(name="crawlArchivedSpaces")
-      private final @Nullable Output<Boolean> crawlArchivedSpaces;
+    private @Nullable Output<Boolean> crawlArchivedSpaces;
 
-    public Output<Boolean> crawlArchivedSpaces() {
-        return this.crawlArchivedSpaces == null ? Codegen.empty() : this.crawlArchivedSpaces;
+    public Optional<Output<Boolean>> crawlArchivedSpaces() {
+        return Optional.ofNullable(this.crawlArchivedSpaces);
     }
 
     @Import(name="crawlPersonalSpaces")
-      private final @Nullable Output<Boolean> crawlPersonalSpaces;
+    private @Nullable Output<Boolean> crawlPersonalSpaces;
 
-    public Output<Boolean> crawlPersonalSpaces() {
-        return this.crawlPersonalSpaces == null ? Codegen.empty() : this.crawlPersonalSpaces;
+    public Optional<Output<Boolean>> crawlPersonalSpaces() {
+        return Optional.ofNullable(this.crawlPersonalSpaces);
     }
 
     @Import(name="excludeSpaces")
-      private final @Nullable Output<List<String>> excludeSpaces;
+    private @Nullable Output<List<String>> excludeSpaces;
 
-    public Output<List<String>> excludeSpaces() {
-        return this.excludeSpaces == null ? Codegen.empty() : this.excludeSpaces;
+    public Optional<Output<List<String>>> excludeSpaces() {
+        return Optional.ofNullable(this.excludeSpaces);
     }
 
     @Import(name="includeSpaces")
-      private final @Nullable Output<List<String>> includeSpaces;
+    private @Nullable Output<List<String>> includeSpaces;
 
-    public Output<List<String>> includeSpaces() {
-        return this.includeSpaces == null ? Codegen.empty() : this.includeSpaces;
+    public Optional<Output<List<String>>> includeSpaces() {
+        return Optional.ofNullable(this.includeSpaces);
     }
 
     @Import(name="spaceFieldMappings")
-      private final @Nullable Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings;
+    private @Nullable Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings;
 
-    public Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings() {
-        return this.spaceFieldMappings == null ? Codegen.empty() : this.spaceFieldMappings;
+    public Optional<Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>>> spaceFieldMappings() {
+        return Optional.ofNullable(this.spaceFieldMappings);
     }
 
-    public DataSourceConfluenceSpaceConfigurationArgs(
-        @Nullable Output<Boolean> crawlArchivedSpaces,
-        @Nullable Output<Boolean> crawlPersonalSpaces,
-        @Nullable Output<List<String>> excludeSpaces,
-        @Nullable Output<List<String>> includeSpaces,
-        @Nullable Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings) {
-        this.crawlArchivedSpaces = crawlArchivedSpaces;
-        this.crawlPersonalSpaces = crawlPersonalSpaces;
-        this.excludeSpaces = excludeSpaces;
-        this.includeSpaces = includeSpaces;
-        this.spaceFieldMappings = spaceFieldMappings;
-    }
+    private DataSourceConfluenceSpaceConfigurationArgs() {}
 
-    private DataSourceConfluenceSpaceConfigurationArgs() {
-        this.crawlArchivedSpaces = Codegen.empty();
-        this.crawlPersonalSpaces = Codegen.empty();
-        this.excludeSpaces = Codegen.empty();
-        this.includeSpaces = Codegen.empty();
-        this.spaceFieldMappings = Codegen.empty();
+    private DataSourceConfluenceSpaceConfigurationArgs(DataSourceConfluenceSpaceConfigurationArgs $) {
+        this.crawlArchivedSpaces = $.crawlArchivedSpaces;
+        this.crawlPersonalSpaces = $.crawlPersonalSpaces;
+        this.excludeSpaces = $.excludeSpaces;
+        this.includeSpaces = $.includeSpaces;
+        this.spaceFieldMappings = $.spaceFieldMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfluenceSpaceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> crawlArchivedSpaces;
-        private @Nullable Output<Boolean> crawlPersonalSpaces;
-        private @Nullable Output<List<String>> excludeSpaces;
-        private @Nullable Output<List<String>> includeSpaces;
-        private @Nullable Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings;
+        private DataSourceConfluenceSpaceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfluenceSpaceConfigurationArgs();
         }
 
         public Builder(DataSourceConfluenceSpaceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crawlArchivedSpaces = defaults.crawlArchivedSpaces;
-    	      this.crawlPersonalSpaces = defaults.crawlPersonalSpaces;
-    	      this.excludeSpaces = defaults.excludeSpaces;
-    	      this.includeSpaces = defaults.includeSpaces;
-    	      this.spaceFieldMappings = defaults.spaceFieldMappings;
+            $ = new DataSourceConfluenceSpaceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crawlArchivedSpaces(@Nullable Output<Boolean> crawlArchivedSpaces) {
-            this.crawlArchivedSpaces = crawlArchivedSpaces;
+            $.crawlArchivedSpaces = crawlArchivedSpaces;
             return this;
         }
-        public Builder crawlArchivedSpaces(@Nullable Boolean crawlArchivedSpaces) {
-            this.crawlArchivedSpaces = Codegen.ofNullable(crawlArchivedSpaces);
-            return this;
+
+        public Builder crawlArchivedSpaces(Boolean crawlArchivedSpaces) {
+            return crawlArchivedSpaces(Output.of(crawlArchivedSpaces));
         }
+
         public Builder crawlPersonalSpaces(@Nullable Output<Boolean> crawlPersonalSpaces) {
-            this.crawlPersonalSpaces = crawlPersonalSpaces;
+            $.crawlPersonalSpaces = crawlPersonalSpaces;
             return this;
         }
-        public Builder crawlPersonalSpaces(@Nullable Boolean crawlPersonalSpaces) {
-            this.crawlPersonalSpaces = Codegen.ofNullable(crawlPersonalSpaces);
-            return this;
+
+        public Builder crawlPersonalSpaces(Boolean crawlPersonalSpaces) {
+            return crawlPersonalSpaces(Output.of(crawlPersonalSpaces));
         }
+
         public Builder excludeSpaces(@Nullable Output<List<String>> excludeSpaces) {
-            this.excludeSpaces = excludeSpaces;
+            $.excludeSpaces = excludeSpaces;
             return this;
         }
-        public Builder excludeSpaces(@Nullable List<String> excludeSpaces) {
-            this.excludeSpaces = Codegen.ofNullable(excludeSpaces);
-            return this;
+
+        public Builder excludeSpaces(List<String> excludeSpaces) {
+            return excludeSpaces(Output.of(excludeSpaces));
         }
+
         public Builder excludeSpaces(String... excludeSpaces) {
             return excludeSpaces(List.of(excludeSpaces));
         }
+
         public Builder includeSpaces(@Nullable Output<List<String>> includeSpaces) {
-            this.includeSpaces = includeSpaces;
+            $.includeSpaces = includeSpaces;
             return this;
         }
-        public Builder includeSpaces(@Nullable List<String> includeSpaces) {
-            this.includeSpaces = Codegen.ofNullable(includeSpaces);
-            return this;
+
+        public Builder includeSpaces(List<String> includeSpaces) {
+            return includeSpaces(Output.of(includeSpaces));
         }
+
         public Builder includeSpaces(String... includeSpaces) {
             return includeSpaces(List.of(includeSpaces));
         }
+
         public Builder spaceFieldMappings(@Nullable Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings) {
-            this.spaceFieldMappings = spaceFieldMappings;
+            $.spaceFieldMappings = spaceFieldMappings;
             return this;
         }
-        public Builder spaceFieldMappings(@Nullable List<DataSourceConfluenceSpaceToIndexFieldMappingArgs> spaceFieldMappings) {
-            this.spaceFieldMappings = Codegen.ofNullable(spaceFieldMappings);
-            return this;
+
+        public Builder spaceFieldMappings(List<DataSourceConfluenceSpaceToIndexFieldMappingArgs> spaceFieldMappings) {
+            return spaceFieldMappings(Output.of(spaceFieldMappings));
         }
+
         public Builder spaceFieldMappings(DataSourceConfluenceSpaceToIndexFieldMappingArgs... spaceFieldMappings) {
             return spaceFieldMappings(List.of(spaceFieldMappings));
-        }        public DataSourceConfluenceSpaceConfigurationArgs build() {
-            return new DataSourceConfluenceSpaceConfigurationArgs(crawlArchivedSpaces, crawlPersonalSpaces, excludeSpaces, includeSpaces, spaceFieldMappings);
+        }
+
+        public DataSourceConfluenceSpaceConfigurationArgs build() {
+            return $;
         }
     }
+
 }

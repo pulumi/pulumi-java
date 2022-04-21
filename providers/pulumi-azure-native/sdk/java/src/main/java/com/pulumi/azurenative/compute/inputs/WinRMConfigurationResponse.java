@@ -24,48 +24,48 @@ public final class WinRMConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="listeners")
-      private final @Nullable List<WinRMListenerResponse> listeners;
+    private @Nullable List<WinRMListenerResponse> listeners;
 
-    public List<WinRMListenerResponse> listeners() {
-        return this.listeners == null ? List.of() : this.listeners;
+    public Optional<List<WinRMListenerResponse>> listeners() {
+        return Optional.ofNullable(this.listeners);
     }
 
-    public WinRMConfigurationResponse(@Nullable List<WinRMListenerResponse> listeners) {
-        this.listeners = listeners;
-    }
+    private WinRMConfigurationResponse() {}
 
-    private WinRMConfigurationResponse() {
-        this.listeners = List.of();
+    private WinRMConfigurationResponse(WinRMConfigurationResponse $) {
+        this.listeners = $.listeners;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WinRMConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<WinRMListenerResponse> listeners;
+        private WinRMConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WinRMConfigurationResponse();
         }
 
         public Builder(WinRMConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.listeners = defaults.listeners;
+            $ = new WinRMConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder listeners(@Nullable List<WinRMListenerResponse> listeners) {
-            this.listeners = listeners;
+            $.listeners = listeners;
             return this;
         }
+
         public Builder listeners(WinRMListenerResponse... listeners) {
             return listeners(List.of(listeners));
-        }        public WinRMConfigurationResponse build() {
-            return new WinRMConfigurationResponse(listeners);
+        }
+
+        public WinRMConfigurationResponse build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class BootstrapConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sourceRepository")
-      private final @Nullable CodeRepositoryResponse sourceRepository;
+    private @Nullable CodeRepositoryResponse sourceRepository;
 
     public Optional<CodeRepositoryResponse> sourceRepository() {
-        return this.sourceRepository == null ? Optional.empty() : Optional.ofNullable(this.sourceRepository);
+        return Optional.ofNullable(this.sourceRepository);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class BootstrapConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="template", required=true)
-      private final PipelineTemplateResponse template;
+    private PipelineTemplateResponse template;
 
     public PipelineTemplateResponse template() {
         return this.template;
     }
 
-    public BootstrapConfigurationResponse(
-        @Nullable CodeRepositoryResponse sourceRepository,
-        PipelineTemplateResponse template) {
-        this.sourceRepository = sourceRepository;
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-    }
+    private BootstrapConfigurationResponse() {}
 
-    private BootstrapConfigurationResponse() {
-        this.sourceRepository = null;
-        this.template = null;
+    private BootstrapConfigurationResponse(BootstrapConfigurationResponse $) {
+        this.sourceRepository = $.sourceRepository;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BootstrapConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CodeRepositoryResponse sourceRepository;
-        private PipelineTemplateResponse template;
+        private BootstrapConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BootstrapConfigurationResponse();
         }
 
         public Builder(BootstrapConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceRepository = defaults.sourceRepository;
-    	      this.template = defaults.template;
+            $ = new BootstrapConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceRepository(@Nullable CodeRepositoryResponse sourceRepository) {
-            this.sourceRepository = sourceRepository;
+            $.sourceRepository = sourceRepository;
             return this;
         }
+
         public Builder template(PipelineTemplateResponse template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
-        }        public BootstrapConfigurationResponse build() {
-            return new BootstrapConfigurationResponse(sourceRepository, template);
+        }
+
+        public BootstrapConfigurationResponse build() {
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            return $;
         }
     }
+
 }

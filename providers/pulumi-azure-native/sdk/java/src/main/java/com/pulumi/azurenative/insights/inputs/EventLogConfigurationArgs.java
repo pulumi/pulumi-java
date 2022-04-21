@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class EventLogConfigurationArgs extends com.pulumi.resources.Resour
     public static final EventLogConfigurationArgs Empty = new EventLogConfigurationArgs();
 
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     @Import(name="logName", required=true)
-      private final Output<String> logName;
+    private Output<String> logName;
 
     public Output<String> logName() {
         return this.logName;
     }
 
-    public EventLogConfigurationArgs(
-        @Nullable Output<String> filter,
-        Output<String> logName) {
-        this.filter = filter;
-        this.logName = Objects.requireNonNull(logName, "expected parameter 'logName' to be non-null");
-    }
+    private EventLogConfigurationArgs() {}
 
-    private EventLogConfigurationArgs() {
-        this.filter = Codegen.empty();
-        this.logName = Codegen.empty();
+    private EventLogConfigurationArgs(EventLogConfigurationArgs $) {
+        this.filter = $.filter;
+        this.logName = $.logName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventLogConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filter;
-        private Output<String> logName;
+        private EventLogConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventLogConfigurationArgs();
         }
 
         public Builder(EventLogConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.logName = defaults.logName;
+            $ = new EventLogConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder logName(Output<String> logName) {
-            this.logName = Objects.requireNonNull(logName);
+            $.logName = logName;
             return this;
         }
+
         public Builder logName(String logName) {
-            this.logName = Output.of(Objects.requireNonNull(logName));
-            return this;
-        }        public EventLogConfigurationArgs build() {
-            return new EventLogConfigurationArgs(filter, logName);
+            return logName(Output.of(logName));
+        }
+
+        public EventLogConfigurationArgs build() {
+            $.logName = Objects.requireNonNull($.logName, "expected parameter 'logName' to be non-null");
+            return $;
         }
     }
+
 }

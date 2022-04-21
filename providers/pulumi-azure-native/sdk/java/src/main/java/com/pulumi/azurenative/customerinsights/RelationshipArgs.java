@@ -8,11 +8,11 @@ import com.pulumi.azurenative.customerinsights.inputs.PropertyDefinitionArgs;
 import com.pulumi.azurenative.customerinsights.inputs.RelationshipTypeMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cardinality")
-      private final @Nullable Output<CardinalityTypes> cardinality;
+    private @Nullable Output<CardinalityTypes> cardinality;
 
-    public Output<CardinalityTypes> cardinality() {
-        return this.cardinality == null ? Codegen.empty() : this.cardinality;
+    public Optional<Output<CardinalityTypes>> cardinality() {
+        return Optional.ofNullable(this.cardinality);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<Map<String,String>> description;
+    private @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<Map<String,String>>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<Map<String,String>> displayName;
+    private @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<Map<String,String>>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expiryDateTimeUtc")
-      private final @Nullable Output<String> expiryDateTimeUtc;
+    private @Nullable Output<String> expiryDateTimeUtc;
 
-    public Output<String> expiryDateTimeUtc() {
-        return this.expiryDateTimeUtc == null ? Codegen.empty() : this.expiryDateTimeUtc;
+    public Optional<Output<String>> expiryDateTimeUtc() {
+        return Optional.ofNullable(this.expiryDateTimeUtc);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
+    private @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
-    public Output<List<PropertyDefinitionArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<PropertyDefinitionArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubName", required=true)
-      private final Output<String> hubName;
+    private Output<String> hubName;
 
     public Output<String> hubName() {
         return this.hubName;
@@ -91,10 +91,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lookupMappings")
-      private final @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings;
+    private @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings;
 
-    public Output<List<RelationshipTypeMappingArgs>> lookupMappings() {
-        return this.lookupMappings == null ? Codegen.empty() : this.lookupMappings;
+    public Optional<Output<List<RelationshipTypeMappingArgs>>> lookupMappings() {
+        return Optional.ofNullable(this.lookupMappings);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileType", required=true)
-      private final Output<String> profileType;
+    private Output<String> profileType;
 
     public Output<String> profileType() {
         return this.profileType;
@@ -113,7 +113,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relatedProfileType", required=true)
-      private final Output<String> relatedProfileType;
+    private Output<String> relatedProfileType;
 
     public Output<String> relatedProfileType() {
         return this.relatedProfileType;
@@ -124,10 +124,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relationshipName")
-      private final @Nullable Output<String> relationshipName;
+    private @Nullable Output<String> relationshipName;
 
-    public Output<String> relationshipName() {
-        return this.relationshipName == null ? Codegen.empty() : this.relationshipName;
+    public Optional<Output<String>> relationshipName() {
+        return Optional.ofNullable(this.relationshipName);
     }
 
     /**
@@ -135,186 +135,160 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public RelationshipArgs(
-        @Nullable Output<CardinalityTypes> cardinality,
-        @Nullable Output<Map<String,String>> description,
-        @Nullable Output<Map<String,String>> displayName,
-        @Nullable Output<String> expiryDateTimeUtc,
-        @Nullable Output<List<PropertyDefinitionArgs>> fields,
-        Output<String> hubName,
-        @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings,
-        Output<String> profileType,
-        Output<String> relatedProfileType,
-        @Nullable Output<String> relationshipName,
-        Output<String> resourceGroupName) {
-        this.cardinality = cardinality;
-        this.description = description;
-        this.displayName = displayName;
-        this.expiryDateTimeUtc = expiryDateTimeUtc;
-        this.fields = fields;
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.lookupMappings = lookupMappings;
-        this.profileType = Objects.requireNonNull(profileType, "expected parameter 'profileType' to be non-null");
-        this.relatedProfileType = Objects.requireNonNull(relatedProfileType, "expected parameter 'relatedProfileType' to be non-null");
-        this.relationshipName = relationshipName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private RelationshipArgs() {}
 
-    private RelationshipArgs() {
-        this.cardinality = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.expiryDateTimeUtc = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.hubName = Codegen.empty();
-        this.lookupMappings = Codegen.empty();
-        this.profileType = Codegen.empty();
-        this.relatedProfileType = Codegen.empty();
-        this.relationshipName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private RelationshipArgs(RelationshipArgs $) {
+        this.cardinality = $.cardinality;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.expiryDateTimeUtc = $.expiryDateTimeUtc;
+        this.fields = $.fields;
+        this.hubName = $.hubName;
+        this.lookupMappings = $.lookupMappings;
+        this.profileType = $.profileType;
+        this.relatedProfileType = $.relatedProfileType;
+        this.relationshipName = $.relationshipName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CardinalityTypes> cardinality;
-        private @Nullable Output<Map<String,String>> description;
-        private @Nullable Output<Map<String,String>> displayName;
-        private @Nullable Output<String> expiryDateTimeUtc;
-        private @Nullable Output<List<PropertyDefinitionArgs>> fields;
-        private Output<String> hubName;
-        private @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings;
-        private Output<String> profileType;
-        private Output<String> relatedProfileType;
-        private @Nullable Output<String> relationshipName;
-        private Output<String> resourceGroupName;
+        private RelationshipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipArgs();
         }
 
         public Builder(RelationshipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cardinality = defaults.cardinality;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.expiryDateTimeUtc = defaults.expiryDateTimeUtc;
-    	      this.fields = defaults.fields;
-    	      this.hubName = defaults.hubName;
-    	      this.lookupMappings = defaults.lookupMappings;
-    	      this.profileType = defaults.profileType;
-    	      this.relatedProfileType = defaults.relatedProfileType;
-    	      this.relationshipName = defaults.relationshipName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new RelationshipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cardinality(@Nullable Output<CardinalityTypes> cardinality) {
-            this.cardinality = cardinality;
+            $.cardinality = cardinality;
             return this;
         }
-        public Builder cardinality(@Nullable CardinalityTypes cardinality) {
-            this.cardinality = Codegen.ofNullable(cardinality);
-            return this;
+
+        public Builder cardinality(CardinalityTypes cardinality) {
+            return cardinality(Output.of(cardinality));
         }
+
         public Builder description(@Nullable Output<Map<String,String>> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable Map<String,String> description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(Map<String,String> description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(Map<String,String> displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder expiryDateTimeUtc(@Nullable Output<String> expiryDateTimeUtc) {
-            this.expiryDateTimeUtc = expiryDateTimeUtc;
+            $.expiryDateTimeUtc = expiryDateTimeUtc;
             return this;
         }
-        public Builder expiryDateTimeUtc(@Nullable String expiryDateTimeUtc) {
-            this.expiryDateTimeUtc = Codegen.ofNullable(expiryDateTimeUtc);
-            return this;
+
+        public Builder expiryDateTimeUtc(String expiryDateTimeUtc) {
+            return expiryDateTimeUtc(Output.of(expiryDateTimeUtc));
         }
+
         public Builder fields(@Nullable Output<List<PropertyDefinitionArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<PropertyDefinitionArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<PropertyDefinitionArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(PropertyDefinitionArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder hubName(Output<String> hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Output.of(Objects.requireNonNull(hubName));
-            return this;
+            return hubName(Output.of(hubName));
         }
+
         public Builder lookupMappings(@Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings) {
-            this.lookupMappings = lookupMappings;
+            $.lookupMappings = lookupMappings;
             return this;
         }
-        public Builder lookupMappings(@Nullable List<RelationshipTypeMappingArgs> lookupMappings) {
-            this.lookupMappings = Codegen.ofNullable(lookupMappings);
-            return this;
+
+        public Builder lookupMappings(List<RelationshipTypeMappingArgs> lookupMappings) {
+            return lookupMappings(Output.of(lookupMappings));
         }
+
         public Builder lookupMappings(RelationshipTypeMappingArgs... lookupMappings) {
             return lookupMappings(List.of(lookupMappings));
         }
+
         public Builder profileType(Output<String> profileType) {
-            this.profileType = Objects.requireNonNull(profileType);
+            $.profileType = profileType;
             return this;
         }
+
         public Builder profileType(String profileType) {
-            this.profileType = Output.of(Objects.requireNonNull(profileType));
-            return this;
+            return profileType(Output.of(profileType));
         }
+
         public Builder relatedProfileType(Output<String> relatedProfileType) {
-            this.relatedProfileType = Objects.requireNonNull(relatedProfileType);
+            $.relatedProfileType = relatedProfileType;
             return this;
         }
+
         public Builder relatedProfileType(String relatedProfileType) {
-            this.relatedProfileType = Output.of(Objects.requireNonNull(relatedProfileType));
-            return this;
+            return relatedProfileType(Output.of(relatedProfileType));
         }
+
         public Builder relationshipName(@Nullable Output<String> relationshipName) {
-            this.relationshipName = relationshipName;
+            $.relationshipName = relationshipName;
             return this;
         }
-        public Builder relationshipName(@Nullable String relationshipName) {
-            this.relationshipName = Codegen.ofNullable(relationshipName);
-            return this;
+
+        public Builder relationshipName(String relationshipName) {
+            return relationshipName(Output.of(relationshipName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public RelationshipArgs build() {
-            return new RelationshipArgs(cardinality, description, displayName, expiryDateTimeUtc, fields, hubName, lookupMappings, profileType, relatedProfileType, relationshipName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public RelationshipArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.profileType = Objects.requireNonNull($.profileType, "expected parameter 'profileType' to be non-null");
+            $.relatedProfileType = Objects.requireNonNull($.relatedProfileType, "expected parameter 'relatedProfileType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

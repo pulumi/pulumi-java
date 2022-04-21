@@ -15,7 +15,7 @@ public final class ApplicationPackageReferenceResponse extends com.pulumi.resour
     public static final ApplicationPackageReferenceResponse Empty = new ApplicationPackageReferenceResponse();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -26,55 +26,51 @@ public final class ApplicationPackageReferenceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ApplicationPackageReferenceResponse(
-        String id,
-        @Nullable String version) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.version = version;
-    }
+    private ApplicationPackageReferenceResponse() {}
 
-    private ApplicationPackageReferenceResponse() {
-        this.id = null;
-        this.version = null;
+    private ApplicationPackageReferenceResponse(ApplicationPackageReferenceResponse $) {
+        this.id = $.id;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPackageReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable String version;
+        private ApplicationPackageReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPackageReferenceResponse();
         }
 
         public Builder(ApplicationPackageReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.version = defaults.version;
+            $ = new ApplicationPackageReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ApplicationPackageReferenceResponse build() {
-            return new ApplicationPackageReferenceResponse(id, version);
+        }
+
+        public ApplicationPackageReferenceResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

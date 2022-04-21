@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaColorInfoResponse extends com.pulumi.r
      * 
      */
     @Import(name="colorFamilies", required=true)
-      private final List<String> colorFamilies;
+    private List<String> colorFamilies;
 
     public List<String> colorFamilies() {
         return this.colorFamilies;
@@ -33,61 +33,60 @@ public final class GoogleCloudRetailV2betaColorInfoResponse extends com.pulumi.r
      * 
      */
     @Import(name="colors", required=true)
-      private final List<String> colors;
+    private List<String> colors;
 
     public List<String> colors() {
         return this.colors;
     }
 
-    public GoogleCloudRetailV2betaColorInfoResponse(
-        List<String> colorFamilies,
-        List<String> colors) {
-        this.colorFamilies = Objects.requireNonNull(colorFamilies, "expected parameter 'colorFamilies' to be non-null");
-        this.colors = Objects.requireNonNull(colors, "expected parameter 'colors' to be non-null");
-    }
+    private GoogleCloudRetailV2betaColorInfoResponse() {}
 
-    private GoogleCloudRetailV2betaColorInfoResponse() {
-        this.colorFamilies = List.of();
-        this.colors = List.of();
+    private GoogleCloudRetailV2betaColorInfoResponse(GoogleCloudRetailV2betaColorInfoResponse $) {
+        this.colorFamilies = $.colorFamilies;
+        this.colors = $.colors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaColorInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> colorFamilies;
-        private List<String> colors;
+        private GoogleCloudRetailV2betaColorInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaColorInfoResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaColorInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.colorFamilies = defaults.colorFamilies;
-    	      this.colors = defaults.colors;
+            $ = new GoogleCloudRetailV2betaColorInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder colorFamilies(List<String> colorFamilies) {
-            this.colorFamilies = Objects.requireNonNull(colorFamilies);
+            $.colorFamilies = colorFamilies;
             return this;
         }
+
         public Builder colorFamilies(String... colorFamilies) {
             return colorFamilies(List.of(colorFamilies));
         }
+
         public Builder colors(List<String> colors) {
-            this.colors = Objects.requireNonNull(colors);
+            $.colors = colors;
             return this;
         }
+
         public Builder colors(String... colors) {
             return colors(List.of(colors));
-        }        public GoogleCloudRetailV2betaColorInfoResponse build() {
-            return new GoogleCloudRetailV2betaColorInfoResponse(colorFamilies, colors);
+        }
+
+        public GoogleCloudRetailV2betaColorInfoResponse build() {
+            $.colorFamilies = Objects.requireNonNull($.colorFamilies, "expected parameter 'colorFamilies' to be non-null");
+            $.colors = Objects.requireNonNull($.colors, "expected parameter 'colors' to be non-null");
+            return $;
         }
     }
+
 }

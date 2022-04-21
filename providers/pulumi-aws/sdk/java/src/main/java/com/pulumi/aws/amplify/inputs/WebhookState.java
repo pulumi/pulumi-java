@@ -5,9 +5,9 @@ package com.pulumi.aws.amplify.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="branchName")
-      private final @Nullable Output<String> branchName;
+    private @Nullable Output<String> branchName;
 
-    public Output<String> branchName() {
-        return this.branchName == null ? Codegen.empty() : this.branchName;
+    public Optional<Output<String>> branchName() {
+        return Optional.ofNullable(this.branchName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public WebhookState(
-        @Nullable Output<String> appId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> branchName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> url) {
-        this.appId = appId;
-        this.arn = arn;
-        this.branchName = branchName;
-        this.description = description;
-        this.url = url;
-    }
+    private WebhookState() {}
 
-    private WebhookState() {
-        this.appId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.branchName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.url = Codegen.empty();
+    private WebhookState(WebhookState $) {
+        this.appId = $.appId;
+        this.arn = $.arn;
+        this.branchName = $.branchName;
+        this.description = $.description;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> branchName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> url;
+        private WebhookState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookState();
         }
 
         public Builder(WebhookState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.arn = defaults.arn;
-    	      this.branchName = defaults.branchName;
-    	      this.description = defaults.description;
-    	      this.url = defaults.url;
+            $ = new WebhookState(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder branchName(@Nullable Output<String> branchName) {
-            this.branchName = branchName;
+            $.branchName = branchName;
             return this;
         }
-        public Builder branchName(@Nullable String branchName) {
-            this.branchName = Codegen.ofNullable(branchName);
-            return this;
+
+        public Builder branchName(String branchName) {
+            return branchName(Output.of(branchName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public WebhookState build() {
-            return new WebhookState(appId, arn, branchName, description, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public WebhookState build() {
+            return $;
         }
     }
+
 }

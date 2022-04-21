@@ -24,10 +24,10 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="category")
-      private final @Nullable String category;
+    private @Nullable String category;
 
     public Optional<String> category() {
-        return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="order")
-      private final @Nullable Integer order;
+    private @Nullable Integer order;
 
     public Optional<Integer> order() {
-        return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
+        return Optional.ofNullable(this.order);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable String resourceType;
+    private @Nullable String resourceType;
 
     public Optional<String> resourceType() {
-        return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public WorkbookTemplateGalleryResponse(
-        @Nullable String category,
-        @Nullable String name,
-        @Nullable Integer order,
-        @Nullable String resourceType,
-        @Nullable String type) {
-        this.category = category;
-        this.name = name;
-        this.order = order;
-        this.resourceType = resourceType;
-        this.type = type;
-    }
+    private WorkbookTemplateGalleryResponse() {}
 
-    private WorkbookTemplateGalleryResponse() {
-        this.category = null;
-        this.name = null;
-        this.order = null;
-        this.resourceType = null;
-        this.type = null;
+    private WorkbookTemplateGalleryResponse(WorkbookTemplateGalleryResponse $) {
+        this.category = $.category;
+        this.name = $.name;
+        this.order = $.order;
+        this.resourceType = $.resourceType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkbookTemplateGalleryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String category;
-        private @Nullable String name;
-        private @Nullable Integer order;
-        private @Nullable String resourceType;
-        private @Nullable String type;
+        private WorkbookTemplateGalleryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkbookTemplateGalleryResponse();
         }
 
         public Builder(WorkbookTemplateGalleryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.name = defaults.name;
-    	      this.order = defaults.order;
-    	      this.resourceType = defaults.resourceType;
-    	      this.type = defaults.type;
+            $ = new WorkbookTemplateGalleryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder category(@Nullable String category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder order(@Nullable Integer order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
+
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public WorkbookTemplateGalleryResponse build() {
-            return new WorkbookTemplateGalleryResponse(category, name, order, resourceType, type);
+        }
+
+        public WorkbookTemplateGalleryResponse build() {
+            return $;
         }
     }
+
 }

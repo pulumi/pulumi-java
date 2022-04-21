@@ -21,7 +21,7 @@ public final class AddressDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="forwardAddress", required=true)
-      private final AddressPropertiesResponse forwardAddress;
+    private AddressPropertiesResponse forwardAddress;
 
     public AddressPropertiesResponse forwardAddress() {
         return this.forwardAddress;
@@ -32,55 +32,52 @@ public final class AddressDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="returnAddress", required=true)
-      private final AddressPropertiesResponse returnAddress;
+    private AddressPropertiesResponse returnAddress;
 
     public AddressPropertiesResponse returnAddress() {
         return this.returnAddress;
     }
 
-    public AddressDetailsResponse(
-        AddressPropertiesResponse forwardAddress,
-        AddressPropertiesResponse returnAddress) {
-        this.forwardAddress = Objects.requireNonNull(forwardAddress, "expected parameter 'forwardAddress' to be non-null");
-        this.returnAddress = Objects.requireNonNull(returnAddress, "expected parameter 'returnAddress' to be non-null");
-    }
+    private AddressDetailsResponse() {}
 
-    private AddressDetailsResponse() {
-        this.forwardAddress = null;
-        this.returnAddress = null;
+    private AddressDetailsResponse(AddressDetailsResponse $) {
+        this.forwardAddress = $.forwardAddress;
+        this.returnAddress = $.returnAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AddressPropertiesResponse forwardAddress;
-        private AddressPropertiesResponse returnAddress;
+        private AddressDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressDetailsResponse();
         }
 
         public Builder(AddressDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardAddress = defaults.forwardAddress;
-    	      this.returnAddress = defaults.returnAddress;
+            $ = new AddressDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardAddress(AddressPropertiesResponse forwardAddress) {
-            this.forwardAddress = Objects.requireNonNull(forwardAddress);
+            $.forwardAddress = forwardAddress;
             return this;
         }
+
         public Builder returnAddress(AddressPropertiesResponse returnAddress) {
-            this.returnAddress = Objects.requireNonNull(returnAddress);
+            $.returnAddress = returnAddress;
             return this;
-        }        public AddressDetailsResponse build() {
-            return new AddressDetailsResponse(forwardAddress, returnAddress);
+        }
+
+        public AddressDetailsResponse build() {
+            $.forwardAddress = Objects.requireNonNull($.forwardAddress, "expected parameter 'forwardAddress' to be non-null");
+            $.returnAddress = Objects.requireNonNull($.returnAddress, "expected parameter 'returnAddress' to be non-null");
+            return $;
         }
     }
+
 }

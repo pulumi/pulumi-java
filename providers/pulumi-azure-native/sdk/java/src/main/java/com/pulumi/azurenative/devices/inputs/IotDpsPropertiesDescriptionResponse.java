@@ -28,10 +28,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="allocationPolicy")
-      private final @Nullable String allocationPolicy;
+    private @Nullable String allocationPolicy;
 
     public Optional<String> allocationPolicy() {
-        return this.allocationPolicy == null ? Optional.empty() : Optional.ofNullable(this.allocationPolicy);
+        return Optional.ofNullable(this.allocationPolicy);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="authorizationPolicies")
-      private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies;
+    private @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies;
 
-    public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies() {
-        return this.authorizationPolicies == null ? List.of() : this.authorizationPolicies;
+    public Optional<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse>> authorizationPolicies() {
+        return Optional.ofNullable(this.authorizationPolicies);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="deviceProvisioningHostName", required=true)
-      private final String deviceProvisioningHostName;
+    private String deviceProvisioningHostName;
 
     public String deviceProvisioningHostName() {
         return this.deviceProvisioningHostName;
@@ -61,7 +61,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="idScope", required=true)
-      private final String idScope;
+    private String idScope;
 
     public String idScope() {
         return this.idScope;
@@ -72,10 +72,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="iotHubs")
-      private final @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs;
+    private @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs;
 
-    public List<IotHubDefinitionDescriptionResponse> iotHubs() {
-        return this.iotHubs == null ? List.of() : this.iotHubs;
+    public Optional<List<IotHubDefinitionDescriptionResponse>> iotHubs() {
+        return Optional.ofNullable(this.iotHubs);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="ipFilterRules")
-      private final @Nullable List<TargetIpFilterRuleResponse> ipFilterRules;
+    private @Nullable List<TargetIpFilterRuleResponse> ipFilterRules;
 
-    public List<TargetIpFilterRuleResponse> ipFilterRules() {
-        return this.ipFilterRules == null ? List.of() : this.ipFilterRules;
+    public Optional<List<TargetIpFilterRuleResponse>> ipFilterRules() {
+        return Optional.ofNullable(this.ipFilterRules);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="privateEndpointConnections")
-      private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+    private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
-        return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
+    public Optional<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
+        return Optional.ofNullable(this.privateEndpointConnections);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable String publicNetworkAccess;
+    private @Nullable String publicNetworkAccess;
 
     public Optional<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -127,7 +127,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="serviceOperationsHostName", required=true)
-      private final String serviceOperationsHostName;
+    private String serviceOperationsHostName;
 
     public String serviceOperationsHostName() {
         return this.serviceOperationsHostName;
@@ -138,148 +138,123 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public IotDpsPropertiesDescriptionResponse(
-        @Nullable String allocationPolicy,
-        @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies,
-        String deviceProvisioningHostName,
-        String idScope,
-        @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs,
-        @Nullable List<TargetIpFilterRuleResponse> ipFilterRules,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String provisioningState,
-        @Nullable String publicNetworkAccess,
-        String serviceOperationsHostName,
-        @Nullable String state) {
-        this.allocationPolicy = allocationPolicy;
-        this.authorizationPolicies = authorizationPolicies;
-        this.deviceProvisioningHostName = Objects.requireNonNull(deviceProvisioningHostName, "expected parameter 'deviceProvisioningHostName' to be non-null");
-        this.idScope = Objects.requireNonNull(idScope, "expected parameter 'idScope' to be non-null");
-        this.iotHubs = iotHubs;
-        this.ipFilterRules = ipFilterRules;
-        this.privateEndpointConnections = privateEndpointConnections;
-        this.provisioningState = provisioningState;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.serviceOperationsHostName = Objects.requireNonNull(serviceOperationsHostName, "expected parameter 'serviceOperationsHostName' to be non-null");
-        this.state = state;
-    }
+    private IotDpsPropertiesDescriptionResponse() {}
 
-    private IotDpsPropertiesDescriptionResponse() {
-        this.allocationPolicy = null;
-        this.authorizationPolicies = List.of();
-        this.deviceProvisioningHostName = null;
-        this.idScope = null;
-        this.iotHubs = List.of();
-        this.ipFilterRules = List.of();
-        this.privateEndpointConnections = List.of();
-        this.provisioningState = null;
-        this.publicNetworkAccess = null;
-        this.serviceOperationsHostName = null;
-        this.state = null;
+    private IotDpsPropertiesDescriptionResponse(IotDpsPropertiesDescriptionResponse $) {
+        this.allocationPolicy = $.allocationPolicy;
+        this.authorizationPolicies = $.authorizationPolicies;
+        this.deviceProvisioningHostName = $.deviceProvisioningHostName;
+        this.idScope = $.idScope;
+        this.iotHubs = $.iotHubs;
+        this.ipFilterRules = $.ipFilterRules;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.provisioningState = $.provisioningState;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.serviceOperationsHostName = $.serviceOperationsHostName;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotDpsPropertiesDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String allocationPolicy;
-        private @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies;
-        private String deviceProvisioningHostName;
-        private String idScope;
-        private @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs;
-        private @Nullable List<TargetIpFilterRuleResponse> ipFilterRules;
-        private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-        private @Nullable String provisioningState;
-        private @Nullable String publicNetworkAccess;
-        private String serviceOperationsHostName;
-        private @Nullable String state;
+        private IotDpsPropertiesDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotDpsPropertiesDescriptionResponse();
         }
 
         public Builder(IotDpsPropertiesDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationPolicy = defaults.allocationPolicy;
-    	      this.authorizationPolicies = defaults.authorizationPolicies;
-    	      this.deviceProvisioningHostName = defaults.deviceProvisioningHostName;
-    	      this.idScope = defaults.idScope;
-    	      this.iotHubs = defaults.iotHubs;
-    	      this.ipFilterRules = defaults.ipFilterRules;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.serviceOperationsHostName = defaults.serviceOperationsHostName;
-    	      this.state = defaults.state;
+            $ = new IotDpsPropertiesDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationPolicy(@Nullable String allocationPolicy) {
-            this.allocationPolicy = allocationPolicy;
+            $.allocationPolicy = allocationPolicy;
             return this;
         }
+
         public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies) {
-            this.authorizationPolicies = authorizationPolicies;
+            $.authorizationPolicies = authorizationPolicies;
             return this;
         }
+
         public Builder authorizationPolicies(SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse... authorizationPolicies) {
             return authorizationPolicies(List.of(authorizationPolicies));
         }
+
         public Builder deviceProvisioningHostName(String deviceProvisioningHostName) {
-            this.deviceProvisioningHostName = Objects.requireNonNull(deviceProvisioningHostName);
+            $.deviceProvisioningHostName = deviceProvisioningHostName;
             return this;
         }
+
         public Builder idScope(String idScope) {
-            this.idScope = Objects.requireNonNull(idScope);
+            $.idScope = idScope;
             return this;
         }
+
         public Builder iotHubs(@Nullable List<IotHubDefinitionDescriptionResponse> iotHubs) {
-            this.iotHubs = iotHubs;
+            $.iotHubs = iotHubs;
             return this;
         }
+
         public Builder iotHubs(IotHubDefinitionDescriptionResponse... iotHubs) {
             return iotHubs(List.of(iotHubs));
         }
+
         public Builder ipFilterRules(@Nullable List<TargetIpFilterRuleResponse> ipFilterRules) {
-            this.ipFilterRules = ipFilterRules;
+            $.ipFilterRules = ipFilterRules;
             return this;
         }
+
         public Builder ipFilterRules(TargetIpFilterRuleResponse... ipFilterRules) {
             return ipFilterRules(List.of(ipFilterRules));
         }
+
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
-            this.privateEndpointConnections = privateEndpointConnections;
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
+
         public Builder serviceOperationsHostName(String serviceOperationsHostName) {
-            this.serviceOperationsHostName = Objects.requireNonNull(serviceOperationsHostName);
+            $.serviceOperationsHostName = serviceOperationsHostName;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public IotDpsPropertiesDescriptionResponse build() {
-            return new IotDpsPropertiesDescriptionResponse(allocationPolicy, authorizationPolicies, deviceProvisioningHostName, idScope, iotHubs, ipFilterRules, privateEndpointConnections, provisioningState, publicNetworkAccess, serviceOperationsHostName, state);
+        }
+
+        public IotDpsPropertiesDescriptionResponse build() {
+            $.deviceProvisioningHostName = Objects.requireNonNull($.deviceProvisioningHostName, "expected parameter 'deviceProvisioningHostName' to be non-null");
+            $.idScope = Objects.requireNonNull($.idScope, "expected parameter 'idScope' to be non-null");
+            $.serviceOperationsHostName = Objects.requireNonNull($.serviceOperationsHostName, "expected parameter 'serviceOperationsHostName' to be non-null");
+            return $;
         }
     }
+
 }

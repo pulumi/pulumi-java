@@ -17,7 +17,7 @@ public final class GetTransparentDataEncryptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetTransparentDataEncryptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetTransparentDataEncryptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
@@ -50,73 +50,66 @@ public final class GetTransparentDataEncryptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="transparentDataEncryptionName", required=true)
-      private final String transparentDataEncryptionName;
+    private String transparentDataEncryptionName;
 
     public String transparentDataEncryptionName() {
         return this.transparentDataEncryptionName;
     }
 
-    public GetTransparentDataEncryptionArgs(
-        String databaseName,
-        String resourceGroupName,
-        String serverName,
-        String transparentDataEncryptionName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.transparentDataEncryptionName = Objects.requireNonNull(transparentDataEncryptionName, "expected parameter 'transparentDataEncryptionName' to be non-null");
-    }
+    private GetTransparentDataEncryptionArgs() {}
 
-    private GetTransparentDataEncryptionArgs() {
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
-        this.transparentDataEncryptionName = null;
+    private GetTransparentDataEncryptionArgs(GetTransparentDataEncryptionArgs $) {
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.transparentDataEncryptionName = $.transparentDataEncryptionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransparentDataEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String resourceGroupName;
-        private String serverName;
-        private String transparentDataEncryptionName;
+        private GetTransparentDataEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransparentDataEncryptionArgs();
         }
 
         public Builder(GetTransparentDataEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.transparentDataEncryptionName = defaults.transparentDataEncryptionName;
+            $ = new GetTransparentDataEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder transparentDataEncryptionName(String transparentDataEncryptionName) {
-            this.transparentDataEncryptionName = Objects.requireNonNull(transparentDataEncryptionName);
+            $.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
-        }        public GetTransparentDataEncryptionArgs build() {
-            return new GetTransparentDataEncryptionArgs(databaseName, resourceGroupName, serverName, transparentDataEncryptionName);
+        }
+
+        public GetTransparentDataEncryptionArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.transparentDataEncryptionName = Objects.requireNonNull($.transparentDataEncryptionName, "expected parameter 'transparentDataEncryptionName' to be non-null");
+            return $;
         }
     }
+
 }

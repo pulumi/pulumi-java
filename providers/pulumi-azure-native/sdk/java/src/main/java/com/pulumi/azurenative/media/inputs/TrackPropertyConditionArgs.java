@@ -8,9 +8,9 @@ import com.pulumi.azurenative.media.enums.TrackPropertyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="operation", required=true)
-      private final Output<Either<String,TrackPropertyCompareOperation>> operation;
+    private Output<Either<String,TrackPropertyCompareOperation>> operation;
 
     public Output<Either<String,TrackPropertyCompareOperation>> operation() {
         return this.operation;
@@ -38,7 +38,7 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="property", required=true)
-      private final Output<Either<String,TrackPropertyType>> property;
+    private Output<Either<String,TrackPropertyType>> property;
 
     public Output<Either<String,TrackPropertyType>> property() {
         return this.property;
@@ -49,76 +49,70 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public TrackPropertyConditionArgs(
-        Output<Either<String,TrackPropertyCompareOperation>> operation,
-        Output<Either<String,TrackPropertyType>> property,
-        @Nullable Output<String> value) {
-        this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
-        this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
-        this.value = value;
-    }
+    private TrackPropertyConditionArgs() {}
 
-    private TrackPropertyConditionArgs() {
-        this.operation = Codegen.empty();
-        this.property = Codegen.empty();
-        this.value = Codegen.empty();
+    private TrackPropertyConditionArgs(TrackPropertyConditionArgs $) {
+        this.operation = $.operation;
+        this.property = $.property;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrackPropertyConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,TrackPropertyCompareOperation>> operation;
-        private Output<Either<String,TrackPropertyType>> property;
-        private @Nullable Output<String> value;
+        private TrackPropertyConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrackPropertyConditionArgs();
         }
 
         public Builder(TrackPropertyConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operation = defaults.operation;
-    	      this.property = defaults.property;
-    	      this.value = defaults.value;
+            $ = new TrackPropertyConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operation(Output<Either<String,TrackPropertyCompareOperation>> operation) {
-            this.operation = Objects.requireNonNull(operation);
+            $.operation = operation;
             return this;
         }
+
         public Builder operation(Either<String,TrackPropertyCompareOperation> operation) {
-            this.operation = Output.of(Objects.requireNonNull(operation));
-            return this;
+            return operation(Output.of(operation));
         }
+
         public Builder property(Output<Either<String,TrackPropertyType>> property) {
-            this.property = Objects.requireNonNull(property);
+            $.property = property;
             return this;
         }
+
         public Builder property(Either<String,TrackPropertyType> property) {
-            this.property = Output.of(Objects.requireNonNull(property));
-            return this;
+            return property(Output.of(property));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public TrackPropertyConditionArgs build() {
-            return new TrackPropertyConditionArgs(operation, property, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public TrackPropertyConditionArgs build() {
+            $.operation = Objects.requireNonNull($.operation, "expected parameter 'operation' to be non-null");
+            $.property = Objects.requireNonNull($.property, "expected parameter 'property' to be non-null");
+            return $;
         }
     }
+
 }

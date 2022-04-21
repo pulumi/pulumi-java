@@ -15,62 +15,57 @@ public final class SpotFleetAcceleratorCountRequest extends com.pulumi.resources
     public static final SpotFleetAcceleratorCountRequest Empty = new SpotFleetAcceleratorCountRequest();
 
     @Import(name="max")
-      private final @Nullable Integer max;
+    private @Nullable Integer max;
 
     public Optional<Integer> max() {
-        return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
+        return Optional.ofNullable(this.max);
     }
 
     @Import(name="min")
-      private final @Nullable Integer min;
+    private @Nullable Integer min;
 
     public Optional<Integer> min() {
-        return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
+        return Optional.ofNullable(this.min);
     }
 
-    public SpotFleetAcceleratorCountRequest(
-        @Nullable Integer max,
-        @Nullable Integer min) {
-        this.max = max;
-        this.min = min;
-    }
+    private SpotFleetAcceleratorCountRequest() {}
 
-    private SpotFleetAcceleratorCountRequest() {
-        this.max = null;
-        this.min = null;
+    private SpotFleetAcceleratorCountRequest(SpotFleetAcceleratorCountRequest $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetAcceleratorCountRequest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer max;
-        private @Nullable Integer min;
+        private SpotFleetAcceleratorCountRequest $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetAcceleratorCountRequest();
         }
 
         public Builder(SpotFleetAcceleratorCountRequest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new SpotFleetAcceleratorCountRequest(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Integer max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
+
         public Builder min(@Nullable Integer min) {
-            this.min = min;
+            $.min = min;
             return this;
-        }        public SpotFleetAcceleratorCountRequest build() {
-            return new SpotFleetAcceleratorCountRequest(max, min);
+        }
+
+        public SpotFleetAcceleratorCountRequest build() {
+            return $;
         }
     }
+
 }

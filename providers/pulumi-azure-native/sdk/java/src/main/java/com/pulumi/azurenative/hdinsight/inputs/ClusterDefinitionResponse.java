@@ -25,10 +25,10 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="blueprint")
-      private final @Nullable String blueprint;
+    private @Nullable String blueprint;
 
     public Optional<String> blueprint() {
-        return this.blueprint == null ? Optional.empty() : Optional.ofNullable(this.blueprint);
+        return Optional.ofNullable(this.blueprint);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="componentVersion")
-      private final @Nullable Map<String,String> componentVersion;
+    private @Nullable Map<String,String> componentVersion;
 
-    public Map<String,String> componentVersion() {
-        return this.componentVersion == null ? Map.of() : this.componentVersion;
+    public Optional<Map<String,String>> componentVersion() {
+        return Optional.ofNullable(this.componentVersion);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="configurations")
-      private final @Nullable Object configurations;
+    private @Nullable Object configurations;
 
     public Optional<Object> configurations() {
-        return this.configurations == null ? Optional.empty() : Optional.ofNullable(this.configurations);
+        return Optional.ofNullable(this.configurations);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
-    public ClusterDefinitionResponse(
-        @Nullable String blueprint,
-        @Nullable Map<String,String> componentVersion,
-        @Nullable Object configurations,
-        @Nullable String kind) {
-        this.blueprint = blueprint;
-        this.componentVersion = componentVersion;
-        this.configurations = configurations;
-        this.kind = kind;
-    }
+    private ClusterDefinitionResponse() {}
 
-    private ClusterDefinitionResponse() {
-        this.blueprint = null;
-        this.componentVersion = Map.of();
-        this.configurations = null;
-        this.kind = null;
+    private ClusterDefinitionResponse(ClusterDefinitionResponse $) {
+        this.blueprint = $.blueprint;
+        this.componentVersion = $.componentVersion;
+        this.configurations = $.configurations;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String blueprint;
-        private @Nullable Map<String,String> componentVersion;
-        private @Nullable Object configurations;
-        private @Nullable String kind;
+        private ClusterDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterDefinitionResponse();
         }
 
         public Builder(ClusterDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blueprint = defaults.blueprint;
-    	      this.componentVersion = defaults.componentVersion;
-    	      this.configurations = defaults.configurations;
-    	      this.kind = defaults.kind;
+            $ = new ClusterDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blueprint(@Nullable String blueprint) {
-            this.blueprint = blueprint;
+            $.blueprint = blueprint;
             return this;
         }
+
         public Builder componentVersion(@Nullable Map<String,String> componentVersion) {
-            this.componentVersion = componentVersion;
+            $.componentVersion = componentVersion;
             return this;
         }
+
         public Builder configurations(@Nullable Object configurations) {
-            this.configurations = configurations;
+            $.configurations = configurations;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
-        }        public ClusterDefinitionResponse build() {
-            return new ClusterDefinitionResponse(blueprint, componentVersion, configurations, kind);
+        }
+
+        public ClusterDefinitionResponse build() {
+            return $;
         }
     }
+
 }

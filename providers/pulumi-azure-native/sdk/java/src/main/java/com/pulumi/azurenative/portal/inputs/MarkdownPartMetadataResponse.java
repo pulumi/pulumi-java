@@ -27,10 +27,10 @@ public final class MarkdownPartMetadataResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="inputs")
-      private final @Nullable List<Object> inputs;
+    private @Nullable List<Object> inputs;
 
-    public List<Object> inputs() {
-        return this.inputs == null ? List.of() : this.inputs;
+    public Optional<List<Object>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MarkdownPartMetadataResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="settings")
-      private final @Nullable MarkdownPartMetadataResponseSettings settings;
+    private @Nullable MarkdownPartMetadataResponseSettings settings;
 
     public Optional<MarkdownPartMetadataResponseSettings> settings() {
-        return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -50,67 +50,61 @@ public final class MarkdownPartMetadataResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public MarkdownPartMetadataResponse(
-        @Nullable List<Object> inputs,
-        @Nullable MarkdownPartMetadataResponseSettings settings,
-        String type) {
-        this.inputs = inputs;
-        this.settings = settings;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private MarkdownPartMetadataResponse() {}
 
-    private MarkdownPartMetadataResponse() {
-        this.inputs = List.of();
-        this.settings = null;
-        this.type = null;
+    private MarkdownPartMetadataResponse(MarkdownPartMetadataResponse $) {
+        this.inputs = $.inputs;
+        this.settings = $.settings;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MarkdownPartMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> inputs;
-        private @Nullable MarkdownPartMetadataResponseSettings settings;
-        private String type;
+        private MarkdownPartMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MarkdownPartMetadataResponse();
         }
 
         public Builder(MarkdownPartMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputs = defaults.inputs;
-    	      this.settings = defaults.settings;
-    	      this.type = defaults.type;
+            $ = new MarkdownPartMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inputs(@Nullable List<Object> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(Object... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder settings(@Nullable MarkdownPartMetadataResponseSettings settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public MarkdownPartMetadataResponse build() {
-            return new MarkdownPartMetadataResponse(inputs, settings, type);
+        }
+
+        public MarkdownPartMetadataResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

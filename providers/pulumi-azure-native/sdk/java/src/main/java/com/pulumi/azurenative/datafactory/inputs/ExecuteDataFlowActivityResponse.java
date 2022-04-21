@@ -34,10 +34,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="compute")
-      private final @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
+    private @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
 
     public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> compute() {
-        return this.compute == null ? Optional.empty() : Optional.ofNullable(this.compute);
+        return Optional.ofNullable(this.compute);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="continueOnError")
-      private final @Nullable Object continueOnError;
+    private @Nullable Object continueOnError;
 
     public Optional<Object> continueOnError() {
-        return this.continueOnError == null ? Optional.empty() : Optional.ofNullable(this.continueOnError);
+        return Optional.ofNullable(this.continueOnError);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="dataFlow", required=true)
-      private final DataFlowReferenceResponse dataFlow;
+    private DataFlowReferenceResponse dataFlow;
 
     public DataFlowReferenceResponse dataFlow() {
         return this.dataFlow;
@@ -67,10 +67,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="integrationRuntime")
-      private final @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
+    private @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
 
     public Optional<IntegrationRuntimeReferenceResponse> integrationRuntime() {
-        return this.integrationRuntime == null ? Optional.empty() : Optional.ofNullable(this.integrationRuntime);
+        return Optional.ofNullable(this.integrationRuntime);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -111,7 +111,7 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -122,10 +122,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="runConcurrently")
-      private final @Nullable Object runConcurrently;
+    private @Nullable Object runConcurrently;
 
     public Optional<Object> runConcurrently() {
-        return this.runConcurrently == null ? Optional.empty() : Optional.ofNullable(this.runConcurrently);
+        return Optional.ofNullable(this.runConcurrently);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="staging")
-      private final @Nullable DataFlowStagingInfoResponse staging;
+    private @Nullable DataFlowStagingInfoResponse staging;
 
     public Optional<DataFlowStagingInfoResponse> staging() {
-        return this.staging == null ? Optional.empty() : Optional.ofNullable(this.staging);
+        return Optional.ofNullable(this.staging);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="traceLevel")
-      private final @Nullable Object traceLevel;
+    private @Nullable Object traceLevel;
 
     public Optional<Object> traceLevel() {
-        return this.traceLevel == null ? Optional.empty() : Optional.ofNullable(this.traceLevel);
+        return Optional.ofNullable(this.traceLevel);
     }
 
     /**
@@ -167,7 +167,7 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -178,169 +178,133 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public ExecuteDataFlowActivityResponse(
-        @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute,
-        @Nullable Object continueOnError,
-        DataFlowReferenceResponse dataFlow,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable IntegrationRuntimeReferenceResponse integrationRuntime,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Object runConcurrently,
-        @Nullable DataFlowStagingInfoResponse staging,
-        @Nullable Object traceLevel,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.compute = compute;
-        this.continueOnError = continueOnError;
-        this.dataFlow = Objects.requireNonNull(dataFlow, "expected parameter 'dataFlow' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.integrationRuntime = integrationRuntime;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.runConcurrently = runConcurrently;
-        this.staging = staging;
-        this.traceLevel = traceLevel;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private ExecuteDataFlowActivityResponse() {}
 
-    private ExecuteDataFlowActivityResponse() {
-        this.compute = null;
-        this.continueOnError = null;
-        this.dataFlow = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.integrationRuntime = null;
-        this.linkedServiceName = null;
-        this.name = null;
-        this.policy = null;
-        this.runConcurrently = null;
-        this.staging = null;
-        this.traceLevel = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private ExecuteDataFlowActivityResponse(ExecuteDataFlowActivityResponse $) {
+        this.compute = $.compute;
+        this.continueOnError = $.continueOnError;
+        this.dataFlow = $.dataFlow;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.integrationRuntime = $.integrationRuntime;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.runConcurrently = $.runConcurrently;
+        this.staging = $.staging;
+        this.traceLevel = $.traceLevel;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecuteDataFlowActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
-        private @Nullable Object continueOnError;
-        private DataFlowReferenceResponse dataFlow;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private @Nullable Object runConcurrently;
-        private @Nullable DataFlowStagingInfoResponse staging;
-        private @Nullable Object traceLevel;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private ExecuteDataFlowActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecuteDataFlowActivityResponse();
         }
 
         public Builder(ExecuteDataFlowActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compute = defaults.compute;
-    	      this.continueOnError = defaults.continueOnError;
-    	      this.dataFlow = defaults.dataFlow;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.integrationRuntime = defaults.integrationRuntime;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.runConcurrently = defaults.runConcurrently;
-    	      this.staging = defaults.staging;
-    	      this.traceLevel = defaults.traceLevel;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new ExecuteDataFlowActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compute(@Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute) {
-            this.compute = compute;
+            $.compute = compute;
             return this;
         }
+
         public Builder continueOnError(@Nullable Object continueOnError) {
-            this.continueOnError = continueOnError;
+            $.continueOnError = continueOnError;
             return this;
         }
+
         public Builder dataFlow(DataFlowReferenceResponse dataFlow) {
-            this.dataFlow = Objects.requireNonNull(dataFlow);
+            $.dataFlow = dataFlow;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder integrationRuntime(@Nullable IntegrationRuntimeReferenceResponse integrationRuntime) {
-            this.integrationRuntime = integrationRuntime;
+            $.integrationRuntime = integrationRuntime;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder runConcurrently(@Nullable Object runConcurrently) {
-            this.runConcurrently = runConcurrently;
+            $.runConcurrently = runConcurrently;
             return this;
         }
+
         public Builder staging(@Nullable DataFlowStagingInfoResponse staging) {
-            this.staging = staging;
+            $.staging = staging;
             return this;
         }
+
         public Builder traceLevel(@Nullable Object traceLevel) {
-            this.traceLevel = traceLevel;
+            $.traceLevel = traceLevel;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public ExecuteDataFlowActivityResponse build() {
-            return new ExecuteDataFlowActivityResponse(compute, continueOnError, dataFlow, dependsOn, description, integrationRuntime, linkedServiceName, name, policy, runConcurrently, staging, traceLevel, type, userProperties);
+        }
+
+        public ExecuteDataFlowActivityResponse build() {
+            $.dataFlow = Objects.requireNonNull($.dataFlow, "expected parameter 'dataFlow' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

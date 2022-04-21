@@ -9,8 +9,8 @@ import com.pulumi.azurenative.batch.inputs.CIFSMountConfigurationArgs;
 import com.pulumi.azurenative.batch.inputs.NFSMountConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="azureBlobFileSystemConfiguration")
-      private final @Nullable Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration;
+    private @Nullable Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration;
 
-    public Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration() {
-        return this.azureBlobFileSystemConfiguration == null ? Codegen.empty() : this.azureBlobFileSystemConfiguration;
+    public Optional<Output<AzureBlobFileSystemConfigurationArgs>> azureBlobFileSystemConfiguration() {
+        return Optional.ofNullable(this.azureBlobFileSystemConfiguration);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="azureFileShareConfiguration")
-      private final @Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration;
+    private @Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration;
 
-    public Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration() {
-        return this.azureFileShareConfiguration == null ? Codegen.empty() : this.azureFileShareConfiguration;
+    public Optional<Output<AzureFileShareConfigurationArgs>> azureFileShareConfiguration() {
+        return Optional.ofNullable(this.azureFileShareConfiguration);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cifsMountConfiguration")
-      private final @Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration;
+    private @Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration;
 
-    public Output<CIFSMountConfigurationArgs> cifsMountConfiguration() {
-        return this.cifsMountConfiguration == null ? Codegen.empty() : this.cifsMountConfiguration;
+    public Optional<Output<CIFSMountConfigurationArgs>> cifsMountConfiguration() {
+        return Optional.ofNullable(this.cifsMountConfiguration);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="nfsMountConfiguration")
-      private final @Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration;
+    private @Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration;
 
-    public Output<NFSMountConfigurationArgs> nfsMountConfiguration() {
-        return this.nfsMountConfiguration == null ? Codegen.empty() : this.nfsMountConfiguration;
+    public Optional<Output<NFSMountConfigurationArgs>> nfsMountConfiguration() {
+        return Optional.ofNullable(this.nfsMountConfiguration);
     }
 
-    public MountConfigurationArgs(
-        @Nullable Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration,
-        @Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration,
-        @Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration,
-        @Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration) {
-        this.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
-        this.azureFileShareConfiguration = azureFileShareConfiguration;
-        this.cifsMountConfiguration = cifsMountConfiguration;
-        this.nfsMountConfiguration = nfsMountConfiguration;
-    }
+    private MountConfigurationArgs() {}
 
-    private MountConfigurationArgs() {
-        this.azureBlobFileSystemConfiguration = Codegen.empty();
-        this.azureFileShareConfiguration = Codegen.empty();
-        this.cifsMountConfiguration = Codegen.empty();
-        this.nfsMountConfiguration = Codegen.empty();
+    private MountConfigurationArgs(MountConfigurationArgs $) {
+        this.azureBlobFileSystemConfiguration = $.azureBlobFileSystemConfiguration;
+        this.azureFileShareConfiguration = $.azureFileShareConfiguration;
+        this.cifsMountConfiguration = $.cifsMountConfiguration;
+        this.nfsMountConfiguration = $.nfsMountConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MountConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration;
-        private @Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration;
-        private @Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration;
-        private @Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration;
+        private MountConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MountConfigurationArgs();
         }
 
         public Builder(MountConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureBlobFileSystemConfiguration = defaults.azureBlobFileSystemConfiguration;
-    	      this.azureFileShareConfiguration = defaults.azureFileShareConfiguration;
-    	      this.cifsMountConfiguration = defaults.cifsMountConfiguration;
-    	      this.nfsMountConfiguration = defaults.nfsMountConfiguration;
+            $ = new MountConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureBlobFileSystemConfiguration(@Nullable Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration) {
-            this.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
+            $.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
             return this;
         }
-        public Builder azureBlobFileSystemConfiguration(@Nullable AzureBlobFileSystemConfigurationArgs azureBlobFileSystemConfiguration) {
-            this.azureBlobFileSystemConfiguration = Codegen.ofNullable(azureBlobFileSystemConfiguration);
-            return this;
+
+        public Builder azureBlobFileSystemConfiguration(AzureBlobFileSystemConfigurationArgs azureBlobFileSystemConfiguration) {
+            return azureBlobFileSystemConfiguration(Output.of(azureBlobFileSystemConfiguration));
         }
+
         public Builder azureFileShareConfiguration(@Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration) {
-            this.azureFileShareConfiguration = azureFileShareConfiguration;
+            $.azureFileShareConfiguration = azureFileShareConfiguration;
             return this;
         }
-        public Builder azureFileShareConfiguration(@Nullable AzureFileShareConfigurationArgs azureFileShareConfiguration) {
-            this.azureFileShareConfiguration = Codegen.ofNullable(azureFileShareConfiguration);
-            return this;
+
+        public Builder azureFileShareConfiguration(AzureFileShareConfigurationArgs azureFileShareConfiguration) {
+            return azureFileShareConfiguration(Output.of(azureFileShareConfiguration));
         }
+
         public Builder cifsMountConfiguration(@Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration) {
-            this.cifsMountConfiguration = cifsMountConfiguration;
+            $.cifsMountConfiguration = cifsMountConfiguration;
             return this;
         }
-        public Builder cifsMountConfiguration(@Nullable CIFSMountConfigurationArgs cifsMountConfiguration) {
-            this.cifsMountConfiguration = Codegen.ofNullable(cifsMountConfiguration);
-            return this;
+
+        public Builder cifsMountConfiguration(CIFSMountConfigurationArgs cifsMountConfiguration) {
+            return cifsMountConfiguration(Output.of(cifsMountConfiguration));
         }
+
         public Builder nfsMountConfiguration(@Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration) {
-            this.nfsMountConfiguration = nfsMountConfiguration;
+            $.nfsMountConfiguration = nfsMountConfiguration;
             return this;
         }
-        public Builder nfsMountConfiguration(@Nullable NFSMountConfigurationArgs nfsMountConfiguration) {
-            this.nfsMountConfiguration = Codegen.ofNullable(nfsMountConfiguration);
-            return this;
-        }        public MountConfigurationArgs build() {
-            return new MountConfigurationArgs(azureBlobFileSystemConfiguration, azureFileShareConfiguration, cifsMountConfiguration, nfsMountConfiguration);
+
+        public Builder nfsMountConfiguration(NFSMountConfigurationArgs nfsMountConfiguration) {
+            return nfsMountConfiguration(Output.of(nfsMountConfiguration));
+        }
+
+        public MountConfigurationArgs build() {
+            return $;
         }
     }
+
 }

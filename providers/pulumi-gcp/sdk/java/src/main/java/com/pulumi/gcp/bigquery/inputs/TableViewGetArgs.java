@@ -5,10 +5,10 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TableViewGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="query", required=true)
-      private final Output<String> query;
+    private Output<String> query;
 
     public Output<String> query() {
         return this.query;
@@ -33,63 +33,59 @@ public final class TableViewGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useLegacySql")
-      private final @Nullable Output<Boolean> useLegacySql;
+    private @Nullable Output<Boolean> useLegacySql;
 
-    public Output<Boolean> useLegacySql() {
-        return this.useLegacySql == null ? Codegen.empty() : this.useLegacySql;
+    public Optional<Output<Boolean>> useLegacySql() {
+        return Optional.ofNullable(this.useLegacySql);
     }
 
-    public TableViewGetArgs(
-        Output<String> query,
-        @Nullable Output<Boolean> useLegacySql) {
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.useLegacySql = useLegacySql;
-    }
+    private TableViewGetArgs() {}
 
-    private TableViewGetArgs() {
-        this.query = Codegen.empty();
-        this.useLegacySql = Codegen.empty();
+    private TableViewGetArgs(TableViewGetArgs $) {
+        this.query = $.query;
+        this.useLegacySql = $.useLegacySql;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableViewGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> query;
-        private @Nullable Output<Boolean> useLegacySql;
+        private TableViewGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableViewGetArgs();
         }
 
         public Builder(TableViewGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.query = defaults.query;
-    	      this.useLegacySql = defaults.useLegacySql;
+            $ = new TableViewGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder query(Output<String> query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Output.of(Objects.requireNonNull(query));
-            return this;
+            return query(Output.of(query));
         }
+
         public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
-            this.useLegacySql = useLegacySql;
+            $.useLegacySql = useLegacySql;
             return this;
         }
-        public Builder useLegacySql(@Nullable Boolean useLegacySql) {
-            this.useLegacySql = Codegen.ofNullable(useLegacySql);
-            return this;
-        }        public TableViewGetArgs build() {
-            return new TableViewGetArgs(query, useLegacySql);
+
+        public Builder useLegacySql(Boolean useLegacySql) {
+            return useLegacySql(Output.of(useLegacySql));
+        }
+
+        public TableViewGetArgs build() {
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            return $;
         }
     }
+
 }

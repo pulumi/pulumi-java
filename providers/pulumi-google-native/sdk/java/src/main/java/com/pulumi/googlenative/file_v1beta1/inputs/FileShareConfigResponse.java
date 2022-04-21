@@ -23,7 +23,7 @@ public final class FileShareConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="capacityGb", required=true)
-      private final String capacityGb;
+    private String capacityGb;
 
     public String capacityGb() {
         return this.capacityGb;
@@ -34,7 +34,7 @@ public final class FileShareConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,7 +45,7 @@ public final class FileShareConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="nfsExportOptions", required=true)
-      private final List<NfsExportOptionsResponse> nfsExportOptions;
+    private List<NfsExportOptionsResponse> nfsExportOptions;
 
     public List<NfsExportOptionsResponse> nfsExportOptions() {
         return this.nfsExportOptions;
@@ -56,76 +56,70 @@ public final class FileShareConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sourceBackup", required=true)
-      private final String sourceBackup;
+    private String sourceBackup;
 
     public String sourceBackup() {
         return this.sourceBackup;
     }
 
-    public FileShareConfigResponse(
-        String capacityGb,
-        String name,
-        List<NfsExportOptionsResponse> nfsExportOptions,
-        String sourceBackup) {
-        this.capacityGb = Objects.requireNonNull(capacityGb, "expected parameter 'capacityGb' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.nfsExportOptions = Objects.requireNonNull(nfsExportOptions, "expected parameter 'nfsExportOptions' to be non-null");
-        this.sourceBackup = Objects.requireNonNull(sourceBackup, "expected parameter 'sourceBackup' to be non-null");
-    }
+    private FileShareConfigResponse() {}
 
-    private FileShareConfigResponse() {
-        this.capacityGb = null;
-        this.name = null;
-        this.nfsExportOptions = List.of();
-        this.sourceBackup = null;
+    private FileShareConfigResponse(FileShareConfigResponse $) {
+        this.capacityGb = $.capacityGb;
+        this.name = $.name;
+        this.nfsExportOptions = $.nfsExportOptions;
+        this.sourceBackup = $.sourceBackup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileShareConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String capacityGb;
-        private String name;
-        private List<NfsExportOptionsResponse> nfsExportOptions;
-        private String sourceBackup;
+        private FileShareConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileShareConfigResponse();
         }
 
         public Builder(FileShareConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityGb = defaults.capacityGb;
-    	      this.name = defaults.name;
-    	      this.nfsExportOptions = defaults.nfsExportOptions;
-    	      this.sourceBackup = defaults.sourceBackup;
+            $ = new FileShareConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityGb(String capacityGb) {
-            this.capacityGb = Objects.requireNonNull(capacityGb);
+            $.capacityGb = capacityGb;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder nfsExportOptions(List<NfsExportOptionsResponse> nfsExportOptions) {
-            this.nfsExportOptions = Objects.requireNonNull(nfsExportOptions);
+            $.nfsExportOptions = nfsExportOptions;
             return this;
         }
+
         public Builder nfsExportOptions(NfsExportOptionsResponse... nfsExportOptions) {
             return nfsExportOptions(List.of(nfsExportOptions));
         }
+
         public Builder sourceBackup(String sourceBackup) {
-            this.sourceBackup = Objects.requireNonNull(sourceBackup);
+            $.sourceBackup = sourceBackup;
             return this;
-        }        public FileShareConfigResponse build() {
-            return new FileShareConfigResponse(capacityGb, name, nfsExportOptions, sourceBackup);
+        }
+
+        public FileShareConfigResponse build() {
+            $.capacityGb = Objects.requireNonNull($.capacityGb, "expected parameter 'capacityGb' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.nfsExportOptions = Objects.requireNonNull($.nfsExportOptions, "expected parameter 'nfsExportOptions' to be non-null");
+            $.sourceBackup = Objects.requireNonNull($.sourceBackup, "expected parameter 'sourceBackup' to be non-null");
+            return $;
         }
     }
+
 }

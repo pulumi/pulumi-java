@@ -18,48 +18,49 @@ public final class ClusteringResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields", required=true)
-      private final List<String> fields;
+    private List<String> fields;
 
     public List<String> fields() {
         return this.fields;
     }
 
-    public ClusteringResponse(List<String> fields) {
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-    }
+    private ClusteringResponse() {}
 
-    private ClusteringResponse() {
-        this.fields = List.of();
+    private ClusteringResponse(ClusteringResponse $) {
+        this.fields = $.fields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusteringResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> fields;
+        private ClusteringResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusteringResponse();
         }
 
         public Builder(ClusteringResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
+            $ = new ClusteringResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(List<String> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(String... fields) {
             return fields(List.of(fields));
-        }        public ClusteringResponse build() {
-            return new ClusteringResponse(fields);
+        }
+
+        public ClusteringResponse build() {
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            return $;
         }
     }
+
 }

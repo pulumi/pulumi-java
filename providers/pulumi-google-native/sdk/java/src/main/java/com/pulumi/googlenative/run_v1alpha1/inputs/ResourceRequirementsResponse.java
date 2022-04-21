@@ -22,7 +22,7 @@ public final class ResourceRequirementsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="limits", required=true)
-      private final Map<String,String> limits;
+    private Map<String,String> limits;
 
     public Map<String,String> limits() {
         return this.limits;
@@ -33,55 +33,52 @@ public final class ResourceRequirementsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="requests", required=true)
-      private final Map<String,String> requests;
+    private Map<String,String> requests;
 
     public Map<String,String> requests() {
         return this.requests;
     }
 
-    public ResourceRequirementsResponse(
-        Map<String,String> limits,
-        Map<String,String> requests) {
-        this.limits = Objects.requireNonNull(limits, "expected parameter 'limits' to be non-null");
-        this.requests = Objects.requireNonNull(requests, "expected parameter 'requests' to be non-null");
-    }
+    private ResourceRequirementsResponse() {}
 
-    private ResourceRequirementsResponse() {
-        this.limits = Map.of();
-        this.requests = Map.of();
+    private ResourceRequirementsResponse(ResourceRequirementsResponse $) {
+        this.limits = $.limits;
+        this.requests = $.requests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRequirementsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> limits;
-        private Map<String,String> requests;
+        private ResourceRequirementsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRequirementsResponse();
         }
 
         public Builder(ResourceRequirementsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limits = defaults.limits;
-    	      this.requests = defaults.requests;
+            $ = new ResourceRequirementsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder limits(Map<String,String> limits) {
-            this.limits = Objects.requireNonNull(limits);
+            $.limits = limits;
             return this;
         }
+
         public Builder requests(Map<String,String> requests) {
-            this.requests = Objects.requireNonNull(requests);
+            $.requests = requests;
             return this;
-        }        public ResourceRequirementsResponse build() {
-            return new ResourceRequirementsResponse(limits, requests);
+        }
+
+        public ResourceRequirementsResponse build() {
+            $.limits = Objects.requireNonNull($.limits, "expected parameter 'limits' to be non-null");
+            $.requests = Objects.requireNonNull($.requests, "expected parameter 'requests' to be non-null");
+            return $;
         }
     }
+
 }

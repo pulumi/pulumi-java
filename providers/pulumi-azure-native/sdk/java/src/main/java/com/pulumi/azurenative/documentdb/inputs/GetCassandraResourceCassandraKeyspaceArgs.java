@@ -17,7 +17,7 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
      * 
      */
     @Import(name="keyspaceName", required=true)
-      private final String keyspaceName;
+    private String keyspaceName;
 
     public String keyspaceName() {
         return this.keyspaceName;
@@ -39,64 +39,59 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCassandraResourceCassandraKeyspaceArgs(
-        String accountName,
-        String keyspaceName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.keyspaceName = Objects.requireNonNull(keyspaceName, "expected parameter 'keyspaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCassandraResourceCassandraKeyspaceArgs() {}
 
-    private GetCassandraResourceCassandraKeyspaceArgs() {
-        this.accountName = null;
-        this.keyspaceName = null;
-        this.resourceGroupName = null;
+    private GetCassandraResourceCassandraKeyspaceArgs(GetCassandraResourceCassandraKeyspaceArgs $) {
+        this.accountName = $.accountName;
+        this.keyspaceName = $.keyspaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCassandraResourceCassandraKeyspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String keyspaceName;
-        private String resourceGroupName;
+        private GetCassandraResourceCassandraKeyspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCassandraResourceCassandraKeyspaceArgs();
         }
 
         public Builder(GetCassandraResourceCassandraKeyspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.keyspaceName = defaults.keyspaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCassandraResourceCassandraKeyspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder keyspaceName(String keyspaceName) {
-            this.keyspaceName = Objects.requireNonNull(keyspaceName);
+            $.keyspaceName = keyspaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCassandraResourceCassandraKeyspaceArgs build() {
-            return new GetCassandraResourceCassandraKeyspaceArgs(accountName, keyspaceName, resourceGroupName);
+        }
+
+        public GetCassandraResourceCassandraKeyspaceArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.keyspaceName = Objects.requireNonNull($.keyspaceName, "expected parameter 'keyspaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

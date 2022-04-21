@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends com.pulum
      * 
      */
     @Import(name="lifespanCount", required=true)
-      private final Integer lifespanCount;
+    private Integer lifespanCount;
 
     public Integer lifespanCount() {
         return this.lifespanCount;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends com.pulum
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,59 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends com.pulum
      * 
      */
     @Import(name="parameters", required=true)
-      private final Map<String,String> parameters;
+    private Map<String,String> parameters;
 
     public Map<String,String> parameters() {
         return this.parameters;
     }
 
-    public GoogleCloudDialogflowV2beta1ContextResponse(
-        Integer lifespanCount,
-        String name,
-        Map<String,String> parameters) {
-        this.lifespanCount = Objects.requireNonNull(lifespanCount, "expected parameter 'lifespanCount' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1ContextResponse() {}
 
-    private GoogleCloudDialogflowV2beta1ContextResponse() {
-        this.lifespanCount = null;
-        this.name = null;
-        this.parameters = Map.of();
+    private GoogleCloudDialogflowV2beta1ContextResponse(GoogleCloudDialogflowV2beta1ContextResponse $) {
+        this.lifespanCount = $.lifespanCount;
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1ContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer lifespanCount;
-        private String name;
-        private Map<String,String> parameters;
+        private GoogleCloudDialogflowV2beta1ContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1ContextResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1ContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lifespanCount = defaults.lifespanCount;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new GoogleCloudDialogflowV2beta1ContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lifespanCount(Integer lifespanCount) {
-            this.lifespanCount = Objects.requireNonNull(lifespanCount);
+            $.lifespanCount = lifespanCount;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(Map<String,String> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
-        }        public GoogleCloudDialogflowV2beta1ContextResponse build() {
-            return new GoogleCloudDialogflowV2beta1ContextResponse(lifespanCount, name, parameters);
+        }
+
+        public GoogleCloudDialogflowV2beta1ContextResponse build() {
+            $.lifespanCount = Objects.requireNonNull($.lifespanCount, "expected parameter 'lifespanCount' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

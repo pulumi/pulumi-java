@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ConfigMapNodeConfigSourceArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NodeConfigSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="configMap")
-      private final @Nullable Output<ConfigMapNodeConfigSourceArgs> configMap;
+    private @Nullable Output<ConfigMapNodeConfigSourceArgs> configMap;
 
-    public Output<ConfigMapNodeConfigSourceArgs> configMap() {
-        return this.configMap == null ? Codegen.empty() : this.configMap;
+    public Optional<Output<ConfigMapNodeConfigSourceArgs>> configMap() {
+        return Optional.ofNullable(this.configMap);
     }
 
-    public NodeConfigSourceArgs(@Nullable Output<ConfigMapNodeConfigSourceArgs> configMap) {
-        this.configMap = configMap;
-    }
+    private NodeConfigSourceArgs() {}
 
-    private NodeConfigSourceArgs() {
-        this.configMap = Codegen.empty();
+    private NodeConfigSourceArgs(NodeConfigSourceArgs $) {
+        this.configMap = $.configMap;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeConfigSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigMapNodeConfigSourceArgs> configMap;
+        private NodeConfigSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeConfigSourceArgs();
         }
 
         public Builder(NodeConfigSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMap = defaults.configMap;
+            $ = new NodeConfigSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configMap(@Nullable Output<ConfigMapNodeConfigSourceArgs> configMap) {
-            this.configMap = configMap;
+            $.configMap = configMap;
             return this;
         }
-        public Builder configMap(@Nullable ConfigMapNodeConfigSourceArgs configMap) {
-            this.configMap = Codegen.ofNullable(configMap);
-            return this;
-        }        public NodeConfigSourceArgs build() {
-            return new NodeConfigSourceArgs(configMap);
+
+        public Builder configMap(ConfigMapNodeConfigSourceArgs configMap) {
+            return configMap(Output.of(configMap));
+        }
+
+        public NodeConfigSourceArgs build() {
+            return $;
         }
     }
+
 }

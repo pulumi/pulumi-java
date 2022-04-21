@@ -17,45 +17,45 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageId", required=true)
-      private final String imageId;
+    private String imageId;
 
     public String imageId() {
         return this.imageId;
     }
 
-    public GetImageArgs(String imageId) {
-        this.imageId = Objects.requireNonNull(imageId, "expected parameter 'imageId' to be non-null");
-    }
+    private GetImageArgs() {}
 
-    private GetImageArgs() {
-        this.imageId = null;
+    private GetImageArgs(GetImageArgs $) {
+        this.imageId = $.imageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageId;
+        private GetImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageArgs();
         }
 
         public Builder(GetImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageId = defaults.imageId;
+            $ = new GetImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageId(String imageId) {
-            this.imageId = Objects.requireNonNull(imageId);
+            $.imageId = imageId;
             return this;
-        }        public GetImageArgs build() {
-            return new GetImageArgs(imageId);
+        }
+
+        public GetImageArgs build() {
+            $.imageId = Objects.requireNonNull($.imageId, "expected parameter 'imageId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class FlowDestinationFlowConfig extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="connectorProfileName")
-      private final @Nullable String connectorProfileName;
+    private @Nullable String connectorProfileName;
 
     public Optional<String> connectorProfileName() {
-        return this.connectorProfileName == null ? Optional.empty() : Optional.ofNullable(this.connectorProfileName);
+        return Optional.ofNullable(this.connectorProfileName);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class FlowDestinationFlowConfig extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="connectorType", required=true)
-      private final FlowConnectorType connectorType;
+    private FlowConnectorType connectorType;
 
     public FlowConnectorType connectorType() {
         return this.connectorType;
@@ -47,64 +47,58 @@ public final class FlowDestinationFlowConfig extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="destinationConnectorProperties", required=true)
-      private final FlowDestinationConnectorProperties destinationConnectorProperties;
+    private FlowDestinationConnectorProperties destinationConnectorProperties;
 
     public FlowDestinationConnectorProperties destinationConnectorProperties() {
         return this.destinationConnectorProperties;
     }
 
-    public FlowDestinationFlowConfig(
-        @Nullable String connectorProfileName,
-        FlowConnectorType connectorType,
-        FlowDestinationConnectorProperties destinationConnectorProperties) {
-        this.connectorProfileName = connectorProfileName;
-        this.connectorType = Objects.requireNonNull(connectorType, "expected parameter 'connectorType' to be non-null");
-        this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties, "expected parameter 'destinationConnectorProperties' to be non-null");
-    }
+    private FlowDestinationFlowConfig() {}
 
-    private FlowDestinationFlowConfig() {
-        this.connectorProfileName = null;
-        this.connectorType = null;
-        this.destinationConnectorProperties = null;
+    private FlowDestinationFlowConfig(FlowDestinationFlowConfig $) {
+        this.connectorProfileName = $.connectorProfileName;
+        this.connectorType = $.connectorType;
+        this.destinationConnectorProperties = $.destinationConnectorProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowDestinationFlowConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String connectorProfileName;
-        private FlowConnectorType connectorType;
-        private FlowDestinationConnectorProperties destinationConnectorProperties;
+        private FlowDestinationFlowConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowDestinationFlowConfig();
         }
 
         public Builder(FlowDestinationFlowConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorProfileName = defaults.connectorProfileName;
-    	      this.connectorType = defaults.connectorType;
-    	      this.destinationConnectorProperties = defaults.destinationConnectorProperties;
+            $ = new FlowDestinationFlowConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
-            this.connectorProfileName = connectorProfileName;
+            $.connectorProfileName = connectorProfileName;
             return this;
         }
+
         public Builder connectorType(FlowConnectorType connectorType) {
-            this.connectorType = Objects.requireNonNull(connectorType);
+            $.connectorType = connectorType;
             return this;
         }
+
         public Builder destinationConnectorProperties(FlowDestinationConnectorProperties destinationConnectorProperties) {
-            this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
+            $.destinationConnectorProperties = destinationConnectorProperties;
             return this;
-        }        public FlowDestinationFlowConfig build() {
-            return new FlowDestinationFlowConfig(connectorProfileName, connectorType, destinationConnectorProperties);
+        }
+
+        public FlowDestinationFlowConfig build() {
+            $.connectorType = Objects.requireNonNull($.connectorType, "expected parameter 'connectorType' to be non-null");
+            $.destinationConnectorProperties = Objects.requireNonNull($.destinationConnectorProperties, "expected parameter 'destinationConnectorProperties' to be non-null");
+            return $;
         }
     }
+
 }

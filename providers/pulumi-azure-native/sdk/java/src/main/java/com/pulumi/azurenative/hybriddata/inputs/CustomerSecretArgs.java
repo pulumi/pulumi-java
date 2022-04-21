@@ -6,7 +6,6 @@ package com.pulumi.azurenative.hybriddata.inputs;
 import com.pulumi.azurenative.hybriddata.enums.SupportedAlgorithm;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="algorithm", required=true)
-      private final Output<SupportedAlgorithm> algorithm;
+    private Output<SupportedAlgorithm> algorithm;
 
     public Output<SupportedAlgorithm> algorithm() {
         return this.algorithm;
@@ -35,7 +34,7 @@ public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keyIdentifier", required=true)
-      private final Output<String> keyIdentifier;
+    private Output<String> keyIdentifier;
 
     public Output<String> keyIdentifier() {
         return this.keyIdentifier;
@@ -46,76 +45,71 @@ public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keyValue", required=true)
-      private final Output<String> keyValue;
+    private Output<String> keyValue;
 
     public Output<String> keyValue() {
         return this.keyValue;
     }
 
-    public CustomerSecretArgs(
-        Output<SupportedAlgorithm> algorithm,
-        Output<String> keyIdentifier,
-        Output<String> keyValue) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.keyIdentifier = Objects.requireNonNull(keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
-        this.keyValue = Objects.requireNonNull(keyValue, "expected parameter 'keyValue' to be non-null");
-    }
+    private CustomerSecretArgs() {}
 
-    private CustomerSecretArgs() {
-        this.algorithm = Codegen.empty();
-        this.keyIdentifier = Codegen.empty();
-        this.keyValue = Codegen.empty();
+    private CustomerSecretArgs(CustomerSecretArgs $) {
+        this.algorithm = $.algorithm;
+        this.keyIdentifier = $.keyIdentifier;
+        this.keyValue = $.keyValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SupportedAlgorithm> algorithm;
-        private Output<String> keyIdentifier;
-        private Output<String> keyValue;
+        private CustomerSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerSecretArgs();
         }
 
         public Builder(CustomerSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.keyIdentifier = defaults.keyIdentifier;
-    	      this.keyValue = defaults.keyValue;
+            $ = new CustomerSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(Output<SupportedAlgorithm> algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder algorithm(SupportedAlgorithm algorithm) {
-            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
-            return this;
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder keyIdentifier(Output<String> keyIdentifier) {
-            this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
+            $.keyIdentifier = keyIdentifier;
             return this;
         }
+
         public Builder keyIdentifier(String keyIdentifier) {
-            this.keyIdentifier = Output.of(Objects.requireNonNull(keyIdentifier));
-            return this;
+            return keyIdentifier(Output.of(keyIdentifier));
         }
+
         public Builder keyValue(Output<String> keyValue) {
-            this.keyValue = Objects.requireNonNull(keyValue);
+            $.keyValue = keyValue;
             return this;
         }
+
         public Builder keyValue(String keyValue) {
-            this.keyValue = Output.of(Objects.requireNonNull(keyValue));
-            return this;
-        }        public CustomerSecretArgs build() {
-            return new CustomerSecretArgs(algorithm, keyIdentifier, keyValue);
+            return keyValue(Output.of(keyValue));
+        }
+
+        public CustomerSecretArgs build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.keyIdentifier = Objects.requireNonNull($.keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
+            $.keyValue = Objects.requireNonNull($.keyValue, "expected parameter 'keyValue' to be non-null");
+            return $;
         }
     }
+
 }

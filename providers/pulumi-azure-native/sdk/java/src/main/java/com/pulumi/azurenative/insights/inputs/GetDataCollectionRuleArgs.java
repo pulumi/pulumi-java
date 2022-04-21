@@ -17,7 +17,7 @@ public final class GetDataCollectionRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataCollectionRuleName", required=true)
-      private final String dataCollectionRuleName;
+    private String dataCollectionRuleName;
 
     public String dataCollectionRuleName() {
         return this.dataCollectionRuleName;
@@ -28,55 +28,52 @@ public final class GetDataCollectionRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDataCollectionRuleArgs(
-        String dataCollectionRuleName,
-        String resourceGroupName) {
-        this.dataCollectionRuleName = Objects.requireNonNull(dataCollectionRuleName, "expected parameter 'dataCollectionRuleName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDataCollectionRuleArgs() {}
 
-    private GetDataCollectionRuleArgs() {
-        this.dataCollectionRuleName = null;
-        this.resourceGroupName = null;
+    private GetDataCollectionRuleArgs(GetDataCollectionRuleArgs $) {
+        this.dataCollectionRuleName = $.dataCollectionRuleName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataCollectionRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataCollectionRuleName;
-        private String resourceGroupName;
+        private GetDataCollectionRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataCollectionRuleArgs();
         }
 
         public Builder(GetDataCollectionRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCollectionRuleName = defaults.dataCollectionRuleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDataCollectionRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCollectionRuleName(String dataCollectionRuleName) {
-            this.dataCollectionRuleName = Objects.requireNonNull(dataCollectionRuleName);
+            $.dataCollectionRuleName = dataCollectionRuleName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDataCollectionRuleArgs build() {
-            return new GetDataCollectionRuleArgs(dataCollectionRuleName, resourceGroupName);
+        }
+
+        public GetDataCollectionRuleArgs build() {
+            $.dataCollectionRuleName = Objects.requireNonNull($.dataCollectionRuleName, "expected parameter 'dataCollectionRuleName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

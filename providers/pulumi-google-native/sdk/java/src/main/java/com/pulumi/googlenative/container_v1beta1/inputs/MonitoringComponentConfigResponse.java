@@ -22,48 +22,49 @@ public final class MonitoringComponentConfigResponse extends com.pulumi.resource
      * 
      */
     @Import(name="enableComponents", required=true)
-      private final List<String> enableComponents;
+    private List<String> enableComponents;
 
     public List<String> enableComponents() {
         return this.enableComponents;
     }
 
-    public MonitoringComponentConfigResponse(List<String> enableComponents) {
-        this.enableComponents = Objects.requireNonNull(enableComponents, "expected parameter 'enableComponents' to be non-null");
-    }
+    private MonitoringComponentConfigResponse() {}
 
-    private MonitoringComponentConfigResponse() {
-        this.enableComponents = List.of();
+    private MonitoringComponentConfigResponse(MonitoringComponentConfigResponse $) {
+        this.enableComponents = $.enableComponents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringComponentConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> enableComponents;
+        private MonitoringComponentConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringComponentConfigResponse();
         }
 
         public Builder(MonitoringComponentConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableComponents = defaults.enableComponents;
+            $ = new MonitoringComponentConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableComponents(List<String> enableComponents) {
-            this.enableComponents = Objects.requireNonNull(enableComponents);
+            $.enableComponents = enableComponents;
             return this;
         }
+
         public Builder enableComponents(String... enableComponents) {
             return enableComponents(List.of(enableComponents));
-        }        public MonitoringComponentConfigResponse build() {
-            return new MonitoringComponentConfigResponse(enableComponents);
+        }
+
+        public MonitoringComponentConfigResponse build() {
+            $.enableComponents = Objects.requireNonNull($.enableComponents, "expected parameter 'enableComponents' to be non-null");
+            return $;
         }
     }
+
 }

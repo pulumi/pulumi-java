@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class ProxyProtocolPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instancePorts", required=true)
-      private final Output<List<String>> instancePorts;
+    private Output<List<String>> instancePorts;
 
     public Output<List<String>> instancePorts() {
         return this.instancePorts;
@@ -33,66 +32,64 @@ public final class ProxyProtocolPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="loadBalancer", required=true)
-      private final Output<String> loadBalancer;
+    private Output<String> loadBalancer;
 
     public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
 
-    public ProxyProtocolPolicyArgs(
-        Output<List<String>> instancePorts,
-        Output<String> loadBalancer) {
-        this.instancePorts = Objects.requireNonNull(instancePorts, "expected parameter 'instancePorts' to be non-null");
-        this.loadBalancer = Objects.requireNonNull(loadBalancer, "expected parameter 'loadBalancer' to be non-null");
-    }
+    private ProxyProtocolPolicyArgs() {}
 
-    private ProxyProtocolPolicyArgs() {
-        this.instancePorts = Codegen.empty();
-        this.loadBalancer = Codegen.empty();
+    private ProxyProtocolPolicyArgs(ProxyProtocolPolicyArgs $) {
+        this.instancePorts = $.instancePorts;
+        this.loadBalancer = $.loadBalancer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProxyProtocolPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> instancePorts;
-        private Output<String> loadBalancer;
+        private ProxyProtocolPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProxyProtocolPolicyArgs();
         }
 
         public Builder(ProxyProtocolPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instancePorts = defaults.instancePorts;
-    	      this.loadBalancer = defaults.loadBalancer;
+            $ = new ProxyProtocolPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instancePorts(Output<List<String>> instancePorts) {
-            this.instancePorts = Objects.requireNonNull(instancePorts);
+            $.instancePorts = instancePorts;
             return this;
         }
+
         public Builder instancePorts(List<String> instancePorts) {
-            this.instancePorts = Output.of(Objects.requireNonNull(instancePorts));
-            return this;
+            return instancePorts(Output.of(instancePorts));
         }
+
         public Builder instancePorts(String... instancePorts) {
             return instancePorts(List.of(instancePorts));
         }
+
         public Builder loadBalancer(Output<String> loadBalancer) {
-            this.loadBalancer = Objects.requireNonNull(loadBalancer);
+            $.loadBalancer = loadBalancer;
             return this;
         }
+
         public Builder loadBalancer(String loadBalancer) {
-            this.loadBalancer = Output.of(Objects.requireNonNull(loadBalancer));
-            return this;
-        }        public ProxyProtocolPolicyArgs build() {
-            return new ProxyProtocolPolicyArgs(instancePorts, loadBalancer);
+            return loadBalancer(Output.of(loadBalancer));
+        }
+
+        public ProxyProtocolPolicyArgs build() {
+            $.instancePorts = Objects.requireNonNull($.instancePorts, "expected parameter 'instancePorts' to be non-null");
+            $.loadBalancer = Objects.requireNonNull($.loadBalancer, "expected parameter 'loadBalancer' to be non-null");
+            return $;
         }
     }
+
 }

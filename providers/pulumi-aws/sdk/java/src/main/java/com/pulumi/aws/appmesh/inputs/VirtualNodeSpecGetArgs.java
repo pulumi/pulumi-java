@@ -10,9 +10,9 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingGetArgs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VirtualNodeSpecGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="backendDefaults")
-      private final @Nullable Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults;
+    private @Nullable Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults;
 
-    public Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults() {
-        return this.backendDefaults == null ? Codegen.empty() : this.backendDefaults;
+    public Optional<Output<VirtualNodeSpecBackendDefaultsGetArgs>> backendDefaults() {
+        return Optional.ofNullable(this.backendDefaults);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VirtualNodeSpecGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="backends")
-      private final @Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends;
+    private @Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends;
 
-    public Output<List<VirtualNodeSpecBackendGetArgs>> backends() {
-        return this.backends == null ? Codegen.empty() : this.backends;
+    public Optional<Output<List<VirtualNodeSpecBackendGetArgs>>> backends() {
+        return Optional.ofNullable(this.backends);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VirtualNodeSpecGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="listener")
-      private final @Nullable Output<VirtualNodeSpecListenerGetArgs> listener;
+    private @Nullable Output<VirtualNodeSpecListenerGetArgs> listener;
 
-    public Output<VirtualNodeSpecListenerGetArgs> listener() {
-        return this.listener == null ? Codegen.empty() : this.listener;
+    public Optional<Output<VirtualNodeSpecListenerGetArgs>> listener() {
+        return Optional.ofNullable(this.listener);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class VirtualNodeSpecGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="logging")
-      private final @Nullable Output<VirtualNodeSpecLoggingGetArgs> logging;
+    private @Nullable Output<VirtualNodeSpecLoggingGetArgs> logging;
 
-    public Output<VirtualNodeSpecLoggingGetArgs> logging() {
-        return this.logging == null ? Codegen.empty() : this.logging;
+    public Optional<Output<VirtualNodeSpecLoggingGetArgs>> logging() {
+        return Optional.ofNullable(this.logging);
     }
 
     /**
@@ -69,105 +69,92 @@ public final class VirtualNodeSpecGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="serviceDiscovery")
-      private final @Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery;
+    private @Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery;
 
-    public Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery() {
-        return this.serviceDiscovery == null ? Codegen.empty() : this.serviceDiscovery;
+    public Optional<Output<VirtualNodeSpecServiceDiscoveryGetArgs>> serviceDiscovery() {
+        return Optional.ofNullable(this.serviceDiscovery);
     }
 
-    public VirtualNodeSpecGetArgs(
-        @Nullable Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults,
-        @Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends,
-        @Nullable Output<VirtualNodeSpecListenerGetArgs> listener,
-        @Nullable Output<VirtualNodeSpecLoggingGetArgs> logging,
-        @Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery) {
-        this.backendDefaults = backendDefaults;
-        this.backends = backends;
-        this.listener = listener;
-        this.logging = logging;
-        this.serviceDiscovery = serviceDiscovery;
-    }
+    private VirtualNodeSpecGetArgs() {}
 
-    private VirtualNodeSpecGetArgs() {
-        this.backendDefaults = Codegen.empty();
-        this.backends = Codegen.empty();
-        this.listener = Codegen.empty();
-        this.logging = Codegen.empty();
-        this.serviceDiscovery = Codegen.empty();
+    private VirtualNodeSpecGetArgs(VirtualNodeSpecGetArgs $) {
+        this.backendDefaults = $.backendDefaults;
+        this.backends = $.backends;
+        this.listener = $.listener;
+        this.logging = $.logging;
+        this.serviceDiscovery = $.serviceDiscovery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults;
-        private @Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends;
-        private @Nullable Output<VirtualNodeSpecListenerGetArgs> listener;
-        private @Nullable Output<VirtualNodeSpecLoggingGetArgs> logging;
-        private @Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery;
+        private VirtualNodeSpecGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecGetArgs();
         }
 
         public Builder(VirtualNodeSpecGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendDefaults = defaults.backendDefaults;
-    	      this.backends = defaults.backends;
-    	      this.listener = defaults.listener;
-    	      this.logging = defaults.logging;
-    	      this.serviceDiscovery = defaults.serviceDiscovery;
+            $ = new VirtualNodeSpecGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendDefaults(@Nullable Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults) {
-            this.backendDefaults = backendDefaults;
+            $.backendDefaults = backendDefaults;
             return this;
         }
-        public Builder backendDefaults(@Nullable VirtualNodeSpecBackendDefaultsGetArgs backendDefaults) {
-            this.backendDefaults = Codegen.ofNullable(backendDefaults);
-            return this;
+
+        public Builder backendDefaults(VirtualNodeSpecBackendDefaultsGetArgs backendDefaults) {
+            return backendDefaults(Output.of(backendDefaults));
         }
+
         public Builder backends(@Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends) {
-            this.backends = backends;
+            $.backends = backends;
             return this;
         }
-        public Builder backends(@Nullable List<VirtualNodeSpecBackendGetArgs> backends) {
-            this.backends = Codegen.ofNullable(backends);
-            return this;
+
+        public Builder backends(List<VirtualNodeSpecBackendGetArgs> backends) {
+            return backends(Output.of(backends));
         }
+
         public Builder backends(VirtualNodeSpecBackendGetArgs... backends) {
             return backends(List.of(backends));
         }
+
         public Builder listener(@Nullable Output<VirtualNodeSpecListenerGetArgs> listener) {
-            this.listener = listener;
+            $.listener = listener;
             return this;
         }
-        public Builder listener(@Nullable VirtualNodeSpecListenerGetArgs listener) {
-            this.listener = Codegen.ofNullable(listener);
-            return this;
+
+        public Builder listener(VirtualNodeSpecListenerGetArgs listener) {
+            return listener(Output.of(listener));
         }
+
         public Builder logging(@Nullable Output<VirtualNodeSpecLoggingGetArgs> logging) {
-            this.logging = logging;
+            $.logging = logging;
             return this;
         }
-        public Builder logging(@Nullable VirtualNodeSpecLoggingGetArgs logging) {
-            this.logging = Codegen.ofNullable(logging);
-            return this;
+
+        public Builder logging(VirtualNodeSpecLoggingGetArgs logging) {
+            return logging(Output.of(logging));
         }
+
         public Builder serviceDiscovery(@Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery) {
-            this.serviceDiscovery = serviceDiscovery;
+            $.serviceDiscovery = serviceDiscovery;
             return this;
         }
-        public Builder serviceDiscovery(@Nullable VirtualNodeSpecServiceDiscoveryGetArgs serviceDiscovery) {
-            this.serviceDiscovery = Codegen.ofNullable(serviceDiscovery);
-            return this;
-        }        public VirtualNodeSpecGetArgs build() {
-            return new VirtualNodeSpecGetArgs(backendDefaults, backends, listener, logging, serviceDiscovery);
+
+        public Builder serviceDiscovery(VirtualNodeSpecServiceDiscoveryGetArgs serviceDiscovery) {
+            return serviceDiscovery(Output.of(serviceDiscovery));
+        }
+
+        public VirtualNodeSpecGetArgs build() {
+            return $;
         }
     }
+
 }

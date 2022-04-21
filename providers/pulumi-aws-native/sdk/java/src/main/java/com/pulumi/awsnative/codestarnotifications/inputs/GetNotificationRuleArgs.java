@@ -13,45 +13,45 @@ public final class GetNotificationRuleArgs extends com.pulumi.resources.InvokeAr
     public static final GetNotificationRuleArgs Empty = new GetNotificationRuleArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetNotificationRuleArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetNotificationRuleArgs() {}
 
-    private GetNotificationRuleArgs() {
-        this.arn = null;
+    private GetNotificationRuleArgs(GetNotificationRuleArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotificationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetNotificationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotificationRuleArgs();
         }
 
         public Builder(GetNotificationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetNotificationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetNotificationRuleArgs build() {
-            return new GetNotificationRuleArgs(arn);
+        }
+
+        public GetNotificationRuleArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

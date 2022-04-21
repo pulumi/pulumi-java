@@ -23,7 +23,7 @@ public final class CredentialResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="basicAuth", required=true)
-      private final BasicAuthResponse basicAuth;
+    private BasicAuthResponse basicAuth;
 
     public BasicAuthResponse basicAuth() {
         return this.basicAuth;
@@ -34,7 +34,7 @@ public final class CredentialResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final ServiceAccountResponse serviceAccount;
+    private ServiceAccountResponse serviceAccount;
 
     public ServiceAccountResponse serviceAccount() {
         return this.serviceAccount;
@@ -45,64 +45,59 @@ public final class CredentialResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="useProjectDefault", required=true)
-      private final Boolean useProjectDefault;
+    private Boolean useProjectDefault;
 
     public Boolean useProjectDefault() {
         return this.useProjectDefault;
     }
 
-    public CredentialResponse(
-        BasicAuthResponse basicAuth,
-        ServiceAccountResponse serviceAccount,
-        Boolean useProjectDefault) {
-        this.basicAuth = Objects.requireNonNull(basicAuth, "expected parameter 'basicAuth' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.useProjectDefault = Objects.requireNonNull(useProjectDefault, "expected parameter 'useProjectDefault' to be non-null");
-    }
+    private CredentialResponse() {}
 
-    private CredentialResponse() {
-        this.basicAuth = null;
-        this.serviceAccount = null;
-        this.useProjectDefault = null;
+    private CredentialResponse(CredentialResponse $) {
+        this.basicAuth = $.basicAuth;
+        this.serviceAccount = $.serviceAccount;
+        this.useProjectDefault = $.useProjectDefault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BasicAuthResponse basicAuth;
-        private ServiceAccountResponse serviceAccount;
-        private Boolean useProjectDefault;
+        private CredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CredentialResponse();
         }
 
         public Builder(CredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicAuth = defaults.basicAuth;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.useProjectDefault = defaults.useProjectDefault;
+            $ = new CredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder basicAuth(BasicAuthResponse basicAuth) {
-            this.basicAuth = Objects.requireNonNull(basicAuth);
+            $.basicAuth = basicAuth;
             return this;
         }
+
         public Builder serviceAccount(ServiceAccountResponse serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder useProjectDefault(Boolean useProjectDefault) {
-            this.useProjectDefault = Objects.requireNonNull(useProjectDefault);
+            $.useProjectDefault = useProjectDefault;
             return this;
-        }        public CredentialResponse build() {
-            return new CredentialResponse(basicAuth, serviceAccount, useProjectDefault);
+        }
+
+        public CredentialResponse build() {
+            $.basicAuth = Objects.requireNonNull($.basicAuth, "expected parameter 'basicAuth' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.useProjectDefault = Objects.requireNonNull($.useProjectDefault, "expected parameter 'useProjectDefault' to be non-null");
+            return $;
         }
     }
+
 }

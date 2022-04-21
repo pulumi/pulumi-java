@@ -25,7 +25,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
      * 
      */
     @Import(name="annotationType", required=true)
-      private final String annotationType;
+    private String annotationType;
 
     public String annotationType() {
         return this.annotationType;
@@ -36,7 +36,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
      * 
      */
     @Import(name="bigquerySource", required=true)
-      private final GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource;
+    private GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource;
 
     public GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource() {
         return this.bigquerySource;
@@ -47,7 +47,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
      * 
      */
     @Import(name="classificationMetadata", required=true)
-      private final GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata;
+    private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata;
 
     public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata() {
         return this.classificationMetadata;
@@ -58,7 +58,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
      * 
      */
     @Import(name="dataType", required=true)
-      private final String dataType;
+    private String dataType;
 
     public String dataType() {
         return this.dataType;
@@ -69,7 +69,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
      * 
      */
     @Import(name="gcsSource", required=true)
-      private final GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource;
+    private GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource;
 
     public GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource() {
         return this.gcsSource;
@@ -80,91 +80,80 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
      * 
      */
     @Import(name="textMetadata", required=true)
-      private final GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
+    private GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
 
     public GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata() {
         return this.textMetadata;
     }
 
-    public GoogleCloudDatalabelingV1beta1InputConfigResponse(
-        String annotationType,
-        GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource,
-        GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata,
-        String dataType,
-        GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource,
-        GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
-        this.annotationType = Objects.requireNonNull(annotationType, "expected parameter 'annotationType' to be non-null");
-        this.bigquerySource = Objects.requireNonNull(bigquerySource, "expected parameter 'bigquerySource' to be non-null");
-        this.classificationMetadata = Objects.requireNonNull(classificationMetadata, "expected parameter 'classificationMetadata' to be non-null");
-        this.dataType = Objects.requireNonNull(dataType, "expected parameter 'dataType' to be non-null");
-        this.gcsSource = Objects.requireNonNull(gcsSource, "expected parameter 'gcsSource' to be non-null");
-        this.textMetadata = Objects.requireNonNull(textMetadata, "expected parameter 'textMetadata' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1InputConfigResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1InputConfigResponse() {
-        this.annotationType = null;
-        this.bigquerySource = null;
-        this.classificationMetadata = null;
-        this.dataType = null;
-        this.gcsSource = null;
-        this.textMetadata = null;
+    private GoogleCloudDatalabelingV1beta1InputConfigResponse(GoogleCloudDatalabelingV1beta1InputConfigResponse $) {
+        this.annotationType = $.annotationType;
+        this.bigquerySource = $.bigquerySource;
+        this.classificationMetadata = $.classificationMetadata;
+        this.dataType = $.dataType;
+        this.gcsSource = $.gcsSource;
+        this.textMetadata = $.textMetadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1InputConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String annotationType;
-        private GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource;
-        private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata;
-        private String dataType;
-        private GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource;
-        private GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
+        private GoogleCloudDatalabelingV1beta1InputConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1InputConfigResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1InputConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationType = defaults.annotationType;
-    	      this.bigquerySource = defaults.bigquerySource;
-    	      this.classificationMetadata = defaults.classificationMetadata;
-    	      this.dataType = defaults.dataType;
-    	      this.gcsSource = defaults.gcsSource;
-    	      this.textMetadata = defaults.textMetadata;
+            $ = new GoogleCloudDatalabelingV1beta1InputConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationType(String annotationType) {
-            this.annotationType = Objects.requireNonNull(annotationType);
+            $.annotationType = annotationType;
             return this;
         }
+
         public Builder bigquerySource(GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource) {
-            this.bigquerySource = Objects.requireNonNull(bigquerySource);
+            $.bigquerySource = bigquerySource;
             return this;
         }
+
         public Builder classificationMetadata(GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata) {
-            this.classificationMetadata = Objects.requireNonNull(classificationMetadata);
+            $.classificationMetadata = classificationMetadata;
             return this;
         }
+
         public Builder dataType(String dataType) {
-            this.dataType = Objects.requireNonNull(dataType);
+            $.dataType = dataType;
             return this;
         }
+
         public Builder gcsSource(GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource) {
-            this.gcsSource = Objects.requireNonNull(gcsSource);
+            $.gcsSource = gcsSource;
             return this;
         }
+
         public Builder textMetadata(GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
-            this.textMetadata = Objects.requireNonNull(textMetadata);
+            $.textMetadata = textMetadata;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1InputConfigResponse build() {
-            return new GoogleCloudDatalabelingV1beta1InputConfigResponse(annotationType, bigquerySource, classificationMetadata, dataType, gcsSource, textMetadata);
+        }
+
+        public GoogleCloudDatalabelingV1beta1InputConfigResponse build() {
+            $.annotationType = Objects.requireNonNull($.annotationType, "expected parameter 'annotationType' to be non-null");
+            $.bigquerySource = Objects.requireNonNull($.bigquerySource, "expected parameter 'bigquerySource' to be non-null");
+            $.classificationMetadata = Objects.requireNonNull($.classificationMetadata, "expected parameter 'classificationMetadata' to be non-null");
+            $.dataType = Objects.requireNonNull($.dataType, "expected parameter 'dataType' to be non-null");
+            $.gcsSource = Objects.requireNonNull($.gcsSource, "expected parameter 'gcsSource' to be non-null");
+            $.textMetadata = Objects.requireNonNull($.textMetadata, "expected parameter 'textMetadata' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetGroupMembershipsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="group", required=true)
-      private final String group;
+    private String group;
 
     public String group() {
         return this.group;
     }
 
-    public GetGroupMembershipsArgs(String group) {
-        this.group = Objects.requireNonNull(group, "expected parameter 'group' to be non-null");
-    }
+    private GetGroupMembershipsArgs() {}
 
-    private GetGroupMembershipsArgs() {
-        this.group = null;
+    private GetGroupMembershipsArgs(GetGroupMembershipsArgs $) {
+        this.group = $.group;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupMembershipsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String group;
+        private GetGroupMembershipsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupMembershipsArgs();
         }
 
         public Builder(GetGroupMembershipsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.group = defaults.group;
+            $ = new GetGroupMembershipsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder group(String group) {
-            this.group = Objects.requireNonNull(group);
+            $.group = group;
             return this;
-        }        public GetGroupMembershipsArgs build() {
-            return new GetGroupMembershipsArgs(group);
+        }
+
+        public GetGroupMembershipsArgs build() {
+            $.group = Objects.requireNonNull($.group, "expected parameter 'group' to be non-null");
+            return $;
         }
     }
+
 }

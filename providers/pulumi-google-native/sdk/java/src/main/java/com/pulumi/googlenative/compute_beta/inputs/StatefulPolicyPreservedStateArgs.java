@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StatefulPolicyPreservedStateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="disks")
-      private final @Nullable Output<Map<String,String>> disks;
+    private @Nullable Output<Map<String,String>> disks;
 
-    public Output<Map<String,String>> disks() {
-        return this.disks == null ? Codegen.empty() : this.disks;
+    public Optional<Output<Map<String,String>>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StatefulPolicyPreservedStateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="externalIPs")
-      private final @Nullable Output<Map<String,String>> externalIPs;
+    private @Nullable Output<Map<String,String>> externalIPs;
 
-    public Output<Map<String,String>> externalIPs() {
-        return this.externalIPs == null ? Codegen.empty() : this.externalIPs;
+    public Optional<Output<Map<String,String>>> externalIPs() {
+        return Optional.ofNullable(this.externalIPs);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class StatefulPolicyPreservedStateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="internalIPs")
-      private final @Nullable Output<Map<String,String>> internalIPs;
+    private @Nullable Output<Map<String,String>> internalIPs;
 
-    public Output<Map<String,String>> internalIPs() {
-        return this.internalIPs == null ? Codegen.empty() : this.internalIPs;
+    public Optional<Output<Map<String,String>>> internalIPs() {
+        return Optional.ofNullable(this.internalIPs);
     }
 
-    public StatefulPolicyPreservedStateArgs(
-        @Nullable Output<Map<String,String>> disks,
-        @Nullable Output<Map<String,String>> externalIPs,
-        @Nullable Output<Map<String,String>> internalIPs) {
-        this.disks = disks;
-        this.externalIPs = externalIPs;
-        this.internalIPs = internalIPs;
-    }
+    private StatefulPolicyPreservedStateArgs() {}
 
-    private StatefulPolicyPreservedStateArgs() {
-        this.disks = Codegen.empty();
-        this.externalIPs = Codegen.empty();
-        this.internalIPs = Codegen.empty();
+    private StatefulPolicyPreservedStateArgs(StatefulPolicyPreservedStateArgs $) {
+        this.disks = $.disks;
+        this.externalIPs = $.externalIPs;
+        this.internalIPs = $.internalIPs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulPolicyPreservedStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> disks;
-        private @Nullable Output<Map<String,String>> externalIPs;
-        private @Nullable Output<Map<String,String>> internalIPs;
+        private StatefulPolicyPreservedStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulPolicyPreservedStateArgs();
         }
 
         public Builder(StatefulPolicyPreservedStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disks = defaults.disks;
-    	      this.externalIPs = defaults.externalIPs;
-    	      this.internalIPs = defaults.internalIPs;
+            $ = new StatefulPolicyPreservedStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disks(@Nullable Output<Map<String,String>> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
-        public Builder disks(@Nullable Map<String,String> disks) {
-            this.disks = Codegen.ofNullable(disks);
-            return this;
+
+        public Builder disks(Map<String,String> disks) {
+            return disks(Output.of(disks));
         }
+
         public Builder externalIPs(@Nullable Output<Map<String,String>> externalIPs) {
-            this.externalIPs = externalIPs;
+            $.externalIPs = externalIPs;
             return this;
         }
-        public Builder externalIPs(@Nullable Map<String,String> externalIPs) {
-            this.externalIPs = Codegen.ofNullable(externalIPs);
-            return this;
+
+        public Builder externalIPs(Map<String,String> externalIPs) {
+            return externalIPs(Output.of(externalIPs));
         }
+
         public Builder internalIPs(@Nullable Output<Map<String,String>> internalIPs) {
-            this.internalIPs = internalIPs;
+            $.internalIPs = internalIPs;
             return this;
         }
-        public Builder internalIPs(@Nullable Map<String,String> internalIPs) {
-            this.internalIPs = Codegen.ofNullable(internalIPs);
-            return this;
-        }        public StatefulPolicyPreservedStateArgs build() {
-            return new StatefulPolicyPreservedStateArgs(disks, externalIPs, internalIPs);
+
+        public Builder internalIPs(Map<String,String> internalIPs) {
+            return internalIPs(Output.of(internalIPs));
+        }
+
+        public StatefulPolicyPreservedStateArgs build() {
+            return $;
         }
     }
+
 }

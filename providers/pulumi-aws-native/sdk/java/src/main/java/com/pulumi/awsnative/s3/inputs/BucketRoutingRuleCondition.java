@@ -23,10 +23,10 @@ public final class BucketRoutingRuleCondition extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="httpErrorCodeReturnedEquals")
-      private final @Nullable String httpErrorCodeReturnedEquals;
+    private @Nullable String httpErrorCodeReturnedEquals;
 
     public Optional<String> httpErrorCodeReturnedEquals() {
-        return this.httpErrorCodeReturnedEquals == null ? Optional.empty() : Optional.ofNullable(this.httpErrorCodeReturnedEquals);
+        return Optional.ofNullable(this.httpErrorCodeReturnedEquals);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class BucketRoutingRuleCondition extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyPrefixEquals")
-      private final @Nullable String keyPrefixEquals;
+    private @Nullable String keyPrefixEquals;
 
     public Optional<String> keyPrefixEquals() {
-        return this.keyPrefixEquals == null ? Optional.empty() : Optional.ofNullable(this.keyPrefixEquals);
+        return Optional.ofNullable(this.keyPrefixEquals);
     }
 
-    public BucketRoutingRuleCondition(
-        @Nullable String httpErrorCodeReturnedEquals,
-        @Nullable String keyPrefixEquals) {
-        this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
-        this.keyPrefixEquals = keyPrefixEquals;
-    }
+    private BucketRoutingRuleCondition() {}
 
-    private BucketRoutingRuleCondition() {
-        this.httpErrorCodeReturnedEquals = null;
-        this.keyPrefixEquals = null;
+    private BucketRoutingRuleCondition(BucketRoutingRuleCondition $) {
+        this.httpErrorCodeReturnedEquals = $.httpErrorCodeReturnedEquals;
+        this.keyPrefixEquals = $.keyPrefixEquals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRoutingRuleCondition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String httpErrorCodeReturnedEquals;
-        private @Nullable String keyPrefixEquals;
+        private BucketRoutingRuleCondition $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRoutingRuleCondition();
         }
 
         public Builder(BucketRoutingRuleCondition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpErrorCodeReturnedEquals = defaults.httpErrorCodeReturnedEquals;
-    	      this.keyPrefixEquals = defaults.keyPrefixEquals;
+            $ = new BucketRoutingRuleCondition(Objects.requireNonNull(defaults));
         }
 
         public Builder httpErrorCodeReturnedEquals(@Nullable String httpErrorCodeReturnedEquals) {
-            this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
+            $.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
             return this;
         }
+
         public Builder keyPrefixEquals(@Nullable String keyPrefixEquals) {
-            this.keyPrefixEquals = keyPrefixEquals;
+            $.keyPrefixEquals = keyPrefixEquals;
             return this;
-        }        public BucketRoutingRuleCondition build() {
-            return new BucketRoutingRuleCondition(httpErrorCodeReturnedEquals, keyPrefixEquals);
+        }
+
+        public BucketRoutingRuleCondition build() {
+            return $;
         }
     }
+
 }

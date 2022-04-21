@@ -5,9 +5,9 @@ package com.pulumi.azurenative.storage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,10 +31,10 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="error404Document")
-      private final @Nullable Output<String> error404Document;
+    private @Nullable Output<String> error404Document;
 
-    public Output<String> error404Document() {
-        return this.error404Document == null ? Codegen.empty() : this.error404Document;
+    public Optional<Output<String>> error404Document() {
+        return Optional.ofNullable(this.error404Document);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="indexDocument")
-      private final @Nullable Output<String> indexDocument;
+    private @Nullable Output<String> indexDocument;
 
-    public Output<String> indexDocument() {
-        return this.indexDocument == null ? Codegen.empty() : this.indexDocument;
+    public Optional<Output<String>> indexDocument() {
+        return Optional.ofNullable(this.indexDocument);
     }
 
     /**
@@ -53,89 +53,80 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public StorageAccountStaticWebsiteArgs(
-        Output<String> accountName,
-        @Nullable Output<String> error404Document,
-        @Nullable Output<String> indexDocument,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.error404Document = error404Document;
-        this.indexDocument = indexDocument;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private StorageAccountStaticWebsiteArgs() {}
 
-    private StorageAccountStaticWebsiteArgs() {
-        this.accountName = Codegen.empty();
-        this.error404Document = Codegen.empty();
-        this.indexDocument = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private StorageAccountStaticWebsiteArgs(StorageAccountStaticWebsiteArgs $) {
+        this.accountName = $.accountName;
+        this.error404Document = $.error404Document;
+        this.indexDocument = $.indexDocument;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountStaticWebsiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> error404Document;
-        private @Nullable Output<String> indexDocument;
-        private Output<String> resourceGroupName;
+        private StorageAccountStaticWebsiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountStaticWebsiteArgs();
         }
 
         public Builder(StorageAccountStaticWebsiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.error404Document = defaults.error404Document;
-    	      this.indexDocument = defaults.indexDocument;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new StorageAccountStaticWebsiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder error404Document(@Nullable Output<String> error404Document) {
-            this.error404Document = error404Document;
+            $.error404Document = error404Document;
             return this;
         }
-        public Builder error404Document(@Nullable String error404Document) {
-            this.error404Document = Codegen.ofNullable(error404Document);
-            return this;
+
+        public Builder error404Document(String error404Document) {
+            return error404Document(Output.of(error404Document));
         }
+
         public Builder indexDocument(@Nullable Output<String> indexDocument) {
-            this.indexDocument = indexDocument;
+            $.indexDocument = indexDocument;
             return this;
         }
-        public Builder indexDocument(@Nullable String indexDocument) {
-            this.indexDocument = Codegen.ofNullable(indexDocument);
-            return this;
+
+        public Builder indexDocument(String indexDocument) {
+            return indexDocument(Output.of(indexDocument));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public StorageAccountStaticWebsiteArgs build() {
-            return new StorageAccountStaticWebsiteArgs(accountName, error404Document, indexDocument, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public StorageAccountStaticWebsiteArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

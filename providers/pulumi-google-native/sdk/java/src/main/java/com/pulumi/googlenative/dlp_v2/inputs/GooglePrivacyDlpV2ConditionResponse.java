@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="field", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse field;
+    private GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="operator", required=true)
-      private final String operator;
+    private String operator;
 
     public String operator() {
         return this.operator;
@@ -45,64 +45,59 @@ public final class GooglePrivacyDlpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="value", required=true)
-      private final GooglePrivacyDlpV2ValueResponse value;
+    private GooglePrivacyDlpV2ValueResponse value;
 
     public GooglePrivacyDlpV2ValueResponse value() {
         return this.value;
     }
 
-    public GooglePrivacyDlpV2ConditionResponse(
-        GooglePrivacyDlpV2FieldIdResponse field,
-        String operator,
-        GooglePrivacyDlpV2ValueResponse value) {
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GooglePrivacyDlpV2ConditionResponse() {}
 
-    private GooglePrivacyDlpV2ConditionResponse() {
-        this.field = null;
-        this.operator = null;
-        this.value = null;
+    private GooglePrivacyDlpV2ConditionResponse(GooglePrivacyDlpV2ConditionResponse $) {
+        this.field = $.field;
+        this.operator = $.operator;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2FieldIdResponse field;
-        private String operator;
-        private GooglePrivacyDlpV2ValueResponse value;
+        private GooglePrivacyDlpV2ConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ConditionResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.operator = defaults.operator;
-    	      this.value = defaults.value;
+            $ = new GooglePrivacyDlpV2ConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder value(GooglePrivacyDlpV2ValueResponse value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GooglePrivacyDlpV2ConditionResponse build() {
-            return new GooglePrivacyDlpV2ConditionResponse(field, operator, value);
+        }
+
+        public GooglePrivacyDlpV2ConditionResponse build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

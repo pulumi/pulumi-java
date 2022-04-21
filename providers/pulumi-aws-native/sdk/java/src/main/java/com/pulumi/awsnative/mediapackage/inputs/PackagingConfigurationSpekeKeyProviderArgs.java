@@ -5,7 +5,6 @@ package com.pulumi.awsnative.mediapackage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends com.pulumi
     public static final PackagingConfigurationSpekeKeyProviderArgs Empty = new PackagingConfigurationSpekeKeyProviderArgs();
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -31,7 +30,7 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends com.pulumi
      * 
      */
     @Import(name="systemIds", required=true)
-      private final Output<List<String>> systemIds;
+    private Output<List<String>> systemIds;
 
     public Output<List<String>> systemIds() {
         return this.systemIds;
@@ -42,79 +41,75 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends com.pulumi
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public PackagingConfigurationSpekeKeyProviderArgs(
-        Output<String> roleArn,
-        Output<List<String>> systemIds,
-        Output<String> url) {
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.systemIds = Objects.requireNonNull(systemIds, "expected parameter 'systemIds' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private PackagingConfigurationSpekeKeyProviderArgs() {}
 
-    private PackagingConfigurationSpekeKeyProviderArgs() {
-        this.roleArn = Codegen.empty();
-        this.systemIds = Codegen.empty();
-        this.url = Codegen.empty();
+    private PackagingConfigurationSpekeKeyProviderArgs(PackagingConfigurationSpekeKeyProviderArgs $) {
+        this.roleArn = $.roleArn;
+        this.systemIds = $.systemIds;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationSpekeKeyProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> roleArn;
-        private Output<List<String>> systemIds;
-        private Output<String> url;
+        private PackagingConfigurationSpekeKeyProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationSpekeKeyProviderArgs();
         }
 
         public Builder(PackagingConfigurationSpekeKeyProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.systemIds = defaults.systemIds;
-    	      this.url = defaults.url;
+            $ = new PackagingConfigurationSpekeKeyProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder systemIds(Output<List<String>> systemIds) {
-            this.systemIds = Objects.requireNonNull(systemIds);
+            $.systemIds = systemIds;
             return this;
         }
+
         public Builder systemIds(List<String> systemIds) {
-            this.systemIds = Output.of(Objects.requireNonNull(systemIds));
-            return this;
+            return systemIds(Output.of(systemIds));
         }
+
         public Builder systemIds(String... systemIds) {
             return systemIds(List.of(systemIds));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public PackagingConfigurationSpekeKeyProviderArgs build() {
-            return new PackagingConfigurationSpekeKeyProviderArgs(roleArn, systemIds, url);
+            return url(Output.of(url));
+        }
+
+        public PackagingConfigurationSpekeKeyProviderArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.systemIds = Objects.requireNonNull($.systemIds, "expected parameter 'systemIds' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

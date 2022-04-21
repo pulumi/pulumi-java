@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
      * 
      */
     @Import(name="estimatedAnonymity", required=true)
-      private final String estimatedAnonymity;
+    private String estimatedAnonymity;
 
     public String estimatedAnonymity() {
         return this.estimatedAnonymity;
@@ -34,58 +34,56 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
      * 
      */
     @Import(name="quasiIdsValues", required=true)
-      private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+    private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
 
-    public GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(
-        String estimatedAnonymity,
-        List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
-        this.estimatedAnonymity = Objects.requireNonNull(estimatedAnonymity, "expected parameter 'estimatedAnonymity' to be non-null");
-        this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues, "expected parameter 'quasiIdsValues' to be non-null");
-    }
+    private GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse() {}
 
-    private GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse() {
-        this.estimatedAnonymity = null;
-        this.quasiIdsValues = List.of();
+    private GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse $) {
+        this.estimatedAnonymity = $.estimatedAnonymity;
+        this.quasiIdsValues = $.quasiIdsValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String estimatedAnonymity;
-        private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+        private GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse();
         }
 
         public Builder(GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.estimatedAnonymity = defaults.estimatedAnonymity;
-    	      this.quasiIdsValues = defaults.quasiIdsValues;
+            $ = new GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder estimatedAnonymity(String estimatedAnonymity) {
-            this.estimatedAnonymity = Objects.requireNonNull(estimatedAnonymity);
+            $.estimatedAnonymity = estimatedAnonymity;
             return this;
         }
+
         public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
-            this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
+            $.quasiIdsValues = quasiIdsValues;
             return this;
         }
+
         public Builder quasiIdsValues(GooglePrivacyDlpV2ValueResponse... quasiIdsValues) {
             return quasiIdsValues(List.of(quasiIdsValues));
-        }        public GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse build() {
-            return new GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(estimatedAnonymity, quasiIdsValues);
+        }
+
+        public GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse build() {
+            $.estimatedAnonymity = Objects.requireNonNull($.estimatedAnonymity, "expected parameter 'estimatedAnonymity' to be non-null");
+            $.quasiIdsValues = Objects.requireNonNull($.quasiIdsValues, "expected parameter 'quasiIdsValues' to be non-null");
+            return $;
         }
     }
+
 }

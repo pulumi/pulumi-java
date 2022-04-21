@@ -17,7 +17,7 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="bandwidthSettingName", required=true)
-      private final String bandwidthSettingName;
+    private String bandwidthSettingName;
 
     public String bandwidthSettingName() {
         return this.bandwidthSettingName;
@@ -28,7 +28,7 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -39,64 +39,59 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBandwidthSettingArgs(
-        String bandwidthSettingName,
-        String managerName,
-        String resourceGroupName) {
-        this.bandwidthSettingName = Objects.requireNonNull(bandwidthSettingName, "expected parameter 'bandwidthSettingName' to be non-null");
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBandwidthSettingArgs() {}
 
-    private GetBandwidthSettingArgs() {
-        this.bandwidthSettingName = null;
-        this.managerName = null;
-        this.resourceGroupName = null;
+    private GetBandwidthSettingArgs(GetBandwidthSettingArgs $) {
+        this.bandwidthSettingName = $.bandwidthSettingName;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBandwidthSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bandwidthSettingName;
-        private String managerName;
-        private String resourceGroupName;
+        private GetBandwidthSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBandwidthSettingArgs();
         }
 
         public Builder(GetBandwidthSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandwidthSettingName = defaults.bandwidthSettingName;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBandwidthSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bandwidthSettingName(String bandwidthSettingName) {
-            this.bandwidthSettingName = Objects.requireNonNull(bandwidthSettingName);
+            $.bandwidthSettingName = bandwidthSettingName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBandwidthSettingArgs build() {
-            return new GetBandwidthSettingArgs(bandwidthSettingName, managerName, resourceGroupName);
+        }
+
+        public GetBandwidthSettingArgs build() {
+            $.bandwidthSettingName = Objects.requireNonNull($.bandwidthSettingName, "expected parameter 'bandwidthSettingName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

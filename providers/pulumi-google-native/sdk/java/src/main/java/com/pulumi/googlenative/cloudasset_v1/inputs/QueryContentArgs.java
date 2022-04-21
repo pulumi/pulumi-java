@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudasset_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudasset_v1.inputs.IamPolicyAnalysisQueryArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class QueryContentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamPolicyAnalysisQuery")
-      private final @Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
+    private @Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
 
-    public Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery() {
-        return this.iamPolicyAnalysisQuery == null ? Codegen.empty() : this.iamPolicyAnalysisQuery;
+    public Optional<Output<IamPolicyAnalysisQueryArgs>> iamPolicyAnalysisQuery() {
+        return Optional.ofNullable(this.iamPolicyAnalysisQuery);
     }
 
-    public QueryContentArgs(@Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery) {
-        this.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
-    }
+    private QueryContentArgs() {}
 
-    private QueryContentArgs() {
-        this.iamPolicyAnalysisQuery = Codegen.empty();
+    private QueryContentArgs(QueryContentArgs $) {
+        this.iamPolicyAnalysisQuery = $.iamPolicyAnalysisQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
+        private QueryContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryContentArgs();
         }
 
         public Builder(QueryContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iamPolicyAnalysisQuery = defaults.iamPolicyAnalysisQuery;
+            $ = new QueryContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iamPolicyAnalysisQuery(@Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery) {
-            this.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
+            $.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
             return this;
         }
-        public Builder iamPolicyAnalysisQuery(@Nullable IamPolicyAnalysisQueryArgs iamPolicyAnalysisQuery) {
-            this.iamPolicyAnalysisQuery = Codegen.ofNullable(iamPolicyAnalysisQuery);
-            return this;
-        }        public QueryContentArgs build() {
-            return new QueryContentArgs(iamPolicyAnalysisQuery);
+
+        public Builder iamPolicyAnalysisQuery(IamPolicyAnalysisQueryArgs iamPolicyAnalysisQuery) {
+            return iamPolicyAnalysisQuery(Output.of(iamPolicyAnalysisQuery));
+        }
+
+        public QueryContentArgs build() {
+            return $;
         }
     }
+
 }

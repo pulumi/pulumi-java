@@ -5,10 +5,10 @@ package com.pulumi.azurenative.containerinstance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ContainerExecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
-    public ContainerExecArgs(@Nullable Output<List<String>> command) {
-        this.command = command;
-    }
+    private ContainerExecArgs() {}
 
-    private ContainerExecArgs() {
-        this.command = Codegen.empty();
+    private ContainerExecArgs(ContainerExecArgs $) {
+        this.command = $.command;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerExecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> command;
+        private ContainerExecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerExecArgs();
         }
 
         public Builder(ContainerExecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
+            $ = new ContainerExecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
-        }        public ContainerExecArgs build() {
-            return new ContainerExecArgs(command);
+        }
+
+        public ContainerExecArgs build() {
+            return $;
         }
     }
+
 }

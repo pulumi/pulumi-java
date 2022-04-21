@@ -5,11 +5,11 @@ package com.pulumi.gcp.organizations;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.organizations.inputs.AccessApprovalSettingsEnrolledServiceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enrolledServices", required=true)
-      private final Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
+    private Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
     public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices() {
         return this.enrolledServices;
@@ -39,10 +39,10 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="notificationEmails")
-      private final @Nullable Output<List<String>> notificationEmails;
+    private @Nullable Output<List<String>> notificationEmails;
 
-    public Output<List<String>> notificationEmails() {
-        return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
+    public Optional<Output<List<String>>> notificationEmails() {
+        return Optional.ofNullable(this.notificationEmails);
     }
 
     /**
@@ -50,82 +50,78 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
-    public AccessApprovalSettingsArgs(
-        Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices,
-        @Nullable Output<List<String>> notificationEmails,
-        Output<String> organizationId) {
-        this.enrolledServices = Objects.requireNonNull(enrolledServices, "expected parameter 'enrolledServices' to be non-null");
-        this.notificationEmails = notificationEmails;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private AccessApprovalSettingsArgs() {}
 
-    private AccessApprovalSettingsArgs() {
-        this.enrolledServices = Codegen.empty();
-        this.notificationEmails = Codegen.empty();
-        this.organizationId = Codegen.empty();
+    private AccessApprovalSettingsArgs(AccessApprovalSettingsArgs $) {
+        this.enrolledServices = $.enrolledServices;
+        this.notificationEmails = $.notificationEmails;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessApprovalSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
-        private @Nullable Output<List<String>> notificationEmails;
-        private Output<String> organizationId;
+        private AccessApprovalSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessApprovalSettingsArgs();
         }
 
         public Builder(AccessApprovalSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enrolledServices = defaults.enrolledServices;
-    	      this.notificationEmails = defaults.notificationEmails;
-    	      this.organizationId = defaults.organizationId;
+            $ = new AccessApprovalSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enrolledServices(Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
-            this.enrolledServices = Objects.requireNonNull(enrolledServices);
+            $.enrolledServices = enrolledServices;
             return this;
         }
+
         public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
-            this.enrolledServices = Output.of(Objects.requireNonNull(enrolledServices));
-            return this;
+            return enrolledServices(Output.of(enrolledServices));
         }
+
         public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceArgs... enrolledServices) {
             return enrolledServices(List.of(enrolledServices));
         }
+
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
-            this.notificationEmails = notificationEmails;
+            $.notificationEmails = notificationEmails;
             return this;
         }
-        public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Codegen.ofNullable(notificationEmails);
-            return this;
+
+        public Builder notificationEmails(List<String> notificationEmails) {
+            return notificationEmails(Output.of(notificationEmails));
         }
+
         public Builder notificationEmails(String... notificationEmails) {
             return notificationEmails(List.of(notificationEmails));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
-        }        public AccessApprovalSettingsArgs build() {
-            return new AccessApprovalSettingsArgs(enrolledServices, notificationEmails, organizationId);
+            return organizationId(Output.of(organizationId));
+        }
+
+        public AccessApprovalSettingsArgs build() {
+            $.enrolledServices = Objects.requireNonNull($.enrolledServices, "expected parameter 'enrolledServices' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

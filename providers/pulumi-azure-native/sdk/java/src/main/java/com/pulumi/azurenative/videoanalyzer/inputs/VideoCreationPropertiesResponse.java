@@ -23,10 +23,10 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionPeriod")
-      private final @Nullable String retentionPeriod;
+    private @Nullable String retentionPeriod;
 
     public Optional<String> retentionPeriod() {
-        return this.retentionPeriod == null ? Optional.empty() : Optional.ofNullable(this.retentionPeriod);
+        return Optional.ofNullable(this.retentionPeriod);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="segmentLength")
-      private final @Nullable String segmentLength;
+    private @Nullable String segmentLength;
 
     public Optional<String> segmentLength() {
-        return this.segmentLength == null ? Optional.empty() : Optional.ofNullable(this.segmentLength);
+        return Optional.ofNullable(this.segmentLength);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
-    public VideoCreationPropertiesResponse(
-        @Nullable String description,
-        @Nullable String retentionPeriod,
-        @Nullable String segmentLength,
-        @Nullable String title) {
-        this.description = description;
-        this.retentionPeriod = retentionPeriod;
-        this.segmentLength = segmentLength;
-        this.title = title;
-    }
+    private VideoCreationPropertiesResponse() {}
 
-    private VideoCreationPropertiesResponse() {
-        this.description = null;
-        this.retentionPeriod = null;
-        this.segmentLength = null;
-        this.title = null;
+    private VideoCreationPropertiesResponse(VideoCreationPropertiesResponse $) {
+        this.description = $.description;
+        this.retentionPeriod = $.retentionPeriod;
+        this.segmentLength = $.segmentLength;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoCreationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String retentionPeriod;
-        private @Nullable String segmentLength;
-        private @Nullable String title;
+        private VideoCreationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoCreationPropertiesResponse();
         }
 
         public Builder(VideoCreationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.retentionPeriod = defaults.retentionPeriod;
-    	      this.segmentLength = defaults.segmentLength;
-    	      this.title = defaults.title;
+            $ = new VideoCreationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder retentionPeriod(@Nullable String retentionPeriod) {
-            this.retentionPeriod = retentionPeriod;
+            $.retentionPeriod = retentionPeriod;
             return this;
         }
+
         public Builder segmentLength(@Nullable String segmentLength) {
-            this.segmentLength = segmentLength;
+            $.segmentLength = segmentLength;
             return this;
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
-        }        public VideoCreationPropertiesResponse build() {
-            return new VideoCreationPropertiesResponse(description, retentionPeriod, segmentLength, title);
+        }
+
+        public VideoCreationPropertiesResponse build() {
+            return $;
         }
     }
+
 }

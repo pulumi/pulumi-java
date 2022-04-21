@@ -5,10 +5,10 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends com.pulu
      * 
      */
     @Import(name="configId")
-      private final @Nullable Output<String> configId;
+    private @Nullable Output<String> configId;
 
-    public Output<String> configId() {
-        return this.configId == null ? Codegen.empty() : this.configId;
+    public Optional<Output<String>> configId() {
+        return Optional.ofNullable(this.configId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends com.pulu
      * 
      */
     @Import(name="disableTraceSampling")
-      private final @Nullable Output<Boolean> disableTraceSampling;
+    private @Nullable Output<Boolean> disableTraceSampling;
 
-    public Output<Boolean> disableTraceSampling() {
-        return this.disableTraceSampling == null ? Codegen.empty() : this.disableTraceSampling;
+    public Optional<Output<Boolean>> disableTraceSampling() {
+        return Optional.ofNullable(this.disableTraceSampling);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends com.pulu
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -61,89 +61,79 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends com.pulu
      * 
      */
     @Import(name="rolloutStrategy")
-      private final @Nullable Output<String> rolloutStrategy;
+    private @Nullable Output<String> rolloutStrategy;
 
-    public Output<String> rolloutStrategy() {
-        return this.rolloutStrategy == null ? Codegen.empty() : this.rolloutStrategy;
+    public Optional<Output<String>> rolloutStrategy() {
+        return Optional.ofNullable(this.rolloutStrategy);
     }
 
-    public FlexibleAppVersionEndpointsApiServiceGetArgs(
-        @Nullable Output<String> configId,
-        @Nullable Output<Boolean> disableTraceSampling,
-        Output<String> name,
-        @Nullable Output<String> rolloutStrategy) {
-        this.configId = configId;
-        this.disableTraceSampling = disableTraceSampling;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.rolloutStrategy = rolloutStrategy;
-    }
+    private FlexibleAppVersionEndpointsApiServiceGetArgs() {}
 
-    private FlexibleAppVersionEndpointsApiServiceGetArgs() {
-        this.configId = Codegen.empty();
-        this.disableTraceSampling = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rolloutStrategy = Codegen.empty();
+    private FlexibleAppVersionEndpointsApiServiceGetArgs(FlexibleAppVersionEndpointsApiServiceGetArgs $) {
+        this.configId = $.configId;
+        this.disableTraceSampling = $.disableTraceSampling;
+        this.name = $.name;
+        this.rolloutStrategy = $.rolloutStrategy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionEndpointsApiServiceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configId;
-        private @Nullable Output<Boolean> disableTraceSampling;
-        private Output<String> name;
-        private @Nullable Output<String> rolloutStrategy;
+        private FlexibleAppVersionEndpointsApiServiceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionEndpointsApiServiceGetArgs();
         }
 
         public Builder(FlexibleAppVersionEndpointsApiServiceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.disableTraceSampling = defaults.disableTraceSampling;
-    	      this.name = defaults.name;
-    	      this.rolloutStrategy = defaults.rolloutStrategy;
+            $ = new FlexibleAppVersionEndpointsApiServiceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(@Nullable Output<String> configId) {
-            this.configId = configId;
+            $.configId = configId;
             return this;
         }
-        public Builder configId(@Nullable String configId) {
-            this.configId = Codegen.ofNullable(configId);
-            return this;
+
+        public Builder configId(String configId) {
+            return configId(Output.of(configId));
         }
+
         public Builder disableTraceSampling(@Nullable Output<Boolean> disableTraceSampling) {
-            this.disableTraceSampling = disableTraceSampling;
+            $.disableTraceSampling = disableTraceSampling;
             return this;
         }
-        public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
-            this.disableTraceSampling = Codegen.ofNullable(disableTraceSampling);
-            return this;
+
+        public Builder disableTraceSampling(Boolean disableTraceSampling) {
+            return disableTraceSampling(Output.of(disableTraceSampling));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder rolloutStrategy(@Nullable Output<String> rolloutStrategy) {
-            this.rolloutStrategy = rolloutStrategy;
+            $.rolloutStrategy = rolloutStrategy;
             return this;
         }
-        public Builder rolloutStrategy(@Nullable String rolloutStrategy) {
-            this.rolloutStrategy = Codegen.ofNullable(rolloutStrategy);
-            return this;
-        }        public FlexibleAppVersionEndpointsApiServiceGetArgs build() {
-            return new FlexibleAppVersionEndpointsApiServiceGetArgs(configId, disableTraceSampling, name, rolloutStrategy);
+
+        public Builder rolloutStrategy(String rolloutStrategy) {
+            return rolloutStrategy(Output.of(rolloutStrategy));
+        }
+
+        public FlexibleAppVersionEndpointsApiServiceGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

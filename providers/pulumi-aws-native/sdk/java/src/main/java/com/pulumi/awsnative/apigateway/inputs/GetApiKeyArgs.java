@@ -17,45 +17,45 @@ public final class GetApiKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aPIKeyId", required=true)
-      private final String aPIKeyId;
+    private String aPIKeyId;
 
     public String aPIKeyId() {
         return this.aPIKeyId;
     }
 
-    public GetApiKeyArgs(String aPIKeyId) {
-        this.aPIKeyId = Objects.requireNonNull(aPIKeyId, "expected parameter 'aPIKeyId' to be non-null");
-    }
+    private GetApiKeyArgs() {}
 
-    private GetApiKeyArgs() {
-        this.aPIKeyId = null;
+    private GetApiKeyArgs(GetApiKeyArgs $) {
+        this.aPIKeyId = $.aPIKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aPIKeyId;
+        private GetApiKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiKeyArgs();
         }
 
         public Builder(GetApiKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aPIKeyId = defaults.aPIKeyId;
+            $ = new GetApiKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aPIKeyId(String aPIKeyId) {
-            this.aPIKeyId = Objects.requireNonNull(aPIKeyId);
+            $.aPIKeyId = aPIKeyId;
             return this;
-        }        public GetApiKeyArgs build() {
-            return new GetApiKeyArgs(aPIKeyId);
+        }
+
+        public GetApiKeyArgs build() {
+            $.aPIKeyId = Objects.requireNonNull($.aPIKeyId, "expected parameter 'aPIKeyId' to be non-null");
+            return $;
         }
     }
+
 }

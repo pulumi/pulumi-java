@@ -7,7 +7,6 @@ import com.pulumi.azurenative.media.inputs.CrossSiteAccessPoliciesArgs;
 import com.pulumi.azurenative.media.inputs.StreamingEndpointAccessControlArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -15,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="accessControl")
-      private final @Nullable Output<StreamingEndpointAccessControlArgs> accessControl;
+    private @Nullable Output<StreamingEndpointAccessControlArgs> accessControl;
 
-    public Output<StreamingEndpointAccessControlArgs> accessControl() {
-        return this.accessControl == null ? Codegen.empty() : this.accessControl;
+    public Optional<Output<StreamingEndpointAccessControlArgs>> accessControl() {
+        return Optional.ofNullable(this.accessControl);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -49,10 +49,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="autoStart")
-      private final @Nullable Output<Boolean> autoStart;
+    private @Nullable Output<Boolean> autoStart;
 
-    public Output<Boolean> autoStart() {
-        return this.autoStart == null ? Codegen.empty() : this.autoStart;
+    public Optional<Output<Boolean>> autoStart() {
+        return Optional.ofNullable(this.autoStart);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="availabilitySetName")
-      private final @Nullable Output<String> availabilitySetName;
+    private @Nullable Output<String> availabilitySetName;
 
-    public Output<String> availabilitySetName() {
-        return this.availabilitySetName == null ? Codegen.empty() : this.availabilitySetName;
+    public Optional<Output<String>> availabilitySetName() {
+        return Optional.ofNullable(this.availabilitySetName);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cdnEnabled")
-      private final @Nullable Output<Boolean> cdnEnabled;
+    private @Nullable Output<Boolean> cdnEnabled;
 
-    public Output<Boolean> cdnEnabled() {
-        return this.cdnEnabled == null ? Codegen.empty() : this.cdnEnabled;
+    public Optional<Output<Boolean>> cdnEnabled() {
+        return Optional.ofNullable(this.cdnEnabled);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cdnProfile")
-      private final @Nullable Output<String> cdnProfile;
+    private @Nullable Output<String> cdnProfile;
 
-    public Output<String> cdnProfile() {
-        return this.cdnProfile == null ? Codegen.empty() : this.cdnProfile;
+    public Optional<Output<String>> cdnProfile() {
+        return Optional.ofNullable(this.cdnProfile);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cdnProvider")
-      private final @Nullable Output<String> cdnProvider;
+    private @Nullable Output<String> cdnProvider;
 
-    public Output<String> cdnProvider() {
-        return this.cdnProvider == null ? Codegen.empty() : this.cdnProvider;
+    public Optional<Output<String>> cdnProvider() {
+        return Optional.ofNullable(this.cdnProvider);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="crossSiteAccessPolicies")
-      private final @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
+    private @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
-    public Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies() {
-        return this.crossSiteAccessPolicies == null ? Codegen.empty() : this.crossSiteAccessPolicies;
+    public Optional<Output<CrossSiteAccessPoliciesArgs>> crossSiteAccessPolicies() {
+        return Optional.ofNullable(this.crossSiteAccessPolicies);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="customHostNames")
-      private final @Nullable Output<List<String>> customHostNames;
+    private @Nullable Output<List<String>> customHostNames;
 
-    public Output<List<String>> customHostNames() {
-        return this.customHostNames == null ? Codegen.empty() : this.customHostNames;
+    public Optional<Output<List<String>>> customHostNames() {
+        return Optional.ofNullable(this.customHostNames);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxCacheAge")
-      private final @Nullable Output<Double> maxCacheAge;
+    private @Nullable Output<Double> maxCacheAge;
 
-    public Output<Double> maxCacheAge() {
-        return this.maxCacheAge == null ? Codegen.empty() : this.maxCacheAge;
+    public Optional<Output<Double>> maxCacheAge() {
+        return Optional.ofNullable(this.maxCacheAge);
     }
 
     /**
@@ -159,7 +159,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -170,7 +170,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="scaleUnits", required=true)
-      private final Output<Integer> scaleUnits;
+    private Output<Integer> scaleUnits;
 
     public Output<Integer> scaleUnits() {
         return this.scaleUnits;
@@ -181,10 +181,10 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="streamingEndpointName")
-      private final @Nullable Output<String> streamingEndpointName;
+    private @Nullable Output<String> streamingEndpointName;
 
-    public Output<String> streamingEndpointName() {
-        return this.streamingEndpointName == null ? Codegen.empty() : this.streamingEndpointName;
+    public Optional<Output<String>> streamingEndpointName() {
+        return Optional.ofNullable(this.streamingEndpointName);
     }
 
     /**
@@ -192,248 +192,205 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public StreamingEndpointArgs(
-        @Nullable Output<StreamingEndpointAccessControlArgs> accessControl,
-        Output<String> accountName,
-        @Nullable Output<Boolean> autoStart,
-        @Nullable Output<String> availabilitySetName,
-        @Nullable Output<Boolean> cdnEnabled,
-        @Nullable Output<String> cdnProfile,
-        @Nullable Output<String> cdnProvider,
-        @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies,
-        @Nullable Output<List<String>> customHostNames,
-        @Nullable Output<String> description,
-        @Nullable Output<String> location,
-        @Nullable Output<Double> maxCacheAge,
-        Output<String> resourceGroupName,
-        Output<Integer> scaleUnits,
-        @Nullable Output<String> streamingEndpointName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.accessControl = accessControl;
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.autoStart = autoStart;
-        this.availabilitySetName = availabilitySetName;
-        this.cdnEnabled = cdnEnabled;
-        this.cdnProfile = cdnProfile;
-        this.cdnProvider = cdnProvider;
-        this.crossSiteAccessPolicies = crossSiteAccessPolicies;
-        this.customHostNames = customHostNames;
-        this.description = description;
-        this.location = location;
-        this.maxCacheAge = maxCacheAge;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scaleUnits = Objects.requireNonNull(scaleUnits, "expected parameter 'scaleUnits' to be non-null");
-        this.streamingEndpointName = streamingEndpointName;
-        this.tags = tags;
-    }
+    private StreamingEndpointArgs() {}
 
-    private StreamingEndpointArgs() {
-        this.accessControl = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.autoStart = Codegen.empty();
-        this.availabilitySetName = Codegen.empty();
-        this.cdnEnabled = Codegen.empty();
-        this.cdnProfile = Codegen.empty();
-        this.cdnProvider = Codegen.empty();
-        this.crossSiteAccessPolicies = Codegen.empty();
-        this.customHostNames = Codegen.empty();
-        this.description = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maxCacheAge = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scaleUnits = Codegen.empty();
-        this.streamingEndpointName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private StreamingEndpointArgs(StreamingEndpointArgs $) {
+        this.accessControl = $.accessControl;
+        this.accountName = $.accountName;
+        this.autoStart = $.autoStart;
+        this.availabilitySetName = $.availabilitySetName;
+        this.cdnEnabled = $.cdnEnabled;
+        this.cdnProfile = $.cdnProfile;
+        this.cdnProvider = $.cdnProvider;
+        this.crossSiteAccessPolicies = $.crossSiteAccessPolicies;
+        this.customHostNames = $.customHostNames;
+        this.description = $.description;
+        this.location = $.location;
+        this.maxCacheAge = $.maxCacheAge;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scaleUnits = $.scaleUnits;
+        this.streamingEndpointName = $.streamingEndpointName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StreamingEndpointAccessControlArgs> accessControl;
-        private Output<String> accountName;
-        private @Nullable Output<Boolean> autoStart;
-        private @Nullable Output<String> availabilitySetName;
-        private @Nullable Output<Boolean> cdnEnabled;
-        private @Nullable Output<String> cdnProfile;
-        private @Nullable Output<String> cdnProvider;
-        private @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
-        private @Nullable Output<List<String>> customHostNames;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Double> maxCacheAge;
-        private Output<String> resourceGroupName;
-        private Output<Integer> scaleUnits;
-        private @Nullable Output<String> streamingEndpointName;
-        private @Nullable Output<Map<String,String>> tags;
+        private StreamingEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingEndpointArgs();
         }
 
         public Builder(StreamingEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControl = defaults.accessControl;
-    	      this.accountName = defaults.accountName;
-    	      this.autoStart = defaults.autoStart;
-    	      this.availabilitySetName = defaults.availabilitySetName;
-    	      this.cdnEnabled = defaults.cdnEnabled;
-    	      this.cdnProfile = defaults.cdnProfile;
-    	      this.cdnProvider = defaults.cdnProvider;
-    	      this.crossSiteAccessPolicies = defaults.crossSiteAccessPolicies;
-    	      this.customHostNames = defaults.customHostNames;
-    	      this.description = defaults.description;
-    	      this.location = defaults.location;
-    	      this.maxCacheAge = defaults.maxCacheAge;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scaleUnits = defaults.scaleUnits;
-    	      this.streamingEndpointName = defaults.streamingEndpointName;
-    	      this.tags = defaults.tags;
+            $ = new StreamingEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControl(@Nullable Output<StreamingEndpointAccessControlArgs> accessControl) {
-            this.accessControl = accessControl;
+            $.accessControl = accessControl;
             return this;
         }
-        public Builder accessControl(@Nullable StreamingEndpointAccessControlArgs accessControl) {
-            this.accessControl = Codegen.ofNullable(accessControl);
-            return this;
+
+        public Builder accessControl(StreamingEndpointAccessControlArgs accessControl) {
+            return accessControl(Output.of(accessControl));
         }
+
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder autoStart(@Nullable Output<Boolean> autoStart) {
-            this.autoStart = autoStart;
+            $.autoStart = autoStart;
             return this;
         }
-        public Builder autoStart(@Nullable Boolean autoStart) {
-            this.autoStart = Codegen.ofNullable(autoStart);
-            return this;
+
+        public Builder autoStart(Boolean autoStart) {
+            return autoStart(Output.of(autoStart));
         }
+
         public Builder availabilitySetName(@Nullable Output<String> availabilitySetName) {
-            this.availabilitySetName = availabilitySetName;
+            $.availabilitySetName = availabilitySetName;
             return this;
         }
-        public Builder availabilitySetName(@Nullable String availabilitySetName) {
-            this.availabilitySetName = Codegen.ofNullable(availabilitySetName);
-            return this;
+
+        public Builder availabilitySetName(String availabilitySetName) {
+            return availabilitySetName(Output.of(availabilitySetName));
         }
+
         public Builder cdnEnabled(@Nullable Output<Boolean> cdnEnabled) {
-            this.cdnEnabled = cdnEnabled;
+            $.cdnEnabled = cdnEnabled;
             return this;
         }
-        public Builder cdnEnabled(@Nullable Boolean cdnEnabled) {
-            this.cdnEnabled = Codegen.ofNullable(cdnEnabled);
-            return this;
+
+        public Builder cdnEnabled(Boolean cdnEnabled) {
+            return cdnEnabled(Output.of(cdnEnabled));
         }
+
         public Builder cdnProfile(@Nullable Output<String> cdnProfile) {
-            this.cdnProfile = cdnProfile;
+            $.cdnProfile = cdnProfile;
             return this;
         }
-        public Builder cdnProfile(@Nullable String cdnProfile) {
-            this.cdnProfile = Codegen.ofNullable(cdnProfile);
-            return this;
+
+        public Builder cdnProfile(String cdnProfile) {
+            return cdnProfile(Output.of(cdnProfile));
         }
+
         public Builder cdnProvider(@Nullable Output<String> cdnProvider) {
-            this.cdnProvider = cdnProvider;
+            $.cdnProvider = cdnProvider;
             return this;
         }
-        public Builder cdnProvider(@Nullable String cdnProvider) {
-            this.cdnProvider = Codegen.ofNullable(cdnProvider);
-            return this;
+
+        public Builder cdnProvider(String cdnProvider) {
+            return cdnProvider(Output.of(cdnProvider));
         }
+
         public Builder crossSiteAccessPolicies(@Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
-            this.crossSiteAccessPolicies = crossSiteAccessPolicies;
+            $.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
-        public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
-            this.crossSiteAccessPolicies = Codegen.ofNullable(crossSiteAccessPolicies);
-            return this;
+
+        public Builder crossSiteAccessPolicies(CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
+            return crossSiteAccessPolicies(Output.of(crossSiteAccessPolicies));
         }
+
         public Builder customHostNames(@Nullable Output<List<String>> customHostNames) {
-            this.customHostNames = customHostNames;
+            $.customHostNames = customHostNames;
             return this;
         }
-        public Builder customHostNames(@Nullable List<String> customHostNames) {
-            this.customHostNames = Codegen.ofNullable(customHostNames);
-            return this;
+
+        public Builder customHostNames(List<String> customHostNames) {
+            return customHostNames(Output.of(customHostNames));
         }
+
         public Builder customHostNames(String... customHostNames) {
             return customHostNames(List.of(customHostNames));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maxCacheAge(@Nullable Output<Double> maxCacheAge) {
-            this.maxCacheAge = maxCacheAge;
+            $.maxCacheAge = maxCacheAge;
             return this;
         }
-        public Builder maxCacheAge(@Nullable Double maxCacheAge) {
-            this.maxCacheAge = Codegen.ofNullable(maxCacheAge);
-            return this;
+
+        public Builder maxCacheAge(Double maxCacheAge) {
+            return maxCacheAge(Output.of(maxCacheAge));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scaleUnits(Output<Integer> scaleUnits) {
-            this.scaleUnits = Objects.requireNonNull(scaleUnits);
+            $.scaleUnits = scaleUnits;
             return this;
         }
+
         public Builder scaleUnits(Integer scaleUnits) {
-            this.scaleUnits = Output.of(Objects.requireNonNull(scaleUnits));
-            return this;
+            return scaleUnits(Output.of(scaleUnits));
         }
+
         public Builder streamingEndpointName(@Nullable Output<String> streamingEndpointName) {
-            this.streamingEndpointName = streamingEndpointName;
+            $.streamingEndpointName = streamingEndpointName;
             return this;
         }
-        public Builder streamingEndpointName(@Nullable String streamingEndpointName) {
-            this.streamingEndpointName = Codegen.ofNullable(streamingEndpointName);
-            return this;
+
+        public Builder streamingEndpointName(String streamingEndpointName) {
+            return streamingEndpointName(Output.of(streamingEndpointName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public StreamingEndpointArgs build() {
-            return new StreamingEndpointArgs(accessControl, accountName, autoStart, availabilitySetName, cdnEnabled, cdnProfile, cdnProvider, crossSiteAccessPolicies, customHostNames, description, location, maxCacheAge, resourceGroupName, scaleUnits, streamingEndpointName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public StreamingEndpointArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scaleUnits = Objects.requireNonNull($.scaleUnits, "expected parameter 'scaleUnits' to be non-null");
+            return $;
         }
     }
+
 }

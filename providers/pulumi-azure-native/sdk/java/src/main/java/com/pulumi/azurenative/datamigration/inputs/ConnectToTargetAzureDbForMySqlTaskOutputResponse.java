@@ -23,7 +23,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
      * 
      */
     @Import(name="databases", required=true)
-      private final List<String> databases;
+    private List<String> databases;
 
     public List<String> databases() {
         return this.databases;
@@ -34,7 +34,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -45,7 +45,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
      * 
      */
     @Import(name="serverVersion", required=true)
-      private final String serverVersion;
+    private String serverVersion;
 
     public String serverVersion() {
         return this.serverVersion;
@@ -56,7 +56,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
      * 
      */
     @Import(name="targetServerBrandVersion", required=true)
-      private final String targetServerBrandVersion;
+    private String targetServerBrandVersion;
 
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -67,88 +67,81 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final List<ReportableExceptionResponse> validationErrors;
+    private List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 
-    public ConnectToTargetAzureDbForMySqlTaskOutputResponse(
-        List<String> databases,
-        String id,
-        String serverVersion,
-        String targetServerBrandVersion,
-        List<ReportableExceptionResponse> validationErrors) {
-        this.databases = Objects.requireNonNull(databases, "expected parameter 'databases' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.serverVersion = Objects.requireNonNull(serverVersion, "expected parameter 'serverVersion' to be non-null");
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private ConnectToTargetAzureDbForMySqlTaskOutputResponse() {}
 
-    private ConnectToTargetAzureDbForMySqlTaskOutputResponse() {
-        this.databases = List.of();
-        this.id = null;
-        this.serverVersion = null;
-        this.targetServerBrandVersion = null;
-        this.validationErrors = List.of();
+    private ConnectToTargetAzureDbForMySqlTaskOutputResponse(ConnectToTargetAzureDbForMySqlTaskOutputResponse $) {
+        this.databases = $.databases;
+        this.id = $.id;
+        this.serverVersion = $.serverVersion;
+        this.targetServerBrandVersion = $.targetServerBrandVersion;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetAzureDbForMySqlTaskOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> databases;
-        private String id;
-        private String serverVersion;
-        private String targetServerBrandVersion;
-        private List<ReportableExceptionResponse> validationErrors;
+        private ConnectToTargetAzureDbForMySqlTaskOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetAzureDbForMySqlTaskOutputResponse();
         }
 
         public Builder(ConnectToTargetAzureDbForMySqlTaskOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databases = defaults.databases;
-    	      this.id = defaults.id;
-    	      this.serverVersion = defaults.serverVersion;
-    	      this.targetServerBrandVersion = defaults.targetServerBrandVersion;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new ConnectToTargetAzureDbForMySqlTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databases(List<String> databases) {
-            this.databases = Objects.requireNonNull(databases);
+            $.databases = databases;
             return this;
         }
+
         public Builder databases(String... databases) {
             return databases(List.of(databases));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder serverVersion(String serverVersion) {
-            this.serverVersion = Objects.requireNonNull(serverVersion);
+            $.serverVersion = serverVersion;
             return this;
         }
+
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
-            this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
+            $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
+
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
-        }        public ConnectToTargetAzureDbForMySqlTaskOutputResponse build() {
-            return new ConnectToTargetAzureDbForMySqlTaskOutputResponse(databases, id, serverVersion, targetServerBrandVersion, validationErrors);
+        }
+
+        public ConnectToTargetAzureDbForMySqlTaskOutputResponse build() {
+            $.databases = Objects.requireNonNull($.databases, "expected parameter 'databases' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.serverVersion = Objects.requireNonNull($.serverVersion, "expected parameter 'serverVersion' to be non-null");
+            $.targetServerBrandVersion = Objects.requireNonNull($.targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.azurenative.cdn.enums.ManagedRuleEnabledState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<Either<String,ActionType>> action;
+    private @Nullable Output<Either<String,ActionType>> action;
 
-    public Output<Either<String,ActionType>> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<Either<String,ActionType>>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
+    private @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
 
-    public Output<Either<String,ManagedRuleEnabledState>> enabledState() {
-        return this.enabledState == null ? Codegen.empty() : this.enabledState;
+    public Optional<Output<Either<String,ManagedRuleEnabledState>>> enabledState() {
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -49,76 +49,69 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ruleId", required=true)
-      private final Output<String> ruleId;
+    private Output<String> ruleId;
 
     public Output<String> ruleId() {
         return this.ruleId;
     }
 
-    public ManagedRuleOverrideArgs(
-        @Nullable Output<Either<String,ActionType>> action,
-        @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState,
-        Output<String> ruleId) {
-        this.action = action;
-        this.enabledState = enabledState;
-        this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
-    }
+    private ManagedRuleOverrideArgs() {}
 
-    private ManagedRuleOverrideArgs() {
-        this.action = Codegen.empty();
-        this.enabledState = Codegen.empty();
-        this.ruleId = Codegen.empty();
+    private ManagedRuleOverrideArgs(ManagedRuleOverrideArgs $) {
+        this.action = $.action;
+        this.enabledState = $.enabledState;
+        this.ruleId = $.ruleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ActionType>> action;
-        private @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
-        private Output<String> ruleId;
+        private ManagedRuleOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleOverrideArgs();
         }
 
         public Builder(ManagedRuleOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.enabledState = defaults.enabledState;
-    	      this.ruleId = defaults.ruleId;
+            $ = new ManagedRuleOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<Either<String,ActionType>> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable Either<String,ActionType> action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(Either<String,ActionType> action) {
+            return action(Output.of(action));
         }
+
         public Builder enabledState(@Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
-        public Builder enabledState(@Nullable Either<String,ManagedRuleEnabledState> enabledState) {
-            this.enabledState = Codegen.ofNullable(enabledState);
-            return this;
+
+        public Builder enabledState(Either<String,ManagedRuleEnabledState> enabledState) {
+            return enabledState(Output.of(enabledState));
         }
+
         public Builder ruleId(Output<String> ruleId) {
-            this.ruleId = Objects.requireNonNull(ruleId);
+            $.ruleId = ruleId;
             return this;
         }
+
         public Builder ruleId(String ruleId) {
-            this.ruleId = Output.of(Objects.requireNonNull(ruleId));
-            return this;
-        }        public ManagedRuleOverrideArgs build() {
-            return new ManagedRuleOverrideArgs(action, enabledState, ruleId);
+            return ruleId(Output.of(ruleId));
+        }
+
+        public ManagedRuleOverrideArgs build() {
+            $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
+            return $;
         }
     }
+
 }

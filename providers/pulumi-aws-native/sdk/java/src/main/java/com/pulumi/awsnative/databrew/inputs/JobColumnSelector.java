@@ -15,62 +15,57 @@ public final class JobColumnSelector extends com.pulumi.resources.InvokeArgs {
     public static final JobColumnSelector Empty = new JobColumnSelector();
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="regex")
-      private final @Nullable String regex;
+    private @Nullable String regex;
 
     public Optional<String> regex() {
-        return this.regex == null ? Optional.empty() : Optional.ofNullable(this.regex);
+        return Optional.ofNullable(this.regex);
     }
 
-    public JobColumnSelector(
-        @Nullable String name,
-        @Nullable String regex) {
-        this.name = name;
-        this.regex = regex;
-    }
+    private JobColumnSelector() {}
 
-    private JobColumnSelector() {
-        this.name = null;
-        this.regex = null;
+    private JobColumnSelector(JobColumnSelector $) {
+        this.name = $.name;
+        this.regex = $.regex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobColumnSelector defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String regex;
+        private JobColumnSelector $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobColumnSelector();
         }
 
         public Builder(JobColumnSelector defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.regex = defaults.regex;
+            $ = new JobColumnSelector(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder regex(@Nullable String regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
-        }        public JobColumnSelector build() {
-            return new JobColumnSelector(name, regex);
+        }
+
+        public JobColumnSelector build() {
+            return $;
         }
     }
+
 }

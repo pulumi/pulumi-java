@@ -30,10 +30,10 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="folder")
-      private final @Nullable DatasetResponseFolder folder;
+    private @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> folder() {
-        return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -63,7 +63,7 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="index", required=true)
-      private final Object index;
+    private Object index;
 
     public Object index() {
         return this.index;
@@ -74,7 +74,7 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -85,10 +85,10 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="path")
-      private final @Nullable Object path;
+    private @Nullable Object path;
 
     public Optional<Object> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="schema")
-      private final @Nullable Object schema;
+    private @Nullable Object schema;
 
     public Optional<Object> schema() {
-        return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="structure")
-      private final @Nullable Object structure;
+    private @Nullable Object structure;
 
     public Optional<Object> structure() {
-        return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
+        return Optional.ofNullable(this.structure);
     }
 
     /**
@@ -130,130 +130,105 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public WebTableDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        Object index,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object path,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.folder = folder;
-        this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.parameters = parameters;
-        this.path = path;
-        this.schema = schema;
-        this.structure = structure;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private WebTableDatasetResponse() {}
 
-    private WebTableDatasetResponse() {
-        this.annotations = List.of();
-        this.description = null;
-        this.folder = null;
-        this.index = null;
-        this.linkedServiceName = null;
-        this.parameters = Map.of();
-        this.path = null;
-        this.schema = null;
-        this.structure = null;
-        this.type = null;
+    private WebTableDatasetResponse(WebTableDatasetResponse $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.folder = $.folder;
+        this.index = $.index;
+        this.linkedServiceName = $.linkedServiceName;
+        this.parameters = $.parameters;
+        this.path = $.path;
+        this.schema = $.schema;
+        this.structure = $.structure;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebTableDatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable String description;
-        private @Nullable DatasetResponseFolder folder;
-        private Object index;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object path;
-        private @Nullable Object schema;
-        private @Nullable Object structure;
-        private String type;
+        private WebTableDatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebTableDatasetResponse();
         }
 
         public Builder(WebTableDatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.folder = defaults.folder;
-    	      this.index = defaults.index;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.parameters = defaults.parameters;
-    	      this.path = defaults.path;
-    	      this.schema = defaults.schema;
-    	      this.structure = defaults.structure;
-    	      this.type = defaults.type;
+            $ = new WebTableDatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder folder(@Nullable DatasetResponseFolder folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
+
         public Builder index(Object index) {
-            this.index = Objects.requireNonNull(index);
+            $.index = index;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder path(@Nullable Object path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder schema(@Nullable Object schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
+
         public Builder structure(@Nullable Object structure) {
-            this.structure = structure;
+            $.structure = structure;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public WebTableDatasetResponse build() {
-            return new WebTableDatasetResponse(annotations, description, folder, index, linkedServiceName, parameters, path, schema, structure, type);
+        }
+
+        public WebTableDatasetResponse build() {
+            $.index = Objects.requireNonNull($.index, "expected parameter 'index' to be non-null");
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

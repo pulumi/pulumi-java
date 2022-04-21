@@ -15,78 +15,72 @@ public final class GetInstantSnapshotArgs extends com.pulumi.resources.InvokeArg
     public static final GetInstantSnapshotArgs Empty = new GetInstantSnapshotArgs();
 
     @Import(name="instantSnapshot", required=true)
-      private final String instantSnapshot;
+    private String instantSnapshot;
 
     public String instantSnapshot() {
         return this.instantSnapshot;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetInstantSnapshotArgs(
-        String instantSnapshot,
-        @Nullable String project,
-        String zone) {
-        this.instantSnapshot = Objects.requireNonNull(instantSnapshot, "expected parameter 'instantSnapshot' to be non-null");
-        this.project = project;
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetInstantSnapshotArgs() {}
 
-    private GetInstantSnapshotArgs() {
-        this.instantSnapshot = null;
-        this.project = null;
-        this.zone = null;
+    private GetInstantSnapshotArgs(GetInstantSnapshotArgs $) {
+        this.instantSnapshot = $.instantSnapshot;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstantSnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instantSnapshot;
-        private @Nullable String project;
-        private String zone;
+        private GetInstantSnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstantSnapshotArgs();
         }
 
         public Builder(GetInstantSnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instantSnapshot = defaults.instantSnapshot;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new GetInstantSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instantSnapshot(String instantSnapshot) {
-            this.instantSnapshot = Objects.requireNonNull(instantSnapshot);
+            $.instantSnapshot = instantSnapshot;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetInstantSnapshotArgs build() {
-            return new GetInstantSnapshotArgs(instantSnapshot, project, zone);
+        }
+
+        public GetInstantSnapshotArgs build() {
+            $.instantSnapshot = Objects.requireNonNull($.instantSnapshot, "expected parameter 'instantSnapshot' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

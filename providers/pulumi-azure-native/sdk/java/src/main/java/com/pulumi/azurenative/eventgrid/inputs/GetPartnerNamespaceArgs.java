@@ -17,7 +17,7 @@ public final class GetPartnerNamespaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="partnerNamespaceName", required=true)
-      private final String partnerNamespaceName;
+    private String partnerNamespaceName;
 
     public String partnerNamespaceName() {
         return this.partnerNamespaceName;
@@ -28,55 +28,52 @@ public final class GetPartnerNamespaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPartnerNamespaceArgs(
-        String partnerNamespaceName,
-        String resourceGroupName) {
-        this.partnerNamespaceName = Objects.requireNonNull(partnerNamespaceName, "expected parameter 'partnerNamespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPartnerNamespaceArgs() {}
 
-    private GetPartnerNamespaceArgs() {
-        this.partnerNamespaceName = null;
-        this.resourceGroupName = null;
+    private GetPartnerNamespaceArgs(GetPartnerNamespaceArgs $) {
+        this.partnerNamespaceName = $.partnerNamespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPartnerNamespaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String partnerNamespaceName;
-        private String resourceGroupName;
+        private GetPartnerNamespaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPartnerNamespaceArgs();
         }
 
         public Builder(GetPartnerNamespaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partnerNamespaceName = defaults.partnerNamespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPartnerNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partnerNamespaceName(String partnerNamespaceName) {
-            this.partnerNamespaceName = Objects.requireNonNull(partnerNamespaceName);
+            $.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPartnerNamespaceArgs build() {
-            return new GetPartnerNamespaceArgs(partnerNamespaceName, resourceGroupName);
+        }
+
+        public GetPartnerNamespaceArgs build() {
+            $.partnerNamespaceName = Objects.requireNonNull($.partnerNamespaceName, "expected parameter 'partnerNamespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

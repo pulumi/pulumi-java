@@ -5,9 +5,9 @@ package com.pulumi.googlenative.runtimeconfig_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     public static final VariableArgs Empty = new VariableArgs();
 
     @Import(name="configId", required=true)
-      private final Output<String> configId;
+    private Output<String> configId;
 
     public Output<String> configId() {
         return this.configId;
@@ -27,24 +27,24 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<String> text;
+    private @Nullable Output<String> text;
 
-    public Output<String> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<String>> text() {
+        return Optional.ofNullable(this.text);
     }
 
     /**
@@ -63,115 +63,99 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public VariableArgs(
-        Output<String> configId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> text,
-        @Nullable Output<String> value) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.text = text;
-        this.value = value;
-    }
+    private VariableArgs() {}
 
-    private VariableArgs() {
-        this.configId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.text = Codegen.empty();
-        this.value = Codegen.empty();
+    private VariableArgs(VariableArgs $) {
+        this.configId = $.configId;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.text = $.text;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> text;
-        private @Nullable Output<String> value;
+        private VariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VariableArgs();
         }
 
         public Builder(VariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.text = defaults.text;
-    	      this.value = defaults.value;
+            $ = new VariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(Output<String> configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder configId(String configId) {
-            this.configId = Output.of(Objects.requireNonNull(configId));
-            return this;
+            return configId(Output.of(configId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder text(@Nullable Output<String> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable String text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
+
+        public Builder text(String text) {
+            return text(Output.of(text));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public VariableArgs build() {
-            return new VariableArgs(configId, name, project, requestId, text, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public VariableArgs build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            return $;
         }
     }
+
 }

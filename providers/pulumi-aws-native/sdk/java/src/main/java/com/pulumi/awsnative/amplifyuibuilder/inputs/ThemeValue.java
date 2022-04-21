@@ -17,65 +17,61 @@ public final class ThemeValue extends com.pulumi.resources.InvokeArgs {
     public static final ThemeValue Empty = new ThemeValue();
 
     @Import(name="children")
-      private final @Nullable List<ThemeValues> children;
+    private @Nullable List<ThemeValues> children;
 
-    public List<ThemeValues> children() {
-        return this.children == null ? List.of() : this.children;
+    public Optional<List<ThemeValues>> children() {
+        return Optional.ofNullable(this.children);
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ThemeValue(
-        @Nullable List<ThemeValues> children,
-        @Nullable String value) {
-        this.children = children;
-        this.value = value;
-    }
+    private ThemeValue() {}
 
-    private ThemeValue() {
-        this.children = List.of();
-        this.value = null;
+    private ThemeValue(ThemeValue $) {
+        this.children = $.children;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ThemeValues> children;
-        private @Nullable String value;
+        private ThemeValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeValue();
         }
 
         public Builder(ThemeValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.children = defaults.children;
-    	      this.value = defaults.value;
+            $ = new ThemeValue(Objects.requireNonNull(defaults));
         }
 
         public Builder children(@Nullable List<ThemeValues> children) {
-            this.children = children;
+            $.children = children;
             return this;
         }
+
         public Builder children(ThemeValues... children) {
             return children(List.of(children));
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ThemeValue build() {
-            return new ThemeValue(children, value);
+        }
+
+        public ThemeValue build() {
+            return $;
         }
     }
+
 }

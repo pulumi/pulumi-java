@@ -5,10 +5,10 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class VolumeReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="destinationPath", required=true)
-      private final Output<String> destinationPath;
+    private Output<String> destinationPath;
 
     public Output<String> destinationPath() {
         return this.destinationPath;
@@ -36,7 +36,7 @@ public final class VolumeReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -47,76 +47,70 @@ public final class VolumeReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
-    public VolumeReferenceArgs(
-        Output<String> destinationPath,
-        Output<String> name,
-        @Nullable Output<Boolean> readOnly) {
-        this.destinationPath = Objects.requireNonNull(destinationPath, "expected parameter 'destinationPath' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.readOnly = readOnly;
-    }
+    private VolumeReferenceArgs() {}
 
-    private VolumeReferenceArgs() {
-        this.destinationPath = Codegen.empty();
-        this.name = Codegen.empty();
-        this.readOnly = Codegen.empty();
+    private VolumeReferenceArgs(VolumeReferenceArgs $) {
+        this.destinationPath = $.destinationPath;
+        this.name = $.name;
+        this.readOnly = $.readOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationPath;
-        private Output<String> name;
-        private @Nullable Output<Boolean> readOnly;
+        private VolumeReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeReferenceArgs();
         }
 
         public Builder(VolumeReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationPath = defaults.destinationPath;
-    	      this.name = defaults.name;
-    	      this.readOnly = defaults.readOnly;
+            $ = new VolumeReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationPath(Output<String> destinationPath) {
-            this.destinationPath = Objects.requireNonNull(destinationPath);
+            $.destinationPath = destinationPath;
             return this;
         }
+
         public Builder destinationPath(String destinationPath) {
-            this.destinationPath = Output.of(Objects.requireNonNull(destinationPath));
-            return this;
+            return destinationPath(Output.of(destinationPath));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
-        }        public VolumeReferenceArgs build() {
-            return new VolumeReferenceArgs(destinationPath, name, readOnly);
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
+        }
+
+        public VolumeReferenceArgs build() {
+            $.destinationPath = Objects.requireNonNull($.destinationPath, "expected parameter 'destinationPath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

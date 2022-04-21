@@ -22,7 +22,7 @@ public final class HttpFaultInjectionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="abort", required=true)
-      private final HttpFaultAbortResponse abort;
+    private HttpFaultAbortResponse abort;
 
     public HttpFaultAbortResponse abort() {
         return this.abort;
@@ -33,55 +33,52 @@ public final class HttpFaultInjectionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="delay", required=true)
-      private final HttpFaultDelayResponse delay;
+    private HttpFaultDelayResponse delay;
 
     public HttpFaultDelayResponse delay() {
         return this.delay;
     }
 
-    public HttpFaultInjectionResponse(
-        HttpFaultAbortResponse abort,
-        HttpFaultDelayResponse delay) {
-        this.abort = Objects.requireNonNull(abort, "expected parameter 'abort' to be non-null");
-        this.delay = Objects.requireNonNull(delay, "expected parameter 'delay' to be non-null");
-    }
+    private HttpFaultInjectionResponse() {}
 
-    private HttpFaultInjectionResponse() {
-        this.abort = null;
-        this.delay = null;
+    private HttpFaultInjectionResponse(HttpFaultInjectionResponse $) {
+        this.abort = $.abort;
+        this.delay = $.delay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpFaultInjectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private HttpFaultAbortResponse abort;
-        private HttpFaultDelayResponse delay;
+        private HttpFaultInjectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpFaultInjectionResponse();
         }
 
         public Builder(HttpFaultInjectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abort = defaults.abort;
-    	      this.delay = defaults.delay;
+            $ = new HttpFaultInjectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder abort(HttpFaultAbortResponse abort) {
-            this.abort = Objects.requireNonNull(abort);
+            $.abort = abort;
             return this;
         }
+
         public Builder delay(HttpFaultDelayResponse delay) {
-            this.delay = Objects.requireNonNull(delay);
+            $.delay = delay;
             return this;
-        }        public HttpFaultInjectionResponse build() {
-            return new HttpFaultInjectionResponse(abort, delay);
+        }
+
+        public HttpFaultInjectionResponse build() {
+            $.abort = Objects.requireNonNull($.abort, "expected parameter 'abort' to be non-null");
+            $.delay = Objects.requireNonNull($.delay, "expected parameter 'delay' to be non-null");
+            return $;
         }
     }
+
 }

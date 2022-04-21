@@ -21,7 +21,7 @@ public final class RecommendedActionImplementationInfoResponse extends com.pulum
      * 
      */
     @Import(name="method", required=true)
-      private final String method;
+    private String method;
 
     public String method() {
         return this.method;
@@ -32,55 +32,52 @@ public final class RecommendedActionImplementationInfoResponse extends com.pulum
      * 
      */
     @Import(name="script", required=true)
-      private final String script;
+    private String script;
 
     public String script() {
         return this.script;
     }
 
-    public RecommendedActionImplementationInfoResponse(
-        String method,
-        String script) {
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.script = Objects.requireNonNull(script, "expected parameter 'script' to be non-null");
-    }
+    private RecommendedActionImplementationInfoResponse() {}
 
-    private RecommendedActionImplementationInfoResponse() {
-        this.method = null;
-        this.script = null;
+    private RecommendedActionImplementationInfoResponse(RecommendedActionImplementationInfoResponse $) {
+        this.method = $.method;
+        this.script = $.script;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecommendedActionImplementationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String method;
-        private String script;
+        private RecommendedActionImplementationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecommendedActionImplementationInfoResponse();
         }
 
         public Builder(RecommendedActionImplementationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.method = defaults.method;
-    	      this.script = defaults.script;
+            $ = new RecommendedActionImplementationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder method(String method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder script(String script) {
-            this.script = Objects.requireNonNull(script);
+            $.script = script;
             return this;
-        }        public RecommendedActionImplementationInfoResponse build() {
-            return new RecommendedActionImplementationInfoResponse(method, script);
+        }
+
+        public RecommendedActionImplementationInfoResponse build() {
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.script = Objects.requireNonNull($.script, "expected parameter 'script' to be non-null");
+            return $;
         }
     }
+
 }

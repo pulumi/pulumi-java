@@ -7,12 +7,12 @@ import com.pulumi.aws.storagegateway.inputs.NfsFileShareCacheAttributesArgs;
 import com.pulumi.aws.storagegateway.inputs.NfsFileShareNfsFileShareDefaultsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auditDestinationArn")
-      private final @Nullable Output<String> auditDestinationArn;
+    private @Nullable Output<String> auditDestinationArn;
 
-    public Output<String> auditDestinationArn() {
-        return this.auditDestinationArn == null ? Codegen.empty() : this.auditDestinationArn;
+    public Optional<Output<String>> auditDestinationArn() {
+        return Optional.ofNullable(this.auditDestinationArn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheAttributes")
-      private final @Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes;
+    private @Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes;
 
-    public Output<NfsFileShareCacheAttributesArgs> cacheAttributes() {
-        return this.cacheAttributes == null ? Codegen.empty() : this.cacheAttributes;
+    public Optional<Output<NfsFileShareCacheAttributesArgs>> cacheAttributes() {
+        return Optional.ofNullable(this.cacheAttributes);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientLists", required=true)
-      private final Output<List<String>> clientLists;
+    private Output<List<String>> clientLists;
 
     public Output<List<String>> clientLists() {
         return this.clientLists;
@@ -58,10 +58,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultStorageClass")
-      private final @Nullable Output<String> defaultStorageClass;
+    private @Nullable Output<String> defaultStorageClass;
 
-    public Output<String> defaultStorageClass() {
-        return this.defaultStorageClass == null ? Codegen.empty() : this.defaultStorageClass;
+    public Optional<Output<String>> defaultStorageClass() {
+        return Optional.ofNullable(this.defaultStorageClass);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileShareName")
-      private final @Nullable Output<String> fileShareName;
+    private @Nullable Output<String> fileShareName;
 
-    public Output<String> fileShareName() {
-        return this.fileShareName == null ? Codegen.empty() : this.fileShareName;
+    public Optional<Output<String>> fileShareName() {
+        return Optional.ofNullable(this.fileShareName);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayArn", required=true)
-      private final Output<String> gatewayArn;
+    private Output<String> gatewayArn;
 
     public Output<String> gatewayArn() {
         return this.gatewayArn;
@@ -91,10 +91,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="guessMimeTypeEnabled")
-      private final @Nullable Output<Boolean> guessMimeTypeEnabled;
+    private @Nullable Output<Boolean> guessMimeTypeEnabled;
 
-    public Output<Boolean> guessMimeTypeEnabled() {
-        return this.guessMimeTypeEnabled == null ? Codegen.empty() : this.guessMimeTypeEnabled;
+    public Optional<Output<Boolean>> guessMimeTypeEnabled() {
+        return Optional.ofNullable(this.guessMimeTypeEnabled);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsEncrypted")
-      private final @Nullable Output<Boolean> kmsEncrypted;
+    private @Nullable Output<Boolean> kmsEncrypted;
 
-    public Output<Boolean> kmsEncrypted() {
-        return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
+    public Optional<Output<Boolean>> kmsEncrypted() {
+        return Optional.ofNullable(this.kmsEncrypted);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -124,7 +124,7 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationArn", required=true)
-      private final Output<String> locationArn;
+    private Output<String> locationArn;
 
     public Output<String> locationArn() {
         return this.locationArn;
@@ -135,10 +135,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nfsFileShareDefaults")
-      private final @Nullable Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults;
+    private @Nullable Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults;
 
-    public Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults() {
-        return this.nfsFileShareDefaults == null ? Codegen.empty() : this.nfsFileShareDefaults;
+    public Optional<Output<NfsFileShareNfsFileShareDefaultsArgs>> nfsFileShareDefaults() {
+        return Optional.ofNullable(this.nfsFileShareDefaults);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationPolicy")
-      private final @Nullable Output<String> notificationPolicy;
+    private @Nullable Output<String> notificationPolicy;
 
-    public Output<String> notificationPolicy() {
-        return this.notificationPolicy == null ? Codegen.empty() : this.notificationPolicy;
+    public Optional<Output<String>> notificationPolicy() {
+        return Optional.ofNullable(this.notificationPolicy);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectAcl")
-      private final @Nullable Output<String> objectAcl;
+    private @Nullable Output<String> objectAcl;
 
-    public Output<String> objectAcl() {
-        return this.objectAcl == null ? Codegen.empty() : this.objectAcl;
+    public Optional<Output<String>> objectAcl() {
+        return Optional.ofNullable(this.objectAcl);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requesterPays")
-      private final @Nullable Output<Boolean> requesterPays;
+    private @Nullable Output<Boolean> requesterPays;
 
-    public Output<Boolean> requesterPays() {
-        return this.requesterPays == null ? Codegen.empty() : this.requesterPays;
+    public Optional<Output<Boolean>> requesterPays() {
+        return Optional.ofNullable(this.requesterPays);
     }
 
     /**
@@ -190,7 +190,7 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -201,10 +201,10 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="squash")
-      private final @Nullable Output<String> squash;
+    private @Nullable Output<String> squash;
 
-    public Output<String> squash() {
-        return this.squash == null ? Codegen.empty() : this.squash;
+    public Optional<Output<String>> squash() {
+        return Optional.ofNullable(this.squash);
     }
 
     /**
@@ -212,274 +212,226 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NfsFileShareArgs(
-        @Nullable Output<String> auditDestinationArn,
-        @Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes,
-        Output<List<String>> clientLists,
-        @Nullable Output<String> defaultStorageClass,
-        @Nullable Output<String> fileShareName,
-        Output<String> gatewayArn,
-        @Nullable Output<Boolean> guessMimeTypeEnabled,
-        @Nullable Output<Boolean> kmsEncrypted,
-        @Nullable Output<String> kmsKeyArn,
-        Output<String> locationArn,
-        @Nullable Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults,
-        @Nullable Output<String> notificationPolicy,
-        @Nullable Output<String> objectAcl,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<Boolean> requesterPays,
-        Output<String> roleArn,
-        @Nullable Output<String> squash,
-        @Nullable Output<Map<String,String>> tags) {
-        this.auditDestinationArn = auditDestinationArn;
-        this.cacheAttributes = cacheAttributes;
-        this.clientLists = Objects.requireNonNull(clientLists, "expected parameter 'clientLists' to be non-null");
-        this.defaultStorageClass = defaultStorageClass;
-        this.fileShareName = fileShareName;
-        this.gatewayArn = Objects.requireNonNull(gatewayArn, "expected parameter 'gatewayArn' to be non-null");
-        this.guessMimeTypeEnabled = guessMimeTypeEnabled;
-        this.kmsEncrypted = kmsEncrypted;
-        this.kmsKeyArn = kmsKeyArn;
-        this.locationArn = Objects.requireNonNull(locationArn, "expected parameter 'locationArn' to be non-null");
-        this.nfsFileShareDefaults = nfsFileShareDefaults;
-        this.notificationPolicy = notificationPolicy;
-        this.objectAcl = objectAcl;
-        this.readOnly = readOnly;
-        this.requesterPays = requesterPays;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.squash = squash;
-        this.tags = tags;
-    }
+    private NfsFileShareArgs() {}
 
-    private NfsFileShareArgs() {
-        this.auditDestinationArn = Codegen.empty();
-        this.cacheAttributes = Codegen.empty();
-        this.clientLists = Codegen.empty();
-        this.defaultStorageClass = Codegen.empty();
-        this.fileShareName = Codegen.empty();
-        this.gatewayArn = Codegen.empty();
-        this.guessMimeTypeEnabled = Codegen.empty();
-        this.kmsEncrypted = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
-        this.locationArn = Codegen.empty();
-        this.nfsFileShareDefaults = Codegen.empty();
-        this.notificationPolicy = Codegen.empty();
-        this.objectAcl = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.requesterPays = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.squash = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NfsFileShareArgs(NfsFileShareArgs $) {
+        this.auditDestinationArn = $.auditDestinationArn;
+        this.cacheAttributes = $.cacheAttributes;
+        this.clientLists = $.clientLists;
+        this.defaultStorageClass = $.defaultStorageClass;
+        this.fileShareName = $.fileShareName;
+        this.gatewayArn = $.gatewayArn;
+        this.guessMimeTypeEnabled = $.guessMimeTypeEnabled;
+        this.kmsEncrypted = $.kmsEncrypted;
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.locationArn = $.locationArn;
+        this.nfsFileShareDefaults = $.nfsFileShareDefaults;
+        this.notificationPolicy = $.notificationPolicy;
+        this.objectAcl = $.objectAcl;
+        this.readOnly = $.readOnly;
+        this.requesterPays = $.requesterPays;
+        this.roleArn = $.roleArn;
+        this.squash = $.squash;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NfsFileShareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> auditDestinationArn;
-        private @Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes;
-        private Output<List<String>> clientLists;
-        private @Nullable Output<String> defaultStorageClass;
-        private @Nullable Output<String> fileShareName;
-        private Output<String> gatewayArn;
-        private @Nullable Output<Boolean> guessMimeTypeEnabled;
-        private @Nullable Output<Boolean> kmsEncrypted;
-        private @Nullable Output<String> kmsKeyArn;
-        private Output<String> locationArn;
-        private @Nullable Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults;
-        private @Nullable Output<String> notificationPolicy;
-        private @Nullable Output<String> objectAcl;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<Boolean> requesterPays;
-        private Output<String> roleArn;
-        private @Nullable Output<String> squash;
-        private @Nullable Output<Map<String,String>> tags;
+        private NfsFileShareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NfsFileShareArgs();
         }
 
         public Builder(NfsFileShareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditDestinationArn = defaults.auditDestinationArn;
-    	      this.cacheAttributes = defaults.cacheAttributes;
-    	      this.clientLists = defaults.clientLists;
-    	      this.defaultStorageClass = defaults.defaultStorageClass;
-    	      this.fileShareName = defaults.fileShareName;
-    	      this.gatewayArn = defaults.gatewayArn;
-    	      this.guessMimeTypeEnabled = defaults.guessMimeTypeEnabled;
-    	      this.kmsEncrypted = defaults.kmsEncrypted;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.locationArn = defaults.locationArn;
-    	      this.nfsFileShareDefaults = defaults.nfsFileShareDefaults;
-    	      this.notificationPolicy = defaults.notificationPolicy;
-    	      this.objectAcl = defaults.objectAcl;
-    	      this.readOnly = defaults.readOnly;
-    	      this.requesterPays = defaults.requesterPays;
-    	      this.roleArn = defaults.roleArn;
-    	      this.squash = defaults.squash;
-    	      this.tags = defaults.tags;
+            $ = new NfsFileShareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditDestinationArn(@Nullable Output<String> auditDestinationArn) {
-            this.auditDestinationArn = auditDestinationArn;
+            $.auditDestinationArn = auditDestinationArn;
             return this;
         }
-        public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
-            this.auditDestinationArn = Codegen.ofNullable(auditDestinationArn);
-            return this;
+
+        public Builder auditDestinationArn(String auditDestinationArn) {
+            return auditDestinationArn(Output.of(auditDestinationArn));
         }
+
         public Builder cacheAttributes(@Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes) {
-            this.cacheAttributes = cacheAttributes;
+            $.cacheAttributes = cacheAttributes;
             return this;
         }
-        public Builder cacheAttributes(@Nullable NfsFileShareCacheAttributesArgs cacheAttributes) {
-            this.cacheAttributes = Codegen.ofNullable(cacheAttributes);
-            return this;
+
+        public Builder cacheAttributes(NfsFileShareCacheAttributesArgs cacheAttributes) {
+            return cacheAttributes(Output.of(cacheAttributes));
         }
+
         public Builder clientLists(Output<List<String>> clientLists) {
-            this.clientLists = Objects.requireNonNull(clientLists);
+            $.clientLists = clientLists;
             return this;
         }
+
         public Builder clientLists(List<String> clientLists) {
-            this.clientLists = Output.of(Objects.requireNonNull(clientLists));
-            return this;
+            return clientLists(Output.of(clientLists));
         }
+
         public Builder clientLists(String... clientLists) {
             return clientLists(List.of(clientLists));
         }
+
         public Builder defaultStorageClass(@Nullable Output<String> defaultStorageClass) {
-            this.defaultStorageClass = defaultStorageClass;
+            $.defaultStorageClass = defaultStorageClass;
             return this;
         }
-        public Builder defaultStorageClass(@Nullable String defaultStorageClass) {
-            this.defaultStorageClass = Codegen.ofNullable(defaultStorageClass);
-            return this;
+
+        public Builder defaultStorageClass(String defaultStorageClass) {
+            return defaultStorageClass(Output.of(defaultStorageClass));
         }
+
         public Builder fileShareName(@Nullable Output<String> fileShareName) {
-            this.fileShareName = fileShareName;
+            $.fileShareName = fileShareName;
             return this;
         }
-        public Builder fileShareName(@Nullable String fileShareName) {
-            this.fileShareName = Codegen.ofNullable(fileShareName);
-            return this;
+
+        public Builder fileShareName(String fileShareName) {
+            return fileShareName(Output.of(fileShareName));
         }
+
         public Builder gatewayArn(Output<String> gatewayArn) {
-            this.gatewayArn = Objects.requireNonNull(gatewayArn);
+            $.gatewayArn = gatewayArn;
             return this;
         }
+
         public Builder gatewayArn(String gatewayArn) {
-            this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
-            return this;
+            return gatewayArn(Output.of(gatewayArn));
         }
+
         public Builder guessMimeTypeEnabled(@Nullable Output<Boolean> guessMimeTypeEnabled) {
-            this.guessMimeTypeEnabled = guessMimeTypeEnabled;
+            $.guessMimeTypeEnabled = guessMimeTypeEnabled;
             return this;
         }
-        public Builder guessMimeTypeEnabled(@Nullable Boolean guessMimeTypeEnabled) {
-            this.guessMimeTypeEnabled = Codegen.ofNullable(guessMimeTypeEnabled);
-            return this;
+
+        public Builder guessMimeTypeEnabled(Boolean guessMimeTypeEnabled) {
+            return guessMimeTypeEnabled(Output.of(guessMimeTypeEnabled));
         }
+
         public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
-            this.kmsEncrypted = kmsEncrypted;
+            $.kmsEncrypted = kmsEncrypted;
             return this;
         }
-        public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
-            this.kmsEncrypted = Codegen.ofNullable(kmsEncrypted);
-            return this;
+
+        public Builder kmsEncrypted(Boolean kmsEncrypted) {
+            return kmsEncrypted(Output.of(kmsEncrypted));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder locationArn(Output<String> locationArn) {
-            this.locationArn = Objects.requireNonNull(locationArn);
+            $.locationArn = locationArn;
             return this;
         }
+
         public Builder locationArn(String locationArn) {
-            this.locationArn = Output.of(Objects.requireNonNull(locationArn));
-            return this;
+            return locationArn(Output.of(locationArn));
         }
+
         public Builder nfsFileShareDefaults(@Nullable Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults) {
-            this.nfsFileShareDefaults = nfsFileShareDefaults;
+            $.nfsFileShareDefaults = nfsFileShareDefaults;
             return this;
         }
-        public Builder nfsFileShareDefaults(@Nullable NfsFileShareNfsFileShareDefaultsArgs nfsFileShareDefaults) {
-            this.nfsFileShareDefaults = Codegen.ofNullable(nfsFileShareDefaults);
-            return this;
+
+        public Builder nfsFileShareDefaults(NfsFileShareNfsFileShareDefaultsArgs nfsFileShareDefaults) {
+            return nfsFileShareDefaults(Output.of(nfsFileShareDefaults));
         }
+
         public Builder notificationPolicy(@Nullable Output<String> notificationPolicy) {
-            this.notificationPolicy = notificationPolicy;
+            $.notificationPolicy = notificationPolicy;
             return this;
         }
-        public Builder notificationPolicy(@Nullable String notificationPolicy) {
-            this.notificationPolicy = Codegen.ofNullable(notificationPolicy);
-            return this;
+
+        public Builder notificationPolicy(String notificationPolicy) {
+            return notificationPolicy(Output.of(notificationPolicy));
         }
+
         public Builder objectAcl(@Nullable Output<String> objectAcl) {
-            this.objectAcl = objectAcl;
+            $.objectAcl = objectAcl;
             return this;
         }
-        public Builder objectAcl(@Nullable String objectAcl) {
-            this.objectAcl = Codegen.ofNullable(objectAcl);
-            return this;
+
+        public Builder objectAcl(String objectAcl) {
+            return objectAcl(Output.of(objectAcl));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
-            this.requesterPays = requesterPays;
+            $.requesterPays = requesterPays;
             return this;
         }
-        public Builder requesterPays(@Nullable Boolean requesterPays) {
-            this.requesterPays = Codegen.ofNullable(requesterPays);
-            return this;
+
+        public Builder requesterPays(Boolean requesterPays) {
+            return requesterPays(Output.of(requesterPays));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder squash(@Nullable Output<String> squash) {
-            this.squash = squash;
+            $.squash = squash;
             return this;
         }
-        public Builder squash(@Nullable String squash) {
-            this.squash = Codegen.ofNullable(squash);
-            return this;
+
+        public Builder squash(String squash) {
+            return squash(Output.of(squash));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public NfsFileShareArgs build() {
-            return new NfsFileShareArgs(auditDestinationArn, cacheAttributes, clientLists, defaultStorageClass, fileShareName, gatewayArn, guessMimeTypeEnabled, kmsEncrypted, kmsKeyArn, locationArn, nfsFileShareDefaults, notificationPolicy, objectAcl, readOnly, requesterPays, roleArn, squash, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public NfsFileShareArgs build() {
+            $.clientLists = Objects.requireNonNull($.clientLists, "expected parameter 'clientLists' to be non-null");
+            $.gatewayArn = Objects.requireNonNull($.gatewayArn, "expected parameter 'gatewayArn' to be non-null");
+            $.locationArn = Objects.requireNonNull($.locationArn, "expected parameter 'locationArn' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

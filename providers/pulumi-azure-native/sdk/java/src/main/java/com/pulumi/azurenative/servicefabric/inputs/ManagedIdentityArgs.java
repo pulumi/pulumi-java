@@ -6,11 +6,11 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.azurenative.servicefabric.enums.ManagedIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ManagedIdentityType> type;
+    private @Nullable Output<ManagedIdentityType> type;
 
-    public Output<ManagedIdentityType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ManagedIdentityType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -39,63 +39,58 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
+    private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
+    public Optional<Output<Map<String,Object>>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public ManagedIdentityArgs(
-        @Nullable Output<ManagedIdentityType> type,
-        @Nullable Output<Map<String,Object>> userAssignedIdentities) {
-        this.type = type;
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private ManagedIdentityArgs() {}
 
-    private ManagedIdentityArgs() {
-        this.type = Codegen.empty();
-        this.userAssignedIdentities = Codegen.empty();
+    private ManagedIdentityArgs(ManagedIdentityArgs $) {
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ManagedIdentityType> type;
-        private @Nullable Output<Map<String,Object>> userAssignedIdentities;
+        private ManagedIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIdentityArgs();
         }
 
         public Builder(ManagedIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new ManagedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<ManagedIdentityType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ManagedIdentityType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(ManagedIdentityType type) {
+            return type(Output.of(type));
         }
+
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-        public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
-            return this;
-        }        public ManagedIdentityArgs build() {
-            return new ManagedIdentityArgs(type, userAssignedIdentities);
+
+        public Builder userAssignedIdentities(Map<String,Object> userAssignedIdentities) {
+            return userAssignedIdentities(Output.of(userAssignedIdentities));
+        }
+
+        public ManagedIdentityArgs build() {
+            return $;
         }
     }
+
 }

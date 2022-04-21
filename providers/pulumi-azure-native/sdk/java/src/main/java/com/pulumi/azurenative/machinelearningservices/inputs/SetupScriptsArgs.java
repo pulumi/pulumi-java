@@ -6,8 +6,8 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.ScriptsToExecuteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SetupScriptsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scripts")
-      private final @Nullable Output<ScriptsToExecuteArgs> scripts;
+    private @Nullable Output<ScriptsToExecuteArgs> scripts;
 
-    public Output<ScriptsToExecuteArgs> scripts() {
-        return this.scripts == null ? Codegen.empty() : this.scripts;
+    public Optional<Output<ScriptsToExecuteArgs>> scripts() {
+        return Optional.ofNullable(this.scripts);
     }
 
-    public SetupScriptsArgs(@Nullable Output<ScriptsToExecuteArgs> scripts) {
-        this.scripts = scripts;
-    }
+    private SetupScriptsArgs() {}
 
-    private SetupScriptsArgs() {
-        this.scripts = Codegen.empty();
+    private SetupScriptsArgs(SetupScriptsArgs $) {
+        this.scripts = $.scripts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SetupScriptsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ScriptsToExecuteArgs> scripts;
+        private SetupScriptsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SetupScriptsArgs();
         }
 
         public Builder(SetupScriptsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scripts = defaults.scripts;
+            $ = new SetupScriptsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scripts(@Nullable Output<ScriptsToExecuteArgs> scripts) {
-            this.scripts = scripts;
+            $.scripts = scripts;
             return this;
         }
-        public Builder scripts(@Nullable ScriptsToExecuteArgs scripts) {
-            this.scripts = Codegen.ofNullable(scripts);
-            return this;
-        }        public SetupScriptsArgs build() {
-            return new SetupScriptsArgs(scripts);
+
+        public Builder scripts(ScriptsToExecuteArgs scripts) {
+            return scripts(Output.of(scripts));
+        }
+
+        public SetupScriptsArgs build() {
+            return $;
         }
     }
+
 }

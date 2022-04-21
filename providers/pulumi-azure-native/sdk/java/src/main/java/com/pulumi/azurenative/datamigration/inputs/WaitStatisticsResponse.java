@@ -23,7 +23,7 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="waitCount", required=true)
-      private final Double waitCount;
+    private Double waitCount;
 
     public Double waitCount() {
         return this.waitCount;
@@ -34,7 +34,7 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="waitTimeMs", required=true)
-      private final Double waitTimeMs;
+    private Double waitTimeMs;
 
     public Double waitTimeMs() {
         return this.waitTimeMs;
@@ -45,64 +45,59 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="waitType", required=true)
-      private final String waitType;
+    private String waitType;
 
     public String waitType() {
         return this.waitType;
     }
 
-    public WaitStatisticsResponse(
-        Double waitCount,
-        Double waitTimeMs,
-        String waitType) {
-        this.waitCount = Objects.requireNonNull(waitCount, "expected parameter 'waitCount' to be non-null");
-        this.waitTimeMs = Codegen.doubleProp("waitTimeMs").arg(waitTimeMs).def(0e+00).require();
-        this.waitType = Objects.requireNonNull(waitType, "expected parameter 'waitType' to be non-null");
-    }
+    private WaitStatisticsResponse() {}
 
-    private WaitStatisticsResponse() {
-        this.waitCount = null;
-        this.waitTimeMs = null;
-        this.waitType = null;
+    private WaitStatisticsResponse(WaitStatisticsResponse $) {
+        this.waitCount = $.waitCount;
+        this.waitTimeMs = $.waitTimeMs;
+        this.waitType = $.waitType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WaitStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double waitCount;
-        private Double waitTimeMs;
-        private String waitType;
+        private WaitStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WaitStatisticsResponse();
         }
 
         public Builder(WaitStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.waitCount = defaults.waitCount;
-    	      this.waitTimeMs = defaults.waitTimeMs;
-    	      this.waitType = defaults.waitType;
+            $ = new WaitStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder waitCount(Double waitCount) {
-            this.waitCount = Objects.requireNonNull(waitCount);
+            $.waitCount = waitCount;
             return this;
         }
+
         public Builder waitTimeMs(Double waitTimeMs) {
-            this.waitTimeMs = Objects.requireNonNull(waitTimeMs);
+            $.waitTimeMs = waitTimeMs;
             return this;
         }
+
         public Builder waitType(String waitType) {
-            this.waitType = Objects.requireNonNull(waitType);
+            $.waitType = waitType;
             return this;
-        }        public WaitStatisticsResponse build() {
-            return new WaitStatisticsResponse(waitCount, waitTimeMs, waitType);
+        }
+
+        public WaitStatisticsResponse build() {
+            $.waitCount = Objects.requireNonNull($.waitCount, "expected parameter 'waitCount' to be non-null");
+            $.waitTimeMs = Codegen.doubleProp("waitTimeMs").arg($.waitTimeMs).def(0e+00).require();
+            $.waitType = Objects.requireNonNull($.waitType, "expected parameter 'waitType' to be non-null");
+            return $;
         }
     }
+
 }

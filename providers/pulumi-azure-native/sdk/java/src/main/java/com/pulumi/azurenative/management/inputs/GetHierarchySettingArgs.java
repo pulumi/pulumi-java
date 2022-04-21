@@ -17,45 +17,45 @@ public final class GetHierarchySettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
     }
 
-    public GetHierarchySettingArgs(String groupId) {
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-    }
+    private GetHierarchySettingArgs() {}
 
-    private GetHierarchySettingArgs() {
-        this.groupId = null;
+    private GetHierarchySettingArgs(GetHierarchySettingArgs $) {
+        this.groupId = $.groupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHierarchySettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupId;
+        private GetHierarchySettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHierarchySettingArgs();
         }
 
         public Builder(GetHierarchySettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
+            $ = new GetHierarchySettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
-        }        public GetHierarchySettingArgs build() {
-            return new GetHierarchySettingArgs(groupId);
+        }
+
+        public GetHierarchySettingArgs build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            return $;
         }
     }
+
 }

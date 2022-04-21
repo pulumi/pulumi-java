@@ -20,10 +20,10 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="directoryId")
-      private final @Nullable String directoryId;
+    private @Nullable String directoryId;
 
     public Optional<String> directoryId() {
-        return this.directoryId == null ? Optional.empty() : Optional.ofNullable(this.directoryId);
+        return Optional.ofNullable(this.directoryId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable String userName;
+    private @Nullable String userName;
 
     public Optional<String> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
     /**
@@ -53,73 +53,62 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable String workspaceId;
+    private @Nullable String workspaceId;
 
     public Optional<String> workspaceId() {
-        return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
+        return Optional.ofNullable(this.workspaceId);
     }
 
-    public GetWorkspaceArgs(
-        @Nullable String directoryId,
-        @Nullable Map<String,String> tags,
-        @Nullable String userName,
-        @Nullable String workspaceId) {
-        this.directoryId = directoryId;
-        this.tags = tags;
-        this.userName = userName;
-        this.workspaceId = workspaceId;
-    }
+    private GetWorkspaceArgs() {}
 
-    private GetWorkspaceArgs() {
-        this.directoryId = null;
-        this.tags = Map.of();
-        this.userName = null;
-        this.workspaceId = null;
+    private GetWorkspaceArgs(GetWorkspaceArgs $) {
+        this.directoryId = $.directoryId;
+        this.tags = $.tags;
+        this.userName = $.userName;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String directoryId;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String userName;
-        private @Nullable String workspaceId;
+        private GetWorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkspaceArgs();
         }
 
         public Builder(GetWorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directoryId = defaults.directoryId;
-    	      this.tags = defaults.tags;
-    	      this.userName = defaults.userName;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new GetWorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = directoryId;
+            $.directoryId = directoryId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder userName(@Nullable String userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
+
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
-        }        public GetWorkspaceArgs build() {
-            return new GetWorkspaceArgs(directoryId, tags, userName, workspaceId);
+        }
+
+        public GetWorkspaceArgs build() {
+            return $;
         }
     }
+
 }

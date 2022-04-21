@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudformation;
 import com.pulumi.aws.cloudformation.inputs.CloudFormationTypeLoggingConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CloudFormationTypeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="executionRoleArn")
-      private final @Nullable Output<String> executionRoleArn;
+    private @Nullable Output<String> executionRoleArn;
 
-    public Output<String> executionRoleArn() {
-        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
+    public Optional<Output<String>> executionRoleArn() {
+        return Optional.ofNullable(this.executionRoleArn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CloudFormationTypeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="loggingConfig")
-      private final @Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig;
+    private @Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig;
 
-    public Output<CloudFormationTypeLoggingConfigArgs> loggingConfig() {
-        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
+    public Optional<Output<CloudFormationTypeLoggingConfigArgs>> loggingConfig() {
+        return Optional.ofNullable(this.loggingConfig);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class CloudFormationTypeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="schemaHandlerPackage", required=true)
-      private final Output<String> schemaHandlerPackage;
+    private Output<String> schemaHandlerPackage;
 
     public Output<String> schemaHandlerPackage() {
         return this.schemaHandlerPackage;
@@ -54,10 +54,10 @@ public final class CloudFormationTypeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -65,102 +65,90 @@ public final class CloudFormationTypeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="typeName", required=true)
-      private final Output<String> typeName;
+    private Output<String> typeName;
 
     public Output<String> typeName() {
         return this.typeName;
     }
 
-    public CloudFormationTypeArgs(
-        @Nullable Output<String> executionRoleArn,
-        @Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig,
-        Output<String> schemaHandlerPackage,
-        @Nullable Output<String> type,
-        Output<String> typeName) {
-        this.executionRoleArn = executionRoleArn;
-        this.loggingConfig = loggingConfig;
-        this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage, "expected parameter 'schemaHandlerPackage' to be non-null");
-        this.type = type;
-        this.typeName = Objects.requireNonNull(typeName, "expected parameter 'typeName' to be non-null");
-    }
+    private CloudFormationTypeArgs() {}
 
-    private CloudFormationTypeArgs() {
-        this.executionRoleArn = Codegen.empty();
-        this.loggingConfig = Codegen.empty();
-        this.schemaHandlerPackage = Codegen.empty();
-        this.type = Codegen.empty();
-        this.typeName = Codegen.empty();
+    private CloudFormationTypeArgs(CloudFormationTypeArgs $) {
+        this.executionRoleArn = $.executionRoleArn;
+        this.loggingConfig = $.loggingConfig;
+        this.schemaHandlerPackage = $.schemaHandlerPackage;
+        this.type = $.type;
+        this.typeName = $.typeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudFormationTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> executionRoleArn;
-        private @Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig;
-        private Output<String> schemaHandlerPackage;
-        private @Nullable Output<String> type;
-        private Output<String> typeName;
+        private CloudFormationTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudFormationTypeArgs();
         }
 
         public Builder(CloudFormationTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.schemaHandlerPackage = defaults.schemaHandlerPackage;
-    	      this.type = defaults.type;
-    	      this.typeName = defaults.typeName;
+            $ = new CloudFormationTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
-            this.executionRoleArn = executionRoleArn;
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
-        public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
-            return this;
+
+        public Builder executionRoleArn(String executionRoleArn) {
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder loggingConfig(@Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig) {
-            this.loggingConfig = loggingConfig;
+            $.loggingConfig = loggingConfig;
             return this;
         }
-        public Builder loggingConfig(@Nullable CloudFormationTypeLoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Codegen.ofNullable(loggingConfig);
-            return this;
+
+        public Builder loggingConfig(CloudFormationTypeLoggingConfigArgs loggingConfig) {
+            return loggingConfig(Output.of(loggingConfig));
         }
+
         public Builder schemaHandlerPackage(Output<String> schemaHandlerPackage) {
-            this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage);
+            $.schemaHandlerPackage = schemaHandlerPackage;
             return this;
         }
+
         public Builder schemaHandlerPackage(String schemaHandlerPackage) {
-            this.schemaHandlerPackage = Output.of(Objects.requireNonNull(schemaHandlerPackage));
-            return this;
+            return schemaHandlerPackage(Output.of(schemaHandlerPackage));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder typeName(Output<String> typeName) {
-            this.typeName = Objects.requireNonNull(typeName);
+            $.typeName = typeName;
             return this;
         }
+
         public Builder typeName(String typeName) {
-            this.typeName = Output.of(Objects.requireNonNull(typeName));
-            return this;
-        }        public CloudFormationTypeArgs build() {
-            return new CloudFormationTypeArgs(executionRoleArn, loggingConfig, schemaHandlerPackage, type, typeName);
+            return typeName(Output.of(typeName));
+        }
+
+        public CloudFormationTypeArgs build() {
+            $.schemaHandlerPackage = Objects.requireNonNull($.schemaHandlerPackage, "expected parameter 'schemaHandlerPackage' to be non-null");
+            $.typeName = Objects.requireNonNull($.typeName, "expected parameter 'typeName' to be non-null");
+            return $;
         }
     }
+
 }

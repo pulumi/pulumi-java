@@ -23,45 +23,44 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public SecretResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private SecretResponse() {}
 
-    private SecretResponse() {
-        this.name = null;
+    private SecretResponse(SecretResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private SecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretResponse();
         }
 
         public Builder(SecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new SecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public SecretResponse build() {
-            return new SecretResponse(name);
+        }
+
+        public SecretResponse build() {
+            return $;
         }
     }
+
 }

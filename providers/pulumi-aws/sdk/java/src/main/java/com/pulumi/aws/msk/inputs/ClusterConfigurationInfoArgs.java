@@ -5,7 +5,6 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ClusterConfigurationInfoArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
@@ -31,63 +30,60 @@ public final class ClusterConfigurationInfoArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="revision", required=true)
-      private final Output<Integer> revision;
+    private Output<Integer> revision;
 
     public Output<Integer> revision() {
         return this.revision;
     }
 
-    public ClusterConfigurationInfoArgs(
-        Output<String> arn,
-        Output<Integer> revision) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-    }
+    private ClusterConfigurationInfoArgs() {}
 
-    private ClusterConfigurationInfoArgs() {
-        this.arn = Codegen.empty();
-        this.revision = Codegen.empty();
+    private ClusterConfigurationInfoArgs(ClusterConfigurationInfoArgs $) {
+        this.arn = $.arn;
+        this.revision = $.revision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterConfigurationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
-        private Output<Integer> revision;
+        private ClusterConfigurationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterConfigurationInfoArgs();
         }
 
         public Builder(ClusterConfigurationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.revision = defaults.revision;
+            $ = new ClusterConfigurationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
+            return arn(Output.of(arn));
         }
+
         public Builder revision(Output<Integer> revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder revision(Integer revision) {
-            this.revision = Output.of(Objects.requireNonNull(revision));
-            return this;
-        }        public ClusterConfigurationInfoArgs build() {
-            return new ClusterConfigurationInfoArgs(arn, revision);
+            return revision(Output.of(revision));
+        }
+
+        public ClusterConfigurationInfoArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            return $;
         }
     }
+
 }

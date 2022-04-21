@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class MetricIdentifierArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,59 @@ public final class MetricIdentifierArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<LabelSelectorArgs> selector;
+    private @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<LabelSelectorArgs>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public MetricIdentifierArgs(
-        Output<String> name,
-        @Nullable Output<LabelSelectorArgs> selector) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.selector = selector;
-    }
+    private MetricIdentifierArgs() {}
 
-    private MetricIdentifierArgs() {
-        this.name = Codegen.empty();
-        this.selector = Codegen.empty();
+    private MetricIdentifierArgs(MetricIdentifierArgs $) {
+        this.name = $.name;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricIdentifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<LabelSelectorArgs> selector;
+        private MetricIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricIdentifierArgs();
         }
 
         public Builder(MetricIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.selector = defaults.selector;
+            $ = new MetricIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public MetricIdentifierArgs build() {
-            return new MetricIdentifierArgs(name, selector);
+
+        public Builder selector(LabelSelectorArgs selector) {
+            return selector(Output.of(selector));
+        }
+
+        public MetricIdentifierArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

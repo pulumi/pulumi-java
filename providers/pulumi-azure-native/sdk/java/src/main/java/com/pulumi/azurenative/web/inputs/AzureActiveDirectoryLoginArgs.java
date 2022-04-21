@@ -5,11 +5,11 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AzureActiveDirectoryLoginArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="disableWWWAuthenticate")
-      private final @Nullable Output<Boolean> disableWWWAuthenticate;
+    private @Nullable Output<Boolean> disableWWWAuthenticate;
 
-    public Output<Boolean> disableWWWAuthenticate() {
-        return this.disableWWWAuthenticate == null ? Codegen.empty() : this.disableWWWAuthenticate;
+    public Optional<Output<Boolean>> disableWWWAuthenticate() {
+        return Optional.ofNullable(this.disableWWWAuthenticate);
     }
 
     /**
@@ -38,66 +38,62 @@ public final class AzureActiveDirectoryLoginArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="loginParameters")
-      private final @Nullable Output<List<String>> loginParameters;
+    private @Nullable Output<List<String>> loginParameters;
 
-    public Output<List<String>> loginParameters() {
-        return this.loginParameters == null ? Codegen.empty() : this.loginParameters;
+    public Optional<Output<List<String>>> loginParameters() {
+        return Optional.ofNullable(this.loginParameters);
     }
 
-    public AzureActiveDirectoryLoginArgs(
-        @Nullable Output<Boolean> disableWWWAuthenticate,
-        @Nullable Output<List<String>> loginParameters) {
-        this.disableWWWAuthenticate = disableWWWAuthenticate;
-        this.loginParameters = loginParameters;
-    }
+    private AzureActiveDirectoryLoginArgs() {}
 
-    private AzureActiveDirectoryLoginArgs() {
-        this.disableWWWAuthenticate = Codegen.empty();
-        this.loginParameters = Codegen.empty();
+    private AzureActiveDirectoryLoginArgs(AzureActiveDirectoryLoginArgs $) {
+        this.disableWWWAuthenticate = $.disableWWWAuthenticate;
+        this.loginParameters = $.loginParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureActiveDirectoryLoginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableWWWAuthenticate;
-        private @Nullable Output<List<String>> loginParameters;
+        private AzureActiveDirectoryLoginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureActiveDirectoryLoginArgs();
         }
 
         public Builder(AzureActiveDirectoryLoginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableWWWAuthenticate = defaults.disableWWWAuthenticate;
-    	      this.loginParameters = defaults.loginParameters;
+            $ = new AzureActiveDirectoryLoginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableWWWAuthenticate(@Nullable Output<Boolean> disableWWWAuthenticate) {
-            this.disableWWWAuthenticate = disableWWWAuthenticate;
+            $.disableWWWAuthenticate = disableWWWAuthenticate;
             return this;
         }
-        public Builder disableWWWAuthenticate(@Nullable Boolean disableWWWAuthenticate) {
-            this.disableWWWAuthenticate = Codegen.ofNullable(disableWWWAuthenticate);
-            return this;
+
+        public Builder disableWWWAuthenticate(Boolean disableWWWAuthenticate) {
+            return disableWWWAuthenticate(Output.of(disableWWWAuthenticate));
         }
+
         public Builder loginParameters(@Nullable Output<List<String>> loginParameters) {
-            this.loginParameters = loginParameters;
+            $.loginParameters = loginParameters;
             return this;
         }
-        public Builder loginParameters(@Nullable List<String> loginParameters) {
-            this.loginParameters = Codegen.ofNullable(loginParameters);
-            return this;
+
+        public Builder loginParameters(List<String> loginParameters) {
+            return loginParameters(Output.of(loginParameters));
         }
+
         public Builder loginParameters(String... loginParameters) {
             return loginParameters(List.of(loginParameters));
-        }        public AzureActiveDirectoryLoginArgs build() {
-            return new AzureActiveDirectoryLoginArgs(disableWWWAuthenticate, loginParameters);
+        }
+
+        public AzureActiveDirectoryLoginArgs build() {
+            return $;
         }
     }
+
 }

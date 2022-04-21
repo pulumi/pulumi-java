@@ -23,45 +23,44 @@ public final class PrivateAtlasPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
-    public PrivateAtlasPropertiesResponse(@Nullable String provisioningState) {
-        this.provisioningState = provisioningState;
-    }
+    private PrivateAtlasPropertiesResponse() {}
 
-    private PrivateAtlasPropertiesResponse() {
-        this.provisioningState = null;
+    private PrivateAtlasPropertiesResponse(PrivateAtlasPropertiesResponse $) {
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateAtlasPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String provisioningState;
+        private PrivateAtlasPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateAtlasPropertiesResponse();
         }
 
         public Builder(PrivateAtlasPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new PrivateAtlasPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
-        }        public PrivateAtlasPropertiesResponse build() {
-            return new PrivateAtlasPropertiesResponse(provisioningState);
+        }
+
+        public PrivateAtlasPropertiesResponse build() {
+            return $;
         }
     }
+
 }

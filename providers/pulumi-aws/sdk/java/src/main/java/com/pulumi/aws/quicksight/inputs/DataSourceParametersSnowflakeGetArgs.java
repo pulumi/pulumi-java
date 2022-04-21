@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DataSourceParametersSnowflakeGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="database", required=true)
-      private final Output<String> database;
+    private Output<String> database;
 
     public Output<String> database() {
         return this.database;
@@ -30,7 +29,7 @@ public final class DataSourceParametersSnowflakeGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
@@ -41,76 +40,71 @@ public final class DataSourceParametersSnowflakeGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="warehouse", required=true)
-      private final Output<String> warehouse;
+    private Output<String> warehouse;
 
     public Output<String> warehouse() {
         return this.warehouse;
     }
 
-    public DataSourceParametersSnowflakeGetArgs(
-        Output<String> database,
-        Output<String> host,
-        Output<String> warehouse) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.warehouse = Objects.requireNonNull(warehouse, "expected parameter 'warehouse' to be non-null");
-    }
+    private DataSourceParametersSnowflakeGetArgs() {}
 
-    private DataSourceParametersSnowflakeGetArgs() {
-        this.database = Codegen.empty();
-        this.host = Codegen.empty();
-        this.warehouse = Codegen.empty();
+    private DataSourceParametersSnowflakeGetArgs(DataSourceParametersSnowflakeGetArgs $) {
+        this.database = $.database;
+        this.host = $.host;
+        this.warehouse = $.warehouse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersSnowflakeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> database;
-        private Output<String> host;
-        private Output<String> warehouse;
+        private DataSourceParametersSnowflakeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersSnowflakeGetArgs();
         }
 
         public Builder(DataSourceParametersSnowflakeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.host = defaults.host;
-    	      this.warehouse = defaults.warehouse;
+            $ = new DataSourceParametersSnowflakeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder database(Output<String> database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Output.of(Objects.requireNonNull(database));
-            return this;
+            return database(Output.of(database));
         }
+
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder warehouse(Output<String> warehouse) {
-            this.warehouse = Objects.requireNonNull(warehouse);
+            $.warehouse = warehouse;
             return this;
         }
+
         public Builder warehouse(String warehouse) {
-            this.warehouse = Output.of(Objects.requireNonNull(warehouse));
-            return this;
-        }        public DataSourceParametersSnowflakeGetArgs build() {
-            return new DataSourceParametersSnowflakeGetArgs(database, host, warehouse);
+            return warehouse(Output.of(warehouse));
+        }
+
+        public DataSourceParametersSnowflakeGetArgs build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.warehouse = Objects.requireNonNull($.warehouse, "expected parameter 'warehouse' to be non-null");
+            return $;
         }
     }
+
 }

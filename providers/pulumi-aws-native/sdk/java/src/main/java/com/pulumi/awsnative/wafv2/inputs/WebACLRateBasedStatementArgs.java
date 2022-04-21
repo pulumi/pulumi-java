@@ -8,9 +8,9 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfigurationArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,110 +19,101 @@ public final class WebACLRateBasedStatementArgs extends com.pulumi.resources.Res
     public static final WebACLRateBasedStatementArgs Empty = new WebACLRateBasedStatementArgs();
 
     @Import(name="aggregateKeyType", required=true)
-      private final Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
+    private Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
 
     public Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @Import(name="forwardedIPConfig")
-      private final @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
+    private @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig() {
-        return this.forwardedIPConfig == null ? Codegen.empty() : this.forwardedIPConfig;
+    public Optional<Output<WebACLForwardedIPConfigurationArgs>> forwardedIPConfig() {
+        return Optional.ofNullable(this.forwardedIPConfig);
     }
 
     @Import(name="limit", required=true)
-      private final Output<Integer> limit;
+    private Output<Integer> limit;
 
     public Output<Integer> limit() {
         return this.limit;
     }
 
     @Import(name="scopeDownStatement")
-      private final @Nullable Output<WebACLStatementArgs> scopeDownStatement;
+    private @Nullable Output<WebACLStatementArgs> scopeDownStatement;
 
-    public Output<WebACLStatementArgs> scopeDownStatement() {
-        return this.scopeDownStatement == null ? Codegen.empty() : this.scopeDownStatement;
+    public Optional<Output<WebACLStatementArgs>> scopeDownStatement() {
+        return Optional.ofNullable(this.scopeDownStatement);
     }
 
-    public WebACLRateBasedStatementArgs(
-        Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType,
-        @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig,
-        Output<Integer> limit,
-        @Nullable Output<WebACLStatementArgs> scopeDownStatement) {
-        this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType, "expected parameter 'aggregateKeyType' to be non-null");
-        this.forwardedIPConfig = forwardedIPConfig;
-        this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
-        this.scopeDownStatement = scopeDownStatement;
-    }
+    private WebACLRateBasedStatementArgs() {}
 
-    private WebACLRateBasedStatementArgs() {
-        this.aggregateKeyType = Codegen.empty();
-        this.forwardedIPConfig = Codegen.empty();
-        this.limit = Codegen.empty();
-        this.scopeDownStatement = Codegen.empty();
+    private WebACLRateBasedStatementArgs(WebACLRateBasedStatementArgs $) {
+        this.aggregateKeyType = $.aggregateKeyType;
+        this.forwardedIPConfig = $.forwardedIPConfig;
+        this.limit = $.limit;
+        this.scopeDownStatement = $.scopeDownStatement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLRateBasedStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
-        private @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
-        private Output<Integer> limit;
-        private @Nullable Output<WebACLStatementArgs> scopeDownStatement;
+        private WebACLRateBasedStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLRateBasedStatementArgs();
         }
 
         public Builder(WebACLRateBasedStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregateKeyType = defaults.aggregateKeyType;
-    	      this.forwardedIPConfig = defaults.forwardedIPConfig;
-    	      this.limit = defaults.limit;
-    	      this.scopeDownStatement = defaults.scopeDownStatement;
+            $ = new WebACLRateBasedStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregateKeyType(Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType) {
-            this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
+            $.aggregateKeyType = aggregateKeyType;
             return this;
         }
+
         public Builder aggregateKeyType(WebACLRateBasedStatementAggregateKeyType aggregateKeyType) {
-            this.aggregateKeyType = Output.of(Objects.requireNonNull(aggregateKeyType));
-            return this;
+            return aggregateKeyType(Output.of(aggregateKeyType));
         }
+
         public Builder forwardedIPConfig(@Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
-            this.forwardedIPConfig = forwardedIPConfig;
+            $.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-        public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
-            this.forwardedIPConfig = Codegen.ofNullable(forwardedIPConfig);
-            return this;
+
+        public Builder forwardedIPConfig(WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
+            return forwardedIPConfig(Output.of(forwardedIPConfig));
         }
+
         public Builder limit(Output<Integer> limit) {
-            this.limit = Objects.requireNonNull(limit);
+            $.limit = limit;
             return this;
         }
+
         public Builder limit(Integer limit) {
-            this.limit = Output.of(Objects.requireNonNull(limit));
-            return this;
+            return limit(Output.of(limit));
         }
+
         public Builder scopeDownStatement(@Nullable Output<WebACLStatementArgs> scopeDownStatement) {
-            this.scopeDownStatement = scopeDownStatement;
+            $.scopeDownStatement = scopeDownStatement;
             return this;
         }
-        public Builder scopeDownStatement(@Nullable WebACLStatementArgs scopeDownStatement) {
-            this.scopeDownStatement = Codegen.ofNullable(scopeDownStatement);
-            return this;
-        }        public WebACLRateBasedStatementArgs build() {
-            return new WebACLRateBasedStatementArgs(aggregateKeyType, forwardedIPConfig, limit, scopeDownStatement);
+
+        public Builder scopeDownStatement(WebACLStatementArgs scopeDownStatement) {
+            return scopeDownStatement(Output.of(scopeDownStatement));
+        }
+
+        public WebACLRateBasedStatementArgs build() {
+            $.aggregateKeyType = Objects.requireNonNull($.aggregateKeyType, "expected parameter 'aggregateKeyType' to be non-null");
+            $.limit = Objects.requireNonNull($.limit, "expected parameter 'limit' to be non-null");
+            return $;
         }
     }
+
 }

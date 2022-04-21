@@ -5,9 +5,9 @@ package com.pulumi.awsnative.nimblestudio.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends com.pulu
      * 
      */
     @Import(name="linux")
-      private final @Nullable Output<String> linux;
+    private @Nullable Output<String> linux;
 
-    public Output<String> linux() {
-        return this.linux == null ? Codegen.empty() : this.linux;
+    public Optional<Output<String>> linux() {
+        return Optional.ofNullable(this.linux);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends com.pulu
      * 
      */
     @Import(name="windows")
-      private final @Nullable Output<String> windows;
+    private @Nullable Output<String> windows;
 
-    public Output<String> windows() {
-        return this.windows == null ? Codegen.empty() : this.windows;
+    public Optional<Output<String>> windows() {
+        return Optional.ofNullable(this.windows);
     }
 
-    public LaunchProfileStreamingSessionStorageRootArgs(
-        @Nullable Output<String> linux,
-        @Nullable Output<String> windows) {
-        this.linux = linux;
-        this.windows = windows;
-    }
+    private LaunchProfileStreamingSessionStorageRootArgs() {}
 
-    private LaunchProfileStreamingSessionStorageRootArgs() {
-        this.linux = Codegen.empty();
-        this.windows = Codegen.empty();
+    private LaunchProfileStreamingSessionStorageRootArgs(LaunchProfileStreamingSessionStorageRootArgs $) {
+        this.linux = $.linux;
+        this.windows = $.windows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchProfileStreamingSessionStorageRootArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> linux;
-        private @Nullable Output<String> windows;
+        private LaunchProfileStreamingSessionStorageRootArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchProfileStreamingSessionStorageRootArgs();
         }
 
         public Builder(LaunchProfileStreamingSessionStorageRootArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linux = defaults.linux;
-    	      this.windows = defaults.windows;
+            $ = new LaunchProfileStreamingSessionStorageRootArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linux(@Nullable Output<String> linux) {
-            this.linux = linux;
+            $.linux = linux;
             return this;
         }
-        public Builder linux(@Nullable String linux) {
-            this.linux = Codegen.ofNullable(linux);
-            return this;
+
+        public Builder linux(String linux) {
+            return linux(Output.of(linux));
         }
+
         public Builder windows(@Nullable Output<String> windows) {
-            this.windows = windows;
+            $.windows = windows;
             return this;
         }
-        public Builder windows(@Nullable String windows) {
-            this.windows = Codegen.ofNullable(windows);
-            return this;
-        }        public LaunchProfileStreamingSessionStorageRootArgs build() {
-            return new LaunchProfileStreamingSessionStorageRootArgs(linux, windows);
+
+        public Builder windows(String windows) {
+            return windows(Output.of(windows));
+        }
+
+        public LaunchProfileStreamingSessionStorageRootArgs build() {
+            return $;
         }
     }
+
 }

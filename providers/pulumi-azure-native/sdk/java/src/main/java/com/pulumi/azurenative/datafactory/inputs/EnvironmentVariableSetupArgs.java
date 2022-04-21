@@ -24,7 +24,7 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -35,7 +35,7 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="variableName", required=true)
-      private final Output<String> variableName;
+    private Output<String> variableName;
 
     public Output<String> variableName() {
         return this.variableName;
@@ -46,76 +46,71 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="variableValue", required=true)
-      private final Output<String> variableValue;
+    private Output<String> variableValue;
 
     public Output<String> variableValue() {
         return this.variableValue;
     }
 
-    public EnvironmentVariableSetupArgs(
-        Output<String> type,
-        Output<String> variableName,
-        Output<String> variableValue) {
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
-        this.variableValue = Objects.requireNonNull(variableValue, "expected parameter 'variableValue' to be non-null");
-    }
+    private EnvironmentVariableSetupArgs() {}
 
-    private EnvironmentVariableSetupArgs() {
-        this.type = Codegen.empty();
-        this.variableName = Codegen.empty();
-        this.variableValue = Codegen.empty();
+    private EnvironmentVariableSetupArgs(EnvironmentVariableSetupArgs $) {
+        this.type = $.type;
+        this.variableName = $.variableName;
+        this.variableValue = $.variableValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentVariableSetupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
-        private Output<String> variableName;
-        private Output<String> variableValue;
+        private EnvironmentVariableSetupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentVariableSetupArgs();
         }
 
         public Builder(EnvironmentVariableSetupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.variableName = defaults.variableName;
-    	      this.variableValue = defaults.variableValue;
+            $ = new EnvironmentVariableSetupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder variableName(Output<String> variableName) {
-            this.variableName = Objects.requireNonNull(variableName);
+            $.variableName = variableName;
             return this;
         }
+
         public Builder variableName(String variableName) {
-            this.variableName = Output.of(Objects.requireNonNull(variableName));
-            return this;
+            return variableName(Output.of(variableName));
         }
+
         public Builder variableValue(Output<String> variableValue) {
-            this.variableValue = Objects.requireNonNull(variableValue);
+            $.variableValue = variableValue;
             return this;
         }
+
         public Builder variableValue(String variableValue) {
-            this.variableValue = Output.of(Objects.requireNonNull(variableValue));
-            return this;
-        }        public EnvironmentVariableSetupArgs build() {
-            return new EnvironmentVariableSetupArgs(type, variableName, variableValue);
+            return variableValue(Output.of(variableValue));
+        }
+
+        public EnvironmentVariableSetupArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.variableName = Objects.requireNonNull($.variableName, "expected parameter 'variableName' to be non-null");
+            $.variableValue = Objects.requireNonNull($.variableValue, "expected parameter 'variableValue' to be non-null");
+            return $;
         }
     }
+
 }

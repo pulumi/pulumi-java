@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.FilterEventTypeItem;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventType")
-      private final @Nullable Output<List<FilterEventTypeItem>> eventType;
+    private @Nullable Output<List<FilterEventTypeItem>> eventType;
 
-    public Output<List<FilterEventTypeItem>> eventType() {
-        return this.eventType == null ? Codegen.empty() : this.eventType;
+    public Optional<Output<List<FilterEventTypeItem>>> eventType() {
+        return Optional.ofNullable(this.eventType);
     }
 
-    public FilterArgs(@Nullable Output<List<FilterEventTypeItem>> eventType) {
-        this.eventType = eventType;
-    }
+    private FilterArgs() {}
 
-    private FilterArgs() {
-        this.eventType = Codegen.empty();
+    private FilterArgs(FilterArgs $) {
+        this.eventType = $.eventType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FilterEventTypeItem>> eventType;
+        private FilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterArgs();
         }
 
         public Builder(FilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
+            $ = new FilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(@Nullable Output<List<FilterEventTypeItem>> eventType) {
-            this.eventType = eventType;
+            $.eventType = eventType;
             return this;
         }
-        public Builder eventType(@Nullable List<FilterEventTypeItem> eventType) {
-            this.eventType = Codegen.ofNullable(eventType);
-            return this;
+
+        public Builder eventType(List<FilterEventTypeItem> eventType) {
+            return eventType(Output.of(eventType));
         }
+
         public Builder eventType(FilterEventTypeItem... eventType) {
             return eventType(List.of(eventType));
-        }        public FilterArgs build() {
-            return new FilterArgs(eventType);
+        }
+
+        public FilterArgs build() {
+            return $;
         }
     }
+
 }

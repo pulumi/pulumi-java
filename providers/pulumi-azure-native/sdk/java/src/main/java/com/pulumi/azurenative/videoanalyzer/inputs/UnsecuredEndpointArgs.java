@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="credentials", required=true)
-      private final Output<UsernamePasswordCredentialsArgs> credentials;
+    private Output<UsernamePasswordCredentialsArgs> credentials;
 
     public Output<UsernamePasswordCredentialsArgs> credentials() {
         return this.credentials;
@@ -37,10 +38,10 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tunnel")
-      private final @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
+    private @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
-    public Output<SecureIotDeviceRemoteTunnelArgs> tunnel() {
-        return this.tunnel == null ? Codegen.empty() : this.tunnel;
+    public Optional<Output<SecureIotDeviceRemoteTunnelArgs>> tunnel() {
+        return Optional.ofNullable(this.tunnel);
     }
 
     /**
@@ -49,7 +50,7 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -60,89 +61,81 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public UnsecuredEndpointArgs(
-        Output<UsernamePasswordCredentialsArgs> credentials,
-        @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel,
-        Output<String> type,
-        Output<String> url) {
-        this.credentials = Objects.requireNonNull(credentials, "expected parameter 'credentials' to be non-null");
-        this.tunnel = tunnel;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private UnsecuredEndpointArgs() {}
 
-    private UnsecuredEndpointArgs() {
-        this.credentials = Codegen.empty();
-        this.tunnel = Codegen.empty();
-        this.type = Codegen.empty();
-        this.url = Codegen.empty();
+    private UnsecuredEndpointArgs(UnsecuredEndpointArgs $) {
+        this.credentials = $.credentials;
+        this.tunnel = $.tunnel;
+        this.type = $.type;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UnsecuredEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<UsernamePasswordCredentialsArgs> credentials;
-        private @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
-        private Output<String> type;
-        private Output<String> url;
+        private UnsecuredEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UnsecuredEndpointArgs();
         }
 
         public Builder(UnsecuredEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.tunnel = defaults.tunnel;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
+            $ = new UnsecuredEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(Output<UsernamePasswordCredentialsArgs> credentials) {
-            this.credentials = Objects.requireNonNull(credentials);
+            $.credentials = credentials;
             return this;
         }
+
         public Builder credentials(UsernamePasswordCredentialsArgs credentials) {
-            this.credentials = Output.of(Objects.requireNonNull(credentials));
-            return this;
+            return credentials(Output.of(credentials));
         }
+
         public Builder tunnel(@Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel) {
-            this.tunnel = tunnel;
+            $.tunnel = tunnel;
             return this;
         }
-        public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelArgs tunnel) {
-            this.tunnel = Codegen.ofNullable(tunnel);
-            return this;
+
+        public Builder tunnel(SecureIotDeviceRemoteTunnelArgs tunnel) {
+            return tunnel(Output.of(tunnel));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public UnsecuredEndpointArgs build() {
-            return new UnsecuredEndpointArgs(credentials, tunnel, type, url);
+            return url(Output.of(url));
+        }
+
+        public UnsecuredEndpointArgs build() {
+            $.credentials = Objects.requireNonNull($.credentials, "expected parameter 'credentials' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<String> encoding;
+    private @Nullable Output<String> encoding;
 
-    public Output<String> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<String>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fingerprint")
-      private final @Nullable Output<String> fingerprint;
+    private @Nullable Output<String> fingerprint;
 
-    public Output<String> fingerprint() {
-        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
+    public Optional<Output<String>> fingerprint() {
+        return Optional.ofNullable(this.fingerprint);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<String> publicKey;
+    private @Nullable Output<String> publicKey;
 
-    public Output<String> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<String>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sshPublicKeyId")
-      private final @Nullable Output<String> sshPublicKeyId;
+    private @Nullable Output<String> sshPublicKeyId;
 
-    public Output<String> sshPublicKeyId() {
-        return this.sshPublicKeyId == null ? Codegen.empty() : this.sshPublicKeyId;
+    public Optional<Output<String>> sshPublicKeyId() {
+        return Optional.ofNullable(this.sshPublicKeyId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public SshKeyState(
-        @Nullable Output<String> encoding,
-        @Nullable Output<String> fingerprint,
-        @Nullable Output<String> publicKey,
-        @Nullable Output<String> sshPublicKeyId,
-        @Nullable Output<String> status,
-        @Nullable Output<String> username) {
-        this.encoding = encoding;
-        this.fingerprint = fingerprint;
-        this.publicKey = publicKey;
-        this.sshPublicKeyId = sshPublicKeyId;
-        this.status = status;
-        this.username = username;
-    }
+    private SshKeyState() {}
 
-    private SshKeyState() {
-        this.encoding = Codegen.empty();
-        this.fingerprint = Codegen.empty();
-        this.publicKey = Codegen.empty();
-        this.sshPublicKeyId = Codegen.empty();
-        this.status = Codegen.empty();
-        this.username = Codegen.empty();
+    private SshKeyState(SshKeyState $) {
+        this.encoding = $.encoding;
+        this.fingerprint = $.fingerprint;
+        this.publicKey = $.publicKey;
+        this.sshPublicKeyId = $.sshPublicKeyId;
+        this.status = $.status;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encoding;
-        private @Nullable Output<String> fingerprint;
-        private @Nullable Output<String> publicKey;
-        private @Nullable Output<String> sshPublicKeyId;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> username;
+        private SshKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshKeyState();
         }
 
         public Builder(SshKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.publicKey = defaults.publicKey;
-    	      this.sshPublicKeyId = defaults.sshPublicKeyId;
-    	      this.status = defaults.status;
-    	      this.username = defaults.username;
+            $ = new SshKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(@Nullable Output<String> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable String encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(String encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
-            this.fingerprint = fingerprint;
+            $.fingerprint = fingerprint;
             return this;
         }
-        public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Codegen.ofNullable(fingerprint);
-            return this;
+
+        public Builder fingerprint(String fingerprint) {
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder publicKey(@Nullable Output<String> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
+
+        public Builder publicKey(String publicKey) {
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder sshPublicKeyId(@Nullable Output<String> sshPublicKeyId) {
-            this.sshPublicKeyId = sshPublicKeyId;
+            $.sshPublicKeyId = sshPublicKeyId;
             return this;
         }
-        public Builder sshPublicKeyId(@Nullable String sshPublicKeyId) {
-            this.sshPublicKeyId = Codegen.ofNullable(sshPublicKeyId);
-            return this;
+
+        public Builder sshPublicKeyId(String sshPublicKeyId) {
+            return sshPublicKeyId(Output.of(sshPublicKeyId));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public SshKeyState build() {
-            return new SshKeyState(encoding, fingerprint, publicKey, sshPublicKeyId, status, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public SshKeyState build() {
+            return $;
         }
     }
+
 }

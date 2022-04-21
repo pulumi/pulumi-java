@@ -20,10 +20,10 @@ public final class UsagePlanApiStage extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiId")
-      private final @Nullable String apiId;
+    private @Nullable String apiId;
 
     public Optional<String> apiId() {
-        return this.apiId == null ? Optional.empty() : Optional.ofNullable(this.apiId);
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UsagePlanApiStage extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stage")
-      private final @Nullable String stage;
+    private @Nullable String stage;
 
     public Optional<String> stage() {
-        return this.stage == null ? Optional.empty() : Optional.ofNullable(this.stage);
+        return Optional.ofNullable(this.stage);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class UsagePlanApiStage extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="throttle")
-      private final @Nullable Object throttle;
+    private @Nullable Object throttle;
 
     public Optional<Object> throttle() {
-        return this.throttle == null ? Optional.empty() : Optional.ofNullable(this.throttle);
+        return Optional.ofNullable(this.throttle);
     }
 
-    public UsagePlanApiStage(
-        @Nullable String apiId,
-        @Nullable String stage,
-        @Nullable Object throttle) {
-        this.apiId = apiId;
-        this.stage = stage;
-        this.throttle = throttle;
-    }
+    private UsagePlanApiStage() {}
 
-    private UsagePlanApiStage() {
-        this.apiId = null;
-        this.stage = null;
-        this.throttle = null;
+    private UsagePlanApiStage(UsagePlanApiStage $) {
+        this.apiId = $.apiId;
+        this.stage = $.stage;
+        this.throttle = $.throttle;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsagePlanApiStage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String apiId;
-        private @Nullable String stage;
-        private @Nullable Object throttle;
+        private UsagePlanApiStage $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsagePlanApiStage();
         }
 
         public Builder(UsagePlanApiStage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.stage = defaults.stage;
-    	      this.throttle = defaults.throttle;
+            $ = new UsagePlanApiStage(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
+
         public Builder stage(@Nullable String stage) {
-            this.stage = stage;
+            $.stage = stage;
             return this;
         }
+
         public Builder throttle(@Nullable Object throttle) {
-            this.throttle = throttle;
+            $.throttle = throttle;
             return this;
-        }        public UsagePlanApiStage build() {
-            return new UsagePlanApiStage(apiId, stage, throttle);
+        }
+
+        public UsagePlanApiStage build() {
+            return $;
         }
     }
+
 }

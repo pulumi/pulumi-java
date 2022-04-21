@@ -5,11 +5,11 @@ package com.pulumi.gcp.certificateauthority;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateAuthority")
-      private final @Nullable Output<String> certificateAuthority;
+    private @Nullable Output<String> certificateAuthority;
 
-    public Output<String> certificateAuthority() {
-        return this.certificateAuthority == null ? Codegen.empty() : this.certificateAuthority;
+    public Optional<Output<String>> certificateAuthority() {
+        return Optional.ofNullable(this.certificateAuthority);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateTemplate")
-      private final @Nullable Output<String> certificateTemplate;
+    private @Nullable Output<String> certificateTemplate;
 
-    public Output<String> certificateTemplate() {
-        return this.certificateTemplate == null ? Codegen.empty() : this.certificateTemplate;
+    public Optional<Output<String>> certificateTemplate() {
+        return Optional.ofNullable(this.certificateTemplate);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<CertificateConfigArgs> config;
+    private @Nullable Output<CertificateConfigArgs> config;
 
-    public Output<CertificateConfigArgs> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<CertificateConfigArgs>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifetime")
-      private final @Nullable Output<String> lifetime;
+    private @Nullable Output<String> lifetime;
 
-    public Output<String> lifetime() {
-        return this.lifetime == null ? Codegen.empty() : this.lifetime;
+    public Optional<Output<String>> lifetime() {
+        return Optional.ofNullable(this.lifetime);
     }
 
     /**
@@ -85,7 +85,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -96,10 +96,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pemCsr")
-      private final @Nullable Output<String> pemCsr;
+    private @Nullable Output<String> pemCsr;
 
-    public Output<String> pemCsr() {
-        return this.pemCsr == null ? Codegen.empty() : this.pemCsr;
+    public Optional<Output<String>> pemCsr() {
+        return Optional.ofNullable(this.pemCsr);
     }
 
     /**
@@ -118,7 +118,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pool", required=true)
-      private final Output<String> pool;
+    private Output<String> pool;
 
     public Output<String> pool() {
         return this.pool;
@@ -130,167 +130,140 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public CertificateArgs(
-        @Nullable Output<String> certificateAuthority,
-        @Nullable Output<String> certificateTemplate,
-        @Nullable Output<CertificateConfigArgs> config,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> lifetime,
-        Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> pemCsr,
-        Output<String> pool,
-        @Nullable Output<String> project) {
-        this.certificateAuthority = certificateAuthority;
-        this.certificateTemplate = certificateTemplate;
-        this.config = config;
-        this.labels = labels;
-        this.lifetime = lifetime;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-        this.pemCsr = pemCsr;
-        this.pool = Objects.requireNonNull(pool, "expected parameter 'pool' to be non-null");
-        this.project = project;
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.certificateAuthority = Codegen.empty();
-        this.certificateTemplate = Codegen.empty();
-        this.config = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.lifetime = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pemCsr = Codegen.empty();
-        this.pool = Codegen.empty();
-        this.project = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.certificateAuthority = $.certificateAuthority;
+        this.certificateTemplate = $.certificateTemplate;
+        this.config = $.config;
+        this.labels = $.labels;
+        this.lifetime = $.lifetime;
+        this.location = $.location;
+        this.name = $.name;
+        this.pemCsr = $.pemCsr;
+        this.pool = $.pool;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateAuthority;
-        private @Nullable Output<String> certificateTemplate;
-        private @Nullable Output<CertificateConfigArgs> config;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> lifetime;
-        private Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> pemCsr;
-        private Output<String> pool;
-        private @Nullable Output<String> project;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthority = defaults.certificateAuthority;
-    	      this.certificateTemplate = defaults.certificateTemplate;
-    	      this.config = defaults.config;
-    	      this.labels = defaults.labels;
-    	      this.lifetime = defaults.lifetime;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.pemCsr = defaults.pemCsr;
-    	      this.pool = defaults.pool;
-    	      this.project = defaults.project;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthority(@Nullable Output<String> certificateAuthority) {
-            this.certificateAuthority = certificateAuthority;
+            $.certificateAuthority = certificateAuthority;
             return this;
         }
-        public Builder certificateAuthority(@Nullable String certificateAuthority) {
-            this.certificateAuthority = Codegen.ofNullable(certificateAuthority);
-            return this;
+
+        public Builder certificateAuthority(String certificateAuthority) {
+            return certificateAuthority(Output.of(certificateAuthority));
         }
+
         public Builder certificateTemplate(@Nullable Output<String> certificateTemplate) {
-            this.certificateTemplate = certificateTemplate;
+            $.certificateTemplate = certificateTemplate;
             return this;
         }
-        public Builder certificateTemplate(@Nullable String certificateTemplate) {
-            this.certificateTemplate = Codegen.ofNullable(certificateTemplate);
-            return this;
+
+        public Builder certificateTemplate(String certificateTemplate) {
+            return certificateTemplate(Output.of(certificateTemplate));
         }
+
         public Builder config(@Nullable Output<CertificateConfigArgs> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable CertificateConfigArgs config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(CertificateConfigArgs config) {
+            return config(Output.of(config));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder lifetime(@Nullable Output<String> lifetime) {
-            this.lifetime = lifetime;
+            $.lifetime = lifetime;
             return this;
         }
-        public Builder lifetime(@Nullable String lifetime) {
-            this.lifetime = Codegen.ofNullable(lifetime);
-            return this;
+
+        public Builder lifetime(String lifetime) {
+            return lifetime(Output.of(lifetime));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pemCsr(@Nullable Output<String> pemCsr) {
-            this.pemCsr = pemCsr;
+            $.pemCsr = pemCsr;
             return this;
         }
-        public Builder pemCsr(@Nullable String pemCsr) {
-            this.pemCsr = Codegen.ofNullable(pemCsr);
-            return this;
+
+        public Builder pemCsr(String pemCsr) {
+            return pemCsr(Output.of(pemCsr));
         }
+
         public Builder pool(Output<String> pool) {
-            this.pool = Objects.requireNonNull(pool);
+            $.pool = pool;
             return this;
         }
+
         public Builder pool(String pool) {
-            this.pool = Output.of(Objects.requireNonNull(pool));
-            return this;
+            return pool(Output.of(pool));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public CertificateArgs build() {
-            return new CertificateArgs(certificateAuthority, certificateTemplate, config, labels, lifetime, location, name, pemCsr, pool, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public CertificateArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.pool = Objects.requireNonNull($.pool, "expected parameter 'pool' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class UsagePlanApiStageThrottleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="burstLimit")
-      private final @Nullable Output<Integer> burstLimit;
+    private @Nullable Output<Integer> burstLimit;
 
-    public Output<Integer> burstLimit() {
-        return this.burstLimit == null ? Codegen.empty() : this.burstLimit;
+    public Optional<Output<Integer>> burstLimit() {
+        return Optional.ofNullable(this.burstLimit);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class UsagePlanApiStageThrottleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -44,76 +44,69 @@ public final class UsagePlanApiStageThrottleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="rateLimit")
-      private final @Nullable Output<Double> rateLimit;
+    private @Nullable Output<Double> rateLimit;
 
-    public Output<Double> rateLimit() {
-        return this.rateLimit == null ? Codegen.empty() : this.rateLimit;
+    public Optional<Output<Double>> rateLimit() {
+        return Optional.ofNullable(this.rateLimit);
     }
 
-    public UsagePlanApiStageThrottleArgs(
-        @Nullable Output<Integer> burstLimit,
-        Output<String> path,
-        @Nullable Output<Double> rateLimit) {
-        this.burstLimit = burstLimit;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.rateLimit = rateLimit;
-    }
+    private UsagePlanApiStageThrottleArgs() {}
 
-    private UsagePlanApiStageThrottleArgs() {
-        this.burstLimit = Codegen.empty();
-        this.path = Codegen.empty();
-        this.rateLimit = Codegen.empty();
+    private UsagePlanApiStageThrottleArgs(UsagePlanApiStageThrottleArgs $) {
+        this.burstLimit = $.burstLimit;
+        this.path = $.path;
+        this.rateLimit = $.rateLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsagePlanApiStageThrottleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> burstLimit;
-        private Output<String> path;
-        private @Nullable Output<Double> rateLimit;
+        private UsagePlanApiStageThrottleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsagePlanApiStageThrottleArgs();
         }
 
         public Builder(UsagePlanApiStageThrottleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.burstLimit = defaults.burstLimit;
-    	      this.path = defaults.path;
-    	      this.rateLimit = defaults.rateLimit;
+            $ = new UsagePlanApiStageThrottleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder burstLimit(@Nullable Output<Integer> burstLimit) {
-            this.burstLimit = burstLimit;
+            $.burstLimit = burstLimit;
             return this;
         }
-        public Builder burstLimit(@Nullable Integer burstLimit) {
-            this.burstLimit = Codegen.ofNullable(burstLimit);
-            return this;
+
+        public Builder burstLimit(Integer burstLimit) {
+            return burstLimit(Output.of(burstLimit));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder rateLimit(@Nullable Output<Double> rateLimit) {
-            this.rateLimit = rateLimit;
+            $.rateLimit = rateLimit;
             return this;
         }
-        public Builder rateLimit(@Nullable Double rateLimit) {
-            this.rateLimit = Codegen.ofNullable(rateLimit);
-            return this;
-        }        public UsagePlanApiStageThrottleArgs build() {
-            return new UsagePlanApiStageThrottleArgs(burstLimit, path, rateLimit);
+
+        public Builder rateLimit(Double rateLimit) {
+            return rateLimit(Output.of(rateLimit));
+        }
+
+        public UsagePlanApiStageThrottleArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

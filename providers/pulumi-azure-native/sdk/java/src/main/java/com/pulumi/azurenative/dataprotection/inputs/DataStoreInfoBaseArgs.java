@@ -7,7 +7,6 @@ import com.pulumi.azurenative.dataprotection.enums.DataStoreTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class DataStoreInfoBaseArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dataStoreType", required=true)
-      private final Output<Either<String,DataStoreTypes>> dataStoreType;
+    private Output<Either<String,DataStoreTypes>> dataStoreType;
 
     public Output<Either<String,DataStoreTypes>> dataStoreType() {
         return this.dataStoreType;
@@ -36,63 +35,60 @@ public final class DataStoreInfoBaseArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<String> objectType;
+    private Output<String> objectType;
 
     public Output<String> objectType() {
         return this.objectType;
     }
 
-    public DataStoreInfoBaseArgs(
-        Output<Either<String,DataStoreTypes>> dataStoreType,
-        Output<String> objectType) {
-        this.dataStoreType = Objects.requireNonNull(dataStoreType, "expected parameter 'dataStoreType' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
-    }
+    private DataStoreInfoBaseArgs() {}
 
-    private DataStoreInfoBaseArgs() {
-        this.dataStoreType = Codegen.empty();
-        this.objectType = Codegen.empty();
+    private DataStoreInfoBaseArgs(DataStoreInfoBaseArgs $) {
+        this.dataStoreType = $.dataStoreType;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataStoreInfoBaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,DataStoreTypes>> dataStoreType;
-        private Output<String> objectType;
+        private DataStoreInfoBaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataStoreInfoBaseArgs();
         }
 
         public Builder(DataStoreInfoBaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataStoreType = defaults.dataStoreType;
-    	      this.objectType = defaults.objectType;
+            $ = new DataStoreInfoBaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataStoreType(Output<Either<String,DataStoreTypes>> dataStoreType) {
-            this.dataStoreType = Objects.requireNonNull(dataStoreType);
+            $.dataStoreType = dataStoreType;
             return this;
         }
+
         public Builder dataStoreType(Either<String,DataStoreTypes> dataStoreType) {
-            this.dataStoreType = Output.of(Objects.requireNonNull(dataStoreType));
-            return this;
+            return dataStoreType(Output.of(dataStoreType));
         }
+
         public Builder objectType(Output<String> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
-        }        public DataStoreInfoBaseArgs build() {
-            return new DataStoreInfoBaseArgs(dataStoreType, objectType);
+            return objectType(Output.of(objectType));
+        }
+
+        public DataStoreInfoBaseArgs build() {
+            $.dataStoreType = Objects.requireNonNull($.dataStoreType, "expected parameter 'dataStoreType' to be non-null");
+            $.objectType = Objects.requireNonNull($.objectType, "expected parameter 'objectType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,10 +10,10 @@ import com.pulumi.azurenative.web.inputs.SecretArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activeRevisionsMode")
-      private final @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
+    private @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
 
-    public Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode() {
-        return this.activeRevisionsMode == null ? Codegen.empty() : this.activeRevisionsMode;
+    public Optional<Output<Either<String,ActiveRevisionsMode>>> activeRevisionsMode() {
+        return Optional.ofNullable(this.activeRevisionsMode);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingress")
-      private final @Nullable Output<IngressArgs> ingress;
+    private @Nullable Output<IngressArgs> ingress;
 
-    public Output<IngressArgs> ingress() {
-        return this.ingress == null ? Codegen.empty() : this.ingress;
+    public Optional<Output<IngressArgs>> ingress() {
+        return Optional.ofNullable(this.ingress);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registries")
-      private final @Nullable Output<List<RegistryCredentialsArgs>> registries;
+    private @Nullable Output<List<RegistryCredentialsArgs>> registries;
 
-    public Output<List<RegistryCredentialsArgs>> registries() {
-        return this.registries == null ? Codegen.empty() : this.registries;
+    public Optional<Output<List<RegistryCredentialsArgs>>> registries() {
+        return Optional.ofNullable(this.registries);
     }
 
     /**
@@ -64,95 +64,86 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secrets")
-      private final @Nullable Output<List<SecretArgs>> secrets;
+    private @Nullable Output<List<SecretArgs>> secrets;
 
-    public Output<List<SecretArgs>> secrets() {
-        return this.secrets == null ? Codegen.empty() : this.secrets;
+    public Optional<Output<List<SecretArgs>>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
-    public ConfigurationArgs(
-        @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode,
-        @Nullable Output<IngressArgs> ingress,
-        @Nullable Output<List<RegistryCredentialsArgs>> registries,
-        @Nullable Output<List<SecretArgs>> secrets) {
-        this.activeRevisionsMode = activeRevisionsMode;
-        this.ingress = ingress;
-        this.registries = registries;
-        this.secrets = secrets;
-    }
+    private ConfigurationArgs() {}
 
-    private ConfigurationArgs() {
-        this.activeRevisionsMode = Codegen.empty();
-        this.ingress = Codegen.empty();
-        this.registries = Codegen.empty();
-        this.secrets = Codegen.empty();
+    private ConfigurationArgs(ConfigurationArgs $) {
+        this.activeRevisionsMode = $.activeRevisionsMode;
+        this.ingress = $.ingress;
+        this.registries = $.registries;
+        this.secrets = $.secrets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
-        private @Nullable Output<IngressArgs> ingress;
-        private @Nullable Output<List<RegistryCredentialsArgs>> registries;
-        private @Nullable Output<List<SecretArgs>> secrets;
+        private ConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationArgs();
         }
 
         public Builder(ConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeRevisionsMode = defaults.activeRevisionsMode;
-    	      this.ingress = defaults.ingress;
-    	      this.registries = defaults.registries;
-    	      this.secrets = defaults.secrets;
+            $ = new ConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeRevisionsMode(@Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode) {
-            this.activeRevisionsMode = activeRevisionsMode;
+            $.activeRevisionsMode = activeRevisionsMode;
             return this;
         }
-        public Builder activeRevisionsMode(@Nullable Either<String,ActiveRevisionsMode> activeRevisionsMode) {
-            this.activeRevisionsMode = Codegen.ofNullable(activeRevisionsMode);
-            return this;
+
+        public Builder activeRevisionsMode(Either<String,ActiveRevisionsMode> activeRevisionsMode) {
+            return activeRevisionsMode(Output.of(activeRevisionsMode));
         }
+
         public Builder ingress(@Nullable Output<IngressArgs> ingress) {
-            this.ingress = ingress;
+            $.ingress = ingress;
             return this;
         }
-        public Builder ingress(@Nullable IngressArgs ingress) {
-            this.ingress = Codegen.ofNullable(ingress);
-            return this;
+
+        public Builder ingress(IngressArgs ingress) {
+            return ingress(Output.of(ingress));
         }
+
         public Builder registries(@Nullable Output<List<RegistryCredentialsArgs>> registries) {
-            this.registries = registries;
+            $.registries = registries;
             return this;
         }
-        public Builder registries(@Nullable List<RegistryCredentialsArgs> registries) {
-            this.registries = Codegen.ofNullable(registries);
-            return this;
+
+        public Builder registries(List<RegistryCredentialsArgs> registries) {
+            return registries(Output.of(registries));
         }
+
         public Builder registries(RegistryCredentialsArgs... registries) {
             return registries(List.of(registries));
         }
+
         public Builder secrets(@Nullable Output<List<SecretArgs>> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
-        public Builder secrets(@Nullable List<SecretArgs> secrets) {
-            this.secrets = Codegen.ofNullable(secrets);
-            return this;
+
+        public Builder secrets(List<SecretArgs> secrets) {
+            return secrets(Output.of(secrets));
         }
+
         public Builder secrets(SecretArgs... secrets) {
             return secrets(List.of(secrets));
-        }        public ConfigurationArgs build() {
-            return new ConfigurationArgs(activeRevisionsMode, ingress, registries, secrets);
+        }
+
+        public ConfigurationArgs build() {
+            return $;
         }
     }
+
 }

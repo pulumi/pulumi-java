@@ -22,7 +22,7 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="encryptionStatus", required=true)
-      private final StatusResponse encryptionStatus;
+    private StatusResponse encryptionStatus;
 
     public StatusResponse encryptionStatus() {
         return this.encryptionStatus;
@@ -33,7 +33,7 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="encryptionType", required=true)
-      private final String encryptionType;
+    private String encryptionType;
 
     public String encryptionType() {
         return this.encryptionType;
@@ -44,64 +44,59 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="kmsKeyVersion", required=true)
-      private final String kmsKeyVersion;
+    private String kmsKeyVersion;
 
     public String kmsKeyVersion() {
         return this.kmsKeyVersion;
     }
 
-    public EncryptionInfoResponse(
-        StatusResponse encryptionStatus,
-        String encryptionType,
-        String kmsKeyVersion) {
-        this.encryptionStatus = Objects.requireNonNull(encryptionStatus, "expected parameter 'encryptionStatus' to be non-null");
-        this.encryptionType = Objects.requireNonNull(encryptionType, "expected parameter 'encryptionType' to be non-null");
-        this.kmsKeyVersion = Objects.requireNonNull(kmsKeyVersion, "expected parameter 'kmsKeyVersion' to be non-null");
-    }
+    private EncryptionInfoResponse() {}
 
-    private EncryptionInfoResponse() {
-        this.encryptionStatus = null;
-        this.encryptionType = null;
-        this.kmsKeyVersion = null;
+    private EncryptionInfoResponse(EncryptionInfoResponse $) {
+        this.encryptionStatus = $.encryptionStatus;
+        this.encryptionType = $.encryptionType;
+        this.kmsKeyVersion = $.kmsKeyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private StatusResponse encryptionStatus;
-        private String encryptionType;
-        private String kmsKeyVersion;
+        private EncryptionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionInfoResponse();
         }
 
         public Builder(EncryptionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionStatus = defaults.encryptionStatus;
-    	      this.encryptionType = defaults.encryptionType;
-    	      this.kmsKeyVersion = defaults.kmsKeyVersion;
+            $ = new EncryptionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionStatus(StatusResponse encryptionStatus) {
-            this.encryptionStatus = Objects.requireNonNull(encryptionStatus);
+            $.encryptionStatus = encryptionStatus;
             return this;
         }
+
         public Builder encryptionType(String encryptionType) {
-            this.encryptionType = Objects.requireNonNull(encryptionType);
+            $.encryptionType = encryptionType;
             return this;
         }
+
         public Builder kmsKeyVersion(String kmsKeyVersion) {
-            this.kmsKeyVersion = Objects.requireNonNull(kmsKeyVersion);
+            $.kmsKeyVersion = kmsKeyVersion;
             return this;
-        }        public EncryptionInfoResponse build() {
-            return new EncryptionInfoResponse(encryptionStatus, encryptionType, kmsKeyVersion);
+        }
+
+        public EncryptionInfoResponse build() {
+            $.encryptionStatus = Objects.requireNonNull($.encryptionStatus, "expected parameter 'encryptionStatus' to be non-null");
+            $.encryptionType = Objects.requireNonNull($.encryptionType, "expected parameter 'encryptionType' to be non-null");
+            $.kmsKeyVersion = Objects.requireNonNull($.kmsKeyVersion, "expected parameter 'kmsKeyVersion' to be non-null");
+            return $;
         }
     }
+
 }

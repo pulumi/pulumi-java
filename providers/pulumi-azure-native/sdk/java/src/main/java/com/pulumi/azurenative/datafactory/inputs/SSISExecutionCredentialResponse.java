@@ -22,7 +22,7 @@ public final class SSISExecutionCredentialResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="domain", required=true)
-      private final Object domain;
+    private Object domain;
 
     public Object domain() {
         return this.domain;
@@ -33,7 +33,7 @@ public final class SSISExecutionCredentialResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="password", required=true)
-      private final SecureStringResponse password;
+    private SecureStringResponse password;
 
     public SecureStringResponse password() {
         return this.password;
@@ -44,64 +44,59 @@ public final class SSISExecutionCredentialResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="userName", required=true)
-      private final Object userName;
+    private Object userName;
 
     public Object userName() {
         return this.userName;
     }
 
-    public SSISExecutionCredentialResponse(
-        Object domain,
-        SecureStringResponse password,
-        Object userName) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private SSISExecutionCredentialResponse() {}
 
-    private SSISExecutionCredentialResponse() {
-        this.domain = null;
-        this.password = null;
-        this.userName = null;
+    private SSISExecutionCredentialResponse(SSISExecutionCredentialResponse $) {
+        this.domain = $.domain;
+        this.password = $.password;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSISExecutionCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object domain;
-        private SecureStringResponse password;
-        private Object userName;
+        private SSISExecutionCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSISExecutionCredentialResponse();
         }
 
         public Builder(SSISExecutionCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.password = defaults.password;
-    	      this.userName = defaults.userName;
+            $ = new SSISExecutionCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(Object domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder password(SecureStringResponse password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder userName(Object userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public SSISExecutionCredentialResponse build() {
-            return new SSISExecutionCredentialResponse(domain, password, userName);
+        }
+
+        public SSISExecutionCredentialResponse build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

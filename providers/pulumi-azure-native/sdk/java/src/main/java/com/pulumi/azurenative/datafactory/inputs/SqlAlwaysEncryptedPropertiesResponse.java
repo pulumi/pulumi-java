@@ -28,7 +28,7 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="alwaysEncryptedAkvAuthType", required=true)
-      private final String alwaysEncryptedAkvAuthType;
+    private String alwaysEncryptedAkvAuthType;
 
     public String alwaysEncryptedAkvAuthType() {
         return this.alwaysEncryptedAkvAuthType;
@@ -39,10 +39,10 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Object servicePrincipalId;
+    private @Nullable Object servicePrincipalId;
 
     public Optional<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -61,73 +61,63 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="servicePrincipalKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
-        return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
+        return Optional.ofNullable(this.servicePrincipalKey);
     }
 
-    public SqlAlwaysEncryptedPropertiesResponse(
-        String alwaysEncryptedAkvAuthType,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-        this.alwaysEncryptedAkvAuthType = Objects.requireNonNull(alwaysEncryptedAkvAuthType, "expected parameter 'alwaysEncryptedAkvAuthType' to be non-null");
-        this.credential = credential;
-        this.servicePrincipalId = servicePrincipalId;
-        this.servicePrincipalKey = servicePrincipalKey;
-    }
+    private SqlAlwaysEncryptedPropertiesResponse() {}
 
-    private SqlAlwaysEncryptedPropertiesResponse() {
-        this.alwaysEncryptedAkvAuthType = null;
-        this.credential = null;
-        this.servicePrincipalId = null;
-        this.servicePrincipalKey = null;
+    private SqlAlwaysEncryptedPropertiesResponse(SqlAlwaysEncryptedPropertiesResponse $) {
+        this.alwaysEncryptedAkvAuthType = $.alwaysEncryptedAkvAuthType;
+        this.credential = $.credential;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlAlwaysEncryptedPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alwaysEncryptedAkvAuthType;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable Object servicePrincipalId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+        private SqlAlwaysEncryptedPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlAlwaysEncryptedPropertiesResponse();
         }
 
         public Builder(SqlAlwaysEncryptedPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alwaysEncryptedAkvAuthType = defaults.alwaysEncryptedAkvAuthType;
-    	      this.credential = defaults.credential;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
+            $ = new SqlAlwaysEncryptedPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alwaysEncryptedAkvAuthType(String alwaysEncryptedAkvAuthType) {
-            this.alwaysEncryptedAkvAuthType = Objects.requireNonNull(alwaysEncryptedAkvAuthType);
+            $.alwaysEncryptedAkvAuthType = alwaysEncryptedAkvAuthType;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-            this.servicePrincipalKey = servicePrincipalKey;
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
-        }        public SqlAlwaysEncryptedPropertiesResponse build() {
-            return new SqlAlwaysEncryptedPropertiesResponse(alwaysEncryptedAkvAuthType, credential, servicePrincipalId, servicePrincipalKey);
+        }
+
+        public SqlAlwaysEncryptedPropertiesResponse build() {
+            $.alwaysEncryptedAkvAuthType = Objects.requireNonNull($.alwaysEncryptedAkvAuthType, "expected parameter 'alwaysEncryptedAkvAuthType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class Oauth2JwtBearerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="clientKey", required=true)
-      private final SecretResponse clientKey;
+    private SecretResponse clientKey;
 
     public SecretResponse clientKey() {
         return this.clientKey;
@@ -33,55 +33,52 @@ public final class Oauth2JwtBearerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="jwtClaims", required=true)
-      private final JwtClaimsResponse jwtClaims;
+    private JwtClaimsResponse jwtClaims;
 
     public JwtClaimsResponse jwtClaims() {
         return this.jwtClaims;
     }
 
-    public Oauth2JwtBearerResponse(
-        SecretResponse clientKey,
-        JwtClaimsResponse jwtClaims) {
-        this.clientKey = Objects.requireNonNull(clientKey, "expected parameter 'clientKey' to be non-null");
-        this.jwtClaims = Objects.requireNonNull(jwtClaims, "expected parameter 'jwtClaims' to be non-null");
-    }
+    private Oauth2JwtBearerResponse() {}
 
-    private Oauth2JwtBearerResponse() {
-        this.clientKey = null;
-        this.jwtClaims = null;
+    private Oauth2JwtBearerResponse(Oauth2JwtBearerResponse $) {
+        this.clientKey = $.clientKey;
+        this.jwtClaims = $.jwtClaims;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Oauth2JwtBearerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SecretResponse clientKey;
-        private JwtClaimsResponse jwtClaims;
+        private Oauth2JwtBearerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Oauth2JwtBearerResponse();
         }
 
         public Builder(Oauth2JwtBearerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientKey = defaults.clientKey;
-    	      this.jwtClaims = defaults.jwtClaims;
+            $ = new Oauth2JwtBearerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientKey(SecretResponse clientKey) {
-            this.clientKey = Objects.requireNonNull(clientKey);
+            $.clientKey = clientKey;
             return this;
         }
+
         public Builder jwtClaims(JwtClaimsResponse jwtClaims) {
-            this.jwtClaims = Objects.requireNonNull(jwtClaims);
+            $.jwtClaims = jwtClaims;
             return this;
-        }        public Oauth2JwtBearerResponse build() {
-            return new Oauth2JwtBearerResponse(clientKey, jwtClaims);
+        }
+
+        public Oauth2JwtBearerResponse build() {
+            $.clientKey = Objects.requireNonNull($.clientKey, "expected parameter 'clientKey' to be non-null");
+            $.jwtClaims = Objects.requireNonNull($.jwtClaims, "expected parameter 'jwtClaims' to be non-null");
+            return $;
         }
     }
+
 }

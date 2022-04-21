@@ -26,7 +26,7 @@ public final class SourceTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -37,7 +37,7 @@ public final class SourceTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourceRepository", required=true)
-      private final SourcePropertiesResponse sourceRepository;
+    private SourcePropertiesResponse sourceRepository;
 
     public SourcePropertiesResponse sourceRepository() {
         return this.sourceRepository;
@@ -48,7 +48,7 @@ public final class SourceTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourceTriggerEvents", required=true)
-      private final List<String> sourceTriggerEvents;
+    private List<String> sourceTriggerEvents;
 
     public List<String> sourceTriggerEvents() {
         return this.sourceTriggerEvents;
@@ -59,76 +59,70 @@ public final class SourceTriggerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public SourceTriggerResponse(
-        String name,
-        SourcePropertiesResponse sourceRepository,
-        List<String> sourceTriggerEvents,
-        @Nullable String status) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.sourceRepository = Objects.requireNonNull(sourceRepository, "expected parameter 'sourceRepository' to be non-null");
-        this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents, "expected parameter 'sourceTriggerEvents' to be non-null");
-        this.status = Codegen.stringProp("status").arg(status).def("Enabled").getNullable();
-    }
+    private SourceTriggerResponse() {}
 
-    private SourceTriggerResponse() {
-        this.name = null;
-        this.sourceRepository = null;
-        this.sourceTriggerEvents = List.of();
-        this.status = null;
+    private SourceTriggerResponse(SourceTriggerResponse $) {
+        this.name = $.name;
+        this.sourceRepository = $.sourceRepository;
+        this.sourceTriggerEvents = $.sourceTriggerEvents;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private SourcePropertiesResponse sourceRepository;
-        private List<String> sourceTriggerEvents;
-        private @Nullable String status;
+        private SourceTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceTriggerResponse();
         }
 
         public Builder(SourceTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sourceRepository = defaults.sourceRepository;
-    	      this.sourceTriggerEvents = defaults.sourceTriggerEvents;
-    	      this.status = defaults.status;
+            $ = new SourceTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder sourceRepository(SourcePropertiesResponse sourceRepository) {
-            this.sourceRepository = Objects.requireNonNull(sourceRepository);
+            $.sourceRepository = sourceRepository;
             return this;
         }
+
         public Builder sourceTriggerEvents(List<String> sourceTriggerEvents) {
-            this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents);
+            $.sourceTriggerEvents = sourceTriggerEvents;
             return this;
         }
+
         public Builder sourceTriggerEvents(String... sourceTriggerEvents) {
             return sourceTriggerEvents(List.of(sourceTriggerEvents));
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public SourceTriggerResponse build() {
-            return new SourceTriggerResponse(name, sourceRepository, sourceTriggerEvents, status);
+        }
+
+        public SourceTriggerResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sourceRepository = Objects.requireNonNull($.sourceRepository, "expected parameter 'sourceRepository' to be non-null");
+            $.sourceTriggerEvents = Objects.requireNonNull($.sourceTriggerEvents, "expected parameter 'sourceTriggerEvents' to be non-null");
+            $.status = Codegen.stringProp("status").arg($.status).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

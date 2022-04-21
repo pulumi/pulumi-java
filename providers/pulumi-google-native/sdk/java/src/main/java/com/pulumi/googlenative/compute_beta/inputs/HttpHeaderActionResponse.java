@@ -23,7 +23,7 @@ public final class HttpHeaderActionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="requestHeadersToAdd", required=true)
-      private final List<HttpHeaderOptionResponse> requestHeadersToAdd;
+    private List<HttpHeaderOptionResponse> requestHeadersToAdd;
 
     public List<HttpHeaderOptionResponse> requestHeadersToAdd() {
         return this.requestHeadersToAdd;
@@ -34,7 +34,7 @@ public final class HttpHeaderActionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="requestHeadersToRemove", required=true)
-      private final List<String> requestHeadersToRemove;
+    private List<String> requestHeadersToRemove;
 
     public List<String> requestHeadersToRemove() {
         return this.requestHeadersToRemove;
@@ -45,7 +45,7 @@ public final class HttpHeaderActionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="responseHeadersToAdd", required=true)
-      private final List<HttpHeaderOptionResponse> responseHeadersToAdd;
+    private List<HttpHeaderOptionResponse> responseHeadersToAdd;
 
     public List<HttpHeaderOptionResponse> responseHeadersToAdd() {
         return this.responseHeadersToAdd;
@@ -56,85 +56,82 @@ public final class HttpHeaderActionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="responseHeadersToRemove", required=true)
-      private final List<String> responseHeadersToRemove;
+    private List<String> responseHeadersToRemove;
 
     public List<String> responseHeadersToRemove() {
         return this.responseHeadersToRemove;
     }
 
-    public HttpHeaderActionResponse(
-        List<HttpHeaderOptionResponse> requestHeadersToAdd,
-        List<String> requestHeadersToRemove,
-        List<HttpHeaderOptionResponse> responseHeadersToAdd,
-        List<String> responseHeadersToRemove) {
-        this.requestHeadersToAdd = Objects.requireNonNull(requestHeadersToAdd, "expected parameter 'requestHeadersToAdd' to be non-null");
-        this.requestHeadersToRemove = Objects.requireNonNull(requestHeadersToRemove, "expected parameter 'requestHeadersToRemove' to be non-null");
-        this.responseHeadersToAdd = Objects.requireNonNull(responseHeadersToAdd, "expected parameter 'responseHeadersToAdd' to be non-null");
-        this.responseHeadersToRemove = Objects.requireNonNull(responseHeadersToRemove, "expected parameter 'responseHeadersToRemove' to be non-null");
-    }
+    private HttpHeaderActionResponse() {}
 
-    private HttpHeaderActionResponse() {
-        this.requestHeadersToAdd = List.of();
-        this.requestHeadersToRemove = List.of();
-        this.responseHeadersToAdd = List.of();
-        this.responseHeadersToRemove = List.of();
+    private HttpHeaderActionResponse(HttpHeaderActionResponse $) {
+        this.requestHeadersToAdd = $.requestHeadersToAdd;
+        this.requestHeadersToRemove = $.requestHeadersToRemove;
+        this.responseHeadersToAdd = $.responseHeadersToAdd;
+        this.responseHeadersToRemove = $.responseHeadersToRemove;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpHeaderActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<HttpHeaderOptionResponse> requestHeadersToAdd;
-        private List<String> requestHeadersToRemove;
-        private List<HttpHeaderOptionResponse> responseHeadersToAdd;
-        private List<String> responseHeadersToRemove;
+        private HttpHeaderActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpHeaderActionResponse();
         }
 
         public Builder(HttpHeaderActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestHeadersToAdd = defaults.requestHeadersToAdd;
-    	      this.requestHeadersToRemove = defaults.requestHeadersToRemove;
-    	      this.responseHeadersToAdd = defaults.responseHeadersToAdd;
-    	      this.responseHeadersToRemove = defaults.responseHeadersToRemove;
+            $ = new HttpHeaderActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder requestHeadersToAdd(List<HttpHeaderOptionResponse> requestHeadersToAdd) {
-            this.requestHeadersToAdd = Objects.requireNonNull(requestHeadersToAdd);
+            $.requestHeadersToAdd = requestHeadersToAdd;
             return this;
         }
+
         public Builder requestHeadersToAdd(HttpHeaderOptionResponse... requestHeadersToAdd) {
             return requestHeadersToAdd(List.of(requestHeadersToAdd));
         }
+
         public Builder requestHeadersToRemove(List<String> requestHeadersToRemove) {
-            this.requestHeadersToRemove = Objects.requireNonNull(requestHeadersToRemove);
+            $.requestHeadersToRemove = requestHeadersToRemove;
             return this;
         }
+
         public Builder requestHeadersToRemove(String... requestHeadersToRemove) {
             return requestHeadersToRemove(List.of(requestHeadersToRemove));
         }
+
         public Builder responseHeadersToAdd(List<HttpHeaderOptionResponse> responseHeadersToAdd) {
-            this.responseHeadersToAdd = Objects.requireNonNull(responseHeadersToAdd);
+            $.responseHeadersToAdd = responseHeadersToAdd;
             return this;
         }
+
         public Builder responseHeadersToAdd(HttpHeaderOptionResponse... responseHeadersToAdd) {
             return responseHeadersToAdd(List.of(responseHeadersToAdd));
         }
+
         public Builder responseHeadersToRemove(List<String> responseHeadersToRemove) {
-            this.responseHeadersToRemove = Objects.requireNonNull(responseHeadersToRemove);
+            $.responseHeadersToRemove = responseHeadersToRemove;
             return this;
         }
+
         public Builder responseHeadersToRemove(String... responseHeadersToRemove) {
             return responseHeadersToRemove(List.of(responseHeadersToRemove));
-        }        public HttpHeaderActionResponse build() {
-            return new HttpHeaderActionResponse(requestHeadersToAdd, requestHeadersToRemove, responseHeadersToAdd, responseHeadersToRemove);
+        }
+
+        public HttpHeaderActionResponse build() {
+            $.requestHeadersToAdd = Objects.requireNonNull($.requestHeadersToAdd, "expected parameter 'requestHeadersToAdd' to be non-null");
+            $.requestHeadersToRemove = Objects.requireNonNull($.requestHeadersToRemove, "expected parameter 'requestHeadersToRemove' to be non-null");
+            $.responseHeadersToAdd = Objects.requireNonNull($.responseHeadersToAdd, "expected parameter 'responseHeadersToAdd' to be non-null");
+            $.responseHeadersToRemove = Objects.requireNonNull($.responseHeadersToRemove, "expected parameter 'responseHeadersToRemove' to be non-null");
+            return $;
         }
     }
+
 }

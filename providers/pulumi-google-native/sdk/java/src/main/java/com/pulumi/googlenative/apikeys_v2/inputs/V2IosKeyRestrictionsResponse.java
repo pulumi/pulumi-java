@@ -22,48 +22,49 @@ public final class V2IosKeyRestrictionsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="allowedBundleIds", required=true)
-      private final List<String> allowedBundleIds;
+    private List<String> allowedBundleIds;
 
     public List<String> allowedBundleIds() {
         return this.allowedBundleIds;
     }
 
-    public V2IosKeyRestrictionsResponse(List<String> allowedBundleIds) {
-        this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds, "expected parameter 'allowedBundleIds' to be non-null");
-    }
+    private V2IosKeyRestrictionsResponse() {}
 
-    private V2IosKeyRestrictionsResponse() {
-        this.allowedBundleIds = List.of();
+    private V2IosKeyRestrictionsResponse(V2IosKeyRestrictionsResponse $) {
+        this.allowedBundleIds = $.allowedBundleIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2IosKeyRestrictionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedBundleIds;
+        private V2IosKeyRestrictionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2IosKeyRestrictionsResponse();
         }
 
         public Builder(V2IosKeyRestrictionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedBundleIds = defaults.allowedBundleIds;
+            $ = new V2IosKeyRestrictionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedBundleIds(List<String> allowedBundleIds) {
-            this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
+            $.allowedBundleIds = allowedBundleIds;
             return this;
         }
+
         public Builder allowedBundleIds(String... allowedBundleIds) {
             return allowedBundleIds(List.of(allowedBundleIds));
-        }        public V2IosKeyRestrictionsResponse build() {
-            return new V2IosKeyRestrictionsResponse(allowedBundleIds);
+        }
+
+        public V2IosKeyRestrictionsResponse build() {
+            $.allowedBundleIds = Objects.requireNonNull($.allowedBundleIds, "expected parameter 'allowedBundleIds' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class InstanceMonthlyTransfer extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="gbPerMonthAllocated")
-      private final @Nullable String gbPerMonthAllocated;
+    private @Nullable String gbPerMonthAllocated;
 
     public Optional<String> gbPerMonthAllocated() {
-        return this.gbPerMonthAllocated == null ? Optional.empty() : Optional.ofNullable(this.gbPerMonthAllocated);
+        return Optional.ofNullable(this.gbPerMonthAllocated);
     }
 
-    public InstanceMonthlyTransfer(@Nullable String gbPerMonthAllocated) {
-        this.gbPerMonthAllocated = gbPerMonthAllocated;
-    }
+    private InstanceMonthlyTransfer() {}
 
-    private InstanceMonthlyTransfer() {
-        this.gbPerMonthAllocated = null;
+    private InstanceMonthlyTransfer(InstanceMonthlyTransfer $) {
+        this.gbPerMonthAllocated = $.gbPerMonthAllocated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceMonthlyTransfer defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String gbPerMonthAllocated;
+        private InstanceMonthlyTransfer $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceMonthlyTransfer();
         }
 
         public Builder(InstanceMonthlyTransfer defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gbPerMonthAllocated = defaults.gbPerMonthAllocated;
+            $ = new InstanceMonthlyTransfer(Objects.requireNonNull(defaults));
         }
 
         public Builder gbPerMonthAllocated(@Nullable String gbPerMonthAllocated) {
-            this.gbPerMonthAllocated = gbPerMonthAllocated;
+            $.gbPerMonthAllocated = gbPerMonthAllocated;
             return this;
-        }        public InstanceMonthlyTransfer build() {
-            return new InstanceMonthlyTransfer(gbPerMonthAllocated);
+        }
+
+        public InstanceMonthlyTransfer build() {
+            return $;
         }
     }
+
 }

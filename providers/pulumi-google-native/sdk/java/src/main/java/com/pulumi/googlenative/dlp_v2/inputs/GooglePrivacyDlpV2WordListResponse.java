@@ -22,48 +22,49 @@ public final class GooglePrivacyDlpV2WordListResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="words", required=true)
-      private final List<String> words;
+    private List<String> words;
 
     public List<String> words() {
         return this.words;
     }
 
-    public GooglePrivacyDlpV2WordListResponse(List<String> words) {
-        this.words = Objects.requireNonNull(words, "expected parameter 'words' to be non-null");
-    }
+    private GooglePrivacyDlpV2WordListResponse() {}
 
-    private GooglePrivacyDlpV2WordListResponse() {
-        this.words = List.of();
+    private GooglePrivacyDlpV2WordListResponse(GooglePrivacyDlpV2WordListResponse $) {
+        this.words = $.words;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2WordListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> words;
+        private GooglePrivacyDlpV2WordListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2WordListResponse();
         }
 
         public Builder(GooglePrivacyDlpV2WordListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.words = defaults.words;
+            $ = new GooglePrivacyDlpV2WordListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder words(List<String> words) {
-            this.words = Objects.requireNonNull(words);
+            $.words = words;
             return this;
         }
+
         public Builder words(String... words) {
             return words(List.of(words));
-        }        public GooglePrivacyDlpV2WordListResponse build() {
-            return new GooglePrivacyDlpV2WordListResponse(words);
+        }
+
+        public GooglePrivacyDlpV2WordListResponse build() {
+            $.words = Objects.requireNonNull($.words, "expected parameter 'words' to be non-null");
+            return $;
         }
     }
+
 }

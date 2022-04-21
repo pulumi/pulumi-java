@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class LogDestinationPolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="accessPolicy", required=true)
-      private final Output<String> accessPolicy;
+    private Output<String> accessPolicy;
 
     public Output<String> accessPolicy() {
         return this.accessPolicy;
@@ -32,7 +32,7 @@ public final class LogDestinationPolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="destinationName", required=true)
-      private final Output<String> destinationName;
+    private Output<String> destinationName;
 
     public Output<String> destinationName() {
         return this.destinationName;
@@ -43,76 +43,70 @@ public final class LogDestinationPolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="forceUpdate")
-      private final @Nullable Output<Boolean> forceUpdate;
+    private @Nullable Output<Boolean> forceUpdate;
 
-    public Output<Boolean> forceUpdate() {
-        return this.forceUpdate == null ? Codegen.empty() : this.forceUpdate;
+    public Optional<Output<Boolean>> forceUpdate() {
+        return Optional.ofNullable(this.forceUpdate);
     }
 
-    public LogDestinationPolicyArgs(
-        Output<String> accessPolicy,
-        Output<String> destinationName,
-        @Nullable Output<Boolean> forceUpdate) {
-        this.accessPolicy = Objects.requireNonNull(accessPolicy, "expected parameter 'accessPolicy' to be non-null");
-        this.destinationName = Objects.requireNonNull(destinationName, "expected parameter 'destinationName' to be non-null");
-        this.forceUpdate = forceUpdate;
-    }
+    private LogDestinationPolicyArgs() {}
 
-    private LogDestinationPolicyArgs() {
-        this.accessPolicy = Codegen.empty();
-        this.destinationName = Codegen.empty();
-        this.forceUpdate = Codegen.empty();
+    private LogDestinationPolicyArgs(LogDestinationPolicyArgs $) {
+        this.accessPolicy = $.accessPolicy;
+        this.destinationName = $.destinationName;
+        this.forceUpdate = $.forceUpdate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogDestinationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessPolicy;
-        private Output<String> destinationName;
-        private @Nullable Output<Boolean> forceUpdate;
+        private LogDestinationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogDestinationPolicyArgs();
         }
 
         public Builder(LogDestinationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicy = defaults.accessPolicy;
-    	      this.destinationName = defaults.destinationName;
-    	      this.forceUpdate = defaults.forceUpdate;
+            $ = new LogDestinationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicy(Output<String> accessPolicy) {
-            this.accessPolicy = Objects.requireNonNull(accessPolicy);
+            $.accessPolicy = accessPolicy;
             return this;
         }
+
         public Builder accessPolicy(String accessPolicy) {
-            this.accessPolicy = Output.of(Objects.requireNonNull(accessPolicy));
-            return this;
+            return accessPolicy(Output.of(accessPolicy));
         }
+
         public Builder destinationName(Output<String> destinationName) {
-            this.destinationName = Objects.requireNonNull(destinationName);
+            $.destinationName = destinationName;
             return this;
         }
+
         public Builder destinationName(String destinationName) {
-            this.destinationName = Output.of(Objects.requireNonNull(destinationName));
-            return this;
+            return destinationName(Output.of(destinationName));
         }
+
         public Builder forceUpdate(@Nullable Output<Boolean> forceUpdate) {
-            this.forceUpdate = forceUpdate;
+            $.forceUpdate = forceUpdate;
             return this;
         }
-        public Builder forceUpdate(@Nullable Boolean forceUpdate) {
-            this.forceUpdate = Codegen.ofNullable(forceUpdate);
-            return this;
-        }        public LogDestinationPolicyArgs build() {
-            return new LogDestinationPolicyArgs(accessPolicy, destinationName, forceUpdate);
+
+        public Builder forceUpdate(Boolean forceUpdate) {
+            return forceUpdate(Output.of(forceUpdate));
+        }
+
+        public LogDestinationPolicyArgs build() {
+            $.accessPolicy = Objects.requireNonNull($.accessPolicy, "expected parameter 'accessPolicy' to be non-null");
+            $.destinationName = Objects.requireNonNull($.destinationName, "expected parameter 'destinationName' to be non-null");
+            return $;
         }
     }
+
 }

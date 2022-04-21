@@ -25,7 +25,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse extends c
      * 
      */
     @Import(name="ruleGroupName", required=true)
-      private final String ruleGroupName;
+    private String ruleGroupName;
 
     public String ruleGroupName() {
         return this.ruleGroupName;
@@ -36,58 +36,55 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse extends c
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<Integer> rules;
+    private @Nullable List<Integer> rules;
 
-    public List<Integer> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<Integer>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public ApplicationGatewayFirewallDisabledRuleGroupResponse(
-        String ruleGroupName,
-        @Nullable List<Integer> rules) {
-        this.ruleGroupName = Objects.requireNonNull(ruleGroupName, "expected parameter 'ruleGroupName' to be non-null");
-        this.rules = rules;
-    }
+    private ApplicationGatewayFirewallDisabledRuleGroupResponse() {}
 
-    private ApplicationGatewayFirewallDisabledRuleGroupResponse() {
-        this.ruleGroupName = null;
-        this.rules = List.of();
+    private ApplicationGatewayFirewallDisabledRuleGroupResponse(ApplicationGatewayFirewallDisabledRuleGroupResponse $) {
+        this.ruleGroupName = $.ruleGroupName;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayFirewallDisabledRuleGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ruleGroupName;
-        private @Nullable List<Integer> rules;
+        private ApplicationGatewayFirewallDisabledRuleGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayFirewallDisabledRuleGroupResponse();
         }
 
         public Builder(ApplicationGatewayFirewallDisabledRuleGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleGroupName = defaults.ruleGroupName;
-    	      this.rules = defaults.rules;
+            $ = new ApplicationGatewayFirewallDisabledRuleGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleGroupName(String ruleGroupName) {
-            this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
+            $.ruleGroupName = ruleGroupName;
             return this;
         }
+
         public Builder rules(@Nullable List<Integer> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(Integer... rules) {
             return rules(List.of(rules));
-        }        public ApplicationGatewayFirewallDisabledRuleGroupResponse build() {
-            return new ApplicationGatewayFirewallDisabledRuleGroupResponse(ruleGroupName, rules);
+        }
+
+        public ApplicationGatewayFirewallDisabledRuleGroupResponse build() {
+            $.ruleGroupName = Objects.requireNonNull($.ruleGroupName, "expected parameter 'ruleGroupName' to be non-null");
+            return $;
         }
     }
+
 }

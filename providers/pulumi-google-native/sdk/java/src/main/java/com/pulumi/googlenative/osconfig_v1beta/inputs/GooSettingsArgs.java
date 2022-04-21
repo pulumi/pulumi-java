@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GooSettingsArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final GooSettingsArgs Empty = new GooSettingsArgs();
 
-    public GooSettingsArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GooSettingsArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GooSettingsArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GooSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GooSettingsArgs();
         }
         public GooSettingsArgs build() {
-            return new GooSettingsArgs();
+            return $;
         }
     }
+
 }

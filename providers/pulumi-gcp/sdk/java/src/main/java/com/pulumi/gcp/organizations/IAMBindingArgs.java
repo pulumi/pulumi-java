@@ -5,11 +5,11 @@ package com.pulumi.gcp.organizations;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.organizations.inputs.IAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
     public static final IAMBindingArgs Empty = new IAMBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<IAMBindingConditionArgs> condition;
+    private @Nullable Output<IAMBindingConditionArgs> condition;
 
-    public Output<IAMBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<IAMBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -29,7 +29,7 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -40,7 +40,7 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orgId", required=true)
-      private final Output<String> orgId;
+    private Output<String> orgId;
 
     public Output<String> orgId() {
         return this.orgId;
@@ -53,92 +53,85 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public IAMBindingArgs(
-        @Nullable Output<IAMBindingConditionArgs> condition,
-        Output<List<String>> members,
-        Output<String> orgId,
-        Output<String> role) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private IAMBindingArgs() {}
 
-    private IAMBindingArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.role = Codegen.empty();
+    private IAMBindingArgs(IAMBindingArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.orgId = $.orgId;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IAMBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IAMBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private Output<String> orgId;
-        private Output<String> role;
+        private IAMBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IAMBindingArgs();
         }
 
         public Builder(IAMBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.orgId = defaults.orgId;
-    	      this.role = defaults.role;
+            $ = new IAMBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<IAMBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable IAMBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(IAMBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder orgId(Output<String> orgId) {
-            this.orgId = Objects.requireNonNull(orgId);
+            $.orgId = orgId;
             return this;
         }
+
         public Builder orgId(String orgId) {
-            this.orgId = Output.of(Objects.requireNonNull(orgId));
-            return this;
+            return orgId(Output.of(orgId));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public IAMBindingArgs build() {
-            return new IAMBindingArgs(condition, members, orgId, role);
+            return role(Output.of(role));
+        }
+
+        public IAMBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.orgId = Objects.requireNonNull($.orgId, "expected parameter 'orgId' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

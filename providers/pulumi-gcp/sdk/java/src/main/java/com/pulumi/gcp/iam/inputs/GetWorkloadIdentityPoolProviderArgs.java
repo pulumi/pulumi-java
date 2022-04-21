@@ -20,10 +20,10 @@ public final class GetWorkloadIdentityPoolProviderArgs extends com.pulumi.resour
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class GetWorkloadIdentityPoolProviderArgs extends com.pulumi.resour
      * 
      */
     @Import(name="workloadIdentityPoolId", required=true)
-      private final String workloadIdentityPoolId;
+    private String workloadIdentityPoolId;
 
     public String workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
@@ -44,64 +44,58 @@ public final class GetWorkloadIdentityPoolProviderArgs extends com.pulumi.resour
      * 
      */
     @Import(name="workloadIdentityPoolProviderId", required=true)
-      private final String workloadIdentityPoolProviderId;
+    private String workloadIdentityPoolProviderId;
 
     public String workloadIdentityPoolProviderId() {
         return this.workloadIdentityPoolProviderId;
     }
 
-    public GetWorkloadIdentityPoolProviderArgs(
-        @Nullable String project,
-        String workloadIdentityPoolId,
-        String workloadIdentityPoolProviderId) {
-        this.project = project;
-        this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId, "expected parameter 'workloadIdentityPoolId' to be non-null");
-        this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId, "expected parameter 'workloadIdentityPoolProviderId' to be non-null");
-    }
+    private GetWorkloadIdentityPoolProviderArgs() {}
 
-    private GetWorkloadIdentityPoolProviderArgs() {
-        this.project = null;
-        this.workloadIdentityPoolId = null;
-        this.workloadIdentityPoolProviderId = null;
+    private GetWorkloadIdentityPoolProviderArgs(GetWorkloadIdentityPoolProviderArgs $) {
+        this.project = $.project;
+        this.workloadIdentityPoolId = $.workloadIdentityPoolId;
+        this.workloadIdentityPoolProviderId = $.workloadIdentityPoolProviderId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadIdentityPoolProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String workloadIdentityPoolId;
-        private String workloadIdentityPoolProviderId;
+        private GetWorkloadIdentityPoolProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadIdentityPoolProviderArgs();
         }
 
         public Builder(GetWorkloadIdentityPoolProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.workloadIdentityPoolId = defaults.workloadIdentityPoolId;
-    	      this.workloadIdentityPoolProviderId = defaults.workloadIdentityPoolProviderId;
+            $ = new GetWorkloadIdentityPoolProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
-            this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
+            $.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
+
         public Builder workloadIdentityPoolProviderId(String workloadIdentityPoolProviderId) {
-            this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId);
+            $.workloadIdentityPoolProviderId = workloadIdentityPoolProviderId;
             return this;
-        }        public GetWorkloadIdentityPoolProviderArgs build() {
-            return new GetWorkloadIdentityPoolProviderArgs(project, workloadIdentityPoolId, workloadIdentityPoolProviderId);
+        }
+
+        public GetWorkloadIdentityPoolProviderArgs build() {
+            $.workloadIdentityPoolId = Objects.requireNonNull($.workloadIdentityPoolId, "expected parameter 'workloadIdentityPoolId' to be non-null");
+            $.workloadIdentityPoolProviderId = Objects.requireNonNull($.workloadIdentityPoolProviderId, "expected parameter 'workloadIdentityPoolProviderId' to be non-null");
+            return $;
         }
     }
+
 }

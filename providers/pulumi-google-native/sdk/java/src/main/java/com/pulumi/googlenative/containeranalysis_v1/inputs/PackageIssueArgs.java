@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="affectedCpeUri", required=true)
-      private final Output<String> affectedCpeUri;
+    private Output<String> affectedCpeUri;
 
     public Output<String> affectedCpeUri() {
         return this.affectedCpeUri;
@@ -36,7 +36,7 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="affectedPackage", required=true)
-      private final Output<String> affectedPackage;
+    private Output<String> affectedPackage;
 
     public Output<String> affectedPackage() {
         return this.affectedPackage;
@@ -47,7 +47,7 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="affectedVersion", required=true)
-      private final Output<VersionArgs> affectedVersion;
+    private Output<VersionArgs> affectedVersion;
 
     public Output<VersionArgs> affectedVersion() {
         return this.affectedVersion;
@@ -58,10 +58,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedCpeUri")
-      private final @Nullable Output<String> fixedCpeUri;
+    private @Nullable Output<String> fixedCpeUri;
 
-    public Output<String> fixedCpeUri() {
-        return this.fixedCpeUri == null ? Codegen.empty() : this.fixedCpeUri;
+    public Optional<Output<String>> fixedCpeUri() {
+        return Optional.ofNullable(this.fixedCpeUri);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedPackage")
-      private final @Nullable Output<String> fixedPackage;
+    private @Nullable Output<String> fixedPackage;
 
-    public Output<String> fixedPackage() {
-        return this.fixedPackage == null ? Codegen.empty() : this.fixedPackage;
+    public Optional<Output<String>> fixedPackage() {
+        return Optional.ofNullable(this.fixedPackage);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedVersion", required=true)
-      private final Output<VersionArgs> fixedVersion;
+    private Output<VersionArgs> fixedVersion;
 
     public Output<VersionArgs> fixedVersion() {
         return this.fixedVersion;
@@ -91,128 +91,112 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packageType")
-      private final @Nullable Output<String> packageType;
+    private @Nullable Output<String> packageType;
 
-    public Output<String> packageType() {
-        return this.packageType == null ? Codegen.empty() : this.packageType;
+    public Optional<Output<String>> packageType() {
+        return Optional.ofNullable(this.packageType);
     }
 
-    public PackageIssueArgs(
-        Output<String> affectedCpeUri,
-        Output<String> affectedPackage,
-        Output<VersionArgs> affectedVersion,
-        @Nullable Output<String> fixedCpeUri,
-        @Nullable Output<String> fixedPackage,
-        Output<VersionArgs> fixedVersion,
-        @Nullable Output<String> packageType) {
-        this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri, "expected parameter 'affectedCpeUri' to be non-null");
-        this.affectedPackage = Objects.requireNonNull(affectedPackage, "expected parameter 'affectedPackage' to be non-null");
-        this.affectedVersion = Objects.requireNonNull(affectedVersion, "expected parameter 'affectedVersion' to be non-null");
-        this.fixedCpeUri = fixedCpeUri;
-        this.fixedPackage = fixedPackage;
-        this.fixedVersion = Objects.requireNonNull(fixedVersion, "expected parameter 'fixedVersion' to be non-null");
-        this.packageType = packageType;
-    }
+    private PackageIssueArgs() {}
 
-    private PackageIssueArgs() {
-        this.affectedCpeUri = Codegen.empty();
-        this.affectedPackage = Codegen.empty();
-        this.affectedVersion = Codegen.empty();
-        this.fixedCpeUri = Codegen.empty();
-        this.fixedPackage = Codegen.empty();
-        this.fixedVersion = Codegen.empty();
-        this.packageType = Codegen.empty();
+    private PackageIssueArgs(PackageIssueArgs $) {
+        this.affectedCpeUri = $.affectedCpeUri;
+        this.affectedPackage = $.affectedPackage;
+        this.affectedVersion = $.affectedVersion;
+        this.fixedCpeUri = $.fixedCpeUri;
+        this.fixedPackage = $.fixedPackage;
+        this.fixedVersion = $.fixedVersion;
+        this.packageType = $.packageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageIssueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> affectedCpeUri;
-        private Output<String> affectedPackage;
-        private Output<VersionArgs> affectedVersion;
-        private @Nullable Output<String> fixedCpeUri;
-        private @Nullable Output<String> fixedPackage;
-        private Output<VersionArgs> fixedVersion;
-        private @Nullable Output<String> packageType;
+        private PackageIssueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageIssueArgs();
         }
 
         public Builder(PackageIssueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affectedCpeUri = defaults.affectedCpeUri;
-    	      this.affectedPackage = defaults.affectedPackage;
-    	      this.affectedVersion = defaults.affectedVersion;
-    	      this.fixedCpeUri = defaults.fixedCpeUri;
-    	      this.fixedPackage = defaults.fixedPackage;
-    	      this.fixedVersion = defaults.fixedVersion;
-    	      this.packageType = defaults.packageType;
+            $ = new PackageIssueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder affectedCpeUri(Output<String> affectedCpeUri) {
-            this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
+            $.affectedCpeUri = affectedCpeUri;
             return this;
         }
+
         public Builder affectedCpeUri(String affectedCpeUri) {
-            this.affectedCpeUri = Output.of(Objects.requireNonNull(affectedCpeUri));
-            return this;
+            return affectedCpeUri(Output.of(affectedCpeUri));
         }
+
         public Builder affectedPackage(Output<String> affectedPackage) {
-            this.affectedPackage = Objects.requireNonNull(affectedPackage);
+            $.affectedPackage = affectedPackage;
             return this;
         }
+
         public Builder affectedPackage(String affectedPackage) {
-            this.affectedPackage = Output.of(Objects.requireNonNull(affectedPackage));
-            return this;
+            return affectedPackage(Output.of(affectedPackage));
         }
+
         public Builder affectedVersion(Output<VersionArgs> affectedVersion) {
-            this.affectedVersion = Objects.requireNonNull(affectedVersion);
+            $.affectedVersion = affectedVersion;
             return this;
         }
+
         public Builder affectedVersion(VersionArgs affectedVersion) {
-            this.affectedVersion = Output.of(Objects.requireNonNull(affectedVersion));
-            return this;
+            return affectedVersion(Output.of(affectedVersion));
         }
+
         public Builder fixedCpeUri(@Nullable Output<String> fixedCpeUri) {
-            this.fixedCpeUri = fixedCpeUri;
+            $.fixedCpeUri = fixedCpeUri;
             return this;
         }
-        public Builder fixedCpeUri(@Nullable String fixedCpeUri) {
-            this.fixedCpeUri = Codegen.ofNullable(fixedCpeUri);
-            return this;
+
+        public Builder fixedCpeUri(String fixedCpeUri) {
+            return fixedCpeUri(Output.of(fixedCpeUri));
         }
+
         public Builder fixedPackage(@Nullable Output<String> fixedPackage) {
-            this.fixedPackage = fixedPackage;
+            $.fixedPackage = fixedPackage;
             return this;
         }
-        public Builder fixedPackage(@Nullable String fixedPackage) {
-            this.fixedPackage = Codegen.ofNullable(fixedPackage);
-            return this;
+
+        public Builder fixedPackage(String fixedPackage) {
+            return fixedPackage(Output.of(fixedPackage));
         }
+
         public Builder fixedVersion(Output<VersionArgs> fixedVersion) {
-            this.fixedVersion = Objects.requireNonNull(fixedVersion);
+            $.fixedVersion = fixedVersion;
             return this;
         }
+
         public Builder fixedVersion(VersionArgs fixedVersion) {
-            this.fixedVersion = Output.of(Objects.requireNonNull(fixedVersion));
-            return this;
+            return fixedVersion(Output.of(fixedVersion));
         }
+
         public Builder packageType(@Nullable Output<String> packageType) {
-            this.packageType = packageType;
+            $.packageType = packageType;
             return this;
         }
-        public Builder packageType(@Nullable String packageType) {
-            this.packageType = Codegen.ofNullable(packageType);
-            return this;
-        }        public PackageIssueArgs build() {
-            return new PackageIssueArgs(affectedCpeUri, affectedPackage, affectedVersion, fixedCpeUri, fixedPackage, fixedVersion, packageType);
+
+        public Builder packageType(String packageType) {
+            return packageType(Output.of(packageType));
+        }
+
+        public PackageIssueArgs build() {
+            $.affectedCpeUri = Objects.requireNonNull($.affectedCpeUri, "expected parameter 'affectedCpeUri' to be non-null");
+            $.affectedPackage = Objects.requireNonNull($.affectedPackage, "expected parameter 'affectedPackage' to be non-null");
+            $.affectedVersion = Objects.requireNonNull($.affectedVersion, "expected parameter 'affectedVersion' to be non-null");
+            $.fixedVersion = Objects.requireNonNull($.fixedVersion, "expected parameter 'fixedVersion' to be non-null");
+            return $;
         }
     }
+
 }

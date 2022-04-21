@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryFieldArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStorageFileSetArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStoragePathArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends com
      * 
      */
     @Import(name="bigQueryField")
-      private final @Nullable Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField;
+    private @Nullable Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField;
 
-    public Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField() {
-        return this.bigQueryField == null ? Codegen.empty() : this.bigQueryField;
+    public Optional<Output<GooglePrivacyDlpV2BigQueryFieldArgs>> bigQueryField() {
+        return Optional.ofNullable(this.bigQueryField);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends com
      * 
      */
     @Import(name="cloudStorageFileSet")
-      private final @Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet;
+    private @Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet;
 
-    public Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet() {
-        return this.cloudStorageFileSet == null ? Codegen.empty() : this.cloudStorageFileSet;
+    public Optional<Output<GooglePrivacyDlpV2CloudStorageFileSetArgs>> cloudStorageFileSet() {
+        return Optional.ofNullable(this.cloudStorageFileSet);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends com
      * 
      */
     @Import(name="outputPath")
-      private final @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath;
+    private @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath;
 
-    public Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath() {
-        return this.outputPath == null ? Codegen.empty() : this.outputPath;
+    public Optional<Output<GooglePrivacyDlpV2CloudStoragePathArgs>> outputPath() {
+        return Optional.ofNullable(this.outputPath);
     }
 
-    public GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs(
-        @Nullable Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField,
-        @Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet,
-        @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath) {
-        this.bigQueryField = bigQueryField;
-        this.cloudStorageFileSet = cloudStorageFileSet;
-        this.outputPath = outputPath;
-    }
+    private GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs() {}
 
-    private GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs() {
-        this.bigQueryField = Codegen.empty();
-        this.cloudStorageFileSet = Codegen.empty();
-        this.outputPath = Codegen.empty();
+    private GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs(GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs $) {
+        this.bigQueryField = $.bigQueryField;
+        this.cloudStorageFileSet = $.cloudStorageFileSet;
+        this.outputPath = $.outputPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField;
-        private @Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet;
-        private @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath;
+        private GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigQueryField = defaults.bigQueryField;
-    	      this.cloudStorageFileSet = defaults.cloudStorageFileSet;
-    	      this.outputPath = defaults.outputPath;
+            $ = new GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigQueryField(@Nullable Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField) {
-            this.bigQueryField = bigQueryField;
+            $.bigQueryField = bigQueryField;
             return this;
         }
-        public Builder bigQueryField(@Nullable GooglePrivacyDlpV2BigQueryFieldArgs bigQueryField) {
-            this.bigQueryField = Codegen.ofNullable(bigQueryField);
-            return this;
+
+        public Builder bigQueryField(GooglePrivacyDlpV2BigQueryFieldArgs bigQueryField) {
+            return bigQueryField(Output.of(bigQueryField));
         }
+
         public Builder cloudStorageFileSet(@Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet) {
-            this.cloudStorageFileSet = cloudStorageFileSet;
+            $.cloudStorageFileSet = cloudStorageFileSet;
             return this;
         }
-        public Builder cloudStorageFileSet(@Nullable GooglePrivacyDlpV2CloudStorageFileSetArgs cloudStorageFileSet) {
-            this.cloudStorageFileSet = Codegen.ofNullable(cloudStorageFileSet);
-            return this;
+
+        public Builder cloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSetArgs cloudStorageFileSet) {
+            return cloudStorageFileSet(Output.of(cloudStorageFileSet));
         }
+
         public Builder outputPath(@Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath) {
-            this.outputPath = outputPath;
+            $.outputPath = outputPath;
             return this;
         }
-        public Builder outputPath(@Nullable GooglePrivacyDlpV2CloudStoragePathArgs outputPath) {
-            this.outputPath = Codegen.ofNullable(outputPath);
-            return this;
-        }        public GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs build() {
-            return new GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs(bigQueryField, cloudStorageFileSet, outputPath);
+
+        public Builder outputPath(GooglePrivacyDlpV2CloudStoragePathArgs outputPath) {
+            return outputPath(Output.of(outputPath));
+        }
+
+        public GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs build() {
+            return $;
         }
     }
+
 }

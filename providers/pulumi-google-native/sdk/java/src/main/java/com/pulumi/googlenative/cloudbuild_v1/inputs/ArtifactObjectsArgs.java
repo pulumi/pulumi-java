@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ArtifactObjectsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class ArtifactObjectsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="paths")
-      private final @Nullable Output<List<String>> paths;
+    private @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> paths() {
-        return this.paths == null ? Codegen.empty() : this.paths;
+    public Optional<Output<List<String>>> paths() {
+        return Optional.ofNullable(this.paths);
     }
 
-    public ArtifactObjectsArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<List<String>> paths) {
-        this.location = location;
-        this.paths = paths;
-    }
+    private ArtifactObjectsArgs() {}
 
-    private ArtifactObjectsArgs() {
-        this.location = Codegen.empty();
-        this.paths = Codegen.empty();
+    private ArtifactObjectsArgs(ArtifactObjectsArgs $) {
+        this.location = $.location;
+        this.paths = $.paths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactObjectsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<String>> paths;
+        private ArtifactObjectsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactObjectsArgs();
         }
 
         public Builder(ArtifactObjectsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.paths = defaults.paths;
+            $ = new ArtifactObjectsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder paths(@Nullable Output<List<String>> paths) {
-            this.paths = paths;
+            $.paths = paths;
             return this;
         }
-        public Builder paths(@Nullable List<String> paths) {
-            this.paths = Codegen.ofNullable(paths);
-            return this;
+
+        public Builder paths(List<String> paths) {
+            return paths(Output.of(paths));
         }
+
         public Builder paths(String... paths) {
             return paths(List.of(paths));
-        }        public ArtifactObjectsArgs build() {
-            return new ArtifactObjectsArgs(location, paths);
+        }
+
+        public ArtifactObjectsArgs build() {
+            return $;
         }
     }
+
 }

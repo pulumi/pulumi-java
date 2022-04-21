@@ -26,7 +26,7 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="customHttpsConfiguration", required=true)
-      private final CustomHttpsConfigurationResponse customHttpsConfiguration;
+    private CustomHttpsConfigurationResponse customHttpsConfiguration;
 
     public CustomHttpsConfigurationResponse customHttpsConfiguration() {
         return this.customHttpsConfiguration;
@@ -37,7 +37,7 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="customHttpsProvisioningState", required=true)
-      private final String customHttpsProvisioningState;
+    private String customHttpsProvisioningState;
 
     public String customHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
@@ -48,7 +48,7 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="customHttpsProvisioningSubstate", required=true)
-      private final String customHttpsProvisioningSubstate;
+    private String customHttpsProvisioningSubstate;
 
     public String customHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
@@ -59,10 +59,10 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="hostName")
-      private final @Nullable String hostName;
+    private @Nullable String hostName;
 
     public Optional<String> hostName() {
-        return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceState", required=true)
-      private final String resourceState;
+    private String resourceState;
 
     public String resourceState() {
         return this.resourceState;
@@ -103,10 +103,10 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sessionAffinityEnabledState")
-      private final @Nullable String sessionAffinityEnabledState;
+    private @Nullable String sessionAffinityEnabledState;
 
     public Optional<String> sessionAffinityEnabledState() {
-        return this.sessionAffinityEnabledState == null ? Optional.empty() : Optional.ofNullable(this.sessionAffinityEnabledState);
+        return Optional.ofNullable(this.sessionAffinityEnabledState);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sessionAffinityTtlSeconds")
-      private final @Nullable Integer sessionAffinityTtlSeconds;
+    private @Nullable Integer sessionAffinityTtlSeconds;
 
     public Optional<Integer> sessionAffinityTtlSeconds() {
-        return this.sessionAffinityTtlSeconds == null ? Optional.empty() : Optional.ofNullable(this.sessionAffinityTtlSeconds);
+        return Optional.ofNullable(this.sessionAffinityTtlSeconds);
     }
 
     /**
@@ -125,7 +125,7 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -136,136 +136,109 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="webApplicationFirewallPolicyLink")
-      private final @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
+    private @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
     public Optional<FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink() {
-        return this.webApplicationFirewallPolicyLink == null ? Optional.empty() : Optional.ofNullable(this.webApplicationFirewallPolicyLink);
+        return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
 
-    public FrontendEndpointResponse(
-        CustomHttpsConfigurationResponse customHttpsConfiguration,
-        String customHttpsProvisioningState,
-        String customHttpsProvisioningSubstate,
-        @Nullable String hostName,
-        @Nullable String id,
-        @Nullable String name,
-        String resourceState,
-        @Nullable String sessionAffinityEnabledState,
-        @Nullable Integer sessionAffinityTtlSeconds,
-        String type,
-        @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
-        this.customHttpsConfiguration = Objects.requireNonNull(customHttpsConfiguration, "expected parameter 'customHttpsConfiguration' to be non-null");
-        this.customHttpsProvisioningState = Objects.requireNonNull(customHttpsProvisioningState, "expected parameter 'customHttpsProvisioningState' to be non-null");
-        this.customHttpsProvisioningSubstate = Objects.requireNonNull(customHttpsProvisioningSubstate, "expected parameter 'customHttpsProvisioningSubstate' to be non-null");
-        this.hostName = hostName;
-        this.id = id;
-        this.name = name;
-        this.resourceState = Objects.requireNonNull(resourceState, "expected parameter 'resourceState' to be non-null");
-        this.sessionAffinityEnabledState = sessionAffinityEnabledState;
-        this.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
-    }
+    private FrontendEndpointResponse() {}
 
-    private FrontendEndpointResponse() {
-        this.customHttpsConfiguration = null;
-        this.customHttpsProvisioningState = null;
-        this.customHttpsProvisioningSubstate = null;
-        this.hostName = null;
-        this.id = null;
-        this.name = null;
-        this.resourceState = null;
-        this.sessionAffinityEnabledState = null;
-        this.sessionAffinityTtlSeconds = null;
-        this.type = null;
-        this.webApplicationFirewallPolicyLink = null;
+    private FrontendEndpointResponse(FrontendEndpointResponse $) {
+        this.customHttpsConfiguration = $.customHttpsConfiguration;
+        this.customHttpsProvisioningState = $.customHttpsProvisioningState;
+        this.customHttpsProvisioningSubstate = $.customHttpsProvisioningSubstate;
+        this.hostName = $.hostName;
+        this.id = $.id;
+        this.name = $.name;
+        this.resourceState = $.resourceState;
+        this.sessionAffinityEnabledState = $.sessionAffinityEnabledState;
+        this.sessionAffinityTtlSeconds = $.sessionAffinityTtlSeconds;
+        this.type = $.type;
+        this.webApplicationFirewallPolicyLink = $.webApplicationFirewallPolicyLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontendEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CustomHttpsConfigurationResponse customHttpsConfiguration;
-        private String customHttpsProvisioningState;
-        private String customHttpsProvisioningSubstate;
-        private @Nullable String hostName;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String resourceState;
-        private @Nullable String sessionAffinityEnabledState;
-        private @Nullable Integer sessionAffinityTtlSeconds;
-        private String type;
-        private @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
+        private FrontendEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontendEndpointResponse();
         }
 
         public Builder(FrontendEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customHttpsConfiguration = defaults.customHttpsConfiguration;
-    	      this.customHttpsProvisioningState = defaults.customHttpsProvisioningState;
-    	      this.customHttpsProvisioningSubstate = defaults.customHttpsProvisioningSubstate;
-    	      this.hostName = defaults.hostName;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.resourceState = defaults.resourceState;
-    	      this.sessionAffinityEnabledState = defaults.sessionAffinityEnabledState;
-    	      this.sessionAffinityTtlSeconds = defaults.sessionAffinityTtlSeconds;
-    	      this.type = defaults.type;
-    	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
+            $ = new FrontendEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customHttpsConfiguration(CustomHttpsConfigurationResponse customHttpsConfiguration) {
-            this.customHttpsConfiguration = Objects.requireNonNull(customHttpsConfiguration);
+            $.customHttpsConfiguration = customHttpsConfiguration;
             return this;
         }
+
         public Builder customHttpsProvisioningState(String customHttpsProvisioningState) {
-            this.customHttpsProvisioningState = Objects.requireNonNull(customHttpsProvisioningState);
+            $.customHttpsProvisioningState = customHttpsProvisioningState;
             return this;
         }
+
         public Builder customHttpsProvisioningSubstate(String customHttpsProvisioningSubstate) {
-            this.customHttpsProvisioningSubstate = Objects.requireNonNull(customHttpsProvisioningSubstate);
+            $.customHttpsProvisioningSubstate = customHttpsProvisioningSubstate;
             return this;
         }
+
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder resourceState(String resourceState) {
-            this.resourceState = Objects.requireNonNull(resourceState);
+            $.resourceState = resourceState;
             return this;
         }
+
         public Builder sessionAffinityEnabledState(@Nullable String sessionAffinityEnabledState) {
-            this.sessionAffinityEnabledState = sessionAffinityEnabledState;
+            $.sessionAffinityEnabledState = sessionAffinityEnabledState;
             return this;
         }
+
         public Builder sessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
-            this.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
+            $.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder webApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
-            this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
+            $.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
-        }        public FrontendEndpointResponse build() {
-            return new FrontendEndpointResponse(customHttpsConfiguration, customHttpsProvisioningState, customHttpsProvisioningSubstate, hostName, id, name, resourceState, sessionAffinityEnabledState, sessionAffinityTtlSeconds, type, webApplicationFirewallPolicyLink);
+        }
+
+        public FrontendEndpointResponse build() {
+            $.customHttpsConfiguration = Objects.requireNonNull($.customHttpsConfiguration, "expected parameter 'customHttpsConfiguration' to be non-null");
+            $.customHttpsProvisioningState = Objects.requireNonNull($.customHttpsProvisioningState, "expected parameter 'customHttpsProvisioningState' to be non-null");
+            $.customHttpsProvisioningSubstate = Objects.requireNonNull($.customHttpsProvisioningSubstate, "expected parameter 'customHttpsProvisioningSubstate' to be non-null");
+            $.resourceState = Objects.requireNonNull($.resourceState, "expected parameter 'resourceState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

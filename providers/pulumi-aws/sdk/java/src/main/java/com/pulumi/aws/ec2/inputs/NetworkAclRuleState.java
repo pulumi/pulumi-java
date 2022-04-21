@@ -5,11 +5,11 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="cidrBlock")
-      private final @Nullable Output<String> cidrBlock;
+    private @Nullable Output<String> cidrBlock;
 
-    public Output<String> cidrBlock() {
-        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
+    public Optional<Output<String>> cidrBlock() {
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="egress")
-      private final @Nullable Output<Boolean> egress;
+    private @Nullable Output<Boolean> egress;
 
-    public Output<Boolean> egress() {
-        return this.egress == null ? Codegen.empty() : this.egress;
+    public Optional<Output<Boolean>> egress() {
+        return Optional.ofNullable(this.egress);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="fromPort")
-      private final @Nullable Output<Integer> fromPort;
+    private @Nullable Output<Integer> fromPort;
 
-    public Output<Integer> fromPort() {
-        return this.fromPort == null ? Codegen.empty() : this.fromPort;
+    public Optional<Output<Integer>> fromPort() {
+        return Optional.ofNullable(this.fromPort);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="icmpCode")
-      private final @Nullable Output<String> icmpCode;
+    private @Nullable Output<String> icmpCode;
 
-    public Output<String> icmpCode() {
-        return this.icmpCode == null ? Codegen.empty() : this.icmpCode;
+    public Optional<Output<String>> icmpCode() {
+        return Optional.ofNullable(this.icmpCode);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="icmpType")
-      private final @Nullable Output<String> icmpType;
+    private @Nullable Output<String> icmpType;
 
-    public Output<String> icmpType() {
-        return this.icmpType == null ? Codegen.empty() : this.icmpType;
+    public Optional<Output<String>> icmpType() {
+        return Optional.ofNullable(this.icmpType);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ipv6CidrBlock")
-      private final @Nullable Output<String> ipv6CidrBlock;
+    private @Nullable Output<String> ipv6CidrBlock;
 
-    public Output<String> ipv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
+    public Optional<Output<String>> ipv6CidrBlock() {
+        return Optional.ofNullable(this.ipv6CidrBlock);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="networkAclId")
-      private final @Nullable Output<String> networkAclId;
+    private @Nullable Output<String> networkAclId;
 
-    public Output<String> networkAclId() {
-        return this.networkAclId == null ? Codegen.empty() : this.networkAclId;
+    public Optional<Output<String>> networkAclId() {
+        return Optional.ofNullable(this.networkAclId);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ruleAction")
-      private final @Nullable Output<String> ruleAction;
+    private @Nullable Output<String> ruleAction;
 
-    public Output<String> ruleAction() {
-        return this.ruleAction == null ? Codegen.empty() : this.ruleAction;
+    public Optional<Output<String>> ruleAction() {
+        return Optional.ofNullable(this.ruleAction);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ruleNumber")
-      private final @Nullable Output<Integer> ruleNumber;
+    private @Nullable Output<Integer> ruleNumber;
 
-    public Output<Integer> ruleNumber() {
-        return this.ruleNumber == null ? Codegen.empty() : this.ruleNumber;
+    public Optional<Output<Integer>> ruleNumber() {
+        return Optional.ofNullable(this.ruleNumber);
     }
 
     /**
@@ -132,180 +132,148 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="toPort")
-      private final @Nullable Output<Integer> toPort;
+    private @Nullable Output<Integer> toPort;
 
-    public Output<Integer> toPort() {
-        return this.toPort == null ? Codegen.empty() : this.toPort;
+    public Optional<Output<Integer>> toPort() {
+        return Optional.ofNullable(this.toPort);
     }
 
-    public NetworkAclRuleState(
-        @Nullable Output<String> cidrBlock,
-        @Nullable Output<Boolean> egress,
-        @Nullable Output<Integer> fromPort,
-        @Nullable Output<String> icmpCode,
-        @Nullable Output<String> icmpType,
-        @Nullable Output<String> ipv6CidrBlock,
-        @Nullable Output<String> networkAclId,
-        @Nullable Output<String> protocol,
-        @Nullable Output<String> ruleAction,
-        @Nullable Output<Integer> ruleNumber,
-        @Nullable Output<Integer> toPort) {
-        this.cidrBlock = cidrBlock;
-        this.egress = egress;
-        this.fromPort = fromPort;
-        this.icmpCode = icmpCode;
-        this.icmpType = icmpType;
-        this.ipv6CidrBlock = ipv6CidrBlock;
-        this.networkAclId = networkAclId;
-        this.protocol = protocol;
-        this.ruleAction = ruleAction;
-        this.ruleNumber = ruleNumber;
-        this.toPort = toPort;
-    }
+    private NetworkAclRuleState() {}
 
-    private NetworkAclRuleState() {
-        this.cidrBlock = Codegen.empty();
-        this.egress = Codegen.empty();
-        this.fromPort = Codegen.empty();
-        this.icmpCode = Codegen.empty();
-        this.icmpType = Codegen.empty();
-        this.ipv6CidrBlock = Codegen.empty();
-        this.networkAclId = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.ruleAction = Codegen.empty();
-        this.ruleNumber = Codegen.empty();
-        this.toPort = Codegen.empty();
+    private NetworkAclRuleState(NetworkAclRuleState $) {
+        this.cidrBlock = $.cidrBlock;
+        this.egress = $.egress;
+        this.fromPort = $.fromPort;
+        this.icmpCode = $.icmpCode;
+        this.icmpType = $.icmpType;
+        this.ipv6CidrBlock = $.ipv6CidrBlock;
+        this.networkAclId = $.networkAclId;
+        this.protocol = $.protocol;
+        this.ruleAction = $.ruleAction;
+        this.ruleNumber = $.ruleNumber;
+        this.toPort = $.toPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkAclRuleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cidrBlock;
-        private @Nullable Output<Boolean> egress;
-        private @Nullable Output<Integer> fromPort;
-        private @Nullable Output<String> icmpCode;
-        private @Nullable Output<String> icmpType;
-        private @Nullable Output<String> ipv6CidrBlock;
-        private @Nullable Output<String> networkAclId;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<String> ruleAction;
-        private @Nullable Output<Integer> ruleNumber;
-        private @Nullable Output<Integer> toPort;
+        private NetworkAclRuleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkAclRuleState();
         }
 
         public Builder(NetworkAclRuleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.egress = defaults.egress;
-    	      this.fromPort = defaults.fromPort;
-    	      this.icmpCode = defaults.icmpCode;
-    	      this.icmpType = defaults.icmpType;
-    	      this.ipv6CidrBlock = defaults.ipv6CidrBlock;
-    	      this.networkAclId = defaults.networkAclId;
-    	      this.protocol = defaults.protocol;
-    	      this.ruleAction = defaults.ruleAction;
-    	      this.ruleNumber = defaults.ruleNumber;
-    	      this.toPort = defaults.toPort;
+            $ = new NetworkAclRuleState(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
-            this.cidrBlock = cidrBlock;
+            $.cidrBlock = cidrBlock;
             return this;
         }
-        public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Codegen.ofNullable(cidrBlock);
-            return this;
+
+        public Builder cidrBlock(String cidrBlock) {
+            return cidrBlock(Output.of(cidrBlock));
         }
+
         public Builder egress(@Nullable Output<Boolean> egress) {
-            this.egress = egress;
+            $.egress = egress;
             return this;
         }
-        public Builder egress(@Nullable Boolean egress) {
-            this.egress = Codegen.ofNullable(egress);
-            return this;
+
+        public Builder egress(Boolean egress) {
+            return egress(Output.of(egress));
         }
+
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
-            this.fromPort = fromPort;
+            $.fromPort = fromPort;
             return this;
         }
-        public Builder fromPort(@Nullable Integer fromPort) {
-            this.fromPort = Codegen.ofNullable(fromPort);
-            return this;
+
+        public Builder fromPort(Integer fromPort) {
+            return fromPort(Output.of(fromPort));
         }
+
         public Builder icmpCode(@Nullable Output<String> icmpCode) {
-            this.icmpCode = icmpCode;
+            $.icmpCode = icmpCode;
             return this;
         }
-        public Builder icmpCode(@Nullable String icmpCode) {
-            this.icmpCode = Codegen.ofNullable(icmpCode);
-            return this;
+
+        public Builder icmpCode(String icmpCode) {
+            return icmpCode(Output.of(icmpCode));
         }
+
         public Builder icmpType(@Nullable Output<String> icmpType) {
-            this.icmpType = icmpType;
+            $.icmpType = icmpType;
             return this;
         }
-        public Builder icmpType(@Nullable String icmpType) {
-            this.icmpType = Codegen.ofNullable(icmpType);
-            return this;
+
+        public Builder icmpType(String icmpType) {
+            return icmpType(Output.of(icmpType));
         }
+
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
-            this.ipv6CidrBlock = ipv6CidrBlock;
+            $.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Codegen.ofNullable(ipv6CidrBlock);
-            return this;
+
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+            return ipv6CidrBlock(Output.of(ipv6CidrBlock));
         }
+
         public Builder networkAclId(@Nullable Output<String> networkAclId) {
-            this.networkAclId = networkAclId;
+            $.networkAclId = networkAclId;
             return this;
         }
-        public Builder networkAclId(@Nullable String networkAclId) {
-            this.networkAclId = Codegen.ofNullable(networkAclId);
-            return this;
+
+        public Builder networkAclId(String networkAclId) {
+            return networkAclId(Output.of(networkAclId));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder ruleAction(@Nullable Output<String> ruleAction) {
-            this.ruleAction = ruleAction;
+            $.ruleAction = ruleAction;
             return this;
         }
-        public Builder ruleAction(@Nullable String ruleAction) {
-            this.ruleAction = Codegen.ofNullable(ruleAction);
-            return this;
+
+        public Builder ruleAction(String ruleAction) {
+            return ruleAction(Output.of(ruleAction));
         }
+
         public Builder ruleNumber(@Nullable Output<Integer> ruleNumber) {
-            this.ruleNumber = ruleNumber;
+            $.ruleNumber = ruleNumber;
             return this;
         }
-        public Builder ruleNumber(@Nullable Integer ruleNumber) {
-            this.ruleNumber = Codegen.ofNullable(ruleNumber);
-            return this;
+
+        public Builder ruleNumber(Integer ruleNumber) {
+            return ruleNumber(Output.of(ruleNumber));
         }
+
         public Builder toPort(@Nullable Output<Integer> toPort) {
-            this.toPort = toPort;
+            $.toPort = toPort;
             return this;
         }
-        public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Codegen.ofNullable(toPort);
-            return this;
-        }        public NetworkAclRuleState build() {
-            return new NetworkAclRuleState(cidrBlock, egress, fromPort, icmpCode, icmpType, ipv6CidrBlock, networkAclId, protocol, ruleAction, ruleNumber, toPort);
+
+        public Builder toPort(Integer toPort) {
+            return toPort(Output.of(toPort));
+        }
+
+        public NetworkAclRuleState build() {
+            return $;
         }
     }
+
 }

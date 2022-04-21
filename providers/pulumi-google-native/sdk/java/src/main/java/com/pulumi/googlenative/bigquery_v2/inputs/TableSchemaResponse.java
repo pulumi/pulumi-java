@@ -18,48 +18,49 @@ public final class TableSchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields", required=true)
-      private final List<TableFieldSchemaResponse> fields;
+    private List<TableFieldSchemaResponse> fields;
 
     public List<TableFieldSchemaResponse> fields() {
         return this.fields;
     }
 
-    public TableSchemaResponse(List<TableFieldSchemaResponse> fields) {
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-    }
+    private TableSchemaResponse() {}
 
-    private TableSchemaResponse() {
-        this.fields = List.of();
+    private TableSchemaResponse(TableSchemaResponse $) {
+        this.fields = $.fields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableSchemaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<TableFieldSchemaResponse> fields;
+        private TableSchemaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableSchemaResponse();
         }
 
         public Builder(TableSchemaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
+            $ = new TableSchemaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(List<TableFieldSchemaResponse> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(TableFieldSchemaResponse... fields) {
             return fields(List.of(fields));
-        }        public TableSchemaResponse build() {
-            return new TableSchemaResponse(fields);
+        }
+
+        public TableSchemaResponse build() {
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            return $;
         }
     }
+
 }

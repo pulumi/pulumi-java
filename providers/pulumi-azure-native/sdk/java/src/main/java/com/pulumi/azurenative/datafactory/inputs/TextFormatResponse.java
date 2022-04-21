@@ -25,10 +25,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="columnDelimiter")
-      private final @Nullable Object columnDelimiter;
+    private @Nullable Object columnDelimiter;
 
     public Optional<Object> columnDelimiter() {
-        return this.columnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.columnDelimiter);
+        return Optional.ofNullable(this.columnDelimiter);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deserializer")
-      private final @Nullable Object deserializer;
+    private @Nullable Object deserializer;
 
     public Optional<Object> deserializer() {
-        return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
+        return Optional.ofNullable(this.deserializer);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encodingName")
-      private final @Nullable Object encodingName;
+    private @Nullable Object encodingName;
 
     public Optional<Object> encodingName() {
-        return this.encodingName == null ? Optional.empty() : Optional.ofNullable(this.encodingName);
+        return Optional.ofNullable(this.encodingName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="escapeChar")
-      private final @Nullable Object escapeChar;
+    private @Nullable Object escapeChar;
 
     public Optional<Object> escapeChar() {
-        return this.escapeChar == null ? Optional.empty() : Optional.ofNullable(this.escapeChar);
+        return Optional.ofNullable(this.escapeChar);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="firstRowAsHeader")
-      private final @Nullable Object firstRowAsHeader;
+    private @Nullable Object firstRowAsHeader;
 
     public Optional<Object> firstRowAsHeader() {
-        return this.firstRowAsHeader == null ? Optional.empty() : Optional.ofNullable(this.firstRowAsHeader);
+        return Optional.ofNullable(this.firstRowAsHeader);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nullValue")
-      private final @Nullable Object nullValue;
+    private @Nullable Object nullValue;
 
     public Optional<Object> nullValue() {
-        return this.nullValue == null ? Optional.empty() : Optional.ofNullable(this.nullValue);
+        return Optional.ofNullable(this.nullValue);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quoteChar")
-      private final @Nullable Object quoteChar;
+    private @Nullable Object quoteChar;
 
     public Optional<Object> quoteChar() {
-        return this.quoteChar == null ? Optional.empty() : Optional.ofNullable(this.quoteChar);
+        return Optional.ofNullable(this.quoteChar);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rowDelimiter")
-      private final @Nullable Object rowDelimiter;
+    private @Nullable Object rowDelimiter;
 
     public Optional<Object> rowDelimiter() {
-        return this.rowDelimiter == null ? Optional.empty() : Optional.ofNullable(this.rowDelimiter);
+        return Optional.ofNullable(this.rowDelimiter);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serializer")
-      private final @Nullable Object serializer;
+    private @Nullable Object serializer;
 
     public Optional<Object> serializer() {
-        return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
+        return Optional.ofNullable(this.serializer);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skipLineCount")
-      private final @Nullable Object skipLineCount;
+    private @Nullable Object skipLineCount;
 
     public Optional<Object> skipLineCount() {
-        return this.skipLineCount == null ? Optional.empty() : Optional.ofNullable(this.skipLineCount);
+        return Optional.ofNullable(this.skipLineCount);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="treatEmptyAsNull")
-      private final @Nullable Object treatEmptyAsNull;
+    private @Nullable Object treatEmptyAsNull;
 
     public Optional<Object> treatEmptyAsNull() {
-        return this.treatEmptyAsNull == null ? Optional.empty() : Optional.ofNullable(this.treatEmptyAsNull);
+        return Optional.ofNullable(this.treatEmptyAsNull);
     }
 
     /**
@@ -147,145 +147,111 @@ public final class TextFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TextFormatResponse(
-        @Nullable Object columnDelimiter,
-        @Nullable Object deserializer,
-        @Nullable Object encodingName,
-        @Nullable Object escapeChar,
-        @Nullable Object firstRowAsHeader,
-        @Nullable Object nullValue,
-        @Nullable Object quoteChar,
-        @Nullable Object rowDelimiter,
-        @Nullable Object serializer,
-        @Nullable Object skipLineCount,
-        @Nullable Object treatEmptyAsNull,
-        String type) {
-        this.columnDelimiter = columnDelimiter;
-        this.deserializer = deserializer;
-        this.encodingName = encodingName;
-        this.escapeChar = escapeChar;
-        this.firstRowAsHeader = firstRowAsHeader;
-        this.nullValue = nullValue;
-        this.quoteChar = quoteChar;
-        this.rowDelimiter = rowDelimiter;
-        this.serializer = serializer;
-        this.skipLineCount = skipLineCount;
-        this.treatEmptyAsNull = treatEmptyAsNull;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private TextFormatResponse() {}
 
-    private TextFormatResponse() {
-        this.columnDelimiter = null;
-        this.deserializer = null;
-        this.encodingName = null;
-        this.escapeChar = null;
-        this.firstRowAsHeader = null;
-        this.nullValue = null;
-        this.quoteChar = null;
-        this.rowDelimiter = null;
-        this.serializer = null;
-        this.skipLineCount = null;
-        this.treatEmptyAsNull = null;
-        this.type = null;
+    private TextFormatResponse(TextFormatResponse $) {
+        this.columnDelimiter = $.columnDelimiter;
+        this.deserializer = $.deserializer;
+        this.encodingName = $.encodingName;
+        this.escapeChar = $.escapeChar;
+        this.firstRowAsHeader = $.firstRowAsHeader;
+        this.nullValue = $.nullValue;
+        this.quoteChar = $.quoteChar;
+        this.rowDelimiter = $.rowDelimiter;
+        this.serializer = $.serializer;
+        this.skipLineCount = $.skipLineCount;
+        this.treatEmptyAsNull = $.treatEmptyAsNull;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TextFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object columnDelimiter;
-        private @Nullable Object deserializer;
-        private @Nullable Object encodingName;
-        private @Nullable Object escapeChar;
-        private @Nullable Object firstRowAsHeader;
-        private @Nullable Object nullValue;
-        private @Nullable Object quoteChar;
-        private @Nullable Object rowDelimiter;
-        private @Nullable Object serializer;
-        private @Nullable Object skipLineCount;
-        private @Nullable Object treatEmptyAsNull;
-        private String type;
+        private TextFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TextFormatResponse();
         }
 
         public Builder(TextFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnDelimiter = defaults.columnDelimiter;
-    	      this.deserializer = defaults.deserializer;
-    	      this.encodingName = defaults.encodingName;
-    	      this.escapeChar = defaults.escapeChar;
-    	      this.firstRowAsHeader = defaults.firstRowAsHeader;
-    	      this.nullValue = defaults.nullValue;
-    	      this.quoteChar = defaults.quoteChar;
-    	      this.rowDelimiter = defaults.rowDelimiter;
-    	      this.serializer = defaults.serializer;
-    	      this.skipLineCount = defaults.skipLineCount;
-    	      this.treatEmptyAsNull = defaults.treatEmptyAsNull;
-    	      this.type = defaults.type;
+            $ = new TextFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columnDelimiter(@Nullable Object columnDelimiter) {
-            this.columnDelimiter = columnDelimiter;
+            $.columnDelimiter = columnDelimiter;
             return this;
         }
+
         public Builder deserializer(@Nullable Object deserializer) {
-            this.deserializer = deserializer;
+            $.deserializer = deserializer;
             return this;
         }
+
         public Builder encodingName(@Nullable Object encodingName) {
-            this.encodingName = encodingName;
+            $.encodingName = encodingName;
             return this;
         }
+
         public Builder escapeChar(@Nullable Object escapeChar) {
-            this.escapeChar = escapeChar;
+            $.escapeChar = escapeChar;
             return this;
         }
+
         public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
-            this.firstRowAsHeader = firstRowAsHeader;
+            $.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
+
         public Builder nullValue(@Nullable Object nullValue) {
-            this.nullValue = nullValue;
+            $.nullValue = nullValue;
             return this;
         }
+
         public Builder quoteChar(@Nullable Object quoteChar) {
-            this.quoteChar = quoteChar;
+            $.quoteChar = quoteChar;
             return this;
         }
+
         public Builder rowDelimiter(@Nullable Object rowDelimiter) {
-            this.rowDelimiter = rowDelimiter;
+            $.rowDelimiter = rowDelimiter;
             return this;
         }
+
         public Builder serializer(@Nullable Object serializer) {
-            this.serializer = serializer;
+            $.serializer = serializer;
             return this;
         }
+
         public Builder skipLineCount(@Nullable Object skipLineCount) {
-            this.skipLineCount = skipLineCount;
+            $.skipLineCount = skipLineCount;
             return this;
         }
+
         public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
-            this.treatEmptyAsNull = treatEmptyAsNull;
+            $.treatEmptyAsNull = treatEmptyAsNull;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TextFormatResponse build() {
-            return new TextFormatResponse(columnDelimiter, deserializer, encodingName, escapeChar, firstRowAsHeader, nullValue, quoteChar, rowDelimiter, serializer, skipLineCount, treatEmptyAsNull, type);
+        }
+
+        public TextFormatResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

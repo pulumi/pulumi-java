@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class DSSEHintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="humanReadableName", required=true)
-      private final Output<String> humanReadableName;
+    private Output<String> humanReadableName;
 
     public Output<String> humanReadableName() {
         return this.humanReadableName;
     }
 
-    public DSSEHintArgs(Output<String> humanReadableName) {
-        this.humanReadableName = Objects.requireNonNull(humanReadableName, "expected parameter 'humanReadableName' to be non-null");
-    }
+    private DSSEHintArgs() {}
 
-    private DSSEHintArgs() {
-        this.humanReadableName = Codegen.empty();
+    private DSSEHintArgs(DSSEHintArgs $) {
+        this.humanReadableName = $.humanReadableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DSSEHintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> humanReadableName;
+        private DSSEHintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DSSEHintArgs();
         }
 
         public Builder(DSSEHintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.humanReadableName = defaults.humanReadableName;
+            $ = new DSSEHintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder humanReadableName(Output<String> humanReadableName) {
-            this.humanReadableName = Objects.requireNonNull(humanReadableName);
+            $.humanReadableName = humanReadableName;
             return this;
         }
+
         public Builder humanReadableName(String humanReadableName) {
-            this.humanReadableName = Output.of(Objects.requireNonNull(humanReadableName));
-            return this;
-        }        public DSSEHintArgs build() {
-            return new DSSEHintArgs(humanReadableName);
+            return humanReadableName(Output.of(humanReadableName));
+        }
+
+        public DSSEHintArgs build() {
+            $.humanReadableName = Objects.requireNonNull($.humanReadableName, "expected parameter 'humanReadableName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @Import(name="classification")
-      private final @Nullable String classification;
+    private @Nullable String classification;
 
     public Optional<String> classification() {
-        return this.classification == null ? Optional.empty() : Optional.ofNullable(this.classification);
+        return Optional.ofNullable(this.classification);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @Import(name="classificationComment")
-      private final @Nullable String classificationComment;
+    private @Nullable String classificationComment;
 
     public Optional<String> classificationComment() {
-        return this.classificationComment == null ? Optional.empty() : Optional.ofNullable(this.classificationComment);
+        return Optional.ofNullable(this.classificationComment);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @Import(name="classificationReason")
-      private final @Nullable String classificationReason;
+    private @Nullable String classificationReason;
 
     public Optional<String> classificationReason() {
-        return this.classificationReason == null ? Optional.empty() : Optional.ofNullable(this.classificationReason);
+        return Optional.ofNullable(this.classificationReason);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @Import(name="labels")
-      private final @Nullable List<IncidentLabelResponse> labels;
+    private @Nullable List<IncidentLabelResponse> labels;
 
-    public List<IncidentLabelResponse> labels() {
-        return this.labels == null ? List.of() : this.labels;
+    public Optional<List<IncidentLabelResponse>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @Import(name="owner")
-      private final @Nullable IncidentOwnerInfoResponse owner;
+    private @Nullable IncidentOwnerInfoResponse owner;
 
     public Optional<IncidentOwnerInfoResponse> owner() {
-        return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @Import(name="severity")
-      private final @Nullable String severity;
+    private @Nullable String severity;
 
     public Optional<String> severity() {
-        return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -92,103 +92,84 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public AutomationRuleModifyPropertiesActionResponseActionConfiguration(
-        @Nullable String classification,
-        @Nullable String classificationComment,
-        @Nullable String classificationReason,
-        @Nullable List<IncidentLabelResponse> labels,
-        @Nullable IncidentOwnerInfoResponse owner,
-        @Nullable String severity,
-        @Nullable String status) {
-        this.classification = classification;
-        this.classificationComment = classificationComment;
-        this.classificationReason = classificationReason;
-        this.labels = labels;
-        this.owner = owner;
-        this.severity = severity;
-        this.status = status;
-    }
+    private AutomationRuleModifyPropertiesActionResponseActionConfiguration() {}
 
-    private AutomationRuleModifyPropertiesActionResponseActionConfiguration() {
-        this.classification = null;
-        this.classificationComment = null;
-        this.classificationReason = null;
-        this.labels = List.of();
-        this.owner = null;
-        this.severity = null;
-        this.status = null;
+    private AutomationRuleModifyPropertiesActionResponseActionConfiguration(AutomationRuleModifyPropertiesActionResponseActionConfiguration $) {
+        this.classification = $.classification;
+        this.classificationComment = $.classificationComment;
+        this.classificationReason = $.classificationReason;
+        this.labels = $.labels;
+        this.owner = $.owner;
+        this.severity = $.severity;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRuleModifyPropertiesActionResponseActionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String classification;
-        private @Nullable String classificationComment;
-        private @Nullable String classificationReason;
-        private @Nullable List<IncidentLabelResponse> labels;
-        private @Nullable IncidentOwnerInfoResponse owner;
-        private @Nullable String severity;
-        private @Nullable String status;
+        private AutomationRuleModifyPropertiesActionResponseActionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRuleModifyPropertiesActionResponseActionConfiguration();
         }
 
         public Builder(AutomationRuleModifyPropertiesActionResponseActionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classification = defaults.classification;
-    	      this.classificationComment = defaults.classificationComment;
-    	      this.classificationReason = defaults.classificationReason;
-    	      this.labels = defaults.labels;
-    	      this.owner = defaults.owner;
-    	      this.severity = defaults.severity;
-    	      this.status = defaults.status;
+            $ = new AutomationRuleModifyPropertiesActionResponseActionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder classification(@Nullable String classification) {
-            this.classification = classification;
+            $.classification = classification;
             return this;
         }
+
         public Builder classificationComment(@Nullable String classificationComment) {
-            this.classificationComment = classificationComment;
+            $.classificationComment = classificationComment;
             return this;
         }
+
         public Builder classificationReason(@Nullable String classificationReason) {
-            this.classificationReason = classificationReason;
+            $.classificationReason = classificationReason;
             return this;
         }
+
         public Builder labels(@Nullable List<IncidentLabelResponse> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(IncidentLabelResponse... labels) {
             return labels(List.of(labels));
         }
+
         public Builder owner(@Nullable IncidentOwnerInfoResponse owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
+
         public Builder severity(@Nullable String severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public AutomationRuleModifyPropertiesActionResponseActionConfiguration build() {
-            return new AutomationRuleModifyPropertiesActionResponseActionConfiguration(classification, classificationComment, classificationReason, labels, owner, severity, status);
+        }
+
+        public AutomationRuleModifyPropertiesActionResponseActionConfiguration build() {
+            return $;
         }
     }
+
 }

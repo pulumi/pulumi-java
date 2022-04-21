@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     public static final CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs Empty = new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs();
 
     @Import(name="obectIds")
-      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> obectIds;
+    private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> obectIds;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> obectIds() {
-        return this.obectIds == null ? Codegen.empty() : this.obectIds;
+    public Optional<Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>>> obectIds() {
+        return Optional.ofNullable(this.obectIds);
     }
 
-    public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> obectIds) {
-        this.obectIds = obectIds;
-    }
+    private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs() {}
 
-    private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs() {
-        this.obectIds = Codegen.empty();
+    private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs(CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs $) {
+        this.obectIds = $.obectIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> obectIds;
+        private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs();
         }
 
         public Builder(CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.obectIds = defaults.obectIds;
+            $ = new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder obectIds(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> obectIds) {
-            this.obectIds = obectIds;
+            $.obectIds = obectIds;
             return this;
         }
-        public Builder obectIds(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs> obectIds) {
-            this.obectIds = Codegen.ofNullable(obectIds);
-            return this;
+
+        public Builder obectIds(List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs> obectIds) {
+            return obectIds(Output.of(obectIds));
         }
+
         public Builder obectIds(CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs... obectIds) {
             return obectIds(List.of(obectIds));
-        }        public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs build() {
-            return new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs(obectIds);
+        }
+
+        public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs build() {
+            return $;
         }
     }
+
 }

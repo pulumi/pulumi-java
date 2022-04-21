@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +22,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * 
      */
     @Import(name="distributionFilter", required=true)
-      private final Output<String> distributionFilter;
+    private Output<String> distributionFilter;
 
     public Output<String> distributionFilter() {
         return this.distributionFilter;
@@ -40,63 +39,60 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * 
      */
     @Import(name="range", required=true)
-      private final Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> range;
+    private Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> range;
 
     public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> range() {
         return this.range;
     }
 
-    public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs(
-        Output<String> distributionFilter,
-        Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> range) {
-        this.distributionFilter = Objects.requireNonNull(distributionFilter, "expected parameter 'distributionFilter' to be non-null");
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-    }
+    private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs() {}
 
-    private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs() {
-        this.distributionFilter = Codegen.empty();
-        this.range = Codegen.empty();
+    private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs $) {
+        this.distributionFilter = $.distributionFilter;
+        this.range = $.range;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> distributionFilter;
-        private Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> range;
+        private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs();
         }
 
         public Builder(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionFilter = defaults.distributionFilter;
-    	      this.range = defaults.range;
+            $ = new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionFilter(Output<String> distributionFilter) {
-            this.distributionFilter = Objects.requireNonNull(distributionFilter);
+            $.distributionFilter = distributionFilter;
             return this;
         }
+
         public Builder distributionFilter(String distributionFilter) {
-            this.distributionFilter = Output.of(Objects.requireNonNull(distributionFilter));
-            return this;
+            return distributionFilter(Output.of(distributionFilter));
         }
+
         public Builder range(Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
         }
+
         public Builder range(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs range) {
-            this.range = Output.of(Objects.requireNonNull(range));
-            return this;
-        }        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs build() {
-            return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs(distributionFilter, range);
+            return range(Output.of(range));
+        }
+
+        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs build() {
+            $.distributionFilter = Objects.requireNonNull($.distributionFilter, "expected parameter 'distributionFilter' to be non-null");
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            return $;
         }
     }
+
 }

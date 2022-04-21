@@ -5,10 +5,10 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="timestampFormats")
-      private final @Nullable Output<List<String>> timestampFormats;
+    private @Nullable Output<List<String>> timestampFormats;
 
-    public Output<List<String>> timestampFormats() {
-        return this.timestampFormats == null ? Codegen.empty() : this.timestampFormats;
+    public Optional<Output<List<String>>> timestampFormats() {
+        return Optional.ofNullable(this.timestampFormats);
     }
 
-    public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs(@Nullable Output<List<String>> timestampFormats) {
-        this.timestampFormats = timestampFormats;
-    }
+    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs() {}
 
-    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs() {
-        this.timestampFormats = Codegen.empty();
+    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs $) {
+        this.timestampFormats = $.timestampFormats;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> timestampFormats;
+        private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs();
         }
 
         public Builder(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timestampFormats = defaults.timestampFormats;
+            $ = new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder timestampFormats(@Nullable Output<List<String>> timestampFormats) {
-            this.timestampFormats = timestampFormats;
+            $.timestampFormats = timestampFormats;
             return this;
         }
-        public Builder timestampFormats(@Nullable List<String> timestampFormats) {
-            this.timestampFormats = Codegen.ofNullable(timestampFormats);
-            return this;
+
+        public Builder timestampFormats(List<String> timestampFormats) {
+            return timestampFormats(Output.of(timestampFormats));
         }
+
         public Builder timestampFormats(String... timestampFormats) {
             return timestampFormats(List.of(timestampFormats));
-        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs build() {
-            return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs(timestampFormats);
+        }
+
+        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs build() {
+            return $;
         }
     }
+
 }

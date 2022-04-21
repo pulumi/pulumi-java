@@ -27,10 +27,10 @@ public final class OriginEndpointHlsEncryption extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="constantInitializationVector")
-      private final @Nullable String constantInitializationVector;
+    private @Nullable String constantInitializationVector;
 
     public Optional<String> constantInitializationVector() {
-        return this.constantInitializationVector == null ? Optional.empty() : Optional.ofNullable(this.constantInitializationVector);
+        return Optional.ofNullable(this.constantInitializationVector);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OriginEndpointHlsEncryption extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="encryptionMethod")
-      private final @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod;
+    private @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod;
 
     public Optional<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod() {
-        return this.encryptionMethod == null ? Optional.empty() : Optional.ofNullable(this.encryptionMethod);
+        return Optional.ofNullable(this.encryptionMethod);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class OriginEndpointHlsEncryption extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="keyRotationIntervalSeconds")
-      private final @Nullable Integer keyRotationIntervalSeconds;
+    private @Nullable Integer keyRotationIntervalSeconds;
 
     public Optional<Integer> keyRotationIntervalSeconds() {
-        return this.keyRotationIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.keyRotationIntervalSeconds);
+        return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
 
     /**
@@ -60,89 +60,76 @@ public final class OriginEndpointHlsEncryption extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="repeatExtXKey")
-      private final @Nullable Boolean repeatExtXKey;
+    private @Nullable Boolean repeatExtXKey;
 
     public Optional<Boolean> repeatExtXKey() {
-        return this.repeatExtXKey == null ? Optional.empty() : Optional.ofNullable(this.repeatExtXKey);
+        return Optional.ofNullable(this.repeatExtXKey);
     }
 
     @Import(name="spekeKeyProvider", required=true)
-      private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
+    private OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
     public OriginEndpointSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public OriginEndpointHlsEncryption(
-        @Nullable String constantInitializationVector,
-        @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod,
-        @Nullable Integer keyRotationIntervalSeconds,
-        @Nullable Boolean repeatExtXKey,
-        OriginEndpointSpekeKeyProvider spekeKeyProvider) {
-        this.constantInitializationVector = constantInitializationVector;
-        this.encryptionMethod = encryptionMethod;
-        this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
-        this.repeatExtXKey = repeatExtXKey;
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
-    }
+    private OriginEndpointHlsEncryption() {}
 
-    private OriginEndpointHlsEncryption() {
-        this.constantInitializationVector = null;
-        this.encryptionMethod = null;
-        this.keyRotationIntervalSeconds = null;
-        this.repeatExtXKey = null;
-        this.spekeKeyProvider = null;
+    private OriginEndpointHlsEncryption(OriginEndpointHlsEncryption $) {
+        this.constantInitializationVector = $.constantInitializationVector;
+        this.encryptionMethod = $.encryptionMethod;
+        this.keyRotationIntervalSeconds = $.keyRotationIntervalSeconds;
+        this.repeatExtXKey = $.repeatExtXKey;
+        this.spekeKeyProvider = $.spekeKeyProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointHlsEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String constantInitializationVector;
-        private @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod;
-        private @Nullable Integer keyRotationIntervalSeconds;
-        private @Nullable Boolean repeatExtXKey;
-        private OriginEndpointSpekeKeyProvider spekeKeyProvider;
+        private OriginEndpointHlsEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointHlsEncryption();
         }
 
         public Builder(OriginEndpointHlsEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constantInitializationVector = defaults.constantInitializationVector;
-    	      this.encryptionMethod = defaults.encryptionMethod;
-    	      this.keyRotationIntervalSeconds = defaults.keyRotationIntervalSeconds;
-    	      this.repeatExtXKey = defaults.repeatExtXKey;
-    	      this.spekeKeyProvider = defaults.spekeKeyProvider;
+            $ = new OriginEndpointHlsEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = constantInitializationVector;
+            $.constantInitializationVector = constantInitializationVector;
             return this;
         }
+
         public Builder encryptionMethod(@Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
-            this.encryptionMethod = encryptionMethod;
+            $.encryptionMethod = encryptionMethod;
             return this;
         }
+
         public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
-            this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
+            $.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
+
         public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
-            this.repeatExtXKey = repeatExtXKey;
+            $.repeatExtXKey = repeatExtXKey;
             return this;
         }
+
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
-            this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+            $.spekeKeyProvider = spekeKeyProvider;
             return this;
-        }        public OriginEndpointHlsEncryption build() {
-            return new OriginEndpointHlsEncryption(constantInitializationVector, encryptionMethod, keyRotationIntervalSeconds, repeatExtXKey, spekeKeyProvider);
+        }
+
+        public OriginEndpointHlsEncryption build() {
+            $.spekeKeyProvider = Objects.requireNonNull($.spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
+            return $;
         }
     }
+
 }

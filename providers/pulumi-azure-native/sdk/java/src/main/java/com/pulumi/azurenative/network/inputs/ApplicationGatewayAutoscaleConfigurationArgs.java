@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends com.pulu
      * 
      */
     @Import(name="maxCapacity")
-      private final @Nullable Output<Integer> maxCapacity;
+    private @Nullable Output<Integer> maxCapacity;
 
-    public Output<Integer> maxCapacity() {
-        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
+    public Optional<Output<Integer>> maxCapacity() {
+        return Optional.ofNullable(this.maxCapacity);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends com.pulu
      * 
      */
     @Import(name="minCapacity", required=true)
-      private final Output<Integer> minCapacity;
+    private Output<Integer> minCapacity;
 
     public Output<Integer> minCapacity() {
         return this.minCapacity;
     }
 
-    public ApplicationGatewayAutoscaleConfigurationArgs(
-        @Nullable Output<Integer> maxCapacity,
-        Output<Integer> minCapacity) {
-        this.maxCapacity = maxCapacity;
-        this.minCapacity = Objects.requireNonNull(minCapacity, "expected parameter 'minCapacity' to be non-null");
-    }
+    private ApplicationGatewayAutoscaleConfigurationArgs() {}
 
-    private ApplicationGatewayAutoscaleConfigurationArgs() {
-        this.maxCapacity = Codegen.empty();
-        this.minCapacity = Codegen.empty();
+    private ApplicationGatewayAutoscaleConfigurationArgs(ApplicationGatewayAutoscaleConfigurationArgs $) {
+        this.maxCapacity = $.maxCapacity;
+        this.minCapacity = $.minCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayAutoscaleConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxCapacity;
-        private Output<Integer> minCapacity;
+        private ApplicationGatewayAutoscaleConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayAutoscaleConfigurationArgs();
         }
 
         public Builder(ApplicationGatewayAutoscaleConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxCapacity = defaults.maxCapacity;
-    	      this.minCapacity = defaults.minCapacity;
+            $ = new ApplicationGatewayAutoscaleConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
-            this.maxCapacity = maxCapacity;
+            $.maxCapacity = maxCapacity;
             return this;
         }
-        public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Codegen.ofNullable(maxCapacity);
-            return this;
+
+        public Builder maxCapacity(Integer maxCapacity) {
+            return maxCapacity(Output.of(maxCapacity));
         }
+
         public Builder minCapacity(Output<Integer> minCapacity) {
-            this.minCapacity = Objects.requireNonNull(minCapacity);
+            $.minCapacity = minCapacity;
             return this;
         }
+
         public Builder minCapacity(Integer minCapacity) {
-            this.minCapacity = Output.of(Objects.requireNonNull(minCapacity));
-            return this;
-        }        public ApplicationGatewayAutoscaleConfigurationArgs build() {
-            return new ApplicationGatewayAutoscaleConfigurationArgs(maxCapacity, minCapacity);
+            return minCapacity(Output.of(minCapacity));
+        }
+
+        public ApplicationGatewayAutoscaleConfigurationArgs build() {
+            $.minCapacity = Objects.requireNonNull($.minCapacity, "expected parameter 'minCapacity' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetContactListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contactListName", required=true)
-      private final String contactListName;
+    private String contactListName;
 
     public String contactListName() {
         return this.contactListName;
     }
 
-    public GetContactListArgs(String contactListName) {
-        this.contactListName = Objects.requireNonNull(contactListName, "expected parameter 'contactListName' to be non-null");
-    }
+    private GetContactListArgs() {}
 
-    private GetContactListArgs() {
-        this.contactListName = null;
+    private GetContactListArgs(GetContactListArgs $) {
+        this.contactListName = $.contactListName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContactListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contactListName;
+        private GetContactListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContactListArgs();
         }
 
         public Builder(GetContactListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactListName = defaults.contactListName;
+            $ = new GetContactListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactListName(String contactListName) {
-            this.contactListName = Objects.requireNonNull(contactListName);
+            $.contactListName = contactListName;
             return this;
-        }        public GetContactListArgs build() {
-            return new GetContactListArgs(contactListName);
+        }
+
+        public GetContactListArgs build() {
+            $.contactListName = Objects.requireNonNull($.contactListName, "expected parameter 'contactListName' to be non-null");
+            return $;
         }
     }
+
 }

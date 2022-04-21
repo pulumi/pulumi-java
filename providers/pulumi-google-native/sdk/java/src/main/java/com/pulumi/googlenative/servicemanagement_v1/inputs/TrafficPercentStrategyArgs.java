@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class TrafficPercentStrategyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="percentages")
-      private final @Nullable Output<Map<String,String>> percentages;
+    private @Nullable Output<Map<String,String>> percentages;
 
-    public Output<Map<String,String>> percentages() {
-        return this.percentages == null ? Codegen.empty() : this.percentages;
+    public Optional<Output<Map<String,String>>> percentages() {
+        return Optional.ofNullable(this.percentages);
     }
 
-    public TrafficPercentStrategyArgs(@Nullable Output<Map<String,String>> percentages) {
-        this.percentages = percentages;
-    }
+    private TrafficPercentStrategyArgs() {}
 
-    private TrafficPercentStrategyArgs() {
-        this.percentages = Codegen.empty();
+    private TrafficPercentStrategyArgs(TrafficPercentStrategyArgs $) {
+        this.percentages = $.percentages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficPercentStrategyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> percentages;
+        private TrafficPercentStrategyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficPercentStrategyArgs();
         }
 
         public Builder(TrafficPercentStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.percentages = defaults.percentages;
+            $ = new TrafficPercentStrategyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder percentages(@Nullable Output<Map<String,String>> percentages) {
-            this.percentages = percentages;
+            $.percentages = percentages;
             return this;
         }
-        public Builder percentages(@Nullable Map<String,String> percentages) {
-            this.percentages = Codegen.ofNullable(percentages);
-            return this;
-        }        public TrafficPercentStrategyArgs build() {
-            return new TrafficPercentStrategyArgs(percentages);
+
+        public Builder percentages(Map<String,String> percentages) {
+            return percentages(Output.of(percentages));
+        }
+
+        public TrafficPercentStrategyArgs build() {
+            return $;
         }
     }
+
 }

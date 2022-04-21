@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GoogleProtobufEmptyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends com.pulumi.resource
      * 
      */
     @Import(name="customTag")
-      private final @Nullable Output<String> customTag;
+    private @Nullable Output<String> customTag;
 
-    public Output<String> customTag() {
-        return this.customTag == null ? Codegen.empty() : this.customTag;
+    public Optional<Output<String>> customTag() {
+        return Optional.ofNullable(this.customTag);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends com.pulumi.resource
      * 
      */
     @Import(name="field", required=true)
-      private final Output<GooglePrivacyDlpV2FieldIdArgs> field;
+    private Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
         return this.field;
@@ -49,10 +49,10 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends com.pulumi.resource
      * 
      */
     @Import(name="inferred")
-      private final @Nullable Output<GoogleProtobufEmptyArgs> inferred;
+    private @Nullable Output<GoogleProtobufEmptyArgs> inferred;
 
-    public Output<GoogleProtobufEmptyArgs> inferred() {
-        return this.inferred == null ? Codegen.empty() : this.inferred;
+    public Optional<Output<GoogleProtobufEmptyArgs>> inferred() {
+        return Optional.ofNullable(this.inferred);
     }
 
     /**
@@ -60,89 +60,79 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends com.pulumi.resource
      * 
      */
     @Import(name="infoType")
-      private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
+    private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
-    public Output<GooglePrivacyDlpV2InfoTypeArgs> infoType() {
-        return this.infoType == null ? Codegen.empty() : this.infoType;
+    public Optional<Output<GooglePrivacyDlpV2InfoTypeArgs>> infoType() {
+        return Optional.ofNullable(this.infoType);
     }
 
-    public GooglePrivacyDlpV2TaggedFieldArgs(
-        @Nullable Output<String> customTag,
-        Output<GooglePrivacyDlpV2FieldIdArgs> field,
-        @Nullable Output<GoogleProtobufEmptyArgs> inferred,
-        @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
-        this.customTag = customTag;
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.inferred = inferred;
-        this.infoType = infoType;
-    }
+    private GooglePrivacyDlpV2TaggedFieldArgs() {}
 
-    private GooglePrivacyDlpV2TaggedFieldArgs() {
-        this.customTag = Codegen.empty();
-        this.field = Codegen.empty();
-        this.inferred = Codegen.empty();
-        this.infoType = Codegen.empty();
+    private GooglePrivacyDlpV2TaggedFieldArgs(GooglePrivacyDlpV2TaggedFieldArgs $) {
+        this.customTag = $.customTag;
+        this.field = $.field;
+        this.inferred = $.inferred;
+        this.infoType = $.infoType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TaggedFieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customTag;
-        private Output<GooglePrivacyDlpV2FieldIdArgs> field;
-        private @Nullable Output<GoogleProtobufEmptyArgs> inferred;
-        private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
+        private GooglePrivacyDlpV2TaggedFieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TaggedFieldArgs();
         }
 
         public Builder(GooglePrivacyDlpV2TaggedFieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customTag = defaults.customTag;
-    	      this.field = defaults.field;
-    	      this.inferred = defaults.inferred;
-    	      this.infoType = defaults.infoType;
+            $ = new GooglePrivacyDlpV2TaggedFieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customTag(@Nullable Output<String> customTag) {
-            this.customTag = customTag;
+            $.customTag = customTag;
             return this;
         }
-        public Builder customTag(@Nullable String customTag) {
-            this.customTag = Codegen.ofNullable(customTag);
-            return this;
+
+        public Builder customTag(String customTag) {
+            return customTag(Output.of(customTag));
         }
+
         public Builder field(Output<GooglePrivacyDlpV2FieldIdArgs> field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Output.of(Objects.requireNonNull(field));
-            return this;
+            return field(Output.of(field));
         }
+
         public Builder inferred(@Nullable Output<GoogleProtobufEmptyArgs> inferred) {
-            this.inferred = inferred;
+            $.inferred = inferred;
             return this;
         }
-        public Builder inferred(@Nullable GoogleProtobufEmptyArgs inferred) {
-            this.inferred = Codegen.ofNullable(inferred);
-            return this;
+
+        public Builder inferred(GoogleProtobufEmptyArgs inferred) {
+            return inferred(Output.of(inferred));
         }
+
         public Builder infoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
-            this.infoType = infoType;
+            $.infoType = infoType;
             return this;
         }
-        public Builder infoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
-            this.infoType = Codegen.ofNullable(infoType);
-            return this;
-        }        public GooglePrivacyDlpV2TaggedFieldArgs build() {
-            return new GooglePrivacyDlpV2TaggedFieldArgs(customTag, field, inferred, infoType);
+
+        public Builder infoType(GooglePrivacyDlpV2InfoTypeArgs infoType) {
+            return infoType(Output.of(infoType));
+        }
+
+        public GooglePrivacyDlpV2TaggedFieldArgs build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            return $;
         }
     }
+
 }

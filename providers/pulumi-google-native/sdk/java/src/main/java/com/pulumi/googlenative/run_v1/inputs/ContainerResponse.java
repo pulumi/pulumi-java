@@ -29,14 +29,14 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="args", required=true)
-      private final List<String> args;
+    private List<String> args;
 
     public List<String> args() {
         return this.args;
     }
 
     @Import(name="command", required=true)
-      private final List<String> command;
+    private List<String> command;
 
     public List<String> command() {
         return this.command;
@@ -47,7 +47,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="env", required=true)
-      private final List<EnvVarResponse> env;
+    private List<EnvVarResponse> env;
 
     public List<EnvVarResponse> env() {
         return this.env;
@@ -58,7 +58,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="envFrom", required=true)
-      private final List<EnvFromSourceResponse> envFrom;
+    private List<EnvFromSourceResponse> envFrom;
 
     public List<EnvFromSourceResponse> envFrom() {
         return this.envFrom;
@@ -69,7 +69,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="image", required=true)
-      private final String image;
+    private String image;
 
     public String image() {
         return this.image;
@@ -80,7 +80,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imagePullPolicy", required=true)
-      private final String imagePullPolicy;
+    private String imagePullPolicy;
 
     public String imagePullPolicy() {
         return this.imagePullPolicy;
@@ -91,7 +91,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="livenessProbe", required=true)
-      private final ProbeResponse livenessProbe;
+    private ProbeResponse livenessProbe;
 
     public ProbeResponse livenessProbe() {
         return this.livenessProbe;
@@ -102,7 +102,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -113,7 +113,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ports", required=true)
-      private final List<ContainerPortResponse> ports;
+    private List<ContainerPortResponse> ports;
 
     public List<ContainerPortResponse> ports() {
         return this.ports;
@@ -124,7 +124,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="readinessProbe", required=true)
-      private final ProbeResponse readinessProbe;
+    private ProbeResponse readinessProbe;
 
     public ProbeResponse readinessProbe() {
         return this.readinessProbe;
@@ -135,7 +135,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resources", required=true)
-      private final ResourceRequirementsResponse resources;
+    private ResourceRequirementsResponse resources;
 
     public ResourceRequirementsResponse resources() {
         return this.resources;
@@ -146,7 +146,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityContext", required=true)
-      private final SecurityContextResponse securityContext;
+    private SecurityContextResponse securityContext;
 
     public SecurityContextResponse securityContext() {
         return this.securityContext;
@@ -157,7 +157,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startupProbe", required=true)
-      private final ProbeResponse startupProbe;
+    private ProbeResponse startupProbe;
 
     public ProbeResponse startupProbe() {
         return this.startupProbe;
@@ -168,7 +168,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="terminationMessagePath", required=true)
-      private final String terminationMessagePath;
+    private String terminationMessagePath;
 
     public String terminationMessagePath() {
         return this.terminationMessagePath;
@@ -179,7 +179,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="terminationMessagePolicy", required=true)
-      private final String terminationMessagePolicy;
+    private String terminationMessagePolicy;
 
     public String terminationMessagePolicy() {
         return this.terminationMessagePolicy;
@@ -190,7 +190,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeMounts", required=true)
-      private final List<VolumeMountResponse> volumeMounts;
+    private List<VolumeMountResponse> volumeMounts;
 
     public List<VolumeMountResponse> volumeMounts() {
         return this.volumeMounts;
@@ -201,208 +201,181 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workingDir", required=true)
-      private final String workingDir;
+    private String workingDir;
 
     public String workingDir() {
         return this.workingDir;
     }
 
-    public ContainerResponse(
-        List<String> args,
-        List<String> command,
-        List<EnvVarResponse> env,
-        List<EnvFromSourceResponse> envFrom,
-        String image,
-        String imagePullPolicy,
-        ProbeResponse livenessProbe,
-        String name,
-        List<ContainerPortResponse> ports,
-        ProbeResponse readinessProbe,
-        ResourceRequirementsResponse resources,
-        SecurityContextResponse securityContext,
-        ProbeResponse startupProbe,
-        String terminationMessagePath,
-        String terminationMessagePolicy,
-        List<VolumeMountResponse> volumeMounts,
-        String workingDir) {
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.env = Objects.requireNonNull(env, "expected parameter 'env' to be non-null");
-        this.envFrom = Objects.requireNonNull(envFrom, "expected parameter 'envFrom' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.imagePullPolicy = Objects.requireNonNull(imagePullPolicy, "expected parameter 'imagePullPolicy' to be non-null");
-        this.livenessProbe = Objects.requireNonNull(livenessProbe, "expected parameter 'livenessProbe' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-        this.readinessProbe = Objects.requireNonNull(readinessProbe, "expected parameter 'readinessProbe' to be non-null");
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-        this.securityContext = Objects.requireNonNull(securityContext, "expected parameter 'securityContext' to be non-null");
-        this.startupProbe = Objects.requireNonNull(startupProbe, "expected parameter 'startupProbe' to be non-null");
-        this.terminationMessagePath = Objects.requireNonNull(terminationMessagePath, "expected parameter 'terminationMessagePath' to be non-null");
-        this.terminationMessagePolicy = Objects.requireNonNull(terminationMessagePolicy, "expected parameter 'terminationMessagePolicy' to be non-null");
-        this.volumeMounts = Objects.requireNonNull(volumeMounts, "expected parameter 'volumeMounts' to be non-null");
-        this.workingDir = Objects.requireNonNull(workingDir, "expected parameter 'workingDir' to be non-null");
-    }
+    private ContainerResponse() {}
 
-    private ContainerResponse() {
-        this.args = List.of();
-        this.command = List.of();
-        this.env = List.of();
-        this.envFrom = List.of();
-        this.image = null;
-        this.imagePullPolicy = null;
-        this.livenessProbe = null;
-        this.name = null;
-        this.ports = List.of();
-        this.readinessProbe = null;
-        this.resources = null;
-        this.securityContext = null;
-        this.startupProbe = null;
-        this.terminationMessagePath = null;
-        this.terminationMessagePolicy = null;
-        this.volumeMounts = List.of();
-        this.workingDir = null;
+    private ContainerResponse(ContainerResponse $) {
+        this.args = $.args;
+        this.command = $.command;
+        this.env = $.env;
+        this.envFrom = $.envFrom;
+        this.image = $.image;
+        this.imagePullPolicy = $.imagePullPolicy;
+        this.livenessProbe = $.livenessProbe;
+        this.name = $.name;
+        this.ports = $.ports;
+        this.readinessProbe = $.readinessProbe;
+        this.resources = $.resources;
+        this.securityContext = $.securityContext;
+        this.startupProbe = $.startupProbe;
+        this.terminationMessagePath = $.terminationMessagePath;
+        this.terminationMessagePolicy = $.terminationMessagePolicy;
+        this.volumeMounts = $.volumeMounts;
+        this.workingDir = $.workingDir;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> args;
-        private List<String> command;
-        private List<EnvVarResponse> env;
-        private List<EnvFromSourceResponse> envFrom;
-        private String image;
-        private String imagePullPolicy;
-        private ProbeResponse livenessProbe;
-        private String name;
-        private List<ContainerPortResponse> ports;
-        private ProbeResponse readinessProbe;
-        private ResourceRequirementsResponse resources;
-        private SecurityContextResponse securityContext;
-        private ProbeResponse startupProbe;
-        private String terminationMessagePath;
-        private String terminationMessagePolicy;
-        private List<VolumeMountResponse> volumeMounts;
-        private String workingDir;
+        private ContainerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerResponse();
         }
 
         public Builder(ContainerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.command = defaults.command;
-    	      this.env = defaults.env;
-    	      this.envFrom = defaults.envFrom;
-    	      this.image = defaults.image;
-    	      this.imagePullPolicy = defaults.imagePullPolicy;
-    	      this.livenessProbe = defaults.livenessProbe;
-    	      this.name = defaults.name;
-    	      this.ports = defaults.ports;
-    	      this.readinessProbe = defaults.readinessProbe;
-    	      this.resources = defaults.resources;
-    	      this.securityContext = defaults.securityContext;
-    	      this.startupProbe = defaults.startupProbe;
-    	      this.terminationMessagePath = defaults.terminationMessagePath;
-    	      this.terminationMessagePolicy = defaults.terminationMessagePolicy;
-    	      this.volumeMounts = defaults.volumeMounts;
-    	      this.workingDir = defaults.workingDir;
+            $ = new ContainerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder args(List<String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder command(List<String> command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder env(List<EnvVarResponse> env) {
-            this.env = Objects.requireNonNull(env);
+            $.env = env;
             return this;
         }
+
         public Builder env(EnvVarResponse... env) {
             return env(List.of(env));
         }
+
         public Builder envFrom(List<EnvFromSourceResponse> envFrom) {
-            this.envFrom = Objects.requireNonNull(envFrom);
+            $.envFrom = envFrom;
             return this;
         }
+
         public Builder envFrom(EnvFromSourceResponse... envFrom) {
             return envFrom(List.of(envFrom));
         }
+
         public Builder image(String image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder imagePullPolicy(String imagePullPolicy) {
-            this.imagePullPolicy = Objects.requireNonNull(imagePullPolicy);
+            $.imagePullPolicy = imagePullPolicy;
             return this;
         }
+
         public Builder livenessProbe(ProbeResponse livenessProbe) {
-            this.livenessProbe = Objects.requireNonNull(livenessProbe);
+            $.livenessProbe = livenessProbe;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder ports(List<ContainerPortResponse> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(ContainerPortResponse... ports) {
             return ports(List.of(ports));
         }
+
         public Builder readinessProbe(ProbeResponse readinessProbe) {
-            this.readinessProbe = Objects.requireNonNull(readinessProbe);
+            $.readinessProbe = readinessProbe;
             return this;
         }
+
         public Builder resources(ResourceRequirementsResponse resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder securityContext(SecurityContextResponse securityContext) {
-            this.securityContext = Objects.requireNonNull(securityContext);
+            $.securityContext = securityContext;
             return this;
         }
+
         public Builder startupProbe(ProbeResponse startupProbe) {
-            this.startupProbe = Objects.requireNonNull(startupProbe);
+            $.startupProbe = startupProbe;
             return this;
         }
+
         public Builder terminationMessagePath(String terminationMessagePath) {
-            this.terminationMessagePath = Objects.requireNonNull(terminationMessagePath);
+            $.terminationMessagePath = terminationMessagePath;
             return this;
         }
+
         public Builder terminationMessagePolicy(String terminationMessagePolicy) {
-            this.terminationMessagePolicy = Objects.requireNonNull(terminationMessagePolicy);
+            $.terminationMessagePolicy = terminationMessagePolicy;
             return this;
         }
+
         public Builder volumeMounts(List<VolumeMountResponse> volumeMounts) {
-            this.volumeMounts = Objects.requireNonNull(volumeMounts);
+            $.volumeMounts = volumeMounts;
             return this;
         }
+
         public Builder volumeMounts(VolumeMountResponse... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
         }
+
         public Builder workingDir(String workingDir) {
-            this.workingDir = Objects.requireNonNull(workingDir);
+            $.workingDir = workingDir;
             return this;
-        }        public ContainerResponse build() {
-            return new ContainerResponse(args, command, env, envFrom, image, imagePullPolicy, livenessProbe, name, ports, readinessProbe, resources, securityContext, startupProbe, terminationMessagePath, terminationMessagePolicy, volumeMounts, workingDir);
+        }
+
+        public ContainerResponse build() {
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            $.env = Objects.requireNonNull($.env, "expected parameter 'env' to be non-null");
+            $.envFrom = Objects.requireNonNull($.envFrom, "expected parameter 'envFrom' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.imagePullPolicy = Objects.requireNonNull($.imagePullPolicy, "expected parameter 'imagePullPolicy' to be non-null");
+            $.livenessProbe = Objects.requireNonNull($.livenessProbe, "expected parameter 'livenessProbe' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            $.readinessProbe = Objects.requireNonNull($.readinessProbe, "expected parameter 'readinessProbe' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            $.securityContext = Objects.requireNonNull($.securityContext, "expected parameter 'securityContext' to be non-null");
+            $.startupProbe = Objects.requireNonNull($.startupProbe, "expected parameter 'startupProbe' to be non-null");
+            $.terminationMessagePath = Objects.requireNonNull($.terminationMessagePath, "expected parameter 'terminationMessagePath' to be non-null");
+            $.terminationMessagePolicy = Objects.requireNonNull($.terminationMessagePolicy, "expected parameter 'terminationMessagePolicy' to be non-null");
+            $.volumeMounts = Objects.requireNonNull($.volumeMounts, "expected parameter 'volumeMounts' to be non-null");
+            $.workingDir = Objects.requireNonNull($.workingDir, "expected parameter 'workingDir' to be non-null");
+            return $;
         }
     }
+
 }

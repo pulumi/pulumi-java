@@ -18,151 +18,135 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration extends com
     public static final DataSourceServiceNowKnowledgeArticleConfiguration Empty = new DataSourceServiceNowKnowledgeArticleConfiguration();
 
     @Import(name="crawlAttachments")
-      private final @Nullable Boolean crawlAttachments;
+    private @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> crawlAttachments() {
-        return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
+        return Optional.ofNullable(this.crawlAttachments);
     }
 
     @Import(name="documentDataFieldName", required=true)
-      private final String documentDataFieldName;
+    private String documentDataFieldName;
 
     public String documentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @Import(name="documentTitleFieldName")
-      private final @Nullable String documentTitleFieldName;
+    private @Nullable String documentTitleFieldName;
 
     public Optional<String> documentTitleFieldName() {
-        return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
+        return Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @Import(name="excludeAttachmentFilePatterns")
-      private final @Nullable List<String> excludeAttachmentFilePatterns;
+    private @Nullable List<String> excludeAttachmentFilePatterns;
 
-    public List<String> excludeAttachmentFilePatterns() {
-        return this.excludeAttachmentFilePatterns == null ? List.of() : this.excludeAttachmentFilePatterns;
+    public Optional<List<String>> excludeAttachmentFilePatterns() {
+        return Optional.ofNullable(this.excludeAttachmentFilePatterns);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+    private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> fieldMappings() {
-        return this.fieldMappings == null ? List.of() : this.fieldMappings;
+    public Optional<List<DataSourceToIndexFieldMapping>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
     @Import(name="filterQuery")
-      private final @Nullable String filterQuery;
+    private @Nullable String filterQuery;
 
     public Optional<String> filterQuery() {
-        return this.filterQuery == null ? Optional.empty() : Optional.ofNullable(this.filterQuery);
+        return Optional.ofNullable(this.filterQuery);
     }
 
     @Import(name="includeAttachmentFilePatterns")
-      private final @Nullable List<String> includeAttachmentFilePatterns;
+    private @Nullable List<String> includeAttachmentFilePatterns;
 
-    public List<String> includeAttachmentFilePatterns() {
-        return this.includeAttachmentFilePatterns == null ? List.of() : this.includeAttachmentFilePatterns;
+    public Optional<List<String>> includeAttachmentFilePatterns() {
+        return Optional.ofNullable(this.includeAttachmentFilePatterns);
     }
 
-    public DataSourceServiceNowKnowledgeArticleConfiguration(
-        @Nullable Boolean crawlAttachments,
-        String documentDataFieldName,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<String> excludeAttachmentFilePatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable String filterQuery,
-        @Nullable List<String> includeAttachmentFilePatterns) {
-        this.crawlAttachments = crawlAttachments;
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName, "expected parameter 'documentDataFieldName' to be non-null");
-        this.documentTitleFieldName = documentTitleFieldName;
-        this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
-        this.fieldMappings = fieldMappings;
-        this.filterQuery = filterQuery;
-        this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
-    }
+    private DataSourceServiceNowKnowledgeArticleConfiguration() {}
 
-    private DataSourceServiceNowKnowledgeArticleConfiguration() {
-        this.crawlAttachments = null;
-        this.documentDataFieldName = null;
-        this.documentTitleFieldName = null;
-        this.excludeAttachmentFilePatterns = List.of();
-        this.fieldMappings = List.of();
-        this.filterQuery = null;
-        this.includeAttachmentFilePatterns = List.of();
+    private DataSourceServiceNowKnowledgeArticleConfiguration(DataSourceServiceNowKnowledgeArticleConfiguration $) {
+        this.crawlAttachments = $.crawlAttachments;
+        this.documentDataFieldName = $.documentDataFieldName;
+        this.documentTitleFieldName = $.documentTitleFieldName;
+        this.excludeAttachmentFilePatterns = $.excludeAttachmentFilePatterns;
+        this.fieldMappings = $.fieldMappings;
+        this.filterQuery = $.filterQuery;
+        this.includeAttachmentFilePatterns = $.includeAttachmentFilePatterns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceServiceNowKnowledgeArticleConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean crawlAttachments;
-        private String documentDataFieldName;
-        private @Nullable String documentTitleFieldName;
-        private @Nullable List<String> excludeAttachmentFilePatterns;
-        private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
-        private @Nullable String filterQuery;
-        private @Nullable List<String> includeAttachmentFilePatterns;
+        private DataSourceServiceNowKnowledgeArticleConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceServiceNowKnowledgeArticleConfiguration();
         }
 
         public Builder(DataSourceServiceNowKnowledgeArticleConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crawlAttachments = defaults.crawlAttachments;
-    	      this.documentDataFieldName = defaults.documentDataFieldName;
-    	      this.documentTitleFieldName = defaults.documentTitleFieldName;
-    	      this.excludeAttachmentFilePatterns = defaults.excludeAttachmentFilePatterns;
-    	      this.fieldMappings = defaults.fieldMappings;
-    	      this.filterQuery = defaults.filterQuery;
-    	      this.includeAttachmentFilePatterns = defaults.includeAttachmentFilePatterns;
+            $ = new DataSourceServiceNowKnowledgeArticleConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
-            this.crawlAttachments = crawlAttachments;
+            $.crawlAttachments = crawlAttachments;
             return this;
         }
+
         public Builder documentDataFieldName(String documentDataFieldName) {
-            this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+            $.documentDataFieldName = documentDataFieldName;
             return this;
         }
+
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
-            this.documentTitleFieldName = documentTitleFieldName;
+            $.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
+
         public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
-            this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
+            $.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
+
         public Builder excludeAttachmentFilePatterns(String... excludeAttachmentFilePatterns) {
             return excludeAttachmentFilePatterns(List.of(excludeAttachmentFilePatterns));
         }
+
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
         }
+
         public Builder filterQuery(@Nullable String filterQuery) {
-            this.filterQuery = filterQuery;
+            $.filterQuery = filterQuery;
             return this;
         }
+
         public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
-            this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
+            $.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
+
         public Builder includeAttachmentFilePatterns(String... includeAttachmentFilePatterns) {
             return includeAttachmentFilePatterns(List.of(includeAttachmentFilePatterns));
-        }        public DataSourceServiceNowKnowledgeArticleConfiguration build() {
-            return new DataSourceServiceNowKnowledgeArticleConfiguration(crawlAttachments, documentDataFieldName, documentTitleFieldName, excludeAttachmentFilePatterns, fieldMappings, filterQuery, includeAttachmentFilePatterns);
+        }
+
+        public DataSourceServiceNowKnowledgeArticleConfiguration build() {
+            $.documentDataFieldName = Objects.requireNonNull($.documentDataFieldName, "expected parameter 'documentDataFieldName' to be non-null");
+            return $;
         }
     }
+
 }

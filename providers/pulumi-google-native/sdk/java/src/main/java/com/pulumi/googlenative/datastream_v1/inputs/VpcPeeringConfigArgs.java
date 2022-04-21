@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class VpcPeeringConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subnet", required=true)
-      private final Output<String> subnet;
+    private Output<String> subnet;
 
     public Output<String> subnet() {
         return this.subnet;
@@ -34,63 +33,60 @@ public final class VpcPeeringConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="vpc", required=true)
-      private final Output<String> vpc;
+    private Output<String> vpc;
 
     public Output<String> vpc() {
         return this.vpc;
     }
 
-    public VpcPeeringConfigArgs(
-        Output<String> subnet,
-        Output<String> vpc) {
-        this.subnet = Objects.requireNonNull(subnet, "expected parameter 'subnet' to be non-null");
-        this.vpc = Objects.requireNonNull(vpc, "expected parameter 'vpc' to be non-null");
-    }
+    private VpcPeeringConfigArgs() {}
 
-    private VpcPeeringConfigArgs() {
-        this.subnet = Codegen.empty();
-        this.vpc = Codegen.empty();
+    private VpcPeeringConfigArgs(VpcPeeringConfigArgs $) {
+        this.subnet = $.subnet;
+        this.vpc = $.vpc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcPeeringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> subnet;
-        private Output<String> vpc;
+        private VpcPeeringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcPeeringConfigArgs();
         }
 
         public Builder(VpcPeeringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnet = defaults.subnet;
-    	      this.vpc = defaults.vpc;
+            $ = new VpcPeeringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subnet(Output<String> subnet) {
-            this.subnet = Objects.requireNonNull(subnet);
+            $.subnet = subnet;
             return this;
         }
+
         public Builder subnet(String subnet) {
-            this.subnet = Output.of(Objects.requireNonNull(subnet));
-            return this;
+            return subnet(Output.of(subnet));
         }
+
         public Builder vpc(Output<String> vpc) {
-            this.vpc = Objects.requireNonNull(vpc);
+            $.vpc = vpc;
             return this;
         }
+
         public Builder vpc(String vpc) {
-            this.vpc = Output.of(Objects.requireNonNull(vpc));
-            return this;
-        }        public VpcPeeringConfigArgs build() {
-            return new VpcPeeringConfigArgs(subnet, vpc);
+            return vpc(Output.of(vpc));
+        }
+
+        public VpcPeeringConfigArgs build() {
+            $.subnet = Objects.requireNonNull($.subnet, "expected parameter 'subnet' to be non-null");
+            $.vpc = Objects.requireNonNull($.vpc, "expected parameter 'vpc' to be non-null");
+            return $;
         }
     }
+
 }

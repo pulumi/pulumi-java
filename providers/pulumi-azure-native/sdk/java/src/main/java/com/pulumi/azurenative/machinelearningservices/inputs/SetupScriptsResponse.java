@@ -23,45 +23,44 @@ public final class SetupScriptsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="scripts")
-      private final @Nullable ScriptsToExecuteResponse scripts;
+    private @Nullable ScriptsToExecuteResponse scripts;
 
     public Optional<ScriptsToExecuteResponse> scripts() {
-        return this.scripts == null ? Optional.empty() : Optional.ofNullable(this.scripts);
+        return Optional.ofNullable(this.scripts);
     }
 
-    public SetupScriptsResponse(@Nullable ScriptsToExecuteResponse scripts) {
-        this.scripts = scripts;
-    }
+    private SetupScriptsResponse() {}
 
-    private SetupScriptsResponse() {
-        this.scripts = null;
+    private SetupScriptsResponse(SetupScriptsResponse $) {
+        this.scripts = $.scripts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SetupScriptsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ScriptsToExecuteResponse scripts;
+        private SetupScriptsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SetupScriptsResponse();
         }
 
         public Builder(SetupScriptsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scripts = defaults.scripts;
+            $ = new SetupScriptsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scripts(@Nullable ScriptsToExecuteResponse scripts) {
-            this.scripts = scripts;
+            $.scripts = scripts;
             return this;
-        }        public SetupScriptsResponse build() {
-            return new SetupScriptsResponse(scripts);
+        }
+
+        public SetupScriptsResponse build() {
+            return $;
         }
     }
+
 }

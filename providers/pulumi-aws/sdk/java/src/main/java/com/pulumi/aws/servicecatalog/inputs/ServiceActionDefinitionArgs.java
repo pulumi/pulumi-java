@@ -5,9 +5,9 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ServiceActionDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="assumeRole")
-      private final @Nullable Output<String> assumeRole;
+    private @Nullable Output<String> assumeRole;
 
-    public Output<String> assumeRole() {
-        return this.assumeRole == null ? Codegen.empty() : this.assumeRole;
+    public Optional<Output<String>> assumeRole() {
+        return Optional.ofNullable(this.assumeRole);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ServiceActionDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -42,10 +42,10 @@ public final class ServiceActionDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<String> parameters;
+    private @Nullable Output<String> parameters;
 
-    public Output<String> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ServiceActionDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -64,102 +64,90 @@ public final class ServiceActionDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public ServiceActionDefinitionArgs(
-        @Nullable Output<String> assumeRole,
-        Output<String> name,
-        @Nullable Output<String> parameters,
-        @Nullable Output<String> type,
-        Output<String> version) {
-        this.assumeRole = assumeRole;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-        this.type = type;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private ServiceActionDefinitionArgs() {}
 
-    private ServiceActionDefinitionArgs() {
-        this.assumeRole = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.type = Codegen.empty();
-        this.version = Codegen.empty();
+    private ServiceActionDefinitionArgs(ServiceActionDefinitionArgs $) {
+        this.assumeRole = $.assumeRole;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceActionDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assumeRole;
-        private Output<String> name;
-        private @Nullable Output<String> parameters;
-        private @Nullable Output<String> type;
-        private Output<String> version;
+        private ServiceActionDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceActionDefinitionArgs();
         }
 
         public Builder(ServiceActionDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assumeRole = defaults.assumeRole;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new ServiceActionDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assumeRole(@Nullable Output<String> assumeRole) {
-            this.assumeRole = assumeRole;
+            $.assumeRole = assumeRole;
             return this;
         }
-        public Builder assumeRole(@Nullable String assumeRole) {
-            this.assumeRole = Codegen.ofNullable(assumeRole);
-            return this;
+
+        public Builder assumeRole(String assumeRole) {
+            return assumeRole(Output.of(assumeRole));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable String parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(String parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public ServiceActionDefinitionArgs build() {
-            return new ServiceActionDefinitionArgs(assumeRole, name, parameters, type, version);
+            return version(Output.of(version));
+        }
+
+        public ServiceActionDefinitionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

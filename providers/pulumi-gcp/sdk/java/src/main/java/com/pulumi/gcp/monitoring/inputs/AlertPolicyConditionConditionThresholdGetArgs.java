@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdAggregationGetArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdTriggerGetArgs;
@@ -13,6 +12,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -38,10 +38,10 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends com.pul
      * 
      */
     @Import(name="aggregations")
-      private final @Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations;
+    private @Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations;
 
-    public Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations() {
-        return this.aggregations == null ? Codegen.empty() : this.aggregations;
+    public Optional<Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>>> aggregations() {
+        return Optional.ofNullable(this.aggregations);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends com.pul
      * 
      */
     @Import(name="comparison", required=true)
-      private final Output<String> comparison;
+    private Output<String> comparison;
 
     public Output<String> comparison() {
         return this.comparison;
@@ -84,10 +84,10 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends com.pul
      * 
      */
     @Import(name="denominatorAggregations")
-      private final @Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations;
+    private @Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations;
 
-    public Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations() {
-        return this.denominatorAggregations == null ? Codegen.empty() : this.denominatorAggregations;
+    public Optional<Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>>> denominatorAggregations() {
+        return Optional.ofNullable(this.denominatorAggregations);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends com.pul
      * 
      */
     @Import(name="denominatorFilter")
-      private final @Nullable Output<String> denominatorFilter;
+    private @Nullable Output<String> denominatorFilter;
 
-    public Output<String> denominatorFilter() {
-        return this.denominatorFilter == null ? Codegen.empty() : this.denominatorFilter;
+    public Optional<Output<String>> denominatorFilter() {
+        return Optional.ofNullable(this.denominatorFilter);
     }
 
     /**
@@ -134,7 +134,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends com.pul
      * 
      */
     @Import(name="duration", required=true)
-      private final Output<String> duration;
+    private Output<String> duration;
 
     public Output<String> duration() {
         return this.duration;
@@ -145,10 +145,10 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends com.pul
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends com.pul
      * 
      */
     @Import(name="thresholdValue")
-      private final @Nullable Output<Double> thresholdValue;
+    private @Nullable Output<Double> thresholdValue;
 
-    public Output<Double> thresholdValue() {
-        return this.thresholdValue == null ? Codegen.empty() : this.thresholdValue;
+    public Optional<Output<Double>> thresholdValue() {
+        return Optional.ofNullable(this.thresholdValue);
     }
 
     /**
@@ -176,147 +176,128 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends com.pul
      * 
      */
     @Import(name="trigger")
-      private final @Nullable Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger;
+    private @Nullable Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger;
 
-    public Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger() {
-        return this.trigger == null ? Codegen.empty() : this.trigger;
+    public Optional<Output<AlertPolicyConditionConditionThresholdTriggerGetArgs>> trigger() {
+        return Optional.ofNullable(this.trigger);
     }
 
-    public AlertPolicyConditionConditionThresholdGetArgs(
-        @Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations,
-        Output<String> comparison,
-        @Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations,
-        @Nullable Output<String> denominatorFilter,
-        Output<String> duration,
-        @Nullable Output<String> filter,
-        @Nullable Output<Double> thresholdValue,
-        @Nullable Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger) {
-        this.aggregations = aggregations;
-        this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
-        this.denominatorAggregations = denominatorAggregations;
-        this.denominatorFilter = denominatorFilter;
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.filter = filter;
-        this.thresholdValue = thresholdValue;
-        this.trigger = trigger;
-    }
+    private AlertPolicyConditionConditionThresholdGetArgs() {}
 
-    private AlertPolicyConditionConditionThresholdGetArgs() {
-        this.aggregations = Codegen.empty();
-        this.comparison = Codegen.empty();
-        this.denominatorAggregations = Codegen.empty();
-        this.denominatorFilter = Codegen.empty();
-        this.duration = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.thresholdValue = Codegen.empty();
-        this.trigger = Codegen.empty();
+    private AlertPolicyConditionConditionThresholdGetArgs(AlertPolicyConditionConditionThresholdGetArgs $) {
+        this.aggregations = $.aggregations;
+        this.comparison = $.comparison;
+        this.denominatorAggregations = $.denominatorAggregations;
+        this.denominatorFilter = $.denominatorFilter;
+        this.duration = $.duration;
+        this.filter = $.filter;
+        this.thresholdValue = $.thresholdValue;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertPolicyConditionConditionThresholdGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations;
-        private Output<String> comparison;
-        private @Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations;
-        private @Nullable Output<String> denominatorFilter;
-        private Output<String> duration;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<Double> thresholdValue;
-        private @Nullable Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger;
+        private AlertPolicyConditionConditionThresholdGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertPolicyConditionConditionThresholdGetArgs();
         }
 
         public Builder(AlertPolicyConditionConditionThresholdGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregations = defaults.aggregations;
-    	      this.comparison = defaults.comparison;
-    	      this.denominatorAggregations = defaults.denominatorAggregations;
-    	      this.denominatorFilter = defaults.denominatorFilter;
-    	      this.duration = defaults.duration;
-    	      this.filter = defaults.filter;
-    	      this.thresholdValue = defaults.thresholdValue;
-    	      this.trigger = defaults.trigger;
+            $ = new AlertPolicyConditionConditionThresholdGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregations(@Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations) {
-            this.aggregations = aggregations;
+            $.aggregations = aggregations;
             return this;
         }
-        public Builder aggregations(@Nullable List<AlertPolicyConditionConditionThresholdAggregationGetArgs> aggregations) {
-            this.aggregations = Codegen.ofNullable(aggregations);
-            return this;
+
+        public Builder aggregations(List<AlertPolicyConditionConditionThresholdAggregationGetArgs> aggregations) {
+            return aggregations(Output.of(aggregations));
         }
+
         public Builder aggregations(AlertPolicyConditionConditionThresholdAggregationGetArgs... aggregations) {
             return aggregations(List.of(aggregations));
         }
+
         public Builder comparison(Output<String> comparison) {
-            this.comparison = Objects.requireNonNull(comparison);
+            $.comparison = comparison;
             return this;
         }
+
         public Builder comparison(String comparison) {
-            this.comparison = Output.of(Objects.requireNonNull(comparison));
-            return this;
+            return comparison(Output.of(comparison));
         }
+
         public Builder denominatorAggregations(@Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations) {
-            this.denominatorAggregations = denominatorAggregations;
+            $.denominatorAggregations = denominatorAggregations;
             return this;
         }
-        public Builder denominatorAggregations(@Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs> denominatorAggregations) {
-            this.denominatorAggregations = Codegen.ofNullable(denominatorAggregations);
-            return this;
+
+        public Builder denominatorAggregations(List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs> denominatorAggregations) {
+            return denominatorAggregations(Output.of(denominatorAggregations));
         }
+
         public Builder denominatorAggregations(AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs... denominatorAggregations) {
             return denominatorAggregations(List.of(denominatorAggregations));
         }
+
         public Builder denominatorFilter(@Nullable Output<String> denominatorFilter) {
-            this.denominatorFilter = denominatorFilter;
+            $.denominatorFilter = denominatorFilter;
             return this;
         }
-        public Builder denominatorFilter(@Nullable String denominatorFilter) {
-            this.denominatorFilter = Codegen.ofNullable(denominatorFilter);
-            return this;
+
+        public Builder denominatorFilter(String denominatorFilter) {
+            return denominatorFilter(Output.of(denominatorFilter));
         }
+
         public Builder duration(Output<String> duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Output.of(Objects.requireNonNull(duration));
-            return this;
+            return duration(Output.of(duration));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder thresholdValue(@Nullable Output<Double> thresholdValue) {
-            this.thresholdValue = thresholdValue;
+            $.thresholdValue = thresholdValue;
             return this;
         }
-        public Builder thresholdValue(@Nullable Double thresholdValue) {
-            this.thresholdValue = Codegen.ofNullable(thresholdValue);
-            return this;
+
+        public Builder thresholdValue(Double thresholdValue) {
+            return thresholdValue(Output.of(thresholdValue));
         }
+
         public Builder trigger(@Nullable Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger) {
-            this.trigger = trigger;
+            $.trigger = trigger;
             return this;
         }
-        public Builder trigger(@Nullable AlertPolicyConditionConditionThresholdTriggerGetArgs trigger) {
-            this.trigger = Codegen.ofNullable(trigger);
-            return this;
-        }        public AlertPolicyConditionConditionThresholdGetArgs build() {
-            return new AlertPolicyConditionConditionThresholdGetArgs(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
+
+        public Builder trigger(AlertPolicyConditionConditionThresholdTriggerGetArgs trigger) {
+            return trigger(Output.of(trigger));
+        }
+
+        public AlertPolicyConditionConditionThresholdGetArgs build() {
+            $.comparison = Objects.requireNonNull($.comparison, "expected parameter 'comparison' to be non-null");
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            return $;
         }
     }
+
 }

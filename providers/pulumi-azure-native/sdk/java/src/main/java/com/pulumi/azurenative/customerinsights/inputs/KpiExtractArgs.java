@@ -5,7 +5,6 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class KpiExtractArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expression", required=true)
-      private final Output<String> expression;
+    private Output<String> expression;
 
     public Output<String> expression() {
         return this.expression;
@@ -34,63 +33,60 @@ public final class KpiExtractArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extractName", required=true)
-      private final Output<String> extractName;
+    private Output<String> extractName;
 
     public Output<String> extractName() {
         return this.extractName;
     }
 
-    public KpiExtractArgs(
-        Output<String> expression,
-        Output<String> extractName) {
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.extractName = Objects.requireNonNull(extractName, "expected parameter 'extractName' to be non-null");
-    }
+    private KpiExtractArgs() {}
 
-    private KpiExtractArgs() {
-        this.expression = Codegen.empty();
-        this.extractName = Codegen.empty();
+    private KpiExtractArgs(KpiExtractArgs $) {
+        this.expression = $.expression;
+        this.extractName = $.extractName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KpiExtractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> expression;
-        private Output<String> extractName;
+        private KpiExtractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KpiExtractArgs();
         }
 
         public Builder(KpiExtractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expression = defaults.expression;
-    	      this.extractName = defaults.extractName;
+            $ = new KpiExtractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expression(Output<String> expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Output.of(Objects.requireNonNull(expression));
-            return this;
+            return expression(Output.of(expression));
         }
+
         public Builder extractName(Output<String> extractName) {
-            this.extractName = Objects.requireNonNull(extractName);
+            $.extractName = extractName;
             return this;
         }
+
         public Builder extractName(String extractName) {
-            this.extractName = Output.of(Objects.requireNonNull(extractName));
-            return this;
-        }        public KpiExtractArgs build() {
-            return new KpiExtractArgs(expression, extractName);
+            return extractName(Output.of(extractName));
+        }
+
+        public KpiExtractArgs build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.extractName = Objects.requireNonNull($.extractName, "expected parameter 'extractName' to be non-null");
+            return $;
         }
     }
+
 }

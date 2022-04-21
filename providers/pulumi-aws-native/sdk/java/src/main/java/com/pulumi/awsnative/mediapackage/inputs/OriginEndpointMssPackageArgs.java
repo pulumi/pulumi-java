@@ -7,9 +7,9 @@ import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointMssEncryptionArgs;
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class OriginEndpointMssPackageArgs extends com.pulumi.resources.Res
     public static final OriginEndpointMssPackageArgs Empty = new OriginEndpointMssPackageArgs();
 
     @Import(name="encryption")
-      private final @Nullable Output<OriginEndpointMssEncryptionArgs> encryption;
+    private @Nullable Output<OriginEndpointMssEncryptionArgs> encryption;
 
-    public Output<OriginEndpointMssEncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<OriginEndpointMssEncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OriginEndpointMssPackageArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="manifestWindowSeconds")
-      private final @Nullable Output<Integer> manifestWindowSeconds;
+    private @Nullable Output<Integer> manifestWindowSeconds;
 
-    public Output<Integer> manifestWindowSeconds() {
-        return this.manifestWindowSeconds == null ? Codegen.empty() : this.manifestWindowSeconds;
+    public Optional<Output<Integer>> manifestWindowSeconds() {
+        return Optional.ofNullable(this.manifestWindowSeconds);
     }
 
     /**
@@ -44,96 +44,85 @@ public final class OriginEndpointMssPackageArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="segmentDurationSeconds")
-      private final @Nullable Output<Integer> segmentDurationSeconds;
+    private @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> segmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
+    public Optional<Output<Integer>> segmentDurationSeconds() {
+        return Optional.ofNullable(this.segmentDurationSeconds);
     }
 
     @Import(name="streamSelection")
-      private final @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
+    private @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
 
-    public Output<OriginEndpointStreamSelectionArgs> streamSelection() {
-        return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
+    public Optional<Output<OriginEndpointStreamSelectionArgs>> streamSelection() {
+        return Optional.ofNullable(this.streamSelection);
     }
 
-    public OriginEndpointMssPackageArgs(
-        @Nullable Output<OriginEndpointMssEncryptionArgs> encryption,
-        @Nullable Output<Integer> manifestWindowSeconds,
-        @Nullable Output<Integer> segmentDurationSeconds,
-        @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
-        this.encryption = encryption;
-        this.manifestWindowSeconds = manifestWindowSeconds;
-        this.segmentDurationSeconds = segmentDurationSeconds;
-        this.streamSelection = streamSelection;
-    }
+    private OriginEndpointMssPackageArgs() {}
 
-    private OriginEndpointMssPackageArgs() {
-        this.encryption = Codegen.empty();
-        this.manifestWindowSeconds = Codegen.empty();
-        this.segmentDurationSeconds = Codegen.empty();
-        this.streamSelection = Codegen.empty();
+    private OriginEndpointMssPackageArgs(OriginEndpointMssPackageArgs $) {
+        this.encryption = $.encryption;
+        this.manifestWindowSeconds = $.manifestWindowSeconds;
+        this.segmentDurationSeconds = $.segmentDurationSeconds;
+        this.streamSelection = $.streamSelection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointMssPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OriginEndpointMssEncryptionArgs> encryption;
-        private @Nullable Output<Integer> manifestWindowSeconds;
-        private @Nullable Output<Integer> segmentDurationSeconds;
-        private @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
+        private OriginEndpointMssPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointMssPackageArgs();
         }
 
         public Builder(OriginEndpointMssPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.manifestWindowSeconds = defaults.manifestWindowSeconds;
-    	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
-    	      this.streamSelection = defaults.streamSelection;
+            $ = new OriginEndpointMssPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable Output<OriginEndpointMssEncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable OriginEndpointMssEncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(OriginEndpointMssEncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder manifestWindowSeconds(@Nullable Output<Integer> manifestWindowSeconds) {
-            this.manifestWindowSeconds = manifestWindowSeconds;
+            $.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
-        public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
-            this.manifestWindowSeconds = Codegen.ofNullable(manifestWindowSeconds);
-            return this;
+
+        public Builder manifestWindowSeconds(Integer manifestWindowSeconds) {
+            return manifestWindowSeconds(Output.of(manifestWindowSeconds));
         }
+
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
-            this.segmentDurationSeconds = segmentDurationSeconds;
+            $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Codegen.ofNullable(segmentDurationSeconds);
-            return this;
+
+        public Builder segmentDurationSeconds(Integer segmentDurationSeconds) {
+            return segmentDurationSeconds(Output.of(segmentDurationSeconds));
         }
+
         public Builder streamSelection(@Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
-            this.streamSelection = streamSelection;
+            $.streamSelection = streamSelection;
             return this;
         }
-        public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
-            this.streamSelection = Codegen.ofNullable(streamSelection);
-            return this;
-        }        public OriginEndpointMssPackageArgs build() {
-            return new OriginEndpointMssPackageArgs(encryption, manifestWindowSeconds, segmentDurationSeconds, streamSelection);
+
+        public Builder streamSelection(OriginEndpointStreamSelectionArgs streamSelection) {
+            return streamSelection(Output.of(streamSelection));
+        }
+
+        public OriginEndpointMssPackageArgs build() {
+            return $;
         }
     }
+
 }

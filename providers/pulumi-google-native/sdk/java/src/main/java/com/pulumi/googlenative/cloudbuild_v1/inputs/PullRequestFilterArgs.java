@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.enums.PullRequestFilterCommentControl;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PullRequestFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="branch")
-      private final @Nullable Output<String> branch;
+    private @Nullable Output<String> branch;
 
-    public Output<String> branch() {
-        return this.branch == null ? Codegen.empty() : this.branch;
+    public Optional<Output<String>> branch() {
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PullRequestFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="commentControl")
-      private final @Nullable Output<PullRequestFilterCommentControl> commentControl;
+    private @Nullable Output<PullRequestFilterCommentControl> commentControl;
 
-    public Output<PullRequestFilterCommentControl> commentControl() {
-        return this.commentControl == null ? Codegen.empty() : this.commentControl;
+    public Optional<Output<PullRequestFilterCommentControl>> commentControl() {
+        return Optional.ofNullable(this.commentControl);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class PullRequestFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="invertRegex")
-      private final @Nullable Output<Boolean> invertRegex;
+    private @Nullable Output<Boolean> invertRegex;
 
-    public Output<Boolean> invertRegex() {
-        return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
+    public Optional<Output<Boolean>> invertRegex() {
+        return Optional.ofNullable(this.invertRegex);
     }
 
-    public PullRequestFilterArgs(
-        @Nullable Output<String> branch,
-        @Nullable Output<PullRequestFilterCommentControl> commentControl,
-        @Nullable Output<Boolean> invertRegex) {
-        this.branch = branch;
-        this.commentControl = commentControl;
-        this.invertRegex = invertRegex;
-    }
+    private PullRequestFilterArgs() {}
 
-    private PullRequestFilterArgs() {
-        this.branch = Codegen.empty();
-        this.commentControl = Codegen.empty();
-        this.invertRegex = Codegen.empty();
+    private PullRequestFilterArgs(PullRequestFilterArgs $) {
+        this.branch = $.branch;
+        this.commentControl = $.commentControl;
+        this.invertRegex = $.invertRegex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PullRequestFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branch;
-        private @Nullable Output<PullRequestFilterCommentControl> commentControl;
-        private @Nullable Output<Boolean> invertRegex;
+        private PullRequestFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PullRequestFilterArgs();
         }
 
         public Builder(PullRequestFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.commentControl = defaults.commentControl;
-    	      this.invertRegex = defaults.invertRegex;
+            $ = new PullRequestFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(@Nullable Output<String> branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
-        public Builder branch(@Nullable String branch) {
-            this.branch = Codegen.ofNullable(branch);
-            return this;
+
+        public Builder branch(String branch) {
+            return branch(Output.of(branch));
         }
+
         public Builder commentControl(@Nullable Output<PullRequestFilterCommentControl> commentControl) {
-            this.commentControl = commentControl;
+            $.commentControl = commentControl;
             return this;
         }
-        public Builder commentControl(@Nullable PullRequestFilterCommentControl commentControl) {
-            this.commentControl = Codegen.ofNullable(commentControl);
-            return this;
+
+        public Builder commentControl(PullRequestFilterCommentControl commentControl) {
+            return commentControl(Output.of(commentControl));
         }
+
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
-            this.invertRegex = invertRegex;
+            $.invertRegex = invertRegex;
             return this;
         }
-        public Builder invertRegex(@Nullable Boolean invertRegex) {
-            this.invertRegex = Codegen.ofNullable(invertRegex);
-            return this;
-        }        public PullRequestFilterArgs build() {
-            return new PullRequestFilterArgs(branch, commentControl, invertRegex);
+
+        public Builder invertRegex(Boolean invertRegex) {
+            return invertRegex(Output.of(invertRegex));
+        }
+
+        public PullRequestFilterArgs build() {
+            return $;
         }
     }
+
 }

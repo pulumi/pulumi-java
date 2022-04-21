@@ -5,7 +5,6 @@ package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingLimitsArgs;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingTargetsArgs;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ClusterAutoscalingConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="autoscalingLimits", required=true)
-      private final Output<AutoscalingLimitsArgs> autoscalingLimits;
+    private Output<AutoscalingLimitsArgs> autoscalingLimits;
 
     public Output<AutoscalingLimitsArgs> autoscalingLimits() {
         return this.autoscalingLimits;
@@ -35,63 +34,60 @@ public final class ClusterAutoscalingConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="autoscalingTargets", required=true)
-      private final Output<AutoscalingTargetsArgs> autoscalingTargets;
+    private Output<AutoscalingTargetsArgs> autoscalingTargets;
 
     public Output<AutoscalingTargetsArgs> autoscalingTargets() {
         return this.autoscalingTargets;
     }
 
-    public ClusterAutoscalingConfigArgs(
-        Output<AutoscalingLimitsArgs> autoscalingLimits,
-        Output<AutoscalingTargetsArgs> autoscalingTargets) {
-        this.autoscalingLimits = Objects.requireNonNull(autoscalingLimits, "expected parameter 'autoscalingLimits' to be non-null");
-        this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets, "expected parameter 'autoscalingTargets' to be non-null");
-    }
+    private ClusterAutoscalingConfigArgs() {}
 
-    private ClusterAutoscalingConfigArgs() {
-        this.autoscalingLimits = Codegen.empty();
-        this.autoscalingTargets = Codegen.empty();
+    private ClusterAutoscalingConfigArgs(ClusterAutoscalingConfigArgs $) {
+        this.autoscalingLimits = $.autoscalingLimits;
+        this.autoscalingTargets = $.autoscalingTargets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAutoscalingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AutoscalingLimitsArgs> autoscalingLimits;
-        private Output<AutoscalingTargetsArgs> autoscalingTargets;
+        private ClusterAutoscalingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAutoscalingConfigArgs();
         }
 
         public Builder(ClusterAutoscalingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingLimits = defaults.autoscalingLimits;
-    	      this.autoscalingTargets = defaults.autoscalingTargets;
+            $ = new ClusterAutoscalingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingLimits(Output<AutoscalingLimitsArgs> autoscalingLimits) {
-            this.autoscalingLimits = Objects.requireNonNull(autoscalingLimits);
+            $.autoscalingLimits = autoscalingLimits;
             return this;
         }
+
         public Builder autoscalingLimits(AutoscalingLimitsArgs autoscalingLimits) {
-            this.autoscalingLimits = Output.of(Objects.requireNonNull(autoscalingLimits));
-            return this;
+            return autoscalingLimits(Output.of(autoscalingLimits));
         }
+
         public Builder autoscalingTargets(Output<AutoscalingTargetsArgs> autoscalingTargets) {
-            this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets);
+            $.autoscalingTargets = autoscalingTargets;
             return this;
         }
+
         public Builder autoscalingTargets(AutoscalingTargetsArgs autoscalingTargets) {
-            this.autoscalingTargets = Output.of(Objects.requireNonNull(autoscalingTargets));
-            return this;
-        }        public ClusterAutoscalingConfigArgs build() {
-            return new ClusterAutoscalingConfigArgs(autoscalingLimits, autoscalingTargets);
+            return autoscalingTargets(Output.of(autoscalingTargets));
+        }
+
+        public ClusterAutoscalingConfigArgs build() {
+            $.autoscalingLimits = Objects.requireNonNull($.autoscalingLimits, "expected parameter 'autoscalingLimits' to be non-null");
+            $.autoscalingTargets = Objects.requireNonNull($.autoscalingTargets, "expected parameter 'autoscalingTargets' to be non-null");
+            return $;
         }
     }
+
 }

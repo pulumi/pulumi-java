@@ -23,10 +23,10 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable String availabilityZone;
+    private @Nullable String availabilityZone;
 
     public Optional<String> availabilityZone() {
-        return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable String networkInterfaceId;
+    private @Nullable String networkInterfaceId;
 
     public Optional<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable String privateIpAddress;
+    private @Nullable String privateIpAddress;
 
     public Optional<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public EndpointAccessNetworkInterface(
-        @Nullable String availabilityZone,
-        @Nullable String networkInterfaceId,
-        @Nullable String privateIpAddress,
-        @Nullable String subnetId) {
-        this.availabilityZone = availabilityZone;
-        this.networkInterfaceId = networkInterfaceId;
-        this.privateIpAddress = privateIpAddress;
-        this.subnetId = subnetId;
-    }
+    private EndpointAccessNetworkInterface() {}
 
-    private EndpointAccessNetworkInterface() {
-        this.availabilityZone = null;
-        this.networkInterfaceId = null;
-        this.privateIpAddress = null;
-        this.subnetId = null;
+    private EndpointAccessNetworkInterface(EndpointAccessNetworkInterface $) {
+        this.availabilityZone = $.availabilityZone;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.privateIpAddress = $.privateIpAddress;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointAccessNetworkInterface defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String availabilityZone;
-        private @Nullable String networkInterfaceId;
-        private @Nullable String privateIpAddress;
-        private @Nullable String subnetId;
+        private EndpointAccessNetworkInterface $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointAccessNetworkInterface();
         }
 
         public Builder(EndpointAccessNetworkInterface defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.subnetId = defaults.subnetId;
+            $ = new EndpointAccessNetworkInterface(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
-        }        public EndpointAccessNetworkInterface build() {
-            return new EndpointAccessNetworkInterface(availabilityZone, networkInterfaceId, privateIpAddress, subnetId);
+        }
+
+        public EndpointAccessNetworkInterface build() {
+            return $;
         }
     }
+
 }

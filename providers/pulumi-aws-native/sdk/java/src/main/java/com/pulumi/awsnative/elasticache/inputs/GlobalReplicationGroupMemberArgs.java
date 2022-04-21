@@ -6,9 +6,9 @@ package com.pulumi.awsnative.elasticache.inputs;
 import com.pulumi.awsnative.elasticache.enums.GlobalReplicationGroupMemberRole;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GlobalReplicationGroupMemberArgs extends com.pulumi.resources
      * 
      */
     @Import(name="replicationGroupId")
-      private final @Nullable Output<String> replicationGroupId;
+    private @Nullable Output<String> replicationGroupId;
 
-    public Output<String> replicationGroupId() {
-        return this.replicationGroupId == null ? Codegen.empty() : this.replicationGroupId;
+    public Optional<Output<String>> replicationGroupId() {
+        return Optional.ofNullable(this.replicationGroupId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GlobalReplicationGroupMemberArgs extends com.pulumi.resources
      * 
      */
     @Import(name="replicationGroupRegion")
-      private final @Nullable Output<String> replicationGroupRegion;
+    private @Nullable Output<String> replicationGroupRegion;
 
-    public Output<String> replicationGroupRegion() {
-        return this.replicationGroupRegion == null ? Codegen.empty() : this.replicationGroupRegion;
+    public Optional<Output<String>> replicationGroupRegion() {
+        return Optional.ofNullable(this.replicationGroupRegion);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class GlobalReplicationGroupMemberArgs extends com.pulumi.resources
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<GlobalReplicationGroupMemberRole> role;
+    private @Nullable Output<GlobalReplicationGroupMemberRole> role;
 
-    public Output<GlobalReplicationGroupMemberRole> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<GlobalReplicationGroupMemberRole>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public GlobalReplicationGroupMemberArgs(
-        @Nullable Output<String> replicationGroupId,
-        @Nullable Output<String> replicationGroupRegion,
-        @Nullable Output<GlobalReplicationGroupMemberRole> role) {
-        this.replicationGroupId = replicationGroupId;
-        this.replicationGroupRegion = replicationGroupRegion;
-        this.role = role;
-    }
+    private GlobalReplicationGroupMemberArgs() {}
 
-    private GlobalReplicationGroupMemberArgs() {
-        this.replicationGroupId = Codegen.empty();
-        this.replicationGroupRegion = Codegen.empty();
-        this.role = Codegen.empty();
+    private GlobalReplicationGroupMemberArgs(GlobalReplicationGroupMemberArgs $) {
+        this.replicationGroupId = $.replicationGroupId;
+        this.replicationGroupRegion = $.replicationGroupRegion;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalReplicationGroupMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> replicationGroupId;
-        private @Nullable Output<String> replicationGroupRegion;
-        private @Nullable Output<GlobalReplicationGroupMemberRole> role;
+        private GlobalReplicationGroupMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalReplicationGroupMemberArgs();
         }
 
         public Builder(GlobalReplicationGroupMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicationGroupId = defaults.replicationGroupId;
-    	      this.replicationGroupRegion = defaults.replicationGroupRegion;
-    	      this.role = defaults.role;
+            $ = new GlobalReplicationGroupMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replicationGroupId(@Nullable Output<String> replicationGroupId) {
-            this.replicationGroupId = replicationGroupId;
+            $.replicationGroupId = replicationGroupId;
             return this;
         }
-        public Builder replicationGroupId(@Nullable String replicationGroupId) {
-            this.replicationGroupId = Codegen.ofNullable(replicationGroupId);
-            return this;
+
+        public Builder replicationGroupId(String replicationGroupId) {
+            return replicationGroupId(Output.of(replicationGroupId));
         }
+
         public Builder replicationGroupRegion(@Nullable Output<String> replicationGroupRegion) {
-            this.replicationGroupRegion = replicationGroupRegion;
+            $.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
-        public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
-            this.replicationGroupRegion = Codegen.ofNullable(replicationGroupRegion);
-            return this;
+
+        public Builder replicationGroupRegion(String replicationGroupRegion) {
+            return replicationGroupRegion(Output.of(replicationGroupRegion));
         }
+
         public Builder role(@Nullable Output<GlobalReplicationGroupMemberRole> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable GlobalReplicationGroupMemberRole role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public GlobalReplicationGroupMemberArgs build() {
-            return new GlobalReplicationGroupMemberArgs(replicationGroupId, replicationGroupRegion, role);
+
+        public Builder role(GlobalReplicationGroupMemberRole role) {
+            return role(Output.of(role));
+        }
+
+        public GlobalReplicationGroupMemberArgs build() {
+            return $;
         }
     }
+
 }

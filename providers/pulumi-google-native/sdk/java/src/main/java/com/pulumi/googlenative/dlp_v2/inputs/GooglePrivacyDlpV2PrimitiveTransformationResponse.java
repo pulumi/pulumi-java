@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="bucketingConfig", required=true)
-      private final GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig;
+    private GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig;
 
     public GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig() {
         return this.bucketingConfig;
@@ -43,7 +43,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="characterMaskConfig", required=true)
-      private final GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig;
+    private GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig;
 
     public GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig() {
         return this.characterMaskConfig;
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="cryptoDeterministicConfig", required=true)
-      private final GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig;
+    private GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig;
 
     public GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig() {
         return this.cryptoDeterministicConfig;
@@ -65,7 +65,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="cryptoHashConfig", required=true)
-      private final GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig;
+    private GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig;
 
     public GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig() {
         return this.cryptoHashConfig;
@@ -76,7 +76,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="cryptoReplaceFfxFpeConfig", required=true)
-      private final GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig;
+    private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig;
 
     public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig() {
         return this.cryptoReplaceFfxFpeConfig;
@@ -87,7 +87,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="dateShiftConfig", required=true)
-      private final GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig;
+    private GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig;
 
     public GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig() {
         return this.dateShiftConfig;
@@ -98,7 +98,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="fixedSizeBucketingConfig", required=true)
-      private final GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig;
+    private GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig;
 
     public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig() {
         return this.fixedSizeBucketingConfig;
@@ -109,7 +109,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="redactConfig", required=true)
-      private final GooglePrivacyDlpV2RedactConfigResponse redactConfig;
+    private GooglePrivacyDlpV2RedactConfigResponse redactConfig;
 
     public GooglePrivacyDlpV2RedactConfigResponse redactConfig() {
         return this.redactConfig;
@@ -120,7 +120,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="replaceConfig", required=true)
-      private final GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig;
+    private GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig;
 
     public GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig() {
         return this.replaceConfig;
@@ -131,7 +131,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="replaceDictionaryConfig", required=true)
-      private final GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig;
+    private GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig;
 
     public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig() {
         return this.replaceDictionaryConfig;
@@ -142,7 +142,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="replaceWithInfoTypeConfig", required=true)
-      private final GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig;
+    private GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig;
 
     public GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig() {
         return this.replaceWithInfoTypeConfig;
@@ -153,145 +153,122 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends com
      * 
      */
     @Import(name="timePartConfig", required=true)
-      private final GooglePrivacyDlpV2TimePartConfigResponse timePartConfig;
+    private GooglePrivacyDlpV2TimePartConfigResponse timePartConfig;
 
     public GooglePrivacyDlpV2TimePartConfigResponse timePartConfig() {
         return this.timePartConfig;
     }
 
-    public GooglePrivacyDlpV2PrimitiveTransformationResponse(
-        GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig,
-        GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig,
-        GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig,
-        GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig,
-        GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig,
-        GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig,
-        GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig,
-        GooglePrivacyDlpV2RedactConfigResponse redactConfig,
-        GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig,
-        GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig,
-        GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig,
-        GooglePrivacyDlpV2TimePartConfigResponse timePartConfig) {
-        this.bucketingConfig = Objects.requireNonNull(bucketingConfig, "expected parameter 'bucketingConfig' to be non-null");
-        this.characterMaskConfig = Objects.requireNonNull(characterMaskConfig, "expected parameter 'characterMaskConfig' to be non-null");
-        this.cryptoDeterministicConfig = Objects.requireNonNull(cryptoDeterministicConfig, "expected parameter 'cryptoDeterministicConfig' to be non-null");
-        this.cryptoHashConfig = Objects.requireNonNull(cryptoHashConfig, "expected parameter 'cryptoHashConfig' to be non-null");
-        this.cryptoReplaceFfxFpeConfig = Objects.requireNonNull(cryptoReplaceFfxFpeConfig, "expected parameter 'cryptoReplaceFfxFpeConfig' to be non-null");
-        this.dateShiftConfig = Objects.requireNonNull(dateShiftConfig, "expected parameter 'dateShiftConfig' to be non-null");
-        this.fixedSizeBucketingConfig = Objects.requireNonNull(fixedSizeBucketingConfig, "expected parameter 'fixedSizeBucketingConfig' to be non-null");
-        this.redactConfig = Objects.requireNonNull(redactConfig, "expected parameter 'redactConfig' to be non-null");
-        this.replaceConfig = Objects.requireNonNull(replaceConfig, "expected parameter 'replaceConfig' to be non-null");
-        this.replaceDictionaryConfig = Objects.requireNonNull(replaceDictionaryConfig, "expected parameter 'replaceDictionaryConfig' to be non-null");
-        this.replaceWithInfoTypeConfig = Objects.requireNonNull(replaceWithInfoTypeConfig, "expected parameter 'replaceWithInfoTypeConfig' to be non-null");
-        this.timePartConfig = Objects.requireNonNull(timePartConfig, "expected parameter 'timePartConfig' to be non-null");
-    }
+    private GooglePrivacyDlpV2PrimitiveTransformationResponse() {}
 
-    private GooglePrivacyDlpV2PrimitiveTransformationResponse() {
-        this.bucketingConfig = null;
-        this.characterMaskConfig = null;
-        this.cryptoDeterministicConfig = null;
-        this.cryptoHashConfig = null;
-        this.cryptoReplaceFfxFpeConfig = null;
-        this.dateShiftConfig = null;
-        this.fixedSizeBucketingConfig = null;
-        this.redactConfig = null;
-        this.replaceConfig = null;
-        this.replaceDictionaryConfig = null;
-        this.replaceWithInfoTypeConfig = null;
-        this.timePartConfig = null;
+    private GooglePrivacyDlpV2PrimitiveTransformationResponse(GooglePrivacyDlpV2PrimitiveTransformationResponse $) {
+        this.bucketingConfig = $.bucketingConfig;
+        this.characterMaskConfig = $.characterMaskConfig;
+        this.cryptoDeterministicConfig = $.cryptoDeterministicConfig;
+        this.cryptoHashConfig = $.cryptoHashConfig;
+        this.cryptoReplaceFfxFpeConfig = $.cryptoReplaceFfxFpeConfig;
+        this.dateShiftConfig = $.dateShiftConfig;
+        this.fixedSizeBucketingConfig = $.fixedSizeBucketingConfig;
+        this.redactConfig = $.redactConfig;
+        this.replaceConfig = $.replaceConfig;
+        this.replaceDictionaryConfig = $.replaceDictionaryConfig;
+        this.replaceWithInfoTypeConfig = $.replaceWithInfoTypeConfig;
+        this.timePartConfig = $.timePartConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2PrimitiveTransformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig;
-        private GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig;
-        private GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig;
-        private GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig;
-        private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig;
-        private GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig;
-        private GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig;
-        private GooglePrivacyDlpV2RedactConfigResponse redactConfig;
-        private GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig;
-        private GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig;
-        private GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig;
-        private GooglePrivacyDlpV2TimePartConfigResponse timePartConfig;
+        private GooglePrivacyDlpV2PrimitiveTransformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2PrimitiveTransformationResponse();
         }
 
         public Builder(GooglePrivacyDlpV2PrimitiveTransformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketingConfig = defaults.bucketingConfig;
-    	      this.characterMaskConfig = defaults.characterMaskConfig;
-    	      this.cryptoDeterministicConfig = defaults.cryptoDeterministicConfig;
-    	      this.cryptoHashConfig = defaults.cryptoHashConfig;
-    	      this.cryptoReplaceFfxFpeConfig = defaults.cryptoReplaceFfxFpeConfig;
-    	      this.dateShiftConfig = defaults.dateShiftConfig;
-    	      this.fixedSizeBucketingConfig = defaults.fixedSizeBucketingConfig;
-    	      this.redactConfig = defaults.redactConfig;
-    	      this.replaceConfig = defaults.replaceConfig;
-    	      this.replaceDictionaryConfig = defaults.replaceDictionaryConfig;
-    	      this.replaceWithInfoTypeConfig = defaults.replaceWithInfoTypeConfig;
-    	      this.timePartConfig = defaults.timePartConfig;
+            $ = new GooglePrivacyDlpV2PrimitiveTransformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketingConfig(GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig) {
-            this.bucketingConfig = Objects.requireNonNull(bucketingConfig);
+            $.bucketingConfig = bucketingConfig;
             return this;
         }
+
         public Builder characterMaskConfig(GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig) {
-            this.characterMaskConfig = Objects.requireNonNull(characterMaskConfig);
+            $.characterMaskConfig = characterMaskConfig;
             return this;
         }
+
         public Builder cryptoDeterministicConfig(GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig) {
-            this.cryptoDeterministicConfig = Objects.requireNonNull(cryptoDeterministicConfig);
+            $.cryptoDeterministicConfig = cryptoDeterministicConfig;
             return this;
         }
+
         public Builder cryptoHashConfig(GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig) {
-            this.cryptoHashConfig = Objects.requireNonNull(cryptoHashConfig);
+            $.cryptoHashConfig = cryptoHashConfig;
             return this;
         }
+
         public Builder cryptoReplaceFfxFpeConfig(GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig) {
-            this.cryptoReplaceFfxFpeConfig = Objects.requireNonNull(cryptoReplaceFfxFpeConfig);
+            $.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;
             return this;
         }
+
         public Builder dateShiftConfig(GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig) {
-            this.dateShiftConfig = Objects.requireNonNull(dateShiftConfig);
+            $.dateShiftConfig = dateShiftConfig;
             return this;
         }
+
         public Builder fixedSizeBucketingConfig(GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig) {
-            this.fixedSizeBucketingConfig = Objects.requireNonNull(fixedSizeBucketingConfig);
+            $.fixedSizeBucketingConfig = fixedSizeBucketingConfig;
             return this;
         }
+
         public Builder redactConfig(GooglePrivacyDlpV2RedactConfigResponse redactConfig) {
-            this.redactConfig = Objects.requireNonNull(redactConfig);
+            $.redactConfig = redactConfig;
             return this;
         }
+
         public Builder replaceConfig(GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig) {
-            this.replaceConfig = Objects.requireNonNull(replaceConfig);
+            $.replaceConfig = replaceConfig;
             return this;
         }
+
         public Builder replaceDictionaryConfig(GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig) {
-            this.replaceDictionaryConfig = Objects.requireNonNull(replaceDictionaryConfig);
+            $.replaceDictionaryConfig = replaceDictionaryConfig;
             return this;
         }
+
         public Builder replaceWithInfoTypeConfig(GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig) {
-            this.replaceWithInfoTypeConfig = Objects.requireNonNull(replaceWithInfoTypeConfig);
+            $.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
             return this;
         }
+
         public Builder timePartConfig(GooglePrivacyDlpV2TimePartConfigResponse timePartConfig) {
-            this.timePartConfig = Objects.requireNonNull(timePartConfig);
+            $.timePartConfig = timePartConfig;
             return this;
-        }        public GooglePrivacyDlpV2PrimitiveTransformationResponse build() {
-            return new GooglePrivacyDlpV2PrimitiveTransformationResponse(bucketingConfig, characterMaskConfig, cryptoDeterministicConfig, cryptoHashConfig, cryptoReplaceFfxFpeConfig, dateShiftConfig, fixedSizeBucketingConfig, redactConfig, replaceConfig, replaceDictionaryConfig, replaceWithInfoTypeConfig, timePartConfig);
+        }
+
+        public GooglePrivacyDlpV2PrimitiveTransformationResponse build() {
+            $.bucketingConfig = Objects.requireNonNull($.bucketingConfig, "expected parameter 'bucketingConfig' to be non-null");
+            $.characterMaskConfig = Objects.requireNonNull($.characterMaskConfig, "expected parameter 'characterMaskConfig' to be non-null");
+            $.cryptoDeterministicConfig = Objects.requireNonNull($.cryptoDeterministicConfig, "expected parameter 'cryptoDeterministicConfig' to be non-null");
+            $.cryptoHashConfig = Objects.requireNonNull($.cryptoHashConfig, "expected parameter 'cryptoHashConfig' to be non-null");
+            $.cryptoReplaceFfxFpeConfig = Objects.requireNonNull($.cryptoReplaceFfxFpeConfig, "expected parameter 'cryptoReplaceFfxFpeConfig' to be non-null");
+            $.dateShiftConfig = Objects.requireNonNull($.dateShiftConfig, "expected parameter 'dateShiftConfig' to be non-null");
+            $.fixedSizeBucketingConfig = Objects.requireNonNull($.fixedSizeBucketingConfig, "expected parameter 'fixedSizeBucketingConfig' to be non-null");
+            $.redactConfig = Objects.requireNonNull($.redactConfig, "expected parameter 'redactConfig' to be non-null");
+            $.replaceConfig = Objects.requireNonNull($.replaceConfig, "expected parameter 'replaceConfig' to be non-null");
+            $.replaceDictionaryConfig = Objects.requireNonNull($.replaceDictionaryConfig, "expected parameter 'replaceDictionaryConfig' to be non-null");
+            $.replaceWithInfoTypeConfig = Objects.requireNonNull($.replaceWithInfoTypeConfig, "expected parameter 'replaceWithInfoTypeConfig' to be non-null");
+            $.timePartConfig = Objects.requireNonNull($.timePartConfig, "expected parameter 'timePartConfig' to be non-null");
+            return $;
         }
     }
+
 }

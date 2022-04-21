@@ -5,7 +5,6 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs ext
      * 
      */
     @Import(name="domainNameLabel", required=true)
-      private final Output<String> domainNameLabel;
+    private Output<String> domainNameLabel;
 
     public Output<String> domainNameLabel() {
         return this.domainNameLabel;
     }
 
-    public VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs(Output<String> domainNameLabel) {
-        this.domainNameLabel = Objects.requireNonNull(domainNameLabel, "expected parameter 'domainNameLabel' to be non-null");
-    }
+    private VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs() {}
 
-    private VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs() {
-        this.domainNameLabel = Codegen.empty();
+    private VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs(VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs $) {
+        this.domainNameLabel = $.domainNameLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domainNameLabel;
+        private VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs();
         }
 
         public Builder(VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainNameLabel = defaults.domainNameLabel;
+            $ = new VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainNameLabel(Output<String> domainNameLabel) {
-            this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
+            $.domainNameLabel = domainNameLabel;
             return this;
         }
+
         public Builder domainNameLabel(String domainNameLabel) {
-            this.domainNameLabel = Output.of(Objects.requireNonNull(domainNameLabel));
-            return this;
-        }        public VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs build() {
-            return new VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs(domainNameLabel);
+            return domainNameLabel(Output.of(domainNameLabel));
+        }
+
+        public VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs build() {
+            $.domainNameLabel = Objects.requireNonNull($.domainNameLabel, "expected parameter 'domainNameLabel' to be non-null");
+            return $;
         }
     }
+
 }

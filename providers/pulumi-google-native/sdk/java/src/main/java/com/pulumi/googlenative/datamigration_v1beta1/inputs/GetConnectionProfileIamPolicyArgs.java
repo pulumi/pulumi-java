@@ -15,94 +15,85 @@ public final class GetConnectionProfileIamPolicyArgs extends com.pulumi.resource
     public static final GetConnectionProfileIamPolicyArgs Empty = new GetConnectionProfileIamPolicyArgs();
 
     @Import(name="connectionProfileId", required=true)
-      private final String connectionProfileId;
+    private String connectionProfileId;
 
     public String connectionProfileId() {
         return this.connectionProfileId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetConnectionProfileIamPolicyArgs(
-        String connectionProfileId,
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.connectionProfileId = Objects.requireNonNull(connectionProfileId, "expected parameter 'connectionProfileId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetConnectionProfileIamPolicyArgs() {}
 
-    private GetConnectionProfileIamPolicyArgs() {
-        this.connectionProfileId = null;
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetConnectionProfileIamPolicyArgs(GetConnectionProfileIamPolicyArgs $) {
+        this.connectionProfileId = $.connectionProfileId;
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectionProfileIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionProfileId;
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetConnectionProfileIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectionProfileIamPolicyArgs();
         }
 
         public Builder(GetConnectionProfileIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionProfileId = defaults.connectionProfileId;
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetConnectionProfileIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionProfileId(String connectionProfileId) {
-            this.connectionProfileId = Objects.requireNonNull(connectionProfileId);
+            $.connectionProfileId = connectionProfileId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetConnectionProfileIamPolicyArgs build() {
-            return new GetConnectionProfileIamPolicyArgs(connectionProfileId, location, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetConnectionProfileIamPolicyArgs build() {
+            $.connectionProfileId = Objects.requireNonNull($.connectionProfileId, "expected parameter 'connectionProfileId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

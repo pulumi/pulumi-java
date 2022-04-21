@@ -6,9 +6,9 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.CookieExpirationConvention;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CookieExpirationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="convention")
-      private final @Nullable Output<CookieExpirationConvention> convention;
+    private @Nullable Output<CookieExpirationConvention> convention;
 
-    public Output<CookieExpirationConvention> convention() {
-        return this.convention == null ? Codegen.empty() : this.convention;
+    public Optional<Output<CookieExpirationConvention>> convention() {
+        return Optional.ofNullable(this.convention);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CookieExpirationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timeToExpiration")
-      private final @Nullable Output<String> timeToExpiration;
+    private @Nullable Output<String> timeToExpiration;
 
-    public Output<String> timeToExpiration() {
-        return this.timeToExpiration == null ? Codegen.empty() : this.timeToExpiration;
+    public Optional<Output<String>> timeToExpiration() {
+        return Optional.ofNullable(this.timeToExpiration);
     }
 
-    public CookieExpirationArgs(
-        @Nullable Output<CookieExpirationConvention> convention,
-        @Nullable Output<String> timeToExpiration) {
-        this.convention = convention;
-        this.timeToExpiration = timeToExpiration;
-    }
+    private CookieExpirationArgs() {}
 
-    private CookieExpirationArgs() {
-        this.convention = Codegen.empty();
-        this.timeToExpiration = Codegen.empty();
+    private CookieExpirationArgs(CookieExpirationArgs $) {
+        this.convention = $.convention;
+        this.timeToExpiration = $.timeToExpiration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CookieExpirationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CookieExpirationConvention> convention;
-        private @Nullable Output<String> timeToExpiration;
+        private CookieExpirationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CookieExpirationArgs();
         }
 
         public Builder(CookieExpirationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.convention = defaults.convention;
-    	      this.timeToExpiration = defaults.timeToExpiration;
+            $ = new CookieExpirationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder convention(@Nullable Output<CookieExpirationConvention> convention) {
-            this.convention = convention;
+            $.convention = convention;
             return this;
         }
-        public Builder convention(@Nullable CookieExpirationConvention convention) {
-            this.convention = Codegen.ofNullable(convention);
-            return this;
+
+        public Builder convention(CookieExpirationConvention convention) {
+            return convention(Output.of(convention));
         }
+
         public Builder timeToExpiration(@Nullable Output<String> timeToExpiration) {
-            this.timeToExpiration = timeToExpiration;
+            $.timeToExpiration = timeToExpiration;
             return this;
         }
-        public Builder timeToExpiration(@Nullable String timeToExpiration) {
-            this.timeToExpiration = Codegen.ofNullable(timeToExpiration);
-            return this;
-        }        public CookieExpirationArgs build() {
-            return new CookieExpirationArgs(convention, timeToExpiration);
+
+        public Builder timeToExpiration(String timeToExpiration) {
+            return timeToExpiration(Output.of(timeToExpiration));
+        }
+
+        public CookieExpirationArgs build() {
+            return $;
         }
     }
+
 }

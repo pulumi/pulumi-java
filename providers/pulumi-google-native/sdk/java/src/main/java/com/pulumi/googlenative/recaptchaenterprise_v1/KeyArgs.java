@@ -5,7 +5,6 @@ package com.pulumi.googlenative.recaptchaenterprise_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.recaptchaenterprise_v1.inputs.GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs;
 import com.pulumi.googlenative.recaptchaenterprise_v1.inputs.GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs;
 import com.pulumi.googlenative.recaptchaenterprise_v1.inputs.GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs;
@@ -14,6 +13,7 @@ import com.pulumi.googlenative.recaptchaenterprise_v1.inputs.GoogleCloudRecaptch
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="androidSettings")
-      private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
+    private @Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings() {
-        return this.androidSettings == null ? Codegen.empty() : this.androidSettings;
+    public Optional<Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs>> androidSettings() {
+        return Optional.ofNullable(this.androidSettings);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iosSettings")
-      private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
+    private @Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings() {
-        return this.iosSettings == null ? Codegen.empty() : this.iosSettings;
+    public Optional<Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs>> iosSettings() {
+        return Optional.ofNullable(this.iosSettings);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -81,17 +81,17 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testingOptions")
-      private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
+    private @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions() {
-        return this.testingOptions == null ? Codegen.empty() : this.testingOptions;
+    public Optional<Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs>> testingOptions() {
+        return Optional.ofNullable(this.testingOptions);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="wafSettings")
-      private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
+    private @Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings() {
-        return this.wafSettings == null ? Codegen.empty() : this.wafSettings;
+    public Optional<Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs>> wafSettings() {
+        return Optional.ofNullable(this.wafSettings);
     }
 
     /**
@@ -121,167 +121,138 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webSettings")
-      private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;
+    private @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings() {
-        return this.webSettings == null ? Codegen.empty() : this.webSettings;
+    public Optional<Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs>> webSettings() {
+        return Optional.ofNullable(this.webSettings);
     }
 
-    public KeyArgs(
-        @Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> displayName,
-        @Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions,
-        @Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings,
-        @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings) {
-        this.androidSettings = androidSettings;
-        this.createTime = createTime;
-        this.displayName = displayName;
-        this.iosSettings = iosSettings;
-        this.labels = labels;
-        this.name = name;
-        this.project = project;
-        this.testingOptions = testingOptions;
-        this.wafSettings = wafSettings;
-        this.webSettings = webSettings;
-    }
+    private KeyArgs() {}
 
-    private KeyArgs() {
-        this.androidSettings = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.iosSettings = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.testingOptions = Codegen.empty();
-        this.wafSettings = Codegen.empty();
-        this.webSettings = Codegen.empty();
+    private KeyArgs(KeyArgs $) {
+        this.androidSettings = $.androidSettings;
+        this.createTime = $.createTime;
+        this.displayName = $.displayName;
+        this.iosSettings = $.iosSettings;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.project = $.project;
+        this.testingOptions = $.testingOptions;
+        this.wafSettings = $.wafSettings;
+        this.webSettings = $.webSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
-        private @Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
-        private @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;
+        private KeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyArgs();
         }
 
         public Builder(KeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidSettings = defaults.androidSettings;
-    	      this.createTime = defaults.createTime;
-    	      this.displayName = defaults.displayName;
-    	      this.iosSettings = defaults.iosSettings;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.testingOptions = defaults.testingOptions;
-    	      this.wafSettings = defaults.wafSettings;
-    	      this.webSettings = defaults.webSettings;
+            $ = new KeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder androidSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings) {
-            this.androidSettings = androidSettings;
+            $.androidSettings = androidSettings;
             return this;
         }
-        public Builder androidSettings(@Nullable GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs androidSettings) {
-            this.androidSettings = Codegen.ofNullable(androidSettings);
-            return this;
+
+        public Builder androidSettings(GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs androidSettings) {
+            return androidSettings(Output.of(androidSettings));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder iosSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings) {
-            this.iosSettings = iosSettings;
+            $.iosSettings = iosSettings;
             return this;
         }
-        public Builder iosSettings(@Nullable GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs iosSettings) {
-            this.iosSettings = Codegen.ofNullable(iosSettings);
-            return this;
+
+        public Builder iosSettings(GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs iosSettings) {
+            return iosSettings(Output.of(iosSettings));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder testingOptions(@Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions) {
-            this.testingOptions = testingOptions;
+            $.testingOptions = testingOptions;
             return this;
         }
-        public Builder testingOptions(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs testingOptions) {
-            this.testingOptions = Codegen.ofNullable(testingOptions);
-            return this;
+
+        public Builder testingOptions(GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs testingOptions) {
+            return testingOptions(Output.of(testingOptions));
         }
+
         public Builder wafSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings) {
-            this.wafSettings = wafSettings;
+            $.wafSettings = wafSettings;
             return this;
         }
-        public Builder wafSettings(@Nullable GoogleCloudRecaptchaenterpriseV1WafSettingsArgs wafSettings) {
-            this.wafSettings = Codegen.ofNullable(wafSettings);
-            return this;
+
+        public Builder wafSettings(GoogleCloudRecaptchaenterpriseV1WafSettingsArgs wafSettings) {
+            return wafSettings(Output.of(wafSettings));
         }
+
         public Builder webSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings) {
-            this.webSettings = webSettings;
+            $.webSettings = webSettings;
             return this;
         }
-        public Builder webSettings(@Nullable GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs webSettings) {
-            this.webSettings = Codegen.ofNullable(webSettings);
-            return this;
-        }        public KeyArgs build() {
-            return new KeyArgs(androidSettings, createTime, displayName, iosSettings, labels, name, project, testingOptions, wafSettings, webSettings);
+
+        public Builder webSettings(GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs webSettings) {
+            return webSettings(Output.of(webSettings));
+        }
+
+        public KeyArgs build() {
+            return $;
         }
     }
+
 }

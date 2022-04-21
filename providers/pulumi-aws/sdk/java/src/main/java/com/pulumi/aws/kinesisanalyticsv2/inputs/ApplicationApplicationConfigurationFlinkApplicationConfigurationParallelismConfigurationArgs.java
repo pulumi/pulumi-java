@@ -5,11 +5,11 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @Import(name="autoScalingEnabled")
-      private final @Nullable Output<Boolean> autoScalingEnabled;
+    private @Nullable Output<Boolean> autoScalingEnabled;
 
-    public Output<Boolean> autoScalingEnabled() {
-        return this.autoScalingEnabled == null ? Codegen.empty() : this.autoScalingEnabled;
+    public Optional<Output<Boolean>> autoScalingEnabled() {
+        return Optional.ofNullable(this.autoScalingEnabled);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @Import(name="configurationType", required=true)
-      private final Output<String> configurationType;
+    private Output<String> configurationType;
 
     public Output<String> configurationType() {
         return this.configurationType;
@@ -44,10 +44,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @Import(name="parallelism")
-      private final @Nullable Output<Integer> parallelism;
+    private @Nullable Output<Integer> parallelism;
 
-    public Output<Integer> parallelism() {
-        return this.parallelism == null ? Codegen.empty() : this.parallelism;
+    public Optional<Output<Integer>> parallelism() {
+        return Optional.ofNullable(this.parallelism);
     }
 
     /**
@@ -55,89 +55,79 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @Import(name="parallelismPerKpu")
-      private final @Nullable Output<Integer> parallelismPerKpu;
+    private @Nullable Output<Integer> parallelismPerKpu;
 
-    public Output<Integer> parallelismPerKpu() {
-        return this.parallelismPerKpu == null ? Codegen.empty() : this.parallelismPerKpu;
+    public Optional<Output<Integer>> parallelismPerKpu() {
+        return Optional.ofNullable(this.parallelismPerKpu);
     }
 
-    public ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs(
-        @Nullable Output<Boolean> autoScalingEnabled,
-        Output<String> configurationType,
-        @Nullable Output<Integer> parallelism,
-        @Nullable Output<Integer> parallelismPerKpu) {
-        this.autoScalingEnabled = autoScalingEnabled;
-        this.configurationType = Objects.requireNonNull(configurationType, "expected parameter 'configurationType' to be non-null");
-        this.parallelism = parallelism;
-        this.parallelismPerKpu = parallelismPerKpu;
-    }
+    private ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs() {}
 
-    private ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs() {
-        this.autoScalingEnabled = Codegen.empty();
-        this.configurationType = Codegen.empty();
-        this.parallelism = Codegen.empty();
-        this.parallelismPerKpu = Codegen.empty();
+    private ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs(ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs $) {
+        this.autoScalingEnabled = $.autoScalingEnabled;
+        this.configurationType = $.configurationType;
+        this.parallelism = $.parallelism;
+        this.parallelismPerKpu = $.parallelismPerKpu;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoScalingEnabled;
-        private Output<String> configurationType;
-        private @Nullable Output<Integer> parallelism;
-        private @Nullable Output<Integer> parallelismPerKpu;
+        private ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScalingEnabled = defaults.autoScalingEnabled;
-    	      this.configurationType = defaults.configurationType;
-    	      this.parallelism = defaults.parallelism;
-    	      this.parallelismPerKpu = defaults.parallelismPerKpu;
+            $ = new ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScalingEnabled(@Nullable Output<Boolean> autoScalingEnabled) {
-            this.autoScalingEnabled = autoScalingEnabled;
+            $.autoScalingEnabled = autoScalingEnabled;
             return this;
         }
-        public Builder autoScalingEnabled(@Nullable Boolean autoScalingEnabled) {
-            this.autoScalingEnabled = Codegen.ofNullable(autoScalingEnabled);
-            return this;
+
+        public Builder autoScalingEnabled(Boolean autoScalingEnabled) {
+            return autoScalingEnabled(Output.of(autoScalingEnabled));
         }
+
         public Builder configurationType(Output<String> configurationType) {
-            this.configurationType = Objects.requireNonNull(configurationType);
+            $.configurationType = configurationType;
             return this;
         }
+
         public Builder configurationType(String configurationType) {
-            this.configurationType = Output.of(Objects.requireNonNull(configurationType));
-            return this;
+            return configurationType(Output.of(configurationType));
         }
+
         public Builder parallelism(@Nullable Output<Integer> parallelism) {
-            this.parallelism = parallelism;
+            $.parallelism = parallelism;
             return this;
         }
-        public Builder parallelism(@Nullable Integer parallelism) {
-            this.parallelism = Codegen.ofNullable(parallelism);
-            return this;
+
+        public Builder parallelism(Integer parallelism) {
+            return parallelism(Output.of(parallelism));
         }
+
         public Builder parallelismPerKpu(@Nullable Output<Integer> parallelismPerKpu) {
-            this.parallelismPerKpu = parallelismPerKpu;
+            $.parallelismPerKpu = parallelismPerKpu;
             return this;
         }
-        public Builder parallelismPerKpu(@Nullable Integer parallelismPerKpu) {
-            this.parallelismPerKpu = Codegen.ofNullable(parallelismPerKpu);
-            return this;
-        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs build() {
-            return new ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs(autoScalingEnabled, configurationType, parallelism, parallelismPerKpu);
+
+        public Builder parallelismPerKpu(Integer parallelismPerKpu) {
+            return parallelismPerKpu(Output.of(parallelismPerKpu));
+        }
+
+        public ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs build() {
+            $.configurationType = Objects.requireNonNull($.configurationType, "expected parameter 'configurationType' to be non-null");
+            return $;
         }
     }
+
 }

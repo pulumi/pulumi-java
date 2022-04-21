@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="analysisScheme")
-      private final @Nullable Output<String> analysisScheme;
+    private @Nullable Output<String> analysisScheme;
 
-    public Output<String> analysisScheme() {
-        return this.analysisScheme == null ? Codegen.empty() : this.analysisScheme;
+    public Optional<Output<String>> analysisScheme() {
+        return Optional.ofNullable(this.analysisScheme);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<String> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
-    public Output<String> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<String>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="facet")
-      private final @Nullable Output<Boolean> facet;
+    private @Nullable Output<Boolean> facet;
 
-    public Output<Boolean> facet() {
-        return this.facet == null ? Codegen.empty() : this.facet;
+    public Optional<Output<Boolean>> facet() {
+        return Optional.ofNullable(this.facet);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="highlight")
-      private final @Nullable Output<Boolean> highlight;
+    private @Nullable Output<Boolean> highlight;
 
-    public Output<Boolean> highlight() {
-        return this.highlight == null ? Codegen.empty() : this.highlight;
+    public Optional<Output<Boolean>> highlight() {
+        return Optional.ofNullable(this.highlight);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -76,10 +76,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="return")
-      private final @Nullable Output<Boolean> return_;
+    private @Nullable Output<Boolean> return_;
 
-    public Output<Boolean> return_() {
-        return this.return_ == null ? Codegen.empty() : this.return_;
+    public Optional<Output<Boolean>> return_() {
+        return Optional.ofNullable(this.return_);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="search")
-      private final @Nullable Output<Boolean> search;
+    private @Nullable Output<Boolean> search;
 
-    public Output<Boolean> search() {
-        return this.search == null ? Codegen.empty() : this.search;
+    public Optional<Output<Boolean>> search() {
+        return Optional.ofNullable(this.search);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sort")
-      private final @Nullable Output<Boolean> sort;
+    private @Nullable Output<Boolean> sort;
 
-    public Output<Boolean> sort() {
-        return this.sort == null ? Codegen.empty() : this.sort;
+    public Optional<Output<Boolean>> sort() {
+        return Optional.ofNullable(this.sort);
     }
 
     /**
@@ -109,154 +109,130 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public DomainIndexFieldGetArgs(
-        @Nullable Output<String> analysisScheme,
-        @Nullable Output<String> defaultValue,
-        @Nullable Output<Boolean> facet,
-        @Nullable Output<Boolean> highlight,
-        Output<String> name,
-        @Nullable Output<Boolean> return_,
-        @Nullable Output<Boolean> search,
-        @Nullable Output<Boolean> sort,
-        Output<String> type) {
-        this.analysisScheme = analysisScheme;
-        this.defaultValue = defaultValue;
-        this.facet = facet;
-        this.highlight = highlight;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.return_ = return_;
-        this.search = search;
-        this.sort = sort;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DomainIndexFieldGetArgs() {}
 
-    private DomainIndexFieldGetArgs() {
-        this.analysisScheme = Codegen.empty();
-        this.defaultValue = Codegen.empty();
-        this.facet = Codegen.empty();
-        this.highlight = Codegen.empty();
-        this.name = Codegen.empty();
-        this.return_ = Codegen.empty();
-        this.search = Codegen.empty();
-        this.sort = Codegen.empty();
-        this.type = Codegen.empty();
+    private DomainIndexFieldGetArgs(DomainIndexFieldGetArgs $) {
+        this.analysisScheme = $.analysisScheme;
+        this.defaultValue = $.defaultValue;
+        this.facet = $.facet;
+        this.highlight = $.highlight;
+        this.name = $.name;
+        this.return_ = $.return_;
+        this.search = $.search;
+        this.sort = $.sort;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainIndexFieldGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> analysisScheme;
-        private @Nullable Output<String> defaultValue;
-        private @Nullable Output<Boolean> facet;
-        private @Nullable Output<Boolean> highlight;
-        private Output<String> name;
-        private @Nullable Output<Boolean> return_;
-        private @Nullable Output<Boolean> search;
-        private @Nullable Output<Boolean> sort;
-        private Output<String> type;
+        private DomainIndexFieldGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainIndexFieldGetArgs();
         }
 
         public Builder(DomainIndexFieldGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisScheme = defaults.analysisScheme;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.facet = defaults.facet;
-    	      this.highlight = defaults.highlight;
-    	      this.name = defaults.name;
-    	      this.return_ = defaults.return_;
-    	      this.search = defaults.search;
-    	      this.sort = defaults.sort;
-    	      this.type = defaults.type;
+            $ = new DomainIndexFieldGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisScheme(@Nullable Output<String> analysisScheme) {
-            this.analysisScheme = analysisScheme;
+            $.analysisScheme = analysisScheme;
             return this;
         }
-        public Builder analysisScheme(@Nullable String analysisScheme) {
-            this.analysisScheme = Codegen.ofNullable(analysisScheme);
-            return this;
+
+        public Builder analysisScheme(String analysisScheme) {
+            return analysisScheme(Output.of(analysisScheme));
         }
+
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(String defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder facet(@Nullable Output<Boolean> facet) {
-            this.facet = facet;
+            $.facet = facet;
             return this;
         }
-        public Builder facet(@Nullable Boolean facet) {
-            this.facet = Codegen.ofNullable(facet);
-            return this;
+
+        public Builder facet(Boolean facet) {
+            return facet(Output.of(facet));
         }
+
         public Builder highlight(@Nullable Output<Boolean> highlight) {
-            this.highlight = highlight;
+            $.highlight = highlight;
             return this;
         }
-        public Builder highlight(@Nullable Boolean highlight) {
-            this.highlight = Codegen.ofNullable(highlight);
-            return this;
+
+        public Builder highlight(Boolean highlight) {
+            return highlight(Output.of(highlight));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder return_(@Nullable Output<Boolean> return_) {
-            this.return_ = return_;
+            $.return_ = return_;
             return this;
         }
-        public Builder return_(@Nullable Boolean return_) {
-            this.return_ = Codegen.ofNullable(return_);
-            return this;
+
+        public Builder return_(Boolean return_) {
+            return return_(Output.of(return_));
         }
+
         public Builder search(@Nullable Output<Boolean> search) {
-            this.search = search;
+            $.search = search;
             return this;
         }
-        public Builder search(@Nullable Boolean search) {
-            this.search = Codegen.ofNullable(search);
-            return this;
+
+        public Builder search(Boolean search) {
+            return search(Output.of(search));
         }
+
         public Builder sort(@Nullable Output<Boolean> sort) {
-            this.sort = sort;
+            $.sort = sort;
             return this;
         }
-        public Builder sort(@Nullable Boolean sort) {
-            this.sort = Codegen.ofNullable(sort);
-            return this;
+
+        public Builder sort(Boolean sort) {
+            return sort(Output.of(sort));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DomainIndexFieldGetArgs build() {
-            return new DomainIndexFieldGetArgs(analysisScheme, defaultValue, facet, highlight, name, return_, search, sort, type);
+            return type(Output.of(type));
+        }
+
+        public DomainIndexFieldGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

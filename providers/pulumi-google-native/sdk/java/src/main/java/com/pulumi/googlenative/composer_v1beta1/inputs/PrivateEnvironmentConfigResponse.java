@@ -23,7 +23,7 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="cloudComposerConnectionSubnetwork", required=true)
-      private final String cloudComposerConnectionSubnetwork;
+    private String cloudComposerConnectionSubnetwork;
 
     public String cloudComposerConnectionSubnetwork() {
         return this.cloudComposerConnectionSubnetwork;
@@ -34,7 +34,7 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="cloudComposerNetworkIpv4CidrBlock", required=true)
-      private final String cloudComposerNetworkIpv4CidrBlock;
+    private String cloudComposerNetworkIpv4CidrBlock;
 
     public String cloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock;
@@ -45,7 +45,7 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="cloudComposerNetworkIpv4ReservedRange", required=true)
-      private final String cloudComposerNetworkIpv4ReservedRange;
+    private String cloudComposerNetworkIpv4ReservedRange;
 
     public String cloudComposerNetworkIpv4ReservedRange() {
         return this.cloudComposerNetworkIpv4ReservedRange;
@@ -56,7 +56,7 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="cloudSqlIpv4CidrBlock", required=true)
-      private final String cloudSqlIpv4CidrBlock;
+    private String cloudSqlIpv4CidrBlock;
 
     public String cloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock;
@@ -67,7 +67,7 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="enablePrivateEnvironment", required=true)
-      private final Boolean enablePrivateEnvironment;
+    private Boolean enablePrivateEnvironment;
 
     public Boolean enablePrivateEnvironment() {
         return this.enablePrivateEnvironment;
@@ -78,7 +78,7 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="enablePrivatelyUsedPublicIps", required=true)
-      private final Boolean enablePrivatelyUsedPublicIps;
+    private Boolean enablePrivatelyUsedPublicIps;
 
     public Boolean enablePrivatelyUsedPublicIps() {
         return this.enablePrivatelyUsedPublicIps;
@@ -89,7 +89,7 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="privateClusterConfig", required=true)
-      private final PrivateClusterConfigResponse privateClusterConfig;
+    private PrivateClusterConfigResponse privateClusterConfig;
 
     public PrivateClusterConfigResponse privateClusterConfig() {
         return this.privateClusterConfig;
@@ -100,7 +100,7 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="webServerIpv4CidrBlock", required=true)
-      private final String webServerIpv4CidrBlock;
+    private String webServerIpv4CidrBlock;
 
     public String webServerIpv4CidrBlock() {
         return this.webServerIpv4CidrBlock;
@@ -111,118 +111,101 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="webServerIpv4ReservedRange", required=true)
-      private final String webServerIpv4ReservedRange;
+    private String webServerIpv4ReservedRange;
 
     public String webServerIpv4ReservedRange() {
         return this.webServerIpv4ReservedRange;
     }
 
-    public PrivateEnvironmentConfigResponse(
-        String cloudComposerConnectionSubnetwork,
-        String cloudComposerNetworkIpv4CidrBlock,
-        String cloudComposerNetworkIpv4ReservedRange,
-        String cloudSqlIpv4CidrBlock,
-        Boolean enablePrivateEnvironment,
-        Boolean enablePrivatelyUsedPublicIps,
-        PrivateClusterConfigResponse privateClusterConfig,
-        String webServerIpv4CidrBlock,
-        String webServerIpv4ReservedRange) {
-        this.cloudComposerConnectionSubnetwork = Objects.requireNonNull(cloudComposerConnectionSubnetwork, "expected parameter 'cloudComposerConnectionSubnetwork' to be non-null");
-        this.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull(cloudComposerNetworkIpv4CidrBlock, "expected parameter 'cloudComposerNetworkIpv4CidrBlock' to be non-null");
-        this.cloudComposerNetworkIpv4ReservedRange = Objects.requireNonNull(cloudComposerNetworkIpv4ReservedRange, "expected parameter 'cloudComposerNetworkIpv4ReservedRange' to be non-null");
-        this.cloudSqlIpv4CidrBlock = Objects.requireNonNull(cloudSqlIpv4CidrBlock, "expected parameter 'cloudSqlIpv4CidrBlock' to be non-null");
-        this.enablePrivateEnvironment = Objects.requireNonNull(enablePrivateEnvironment, "expected parameter 'enablePrivateEnvironment' to be non-null");
-        this.enablePrivatelyUsedPublicIps = Objects.requireNonNull(enablePrivatelyUsedPublicIps, "expected parameter 'enablePrivatelyUsedPublicIps' to be non-null");
-        this.privateClusterConfig = Objects.requireNonNull(privateClusterConfig, "expected parameter 'privateClusterConfig' to be non-null");
-        this.webServerIpv4CidrBlock = Objects.requireNonNull(webServerIpv4CidrBlock, "expected parameter 'webServerIpv4CidrBlock' to be non-null");
-        this.webServerIpv4ReservedRange = Objects.requireNonNull(webServerIpv4ReservedRange, "expected parameter 'webServerIpv4ReservedRange' to be non-null");
-    }
+    private PrivateEnvironmentConfigResponse() {}
 
-    private PrivateEnvironmentConfigResponse() {
-        this.cloudComposerConnectionSubnetwork = null;
-        this.cloudComposerNetworkIpv4CidrBlock = null;
-        this.cloudComposerNetworkIpv4ReservedRange = null;
-        this.cloudSqlIpv4CidrBlock = null;
-        this.enablePrivateEnvironment = null;
-        this.enablePrivatelyUsedPublicIps = null;
-        this.privateClusterConfig = null;
-        this.webServerIpv4CidrBlock = null;
-        this.webServerIpv4ReservedRange = null;
+    private PrivateEnvironmentConfigResponse(PrivateEnvironmentConfigResponse $) {
+        this.cloudComposerConnectionSubnetwork = $.cloudComposerConnectionSubnetwork;
+        this.cloudComposerNetworkIpv4CidrBlock = $.cloudComposerNetworkIpv4CidrBlock;
+        this.cloudComposerNetworkIpv4ReservedRange = $.cloudComposerNetworkIpv4ReservedRange;
+        this.cloudSqlIpv4CidrBlock = $.cloudSqlIpv4CidrBlock;
+        this.enablePrivateEnvironment = $.enablePrivateEnvironment;
+        this.enablePrivatelyUsedPublicIps = $.enablePrivatelyUsedPublicIps;
+        this.privateClusterConfig = $.privateClusterConfig;
+        this.webServerIpv4CidrBlock = $.webServerIpv4CidrBlock;
+        this.webServerIpv4ReservedRange = $.webServerIpv4ReservedRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEnvironmentConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudComposerConnectionSubnetwork;
-        private String cloudComposerNetworkIpv4CidrBlock;
-        private String cloudComposerNetworkIpv4ReservedRange;
-        private String cloudSqlIpv4CidrBlock;
-        private Boolean enablePrivateEnvironment;
-        private Boolean enablePrivatelyUsedPublicIps;
-        private PrivateClusterConfigResponse privateClusterConfig;
-        private String webServerIpv4CidrBlock;
-        private String webServerIpv4ReservedRange;
+        private PrivateEnvironmentConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEnvironmentConfigResponse();
         }
 
         public Builder(PrivateEnvironmentConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudComposerConnectionSubnetwork = defaults.cloudComposerConnectionSubnetwork;
-    	      this.cloudComposerNetworkIpv4CidrBlock = defaults.cloudComposerNetworkIpv4CidrBlock;
-    	      this.cloudComposerNetworkIpv4ReservedRange = defaults.cloudComposerNetworkIpv4ReservedRange;
-    	      this.cloudSqlIpv4CidrBlock = defaults.cloudSqlIpv4CidrBlock;
-    	      this.enablePrivateEnvironment = defaults.enablePrivateEnvironment;
-    	      this.enablePrivatelyUsedPublicIps = defaults.enablePrivatelyUsedPublicIps;
-    	      this.privateClusterConfig = defaults.privateClusterConfig;
-    	      this.webServerIpv4CidrBlock = defaults.webServerIpv4CidrBlock;
-    	      this.webServerIpv4ReservedRange = defaults.webServerIpv4ReservedRange;
+            $ = new PrivateEnvironmentConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudComposerConnectionSubnetwork(String cloudComposerConnectionSubnetwork) {
-            this.cloudComposerConnectionSubnetwork = Objects.requireNonNull(cloudComposerConnectionSubnetwork);
+            $.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
             return this;
         }
+
         public Builder cloudComposerNetworkIpv4CidrBlock(String cloudComposerNetworkIpv4CidrBlock) {
-            this.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull(cloudComposerNetworkIpv4CidrBlock);
+            $.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
             return this;
         }
+
         public Builder cloudComposerNetworkIpv4ReservedRange(String cloudComposerNetworkIpv4ReservedRange) {
-            this.cloudComposerNetworkIpv4ReservedRange = Objects.requireNonNull(cloudComposerNetworkIpv4ReservedRange);
+            $.cloudComposerNetworkIpv4ReservedRange = cloudComposerNetworkIpv4ReservedRange;
             return this;
         }
+
         public Builder cloudSqlIpv4CidrBlock(String cloudSqlIpv4CidrBlock) {
-            this.cloudSqlIpv4CidrBlock = Objects.requireNonNull(cloudSqlIpv4CidrBlock);
+            $.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
             return this;
         }
+
         public Builder enablePrivateEnvironment(Boolean enablePrivateEnvironment) {
-            this.enablePrivateEnvironment = Objects.requireNonNull(enablePrivateEnvironment);
+            $.enablePrivateEnvironment = enablePrivateEnvironment;
             return this;
         }
+
         public Builder enablePrivatelyUsedPublicIps(Boolean enablePrivatelyUsedPublicIps) {
-            this.enablePrivatelyUsedPublicIps = Objects.requireNonNull(enablePrivatelyUsedPublicIps);
+            $.enablePrivatelyUsedPublicIps = enablePrivatelyUsedPublicIps;
             return this;
         }
+
         public Builder privateClusterConfig(PrivateClusterConfigResponse privateClusterConfig) {
-            this.privateClusterConfig = Objects.requireNonNull(privateClusterConfig);
+            $.privateClusterConfig = privateClusterConfig;
             return this;
         }
+
         public Builder webServerIpv4CidrBlock(String webServerIpv4CidrBlock) {
-            this.webServerIpv4CidrBlock = Objects.requireNonNull(webServerIpv4CidrBlock);
+            $.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
             return this;
         }
+
         public Builder webServerIpv4ReservedRange(String webServerIpv4ReservedRange) {
-            this.webServerIpv4ReservedRange = Objects.requireNonNull(webServerIpv4ReservedRange);
+            $.webServerIpv4ReservedRange = webServerIpv4ReservedRange;
             return this;
-        }        public PrivateEnvironmentConfigResponse build() {
-            return new PrivateEnvironmentConfigResponse(cloudComposerConnectionSubnetwork, cloudComposerNetworkIpv4CidrBlock, cloudComposerNetworkIpv4ReservedRange, cloudSqlIpv4CidrBlock, enablePrivateEnvironment, enablePrivatelyUsedPublicIps, privateClusterConfig, webServerIpv4CidrBlock, webServerIpv4ReservedRange);
+        }
+
+        public PrivateEnvironmentConfigResponse build() {
+            $.cloudComposerConnectionSubnetwork = Objects.requireNonNull($.cloudComposerConnectionSubnetwork, "expected parameter 'cloudComposerConnectionSubnetwork' to be non-null");
+            $.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull($.cloudComposerNetworkIpv4CidrBlock, "expected parameter 'cloudComposerNetworkIpv4CidrBlock' to be non-null");
+            $.cloudComposerNetworkIpv4ReservedRange = Objects.requireNonNull($.cloudComposerNetworkIpv4ReservedRange, "expected parameter 'cloudComposerNetworkIpv4ReservedRange' to be non-null");
+            $.cloudSqlIpv4CidrBlock = Objects.requireNonNull($.cloudSqlIpv4CidrBlock, "expected parameter 'cloudSqlIpv4CidrBlock' to be non-null");
+            $.enablePrivateEnvironment = Objects.requireNonNull($.enablePrivateEnvironment, "expected parameter 'enablePrivateEnvironment' to be non-null");
+            $.enablePrivatelyUsedPublicIps = Objects.requireNonNull($.enablePrivatelyUsedPublicIps, "expected parameter 'enablePrivatelyUsedPublicIps' to be non-null");
+            $.privateClusterConfig = Objects.requireNonNull($.privateClusterConfig, "expected parameter 'privateClusterConfig' to be non-null");
+            $.webServerIpv4CidrBlock = Objects.requireNonNull($.webServerIpv4CidrBlock, "expected parameter 'webServerIpv4CidrBlock' to be non-null");
+            $.webServerIpv4ReservedRange = Objects.requireNonNull($.webServerIpv4ReservedRange, "expected parameter 'webServerIpv4ReservedRange' to be non-null");
+            return $;
         }
     }
+
 }

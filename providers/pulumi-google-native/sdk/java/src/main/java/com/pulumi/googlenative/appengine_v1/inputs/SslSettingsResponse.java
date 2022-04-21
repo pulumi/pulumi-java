@@ -21,7 +21,7 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateId", required=true)
-      private final String certificateId;
+    private String certificateId;
 
     public String certificateId() {
         return this.certificateId;
@@ -32,7 +32,7 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pendingManagedCertificateId", required=true)
-      private final String pendingManagedCertificateId;
+    private String pendingManagedCertificateId;
 
     public String pendingManagedCertificateId() {
         return this.pendingManagedCertificateId;
@@ -43,64 +43,59 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sslManagementType", required=true)
-      private final String sslManagementType;
+    private String sslManagementType;
 
     public String sslManagementType() {
         return this.sslManagementType;
     }
 
-    public SslSettingsResponse(
-        String certificateId,
-        String pendingManagedCertificateId,
-        String sslManagementType) {
-        this.certificateId = Objects.requireNonNull(certificateId, "expected parameter 'certificateId' to be non-null");
-        this.pendingManagedCertificateId = Objects.requireNonNull(pendingManagedCertificateId, "expected parameter 'pendingManagedCertificateId' to be non-null");
-        this.sslManagementType = Objects.requireNonNull(sslManagementType, "expected parameter 'sslManagementType' to be non-null");
-    }
+    private SslSettingsResponse() {}
 
-    private SslSettingsResponse() {
-        this.certificateId = null;
-        this.pendingManagedCertificateId = null;
-        this.sslManagementType = null;
+    private SslSettingsResponse(SslSettingsResponse $) {
+        this.certificateId = $.certificateId;
+        this.pendingManagedCertificateId = $.pendingManagedCertificateId;
+        this.sslManagementType = $.sslManagementType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateId;
-        private String pendingManagedCertificateId;
-        private String sslManagementType;
+        private SslSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslSettingsResponse();
         }
 
         public Builder(SslSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.pendingManagedCertificateId = defaults.pendingManagedCertificateId;
-    	      this.sslManagementType = defaults.sslManagementType;
+            $ = new SslSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(String certificateId) {
-            this.certificateId = Objects.requireNonNull(certificateId);
+            $.certificateId = certificateId;
             return this;
         }
+
         public Builder pendingManagedCertificateId(String pendingManagedCertificateId) {
-            this.pendingManagedCertificateId = Objects.requireNonNull(pendingManagedCertificateId);
+            $.pendingManagedCertificateId = pendingManagedCertificateId;
             return this;
         }
+
         public Builder sslManagementType(String sslManagementType) {
-            this.sslManagementType = Objects.requireNonNull(sslManagementType);
+            $.sslManagementType = sslManagementType;
             return this;
-        }        public SslSettingsResponse build() {
-            return new SslSettingsResponse(certificateId, pendingManagedCertificateId, sslManagementType);
+        }
+
+        public SslSettingsResponse build() {
+            $.certificateId = Objects.requireNonNull($.certificateId, "expected parameter 'certificateId' to be non-null");
+            $.pendingManagedCertificateId = Objects.requireNonNull($.pendingManagedCertificateId, "expected parameter 'pendingManagedCertificateId' to be non-null");
+            $.sslManagementType = Objects.requireNonNull($.sslManagementType, "expected parameter 'sslManagementType' to be non-null");
+            return $;
         }
     }
+
 }

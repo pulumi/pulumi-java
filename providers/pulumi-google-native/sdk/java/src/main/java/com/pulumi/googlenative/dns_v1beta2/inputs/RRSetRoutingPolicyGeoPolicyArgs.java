@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,73 +26,69 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
+    private @Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
 
-    public Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public RRSetRoutingPolicyGeoPolicyArgs(
-        @Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items,
-        @Nullable Output<String> kind) {
-        this.items = items;
-        this.kind = kind;
-    }
+    private RRSetRoutingPolicyGeoPolicyArgs() {}
 
-    private RRSetRoutingPolicyGeoPolicyArgs() {
-        this.items = Codegen.empty();
-        this.kind = Codegen.empty();
+    private RRSetRoutingPolicyGeoPolicyArgs(RRSetRoutingPolicyGeoPolicyArgs $) {
+        this.items = $.items;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RRSetRoutingPolicyGeoPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
-        private @Nullable Output<String> kind;
+        private RRSetRoutingPolicyGeoPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RRSetRoutingPolicyGeoPolicyArgs();
         }
 
         public Builder(RRSetRoutingPolicyGeoPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
-    	      this.kind = defaults.kind;
+            $ = new RRSetRoutingPolicyGeoPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs... items) {
             return items(List.of(items));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public RRSetRoutingPolicyGeoPolicyArgs build() {
-            return new RRSetRoutingPolicyGeoPolicyArgs(items, kind);
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
+        }
+
+        public RRSetRoutingPolicyGeoPolicyArgs build() {
+            return $;
         }
     }
+
 }

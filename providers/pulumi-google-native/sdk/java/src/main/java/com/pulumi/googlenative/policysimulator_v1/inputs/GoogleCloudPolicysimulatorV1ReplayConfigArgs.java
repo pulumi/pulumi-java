@@ -5,11 +5,11 @@ package com.pulumi.googlenative.policysimulator_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.policysimulator_v1.enums.GoogleCloudPolicysimulatorV1ReplayConfigLogSource;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends com.pulu
      * 
      */
     @Import(name="logSource")
-      private final @Nullable Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource;
+    private @Nullable Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource;
 
-    public Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource() {
-        return this.logSource == null ? Codegen.empty() : this.logSource;
+    public Optional<Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource>> logSource() {
+        return Optional.ofNullable(this.logSource);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends com.pulu
      * 
      */
     @Import(name="policyOverlay")
-      private final @Nullable Output<Map<String,String>> policyOverlay;
+    private @Nullable Output<Map<String,String>> policyOverlay;
 
-    public Output<Map<String,String>> policyOverlay() {
-        return this.policyOverlay == null ? Codegen.empty() : this.policyOverlay;
+    public Optional<Output<Map<String,String>>> policyOverlay() {
+        return Optional.ofNullable(this.policyOverlay);
     }
 
-    public GoogleCloudPolicysimulatorV1ReplayConfigArgs(
-        @Nullable Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource,
-        @Nullable Output<Map<String,String>> policyOverlay) {
-        this.logSource = logSource;
-        this.policyOverlay = policyOverlay;
-    }
+    private GoogleCloudPolicysimulatorV1ReplayConfigArgs() {}
 
-    private GoogleCloudPolicysimulatorV1ReplayConfigArgs() {
-        this.logSource = Codegen.empty();
-        this.policyOverlay = Codegen.empty();
+    private GoogleCloudPolicysimulatorV1ReplayConfigArgs(GoogleCloudPolicysimulatorV1ReplayConfigArgs $) {
+        this.logSource = $.logSource;
+        this.policyOverlay = $.policyOverlay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudPolicysimulatorV1ReplayConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource;
-        private @Nullable Output<Map<String,String>> policyOverlay;
+        private GoogleCloudPolicysimulatorV1ReplayConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudPolicysimulatorV1ReplayConfigArgs();
         }
 
         public Builder(GoogleCloudPolicysimulatorV1ReplayConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logSource = defaults.logSource;
-    	      this.policyOverlay = defaults.policyOverlay;
+            $ = new GoogleCloudPolicysimulatorV1ReplayConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logSource(@Nullable Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource) {
-            this.logSource = logSource;
+            $.logSource = logSource;
             return this;
         }
-        public Builder logSource(@Nullable GoogleCloudPolicysimulatorV1ReplayConfigLogSource logSource) {
-            this.logSource = Codegen.ofNullable(logSource);
-            return this;
+
+        public Builder logSource(GoogleCloudPolicysimulatorV1ReplayConfigLogSource logSource) {
+            return logSource(Output.of(logSource));
         }
+
         public Builder policyOverlay(@Nullable Output<Map<String,String>> policyOverlay) {
-            this.policyOverlay = policyOverlay;
+            $.policyOverlay = policyOverlay;
             return this;
         }
-        public Builder policyOverlay(@Nullable Map<String,String> policyOverlay) {
-            this.policyOverlay = Codegen.ofNullable(policyOverlay);
-            return this;
-        }        public GoogleCloudPolicysimulatorV1ReplayConfigArgs build() {
-            return new GoogleCloudPolicysimulatorV1ReplayConfigArgs(logSource, policyOverlay);
+
+        public Builder policyOverlay(Map<String,String> policyOverlay) {
+            return policyOverlay(Output.of(policyOverlay));
+        }
+
+        public GoogleCloudPolicysimulatorV1ReplayConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -37,10 +37,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="host")
-      private final @Nullable String host;
+    private @Nullable String host;
 
     public Optional<String> host() {
-        return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="interval")
-      private final @Nullable Integer interval;
+    private @Nullable Integer interval;
 
     public Optional<Integer> interval() {
-        return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="match")
-      private final @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match;
+    private @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match;
 
     public Optional<ApplicationGatewayProbeHealthResponseMatchResponse> match() {
-        return this.match == null ? Optional.empty() : Optional.ofNullable(this.match);
+        return Optional.ofNullable(this.match);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="minServers")
-      private final @Nullable Integer minServers;
+    private @Nullable Integer minServers;
 
     public Optional<Integer> minServers() {
-        return this.minServers == null ? Optional.empty() : Optional.ofNullable(this.minServers);
+        return Optional.ofNullable(this.minServers);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="pickHostNameFromBackendHttpSettings")
-      private final @Nullable Boolean pickHostNameFromBackendHttpSettings;
+    private @Nullable Boolean pickHostNameFromBackendHttpSettings;
 
     public Optional<Boolean> pickHostNameFromBackendHttpSettings() {
-        return this.pickHostNameFromBackendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.pickHostNameFromBackendHttpSettings);
+        return Optional.ofNullable(this.pickHostNameFromBackendHttpSettings);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -147,7 +147,7 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -158,10 +158,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Integer timeout;
+    private @Nullable Integer timeout;
 
     public Optional<Integer> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -169,7 +169,7 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -180,172 +180,131 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="unhealthyThreshold")
-      private final @Nullable Integer unhealthyThreshold;
+    private @Nullable Integer unhealthyThreshold;
 
     public Optional<Integer> unhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.unhealthyThreshold);
+        return Optional.ofNullable(this.unhealthyThreshold);
     }
 
-    public ApplicationGatewayProbeResponse(
-        String etag,
-        @Nullable String host,
-        @Nullable String id,
-        @Nullable Integer interval,
-        @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match,
-        @Nullable Integer minServers,
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable Boolean pickHostNameFromBackendHttpSettings,
-        @Nullable Integer port,
-        @Nullable String protocol,
-        String provisioningState,
-        @Nullable Integer timeout,
-        String type,
-        @Nullable Integer unhealthyThreshold) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.host = host;
-        this.id = id;
-        this.interval = interval;
-        this.match = match;
-        this.minServers = minServers;
-        this.name = name;
-        this.path = path;
-        this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
-        this.port = port;
-        this.protocol = protocol;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.timeout = timeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.unhealthyThreshold = unhealthyThreshold;
-    }
+    private ApplicationGatewayProbeResponse() {}
 
-    private ApplicationGatewayProbeResponse() {
-        this.etag = null;
-        this.host = null;
-        this.id = null;
-        this.interval = null;
-        this.match = null;
-        this.minServers = null;
-        this.name = null;
-        this.path = null;
-        this.pickHostNameFromBackendHttpSettings = null;
-        this.port = null;
-        this.protocol = null;
-        this.provisioningState = null;
-        this.timeout = null;
-        this.type = null;
-        this.unhealthyThreshold = null;
+    private ApplicationGatewayProbeResponse(ApplicationGatewayProbeResponse $) {
+        this.etag = $.etag;
+        this.host = $.host;
+        this.id = $.id;
+        this.interval = $.interval;
+        this.match = $.match;
+        this.minServers = $.minServers;
+        this.name = $.name;
+        this.path = $.path;
+        this.pickHostNameFromBackendHttpSettings = $.pickHostNameFromBackendHttpSettings;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.provisioningState = $.provisioningState;
+        this.timeout = $.timeout;
+        this.type = $.type;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayProbeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String host;
-        private @Nullable String id;
-        private @Nullable Integer interval;
-        private @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match;
-        private @Nullable Integer minServers;
-        private @Nullable String name;
-        private @Nullable String path;
-        private @Nullable Boolean pickHostNameFromBackendHttpSettings;
-        private @Nullable Integer port;
-        private @Nullable String protocol;
-        private String provisioningState;
-        private @Nullable Integer timeout;
-        private String type;
-        private @Nullable Integer unhealthyThreshold;
+        private ApplicationGatewayProbeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayProbeResponse();
         }
 
         public Builder(ApplicationGatewayProbeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.host = defaults.host;
-    	      this.id = defaults.id;
-    	      this.interval = defaults.interval;
-    	      this.match = defaults.match;
-    	      this.minServers = defaults.minServers;
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.pickHostNameFromBackendHttpSettings = defaults.pickHostNameFromBackendHttpSettings;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new ApplicationGatewayProbeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder host(@Nullable String host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder interval(@Nullable Integer interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
+
         public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatchResponse match) {
-            this.match = match;
+            $.match = match;
             return this;
         }
+
         public Builder minServers(@Nullable Integer minServers) {
-            this.minServers = minServers;
+            $.minServers = minServers;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
-            this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
+            $.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = unhealthyThreshold;
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
-        }        public ApplicationGatewayProbeResponse build() {
-            return new ApplicationGatewayProbeResponse(etag, host, id, interval, match, minServers, name, path, pickHostNameFromBackendHttpSettings, port, protocol, provisioningState, timeout, type, unhealthyThreshold);
+        }
+
+        public ApplicationGatewayProbeResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

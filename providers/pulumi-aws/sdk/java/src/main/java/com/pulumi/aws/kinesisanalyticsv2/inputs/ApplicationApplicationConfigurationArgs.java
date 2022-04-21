@@ -12,8 +12,8 @@ import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurat
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class ApplicationApplicationConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="applicationCodeConfiguration", required=true)
-      private final Output<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> applicationCodeConfiguration;
+    private Output<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> applicationCodeConfiguration;
 
     public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> applicationCodeConfiguration() {
         return this.applicationCodeConfiguration;
@@ -37,10 +37,10 @@ public final class ApplicationApplicationConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="applicationSnapshotConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> applicationSnapshotConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> applicationSnapshotConfiguration;
 
-    public Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> applicationSnapshotConfiguration() {
-        return this.applicationSnapshotConfiguration == null ? Codegen.empty() : this.applicationSnapshotConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs>> applicationSnapshotConfiguration() {
+        return Optional.ofNullable(this.applicationSnapshotConfiguration);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApplicationApplicationConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="environmentProperties")
-      private final @Nullable Output<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> environmentProperties;
+    private @Nullable Output<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> environmentProperties;
 
-    public Output<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> environmentProperties() {
-        return this.environmentProperties == null ? Codegen.empty() : this.environmentProperties;
+    public Optional<Output<ApplicationApplicationConfigurationEnvironmentPropertiesArgs>> environmentProperties() {
+        return Optional.ofNullable(this.environmentProperties);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApplicationApplicationConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="flinkApplicationConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> flinkApplicationConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> flinkApplicationConfiguration;
 
-    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> flinkApplicationConfiguration() {
-        return this.flinkApplicationConfiguration == null ? Codegen.empty() : this.flinkApplicationConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs>> flinkApplicationConfiguration() {
+        return Optional.ofNullable(this.flinkApplicationConfiguration);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ApplicationApplicationConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="runConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationArgs> runConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationRunConfigurationArgs> runConfiguration;
 
-    public Output<ApplicationApplicationConfigurationRunConfigurationArgs> runConfiguration() {
-        return this.runConfiguration == null ? Codegen.empty() : this.runConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationRunConfigurationArgs>> runConfiguration() {
+        return Optional.ofNullable(this.runConfiguration);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ApplicationApplicationConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="sqlApplicationConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> sqlApplicationConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> sqlApplicationConfiguration;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> sqlApplicationConfiguration() {
-        return this.sqlApplicationConfiguration == null ? Codegen.empty() : this.sqlApplicationConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs>> sqlApplicationConfiguration() {
+        return Optional.ofNullable(this.sqlApplicationConfiguration);
     }
 
     /**
@@ -92,128 +92,109 @@ public final class ApplicationApplicationConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="vpcConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationVpcConfigurationArgs> vpcConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<ApplicationApplicationConfigurationVpcConfigurationArgs> vpcConfiguration() {
-        return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationVpcConfigurationArgs>> vpcConfiguration() {
+        return Optional.ofNullable(this.vpcConfiguration);
     }
 
-    public ApplicationApplicationConfigurationArgs(
-        Output<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> applicationCodeConfiguration,
-        @Nullable Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> applicationSnapshotConfiguration,
-        @Nullable Output<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> environmentProperties,
-        @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> flinkApplicationConfiguration,
-        @Nullable Output<ApplicationApplicationConfigurationRunConfigurationArgs> runConfiguration,
-        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> sqlApplicationConfiguration,
-        @Nullable Output<ApplicationApplicationConfigurationVpcConfigurationArgs> vpcConfiguration) {
-        this.applicationCodeConfiguration = Objects.requireNonNull(applicationCodeConfiguration, "expected parameter 'applicationCodeConfiguration' to be non-null");
-        this.applicationSnapshotConfiguration = applicationSnapshotConfiguration;
-        this.environmentProperties = environmentProperties;
-        this.flinkApplicationConfiguration = flinkApplicationConfiguration;
-        this.runConfiguration = runConfiguration;
-        this.sqlApplicationConfiguration = sqlApplicationConfiguration;
-        this.vpcConfiguration = vpcConfiguration;
-    }
+    private ApplicationApplicationConfigurationArgs() {}
 
-    private ApplicationApplicationConfigurationArgs() {
-        this.applicationCodeConfiguration = Codegen.empty();
-        this.applicationSnapshotConfiguration = Codegen.empty();
-        this.environmentProperties = Codegen.empty();
-        this.flinkApplicationConfiguration = Codegen.empty();
-        this.runConfiguration = Codegen.empty();
-        this.sqlApplicationConfiguration = Codegen.empty();
-        this.vpcConfiguration = Codegen.empty();
+    private ApplicationApplicationConfigurationArgs(ApplicationApplicationConfigurationArgs $) {
+        this.applicationCodeConfiguration = $.applicationCodeConfiguration;
+        this.applicationSnapshotConfiguration = $.applicationSnapshotConfiguration;
+        this.environmentProperties = $.environmentProperties;
+        this.flinkApplicationConfiguration = $.flinkApplicationConfiguration;
+        this.runConfiguration = $.runConfiguration;
+        this.sqlApplicationConfiguration = $.sqlApplicationConfiguration;
+        this.vpcConfiguration = $.vpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> applicationCodeConfiguration;
-        private @Nullable Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> applicationSnapshotConfiguration;
-        private @Nullable Output<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> environmentProperties;
-        private @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> flinkApplicationConfiguration;
-        private @Nullable Output<ApplicationApplicationConfigurationRunConfigurationArgs> runConfiguration;
-        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> sqlApplicationConfiguration;
-        private @Nullable Output<ApplicationApplicationConfigurationVpcConfigurationArgs> vpcConfiguration;
+        private ApplicationApplicationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationCodeConfiguration = defaults.applicationCodeConfiguration;
-    	      this.applicationSnapshotConfiguration = defaults.applicationSnapshotConfiguration;
-    	      this.environmentProperties = defaults.environmentProperties;
-    	      this.flinkApplicationConfiguration = defaults.flinkApplicationConfiguration;
-    	      this.runConfiguration = defaults.runConfiguration;
-    	      this.sqlApplicationConfiguration = defaults.sqlApplicationConfiguration;
-    	      this.vpcConfiguration = defaults.vpcConfiguration;
+            $ = new ApplicationApplicationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationCodeConfiguration(Output<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> applicationCodeConfiguration) {
-            this.applicationCodeConfiguration = Objects.requireNonNull(applicationCodeConfiguration);
+            $.applicationCodeConfiguration = applicationCodeConfiguration;
             return this;
         }
+
         public Builder applicationCodeConfiguration(ApplicationApplicationConfigurationApplicationCodeConfigurationArgs applicationCodeConfiguration) {
-            this.applicationCodeConfiguration = Output.of(Objects.requireNonNull(applicationCodeConfiguration));
-            return this;
+            return applicationCodeConfiguration(Output.of(applicationCodeConfiguration));
         }
+
         public Builder applicationSnapshotConfiguration(@Nullable Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> applicationSnapshotConfiguration) {
-            this.applicationSnapshotConfiguration = applicationSnapshotConfiguration;
+            $.applicationSnapshotConfiguration = applicationSnapshotConfiguration;
             return this;
         }
-        public Builder applicationSnapshotConfiguration(@Nullable ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs applicationSnapshotConfiguration) {
-            this.applicationSnapshotConfiguration = Codegen.ofNullable(applicationSnapshotConfiguration);
-            return this;
+
+        public Builder applicationSnapshotConfiguration(ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs applicationSnapshotConfiguration) {
+            return applicationSnapshotConfiguration(Output.of(applicationSnapshotConfiguration));
         }
+
         public Builder environmentProperties(@Nullable Output<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> environmentProperties) {
-            this.environmentProperties = environmentProperties;
+            $.environmentProperties = environmentProperties;
             return this;
         }
-        public Builder environmentProperties(@Nullable ApplicationApplicationConfigurationEnvironmentPropertiesArgs environmentProperties) {
-            this.environmentProperties = Codegen.ofNullable(environmentProperties);
-            return this;
+
+        public Builder environmentProperties(ApplicationApplicationConfigurationEnvironmentPropertiesArgs environmentProperties) {
+            return environmentProperties(Output.of(environmentProperties));
         }
+
         public Builder flinkApplicationConfiguration(@Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> flinkApplicationConfiguration) {
-            this.flinkApplicationConfiguration = flinkApplicationConfiguration;
+            $.flinkApplicationConfiguration = flinkApplicationConfiguration;
             return this;
         }
-        public Builder flinkApplicationConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs flinkApplicationConfiguration) {
-            this.flinkApplicationConfiguration = Codegen.ofNullable(flinkApplicationConfiguration);
-            return this;
+
+        public Builder flinkApplicationConfiguration(ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs flinkApplicationConfiguration) {
+            return flinkApplicationConfiguration(Output.of(flinkApplicationConfiguration));
         }
+
         public Builder runConfiguration(@Nullable Output<ApplicationApplicationConfigurationRunConfigurationArgs> runConfiguration) {
-            this.runConfiguration = runConfiguration;
+            $.runConfiguration = runConfiguration;
             return this;
         }
-        public Builder runConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationArgs runConfiguration) {
-            this.runConfiguration = Codegen.ofNullable(runConfiguration);
-            return this;
+
+        public Builder runConfiguration(ApplicationApplicationConfigurationRunConfigurationArgs runConfiguration) {
+            return runConfiguration(Output.of(runConfiguration));
         }
+
         public Builder sqlApplicationConfiguration(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> sqlApplicationConfiguration) {
-            this.sqlApplicationConfiguration = sqlApplicationConfiguration;
+            $.sqlApplicationConfiguration = sqlApplicationConfiguration;
             return this;
         }
-        public Builder sqlApplicationConfiguration(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationArgs sqlApplicationConfiguration) {
-            this.sqlApplicationConfiguration = Codegen.ofNullable(sqlApplicationConfiguration);
-            return this;
+
+        public Builder sqlApplicationConfiguration(ApplicationApplicationConfigurationSqlApplicationConfigurationArgs sqlApplicationConfiguration) {
+            return sqlApplicationConfiguration(Output.of(sqlApplicationConfiguration));
         }
+
         public Builder vpcConfiguration(@Nullable Output<ApplicationApplicationConfigurationVpcConfigurationArgs> vpcConfiguration) {
-            this.vpcConfiguration = vpcConfiguration;
+            $.vpcConfiguration = vpcConfiguration;
             return this;
         }
-        public Builder vpcConfiguration(@Nullable ApplicationApplicationConfigurationVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Codegen.ofNullable(vpcConfiguration);
-            return this;
-        }        public ApplicationApplicationConfigurationArgs build() {
-            return new ApplicationApplicationConfigurationArgs(applicationCodeConfiguration, applicationSnapshotConfiguration, environmentProperties, flinkApplicationConfiguration, runConfiguration, sqlApplicationConfiguration, vpcConfiguration);
+
+        public Builder vpcConfiguration(ApplicationApplicationConfigurationVpcConfigurationArgs vpcConfiguration) {
+            return vpcConfiguration(Output.of(vpcConfiguration));
+        }
+
+        public ApplicationApplicationConfigurationArgs build() {
+            $.applicationCodeConfiguration = Objects.requireNonNull($.applicationCodeConfiguration, "expected parameter 'applicationCodeConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

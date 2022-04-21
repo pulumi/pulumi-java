@@ -17,7 +17,7 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="placementPolicyName", required=true)
-      private final String placementPolicyName;
+    private String placementPolicyName;
 
     public String placementPolicyName() {
         return this.placementPolicyName;
@@ -39,7 +39,7 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -50,73 +50,66 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPlacementPolicyArgs(
-        String clusterName,
-        String placementPolicyName,
-        String privateCloudName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.placementPolicyName = Objects.requireNonNull(placementPolicyName, "expected parameter 'placementPolicyName' to be non-null");
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPlacementPolicyArgs() {}
 
-    private GetPlacementPolicyArgs() {
-        this.clusterName = null;
-        this.placementPolicyName = null;
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private GetPlacementPolicyArgs(GetPlacementPolicyArgs $) {
+        this.clusterName = $.clusterName;
+        this.placementPolicyName = $.placementPolicyName;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPlacementPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String placementPolicyName;
-        private String privateCloudName;
-        private String resourceGroupName;
+        private GetPlacementPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPlacementPolicyArgs();
         }
 
         public Builder(GetPlacementPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.placementPolicyName = defaults.placementPolicyName;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder placementPolicyName(String placementPolicyName) {
-            this.placementPolicyName = Objects.requireNonNull(placementPolicyName);
+            $.placementPolicyName = placementPolicyName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPlacementPolicyArgs build() {
-            return new GetPlacementPolicyArgs(clusterName, placementPolicyName, privateCloudName, resourceGroupName);
+        }
+
+        public GetPlacementPolicyArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.placementPolicyName = Objects.requireNonNull($.placementPolicyName, "expected parameter 'placementPolicyName' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

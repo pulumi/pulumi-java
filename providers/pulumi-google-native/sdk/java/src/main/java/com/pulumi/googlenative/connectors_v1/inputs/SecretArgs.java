@@ -5,9 +5,9 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretVersion")
-      private final @Nullable Output<String> secretVersion;
+    private @Nullable Output<String> secretVersion;
 
-    public Output<String> secretVersion() {
-        return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
+    public Optional<Output<String>> secretVersion() {
+        return Optional.ofNullable(this.secretVersion);
     }
 
-    public SecretArgs(@Nullable Output<String> secretVersion) {
-        this.secretVersion = secretVersion;
-    }
+    private SecretArgs() {}
 
-    private SecretArgs() {
-        this.secretVersion = Codegen.empty();
+    private SecretArgs(SecretArgs $) {
+        this.secretVersion = $.secretVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> secretVersion;
+        private SecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretArgs();
         }
 
         public Builder(SecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretVersion = defaults.secretVersion;
+            $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretVersion(@Nullable Output<String> secretVersion) {
-            this.secretVersion = secretVersion;
+            $.secretVersion = secretVersion;
             return this;
         }
-        public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Codegen.ofNullable(secretVersion);
-            return this;
-        }        public SecretArgs build() {
-            return new SecretArgs(secretVersion);
+
+        public Builder secretVersion(String secretVersion) {
+            return secretVersion(Output.of(secretVersion));
+        }
+
+        public SecretArgs build() {
+            return $;
         }
     }
+
 }

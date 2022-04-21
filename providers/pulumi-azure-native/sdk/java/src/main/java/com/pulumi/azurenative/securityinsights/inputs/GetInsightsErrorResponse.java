@@ -23,7 +23,7 @@ public final class GetInsightsErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -34,7 +34,7 @@ public final class GetInsightsErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -45,64 +45,58 @@ public final class GetInsightsErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="queryId")
-      private final @Nullable String queryId;
+    private @Nullable String queryId;
 
     public Optional<String> queryId() {
-        return this.queryId == null ? Optional.empty() : Optional.ofNullable(this.queryId);
+        return Optional.ofNullable(this.queryId);
     }
 
-    public GetInsightsErrorResponse(
-        String errorMessage,
-        String kind,
-        @Nullable String queryId) {
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.queryId = queryId;
-    }
+    private GetInsightsErrorResponse() {}
 
-    private GetInsightsErrorResponse() {
-        this.errorMessage = null;
-        this.kind = null;
-        this.queryId = null;
+    private GetInsightsErrorResponse(GetInsightsErrorResponse $) {
+        this.errorMessage = $.errorMessage;
+        this.kind = $.kind;
+        this.queryId = $.queryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInsightsErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String errorMessage;
-        private String kind;
-        private @Nullable String queryId;
+        private GetInsightsErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInsightsErrorResponse();
         }
 
         public Builder(GetInsightsErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.kind = defaults.kind;
-    	      this.queryId = defaults.queryId;
+            $ = new GetInsightsErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder queryId(@Nullable String queryId) {
-            this.queryId = queryId;
+            $.queryId = queryId;
             return this;
-        }        public GetInsightsErrorResponse build() {
-            return new GetInsightsErrorResponse(errorMessage, kind, queryId);
+        }
+
+        public GetInsightsErrorResponse build() {
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

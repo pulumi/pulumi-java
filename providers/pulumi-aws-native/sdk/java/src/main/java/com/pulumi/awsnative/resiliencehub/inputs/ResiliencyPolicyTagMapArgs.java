@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.resiliencehub.inputs;
 
-import java.util.Objects;
+
 
 
 public final class ResiliencyPolicyTagMapArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ResiliencyPolicyTagMapArgs Empty = new ResiliencyPolicyTagMapArgs();
 
-    public ResiliencyPolicyTagMapArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ResiliencyPolicyTagMapArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ResiliencyPolicyTagMapArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ResiliencyPolicyTagMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ResiliencyPolicyTagMapArgs();
         }
         public ResiliencyPolicyTagMapArgs build() {
-            return new ResiliencyPolicyTagMapArgs();
+            return $;
         }
     }
+
 }

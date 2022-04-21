@@ -5,9 +5,9 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CxEntityTypeExcludedPhraseGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public CxEntityTypeExcludedPhraseGetArgs(@Nullable Output<String> value) {
-        this.value = value;
-    }
+    private CxEntityTypeExcludedPhraseGetArgs() {}
 
-    private CxEntityTypeExcludedPhraseGetArgs() {
-        this.value = Codegen.empty();
+    private CxEntityTypeExcludedPhraseGetArgs(CxEntityTypeExcludedPhraseGetArgs $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxEntityTypeExcludedPhraseGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> value;
+        private CxEntityTypeExcludedPhraseGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxEntityTypeExcludedPhraseGetArgs();
         }
 
         public Builder(CxEntityTypeExcludedPhraseGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new CxEntityTypeExcludedPhraseGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public CxEntityTypeExcludedPhraseGetArgs build() {
-            return new CxEntityTypeExcludedPhraseGetArgs(value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public CxEntityTypeExcludedPhraseGetArgs build() {
+            return $;
         }
     }
+
 }

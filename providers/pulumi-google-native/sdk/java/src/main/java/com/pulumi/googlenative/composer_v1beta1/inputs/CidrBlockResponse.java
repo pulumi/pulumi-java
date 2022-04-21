@@ -21,7 +21,7 @@ public final class CidrBlockResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cidrBlock", required=true)
-      private final String cidrBlock;
+    private String cidrBlock;
 
     public String cidrBlock() {
         return this.cidrBlock;
@@ -32,55 +32,52 @@ public final class CidrBlockResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
     }
 
-    public CidrBlockResponse(
-        String cidrBlock,
-        String displayName) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-    }
+    private CidrBlockResponse() {}
 
-    private CidrBlockResponse() {
-        this.cidrBlock = null;
-        this.displayName = null;
+    private CidrBlockResponse(CidrBlockResponse $) {
+        this.cidrBlock = $.cidrBlock;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CidrBlockResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cidrBlock;
-        private String displayName;
+        private CidrBlockResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CidrBlockResponse();
         }
 
         public Builder(CidrBlockResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.displayName = defaults.displayName;
+            $ = new CidrBlockResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Objects.requireNonNull(cidrBlock);
+            $.cidrBlock = cidrBlock;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
-        }        public CidrBlockResponse build() {
-            return new CidrBlockResponse(cidrBlock, displayName);
+        }
+
+        public CidrBlockResponse build() {
+            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

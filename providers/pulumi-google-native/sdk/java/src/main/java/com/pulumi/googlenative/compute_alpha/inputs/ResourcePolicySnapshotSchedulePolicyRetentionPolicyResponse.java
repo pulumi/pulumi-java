@@ -22,14 +22,14 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
      * 
      */
     @Import(name="maxRetentionDays", required=true)
-      private final Integer maxRetentionDays;
+    private Integer maxRetentionDays;
 
     public Integer maxRetentionDays() {
         return this.maxRetentionDays;
     }
 
     @Import(name="onPolicySwitch", required=true)
-      private final String onPolicySwitch;
+    private String onPolicySwitch;
 
     public String onPolicySwitch() {
         return this.onPolicySwitch;
@@ -40,64 +40,59 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
      * 
      */
     @Import(name="onSourceDiskDelete", required=true)
-      private final String onSourceDiskDelete;
+    private String onSourceDiskDelete;
 
     public String onSourceDiskDelete() {
         return this.onSourceDiskDelete;
     }
 
-    public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse(
-        Integer maxRetentionDays,
-        String onPolicySwitch,
-        String onSourceDiskDelete) {
-        this.maxRetentionDays = Objects.requireNonNull(maxRetentionDays, "expected parameter 'maxRetentionDays' to be non-null");
-        this.onPolicySwitch = Objects.requireNonNull(onPolicySwitch, "expected parameter 'onPolicySwitch' to be non-null");
-        this.onSourceDiskDelete = Objects.requireNonNull(onSourceDiskDelete, "expected parameter 'onSourceDiskDelete' to be non-null");
-    }
+    private ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse() {}
 
-    private ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse() {
-        this.maxRetentionDays = null;
-        this.onPolicySwitch = null;
-        this.onSourceDiskDelete = null;
+    private ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse(ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse $) {
+        this.maxRetentionDays = $.maxRetentionDays;
+        this.onPolicySwitch = $.onPolicySwitch;
+        this.onSourceDiskDelete = $.onSourceDiskDelete;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxRetentionDays;
-        private String onPolicySwitch;
-        private String onSourceDiskDelete;
+        private ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRetentionDays = defaults.maxRetentionDays;
-    	      this.onPolicySwitch = defaults.onPolicySwitch;
-    	      this.onSourceDiskDelete = defaults.onSourceDiskDelete;
+            $ = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRetentionDays(Integer maxRetentionDays) {
-            this.maxRetentionDays = Objects.requireNonNull(maxRetentionDays);
+            $.maxRetentionDays = maxRetentionDays;
             return this;
         }
+
         public Builder onPolicySwitch(String onPolicySwitch) {
-            this.onPolicySwitch = Objects.requireNonNull(onPolicySwitch);
+            $.onPolicySwitch = onPolicySwitch;
             return this;
         }
+
         public Builder onSourceDiskDelete(String onSourceDiskDelete) {
-            this.onSourceDiskDelete = Objects.requireNonNull(onSourceDiskDelete);
+            $.onSourceDiskDelete = onSourceDiskDelete;
             return this;
-        }        public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse build() {
-            return new ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse(maxRetentionDays, onPolicySwitch, onSourceDiskDelete);
+        }
+
+        public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse build() {
+            $.maxRetentionDays = Objects.requireNonNull($.maxRetentionDays, "expected parameter 'maxRetentionDays' to be non-null");
+            $.onPolicySwitch = Objects.requireNonNull($.onPolicySwitch, "expected parameter 'onPolicySwitch' to be non-null");
+            $.onSourceDiskDelete = Objects.requireNonNull($.onSourceDiskDelete, "expected parameter 'onSourceDiskDelete' to be non-null");
+            return $;
         }
     }
+
 }

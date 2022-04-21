@@ -22,7 +22,7 @@ public final class CostAllocationProportionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,55 +33,52 @@ public final class CostAllocationProportionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="percentage", required=true)
-      private final Double percentage;
+    private Double percentage;
 
     public Double percentage() {
         return this.percentage;
     }
 
-    public CostAllocationProportionResponse(
-        String name,
-        Double percentage) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.percentage = Objects.requireNonNull(percentage, "expected parameter 'percentage' to be non-null");
-    }
+    private CostAllocationProportionResponse() {}
 
-    private CostAllocationProportionResponse() {
-        this.name = null;
-        this.percentage = null;
+    private CostAllocationProportionResponse(CostAllocationProportionResponse $) {
+        this.name = $.name;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CostAllocationProportionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private Double percentage;
+        private CostAllocationProportionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CostAllocationProportionResponse();
         }
 
         public Builder(CostAllocationProportionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.percentage = defaults.percentage;
+            $ = new CostAllocationProportionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder percentage(Double percentage) {
-            this.percentage = Objects.requireNonNull(percentage);
+            $.percentage = percentage;
             return this;
-        }        public CostAllocationProportionResponse build() {
-            return new CostAllocationProportionResponse(name, percentage);
+        }
+
+        public CostAllocationProportionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.percentage = Objects.requireNonNull($.percentage, "expected parameter 'percentage' to be non-null");
+            return $;
         }
     }
+
 }

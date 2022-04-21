@@ -5,11 +5,11 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="caCertificate")
-      private final @Nullable Output<String> caCertificate;
+    private @Nullable Output<String> caCertificate;
 
-    public Output<String> caCertificate() {
-        return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
+    public Optional<Output<String>> caCertificate() {
+        return Optional.ofNullable(this.caCertificate);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="clientCertificate")
-      private final @Nullable Output<String> clientCertificate;
+    private @Nullable Output<String> clientCertificate;
 
-    public Output<String> clientCertificate() {
-        return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
+    public Optional<Output<String>> clientCertificate() {
+        return Optional.ofNullable(this.clientCertificate);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="clientKey")
-      private final @Nullable Output<String> clientKey;
+    private @Nullable Output<String> clientKey;
 
-    public Output<String> clientKey() {
-        return this.clientKey == null ? Codegen.empty() : this.clientKey;
+    public Optional<Output<String>> clientKey() {
+        return Optional.ofNullable(this.clientKey);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="connectRetryInterval")
-      private final @Nullable Output<Integer> connectRetryInterval;
+    private @Nullable Output<Integer> connectRetryInterval;
 
-    public Output<Integer> connectRetryInterval() {
-        return this.connectRetryInterval == null ? Codegen.empty() : this.connectRetryInterval;
+    public Optional<Output<Integer>> connectRetryInterval() {
+        return Optional.ofNullable(this.connectRetryInterval);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="dumpFilePath")
-      private final @Nullable Output<String> dumpFilePath;
+    private @Nullable Output<String> dumpFilePath;
 
-    public Output<String> dumpFilePath() {
-        return this.dumpFilePath == null ? Codegen.empty() : this.dumpFilePath;
+    public Optional<Output<String>> dumpFilePath() {
+        return Optional.ofNullable(this.dumpFilePath);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="failoverTarget")
-      private final @Nullable Output<Boolean> failoverTarget;
+    private @Nullable Output<Boolean> failoverTarget;
 
-    public Output<Boolean> failoverTarget() {
-        return this.failoverTarget == null ? Codegen.empty() : this.failoverTarget;
+    public Optional<Output<Boolean>> failoverTarget() {
+        return Optional.ofNullable(this.failoverTarget);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="masterHeartbeatPeriod")
-      private final @Nullable Output<Integer> masterHeartbeatPeriod;
+    private @Nullable Output<Integer> masterHeartbeatPeriod;
 
-    public Output<Integer> masterHeartbeatPeriod() {
-        return this.masterHeartbeatPeriod == null ? Codegen.empty() : this.masterHeartbeatPeriod;
+    public Optional<Output<Integer>> masterHeartbeatPeriod() {
+        return Optional.ofNullable(this.masterHeartbeatPeriod);
     }
 
     /**
@@ -108,17 +108,17 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     @Import(name="sslCipher")
-      private final @Nullable Output<String> sslCipher;
+    private @Nullable Output<String> sslCipher;
 
-    public Output<String> sslCipher() {
-        return this.sslCipher == null ? Codegen.empty() : this.sslCipher;
+    public Optional<Output<String>> sslCipher() {
+        return Optional.ofNullable(this.sslCipher);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
     /**
@@ -138,180 +138,148 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="verifyServerCertificate")
-      private final @Nullable Output<Boolean> verifyServerCertificate;
+    private @Nullable Output<Boolean> verifyServerCertificate;
 
-    public Output<Boolean> verifyServerCertificate() {
-        return this.verifyServerCertificate == null ? Codegen.empty() : this.verifyServerCertificate;
+    public Optional<Output<Boolean>> verifyServerCertificate() {
+        return Optional.ofNullable(this.verifyServerCertificate);
     }
 
-    public DatabaseInstanceReplicaConfigurationGetArgs(
-        @Nullable Output<String> caCertificate,
-        @Nullable Output<String> clientCertificate,
-        @Nullable Output<String> clientKey,
-        @Nullable Output<Integer> connectRetryInterval,
-        @Nullable Output<String> dumpFilePath,
-        @Nullable Output<Boolean> failoverTarget,
-        @Nullable Output<Integer> masterHeartbeatPeriod,
-        @Nullable Output<String> password,
-        @Nullable Output<String> sslCipher,
-        @Nullable Output<String> username,
-        @Nullable Output<Boolean> verifyServerCertificate) {
-        this.caCertificate = caCertificate;
-        this.clientCertificate = clientCertificate;
-        this.clientKey = clientKey;
-        this.connectRetryInterval = connectRetryInterval;
-        this.dumpFilePath = dumpFilePath;
-        this.failoverTarget = failoverTarget;
-        this.masterHeartbeatPeriod = masterHeartbeatPeriod;
-        this.password = password;
-        this.sslCipher = sslCipher;
-        this.username = username;
-        this.verifyServerCertificate = verifyServerCertificate;
-    }
+    private DatabaseInstanceReplicaConfigurationGetArgs() {}
 
-    private DatabaseInstanceReplicaConfigurationGetArgs() {
-        this.caCertificate = Codegen.empty();
-        this.clientCertificate = Codegen.empty();
-        this.clientKey = Codegen.empty();
-        this.connectRetryInterval = Codegen.empty();
-        this.dumpFilePath = Codegen.empty();
-        this.failoverTarget = Codegen.empty();
-        this.masterHeartbeatPeriod = Codegen.empty();
-        this.password = Codegen.empty();
-        this.sslCipher = Codegen.empty();
-        this.username = Codegen.empty();
-        this.verifyServerCertificate = Codegen.empty();
+    private DatabaseInstanceReplicaConfigurationGetArgs(DatabaseInstanceReplicaConfigurationGetArgs $) {
+        this.caCertificate = $.caCertificate;
+        this.clientCertificate = $.clientCertificate;
+        this.clientKey = $.clientKey;
+        this.connectRetryInterval = $.connectRetryInterval;
+        this.dumpFilePath = $.dumpFilePath;
+        this.failoverTarget = $.failoverTarget;
+        this.masterHeartbeatPeriod = $.masterHeartbeatPeriod;
+        this.password = $.password;
+        this.sslCipher = $.sslCipher;
+        this.username = $.username;
+        this.verifyServerCertificate = $.verifyServerCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceReplicaConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> caCertificate;
-        private @Nullable Output<String> clientCertificate;
-        private @Nullable Output<String> clientKey;
-        private @Nullable Output<Integer> connectRetryInterval;
-        private @Nullable Output<String> dumpFilePath;
-        private @Nullable Output<Boolean> failoverTarget;
-        private @Nullable Output<Integer> masterHeartbeatPeriod;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> sslCipher;
-        private @Nullable Output<String> username;
-        private @Nullable Output<Boolean> verifyServerCertificate;
+        private DatabaseInstanceReplicaConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceReplicaConfigurationGetArgs();
         }
 
         public Builder(DatabaseInstanceReplicaConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caCertificate = defaults.caCertificate;
-    	      this.clientCertificate = defaults.clientCertificate;
-    	      this.clientKey = defaults.clientKey;
-    	      this.connectRetryInterval = defaults.connectRetryInterval;
-    	      this.dumpFilePath = defaults.dumpFilePath;
-    	      this.failoverTarget = defaults.failoverTarget;
-    	      this.masterHeartbeatPeriod = defaults.masterHeartbeatPeriod;
-    	      this.password = defaults.password;
-    	      this.sslCipher = defaults.sslCipher;
-    	      this.username = defaults.username;
-    	      this.verifyServerCertificate = defaults.verifyServerCertificate;
+            $ = new DatabaseInstanceReplicaConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caCertificate(@Nullable Output<String> caCertificate) {
-            this.caCertificate = caCertificate;
+            $.caCertificate = caCertificate;
             return this;
         }
-        public Builder caCertificate(@Nullable String caCertificate) {
-            this.caCertificate = Codegen.ofNullable(caCertificate);
-            return this;
+
+        public Builder caCertificate(String caCertificate) {
+            return caCertificate(Output.of(caCertificate));
         }
+
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
-            this.clientCertificate = clientCertificate;
+            $.clientCertificate = clientCertificate;
             return this;
         }
-        public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Codegen.ofNullable(clientCertificate);
-            return this;
+
+        public Builder clientCertificate(String clientCertificate) {
+            return clientCertificate(Output.of(clientCertificate));
         }
+
         public Builder clientKey(@Nullable Output<String> clientKey) {
-            this.clientKey = clientKey;
+            $.clientKey = clientKey;
             return this;
         }
-        public Builder clientKey(@Nullable String clientKey) {
-            this.clientKey = Codegen.ofNullable(clientKey);
-            return this;
+
+        public Builder clientKey(String clientKey) {
+            return clientKey(Output.of(clientKey));
         }
+
         public Builder connectRetryInterval(@Nullable Output<Integer> connectRetryInterval) {
-            this.connectRetryInterval = connectRetryInterval;
+            $.connectRetryInterval = connectRetryInterval;
             return this;
         }
-        public Builder connectRetryInterval(@Nullable Integer connectRetryInterval) {
-            this.connectRetryInterval = Codegen.ofNullable(connectRetryInterval);
-            return this;
+
+        public Builder connectRetryInterval(Integer connectRetryInterval) {
+            return connectRetryInterval(Output.of(connectRetryInterval));
         }
+
         public Builder dumpFilePath(@Nullable Output<String> dumpFilePath) {
-            this.dumpFilePath = dumpFilePath;
+            $.dumpFilePath = dumpFilePath;
             return this;
         }
-        public Builder dumpFilePath(@Nullable String dumpFilePath) {
-            this.dumpFilePath = Codegen.ofNullable(dumpFilePath);
-            return this;
+
+        public Builder dumpFilePath(String dumpFilePath) {
+            return dumpFilePath(Output.of(dumpFilePath));
         }
+
         public Builder failoverTarget(@Nullable Output<Boolean> failoverTarget) {
-            this.failoverTarget = failoverTarget;
+            $.failoverTarget = failoverTarget;
             return this;
         }
-        public Builder failoverTarget(@Nullable Boolean failoverTarget) {
-            this.failoverTarget = Codegen.ofNullable(failoverTarget);
-            return this;
+
+        public Builder failoverTarget(Boolean failoverTarget) {
+            return failoverTarget(Output.of(failoverTarget));
         }
+
         public Builder masterHeartbeatPeriod(@Nullable Output<Integer> masterHeartbeatPeriod) {
-            this.masterHeartbeatPeriod = masterHeartbeatPeriod;
+            $.masterHeartbeatPeriod = masterHeartbeatPeriod;
             return this;
         }
-        public Builder masterHeartbeatPeriod(@Nullable Integer masterHeartbeatPeriod) {
-            this.masterHeartbeatPeriod = Codegen.ofNullable(masterHeartbeatPeriod);
-            return this;
+
+        public Builder masterHeartbeatPeriod(Integer masterHeartbeatPeriod) {
+            return masterHeartbeatPeriod(Output.of(masterHeartbeatPeriod));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder sslCipher(@Nullable Output<String> sslCipher) {
-            this.sslCipher = sslCipher;
+            $.sslCipher = sslCipher;
             return this;
         }
-        public Builder sslCipher(@Nullable String sslCipher) {
-            this.sslCipher = Codegen.ofNullable(sslCipher);
-            return this;
+
+        public Builder sslCipher(String sslCipher) {
+            return sslCipher(Output.of(sslCipher));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
+
+        public Builder username(String username) {
+            return username(Output.of(username));
         }
+
         public Builder verifyServerCertificate(@Nullable Output<Boolean> verifyServerCertificate) {
-            this.verifyServerCertificate = verifyServerCertificate;
+            $.verifyServerCertificate = verifyServerCertificate;
             return this;
         }
-        public Builder verifyServerCertificate(@Nullable Boolean verifyServerCertificate) {
-            this.verifyServerCertificate = Codegen.ofNullable(verifyServerCertificate);
-            return this;
-        }        public DatabaseInstanceReplicaConfigurationGetArgs build() {
-            return new DatabaseInstanceReplicaConfigurationGetArgs(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, failoverTarget, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
+
+        public Builder verifyServerCertificate(Boolean verifyServerCertificate) {
+            return verifyServerCertificate(Output.of(verifyServerCertificate));
+        }
+
+        public DatabaseInstanceReplicaConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

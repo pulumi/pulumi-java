@@ -5,9 +5,9 @@ package com.pulumi.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -41,10 +41,10 @@ public final class KubeconfigOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="profileName")
-      private final @Nullable Output<String> profileName;
+    private @Nullable Output<String> profileName;
 
-    public Output<String> profileName() {
-        return this.profileName == null ? Codegen.empty() : this.profileName;
+    public Optional<Output<String>> profileName() {
+        return Optional.ofNullable(this.profileName);
     }
 
     /**
@@ -54,63 +54,58 @@ public final class KubeconfigOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public KubeconfigOptionsArgs(
-        @Nullable Output<String> profileName,
-        @Nullable Output<String> roleArn) {
-        this.profileName = profileName;
-        this.roleArn = roleArn;
-    }
+    private KubeconfigOptionsArgs() {}
 
-    private KubeconfigOptionsArgs() {
-        this.profileName = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private KubeconfigOptionsArgs(KubeconfigOptionsArgs $) {
+        this.profileName = $.profileName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubeconfigOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> profileName;
-        private @Nullable Output<String> roleArn;
+        private KubeconfigOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubeconfigOptionsArgs();
         }
 
         public Builder(KubeconfigOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new KubeconfigOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(@Nullable Output<String> profileName) {
-            this.profileName = profileName;
+            $.profileName = profileName;
             return this;
         }
-        public Builder profileName(@Nullable String profileName) {
-            this.profileName = Codegen.ofNullable(profileName);
-            return this;
+
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public KubeconfigOptionsArgs build() {
-            return new KubeconfigOptionsArgs(profileName, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public KubeconfigOptionsArgs build() {
+            return $;
         }
     }
+
 }

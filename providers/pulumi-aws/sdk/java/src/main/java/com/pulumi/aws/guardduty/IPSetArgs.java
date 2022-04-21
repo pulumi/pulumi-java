@@ -5,11 +5,11 @@ package com.pulumi.aws.guardduty;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class IPSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activate", required=true)
-      private final Output<Boolean> activate;
+    private Output<Boolean> activate;
 
     public Output<Boolean> activate() {
         return this.activate;
@@ -33,7 +33,7 @@ public final class IPSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="detectorId", required=true)
-      private final Output<String> detectorId;
+    private Output<String> detectorId;
 
     public Output<String> detectorId() {
         return this.detectorId;
@@ -44,7 +44,7 @@ public final class IPSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="format", required=true)
-      private final Output<String> format;
+    private Output<String> format;
 
     public Output<String> format() {
         return this.format;
@@ -55,7 +55,7 @@ public final class IPSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -66,10 +66,10 @@ public final class IPSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -77,115 +77,102 @@ public final class IPSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IPSetArgs(
-        Output<Boolean> activate,
-        Output<String> detectorId,
-        Output<String> format,
-        Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags) {
-        this.activate = Objects.requireNonNull(activate, "expected parameter 'activate' to be non-null");
-        this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-        this.tags = tags;
-    }
+    private IPSetArgs() {}
 
-    private IPSetArgs() {
-        this.activate = Codegen.empty();
-        this.detectorId = Codegen.empty();
-        this.format = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IPSetArgs(IPSetArgs $) {
+        this.activate = $.activate;
+        this.detectorId = $.detectorId;
+        this.format = $.format;
+        this.location = $.location;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> activate;
-        private Output<String> detectorId;
-        private Output<String> format;
-        private Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
+        private IPSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPSetArgs();
         }
 
         public Builder(IPSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activate = defaults.activate;
-    	      this.detectorId = defaults.detectorId;
-    	      this.format = defaults.format;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new IPSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activate(Output<Boolean> activate) {
-            this.activate = Objects.requireNonNull(activate);
+            $.activate = activate;
             return this;
         }
+
         public Builder activate(Boolean activate) {
-            this.activate = Output.of(Objects.requireNonNull(activate));
-            return this;
+            return activate(Output.of(activate));
         }
+
         public Builder detectorId(Output<String> detectorId) {
-            this.detectorId = Objects.requireNonNull(detectorId);
+            $.detectorId = detectorId;
             return this;
         }
+
         public Builder detectorId(String detectorId) {
-            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
-            return this;
+            return detectorId(Output.of(detectorId));
         }
+
         public Builder format(Output<String> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public IPSetArgs build() {
-            return new IPSetArgs(activate, detectorId, format, location, name, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public IPSetArgs build() {
+            $.activate = Objects.requireNonNull($.activate, "expected parameter 'activate' to be non-null");
+            $.detectorId = Objects.requireNonNull($.detectorId, "expected parameter 'detectorId' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends com.pulumi
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends com.pulumi
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends com.pulumi
      * 
      */
     @Import(name="serializationLibrary")
-      private final @Nullable Output<String> serializationLibrary;
+    private @Nullable Output<String> serializationLibrary;
 
-    public Output<String> serializationLibrary() {
-        return this.serializationLibrary == null ? Codegen.empty() : this.serializationLibrary;
+    public Optional<Output<String>> serializationLibrary() {
+        return Optional.ofNullable(this.serializationLibrary);
     }
 
-    public PartitionStorageDescriptorSerDeInfoGetArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<String> serializationLibrary) {
-        this.name = name;
-        this.parameters = parameters;
-        this.serializationLibrary = serializationLibrary;
-    }
+    private PartitionStorageDescriptorSerDeInfoGetArgs() {}
 
-    private PartitionStorageDescriptorSerDeInfoGetArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.serializationLibrary = Codegen.empty();
+    private PartitionStorageDescriptorSerDeInfoGetArgs(PartitionStorageDescriptorSerDeInfoGetArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.serializationLibrary = $.serializationLibrary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartitionStorageDescriptorSerDeInfoGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<String> serializationLibrary;
+        private PartitionStorageDescriptorSerDeInfoGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartitionStorageDescriptorSerDeInfoGetArgs();
         }
 
         public Builder(PartitionStorageDescriptorSerDeInfoGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.serializationLibrary = defaults.serializationLibrary;
+            $ = new PartitionStorageDescriptorSerDeInfoGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder serializationLibrary(@Nullable Output<String> serializationLibrary) {
-            this.serializationLibrary = serializationLibrary;
+            $.serializationLibrary = serializationLibrary;
             return this;
         }
-        public Builder serializationLibrary(@Nullable String serializationLibrary) {
-            this.serializationLibrary = Codegen.ofNullable(serializationLibrary);
-            return this;
-        }        public PartitionStorageDescriptorSerDeInfoGetArgs build() {
-            return new PartitionStorageDescriptorSerDeInfoGetArgs(name, parameters, serializationLibrary);
+
+        public Builder serializationLibrary(String serializationLibrary) {
+            return serializationLibrary(Output.of(serializationLibrary));
+        }
+
+        public PartitionStorageDescriptorSerDeInfoGetArgs build() {
+            return $;
         }
     }
+
 }

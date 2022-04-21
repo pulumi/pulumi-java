@@ -17,45 +17,45 @@ public final class GetEventSourceMappingArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetEventSourceMappingArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetEventSourceMappingArgs() {}
 
-    private GetEventSourceMappingArgs() {
-        this.id = null;
+    private GetEventSourceMappingArgs(GetEventSourceMappingArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventSourceMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetEventSourceMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventSourceMappingArgs();
         }
 
         public Builder(GetEventSourceMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetEventSourceMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetEventSourceMappingArgs build() {
-            return new GetEventSourceMappingArgs(id);
+        }
+
+        public GetEventSourceMappingArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

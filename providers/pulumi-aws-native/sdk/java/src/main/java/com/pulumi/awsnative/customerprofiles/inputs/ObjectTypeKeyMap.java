@@ -17,65 +17,61 @@ public final class ObjectTypeKeyMap extends com.pulumi.resources.InvokeArgs {
     public static final ObjectTypeKeyMap Empty = new ObjectTypeKeyMap();
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="objectTypeKeyList")
-      private final @Nullable List<ObjectTypeKey> objectTypeKeyList;
+    private @Nullable List<ObjectTypeKey> objectTypeKeyList;
 
-    public List<ObjectTypeKey> objectTypeKeyList() {
-        return this.objectTypeKeyList == null ? List.of() : this.objectTypeKeyList;
+    public Optional<List<ObjectTypeKey>> objectTypeKeyList() {
+        return Optional.ofNullable(this.objectTypeKeyList);
     }
 
-    public ObjectTypeKeyMap(
-        @Nullable String name,
-        @Nullable List<ObjectTypeKey> objectTypeKeyList) {
-        this.name = name;
-        this.objectTypeKeyList = objectTypeKeyList;
-    }
+    private ObjectTypeKeyMap() {}
 
-    private ObjectTypeKeyMap() {
-        this.name = null;
-        this.objectTypeKeyList = List.of();
+    private ObjectTypeKeyMap(ObjectTypeKeyMap $) {
+        this.name = $.name;
+        this.objectTypeKeyList = $.objectTypeKeyList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectTypeKeyMap defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable List<ObjectTypeKey> objectTypeKeyList;
+        private ObjectTypeKeyMap $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectTypeKeyMap();
         }
 
         public Builder(ObjectTypeKeyMap defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.objectTypeKeyList = defaults.objectTypeKeyList;
+            $ = new ObjectTypeKeyMap(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder objectTypeKeyList(@Nullable List<ObjectTypeKey> objectTypeKeyList) {
-            this.objectTypeKeyList = objectTypeKeyList;
+            $.objectTypeKeyList = objectTypeKeyList;
             return this;
         }
+
         public Builder objectTypeKeyList(ObjectTypeKey... objectTypeKeyList) {
             return objectTypeKeyList(List.of(objectTypeKeyList));
-        }        public ObjectTypeKeyMap build() {
-            return new ObjectTypeKeyMap(name, objectTypeKeyList);
+        }
+
+        public ObjectTypeKeyMap build() {
+            return $;
         }
     }
+
 }

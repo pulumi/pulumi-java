@@ -17,7 +17,7 @@ public final class GetReplicationRecoveryPlanArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="recoveryPlanName", required=true)
-      private final String recoveryPlanName;
+    private String recoveryPlanName;
 
     public String recoveryPlanName() {
         return this.recoveryPlanName;
@@ -28,7 +28,7 @@ public final class GetReplicationRecoveryPlanArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetReplicationRecoveryPlanArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetReplicationRecoveryPlanArgs(
-        String recoveryPlanName,
-        String resourceGroupName,
-        String resourceName) {
-        this.recoveryPlanName = Objects.requireNonNull(recoveryPlanName, "expected parameter 'recoveryPlanName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetReplicationRecoveryPlanArgs() {}
 
-    private GetReplicationRecoveryPlanArgs() {
-        this.recoveryPlanName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetReplicationRecoveryPlanArgs(GetReplicationRecoveryPlanArgs $) {
+        this.recoveryPlanName = $.recoveryPlanName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationRecoveryPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String recoveryPlanName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetReplicationRecoveryPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationRecoveryPlanArgs();
         }
 
         public Builder(GetReplicationRecoveryPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recoveryPlanName = defaults.recoveryPlanName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetReplicationRecoveryPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recoveryPlanName(String recoveryPlanName) {
-            this.recoveryPlanName = Objects.requireNonNull(recoveryPlanName);
+            $.recoveryPlanName = recoveryPlanName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetReplicationRecoveryPlanArgs build() {
-            return new GetReplicationRecoveryPlanArgs(recoveryPlanName, resourceGroupName, resourceName);
+        }
+
+        public GetReplicationRecoveryPlanArgs build() {
+            $.recoveryPlanName = Objects.requireNonNull($.recoveryPlanName, "expected parameter 'recoveryPlanName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

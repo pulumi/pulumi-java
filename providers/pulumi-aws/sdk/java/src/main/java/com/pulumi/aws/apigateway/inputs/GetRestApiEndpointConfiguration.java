@@ -14,68 +14,67 @@ public final class GetRestApiEndpointConfiguration extends com.pulumi.resources.
     public static final GetRestApiEndpointConfiguration Empty = new GetRestApiEndpointConfiguration();
 
     @Import(name="types", required=true)
-      private final List<String> types;
+    private List<String> types;
 
     public List<String> types() {
         return this.types;
     }
 
     @Import(name="vpcEndpointIds", required=true)
-      private final List<String> vpcEndpointIds;
+    private List<String> vpcEndpointIds;
 
     public List<String> vpcEndpointIds() {
         return this.vpcEndpointIds;
     }
 
-    public GetRestApiEndpointConfiguration(
-        List<String> types,
-        List<String> vpcEndpointIds) {
-        this.types = Objects.requireNonNull(types, "expected parameter 'types' to be non-null");
-        this.vpcEndpointIds = Objects.requireNonNull(vpcEndpointIds, "expected parameter 'vpcEndpointIds' to be non-null");
-    }
+    private GetRestApiEndpointConfiguration() {}
 
-    private GetRestApiEndpointConfiguration() {
-        this.types = List.of();
-        this.vpcEndpointIds = List.of();
+    private GetRestApiEndpointConfiguration(GetRestApiEndpointConfiguration $) {
+        this.types = $.types;
+        this.vpcEndpointIds = $.vpcEndpointIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRestApiEndpointConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> types;
-        private List<String> vpcEndpointIds;
+        private GetRestApiEndpointConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRestApiEndpointConfiguration();
         }
 
         public Builder(GetRestApiEndpointConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.types = defaults.types;
-    	      this.vpcEndpointIds = defaults.vpcEndpointIds;
+            $ = new GetRestApiEndpointConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder types(List<String> types) {
-            this.types = Objects.requireNonNull(types);
+            $.types = types;
             return this;
         }
+
         public Builder types(String... types) {
             return types(List.of(types));
         }
+
         public Builder vpcEndpointIds(List<String> vpcEndpointIds) {
-            this.vpcEndpointIds = Objects.requireNonNull(vpcEndpointIds);
+            $.vpcEndpointIds = vpcEndpointIds;
             return this;
         }
+
         public Builder vpcEndpointIds(String... vpcEndpointIds) {
             return vpcEndpointIds(List.of(vpcEndpointIds));
-        }        public GetRestApiEndpointConfiguration build() {
-            return new GetRestApiEndpointConfiguration(types, vpcEndpointIds);
+        }
+
+        public GetRestApiEndpointConfiguration build() {
+            $.types = Objects.requireNonNull($.types, "expected parameter 'types' to be non-null");
+            $.vpcEndpointIds = Objects.requireNonNull($.vpcEndpointIds, "expected parameter 'vpcEndpointIds' to be non-null");
+            return $;
         }
     }
+
 }

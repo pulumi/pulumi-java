@@ -23,7 +23,7 @@ public final class TextStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="codec", required=true)
-      private final String codec;
+    private String codec;
 
     public String codec() {
         return this.codec;
@@ -34,58 +34,56 @@ public final class TextStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mapping", required=true)
-      private final List<TextMappingResponse> mapping;
+    private List<TextMappingResponse> mapping;
 
     public List<TextMappingResponse> mapping() {
         return this.mapping;
     }
 
-    public TextStreamResponse(
-        String codec,
-        List<TextMappingResponse> mapping) {
-        this.codec = Objects.requireNonNull(codec, "expected parameter 'codec' to be non-null");
-        this.mapping = Objects.requireNonNull(mapping, "expected parameter 'mapping' to be non-null");
-    }
+    private TextStreamResponse() {}
 
-    private TextStreamResponse() {
-        this.codec = null;
-        this.mapping = List.of();
+    private TextStreamResponse(TextStreamResponse $) {
+        this.codec = $.codec;
+        this.mapping = $.mapping;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TextStreamResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String codec;
-        private List<TextMappingResponse> mapping;
+        private TextStreamResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TextStreamResponse();
         }
 
         public Builder(TextStreamResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codec = defaults.codec;
-    	      this.mapping = defaults.mapping;
+            $ = new TextStreamResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder codec(String codec) {
-            this.codec = Objects.requireNonNull(codec);
+            $.codec = codec;
             return this;
         }
+
         public Builder mapping(List<TextMappingResponse> mapping) {
-            this.mapping = Objects.requireNonNull(mapping);
+            $.mapping = mapping;
             return this;
         }
+
         public Builder mapping(TextMappingResponse... mapping) {
             return mapping(List.of(mapping));
-        }        public TextStreamResponse build() {
-            return new TextStreamResponse(codec, mapping);
+        }
+
+        public TextStreamResponse build() {
+            $.codec = Objects.requireNonNull($.codec, "expected parameter 'codec' to be non-null");
+            $.mapping = Objects.requireNonNull($.mapping, "expected parameter 'mapping' to be non-null");
+            return $;
         }
     }
+
 }

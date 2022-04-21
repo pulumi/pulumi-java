@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1DateRangeArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="csvDelimiter")
-      private final @Nullable Output<String> csvDelimiter;
+    private @Nullable Output<String> csvDelimiter;
 
-    public Output<String> csvDelimiter() {
-        return this.csvDelimiter == null ? Codegen.empty() : this.csvDelimiter;
+    public Optional<Output<String>> csvDelimiter() {
+        return Optional.ofNullable(this.csvDelimiter);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datastoreName", required=true)
-      private final Output<String> datastoreName;
+    private Output<String> datastoreName;
 
     public Output<String> datastoreName() {
         return this.datastoreName;
@@ -43,7 +43,7 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dateRange", required=true)
-      private final Output<GoogleCloudApigeeV1DateRangeArgs> dateRange;
+    private Output<GoogleCloudApigeeV1DateRangeArgs> dateRange;
 
     public Output<GoogleCloudApigeeV1DateRangeArgs> dateRange() {
         return this.dateRange;
@@ -54,14 +54,14 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -72,14 +72,14 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -90,141 +90,122 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputFormat")
-      private final @Nullable Output<String> outputFormat;
+    private @Nullable Output<String> outputFormat;
 
-    public Output<String> outputFormat() {
-        return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
+    public Optional<Output<String>> outputFormat() {
+        return Optional.ofNullable(this.outputFormat);
     }
 
-    public ExportArgs(
-        @Nullable Output<String> csvDelimiter,
-        Output<String> datastoreName,
-        Output<GoogleCloudApigeeV1DateRangeArgs> dateRange,
-        @Nullable Output<String> description,
-        Output<String> environmentId,
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        @Nullable Output<String> outputFormat) {
-        this.csvDelimiter = csvDelimiter;
-        this.datastoreName = Objects.requireNonNull(datastoreName, "expected parameter 'datastoreName' to be non-null");
-        this.dateRange = Objects.requireNonNull(dateRange, "expected parameter 'dateRange' to be non-null");
-        this.description = description;
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.outputFormat = outputFormat;
-    }
+    private ExportArgs() {}
 
-    private ExportArgs() {
-        this.csvDelimiter = Codegen.empty();
-        this.datastoreName = Codegen.empty();
-        this.dateRange = Codegen.empty();
-        this.description = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.outputFormat = Codegen.empty();
+    private ExportArgs(ExportArgs $) {
+        this.csvDelimiter = $.csvDelimiter;
+        this.datastoreName = $.datastoreName;
+        this.dateRange = $.dateRange;
+        this.description = $.description;
+        this.environmentId = $.environmentId;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.outputFormat = $.outputFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> csvDelimiter;
-        private Output<String> datastoreName;
-        private Output<GoogleCloudApigeeV1DateRangeArgs> dateRange;
-        private @Nullable Output<String> description;
-        private Output<String> environmentId;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private @Nullable Output<String> outputFormat;
+        private ExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportArgs();
         }
 
         public Builder(ExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.csvDelimiter = defaults.csvDelimiter;
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.dateRange = defaults.dateRange;
-    	      this.description = defaults.description;
-    	      this.environmentId = defaults.environmentId;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.outputFormat = defaults.outputFormat;
+            $ = new ExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder csvDelimiter(@Nullable Output<String> csvDelimiter) {
-            this.csvDelimiter = csvDelimiter;
+            $.csvDelimiter = csvDelimiter;
             return this;
         }
-        public Builder csvDelimiter(@Nullable String csvDelimiter) {
-            this.csvDelimiter = Codegen.ofNullable(csvDelimiter);
-            return this;
+
+        public Builder csvDelimiter(String csvDelimiter) {
+            return csvDelimiter(Output.of(csvDelimiter));
         }
+
         public Builder datastoreName(Output<String> datastoreName) {
-            this.datastoreName = Objects.requireNonNull(datastoreName);
+            $.datastoreName = datastoreName;
             return this;
         }
+
         public Builder datastoreName(String datastoreName) {
-            this.datastoreName = Output.of(Objects.requireNonNull(datastoreName));
-            return this;
+            return datastoreName(Output.of(datastoreName));
         }
+
         public Builder dateRange(Output<GoogleCloudApigeeV1DateRangeArgs> dateRange) {
-            this.dateRange = Objects.requireNonNull(dateRange);
+            $.dateRange = dateRange;
             return this;
         }
+
         public Builder dateRange(GoogleCloudApigeeV1DateRangeArgs dateRange) {
-            this.dateRange = Output.of(Objects.requireNonNull(dateRange));
-            return this;
+            return dateRange(Output.of(dateRange));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
-            this.outputFormat = outputFormat;
+            $.outputFormat = outputFormat;
             return this;
         }
-        public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Codegen.ofNullable(outputFormat);
-            return this;
-        }        public ExportArgs build() {
-            return new ExportArgs(csvDelimiter, datastoreName, dateRange, description, environmentId, name, organizationId, outputFormat);
+
+        public Builder outputFormat(String outputFormat) {
+            return outputFormat(Output.of(outputFormat));
+        }
+
+        public ExportArgs build() {
+            $.datastoreName = Objects.requireNonNull($.datastoreName, "expected parameter 'datastoreName' to be non-null");
+            $.dateRange = Objects.requireNonNull($.dateRange, "expected parameter 'dateRange' to be non-null");
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

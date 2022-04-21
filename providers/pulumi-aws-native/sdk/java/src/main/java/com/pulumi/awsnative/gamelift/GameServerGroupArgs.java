@@ -12,11 +12,11 @@ import com.pulumi.awsnative.gamelift.inputs.GameServerGroupLaunchTemplateArgs;
 import com.pulumi.awsnative.gamelift.inputs.GameServerGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="autoScalingPolicy")
-      private final @Nullable Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy;
+    private @Nullable Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy;
 
-    public Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy() {
-        return this.autoScalingPolicy == null ? Codegen.empty() : this.autoScalingPolicy;
+    public Optional<Output<GameServerGroupAutoScalingPolicyArgs>> autoScalingPolicy() {
+        return Optional.ofNullable(this.autoScalingPolicy);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="balancingStrategy")
-      private final @Nullable Output<GameServerGroupBalancingStrategy> balancingStrategy;
+    private @Nullable Output<GameServerGroupBalancingStrategy> balancingStrategy;
 
-    public Output<GameServerGroupBalancingStrategy> balancingStrategy() {
-        return this.balancingStrategy == null ? Codegen.empty() : this.balancingStrategy;
+    public Optional<Output<GameServerGroupBalancingStrategy>> balancingStrategy() {
+        return Optional.ofNullable(this.balancingStrategy);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable Output<GameServerGroupDeleteOption> deleteOption;
+    private @Nullable Output<GameServerGroupDeleteOption> deleteOption;
 
-    public Output<GameServerGroupDeleteOption> deleteOption() {
-        return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
+    public Optional<Output<GameServerGroupDeleteOption>> deleteOption() {
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="gameServerGroupName")
-      private final @Nullable Output<String> gameServerGroupName;
+    private @Nullable Output<String> gameServerGroupName;
 
-    public Output<String> gameServerGroupName() {
-        return this.gameServerGroupName == null ? Codegen.empty() : this.gameServerGroupName;
+    public Optional<Output<String>> gameServerGroupName() {
+        return Optional.ofNullable(this.gameServerGroupName);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="gameServerProtectionPolicy")
-      private final @Nullable Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy;
+    private @Nullable Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy;
 
-    public Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy() {
-        return this.gameServerProtectionPolicy == null ? Codegen.empty() : this.gameServerProtectionPolicy;
+    public Optional<Output<GameServerGroupGameServerProtectionPolicy>> gameServerProtectionPolicy() {
+        return Optional.ofNullable(this.gameServerProtectionPolicy);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instanceDefinitions", required=true)
-      private final Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions;
+    private Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions;
 
     public Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions() {
         return this.instanceDefinitions;
@@ -95,7 +95,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="launchTemplate", required=true)
-      private final Output<GameServerGroupLaunchTemplateArgs> launchTemplate;
+    private Output<GameServerGroupLaunchTemplateArgs> launchTemplate;
 
     public Output<GameServerGroupLaunchTemplateArgs> launchTemplate() {
         return this.launchTemplate;
@@ -106,10 +106,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maxSize")
-      private final @Nullable Output<Double> maxSize;
+    private @Nullable Output<Double> maxSize;
 
-    public Output<Double> maxSize() {
-        return this.maxSize == null ? Codegen.empty() : this.maxSize;
+    public Optional<Output<Double>> maxSize() {
+        return Optional.ofNullable(this.maxSize);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="minSize")
-      private final @Nullable Output<Double> minSize;
+    private @Nullable Output<Double> minSize;
 
-    public Output<Double> minSize() {
-        return this.minSize == null ? Codegen.empty() : this.minSize;
+    public Optional<Output<Double>> minSize() {
+        return Optional.ofNullable(this.minSize);
     }
 
     /**
@@ -128,7 +128,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -139,10 +139,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<GameServerGroupTagArgs>> tags;
+    private @Nullable Output<List<GameServerGroupTagArgs>> tags;
 
-    public Output<List<GameServerGroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<GameServerGroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -150,202 +150,173 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="vpcSubnets")
-      private final @Nullable Output<List<String>> vpcSubnets;
+    private @Nullable Output<List<String>> vpcSubnets;
 
-    public Output<List<String>> vpcSubnets() {
-        return this.vpcSubnets == null ? Codegen.empty() : this.vpcSubnets;
+    public Optional<Output<List<String>>> vpcSubnets() {
+        return Optional.ofNullable(this.vpcSubnets);
     }
 
-    public GameServerGroupArgs(
-        @Nullable Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy,
-        @Nullable Output<GameServerGroupBalancingStrategy> balancingStrategy,
-        @Nullable Output<GameServerGroupDeleteOption> deleteOption,
-        @Nullable Output<String> gameServerGroupName,
-        @Nullable Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy,
-        Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions,
-        Output<GameServerGroupLaunchTemplateArgs> launchTemplate,
-        @Nullable Output<Double> maxSize,
-        @Nullable Output<Double> minSize,
-        Output<String> roleArn,
-        @Nullable Output<List<GameServerGroupTagArgs>> tags,
-        @Nullable Output<List<String>> vpcSubnets) {
-        this.autoScalingPolicy = autoScalingPolicy;
-        this.balancingStrategy = balancingStrategy;
-        this.deleteOption = deleteOption;
-        this.gameServerGroupName = gameServerGroupName;
-        this.gameServerProtectionPolicy = gameServerProtectionPolicy;
-        this.instanceDefinitions = Objects.requireNonNull(instanceDefinitions, "expected parameter 'instanceDefinitions' to be non-null");
-        this.launchTemplate = Objects.requireNonNull(launchTemplate, "expected parameter 'launchTemplate' to be non-null");
-        this.maxSize = maxSize;
-        this.minSize = minSize;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tags = tags;
-        this.vpcSubnets = vpcSubnets;
-    }
+    private GameServerGroupArgs() {}
 
-    private GameServerGroupArgs() {
-        this.autoScalingPolicy = Codegen.empty();
-        this.balancingStrategy = Codegen.empty();
-        this.deleteOption = Codegen.empty();
-        this.gameServerGroupName = Codegen.empty();
-        this.gameServerProtectionPolicy = Codegen.empty();
-        this.instanceDefinitions = Codegen.empty();
-        this.launchTemplate = Codegen.empty();
-        this.maxSize = Codegen.empty();
-        this.minSize = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcSubnets = Codegen.empty();
+    private GameServerGroupArgs(GameServerGroupArgs $) {
+        this.autoScalingPolicy = $.autoScalingPolicy;
+        this.balancingStrategy = $.balancingStrategy;
+        this.deleteOption = $.deleteOption;
+        this.gameServerGroupName = $.gameServerGroupName;
+        this.gameServerProtectionPolicy = $.gameServerProtectionPolicy;
+        this.instanceDefinitions = $.instanceDefinitions;
+        this.launchTemplate = $.launchTemplate;
+        this.maxSize = $.maxSize;
+        this.minSize = $.minSize;
+        this.roleArn = $.roleArn;
+        this.tags = $.tags;
+        this.vpcSubnets = $.vpcSubnets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy;
-        private @Nullable Output<GameServerGroupBalancingStrategy> balancingStrategy;
-        private @Nullable Output<GameServerGroupDeleteOption> deleteOption;
-        private @Nullable Output<String> gameServerGroupName;
-        private @Nullable Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy;
-        private Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions;
-        private Output<GameServerGroupLaunchTemplateArgs> launchTemplate;
-        private @Nullable Output<Double> maxSize;
-        private @Nullable Output<Double> minSize;
-        private Output<String> roleArn;
-        private @Nullable Output<List<GameServerGroupTagArgs>> tags;
-        private @Nullable Output<List<String>> vpcSubnets;
+        private GameServerGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerGroupArgs();
         }
 
         public Builder(GameServerGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScalingPolicy = defaults.autoScalingPolicy;
-    	      this.balancingStrategy = defaults.balancingStrategy;
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.gameServerGroupName = defaults.gameServerGroupName;
-    	      this.gameServerProtectionPolicy = defaults.gameServerProtectionPolicy;
-    	      this.instanceDefinitions = defaults.instanceDefinitions;
-    	      this.launchTemplate = defaults.launchTemplate;
-    	      this.maxSize = defaults.maxSize;
-    	      this.minSize = defaults.minSize;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tags = defaults.tags;
-    	      this.vpcSubnets = defaults.vpcSubnets;
+            $ = new GameServerGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScalingPolicy(@Nullable Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy) {
-            this.autoScalingPolicy = autoScalingPolicy;
+            $.autoScalingPolicy = autoScalingPolicy;
             return this;
         }
-        public Builder autoScalingPolicy(@Nullable GameServerGroupAutoScalingPolicyArgs autoScalingPolicy) {
-            this.autoScalingPolicy = Codegen.ofNullable(autoScalingPolicy);
-            return this;
+
+        public Builder autoScalingPolicy(GameServerGroupAutoScalingPolicyArgs autoScalingPolicy) {
+            return autoScalingPolicy(Output.of(autoScalingPolicy));
         }
+
         public Builder balancingStrategy(@Nullable Output<GameServerGroupBalancingStrategy> balancingStrategy) {
-            this.balancingStrategy = balancingStrategy;
+            $.balancingStrategy = balancingStrategy;
             return this;
         }
-        public Builder balancingStrategy(@Nullable GameServerGroupBalancingStrategy balancingStrategy) {
-            this.balancingStrategy = Codegen.ofNullable(balancingStrategy);
-            return this;
+
+        public Builder balancingStrategy(GameServerGroupBalancingStrategy balancingStrategy) {
+            return balancingStrategy(Output.of(balancingStrategy));
         }
+
         public Builder deleteOption(@Nullable Output<GameServerGroupDeleteOption> deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
-        public Builder deleteOption(@Nullable GameServerGroupDeleteOption deleteOption) {
-            this.deleteOption = Codegen.ofNullable(deleteOption);
-            return this;
+
+        public Builder deleteOption(GameServerGroupDeleteOption deleteOption) {
+            return deleteOption(Output.of(deleteOption));
         }
+
         public Builder gameServerGroupName(@Nullable Output<String> gameServerGroupName) {
-            this.gameServerGroupName = gameServerGroupName;
+            $.gameServerGroupName = gameServerGroupName;
             return this;
         }
-        public Builder gameServerGroupName(@Nullable String gameServerGroupName) {
-            this.gameServerGroupName = Codegen.ofNullable(gameServerGroupName);
-            return this;
+
+        public Builder gameServerGroupName(String gameServerGroupName) {
+            return gameServerGroupName(Output.of(gameServerGroupName));
         }
+
         public Builder gameServerProtectionPolicy(@Nullable Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy) {
-            this.gameServerProtectionPolicy = gameServerProtectionPolicy;
+            $.gameServerProtectionPolicy = gameServerProtectionPolicy;
             return this;
         }
-        public Builder gameServerProtectionPolicy(@Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy) {
-            this.gameServerProtectionPolicy = Codegen.ofNullable(gameServerProtectionPolicy);
-            return this;
+
+        public Builder gameServerProtectionPolicy(GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy) {
+            return gameServerProtectionPolicy(Output.of(gameServerProtectionPolicy));
         }
+
         public Builder instanceDefinitions(Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions) {
-            this.instanceDefinitions = Objects.requireNonNull(instanceDefinitions);
+            $.instanceDefinitions = instanceDefinitions;
             return this;
         }
+
         public Builder instanceDefinitions(List<GameServerGroupInstanceDefinitionArgs> instanceDefinitions) {
-            this.instanceDefinitions = Output.of(Objects.requireNonNull(instanceDefinitions));
-            return this;
+            return instanceDefinitions(Output.of(instanceDefinitions));
         }
+
         public Builder instanceDefinitions(GameServerGroupInstanceDefinitionArgs... instanceDefinitions) {
             return instanceDefinitions(List.of(instanceDefinitions));
         }
+
         public Builder launchTemplate(Output<GameServerGroupLaunchTemplateArgs> launchTemplate) {
-            this.launchTemplate = Objects.requireNonNull(launchTemplate);
+            $.launchTemplate = launchTemplate;
             return this;
         }
+
         public Builder launchTemplate(GameServerGroupLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Output.of(Objects.requireNonNull(launchTemplate));
-            return this;
+            return launchTemplate(Output.of(launchTemplate));
         }
+
         public Builder maxSize(@Nullable Output<Double> maxSize) {
-            this.maxSize = maxSize;
+            $.maxSize = maxSize;
             return this;
         }
-        public Builder maxSize(@Nullable Double maxSize) {
-            this.maxSize = Codegen.ofNullable(maxSize);
-            return this;
+
+        public Builder maxSize(Double maxSize) {
+            return maxSize(Output.of(maxSize));
         }
+
         public Builder minSize(@Nullable Output<Double> minSize) {
-            this.minSize = minSize;
+            $.minSize = minSize;
             return this;
         }
-        public Builder minSize(@Nullable Double minSize) {
-            this.minSize = Codegen.ofNullable(minSize);
-            return this;
+
+        public Builder minSize(Double minSize) {
+            return minSize(Output.of(minSize));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tags(@Nullable Output<List<GameServerGroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<GameServerGroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<GameServerGroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(GameServerGroupTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder vpcSubnets(@Nullable Output<List<String>> vpcSubnets) {
-            this.vpcSubnets = vpcSubnets;
+            $.vpcSubnets = vpcSubnets;
             return this;
         }
-        public Builder vpcSubnets(@Nullable List<String> vpcSubnets) {
-            this.vpcSubnets = Codegen.ofNullable(vpcSubnets);
-            return this;
+
+        public Builder vpcSubnets(List<String> vpcSubnets) {
+            return vpcSubnets(Output.of(vpcSubnets));
         }
+
         public Builder vpcSubnets(String... vpcSubnets) {
             return vpcSubnets(List.of(vpcSubnets));
-        }        public GameServerGroupArgs build() {
-            return new GameServerGroupArgs(autoScalingPolicy, balancingStrategy, deleteOption, gameServerGroupName, gameServerProtectionPolicy, instanceDefinitions, launchTemplate, maxSize, minSize, roleArn, tags, vpcSubnets);
+        }
+
+        public GameServerGroupArgs build() {
+            $.instanceDefinitions = Objects.requireNonNull($.instanceDefinitions, "expected parameter 'instanceDefinitions' to be non-null");
+            $.launchTemplate = Objects.requireNonNull($.launchTemplate, "expected parameter 'launchTemplate' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

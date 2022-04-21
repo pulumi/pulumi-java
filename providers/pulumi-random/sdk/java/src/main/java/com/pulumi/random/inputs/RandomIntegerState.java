@@ -5,12 +5,12 @@ package com.pulumi.random.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keepers")
-      private final @Nullable Output<Map<String,Object>> keepers;
+    private @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> keepers() {
-        return this.keepers == null ? Codegen.empty() : this.keepers;
+    public Optional<Output<Map<String,Object>>> keepers() {
+        return Optional.ofNullable(this.keepers);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="max")
-      private final @Nullable Output<Integer> max;
+    private @Nullable Output<Integer> max;
 
-    public Output<Integer> max() {
-        return this.max == null ? Codegen.empty() : this.max;
+    public Optional<Output<Integer>> max() {
+        return Optional.ofNullable(this.max);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="min")
-      private final @Nullable Output<Integer> min;
+    private @Nullable Output<Integer> min;
 
-    public Output<Integer> min() {
-        return this.min == null ? Codegen.empty() : this.min;
+    public Optional<Output<Integer>> min() {
+        return Optional.ofNullable(this.min);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="result")
-      private final @Nullable Output<Integer> result;
+    private @Nullable Output<Integer> result;
 
-    public Output<Integer> result() {
-        return this.result == null ? Codegen.empty() : this.result;
+    public Optional<Output<Integer>> result() {
+        return Optional.ofNullable(this.result);
     }
 
     /**
@@ -67,102 +67,88 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="seed")
-      private final @Nullable Output<String> seed;
+    private @Nullable Output<String> seed;
 
-    public Output<String> seed() {
-        return this.seed == null ? Codegen.empty() : this.seed;
+    public Optional<Output<String>> seed() {
+        return Optional.ofNullable(this.seed);
     }
 
-    public RandomIntegerState(
-        @Nullable Output<Map<String,Object>> keepers,
-        @Nullable Output<Integer> max,
-        @Nullable Output<Integer> min,
-        @Nullable Output<Integer> result,
-        @Nullable Output<String> seed) {
-        this.keepers = keepers;
-        this.max = max;
-        this.min = min;
-        this.result = result;
-        this.seed = seed;
-    }
+    private RandomIntegerState() {}
 
-    private RandomIntegerState() {
-        this.keepers = Codegen.empty();
-        this.max = Codegen.empty();
-        this.min = Codegen.empty();
-        this.result = Codegen.empty();
-        this.seed = Codegen.empty();
+    private RandomIntegerState(RandomIntegerState $) {
+        this.keepers = $.keepers;
+        this.max = $.max;
+        this.min = $.min;
+        this.result = $.result;
+        this.seed = $.seed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RandomIntegerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> keepers;
-        private @Nullable Output<Integer> max;
-        private @Nullable Output<Integer> min;
-        private @Nullable Output<Integer> result;
-        private @Nullable Output<String> seed;
+        private RandomIntegerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RandomIntegerState();
         }
 
         public Builder(RandomIntegerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keepers = defaults.keepers;
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
-    	      this.result = defaults.result;
-    	      this.seed = defaults.seed;
+            $ = new RandomIntegerState(Objects.requireNonNull(defaults));
         }
 
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
-            this.keepers = keepers;
+            $.keepers = keepers;
             return this;
         }
-        public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Codegen.ofNullable(keepers);
-            return this;
+
+        public Builder keepers(Map<String,Object> keepers) {
+            return keepers(Output.of(keepers));
         }
+
         public Builder max(@Nullable Output<Integer> max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
-        public Builder max(@Nullable Integer max) {
-            this.max = Codegen.ofNullable(max);
-            return this;
+
+        public Builder max(Integer max) {
+            return max(Output.of(max));
         }
+
         public Builder min(@Nullable Output<Integer> min) {
-            this.min = min;
+            $.min = min;
             return this;
         }
-        public Builder min(@Nullable Integer min) {
-            this.min = Codegen.ofNullable(min);
-            return this;
+
+        public Builder min(Integer min) {
+            return min(Output.of(min));
         }
+
         public Builder result(@Nullable Output<Integer> result) {
-            this.result = result;
+            $.result = result;
             return this;
         }
-        public Builder result(@Nullable Integer result) {
-            this.result = Codegen.ofNullable(result);
-            return this;
+
+        public Builder result(Integer result) {
+            return result(Output.of(result));
         }
+
         public Builder seed(@Nullable Output<String> seed) {
-            this.seed = seed;
+            $.seed = seed;
             return this;
         }
-        public Builder seed(@Nullable String seed) {
-            this.seed = Codegen.ofNullable(seed);
-            return this;
-        }        public RandomIntegerState build() {
-            return new RandomIntegerState(keepers, max, min, result, seed);
+
+        public Builder seed(String seed) {
+            return seed(Output.of(seed));
+        }
+
+        public RandomIntegerState build() {
+            return $;
         }
     }
+
 }

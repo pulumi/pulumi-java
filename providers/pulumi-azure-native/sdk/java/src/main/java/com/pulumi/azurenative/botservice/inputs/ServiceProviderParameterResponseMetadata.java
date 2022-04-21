@@ -23,45 +23,44 @@ public final class ServiceProviderParameterResponseMetadata extends com.pulumi.r
      * 
      */
     @Import(name="constraints")
-      private final @Nullable ServiceProviderParameterResponseConstraints constraints;
+    private @Nullable ServiceProviderParameterResponseConstraints constraints;
 
     public Optional<ServiceProviderParameterResponseConstraints> constraints() {
-        return this.constraints == null ? Optional.empty() : Optional.ofNullable(this.constraints);
+        return Optional.ofNullable(this.constraints);
     }
 
-    public ServiceProviderParameterResponseMetadata(@Nullable ServiceProviderParameterResponseConstraints constraints) {
-        this.constraints = constraints;
-    }
+    private ServiceProviderParameterResponseMetadata() {}
 
-    private ServiceProviderParameterResponseMetadata() {
-        this.constraints = null;
+    private ServiceProviderParameterResponseMetadata(ServiceProviderParameterResponseMetadata $) {
+        this.constraints = $.constraints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceProviderParameterResponseMetadata defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceProviderParameterResponseConstraints constraints;
+        private ServiceProviderParameterResponseMetadata $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceProviderParameterResponseMetadata();
         }
 
         public Builder(ServiceProviderParameterResponseMetadata defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constraints = defaults.constraints;
+            $ = new ServiceProviderParameterResponseMetadata(Objects.requireNonNull(defaults));
         }
 
         public Builder constraints(@Nullable ServiceProviderParameterResponseConstraints constraints) {
-            this.constraints = constraints;
+            $.constraints = constraints;
             return this;
-        }        public ServiceProviderParameterResponseMetadata build() {
-            return new ServiceProviderParameterResponseMetadata(constraints);
+        }
+
+        public ServiceProviderParameterResponseMetadata build() {
+            return $;
         }
     }
+
 }

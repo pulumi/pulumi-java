@@ -5,9 +5,9 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="checkSum")
-      private final @Nullable Output<String> checkSum;
+    private @Nullable Output<String> checkSum;
 
-    public Output<String> checkSum() {
-        return this.checkSum == null ? Codegen.empty() : this.checkSum;
+    public Optional<Output<String>> checkSum() {
+        return Optional.ofNullable(this.checkSum);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public GuestPoliciesRecipeArtifactRemoteGetArgs(
-        @Nullable Output<String> checkSum,
-        @Nullable Output<String> uri) {
-        this.checkSum = checkSum;
-        this.uri = uri;
-    }
+    private GuestPoliciesRecipeArtifactRemoteGetArgs() {}
 
-    private GuestPoliciesRecipeArtifactRemoteGetArgs() {
-        this.checkSum = Codegen.empty();
-        this.uri = Codegen.empty();
+    private GuestPoliciesRecipeArtifactRemoteGetArgs(GuestPoliciesRecipeArtifactRemoteGetArgs $) {
+        this.checkSum = $.checkSum;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesRecipeArtifactRemoteGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> checkSum;
-        private @Nullable Output<String> uri;
+        private GuestPoliciesRecipeArtifactRemoteGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesRecipeArtifactRemoteGetArgs();
         }
 
         public Builder(GuestPoliciesRecipeArtifactRemoteGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkSum = defaults.checkSum;
-    	      this.uri = defaults.uri;
+            $ = new GuestPoliciesRecipeArtifactRemoteGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checkSum(@Nullable Output<String> checkSum) {
-            this.checkSum = checkSum;
+            $.checkSum = checkSum;
             return this;
         }
-        public Builder checkSum(@Nullable String checkSum) {
-            this.checkSum = Codegen.ofNullable(checkSum);
-            return this;
+
+        public Builder checkSum(String checkSum) {
+            return checkSum(Output.of(checkSum));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public GuestPoliciesRecipeArtifactRemoteGetArgs build() {
-            return new GuestPoliciesRecipeArtifactRemoteGetArgs(checkSum, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public GuestPoliciesRecipeArtifactRemoteGetArgs build() {
+            return $;
         }
     }
+
 }

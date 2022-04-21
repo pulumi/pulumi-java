@@ -5,9 +5,9 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AdBreakArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTimeOffset")
-      private final @Nullable Output<String> startTimeOffset;
+    private @Nullable Output<String> startTimeOffset;
 
-    public Output<String> startTimeOffset() {
-        return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
+    public Optional<Output<String>> startTimeOffset() {
+        return Optional.ofNullable(this.startTimeOffset);
     }
 
-    public AdBreakArgs(@Nullable Output<String> startTimeOffset) {
-        this.startTimeOffset = startTimeOffset;
-    }
+    private AdBreakArgs() {}
 
-    private AdBreakArgs() {
-        this.startTimeOffset = Codegen.empty();
+    private AdBreakArgs(AdBreakArgs $) {
+        this.startTimeOffset = $.startTimeOffset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdBreakArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> startTimeOffset;
+        private AdBreakArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdBreakArgs();
         }
 
         public Builder(AdBreakArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startTimeOffset = defaults.startTimeOffset;
+            $ = new AdBreakArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
-            this.startTimeOffset = startTimeOffset;
+            $.startTimeOffset = startTimeOffset;
             return this;
         }
-        public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Codegen.ofNullable(startTimeOffset);
-            return this;
-        }        public AdBreakArgs build() {
-            return new AdBreakArgs(startTimeOffset);
+
+        public Builder startTimeOffset(String startTimeOffset) {
+            return startTimeOffset(Output.of(startTimeOffset));
+        }
+
+        public AdBreakArgs build() {
+            return $;
         }
     }
+
 }

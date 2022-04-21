@@ -27,7 +27,7 @@ public final class WebBasicAuthenticationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final String authenticationType;
+    private String authenticationType;
 
     public String authenticationType() {
         return this.authenticationType;
@@ -38,7 +38,7 @@ public final class WebBasicAuthenticationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="password", required=true)
-      private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
@@ -49,7 +49,7 @@ public final class WebBasicAuthenticationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="url", required=true)
-      private final Object url;
+    private Object url;
 
     public Object url() {
         return this.url;
@@ -60,73 +60,66 @@ public final class WebBasicAuthenticationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="username", required=true)
-      private final Object username;
+    private Object username;
 
     public Object username() {
         return this.username;
     }
 
-    public WebBasicAuthenticationResponse(
-        String authenticationType,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Object url,
-        Object username) {
-        this.authenticationType = Codegen.stringProp("authenticationType").arg(authenticationType).require();
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private WebBasicAuthenticationResponse() {}
 
-    private WebBasicAuthenticationResponse() {
-        this.authenticationType = null;
-        this.password = null;
-        this.url = null;
-        this.username = null;
+    private WebBasicAuthenticationResponse(WebBasicAuthenticationResponse $) {
+        this.authenticationType = $.authenticationType;
+        this.password = $.password;
+        this.url = $.url;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebBasicAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authenticationType;
-        private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private Object url;
-        private Object username;
+        private WebBasicAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebBasicAuthenticationResponse();
         }
 
         public Builder(WebBasicAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.password = defaults.password;
-    	      this.url = defaults.url;
-    	      this.username = defaults.username;
+            $ = new WebBasicAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder username(Object username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public WebBasicAuthenticationResponse build() {
-            return new WebBasicAuthenticationResponse(authenticationType, password, url, username);
+        }
+
+        public WebBasicAuthenticationResponse build() {
+            $.authenticationType = Codegen.stringProp("authenticationType").arg($.authenticationType).require();
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

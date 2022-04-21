@@ -17,62 +17,59 @@ public final class GetFunctionFileSystemConfig extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
     @Import(name="localMountPath", required=true)
-      private final String localMountPath;
+    private String localMountPath;
 
     public String localMountPath() {
         return this.localMountPath;
     }
 
-    public GetFunctionFileSystemConfig(
-        String arn,
-        String localMountPath) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.localMountPath = Objects.requireNonNull(localMountPath, "expected parameter 'localMountPath' to be non-null");
-    }
+    private GetFunctionFileSystemConfig() {}
 
-    private GetFunctionFileSystemConfig() {
-        this.arn = null;
-        this.localMountPath = null;
+    private GetFunctionFileSystemConfig(GetFunctionFileSystemConfig $) {
+        this.arn = $.arn;
+        this.localMountPath = $.localMountPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionFileSystemConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String localMountPath;
+        private GetFunctionFileSystemConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionFileSystemConfig();
         }
 
         public Builder(GetFunctionFileSystemConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.localMountPath = defaults.localMountPath;
+            $ = new GetFunctionFileSystemConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder localMountPath(String localMountPath) {
-            this.localMountPath = Objects.requireNonNull(localMountPath);
+            $.localMountPath = localMountPath;
             return this;
-        }        public GetFunctionFileSystemConfig build() {
-            return new GetFunctionFileSystemConfig(arn, localMountPath);
+        }
+
+        public GetFunctionFileSystemConfig build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.localMountPath = Objects.requireNonNull($.localMountPath, "expected parameter 'localMountPath' to be non-null");
+            return $;
         }
     }
+
 }

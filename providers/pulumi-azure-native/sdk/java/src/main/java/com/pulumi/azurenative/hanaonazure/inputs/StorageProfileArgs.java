@@ -7,9 +7,9 @@ import com.pulumi.azurenative.hanaonazure.inputs.DiskArgs;
 import com.pulumi.azurenative.hanaonazure.inputs.SAPSystemIDArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hanaSids")
-      private final @Nullable Output<List<SAPSystemIDArgs>> hanaSids;
+    private @Nullable Output<List<SAPSystemIDArgs>> hanaSids;
 
-    public Output<List<SAPSystemIDArgs>> hanaSids() {
-        return this.hanaSids == null ? Codegen.empty() : this.hanaSids;
+    public Optional<Output<List<SAPSystemIDArgs>>> hanaSids() {
+        return Optional.ofNullable(this.hanaSids);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="osDisks")
-      private final @Nullable Output<List<DiskArgs>> osDisks;
+    private @Nullable Output<List<DiskArgs>> osDisks;
 
-    public Output<List<DiskArgs>> osDisks() {
-        return this.osDisks == null ? Codegen.empty() : this.osDisks;
+    public Optional<Output<List<DiskArgs>>> osDisks() {
+        return Optional.ofNullable(this.osDisks);
     }
 
-    public StorageProfileArgs(
-        @Nullable Output<List<SAPSystemIDArgs>> hanaSids,
-        @Nullable Output<List<DiskArgs>> osDisks) {
-        this.hanaSids = hanaSids;
-        this.osDisks = osDisks;
-    }
+    private StorageProfileArgs() {}
 
-    private StorageProfileArgs() {
-        this.hanaSids = Codegen.empty();
-        this.osDisks = Codegen.empty();
+    private StorageProfileArgs(StorageProfileArgs $) {
+        this.hanaSids = $.hanaSids;
+        this.osDisks = $.osDisks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SAPSystemIDArgs>> hanaSids;
-        private @Nullable Output<List<DiskArgs>> osDisks;
+        private StorageProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageProfileArgs();
         }
 
         public Builder(StorageProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hanaSids = defaults.hanaSids;
-    	      this.osDisks = defaults.osDisks;
+            $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hanaSids(@Nullable Output<List<SAPSystemIDArgs>> hanaSids) {
-            this.hanaSids = hanaSids;
+            $.hanaSids = hanaSids;
             return this;
         }
-        public Builder hanaSids(@Nullable List<SAPSystemIDArgs> hanaSids) {
-            this.hanaSids = Codegen.ofNullable(hanaSids);
-            return this;
+
+        public Builder hanaSids(List<SAPSystemIDArgs> hanaSids) {
+            return hanaSids(Output.of(hanaSids));
         }
+
         public Builder hanaSids(SAPSystemIDArgs... hanaSids) {
             return hanaSids(List.of(hanaSids));
         }
+
         public Builder osDisks(@Nullable Output<List<DiskArgs>> osDisks) {
-            this.osDisks = osDisks;
+            $.osDisks = osDisks;
             return this;
         }
-        public Builder osDisks(@Nullable List<DiskArgs> osDisks) {
-            this.osDisks = Codegen.ofNullable(osDisks);
-            return this;
+
+        public Builder osDisks(List<DiskArgs> osDisks) {
+            return osDisks(Output.of(osDisks));
         }
+
         public Builder osDisks(DiskArgs... osDisks) {
             return osDisks(List.of(osDisks));
-        }        public StorageProfileArgs build() {
-            return new StorageProfileArgs(hanaSids, osDisks);
+        }
+
+        public StorageProfileArgs build() {
+            return $;
         }
     }
+
 }

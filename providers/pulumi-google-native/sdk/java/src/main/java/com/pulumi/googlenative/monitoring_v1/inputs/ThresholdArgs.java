@@ -5,13 +5,13 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.enums.ThresholdColor;
 import com.pulumi.googlenative.monitoring_v1.enums.ThresholdDirection;
 import com.pulumi.googlenative.monitoring_v1.enums.ThresholdTargetAxis;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="color")
-      private final @Nullable Output<ThresholdColor> color;
+    private @Nullable Output<ThresholdColor> color;
 
-    public Output<ThresholdColor> color() {
-        return this.color == null ? Codegen.empty() : this.color;
+    public Optional<Output<ThresholdColor>> color() {
+        return Optional.ofNullable(this.color);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="direction")
-      private final @Nullable Output<ThresholdDirection> direction;
+    private @Nullable Output<ThresholdDirection> direction;
 
-    public Output<ThresholdDirection> direction() {
-        return this.direction == null ? Codegen.empty() : this.direction;
+    public Optional<Output<ThresholdDirection>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetAxis")
-      private final @Nullable Output<ThresholdTargetAxis> targetAxis;
+    private @Nullable Output<ThresholdTargetAxis> targetAxis;
 
-    public Output<ThresholdTargetAxis> targetAxis() {
-        return this.targetAxis == null ? Codegen.empty() : this.targetAxis;
+    public Optional<Output<ThresholdTargetAxis>> targetAxis() {
+        return Optional.ofNullable(this.targetAxis);
     }
 
     /**
@@ -72,102 +72,88 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Double> value;
+    private @Nullable Output<Double> value;
 
-    public Output<Double> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Double>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ThresholdArgs(
-        @Nullable Output<ThresholdColor> color,
-        @Nullable Output<ThresholdDirection> direction,
-        @Nullable Output<String> label,
-        @Nullable Output<ThresholdTargetAxis> targetAxis,
-        @Nullable Output<Double> value) {
-        this.color = color;
-        this.direction = direction;
-        this.label = label;
-        this.targetAxis = targetAxis;
-        this.value = value;
-    }
+    private ThresholdArgs() {}
 
-    private ThresholdArgs() {
-        this.color = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.label = Codegen.empty();
-        this.targetAxis = Codegen.empty();
-        this.value = Codegen.empty();
+    private ThresholdArgs(ThresholdArgs $) {
+        this.color = $.color;
+        this.direction = $.direction;
+        this.label = $.label;
+        this.targetAxis = $.targetAxis;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThresholdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ThresholdColor> color;
-        private @Nullable Output<ThresholdDirection> direction;
-        private @Nullable Output<String> label;
-        private @Nullable Output<ThresholdTargetAxis> targetAxis;
-        private @Nullable Output<Double> value;
+        private ThresholdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThresholdArgs();
         }
 
         public Builder(ThresholdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.color = defaults.color;
-    	      this.direction = defaults.direction;
-    	      this.label = defaults.label;
-    	      this.targetAxis = defaults.targetAxis;
-    	      this.value = defaults.value;
+            $ = new ThresholdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder color(@Nullable Output<ThresholdColor> color) {
-            this.color = color;
+            $.color = color;
             return this;
         }
-        public Builder color(@Nullable ThresholdColor color) {
-            this.color = Codegen.ofNullable(color);
-            return this;
+
+        public Builder color(ThresholdColor color) {
+            return color(Output.of(color));
         }
+
         public Builder direction(@Nullable Output<ThresholdDirection> direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
-        public Builder direction(@Nullable ThresholdDirection direction) {
-            this.direction = Codegen.ofNullable(direction);
-            return this;
+
+        public Builder direction(ThresholdDirection direction) {
+            return direction(Output.of(direction));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder targetAxis(@Nullable Output<ThresholdTargetAxis> targetAxis) {
-            this.targetAxis = targetAxis;
+            $.targetAxis = targetAxis;
             return this;
         }
-        public Builder targetAxis(@Nullable ThresholdTargetAxis targetAxis) {
-            this.targetAxis = Codegen.ofNullable(targetAxis);
-            return this;
+
+        public Builder targetAxis(ThresholdTargetAxis targetAxis) {
+            return targetAxis(Output.of(targetAxis));
         }
+
         public Builder value(@Nullable Output<Double> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Double value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ThresholdArgs build() {
-            return new ThresholdArgs(color, direction, label, targetAxis, value);
+
+        public Builder value(Double value) {
+            return value(Output.of(value));
+        }
+
+        public ThresholdArgs build() {
+            return $;
         }
     }
+
 }

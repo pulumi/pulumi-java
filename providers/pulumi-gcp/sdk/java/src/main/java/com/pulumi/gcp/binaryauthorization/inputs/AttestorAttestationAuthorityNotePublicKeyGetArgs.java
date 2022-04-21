@@ -5,10 +5,10 @@ package com.pulumi.gcp.binaryauthorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends com.
      * 
      */
     @Import(name="asciiArmoredPgpPublicKey")
-      private final @Nullable Output<String> asciiArmoredPgpPublicKey;
+    private @Nullable Output<String> asciiArmoredPgpPublicKey;
 
-    public Output<String> asciiArmoredPgpPublicKey() {
-        return this.asciiArmoredPgpPublicKey == null ? Codegen.empty() : this.asciiArmoredPgpPublicKey;
+    public Optional<Output<String>> asciiArmoredPgpPublicKey() {
+        return Optional.ofNullable(this.asciiArmoredPgpPublicKey);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends com.
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends com.
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -72,89 +72,78 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends com.
      * 
      */
     @Import(name="pkixPublicKey")
-      private final @Nullable Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> pkixPublicKey;
+    private @Nullable Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> pkixPublicKey;
 
-    public Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> pkixPublicKey() {
-        return this.pkixPublicKey == null ? Codegen.empty() : this.pkixPublicKey;
+    public Optional<Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs>> pkixPublicKey() {
+        return Optional.ofNullable(this.pkixPublicKey);
     }
 
-    public AttestorAttestationAuthorityNotePublicKeyGetArgs(
-        @Nullable Output<String> asciiArmoredPgpPublicKey,
-        @Nullable Output<String> comment,
-        @Nullable Output<String> id,
-        @Nullable Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> pkixPublicKey) {
-        this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
-        this.comment = comment;
-        this.id = id;
-        this.pkixPublicKey = pkixPublicKey;
-    }
+    private AttestorAttestationAuthorityNotePublicKeyGetArgs() {}
 
-    private AttestorAttestationAuthorityNotePublicKeyGetArgs() {
-        this.asciiArmoredPgpPublicKey = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.id = Codegen.empty();
-        this.pkixPublicKey = Codegen.empty();
+    private AttestorAttestationAuthorityNotePublicKeyGetArgs(AttestorAttestationAuthorityNotePublicKeyGetArgs $) {
+        this.asciiArmoredPgpPublicKey = $.asciiArmoredPgpPublicKey;
+        this.comment = $.comment;
+        this.id = $.id;
+        this.pkixPublicKey = $.pkixPublicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestorAttestationAuthorityNotePublicKeyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> asciiArmoredPgpPublicKey;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> id;
-        private @Nullable Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> pkixPublicKey;
+        private AttestorAttestationAuthorityNotePublicKeyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestorAttestationAuthorityNotePublicKeyGetArgs();
         }
 
         public Builder(AttestorAttestationAuthorityNotePublicKeyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asciiArmoredPgpPublicKey = defaults.asciiArmoredPgpPublicKey;
-    	      this.comment = defaults.comment;
-    	      this.id = defaults.id;
-    	      this.pkixPublicKey = defaults.pkixPublicKey;
+            $ = new AttestorAttestationAuthorityNotePublicKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder asciiArmoredPgpPublicKey(@Nullable Output<String> asciiArmoredPgpPublicKey) {
-            this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
+            $.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
             return this;
         }
-        public Builder asciiArmoredPgpPublicKey(@Nullable String asciiArmoredPgpPublicKey) {
-            this.asciiArmoredPgpPublicKey = Codegen.ofNullable(asciiArmoredPgpPublicKey);
-            return this;
+
+        public Builder asciiArmoredPgpPublicKey(String asciiArmoredPgpPublicKey) {
+            return asciiArmoredPgpPublicKey(Output.of(asciiArmoredPgpPublicKey));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder pkixPublicKey(@Nullable Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> pkixPublicKey) {
-            this.pkixPublicKey = pkixPublicKey;
+            $.pkixPublicKey = pkixPublicKey;
             return this;
         }
-        public Builder pkixPublicKey(@Nullable AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs pkixPublicKey) {
-            this.pkixPublicKey = Codegen.ofNullable(pkixPublicKey);
-            return this;
-        }        public AttestorAttestationAuthorityNotePublicKeyGetArgs build() {
-            return new AttestorAttestationAuthorityNotePublicKeyGetArgs(asciiArmoredPgpPublicKey, comment, id, pkixPublicKey);
+
+        public Builder pkixPublicKey(AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs pkixPublicKey) {
+            return pkixPublicKey(Output.of(pkixPublicKey));
+        }
+
+        public AttestorAttestationAuthorityNotePublicKeyGetArgs build() {
+            return $;
         }
     }
+
 }

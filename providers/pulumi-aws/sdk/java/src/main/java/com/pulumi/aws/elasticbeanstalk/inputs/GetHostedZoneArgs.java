@@ -19,45 +19,44 @@ public final class GetHostedZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
-    public GetHostedZoneArgs(@Nullable String region) {
-        this.region = region;
-    }
+    private GetHostedZoneArgs() {}
 
-    private GetHostedZoneArgs() {
-        this.region = null;
+    private GetHostedZoneArgs(GetHostedZoneArgs $) {
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHostedZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String region;
+        private GetHostedZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHostedZoneArgs();
         }
 
         public Builder(GetHostedZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
+            $ = new GetHostedZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
-        }        public GetHostedZoneArgs build() {
-            return new GetHostedZoneArgs(region);
+        }
+
+        public GetHostedZoneArgs build() {
+            return $;
         }
     }
+
 }

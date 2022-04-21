@@ -5,9 +5,9 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VideoPublishingOptionsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="disableArchive")
-      private final @Nullable Output<String> disableArchive;
+    private @Nullable Output<String> disableArchive;
 
-    public Output<String> disableArchive() {
-        return this.disableArchive == null ? Codegen.empty() : this.disableArchive;
+    public Optional<Output<String>> disableArchive() {
+        return Optional.ofNullable(this.disableArchive);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class VideoPublishingOptionsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="disableRtspPublishing")
-      private final @Nullable Output<String> disableRtspPublishing;
+    private @Nullable Output<String> disableRtspPublishing;
 
-    public Output<String> disableRtspPublishing() {
-        return this.disableRtspPublishing == null ? Codegen.empty() : this.disableRtspPublishing;
+    public Optional<Output<String>> disableRtspPublishing() {
+        return Optional.ofNullable(this.disableRtspPublishing);
     }
 
-    public VideoPublishingOptionsArgs(
-        @Nullable Output<String> disableArchive,
-        @Nullable Output<String> disableRtspPublishing) {
-        this.disableArchive = disableArchive;
-        this.disableRtspPublishing = disableRtspPublishing;
-    }
+    private VideoPublishingOptionsArgs() {}
 
-    private VideoPublishingOptionsArgs() {
-        this.disableArchive = Codegen.empty();
-        this.disableRtspPublishing = Codegen.empty();
+    private VideoPublishingOptionsArgs(VideoPublishingOptionsArgs $) {
+        this.disableArchive = $.disableArchive;
+        this.disableRtspPublishing = $.disableRtspPublishing;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoPublishingOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> disableArchive;
-        private @Nullable Output<String> disableRtspPublishing;
+        private VideoPublishingOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoPublishingOptionsArgs();
         }
 
         public Builder(VideoPublishingOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableArchive = defaults.disableArchive;
-    	      this.disableRtspPublishing = defaults.disableRtspPublishing;
+            $ = new VideoPublishingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableArchive(@Nullable Output<String> disableArchive) {
-            this.disableArchive = disableArchive;
+            $.disableArchive = disableArchive;
             return this;
         }
-        public Builder disableArchive(@Nullable String disableArchive) {
-            this.disableArchive = Codegen.ofNullable(disableArchive);
-            return this;
+
+        public Builder disableArchive(String disableArchive) {
+            return disableArchive(Output.of(disableArchive));
         }
+
         public Builder disableRtspPublishing(@Nullable Output<String> disableRtspPublishing) {
-            this.disableRtspPublishing = disableRtspPublishing;
+            $.disableRtspPublishing = disableRtspPublishing;
             return this;
         }
-        public Builder disableRtspPublishing(@Nullable String disableRtspPublishing) {
-            this.disableRtspPublishing = Codegen.ofNullable(disableRtspPublishing);
-            return this;
-        }        public VideoPublishingOptionsArgs build() {
-            return new VideoPublishingOptionsArgs(disableArchive, disableRtspPublishing);
+
+        public Builder disableRtspPublishing(String disableRtspPublishing) {
+            return disableRtspPublishing(Output.of(disableRtspPublishing));
+        }
+
+        public VideoPublishingOptionsArgs build() {
+            return $;
         }
     }
+
 }

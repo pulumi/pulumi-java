@@ -5,9 +5,9 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressLine1")
-      private final @Nullable Output<String> addressLine1;
+    private @Nullable Output<String> addressLine1;
 
-    public Output<String> addressLine1() {
-        return this.addressLine1 == null ? Codegen.empty() : this.addressLine1;
+    public Optional<Output<String>> addressLine1() {
+        return Optional.ofNullable(this.addressLine1);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressLine2")
-      private final @Nullable Output<String> addressLine2;
+    private @Nullable Output<String> addressLine2;
 
-    public Output<String> addressLine2() {
-        return this.addressLine2 == null ? Codegen.empty() : this.addressLine2;
+    public Optional<Output<String>> addressLine2() {
+        return Optional.ofNullable(this.addressLine2);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressLine3")
-      private final @Nullable Output<String> addressLine3;
+    private @Nullable Output<String> addressLine3;
 
-    public Output<String> addressLine3() {
-        return this.addressLine3 == null ? Codegen.empty() : this.addressLine3;
+    public Optional<Output<String>> addressLine3() {
+        return Optional.ofNullable(this.addressLine3);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="city")
-      private final @Nullable Output<String> city;
+    private @Nullable Output<String> city;
 
-    public Output<String> city() {
-        return this.city == null ? Codegen.empty() : this.city;
+    public Optional<Output<String>> city() {
+        return Optional.ofNullable(this.city);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="country", required=true)
-      private final Output<String> country;
+    private Output<String> country;
 
     public Output<String> country() {
         return this.country;
@@ -79,10 +79,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postalCode")
-      private final @Nullable Output<String> postalCode;
+    private @Nullable Output<String> postalCode;
 
-    public Output<String> postalCode() {
-        return this.postalCode == null ? Codegen.empty() : this.postalCode;
+    public Optional<Output<String>> postalCode() {
+        return Optional.ofNullable(this.postalCode);
     }
 
     /**
@@ -90,128 +90,109 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public AddressArgs(
-        @Nullable Output<String> addressLine1,
-        @Nullable Output<String> addressLine2,
-        @Nullable Output<String> addressLine3,
-        @Nullable Output<String> city,
-        Output<String> country,
-        @Nullable Output<String> postalCode,
-        @Nullable Output<String> state) {
-        this.addressLine1 = addressLine1;
-        this.addressLine2 = addressLine2;
-        this.addressLine3 = addressLine3;
-        this.city = city;
-        this.country = Objects.requireNonNull(country, "expected parameter 'country' to be non-null");
-        this.postalCode = postalCode;
-        this.state = state;
-    }
+    private AddressArgs() {}
 
-    private AddressArgs() {
-        this.addressLine1 = Codegen.empty();
-        this.addressLine2 = Codegen.empty();
-        this.addressLine3 = Codegen.empty();
-        this.city = Codegen.empty();
-        this.country = Codegen.empty();
-        this.postalCode = Codegen.empty();
-        this.state = Codegen.empty();
+    private AddressArgs(AddressArgs $) {
+        this.addressLine1 = $.addressLine1;
+        this.addressLine2 = $.addressLine2;
+        this.addressLine3 = $.addressLine3;
+        this.city = $.city;
+        this.country = $.country;
+        this.postalCode = $.postalCode;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressLine1;
-        private @Nullable Output<String> addressLine2;
-        private @Nullable Output<String> addressLine3;
-        private @Nullable Output<String> city;
-        private Output<String> country;
-        private @Nullable Output<String> postalCode;
-        private @Nullable Output<String> state;
+        private AddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressArgs();
         }
 
         public Builder(AddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressLine1 = defaults.addressLine1;
-    	      this.addressLine2 = defaults.addressLine2;
-    	      this.addressLine3 = defaults.addressLine3;
-    	      this.city = defaults.city;
-    	      this.country = defaults.country;
-    	      this.postalCode = defaults.postalCode;
-    	      this.state = defaults.state;
+            $ = new AddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressLine1(@Nullable Output<String> addressLine1) {
-            this.addressLine1 = addressLine1;
+            $.addressLine1 = addressLine1;
             return this;
         }
-        public Builder addressLine1(@Nullable String addressLine1) {
-            this.addressLine1 = Codegen.ofNullable(addressLine1);
-            return this;
+
+        public Builder addressLine1(String addressLine1) {
+            return addressLine1(Output.of(addressLine1));
         }
+
         public Builder addressLine2(@Nullable Output<String> addressLine2) {
-            this.addressLine2 = addressLine2;
+            $.addressLine2 = addressLine2;
             return this;
         }
-        public Builder addressLine2(@Nullable String addressLine2) {
-            this.addressLine2 = Codegen.ofNullable(addressLine2);
-            return this;
+
+        public Builder addressLine2(String addressLine2) {
+            return addressLine2(Output.of(addressLine2));
         }
+
         public Builder addressLine3(@Nullable Output<String> addressLine3) {
-            this.addressLine3 = addressLine3;
+            $.addressLine3 = addressLine3;
             return this;
         }
-        public Builder addressLine3(@Nullable String addressLine3) {
-            this.addressLine3 = Codegen.ofNullable(addressLine3);
-            return this;
+
+        public Builder addressLine3(String addressLine3) {
+            return addressLine3(Output.of(addressLine3));
         }
+
         public Builder city(@Nullable Output<String> city) {
-            this.city = city;
+            $.city = city;
             return this;
         }
-        public Builder city(@Nullable String city) {
-            this.city = Codegen.ofNullable(city);
-            return this;
+
+        public Builder city(String city) {
+            return city(Output.of(city));
         }
+
         public Builder country(Output<String> country) {
-            this.country = Objects.requireNonNull(country);
+            $.country = country;
             return this;
         }
+
         public Builder country(String country) {
-            this.country = Output.of(Objects.requireNonNull(country));
-            return this;
+            return country(Output.of(country));
         }
+
         public Builder postalCode(@Nullable Output<String> postalCode) {
-            this.postalCode = postalCode;
+            $.postalCode = postalCode;
             return this;
         }
-        public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Codegen.ofNullable(postalCode);
-            return this;
+
+        public Builder postalCode(String postalCode) {
+            return postalCode(Output.of(postalCode));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public AddressArgs build() {
-            return new AddressArgs(addressLine1, addressLine2, addressLine3, city, country, postalCode, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public AddressArgs build() {
+            $.country = Objects.requireNonNull($.country, "expected parameter 'country' to be non-null");
+            return $;
         }
     }
+
 }

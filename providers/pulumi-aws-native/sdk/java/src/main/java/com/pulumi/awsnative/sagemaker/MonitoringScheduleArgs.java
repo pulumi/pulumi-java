@@ -9,10 +9,10 @@ import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringExecuti
 import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
     public static final MonitoringScheduleArgs Empty = new MonitoringScheduleArgs();
 
     @Import(name="endpointName")
-      private final @Nullable Output<String> endpointName;
+    private @Nullable Output<String> endpointName;
 
-    public Output<String> endpointName() {
-        return this.endpointName == null ? Codegen.empty() : this.endpointName;
+    public Optional<Output<String>> endpointName() {
+        return Optional.ofNullable(this.endpointName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="failureReason")
-      private final @Nullable Output<String> failureReason;
+    private @Nullable Output<String> failureReason;
 
-    public Output<String> failureReason() {
-        return this.failureReason == null ? Codegen.empty() : this.failureReason;
+    public Optional<Output<String>> failureReason() {
+        return Optional.ofNullable(this.failureReason);
     }
 
     /**
@@ -43,24 +43,24 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="lastMonitoringExecutionSummary")
-      private final @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
+    private @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
 
-    public Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary() {
-        return this.lastMonitoringExecutionSummary == null ? Codegen.empty() : this.lastMonitoringExecutionSummary;
+    public Optional<Output<MonitoringScheduleMonitoringExecutionSummaryArgs>> lastMonitoringExecutionSummary() {
+        return Optional.ofNullable(this.lastMonitoringExecutionSummary);
     }
 
     @Import(name="monitoringScheduleConfig", required=true)
-      private final Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
+    private Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
 
     public Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig() {
         return this.monitoringScheduleConfig;
     }
 
     @Import(name="monitoringScheduleName")
-      private final @Nullable Output<String> monitoringScheduleName;
+    private @Nullable Output<String> monitoringScheduleName;
 
-    public Output<String> monitoringScheduleName() {
-        return this.monitoringScheduleName == null ? Codegen.empty() : this.monitoringScheduleName;
+    public Optional<Output<String>> monitoringScheduleName() {
+        return Optional.ofNullable(this.monitoringScheduleName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="monitoringScheduleStatus")
-      private final @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus;
+    private @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus;
 
-    public Output<MonitoringScheduleStatus> monitoringScheduleStatus() {
-        return this.monitoringScheduleStatus == null ? Codegen.empty() : this.monitoringScheduleStatus;
+    public Optional<Output<MonitoringScheduleStatus>> monitoringScheduleStatus() {
+        return Optional.ofNullable(this.monitoringScheduleStatus);
     }
 
     /**
@@ -79,131 +79,113 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<MonitoringScheduleTagArgs>> tags;
+    private @Nullable Output<List<MonitoringScheduleTagArgs>> tags;
 
-    public Output<List<MonitoringScheduleTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<MonitoringScheduleTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public MonitoringScheduleArgs(
-        @Nullable Output<String> endpointName,
-        @Nullable Output<String> failureReason,
-        @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary,
-        Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig,
-        @Nullable Output<String> monitoringScheduleName,
-        @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus,
-        @Nullable Output<List<MonitoringScheduleTagArgs>> tags) {
-        this.endpointName = endpointName;
-        this.failureReason = failureReason;
-        this.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
-        this.monitoringScheduleConfig = Objects.requireNonNull(monitoringScheduleConfig, "expected parameter 'monitoringScheduleConfig' to be non-null");
-        this.monitoringScheduleName = monitoringScheduleName;
-        this.monitoringScheduleStatus = monitoringScheduleStatus;
-        this.tags = tags;
-    }
+    private MonitoringScheduleArgs() {}
 
-    private MonitoringScheduleArgs() {
-        this.endpointName = Codegen.empty();
-        this.failureReason = Codegen.empty();
-        this.lastMonitoringExecutionSummary = Codegen.empty();
-        this.monitoringScheduleConfig = Codegen.empty();
-        this.monitoringScheduleName = Codegen.empty();
-        this.monitoringScheduleStatus = Codegen.empty();
-        this.tags = Codegen.empty();
+    private MonitoringScheduleArgs(MonitoringScheduleArgs $) {
+        this.endpointName = $.endpointName;
+        this.failureReason = $.failureReason;
+        this.lastMonitoringExecutionSummary = $.lastMonitoringExecutionSummary;
+        this.monitoringScheduleConfig = $.monitoringScheduleConfig;
+        this.monitoringScheduleName = $.monitoringScheduleName;
+        this.monitoringScheduleStatus = $.monitoringScheduleStatus;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endpointName;
-        private @Nullable Output<String> failureReason;
-        private @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
-        private Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
-        private @Nullable Output<String> monitoringScheduleName;
-        private @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus;
-        private @Nullable Output<List<MonitoringScheduleTagArgs>> tags;
+        private MonitoringScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleArgs();
         }
 
         public Builder(MonitoringScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointName = defaults.endpointName;
-    	      this.failureReason = defaults.failureReason;
-    	      this.lastMonitoringExecutionSummary = defaults.lastMonitoringExecutionSummary;
-    	      this.monitoringScheduleConfig = defaults.monitoringScheduleConfig;
-    	      this.monitoringScheduleName = defaults.monitoringScheduleName;
-    	      this.monitoringScheduleStatus = defaults.monitoringScheduleStatus;
-    	      this.tags = defaults.tags;
+            $ = new MonitoringScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointName(@Nullable Output<String> endpointName) {
-            this.endpointName = endpointName;
+            $.endpointName = endpointName;
             return this;
         }
-        public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Codegen.ofNullable(endpointName);
-            return this;
+
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder failureReason(@Nullable Output<String> failureReason) {
-            this.failureReason = failureReason;
+            $.failureReason = failureReason;
             return this;
         }
-        public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Codegen.ofNullable(failureReason);
-            return this;
+
+        public Builder failureReason(String failureReason) {
+            return failureReason(Output.of(failureReason));
         }
+
         public Builder lastMonitoringExecutionSummary(@Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary) {
-            this.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
+            $.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
             return this;
         }
-        public Builder lastMonitoringExecutionSummary(@Nullable MonitoringScheduleMonitoringExecutionSummaryArgs lastMonitoringExecutionSummary) {
-            this.lastMonitoringExecutionSummary = Codegen.ofNullable(lastMonitoringExecutionSummary);
-            return this;
+
+        public Builder lastMonitoringExecutionSummary(MonitoringScheduleMonitoringExecutionSummaryArgs lastMonitoringExecutionSummary) {
+            return lastMonitoringExecutionSummary(Output.of(lastMonitoringExecutionSummary));
         }
+
         public Builder monitoringScheduleConfig(Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig) {
-            this.monitoringScheduleConfig = Objects.requireNonNull(monitoringScheduleConfig);
+            $.monitoringScheduleConfig = monitoringScheduleConfig;
             return this;
         }
+
         public Builder monitoringScheduleConfig(MonitoringScheduleConfigArgs monitoringScheduleConfig) {
-            this.monitoringScheduleConfig = Output.of(Objects.requireNonNull(monitoringScheduleConfig));
-            return this;
+            return monitoringScheduleConfig(Output.of(monitoringScheduleConfig));
         }
+
         public Builder monitoringScheduleName(@Nullable Output<String> monitoringScheduleName) {
-            this.monitoringScheduleName = monitoringScheduleName;
+            $.monitoringScheduleName = monitoringScheduleName;
             return this;
         }
-        public Builder monitoringScheduleName(@Nullable String monitoringScheduleName) {
-            this.monitoringScheduleName = Codegen.ofNullable(monitoringScheduleName);
-            return this;
+
+        public Builder monitoringScheduleName(String monitoringScheduleName) {
+            return monitoringScheduleName(Output.of(monitoringScheduleName));
         }
+
         public Builder monitoringScheduleStatus(@Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus) {
-            this.monitoringScheduleStatus = monitoringScheduleStatus;
+            $.monitoringScheduleStatus = monitoringScheduleStatus;
             return this;
         }
-        public Builder monitoringScheduleStatus(@Nullable MonitoringScheduleStatus monitoringScheduleStatus) {
-            this.monitoringScheduleStatus = Codegen.ofNullable(monitoringScheduleStatus);
-            return this;
+
+        public Builder monitoringScheduleStatus(MonitoringScheduleStatus monitoringScheduleStatus) {
+            return monitoringScheduleStatus(Output.of(monitoringScheduleStatus));
         }
+
         public Builder tags(@Nullable Output<List<MonitoringScheduleTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<MonitoringScheduleTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<MonitoringScheduleTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(MonitoringScheduleTagArgs... tags) {
             return tags(List.of(tags));
-        }        public MonitoringScheduleArgs build() {
-            return new MonitoringScheduleArgs(endpointName, failureReason, lastMonitoringExecutionSummary, monitoringScheduleConfig, monitoringScheduleName, monitoringScheduleStatus, tags);
+        }
+
+        public MonitoringScheduleArgs build() {
+            $.monitoringScheduleConfig = Objects.requireNonNull($.monitoringScheduleConfig, "expected parameter 'monitoringScheduleConfig' to be non-null");
+            return $;
         }
     }
+
 }

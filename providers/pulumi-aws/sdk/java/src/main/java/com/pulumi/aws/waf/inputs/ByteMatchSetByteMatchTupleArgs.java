@@ -6,9 +6,9 @@ package com.pulumi.aws.waf.inputs;
 import com.pulumi.aws.waf.inputs.ByteMatchSetByteMatchTupleFieldToMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="fieldToMatch", required=true)
-      private final Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch;
+    private Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch;
 
     public Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
@@ -36,7 +36,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="positionalConstraint", required=true)
-      private final Output<String> positionalConstraint;
+    private Output<String> positionalConstraint;
 
     public Output<String> positionalConstraint() {
         return this.positionalConstraint;
@@ -49,10 +49,10 @@ public final class ByteMatchSetByteMatchTupleArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="targetString")
-      private final @Nullable Output<String> targetString;
+    private @Nullable Output<String> targetString;
 
-    public Output<String> targetString() {
-        return this.targetString == null ? Codegen.empty() : this.targetString;
+    public Optional<Output<String>> targetString() {
+        return Optional.ofNullable(this.targetString);
     }
 
     /**
@@ -64,89 +64,81 @@ public final class ByteMatchSetByteMatchTupleArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="textTransformation", required=true)
-      private final Output<String> textTransformation;
+    private Output<String> textTransformation;
 
     public Output<String> textTransformation() {
         return this.textTransformation;
     }
 
-    public ByteMatchSetByteMatchTupleArgs(
-        Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch,
-        Output<String> positionalConstraint,
-        @Nullable Output<String> targetString,
-        Output<String> textTransformation) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.positionalConstraint = Objects.requireNonNull(positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
-        this.targetString = targetString;
-        this.textTransformation = Objects.requireNonNull(textTransformation, "expected parameter 'textTransformation' to be non-null");
-    }
+    private ByteMatchSetByteMatchTupleArgs() {}
 
-    private ByteMatchSetByteMatchTupleArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.positionalConstraint = Codegen.empty();
-        this.targetString = Codegen.empty();
-        this.textTransformation = Codegen.empty();
+    private ByteMatchSetByteMatchTupleArgs(ByteMatchSetByteMatchTupleArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.positionalConstraint = $.positionalConstraint;
+        this.targetString = $.targetString;
+        this.textTransformation = $.textTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ByteMatchSetByteMatchTupleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch;
-        private Output<String> positionalConstraint;
-        private @Nullable Output<String> targetString;
-        private Output<String> textTransformation;
+        private ByteMatchSetByteMatchTupleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ByteMatchSetByteMatchTupleArgs();
         }
 
         public Builder(ByteMatchSetByteMatchTupleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.positionalConstraint = defaults.positionalConstraint;
-    	      this.targetString = defaults.targetString;
-    	      this.textTransformation = defaults.textTransformation;
+            $ = new ByteMatchSetByteMatchTupleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder fieldToMatch(ByteMatchSetByteMatchTupleFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
-            return this;
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder positionalConstraint(Output<String> positionalConstraint) {
-            this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
+            $.positionalConstraint = positionalConstraint;
             return this;
         }
+
         public Builder positionalConstraint(String positionalConstraint) {
-            this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
-            return this;
+            return positionalConstraint(Output.of(positionalConstraint));
         }
+
         public Builder targetString(@Nullable Output<String> targetString) {
-            this.targetString = targetString;
+            $.targetString = targetString;
             return this;
         }
-        public Builder targetString(@Nullable String targetString) {
-            this.targetString = Codegen.ofNullable(targetString);
-            return this;
+
+        public Builder targetString(String targetString) {
+            return targetString(Output.of(targetString));
         }
+
         public Builder textTransformation(Output<String> textTransformation) {
-            this.textTransformation = Objects.requireNonNull(textTransformation);
+            $.textTransformation = textTransformation;
             return this;
         }
+
         public Builder textTransformation(String textTransformation) {
-            this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
-            return this;
-        }        public ByteMatchSetByteMatchTupleArgs build() {
-            return new ByteMatchSetByteMatchTupleArgs(fieldToMatch, positionalConstraint, targetString, textTransformation);
+            return textTransformation(Output.of(textTransformation));
+        }
+
+        public ByteMatchSetByteMatchTupleArgs build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.positionalConstraint = Objects.requireNonNull($.positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
+            $.textTransformation = Objects.requireNonNull($.textTransformation, "expected parameter 'textTransformation' to be non-null");
+            return $;
         }
     }
+
 }

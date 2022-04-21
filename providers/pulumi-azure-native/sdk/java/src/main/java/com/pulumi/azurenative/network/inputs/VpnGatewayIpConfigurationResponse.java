@@ -23,10 +23,10 @@ public final class VpnGatewayIpConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VpnGatewayIpConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable String privateIpAddress;
+    private @Nullable String privateIpAddress;
 
     public Optional<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class VpnGatewayIpConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="publicIpAddress")
-      private final @Nullable String publicIpAddress;
+    private @Nullable String publicIpAddress;
 
     public Optional<String> publicIpAddress() {
-        return this.publicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddress);
+        return Optional.ofNullable(this.publicIpAddress);
     }
 
-    public VpnGatewayIpConfigurationResponse(
-        @Nullable String id,
-        @Nullable String privateIpAddress,
-        @Nullable String publicIpAddress) {
-        this.id = id;
-        this.privateIpAddress = privateIpAddress;
-        this.publicIpAddress = publicIpAddress;
-    }
+    private VpnGatewayIpConfigurationResponse() {}
 
-    private VpnGatewayIpConfigurationResponse() {
-        this.id = null;
-        this.privateIpAddress = null;
-        this.publicIpAddress = null;
+    private VpnGatewayIpConfigurationResponse(VpnGatewayIpConfigurationResponse $) {
+        this.id = $.id;
+        this.privateIpAddress = $.privateIpAddress;
+        this.publicIpAddress = $.publicIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnGatewayIpConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String privateIpAddress;
-        private @Nullable String publicIpAddress;
+        private VpnGatewayIpConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnGatewayIpConfigurationResponse();
         }
 
         public Builder(VpnGatewayIpConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.publicIpAddress = defaults.publicIpAddress;
+            $ = new VpnGatewayIpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
+            $.publicIpAddress = publicIpAddress;
             return this;
-        }        public VpnGatewayIpConfigurationResponse build() {
-            return new VpnGatewayIpConfigurationResponse(id, privateIpAddress, publicIpAddress);
+        }
+
+        public VpnGatewayIpConfigurationResponse build() {
+            return $;
         }
     }
+
 }

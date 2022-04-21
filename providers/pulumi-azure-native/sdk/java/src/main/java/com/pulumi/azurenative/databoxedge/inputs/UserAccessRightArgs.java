@@ -7,7 +7,6 @@ import com.pulumi.azurenative.databoxedge.enums.ShareAccessType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class UserAccessRightArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="accessType", required=true)
-      private final Output<Either<String,ShareAccessType>> accessType;
+    private Output<Either<String,ShareAccessType>> accessType;
 
     public Output<Either<String,ShareAccessType>> accessType() {
         return this.accessType;
@@ -36,63 +35,60 @@ public final class UserAccessRightArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
     }
 
-    public UserAccessRightArgs(
-        Output<Either<String,ShareAccessType>> accessType,
-        Output<String> userId) {
-        this.accessType = Objects.requireNonNull(accessType, "expected parameter 'accessType' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private UserAccessRightArgs() {}
 
-    private UserAccessRightArgs() {
-        this.accessType = Codegen.empty();
-        this.userId = Codegen.empty();
+    private UserAccessRightArgs(UserAccessRightArgs $) {
+        this.accessType = $.accessType;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAccessRightArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ShareAccessType>> accessType;
-        private Output<String> userId;
+        private UserAccessRightArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAccessRightArgs();
         }
 
         public Builder(UserAccessRightArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessType = defaults.accessType;
-    	      this.userId = defaults.userId;
+            $ = new UserAccessRightArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessType(Output<Either<String,ShareAccessType>> accessType) {
-            this.accessType = Objects.requireNonNull(accessType);
+            $.accessType = accessType;
             return this;
         }
+
         public Builder accessType(Either<String,ShareAccessType> accessType) {
-            this.accessType = Output.of(Objects.requireNonNull(accessType));
-            return this;
+            return accessType(Output.of(accessType));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
-        }        public UserAccessRightArgs build() {
-            return new UserAccessRightArgs(accessType, userId);
+            return userId(Output.of(userId));
+        }
+
+        public UserAccessRightArgs build() {
+            $.accessType = Objects.requireNonNull($.accessType, "expected parameter 'accessType' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

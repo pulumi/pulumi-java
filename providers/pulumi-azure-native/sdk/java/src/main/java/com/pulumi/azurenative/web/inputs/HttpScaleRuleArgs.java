@@ -6,11 +6,11 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class HttpScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auth")
-      private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
+    private @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
-    public Output<List<ScaleRuleAuthArgs>> auth() {
-        return this.auth == null ? Codegen.empty() : this.auth;
+    public Optional<Output<List<ScaleRuleAuthArgs>>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -38,66 +38,62 @@ public final class HttpScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
-    public HttpScaleRuleArgs(
-        @Nullable Output<List<ScaleRuleAuthArgs>> auth,
-        @Nullable Output<Map<String,String>> metadata) {
-        this.auth = auth;
-        this.metadata = metadata;
-    }
+    private HttpScaleRuleArgs() {}
 
-    private HttpScaleRuleArgs() {
-        this.auth = Codegen.empty();
-        this.metadata = Codegen.empty();
+    private HttpScaleRuleArgs(HttpScaleRuleArgs $) {
+        this.auth = $.auth;
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpScaleRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ScaleRuleAuthArgs>> auth;
-        private @Nullable Output<Map<String,String>> metadata;
+        private HttpScaleRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpScaleRuleArgs();
         }
 
         public Builder(HttpScaleRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.metadata = defaults.metadata;
+            $ = new HttpScaleRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable Output<List<ScaleRuleAuthArgs>> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
-        public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
-            this.auth = Codegen.ofNullable(auth);
-            return this;
+
+        public Builder auth(List<ScaleRuleAuthArgs> auth) {
+            return auth(Output.of(auth));
         }
+
         public Builder auth(ScaleRuleAuthArgs... auth) {
             return auth(List.of(auth));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
-        }        public HttpScaleRuleArgs build() {
-            return new HttpScaleRuleArgs(auth, metadata);
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
+        }
+
+        public HttpScaleRuleArgs build() {
+            return $;
         }
     }
+
 }

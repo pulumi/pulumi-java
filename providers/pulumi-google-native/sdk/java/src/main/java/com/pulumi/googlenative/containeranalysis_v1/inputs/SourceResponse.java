@@ -24,7 +24,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalContexts", required=true)
-      private final List<SourceContextResponse> additionalContexts;
+    private List<SourceContextResponse> additionalContexts;
 
     public List<SourceContextResponse> additionalContexts() {
         return this.additionalContexts;
@@ -35,7 +35,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="artifactStorageSourceUri", required=true)
-      private final String artifactStorageSourceUri;
+    private String artifactStorageSourceUri;
 
     public String artifactStorageSourceUri() {
         return this.artifactStorageSourceUri;
@@ -46,7 +46,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="context", required=true)
-      private final SourceContextResponse context;
+    private SourceContextResponse context;
 
     public SourceContextResponse context() {
         return this.context;
@@ -57,76 +57,70 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileHashes", required=true)
-      private final Map<String,String> fileHashes;
+    private Map<String,String> fileHashes;
 
     public Map<String,String> fileHashes() {
         return this.fileHashes;
     }
 
-    public SourceResponse(
-        List<SourceContextResponse> additionalContexts,
-        String artifactStorageSourceUri,
-        SourceContextResponse context,
-        Map<String,String> fileHashes) {
-        this.additionalContexts = Objects.requireNonNull(additionalContexts, "expected parameter 'additionalContexts' to be non-null");
-        this.artifactStorageSourceUri = Objects.requireNonNull(artifactStorageSourceUri, "expected parameter 'artifactStorageSourceUri' to be non-null");
-        this.context = Objects.requireNonNull(context, "expected parameter 'context' to be non-null");
-        this.fileHashes = Objects.requireNonNull(fileHashes, "expected parameter 'fileHashes' to be non-null");
-    }
+    private SourceResponse() {}
 
-    private SourceResponse() {
-        this.additionalContexts = List.of();
-        this.artifactStorageSourceUri = null;
-        this.context = null;
-        this.fileHashes = Map.of();
+    private SourceResponse(SourceResponse $) {
+        this.additionalContexts = $.additionalContexts;
+        this.artifactStorageSourceUri = $.artifactStorageSourceUri;
+        this.context = $.context;
+        this.fileHashes = $.fileHashes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SourceContextResponse> additionalContexts;
-        private String artifactStorageSourceUri;
-        private SourceContextResponse context;
-        private Map<String,String> fileHashes;
+        private SourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceResponse();
         }
 
         public Builder(SourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalContexts = defaults.additionalContexts;
-    	      this.artifactStorageSourceUri = defaults.artifactStorageSourceUri;
-    	      this.context = defaults.context;
-    	      this.fileHashes = defaults.fileHashes;
+            $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalContexts(List<SourceContextResponse> additionalContexts) {
-            this.additionalContexts = Objects.requireNonNull(additionalContexts);
+            $.additionalContexts = additionalContexts;
             return this;
         }
+
         public Builder additionalContexts(SourceContextResponse... additionalContexts) {
             return additionalContexts(List.of(additionalContexts));
         }
+
         public Builder artifactStorageSourceUri(String artifactStorageSourceUri) {
-            this.artifactStorageSourceUri = Objects.requireNonNull(artifactStorageSourceUri);
+            $.artifactStorageSourceUri = artifactStorageSourceUri;
             return this;
         }
+
         public Builder context(SourceContextResponse context) {
-            this.context = Objects.requireNonNull(context);
+            $.context = context;
             return this;
         }
+
         public Builder fileHashes(Map<String,String> fileHashes) {
-            this.fileHashes = Objects.requireNonNull(fileHashes);
+            $.fileHashes = fileHashes;
             return this;
-        }        public SourceResponse build() {
-            return new SourceResponse(additionalContexts, artifactStorageSourceUri, context, fileHashes);
+        }
+
+        public SourceResponse build() {
+            $.additionalContexts = Objects.requireNonNull($.additionalContexts, "expected parameter 'additionalContexts' to be non-null");
+            $.artifactStorageSourceUri = Objects.requireNonNull($.artifactStorageSourceUri, "expected parameter 'artifactStorageSourceUri' to be non-null");
+            $.context = Objects.requireNonNull($.context, "expected parameter 'context' to be non-null");
+            $.fileHashes = Objects.requireNonNull($.fileHashes, "expected parameter 'fileHashes' to be non-null");
+            return $;
         }
     }
+
 }

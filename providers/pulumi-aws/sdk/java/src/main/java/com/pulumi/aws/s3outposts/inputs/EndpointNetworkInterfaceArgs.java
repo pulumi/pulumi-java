@@ -5,9 +5,9 @@ package com.pulumi.aws.s3outposts.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class EndpointNetworkInterfaceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable Output<String> networkInterfaceId;
+    private @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
+    public Optional<Output<String>> networkInterfaceId() {
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
-    public EndpointNetworkInterfaceArgs(@Nullable Output<String> networkInterfaceId) {
-        this.networkInterfaceId = networkInterfaceId;
-    }
+    private EndpointNetworkInterfaceArgs() {}
 
-    private EndpointNetworkInterfaceArgs() {
-        this.networkInterfaceId = Codegen.empty();
+    private EndpointNetworkInterfaceArgs(EndpointNetworkInterfaceArgs $) {
+        this.networkInterfaceId = $.networkInterfaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointNetworkInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> networkInterfaceId;
+        private EndpointNetworkInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointNetworkInterfaceArgs();
         }
 
         public Builder(EndpointNetworkInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
+            $ = new EndpointNetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
-        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
-            return this;
-        }        public EndpointNetworkInterfaceArgs build() {
-            return new EndpointNetworkInterfaceArgs(networkInterfaceId);
+
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            return networkInterfaceId(Output.of(networkInterfaceId));
+        }
+
+        public EndpointNetworkInterfaceArgs build() {
+            return $;
         }
     }
+
 }

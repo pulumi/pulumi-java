@@ -22,7 +22,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityIds", required=true)
-      private final List<String> identityIds;
+    private List<String> identityIds;
 
     public List<String> identityIds() {
         return this.identityIds;
@@ -33,58 +33,56 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public IdentityResponse(
-        List<String> identityIds,
-        String type) {
-        this.identityIds = Objects.requireNonNull(identityIds, "expected parameter 'identityIds' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private IdentityResponse() {}
 
-    private IdentityResponse() {
-        this.identityIds = List.of();
-        this.type = null;
+    private IdentityResponse(IdentityResponse $) {
+        this.identityIds = $.identityIds;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> identityIds;
-        private String type;
+        private IdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityResponse();
         }
 
         public Builder(IdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityIds = defaults.identityIds;
-    	      this.type = defaults.type;
+            $ = new IdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identityIds(List<String> identityIds) {
-            this.identityIds = Objects.requireNonNull(identityIds);
+            $.identityIds = identityIds;
             return this;
         }
+
         public Builder identityIds(String... identityIds) {
             return identityIds(List.of(identityIds));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public IdentityResponse build() {
-            return new IdentityResponse(identityIds, type);
+        }
+
+        public IdentityResponse build() {
+            $.identityIds = Objects.requireNonNull($.identityIds, "expected parameter 'identityIds' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

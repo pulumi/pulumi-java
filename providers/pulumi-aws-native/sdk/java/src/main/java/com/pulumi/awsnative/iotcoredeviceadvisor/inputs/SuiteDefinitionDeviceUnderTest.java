@@ -15,62 +15,57 @@ public final class SuiteDefinitionDeviceUnderTest extends com.pulumi.resources.I
     public static final SuiteDefinitionDeviceUnderTest Empty = new SuiteDefinitionDeviceUnderTest();
 
     @Import(name="certificateArn")
-      private final @Nullable String certificateArn;
+    private @Nullable String certificateArn;
 
     public Optional<String> certificateArn() {
-        return this.certificateArn == null ? Optional.empty() : Optional.ofNullable(this.certificateArn);
+        return Optional.ofNullable(this.certificateArn);
     }
 
     @Import(name="thingArn")
-      private final @Nullable String thingArn;
+    private @Nullable String thingArn;
 
     public Optional<String> thingArn() {
-        return this.thingArn == null ? Optional.empty() : Optional.ofNullable(this.thingArn);
+        return Optional.ofNullable(this.thingArn);
     }
 
-    public SuiteDefinitionDeviceUnderTest(
-        @Nullable String certificateArn,
-        @Nullable String thingArn) {
-        this.certificateArn = certificateArn;
-        this.thingArn = thingArn;
-    }
+    private SuiteDefinitionDeviceUnderTest() {}
 
-    private SuiteDefinitionDeviceUnderTest() {
-        this.certificateArn = null;
-        this.thingArn = null;
+    private SuiteDefinitionDeviceUnderTest(SuiteDefinitionDeviceUnderTest $) {
+        this.certificateArn = $.certificateArn;
+        this.thingArn = $.thingArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuiteDefinitionDeviceUnderTest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String certificateArn;
-        private @Nullable String thingArn;
+        private SuiteDefinitionDeviceUnderTest $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuiteDefinitionDeviceUnderTest();
         }
 
         public Builder(SuiteDefinitionDeviceUnderTest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.thingArn = defaults.thingArn;
+            $ = new SuiteDefinitionDeviceUnderTest(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
+
         public Builder thingArn(@Nullable String thingArn) {
-            this.thingArn = thingArn;
+            $.thingArn = thingArn;
             return this;
-        }        public SuiteDefinitionDeviceUnderTest build() {
-            return new SuiteDefinitionDeviceUnderTest(certificateArn, thingArn);
+        }
+
+        public SuiteDefinitionDeviceUnderTest build() {
+            return $;
         }
     }
+
 }

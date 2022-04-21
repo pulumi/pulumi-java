@@ -22,148 +22,131 @@ public final class GlobalTableReplicaSpecification extends com.pulumi.resources.
     public static final GlobalTableReplicaSpecification Empty = new GlobalTableReplicaSpecification();
 
     @Import(name="contributorInsightsSpecification")
-      private final @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
+    private @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
 
     public Optional<GlobalTableContributorInsightsSpecification> contributorInsightsSpecification() {
-        return this.contributorInsightsSpecification == null ? Optional.empty() : Optional.ofNullable(this.contributorInsightsSpecification);
+        return Optional.ofNullable(this.contributorInsightsSpecification);
     }
 
     @Import(name="globalSecondaryIndexes")
-      private final @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes;
+    private @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes;
 
-    public List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes() {
-        return this.globalSecondaryIndexes == null ? List.of() : this.globalSecondaryIndexes;
+    public Optional<List<GlobalTableReplicaGlobalSecondaryIndexSpecification>> globalSecondaryIndexes() {
+        return Optional.ofNullable(this.globalSecondaryIndexes);
     }
 
     @Import(name="pointInTimeRecoverySpecification")
-      private final @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification;
+    private @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification;
 
     public Optional<GlobalTablePointInTimeRecoverySpecification> pointInTimeRecoverySpecification() {
-        return this.pointInTimeRecoverySpecification == null ? Optional.empty() : Optional.ofNullable(this.pointInTimeRecoverySpecification);
+        return Optional.ofNullable(this.pointInTimeRecoverySpecification);
     }
 
     @Import(name="readProvisionedThroughputSettings")
-      private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
+    private @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
 
     public Optional<GlobalTableReadProvisionedThroughputSettings> readProvisionedThroughputSettings() {
-        return this.readProvisionedThroughputSettings == null ? Optional.empty() : Optional.ofNullable(this.readProvisionedThroughputSettings);
+        return Optional.ofNullable(this.readProvisionedThroughputSettings);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="sSESpecification")
-      private final @Nullable GlobalTableReplicaSSESpecification sSESpecification;
+    private @Nullable GlobalTableReplicaSSESpecification sSESpecification;
 
     public Optional<GlobalTableReplicaSSESpecification> sSESpecification() {
-        return this.sSESpecification == null ? Optional.empty() : Optional.ofNullable(this.sSESpecification);
+        return Optional.ofNullable(this.sSESpecification);
     }
 
     @Import(name="tags")
-      private final @Nullable List<GlobalTableTag> tags;
+    private @Nullable List<GlobalTableTag> tags;
 
-    public List<GlobalTableTag> tags() {
-        return this.tags == null ? List.of() : this.tags;
+    public Optional<List<GlobalTableTag>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GlobalTableReplicaSpecification(
-        @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
-        @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes,
-        @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification,
-        @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings,
-        String region,
-        @Nullable GlobalTableReplicaSSESpecification sSESpecification,
-        @Nullable List<GlobalTableTag> tags) {
-        this.contributorInsightsSpecification = contributorInsightsSpecification;
-        this.globalSecondaryIndexes = globalSecondaryIndexes;
-        this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
-        this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.sSESpecification = sSESpecification;
-        this.tags = tags;
-    }
+    private GlobalTableReplicaSpecification() {}
 
-    private GlobalTableReplicaSpecification() {
-        this.contributorInsightsSpecification = null;
-        this.globalSecondaryIndexes = List.of();
-        this.pointInTimeRecoverySpecification = null;
-        this.readProvisionedThroughputSettings = null;
-        this.region = null;
-        this.sSESpecification = null;
-        this.tags = List.of();
+    private GlobalTableReplicaSpecification(GlobalTableReplicaSpecification $) {
+        this.contributorInsightsSpecification = $.contributorInsightsSpecification;
+        this.globalSecondaryIndexes = $.globalSecondaryIndexes;
+        this.pointInTimeRecoverySpecification = $.pointInTimeRecoverySpecification;
+        this.readProvisionedThroughputSettings = $.readProvisionedThroughputSettings;
+        this.region = $.region;
+        this.sSESpecification = $.sSESpecification;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableReplicaSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
-        private @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes;
-        private @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification;
-        private @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
-        private String region;
-        private @Nullable GlobalTableReplicaSSESpecification sSESpecification;
-        private @Nullable List<GlobalTableTag> tags;
+        private GlobalTableReplicaSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableReplicaSpecification();
         }
 
         public Builder(GlobalTableReplicaSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contributorInsightsSpecification = defaults.contributorInsightsSpecification;
-    	      this.globalSecondaryIndexes = defaults.globalSecondaryIndexes;
-    	      this.pointInTimeRecoverySpecification = defaults.pointInTimeRecoverySpecification;
-    	      this.readProvisionedThroughputSettings = defaults.readProvisionedThroughputSettings;
-    	      this.region = defaults.region;
-    	      this.sSESpecification = defaults.sSESpecification;
-    	      this.tags = defaults.tags;
+            $ = new GlobalTableReplicaSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification) {
-            this.contributorInsightsSpecification = contributorInsightsSpecification;
+            $.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
+
         public Builder globalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = globalSecondaryIndexes;
+            $.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
+
         public Builder globalSecondaryIndexes(GlobalTableReplicaGlobalSecondaryIndexSpecification... globalSecondaryIndexes) {
             return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
         }
+
         public Builder pointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification) {
-            this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
+            $.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
             return this;
         }
+
         public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
-            this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
+            $.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder sSESpecification(@Nullable GlobalTableReplicaSSESpecification sSESpecification) {
-            this.sSESpecification = sSESpecification;
+            $.sSESpecification = sSESpecification;
             return this;
         }
+
         public Builder tags(@Nullable List<GlobalTableTag> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(GlobalTableTag... tags) {
             return tags(List.of(tags));
-        }        public GlobalTableReplicaSpecification build() {
-            return new GlobalTableReplicaSpecification(contributorInsightsSpecification, globalSecondaryIndexes, pointInTimeRecoverySpecification, readProvisionedThroughputSettings, region, sSESpecification, tags);
+        }
+
+        public GlobalTableReplicaSpecification build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

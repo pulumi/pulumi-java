@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualMachineSshCredentialsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualMachineSshCredentialsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateKeyData")
-      private final @Nullable Output<String> privateKeyData;
+    private @Nullable Output<String> privateKeyData;
 
-    public Output<String> privateKeyData() {
-        return this.privateKeyData == null ? Codegen.empty() : this.privateKeyData;
+    public Optional<Output<String>> privateKeyData() {
+        return Optional.ofNullable(this.privateKeyData);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualMachineSshCredentialsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="publicKeyData")
-      private final @Nullable Output<String> publicKeyData;
+    private @Nullable Output<String> publicKeyData;
 
-    public Output<String> publicKeyData() {
-        return this.publicKeyData == null ? Codegen.empty() : this.publicKeyData;
+    public Optional<Output<String>> publicKeyData() {
+        return Optional.ofNullable(this.publicKeyData);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class VirtualMachineSshCredentialsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public VirtualMachineSshCredentialsArgs(
-        @Nullable Output<String> password,
-        @Nullable Output<String> privateKeyData,
-        @Nullable Output<String> publicKeyData,
-        @Nullable Output<String> username) {
-        this.password = password;
-        this.privateKeyData = privateKeyData;
-        this.publicKeyData = publicKeyData;
-        this.username = username;
-    }
+    private VirtualMachineSshCredentialsArgs() {}
 
-    private VirtualMachineSshCredentialsArgs() {
-        this.password = Codegen.empty();
-        this.privateKeyData = Codegen.empty();
-        this.publicKeyData = Codegen.empty();
-        this.username = Codegen.empty();
+    private VirtualMachineSshCredentialsArgs(VirtualMachineSshCredentialsArgs $) {
+        this.password = $.password;
+        this.privateKeyData = $.privateKeyData;
+        this.publicKeyData = $.publicKeyData;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineSshCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> privateKeyData;
-        private @Nullable Output<String> publicKeyData;
-        private @Nullable Output<String> username;
+        private VirtualMachineSshCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineSshCredentialsArgs();
         }
 
         public Builder(VirtualMachineSshCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.privateKeyData = defaults.privateKeyData;
-    	      this.publicKeyData = defaults.publicKeyData;
-    	      this.username = defaults.username;
+            $ = new VirtualMachineSshCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder privateKeyData(@Nullable Output<String> privateKeyData) {
-            this.privateKeyData = privateKeyData;
+            $.privateKeyData = privateKeyData;
             return this;
         }
-        public Builder privateKeyData(@Nullable String privateKeyData) {
-            this.privateKeyData = Codegen.ofNullable(privateKeyData);
-            return this;
+
+        public Builder privateKeyData(String privateKeyData) {
+            return privateKeyData(Output.of(privateKeyData));
         }
+
         public Builder publicKeyData(@Nullable Output<String> publicKeyData) {
-            this.publicKeyData = publicKeyData;
+            $.publicKeyData = publicKeyData;
             return this;
         }
-        public Builder publicKeyData(@Nullable String publicKeyData) {
-            this.publicKeyData = Codegen.ofNullable(publicKeyData);
-            return this;
+
+        public Builder publicKeyData(String publicKeyData) {
+            return publicKeyData(Output.of(publicKeyData));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public VirtualMachineSshCredentialsArgs build() {
-            return new VirtualMachineSshCredentialsArgs(password, privateKeyData, publicKeyData, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public VirtualMachineSshCredentialsArgs build() {
+            return $;
         }
     }
+
 }

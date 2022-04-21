@@ -15,65 +15,63 @@ public final class LaunchStepConfig extends com.pulumi.resources.InvokeArgs {
     public static final LaunchStepConfig Empty = new LaunchStepConfig();
 
     @Import(name="groupWeights", required=true)
-      private final List<LaunchGroupToWeight> groupWeights;
+    private List<LaunchGroupToWeight> groupWeights;
 
     public List<LaunchGroupToWeight> groupWeights() {
         return this.groupWeights;
     }
 
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public LaunchStepConfig(
-        List<LaunchGroupToWeight> groupWeights,
-        String startTime) {
-        this.groupWeights = Objects.requireNonNull(groupWeights, "expected parameter 'groupWeights' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private LaunchStepConfig() {}
 
-    private LaunchStepConfig() {
-        this.groupWeights = List.of();
-        this.startTime = null;
+    private LaunchStepConfig(LaunchStepConfig $) {
+        this.groupWeights = $.groupWeights;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchStepConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<LaunchGroupToWeight> groupWeights;
-        private String startTime;
+        private LaunchStepConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchStepConfig();
         }
 
         public Builder(LaunchStepConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupWeights = defaults.groupWeights;
-    	      this.startTime = defaults.startTime;
+            $ = new LaunchStepConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder groupWeights(List<LaunchGroupToWeight> groupWeights) {
-            this.groupWeights = Objects.requireNonNull(groupWeights);
+            $.groupWeights = groupWeights;
             return this;
         }
+
         public Builder groupWeights(LaunchGroupToWeight... groupWeights) {
             return groupWeights(List.of(groupWeights));
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public LaunchStepConfig build() {
-            return new LaunchStepConfig(groupWeights, startTime);
+        }
+
+        public LaunchStepConfig build() {
+            $.groupWeights = Objects.requireNonNull($.groupWeights, "expected parameter 'groupWeights' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

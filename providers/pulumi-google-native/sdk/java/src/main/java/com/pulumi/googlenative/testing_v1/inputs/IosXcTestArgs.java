@@ -5,11 +5,11 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testSpecialEntitlements")
-      private final @Nullable Output<Boolean> testSpecialEntitlements;
+    private @Nullable Output<Boolean> testSpecialEntitlements;
 
-    public Output<Boolean> testSpecialEntitlements() {
-        return this.testSpecialEntitlements == null ? Codegen.empty() : this.testSpecialEntitlements;
+    public Optional<Output<Boolean>> testSpecialEntitlements() {
+        return Optional.ofNullable(this.testSpecialEntitlements);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testsZip", required=true)
-      private final Output<FileReferenceArgs> testsZip;
+    private Output<FileReferenceArgs> testsZip;
 
     public Output<FileReferenceArgs> testsZip() {
         return this.testsZip;
@@ -48,10 +48,10 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xcodeVersion")
-      private final @Nullable Output<String> xcodeVersion;
+    private @Nullable Output<String> xcodeVersion;
 
-    public Output<String> xcodeVersion() {
-        return this.xcodeVersion == null ? Codegen.empty() : this.xcodeVersion;
+    public Optional<Output<String>> xcodeVersion() {
+        return Optional.ofNullable(this.xcodeVersion);
     }
 
     /**
@@ -59,89 +59,79 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xctestrun")
-      private final @Nullable Output<FileReferenceArgs> xctestrun;
+    private @Nullable Output<FileReferenceArgs> xctestrun;
 
-    public Output<FileReferenceArgs> xctestrun() {
-        return this.xctestrun == null ? Codegen.empty() : this.xctestrun;
+    public Optional<Output<FileReferenceArgs>> xctestrun() {
+        return Optional.ofNullable(this.xctestrun);
     }
 
-    public IosXcTestArgs(
-        @Nullable Output<Boolean> testSpecialEntitlements,
-        Output<FileReferenceArgs> testsZip,
-        @Nullable Output<String> xcodeVersion,
-        @Nullable Output<FileReferenceArgs> xctestrun) {
-        this.testSpecialEntitlements = testSpecialEntitlements;
-        this.testsZip = Objects.requireNonNull(testsZip, "expected parameter 'testsZip' to be non-null");
-        this.xcodeVersion = xcodeVersion;
-        this.xctestrun = xctestrun;
-    }
+    private IosXcTestArgs() {}
 
-    private IosXcTestArgs() {
-        this.testSpecialEntitlements = Codegen.empty();
-        this.testsZip = Codegen.empty();
-        this.xcodeVersion = Codegen.empty();
-        this.xctestrun = Codegen.empty();
+    private IosXcTestArgs(IosXcTestArgs $) {
+        this.testSpecialEntitlements = $.testSpecialEntitlements;
+        this.testsZip = $.testsZip;
+        this.xcodeVersion = $.xcodeVersion;
+        this.xctestrun = $.xctestrun;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosXcTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> testSpecialEntitlements;
-        private Output<FileReferenceArgs> testsZip;
-        private @Nullable Output<String> xcodeVersion;
-        private @Nullable Output<FileReferenceArgs> xctestrun;
+        private IosXcTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosXcTestArgs();
         }
 
         public Builder(IosXcTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testSpecialEntitlements = defaults.testSpecialEntitlements;
-    	      this.testsZip = defaults.testsZip;
-    	      this.xcodeVersion = defaults.xcodeVersion;
-    	      this.xctestrun = defaults.xctestrun;
+            $ = new IosXcTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder testSpecialEntitlements(@Nullable Output<Boolean> testSpecialEntitlements) {
-            this.testSpecialEntitlements = testSpecialEntitlements;
+            $.testSpecialEntitlements = testSpecialEntitlements;
             return this;
         }
-        public Builder testSpecialEntitlements(@Nullable Boolean testSpecialEntitlements) {
-            this.testSpecialEntitlements = Codegen.ofNullable(testSpecialEntitlements);
-            return this;
+
+        public Builder testSpecialEntitlements(Boolean testSpecialEntitlements) {
+            return testSpecialEntitlements(Output.of(testSpecialEntitlements));
         }
+
         public Builder testsZip(Output<FileReferenceArgs> testsZip) {
-            this.testsZip = Objects.requireNonNull(testsZip);
+            $.testsZip = testsZip;
             return this;
         }
+
         public Builder testsZip(FileReferenceArgs testsZip) {
-            this.testsZip = Output.of(Objects.requireNonNull(testsZip));
-            return this;
+            return testsZip(Output.of(testsZip));
         }
+
         public Builder xcodeVersion(@Nullable Output<String> xcodeVersion) {
-            this.xcodeVersion = xcodeVersion;
+            $.xcodeVersion = xcodeVersion;
             return this;
         }
-        public Builder xcodeVersion(@Nullable String xcodeVersion) {
-            this.xcodeVersion = Codegen.ofNullable(xcodeVersion);
-            return this;
+
+        public Builder xcodeVersion(String xcodeVersion) {
+            return xcodeVersion(Output.of(xcodeVersion));
         }
+
         public Builder xctestrun(@Nullable Output<FileReferenceArgs> xctestrun) {
-            this.xctestrun = xctestrun;
+            $.xctestrun = xctestrun;
             return this;
         }
-        public Builder xctestrun(@Nullable FileReferenceArgs xctestrun) {
-            this.xctestrun = Codegen.ofNullable(xctestrun);
-            return this;
-        }        public IosXcTestArgs build() {
-            return new IosXcTestArgs(testSpecialEntitlements, testsZip, xcodeVersion, xctestrun);
+
+        public Builder xctestrun(FileReferenceArgs xctestrun) {
+            return xctestrun(Output.of(xctestrun));
+        }
+
+        public IosXcTestArgs build() {
+            $.testsZip = Objects.requireNonNull($.testsZip, "expected parameter 'testsZip' to be non-null");
+            return $;
         }
     }
+
 }

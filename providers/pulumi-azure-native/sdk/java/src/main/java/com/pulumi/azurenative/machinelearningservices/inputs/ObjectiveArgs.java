@@ -7,7 +7,6 @@ import com.pulumi.azurenative.machinelearningservices.enums.Goal;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="goal", required=true)
-      private final Output<Either<String,Goal>> goal;
+    private Output<Either<String,Goal>> goal;
 
     public Output<Either<String,Goal>> goal() {
         return this.goal;
@@ -36,63 +35,60 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryMetric", required=true)
-      private final Output<String> primaryMetric;
+    private Output<String> primaryMetric;
 
     public Output<String> primaryMetric() {
         return this.primaryMetric;
     }
 
-    public ObjectiveArgs(
-        Output<Either<String,Goal>> goal,
-        Output<String> primaryMetric) {
-        this.goal = Objects.requireNonNull(goal, "expected parameter 'goal' to be non-null");
-        this.primaryMetric = Objects.requireNonNull(primaryMetric, "expected parameter 'primaryMetric' to be non-null");
-    }
+    private ObjectiveArgs() {}
 
-    private ObjectiveArgs() {
-        this.goal = Codegen.empty();
-        this.primaryMetric = Codegen.empty();
+    private ObjectiveArgs(ObjectiveArgs $) {
+        this.goal = $.goal;
+        this.primaryMetric = $.primaryMetric;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectiveArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,Goal>> goal;
-        private Output<String> primaryMetric;
+        private ObjectiveArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectiveArgs();
         }
 
         public Builder(ObjectiveArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.goal = defaults.goal;
-    	      this.primaryMetric = defaults.primaryMetric;
+            $ = new ObjectiveArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder goal(Output<Either<String,Goal>> goal) {
-            this.goal = Objects.requireNonNull(goal);
+            $.goal = goal;
             return this;
         }
+
         public Builder goal(Either<String,Goal> goal) {
-            this.goal = Output.of(Objects.requireNonNull(goal));
-            return this;
+            return goal(Output.of(goal));
         }
+
         public Builder primaryMetric(Output<String> primaryMetric) {
-            this.primaryMetric = Objects.requireNonNull(primaryMetric);
+            $.primaryMetric = primaryMetric;
             return this;
         }
+
         public Builder primaryMetric(String primaryMetric) {
-            this.primaryMetric = Output.of(Objects.requireNonNull(primaryMetric));
-            return this;
-        }        public ObjectiveArgs build() {
-            return new ObjectiveArgs(goal, primaryMetric);
+            return primaryMetric(Output.of(primaryMetric));
+        }
+
+        public ObjectiveArgs build() {
+            $.goal = Objects.requireNonNull($.goal, "expected parameter 'goal' to be non-null");
+            $.primaryMetric = Objects.requireNonNull($.primaryMetric, "expected parameter 'primaryMetric' to be non-null");
+            return $;
         }
     }
+
 }

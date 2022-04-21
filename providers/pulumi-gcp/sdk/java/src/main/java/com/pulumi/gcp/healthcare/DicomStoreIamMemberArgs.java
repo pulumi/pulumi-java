@@ -5,10 +5,10 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.DicomStoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class DicomStoreIamMemberArgs extends com.pulumi.resources.Resource
     public static final DicomStoreIamMemberArgs Empty = new DicomStoreIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<DicomStoreIamMemberConditionArgs> condition;
+    private @Nullable Output<DicomStoreIamMemberConditionArgs> condition;
 
-    public Output<DicomStoreIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<DicomStoreIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -31,14 +31,14 @@ public final class DicomStoreIamMemberArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dicomStoreId", required=true)
-      private final Output<String> dicomStoreId;
+    private Output<String> dicomStoreId;
 
     public Output<String> dicomStoreId() {
         return this.dicomStoreId;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -51,89 +51,81 @@ public final class DicomStoreIamMemberArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public DicomStoreIamMemberArgs(
-        @Nullable Output<DicomStoreIamMemberConditionArgs> condition,
-        Output<String> dicomStoreId,
-        Output<String> member,
-        Output<String> role) {
-        this.condition = condition;
-        this.dicomStoreId = Objects.requireNonNull(dicomStoreId, "expected parameter 'dicomStoreId' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private DicomStoreIamMemberArgs() {}
 
-    private DicomStoreIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.dicomStoreId = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private DicomStoreIamMemberArgs(DicomStoreIamMemberArgs $) {
+        this.condition = $.condition;
+        this.dicomStoreId = $.dicomStoreId;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DicomStoreIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DicomStoreIamMemberConditionArgs> condition;
-        private Output<String> dicomStoreId;
-        private Output<String> member;
-        private Output<String> role;
+        private DicomStoreIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DicomStoreIamMemberArgs();
         }
 
         public Builder(DicomStoreIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.dicomStoreId = defaults.dicomStoreId;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new DicomStoreIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<DicomStoreIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable DicomStoreIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(DicomStoreIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder dicomStoreId(Output<String> dicomStoreId) {
-            this.dicomStoreId = Objects.requireNonNull(dicomStoreId);
+            $.dicomStoreId = dicomStoreId;
             return this;
         }
+
         public Builder dicomStoreId(String dicomStoreId) {
-            this.dicomStoreId = Output.of(Objects.requireNonNull(dicomStoreId));
-            return this;
+            return dicomStoreId(Output.of(dicomStoreId));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public DicomStoreIamMemberArgs build() {
-            return new DicomStoreIamMemberArgs(condition, dicomStoreId, member, role);
+            return role(Output.of(role));
+        }
+
+        public DicomStoreIamMemberArgs build() {
+            $.dicomStoreId = Objects.requireNonNull($.dicomStoreId, "expected parameter 'dicomStoreId' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

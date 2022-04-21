@@ -24,10 +24,10 @@ public final class ChangeFeedResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ChangeFeedResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retentionInDays")
-      private final @Nullable Integer retentionInDays;
+    private @Nullable Integer retentionInDays;
 
     public Optional<Integer> retentionInDays() {
-        return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
+        return Optional.ofNullable(this.retentionInDays);
     }
 
-    public ChangeFeedResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer retentionInDays) {
-        this.enabled = enabled;
-        this.retentionInDays = retentionInDays;
-    }
+    private ChangeFeedResponse() {}
 
-    private ChangeFeedResponse() {
-        this.enabled = null;
-        this.retentionInDays = null;
+    private ChangeFeedResponse(ChangeFeedResponse $) {
+        this.enabled = $.enabled;
+        this.retentionInDays = $.retentionInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChangeFeedResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable Integer retentionInDays;
+        private ChangeFeedResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChangeFeedResponse();
         }
 
         public Builder(ChangeFeedResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.retentionInDays = defaults.retentionInDays;
+            $ = new ChangeFeedResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = retentionInDays;
+            $.retentionInDays = retentionInDays;
             return this;
-        }        public ChangeFeedResponse build() {
-            return new ChangeFeedResponse(enabled, retentionInDays);
+        }
+
+        public ChangeFeedResponse build() {
+            return $;
         }
     }
+
 }

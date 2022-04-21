@@ -6,10 +6,10 @@ package com.pulumi.azurenative.deploymentmanager;
 import com.pulumi.azurenative.deploymentmanager.inputs.SasAuthenticationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="artifactRoot")
-      private final @Nullable Output<String> artifactRoot;
+    private @Nullable Output<String> artifactRoot;
 
-    public Output<String> artifactRoot() {
-        return this.artifactRoot == null ? Codegen.empty() : this.artifactRoot;
+    public Optional<Output<String>> artifactRoot() {
+        return Optional.ofNullable(this.artifactRoot);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="artifactSourceName")
-      private final @Nullable Output<String> artifactSourceName;
+    private @Nullable Output<String> artifactSourceName;
 
-    public Output<String> artifactSourceName() {
-        return this.artifactSourceName == null ? Codegen.empty() : this.artifactSourceName;
+    public Optional<Output<String>> artifactSourceName() {
+        return Optional.ofNullable(this.artifactSourceName);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="authentication", required=true)
-      private final Output<SasAuthenticationArgs> authentication;
+    private Output<SasAuthenticationArgs> authentication;
 
     public Output<SasAuthenticationArgs> authentication() {
         return this.authentication;
@@ -55,10 +55,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sourceType", required=true)
-      private final Output<String> sourceType;
+    private Output<String> sourceType;
 
     public Output<String> sourceType() {
         return this.sourceType;
@@ -88,128 +88,111 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ArtifactSourceArgs(
-        @Nullable Output<String> artifactRoot,
-        @Nullable Output<String> artifactSourceName,
-        Output<SasAuthenticationArgs> authentication,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        Output<String> sourceType,
-        @Nullable Output<Map<String,String>> tags) {
-        this.artifactRoot = artifactRoot;
-        this.artifactSourceName = artifactSourceName;
-        this.authentication = Objects.requireNonNull(authentication, "expected parameter 'authentication' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sourceType = Objects.requireNonNull(sourceType, "expected parameter 'sourceType' to be non-null");
-        this.tags = tags;
-    }
+    private ArtifactSourceArgs() {}
 
-    private ArtifactSourceArgs() {
-        this.artifactRoot = Codegen.empty();
-        this.artifactSourceName = Codegen.empty();
-        this.authentication = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sourceType = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ArtifactSourceArgs(ArtifactSourceArgs $) {
+        this.artifactRoot = $.artifactRoot;
+        this.artifactSourceName = $.artifactSourceName;
+        this.authentication = $.authentication;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sourceType = $.sourceType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactRoot;
-        private @Nullable Output<String> artifactSourceName;
-        private Output<SasAuthenticationArgs> authentication;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private Output<String> sourceType;
-        private @Nullable Output<Map<String,String>> tags;
+        private ArtifactSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactSourceArgs();
         }
 
         public Builder(ArtifactSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactRoot = defaults.artifactRoot;
-    	      this.artifactSourceName = defaults.artifactSourceName;
-    	      this.authentication = defaults.authentication;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sourceType = defaults.sourceType;
-    	      this.tags = defaults.tags;
+            $ = new ArtifactSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactRoot(@Nullable Output<String> artifactRoot) {
-            this.artifactRoot = artifactRoot;
+            $.artifactRoot = artifactRoot;
             return this;
         }
-        public Builder artifactRoot(@Nullable String artifactRoot) {
-            this.artifactRoot = Codegen.ofNullable(artifactRoot);
-            return this;
+
+        public Builder artifactRoot(String artifactRoot) {
+            return artifactRoot(Output.of(artifactRoot));
         }
+
         public Builder artifactSourceName(@Nullable Output<String> artifactSourceName) {
-            this.artifactSourceName = artifactSourceName;
+            $.artifactSourceName = artifactSourceName;
             return this;
         }
-        public Builder artifactSourceName(@Nullable String artifactSourceName) {
-            this.artifactSourceName = Codegen.ofNullable(artifactSourceName);
-            return this;
+
+        public Builder artifactSourceName(String artifactSourceName) {
+            return artifactSourceName(Output.of(artifactSourceName));
         }
+
         public Builder authentication(Output<SasAuthenticationArgs> authentication) {
-            this.authentication = Objects.requireNonNull(authentication);
+            $.authentication = authentication;
             return this;
         }
+
         public Builder authentication(SasAuthenticationArgs authentication) {
-            this.authentication = Output.of(Objects.requireNonNull(authentication));
-            return this;
+            return authentication(Output.of(authentication));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sourceType(Output<String> sourceType) {
-            this.sourceType = Objects.requireNonNull(sourceType);
+            $.sourceType = sourceType;
             return this;
         }
+
         public Builder sourceType(String sourceType) {
-            this.sourceType = Output.of(Objects.requireNonNull(sourceType));
-            return this;
+            return sourceType(Output.of(sourceType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ArtifactSourceArgs build() {
-            return new ArtifactSourceArgs(artifactRoot, artifactSourceName, authentication, location, resourceGroupName, sourceType, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ArtifactSourceArgs build() {
+            $.authentication = Objects.requireNonNull($.authentication, "expected parameter 'authentication' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sourceType = Objects.requireNonNull($.sourceType, "expected parameter 'sourceType' to be non-null");
+            return $;
         }
     }
+
 }

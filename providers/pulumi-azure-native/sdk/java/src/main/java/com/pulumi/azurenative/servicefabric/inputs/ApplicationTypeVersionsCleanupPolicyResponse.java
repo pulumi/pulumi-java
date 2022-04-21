@@ -17,45 +17,45 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse extends com.pulu
      * 
      */
     @Import(name="maxUnusedVersionsToKeep", required=true)
-      private final Double maxUnusedVersionsToKeep;
+    private Double maxUnusedVersionsToKeep;
 
     public Double maxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;
     }
 
-    public ApplicationTypeVersionsCleanupPolicyResponse(Double maxUnusedVersionsToKeep) {
-        this.maxUnusedVersionsToKeep = Objects.requireNonNull(maxUnusedVersionsToKeep, "expected parameter 'maxUnusedVersionsToKeep' to be non-null");
-    }
+    private ApplicationTypeVersionsCleanupPolicyResponse() {}
 
-    private ApplicationTypeVersionsCleanupPolicyResponse() {
-        this.maxUnusedVersionsToKeep = null;
+    private ApplicationTypeVersionsCleanupPolicyResponse(ApplicationTypeVersionsCleanupPolicyResponse $) {
+        this.maxUnusedVersionsToKeep = $.maxUnusedVersionsToKeep;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationTypeVersionsCleanupPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double maxUnusedVersionsToKeep;
+        private ApplicationTypeVersionsCleanupPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationTypeVersionsCleanupPolicyResponse();
         }
 
         public Builder(ApplicationTypeVersionsCleanupPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxUnusedVersionsToKeep = defaults.maxUnusedVersionsToKeep;
+            $ = new ApplicationTypeVersionsCleanupPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxUnusedVersionsToKeep(Double maxUnusedVersionsToKeep) {
-            this.maxUnusedVersionsToKeep = Objects.requireNonNull(maxUnusedVersionsToKeep);
+            $.maxUnusedVersionsToKeep = maxUnusedVersionsToKeep;
             return this;
-        }        public ApplicationTypeVersionsCleanupPolicyResponse build() {
-            return new ApplicationTypeVersionsCleanupPolicyResponse(maxUnusedVersionsToKeep);
+        }
+
+        public ApplicationTypeVersionsCleanupPolicyResponse build() {
+            $.maxUnusedVersionsToKeep = Objects.requireNonNull($.maxUnusedVersionsToKeep, "expected parameter 'maxUnusedVersionsToKeep' to be non-null");
+            return $;
         }
     }
+
 }

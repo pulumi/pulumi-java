@@ -8,9 +8,9 @@ import com.pulumi.azurenative.machinelearningcompute.inputs.ServiceAuthConfigura
 import com.pulumi.azurenative.machinelearningcompute.inputs.SslConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="autoScale")
-      private final @Nullable Output<AutoScaleConfigurationArgs> autoScale;
+    private @Nullable Output<AutoScaleConfigurationArgs> autoScale;
 
-    public Output<AutoScaleConfigurationArgs> autoScale() {
-        return this.autoScale == null ? Codegen.empty() : this.autoScale;
+    public Optional<Output<AutoScaleConfigurationArgs>> autoScale() {
+        return Optional.ofNullable(this.autoScale);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="serviceAuth")
-      private final @Nullable Output<ServiceAuthConfigurationArgs> serviceAuth;
+    private @Nullable Output<ServiceAuthConfigurationArgs> serviceAuth;
 
-    public Output<ServiceAuthConfigurationArgs> serviceAuth() {
-        return this.serviceAuth == null ? Codegen.empty() : this.serviceAuth;
+    public Optional<Output<ServiceAuthConfigurationArgs>> serviceAuth() {
+        return Optional.ofNullable(this.serviceAuth);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="ssl")
-      private final @Nullable Output<SslConfigurationArgs> ssl;
+    private @Nullable Output<SslConfigurationArgs> ssl;
 
-    public Output<SslConfigurationArgs> ssl() {
-        return this.ssl == null ? Codegen.empty() : this.ssl;
+    public Optional<Output<SslConfigurationArgs>> ssl() {
+        return Optional.ofNullable(this.ssl);
     }
 
-    public GlobalServiceConfigurationArgs(
-        @Nullable Output<AutoScaleConfigurationArgs> autoScale,
-        @Nullable Output<String> etag,
-        @Nullable Output<ServiceAuthConfigurationArgs> serviceAuth,
-        @Nullable Output<SslConfigurationArgs> ssl) {
-        this.autoScale = autoScale;
-        this.etag = etag;
-        this.serviceAuth = serviceAuth;
-        this.ssl = ssl;
-    }
+    private GlobalServiceConfigurationArgs() {}
 
-    private GlobalServiceConfigurationArgs() {
-        this.autoScale = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.serviceAuth = Codegen.empty();
-        this.ssl = Codegen.empty();
+    private GlobalServiceConfigurationArgs(GlobalServiceConfigurationArgs $) {
+        this.autoScale = $.autoScale;
+        this.etag = $.etag;
+        this.serviceAuth = $.serviceAuth;
+        this.ssl = $.ssl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalServiceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoScaleConfigurationArgs> autoScale;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<ServiceAuthConfigurationArgs> serviceAuth;
-        private @Nullable Output<SslConfigurationArgs> ssl;
+        private GlobalServiceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalServiceConfigurationArgs();
         }
 
         public Builder(GlobalServiceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScale = defaults.autoScale;
-    	      this.etag = defaults.etag;
-    	      this.serviceAuth = defaults.serviceAuth;
-    	      this.ssl = defaults.ssl;
+            $ = new GlobalServiceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScale(@Nullable Output<AutoScaleConfigurationArgs> autoScale) {
-            this.autoScale = autoScale;
+            $.autoScale = autoScale;
             return this;
         }
-        public Builder autoScale(@Nullable AutoScaleConfigurationArgs autoScale) {
-            this.autoScale = Codegen.ofNullable(autoScale);
-            return this;
+
+        public Builder autoScale(AutoScaleConfigurationArgs autoScale) {
+            return autoScale(Output.of(autoScale));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder serviceAuth(@Nullable Output<ServiceAuthConfigurationArgs> serviceAuth) {
-            this.serviceAuth = serviceAuth;
+            $.serviceAuth = serviceAuth;
             return this;
         }
-        public Builder serviceAuth(@Nullable ServiceAuthConfigurationArgs serviceAuth) {
-            this.serviceAuth = Codegen.ofNullable(serviceAuth);
-            return this;
+
+        public Builder serviceAuth(ServiceAuthConfigurationArgs serviceAuth) {
+            return serviceAuth(Output.of(serviceAuth));
         }
+
         public Builder ssl(@Nullable Output<SslConfigurationArgs> ssl) {
-            this.ssl = ssl;
+            $.ssl = ssl;
             return this;
         }
-        public Builder ssl(@Nullable SslConfigurationArgs ssl) {
-            this.ssl = Codegen.ofNullable(ssl);
-            return this;
-        }        public GlobalServiceConfigurationArgs build() {
-            return new GlobalServiceConfigurationArgs(autoScale, etag, serviceAuth, ssl);
+
+        public Builder ssl(SslConfigurationArgs ssl) {
+            return ssl(Output.of(ssl));
+        }
+
+        public GlobalServiceConfigurationArgs build() {
+            return $;
         }
     }
+
 }

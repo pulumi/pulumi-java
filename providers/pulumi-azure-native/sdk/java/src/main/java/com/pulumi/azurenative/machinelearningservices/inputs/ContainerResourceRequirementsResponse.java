@@ -25,10 +25,10 @@ public final class ContainerResourceRequirementsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Double cpu;
+    private @Nullable Double cpu;
 
     public Optional<Double> cpu() {
-        return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContainerResourceRequirementsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="cpuLimit")
-      private final @Nullable Double cpuLimit;
+    private @Nullable Double cpuLimit;
 
     public Optional<Double> cpuLimit() {
-        return this.cpuLimit == null ? Optional.empty() : Optional.ofNullable(this.cpuLimit);
+        return Optional.ofNullable(this.cpuLimit);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ContainerResourceRequirementsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="fpga")
-      private final @Nullable Integer fpga;
+    private @Nullable Integer fpga;
 
     public Optional<Integer> fpga() {
-        return this.fpga == null ? Optional.empty() : Optional.ofNullable(this.fpga);
+        return Optional.ofNullable(this.fpga);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ContainerResourceRequirementsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="gpu")
-      private final @Nullable Integer gpu;
+    private @Nullable Integer gpu;
 
     public Optional<Integer> gpu() {
-        return this.gpu == null ? Optional.empty() : Optional.ofNullable(this.gpu);
+        return Optional.ofNullable(this.gpu);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ContainerResourceRequirementsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="memoryInGB")
-      private final @Nullable Double memoryInGB;
+    private @Nullable Double memoryInGB;
 
     public Optional<Double> memoryInGB() {
-        return this.memoryInGB == null ? Optional.empty() : Optional.ofNullable(this.memoryInGB);
+        return Optional.ofNullable(this.memoryInGB);
     }
 
     /**
@@ -83,91 +83,74 @@ public final class ContainerResourceRequirementsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="memoryInGBLimit")
-      private final @Nullable Double memoryInGBLimit;
+    private @Nullable Double memoryInGBLimit;
 
     public Optional<Double> memoryInGBLimit() {
-        return this.memoryInGBLimit == null ? Optional.empty() : Optional.ofNullable(this.memoryInGBLimit);
+        return Optional.ofNullable(this.memoryInGBLimit);
     }
 
-    public ContainerResourceRequirementsResponse(
-        @Nullable Double cpu,
-        @Nullable Double cpuLimit,
-        @Nullable Integer fpga,
-        @Nullable Integer gpu,
-        @Nullable Double memoryInGB,
-        @Nullable Double memoryInGBLimit) {
-        this.cpu = cpu;
-        this.cpuLimit = cpuLimit;
-        this.fpga = fpga;
-        this.gpu = gpu;
-        this.memoryInGB = memoryInGB;
-        this.memoryInGBLimit = memoryInGBLimit;
-    }
+    private ContainerResourceRequirementsResponse() {}
 
-    private ContainerResourceRequirementsResponse() {
-        this.cpu = null;
-        this.cpuLimit = null;
-        this.fpga = null;
-        this.gpu = null;
-        this.memoryInGB = null;
-        this.memoryInGBLimit = null;
+    private ContainerResourceRequirementsResponse(ContainerResourceRequirementsResponse $) {
+        this.cpu = $.cpu;
+        this.cpuLimit = $.cpuLimit;
+        this.fpga = $.fpga;
+        this.gpu = $.gpu;
+        this.memoryInGB = $.memoryInGB;
+        this.memoryInGBLimit = $.memoryInGBLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerResourceRequirementsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double cpu;
-        private @Nullable Double cpuLimit;
-        private @Nullable Integer fpga;
-        private @Nullable Integer gpu;
-        private @Nullable Double memoryInGB;
-        private @Nullable Double memoryInGBLimit;
+        private ContainerResourceRequirementsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerResourceRequirementsResponse();
         }
 
         public Builder(ContainerResourceRequirementsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.cpuLimit = defaults.cpuLimit;
-    	      this.fpga = defaults.fpga;
-    	      this.gpu = defaults.gpu;
-    	      this.memoryInGB = defaults.memoryInGB;
-    	      this.memoryInGBLimit = defaults.memoryInGBLimit;
+            $ = new ContainerResourceRequirementsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
+
         public Builder cpuLimit(@Nullable Double cpuLimit) {
-            this.cpuLimit = cpuLimit;
+            $.cpuLimit = cpuLimit;
             return this;
         }
+
         public Builder fpga(@Nullable Integer fpga) {
-            this.fpga = fpga;
+            $.fpga = fpga;
             return this;
         }
+
         public Builder gpu(@Nullable Integer gpu) {
-            this.gpu = gpu;
+            $.gpu = gpu;
             return this;
         }
+
         public Builder memoryInGB(@Nullable Double memoryInGB) {
-            this.memoryInGB = memoryInGB;
+            $.memoryInGB = memoryInGB;
             return this;
         }
+
         public Builder memoryInGBLimit(@Nullable Double memoryInGBLimit) {
-            this.memoryInGBLimit = memoryInGBLimit;
+            $.memoryInGBLimit = memoryInGBLimit;
             return this;
-        }        public ContainerResourceRequirementsResponse build() {
-            return new ContainerResourceRequirementsResponse(cpu, cpuLimit, fpga, gpu, memoryInGB, memoryInGBLimit);
+        }
+
+        public ContainerResourceRequirementsResponse build() {
+            return $;
         }
     }
+
 }

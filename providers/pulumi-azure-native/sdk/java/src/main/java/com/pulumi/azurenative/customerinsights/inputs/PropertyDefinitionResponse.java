@@ -28,10 +28,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="arrayValueSeparator")
-      private final @Nullable String arrayValueSeparator;
+    private @Nullable String arrayValueSeparator;
 
     public Optional<String> arrayValueSeparator() {
-        return this.arrayValueSeparator == null ? Optional.empty() : Optional.ofNullable(this.arrayValueSeparator);
+        return Optional.ofNullable(this.arrayValueSeparator);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataSourcePrecedenceRules", required=true)
-      private final List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules;
+    private List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules;
 
     public List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules() {
         return this.dataSourcePrecedenceRules;
@@ -50,10 +50,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enumValidValues")
-      private final @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues;
+    private @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues;
 
-    public List<ProfileEnumValidValuesFormatResponse> enumValidValues() {
-        return this.enumValidValues == null ? List.of() : this.enumValidValues;
+    public Optional<List<ProfileEnumValidValuesFormatResponse>> enumValidValues() {
+        return Optional.ofNullable(this.enumValidValues);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fieldName", required=true)
-      private final String fieldName;
+    private String fieldName;
 
     public String fieldName() {
         return this.fieldName;
@@ -72,7 +72,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fieldType", required=true)
-      private final String fieldType;
+    private String fieldType;
 
     public String fieldType() {
         return this.fieldType;
@@ -83,10 +83,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isArray")
-      private final @Nullable Boolean isArray;
+    private @Nullable Boolean isArray;
 
     public Optional<Boolean> isArray() {
-        return this.isArray == null ? Optional.empty() : Optional.ofNullable(this.isArray);
+        return Optional.ofNullable(this.isArray);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isAvailableInGraph")
-      private final @Nullable Boolean isAvailableInGraph;
+    private @Nullable Boolean isAvailableInGraph;
 
     public Optional<Boolean> isAvailableInGraph() {
-        return this.isAvailableInGraph == null ? Optional.empty() : Optional.ofNullable(this.isAvailableInGraph);
+        return Optional.ofNullable(this.isAvailableInGraph);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isEnum")
-      private final @Nullable Boolean isEnum;
+    private @Nullable Boolean isEnum;
 
     public Optional<Boolean> isEnum() {
-        return this.isEnum == null ? Optional.empty() : Optional.ofNullable(this.isEnum);
+        return Optional.ofNullable(this.isEnum);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isFlagEnum")
-      private final @Nullable Boolean isFlagEnum;
+    private @Nullable Boolean isFlagEnum;
 
     public Optional<Boolean> isFlagEnum() {
-        return this.isFlagEnum == null ? Optional.empty() : Optional.ofNullable(this.isFlagEnum);
+        return Optional.ofNullable(this.isFlagEnum);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isImage")
-      private final @Nullable Boolean isImage;
+    private @Nullable Boolean isImage;
 
     public Optional<Boolean> isImage() {
-        return this.isImage == null ? Optional.empty() : Optional.ofNullable(this.isImage);
+        return Optional.ofNullable(this.isImage);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isLocalizedString")
-      private final @Nullable Boolean isLocalizedString;
+    private @Nullable Boolean isLocalizedString;
 
     public Optional<Boolean> isLocalizedString() {
-        return this.isLocalizedString == null ? Optional.empty() : Optional.ofNullable(this.isLocalizedString);
+        return Optional.ofNullable(this.isLocalizedString);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isName")
-      private final @Nullable Boolean isName;
+    private @Nullable Boolean isName;
 
     public Optional<Boolean> isName() {
-        return this.isName == null ? Optional.empty() : Optional.ofNullable(this.isName);
+        return Optional.ofNullable(this.isName);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isRequired")
-      private final @Nullable Boolean isRequired;
+    private @Nullable Boolean isRequired;
 
     public Optional<Boolean> isRequired() {
-        return this.isRequired == null ? Optional.empty() : Optional.ofNullable(this.isRequired);
+        return Optional.ofNullable(this.isRequired);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maxLength")
-      private final @Nullable Integer maxLength;
+    private @Nullable Integer maxLength;
 
     public Optional<Integer> maxLength() {
-        return this.maxLength == null ? Optional.empty() : Optional.ofNullable(this.maxLength);
+        return Optional.ofNullable(this.maxLength);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="propertyId")
-      private final @Nullable String propertyId;
+    private @Nullable String propertyId;
 
     public Optional<String> propertyId() {
-        return this.propertyId == null ? Optional.empty() : Optional.ofNullable(this.propertyId);
+        return Optional.ofNullable(this.propertyId);
     }
 
     /**
@@ -193,187 +193,145 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="schemaItemPropLink")
-      private final @Nullable String schemaItemPropLink;
+    private @Nullable String schemaItemPropLink;
 
     public Optional<String> schemaItemPropLink() {
-        return this.schemaItemPropLink == null ? Optional.empty() : Optional.ofNullable(this.schemaItemPropLink);
+        return Optional.ofNullable(this.schemaItemPropLink);
     }
 
-    public PropertyDefinitionResponse(
-        @Nullable String arrayValueSeparator,
-        List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules,
-        @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues,
-        String fieldName,
-        String fieldType,
-        @Nullable Boolean isArray,
-        @Nullable Boolean isAvailableInGraph,
-        @Nullable Boolean isEnum,
-        @Nullable Boolean isFlagEnum,
-        @Nullable Boolean isImage,
-        @Nullable Boolean isLocalizedString,
-        @Nullable Boolean isName,
-        @Nullable Boolean isRequired,
-        @Nullable Integer maxLength,
-        @Nullable String propertyId,
-        @Nullable String schemaItemPropLink) {
-        this.arrayValueSeparator = arrayValueSeparator;
-        this.dataSourcePrecedenceRules = Objects.requireNonNull(dataSourcePrecedenceRules, "expected parameter 'dataSourcePrecedenceRules' to be non-null");
-        this.enumValidValues = enumValidValues;
-        this.fieldName = Objects.requireNonNull(fieldName, "expected parameter 'fieldName' to be non-null");
-        this.fieldType = Objects.requireNonNull(fieldType, "expected parameter 'fieldType' to be non-null");
-        this.isArray = isArray;
-        this.isAvailableInGraph = isAvailableInGraph;
-        this.isEnum = isEnum;
-        this.isFlagEnum = isFlagEnum;
-        this.isImage = isImage;
-        this.isLocalizedString = isLocalizedString;
-        this.isName = isName;
-        this.isRequired = isRequired;
-        this.maxLength = maxLength;
-        this.propertyId = propertyId;
-        this.schemaItemPropLink = schemaItemPropLink;
-    }
+    private PropertyDefinitionResponse() {}
 
-    private PropertyDefinitionResponse() {
-        this.arrayValueSeparator = null;
-        this.dataSourcePrecedenceRules = List.of();
-        this.enumValidValues = List.of();
-        this.fieldName = null;
-        this.fieldType = null;
-        this.isArray = null;
-        this.isAvailableInGraph = null;
-        this.isEnum = null;
-        this.isFlagEnum = null;
-        this.isImage = null;
-        this.isLocalizedString = null;
-        this.isName = null;
-        this.isRequired = null;
-        this.maxLength = null;
-        this.propertyId = null;
-        this.schemaItemPropLink = null;
+    private PropertyDefinitionResponse(PropertyDefinitionResponse $) {
+        this.arrayValueSeparator = $.arrayValueSeparator;
+        this.dataSourcePrecedenceRules = $.dataSourcePrecedenceRules;
+        this.enumValidValues = $.enumValidValues;
+        this.fieldName = $.fieldName;
+        this.fieldType = $.fieldType;
+        this.isArray = $.isArray;
+        this.isAvailableInGraph = $.isAvailableInGraph;
+        this.isEnum = $.isEnum;
+        this.isFlagEnum = $.isFlagEnum;
+        this.isImage = $.isImage;
+        this.isLocalizedString = $.isLocalizedString;
+        this.isName = $.isName;
+        this.isRequired = $.isRequired;
+        this.maxLength = $.maxLength;
+        this.propertyId = $.propertyId;
+        this.schemaItemPropLink = $.schemaItemPropLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropertyDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arrayValueSeparator;
-        private List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules;
-        private @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues;
-        private String fieldName;
-        private String fieldType;
-        private @Nullable Boolean isArray;
-        private @Nullable Boolean isAvailableInGraph;
-        private @Nullable Boolean isEnum;
-        private @Nullable Boolean isFlagEnum;
-        private @Nullable Boolean isImage;
-        private @Nullable Boolean isLocalizedString;
-        private @Nullable Boolean isName;
-        private @Nullable Boolean isRequired;
-        private @Nullable Integer maxLength;
-        private @Nullable String propertyId;
-        private @Nullable String schemaItemPropLink;
+        private PropertyDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropertyDefinitionResponse();
         }
 
         public Builder(PropertyDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arrayValueSeparator = defaults.arrayValueSeparator;
-    	      this.dataSourcePrecedenceRules = defaults.dataSourcePrecedenceRules;
-    	      this.enumValidValues = defaults.enumValidValues;
-    	      this.fieldName = defaults.fieldName;
-    	      this.fieldType = defaults.fieldType;
-    	      this.isArray = defaults.isArray;
-    	      this.isAvailableInGraph = defaults.isAvailableInGraph;
-    	      this.isEnum = defaults.isEnum;
-    	      this.isFlagEnum = defaults.isFlagEnum;
-    	      this.isImage = defaults.isImage;
-    	      this.isLocalizedString = defaults.isLocalizedString;
-    	      this.isName = defaults.isName;
-    	      this.isRequired = defaults.isRequired;
-    	      this.maxLength = defaults.maxLength;
-    	      this.propertyId = defaults.propertyId;
-    	      this.schemaItemPropLink = defaults.schemaItemPropLink;
+            $ = new PropertyDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arrayValueSeparator(@Nullable String arrayValueSeparator) {
-            this.arrayValueSeparator = arrayValueSeparator;
+            $.arrayValueSeparator = arrayValueSeparator;
             return this;
         }
+
         public Builder dataSourcePrecedenceRules(List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules) {
-            this.dataSourcePrecedenceRules = Objects.requireNonNull(dataSourcePrecedenceRules);
+            $.dataSourcePrecedenceRules = dataSourcePrecedenceRules;
             return this;
         }
+
         public Builder dataSourcePrecedenceRules(DataSourcePrecedenceResponse... dataSourcePrecedenceRules) {
             return dataSourcePrecedenceRules(List.of(dataSourcePrecedenceRules));
         }
+
         public Builder enumValidValues(@Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues) {
-            this.enumValidValues = enumValidValues;
+            $.enumValidValues = enumValidValues;
             return this;
         }
+
         public Builder enumValidValues(ProfileEnumValidValuesFormatResponse... enumValidValues) {
             return enumValidValues(List.of(enumValidValues));
         }
+
         public Builder fieldName(String fieldName) {
-            this.fieldName = Objects.requireNonNull(fieldName);
+            $.fieldName = fieldName;
             return this;
         }
+
         public Builder fieldType(String fieldType) {
-            this.fieldType = Objects.requireNonNull(fieldType);
+            $.fieldType = fieldType;
             return this;
         }
+
         public Builder isArray(@Nullable Boolean isArray) {
-            this.isArray = isArray;
+            $.isArray = isArray;
             return this;
         }
+
         public Builder isAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
-            this.isAvailableInGraph = isAvailableInGraph;
+            $.isAvailableInGraph = isAvailableInGraph;
             return this;
         }
+
         public Builder isEnum(@Nullable Boolean isEnum) {
-            this.isEnum = isEnum;
+            $.isEnum = isEnum;
             return this;
         }
+
         public Builder isFlagEnum(@Nullable Boolean isFlagEnum) {
-            this.isFlagEnum = isFlagEnum;
+            $.isFlagEnum = isFlagEnum;
             return this;
         }
+
         public Builder isImage(@Nullable Boolean isImage) {
-            this.isImage = isImage;
+            $.isImage = isImage;
             return this;
         }
+
         public Builder isLocalizedString(@Nullable Boolean isLocalizedString) {
-            this.isLocalizedString = isLocalizedString;
+            $.isLocalizedString = isLocalizedString;
             return this;
         }
+
         public Builder isName(@Nullable Boolean isName) {
-            this.isName = isName;
+            $.isName = isName;
             return this;
         }
+
         public Builder isRequired(@Nullable Boolean isRequired) {
-            this.isRequired = isRequired;
+            $.isRequired = isRequired;
             return this;
         }
+
         public Builder maxLength(@Nullable Integer maxLength) {
-            this.maxLength = maxLength;
+            $.maxLength = maxLength;
             return this;
         }
+
         public Builder propertyId(@Nullable String propertyId) {
-            this.propertyId = propertyId;
+            $.propertyId = propertyId;
             return this;
         }
+
         public Builder schemaItemPropLink(@Nullable String schemaItemPropLink) {
-            this.schemaItemPropLink = schemaItemPropLink;
+            $.schemaItemPropLink = schemaItemPropLink;
             return this;
-        }        public PropertyDefinitionResponse build() {
-            return new PropertyDefinitionResponse(arrayValueSeparator, dataSourcePrecedenceRules, enumValidValues, fieldName, fieldType, isArray, isAvailableInGraph, isEnum, isFlagEnum, isImage, isLocalizedString, isName, isRequired, maxLength, propertyId, schemaItemPropLink);
+        }
+
+        public PropertyDefinitionResponse build() {
+            $.dataSourcePrecedenceRules = Objects.requireNonNull($.dataSourcePrecedenceRules, "expected parameter 'dataSourcePrecedenceRules' to be non-null");
+            $.fieldName = Objects.requireNonNull($.fieldName, "expected parameter 'fieldName' to be non-null");
+            $.fieldType = Objects.requireNonNull($.fieldType, "expected parameter 'fieldType' to be non-null");
+            return $;
         }
     }
+
 }

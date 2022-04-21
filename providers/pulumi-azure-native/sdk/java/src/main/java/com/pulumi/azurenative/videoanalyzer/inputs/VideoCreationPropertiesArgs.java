@@ -5,9 +5,9 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VideoCreationPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VideoCreationPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="retentionPeriod")
-      private final @Nullable Output<String> retentionPeriod;
+    private @Nullable Output<String> retentionPeriod;
 
-    public Output<String> retentionPeriod() {
-        return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
+    public Optional<Output<String>> retentionPeriod() {
+        return Optional.ofNullable(this.retentionPeriod);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VideoCreationPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="segmentLength")
-      private final @Nullable Output<String> segmentLength;
+    private @Nullable Output<String> segmentLength;
 
-    public Output<String> segmentLength() {
-        return this.segmentLength == null ? Codegen.empty() : this.segmentLength;
+    public Optional<Output<String>> segmentLength() {
+        return Optional.ofNullable(this.segmentLength);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class VideoCreationPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public VideoCreationPropertiesArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> retentionPeriod,
-        @Nullable Output<String> segmentLength,
-        @Nullable Output<String> title) {
-        this.description = description;
-        this.retentionPeriod = retentionPeriod;
-        this.segmentLength = segmentLength;
-        this.title = title;
-    }
+    private VideoCreationPropertiesArgs() {}
 
-    private VideoCreationPropertiesArgs() {
-        this.description = Codegen.empty();
-        this.retentionPeriod = Codegen.empty();
-        this.segmentLength = Codegen.empty();
-        this.title = Codegen.empty();
+    private VideoCreationPropertiesArgs(VideoCreationPropertiesArgs $) {
+        this.description = $.description;
+        this.retentionPeriod = $.retentionPeriod;
+        this.segmentLength = $.segmentLength;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoCreationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> retentionPeriod;
-        private @Nullable Output<String> segmentLength;
-        private @Nullable Output<String> title;
+        private VideoCreationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoCreationPropertiesArgs();
         }
 
         public Builder(VideoCreationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.retentionPeriod = defaults.retentionPeriod;
-    	      this.segmentLength = defaults.segmentLength;
-    	      this.title = defaults.title;
+            $ = new VideoCreationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder retentionPeriod(@Nullable Output<String> retentionPeriod) {
-            this.retentionPeriod = retentionPeriod;
+            $.retentionPeriod = retentionPeriod;
             return this;
         }
-        public Builder retentionPeriod(@Nullable String retentionPeriod) {
-            this.retentionPeriod = Codegen.ofNullable(retentionPeriod);
-            return this;
+
+        public Builder retentionPeriod(String retentionPeriod) {
+            return retentionPeriod(Output.of(retentionPeriod));
         }
+
         public Builder segmentLength(@Nullable Output<String> segmentLength) {
-            this.segmentLength = segmentLength;
+            $.segmentLength = segmentLength;
             return this;
         }
-        public Builder segmentLength(@Nullable String segmentLength) {
-            this.segmentLength = Codegen.ofNullable(segmentLength);
-            return this;
+
+        public Builder segmentLength(String segmentLength) {
+            return segmentLength(Output.of(segmentLength));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public VideoCreationPropertiesArgs build() {
-            return new VideoCreationPropertiesArgs(description, retentionPeriod, segmentLength, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public VideoCreationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

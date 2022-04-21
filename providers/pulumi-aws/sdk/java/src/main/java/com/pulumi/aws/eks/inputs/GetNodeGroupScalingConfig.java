@@ -17,7 +17,7 @@ public final class GetNodeGroupScalingConfig extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="desiredSize", required=true)
-      private final Integer desiredSize;
+    private Integer desiredSize;
 
     public Integer desiredSize() {
         return this.desiredSize;
@@ -28,7 +28,7 @@ public final class GetNodeGroupScalingConfig extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxSize", required=true)
-      private final Integer maxSize;
+    private Integer maxSize;
 
     public Integer maxSize() {
         return this.maxSize;
@@ -39,64 +39,59 @@ public final class GetNodeGroupScalingConfig extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="minSize", required=true)
-      private final Integer minSize;
+    private Integer minSize;
 
     public Integer minSize() {
         return this.minSize;
     }
 
-    public GetNodeGroupScalingConfig(
-        Integer desiredSize,
-        Integer maxSize,
-        Integer minSize) {
-        this.desiredSize = Objects.requireNonNull(desiredSize, "expected parameter 'desiredSize' to be non-null");
-        this.maxSize = Objects.requireNonNull(maxSize, "expected parameter 'maxSize' to be non-null");
-        this.minSize = Objects.requireNonNull(minSize, "expected parameter 'minSize' to be non-null");
-    }
+    private GetNodeGroupScalingConfig() {}
 
-    private GetNodeGroupScalingConfig() {
-        this.desiredSize = null;
-        this.maxSize = null;
-        this.minSize = null;
+    private GetNodeGroupScalingConfig(GetNodeGroupScalingConfig $) {
+        this.desiredSize = $.desiredSize;
+        this.maxSize = $.maxSize;
+        this.minSize = $.minSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodeGroupScalingConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer desiredSize;
-        private Integer maxSize;
-        private Integer minSize;
+        private GetNodeGroupScalingConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodeGroupScalingConfig();
         }
 
         public Builder(GetNodeGroupScalingConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desiredSize = defaults.desiredSize;
-    	      this.maxSize = defaults.maxSize;
-    	      this.minSize = defaults.minSize;
+            $ = new GetNodeGroupScalingConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder desiredSize(Integer desiredSize) {
-            this.desiredSize = Objects.requireNonNull(desiredSize);
+            $.desiredSize = desiredSize;
             return this;
         }
+
         public Builder maxSize(Integer maxSize) {
-            this.maxSize = Objects.requireNonNull(maxSize);
+            $.maxSize = maxSize;
             return this;
         }
+
         public Builder minSize(Integer minSize) {
-            this.minSize = Objects.requireNonNull(minSize);
+            $.minSize = minSize;
             return this;
-        }        public GetNodeGroupScalingConfig build() {
-            return new GetNodeGroupScalingConfig(desiredSize, maxSize, minSize);
+        }
+
+        public GetNodeGroupScalingConfig build() {
+            $.desiredSize = Objects.requireNonNull($.desiredSize, "expected parameter 'desiredSize' to be non-null");
+            $.maxSize = Objects.requireNonNull($.maxSize, "expected parameter 'maxSize' to be non-null");
+            $.minSize = Objects.requireNonNull($.minSize, "expected parameter 'minSize' to be non-null");
+            return $;
         }
     }
+
 }

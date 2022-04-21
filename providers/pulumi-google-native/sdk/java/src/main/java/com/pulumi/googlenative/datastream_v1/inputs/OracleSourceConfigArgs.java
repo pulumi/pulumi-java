@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="excludeObjects")
-      private final @Nullable Output<OracleRdbmsArgs> excludeObjects;
+    private @Nullable Output<OracleRdbmsArgs> excludeObjects;
 
-    public Output<OracleRdbmsArgs> excludeObjects() {
-        return this.excludeObjects == null ? Codegen.empty() : this.excludeObjects;
+    public Optional<Output<OracleRdbmsArgs>> excludeObjects() {
+        return Optional.ofNullable(this.excludeObjects);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="includeObjects")
-      private final @Nullable Output<OracleRdbmsArgs> includeObjects;
+    private @Nullable Output<OracleRdbmsArgs> includeObjects;
 
-    public Output<OracleRdbmsArgs> includeObjects() {
-        return this.includeObjects == null ? Codegen.empty() : this.includeObjects;
+    public Optional<Output<OracleRdbmsArgs>> includeObjects() {
+        return Optional.ofNullable(this.includeObjects);
     }
 
-    public OracleSourceConfigArgs(
-        @Nullable Output<OracleRdbmsArgs> excludeObjects,
-        @Nullable Output<OracleRdbmsArgs> includeObjects) {
-        this.excludeObjects = excludeObjects;
-        this.includeObjects = includeObjects;
-    }
+    private OracleSourceConfigArgs() {}
 
-    private OracleSourceConfigArgs() {
-        this.excludeObjects = Codegen.empty();
-        this.includeObjects = Codegen.empty();
+    private OracleSourceConfigArgs(OracleSourceConfigArgs $) {
+        this.excludeObjects = $.excludeObjects;
+        this.includeObjects = $.includeObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleSourceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OracleRdbmsArgs> excludeObjects;
-        private @Nullable Output<OracleRdbmsArgs> includeObjects;
+        private OracleSourceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleSourceConfigArgs();
         }
 
         public Builder(OracleSourceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludeObjects = defaults.excludeObjects;
-    	      this.includeObjects = defaults.includeObjects;
+            $ = new OracleSourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludeObjects(@Nullable Output<OracleRdbmsArgs> excludeObjects) {
-            this.excludeObjects = excludeObjects;
+            $.excludeObjects = excludeObjects;
             return this;
         }
-        public Builder excludeObjects(@Nullable OracleRdbmsArgs excludeObjects) {
-            this.excludeObjects = Codegen.ofNullable(excludeObjects);
-            return this;
+
+        public Builder excludeObjects(OracleRdbmsArgs excludeObjects) {
+            return excludeObjects(Output.of(excludeObjects));
         }
+
         public Builder includeObjects(@Nullable Output<OracleRdbmsArgs> includeObjects) {
-            this.includeObjects = includeObjects;
+            $.includeObjects = includeObjects;
             return this;
         }
-        public Builder includeObjects(@Nullable OracleRdbmsArgs includeObjects) {
-            this.includeObjects = Codegen.ofNullable(includeObjects);
-            return this;
-        }        public OracleSourceConfigArgs build() {
-            return new OracleSourceConfigArgs(excludeObjects, includeObjects);
+
+        public Builder includeObjects(OracleRdbmsArgs includeObjects) {
+            return includeObjects(Output.of(includeObjects));
+        }
+
+        public OracleSourceConfigArgs build() {
+            return $;
         }
     }
+
 }

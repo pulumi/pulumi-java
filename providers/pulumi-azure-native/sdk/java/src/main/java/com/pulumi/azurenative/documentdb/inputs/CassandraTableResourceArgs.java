@@ -6,10 +6,10 @@ package com.pulumi.azurenative.documentdb.inputs;
 import com.pulumi.azurenative.documentdb.inputs.CassandraSchemaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="analyticalStorageTtl")
-      private final @Nullable Output<Integer> analyticalStorageTtl;
+    private @Nullable Output<Integer> analyticalStorageTtl;
 
-    public Output<Integer> analyticalStorageTtl() {
-        return this.analyticalStorageTtl == null ? Codegen.empty() : this.analyticalStorageTtl;
+    public Optional<Output<Integer>> analyticalStorageTtl() {
+        return Optional.ofNullable(this.analyticalStorageTtl);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="defaultTtl")
-      private final @Nullable Output<Integer> defaultTtl;
+    private @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> defaultTtl() {
-        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
+    public Optional<Output<Integer>> defaultTtl() {
+        return Optional.ofNullable(this.defaultTtl);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -59,89 +59,79 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<CassandraSchemaArgs> schema;
+    private @Nullable Output<CassandraSchemaArgs> schema;
 
-    public Output<CassandraSchemaArgs> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<CassandraSchemaArgs>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
-    public CassandraTableResourceArgs(
-        @Nullable Output<Integer> analyticalStorageTtl,
-        @Nullable Output<Integer> defaultTtl,
-        Output<String> id,
-        @Nullable Output<CassandraSchemaArgs> schema) {
-        this.analyticalStorageTtl = analyticalStorageTtl;
-        this.defaultTtl = defaultTtl;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.schema = schema;
-    }
+    private CassandraTableResourceArgs() {}
 
-    private CassandraTableResourceArgs() {
-        this.analyticalStorageTtl = Codegen.empty();
-        this.defaultTtl = Codegen.empty();
-        this.id = Codegen.empty();
-        this.schema = Codegen.empty();
+    private CassandraTableResourceArgs(CassandraTableResourceArgs $) {
+        this.analyticalStorageTtl = $.analyticalStorageTtl;
+        this.defaultTtl = $.defaultTtl;
+        this.id = $.id;
+        this.schema = $.schema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CassandraTableResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> analyticalStorageTtl;
-        private @Nullable Output<Integer> defaultTtl;
-        private Output<String> id;
-        private @Nullable Output<CassandraSchemaArgs> schema;
+        private CassandraTableResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CassandraTableResourceArgs();
         }
 
         public Builder(CassandraTableResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyticalStorageTtl = defaults.analyticalStorageTtl;
-    	      this.defaultTtl = defaults.defaultTtl;
-    	      this.id = defaults.id;
-    	      this.schema = defaults.schema;
+            $ = new CassandraTableResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analyticalStorageTtl(@Nullable Output<Integer> analyticalStorageTtl) {
-            this.analyticalStorageTtl = analyticalStorageTtl;
+            $.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
-        public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
-            this.analyticalStorageTtl = Codegen.ofNullable(analyticalStorageTtl);
-            return this;
+
+        public Builder analyticalStorageTtl(Integer analyticalStorageTtl) {
+            return analyticalStorageTtl(Output.of(analyticalStorageTtl));
         }
+
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
-            this.defaultTtl = defaultTtl;
+            $.defaultTtl = defaultTtl;
             return this;
         }
-        public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Codegen.ofNullable(defaultTtl);
-            return this;
+
+        public Builder defaultTtl(Integer defaultTtl) {
+            return defaultTtl(Output.of(defaultTtl));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder schema(@Nullable Output<CassandraSchemaArgs> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable CassandraSchemaArgs schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
-        }        public CassandraTableResourceArgs build() {
-            return new CassandraTableResourceArgs(analyticalStorageTtl, defaultTtl, id, schema);
+
+        public Builder schema(CassandraSchemaArgs schema) {
+            return schema(Output.of(schema));
+        }
+
+        public CassandraTableResourceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

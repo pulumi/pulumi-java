@@ -5,9 +5,9 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.ExecStepConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ExecStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linuxExecStepConfig")
-      private final @Nullable Output<ExecStepConfigArgs> linuxExecStepConfig;
+    private @Nullable Output<ExecStepConfigArgs> linuxExecStepConfig;
 
-    public Output<ExecStepConfigArgs> linuxExecStepConfig() {
-        return this.linuxExecStepConfig == null ? Codegen.empty() : this.linuxExecStepConfig;
+    public Optional<Output<ExecStepConfigArgs>> linuxExecStepConfig() {
+        return Optional.ofNullable(this.linuxExecStepConfig);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ExecStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowsExecStepConfig")
-      private final @Nullable Output<ExecStepConfigArgs> windowsExecStepConfig;
+    private @Nullable Output<ExecStepConfigArgs> windowsExecStepConfig;
 
-    public Output<ExecStepConfigArgs> windowsExecStepConfig() {
-        return this.windowsExecStepConfig == null ? Codegen.empty() : this.windowsExecStepConfig;
+    public Optional<Output<ExecStepConfigArgs>> windowsExecStepConfig() {
+        return Optional.ofNullable(this.windowsExecStepConfig);
     }
 
-    public ExecStepArgs(
-        @Nullable Output<ExecStepConfigArgs> linuxExecStepConfig,
-        @Nullable Output<ExecStepConfigArgs> windowsExecStepConfig) {
-        this.linuxExecStepConfig = linuxExecStepConfig;
-        this.windowsExecStepConfig = windowsExecStepConfig;
-    }
+    private ExecStepArgs() {}
 
-    private ExecStepArgs() {
-        this.linuxExecStepConfig = Codegen.empty();
-        this.windowsExecStepConfig = Codegen.empty();
+    private ExecStepArgs(ExecStepArgs $) {
+        this.linuxExecStepConfig = $.linuxExecStepConfig;
+        this.windowsExecStepConfig = $.windowsExecStepConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExecStepConfigArgs> linuxExecStepConfig;
-        private @Nullable Output<ExecStepConfigArgs> windowsExecStepConfig;
+        private ExecStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecStepArgs();
         }
 
         public Builder(ExecStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linuxExecStepConfig = defaults.linuxExecStepConfig;
-    	      this.windowsExecStepConfig = defaults.windowsExecStepConfig;
+            $ = new ExecStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linuxExecStepConfig(@Nullable Output<ExecStepConfigArgs> linuxExecStepConfig) {
-            this.linuxExecStepConfig = linuxExecStepConfig;
+            $.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
-        public Builder linuxExecStepConfig(@Nullable ExecStepConfigArgs linuxExecStepConfig) {
-            this.linuxExecStepConfig = Codegen.ofNullable(linuxExecStepConfig);
-            return this;
+
+        public Builder linuxExecStepConfig(ExecStepConfigArgs linuxExecStepConfig) {
+            return linuxExecStepConfig(Output.of(linuxExecStepConfig));
         }
+
         public Builder windowsExecStepConfig(@Nullable Output<ExecStepConfigArgs> windowsExecStepConfig) {
-            this.windowsExecStepConfig = windowsExecStepConfig;
+            $.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
-        public Builder windowsExecStepConfig(@Nullable ExecStepConfigArgs windowsExecStepConfig) {
-            this.windowsExecStepConfig = Codegen.ofNullable(windowsExecStepConfig);
-            return this;
-        }        public ExecStepArgs build() {
-            return new ExecStepArgs(linuxExecStepConfig, windowsExecStepConfig);
+
+        public Builder windowsExecStepConfig(ExecStepConfigArgs windowsExecStepConfig) {
+            return windowsExecStepConfig(Output.of(windowsExecStepConfig));
+        }
+
+        public ExecStepArgs build() {
+            return $;
         }
     }
+
 }

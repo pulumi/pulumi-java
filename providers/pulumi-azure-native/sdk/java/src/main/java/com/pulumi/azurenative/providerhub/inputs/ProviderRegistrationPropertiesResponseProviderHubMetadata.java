@@ -18,81 +18,74 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata ext
     public static final ProviderRegistrationPropertiesResponseProviderHubMetadata Empty = new ProviderRegistrationPropertiesResponseProviderHubMetadata();
 
     @Import(name="providerAuthentication")
-      private final @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication;
+    private @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication;
 
     public Optional<ProviderHubMetadataResponseProviderAuthentication> providerAuthentication() {
-        return this.providerAuthentication == null ? Optional.empty() : Optional.ofNullable(this.providerAuthentication);
+        return Optional.ofNullable(this.providerAuthentication);
     }
 
     @Import(name="providerAuthorizations")
-      private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
+    private @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
 
-    public List<ResourceProviderAuthorizationResponse> providerAuthorizations() {
-        return this.providerAuthorizations == null ? List.of() : this.providerAuthorizations;
+    public Optional<List<ResourceProviderAuthorizationResponse>> providerAuthorizations() {
+        return Optional.ofNullable(this.providerAuthorizations);
     }
 
     @Import(name="thirdPartyProviderAuthorization")
-      private final @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
+    private @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
 
     public Optional<ProviderHubMetadataResponseThirdPartyProviderAuthorization> thirdPartyProviderAuthorization() {
-        return this.thirdPartyProviderAuthorization == null ? Optional.empty() : Optional.ofNullable(this.thirdPartyProviderAuthorization);
+        return Optional.ofNullable(this.thirdPartyProviderAuthorization);
     }
 
-    public ProviderRegistrationPropertiesResponseProviderHubMetadata(
-        @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication,
-        @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
-        @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
-        this.providerAuthentication = providerAuthentication;
-        this.providerAuthorizations = providerAuthorizations;
-        this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
-    }
+    private ProviderRegistrationPropertiesResponseProviderHubMetadata() {}
 
-    private ProviderRegistrationPropertiesResponseProviderHubMetadata() {
-        this.providerAuthentication = null;
-        this.providerAuthorizations = List.of();
-        this.thirdPartyProviderAuthorization = null;
+    private ProviderRegistrationPropertiesResponseProviderHubMetadata(ProviderRegistrationPropertiesResponseProviderHubMetadata $) {
+        this.providerAuthentication = $.providerAuthentication;
+        this.providerAuthorizations = $.providerAuthorizations;
+        this.thirdPartyProviderAuthorization = $.thirdPartyProviderAuthorization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderRegistrationPropertiesResponseProviderHubMetadata defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication;
-        private @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
-        private @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
+        private ProviderRegistrationPropertiesResponseProviderHubMetadata $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderRegistrationPropertiesResponseProviderHubMetadata();
         }
 
         public Builder(ProviderRegistrationPropertiesResponseProviderHubMetadata defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.providerAuthentication = defaults.providerAuthentication;
-    	      this.providerAuthorizations = defaults.providerAuthorizations;
-    	      this.thirdPartyProviderAuthorization = defaults.thirdPartyProviderAuthorization;
+            $ = new ProviderRegistrationPropertiesResponseProviderHubMetadata(Objects.requireNonNull(defaults));
         }
 
         public Builder providerAuthentication(@Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication) {
-            this.providerAuthentication = providerAuthentication;
+            $.providerAuthentication = providerAuthentication;
             return this;
         }
+
         public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations) {
-            this.providerAuthorizations = providerAuthorizations;
+            $.providerAuthorizations = providerAuthorizations;
             return this;
         }
+
         public Builder providerAuthorizations(ResourceProviderAuthorizationResponse... providerAuthorizations) {
             return providerAuthorizations(List.of(providerAuthorizations));
         }
+
         public Builder thirdPartyProviderAuthorization(@Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
-            this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
+            $.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
             return this;
-        }        public ProviderRegistrationPropertiesResponseProviderHubMetadata build() {
-            return new ProviderRegistrationPropertiesResponseProviderHubMetadata(providerAuthentication, providerAuthorizations, thirdPartyProviderAuthorization);
+        }
+
+        public ProviderRegistrationPropertiesResponseProviderHubMetadata build() {
+            return $;
         }
     }
+
 }

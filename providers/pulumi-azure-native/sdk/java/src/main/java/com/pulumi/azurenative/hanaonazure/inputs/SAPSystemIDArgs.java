@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hanaonazure.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SAPSystemIDArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gid")
-      private final @Nullable Output<String> gid;
+    private @Nullable Output<String> gid;
 
-    public Output<String> gid() {
-        return this.gid == null ? Codegen.empty() : this.gid;
+    public Optional<Output<String>> gid() {
+        return Optional.ofNullable(this.gid);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SAPSystemIDArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sid")
-      private final @Nullable Output<String> sid;
+    private @Nullable Output<String> sid;
 
-    public Output<String> sid() {
-        return this.sid == null ? Codegen.empty() : this.sid;
+    public Optional<Output<String>> sid() {
+        return Optional.ofNullable(this.sid);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SAPSystemIDArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class SAPSystemIDArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public SAPSystemIDArgs(
-        @Nullable Output<String> gid,
-        @Nullable Output<String> sid,
-        @Nullable Output<String> uid,
-        @Nullable Output<String> username) {
-        this.gid = gid;
-        this.sid = sid;
-        this.uid = uid;
-        this.username = username;
-    }
+    private SAPSystemIDArgs() {}
 
-    private SAPSystemIDArgs() {
-        this.gid = Codegen.empty();
-        this.sid = Codegen.empty();
-        this.uid = Codegen.empty();
-        this.username = Codegen.empty();
+    private SAPSystemIDArgs(SAPSystemIDArgs $) {
+        this.gid = $.gid;
+        this.sid = $.sid;
+        this.uid = $.uid;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SAPSystemIDArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gid;
-        private @Nullable Output<String> sid;
-        private @Nullable Output<String> uid;
-        private @Nullable Output<String> username;
+        private SAPSystemIDArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SAPSystemIDArgs();
         }
 
         public Builder(SAPSystemIDArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gid = defaults.gid;
-    	      this.sid = defaults.sid;
-    	      this.uid = defaults.uid;
-    	      this.username = defaults.username;
+            $ = new SAPSystemIDArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gid(@Nullable Output<String> gid) {
-            this.gid = gid;
+            $.gid = gid;
             return this;
         }
-        public Builder gid(@Nullable String gid) {
-            this.gid = Codegen.ofNullable(gid);
-            return this;
+
+        public Builder gid(String gid) {
+            return gid(Output.of(gid));
         }
+
         public Builder sid(@Nullable Output<String> sid) {
-            this.sid = sid;
+            $.sid = sid;
             return this;
         }
-        public Builder sid(@Nullable String sid) {
-            this.sid = Codegen.ofNullable(sid);
-            return this;
+
+        public Builder sid(String sid) {
+            return sid(Output.of(sid));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public SAPSystemIDArgs build() {
-            return new SAPSystemIDArgs(gid, sid, uid, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public SAPSystemIDArgs build() {
+            return $;
         }
     }
+
 }

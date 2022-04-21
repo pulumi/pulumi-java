@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="interconnectAttachment")
-      private final @Nullable Output<String> interconnectAttachment;
+    private @Nullable Output<String> interconnectAttachment;
 
-    public Output<String> interconnectAttachment() {
-        return this.interconnectAttachment == null ? Codegen.empty() : this.interconnectAttachment;
+    public Optional<Output<String>> interconnectAttachment() {
+        return Optional.ofNullable(this.interconnectAttachment);
     }
 
-    public VpnGatewayVpnGatewayInterfaceArgs(@Nullable Output<String> interconnectAttachment) {
-        this.interconnectAttachment = interconnectAttachment;
-    }
+    private VpnGatewayVpnGatewayInterfaceArgs() {}
 
-    private VpnGatewayVpnGatewayInterfaceArgs() {
-        this.interconnectAttachment = Codegen.empty();
+    private VpnGatewayVpnGatewayInterfaceArgs(VpnGatewayVpnGatewayInterfaceArgs $) {
+        this.interconnectAttachment = $.interconnectAttachment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnGatewayVpnGatewayInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> interconnectAttachment;
+        private VpnGatewayVpnGatewayInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnGatewayVpnGatewayInterfaceArgs();
         }
 
         public Builder(VpnGatewayVpnGatewayInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interconnectAttachment = defaults.interconnectAttachment;
+            $ = new VpnGatewayVpnGatewayInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interconnectAttachment(@Nullable Output<String> interconnectAttachment) {
-            this.interconnectAttachment = interconnectAttachment;
+            $.interconnectAttachment = interconnectAttachment;
             return this;
         }
-        public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
-            this.interconnectAttachment = Codegen.ofNullable(interconnectAttachment);
-            return this;
-        }        public VpnGatewayVpnGatewayInterfaceArgs build() {
-            return new VpnGatewayVpnGatewayInterfaceArgs(interconnectAttachment);
+
+        public Builder interconnectAttachment(String interconnectAttachment) {
+            return interconnectAttachment(Output.of(interconnectAttachment));
+        }
+
+        public VpnGatewayVpnGatewayInterfaceArgs build() {
+            return $;
         }
     }
+
 }

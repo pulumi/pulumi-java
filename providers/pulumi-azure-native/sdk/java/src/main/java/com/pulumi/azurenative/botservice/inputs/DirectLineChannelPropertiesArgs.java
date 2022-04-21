@@ -6,10 +6,10 @@ package com.pulumi.azurenative.botservice.inputs;
 import com.pulumi.azurenative.botservice.inputs.DirectLineSiteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DirectLineChannelPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="directLineEmbedCode")
-      private final @Nullable Output<String> directLineEmbedCode;
+    private @Nullable Output<String> directLineEmbedCode;
 
-    public Output<String> directLineEmbedCode() {
-        return this.directLineEmbedCode == null ? Codegen.empty() : this.directLineEmbedCode;
+    public Optional<Output<String>> directLineEmbedCode() {
+        return Optional.ofNullable(this.directLineEmbedCode);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class DirectLineChannelPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sites")
-      private final @Nullable Output<List<DirectLineSiteArgs>> sites;
+    private @Nullable Output<List<DirectLineSiteArgs>> sites;
 
-    public Output<List<DirectLineSiteArgs>> sites() {
-        return this.sites == null ? Codegen.empty() : this.sites;
+    public Optional<Output<List<DirectLineSiteArgs>>> sites() {
+        return Optional.ofNullable(this.sites);
     }
 
-    public DirectLineChannelPropertiesArgs(
-        @Nullable Output<String> directLineEmbedCode,
-        @Nullable Output<List<DirectLineSiteArgs>> sites) {
-        this.directLineEmbedCode = directLineEmbedCode;
-        this.sites = sites;
-    }
+    private DirectLineChannelPropertiesArgs() {}
 
-    private DirectLineChannelPropertiesArgs() {
-        this.directLineEmbedCode = Codegen.empty();
-        this.sites = Codegen.empty();
+    private DirectLineChannelPropertiesArgs(DirectLineChannelPropertiesArgs $) {
+        this.directLineEmbedCode = $.directLineEmbedCode;
+        this.sites = $.sites;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectLineChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> directLineEmbedCode;
-        private @Nullable Output<List<DirectLineSiteArgs>> sites;
+        private DirectLineChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectLineChannelPropertiesArgs();
         }
 
         public Builder(DirectLineChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directLineEmbedCode = defaults.directLineEmbedCode;
-    	      this.sites = defaults.sites;
+            $ = new DirectLineChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directLineEmbedCode(@Nullable Output<String> directLineEmbedCode) {
-            this.directLineEmbedCode = directLineEmbedCode;
+            $.directLineEmbedCode = directLineEmbedCode;
             return this;
         }
-        public Builder directLineEmbedCode(@Nullable String directLineEmbedCode) {
-            this.directLineEmbedCode = Codegen.ofNullable(directLineEmbedCode);
-            return this;
+
+        public Builder directLineEmbedCode(String directLineEmbedCode) {
+            return directLineEmbedCode(Output.of(directLineEmbedCode));
         }
+
         public Builder sites(@Nullable Output<List<DirectLineSiteArgs>> sites) {
-            this.sites = sites;
+            $.sites = sites;
             return this;
         }
-        public Builder sites(@Nullable List<DirectLineSiteArgs> sites) {
-            this.sites = Codegen.ofNullable(sites);
-            return this;
+
+        public Builder sites(List<DirectLineSiteArgs> sites) {
+            return sites(Output.of(sites));
         }
+
         public Builder sites(DirectLineSiteArgs... sites) {
             return sites(List.of(sites));
-        }        public DirectLineChannelPropertiesArgs build() {
-            return new DirectLineChannelPropertiesArgs(directLineEmbedCode, sites);
+        }
+
+        public DirectLineChannelPropertiesArgs build() {
+            return $;
         }
     }
+
 }

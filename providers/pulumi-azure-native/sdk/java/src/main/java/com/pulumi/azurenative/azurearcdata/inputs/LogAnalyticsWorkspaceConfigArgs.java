@@ -5,9 +5,9 @@ package com.pulumi.azurenative.azurearcdata.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LogAnalyticsWorkspaceConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="primaryKey")
-      private final @Nullable Output<String> primaryKey;
+    private @Nullable Output<String> primaryKey;
 
-    public Output<String> primaryKey() {
-        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
+    public Optional<Output<String>> primaryKey() {
+        return Optional.ofNullable(this.primaryKey);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class LogAnalyticsWorkspaceConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable Output<String> workspaceId;
+    private @Nullable Output<String> workspaceId;
 
-    public Output<String> workspaceId() {
-        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
+    public Optional<Output<String>> workspaceId() {
+        return Optional.ofNullable(this.workspaceId);
     }
 
-    public LogAnalyticsWorkspaceConfigArgs(
-        @Nullable Output<String> primaryKey,
-        @Nullable Output<String> workspaceId) {
-        this.primaryKey = primaryKey;
-        this.workspaceId = workspaceId;
-    }
+    private LogAnalyticsWorkspaceConfigArgs() {}
 
-    private LogAnalyticsWorkspaceConfigArgs() {
-        this.primaryKey = Codegen.empty();
-        this.workspaceId = Codegen.empty();
+    private LogAnalyticsWorkspaceConfigArgs(LogAnalyticsWorkspaceConfigArgs $) {
+        this.primaryKey = $.primaryKey;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogAnalyticsWorkspaceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> primaryKey;
-        private @Nullable Output<String> workspaceId;
+        private LogAnalyticsWorkspaceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogAnalyticsWorkspaceConfigArgs();
         }
 
         public Builder(LogAnalyticsWorkspaceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primaryKey = defaults.primaryKey;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new LogAnalyticsWorkspaceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
-            this.primaryKey = primaryKey;
+            $.primaryKey = primaryKey;
             return this;
         }
-        public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Codegen.ofNullable(primaryKey);
-            return this;
+
+        public Builder primaryKey(String primaryKey) {
+            return primaryKey(Output.of(primaryKey));
         }
+
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
         }
-        public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Codegen.ofNullable(workspaceId);
-            return this;
-        }        public LogAnalyticsWorkspaceConfigArgs build() {
-            return new LogAnalyticsWorkspaceConfigArgs(primaryKey, workspaceId);
+
+        public Builder workspaceId(String workspaceId) {
+            return workspaceId(Output.of(workspaceId));
+        }
+
+        public LogAnalyticsWorkspaceConfigArgs build() {
+            return $;
         }
     }
+
 }

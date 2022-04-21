@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
      * 
      */
     @Import(name="cloudSql", required=true)
-      private final GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
+    private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
 
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql() {
         return this.cloudSql;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
      * 
      */
     @Import(name="connectionType", required=true)
-      private final String connectionType;
+    private String connectionType;
 
     public String connectionType() {
         return this.connectionType;
@@ -45,64 +45,59 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
      * 
      */
     @Import(name="hasCredential", required=true)
-      private final Boolean hasCredential;
+    private Boolean hasCredential;
 
     public Boolean hasCredential() {
         return this.hasCredential;
     }
 
-    public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(
-        GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql,
-        String connectionType,
-        Boolean hasCredential) {
-        this.cloudSql = Objects.requireNonNull(cloudSql, "expected parameter 'cloudSql' to be non-null");
-        this.connectionType = Objects.requireNonNull(connectionType, "expected parameter 'connectionType' to be non-null");
-        this.hasCredential = Objects.requireNonNull(hasCredential, "expected parameter 'hasCredential' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse() {
-        this.cloudSql = null;
-        this.connectionType = null;
-        this.hasCredential = null;
+    private GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse $) {
+        this.cloudSql = $.cloudSql;
+        this.connectionType = $.connectionType;
+        this.hasCredential = $.hasCredential;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
-        private String connectionType;
-        private Boolean hasCredential;
+        private GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSql = defaults.cloudSql;
-    	      this.connectionType = defaults.connectionType;
-    	      this.hasCredential = defaults.hasCredential;
+            $ = new GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSql(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql) {
-            this.cloudSql = Objects.requireNonNull(cloudSql);
+            $.cloudSql = cloudSql;
             return this;
         }
+
         public Builder connectionType(String connectionType) {
-            this.connectionType = Objects.requireNonNull(connectionType);
+            $.connectionType = connectionType;
             return this;
         }
+
         public Builder hasCredential(Boolean hasCredential) {
-            this.hasCredential = Objects.requireNonNull(hasCredential);
+            $.hasCredential = hasCredential;
             return this;
-        }        public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse build() {
-            return new GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(cloudSql, connectionType, hasCredential);
+        }
+
+        public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse build() {
+            $.cloudSql = Objects.requireNonNull($.cloudSql, "expected parameter 'cloudSql' to be non-null");
+            $.connectionType = Objects.requireNonNull($.connectionType, "expected parameter 'connectionType' to be non-null");
+            $.hasCredential = Objects.requireNonNull($.hasCredential, "expected parameter 'hasCredential' to be non-null");
+            return $;
         }
     }
+
 }

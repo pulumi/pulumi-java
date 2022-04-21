@@ -15,94 +15,86 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDocumentArgs Empty = new GetDocumentArgs();
 
     @Import(name="documentId", required=true)
-      private final String documentId;
+    private String documentId;
 
     public String documentId() {
         return this.documentId;
     }
 
     @Import(name="knowledgeBaseId", required=true)
-      private final String knowledgeBaseId;
+    private String knowledgeBaseId;
 
     public String knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDocumentArgs(
-        String documentId,
-        String knowledgeBaseId,
-        String location,
-        @Nullable String project) {
-        this.documentId = Objects.requireNonNull(documentId, "expected parameter 'documentId' to be non-null");
-        this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId, "expected parameter 'knowledgeBaseId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetDocumentArgs() {}
 
-    private GetDocumentArgs() {
-        this.documentId = null;
-        this.knowledgeBaseId = null;
-        this.location = null;
-        this.project = null;
+    private GetDocumentArgs(GetDocumentArgs $) {
+        this.documentId = $.documentId;
+        this.knowledgeBaseId = $.knowledgeBaseId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDocumentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String documentId;
-        private String knowledgeBaseId;
-        private String location;
-        private @Nullable String project;
+        private GetDocumentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDocumentArgs();
         }
 
         public Builder(GetDocumentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentId = defaults.documentId;
-    	      this.knowledgeBaseId = defaults.knowledgeBaseId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetDocumentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder documentId(String documentId) {
-            this.documentId = Objects.requireNonNull(documentId);
+            $.documentId = documentId;
             return this;
         }
+
         public Builder knowledgeBaseId(String knowledgeBaseId) {
-            this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
+            $.knowledgeBaseId = knowledgeBaseId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDocumentArgs build() {
-            return new GetDocumentArgs(documentId, knowledgeBaseId, location, project);
+        }
+
+        public GetDocumentArgs build() {
+            $.documentId = Objects.requireNonNull($.documentId, "expected parameter 'documentId' to be non-null");
+            $.knowledgeBaseId = Objects.requireNonNull($.knowledgeBaseId, "expected parameter 'knowledgeBaseId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

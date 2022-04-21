@@ -7,10 +7,10 @@ import com.pulumi.azurenative.storsimple.enums.DayOfWeek;
 import com.pulumi.azurenative.storsimple.enums.RecurrenceType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class ScheduleRecurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="recurrenceType", required=true)
-      private final Output<RecurrenceType> recurrenceType;
+    private Output<RecurrenceType> recurrenceType;
 
     public Output<RecurrenceType> recurrenceType() {
         return this.recurrenceType;
@@ -38,7 +38,7 @@ public final class ScheduleRecurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="recurrenceValue", required=true)
-      private final Output<Integer> recurrenceValue;
+    private Output<Integer> recurrenceValue;
 
     public Output<Integer> recurrenceValue() {
         return this.recurrenceValue;
@@ -49,79 +49,74 @@ public final class ScheduleRecurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="weeklyDaysList")
-      private final @Nullable Output<List<DayOfWeek>> weeklyDaysList;
+    private @Nullable Output<List<DayOfWeek>> weeklyDaysList;
 
-    public Output<List<DayOfWeek>> weeklyDaysList() {
-        return this.weeklyDaysList == null ? Codegen.empty() : this.weeklyDaysList;
+    public Optional<Output<List<DayOfWeek>>> weeklyDaysList() {
+        return Optional.ofNullable(this.weeklyDaysList);
     }
 
-    public ScheduleRecurrenceArgs(
-        Output<RecurrenceType> recurrenceType,
-        Output<Integer> recurrenceValue,
-        @Nullable Output<List<DayOfWeek>> weeklyDaysList) {
-        this.recurrenceType = Objects.requireNonNull(recurrenceType, "expected parameter 'recurrenceType' to be non-null");
-        this.recurrenceValue = Objects.requireNonNull(recurrenceValue, "expected parameter 'recurrenceValue' to be non-null");
-        this.weeklyDaysList = weeklyDaysList;
-    }
+    private ScheduleRecurrenceArgs() {}
 
-    private ScheduleRecurrenceArgs() {
-        this.recurrenceType = Codegen.empty();
-        this.recurrenceValue = Codegen.empty();
-        this.weeklyDaysList = Codegen.empty();
+    private ScheduleRecurrenceArgs(ScheduleRecurrenceArgs $) {
+        this.recurrenceType = $.recurrenceType;
+        this.recurrenceValue = $.recurrenceValue;
+        this.weeklyDaysList = $.weeklyDaysList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleRecurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RecurrenceType> recurrenceType;
-        private Output<Integer> recurrenceValue;
-        private @Nullable Output<List<DayOfWeek>> weeklyDaysList;
+        private ScheduleRecurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleRecurrenceArgs();
         }
 
         public Builder(ScheduleRecurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrenceType = defaults.recurrenceType;
-    	      this.recurrenceValue = defaults.recurrenceValue;
-    	      this.weeklyDaysList = defaults.weeklyDaysList;
+            $ = new ScheduleRecurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrenceType(Output<RecurrenceType> recurrenceType) {
-            this.recurrenceType = Objects.requireNonNull(recurrenceType);
+            $.recurrenceType = recurrenceType;
             return this;
         }
+
         public Builder recurrenceType(RecurrenceType recurrenceType) {
-            this.recurrenceType = Output.of(Objects.requireNonNull(recurrenceType));
-            return this;
+            return recurrenceType(Output.of(recurrenceType));
         }
+
         public Builder recurrenceValue(Output<Integer> recurrenceValue) {
-            this.recurrenceValue = Objects.requireNonNull(recurrenceValue);
+            $.recurrenceValue = recurrenceValue;
             return this;
         }
+
         public Builder recurrenceValue(Integer recurrenceValue) {
-            this.recurrenceValue = Output.of(Objects.requireNonNull(recurrenceValue));
-            return this;
+            return recurrenceValue(Output.of(recurrenceValue));
         }
+
         public Builder weeklyDaysList(@Nullable Output<List<DayOfWeek>> weeklyDaysList) {
-            this.weeklyDaysList = weeklyDaysList;
+            $.weeklyDaysList = weeklyDaysList;
             return this;
         }
-        public Builder weeklyDaysList(@Nullable List<DayOfWeek> weeklyDaysList) {
-            this.weeklyDaysList = Codegen.ofNullable(weeklyDaysList);
-            return this;
+
+        public Builder weeklyDaysList(List<DayOfWeek> weeklyDaysList) {
+            return weeklyDaysList(Output.of(weeklyDaysList));
         }
+
         public Builder weeklyDaysList(DayOfWeek... weeklyDaysList) {
             return weeklyDaysList(List.of(weeklyDaysList));
-        }        public ScheduleRecurrenceArgs build() {
-            return new ScheduleRecurrenceArgs(recurrenceType, recurrenceValue, weeklyDaysList);
+        }
+
+        public ScheduleRecurrenceArgs build() {
+            $.recurrenceType = Objects.requireNonNull($.recurrenceType, "expected parameter 'recurrenceType' to be non-null");
+            $.recurrenceValue = Objects.requireNonNull($.recurrenceValue, "expected parameter 'recurrenceValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ParticipantPropertyReferenceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sourcePropertyName", required=true)
-      private final String sourcePropertyName;
+    private String sourcePropertyName;
 
     public String sourcePropertyName() {
         return this.sourcePropertyName;
@@ -32,55 +32,52 @@ public final class ParticipantPropertyReferenceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="targetPropertyName", required=true)
-      private final String targetPropertyName;
+    private String targetPropertyName;
 
     public String targetPropertyName() {
         return this.targetPropertyName;
     }
 
-    public ParticipantPropertyReferenceResponse(
-        String sourcePropertyName,
-        String targetPropertyName) {
-        this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName, "expected parameter 'sourcePropertyName' to be non-null");
-        this.targetPropertyName = Objects.requireNonNull(targetPropertyName, "expected parameter 'targetPropertyName' to be non-null");
-    }
+    private ParticipantPropertyReferenceResponse() {}
 
-    private ParticipantPropertyReferenceResponse() {
-        this.sourcePropertyName = null;
-        this.targetPropertyName = null;
+    private ParticipantPropertyReferenceResponse(ParticipantPropertyReferenceResponse $) {
+        this.sourcePropertyName = $.sourcePropertyName;
+        this.targetPropertyName = $.targetPropertyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParticipantPropertyReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sourcePropertyName;
-        private String targetPropertyName;
+        private ParticipantPropertyReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParticipantPropertyReferenceResponse();
         }
 
         public Builder(ParticipantPropertyReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourcePropertyName = defaults.sourcePropertyName;
-    	      this.targetPropertyName = defaults.targetPropertyName;
+            $ = new ParticipantPropertyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourcePropertyName(String sourcePropertyName) {
-            this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
+            $.sourcePropertyName = sourcePropertyName;
             return this;
         }
+
         public Builder targetPropertyName(String targetPropertyName) {
-            this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
+            $.targetPropertyName = targetPropertyName;
             return this;
-        }        public ParticipantPropertyReferenceResponse build() {
-            return new ParticipantPropertyReferenceResponse(sourcePropertyName, targetPropertyName);
+        }
+
+        public ParticipantPropertyReferenceResponse build() {
+            $.sourcePropertyName = Objects.requireNonNull($.sourcePropertyName, "expected parameter 'sourcePropertyName' to be non-null");
+            $.targetPropertyName = Objects.requireNonNull($.targetPropertyName, "expected parameter 'targetPropertyName' to be non-null");
+            return $;
         }
     }
+
 }

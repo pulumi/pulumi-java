@@ -66,10 +66,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="expression", required=true)
-      private final ExpressionResponse expression;
+    private ExpressionResponse expression;
 
     public ExpressionResponse expression() {
         return this.expression;
@@ -99,10 +99,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ifFalseActivities")
-      private final @Nullable List<Object> ifFalseActivities;
+    private @Nullable List<Object> ifFalseActivities;
 
-    public List<Object> ifFalseActivities() {
-        return this.ifFalseActivities == null ? List.of() : this.ifFalseActivities;
+    public Optional<List<Object>> ifFalseActivities() {
+        return Optional.ofNullable(this.ifFalseActivities);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ifTrueActivities")
-      private final @Nullable List<Object> ifTrueActivities;
+    private @Nullable List<Object> ifTrueActivities;
 
-    public List<Object> ifTrueActivities() {
-        return this.ifTrueActivities == null ? List.of() : this.ifTrueActivities;
+    public Optional<List<Object>> ifTrueActivities() {
+        return Optional.ofNullable(this.ifTrueActivities);
     }
 
     /**
@@ -121,7 +121,7 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -133,7 +133,7 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -144,121 +144,105 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public IfConditionActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        ExpressionResponse expression,
-        @Nullable List<Object> ifFalseActivities,
-        @Nullable List<Object> ifTrueActivities,
-        String name,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.ifFalseActivities = ifFalseActivities;
-        this.ifTrueActivities = ifTrueActivities;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private IfConditionActivityResponse() {}
 
-    private IfConditionActivityResponse() {
-        this.dependsOn = List.of();
-        this.description = null;
-        this.expression = null;
-        this.ifFalseActivities = List.of();
-        this.ifTrueActivities = List.of();
-        this.name = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private IfConditionActivityResponse(IfConditionActivityResponse $) {
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.expression = $.expression;
+        this.ifFalseActivities = $.ifFalseActivities;
+        this.ifTrueActivities = $.ifTrueActivities;
+        this.name = $.name;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IfConditionActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private ExpressionResponse expression;
-        private @Nullable List<Object> ifFalseActivities;
-        private @Nullable List<Object> ifTrueActivities;
-        private String name;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private IfConditionActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IfConditionActivityResponse();
         }
 
         public Builder(IfConditionActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.expression = defaults.expression;
-    	      this.ifFalseActivities = defaults.ifFalseActivities;
-    	      this.ifTrueActivities = defaults.ifTrueActivities;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new IfConditionActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder expression(ExpressionResponse expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder ifFalseActivities(@Nullable List<Object> ifFalseActivities) {
-            this.ifFalseActivities = ifFalseActivities;
+            $.ifFalseActivities = ifFalseActivities;
             return this;
         }
+
         public Builder ifFalseActivities(Object... ifFalseActivities) {
             return ifFalseActivities(List.of(ifFalseActivities));
         }
+
         public Builder ifTrueActivities(@Nullable List<Object> ifTrueActivities) {
-            this.ifTrueActivities = ifTrueActivities;
+            $.ifTrueActivities = ifTrueActivities;
             return this;
         }
+
         public Builder ifTrueActivities(Object... ifTrueActivities) {
             return ifTrueActivities(List.of(ifTrueActivities));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public IfConditionActivityResponse build() {
-            return new IfConditionActivityResponse(dependsOn, description, expression, ifFalseActivities, ifTrueActivities, name, type, userProperties);
+        }
+
+        public IfConditionActivityResponse build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

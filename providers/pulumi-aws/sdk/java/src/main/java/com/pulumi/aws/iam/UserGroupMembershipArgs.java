@@ -5,7 +5,6 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class UserGroupMembershipArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="groups", required=true)
-      private final Output<List<String>> groups;
+    private Output<List<String>> groups;
 
     public Output<List<String>> groups() {
         return this.groups;
@@ -31,66 +30,64 @@ public final class UserGroupMembershipArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="user", required=true)
-      private final Output<String> user;
+    private Output<String> user;
 
     public Output<String> user() {
         return this.user;
     }
 
-    public UserGroupMembershipArgs(
-        Output<List<String>> groups,
-        Output<String> user) {
-        this.groups = Objects.requireNonNull(groups, "expected parameter 'groups' to be non-null");
-        this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
-    }
+    private UserGroupMembershipArgs() {}
 
-    private UserGroupMembershipArgs() {
-        this.groups = Codegen.empty();
-        this.user = Codegen.empty();
+    private UserGroupMembershipArgs(UserGroupMembershipArgs $) {
+        this.groups = $.groups;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserGroupMembershipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> groups;
-        private Output<String> user;
+        private UserGroupMembershipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserGroupMembershipArgs();
         }
 
         public Builder(UserGroupMembershipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groups = defaults.groups;
-    	      this.user = defaults.user;
+            $ = new UserGroupMembershipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groups(Output<List<String>> groups) {
-            this.groups = Objects.requireNonNull(groups);
+            $.groups = groups;
             return this;
         }
+
         public Builder groups(List<String> groups) {
-            this.groups = Output.of(Objects.requireNonNull(groups));
-            return this;
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder user(Output<String> user) {
-            this.user = Objects.requireNonNull(user);
+            $.user = user;
             return this;
         }
+
         public Builder user(String user) {
-            this.user = Output.of(Objects.requireNonNull(user));
-            return this;
-        }        public UserGroupMembershipArgs build() {
-            return new UserGroupMembershipArgs(groups, user);
+            return user(Output.of(user));
+        }
+
+        public UserGroupMembershipArgs build() {
+            $.groups = Objects.requireNonNull($.groups, "expected parameter 'groups' to be non-null");
+            $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
+            return $;
         }
     }
+
 }

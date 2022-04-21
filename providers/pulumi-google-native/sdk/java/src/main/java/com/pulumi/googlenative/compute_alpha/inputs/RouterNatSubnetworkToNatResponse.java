@@ -22,7 +22,7 @@ public final class RouterNatSubnetworkToNatResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,7 +33,7 @@ public final class RouterNatSubnetworkToNatResponse extends com.pulumi.resources
      * 
      */
     @Import(name="secondaryIpRangeNames", required=true)
-      private final List<String> secondaryIpRangeNames;
+    private List<String> secondaryIpRangeNames;
 
     public List<String> secondaryIpRangeNames() {
         return this.secondaryIpRangeNames;
@@ -44,70 +44,67 @@ public final class RouterNatSubnetworkToNatResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sourceIpRangesToNat", required=true)
-      private final List<String> sourceIpRangesToNat;
+    private List<String> sourceIpRangesToNat;
 
     public List<String> sourceIpRangesToNat() {
         return this.sourceIpRangesToNat;
     }
 
-    public RouterNatSubnetworkToNatResponse(
-        String name,
-        List<String> secondaryIpRangeNames,
-        List<String> sourceIpRangesToNat) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secondaryIpRangeNames = Objects.requireNonNull(secondaryIpRangeNames, "expected parameter 'secondaryIpRangeNames' to be non-null");
-        this.sourceIpRangesToNat = Objects.requireNonNull(sourceIpRangesToNat, "expected parameter 'sourceIpRangesToNat' to be non-null");
-    }
+    private RouterNatSubnetworkToNatResponse() {}
 
-    private RouterNatSubnetworkToNatResponse() {
-        this.name = null;
-        this.secondaryIpRangeNames = List.of();
-        this.sourceIpRangesToNat = List.of();
+    private RouterNatSubnetworkToNatResponse(RouterNatSubnetworkToNatResponse $) {
+        this.name = $.name;
+        this.secondaryIpRangeNames = $.secondaryIpRangeNames;
+        this.sourceIpRangesToNat = $.sourceIpRangesToNat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatSubnetworkToNatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<String> secondaryIpRangeNames;
-        private List<String> sourceIpRangesToNat;
+        private RouterNatSubnetworkToNatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatSubnetworkToNatResponse();
         }
 
         public Builder(RouterNatSubnetworkToNatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.secondaryIpRangeNames = defaults.secondaryIpRangeNames;
-    	      this.sourceIpRangesToNat = defaults.sourceIpRangesToNat;
+            $ = new RouterNatSubnetworkToNatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder secondaryIpRangeNames(List<String> secondaryIpRangeNames) {
-            this.secondaryIpRangeNames = Objects.requireNonNull(secondaryIpRangeNames);
+            $.secondaryIpRangeNames = secondaryIpRangeNames;
             return this;
         }
+
         public Builder secondaryIpRangeNames(String... secondaryIpRangeNames) {
             return secondaryIpRangeNames(List.of(secondaryIpRangeNames));
         }
+
         public Builder sourceIpRangesToNat(List<String> sourceIpRangesToNat) {
-            this.sourceIpRangesToNat = Objects.requireNonNull(sourceIpRangesToNat);
+            $.sourceIpRangesToNat = sourceIpRangesToNat;
             return this;
         }
+
         public Builder sourceIpRangesToNat(String... sourceIpRangesToNat) {
             return sourceIpRangesToNat(List.of(sourceIpRangesToNat));
-        }        public RouterNatSubnetworkToNatResponse build() {
-            return new RouterNatSubnetworkToNatResponse(name, secondaryIpRangeNames, sourceIpRangesToNat);
+        }
+
+        public RouterNatSubnetworkToNatResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.secondaryIpRangeNames = Objects.requireNonNull($.secondaryIpRangeNames, "expected parameter 'secondaryIpRangeNames' to be non-null");
+            $.sourceIpRangesToNat = Objects.requireNonNull($.sourceIpRangesToNat, "expected parameter 'sourceIpRangesToNat' to be non-null");
+            return $;
         }
     }
+
 }

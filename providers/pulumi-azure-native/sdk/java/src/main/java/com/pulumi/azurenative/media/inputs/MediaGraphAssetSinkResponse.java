@@ -23,7 +23,7 @@ public final class MediaGraphAssetSinkResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="assetName", required=true)
-      private final String assetName;
+    private String assetName;
 
     public String assetName() {
         return this.assetName;
@@ -34,7 +34,7 @@ public final class MediaGraphAssetSinkResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="inputs", required=true)
-      private final List<String> inputs;
+    private List<String> inputs;
 
     public List<String> inputs() {
         return this.inputs;
@@ -45,7 +45,7 @@ public final class MediaGraphAssetSinkResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -57,76 +57,70 @@ public final class MediaGraphAssetSinkResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public MediaGraphAssetSinkResponse(
-        String assetName,
-        List<String> inputs,
-        String name,
-        String odataType) {
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private MediaGraphAssetSinkResponse() {}
 
-    private MediaGraphAssetSinkResponse() {
-        this.assetName = null;
-        this.inputs = List.of();
-        this.name = null;
-        this.odataType = null;
+    private MediaGraphAssetSinkResponse(MediaGraphAssetSinkResponse $) {
+        this.assetName = $.assetName;
+        this.inputs = $.inputs;
+        this.name = $.name;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphAssetSinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assetName;
-        private List<String> inputs;
-        private String name;
-        private String odataType;
+        private MediaGraphAssetSinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphAssetSinkResponse();
         }
 
         public Builder(MediaGraphAssetSinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetName = defaults.assetName;
-    	      this.inputs = defaults.inputs;
-    	      this.name = defaults.name;
-    	      this.odataType = defaults.odataType;
+            $ = new MediaGraphAssetSinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assetName(String assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder inputs(List<String> inputs) {
-            this.inputs = Objects.requireNonNull(inputs);
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(String... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public MediaGraphAssetSinkResponse build() {
-            return new MediaGraphAssetSinkResponse(assetName, inputs, name, odataType);
+        }
+
+        public MediaGraphAssetSinkResponse build() {
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.inputs = Objects.requireNonNull($.inputs, "expected parameter 'inputs' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

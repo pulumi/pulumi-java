@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainId")
-      private final @Nullable Output<String> domainId;
+    private @Nullable Output<String> domainId;
 
-    public Output<String> domainId() {
-        return this.domainId == null ? Codegen.empty() : this.domainId;
+    public Optional<Output<String>> domainId() {
+        return Optional.ofNullable(this.domainId);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeEfsFileSystemUid")
-      private final @Nullable Output<String> homeEfsFileSystemUid;
+    private @Nullable Output<String> homeEfsFileSystemUid;
 
-    public Output<String> homeEfsFileSystemUid() {
-        return this.homeEfsFileSystemUid == null ? Codegen.empty() : this.homeEfsFileSystemUid;
+    public Optional<Output<String>> homeEfsFileSystemUid() {
+        return Optional.ofNullable(this.homeEfsFileSystemUid);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="singleSignOnUserIdentifier")
-      private final @Nullable Output<String> singleSignOnUserIdentifier;
+    private @Nullable Output<String> singleSignOnUserIdentifier;
 
-    public Output<String> singleSignOnUserIdentifier() {
-        return this.singleSignOnUserIdentifier == null ? Codegen.empty() : this.singleSignOnUserIdentifier;
+    public Optional<Output<String>> singleSignOnUserIdentifier() {
+        return Optional.ofNullable(this.singleSignOnUserIdentifier);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="singleSignOnUserValue")
-      private final @Nullable Output<String> singleSignOnUserValue;
+    private @Nullable Output<String> singleSignOnUserValue;
 
-    public Output<String> singleSignOnUserValue() {
-        return this.singleSignOnUserValue == null ? Codegen.empty() : this.singleSignOnUserValue;
+    public Optional<Output<String>> singleSignOnUserValue() {
+        return Optional.ofNullable(this.singleSignOnUserValue);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userProfileName")
-      private final @Nullable Output<String> userProfileName;
+    private @Nullable Output<String> userProfileName;
 
-    public Output<String> userProfileName() {
-        return this.userProfileName == null ? Codegen.empty() : this.userProfileName;
+    public Optional<Output<String>> userProfileName() {
+        return Optional.ofNullable(this.userProfileName);
     }
 
     /**
@@ -110,154 +110,128 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userSettings")
-      private final @Nullable Output<UserProfileUserSettingsGetArgs> userSettings;
+    private @Nullable Output<UserProfileUserSettingsGetArgs> userSettings;
 
-    public Output<UserProfileUserSettingsGetArgs> userSettings() {
-        return this.userSettings == null ? Codegen.empty() : this.userSettings;
+    public Optional<Output<UserProfileUserSettingsGetArgs>> userSettings() {
+        return Optional.ofNullable(this.userSettings);
     }
 
-    public UserProfileState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> domainId,
-        @Nullable Output<String> homeEfsFileSystemUid,
-        @Nullable Output<String> singleSignOnUserIdentifier,
-        @Nullable Output<String> singleSignOnUserValue,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> userProfileName,
-        @Nullable Output<UserProfileUserSettingsGetArgs> userSettings) {
-        this.arn = arn;
-        this.domainId = domainId;
-        this.homeEfsFileSystemUid = homeEfsFileSystemUid;
-        this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
-        this.singleSignOnUserValue = singleSignOnUserValue;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.userProfileName = userProfileName;
-        this.userSettings = userSettings;
-    }
+    private UserProfileState() {}
 
-    private UserProfileState() {
-        this.arn = Codegen.empty();
-        this.domainId = Codegen.empty();
-        this.homeEfsFileSystemUid = Codegen.empty();
-        this.singleSignOnUserIdentifier = Codegen.empty();
-        this.singleSignOnUserValue = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.userProfileName = Codegen.empty();
-        this.userSettings = Codegen.empty();
+    private UserProfileState(UserProfileState $) {
+        this.arn = $.arn;
+        this.domainId = $.domainId;
+        this.homeEfsFileSystemUid = $.homeEfsFileSystemUid;
+        this.singleSignOnUserIdentifier = $.singleSignOnUserIdentifier;
+        this.singleSignOnUserValue = $.singleSignOnUserValue;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.userProfileName = $.userProfileName;
+        this.userSettings = $.userSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> domainId;
-        private @Nullable Output<String> homeEfsFileSystemUid;
-        private @Nullable Output<String> singleSignOnUserIdentifier;
-        private @Nullable Output<String> singleSignOnUserValue;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> userProfileName;
-        private @Nullable Output<UserProfileUserSettingsGetArgs> userSettings;
+        private UserProfileState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileState();
         }
 
         public Builder(UserProfileState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.domainId = defaults.domainId;
-    	      this.homeEfsFileSystemUid = defaults.homeEfsFileSystemUid;
-    	      this.singleSignOnUserIdentifier = defaults.singleSignOnUserIdentifier;
-    	      this.singleSignOnUserValue = defaults.singleSignOnUserValue;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.userProfileName = defaults.userProfileName;
-    	      this.userSettings = defaults.userSettings;
+            $ = new UserProfileState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder domainId(@Nullable Output<String> domainId) {
-            this.domainId = domainId;
+            $.domainId = domainId;
             return this;
         }
-        public Builder domainId(@Nullable String domainId) {
-            this.domainId = Codegen.ofNullable(domainId);
-            return this;
+
+        public Builder domainId(String domainId) {
+            return domainId(Output.of(domainId));
         }
+
         public Builder homeEfsFileSystemUid(@Nullable Output<String> homeEfsFileSystemUid) {
-            this.homeEfsFileSystemUid = homeEfsFileSystemUid;
+            $.homeEfsFileSystemUid = homeEfsFileSystemUid;
             return this;
         }
-        public Builder homeEfsFileSystemUid(@Nullable String homeEfsFileSystemUid) {
-            this.homeEfsFileSystemUid = Codegen.ofNullable(homeEfsFileSystemUid);
-            return this;
+
+        public Builder homeEfsFileSystemUid(String homeEfsFileSystemUid) {
+            return homeEfsFileSystemUid(Output.of(homeEfsFileSystemUid));
         }
+
         public Builder singleSignOnUserIdentifier(@Nullable Output<String> singleSignOnUserIdentifier) {
-            this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
+            $.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
             return this;
         }
-        public Builder singleSignOnUserIdentifier(@Nullable String singleSignOnUserIdentifier) {
-            this.singleSignOnUserIdentifier = Codegen.ofNullable(singleSignOnUserIdentifier);
-            return this;
+
+        public Builder singleSignOnUserIdentifier(String singleSignOnUserIdentifier) {
+            return singleSignOnUserIdentifier(Output.of(singleSignOnUserIdentifier));
         }
+
         public Builder singleSignOnUserValue(@Nullable Output<String> singleSignOnUserValue) {
-            this.singleSignOnUserValue = singleSignOnUserValue;
+            $.singleSignOnUserValue = singleSignOnUserValue;
             return this;
         }
-        public Builder singleSignOnUserValue(@Nullable String singleSignOnUserValue) {
-            this.singleSignOnUserValue = Codegen.ofNullable(singleSignOnUserValue);
-            return this;
+
+        public Builder singleSignOnUserValue(String singleSignOnUserValue) {
+            return singleSignOnUserValue(Output.of(singleSignOnUserValue));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder userProfileName(@Nullable Output<String> userProfileName) {
-            this.userProfileName = userProfileName;
+            $.userProfileName = userProfileName;
             return this;
         }
-        public Builder userProfileName(@Nullable String userProfileName) {
-            this.userProfileName = Codegen.ofNullable(userProfileName);
-            return this;
+
+        public Builder userProfileName(String userProfileName) {
+            return userProfileName(Output.of(userProfileName));
         }
+
         public Builder userSettings(@Nullable Output<UserProfileUserSettingsGetArgs> userSettings) {
-            this.userSettings = userSettings;
+            $.userSettings = userSettings;
             return this;
         }
-        public Builder userSettings(@Nullable UserProfileUserSettingsGetArgs userSettings) {
-            this.userSettings = Codegen.ofNullable(userSettings);
-            return this;
-        }        public UserProfileState build() {
-            return new UserProfileState(arn, domainId, homeEfsFileSystemUid, singleSignOnUserIdentifier, singleSignOnUserValue, tags, tagsAll, userProfileName, userSettings);
+
+        public Builder userSettings(UserProfileUserSettingsGetArgs userSettings) {
+            return userSettings(Output.of(userSettings));
+        }
+
+        public UserProfileState build() {
+            return $;
         }
     }
+
 }

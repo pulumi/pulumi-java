@@ -21,45 +21,45 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
      * 
      */
     @Import(name="useElapsedTime", required=true)
-      private final Boolean useElapsedTime;
+    private Boolean useElapsedTime;
 
     public Boolean useElapsedTime() {
         return this.useElapsedTime;
     }
 
-    public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse(Boolean useElapsedTime) {
-        this.useElapsedTime = Objects.requireNonNull(useElapsedTime, "expected parameter 'useElapsedTime' to be non-null");
-    }
+    private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse() {}
 
-    private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse() {
-        this.useElapsedTime = null;
+    private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse(GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse $) {
+        this.useElapsedTime = $.useElapsedTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean useElapsedTime;
+        private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse();
         }
 
         public Builder(GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.useElapsedTime = defaults.useElapsedTime;
+            $ = new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder useElapsedTime(Boolean useElapsedTime) {
-            this.useElapsedTime = Objects.requireNonNull(useElapsedTime);
+            $.useElapsedTime = useElapsedTime;
             return this;
-        }        public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse build() {
-            return new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse(useElapsedTime);
+        }
+
+        public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse build() {
+            $.useElapsedTime = Objects.requireNonNull($.useElapsedTime, "expected parameter 'useElapsedTime' to be non-null");
+            return $;
         }
     }
+
 }

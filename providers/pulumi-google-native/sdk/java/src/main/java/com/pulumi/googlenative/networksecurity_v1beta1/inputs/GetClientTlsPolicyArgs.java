@@ -15,78 +15,72 @@ public final class GetClientTlsPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetClientTlsPolicyArgs Empty = new GetClientTlsPolicyArgs();
 
     @Import(name="clientTlsPolicyId", required=true)
-      private final String clientTlsPolicyId;
+    private String clientTlsPolicyId;
 
     public String clientTlsPolicyId() {
         return this.clientTlsPolicyId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetClientTlsPolicyArgs(
-        String clientTlsPolicyId,
-        String location,
-        @Nullable String project) {
-        this.clientTlsPolicyId = Objects.requireNonNull(clientTlsPolicyId, "expected parameter 'clientTlsPolicyId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetClientTlsPolicyArgs() {}
 
-    private GetClientTlsPolicyArgs() {
-        this.clientTlsPolicyId = null;
-        this.location = null;
-        this.project = null;
+    private GetClientTlsPolicyArgs(GetClientTlsPolicyArgs $) {
+        this.clientTlsPolicyId = $.clientTlsPolicyId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClientTlsPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientTlsPolicyId;
-        private String location;
-        private @Nullable String project;
+        private GetClientTlsPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClientTlsPolicyArgs();
         }
 
         public Builder(GetClientTlsPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientTlsPolicyId = defaults.clientTlsPolicyId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetClientTlsPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientTlsPolicyId(String clientTlsPolicyId) {
-            this.clientTlsPolicyId = Objects.requireNonNull(clientTlsPolicyId);
+            $.clientTlsPolicyId = clientTlsPolicyId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetClientTlsPolicyArgs build() {
-            return new GetClientTlsPolicyArgs(clientTlsPolicyId, location, project);
+        }
+
+        public GetClientTlsPolicyArgs build() {
+            $.clientTlsPolicyId = Objects.requireNonNull($.clientTlsPolicyId, "expected parameter 'clientTlsPolicyId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

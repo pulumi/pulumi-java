@@ -5,10 +5,10 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CxFlowNluSettingsGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="classificationThreshold")
-      private final @Nullable Output<Double> classificationThreshold;
+    private @Nullable Output<Double> classificationThreshold;
 
-    public Output<Double> classificationThreshold() {
-        return this.classificationThreshold == null ? Codegen.empty() : this.classificationThreshold;
+    public Optional<Output<Double>> classificationThreshold() {
+        return Optional.ofNullable(this.classificationThreshold);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CxFlowNluSettingsGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="modelTrainingMode")
-      private final @Nullable Output<String> modelTrainingMode;
+    private @Nullable Output<String> modelTrainingMode;
 
-    public Output<String> modelTrainingMode() {
-        return this.modelTrainingMode == null ? Codegen.empty() : this.modelTrainingMode;
+    public Optional<Output<String>> modelTrainingMode() {
+        return Optional.ofNullable(this.modelTrainingMode);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class CxFlowNluSettingsGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="modelType")
-      private final @Nullable Output<String> modelType;
+    private @Nullable Output<String> modelType;
 
-    public Output<String> modelType() {
-        return this.modelType == null ? Codegen.empty() : this.modelType;
+    public Optional<Output<String>> modelType() {
+        return Optional.ofNullable(this.modelType);
     }
 
-    public CxFlowNluSettingsGetArgs(
-        @Nullable Output<Double> classificationThreshold,
-        @Nullable Output<String> modelTrainingMode,
-        @Nullable Output<String> modelType) {
-        this.classificationThreshold = classificationThreshold;
-        this.modelTrainingMode = modelTrainingMode;
-        this.modelType = modelType;
-    }
+    private CxFlowNluSettingsGetArgs() {}
 
-    private CxFlowNluSettingsGetArgs() {
-        this.classificationThreshold = Codegen.empty();
-        this.modelTrainingMode = Codegen.empty();
-        this.modelType = Codegen.empty();
+    private CxFlowNluSettingsGetArgs(CxFlowNluSettingsGetArgs $) {
+        this.classificationThreshold = $.classificationThreshold;
+        this.modelTrainingMode = $.modelTrainingMode;
+        this.modelType = $.modelType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxFlowNluSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> classificationThreshold;
-        private @Nullable Output<String> modelTrainingMode;
-        private @Nullable Output<String> modelType;
+        private CxFlowNluSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxFlowNluSettingsGetArgs();
         }
 
         public Builder(CxFlowNluSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classificationThreshold = defaults.classificationThreshold;
-    	      this.modelTrainingMode = defaults.modelTrainingMode;
-    	      this.modelType = defaults.modelType;
+            $ = new CxFlowNluSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classificationThreshold(@Nullable Output<Double> classificationThreshold) {
-            this.classificationThreshold = classificationThreshold;
+            $.classificationThreshold = classificationThreshold;
             return this;
         }
-        public Builder classificationThreshold(@Nullable Double classificationThreshold) {
-            this.classificationThreshold = Codegen.ofNullable(classificationThreshold);
-            return this;
+
+        public Builder classificationThreshold(Double classificationThreshold) {
+            return classificationThreshold(Output.of(classificationThreshold));
         }
+
         public Builder modelTrainingMode(@Nullable Output<String> modelTrainingMode) {
-            this.modelTrainingMode = modelTrainingMode;
+            $.modelTrainingMode = modelTrainingMode;
             return this;
         }
-        public Builder modelTrainingMode(@Nullable String modelTrainingMode) {
-            this.modelTrainingMode = Codegen.ofNullable(modelTrainingMode);
-            return this;
+
+        public Builder modelTrainingMode(String modelTrainingMode) {
+            return modelTrainingMode(Output.of(modelTrainingMode));
         }
+
         public Builder modelType(@Nullable Output<String> modelType) {
-            this.modelType = modelType;
+            $.modelType = modelType;
             return this;
         }
-        public Builder modelType(@Nullable String modelType) {
-            this.modelType = Codegen.ofNullable(modelType);
-            return this;
-        }        public CxFlowNluSettingsGetArgs build() {
-            return new CxFlowNluSettingsGetArgs(classificationThreshold, modelTrainingMode, modelType);
+
+        public Builder modelType(String modelType) {
+            return modelType(Output.of(modelType));
+        }
+
+        public CxFlowNluSettingsGetArgs build() {
+            return $;
         }
     }
+
 }

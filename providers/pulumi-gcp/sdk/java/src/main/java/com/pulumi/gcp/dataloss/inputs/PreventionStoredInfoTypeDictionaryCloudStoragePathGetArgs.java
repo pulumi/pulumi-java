@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs ext
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
-    public PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs(Output<String> path) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs() {}
 
-    private PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs() {
-        this.path = Codegen.empty();
+    private PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs(PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs $) {
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> path;
+        private PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs();
         }
 
         public Builder(PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
+            $ = new PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs build() {
-            return new PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs(path);
+            return path(Output.of(path));
+        }
+
+        public PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

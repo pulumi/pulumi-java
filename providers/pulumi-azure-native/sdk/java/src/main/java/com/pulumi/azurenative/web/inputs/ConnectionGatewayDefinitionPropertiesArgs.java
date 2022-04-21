@@ -6,11 +6,11 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ConnectionGatewayReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="backendUri")
-      private final @Nullable Output<String> backendUri;
+    private @Nullable Output<String> backendUri;
 
-    public Output<String> backendUri() {
-        return this.backendUri == null ? Codegen.empty() : this.backendUri;
+    public Optional<Output<String>> backendUri() {
+        return Optional.ofNullable(this.backendUri);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="connectionGatewayInstallation")
-      private final @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
+    private @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
 
-    public Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation() {
-        return this.connectionGatewayInstallation == null ? Codegen.empty() : this.connectionGatewayInstallation;
+    public Optional<Output<ConnectionGatewayReferenceArgs>> connectionGatewayInstallation() {
+        return Optional.ofNullable(this.connectionGatewayInstallation);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="contactInformation")
-      private final @Nullable Output<List<String>> contactInformation;
+    private @Nullable Output<List<String>> contactInformation;
 
-    public Output<List<String>> contactInformation() {
-        return this.contactInformation == null ? Codegen.empty() : this.contactInformation;
+    public Optional<Output<List<String>>> contactInformation() {
+        return Optional.ofNullable(this.contactInformation);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="machineName")
-      private final @Nullable Output<String> machineName;
+    private @Nullable Output<String> machineName;
 
-    public Output<String> machineName() {
-        return this.machineName == null ? Codegen.empty() : this.machineName;
+    public Optional<Output<String>> machineName() {
+        return Optional.ofNullable(this.machineName);
     }
 
     /**
@@ -89,131 +89,112 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Object> status;
+    private @Nullable Output<Object> status;
 
-    public Output<Object> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Object>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public ConnectionGatewayDefinitionPropertiesArgs(
-        @Nullable Output<String> backendUri,
-        @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation,
-        @Nullable Output<List<String>> contactInformation,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> machineName,
-        @Nullable Output<Object> status) {
-        this.backendUri = backendUri;
-        this.connectionGatewayInstallation = connectionGatewayInstallation;
-        this.contactInformation = contactInformation;
-        this.description = description;
-        this.displayName = displayName;
-        this.machineName = machineName;
-        this.status = status;
-    }
+    private ConnectionGatewayDefinitionPropertiesArgs() {}
 
-    private ConnectionGatewayDefinitionPropertiesArgs() {
-        this.backendUri = Codegen.empty();
-        this.connectionGatewayInstallation = Codegen.empty();
-        this.contactInformation = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.machineName = Codegen.empty();
-        this.status = Codegen.empty();
+    private ConnectionGatewayDefinitionPropertiesArgs(ConnectionGatewayDefinitionPropertiesArgs $) {
+        this.backendUri = $.backendUri;
+        this.connectionGatewayInstallation = $.connectionGatewayInstallation;
+        this.contactInformation = $.contactInformation;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.machineName = $.machineName;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionGatewayDefinitionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backendUri;
-        private @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
-        private @Nullable Output<List<String>> contactInformation;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> machineName;
-        private @Nullable Output<Object> status;
+        private ConnectionGatewayDefinitionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionGatewayDefinitionPropertiesArgs();
         }
 
         public Builder(ConnectionGatewayDefinitionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendUri = defaults.backendUri;
-    	      this.connectionGatewayInstallation = defaults.connectionGatewayInstallation;
-    	      this.contactInformation = defaults.contactInformation;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.machineName = defaults.machineName;
-    	      this.status = defaults.status;
+            $ = new ConnectionGatewayDefinitionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendUri(@Nullable Output<String> backendUri) {
-            this.backendUri = backendUri;
+            $.backendUri = backendUri;
             return this;
         }
-        public Builder backendUri(@Nullable String backendUri) {
-            this.backendUri = Codegen.ofNullable(backendUri);
-            return this;
+
+        public Builder backendUri(String backendUri) {
+            return backendUri(Output.of(backendUri));
         }
+
         public Builder connectionGatewayInstallation(@Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation) {
-            this.connectionGatewayInstallation = connectionGatewayInstallation;
+            $.connectionGatewayInstallation = connectionGatewayInstallation;
             return this;
         }
-        public Builder connectionGatewayInstallation(@Nullable ConnectionGatewayReferenceArgs connectionGatewayInstallation) {
-            this.connectionGatewayInstallation = Codegen.ofNullable(connectionGatewayInstallation);
-            return this;
+
+        public Builder connectionGatewayInstallation(ConnectionGatewayReferenceArgs connectionGatewayInstallation) {
+            return connectionGatewayInstallation(Output.of(connectionGatewayInstallation));
         }
+
         public Builder contactInformation(@Nullable Output<List<String>> contactInformation) {
-            this.contactInformation = contactInformation;
+            $.contactInformation = contactInformation;
             return this;
         }
-        public Builder contactInformation(@Nullable List<String> contactInformation) {
-            this.contactInformation = Codegen.ofNullable(contactInformation);
-            return this;
+
+        public Builder contactInformation(List<String> contactInformation) {
+            return contactInformation(Output.of(contactInformation));
         }
+
         public Builder contactInformation(String... contactInformation) {
             return contactInformation(List.of(contactInformation));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder machineName(@Nullable Output<String> machineName) {
-            this.machineName = machineName;
+            $.machineName = machineName;
             return this;
         }
-        public Builder machineName(@Nullable String machineName) {
-            this.machineName = Codegen.ofNullable(machineName);
-            return this;
+
+        public Builder machineName(String machineName) {
+            return machineName(Output.of(machineName));
         }
+
         public Builder status(@Nullable Output<Object> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Object status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public ConnectionGatewayDefinitionPropertiesArgs build() {
-            return new ConnectionGatewayDefinitionPropertiesArgs(backendUri, connectionGatewayInstallation, contactInformation, description, displayName, machineName, status);
+
+        public Builder status(Object status) {
+            return status(Output.of(status));
+        }
+
+        public ConnectionGatewayDefinitionPropertiesArgs build() {
+            return $;
         }
     }
+
 }

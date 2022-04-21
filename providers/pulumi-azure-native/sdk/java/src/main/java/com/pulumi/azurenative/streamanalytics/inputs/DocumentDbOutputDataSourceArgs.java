@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable Output<String> accountKey;
+    private @Nullable Output<String> accountKey;
 
-    public Output<String> accountKey() {
-        return this.accountKey == null ? Codegen.empty() : this.accountKey;
+    public Optional<Output<String>> accountKey() {
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="collectionNamePattern")
-      private final @Nullable Output<String> collectionNamePattern;
+    private @Nullable Output<String> collectionNamePattern;
 
-    public Output<String> collectionNamePattern() {
-        return this.collectionNamePattern == null ? Codegen.empty() : this.collectionNamePattern;
+    public Optional<Output<String>> collectionNamePattern() {
+        return Optional.ofNullable(this.collectionNamePattern);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="database")
-      private final @Nullable Output<String> database;
+    private @Nullable Output<String> database;
 
-    public Output<String> database() {
-        return this.database == null ? Codegen.empty() : this.database;
+    public Optional<Output<String>> database() {
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -68,10 +69,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="documentId")
-      private final @Nullable Output<String> documentId;
+    private @Nullable Output<String> documentId;
 
-    public Output<String> documentId() {
-        return this.documentId == null ? Codegen.empty() : this.documentId;
+    public Optional<Output<String>> documentId() {
+        return Optional.ofNullable(this.documentId);
     }
 
     /**
@@ -79,10 +80,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="partitionKey")
-      private final @Nullable Output<String> partitionKey;
+    private @Nullable Output<String> partitionKey;
 
-    public Output<String> partitionKey() {
-        return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
+    public Optional<Output<String>> partitionKey() {
+        return Optional.ofNullable(this.partitionKey);
     }
 
     /**
@@ -91,128 +92,109 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public DocumentDbOutputDataSourceArgs(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> accountKey,
-        @Nullable Output<String> collectionNamePattern,
-        @Nullable Output<String> database,
-        @Nullable Output<String> documentId,
-        @Nullable Output<String> partitionKey,
-        Output<String> type) {
-        this.accountId = accountId;
-        this.accountKey = accountKey;
-        this.collectionNamePattern = collectionNamePattern;
-        this.database = database;
-        this.documentId = documentId;
-        this.partitionKey = partitionKey;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private DocumentDbOutputDataSourceArgs() {}
 
-    private DocumentDbOutputDataSourceArgs() {
-        this.accountId = Codegen.empty();
-        this.accountKey = Codegen.empty();
-        this.collectionNamePattern = Codegen.empty();
-        this.database = Codegen.empty();
-        this.documentId = Codegen.empty();
-        this.partitionKey = Codegen.empty();
-        this.type = Codegen.empty();
+    private DocumentDbOutputDataSourceArgs(DocumentDbOutputDataSourceArgs $) {
+        this.accountId = $.accountId;
+        this.accountKey = $.accountKey;
+        this.collectionNamePattern = $.collectionNamePattern;
+        this.database = $.database;
+        this.documentId = $.documentId;
+        this.partitionKey = $.partitionKey;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentDbOutputDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> accountKey;
-        private @Nullable Output<String> collectionNamePattern;
-        private @Nullable Output<String> database;
-        private @Nullable Output<String> documentId;
-        private @Nullable Output<String> partitionKey;
-        private Output<String> type;
+        private DocumentDbOutputDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentDbOutputDataSourceArgs();
         }
 
         public Builder(DocumentDbOutputDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.accountKey = defaults.accountKey;
-    	      this.collectionNamePattern = defaults.collectionNamePattern;
-    	      this.database = defaults.database;
-    	      this.documentId = defaults.documentId;
-    	      this.partitionKey = defaults.partitionKey;
-    	      this.type = defaults.type;
+            $ = new DocumentDbOutputDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder accountKey(@Nullable Output<String> accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
-        public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Codegen.ofNullable(accountKey);
-            return this;
+
+        public Builder accountKey(String accountKey) {
+            return accountKey(Output.of(accountKey));
         }
+
         public Builder collectionNamePattern(@Nullable Output<String> collectionNamePattern) {
-            this.collectionNamePattern = collectionNamePattern;
+            $.collectionNamePattern = collectionNamePattern;
             return this;
         }
-        public Builder collectionNamePattern(@Nullable String collectionNamePattern) {
-            this.collectionNamePattern = Codegen.ofNullable(collectionNamePattern);
-            return this;
+
+        public Builder collectionNamePattern(String collectionNamePattern) {
+            return collectionNamePattern(Output.of(collectionNamePattern));
         }
+
         public Builder database(@Nullable Output<String> database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
-        public Builder database(@Nullable String database) {
-            this.database = Codegen.ofNullable(database);
-            return this;
+
+        public Builder database(String database) {
+            return database(Output.of(database));
         }
+
         public Builder documentId(@Nullable Output<String> documentId) {
-            this.documentId = documentId;
+            $.documentId = documentId;
             return this;
         }
-        public Builder documentId(@Nullable String documentId) {
-            this.documentId = Codegen.ofNullable(documentId);
-            return this;
+
+        public Builder documentId(String documentId) {
+            return documentId(Output.of(documentId));
         }
+
         public Builder partitionKey(@Nullable Output<String> partitionKey) {
-            this.partitionKey = partitionKey;
+            $.partitionKey = partitionKey;
             return this;
         }
-        public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Codegen.ofNullable(partitionKey);
-            return this;
+
+        public Builder partitionKey(String partitionKey) {
+            return partitionKey(Output.of(partitionKey));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DocumentDbOutputDataSourceArgs build() {
-            return new DocumentDbOutputDataSourceArgs(accountId, accountKey, collectionNamePattern, database, documentId, partitionKey, type);
+            return type(Output.of(type));
+        }
+
+        public DocumentDbOutputDataSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

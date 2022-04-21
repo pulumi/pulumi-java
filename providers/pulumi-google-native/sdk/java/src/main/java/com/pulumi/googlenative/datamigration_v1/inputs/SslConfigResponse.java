@@ -21,7 +21,7 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="caCertificate", required=true)
-      private final String caCertificate;
+    private String caCertificate;
 
     public String caCertificate() {
         return this.caCertificate;
@@ -32,7 +32,7 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientCertificate", required=true)
-      private final String clientCertificate;
+    private String clientCertificate;
 
     public String clientCertificate() {
         return this.clientCertificate;
@@ -43,7 +43,7 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientKey", required=true)
-      private final String clientKey;
+    private String clientKey;
 
     public String clientKey() {
         return this.clientKey;
@@ -54,73 +54,66 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SslConfigResponse(
-        String caCertificate,
-        String clientCertificate,
-        String clientKey,
-        String type) {
-        this.caCertificate = Objects.requireNonNull(caCertificate, "expected parameter 'caCertificate' to be non-null");
-        this.clientCertificate = Objects.requireNonNull(clientCertificate, "expected parameter 'clientCertificate' to be non-null");
-        this.clientKey = Objects.requireNonNull(clientKey, "expected parameter 'clientKey' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SslConfigResponse() {}
 
-    private SslConfigResponse() {
-        this.caCertificate = null;
-        this.clientCertificate = null;
-        this.clientKey = null;
-        this.type = null;
+    private SslConfigResponse(SslConfigResponse $) {
+        this.caCertificate = $.caCertificate;
+        this.clientCertificate = $.clientCertificate;
+        this.clientKey = $.clientKey;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String caCertificate;
-        private String clientCertificate;
-        private String clientKey;
-        private String type;
+        private SslConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslConfigResponse();
         }
 
         public Builder(SslConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caCertificate = defaults.caCertificate;
-    	      this.clientCertificate = defaults.clientCertificate;
-    	      this.clientKey = defaults.clientKey;
-    	      this.type = defaults.type;
+            $ = new SslConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caCertificate(String caCertificate) {
-            this.caCertificate = Objects.requireNonNull(caCertificate);
+            $.caCertificate = caCertificate;
             return this;
         }
+
         public Builder clientCertificate(String clientCertificate) {
-            this.clientCertificate = Objects.requireNonNull(clientCertificate);
+            $.clientCertificate = clientCertificate;
             return this;
         }
+
         public Builder clientKey(String clientKey) {
-            this.clientKey = Objects.requireNonNull(clientKey);
+            $.clientKey = clientKey;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SslConfigResponse build() {
-            return new SslConfigResponse(caCertificate, clientCertificate, clientKey, type);
+        }
+
+        public SslConfigResponse build() {
+            $.caCertificate = Objects.requireNonNull($.caCertificate, "expected parameter 'caCertificate' to be non-null");
+            $.clientCertificate = Objects.requireNonNull($.clientCertificate, "expected parameter 'clientCertificate' to be non-null");
+            $.clientKey = Objects.requireNonNull($.clientKey, "expected parameter 'clientKey' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

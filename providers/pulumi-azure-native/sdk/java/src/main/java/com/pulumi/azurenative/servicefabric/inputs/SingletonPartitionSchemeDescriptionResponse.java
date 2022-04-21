@@ -23,45 +23,45 @@ public final class SingletonPartitionSchemeDescriptionResponse extends com.pulum
      * 
      */
     @Import(name="partitionScheme", required=true)
-      private final String partitionScheme;
+    private String partitionScheme;
 
     public String partitionScheme() {
         return this.partitionScheme;
     }
 
-    public SingletonPartitionSchemeDescriptionResponse(String partitionScheme) {
-        this.partitionScheme = Codegen.stringProp("partitionScheme").arg(partitionScheme).require();
-    }
+    private SingletonPartitionSchemeDescriptionResponse() {}
 
-    private SingletonPartitionSchemeDescriptionResponse() {
-        this.partitionScheme = null;
+    private SingletonPartitionSchemeDescriptionResponse(SingletonPartitionSchemeDescriptionResponse $) {
+        this.partitionScheme = $.partitionScheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SingletonPartitionSchemeDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String partitionScheme;
+        private SingletonPartitionSchemeDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SingletonPartitionSchemeDescriptionResponse();
         }
 
         public Builder(SingletonPartitionSchemeDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionScheme = defaults.partitionScheme;
+            $ = new SingletonPartitionSchemeDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionScheme(String partitionScheme) {
-            this.partitionScheme = Objects.requireNonNull(partitionScheme);
+            $.partitionScheme = partitionScheme;
             return this;
-        }        public SingletonPartitionSchemeDescriptionResponse build() {
-            return new SingletonPartitionSchemeDescriptionResponse(partitionScheme);
+        }
+
+        public SingletonPartitionSchemeDescriptionResponse build() {
+            $.partitionScheme = Codegen.stringProp("partitionScheme").arg($.partitionScheme).require();
+            return $;
         }
     }
+
 }

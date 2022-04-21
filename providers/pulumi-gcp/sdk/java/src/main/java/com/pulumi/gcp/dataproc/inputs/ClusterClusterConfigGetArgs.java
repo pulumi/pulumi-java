@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigAutoscalingConfigGetArgs;
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigEncryptionConfigGetArgs;
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigEndpointConfigGetArgs;
@@ -21,6 +20,7 @@ import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigWorkerConfigGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,17 +36,17 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="autoscalingConfig")
-      private final @Nullable Output<ClusterClusterConfigAutoscalingConfigGetArgs> autoscalingConfig;
+    private @Nullable Output<ClusterClusterConfigAutoscalingConfigGetArgs> autoscalingConfig;
 
-    public Output<ClusterClusterConfigAutoscalingConfigGetArgs> autoscalingConfig() {
-        return this.autoscalingConfig == null ? Codegen.empty() : this.autoscalingConfig;
+    public Optional<Output<ClusterClusterConfigAutoscalingConfigGetArgs>> autoscalingConfig() {
+        return Optional.ofNullable(this.autoscalingConfig);
     }
 
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="encryptionConfig")
-      private final @Nullable Output<ClusterClusterConfigEncryptionConfigGetArgs> encryptionConfig;
+    private @Nullable Output<ClusterClusterConfigEncryptionConfigGetArgs> encryptionConfig;
 
-    public Output<ClusterClusterConfigEncryptionConfigGetArgs> encryptionConfig() {
-        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
+    public Optional<Output<ClusterClusterConfigEncryptionConfigGetArgs>> encryptionConfig() {
+        return Optional.ofNullable(this.encryptionConfig);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="endpointConfig")
-      private final @Nullable Output<ClusterClusterConfigEndpointConfigGetArgs> endpointConfig;
+    private @Nullable Output<ClusterClusterConfigEndpointConfigGetArgs> endpointConfig;
 
-    public Output<ClusterClusterConfigEndpointConfigGetArgs> endpointConfig() {
-        return this.endpointConfig == null ? Codegen.empty() : this.endpointConfig;
+    public Optional<Output<ClusterClusterConfigEndpointConfigGetArgs>> endpointConfig() {
+        return Optional.ofNullable(this.endpointConfig);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="gceClusterConfig")
-      private final @Nullable Output<ClusterClusterConfigGceClusterConfigGetArgs> gceClusterConfig;
+    private @Nullable Output<ClusterClusterConfigGceClusterConfigGetArgs> gceClusterConfig;
 
-    public Output<ClusterClusterConfigGceClusterConfigGetArgs> gceClusterConfig() {
-        return this.gceClusterConfig == null ? Codegen.empty() : this.gceClusterConfig;
+    public Optional<Output<ClusterClusterConfigGceClusterConfigGetArgs>> gceClusterConfig() {
+        return Optional.ofNullable(this.gceClusterConfig);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="initializationActions")
-      private final @Nullable Output<List<ClusterClusterConfigInitializationActionGetArgs>> initializationActions;
+    private @Nullable Output<List<ClusterClusterConfigInitializationActionGetArgs>> initializationActions;
 
-    public Output<List<ClusterClusterConfigInitializationActionGetArgs>> initializationActions() {
-        return this.initializationActions == null ? Codegen.empty() : this.initializationActions;
+    public Optional<Output<List<ClusterClusterConfigInitializationActionGetArgs>>> initializationActions() {
+        return Optional.ofNullable(this.initializationActions);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="lifecycleConfig")
-      private final @Nullable Output<ClusterClusterConfigLifecycleConfigGetArgs> lifecycleConfig;
+    private @Nullable Output<ClusterClusterConfigLifecycleConfigGetArgs> lifecycleConfig;
 
-    public Output<ClusterClusterConfigLifecycleConfigGetArgs> lifecycleConfig() {
-        return this.lifecycleConfig == null ? Codegen.empty() : this.lifecycleConfig;
+    public Optional<Output<ClusterClusterConfigLifecycleConfigGetArgs>> lifecycleConfig() {
+        return Optional.ofNullable(this.lifecycleConfig);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="masterConfig")
-      private final @Nullable Output<ClusterClusterConfigMasterConfigGetArgs> masterConfig;
+    private @Nullable Output<ClusterClusterConfigMasterConfigGetArgs> masterConfig;
 
-    public Output<ClusterClusterConfigMasterConfigGetArgs> masterConfig() {
-        return this.masterConfig == null ? Codegen.empty() : this.masterConfig;
+    public Optional<Output<ClusterClusterConfigMasterConfigGetArgs>> masterConfig() {
+        return Optional.ofNullable(this.masterConfig);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="metastoreConfig")
-      private final @Nullable Output<ClusterClusterConfigMetastoreConfigGetArgs> metastoreConfig;
+    private @Nullable Output<ClusterClusterConfigMetastoreConfigGetArgs> metastoreConfig;
 
-    public Output<ClusterClusterConfigMetastoreConfigGetArgs> metastoreConfig() {
-        return this.metastoreConfig == null ? Codegen.empty() : this.metastoreConfig;
+    public Optional<Output<ClusterClusterConfigMetastoreConfigGetArgs>> metastoreConfig() {
+        return Optional.ofNullable(this.metastoreConfig);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="preemptibleWorkerConfig")
-      private final @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> preemptibleWorkerConfig;
+    private @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> preemptibleWorkerConfig;
 
-    public Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> preemptibleWorkerConfig() {
-        return this.preemptibleWorkerConfig == null ? Codegen.empty() : this.preemptibleWorkerConfig;
+    public Optional<Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs>> preemptibleWorkerConfig() {
+        return Optional.ofNullable(this.preemptibleWorkerConfig);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="securityConfig")
-      private final @Nullable Output<ClusterClusterConfigSecurityConfigGetArgs> securityConfig;
+    private @Nullable Output<ClusterClusterConfigSecurityConfigGetArgs> securityConfig;
 
-    public Output<ClusterClusterConfigSecurityConfigGetArgs> securityConfig() {
-        return this.securityConfig == null ? Codegen.empty() : this.securityConfig;
+    public Optional<Output<ClusterClusterConfigSecurityConfigGetArgs>> securityConfig() {
+        return Optional.ofNullable(this.securityConfig);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="softwareConfig")
-      private final @Nullable Output<ClusterClusterConfigSoftwareConfigGetArgs> softwareConfig;
+    private @Nullable Output<ClusterClusterConfigSoftwareConfigGetArgs> softwareConfig;
 
-    public Output<ClusterClusterConfigSoftwareConfigGetArgs> softwareConfig() {
-        return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
+    public Optional<Output<ClusterClusterConfigSoftwareConfigGetArgs>> softwareConfig() {
+        return Optional.ofNullable(this.softwareConfig);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="stagingBucket")
-      private final @Nullable Output<String> stagingBucket;
+    private @Nullable Output<String> stagingBucket;
 
-    public Output<String> stagingBucket() {
-        return this.stagingBucket == null ? Codegen.empty() : this.stagingBucket;
+    public Optional<Output<String>> stagingBucket() {
+        return Optional.ofNullable(this.stagingBucket);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tempBucket")
-      private final @Nullable Output<String> tempBucket;
+    private @Nullable Output<String> tempBucket;
 
-    public Output<String> tempBucket() {
-        return this.tempBucket == null ? Codegen.empty() : this.tempBucket;
+    public Optional<Output<String>> tempBucket() {
+        return Optional.ofNullable(this.tempBucket);
     }
 
     /**
@@ -208,235 +208,192 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="workerConfig")
-      private final @Nullable Output<ClusterClusterConfigWorkerConfigGetArgs> workerConfig;
+    private @Nullable Output<ClusterClusterConfigWorkerConfigGetArgs> workerConfig;
 
-    public Output<ClusterClusterConfigWorkerConfigGetArgs> workerConfig() {
-        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
+    public Optional<Output<ClusterClusterConfigWorkerConfigGetArgs>> workerConfig() {
+        return Optional.ofNullable(this.workerConfig);
     }
 
-    public ClusterClusterConfigGetArgs(
-        @Nullable Output<ClusterClusterConfigAutoscalingConfigGetArgs> autoscalingConfig,
-        @Nullable Output<String> bucket,
-        @Nullable Output<ClusterClusterConfigEncryptionConfigGetArgs> encryptionConfig,
-        @Nullable Output<ClusterClusterConfigEndpointConfigGetArgs> endpointConfig,
-        @Nullable Output<ClusterClusterConfigGceClusterConfigGetArgs> gceClusterConfig,
-        @Nullable Output<List<ClusterClusterConfigInitializationActionGetArgs>> initializationActions,
-        @Nullable Output<ClusterClusterConfigLifecycleConfigGetArgs> lifecycleConfig,
-        @Nullable Output<ClusterClusterConfigMasterConfigGetArgs> masterConfig,
-        @Nullable Output<ClusterClusterConfigMetastoreConfigGetArgs> metastoreConfig,
-        @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> preemptibleWorkerConfig,
-        @Nullable Output<ClusterClusterConfigSecurityConfigGetArgs> securityConfig,
-        @Nullable Output<ClusterClusterConfigSoftwareConfigGetArgs> softwareConfig,
-        @Nullable Output<String> stagingBucket,
-        @Nullable Output<String> tempBucket,
-        @Nullable Output<ClusterClusterConfigWorkerConfigGetArgs> workerConfig) {
-        this.autoscalingConfig = autoscalingConfig;
-        this.bucket = bucket;
-        this.encryptionConfig = encryptionConfig;
-        this.endpointConfig = endpointConfig;
-        this.gceClusterConfig = gceClusterConfig;
-        this.initializationActions = initializationActions;
-        this.lifecycleConfig = lifecycleConfig;
-        this.masterConfig = masterConfig;
-        this.metastoreConfig = metastoreConfig;
-        this.preemptibleWorkerConfig = preemptibleWorkerConfig;
-        this.securityConfig = securityConfig;
-        this.softwareConfig = softwareConfig;
-        this.stagingBucket = stagingBucket;
-        this.tempBucket = tempBucket;
-        this.workerConfig = workerConfig;
-    }
+    private ClusterClusterConfigGetArgs() {}
 
-    private ClusterClusterConfigGetArgs() {
-        this.autoscalingConfig = Codegen.empty();
-        this.bucket = Codegen.empty();
-        this.encryptionConfig = Codegen.empty();
-        this.endpointConfig = Codegen.empty();
-        this.gceClusterConfig = Codegen.empty();
-        this.initializationActions = Codegen.empty();
-        this.lifecycleConfig = Codegen.empty();
-        this.masterConfig = Codegen.empty();
-        this.metastoreConfig = Codegen.empty();
-        this.preemptibleWorkerConfig = Codegen.empty();
-        this.securityConfig = Codegen.empty();
-        this.softwareConfig = Codegen.empty();
-        this.stagingBucket = Codegen.empty();
-        this.tempBucket = Codegen.empty();
-        this.workerConfig = Codegen.empty();
+    private ClusterClusterConfigGetArgs(ClusterClusterConfigGetArgs $) {
+        this.autoscalingConfig = $.autoscalingConfig;
+        this.bucket = $.bucket;
+        this.encryptionConfig = $.encryptionConfig;
+        this.endpointConfig = $.endpointConfig;
+        this.gceClusterConfig = $.gceClusterConfig;
+        this.initializationActions = $.initializationActions;
+        this.lifecycleConfig = $.lifecycleConfig;
+        this.masterConfig = $.masterConfig;
+        this.metastoreConfig = $.metastoreConfig;
+        this.preemptibleWorkerConfig = $.preemptibleWorkerConfig;
+        this.securityConfig = $.securityConfig;
+        this.softwareConfig = $.softwareConfig;
+        this.stagingBucket = $.stagingBucket;
+        this.tempBucket = $.tempBucket;
+        this.workerConfig = $.workerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterClusterConfigAutoscalingConfigGetArgs> autoscalingConfig;
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<ClusterClusterConfigEncryptionConfigGetArgs> encryptionConfig;
-        private @Nullable Output<ClusterClusterConfigEndpointConfigGetArgs> endpointConfig;
-        private @Nullable Output<ClusterClusterConfigGceClusterConfigGetArgs> gceClusterConfig;
-        private @Nullable Output<List<ClusterClusterConfigInitializationActionGetArgs>> initializationActions;
-        private @Nullable Output<ClusterClusterConfigLifecycleConfigGetArgs> lifecycleConfig;
-        private @Nullable Output<ClusterClusterConfigMasterConfigGetArgs> masterConfig;
-        private @Nullable Output<ClusterClusterConfigMetastoreConfigGetArgs> metastoreConfig;
-        private @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> preemptibleWorkerConfig;
-        private @Nullable Output<ClusterClusterConfigSecurityConfigGetArgs> securityConfig;
-        private @Nullable Output<ClusterClusterConfigSoftwareConfigGetArgs> softwareConfig;
-        private @Nullable Output<String> stagingBucket;
-        private @Nullable Output<String> tempBucket;
-        private @Nullable Output<ClusterClusterConfigWorkerConfigGetArgs> workerConfig;
+        private ClusterClusterConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigGetArgs();
         }
 
         public Builder(ClusterClusterConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingConfig = defaults.autoscalingConfig;
-    	      this.bucket = defaults.bucket;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.endpointConfig = defaults.endpointConfig;
-    	      this.gceClusterConfig = defaults.gceClusterConfig;
-    	      this.initializationActions = defaults.initializationActions;
-    	      this.lifecycleConfig = defaults.lifecycleConfig;
-    	      this.masterConfig = defaults.masterConfig;
-    	      this.metastoreConfig = defaults.metastoreConfig;
-    	      this.preemptibleWorkerConfig = defaults.preemptibleWorkerConfig;
-    	      this.securityConfig = defaults.securityConfig;
-    	      this.softwareConfig = defaults.softwareConfig;
-    	      this.stagingBucket = defaults.stagingBucket;
-    	      this.tempBucket = defaults.tempBucket;
-    	      this.workerConfig = defaults.workerConfig;
+            $ = new ClusterClusterConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingConfig(@Nullable Output<ClusterClusterConfigAutoscalingConfigGetArgs> autoscalingConfig) {
-            this.autoscalingConfig = autoscalingConfig;
+            $.autoscalingConfig = autoscalingConfig;
             return this;
         }
-        public Builder autoscalingConfig(@Nullable ClusterClusterConfigAutoscalingConfigGetArgs autoscalingConfig) {
-            this.autoscalingConfig = Codegen.ofNullable(autoscalingConfig);
-            return this;
+
+        public Builder autoscalingConfig(ClusterClusterConfigAutoscalingConfigGetArgs autoscalingConfig) {
+            return autoscalingConfig(Output.of(autoscalingConfig));
         }
+
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder encryptionConfig(@Nullable Output<ClusterClusterConfigEncryptionConfigGetArgs> encryptionConfig) {
-            this.encryptionConfig = encryptionConfig;
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
-        public Builder encryptionConfig(@Nullable ClusterClusterConfigEncryptionConfigGetArgs encryptionConfig) {
-            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
-            return this;
+
+        public Builder encryptionConfig(ClusterClusterConfigEncryptionConfigGetArgs encryptionConfig) {
+            return encryptionConfig(Output.of(encryptionConfig));
         }
+
         public Builder endpointConfig(@Nullable Output<ClusterClusterConfigEndpointConfigGetArgs> endpointConfig) {
-            this.endpointConfig = endpointConfig;
+            $.endpointConfig = endpointConfig;
             return this;
         }
-        public Builder endpointConfig(@Nullable ClusterClusterConfigEndpointConfigGetArgs endpointConfig) {
-            this.endpointConfig = Codegen.ofNullable(endpointConfig);
-            return this;
+
+        public Builder endpointConfig(ClusterClusterConfigEndpointConfigGetArgs endpointConfig) {
+            return endpointConfig(Output.of(endpointConfig));
         }
+
         public Builder gceClusterConfig(@Nullable Output<ClusterClusterConfigGceClusterConfigGetArgs> gceClusterConfig) {
-            this.gceClusterConfig = gceClusterConfig;
+            $.gceClusterConfig = gceClusterConfig;
             return this;
         }
-        public Builder gceClusterConfig(@Nullable ClusterClusterConfigGceClusterConfigGetArgs gceClusterConfig) {
-            this.gceClusterConfig = Codegen.ofNullable(gceClusterConfig);
-            return this;
+
+        public Builder gceClusterConfig(ClusterClusterConfigGceClusterConfigGetArgs gceClusterConfig) {
+            return gceClusterConfig(Output.of(gceClusterConfig));
         }
+
         public Builder initializationActions(@Nullable Output<List<ClusterClusterConfigInitializationActionGetArgs>> initializationActions) {
-            this.initializationActions = initializationActions;
+            $.initializationActions = initializationActions;
             return this;
         }
-        public Builder initializationActions(@Nullable List<ClusterClusterConfigInitializationActionGetArgs> initializationActions) {
-            this.initializationActions = Codegen.ofNullable(initializationActions);
-            return this;
+
+        public Builder initializationActions(List<ClusterClusterConfigInitializationActionGetArgs> initializationActions) {
+            return initializationActions(Output.of(initializationActions));
         }
+
         public Builder initializationActions(ClusterClusterConfigInitializationActionGetArgs... initializationActions) {
             return initializationActions(List.of(initializationActions));
         }
+
         public Builder lifecycleConfig(@Nullable Output<ClusterClusterConfigLifecycleConfigGetArgs> lifecycleConfig) {
-            this.lifecycleConfig = lifecycleConfig;
+            $.lifecycleConfig = lifecycleConfig;
             return this;
         }
-        public Builder lifecycleConfig(@Nullable ClusterClusterConfigLifecycleConfigGetArgs lifecycleConfig) {
-            this.lifecycleConfig = Codegen.ofNullable(lifecycleConfig);
-            return this;
+
+        public Builder lifecycleConfig(ClusterClusterConfigLifecycleConfigGetArgs lifecycleConfig) {
+            return lifecycleConfig(Output.of(lifecycleConfig));
         }
+
         public Builder masterConfig(@Nullable Output<ClusterClusterConfigMasterConfigGetArgs> masterConfig) {
-            this.masterConfig = masterConfig;
+            $.masterConfig = masterConfig;
             return this;
         }
-        public Builder masterConfig(@Nullable ClusterClusterConfigMasterConfigGetArgs masterConfig) {
-            this.masterConfig = Codegen.ofNullable(masterConfig);
-            return this;
+
+        public Builder masterConfig(ClusterClusterConfigMasterConfigGetArgs masterConfig) {
+            return masterConfig(Output.of(masterConfig));
         }
+
         public Builder metastoreConfig(@Nullable Output<ClusterClusterConfigMetastoreConfigGetArgs> metastoreConfig) {
-            this.metastoreConfig = metastoreConfig;
+            $.metastoreConfig = metastoreConfig;
             return this;
         }
-        public Builder metastoreConfig(@Nullable ClusterClusterConfigMetastoreConfigGetArgs metastoreConfig) {
-            this.metastoreConfig = Codegen.ofNullable(metastoreConfig);
-            return this;
+
+        public Builder metastoreConfig(ClusterClusterConfigMetastoreConfigGetArgs metastoreConfig) {
+            return metastoreConfig(Output.of(metastoreConfig));
         }
+
         public Builder preemptibleWorkerConfig(@Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> preemptibleWorkerConfig) {
-            this.preemptibleWorkerConfig = preemptibleWorkerConfig;
+            $.preemptibleWorkerConfig = preemptibleWorkerConfig;
             return this;
         }
-        public Builder preemptibleWorkerConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfigGetArgs preemptibleWorkerConfig) {
-            this.preemptibleWorkerConfig = Codegen.ofNullable(preemptibleWorkerConfig);
-            return this;
+
+        public Builder preemptibleWorkerConfig(ClusterClusterConfigPreemptibleWorkerConfigGetArgs preemptibleWorkerConfig) {
+            return preemptibleWorkerConfig(Output.of(preemptibleWorkerConfig));
         }
+
         public Builder securityConfig(@Nullable Output<ClusterClusterConfigSecurityConfigGetArgs> securityConfig) {
-            this.securityConfig = securityConfig;
+            $.securityConfig = securityConfig;
             return this;
         }
-        public Builder securityConfig(@Nullable ClusterClusterConfigSecurityConfigGetArgs securityConfig) {
-            this.securityConfig = Codegen.ofNullable(securityConfig);
-            return this;
+
+        public Builder securityConfig(ClusterClusterConfigSecurityConfigGetArgs securityConfig) {
+            return securityConfig(Output.of(securityConfig));
         }
+
         public Builder softwareConfig(@Nullable Output<ClusterClusterConfigSoftwareConfigGetArgs> softwareConfig) {
-            this.softwareConfig = softwareConfig;
+            $.softwareConfig = softwareConfig;
             return this;
         }
-        public Builder softwareConfig(@Nullable ClusterClusterConfigSoftwareConfigGetArgs softwareConfig) {
-            this.softwareConfig = Codegen.ofNullable(softwareConfig);
-            return this;
+
+        public Builder softwareConfig(ClusterClusterConfigSoftwareConfigGetArgs softwareConfig) {
+            return softwareConfig(Output.of(softwareConfig));
         }
+
         public Builder stagingBucket(@Nullable Output<String> stagingBucket) {
-            this.stagingBucket = stagingBucket;
+            $.stagingBucket = stagingBucket;
             return this;
         }
-        public Builder stagingBucket(@Nullable String stagingBucket) {
-            this.stagingBucket = Codegen.ofNullable(stagingBucket);
-            return this;
+
+        public Builder stagingBucket(String stagingBucket) {
+            return stagingBucket(Output.of(stagingBucket));
         }
+
         public Builder tempBucket(@Nullable Output<String> tempBucket) {
-            this.tempBucket = tempBucket;
+            $.tempBucket = tempBucket;
             return this;
         }
-        public Builder tempBucket(@Nullable String tempBucket) {
-            this.tempBucket = Codegen.ofNullable(tempBucket);
-            return this;
+
+        public Builder tempBucket(String tempBucket) {
+            return tempBucket(Output.of(tempBucket));
         }
+
         public Builder workerConfig(@Nullable Output<ClusterClusterConfigWorkerConfigGetArgs> workerConfig) {
-            this.workerConfig = workerConfig;
+            $.workerConfig = workerConfig;
             return this;
         }
-        public Builder workerConfig(@Nullable ClusterClusterConfigWorkerConfigGetArgs workerConfig) {
-            this.workerConfig = Codegen.ofNullable(workerConfig);
-            return this;
-        }        public ClusterClusterConfigGetArgs build() {
-            return new ClusterClusterConfigGetArgs(autoscalingConfig, bucket, encryptionConfig, endpointConfig, gceClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, preemptibleWorkerConfig, securityConfig, softwareConfig, stagingBucket, tempBucket, workerConfig);
+
+        public Builder workerConfig(ClusterClusterConfigWorkerConfigGetArgs workerConfig) {
+            return workerConfig(Output.of(workerConfig));
+        }
+
+        public ClusterClusterConfigGetArgs build() {
+            return $;
         }
     }
+
 }

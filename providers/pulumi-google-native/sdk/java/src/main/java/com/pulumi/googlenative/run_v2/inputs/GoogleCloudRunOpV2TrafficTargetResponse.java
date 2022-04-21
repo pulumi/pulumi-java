@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends com.pulumi.re
      * 
      */
     @Import(name="percent", required=true)
-      private final Integer percent;
+    private Integer percent;
 
     public Integer percent() {
         return this.percent;
@@ -33,7 +33,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends com.pulumi.re
      * 
      */
     @Import(name="revision", required=true)
-      private final String revision;
+    private String revision;
 
     public String revision() {
         return this.revision;
@@ -44,7 +44,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends com.pulumi.re
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
@@ -55,73 +55,66 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudRunOpV2TrafficTargetResponse(
-        Integer percent,
-        String revision,
-        String tag,
-        String type) {
-        this.percent = Objects.requireNonNull(percent, "expected parameter 'percent' to be non-null");
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudRunOpV2TrafficTargetResponse() {}
 
-    private GoogleCloudRunOpV2TrafficTargetResponse() {
-        this.percent = null;
-        this.revision = null;
-        this.tag = null;
-        this.type = null;
+    private GoogleCloudRunOpV2TrafficTargetResponse(GoogleCloudRunOpV2TrafficTargetResponse $) {
+        this.percent = $.percent;
+        this.revision = $.revision;
+        this.tag = $.tag;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2TrafficTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer percent;
-        private String revision;
-        private String tag;
-        private String type;
+        private GoogleCloudRunOpV2TrafficTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2TrafficTargetResponse();
         }
 
         public Builder(GoogleCloudRunOpV2TrafficTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.percent = defaults.percent;
-    	      this.revision = defaults.revision;
-    	      this.tag = defaults.tag;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudRunOpV2TrafficTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder percent(Integer percent) {
-            this.percent = Objects.requireNonNull(percent);
+            $.percent = percent;
             return this;
         }
+
         public Builder revision(String revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudRunOpV2TrafficTargetResponse build() {
-            return new GoogleCloudRunOpV2TrafficTargetResponse(percent, revision, tag, type);
+        }
+
+        public GoogleCloudRunOpV2TrafficTargetResponse build() {
+            $.percent = Objects.requireNonNull($.percent, "expected parameter 'percent' to be non-null");
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

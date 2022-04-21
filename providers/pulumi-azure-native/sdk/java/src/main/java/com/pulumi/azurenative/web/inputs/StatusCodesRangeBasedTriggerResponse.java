@@ -24,17 +24,17 @@ public final class StatusCodesRangeBasedTriggerResponse extends com.pulumi.resou
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StatusCodesRangeBasedTriggerResponse extends com.pulumi.resou
      * 
      */
     @Import(name="statusCodes")
-      private final @Nullable String statusCodes;
+    private @Nullable String statusCodes;
 
     public Optional<String> statusCodes() {
-        return this.statusCodes == null ? Optional.empty() : Optional.ofNullable(this.statusCodes);
+        return Optional.ofNullable(this.statusCodes);
     }
 
     /**
@@ -53,73 +53,62 @@ public final class StatusCodesRangeBasedTriggerResponse extends com.pulumi.resou
      * 
      */
     @Import(name="timeInterval")
-      private final @Nullable String timeInterval;
+    private @Nullable String timeInterval;
 
     public Optional<String> timeInterval() {
-        return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);
+        return Optional.ofNullable(this.timeInterval);
     }
 
-    public StatusCodesRangeBasedTriggerResponse(
-        @Nullable Integer count,
-        @Nullable String path,
-        @Nullable String statusCodes,
-        @Nullable String timeInterval) {
-        this.count = count;
-        this.path = path;
-        this.statusCodes = statusCodes;
-        this.timeInterval = timeInterval;
-    }
+    private StatusCodesRangeBasedTriggerResponse() {}
 
-    private StatusCodesRangeBasedTriggerResponse() {
-        this.count = null;
-        this.path = null;
-        this.statusCodes = null;
-        this.timeInterval = null;
+    private StatusCodesRangeBasedTriggerResponse(StatusCodesRangeBasedTriggerResponse $) {
+        this.count = $.count;
+        this.path = $.path;
+        this.statusCodes = $.statusCodes;
+        this.timeInterval = $.timeInterval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusCodesRangeBasedTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer count;
-        private @Nullable String path;
-        private @Nullable String statusCodes;
-        private @Nullable String timeInterval;
+        private StatusCodesRangeBasedTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusCodesRangeBasedTriggerResponse();
         }
 
         public Builder(StatusCodesRangeBasedTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.path = defaults.path;
-    	      this.statusCodes = defaults.statusCodes;
-    	      this.timeInterval = defaults.timeInterval;
+            $ = new StatusCodesRangeBasedTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder statusCodes(@Nullable String statusCodes) {
-            this.statusCodes = statusCodes;
+            $.statusCodes = statusCodes;
             return this;
         }
+
         public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = timeInterval;
+            $.timeInterval = timeInterval;
             return this;
-        }        public StatusCodesRangeBasedTriggerResponse build() {
-            return new StatusCodesRangeBasedTriggerResponse(count, path, statusCodes, timeInterval);
+        }
+
+        public StatusCodesRangeBasedTriggerResponse build() {
+            return $;
         }
     }
+
 }

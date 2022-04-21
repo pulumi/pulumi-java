@@ -31,7 +31,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="acceleratorConfig", required=true)
-      private final GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
+    private GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
 
     public GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
@@ -42,7 +42,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="autoScaling", required=true)
-      private final GoogleCloudMlV1__AutoScalingResponse autoScaling;
+    private GoogleCloudMlV1__AutoScalingResponse autoScaling;
 
     public GoogleCloudMlV1__AutoScalingResponse autoScaling() {
         return this.autoScaling;
@@ -53,7 +53,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="container", required=true)
-      private final GoogleCloudMlV1__ContainerSpecResponse container;
+    private GoogleCloudMlV1__ContainerSpecResponse container;
 
     public GoogleCloudMlV1__ContainerSpecResponse container() {
         return this.container;
@@ -64,7 +64,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -75,7 +75,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="deploymentUri", required=true)
-      private final String deploymentUri;
+    private String deploymentUri;
 
     public String deploymentUri() {
         return this.deploymentUri;
@@ -86,7 +86,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -97,7 +97,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -108,7 +108,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -119,7 +119,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="explanationConfig", required=true)
-      private final GoogleCloudMlV1__ExplanationConfigResponse explanationConfig;
+    private GoogleCloudMlV1__ExplanationConfigResponse explanationConfig;
 
     public GoogleCloudMlV1__ExplanationConfigResponse explanationConfig() {
         return this.explanationConfig;
@@ -130,7 +130,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="framework", required=true)
-      private final String framework;
+    private String framework;
 
     public String framework() {
         return this.framework;
@@ -141,7 +141,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="isDefault", required=true)
-      private final Boolean isDefault;
+    private Boolean isDefault;
 
     public Boolean isDefault() {
         return this.isDefault;
@@ -152,7 +152,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -163,7 +163,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastMigrationModelId", required=true)
-      private final String lastMigrationModelId;
+    private String lastMigrationModelId;
 
     public String lastMigrationModelId() {
         return this.lastMigrationModelId;
@@ -174,7 +174,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastMigrationTime", required=true)
-      private final String lastMigrationTime;
+    private String lastMigrationTime;
 
     public String lastMigrationTime() {
         return this.lastMigrationTime;
@@ -185,7 +185,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastUseTime", required=true)
-      private final String lastUseTime;
+    private String lastUseTime;
 
     public String lastUseTime() {
         return this.lastUseTime;
@@ -196,7 +196,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -207,7 +207,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="manualScaling", required=true)
-      private final GoogleCloudMlV1__ManualScalingResponse manualScaling;
+    private GoogleCloudMlV1__ManualScalingResponse manualScaling;
 
     public GoogleCloudMlV1__ManualScalingResponse manualScaling() {
         return this.manualScaling;
@@ -218,7 +218,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -229,7 +229,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="packageUris", required=true)
-      private final List<String> packageUris;
+    private List<String> packageUris;
 
     public List<String> packageUris() {
         return this.packageUris;
@@ -240,7 +240,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="predictionClass", required=true)
-      private final String predictionClass;
+    private String predictionClass;
 
     public String predictionClass() {
         return this.predictionClass;
@@ -251,7 +251,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="pythonVersion", required=true)
-      private final String pythonVersion;
+    private String pythonVersion;
 
     public String pythonVersion() {
         return this.pythonVersion;
@@ -262,7 +262,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="requestLoggingConfig", required=true)
-      private final GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig;
+    private GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig;
 
     public GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig() {
         return this.requestLoggingConfig;
@@ -273,7 +273,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="routes", required=true)
-      private final GoogleCloudMlV1__RouteMapResponse routes;
+    private GoogleCloudMlV1__RouteMapResponse routes;
 
     public GoogleCloudMlV1__RouteMapResponse routes() {
         return this.routes;
@@ -284,7 +284,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="runtimeVersion", required=true)
-      private final String runtimeVersion;
+    private String runtimeVersion;
 
     public String runtimeVersion() {
         return this.runtimeVersion;
@@ -295,7 +295,7 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
@@ -306,274 +306,224 @@ public final class GoogleCloudMlV1__VersionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public GoogleCloudMlV1__VersionResponse(
-        GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig,
-        GoogleCloudMlV1__AutoScalingResponse autoScaling,
-        GoogleCloudMlV1__ContainerSpecResponse container,
-        String createTime,
-        String deploymentUri,
-        String description,
-        String errorMessage,
-        String etag,
-        GoogleCloudMlV1__ExplanationConfigResponse explanationConfig,
-        String framework,
-        Boolean isDefault,
-        Map<String,String> labels,
-        String lastMigrationModelId,
-        String lastMigrationTime,
-        String lastUseTime,
-        String machineType,
-        GoogleCloudMlV1__ManualScalingResponse manualScaling,
-        String name,
-        List<String> packageUris,
-        String predictionClass,
-        String pythonVersion,
-        GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig,
-        GoogleCloudMlV1__RouteMapResponse routes,
-        String runtimeVersion,
-        String serviceAccount,
-        String state) {
-        this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig, "expected parameter 'acceleratorConfig' to be non-null");
-        this.autoScaling = Objects.requireNonNull(autoScaling, "expected parameter 'autoScaling' to be non-null");
-        this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.deploymentUri = Objects.requireNonNull(deploymentUri, "expected parameter 'deploymentUri' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.explanationConfig = Objects.requireNonNull(explanationConfig, "expected parameter 'explanationConfig' to be non-null");
-        this.framework = Objects.requireNonNull(framework, "expected parameter 'framework' to be non-null");
-        this.isDefault = Objects.requireNonNull(isDefault, "expected parameter 'isDefault' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.lastMigrationModelId = Objects.requireNonNull(lastMigrationModelId, "expected parameter 'lastMigrationModelId' to be non-null");
-        this.lastMigrationTime = Objects.requireNonNull(lastMigrationTime, "expected parameter 'lastMigrationTime' to be non-null");
-        this.lastUseTime = Objects.requireNonNull(lastUseTime, "expected parameter 'lastUseTime' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.manualScaling = Objects.requireNonNull(manualScaling, "expected parameter 'manualScaling' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.packageUris = Objects.requireNonNull(packageUris, "expected parameter 'packageUris' to be non-null");
-        this.predictionClass = Objects.requireNonNull(predictionClass, "expected parameter 'predictionClass' to be non-null");
-        this.pythonVersion = Objects.requireNonNull(pythonVersion, "expected parameter 'pythonVersion' to be non-null");
-        this.requestLoggingConfig = Objects.requireNonNull(requestLoggingConfig, "expected parameter 'requestLoggingConfig' to be non-null");
-        this.routes = Objects.requireNonNull(routes, "expected parameter 'routes' to be non-null");
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private GoogleCloudMlV1__VersionResponse() {}
 
-    private GoogleCloudMlV1__VersionResponse() {
-        this.acceleratorConfig = null;
-        this.autoScaling = null;
-        this.container = null;
-        this.createTime = null;
-        this.deploymentUri = null;
-        this.description = null;
-        this.errorMessage = null;
-        this.etag = null;
-        this.explanationConfig = null;
-        this.framework = null;
-        this.isDefault = null;
-        this.labels = Map.of();
-        this.lastMigrationModelId = null;
-        this.lastMigrationTime = null;
-        this.lastUseTime = null;
-        this.machineType = null;
-        this.manualScaling = null;
-        this.name = null;
-        this.packageUris = List.of();
-        this.predictionClass = null;
-        this.pythonVersion = null;
-        this.requestLoggingConfig = null;
-        this.routes = null;
-        this.runtimeVersion = null;
-        this.serviceAccount = null;
-        this.state = null;
+    private GoogleCloudMlV1__VersionResponse(GoogleCloudMlV1__VersionResponse $) {
+        this.acceleratorConfig = $.acceleratorConfig;
+        this.autoScaling = $.autoScaling;
+        this.container = $.container;
+        this.createTime = $.createTime;
+        this.deploymentUri = $.deploymentUri;
+        this.description = $.description;
+        this.errorMessage = $.errorMessage;
+        this.etag = $.etag;
+        this.explanationConfig = $.explanationConfig;
+        this.framework = $.framework;
+        this.isDefault = $.isDefault;
+        this.labels = $.labels;
+        this.lastMigrationModelId = $.lastMigrationModelId;
+        this.lastMigrationTime = $.lastMigrationTime;
+        this.lastUseTime = $.lastUseTime;
+        this.machineType = $.machineType;
+        this.manualScaling = $.manualScaling;
+        this.name = $.name;
+        this.packageUris = $.packageUris;
+        this.predictionClass = $.predictionClass;
+        this.pythonVersion = $.pythonVersion;
+        this.requestLoggingConfig = $.requestLoggingConfig;
+        this.routes = $.routes;
+        this.runtimeVersion = $.runtimeVersion;
+        this.serviceAccount = $.serviceAccount;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__VersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
-        private GoogleCloudMlV1__AutoScalingResponse autoScaling;
-        private GoogleCloudMlV1__ContainerSpecResponse container;
-        private String createTime;
-        private String deploymentUri;
-        private String description;
-        private String errorMessage;
-        private String etag;
-        private GoogleCloudMlV1__ExplanationConfigResponse explanationConfig;
-        private String framework;
-        private Boolean isDefault;
-        private Map<String,String> labels;
-        private String lastMigrationModelId;
-        private String lastMigrationTime;
-        private String lastUseTime;
-        private String machineType;
-        private GoogleCloudMlV1__ManualScalingResponse manualScaling;
-        private String name;
-        private List<String> packageUris;
-        private String predictionClass;
-        private String pythonVersion;
-        private GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig;
-        private GoogleCloudMlV1__RouteMapResponse routes;
-        private String runtimeVersion;
-        private String serviceAccount;
-        private String state;
+        private GoogleCloudMlV1__VersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__VersionResponse();
         }
 
         public Builder(GoogleCloudMlV1__VersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorConfig = defaults.acceleratorConfig;
-    	      this.autoScaling = defaults.autoScaling;
-    	      this.container = defaults.container;
-    	      this.createTime = defaults.createTime;
-    	      this.deploymentUri = defaults.deploymentUri;
-    	      this.description = defaults.description;
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.etag = defaults.etag;
-    	      this.explanationConfig = defaults.explanationConfig;
-    	      this.framework = defaults.framework;
-    	      this.isDefault = defaults.isDefault;
-    	      this.labels = defaults.labels;
-    	      this.lastMigrationModelId = defaults.lastMigrationModelId;
-    	      this.lastMigrationTime = defaults.lastMigrationTime;
-    	      this.lastUseTime = defaults.lastUseTime;
-    	      this.machineType = defaults.machineType;
-    	      this.manualScaling = defaults.manualScaling;
-    	      this.name = defaults.name;
-    	      this.packageUris = defaults.packageUris;
-    	      this.predictionClass = defaults.predictionClass;
-    	      this.pythonVersion = defaults.pythonVersion;
-    	      this.requestLoggingConfig = defaults.requestLoggingConfig;
-    	      this.routes = defaults.routes;
-    	      this.runtimeVersion = defaults.runtimeVersion;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.state = defaults.state;
+            $ = new GoogleCloudMlV1__VersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorConfig(GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig) {
-            this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
+            $.acceleratorConfig = acceleratorConfig;
             return this;
         }
+
         public Builder autoScaling(GoogleCloudMlV1__AutoScalingResponse autoScaling) {
-            this.autoScaling = Objects.requireNonNull(autoScaling);
+            $.autoScaling = autoScaling;
             return this;
         }
+
         public Builder container(GoogleCloudMlV1__ContainerSpecResponse container) {
-            this.container = Objects.requireNonNull(container);
+            $.container = container;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder deploymentUri(String deploymentUri) {
-            this.deploymentUri = Objects.requireNonNull(deploymentUri);
+            $.deploymentUri = deploymentUri;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder explanationConfig(GoogleCloudMlV1__ExplanationConfigResponse explanationConfig) {
-            this.explanationConfig = Objects.requireNonNull(explanationConfig);
+            $.explanationConfig = explanationConfig;
             return this;
         }
+
         public Builder framework(String framework) {
-            this.framework = Objects.requireNonNull(framework);
+            $.framework = framework;
             return this;
         }
+
         public Builder isDefault(Boolean isDefault) {
-            this.isDefault = Objects.requireNonNull(isDefault);
+            $.isDefault = isDefault;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder lastMigrationModelId(String lastMigrationModelId) {
-            this.lastMigrationModelId = Objects.requireNonNull(lastMigrationModelId);
+            $.lastMigrationModelId = lastMigrationModelId;
             return this;
         }
+
         public Builder lastMigrationTime(String lastMigrationTime) {
-            this.lastMigrationTime = Objects.requireNonNull(lastMigrationTime);
+            $.lastMigrationTime = lastMigrationTime;
             return this;
         }
+
         public Builder lastUseTime(String lastUseTime) {
-            this.lastUseTime = Objects.requireNonNull(lastUseTime);
+            $.lastUseTime = lastUseTime;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder manualScaling(GoogleCloudMlV1__ManualScalingResponse manualScaling) {
-            this.manualScaling = Objects.requireNonNull(manualScaling);
+            $.manualScaling = manualScaling;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder packageUris(List<String> packageUris) {
-            this.packageUris = Objects.requireNonNull(packageUris);
+            $.packageUris = packageUris;
             return this;
         }
+
         public Builder packageUris(String... packageUris) {
             return packageUris(List.of(packageUris));
         }
+
         public Builder predictionClass(String predictionClass) {
-            this.predictionClass = Objects.requireNonNull(predictionClass);
+            $.predictionClass = predictionClass;
             return this;
         }
+
         public Builder pythonVersion(String pythonVersion) {
-            this.pythonVersion = Objects.requireNonNull(pythonVersion);
+            $.pythonVersion = pythonVersion;
             return this;
         }
+
         public Builder requestLoggingConfig(GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig) {
-            this.requestLoggingConfig = Objects.requireNonNull(requestLoggingConfig);
+            $.requestLoggingConfig = requestLoggingConfig;
             return this;
         }
+
         public Builder routes(GoogleCloudMlV1__RouteMapResponse routes) {
-            this.routes = Objects.requireNonNull(routes);
+            $.routes = routes;
             return this;
         }
+
         public Builder runtimeVersion(String runtimeVersion) {
-            this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public GoogleCloudMlV1__VersionResponse build() {
-            return new GoogleCloudMlV1__VersionResponse(acceleratorConfig, autoScaling, container, createTime, deploymentUri, description, errorMessage, etag, explanationConfig, framework, isDefault, labels, lastMigrationModelId, lastMigrationTime, lastUseTime, machineType, manualScaling, name, packageUris, predictionClass, pythonVersion, requestLoggingConfig, routes, runtimeVersion, serviceAccount, state);
+        }
+
+        public GoogleCloudMlV1__VersionResponse build() {
+            $.acceleratorConfig = Objects.requireNonNull($.acceleratorConfig, "expected parameter 'acceleratorConfig' to be non-null");
+            $.autoScaling = Objects.requireNonNull($.autoScaling, "expected parameter 'autoScaling' to be non-null");
+            $.container = Objects.requireNonNull($.container, "expected parameter 'container' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.deploymentUri = Objects.requireNonNull($.deploymentUri, "expected parameter 'deploymentUri' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.explanationConfig = Objects.requireNonNull($.explanationConfig, "expected parameter 'explanationConfig' to be non-null");
+            $.framework = Objects.requireNonNull($.framework, "expected parameter 'framework' to be non-null");
+            $.isDefault = Objects.requireNonNull($.isDefault, "expected parameter 'isDefault' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.lastMigrationModelId = Objects.requireNonNull($.lastMigrationModelId, "expected parameter 'lastMigrationModelId' to be non-null");
+            $.lastMigrationTime = Objects.requireNonNull($.lastMigrationTime, "expected parameter 'lastMigrationTime' to be non-null");
+            $.lastUseTime = Objects.requireNonNull($.lastUseTime, "expected parameter 'lastUseTime' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.manualScaling = Objects.requireNonNull($.manualScaling, "expected parameter 'manualScaling' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.packageUris = Objects.requireNonNull($.packageUris, "expected parameter 'packageUris' to be non-null");
+            $.predictionClass = Objects.requireNonNull($.predictionClass, "expected parameter 'predictionClass' to be non-null");
+            $.pythonVersion = Objects.requireNonNull($.pythonVersion, "expected parameter 'pythonVersion' to be non-null");
+            $.requestLoggingConfig = Objects.requireNonNull($.requestLoggingConfig, "expected parameter 'requestLoggingConfig' to be non-null");
+            $.routes = Objects.requireNonNull($.routes, "expected parameter 'routes' to be non-null");
+            $.runtimeVersion = Objects.requireNonNull($.runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

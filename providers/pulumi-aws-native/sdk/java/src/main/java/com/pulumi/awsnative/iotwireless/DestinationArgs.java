@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iotwireless.enums.DestinationExpressionType;
 import com.pulumi.awsnative.iotwireless.inputs.DestinationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expression", required=true)
-      private final Output<String> expression;
+    private Output<String> expression;
 
     public Output<String> expression() {
         return this.expression;
@@ -45,7 +45,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expressionType", required=true)
-      private final Output<DestinationExpressionType> expressionType;
+    private Output<DestinationExpressionType> expressionType;
 
     public Output<DestinationExpressionType> expressionType() {
         return this.expressionType;
@@ -56,10 +56,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -78,118 +78,105 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DestinationTagArgs>> tags;
+    private @Nullable Output<List<DestinationTagArgs>> tags;
 
-    public Output<List<DestinationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DestinationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DestinationArgs(
-        @Nullable Output<String> description,
-        Output<String> expression,
-        Output<DestinationExpressionType> expressionType,
-        @Nullable Output<String> name,
-        Output<String> roleArn,
-        @Nullable Output<List<DestinationTagArgs>> tags) {
-        this.description = description;
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.expressionType = Objects.requireNonNull(expressionType, "expected parameter 'expressionType' to be non-null");
-        this.name = name;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tags = tags;
-    }
+    private DestinationArgs() {}
 
-    private DestinationArgs() {
-        this.description = Codegen.empty();
-        this.expression = Codegen.empty();
-        this.expressionType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DestinationArgs(DestinationArgs $) {
+        this.description = $.description;
+        this.expression = $.expression;
+        this.expressionType = $.expressionType;
+        this.name = $.name;
+        this.roleArn = $.roleArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> expression;
-        private Output<DestinationExpressionType> expressionType;
-        private @Nullable Output<String> name;
-        private Output<String> roleArn;
-        private @Nullable Output<List<DestinationTagArgs>> tags;
+        private DestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationArgs();
         }
 
         public Builder(DestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.expression = defaults.expression;
-    	      this.expressionType = defaults.expressionType;
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tags = defaults.tags;
+            $ = new DestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expression(Output<String> expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Output.of(Objects.requireNonNull(expression));
-            return this;
+            return expression(Output.of(expression));
         }
+
         public Builder expressionType(Output<DestinationExpressionType> expressionType) {
-            this.expressionType = Objects.requireNonNull(expressionType);
+            $.expressionType = expressionType;
             return this;
         }
+
         public Builder expressionType(DestinationExpressionType expressionType) {
-            this.expressionType = Output.of(Objects.requireNonNull(expressionType));
-            return this;
+            return expressionType(Output.of(expressionType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tags(@Nullable Output<List<DestinationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DestinationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DestinationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DestinationTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DestinationArgs build() {
-            return new DestinationArgs(description, expression, expressionType, name, roleArn, tags);
+        }
+
+        public DestinationArgs build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.expressionType = Objects.requireNonNull($.expressionType, "expected parameter 'expressionType' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

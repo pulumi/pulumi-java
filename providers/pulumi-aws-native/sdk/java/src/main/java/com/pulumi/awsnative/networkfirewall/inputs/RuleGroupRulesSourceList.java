@@ -16,84 +16,81 @@ public final class RuleGroupRulesSourceList extends com.pulumi.resources.InvokeA
     public static final RuleGroupRulesSourceList Empty = new RuleGroupRulesSourceList();
 
     @Import(name="generatedRulesType", required=true)
-      private final RuleGroupGeneratedRulesType generatedRulesType;
+    private RuleGroupGeneratedRulesType generatedRulesType;
 
     public RuleGroupGeneratedRulesType generatedRulesType() {
         return this.generatedRulesType;
     }
 
     @Import(name="targetTypes", required=true)
-      private final List<RuleGroupTargetType> targetTypes;
+    private List<RuleGroupTargetType> targetTypes;
 
     public List<RuleGroupTargetType> targetTypes() {
         return this.targetTypes;
     }
 
     @Import(name="targets", required=true)
-      private final List<String> targets;
+    private List<String> targets;
 
     public List<String> targets() {
         return this.targets;
     }
 
-    public RuleGroupRulesSourceList(
-        RuleGroupGeneratedRulesType generatedRulesType,
-        List<RuleGroupTargetType> targetTypes,
-        List<String> targets) {
-        this.generatedRulesType = Objects.requireNonNull(generatedRulesType, "expected parameter 'generatedRulesType' to be non-null");
-        this.targetTypes = Objects.requireNonNull(targetTypes, "expected parameter 'targetTypes' to be non-null");
-        this.targets = Objects.requireNonNull(targets, "expected parameter 'targets' to be non-null");
-    }
+    private RuleGroupRulesSourceList() {}
 
-    private RuleGroupRulesSourceList() {
-        this.generatedRulesType = null;
-        this.targetTypes = List.of();
-        this.targets = List.of();
+    private RuleGroupRulesSourceList(RuleGroupRulesSourceList $) {
+        this.generatedRulesType = $.generatedRulesType;
+        this.targetTypes = $.targetTypes;
+        this.targets = $.targets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRulesSourceList defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RuleGroupGeneratedRulesType generatedRulesType;
-        private List<RuleGroupTargetType> targetTypes;
-        private List<String> targets;
+        private RuleGroupRulesSourceList $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRulesSourceList();
         }
 
         public Builder(RuleGroupRulesSourceList defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.generatedRulesType = defaults.generatedRulesType;
-    	      this.targetTypes = defaults.targetTypes;
-    	      this.targets = defaults.targets;
+            $ = new RuleGroupRulesSourceList(Objects.requireNonNull(defaults));
         }
 
         public Builder generatedRulesType(RuleGroupGeneratedRulesType generatedRulesType) {
-            this.generatedRulesType = Objects.requireNonNull(generatedRulesType);
+            $.generatedRulesType = generatedRulesType;
             return this;
         }
+
         public Builder targetTypes(List<RuleGroupTargetType> targetTypes) {
-            this.targetTypes = Objects.requireNonNull(targetTypes);
+            $.targetTypes = targetTypes;
             return this;
         }
+
         public Builder targetTypes(RuleGroupTargetType... targetTypes) {
             return targetTypes(List.of(targetTypes));
         }
+
         public Builder targets(List<String> targets) {
-            this.targets = Objects.requireNonNull(targets);
+            $.targets = targets;
             return this;
         }
+
         public Builder targets(String... targets) {
             return targets(List.of(targets));
-        }        public RuleGroupRulesSourceList build() {
-            return new RuleGroupRulesSourceList(generatedRulesType, targetTypes, targets);
+        }
+
+        public RuleGroupRulesSourceList build() {
+            $.generatedRulesType = Objects.requireNonNull($.generatedRulesType, "expected parameter 'generatedRulesType' to be non-null");
+            $.targetTypes = Objects.requireNonNull($.targetTypes, "expected parameter 'targetTypes' to be non-null");
+            $.targets = Objects.requireNonNull($.targets, "expected parameter 'targets' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,10 +22,10 @@ public final class GetSubnetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetSubnetsFilter> filters;
+    private @Nullable List<GetSubnetsFilter> filters;
 
-    public List<GetSubnetsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetSubnetsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,58 +34,54 @@ public final class GetSubnetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetSubnetsArgs(
-        @Nullable List<GetSubnetsFilter> filters,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.tags = tags;
-    }
+    private GetSubnetsArgs() {}
 
-    private GetSubnetsArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
+    private GetSubnetsArgs(GetSubnetsArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubnetsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetSubnetsFilter> filters;
-        private @Nullable Map<String,String> tags;
+        private GetSubnetsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubnetsArgs();
         }
 
         public Builder(GetSubnetsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
+            $ = new GetSubnetsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetSubnetsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetSubnetsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetSubnetsArgs build() {
-            return new GetSubnetsArgs(filters, tags);
+        }
+
+        public GetSubnetsArgs build() {
+            return $;
         }
     }
+
 }

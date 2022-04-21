@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SubnetworkIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +23,14 @@ public final class SubnetworkIAMBindingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<SubnetworkIAMBindingConditionArgs> condition;
+    private @Nullable Output<SubnetworkIAMBindingConditionArgs> condition;
 
-    public Output<SubnetworkIAMBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<SubnetworkIAMBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -42,10 +42,10 @@ public final class SubnetworkIAMBindingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SubnetworkIAMBindingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class SubnetworkIAMBindingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -80,118 +80,105 @@ public final class SubnetworkIAMBindingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final Output<String> subnetwork;
+    private Output<String> subnetwork;
 
     public Output<String> subnetwork() {
         return this.subnetwork;
     }
 
-    public SubnetworkIAMBindingArgs(
-        @Nullable Output<SubnetworkIAMBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> role,
-        Output<String> subnetwork) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.region = region;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-    }
+    private SubnetworkIAMBindingArgs() {}
 
-    private SubnetworkIAMBindingArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.role = Codegen.empty();
-        this.subnetwork = Codegen.empty();
+    private SubnetworkIAMBindingArgs(SubnetworkIAMBindingArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.project = $.project;
+        this.region = $.region;
+        this.role = $.role;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetworkIAMBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubnetworkIAMBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> role;
-        private Output<String> subnetwork;
+        private SubnetworkIAMBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetworkIAMBindingArgs();
         }
 
         public Builder(SubnetworkIAMBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.role = defaults.role;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new SubnetworkIAMBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<SubnetworkIAMBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable SubnetworkIAMBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(SubnetworkIAMBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder subnetwork(Output<String> subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Output.of(Objects.requireNonNull(subnetwork));
-            return this;
-        }        public SubnetworkIAMBindingArgs build() {
-            return new SubnetworkIAMBindingArgs(condition, members, project, region, role, subnetwork);
+            return subnetwork(Output.of(subnetwork));
+        }
+
+        public SubnetworkIAMBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            return $;
         }
     }
+
 }

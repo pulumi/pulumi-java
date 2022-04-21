@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArg
     public static final SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs Empty = new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs();
 
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs(
-        @Nullable Output<String> target,
-        Output<String> type) {
-        this.target = target;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs() {}
 
-    private SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs() {
-        this.target = Codegen.empty();
-        this.type = Codegen.empty();
+    private SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs(SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs $) {
+        this.target = $.target;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> target;
-        private Output<String> type;
+        private SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs();
         }
 
         public Builder(SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
-    	      this.type = defaults.type;
+            $ = new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs build() {
-            return new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs(target, type);
+            return type(Output.of(type));
+        }
+
+        public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

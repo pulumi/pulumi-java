@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.FileContentBufferArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InitialStateConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dbs")
-      private final @Nullable Output<List<FileContentBufferArgs>> dbs;
+    private @Nullable Output<List<FileContentBufferArgs>> dbs;
 
-    public Output<List<FileContentBufferArgs>> dbs() {
-        return this.dbs == null ? Codegen.empty() : this.dbs;
+    public Optional<Output<List<FileContentBufferArgs>>> dbs() {
+        return Optional.ofNullable(this.dbs);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InitialStateConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dbxs")
-      private final @Nullable Output<List<FileContentBufferArgs>> dbxs;
+    private @Nullable Output<List<FileContentBufferArgs>> dbxs;
 
-    public Output<List<FileContentBufferArgs>> dbxs() {
-        return this.dbxs == null ? Codegen.empty() : this.dbxs;
+    public Optional<Output<List<FileContentBufferArgs>>> dbxs() {
+        return Optional.ofNullable(this.dbxs);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InitialStateConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keks")
-      private final @Nullable Output<List<FileContentBufferArgs>> keks;
+    private @Nullable Output<List<FileContentBufferArgs>> keks;
 
-    public Output<List<FileContentBufferArgs>> keks() {
-        return this.keks == null ? Codegen.empty() : this.keks;
+    public Optional<Output<List<FileContentBufferArgs>>> keks() {
+        return Optional.ofNullable(this.keks);
     }
 
     /**
@@ -58,98 +58,90 @@ public final class InitialStateConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="pk")
-      private final @Nullable Output<FileContentBufferArgs> pk;
+    private @Nullable Output<FileContentBufferArgs> pk;
 
-    public Output<FileContentBufferArgs> pk() {
-        return this.pk == null ? Codegen.empty() : this.pk;
+    public Optional<Output<FileContentBufferArgs>> pk() {
+        return Optional.ofNullable(this.pk);
     }
 
-    public InitialStateConfigArgs(
-        @Nullable Output<List<FileContentBufferArgs>> dbs,
-        @Nullable Output<List<FileContentBufferArgs>> dbxs,
-        @Nullable Output<List<FileContentBufferArgs>> keks,
-        @Nullable Output<FileContentBufferArgs> pk) {
-        this.dbs = dbs;
-        this.dbxs = dbxs;
-        this.keks = keks;
-        this.pk = pk;
-    }
+    private InitialStateConfigArgs() {}
 
-    private InitialStateConfigArgs() {
-        this.dbs = Codegen.empty();
-        this.dbxs = Codegen.empty();
-        this.keks = Codegen.empty();
-        this.pk = Codegen.empty();
+    private InitialStateConfigArgs(InitialStateConfigArgs $) {
+        this.dbs = $.dbs;
+        this.dbxs = $.dbxs;
+        this.keks = $.keks;
+        this.pk = $.pk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InitialStateConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FileContentBufferArgs>> dbs;
-        private @Nullable Output<List<FileContentBufferArgs>> dbxs;
-        private @Nullable Output<List<FileContentBufferArgs>> keks;
-        private @Nullable Output<FileContentBufferArgs> pk;
+        private InitialStateConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InitialStateConfigArgs();
         }
 
         public Builder(InitialStateConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbs = defaults.dbs;
-    	      this.dbxs = defaults.dbxs;
-    	      this.keks = defaults.keks;
-    	      this.pk = defaults.pk;
+            $ = new InitialStateConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dbs(@Nullable Output<List<FileContentBufferArgs>> dbs) {
-            this.dbs = dbs;
+            $.dbs = dbs;
             return this;
         }
-        public Builder dbs(@Nullable List<FileContentBufferArgs> dbs) {
-            this.dbs = Codegen.ofNullable(dbs);
-            return this;
+
+        public Builder dbs(List<FileContentBufferArgs> dbs) {
+            return dbs(Output.of(dbs));
         }
+
         public Builder dbs(FileContentBufferArgs... dbs) {
             return dbs(List.of(dbs));
         }
+
         public Builder dbxs(@Nullable Output<List<FileContentBufferArgs>> dbxs) {
-            this.dbxs = dbxs;
+            $.dbxs = dbxs;
             return this;
         }
-        public Builder dbxs(@Nullable List<FileContentBufferArgs> dbxs) {
-            this.dbxs = Codegen.ofNullable(dbxs);
-            return this;
+
+        public Builder dbxs(List<FileContentBufferArgs> dbxs) {
+            return dbxs(Output.of(dbxs));
         }
+
         public Builder dbxs(FileContentBufferArgs... dbxs) {
             return dbxs(List.of(dbxs));
         }
+
         public Builder keks(@Nullable Output<List<FileContentBufferArgs>> keks) {
-            this.keks = keks;
+            $.keks = keks;
             return this;
         }
-        public Builder keks(@Nullable List<FileContentBufferArgs> keks) {
-            this.keks = Codegen.ofNullable(keks);
-            return this;
+
+        public Builder keks(List<FileContentBufferArgs> keks) {
+            return keks(Output.of(keks));
         }
+
         public Builder keks(FileContentBufferArgs... keks) {
             return keks(List.of(keks));
         }
+
         public Builder pk(@Nullable Output<FileContentBufferArgs> pk) {
-            this.pk = pk;
+            $.pk = pk;
             return this;
         }
-        public Builder pk(@Nullable FileContentBufferArgs pk) {
-            this.pk = Codegen.ofNullable(pk);
-            return this;
-        }        public InitialStateConfigArgs build() {
-            return new InitialStateConfigArgs(dbs, dbxs, keks, pk);
+
+        public Builder pk(FileContentBufferArgs pk) {
+            return pk(Output.of(pk));
+        }
+
+        public InitialStateConfigArgs build() {
+            return $;
         }
     }
+
 }

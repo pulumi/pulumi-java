@@ -15,78 +15,72 @@ public final class GetSpokeArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSpokeArgs Empty = new GetSpokeArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="spokeId", required=true)
-      private final String spokeId;
+    private String spokeId;
 
     public String spokeId() {
         return this.spokeId;
     }
 
-    public GetSpokeArgs(
-        String location,
-        @Nullable String project,
-        String spokeId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.spokeId = Objects.requireNonNull(spokeId, "expected parameter 'spokeId' to be non-null");
-    }
+    private GetSpokeArgs() {}
 
-    private GetSpokeArgs() {
-        this.location = null;
-        this.project = null;
-        this.spokeId = null;
+    private GetSpokeArgs(GetSpokeArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.spokeId = $.spokeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSpokeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String spokeId;
+        private GetSpokeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSpokeArgs();
         }
 
         public Builder(GetSpokeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.spokeId = defaults.spokeId;
+            $ = new GetSpokeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder spokeId(String spokeId) {
-            this.spokeId = Objects.requireNonNull(spokeId);
+            $.spokeId = spokeId;
             return this;
-        }        public GetSpokeArgs build() {
-            return new GetSpokeArgs(location, project, spokeId);
+        }
+
+        public GetSpokeArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.spokeId = Objects.requireNonNull($.spokeId, "expected parameter 'spokeId' to be non-null");
+            return $;
         }
     }
+
 }

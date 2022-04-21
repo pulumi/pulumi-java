@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudformation;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ModuleDefaultVersionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ModuleDefaultVersionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="moduleName")
-      private final @Nullable Output<String> moduleName;
+    private @Nullable Output<String> moduleName;
 
-    public Output<String> moduleName() {
-        return this.moduleName == null ? Codegen.empty() : this.moduleName;
+    public Optional<Output<String>> moduleName() {
+        return Optional.ofNullable(this.moduleName);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ModuleDefaultVersionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="versionId")
-      private final @Nullable Output<String> versionId;
+    private @Nullable Output<String> versionId;
 
-    public Output<String> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
-    public ModuleDefaultVersionArgs(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> moduleName,
-        @Nullable Output<String> versionId) {
-        this.arn = arn;
-        this.moduleName = moduleName;
-        this.versionId = versionId;
-    }
+    private ModuleDefaultVersionArgs() {}
 
-    private ModuleDefaultVersionArgs() {
-        this.arn = Codegen.empty();
-        this.moduleName = Codegen.empty();
-        this.versionId = Codegen.empty();
+    private ModuleDefaultVersionArgs(ModuleDefaultVersionArgs $) {
+        this.arn = $.arn;
+        this.moduleName = $.moduleName;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModuleDefaultVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> moduleName;
-        private @Nullable Output<String> versionId;
+        private ModuleDefaultVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModuleDefaultVersionArgs();
         }
 
         public Builder(ModuleDefaultVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.moduleName = defaults.moduleName;
-    	      this.versionId = defaults.versionId;
+            $ = new ModuleDefaultVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder moduleName(@Nullable Output<String> moduleName) {
-            this.moduleName = moduleName;
+            $.moduleName = moduleName;
             return this;
         }
-        public Builder moduleName(@Nullable String moduleName) {
-            this.moduleName = Codegen.ofNullable(moduleName);
-            return this;
+
+        public Builder moduleName(String moduleName) {
+            return moduleName(Output.of(moduleName));
         }
+
         public Builder versionId(@Nullable Output<String> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable String versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
-        }        public ModuleDefaultVersionArgs build() {
-            return new ModuleDefaultVersionArgs(arn, moduleName, versionId);
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
+        }
+
+        public ModuleDefaultVersionArgs build() {
+            return $;
         }
     }
+
 }

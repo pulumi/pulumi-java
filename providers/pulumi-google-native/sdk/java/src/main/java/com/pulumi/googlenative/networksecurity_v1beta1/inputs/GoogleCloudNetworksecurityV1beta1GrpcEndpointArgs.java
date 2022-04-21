@@ -5,7 +5,6 @@ package com.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs extends com
      * 
      */
     @Import(name="targetUri", required=true)
-      private final Output<String> targetUri;
+    private Output<String> targetUri;
 
     public Output<String> targetUri() {
         return this.targetUri;
     }
 
-    public GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs(Output<String> targetUri) {
-        this.targetUri = Objects.requireNonNull(targetUri, "expected parameter 'targetUri' to be non-null");
-    }
+    private GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs() {}
 
-    private GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs() {
-        this.targetUri = Codegen.empty();
+    private GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs(GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs $) {
+        this.targetUri = $.targetUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> targetUri;
+        private GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs();
         }
 
         public Builder(GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetUri = defaults.targetUri;
+            $ = new GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetUri(Output<String> targetUri) {
-            this.targetUri = Objects.requireNonNull(targetUri);
+            $.targetUri = targetUri;
             return this;
         }
+
         public Builder targetUri(String targetUri) {
-            this.targetUri = Output.of(Objects.requireNonNull(targetUri));
-            return this;
-        }        public GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs build() {
-            return new GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs(targetUri);
+            return targetUri(Output.of(targetUri));
+        }
+
+        public GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs build() {
+            $.targetUri = Objects.requireNonNull($.targetUri, "expected parameter 'targetUri' to be non-null");
+            return $;
         }
     }
+
 }

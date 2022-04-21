@@ -5,13 +5,13 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeDesiredState;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="artifacts")
-      private final @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts;
+    private @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts;
 
-    public Output<List<SoftwareRecipeArtifactArgs>> artifacts() {
-        return this.artifacts == null ? Codegen.empty() : this.artifacts;
+    public Optional<Output<List<SoftwareRecipeArtifactArgs>>> artifacts() {
+        return Optional.ofNullable(this.artifacts);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="desiredState")
-      private final @Nullable Output<SoftwareRecipeDesiredState> desiredState;
+    private @Nullable Output<SoftwareRecipeDesiredState> desiredState;
 
-    public Output<SoftwareRecipeDesiredState> desiredState() {
-        return this.desiredState == null ? Codegen.empty() : this.desiredState;
+    public Optional<Output<SoftwareRecipeDesiredState>> desiredState() {
+        return Optional.ofNullable(this.desiredState);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="installSteps")
-      private final @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps;
+    private @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps;
 
-    public Output<List<SoftwareRecipeStepArgs>> installSteps() {
-        return this.installSteps == null ? Codegen.empty() : this.installSteps;
+    public Optional<Output<List<SoftwareRecipeStepArgs>>> installSteps() {
+        return Optional.ofNullable(this.installSteps);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -72,10 +72,10 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="updateSteps")
-      private final @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps;
+    private @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps;
 
-    public Output<List<SoftwareRecipeStepArgs>> updateSteps() {
-        return this.updateSteps == null ? Codegen.empty() : this.updateSteps;
+    public Optional<Output<List<SoftwareRecipeStepArgs>>> updateSteps() {
+        return Optional.ofNullable(this.updateSteps);
     }
 
     /**
@@ -83,124 +83,111 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public SoftwareRecipeArgs(
-        @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts,
-        @Nullable Output<SoftwareRecipeDesiredState> desiredState,
-        @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps,
-        Output<String> name,
-        @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps,
-        @Nullable Output<String> version) {
-        this.artifacts = artifacts;
-        this.desiredState = desiredState;
-        this.installSteps = installSteps;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.updateSteps = updateSteps;
-        this.version = version;
-    }
+    private SoftwareRecipeArgs() {}
 
-    private SoftwareRecipeArgs() {
-        this.artifacts = Codegen.empty();
-        this.desiredState = Codegen.empty();
-        this.installSteps = Codegen.empty();
-        this.name = Codegen.empty();
-        this.updateSteps = Codegen.empty();
-        this.version = Codegen.empty();
+    private SoftwareRecipeArgs(SoftwareRecipeArgs $) {
+        this.artifacts = $.artifacts;
+        this.desiredState = $.desiredState;
+        this.installSteps = $.installSteps;
+        this.name = $.name;
+        this.updateSteps = $.updateSteps;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts;
-        private @Nullable Output<SoftwareRecipeDesiredState> desiredState;
-        private @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps;
-        private Output<String> name;
-        private @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps;
-        private @Nullable Output<String> version;
+        private SoftwareRecipeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeArgs();
         }
 
         public Builder(SoftwareRecipeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifacts = defaults.artifacts;
-    	      this.desiredState = defaults.desiredState;
-    	      this.installSteps = defaults.installSteps;
-    	      this.name = defaults.name;
-    	      this.updateSteps = defaults.updateSteps;
-    	      this.version = defaults.version;
+            $ = new SoftwareRecipeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifacts(@Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts) {
-            this.artifacts = artifacts;
+            $.artifacts = artifacts;
             return this;
         }
-        public Builder artifacts(@Nullable List<SoftwareRecipeArtifactArgs> artifacts) {
-            this.artifacts = Codegen.ofNullable(artifacts);
-            return this;
+
+        public Builder artifacts(List<SoftwareRecipeArtifactArgs> artifacts) {
+            return artifacts(Output.of(artifacts));
         }
+
         public Builder artifacts(SoftwareRecipeArtifactArgs... artifacts) {
             return artifacts(List.of(artifacts));
         }
+
         public Builder desiredState(@Nullable Output<SoftwareRecipeDesiredState> desiredState) {
-            this.desiredState = desiredState;
+            $.desiredState = desiredState;
             return this;
         }
-        public Builder desiredState(@Nullable SoftwareRecipeDesiredState desiredState) {
-            this.desiredState = Codegen.ofNullable(desiredState);
-            return this;
+
+        public Builder desiredState(SoftwareRecipeDesiredState desiredState) {
+            return desiredState(Output.of(desiredState));
         }
+
         public Builder installSteps(@Nullable Output<List<SoftwareRecipeStepArgs>> installSteps) {
-            this.installSteps = installSteps;
+            $.installSteps = installSteps;
             return this;
         }
-        public Builder installSteps(@Nullable List<SoftwareRecipeStepArgs> installSteps) {
-            this.installSteps = Codegen.ofNullable(installSteps);
-            return this;
+
+        public Builder installSteps(List<SoftwareRecipeStepArgs> installSteps) {
+            return installSteps(Output.of(installSteps));
         }
+
         public Builder installSteps(SoftwareRecipeStepArgs... installSteps) {
             return installSteps(List.of(installSteps));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder updateSteps(@Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps) {
-            this.updateSteps = updateSteps;
+            $.updateSteps = updateSteps;
             return this;
         }
-        public Builder updateSteps(@Nullable List<SoftwareRecipeStepArgs> updateSteps) {
-            this.updateSteps = Codegen.ofNullable(updateSteps);
-            return this;
+
+        public Builder updateSteps(List<SoftwareRecipeStepArgs> updateSteps) {
+            return updateSteps(Output.of(updateSteps));
         }
+
         public Builder updateSteps(SoftwareRecipeStepArgs... updateSteps) {
             return updateSteps(List.of(updateSteps));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public SoftwareRecipeArgs build() {
-            return new SoftwareRecipeArgs(artifacts, desiredState, installSteps, name, updateSteps, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public SoftwareRecipeArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

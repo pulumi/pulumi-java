@@ -24,10 +24,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
      * 
      */
     @Import(name="profileName")
-      private final @Nullable String profileName;
+    private @Nullable String profileName;
 
     public Optional<String> profileName() {
-        return this.profileName == null ? Optional.empty() : Optional.ofNullable(this.profileName);
+        return Optional.ofNullable(this.profileName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
      * 
      */
     @Import(name="profilePropertyName")
-      private final @Nullable String profilePropertyName;
+    private @Nullable String profilePropertyName;
 
     public Optional<String> profilePropertyName() {
-        return this.profilePropertyName == null ? Optional.empty() : Optional.ofNullable(this.profilePropertyName);
+        return Optional.ofNullable(this.profilePropertyName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
      * 
      */
     @Import(name="rank")
-      private final @Nullable Integer rank;
+    private @Nullable Integer rank;
 
     public Optional<Integer> rank() {
-        return this.rank == null ? Optional.empty() : Optional.ofNullable(this.rank);
+        return Optional.ofNullable(this.rank);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public CanonicalProfileDefinitionResponseProperties(
-        @Nullable String profileName,
-        @Nullable String profilePropertyName,
-        @Nullable Integer rank,
-        @Nullable String type,
-        @Nullable String value) {
-        this.profileName = profileName;
-        this.profilePropertyName = profilePropertyName;
-        this.rank = rank;
-        this.type = type;
-        this.value = value;
-    }
+    private CanonicalProfileDefinitionResponseProperties() {}
 
-    private CanonicalProfileDefinitionResponseProperties() {
-        this.profileName = null;
-        this.profilePropertyName = null;
-        this.rank = null;
-        this.type = null;
-        this.value = null;
+    private CanonicalProfileDefinitionResponseProperties(CanonicalProfileDefinitionResponseProperties $) {
+        this.profileName = $.profileName;
+        this.profilePropertyName = $.profilePropertyName;
+        this.rank = $.rank;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanonicalProfileDefinitionResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String profileName;
-        private @Nullable String profilePropertyName;
-        private @Nullable Integer rank;
-        private @Nullable String type;
-        private @Nullable String value;
+        private CanonicalProfileDefinitionResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanonicalProfileDefinitionResponseProperties();
         }
 
         public Builder(CanonicalProfileDefinitionResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
-    	      this.profilePropertyName = defaults.profilePropertyName;
-    	      this.rank = defaults.rank;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new CanonicalProfileDefinitionResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = profileName;
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profilePropertyName(@Nullable String profilePropertyName) {
-            this.profilePropertyName = profilePropertyName;
+            $.profilePropertyName = profilePropertyName;
             return this;
         }
+
         public Builder rank(@Nullable Integer rank) {
-            this.rank = rank;
+            $.rank = rank;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public CanonicalProfileDefinitionResponseProperties build() {
-            return new CanonicalProfileDefinitionResponseProperties(profileName, profilePropertyName, rank, type, value);
+        }
+
+        public CanonicalProfileDefinitionResponseProperties build() {
+            return $;
         }
     }
+
 }

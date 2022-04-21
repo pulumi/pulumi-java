@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class InstanceGroupNamedPortArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="group", required=true)
-      private final Output<String> group;
+    private Output<String> group;
 
     public Output<String> group() {
         return this.group;
@@ -33,10 +33,10 @@ public final class InstanceGroupNamedPortArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class InstanceGroupNamedPortArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -56,10 +56,10 @@ public final class InstanceGroupNamedPortArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -67,102 +67,90 @@ public final class InstanceGroupNamedPortArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceGroupNamedPortArgs(
-        Output<String> group,
-        @Nullable Output<String> name,
-        Output<Integer> port,
-        @Nullable Output<String> project,
-        @Nullable Output<String> zone) {
-        this.group = Objects.requireNonNull(group, "expected parameter 'group' to be non-null");
-        this.name = name;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.project = project;
-        this.zone = zone;
-    }
+    private InstanceGroupNamedPortArgs() {}
 
-    private InstanceGroupNamedPortArgs() {
-        this.group = Codegen.empty();
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceGroupNamedPortArgs(InstanceGroupNamedPortArgs $) {
+        this.group = $.group;
+        this.name = $.name;
+        this.port = $.port;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupNamedPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> group;
-        private @Nullable Output<String> name;
-        private Output<Integer> port;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> zone;
+        private InstanceGroupNamedPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupNamedPortArgs();
         }
 
         public Builder(InstanceGroupNamedPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.group = defaults.group;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new InstanceGroupNamedPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder group(Output<String> group) {
-            this.group = Objects.requireNonNull(group);
+            $.group = group;
             return this;
         }
+
         public Builder group(String group) {
-            this.group = Output.of(Objects.requireNonNull(group));
-            return this;
+            return group(Output.of(group));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceGroupNamedPortArgs build() {
-            return new InstanceGroupNamedPortArgs(group, name, port, project, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceGroupNamedPortArgs build() {
+            $.group = Objects.requireNonNull($.group, "expected parameter 'group' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

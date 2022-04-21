@@ -17,7 +17,7 @@ public final class GetVpcCidrBlockAssociation extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="associationId", required=true)
-      private final String associationId;
+    private String associationId;
 
     public String associationId() {
         return this.associationId;
@@ -28,7 +28,7 @@ public final class GetVpcCidrBlockAssociation extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cidrBlock", required=true)
-      private final String cidrBlock;
+    private String cidrBlock;
 
     public String cidrBlock() {
         return this.cidrBlock;
@@ -40,64 +40,59 @@ public final class GetVpcCidrBlockAssociation extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public GetVpcCidrBlockAssociation(
-        String associationId,
-        String cidrBlock,
-        String state) {
-        this.associationId = Objects.requireNonNull(associationId, "expected parameter 'associationId' to be non-null");
-        this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private GetVpcCidrBlockAssociation() {}
 
-    private GetVpcCidrBlockAssociation() {
-        this.associationId = null;
-        this.cidrBlock = null;
-        this.state = null;
+    private GetVpcCidrBlockAssociation(GetVpcCidrBlockAssociation $) {
+        this.associationId = $.associationId;
+        this.cidrBlock = $.cidrBlock;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcCidrBlockAssociation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String associationId;
-        private String cidrBlock;
-        private String state;
+        private GetVpcCidrBlockAssociation $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcCidrBlockAssociation();
         }
 
         public Builder(GetVpcCidrBlockAssociation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associationId = defaults.associationId;
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.state = defaults.state;
+            $ = new GetVpcCidrBlockAssociation(Objects.requireNonNull(defaults));
         }
 
         public Builder associationId(String associationId) {
-            this.associationId = Objects.requireNonNull(associationId);
+            $.associationId = associationId;
             return this;
         }
+
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Objects.requireNonNull(cidrBlock);
+            $.cidrBlock = cidrBlock;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public GetVpcCidrBlockAssociation build() {
-            return new GetVpcCidrBlockAssociation(associationId, cidrBlock, state);
+        }
+
+        public GetVpcCidrBlockAssociation build() {
+            $.associationId = Objects.requireNonNull($.associationId, "expected parameter 'associationId' to be non-null");
+            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="agentConfiguration")
-      private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
+    private @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
-    public Output<AgentPropertiesArgs> agentConfiguration() {
-        return this.agentConfiguration == null ? Codegen.empty() : this.agentConfiguration;
+    public Optional<Output<AgentPropertiesArgs>> agentConfiguration() {
+        return Optional.ofNullable(this.agentConfiguration);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="agentPoolName")
-      private final @Nullable Output<String> agentPoolName;
+    private @Nullable Output<String> agentPoolName;
 
-    public Output<String> agentPoolName() {
-        return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
+    public Optional<Output<String>> agentPoolName() {
+        return Optional.ofNullable(this.agentPoolName);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<List<ArgumentArgs>> arguments;
+    private @Nullable Output<List<ArgumentArgs>> arguments;
 
-    public Output<List<ArgumentArgs>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<List<ArgumentArgs>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<CredentialsArgs> credentials;
+    private @Nullable Output<CredentialsArgs> credentials;
 
-    public Output<CredentialsArgs> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<CredentialsArgs>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -75,7 +76,7 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dockerFilePath", required=true)
-      private final Output<String> dockerFilePath;
+    private Output<String> dockerFilePath;
 
     public Output<String> dockerFilePath() {
         return this.dockerFilePath;
@@ -86,10 +87,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="imageNames")
-      private final @Nullable Output<List<String>> imageNames;
+    private @Nullable Output<List<String>> imageNames;
 
-    public Output<List<String>> imageNames() {
-        return this.imageNames == null ? Codegen.empty() : this.imageNames;
+    public Optional<Output<List<String>>> imageNames() {
+        return Optional.ofNullable(this.imageNames);
     }
 
     /**
@@ -97,10 +98,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isArchiveEnabled")
-      private final @Nullable Output<Boolean> isArchiveEnabled;
+    private @Nullable Output<Boolean> isArchiveEnabled;
 
-    public Output<Boolean> isArchiveEnabled() {
-        return this.isArchiveEnabled == null ? Codegen.empty() : this.isArchiveEnabled;
+    public Optional<Output<Boolean>> isArchiveEnabled() {
+        return Optional.ofNullable(this.isArchiveEnabled);
     }
 
     /**
@@ -108,10 +109,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isPushEnabled")
-      private final @Nullable Output<Boolean> isPushEnabled;
+    private @Nullable Output<Boolean> isPushEnabled;
 
-    public Output<Boolean> isPushEnabled() {
-        return this.isPushEnabled == null ? Codegen.empty() : this.isPushEnabled;
+    public Optional<Output<Boolean>> isPushEnabled() {
+        return Optional.ofNullable(this.isPushEnabled);
     }
 
     /**
@@ -119,10 +120,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="logTemplate")
-      private final @Nullable Output<String> logTemplate;
+    private @Nullable Output<String> logTemplate;
 
-    public Output<String> logTemplate() {
-        return this.logTemplate == null ? Codegen.empty() : this.logTemplate;
+    public Optional<Output<String>> logTemplate() {
+        return Optional.ofNullable(this.logTemplate);
     }
 
     /**
@@ -130,10 +131,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="noCache")
-      private final @Nullable Output<Boolean> noCache;
+    private @Nullable Output<Boolean> noCache;
 
-    public Output<Boolean> noCache() {
-        return this.noCache == null ? Codegen.empty() : this.noCache;
+    public Optional<Output<Boolean>> noCache() {
+        return Optional.ofNullable(this.noCache);
     }
 
     /**
@@ -141,7 +142,7 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="platform", required=true)
-      private final Output<PlatformPropertiesArgs> platform;
+    private Output<PlatformPropertiesArgs> platform;
 
     public Output<PlatformPropertiesArgs> platform() {
         return this.platform;
@@ -153,10 +154,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sourceLocation")
-      private final @Nullable Output<String> sourceLocation;
+    private @Nullable Output<String> sourceLocation;
 
-    public Output<String> sourceLocation() {
-        return this.sourceLocation == null ? Codegen.empty() : this.sourceLocation;
+    public Optional<Output<String>> sourceLocation() {
+        return Optional.ofNullable(this.sourceLocation);
     }
 
     /**
@@ -164,10 +165,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -175,10 +176,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<Integer> timeout;
+    private @Nullable Output<Integer> timeout;
 
-    public Output<Integer> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<Integer>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -187,238 +188,203 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public DockerBuildRequestArgs(
-        @Nullable Output<AgentPropertiesArgs> agentConfiguration,
-        @Nullable Output<String> agentPoolName,
-        @Nullable Output<List<ArgumentArgs>> arguments,
-        @Nullable Output<CredentialsArgs> credentials,
-        Output<String> dockerFilePath,
-        @Nullable Output<List<String>> imageNames,
-        @Nullable Output<Boolean> isArchiveEnabled,
-        @Nullable Output<Boolean> isPushEnabled,
-        @Nullable Output<String> logTemplate,
-        @Nullable Output<Boolean> noCache,
-        Output<PlatformPropertiesArgs> platform,
-        @Nullable Output<String> sourceLocation,
-        @Nullable Output<String> target,
-        @Nullable Output<Integer> timeout,
-        Output<String> type) {
-        this.agentConfiguration = agentConfiguration;
-        this.agentPoolName = agentPoolName;
-        this.arguments = arguments;
-        this.credentials = credentials;
-        this.dockerFilePath = Objects.requireNonNull(dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
-        this.imageNames = imageNames;
-        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").output().arg(isArchiveEnabled).def(false).getNullable();
-        this.isPushEnabled = Codegen.booleanProp("isPushEnabled").output().arg(isPushEnabled).def(true).getNullable();
-        this.logTemplate = logTemplate;
-        this.noCache = Codegen.booleanProp("noCache").output().arg(noCache).def(false).getNullable();
-        this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
-        this.sourceLocation = sourceLocation;
-        this.target = target;
-        this.timeout = Codegen.integerProp("timeout").output().arg(timeout).def(3600).getNullable();
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private DockerBuildRequestArgs() {}
 
-    private DockerBuildRequestArgs() {
-        this.agentConfiguration = Codegen.empty();
-        this.agentPoolName = Codegen.empty();
-        this.arguments = Codegen.empty();
-        this.credentials = Codegen.empty();
-        this.dockerFilePath = Codegen.empty();
-        this.imageNames = Codegen.empty();
-        this.isArchiveEnabled = Codegen.empty();
-        this.isPushEnabled = Codegen.empty();
-        this.logTemplate = Codegen.empty();
-        this.noCache = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.sourceLocation = Codegen.empty();
-        this.target = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.type = Codegen.empty();
+    private DockerBuildRequestArgs(DockerBuildRequestArgs $) {
+        this.agentConfiguration = $.agentConfiguration;
+        this.agentPoolName = $.agentPoolName;
+        this.arguments = $.arguments;
+        this.credentials = $.credentials;
+        this.dockerFilePath = $.dockerFilePath;
+        this.imageNames = $.imageNames;
+        this.isArchiveEnabled = $.isArchiveEnabled;
+        this.isPushEnabled = $.isPushEnabled;
+        this.logTemplate = $.logTemplate;
+        this.noCache = $.noCache;
+        this.platform = $.platform;
+        this.sourceLocation = $.sourceLocation;
+        this.target = $.target;
+        this.timeout = $.timeout;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DockerBuildRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AgentPropertiesArgs> agentConfiguration;
-        private @Nullable Output<String> agentPoolName;
-        private @Nullable Output<List<ArgumentArgs>> arguments;
-        private @Nullable Output<CredentialsArgs> credentials;
-        private Output<String> dockerFilePath;
-        private @Nullable Output<List<String>> imageNames;
-        private @Nullable Output<Boolean> isArchiveEnabled;
-        private @Nullable Output<Boolean> isPushEnabled;
-        private @Nullable Output<String> logTemplate;
-        private @Nullable Output<Boolean> noCache;
-        private Output<PlatformPropertiesArgs> platform;
-        private @Nullable Output<String> sourceLocation;
-        private @Nullable Output<String> target;
-        private @Nullable Output<Integer> timeout;
-        private Output<String> type;
+        private DockerBuildRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DockerBuildRequestArgs();
         }
 
         public Builder(DockerBuildRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentConfiguration = defaults.agentConfiguration;
-    	      this.agentPoolName = defaults.agentPoolName;
-    	      this.arguments = defaults.arguments;
-    	      this.credentials = defaults.credentials;
-    	      this.dockerFilePath = defaults.dockerFilePath;
-    	      this.imageNames = defaults.imageNames;
-    	      this.isArchiveEnabled = defaults.isArchiveEnabled;
-    	      this.isPushEnabled = defaults.isPushEnabled;
-    	      this.logTemplate = defaults.logTemplate;
-    	      this.noCache = defaults.noCache;
-    	      this.platform = defaults.platform;
-    	      this.sourceLocation = defaults.sourceLocation;
-    	      this.target = defaults.target;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
+            $ = new DockerBuildRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentConfiguration(@Nullable Output<AgentPropertiesArgs> agentConfiguration) {
-            this.agentConfiguration = agentConfiguration;
+            $.agentConfiguration = agentConfiguration;
             return this;
         }
-        public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
-            this.agentConfiguration = Codegen.ofNullable(agentConfiguration);
-            return this;
+
+        public Builder agentConfiguration(AgentPropertiesArgs agentConfiguration) {
+            return agentConfiguration(Output.of(agentConfiguration));
         }
+
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
-            this.agentPoolName = agentPoolName;
+            $.agentPoolName = agentPoolName;
             return this;
         }
-        public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Codegen.ofNullable(agentPoolName);
-            return this;
+
+        public Builder agentPoolName(String agentPoolName) {
+            return agentPoolName(Output.of(agentPoolName));
         }
+
         public Builder arguments(@Nullable Output<List<ArgumentArgs>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(List<ArgumentArgs> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder arguments(ArgumentArgs... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable CredentialsArgs credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(CredentialsArgs credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder dockerFilePath(Output<String> dockerFilePath) {
-            this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
+            $.dockerFilePath = dockerFilePath;
             return this;
         }
+
         public Builder dockerFilePath(String dockerFilePath) {
-            this.dockerFilePath = Output.of(Objects.requireNonNull(dockerFilePath));
-            return this;
+            return dockerFilePath(Output.of(dockerFilePath));
         }
+
         public Builder imageNames(@Nullable Output<List<String>> imageNames) {
-            this.imageNames = imageNames;
+            $.imageNames = imageNames;
             return this;
         }
-        public Builder imageNames(@Nullable List<String> imageNames) {
-            this.imageNames = Codegen.ofNullable(imageNames);
-            return this;
+
+        public Builder imageNames(List<String> imageNames) {
+            return imageNames(Output.of(imageNames));
         }
+
         public Builder imageNames(String... imageNames) {
             return imageNames(List.of(imageNames));
         }
+
         public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
-            this.isArchiveEnabled = isArchiveEnabled;
+            $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
-        public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
-            this.isArchiveEnabled = Codegen.ofNullable(isArchiveEnabled);
-            return this;
+
+        public Builder isArchiveEnabled(Boolean isArchiveEnabled) {
+            return isArchiveEnabled(Output.of(isArchiveEnabled));
         }
+
         public Builder isPushEnabled(@Nullable Output<Boolean> isPushEnabled) {
-            this.isPushEnabled = isPushEnabled;
+            $.isPushEnabled = isPushEnabled;
             return this;
         }
-        public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
-            this.isPushEnabled = Codegen.ofNullable(isPushEnabled);
-            return this;
+
+        public Builder isPushEnabled(Boolean isPushEnabled) {
+            return isPushEnabled(Output.of(isPushEnabled));
         }
+
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
-            this.logTemplate = logTemplate;
+            $.logTemplate = logTemplate;
             return this;
         }
-        public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = Codegen.ofNullable(logTemplate);
-            return this;
+
+        public Builder logTemplate(String logTemplate) {
+            return logTemplate(Output.of(logTemplate));
         }
+
         public Builder noCache(@Nullable Output<Boolean> noCache) {
-            this.noCache = noCache;
+            $.noCache = noCache;
             return this;
         }
-        public Builder noCache(@Nullable Boolean noCache) {
-            this.noCache = Codegen.ofNullable(noCache);
-            return this;
+
+        public Builder noCache(Boolean noCache) {
+            return noCache(Output.of(noCache));
         }
+
         public Builder platform(Output<PlatformPropertiesArgs> platform) {
-            this.platform = Objects.requireNonNull(platform);
+            $.platform = platform;
             return this;
         }
+
         public Builder platform(PlatformPropertiesArgs platform) {
-            this.platform = Output.of(Objects.requireNonNull(platform));
-            return this;
+            return platform(Output.of(platform));
         }
+
         public Builder sourceLocation(@Nullable Output<String> sourceLocation) {
-            this.sourceLocation = sourceLocation;
+            $.sourceLocation = sourceLocation;
             return this;
         }
-        public Builder sourceLocation(@Nullable String sourceLocation) {
-            this.sourceLocation = Codegen.ofNullable(sourceLocation);
-            return this;
+
+        public Builder sourceLocation(String sourceLocation) {
+            return sourceLocation(Output.of(sourceLocation));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder timeout(@Nullable Output<Integer> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(Integer timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DockerBuildRequestArgs build() {
-            return new DockerBuildRequestArgs(agentConfiguration, agentPoolName, arguments, credentials, dockerFilePath, imageNames, isArchiveEnabled, isPushEnabled, logTemplate, noCache, platform, sourceLocation, target, timeout, type);
+            return type(Output.of(type));
+        }
+
+        public DockerBuildRequestArgs build() {
+            $.dockerFilePath = Objects.requireNonNull($.dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
+            $.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").output().arg($.isArchiveEnabled).def(false).getNullable();
+            $.isPushEnabled = Codegen.booleanProp("isPushEnabled").output().arg($.isPushEnabled).def(true).getNullable();
+            $.noCache = Codegen.booleanProp("noCache").output().arg($.noCache).def(false).getNullable();
+            $.platform = Objects.requireNonNull($.platform, "expected parameter 'platform' to be non-null");
+            $.timeout = Codegen.integerProp("timeout").output().arg($.timeout).def(3600).getNullable();
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

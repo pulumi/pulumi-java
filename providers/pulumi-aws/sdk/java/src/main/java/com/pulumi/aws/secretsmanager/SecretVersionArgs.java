@@ -5,10 +5,10 @@ package com.pulumi.aws.secretsmanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretBinary")
-      private final @Nullable Output<String> secretBinary;
+    private @Nullable Output<String> secretBinary;
 
-    public Output<String> secretBinary() {
-        return this.secretBinary == null ? Codegen.empty() : this.secretBinary;
+    public Optional<Output<String>> secretBinary() {
+        return Optional.ofNullable(this.secretBinary);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretId", required=true)
-      private final Output<String> secretId;
+    private Output<String> secretId;
 
     public Output<String> secretId() {
         return this.secretId;
@@ -43,10 +43,10 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretString")
-      private final @Nullable Output<String> secretString;
+    private @Nullable Output<String> secretString;
 
-    public Output<String> secretString() {
-        return this.secretString == null ? Codegen.empty() : this.secretString;
+    public Optional<Output<String>> secretString() {
+        return Optional.ofNullable(this.secretString);
     }
 
     /**
@@ -54,92 +54,83 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionStages")
-      private final @Nullable Output<List<String>> versionStages;
+    private @Nullable Output<List<String>> versionStages;
 
-    public Output<List<String>> versionStages() {
-        return this.versionStages == null ? Codegen.empty() : this.versionStages;
+    public Optional<Output<List<String>>> versionStages() {
+        return Optional.ofNullable(this.versionStages);
     }
 
-    public SecretVersionArgs(
-        @Nullable Output<String> secretBinary,
-        Output<String> secretId,
-        @Nullable Output<String> secretString,
-        @Nullable Output<List<String>> versionStages) {
-        this.secretBinary = secretBinary;
-        this.secretId = Objects.requireNonNull(secretId, "expected parameter 'secretId' to be non-null");
-        this.secretString = secretString;
-        this.versionStages = versionStages;
-    }
+    private SecretVersionArgs() {}
 
-    private SecretVersionArgs() {
-        this.secretBinary = Codegen.empty();
-        this.secretId = Codegen.empty();
-        this.secretString = Codegen.empty();
-        this.versionStages = Codegen.empty();
+    private SecretVersionArgs(SecretVersionArgs $) {
+        this.secretBinary = $.secretBinary;
+        this.secretId = $.secretId;
+        this.secretString = $.secretString;
+        this.versionStages = $.versionStages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> secretBinary;
-        private Output<String> secretId;
-        private @Nullable Output<String> secretString;
-        private @Nullable Output<List<String>> versionStages;
+        private SecretVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretVersionArgs();
         }
 
         public Builder(SecretVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretBinary = defaults.secretBinary;
-    	      this.secretId = defaults.secretId;
-    	      this.secretString = defaults.secretString;
-    	      this.versionStages = defaults.versionStages;
+            $ = new SecretVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretBinary(@Nullable Output<String> secretBinary) {
-            this.secretBinary = secretBinary;
+            $.secretBinary = secretBinary;
             return this;
         }
-        public Builder secretBinary(@Nullable String secretBinary) {
-            this.secretBinary = Codegen.ofNullable(secretBinary);
-            return this;
+
+        public Builder secretBinary(String secretBinary) {
+            return secretBinary(Output.of(secretBinary));
         }
+
         public Builder secretId(Output<String> secretId) {
-            this.secretId = Objects.requireNonNull(secretId);
+            $.secretId = secretId;
             return this;
         }
+
         public Builder secretId(String secretId) {
-            this.secretId = Output.of(Objects.requireNonNull(secretId));
-            return this;
+            return secretId(Output.of(secretId));
         }
+
         public Builder secretString(@Nullable Output<String> secretString) {
-            this.secretString = secretString;
+            $.secretString = secretString;
             return this;
         }
-        public Builder secretString(@Nullable String secretString) {
-            this.secretString = Codegen.ofNullable(secretString);
-            return this;
+
+        public Builder secretString(String secretString) {
+            return secretString(Output.of(secretString));
         }
+
         public Builder versionStages(@Nullable Output<List<String>> versionStages) {
-            this.versionStages = versionStages;
+            $.versionStages = versionStages;
             return this;
         }
-        public Builder versionStages(@Nullable List<String> versionStages) {
-            this.versionStages = Codegen.ofNullable(versionStages);
-            return this;
+
+        public Builder versionStages(List<String> versionStages) {
+            return versionStages(Output.of(versionStages));
         }
+
         public Builder versionStages(String... versionStages) {
             return versionStages(List.of(versionStages));
-        }        public SecretVersionArgs build() {
-            return new SecretVersionArgs(secretBinary, secretId, secretString, versionStages);
+        }
+
+        public SecretVersionArgs build() {
+            $.secretId = Objects.requireNonNull($.secretId, "expected parameter 'secretId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecLoggingAccessLogFileGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VirtualGatewaySpecLoggingAccessLogGetArgs extends com.pulumi.
      * 
      */
     @Import(name="file")
-      private final @Nullable Output<VirtualGatewaySpecLoggingAccessLogFileGetArgs> file;
+    private @Nullable Output<VirtualGatewaySpecLoggingAccessLogFileGetArgs> file;
 
-    public Output<VirtualGatewaySpecLoggingAccessLogFileGetArgs> file() {
-        return this.file == null ? Codegen.empty() : this.file;
+    public Optional<Output<VirtualGatewaySpecLoggingAccessLogFileGetArgs>> file() {
+        return Optional.ofNullable(this.file);
     }
 
-    public VirtualGatewaySpecLoggingAccessLogGetArgs(@Nullable Output<VirtualGatewaySpecLoggingAccessLogFileGetArgs> file) {
-        this.file = file;
-    }
+    private VirtualGatewaySpecLoggingAccessLogGetArgs() {}
 
-    private VirtualGatewaySpecLoggingAccessLogGetArgs() {
-        this.file = Codegen.empty();
+    private VirtualGatewaySpecLoggingAccessLogGetArgs(VirtualGatewaySpecLoggingAccessLogGetArgs $) {
+        this.file = $.file;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualGatewaySpecLoggingAccessLogGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualGatewaySpecLoggingAccessLogFileGetArgs> file;
+        private VirtualGatewaySpecLoggingAccessLogGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualGatewaySpecLoggingAccessLogGetArgs();
         }
 
         public Builder(VirtualGatewaySpecLoggingAccessLogGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.file = defaults.file;
+            $ = new VirtualGatewaySpecLoggingAccessLogGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder file(@Nullable Output<VirtualGatewaySpecLoggingAccessLogFileGetArgs> file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
-        public Builder file(@Nullable VirtualGatewaySpecLoggingAccessLogFileGetArgs file) {
-            this.file = Codegen.ofNullable(file);
-            return this;
-        }        public VirtualGatewaySpecLoggingAccessLogGetArgs build() {
-            return new VirtualGatewaySpecLoggingAccessLogGetArgs(file);
+
+        public Builder file(VirtualGatewaySpecLoggingAccessLogFileGetArgs file) {
+            return file(Output.of(file));
+        }
+
+        public VirtualGatewaySpecLoggingAccessLogGetArgs build() {
+            return $;
         }
     }
+
 }

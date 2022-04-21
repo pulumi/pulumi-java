@@ -15,62 +15,57 @@ public final class ResourceGuardOperationDetailResponse extends com.pulumi.resou
     public static final ResourceGuardOperationDetailResponse Empty = new ResourceGuardOperationDetailResponse();
 
     @Import(name="defaultResourceRequest")
-      private final @Nullable String defaultResourceRequest;
+    private @Nullable String defaultResourceRequest;
 
     public Optional<String> defaultResourceRequest() {
-        return this.defaultResourceRequest == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceRequest);
+        return Optional.ofNullable(this.defaultResourceRequest);
     }
 
     @Import(name="vaultCriticalOperation")
-      private final @Nullable String vaultCriticalOperation;
+    private @Nullable String vaultCriticalOperation;
 
     public Optional<String> vaultCriticalOperation() {
-        return this.vaultCriticalOperation == null ? Optional.empty() : Optional.ofNullable(this.vaultCriticalOperation);
+        return Optional.ofNullable(this.vaultCriticalOperation);
     }
 
-    public ResourceGuardOperationDetailResponse(
-        @Nullable String defaultResourceRequest,
-        @Nullable String vaultCriticalOperation) {
-        this.defaultResourceRequest = defaultResourceRequest;
-        this.vaultCriticalOperation = vaultCriticalOperation;
-    }
+    private ResourceGuardOperationDetailResponse() {}
 
-    private ResourceGuardOperationDetailResponse() {
-        this.defaultResourceRequest = null;
-        this.vaultCriticalOperation = null;
+    private ResourceGuardOperationDetailResponse(ResourceGuardOperationDetailResponse $) {
+        this.defaultResourceRequest = $.defaultResourceRequest;
+        this.vaultCriticalOperation = $.vaultCriticalOperation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGuardOperationDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String defaultResourceRequest;
-        private @Nullable String vaultCriticalOperation;
+        private ResourceGuardOperationDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGuardOperationDetailResponse();
         }
 
         public Builder(ResourceGuardOperationDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultResourceRequest = defaults.defaultResourceRequest;
-    	      this.vaultCriticalOperation = defaults.vaultCriticalOperation;
+            $ = new ResourceGuardOperationDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultResourceRequest(@Nullable String defaultResourceRequest) {
-            this.defaultResourceRequest = defaultResourceRequest;
+            $.defaultResourceRequest = defaultResourceRequest;
             return this;
         }
+
         public Builder vaultCriticalOperation(@Nullable String vaultCriticalOperation) {
-            this.vaultCriticalOperation = vaultCriticalOperation;
+            $.vaultCriticalOperation = vaultCriticalOperation;
             return this;
-        }        public ResourceGuardOperationDetailResponse build() {
-            return new ResourceGuardOperationDetailResponse(defaultResourceRequest, vaultCriticalOperation);
+        }
+
+        public ResourceGuardOperationDetailResponse build() {
+            return $;
         }
     }
+
 }

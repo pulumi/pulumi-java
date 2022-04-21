@@ -5,10 +5,10 @@ package com.pulumi.googlenative.firebasehosting_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -32,103 +32,93 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="siteId", required=true)
-      private final Output<String> siteId;
+    private Output<String> siteId;
 
     public Output<String> siteId() {
         return this.siteId;
     }
 
-    public SiteArgs(
-        @Nullable Output<String> appId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> project,
-        Output<String> siteId) {
-        this.appId = appId;
-        this.labels = labels;
-        this.project = project;
-        this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");
-    }
+    private SiteArgs() {}
 
-    private SiteArgs() {
-        this.appId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.project = Codegen.empty();
-        this.siteId = Codegen.empty();
+    private SiteArgs(SiteArgs $) {
+        this.appId = $.appId;
+        this.labels = $.labels;
+        this.project = $.project;
+        this.siteId = $.siteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> project;
-        private Output<String> siteId;
+        private SiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SiteArgs();
         }
 
         public Builder(SiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.labels = defaults.labels;
-    	      this.project = defaults.project;
-    	      this.siteId = defaults.siteId;
+            $ = new SiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder siteId(Output<String> siteId) {
-            this.siteId = Objects.requireNonNull(siteId);
+            $.siteId = siteId;
             return this;
         }
+
         public Builder siteId(String siteId) {
-            this.siteId = Output.of(Objects.requireNonNull(siteId));
-            return this;
-        }        public SiteArgs build() {
-            return new SiteArgs(appId, labels, project, siteId);
+            return siteId(Output.of(siteId));
+        }
+
+        public SiteArgs build() {
+            $.siteId = Objects.requireNonNull($.siteId, "expected parameter 'siteId' to be non-null");
+            return $;
         }
     }
+
 }

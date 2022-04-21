@@ -24,10 +24,10 @@ public final class ProbeSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="failureThreshold")
-      private final @Nullable Integer failureThreshold;
+    private @Nullable Integer failureThreshold;
 
     public Optional<Integer> failureThreshold() {
-        return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
+        return Optional.ofNullable(this.failureThreshold);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ProbeSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="initialDelay")
-      private final @Nullable String initialDelay;
+    private @Nullable String initialDelay;
 
     public Optional<String> initialDelay() {
-        return this.initialDelay == null ? Optional.empty() : Optional.ofNullable(this.initialDelay);
+        return Optional.ofNullable(this.initialDelay);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ProbeSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="period")
-      private final @Nullable String period;
+    private @Nullable String period;
 
     public Optional<String> period() {
-        return this.period == null ? Optional.empty() : Optional.ofNullable(this.period);
+        return Optional.ofNullable(this.period);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ProbeSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="successThreshold")
-      private final @Nullable Integer successThreshold;
+    private @Nullable Integer successThreshold;
 
     public Optional<Integer> successThreshold() {
-        return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
+        return Optional.ofNullable(this.successThreshold);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class ProbeSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ProbeSettingsResponse(
-        @Nullable Integer failureThreshold,
-        @Nullable String initialDelay,
-        @Nullable String period,
-        @Nullable Integer successThreshold,
-        @Nullable String timeout) {
-        this.failureThreshold = failureThreshold;
-        this.initialDelay = initialDelay;
-        this.period = period;
-        this.successThreshold = successThreshold;
-        this.timeout = timeout;
-    }
+    private ProbeSettingsResponse() {}
 
-    private ProbeSettingsResponse() {
-        this.failureThreshold = null;
-        this.initialDelay = null;
-        this.period = null;
-        this.successThreshold = null;
-        this.timeout = null;
+    private ProbeSettingsResponse(ProbeSettingsResponse $) {
+        this.failureThreshold = $.failureThreshold;
+        this.initialDelay = $.initialDelay;
+        this.period = $.period;
+        this.successThreshold = $.successThreshold;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProbeSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer failureThreshold;
-        private @Nullable String initialDelay;
-        private @Nullable String period;
-        private @Nullable Integer successThreshold;
-        private @Nullable String timeout;
+        private ProbeSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProbeSettingsResponse();
         }
 
         public Builder(ProbeSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.initialDelay = defaults.initialDelay;
-    	      this.period = defaults.period;
-    	      this.successThreshold = defaults.successThreshold;
-    	      this.timeout = defaults.timeout;
+            $ = new ProbeSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = failureThreshold;
+            $.failureThreshold = failureThreshold;
             return this;
         }
+
         public Builder initialDelay(@Nullable String initialDelay) {
-            this.initialDelay = initialDelay;
+            $.initialDelay = initialDelay;
             return this;
         }
+
         public Builder period(@Nullable String period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
+
         public Builder successThreshold(@Nullable Integer successThreshold) {
-            this.successThreshold = successThreshold;
+            $.successThreshold = successThreshold;
             return this;
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
-        }        public ProbeSettingsResponse build() {
-            return new ProbeSettingsResponse(failureThreshold, initialDelay, period, successThreshold, timeout);
+        }
+
+        public ProbeSettingsResponse build() {
+            return $;
         }
     }
+
 }

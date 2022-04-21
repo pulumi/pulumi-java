@@ -17,45 +17,45 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connectionArn", required=true)
-      private final String connectionArn;
+    private String connectionArn;
 
     public String connectionArn() {
         return this.connectionArn;
     }
 
-    public GetConnectionArgs(String connectionArn) {
-        this.connectionArn = Objects.requireNonNull(connectionArn, "expected parameter 'connectionArn' to be non-null");
-    }
+    private GetConnectionArgs() {}
 
-    private GetConnectionArgs() {
-        this.connectionArn = null;
+    private GetConnectionArgs(GetConnectionArgs $) {
+        this.connectionArn = $.connectionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionArn;
+        private GetConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectionArgs();
         }
 
         public Builder(GetConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionArn = defaults.connectionArn;
+            $ = new GetConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionArn(String connectionArn) {
-            this.connectionArn = Objects.requireNonNull(connectionArn);
+            $.connectionArn = connectionArn;
             return this;
-        }        public GetConnectionArgs build() {
-            return new GetConnectionArgs(connectionArn);
+        }
+
+        public GetConnectionArgs build() {
+            $.connectionArn = Objects.requireNonNull($.connectionArn, "expected parameter 'connectionArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupQueryArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DynamicGroupMetadataArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="queries")
-      private final @Nullable Output<List<DynamicGroupQueryArgs>> queries;
+    private @Nullable Output<List<DynamicGroupQueryArgs>> queries;
 
-    public Output<List<DynamicGroupQueryArgs>> queries() {
-        return this.queries == null ? Codegen.empty() : this.queries;
+    public Optional<Output<List<DynamicGroupQueryArgs>>> queries() {
+        return Optional.ofNullable(this.queries);
     }
 
-    public DynamicGroupMetadataArgs(@Nullable Output<List<DynamicGroupQueryArgs>> queries) {
-        this.queries = queries;
-    }
+    private DynamicGroupMetadataArgs() {}
 
-    private DynamicGroupMetadataArgs() {
-        this.queries = Codegen.empty();
+    private DynamicGroupMetadataArgs(DynamicGroupMetadataArgs $) {
+        this.queries = $.queries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DynamicGroupMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DynamicGroupQueryArgs>> queries;
+        private DynamicGroupMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DynamicGroupMetadataArgs();
         }
 
         public Builder(DynamicGroupMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queries = defaults.queries;
+            $ = new DynamicGroupMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queries(@Nullable Output<List<DynamicGroupQueryArgs>> queries) {
-            this.queries = queries;
+            $.queries = queries;
             return this;
         }
-        public Builder queries(@Nullable List<DynamicGroupQueryArgs> queries) {
-            this.queries = Codegen.ofNullable(queries);
-            return this;
+
+        public Builder queries(List<DynamicGroupQueryArgs> queries) {
+            return queries(Output.of(queries));
         }
+
         public Builder queries(DynamicGroupQueryArgs... queries) {
             return queries(List.of(queries));
-        }        public DynamicGroupMetadataArgs build() {
-            return new DynamicGroupMetadataArgs(queries);
+        }
+
+        public DynamicGroupMetadataArgs build() {
+            return $;
         }
     }
+
 }

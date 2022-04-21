@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VpcIpamOperatingRegionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="regionName", required=true)
-      private final Output<String> regionName;
+    private Output<String> regionName;
 
     public Output<String> regionName() {
         return this.regionName;
     }
 
-    public VpcIpamOperatingRegionArgs(Output<String> regionName) {
-        this.regionName = Objects.requireNonNull(regionName, "expected parameter 'regionName' to be non-null");
-    }
+    private VpcIpamOperatingRegionArgs() {}
 
-    private VpcIpamOperatingRegionArgs() {
-        this.regionName = Codegen.empty();
+    private VpcIpamOperatingRegionArgs(VpcIpamOperatingRegionArgs $) {
+        this.regionName = $.regionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcIpamOperatingRegionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> regionName;
+        private VpcIpamOperatingRegionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcIpamOperatingRegionArgs();
         }
 
         public Builder(VpcIpamOperatingRegionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regionName = defaults.regionName;
+            $ = new VpcIpamOperatingRegionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regionName(Output<String> regionName) {
-            this.regionName = Objects.requireNonNull(regionName);
+            $.regionName = regionName;
             return this;
         }
+
         public Builder regionName(String regionName) {
-            this.regionName = Output.of(Objects.requireNonNull(regionName));
-            return this;
-        }        public VpcIpamOperatingRegionArgs build() {
-            return new VpcIpamOperatingRegionArgs(regionName);
+            return regionName(Output.of(regionName));
+        }
+
+        public VpcIpamOperatingRegionArgs build() {
+            $.regionName = Objects.requireNonNull($.regionName, "expected parameter 'regionName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,12 +6,12 @@ package com.pulumi.aws.apigatewayv2;
 import com.pulumi.aws.apigatewayv2.inputs.AuthorizerJwtConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -36,10 +36,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizerCredentialsArn")
-      private final @Nullable Output<String> authorizerCredentialsArn;
+    private @Nullable Output<String> authorizerCredentialsArn;
 
-    public Output<String> authorizerCredentialsArn() {
-        return this.authorizerCredentialsArn == null ? Codegen.empty() : this.authorizerCredentialsArn;
+    public Optional<Output<String>> authorizerCredentialsArn() {
+        return Optional.ofNullable(this.authorizerCredentialsArn);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizerPayloadFormatVersion")
-      private final @Nullable Output<String> authorizerPayloadFormatVersion;
+    private @Nullable Output<String> authorizerPayloadFormatVersion;
 
-    public Output<String> authorizerPayloadFormatVersion() {
-        return this.authorizerPayloadFormatVersion == null ? Codegen.empty() : this.authorizerPayloadFormatVersion;
+    public Optional<Output<String>> authorizerPayloadFormatVersion() {
+        return Optional.ofNullable(this.authorizerPayloadFormatVersion);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizerResultTtlInSeconds")
-      private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
+    private @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
-    public Output<Integer> authorizerResultTtlInSeconds() {
-        return this.authorizerResultTtlInSeconds == null ? Codegen.empty() : this.authorizerResultTtlInSeconds;
+    public Optional<Output<Integer>> authorizerResultTtlInSeconds() {
+        return Optional.ofNullable(this.authorizerResultTtlInSeconds);
     }
 
     /**
@@ -74,7 +74,7 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizerType", required=true)
-      private final Output<String> authorizerType;
+    private Output<String> authorizerType;
 
     public Output<String> authorizerType() {
         return this.authorizerType;
@@ -87,10 +87,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizerUri")
-      private final @Nullable Output<String> authorizerUri;
+    private @Nullable Output<String> authorizerUri;
 
-    public Output<String> authorizerUri() {
-        return this.authorizerUri == null ? Codegen.empty() : this.authorizerUri;
+    public Optional<Output<String>> authorizerUri() {
+        return Optional.ofNullable(this.authorizerUri);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableSimpleResponses")
-      private final @Nullable Output<Boolean> enableSimpleResponses;
+    private @Nullable Output<Boolean> enableSimpleResponses;
 
-    public Output<Boolean> enableSimpleResponses() {
-        return this.enableSimpleResponses == null ? Codegen.empty() : this.enableSimpleResponses;
+    public Optional<Output<Boolean>> enableSimpleResponses() {
+        return Optional.ofNullable(this.enableSimpleResponses);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identitySources")
-      private final @Nullable Output<List<String>> identitySources;
+    private @Nullable Output<List<String>> identitySources;
 
-    public Output<List<String>> identitySources() {
-        return this.identitySources == null ? Codegen.empty() : this.identitySources;
+    public Optional<Output<List<String>>> identitySources() {
+        return Optional.ofNullable(this.identitySources);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jwtConfiguration")
-      private final @Nullable Output<AuthorizerJwtConfigurationArgs> jwtConfiguration;
+    private @Nullable Output<AuthorizerJwtConfigurationArgs> jwtConfiguration;
 
-    public Output<AuthorizerJwtConfigurationArgs> jwtConfiguration() {
-        return this.jwtConfiguration == null ? Codegen.empty() : this.jwtConfiguration;
+    public Optional<Output<AuthorizerJwtConfigurationArgs>> jwtConfiguration() {
+        return Optional.ofNullable(this.jwtConfiguration);
     }
 
     /**
@@ -135,170 +135,144 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public AuthorizerArgs(
-        Output<String> apiId,
-        @Nullable Output<String> authorizerCredentialsArn,
-        @Nullable Output<String> authorizerPayloadFormatVersion,
-        @Nullable Output<Integer> authorizerResultTtlInSeconds,
-        Output<String> authorizerType,
-        @Nullable Output<String> authorizerUri,
-        @Nullable Output<Boolean> enableSimpleResponses,
-        @Nullable Output<List<String>> identitySources,
-        @Nullable Output<AuthorizerJwtConfigurationArgs> jwtConfiguration,
-        @Nullable Output<String> name) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.authorizerCredentialsArn = authorizerCredentialsArn;
-        this.authorizerPayloadFormatVersion = authorizerPayloadFormatVersion;
-        this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
-        this.authorizerType = Objects.requireNonNull(authorizerType, "expected parameter 'authorizerType' to be non-null");
-        this.authorizerUri = authorizerUri;
-        this.enableSimpleResponses = enableSimpleResponses;
-        this.identitySources = identitySources;
-        this.jwtConfiguration = jwtConfiguration;
-        this.name = name;
-    }
+    private AuthorizerArgs() {}
 
-    private AuthorizerArgs() {
-        this.apiId = Codegen.empty();
-        this.authorizerCredentialsArn = Codegen.empty();
-        this.authorizerPayloadFormatVersion = Codegen.empty();
-        this.authorizerResultTtlInSeconds = Codegen.empty();
-        this.authorizerType = Codegen.empty();
-        this.authorizerUri = Codegen.empty();
-        this.enableSimpleResponses = Codegen.empty();
-        this.identitySources = Codegen.empty();
-        this.jwtConfiguration = Codegen.empty();
-        this.name = Codegen.empty();
+    private AuthorizerArgs(AuthorizerArgs $) {
+        this.apiId = $.apiId;
+        this.authorizerCredentialsArn = $.authorizerCredentialsArn;
+        this.authorizerPayloadFormatVersion = $.authorizerPayloadFormatVersion;
+        this.authorizerResultTtlInSeconds = $.authorizerResultTtlInSeconds;
+        this.authorizerType = $.authorizerType;
+        this.authorizerUri = $.authorizerUri;
+        this.enableSimpleResponses = $.enableSimpleResponses;
+        this.identitySources = $.identitySources;
+        this.jwtConfiguration = $.jwtConfiguration;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<String> authorizerCredentialsArn;
-        private @Nullable Output<String> authorizerPayloadFormatVersion;
-        private @Nullable Output<Integer> authorizerResultTtlInSeconds;
-        private Output<String> authorizerType;
-        private @Nullable Output<String> authorizerUri;
-        private @Nullable Output<Boolean> enableSimpleResponses;
-        private @Nullable Output<List<String>> identitySources;
-        private @Nullable Output<AuthorizerJwtConfigurationArgs> jwtConfiguration;
-        private @Nullable Output<String> name;
+        private AuthorizerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizerArgs();
         }
 
         public Builder(AuthorizerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.authorizerCredentialsArn = defaults.authorizerCredentialsArn;
-    	      this.authorizerPayloadFormatVersion = defaults.authorizerPayloadFormatVersion;
-    	      this.authorizerResultTtlInSeconds = defaults.authorizerResultTtlInSeconds;
-    	      this.authorizerType = defaults.authorizerType;
-    	      this.authorizerUri = defaults.authorizerUri;
-    	      this.enableSimpleResponses = defaults.enableSimpleResponses;
-    	      this.identitySources = defaults.identitySources;
-    	      this.jwtConfiguration = defaults.jwtConfiguration;
-    	      this.name = defaults.name;
+            $ = new AuthorizerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder authorizerCredentialsArn(@Nullable Output<String> authorizerCredentialsArn) {
-            this.authorizerCredentialsArn = authorizerCredentialsArn;
+            $.authorizerCredentialsArn = authorizerCredentialsArn;
             return this;
         }
-        public Builder authorizerCredentialsArn(@Nullable String authorizerCredentialsArn) {
-            this.authorizerCredentialsArn = Codegen.ofNullable(authorizerCredentialsArn);
-            return this;
+
+        public Builder authorizerCredentialsArn(String authorizerCredentialsArn) {
+            return authorizerCredentialsArn(Output.of(authorizerCredentialsArn));
         }
+
         public Builder authorizerPayloadFormatVersion(@Nullable Output<String> authorizerPayloadFormatVersion) {
-            this.authorizerPayloadFormatVersion = authorizerPayloadFormatVersion;
+            $.authorizerPayloadFormatVersion = authorizerPayloadFormatVersion;
             return this;
         }
-        public Builder authorizerPayloadFormatVersion(@Nullable String authorizerPayloadFormatVersion) {
-            this.authorizerPayloadFormatVersion = Codegen.ofNullable(authorizerPayloadFormatVersion);
-            return this;
+
+        public Builder authorizerPayloadFormatVersion(String authorizerPayloadFormatVersion) {
+            return authorizerPayloadFormatVersion(Output.of(authorizerPayloadFormatVersion));
         }
+
         public Builder authorizerResultTtlInSeconds(@Nullable Output<Integer> authorizerResultTtlInSeconds) {
-            this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
+            $.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
-        public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
-            this.authorizerResultTtlInSeconds = Codegen.ofNullable(authorizerResultTtlInSeconds);
-            return this;
+
+        public Builder authorizerResultTtlInSeconds(Integer authorizerResultTtlInSeconds) {
+            return authorizerResultTtlInSeconds(Output.of(authorizerResultTtlInSeconds));
         }
+
         public Builder authorizerType(Output<String> authorizerType) {
-            this.authorizerType = Objects.requireNonNull(authorizerType);
+            $.authorizerType = authorizerType;
             return this;
         }
+
         public Builder authorizerType(String authorizerType) {
-            this.authorizerType = Output.of(Objects.requireNonNull(authorizerType));
-            return this;
+            return authorizerType(Output.of(authorizerType));
         }
+
         public Builder authorizerUri(@Nullable Output<String> authorizerUri) {
-            this.authorizerUri = authorizerUri;
+            $.authorizerUri = authorizerUri;
             return this;
         }
-        public Builder authorizerUri(@Nullable String authorizerUri) {
-            this.authorizerUri = Codegen.ofNullable(authorizerUri);
-            return this;
+
+        public Builder authorizerUri(String authorizerUri) {
+            return authorizerUri(Output.of(authorizerUri));
         }
+
         public Builder enableSimpleResponses(@Nullable Output<Boolean> enableSimpleResponses) {
-            this.enableSimpleResponses = enableSimpleResponses;
+            $.enableSimpleResponses = enableSimpleResponses;
             return this;
         }
-        public Builder enableSimpleResponses(@Nullable Boolean enableSimpleResponses) {
-            this.enableSimpleResponses = Codegen.ofNullable(enableSimpleResponses);
-            return this;
+
+        public Builder enableSimpleResponses(Boolean enableSimpleResponses) {
+            return enableSimpleResponses(Output.of(enableSimpleResponses));
         }
+
         public Builder identitySources(@Nullable Output<List<String>> identitySources) {
-            this.identitySources = identitySources;
+            $.identitySources = identitySources;
             return this;
         }
-        public Builder identitySources(@Nullable List<String> identitySources) {
-            this.identitySources = Codegen.ofNullable(identitySources);
-            return this;
+
+        public Builder identitySources(List<String> identitySources) {
+            return identitySources(Output.of(identitySources));
         }
+
         public Builder identitySources(String... identitySources) {
             return identitySources(List.of(identitySources));
         }
+
         public Builder jwtConfiguration(@Nullable Output<AuthorizerJwtConfigurationArgs> jwtConfiguration) {
-            this.jwtConfiguration = jwtConfiguration;
+            $.jwtConfiguration = jwtConfiguration;
             return this;
         }
-        public Builder jwtConfiguration(@Nullable AuthorizerJwtConfigurationArgs jwtConfiguration) {
-            this.jwtConfiguration = Codegen.ofNullable(jwtConfiguration);
-            return this;
+
+        public Builder jwtConfiguration(AuthorizerJwtConfigurationArgs jwtConfiguration) {
+            return jwtConfiguration(Output.of(jwtConfiguration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public AuthorizerArgs build() {
-            return new AuthorizerArgs(apiId, authorizerCredentialsArn, authorizerPayloadFormatVersion, authorizerResultTtlInSeconds, authorizerType, authorizerUri, enableSimpleResponses, identitySources, jwtConfiguration, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public AuthorizerArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.authorizerType = Objects.requireNonNull($.authorizerType, "expected parameter 'authorizerType' to be non-null");
+            return $;
         }
     }
+
 }

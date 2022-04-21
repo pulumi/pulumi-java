@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.NodeGroupAutoscalingPolicyGetArgs;
 import com.pulumi.gcp.compute.inputs.NodeGroupMaintenanceWindowGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingPolicy")
-      private final @Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy;
+    private @Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy;
 
-    public Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
+    public Optional<Output<NodeGroupAutoscalingPolicyGetArgs>> autoscalingPolicy() {
+        return Optional.ofNullable(this.autoscalingPolicy);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initialSize")
-      private final @Nullable Output<Integer> initialSize;
+    private @Nullable Output<Integer> initialSize;
 
-    public Output<Integer> initialSize() {
-        return this.initialSize == null ? Codegen.empty() : this.initialSize;
+    public Optional<Output<Integer>> initialSize() {
+        return Optional.ofNullable(this.initialSize);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenancePolicy")
-      private final @Nullable Output<String> maintenancePolicy;
+    private @Nullable Output<String> maintenancePolicy;
 
-    public Output<String> maintenancePolicy() {
-        return this.maintenancePolicy == null ? Codegen.empty() : this.maintenancePolicy;
+    public Optional<Output<String>> maintenancePolicy() {
+        return Optional.ofNullable(this.maintenancePolicy);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceWindow")
-      private final @Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow;
+    private @Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow;
 
-    public Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
+    public Optional<Output<NodeGroupMaintenanceWindowGetArgs>> maintenanceWindow() {
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeTemplate")
-      private final @Nullable Output<String> nodeTemplate;
+    private @Nullable Output<String> nodeTemplate;
 
-    public Output<String> nodeTemplate() {
-        return this.nodeTemplate == null ? Codegen.empty() : this.nodeTemplate;
+    public Optional<Output<String>> nodeTemplate() {
+        return Optional.ofNullable(this.nodeTemplate);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<Integer> size;
+    private @Nullable Output<Integer> size;
 
-    public Output<Integer> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<Integer>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -148,193 +148,158 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public NodeGroupState(
-        @Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> initialSize,
-        @Nullable Output<String> maintenancePolicy,
-        @Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow,
-        @Nullable Output<String> name,
-        @Nullable Output<String> nodeTemplate,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<Integer> size,
-        @Nullable Output<String> zone) {
-        this.autoscalingPolicy = autoscalingPolicy;
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.initialSize = initialSize;
-        this.maintenancePolicy = maintenancePolicy;
-        this.maintenanceWindow = maintenanceWindow;
-        this.name = name;
-        this.nodeTemplate = nodeTemplate;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.size = size;
-        this.zone = zone;
-    }
+    private NodeGroupState() {}
 
-    private NodeGroupState() {
-        this.autoscalingPolicy = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.initialSize = Codegen.empty();
-        this.maintenancePolicy = Codegen.empty();
-        this.maintenanceWindow = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nodeTemplate = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.size = Codegen.empty();
-        this.zone = Codegen.empty();
+    private NodeGroupState(NodeGroupState $) {
+        this.autoscalingPolicy = $.autoscalingPolicy;
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.initialSize = $.initialSize;
+        this.maintenancePolicy = $.maintenancePolicy;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.name = $.name;
+        this.nodeTemplate = $.nodeTemplate;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.size = $.size;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> initialSize;
-        private @Nullable Output<String> maintenancePolicy;
-        private @Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> nodeTemplate;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<Integer> size;
-        private @Nullable Output<String> zone;
+        private NodeGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupState();
         }
 
         public Builder(NodeGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingPolicy = defaults.autoscalingPolicy;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.initialSize = defaults.initialSize;
-    	      this.maintenancePolicy = defaults.maintenancePolicy;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.name = defaults.name;
-    	      this.nodeTemplate = defaults.nodeTemplate;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.size = defaults.size;
-    	      this.zone = defaults.zone;
+            $ = new NodeGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingPolicy(@Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy) {
-            this.autoscalingPolicy = autoscalingPolicy;
+            $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-        public Builder autoscalingPolicy(@Nullable NodeGroupAutoscalingPolicyGetArgs autoscalingPolicy) {
-            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
-            return this;
+
+        public Builder autoscalingPolicy(NodeGroupAutoscalingPolicyGetArgs autoscalingPolicy) {
+            return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder initialSize(@Nullable Output<Integer> initialSize) {
-            this.initialSize = initialSize;
+            $.initialSize = initialSize;
             return this;
         }
-        public Builder initialSize(@Nullable Integer initialSize) {
-            this.initialSize = Codegen.ofNullable(initialSize);
-            return this;
+
+        public Builder initialSize(Integer initialSize) {
+            return initialSize(Output.of(initialSize));
         }
+
         public Builder maintenancePolicy(@Nullable Output<String> maintenancePolicy) {
-            this.maintenancePolicy = maintenancePolicy;
+            $.maintenancePolicy = maintenancePolicy;
             return this;
         }
-        public Builder maintenancePolicy(@Nullable String maintenancePolicy) {
-            this.maintenancePolicy = Codegen.ofNullable(maintenancePolicy);
-            return this;
+
+        public Builder maintenancePolicy(String maintenancePolicy) {
+            return maintenancePolicy(Output.of(maintenancePolicy));
         }
+
         public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
-        public Builder maintenanceWindow(@Nullable NodeGroupMaintenanceWindowGetArgs maintenanceWindow) {
-            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
-            return this;
+
+        public Builder maintenanceWindow(NodeGroupMaintenanceWindowGetArgs maintenanceWindow) {
+            return maintenanceWindow(Output.of(maintenanceWindow));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nodeTemplate(@Nullable Output<String> nodeTemplate) {
-            this.nodeTemplate = nodeTemplate;
+            $.nodeTemplate = nodeTemplate;
             return this;
         }
-        public Builder nodeTemplate(@Nullable String nodeTemplate) {
-            this.nodeTemplate = Codegen.ofNullable(nodeTemplate);
-            return this;
+
+        public Builder nodeTemplate(String nodeTemplate) {
+            return nodeTemplate(Output.of(nodeTemplate));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder size(@Nullable Output<Integer> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable Integer size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(Integer size) {
+            return size(Output.of(size));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public NodeGroupState build() {
-            return new NodeGroupState(autoscalingPolicy, creationTimestamp, description, initialSize, maintenancePolicy, maintenanceWindow, name, nodeTemplate, project, selfLink, size, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public NodeGroupState build() {
+            return $;
         }
     }
+
 }

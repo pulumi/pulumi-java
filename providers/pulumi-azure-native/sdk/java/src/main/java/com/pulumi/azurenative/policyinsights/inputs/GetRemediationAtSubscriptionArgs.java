@@ -17,45 +17,45 @@ public final class GetRemediationAtSubscriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="remediationName", required=true)
-      private final String remediationName;
+    private String remediationName;
 
     public String remediationName() {
         return this.remediationName;
     }
 
-    public GetRemediationAtSubscriptionArgs(String remediationName) {
-        this.remediationName = Objects.requireNonNull(remediationName, "expected parameter 'remediationName' to be non-null");
-    }
+    private GetRemediationAtSubscriptionArgs() {}
 
-    private GetRemediationAtSubscriptionArgs() {
-        this.remediationName = null;
+    private GetRemediationAtSubscriptionArgs(GetRemediationAtSubscriptionArgs $) {
+        this.remediationName = $.remediationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRemediationAtSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String remediationName;
+        private GetRemediationAtSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRemediationAtSubscriptionArgs();
         }
 
         public Builder(GetRemediationAtSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.remediationName = defaults.remediationName;
+            $ = new GetRemediationAtSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder remediationName(String remediationName) {
-            this.remediationName = Objects.requireNonNull(remediationName);
+            $.remediationName = remediationName;
             return this;
-        }        public GetRemediationAtSubscriptionArgs build() {
-            return new GetRemediationAtSubscriptionArgs(remediationName);
+        }
+
+        public GetRemediationAtSubscriptionArgs build() {
+            $.remediationName = Objects.requireNonNull($.remediationName, "expected parameter 'remediationName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="frequencyInMinutes", required=true)
-      private final Integer frequencyInMinutes;
+    private Integer frequencyInMinutes;
 
     public Integer frequencyInMinutes() {
         return this.frequencyInMinutes;
@@ -32,55 +32,52 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeWindowInMinutes", required=true)
-      private final Integer timeWindowInMinutes;
+    private Integer timeWindowInMinutes;
 
     public Integer timeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }
 
-    public ScheduleResponse(
-        Integer frequencyInMinutes,
-        Integer timeWindowInMinutes) {
-        this.frequencyInMinutes = Objects.requireNonNull(frequencyInMinutes, "expected parameter 'frequencyInMinutes' to be non-null");
-        this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes, "expected parameter 'timeWindowInMinutes' to be non-null");
-    }
+    private ScheduleResponse() {}
 
-    private ScheduleResponse() {
-        this.frequencyInMinutes = null;
-        this.timeWindowInMinutes = null;
+    private ScheduleResponse(ScheduleResponse $) {
+        this.frequencyInMinutes = $.frequencyInMinutes;
+        this.timeWindowInMinutes = $.timeWindowInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer frequencyInMinutes;
-        private Integer timeWindowInMinutes;
+        private ScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleResponse();
         }
 
         public Builder(ScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequencyInMinutes = defaults.frequencyInMinutes;
-    	      this.timeWindowInMinutes = defaults.timeWindowInMinutes;
+            $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder frequencyInMinutes(Integer frequencyInMinutes) {
-            this.frequencyInMinutes = Objects.requireNonNull(frequencyInMinutes);
+            $.frequencyInMinutes = frequencyInMinutes;
             return this;
         }
+
         public Builder timeWindowInMinutes(Integer timeWindowInMinutes) {
-            this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
+            $.timeWindowInMinutes = timeWindowInMinutes;
             return this;
-        }        public ScheduleResponse build() {
-            return new ScheduleResponse(frequencyInMinutes, timeWindowInMinutes);
+        }
+
+        public ScheduleResponse build() {
+            $.frequencyInMinutes = Objects.requireNonNull($.frequencyInMinutes, "expected parameter 'frequencyInMinutes' to be non-null");
+            $.timeWindowInMinutes = Objects.requireNonNull($.timeWindowInMinutes, "expected parameter 'timeWindowInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InterconnectAttachmentPrivateInterconnectInfoGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="adminEnabled")
-      private final @Nullable Output<Boolean> adminEnabled;
+    private @Nullable Output<Boolean> adminEnabled;
 
-    public Output<Boolean> adminEnabled() {
-        return this.adminEnabled == null ? Codegen.empty() : this.adminEnabled;
+    public Optional<Output<Boolean>> adminEnabled() {
+        return Optional.ofNullable(this.adminEnabled);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="bandwidth")
-      private final @Nullable Output<String> bandwidth;
+    private @Nullable Output<String> bandwidth;
 
-    public Output<String> bandwidth() {
-        return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
+    public Optional<Output<String>> bandwidth() {
+        return Optional.ofNullable(this.bandwidth);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="candidateSubnets")
-      private final @Nullable Output<List<String>> candidateSubnets;
+    private @Nullable Output<List<String>> candidateSubnets;
 
-    public Output<List<String>> candidateSubnets() {
-        return this.candidateSubnets == null ? Codegen.empty() : this.candidateSubnets;
+    public Optional<Output<List<String>>> candidateSubnets() {
+        return Optional.ofNullable(this.candidateSubnets);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="cloudRouterIpAddress")
-      private final @Nullable Output<String> cloudRouterIpAddress;
+    private @Nullable Output<String> cloudRouterIpAddress;
 
-    public Output<String> cloudRouterIpAddress() {
-        return this.cloudRouterIpAddress == null ? Codegen.empty() : this.cloudRouterIpAddress;
+    public Optional<Output<String>> cloudRouterIpAddress() {
+        return Optional.ofNullable(this.cloudRouterIpAddress);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="customerRouterIpAddress")
-      private final @Nullable Output<String> customerRouterIpAddress;
+    private @Nullable Output<String> customerRouterIpAddress;
 
-    public Output<String> customerRouterIpAddress() {
-        return this.customerRouterIpAddress == null ? Codegen.empty() : this.customerRouterIpAddress;
+    public Optional<Output<String>> customerRouterIpAddress() {
+        return Optional.ofNullable(this.customerRouterIpAddress);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="edgeAvailabilityDomain")
-      private final @Nullable Output<String> edgeAvailabilityDomain;
+    private @Nullable Output<String> edgeAvailabilityDomain;
 
-    public Output<String> edgeAvailabilityDomain() {
-        return this.edgeAvailabilityDomain == null ? Codegen.empty() : this.edgeAvailabilityDomain;
+    public Optional<Output<String>> edgeAvailabilityDomain() {
+        return Optional.ofNullable(this.edgeAvailabilityDomain);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<String> encryption;
+    private @Nullable Output<String> encryption;
 
-    public Output<String> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<String>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="googleReferenceId")
-      private final @Nullable Output<String> googleReferenceId;
+    private @Nullable Output<String> googleReferenceId;
 
-    public Output<String> googleReferenceId() {
-        return this.googleReferenceId == null ? Codegen.empty() : this.googleReferenceId;
+    public Optional<Output<String>> googleReferenceId() {
+        return Optional.ofNullable(this.googleReferenceId);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="interconnect")
-      private final @Nullable Output<String> interconnect;
+    private @Nullable Output<String> interconnect;
 
-    public Output<String> interconnect() {
-        return this.interconnect == null ? Codegen.empty() : this.interconnect;
+    public Optional<Output<String>> interconnect() {
+        return Optional.ofNullable(this.interconnect);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="ipsecInternalAddresses")
-      private final @Nullable Output<List<String>> ipsecInternalAddresses;
+    private @Nullable Output<List<String>> ipsecInternalAddresses;
 
-    public Output<List<String>> ipsecInternalAddresses() {
-        return this.ipsecInternalAddresses == null ? Codegen.empty() : this.ipsecInternalAddresses;
+    public Optional<Output<List<String>>> ipsecInternalAddresses() {
+        return Optional.ofNullable(this.ipsecInternalAddresses);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="mtu")
-      private final @Nullable Output<String> mtu;
+    private @Nullable Output<String> mtu;
 
-    public Output<String> mtu() {
-        return this.mtu == null ? Codegen.empty() : this.mtu;
+    public Optional<Output<String>> mtu() {
+        return Optional.ofNullable(this.mtu);
     }
 
     /**
@@ -220,10 +220,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="pairingKey")
-      private final @Nullable Output<String> pairingKey;
+    private @Nullable Output<String> pairingKey;
 
-    public Output<String> pairingKey() {
-        return this.pairingKey == null ? Codegen.empty() : this.pairingKey;
+    public Optional<Output<String>> pairingKey() {
+        return Optional.ofNullable(this.pairingKey);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="partnerAsn")
-      private final @Nullable Output<String> partnerAsn;
+    private @Nullable Output<String> partnerAsn;
 
-    public Output<String> partnerAsn() {
-        return this.partnerAsn == null ? Codegen.empty() : this.partnerAsn;
+    public Optional<Output<String>> partnerAsn() {
+        return Optional.ofNullable(this.partnerAsn);
     }
 
     /**
@@ -256,10 +256,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="privateInterconnectInfos")
-      private final @Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> privateInterconnectInfos;
+    private @Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> privateInterconnectInfos;
 
-    public Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> privateInterconnectInfos() {
-        return this.privateInterconnectInfos == null ? Codegen.empty() : this.privateInterconnectInfos;
+    public Optional<Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>>> privateInterconnectInfos() {
+        return Optional.ofNullable(this.privateInterconnectInfos);
     }
 
     /**
@@ -268,10 +268,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -279,10 +279,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -293,10 +293,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="router")
-      private final @Nullable Output<String> router;
+    private @Nullable Output<String> router;
 
-    public Output<String> router() {
-        return this.router == null ? Codegen.empty() : this.router;
+    public Optional<Output<String>> router() {
+        return Optional.ofNullable(this.router);
     }
 
     /**
@@ -304,10 +304,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -315,10 +315,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -328,10 +328,10 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -340,358 +340,290 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="vlanTag8021q")
-      private final @Nullable Output<Integer> vlanTag8021q;
+    private @Nullable Output<Integer> vlanTag8021q;
 
-    public Output<Integer> vlanTag8021q() {
-        return this.vlanTag8021q == null ? Codegen.empty() : this.vlanTag8021q;
+    public Optional<Output<Integer>> vlanTag8021q() {
+        return Optional.ofNullable(this.vlanTag8021q);
     }
 
-    public InterconnectAttachmentState(
-        @Nullable Output<Boolean> adminEnabled,
-        @Nullable Output<String> bandwidth,
-        @Nullable Output<List<String>> candidateSubnets,
-        @Nullable Output<String> cloudRouterIpAddress,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> customerRouterIpAddress,
-        @Nullable Output<String> description,
-        @Nullable Output<String> edgeAvailabilityDomain,
-        @Nullable Output<String> encryption,
-        @Nullable Output<String> googleReferenceId,
-        @Nullable Output<String> interconnect,
-        @Nullable Output<List<String>> ipsecInternalAddresses,
-        @Nullable Output<String> mtu,
-        @Nullable Output<String> name,
-        @Nullable Output<String> pairingKey,
-        @Nullable Output<String> partnerAsn,
-        @Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> privateInterconnectInfos,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> router,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> state,
-        @Nullable Output<String> type,
-        @Nullable Output<Integer> vlanTag8021q) {
-        this.adminEnabled = adminEnabled;
-        this.bandwidth = bandwidth;
-        this.candidateSubnets = candidateSubnets;
-        this.cloudRouterIpAddress = cloudRouterIpAddress;
-        this.creationTimestamp = creationTimestamp;
-        this.customerRouterIpAddress = customerRouterIpAddress;
-        this.description = description;
-        this.edgeAvailabilityDomain = edgeAvailabilityDomain;
-        this.encryption = encryption;
-        this.googleReferenceId = googleReferenceId;
-        this.interconnect = interconnect;
-        this.ipsecInternalAddresses = ipsecInternalAddresses;
-        this.mtu = mtu;
-        this.name = name;
-        this.pairingKey = pairingKey;
-        this.partnerAsn = partnerAsn;
-        this.privateInterconnectInfos = privateInterconnectInfos;
-        this.project = project;
-        this.region = region;
-        this.router = router;
-        this.selfLink = selfLink;
-        this.state = state;
-        this.type = type;
-        this.vlanTag8021q = vlanTag8021q;
-    }
+    private InterconnectAttachmentState() {}
 
-    private InterconnectAttachmentState() {
-        this.adminEnabled = Codegen.empty();
-        this.bandwidth = Codegen.empty();
-        this.candidateSubnets = Codegen.empty();
-        this.cloudRouterIpAddress = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.customerRouterIpAddress = Codegen.empty();
-        this.description = Codegen.empty();
-        this.edgeAvailabilityDomain = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.googleReferenceId = Codegen.empty();
-        this.interconnect = Codegen.empty();
-        this.ipsecInternalAddresses = Codegen.empty();
-        this.mtu = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pairingKey = Codegen.empty();
-        this.partnerAsn = Codegen.empty();
-        this.privateInterconnectInfos = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.router = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.state = Codegen.empty();
-        this.type = Codegen.empty();
-        this.vlanTag8021q = Codegen.empty();
+    private InterconnectAttachmentState(InterconnectAttachmentState $) {
+        this.adminEnabled = $.adminEnabled;
+        this.bandwidth = $.bandwidth;
+        this.candidateSubnets = $.candidateSubnets;
+        this.cloudRouterIpAddress = $.cloudRouterIpAddress;
+        this.creationTimestamp = $.creationTimestamp;
+        this.customerRouterIpAddress = $.customerRouterIpAddress;
+        this.description = $.description;
+        this.edgeAvailabilityDomain = $.edgeAvailabilityDomain;
+        this.encryption = $.encryption;
+        this.googleReferenceId = $.googleReferenceId;
+        this.interconnect = $.interconnect;
+        this.ipsecInternalAddresses = $.ipsecInternalAddresses;
+        this.mtu = $.mtu;
+        this.name = $.name;
+        this.pairingKey = $.pairingKey;
+        this.partnerAsn = $.partnerAsn;
+        this.privateInterconnectInfos = $.privateInterconnectInfos;
+        this.project = $.project;
+        this.region = $.region;
+        this.router = $.router;
+        this.selfLink = $.selfLink;
+        this.state = $.state;
+        this.type = $.type;
+        this.vlanTag8021q = $.vlanTag8021q;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> adminEnabled;
-        private @Nullable Output<String> bandwidth;
-        private @Nullable Output<List<String>> candidateSubnets;
-        private @Nullable Output<String> cloudRouterIpAddress;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> customerRouterIpAddress;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> edgeAvailabilityDomain;
-        private @Nullable Output<String> encryption;
-        private @Nullable Output<String> googleReferenceId;
-        private @Nullable Output<String> interconnect;
-        private @Nullable Output<List<String>> ipsecInternalAddresses;
-        private @Nullable Output<String> mtu;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> pairingKey;
-        private @Nullable Output<String> partnerAsn;
-        private @Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> privateInterconnectInfos;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> router;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> type;
-        private @Nullable Output<Integer> vlanTag8021q;
+        private InterconnectAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectAttachmentState();
         }
 
         public Builder(InterconnectAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminEnabled = defaults.adminEnabled;
-    	      this.bandwidth = defaults.bandwidth;
-    	      this.candidateSubnets = defaults.candidateSubnets;
-    	      this.cloudRouterIpAddress = defaults.cloudRouterIpAddress;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.customerRouterIpAddress = defaults.customerRouterIpAddress;
-    	      this.description = defaults.description;
-    	      this.edgeAvailabilityDomain = defaults.edgeAvailabilityDomain;
-    	      this.encryption = defaults.encryption;
-    	      this.googleReferenceId = defaults.googleReferenceId;
-    	      this.interconnect = defaults.interconnect;
-    	      this.ipsecInternalAddresses = defaults.ipsecInternalAddresses;
-    	      this.mtu = defaults.mtu;
-    	      this.name = defaults.name;
-    	      this.pairingKey = defaults.pairingKey;
-    	      this.partnerAsn = defaults.partnerAsn;
-    	      this.privateInterconnectInfos = defaults.privateInterconnectInfos;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.router = defaults.router;
-    	      this.selfLink = defaults.selfLink;
-    	      this.state = defaults.state;
-    	      this.type = defaults.type;
-    	      this.vlanTag8021q = defaults.vlanTag8021q;
+            $ = new InterconnectAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder adminEnabled(@Nullable Output<Boolean> adminEnabled) {
-            this.adminEnabled = adminEnabled;
+            $.adminEnabled = adminEnabled;
             return this;
         }
-        public Builder adminEnabled(@Nullable Boolean adminEnabled) {
-            this.adminEnabled = Codegen.ofNullable(adminEnabled);
-            return this;
+
+        public Builder adminEnabled(Boolean adminEnabled) {
+            return adminEnabled(Output.of(adminEnabled));
         }
+
         public Builder bandwidth(@Nullable Output<String> bandwidth) {
-            this.bandwidth = bandwidth;
+            $.bandwidth = bandwidth;
             return this;
         }
-        public Builder bandwidth(@Nullable String bandwidth) {
-            this.bandwidth = Codegen.ofNullable(bandwidth);
-            return this;
+
+        public Builder bandwidth(String bandwidth) {
+            return bandwidth(Output.of(bandwidth));
         }
+
         public Builder candidateSubnets(@Nullable Output<List<String>> candidateSubnets) {
-            this.candidateSubnets = candidateSubnets;
+            $.candidateSubnets = candidateSubnets;
             return this;
         }
-        public Builder candidateSubnets(@Nullable List<String> candidateSubnets) {
-            this.candidateSubnets = Codegen.ofNullable(candidateSubnets);
-            return this;
+
+        public Builder candidateSubnets(List<String> candidateSubnets) {
+            return candidateSubnets(Output.of(candidateSubnets));
         }
+
         public Builder candidateSubnets(String... candidateSubnets) {
             return candidateSubnets(List.of(candidateSubnets));
         }
+
         public Builder cloudRouterIpAddress(@Nullable Output<String> cloudRouterIpAddress) {
-            this.cloudRouterIpAddress = cloudRouterIpAddress;
+            $.cloudRouterIpAddress = cloudRouterIpAddress;
             return this;
         }
-        public Builder cloudRouterIpAddress(@Nullable String cloudRouterIpAddress) {
-            this.cloudRouterIpAddress = Codegen.ofNullable(cloudRouterIpAddress);
-            return this;
+
+        public Builder cloudRouterIpAddress(String cloudRouterIpAddress) {
+            return cloudRouterIpAddress(Output.of(cloudRouterIpAddress));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder customerRouterIpAddress(@Nullable Output<String> customerRouterIpAddress) {
-            this.customerRouterIpAddress = customerRouterIpAddress;
+            $.customerRouterIpAddress = customerRouterIpAddress;
             return this;
         }
-        public Builder customerRouterIpAddress(@Nullable String customerRouterIpAddress) {
-            this.customerRouterIpAddress = Codegen.ofNullable(customerRouterIpAddress);
-            return this;
+
+        public Builder customerRouterIpAddress(String customerRouterIpAddress) {
+            return customerRouterIpAddress(Output.of(customerRouterIpAddress));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder edgeAvailabilityDomain(@Nullable Output<String> edgeAvailabilityDomain) {
-            this.edgeAvailabilityDomain = edgeAvailabilityDomain;
+            $.edgeAvailabilityDomain = edgeAvailabilityDomain;
             return this;
         }
-        public Builder edgeAvailabilityDomain(@Nullable String edgeAvailabilityDomain) {
-            this.edgeAvailabilityDomain = Codegen.ofNullable(edgeAvailabilityDomain);
-            return this;
+
+        public Builder edgeAvailabilityDomain(String edgeAvailabilityDomain) {
+            return edgeAvailabilityDomain(Output.of(edgeAvailabilityDomain));
         }
+
         public Builder encryption(@Nullable Output<String> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable String encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(String encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder googleReferenceId(@Nullable Output<String> googleReferenceId) {
-            this.googleReferenceId = googleReferenceId;
+            $.googleReferenceId = googleReferenceId;
             return this;
         }
-        public Builder googleReferenceId(@Nullable String googleReferenceId) {
-            this.googleReferenceId = Codegen.ofNullable(googleReferenceId);
-            return this;
+
+        public Builder googleReferenceId(String googleReferenceId) {
+            return googleReferenceId(Output.of(googleReferenceId));
         }
+
         public Builder interconnect(@Nullable Output<String> interconnect) {
-            this.interconnect = interconnect;
+            $.interconnect = interconnect;
             return this;
         }
-        public Builder interconnect(@Nullable String interconnect) {
-            this.interconnect = Codegen.ofNullable(interconnect);
-            return this;
+
+        public Builder interconnect(String interconnect) {
+            return interconnect(Output.of(interconnect));
         }
+
         public Builder ipsecInternalAddresses(@Nullable Output<List<String>> ipsecInternalAddresses) {
-            this.ipsecInternalAddresses = ipsecInternalAddresses;
+            $.ipsecInternalAddresses = ipsecInternalAddresses;
             return this;
         }
-        public Builder ipsecInternalAddresses(@Nullable List<String> ipsecInternalAddresses) {
-            this.ipsecInternalAddresses = Codegen.ofNullable(ipsecInternalAddresses);
-            return this;
+
+        public Builder ipsecInternalAddresses(List<String> ipsecInternalAddresses) {
+            return ipsecInternalAddresses(Output.of(ipsecInternalAddresses));
         }
+
         public Builder ipsecInternalAddresses(String... ipsecInternalAddresses) {
             return ipsecInternalAddresses(List.of(ipsecInternalAddresses));
         }
+
         public Builder mtu(@Nullable Output<String> mtu) {
-            this.mtu = mtu;
+            $.mtu = mtu;
             return this;
         }
-        public Builder mtu(@Nullable String mtu) {
-            this.mtu = Codegen.ofNullable(mtu);
-            return this;
+
+        public Builder mtu(String mtu) {
+            return mtu(Output.of(mtu));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pairingKey(@Nullable Output<String> pairingKey) {
-            this.pairingKey = pairingKey;
+            $.pairingKey = pairingKey;
             return this;
         }
-        public Builder pairingKey(@Nullable String pairingKey) {
-            this.pairingKey = Codegen.ofNullable(pairingKey);
-            return this;
+
+        public Builder pairingKey(String pairingKey) {
+            return pairingKey(Output.of(pairingKey));
         }
+
         public Builder partnerAsn(@Nullable Output<String> partnerAsn) {
-            this.partnerAsn = partnerAsn;
+            $.partnerAsn = partnerAsn;
             return this;
         }
-        public Builder partnerAsn(@Nullable String partnerAsn) {
-            this.partnerAsn = Codegen.ofNullable(partnerAsn);
-            return this;
+
+        public Builder partnerAsn(String partnerAsn) {
+            return partnerAsn(Output.of(partnerAsn));
         }
+
         public Builder privateInterconnectInfos(@Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> privateInterconnectInfos) {
-            this.privateInterconnectInfos = privateInterconnectInfos;
+            $.privateInterconnectInfos = privateInterconnectInfos;
             return this;
         }
-        public Builder privateInterconnectInfos(@Nullable List<InterconnectAttachmentPrivateInterconnectInfoGetArgs> privateInterconnectInfos) {
-            this.privateInterconnectInfos = Codegen.ofNullable(privateInterconnectInfos);
-            return this;
+
+        public Builder privateInterconnectInfos(List<InterconnectAttachmentPrivateInterconnectInfoGetArgs> privateInterconnectInfos) {
+            return privateInterconnectInfos(Output.of(privateInterconnectInfos));
         }
+
         public Builder privateInterconnectInfos(InterconnectAttachmentPrivateInterconnectInfoGetArgs... privateInterconnectInfos) {
             return privateInterconnectInfos(List.of(privateInterconnectInfos));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder router(@Nullable Output<String> router) {
-            this.router = router;
+            $.router = router;
             return this;
         }
-        public Builder router(@Nullable String router) {
-            this.router = Codegen.ofNullable(router);
-            return this;
+
+        public Builder router(String router) {
+            return router(Output.of(router));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder vlanTag8021q(@Nullable Output<Integer> vlanTag8021q) {
-            this.vlanTag8021q = vlanTag8021q;
+            $.vlanTag8021q = vlanTag8021q;
             return this;
         }
-        public Builder vlanTag8021q(@Nullable Integer vlanTag8021q) {
-            this.vlanTag8021q = Codegen.ofNullable(vlanTag8021q);
-            return this;
-        }        public InterconnectAttachmentState build() {
-            return new InterconnectAttachmentState(adminEnabled, bandwidth, candidateSubnets, cloudRouterIpAddress, creationTimestamp, customerRouterIpAddress, description, edgeAvailabilityDomain, encryption, googleReferenceId, interconnect, ipsecInternalAddresses, mtu, name, pairingKey, partnerAsn, privateInterconnectInfos, project, region, router, selfLink, state, type, vlanTag8021q);
+
+        public Builder vlanTag8021q(Integer vlanTag8021q) {
+            return vlanTag8021q(Output.of(vlanTag8021q));
+        }
+
+        public InterconnectAttachmentState build() {
+            return $;
         }
     }
+
 }

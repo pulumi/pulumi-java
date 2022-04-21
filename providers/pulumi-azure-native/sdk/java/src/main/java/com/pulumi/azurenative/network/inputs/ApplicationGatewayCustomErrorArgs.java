@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.ApplicationGatewayCustomErrorStatusC
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ApplicationGatewayCustomErrorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="customErrorPageUrl")
-      private final @Nullable Output<String> customErrorPageUrl;
+    private @Nullable Output<String> customErrorPageUrl;
 
-    public Output<String> customErrorPageUrl() {
-        return this.customErrorPageUrl == null ? Codegen.empty() : this.customErrorPageUrl;
+    public Optional<Output<String>> customErrorPageUrl() {
+        return Optional.ofNullable(this.customErrorPageUrl);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class ApplicationGatewayCustomErrorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="statusCode")
-      private final @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
+    private @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
 
-    public Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode() {
-        return this.statusCode == null ? Codegen.empty() : this.statusCode;
+    public Optional<Output<Either<String,ApplicationGatewayCustomErrorStatusCode>>> statusCode() {
+        return Optional.ofNullable(this.statusCode);
     }
 
-    public ApplicationGatewayCustomErrorArgs(
-        @Nullable Output<String> customErrorPageUrl,
-        @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode) {
-        this.customErrorPageUrl = customErrorPageUrl;
-        this.statusCode = statusCode;
-    }
+    private ApplicationGatewayCustomErrorArgs() {}
 
-    private ApplicationGatewayCustomErrorArgs() {
-        this.customErrorPageUrl = Codegen.empty();
-        this.statusCode = Codegen.empty();
+    private ApplicationGatewayCustomErrorArgs(ApplicationGatewayCustomErrorArgs $) {
+        this.customErrorPageUrl = $.customErrorPageUrl;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayCustomErrorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customErrorPageUrl;
-        private @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
+        private ApplicationGatewayCustomErrorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayCustomErrorArgs();
         }
 
         public Builder(ApplicationGatewayCustomErrorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customErrorPageUrl = defaults.customErrorPageUrl;
-    	      this.statusCode = defaults.statusCode;
+            $ = new ApplicationGatewayCustomErrorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customErrorPageUrl(@Nullable Output<String> customErrorPageUrl) {
-            this.customErrorPageUrl = customErrorPageUrl;
+            $.customErrorPageUrl = customErrorPageUrl;
             return this;
         }
-        public Builder customErrorPageUrl(@Nullable String customErrorPageUrl) {
-            this.customErrorPageUrl = Codegen.ofNullable(customErrorPageUrl);
-            return this;
+
+        public Builder customErrorPageUrl(String customErrorPageUrl) {
+            return customErrorPageUrl(Output.of(customErrorPageUrl));
         }
+
         public Builder statusCode(@Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode) {
-            this.statusCode = statusCode;
+            $.statusCode = statusCode;
             return this;
         }
-        public Builder statusCode(@Nullable Either<String,ApplicationGatewayCustomErrorStatusCode> statusCode) {
-            this.statusCode = Codegen.ofNullable(statusCode);
-            return this;
-        }        public ApplicationGatewayCustomErrorArgs build() {
-            return new ApplicationGatewayCustomErrorArgs(customErrorPageUrl, statusCode);
+
+        public Builder statusCode(Either<String,ApplicationGatewayCustomErrorStatusCode> statusCode) {
+            return statusCode(Output.of(statusCode));
+        }
+
+        public ApplicationGatewayCustomErrorArgs build() {
+            return $;
         }
     }
+
 }

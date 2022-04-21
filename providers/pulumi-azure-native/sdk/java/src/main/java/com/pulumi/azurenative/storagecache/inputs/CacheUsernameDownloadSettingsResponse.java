@@ -26,10 +26,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="autoDownloadCertificate")
-      private final @Nullable Boolean autoDownloadCertificate;
+    private @Nullable Boolean autoDownloadCertificate;
 
     public Optional<Boolean> autoDownloadCertificate() {
-        return this.autoDownloadCertificate == null ? Optional.empty() : Optional.ofNullable(this.autoDownloadCertificate);
+        return Optional.ofNullable(this.autoDownloadCertificate);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="caCertificateURI")
-      private final @Nullable String caCertificateURI;
+    private @Nullable String caCertificateURI;
 
     public Optional<String> caCertificateURI() {
-        return this.caCertificateURI == null ? Optional.empty() : Optional.ofNullable(this.caCertificateURI);
+        return Optional.ofNullable(this.caCertificateURI);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="credentials")
-      private final @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials;
+    private @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials;
 
     public Optional<CacheUsernameDownloadSettingsResponseCredentials> credentials() {
-        return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="encryptLdapConnection")
-      private final @Nullable Boolean encryptLdapConnection;
+    private @Nullable Boolean encryptLdapConnection;
 
     public Optional<Boolean> encryptLdapConnection() {
-        return this.encryptLdapConnection == null ? Optional.empty() : Optional.ofNullable(this.encryptLdapConnection);
+        return Optional.ofNullable(this.encryptLdapConnection);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="extendedGroups")
-      private final @Nullable Boolean extendedGroups;
+    private @Nullable Boolean extendedGroups;
 
     public Optional<Boolean> extendedGroups() {
-        return this.extendedGroups == null ? Optional.empty() : Optional.ofNullable(this.extendedGroups);
+        return Optional.ofNullable(this.extendedGroups);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="groupFileURI")
-      private final @Nullable String groupFileURI;
+    private @Nullable String groupFileURI;
 
     public Optional<String> groupFileURI() {
-        return this.groupFileURI == null ? Optional.empty() : Optional.ofNullable(this.groupFileURI);
+        return Optional.ofNullable(this.groupFileURI);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="ldapBaseDN")
-      private final @Nullable String ldapBaseDN;
+    private @Nullable String ldapBaseDN;
 
     public Optional<String> ldapBaseDN() {
-        return this.ldapBaseDN == null ? Optional.empty() : Optional.ofNullable(this.ldapBaseDN);
+        return Optional.ofNullable(this.ldapBaseDN);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="ldapServer")
-      private final @Nullable String ldapServer;
+    private @Nullable String ldapServer;
 
     public Optional<String> ldapServer() {
-        return this.ldapServer == null ? Optional.empty() : Optional.ofNullable(this.ldapServer);
+        return Optional.ofNullable(this.ldapServer);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="requireValidCertificate")
-      private final @Nullable Boolean requireValidCertificate;
+    private @Nullable Boolean requireValidCertificate;
 
     public Optional<Boolean> requireValidCertificate() {
-        return this.requireValidCertificate == null ? Optional.empty() : Optional.ofNullable(this.requireValidCertificate);
+        return Optional.ofNullable(this.requireValidCertificate);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="userFileURI")
-      private final @Nullable String userFileURI;
+    private @Nullable String userFileURI;
 
     public Optional<String> userFileURI() {
-        return this.userFileURI == null ? Optional.empty() : Optional.ofNullable(this.userFileURI);
+        return Optional.ofNullable(this.userFileURI);
     }
 
     /**
@@ -136,7 +136,7 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="usernameDownloaded", required=true)
-      private final String usernameDownloaded;
+    private String usernameDownloaded;
 
     public String usernameDownloaded() {
         return this.usernameDownloaded;
@@ -147,145 +147,112 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="usernameSource")
-      private final @Nullable String usernameSource;
+    private @Nullable String usernameSource;
 
     public Optional<String> usernameSource() {
-        return this.usernameSource == null ? Optional.empty() : Optional.ofNullable(this.usernameSource);
+        return Optional.ofNullable(this.usernameSource);
     }
 
-    public CacheUsernameDownloadSettingsResponse(
-        @Nullable Boolean autoDownloadCertificate,
-        @Nullable String caCertificateURI,
-        @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials,
-        @Nullable Boolean encryptLdapConnection,
-        @Nullable Boolean extendedGroups,
-        @Nullable String groupFileURI,
-        @Nullable String ldapBaseDN,
-        @Nullable String ldapServer,
-        @Nullable Boolean requireValidCertificate,
-        @Nullable String userFileURI,
-        String usernameDownloaded,
-        @Nullable String usernameSource) {
-        this.autoDownloadCertificate = autoDownloadCertificate;
-        this.caCertificateURI = caCertificateURI;
-        this.credentials = credentials;
-        this.encryptLdapConnection = encryptLdapConnection;
-        this.extendedGroups = extendedGroups;
-        this.groupFileURI = groupFileURI;
-        this.ldapBaseDN = ldapBaseDN;
-        this.ldapServer = ldapServer;
-        this.requireValidCertificate = requireValidCertificate;
-        this.userFileURI = userFileURI;
-        this.usernameDownloaded = Objects.requireNonNull(usernameDownloaded, "expected parameter 'usernameDownloaded' to be non-null");
-        this.usernameSource = Codegen.stringProp("usernameSource").arg(usernameSource).def("None").getNullable();
-    }
+    private CacheUsernameDownloadSettingsResponse() {}
 
-    private CacheUsernameDownloadSettingsResponse() {
-        this.autoDownloadCertificate = null;
-        this.caCertificateURI = null;
-        this.credentials = null;
-        this.encryptLdapConnection = null;
-        this.extendedGroups = null;
-        this.groupFileURI = null;
-        this.ldapBaseDN = null;
-        this.ldapServer = null;
-        this.requireValidCertificate = null;
-        this.userFileURI = null;
-        this.usernameDownloaded = null;
-        this.usernameSource = null;
+    private CacheUsernameDownloadSettingsResponse(CacheUsernameDownloadSettingsResponse $) {
+        this.autoDownloadCertificate = $.autoDownloadCertificate;
+        this.caCertificateURI = $.caCertificateURI;
+        this.credentials = $.credentials;
+        this.encryptLdapConnection = $.encryptLdapConnection;
+        this.extendedGroups = $.extendedGroups;
+        this.groupFileURI = $.groupFileURI;
+        this.ldapBaseDN = $.ldapBaseDN;
+        this.ldapServer = $.ldapServer;
+        this.requireValidCertificate = $.requireValidCertificate;
+        this.userFileURI = $.userFileURI;
+        this.usernameDownloaded = $.usernameDownloaded;
+        this.usernameSource = $.usernameSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheUsernameDownloadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean autoDownloadCertificate;
-        private @Nullable String caCertificateURI;
-        private @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials;
-        private @Nullable Boolean encryptLdapConnection;
-        private @Nullable Boolean extendedGroups;
-        private @Nullable String groupFileURI;
-        private @Nullable String ldapBaseDN;
-        private @Nullable String ldapServer;
-        private @Nullable Boolean requireValidCertificate;
-        private @Nullable String userFileURI;
-        private String usernameDownloaded;
-        private @Nullable String usernameSource;
+        private CacheUsernameDownloadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheUsernameDownloadSettingsResponse();
         }
 
         public Builder(CacheUsernameDownloadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDownloadCertificate = defaults.autoDownloadCertificate;
-    	      this.caCertificateURI = defaults.caCertificateURI;
-    	      this.credentials = defaults.credentials;
-    	      this.encryptLdapConnection = defaults.encryptLdapConnection;
-    	      this.extendedGroups = defaults.extendedGroups;
-    	      this.groupFileURI = defaults.groupFileURI;
-    	      this.ldapBaseDN = defaults.ldapBaseDN;
-    	      this.ldapServer = defaults.ldapServer;
-    	      this.requireValidCertificate = defaults.requireValidCertificate;
-    	      this.userFileURI = defaults.userFileURI;
-    	      this.usernameDownloaded = defaults.usernameDownloaded;
-    	      this.usernameSource = defaults.usernameSource;
+            $ = new CacheUsernameDownloadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDownloadCertificate(@Nullable Boolean autoDownloadCertificate) {
-            this.autoDownloadCertificate = autoDownloadCertificate;
+            $.autoDownloadCertificate = autoDownloadCertificate;
             return this;
         }
+
         public Builder caCertificateURI(@Nullable String caCertificateURI) {
-            this.caCertificateURI = caCertificateURI;
+            $.caCertificateURI = caCertificateURI;
             return this;
         }
+
         public Builder credentials(@Nullable CacheUsernameDownloadSettingsResponseCredentials credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
+
         public Builder encryptLdapConnection(@Nullable Boolean encryptLdapConnection) {
-            this.encryptLdapConnection = encryptLdapConnection;
+            $.encryptLdapConnection = encryptLdapConnection;
             return this;
         }
+
         public Builder extendedGroups(@Nullable Boolean extendedGroups) {
-            this.extendedGroups = extendedGroups;
+            $.extendedGroups = extendedGroups;
             return this;
         }
+
         public Builder groupFileURI(@Nullable String groupFileURI) {
-            this.groupFileURI = groupFileURI;
+            $.groupFileURI = groupFileURI;
             return this;
         }
+
         public Builder ldapBaseDN(@Nullable String ldapBaseDN) {
-            this.ldapBaseDN = ldapBaseDN;
+            $.ldapBaseDN = ldapBaseDN;
             return this;
         }
+
         public Builder ldapServer(@Nullable String ldapServer) {
-            this.ldapServer = ldapServer;
+            $.ldapServer = ldapServer;
             return this;
         }
+
         public Builder requireValidCertificate(@Nullable Boolean requireValidCertificate) {
-            this.requireValidCertificate = requireValidCertificate;
+            $.requireValidCertificate = requireValidCertificate;
             return this;
         }
+
         public Builder userFileURI(@Nullable String userFileURI) {
-            this.userFileURI = userFileURI;
+            $.userFileURI = userFileURI;
             return this;
         }
+
         public Builder usernameDownloaded(String usernameDownloaded) {
-            this.usernameDownloaded = Objects.requireNonNull(usernameDownloaded);
+            $.usernameDownloaded = usernameDownloaded;
             return this;
         }
+
         public Builder usernameSource(@Nullable String usernameSource) {
-            this.usernameSource = usernameSource;
+            $.usernameSource = usernameSource;
             return this;
-        }        public CacheUsernameDownloadSettingsResponse build() {
-            return new CacheUsernameDownloadSettingsResponse(autoDownloadCertificate, caCertificateURI, credentials, encryptLdapConnection, extendedGroups, groupFileURI, ldapBaseDN, ldapServer, requireValidCertificate, userFileURI, usernameDownloaded, usernameSource);
+        }
+
+        public CacheUsernameDownloadSettingsResponse build() {
+            $.usernameDownloaded = Objects.requireNonNull($.usernameDownloaded, "expected parameter 'usernameDownloaded' to be non-null");
+            $.usernameSource = Codegen.stringProp("usernameSource").arg($.usernameSource).def("None").getNullable();
+            return $;
         }
     }
+
 }

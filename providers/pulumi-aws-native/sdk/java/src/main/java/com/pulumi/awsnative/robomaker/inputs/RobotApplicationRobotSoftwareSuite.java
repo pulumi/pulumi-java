@@ -24,7 +24,7 @@ public final class RobotApplicationRobotSoftwareSuite extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final RobotApplicationRobotSoftwareSuiteName name;
+    private RobotApplicationRobotSoftwareSuiteName name;
 
     public RobotApplicationRobotSoftwareSuiteName name() {
         return this.name;
@@ -35,55 +35,51 @@ public final class RobotApplicationRobotSoftwareSuite extends com.pulumi.resourc
      * 
      */
     @Import(name="version")
-      private final @Nullable RobotApplicationRobotSoftwareSuiteVersion version;
+    private @Nullable RobotApplicationRobotSoftwareSuiteVersion version;
 
     public Optional<RobotApplicationRobotSoftwareSuiteVersion> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public RobotApplicationRobotSoftwareSuite(
-        RobotApplicationRobotSoftwareSuiteName name,
-        @Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = version;
-    }
+    private RobotApplicationRobotSoftwareSuite() {}
 
-    private RobotApplicationRobotSoftwareSuite() {
-        this.name = null;
-        this.version = null;
+    private RobotApplicationRobotSoftwareSuite(RobotApplicationRobotSoftwareSuite $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RobotApplicationRobotSoftwareSuite defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RobotApplicationRobotSoftwareSuiteName name;
-        private @Nullable RobotApplicationRobotSoftwareSuiteVersion version;
+        private RobotApplicationRobotSoftwareSuite $;
 
         public Builder() {
-    	      // Empty
+            $ = new RobotApplicationRobotSoftwareSuite();
         }
 
         public Builder(RobotApplicationRobotSoftwareSuite defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new RobotApplicationRobotSoftwareSuite(Objects.requireNonNull(defaults));
         }
 
         public Builder name(RobotApplicationRobotSoftwareSuiteName name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder version(@Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public RobotApplicationRobotSoftwareSuite build() {
-            return new RobotApplicationRobotSoftwareSuite(name, version);
+        }
+
+        public RobotApplicationRobotSoftwareSuite build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

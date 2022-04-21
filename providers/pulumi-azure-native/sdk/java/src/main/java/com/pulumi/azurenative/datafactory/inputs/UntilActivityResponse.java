@@ -66,7 +66,7 @@ public final class UntilActivityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="activities", required=true)
-      private final List<Object> activities;
+    private List<Object> activities;
 
     public List<Object> activities() {
         return this.activities;
@@ -77,10 +77,10 @@ public final class UntilActivityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class UntilActivityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class UntilActivityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expression", required=true)
-      private final ExpressionResponse expression;
+    private ExpressionResponse expression;
 
     public ExpressionResponse expression() {
         return this.expression;
@@ -110,7 +110,7 @@ public final class UntilActivityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -121,10 +121,10 @@ public final class UntilActivityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Object timeout;
+    private @Nullable Object timeout;
 
     public Optional<Object> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -133,7 +133,7 @@ public final class UntilActivityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -144,118 +144,102 @@ public final class UntilActivityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public UntilActivityResponse(
-        List<Object> activities,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        ExpressionResponse expression,
-        String name,
-        @Nullable Object timeout,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.activities = Objects.requireNonNull(activities, "expected parameter 'activities' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.timeout = timeout;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private UntilActivityResponse() {}
 
-    private UntilActivityResponse() {
-        this.activities = List.of();
-        this.dependsOn = List.of();
-        this.description = null;
-        this.expression = null;
-        this.name = null;
-        this.timeout = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private UntilActivityResponse(UntilActivityResponse $) {
+        this.activities = $.activities;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.expression = $.expression;
+        this.name = $.name;
+        this.timeout = $.timeout;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UntilActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Object> activities;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private ExpressionResponse expression;
-        private String name;
-        private @Nullable Object timeout;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private UntilActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UntilActivityResponse();
         }
 
         public Builder(UntilActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activities = defaults.activities;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.expression = defaults.expression;
-    	      this.name = defaults.name;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new UntilActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activities(List<Object> activities) {
-            this.activities = Objects.requireNonNull(activities);
+            $.activities = activities;
             return this;
         }
+
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder expression(ExpressionResponse expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder timeout(@Nullable Object timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public UntilActivityResponse build() {
-            return new UntilActivityResponse(activities, dependsOn, description, expression, name, timeout, type, userProperties);
+        }
+
+        public UntilActivityResponse build() {
+            $.activities = Objects.requireNonNull($.activities, "expected parameter 'activities' to be non-null");
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

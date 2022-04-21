@@ -9,10 +9,10 @@ import com.pulumi.azurenative.insights.inputs.ScaleRuleArgs;
 import com.pulumi.azurenative.insights.inputs.TimeWindowArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="capacity", required=true)
-      private final Output<ScaleCapacityArgs> capacity;
+    private Output<ScaleCapacityArgs> capacity;
 
     public Output<ScaleCapacityArgs> capacity() {
         return this.capacity;
@@ -40,10 +40,10 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fixedDate")
-      private final @Nullable Output<TimeWindowArgs> fixedDate;
+    private @Nullable Output<TimeWindowArgs> fixedDate;
 
-    public Output<TimeWindowArgs> fixedDate() {
-        return this.fixedDate == null ? Codegen.empty() : this.fixedDate;
+    public Optional<Output<TimeWindowArgs>> fixedDate() {
+        return Optional.ofNullable(this.fixedDate);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -62,10 +62,10 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="recurrence")
-      private final @Nullable Output<RecurrenceArgs> recurrence;
+    private @Nullable Output<RecurrenceArgs> recurrence;
 
-    public Output<RecurrenceArgs> recurrence() {
-        return this.recurrence == null ? Codegen.empty() : this.recurrence;
+    public Optional<Output<RecurrenceArgs>> recurrence() {
+        return Optional.ofNullable(this.recurrence);
     }
 
     /**
@@ -73,105 +73,95 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="rules", required=true)
-      private final Output<List<ScaleRuleArgs>> rules;
+    private Output<List<ScaleRuleArgs>> rules;
 
     public Output<List<ScaleRuleArgs>> rules() {
         return this.rules;
     }
 
-    public AutoscaleProfileArgs(
-        Output<ScaleCapacityArgs> capacity,
-        @Nullable Output<TimeWindowArgs> fixedDate,
-        Output<String> name,
-        @Nullable Output<RecurrenceArgs> recurrence,
-        Output<List<ScaleRuleArgs>> rules) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-        this.fixedDate = fixedDate;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.recurrence = recurrence;
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private AutoscaleProfileArgs() {}
 
-    private AutoscaleProfileArgs() {
-        this.capacity = Codegen.empty();
-        this.fixedDate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.recurrence = Codegen.empty();
-        this.rules = Codegen.empty();
+    private AutoscaleProfileArgs(AutoscaleProfileArgs $) {
+        this.capacity = $.capacity;
+        this.fixedDate = $.fixedDate;
+        this.name = $.name;
+        this.recurrence = $.recurrence;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ScaleCapacityArgs> capacity;
-        private @Nullable Output<TimeWindowArgs> fixedDate;
-        private Output<String> name;
-        private @Nullable Output<RecurrenceArgs> recurrence;
-        private Output<List<ScaleRuleArgs>> rules;
+        private AutoscaleProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleProfileArgs();
         }
 
         public Builder(AutoscaleProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.fixedDate = defaults.fixedDate;
-    	      this.name = defaults.name;
-    	      this.recurrence = defaults.recurrence;
-    	      this.rules = defaults.rules;
+            $ = new AutoscaleProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(Output<ScaleCapacityArgs> capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
         }
+
         public Builder capacity(ScaleCapacityArgs capacity) {
-            this.capacity = Output.of(Objects.requireNonNull(capacity));
-            return this;
+            return capacity(Output.of(capacity));
         }
+
         public Builder fixedDate(@Nullable Output<TimeWindowArgs> fixedDate) {
-            this.fixedDate = fixedDate;
+            $.fixedDate = fixedDate;
             return this;
         }
-        public Builder fixedDate(@Nullable TimeWindowArgs fixedDate) {
-            this.fixedDate = Codegen.ofNullable(fixedDate);
-            return this;
+
+        public Builder fixedDate(TimeWindowArgs fixedDate) {
+            return fixedDate(Output.of(fixedDate));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder recurrence(@Nullable Output<RecurrenceArgs> recurrence) {
-            this.recurrence = recurrence;
+            $.recurrence = recurrence;
             return this;
         }
-        public Builder recurrence(@Nullable RecurrenceArgs recurrence) {
-            this.recurrence = Codegen.ofNullable(recurrence);
-            return this;
+
+        public Builder recurrence(RecurrenceArgs recurrence) {
+            return recurrence(Output.of(recurrence));
         }
+
         public Builder rules(Output<List<ScaleRuleArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<ScaleRuleArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(ScaleRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public AutoscaleProfileArgs build() {
-            return new AutoscaleProfileArgs(capacity, fixedDate, name, recurrence, rules);
+        }
+
+        public AutoscaleProfileArgs build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

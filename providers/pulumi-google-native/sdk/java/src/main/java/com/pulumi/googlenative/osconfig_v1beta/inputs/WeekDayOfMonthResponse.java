@@ -22,7 +22,7 @@ public final class WeekDayOfMonthResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dayOfWeek", required=true)
-      private final String dayOfWeek;
+    private String dayOfWeek;
 
     public String dayOfWeek() {
         return this.dayOfWeek;
@@ -33,7 +33,7 @@ public final class WeekDayOfMonthResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dayOffset", required=true)
-      private final Integer dayOffset;
+    private Integer dayOffset;
 
     public Integer dayOffset() {
         return this.dayOffset;
@@ -44,64 +44,59 @@ public final class WeekDayOfMonthResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="weekOrdinal", required=true)
-      private final Integer weekOrdinal;
+    private Integer weekOrdinal;
 
     public Integer weekOrdinal() {
         return this.weekOrdinal;
     }
 
-    public WeekDayOfMonthResponse(
-        String dayOfWeek,
-        Integer dayOffset,
-        Integer weekOrdinal) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
-        this.dayOffset = Objects.requireNonNull(dayOffset, "expected parameter 'dayOffset' to be non-null");
-        this.weekOrdinal = Objects.requireNonNull(weekOrdinal, "expected parameter 'weekOrdinal' to be non-null");
-    }
+    private WeekDayOfMonthResponse() {}
 
-    private WeekDayOfMonthResponse() {
-        this.dayOfWeek = null;
-        this.dayOffset = null;
-        this.weekOrdinal = null;
+    private WeekDayOfMonthResponse(WeekDayOfMonthResponse $) {
+        this.dayOfWeek = $.dayOfWeek;
+        this.dayOffset = $.dayOffset;
+        this.weekOrdinal = $.weekOrdinal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeekDayOfMonthResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dayOfWeek;
-        private Integer dayOffset;
-        private Integer weekOrdinal;
+        private WeekDayOfMonthResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeekDayOfMonthResponse();
         }
 
         public Builder(WeekDayOfMonthResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
-    	      this.dayOffset = defaults.dayOffset;
-    	      this.weekOrdinal = defaults.weekOrdinal;
+            $ = new WeekDayOfMonthResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
+
         public Builder dayOffset(Integer dayOffset) {
-            this.dayOffset = Objects.requireNonNull(dayOffset);
+            $.dayOffset = dayOffset;
             return this;
         }
+
         public Builder weekOrdinal(Integer weekOrdinal) {
-            this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
+            $.weekOrdinal = weekOrdinal;
             return this;
-        }        public WeekDayOfMonthResponse build() {
-            return new WeekDayOfMonthResponse(dayOfWeek, dayOffset, weekOrdinal);
+        }
+
+        public WeekDayOfMonthResponse build() {
+            $.dayOfWeek = Objects.requireNonNull($.dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
+            $.dayOffset = Objects.requireNonNull($.dayOffset, "expected parameter 'dayOffset' to be non-null");
+            $.weekOrdinal = Objects.requireNonNull($.weekOrdinal, "expected parameter 'weekOrdinal' to be non-null");
+            return $;
         }
     }
+
 }

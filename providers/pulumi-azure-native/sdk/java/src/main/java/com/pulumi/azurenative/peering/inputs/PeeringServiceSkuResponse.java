@@ -23,45 +23,44 @@ public final class PeeringServiceSkuResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public PeeringServiceSkuResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private PeeringServiceSkuResponse() {}
 
-    private PeeringServiceSkuResponse() {
-        this.name = null;
+    private PeeringServiceSkuResponse(PeeringServiceSkuResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringServiceSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private PeeringServiceSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringServiceSkuResponse();
         }
 
         public Builder(PeeringServiceSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new PeeringServiceSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public PeeringServiceSkuResponse build() {
-            return new PeeringServiceSkuResponse(name);
+        }
+
+        public PeeringServiceSkuResponse build() {
+            return $;
         }
     }
+
 }

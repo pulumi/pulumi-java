@@ -23,10 +23,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="podCidr")
-      private final @Nullable String podCidr;
+    private @Nullable String podCidr;
 
     public Optional<String> podCidr() {
-        return this.podCidr == null ? Optional.empty() : Optional.ofNullable(this.podCidr);
+        return Optional.ofNullable(this.podCidr);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceCidr")
-      private final @Nullable String serviceCidr;
+    private @Nullable String serviceCidr;
 
     public Optional<String> serviceCidr() {
-        return this.serviceCidr == null ? Optional.empty() : Optional.ofNullable(this.serviceCidr);
+        return Optional.ofNullable(this.serviceCidr);
     }
 
-    public NetworkProfileResponse(
-        @Nullable String podCidr,
-        @Nullable String serviceCidr) {
-        this.podCidr = podCidr;
-        this.serviceCidr = serviceCidr;
-    }
+    private NetworkProfileResponse() {}
 
-    private NetworkProfileResponse() {
-        this.podCidr = null;
-        this.serviceCidr = null;
+    private NetworkProfileResponse(NetworkProfileResponse $) {
+        this.podCidr = $.podCidr;
+        this.serviceCidr = $.serviceCidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String podCidr;
-        private @Nullable String serviceCidr;
+        private NetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileResponse();
         }
 
         public Builder(NetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.podCidr = defaults.podCidr;
-    	      this.serviceCidr = defaults.serviceCidr;
+            $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder podCidr(@Nullable String podCidr) {
-            this.podCidr = podCidr;
+            $.podCidr = podCidr;
             return this;
         }
+
         public Builder serviceCidr(@Nullable String serviceCidr) {
-            this.serviceCidr = serviceCidr;
+            $.serviceCidr = serviceCidr;
             return this;
-        }        public NetworkProfileResponse build() {
-            return new NetworkProfileResponse(podCidr, serviceCidr);
+        }
+
+        public NetworkProfileResponse build() {
+            return $;
         }
     }
+
 }

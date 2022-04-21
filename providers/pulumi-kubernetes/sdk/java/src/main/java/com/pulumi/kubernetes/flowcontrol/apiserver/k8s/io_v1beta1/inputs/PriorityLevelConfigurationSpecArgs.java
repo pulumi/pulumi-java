@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.LimitedPriorityLevelConfigurationArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PriorityLevelConfigurationSpecArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="limited")
-      private final @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited;
+    private @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited;
 
-    public Output<LimitedPriorityLevelConfigurationArgs> limited() {
-        return this.limited == null ? Codegen.empty() : this.limited;
+    public Optional<Output<LimitedPriorityLevelConfigurationArgs>> limited() {
+        return Optional.ofNullable(this.limited);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class PriorityLevelConfigurationSpecArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public PriorityLevelConfigurationSpecArgs(
-        @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited,
-        Output<String> type) {
-        this.limited = limited;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PriorityLevelConfigurationSpecArgs() {}
 
-    private PriorityLevelConfigurationSpecArgs() {
-        this.limited = Codegen.empty();
-        this.type = Codegen.empty();
+    private PriorityLevelConfigurationSpecArgs(PriorityLevelConfigurationSpecArgs $) {
+        this.limited = $.limited;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PriorityLevelConfigurationSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited;
-        private Output<String> type;
+        private PriorityLevelConfigurationSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PriorityLevelConfigurationSpecArgs();
         }
 
         public Builder(PriorityLevelConfigurationSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limited = defaults.limited;
-    	      this.type = defaults.type;
+            $ = new PriorityLevelConfigurationSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder limited(@Nullable Output<LimitedPriorityLevelConfigurationArgs> limited) {
-            this.limited = limited;
+            $.limited = limited;
             return this;
         }
-        public Builder limited(@Nullable LimitedPriorityLevelConfigurationArgs limited) {
-            this.limited = Codegen.ofNullable(limited);
-            return this;
+
+        public Builder limited(LimitedPriorityLevelConfigurationArgs limited) {
+            return limited(Output.of(limited));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public PriorityLevelConfigurationSpecArgs build() {
-            return new PriorityLevelConfigurationSpecArgs(limited, type);
+            return type(Output.of(type));
+        }
+
+        public PriorityLevelConfigurationSpecArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

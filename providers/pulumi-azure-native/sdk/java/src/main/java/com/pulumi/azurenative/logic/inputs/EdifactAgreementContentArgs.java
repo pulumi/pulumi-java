@@ -6,7 +6,6 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.EdifactOneWayAgreementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,7 +22,7 @@ public final class EdifactAgreementContentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="receiveAgreement", required=true)
-      private final Output<EdifactOneWayAgreementArgs> receiveAgreement;
+    private Output<EdifactOneWayAgreementArgs> receiveAgreement;
 
     public Output<EdifactOneWayAgreementArgs> receiveAgreement() {
         return this.receiveAgreement;
@@ -34,63 +33,60 @@ public final class EdifactAgreementContentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sendAgreement", required=true)
-      private final Output<EdifactOneWayAgreementArgs> sendAgreement;
+    private Output<EdifactOneWayAgreementArgs> sendAgreement;
 
     public Output<EdifactOneWayAgreementArgs> sendAgreement() {
         return this.sendAgreement;
     }
 
-    public EdifactAgreementContentArgs(
-        Output<EdifactOneWayAgreementArgs> receiveAgreement,
-        Output<EdifactOneWayAgreementArgs> sendAgreement) {
-        this.receiveAgreement = Objects.requireNonNull(receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
-        this.sendAgreement = Objects.requireNonNull(sendAgreement, "expected parameter 'sendAgreement' to be non-null");
-    }
+    private EdifactAgreementContentArgs() {}
 
-    private EdifactAgreementContentArgs() {
-        this.receiveAgreement = Codegen.empty();
-        this.sendAgreement = Codegen.empty();
+    private EdifactAgreementContentArgs(EdifactAgreementContentArgs $) {
+        this.receiveAgreement = $.receiveAgreement;
+        this.sendAgreement = $.sendAgreement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactAgreementContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<EdifactOneWayAgreementArgs> receiveAgreement;
-        private Output<EdifactOneWayAgreementArgs> sendAgreement;
+        private EdifactAgreementContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactAgreementContentArgs();
         }
 
         public Builder(EdifactAgreementContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.receiveAgreement = defaults.receiveAgreement;
-    	      this.sendAgreement = defaults.sendAgreement;
+            $ = new EdifactAgreementContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder receiveAgreement(Output<EdifactOneWayAgreementArgs> receiveAgreement) {
-            this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
+            $.receiveAgreement = receiveAgreement;
             return this;
         }
+
         public Builder receiveAgreement(EdifactOneWayAgreementArgs receiveAgreement) {
-            this.receiveAgreement = Output.of(Objects.requireNonNull(receiveAgreement));
-            return this;
+            return receiveAgreement(Output.of(receiveAgreement));
         }
+
         public Builder sendAgreement(Output<EdifactOneWayAgreementArgs> sendAgreement) {
-            this.sendAgreement = Objects.requireNonNull(sendAgreement);
+            $.sendAgreement = sendAgreement;
             return this;
         }
+
         public Builder sendAgreement(EdifactOneWayAgreementArgs sendAgreement) {
-            this.sendAgreement = Output.of(Objects.requireNonNull(sendAgreement));
-            return this;
-        }        public EdifactAgreementContentArgs build() {
-            return new EdifactAgreementContentArgs(receiveAgreement, sendAgreement);
+            return sendAgreement(Output.of(sendAgreement));
+        }
+
+        public EdifactAgreementContentArgs build() {
+            $.receiveAgreement = Objects.requireNonNull($.receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
+            $.sendAgreement = Objects.requireNonNull($.sendAgreement, "expected parameter 'sendAgreement' to be non-null");
+            return $;
         }
     }
+
 }

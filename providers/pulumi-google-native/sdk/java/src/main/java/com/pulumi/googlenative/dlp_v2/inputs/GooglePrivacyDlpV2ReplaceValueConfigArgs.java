@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="newValue")
-      private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue;
+    private @Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> newValue() {
-        return this.newValue == null ? Codegen.empty() : this.newValue;
+    public Optional<Output<GooglePrivacyDlpV2ValueArgs>> newValue() {
+        return Optional.ofNullable(this.newValue);
     }
 
-    public GooglePrivacyDlpV2ReplaceValueConfigArgs(@Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue) {
-        this.newValue = newValue;
-    }
+    private GooglePrivacyDlpV2ReplaceValueConfigArgs() {}
 
-    private GooglePrivacyDlpV2ReplaceValueConfigArgs() {
-        this.newValue = Codegen.empty();
+    private GooglePrivacyDlpV2ReplaceValueConfigArgs(GooglePrivacyDlpV2ReplaceValueConfigArgs $) {
+        this.newValue = $.newValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ReplaceValueConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue;
+        private GooglePrivacyDlpV2ReplaceValueConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ReplaceValueConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2ReplaceValueConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.newValue = defaults.newValue;
+            $ = new GooglePrivacyDlpV2ReplaceValueConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder newValue(@Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue) {
-            this.newValue = newValue;
+            $.newValue = newValue;
             return this;
         }
-        public Builder newValue(@Nullable GooglePrivacyDlpV2ValueArgs newValue) {
-            this.newValue = Codegen.ofNullable(newValue);
-            return this;
-        }        public GooglePrivacyDlpV2ReplaceValueConfigArgs build() {
-            return new GooglePrivacyDlpV2ReplaceValueConfigArgs(newValue);
+
+        public Builder newValue(GooglePrivacyDlpV2ValueArgs newValue) {
+            return newValue(Output.of(newValue));
+        }
+
+        public GooglePrivacyDlpV2ReplaceValueConfigArgs build() {
+            return $;
         }
     }
+
 }

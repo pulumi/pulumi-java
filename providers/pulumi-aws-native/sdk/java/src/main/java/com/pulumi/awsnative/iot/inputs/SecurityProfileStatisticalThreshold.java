@@ -23,45 +23,44 @@ public final class SecurityProfileStatisticalThreshold extends com.pulumi.resour
      * 
      */
     @Import(name="statistic")
-      private final @Nullable SecurityProfileStatisticalThresholdStatistic statistic;
+    private @Nullable SecurityProfileStatisticalThresholdStatistic statistic;
 
     public Optional<SecurityProfileStatisticalThresholdStatistic> statistic() {
-        return this.statistic == null ? Optional.empty() : Optional.ofNullable(this.statistic);
+        return Optional.ofNullable(this.statistic);
     }
 
-    public SecurityProfileStatisticalThreshold(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
-        this.statistic = statistic;
-    }
+    private SecurityProfileStatisticalThreshold() {}
 
-    private SecurityProfileStatisticalThreshold() {
-        this.statistic = null;
+    private SecurityProfileStatisticalThreshold(SecurityProfileStatisticalThreshold $) {
+        this.statistic = $.statistic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileStatisticalThreshold defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SecurityProfileStatisticalThresholdStatistic statistic;
+        private SecurityProfileStatisticalThreshold $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileStatisticalThreshold();
         }
 
         public Builder(SecurityProfileStatisticalThreshold defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statistic = defaults.statistic;
+            $ = new SecurityProfileStatisticalThreshold(Objects.requireNonNull(defaults));
         }
 
         public Builder statistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
-            this.statistic = statistic;
+            $.statistic = statistic;
             return this;
-        }        public SecurityProfileStatisticalThreshold build() {
-            return new SecurityProfileStatisticalThreshold(statistic);
+        }
+
+        public SecurityProfileStatisticalThreshold build() {
+            return $;
         }
     }
+
 }

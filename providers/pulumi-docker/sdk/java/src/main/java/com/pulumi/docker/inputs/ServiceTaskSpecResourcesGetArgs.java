@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.ServiceTaskSpecResourcesLimitsGetArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecResourcesReservationGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ServiceTaskSpecResourcesGetArgs extends com.pulumi.resources.
     public static final ServiceTaskSpecResourcesGetArgs Empty = new ServiceTaskSpecResourcesGetArgs();
 
     @Import(name="limits")
-      private final @Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits;
+    private @Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits;
 
-    public Output<ServiceTaskSpecResourcesLimitsGetArgs> limits() {
-        return this.limits == null ? Codegen.empty() : this.limits;
+    public Optional<Output<ServiceTaskSpecResourcesLimitsGetArgs>> limits() {
+        return Optional.ofNullable(this.limits);
     }
 
     @Import(name="reservation")
-      private final @Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation;
+    private @Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation;
 
-    public Output<ServiceTaskSpecResourcesReservationGetArgs> reservation() {
-        return this.reservation == null ? Codegen.empty() : this.reservation;
+    public Optional<Output<ServiceTaskSpecResourcesReservationGetArgs>> reservation() {
+        return Optional.ofNullable(this.reservation);
     }
 
-    public ServiceTaskSpecResourcesGetArgs(
-        @Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits,
-        @Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation) {
-        this.limits = limits;
-        this.reservation = reservation;
-    }
+    private ServiceTaskSpecResourcesGetArgs() {}
 
-    private ServiceTaskSpecResourcesGetArgs() {
-        this.limits = Codegen.empty();
-        this.reservation = Codegen.empty();
+    private ServiceTaskSpecResourcesGetArgs(ServiceTaskSpecResourcesGetArgs $) {
+        this.limits = $.limits;
+        this.reservation = $.reservation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecResourcesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits;
-        private @Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation;
+        private ServiceTaskSpecResourcesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecResourcesGetArgs();
         }
 
         public Builder(ServiceTaskSpecResourcesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limits = defaults.limits;
-    	      this.reservation = defaults.reservation;
+            $ = new ServiceTaskSpecResourcesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder limits(@Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits) {
-            this.limits = limits;
+            $.limits = limits;
             return this;
         }
-        public Builder limits(@Nullable ServiceTaskSpecResourcesLimitsGetArgs limits) {
-            this.limits = Codegen.ofNullable(limits);
-            return this;
+
+        public Builder limits(ServiceTaskSpecResourcesLimitsGetArgs limits) {
+            return limits(Output.of(limits));
         }
+
         public Builder reservation(@Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation) {
-            this.reservation = reservation;
+            $.reservation = reservation;
             return this;
         }
-        public Builder reservation(@Nullable ServiceTaskSpecResourcesReservationGetArgs reservation) {
-            this.reservation = Codegen.ofNullable(reservation);
-            return this;
-        }        public ServiceTaskSpecResourcesGetArgs build() {
-            return new ServiceTaskSpecResourcesGetArgs(limits, reservation);
+
+        public Builder reservation(ServiceTaskSpecResourcesReservationGetArgs reservation) {
+            return reservation(Output.of(reservation));
+        }
+
+        public ServiceTaskSpecResourcesGetArgs build() {
+            return $;
         }
     }
+
 }

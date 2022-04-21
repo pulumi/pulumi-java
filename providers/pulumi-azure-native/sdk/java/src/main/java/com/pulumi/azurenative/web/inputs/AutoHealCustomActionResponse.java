@@ -24,10 +24,10 @@ public final class AutoHealCustomActionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="exe")
-      private final @Nullable String exe;
+    private @Nullable String exe;
 
     public Optional<String> exe() {
-        return this.exe == null ? Optional.empty() : Optional.ofNullable(this.exe);
+        return Optional.ofNullable(this.exe);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AutoHealCustomActionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parameters")
-      private final @Nullable String parameters;
+    private @Nullable String parameters;
 
     public Optional<String> parameters() {
-        return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
+        return Optional.ofNullable(this.parameters);
     }
 
-    public AutoHealCustomActionResponse(
-        @Nullable String exe,
-        @Nullable String parameters) {
-        this.exe = exe;
-        this.parameters = parameters;
-    }
+    private AutoHealCustomActionResponse() {}
 
-    private AutoHealCustomActionResponse() {
-        this.exe = null;
-        this.parameters = null;
+    private AutoHealCustomActionResponse(AutoHealCustomActionResponse $) {
+        this.exe = $.exe;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoHealCustomActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String exe;
-        private @Nullable String parameters;
+        private AutoHealCustomActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoHealCustomActionResponse();
         }
 
         public Builder(AutoHealCustomActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exe = defaults.exe;
-    	      this.parameters = defaults.parameters;
+            $ = new AutoHealCustomActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exe(@Nullable String exe) {
-            this.exe = exe;
+            $.exe = exe;
             return this;
         }
+
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
-        }        public AutoHealCustomActionResponse build() {
-            return new AutoHealCustomActionResponse(exe, parameters);
+        }
+
+        public AutoHealCustomActionResponse build() {
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class StackSetAutoDeployment extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class StackSetAutoDeployment extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="retainStacksOnAccountRemoval")
-      private final @Nullable Boolean retainStacksOnAccountRemoval;
+    private @Nullable Boolean retainStacksOnAccountRemoval;
 
     public Optional<Boolean> retainStacksOnAccountRemoval() {
-        return this.retainStacksOnAccountRemoval == null ? Optional.empty() : Optional.ofNullable(this.retainStacksOnAccountRemoval);
+        return Optional.ofNullable(this.retainStacksOnAccountRemoval);
     }
 
-    public StackSetAutoDeployment(
-        @Nullable Boolean enabled,
-        @Nullable Boolean retainStacksOnAccountRemoval) {
-        this.enabled = enabled;
-        this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
-    }
+    private StackSetAutoDeployment() {}
 
-    private StackSetAutoDeployment() {
-        this.enabled = null;
-        this.retainStacksOnAccountRemoval = null;
+    private StackSetAutoDeployment(StackSetAutoDeployment $) {
+        this.enabled = $.enabled;
+        this.retainStacksOnAccountRemoval = $.retainStacksOnAccountRemoval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetAutoDeployment defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable Boolean retainStacksOnAccountRemoval;
+        private StackSetAutoDeployment $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetAutoDeployment();
         }
 
         public Builder(StackSetAutoDeployment defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.retainStacksOnAccountRemoval = defaults.retainStacksOnAccountRemoval;
+            $ = new StackSetAutoDeployment(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder retainStacksOnAccountRemoval(@Nullable Boolean retainStacksOnAccountRemoval) {
-            this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
+            $.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
             return this;
-        }        public StackSetAutoDeployment build() {
-            return new StackSetAutoDeployment(enabled, retainStacksOnAccountRemoval);
+        }
+
+        public StackSetAutoDeployment build() {
+            return $;
         }
     }
+
 }

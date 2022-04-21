@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="redirectSiteKey")
-      private final @Nullable Output<String> redirectSiteKey;
+    private @Nullable Output<String> redirectSiteKey;
 
-    public Output<String> redirectSiteKey() {
-        return this.redirectSiteKey == null ? Codegen.empty() : this.redirectSiteKey;
+    public Optional<Output<String>> redirectSiteKey() {
+        return Optional.ofNullable(this.redirectSiteKey);
     }
 
-    public SecurityPolicyRecaptchaOptionsConfigArgs(@Nullable Output<String> redirectSiteKey) {
-        this.redirectSiteKey = redirectSiteKey;
-    }
+    private SecurityPolicyRecaptchaOptionsConfigArgs() {}
 
-    private SecurityPolicyRecaptchaOptionsConfigArgs() {
-        this.redirectSiteKey = Codegen.empty();
+    private SecurityPolicyRecaptchaOptionsConfigArgs(SecurityPolicyRecaptchaOptionsConfigArgs $) {
+        this.redirectSiteKey = $.redirectSiteKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRecaptchaOptionsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> redirectSiteKey;
+        private SecurityPolicyRecaptchaOptionsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRecaptchaOptionsConfigArgs();
         }
 
         public Builder(SecurityPolicyRecaptchaOptionsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.redirectSiteKey = defaults.redirectSiteKey;
+            $ = new SecurityPolicyRecaptchaOptionsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder redirectSiteKey(@Nullable Output<String> redirectSiteKey) {
-            this.redirectSiteKey = redirectSiteKey;
+            $.redirectSiteKey = redirectSiteKey;
             return this;
         }
-        public Builder redirectSiteKey(@Nullable String redirectSiteKey) {
-            this.redirectSiteKey = Codegen.ofNullable(redirectSiteKey);
-            return this;
-        }        public SecurityPolicyRecaptchaOptionsConfigArgs build() {
-            return new SecurityPolicyRecaptchaOptionsConfigArgs(redirectSiteKey);
+
+        public Builder redirectSiteKey(String redirectSiteKey) {
+            return redirectSiteKey(Output.of(redirectSiteKey));
+        }
+
+        public SecurityPolicyRecaptchaOptionsConfigArgs build() {
+            return $;
         }
     }
+
 }

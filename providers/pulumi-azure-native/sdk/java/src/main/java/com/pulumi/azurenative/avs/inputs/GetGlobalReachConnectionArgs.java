@@ -17,7 +17,7 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="globalReachConnectionName", required=true)
-      private final String globalReachConnectionName;
+    private String globalReachConnectionName;
 
     public String globalReachConnectionName() {
         return this.globalReachConnectionName;
@@ -28,7 +28,7 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -39,64 +39,59 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetGlobalReachConnectionArgs(
-        String globalReachConnectionName,
-        String privateCloudName,
-        String resourceGroupName) {
-        this.globalReachConnectionName = Objects.requireNonNull(globalReachConnectionName, "expected parameter 'globalReachConnectionName' to be non-null");
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetGlobalReachConnectionArgs() {}
 
-    private GetGlobalReachConnectionArgs() {
-        this.globalReachConnectionName = null;
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private GetGlobalReachConnectionArgs(GetGlobalReachConnectionArgs $) {
+        this.globalReachConnectionName = $.globalReachConnectionName;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalReachConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String globalReachConnectionName;
-        private String privateCloudName;
-        private String resourceGroupName;
+        private GetGlobalReachConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalReachConnectionArgs();
         }
 
         public Builder(GetGlobalReachConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalReachConnectionName = defaults.globalReachConnectionName;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetGlobalReachConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder globalReachConnectionName(String globalReachConnectionName) {
-            this.globalReachConnectionName = Objects.requireNonNull(globalReachConnectionName);
+            $.globalReachConnectionName = globalReachConnectionName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetGlobalReachConnectionArgs build() {
-            return new GetGlobalReachConnectionArgs(globalReachConnectionName, privateCloudName, resourceGroupName);
+        }
+
+        public GetGlobalReachConnectionArgs build() {
+            $.globalReachConnectionName = Objects.requireNonNull($.globalReachConnectionName, "expected parameter 'globalReachConnectionName' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

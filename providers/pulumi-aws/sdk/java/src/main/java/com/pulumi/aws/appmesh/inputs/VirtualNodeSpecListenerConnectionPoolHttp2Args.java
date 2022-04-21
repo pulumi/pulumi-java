@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp2Args extends com.pu
      * 
      */
     @Import(name="maxRequests", required=true)
-      private final Output<Integer> maxRequests;
+    private Output<Integer> maxRequests;
 
     public Output<Integer> maxRequests() {
         return this.maxRequests;
     }
 
-    public VirtualNodeSpecListenerConnectionPoolHttp2Args(Output<Integer> maxRequests) {
-        this.maxRequests = Objects.requireNonNull(maxRequests, "expected parameter 'maxRequests' to be non-null");
-    }
+    private VirtualNodeSpecListenerConnectionPoolHttp2Args() {}
 
-    private VirtualNodeSpecListenerConnectionPoolHttp2Args() {
-        this.maxRequests = Codegen.empty();
+    private VirtualNodeSpecListenerConnectionPoolHttp2Args(VirtualNodeSpecListenerConnectionPoolHttp2Args $) {
+        this.maxRequests = $.maxRequests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerConnectionPoolHttp2Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxRequests;
+        private VirtualNodeSpecListenerConnectionPoolHttp2Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerConnectionPoolHttp2Args();
         }
 
         public Builder(VirtualNodeSpecListenerConnectionPoolHttp2Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRequests = defaults.maxRequests;
+            $ = new VirtualNodeSpecListenerConnectionPoolHttp2Args(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRequests(Output<Integer> maxRequests) {
-            this.maxRequests = Objects.requireNonNull(maxRequests);
+            $.maxRequests = maxRequests;
             return this;
         }
+
         public Builder maxRequests(Integer maxRequests) {
-            this.maxRequests = Output.of(Objects.requireNonNull(maxRequests));
-            return this;
-        }        public VirtualNodeSpecListenerConnectionPoolHttp2Args build() {
-            return new VirtualNodeSpecListenerConnectionPoolHttp2Args(maxRequests);
+            return maxRequests(Output.of(maxRequests));
+        }
+
+        public VirtualNodeSpecListenerConnectionPoolHttp2Args build() {
+            $.maxRequests = Objects.requireNonNull($.maxRequests, "expected parameter 'maxRequests' to be non-null");
+            return $;
         }
     }
+
 }

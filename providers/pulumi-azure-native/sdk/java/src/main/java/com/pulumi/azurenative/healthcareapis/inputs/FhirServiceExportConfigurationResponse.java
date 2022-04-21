@@ -23,45 +23,44 @@ public final class FhirServiceExportConfigurationResponse extends com.pulumi.res
      * 
      */
     @Import(name="storageAccountName")
-      private final @Nullable String storageAccountName;
+    private @Nullable String storageAccountName;
 
     public Optional<String> storageAccountName() {
-        return this.storageAccountName == null ? Optional.empty() : Optional.ofNullable(this.storageAccountName);
+        return Optional.ofNullable(this.storageAccountName);
     }
 
-    public FhirServiceExportConfigurationResponse(@Nullable String storageAccountName) {
-        this.storageAccountName = storageAccountName;
-    }
+    private FhirServiceExportConfigurationResponse() {}
 
-    private FhirServiceExportConfigurationResponse() {
-        this.storageAccountName = null;
+    private FhirServiceExportConfigurationResponse(FhirServiceExportConfigurationResponse $) {
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirServiceExportConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String storageAccountName;
+        private FhirServiceExportConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirServiceExportConfigurationResponse();
         }
 
         public Builder(FhirServiceExportConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new FhirServiceExportConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = storageAccountName;
+            $.storageAccountName = storageAccountName;
             return this;
-        }        public FhirServiceExportConfigurationResponse build() {
-            return new FhirServiceExportConfigurationResponse(storageAccountName);
+        }
+
+        public FhirServiceExportConfigurationResponse build() {
+            return $;
         }
     }
+
 }

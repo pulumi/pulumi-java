@@ -23,10 +23,10 @@ public final class ExpressRouteGatewayPropertiesResponseBounds extends com.pulum
      * 
      */
     @Import(name="max")
-      private final @Nullable Integer max;
+    private @Nullable Integer max;
 
     public Optional<Integer> max() {
-        return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
+        return Optional.ofNullable(this.max);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ExpressRouteGatewayPropertiesResponseBounds extends com.pulum
      * 
      */
     @Import(name="min")
-      private final @Nullable Integer min;
+    private @Nullable Integer min;
 
     public Optional<Integer> min() {
-        return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
+        return Optional.ofNullable(this.min);
     }
 
-    public ExpressRouteGatewayPropertiesResponseBounds(
-        @Nullable Integer max,
-        @Nullable Integer min) {
-        this.max = max;
-        this.min = min;
-    }
+    private ExpressRouteGatewayPropertiesResponseBounds() {}
 
-    private ExpressRouteGatewayPropertiesResponseBounds() {
-        this.max = null;
-        this.min = null;
+    private ExpressRouteGatewayPropertiesResponseBounds(ExpressRouteGatewayPropertiesResponseBounds $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteGatewayPropertiesResponseBounds defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer max;
-        private @Nullable Integer min;
+        private ExpressRouteGatewayPropertiesResponseBounds $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteGatewayPropertiesResponseBounds();
         }
 
         public Builder(ExpressRouteGatewayPropertiesResponseBounds defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new ExpressRouteGatewayPropertiesResponseBounds(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Integer max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
+
         public Builder min(@Nullable Integer min) {
-            this.min = min;
+            $.min = min;
             return this;
-        }        public ExpressRouteGatewayPropertiesResponseBounds build() {
-            return new ExpressRouteGatewayPropertiesResponseBounds(max, min);
+        }
+
+        public ExpressRouteGatewayPropertiesResponseBounds build() {
+            return $;
         }
     }
+
 }

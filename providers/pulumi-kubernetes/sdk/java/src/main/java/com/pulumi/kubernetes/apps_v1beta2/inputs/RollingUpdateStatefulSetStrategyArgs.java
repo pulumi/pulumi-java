@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.apps_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class RollingUpdateStatefulSetStrategyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="partition")
-      private final @Nullable Output<Integer> partition;
+    private @Nullable Output<Integer> partition;
 
-    public Output<Integer> partition() {
-        return this.partition == null ? Codegen.empty() : this.partition;
+    public Optional<Output<Integer>> partition() {
+        return Optional.ofNullable(this.partition);
     }
 
-    public RollingUpdateStatefulSetStrategyArgs(@Nullable Output<Integer> partition) {
-        this.partition = partition;
-    }
+    private RollingUpdateStatefulSetStrategyArgs() {}
 
-    private RollingUpdateStatefulSetStrategyArgs() {
-        this.partition = Codegen.empty();
+    private RollingUpdateStatefulSetStrategyArgs(RollingUpdateStatefulSetStrategyArgs $) {
+        this.partition = $.partition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RollingUpdateStatefulSetStrategyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> partition;
+        private RollingUpdateStatefulSetStrategyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RollingUpdateStatefulSetStrategyArgs();
         }
 
         public Builder(RollingUpdateStatefulSetStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partition = defaults.partition;
+            $ = new RollingUpdateStatefulSetStrategyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partition(@Nullable Output<Integer> partition) {
-            this.partition = partition;
+            $.partition = partition;
             return this;
         }
-        public Builder partition(@Nullable Integer partition) {
-            this.partition = Codegen.ofNullable(partition);
-            return this;
-        }        public RollingUpdateStatefulSetStrategyArgs build() {
-            return new RollingUpdateStatefulSetStrategyArgs(partition);
+
+        public Builder partition(Integer partition) {
+            return partition(Output.of(partition));
+        }
+
+        public RollingUpdateStatefulSetStrategyArgs build() {
+            return $;
         }
     }
+
 }

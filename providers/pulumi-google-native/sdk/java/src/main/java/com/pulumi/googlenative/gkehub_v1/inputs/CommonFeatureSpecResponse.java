@@ -22,7 +22,7 @@ public final class CommonFeatureSpecResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="appdevexperience", required=true)
-      private final AppDevExperienceFeatureSpecResponse appdevexperience;
+    private AppDevExperienceFeatureSpecResponse appdevexperience;
 
     public AppDevExperienceFeatureSpecResponse appdevexperience() {
         return this.appdevexperience;
@@ -33,55 +33,52 @@ public final class CommonFeatureSpecResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="multiclusteringress", required=true)
-      private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
+    private MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
     public MultiClusterIngressFeatureSpecResponse multiclusteringress() {
         return this.multiclusteringress;
     }
 
-    public CommonFeatureSpecResponse(
-        AppDevExperienceFeatureSpecResponse appdevexperience,
-        MultiClusterIngressFeatureSpecResponse multiclusteringress) {
-        this.appdevexperience = Objects.requireNonNull(appdevexperience, "expected parameter 'appdevexperience' to be non-null");
-        this.multiclusteringress = Objects.requireNonNull(multiclusteringress, "expected parameter 'multiclusteringress' to be non-null");
-    }
+    private CommonFeatureSpecResponse() {}
 
-    private CommonFeatureSpecResponse() {
-        this.appdevexperience = null;
-        this.multiclusteringress = null;
+    private CommonFeatureSpecResponse(CommonFeatureSpecResponse $) {
+        this.appdevexperience = $.appdevexperience;
+        this.multiclusteringress = $.multiclusteringress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommonFeatureSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AppDevExperienceFeatureSpecResponse appdevexperience;
-        private MultiClusterIngressFeatureSpecResponse multiclusteringress;
+        private CommonFeatureSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommonFeatureSpecResponse();
         }
 
         public Builder(CommonFeatureSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appdevexperience = defaults.appdevexperience;
-    	      this.multiclusteringress = defaults.multiclusteringress;
+            $ = new CommonFeatureSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appdevexperience(AppDevExperienceFeatureSpecResponse appdevexperience) {
-            this.appdevexperience = Objects.requireNonNull(appdevexperience);
+            $.appdevexperience = appdevexperience;
             return this;
         }
+
         public Builder multiclusteringress(MultiClusterIngressFeatureSpecResponse multiclusteringress) {
-            this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
+            $.multiclusteringress = multiclusteringress;
             return this;
-        }        public CommonFeatureSpecResponse build() {
-            return new CommonFeatureSpecResponse(appdevexperience, multiclusteringress);
+        }
+
+        public CommonFeatureSpecResponse build() {
+            $.appdevexperience = Objects.requireNonNull($.appdevexperience, "expected parameter 'appdevexperience' to be non-null");
+            $.multiclusteringress = Objects.requireNonNull($.multiclusteringress, "expected parameter 'multiclusteringress' to be non-null");
+            return $;
         }
     }
+
 }

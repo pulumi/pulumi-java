@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.SecurityPolicyType;
 import com.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyAdaptiveProtectionConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyAdvancedOptionsConfigArgs;
@@ -18,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,17 +26,17 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     public static final SecurityPolicyArgs Empty = new SecurityPolicyArgs();
 
     @Import(name="adaptiveProtectionConfig")
-      private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
+    private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
-    public Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig() {
-        return this.adaptiveProtectionConfig == null ? Codegen.empty() : this.adaptiveProtectionConfig;
+    public Optional<Output<SecurityPolicyAdaptiveProtectionConfigArgs>> adaptiveProtectionConfig() {
+        return Optional.ofNullable(this.adaptiveProtectionConfig);
     }
 
     @Import(name="advancedOptionsConfig")
-      private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
+    private @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
 
-    public Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig() {
-        return this.advancedOptionsConfig == null ? Codegen.empty() : this.advancedOptionsConfig;
+    public Optional<Output<SecurityPolicyAdvancedOptionsConfigArgs>> advancedOptionsConfig() {
+        return Optional.ofNullable(this.advancedOptionsConfig);
     }
 
     /**
@@ -44,24 +44,24 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="associations")
-      private final @Nullable Output<List<SecurityPolicyAssociationArgs>> associations;
+    private @Nullable Output<List<SecurityPolicyAssociationArgs>> associations;
 
-    public Output<List<SecurityPolicyAssociationArgs>> associations() {
-        return this.associations == null ? Codegen.empty() : this.associations;
+    public Optional<Output<List<SecurityPolicyAssociationArgs>>> associations() {
+        return Optional.ofNullable(this.associations);
     }
 
     @Import(name="cloudArmorConfig")
-      private final @Nullable Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig;
+    private @Nullable Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig;
 
-    public Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig() {
-        return this.cloudArmorConfig == null ? Codegen.empty() : this.cloudArmorConfig;
+    public Optional<Output<SecurityPolicyCloudArmorConfigArgs>> cloudArmorConfig() {
+        return Optional.ofNullable(this.cloudArmorConfig);
     }
 
     @Import(name="ddosProtectionConfig")
-      private final @Nullable Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig;
+    private @Nullable Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig;
 
-    public Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig() {
-        return this.ddosProtectionConfig == null ? Codegen.empty() : this.ddosProtectionConfig;
+    public Optional<Output<SecurityPolicyDdosProtectionConfigArgs>> ddosProtectionConfig() {
+        return Optional.ofNullable(this.ddosProtectionConfig);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -102,31 +102,31 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="recaptchaOptionsConfig")
-      private final @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
+    private @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
 
-    public Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig() {
-        return this.recaptchaOptionsConfig == null ? Codegen.empty() : this.recaptchaOptionsConfig;
+    public Optional<Output<SecurityPolicyRecaptchaOptionsConfigArgs>> recaptchaOptionsConfig() {
+        return Optional.ofNullable(this.recaptchaOptionsConfig);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
+    private @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
-    public Output<List<SecurityPolicyRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<SecurityPolicyRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -145,245 +145,203 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<SecurityPolicyType> type;
+    private @Nullable Output<SecurityPolicyType> type;
 
-    public Output<SecurityPolicyType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<SecurityPolicyType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public SecurityPolicyArgs(
-        @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig,
-        @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig,
-        @Nullable Output<List<SecurityPolicyAssociationArgs>> associations,
-        @Nullable Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig,
-        @Nullable Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig,
-        @Nullable Output<String> requestId,
-        @Nullable Output<List<SecurityPolicyRuleArgs>> rules,
-        @Nullable Output<SecurityPolicyType> type,
-        @Nullable Output<String> validateOnly) {
-        this.adaptiveProtectionConfig = adaptiveProtectionConfig;
-        this.advancedOptionsConfig = advancedOptionsConfig;
-        this.associations = associations;
-        this.cloudArmorConfig = cloudArmorConfig;
-        this.ddosProtectionConfig = ddosProtectionConfig;
-        this.description = description;
-        this.displayName = displayName;
-        this.labels = labels;
-        this.name = name;
-        this.project = project;
-        this.recaptchaOptionsConfig = recaptchaOptionsConfig;
-        this.requestId = requestId;
-        this.rules = rules;
-        this.type = type;
-        this.validateOnly = validateOnly;
-    }
+    private SecurityPolicyArgs() {}
 
-    private SecurityPolicyArgs() {
-        this.adaptiveProtectionConfig = Codegen.empty();
-        this.advancedOptionsConfig = Codegen.empty();
-        this.associations = Codegen.empty();
-        this.cloudArmorConfig = Codegen.empty();
-        this.ddosProtectionConfig = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.recaptchaOptionsConfig = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.type = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private SecurityPolicyArgs(SecurityPolicyArgs $) {
+        this.adaptiveProtectionConfig = $.adaptiveProtectionConfig;
+        this.advancedOptionsConfig = $.advancedOptionsConfig;
+        this.associations = $.associations;
+        this.cloudArmorConfig = $.cloudArmorConfig;
+        this.ddosProtectionConfig = $.ddosProtectionConfig;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.project = $.project;
+        this.recaptchaOptionsConfig = $.recaptchaOptionsConfig;
+        this.requestId = $.requestId;
+        this.rules = $.rules;
+        this.type = $.type;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
-        private @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
-        private @Nullable Output<List<SecurityPolicyAssociationArgs>> associations;
-        private @Nullable Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig;
-        private @Nullable Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
-        private @Nullable Output<SecurityPolicyType> type;
-        private @Nullable Output<String> validateOnly;
+        private SecurityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyArgs();
         }
 
         public Builder(SecurityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adaptiveProtectionConfig = defaults.adaptiveProtectionConfig;
-    	      this.advancedOptionsConfig = defaults.advancedOptionsConfig;
-    	      this.associations = defaults.associations;
-    	      this.cloudArmorConfig = defaults.cloudArmorConfig;
-    	      this.ddosProtectionConfig = defaults.ddosProtectionConfig;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.recaptchaOptionsConfig = defaults.recaptchaOptionsConfig;
-    	      this.requestId = defaults.requestId;
-    	      this.rules = defaults.rules;
-    	      this.type = defaults.type;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new SecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adaptiveProtectionConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = adaptiveProtectionConfig;
+            $.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
-        public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = Codegen.ofNullable(adaptiveProtectionConfig);
-            return this;
+
+        public Builder adaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
+            return adaptiveProtectionConfig(Output.of(adaptiveProtectionConfig));
         }
+
         public Builder advancedOptionsConfig(@Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig) {
-            this.advancedOptionsConfig = advancedOptionsConfig;
+            $.advancedOptionsConfig = advancedOptionsConfig;
             return this;
         }
-        public Builder advancedOptionsConfig(@Nullable SecurityPolicyAdvancedOptionsConfigArgs advancedOptionsConfig) {
-            this.advancedOptionsConfig = Codegen.ofNullable(advancedOptionsConfig);
-            return this;
+
+        public Builder advancedOptionsConfig(SecurityPolicyAdvancedOptionsConfigArgs advancedOptionsConfig) {
+            return advancedOptionsConfig(Output.of(advancedOptionsConfig));
         }
+
         public Builder associations(@Nullable Output<List<SecurityPolicyAssociationArgs>> associations) {
-            this.associations = associations;
+            $.associations = associations;
             return this;
         }
-        public Builder associations(@Nullable List<SecurityPolicyAssociationArgs> associations) {
-            this.associations = Codegen.ofNullable(associations);
-            return this;
+
+        public Builder associations(List<SecurityPolicyAssociationArgs> associations) {
+            return associations(Output.of(associations));
         }
+
         public Builder associations(SecurityPolicyAssociationArgs... associations) {
             return associations(List.of(associations));
         }
+
         public Builder cloudArmorConfig(@Nullable Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig) {
-            this.cloudArmorConfig = cloudArmorConfig;
+            $.cloudArmorConfig = cloudArmorConfig;
             return this;
         }
-        public Builder cloudArmorConfig(@Nullable SecurityPolicyCloudArmorConfigArgs cloudArmorConfig) {
-            this.cloudArmorConfig = Codegen.ofNullable(cloudArmorConfig);
-            return this;
+
+        public Builder cloudArmorConfig(SecurityPolicyCloudArmorConfigArgs cloudArmorConfig) {
+            return cloudArmorConfig(Output.of(cloudArmorConfig));
         }
+
         public Builder ddosProtectionConfig(@Nullable Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig) {
-            this.ddosProtectionConfig = ddosProtectionConfig;
+            $.ddosProtectionConfig = ddosProtectionConfig;
             return this;
         }
-        public Builder ddosProtectionConfig(@Nullable SecurityPolicyDdosProtectionConfigArgs ddosProtectionConfig) {
-            this.ddosProtectionConfig = Codegen.ofNullable(ddosProtectionConfig);
-            return this;
+
+        public Builder ddosProtectionConfig(SecurityPolicyDdosProtectionConfigArgs ddosProtectionConfig) {
+            return ddosProtectionConfig(Output.of(ddosProtectionConfig));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder recaptchaOptionsConfig(@Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig) {
-            this.recaptchaOptionsConfig = recaptchaOptionsConfig;
+            $.recaptchaOptionsConfig = recaptchaOptionsConfig;
             return this;
         }
-        public Builder recaptchaOptionsConfig(@Nullable SecurityPolicyRecaptchaOptionsConfigArgs recaptchaOptionsConfig) {
-            this.recaptchaOptionsConfig = Codegen.ofNullable(recaptchaOptionsConfig);
-            return this;
+
+        public Builder recaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfigArgs recaptchaOptionsConfig) {
+            return recaptchaOptionsConfig(Output.of(recaptchaOptionsConfig));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<SecurityPolicyRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<SecurityPolicyRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(SecurityPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder type(@Nullable Output<SecurityPolicyType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable SecurityPolicyType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(SecurityPolicyType type) {
+            return type(Output.of(type));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public SecurityPolicyArgs build() {
-            return new SecurityPolicyArgs(adaptiveProtectionConfig, advancedOptionsConfig, associations, cloudArmorConfig, ddosProtectionConfig, description, displayName, labels, name, project, recaptchaOptionsConfig, requestId, rules, type, validateOnly);
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public SecurityPolicyArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ApplicationMetricDescriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="maximumCapacity")
-      private final @Nullable Output<Double> maximumCapacity;
+    private @Nullable Output<Double> maximumCapacity;
 
-    public Output<Double> maximumCapacity() {
-        return this.maximumCapacity == null ? Codegen.empty() : this.maximumCapacity;
+    public Optional<Output<Double>> maximumCapacity() {
+        return Optional.ofNullable(this.maximumCapacity);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ApplicationMetricDescriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ApplicationMetricDescriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="reservationCapacity")
-      private final @Nullable Output<Double> reservationCapacity;
+    private @Nullable Output<Double> reservationCapacity;
 
-    public Output<Double> reservationCapacity() {
-        return this.reservationCapacity == null ? Codegen.empty() : this.reservationCapacity;
+    public Optional<Output<Double>> reservationCapacity() {
+        return Optional.ofNullable(this.reservationCapacity);
     }
 
     /**
@@ -68,89 +68,78 @@ public final class ApplicationMetricDescriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="totalApplicationCapacity")
-      private final @Nullable Output<Double> totalApplicationCapacity;
+    private @Nullable Output<Double> totalApplicationCapacity;
 
-    public Output<Double> totalApplicationCapacity() {
-        return this.totalApplicationCapacity == null ? Codegen.empty() : this.totalApplicationCapacity;
+    public Optional<Output<Double>> totalApplicationCapacity() {
+        return Optional.ofNullable(this.totalApplicationCapacity);
     }
 
-    public ApplicationMetricDescriptionArgs(
-        @Nullable Output<Double> maximumCapacity,
-        @Nullable Output<String> name,
-        @Nullable Output<Double> reservationCapacity,
-        @Nullable Output<Double> totalApplicationCapacity) {
-        this.maximumCapacity = maximumCapacity;
-        this.name = name;
-        this.reservationCapacity = reservationCapacity;
-        this.totalApplicationCapacity = totalApplicationCapacity;
-    }
+    private ApplicationMetricDescriptionArgs() {}
 
-    private ApplicationMetricDescriptionArgs() {
-        this.maximumCapacity = Codegen.empty();
-        this.name = Codegen.empty();
-        this.reservationCapacity = Codegen.empty();
-        this.totalApplicationCapacity = Codegen.empty();
+    private ApplicationMetricDescriptionArgs(ApplicationMetricDescriptionArgs $) {
+        this.maximumCapacity = $.maximumCapacity;
+        this.name = $.name;
+        this.reservationCapacity = $.reservationCapacity;
+        this.totalApplicationCapacity = $.totalApplicationCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationMetricDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> maximumCapacity;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Double> reservationCapacity;
-        private @Nullable Output<Double> totalApplicationCapacity;
+        private ApplicationMetricDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationMetricDescriptionArgs();
         }
 
         public Builder(ApplicationMetricDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximumCapacity = defaults.maximumCapacity;
-    	      this.name = defaults.name;
-    	      this.reservationCapacity = defaults.reservationCapacity;
-    	      this.totalApplicationCapacity = defaults.totalApplicationCapacity;
+            $ = new ApplicationMetricDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maximumCapacity(@Nullable Output<Double> maximumCapacity) {
-            this.maximumCapacity = maximumCapacity;
+            $.maximumCapacity = maximumCapacity;
             return this;
         }
-        public Builder maximumCapacity(@Nullable Double maximumCapacity) {
-            this.maximumCapacity = Codegen.ofNullable(maximumCapacity);
-            return this;
+
+        public Builder maximumCapacity(Double maximumCapacity) {
+            return maximumCapacity(Output.of(maximumCapacity));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder reservationCapacity(@Nullable Output<Double> reservationCapacity) {
-            this.reservationCapacity = reservationCapacity;
+            $.reservationCapacity = reservationCapacity;
             return this;
         }
-        public Builder reservationCapacity(@Nullable Double reservationCapacity) {
-            this.reservationCapacity = Codegen.ofNullable(reservationCapacity);
-            return this;
+
+        public Builder reservationCapacity(Double reservationCapacity) {
+            return reservationCapacity(Output.of(reservationCapacity));
         }
+
         public Builder totalApplicationCapacity(@Nullable Output<Double> totalApplicationCapacity) {
-            this.totalApplicationCapacity = totalApplicationCapacity;
+            $.totalApplicationCapacity = totalApplicationCapacity;
             return this;
         }
-        public Builder totalApplicationCapacity(@Nullable Double totalApplicationCapacity) {
-            this.totalApplicationCapacity = Codegen.ofNullable(totalApplicationCapacity);
-            return this;
-        }        public ApplicationMetricDescriptionArgs build() {
-            return new ApplicationMetricDescriptionArgs(maximumCapacity, name, reservationCapacity, totalApplicationCapacity);
+
+        public Builder totalApplicationCapacity(Double totalApplicationCapacity) {
+            return totalApplicationCapacity(Output.of(totalApplicationCapacity));
+        }
+
+        public ApplicationMetricDescriptionArgs build() {
+            return $;
         }
     }
+
 }

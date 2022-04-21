@@ -21,7 +21,7 @@ public final class MatchingCriteriaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="attribute", required=true)
-      private final String attribute;
+    private String attribute;
 
     public String attribute() {
         return this.attribute;
@@ -32,55 +32,52 @@ public final class MatchingCriteriaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public MatchingCriteriaResponse(
-        String attribute,
-        String value) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private MatchingCriteriaResponse() {}
 
-    private MatchingCriteriaResponse() {
-        this.attribute = null;
-        this.value = null;
+    private MatchingCriteriaResponse(MatchingCriteriaResponse $) {
+        this.attribute = $.attribute;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MatchingCriteriaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attribute;
-        private String value;
+        private MatchingCriteriaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MatchingCriteriaResponse();
         }
 
         public Builder(MatchingCriteriaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.value = defaults.value;
+            $ = new MatchingCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(String attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public MatchingCriteriaResponse build() {
-            return new MatchingCriteriaResponse(attribute, value);
+        }
+
+        public MatchingCriteriaResponse build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

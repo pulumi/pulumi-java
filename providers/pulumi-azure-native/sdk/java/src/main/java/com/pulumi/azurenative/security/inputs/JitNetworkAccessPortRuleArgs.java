@@ -7,11 +7,11 @@ import com.pulumi.azurenative.security.enums.Protocol;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class JitNetworkAccessPortRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="allowedSourceAddressPrefix")
-      private final @Nullable Output<String> allowedSourceAddressPrefix;
+    private @Nullable Output<String> allowedSourceAddressPrefix;
 
-    public Output<String> allowedSourceAddressPrefix() {
-        return this.allowedSourceAddressPrefix == null ? Codegen.empty() : this.allowedSourceAddressPrefix;
+    public Optional<Output<String>> allowedSourceAddressPrefix() {
+        return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JitNetworkAccessPortRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="allowedSourceAddressPrefixes")
-      private final @Nullable Output<List<String>> allowedSourceAddressPrefixes;
+    private @Nullable Output<List<String>> allowedSourceAddressPrefixes;
 
-    public Output<List<String>> allowedSourceAddressPrefixes() {
-        return this.allowedSourceAddressPrefixes == null ? Codegen.empty() : this.allowedSourceAddressPrefixes;
+    public Optional<Output<List<String>>> allowedSourceAddressPrefixes() {
+        return Optional.ofNullable(this.allowedSourceAddressPrefixes);
     }
 
     /**
@@ -46,119 +46,109 @@ public final class JitNetworkAccessPortRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxRequestAccessDuration", required=true)
-      private final Output<String> maxRequestAccessDuration;
+    private Output<String> maxRequestAccessDuration;
 
     public Output<String> maxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }
 
     @Import(name="number", required=true)
-      private final Output<Integer> number;
+    private Output<Integer> number;
 
     public Output<Integer> number() {
         return this.number;
     }
 
     @Import(name="protocol", required=true)
-      private final Output<Either<String,Protocol>> protocol;
+    private Output<Either<String,Protocol>> protocol;
 
     public Output<Either<String,Protocol>> protocol() {
         return this.protocol;
     }
 
-    public JitNetworkAccessPortRuleArgs(
-        @Nullable Output<String> allowedSourceAddressPrefix,
-        @Nullable Output<List<String>> allowedSourceAddressPrefixes,
-        Output<String> maxRequestAccessDuration,
-        Output<Integer> number,
-        Output<Either<String,Protocol>> protocol) {
-        this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
-        this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
-        this.maxRequestAccessDuration = Objects.requireNonNull(maxRequestAccessDuration, "expected parameter 'maxRequestAccessDuration' to be non-null");
-        this.number = Objects.requireNonNull(number, "expected parameter 'number' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private JitNetworkAccessPortRuleArgs() {}
 
-    private JitNetworkAccessPortRuleArgs() {
-        this.allowedSourceAddressPrefix = Codegen.empty();
-        this.allowedSourceAddressPrefixes = Codegen.empty();
-        this.maxRequestAccessDuration = Codegen.empty();
-        this.number = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private JitNetworkAccessPortRuleArgs(JitNetworkAccessPortRuleArgs $) {
+        this.allowedSourceAddressPrefix = $.allowedSourceAddressPrefix;
+        this.allowedSourceAddressPrefixes = $.allowedSourceAddressPrefixes;
+        this.maxRequestAccessDuration = $.maxRequestAccessDuration;
+        this.number = $.number;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitNetworkAccessPortRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allowedSourceAddressPrefix;
-        private @Nullable Output<List<String>> allowedSourceAddressPrefixes;
-        private Output<String> maxRequestAccessDuration;
-        private Output<Integer> number;
-        private Output<Either<String,Protocol>> protocol;
+        private JitNetworkAccessPortRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitNetworkAccessPortRuleArgs();
         }
 
         public Builder(JitNetworkAccessPortRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedSourceAddressPrefix = defaults.allowedSourceAddressPrefix;
-    	      this.allowedSourceAddressPrefixes = defaults.allowedSourceAddressPrefixes;
-    	      this.maxRequestAccessDuration = defaults.maxRequestAccessDuration;
-    	      this.number = defaults.number;
-    	      this.protocol = defaults.protocol;
+            $ = new JitNetworkAccessPortRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedSourceAddressPrefix(@Nullable Output<String> allowedSourceAddressPrefix) {
-            this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
+            $.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
-        public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
-            this.allowedSourceAddressPrefix = Codegen.ofNullable(allowedSourceAddressPrefix);
-            return this;
+
+        public Builder allowedSourceAddressPrefix(String allowedSourceAddressPrefix) {
+            return allowedSourceAddressPrefix(Output.of(allowedSourceAddressPrefix));
         }
+
         public Builder allowedSourceAddressPrefixes(@Nullable Output<List<String>> allowedSourceAddressPrefixes) {
-            this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
+            $.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
-        public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
-            this.allowedSourceAddressPrefixes = Codegen.ofNullable(allowedSourceAddressPrefixes);
-            return this;
+
+        public Builder allowedSourceAddressPrefixes(List<String> allowedSourceAddressPrefixes) {
+            return allowedSourceAddressPrefixes(Output.of(allowedSourceAddressPrefixes));
         }
+
         public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {
             return allowedSourceAddressPrefixes(List.of(allowedSourceAddressPrefixes));
         }
+
         public Builder maxRequestAccessDuration(Output<String> maxRequestAccessDuration) {
-            this.maxRequestAccessDuration = Objects.requireNonNull(maxRequestAccessDuration);
+            $.maxRequestAccessDuration = maxRequestAccessDuration;
             return this;
         }
+
         public Builder maxRequestAccessDuration(String maxRequestAccessDuration) {
-            this.maxRequestAccessDuration = Output.of(Objects.requireNonNull(maxRequestAccessDuration));
-            return this;
+            return maxRequestAccessDuration(Output.of(maxRequestAccessDuration));
         }
+
         public Builder number(Output<Integer> number) {
-            this.number = Objects.requireNonNull(number);
+            $.number = number;
             return this;
         }
+
         public Builder number(Integer number) {
-            this.number = Output.of(Objects.requireNonNull(number));
-            return this;
+            return number(Output.of(number));
         }
+
         public Builder protocol(Output<Either<String,Protocol>> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(Either<String,Protocol> protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
-        }        public JitNetworkAccessPortRuleArgs build() {
-            return new JitNetworkAccessPortRuleArgs(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, maxRequestAccessDuration, number, protocol);
+            return protocol(Output.of(protocol));
+        }
+
+        public JitNetworkAccessPortRuleArgs build() {
+            $.maxRequestAccessDuration = Objects.requireNonNull($.maxRequestAccessDuration, "expected parameter 'maxRequestAccessDuration' to be non-null");
+            $.number = Objects.requireNonNull($.number, "expected parameter 'number' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

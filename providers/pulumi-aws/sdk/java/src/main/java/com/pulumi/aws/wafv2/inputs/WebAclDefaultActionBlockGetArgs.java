@@ -6,8 +6,8 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclDefaultActionBlockCustomResponseGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WebAclDefaultActionBlockGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="customResponse")
-      private final @Nullable Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse;
+    private @Nullable Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse;
 
-    public Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse() {
-        return this.customResponse == null ? Codegen.empty() : this.customResponse;
+    public Optional<Output<WebAclDefaultActionBlockCustomResponseGetArgs>> customResponse() {
+        return Optional.ofNullable(this.customResponse);
     }
 
-    public WebAclDefaultActionBlockGetArgs(@Nullable Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse) {
-        this.customResponse = customResponse;
-    }
+    private WebAclDefaultActionBlockGetArgs() {}
 
-    private WebAclDefaultActionBlockGetArgs() {
-        this.customResponse = Codegen.empty();
+    private WebAclDefaultActionBlockGetArgs(WebAclDefaultActionBlockGetArgs $) {
+        this.customResponse = $.customResponse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclDefaultActionBlockGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse;
+        private WebAclDefaultActionBlockGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclDefaultActionBlockGetArgs();
         }
 
         public Builder(WebAclDefaultActionBlockGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customResponse = defaults.customResponse;
+            $ = new WebAclDefaultActionBlockGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customResponse(@Nullable Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse) {
-            this.customResponse = customResponse;
+            $.customResponse = customResponse;
             return this;
         }
-        public Builder customResponse(@Nullable WebAclDefaultActionBlockCustomResponseGetArgs customResponse) {
-            this.customResponse = Codegen.ofNullable(customResponse);
-            return this;
-        }        public WebAclDefaultActionBlockGetArgs build() {
-            return new WebAclDefaultActionBlockGetArgs(customResponse);
+
+        public Builder customResponse(WebAclDefaultActionBlockCustomResponseGetArgs customResponse) {
+            return customResponse(Output.of(customResponse));
+        }
+
+        public WebAclDefaultActionBlockGetArgs build() {
+            return $;
         }
     }
+
 }

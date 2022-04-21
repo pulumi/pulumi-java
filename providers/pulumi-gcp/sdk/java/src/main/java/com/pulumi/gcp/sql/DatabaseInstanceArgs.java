@@ -5,7 +5,6 @@ package com.pulumi.gcp.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceCloneArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceReplicaConfigurationArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceRestoreBackupContextArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clone")
-      private final @Nullable Output<DatabaseInstanceCloneArgs> clone;
+    private @Nullable Output<DatabaseInstanceCloneArgs> clone;
 
-    public Output<DatabaseInstanceCloneArgs> clone_() {
-        return this.clone == null ? Codegen.empty() : this.clone;
+    public Optional<Output<DatabaseInstanceCloneArgs>> clone_() {
+        return Optional.ofNullable(this.clone);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="databaseVersion", required=true)
-      private final Output<String> databaseVersion;
+    private Output<String> databaseVersion;
 
     public Output<String> databaseVersion() {
         return this.databaseVersion;
@@ -58,10 +58,10 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deletionProtection")
-      private final @Nullable Output<Boolean> deletionProtection;
+    private @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> deletionProtection() {
-        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="encryptionKeyName")
-      private final @Nullable Output<String> encryptionKeyName;
+    private @Nullable Output<String> encryptionKeyName;
 
-    public Output<String> encryptionKeyName() {
-        return this.encryptionKeyName == null ? Codegen.empty() : this.encryptionKeyName;
+    public Optional<Output<String>> encryptionKeyName() {
+        return Optional.ofNullable(this.encryptionKeyName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="masterInstanceName")
-      private final @Nullable Output<String> masterInstanceName;
+    private @Nullable Output<String> masterInstanceName;
 
-    public Output<String> masterInstanceName() {
-        return this.masterInstanceName == null ? Codegen.empty() : this.masterInstanceName;
+    public Optional<Output<String>> masterInstanceName() {
+        return Optional.ofNullable(this.masterInstanceName);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="replicaConfiguration")
-      private final @Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
+    private @Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
 
-    public Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration() {
-        return this.replicaConfiguration == null ? Codegen.empty() : this.replicaConfiguration;
+    public Optional<Output<DatabaseInstanceReplicaConfigurationArgs>> replicaConfiguration() {
+        return Optional.ofNullable(this.replicaConfiguration);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="restoreBackupContext")
-      private final @Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
+    private @Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
 
-    public Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext() {
-        return this.restoreBackupContext == null ? Codegen.empty() : this.restoreBackupContext;
+    public Optional<Output<DatabaseInstanceRestoreBackupContextArgs>> restoreBackupContext() {
+        return Optional.ofNullable(this.restoreBackupContext);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="rootPassword")
-      private final @Nullable Output<String> rootPassword;
+    private @Nullable Output<String> rootPassword;
 
-    public Output<String> rootPassword() {
-        return this.rootPassword == null ? Codegen.empty() : this.rootPassword;
+    public Optional<Output<String>> rootPassword() {
+        return Optional.ofNullable(this.rootPassword);
     }
 
     /**
@@ -176,193 +176,159 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<DatabaseInstanceSettingsArgs> settings;
+    private @Nullable Output<DatabaseInstanceSettingsArgs> settings;
 
-    public Output<DatabaseInstanceSettingsArgs> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<DatabaseInstanceSettingsArgs>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
-    public DatabaseInstanceArgs(
-        @Nullable Output<DatabaseInstanceCloneArgs> clone,
-        Output<String> databaseVersion,
-        @Nullable Output<Boolean> deletionProtection,
-        @Nullable Output<String> encryptionKeyName,
-        @Nullable Output<String> masterInstanceName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration,
-        @Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext,
-        @Nullable Output<String> rootPassword,
-        @Nullable Output<DatabaseInstanceSettingsArgs> settings) {
-        this.clone = clone;
-        this.databaseVersion = Objects.requireNonNull(databaseVersion, "expected parameter 'databaseVersion' to be non-null");
-        this.deletionProtection = deletionProtection;
-        this.encryptionKeyName = encryptionKeyName;
-        this.masterInstanceName = masterInstanceName;
-        this.name = name;
-        this.project = project;
-        this.region = region;
-        this.replicaConfiguration = replicaConfiguration;
-        this.restoreBackupContext = restoreBackupContext;
-        this.rootPassword = rootPassword;
-        this.settings = settings;
-    }
+    private DatabaseInstanceArgs() {}
 
-    private DatabaseInstanceArgs() {
-        this.clone = Codegen.empty();
-        this.databaseVersion = Codegen.empty();
-        this.deletionProtection = Codegen.empty();
-        this.encryptionKeyName = Codegen.empty();
-        this.masterInstanceName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.replicaConfiguration = Codegen.empty();
-        this.restoreBackupContext = Codegen.empty();
-        this.rootPassword = Codegen.empty();
-        this.settings = Codegen.empty();
+    private DatabaseInstanceArgs(DatabaseInstanceArgs $) {
+        this.clone = $.clone;
+        this.databaseVersion = $.databaseVersion;
+        this.deletionProtection = $.deletionProtection;
+        this.encryptionKeyName = $.encryptionKeyName;
+        this.masterInstanceName = $.masterInstanceName;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.replicaConfiguration = $.replicaConfiguration;
+        this.restoreBackupContext = $.restoreBackupContext;
+        this.rootPassword = $.rootPassword;
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatabaseInstanceCloneArgs> clone;
-        private Output<String> databaseVersion;
-        private @Nullable Output<Boolean> deletionProtection;
-        private @Nullable Output<String> encryptionKeyName;
-        private @Nullable Output<String> masterInstanceName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
-        private @Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
-        private @Nullable Output<String> rootPassword;
-        private @Nullable Output<DatabaseInstanceSettingsArgs> settings;
+        private DatabaseInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceArgs();
         }
 
         public Builder(DatabaseInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clone = defaults.clone;
-    	      this.databaseVersion = defaults.databaseVersion;
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.encryptionKeyName = defaults.encryptionKeyName;
-    	      this.masterInstanceName = defaults.masterInstanceName;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.replicaConfiguration = defaults.replicaConfiguration;
-    	      this.restoreBackupContext = defaults.restoreBackupContext;
-    	      this.rootPassword = defaults.rootPassword;
-    	      this.settings = defaults.settings;
+            $ = new DatabaseInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clone_(@Nullable Output<DatabaseInstanceCloneArgs> clone) {
-            this.clone = clone;
+            $.clone = clone;
             return this;
         }
-        public Builder clone_(@Nullable DatabaseInstanceCloneArgs clone) {
-            this.clone = Codegen.ofNullable(clone);
-            return this;
+
+        public Builder clone_(DatabaseInstanceCloneArgs clone) {
+            return clone_(Output.of(clone));
         }
+
         public Builder databaseVersion(Output<String> databaseVersion) {
-            this.databaseVersion = Objects.requireNonNull(databaseVersion);
+            $.databaseVersion = databaseVersion;
             return this;
         }
+
         public Builder databaseVersion(String databaseVersion) {
-            this.databaseVersion = Output.of(Objects.requireNonNull(databaseVersion));
-            return this;
+            return databaseVersion(Output.of(databaseVersion));
         }
+
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
-            this.deletionProtection = deletionProtection;
+            $.deletionProtection = deletionProtection;
             return this;
         }
-        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Codegen.ofNullable(deletionProtection);
-            return this;
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
+
         public Builder encryptionKeyName(@Nullable Output<String> encryptionKeyName) {
-            this.encryptionKeyName = encryptionKeyName;
+            $.encryptionKeyName = encryptionKeyName;
             return this;
         }
-        public Builder encryptionKeyName(@Nullable String encryptionKeyName) {
-            this.encryptionKeyName = Codegen.ofNullable(encryptionKeyName);
-            return this;
+
+        public Builder encryptionKeyName(String encryptionKeyName) {
+            return encryptionKeyName(Output.of(encryptionKeyName));
         }
+
         public Builder masterInstanceName(@Nullable Output<String> masterInstanceName) {
-            this.masterInstanceName = masterInstanceName;
+            $.masterInstanceName = masterInstanceName;
             return this;
         }
-        public Builder masterInstanceName(@Nullable String masterInstanceName) {
-            this.masterInstanceName = Codegen.ofNullable(masterInstanceName);
-            return this;
+
+        public Builder masterInstanceName(String masterInstanceName) {
+            return masterInstanceName(Output.of(masterInstanceName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder replicaConfiguration(@Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration) {
-            this.replicaConfiguration = replicaConfiguration;
+            $.replicaConfiguration = replicaConfiguration;
             return this;
         }
-        public Builder replicaConfiguration(@Nullable DatabaseInstanceReplicaConfigurationArgs replicaConfiguration) {
-            this.replicaConfiguration = Codegen.ofNullable(replicaConfiguration);
-            return this;
+
+        public Builder replicaConfiguration(DatabaseInstanceReplicaConfigurationArgs replicaConfiguration) {
+            return replicaConfiguration(Output.of(replicaConfiguration));
         }
+
         public Builder restoreBackupContext(@Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext) {
-            this.restoreBackupContext = restoreBackupContext;
+            $.restoreBackupContext = restoreBackupContext;
             return this;
         }
-        public Builder restoreBackupContext(@Nullable DatabaseInstanceRestoreBackupContextArgs restoreBackupContext) {
-            this.restoreBackupContext = Codegen.ofNullable(restoreBackupContext);
-            return this;
+
+        public Builder restoreBackupContext(DatabaseInstanceRestoreBackupContextArgs restoreBackupContext) {
+            return restoreBackupContext(Output.of(restoreBackupContext));
         }
+
         public Builder rootPassword(@Nullable Output<String> rootPassword) {
-            this.rootPassword = rootPassword;
+            $.rootPassword = rootPassword;
             return this;
         }
-        public Builder rootPassword(@Nullable String rootPassword) {
-            this.rootPassword = Codegen.ofNullable(rootPassword);
-            return this;
+
+        public Builder rootPassword(String rootPassword) {
+            return rootPassword(Output.of(rootPassword));
         }
+
         public Builder settings(@Nullable Output<DatabaseInstanceSettingsArgs> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable DatabaseInstanceSettingsArgs settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
-        }        public DatabaseInstanceArgs build() {
-            return new DatabaseInstanceArgs(clone, databaseVersion, deletionProtection, encryptionKeyName, masterInstanceName, name, project, region, replicaConfiguration, restoreBackupContext, rootPassword, settings);
+
+        public Builder settings(DatabaseInstanceSettingsArgs settings) {
+            return settings(Output.of(settings));
+        }
+
+        public DatabaseInstanceArgs build() {
+            $.databaseVersion = Objects.requireNonNull($.databaseVersion, "expected parameter 'databaseVersion' to be non-null");
+            return $;
         }
     }
+
 }

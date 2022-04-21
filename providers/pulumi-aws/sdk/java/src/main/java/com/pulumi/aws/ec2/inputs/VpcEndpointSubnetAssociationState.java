@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpcEndpointSubnetAssociationState extends com.pulumi.resource
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class VpcEndpointSubnetAssociationState extends com.pulumi.resource
      * 
      */
     @Import(name="vpcEndpointId")
-      private final @Nullable Output<String> vpcEndpointId;
+    private @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> vpcEndpointId() {
-        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
+    public Optional<Output<String>> vpcEndpointId() {
+        return Optional.ofNullable(this.vpcEndpointId);
     }
 
-    public VpcEndpointSubnetAssociationState(
-        @Nullable Output<String> subnetId,
-        @Nullable Output<String> vpcEndpointId) {
-        this.subnetId = subnetId;
-        this.vpcEndpointId = vpcEndpointId;
-    }
+    private VpcEndpointSubnetAssociationState() {}
 
-    private VpcEndpointSubnetAssociationState() {
-        this.subnetId = Codegen.empty();
-        this.vpcEndpointId = Codegen.empty();
+    private VpcEndpointSubnetAssociationState(VpcEndpointSubnetAssociationState $) {
+        this.subnetId = $.subnetId;
+        this.vpcEndpointId = $.vpcEndpointId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointSubnetAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<String> vpcEndpointId;
+        private VpcEndpointSubnetAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointSubnetAssociationState();
         }
 
         public Builder(VpcEndpointSubnetAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
-    	      this.vpcEndpointId = defaults.vpcEndpointId;
+            $ = new VpcEndpointSubnetAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
-            this.vpcEndpointId = vpcEndpointId;
+            $.vpcEndpointId = vpcEndpointId;
             return this;
         }
-        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
-            return this;
-        }        public VpcEndpointSubnetAssociationState build() {
-            return new VpcEndpointSubnetAssociationState(subnetId, vpcEndpointId);
+
+        public Builder vpcEndpointId(String vpcEndpointId) {
+            return vpcEndpointId(Output.of(vpcEndpointId));
+        }
+
+        public VpcEndpointSubnetAssociationState build() {
+            return $;
         }
     }
+
 }

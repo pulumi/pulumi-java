@@ -6,9 +6,9 @@ package com.pulumi.aws.autoscaling.inputs;
 import com.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideArgs extends c
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideArgs extends c
      * 
      */
     @Import(name="launchTemplateSpecification")
-      private final @Nullable Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> launchTemplateSpecification;
+    private @Nullable Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
-    public Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> launchTemplateSpecification() {
-        return this.launchTemplateSpecification == null ? Codegen.empty() : this.launchTemplateSpecification;
+    public Optional<Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs>> launchTemplateSpecification() {
+        return Optional.ofNullable(this.launchTemplateSpecification);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideArgs extends c
      * 
      */
     @Import(name="weightedCapacity")
-      private final @Nullable Output<String> weightedCapacity;
+    private @Nullable Output<String> weightedCapacity;
 
-    public Output<String> weightedCapacity() {
-        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
+    public Optional<Output<String>> weightedCapacity() {
+        return Optional.ofNullable(this.weightedCapacity);
     }
 
-    public GroupMixedInstancesPolicyLaunchTemplateOverrideArgs(
-        @Nullable Output<String> instanceType,
-        @Nullable Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> launchTemplateSpecification,
-        @Nullable Output<String> weightedCapacity) {
-        this.instanceType = instanceType;
-        this.launchTemplateSpecification = launchTemplateSpecification;
-        this.weightedCapacity = weightedCapacity;
-    }
+    private GroupMixedInstancesPolicyLaunchTemplateOverrideArgs() {}
 
-    private GroupMixedInstancesPolicyLaunchTemplateOverrideArgs() {
-        this.instanceType = Codegen.empty();
-        this.launchTemplateSpecification = Codegen.empty();
-        this.weightedCapacity = Codegen.empty();
+    private GroupMixedInstancesPolicyLaunchTemplateOverrideArgs(GroupMixedInstancesPolicyLaunchTemplateOverrideArgs $) {
+        this.instanceType = $.instanceType;
+        this.launchTemplateSpecification = $.launchTemplateSpecification;
+        this.weightedCapacity = $.weightedCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMixedInstancesPolicyLaunchTemplateOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> launchTemplateSpecification;
-        private @Nullable Output<String> weightedCapacity;
+        private GroupMixedInstancesPolicyLaunchTemplateOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMixedInstancesPolicyLaunchTemplateOverrideArgs();
         }
 
         public Builder(GroupMixedInstancesPolicyLaunchTemplateOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.launchTemplateSpecification = defaults.launchTemplateSpecification;
-    	      this.weightedCapacity = defaults.weightedCapacity;
+            $ = new GroupMixedInstancesPolicyLaunchTemplateOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder launchTemplateSpecification(@Nullable Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> launchTemplateSpecification) {
-            this.launchTemplateSpecification = launchTemplateSpecification;
+            $.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
-        public Builder launchTemplateSpecification(@Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs launchTemplateSpecification) {
-            this.launchTemplateSpecification = Codegen.ofNullable(launchTemplateSpecification);
-            return this;
+
+        public Builder launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs launchTemplateSpecification) {
+            return launchTemplateSpecification(Output.of(launchTemplateSpecification));
         }
+
         public Builder weightedCapacity(@Nullable Output<String> weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
+            $.weightedCapacity = weightedCapacity;
             return this;
         }
-        public Builder weightedCapacity(@Nullable String weightedCapacity) {
-            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
-            return this;
-        }        public GroupMixedInstancesPolicyLaunchTemplateOverrideArgs build() {
-            return new GroupMixedInstancesPolicyLaunchTemplateOverrideArgs(instanceType, launchTemplateSpecification, weightedCapacity);
+
+        public Builder weightedCapacity(String weightedCapacity) {
+            return weightedCapacity(Output.of(weightedCapacity));
+        }
+
+        public GroupMixedInstancesPolicyLaunchTemplateOverrideArgs build() {
+            return $;
         }
     }
+
 }

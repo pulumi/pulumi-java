@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends com
      * 
      */
     @Import(name="abortedCount", required=true)
-      private final String abortedCount;
+    private String abortedCount;
 
     public String abortedCount() {
         return this.abortedCount;
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends com
      * 
      */
     @Import(name="pendingCount", required=true)
-      private final String pendingCount;
+    private String pendingCount;
 
     public String pendingCount() {
         return this.pendingCount;
@@ -43,64 +43,59 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends com
      * 
      */
     @Import(name="processedCount", required=true)
-      private final String processedCount;
+    private String processedCount;
 
     public String processedCount() {
         return this.processedCount;
     }
 
-    public GooglePrivacyDlpV2HybridInspectStatisticsResponse(
-        String abortedCount,
-        String pendingCount,
-        String processedCount) {
-        this.abortedCount = Objects.requireNonNull(abortedCount, "expected parameter 'abortedCount' to be non-null");
-        this.pendingCount = Objects.requireNonNull(pendingCount, "expected parameter 'pendingCount' to be non-null");
-        this.processedCount = Objects.requireNonNull(processedCount, "expected parameter 'processedCount' to be non-null");
-    }
+    private GooglePrivacyDlpV2HybridInspectStatisticsResponse() {}
 
-    private GooglePrivacyDlpV2HybridInspectStatisticsResponse() {
-        this.abortedCount = null;
-        this.pendingCount = null;
-        this.processedCount = null;
+    private GooglePrivacyDlpV2HybridInspectStatisticsResponse(GooglePrivacyDlpV2HybridInspectStatisticsResponse $) {
+        this.abortedCount = $.abortedCount;
+        this.pendingCount = $.pendingCount;
+        this.processedCount = $.processedCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2HybridInspectStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String abortedCount;
-        private String pendingCount;
-        private String processedCount;
+        private GooglePrivacyDlpV2HybridInspectStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2HybridInspectStatisticsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2HybridInspectStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abortedCount = defaults.abortedCount;
-    	      this.pendingCount = defaults.pendingCount;
-    	      this.processedCount = defaults.processedCount;
+            $ = new GooglePrivacyDlpV2HybridInspectStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder abortedCount(String abortedCount) {
-            this.abortedCount = Objects.requireNonNull(abortedCount);
+            $.abortedCount = abortedCount;
             return this;
         }
+
         public Builder pendingCount(String pendingCount) {
-            this.pendingCount = Objects.requireNonNull(pendingCount);
+            $.pendingCount = pendingCount;
             return this;
         }
+
         public Builder processedCount(String processedCount) {
-            this.processedCount = Objects.requireNonNull(processedCount);
+            $.processedCount = processedCount;
             return this;
-        }        public GooglePrivacyDlpV2HybridInspectStatisticsResponse build() {
-            return new GooglePrivacyDlpV2HybridInspectStatisticsResponse(abortedCount, pendingCount, processedCount);
+        }
+
+        public GooglePrivacyDlpV2HybridInspectStatisticsResponse build() {
+            $.abortedCount = Objects.requireNonNull($.abortedCount, "expected parameter 'abortedCount' to be non-null");
+            $.pendingCount = Objects.requireNonNull($.pendingCount, "expected parameter 'pendingCount' to be non-null");
+            $.processedCount = Objects.requireNonNull($.processedCount, "expected parameter 'processedCount' to be non-null");
+            return $;
         }
     }
+
 }

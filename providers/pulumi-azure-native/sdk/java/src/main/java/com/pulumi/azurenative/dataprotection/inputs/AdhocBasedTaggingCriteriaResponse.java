@@ -23,45 +23,44 @@ public final class AdhocBasedTaggingCriteriaResponse extends com.pulumi.resource
      * 
      */
     @Import(name="tagInfo")
-      private final @Nullable RetentionTagResponse tagInfo;
+    private @Nullable RetentionTagResponse tagInfo;
 
     public Optional<RetentionTagResponse> tagInfo() {
-        return this.tagInfo == null ? Optional.empty() : Optional.ofNullable(this.tagInfo);
+        return Optional.ofNullable(this.tagInfo);
     }
 
-    public AdhocBasedTaggingCriteriaResponse(@Nullable RetentionTagResponse tagInfo) {
-        this.tagInfo = tagInfo;
-    }
+    private AdhocBasedTaggingCriteriaResponse() {}
 
-    private AdhocBasedTaggingCriteriaResponse() {
-        this.tagInfo = null;
+    private AdhocBasedTaggingCriteriaResponse(AdhocBasedTaggingCriteriaResponse $) {
+        this.tagInfo = $.tagInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdhocBasedTaggingCriteriaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RetentionTagResponse tagInfo;
+        private AdhocBasedTaggingCriteriaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdhocBasedTaggingCriteriaResponse();
         }
 
         public Builder(AdhocBasedTaggingCriteriaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tagInfo = defaults.tagInfo;
+            $ = new AdhocBasedTaggingCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder tagInfo(@Nullable RetentionTagResponse tagInfo) {
-            this.tagInfo = tagInfo;
+            $.tagInfo = tagInfo;
             return this;
-        }        public AdhocBasedTaggingCriteriaResponse build() {
-            return new AdhocBasedTaggingCriteriaResponse(tagInfo);
+        }
+
+        public AdhocBasedTaggingCriteriaResponse build() {
+            return $;
         }
     }
+
 }

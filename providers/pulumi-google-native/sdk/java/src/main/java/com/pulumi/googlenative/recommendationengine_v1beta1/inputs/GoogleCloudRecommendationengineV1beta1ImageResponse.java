@@ -22,7 +22,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends c
      * 
      */
     @Import(name="height", required=true)
-      private final Integer height;
+    private Integer height;
 
     public Integer height() {
         return this.height;
@@ -33,7 +33,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends c
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
@@ -44,64 +44,59 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends c
      * 
      */
     @Import(name="width", required=true)
-      private final Integer width;
+    private Integer width;
 
     public Integer width() {
         return this.width;
     }
 
-    public GoogleCloudRecommendationengineV1beta1ImageResponse(
-        Integer height,
-        String uri,
-        Integer width) {
-        this.height = Objects.requireNonNull(height, "expected parameter 'height' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.width = Objects.requireNonNull(width, "expected parameter 'width' to be non-null");
-    }
+    private GoogleCloudRecommendationengineV1beta1ImageResponse() {}
 
-    private GoogleCloudRecommendationengineV1beta1ImageResponse() {
-        this.height = null;
-        this.uri = null;
-        this.width = null;
+    private GoogleCloudRecommendationengineV1beta1ImageResponse(GoogleCloudRecommendationengineV1beta1ImageResponse $) {
+        this.height = $.height;
+        this.uri = $.uri;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecommendationengineV1beta1ImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer height;
-        private String uri;
-        private Integer width;
+        private GoogleCloudRecommendationengineV1beta1ImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecommendationengineV1beta1ImageResponse();
         }
 
         public Builder(GoogleCloudRecommendationengineV1beta1ImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.uri = defaults.uri;
-    	      this.width = defaults.width;
+            $ = new GoogleCloudRecommendationengineV1beta1ImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder height(Integer height) {
-            this.height = Objects.requireNonNull(height);
+            $.height = height;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder width(Integer width) {
-            this.width = Objects.requireNonNull(width);
+            $.width = width;
             return this;
-        }        public GoogleCloudRecommendationengineV1beta1ImageResponse build() {
-            return new GoogleCloudRecommendationengineV1beta1ImageResponse(height, uri, width);
+        }
+
+        public GoogleCloudRecommendationengineV1beta1ImageResponse build() {
+            $.height = Objects.requireNonNull($.height, "expected parameter 'height' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            $.width = Objects.requireNonNull($.width, "expected parameter 'width' to be non-null");
+            return $;
         }
     }
+
 }

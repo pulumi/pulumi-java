@@ -17,7 +17,7 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
@@ -28,7 +28,7 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetReplicationPolicyArgs(
-        String policyName,
-        String resourceGroupName,
-        String resourceName) {
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetReplicationPolicyArgs() {}
 
-    private GetReplicationPolicyArgs() {
-        this.policyName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetReplicationPolicyArgs(GetReplicationPolicyArgs $) {
+        this.policyName = $.policyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetReplicationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationPolicyArgs();
         }
 
         public Builder(GetReplicationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyName = defaults.policyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetReplicationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetReplicationPolicyArgs build() {
-            return new GetReplicationPolicyArgs(policyName, resourceGroupName, resourceName);
+        }
+
+        public GetReplicationPolicyArgs build() {
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

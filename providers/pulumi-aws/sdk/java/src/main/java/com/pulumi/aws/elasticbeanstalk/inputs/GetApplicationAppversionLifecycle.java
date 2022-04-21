@@ -19,7 +19,7 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
      * 
      */
     @Import(name="deleteSourceFromS3", required=true)
-      private final Boolean deleteSourceFromS3;
+    private Boolean deleteSourceFromS3;
 
     public Boolean deleteSourceFromS3() {
         return this.deleteSourceFromS3;
@@ -30,7 +30,7 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
      * 
      */
     @Import(name="maxAgeInDays", required=true)
-      private final Integer maxAgeInDays;
+    private Integer maxAgeInDays;
 
     public Integer maxAgeInDays() {
         return this.maxAgeInDays;
@@ -41,7 +41,7 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
      * 
      */
     @Import(name="maxCount", required=true)
-      private final Integer maxCount;
+    private Integer maxCount;
 
     public Integer maxCount() {
         return this.maxCount;
@@ -52,73 +52,66 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
      * 
      */
     @Import(name="serviceRole", required=true)
-      private final String serviceRole;
+    private String serviceRole;
 
     public String serviceRole() {
         return this.serviceRole;
     }
 
-    public GetApplicationAppversionLifecycle(
-        Boolean deleteSourceFromS3,
-        Integer maxAgeInDays,
-        Integer maxCount,
-        String serviceRole) {
-        this.deleteSourceFromS3 = Objects.requireNonNull(deleteSourceFromS3, "expected parameter 'deleteSourceFromS3' to be non-null");
-        this.maxAgeInDays = Objects.requireNonNull(maxAgeInDays, "expected parameter 'maxAgeInDays' to be non-null");
-        this.maxCount = Objects.requireNonNull(maxCount, "expected parameter 'maxCount' to be non-null");
-        this.serviceRole = Objects.requireNonNull(serviceRole, "expected parameter 'serviceRole' to be non-null");
-    }
+    private GetApplicationAppversionLifecycle() {}
 
-    private GetApplicationAppversionLifecycle() {
-        this.deleteSourceFromS3 = null;
-        this.maxAgeInDays = null;
-        this.maxCount = null;
-        this.serviceRole = null;
+    private GetApplicationAppversionLifecycle(GetApplicationAppversionLifecycle $) {
+        this.deleteSourceFromS3 = $.deleteSourceFromS3;
+        this.maxAgeInDays = $.maxAgeInDays;
+        this.maxCount = $.maxCount;
+        this.serviceRole = $.serviceRole;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationAppversionLifecycle defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean deleteSourceFromS3;
-        private Integer maxAgeInDays;
-        private Integer maxCount;
-        private String serviceRole;
+        private GetApplicationAppversionLifecycle $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationAppversionLifecycle();
         }
 
         public Builder(GetApplicationAppversionLifecycle defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteSourceFromS3 = defaults.deleteSourceFromS3;
-    	      this.maxAgeInDays = defaults.maxAgeInDays;
-    	      this.maxCount = defaults.maxCount;
-    	      this.serviceRole = defaults.serviceRole;
+            $ = new GetApplicationAppversionLifecycle(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteSourceFromS3(Boolean deleteSourceFromS3) {
-            this.deleteSourceFromS3 = Objects.requireNonNull(deleteSourceFromS3);
+            $.deleteSourceFromS3 = deleteSourceFromS3;
             return this;
         }
+
         public Builder maxAgeInDays(Integer maxAgeInDays) {
-            this.maxAgeInDays = Objects.requireNonNull(maxAgeInDays);
+            $.maxAgeInDays = maxAgeInDays;
             return this;
         }
+
         public Builder maxCount(Integer maxCount) {
-            this.maxCount = Objects.requireNonNull(maxCount);
+            $.maxCount = maxCount;
             return this;
         }
+
         public Builder serviceRole(String serviceRole) {
-            this.serviceRole = Objects.requireNonNull(serviceRole);
+            $.serviceRole = serviceRole;
             return this;
-        }        public GetApplicationAppversionLifecycle build() {
-            return new GetApplicationAppversionLifecycle(deleteSourceFromS3, maxAgeInDays, maxCount, serviceRole);
+        }
+
+        public GetApplicationAppversionLifecycle build() {
+            $.deleteSourceFromS3 = Objects.requireNonNull($.deleteSourceFromS3, "expected parameter 'deleteSourceFromS3' to be non-null");
+            $.maxAgeInDays = Objects.requireNonNull($.maxAgeInDays, "expected parameter 'maxAgeInDays' to be non-null");
+            $.maxCount = Objects.requireNonNull($.maxCount, "expected parameter 'maxCount' to be non-null");
+            $.serviceRole = Objects.requireNonNull($.serviceRole, "expected parameter 'serviceRole' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.random;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="byteLength", required=true)
-      private final Output<Integer> byteLength;
+    private Output<Integer> byteLength;
 
     public Output<Integer> byteLength() {
         return this.byteLength;
@@ -34,10 +34,10 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keepers")
-      private final @Nullable Output<Map<String,Object>> keepers;
+    private @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> keepers() {
-        return this.keepers == null ? Codegen.empty() : this.keepers;
+    public Optional<Output<Map<String,Object>>> keepers() {
+        return Optional.ofNullable(this.keepers);
     }
 
     /**
@@ -45,76 +45,69 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public RandomIdArgs(
-        Output<Integer> byteLength,
-        @Nullable Output<Map<String,Object>> keepers,
-        @Nullable Output<String> prefix) {
-        this.byteLength = Objects.requireNonNull(byteLength, "expected parameter 'byteLength' to be non-null");
-        this.keepers = keepers;
-        this.prefix = prefix;
-    }
+    private RandomIdArgs() {}
 
-    private RandomIdArgs() {
-        this.byteLength = Codegen.empty();
-        this.keepers = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private RandomIdArgs(RandomIdArgs $) {
+        this.byteLength = $.byteLength;
+        this.keepers = $.keepers;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RandomIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> byteLength;
-        private @Nullable Output<Map<String,Object>> keepers;
-        private @Nullable Output<String> prefix;
+        private RandomIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RandomIdArgs();
         }
 
         public Builder(RandomIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.byteLength = defaults.byteLength;
-    	      this.keepers = defaults.keepers;
-    	      this.prefix = defaults.prefix;
+            $ = new RandomIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder byteLength(Output<Integer> byteLength) {
-            this.byteLength = Objects.requireNonNull(byteLength);
+            $.byteLength = byteLength;
             return this;
         }
+
         public Builder byteLength(Integer byteLength) {
-            this.byteLength = Output.of(Objects.requireNonNull(byteLength));
-            return this;
+            return byteLength(Output.of(byteLength));
         }
+
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
-            this.keepers = keepers;
+            $.keepers = keepers;
             return this;
         }
-        public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Codegen.ofNullable(keepers);
-            return this;
+
+        public Builder keepers(Map<String,Object> keepers) {
+            return keepers(Output.of(keepers));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public RandomIdArgs build() {
-            return new RandomIdArgs(byteLength, keepers, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public RandomIdArgs build() {
+            $.byteLength = Objects.requireNonNull($.byteLength, "expected parameter 'byteLength' to be non-null");
+            return $;
         }
     }
+
 }

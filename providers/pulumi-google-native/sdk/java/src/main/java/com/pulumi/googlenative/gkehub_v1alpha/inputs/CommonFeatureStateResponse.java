@@ -23,7 +23,7 @@ public final class CommonFeatureStateResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="appdevexperience", required=true)
-      private final AppDevExperienceFeatureStateResponse appdevexperience;
+    private AppDevExperienceFeatureStateResponse appdevexperience;
 
     public AppDevExperienceFeatureStateResponse appdevexperience() {
         return this.appdevexperience;
@@ -34,7 +34,7 @@ public final class CommonFeatureStateResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="servicemesh", required=true)
-      private final ServiceMeshFeatureStateResponse servicemesh;
+    private ServiceMeshFeatureStateResponse servicemesh;
 
     public ServiceMeshFeatureStateResponse servicemesh() {
         return this.servicemesh;
@@ -45,64 +45,59 @@ public final class CommonFeatureStateResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state", required=true)
-      private final FeatureStateResponse state;
+    private FeatureStateResponse state;
 
     public FeatureStateResponse state() {
         return this.state;
     }
 
-    public CommonFeatureStateResponse(
-        AppDevExperienceFeatureStateResponse appdevexperience,
-        ServiceMeshFeatureStateResponse servicemesh,
-        FeatureStateResponse state) {
-        this.appdevexperience = Objects.requireNonNull(appdevexperience, "expected parameter 'appdevexperience' to be non-null");
-        this.servicemesh = Objects.requireNonNull(servicemesh, "expected parameter 'servicemesh' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private CommonFeatureStateResponse() {}
 
-    private CommonFeatureStateResponse() {
-        this.appdevexperience = null;
-        this.servicemesh = null;
-        this.state = null;
+    private CommonFeatureStateResponse(CommonFeatureStateResponse $) {
+        this.appdevexperience = $.appdevexperience;
+        this.servicemesh = $.servicemesh;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommonFeatureStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AppDevExperienceFeatureStateResponse appdevexperience;
-        private ServiceMeshFeatureStateResponse servicemesh;
-        private FeatureStateResponse state;
+        private CommonFeatureStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommonFeatureStateResponse();
         }
 
         public Builder(CommonFeatureStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appdevexperience = defaults.appdevexperience;
-    	      this.servicemesh = defaults.servicemesh;
-    	      this.state = defaults.state;
+            $ = new CommonFeatureStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appdevexperience(AppDevExperienceFeatureStateResponse appdevexperience) {
-            this.appdevexperience = Objects.requireNonNull(appdevexperience);
+            $.appdevexperience = appdevexperience;
             return this;
         }
+
         public Builder servicemesh(ServiceMeshFeatureStateResponse servicemesh) {
-            this.servicemesh = Objects.requireNonNull(servicemesh);
+            $.servicemesh = servicemesh;
             return this;
         }
+
         public Builder state(FeatureStateResponse state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public CommonFeatureStateResponse build() {
-            return new CommonFeatureStateResponse(appdevexperience, servicemesh, state);
+        }
+
+        public CommonFeatureStateResponse build() {
+            $.appdevexperience = Objects.requireNonNull($.appdevexperience, "expected parameter 'appdevexperience' to be non-null");
+            $.servicemesh = Objects.requireNonNull($.servicemesh, "expected parameter 'servicemesh' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

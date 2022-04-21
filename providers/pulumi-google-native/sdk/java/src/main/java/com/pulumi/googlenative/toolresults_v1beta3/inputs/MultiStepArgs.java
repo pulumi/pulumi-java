@@ -5,11 +5,11 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.PrimaryStepArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MultiStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="multistepNumber")
-      private final @Nullable Output<Integer> multistepNumber;
+    private @Nullable Output<Integer> multistepNumber;
 
-    public Output<Integer> multistepNumber() {
-        return this.multistepNumber == null ? Codegen.empty() : this.multistepNumber;
+    public Optional<Output<Integer>> multistepNumber() {
+        return Optional.ofNullable(this.multistepNumber);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MultiStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryStep")
-      private final @Nullable Output<PrimaryStepArgs> primaryStep;
+    private @Nullable Output<PrimaryStepArgs> primaryStep;
 
-    public Output<PrimaryStepArgs> primaryStep() {
-        return this.primaryStep == null ? Codegen.empty() : this.primaryStep;
+    public Optional<Output<PrimaryStepArgs>> primaryStep() {
+        return Optional.ofNullable(this.primaryStep);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class MultiStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryStepId")
-      private final @Nullable Output<String> primaryStepId;
+    private @Nullable Output<String> primaryStepId;
 
-    public Output<String> primaryStepId() {
-        return this.primaryStepId == null ? Codegen.empty() : this.primaryStepId;
+    public Optional<Output<String>> primaryStepId() {
+        return Optional.ofNullable(this.primaryStepId);
     }
 
-    public MultiStepArgs(
-        @Nullable Output<Integer> multistepNumber,
-        @Nullable Output<PrimaryStepArgs> primaryStep,
-        @Nullable Output<String> primaryStepId) {
-        this.multistepNumber = multistepNumber;
-        this.primaryStep = primaryStep;
-        this.primaryStepId = primaryStepId;
-    }
+    private MultiStepArgs() {}
 
-    private MultiStepArgs() {
-        this.multistepNumber = Codegen.empty();
-        this.primaryStep = Codegen.empty();
-        this.primaryStepId = Codegen.empty();
+    private MultiStepArgs(MultiStepArgs $) {
+        this.multistepNumber = $.multistepNumber;
+        this.primaryStep = $.primaryStep;
+        this.primaryStepId = $.primaryStepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> multistepNumber;
-        private @Nullable Output<PrimaryStepArgs> primaryStep;
-        private @Nullable Output<String> primaryStepId;
+        private MultiStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiStepArgs();
         }
 
         public Builder(MultiStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.multistepNumber = defaults.multistepNumber;
-    	      this.primaryStep = defaults.primaryStep;
-    	      this.primaryStepId = defaults.primaryStepId;
+            $ = new MultiStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder multistepNumber(@Nullable Output<Integer> multistepNumber) {
-            this.multistepNumber = multistepNumber;
+            $.multistepNumber = multistepNumber;
             return this;
         }
-        public Builder multistepNumber(@Nullable Integer multistepNumber) {
-            this.multistepNumber = Codegen.ofNullable(multistepNumber);
-            return this;
+
+        public Builder multistepNumber(Integer multistepNumber) {
+            return multistepNumber(Output.of(multistepNumber));
         }
+
         public Builder primaryStep(@Nullable Output<PrimaryStepArgs> primaryStep) {
-            this.primaryStep = primaryStep;
+            $.primaryStep = primaryStep;
             return this;
         }
-        public Builder primaryStep(@Nullable PrimaryStepArgs primaryStep) {
-            this.primaryStep = Codegen.ofNullable(primaryStep);
-            return this;
+
+        public Builder primaryStep(PrimaryStepArgs primaryStep) {
+            return primaryStep(Output.of(primaryStep));
         }
+
         public Builder primaryStepId(@Nullable Output<String> primaryStepId) {
-            this.primaryStepId = primaryStepId;
+            $.primaryStepId = primaryStepId;
             return this;
         }
-        public Builder primaryStepId(@Nullable String primaryStepId) {
-            this.primaryStepId = Codegen.ofNullable(primaryStepId);
-            return this;
-        }        public MultiStepArgs build() {
-            return new MultiStepArgs(multistepNumber, primaryStep, primaryStepId);
+
+        public Builder primaryStepId(String primaryStepId) {
+            return primaryStepId(Output.of(primaryStepId));
+        }
+
+        public MultiStepArgs build() {
+            return $;
         }
     }
+
 }

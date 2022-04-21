@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DiagnosticLoggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="diagnosticId", required=true)
-      private final Output<String> diagnosticId;
+    private Output<String> diagnosticId;
 
     public Output<String> diagnosticId() {
         return this.diagnosticId;
@@ -31,10 +31,10 @@ public final class DiagnosticLoggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="loggerid")
-      private final @Nullable Output<String> loggerid;
+    private @Nullable Output<String> loggerid;
 
-    public Output<String> loggerid() {
-        return this.loggerid == null ? Codegen.empty() : this.loggerid;
+    public Optional<Output<String>> loggerid() {
+        return Optional.ofNullable(this.loggerid);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class DiagnosticLoggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,89 +53,81 @@ public final class DiagnosticLoggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public DiagnosticLoggerArgs(
-        Output<String> diagnosticId,
-        @Nullable Output<String> loggerid,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.diagnosticId = Objects.requireNonNull(diagnosticId, "expected parameter 'diagnosticId' to be non-null");
-        this.loggerid = loggerid;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private DiagnosticLoggerArgs() {}
 
-    private DiagnosticLoggerArgs() {
-        this.diagnosticId = Codegen.empty();
-        this.loggerid = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private DiagnosticLoggerArgs(DiagnosticLoggerArgs $) {
+        this.diagnosticId = $.diagnosticId;
+        this.loggerid = $.loggerid;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticLoggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> diagnosticId;
-        private @Nullable Output<String> loggerid;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private DiagnosticLoggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticLoggerArgs();
         }
 
         public Builder(DiagnosticLoggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diagnosticId = defaults.diagnosticId;
-    	      this.loggerid = defaults.loggerid;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new DiagnosticLoggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diagnosticId(Output<String> diagnosticId) {
-            this.diagnosticId = Objects.requireNonNull(diagnosticId);
+            $.diagnosticId = diagnosticId;
             return this;
         }
+
         public Builder diagnosticId(String diagnosticId) {
-            this.diagnosticId = Output.of(Objects.requireNonNull(diagnosticId));
-            return this;
+            return diagnosticId(Output.of(diagnosticId));
         }
+
         public Builder loggerid(@Nullable Output<String> loggerid) {
-            this.loggerid = loggerid;
+            $.loggerid = loggerid;
             return this;
         }
-        public Builder loggerid(@Nullable String loggerid) {
-            this.loggerid = Codegen.ofNullable(loggerid);
-            return this;
+
+        public Builder loggerid(String loggerid) {
+            return loggerid(Output.of(loggerid));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public DiagnosticLoggerArgs build() {
-            return new DiagnosticLoggerArgs(diagnosticId, loggerid, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public DiagnosticLoggerArgs build() {
+            $.diagnosticId = Objects.requireNonNull($.diagnosticId, "expected parameter 'diagnosticId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

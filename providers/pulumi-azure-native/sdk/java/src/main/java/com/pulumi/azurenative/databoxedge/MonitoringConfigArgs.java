@@ -6,7 +6,6 @@ package com.pulumi.azurenative.databoxedge;
 import com.pulumi.azurenative.databoxedge.inputs.MetricConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -32,7 +31,7 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="metricConfigurations", required=true)
-      private final Output<List<MetricConfigurationArgs>> metricConfigurations;
+    private Output<List<MetricConfigurationArgs>> metricConfigurations;
 
     public Output<List<MetricConfigurationArgs>> metricConfigurations() {
         return this.metricConfigurations;
@@ -43,7 +42,7 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,92 +53,86 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="roleName", required=true)
-      private final Output<String> roleName;
+    private Output<String> roleName;
 
     public Output<String> roleName() {
         return this.roleName;
     }
 
-    public MonitoringConfigArgs(
-        Output<String> deviceName,
-        Output<List<MetricConfigurationArgs>> metricConfigurations,
-        Output<String> resourceGroupName,
-        Output<String> roleName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.metricConfigurations = Objects.requireNonNull(metricConfigurations, "expected parameter 'metricConfigurations' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleName = Objects.requireNonNull(roleName, "expected parameter 'roleName' to be non-null");
-    }
+    private MonitoringConfigArgs() {}
 
-    private MonitoringConfigArgs() {
-        this.deviceName = Codegen.empty();
-        this.metricConfigurations = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.roleName = Codegen.empty();
+    private MonitoringConfigArgs(MonitoringConfigArgs $) {
+        this.deviceName = $.deviceName;
+        this.metricConfigurations = $.metricConfigurations;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleName = $.roleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deviceName;
-        private Output<List<MetricConfigurationArgs>> metricConfigurations;
-        private Output<String> resourceGroupName;
-        private Output<String> roleName;
+        private MonitoringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringConfigArgs();
         }
 
         public Builder(MonitoringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.metricConfigurations = defaults.metricConfigurations;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleName = defaults.roleName;
+            $ = new MonitoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder metricConfigurations(Output<List<MetricConfigurationArgs>> metricConfigurations) {
-            this.metricConfigurations = Objects.requireNonNull(metricConfigurations);
+            $.metricConfigurations = metricConfigurations;
             return this;
         }
+
         public Builder metricConfigurations(List<MetricConfigurationArgs> metricConfigurations) {
-            this.metricConfigurations = Output.of(Objects.requireNonNull(metricConfigurations));
-            return this;
+            return metricConfigurations(Output.of(metricConfigurations));
         }
+
         public Builder metricConfigurations(MetricConfigurationArgs... metricConfigurations) {
             return metricConfigurations(List.of(metricConfigurations));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder roleName(Output<String> roleName) {
-            this.roleName = Objects.requireNonNull(roleName);
+            $.roleName = roleName;
             return this;
         }
+
         public Builder roleName(String roleName) {
-            this.roleName = Output.of(Objects.requireNonNull(roleName));
-            return this;
-        }        public MonitoringConfigArgs build() {
-            return new MonitoringConfigArgs(deviceName, metricConfigurations, resourceGroupName, roleName);
+            return roleName(Output.of(roleName));
+        }
+
+        public MonitoringConfigArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.metricConfigurations = Objects.requireNonNull($.metricConfigurations, "expected parameter 'metricConfigurations' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.roleName = Objects.requireNonNull($.roleName, "expected parameter 'roleName' to be non-null");
+            return $;
         }
     }
+
 }

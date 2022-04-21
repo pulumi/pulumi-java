@@ -5,9 +5,9 @@ package com.pulumi.awsnative.groundstation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ConfigDataflowEndpointConfigArgs extends com.pulumi.resources
     public static final ConfigDataflowEndpointConfigArgs Empty = new ConfigDataflowEndpointConfigArgs();
 
     @Import(name="dataflowEndpointName")
-      private final @Nullable Output<String> dataflowEndpointName;
+    private @Nullable Output<String> dataflowEndpointName;
 
-    public Output<String> dataflowEndpointName() {
-        return this.dataflowEndpointName == null ? Codegen.empty() : this.dataflowEndpointName;
+    public Optional<Output<String>> dataflowEndpointName() {
+        return Optional.ofNullable(this.dataflowEndpointName);
     }
 
     @Import(name="dataflowEndpointRegion")
-      private final @Nullable Output<String> dataflowEndpointRegion;
+    private @Nullable Output<String> dataflowEndpointRegion;
 
-    public Output<String> dataflowEndpointRegion() {
-        return this.dataflowEndpointRegion == null ? Codegen.empty() : this.dataflowEndpointRegion;
+    public Optional<Output<String>> dataflowEndpointRegion() {
+        return Optional.ofNullable(this.dataflowEndpointRegion);
     }
 
-    public ConfigDataflowEndpointConfigArgs(
-        @Nullable Output<String> dataflowEndpointName,
-        @Nullable Output<String> dataflowEndpointRegion) {
-        this.dataflowEndpointName = dataflowEndpointName;
-        this.dataflowEndpointRegion = dataflowEndpointRegion;
-    }
+    private ConfigDataflowEndpointConfigArgs() {}
 
-    private ConfigDataflowEndpointConfigArgs() {
-        this.dataflowEndpointName = Codegen.empty();
-        this.dataflowEndpointRegion = Codegen.empty();
+    private ConfigDataflowEndpointConfigArgs(ConfigDataflowEndpointConfigArgs $) {
+        this.dataflowEndpointName = $.dataflowEndpointName;
+        this.dataflowEndpointRegion = $.dataflowEndpointRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigDataflowEndpointConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataflowEndpointName;
-        private @Nullable Output<String> dataflowEndpointRegion;
+        private ConfigDataflowEndpointConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigDataflowEndpointConfigArgs();
         }
 
         public Builder(ConfigDataflowEndpointConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataflowEndpointName = defaults.dataflowEndpointName;
-    	      this.dataflowEndpointRegion = defaults.dataflowEndpointRegion;
+            $ = new ConfigDataflowEndpointConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataflowEndpointName(@Nullable Output<String> dataflowEndpointName) {
-            this.dataflowEndpointName = dataflowEndpointName;
+            $.dataflowEndpointName = dataflowEndpointName;
             return this;
         }
-        public Builder dataflowEndpointName(@Nullable String dataflowEndpointName) {
-            this.dataflowEndpointName = Codegen.ofNullable(dataflowEndpointName);
-            return this;
+
+        public Builder dataflowEndpointName(String dataflowEndpointName) {
+            return dataflowEndpointName(Output.of(dataflowEndpointName));
         }
+
         public Builder dataflowEndpointRegion(@Nullable Output<String> dataflowEndpointRegion) {
-            this.dataflowEndpointRegion = dataflowEndpointRegion;
+            $.dataflowEndpointRegion = dataflowEndpointRegion;
             return this;
         }
-        public Builder dataflowEndpointRegion(@Nullable String dataflowEndpointRegion) {
-            this.dataflowEndpointRegion = Codegen.ofNullable(dataflowEndpointRegion);
-            return this;
-        }        public ConfigDataflowEndpointConfigArgs build() {
-            return new ConfigDataflowEndpointConfigArgs(dataflowEndpointName, dataflowEndpointRegion);
+
+        public Builder dataflowEndpointRegion(String dataflowEndpointRegion) {
+            return dataflowEndpointRegion(Output.of(dataflowEndpointRegion));
+        }
+
+        public ConfigDataflowEndpointConfigArgs build() {
+            return $;
         }
     }
+
 }

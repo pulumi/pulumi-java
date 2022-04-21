@@ -5,12 +5,12 @@ package com.pulumi.googlenative.pubsublite_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.pubsublite_v1.inputs.PartitionConfigArgs;
 import com.pulumi.googlenative.pubsublite_v1.inputs.ReservationConfigArgs;
 import com.pulumi.googlenative.pubsublite_v1.inputs.RetentionConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,10 +19,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     public static final TopicArgs Empty = new TopicArgs();
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -41,17 +41,17 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionConfig")
-      private final @Nullable Output<PartitionConfigArgs> partitionConfig;
+    private @Nullable Output<PartitionConfigArgs> partitionConfig;
 
-    public Output<PartitionConfigArgs> partitionConfig() {
-        return this.partitionConfig == null ? Codegen.empty() : this.partitionConfig;
+    public Optional<Output<PartitionConfigArgs>> partitionConfig() {
+        return Optional.ofNullable(this.partitionConfig);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservationConfig")
-      private final @Nullable Output<ReservationConfigArgs> reservationConfig;
+    private @Nullable Output<ReservationConfigArgs> reservationConfig;
 
-    public Output<ReservationConfigArgs> reservationConfig() {
-        return this.reservationConfig == null ? Codegen.empty() : this.reservationConfig;
+    public Optional<Output<ReservationConfigArgs>> reservationConfig() {
+        return Optional.ofNullable(this.reservationConfig);
     }
 
     /**
@@ -70,135 +70,116 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionConfig")
-      private final @Nullable Output<RetentionConfigArgs> retentionConfig;
+    private @Nullable Output<RetentionConfigArgs> retentionConfig;
 
-    public Output<RetentionConfigArgs> retentionConfig() {
-        return this.retentionConfig == null ? Codegen.empty() : this.retentionConfig;
+    public Optional<Output<RetentionConfigArgs>> retentionConfig() {
+        return Optional.ofNullable(this.retentionConfig);
     }
 
     @Import(name="topicId", required=true)
-      private final Output<String> topicId;
+    private Output<String> topicId;
 
     public Output<String> topicId() {
         return this.topicId;
     }
 
-    public TopicArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<PartitionConfigArgs> partitionConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<ReservationConfigArgs> reservationConfig,
-        @Nullable Output<RetentionConfigArgs> retentionConfig,
-        Output<String> topicId) {
-        this.location = location;
-        this.name = name;
-        this.partitionConfig = partitionConfig;
-        this.project = project;
-        this.reservationConfig = reservationConfig;
-        this.retentionConfig = retentionConfig;
-        this.topicId = Objects.requireNonNull(topicId, "expected parameter 'topicId' to be non-null");
-    }
+    private TopicArgs() {}
 
-    private TopicArgs() {
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.partitionConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.reservationConfig = Codegen.empty();
-        this.retentionConfig = Codegen.empty();
-        this.topicId = Codegen.empty();
+    private TopicArgs(TopicArgs $) {
+        this.location = $.location;
+        this.name = $.name;
+        this.partitionConfig = $.partitionConfig;
+        this.project = $.project;
+        this.reservationConfig = $.reservationConfig;
+        this.retentionConfig = $.retentionConfig;
+        this.topicId = $.topicId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<PartitionConfigArgs> partitionConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<ReservationConfigArgs> reservationConfig;
-        private @Nullable Output<RetentionConfigArgs> retentionConfig;
-        private Output<String> topicId;
+        private TopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicArgs();
         }
 
         public Builder(TopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.partitionConfig = defaults.partitionConfig;
-    	      this.project = defaults.project;
-    	      this.reservationConfig = defaults.reservationConfig;
-    	      this.retentionConfig = defaults.retentionConfig;
-    	      this.topicId = defaults.topicId;
+            $ = new TopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder partitionConfig(@Nullable Output<PartitionConfigArgs> partitionConfig) {
-            this.partitionConfig = partitionConfig;
+            $.partitionConfig = partitionConfig;
             return this;
         }
-        public Builder partitionConfig(@Nullable PartitionConfigArgs partitionConfig) {
-            this.partitionConfig = Codegen.ofNullable(partitionConfig);
-            return this;
+
+        public Builder partitionConfig(PartitionConfigArgs partitionConfig) {
+            return partitionConfig(Output.of(partitionConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder reservationConfig(@Nullable Output<ReservationConfigArgs> reservationConfig) {
-            this.reservationConfig = reservationConfig;
+            $.reservationConfig = reservationConfig;
             return this;
         }
-        public Builder reservationConfig(@Nullable ReservationConfigArgs reservationConfig) {
-            this.reservationConfig = Codegen.ofNullable(reservationConfig);
-            return this;
+
+        public Builder reservationConfig(ReservationConfigArgs reservationConfig) {
+            return reservationConfig(Output.of(reservationConfig));
         }
+
         public Builder retentionConfig(@Nullable Output<RetentionConfigArgs> retentionConfig) {
-            this.retentionConfig = retentionConfig;
+            $.retentionConfig = retentionConfig;
             return this;
         }
-        public Builder retentionConfig(@Nullable RetentionConfigArgs retentionConfig) {
-            this.retentionConfig = Codegen.ofNullable(retentionConfig);
-            return this;
+
+        public Builder retentionConfig(RetentionConfigArgs retentionConfig) {
+            return retentionConfig(Output.of(retentionConfig));
         }
+
         public Builder topicId(Output<String> topicId) {
-            this.topicId = Objects.requireNonNull(topicId);
+            $.topicId = topicId;
             return this;
         }
+
         public Builder topicId(String topicId) {
-            this.topicId = Output.of(Objects.requireNonNull(topicId));
-            return this;
-        }        public TopicArgs build() {
-            return new TopicArgs(location, name, partitionConfig, project, reservationConfig, retentionConfig, topicId);
+            return topicId(Output.of(topicId));
+        }
+
+        public TopicArgs build() {
+            $.topicId = Objects.requireNonNull($.topicId, "expected parameter 'topicId' to be non-null");
+            return $;
         }
     }
+
 }

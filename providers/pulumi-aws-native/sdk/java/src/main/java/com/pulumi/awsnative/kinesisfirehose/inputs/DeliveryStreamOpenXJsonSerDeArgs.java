@@ -5,10 +5,10 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends com.pulumi.resources
     public static final DeliveryStreamOpenXJsonSerDeArgs Empty = new DeliveryStreamOpenXJsonSerDeArgs();
 
     @Import(name="caseInsensitive")
-      private final @Nullable Output<Boolean> caseInsensitive;
+    private @Nullable Output<Boolean> caseInsensitive;
 
-    public Output<Boolean> caseInsensitive() {
-        return this.caseInsensitive == null ? Codegen.empty() : this.caseInsensitive;
+    public Optional<Output<Boolean>> caseInsensitive() {
+        return Optional.ofNullable(this.caseInsensitive);
     }
 
     @Import(name="columnToJsonKeyMappings")
-      private final @Nullable Output<Object> columnToJsonKeyMappings;
+    private @Nullable Output<Object> columnToJsonKeyMappings;
 
-    public Output<Object> columnToJsonKeyMappings() {
-        return this.columnToJsonKeyMappings == null ? Codegen.empty() : this.columnToJsonKeyMappings;
+    public Optional<Output<Object>> columnToJsonKeyMappings() {
+        return Optional.ofNullable(this.columnToJsonKeyMappings);
     }
 
     @Import(name="convertDotsInJsonKeysToUnderscores")
-      private final @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores;
+    private @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores;
 
-    public Output<Boolean> convertDotsInJsonKeysToUnderscores() {
-        return this.convertDotsInJsonKeysToUnderscores == null ? Codegen.empty() : this.convertDotsInJsonKeysToUnderscores;
+    public Optional<Output<Boolean>> convertDotsInJsonKeysToUnderscores() {
+        return Optional.ofNullable(this.convertDotsInJsonKeysToUnderscores);
     }
 
-    public DeliveryStreamOpenXJsonSerDeArgs(
-        @Nullable Output<Boolean> caseInsensitive,
-        @Nullable Output<Object> columnToJsonKeyMappings,
-        @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores) {
-        this.caseInsensitive = caseInsensitive;
-        this.columnToJsonKeyMappings = columnToJsonKeyMappings;
-        this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
-    }
+    private DeliveryStreamOpenXJsonSerDeArgs() {}
 
-    private DeliveryStreamOpenXJsonSerDeArgs() {
-        this.caseInsensitive = Codegen.empty();
-        this.columnToJsonKeyMappings = Codegen.empty();
-        this.convertDotsInJsonKeysToUnderscores = Codegen.empty();
+    private DeliveryStreamOpenXJsonSerDeArgs(DeliveryStreamOpenXJsonSerDeArgs $) {
+        this.caseInsensitive = $.caseInsensitive;
+        this.columnToJsonKeyMappings = $.columnToJsonKeyMappings;
+        this.convertDotsInJsonKeysToUnderscores = $.convertDotsInJsonKeysToUnderscores;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamOpenXJsonSerDeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> caseInsensitive;
-        private @Nullable Output<Object> columnToJsonKeyMappings;
-        private @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores;
+        private DeliveryStreamOpenXJsonSerDeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamOpenXJsonSerDeArgs();
         }
 
         public Builder(DeliveryStreamOpenXJsonSerDeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caseInsensitive = defaults.caseInsensitive;
-    	      this.columnToJsonKeyMappings = defaults.columnToJsonKeyMappings;
-    	      this.convertDotsInJsonKeysToUnderscores = defaults.convertDotsInJsonKeysToUnderscores;
+            $ = new DeliveryStreamOpenXJsonSerDeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caseInsensitive(@Nullable Output<Boolean> caseInsensitive) {
-            this.caseInsensitive = caseInsensitive;
+            $.caseInsensitive = caseInsensitive;
             return this;
         }
-        public Builder caseInsensitive(@Nullable Boolean caseInsensitive) {
-            this.caseInsensitive = Codegen.ofNullable(caseInsensitive);
-            return this;
+
+        public Builder caseInsensitive(Boolean caseInsensitive) {
+            return caseInsensitive(Output.of(caseInsensitive));
         }
+
         public Builder columnToJsonKeyMappings(@Nullable Output<Object> columnToJsonKeyMappings) {
-            this.columnToJsonKeyMappings = columnToJsonKeyMappings;
+            $.columnToJsonKeyMappings = columnToJsonKeyMappings;
             return this;
         }
-        public Builder columnToJsonKeyMappings(@Nullable Object columnToJsonKeyMappings) {
-            this.columnToJsonKeyMappings = Codegen.ofNullable(columnToJsonKeyMappings);
-            return this;
+
+        public Builder columnToJsonKeyMappings(Object columnToJsonKeyMappings) {
+            return columnToJsonKeyMappings(Output.of(columnToJsonKeyMappings));
         }
+
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores) {
-            this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
+            $.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
         }
-        public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
-            this.convertDotsInJsonKeysToUnderscores = Codegen.ofNullable(convertDotsInJsonKeysToUnderscores);
-            return this;
-        }        public DeliveryStreamOpenXJsonSerDeArgs build() {
-            return new DeliveryStreamOpenXJsonSerDeArgs(caseInsensitive, columnToJsonKeyMappings, convertDotsInJsonKeysToUnderscores);
+
+        public Builder convertDotsInJsonKeysToUnderscores(Boolean convertDotsInJsonKeysToUnderscores) {
+            return convertDotsInJsonKeysToUnderscores(Output.of(convertDotsInJsonKeysToUnderscores));
+        }
+
+        public DeliveryStreamOpenXJsonSerDeArgs build() {
+            return $;
         }
     }
+
 }

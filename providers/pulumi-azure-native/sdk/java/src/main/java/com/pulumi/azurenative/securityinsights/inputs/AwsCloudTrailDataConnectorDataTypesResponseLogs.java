@@ -23,45 +23,44 @@ public final class AwsCloudTrailDataConnectorDataTypesResponseLogs extends com.p
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public AwsCloudTrailDataConnectorDataTypesResponseLogs(@Nullable String state) {
-        this.state = state;
-    }
+    private AwsCloudTrailDataConnectorDataTypesResponseLogs() {}
 
-    private AwsCloudTrailDataConnectorDataTypesResponseLogs() {
-        this.state = null;
+    private AwsCloudTrailDataConnectorDataTypesResponseLogs(AwsCloudTrailDataConnectorDataTypesResponseLogs $) {
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsCloudTrailDataConnectorDataTypesResponseLogs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String state;
+        private AwsCloudTrailDataConnectorDataTypesResponseLogs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsCloudTrailDataConnectorDataTypesResponseLogs();
         }
 
         public Builder(AwsCloudTrailDataConnectorDataTypesResponseLogs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.state = defaults.state;
+            $ = new AwsCloudTrailDataConnectorDataTypesResponseLogs(Objects.requireNonNull(defaults));
         }
 
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public AwsCloudTrailDataConnectorDataTypesResponseLogs build() {
-            return new AwsCloudTrailDataConnectorDataTypesResponseLogs(state);
+        }
+
+        public AwsCloudTrailDataConnectorDataTypesResponseLogs build() {
+            return $;
         }
     }
+
 }

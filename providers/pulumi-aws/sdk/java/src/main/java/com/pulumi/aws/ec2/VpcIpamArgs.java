@@ -6,11 +6,11 @@ package com.pulumi.aws.ec2;
 import com.pulumi.aws.ec2.inputs.VpcIpamOperatingRegionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class VpcIpamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class VpcIpamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operatingRegions", required=true)
-      private final Output<List<VpcIpamOperatingRegionArgs>> operatingRegions;
+    private Output<List<VpcIpamOperatingRegionArgs>> operatingRegions;
 
     public Output<List<VpcIpamOperatingRegionArgs>> operatingRegions() {
         return this.operatingRegions;
@@ -45,79 +45,73 @@ public final class VpcIpamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public VpcIpamArgs(
-        @Nullable Output<String> description,
-        Output<List<VpcIpamOperatingRegionArgs>> operatingRegions,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = description;
-        this.operatingRegions = Objects.requireNonNull(operatingRegions, "expected parameter 'operatingRegions' to be non-null");
-        this.tags = tags;
-    }
+    private VpcIpamArgs() {}
 
-    private VpcIpamArgs() {
-        this.description = Codegen.empty();
-        this.operatingRegions = Codegen.empty();
-        this.tags = Codegen.empty();
+    private VpcIpamArgs(VpcIpamArgs $) {
+        this.description = $.description;
+        this.operatingRegions = $.operatingRegions;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcIpamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<VpcIpamOperatingRegionArgs>> operatingRegions;
-        private @Nullable Output<Map<String,String>> tags;
+        private VpcIpamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcIpamArgs();
         }
 
         public Builder(VpcIpamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.operatingRegions = defaults.operatingRegions;
-    	      this.tags = defaults.tags;
+            $ = new VpcIpamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder operatingRegions(Output<List<VpcIpamOperatingRegionArgs>> operatingRegions) {
-            this.operatingRegions = Objects.requireNonNull(operatingRegions);
+            $.operatingRegions = operatingRegions;
             return this;
         }
+
         public Builder operatingRegions(List<VpcIpamOperatingRegionArgs> operatingRegions) {
-            this.operatingRegions = Output.of(Objects.requireNonNull(operatingRegions));
-            return this;
+            return operatingRegions(Output.of(operatingRegions));
         }
+
         public Builder operatingRegions(VpcIpamOperatingRegionArgs... operatingRegions) {
             return operatingRegions(List.of(operatingRegions));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public VpcIpamArgs build() {
-            return new VpcIpamArgs(description, operatingRegions, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public VpcIpamArgs build() {
+            $.operatingRegions = Objects.requireNonNull($.operatingRegions, "expected parameter 'operatingRegions' to be non-null");
+            return $;
         }
     }
+
 }

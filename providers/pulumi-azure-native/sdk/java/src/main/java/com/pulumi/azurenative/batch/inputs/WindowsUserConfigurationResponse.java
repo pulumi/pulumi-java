@@ -19,45 +19,44 @@ public final class WindowsUserConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="loginMode")
-      private final @Nullable String loginMode;
+    private @Nullable String loginMode;
 
     public Optional<String> loginMode() {
-        return this.loginMode == null ? Optional.empty() : Optional.ofNullable(this.loginMode);
+        return Optional.ofNullable(this.loginMode);
     }
 
-    public WindowsUserConfigurationResponse(@Nullable String loginMode) {
-        this.loginMode = loginMode;
-    }
+    private WindowsUserConfigurationResponse() {}
 
-    private WindowsUserConfigurationResponse() {
-        this.loginMode = null;
+    private WindowsUserConfigurationResponse(WindowsUserConfigurationResponse $) {
+        this.loginMode = $.loginMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsUserConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String loginMode;
+        private WindowsUserConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsUserConfigurationResponse();
         }
 
         public Builder(WindowsUserConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loginMode = defaults.loginMode;
+            $ = new WindowsUserConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder loginMode(@Nullable String loginMode) {
-            this.loginMode = loginMode;
+            $.loginMode = loginMode;
             return this;
-        }        public WindowsUserConfigurationResponse build() {
-            return new WindowsUserConfigurationResponse(loginMode);
+        }
+
+        public WindowsUserConfigurationResponse build() {
+            return $;
         }
     }
+
 }

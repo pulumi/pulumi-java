@@ -8,10 +8,10 @@ import com.pulumi.awsnative.quicksight.inputs.TemplateSourceEntityArgs;
 import com.pulumi.awsnative.quicksight.inputs.TemplateTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     public static final TemplateArgs Empty = new TemplateArgs();
 
     @Import(name="awsAccountId", required=true)
-      private final Output<String> awsAccountId;
+    private Output<String> awsAccountId;
 
     public Output<String> awsAccountId() {
         return this.awsAccountId;
@@ -31,10 +31,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,14 +42,14 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<TemplateResourcePermissionArgs>> permissions;
+    private @Nullable Output<List<TemplateResourcePermissionArgs>> permissions;
 
-    public Output<List<TemplateResourcePermissionArgs>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<TemplateResourcePermissionArgs>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     @Import(name="sourceEntity", required=true)
-      private final Output<TemplateSourceEntityArgs> sourceEntity;
+    private Output<TemplateSourceEntityArgs> sourceEntity;
 
     public Output<TemplateSourceEntityArgs> sourceEntity() {
         return this.sourceEntity;
@@ -60,14 +60,14 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<TemplateTagArgs>> tags;
+    private @Nullable Output<List<TemplateTagArgs>> tags;
 
-    public Output<List<TemplateTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TemplateTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="templateId", required=true)
-      private final Output<String> templateId;
+    private Output<String> templateId;
 
     public Output<String> templateId() {
         return this.templateId;
@@ -81,134 +81,119 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionDescription")
-      private final @Nullable Output<String> versionDescription;
+    private @Nullable Output<String> versionDescription;
 
-    public Output<String> versionDescription() {
-        return this.versionDescription == null ? Codegen.empty() : this.versionDescription;
+    public Optional<Output<String>> versionDescription() {
+        return Optional.ofNullable(this.versionDescription);
     }
 
-    public TemplateArgs(
-        Output<String> awsAccountId,
-        @Nullable Output<String> name,
-        @Nullable Output<List<TemplateResourcePermissionArgs>> permissions,
-        Output<TemplateSourceEntityArgs> sourceEntity,
-        @Nullable Output<List<TemplateTagArgs>> tags,
-        Output<String> templateId,
-        @Nullable Output<String> versionDescription) {
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-        this.name = name;
-        this.permissions = permissions;
-        this.sourceEntity = Objects.requireNonNull(sourceEntity, "expected parameter 'sourceEntity' to be non-null");
-        this.tags = tags;
-        this.templateId = Objects.requireNonNull(templateId, "expected parameter 'templateId' to be non-null");
-        this.versionDescription = versionDescription;
-    }
+    private TemplateArgs() {}
 
-    private TemplateArgs() {
-        this.awsAccountId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.sourceEntity = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateId = Codegen.empty();
-        this.versionDescription = Codegen.empty();
+    private TemplateArgs(TemplateArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.name = $.name;
+        this.permissions = $.permissions;
+        this.sourceEntity = $.sourceEntity;
+        this.tags = $.tags;
+        this.templateId = $.templateId;
+        this.versionDescription = $.versionDescription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> awsAccountId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<TemplateResourcePermissionArgs>> permissions;
-        private Output<TemplateSourceEntityArgs> sourceEntity;
-        private @Nullable Output<List<TemplateTagArgs>> tags;
-        private Output<String> templateId;
-        private @Nullable Output<String> versionDescription;
+        private TemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateArgs();
         }
 
         public Builder(TemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.name = defaults.name;
-    	      this.permissions = defaults.permissions;
-    	      this.sourceEntity = defaults.sourceEntity;
-    	      this.tags = defaults.tags;
-    	      this.templateId = defaults.templateId;
-    	      this.versionDescription = defaults.versionDescription;
+            $ = new TemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(Output<String> awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
-            return this;
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder permissions(@Nullable Output<List<TemplateResourcePermissionArgs>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<TemplateResourcePermissionArgs> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<TemplateResourcePermissionArgs> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(TemplateResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder sourceEntity(Output<TemplateSourceEntityArgs> sourceEntity) {
-            this.sourceEntity = Objects.requireNonNull(sourceEntity);
+            $.sourceEntity = sourceEntity;
             return this;
         }
+
         public Builder sourceEntity(TemplateSourceEntityArgs sourceEntity) {
-            this.sourceEntity = Output.of(Objects.requireNonNull(sourceEntity));
-            return this;
+            return sourceEntity(Output.of(sourceEntity));
         }
+
         public Builder tags(@Nullable Output<List<TemplateTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TemplateTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TemplateTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TemplateTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder templateId(Output<String> templateId) {
-            this.templateId = Objects.requireNonNull(templateId);
+            $.templateId = templateId;
             return this;
         }
+
         public Builder templateId(String templateId) {
-            this.templateId = Output.of(Objects.requireNonNull(templateId));
-            return this;
+            return templateId(Output.of(templateId));
         }
+
         public Builder versionDescription(@Nullable Output<String> versionDescription) {
-            this.versionDescription = versionDescription;
+            $.versionDescription = versionDescription;
             return this;
         }
-        public Builder versionDescription(@Nullable String versionDescription) {
-            this.versionDescription = Codegen.ofNullable(versionDescription);
-            return this;
-        }        public TemplateArgs build() {
-            return new TemplateArgs(awsAccountId, name, permissions, sourceEntity, tags, templateId, versionDescription);
+
+        public Builder versionDescription(String versionDescription) {
+            return versionDescription(Output.of(versionDescription));
+        }
+
+        public TemplateArgs build() {
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            $.sourceEntity = Objects.requireNonNull($.sourceEntity, "expected parameter 'sourceEntity' to be non-null");
+            $.templateId = Objects.requireNonNull($.templateId, "expected parameter 'templateId' to be non-null");
+            return $;
         }
     }
+
 }

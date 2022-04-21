@@ -6,8 +6,8 @@ package com.pulumi.awsnative.lambda.inputs;
 import com.pulumi.awsnative.lambda.enums.FunctionTracingConfigMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FunctionTracingConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<FunctionTracingConfigMode> mode;
+    private @Nullable Output<FunctionTracingConfigMode> mode;
 
-    public Output<FunctionTracingConfigMode> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<FunctionTracingConfigMode>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public FunctionTracingConfigArgs(@Nullable Output<FunctionTracingConfigMode> mode) {
-        this.mode = mode;
-    }
+    private FunctionTracingConfigArgs() {}
 
-    private FunctionTracingConfigArgs() {
-        this.mode = Codegen.empty();
+    private FunctionTracingConfigArgs(FunctionTracingConfigArgs $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionTracingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FunctionTracingConfigMode> mode;
+        private FunctionTracingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionTracingConfigArgs();
         }
 
         public Builder(FunctionTracingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new FunctionTracingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<FunctionTracingConfigMode> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable FunctionTracingConfigMode mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public FunctionTracingConfigArgs build() {
-            return new FunctionTracingConfigArgs(mode);
+
+        public Builder mode(FunctionTracingConfigMode mode) {
+            return mode(Output.of(mode));
+        }
+
+        public FunctionTracingConfigArgs build() {
+            return $;
         }
     }
+
 }

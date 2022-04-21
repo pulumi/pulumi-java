@@ -23,10 +23,10 @@ public final class ComputeInstanceLastOperationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="operationName")
-      private final @Nullable String operationName;
+    private @Nullable String operationName;
 
     public Optional<String> operationName() {
-        return this.operationName == null ? Optional.empty() : Optional.ofNullable(this.operationName);
+        return Optional.ofNullable(this.operationName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ComputeInstanceLastOperationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="operationStatus")
-      private final @Nullable String operationStatus;
+    private @Nullable String operationStatus;
 
     public Optional<String> operationStatus() {
-        return this.operationStatus == null ? Optional.empty() : Optional.ofNullable(this.operationStatus);
+        return Optional.ofNullable(this.operationStatus);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ComputeInstanceLastOperationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="operationTime")
-      private final @Nullable String operationTime;
+    private @Nullable String operationTime;
 
     public Optional<String> operationTime() {
-        return this.operationTime == null ? Optional.empty() : Optional.ofNullable(this.operationTime);
+        return Optional.ofNullable(this.operationTime);
     }
 
-    public ComputeInstanceLastOperationResponse(
-        @Nullable String operationName,
-        @Nullable String operationStatus,
-        @Nullable String operationTime) {
-        this.operationName = operationName;
-        this.operationStatus = operationStatus;
-        this.operationTime = operationTime;
-    }
+    private ComputeInstanceLastOperationResponse() {}
 
-    private ComputeInstanceLastOperationResponse() {
-        this.operationName = null;
-        this.operationStatus = null;
-        this.operationTime = null;
+    private ComputeInstanceLastOperationResponse(ComputeInstanceLastOperationResponse $) {
+        this.operationName = $.operationName;
+        this.operationStatus = $.operationStatus;
+        this.operationTime = $.operationTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeInstanceLastOperationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String operationName;
-        private @Nullable String operationStatus;
-        private @Nullable String operationTime;
+        private ComputeInstanceLastOperationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeInstanceLastOperationResponse();
         }
 
         public Builder(ComputeInstanceLastOperationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationName = defaults.operationName;
-    	      this.operationStatus = defaults.operationStatus;
-    	      this.operationTime = defaults.operationTime;
+            $ = new ComputeInstanceLastOperationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operationName(@Nullable String operationName) {
-            this.operationName = operationName;
+            $.operationName = operationName;
             return this;
         }
+
         public Builder operationStatus(@Nullable String operationStatus) {
-            this.operationStatus = operationStatus;
+            $.operationStatus = operationStatus;
             return this;
         }
+
         public Builder operationTime(@Nullable String operationTime) {
-            this.operationTime = operationTime;
+            $.operationTime = operationTime;
             return this;
-        }        public ComputeInstanceLastOperationResponse build() {
-            return new ComputeInstanceLastOperationResponse(operationName, operationStatus, operationTime);
+        }
+
+        public ComputeInstanceLastOperationResponse build() {
+            return $;
         }
     }
+
 }

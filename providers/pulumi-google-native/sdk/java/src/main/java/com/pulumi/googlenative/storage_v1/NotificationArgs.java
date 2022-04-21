@@ -5,11 +5,11 @@ package com.pulumi.googlenative.storage_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     public static final NotificationArgs Empty = new NotificationArgs();
 
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -29,10 +29,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customAttributes")
-      private final @Nullable Output<Map<String,String>> customAttributes;
+    private @Nullable Output<Map<String,String>> customAttributes;
 
-    public Output<Map<String,String>> customAttributes() {
-        return this.customAttributes == null ? Codegen.empty() : this.customAttributes;
+    public Optional<Output<Map<String,String>>> customAttributes() {
+        return Optional.ofNullable(this.customAttributes);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventTypes")
-      private final @Nullable Output<List<String>> eventTypes;
+    private @Nullable Output<List<String>> eventTypes;
 
-    public Output<List<String>> eventTypes() {
-        return this.eventTypes == null ? Codegen.empty() : this.eventTypes;
+    public Optional<Output<List<String>>> eventTypes() {
+        return Optional.ofNullable(this.eventTypes);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectNamePrefix")
-      private final @Nullable Output<String> objectNamePrefix;
+    private @Nullable Output<String> objectNamePrefix;
 
-    public Output<String> objectNamePrefix() {
-        return this.objectNamePrefix == null ? Codegen.empty() : this.objectNamePrefix;
+    public Optional<Output<String>> objectNamePrefix() {
+        return Optional.ofNullable(this.objectNamePrefix);
     }
 
     /**
@@ -95,17 +95,17 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="payloadFormat")
-      private final @Nullable Output<String> payloadFormat;
+    private @Nullable Output<String> payloadFormat;
 
-    public Output<String> payloadFormat() {
-        return this.payloadFormat == null ? Codegen.empty() : this.payloadFormat;
+    public Optional<Output<String>> payloadFormat() {
+        return Optional.ofNullable(this.payloadFormat);
     }
 
     @Import(name="provisionalUserProject")
-      private final @Nullable Output<String> provisionalUserProject;
+    private @Nullable Output<String> provisionalUserProject;
 
-    public Output<String> provisionalUserProject() {
-        return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
+    public Optional<Output<String>> provisionalUserProject() {
+        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -124,203 +124,170 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
     @Import(name="userProject")
-      private final @Nullable Output<String> userProject;
+    private @Nullable Output<String> userProject;
 
-    public Output<String> userProject() {
-        return this.userProject == null ? Codegen.empty() : this.userProject;
+    public Optional<Output<String>> userProject() {
+        return Optional.ofNullable(this.userProject);
     }
 
-    public NotificationArgs(
-        Output<String> bucket,
-        @Nullable Output<Map<String,String>> customAttributes,
-        @Nullable Output<String> etag,
-        @Nullable Output<List<String>> eventTypes,
-        @Nullable Output<String> id,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> objectNamePrefix,
-        @Nullable Output<String> payloadFormat,
-        @Nullable Output<String> provisionalUserProject,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> topic,
-        @Nullable Output<String> userProject) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.customAttributes = customAttributes;
-        this.etag = etag;
-        this.eventTypes = eventTypes;
-        this.id = id;
-        this.kind = kind;
-        this.objectNamePrefix = objectNamePrefix;
-        this.payloadFormat = payloadFormat;
-        this.provisionalUserProject = provisionalUserProject;
-        this.selfLink = selfLink;
-        this.topic = topic;
-        this.userProject = userProject;
-    }
+    private NotificationArgs() {}
 
-    private NotificationArgs() {
-        this.bucket = Codegen.empty();
-        this.customAttributes = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.eventTypes = Codegen.empty();
-        this.id = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.objectNamePrefix = Codegen.empty();
-        this.payloadFormat = Codegen.empty();
-        this.provisionalUserProject = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.topic = Codegen.empty();
-        this.userProject = Codegen.empty();
+    private NotificationArgs(NotificationArgs $) {
+        this.bucket = $.bucket;
+        this.customAttributes = $.customAttributes;
+        this.etag = $.etag;
+        this.eventTypes = $.eventTypes;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.objectNamePrefix = $.objectNamePrefix;
+        this.payloadFormat = $.payloadFormat;
+        this.provisionalUserProject = $.provisionalUserProject;
+        this.selfLink = $.selfLink;
+        this.topic = $.topic;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<Map<String,String>> customAttributes;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<List<String>> eventTypes;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> objectNamePrefix;
-        private @Nullable Output<String> payloadFormat;
-        private @Nullable Output<String> provisionalUserProject;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> topic;
-        private @Nullable Output<String> userProject;
+        private NotificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationArgs();
         }
 
         public Builder(NotificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.customAttributes = defaults.customAttributes;
-    	      this.etag = defaults.etag;
-    	      this.eventTypes = defaults.eventTypes;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.objectNamePrefix = defaults.objectNamePrefix;
-    	      this.payloadFormat = defaults.payloadFormat;
-    	      this.provisionalUserProject = defaults.provisionalUserProject;
-    	      this.selfLink = defaults.selfLink;
-    	      this.topic = defaults.topic;
-    	      this.userProject = defaults.userProject;
+            $ = new NotificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
-            this.customAttributes = customAttributes;
+            $.customAttributes = customAttributes;
             return this;
         }
-        public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
-            this.customAttributes = Codegen.ofNullable(customAttributes);
-            return this;
+
+        public Builder customAttributes(Map<String,String> customAttributes) {
+            return customAttributes(Output.of(customAttributes));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
-            this.eventTypes = eventTypes;
+            $.eventTypes = eventTypes;
             return this;
         }
-        public Builder eventTypes(@Nullable List<String> eventTypes) {
-            this.eventTypes = Codegen.ofNullable(eventTypes);
-            return this;
+
+        public Builder eventTypes(List<String> eventTypes) {
+            return eventTypes(Output.of(eventTypes));
         }
+
         public Builder eventTypes(String... eventTypes) {
             return eventTypes(List.of(eventTypes));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
-            this.objectNamePrefix = objectNamePrefix;
+            $.objectNamePrefix = objectNamePrefix;
             return this;
         }
-        public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
-            this.objectNamePrefix = Codegen.ofNullable(objectNamePrefix);
-            return this;
+
+        public Builder objectNamePrefix(String objectNamePrefix) {
+            return objectNamePrefix(Output.of(objectNamePrefix));
         }
+
         public Builder payloadFormat(@Nullable Output<String> payloadFormat) {
-            this.payloadFormat = payloadFormat;
+            $.payloadFormat = payloadFormat;
             return this;
         }
-        public Builder payloadFormat(@Nullable String payloadFormat) {
-            this.payloadFormat = Codegen.ofNullable(payloadFormat);
-            return this;
+
+        public Builder payloadFormat(String payloadFormat) {
+            return payloadFormat(Output.of(payloadFormat));
         }
+
         public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
-            this.provisionalUserProject = provisionalUserProject;
+            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
-        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = Codegen.ofNullable(provisionalUserProject);
-            return this;
+
+        public Builder provisionalUserProject(String provisionalUserProject) {
+            return provisionalUserProject(Output.of(provisionalUserProject));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
         }
+
         public Builder userProject(@Nullable Output<String> userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
         }
-        public Builder userProject(@Nullable String userProject) {
-            this.userProject = Codegen.ofNullable(userProject);
-            return this;
-        }        public NotificationArgs build() {
-            return new NotificationArgs(bucket, customAttributes, etag, eventTypes, id, kind, objectNamePrefix, payloadFormat, provisionalUserProject, selfLink, topic, userProject);
+
+        public Builder userProject(String userProject) {
+            return userProject(Output.of(userProject));
+        }
+
+        public NotificationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

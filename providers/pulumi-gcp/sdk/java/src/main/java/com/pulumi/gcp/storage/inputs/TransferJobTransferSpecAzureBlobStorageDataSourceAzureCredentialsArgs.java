@@ -5,7 +5,6 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
      * 
      */
     @Import(name="sasToken", required=true)
-      private final Output<String> sasToken;
+    private Output<String> sasToken;
 
     public Output<String> sasToken() {
         return this.sasToken;
     }
 
-    public TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs(Output<String> sasToken) {
-        this.sasToken = Objects.requireNonNull(sasToken, "expected parameter 'sasToken' to be non-null");
-    }
+    private TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs() {}
 
-    private TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs() {
-        this.sasToken = Codegen.empty();
+    private TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs(TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs $) {
+        this.sasToken = $.sasToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sasToken;
+        private TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs();
         }
 
         public Builder(TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasToken = defaults.sasToken;
+            $ = new TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sasToken(Output<String> sasToken) {
-            this.sasToken = Objects.requireNonNull(sasToken);
+            $.sasToken = sasToken;
             return this;
         }
+
         public Builder sasToken(String sasToken) {
-            this.sasToken = Output.of(Objects.requireNonNull(sasToken));
-            return this;
-        }        public TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs build() {
-            return new TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs(sasToken);
+            return sasToken(Output.of(sasToken));
+        }
+
+        public TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs build() {
+            $.sasToken = Objects.requireNonNull($.sasToken, "expected parameter 'sasToken' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetParameterGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="parameterGroupName", required=true)
-      private final String parameterGroupName;
+    private String parameterGroupName;
 
     public String parameterGroupName() {
         return this.parameterGroupName;
     }
 
-    public GetParameterGroupArgs(String parameterGroupName) {
-        this.parameterGroupName = Objects.requireNonNull(parameterGroupName, "expected parameter 'parameterGroupName' to be non-null");
-    }
+    private GetParameterGroupArgs() {}
 
-    private GetParameterGroupArgs() {
-        this.parameterGroupName = null;
+    private GetParameterGroupArgs(GetParameterGroupArgs $) {
+        this.parameterGroupName = $.parameterGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetParameterGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parameterGroupName;
+        private GetParameterGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetParameterGroupArgs();
         }
 
         public Builder(GetParameterGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterGroupName = defaults.parameterGroupName;
+            $ = new GetParameterGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterGroupName(String parameterGroupName) {
-            this.parameterGroupName = Objects.requireNonNull(parameterGroupName);
+            $.parameterGroupName = parameterGroupName;
             return this;
-        }        public GetParameterGroupArgs build() {
-            return new GetParameterGroupArgs(parameterGroupName);
+        }
+
+        public GetParameterGroupArgs build() {
+            $.parameterGroupName = Objects.requireNonNull($.parameterGroupName, "expected parameter 'parameterGroupName' to be non-null");
+            return $;
         }
     }
+
 }

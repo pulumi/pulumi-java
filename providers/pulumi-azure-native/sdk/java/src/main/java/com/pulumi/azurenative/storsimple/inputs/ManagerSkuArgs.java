@@ -6,7 +6,6 @@ package com.pulumi.azurenative.storsimple.inputs;
 import com.pulumi.azurenative.storsimple.enums.ManagerSkuType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class ManagerSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<ManagerSkuType> name;
+    private Output<ManagerSkuType> name;
 
     public Output<ManagerSkuType> name() {
         return this.name;
     }
 
-    public ManagerSkuArgs(Output<ManagerSkuType> name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ManagerSkuArgs() {}
 
-    private ManagerSkuArgs() {
-        this.name = Codegen.empty();
+    private ManagerSkuArgs(ManagerSkuArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagerSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ManagerSkuType> name;
+        private ManagerSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagerSkuArgs();
         }
 
         public Builder(ManagerSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new ManagerSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<ManagerSkuType> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(ManagerSkuType name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ManagerSkuArgs build() {
-            return new ManagerSkuArgs(name);
+            return name(Output.of(name));
+        }
+
+        public ManagerSkuArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

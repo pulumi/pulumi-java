@@ -21,10 +21,10 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="continuationToken")
-      private final @Nullable String continuationToken;
+    private @Nullable String continuationToken;
 
     public Optional<String> continuationToken() {
-        return this.continuationToken == null ? Optional.empty() : Optional.ofNullable(this.continuationToken);
+        return Optional.ofNullable(this.continuationToken);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="downloadAs", required=true)
-      private final String downloadAs;
+    private String downloadAs;
 
     public String downloadAs() {
         return this.downloadAs;
@@ -43,7 +43,7 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="geoLocationId", required=true)
-      private final String geoLocationId;
+    private String geoLocationId;
 
     public String geoLocationId() {
         return this.geoLocationId;
@@ -54,7 +54,7 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -65,10 +65,10 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="testSuccessfulCriteria")
-      private final @Nullable Boolean testSuccessfulCriteria;
+    private @Nullable Boolean testSuccessfulCriteria;
 
     public Optional<Boolean> testSuccessfulCriteria() {
-        return this.testSuccessfulCriteria == null ? Optional.empty() : Optional.ofNullable(this.testSuccessfulCriteria);
+        return Optional.ofNullable(this.testSuccessfulCriteria);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeStamp", required=true)
-      private final Integer timeStamp;
+    private Integer timeStamp;
 
     public Integer timeStamp() {
         return this.timeStamp;
@@ -87,100 +87,85 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="webTestName", required=true)
-      private final String webTestName;
+    private String webTestName;
 
     public String webTestName() {
         return this.webTestName;
     }
 
-    public GetTestResultFileArgs(
-        @Nullable String continuationToken,
-        String downloadAs,
-        String geoLocationId,
-        String resourceGroupName,
-        @Nullable Boolean testSuccessfulCriteria,
-        Integer timeStamp,
-        String webTestName) {
-        this.continuationToken = continuationToken;
-        this.downloadAs = Objects.requireNonNull(downloadAs, "expected parameter 'downloadAs' to be non-null");
-        this.geoLocationId = Objects.requireNonNull(geoLocationId, "expected parameter 'geoLocationId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.testSuccessfulCriteria = testSuccessfulCriteria;
-        this.timeStamp = Objects.requireNonNull(timeStamp, "expected parameter 'timeStamp' to be non-null");
-        this.webTestName = Objects.requireNonNull(webTestName, "expected parameter 'webTestName' to be non-null");
-    }
+    private GetTestResultFileArgs() {}
 
-    private GetTestResultFileArgs() {
-        this.continuationToken = null;
-        this.downloadAs = null;
-        this.geoLocationId = null;
-        this.resourceGroupName = null;
-        this.testSuccessfulCriteria = null;
-        this.timeStamp = null;
-        this.webTestName = null;
+    private GetTestResultFileArgs(GetTestResultFileArgs $) {
+        this.continuationToken = $.continuationToken;
+        this.downloadAs = $.downloadAs;
+        this.geoLocationId = $.geoLocationId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.testSuccessfulCriteria = $.testSuccessfulCriteria;
+        this.timeStamp = $.timeStamp;
+        this.webTestName = $.webTestName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTestResultFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String continuationToken;
-        private String downloadAs;
-        private String geoLocationId;
-        private String resourceGroupName;
-        private @Nullable Boolean testSuccessfulCriteria;
-        private Integer timeStamp;
-        private String webTestName;
+        private GetTestResultFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTestResultFileArgs();
         }
 
         public Builder(GetTestResultFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.continuationToken = defaults.continuationToken;
-    	      this.downloadAs = defaults.downloadAs;
-    	      this.geoLocationId = defaults.geoLocationId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.testSuccessfulCriteria = defaults.testSuccessfulCriteria;
-    	      this.timeStamp = defaults.timeStamp;
-    	      this.webTestName = defaults.webTestName;
+            $ = new GetTestResultFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder continuationToken(@Nullable String continuationToken) {
-            this.continuationToken = continuationToken;
+            $.continuationToken = continuationToken;
             return this;
         }
+
         public Builder downloadAs(String downloadAs) {
-            this.downloadAs = Objects.requireNonNull(downloadAs);
+            $.downloadAs = downloadAs;
             return this;
         }
+
         public Builder geoLocationId(String geoLocationId) {
-            this.geoLocationId = Objects.requireNonNull(geoLocationId);
+            $.geoLocationId = geoLocationId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder testSuccessfulCriteria(@Nullable Boolean testSuccessfulCriteria) {
-            this.testSuccessfulCriteria = testSuccessfulCriteria;
+            $.testSuccessfulCriteria = testSuccessfulCriteria;
             return this;
         }
+
         public Builder timeStamp(Integer timeStamp) {
-            this.timeStamp = Objects.requireNonNull(timeStamp);
+            $.timeStamp = timeStamp;
             return this;
         }
+
         public Builder webTestName(String webTestName) {
-            this.webTestName = Objects.requireNonNull(webTestName);
+            $.webTestName = webTestName;
             return this;
-        }        public GetTestResultFileArgs build() {
-            return new GetTestResultFileArgs(continuationToken, downloadAs, geoLocationId, resourceGroupName, testSuccessfulCriteria, timeStamp, webTestName);
+        }
+
+        public GetTestResultFileArgs build() {
+            $.downloadAs = Objects.requireNonNull($.downloadAs, "expected parameter 'downloadAs' to be non-null");
+            $.geoLocationId = Objects.requireNonNull($.geoLocationId, "expected parameter 'geoLocationId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.timeStamp = Objects.requireNonNull($.timeStamp, "expected parameter 'timeStamp' to be non-null");
+            $.webTestName = Objects.requireNonNull($.webTestName, "expected parameter 'webTestName' to be non-null");
+            return $;
         }
     }
+
 }

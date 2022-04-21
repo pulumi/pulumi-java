@@ -6,9 +6,9 @@ package com.pulumi.aws.apprunner.inputs;
 import com.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetA
      * 
      */
     @Import(name="codeConfigurationValues")
-      private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs> codeConfigurationValues;
+    private @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs> codeConfigurationValues;
 
-    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs> codeConfigurationValues() {
-        return this.codeConfigurationValues == null ? Codegen.empty() : this.codeConfigurationValues;
+    public Optional<Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs>> codeConfigurationValues() {
+        return Optional.ofNullable(this.codeConfigurationValues);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetA
      * 
      */
     @Import(name="configurationSource", required=true)
-      private final Output<String> configurationSource;
+    private Output<String> configurationSource;
 
     public Output<String> configurationSource() {
         return this.configurationSource;
     }
 
-    public ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs(
-        @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs> codeConfigurationValues,
-        Output<String> configurationSource) {
-        this.codeConfigurationValues = codeConfigurationValues;
-        this.configurationSource = Objects.requireNonNull(configurationSource, "expected parameter 'configurationSource' to be non-null");
-    }
+    private ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs() {}
 
-    private ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs() {
-        this.codeConfigurationValues = Codegen.empty();
-        this.configurationSource = Codegen.empty();
+    private ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs(ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs $) {
+        this.codeConfigurationValues = $.codeConfigurationValues;
+        this.configurationSource = $.configurationSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs> codeConfigurationValues;
-        private Output<String> configurationSource;
+        private ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs();
         }
 
         public Builder(ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeConfigurationValues = defaults.codeConfigurationValues;
-    	      this.configurationSource = defaults.configurationSource;
+            $ = new ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeConfigurationValues(@Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs> codeConfigurationValues) {
-            this.codeConfigurationValues = codeConfigurationValues;
+            $.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
-        public Builder codeConfigurationValues(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs codeConfigurationValues) {
-            this.codeConfigurationValues = Codegen.ofNullable(codeConfigurationValues);
-            return this;
+
+        public Builder codeConfigurationValues(ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs codeConfigurationValues) {
+            return codeConfigurationValues(Output.of(codeConfigurationValues));
         }
+
         public Builder configurationSource(Output<String> configurationSource) {
-            this.configurationSource = Objects.requireNonNull(configurationSource);
+            $.configurationSource = configurationSource;
             return this;
         }
+
         public Builder configurationSource(String configurationSource) {
-            this.configurationSource = Output.of(Objects.requireNonNull(configurationSource));
-            return this;
-        }        public ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs build() {
-            return new ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs(codeConfigurationValues, configurationSource);
+            return configurationSource(Output.of(configurationSource));
+        }
+
+        public ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs build() {
+            $.configurationSource = Objects.requireNonNull($.configurationSource, "expected parameter 'configurationSource' to be non-null");
+            return $;
         }
     }
+
 }

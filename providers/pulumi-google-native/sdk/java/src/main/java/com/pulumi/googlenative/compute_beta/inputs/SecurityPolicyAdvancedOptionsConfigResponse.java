@@ -13,62 +13,59 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse extends com.pulum
     public static final SecurityPolicyAdvancedOptionsConfigResponse Empty = new SecurityPolicyAdvancedOptionsConfigResponse();
 
     @Import(name="jsonParsing", required=true)
-      private final String jsonParsing;
+    private String jsonParsing;
 
     public String jsonParsing() {
         return this.jsonParsing;
     }
 
     @Import(name="logLevel", required=true)
-      private final String logLevel;
+    private String logLevel;
 
     public String logLevel() {
         return this.logLevel;
     }
 
-    public SecurityPolicyAdvancedOptionsConfigResponse(
-        String jsonParsing,
-        String logLevel) {
-        this.jsonParsing = Objects.requireNonNull(jsonParsing, "expected parameter 'jsonParsing' to be non-null");
-        this.logLevel = Objects.requireNonNull(logLevel, "expected parameter 'logLevel' to be non-null");
-    }
+    private SecurityPolicyAdvancedOptionsConfigResponse() {}
 
-    private SecurityPolicyAdvancedOptionsConfigResponse() {
-        this.jsonParsing = null;
-        this.logLevel = null;
+    private SecurityPolicyAdvancedOptionsConfigResponse(SecurityPolicyAdvancedOptionsConfigResponse $) {
+        this.jsonParsing = $.jsonParsing;
+        this.logLevel = $.logLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyAdvancedOptionsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jsonParsing;
-        private String logLevel;
+        private SecurityPolicyAdvancedOptionsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyAdvancedOptionsConfigResponse();
         }
 
         public Builder(SecurityPolicyAdvancedOptionsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jsonParsing = defaults.jsonParsing;
-    	      this.logLevel = defaults.logLevel;
+            $ = new SecurityPolicyAdvancedOptionsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jsonParsing(String jsonParsing) {
-            this.jsonParsing = Objects.requireNonNull(jsonParsing);
+            $.jsonParsing = jsonParsing;
             return this;
         }
+
         public Builder logLevel(String logLevel) {
-            this.logLevel = Objects.requireNonNull(logLevel);
+            $.logLevel = logLevel;
             return this;
-        }        public SecurityPolicyAdvancedOptionsConfigResponse build() {
-            return new SecurityPolicyAdvancedOptionsConfigResponse(jsonParsing, logLevel);
+        }
+
+        public SecurityPolicyAdvancedOptionsConfigResponse build() {
+            $.jsonParsing = Objects.requireNonNull($.jsonParsing, "expected parameter 'jsonParsing' to be non-null");
+            $.logLevel = Objects.requireNonNull($.logLevel, "expected parameter 'logLevel' to be non-null");
+            return $;
         }
     }
+
 }

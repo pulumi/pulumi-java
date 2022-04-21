@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,17 +35,17 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="backupManagementType", required=true)
-      private final Output<String> backupManagementType;
+    private Output<String> backupManagementType;
 
     public Output<String> backupManagementType() {
         return this.backupManagementType;
     }
 
     @Import(name="instantRPDetails")
-      private final @Nullable Output<InstantRPAdditionalDetailsArgs> instantRPDetails;
+    private @Nullable Output<InstantRPAdditionalDetailsArgs> instantRPDetails;
 
-    public Output<InstantRPAdditionalDetailsArgs> instantRPDetails() {
-        return this.instantRPDetails == null ? Codegen.empty() : this.instantRPDetails;
+    public Optional<Output<InstantRPAdditionalDetailsArgs>> instantRPDetails() {
+        return Optional.ofNullable(this.instantRPDetails);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="instantRpRetentionRangeInDays")
-      private final @Nullable Output<Integer> instantRpRetentionRangeInDays;
+    private @Nullable Output<Integer> instantRpRetentionRangeInDays;
 
-    public Output<Integer> instantRpRetentionRangeInDays() {
-        return this.instantRpRetentionRangeInDays == null ? Codegen.empty() : this.instantRpRetentionRangeInDays;
+    public Optional<Output<Integer>> instantRpRetentionRangeInDays() {
+        return Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="protectedItemsCount")
-      private final @Nullable Output<Integer> protectedItemsCount;
+    private @Nullable Output<Integer> protectedItemsCount;
 
-    public Output<Integer> protectedItemsCount() {
-        return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
+    public Optional<Output<Integer>> protectedItemsCount() {
+        return Optional.ofNullable(this.protectedItemsCount);
     }
 
     /**
@@ -74,10 +75,10 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+    private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
-    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy() {
-        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
+    public Optional<Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -85,10 +86,10 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="schedulePolicy")
-      private final @Nullable Output<Object> schedulePolicy;
+    private @Nullable Output<Object> schedulePolicy;
 
-    public Output<Object> schedulePolicy() {
-        return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
+    public Optional<Output<Object>> schedulePolicy() {
+        return Optional.ofNullable(this.schedulePolicy);
     }
 
     /**
@@ -96,128 +97,109 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public AzureIaaSVMProtectionPolicyArgs(
-        Output<String> backupManagementType,
-        @Nullable Output<InstantRPAdditionalDetailsArgs> instantRPDetails,
-        @Nullable Output<Integer> instantRpRetentionRangeInDays,
-        @Nullable Output<Integer> protectedItemsCount,
-        @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy,
-        @Nullable Output<Object> schedulePolicy,
-        @Nullable Output<String> timeZone) {
-        this.backupManagementType = Codegen.stringProp("backupManagementType").output().arg(backupManagementType).require();
-        this.instantRPDetails = instantRPDetails;
-        this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
-        this.protectedItemsCount = protectedItemsCount;
-        this.retentionPolicy = retentionPolicy;
-        this.schedulePolicy = schedulePolicy;
-        this.timeZone = timeZone;
-    }
+    private AzureIaaSVMProtectionPolicyArgs() {}
 
-    private AzureIaaSVMProtectionPolicyArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.instantRPDetails = Codegen.empty();
-        this.instantRpRetentionRangeInDays = Codegen.empty();
-        this.protectedItemsCount = Codegen.empty();
-        this.retentionPolicy = Codegen.empty();
-        this.schedulePolicy = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private AzureIaaSVMProtectionPolicyArgs(AzureIaaSVMProtectionPolicyArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.instantRPDetails = $.instantRPDetails;
+        this.instantRpRetentionRangeInDays = $.instantRpRetentionRangeInDays;
+        this.protectedItemsCount = $.protectedItemsCount;
+        this.retentionPolicy = $.retentionPolicy;
+        this.schedulePolicy = $.schedulePolicy;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureIaaSVMProtectionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupManagementType;
-        private @Nullable Output<InstantRPAdditionalDetailsArgs> instantRPDetails;
-        private @Nullable Output<Integer> instantRpRetentionRangeInDays;
-        private @Nullable Output<Integer> protectedItemsCount;
-        private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
-        private @Nullable Output<Object> schedulePolicy;
-        private @Nullable Output<String> timeZone;
+        private AzureIaaSVMProtectionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureIaaSVMProtectionPolicyArgs();
         }
 
         public Builder(AzureIaaSVMProtectionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.instantRPDetails = defaults.instantRPDetails;
-    	      this.instantRpRetentionRangeInDays = defaults.instantRpRetentionRangeInDays;
-    	      this.protectedItemsCount = defaults.protectedItemsCount;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.schedulePolicy = defaults.schedulePolicy;
-    	      this.timeZone = defaults.timeZone;
+            $ = new AzureIaaSVMProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(Output<String> backupManagementType) {
-            this.backupManagementType = Objects.requireNonNull(backupManagementType);
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
-            return this;
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder instantRPDetails(@Nullable Output<InstantRPAdditionalDetailsArgs> instantRPDetails) {
-            this.instantRPDetails = instantRPDetails;
+            $.instantRPDetails = instantRPDetails;
             return this;
         }
-        public Builder instantRPDetails(@Nullable InstantRPAdditionalDetailsArgs instantRPDetails) {
-            this.instantRPDetails = Codegen.ofNullable(instantRPDetails);
-            return this;
+
+        public Builder instantRPDetails(InstantRPAdditionalDetailsArgs instantRPDetails) {
+            return instantRPDetails(Output.of(instantRPDetails));
         }
+
         public Builder instantRpRetentionRangeInDays(@Nullable Output<Integer> instantRpRetentionRangeInDays) {
-            this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
+            $.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
             return this;
         }
-        public Builder instantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
-            this.instantRpRetentionRangeInDays = Codegen.ofNullable(instantRpRetentionRangeInDays);
-            return this;
+
+        public Builder instantRpRetentionRangeInDays(Integer instantRpRetentionRangeInDays) {
+            return instantRpRetentionRangeInDays(Output.of(instantRpRetentionRangeInDays));
         }
+
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
-            this.protectedItemsCount = protectedItemsCount;
+            $.protectedItemsCount = protectedItemsCount;
             return this;
         }
-        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Codegen.ofNullable(protectedItemsCount);
-            return this;
+
+        public Builder protectedItemsCount(Integer protectedItemsCount) {
+            return protectedItemsCount(Output.of(protectedItemsCount));
         }
+
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
-        public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
-            return this;
+
+        public Builder retentionPolicy(Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
+            return retentionPolicy(Output.of(retentionPolicy));
         }
+
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
-            this.schedulePolicy = schedulePolicy;
+            $.schedulePolicy = schedulePolicy;
             return this;
         }
-        public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = Codegen.ofNullable(schedulePolicy);
-            return this;
+
+        public Builder schedulePolicy(Object schedulePolicy) {
+            return schedulePolicy(Output.of(schedulePolicy));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public AzureIaaSVMProtectionPolicyArgs build() {
-            return new AzureIaaSVMProtectionPolicyArgs(backupManagementType, instantRPDetails, instantRpRetentionRangeInDays, protectedItemsCount, retentionPolicy, schedulePolicy, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public AzureIaaSVMProtectionPolicyArgs build() {
+            $.backupManagementType = Codegen.stringProp("backupManagementType").output().arg($.backupManagementType).require();
+            return $;
         }
     }
+
 }

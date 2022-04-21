@@ -5,9 +5,9 @@ package com.pulumi.awsnative.forecast.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class EncryptionConfigPropertiesArgs extends com.pulumi.resources.R
     public static final EncryptionConfigPropertiesArgs Empty = new EncryptionConfigPropertiesArgs();
 
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public EncryptionConfigPropertiesArgs(
-        @Nullable Output<String> kmsKeyArn,
-        @Nullable Output<String> roleArn) {
-        this.kmsKeyArn = kmsKeyArn;
-        this.roleArn = roleArn;
-    }
+    private EncryptionConfigPropertiesArgs() {}
 
-    private EncryptionConfigPropertiesArgs() {
-        this.kmsKeyArn = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private EncryptionConfigPropertiesArgs(EncryptionConfigPropertiesArgs $) {
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyArn;
-        private @Nullable Output<String> roleArn;
+        private EncryptionConfigPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigPropertiesArgs();
         }
 
         public Builder(EncryptionConfigPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.roleArn = defaults.roleArn;
+            $ = new EncryptionConfigPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public EncryptionConfigPropertiesArgs build() {
-            return new EncryptionConfigPropertiesArgs(kmsKeyArn, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public EncryptionConfigPropertiesArgs build() {
+            return $;
         }
     }
+
 }

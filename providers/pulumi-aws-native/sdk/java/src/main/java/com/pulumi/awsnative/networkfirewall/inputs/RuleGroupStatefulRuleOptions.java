@@ -15,45 +15,44 @@ public final class RuleGroupStatefulRuleOptions extends com.pulumi.resources.Inv
     public static final RuleGroupStatefulRuleOptions Empty = new RuleGroupStatefulRuleOptions();
 
     @Import(name="ruleOrder")
-      private final @Nullable RuleGroupRuleOrder ruleOrder;
+    private @Nullable RuleGroupRuleOrder ruleOrder;
 
     public Optional<RuleGroupRuleOrder> ruleOrder() {
-        return this.ruleOrder == null ? Optional.empty() : Optional.ofNullable(this.ruleOrder);
+        return Optional.ofNullable(this.ruleOrder);
     }
 
-    public RuleGroupStatefulRuleOptions(@Nullable RuleGroupRuleOrder ruleOrder) {
-        this.ruleOrder = ruleOrder;
-    }
+    private RuleGroupStatefulRuleOptions() {}
 
-    private RuleGroupStatefulRuleOptions() {
-        this.ruleOrder = null;
+    private RuleGroupStatefulRuleOptions(RuleGroupStatefulRuleOptions $) {
+        this.ruleOrder = $.ruleOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupStatefulRuleOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RuleGroupRuleOrder ruleOrder;
+        private RuleGroupStatefulRuleOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupStatefulRuleOptions();
         }
 
         public Builder(RuleGroupStatefulRuleOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleOrder = defaults.ruleOrder;
+            $ = new RuleGroupStatefulRuleOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleOrder(@Nullable RuleGroupRuleOrder ruleOrder) {
-            this.ruleOrder = ruleOrder;
+            $.ruleOrder = ruleOrder;
             return this;
-        }        public RuleGroupStatefulRuleOptions build() {
-            return new RuleGroupStatefulRuleOptions(ruleOrder);
+        }
+
+        public RuleGroupStatefulRuleOptions build() {
+            return $;
         }
     }
+
 }

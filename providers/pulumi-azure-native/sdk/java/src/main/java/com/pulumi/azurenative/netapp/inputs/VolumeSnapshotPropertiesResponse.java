@@ -23,45 +23,44 @@ public final class VolumeSnapshotPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="snapshotPolicyId")
-      private final @Nullable String snapshotPolicyId;
+    private @Nullable String snapshotPolicyId;
 
     public Optional<String> snapshotPolicyId() {
-        return this.snapshotPolicyId == null ? Optional.empty() : Optional.ofNullable(this.snapshotPolicyId);
+        return Optional.ofNullable(this.snapshotPolicyId);
     }
 
-    public VolumeSnapshotPropertiesResponse(@Nullable String snapshotPolicyId) {
-        this.snapshotPolicyId = snapshotPolicyId;
-    }
+    private VolumeSnapshotPropertiesResponse() {}
 
-    private VolumeSnapshotPropertiesResponse() {
-        this.snapshotPolicyId = null;
+    private VolumeSnapshotPropertiesResponse(VolumeSnapshotPropertiesResponse $) {
+        this.snapshotPolicyId = $.snapshotPolicyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeSnapshotPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String snapshotPolicyId;
+        private VolumeSnapshotPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeSnapshotPropertiesResponse();
         }
 
         public Builder(VolumeSnapshotPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.snapshotPolicyId = defaults.snapshotPolicyId;
+            $ = new VolumeSnapshotPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder snapshotPolicyId(@Nullable String snapshotPolicyId) {
-            this.snapshotPolicyId = snapshotPolicyId;
+            $.snapshotPolicyId = snapshotPolicyId;
             return this;
-        }        public VolumeSnapshotPropertiesResponse build() {
-            return new VolumeSnapshotPropertiesResponse(snapshotPolicyId);
+        }
+
+        public VolumeSnapshotPropertiesResponse build() {
+            return $;
         }
     }
+
 }

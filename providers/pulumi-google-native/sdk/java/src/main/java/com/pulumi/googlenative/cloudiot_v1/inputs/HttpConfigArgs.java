@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudiot_v1.enums.HttpConfigHttpEnabledState;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpEnabledState")
-      private final @Nullable Output<HttpConfigHttpEnabledState> httpEnabledState;
+    private @Nullable Output<HttpConfigHttpEnabledState> httpEnabledState;
 
-    public Output<HttpConfigHttpEnabledState> httpEnabledState() {
-        return this.httpEnabledState == null ? Codegen.empty() : this.httpEnabledState;
+    public Optional<Output<HttpConfigHttpEnabledState>> httpEnabledState() {
+        return Optional.ofNullable(this.httpEnabledState);
     }
 
-    public HttpConfigArgs(@Nullable Output<HttpConfigHttpEnabledState> httpEnabledState) {
-        this.httpEnabledState = httpEnabledState;
-    }
+    private HttpConfigArgs() {}
 
-    private HttpConfigArgs() {
-        this.httpEnabledState = Codegen.empty();
+    private HttpConfigArgs(HttpConfigArgs $) {
+        this.httpEnabledState = $.httpEnabledState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HttpConfigHttpEnabledState> httpEnabledState;
+        private HttpConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpConfigArgs();
         }
 
         public Builder(HttpConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpEnabledState = defaults.httpEnabledState;
+            $ = new HttpConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpEnabledState(@Nullable Output<HttpConfigHttpEnabledState> httpEnabledState) {
-            this.httpEnabledState = httpEnabledState;
+            $.httpEnabledState = httpEnabledState;
             return this;
         }
-        public Builder httpEnabledState(@Nullable HttpConfigHttpEnabledState httpEnabledState) {
-            this.httpEnabledState = Codegen.ofNullable(httpEnabledState);
-            return this;
-        }        public HttpConfigArgs build() {
-            return new HttpConfigArgs(httpEnabledState);
+
+        public Builder httpEnabledState(HttpConfigHttpEnabledState httpEnabledState) {
+            return httpEnabledState(Output.of(httpEnabledState));
+        }
+
+        public HttpConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1RenewalSettingsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends com.pulumi
      * 
      */
     @Import(name="renewalSettings")
-      private final @Nullable Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
+    private @Nullable Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
 
-    public Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings() {
-        return this.renewalSettings == null ? Codegen.empty() : this.renewalSettings;
+    public Optional<Output<GoogleCloudChannelV1RenewalSettingsArgs>> renewalSettings() {
+        return Optional.ofNullable(this.renewalSettings);
     }
 
-    public GoogleCloudChannelV1CommitmentSettingsArgs(@Nullable Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings) {
-        this.renewalSettings = renewalSettings;
-    }
+    private GoogleCloudChannelV1CommitmentSettingsArgs() {}
 
-    private GoogleCloudChannelV1CommitmentSettingsArgs() {
-        this.renewalSettings = Codegen.empty();
+    private GoogleCloudChannelV1CommitmentSettingsArgs(GoogleCloudChannelV1CommitmentSettingsArgs $) {
+        this.renewalSettings = $.renewalSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1CommitmentSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
+        private GoogleCloudChannelV1CommitmentSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1CommitmentSettingsArgs();
         }
 
         public Builder(GoogleCloudChannelV1CommitmentSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.renewalSettings = defaults.renewalSettings;
+            $ = new GoogleCloudChannelV1CommitmentSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder renewalSettings(@Nullable Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings) {
-            this.renewalSettings = renewalSettings;
+            $.renewalSettings = renewalSettings;
             return this;
         }
-        public Builder renewalSettings(@Nullable GoogleCloudChannelV1RenewalSettingsArgs renewalSettings) {
-            this.renewalSettings = Codegen.ofNullable(renewalSettings);
-            return this;
-        }        public GoogleCloudChannelV1CommitmentSettingsArgs build() {
-            return new GoogleCloudChannelV1CommitmentSettingsArgs(renewalSettings);
+
+        public Builder renewalSettings(GoogleCloudChannelV1RenewalSettingsArgs renewalSettings) {
+            return renewalSettings(Output.of(renewalSettings));
+        }
+
+        public GoogleCloudChannelV1CommitmentSettingsArgs build() {
+            return $;
         }
     }
+
 }

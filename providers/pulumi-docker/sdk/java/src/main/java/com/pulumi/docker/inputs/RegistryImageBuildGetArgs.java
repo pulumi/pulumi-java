@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.RegistryImageBuildAuthConfigGetArgs;
 import com.pulumi.docker.inputs.RegistryImageBuildUlimitGetArgs;
 import java.lang.Boolean;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,685 +22,596 @@ public final class RegistryImageBuildGetArgs extends com.pulumi.resources.Resour
     public static final RegistryImageBuildGetArgs Empty = new RegistryImageBuildGetArgs();
 
     @Import(name="authConfigs")
-      private final @Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs;
+    private @Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs;
 
-    public Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs() {
-        return this.authConfigs == null ? Codegen.empty() : this.authConfigs;
+    public Optional<Output<List<RegistryImageBuildAuthConfigGetArgs>>> authConfigs() {
+        return Optional.ofNullable(this.authConfigs);
     }
 
     @Import(name="buildArgs")
-      private final @Nullable Output<Map<String,String>> buildArgs;
+    private @Nullable Output<Map<String,String>> buildArgs;
 
-    public Output<Map<String,String>> buildArgs() {
-        return this.buildArgs == null ? Codegen.empty() : this.buildArgs;
+    public Optional<Output<Map<String,String>>> buildArgs() {
+        return Optional.ofNullable(this.buildArgs);
     }
 
     @Import(name="buildId")
-      private final @Nullable Output<String> buildId;
+    private @Nullable Output<String> buildId;
 
-    public Output<String> buildId() {
-        return this.buildId == null ? Codegen.empty() : this.buildId;
+    public Optional<Output<String>> buildId() {
+        return Optional.ofNullable(this.buildId);
     }
 
     @Import(name="cacheFroms")
-      private final @Nullable Output<List<String>> cacheFroms;
+    private @Nullable Output<List<String>> cacheFroms;
 
-    public Output<List<String>> cacheFroms() {
-        return this.cacheFroms == null ? Codegen.empty() : this.cacheFroms;
+    public Optional<Output<List<String>>> cacheFroms() {
+        return Optional.ofNullable(this.cacheFroms);
     }
 
     @Import(name="cgroupParent")
-      private final @Nullable Output<String> cgroupParent;
+    private @Nullable Output<String> cgroupParent;
 
-    public Output<String> cgroupParent() {
-        return this.cgroupParent == null ? Codegen.empty() : this.cgroupParent;
+    public Optional<Output<String>> cgroupParent() {
+        return Optional.ofNullable(this.cgroupParent);
     }
 
     @Import(name="context", required=true)
-      private final Output<String> context;
+    private Output<String> context;
 
     public Output<String> context() {
         return this.context;
     }
 
     @Import(name="cpuPeriod")
-      private final @Nullable Output<Integer> cpuPeriod;
+    private @Nullable Output<Integer> cpuPeriod;
 
-    public Output<Integer> cpuPeriod() {
-        return this.cpuPeriod == null ? Codegen.empty() : this.cpuPeriod;
+    public Optional<Output<Integer>> cpuPeriod() {
+        return Optional.ofNullable(this.cpuPeriod);
     }
 
     @Import(name="cpuQuota")
-      private final @Nullable Output<Integer> cpuQuota;
+    private @Nullable Output<Integer> cpuQuota;
 
-    public Output<Integer> cpuQuota() {
-        return this.cpuQuota == null ? Codegen.empty() : this.cpuQuota;
+    public Optional<Output<Integer>> cpuQuota() {
+        return Optional.ofNullable(this.cpuQuota);
     }
 
     @Import(name="cpuSetCpus")
-      private final @Nullable Output<String> cpuSetCpus;
+    private @Nullable Output<String> cpuSetCpus;
 
-    public Output<String> cpuSetCpus() {
-        return this.cpuSetCpus == null ? Codegen.empty() : this.cpuSetCpus;
+    public Optional<Output<String>> cpuSetCpus() {
+        return Optional.ofNullable(this.cpuSetCpus);
     }
 
     @Import(name="cpuSetMems")
-      private final @Nullable Output<String> cpuSetMems;
+    private @Nullable Output<String> cpuSetMems;
 
-    public Output<String> cpuSetMems() {
-        return this.cpuSetMems == null ? Codegen.empty() : this.cpuSetMems;
+    public Optional<Output<String>> cpuSetMems() {
+        return Optional.ofNullable(this.cpuSetMems);
     }
 
     @Import(name="cpuShares")
-      private final @Nullable Output<Integer> cpuShares;
+    private @Nullable Output<Integer> cpuShares;
 
-    public Output<Integer> cpuShares() {
-        return this.cpuShares == null ? Codegen.empty() : this.cpuShares;
+    public Optional<Output<Integer>> cpuShares() {
+        return Optional.ofNullable(this.cpuShares);
     }
 
     @Import(name="dockerfile")
-      private final @Nullable Output<String> dockerfile;
+    private @Nullable Output<String> dockerfile;
 
-    public Output<String> dockerfile() {
-        return this.dockerfile == null ? Codegen.empty() : this.dockerfile;
+    public Optional<Output<String>> dockerfile() {
+        return Optional.ofNullable(this.dockerfile);
     }
 
     @Import(name="extraHosts")
-      private final @Nullable Output<List<String>> extraHosts;
+    private @Nullable Output<List<String>> extraHosts;
 
-    public Output<List<String>> extraHosts() {
-        return this.extraHosts == null ? Codegen.empty() : this.extraHosts;
+    public Optional<Output<List<String>>> extraHosts() {
+        return Optional.ofNullable(this.extraHosts);
     }
 
     @Import(name="forceRemove")
-      private final @Nullable Output<Boolean> forceRemove;
+    private @Nullable Output<Boolean> forceRemove;
 
-    public Output<Boolean> forceRemove() {
-        return this.forceRemove == null ? Codegen.empty() : this.forceRemove;
+    public Optional<Output<Boolean>> forceRemove() {
+        return Optional.ofNullable(this.forceRemove);
     }
 
     @Import(name="isolation")
-      private final @Nullable Output<String> isolation;
+    private @Nullable Output<String> isolation;
 
-    public Output<String> isolation() {
-        return this.isolation == null ? Codegen.empty() : this.isolation;
+    public Optional<Output<String>> isolation() {
+        return Optional.ofNullable(this.isolation);
     }
 
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="memory")
-      private final @Nullable Output<Integer> memory;
+    private @Nullable Output<Integer> memory;
 
-    public Output<Integer> memory() {
-        return this.memory == null ? Codegen.empty() : this.memory;
+    public Optional<Output<Integer>> memory() {
+        return Optional.ofNullable(this.memory);
     }
 
     @Import(name="memorySwap")
-      private final @Nullable Output<Integer> memorySwap;
+    private @Nullable Output<Integer> memorySwap;
 
-    public Output<Integer> memorySwap() {
-        return this.memorySwap == null ? Codegen.empty() : this.memorySwap;
+    public Optional<Output<Integer>> memorySwap() {
+        return Optional.ofNullable(this.memorySwap);
     }
 
     @Import(name="networkMode")
-      private final @Nullable Output<String> networkMode;
+    private @Nullable Output<String> networkMode;
 
-    public Output<String> networkMode() {
-        return this.networkMode == null ? Codegen.empty() : this.networkMode;
+    public Optional<Output<String>> networkMode() {
+        return Optional.ofNullable(this.networkMode);
     }
 
     @Import(name="noCache")
-      private final @Nullable Output<Boolean> noCache;
+    private @Nullable Output<Boolean> noCache;
 
-    public Output<Boolean> noCache() {
-        return this.noCache == null ? Codegen.empty() : this.noCache;
+    public Optional<Output<Boolean>> noCache() {
+        return Optional.ofNullable(this.noCache);
     }
 
     @Import(name="platform")
-      private final @Nullable Output<String> platform;
+    private @Nullable Output<String> platform;
 
-    public Output<String> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<String>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     @Import(name="pullParent")
-      private final @Nullable Output<Boolean> pullParent;
+    private @Nullable Output<Boolean> pullParent;
 
-    public Output<Boolean> pullParent() {
-        return this.pullParent == null ? Codegen.empty() : this.pullParent;
+    public Optional<Output<Boolean>> pullParent() {
+        return Optional.ofNullable(this.pullParent);
     }
 
     @Import(name="remoteContext")
-      private final @Nullable Output<String> remoteContext;
+    private @Nullable Output<String> remoteContext;
 
-    public Output<String> remoteContext() {
-        return this.remoteContext == null ? Codegen.empty() : this.remoteContext;
+    public Optional<Output<String>> remoteContext() {
+        return Optional.ofNullable(this.remoteContext);
     }
 
     @Import(name="remove")
-      private final @Nullable Output<Boolean> remove;
+    private @Nullable Output<Boolean> remove;
 
-    public Output<Boolean> remove() {
-        return this.remove == null ? Codegen.empty() : this.remove;
+    public Optional<Output<Boolean>> remove() {
+        return Optional.ofNullable(this.remove);
     }
 
     @Import(name="securityOpts")
-      private final @Nullable Output<List<String>> securityOpts;
+    private @Nullable Output<List<String>> securityOpts;
 
-    public Output<List<String>> securityOpts() {
-        return this.securityOpts == null ? Codegen.empty() : this.securityOpts;
+    public Optional<Output<List<String>>> securityOpts() {
+        return Optional.ofNullable(this.securityOpts);
     }
 
     @Import(name="sessionId")
-      private final @Nullable Output<String> sessionId;
+    private @Nullable Output<String> sessionId;
 
-    public Output<String> sessionId() {
-        return this.sessionId == null ? Codegen.empty() : this.sessionId;
+    public Optional<Output<String>> sessionId() {
+        return Optional.ofNullable(this.sessionId);
     }
 
     @Import(name="shmSize")
-      private final @Nullable Output<Integer> shmSize;
+    private @Nullable Output<Integer> shmSize;
 
-    public Output<Integer> shmSize() {
-        return this.shmSize == null ? Codegen.empty() : this.shmSize;
+    public Optional<Output<Integer>> shmSize() {
+        return Optional.ofNullable(this.shmSize);
     }
 
     @Import(name="squash")
-      private final @Nullable Output<Boolean> squash;
+    private @Nullable Output<Boolean> squash;
 
-    public Output<Boolean> squash() {
-        return this.squash == null ? Codegen.empty() : this.squash;
+    public Optional<Output<Boolean>> squash() {
+        return Optional.ofNullable(this.squash);
     }
 
     @Import(name="suppressOutput")
-      private final @Nullable Output<Boolean> suppressOutput;
+    private @Nullable Output<Boolean> suppressOutput;
 
-    public Output<Boolean> suppressOutput() {
-        return this.suppressOutput == null ? Codegen.empty() : this.suppressOutput;
+    public Optional<Output<Boolean>> suppressOutput() {
+        return Optional.ofNullable(this.suppressOutput);
     }
 
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     @Import(name="ulimits")
-      private final @Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits;
+    private @Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits;
 
-    public Output<List<RegistryImageBuildUlimitGetArgs>> ulimits() {
-        return this.ulimits == null ? Codegen.empty() : this.ulimits;
+    public Optional<Output<List<RegistryImageBuildUlimitGetArgs>>> ulimits() {
+        return Optional.ofNullable(this.ulimits);
     }
 
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public RegistryImageBuildGetArgs(
-        @Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs,
-        @Nullable Output<Map<String,String>> buildArgs,
-        @Nullable Output<String> buildId,
-        @Nullable Output<List<String>> cacheFroms,
-        @Nullable Output<String> cgroupParent,
-        Output<String> context,
-        @Nullable Output<Integer> cpuPeriod,
-        @Nullable Output<Integer> cpuQuota,
-        @Nullable Output<String> cpuSetCpus,
-        @Nullable Output<String> cpuSetMems,
-        @Nullable Output<Integer> cpuShares,
-        @Nullable Output<String> dockerfile,
-        @Nullable Output<List<String>> extraHosts,
-        @Nullable Output<Boolean> forceRemove,
-        @Nullable Output<String> isolation,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<Integer> memory,
-        @Nullable Output<Integer> memorySwap,
-        @Nullable Output<String> networkMode,
-        @Nullable Output<Boolean> noCache,
-        @Nullable Output<String> platform,
-        @Nullable Output<Boolean> pullParent,
-        @Nullable Output<String> remoteContext,
-        @Nullable Output<Boolean> remove,
-        @Nullable Output<List<String>> securityOpts,
-        @Nullable Output<String> sessionId,
-        @Nullable Output<Integer> shmSize,
-        @Nullable Output<Boolean> squash,
-        @Nullable Output<Boolean> suppressOutput,
-        @Nullable Output<String> target,
-        @Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits,
-        @Nullable Output<String> version) {
-        this.authConfigs = authConfigs;
-        this.buildArgs = buildArgs;
-        this.buildId = buildId;
-        this.cacheFroms = cacheFroms;
-        this.cgroupParent = cgroupParent;
-        this.context = Objects.requireNonNull(context, "expected parameter 'context' to be non-null");
-        this.cpuPeriod = cpuPeriod;
-        this.cpuQuota = cpuQuota;
-        this.cpuSetCpus = cpuSetCpus;
-        this.cpuSetMems = cpuSetMems;
-        this.cpuShares = cpuShares;
-        this.dockerfile = dockerfile;
-        this.extraHosts = extraHosts;
-        this.forceRemove = forceRemove;
-        this.isolation = isolation;
-        this.labels = labels;
-        this.memory = memory;
-        this.memorySwap = memorySwap;
-        this.networkMode = networkMode;
-        this.noCache = noCache;
-        this.platform = platform;
-        this.pullParent = pullParent;
-        this.remoteContext = remoteContext;
-        this.remove = remove;
-        this.securityOpts = securityOpts;
-        this.sessionId = sessionId;
-        this.shmSize = shmSize;
-        this.squash = squash;
-        this.suppressOutput = suppressOutput;
-        this.target = target;
-        this.ulimits = ulimits;
-        this.version = version;
-    }
+    private RegistryImageBuildGetArgs() {}
 
-    private RegistryImageBuildGetArgs() {
-        this.authConfigs = Codegen.empty();
-        this.buildArgs = Codegen.empty();
-        this.buildId = Codegen.empty();
-        this.cacheFroms = Codegen.empty();
-        this.cgroupParent = Codegen.empty();
-        this.context = Codegen.empty();
-        this.cpuPeriod = Codegen.empty();
-        this.cpuQuota = Codegen.empty();
-        this.cpuSetCpus = Codegen.empty();
-        this.cpuSetMems = Codegen.empty();
-        this.cpuShares = Codegen.empty();
-        this.dockerfile = Codegen.empty();
-        this.extraHosts = Codegen.empty();
-        this.forceRemove = Codegen.empty();
-        this.isolation = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.memory = Codegen.empty();
-        this.memorySwap = Codegen.empty();
-        this.networkMode = Codegen.empty();
-        this.noCache = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.pullParent = Codegen.empty();
-        this.remoteContext = Codegen.empty();
-        this.remove = Codegen.empty();
-        this.securityOpts = Codegen.empty();
-        this.sessionId = Codegen.empty();
-        this.shmSize = Codegen.empty();
-        this.squash = Codegen.empty();
-        this.suppressOutput = Codegen.empty();
-        this.target = Codegen.empty();
-        this.ulimits = Codegen.empty();
-        this.version = Codegen.empty();
+    private RegistryImageBuildGetArgs(RegistryImageBuildGetArgs $) {
+        this.authConfigs = $.authConfigs;
+        this.buildArgs = $.buildArgs;
+        this.buildId = $.buildId;
+        this.cacheFroms = $.cacheFroms;
+        this.cgroupParent = $.cgroupParent;
+        this.context = $.context;
+        this.cpuPeriod = $.cpuPeriod;
+        this.cpuQuota = $.cpuQuota;
+        this.cpuSetCpus = $.cpuSetCpus;
+        this.cpuSetMems = $.cpuSetMems;
+        this.cpuShares = $.cpuShares;
+        this.dockerfile = $.dockerfile;
+        this.extraHosts = $.extraHosts;
+        this.forceRemove = $.forceRemove;
+        this.isolation = $.isolation;
+        this.labels = $.labels;
+        this.memory = $.memory;
+        this.memorySwap = $.memorySwap;
+        this.networkMode = $.networkMode;
+        this.noCache = $.noCache;
+        this.platform = $.platform;
+        this.pullParent = $.pullParent;
+        this.remoteContext = $.remoteContext;
+        this.remove = $.remove;
+        this.securityOpts = $.securityOpts;
+        this.sessionId = $.sessionId;
+        this.shmSize = $.shmSize;
+        this.squash = $.squash;
+        this.suppressOutput = $.suppressOutput;
+        this.target = $.target;
+        this.ulimits = $.ulimits;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryImageBuildGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs;
-        private @Nullable Output<Map<String,String>> buildArgs;
-        private @Nullable Output<String> buildId;
-        private @Nullable Output<List<String>> cacheFroms;
-        private @Nullable Output<String> cgroupParent;
-        private Output<String> context;
-        private @Nullable Output<Integer> cpuPeriod;
-        private @Nullable Output<Integer> cpuQuota;
-        private @Nullable Output<String> cpuSetCpus;
-        private @Nullable Output<String> cpuSetMems;
-        private @Nullable Output<Integer> cpuShares;
-        private @Nullable Output<String> dockerfile;
-        private @Nullable Output<List<String>> extraHosts;
-        private @Nullable Output<Boolean> forceRemove;
-        private @Nullable Output<String> isolation;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<Integer> memory;
-        private @Nullable Output<Integer> memorySwap;
-        private @Nullable Output<String> networkMode;
-        private @Nullable Output<Boolean> noCache;
-        private @Nullable Output<String> platform;
-        private @Nullable Output<Boolean> pullParent;
-        private @Nullable Output<String> remoteContext;
-        private @Nullable Output<Boolean> remove;
-        private @Nullable Output<List<String>> securityOpts;
-        private @Nullable Output<String> sessionId;
-        private @Nullable Output<Integer> shmSize;
-        private @Nullable Output<Boolean> squash;
-        private @Nullable Output<Boolean> suppressOutput;
-        private @Nullable Output<String> target;
-        private @Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits;
-        private @Nullable Output<String> version;
+        private RegistryImageBuildGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryImageBuildGetArgs();
         }
 
         public Builder(RegistryImageBuildGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authConfigs = defaults.authConfigs;
-    	      this.buildArgs = defaults.buildArgs;
-    	      this.buildId = defaults.buildId;
-    	      this.cacheFroms = defaults.cacheFroms;
-    	      this.cgroupParent = defaults.cgroupParent;
-    	      this.context = defaults.context;
-    	      this.cpuPeriod = defaults.cpuPeriod;
-    	      this.cpuQuota = defaults.cpuQuota;
-    	      this.cpuSetCpus = defaults.cpuSetCpus;
-    	      this.cpuSetMems = defaults.cpuSetMems;
-    	      this.cpuShares = defaults.cpuShares;
-    	      this.dockerfile = defaults.dockerfile;
-    	      this.extraHosts = defaults.extraHosts;
-    	      this.forceRemove = defaults.forceRemove;
-    	      this.isolation = defaults.isolation;
-    	      this.labels = defaults.labels;
-    	      this.memory = defaults.memory;
-    	      this.memorySwap = defaults.memorySwap;
-    	      this.networkMode = defaults.networkMode;
-    	      this.noCache = defaults.noCache;
-    	      this.platform = defaults.platform;
-    	      this.pullParent = defaults.pullParent;
-    	      this.remoteContext = defaults.remoteContext;
-    	      this.remove = defaults.remove;
-    	      this.securityOpts = defaults.securityOpts;
-    	      this.sessionId = defaults.sessionId;
-    	      this.shmSize = defaults.shmSize;
-    	      this.squash = defaults.squash;
-    	      this.suppressOutput = defaults.suppressOutput;
-    	      this.target = defaults.target;
-    	      this.ulimits = defaults.ulimits;
-    	      this.version = defaults.version;
+            $ = new RegistryImageBuildGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authConfigs(@Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs) {
-            this.authConfigs = authConfigs;
+            $.authConfigs = authConfigs;
             return this;
         }
-        public Builder authConfigs(@Nullable List<RegistryImageBuildAuthConfigGetArgs> authConfigs) {
-            this.authConfigs = Codegen.ofNullable(authConfigs);
-            return this;
+
+        public Builder authConfigs(List<RegistryImageBuildAuthConfigGetArgs> authConfigs) {
+            return authConfigs(Output.of(authConfigs));
         }
+
         public Builder authConfigs(RegistryImageBuildAuthConfigGetArgs... authConfigs) {
             return authConfigs(List.of(authConfigs));
         }
+
         public Builder buildArgs(@Nullable Output<Map<String,String>> buildArgs) {
-            this.buildArgs = buildArgs;
+            $.buildArgs = buildArgs;
             return this;
         }
-        public Builder buildArgs(@Nullable Map<String,String> buildArgs) {
-            this.buildArgs = Codegen.ofNullable(buildArgs);
-            return this;
+
+        public Builder buildArgs(Map<String,String> buildArgs) {
+            return buildArgs(Output.of(buildArgs));
         }
+
         public Builder buildId(@Nullable Output<String> buildId) {
-            this.buildId = buildId;
+            $.buildId = buildId;
             return this;
         }
-        public Builder buildId(@Nullable String buildId) {
-            this.buildId = Codegen.ofNullable(buildId);
-            return this;
+
+        public Builder buildId(String buildId) {
+            return buildId(Output.of(buildId));
         }
+
         public Builder cacheFroms(@Nullable Output<List<String>> cacheFroms) {
-            this.cacheFroms = cacheFroms;
+            $.cacheFroms = cacheFroms;
             return this;
         }
-        public Builder cacheFroms(@Nullable List<String> cacheFroms) {
-            this.cacheFroms = Codegen.ofNullable(cacheFroms);
-            return this;
+
+        public Builder cacheFroms(List<String> cacheFroms) {
+            return cacheFroms(Output.of(cacheFroms));
         }
+
         public Builder cacheFroms(String... cacheFroms) {
             return cacheFroms(List.of(cacheFroms));
         }
+
         public Builder cgroupParent(@Nullable Output<String> cgroupParent) {
-            this.cgroupParent = cgroupParent;
+            $.cgroupParent = cgroupParent;
             return this;
         }
-        public Builder cgroupParent(@Nullable String cgroupParent) {
-            this.cgroupParent = Codegen.ofNullable(cgroupParent);
-            return this;
+
+        public Builder cgroupParent(String cgroupParent) {
+            return cgroupParent(Output.of(cgroupParent));
         }
+
         public Builder context(Output<String> context) {
-            this.context = Objects.requireNonNull(context);
+            $.context = context;
             return this;
         }
+
         public Builder context(String context) {
-            this.context = Output.of(Objects.requireNonNull(context));
-            return this;
+            return context(Output.of(context));
         }
+
         public Builder cpuPeriod(@Nullable Output<Integer> cpuPeriod) {
-            this.cpuPeriod = cpuPeriod;
+            $.cpuPeriod = cpuPeriod;
             return this;
         }
-        public Builder cpuPeriod(@Nullable Integer cpuPeriod) {
-            this.cpuPeriod = Codegen.ofNullable(cpuPeriod);
-            return this;
+
+        public Builder cpuPeriod(Integer cpuPeriod) {
+            return cpuPeriod(Output.of(cpuPeriod));
         }
+
         public Builder cpuQuota(@Nullable Output<Integer> cpuQuota) {
-            this.cpuQuota = cpuQuota;
+            $.cpuQuota = cpuQuota;
             return this;
         }
-        public Builder cpuQuota(@Nullable Integer cpuQuota) {
-            this.cpuQuota = Codegen.ofNullable(cpuQuota);
-            return this;
+
+        public Builder cpuQuota(Integer cpuQuota) {
+            return cpuQuota(Output.of(cpuQuota));
         }
+
         public Builder cpuSetCpus(@Nullable Output<String> cpuSetCpus) {
-            this.cpuSetCpus = cpuSetCpus;
+            $.cpuSetCpus = cpuSetCpus;
             return this;
         }
-        public Builder cpuSetCpus(@Nullable String cpuSetCpus) {
-            this.cpuSetCpus = Codegen.ofNullable(cpuSetCpus);
-            return this;
+
+        public Builder cpuSetCpus(String cpuSetCpus) {
+            return cpuSetCpus(Output.of(cpuSetCpus));
         }
+
         public Builder cpuSetMems(@Nullable Output<String> cpuSetMems) {
-            this.cpuSetMems = cpuSetMems;
+            $.cpuSetMems = cpuSetMems;
             return this;
         }
-        public Builder cpuSetMems(@Nullable String cpuSetMems) {
-            this.cpuSetMems = Codegen.ofNullable(cpuSetMems);
-            return this;
+
+        public Builder cpuSetMems(String cpuSetMems) {
+            return cpuSetMems(Output.of(cpuSetMems));
         }
+
         public Builder cpuShares(@Nullable Output<Integer> cpuShares) {
-            this.cpuShares = cpuShares;
+            $.cpuShares = cpuShares;
             return this;
         }
-        public Builder cpuShares(@Nullable Integer cpuShares) {
-            this.cpuShares = Codegen.ofNullable(cpuShares);
-            return this;
+
+        public Builder cpuShares(Integer cpuShares) {
+            return cpuShares(Output.of(cpuShares));
         }
+
         public Builder dockerfile(@Nullable Output<String> dockerfile) {
-            this.dockerfile = dockerfile;
+            $.dockerfile = dockerfile;
             return this;
         }
-        public Builder dockerfile(@Nullable String dockerfile) {
-            this.dockerfile = Codegen.ofNullable(dockerfile);
-            return this;
+
+        public Builder dockerfile(String dockerfile) {
+            return dockerfile(Output.of(dockerfile));
         }
+
         public Builder extraHosts(@Nullable Output<List<String>> extraHosts) {
-            this.extraHosts = extraHosts;
+            $.extraHosts = extraHosts;
             return this;
         }
-        public Builder extraHosts(@Nullable List<String> extraHosts) {
-            this.extraHosts = Codegen.ofNullable(extraHosts);
-            return this;
+
+        public Builder extraHosts(List<String> extraHosts) {
+            return extraHosts(Output.of(extraHosts));
         }
+
         public Builder extraHosts(String... extraHosts) {
             return extraHosts(List.of(extraHosts));
         }
+
         public Builder forceRemove(@Nullable Output<Boolean> forceRemove) {
-            this.forceRemove = forceRemove;
+            $.forceRemove = forceRemove;
             return this;
         }
-        public Builder forceRemove(@Nullable Boolean forceRemove) {
-            this.forceRemove = Codegen.ofNullable(forceRemove);
-            return this;
+
+        public Builder forceRemove(Boolean forceRemove) {
+            return forceRemove(Output.of(forceRemove));
         }
+
         public Builder isolation(@Nullable Output<String> isolation) {
-            this.isolation = isolation;
+            $.isolation = isolation;
             return this;
         }
-        public Builder isolation(@Nullable String isolation) {
-            this.isolation = Codegen.ofNullable(isolation);
-            return this;
+
+        public Builder isolation(String isolation) {
+            return isolation(Output.of(isolation));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder memory(@Nullable Output<Integer> memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
         }
-        public Builder memory(@Nullable Integer memory) {
-            this.memory = Codegen.ofNullable(memory);
-            return this;
+
+        public Builder memory(Integer memory) {
+            return memory(Output.of(memory));
         }
+
         public Builder memorySwap(@Nullable Output<Integer> memorySwap) {
-            this.memorySwap = memorySwap;
+            $.memorySwap = memorySwap;
             return this;
         }
-        public Builder memorySwap(@Nullable Integer memorySwap) {
-            this.memorySwap = Codegen.ofNullable(memorySwap);
-            return this;
+
+        public Builder memorySwap(Integer memorySwap) {
+            return memorySwap(Output.of(memorySwap));
         }
+
         public Builder networkMode(@Nullable Output<String> networkMode) {
-            this.networkMode = networkMode;
+            $.networkMode = networkMode;
             return this;
         }
-        public Builder networkMode(@Nullable String networkMode) {
-            this.networkMode = Codegen.ofNullable(networkMode);
-            return this;
+
+        public Builder networkMode(String networkMode) {
+            return networkMode(Output.of(networkMode));
         }
+
         public Builder noCache(@Nullable Output<Boolean> noCache) {
-            this.noCache = noCache;
+            $.noCache = noCache;
             return this;
         }
-        public Builder noCache(@Nullable Boolean noCache) {
-            this.noCache = Codegen.ofNullable(noCache);
-            return this;
+
+        public Builder noCache(Boolean noCache) {
+            return noCache(Output.of(noCache));
         }
+
         public Builder platform(@Nullable Output<String> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable String platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(String platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder pullParent(@Nullable Output<Boolean> pullParent) {
-            this.pullParent = pullParent;
+            $.pullParent = pullParent;
             return this;
         }
-        public Builder pullParent(@Nullable Boolean pullParent) {
-            this.pullParent = Codegen.ofNullable(pullParent);
-            return this;
+
+        public Builder pullParent(Boolean pullParent) {
+            return pullParent(Output.of(pullParent));
         }
+
         public Builder remoteContext(@Nullable Output<String> remoteContext) {
-            this.remoteContext = remoteContext;
+            $.remoteContext = remoteContext;
             return this;
         }
-        public Builder remoteContext(@Nullable String remoteContext) {
-            this.remoteContext = Codegen.ofNullable(remoteContext);
-            return this;
+
+        public Builder remoteContext(String remoteContext) {
+            return remoteContext(Output.of(remoteContext));
         }
+
         public Builder remove(@Nullable Output<Boolean> remove) {
-            this.remove = remove;
+            $.remove = remove;
             return this;
         }
-        public Builder remove(@Nullable Boolean remove) {
-            this.remove = Codegen.ofNullable(remove);
-            return this;
+
+        public Builder remove(Boolean remove) {
+            return remove(Output.of(remove));
         }
+
         public Builder securityOpts(@Nullable Output<List<String>> securityOpts) {
-            this.securityOpts = securityOpts;
+            $.securityOpts = securityOpts;
             return this;
         }
-        public Builder securityOpts(@Nullable List<String> securityOpts) {
-            this.securityOpts = Codegen.ofNullable(securityOpts);
-            return this;
+
+        public Builder securityOpts(List<String> securityOpts) {
+            return securityOpts(Output.of(securityOpts));
         }
+
         public Builder securityOpts(String... securityOpts) {
             return securityOpts(List.of(securityOpts));
         }
+
         public Builder sessionId(@Nullable Output<String> sessionId) {
-            this.sessionId = sessionId;
+            $.sessionId = sessionId;
             return this;
         }
-        public Builder sessionId(@Nullable String sessionId) {
-            this.sessionId = Codegen.ofNullable(sessionId);
-            return this;
+
+        public Builder sessionId(String sessionId) {
+            return sessionId(Output.of(sessionId));
         }
+
         public Builder shmSize(@Nullable Output<Integer> shmSize) {
-            this.shmSize = shmSize;
+            $.shmSize = shmSize;
             return this;
         }
-        public Builder shmSize(@Nullable Integer shmSize) {
-            this.shmSize = Codegen.ofNullable(shmSize);
-            return this;
+
+        public Builder shmSize(Integer shmSize) {
+            return shmSize(Output.of(shmSize));
         }
+
         public Builder squash(@Nullable Output<Boolean> squash) {
-            this.squash = squash;
+            $.squash = squash;
             return this;
         }
-        public Builder squash(@Nullable Boolean squash) {
-            this.squash = Codegen.ofNullable(squash);
-            return this;
+
+        public Builder squash(Boolean squash) {
+            return squash(Output.of(squash));
         }
+
         public Builder suppressOutput(@Nullable Output<Boolean> suppressOutput) {
-            this.suppressOutput = suppressOutput;
+            $.suppressOutput = suppressOutput;
             return this;
         }
-        public Builder suppressOutput(@Nullable Boolean suppressOutput) {
-            this.suppressOutput = Codegen.ofNullable(suppressOutput);
-            return this;
+
+        public Builder suppressOutput(Boolean suppressOutput) {
+            return suppressOutput(Output.of(suppressOutput));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder ulimits(@Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits) {
-            this.ulimits = ulimits;
+            $.ulimits = ulimits;
             return this;
         }
-        public Builder ulimits(@Nullable List<RegistryImageBuildUlimitGetArgs> ulimits) {
-            this.ulimits = Codegen.ofNullable(ulimits);
-            return this;
+
+        public Builder ulimits(List<RegistryImageBuildUlimitGetArgs> ulimits) {
+            return ulimits(Output.of(ulimits));
         }
+
         public Builder ulimits(RegistryImageBuildUlimitGetArgs... ulimits) {
             return ulimits(List.of(ulimits));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public RegistryImageBuildGetArgs build() {
-            return new RegistryImageBuildGetArgs(authConfigs, buildArgs, buildId, cacheFroms, cgroupParent, context, cpuPeriod, cpuQuota, cpuSetCpus, cpuSetMems, cpuShares, dockerfile, extraHosts, forceRemove, isolation, labels, memory, memorySwap, networkMode, noCache, platform, pullParent, remoteContext, remove, securityOpts, sessionId, shmSize, squash, suppressOutput, target, ulimits, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public RegistryImageBuildGetArgs build() {
+            $.context = Objects.requireNonNull($.context, "expected parameter 'context' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,320 +23,293 @@ public final class GetDatabaseInstanceSetting extends com.pulumi.resources.Invok
     public static final GetDatabaseInstanceSetting Empty = new GetDatabaseInstanceSetting();
 
     @Import(name="activationPolicy", required=true)
-      private final String activationPolicy;
+    private String activationPolicy;
 
     public String activationPolicy() {
         return this.activationPolicy;
     }
 
     @Import(name="availabilityType", required=true)
-      private final String availabilityType;
+    private String availabilityType;
 
     public String availabilityType() {
         return this.availabilityType;
     }
 
     @Import(name="backupConfigurations", required=true)
-      private final List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations;
+    private List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations;
 
     public List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations() {
         return this.backupConfigurations;
     }
 
     @Import(name="collation", required=true)
-      private final String collation;
+    private String collation;
 
     public String collation() {
         return this.collation;
     }
 
     @Import(name="databaseFlags", required=true)
-      private final List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags;
+    private List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags;
 
     public List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags() {
         return this.databaseFlags;
     }
 
     @Import(name="diskAutoresize", required=true)
-      private final Boolean diskAutoresize;
+    private Boolean diskAutoresize;
 
     public Boolean diskAutoresize() {
         return this.diskAutoresize;
     }
 
     @Import(name="diskAutoresizeLimit", required=true)
-      private final Integer diskAutoresizeLimit;
+    private Integer diskAutoresizeLimit;
 
     public Integer diskAutoresizeLimit() {
         return this.diskAutoresizeLimit;
     }
 
     @Import(name="diskSize", required=true)
-      private final Integer diskSize;
+    private Integer diskSize;
 
     public Integer diskSize() {
         return this.diskSize;
     }
 
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
     }
 
     @Import(name="insightsConfigs", required=true)
-      private final List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs;
+    private List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs;
 
     public List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs() {
         return this.insightsConfigs;
     }
 
     @Import(name="ipConfigurations", required=true)
-      private final List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations;
+    private List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations;
 
     public List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations() {
         return this.ipConfigurations;
     }
 
     @Import(name="locationPreferences", required=true)
-      private final List<GetDatabaseInstanceSettingLocationPreference> locationPreferences;
+    private List<GetDatabaseInstanceSettingLocationPreference> locationPreferences;
 
     public List<GetDatabaseInstanceSettingLocationPreference> locationPreferences() {
         return this.locationPreferences;
     }
 
     @Import(name="maintenanceWindows", required=true)
-      private final List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows;
+    private List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows;
 
     public List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows() {
         return this.maintenanceWindows;
     }
 
     @Import(name="pricingPlan", required=true)
-      private final String pricingPlan;
+    private String pricingPlan;
 
     public String pricingPlan() {
         return this.pricingPlan;
     }
 
     @Import(name="tier", required=true)
-      private final String tier;
+    private String tier;
 
     public String tier() {
         return this.tier;
     }
 
     @Import(name="userLabels", required=true)
-      private final Map<String,String> userLabels;
+    private Map<String,String> userLabels;
 
     public Map<String,String> userLabels() {
         return this.userLabels;
     }
 
     @Import(name="version", required=true)
-      private final Integer version;
+    private Integer version;
 
     public Integer version() {
         return this.version;
     }
 
-    public GetDatabaseInstanceSetting(
-        String activationPolicy,
-        String availabilityType,
-        List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations,
-        String collation,
-        List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags,
-        Boolean diskAutoresize,
-        Integer diskAutoresizeLimit,
-        Integer diskSize,
-        String diskType,
-        List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs,
-        List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations,
-        List<GetDatabaseInstanceSettingLocationPreference> locationPreferences,
-        List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows,
-        String pricingPlan,
-        String tier,
-        Map<String,String> userLabels,
-        Integer version) {
-        this.activationPolicy = Objects.requireNonNull(activationPolicy, "expected parameter 'activationPolicy' to be non-null");
-        this.availabilityType = Objects.requireNonNull(availabilityType, "expected parameter 'availabilityType' to be non-null");
-        this.backupConfigurations = Objects.requireNonNull(backupConfigurations, "expected parameter 'backupConfigurations' to be non-null");
-        this.collation = Objects.requireNonNull(collation, "expected parameter 'collation' to be non-null");
-        this.databaseFlags = Objects.requireNonNull(databaseFlags, "expected parameter 'databaseFlags' to be non-null");
-        this.diskAutoresize = Objects.requireNonNull(diskAutoresize, "expected parameter 'diskAutoresize' to be non-null");
-        this.diskAutoresizeLimit = Objects.requireNonNull(diskAutoresizeLimit, "expected parameter 'diskAutoresizeLimit' to be non-null");
-        this.diskSize = Objects.requireNonNull(diskSize, "expected parameter 'diskSize' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.insightsConfigs = Objects.requireNonNull(insightsConfigs, "expected parameter 'insightsConfigs' to be non-null");
-        this.ipConfigurations = Objects.requireNonNull(ipConfigurations, "expected parameter 'ipConfigurations' to be non-null");
-        this.locationPreferences = Objects.requireNonNull(locationPreferences, "expected parameter 'locationPreferences' to be non-null");
-        this.maintenanceWindows = Objects.requireNonNull(maintenanceWindows, "expected parameter 'maintenanceWindows' to be non-null");
-        this.pricingPlan = Objects.requireNonNull(pricingPlan, "expected parameter 'pricingPlan' to be non-null");
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-        this.userLabels = Objects.requireNonNull(userLabels, "expected parameter 'userLabels' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private GetDatabaseInstanceSetting() {}
 
-    private GetDatabaseInstanceSetting() {
-        this.activationPolicy = null;
-        this.availabilityType = null;
-        this.backupConfigurations = List.of();
-        this.collation = null;
-        this.databaseFlags = List.of();
-        this.diskAutoresize = null;
-        this.diskAutoresizeLimit = null;
-        this.diskSize = null;
-        this.diskType = null;
-        this.insightsConfigs = List.of();
-        this.ipConfigurations = List.of();
-        this.locationPreferences = List.of();
-        this.maintenanceWindows = List.of();
-        this.pricingPlan = null;
-        this.tier = null;
-        this.userLabels = Map.of();
-        this.version = null;
+    private GetDatabaseInstanceSetting(GetDatabaseInstanceSetting $) {
+        this.activationPolicy = $.activationPolicy;
+        this.availabilityType = $.availabilityType;
+        this.backupConfigurations = $.backupConfigurations;
+        this.collation = $.collation;
+        this.databaseFlags = $.databaseFlags;
+        this.diskAutoresize = $.diskAutoresize;
+        this.diskAutoresizeLimit = $.diskAutoresizeLimit;
+        this.diskSize = $.diskSize;
+        this.diskType = $.diskType;
+        this.insightsConfigs = $.insightsConfigs;
+        this.ipConfigurations = $.ipConfigurations;
+        this.locationPreferences = $.locationPreferences;
+        this.maintenanceWindows = $.maintenanceWindows;
+        this.pricingPlan = $.pricingPlan;
+        this.tier = $.tier;
+        this.userLabels = $.userLabels;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String activationPolicy;
-        private String availabilityType;
-        private List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations;
-        private String collation;
-        private List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags;
-        private Boolean diskAutoresize;
-        private Integer diskAutoresizeLimit;
-        private Integer diskSize;
-        private String diskType;
-        private List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs;
-        private List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations;
-        private List<GetDatabaseInstanceSettingLocationPreference> locationPreferences;
-        private List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows;
-        private String pricingPlan;
-        private String tier;
-        private Map<String,String> userLabels;
-        private Integer version;
+        private GetDatabaseInstanceSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceSetting();
         }
 
         public Builder(GetDatabaseInstanceSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activationPolicy = defaults.activationPolicy;
-    	      this.availabilityType = defaults.availabilityType;
-    	      this.backupConfigurations = defaults.backupConfigurations;
-    	      this.collation = defaults.collation;
-    	      this.databaseFlags = defaults.databaseFlags;
-    	      this.diskAutoresize = defaults.diskAutoresize;
-    	      this.diskAutoresizeLimit = defaults.diskAutoresizeLimit;
-    	      this.diskSize = defaults.diskSize;
-    	      this.diskType = defaults.diskType;
-    	      this.insightsConfigs = defaults.insightsConfigs;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.locationPreferences = defaults.locationPreferences;
-    	      this.maintenanceWindows = defaults.maintenanceWindows;
-    	      this.pricingPlan = defaults.pricingPlan;
-    	      this.tier = defaults.tier;
-    	      this.userLabels = defaults.userLabels;
-    	      this.version = defaults.version;
+            $ = new GetDatabaseInstanceSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder activationPolicy(String activationPolicy) {
-            this.activationPolicy = Objects.requireNonNull(activationPolicy);
+            $.activationPolicy = activationPolicy;
             return this;
         }
+
         public Builder availabilityType(String availabilityType) {
-            this.availabilityType = Objects.requireNonNull(availabilityType);
+            $.availabilityType = availabilityType;
             return this;
         }
+
         public Builder backupConfigurations(List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations) {
-            this.backupConfigurations = Objects.requireNonNull(backupConfigurations);
+            $.backupConfigurations = backupConfigurations;
             return this;
         }
+
         public Builder backupConfigurations(GetDatabaseInstanceSettingBackupConfiguration... backupConfigurations) {
             return backupConfigurations(List.of(backupConfigurations));
         }
+
         public Builder collation(String collation) {
-            this.collation = Objects.requireNonNull(collation);
+            $.collation = collation;
             return this;
         }
+
         public Builder databaseFlags(List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags) {
-            this.databaseFlags = Objects.requireNonNull(databaseFlags);
+            $.databaseFlags = databaseFlags;
             return this;
         }
+
         public Builder databaseFlags(GetDatabaseInstanceSettingDatabaseFlag... databaseFlags) {
             return databaseFlags(List.of(databaseFlags));
         }
+
         public Builder diskAutoresize(Boolean diskAutoresize) {
-            this.diskAutoresize = Objects.requireNonNull(diskAutoresize);
+            $.diskAutoresize = diskAutoresize;
             return this;
         }
+
         public Builder diskAutoresizeLimit(Integer diskAutoresizeLimit) {
-            this.diskAutoresizeLimit = Objects.requireNonNull(diskAutoresizeLimit);
+            $.diskAutoresizeLimit = diskAutoresizeLimit;
             return this;
         }
+
         public Builder diskSize(Integer diskSize) {
-            this.diskSize = Objects.requireNonNull(diskSize);
+            $.diskSize = diskSize;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder insightsConfigs(List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs) {
-            this.insightsConfigs = Objects.requireNonNull(insightsConfigs);
+            $.insightsConfigs = insightsConfigs;
             return this;
         }
+
         public Builder insightsConfigs(GetDatabaseInstanceSettingInsightsConfig... insightsConfigs) {
             return insightsConfigs(List.of(insightsConfigs));
         }
+
         public Builder ipConfigurations(List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations) {
-            this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(GetDatabaseInstanceSettingIpConfiguration... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder locationPreferences(List<GetDatabaseInstanceSettingLocationPreference> locationPreferences) {
-            this.locationPreferences = Objects.requireNonNull(locationPreferences);
+            $.locationPreferences = locationPreferences;
             return this;
         }
+
         public Builder locationPreferences(GetDatabaseInstanceSettingLocationPreference... locationPreferences) {
             return locationPreferences(List.of(locationPreferences));
         }
+
         public Builder maintenanceWindows(List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows) {
-            this.maintenanceWindows = Objects.requireNonNull(maintenanceWindows);
+            $.maintenanceWindows = maintenanceWindows;
             return this;
         }
+
         public Builder maintenanceWindows(GetDatabaseInstanceSettingMaintenanceWindow... maintenanceWindows) {
             return maintenanceWindows(List.of(maintenanceWindows));
         }
+
         public Builder pricingPlan(String pricingPlan) {
-            this.pricingPlan = Objects.requireNonNull(pricingPlan);
+            $.pricingPlan = pricingPlan;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder userLabels(Map<String,String> userLabels) {
-            this.userLabels = Objects.requireNonNull(userLabels);
+            $.userLabels = userLabels;
             return this;
         }
+
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public GetDatabaseInstanceSetting build() {
-            return new GetDatabaseInstanceSetting(activationPolicy, availabilityType, backupConfigurations, collation, databaseFlags, diskAutoresize, diskAutoresizeLimit, diskSize, diskType, insightsConfigs, ipConfigurations, locationPreferences, maintenanceWindows, pricingPlan, tier, userLabels, version);
+        }
+
+        public GetDatabaseInstanceSetting build() {
+            $.activationPolicy = Objects.requireNonNull($.activationPolicy, "expected parameter 'activationPolicy' to be non-null");
+            $.availabilityType = Objects.requireNonNull($.availabilityType, "expected parameter 'availabilityType' to be non-null");
+            $.backupConfigurations = Objects.requireNonNull($.backupConfigurations, "expected parameter 'backupConfigurations' to be non-null");
+            $.collation = Objects.requireNonNull($.collation, "expected parameter 'collation' to be non-null");
+            $.databaseFlags = Objects.requireNonNull($.databaseFlags, "expected parameter 'databaseFlags' to be non-null");
+            $.diskAutoresize = Objects.requireNonNull($.diskAutoresize, "expected parameter 'diskAutoresize' to be non-null");
+            $.diskAutoresizeLimit = Objects.requireNonNull($.diskAutoresizeLimit, "expected parameter 'diskAutoresizeLimit' to be non-null");
+            $.diskSize = Objects.requireNonNull($.diskSize, "expected parameter 'diskSize' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.insightsConfigs = Objects.requireNonNull($.insightsConfigs, "expected parameter 'insightsConfigs' to be non-null");
+            $.ipConfigurations = Objects.requireNonNull($.ipConfigurations, "expected parameter 'ipConfigurations' to be non-null");
+            $.locationPreferences = Objects.requireNonNull($.locationPreferences, "expected parameter 'locationPreferences' to be non-null");
+            $.maintenanceWindows = Objects.requireNonNull($.maintenanceWindows, "expected parameter 'maintenanceWindows' to be non-null");
+            $.pricingPlan = Objects.requireNonNull($.pricingPlan, "expected parameter 'pricingPlan' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            $.userLabels = Objects.requireNonNull($.userLabels, "expected parameter 'userLabels' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

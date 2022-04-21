@@ -22,45 +22,45 @@ public final class TrafficPercentStrategyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="percentages", required=true)
-      private final Map<String,String> percentages;
+    private Map<String,String> percentages;
 
     public Map<String,String> percentages() {
         return this.percentages;
     }
 
-    public TrafficPercentStrategyResponse(Map<String,String> percentages) {
-        this.percentages = Objects.requireNonNull(percentages, "expected parameter 'percentages' to be non-null");
-    }
+    private TrafficPercentStrategyResponse() {}
 
-    private TrafficPercentStrategyResponse() {
-        this.percentages = Map.of();
+    private TrafficPercentStrategyResponse(TrafficPercentStrategyResponse $) {
+        this.percentages = $.percentages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficPercentStrategyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> percentages;
+        private TrafficPercentStrategyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficPercentStrategyResponse();
         }
 
         public Builder(TrafficPercentStrategyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.percentages = defaults.percentages;
+            $ = new TrafficPercentStrategyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder percentages(Map<String,String> percentages) {
-            this.percentages = Objects.requireNonNull(percentages);
+            $.percentages = percentages;
             return this;
-        }        public TrafficPercentStrategyResponse build() {
-            return new TrafficPercentStrategyResponse(percentages);
+        }
+
+        public TrafficPercentStrategyResponse build() {
+            $.percentages = Objects.requireNonNull($.percentages, "expected parameter 'percentages' to be non-null");
+            return $;
         }
     }
+
 }

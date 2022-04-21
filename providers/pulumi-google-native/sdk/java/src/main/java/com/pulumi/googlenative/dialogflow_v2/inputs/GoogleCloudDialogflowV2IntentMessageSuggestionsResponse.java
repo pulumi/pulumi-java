@@ -22,48 +22,49 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsResponse exten
      * 
      */
     @Import(name="suggestions", required=true)
-      private final List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions;
+    private List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions;
 
     public List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions() {
         return this.suggestions;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse(List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions) {
-        this.suggestions = Objects.requireNonNull(suggestions, "expected parameter 'suggestions' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageSuggestionsResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageSuggestionsResponse() {
-        this.suggestions = List.of();
+    private GoogleCloudDialogflowV2IntentMessageSuggestionsResponse(GoogleCloudDialogflowV2IntentMessageSuggestionsResponse $) {
+        this.suggestions = $.suggestions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageSuggestionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions;
+        private GoogleCloudDialogflowV2IntentMessageSuggestionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageSuggestionsResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageSuggestionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.suggestions = defaults.suggestions;
+            $ = new GoogleCloudDialogflowV2IntentMessageSuggestionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder suggestions(List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions) {
-            this.suggestions = Objects.requireNonNull(suggestions);
+            $.suggestions = suggestions;
             return this;
         }
+
         public Builder suggestions(GoogleCloudDialogflowV2IntentMessageSuggestionResponse... suggestions) {
             return suggestions(List.of(suggestions));
-        }        public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageSuggestionsResponse(suggestions);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse build() {
+            $.suggestions = Objects.requireNonNull($.suggestions, "expected parameter 'suggestions' to be non-null");
+            return $;
         }
     }
+
 }

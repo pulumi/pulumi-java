@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModi
      * 
      */
     @Import(name="status", required=true)
-      private final Output<String> status;
+    private Output<String> status;
 
     public Output<String> status() {
         return this.status;
     }
 
-    public BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs(Output<String> status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs() {}
 
-    private BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs() {
-        this.status = Codegen.empty();
+    private BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs(BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> status;
+        private BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs();
         }
 
         public Builder(BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<String> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs build() {
-            return new BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs(status);
+            return status(Output.of(status));
+        }
+
+        public BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

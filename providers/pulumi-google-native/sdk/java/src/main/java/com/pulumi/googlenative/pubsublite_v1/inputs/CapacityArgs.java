@@ -5,9 +5,9 @@ package com.pulumi.googlenative.pubsublite_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CapacityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishMibPerSec")
-      private final @Nullable Output<Integer> publishMibPerSec;
+    private @Nullable Output<Integer> publishMibPerSec;
 
-    public Output<Integer> publishMibPerSec() {
-        return this.publishMibPerSec == null ? Codegen.empty() : this.publishMibPerSec;
+    public Optional<Output<Integer>> publishMibPerSec() {
+        return Optional.ofNullable(this.publishMibPerSec);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CapacityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscribeMibPerSec")
-      private final @Nullable Output<Integer> subscribeMibPerSec;
+    private @Nullable Output<Integer> subscribeMibPerSec;
 
-    public Output<Integer> subscribeMibPerSec() {
-        return this.subscribeMibPerSec == null ? Codegen.empty() : this.subscribeMibPerSec;
+    public Optional<Output<Integer>> subscribeMibPerSec() {
+        return Optional.ofNullable(this.subscribeMibPerSec);
     }
 
-    public CapacityArgs(
-        @Nullable Output<Integer> publishMibPerSec,
-        @Nullable Output<Integer> subscribeMibPerSec) {
-        this.publishMibPerSec = publishMibPerSec;
-        this.subscribeMibPerSec = subscribeMibPerSec;
-    }
+    private CapacityArgs() {}
 
-    private CapacityArgs() {
-        this.publishMibPerSec = Codegen.empty();
-        this.subscribeMibPerSec = Codegen.empty();
+    private CapacityArgs(CapacityArgs $) {
+        this.publishMibPerSec = $.publishMibPerSec;
+        this.subscribeMibPerSec = $.subscribeMibPerSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> publishMibPerSec;
-        private @Nullable Output<Integer> subscribeMibPerSec;
+        private CapacityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityArgs();
         }
 
         public Builder(CapacityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishMibPerSec = defaults.publishMibPerSec;
-    	      this.subscribeMibPerSec = defaults.subscribeMibPerSec;
+            $ = new CapacityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publishMibPerSec(@Nullable Output<Integer> publishMibPerSec) {
-            this.publishMibPerSec = publishMibPerSec;
+            $.publishMibPerSec = publishMibPerSec;
             return this;
         }
-        public Builder publishMibPerSec(@Nullable Integer publishMibPerSec) {
-            this.publishMibPerSec = Codegen.ofNullable(publishMibPerSec);
-            return this;
+
+        public Builder publishMibPerSec(Integer publishMibPerSec) {
+            return publishMibPerSec(Output.of(publishMibPerSec));
         }
+
         public Builder subscribeMibPerSec(@Nullable Output<Integer> subscribeMibPerSec) {
-            this.subscribeMibPerSec = subscribeMibPerSec;
+            $.subscribeMibPerSec = subscribeMibPerSec;
             return this;
         }
-        public Builder subscribeMibPerSec(@Nullable Integer subscribeMibPerSec) {
-            this.subscribeMibPerSec = Codegen.ofNullable(subscribeMibPerSec);
-            return this;
-        }        public CapacityArgs build() {
-            return new CapacityArgs(publishMibPerSec, subscribeMibPerSec);
+
+        public Builder subscribeMibPerSec(Integer subscribeMibPerSec) {
+            return subscribeMibPerSec(Output.of(subscribeMibPerSec));
+        }
+
+        public CapacityArgs build() {
+            return $;
         }
     }
+
 }

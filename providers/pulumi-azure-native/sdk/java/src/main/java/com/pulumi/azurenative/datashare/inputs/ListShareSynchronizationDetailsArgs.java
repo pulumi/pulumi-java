@@ -20,7 +20,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -31,10 +31,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="consumerEmail")
-      private final @Nullable String consumerEmail;
+    private @Nullable String consumerEmail;
 
     public Optional<String> consumerEmail() {
-        return this.consumerEmail == null ? Optional.empty() : Optional.ofNullable(this.consumerEmail);
+        return Optional.ofNullable(this.consumerEmail);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="consumerName")
-      private final @Nullable String consumerName;
+    private @Nullable String consumerName;
 
     public Optional<String> consumerName() {
-        return this.consumerName == null ? Optional.empty() : Optional.ofNullable(this.consumerName);
+        return Optional.ofNullable(this.consumerName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="consumerTenantName")
-      private final @Nullable String consumerTenantName;
+    private @Nullable String consumerTenantName;
 
     public Optional<String> consumerTenantName() {
-        return this.consumerTenantName == null ? Optional.empty() : Optional.ofNullable(this.consumerTenantName);
+        return Optional.ofNullable(this.consumerTenantName);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="durationMs")
-      private final @Nullable Integer durationMs;
+    private @Nullable Integer durationMs;
 
     public Optional<Integer> durationMs() {
-        return this.durationMs == null ? Optional.empty() : Optional.ofNullable(this.durationMs);
+        return Optional.ofNullable(this.durationMs);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="filter")
-      private final @Nullable String filter;
+    private @Nullable String filter;
 
     public Optional<String> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="orderby")
-      private final @Nullable String orderby;
+    private @Nullable String orderby;
 
     public Optional<String> orderby() {
-        return this.orderby == null ? Optional.empty() : Optional.ofNullable(this.orderby);
+        return Optional.ofNullable(this.orderby);
     }
 
     /**
@@ -119,7 +119,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -130,7 +130,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="shareName", required=true)
-      private final String shareName;
+    private String shareName;
 
     public String shareName() {
         return this.shareName;
@@ -141,10 +141,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -174,172 +174,131 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="synchronizationId")
-      private final @Nullable String synchronizationId;
+    private @Nullable String synchronizationId;
 
     public Optional<String> synchronizationId() {
-        return this.synchronizationId == null ? Optional.empty() : Optional.ofNullable(this.synchronizationId);
+        return Optional.ofNullable(this.synchronizationId);
     }
 
-    public ListShareSynchronizationDetailsArgs(
-        String accountName,
-        @Nullable String consumerEmail,
-        @Nullable String consumerName,
-        @Nullable String consumerTenantName,
-        @Nullable Integer durationMs,
-        @Nullable String endTime,
-        @Nullable String filter,
-        @Nullable String message,
-        @Nullable String orderby,
-        String resourceGroupName,
-        String shareName,
-        @Nullable String skipToken,
-        @Nullable String startTime,
-        @Nullable String status,
-        @Nullable String synchronizationId) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.consumerEmail = consumerEmail;
-        this.consumerName = consumerName;
-        this.consumerTenantName = consumerTenantName;
-        this.durationMs = durationMs;
-        this.endTime = endTime;
-        this.filter = filter;
-        this.message = message;
-        this.orderby = orderby;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-        this.skipToken = skipToken;
-        this.startTime = startTime;
-        this.status = status;
-        this.synchronizationId = synchronizationId;
-    }
+    private ListShareSynchronizationDetailsArgs() {}
 
-    private ListShareSynchronizationDetailsArgs() {
-        this.accountName = null;
-        this.consumerEmail = null;
-        this.consumerName = null;
-        this.consumerTenantName = null;
-        this.durationMs = null;
-        this.endTime = null;
-        this.filter = null;
-        this.message = null;
-        this.orderby = null;
-        this.resourceGroupName = null;
-        this.shareName = null;
-        this.skipToken = null;
-        this.startTime = null;
-        this.status = null;
-        this.synchronizationId = null;
+    private ListShareSynchronizationDetailsArgs(ListShareSynchronizationDetailsArgs $) {
+        this.accountName = $.accountName;
+        this.consumerEmail = $.consumerEmail;
+        this.consumerName = $.consumerName;
+        this.consumerTenantName = $.consumerTenantName;
+        this.durationMs = $.durationMs;
+        this.endTime = $.endTime;
+        this.filter = $.filter;
+        this.message = $.message;
+        this.orderby = $.orderby;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareName = $.shareName;
+        this.skipToken = $.skipToken;
+        this.startTime = $.startTime;
+        this.status = $.status;
+        this.synchronizationId = $.synchronizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListShareSynchronizationDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private @Nullable String consumerEmail;
-        private @Nullable String consumerName;
-        private @Nullable String consumerTenantName;
-        private @Nullable Integer durationMs;
-        private @Nullable String endTime;
-        private @Nullable String filter;
-        private @Nullable String message;
-        private @Nullable String orderby;
-        private String resourceGroupName;
-        private String shareName;
-        private @Nullable String skipToken;
-        private @Nullable String startTime;
-        private @Nullable String status;
-        private @Nullable String synchronizationId;
+        private ListShareSynchronizationDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListShareSynchronizationDetailsArgs();
         }
 
         public Builder(ListShareSynchronizationDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.consumerEmail = defaults.consumerEmail;
-    	      this.consumerName = defaults.consumerName;
-    	      this.consumerTenantName = defaults.consumerTenantName;
-    	      this.durationMs = defaults.durationMs;
-    	      this.endTime = defaults.endTime;
-    	      this.filter = defaults.filter;
-    	      this.message = defaults.message;
-    	      this.orderby = defaults.orderby;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareName = defaults.shareName;
-    	      this.skipToken = defaults.skipToken;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
-    	      this.synchronizationId = defaults.synchronizationId;
+            $ = new ListShareSynchronizationDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder consumerEmail(@Nullable String consumerEmail) {
-            this.consumerEmail = consumerEmail;
+            $.consumerEmail = consumerEmail;
             return this;
         }
+
         public Builder consumerName(@Nullable String consumerName) {
-            this.consumerName = consumerName;
+            $.consumerName = consumerName;
             return this;
         }
+
         public Builder consumerTenantName(@Nullable String consumerTenantName) {
-            this.consumerTenantName = consumerTenantName;
+            $.consumerTenantName = consumerTenantName;
             return this;
         }
+
         public Builder durationMs(@Nullable Integer durationMs) {
-            this.durationMs = durationMs;
+            $.durationMs = durationMs;
             return this;
         }
+
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder filter(@Nullable String filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder orderby(@Nullable String orderby) {
-            this.orderby = orderby;
+            $.orderby = orderby;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder synchronizationId(@Nullable String synchronizationId) {
-            this.synchronizationId = synchronizationId;
+            $.synchronizationId = synchronizationId;
             return this;
-        }        public ListShareSynchronizationDetailsArgs build() {
-            return new ListShareSynchronizationDetailsArgs(accountName, consumerEmail, consumerName, consumerTenantName, durationMs, endTime, filter, message, orderby, resourceGroupName, shareName, skipToken, startTime, status, synchronizationId);
+        }
+
+        public ListShareSynchronizationDetailsArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

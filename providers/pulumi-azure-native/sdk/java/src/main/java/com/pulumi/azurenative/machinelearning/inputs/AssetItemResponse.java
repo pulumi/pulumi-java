@@ -29,10 +29,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputPorts")
-      private final @Nullable Map<String,InputPortResponse> inputPorts;
+    private @Nullable Map<String,InputPortResponse> inputPorts;
 
-    public Map<String,InputPortResponse> inputPorts() {
-        return this.inputPorts == null ? Map.of() : this.inputPorts;
+    public Optional<Map<String,InputPortResponse>> inputPorts() {
+        return Optional.ofNullable(this.inputPorts);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locationInfo", required=true)
-      private final BlobLocationResponse locationInfo;
+    private BlobLocationResponse locationInfo;
 
     public BlobLocationResponse locationInfo() {
         return this.locationInfo;
@@ -62,10 +62,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Map<String,String> metadata;
+    private @Nullable Map<String,String> metadata;
 
-    public Map<String,String> metadata() {
-        return this.metadata == null ? Map.of() : this.metadata;
+    public Optional<Map<String,String>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -84,10 +84,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputPorts")
-      private final @Nullable Map<String,OutputPortResponse> outputPorts;
+    private @Nullable Map<String,OutputPortResponse> outputPorts;
 
-    public Map<String,OutputPortResponse> outputPorts() {
-        return this.outputPorts == null ? Map.of() : this.outputPorts;
+    public Optional<Map<String,OutputPortResponse>> outputPorts() {
+        return Optional.ofNullable(this.outputPorts);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable List<ModuleAssetParameterResponse> parameters;
+    private @Nullable List<ModuleAssetParameterResponse> parameters;
 
-    public List<ModuleAssetParameterResponse> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<ModuleAssetParameterResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -106,112 +106,93 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AssetItemResponse(
-        @Nullable String id,
-        @Nullable Map<String,InputPortResponse> inputPorts,
-        BlobLocationResponse locationInfo,
-        @Nullable Map<String,String> metadata,
-        String name,
-        @Nullable Map<String,OutputPortResponse> outputPorts,
-        @Nullable List<ModuleAssetParameterResponse> parameters,
-        String type) {
-        this.id = id;
-        this.inputPorts = inputPorts;
-        this.locationInfo = Objects.requireNonNull(locationInfo, "expected parameter 'locationInfo' to be non-null");
-        this.metadata = metadata;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.outputPorts = outputPorts;
-        this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AssetItemResponse() {}
 
-    private AssetItemResponse() {
-        this.id = null;
-        this.inputPorts = Map.of();
-        this.locationInfo = null;
-        this.metadata = Map.of();
-        this.name = null;
-        this.outputPorts = Map.of();
-        this.parameters = List.of();
-        this.type = null;
+    private AssetItemResponse(AssetItemResponse $) {
+        this.id = $.id;
+        this.inputPorts = $.inputPorts;
+        this.locationInfo = $.locationInfo;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.outputPorts = $.outputPorts;
+        this.parameters = $.parameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable Map<String,InputPortResponse> inputPorts;
-        private BlobLocationResponse locationInfo;
-        private @Nullable Map<String,String> metadata;
-        private String name;
-        private @Nullable Map<String,OutputPortResponse> outputPorts;
-        private @Nullable List<ModuleAssetParameterResponse> parameters;
-        private String type;
+        private AssetItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetItemResponse();
         }
 
         public Builder(AssetItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.inputPorts = defaults.inputPorts;
-    	      this.locationInfo = defaults.locationInfo;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.outputPorts = defaults.outputPorts;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
+            $ = new AssetItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder inputPorts(@Nullable Map<String,InputPortResponse> inputPorts) {
-            this.inputPorts = inputPorts;
+            $.inputPorts = inputPorts;
             return this;
         }
+
         public Builder locationInfo(BlobLocationResponse locationInfo) {
-            this.locationInfo = Objects.requireNonNull(locationInfo);
+            $.locationInfo = locationInfo;
             return this;
         }
+
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder outputPorts(@Nullable Map<String,OutputPortResponse> outputPorts) {
-            this.outputPorts = outputPorts;
+            $.outputPorts = outputPorts;
             return this;
         }
+
         public Builder parameters(@Nullable List<ModuleAssetParameterResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(ModuleAssetParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AssetItemResponse build() {
-            return new AssetItemResponse(id, inputPorts, locationInfo, metadata, name, outputPorts, parameters, type);
+        }
+
+        public AssetItemResponse build() {
+            $.locationInfo = Objects.requireNonNull($.locationInfo, "expected parameter 'locationInfo' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

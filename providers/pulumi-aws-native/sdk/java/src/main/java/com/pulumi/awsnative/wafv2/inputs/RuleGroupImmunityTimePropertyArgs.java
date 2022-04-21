@@ -5,7 +5,6 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class RuleGroupImmunityTimePropertyArgs extends com.pulumi.resource
     public static final RuleGroupImmunityTimePropertyArgs Empty = new RuleGroupImmunityTimePropertyArgs();
 
     @Import(name="immunityTime", required=true)
-      private final Output<Integer> immunityTime;
+    private Output<Integer> immunityTime;
 
     public Output<Integer> immunityTime() {
         return this.immunityTime;
     }
 
-    public RuleGroupImmunityTimePropertyArgs(Output<Integer> immunityTime) {
-        this.immunityTime = Objects.requireNonNull(immunityTime, "expected parameter 'immunityTime' to be non-null");
-    }
+    private RuleGroupImmunityTimePropertyArgs() {}
 
-    private RuleGroupImmunityTimePropertyArgs() {
-        this.immunityTime = Codegen.empty();
+    private RuleGroupImmunityTimePropertyArgs(RuleGroupImmunityTimePropertyArgs $) {
+        this.immunityTime = $.immunityTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupImmunityTimePropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> immunityTime;
+        private RuleGroupImmunityTimePropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupImmunityTimePropertyArgs();
         }
 
         public Builder(RuleGroupImmunityTimePropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.immunityTime = defaults.immunityTime;
+            $ = new RuleGroupImmunityTimePropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder immunityTime(Output<Integer> immunityTime) {
-            this.immunityTime = Objects.requireNonNull(immunityTime);
+            $.immunityTime = immunityTime;
             return this;
         }
+
         public Builder immunityTime(Integer immunityTime) {
-            this.immunityTime = Output.of(Objects.requireNonNull(immunityTime));
-            return this;
-        }        public RuleGroupImmunityTimePropertyArgs build() {
-            return new RuleGroupImmunityTimePropertyArgs(immunityTime);
+            return immunityTime(Output.of(immunityTime));
+        }
+
+        public RuleGroupImmunityTimePropertyArgs build() {
+            $.immunityTime = Objects.requireNonNull($.immunityTime, "expected parameter 'immunityTime' to be non-null");
+            return $;
         }
     }
+
 }

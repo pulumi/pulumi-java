@@ -24,48 +24,48 @@ public final class ScaleInPolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<String> rules;
+    private @Nullable List<String> rules;
 
-    public List<String> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<String>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public ScaleInPolicyResponse(@Nullable List<String> rules) {
-        this.rules = rules;
-    }
+    private ScaleInPolicyResponse() {}
 
-    private ScaleInPolicyResponse() {
-        this.rules = List.of();
+    private ScaleInPolicyResponse(ScaleInPolicyResponse $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleInPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> rules;
+        private ScaleInPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleInPolicyResponse();
         }
 
         public Builder(ScaleInPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new ScaleInPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable List<String> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(String... rules) {
             return rules(List.of(rules));
-        }        public ScaleInPolicyResponse build() {
-            return new ScaleInPolicyResponse(rules);
+        }
+
+        public ScaleInPolicyResponse build() {
+            return $;
         }
     }
+
 }

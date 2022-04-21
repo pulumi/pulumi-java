@@ -5,9 +5,9 @@ package com.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ResourceSetNLBResourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
-    public ResourceSetNLBResourceArgs(@Nullable Output<String> arn) {
-        this.arn = arn;
-    }
+    private ResourceSetNLBResourceArgs() {}
 
-    private ResourceSetNLBResourceArgs() {
-        this.arn = Codegen.empty();
+    private ResourceSetNLBResourceArgs(ResourceSetNLBResourceArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetNLBResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
+        private ResourceSetNLBResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetNLBResourceArgs();
         }
 
         public Builder(ResourceSetNLBResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new ResourceSetNLBResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
-        }        public ResourceSetNLBResourceArgs build() {
-            return new ResourceSetNLBResourceArgs(arn);
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        public ResourceSetNLBResourceArgs build() {
+            return $;
         }
     }
+
 }

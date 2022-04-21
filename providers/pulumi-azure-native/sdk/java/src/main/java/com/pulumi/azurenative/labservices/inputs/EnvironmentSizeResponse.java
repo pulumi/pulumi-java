@@ -27,7 +27,7 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxPrice", required=true)
-      private final Double maxPrice;
+    private Double maxPrice;
 
     public Double maxPrice() {
         return this.maxPrice;
@@ -38,7 +38,7 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="minMemory", required=true)
-      private final Double minMemory;
+    private Double minMemory;
 
     public Double minMemory() {
         return this.minMemory;
@@ -49,7 +49,7 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="minNumberOfCores", required=true)
-      private final Integer minNumberOfCores;
+    private Integer minNumberOfCores;
 
     public Integer minNumberOfCores() {
         return this.minNumberOfCores;
@@ -60,10 +60,10 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,85 +71,75 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vmSizes")
-      private final @Nullable List<SizeInfoResponse> vmSizes;
+    private @Nullable List<SizeInfoResponse> vmSizes;
 
-    public List<SizeInfoResponse> vmSizes() {
-        return this.vmSizes == null ? List.of() : this.vmSizes;
+    public Optional<List<SizeInfoResponse>> vmSizes() {
+        return Optional.ofNullable(this.vmSizes);
     }
 
-    public EnvironmentSizeResponse(
-        Double maxPrice,
-        Double minMemory,
-        Integer minNumberOfCores,
-        @Nullable String name,
-        @Nullable List<SizeInfoResponse> vmSizes) {
-        this.maxPrice = Objects.requireNonNull(maxPrice, "expected parameter 'maxPrice' to be non-null");
-        this.minMemory = Objects.requireNonNull(minMemory, "expected parameter 'minMemory' to be non-null");
-        this.minNumberOfCores = Objects.requireNonNull(minNumberOfCores, "expected parameter 'minNumberOfCores' to be non-null");
-        this.name = name;
-        this.vmSizes = vmSizes;
-    }
+    private EnvironmentSizeResponse() {}
 
-    private EnvironmentSizeResponse() {
-        this.maxPrice = null;
-        this.minMemory = null;
-        this.minNumberOfCores = null;
-        this.name = null;
-        this.vmSizes = List.of();
+    private EnvironmentSizeResponse(EnvironmentSizeResponse $) {
+        this.maxPrice = $.maxPrice;
+        this.minMemory = $.minMemory;
+        this.minNumberOfCores = $.minNumberOfCores;
+        this.name = $.name;
+        this.vmSizes = $.vmSizes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentSizeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double maxPrice;
-        private Double minMemory;
-        private Integer minNumberOfCores;
-        private @Nullable String name;
-        private @Nullable List<SizeInfoResponse> vmSizes;
+        private EnvironmentSizeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentSizeResponse();
         }
 
         public Builder(EnvironmentSizeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxPrice = defaults.maxPrice;
-    	      this.minMemory = defaults.minMemory;
-    	      this.minNumberOfCores = defaults.minNumberOfCores;
-    	      this.name = defaults.name;
-    	      this.vmSizes = defaults.vmSizes;
+            $ = new EnvironmentSizeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxPrice(Double maxPrice) {
-            this.maxPrice = Objects.requireNonNull(maxPrice);
+            $.maxPrice = maxPrice;
             return this;
         }
+
         public Builder minMemory(Double minMemory) {
-            this.minMemory = Objects.requireNonNull(minMemory);
+            $.minMemory = minMemory;
             return this;
         }
+
         public Builder minNumberOfCores(Integer minNumberOfCores) {
-            this.minNumberOfCores = Objects.requireNonNull(minNumberOfCores);
+            $.minNumberOfCores = minNumberOfCores;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder vmSizes(@Nullable List<SizeInfoResponse> vmSizes) {
-            this.vmSizes = vmSizes;
+            $.vmSizes = vmSizes;
             return this;
         }
+
         public Builder vmSizes(SizeInfoResponse... vmSizes) {
             return vmSizes(List.of(vmSizes));
-        }        public EnvironmentSizeResponse build() {
-            return new EnvironmentSizeResponse(maxPrice, minMemory, minNumberOfCores, name, vmSizes);
+        }
+
+        public EnvironmentSizeResponse build() {
+            $.maxPrice = Objects.requireNonNull($.maxPrice, "expected parameter 'maxPrice' to be non-null");
+            $.minMemory = Objects.requireNonNull($.minMemory, "expected parameter 'minMemory' to be non-null");
+            $.minNumberOfCores = Objects.requireNonNull($.minNumberOfCores, "expected parameter 'minNumberOfCores' to be non-null");
+            return $;
         }
     }
+
 }

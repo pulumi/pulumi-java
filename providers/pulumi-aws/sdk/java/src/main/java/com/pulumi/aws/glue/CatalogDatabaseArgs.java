@@ -6,10 +6,10 @@ package com.pulumi.aws.glue;
 import com.pulumi.aws.glue.inputs.CatalogDatabaseTargetDatabaseArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="locationUri")
-      private final @Nullable Output<String> locationUri;
+    private @Nullable Output<String> locationUri;
 
-    public Output<String> locationUri() {
-        return this.locationUri == null ? Codegen.empty() : this.locationUri;
+    public Optional<Output<String>> locationUri() {
+        return Optional.ofNullable(this.locationUri);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -77,115 +77,98 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="targetDatabase")
-      private final @Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase;
+    private @Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase;
 
-    public Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase() {
-        return this.targetDatabase == null ? Codegen.empty() : this.targetDatabase;
+    public Optional<Output<CatalogDatabaseTargetDatabaseArgs>> targetDatabase() {
+        return Optional.ofNullable(this.targetDatabase);
     }
 
-    public CatalogDatabaseArgs(
-        @Nullable Output<String> catalogId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> locationUri,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase) {
-        this.catalogId = catalogId;
-        this.description = description;
-        this.locationUri = locationUri;
-        this.name = name;
-        this.parameters = parameters;
-        this.targetDatabase = targetDatabase;
-    }
+    private CatalogDatabaseArgs() {}
 
-    private CatalogDatabaseArgs() {
-        this.catalogId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.locationUri = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.targetDatabase = Codegen.empty();
+    private CatalogDatabaseArgs(CatalogDatabaseArgs $) {
+        this.catalogId = $.catalogId;
+        this.description = $.description;
+        this.locationUri = $.locationUri;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.targetDatabase = $.targetDatabase;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CatalogDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> locationUri;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase;
+        private CatalogDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CatalogDatabaseArgs();
         }
 
         public Builder(CatalogDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.description = defaults.description;
-    	      this.locationUri = defaults.locationUri;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.targetDatabase = defaults.targetDatabase;
+            $ = new CatalogDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder locationUri(@Nullable Output<String> locationUri) {
-            this.locationUri = locationUri;
+            $.locationUri = locationUri;
             return this;
         }
-        public Builder locationUri(@Nullable String locationUri) {
-            this.locationUri = Codegen.ofNullable(locationUri);
-            return this;
+
+        public Builder locationUri(String locationUri) {
+            return locationUri(Output.of(locationUri));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder targetDatabase(@Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase) {
-            this.targetDatabase = targetDatabase;
+            $.targetDatabase = targetDatabase;
             return this;
         }
-        public Builder targetDatabase(@Nullable CatalogDatabaseTargetDatabaseArgs targetDatabase) {
-            this.targetDatabase = Codegen.ofNullable(targetDatabase);
-            return this;
-        }        public CatalogDatabaseArgs build() {
-            return new CatalogDatabaseArgs(catalogId, description, locationUri, name, parameters, targetDatabase);
+
+        public Builder targetDatabase(CatalogDatabaseTargetDatabaseArgs targetDatabase) {
+            return targetDatabase(Output.of(targetDatabase));
+        }
+
+        public CatalogDatabaseArgs build() {
+            return $;
         }
     }
+
 }

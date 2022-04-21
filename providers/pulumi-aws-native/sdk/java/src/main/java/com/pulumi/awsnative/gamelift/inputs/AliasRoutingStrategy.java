@@ -20,10 +20,10 @@ public final class AliasRoutingStrategy extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fleetId")
-      private final @Nullable String fleetId;
+    private @Nullable String fleetId;
 
     public Optional<String> fleetId() {
-        return this.fleetId == null ? Optional.empty() : Optional.ofNullable(this.fleetId);
+        return Optional.ofNullable(this.fleetId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AliasRoutingStrategy extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -42,64 +42,57 @@ public final class AliasRoutingStrategy extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final AliasRoutingStrategyType type;
+    private AliasRoutingStrategyType type;
 
     public AliasRoutingStrategyType type() {
         return this.type;
     }
 
-    public AliasRoutingStrategy(
-        @Nullable String fleetId,
-        @Nullable String message,
-        AliasRoutingStrategyType type) {
-        this.fleetId = fleetId;
-        this.message = message;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AliasRoutingStrategy() {}
 
-    private AliasRoutingStrategy() {
-        this.fleetId = null;
-        this.message = null;
-        this.type = null;
+    private AliasRoutingStrategy(AliasRoutingStrategy $) {
+        this.fleetId = $.fleetId;
+        this.message = $.message;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasRoutingStrategy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String fleetId;
-        private @Nullable String message;
-        private AliasRoutingStrategyType type;
+        private AliasRoutingStrategy $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasRoutingStrategy();
         }
 
         public Builder(AliasRoutingStrategy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fleetId = defaults.fleetId;
-    	      this.message = defaults.message;
-    	      this.type = defaults.type;
+            $ = new AliasRoutingStrategy(Objects.requireNonNull(defaults));
         }
 
         public Builder fleetId(@Nullable String fleetId) {
-            this.fleetId = fleetId;
+            $.fleetId = fleetId;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder type(AliasRoutingStrategyType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AliasRoutingStrategy build() {
-            return new AliasRoutingStrategy(fleetId, message, type);
+        }
+
+        public AliasRoutingStrategy build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

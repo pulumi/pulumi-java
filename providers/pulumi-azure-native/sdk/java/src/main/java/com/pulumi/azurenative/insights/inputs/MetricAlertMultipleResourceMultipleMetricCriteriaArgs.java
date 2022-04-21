@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
      * 
      */
     @Import(name="allOf")
-      private final @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
+    private @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
 
-    public Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf() {
-        return this.allOf == null ? Codegen.empty() : this.allOf;
+    public Optional<Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>>> allOf() {
+        return Optional.ofNullable(this.allOf);
     }
 
     /**
@@ -40,66 +41,63 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
-        @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf,
-        Output<String> odataType) {
-        this.allOf = allOf;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private MetricAlertMultipleResourceMultipleMetricCriteriaArgs() {}
 
-    private MetricAlertMultipleResourceMultipleMetricCriteriaArgs() {
-        this.allOf = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private MetricAlertMultipleResourceMultipleMetricCriteriaArgs(MetricAlertMultipleResourceMultipleMetricCriteriaArgs $) {
+        this.allOf = $.allOf;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricAlertMultipleResourceMultipleMetricCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
-        private Output<String> odataType;
+        private MetricAlertMultipleResourceMultipleMetricCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricAlertMultipleResourceMultipleMetricCriteriaArgs();
         }
 
         public Builder(MetricAlertMultipleResourceMultipleMetricCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allOf = defaults.allOf;
-    	      this.odataType = defaults.odataType;
+            $ = new MetricAlertMultipleResourceMultipleMetricCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allOf(@Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf) {
-            this.allOf = allOf;
+            $.allOf = allOf;
             return this;
         }
-        public Builder allOf(@Nullable List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>> allOf) {
-            this.allOf = Codegen.ofNullable(allOf);
-            return this;
+
+        public Builder allOf(List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>> allOf) {
+            return allOf(Output.of(allOf));
         }
+
         public Builder allOf(Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>... allOf) {
             return allOf(List.of(allOf));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public MetricAlertMultipleResourceMultipleMetricCriteriaArgs build() {
-            return new MetricAlertMultipleResourceMultipleMetricCriteriaArgs(allOf, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public MetricAlertMultipleResourceMultipleMetricCriteriaArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

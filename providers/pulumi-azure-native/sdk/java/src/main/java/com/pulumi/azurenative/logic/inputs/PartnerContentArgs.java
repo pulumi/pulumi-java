@@ -6,8 +6,8 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.B2BPartnerContentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PartnerContentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="b2b")
-      private final @Nullable Output<B2BPartnerContentArgs> b2b;
+    private @Nullable Output<B2BPartnerContentArgs> b2b;
 
-    public Output<B2BPartnerContentArgs> b2b() {
-        return this.b2b == null ? Codegen.empty() : this.b2b;
+    public Optional<Output<B2BPartnerContentArgs>> b2b() {
+        return Optional.ofNullable(this.b2b);
     }
 
-    public PartnerContentArgs(@Nullable Output<B2BPartnerContentArgs> b2b) {
-        this.b2b = b2b;
-    }
+    private PartnerContentArgs() {}
 
-    private PartnerContentArgs() {
-        this.b2b = Codegen.empty();
+    private PartnerContentArgs(PartnerContentArgs $) {
+        this.b2b = $.b2b;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartnerContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<B2BPartnerContentArgs> b2b;
+        private PartnerContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartnerContentArgs();
         }
 
         public Builder(PartnerContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.b2b = defaults.b2b;
+            $ = new PartnerContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder b2b(@Nullable Output<B2BPartnerContentArgs> b2b) {
-            this.b2b = b2b;
+            $.b2b = b2b;
             return this;
         }
-        public Builder b2b(@Nullable B2BPartnerContentArgs b2b) {
-            this.b2b = Codegen.ofNullable(b2b);
-            return this;
-        }        public PartnerContentArgs build() {
-            return new PartnerContentArgs(b2b);
+
+        public Builder b2b(B2BPartnerContentArgs b2b) {
+            return b2b(Output.of(b2b));
+        }
+
+        public PartnerContentArgs build() {
+            return $;
         }
     }
+
 }

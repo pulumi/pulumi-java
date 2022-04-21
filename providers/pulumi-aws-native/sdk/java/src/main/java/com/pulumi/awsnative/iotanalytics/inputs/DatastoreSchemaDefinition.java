@@ -16,48 +16,48 @@ public final class DatastoreSchemaDefinition extends com.pulumi.resources.Invoke
     public static final DatastoreSchemaDefinition Empty = new DatastoreSchemaDefinition();
 
     @Import(name="columns")
-      private final @Nullable List<DatastoreColumn> columns;
+    private @Nullable List<DatastoreColumn> columns;
 
-    public List<DatastoreColumn> columns() {
-        return this.columns == null ? List.of() : this.columns;
+    public Optional<List<DatastoreColumn>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
-    public DatastoreSchemaDefinition(@Nullable List<DatastoreColumn> columns) {
-        this.columns = columns;
-    }
+    private DatastoreSchemaDefinition() {}
 
-    private DatastoreSchemaDefinition() {
-        this.columns = List.of();
+    private DatastoreSchemaDefinition(DatastoreSchemaDefinition $) {
+        this.columns = $.columns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreSchemaDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DatastoreColumn> columns;
+        private DatastoreSchemaDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreSchemaDefinition();
         }
 
         public Builder(DatastoreSchemaDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
+            $ = new DatastoreSchemaDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable List<DatastoreColumn> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(DatastoreColumn... columns) {
             return columns(List.of(columns));
-        }        public DatastoreSchemaDefinition build() {
-            return new DatastoreSchemaDefinition(columns);
+        }
+
+        public DatastoreSchemaDefinition build() {
+            return $;
         }
     }
+
 }

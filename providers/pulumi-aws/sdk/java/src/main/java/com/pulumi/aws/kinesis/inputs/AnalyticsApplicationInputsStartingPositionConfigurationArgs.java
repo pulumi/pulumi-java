@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
      * 
      */
     @Import(name="startingPosition")
-      private final @Nullable Output<String> startingPosition;
+    private @Nullable Output<String> startingPosition;
 
-    public Output<String> startingPosition() {
-        return this.startingPosition == null ? Codegen.empty() : this.startingPosition;
+    public Optional<Output<String>> startingPosition() {
+        return Optional.ofNullable(this.startingPosition);
     }
 
-    public AnalyticsApplicationInputsStartingPositionConfigurationArgs(@Nullable Output<String> startingPosition) {
-        this.startingPosition = startingPosition;
-    }
+    private AnalyticsApplicationInputsStartingPositionConfigurationArgs() {}
 
-    private AnalyticsApplicationInputsStartingPositionConfigurationArgs() {
-        this.startingPosition = Codegen.empty();
+    private AnalyticsApplicationInputsStartingPositionConfigurationArgs(AnalyticsApplicationInputsStartingPositionConfigurationArgs $) {
+        this.startingPosition = $.startingPosition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationInputsStartingPositionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> startingPosition;
+        private AnalyticsApplicationInputsStartingPositionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationInputsStartingPositionConfigurationArgs();
         }
 
         public Builder(AnalyticsApplicationInputsStartingPositionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startingPosition = defaults.startingPosition;
+            $ = new AnalyticsApplicationInputsStartingPositionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder startingPosition(@Nullable Output<String> startingPosition) {
-            this.startingPosition = startingPosition;
+            $.startingPosition = startingPosition;
             return this;
         }
-        public Builder startingPosition(@Nullable String startingPosition) {
-            this.startingPosition = Codegen.ofNullable(startingPosition);
-            return this;
-        }        public AnalyticsApplicationInputsStartingPositionConfigurationArgs build() {
-            return new AnalyticsApplicationInputsStartingPositionConfigurationArgs(startingPosition);
+
+        public Builder startingPosition(String startingPosition) {
+            return startingPosition(Output.of(startingPosition));
+        }
+
+        public AnalyticsApplicationInputsStartingPositionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

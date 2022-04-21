@@ -17,7 +17,7 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="schemaId", required=true)
-      private final String schemaId;
+    private String schemaId;
 
     public String schemaId() {
         return this.schemaId;
@@ -39,64 +39,59 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetSchemaArgs(
-        String resourceGroupName,
-        String schemaId,
-        String serviceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schemaId = Objects.requireNonNull(schemaId, "expected parameter 'schemaId' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetSchemaArgs() {}
 
-    private GetSchemaArgs() {
-        this.resourceGroupName = null;
-        this.schemaId = null;
-        this.serviceName = null;
+    private GetSchemaArgs(GetSchemaArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaId = $.schemaId;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String schemaId;
-        private String serviceName;
+        private GetSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSchemaArgs();
         }
 
         public Builder(GetSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaId = defaults.schemaId;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder schemaId(String schemaId) {
-            this.schemaId = Objects.requireNonNull(schemaId);
+            $.schemaId = schemaId;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetSchemaArgs build() {
-            return new GetSchemaArgs(resourceGroupName, schemaId, serviceName);
+        }
+
+        public GetSchemaArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.schemaId = Objects.requireNonNull($.schemaId, "expected parameter 'schemaId' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,49 +24,49 @@ public final class LongTermSchedulePolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="schedulePolicyType", required=true)
-      private final Output<String> schedulePolicyType;
+    private Output<String> schedulePolicyType;
 
     public Output<String> schedulePolicyType() {
         return this.schedulePolicyType;
     }
 
-    public LongTermSchedulePolicyArgs(Output<String> schedulePolicyType) {
-        this.schedulePolicyType = Codegen.stringProp("schedulePolicyType").output().arg(schedulePolicyType).require();
-    }
+    private LongTermSchedulePolicyArgs() {}
 
-    private LongTermSchedulePolicyArgs() {
-        this.schedulePolicyType = Codegen.empty();
+    private LongTermSchedulePolicyArgs(LongTermSchedulePolicyArgs $) {
+        this.schedulePolicyType = $.schedulePolicyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LongTermSchedulePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> schedulePolicyType;
+        private LongTermSchedulePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LongTermSchedulePolicyArgs();
         }
 
         public Builder(LongTermSchedulePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedulePolicyType = defaults.schedulePolicyType;
+            $ = new LongTermSchedulePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schedulePolicyType(Output<String> schedulePolicyType) {
-            this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
+            $.schedulePolicyType = schedulePolicyType;
             return this;
         }
+
         public Builder schedulePolicyType(String schedulePolicyType) {
-            this.schedulePolicyType = Output.of(Objects.requireNonNull(schedulePolicyType));
-            return this;
-        }        public LongTermSchedulePolicyArgs build() {
-            return new LongTermSchedulePolicyArgs(schedulePolicyType);
+            return schedulePolicyType(Output.of(schedulePolicyType));
+        }
+
+        public LongTermSchedulePolicyArgs build() {
+            $.schedulePolicyType = Codegen.stringProp("schedulePolicyType").output().arg($.schedulePolicyType).require();
+            return $;
         }
     }
+
 }

@@ -30,10 +30,10 @@ public final class Office365DatasetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class Office365DatasetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class Office365DatasetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="folder")
-      private final @Nullable DatasetResponseFolder folder;
+    private @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> folder() {
-        return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -63,7 +63,7 @@ public final class Office365DatasetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -74,10 +74,10 @@ public final class Office365DatasetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class Office365DatasetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="predicate")
-      private final @Nullable Object predicate;
+    private @Nullable Object predicate;
 
     public Optional<Object> predicate() {
-        return this.predicate == null ? Optional.empty() : Optional.ofNullable(this.predicate);
+        return Optional.ofNullable(this.predicate);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class Office365DatasetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="schema")
-      private final @Nullable Object schema;
+    private @Nullable Object schema;
 
     public Optional<Object> schema() {
-        return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class Office365DatasetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="structure")
-      private final @Nullable Object structure;
+    private @Nullable Object structure;
 
     public Optional<Object> structure() {
-        return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
+        return Optional.ofNullable(this.structure);
     }
 
     /**
@@ -118,7 +118,7 @@ public final class Office365DatasetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tableName", required=true)
-      private final Object tableName;
+    private Object tableName;
 
     public Object tableName() {
         return this.tableName;
@@ -130,130 +130,105 @@ public final class Office365DatasetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public Office365DatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object predicate,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        Object tableName,
-        String type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.parameters = parameters;
-        this.predicate = predicate;
-        this.schema = schema;
-        this.structure = structure;
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private Office365DatasetResponse() {}
 
-    private Office365DatasetResponse() {
-        this.annotations = List.of();
-        this.description = null;
-        this.folder = null;
-        this.linkedServiceName = null;
-        this.parameters = Map.of();
-        this.predicate = null;
-        this.schema = null;
-        this.structure = null;
-        this.tableName = null;
-        this.type = null;
+    private Office365DatasetResponse(Office365DatasetResponse $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.folder = $.folder;
+        this.linkedServiceName = $.linkedServiceName;
+        this.parameters = $.parameters;
+        this.predicate = $.predicate;
+        this.schema = $.schema;
+        this.structure = $.structure;
+        this.tableName = $.tableName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Office365DatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable String description;
-        private @Nullable DatasetResponseFolder folder;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object predicate;
-        private @Nullable Object schema;
-        private @Nullable Object structure;
-        private Object tableName;
-        private String type;
+        private Office365DatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Office365DatasetResponse();
         }
 
         public Builder(Office365DatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.folder = defaults.folder;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.parameters = defaults.parameters;
-    	      this.predicate = defaults.predicate;
-    	      this.schema = defaults.schema;
-    	      this.structure = defaults.structure;
-    	      this.tableName = defaults.tableName;
-    	      this.type = defaults.type;
+            $ = new Office365DatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder folder(@Nullable DatasetResponseFolder folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder predicate(@Nullable Object predicate) {
-            this.predicate = predicate;
+            $.predicate = predicate;
             return this;
         }
+
         public Builder schema(@Nullable Object schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
+
         public Builder structure(@Nullable Object structure) {
-            this.structure = structure;
+            $.structure = structure;
             return this;
         }
+
         public Builder tableName(Object tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public Office365DatasetResponse build() {
-            return new Office365DatasetResponse(annotations, description, folder, linkedServiceName, parameters, predicate, schema, structure, tableName, type);
+        }
+
+        public Office365DatasetResponse build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

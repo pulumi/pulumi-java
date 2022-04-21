@@ -23,7 +23,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
      * 
      */
     @Import(name="databases", required=true)
-      private final List<String> databases;
+    private List<String> databases;
 
     public List<String> databases() {
         return this.databases;
@@ -34,7 +34,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -45,7 +45,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
      * 
      */
     @Import(name="sourceServerBrandVersion", required=true)
-      private final String sourceServerBrandVersion;
+    private String sourceServerBrandVersion;
 
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
@@ -56,7 +56,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
      * 
      */
     @Import(name="sourceServerVersion", required=true)
-      private final String sourceServerVersion;
+    private String sourceServerVersion;
 
     public String sourceServerVersion() {
         return this.sourceServerVersion;
@@ -67,88 +67,81 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final List<ReportableExceptionResponse> validationErrors;
+    private List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 
-    public ConnectToSourcePostgreSqlSyncTaskOutputResponse(
-        List<String> databases,
-        String id,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
-        this.databases = Objects.requireNonNull(databases, "expected parameter 'databases' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion, "expected parameter 'sourceServerBrandVersion' to be non-null");
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private ConnectToSourcePostgreSqlSyncTaskOutputResponse() {}
 
-    private ConnectToSourcePostgreSqlSyncTaskOutputResponse() {
-        this.databases = List.of();
-        this.id = null;
-        this.sourceServerBrandVersion = null;
-        this.sourceServerVersion = null;
-        this.validationErrors = List.of();
+    private ConnectToSourcePostgreSqlSyncTaskOutputResponse(ConnectToSourcePostgreSqlSyncTaskOutputResponse $) {
+        this.databases = $.databases;
+        this.id = $.id;
+        this.sourceServerBrandVersion = $.sourceServerBrandVersion;
+        this.sourceServerVersion = $.sourceServerVersion;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToSourcePostgreSqlSyncTaskOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> databases;
-        private String id;
-        private String sourceServerBrandVersion;
-        private String sourceServerVersion;
-        private List<ReportableExceptionResponse> validationErrors;
+        private ConnectToSourcePostgreSqlSyncTaskOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToSourcePostgreSqlSyncTaskOutputResponse();
         }
 
         public Builder(ConnectToSourcePostgreSqlSyncTaskOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databases = defaults.databases;
-    	      this.id = defaults.id;
-    	      this.sourceServerBrandVersion = defaults.sourceServerBrandVersion;
-    	      this.sourceServerVersion = defaults.sourceServerVersion;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new ConnectToSourcePostgreSqlSyncTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databases(List<String> databases) {
-            this.databases = Objects.requireNonNull(databases);
+            $.databases = databases;
             return this;
         }
+
         public Builder databases(String... databases) {
             return databases(List.of(databases));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
-            this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
+            $.sourceServerBrandVersion = sourceServerBrandVersion;
             return this;
         }
+
         public Builder sourceServerVersion(String sourceServerVersion) {
-            this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
+            $.sourceServerVersion = sourceServerVersion;
             return this;
         }
+
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
-        }        public ConnectToSourcePostgreSqlSyncTaskOutputResponse build() {
-            return new ConnectToSourcePostgreSqlSyncTaskOutputResponse(databases, id, sourceServerBrandVersion, sourceServerVersion, validationErrors);
+        }
+
+        public ConnectToSourcePostgreSqlSyncTaskOutputResponse build() {
+            $.databases = Objects.requireNonNull($.databases, "expected parameter 'databases' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.sourceServerBrandVersion = Objects.requireNonNull($.sourceServerBrandVersion, "expected parameter 'sourceServerBrandVersion' to be non-null");
+            $.sourceServerVersion = Objects.requireNonNull($.sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

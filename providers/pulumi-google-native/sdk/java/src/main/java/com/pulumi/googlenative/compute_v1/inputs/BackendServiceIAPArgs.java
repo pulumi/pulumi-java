@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BackendServiceIAPArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BackendServiceIAPArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="oauth2ClientId")
-      private final @Nullable Output<String> oauth2ClientId;
+    private @Nullable Output<String> oauth2ClientId;
 
-    public Output<String> oauth2ClientId() {
-        return this.oauth2ClientId == null ? Codegen.empty() : this.oauth2ClientId;
+    public Optional<Output<String>> oauth2ClientId() {
+        return Optional.ofNullable(this.oauth2ClientId);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class BackendServiceIAPArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="oauth2ClientSecret")
-      private final @Nullable Output<String> oauth2ClientSecret;
+    private @Nullable Output<String> oauth2ClientSecret;
 
-    public Output<String> oauth2ClientSecret() {
-        return this.oauth2ClientSecret == null ? Codegen.empty() : this.oauth2ClientSecret;
+    public Optional<Output<String>> oauth2ClientSecret() {
+        return Optional.ofNullable(this.oauth2ClientSecret);
     }
 
-    public BackendServiceIAPArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> oauth2ClientId,
-        @Nullable Output<String> oauth2ClientSecret) {
-        this.enabled = enabled;
-        this.oauth2ClientId = oauth2ClientId;
-        this.oauth2ClientSecret = oauth2ClientSecret;
-    }
+    private BackendServiceIAPArgs() {}
 
-    private BackendServiceIAPArgs() {
-        this.enabled = Codegen.empty();
-        this.oauth2ClientId = Codegen.empty();
-        this.oauth2ClientSecret = Codegen.empty();
+    private BackendServiceIAPArgs(BackendServiceIAPArgs $) {
+        this.enabled = $.enabled;
+        this.oauth2ClientId = $.oauth2ClientId;
+        this.oauth2ClientSecret = $.oauth2ClientSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceIAPArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> oauth2ClientId;
-        private @Nullable Output<String> oauth2ClientSecret;
+        private BackendServiceIAPArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceIAPArgs();
         }
 
         public Builder(BackendServiceIAPArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.oauth2ClientId = defaults.oauth2ClientId;
-    	      this.oauth2ClientSecret = defaults.oauth2ClientSecret;
+            $ = new BackendServiceIAPArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder oauth2ClientId(@Nullable Output<String> oauth2ClientId) {
-            this.oauth2ClientId = oauth2ClientId;
+            $.oauth2ClientId = oauth2ClientId;
             return this;
         }
-        public Builder oauth2ClientId(@Nullable String oauth2ClientId) {
-            this.oauth2ClientId = Codegen.ofNullable(oauth2ClientId);
-            return this;
+
+        public Builder oauth2ClientId(String oauth2ClientId) {
+            return oauth2ClientId(Output.of(oauth2ClientId));
         }
+
         public Builder oauth2ClientSecret(@Nullable Output<String> oauth2ClientSecret) {
-            this.oauth2ClientSecret = oauth2ClientSecret;
+            $.oauth2ClientSecret = oauth2ClientSecret;
             return this;
         }
-        public Builder oauth2ClientSecret(@Nullable String oauth2ClientSecret) {
-            this.oauth2ClientSecret = Codegen.ofNullable(oauth2ClientSecret);
-            return this;
-        }        public BackendServiceIAPArgs build() {
-            return new BackendServiceIAPArgs(enabled, oauth2ClientId, oauth2ClientSecret);
+
+        public Builder oauth2ClientSecret(String oauth2ClientSecret) {
+            return oauth2ClientSecret(Output.of(oauth2ClientSecret));
+        }
+
+        public BackendServiceIAPArgs build() {
+            return $;
         }
     }
+
 }

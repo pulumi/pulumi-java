@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends com.pul
      * 
      */
     @Import(name="condition", required=true)
-      private final GooglePrivacyDlpV2RecordConditionResponse condition;
+    private GooglePrivacyDlpV2RecordConditionResponse condition;
 
     public GooglePrivacyDlpV2RecordConditionResponse condition() {
         return this.condition;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends com.pul
      * 
      */
     @Import(name="fields", required=true)
-      private final List<GooglePrivacyDlpV2FieldIdResponse> fields;
+    private List<GooglePrivacyDlpV2FieldIdResponse> fields;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> fields() {
         return this.fields;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends com.pul
      * 
      */
     @Import(name="infoTypeTransformations", required=true)
-      private final GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
+    private GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
 
     public GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations() {
         return this.infoTypeTransformations;
@@ -58,76 +58,70 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends com.pul
      * 
      */
     @Import(name="primitiveTransformation", required=true)
-      private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
+    private GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
     public GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation() {
         return this.primitiveTransformation;
     }
 
-    public GooglePrivacyDlpV2FieldTransformationResponse(
-        GooglePrivacyDlpV2RecordConditionResponse condition,
-        List<GooglePrivacyDlpV2FieldIdResponse> fields,
-        GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
-        GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations, "expected parameter 'infoTypeTransformations' to be non-null");
-        this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation, "expected parameter 'primitiveTransformation' to be non-null");
-    }
+    private GooglePrivacyDlpV2FieldTransformationResponse() {}
 
-    private GooglePrivacyDlpV2FieldTransformationResponse() {
-        this.condition = null;
-        this.fields = List.of();
-        this.infoTypeTransformations = null;
-        this.primitiveTransformation = null;
+    private GooglePrivacyDlpV2FieldTransformationResponse(GooglePrivacyDlpV2FieldTransformationResponse $) {
+        this.condition = $.condition;
+        this.fields = $.fields;
+        this.infoTypeTransformations = $.infoTypeTransformations;
+        this.primitiveTransformation = $.primitiveTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2FieldTransformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2RecordConditionResponse condition;
-        private List<GooglePrivacyDlpV2FieldIdResponse> fields;
-        private GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
-        private GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
+        private GooglePrivacyDlpV2FieldTransformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2FieldTransformationResponse();
         }
 
         public Builder(GooglePrivacyDlpV2FieldTransformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.fields = defaults.fields;
-    	      this.infoTypeTransformations = defaults.infoTypeTransformations;
-    	      this.primitiveTransformation = defaults.primitiveTransformation;
+            $ = new GooglePrivacyDlpV2FieldTransformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(GooglePrivacyDlpV2RecordConditionResponse condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder fields(List<GooglePrivacyDlpV2FieldIdResponse> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(GooglePrivacyDlpV2FieldIdResponse... fields) {
             return fields(List.of(fields));
         }
+
         public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
-            this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
+            $.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
+
         public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
-            this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
+            $.primitiveTransformation = primitiveTransformation;
             return this;
-        }        public GooglePrivacyDlpV2FieldTransformationResponse build() {
-            return new GooglePrivacyDlpV2FieldTransformationResponse(condition, fields, infoTypeTransformations, primitiveTransformation);
+        }
+
+        public GooglePrivacyDlpV2FieldTransformationResponse build() {
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            $.infoTypeTransformations = Objects.requireNonNull($.infoTypeTransformations, "expected parameter 'infoTypeTransformations' to be non-null");
+            $.primitiveTransformation = Objects.requireNonNull($.primitiveTransformation, "expected parameter 'primitiveTransformation' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pushEndpoint", required=true)
-      private final String pushEndpoint;
+    private String pushEndpoint;
 
     public String pushEndpoint() {
         return this.pushEndpoint;
     }
 
-    public PushConfigResponse(String pushEndpoint) {
-        this.pushEndpoint = Objects.requireNonNull(pushEndpoint, "expected parameter 'pushEndpoint' to be non-null");
-    }
+    private PushConfigResponse() {}
 
-    private PushConfigResponse() {
-        this.pushEndpoint = null;
+    private PushConfigResponse(PushConfigResponse $) {
+        this.pushEndpoint = $.pushEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PushConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pushEndpoint;
+        private PushConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PushConfigResponse();
         }
 
         public Builder(PushConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pushEndpoint = defaults.pushEndpoint;
+            $ = new PushConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pushEndpoint(String pushEndpoint) {
-            this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
+            $.pushEndpoint = pushEndpoint;
             return this;
-        }        public PushConfigResponse build() {
-            return new PushConfigResponse(pushEndpoint);
+        }
+
+        public PushConfigResponse build() {
+            $.pushEndpoint = Objects.requireNonNull($.pushEndpoint, "expected parameter 'pushEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

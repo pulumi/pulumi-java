@@ -6,9 +6,9 @@ package com.pulumi.aws.imagebuilder.inputs;
 import com.pulumi.aws.imagebuilder.inputs.ImageOutputResourceAmiGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ImageOutputResourceGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="amis")
-      private final @Nullable Output<List<ImageOutputResourceAmiGetArgs>> amis;
+    private @Nullable Output<List<ImageOutputResourceAmiGetArgs>> amis;
 
-    public Output<List<ImageOutputResourceAmiGetArgs>> amis() {
-        return this.amis == null ? Codegen.empty() : this.amis;
+    public Optional<Output<List<ImageOutputResourceAmiGetArgs>>> amis() {
+        return Optional.ofNullable(this.amis);
     }
 
-    public ImageOutputResourceGetArgs(@Nullable Output<List<ImageOutputResourceAmiGetArgs>> amis) {
-        this.amis = amis;
-    }
+    private ImageOutputResourceGetArgs() {}
 
-    private ImageOutputResourceGetArgs() {
-        this.amis = Codegen.empty();
+    private ImageOutputResourceGetArgs(ImageOutputResourceGetArgs $) {
+        this.amis = $.amis;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageOutputResourceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ImageOutputResourceAmiGetArgs>> amis;
+        private ImageOutputResourceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageOutputResourceGetArgs();
         }
 
         public Builder(ImageOutputResourceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amis = defaults.amis;
+            $ = new ImageOutputResourceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amis(@Nullable Output<List<ImageOutputResourceAmiGetArgs>> amis) {
-            this.amis = amis;
+            $.amis = amis;
             return this;
         }
-        public Builder amis(@Nullable List<ImageOutputResourceAmiGetArgs> amis) {
-            this.amis = Codegen.ofNullable(amis);
-            return this;
+
+        public Builder amis(List<ImageOutputResourceAmiGetArgs> amis) {
+            return amis(Output.of(amis));
         }
+
         public Builder amis(ImageOutputResourceAmiGetArgs... amis) {
             return amis(List.of(amis));
-        }        public ImageOutputResourceGetArgs build() {
-            return new ImageOutputResourceGetArgs(amis);
+        }
+
+        public ImageOutputResourceGetArgs build() {
+            return $;
         }
     }
+
 }

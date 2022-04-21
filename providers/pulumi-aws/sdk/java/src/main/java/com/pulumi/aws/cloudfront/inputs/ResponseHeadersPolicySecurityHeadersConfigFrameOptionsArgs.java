@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs ex
      * 
      */
     @Import(name="frameOption", required=true)
-      private final Output<String> frameOption;
+    private Output<String> frameOption;
 
     public Output<String> frameOption() {
         return this.frameOption;
@@ -31,63 +30,60 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs ex
      * 
      */
     @Import(name="override", required=true)
-      private final Output<Boolean> override;
+    private Output<Boolean> override;
 
     public Output<Boolean> override() {
         return this.override;
     }
 
-    public ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs(
-        Output<String> frameOption,
-        Output<Boolean> override) {
-        this.frameOption = Objects.requireNonNull(frameOption, "expected parameter 'frameOption' to be non-null");
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-    }
+    private ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs() {}
 
-    private ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs() {
-        this.frameOption = Codegen.empty();
-        this.override = Codegen.empty();
+    private ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs(ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs $) {
+        this.frameOption = $.frameOption;
+        this.override = $.override;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> frameOption;
-        private Output<Boolean> override;
+        private ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs();
         }
 
         public Builder(ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frameOption = defaults.frameOption;
-    	      this.override = defaults.override;
+            $ = new ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frameOption(Output<String> frameOption) {
-            this.frameOption = Objects.requireNonNull(frameOption);
+            $.frameOption = frameOption;
             return this;
         }
+
         public Builder frameOption(String frameOption) {
-            this.frameOption = Output.of(Objects.requireNonNull(frameOption));
-            return this;
+            return frameOption(Output.of(frameOption));
         }
+
         public Builder override(Output<Boolean> override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Output.of(Objects.requireNonNull(override));
-            return this;
-        }        public ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs build() {
-            return new ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs(frameOption, override);
+            return override(Output.of(override));
+        }
+
+        public ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs build() {
+            $.frameOption = Objects.requireNonNull($.frameOption, "expected parameter 'frameOption' to be non-null");
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

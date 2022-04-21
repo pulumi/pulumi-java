@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.GroupMembersItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditionalMembership")
-      private final @Nullable Output<String> conditionalMembership;
+    private @Nullable Output<String> conditionalMembership;
 
-    public Output<String> conditionalMembership() {
-        return this.conditionalMembership == null ? Codegen.empty() : this.conditionalMembership;
+    public Optional<Output<String>> conditionalMembership() {
+        return Optional.ofNullable(this.conditionalMembership);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupMembers")
-      private final @Nullable Output<List<GroupMembersItemArgs>> groupMembers;
+    private @Nullable Output<List<GroupMembersItemArgs>> groupMembers;
 
-    public Output<List<GroupMembersItemArgs>> groupMembers() {
-        return this.groupMembers == null ? Codegen.empty() : this.groupMembers;
+    public Optional<Output<List<GroupMembersItemArgs>>> groupMembers() {
+        return Optional.ofNullable(this.groupMembers);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memberType")
-      private final @Nullable Output<String> memberType;
+    private @Nullable Output<String> memberType;
 
-    public Output<String> memberType() {
-        return this.memberType == null ? Codegen.empty() : this.memberType;
+    public Optional<Output<String>> memberType() {
+        return Optional.ofNullable(this.memberType);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkGroupName")
-      private final @Nullable Output<String> networkGroupName;
+    private @Nullable Output<String> networkGroupName;
 
-    public Output<String> networkGroupName() {
-        return this.networkGroupName == null ? Codegen.empty() : this.networkGroupName;
+    public Optional<Output<String>> networkGroupName() {
+        return Optional.ofNullable(this.networkGroupName);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final Output<String> networkManagerName;
+    private Output<String> networkManagerName;
 
     public Output<String> networkManagerName() {
         return this.networkManagerName;
@@ -99,144 +99,124 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public NetworkGroupArgs(
-        @Nullable Output<String> conditionalMembership,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<List<GroupMembersItemArgs>> groupMembers,
-        @Nullable Output<String> memberType,
-        @Nullable Output<String> networkGroupName,
-        Output<String> networkManagerName,
-        Output<String> resourceGroupName) {
-        this.conditionalMembership = conditionalMembership;
-        this.description = description;
-        this.displayName = displayName;
-        this.groupMembers = groupMembers;
-        this.memberType = memberType;
-        this.networkGroupName = networkGroupName;
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private NetworkGroupArgs() {}
 
-    private NetworkGroupArgs() {
-        this.conditionalMembership = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.groupMembers = Codegen.empty();
-        this.memberType = Codegen.empty();
-        this.networkGroupName = Codegen.empty();
-        this.networkManagerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private NetworkGroupArgs(NetworkGroupArgs $) {
+        this.conditionalMembership = $.conditionalMembership;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.groupMembers = $.groupMembers;
+        this.memberType = $.memberType;
+        this.networkGroupName = $.networkGroupName;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> conditionalMembership;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<List<GroupMembersItemArgs>> groupMembers;
-        private @Nullable Output<String> memberType;
-        private @Nullable Output<String> networkGroupName;
-        private Output<String> networkManagerName;
-        private Output<String> resourceGroupName;
+        private NetworkGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkGroupArgs();
         }
 
         public Builder(NetworkGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditionalMembership = defaults.conditionalMembership;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.groupMembers = defaults.groupMembers;
-    	      this.memberType = defaults.memberType;
-    	      this.networkGroupName = defaults.networkGroupName;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new NetworkGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditionalMembership(@Nullable Output<String> conditionalMembership) {
-            this.conditionalMembership = conditionalMembership;
+            $.conditionalMembership = conditionalMembership;
             return this;
         }
-        public Builder conditionalMembership(@Nullable String conditionalMembership) {
-            this.conditionalMembership = Codegen.ofNullable(conditionalMembership);
-            return this;
+
+        public Builder conditionalMembership(String conditionalMembership) {
+            return conditionalMembership(Output.of(conditionalMembership));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder groupMembers(@Nullable Output<List<GroupMembersItemArgs>> groupMembers) {
-            this.groupMembers = groupMembers;
+            $.groupMembers = groupMembers;
             return this;
         }
-        public Builder groupMembers(@Nullable List<GroupMembersItemArgs> groupMembers) {
-            this.groupMembers = Codegen.ofNullable(groupMembers);
-            return this;
+
+        public Builder groupMembers(List<GroupMembersItemArgs> groupMembers) {
+            return groupMembers(Output.of(groupMembers));
         }
+
         public Builder groupMembers(GroupMembersItemArgs... groupMembers) {
             return groupMembers(List.of(groupMembers));
         }
+
         public Builder memberType(@Nullable Output<String> memberType) {
-            this.memberType = memberType;
+            $.memberType = memberType;
             return this;
         }
-        public Builder memberType(@Nullable String memberType) {
-            this.memberType = Codegen.ofNullable(memberType);
-            return this;
+
+        public Builder memberType(String memberType) {
+            return memberType(Output.of(memberType));
         }
+
         public Builder networkGroupName(@Nullable Output<String> networkGroupName) {
-            this.networkGroupName = networkGroupName;
+            $.networkGroupName = networkGroupName;
             return this;
         }
-        public Builder networkGroupName(@Nullable String networkGroupName) {
-            this.networkGroupName = Codegen.ofNullable(networkGroupName);
-            return this;
+
+        public Builder networkGroupName(String networkGroupName) {
+            return networkGroupName(Output.of(networkGroupName));
         }
+
         public Builder networkManagerName(Output<String> networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
-            return this;
+            return networkManagerName(Output.of(networkManagerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public NetworkGroupArgs build() {
-            return new NetworkGroupArgs(conditionalMembership, description, displayName, groupMembers, memberType, networkGroupName, networkManagerName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public NetworkGroupArgs build() {
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

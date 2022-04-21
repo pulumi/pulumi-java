@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class AutomaticResponse extends com.pulumi.resources.InvokeArgs {
 
     public static final AutomaticResponse Empty = new AutomaticResponse();
 
-    public AutomaticResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AutomaticResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AutomaticResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AutomaticResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AutomaticResponse();
         }
         public AutomaticResponse build() {
-            return new AutomaticResponse();
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.re
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.re
      * 
      */
     @Import(name="dataSetMappingName", required=true)
-      private final String dataSetMappingName;
+    private String dataSetMappingName;
 
     public String dataSetMappingName() {
         return this.dataSetMappingName;
@@ -39,7 +39,7 @@ public final class GetADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.re
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-      private final String shareSubscriptionName;
+    private String shareSubscriptionName;
 
     public String shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
-    public GetADLSGen2FileSystemDataSetMappingArgs(
-        String accountName,
-        String dataSetMappingName,
-        String resourceGroupName,
-        String shareSubscriptionName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dataSetMappingName = Objects.requireNonNull(dataSetMappingName, "expected parameter 'dataSetMappingName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
-    }
+    private GetADLSGen2FileSystemDataSetMappingArgs() {}
 
-    private GetADLSGen2FileSystemDataSetMappingArgs() {
-        this.accountName = null;
-        this.dataSetMappingName = null;
-        this.resourceGroupName = null;
-        this.shareSubscriptionName = null;
+    private GetADLSGen2FileSystemDataSetMappingArgs(GetADLSGen2FileSystemDataSetMappingArgs $) {
+        this.accountName = $.accountName;
+        this.dataSetMappingName = $.dataSetMappingName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetADLSGen2FileSystemDataSetMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String dataSetMappingName;
-        private String resourceGroupName;
-        private String shareSubscriptionName;
+        private GetADLSGen2FileSystemDataSetMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetADLSGen2FileSystemDataSetMappingArgs();
         }
 
         public Builder(GetADLSGen2FileSystemDataSetMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dataSetMappingName = defaults.dataSetMappingName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
+            $ = new GetADLSGen2FileSystemDataSetMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder dataSetMappingName(String dataSetMappingName) {
-            this.dataSetMappingName = Objects.requireNonNull(dataSetMappingName);
+            $.dataSetMappingName = dataSetMappingName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
-        }        public GetADLSGen2FileSystemDataSetMappingArgs build() {
-            return new GetADLSGen2FileSystemDataSetMappingArgs(accountName, dataSetMappingName, resourceGroupName, shareSubscriptionName);
+        }
+
+        public GetADLSGen2FileSystemDataSetMappingArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.dataSetMappingName = Objects.requireNonNull($.dataSetMappingName, "expected parameter 'dataSetMappingName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareSubscriptionName = Objects.requireNonNull($.shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
+            return $;
         }
     }
+
 }

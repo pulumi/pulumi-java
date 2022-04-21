@@ -17,7 +17,7 @@ public final class GetWebhookArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class GetWebhookArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetWebhookArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="webhookName", required=true)
-      private final String webhookName;
+    private String webhookName;
 
     public String webhookName() {
         return this.webhookName;
     }
 
-    public GetWebhookArgs(
-        String registryName,
-        String resourceGroupName,
-        String webhookName) {
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.webhookName = Objects.requireNonNull(webhookName, "expected parameter 'webhookName' to be non-null");
-    }
+    private GetWebhookArgs() {}
 
-    private GetWebhookArgs() {
-        this.registryName = null;
-        this.resourceGroupName = null;
-        this.webhookName = null;
+    private GetWebhookArgs(GetWebhookArgs $) {
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.webhookName = $.webhookName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebhookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registryName;
-        private String resourceGroupName;
-        private String webhookName;
+        private GetWebhookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebhookArgs();
         }
 
         public Builder(GetWebhookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.webhookName = defaults.webhookName;
+            $ = new GetWebhookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder webhookName(String webhookName) {
-            this.webhookName = Objects.requireNonNull(webhookName);
+            $.webhookName = webhookName;
             return this;
-        }        public GetWebhookArgs build() {
-            return new GetWebhookArgs(registryName, resourceGroupName, webhookName);
+        }
+
+        public GetWebhookArgs build() {
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.webhookName = Objects.requireNonNull($.webhookName, "expected parameter 'webhookName' to be non-null");
+            return $;
         }
     }
+
 }

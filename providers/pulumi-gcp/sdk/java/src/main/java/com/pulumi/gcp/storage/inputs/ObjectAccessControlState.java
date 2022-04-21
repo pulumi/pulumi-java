@@ -5,12 +5,12 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.storage.inputs.ObjectAccessControlProjectTeamGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="entity")
-      private final @Nullable Output<String> entity;
+    private @Nullable Output<String> entity;
 
-    public Output<String> entity() {
-        return this.entity == null ? Codegen.empty() : this.entity;
+    public Optional<Output<String>> entity() {
+        return Optional.ofNullable(this.entity);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="entityId")
-      private final @Nullable Output<String> entityId;
+    private @Nullable Output<String> entityId;
 
-    public Output<String> entityId() {
-        return this.entityId == null ? Codegen.empty() : this.entityId;
+    public Optional<Output<String>> entityId() {
+        return Optional.ofNullable(this.entityId);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="generation")
-      private final @Nullable Output<Integer> generation;
+    private @Nullable Output<Integer> generation;
 
-    public Output<Integer> generation() {
-        return this.generation == null ? Codegen.empty() : this.generation;
+    public Optional<Output<Integer>> generation() {
+        return Optional.ofNullable(this.generation);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="object")
-      private final @Nullable Output<String> object;
+    private @Nullable Output<String> object;
 
-    public Output<String> object() {
-        return this.object == null ? Codegen.empty() : this.object;
+    public Optional<Output<String>> object() {
+        return Optional.ofNullable(this.object);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="projectTeams")
-      private final @Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams;
+    private @Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams;
 
-    public Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams() {
-        return this.projectTeams == null ? Codegen.empty() : this.projectTeams;
+    public Optional<Output<List<ObjectAccessControlProjectTeamGetArgs>>> projectTeams() {
+        return Optional.ofNullable(this.projectTeams);
     }
 
     /**
@@ -120,157 +120,132 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public ObjectAccessControlState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> email,
-        @Nullable Output<String> entity,
-        @Nullable Output<String> entityId,
-        @Nullable Output<Integer> generation,
-        @Nullable Output<String> object,
-        @Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams,
-        @Nullable Output<String> role) {
-        this.bucket = bucket;
-        this.domain = domain;
-        this.email = email;
-        this.entity = entity;
-        this.entityId = entityId;
-        this.generation = generation;
-        this.object = object;
-        this.projectTeams = projectTeams;
-        this.role = role;
-    }
+    private ObjectAccessControlState() {}
 
-    private ObjectAccessControlState() {
-        this.bucket = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.email = Codegen.empty();
-        this.entity = Codegen.empty();
-        this.entityId = Codegen.empty();
-        this.generation = Codegen.empty();
-        this.object = Codegen.empty();
-        this.projectTeams = Codegen.empty();
-        this.role = Codegen.empty();
+    private ObjectAccessControlState(ObjectAccessControlState $) {
+        this.bucket = $.bucket;
+        this.domain = $.domain;
+        this.email = $.email;
+        this.entity = $.entity;
+        this.entityId = $.entityId;
+        this.generation = $.generation;
+        this.object = $.object;
+        this.projectTeams = $.projectTeams;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectAccessControlState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> entity;
-        private @Nullable Output<String> entityId;
-        private @Nullable Output<Integer> generation;
-        private @Nullable Output<String> object;
-        private @Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams;
-        private @Nullable Output<String> role;
+        private ObjectAccessControlState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectAccessControlState();
         }
 
         public Builder(ObjectAccessControlState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.domain = defaults.domain;
-    	      this.email = defaults.email;
-    	      this.entity = defaults.entity;
-    	      this.entityId = defaults.entityId;
-    	      this.generation = defaults.generation;
-    	      this.object = defaults.object;
-    	      this.projectTeams = defaults.projectTeams;
-    	      this.role = defaults.role;
+            $ = new ObjectAccessControlState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder entity(@Nullable Output<String> entity) {
-            this.entity = entity;
+            $.entity = entity;
             return this;
         }
-        public Builder entity(@Nullable String entity) {
-            this.entity = Codegen.ofNullable(entity);
-            return this;
+
+        public Builder entity(String entity) {
+            return entity(Output.of(entity));
         }
+
         public Builder entityId(@Nullable Output<String> entityId) {
-            this.entityId = entityId;
+            $.entityId = entityId;
             return this;
         }
-        public Builder entityId(@Nullable String entityId) {
-            this.entityId = Codegen.ofNullable(entityId);
-            return this;
+
+        public Builder entityId(String entityId) {
+            return entityId(Output.of(entityId));
         }
+
         public Builder generation(@Nullable Output<Integer> generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
-        public Builder generation(@Nullable Integer generation) {
-            this.generation = Codegen.ofNullable(generation);
-            return this;
+
+        public Builder generation(Integer generation) {
+            return generation(Output.of(generation));
         }
+
         public Builder object(@Nullable Output<String> object) {
-            this.object = object;
+            $.object = object;
             return this;
         }
-        public Builder object(@Nullable String object) {
-            this.object = Codegen.ofNullable(object);
-            return this;
+
+        public Builder object(String object) {
+            return object(Output.of(object));
         }
+
         public Builder projectTeams(@Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams) {
-            this.projectTeams = projectTeams;
+            $.projectTeams = projectTeams;
             return this;
         }
-        public Builder projectTeams(@Nullable List<ObjectAccessControlProjectTeamGetArgs> projectTeams) {
-            this.projectTeams = Codegen.ofNullable(projectTeams);
-            return this;
+
+        public Builder projectTeams(List<ObjectAccessControlProjectTeamGetArgs> projectTeams) {
+            return projectTeams(Output.of(projectTeams));
         }
+
         public Builder projectTeams(ObjectAccessControlProjectTeamGetArgs... projectTeams) {
             return projectTeams(List.of(projectTeams));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public ObjectAccessControlState build() {
-            return new ObjectAccessControlState(bucket, domain, email, entity, entityId, generation, object, projectTeams, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public ObjectAccessControlState build() {
+            return $;
         }
     }
+
 }

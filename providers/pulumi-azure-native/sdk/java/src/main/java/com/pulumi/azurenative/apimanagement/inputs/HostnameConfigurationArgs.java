@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<CertificateInformationArgs> certificate;
+    private @Nullable Output<CertificateInformationArgs> certificate;
 
-    public Output<CertificateInformationArgs> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<CertificateInformationArgs>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificatePassword")
-      private final @Nullable Output<String> certificatePassword;
+    private @Nullable Output<String> certificatePassword;
 
-    public Output<String> certificatePassword() {
-        return this.certificatePassword == null ? Codegen.empty() : this.certificatePassword;
+    public Optional<Output<String>> certificatePassword() {
+        return Optional.ofNullable(this.certificatePassword);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="defaultSslBinding")
-      private final @Nullable Output<Boolean> defaultSslBinding;
+    private @Nullable Output<Boolean> defaultSslBinding;
 
-    public Output<Boolean> defaultSslBinding() {
-        return this.defaultSslBinding == null ? Codegen.empty() : this.defaultSslBinding;
+    public Optional<Output<Boolean>> defaultSslBinding() {
+        return Optional.ofNullable(this.defaultSslBinding);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="encodedCertificate")
-      private final @Nullable Output<String> encodedCertificate;
+    private @Nullable Output<String> encodedCertificate;
 
-    public Output<String> encodedCertificate() {
-        return this.encodedCertificate == null ? Codegen.empty() : this.encodedCertificate;
+    public Optional<Output<String>> encodedCertificate() {
+        return Optional.ofNullable(this.encodedCertificate);
     }
 
     /**
@@ -72,7 +73,7 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="hostName", required=true)
-      private final Output<String> hostName;
+    private Output<String> hostName;
 
     public Output<String> hostName() {
         return this.hostName;
@@ -83,10 +84,10 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="identityClientId")
-      private final @Nullable Output<String> identityClientId;
+    private @Nullable Output<String> identityClientId;
 
-    public Output<String> identityClientId() {
-        return this.identityClientId == null ? Codegen.empty() : this.identityClientId;
+    public Optional<Output<String>> identityClientId() {
+        return Optional.ofNullable(this.identityClientId);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="keyVaultId")
-      private final @Nullable Output<String> keyVaultId;
+    private @Nullable Output<String> keyVaultId;
 
-    public Output<String> keyVaultId() {
-        return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
+    public Optional<Output<String>> keyVaultId() {
+        return Optional.ofNullable(this.keyVaultId);
     }
 
     /**
@@ -105,10 +106,10 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="negotiateClientCertificate")
-      private final @Nullable Output<Boolean> negotiateClientCertificate;
+    private @Nullable Output<Boolean> negotiateClientCertificate;
 
-    public Output<Boolean> negotiateClientCertificate() {
-        return this.negotiateClientCertificate == null ? Codegen.empty() : this.negotiateClientCertificate;
+    public Optional<Output<Boolean>> negotiateClientCertificate() {
+        return Optional.ofNullable(this.negotiateClientCertificate);
     }
 
     /**
@@ -116,154 +117,132 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,HostnameType>> type;
+    private Output<Either<String,HostnameType>> type;
 
     public Output<Either<String,HostnameType>> type() {
         return this.type;
     }
 
-    public HostnameConfigurationArgs(
-        @Nullable Output<CertificateInformationArgs> certificate,
-        @Nullable Output<String> certificatePassword,
-        @Nullable Output<Boolean> defaultSslBinding,
-        @Nullable Output<String> encodedCertificate,
-        Output<String> hostName,
-        @Nullable Output<String> identityClientId,
-        @Nullable Output<String> keyVaultId,
-        @Nullable Output<Boolean> negotiateClientCertificate,
-        Output<Either<String,HostnameType>> type) {
-        this.certificate = certificate;
-        this.certificatePassword = certificatePassword;
-        this.defaultSslBinding = Codegen.booleanProp("defaultSslBinding").output().arg(defaultSslBinding).def(false).getNullable();
-        this.encodedCertificate = encodedCertificate;
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.identityClientId = identityClientId;
-        this.keyVaultId = keyVaultId;
-        this.negotiateClientCertificate = Codegen.booleanProp("negotiateClientCertificate").output().arg(negotiateClientCertificate).def(false).getNullable();
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private HostnameConfigurationArgs() {}
 
-    private HostnameConfigurationArgs() {
-        this.certificate = Codegen.empty();
-        this.certificatePassword = Codegen.empty();
-        this.defaultSslBinding = Codegen.empty();
-        this.encodedCertificate = Codegen.empty();
-        this.hostName = Codegen.empty();
-        this.identityClientId = Codegen.empty();
-        this.keyVaultId = Codegen.empty();
-        this.negotiateClientCertificate = Codegen.empty();
-        this.type = Codegen.empty();
+    private HostnameConfigurationArgs(HostnameConfigurationArgs $) {
+        this.certificate = $.certificate;
+        this.certificatePassword = $.certificatePassword;
+        this.defaultSslBinding = $.defaultSslBinding;
+        this.encodedCertificate = $.encodedCertificate;
+        this.hostName = $.hostName;
+        this.identityClientId = $.identityClientId;
+        this.keyVaultId = $.keyVaultId;
+        this.negotiateClientCertificate = $.negotiateClientCertificate;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostnameConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CertificateInformationArgs> certificate;
-        private @Nullable Output<String> certificatePassword;
-        private @Nullable Output<Boolean> defaultSslBinding;
-        private @Nullable Output<String> encodedCertificate;
-        private Output<String> hostName;
-        private @Nullable Output<String> identityClientId;
-        private @Nullable Output<String> keyVaultId;
-        private @Nullable Output<Boolean> negotiateClientCertificate;
-        private Output<Either<String,HostnameType>> type;
+        private HostnameConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostnameConfigurationArgs();
         }
 
         public Builder(HostnameConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.certificatePassword = defaults.certificatePassword;
-    	      this.defaultSslBinding = defaults.defaultSslBinding;
-    	      this.encodedCertificate = defaults.encodedCertificate;
-    	      this.hostName = defaults.hostName;
-    	      this.identityClientId = defaults.identityClientId;
-    	      this.keyVaultId = defaults.keyVaultId;
-    	      this.negotiateClientCertificate = defaults.negotiateClientCertificate;
-    	      this.type = defaults.type;
+            $ = new HostnameConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable Output<CertificateInformationArgs> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable CertificateInformationArgs certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(CertificateInformationArgs certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder certificatePassword(@Nullable Output<String> certificatePassword) {
-            this.certificatePassword = certificatePassword;
+            $.certificatePassword = certificatePassword;
             return this;
         }
-        public Builder certificatePassword(@Nullable String certificatePassword) {
-            this.certificatePassword = Codegen.ofNullable(certificatePassword);
-            return this;
+
+        public Builder certificatePassword(String certificatePassword) {
+            return certificatePassword(Output.of(certificatePassword));
         }
+
         public Builder defaultSslBinding(@Nullable Output<Boolean> defaultSslBinding) {
-            this.defaultSslBinding = defaultSslBinding;
+            $.defaultSslBinding = defaultSslBinding;
             return this;
         }
-        public Builder defaultSslBinding(@Nullable Boolean defaultSslBinding) {
-            this.defaultSslBinding = Codegen.ofNullable(defaultSslBinding);
-            return this;
+
+        public Builder defaultSslBinding(Boolean defaultSslBinding) {
+            return defaultSslBinding(Output.of(defaultSslBinding));
         }
+
         public Builder encodedCertificate(@Nullable Output<String> encodedCertificate) {
-            this.encodedCertificate = encodedCertificate;
+            $.encodedCertificate = encodedCertificate;
             return this;
         }
-        public Builder encodedCertificate(@Nullable String encodedCertificate) {
-            this.encodedCertificate = Codegen.ofNullable(encodedCertificate);
-            return this;
+
+        public Builder encodedCertificate(String encodedCertificate) {
+            return encodedCertificate(Output.of(encodedCertificate));
         }
+
         public Builder hostName(Output<String> hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder hostName(String hostName) {
-            this.hostName = Output.of(Objects.requireNonNull(hostName));
-            return this;
+            return hostName(Output.of(hostName));
         }
+
         public Builder identityClientId(@Nullable Output<String> identityClientId) {
-            this.identityClientId = identityClientId;
+            $.identityClientId = identityClientId;
             return this;
         }
-        public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = Codegen.ofNullable(identityClientId);
-            return this;
+
+        public Builder identityClientId(String identityClientId) {
+            return identityClientId(Output.of(identityClientId));
         }
+
         public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
-            this.keyVaultId = keyVaultId;
+            $.keyVaultId = keyVaultId;
             return this;
         }
-        public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Codegen.ofNullable(keyVaultId);
-            return this;
+
+        public Builder keyVaultId(String keyVaultId) {
+            return keyVaultId(Output.of(keyVaultId));
         }
+
         public Builder negotiateClientCertificate(@Nullable Output<Boolean> negotiateClientCertificate) {
-            this.negotiateClientCertificate = negotiateClientCertificate;
+            $.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
-        public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
-            this.negotiateClientCertificate = Codegen.ofNullable(negotiateClientCertificate);
-            return this;
+
+        public Builder negotiateClientCertificate(Boolean negotiateClientCertificate) {
+            return negotiateClientCertificate(Output.of(negotiateClientCertificate));
         }
+
         public Builder type(Output<Either<String,HostnameType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,HostnameType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public HostnameConfigurationArgs build() {
-            return new HostnameConfigurationArgs(certificate, certificatePassword, defaultSslBinding, encodedCertificate, hostName, identityClientId, keyVaultId, negotiateClientCertificate, type);
+            return type(Output.of(type));
+        }
+
+        public HostnameConfigurationArgs build() {
+            $.defaultSslBinding = Codegen.booleanProp("defaultSslBinding").output().arg($.defaultSslBinding).def(false).getNullable();
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.negotiateClientCertificate = Codegen.booleanProp("negotiateClientCertificate").output().arg($.negotiateClientCertificate).def(false).getNullable();
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.awsnative.lightsail;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alarmName")
-      private final @Nullable Output<String> alarmName;
+    private @Nullable Output<String> alarmName;
 
-    public Output<String> alarmName() {
-        return this.alarmName == null ? Codegen.empty() : this.alarmName;
+    public Optional<Output<String>> alarmName() {
+        return Optional.ofNullable(this.alarmName);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comparisonOperator", required=true)
-      private final Output<String> comparisonOperator;
+    private Output<String> comparisonOperator;
 
     public Output<String> comparisonOperator() {
         return this.comparisonOperator;
@@ -46,10 +46,10 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactProtocols")
-      private final @Nullable Output<List<String>> contactProtocols;
+    private @Nullable Output<List<String>> contactProtocols;
 
-    public Output<List<String>> contactProtocols() {
-        return this.contactProtocols == null ? Codegen.empty() : this.contactProtocols;
+    public Optional<Output<List<String>>> contactProtocols() {
+        return Optional.ofNullable(this.contactProtocols);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datapointsToAlarm")
-      private final @Nullable Output<Integer> datapointsToAlarm;
+    private @Nullable Output<Integer> datapointsToAlarm;
 
-    public Output<Integer> datapointsToAlarm() {
-        return this.datapointsToAlarm == null ? Codegen.empty() : this.datapointsToAlarm;
+    public Optional<Output<Integer>> datapointsToAlarm() {
+        return Optional.ofNullable(this.datapointsToAlarm);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="evaluationPeriods", required=true)
-      private final Output<Integer> evaluationPeriods;
+    private Output<Integer> evaluationPeriods;
 
     public Output<Integer> evaluationPeriods() {
         return this.evaluationPeriods;
@@ -79,7 +79,7 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -90,7 +90,7 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitoredResourceName", required=true)
-      private final Output<String> monitoredResourceName;
+    private Output<String> monitoredResourceName;
 
     public Output<String> monitoredResourceName() {
         return this.monitoredResourceName;
@@ -101,10 +101,10 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationEnabled")
-      private final @Nullable Output<Boolean> notificationEnabled;
+    private @Nullable Output<Boolean> notificationEnabled;
 
-    public Output<Boolean> notificationEnabled() {
-        return this.notificationEnabled == null ? Codegen.empty() : this.notificationEnabled;
+    public Optional<Output<Boolean>> notificationEnabled() {
+        return Optional.ofNullable(this.notificationEnabled);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationTriggers")
-      private final @Nullable Output<List<String>> notificationTriggers;
+    private @Nullable Output<List<String>> notificationTriggers;
 
-    public Output<List<String>> notificationTriggers() {
-        return this.notificationTriggers == null ? Codegen.empty() : this.notificationTriggers;
+    public Optional<Output<List<String>>> notificationTriggers() {
+        return Optional.ofNullable(this.notificationTriggers);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="threshold", required=true)
-      private final Output<Double> threshold;
+    private Output<Double> threshold;
 
     public Output<Double> threshold() {
         return this.threshold;
@@ -134,186 +134,161 @@ public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="treatMissingData")
-      private final @Nullable Output<String> treatMissingData;
+    private @Nullable Output<String> treatMissingData;
 
-    public Output<String> treatMissingData() {
-        return this.treatMissingData == null ? Codegen.empty() : this.treatMissingData;
+    public Optional<Output<String>> treatMissingData() {
+        return Optional.ofNullable(this.treatMissingData);
     }
 
-    public AlarmArgs(
-        @Nullable Output<String> alarmName,
-        Output<String> comparisonOperator,
-        @Nullable Output<List<String>> contactProtocols,
-        @Nullable Output<Integer> datapointsToAlarm,
-        Output<Integer> evaluationPeriods,
-        Output<String> metricName,
-        Output<String> monitoredResourceName,
-        @Nullable Output<Boolean> notificationEnabled,
-        @Nullable Output<List<String>> notificationTriggers,
-        Output<Double> threshold,
-        @Nullable Output<String> treatMissingData) {
-        this.alarmName = alarmName;
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
-        this.contactProtocols = contactProtocols;
-        this.datapointsToAlarm = datapointsToAlarm;
-        this.evaluationPeriods = Objects.requireNonNull(evaluationPeriods, "expected parameter 'evaluationPeriods' to be non-null");
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.monitoredResourceName = Objects.requireNonNull(monitoredResourceName, "expected parameter 'monitoredResourceName' to be non-null");
-        this.notificationEnabled = notificationEnabled;
-        this.notificationTriggers = notificationTriggers;
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.treatMissingData = treatMissingData;
-    }
+    private AlarmArgs() {}
 
-    private AlarmArgs() {
-        this.alarmName = Codegen.empty();
-        this.comparisonOperator = Codegen.empty();
-        this.contactProtocols = Codegen.empty();
-        this.datapointsToAlarm = Codegen.empty();
-        this.evaluationPeriods = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.monitoredResourceName = Codegen.empty();
-        this.notificationEnabled = Codegen.empty();
-        this.notificationTriggers = Codegen.empty();
-        this.threshold = Codegen.empty();
-        this.treatMissingData = Codegen.empty();
+    private AlarmArgs(AlarmArgs $) {
+        this.alarmName = $.alarmName;
+        this.comparisonOperator = $.comparisonOperator;
+        this.contactProtocols = $.contactProtocols;
+        this.datapointsToAlarm = $.datapointsToAlarm;
+        this.evaluationPeriods = $.evaluationPeriods;
+        this.metricName = $.metricName;
+        this.monitoredResourceName = $.monitoredResourceName;
+        this.notificationEnabled = $.notificationEnabled;
+        this.notificationTriggers = $.notificationTriggers;
+        this.threshold = $.threshold;
+        this.treatMissingData = $.treatMissingData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlarmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alarmName;
-        private Output<String> comparisonOperator;
-        private @Nullable Output<List<String>> contactProtocols;
-        private @Nullable Output<Integer> datapointsToAlarm;
-        private Output<Integer> evaluationPeriods;
-        private Output<String> metricName;
-        private Output<String> monitoredResourceName;
-        private @Nullable Output<Boolean> notificationEnabled;
-        private @Nullable Output<List<String>> notificationTriggers;
-        private Output<Double> threshold;
-        private @Nullable Output<String> treatMissingData;
+        private AlarmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlarmArgs();
         }
 
         public Builder(AlarmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmName = defaults.alarmName;
-    	      this.comparisonOperator = defaults.comparisonOperator;
-    	      this.contactProtocols = defaults.contactProtocols;
-    	      this.datapointsToAlarm = defaults.datapointsToAlarm;
-    	      this.evaluationPeriods = defaults.evaluationPeriods;
-    	      this.metricName = defaults.metricName;
-    	      this.monitoredResourceName = defaults.monitoredResourceName;
-    	      this.notificationEnabled = defaults.notificationEnabled;
-    	      this.notificationTriggers = defaults.notificationTriggers;
-    	      this.threshold = defaults.threshold;
-    	      this.treatMissingData = defaults.treatMissingData;
+            $ = new AlarmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmName(@Nullable Output<String> alarmName) {
-            this.alarmName = alarmName;
+            $.alarmName = alarmName;
             return this;
         }
-        public Builder alarmName(@Nullable String alarmName) {
-            this.alarmName = Codegen.ofNullable(alarmName);
-            return this;
+
+        public Builder alarmName(String alarmName) {
+            return alarmName(Output.of(alarmName));
         }
+
         public Builder comparisonOperator(Output<String> comparisonOperator) {
-            this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
+            $.comparisonOperator = comparisonOperator;
             return this;
         }
+
         public Builder comparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
-            return this;
+            return comparisonOperator(Output.of(comparisonOperator));
         }
+
         public Builder contactProtocols(@Nullable Output<List<String>> contactProtocols) {
-            this.contactProtocols = contactProtocols;
+            $.contactProtocols = contactProtocols;
             return this;
         }
-        public Builder contactProtocols(@Nullable List<String> contactProtocols) {
-            this.contactProtocols = Codegen.ofNullable(contactProtocols);
-            return this;
+
+        public Builder contactProtocols(List<String> contactProtocols) {
+            return contactProtocols(Output.of(contactProtocols));
         }
+
         public Builder contactProtocols(String... contactProtocols) {
             return contactProtocols(List.of(contactProtocols));
         }
+
         public Builder datapointsToAlarm(@Nullable Output<Integer> datapointsToAlarm) {
-            this.datapointsToAlarm = datapointsToAlarm;
+            $.datapointsToAlarm = datapointsToAlarm;
             return this;
         }
-        public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
-            this.datapointsToAlarm = Codegen.ofNullable(datapointsToAlarm);
-            return this;
+
+        public Builder datapointsToAlarm(Integer datapointsToAlarm) {
+            return datapointsToAlarm(Output.of(datapointsToAlarm));
         }
+
         public Builder evaluationPeriods(Output<Integer> evaluationPeriods) {
-            this.evaluationPeriods = Objects.requireNonNull(evaluationPeriods);
+            $.evaluationPeriods = evaluationPeriods;
             return this;
         }
+
         public Builder evaluationPeriods(Integer evaluationPeriods) {
-            this.evaluationPeriods = Output.of(Objects.requireNonNull(evaluationPeriods));
-            return this;
+            return evaluationPeriods(Output.of(evaluationPeriods));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder monitoredResourceName(Output<String> monitoredResourceName) {
-            this.monitoredResourceName = Objects.requireNonNull(monitoredResourceName);
+            $.monitoredResourceName = monitoredResourceName;
             return this;
         }
+
         public Builder monitoredResourceName(String monitoredResourceName) {
-            this.monitoredResourceName = Output.of(Objects.requireNonNull(monitoredResourceName));
-            return this;
+            return monitoredResourceName(Output.of(monitoredResourceName));
         }
+
         public Builder notificationEnabled(@Nullable Output<Boolean> notificationEnabled) {
-            this.notificationEnabled = notificationEnabled;
+            $.notificationEnabled = notificationEnabled;
             return this;
         }
-        public Builder notificationEnabled(@Nullable Boolean notificationEnabled) {
-            this.notificationEnabled = Codegen.ofNullable(notificationEnabled);
-            return this;
+
+        public Builder notificationEnabled(Boolean notificationEnabled) {
+            return notificationEnabled(Output.of(notificationEnabled));
         }
+
         public Builder notificationTriggers(@Nullable Output<List<String>> notificationTriggers) {
-            this.notificationTriggers = notificationTriggers;
+            $.notificationTriggers = notificationTriggers;
             return this;
         }
-        public Builder notificationTriggers(@Nullable List<String> notificationTriggers) {
-            this.notificationTriggers = Codegen.ofNullable(notificationTriggers);
-            return this;
+
+        public Builder notificationTriggers(List<String> notificationTriggers) {
+            return notificationTriggers(Output.of(notificationTriggers));
         }
+
         public Builder notificationTriggers(String... notificationTriggers) {
             return notificationTriggers(List.of(notificationTriggers));
         }
+
         public Builder threshold(Output<Double> threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
         }
+
         public Builder threshold(Double threshold) {
-            this.threshold = Output.of(Objects.requireNonNull(threshold));
-            return this;
+            return threshold(Output.of(threshold));
         }
+
         public Builder treatMissingData(@Nullable Output<String> treatMissingData) {
-            this.treatMissingData = treatMissingData;
+            $.treatMissingData = treatMissingData;
             return this;
         }
-        public Builder treatMissingData(@Nullable String treatMissingData) {
-            this.treatMissingData = Codegen.ofNullable(treatMissingData);
-            return this;
-        }        public AlarmArgs build() {
-            return new AlarmArgs(alarmName, comparisonOperator, contactProtocols, datapointsToAlarm, evaluationPeriods, metricName, monitoredResourceName, notificationEnabled, notificationTriggers, threshold, treatMissingData);
+
+        public Builder treatMissingData(String treatMissingData) {
+            return treatMissingData(Output.of(treatMissingData));
+        }
+
+        public AlarmArgs build() {
+            $.comparisonOperator = Objects.requireNonNull($.comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
+            $.evaluationPeriods = Objects.requireNonNull($.evaluationPeriods, "expected parameter 'evaluationPeriods' to be non-null");
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.monitoredResourceName = Objects.requireNonNull($.monitoredResourceName, "expected parameter 'monitoredResourceName' to be non-null");
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            return $;
         }
     }
+
 }

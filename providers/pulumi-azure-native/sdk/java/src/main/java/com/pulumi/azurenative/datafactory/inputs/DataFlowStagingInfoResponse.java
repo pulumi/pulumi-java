@@ -24,10 +24,10 @@ public final class DataFlowStagingInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Object folderPath;
+    private @Nullable Object folderPath;
 
     public Optional<Object> folderPath() {
-        return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class DataFlowStagingInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="linkedService")
-      private final @Nullable LinkedServiceReferenceResponse linkedService;
+    private @Nullable LinkedServiceReferenceResponse linkedService;
 
     public Optional<LinkedServiceReferenceResponse> linkedService() {
-        return this.linkedService == null ? Optional.empty() : Optional.ofNullable(this.linkedService);
+        return Optional.ofNullable(this.linkedService);
     }
 
-    public DataFlowStagingInfoResponse(
-        @Nullable Object folderPath,
-        @Nullable LinkedServiceReferenceResponse linkedService) {
-        this.folderPath = folderPath;
-        this.linkedService = linkedService;
-    }
+    private DataFlowStagingInfoResponse() {}
 
-    private DataFlowStagingInfoResponse() {
-        this.folderPath = null;
-        this.linkedService = null;
+    private DataFlowStagingInfoResponse(DataFlowStagingInfoResponse $) {
+        this.folderPath = $.folderPath;
+        this.linkedService = $.linkedService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataFlowStagingInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object folderPath;
-        private @Nullable LinkedServiceReferenceResponse linkedService;
+        private DataFlowStagingInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataFlowStagingInfoResponse();
         }
 
         public Builder(DataFlowStagingInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.folderPath = defaults.folderPath;
-    	      this.linkedService = defaults.linkedService;
+            $ = new DataFlowStagingInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
-            this.linkedService = linkedService;
+            $.linkedService = linkedService;
             return this;
-        }        public DataFlowStagingInfoResponse build() {
-            return new DataFlowStagingInfoResponse(folderPath, linkedService);
+        }
+
+        public DataFlowStagingInfoResponse build() {
+            return $;
         }
     }
+
 }

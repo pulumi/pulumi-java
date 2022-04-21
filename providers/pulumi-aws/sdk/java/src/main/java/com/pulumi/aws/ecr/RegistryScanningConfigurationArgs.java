@@ -6,10 +6,10 @@ package com.pulumi.aws.ecr;
 import com.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegistryScanningConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules;
+    private @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules;
 
-    public Output<List<RegistryScanningConfigurationRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<RegistryScanningConfigurationRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -33,66 +33,63 @@ public final class RegistryScanningConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="scanType", required=true)
-      private final Output<String> scanType;
+    private Output<String> scanType;
 
     public Output<String> scanType() {
         return this.scanType;
     }
 
-    public RegistryScanningConfigurationArgs(
-        @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules,
-        Output<String> scanType) {
-        this.rules = rules;
-        this.scanType = Objects.requireNonNull(scanType, "expected parameter 'scanType' to be non-null");
-    }
+    private RegistryScanningConfigurationArgs() {}
 
-    private RegistryScanningConfigurationArgs() {
-        this.rules = Codegen.empty();
-        this.scanType = Codegen.empty();
+    private RegistryScanningConfigurationArgs(RegistryScanningConfigurationArgs $) {
+        this.rules = $.rules;
+        this.scanType = $.scanType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryScanningConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules;
-        private Output<String> scanType;
+        private RegistryScanningConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryScanningConfigurationArgs();
         }
 
         public Builder(RegistryScanningConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
-    	      this.scanType = defaults.scanType;
+            $ = new RegistryScanningConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<RegistryScanningConfigurationRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<RegistryScanningConfigurationRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(RegistryScanningConfigurationRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder scanType(Output<String> scanType) {
-            this.scanType = Objects.requireNonNull(scanType);
+            $.scanType = scanType;
             return this;
         }
+
         public Builder scanType(String scanType) {
-            this.scanType = Output.of(Objects.requireNonNull(scanType));
-            return this;
-        }        public RegistryScanningConfigurationArgs build() {
-            return new RegistryScanningConfigurationArgs(rules, scanType);
+            return scanType(Output.of(scanType));
+        }
+
+        public RegistryScanningConfigurationArgs build() {
+            $.scanType = Objects.requireNonNull($.scanType, "expected parameter 'scanType' to be non-null");
+            return $;
         }
     }
+
 }

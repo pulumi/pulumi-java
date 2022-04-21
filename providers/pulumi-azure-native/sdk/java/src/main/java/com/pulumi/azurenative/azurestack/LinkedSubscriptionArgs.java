@@ -7,9 +7,9 @@ import com.pulumi.azurenative.azurestack.enums.Location;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="linkedSubscriptionId", required=true)
-      private final Output<String> linkedSubscriptionId;
+    private Output<String> linkedSubscriptionId;
 
     public Output<String> linkedSubscriptionId() {
         return this.linkedSubscriptionId;
@@ -33,10 +33,10 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="linkedSubscriptionName")
-      private final @Nullable Output<String> linkedSubscriptionName;
+    private @Nullable Output<String> linkedSubscriptionName;
 
-    public Output<String> linkedSubscriptionName() {
-        return this.linkedSubscriptionName == null ? Codegen.empty() : this.linkedSubscriptionName;
+    public Optional<Output<String>> linkedSubscriptionName() {
+        return Optional.ofNullable(this.linkedSubscriptionName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<Either<String,Location>> location;
+    private @Nullable Output<Either<String,Location>> location;
 
-    public Output<Either<String,Location>> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<Either<String,Location>>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="registrationResourceId", required=true)
-      private final Output<String> registrationResourceId;
+    private Output<String> registrationResourceId;
 
     public Output<String> registrationResourceId() {
         return this.registrationResourceId;
@@ -66,102 +66,91 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final Output<String> resourceGroup;
+    private Output<String> resourceGroup;
 
     public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
-    public LinkedSubscriptionArgs(
-        Output<String> linkedSubscriptionId,
-        @Nullable Output<String> linkedSubscriptionName,
-        @Nullable Output<Either<String,Location>> location,
-        Output<String> registrationResourceId,
-        Output<String> resourceGroup) {
-        this.linkedSubscriptionId = Objects.requireNonNull(linkedSubscriptionId, "expected parameter 'linkedSubscriptionId' to be non-null");
-        this.linkedSubscriptionName = linkedSubscriptionName;
-        this.location = location;
-        this.registrationResourceId = Objects.requireNonNull(registrationResourceId, "expected parameter 'registrationResourceId' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-    }
+    private LinkedSubscriptionArgs() {}
 
-    private LinkedSubscriptionArgs() {
-        this.linkedSubscriptionId = Codegen.empty();
-        this.linkedSubscriptionName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.registrationResourceId = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
+    private LinkedSubscriptionArgs(LinkedSubscriptionArgs $) {
+        this.linkedSubscriptionId = $.linkedSubscriptionId;
+        this.linkedSubscriptionName = $.linkedSubscriptionName;
+        this.location = $.location;
+        this.registrationResourceId = $.registrationResourceId;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> linkedSubscriptionId;
-        private @Nullable Output<String> linkedSubscriptionName;
-        private @Nullable Output<Either<String,Location>> location;
-        private Output<String> registrationResourceId;
-        private Output<String> resourceGroup;
+        private LinkedSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedSubscriptionArgs();
         }
 
         public Builder(LinkedSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedSubscriptionId = defaults.linkedSubscriptionId;
-    	      this.linkedSubscriptionName = defaults.linkedSubscriptionName;
-    	      this.location = defaults.location;
-    	      this.registrationResourceId = defaults.registrationResourceId;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new LinkedSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedSubscriptionId(Output<String> linkedSubscriptionId) {
-            this.linkedSubscriptionId = Objects.requireNonNull(linkedSubscriptionId);
+            $.linkedSubscriptionId = linkedSubscriptionId;
             return this;
         }
+
         public Builder linkedSubscriptionId(String linkedSubscriptionId) {
-            this.linkedSubscriptionId = Output.of(Objects.requireNonNull(linkedSubscriptionId));
-            return this;
+            return linkedSubscriptionId(Output.of(linkedSubscriptionId));
         }
+
         public Builder linkedSubscriptionName(@Nullable Output<String> linkedSubscriptionName) {
-            this.linkedSubscriptionName = linkedSubscriptionName;
+            $.linkedSubscriptionName = linkedSubscriptionName;
             return this;
         }
-        public Builder linkedSubscriptionName(@Nullable String linkedSubscriptionName) {
-            this.linkedSubscriptionName = Codegen.ofNullable(linkedSubscriptionName);
-            return this;
+
+        public Builder linkedSubscriptionName(String linkedSubscriptionName) {
+            return linkedSubscriptionName(Output.of(linkedSubscriptionName));
         }
+
         public Builder location(@Nullable Output<Either<String,Location>> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable Either<String,Location> location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(Either<String,Location> location) {
+            return location(Output.of(location));
         }
+
         public Builder registrationResourceId(Output<String> registrationResourceId) {
-            this.registrationResourceId = Objects.requireNonNull(registrationResourceId);
+            $.registrationResourceId = registrationResourceId;
             return this;
         }
+
         public Builder registrationResourceId(String registrationResourceId) {
-            this.registrationResourceId = Output.of(Objects.requireNonNull(registrationResourceId));
-            return this;
+            return registrationResourceId(Output.of(registrationResourceId));
         }
+
         public Builder resourceGroup(Output<String> resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
-            return this;
-        }        public LinkedSubscriptionArgs build() {
-            return new LinkedSubscriptionArgs(linkedSubscriptionId, linkedSubscriptionName, location, registrationResourceId, resourceGroup);
+            return resourceGroup(Output.of(resourceGroup));
+        }
+
+        public LinkedSubscriptionArgs build() {
+            $.linkedSubscriptionId = Objects.requireNonNull($.linkedSubscriptionId, "expected parameter 'linkedSubscriptionId' to be non-null");
+            $.registrationResourceId = Objects.requireNonNull($.registrationResourceId, "expected parameter 'registrationResourceId' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

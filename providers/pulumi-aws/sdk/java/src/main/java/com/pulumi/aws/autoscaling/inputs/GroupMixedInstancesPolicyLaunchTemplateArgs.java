@@ -7,9 +7,9 @@ import com.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplate
 import com.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends com.pulum
      * 
      */
     @Import(name="launchTemplateSpecification", required=true)
-      private final Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification;
+    private Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
     public Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification;
@@ -33,66 +33,63 @@ public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends com.pulum
      * 
      */
     @Import(name="overrides")
-      private final @Nullable Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides;
+    private @Nullable Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides;
 
-    public Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides() {
-        return this.overrides == null ? Codegen.empty() : this.overrides;
+    public Optional<Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>>> overrides() {
+        return Optional.ofNullable(this.overrides);
     }
 
-    public GroupMixedInstancesPolicyLaunchTemplateArgs(
-        Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification,
-        @Nullable Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides) {
-        this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification, "expected parameter 'launchTemplateSpecification' to be non-null");
-        this.overrides = overrides;
-    }
+    private GroupMixedInstancesPolicyLaunchTemplateArgs() {}
 
-    private GroupMixedInstancesPolicyLaunchTemplateArgs() {
-        this.launchTemplateSpecification = Codegen.empty();
-        this.overrides = Codegen.empty();
+    private GroupMixedInstancesPolicyLaunchTemplateArgs(GroupMixedInstancesPolicyLaunchTemplateArgs $) {
+        this.launchTemplateSpecification = $.launchTemplateSpecification;
+        this.overrides = $.overrides;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMixedInstancesPolicyLaunchTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification;
-        private @Nullable Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides;
+        private GroupMixedInstancesPolicyLaunchTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMixedInstancesPolicyLaunchTemplateArgs();
         }
 
         public Builder(GroupMixedInstancesPolicyLaunchTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchTemplateSpecification = defaults.launchTemplateSpecification;
-    	      this.overrides = defaults.overrides;
+            $ = new GroupMixedInstancesPolicyLaunchTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder launchTemplateSpecification(Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification) {
-            this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
+            $.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
+
         public Builder launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs launchTemplateSpecification) {
-            this.launchTemplateSpecification = Output.of(Objects.requireNonNull(launchTemplateSpecification));
-            return this;
+            return launchTemplateSpecification(Output.of(launchTemplateSpecification));
         }
+
         public Builder overrides(@Nullable Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides) {
-            this.overrides = overrides;
+            $.overrides = overrides;
             return this;
         }
-        public Builder overrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs> overrides) {
-            this.overrides = Codegen.ofNullable(overrides);
-            return this;
+
+        public Builder overrides(List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs> overrides) {
+            return overrides(Output.of(overrides));
         }
+
         public Builder overrides(GroupMixedInstancesPolicyLaunchTemplateOverrideArgs... overrides) {
             return overrides(List.of(overrides));
-        }        public GroupMixedInstancesPolicyLaunchTemplateArgs build() {
-            return new GroupMixedInstancesPolicyLaunchTemplateArgs(launchTemplateSpecification, overrides);
+        }
+
+        public GroupMixedInstancesPolicyLaunchTemplateArgs build() {
+            $.launchTemplateSpecification = Objects.requireNonNull($.launchTemplateSpecification, "expected parameter 'launchTemplateSpecification' to be non-null");
+            return $;
         }
     }
+
 }

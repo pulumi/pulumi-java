@@ -5,9 +5,9 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RoutineArgumentGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="argumentKind")
-      private final @Nullable Output<String> argumentKind;
+    private @Nullable Output<String> argumentKind;
 
-    public Output<String> argumentKind() {
-        return this.argumentKind == null ? Codegen.empty() : this.argumentKind;
+    public Optional<Output<String>> argumentKind() {
+        return Optional.ofNullable(this.argumentKind);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class RoutineArgumentGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<String> dataType;
+    private @Nullable Output<String> dataType;
 
-    public Output<String> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<String>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class RoutineArgumentGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -62,89 +62,78 @@ public final class RoutineArgumentGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public RoutineArgumentGetArgs(
-        @Nullable Output<String> argumentKind,
-        @Nullable Output<String> dataType,
-        @Nullable Output<String> mode,
-        @Nullable Output<String> name) {
-        this.argumentKind = argumentKind;
-        this.dataType = dataType;
-        this.mode = mode;
-        this.name = name;
-    }
+    private RoutineArgumentGetArgs() {}
 
-    private RoutineArgumentGetArgs() {
-        this.argumentKind = Codegen.empty();
-        this.dataType = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.name = Codegen.empty();
+    private RoutineArgumentGetArgs(RoutineArgumentGetArgs $) {
+        this.argumentKind = $.argumentKind;
+        this.dataType = $.dataType;
+        this.mode = $.mode;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutineArgumentGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> argumentKind;
-        private @Nullable Output<String> dataType;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<String> name;
+        private RoutineArgumentGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutineArgumentGetArgs();
         }
 
         public Builder(RoutineArgumentGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.argumentKind = defaults.argumentKind;
-    	      this.dataType = defaults.dataType;
-    	      this.mode = defaults.mode;
-    	      this.name = defaults.name;
+            $ = new RoutineArgumentGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder argumentKind(@Nullable Output<String> argumentKind) {
-            this.argumentKind = argumentKind;
+            $.argumentKind = argumentKind;
             return this;
         }
-        public Builder argumentKind(@Nullable String argumentKind) {
-            this.argumentKind = Codegen.ofNullable(argumentKind);
-            return this;
+
+        public Builder argumentKind(String argumentKind) {
+            return argumentKind(Output.of(argumentKind));
         }
+
         public Builder dataType(@Nullable Output<String> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable String dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(String dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public RoutineArgumentGetArgs build() {
-            return new RoutineArgumentGetArgs(argumentKind, dataType, mode, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public RoutineArgumentGetArgs build() {
+            return $;
         }
     }
+
 }

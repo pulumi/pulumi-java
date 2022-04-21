@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -21,52 +20,53 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGet
      * 
      */
     @Import(name="dayOfWeeks", required=true)
-      private final Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
+    private Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
 
     public Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks() {
         return this.dayOfWeeks;
     }
 
-    public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs(Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks) {
-        this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks, "expected parameter 'dayOfWeeks' to be non-null");
-    }
+    private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs() {}
 
-    private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs() {
-        this.dayOfWeeks = Codegen.empty();
+    private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs $) {
+        this.dayOfWeeks = $.dayOfWeeks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
+        private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeeks = defaults.dayOfWeeks;
+            $ = new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeeks(Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks) {
-            this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
+            $.dayOfWeeks = dayOfWeeks;
             return this;
         }
+
         public Builder dayOfWeeks(List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs> dayOfWeeks) {
-            this.dayOfWeeks = Output.of(Objects.requireNonNull(dayOfWeeks));
-            return this;
+            return dayOfWeeks(Output.of(dayOfWeeks));
         }
+
         public Builder dayOfWeeks(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs... dayOfWeeks) {
             return dayOfWeeks(List.of(dayOfWeeks));
-        }        public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs build() {
-            return new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs(dayOfWeeks);
+        }
+
+        public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs build() {
+            $.dayOfWeeks = Objects.requireNonNull($.dayOfWeeks, "expected parameter 'dayOfWeeks' to be non-null");
+            return $;
         }
     }
+
 }

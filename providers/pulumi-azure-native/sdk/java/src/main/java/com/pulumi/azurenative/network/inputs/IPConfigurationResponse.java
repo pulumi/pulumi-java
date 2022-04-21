@@ -26,7 +26,7 @@ public final class IPConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -37,10 +37,10 @@ public final class IPConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class IPConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class IPConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable String privateIPAddress;
+    private @Nullable String privateIPAddress;
 
     public Optional<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class IPConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateIPAllocationMethod")
-      private final @Nullable String privateIPAllocationMethod;
+    private @Nullable String privateIPAllocationMethod;
 
     public Optional<String> privateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
+        return Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class IPConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -92,10 +92,10 @@ public final class IPConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="publicIPAddress")
-      private final @Nullable PublicIPAddressResponse publicIPAddress;
+    private @Nullable PublicIPAddressResponse publicIPAddress;
 
     public Optional<PublicIPAddressResponse> publicIPAddress() {
-        return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
+        return Optional.ofNullable(this.publicIPAddress);
     }
 
     /**
@@ -103,109 +103,89 @@ public final class IPConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubnetResponse subnet;
+    private @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
-    public IPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String privateIPAddress,
-        @Nullable String privateIPAllocationMethod,
-        String provisioningState,
-        @Nullable PublicIPAddressResponse publicIPAddress,
-        @Nullable SubnetResponse subnet) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.privateIPAddress = privateIPAddress;
-        this.privateIPAllocationMethod = Codegen.stringProp("privateIPAllocationMethod").arg(privateIPAllocationMethod).def("Dynamic").getNullable();
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicIPAddress = publicIPAddress;
-        this.subnet = subnet;
-    }
+    private IPConfigurationResponse() {}
 
-    private IPConfigurationResponse() {
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.privateIPAddress = null;
-        this.privateIPAllocationMethod = null;
-        this.provisioningState = null;
-        this.publicIPAddress = null;
-        this.subnet = null;
+    private IPConfigurationResponse(IPConfigurationResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.privateIPAddress = $.privateIPAddress;
+        this.privateIPAllocationMethod = $.privateIPAllocationMethod;
+        this.provisioningState = $.provisioningState;
+        this.publicIPAddress = $.publicIPAddress;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String privateIPAddress;
-        private @Nullable String privateIPAllocationMethod;
-        private String provisioningState;
-        private @Nullable PublicIPAddressResponse publicIPAddress;
-        private @Nullable SubnetResponse subnet;
+        private IPConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPConfigurationResponse();
         }
 
         public Builder(IPConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.privateIPAllocationMethod = defaults.privateIPAllocationMethod;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.subnet = defaults.subnet;
+            $ = new IPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
+
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = privateIPAllocationMethod;
+            $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
-            this.publicIPAddress = publicIPAddress;
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
+
         public Builder subnet(@Nullable SubnetResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
-        }        public IPConfigurationResponse build() {
-            return new IPConfigurationResponse(etag, id, name, privateIPAddress, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet);
+        }
+
+        public IPConfigurationResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.privateIPAllocationMethod = Codegen.stringProp("privateIPAllocationMethod").arg($.privateIPAllocationMethod).def("Dynamic").getNullable();
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

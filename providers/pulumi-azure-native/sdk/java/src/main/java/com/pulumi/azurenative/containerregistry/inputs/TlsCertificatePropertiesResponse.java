@@ -21,7 +21,7 @@ public final class TlsCertificatePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -32,55 +32,52 @@ public final class TlsCertificatePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TlsCertificatePropertiesResponse(
-        String location,
-        String type) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TlsCertificatePropertiesResponse() {}
 
-    private TlsCertificatePropertiesResponse() {
-        this.location = null;
-        this.type = null;
+    private TlsCertificatePropertiesResponse(TlsCertificatePropertiesResponse $) {
+        this.location = $.location;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsCertificatePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String type;
+        private TlsCertificatePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsCertificatePropertiesResponse();
         }
 
         public Builder(TlsCertificatePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.type = defaults.type;
+            $ = new TlsCertificatePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TlsCertificatePropertiesResponse build() {
-            return new TlsCertificatePropertiesResponse(location, type);
+        }
+
+        public TlsCertificatePropertiesResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

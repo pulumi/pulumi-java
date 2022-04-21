@@ -21,7 +21,7 @@ public final class AccountPropertiesResponseManagedResources extends com.pulumi.
      * 
      */
     @Import(name="eventHubNamespace", required=true)
-      private final String eventHubNamespace;
+    private String eventHubNamespace;
 
     public String eventHubNamespace() {
         return this.eventHubNamespace;
@@ -32,7 +32,7 @@ public final class AccountPropertiesResponseManagedResources extends com.pulumi.
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final String resourceGroup;
+    private String resourceGroup;
 
     public String resourceGroup() {
         return this.resourceGroup;
@@ -43,64 +43,59 @@ public final class AccountPropertiesResponseManagedResources extends com.pulumi.
      * 
      */
     @Import(name="storageAccount", required=true)
-      private final String storageAccount;
+    private String storageAccount;
 
     public String storageAccount() {
         return this.storageAccount;
     }
 
-    public AccountPropertiesResponseManagedResources(
-        String eventHubNamespace,
-        String resourceGroup,
-        String storageAccount) {
-        this.eventHubNamespace = Objects.requireNonNull(eventHubNamespace, "expected parameter 'eventHubNamespace' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-        this.storageAccount = Objects.requireNonNull(storageAccount, "expected parameter 'storageAccount' to be non-null");
-    }
+    private AccountPropertiesResponseManagedResources() {}
 
-    private AccountPropertiesResponseManagedResources() {
-        this.eventHubNamespace = null;
-        this.resourceGroup = null;
-        this.storageAccount = null;
+    private AccountPropertiesResponseManagedResources(AccountPropertiesResponseManagedResources $) {
+        this.eventHubNamespace = $.eventHubNamespace;
+        this.resourceGroup = $.resourceGroup;
+        this.storageAccount = $.storageAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountPropertiesResponseManagedResources defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventHubNamespace;
-        private String resourceGroup;
-        private String storageAccount;
+        private AccountPropertiesResponseManagedResources $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountPropertiesResponseManagedResources();
         }
 
         public Builder(AccountPropertiesResponseManagedResources defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHubNamespace = defaults.eventHubNamespace;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.storageAccount = defaults.storageAccount;
+            $ = new AccountPropertiesResponseManagedResources(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHubNamespace(String eventHubNamespace) {
-            this.eventHubNamespace = Objects.requireNonNull(eventHubNamespace);
+            $.eventHubNamespace = eventHubNamespace;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder storageAccount(String storageAccount) {
-            this.storageAccount = Objects.requireNonNull(storageAccount);
+            $.storageAccount = storageAccount;
             return this;
-        }        public AccountPropertiesResponseManagedResources build() {
-            return new AccountPropertiesResponseManagedResources(eventHubNamespace, resourceGroup, storageAccount);
+        }
+
+        public AccountPropertiesResponseManagedResources build() {
+            $.eventHubNamespace = Objects.requireNonNull($.eventHubNamespace, "expected parameter 'eventHubNamespace' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            $.storageAccount = Objects.requireNonNull($.storageAccount, "expected parameter 'storageAccount' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class CopyVideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class CopyVideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public CopyVideoResponse(
-        @Nullable String label,
-        String odataType) {
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private CopyVideoResponse() {}
 
-    private CopyVideoResponse() {
-        this.label = null;
-        this.odataType = null;
+    private CopyVideoResponse(CopyVideoResponse $) {
+        this.label = $.label;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CopyVideoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String label;
-        private String odataType;
+        private CopyVideoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CopyVideoResponse();
         }
 
         public Builder(CopyVideoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
+            $ = new CopyVideoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public CopyVideoResponse build() {
-            return new CopyVideoResponse(label, odataType);
+        }
+
+        public CopyVideoResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

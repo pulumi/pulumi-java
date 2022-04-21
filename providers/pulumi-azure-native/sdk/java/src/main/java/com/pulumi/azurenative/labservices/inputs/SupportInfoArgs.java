@@ -5,9 +5,9 @@ package com.pulumi.azurenative.labservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instructions")
-      private final @Nullable Output<String> instructions;
+    private @Nullable Output<String> instructions;
 
-    public Output<String> instructions() {
-        return this.instructions == null ? Codegen.empty() : this.instructions;
+    public Optional<Output<String>> instructions() {
+        return Optional.ofNullable(this.instructions);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phone")
-      private final @Nullable Output<String> phone;
+    private @Nullable Output<String> phone;
 
-    public Output<String> phone() {
-        return this.phone == null ? Codegen.empty() : this.phone;
+    public Optional<Output<String>> phone() {
+        return Optional.ofNullable(this.phone);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public SupportInfoArgs(
-        @Nullable Output<String> email,
-        @Nullable Output<String> instructions,
-        @Nullable Output<String> phone,
-        @Nullable Output<String> url) {
-        this.email = email;
-        this.instructions = instructions;
-        this.phone = phone;
-        this.url = url;
-    }
+    private SupportInfoArgs() {}
 
-    private SupportInfoArgs() {
-        this.email = Codegen.empty();
-        this.instructions = Codegen.empty();
-        this.phone = Codegen.empty();
-        this.url = Codegen.empty();
+    private SupportInfoArgs(SupportInfoArgs $) {
+        this.email = $.email;
+        this.instructions = $.instructions;
+        this.phone = $.phone;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SupportInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> instructions;
-        private @Nullable Output<String> phone;
-        private @Nullable Output<String> url;
+        private SupportInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SupportInfoArgs();
         }
 
         public Builder(SupportInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.instructions = defaults.instructions;
-    	      this.phone = defaults.phone;
-    	      this.url = defaults.url;
+            $ = new SupportInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder instructions(@Nullable Output<String> instructions) {
-            this.instructions = instructions;
+            $.instructions = instructions;
             return this;
         }
-        public Builder instructions(@Nullable String instructions) {
-            this.instructions = Codegen.ofNullable(instructions);
-            return this;
+
+        public Builder instructions(String instructions) {
+            return instructions(Output.of(instructions));
         }
+
         public Builder phone(@Nullable Output<String> phone) {
-            this.phone = phone;
+            $.phone = phone;
             return this;
         }
-        public Builder phone(@Nullable String phone) {
-            this.phone = Codegen.ofNullable(phone);
-            return this;
+
+        public Builder phone(String phone) {
+            return phone(Output.of(phone));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public SupportInfoArgs build() {
-            return new SupportInfoArgs(email, instructions, phone, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public SupportInfoArgs build() {
+            return $;
         }
     }
+
 }

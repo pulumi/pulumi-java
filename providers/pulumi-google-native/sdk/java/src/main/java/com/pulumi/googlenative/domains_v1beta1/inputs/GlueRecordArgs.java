@@ -5,10 +5,10 @@ package com.pulumi.googlenative.domains_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GlueRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostName", required=true)
-      private final Output<String> hostName;
+    private Output<String> hostName;
 
     public Output<String> hostName() {
         return this.hostName;
@@ -36,10 +36,10 @@ public final class GlueRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipv4Addresses")
-      private final @Nullable Output<List<String>> ipv4Addresses;
+    private @Nullable Output<List<String>> ipv4Addresses;
 
-    public Output<List<String>> ipv4Addresses() {
-        return this.ipv4Addresses == null ? Codegen.empty() : this.ipv4Addresses;
+    public Optional<Output<List<String>>> ipv4Addresses() {
+        return Optional.ofNullable(this.ipv4Addresses);
     }
 
     /**
@@ -47,82 +47,77 @@ public final class GlueRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipv6Addresses")
-      private final @Nullable Output<List<String>> ipv6Addresses;
+    private @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> ipv6Addresses() {
-        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
+    public Optional<Output<List<String>>> ipv6Addresses() {
+        return Optional.ofNullable(this.ipv6Addresses);
     }
 
-    public GlueRecordArgs(
-        Output<String> hostName,
-        @Nullable Output<List<String>> ipv4Addresses,
-        @Nullable Output<List<String>> ipv6Addresses) {
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.ipv4Addresses = ipv4Addresses;
-        this.ipv6Addresses = ipv6Addresses;
-    }
+    private GlueRecordArgs() {}
 
-    private GlueRecordArgs() {
-        this.hostName = Codegen.empty();
-        this.ipv4Addresses = Codegen.empty();
-        this.ipv6Addresses = Codegen.empty();
+    private GlueRecordArgs(GlueRecordArgs $) {
+        this.hostName = $.hostName;
+        this.ipv4Addresses = $.ipv4Addresses;
+        this.ipv6Addresses = $.ipv6Addresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlueRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hostName;
-        private @Nullable Output<List<String>> ipv4Addresses;
-        private @Nullable Output<List<String>> ipv6Addresses;
+        private GlueRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlueRecordArgs();
         }
 
         public Builder(GlueRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostName = defaults.hostName;
-    	      this.ipv4Addresses = defaults.ipv4Addresses;
-    	      this.ipv6Addresses = defaults.ipv6Addresses;
+            $ = new GlueRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostName(Output<String> hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder hostName(String hostName) {
-            this.hostName = Output.of(Objects.requireNonNull(hostName));
-            return this;
+            return hostName(Output.of(hostName));
         }
+
         public Builder ipv4Addresses(@Nullable Output<List<String>> ipv4Addresses) {
-            this.ipv4Addresses = ipv4Addresses;
+            $.ipv4Addresses = ipv4Addresses;
             return this;
         }
-        public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
-            this.ipv4Addresses = Codegen.ofNullable(ipv4Addresses);
-            return this;
+
+        public Builder ipv4Addresses(List<String> ipv4Addresses) {
+            return ipv4Addresses(Output.of(ipv4Addresses));
         }
+
         public Builder ipv4Addresses(String... ipv4Addresses) {
             return ipv4Addresses(List.of(ipv4Addresses));
         }
+
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
-            this.ipv6Addresses = ipv6Addresses;
+            $.ipv6Addresses = ipv6Addresses;
             return this;
         }
-        public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
-            return this;
+
+        public Builder ipv6Addresses(List<String> ipv6Addresses) {
+            return ipv6Addresses(Output.of(ipv6Addresses));
         }
+
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
-        }        public GlueRecordArgs build() {
-            return new GlueRecordArgs(hostName, ipv4Addresses, ipv6Addresses);
+        }
+
+        public GlueRecordArgs build() {
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            return $;
         }
     }
+
 }

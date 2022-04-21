@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AlarmsPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="alarmRoleArn")
-      private final @Nullable Output<String> alarmRoleArn;
+    private @Nullable Output<String> alarmRoleArn;
 
-    public Output<String> alarmRoleArn() {
-        return this.alarmRoleArn == null ? Codegen.empty() : this.alarmRoleArn;
+    public Optional<Output<String>> alarmRoleArn() {
+        return Optional.ofNullable(this.alarmRoleArn);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AlarmsPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="notificationLambdaArn")
-      private final @Nullable Output<String> notificationLambdaArn;
+    private @Nullable Output<String> notificationLambdaArn;
 
-    public Output<String> notificationLambdaArn() {
-        return this.notificationLambdaArn == null ? Codegen.empty() : this.notificationLambdaArn;
+    public Optional<Output<String>> notificationLambdaArn() {
+        return Optional.ofNullable(this.notificationLambdaArn);
     }
 
-    public AlarmsPropertiesArgs(
-        @Nullable Output<String> alarmRoleArn,
-        @Nullable Output<String> notificationLambdaArn) {
-        this.alarmRoleArn = alarmRoleArn;
-        this.notificationLambdaArn = notificationLambdaArn;
-    }
+    private AlarmsPropertiesArgs() {}
 
-    private AlarmsPropertiesArgs() {
-        this.alarmRoleArn = Codegen.empty();
-        this.notificationLambdaArn = Codegen.empty();
+    private AlarmsPropertiesArgs(AlarmsPropertiesArgs $) {
+        this.alarmRoleArn = $.alarmRoleArn;
+        this.notificationLambdaArn = $.notificationLambdaArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlarmsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alarmRoleArn;
-        private @Nullable Output<String> notificationLambdaArn;
+        private AlarmsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlarmsPropertiesArgs();
         }
 
         public Builder(AlarmsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmRoleArn = defaults.alarmRoleArn;
-    	      this.notificationLambdaArn = defaults.notificationLambdaArn;
+            $ = new AlarmsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmRoleArn(@Nullable Output<String> alarmRoleArn) {
-            this.alarmRoleArn = alarmRoleArn;
+            $.alarmRoleArn = alarmRoleArn;
             return this;
         }
-        public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
-            this.alarmRoleArn = Codegen.ofNullable(alarmRoleArn);
-            return this;
+
+        public Builder alarmRoleArn(String alarmRoleArn) {
+            return alarmRoleArn(Output.of(alarmRoleArn));
         }
+
         public Builder notificationLambdaArn(@Nullable Output<String> notificationLambdaArn) {
-            this.notificationLambdaArn = notificationLambdaArn;
+            $.notificationLambdaArn = notificationLambdaArn;
             return this;
         }
-        public Builder notificationLambdaArn(@Nullable String notificationLambdaArn) {
-            this.notificationLambdaArn = Codegen.ofNullable(notificationLambdaArn);
-            return this;
-        }        public AlarmsPropertiesArgs build() {
-            return new AlarmsPropertiesArgs(alarmRoleArn, notificationLambdaArn);
+
+        public Builder notificationLambdaArn(String notificationLambdaArn) {
+            return notificationLambdaArn(Output.of(notificationLambdaArn));
+        }
+
+        public AlarmsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

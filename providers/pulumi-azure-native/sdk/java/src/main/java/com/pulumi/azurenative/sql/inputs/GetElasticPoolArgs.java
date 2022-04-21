@@ -17,7 +17,7 @@ public final class GetElasticPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elasticPoolName", required=true)
-      private final String elasticPoolName;
+    private String elasticPoolName;
 
     public String elasticPoolName() {
         return this.elasticPoolName;
@@ -28,7 +28,7 @@ public final class GetElasticPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetElasticPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetElasticPoolArgs(
-        String elasticPoolName,
-        String resourceGroupName,
-        String serverName) {
-        this.elasticPoolName = Objects.requireNonNull(elasticPoolName, "expected parameter 'elasticPoolName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetElasticPoolArgs() {}
 
-    private GetElasticPoolArgs() {
-        this.elasticPoolName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetElasticPoolArgs(GetElasticPoolArgs $) {
+        this.elasticPoolName = $.elasticPoolName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetElasticPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String elasticPoolName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetElasticPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetElasticPoolArgs();
         }
 
         public Builder(GetElasticPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elasticPoolName = defaults.elasticPoolName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetElasticPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder elasticPoolName(String elasticPoolName) {
-            this.elasticPoolName = Objects.requireNonNull(elasticPoolName);
+            $.elasticPoolName = elasticPoolName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetElasticPoolArgs build() {
-            return new GetElasticPoolArgs(elasticPoolName, resourceGroupName, serverName);
+        }
+
+        public GetElasticPoolArgs build() {
+            $.elasticPoolName = Objects.requireNonNull($.elasticPoolName, "expected parameter 'elasticPoolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

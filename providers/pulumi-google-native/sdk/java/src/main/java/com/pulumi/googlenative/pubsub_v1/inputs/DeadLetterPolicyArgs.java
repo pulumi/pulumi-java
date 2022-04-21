@@ -5,10 +5,10 @@ package com.pulumi.googlenative.pubsub_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DeadLetterPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deadLetterTopic")
-      private final @Nullable Output<String> deadLetterTopic;
+    private @Nullable Output<String> deadLetterTopic;
 
-    public Output<String> deadLetterTopic() {
-        return this.deadLetterTopic == null ? Codegen.empty() : this.deadLetterTopic;
+    public Optional<Output<String>> deadLetterTopic() {
+        return Optional.ofNullable(this.deadLetterTopic);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DeadLetterPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="maxDeliveryAttempts")
-      private final @Nullable Output<Integer> maxDeliveryAttempts;
+    private @Nullable Output<Integer> maxDeliveryAttempts;
 
-    public Output<Integer> maxDeliveryAttempts() {
-        return this.maxDeliveryAttempts == null ? Codegen.empty() : this.maxDeliveryAttempts;
+    public Optional<Output<Integer>> maxDeliveryAttempts() {
+        return Optional.ofNullable(this.maxDeliveryAttempts);
     }
 
-    public DeadLetterPolicyArgs(
-        @Nullable Output<String> deadLetterTopic,
-        @Nullable Output<Integer> maxDeliveryAttempts) {
-        this.deadLetterTopic = deadLetterTopic;
-        this.maxDeliveryAttempts = maxDeliveryAttempts;
-    }
+    private DeadLetterPolicyArgs() {}
 
-    private DeadLetterPolicyArgs() {
-        this.deadLetterTopic = Codegen.empty();
-        this.maxDeliveryAttempts = Codegen.empty();
+    private DeadLetterPolicyArgs(DeadLetterPolicyArgs $) {
+        this.deadLetterTopic = $.deadLetterTopic;
+        this.maxDeliveryAttempts = $.maxDeliveryAttempts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeadLetterPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deadLetterTopic;
-        private @Nullable Output<Integer> maxDeliveryAttempts;
+        private DeadLetterPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeadLetterPolicyArgs();
         }
 
         public Builder(DeadLetterPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deadLetterTopic = defaults.deadLetterTopic;
-    	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
+            $ = new DeadLetterPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deadLetterTopic(@Nullable Output<String> deadLetterTopic) {
-            this.deadLetterTopic = deadLetterTopic;
+            $.deadLetterTopic = deadLetterTopic;
             return this;
         }
-        public Builder deadLetterTopic(@Nullable String deadLetterTopic) {
-            this.deadLetterTopic = Codegen.ofNullable(deadLetterTopic);
-            return this;
+
+        public Builder deadLetterTopic(String deadLetterTopic) {
+            return deadLetterTopic(Output.of(deadLetterTopic));
         }
+
         public Builder maxDeliveryAttempts(@Nullable Output<Integer> maxDeliveryAttempts) {
-            this.maxDeliveryAttempts = maxDeliveryAttempts;
+            $.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
-        public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
-            this.maxDeliveryAttempts = Codegen.ofNullable(maxDeliveryAttempts);
-            return this;
-        }        public DeadLetterPolicyArgs build() {
-            return new DeadLetterPolicyArgs(deadLetterTopic, maxDeliveryAttempts);
+
+        public Builder maxDeliveryAttempts(Integer maxDeliveryAttempts) {
+            return maxDeliveryAttempts(Output.of(maxDeliveryAttempts));
+        }
+
+        public DeadLetterPolicyArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.applicationinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ApplicationCustomComponentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="componentName", required=true)
-      private final Output<String> componentName;
+    private Output<String> componentName;
 
     public Output<String> componentName() {
         return this.componentName;
@@ -35,66 +34,64 @@ public final class ApplicationCustomComponentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceList", required=true)
-      private final Output<List<String>> resourceList;
+    private Output<List<String>> resourceList;
 
     public Output<List<String>> resourceList() {
         return this.resourceList;
     }
 
-    public ApplicationCustomComponentArgs(
-        Output<String> componentName,
-        Output<List<String>> resourceList) {
-        this.componentName = Objects.requireNonNull(componentName, "expected parameter 'componentName' to be non-null");
-        this.resourceList = Objects.requireNonNull(resourceList, "expected parameter 'resourceList' to be non-null");
-    }
+    private ApplicationCustomComponentArgs() {}
 
-    private ApplicationCustomComponentArgs() {
-        this.componentName = Codegen.empty();
-        this.resourceList = Codegen.empty();
+    private ApplicationCustomComponentArgs(ApplicationCustomComponentArgs $) {
+        this.componentName = $.componentName;
+        this.resourceList = $.resourceList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationCustomComponentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> componentName;
-        private Output<List<String>> resourceList;
+        private ApplicationCustomComponentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationCustomComponentArgs();
         }
 
         public Builder(ApplicationCustomComponentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentName = defaults.componentName;
-    	      this.resourceList = defaults.resourceList;
+            $ = new ApplicationCustomComponentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentName(Output<String> componentName) {
-            this.componentName = Objects.requireNonNull(componentName);
+            $.componentName = componentName;
             return this;
         }
+
         public Builder componentName(String componentName) {
-            this.componentName = Output.of(Objects.requireNonNull(componentName));
-            return this;
+            return componentName(Output.of(componentName));
         }
+
         public Builder resourceList(Output<List<String>> resourceList) {
-            this.resourceList = Objects.requireNonNull(resourceList);
+            $.resourceList = resourceList;
             return this;
         }
+
         public Builder resourceList(List<String> resourceList) {
-            this.resourceList = Output.of(Objects.requireNonNull(resourceList));
-            return this;
+            return resourceList(Output.of(resourceList));
         }
+
         public Builder resourceList(String... resourceList) {
             return resourceList(List.of(resourceList));
-        }        public ApplicationCustomComponentArgs build() {
-            return new ApplicationCustomComponentArgs(componentName, resourceList);
+        }
+
+        public ApplicationCustomComponentArgs build() {
+            $.componentName = Objects.requireNonNull($.componentName, "expected parameter 'componentName' to be non-null");
+            $.resourceList = Objects.requireNonNull($.resourceList, "expected parameter 'resourceList' to be non-null");
+            return $;
         }
     }
+
 }

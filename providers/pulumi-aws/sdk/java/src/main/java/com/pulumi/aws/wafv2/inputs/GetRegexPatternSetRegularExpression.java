@@ -17,45 +17,45 @@ public final class GetRegexPatternSetRegularExpression extends com.pulumi.resour
      * 
      */
     @Import(name="regexString", required=true)
-      private final String regexString;
+    private String regexString;
 
     public String regexString() {
         return this.regexString;
     }
 
-    public GetRegexPatternSetRegularExpression(String regexString) {
-        this.regexString = Objects.requireNonNull(regexString, "expected parameter 'regexString' to be non-null");
-    }
+    private GetRegexPatternSetRegularExpression() {}
 
-    private GetRegexPatternSetRegularExpression() {
-        this.regexString = null;
+    private GetRegexPatternSetRegularExpression(GetRegexPatternSetRegularExpression $) {
+        this.regexString = $.regexString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegexPatternSetRegularExpression defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String regexString;
+        private GetRegexPatternSetRegularExpression $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegexPatternSetRegularExpression();
         }
 
         public Builder(GetRegexPatternSetRegularExpression defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regexString = defaults.regexString;
+            $ = new GetRegexPatternSetRegularExpression(Objects.requireNonNull(defaults));
         }
 
         public Builder regexString(String regexString) {
-            this.regexString = Objects.requireNonNull(regexString);
+            $.regexString = regexString;
             return this;
-        }        public GetRegexPatternSetRegularExpression build() {
-            return new GetRegexPatternSetRegularExpression(regexString);
+        }
+
+        public GetRegexPatternSetRegularExpression build() {
+            $.regexString = Objects.requireNonNull($.regexString, "expected parameter 'regexString' to be non-null");
+            return $;
         }
     }
+
 }

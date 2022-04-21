@@ -17,7 +17,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
      * 
      */
     @Import(name="forwardingPath", required=true)
-      private final String forwardingPath;
+    private String forwardingPath;
 
     public String forwardingPath() {
         return this.forwardingPath;
@@ -28,71 +28,66 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
      * 
      */
     @Import(name="ipv4Address", required=true)
-      private final String ipv4Address;
+    private String ipv4Address;
 
     public String ipv4Address() {
         return this.ipv4Address;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public PolicyAlternativeNameServerConfigTargetNameServerResponse(
-        String forwardingPath,
-        String ipv4Address,
-        String kind) {
-        this.forwardingPath = Objects.requireNonNull(forwardingPath, "expected parameter 'forwardingPath' to be non-null");
-        this.ipv4Address = Objects.requireNonNull(ipv4Address, "expected parameter 'ipv4Address' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private PolicyAlternativeNameServerConfigTargetNameServerResponse() {}
 
-    private PolicyAlternativeNameServerConfigTargetNameServerResponse() {
-        this.forwardingPath = null;
-        this.ipv4Address = null;
-        this.kind = null;
+    private PolicyAlternativeNameServerConfigTargetNameServerResponse(PolicyAlternativeNameServerConfigTargetNameServerResponse $) {
+        this.forwardingPath = $.forwardingPath;
+        this.ipv4Address = $.ipv4Address;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAlternativeNameServerConfigTargetNameServerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String forwardingPath;
-        private String ipv4Address;
-        private String kind;
+        private PolicyAlternativeNameServerConfigTargetNameServerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAlternativeNameServerConfigTargetNameServerResponse();
         }
 
         public Builder(PolicyAlternativeNameServerConfigTargetNameServerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardingPath = defaults.forwardingPath;
-    	      this.ipv4Address = defaults.ipv4Address;
-    	      this.kind = defaults.kind;
+            $ = new PolicyAlternativeNameServerConfigTargetNameServerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardingPath(String forwardingPath) {
-            this.forwardingPath = Objects.requireNonNull(forwardingPath);
+            $.forwardingPath = forwardingPath;
             return this;
         }
+
         public Builder ipv4Address(String ipv4Address) {
-            this.ipv4Address = Objects.requireNonNull(ipv4Address);
+            $.ipv4Address = ipv4Address;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public PolicyAlternativeNameServerConfigTargetNameServerResponse build() {
-            return new PolicyAlternativeNameServerConfigTargetNameServerResponse(forwardingPath, ipv4Address, kind);
+        }
+
+        public PolicyAlternativeNameServerConfigTargetNameServerResponse build() {
+            $.forwardingPath = Objects.requireNonNull($.forwardingPath, "expected parameter 'forwardingPath' to be non-null");
+            $.ipv4Address = Objects.requireNonNull($.ipv4Address, "expected parameter 'ipv4Address' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

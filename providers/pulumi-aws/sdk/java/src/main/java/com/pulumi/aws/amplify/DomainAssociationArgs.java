@@ -6,11 +6,11 @@ package com.pulumi.aws.amplify;
 import com.pulumi.aws.amplify.inputs.DomainAssociationSubDomainArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -34,7 +34,7 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -45,7 +45,7 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="subDomains", required=true)
-      private final Output<List<DomainAssociationSubDomainArgs>> subDomains;
+    private Output<List<DomainAssociationSubDomainArgs>> subDomains;
 
     public Output<List<DomainAssociationSubDomainArgs>> subDomains() {
         return this.subDomains;
@@ -56,92 +56,85 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="waitForVerification")
-      private final @Nullable Output<Boolean> waitForVerification;
+    private @Nullable Output<Boolean> waitForVerification;
 
-    public Output<Boolean> waitForVerification() {
-        return this.waitForVerification == null ? Codegen.empty() : this.waitForVerification;
+    public Optional<Output<Boolean>> waitForVerification() {
+        return Optional.ofNullable(this.waitForVerification);
     }
 
-    public DomainAssociationArgs(
-        Output<String> appId,
-        Output<String> domainName,
-        Output<List<DomainAssociationSubDomainArgs>> subDomains,
-        @Nullable Output<Boolean> waitForVerification) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.subDomains = Objects.requireNonNull(subDomains, "expected parameter 'subDomains' to be non-null");
-        this.waitForVerification = waitForVerification;
-    }
+    private DomainAssociationArgs() {}
 
-    private DomainAssociationArgs() {
-        this.appId = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.subDomains = Codegen.empty();
-        this.waitForVerification = Codegen.empty();
+    private DomainAssociationArgs(DomainAssociationArgs $) {
+        this.appId = $.appId;
+        this.domainName = $.domainName;
+        this.subDomains = $.subDomains;
+        this.waitForVerification = $.waitForVerification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appId;
-        private Output<String> domainName;
-        private Output<List<DomainAssociationSubDomainArgs>> subDomains;
-        private @Nullable Output<Boolean> waitForVerification;
+        private DomainAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainAssociationArgs();
         }
 
         public Builder(DomainAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.domainName = defaults.domainName;
-    	      this.subDomains = defaults.subDomains;
-    	      this.waitForVerification = defaults.waitForVerification;
+            $ = new DomainAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder subDomains(Output<List<DomainAssociationSubDomainArgs>> subDomains) {
-            this.subDomains = Objects.requireNonNull(subDomains);
+            $.subDomains = subDomains;
             return this;
         }
+
         public Builder subDomains(List<DomainAssociationSubDomainArgs> subDomains) {
-            this.subDomains = Output.of(Objects.requireNonNull(subDomains));
-            return this;
+            return subDomains(Output.of(subDomains));
         }
+
         public Builder subDomains(DomainAssociationSubDomainArgs... subDomains) {
             return subDomains(List.of(subDomains));
         }
+
         public Builder waitForVerification(@Nullable Output<Boolean> waitForVerification) {
-            this.waitForVerification = waitForVerification;
+            $.waitForVerification = waitForVerification;
             return this;
         }
-        public Builder waitForVerification(@Nullable Boolean waitForVerification) {
-            this.waitForVerification = Codegen.ofNullable(waitForVerification);
-            return this;
-        }        public DomainAssociationArgs build() {
-            return new DomainAssociationArgs(appId, domainName, subDomains, waitForVerification);
+
+        public Builder waitForVerification(Boolean waitForVerification) {
+            return waitForVerification(Output.of(waitForVerification));
+        }
+
+        public DomainAssociationArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.subDomains = Objects.requireNonNull($.subDomains, "expected parameter 'subDomains' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<Integer> code;
+    private @Nullable Output<Integer> code;
 
-    public Output<Integer> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<Integer>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="recommendations")
-      private final @Nullable Output<List<String>> recommendations;
+    private @Nullable Output<List<String>> recommendations;
 
-    public Output<List<String>> recommendations() {
-        return this.recommendations == null ? Codegen.empty() : this.recommendations;
+    public Optional<Output<List<String>>> recommendations() {
+        return Optional.ofNullable(this.recommendations);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public MABContainerHealthDetailsArgs(
-        @Nullable Output<Integer> code,
-        @Nullable Output<String> message,
-        @Nullable Output<List<String>> recommendations,
-        @Nullable Output<String> title) {
-        this.code = code;
-        this.message = message;
-        this.recommendations = recommendations;
-        this.title = title;
-    }
+    private MABContainerHealthDetailsArgs() {}
 
-    private MABContainerHealthDetailsArgs() {
-        this.code = Codegen.empty();
-        this.message = Codegen.empty();
-        this.recommendations = Codegen.empty();
-        this.title = Codegen.empty();
+    private MABContainerHealthDetailsArgs(MABContainerHealthDetailsArgs $) {
+        this.code = $.code;
+        this.message = $.message;
+        this.recommendations = $.recommendations;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MABContainerHealthDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> code;
-        private @Nullable Output<String> message;
-        private @Nullable Output<List<String>> recommendations;
-        private @Nullable Output<String> title;
+        private MABContainerHealthDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MABContainerHealthDetailsArgs();
         }
 
         public Builder(MABContainerHealthDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.message = defaults.message;
-    	      this.recommendations = defaults.recommendations;
-    	      this.title = defaults.title;
+            $ = new MABContainerHealthDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<Integer> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable Integer code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(Integer code) {
+            return code(Output.of(code));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder recommendations(@Nullable Output<List<String>> recommendations) {
-            this.recommendations = recommendations;
+            $.recommendations = recommendations;
             return this;
         }
-        public Builder recommendations(@Nullable List<String> recommendations) {
-            this.recommendations = Codegen.ofNullable(recommendations);
-            return this;
+
+        public Builder recommendations(List<String> recommendations) {
+            return recommendations(Output.of(recommendations));
         }
+
         public Builder recommendations(String... recommendations) {
             return recommendations(List.of(recommendations));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public MABContainerHealthDetailsArgs build() {
-            return new MABContainerHealthDetailsArgs(code, message, recommendations, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public MABContainerHealthDetailsArgs build() {
+            return $;
         }
     }
+
 }

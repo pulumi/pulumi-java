@@ -24,7 +24,7 @@ public final class Hl7SchemaConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="messageSchemaConfigs", required=true)
-      private final Map<String,String> messageSchemaConfigs;
+    private Map<String,String> messageSchemaConfigs;
 
     public Map<String,String> messageSchemaConfigs() {
         return this.messageSchemaConfigs;
@@ -35,58 +35,56 @@ public final class Hl7SchemaConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="version", required=true)
-      private final List<VersionSourceResponse> version;
+    private List<VersionSourceResponse> version;
 
     public List<VersionSourceResponse> version() {
         return this.version;
     }
 
-    public Hl7SchemaConfigResponse(
-        Map<String,String> messageSchemaConfigs,
-        List<VersionSourceResponse> version) {
-        this.messageSchemaConfigs = Objects.requireNonNull(messageSchemaConfigs, "expected parameter 'messageSchemaConfigs' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private Hl7SchemaConfigResponse() {}
 
-    private Hl7SchemaConfigResponse() {
-        this.messageSchemaConfigs = Map.of();
-        this.version = List.of();
+    private Hl7SchemaConfigResponse(Hl7SchemaConfigResponse $) {
+        this.messageSchemaConfigs = $.messageSchemaConfigs;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7SchemaConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> messageSchemaConfigs;
-        private List<VersionSourceResponse> version;
+        private Hl7SchemaConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7SchemaConfigResponse();
         }
 
         public Builder(Hl7SchemaConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageSchemaConfigs = defaults.messageSchemaConfigs;
-    	      this.version = defaults.version;
+            $ = new Hl7SchemaConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder messageSchemaConfigs(Map<String,String> messageSchemaConfigs) {
-            this.messageSchemaConfigs = Objects.requireNonNull(messageSchemaConfigs);
+            $.messageSchemaConfigs = messageSchemaConfigs;
             return this;
         }
+
         public Builder version(List<VersionSourceResponse> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(VersionSourceResponse... version) {
             return version(List.of(version));
-        }        public Hl7SchemaConfigResponse build() {
-            return new Hl7SchemaConfigResponse(messageSchemaConfigs, version);
+        }
+
+        public Hl7SchemaConfigResponse build() {
+            $.messageSchemaConfigs = Objects.requireNonNull($.messageSchemaConfigs, "expected parameter 'messageSchemaConfigs' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

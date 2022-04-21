@@ -21,45 +21,45 @@ public final class HttpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpEnabledState", required=true)
-      private final String httpEnabledState;
+    private String httpEnabledState;
 
     public String httpEnabledState() {
         return this.httpEnabledState;
     }
 
-    public HttpConfigResponse(String httpEnabledState) {
-        this.httpEnabledState = Objects.requireNonNull(httpEnabledState, "expected parameter 'httpEnabledState' to be non-null");
-    }
+    private HttpConfigResponse() {}
 
-    private HttpConfigResponse() {
-        this.httpEnabledState = null;
+    private HttpConfigResponse(HttpConfigResponse $) {
+        this.httpEnabledState = $.httpEnabledState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String httpEnabledState;
+        private HttpConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpConfigResponse();
         }
 
         public Builder(HttpConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpEnabledState = defaults.httpEnabledState;
+            $ = new HttpConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder httpEnabledState(String httpEnabledState) {
-            this.httpEnabledState = Objects.requireNonNull(httpEnabledState);
+            $.httpEnabledState = httpEnabledState;
             return this;
-        }        public HttpConfigResponse build() {
-            return new HttpConfigResponse(httpEnabledState);
+        }
+
+        public HttpConfigResponse build() {
+            $.httpEnabledState = Objects.requireNonNull($.httpEnabledState, "expected parameter 'httpEnabledState' to be non-null");
+            return $;
         }
     }
+
 }

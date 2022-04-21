@@ -25,7 +25,7 @@ public final class RepresentationContractResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="contentType", required=true)
-      private final String contentType;
+    private String contentType;
 
     public String contentType() {
         return this.contentType;
@@ -36,10 +36,10 @@ public final class RepresentationContractResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="formParameters")
-      private final @Nullable List<ParameterContractResponse> formParameters;
+    private @Nullable List<ParameterContractResponse> formParameters;
 
-    public List<ParameterContractResponse> formParameters() {
-        return this.formParameters == null ? List.of() : this.formParameters;
+    public Optional<List<ParameterContractResponse>> formParameters() {
+        return Optional.ofNullable(this.formParameters);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RepresentationContractResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sample")
-      private final @Nullable String sample;
+    private @Nullable String sample;
 
     public Optional<String> sample() {
-        return this.sample == null ? Optional.empty() : Optional.ofNullable(this.sample);
+        return Optional.ofNullable(this.sample);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RepresentationContractResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="schemaId")
-      private final @Nullable String schemaId;
+    private @Nullable String schemaId;
 
     public Optional<String> schemaId() {
-        return this.schemaId == null ? Optional.empty() : Optional.ofNullable(this.schemaId);
+        return Optional.ofNullable(this.schemaId);
     }
 
     /**
@@ -69,85 +69,73 @@ public final class RepresentationContractResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="typeName")
-      private final @Nullable String typeName;
+    private @Nullable String typeName;
 
     public Optional<String> typeName() {
-        return this.typeName == null ? Optional.empty() : Optional.ofNullable(this.typeName);
+        return Optional.ofNullable(this.typeName);
     }
 
-    public RepresentationContractResponse(
-        String contentType,
-        @Nullable List<ParameterContractResponse> formParameters,
-        @Nullable String sample,
-        @Nullable String schemaId,
-        @Nullable String typeName) {
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.formParameters = formParameters;
-        this.sample = sample;
-        this.schemaId = schemaId;
-        this.typeName = typeName;
-    }
+    private RepresentationContractResponse() {}
 
-    private RepresentationContractResponse() {
-        this.contentType = null;
-        this.formParameters = List.of();
-        this.sample = null;
-        this.schemaId = null;
-        this.typeName = null;
+    private RepresentationContractResponse(RepresentationContractResponse $) {
+        this.contentType = $.contentType;
+        this.formParameters = $.formParameters;
+        this.sample = $.sample;
+        this.schemaId = $.schemaId;
+        this.typeName = $.typeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepresentationContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contentType;
-        private @Nullable List<ParameterContractResponse> formParameters;
-        private @Nullable String sample;
-        private @Nullable String schemaId;
-        private @Nullable String typeName;
+        private RepresentationContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepresentationContractResponse();
         }
 
         public Builder(RepresentationContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.formParameters = defaults.formParameters;
-    	      this.sample = defaults.sample;
-    	      this.schemaId = defaults.schemaId;
-    	      this.typeName = defaults.typeName;
+            $ = new RepresentationContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(String contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder formParameters(@Nullable List<ParameterContractResponse> formParameters) {
-            this.formParameters = formParameters;
+            $.formParameters = formParameters;
             return this;
         }
+
         public Builder formParameters(ParameterContractResponse... formParameters) {
             return formParameters(List.of(formParameters));
         }
+
         public Builder sample(@Nullable String sample) {
-            this.sample = sample;
+            $.sample = sample;
             return this;
         }
+
         public Builder schemaId(@Nullable String schemaId) {
-            this.schemaId = schemaId;
+            $.schemaId = schemaId;
             return this;
         }
+
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = typeName;
+            $.typeName = typeName;
             return this;
-        }        public RepresentationContractResponse build() {
-            return new RepresentationContractResponse(contentType, formParameters, sample, schemaId, typeName);
+        }
+
+        public RepresentationContractResponse build() {
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            return $;
         }
     }
+
 }

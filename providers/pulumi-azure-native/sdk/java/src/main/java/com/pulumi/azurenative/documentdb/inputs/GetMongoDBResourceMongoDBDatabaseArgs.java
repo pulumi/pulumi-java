@@ -17,7 +17,7 @@ public final class GetMongoDBResourceMongoDBDatabaseArgs extends com.pulumi.reso
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetMongoDBResourceMongoDBDatabaseArgs extends com.pulumi.reso
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,64 +39,59 @@ public final class GetMongoDBResourceMongoDBDatabaseArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMongoDBResourceMongoDBDatabaseArgs(
-        String accountName,
-        String databaseName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMongoDBResourceMongoDBDatabaseArgs() {}
 
-    private GetMongoDBResourceMongoDBDatabaseArgs() {
-        this.accountName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
+    private GetMongoDBResourceMongoDBDatabaseArgs(GetMongoDBResourceMongoDBDatabaseArgs $) {
+        this.accountName = $.accountName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMongoDBResourceMongoDBDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String databaseName;
-        private String resourceGroupName;
+        private GetMongoDBResourceMongoDBDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMongoDBResourceMongoDBDatabaseArgs();
         }
 
         public Builder(GetMongoDBResourceMongoDBDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMongoDBResourceMongoDBDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMongoDBResourceMongoDBDatabaseArgs build() {
-            return new GetMongoDBResourceMongoDBDatabaseArgs(accountName, databaseName, resourceGroupName);
+        }
+
+        public GetMongoDBResourceMongoDBDatabaseArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

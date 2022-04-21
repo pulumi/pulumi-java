@@ -7,11 +7,11 @@ import com.pulumi.azurenative.devices.enums.RoutingSource;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<String> condition;
+    private @Nullable Output<String> condition;
 
-    public Output<String> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<String>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="endpointNames", required=true)
-      private final Output<List<String>> endpointNames;
+    private Output<List<String>> endpointNames;
 
     public Output<List<String>> endpointNames() {
         return this.endpointNames;
@@ -50,7 +50,7 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -61,10 +61,10 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -72,105 +72,95 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="source", required=true)
-      private final Output<Either<String,RoutingSource>> source;
+    private Output<Either<String,RoutingSource>> source;
 
     public Output<Either<String,RoutingSource>> source() {
         return this.source;
     }
 
-    public FallbackRoutePropertiesArgs(
-        @Nullable Output<String> condition,
-        Output<List<String>> endpointNames,
-        Output<Boolean> isEnabled,
-        @Nullable Output<String> name,
-        Output<Either<String,RoutingSource>> source) {
-        this.condition = condition;
-        this.endpointNames = Objects.requireNonNull(endpointNames, "expected parameter 'endpointNames' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.name = name;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private FallbackRoutePropertiesArgs() {}
 
-    private FallbackRoutePropertiesArgs() {
-        this.condition = Codegen.empty();
-        this.endpointNames = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.name = Codegen.empty();
-        this.source = Codegen.empty();
+    private FallbackRoutePropertiesArgs(FallbackRoutePropertiesArgs $) {
+        this.condition = $.condition;
+        this.endpointNames = $.endpointNames;
+        this.isEnabled = $.isEnabled;
+        this.name = $.name;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FallbackRoutePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> condition;
-        private Output<List<String>> endpointNames;
-        private Output<Boolean> isEnabled;
-        private @Nullable Output<String> name;
-        private Output<Either<String,RoutingSource>> source;
+        private FallbackRoutePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FallbackRoutePropertiesArgs();
         }
 
         public Builder(FallbackRoutePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.endpointNames = defaults.endpointNames;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.name = defaults.name;
-    	      this.source = defaults.source;
+            $ = new FallbackRoutePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<String> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable String condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(String condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder endpointNames(Output<List<String>> endpointNames) {
-            this.endpointNames = Objects.requireNonNull(endpointNames);
+            $.endpointNames = endpointNames;
             return this;
         }
+
         public Builder endpointNames(List<String> endpointNames) {
-            this.endpointNames = Output.of(Objects.requireNonNull(endpointNames));
-            return this;
+            return endpointNames(Output.of(endpointNames));
         }
+
         public Builder endpointNames(String... endpointNames) {
             return endpointNames(List.of(endpointNames));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder source(Output<Either<String,RoutingSource>> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(Either<String,RoutingSource> source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public FallbackRoutePropertiesArgs build() {
-            return new FallbackRoutePropertiesArgs(condition, endpointNames, isEnabled, name, source);
+            return source(Output.of(source));
+        }
+
+        public FallbackRoutePropertiesArgs build() {
+            $.endpointNames = Objects.requireNonNull($.endpointNames, "expected parameter 'endpointNames' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

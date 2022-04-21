@@ -17,7 +17,7 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends com.pulum
      * 
      */
     @Import(name="expires", required=true)
-      private final String expires;
+    private String expires;
 
     public String expires() {
         return this.expires;
@@ -28,55 +28,52 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends com.pulum
      * 
      */
     @Import(name="self", required=true)
-      private final String self;
+    private String self;
 
     public String self() {
         return this.self;
     }
 
-    public GoogleCloudApigeeV1AsyncQueryResultResponse(
-        String expires,
-        String self) {
-        this.expires = Objects.requireNonNull(expires, "expected parameter 'expires' to be non-null");
-        this.self = Objects.requireNonNull(self, "expected parameter 'self' to be non-null");
-    }
+    private GoogleCloudApigeeV1AsyncQueryResultResponse() {}
 
-    private GoogleCloudApigeeV1AsyncQueryResultResponse() {
-        this.expires = null;
-        this.self = null;
+    private GoogleCloudApigeeV1AsyncQueryResultResponse(GoogleCloudApigeeV1AsyncQueryResultResponse $) {
+        this.expires = $.expires;
+        this.self = $.self;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1AsyncQueryResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expires;
-        private String self;
+        private GoogleCloudApigeeV1AsyncQueryResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1AsyncQueryResultResponse();
         }
 
         public Builder(GoogleCloudApigeeV1AsyncQueryResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expires = defaults.expires;
-    	      this.self = defaults.self;
+            $ = new GoogleCloudApigeeV1AsyncQueryResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expires(String expires) {
-            this.expires = Objects.requireNonNull(expires);
+            $.expires = expires;
             return this;
         }
+
         public Builder self(String self) {
-            this.self = Objects.requireNonNull(self);
+            $.self = self;
             return this;
-        }        public GoogleCloudApigeeV1AsyncQueryResultResponse build() {
-            return new GoogleCloudApigeeV1AsyncQueryResultResponse(expires, self);
+        }
+
+        public GoogleCloudApigeeV1AsyncQueryResultResponse build() {
+            $.expires = Objects.requireNonNull($.expires, "expected parameter 'expires' to be non-null");
+            $.self = Objects.requireNonNull($.self, "expected parameter 'self' to be non-null");
+            return $;
         }
     }
+
 }

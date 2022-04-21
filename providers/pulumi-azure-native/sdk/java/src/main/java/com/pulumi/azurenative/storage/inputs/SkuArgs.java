@@ -7,7 +7,6 @@ import com.pulumi.azurenative.storage.enums.SkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,SkuName>> name;
+    private Output<Either<String,SkuName>> name;
 
     public Output<Either<String,SkuName>> name() {
         return this.name;
     }
 
-    public SkuArgs(Output<Either<String,SkuName>> name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private SkuArgs() {}
 
-    private SkuArgs() {
-        this.name = Codegen.empty();
+    private SkuArgs(SkuArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,SkuName>> name;
+        private SkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuArgs();
         }
 
         public Builder(SkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<Either<String,SkuName>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,SkuName> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public SkuArgs build() {
-            return new SkuArgs(name);
+            return name(Output.of(name));
+        }
+
+        public SkuArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

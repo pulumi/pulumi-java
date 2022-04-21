@@ -21,7 +21,7 @@ public final class KeyVaultReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,55 +32,52 @@ public final class KeyVaultReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public KeyVaultReferenceResponse(
-        String id,
-        String url) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private KeyVaultReferenceResponse() {}
 
-    private KeyVaultReferenceResponse() {
-        this.id = null;
-        this.url = null;
+    private KeyVaultReferenceResponse(KeyVaultReferenceResponse $) {
+        this.id = $.id;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String url;
+        private KeyVaultReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultReferenceResponse();
         }
 
         public Builder(KeyVaultReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.url = defaults.url;
+            $ = new KeyVaultReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public KeyVaultReferenceResponse build() {
-            return new KeyVaultReferenceResponse(id, url);
+        }
+
+        public KeyVaultReferenceResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

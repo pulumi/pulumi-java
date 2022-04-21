@@ -15,78 +15,71 @@ public final class GetDomainIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetDomainIamPolicyArgs Empty = new GetDomainIamPolicyArgs();
 
     @Import(name="domainId", required=true)
-      private final String domainId;
+    private String domainId;
 
     public String domainId() {
         return this.domainId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDomainIamPolicyArgs(
-        String domainId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetDomainIamPolicyArgs() {}
 
-    private GetDomainIamPolicyArgs() {
-        this.domainId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetDomainIamPolicyArgs(GetDomainIamPolicyArgs $) {
+        this.domainId = $.domainId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetDomainIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainIamPolicyArgs();
         }
 
         public Builder(GetDomainIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainId = defaults.domainId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetDomainIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainId(String domainId) {
-            this.domainId = Objects.requireNonNull(domainId);
+            $.domainId = domainId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDomainIamPolicyArgs build() {
-            return new GetDomainIamPolicyArgs(domainId, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetDomainIamPolicyArgs build() {
+            $.domainId = Objects.requireNonNull($.domainId, "expected parameter 'domainId' to be non-null");
+            return $;
         }
     }
+
 }

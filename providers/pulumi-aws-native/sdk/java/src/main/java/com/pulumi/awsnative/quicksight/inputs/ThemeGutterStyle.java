@@ -24,45 +24,44 @@ public final class ThemeGutterStyle extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="show")
-      private final @Nullable Boolean show;
+    private @Nullable Boolean show;
 
     public Optional<Boolean> show() {
-        return this.show == null ? Optional.empty() : Optional.ofNullable(this.show);
+        return Optional.ofNullable(this.show);
     }
 
-    public ThemeGutterStyle(@Nullable Boolean show) {
-        this.show = show;
-    }
+    private ThemeGutterStyle() {}
 
-    private ThemeGutterStyle() {
-        this.show = null;
+    private ThemeGutterStyle(ThemeGutterStyle $) {
+        this.show = $.show;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeGutterStyle defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean show;
+        private ThemeGutterStyle $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeGutterStyle();
         }
 
         public Builder(ThemeGutterStyle defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.show = defaults.show;
+            $ = new ThemeGutterStyle(Objects.requireNonNull(defaults));
         }
 
         public Builder show(@Nullable Boolean show) {
-            this.show = show;
+            $.show = show;
             return this;
-        }        public ThemeGutterStyle build() {
-            return new ThemeGutterStyle(show);
+        }
+
+        public ThemeGutterStyle build() {
+            return $;
         }
     }
+
 }

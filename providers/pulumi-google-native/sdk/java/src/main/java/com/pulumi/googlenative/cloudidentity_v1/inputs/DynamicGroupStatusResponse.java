@@ -21,7 +21,7 @@ public final class DynamicGroupStatusResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -32,55 +32,52 @@ public final class DynamicGroupStatusResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="statusTime", required=true)
-      private final String statusTime;
+    private String statusTime;
 
     public String statusTime() {
         return this.statusTime;
     }
 
-    public DynamicGroupStatusResponse(
-        String status,
-        String statusTime) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.statusTime = Objects.requireNonNull(statusTime, "expected parameter 'statusTime' to be non-null");
-    }
+    private DynamicGroupStatusResponse() {}
 
-    private DynamicGroupStatusResponse() {
-        this.status = null;
-        this.statusTime = null;
+    private DynamicGroupStatusResponse(DynamicGroupStatusResponse $) {
+        this.status = $.status;
+        this.statusTime = $.statusTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DynamicGroupStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String status;
-        private String statusTime;
+        private DynamicGroupStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DynamicGroupStatusResponse();
         }
 
         public Builder(DynamicGroupStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.statusTime = defaults.statusTime;
+            $ = new DynamicGroupStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder statusTime(String statusTime) {
-            this.statusTime = Objects.requireNonNull(statusTime);
+            $.statusTime = statusTime;
             return this;
-        }        public DynamicGroupStatusResponse build() {
-            return new DynamicGroupStatusResponse(status, statusTime);
+        }
+
+        public DynamicGroupStatusResponse build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.statusTime = Objects.requireNonNull($.statusTime, "expected parameter 'statusTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceNatActiveIps", required=true)
-      private final List<String> sourceNatActiveIps;
+    private List<String> sourceNatActiveIps;
 
     public List<String> sourceNatActiveIps() {
         return this.sourceNatActiveIps;
@@ -29,7 +29,7 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceNatActiveRanges", required=true)
-      private final List<String> sourceNatActiveRanges;
+    private List<String> sourceNatActiveRanges;
 
     public List<String> sourceNatActiveRanges() {
         return this.sourceNatActiveRanges;
@@ -40,7 +40,7 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceNatDrainIps", required=true)
-      private final List<String> sourceNatDrainIps;
+    private List<String> sourceNatDrainIps;
 
     public List<String> sourceNatDrainIps() {
         return this.sourceNatDrainIps;
@@ -51,85 +51,82 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceNatDrainRanges", required=true)
-      private final List<String> sourceNatDrainRanges;
+    private List<String> sourceNatDrainRanges;
 
     public List<String> sourceNatDrainRanges() {
         return this.sourceNatDrainRanges;
     }
 
-    public RouterNatRuleActionResponse(
-        List<String> sourceNatActiveIps,
-        List<String> sourceNatActiveRanges,
-        List<String> sourceNatDrainIps,
-        List<String> sourceNatDrainRanges) {
-        this.sourceNatActiveIps = Objects.requireNonNull(sourceNatActiveIps, "expected parameter 'sourceNatActiveIps' to be non-null");
-        this.sourceNatActiveRanges = Objects.requireNonNull(sourceNatActiveRanges, "expected parameter 'sourceNatActiveRanges' to be non-null");
-        this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps, "expected parameter 'sourceNatDrainIps' to be non-null");
-        this.sourceNatDrainRanges = Objects.requireNonNull(sourceNatDrainRanges, "expected parameter 'sourceNatDrainRanges' to be non-null");
-    }
+    private RouterNatRuleActionResponse() {}
 
-    private RouterNatRuleActionResponse() {
-        this.sourceNatActiveIps = List.of();
-        this.sourceNatActiveRanges = List.of();
-        this.sourceNatDrainIps = List.of();
-        this.sourceNatDrainRanges = List.of();
+    private RouterNatRuleActionResponse(RouterNatRuleActionResponse $) {
+        this.sourceNatActiveIps = $.sourceNatActiveIps;
+        this.sourceNatActiveRanges = $.sourceNatActiveRanges;
+        this.sourceNatDrainIps = $.sourceNatDrainIps;
+        this.sourceNatDrainRanges = $.sourceNatDrainRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatRuleActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> sourceNatActiveIps;
-        private List<String> sourceNatActiveRanges;
-        private List<String> sourceNatDrainIps;
-        private List<String> sourceNatDrainRanges;
+        private RouterNatRuleActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatRuleActionResponse();
         }
 
         public Builder(RouterNatRuleActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceNatActiveIps = defaults.sourceNatActiveIps;
-    	      this.sourceNatActiveRanges = defaults.sourceNatActiveRanges;
-    	      this.sourceNatDrainIps = defaults.sourceNatDrainIps;
-    	      this.sourceNatDrainRanges = defaults.sourceNatDrainRanges;
+            $ = new RouterNatRuleActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceNatActiveIps(List<String> sourceNatActiveIps) {
-            this.sourceNatActiveIps = Objects.requireNonNull(sourceNatActiveIps);
+            $.sourceNatActiveIps = sourceNatActiveIps;
             return this;
         }
+
         public Builder sourceNatActiveIps(String... sourceNatActiveIps) {
             return sourceNatActiveIps(List.of(sourceNatActiveIps));
         }
+
         public Builder sourceNatActiveRanges(List<String> sourceNatActiveRanges) {
-            this.sourceNatActiveRanges = Objects.requireNonNull(sourceNatActiveRanges);
+            $.sourceNatActiveRanges = sourceNatActiveRanges;
             return this;
         }
+
         public Builder sourceNatActiveRanges(String... sourceNatActiveRanges) {
             return sourceNatActiveRanges(List.of(sourceNatActiveRanges));
         }
+
         public Builder sourceNatDrainIps(List<String> sourceNatDrainIps) {
-            this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps);
+            $.sourceNatDrainIps = sourceNatDrainIps;
             return this;
         }
+
         public Builder sourceNatDrainIps(String... sourceNatDrainIps) {
             return sourceNatDrainIps(List.of(sourceNatDrainIps));
         }
+
         public Builder sourceNatDrainRanges(List<String> sourceNatDrainRanges) {
-            this.sourceNatDrainRanges = Objects.requireNonNull(sourceNatDrainRanges);
+            $.sourceNatDrainRanges = sourceNatDrainRanges;
             return this;
         }
+
         public Builder sourceNatDrainRanges(String... sourceNatDrainRanges) {
             return sourceNatDrainRanges(List.of(sourceNatDrainRanges));
-        }        public RouterNatRuleActionResponse build() {
-            return new RouterNatRuleActionResponse(sourceNatActiveIps, sourceNatActiveRanges, sourceNatDrainIps, sourceNatDrainRanges);
+        }
+
+        public RouterNatRuleActionResponse build() {
+            $.sourceNatActiveIps = Objects.requireNonNull($.sourceNatActiveIps, "expected parameter 'sourceNatActiveIps' to be non-null");
+            $.sourceNatActiveRanges = Objects.requireNonNull($.sourceNatActiveRanges, "expected parameter 'sourceNatActiveRanges' to be non-null");
+            $.sourceNatDrainIps = Objects.requireNonNull($.sourceNatDrainIps, "expected parameter 'sourceNatDrainIps' to be non-null");
+            $.sourceNatDrainRanges = Objects.requireNonNull($.sourceNatDrainRanges, "expected parameter 'sourceNatDrainRanges' to be non-null");
+            return $;
         }
     }
+
 }

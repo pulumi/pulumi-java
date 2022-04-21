@@ -17,7 +17,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="alias", required=true)
-      private final String alias;
+    private String alias;
 
     public String alias() {
         return this.alias;
@@ -28,7 +28,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="authorizationRuleName", required=true)
-      private final String authorizationRuleName;
+    private String authorizationRuleName;
 
     public String authorizationRuleName() {
         return this.authorizationRuleName;
@@ -39,7 +39,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -50,73 +50,66 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListDisasterRecoveryConfigKeysArgs(
-        String alias,
-        String authorizationRuleName,
-        String namespaceName,
-        String resourceGroupName) {
-        this.alias = Objects.requireNonNull(alias, "expected parameter 'alias' to be non-null");
-        this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListDisasterRecoveryConfigKeysArgs() {}
 
-    private ListDisasterRecoveryConfigKeysArgs() {
-        this.alias = null;
-        this.authorizationRuleName = null;
-        this.namespaceName = null;
-        this.resourceGroupName = null;
+    private ListDisasterRecoveryConfigKeysArgs(ListDisasterRecoveryConfigKeysArgs $) {
+        this.alias = $.alias;
+        this.authorizationRuleName = $.authorizationRuleName;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListDisasterRecoveryConfigKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alias;
-        private String authorizationRuleName;
-        private String namespaceName;
-        private String resourceGroupName;
+        private ListDisasterRecoveryConfigKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListDisasterRecoveryConfigKeysArgs();
         }
 
         public Builder(ListDisasterRecoveryConfigKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.authorizationRuleName = defaults.authorizationRuleName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListDisasterRecoveryConfigKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(String alias) {
-            this.alias = Objects.requireNonNull(alias);
+            $.alias = alias;
             return this;
         }
+
         public Builder authorizationRuleName(String authorizationRuleName) {
-            this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
+            $.authorizationRuleName = authorizationRuleName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListDisasterRecoveryConfigKeysArgs build() {
-            return new ListDisasterRecoveryConfigKeysArgs(alias, authorizationRuleName, namespaceName, resourceGroupName);
+        }
+
+        public ListDisasterRecoveryConfigKeysArgs build() {
+            $.alias = Objects.requireNonNull($.alias, "expected parameter 'alias' to be non-null");
+            $.authorizationRuleName = Objects.requireNonNull($.authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

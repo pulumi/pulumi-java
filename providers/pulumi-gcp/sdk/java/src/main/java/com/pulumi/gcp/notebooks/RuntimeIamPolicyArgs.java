@@ -5,9 +5,9 @@ package com.pulumi.gcp.notebooks;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RuntimeIamPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class RuntimeIamPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -44,10 +44,10 @@ public final class RuntimeIamPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -55,89 +55,80 @@ public final class RuntimeIamPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="runtimeName", required=true)
-      private final Output<String> runtimeName;
+    private Output<String> runtimeName;
 
     public Output<String> runtimeName() {
         return this.runtimeName;
     }
 
-    public RuntimeIamPolicyArgs(
-        @Nullable Output<String> location,
-        Output<String> policyData,
-        @Nullable Output<String> project,
-        Output<String> runtimeName) {
-        this.location = location;
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-        this.runtimeName = Objects.requireNonNull(runtimeName, "expected parameter 'runtimeName' to be non-null");
-    }
+    private RuntimeIamPolicyArgs() {}
 
-    private RuntimeIamPolicyArgs() {
-        this.location = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.runtimeName = Codegen.empty();
+    private RuntimeIamPolicyArgs(RuntimeIamPolicyArgs $) {
+        this.location = $.location;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.runtimeName = $.runtimeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
-        private Output<String> runtimeName;
+        private RuntimeIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeIamPolicyArgs();
         }
 
         public Builder(RuntimeIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.runtimeName = defaults.runtimeName;
+            $ = new RuntimeIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder runtimeName(Output<String> runtimeName) {
-            this.runtimeName = Objects.requireNonNull(runtimeName);
+            $.runtimeName = runtimeName;
             return this;
         }
+
         public Builder runtimeName(String runtimeName) {
-            this.runtimeName = Output.of(Objects.requireNonNull(runtimeName));
-            return this;
-        }        public RuntimeIamPolicyArgs build() {
-            return new RuntimeIamPolicyArgs(location, policyData, project, runtimeName);
+            return runtimeName(Output.of(runtimeName));
+        }
+
+        public RuntimeIamPolicyArgs build() {
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            $.runtimeName = Objects.requireNonNull($.runtimeName, "expected parameter 'runtimeName' to be non-null");
+            return $;
         }
     }
+
 }

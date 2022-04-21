@@ -11,10 +11,10 @@ import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaArgs;
 import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsStartingPositionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="kinesisFirehose")
-      private final @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose;
+    private @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose;
 
-    public Output<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose() {
-        return this.kinesisFirehose == null ? Codegen.empty() : this.kinesisFirehose;
+    public Optional<Output<AnalyticsApplicationInputsKinesisFirehoseArgs>> kinesisFirehose() {
+        return Optional.ofNullable(this.kinesisFirehose);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="kinesisStream")
-      private final @Nullable Output<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream;
+    private @Nullable Output<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream;
 
-    public Output<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream() {
-        return this.kinesisStream == null ? Codegen.empty() : this.kinesisStream;
+    public Optional<Output<AnalyticsApplicationInputsKinesisStreamArgs>> kinesisStream() {
+        return Optional.ofNullable(this.kinesisStream);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="namePrefix", required=true)
-      private final Output<String> namePrefix;
+    private Output<String> namePrefix;
 
     public Output<String> namePrefix() {
         return this.namePrefix;
@@ -74,10 +74,10 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="parallelism")
-      private final @Nullable Output<AnalyticsApplicationInputsParallelismArgs> parallelism;
+    private @Nullable Output<AnalyticsApplicationInputsParallelismArgs> parallelism;
 
-    public Output<AnalyticsApplicationInputsParallelismArgs> parallelism() {
-        return this.parallelism == null ? Codegen.empty() : this.parallelism;
+    public Optional<Output<AnalyticsApplicationInputsParallelismArgs>> parallelism() {
+        return Optional.ofNullable(this.parallelism);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="processingConfiguration")
-      private final @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration;
+    private @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration() {
-        return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
+    public Optional<Output<AnalyticsApplicationInputsProcessingConfigurationArgs>> processingConfiguration() {
+        return Optional.ofNullable(this.processingConfiguration);
     }
 
     /**
@@ -97,7 +97,7 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="schema", required=true)
-      private final Output<AnalyticsApplicationInputsSchemaArgs> schema;
+    private Output<AnalyticsApplicationInputsSchemaArgs> schema;
 
     public Output<AnalyticsApplicationInputsSchemaArgs> schema() {
         return this.schema;
@@ -109,167 +109,145 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="startingPositionConfigurations")
-      private final @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations;
+    private @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations;
 
-    public Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations() {
-        return this.startingPositionConfigurations == null ? Codegen.empty() : this.startingPositionConfigurations;
+    public Optional<Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>>> startingPositionConfigurations() {
+        return Optional.ofNullable(this.startingPositionConfigurations);
     }
 
     @Import(name="streamNames")
-      private final @Nullable Output<List<String>> streamNames;
+    private @Nullable Output<List<String>> streamNames;
 
-    public Output<List<String>> streamNames() {
-        return this.streamNames == null ? Codegen.empty() : this.streamNames;
+    public Optional<Output<List<String>>> streamNames() {
+        return Optional.ofNullable(this.streamNames);
     }
 
-    public AnalyticsApplicationInputsArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose,
-        @Nullable Output<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream,
-        Output<String> namePrefix,
-        @Nullable Output<AnalyticsApplicationInputsParallelismArgs> parallelism,
-        @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration,
-        Output<AnalyticsApplicationInputsSchemaArgs> schema,
-        @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations,
-        @Nullable Output<List<String>> streamNames) {
-        this.id = id;
-        this.kinesisFirehose = kinesisFirehose;
-        this.kinesisStream = kinesisStream;
-        this.namePrefix = Objects.requireNonNull(namePrefix, "expected parameter 'namePrefix' to be non-null");
-        this.parallelism = parallelism;
-        this.processingConfiguration = processingConfiguration;
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-        this.startingPositionConfigurations = startingPositionConfigurations;
-        this.streamNames = streamNames;
-    }
+    private AnalyticsApplicationInputsArgs() {}
 
-    private AnalyticsApplicationInputsArgs() {
-        this.id = Codegen.empty();
-        this.kinesisFirehose = Codegen.empty();
-        this.kinesisStream = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.parallelism = Codegen.empty();
-        this.processingConfiguration = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.startingPositionConfigurations = Codegen.empty();
-        this.streamNames = Codegen.empty();
+    private AnalyticsApplicationInputsArgs(AnalyticsApplicationInputsArgs $) {
+        this.id = $.id;
+        this.kinesisFirehose = $.kinesisFirehose;
+        this.kinesisStream = $.kinesisStream;
+        this.namePrefix = $.namePrefix;
+        this.parallelism = $.parallelism;
+        this.processingConfiguration = $.processingConfiguration;
+        this.schema = $.schema;
+        this.startingPositionConfigurations = $.startingPositionConfigurations;
+        this.streamNames = $.streamNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationInputsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose;
-        private @Nullable Output<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream;
-        private Output<String> namePrefix;
-        private @Nullable Output<AnalyticsApplicationInputsParallelismArgs> parallelism;
-        private @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration;
-        private Output<AnalyticsApplicationInputsSchemaArgs> schema;
-        private @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations;
-        private @Nullable Output<List<String>> streamNames;
+        private AnalyticsApplicationInputsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationInputsArgs();
         }
 
         public Builder(AnalyticsApplicationInputsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.kinesisFirehose = defaults.kinesisFirehose;
-    	      this.kinesisStream = defaults.kinesisStream;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.parallelism = defaults.parallelism;
-    	      this.processingConfiguration = defaults.processingConfiguration;
-    	      this.schema = defaults.schema;
-    	      this.startingPositionConfigurations = defaults.startingPositionConfigurations;
-    	      this.streamNames = defaults.streamNames;
+            $ = new AnalyticsApplicationInputsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder kinesisFirehose(@Nullable Output<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose) {
-            this.kinesisFirehose = kinesisFirehose;
+            $.kinesisFirehose = kinesisFirehose;
             return this;
         }
-        public Builder kinesisFirehose(@Nullable AnalyticsApplicationInputsKinesisFirehoseArgs kinesisFirehose) {
-            this.kinesisFirehose = Codegen.ofNullable(kinesisFirehose);
-            return this;
+
+        public Builder kinesisFirehose(AnalyticsApplicationInputsKinesisFirehoseArgs kinesisFirehose) {
+            return kinesisFirehose(Output.of(kinesisFirehose));
         }
+
         public Builder kinesisStream(@Nullable Output<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream) {
-            this.kinesisStream = kinesisStream;
+            $.kinesisStream = kinesisStream;
             return this;
         }
-        public Builder kinesisStream(@Nullable AnalyticsApplicationInputsKinesisStreamArgs kinesisStream) {
-            this.kinesisStream = Codegen.ofNullable(kinesisStream);
-            return this;
+
+        public Builder kinesisStream(AnalyticsApplicationInputsKinesisStreamArgs kinesisStream) {
+            return kinesisStream(Output.of(kinesisStream));
         }
+
         public Builder namePrefix(Output<String> namePrefix) {
-            this.namePrefix = Objects.requireNonNull(namePrefix);
+            $.namePrefix = namePrefix;
             return this;
         }
+
         public Builder namePrefix(String namePrefix) {
-            this.namePrefix = Output.of(Objects.requireNonNull(namePrefix));
-            return this;
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder parallelism(@Nullable Output<AnalyticsApplicationInputsParallelismArgs> parallelism) {
-            this.parallelism = parallelism;
+            $.parallelism = parallelism;
             return this;
         }
-        public Builder parallelism(@Nullable AnalyticsApplicationInputsParallelismArgs parallelism) {
-            this.parallelism = Codegen.ofNullable(parallelism);
-            return this;
+
+        public Builder parallelism(AnalyticsApplicationInputsParallelismArgs parallelism) {
+            return parallelism(Output.of(parallelism));
         }
+
         public Builder processingConfiguration(@Nullable Output<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration) {
-            this.processingConfiguration = processingConfiguration;
+            $.processingConfiguration = processingConfiguration;
             return this;
         }
-        public Builder processingConfiguration(@Nullable AnalyticsApplicationInputsProcessingConfigurationArgs processingConfiguration) {
-            this.processingConfiguration = Codegen.ofNullable(processingConfiguration);
-            return this;
+
+        public Builder processingConfiguration(AnalyticsApplicationInputsProcessingConfigurationArgs processingConfiguration) {
+            return processingConfiguration(Output.of(processingConfiguration));
         }
+
         public Builder schema(Output<AnalyticsApplicationInputsSchemaArgs> schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder schema(AnalyticsApplicationInputsSchemaArgs schema) {
-            this.schema = Output.of(Objects.requireNonNull(schema));
-            return this;
+            return schema(Output.of(schema));
         }
+
         public Builder startingPositionConfigurations(@Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations) {
-            this.startingPositionConfigurations = startingPositionConfigurations;
+            $.startingPositionConfigurations = startingPositionConfigurations;
             return this;
         }
-        public Builder startingPositionConfigurations(@Nullable List<AnalyticsApplicationInputsStartingPositionConfigurationArgs> startingPositionConfigurations) {
-            this.startingPositionConfigurations = Codegen.ofNullable(startingPositionConfigurations);
-            return this;
+
+        public Builder startingPositionConfigurations(List<AnalyticsApplicationInputsStartingPositionConfigurationArgs> startingPositionConfigurations) {
+            return startingPositionConfigurations(Output.of(startingPositionConfigurations));
         }
+
         public Builder startingPositionConfigurations(AnalyticsApplicationInputsStartingPositionConfigurationArgs... startingPositionConfigurations) {
             return startingPositionConfigurations(List.of(startingPositionConfigurations));
         }
+
         public Builder streamNames(@Nullable Output<List<String>> streamNames) {
-            this.streamNames = streamNames;
+            $.streamNames = streamNames;
             return this;
         }
-        public Builder streamNames(@Nullable List<String> streamNames) {
-            this.streamNames = Codegen.ofNullable(streamNames);
-            return this;
+
+        public Builder streamNames(List<String> streamNames) {
+            return streamNames(Output.of(streamNames));
         }
+
         public Builder streamNames(String... streamNames) {
             return streamNames(List.of(streamNames));
-        }        public AnalyticsApplicationInputsArgs build() {
-            return new AnalyticsApplicationInputsArgs(id, kinesisFirehose, kinesisStream, namePrefix, parallelism, processingConfiguration, schema, startingPositionConfigurations, streamNames);
+        }
+
+        public AnalyticsApplicationInputsArgs build() {
+            $.namePrefix = Objects.requireNonNull($.namePrefix, "expected parameter 'namePrefix' to be non-null");
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            return $;
         }
     }
+
 }

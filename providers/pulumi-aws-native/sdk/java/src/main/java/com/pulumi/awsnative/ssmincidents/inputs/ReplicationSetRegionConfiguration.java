@@ -17,45 +17,45 @@ public final class ReplicationSetRegionConfiguration extends com.pulumi.resource
     public static final ReplicationSetRegionConfiguration Empty = new ReplicationSetRegionConfiguration();
 
     @Import(name="sseKmsKeyId", required=true)
-      private final String sseKmsKeyId;
+    private String sseKmsKeyId;
 
     public String sseKmsKeyId() {
         return this.sseKmsKeyId;
     }
 
-    public ReplicationSetRegionConfiguration(String sseKmsKeyId) {
-        this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId, "expected parameter 'sseKmsKeyId' to be non-null");
-    }
+    private ReplicationSetRegionConfiguration() {}
 
-    private ReplicationSetRegionConfiguration() {
-        this.sseKmsKeyId = null;
+    private ReplicationSetRegionConfiguration(ReplicationSetRegionConfiguration $) {
+        this.sseKmsKeyId = $.sseKmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationSetRegionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sseKmsKeyId;
+        private ReplicationSetRegionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationSetRegionConfiguration();
         }
 
         public Builder(ReplicationSetRegionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sseKmsKeyId = defaults.sseKmsKeyId;
+            $ = new ReplicationSetRegionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder sseKmsKeyId(String sseKmsKeyId) {
-            this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId);
+            $.sseKmsKeyId = sseKmsKeyId;
             return this;
-        }        public ReplicationSetRegionConfiguration build() {
-            return new ReplicationSetRegionConfiguration(sseKmsKeyId);
+        }
+
+        public ReplicationSetRegionConfiguration build() {
+            $.sseKmsKeyId = Objects.requireNonNull($.sseKmsKeyId, "expected parameter 'sseKmsKeyId' to be non-null");
+            return $;
         }
     }
+
 }

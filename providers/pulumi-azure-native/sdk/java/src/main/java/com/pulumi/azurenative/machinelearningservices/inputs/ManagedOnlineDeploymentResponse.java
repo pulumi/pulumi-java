@@ -32,10 +32,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="appInsightsEnabled")
-      private final @Nullable Boolean appInsightsEnabled;
+    private @Nullable Boolean appInsightsEnabled;
 
     public Optional<Boolean> appInsightsEnabled() {
-        return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
+        return Optional.ofNullable(this.appInsightsEnabled);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="codeConfiguration")
-      private final @Nullable CodeConfigurationResponse codeConfiguration;
+    private @Nullable CodeConfigurationResponse codeConfiguration;
 
     public Optional<CodeConfigurationResponse> codeConfiguration() {
-        return this.codeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.codeConfiguration);
+        return Optional.ofNullable(this.codeConfiguration);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="endpointComputeType", required=true)
-      private final String endpointComputeType;
+    private String endpointComputeType;
 
     public String endpointComputeType() {
         return this.endpointComputeType;
@@ -77,10 +77,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable String environmentId;
+    private @Nullable String environmentId;
 
     public Optional<String> environmentId() {
-        return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Map<String,String> environmentVariables;
+    private @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> environmentVariables() {
-        return this.environmentVariables == null ? Map.of() : this.environmentVariables;
+    public Optional<Map<String,String>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable String instanceType;
+    private @Nullable String instanceType;
 
     public Optional<String> instanceType() {
-        return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="livenessProbe")
-      private final @Nullable ProbeSettingsResponse livenessProbe;
+    private @Nullable ProbeSettingsResponse livenessProbe;
 
     public Optional<ProbeSettingsResponse> livenessProbe() {
-        return this.livenessProbe == null ? Optional.empty() : Optional.ofNullable(this.livenessProbe);
+        return Optional.ofNullable(this.livenessProbe);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="model")
-      private final @Nullable Object model;
+    private @Nullable Object model;
 
-    public Object model() {
-        return this.model == null ? null : this.model;
+    public Optional<Object> model() {
+        return Optional.ofNullable(this.model);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -143,7 +143,7 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -154,10 +154,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="readinessProbe")
-      private final @Nullable ProbeSettingsResponse readinessProbe;
+    private @Nullable ProbeSettingsResponse readinessProbe;
 
     public Optional<ProbeSettingsResponse> readinessProbe() {
-        return this.readinessProbe == null ? Optional.empty() : Optional.ofNullable(this.readinessProbe);
+        return Optional.ofNullable(this.readinessProbe);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="requestSettings")
-      private final @Nullable OnlineRequestSettingsResponse requestSettings;
+    private @Nullable OnlineRequestSettingsResponse requestSettings;
 
     public Optional<OnlineRequestSettingsResponse> requestSettings() {
-        return this.requestSettings == null ? Optional.empty() : Optional.ofNullable(this.requestSettings);
+        return Optional.ofNullable(this.requestSettings);
     }
 
     /**
@@ -176,163 +176,124 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="scaleSettings")
-      private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
+    private @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
-    public Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings() {
-        return this.scaleSettings == null ? null : this.scaleSettings;
+    public Optional<Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse>> scaleSettings() {
+        return Optional.ofNullable(this.scaleSettings);
     }
 
-    public ManagedOnlineDeploymentResponse(
-        @Nullable Boolean appInsightsEnabled,
-        @Nullable CodeConfigurationResponse codeConfiguration,
-        @Nullable String description,
-        String endpointComputeType,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String instanceType,
-        @Nullable ProbeSettingsResponse livenessProbe,
-        @Nullable Object model,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        @Nullable ProbeSettingsResponse readinessProbe,
-        @Nullable OnlineRequestSettingsResponse requestSettings,
-        @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
-        this.appInsightsEnabled = appInsightsEnabled;
-        this.codeConfiguration = codeConfiguration;
-        this.description = description;
-        this.endpointComputeType = Codegen.stringProp("endpointComputeType").arg(endpointComputeType).require();
-        this.environmentId = environmentId;
-        this.environmentVariables = environmentVariables;
-        this.instanceType = instanceType;
-        this.livenessProbe = livenessProbe;
-        this.model = model;
-        this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.readinessProbe = readinessProbe;
-        this.requestSettings = requestSettings;
-        this.scaleSettings = scaleSettings;
-    }
+    private ManagedOnlineDeploymentResponse() {}
 
-    private ManagedOnlineDeploymentResponse() {
-        this.appInsightsEnabled = null;
-        this.codeConfiguration = null;
-        this.description = null;
-        this.endpointComputeType = null;
-        this.environmentId = null;
-        this.environmentVariables = Map.of();
-        this.instanceType = null;
-        this.livenessProbe = null;
-        this.model = null;
-        this.properties = Map.of();
-        this.provisioningState = null;
-        this.readinessProbe = null;
-        this.requestSettings = null;
-        this.scaleSettings = null;
+    private ManagedOnlineDeploymentResponse(ManagedOnlineDeploymentResponse $) {
+        this.appInsightsEnabled = $.appInsightsEnabled;
+        this.codeConfiguration = $.codeConfiguration;
+        this.description = $.description;
+        this.endpointComputeType = $.endpointComputeType;
+        this.environmentId = $.environmentId;
+        this.environmentVariables = $.environmentVariables;
+        this.instanceType = $.instanceType;
+        this.livenessProbe = $.livenessProbe;
+        this.model = $.model;
+        this.properties = $.properties;
+        this.provisioningState = $.provisioningState;
+        this.readinessProbe = $.readinessProbe;
+        this.requestSettings = $.requestSettings;
+        this.scaleSettings = $.scaleSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedOnlineDeploymentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean appInsightsEnabled;
-        private @Nullable CodeConfigurationResponse codeConfiguration;
-        private @Nullable String description;
-        private String endpointComputeType;
-        private @Nullable String environmentId;
-        private @Nullable Map<String,String> environmentVariables;
-        private @Nullable String instanceType;
-        private @Nullable ProbeSettingsResponse livenessProbe;
-        private @Nullable Object model;
-        private @Nullable Map<String,String> properties;
-        private String provisioningState;
-        private @Nullable ProbeSettingsResponse readinessProbe;
-        private @Nullable OnlineRequestSettingsResponse requestSettings;
-        private @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
+        private ManagedOnlineDeploymentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedOnlineDeploymentResponse();
         }
 
         public Builder(ManagedOnlineDeploymentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appInsightsEnabled = defaults.appInsightsEnabled;
-    	      this.codeConfiguration = defaults.codeConfiguration;
-    	      this.description = defaults.description;
-    	      this.endpointComputeType = defaults.endpointComputeType;
-    	      this.environmentId = defaults.environmentId;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.instanceType = defaults.instanceType;
-    	      this.livenessProbe = defaults.livenessProbe;
-    	      this.model = defaults.model;
-    	      this.properties = defaults.properties;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.readinessProbe = defaults.readinessProbe;
-    	      this.requestSettings = defaults.requestSettings;
-    	      this.scaleSettings = defaults.scaleSettings;
+            $ = new ManagedOnlineDeploymentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
-            this.appInsightsEnabled = appInsightsEnabled;
+            $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
+
         public Builder codeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
-            this.codeConfiguration = codeConfiguration;
+            $.codeConfiguration = codeConfiguration;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder endpointComputeType(String endpointComputeType) {
-            this.endpointComputeType = Objects.requireNonNull(endpointComputeType);
+            $.endpointComputeType = endpointComputeType;
             return this;
         }
+
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
+
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder livenessProbe(@Nullable ProbeSettingsResponse livenessProbe) {
-            this.livenessProbe = livenessProbe;
+            $.livenessProbe = livenessProbe;
             return this;
         }
+
         public Builder model(@Nullable Object model) {
-            this.model = model;
+            $.model = model;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder readinessProbe(@Nullable ProbeSettingsResponse readinessProbe) {
-            this.readinessProbe = readinessProbe;
+            $.readinessProbe = readinessProbe;
             return this;
         }
+
         public Builder requestSettings(@Nullable OnlineRequestSettingsResponse requestSettings) {
-            this.requestSettings = requestSettings;
+            $.requestSettings = requestSettings;
             return this;
         }
+
         public Builder scaleSettings(@Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
-            this.scaleSettings = scaleSettings;
+            $.scaleSettings = scaleSettings;
             return this;
-        }        public ManagedOnlineDeploymentResponse build() {
-            return new ManagedOnlineDeploymentResponse(appInsightsEnabled, codeConfiguration, description, endpointComputeType, environmentId, environmentVariables, instanceType, livenessProbe, model, properties, provisioningState, readinessProbe, requestSettings, scaleSettings);
+        }
+
+        public ManagedOnlineDeploymentResponse build() {
+            $.endpointComputeType = Codegen.stringProp("endpointComputeType").arg($.endpointComputeType).require();
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ConnectorProfileDynatraceConnectorProfilePropertiesArgs exten
      * 
      */
     @Import(name="instanceUrl", required=true)
-      private final Output<String> instanceUrl;
+    private Output<String> instanceUrl;
 
     public Output<String> instanceUrl() {
         return this.instanceUrl;
     }
 
-    public ConnectorProfileDynatraceConnectorProfilePropertiesArgs(Output<String> instanceUrl) {
-        this.instanceUrl = Objects.requireNonNull(instanceUrl, "expected parameter 'instanceUrl' to be non-null");
-    }
+    private ConnectorProfileDynatraceConnectorProfilePropertiesArgs() {}
 
-    private ConnectorProfileDynatraceConnectorProfilePropertiesArgs() {
-        this.instanceUrl = Codegen.empty();
+    private ConnectorProfileDynatraceConnectorProfilePropertiesArgs(ConnectorProfileDynatraceConnectorProfilePropertiesArgs $) {
+        this.instanceUrl = $.instanceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileDynatraceConnectorProfilePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceUrl;
+        private ConnectorProfileDynatraceConnectorProfilePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileDynatraceConnectorProfilePropertiesArgs();
         }
 
         public Builder(ConnectorProfileDynatraceConnectorProfilePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceUrl = defaults.instanceUrl;
+            $ = new ConnectorProfileDynatraceConnectorProfilePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceUrl(Output<String> instanceUrl) {
-            this.instanceUrl = Objects.requireNonNull(instanceUrl);
+            $.instanceUrl = instanceUrl;
             return this;
         }
+
         public Builder instanceUrl(String instanceUrl) {
-            this.instanceUrl = Output.of(Objects.requireNonNull(instanceUrl));
-            return this;
-        }        public ConnectorProfileDynatraceConnectorProfilePropertiesArgs build() {
-            return new ConnectorProfileDynatraceConnectorProfilePropertiesArgs(instanceUrl);
+            return instanceUrl(Output.of(instanceUrl));
+        }
+
+        public ConnectorProfileDynatraceConnectorProfilePropertiesArgs build() {
+            $.instanceUrl = Objects.requireNonNull($.instanceUrl, "expected parameter 'instanceUrl' to be non-null");
+            return $;
         }
     }
+
 }

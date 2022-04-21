@@ -5,13 +5,13 @@ package com.pulumi.gcp.osconfig;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="instanceFilter", required=true)
-      private final Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
+    private Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
     public Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter() {
         return this.instanceFilter;
@@ -46,7 +46,7 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -57,10 +57,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="osPolicies", required=true)
-      private final Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
+    private Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
 
     public Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies() {
         return this.osPolicies;
@@ -79,10 +79,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -90,131 +90,116 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="rollout", required=true)
-      private final Output<OsPolicyAssignmentRolloutArgs> rollout;
+    private Output<OsPolicyAssignmentRolloutArgs> rollout;
 
     public Output<OsPolicyAssignmentRolloutArgs> rollout() {
         return this.rollout;
     }
 
-    public OsPolicyAssignmentArgs(
-        @Nullable Output<String> description,
-        Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter,
-        Output<String> location,
-        @Nullable Output<String> name,
-        Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies,
-        @Nullable Output<String> project,
-        Output<OsPolicyAssignmentRolloutArgs> rollout) {
-        this.description = description;
-        this.instanceFilter = Objects.requireNonNull(instanceFilter, "expected parameter 'instanceFilter' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-        this.osPolicies = Objects.requireNonNull(osPolicies, "expected parameter 'osPolicies' to be non-null");
-        this.project = project;
-        this.rollout = Objects.requireNonNull(rollout, "expected parameter 'rollout' to be non-null");
-    }
+    private OsPolicyAssignmentArgs() {}
 
-    private OsPolicyAssignmentArgs() {
-        this.description = Codegen.empty();
-        this.instanceFilter = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.osPolicies = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rollout = Codegen.empty();
+    private OsPolicyAssignmentArgs(OsPolicyAssignmentArgs $) {
+        this.description = $.description;
+        this.instanceFilter = $.instanceFilter;
+        this.location = $.location;
+        this.name = $.name;
+        this.osPolicies = $.osPolicies;
+        this.project = $.project;
+        this.rollout = $.rollout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
-        private Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
-        private @Nullable Output<String> project;
-        private Output<OsPolicyAssignmentRolloutArgs> rollout;
+        private OsPolicyAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentArgs();
         }
 
         public Builder(OsPolicyAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.instanceFilter = defaults.instanceFilter;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.osPolicies = defaults.osPolicies;
-    	      this.project = defaults.project;
-    	      this.rollout = defaults.rollout;
+            $ = new OsPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder instanceFilter(Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter) {
-            this.instanceFilter = Objects.requireNonNull(instanceFilter);
+            $.instanceFilter = instanceFilter;
             return this;
         }
+
         public Builder instanceFilter(OsPolicyAssignmentInstanceFilterArgs instanceFilter) {
-            this.instanceFilter = Output.of(Objects.requireNonNull(instanceFilter));
-            return this;
+            return instanceFilter(Output.of(instanceFilter));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder osPolicies(Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies) {
-            this.osPolicies = Objects.requireNonNull(osPolicies);
+            $.osPolicies = osPolicies;
             return this;
         }
+
         public Builder osPolicies(List<OsPolicyAssignmentOsPolicyArgs> osPolicies) {
-            this.osPolicies = Output.of(Objects.requireNonNull(osPolicies));
-            return this;
+            return osPolicies(Output.of(osPolicies));
         }
+
         public Builder osPolicies(OsPolicyAssignmentOsPolicyArgs... osPolicies) {
             return osPolicies(List.of(osPolicies));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rollout(Output<OsPolicyAssignmentRolloutArgs> rollout) {
-            this.rollout = Objects.requireNonNull(rollout);
+            $.rollout = rollout;
             return this;
         }
+
         public Builder rollout(OsPolicyAssignmentRolloutArgs rollout) {
-            this.rollout = Output.of(Objects.requireNonNull(rollout));
-            return this;
-        }        public OsPolicyAssignmentArgs build() {
-            return new OsPolicyAssignmentArgs(description, instanceFilter, location, name, osPolicies, project, rollout);
+            return rollout(Output.of(rollout));
+        }
+
+        public OsPolicyAssignmentArgs build() {
+            $.instanceFilter = Objects.requireNonNull($.instanceFilter, "expected parameter 'instanceFilter' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.osPolicies = Objects.requireNonNull($.osPolicies, "expected parameter 'osPolicies' to be non-null");
+            $.rollout = Objects.requireNonNull($.rollout, "expected parameter 'rollout' to be non-null");
+            return $;
         }
     }
+
 }

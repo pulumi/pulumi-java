@@ -22,7 +22,7 @@ public final class AptSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="excludes", required=true)
-      private final List<String> excludes;
+    private List<String> excludes;
 
     public List<String> excludes() {
         return this.excludes;
@@ -33,7 +33,7 @@ public final class AptSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exclusivePackages", required=true)
-      private final List<String> exclusivePackages;
+    private List<String> exclusivePackages;
 
     public List<String> exclusivePackages() {
         return this.exclusivePackages;
@@ -44,70 +44,67 @@ public final class AptSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AptSettingsResponse(
-        List<String> excludes,
-        List<String> exclusivePackages,
-        String type) {
-        this.excludes = Objects.requireNonNull(excludes, "expected parameter 'excludes' to be non-null");
-        this.exclusivePackages = Objects.requireNonNull(exclusivePackages, "expected parameter 'exclusivePackages' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AptSettingsResponse() {}
 
-    private AptSettingsResponse() {
-        this.excludes = List.of();
-        this.exclusivePackages = List.of();
-        this.type = null;
+    private AptSettingsResponse(AptSettingsResponse $) {
+        this.excludes = $.excludes;
+        this.exclusivePackages = $.exclusivePackages;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AptSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> excludes;
-        private List<String> exclusivePackages;
-        private String type;
+        private AptSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AptSettingsResponse();
         }
 
         public Builder(AptSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludes = defaults.excludes;
-    	      this.exclusivePackages = defaults.exclusivePackages;
-    	      this.type = defaults.type;
+            $ = new AptSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder excludes(List<String> excludes) {
-            this.excludes = Objects.requireNonNull(excludes);
+            $.excludes = excludes;
             return this;
         }
+
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
+
         public Builder exclusivePackages(List<String> exclusivePackages) {
-            this.exclusivePackages = Objects.requireNonNull(exclusivePackages);
+            $.exclusivePackages = exclusivePackages;
             return this;
         }
+
         public Builder exclusivePackages(String... exclusivePackages) {
             return exclusivePackages(List.of(exclusivePackages));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AptSettingsResponse build() {
-            return new AptSettingsResponse(excludes, exclusivePackages, type);
+        }
+
+        public AptSettingsResponse build() {
+            $.excludes = Objects.requireNonNull($.excludes, "expected parameter 'excludes' to be non-null");
+            $.exclusivePackages = Objects.requireNonNull($.exclusivePackages, "expected parameter 'exclusivePackages' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

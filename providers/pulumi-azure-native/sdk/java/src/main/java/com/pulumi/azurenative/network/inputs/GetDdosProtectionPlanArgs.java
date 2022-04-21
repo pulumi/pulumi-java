@@ -17,7 +17,7 @@ public final class GetDdosProtectionPlanArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ddosProtectionPlanName", required=true)
-      private final String ddosProtectionPlanName;
+    private String ddosProtectionPlanName;
 
     public String ddosProtectionPlanName() {
         return this.ddosProtectionPlanName;
@@ -28,55 +28,52 @@ public final class GetDdosProtectionPlanArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDdosProtectionPlanArgs(
-        String ddosProtectionPlanName,
-        String resourceGroupName) {
-        this.ddosProtectionPlanName = Objects.requireNonNull(ddosProtectionPlanName, "expected parameter 'ddosProtectionPlanName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDdosProtectionPlanArgs() {}
 
-    private GetDdosProtectionPlanArgs() {
-        this.ddosProtectionPlanName = null;
-        this.resourceGroupName = null;
+    private GetDdosProtectionPlanArgs(GetDdosProtectionPlanArgs $) {
+        this.ddosProtectionPlanName = $.ddosProtectionPlanName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDdosProtectionPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ddosProtectionPlanName;
-        private String resourceGroupName;
+        private GetDdosProtectionPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDdosProtectionPlanArgs();
         }
 
         public Builder(GetDdosProtectionPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ddosProtectionPlanName = defaults.ddosProtectionPlanName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDdosProtectionPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ddosProtectionPlanName(String ddosProtectionPlanName) {
-            this.ddosProtectionPlanName = Objects.requireNonNull(ddosProtectionPlanName);
+            $.ddosProtectionPlanName = ddosProtectionPlanName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDdosProtectionPlanArgs build() {
-            return new GetDdosProtectionPlanArgs(ddosProtectionPlanName, resourceGroupName);
+        }
+
+        public GetDdosProtectionPlanArgs build() {
+            $.ddosProtectionPlanName = Objects.requireNonNull($.ddosProtectionPlanName, "expected parameter 'ddosProtectionPlanName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

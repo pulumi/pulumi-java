@@ -21,7 +21,7 @@ public final class SchematizedDataResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="data", required=true)
-      private final String data;
+    private String data;
 
     public String data() {
         return this.data;
@@ -32,55 +32,52 @@ public final class SchematizedDataResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="error", required=true)
-      private final String error;
+    private String error;
 
     public String error() {
         return this.error;
     }
 
-    public SchematizedDataResponse(
-        String data,
-        String error) {
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-    }
+    private SchematizedDataResponse() {}
 
-    private SchematizedDataResponse() {
-        this.data = null;
-        this.error = null;
+    private SchematizedDataResponse(SchematizedDataResponse $) {
+        this.data = $.data;
+        this.error = $.error;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchematizedDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String data;
-        private String error;
+        private SchematizedDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchematizedDataResponse();
         }
 
         public Builder(SchematizedDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.error = defaults.error;
+            $ = new SchematizedDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder data(String data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
         }
+
         public Builder error(String error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
-        }        public SchematizedDataResponse build() {
-            return new SchematizedDataResponse(data, error);
+        }
+
+        public SchematizedDataResponse build() {
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            return $;
         }
     }
+
 }

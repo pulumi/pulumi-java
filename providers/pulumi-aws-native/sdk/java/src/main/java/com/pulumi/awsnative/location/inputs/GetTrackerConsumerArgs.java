@@ -13,62 +13,59 @@ public final class GetTrackerConsumerArgs extends com.pulumi.resources.InvokeArg
     public static final GetTrackerConsumerArgs Empty = new GetTrackerConsumerArgs();
 
     @Import(name="consumerArn", required=true)
-      private final String consumerArn;
+    private String consumerArn;
 
     public String consumerArn() {
         return this.consumerArn;
     }
 
     @Import(name="trackerName", required=true)
-      private final String trackerName;
+    private String trackerName;
 
     public String trackerName() {
         return this.trackerName;
     }
 
-    public GetTrackerConsumerArgs(
-        String consumerArn,
-        String trackerName) {
-        this.consumerArn = Objects.requireNonNull(consumerArn, "expected parameter 'consumerArn' to be non-null");
-        this.trackerName = Objects.requireNonNull(trackerName, "expected parameter 'trackerName' to be non-null");
-    }
+    private GetTrackerConsumerArgs() {}
 
-    private GetTrackerConsumerArgs() {
-        this.consumerArn = null;
-        this.trackerName = null;
+    private GetTrackerConsumerArgs(GetTrackerConsumerArgs $) {
+        this.consumerArn = $.consumerArn;
+        this.trackerName = $.trackerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTrackerConsumerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consumerArn;
-        private String trackerName;
+        private GetTrackerConsumerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTrackerConsumerArgs();
         }
 
         public Builder(GetTrackerConsumerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerArn = defaults.consumerArn;
-    	      this.trackerName = defaults.trackerName;
+            $ = new GetTrackerConsumerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerArn(String consumerArn) {
-            this.consumerArn = Objects.requireNonNull(consumerArn);
+            $.consumerArn = consumerArn;
             return this;
         }
+
         public Builder trackerName(String trackerName) {
-            this.trackerName = Objects.requireNonNull(trackerName);
+            $.trackerName = trackerName;
             return this;
-        }        public GetTrackerConsumerArgs build() {
-            return new GetTrackerConsumerArgs(consumerArn, trackerName);
+        }
+
+        public GetTrackerConsumerArgs build() {
+            $.consumerArn = Objects.requireNonNull($.consumerArn, "expected parameter 'consumerArn' to be non-null");
+            $.trackerName = Objects.requireNonNull($.trackerName, "expected parameter 'trackerName' to be non-null");
+            return $;
         }
     }
+
 }

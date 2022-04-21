@@ -5,10 +5,10 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.OracleSchemaArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class OracleRdbmsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oracleSchemas")
-      private final @Nullable Output<List<OracleSchemaArgs>> oracleSchemas;
+    private @Nullable Output<List<OracleSchemaArgs>> oracleSchemas;
 
-    public Output<List<OracleSchemaArgs>> oracleSchemas() {
-        return this.oracleSchemas == null ? Codegen.empty() : this.oracleSchemas;
+    public Optional<Output<List<OracleSchemaArgs>>> oracleSchemas() {
+        return Optional.ofNullable(this.oracleSchemas);
     }
 
-    public OracleRdbmsArgs(@Nullable Output<List<OracleSchemaArgs>> oracleSchemas) {
-        this.oracleSchemas = oracleSchemas;
-    }
+    private OracleRdbmsArgs() {}
 
-    private OracleRdbmsArgs() {
-        this.oracleSchemas = Codegen.empty();
+    private OracleRdbmsArgs(OracleRdbmsArgs $) {
+        this.oracleSchemas = $.oracleSchemas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleRdbmsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OracleSchemaArgs>> oracleSchemas;
+        private OracleRdbmsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleRdbmsArgs();
         }
 
         public Builder(OracleRdbmsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oracleSchemas = defaults.oracleSchemas;
+            $ = new OracleRdbmsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder oracleSchemas(@Nullable Output<List<OracleSchemaArgs>> oracleSchemas) {
-            this.oracleSchemas = oracleSchemas;
+            $.oracleSchemas = oracleSchemas;
             return this;
         }
-        public Builder oracleSchemas(@Nullable List<OracleSchemaArgs> oracleSchemas) {
-            this.oracleSchemas = Codegen.ofNullable(oracleSchemas);
-            return this;
+
+        public Builder oracleSchemas(List<OracleSchemaArgs> oracleSchemas) {
+            return oracleSchemas(Output.of(oracleSchemas));
         }
+
         public Builder oracleSchemas(OracleSchemaArgs... oracleSchemas) {
             return oracleSchemas(List.of(oracleSchemas));
-        }        public OracleRdbmsArgs build() {
-            return new OracleRdbmsArgs(oracleSchemas);
+        }
+
+        public OracleRdbmsArgs build() {
+            return $;
         }
     }
+
 }

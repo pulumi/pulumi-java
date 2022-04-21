@@ -17,45 +17,45 @@ public final class GetEmailIdentityArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
     }
 
-    public GetEmailIdentityArgs(String email) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-    }
+    private GetEmailIdentityArgs() {}
 
-    private GetEmailIdentityArgs() {
-        this.email = null;
+    private GetEmailIdentityArgs(GetEmailIdentityArgs $) {
+        this.email = $.email;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEmailIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String email;
+        private GetEmailIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEmailIdentityArgs();
         }
 
         public Builder(GetEmailIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
+            $ = new GetEmailIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
-        }        public GetEmailIdentityArgs build() {
-            return new GetEmailIdentityArgs(email);
+        }
+
+        public GetEmailIdentityArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            return $;
         }
     }
+
 }

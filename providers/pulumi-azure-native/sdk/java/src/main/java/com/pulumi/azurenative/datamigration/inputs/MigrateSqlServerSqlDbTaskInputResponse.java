@@ -26,7 +26,7 @@ public final class MigrateSqlServerSqlDbTaskInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="selectedDatabases", required=true)
-      private final List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases;
+    private List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
@@ -37,7 +37,7 @@ public final class MigrateSqlServerSqlDbTaskInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final SqlConnectionInfoResponse sourceConnectionInfo;
+    private SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -48,7 +48,7 @@ public final class MigrateSqlServerSqlDbTaskInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final SqlConnectionInfoResponse targetConnectionInfo;
+    private SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -61,76 +61,69 @@ public final class MigrateSqlServerSqlDbTaskInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="validationOptions")
-      private final @Nullable MigrationValidationOptionsResponse validationOptions;
+    private @Nullable MigrationValidationOptionsResponse validationOptions;
 
     public Optional<MigrationValidationOptionsResponse> validationOptions() {
-        return this.validationOptions == null ? Optional.empty() : Optional.ofNullable(this.validationOptions);
+        return Optional.ofNullable(this.validationOptions);
     }
 
-    public MigrateSqlServerSqlDbTaskInputResponse(
-        List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        SqlConnectionInfoResponse targetConnectionInfo,
-        @Nullable MigrationValidationOptionsResponse validationOptions) {
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-        this.validationOptions = validationOptions;
-    }
+    private MigrateSqlServerSqlDbTaskInputResponse() {}
 
-    private MigrateSqlServerSqlDbTaskInputResponse() {
-        this.selectedDatabases = List.of();
-        this.sourceConnectionInfo = null;
-        this.targetConnectionInfo = null;
-        this.validationOptions = null;
+    private MigrateSqlServerSqlDbTaskInputResponse(MigrateSqlServerSqlDbTaskInputResponse $) {
+        this.selectedDatabases = $.selectedDatabases;
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.targetConnectionInfo = $.targetConnectionInfo;
+        this.validationOptions = $.validationOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases;
-        private SqlConnectionInfoResponse sourceConnectionInfo;
-        private SqlConnectionInfoResponse targetConnectionInfo;
-        private @Nullable MigrationValidationOptionsResponse validationOptions;
+        private MigrateSqlServerSqlDbTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbTaskInputResponse();
         }
 
         public Builder(MigrateSqlServerSqlDbTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.selectedDatabases = defaults.selectedDatabases;
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
-    	      this.validationOptions = defaults.validationOptions;
+            $ = new MigrateSqlServerSqlDbTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder selectedDatabases(List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases) {
-            this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+            $.selectedDatabases = selectedDatabases;
             return this;
         }
+
         public Builder selectedDatabases(MigrateSqlServerSqlDbDatabaseInputResponse... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
+
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
+
         public Builder validationOptions(@Nullable MigrationValidationOptionsResponse validationOptions) {
-            this.validationOptions = validationOptions;
+            $.validationOptions = validationOptions;
             return this;
-        }        public MigrateSqlServerSqlDbTaskInputResponse build() {
-            return new MigrateSqlServerSqlDbTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);
+        }
+
+        public MigrateSqlServerSqlDbTaskInputResponse build() {
+            $.selectedDatabases = Objects.requireNonNull($.selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

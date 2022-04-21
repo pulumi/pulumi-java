@@ -5,7 +5,6 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class BucketReplicationTimeValueArgs extends com.pulumi.resources.R
     public static final BucketReplicationTimeValueArgs Empty = new BucketReplicationTimeValueArgs();
 
     @Import(name="minutes", required=true)
-      private final Output<Integer> minutes;
+    private Output<Integer> minutes;
 
     public Output<Integer> minutes() {
         return this.minutes;
     }
 
-    public BucketReplicationTimeValueArgs(Output<Integer> minutes) {
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-    }
+    private BucketReplicationTimeValueArgs() {}
 
-    private BucketReplicationTimeValueArgs() {
-        this.minutes = Codegen.empty();
+    private BucketReplicationTimeValueArgs(BucketReplicationTimeValueArgs $) {
+        this.minutes = $.minutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationTimeValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> minutes;
+        private BucketReplicationTimeValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationTimeValueArgs();
         }
 
         public Builder(BucketReplicationTimeValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minutes = defaults.minutes;
+            $ = new BucketReplicationTimeValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minutes(Output<Integer> minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
         }
+
         public Builder minutes(Integer minutes) {
-            this.minutes = Output.of(Objects.requireNonNull(minutes));
-            return this;
-        }        public BucketReplicationTimeValueArgs build() {
-            return new BucketReplicationTimeValueArgs(minutes);
+            return minutes(Output.of(minutes));
+        }
+
+        public BucketReplicationTimeValueArgs build() {
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            return $;
         }
     }
+
 }

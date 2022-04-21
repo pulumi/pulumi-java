@@ -5,10 +5,10 @@ package com.pulumi.aws.cfg.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="excludedAccounts")
-      private final @Nullable Output<List<String>> excludedAccounts;
+    private @Nullable Output<List<String>> excludedAccounts;
 
-    public Output<List<String>> excludedAccounts() {
-        return this.excludedAccounts == null ? Codegen.empty() : this.excludedAccounts;
+    public Optional<Output<List<String>>> excludedAccounts() {
+        return Optional.ofNullable(this.excludedAccounts);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="inputParameters")
-      private final @Nullable Output<String> inputParameters;
+    private @Nullable Output<String> inputParameters;
 
-    public Output<String> inputParameters() {
-        return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
+    public Optional<Output<String>> inputParameters() {
+        return Optional.ofNullable(this.inputParameters);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="lambdaFunctionArn")
-      private final @Nullable Output<String> lambdaFunctionArn;
+    private @Nullable Output<String> lambdaFunctionArn;
 
-    public Output<String> lambdaFunctionArn() {
-        return this.lambdaFunctionArn == null ? Codegen.empty() : this.lambdaFunctionArn;
+    public Optional<Output<String>> lambdaFunctionArn() {
+        return Optional.ofNullable(this.lambdaFunctionArn);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maximumExecutionFrequency")
-      private final @Nullable Output<String> maximumExecutionFrequency;
+    private @Nullable Output<String> maximumExecutionFrequency;
 
-    public Output<String> maximumExecutionFrequency() {
-        return this.maximumExecutionFrequency == null ? Codegen.empty() : this.maximumExecutionFrequency;
+    public Optional<Output<String>> maximumExecutionFrequency() {
+        return Optional.ofNullable(this.maximumExecutionFrequency);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceIdScope")
-      private final @Nullable Output<String> resourceIdScope;
+    private @Nullable Output<String> resourceIdScope;
 
-    public Output<String> resourceIdScope() {
-        return this.resourceIdScope == null ? Codegen.empty() : this.resourceIdScope;
+    public Optional<Output<String>> resourceIdScope() {
+        return Optional.ofNullable(this.resourceIdScope);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceTypesScopes")
-      private final @Nullable Output<List<String>> resourceTypesScopes;
+    private @Nullable Output<List<String>> resourceTypesScopes;
 
-    public Output<List<String>> resourceTypesScopes() {
-        return this.resourceTypesScopes == null ? Codegen.empty() : this.resourceTypesScopes;
+    public Optional<Output<List<String>>> resourceTypesScopes() {
+        return Optional.ofNullable(this.resourceTypesScopes);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tagKeyScope")
-      private final @Nullable Output<String> tagKeyScope;
+    private @Nullable Output<String> tagKeyScope;
 
-    public Output<String> tagKeyScope() {
-        return this.tagKeyScope == null ? Codegen.empty() : this.tagKeyScope;
+    public Optional<Output<String>> tagKeyScope() {
+        return Optional.ofNullable(this.tagKeyScope);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tagValueScope")
-      private final @Nullable Output<String> tagValueScope;
+    private @Nullable Output<String> tagValueScope;
 
-    public Output<String> tagValueScope() {
-        return this.tagValueScope == null ? Codegen.empty() : this.tagValueScope;
+    public Optional<Output<String>> tagValueScope() {
+        return Optional.ofNullable(this.tagValueScope);
     }
 
     /**
@@ -142,202 +142,170 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="triggerTypes")
-      private final @Nullable Output<List<String>> triggerTypes;
+    private @Nullable Output<List<String>> triggerTypes;
 
-    public Output<List<String>> triggerTypes() {
-        return this.triggerTypes == null ? Codegen.empty() : this.triggerTypes;
+    public Optional<Output<List<String>>> triggerTypes() {
+        return Optional.ofNullable(this.triggerTypes);
     }
 
-    public OrganizationCustomRuleState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> excludedAccounts,
-        @Nullable Output<String> inputParameters,
-        @Nullable Output<String> lambdaFunctionArn,
-        @Nullable Output<String> maximumExecutionFrequency,
-        @Nullable Output<String> name,
-        @Nullable Output<String> resourceIdScope,
-        @Nullable Output<List<String>> resourceTypesScopes,
-        @Nullable Output<String> tagKeyScope,
-        @Nullable Output<String> tagValueScope,
-        @Nullable Output<List<String>> triggerTypes) {
-        this.arn = arn;
-        this.description = description;
-        this.excludedAccounts = excludedAccounts;
-        this.inputParameters = inputParameters;
-        this.lambdaFunctionArn = lambdaFunctionArn;
-        this.maximumExecutionFrequency = maximumExecutionFrequency;
-        this.name = name;
-        this.resourceIdScope = resourceIdScope;
-        this.resourceTypesScopes = resourceTypesScopes;
-        this.tagKeyScope = tagKeyScope;
-        this.tagValueScope = tagValueScope;
-        this.triggerTypes = triggerTypes;
-    }
+    private OrganizationCustomRuleState() {}
 
-    private OrganizationCustomRuleState() {
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.excludedAccounts = Codegen.empty();
-        this.inputParameters = Codegen.empty();
-        this.lambdaFunctionArn = Codegen.empty();
-        this.maximumExecutionFrequency = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceIdScope = Codegen.empty();
-        this.resourceTypesScopes = Codegen.empty();
-        this.tagKeyScope = Codegen.empty();
-        this.tagValueScope = Codegen.empty();
-        this.triggerTypes = Codegen.empty();
+    private OrganizationCustomRuleState(OrganizationCustomRuleState $) {
+        this.arn = $.arn;
+        this.description = $.description;
+        this.excludedAccounts = $.excludedAccounts;
+        this.inputParameters = $.inputParameters;
+        this.lambdaFunctionArn = $.lambdaFunctionArn;
+        this.maximumExecutionFrequency = $.maximumExecutionFrequency;
+        this.name = $.name;
+        this.resourceIdScope = $.resourceIdScope;
+        this.resourceTypesScopes = $.resourceTypesScopes;
+        this.tagKeyScope = $.tagKeyScope;
+        this.tagValueScope = $.tagValueScope;
+        this.triggerTypes = $.triggerTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationCustomRuleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> excludedAccounts;
-        private @Nullable Output<String> inputParameters;
-        private @Nullable Output<String> lambdaFunctionArn;
-        private @Nullable Output<String> maximumExecutionFrequency;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> resourceIdScope;
-        private @Nullable Output<List<String>> resourceTypesScopes;
-        private @Nullable Output<String> tagKeyScope;
-        private @Nullable Output<String> tagValueScope;
-        private @Nullable Output<List<String>> triggerTypes;
+        private OrganizationCustomRuleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationCustomRuleState();
         }
 
         public Builder(OrganizationCustomRuleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.excludedAccounts = defaults.excludedAccounts;
-    	      this.inputParameters = defaults.inputParameters;
-    	      this.lambdaFunctionArn = defaults.lambdaFunctionArn;
-    	      this.maximumExecutionFrequency = defaults.maximumExecutionFrequency;
-    	      this.name = defaults.name;
-    	      this.resourceIdScope = defaults.resourceIdScope;
-    	      this.resourceTypesScopes = defaults.resourceTypesScopes;
-    	      this.tagKeyScope = defaults.tagKeyScope;
-    	      this.tagValueScope = defaults.tagValueScope;
-    	      this.triggerTypes = defaults.triggerTypes;
+            $ = new OrganizationCustomRuleState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder excludedAccounts(@Nullable Output<List<String>> excludedAccounts) {
-            this.excludedAccounts = excludedAccounts;
+            $.excludedAccounts = excludedAccounts;
             return this;
         }
-        public Builder excludedAccounts(@Nullable List<String> excludedAccounts) {
-            this.excludedAccounts = Codegen.ofNullable(excludedAccounts);
-            return this;
+
+        public Builder excludedAccounts(List<String> excludedAccounts) {
+            return excludedAccounts(Output.of(excludedAccounts));
         }
+
         public Builder excludedAccounts(String... excludedAccounts) {
             return excludedAccounts(List.of(excludedAccounts));
         }
+
         public Builder inputParameters(@Nullable Output<String> inputParameters) {
-            this.inputParameters = inputParameters;
+            $.inputParameters = inputParameters;
             return this;
         }
-        public Builder inputParameters(@Nullable String inputParameters) {
-            this.inputParameters = Codegen.ofNullable(inputParameters);
-            return this;
+
+        public Builder inputParameters(String inputParameters) {
+            return inputParameters(Output.of(inputParameters));
         }
+
         public Builder lambdaFunctionArn(@Nullable Output<String> lambdaFunctionArn) {
-            this.lambdaFunctionArn = lambdaFunctionArn;
+            $.lambdaFunctionArn = lambdaFunctionArn;
             return this;
         }
-        public Builder lambdaFunctionArn(@Nullable String lambdaFunctionArn) {
-            this.lambdaFunctionArn = Codegen.ofNullable(lambdaFunctionArn);
-            return this;
+
+        public Builder lambdaFunctionArn(String lambdaFunctionArn) {
+            return lambdaFunctionArn(Output.of(lambdaFunctionArn));
         }
+
         public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = maximumExecutionFrequency;
+            $.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
-        public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = Codegen.ofNullable(maximumExecutionFrequency);
-            return this;
+
+        public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
+            return maximumExecutionFrequency(Output.of(maximumExecutionFrequency));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceIdScope(@Nullable Output<String> resourceIdScope) {
-            this.resourceIdScope = resourceIdScope;
+            $.resourceIdScope = resourceIdScope;
             return this;
         }
-        public Builder resourceIdScope(@Nullable String resourceIdScope) {
-            this.resourceIdScope = Codegen.ofNullable(resourceIdScope);
-            return this;
+
+        public Builder resourceIdScope(String resourceIdScope) {
+            return resourceIdScope(Output.of(resourceIdScope));
         }
+
         public Builder resourceTypesScopes(@Nullable Output<List<String>> resourceTypesScopes) {
-            this.resourceTypesScopes = resourceTypesScopes;
+            $.resourceTypesScopes = resourceTypesScopes;
             return this;
         }
-        public Builder resourceTypesScopes(@Nullable List<String> resourceTypesScopes) {
-            this.resourceTypesScopes = Codegen.ofNullable(resourceTypesScopes);
-            return this;
+
+        public Builder resourceTypesScopes(List<String> resourceTypesScopes) {
+            return resourceTypesScopes(Output.of(resourceTypesScopes));
         }
+
         public Builder resourceTypesScopes(String... resourceTypesScopes) {
             return resourceTypesScopes(List.of(resourceTypesScopes));
         }
+
         public Builder tagKeyScope(@Nullable Output<String> tagKeyScope) {
-            this.tagKeyScope = tagKeyScope;
+            $.tagKeyScope = tagKeyScope;
             return this;
         }
-        public Builder tagKeyScope(@Nullable String tagKeyScope) {
-            this.tagKeyScope = Codegen.ofNullable(tagKeyScope);
-            return this;
+
+        public Builder tagKeyScope(String tagKeyScope) {
+            return tagKeyScope(Output.of(tagKeyScope));
         }
+
         public Builder tagValueScope(@Nullable Output<String> tagValueScope) {
-            this.tagValueScope = tagValueScope;
+            $.tagValueScope = tagValueScope;
             return this;
         }
-        public Builder tagValueScope(@Nullable String tagValueScope) {
-            this.tagValueScope = Codegen.ofNullable(tagValueScope);
-            return this;
+
+        public Builder tagValueScope(String tagValueScope) {
+            return tagValueScope(Output.of(tagValueScope));
         }
+
         public Builder triggerTypes(@Nullable Output<List<String>> triggerTypes) {
-            this.triggerTypes = triggerTypes;
+            $.triggerTypes = triggerTypes;
             return this;
         }
-        public Builder triggerTypes(@Nullable List<String> triggerTypes) {
-            this.triggerTypes = Codegen.ofNullable(triggerTypes);
-            return this;
+
+        public Builder triggerTypes(List<String> triggerTypes) {
+            return triggerTypes(Output.of(triggerTypes));
         }
+
         public Builder triggerTypes(String... triggerTypes) {
             return triggerTypes(List.of(triggerTypes));
-        }        public OrganizationCustomRuleState build() {
-            return new OrganizationCustomRuleState(arn, description, excludedAccounts, inputParameters, lambdaFunctionArn, maximumExecutionFrequency, name, resourceIdScope, resourceTypesScopes, tagKeyScope, tagValueScope, triggerTypes);
+        }
+
+        public OrganizationCustomRuleState build() {
+            return $;
         }
     }
+
 }

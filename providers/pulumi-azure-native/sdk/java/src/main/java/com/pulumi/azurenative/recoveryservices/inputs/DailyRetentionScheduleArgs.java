@@ -6,10 +6,10 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DailyRetentionScheduleArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="retentionDuration")
-      private final @Nullable Output<RetentionDurationArgs> retentionDuration;
+    private @Nullable Output<RetentionDurationArgs> retentionDuration;
 
-    public Output<RetentionDurationArgs> retentionDuration() {
-        return this.retentionDuration == null ? Codegen.empty() : this.retentionDuration;
+    public Optional<Output<RetentionDurationArgs>> retentionDuration() {
+        return Optional.ofNullable(this.retentionDuration);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class DailyRetentionScheduleArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="retentionTimes")
-      private final @Nullable Output<List<String>> retentionTimes;
+    private @Nullable Output<List<String>> retentionTimes;
 
-    public Output<List<String>> retentionTimes() {
-        return this.retentionTimes == null ? Codegen.empty() : this.retentionTimes;
+    public Optional<Output<List<String>>> retentionTimes() {
+        return Optional.ofNullable(this.retentionTimes);
     }
 
-    public DailyRetentionScheduleArgs(
-        @Nullable Output<RetentionDurationArgs> retentionDuration,
-        @Nullable Output<List<String>> retentionTimes) {
-        this.retentionDuration = retentionDuration;
-        this.retentionTimes = retentionTimes;
-    }
+    private DailyRetentionScheduleArgs() {}
 
-    private DailyRetentionScheduleArgs() {
-        this.retentionDuration = Codegen.empty();
-        this.retentionTimes = Codegen.empty();
+    private DailyRetentionScheduleArgs(DailyRetentionScheduleArgs $) {
+        this.retentionDuration = $.retentionDuration;
+        this.retentionTimes = $.retentionTimes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DailyRetentionScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RetentionDurationArgs> retentionDuration;
-        private @Nullable Output<List<String>> retentionTimes;
+        private DailyRetentionScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DailyRetentionScheduleArgs();
         }
 
         public Builder(DailyRetentionScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retentionDuration = defaults.retentionDuration;
-    	      this.retentionTimes = defaults.retentionTimes;
+            $ = new DailyRetentionScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder retentionDuration(@Nullable Output<RetentionDurationArgs> retentionDuration) {
-            this.retentionDuration = retentionDuration;
+            $.retentionDuration = retentionDuration;
             return this;
         }
-        public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
-            this.retentionDuration = Codegen.ofNullable(retentionDuration);
-            return this;
+
+        public Builder retentionDuration(RetentionDurationArgs retentionDuration) {
+            return retentionDuration(Output.of(retentionDuration));
         }
+
         public Builder retentionTimes(@Nullable Output<List<String>> retentionTimes) {
-            this.retentionTimes = retentionTimes;
+            $.retentionTimes = retentionTimes;
             return this;
         }
-        public Builder retentionTimes(@Nullable List<String> retentionTimes) {
-            this.retentionTimes = Codegen.ofNullable(retentionTimes);
-            return this;
+
+        public Builder retentionTimes(List<String> retentionTimes) {
+            return retentionTimes(Output.of(retentionTimes));
         }
+
         public Builder retentionTimes(String... retentionTimes) {
             return retentionTimes(List.of(retentionTimes));
-        }        public DailyRetentionScheduleArgs build() {
-            return new DailyRetentionScheduleArgs(retentionDuration, retentionTimes);
+        }
+
+        public DailyRetentionScheduleArgs build() {
+            return $;
         }
     }
+
 }

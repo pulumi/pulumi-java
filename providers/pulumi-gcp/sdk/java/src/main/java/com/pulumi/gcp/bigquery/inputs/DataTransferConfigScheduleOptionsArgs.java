@@ -5,10 +5,10 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DataTransferConfigScheduleOptionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="disableAutoScheduling")
-      private final @Nullable Output<Boolean> disableAutoScheduling;
+    private @Nullable Output<Boolean> disableAutoScheduling;
 
-    public Output<Boolean> disableAutoScheduling() {
-        return this.disableAutoScheduling == null ? Codegen.empty() : this.disableAutoScheduling;
+    public Optional<Output<Boolean>> disableAutoScheduling() {
+        return Optional.ofNullable(this.disableAutoScheduling);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DataTransferConfigScheduleOptionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -54,76 +54,68 @@ public final class DataTransferConfigScheduleOptionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public DataTransferConfigScheduleOptionsArgs(
-        @Nullable Output<Boolean> disableAutoScheduling,
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> startTime) {
-        this.disableAutoScheduling = disableAutoScheduling;
-        this.endTime = endTime;
-        this.startTime = startTime;
-    }
+    private DataTransferConfigScheduleOptionsArgs() {}
 
-    private DataTransferConfigScheduleOptionsArgs() {
-        this.disableAutoScheduling = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private DataTransferConfigScheduleOptionsArgs(DataTransferConfigScheduleOptionsArgs $) {
+        this.disableAutoScheduling = $.disableAutoScheduling;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataTransferConfigScheduleOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableAutoScheduling;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> startTime;
+        private DataTransferConfigScheduleOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataTransferConfigScheduleOptionsArgs();
         }
 
         public Builder(DataTransferConfigScheduleOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableAutoScheduling = defaults.disableAutoScheduling;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new DataTransferConfigScheduleOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableAutoScheduling(@Nullable Output<Boolean> disableAutoScheduling) {
-            this.disableAutoScheduling = disableAutoScheduling;
+            $.disableAutoScheduling = disableAutoScheduling;
             return this;
         }
-        public Builder disableAutoScheduling(@Nullable Boolean disableAutoScheduling) {
-            this.disableAutoScheduling = Codegen.ofNullable(disableAutoScheduling);
-            return this;
+
+        public Builder disableAutoScheduling(Boolean disableAutoScheduling) {
+            return disableAutoScheduling(Output.of(disableAutoScheduling));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public DataTransferConfigScheduleOptionsArgs build() {
-            return new DataTransferConfigScheduleOptionsArgs(disableAutoScheduling, endTime, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public DataTransferConfigScheduleOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="circuitName", required=true)
-      private final String circuitName;
+    private String circuitName;
 
     public String circuitName() {
         return this.circuitName;
@@ -28,7 +28,7 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="connectionName", required=true)
-      private final String connectionName;
+    private String connectionName;
 
     public String connectionName() {
         return this.connectionName;
@@ -39,7 +39,7 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="peeringName", required=true)
-      private final String peeringName;
+    private String peeringName;
 
     public String peeringName() {
         return this.peeringName;
@@ -50,73 +50,66 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExpressRouteCircuitConnectionArgs(
-        String circuitName,
-        String connectionName,
-        String peeringName,
-        String resourceGroupName) {
-        this.circuitName = Objects.requireNonNull(circuitName, "expected parameter 'circuitName' to be non-null");
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.peeringName = Objects.requireNonNull(peeringName, "expected parameter 'peeringName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExpressRouteCircuitConnectionArgs() {}
 
-    private GetExpressRouteCircuitConnectionArgs() {
-        this.circuitName = null;
-        this.connectionName = null;
-        this.peeringName = null;
-        this.resourceGroupName = null;
+    private GetExpressRouteCircuitConnectionArgs(GetExpressRouteCircuitConnectionArgs $) {
+        this.circuitName = $.circuitName;
+        this.connectionName = $.connectionName;
+        this.peeringName = $.peeringName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExpressRouteCircuitConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String circuitName;
-        private String connectionName;
-        private String peeringName;
-        private String resourceGroupName;
+        private GetExpressRouteCircuitConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExpressRouteCircuitConnectionArgs();
         }
 
         public Builder(GetExpressRouteCircuitConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.circuitName = defaults.circuitName;
-    	      this.connectionName = defaults.connectionName;
-    	      this.peeringName = defaults.peeringName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExpressRouteCircuitConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder circuitName(String circuitName) {
-            this.circuitName = Objects.requireNonNull(circuitName);
+            $.circuitName = circuitName;
             return this;
         }
+
         public Builder connectionName(String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder peeringName(String peeringName) {
-            this.peeringName = Objects.requireNonNull(peeringName);
+            $.peeringName = peeringName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExpressRouteCircuitConnectionArgs build() {
-            return new GetExpressRouteCircuitConnectionArgs(circuitName, connectionName, peeringName, resourceGroupName);
+        }
+
+        public GetExpressRouteCircuitConnectionArgs build() {
+            $.circuitName = Objects.requireNonNull($.circuitName, "expected parameter 'circuitName' to be non-null");
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.peeringName = Objects.requireNonNull($.peeringName, "expected parameter 'peeringName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

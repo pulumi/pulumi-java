@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ScopedResourceSelectorRequirementArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ScopeSelectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchExpressions")
-      private final @Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
+    private @Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
 
-    public Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions() {
-        return this.matchExpressions == null ? Codegen.empty() : this.matchExpressions;
+    public Optional<Output<List<ScopedResourceSelectorRequirementArgs>>> matchExpressions() {
+        return Optional.ofNullable(this.matchExpressions);
     }
 
-    public ScopeSelectorArgs(@Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions) {
-        this.matchExpressions = matchExpressions;
-    }
+    private ScopeSelectorArgs() {}
 
-    private ScopeSelectorArgs() {
-        this.matchExpressions = Codegen.empty();
+    private ScopeSelectorArgs(ScopeSelectorArgs $) {
+        this.matchExpressions = $.matchExpressions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
+        private ScopeSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeSelectorArgs();
         }
 
         public Builder(ScopeSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchExpressions = defaults.matchExpressions;
+            $ = new ScopeSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder matchExpressions(@Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions) {
-            this.matchExpressions = matchExpressions;
+            $.matchExpressions = matchExpressions;
             return this;
         }
-        public Builder matchExpressions(@Nullable List<ScopedResourceSelectorRequirementArgs> matchExpressions) {
-            this.matchExpressions = Codegen.ofNullable(matchExpressions);
-            return this;
+
+        public Builder matchExpressions(List<ScopedResourceSelectorRequirementArgs> matchExpressions) {
+            return matchExpressions(Output.of(matchExpressions));
         }
+
         public Builder matchExpressions(ScopedResourceSelectorRequirementArgs... matchExpressions) {
             return matchExpressions(List.of(matchExpressions));
-        }        public ScopeSelectorArgs build() {
-            return new ScopeSelectorArgs(matchExpressions);
+        }
+
+        public ScopeSelectorArgs build() {
+            return $;
         }
     }
+
 }

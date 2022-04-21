@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,49 +28,49 @@ public final class PodReadinessGateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="conditionType", required=true)
-      private final Output<String> conditionType;
+    private Output<String> conditionType;
 
     public Output<String> conditionType() {
         return this.conditionType;
     }
 
-    public PodReadinessGateArgs(Output<String> conditionType) {
-        this.conditionType = Objects.requireNonNull(conditionType, "expected parameter 'conditionType' to be non-null");
-    }
+    private PodReadinessGateArgs() {}
 
-    private PodReadinessGateArgs() {
-        this.conditionType = Codegen.empty();
+    private PodReadinessGateArgs(PodReadinessGateArgs $) {
+        this.conditionType = $.conditionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodReadinessGateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> conditionType;
+        private PodReadinessGateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodReadinessGateArgs();
         }
 
         public Builder(PodReadinessGateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditionType = defaults.conditionType;
+            $ = new PodReadinessGateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditionType(Output<String> conditionType) {
-            this.conditionType = Objects.requireNonNull(conditionType);
+            $.conditionType = conditionType;
             return this;
         }
+
         public Builder conditionType(String conditionType) {
-            this.conditionType = Output.of(Objects.requireNonNull(conditionType));
-            return this;
-        }        public PodReadinessGateArgs build() {
-            return new PodReadinessGateArgs(conditionType);
+            return conditionType(Output.of(conditionType));
+        }
+
+        public PodReadinessGateArgs build() {
+            $.conditionType = Objects.requireNonNull($.conditionType, "expected parameter 'conditionType' to be non-null");
+            return $;
         }
     }
+
 }

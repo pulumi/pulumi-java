@@ -7,11 +7,11 @@ import com.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurat
 import com.pulumi.azurenative.hybridnetwork.inputs.NetworkInterfaceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class NetworkFunctionUserConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
+    private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceArgs>> networkInterfaces() {
-        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
+    public Optional<Output<List<NetworkInterfaceArgs>>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class NetworkFunctionUserConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
+    private @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
 
-    public Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile() {
-        return this.osProfile == null ? Codegen.empty() : this.osProfile;
+    public Optional<Output<NetworkFunctionUserConfigurationOsProfileArgs>> osProfile() {
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class NetworkFunctionUserConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="roleName")
-      private final @Nullable Output<String> roleName;
+    private @Nullable Output<String> roleName;
 
-    public Output<String> roleName() {
-        return this.roleName == null ? Codegen.empty() : this.roleName;
+    public Optional<Output<String>> roleName() {
+        return Optional.ofNullable(this.roleName);
     }
 
     /**
@@ -61,92 +61,82 @@ public final class NetworkFunctionUserConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="userDataParameters")
-      private final @Nullable Output<Object> userDataParameters;
+    private @Nullable Output<Object> userDataParameters;
 
-    public Output<Object> userDataParameters() {
-        return this.userDataParameters == null ? Codegen.empty() : this.userDataParameters;
+    public Optional<Output<Object>> userDataParameters() {
+        return Optional.ofNullable(this.userDataParameters);
     }
 
-    public NetworkFunctionUserConfigurationArgs(
-        @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile,
-        @Nullable Output<String> roleName,
-        @Nullable Output<Object> userDataParameters) {
-        this.networkInterfaces = networkInterfaces;
-        this.osProfile = osProfile;
-        this.roleName = roleName;
-        this.userDataParameters = userDataParameters;
-    }
+    private NetworkFunctionUserConfigurationArgs() {}
 
-    private NetworkFunctionUserConfigurationArgs() {
-        this.networkInterfaces = Codegen.empty();
-        this.osProfile = Codegen.empty();
-        this.roleName = Codegen.empty();
-        this.userDataParameters = Codegen.empty();
+    private NetworkFunctionUserConfigurationArgs(NetworkFunctionUserConfigurationArgs $) {
+        this.networkInterfaces = $.networkInterfaces;
+        this.osProfile = $.osProfile;
+        this.roleName = $.roleName;
+        this.userDataParameters = $.userDataParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkFunctionUserConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
-        private @Nullable Output<String> roleName;
-        private @Nullable Output<Object> userDataParameters;
+        private NetworkFunctionUserConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkFunctionUserConfigurationArgs();
         }
 
         public Builder(NetworkFunctionUserConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.osProfile = defaults.osProfile;
-    	      this.roleName = defaults.roleName;
-    	      this.userDataParameters = defaults.userDataParameters;
+            $ = new NetworkFunctionUserConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
-        public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
-            return this;
+
+        public Builder networkInterfaces(List<NetworkInterfaceArgs> networkInterfaces) {
+            return networkInterfaces(Output.of(networkInterfaces));
         }
+
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder osProfile(@Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
-        public Builder osProfile(@Nullable NetworkFunctionUserConfigurationOsProfileArgs osProfile) {
-            this.osProfile = Codegen.ofNullable(osProfile);
-            return this;
+
+        public Builder osProfile(NetworkFunctionUserConfigurationOsProfileArgs osProfile) {
+            return osProfile(Output.of(osProfile));
         }
+
         public Builder roleName(@Nullable Output<String> roleName) {
-            this.roleName = roleName;
+            $.roleName = roleName;
             return this;
         }
-        public Builder roleName(@Nullable String roleName) {
-            this.roleName = Codegen.ofNullable(roleName);
-            return this;
+
+        public Builder roleName(String roleName) {
+            return roleName(Output.of(roleName));
         }
+
         public Builder userDataParameters(@Nullable Output<Object> userDataParameters) {
-            this.userDataParameters = userDataParameters;
+            $.userDataParameters = userDataParameters;
             return this;
         }
-        public Builder userDataParameters(@Nullable Object userDataParameters) {
-            this.userDataParameters = Codegen.ofNullable(userDataParameters);
-            return this;
-        }        public NetworkFunctionUserConfigurationArgs build() {
-            return new NetworkFunctionUserConfigurationArgs(networkInterfaces, osProfile, roleName, userDataParameters);
+
+        public Builder userDataParameters(Object userDataParameters) {
+            return userDataParameters(Output.of(userDataParameters));
+        }
+
+        public NetworkFunctionUserConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -29,7 +29,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
      * 
      */
     @Import(name="annotationEndBoundary", required=true)
-      private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary;
+    private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary;
 
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary() {
         return this.annotationEndBoundary;
@@ -40,7 +40,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
      * 
      */
     @Import(name="annotationStartBoundary", required=true)
-      private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary;
+    private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary;
 
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary() {
         return this.annotationStartBoundary;
@@ -51,7 +51,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
      * 
      */
     @Import(name="channelTag", required=true)
-      private final Integer channelTag;
+    private Integer channelTag;
 
     public Integer channelTag() {
         return this.channelTag;
@@ -62,7 +62,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
      * 
      */
     @Import(name="entityMentionData", required=true)
-      private final GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData;
+    private GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData;
 
     public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData() {
         return this.entityMentionData;
@@ -73,7 +73,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
      * 
      */
     @Import(name="holdData", required=true)
-      private final GoogleCloudContactcenterinsightsV1HoldDataResponse holdData;
+    private GoogleCloudContactcenterinsightsV1HoldDataResponse holdData;
 
     public GoogleCloudContactcenterinsightsV1HoldDataResponse holdData() {
         return this.holdData;
@@ -84,7 +84,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
      * 
      */
     @Import(name="intentMatchData", required=true)
-      private final GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData;
+    private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData;
 
     public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData() {
         return this.intentMatchData;
@@ -95,7 +95,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
      * 
      */
     @Import(name="interruptionData", required=true)
-      private final GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData;
+    private GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData;
 
     public GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData() {
         return this.interruptionData;
@@ -106,7 +106,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
      * 
      */
     @Import(name="phraseMatchData", required=true)
-      private final GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData;
+    private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData;
 
     public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData() {
         return this.phraseMatchData;
@@ -117,7 +117,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
      * 
      */
     @Import(name="sentimentData", required=true)
-      private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
+    private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData() {
         return this.sentimentData;
@@ -128,127 +128,108 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
      * 
      */
     @Import(name="silenceData", required=true)
-      private final GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData;
+    private GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData;
 
     public GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData() {
         return this.silenceData;
     }
 
-    public GoogleCloudContactcenterinsightsV1CallAnnotationResponse(
-        GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary,
-        GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary,
-        Integer channelTag,
-        GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData,
-        GoogleCloudContactcenterinsightsV1HoldDataResponse holdData,
-        GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData,
-        GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData,
-        GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData,
-        GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData,
-        GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
-        this.annotationEndBoundary = Objects.requireNonNull(annotationEndBoundary, "expected parameter 'annotationEndBoundary' to be non-null");
-        this.annotationStartBoundary = Objects.requireNonNull(annotationStartBoundary, "expected parameter 'annotationStartBoundary' to be non-null");
-        this.channelTag = Objects.requireNonNull(channelTag, "expected parameter 'channelTag' to be non-null");
-        this.entityMentionData = Objects.requireNonNull(entityMentionData, "expected parameter 'entityMentionData' to be non-null");
-        this.holdData = Objects.requireNonNull(holdData, "expected parameter 'holdData' to be non-null");
-        this.intentMatchData = Objects.requireNonNull(intentMatchData, "expected parameter 'intentMatchData' to be non-null");
-        this.interruptionData = Objects.requireNonNull(interruptionData, "expected parameter 'interruptionData' to be non-null");
-        this.phraseMatchData = Objects.requireNonNull(phraseMatchData, "expected parameter 'phraseMatchData' to be non-null");
-        this.sentimentData = Objects.requireNonNull(sentimentData, "expected parameter 'sentimentData' to be non-null");
-        this.silenceData = Objects.requireNonNull(silenceData, "expected parameter 'silenceData' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1CallAnnotationResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1CallAnnotationResponse() {
-        this.annotationEndBoundary = null;
-        this.annotationStartBoundary = null;
-        this.channelTag = null;
-        this.entityMentionData = null;
-        this.holdData = null;
-        this.intentMatchData = null;
-        this.interruptionData = null;
-        this.phraseMatchData = null;
-        this.sentimentData = null;
-        this.silenceData = null;
+    private GoogleCloudContactcenterinsightsV1CallAnnotationResponse(GoogleCloudContactcenterinsightsV1CallAnnotationResponse $) {
+        this.annotationEndBoundary = $.annotationEndBoundary;
+        this.annotationStartBoundary = $.annotationStartBoundary;
+        this.channelTag = $.channelTag;
+        this.entityMentionData = $.entityMentionData;
+        this.holdData = $.holdData;
+        this.intentMatchData = $.intentMatchData;
+        this.interruptionData = $.interruptionData;
+        this.phraseMatchData = $.phraseMatchData;
+        this.sentimentData = $.sentimentData;
+        this.silenceData = $.silenceData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1CallAnnotationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary;
-        private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary;
-        private Integer channelTag;
-        private GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData;
-        private GoogleCloudContactcenterinsightsV1HoldDataResponse holdData;
-        private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData;
-        private GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData;
-        private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData;
-        private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
-        private GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData;
+        private GoogleCloudContactcenterinsightsV1CallAnnotationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1CallAnnotationResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1CallAnnotationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationEndBoundary = defaults.annotationEndBoundary;
-    	      this.annotationStartBoundary = defaults.annotationStartBoundary;
-    	      this.channelTag = defaults.channelTag;
-    	      this.entityMentionData = defaults.entityMentionData;
-    	      this.holdData = defaults.holdData;
-    	      this.intentMatchData = defaults.intentMatchData;
-    	      this.interruptionData = defaults.interruptionData;
-    	      this.phraseMatchData = defaults.phraseMatchData;
-    	      this.sentimentData = defaults.sentimentData;
-    	      this.silenceData = defaults.silenceData;
+            $ = new GoogleCloudContactcenterinsightsV1CallAnnotationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationEndBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary) {
-            this.annotationEndBoundary = Objects.requireNonNull(annotationEndBoundary);
+            $.annotationEndBoundary = annotationEndBoundary;
             return this;
         }
+
         public Builder annotationStartBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary) {
-            this.annotationStartBoundary = Objects.requireNonNull(annotationStartBoundary);
+            $.annotationStartBoundary = annotationStartBoundary;
             return this;
         }
+
         public Builder channelTag(Integer channelTag) {
-            this.channelTag = Objects.requireNonNull(channelTag);
+            $.channelTag = channelTag;
             return this;
         }
+
         public Builder entityMentionData(GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData) {
-            this.entityMentionData = Objects.requireNonNull(entityMentionData);
+            $.entityMentionData = entityMentionData;
             return this;
         }
+
         public Builder holdData(GoogleCloudContactcenterinsightsV1HoldDataResponse holdData) {
-            this.holdData = Objects.requireNonNull(holdData);
+            $.holdData = holdData;
             return this;
         }
+
         public Builder intentMatchData(GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData) {
-            this.intentMatchData = Objects.requireNonNull(intentMatchData);
+            $.intentMatchData = intentMatchData;
             return this;
         }
+
         public Builder interruptionData(GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData) {
-            this.interruptionData = Objects.requireNonNull(interruptionData);
+            $.interruptionData = interruptionData;
             return this;
         }
+
         public Builder phraseMatchData(GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData) {
-            this.phraseMatchData = Objects.requireNonNull(phraseMatchData);
+            $.phraseMatchData = phraseMatchData;
             return this;
         }
+
         public Builder sentimentData(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
-            this.sentimentData = Objects.requireNonNull(sentimentData);
+            $.sentimentData = sentimentData;
             return this;
         }
+
         public Builder silenceData(GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
-            this.silenceData = Objects.requireNonNull(silenceData);
+            $.silenceData = silenceData;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1CallAnnotationResponse build() {
-            return new GoogleCloudContactcenterinsightsV1CallAnnotationResponse(annotationEndBoundary, annotationStartBoundary, channelTag, entityMentionData, holdData, intentMatchData, interruptionData, phraseMatchData, sentimentData, silenceData);
+        }
+
+        public GoogleCloudContactcenterinsightsV1CallAnnotationResponse build() {
+            $.annotationEndBoundary = Objects.requireNonNull($.annotationEndBoundary, "expected parameter 'annotationEndBoundary' to be non-null");
+            $.annotationStartBoundary = Objects.requireNonNull($.annotationStartBoundary, "expected parameter 'annotationStartBoundary' to be non-null");
+            $.channelTag = Objects.requireNonNull($.channelTag, "expected parameter 'channelTag' to be non-null");
+            $.entityMentionData = Objects.requireNonNull($.entityMentionData, "expected parameter 'entityMentionData' to be non-null");
+            $.holdData = Objects.requireNonNull($.holdData, "expected parameter 'holdData' to be non-null");
+            $.intentMatchData = Objects.requireNonNull($.intentMatchData, "expected parameter 'intentMatchData' to be non-null");
+            $.interruptionData = Objects.requireNonNull($.interruptionData, "expected parameter 'interruptionData' to be non-null");
+            $.phraseMatchData = Objects.requireNonNull($.phraseMatchData, "expected parameter 'phraseMatchData' to be non-null");
+            $.sentimentData = Objects.requireNonNull($.sentimentData, "expected parameter 'sentimentData' to be non-null");
+            $.silenceData = Objects.requireNonNull($.silenceData, "expected parameter 'silenceData' to be non-null");
+            return $;
         }
     }
+
 }

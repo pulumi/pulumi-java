@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.securityhub;
 
-import java.util.Objects;
+
 
 
 public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
-    public AccountArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AccountArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AccountArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AccountArgs();
         }
         public AccountArgs build() {
-            return new AccountArgs();
+            return $;
         }
     }
+
 }

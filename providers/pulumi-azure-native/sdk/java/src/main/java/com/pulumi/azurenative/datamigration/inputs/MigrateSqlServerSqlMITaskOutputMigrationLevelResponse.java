@@ -23,7 +23,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="agentJobs", required=true)
-      private final Map<String,String> agentJobs;
+    private Map<String,String> agentJobs;
 
     public Map<String,String> agentJobs() {
         return this.agentJobs;
@@ -34,7 +34,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="databases", required=true)
-      private final Map<String,String> databases;
+    private Map<String,String> databases;
 
     public Map<String,String> databases() {
         return this.databases;
@@ -45,7 +45,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -56,7 +56,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
-      private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+    private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -67,7 +67,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -78,7 +78,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="logins", required=true)
-      private final Map<String,String> logins;
+    private Map<String,String> logins;
 
     public Map<String,String> logins() {
         return this.logins;
@@ -89,7 +89,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -100,7 +100,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="orphanedUsersInfo", required=true)
-      private final List<OrphanedUserInfoResponse> orphanedUsersInfo;
+    private List<OrphanedUserInfoResponse> orphanedUsersInfo;
 
     public List<OrphanedUserInfoResponse> orphanedUsersInfo() {
         return this.orphanedUsersInfo;
@@ -112,7 +112,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -123,7 +123,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="serverRoleResults", required=true)
-      private final Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
+    private Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
 
     public Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults() {
         return this.serverRoleResults;
@@ -134,7 +134,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="sourceServerBrandVersion", required=true)
-      private final String sourceServerBrandVersion;
+    private String sourceServerBrandVersion;
 
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
@@ -145,7 +145,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="sourceServerVersion", required=true)
-      private final String sourceServerVersion;
+    private String sourceServerVersion;
 
     public String sourceServerVersion() {
         return this.sourceServerVersion;
@@ -156,7 +156,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -167,7 +167,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -178,7 +178,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -189,7 +189,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="targetServerBrandVersion", required=true)
-      private final String targetServerBrandVersion;
+    private String targetServerBrandVersion;
 
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -200,196 +200,165 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="targetServerVersion", required=true)
-      private final String targetServerVersion;
+    private String targetServerVersion;
 
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
 
-    public MigrateSqlServerSqlMITaskOutputMigrationLevelResponse(
-        Map<String,String> agentJobs,
-        Map<String,String> databases,
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        Map<String,String> logins,
-        String message,
-        List<OrphanedUserInfoResponse> orphanedUsersInfo,
-        String resultType,
-        Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        String startedOn,
-        String state,
-        String status,
-        String targetServerBrandVersion,
-        String targetServerVersion) {
-        this.agentJobs = Objects.requireNonNull(agentJobs, "expected parameter 'agentJobs' to be non-null");
-        this.databases = Objects.requireNonNull(databases, "expected parameter 'databases' to be non-null");
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.logins = Objects.requireNonNull(logins, "expected parameter 'logins' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.orphanedUsersInfo = Objects.requireNonNull(orphanedUsersInfo, "expected parameter 'orphanedUsersInfo' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.serverRoleResults = Objects.requireNonNull(serverRoleResults, "expected parameter 'serverRoleResults' to be non-null");
-        this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion, "expected parameter 'sourceServerBrandVersion' to be non-null");
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
-    }
+    private MigrateSqlServerSqlMITaskOutputMigrationLevelResponse() {}
 
-    private MigrateSqlServerSqlMITaskOutputMigrationLevelResponse() {
-        this.agentJobs = Map.of();
-        this.databases = Map.of();
-        this.endedOn = null;
-        this.exceptionsAndWarnings = List.of();
-        this.id = null;
-        this.logins = Map.of();
-        this.message = null;
-        this.orphanedUsersInfo = List.of();
-        this.resultType = null;
-        this.serverRoleResults = Map.of();
-        this.sourceServerBrandVersion = null;
-        this.sourceServerVersion = null;
-        this.startedOn = null;
-        this.state = null;
-        this.status = null;
-        this.targetServerBrandVersion = null;
-        this.targetServerVersion = null;
+    private MigrateSqlServerSqlMITaskOutputMigrationLevelResponse(MigrateSqlServerSqlMITaskOutputMigrationLevelResponse $) {
+        this.agentJobs = $.agentJobs;
+        this.databases = $.databases;
+        this.endedOn = $.endedOn;
+        this.exceptionsAndWarnings = $.exceptionsAndWarnings;
+        this.id = $.id;
+        this.logins = $.logins;
+        this.message = $.message;
+        this.orphanedUsersInfo = $.orphanedUsersInfo;
+        this.resultType = $.resultType;
+        this.serverRoleResults = $.serverRoleResults;
+        this.sourceServerBrandVersion = $.sourceServerBrandVersion;
+        this.sourceServerVersion = $.sourceServerVersion;
+        this.startedOn = $.startedOn;
+        this.state = $.state;
+        this.status = $.status;
+        this.targetServerBrandVersion = $.targetServerBrandVersion;
+        this.targetServerVersion = $.targetServerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlMITaskOutputMigrationLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> agentJobs;
-        private Map<String,String> databases;
-        private String endedOn;
-        private List<ReportableExceptionResponse> exceptionsAndWarnings;
-        private String id;
-        private Map<String,String> logins;
-        private String message;
-        private List<OrphanedUserInfoResponse> orphanedUsersInfo;
-        private String resultType;
-        private Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
-        private String sourceServerBrandVersion;
-        private String sourceServerVersion;
-        private String startedOn;
-        private String state;
-        private String status;
-        private String targetServerBrandVersion;
-        private String targetServerVersion;
+        private MigrateSqlServerSqlMITaskOutputMigrationLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlMITaskOutputMigrationLevelResponse();
         }
 
         public Builder(MigrateSqlServerSqlMITaskOutputMigrationLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentJobs = defaults.agentJobs;
-    	      this.databases = defaults.databases;
-    	      this.endedOn = defaults.endedOn;
-    	      this.exceptionsAndWarnings = defaults.exceptionsAndWarnings;
-    	      this.id = defaults.id;
-    	      this.logins = defaults.logins;
-    	      this.message = defaults.message;
-    	      this.orphanedUsersInfo = defaults.orphanedUsersInfo;
-    	      this.resultType = defaults.resultType;
-    	      this.serverRoleResults = defaults.serverRoleResults;
-    	      this.sourceServerBrandVersion = defaults.sourceServerBrandVersion;
-    	      this.sourceServerVersion = defaults.sourceServerVersion;
-    	      this.startedOn = defaults.startedOn;
-    	      this.state = defaults.state;
-    	      this.status = defaults.status;
-    	      this.targetServerBrandVersion = defaults.targetServerBrandVersion;
-    	      this.targetServerVersion = defaults.targetServerVersion;
+            $ = new MigrateSqlServerSqlMITaskOutputMigrationLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentJobs(Map<String,String> agentJobs) {
-            this.agentJobs = Objects.requireNonNull(agentJobs);
+            $.agentJobs = agentJobs;
             return this;
         }
+
         public Builder databases(Map<String,String> databases) {
-            this.databases = Objects.requireNonNull(databases);
+            $.databases = databases;
             return this;
         }
+
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
-            this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
+            $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
+
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder logins(Map<String,String> logins) {
-            this.logins = Objects.requireNonNull(logins);
+            $.logins = logins;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder orphanedUsersInfo(List<OrphanedUserInfoResponse> orphanedUsersInfo) {
-            this.orphanedUsersInfo = Objects.requireNonNull(orphanedUsersInfo);
+            $.orphanedUsersInfo = orphanedUsersInfo;
             return this;
         }
+
         public Builder orphanedUsersInfo(OrphanedUserInfoResponse... orphanedUsersInfo) {
             return orphanedUsersInfo(List.of(orphanedUsersInfo));
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder serverRoleResults(Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults) {
-            this.serverRoleResults = Objects.requireNonNull(serverRoleResults);
+            $.serverRoleResults = serverRoleResults;
             return this;
         }
+
         public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
-            this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
+            $.sourceServerBrandVersion = sourceServerBrandVersion;
             return this;
         }
+
         public Builder sourceServerVersion(String sourceServerVersion) {
-            this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
+            $.sourceServerVersion = sourceServerVersion;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
-            this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
+            $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
+
         public Builder targetServerVersion(String targetServerVersion) {
-            this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+            $.targetServerVersion = targetServerVersion;
             return this;
-        }        public MigrateSqlServerSqlMITaskOutputMigrationLevelResponse build() {
-            return new MigrateSqlServerSqlMITaskOutputMigrationLevelResponse(agentJobs, databases, endedOn, exceptionsAndWarnings, id, logins, message, orphanedUsersInfo, resultType, serverRoleResults, sourceServerBrandVersion, sourceServerVersion, startedOn, state, status, targetServerBrandVersion, targetServerVersion);
+        }
+
+        public MigrateSqlServerSqlMITaskOutputMigrationLevelResponse build() {
+            $.agentJobs = Objects.requireNonNull($.agentJobs, "expected parameter 'agentJobs' to be non-null");
+            $.databases = Objects.requireNonNull($.databases, "expected parameter 'databases' to be non-null");
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.exceptionsAndWarnings = Objects.requireNonNull($.exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.logins = Objects.requireNonNull($.logins, "expected parameter 'logins' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.orphanedUsersInfo = Objects.requireNonNull($.orphanedUsersInfo, "expected parameter 'orphanedUsersInfo' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.serverRoleResults = Objects.requireNonNull($.serverRoleResults, "expected parameter 'serverRoleResults' to be non-null");
+            $.sourceServerBrandVersion = Objects.requireNonNull($.sourceServerBrandVersion, "expected parameter 'sourceServerBrandVersion' to be non-null");
+            $.sourceServerVersion = Objects.requireNonNull($.sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.targetServerBrandVersion = Objects.requireNonNull($.targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
+            $.targetServerVersion = Objects.requireNonNull($.targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
+            return $;
         }
     }
+
 }

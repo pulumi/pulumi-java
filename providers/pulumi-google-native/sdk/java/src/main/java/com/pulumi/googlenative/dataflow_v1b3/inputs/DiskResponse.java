@@ -22,7 +22,7 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
@@ -33,7 +33,7 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mountPoint", required=true)
-      private final String mountPoint;
+    private String mountPoint;
 
     public String mountPoint() {
         return this.mountPoint;
@@ -44,64 +44,59 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sizeGb", required=true)
-      private final Integer sizeGb;
+    private Integer sizeGb;
 
     public Integer sizeGb() {
         return this.sizeGb;
     }
 
-    public DiskResponse(
-        String diskType,
-        String mountPoint,
-        Integer sizeGb) {
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.mountPoint = Objects.requireNonNull(mountPoint, "expected parameter 'mountPoint' to be non-null");
-        this.sizeGb = Objects.requireNonNull(sizeGb, "expected parameter 'sizeGb' to be non-null");
-    }
+    private DiskResponse() {}
 
-    private DiskResponse() {
-        this.diskType = null;
-        this.mountPoint = null;
-        this.sizeGb = null;
+    private DiskResponse(DiskResponse $) {
+        this.diskType = $.diskType;
+        this.mountPoint = $.mountPoint;
+        this.sizeGb = $.sizeGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskType;
-        private String mountPoint;
-        private Integer sizeGb;
+        private DiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskResponse();
         }
 
         public Builder(DiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskType = defaults.diskType;
-    	      this.mountPoint = defaults.mountPoint;
-    	      this.sizeGb = defaults.sizeGb;
+            $ = new DiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder mountPoint(String mountPoint) {
-            this.mountPoint = Objects.requireNonNull(mountPoint);
+            $.mountPoint = mountPoint;
             return this;
         }
+
         public Builder sizeGb(Integer sizeGb) {
-            this.sizeGb = Objects.requireNonNull(sizeGb);
+            $.sizeGb = sizeGb;
             return this;
-        }        public DiskResponse build() {
-            return new DiskResponse(diskType, mountPoint, sizeGb);
+        }
+
+        public DiskResponse build() {
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.mountPoint = Objects.requireNonNull($.mountPoint, "expected parameter 'mountPoint' to be non-null");
+            $.sizeGb = Objects.requireNonNull($.sizeGb, "expected parameter 'sizeGb' to be non-null");
+            return $;
         }
     }
+
 }

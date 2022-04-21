@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudbuild_v1alpha2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1alpha2.inputs.NetworkConfigArgs;
 import com.pulumi.googlenative.cloudbuild_v1alpha2.inputs.WorkerConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +22,17 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-      private final @Nullable Output<NetworkConfigArgs> networkConfig;
+    private @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Output<NetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<NetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
@@ -51,109 +51,97 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerConfig")
-      private final @Nullable Output<WorkerConfigArgs> workerConfig;
+    private @Nullable Output<WorkerConfigArgs> workerConfig;
 
-    public Output<WorkerConfigArgs> workerConfig() {
-        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
+    public Optional<Output<WorkerConfigArgs>> workerConfig() {
+        return Optional.ofNullable(this.workerConfig);
     }
 
     @Import(name="workerPoolId", required=true)
-      private final Output<String> workerPoolId;
+    private Output<String> workerPoolId;
 
     public Output<String> workerPoolId() {
         return this.workerPoolId;
     }
 
-    public WorkerPoolArgs(
-        @Nullable Output<NetworkConfigArgs> networkConfig,
-        @Nullable Output<String> project,
-        Output<String> region,
-        @Nullable Output<WorkerConfigArgs> workerConfig,
-        Output<String> workerPoolId) {
-        this.networkConfig = networkConfig;
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.workerConfig = workerConfig;
-        this.workerPoolId = Objects.requireNonNull(workerPoolId, "expected parameter 'workerPoolId' to be non-null");
-    }
+    private WorkerPoolArgs() {}
 
-    private WorkerPoolArgs() {
-        this.networkConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.workerConfig = Codegen.empty();
-        this.workerPoolId = Codegen.empty();
+    private WorkerPoolArgs(WorkerPoolArgs $) {
+        this.networkConfig = $.networkConfig;
+        this.project = $.project;
+        this.region = $.region;
+        this.workerConfig = $.workerConfig;
+        this.workerPoolId = $.workerPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkConfigArgs> networkConfig;
-        private @Nullable Output<String> project;
-        private Output<String> region;
-        private @Nullable Output<WorkerConfigArgs> workerConfig;
-        private Output<String> workerPoolId;
+        private WorkerPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerPoolArgs();
         }
 
         public Builder(WorkerPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.workerConfig = defaults.workerConfig;
-    	      this.workerPoolId = defaults.workerPoolId;
+            $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(NetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
-            this.workerConfig = workerConfig;
+            $.workerConfig = workerConfig;
             return this;
         }
-        public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
-            this.workerConfig = Codegen.ofNullable(workerConfig);
-            return this;
+
+        public Builder workerConfig(WorkerConfigArgs workerConfig) {
+            return workerConfig(Output.of(workerConfig));
         }
+
         public Builder workerPoolId(Output<String> workerPoolId) {
-            this.workerPoolId = Objects.requireNonNull(workerPoolId);
+            $.workerPoolId = workerPoolId;
             return this;
         }
+
         public Builder workerPoolId(String workerPoolId) {
-            this.workerPoolId = Output.of(Objects.requireNonNull(workerPoolId));
-            return this;
-        }        public WorkerPoolArgs build() {
-            return new WorkerPoolArgs(networkConfig, project, region, workerConfig, workerPoolId);
+            return workerPoolId(Output.of(workerPoolId));
+        }
+
+        public WorkerPoolArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.workerPoolId = Objects.requireNonNull($.workerPoolId, "expected parameter 'workerPoolId' to be non-null");
+            return $;
         }
     }
+
 }

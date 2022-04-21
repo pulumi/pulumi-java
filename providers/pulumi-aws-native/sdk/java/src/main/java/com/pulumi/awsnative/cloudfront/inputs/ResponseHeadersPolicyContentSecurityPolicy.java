@@ -14,62 +14,59 @@ public final class ResponseHeadersPolicyContentSecurityPolicy extends com.pulumi
     public static final ResponseHeadersPolicyContentSecurityPolicy Empty = new ResponseHeadersPolicyContentSecurityPolicy();
 
     @Import(name="contentSecurityPolicy", required=true)
-      private final String contentSecurityPolicy;
+    private String contentSecurityPolicy;
 
     public String contentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
 
     @Import(name="override", required=true)
-      private final Boolean override;
+    private Boolean override;
 
     public Boolean override() {
         return this.override;
     }
 
-    public ResponseHeadersPolicyContentSecurityPolicy(
-        String contentSecurityPolicy,
-        Boolean override) {
-        this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy, "expected parameter 'contentSecurityPolicy' to be non-null");
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-    }
+    private ResponseHeadersPolicyContentSecurityPolicy() {}
 
-    private ResponseHeadersPolicyContentSecurityPolicy() {
-        this.contentSecurityPolicy = null;
-        this.override = null;
+    private ResponseHeadersPolicyContentSecurityPolicy(ResponseHeadersPolicyContentSecurityPolicy $) {
+        this.contentSecurityPolicy = $.contentSecurityPolicy;
+        this.override = $.override;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyContentSecurityPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contentSecurityPolicy;
-        private Boolean override;
+        private ResponseHeadersPolicyContentSecurityPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyContentSecurityPolicy();
         }
 
         public Builder(ResponseHeadersPolicyContentSecurityPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentSecurityPolicy = defaults.contentSecurityPolicy;
-    	      this.override = defaults.override;
+            $ = new ResponseHeadersPolicyContentSecurityPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder contentSecurityPolicy(String contentSecurityPolicy) {
-            this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
+            $.contentSecurityPolicy = contentSecurityPolicy;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
-        }        public ResponseHeadersPolicyContentSecurityPolicy build() {
-            return new ResponseHeadersPolicyContentSecurityPolicy(contentSecurityPolicy, override);
+        }
+
+        public ResponseHeadersPolicyContentSecurityPolicy build() {
+            $.contentSecurityPolicy = Objects.requireNonNull($.contentSecurityPolicy, "expected parameter 'contentSecurityPolicy' to be non-null");
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

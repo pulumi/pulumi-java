@@ -19,45 +19,44 @@ public final class ClusterConfiguration extends com.pulumi.resources.InvokeArgs 
     public static final ClusterConfiguration Empty = new ClusterConfiguration();
 
     @Import(name="executeCommandConfiguration")
-      private final @Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration;
+    private @Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration;
 
     public Optional<ClusterExecuteCommandConfiguration> executeCommandConfiguration() {
-        return this.executeCommandConfiguration == null ? Optional.empty() : Optional.ofNullable(this.executeCommandConfiguration);
+        return Optional.ofNullable(this.executeCommandConfiguration);
     }
 
-    public ClusterConfiguration(@Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration) {
-        this.executeCommandConfiguration = executeCommandConfiguration;
-    }
+    private ClusterConfiguration() {}
 
-    private ClusterConfiguration() {
-        this.executeCommandConfiguration = null;
+    private ClusterConfiguration(ClusterConfiguration $) {
+        this.executeCommandConfiguration = $.executeCommandConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration;
+        private ClusterConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterConfiguration();
         }
 
         public Builder(ClusterConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executeCommandConfiguration = defaults.executeCommandConfiguration;
+            $ = new ClusterConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder executeCommandConfiguration(@Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration) {
-            this.executeCommandConfiguration = executeCommandConfiguration;
+            $.executeCommandConfiguration = executeCommandConfiguration;
             return this;
-        }        public ClusterConfiguration build() {
-            return new ClusterConfiguration(executeCommandConfiguration);
+        }
+
+        public ClusterConfiguration build() {
+            return $;
         }
     }
+
 }

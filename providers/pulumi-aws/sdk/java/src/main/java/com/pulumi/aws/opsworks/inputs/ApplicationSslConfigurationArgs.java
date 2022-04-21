@@ -5,9 +5,9 @@ package com.pulumi.aws.opsworks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApplicationSslConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="certificate", required=true)
-      private final Output<String> certificate;
+    private Output<String> certificate;
 
     public Output<String> certificate() {
         return this.certificate;
@@ -31,10 +31,10 @@ public final class ApplicationSslConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="chain")
-      private final @Nullable Output<String> chain;
+    private @Nullable Output<String> chain;
 
-    public Output<String> chain() {
-        return this.chain == null ? Codegen.empty() : this.chain;
+    public Optional<Output<String>> chain() {
+        return Optional.ofNullable(this.chain);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class ApplicationSslConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="privateKey", required=true)
-      private final Output<String> privateKey;
+    private Output<String> privateKey;
 
     public Output<String> privateKey() {
         return this.privateKey;
     }
 
-    public ApplicationSslConfigurationArgs(
-        Output<String> certificate,
-        @Nullable Output<String> chain,
-        Output<String> privateKey) {
-        this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
-        this.chain = chain;
-        this.privateKey = Objects.requireNonNull(privateKey, "expected parameter 'privateKey' to be non-null");
-    }
+    private ApplicationSslConfigurationArgs() {}
 
-    private ApplicationSslConfigurationArgs() {
-        this.certificate = Codegen.empty();
-        this.chain = Codegen.empty();
-        this.privateKey = Codegen.empty();
+    private ApplicationSslConfigurationArgs(ApplicationSslConfigurationArgs $) {
+        this.certificate = $.certificate;
+        this.chain = $.chain;
+        this.privateKey = $.privateKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationSslConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificate;
-        private @Nullable Output<String> chain;
-        private Output<String> privateKey;
+        private ApplicationSslConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationSslConfigurationArgs();
         }
 
         public Builder(ApplicationSslConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.chain = defaults.chain;
-    	      this.privateKey = defaults.privateKey;
+            $ = new ApplicationSslConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(Output<String> certificate) {
-            this.certificate = Objects.requireNonNull(certificate);
+            $.certificate = certificate;
             return this;
         }
+
         public Builder certificate(String certificate) {
-            this.certificate = Output.of(Objects.requireNonNull(certificate));
-            return this;
+            return certificate(Output.of(certificate));
         }
+
         public Builder chain(@Nullable Output<String> chain) {
-            this.chain = chain;
+            $.chain = chain;
             return this;
         }
-        public Builder chain(@Nullable String chain) {
-            this.chain = Codegen.ofNullable(chain);
-            return this;
+
+        public Builder chain(String chain) {
+            return chain(Output.of(chain));
         }
+
         public Builder privateKey(Output<String> privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey);
+            $.privateKey = privateKey;
             return this;
         }
+
         public Builder privateKey(String privateKey) {
-            this.privateKey = Output.of(Objects.requireNonNull(privateKey));
-            return this;
-        }        public ApplicationSslConfigurationArgs build() {
-            return new ApplicationSslConfigurationArgs(certificate, chain, privateKey);
+            return privateKey(Output.of(privateKey));
+        }
+
+        public ApplicationSslConfigurationArgs build() {
+            $.certificate = Objects.requireNonNull($.certificate, "expected parameter 'certificate' to be non-null");
+            $.privateKey = Objects.requireNonNull($.privateKey, "expected parameter 'privateKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,78 +14,73 @@ public final class GetResourcePolicyGroupPlacementPolicy extends com.pulumi.reso
     public static final GetResourcePolicyGroupPlacementPolicy Empty = new GetResourcePolicyGroupPlacementPolicy();
 
     @Import(name="availabilityDomainCount", required=true)
-      private final Integer availabilityDomainCount;
+    private Integer availabilityDomainCount;
 
     public Integer availabilityDomainCount() {
         return this.availabilityDomainCount;
     }
 
     @Import(name="collocation", required=true)
-      private final String collocation;
+    private String collocation;
 
     public String collocation() {
         return this.collocation;
     }
 
     @Import(name="vmCount", required=true)
-      private final Integer vmCount;
+    private Integer vmCount;
 
     public Integer vmCount() {
         return this.vmCount;
     }
 
-    public GetResourcePolicyGroupPlacementPolicy(
-        Integer availabilityDomainCount,
-        String collocation,
-        Integer vmCount) {
-        this.availabilityDomainCount = Objects.requireNonNull(availabilityDomainCount, "expected parameter 'availabilityDomainCount' to be non-null");
-        this.collocation = Objects.requireNonNull(collocation, "expected parameter 'collocation' to be non-null");
-        this.vmCount = Objects.requireNonNull(vmCount, "expected parameter 'vmCount' to be non-null");
-    }
+    private GetResourcePolicyGroupPlacementPolicy() {}
 
-    private GetResourcePolicyGroupPlacementPolicy() {
-        this.availabilityDomainCount = null;
-        this.collocation = null;
-        this.vmCount = null;
+    private GetResourcePolicyGroupPlacementPolicy(GetResourcePolicyGroupPlacementPolicy $) {
+        this.availabilityDomainCount = $.availabilityDomainCount;
+        this.collocation = $.collocation;
+        this.vmCount = $.vmCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcePolicyGroupPlacementPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer availabilityDomainCount;
-        private String collocation;
-        private Integer vmCount;
+        private GetResourcePolicyGroupPlacementPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcePolicyGroupPlacementPolicy();
         }
 
         public Builder(GetResourcePolicyGroupPlacementPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityDomainCount = defaults.availabilityDomainCount;
-    	      this.collocation = defaults.collocation;
-    	      this.vmCount = defaults.vmCount;
+            $ = new GetResourcePolicyGroupPlacementPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityDomainCount(Integer availabilityDomainCount) {
-            this.availabilityDomainCount = Objects.requireNonNull(availabilityDomainCount);
+            $.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
+
         public Builder collocation(String collocation) {
-            this.collocation = Objects.requireNonNull(collocation);
+            $.collocation = collocation;
             return this;
         }
+
         public Builder vmCount(Integer vmCount) {
-            this.vmCount = Objects.requireNonNull(vmCount);
+            $.vmCount = vmCount;
             return this;
-        }        public GetResourcePolicyGroupPlacementPolicy build() {
-            return new GetResourcePolicyGroupPlacementPolicy(availabilityDomainCount, collocation, vmCount);
+        }
+
+        public GetResourcePolicyGroupPlacementPolicy build() {
+            $.availabilityDomainCount = Objects.requireNonNull($.availabilityDomainCount, "expected parameter 'availabilityDomainCount' to be non-null");
+            $.collocation = Objects.requireNonNull($.collocation, "expected parameter 'collocation' to be non-null");
+            $.vmCount = Objects.requireNonNull($.vmCount, "expected parameter 'vmCount' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @Import(name="forwardingPath")
-      private final @Nullable Output<String> forwardingPath;
+    private @Nullable Output<String> forwardingPath;
 
-    public Output<String> forwardingPath() {
-        return this.forwardingPath == null ? Codegen.empty() : this.forwardingPath;
+    public Optional<Output<String>> forwardingPath() {
+        return Optional.ofNullable(this.forwardingPath);
     }
 
     /**
@@ -34,63 +34,59 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @Import(name="ipv4Address", required=true)
-      private final Output<String> ipv4Address;
+    private Output<String> ipv4Address;
 
     public Output<String> ipv4Address() {
         return this.ipv4Address;
     }
 
-    public PolicyAlternativeNameServerConfigTargetNameServerArgs(
-        @Nullable Output<String> forwardingPath,
-        Output<String> ipv4Address) {
-        this.forwardingPath = forwardingPath;
-        this.ipv4Address = Objects.requireNonNull(ipv4Address, "expected parameter 'ipv4Address' to be non-null");
-    }
+    private PolicyAlternativeNameServerConfigTargetNameServerArgs() {}
 
-    private PolicyAlternativeNameServerConfigTargetNameServerArgs() {
-        this.forwardingPath = Codegen.empty();
-        this.ipv4Address = Codegen.empty();
+    private PolicyAlternativeNameServerConfigTargetNameServerArgs(PolicyAlternativeNameServerConfigTargetNameServerArgs $) {
+        this.forwardingPath = $.forwardingPath;
+        this.ipv4Address = $.ipv4Address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAlternativeNameServerConfigTargetNameServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> forwardingPath;
-        private Output<String> ipv4Address;
+        private PolicyAlternativeNameServerConfigTargetNameServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAlternativeNameServerConfigTargetNameServerArgs();
         }
 
         public Builder(PolicyAlternativeNameServerConfigTargetNameServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardingPath = defaults.forwardingPath;
-    	      this.ipv4Address = defaults.ipv4Address;
+            $ = new PolicyAlternativeNameServerConfigTargetNameServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardingPath(@Nullable Output<String> forwardingPath) {
-            this.forwardingPath = forwardingPath;
+            $.forwardingPath = forwardingPath;
             return this;
         }
-        public Builder forwardingPath(@Nullable String forwardingPath) {
-            this.forwardingPath = Codegen.ofNullable(forwardingPath);
-            return this;
+
+        public Builder forwardingPath(String forwardingPath) {
+            return forwardingPath(Output.of(forwardingPath));
         }
+
         public Builder ipv4Address(Output<String> ipv4Address) {
-            this.ipv4Address = Objects.requireNonNull(ipv4Address);
+            $.ipv4Address = ipv4Address;
             return this;
         }
+
         public Builder ipv4Address(String ipv4Address) {
-            this.ipv4Address = Output.of(Objects.requireNonNull(ipv4Address));
-            return this;
-        }        public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {
-            return new PolicyAlternativeNameServerConfigTargetNameServerArgs(forwardingPath, ipv4Address);
+            return ipv4Address(Output.of(ipv4Address));
+        }
+
+        public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {
+            $.ipv4Address = Objects.requireNonNull($.ipv4Address, "expected parameter 'ipv4Address' to be non-null");
+            return $;
         }
     }
+
 }

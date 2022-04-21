@@ -5,9 +5,9 @@ package com.pulumi.gcp.firestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IndexFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arrayConfig")
-      private final @Nullable Output<String> arrayConfig;
+    private @Nullable Output<String> arrayConfig;
 
-    public Output<String> arrayConfig() {
-        return this.arrayConfig == null ? Codegen.empty() : this.arrayConfig;
+    public Optional<Output<String>> arrayConfig() {
+        return Optional.ofNullable(this.arrayConfig);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class IndexFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fieldPath")
-      private final @Nullable Output<String> fieldPath;
+    private @Nullable Output<String> fieldPath;
 
-    public Output<String> fieldPath() {
-        return this.fieldPath == null ? Codegen.empty() : this.fieldPath;
+    public Optional<Output<String>> fieldPath() {
+        return Optional.ofNullable(this.fieldPath);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class IndexFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="order")
-      private final @Nullable Output<String> order;
+    private @Nullable Output<String> order;
 
-    public Output<String> order() {
-        return this.order == null ? Codegen.empty() : this.order;
+    public Optional<Output<String>> order() {
+        return Optional.ofNullable(this.order);
     }
 
-    public IndexFieldGetArgs(
-        @Nullable Output<String> arrayConfig,
-        @Nullable Output<String> fieldPath,
-        @Nullable Output<String> order) {
-        this.arrayConfig = arrayConfig;
-        this.fieldPath = fieldPath;
-        this.order = order;
-    }
+    private IndexFieldGetArgs() {}
 
-    private IndexFieldGetArgs() {
-        this.arrayConfig = Codegen.empty();
-        this.fieldPath = Codegen.empty();
-        this.order = Codegen.empty();
+    private IndexFieldGetArgs(IndexFieldGetArgs $) {
+        this.arrayConfig = $.arrayConfig;
+        this.fieldPath = $.fieldPath;
+        this.order = $.order;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexFieldGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arrayConfig;
-        private @Nullable Output<String> fieldPath;
-        private @Nullable Output<String> order;
+        private IndexFieldGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexFieldGetArgs();
         }
 
         public Builder(IndexFieldGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arrayConfig = defaults.arrayConfig;
-    	      this.fieldPath = defaults.fieldPath;
-    	      this.order = defaults.order;
+            $ = new IndexFieldGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arrayConfig(@Nullable Output<String> arrayConfig) {
-            this.arrayConfig = arrayConfig;
+            $.arrayConfig = arrayConfig;
             return this;
         }
-        public Builder arrayConfig(@Nullable String arrayConfig) {
-            this.arrayConfig = Codegen.ofNullable(arrayConfig);
-            return this;
+
+        public Builder arrayConfig(String arrayConfig) {
+            return arrayConfig(Output.of(arrayConfig));
         }
+
         public Builder fieldPath(@Nullable Output<String> fieldPath) {
-            this.fieldPath = fieldPath;
+            $.fieldPath = fieldPath;
             return this;
         }
-        public Builder fieldPath(@Nullable String fieldPath) {
-            this.fieldPath = Codegen.ofNullable(fieldPath);
-            return this;
+
+        public Builder fieldPath(String fieldPath) {
+            return fieldPath(Output.of(fieldPath));
         }
+
         public Builder order(@Nullable Output<String> order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
-        public Builder order(@Nullable String order) {
-            this.order = Codegen.ofNullable(order);
-            return this;
-        }        public IndexFieldGetArgs build() {
-            return new IndexFieldGetArgs(arrayConfig, fieldPath, order);
+
+        public Builder order(String order) {
+            return order(Output.of(order));
+        }
+
+        public IndexFieldGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,70 +18,67 @@ public final class CertificateOtherNameArgs extends com.pulumi.resources.Resourc
     public static final CertificateOtherNameArgs Empty = new CertificateOtherNameArgs();
 
     @Import(name="typeId", required=true)
-      private final Output<String> typeId;
+    private Output<String> typeId;
 
     public Output<String> typeId() {
         return this.typeId;
     }
 
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public CertificateOtherNameArgs(
-        Output<String> typeId,
-        Output<String> value) {
-        this.typeId = Objects.requireNonNull(typeId, "expected parameter 'typeId' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private CertificateOtherNameArgs() {}
 
-    private CertificateOtherNameArgs() {
-        this.typeId = Codegen.empty();
-        this.value = Codegen.empty();
+    private CertificateOtherNameArgs(CertificateOtherNameArgs $) {
+        this.typeId = $.typeId;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateOtherNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> typeId;
-        private Output<String> value;
+        private CertificateOtherNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateOtherNameArgs();
         }
 
         public Builder(CertificateOtherNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.typeId = defaults.typeId;
-    	      this.value = defaults.value;
+            $ = new CertificateOtherNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder typeId(Output<String> typeId) {
-            this.typeId = Objects.requireNonNull(typeId);
+            $.typeId = typeId;
             return this;
         }
+
         public Builder typeId(String typeId) {
-            this.typeId = Output.of(Objects.requireNonNull(typeId));
-            return this;
+            return typeId(Output.of(typeId));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public CertificateOtherNameArgs build() {
-            return new CertificateOtherNameArgs(typeId, value);
+            return value(Output.of(value));
+        }
+
+        public CertificateOtherNameArgs build() {
+            $.typeId = Objects.requireNonNull($.typeId, "expected parameter 'typeId' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

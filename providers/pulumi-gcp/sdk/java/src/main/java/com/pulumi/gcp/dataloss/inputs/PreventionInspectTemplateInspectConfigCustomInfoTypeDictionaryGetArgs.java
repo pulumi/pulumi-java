@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @Import(name="cloudStoragePath")
-      private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
+    private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath() {
-        return this.cloudStoragePath == null ? Codegen.empty() : this.cloudStoragePath;
+    public Optional<Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs>> cloudStoragePath() {
+        return Optional.ofNullable(this.cloudStoragePath);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @Import(name="wordList")
-      private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList;
+    private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList() {
-        return this.wordList == null ? Codegen.empty() : this.wordList;
+    public Optional<Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs>> wordList() {
+        return Optional.ofNullable(this.wordList);
     }
 
-    public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs(
-        @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath,
-        @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList) {
-        this.cloudStoragePath = cloudStoragePath;
-        this.wordList = wordList;
-    }
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs() {}
 
-    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs() {
-        this.cloudStoragePath = Codegen.empty();
-        this.wordList = Codegen.empty();
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs $) {
+        this.cloudStoragePath = $.cloudStoragePath;
+        this.wordList = $.wordList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
-        private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList;
+        private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs();
         }
 
         public Builder(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudStoragePath = defaults.cloudStoragePath;
-    	      this.wordList = defaults.wordList;
+            $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudStoragePath(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath) {
-            this.cloudStoragePath = cloudStoragePath;
+            $.cloudStoragePath = cloudStoragePath;
             return this;
         }
-        public Builder cloudStoragePath(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs cloudStoragePath) {
-            this.cloudStoragePath = Codegen.ofNullable(cloudStoragePath);
-            return this;
+
+        public Builder cloudStoragePath(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs cloudStoragePath) {
+            return cloudStoragePath(Output.of(cloudStoragePath));
         }
+
         public Builder wordList(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList) {
-            this.wordList = wordList;
+            $.wordList = wordList;
             return this;
         }
-        public Builder wordList(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs wordList) {
-            this.wordList = Codegen.ofNullable(wordList);
-            return this;
-        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs build() {
-            return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs(cloudStoragePath, wordList);
+
+        public Builder wordList(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs wordList) {
+            return wordList(Output.of(wordList));
+        }
+
+        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs build() {
+            return $;
         }
     }
+
 }

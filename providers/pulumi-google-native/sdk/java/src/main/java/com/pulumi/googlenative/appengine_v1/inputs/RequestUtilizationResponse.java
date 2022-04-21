@@ -21,7 +21,7 @@ public final class RequestUtilizationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetConcurrentRequests", required=true)
-      private final Integer targetConcurrentRequests;
+    private Integer targetConcurrentRequests;
 
     public Integer targetConcurrentRequests() {
         return this.targetConcurrentRequests;
@@ -32,55 +32,52 @@ public final class RequestUtilizationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetRequestCountPerSecond", required=true)
-      private final Integer targetRequestCountPerSecond;
+    private Integer targetRequestCountPerSecond;
 
     public Integer targetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond;
     }
 
-    public RequestUtilizationResponse(
-        Integer targetConcurrentRequests,
-        Integer targetRequestCountPerSecond) {
-        this.targetConcurrentRequests = Objects.requireNonNull(targetConcurrentRequests, "expected parameter 'targetConcurrentRequests' to be non-null");
-        this.targetRequestCountPerSecond = Objects.requireNonNull(targetRequestCountPerSecond, "expected parameter 'targetRequestCountPerSecond' to be non-null");
-    }
+    private RequestUtilizationResponse() {}
 
-    private RequestUtilizationResponse() {
-        this.targetConcurrentRequests = null;
-        this.targetRequestCountPerSecond = null;
+    private RequestUtilizationResponse(RequestUtilizationResponse $) {
+        this.targetConcurrentRequests = $.targetConcurrentRequests;
+        this.targetRequestCountPerSecond = $.targetRequestCountPerSecond;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestUtilizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer targetConcurrentRequests;
-        private Integer targetRequestCountPerSecond;
+        private RequestUtilizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestUtilizationResponse();
         }
 
         public Builder(RequestUtilizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetConcurrentRequests = defaults.targetConcurrentRequests;
-    	      this.targetRequestCountPerSecond = defaults.targetRequestCountPerSecond;
+            $ = new RequestUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetConcurrentRequests(Integer targetConcurrentRequests) {
-            this.targetConcurrentRequests = Objects.requireNonNull(targetConcurrentRequests);
+            $.targetConcurrentRequests = targetConcurrentRequests;
             return this;
         }
+
         public Builder targetRequestCountPerSecond(Integer targetRequestCountPerSecond) {
-            this.targetRequestCountPerSecond = Objects.requireNonNull(targetRequestCountPerSecond);
+            $.targetRequestCountPerSecond = targetRequestCountPerSecond;
             return this;
-        }        public RequestUtilizationResponse build() {
-            return new RequestUtilizationResponse(targetConcurrentRequests, targetRequestCountPerSecond);
+        }
+
+        public RequestUtilizationResponse build() {
+            $.targetConcurrentRequests = Objects.requireNonNull($.targetConcurrentRequests, "expected parameter 'targetConcurrentRequests' to be non-null");
+            $.targetRequestCountPerSecond = Objects.requireNonNull($.targetRequestCountPerSecond, "expected parameter 'targetRequestCountPerSecond' to be non-null");
+            return $;
         }
     }
+
 }

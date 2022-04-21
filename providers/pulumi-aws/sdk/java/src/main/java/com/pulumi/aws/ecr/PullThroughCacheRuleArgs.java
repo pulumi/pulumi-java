@@ -5,7 +5,6 @@ package com.pulumi.aws.ecr;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PullThroughCacheRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ecrRepositoryPrefix", required=true)
-      private final Output<String> ecrRepositoryPrefix;
+    private Output<String> ecrRepositoryPrefix;
 
     public Output<String> ecrRepositoryPrefix() {
         return this.ecrRepositoryPrefix;
@@ -30,63 +29,60 @@ public final class PullThroughCacheRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="upstreamRegistryUrl", required=true)
-      private final Output<String> upstreamRegistryUrl;
+    private Output<String> upstreamRegistryUrl;
 
     public Output<String> upstreamRegistryUrl() {
         return this.upstreamRegistryUrl;
     }
 
-    public PullThroughCacheRuleArgs(
-        Output<String> ecrRepositoryPrefix,
-        Output<String> upstreamRegistryUrl) {
-        this.ecrRepositoryPrefix = Objects.requireNonNull(ecrRepositoryPrefix, "expected parameter 'ecrRepositoryPrefix' to be non-null");
-        this.upstreamRegistryUrl = Objects.requireNonNull(upstreamRegistryUrl, "expected parameter 'upstreamRegistryUrl' to be non-null");
-    }
+    private PullThroughCacheRuleArgs() {}
 
-    private PullThroughCacheRuleArgs() {
-        this.ecrRepositoryPrefix = Codegen.empty();
-        this.upstreamRegistryUrl = Codegen.empty();
+    private PullThroughCacheRuleArgs(PullThroughCacheRuleArgs $) {
+        this.ecrRepositoryPrefix = $.ecrRepositoryPrefix;
+        this.upstreamRegistryUrl = $.upstreamRegistryUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PullThroughCacheRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ecrRepositoryPrefix;
-        private Output<String> upstreamRegistryUrl;
+        private PullThroughCacheRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PullThroughCacheRuleArgs();
         }
 
         public Builder(PullThroughCacheRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ecrRepositoryPrefix = defaults.ecrRepositoryPrefix;
-    	      this.upstreamRegistryUrl = defaults.upstreamRegistryUrl;
+            $ = new PullThroughCacheRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ecrRepositoryPrefix(Output<String> ecrRepositoryPrefix) {
-            this.ecrRepositoryPrefix = Objects.requireNonNull(ecrRepositoryPrefix);
+            $.ecrRepositoryPrefix = ecrRepositoryPrefix;
             return this;
         }
+
         public Builder ecrRepositoryPrefix(String ecrRepositoryPrefix) {
-            this.ecrRepositoryPrefix = Output.of(Objects.requireNonNull(ecrRepositoryPrefix));
-            return this;
+            return ecrRepositoryPrefix(Output.of(ecrRepositoryPrefix));
         }
+
         public Builder upstreamRegistryUrl(Output<String> upstreamRegistryUrl) {
-            this.upstreamRegistryUrl = Objects.requireNonNull(upstreamRegistryUrl);
+            $.upstreamRegistryUrl = upstreamRegistryUrl;
             return this;
         }
+
         public Builder upstreamRegistryUrl(String upstreamRegistryUrl) {
-            this.upstreamRegistryUrl = Output.of(Objects.requireNonNull(upstreamRegistryUrl));
-            return this;
-        }        public PullThroughCacheRuleArgs build() {
-            return new PullThroughCacheRuleArgs(ecrRepositoryPrefix, upstreamRegistryUrl);
+            return upstreamRegistryUrl(Output.of(upstreamRegistryUrl));
+        }
+
+        public PullThroughCacheRuleArgs build() {
+            $.ecrRepositoryPrefix = Objects.requireNonNull($.ecrRepositoryPrefix, "expected parameter 'ecrRepositoryPrefix' to be non-null");
+            $.upstreamRegistryUrl = Objects.requireNonNull($.upstreamRegistryUrl, "expected parameter 'upstreamRegistryUrl' to be non-null");
+            return $;
         }
     }
+
 }

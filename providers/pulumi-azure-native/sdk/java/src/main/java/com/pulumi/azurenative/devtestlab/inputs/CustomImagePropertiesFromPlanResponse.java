@@ -23,10 +23,10 @@ public final class CustomImagePropertiesFromPlanResponse extends com.pulumi.reso
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CustomImagePropertiesFromPlanResponse extends com.pulumi.reso
      * 
      */
     @Import(name="offer")
-      private final @Nullable String offer;
+    private @Nullable String offer;
 
     public Optional<String> offer() {
-        return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
+        return Optional.ofNullable(this.offer);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class CustomImagePropertiesFromPlanResponse extends com.pulumi.reso
      * 
      */
     @Import(name="publisher")
-      private final @Nullable String publisher;
+    private @Nullable String publisher;
 
     public Optional<String> publisher() {
-        return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
+        return Optional.ofNullable(this.publisher);
     }
 
-    public CustomImagePropertiesFromPlanResponse(
-        @Nullable String id,
-        @Nullable String offer,
-        @Nullable String publisher) {
-        this.id = id;
-        this.offer = offer;
-        this.publisher = publisher;
-    }
+    private CustomImagePropertiesFromPlanResponse() {}
 
-    private CustomImagePropertiesFromPlanResponse() {
-        this.id = null;
-        this.offer = null;
-        this.publisher = null;
+    private CustomImagePropertiesFromPlanResponse(CustomImagePropertiesFromPlanResponse $) {
+        this.id = $.id;
+        this.offer = $.offer;
+        this.publisher = $.publisher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomImagePropertiesFromPlanResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String offer;
-        private @Nullable String publisher;
+        private CustomImagePropertiesFromPlanResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomImagePropertiesFromPlanResponse();
         }
 
         public Builder(CustomImagePropertiesFromPlanResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.offer = defaults.offer;
-    	      this.publisher = defaults.publisher;
+            $ = new CustomImagePropertiesFromPlanResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder offer(@Nullable String offer) {
-            this.offer = offer;
+            $.offer = offer;
             return this;
         }
+
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
-        }        public CustomImagePropertiesFromPlanResponse build() {
-            return new CustomImagePropertiesFromPlanResponse(id, offer, publisher);
+        }
+
+        public CustomImagePropertiesFromPlanResponse build() {
+            return $;
         }
     }
+
 }

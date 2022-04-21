@@ -21,7 +21,7 @@ public final class RedisAccessKeysResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="primaryKey", required=true)
-      private final String primaryKey;
+    private String primaryKey;
 
     public String primaryKey() {
         return this.primaryKey;
@@ -32,55 +32,52 @@ public final class RedisAccessKeysResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="secondaryKey", required=true)
-      private final String secondaryKey;
+    private String secondaryKey;
 
     public String secondaryKey() {
         return this.secondaryKey;
     }
 
-    public RedisAccessKeysResponse(
-        String primaryKey,
-        String secondaryKey) {
-        this.primaryKey = Objects.requireNonNull(primaryKey, "expected parameter 'primaryKey' to be non-null");
-        this.secondaryKey = Objects.requireNonNull(secondaryKey, "expected parameter 'secondaryKey' to be non-null");
-    }
+    private RedisAccessKeysResponse() {}
 
-    private RedisAccessKeysResponse() {
-        this.primaryKey = null;
-        this.secondaryKey = null;
+    private RedisAccessKeysResponse(RedisAccessKeysResponse $) {
+        this.primaryKey = $.primaryKey;
+        this.secondaryKey = $.secondaryKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedisAccessKeysResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String primaryKey;
-        private String secondaryKey;
+        private RedisAccessKeysResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedisAccessKeysResponse();
         }
 
         public Builder(RedisAccessKeysResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primaryKey = defaults.primaryKey;
-    	      this.secondaryKey = defaults.secondaryKey;
+            $ = new RedisAccessKeysResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder primaryKey(String primaryKey) {
-            this.primaryKey = Objects.requireNonNull(primaryKey);
+            $.primaryKey = primaryKey;
             return this;
         }
+
         public Builder secondaryKey(String secondaryKey) {
-            this.secondaryKey = Objects.requireNonNull(secondaryKey);
+            $.secondaryKey = secondaryKey;
             return this;
-        }        public RedisAccessKeysResponse build() {
-            return new RedisAccessKeysResponse(primaryKey, secondaryKey);
+        }
+
+        public RedisAccessKeysResponse build() {
+            $.primaryKey = Objects.requireNonNull($.primaryKey, "expected parameter 'primaryKey' to be non-null");
+            $.secondaryKey = Objects.requireNonNull($.secondaryKey, "expected parameter 'secondaryKey' to be non-null");
+            return $;
         }
     }
+
 }

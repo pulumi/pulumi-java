@@ -5,7 +5,6 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__TrainingInputScaleTier;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__EncryptionConfigArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__HyperparameterSpecArgs;
@@ -15,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="enableWebAccess")
-      private final @Nullable Output<Boolean> enableWebAccess;
+    private @Nullable Output<Boolean> enableWebAccess;
 
-    public Output<Boolean> enableWebAccess() {
-        return this.enableWebAccess == null ? Codegen.empty() : this.enableWebAccess;
+    public Optional<Output<Boolean>> enableWebAccess() {
+        return Optional.ofNullable(this.enableWebAccess);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="encryptionConfig")
-      private final @Nullable Output<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig;
+    private @Nullable Output<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig;
 
-    public Output<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig() {
-        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
+    public Optional<Output<GoogleCloudMlV1__EncryptionConfigArgs>> encryptionConfig() {
+        return Optional.ofNullable(this.encryptionConfig);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="evaluatorConfig")
-      private final @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig;
+    private @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig;
 
-    public Output<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig() {
-        return this.evaluatorConfig == null ? Codegen.empty() : this.evaluatorConfig;
+    public Optional<Output<GoogleCloudMlV1__ReplicaConfigArgs>> evaluatorConfig() {
+        return Optional.ofNullable(this.evaluatorConfig);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="evaluatorCount")
-      private final @Nullable Output<String> evaluatorCount;
+    private @Nullable Output<String> evaluatorCount;
 
-    public Output<String> evaluatorCount() {
-        return this.evaluatorCount == null ? Codegen.empty() : this.evaluatorCount;
+    public Optional<Output<String>> evaluatorCount() {
+        return Optional.ofNullable(this.evaluatorCount);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="evaluatorType")
-      private final @Nullable Output<String> evaluatorType;
+    private @Nullable Output<String> evaluatorType;
 
-    public Output<String> evaluatorType() {
-        return this.evaluatorType == null ? Codegen.empty() : this.evaluatorType;
+    public Optional<Output<String>> evaluatorType() {
+        return Optional.ofNullable(this.evaluatorType);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="hyperparameters")
-      private final @Nullable Output<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters;
+    private @Nullable Output<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters;
 
-    public Output<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters() {
-        return this.hyperparameters == null ? Codegen.empty() : this.hyperparameters;
+    public Optional<Output<GoogleCloudMlV1__HyperparameterSpecArgs>> hyperparameters() {
+        return Optional.ofNullable(this.hyperparameters);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="jobDir")
-      private final @Nullable Output<String> jobDir;
+    private @Nullable Output<String> jobDir;
 
-    public Output<String> jobDir() {
-        return this.jobDir == null ? Codegen.empty() : this.jobDir;
+    public Optional<Output<String>> jobDir() {
+        return Optional.ofNullable(this.jobDir);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="masterConfig")
-      private final @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig;
+    private @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig;
 
-    public Output<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig() {
-        return this.masterConfig == null ? Codegen.empty() : this.masterConfig;
+    public Optional<Output<GoogleCloudMlV1__ReplicaConfigArgs>> masterConfig() {
+        return Optional.ofNullable(this.masterConfig);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="masterType")
-      private final @Nullable Output<String> masterType;
+    private @Nullable Output<String> masterType;
 
-    public Output<String> masterType() {
-        return this.masterType == null ? Codegen.empty() : this.masterType;
+    public Optional<Output<String>> masterType() {
+        return Optional.ofNullable(this.masterType);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -152,7 +152,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="packageUris", required=true)
-      private final Output<List<String>> packageUris;
+    private Output<List<String>> packageUris;
 
     public Output<List<String>> packageUris() {
         return this.packageUris;
@@ -163,10 +163,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="parameterServerConfig")
-      private final @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig;
+    private @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig;
 
-    public Output<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig() {
-        return this.parameterServerConfig == null ? Codegen.empty() : this.parameterServerConfig;
+    public Optional<Output<GoogleCloudMlV1__ReplicaConfigArgs>> parameterServerConfig() {
+        return Optional.ofNullable(this.parameterServerConfig);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="parameterServerCount")
-      private final @Nullable Output<String> parameterServerCount;
+    private @Nullable Output<String> parameterServerCount;
 
-    public Output<String> parameterServerCount() {
-        return this.parameterServerCount == null ? Codegen.empty() : this.parameterServerCount;
+    public Optional<Output<String>> parameterServerCount() {
+        return Optional.ofNullable(this.parameterServerCount);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="parameterServerType")
-      private final @Nullable Output<String> parameterServerType;
+    private @Nullable Output<String> parameterServerType;
 
-    public Output<String> parameterServerType() {
-        return this.parameterServerType == null ? Codegen.empty() : this.parameterServerType;
+    public Optional<Output<String>> parameterServerType() {
+        return Optional.ofNullable(this.parameterServerType);
     }
 
     /**
@@ -196,7 +196,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="pythonModule", required=true)
-      private final Output<String> pythonModule;
+    private Output<String> pythonModule;
 
     public Output<String> pythonModule() {
         return this.pythonModule;
@@ -207,10 +207,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="pythonVersion")
-      private final @Nullable Output<String> pythonVersion;
+    private @Nullable Output<String> pythonVersion;
 
-    public Output<String> pythonVersion() {
-        return this.pythonVersion == null ? Codegen.empty() : this.pythonVersion;
+    public Optional<Output<String>> pythonVersion() {
+        return Optional.ofNullable(this.pythonVersion);
     }
 
     /**
@@ -218,7 +218,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
@@ -229,10 +229,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="runtimeVersion")
-      private final @Nullable Output<String> runtimeVersion;
+    private @Nullable Output<String> runtimeVersion;
 
-    public Output<String> runtimeVersion() {
-        return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
+    public Optional<Output<String>> runtimeVersion() {
+        return Optional.ofNullable(this.runtimeVersion);
     }
 
     /**
@@ -240,7 +240,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="scaleTier", required=true)
-      private final Output<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier;
+    private Output<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier;
 
     public Output<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier() {
         return this.scaleTier;
@@ -251,10 +251,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="scheduling")
-      private final @Nullable Output<GoogleCloudMlV1__SchedulingArgs> scheduling;
+    private @Nullable Output<GoogleCloudMlV1__SchedulingArgs> scheduling;
 
-    public Output<GoogleCloudMlV1__SchedulingArgs> scheduling() {
-        return this.scheduling == null ? Codegen.empty() : this.scheduling;
+    public Optional<Output<GoogleCloudMlV1__SchedulingArgs>> scheduling() {
+        return Optional.ofNullable(this.scheduling);
     }
 
     /**
@@ -262,10 +262,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -273,10 +273,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="useChiefInTfConfig")
-      private final @Nullable Output<Boolean> useChiefInTfConfig;
+    private @Nullable Output<Boolean> useChiefInTfConfig;
 
-    public Output<Boolean> useChiefInTfConfig() {
-        return this.useChiefInTfConfig == null ? Codegen.empty() : this.useChiefInTfConfig;
+    public Optional<Output<Boolean>> useChiefInTfConfig() {
+        return Optional.ofNullable(this.useChiefInTfConfig);
     }
 
     /**
@@ -284,10 +284,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="workerConfig")
-      private final @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig;
+    private @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig;
 
-    public Output<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig() {
-        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
+    public Optional<Output<GoogleCloudMlV1__ReplicaConfigArgs>> workerConfig() {
+        return Optional.ofNullable(this.workerConfig);
     }
 
     /**
@@ -295,10 +295,10 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="workerCount")
-      private final @Nullable Output<String> workerCount;
+    private @Nullable Output<String> workerCount;
 
-    public Output<String> workerCount() {
-        return this.workerCount == null ? Codegen.empty() : this.workerCount;
+    public Optional<Output<String>> workerCount() {
+        return Optional.ofNullable(this.workerCount);
     }
 
     /**
@@ -306,381 +306,310 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="workerType")
-      private final @Nullable Output<String> workerType;
+    private @Nullable Output<String> workerType;
 
-    public Output<String> workerType() {
-        return this.workerType == null ? Codegen.empty() : this.workerType;
+    public Optional<Output<String>> workerType() {
+        return Optional.ofNullable(this.workerType);
     }
 
-    public GoogleCloudMlV1__TrainingInputArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<Boolean> enableWebAccess,
-        @Nullable Output<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig,
-        @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig,
-        @Nullable Output<String> evaluatorCount,
-        @Nullable Output<String> evaluatorType,
-        @Nullable Output<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters,
-        @Nullable Output<String> jobDir,
-        @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig,
-        @Nullable Output<String> masterType,
-        @Nullable Output<String> network,
-        Output<List<String>> packageUris,
-        @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig,
-        @Nullable Output<String> parameterServerCount,
-        @Nullable Output<String> parameterServerType,
-        Output<String> pythonModule,
-        @Nullable Output<String> pythonVersion,
-        Output<String> region,
-        @Nullable Output<String> runtimeVersion,
-        Output<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier,
-        @Nullable Output<GoogleCloudMlV1__SchedulingArgs> scheduling,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<Boolean> useChiefInTfConfig,
-        @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig,
-        @Nullable Output<String> workerCount,
-        @Nullable Output<String> workerType) {
-        this.args = args;
-        this.enableWebAccess = enableWebAccess;
-        this.encryptionConfig = encryptionConfig;
-        this.evaluatorConfig = evaluatorConfig;
-        this.evaluatorCount = evaluatorCount;
-        this.evaluatorType = evaluatorType;
-        this.hyperparameters = hyperparameters;
-        this.jobDir = jobDir;
-        this.masterConfig = masterConfig;
-        this.masterType = masterType;
-        this.network = network;
-        this.packageUris = Objects.requireNonNull(packageUris, "expected parameter 'packageUris' to be non-null");
-        this.parameterServerConfig = parameterServerConfig;
-        this.parameterServerCount = parameterServerCount;
-        this.parameterServerType = parameterServerType;
-        this.pythonModule = Objects.requireNonNull(pythonModule, "expected parameter 'pythonModule' to be non-null");
-        this.pythonVersion = pythonVersion;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.runtimeVersion = runtimeVersion;
-        this.scaleTier = Objects.requireNonNull(scaleTier, "expected parameter 'scaleTier' to be non-null");
-        this.scheduling = scheduling;
-        this.serviceAccount = serviceAccount;
-        this.useChiefInTfConfig = useChiefInTfConfig;
-        this.workerConfig = workerConfig;
-        this.workerCount = workerCount;
-        this.workerType = workerType;
-    }
+    private GoogleCloudMlV1__TrainingInputArgs() {}
 
-    private GoogleCloudMlV1__TrainingInputArgs() {
-        this.args = Codegen.empty();
-        this.enableWebAccess = Codegen.empty();
-        this.encryptionConfig = Codegen.empty();
-        this.evaluatorConfig = Codegen.empty();
-        this.evaluatorCount = Codegen.empty();
-        this.evaluatorType = Codegen.empty();
-        this.hyperparameters = Codegen.empty();
-        this.jobDir = Codegen.empty();
-        this.masterConfig = Codegen.empty();
-        this.masterType = Codegen.empty();
-        this.network = Codegen.empty();
-        this.packageUris = Codegen.empty();
-        this.parameterServerConfig = Codegen.empty();
-        this.parameterServerCount = Codegen.empty();
-        this.parameterServerType = Codegen.empty();
-        this.pythonModule = Codegen.empty();
-        this.pythonVersion = Codegen.empty();
-        this.region = Codegen.empty();
-        this.runtimeVersion = Codegen.empty();
-        this.scaleTier = Codegen.empty();
-        this.scheduling = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.useChiefInTfConfig = Codegen.empty();
-        this.workerConfig = Codegen.empty();
-        this.workerCount = Codegen.empty();
-        this.workerType = Codegen.empty();
+    private GoogleCloudMlV1__TrainingInputArgs(GoogleCloudMlV1__TrainingInputArgs $) {
+        this.args = $.args;
+        this.enableWebAccess = $.enableWebAccess;
+        this.encryptionConfig = $.encryptionConfig;
+        this.evaluatorConfig = $.evaluatorConfig;
+        this.evaluatorCount = $.evaluatorCount;
+        this.evaluatorType = $.evaluatorType;
+        this.hyperparameters = $.hyperparameters;
+        this.jobDir = $.jobDir;
+        this.masterConfig = $.masterConfig;
+        this.masterType = $.masterType;
+        this.network = $.network;
+        this.packageUris = $.packageUris;
+        this.parameterServerConfig = $.parameterServerConfig;
+        this.parameterServerCount = $.parameterServerCount;
+        this.parameterServerType = $.parameterServerType;
+        this.pythonModule = $.pythonModule;
+        this.pythonVersion = $.pythonVersion;
+        this.region = $.region;
+        this.runtimeVersion = $.runtimeVersion;
+        this.scaleTier = $.scaleTier;
+        this.scheduling = $.scheduling;
+        this.serviceAccount = $.serviceAccount;
+        this.useChiefInTfConfig = $.useChiefInTfConfig;
+        this.workerConfig = $.workerConfig;
+        this.workerCount = $.workerCount;
+        this.workerType = $.workerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__TrainingInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<Boolean> enableWebAccess;
-        private @Nullable Output<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig;
-        private @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig;
-        private @Nullable Output<String> evaluatorCount;
-        private @Nullable Output<String> evaluatorType;
-        private @Nullable Output<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters;
-        private @Nullable Output<String> jobDir;
-        private @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig;
-        private @Nullable Output<String> masterType;
-        private @Nullable Output<String> network;
-        private Output<List<String>> packageUris;
-        private @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig;
-        private @Nullable Output<String> parameterServerCount;
-        private @Nullable Output<String> parameterServerType;
-        private Output<String> pythonModule;
-        private @Nullable Output<String> pythonVersion;
-        private Output<String> region;
-        private @Nullable Output<String> runtimeVersion;
-        private Output<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier;
-        private @Nullable Output<GoogleCloudMlV1__SchedulingArgs> scheduling;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<Boolean> useChiefInTfConfig;
-        private @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig;
-        private @Nullable Output<String> workerCount;
-        private @Nullable Output<String> workerType;
+        private GoogleCloudMlV1__TrainingInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__TrainingInputArgs();
         }
 
         public Builder(GoogleCloudMlV1__TrainingInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.enableWebAccess = defaults.enableWebAccess;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.evaluatorConfig = defaults.evaluatorConfig;
-    	      this.evaluatorCount = defaults.evaluatorCount;
-    	      this.evaluatorType = defaults.evaluatorType;
-    	      this.hyperparameters = defaults.hyperparameters;
-    	      this.jobDir = defaults.jobDir;
-    	      this.masterConfig = defaults.masterConfig;
-    	      this.masterType = defaults.masterType;
-    	      this.network = defaults.network;
-    	      this.packageUris = defaults.packageUris;
-    	      this.parameterServerConfig = defaults.parameterServerConfig;
-    	      this.parameterServerCount = defaults.parameterServerCount;
-    	      this.parameterServerType = defaults.parameterServerType;
-    	      this.pythonModule = defaults.pythonModule;
-    	      this.pythonVersion = defaults.pythonVersion;
-    	      this.region = defaults.region;
-    	      this.runtimeVersion = defaults.runtimeVersion;
-    	      this.scaleTier = defaults.scaleTier;
-    	      this.scheduling = defaults.scheduling;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.useChiefInTfConfig = defaults.useChiefInTfConfig;
-    	      this.workerConfig = defaults.workerConfig;
-    	      this.workerCount = defaults.workerCount;
-    	      this.workerType = defaults.workerType;
+            $ = new GoogleCloudMlV1__TrainingInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder enableWebAccess(@Nullable Output<Boolean> enableWebAccess) {
-            this.enableWebAccess = enableWebAccess;
+            $.enableWebAccess = enableWebAccess;
             return this;
         }
-        public Builder enableWebAccess(@Nullable Boolean enableWebAccess) {
-            this.enableWebAccess = Codegen.ofNullable(enableWebAccess);
-            return this;
+
+        public Builder enableWebAccess(Boolean enableWebAccess) {
+            return enableWebAccess(Output.of(enableWebAccess));
         }
+
         public Builder encryptionConfig(@Nullable Output<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig) {
-            this.encryptionConfig = encryptionConfig;
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
-        public Builder encryptionConfig(@Nullable GoogleCloudMlV1__EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
-            return this;
+
+        public Builder encryptionConfig(GoogleCloudMlV1__EncryptionConfigArgs encryptionConfig) {
+            return encryptionConfig(Output.of(encryptionConfig));
         }
+
         public Builder evaluatorConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig) {
-            this.evaluatorConfig = evaluatorConfig;
+            $.evaluatorConfig = evaluatorConfig;
             return this;
         }
-        public Builder evaluatorConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs evaluatorConfig) {
-            this.evaluatorConfig = Codegen.ofNullable(evaluatorConfig);
-            return this;
+
+        public Builder evaluatorConfig(GoogleCloudMlV1__ReplicaConfigArgs evaluatorConfig) {
+            return evaluatorConfig(Output.of(evaluatorConfig));
         }
+
         public Builder evaluatorCount(@Nullable Output<String> evaluatorCount) {
-            this.evaluatorCount = evaluatorCount;
+            $.evaluatorCount = evaluatorCount;
             return this;
         }
-        public Builder evaluatorCount(@Nullable String evaluatorCount) {
-            this.evaluatorCount = Codegen.ofNullable(evaluatorCount);
-            return this;
+
+        public Builder evaluatorCount(String evaluatorCount) {
+            return evaluatorCount(Output.of(evaluatorCount));
         }
+
         public Builder evaluatorType(@Nullable Output<String> evaluatorType) {
-            this.evaluatorType = evaluatorType;
+            $.evaluatorType = evaluatorType;
             return this;
         }
-        public Builder evaluatorType(@Nullable String evaluatorType) {
-            this.evaluatorType = Codegen.ofNullable(evaluatorType);
-            return this;
+
+        public Builder evaluatorType(String evaluatorType) {
+            return evaluatorType(Output.of(evaluatorType));
         }
+
         public Builder hyperparameters(@Nullable Output<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters) {
-            this.hyperparameters = hyperparameters;
+            $.hyperparameters = hyperparameters;
             return this;
         }
-        public Builder hyperparameters(@Nullable GoogleCloudMlV1__HyperparameterSpecArgs hyperparameters) {
-            this.hyperparameters = Codegen.ofNullable(hyperparameters);
-            return this;
+
+        public Builder hyperparameters(GoogleCloudMlV1__HyperparameterSpecArgs hyperparameters) {
+            return hyperparameters(Output.of(hyperparameters));
         }
+
         public Builder jobDir(@Nullable Output<String> jobDir) {
-            this.jobDir = jobDir;
+            $.jobDir = jobDir;
             return this;
         }
-        public Builder jobDir(@Nullable String jobDir) {
-            this.jobDir = Codegen.ofNullable(jobDir);
-            return this;
+
+        public Builder jobDir(String jobDir) {
+            return jobDir(Output.of(jobDir));
         }
+
         public Builder masterConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig) {
-            this.masterConfig = masterConfig;
+            $.masterConfig = masterConfig;
             return this;
         }
-        public Builder masterConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs masterConfig) {
-            this.masterConfig = Codegen.ofNullable(masterConfig);
-            return this;
+
+        public Builder masterConfig(GoogleCloudMlV1__ReplicaConfigArgs masterConfig) {
+            return masterConfig(Output.of(masterConfig));
         }
+
         public Builder masterType(@Nullable Output<String> masterType) {
-            this.masterType = masterType;
+            $.masterType = masterType;
             return this;
         }
-        public Builder masterType(@Nullable String masterType) {
-            this.masterType = Codegen.ofNullable(masterType);
-            return this;
+
+        public Builder masterType(String masterType) {
+            return masterType(Output.of(masterType));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder packageUris(Output<List<String>> packageUris) {
-            this.packageUris = Objects.requireNonNull(packageUris);
+            $.packageUris = packageUris;
             return this;
         }
+
         public Builder packageUris(List<String> packageUris) {
-            this.packageUris = Output.of(Objects.requireNonNull(packageUris));
-            return this;
+            return packageUris(Output.of(packageUris));
         }
+
         public Builder packageUris(String... packageUris) {
             return packageUris(List.of(packageUris));
         }
+
         public Builder parameterServerConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig) {
-            this.parameterServerConfig = parameterServerConfig;
+            $.parameterServerConfig = parameterServerConfig;
             return this;
         }
-        public Builder parameterServerConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs parameterServerConfig) {
-            this.parameterServerConfig = Codegen.ofNullable(parameterServerConfig);
-            return this;
+
+        public Builder parameterServerConfig(GoogleCloudMlV1__ReplicaConfigArgs parameterServerConfig) {
+            return parameterServerConfig(Output.of(parameterServerConfig));
         }
+
         public Builder parameterServerCount(@Nullable Output<String> parameterServerCount) {
-            this.parameterServerCount = parameterServerCount;
+            $.parameterServerCount = parameterServerCount;
             return this;
         }
-        public Builder parameterServerCount(@Nullable String parameterServerCount) {
-            this.parameterServerCount = Codegen.ofNullable(parameterServerCount);
-            return this;
+
+        public Builder parameterServerCount(String parameterServerCount) {
+            return parameterServerCount(Output.of(parameterServerCount));
         }
+
         public Builder parameterServerType(@Nullable Output<String> parameterServerType) {
-            this.parameterServerType = parameterServerType;
+            $.parameterServerType = parameterServerType;
             return this;
         }
-        public Builder parameterServerType(@Nullable String parameterServerType) {
-            this.parameterServerType = Codegen.ofNullable(parameterServerType);
-            return this;
+
+        public Builder parameterServerType(String parameterServerType) {
+            return parameterServerType(Output.of(parameterServerType));
         }
+
         public Builder pythonModule(Output<String> pythonModule) {
-            this.pythonModule = Objects.requireNonNull(pythonModule);
+            $.pythonModule = pythonModule;
             return this;
         }
+
         public Builder pythonModule(String pythonModule) {
-            this.pythonModule = Output.of(Objects.requireNonNull(pythonModule));
-            return this;
+            return pythonModule(Output.of(pythonModule));
         }
+
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
-            this.pythonVersion = pythonVersion;
+            $.pythonVersion = pythonVersion;
             return this;
         }
-        public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Codegen.ofNullable(pythonVersion);
-            return this;
+
+        public Builder pythonVersion(String pythonVersion) {
+            return pythonVersion(Output.of(pythonVersion));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
-            this.runtimeVersion = runtimeVersion;
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
-        public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Codegen.ofNullable(runtimeVersion);
-            return this;
+
+        public Builder runtimeVersion(String runtimeVersion) {
+            return runtimeVersion(Output.of(runtimeVersion));
         }
+
         public Builder scaleTier(Output<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier) {
-            this.scaleTier = Objects.requireNonNull(scaleTier);
+            $.scaleTier = scaleTier;
             return this;
         }
+
         public Builder scaleTier(GoogleCloudMlV1__TrainingInputScaleTier scaleTier) {
-            this.scaleTier = Output.of(Objects.requireNonNull(scaleTier));
-            return this;
+            return scaleTier(Output.of(scaleTier));
         }
+
         public Builder scheduling(@Nullable Output<GoogleCloudMlV1__SchedulingArgs> scheduling) {
-            this.scheduling = scheduling;
+            $.scheduling = scheduling;
             return this;
         }
-        public Builder scheduling(@Nullable GoogleCloudMlV1__SchedulingArgs scheduling) {
-            this.scheduling = Codegen.ofNullable(scheduling);
-            return this;
+
+        public Builder scheduling(GoogleCloudMlV1__SchedulingArgs scheduling) {
+            return scheduling(Output.of(scheduling));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder useChiefInTfConfig(@Nullable Output<Boolean> useChiefInTfConfig) {
-            this.useChiefInTfConfig = useChiefInTfConfig;
+            $.useChiefInTfConfig = useChiefInTfConfig;
             return this;
         }
-        public Builder useChiefInTfConfig(@Nullable Boolean useChiefInTfConfig) {
-            this.useChiefInTfConfig = Codegen.ofNullable(useChiefInTfConfig);
-            return this;
+
+        public Builder useChiefInTfConfig(Boolean useChiefInTfConfig) {
+            return useChiefInTfConfig(Output.of(useChiefInTfConfig));
         }
+
         public Builder workerConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig) {
-            this.workerConfig = workerConfig;
+            $.workerConfig = workerConfig;
             return this;
         }
-        public Builder workerConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs workerConfig) {
-            this.workerConfig = Codegen.ofNullable(workerConfig);
-            return this;
+
+        public Builder workerConfig(GoogleCloudMlV1__ReplicaConfigArgs workerConfig) {
+            return workerConfig(Output.of(workerConfig));
         }
+
         public Builder workerCount(@Nullable Output<String> workerCount) {
-            this.workerCount = workerCount;
+            $.workerCount = workerCount;
             return this;
         }
-        public Builder workerCount(@Nullable String workerCount) {
-            this.workerCount = Codegen.ofNullable(workerCount);
-            return this;
+
+        public Builder workerCount(String workerCount) {
+            return workerCount(Output.of(workerCount));
         }
+
         public Builder workerType(@Nullable Output<String> workerType) {
-            this.workerType = workerType;
+            $.workerType = workerType;
             return this;
         }
-        public Builder workerType(@Nullable String workerType) {
-            this.workerType = Codegen.ofNullable(workerType);
-            return this;
-        }        public GoogleCloudMlV1__TrainingInputArgs build() {
-            return new GoogleCloudMlV1__TrainingInputArgs(args, enableWebAccess, encryptionConfig, evaluatorConfig, evaluatorCount, evaluatorType, hyperparameters, jobDir, masterConfig, masterType, network, packageUris, parameterServerConfig, parameterServerCount, parameterServerType, pythonModule, pythonVersion, region, runtimeVersion, scaleTier, scheduling, serviceAccount, useChiefInTfConfig, workerConfig, workerCount, workerType);
+
+        public Builder workerType(String workerType) {
+            return workerType(Output.of(workerType));
+        }
+
+        public GoogleCloudMlV1__TrainingInputArgs build() {
+            $.packageUris = Objects.requireNonNull($.packageUris, "expected parameter 'packageUris' to be non-null");
+            $.pythonModule = Objects.requireNonNull($.pythonModule, "expected parameter 'pythonModule' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.scaleTier = Objects.requireNonNull($.scaleTier, "expected parameter 'scaleTier' to be non-null");
+            return $;
         }
     }
+
 }

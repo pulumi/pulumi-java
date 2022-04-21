@@ -21,7 +21,7 @@ public final class SdkVersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sdkSupportStatus", required=true)
-      private final String sdkSupportStatus;
+    private String sdkSupportStatus;
 
     public String sdkSupportStatus() {
         return this.sdkSupportStatus;
@@ -32,7 +32,7 @@ public final class SdkVersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
@@ -43,64 +43,59 @@ public final class SdkVersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionDisplayName", required=true)
-      private final String versionDisplayName;
+    private String versionDisplayName;
 
     public String versionDisplayName() {
         return this.versionDisplayName;
     }
 
-    public SdkVersionResponse(
-        String sdkSupportStatus,
-        String version,
-        String versionDisplayName) {
-        this.sdkSupportStatus = Objects.requireNonNull(sdkSupportStatus, "expected parameter 'sdkSupportStatus' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-        this.versionDisplayName = Objects.requireNonNull(versionDisplayName, "expected parameter 'versionDisplayName' to be non-null");
-    }
+    private SdkVersionResponse() {}
 
-    private SdkVersionResponse() {
-        this.sdkSupportStatus = null;
-        this.version = null;
-        this.versionDisplayName = null;
+    private SdkVersionResponse(SdkVersionResponse $) {
+        this.sdkSupportStatus = $.sdkSupportStatus;
+        this.version = $.version;
+        this.versionDisplayName = $.versionDisplayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SdkVersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sdkSupportStatus;
-        private String version;
-        private String versionDisplayName;
+        private SdkVersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SdkVersionResponse();
         }
 
         public Builder(SdkVersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sdkSupportStatus = defaults.sdkSupportStatus;
-    	      this.version = defaults.version;
-    	      this.versionDisplayName = defaults.versionDisplayName;
+            $ = new SdkVersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sdkSupportStatus(String sdkSupportStatus) {
-            this.sdkSupportStatus = Objects.requireNonNull(sdkSupportStatus);
+            $.sdkSupportStatus = sdkSupportStatus;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder versionDisplayName(String versionDisplayName) {
-            this.versionDisplayName = Objects.requireNonNull(versionDisplayName);
+            $.versionDisplayName = versionDisplayName;
             return this;
-        }        public SdkVersionResponse build() {
-            return new SdkVersionResponse(sdkSupportStatus, version, versionDisplayName);
+        }
+
+        public SdkVersionResponse build() {
+            $.sdkSupportStatus = Objects.requireNonNull($.sdkSupportStatus, "expected parameter 'sdkSupportStatus' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            $.versionDisplayName = Objects.requireNonNull($.versionDisplayName, "expected parameter 'versionDisplayName' to be non-null");
+            return $;
         }
     }
+
 }

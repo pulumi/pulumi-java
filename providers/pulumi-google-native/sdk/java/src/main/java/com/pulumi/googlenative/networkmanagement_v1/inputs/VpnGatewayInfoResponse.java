@@ -21,7 +21,7 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
@@ -43,7 +43,7 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="networkUri", required=true)
-      private final String networkUri;
+    private String networkUri;
 
     public String networkUri() {
         return this.networkUri;
@@ -54,7 +54,7 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -65,7 +65,7 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
@@ -76,91 +76,80 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="vpnTunnelUri", required=true)
-      private final String vpnTunnelUri;
+    private String vpnTunnelUri;
 
     public String vpnTunnelUri() {
         return this.vpnTunnelUri;
     }
 
-    public VpnGatewayInfoResponse(
-        String displayName,
-        String ipAddress,
-        String networkUri,
-        String region,
-        String uri,
-        String vpnTunnelUri) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.networkUri = Objects.requireNonNull(networkUri, "expected parameter 'networkUri' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.vpnTunnelUri = Objects.requireNonNull(vpnTunnelUri, "expected parameter 'vpnTunnelUri' to be non-null");
-    }
+    private VpnGatewayInfoResponse() {}
 
-    private VpnGatewayInfoResponse() {
-        this.displayName = null;
-        this.ipAddress = null;
-        this.networkUri = null;
-        this.region = null;
-        this.uri = null;
-        this.vpnTunnelUri = null;
+    private VpnGatewayInfoResponse(VpnGatewayInfoResponse $) {
+        this.displayName = $.displayName;
+        this.ipAddress = $.ipAddress;
+        this.networkUri = $.networkUri;
+        this.region = $.region;
+        this.uri = $.uri;
+        this.vpnTunnelUri = $.vpnTunnelUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnGatewayInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String ipAddress;
-        private String networkUri;
-        private String region;
-        private String uri;
-        private String vpnTunnelUri;
+        private VpnGatewayInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnGatewayInfoResponse();
         }
 
         public Builder(VpnGatewayInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.networkUri = defaults.networkUri;
-    	      this.region = defaults.region;
-    	      this.uri = defaults.uri;
-    	      this.vpnTunnelUri = defaults.vpnTunnelUri;
+            $ = new VpnGatewayInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder networkUri(String networkUri) {
-            this.networkUri = Objects.requireNonNull(networkUri);
+            $.networkUri = networkUri;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder vpnTunnelUri(String vpnTunnelUri) {
-            this.vpnTunnelUri = Objects.requireNonNull(vpnTunnelUri);
+            $.vpnTunnelUri = vpnTunnelUri;
             return this;
-        }        public VpnGatewayInfoResponse build() {
-            return new VpnGatewayInfoResponse(displayName, ipAddress, networkUri, region, uri, vpnTunnelUri);
+        }
+
+        public VpnGatewayInfoResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.networkUri = Objects.requireNonNull($.networkUri, "expected parameter 'networkUri' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            $.vpnTunnelUri = Objects.requireNonNull($.vpnTunnelUri, "expected parameter 'vpnTunnelUri' to be non-null");
+            return $;
         }
     }
+
 }

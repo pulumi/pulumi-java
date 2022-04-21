@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * 
      */
     @Import(name="confidenceInterval", required=true)
-      private final GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval;
+    private GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval;
 
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval() {
         return this.confidenceInterval;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * 
      */
     @Import(name="count", required=true)
-      private final Double count;
+    private Double count;
 
     public Double count() {
         return this.count;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * 
      */
     @Import(name="countType", required=true)
-      private final String countType;
+    private String countType;
 
     public String countType() {
         return this.countType;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * 
      */
     @Import(name="ratio", required=true)
-      private final Double ratio;
+    private Double ratio;
 
     public Double ratio() {
         return this.ratio;
@@ -67,82 +67,73 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudDialogflowCxV3ExperimentResultMetricResponse(
-        GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval,
-        Double count,
-        String countType,
-        Double ratio,
-        String type) {
-        this.confidenceInterval = Objects.requireNonNull(confidenceInterval, "expected parameter 'confidenceInterval' to be non-null");
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.countType = Objects.requireNonNull(countType, "expected parameter 'countType' to be non-null");
-        this.ratio = Objects.requireNonNull(ratio, "expected parameter 'ratio' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3ExperimentResultMetricResponse() {}
 
-    private GoogleCloudDialogflowCxV3ExperimentResultMetricResponse() {
-        this.confidenceInterval = null;
-        this.count = null;
-        this.countType = null;
-        this.ratio = null;
-        this.type = null;
+    private GoogleCloudDialogflowCxV3ExperimentResultMetricResponse(GoogleCloudDialogflowCxV3ExperimentResultMetricResponse $) {
+        this.confidenceInterval = $.confidenceInterval;
+        this.count = $.count;
+        this.countType = $.countType;
+        this.ratio = $.ratio;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3ExperimentResultMetricResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval;
-        private Double count;
-        private String countType;
-        private Double ratio;
-        private String type;
+        private GoogleCloudDialogflowCxV3ExperimentResultMetricResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3ExperimentResultMetricResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3ExperimentResultMetricResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confidenceInterval = defaults.confidenceInterval;
-    	      this.count = defaults.count;
-    	      this.countType = defaults.countType;
-    	      this.ratio = defaults.ratio;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDialogflowCxV3ExperimentResultMetricResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder confidenceInterval(GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval) {
-            this.confidenceInterval = Objects.requireNonNull(confidenceInterval);
+            $.confidenceInterval = confidenceInterval;
             return this;
         }
+
         public Builder count(Double count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder countType(String countType) {
-            this.countType = Objects.requireNonNull(countType);
+            $.countType = countType;
             return this;
         }
+
         public Builder ratio(Double ratio) {
-            this.ratio = Objects.requireNonNull(ratio);
+            $.ratio = ratio;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudDialogflowCxV3ExperimentResultMetricResponse build() {
-            return new GoogleCloudDialogflowCxV3ExperimentResultMetricResponse(confidenceInterval, count, countType, ratio, type);
+        }
+
+        public GoogleCloudDialogflowCxV3ExperimentResultMetricResponse build() {
+            $.confidenceInterval = Objects.requireNonNull($.confidenceInterval, "expected parameter 'confidenceInterval' to be non-null");
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.countType = Objects.requireNonNull($.countType, "expected parameter 'countType' to be non-null");
+            $.ratio = Objects.requireNonNull($.ratio, "expected parameter 'ratio' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.awsnative.appflow.inputs.ConnectorProfileSAPODataConnectorProf
 import com.pulumi.awsnative.appflow.inputs.ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
     public static final ConnectorProfileSAPODataConnectorProfileCredentialsArgs Empty = new ConnectorProfileSAPODataConnectorProfileCredentialsArgs();
 
     @Import(name="basicAuthCredentials")
-      private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials;
+    private @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials;
 
-    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials() {
-        return this.basicAuthCredentials == null ? Codegen.empty() : this.basicAuthCredentials;
+    public Optional<Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs>> basicAuthCredentials() {
+        return Optional.ofNullable(this.basicAuthCredentials);
     }
 
     @Import(name="oAuthCredentials")
-      private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials;
+    private @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials;
 
-    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials() {
-        return this.oAuthCredentials == null ? Codegen.empty() : this.oAuthCredentials;
+    public Optional<Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs>> oAuthCredentials() {
+        return Optional.ofNullable(this.oAuthCredentials);
     }
 
-    public ConnectorProfileSAPODataConnectorProfileCredentialsArgs(
-        @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials,
-        @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials) {
-        this.basicAuthCredentials = basicAuthCredentials;
-        this.oAuthCredentials = oAuthCredentials;
-    }
+    private ConnectorProfileSAPODataConnectorProfileCredentialsArgs() {}
 
-    private ConnectorProfileSAPODataConnectorProfileCredentialsArgs() {
-        this.basicAuthCredentials = Codegen.empty();
-        this.oAuthCredentials = Codegen.empty();
+    private ConnectorProfileSAPODataConnectorProfileCredentialsArgs(ConnectorProfileSAPODataConnectorProfileCredentialsArgs $) {
+        this.basicAuthCredentials = $.basicAuthCredentials;
+        this.oAuthCredentials = $.oAuthCredentials;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileSAPODataConnectorProfileCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials;
-        private @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials;
+        private ConnectorProfileSAPODataConnectorProfileCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileSAPODataConnectorProfileCredentialsArgs();
         }
 
         public Builder(ConnectorProfileSAPODataConnectorProfileCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicAuthCredentials = defaults.basicAuthCredentials;
-    	      this.oAuthCredentials = defaults.oAuthCredentials;
+            $ = new ConnectorProfileSAPODataConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicAuthCredentials(@Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials) {
-            this.basicAuthCredentials = basicAuthCredentials;
+            $.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
-        public Builder basicAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs basicAuthCredentials) {
-            this.basicAuthCredentials = Codegen.ofNullable(basicAuthCredentials);
-            return this;
+
+        public Builder basicAuthCredentials(ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs basicAuthCredentials) {
+            return basicAuthCredentials(Output.of(basicAuthCredentials));
         }
+
         public Builder oAuthCredentials(@Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials) {
-            this.oAuthCredentials = oAuthCredentials;
+            $.oAuthCredentials = oAuthCredentials;
             return this;
         }
-        public Builder oAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs oAuthCredentials) {
-            this.oAuthCredentials = Codegen.ofNullable(oAuthCredentials);
-            return this;
-        }        public ConnectorProfileSAPODataConnectorProfileCredentialsArgs build() {
-            return new ConnectorProfileSAPODataConnectorProfileCredentialsArgs(basicAuthCredentials, oAuthCredentials);
+
+        public Builder oAuthCredentials(ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs oAuthCredentials) {
+            return oAuthCredentials(Output.of(oAuthCredentials));
+        }
+
+        public ConnectorProfileSAPODataConnectorProfileCredentialsArgs build() {
+            return $;
         }
     }
+
 }

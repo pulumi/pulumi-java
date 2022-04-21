@@ -5,9 +5,9 @@ package com.pulumi.googlenative.artifactregistry_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
     public static final TagArgs Empty = new TagArgs();
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -27,38 +27,38 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="packageId", required=true)
-      private final Output<String> packageId;
+    private Output<String> packageId;
 
     public Output<String> packageId() {
         return this.packageId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="repositoryId", required=true)
-      private final Output<String> repositoryId;
+    private Output<String> repositoryId;
 
     public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
     @Import(name="tagId")
-      private final @Nullable Output<String> tagId;
+    private @Nullable Output<String> tagId;
 
-    public Output<String> tagId() {
-        return this.tagId == null ? Codegen.empty() : this.tagId;
+    public Optional<Output<String>> tagId() {
+        return Optional.ofNullable(this.tagId);
     }
 
     /**
@@ -66,128 +66,110 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public TagArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> packageId,
-        @Nullable Output<String> project,
-        Output<String> repositoryId,
-        @Nullable Output<String> tagId,
-        @Nullable Output<String> version) {
-        this.location = location;
-        this.name = name;
-        this.packageId = Objects.requireNonNull(packageId, "expected parameter 'packageId' to be non-null");
-        this.project = project;
-        this.repositoryId = Objects.requireNonNull(repositoryId, "expected parameter 'repositoryId' to be non-null");
-        this.tagId = tagId;
-        this.version = version;
-    }
+    private TagArgs() {}
 
-    private TagArgs() {
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.packageId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.repositoryId = Codegen.empty();
-        this.tagId = Codegen.empty();
-        this.version = Codegen.empty();
+    private TagArgs(TagArgs $) {
+        this.location = $.location;
+        this.name = $.name;
+        this.packageId = $.packageId;
+        this.project = $.project;
+        this.repositoryId = $.repositoryId;
+        this.tagId = $.tagId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> packageId;
-        private @Nullable Output<String> project;
-        private Output<String> repositoryId;
-        private @Nullable Output<String> tagId;
-        private @Nullable Output<String> version;
+        private TagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagArgs();
         }
 
         public Builder(TagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.packageId = defaults.packageId;
-    	      this.project = defaults.project;
-    	      this.repositoryId = defaults.repositoryId;
-    	      this.tagId = defaults.tagId;
-    	      this.version = defaults.version;
+            $ = new TagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder packageId(Output<String> packageId) {
-            this.packageId = Objects.requireNonNull(packageId);
+            $.packageId = packageId;
             return this;
         }
+
         public Builder packageId(String packageId) {
-            this.packageId = Output.of(Objects.requireNonNull(packageId));
-            return this;
+            return packageId(Output.of(packageId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder repositoryId(Output<String> repositoryId) {
-            this.repositoryId = Objects.requireNonNull(repositoryId);
+            $.repositoryId = repositoryId;
             return this;
         }
+
         public Builder repositoryId(String repositoryId) {
-            this.repositoryId = Output.of(Objects.requireNonNull(repositoryId));
-            return this;
+            return repositoryId(Output.of(repositoryId));
         }
+
         public Builder tagId(@Nullable Output<String> tagId) {
-            this.tagId = tagId;
+            $.tagId = tagId;
             return this;
         }
-        public Builder tagId(@Nullable String tagId) {
-            this.tagId = Codegen.ofNullable(tagId);
-            return this;
+
+        public Builder tagId(String tagId) {
+            return tagId(Output.of(tagId));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public TagArgs build() {
-            return new TagArgs(location, name, packageId, project, repositoryId, tagId, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public TagArgs build() {
+            $.packageId = Objects.requireNonNull($.packageId, "expected parameter 'packageId' to be non-null");
+            $.repositoryId = Objects.requireNonNull($.repositoryId, "expected parameter 'repositoryId' to be non-null");
+            return $;
         }
     }
+
 }

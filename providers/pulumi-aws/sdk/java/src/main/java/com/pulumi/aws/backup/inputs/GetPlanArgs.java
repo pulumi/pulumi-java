@@ -20,7 +20,7 @@ public final class GetPlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="planId", required=true)
-      private final String planId;
+    private String planId;
 
     public String planId() {
         return this.planId;
@@ -31,55 +31,51 @@ public final class GetPlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetPlanArgs(
-        String planId,
-        @Nullable Map<String,String> tags) {
-        this.planId = Objects.requireNonNull(planId, "expected parameter 'planId' to be non-null");
-        this.tags = tags;
-    }
+    private GetPlanArgs() {}
 
-    private GetPlanArgs() {
-        this.planId = null;
-        this.tags = Map.of();
+    private GetPlanArgs(GetPlanArgs $) {
+        this.planId = $.planId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String planId;
-        private @Nullable Map<String,String> tags;
+        private GetPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPlanArgs();
         }
 
         public Builder(GetPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.planId = defaults.planId;
-    	      this.tags = defaults.tags;
+            $ = new GetPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder planId(String planId) {
-            this.planId = Objects.requireNonNull(planId);
+            $.planId = planId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetPlanArgs build() {
-            return new GetPlanArgs(planId, tags);
+        }
+
+        public GetPlanArgs build() {
+            $.planId = Objects.requireNonNull($.planId, "expected parameter 'planId' to be non-null");
+            return $;
         }
     }
+
 }

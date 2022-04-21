@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.authentication.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TokenReviewSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="audiences")
-      private final @Nullable Output<List<String>> audiences;
+    private @Nullable Output<List<String>> audiences;
 
-    public Output<List<String>> audiences() {
-        return this.audiences == null ? Codegen.empty() : this.audiences;
+    public Optional<Output<List<String>>> audiences() {
+        return Optional.ofNullable(this.audiences);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class TokenReviewSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="token")
-      private final @Nullable Output<String> token;
+    private @Nullable Output<String> token;
 
-    public Output<String> token() {
-        return this.token == null ? Codegen.empty() : this.token;
+    public Optional<Output<String>> token() {
+        return Optional.ofNullable(this.token);
     }
 
-    public TokenReviewSpecArgs(
-        @Nullable Output<List<String>> audiences,
-        @Nullable Output<String> token) {
-        this.audiences = audiences;
-        this.token = token;
-    }
+    private TokenReviewSpecArgs() {}
 
-    private TokenReviewSpecArgs() {
-        this.audiences = Codegen.empty();
-        this.token = Codegen.empty();
+    private TokenReviewSpecArgs(TokenReviewSpecArgs $) {
+        this.audiences = $.audiences;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TokenReviewSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> audiences;
-        private @Nullable Output<String> token;
+        private TokenReviewSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TokenReviewSpecArgs();
         }
 
         public Builder(TokenReviewSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audiences = defaults.audiences;
-    	      this.token = defaults.token;
+            $ = new TokenReviewSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audiences(@Nullable Output<List<String>> audiences) {
-            this.audiences = audiences;
+            $.audiences = audiences;
             return this;
         }
-        public Builder audiences(@Nullable List<String> audiences) {
-            this.audiences = Codegen.ofNullable(audiences);
-            return this;
+
+        public Builder audiences(List<String> audiences) {
+            return audiences(Output.of(audiences));
         }
+
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
+
         public Builder token(@Nullable Output<String> token) {
-            this.token = token;
+            $.token = token;
             return this;
         }
-        public Builder token(@Nullable String token) {
-            this.token = Codegen.ofNullable(token);
-            return this;
-        }        public TokenReviewSpecArgs build() {
-            return new TokenReviewSpecArgs(audiences, token);
+
+        public Builder token(String token) {
+            return token(Output.of(token));
+        }
+
+        public TokenReviewSpecArgs build() {
+            return $;
         }
     }
+
 }

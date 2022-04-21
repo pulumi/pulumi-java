@@ -6,7 +6,6 @@ package com.pulumi.awsnative.robomaker.inputs;
 import com.pulumi.awsnative.robomaker.enums.SimulationApplicationRenderingEngineName;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class SimulationApplicationRenderingEngineArgs extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final Output<SimulationApplicationRenderingEngineName> name;
+    private Output<SimulationApplicationRenderingEngineName> name;
 
     public Output<SimulationApplicationRenderingEngineName> name() {
         return this.name;
@@ -35,63 +34,60 @@ public final class SimulationApplicationRenderingEngineArgs extends com.pulumi.r
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public SimulationApplicationRenderingEngineArgs(
-        Output<SimulationApplicationRenderingEngineName> name,
-        Output<String> version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SimulationApplicationRenderingEngineArgs() {}
 
-    private SimulationApplicationRenderingEngineArgs() {
-        this.name = Codegen.empty();
-        this.version = Codegen.empty();
+    private SimulationApplicationRenderingEngineArgs(SimulationApplicationRenderingEngineArgs $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SimulationApplicationRenderingEngineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SimulationApplicationRenderingEngineName> name;
-        private Output<String> version;
+        private SimulationApplicationRenderingEngineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SimulationApplicationRenderingEngineArgs();
         }
 
         public Builder(SimulationApplicationRenderingEngineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new SimulationApplicationRenderingEngineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<SimulationApplicationRenderingEngineName> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(SimulationApplicationRenderingEngineName name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public SimulationApplicationRenderingEngineArgs build() {
-            return new SimulationApplicationRenderingEngineArgs(name, version);
+            return version(Output.of(version));
+        }
+
+        public SimulationApplicationRenderingEngineArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

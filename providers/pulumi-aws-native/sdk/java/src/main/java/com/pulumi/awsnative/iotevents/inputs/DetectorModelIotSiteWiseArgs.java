@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DetectorModelIotSiteWiseArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="assetId")
-      private final @Nullable Output<String> assetId;
+    private @Nullable Output<String> assetId;
 
-    public Output<String> assetId() {
-        return this.assetId == null ? Codegen.empty() : this.assetId;
+    public Optional<Output<String>> assetId() {
+        return Optional.ofNullable(this.assetId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DetectorModelIotSiteWiseArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="entryId")
-      private final @Nullable Output<String> entryId;
+    private @Nullable Output<String> entryId;
 
-    public Output<String> entryId() {
-        return this.entryId == null ? Codegen.empty() : this.entryId;
+    public Optional<Output<String>> entryId() {
+        return Optional.ofNullable(this.entryId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DetectorModelIotSiteWiseArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="propertyAlias")
-      private final @Nullable Output<String> propertyAlias;
+    private @Nullable Output<String> propertyAlias;
 
-    public Output<String> propertyAlias() {
-        return this.propertyAlias == null ? Codegen.empty() : this.propertyAlias;
+    public Optional<Output<String>> propertyAlias() {
+        return Optional.ofNullable(this.propertyAlias);
     }
 
     /**
@@ -58,109 +58,96 @@ public final class DetectorModelIotSiteWiseArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="propertyId")
-      private final @Nullable Output<String> propertyId;
+    private @Nullable Output<String> propertyId;
 
-    public Output<String> propertyId() {
-        return this.propertyId == null ? Codegen.empty() : this.propertyId;
+    public Optional<Output<String>> propertyId() {
+        return Optional.ofNullable(this.propertyId);
     }
 
     @Import(name="propertyValue", required=true)
-      private final Output<DetectorModelAssetPropertyValueArgs> propertyValue;
+    private Output<DetectorModelAssetPropertyValueArgs> propertyValue;
 
     public Output<DetectorModelAssetPropertyValueArgs> propertyValue() {
         return this.propertyValue;
     }
 
-    public DetectorModelIotSiteWiseArgs(
-        @Nullable Output<String> assetId,
-        @Nullable Output<String> entryId,
-        @Nullable Output<String> propertyAlias,
-        @Nullable Output<String> propertyId,
-        Output<DetectorModelAssetPropertyValueArgs> propertyValue) {
-        this.assetId = assetId;
-        this.entryId = entryId;
-        this.propertyAlias = propertyAlias;
-        this.propertyId = propertyId;
-        this.propertyValue = Objects.requireNonNull(propertyValue, "expected parameter 'propertyValue' to be non-null");
-    }
+    private DetectorModelIotSiteWiseArgs() {}
 
-    private DetectorModelIotSiteWiseArgs() {
-        this.assetId = Codegen.empty();
-        this.entryId = Codegen.empty();
-        this.propertyAlias = Codegen.empty();
-        this.propertyId = Codegen.empty();
-        this.propertyValue = Codegen.empty();
+    private DetectorModelIotSiteWiseArgs(DetectorModelIotSiteWiseArgs $) {
+        this.assetId = $.assetId;
+        this.entryId = $.entryId;
+        this.propertyAlias = $.propertyAlias;
+        this.propertyId = $.propertyId;
+        this.propertyValue = $.propertyValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelIotSiteWiseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assetId;
-        private @Nullable Output<String> entryId;
-        private @Nullable Output<String> propertyAlias;
-        private @Nullable Output<String> propertyId;
-        private Output<DetectorModelAssetPropertyValueArgs> propertyValue;
+        private DetectorModelIotSiteWiseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelIotSiteWiseArgs();
         }
 
         public Builder(DetectorModelIotSiteWiseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetId = defaults.assetId;
-    	      this.entryId = defaults.entryId;
-    	      this.propertyAlias = defaults.propertyAlias;
-    	      this.propertyId = defaults.propertyId;
-    	      this.propertyValue = defaults.propertyValue;
+            $ = new DetectorModelIotSiteWiseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetId(@Nullable Output<String> assetId) {
-            this.assetId = assetId;
+            $.assetId = assetId;
             return this;
         }
-        public Builder assetId(@Nullable String assetId) {
-            this.assetId = Codegen.ofNullable(assetId);
-            return this;
+
+        public Builder assetId(String assetId) {
+            return assetId(Output.of(assetId));
         }
+
         public Builder entryId(@Nullable Output<String> entryId) {
-            this.entryId = entryId;
+            $.entryId = entryId;
             return this;
         }
-        public Builder entryId(@Nullable String entryId) {
-            this.entryId = Codegen.ofNullable(entryId);
-            return this;
+
+        public Builder entryId(String entryId) {
+            return entryId(Output.of(entryId));
         }
+
         public Builder propertyAlias(@Nullable Output<String> propertyAlias) {
-            this.propertyAlias = propertyAlias;
+            $.propertyAlias = propertyAlias;
             return this;
         }
-        public Builder propertyAlias(@Nullable String propertyAlias) {
-            this.propertyAlias = Codegen.ofNullable(propertyAlias);
-            return this;
+
+        public Builder propertyAlias(String propertyAlias) {
+            return propertyAlias(Output.of(propertyAlias));
         }
+
         public Builder propertyId(@Nullable Output<String> propertyId) {
-            this.propertyId = propertyId;
+            $.propertyId = propertyId;
             return this;
         }
-        public Builder propertyId(@Nullable String propertyId) {
-            this.propertyId = Codegen.ofNullable(propertyId);
-            return this;
+
+        public Builder propertyId(String propertyId) {
+            return propertyId(Output.of(propertyId));
         }
+
         public Builder propertyValue(Output<DetectorModelAssetPropertyValueArgs> propertyValue) {
-            this.propertyValue = Objects.requireNonNull(propertyValue);
+            $.propertyValue = propertyValue;
             return this;
         }
+
         public Builder propertyValue(DetectorModelAssetPropertyValueArgs propertyValue) {
-            this.propertyValue = Output.of(Objects.requireNonNull(propertyValue));
-            return this;
-        }        public DetectorModelIotSiteWiseArgs build() {
-            return new DetectorModelIotSiteWiseArgs(assetId, entryId, propertyAlias, propertyId, propertyValue);
+            return propertyValue(Output.of(propertyValue));
+        }
+
+        public DetectorModelIotSiteWiseArgs build() {
+            $.propertyValue = Objects.requireNonNull($.propertyValue, "expected parameter 'propertyValue' to be non-null");
+            return $;
         }
     }
+
 }

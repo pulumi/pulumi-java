@@ -5,11 +5,11 @@ package com.pulumi.gcp.orgpolicy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.orgpolicy.inputs.PolicySpecRuleConditionArgs;
 import com.pulumi.gcp.orgpolicy.inputs.PolicySpecRuleValuesArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowAll")
-      private final @Nullable Output<String> allowAll;
+    private @Nullable Output<String> allowAll;
 
-    public Output<String> allowAll() {
-        return this.allowAll == null ? Codegen.empty() : this.allowAll;
+    public Optional<Output<String>> allowAll() {
+        return Optional.ofNullable(this.allowAll);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<PolicySpecRuleConditionArgs> condition;
+    private @Nullable Output<PolicySpecRuleConditionArgs> condition;
 
-    public Output<PolicySpecRuleConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<PolicySpecRuleConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="denyAll")
-      private final @Nullable Output<String> denyAll;
+    private @Nullable Output<String> denyAll;
 
-    public Output<String> denyAll() {
-        return this.denyAll == null ? Codegen.empty() : this.denyAll;
+    public Optional<Output<String>> denyAll() {
+        return Optional.ofNullable(this.denyAll);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enforce")
-      private final @Nullable Output<String> enforce;
+    private @Nullable Output<String> enforce;
 
-    public Output<String> enforce() {
-        return this.enforce == null ? Codegen.empty() : this.enforce;
+    public Optional<Output<String>> enforce() {
+        return Optional.ofNullable(this.enforce);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<PolicySpecRuleValuesArgs> values;
+    private @Nullable Output<PolicySpecRuleValuesArgs> values;
 
-    public Output<PolicySpecRuleValuesArgs> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<PolicySpecRuleValuesArgs>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public PolicySpecRuleArgs(
-        @Nullable Output<String> allowAll,
-        @Nullable Output<PolicySpecRuleConditionArgs> condition,
-        @Nullable Output<String> denyAll,
-        @Nullable Output<String> enforce,
-        @Nullable Output<PolicySpecRuleValuesArgs> values) {
-        this.allowAll = allowAll;
-        this.condition = condition;
-        this.denyAll = denyAll;
-        this.enforce = enforce;
-        this.values = values;
-    }
+    private PolicySpecRuleArgs() {}
 
-    private PolicySpecRuleArgs() {
-        this.allowAll = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.denyAll = Codegen.empty();
-        this.enforce = Codegen.empty();
-        this.values = Codegen.empty();
+    private PolicySpecRuleArgs(PolicySpecRuleArgs $) {
+        this.allowAll = $.allowAll;
+        this.condition = $.condition;
+        this.denyAll = $.denyAll;
+        this.enforce = $.enforce;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicySpecRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allowAll;
-        private @Nullable Output<PolicySpecRuleConditionArgs> condition;
-        private @Nullable Output<String> denyAll;
-        private @Nullable Output<String> enforce;
-        private @Nullable Output<PolicySpecRuleValuesArgs> values;
+        private PolicySpecRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicySpecRuleArgs();
         }
 
         public Builder(PolicySpecRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAll = defaults.allowAll;
-    	      this.condition = defaults.condition;
-    	      this.denyAll = defaults.denyAll;
-    	      this.enforce = defaults.enforce;
-    	      this.values = defaults.values;
+            $ = new PolicySpecRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAll(@Nullable Output<String> allowAll) {
-            this.allowAll = allowAll;
+            $.allowAll = allowAll;
             return this;
         }
-        public Builder allowAll(@Nullable String allowAll) {
-            this.allowAll = Codegen.ofNullable(allowAll);
-            return this;
+
+        public Builder allowAll(String allowAll) {
+            return allowAll(Output.of(allowAll));
         }
+
         public Builder condition(@Nullable Output<PolicySpecRuleConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable PolicySpecRuleConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(PolicySpecRuleConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder denyAll(@Nullable Output<String> denyAll) {
-            this.denyAll = denyAll;
+            $.denyAll = denyAll;
             return this;
         }
-        public Builder denyAll(@Nullable String denyAll) {
-            this.denyAll = Codegen.ofNullable(denyAll);
-            return this;
+
+        public Builder denyAll(String denyAll) {
+            return denyAll(Output.of(denyAll));
         }
+
         public Builder enforce(@Nullable Output<String> enforce) {
-            this.enforce = enforce;
+            $.enforce = enforce;
             return this;
         }
-        public Builder enforce(@Nullable String enforce) {
-            this.enforce = Codegen.ofNullable(enforce);
-            return this;
+
+        public Builder enforce(String enforce) {
+            return enforce(Output.of(enforce));
         }
+
         public Builder values(@Nullable Output<PolicySpecRuleValuesArgs> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable PolicySpecRuleValuesArgs values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
-        }        public PolicySpecRuleArgs build() {
-            return new PolicySpecRuleArgs(allowAll, condition, denyAll, enforce, values);
+
+        public Builder values(PolicySpecRuleValuesArgs values) {
+            return values(Output.of(values));
+        }
+
+        public PolicySpecRuleArgs build() {
+            return $;
         }
     }
+
 }

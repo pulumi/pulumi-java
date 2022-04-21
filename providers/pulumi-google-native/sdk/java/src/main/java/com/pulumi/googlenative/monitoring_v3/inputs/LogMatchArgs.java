@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class LogMatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
@@ -36,63 +36,59 @@ public final class LogMatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labelExtractors")
-      private final @Nullable Output<Map<String,String>> labelExtractors;
+    private @Nullable Output<Map<String,String>> labelExtractors;
 
-    public Output<Map<String,String>> labelExtractors() {
-        return this.labelExtractors == null ? Codegen.empty() : this.labelExtractors;
+    public Optional<Output<Map<String,String>>> labelExtractors() {
+        return Optional.ofNullable(this.labelExtractors);
     }
 
-    public LogMatchArgs(
-        Output<String> filter,
-        @Nullable Output<Map<String,String>> labelExtractors) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.labelExtractors = labelExtractors;
-    }
+    private LogMatchArgs() {}
 
-    private LogMatchArgs() {
-        this.filter = Codegen.empty();
-        this.labelExtractors = Codegen.empty();
+    private LogMatchArgs(LogMatchArgs $) {
+        this.filter = $.filter;
+        this.labelExtractors = $.labelExtractors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogMatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> filter;
-        private @Nullable Output<Map<String,String>> labelExtractors;
+        private LogMatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogMatchArgs();
         }
 
         public Builder(LogMatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.labelExtractors = defaults.labelExtractors;
+            $ = new LogMatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder labelExtractors(@Nullable Output<Map<String,String>> labelExtractors) {
-            this.labelExtractors = labelExtractors;
+            $.labelExtractors = labelExtractors;
             return this;
         }
-        public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
-            this.labelExtractors = Codegen.ofNullable(labelExtractors);
-            return this;
-        }        public LogMatchArgs build() {
-            return new LogMatchArgs(filter, labelExtractors);
+
+        public Builder labelExtractors(Map<String,String> labelExtractors) {
+            return labelExtractors(Output.of(labelExtractors));
+        }
+
+        public LogMatchArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

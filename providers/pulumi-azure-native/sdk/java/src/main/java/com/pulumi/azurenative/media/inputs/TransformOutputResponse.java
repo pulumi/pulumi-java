@@ -29,10 +29,10 @@ public final class TransformOutputResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="onError")
-      private final @Nullable String onError;
+    private @Nullable String onError;
 
     public Optional<String> onError() {
-        return this.onError == null ? Optional.empty() : Optional.ofNullable(this.onError);
+        return Optional.ofNullable(this.onError);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class TransformOutputResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="preset", required=true)
-      private final Object preset;
+    private Object preset;
 
     public Object preset() {
         return this.preset;
@@ -51,64 +51,57 @@ public final class TransformOutputResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="relativePriority")
-      private final @Nullable String relativePriority;
+    private @Nullable String relativePriority;
 
     public Optional<String> relativePriority() {
-        return this.relativePriority == null ? Optional.empty() : Optional.ofNullable(this.relativePriority);
+        return Optional.ofNullable(this.relativePriority);
     }
 
-    public TransformOutputResponse(
-        @Nullable String onError,
-        Object preset,
-        @Nullable String relativePriority) {
-        this.onError = onError;
-        this.preset = Objects.requireNonNull(preset, "expected parameter 'preset' to be non-null");
-        this.relativePriority = relativePriority;
-    }
+    private TransformOutputResponse() {}
 
-    private TransformOutputResponse() {
-        this.onError = null;
-        this.preset = null;
-        this.relativePriority = null;
+    private TransformOutputResponse(TransformOutputResponse $) {
+        this.onError = $.onError;
+        this.preset = $.preset;
+        this.relativePriority = $.relativePriority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransformOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String onError;
-        private Object preset;
-        private @Nullable String relativePriority;
+        private TransformOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransformOutputResponse();
         }
 
         public Builder(TransformOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onError = defaults.onError;
-    	      this.preset = defaults.preset;
-    	      this.relativePriority = defaults.relativePriority;
+            $ = new TransformOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder onError(@Nullable String onError) {
-            this.onError = onError;
+            $.onError = onError;
             return this;
         }
+
         public Builder preset(Object preset) {
-            this.preset = Objects.requireNonNull(preset);
+            $.preset = preset;
             return this;
         }
+
         public Builder relativePriority(@Nullable String relativePriority) {
-            this.relativePriority = relativePriority;
+            $.relativePriority = relativePriority;
             return this;
-        }        public TransformOutputResponse build() {
-            return new TransformOutputResponse(onError, preset, relativePriority);
+        }
+
+        public TransformOutputResponse build() {
+            $.preset = Objects.requireNonNull($.preset, "expected parameter 'preset' to be non-null");
+            return $;
         }
     }
+
 }

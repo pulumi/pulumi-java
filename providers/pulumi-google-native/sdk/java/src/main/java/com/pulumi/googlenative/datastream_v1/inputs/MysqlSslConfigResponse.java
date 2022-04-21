@@ -22,7 +22,7 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="caCertificate", required=true)
-      private final String caCertificate;
+    private String caCertificate;
 
     public String caCertificate() {
         return this.caCertificate;
@@ -33,7 +33,7 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="caCertificateSet", required=true)
-      private final Boolean caCertificateSet;
+    private Boolean caCertificateSet;
 
     public Boolean caCertificateSet() {
         return this.caCertificateSet;
@@ -44,7 +44,7 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="clientCertificate", required=true)
-      private final String clientCertificate;
+    private String clientCertificate;
 
     public String clientCertificate() {
         return this.clientCertificate;
@@ -55,7 +55,7 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="clientCertificateSet", required=true)
-      private final Boolean clientCertificateSet;
+    private Boolean clientCertificateSet;
 
     public Boolean clientCertificateSet() {
         return this.clientCertificateSet;
@@ -66,7 +66,7 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="clientKey", required=true)
-      private final String clientKey;
+    private String clientKey;
 
     public String clientKey() {
         return this.clientKey;
@@ -77,91 +77,80 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="clientKeySet", required=true)
-      private final Boolean clientKeySet;
+    private Boolean clientKeySet;
 
     public Boolean clientKeySet() {
         return this.clientKeySet;
     }
 
-    public MysqlSslConfigResponse(
-        String caCertificate,
-        Boolean caCertificateSet,
-        String clientCertificate,
-        Boolean clientCertificateSet,
-        String clientKey,
-        Boolean clientKeySet) {
-        this.caCertificate = Objects.requireNonNull(caCertificate, "expected parameter 'caCertificate' to be non-null");
-        this.caCertificateSet = Objects.requireNonNull(caCertificateSet, "expected parameter 'caCertificateSet' to be non-null");
-        this.clientCertificate = Objects.requireNonNull(clientCertificate, "expected parameter 'clientCertificate' to be non-null");
-        this.clientCertificateSet = Objects.requireNonNull(clientCertificateSet, "expected parameter 'clientCertificateSet' to be non-null");
-        this.clientKey = Objects.requireNonNull(clientKey, "expected parameter 'clientKey' to be non-null");
-        this.clientKeySet = Objects.requireNonNull(clientKeySet, "expected parameter 'clientKeySet' to be non-null");
-    }
+    private MysqlSslConfigResponse() {}
 
-    private MysqlSslConfigResponse() {
-        this.caCertificate = null;
-        this.caCertificateSet = null;
-        this.clientCertificate = null;
-        this.clientCertificateSet = null;
-        this.clientKey = null;
-        this.clientKeySet = null;
+    private MysqlSslConfigResponse(MysqlSslConfigResponse $) {
+        this.caCertificate = $.caCertificate;
+        this.caCertificateSet = $.caCertificateSet;
+        this.clientCertificate = $.clientCertificate;
+        this.clientCertificateSet = $.clientCertificateSet;
+        this.clientKey = $.clientKey;
+        this.clientKeySet = $.clientKeySet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlSslConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String caCertificate;
-        private Boolean caCertificateSet;
-        private String clientCertificate;
-        private Boolean clientCertificateSet;
-        private String clientKey;
-        private Boolean clientKeySet;
+        private MysqlSslConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlSslConfigResponse();
         }
 
         public Builder(MysqlSslConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caCertificate = defaults.caCertificate;
-    	      this.caCertificateSet = defaults.caCertificateSet;
-    	      this.clientCertificate = defaults.clientCertificate;
-    	      this.clientCertificateSet = defaults.clientCertificateSet;
-    	      this.clientKey = defaults.clientKey;
-    	      this.clientKeySet = defaults.clientKeySet;
+            $ = new MysqlSslConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caCertificate(String caCertificate) {
-            this.caCertificate = Objects.requireNonNull(caCertificate);
+            $.caCertificate = caCertificate;
             return this;
         }
+
         public Builder caCertificateSet(Boolean caCertificateSet) {
-            this.caCertificateSet = Objects.requireNonNull(caCertificateSet);
+            $.caCertificateSet = caCertificateSet;
             return this;
         }
+
         public Builder clientCertificate(String clientCertificate) {
-            this.clientCertificate = Objects.requireNonNull(clientCertificate);
+            $.clientCertificate = clientCertificate;
             return this;
         }
+
         public Builder clientCertificateSet(Boolean clientCertificateSet) {
-            this.clientCertificateSet = Objects.requireNonNull(clientCertificateSet);
+            $.clientCertificateSet = clientCertificateSet;
             return this;
         }
+
         public Builder clientKey(String clientKey) {
-            this.clientKey = Objects.requireNonNull(clientKey);
+            $.clientKey = clientKey;
             return this;
         }
+
         public Builder clientKeySet(Boolean clientKeySet) {
-            this.clientKeySet = Objects.requireNonNull(clientKeySet);
+            $.clientKeySet = clientKeySet;
             return this;
-        }        public MysqlSslConfigResponse build() {
-            return new MysqlSslConfigResponse(caCertificate, caCertificateSet, clientCertificate, clientCertificateSet, clientKey, clientKeySet);
+        }
+
+        public MysqlSslConfigResponse build() {
+            $.caCertificate = Objects.requireNonNull($.caCertificate, "expected parameter 'caCertificate' to be non-null");
+            $.caCertificateSet = Objects.requireNonNull($.caCertificateSet, "expected parameter 'caCertificateSet' to be non-null");
+            $.clientCertificate = Objects.requireNonNull($.clientCertificate, "expected parameter 'clientCertificate' to be non-null");
+            $.clientCertificateSet = Objects.requireNonNull($.clientCertificateSet, "expected parameter 'clientCertificateSet' to be non-null");
+            $.clientKey = Objects.requireNonNull($.clientKey, "expected parameter 'clientKey' to be non-null");
+            $.clientKeySet = Objects.requireNonNull($.clientKeySet, "expected parameter 'clientKeySet' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,52 +15,53 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     public static final FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs Empty = new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs();
 
     @Import(name="items", required=true)
-      private final Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> items;
+    private Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> items;
 
     public Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> items() {
         return this.items;
     }
 
-    public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs(Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs() {}
 
-    private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs() {
-        this.items = Codegen.empty();
+    private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> items;
+        private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs();
         }
 
         public Builder(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs> items) {
-            this.items = Output.of(Objects.requireNonNull(items));
-            return this;
+            return items(Output.of(items));
         }
+
         public Builder items(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs... items) {
             return items(List.of(items));
-        }        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs build() {
-            return new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs(items);
+        }
+
+        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

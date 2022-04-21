@@ -9,12 +9,12 @@ import com.pulumi.aws.lambda.inputs.EventSourceMappingSelfManagedEventSourceArgs
 import com.pulumi.aws.lambda.inputs.EventSourceMappingSourceAccessConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,24 +29,24 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="batchSize")
-      private final @Nullable Output<Integer> batchSize;
+    private @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> batchSize() {
-        return this.batchSize == null ? Codegen.empty() : this.batchSize;
+    public Optional<Output<Integer>> batchSize() {
+        return Optional.ofNullable(this.batchSize);
     }
 
     @Import(name="bisectBatchOnFunctionError")
-      private final @Nullable Output<Boolean> bisectBatchOnFunctionError;
+    private @Nullable Output<Boolean> bisectBatchOnFunctionError;
 
-    public Output<Boolean> bisectBatchOnFunctionError() {
-        return this.bisectBatchOnFunctionError == null ? Codegen.empty() : this.bisectBatchOnFunctionError;
+    public Optional<Output<Boolean>> bisectBatchOnFunctionError() {
+        return Optional.ofNullable(this.bisectBatchOnFunctionError);
     }
 
     @Import(name="destinationConfig")
-      private final @Nullable Output<EventSourceMappingDestinationConfigArgs> destinationConfig;
+    private @Nullable Output<EventSourceMappingDestinationConfigArgs> destinationConfig;
 
-    public Output<EventSourceMappingDestinationConfigArgs> destinationConfig() {
-        return this.destinationConfig == null ? Codegen.empty() : this.destinationConfig;
+    public Optional<Output<EventSourceMappingDestinationConfigArgs>> destinationConfig() {
+        return Optional.ofNullable(this.destinationConfig);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="eventSourceArn")
-      private final @Nullable Output<String> eventSourceArn;
+    private @Nullable Output<String> eventSourceArn;
 
-    public Output<String> eventSourceArn() {
-        return this.eventSourceArn == null ? Codegen.empty() : this.eventSourceArn;
+    public Optional<Output<String>> eventSourceArn() {
+        return Optional.ofNullable(this.eventSourceArn);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="filterCriteria")
-      private final @Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria;
+    private @Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria;
 
-    public Output<EventSourceMappingFilterCriteriaArgs> filterCriteria() {
-        return this.filterCriteria == null ? Codegen.empty() : this.filterCriteria;
+    public Optional<Output<EventSourceMappingFilterCriteriaArgs>> filterCriteria() {
+        return Optional.ofNullable(this.filterCriteria);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="functionName", required=true)
-      private final Output<String> functionName;
+    private Output<String> functionName;
 
     public Output<String> functionName() {
         return this.functionName;
@@ -98,10 +98,10 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="functionResponseTypes")
-      private final @Nullable Output<List<String>> functionResponseTypes;
+    private @Nullable Output<List<String>> functionResponseTypes;
 
-    public Output<List<String>> functionResponseTypes() {
-        return this.functionResponseTypes == null ? Codegen.empty() : this.functionResponseTypes;
+    public Optional<Output<List<String>>> functionResponseTypes() {
+        return Optional.ofNullable(this.functionResponseTypes);
     }
 
     /**
@@ -112,31 +112,31 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="maximumBatchingWindowInSeconds")
-      private final @Nullable Output<Integer> maximumBatchingWindowInSeconds;
+    private @Nullable Output<Integer> maximumBatchingWindowInSeconds;
 
-    public Output<Integer> maximumBatchingWindowInSeconds() {
-        return this.maximumBatchingWindowInSeconds == null ? Codegen.empty() : this.maximumBatchingWindowInSeconds;
+    public Optional<Output<Integer>> maximumBatchingWindowInSeconds() {
+        return Optional.ofNullable(this.maximumBatchingWindowInSeconds);
     }
 
     @Import(name="maximumRecordAgeInSeconds")
-      private final @Nullable Output<Integer> maximumRecordAgeInSeconds;
+    private @Nullable Output<Integer> maximumRecordAgeInSeconds;
 
-    public Output<Integer> maximumRecordAgeInSeconds() {
-        return this.maximumRecordAgeInSeconds == null ? Codegen.empty() : this.maximumRecordAgeInSeconds;
+    public Optional<Output<Integer>> maximumRecordAgeInSeconds() {
+        return Optional.ofNullable(this.maximumRecordAgeInSeconds);
     }
 
     @Import(name="maximumRetryAttempts")
-      private final @Nullable Output<Integer> maximumRetryAttempts;
+    private @Nullable Output<Integer> maximumRetryAttempts;
 
-    public Output<Integer> maximumRetryAttempts() {
-        return this.maximumRetryAttempts == null ? Codegen.empty() : this.maximumRetryAttempts;
+    public Optional<Output<Integer>> maximumRetryAttempts() {
+        return Optional.ofNullable(this.maximumRetryAttempts);
     }
 
     @Import(name="parallelizationFactor")
-      private final @Nullable Output<Integer> parallelizationFactor;
+    private @Nullable Output<Integer> parallelizationFactor;
 
-    public Output<Integer> parallelizationFactor() {
-        return this.parallelizationFactor == null ? Codegen.empty() : this.parallelizationFactor;
+    public Optional<Output<Integer>> parallelizationFactor() {
+        return Optional.ofNullable(this.parallelizationFactor);
     }
 
     /**
@@ -146,24 +146,24 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="queues")
-      private final @Nullable Output<List<String>> queues;
+    private @Nullable Output<List<String>> queues;
 
-    public Output<List<String>> queues() {
-        return this.queues == null ? Codegen.empty() : this.queues;
+    public Optional<Output<List<String>>> queues() {
+        return Optional.ofNullable(this.queues);
     }
 
     @Import(name="selfManagedEventSource")
-      private final @Nullable Output<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource;
+    private @Nullable Output<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource;
 
-    public Output<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource() {
-        return this.selfManagedEventSource == null ? Codegen.empty() : this.selfManagedEventSource;
+    public Optional<Output<EventSourceMappingSelfManagedEventSourceArgs>> selfManagedEventSource() {
+        return Optional.ofNullable(this.selfManagedEventSource);
     }
 
     @Import(name="sourceAccessConfigurations")
-      private final @Nullable Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations;
+    private @Nullable Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations;
 
-    public Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations() {
-        return this.sourceAccessConfigurations == null ? Codegen.empty() : this.sourceAccessConfigurations;
+    public Optional<Output<List<EventSourceMappingSourceAccessConfigurationArgs>>> sourceAccessConfigurations() {
+        return Optional.ofNullable(this.sourceAccessConfigurations);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="startingPosition")
-      private final @Nullable Output<String> startingPosition;
+    private @Nullable Output<String> startingPosition;
 
-    public Output<String> startingPosition() {
-        return this.startingPosition == null ? Codegen.empty() : this.startingPosition;
+    public Optional<Output<String>> startingPosition() {
+        return Optional.ofNullable(this.startingPosition);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="startingPositionTimestamp")
-      private final @Nullable Output<String> startingPositionTimestamp;
+    private @Nullable Output<String> startingPositionTimestamp;
 
-    public Output<String> startingPositionTimestamp() {
-        return this.startingPositionTimestamp == null ? Codegen.empty() : this.startingPositionTimestamp;
+    public Optional<Output<String>> startingPositionTimestamp() {
+        return Optional.ofNullable(this.startingPositionTimestamp);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="topics")
-      private final @Nullable Output<List<String>> topics;
+    private @Nullable Output<List<String>> topics;
 
-    public Output<List<String>> topics() {
-        return this.topics == null ? Codegen.empty() : this.topics;
+    public Optional<Output<List<String>>> topics() {
+        return Optional.ofNullable(this.topics);
     }
 
     /**
@@ -204,296 +204,245 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tumblingWindowInSeconds")
-      private final @Nullable Output<Integer> tumblingWindowInSeconds;
+    private @Nullable Output<Integer> tumblingWindowInSeconds;
 
-    public Output<Integer> tumblingWindowInSeconds() {
-        return this.tumblingWindowInSeconds == null ? Codegen.empty() : this.tumblingWindowInSeconds;
+    public Optional<Output<Integer>> tumblingWindowInSeconds() {
+        return Optional.ofNullable(this.tumblingWindowInSeconds);
     }
 
-    public EventSourceMappingArgs(
-        @Nullable Output<Integer> batchSize,
-        @Nullable Output<Boolean> bisectBatchOnFunctionError,
-        @Nullable Output<EventSourceMappingDestinationConfigArgs> destinationConfig,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> eventSourceArn,
-        @Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria,
-        Output<String> functionName,
-        @Nullable Output<List<String>> functionResponseTypes,
-        @Nullable Output<Integer> maximumBatchingWindowInSeconds,
-        @Nullable Output<Integer> maximumRecordAgeInSeconds,
-        @Nullable Output<Integer> maximumRetryAttempts,
-        @Nullable Output<Integer> parallelizationFactor,
-        @Nullable Output<List<String>> queues,
-        @Nullable Output<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource,
-        @Nullable Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations,
-        @Nullable Output<String> startingPosition,
-        @Nullable Output<String> startingPositionTimestamp,
-        @Nullable Output<List<String>> topics,
-        @Nullable Output<Integer> tumblingWindowInSeconds) {
-        this.batchSize = batchSize;
-        this.bisectBatchOnFunctionError = bisectBatchOnFunctionError;
-        this.destinationConfig = destinationConfig;
-        this.enabled = enabled;
-        this.eventSourceArn = eventSourceArn;
-        this.filterCriteria = filterCriteria;
-        this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
-        this.functionResponseTypes = functionResponseTypes;
-        this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
-        this.maximumRecordAgeInSeconds = maximumRecordAgeInSeconds;
-        this.maximumRetryAttempts = maximumRetryAttempts;
-        this.parallelizationFactor = parallelizationFactor;
-        this.queues = queues;
-        this.selfManagedEventSource = selfManagedEventSource;
-        this.sourceAccessConfigurations = sourceAccessConfigurations;
-        this.startingPosition = startingPosition;
-        this.startingPositionTimestamp = startingPositionTimestamp;
-        this.topics = topics;
-        this.tumblingWindowInSeconds = tumblingWindowInSeconds;
-    }
+    private EventSourceMappingArgs() {}
 
-    private EventSourceMappingArgs() {
-        this.batchSize = Codegen.empty();
-        this.bisectBatchOnFunctionError = Codegen.empty();
-        this.destinationConfig = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.eventSourceArn = Codegen.empty();
-        this.filterCriteria = Codegen.empty();
-        this.functionName = Codegen.empty();
-        this.functionResponseTypes = Codegen.empty();
-        this.maximumBatchingWindowInSeconds = Codegen.empty();
-        this.maximumRecordAgeInSeconds = Codegen.empty();
-        this.maximumRetryAttempts = Codegen.empty();
-        this.parallelizationFactor = Codegen.empty();
-        this.queues = Codegen.empty();
-        this.selfManagedEventSource = Codegen.empty();
-        this.sourceAccessConfigurations = Codegen.empty();
-        this.startingPosition = Codegen.empty();
-        this.startingPositionTimestamp = Codegen.empty();
-        this.topics = Codegen.empty();
-        this.tumblingWindowInSeconds = Codegen.empty();
+    private EventSourceMappingArgs(EventSourceMappingArgs $) {
+        this.batchSize = $.batchSize;
+        this.bisectBatchOnFunctionError = $.bisectBatchOnFunctionError;
+        this.destinationConfig = $.destinationConfig;
+        this.enabled = $.enabled;
+        this.eventSourceArn = $.eventSourceArn;
+        this.filterCriteria = $.filterCriteria;
+        this.functionName = $.functionName;
+        this.functionResponseTypes = $.functionResponseTypes;
+        this.maximumBatchingWindowInSeconds = $.maximumBatchingWindowInSeconds;
+        this.maximumRecordAgeInSeconds = $.maximumRecordAgeInSeconds;
+        this.maximumRetryAttempts = $.maximumRetryAttempts;
+        this.parallelizationFactor = $.parallelizationFactor;
+        this.queues = $.queues;
+        this.selfManagedEventSource = $.selfManagedEventSource;
+        this.sourceAccessConfigurations = $.sourceAccessConfigurations;
+        this.startingPosition = $.startingPosition;
+        this.startingPositionTimestamp = $.startingPositionTimestamp;
+        this.topics = $.topics;
+        this.tumblingWindowInSeconds = $.tumblingWindowInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> batchSize;
-        private @Nullable Output<Boolean> bisectBatchOnFunctionError;
-        private @Nullable Output<EventSourceMappingDestinationConfigArgs> destinationConfig;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> eventSourceArn;
-        private @Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria;
-        private Output<String> functionName;
-        private @Nullable Output<List<String>> functionResponseTypes;
-        private @Nullable Output<Integer> maximumBatchingWindowInSeconds;
-        private @Nullable Output<Integer> maximumRecordAgeInSeconds;
-        private @Nullable Output<Integer> maximumRetryAttempts;
-        private @Nullable Output<Integer> parallelizationFactor;
-        private @Nullable Output<List<String>> queues;
-        private @Nullable Output<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource;
-        private @Nullable Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations;
-        private @Nullable Output<String> startingPosition;
-        private @Nullable Output<String> startingPositionTimestamp;
-        private @Nullable Output<List<String>> topics;
-        private @Nullable Output<Integer> tumblingWindowInSeconds;
+        private EventSourceMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingArgs();
         }
 
         public Builder(EventSourceMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchSize = defaults.batchSize;
-    	      this.bisectBatchOnFunctionError = defaults.bisectBatchOnFunctionError;
-    	      this.destinationConfig = defaults.destinationConfig;
-    	      this.enabled = defaults.enabled;
-    	      this.eventSourceArn = defaults.eventSourceArn;
-    	      this.filterCriteria = defaults.filterCriteria;
-    	      this.functionName = defaults.functionName;
-    	      this.functionResponseTypes = defaults.functionResponseTypes;
-    	      this.maximumBatchingWindowInSeconds = defaults.maximumBatchingWindowInSeconds;
-    	      this.maximumRecordAgeInSeconds = defaults.maximumRecordAgeInSeconds;
-    	      this.maximumRetryAttempts = defaults.maximumRetryAttempts;
-    	      this.parallelizationFactor = defaults.parallelizationFactor;
-    	      this.queues = defaults.queues;
-    	      this.selfManagedEventSource = defaults.selfManagedEventSource;
-    	      this.sourceAccessConfigurations = defaults.sourceAccessConfigurations;
-    	      this.startingPosition = defaults.startingPosition;
-    	      this.startingPositionTimestamp = defaults.startingPositionTimestamp;
-    	      this.topics = defaults.topics;
-    	      this.tumblingWindowInSeconds = defaults.tumblingWindowInSeconds;
+            $ = new EventSourceMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchSize(@Nullable Output<Integer> batchSize) {
-            this.batchSize = batchSize;
+            $.batchSize = batchSize;
             return this;
         }
-        public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = Codegen.ofNullable(batchSize);
-            return this;
+
+        public Builder batchSize(Integer batchSize) {
+            return batchSize(Output.of(batchSize));
         }
+
         public Builder bisectBatchOnFunctionError(@Nullable Output<Boolean> bisectBatchOnFunctionError) {
-            this.bisectBatchOnFunctionError = bisectBatchOnFunctionError;
+            $.bisectBatchOnFunctionError = bisectBatchOnFunctionError;
             return this;
         }
-        public Builder bisectBatchOnFunctionError(@Nullable Boolean bisectBatchOnFunctionError) {
-            this.bisectBatchOnFunctionError = Codegen.ofNullable(bisectBatchOnFunctionError);
-            return this;
+
+        public Builder bisectBatchOnFunctionError(Boolean bisectBatchOnFunctionError) {
+            return bisectBatchOnFunctionError(Output.of(bisectBatchOnFunctionError));
         }
+
         public Builder destinationConfig(@Nullable Output<EventSourceMappingDestinationConfigArgs> destinationConfig) {
-            this.destinationConfig = destinationConfig;
+            $.destinationConfig = destinationConfig;
             return this;
         }
-        public Builder destinationConfig(@Nullable EventSourceMappingDestinationConfigArgs destinationConfig) {
-            this.destinationConfig = Codegen.ofNullable(destinationConfig);
-            return this;
+
+        public Builder destinationConfig(EventSourceMappingDestinationConfigArgs destinationConfig) {
+            return destinationConfig(Output.of(destinationConfig));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder eventSourceArn(@Nullable Output<String> eventSourceArn) {
-            this.eventSourceArn = eventSourceArn;
+            $.eventSourceArn = eventSourceArn;
             return this;
         }
-        public Builder eventSourceArn(@Nullable String eventSourceArn) {
-            this.eventSourceArn = Codegen.ofNullable(eventSourceArn);
-            return this;
+
+        public Builder eventSourceArn(String eventSourceArn) {
+            return eventSourceArn(Output.of(eventSourceArn));
         }
+
         public Builder filterCriteria(@Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria) {
-            this.filterCriteria = filterCriteria;
+            $.filterCriteria = filterCriteria;
             return this;
         }
-        public Builder filterCriteria(@Nullable EventSourceMappingFilterCriteriaArgs filterCriteria) {
-            this.filterCriteria = Codegen.ofNullable(filterCriteria);
-            return this;
+
+        public Builder filterCriteria(EventSourceMappingFilterCriteriaArgs filterCriteria) {
+            return filterCriteria(Output.of(filterCriteria));
         }
+
         public Builder functionName(Output<String> functionName) {
-            this.functionName = Objects.requireNonNull(functionName);
+            $.functionName = functionName;
             return this;
         }
+
         public Builder functionName(String functionName) {
-            this.functionName = Output.of(Objects.requireNonNull(functionName));
-            return this;
+            return functionName(Output.of(functionName));
         }
+
         public Builder functionResponseTypes(@Nullable Output<List<String>> functionResponseTypes) {
-            this.functionResponseTypes = functionResponseTypes;
+            $.functionResponseTypes = functionResponseTypes;
             return this;
         }
-        public Builder functionResponseTypes(@Nullable List<String> functionResponseTypes) {
-            this.functionResponseTypes = Codegen.ofNullable(functionResponseTypes);
-            return this;
+
+        public Builder functionResponseTypes(List<String> functionResponseTypes) {
+            return functionResponseTypes(Output.of(functionResponseTypes));
         }
+
         public Builder functionResponseTypes(String... functionResponseTypes) {
             return functionResponseTypes(List.of(functionResponseTypes));
         }
+
         public Builder maximumBatchingWindowInSeconds(@Nullable Output<Integer> maximumBatchingWindowInSeconds) {
-            this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
+            $.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
             return this;
         }
-        public Builder maximumBatchingWindowInSeconds(@Nullable Integer maximumBatchingWindowInSeconds) {
-            this.maximumBatchingWindowInSeconds = Codegen.ofNullable(maximumBatchingWindowInSeconds);
-            return this;
+
+        public Builder maximumBatchingWindowInSeconds(Integer maximumBatchingWindowInSeconds) {
+            return maximumBatchingWindowInSeconds(Output.of(maximumBatchingWindowInSeconds));
         }
+
         public Builder maximumRecordAgeInSeconds(@Nullable Output<Integer> maximumRecordAgeInSeconds) {
-            this.maximumRecordAgeInSeconds = maximumRecordAgeInSeconds;
+            $.maximumRecordAgeInSeconds = maximumRecordAgeInSeconds;
             return this;
         }
-        public Builder maximumRecordAgeInSeconds(@Nullable Integer maximumRecordAgeInSeconds) {
-            this.maximumRecordAgeInSeconds = Codegen.ofNullable(maximumRecordAgeInSeconds);
-            return this;
+
+        public Builder maximumRecordAgeInSeconds(Integer maximumRecordAgeInSeconds) {
+            return maximumRecordAgeInSeconds(Output.of(maximumRecordAgeInSeconds));
         }
+
         public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
-            this.maximumRetryAttempts = maximumRetryAttempts;
+            $.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
-        public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
-            this.maximumRetryAttempts = Codegen.ofNullable(maximumRetryAttempts);
-            return this;
+
+        public Builder maximumRetryAttempts(Integer maximumRetryAttempts) {
+            return maximumRetryAttempts(Output.of(maximumRetryAttempts));
         }
+
         public Builder parallelizationFactor(@Nullable Output<Integer> parallelizationFactor) {
-            this.parallelizationFactor = parallelizationFactor;
+            $.parallelizationFactor = parallelizationFactor;
             return this;
         }
-        public Builder parallelizationFactor(@Nullable Integer parallelizationFactor) {
-            this.parallelizationFactor = Codegen.ofNullable(parallelizationFactor);
-            return this;
+
+        public Builder parallelizationFactor(Integer parallelizationFactor) {
+            return parallelizationFactor(Output.of(parallelizationFactor));
         }
+
         public Builder queues(@Nullable Output<List<String>> queues) {
-            this.queues = queues;
+            $.queues = queues;
             return this;
         }
-        public Builder queues(@Nullable List<String> queues) {
-            this.queues = Codegen.ofNullable(queues);
-            return this;
+
+        public Builder queues(List<String> queues) {
+            return queues(Output.of(queues));
         }
+
         public Builder queues(String... queues) {
             return queues(List.of(queues));
         }
+
         public Builder selfManagedEventSource(@Nullable Output<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource) {
-            this.selfManagedEventSource = selfManagedEventSource;
+            $.selfManagedEventSource = selfManagedEventSource;
             return this;
         }
-        public Builder selfManagedEventSource(@Nullable EventSourceMappingSelfManagedEventSourceArgs selfManagedEventSource) {
-            this.selfManagedEventSource = Codegen.ofNullable(selfManagedEventSource);
-            return this;
+
+        public Builder selfManagedEventSource(EventSourceMappingSelfManagedEventSourceArgs selfManagedEventSource) {
+            return selfManagedEventSource(Output.of(selfManagedEventSource));
         }
+
         public Builder sourceAccessConfigurations(@Nullable Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations) {
-            this.sourceAccessConfigurations = sourceAccessConfigurations;
+            $.sourceAccessConfigurations = sourceAccessConfigurations;
             return this;
         }
-        public Builder sourceAccessConfigurations(@Nullable List<EventSourceMappingSourceAccessConfigurationArgs> sourceAccessConfigurations) {
-            this.sourceAccessConfigurations = Codegen.ofNullable(sourceAccessConfigurations);
-            return this;
+
+        public Builder sourceAccessConfigurations(List<EventSourceMappingSourceAccessConfigurationArgs> sourceAccessConfigurations) {
+            return sourceAccessConfigurations(Output.of(sourceAccessConfigurations));
         }
+
         public Builder sourceAccessConfigurations(EventSourceMappingSourceAccessConfigurationArgs... sourceAccessConfigurations) {
             return sourceAccessConfigurations(List.of(sourceAccessConfigurations));
         }
+
         public Builder startingPosition(@Nullable Output<String> startingPosition) {
-            this.startingPosition = startingPosition;
+            $.startingPosition = startingPosition;
             return this;
         }
-        public Builder startingPosition(@Nullable String startingPosition) {
-            this.startingPosition = Codegen.ofNullable(startingPosition);
-            return this;
+
+        public Builder startingPosition(String startingPosition) {
+            return startingPosition(Output.of(startingPosition));
         }
+
         public Builder startingPositionTimestamp(@Nullable Output<String> startingPositionTimestamp) {
-            this.startingPositionTimestamp = startingPositionTimestamp;
+            $.startingPositionTimestamp = startingPositionTimestamp;
             return this;
         }
-        public Builder startingPositionTimestamp(@Nullable String startingPositionTimestamp) {
-            this.startingPositionTimestamp = Codegen.ofNullable(startingPositionTimestamp);
-            return this;
+
+        public Builder startingPositionTimestamp(String startingPositionTimestamp) {
+            return startingPositionTimestamp(Output.of(startingPositionTimestamp));
         }
+
         public Builder topics(@Nullable Output<List<String>> topics) {
-            this.topics = topics;
+            $.topics = topics;
             return this;
         }
-        public Builder topics(@Nullable List<String> topics) {
-            this.topics = Codegen.ofNullable(topics);
-            return this;
+
+        public Builder topics(List<String> topics) {
+            return topics(Output.of(topics));
         }
+
         public Builder topics(String... topics) {
             return topics(List.of(topics));
         }
+
         public Builder tumblingWindowInSeconds(@Nullable Output<Integer> tumblingWindowInSeconds) {
-            this.tumblingWindowInSeconds = tumblingWindowInSeconds;
+            $.tumblingWindowInSeconds = tumblingWindowInSeconds;
             return this;
         }
-        public Builder tumblingWindowInSeconds(@Nullable Integer tumblingWindowInSeconds) {
-            this.tumblingWindowInSeconds = Codegen.ofNullable(tumblingWindowInSeconds);
-            return this;
-        }        public EventSourceMappingArgs build() {
-            return new EventSourceMappingArgs(batchSize, bisectBatchOnFunctionError, destinationConfig, enabled, eventSourceArn, filterCriteria, functionName, functionResponseTypes, maximumBatchingWindowInSeconds, maximumRecordAgeInSeconds, maximumRetryAttempts, parallelizationFactor, queues, selfManagedEventSource, sourceAccessConfigurations, startingPosition, startingPositionTimestamp, topics, tumblingWindowInSeconds);
+
+        public Builder tumblingWindowInSeconds(Integer tumblingWindowInSeconds) {
+            return tumblingWindowInSeconds(Output.of(tumblingWindowInSeconds));
+        }
+
+        public EventSourceMappingArgs build() {
+            $.functionName = Objects.requireNonNull($.functionName, "expected parameter 'functionName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class NodeConfigDefaultsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="gcfsConfig", required=true)
-      private final GcfsConfigResponse gcfsConfig;
+    private GcfsConfigResponse gcfsConfig;
 
     public GcfsConfigResponse gcfsConfig() {
         return this.gcfsConfig;
     }
 
-    public NodeConfigDefaultsResponse(GcfsConfigResponse gcfsConfig) {
-        this.gcfsConfig = Objects.requireNonNull(gcfsConfig, "expected parameter 'gcfsConfig' to be non-null");
-    }
+    private NodeConfigDefaultsResponse() {}
 
-    private NodeConfigDefaultsResponse() {
-        this.gcfsConfig = null;
+    private NodeConfigDefaultsResponse(NodeConfigDefaultsResponse $) {
+        this.gcfsConfig = $.gcfsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeConfigDefaultsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GcfsConfigResponse gcfsConfig;
+        private NodeConfigDefaultsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeConfigDefaultsResponse();
         }
 
         public Builder(NodeConfigDefaultsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcfsConfig = defaults.gcfsConfig;
+            $ = new NodeConfigDefaultsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gcfsConfig(GcfsConfigResponse gcfsConfig) {
-            this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
+            $.gcfsConfig = gcfsConfig;
             return this;
-        }        public NodeConfigDefaultsResponse build() {
-            return new NodeConfigDefaultsResponse(gcfsConfig);
+        }
+
+        public NodeConfigDefaultsResponse build() {
+            $.gcfsConfig = Objects.requireNonNull($.gcfsConfig, "expected parameter 'gcfsConfig' to be non-null");
+            return $;
         }
     }
+
 }

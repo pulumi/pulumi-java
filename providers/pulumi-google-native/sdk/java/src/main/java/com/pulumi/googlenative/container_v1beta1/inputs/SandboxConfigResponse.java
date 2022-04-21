@@ -21,7 +21,7 @@ public final class SandboxConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sandboxType", required=true)
-      private final String sandboxType;
+    private String sandboxType;
 
     public String sandboxType() {
         return this.sandboxType;
@@ -32,55 +32,52 @@ public final class SandboxConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SandboxConfigResponse(
-        String sandboxType,
-        String type) {
-        this.sandboxType = Objects.requireNonNull(sandboxType, "expected parameter 'sandboxType' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SandboxConfigResponse() {}
 
-    private SandboxConfigResponse() {
-        this.sandboxType = null;
-        this.type = null;
+    private SandboxConfigResponse(SandboxConfigResponse $) {
+        this.sandboxType = $.sandboxType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SandboxConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sandboxType;
-        private String type;
+        private SandboxConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SandboxConfigResponse();
         }
 
         public Builder(SandboxConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sandboxType = defaults.sandboxType;
-    	      this.type = defaults.type;
+            $ = new SandboxConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sandboxType(String sandboxType) {
-            this.sandboxType = Objects.requireNonNull(sandboxType);
+            $.sandboxType = sandboxType;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SandboxConfigResponse build() {
-            return new SandboxConfigResponse(sandboxType, type);
+        }
+
+        public SandboxConfigResponse build() {
+            $.sandboxType = Objects.requireNonNull($.sandboxType, "expected parameter 'sandboxType' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

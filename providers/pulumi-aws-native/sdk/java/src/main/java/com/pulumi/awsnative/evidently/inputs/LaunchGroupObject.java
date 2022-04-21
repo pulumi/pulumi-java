@@ -15,94 +15,86 @@ public final class LaunchGroupObject extends com.pulumi.resources.InvokeArgs {
     public static final LaunchGroupObject Empty = new LaunchGroupObject();
 
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="feature", required=true)
-      private final String feature;
+    private String feature;
 
     public String feature() {
         return this.feature;
     }
 
     @Import(name="groupName", required=true)
-      private final String groupName;
+    private String groupName;
 
     public String groupName() {
         return this.groupName;
     }
 
     @Import(name="variation", required=true)
-      private final String variation;
+    private String variation;
 
     public String variation() {
         return this.variation;
     }
 
-    public LaunchGroupObject(
-        @Nullable String description,
-        String feature,
-        String groupName,
-        String variation) {
-        this.description = description;
-        this.feature = Objects.requireNonNull(feature, "expected parameter 'feature' to be non-null");
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.variation = Objects.requireNonNull(variation, "expected parameter 'variation' to be non-null");
-    }
+    private LaunchGroupObject() {}
 
-    private LaunchGroupObject() {
-        this.description = null;
-        this.feature = null;
-        this.groupName = null;
-        this.variation = null;
+    private LaunchGroupObject(LaunchGroupObject $) {
+        this.description = $.description;
+        this.feature = $.feature;
+        this.groupName = $.groupName;
+        this.variation = $.variation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchGroupObject defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String feature;
-        private String groupName;
-        private String variation;
+        private LaunchGroupObject $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchGroupObject();
         }
 
         public Builder(LaunchGroupObject defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.feature = defaults.feature;
-    	      this.groupName = defaults.groupName;
-    	      this.variation = defaults.variation;
+            $ = new LaunchGroupObject(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder feature(String feature) {
-            this.feature = Objects.requireNonNull(feature);
+            $.feature = feature;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder variation(String variation) {
-            this.variation = Objects.requireNonNull(variation);
+            $.variation = variation;
             return this;
-        }        public LaunchGroupObject build() {
-            return new LaunchGroupObject(description, feature, groupName, variation);
+        }
+
+        public LaunchGroupObject build() {
+            $.feature = Objects.requireNonNull($.feature, "expected parameter 'feature' to be non-null");
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.variation = Objects.requireNonNull($.variation, "expected parameter 'variation' to be non-null");
+            return $;
         }
     }
+
 }

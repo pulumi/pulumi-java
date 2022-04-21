@@ -23,10 +23,10 @@ public final class DatasetCompressionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="level")
-      private final @Nullable Object level;
+    private @Nullable Object level;
 
     public Optional<Object> level() {
-        return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class DatasetCompressionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final Object type;
+    private Object type;
 
     public Object type() {
         return this.type;
     }
 
-    public DatasetCompressionResponse(
-        @Nullable Object level,
-        Object type) {
-        this.level = level;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DatasetCompressionResponse() {}
 
-    private DatasetCompressionResponse() {
-        this.level = null;
-        this.type = null;
+    private DatasetCompressionResponse(DatasetCompressionResponse $) {
+        this.level = $.level;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetCompressionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object level;
-        private Object type;
+        private DatasetCompressionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetCompressionResponse();
         }
 
         public Builder(DatasetCompressionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
-    	      this.type = defaults.type;
+            $ = new DatasetCompressionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder level(@Nullable Object level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
+
         public Builder type(Object type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DatasetCompressionResponse build() {
-            return new DatasetCompressionResponse(level, type);
+        }
+
+        public DatasetCompressionResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

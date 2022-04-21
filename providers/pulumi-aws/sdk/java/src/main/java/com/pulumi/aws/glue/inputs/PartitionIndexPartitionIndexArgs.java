@@ -5,10 +5,10 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,17 +21,17 @@ public final class PartitionIndexPartitionIndexArgs extends com.pulumi.resources
      * 
      */
     @Import(name="indexName")
-      private final @Nullable Output<String> indexName;
+    private @Nullable Output<String> indexName;
 
-    public Output<String> indexName() {
-        return this.indexName == null ? Codegen.empty() : this.indexName;
+    public Optional<Output<String>> indexName() {
+        return Optional.ofNullable(this.indexName);
     }
 
     @Import(name="indexStatus")
-      private final @Nullable Output<String> indexStatus;
+    private @Nullable Output<String> indexStatus;
 
-    public Output<String> indexStatus() {
-        return this.indexStatus == null ? Codegen.empty() : this.indexStatus;
+    public Optional<Output<String>> indexStatus() {
+        return Optional.ofNullable(this.indexStatus);
     }
 
     /**
@@ -39,79 +39,72 @@ public final class PartitionIndexPartitionIndexArgs extends com.pulumi.resources
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<List<String>> keys;
+    private @Nullable Output<List<String>> keys;
 
-    public Output<List<String>> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<List<String>>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
-    public PartitionIndexPartitionIndexArgs(
-        @Nullable Output<String> indexName,
-        @Nullable Output<String> indexStatus,
-        @Nullable Output<List<String>> keys) {
-        this.indexName = indexName;
-        this.indexStatus = indexStatus;
-        this.keys = keys;
-    }
+    private PartitionIndexPartitionIndexArgs() {}
 
-    private PartitionIndexPartitionIndexArgs() {
-        this.indexName = Codegen.empty();
-        this.indexStatus = Codegen.empty();
-        this.keys = Codegen.empty();
+    private PartitionIndexPartitionIndexArgs(PartitionIndexPartitionIndexArgs $) {
+        this.indexName = $.indexName;
+        this.indexStatus = $.indexStatus;
+        this.keys = $.keys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartitionIndexPartitionIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> indexName;
-        private @Nullable Output<String> indexStatus;
-        private @Nullable Output<List<String>> keys;
+        private PartitionIndexPartitionIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartitionIndexPartitionIndexArgs();
         }
 
         public Builder(PartitionIndexPartitionIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.indexName = defaults.indexName;
-    	      this.indexStatus = defaults.indexStatus;
-    	      this.keys = defaults.keys;
+            $ = new PartitionIndexPartitionIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder indexName(@Nullable Output<String> indexName) {
-            this.indexName = indexName;
+            $.indexName = indexName;
             return this;
         }
-        public Builder indexName(@Nullable String indexName) {
-            this.indexName = Codegen.ofNullable(indexName);
-            return this;
+
+        public Builder indexName(String indexName) {
+            return indexName(Output.of(indexName));
         }
+
         public Builder indexStatus(@Nullable Output<String> indexStatus) {
-            this.indexStatus = indexStatus;
+            $.indexStatus = indexStatus;
             return this;
         }
-        public Builder indexStatus(@Nullable String indexStatus) {
-            this.indexStatus = Codegen.ofNullable(indexStatus);
-            return this;
+
+        public Builder indexStatus(String indexStatus) {
+            return indexStatus(Output.of(indexStatus));
         }
+
         public Builder keys(@Nullable Output<List<String>> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable List<String> keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(List<String> keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder keys(String... keys) {
             return keys(List.of(keys));
-        }        public PartitionIndexPartitionIndexArgs build() {
-            return new PartitionIndexPartitionIndexArgs(indexName, indexStatus, keys);
+        }
+
+        public PartitionIndexPartitionIndexArgs build() {
+            return $;
         }
     }
+
 }

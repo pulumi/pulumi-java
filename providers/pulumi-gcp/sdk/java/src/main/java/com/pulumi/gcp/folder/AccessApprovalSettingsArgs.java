@@ -5,11 +5,11 @@ package com.pulumi.gcp.folder;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.folder.inputs.AccessApprovalSettingsEnrolledServiceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enrolledServices", required=true)
-      private final Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
+    private Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
     public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices() {
         return this.enrolledServices;
@@ -37,7 +37,7 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="folderId", required=true)
-      private final Output<String> folderId;
+    private Output<String> folderId;
 
     public Output<String> folderId() {
         return this.folderId;
@@ -50,82 +50,78 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="notificationEmails")
-      private final @Nullable Output<List<String>> notificationEmails;
+    private @Nullable Output<List<String>> notificationEmails;
 
-    public Output<List<String>> notificationEmails() {
-        return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
+    public Optional<Output<List<String>>> notificationEmails() {
+        return Optional.ofNullable(this.notificationEmails);
     }
 
-    public AccessApprovalSettingsArgs(
-        Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices,
-        Output<String> folderId,
-        @Nullable Output<List<String>> notificationEmails) {
-        this.enrolledServices = Objects.requireNonNull(enrolledServices, "expected parameter 'enrolledServices' to be non-null");
-        this.folderId = Objects.requireNonNull(folderId, "expected parameter 'folderId' to be non-null");
-        this.notificationEmails = notificationEmails;
-    }
+    private AccessApprovalSettingsArgs() {}
 
-    private AccessApprovalSettingsArgs() {
-        this.enrolledServices = Codegen.empty();
-        this.folderId = Codegen.empty();
-        this.notificationEmails = Codegen.empty();
+    private AccessApprovalSettingsArgs(AccessApprovalSettingsArgs $) {
+        this.enrolledServices = $.enrolledServices;
+        this.folderId = $.folderId;
+        this.notificationEmails = $.notificationEmails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessApprovalSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
-        private Output<String> folderId;
-        private @Nullable Output<List<String>> notificationEmails;
+        private AccessApprovalSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessApprovalSettingsArgs();
         }
 
         public Builder(AccessApprovalSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enrolledServices = defaults.enrolledServices;
-    	      this.folderId = defaults.folderId;
-    	      this.notificationEmails = defaults.notificationEmails;
+            $ = new AccessApprovalSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enrolledServices(Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
-            this.enrolledServices = Objects.requireNonNull(enrolledServices);
+            $.enrolledServices = enrolledServices;
             return this;
         }
+
         public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
-            this.enrolledServices = Output.of(Objects.requireNonNull(enrolledServices));
-            return this;
+            return enrolledServices(Output.of(enrolledServices));
         }
+
         public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceArgs... enrolledServices) {
             return enrolledServices(List.of(enrolledServices));
         }
+
         public Builder folderId(Output<String> folderId) {
-            this.folderId = Objects.requireNonNull(folderId);
+            $.folderId = folderId;
             return this;
         }
+
         public Builder folderId(String folderId) {
-            this.folderId = Output.of(Objects.requireNonNull(folderId));
-            return this;
+            return folderId(Output.of(folderId));
         }
+
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
-            this.notificationEmails = notificationEmails;
+            $.notificationEmails = notificationEmails;
             return this;
         }
-        public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Codegen.ofNullable(notificationEmails);
-            return this;
+
+        public Builder notificationEmails(List<String> notificationEmails) {
+            return notificationEmails(Output.of(notificationEmails));
         }
+
         public Builder notificationEmails(String... notificationEmails) {
             return notificationEmails(List.of(notificationEmails));
-        }        public AccessApprovalSettingsArgs build() {
-            return new AccessApprovalSettingsArgs(enrolledServices, folderId, notificationEmails);
+        }
+
+        public AccessApprovalSettingsArgs build() {
+            $.enrolledServices = Objects.requireNonNull($.enrolledServices, "expected parameter 'enrolledServices' to be non-null");
+            $.folderId = Objects.requireNonNull($.folderId, "expected parameter 'folderId' to be non-null");
+            return $;
         }
     }
+
 }

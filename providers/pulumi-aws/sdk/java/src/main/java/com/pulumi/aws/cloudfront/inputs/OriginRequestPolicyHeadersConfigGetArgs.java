@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.OriginRequestPolicyHeadersConfigHeadersGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class OriginRequestPolicyHeadersConfigGetArgs extends com.pulumi.re
     public static final OriginRequestPolicyHeadersConfigGetArgs Empty = new OriginRequestPolicyHeadersConfigGetArgs();
 
     @Import(name="headerBehavior")
-      private final @Nullable Output<String> headerBehavior;
+    private @Nullable Output<String> headerBehavior;
 
-    public Output<String> headerBehavior() {
-        return this.headerBehavior == null ? Codegen.empty() : this.headerBehavior;
+    public Optional<Output<String>> headerBehavior() {
+        return Optional.ofNullable(this.headerBehavior);
     }
 
     @Import(name="headers")
-      private final @Nullable Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers;
+    private @Nullable Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers;
 
-    public Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<OriginRequestPolicyHeadersConfigHeadersGetArgs>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
-    public OriginRequestPolicyHeadersConfigGetArgs(
-        @Nullable Output<String> headerBehavior,
-        @Nullable Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers) {
-        this.headerBehavior = headerBehavior;
-        this.headers = headers;
-    }
+    private OriginRequestPolicyHeadersConfigGetArgs() {}
 
-    private OriginRequestPolicyHeadersConfigGetArgs() {
-        this.headerBehavior = Codegen.empty();
-        this.headers = Codegen.empty();
+    private OriginRequestPolicyHeadersConfigGetArgs(OriginRequestPolicyHeadersConfigGetArgs $) {
+        this.headerBehavior = $.headerBehavior;
+        this.headers = $.headers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginRequestPolicyHeadersConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> headerBehavior;
-        private @Nullable Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers;
+        private OriginRequestPolicyHeadersConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginRequestPolicyHeadersConfigGetArgs();
         }
 
         public Builder(OriginRequestPolicyHeadersConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerBehavior = defaults.headerBehavior;
-    	      this.headers = defaults.headers;
+            $ = new OriginRequestPolicyHeadersConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerBehavior(@Nullable Output<String> headerBehavior) {
-            this.headerBehavior = headerBehavior;
+            $.headerBehavior = headerBehavior;
             return this;
         }
-        public Builder headerBehavior(@Nullable String headerBehavior) {
-            this.headerBehavior = Codegen.ofNullable(headerBehavior);
-            return this;
+
+        public Builder headerBehavior(String headerBehavior) {
+            return headerBehavior(Output.of(headerBehavior));
         }
+
         public Builder headers(@Nullable Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable OriginRequestPolicyHeadersConfigHeadersGetArgs headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
-        }        public OriginRequestPolicyHeadersConfigGetArgs build() {
-            return new OriginRequestPolicyHeadersConfigGetArgs(headerBehavior, headers);
+
+        public Builder headers(OriginRequestPolicyHeadersConfigHeadersGetArgs headers) {
+            return headers(Output.of(headers));
+        }
+
+        public OriginRequestPolicyHeadersConfigGetArgs build() {
+            return $;
         }
     }
+
 }

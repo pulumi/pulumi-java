@@ -21,7 +21,7 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends com.pulu
      * 
      */
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
@@ -32,55 +32,52 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends com.pulu
      * 
      */
     @Import(name="publicIpAddress", required=true)
-      private final String publicIpAddress;
+    private String publicIpAddress;
 
     public String publicIpAddress() {
         return this.publicIpAddress;
     }
 
-    public ComputeInstanceConnectivityEndpointsResponse(
-        String privateIpAddress,
-        String publicIpAddress) {
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress, "expected parameter 'publicIpAddress' to be non-null");
-    }
+    private ComputeInstanceConnectivityEndpointsResponse() {}
 
-    private ComputeInstanceConnectivityEndpointsResponse() {
-        this.privateIpAddress = null;
-        this.publicIpAddress = null;
+    private ComputeInstanceConnectivityEndpointsResponse(ComputeInstanceConnectivityEndpointsResponse $) {
+        this.privateIpAddress = $.privateIpAddress;
+        this.publicIpAddress = $.publicIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeInstanceConnectivityEndpointsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateIpAddress;
-        private String publicIpAddress;
+        private ComputeInstanceConnectivityEndpointsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeInstanceConnectivityEndpointsResponse();
         }
 
         public Builder(ComputeInstanceConnectivityEndpointsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.publicIpAddress = defaults.publicIpAddress;
+            $ = new ComputeInstanceConnectivityEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder publicIpAddress(String publicIpAddress) {
-            this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
+            $.publicIpAddress = publicIpAddress;
             return this;
-        }        public ComputeInstanceConnectivityEndpointsResponse build() {
-            return new ComputeInstanceConnectivityEndpointsResponse(privateIpAddress, publicIpAddress);
+        }
+
+        public ComputeInstanceConnectivityEndpointsResponse build() {
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            $.publicIpAddress = Objects.requireNonNull($.publicIpAddress, "expected parameter 'publicIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

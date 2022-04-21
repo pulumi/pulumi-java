@@ -22,7 +22,7 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends com.pulumi.
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -33,55 +33,52 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends com.pulumi.
      * 
      */
     @Import(name="trial", required=true)
-      private final Boolean trial;
+    private Boolean trial;
 
     public Boolean trial() {
         return this.trial;
     }
 
-    public GoogleCloudChannelV1TrialSettingsResponse(
-        String endTime,
-        Boolean trial) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.trial = Objects.requireNonNull(trial, "expected parameter 'trial' to be non-null");
-    }
+    private GoogleCloudChannelV1TrialSettingsResponse() {}
 
-    private GoogleCloudChannelV1TrialSettingsResponse() {
-        this.endTime = null;
-        this.trial = null;
+    private GoogleCloudChannelV1TrialSettingsResponse(GoogleCloudChannelV1TrialSettingsResponse $) {
+        this.endTime = $.endTime;
+        this.trial = $.trial;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1TrialSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private Boolean trial;
+        private GoogleCloudChannelV1TrialSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1TrialSettingsResponse();
         }
 
         public Builder(GoogleCloudChannelV1TrialSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.trial = defaults.trial;
+            $ = new GoogleCloudChannelV1TrialSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder trial(Boolean trial) {
-            this.trial = Objects.requireNonNull(trial);
+            $.trial = trial;
             return this;
-        }        public GoogleCloudChannelV1TrialSettingsResponse build() {
-            return new GoogleCloudChannelV1TrialSettingsResponse(endTime, trial);
+        }
+
+        public GoogleCloudChannelV1TrialSettingsResponse build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.trial = Objects.requireNonNull($.trial, "expected parameter 'trial' to be non-null");
+            return $;
         }
     }
+
 }

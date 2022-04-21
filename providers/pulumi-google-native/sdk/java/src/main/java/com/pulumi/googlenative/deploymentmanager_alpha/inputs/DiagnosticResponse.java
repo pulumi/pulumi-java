@@ -17,7 +17,7 @@ public final class DiagnosticResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="field", required=true)
-      private final String field;
+    private String field;
 
     public String field() {
         return this.field;
@@ -28,55 +28,52 @@ public final class DiagnosticResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="level", required=true)
-      private final String level;
+    private String level;
 
     public String level() {
         return this.level;
     }
 
-    public DiagnosticResponse(
-        String field,
-        String level) {
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
-    }
+    private DiagnosticResponse() {}
 
-    private DiagnosticResponse() {
-        this.field = null;
-        this.level = null;
+    private DiagnosticResponse(DiagnosticResponse $) {
+        this.field = $.field;
+        this.level = $.level;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String field;
-        private String level;
+        private DiagnosticResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticResponse();
         }
 
         public Builder(DiagnosticResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.level = defaults.level;
+            $ = new DiagnosticResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder field(String field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder level(String level) {
-            this.level = Objects.requireNonNull(level);
+            $.level = level;
             return this;
-        }        public DiagnosticResponse build() {
-            return new DiagnosticResponse(field, level);
+        }
+
+        public DiagnosticResponse build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.level = Objects.requireNonNull($.level, "expected parameter 'level' to be non-null");
+            return $;
         }
     }
+
 }

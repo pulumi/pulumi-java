@@ -8,10 +8,10 @@ import com.pulumi.azurenative.mixedreality.inputs.ObjectAnchorsAccountIdentityAr
 import com.pulumi.azurenative.mixedreality.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Output<String> accountName;
+    private @Nullable Output<String> accountName;
 
-    public Output<String> accountName() {
-        return this.accountName == null ? Codegen.empty() : this.accountName;
+    public Optional<Output<String>> accountName() {
+        return Optional.ofNullable(this.accountName);
     }
 
     @Import(name="identity")
-      private final @Nullable Output<ObjectAnchorsAccountIdentityArgs> identity;
+    private @Nullable Output<ObjectAnchorsAccountIdentityArgs> identity;
 
-    public Output<ObjectAnchorsAccountIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ObjectAnchorsAccountIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<SkuArgs> kind;
+    private @Nullable Output<SkuArgs> kind;
 
-    public Output<SkuArgs> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<SkuArgs>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="plan")
-      private final @Nullable Output<IdentityArgs> plan;
+    private @Nullable Output<IdentityArgs> plan;
 
-    public Output<IdentityArgs> plan() {
-        return this.plan == null ? Codegen.empty() : this.plan;
+    public Optional<Output<IdentityArgs>> plan() {
+        return Optional.ofNullable(this.plan);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -86,10 +86,10 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="storageAccountName")
-      private final @Nullable Output<String> storageAccountName;
+    private @Nullable Output<String> storageAccountName;
 
-    public Output<String> storageAccountName() {
-        return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
+    public Optional<Output<String>> storageAccountName() {
+        return Optional.ofNullable(this.storageAccountName);
     }
 
     /**
@@ -108,154 +108,129 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ObjectAnchorsAccountArgs(
-        @Nullable Output<String> accountName,
-        @Nullable Output<ObjectAnchorsAccountIdentityArgs> identity,
-        @Nullable Output<SkuArgs> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<IdentityArgs> plan,
-        Output<String> resourceGroupName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<String> storageAccountName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.accountName = accountName;
-        this.identity = identity;
-        this.kind = kind;
-        this.location = location;
-        this.plan = plan;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.storageAccountName = storageAccountName;
-        this.tags = tags;
-    }
+    private ObjectAnchorsAccountArgs() {}
 
-    private ObjectAnchorsAccountArgs() {
-        this.accountName = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.plan = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.storageAccountName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ObjectAnchorsAccountArgs(ObjectAnchorsAccountArgs $) {
+        this.accountName = $.accountName;
+        this.identity = $.identity;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.plan = $.plan;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.storageAccountName = $.storageAccountName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectAnchorsAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountName;
-        private @Nullable Output<ObjectAnchorsAccountIdentityArgs> identity;
-        private @Nullable Output<SkuArgs> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<IdentityArgs> plan;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<String> storageAccountName;
-        private @Nullable Output<Map<String,String>> tags;
+        private ObjectAnchorsAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectAnchorsAccountArgs();
         }
 
         public Builder(ObjectAnchorsAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.identity = defaults.identity;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.plan = defaults.plan;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.storageAccountName = defaults.storageAccountName;
-    	      this.tags = defaults.tags;
+            $ = new ObjectAnchorsAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable Output<String> accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
-        public Builder accountName(@Nullable String accountName) {
-            this.accountName = Codegen.ofNullable(accountName);
-            return this;
+
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
         }
+
         public Builder identity(@Nullable Output<ObjectAnchorsAccountIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ObjectAnchorsAccountIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ObjectAnchorsAccountIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kind(@Nullable Output<SkuArgs> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable SkuArgs kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(SkuArgs kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder plan(@Nullable Output<IdentityArgs> plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
-        public Builder plan(@Nullable IdentityArgs plan) {
-            this.plan = Codegen.ofNullable(plan);
-            return this;
+
+        public Builder plan(IdentityArgs plan) {
+            return plan(Output.of(plan));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
-            this.storageAccountName = storageAccountName;
+            $.storageAccountName = storageAccountName;
             return this;
         }
-        public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Codegen.ofNullable(storageAccountName);
-            return this;
+
+        public Builder storageAccountName(String storageAccountName) {
+            return storageAccountName(Output.of(storageAccountName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ObjectAnchorsAccountArgs build() {
-            return new ObjectAnchorsAccountArgs(accountName, identity, kind, location, plan, resourceGroupName, sku, storageAccountName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ObjectAnchorsAccountArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

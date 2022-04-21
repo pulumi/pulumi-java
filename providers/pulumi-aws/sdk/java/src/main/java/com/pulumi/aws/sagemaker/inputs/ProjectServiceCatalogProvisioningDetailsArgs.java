@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends com.pulu
      * 
      */
     @Import(name="pathId")
-      private final @Nullable Output<String> pathId;
+    private @Nullable Output<String> pathId;
 
-    public Output<String> pathId() {
-        return this.pathId == null ? Codegen.empty() : this.pathId;
+    public Optional<Output<String>> pathId() {
+        return Optional.ofNullable(this.pathId);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends com.pulu
      * 
      */
     @Import(name="productId", required=true)
-      private final Output<String> productId;
+    private Output<String> productId;
 
     public Output<String> productId() {
         return this.productId;
@@ -44,10 +44,10 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends com.pulu
      * 
      */
     @Import(name="provisioningArtifactId")
-      private final @Nullable Output<String> provisioningArtifactId;
+    private @Nullable Output<String> provisioningArtifactId;
 
-    public Output<String> provisioningArtifactId() {
-        return this.provisioningArtifactId == null ? Codegen.empty() : this.provisioningArtifactId;
+    public Optional<Output<String>> provisioningArtifactId() {
+        return Optional.ofNullable(this.provisioningArtifactId);
     }
 
     /**
@@ -55,92 +55,83 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends com.pulu
      * 
      */
     @Import(name="provisioningParameters")
-      private final @Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters;
+    private @Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters;
 
-    public Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters() {
-        return this.provisioningParameters == null ? Codegen.empty() : this.provisioningParameters;
+    public Optional<Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>>> provisioningParameters() {
+        return Optional.ofNullable(this.provisioningParameters);
     }
 
-    public ProjectServiceCatalogProvisioningDetailsArgs(
-        @Nullable Output<String> pathId,
-        Output<String> productId,
-        @Nullable Output<String> provisioningArtifactId,
-        @Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters) {
-        this.pathId = pathId;
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.provisioningArtifactId = provisioningArtifactId;
-        this.provisioningParameters = provisioningParameters;
-    }
+    private ProjectServiceCatalogProvisioningDetailsArgs() {}
 
-    private ProjectServiceCatalogProvisioningDetailsArgs() {
-        this.pathId = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.provisioningArtifactId = Codegen.empty();
-        this.provisioningParameters = Codegen.empty();
+    private ProjectServiceCatalogProvisioningDetailsArgs(ProjectServiceCatalogProvisioningDetailsArgs $) {
+        this.pathId = $.pathId;
+        this.productId = $.productId;
+        this.provisioningArtifactId = $.provisioningArtifactId;
+        this.provisioningParameters = $.provisioningParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectServiceCatalogProvisioningDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pathId;
-        private Output<String> productId;
-        private @Nullable Output<String> provisioningArtifactId;
-        private @Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters;
+        private ProjectServiceCatalogProvisioningDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectServiceCatalogProvisioningDetailsArgs();
         }
 
         public Builder(ProjectServiceCatalogProvisioningDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pathId = defaults.pathId;
-    	      this.productId = defaults.productId;
-    	      this.provisioningArtifactId = defaults.provisioningArtifactId;
-    	      this.provisioningParameters = defaults.provisioningParameters;
+            $ = new ProjectServiceCatalogProvisioningDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pathId(@Nullable Output<String> pathId) {
-            this.pathId = pathId;
+            $.pathId = pathId;
             return this;
         }
-        public Builder pathId(@Nullable String pathId) {
-            this.pathId = Codegen.ofNullable(pathId);
-            return this;
+
+        public Builder pathId(String pathId) {
+            return pathId(Output.of(pathId));
         }
+
         public Builder productId(Output<String> productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder productId(String productId) {
-            this.productId = Output.of(Objects.requireNonNull(productId));
-            return this;
+            return productId(Output.of(productId));
         }
+
         public Builder provisioningArtifactId(@Nullable Output<String> provisioningArtifactId) {
-            this.provisioningArtifactId = provisioningArtifactId;
+            $.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
-        public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
-            this.provisioningArtifactId = Codegen.ofNullable(provisioningArtifactId);
-            return this;
+
+        public Builder provisioningArtifactId(String provisioningArtifactId) {
+            return provisioningArtifactId(Output.of(provisioningArtifactId));
         }
+
         public Builder provisioningParameters(@Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters) {
-            this.provisioningParameters = provisioningParameters;
+            $.provisioningParameters = provisioningParameters;
             return this;
         }
-        public Builder provisioningParameters(@Nullable List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs> provisioningParameters) {
-            this.provisioningParameters = Codegen.ofNullable(provisioningParameters);
-            return this;
+
+        public Builder provisioningParameters(List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs> provisioningParameters) {
+            return provisioningParameters(Output.of(provisioningParameters));
         }
+
         public Builder provisioningParameters(ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs... provisioningParameters) {
             return provisioningParameters(List.of(provisioningParameters));
-        }        public ProjectServiceCatalogProvisioningDetailsArgs build() {
-            return new ProjectServiceCatalogProvisioningDetailsArgs(pathId, productId, provisioningArtifactId, provisioningParameters);
+        }
+
+        public ProjectServiceCatalogProvisioningDetailsArgs build() {
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            return $;
         }
     }
+
 }

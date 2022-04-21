@@ -24,7 +24,7 @@ public final class ResourceGroupResourceSettingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
@@ -35,63 +35,60 @@ public final class ResourceGroupResourceSettingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final Output<String> targetResourceName;
+    private Output<String> targetResourceName;
 
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 
-    public ResourceGroupResourceSettingsArgs(
-        Output<String> resourceType,
-        Output<String> targetResourceName) {
-        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-    }
+    private ResourceGroupResourceSettingsArgs() {}
 
-    private ResourceGroupResourceSettingsArgs() {
-        this.resourceType = Codegen.empty();
-        this.targetResourceName = Codegen.empty();
+    private ResourceGroupResourceSettingsArgs(ResourceGroupResourceSettingsArgs $) {
+        this.resourceType = $.resourceType;
+        this.targetResourceName = $.targetResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGroupResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceType;
-        private Output<String> targetResourceName;
+        private ResourceGroupResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGroupResourceSettingsArgs();
         }
 
         public Builder(ResourceGroupResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.targetResourceName = defaults.targetResourceName;
+            $ = new ResourceGroupResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder targetResourceName(Output<String> targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
-            return this;
-        }        public ResourceGroupResourceSettingsArgs build() {
-            return new ResourceGroupResourceSettingsArgs(resourceType, targetResourceName);
+            return targetResourceName(Output.of(targetResourceName));
+        }
+
+        public ResourceGroupResourceSettingsArgs build() {
+            $.resourceType = Codegen.stringProp("resourceType").output().arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

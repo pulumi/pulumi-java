@@ -22,7 +22,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
@@ -33,7 +33,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="domain", required=true)
-      private final String domain;
+    private String domain;
 
     public String domain() {
         return this.domain;
@@ -44,7 +44,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -66,7 +66,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="entity", required=true)
-      private final String entity;
+    private String entity;
 
     public String entity() {
         return this.entity;
@@ -77,7 +77,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="entityId", required=true)
-      private final String entityId;
+    private String entityId;
 
     public String entityId() {
         return this.entityId;
@@ -88,7 +88,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -99,7 +99,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="generation", required=true)
-      private final String generation;
+    private String generation;
 
     public String generation() {
         return this.generation;
@@ -110,7 +110,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -121,7 +121,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
@@ -132,7 +132,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="projectTeam", required=true)
-      private final ObjectAccessControlProjectTeamResponse projectTeam;
+    private ObjectAccessControlProjectTeamResponse projectTeam;
 
     public ObjectAccessControlProjectTeamResponse projectTeam() {
         return this.projectTeam;
@@ -143,7 +143,7 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="role", required=true)
-      private final String role;
+    private String role;
 
     public String role() {
         return this.role;
@@ -154,145 +154,122 @@ public final class ObjectAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="selfLink", required=true)
-      private final String selfLink;
+    private String selfLink;
 
     public String selfLink() {
         return this.selfLink;
     }
 
-    public ObjectAccessControlResponse(
-        String bucket,
-        String domain,
-        String email,
-        String entity,
-        String entityId,
-        String etag,
-        String generation,
-        String kind,
-        String object,
-        ObjectAccessControlProjectTeamResponse projectTeam,
-        String role,
-        String selfLink) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.entity = Objects.requireNonNull(entity, "expected parameter 'entity' to be non-null");
-        this.entityId = Objects.requireNonNull(entityId, "expected parameter 'entityId' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.generation = Objects.requireNonNull(generation, "expected parameter 'generation' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-        this.projectTeam = Objects.requireNonNull(projectTeam, "expected parameter 'projectTeam' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.selfLink = Objects.requireNonNull(selfLink, "expected parameter 'selfLink' to be non-null");
-    }
+    private ObjectAccessControlResponse() {}
 
-    private ObjectAccessControlResponse() {
-        this.bucket = null;
-        this.domain = null;
-        this.email = null;
-        this.entity = null;
-        this.entityId = null;
-        this.etag = null;
-        this.generation = null;
-        this.kind = null;
-        this.object = null;
-        this.projectTeam = null;
-        this.role = null;
-        this.selfLink = null;
+    private ObjectAccessControlResponse(ObjectAccessControlResponse $) {
+        this.bucket = $.bucket;
+        this.domain = $.domain;
+        this.email = $.email;
+        this.entity = $.entity;
+        this.entityId = $.entityId;
+        this.etag = $.etag;
+        this.generation = $.generation;
+        this.kind = $.kind;
+        this.object = $.object;
+        this.projectTeam = $.projectTeam;
+        this.role = $.role;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectAccessControlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String domain;
-        private String email;
-        private String entity;
-        private String entityId;
-        private String etag;
-        private String generation;
-        private String kind;
-        private String object;
-        private ObjectAccessControlProjectTeamResponse projectTeam;
-        private String role;
-        private String selfLink;
+        private ObjectAccessControlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectAccessControlResponse();
         }
 
         public Builder(ObjectAccessControlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.domain = defaults.domain;
-    	      this.email = defaults.email;
-    	      this.entity = defaults.entity;
-    	      this.entityId = defaults.entityId;
-    	      this.etag = defaults.etag;
-    	      this.generation = defaults.generation;
-    	      this.kind = defaults.kind;
-    	      this.object = defaults.object;
-    	      this.projectTeam = defaults.projectTeam;
-    	      this.role = defaults.role;
-    	      this.selfLink = defaults.selfLink;
+            $ = new ObjectAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder entity(String entity) {
-            this.entity = Objects.requireNonNull(entity);
+            $.entity = entity;
             return this;
         }
+
         public Builder entityId(String entityId) {
-            this.entityId = Objects.requireNonNull(entityId);
+            $.entityId = entityId;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder generation(String generation) {
-            this.generation = Objects.requireNonNull(generation);
+            $.generation = generation;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder projectTeam(ObjectAccessControlProjectTeamResponse projectTeam) {
-            this.projectTeam = Objects.requireNonNull(projectTeam);
+            $.projectTeam = projectTeam;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder selfLink(String selfLink) {
-            this.selfLink = Objects.requireNonNull(selfLink);
+            $.selfLink = selfLink;
             return this;
-        }        public ObjectAccessControlResponse build() {
-            return new ObjectAccessControlResponse(bucket, domain, email, entity, entityId, etag, generation, kind, object, projectTeam, role, selfLink);
+        }
+
+        public ObjectAccessControlResponse build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.entity = Objects.requireNonNull($.entity, "expected parameter 'entity' to be non-null");
+            $.entityId = Objects.requireNonNull($.entityId, "expected parameter 'entityId' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.generation = Objects.requireNonNull($.generation, "expected parameter 'generation' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            $.projectTeam = Objects.requireNonNull($.projectTeam, "expected parameter 'projectTeam' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.selfLink = Objects.requireNonNull($.selfLink, "expected parameter 'selfLink' to be non-null");
+            return $;
         }
     }
+
 }

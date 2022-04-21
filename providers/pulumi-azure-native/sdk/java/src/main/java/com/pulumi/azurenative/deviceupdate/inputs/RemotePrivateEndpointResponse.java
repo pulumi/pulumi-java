@@ -27,10 +27,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectionDetails")
-      private final @Nullable List<ConnectionDetailsResponse> connectionDetails;
+    private @Nullable List<ConnectionDetailsResponse> connectionDetails;
 
-    public List<ConnectionDetailsResponse> connectionDetails() {
-        return this.connectionDetails == null ? List.of() : this.connectionDetails;
+    public Optional<List<ConnectionDetailsResponse>> connectionDetails() {
+        return Optional.ofNullable(this.connectionDetails);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="manualPrivateLinkServiceConnections")
-      private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
+    private @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
-    public List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
+    public Optional<List<PrivateLinkServiceConnectionResponse>> manualPrivateLinkServiceConnections() {
+        return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="privateLinkServiceConnections")
-      private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
+    private @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
 
-    public List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections() {
-        return this.privateLinkServiceConnections == null ? List.of() : this.privateLinkServiceConnections;
+    public Optional<List<PrivateLinkServiceConnectionResponse>> privateLinkServiceConnections() {
+        return Optional.ofNullable(this.privateLinkServiceConnections);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="privateLinkServiceProxies")
-      private final @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies;
+    private @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies;
 
-    public List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies() {
-        return this.privateLinkServiceProxies == null ? List.of() : this.privateLinkServiceProxies;
+    public Optional<List<PrivateLinkServiceProxyResponse>> privateLinkServiceProxies() {
+        return Optional.ofNullable(this.privateLinkServiceProxies);
     }
 
     /**
@@ -82,103 +82,91 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vnetTrafficTag", required=true)
-      private final String vnetTrafficTag;
+    private String vnetTrafficTag;
 
     public String vnetTrafficTag() {
         return this.vnetTrafficTag;
     }
 
-    public RemotePrivateEndpointResponse(
-        @Nullable List<ConnectionDetailsResponse> connectionDetails,
-        @Nullable String id,
-        @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
-        @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
-        @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies,
-        String vnetTrafficTag) {
-        this.connectionDetails = connectionDetails;
-        this.id = id;
-        this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
-        this.privateLinkServiceConnections = privateLinkServiceConnections;
-        this.privateLinkServiceProxies = privateLinkServiceProxies;
-        this.vnetTrafficTag = Objects.requireNonNull(vnetTrafficTag, "expected parameter 'vnetTrafficTag' to be non-null");
-    }
+    private RemotePrivateEndpointResponse() {}
 
-    private RemotePrivateEndpointResponse() {
-        this.connectionDetails = List.of();
-        this.id = null;
-        this.manualPrivateLinkServiceConnections = List.of();
-        this.privateLinkServiceConnections = List.of();
-        this.privateLinkServiceProxies = List.of();
-        this.vnetTrafficTag = null;
+    private RemotePrivateEndpointResponse(RemotePrivateEndpointResponse $) {
+        this.connectionDetails = $.connectionDetails;
+        this.id = $.id;
+        this.manualPrivateLinkServiceConnections = $.manualPrivateLinkServiceConnections;
+        this.privateLinkServiceConnections = $.privateLinkServiceConnections;
+        this.privateLinkServiceProxies = $.privateLinkServiceProxies;
+        this.vnetTrafficTag = $.vnetTrafficTag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemotePrivateEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ConnectionDetailsResponse> connectionDetails;
-        private @Nullable String id;
-        private @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
-        private @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
-        private @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies;
-        private String vnetTrafficTag;
+        private RemotePrivateEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemotePrivateEndpointResponse();
         }
 
         public Builder(RemotePrivateEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionDetails = defaults.connectionDetails;
-    	      this.id = defaults.id;
-    	      this.manualPrivateLinkServiceConnections = defaults.manualPrivateLinkServiceConnections;
-    	      this.privateLinkServiceConnections = defaults.privateLinkServiceConnections;
-    	      this.privateLinkServiceProxies = defaults.privateLinkServiceProxies;
-    	      this.vnetTrafficTag = defaults.vnetTrafficTag;
+            $ = new RemotePrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionDetails(@Nullable List<ConnectionDetailsResponse> connectionDetails) {
-            this.connectionDetails = connectionDetails;
+            $.connectionDetails = connectionDetails;
             return this;
         }
+
         public Builder connectionDetails(ConnectionDetailsResponse... connectionDetails) {
             return connectionDetails(List.of(connectionDetails));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
+            $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
+
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionResponse... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
         }
+
         public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections) {
-            this.privateLinkServiceConnections = privateLinkServiceConnections;
+            $.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
+
         public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionResponse... privateLinkServiceConnections) {
             return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
         }
+
         public Builder privateLinkServiceProxies(@Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies) {
-            this.privateLinkServiceProxies = privateLinkServiceProxies;
+            $.privateLinkServiceProxies = privateLinkServiceProxies;
             return this;
         }
+
         public Builder privateLinkServiceProxies(PrivateLinkServiceProxyResponse... privateLinkServiceProxies) {
             return privateLinkServiceProxies(List.of(privateLinkServiceProxies));
         }
+
         public Builder vnetTrafficTag(String vnetTrafficTag) {
-            this.vnetTrafficTag = Objects.requireNonNull(vnetTrafficTag);
+            $.vnetTrafficTag = vnetTrafficTag;
             return this;
-        }        public RemotePrivateEndpointResponse build() {
-            return new RemotePrivateEndpointResponse(connectionDetails, id, manualPrivateLinkServiceConnections, privateLinkServiceConnections, privateLinkServiceProxies, vnetTrafficTag);
+        }
+
+        public RemotePrivateEndpointResponse build() {
+            $.vnetTrafficTag = Objects.requireNonNull($.vnetTrafficTag, "expected parameter 'vnetTrafficTag' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datalabeling_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1AnnotationSpecArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AnnotationSpecSetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="annotationSpecs", required=true)
-      private final Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs;
+    private Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs;
 
     public Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs() {
         return this.annotationSpecs;
@@ -33,10 +33,10 @@ public final class AnnotationSpecSetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,99 +44,91 @@ public final class AnnotationSpecSetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public AnnotationSpecSetArgs(
-        Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<String> project) {
-        this.annotationSpecs = Objects.requireNonNull(annotationSpecs, "expected parameter 'annotationSpecs' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.project = project;
-    }
+    private AnnotationSpecSetArgs() {}
 
-    private AnnotationSpecSetArgs() {
-        this.annotationSpecs = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.project = Codegen.empty();
+    private AnnotationSpecSetArgs(AnnotationSpecSetArgs $) {
+        this.annotationSpecs = $.annotationSpecs;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnnotationSpecSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<String> project;
+        private AnnotationSpecSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnnotationSpecSetArgs();
         }
 
         public Builder(AnnotationSpecSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationSpecs = defaults.annotationSpecs;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.project = defaults.project;
+            $ = new AnnotationSpecSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationSpecs(Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs) {
-            this.annotationSpecs = Objects.requireNonNull(annotationSpecs);
+            $.annotationSpecs = annotationSpecs;
             return this;
         }
+
         public Builder annotationSpecs(List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs> annotationSpecs) {
-            this.annotationSpecs = Output.of(Objects.requireNonNull(annotationSpecs));
-            return this;
+            return annotationSpecs(Output.of(annotationSpecs));
         }
+
         public Builder annotationSpecs(GoogleCloudDatalabelingV1beta1AnnotationSpecArgs... annotationSpecs) {
             return annotationSpecs(List.of(annotationSpecs));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public AnnotationSpecSetArgs build() {
-            return new AnnotationSpecSetArgs(annotationSpecs, description, displayName, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public AnnotationSpecSetArgs build() {
+            $.annotationSpecs = Objects.requireNonNull($.annotationSpecs, "expected parameter 'annotationSpecs' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

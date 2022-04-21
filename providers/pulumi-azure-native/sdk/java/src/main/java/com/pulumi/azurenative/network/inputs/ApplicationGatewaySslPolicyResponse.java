@@ -24,10 +24,10 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="cipherSuites")
-      private final @Nullable List<String> cipherSuites;
+    private @Nullable List<String> cipherSuites;
 
-    public List<String> cipherSuites() {
-        return this.cipherSuites == null ? List.of() : this.cipherSuites;
+    public Optional<List<String>> cipherSuites() {
+        return Optional.ofNullable(this.cipherSuites);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="disabledSslProtocols")
-      private final @Nullable List<String> disabledSslProtocols;
+    private @Nullable List<String> disabledSslProtocols;
 
-    public List<String> disabledSslProtocols() {
-        return this.disabledSslProtocols == null ? List.of() : this.disabledSslProtocols;
+    public Optional<List<String>> disabledSslProtocols() {
+        return Optional.ofNullable(this.disabledSslProtocols);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="minProtocolVersion")
-      private final @Nullable String minProtocolVersion;
+    private @Nullable String minProtocolVersion;
 
     public Optional<String> minProtocolVersion() {
-        return this.minProtocolVersion == null ? Optional.empty() : Optional.ofNullable(this.minProtocolVersion);
+        return Optional.ofNullable(this.minProtocolVersion);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="policyName")
-      private final @Nullable String policyName;
+    private @Nullable String policyName;
 
     public Optional<String> policyName() {
-        return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
+        return Optional.ofNullable(this.policyName);
     }
 
     /**
@@ -68,88 +68,76 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="policyType")
-      private final @Nullable String policyType;
+    private @Nullable String policyType;
 
     public Optional<String> policyType() {
-        return this.policyType == null ? Optional.empty() : Optional.ofNullable(this.policyType);
+        return Optional.ofNullable(this.policyType);
     }
 
-    public ApplicationGatewaySslPolicyResponse(
-        @Nullable List<String> cipherSuites,
-        @Nullable List<String> disabledSslProtocols,
-        @Nullable String minProtocolVersion,
-        @Nullable String policyName,
-        @Nullable String policyType) {
-        this.cipherSuites = cipherSuites;
-        this.disabledSslProtocols = disabledSslProtocols;
-        this.minProtocolVersion = minProtocolVersion;
-        this.policyName = policyName;
-        this.policyType = policyType;
-    }
+    private ApplicationGatewaySslPolicyResponse() {}
 
-    private ApplicationGatewaySslPolicyResponse() {
-        this.cipherSuites = List.of();
-        this.disabledSslProtocols = List.of();
-        this.minProtocolVersion = null;
-        this.policyName = null;
-        this.policyType = null;
+    private ApplicationGatewaySslPolicyResponse(ApplicationGatewaySslPolicyResponse $) {
+        this.cipherSuites = $.cipherSuites;
+        this.disabledSslProtocols = $.disabledSslProtocols;
+        this.minProtocolVersion = $.minProtocolVersion;
+        this.policyName = $.policyName;
+        this.policyType = $.policyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewaySslPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> cipherSuites;
-        private @Nullable List<String> disabledSslProtocols;
-        private @Nullable String minProtocolVersion;
-        private @Nullable String policyName;
-        private @Nullable String policyType;
+        private ApplicationGatewaySslPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewaySslPolicyResponse();
         }
 
         public Builder(ApplicationGatewaySslPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cipherSuites = defaults.cipherSuites;
-    	      this.disabledSslProtocols = defaults.disabledSslProtocols;
-    	      this.minProtocolVersion = defaults.minProtocolVersion;
-    	      this.policyName = defaults.policyName;
-    	      this.policyType = defaults.policyType;
+            $ = new ApplicationGatewaySslPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cipherSuites(@Nullable List<String> cipherSuites) {
-            this.cipherSuites = cipherSuites;
+            $.cipherSuites = cipherSuites;
             return this;
         }
+
         public Builder cipherSuites(String... cipherSuites) {
             return cipherSuites(List.of(cipherSuites));
         }
+
         public Builder disabledSslProtocols(@Nullable List<String> disabledSslProtocols) {
-            this.disabledSslProtocols = disabledSslProtocols;
+            $.disabledSslProtocols = disabledSslProtocols;
             return this;
         }
+
         public Builder disabledSslProtocols(String... disabledSslProtocols) {
             return disabledSslProtocols(List.of(disabledSslProtocols));
         }
+
         public Builder minProtocolVersion(@Nullable String minProtocolVersion) {
-            this.minProtocolVersion = minProtocolVersion;
+            $.minProtocolVersion = minProtocolVersion;
             return this;
         }
+
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
+
         public Builder policyType(@Nullable String policyType) {
-            this.policyType = policyType;
+            $.policyType = policyType;
             return this;
-        }        public ApplicationGatewaySslPolicyResponse build() {
-            return new ApplicationGatewaySslPolicyResponse(cipherSuites, disabledSslProtocols, minProtocolVersion, policyName, policyType);
+        }
+
+        public ApplicationGatewaySslPolicyResponse build() {
+            return $;
         }
     }
+
 }

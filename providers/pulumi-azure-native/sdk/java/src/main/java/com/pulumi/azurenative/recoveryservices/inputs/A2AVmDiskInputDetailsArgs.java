@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="diskUri")
-      private final @Nullable Output<String> diskUri;
+    private @Nullable Output<String> diskUri;
 
-    public Output<String> diskUri() {
-        return this.diskUri == null ? Codegen.empty() : this.diskUri;
+    public Optional<Output<String>> diskUri() {
+        return Optional.ofNullable(this.diskUri);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="primaryStagingAzureStorageAccountId")
-      private final @Nullable Output<String> primaryStagingAzureStorageAccountId;
+    private @Nullable Output<String> primaryStagingAzureStorageAccountId;
 
-    public Output<String> primaryStagingAzureStorageAccountId() {
-        return this.primaryStagingAzureStorageAccountId == null ? Codegen.empty() : this.primaryStagingAzureStorageAccountId;
+    public Optional<Output<String>> primaryStagingAzureStorageAccountId() {
+        return Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="recoveryAzureStorageAccountId")
-      private final @Nullable Output<String> recoveryAzureStorageAccountId;
+    private @Nullable Output<String> recoveryAzureStorageAccountId;
 
-    public Output<String> recoveryAzureStorageAccountId() {
-        return this.recoveryAzureStorageAccountId == null ? Codegen.empty() : this.recoveryAzureStorageAccountId;
+    public Optional<Output<String>> recoveryAzureStorageAccountId() {
+        return Optional.ofNullable(this.recoveryAzureStorageAccountId);
     }
 
-    public A2AVmDiskInputDetailsArgs(
-        @Nullable Output<String> diskUri,
-        @Nullable Output<String> primaryStagingAzureStorageAccountId,
-        @Nullable Output<String> recoveryAzureStorageAccountId) {
-        this.diskUri = diskUri;
-        this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
-        this.recoveryAzureStorageAccountId = recoveryAzureStorageAccountId;
-    }
+    private A2AVmDiskInputDetailsArgs() {}
 
-    private A2AVmDiskInputDetailsArgs() {
-        this.diskUri = Codegen.empty();
-        this.primaryStagingAzureStorageAccountId = Codegen.empty();
-        this.recoveryAzureStorageAccountId = Codegen.empty();
+    private A2AVmDiskInputDetailsArgs(A2AVmDiskInputDetailsArgs $) {
+        this.diskUri = $.diskUri;
+        this.primaryStagingAzureStorageAccountId = $.primaryStagingAzureStorageAccountId;
+        this.recoveryAzureStorageAccountId = $.recoveryAzureStorageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(A2AVmDiskInputDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskUri;
-        private @Nullable Output<String> primaryStagingAzureStorageAccountId;
-        private @Nullable Output<String> recoveryAzureStorageAccountId;
+        private A2AVmDiskInputDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new A2AVmDiskInputDetailsArgs();
         }
 
         public Builder(A2AVmDiskInputDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskUri = defaults.diskUri;
-    	      this.primaryStagingAzureStorageAccountId = defaults.primaryStagingAzureStorageAccountId;
-    	      this.recoveryAzureStorageAccountId = defaults.recoveryAzureStorageAccountId;
+            $ = new A2AVmDiskInputDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskUri(@Nullable Output<String> diskUri) {
-            this.diskUri = diskUri;
+            $.diskUri = diskUri;
             return this;
         }
-        public Builder diskUri(@Nullable String diskUri) {
-            this.diskUri = Codegen.ofNullable(diskUri);
-            return this;
+
+        public Builder diskUri(String diskUri) {
+            return diskUri(Output.of(diskUri));
         }
+
         public Builder primaryStagingAzureStorageAccountId(@Nullable Output<String> primaryStagingAzureStorageAccountId) {
-            this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
+            $.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
-        public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
-            this.primaryStagingAzureStorageAccountId = Codegen.ofNullable(primaryStagingAzureStorageAccountId);
-            return this;
+
+        public Builder primaryStagingAzureStorageAccountId(String primaryStagingAzureStorageAccountId) {
+            return primaryStagingAzureStorageAccountId(Output.of(primaryStagingAzureStorageAccountId));
         }
+
         public Builder recoveryAzureStorageAccountId(@Nullable Output<String> recoveryAzureStorageAccountId) {
-            this.recoveryAzureStorageAccountId = recoveryAzureStorageAccountId;
+            $.recoveryAzureStorageAccountId = recoveryAzureStorageAccountId;
             return this;
         }
-        public Builder recoveryAzureStorageAccountId(@Nullable String recoveryAzureStorageAccountId) {
-            this.recoveryAzureStorageAccountId = Codegen.ofNullable(recoveryAzureStorageAccountId);
-            return this;
-        }        public A2AVmDiskInputDetailsArgs build() {
-            return new A2AVmDiskInputDetailsArgs(diskUri, primaryStagingAzureStorageAccountId, recoveryAzureStorageAccountId);
+
+        public Builder recoveryAzureStorageAccountId(String recoveryAzureStorageAccountId) {
+            return recoveryAzureStorageAccountId(Output.of(recoveryAzureStorageAccountId));
+        }
+
+        public A2AVmDiskInputDetailsArgs build() {
+            return $;
         }
     }
+
 }

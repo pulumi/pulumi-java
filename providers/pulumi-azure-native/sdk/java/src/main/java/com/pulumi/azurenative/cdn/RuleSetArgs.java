@@ -5,9 +5,9 @@ package com.pulumi.azurenative.cdn;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class RuleSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -31,7 +31,7 @@ public final class RuleSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,76 +42,70 @@ public final class RuleSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleSetName")
-      private final @Nullable Output<String> ruleSetName;
+    private @Nullable Output<String> ruleSetName;
 
-    public Output<String> ruleSetName() {
-        return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
+    public Optional<Output<String>> ruleSetName() {
+        return Optional.ofNullable(this.ruleSetName);
     }
 
-    public RuleSetArgs(
-        Output<String> profileName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleSetName) {
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleSetName = ruleSetName;
-    }
+    private RuleSetArgs() {}
 
-    private RuleSetArgs() {
-        this.profileName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleSetName = Codegen.empty();
+    private RuleSetArgs(RuleSetArgs $) {
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleSetName = $.ruleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> profileName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleSetName;
+        private RuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleSetArgs();
         }
 
         public Builder(RuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleSetName = defaults.ruleSetName;
+            $ = new RuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
-            this.ruleSetName = ruleSetName;
+            $.ruleSetName = ruleSetName;
             return this;
         }
-        public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Codegen.ofNullable(ruleSetName);
-            return this;
-        }        public RuleSetArgs build() {
-            return new RuleSetArgs(profileName, resourceGroupName, ruleSetName);
+
+        public Builder ruleSetName(String ruleSetName) {
+            return ruleSetName(Output.of(ruleSetName));
+        }
+
+        public RuleSetArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

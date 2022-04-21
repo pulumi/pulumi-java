@@ -24,45 +24,48 @@ public final class RuleResultsPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="results")
-      private final @Nullable List<List<String>> results;
+    private @Nullable List<List<String>> results;
 
-    public List<List<String>> results() {
-        return this.results == null ? List.of() : this.results;
+    public Optional<List<List<String>>> results() {
+        return Optional.ofNullable(this.results);
     }
 
-    public RuleResultsPropertiesResponse(@Nullable List<List<String>> results) {
-        this.results = results;
-    }
+    private RuleResultsPropertiesResponse() {}
 
-    private RuleResultsPropertiesResponse() {
-        this.results = List.of();
+    private RuleResultsPropertiesResponse(RuleResultsPropertiesResponse $) {
+        this.results = $.results;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleResultsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<List<String>> results;
+        private RuleResultsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleResultsPropertiesResponse();
         }
 
         public Builder(RuleResultsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.results = defaults.results;
+            $ = new RuleResultsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder results(@Nullable List<List<String>> results) {
-            this.results = results;
+            $.results = results;
             return this;
-        }        public RuleResultsPropertiesResponse build() {
-            return new RuleResultsPropertiesResponse(results);
+        }
+
+        public Builder results(List<String>... results) {
+            return results(List.of(results));
+        }
+
+        public RuleResultsPropertiesResponse build() {
+            return $;
         }
     }
+
 }

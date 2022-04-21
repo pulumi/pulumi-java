@@ -19,45 +19,44 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="registryId")
-      private final @Nullable String registryId;
+    private @Nullable String registryId;
 
     public Optional<String> registryId() {
-        return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);
+        return Optional.ofNullable(this.registryId);
     }
 
-    public GetAuthorizationTokenArgs(@Nullable String registryId) {
-        this.registryId = registryId;
-    }
+    private GetAuthorizationTokenArgs() {}
 
-    private GetAuthorizationTokenArgs() {
-        this.registryId = null;
+    private GetAuthorizationTokenArgs(GetAuthorizationTokenArgs $) {
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAuthorizationTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String registryId;
+        private GetAuthorizationTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAuthorizationTokenArgs();
         }
 
         public Builder(GetAuthorizationTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryId = defaults.registryId;
+            $ = new GetAuthorizationTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = registryId;
+            $.registryId = registryId;
             return this;
-        }        public GetAuthorizationTokenArgs build() {
-            return new GetAuthorizationTokenArgs(registryId);
+        }
+
+        public GetAuthorizationTokenArgs build() {
+            return $;
         }
     }
+
 }

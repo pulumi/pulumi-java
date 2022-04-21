@@ -21,10 +21,10 @@ public final class EncryptionPropertyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="identity")
-      private final @Nullable IdentityForCmkResponse identity;
+    private @Nullable IdentityForCmkResponse identity;
 
     public Optional<IdentityForCmkResponse> identity() {
-        return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class EncryptionPropertyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyVaultProperties", required=true)
-      private final KeyVaultPropertiesResponse keyVaultProperties;
+    private KeyVaultPropertiesResponse keyVaultProperties;
 
     public KeyVaultPropertiesResponse keyVaultProperties() {
         return this.keyVaultProperties;
@@ -43,64 +43,58 @@ public final class EncryptionPropertyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public EncryptionPropertyResponse(
-        @Nullable IdentityForCmkResponse identity,
-        KeyVaultPropertiesResponse keyVaultProperties,
-        String status) {
-        this.identity = identity;
-        this.keyVaultProperties = Objects.requireNonNull(keyVaultProperties, "expected parameter 'keyVaultProperties' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private EncryptionPropertyResponse() {}
 
-    private EncryptionPropertyResponse() {
-        this.identity = null;
-        this.keyVaultProperties = null;
-        this.status = null;
+    private EncryptionPropertyResponse(EncryptionPropertyResponse $) {
+        this.identity = $.identity;
+        this.keyVaultProperties = $.keyVaultProperties;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable IdentityForCmkResponse identity;
-        private KeyVaultPropertiesResponse keyVaultProperties;
-        private String status;
+        private EncryptionPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPropertyResponse();
         }
 
         public Builder(EncryptionPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
-    	      this.status = defaults.status;
+            $ = new EncryptionPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable IdentityForCmkResponse identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
+
         public Builder keyVaultProperties(KeyVaultPropertiesResponse keyVaultProperties) {
-            this.keyVaultProperties = Objects.requireNonNull(keyVaultProperties);
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public EncryptionPropertyResponse build() {
-            return new EncryptionPropertyResponse(identity, keyVaultProperties, status);
+        }
+
+        public EncryptionPropertyResponse build() {
+            $.keyVaultProperties = Objects.requireNonNull($.keyVaultProperties, "expected parameter 'keyVaultProperties' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

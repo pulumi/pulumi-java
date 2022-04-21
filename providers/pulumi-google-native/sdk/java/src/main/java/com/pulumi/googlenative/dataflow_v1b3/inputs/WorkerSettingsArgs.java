@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="baseUrl")
-      private final @Nullable Output<String> baseUrl;
+    private @Nullable Output<String> baseUrl;
 
-    public Output<String> baseUrl() {
-        return this.baseUrl == null ? Codegen.empty() : this.baseUrl;
+    public Optional<Output<String>> baseUrl() {
+        return Optional.ofNullable(this.baseUrl);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="reportingEnabled")
-      private final @Nullable Output<Boolean> reportingEnabled;
+    private @Nullable Output<Boolean> reportingEnabled;
 
-    public Output<Boolean> reportingEnabled() {
-        return this.reportingEnabled == null ? Codegen.empty() : this.reportingEnabled;
+    public Optional<Output<Boolean>> reportingEnabled() {
+        return Optional.ofNullable(this.reportingEnabled);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="servicePath")
-      private final @Nullable Output<String> servicePath;
+    private @Nullable Output<String> servicePath;
 
-    public Output<String> servicePath() {
-        return this.servicePath == null ? Codegen.empty() : this.servicePath;
+    public Optional<Output<String>> servicePath() {
+        return Optional.ofNullable(this.servicePath);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="shuffleServicePath")
-      private final @Nullable Output<String> shuffleServicePath;
+    private @Nullable Output<String> shuffleServicePath;
 
-    public Output<String> shuffleServicePath() {
-        return this.shuffleServicePath == null ? Codegen.empty() : this.shuffleServicePath;
+    public Optional<Output<String>> shuffleServicePath() {
+        return Optional.ofNullable(this.shuffleServicePath);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tempStoragePrefix")
-      private final @Nullable Output<String> tempStoragePrefix;
+    private @Nullable Output<String> tempStoragePrefix;
 
-    public Output<String> tempStoragePrefix() {
-        return this.tempStoragePrefix == null ? Codegen.empty() : this.tempStoragePrefix;
+    public Optional<Output<String>> tempStoragePrefix() {
+        return Optional.ofNullable(this.tempStoragePrefix);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="workerId")
-      private final @Nullable Output<String> workerId;
+    private @Nullable Output<String> workerId;
 
-    public Output<String> workerId() {
-        return this.workerId == null ? Codegen.empty() : this.workerId;
+    public Optional<Output<String>> workerId() {
+        return Optional.ofNullable(this.workerId);
     }
 
-    public WorkerSettingsArgs(
-        @Nullable Output<String> baseUrl,
-        @Nullable Output<Boolean> reportingEnabled,
-        @Nullable Output<String> servicePath,
-        @Nullable Output<String> shuffleServicePath,
-        @Nullable Output<String> tempStoragePrefix,
-        @Nullable Output<String> workerId) {
-        this.baseUrl = baseUrl;
-        this.reportingEnabled = reportingEnabled;
-        this.servicePath = servicePath;
-        this.shuffleServicePath = shuffleServicePath;
-        this.tempStoragePrefix = tempStoragePrefix;
-        this.workerId = workerId;
-    }
+    private WorkerSettingsArgs() {}
 
-    private WorkerSettingsArgs() {
-        this.baseUrl = Codegen.empty();
-        this.reportingEnabled = Codegen.empty();
-        this.servicePath = Codegen.empty();
-        this.shuffleServicePath = Codegen.empty();
-        this.tempStoragePrefix = Codegen.empty();
-        this.workerId = Codegen.empty();
+    private WorkerSettingsArgs(WorkerSettingsArgs $) {
+        this.baseUrl = $.baseUrl;
+        this.reportingEnabled = $.reportingEnabled;
+        this.servicePath = $.servicePath;
+        this.shuffleServicePath = $.shuffleServicePath;
+        this.tempStoragePrefix = $.tempStoragePrefix;
+        this.workerId = $.workerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> baseUrl;
-        private @Nullable Output<Boolean> reportingEnabled;
-        private @Nullable Output<String> servicePath;
-        private @Nullable Output<String> shuffleServicePath;
-        private @Nullable Output<String> tempStoragePrefix;
-        private @Nullable Output<String> workerId;
+        private WorkerSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerSettingsArgs();
         }
 
         public Builder(WorkerSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseUrl = defaults.baseUrl;
-    	      this.reportingEnabled = defaults.reportingEnabled;
-    	      this.servicePath = defaults.servicePath;
-    	      this.shuffleServicePath = defaults.shuffleServicePath;
-    	      this.tempStoragePrefix = defaults.tempStoragePrefix;
-    	      this.workerId = defaults.workerId;
+            $ = new WorkerSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseUrl(@Nullable Output<String> baseUrl) {
-            this.baseUrl = baseUrl;
+            $.baseUrl = baseUrl;
             return this;
         }
-        public Builder baseUrl(@Nullable String baseUrl) {
-            this.baseUrl = Codegen.ofNullable(baseUrl);
-            return this;
+
+        public Builder baseUrl(String baseUrl) {
+            return baseUrl(Output.of(baseUrl));
         }
+
         public Builder reportingEnabled(@Nullable Output<Boolean> reportingEnabled) {
-            this.reportingEnabled = reportingEnabled;
+            $.reportingEnabled = reportingEnabled;
             return this;
         }
-        public Builder reportingEnabled(@Nullable Boolean reportingEnabled) {
-            this.reportingEnabled = Codegen.ofNullable(reportingEnabled);
-            return this;
+
+        public Builder reportingEnabled(Boolean reportingEnabled) {
+            return reportingEnabled(Output.of(reportingEnabled));
         }
+
         public Builder servicePath(@Nullable Output<String> servicePath) {
-            this.servicePath = servicePath;
+            $.servicePath = servicePath;
             return this;
         }
-        public Builder servicePath(@Nullable String servicePath) {
-            this.servicePath = Codegen.ofNullable(servicePath);
-            return this;
+
+        public Builder servicePath(String servicePath) {
+            return servicePath(Output.of(servicePath));
         }
+
         public Builder shuffleServicePath(@Nullable Output<String> shuffleServicePath) {
-            this.shuffleServicePath = shuffleServicePath;
+            $.shuffleServicePath = shuffleServicePath;
             return this;
         }
-        public Builder shuffleServicePath(@Nullable String shuffleServicePath) {
-            this.shuffleServicePath = Codegen.ofNullable(shuffleServicePath);
-            return this;
+
+        public Builder shuffleServicePath(String shuffleServicePath) {
+            return shuffleServicePath(Output.of(shuffleServicePath));
         }
+
         public Builder tempStoragePrefix(@Nullable Output<String> tempStoragePrefix) {
-            this.tempStoragePrefix = tempStoragePrefix;
+            $.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
-        public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
-            this.tempStoragePrefix = Codegen.ofNullable(tempStoragePrefix);
-            return this;
+
+        public Builder tempStoragePrefix(String tempStoragePrefix) {
+            return tempStoragePrefix(Output.of(tempStoragePrefix));
         }
+
         public Builder workerId(@Nullable Output<String> workerId) {
-            this.workerId = workerId;
+            $.workerId = workerId;
             return this;
         }
-        public Builder workerId(@Nullable String workerId) {
-            this.workerId = Codegen.ofNullable(workerId);
-            return this;
-        }        public WorkerSettingsArgs build() {
-            return new WorkerSettingsArgs(baseUrl, reportingEnabled, servicePath, shuffleServicePath, tempStoragePrefix, workerId);
+
+        public Builder workerId(String workerId) {
+            return workerId(Output.of(workerId));
+        }
+
+        public WorkerSettingsArgs build() {
+            return $;
         }
     }
+
 }

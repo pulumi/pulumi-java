@@ -6,8 +6,8 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclDefaultActionAllowCustomRequestHandlingGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WebAclDefaultActionAllowGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="customRequestHandling")
-      private final @Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
+    private @Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
 
-    public Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling() {
-        return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
+    public Optional<Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs>> customRequestHandling() {
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public WebAclDefaultActionAllowGetArgs(@Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private WebAclDefaultActionAllowGetArgs() {}
 
-    private WebAclDefaultActionAllowGetArgs() {
-        this.customRequestHandling = Codegen.empty();
+    private WebAclDefaultActionAllowGetArgs(WebAclDefaultActionAllowGetArgs $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclDefaultActionAllowGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
+        private WebAclDefaultActionAllowGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclDefaultActionAllowGetArgs();
         }
 
         public Builder(WebAclDefaultActionAllowGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new WebAclDefaultActionAllowGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
         }
-        public Builder customRequestHandling(@Nullable WebAclDefaultActionAllowCustomRequestHandlingGetArgs customRequestHandling) {
-            this.customRequestHandling = Codegen.ofNullable(customRequestHandling);
-            return this;
-        }        public WebAclDefaultActionAllowGetArgs build() {
-            return new WebAclDefaultActionAllowGetArgs(customRequestHandling);
+
+        public Builder customRequestHandling(WebAclDefaultActionAllowCustomRequestHandlingGetArgs customRequestHandling) {
+            return customRequestHandling(Output.of(customRequestHandling));
+        }
+
+        public WebAclDefaultActionAllowGetArgs build() {
+            return $;
         }
     }
+
 }

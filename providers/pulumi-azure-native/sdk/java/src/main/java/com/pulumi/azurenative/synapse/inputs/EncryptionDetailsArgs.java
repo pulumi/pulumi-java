@@ -6,8 +6,8 @@ package com.pulumi.azurenative.synapse.inputs;
 import com.pulumi.azurenative.synapse.inputs.CustomerManagedKeyDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EncryptionDetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cmk")
-      private final @Nullable Output<CustomerManagedKeyDetailsArgs> cmk;
+    private @Nullable Output<CustomerManagedKeyDetailsArgs> cmk;
 
-    public Output<CustomerManagedKeyDetailsArgs> cmk() {
-        return this.cmk == null ? Codegen.empty() : this.cmk;
+    public Optional<Output<CustomerManagedKeyDetailsArgs>> cmk() {
+        return Optional.ofNullable(this.cmk);
     }
 
-    public EncryptionDetailsArgs(@Nullable Output<CustomerManagedKeyDetailsArgs> cmk) {
-        this.cmk = cmk;
-    }
+    private EncryptionDetailsArgs() {}
 
-    private EncryptionDetailsArgs() {
-        this.cmk = Codegen.empty();
+    private EncryptionDetailsArgs(EncryptionDetailsArgs $) {
+        this.cmk = $.cmk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CustomerManagedKeyDetailsArgs> cmk;
+        private EncryptionDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionDetailsArgs();
         }
 
         public Builder(EncryptionDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cmk = defaults.cmk;
+            $ = new EncryptionDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cmk(@Nullable Output<CustomerManagedKeyDetailsArgs> cmk) {
-            this.cmk = cmk;
+            $.cmk = cmk;
             return this;
         }
-        public Builder cmk(@Nullable CustomerManagedKeyDetailsArgs cmk) {
-            this.cmk = Codegen.ofNullable(cmk);
-            return this;
-        }        public EncryptionDetailsArgs build() {
-            return new EncryptionDetailsArgs(cmk);
+
+        public Builder cmk(CustomerManagedKeyDetailsArgs cmk) {
+            return cmk(Output.of(cmk));
+        }
+
+        public EncryptionDetailsArgs build() {
+            return $;
         }
     }
+
 }

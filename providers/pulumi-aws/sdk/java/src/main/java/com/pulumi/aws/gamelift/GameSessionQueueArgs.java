@@ -6,12 +6,12 @@ package com.pulumi.aws.gamelift;
 import com.pulumi.aws.gamelift.inputs.GameSessionQueuePlayerLatencyPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GameSessionQueueArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="destinations")
-      private final @Nullable Output<List<String>> destinations;
+    private @Nullable Output<List<String>> destinations;
 
-    public Output<List<String>> destinations() {
-        return this.destinations == null ? Codegen.empty() : this.destinations;
+    public Optional<Output<List<String>>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GameSessionQueueArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GameSessionQueueArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="playerLatencyPolicies")
-      private final @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies;
+    private @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies;
 
-    public Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies() {
-        return this.playerLatencyPolicies == null ? Codegen.empty() : this.playerLatencyPolicies;
+    public Optional<Output<List<GameSessionQueuePlayerLatencyPolicyArgs>>> playerLatencyPolicies() {
+        return Optional.ofNullable(this.playerLatencyPolicies);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GameSessionQueueArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -68,108 +68,96 @@ public final class GameSessionQueueArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timeoutInSeconds")
-      private final @Nullable Output<Integer> timeoutInSeconds;
+    private @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> timeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
+    public Optional<Output<Integer>> timeoutInSeconds() {
+        return Optional.ofNullable(this.timeoutInSeconds);
     }
 
-    public GameSessionQueueArgs(
-        @Nullable Output<List<String>> destinations,
-        @Nullable Output<String> name,
-        @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> timeoutInSeconds) {
-        this.destinations = destinations;
-        this.name = name;
-        this.playerLatencyPolicies = playerLatencyPolicies;
-        this.tags = tags;
-        this.timeoutInSeconds = timeoutInSeconds;
-    }
+    private GameSessionQueueArgs() {}
 
-    private GameSessionQueueArgs() {
-        this.destinations = Codegen.empty();
-        this.name = Codegen.empty();
-        this.playerLatencyPolicies = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeoutInSeconds = Codegen.empty();
+    private GameSessionQueueArgs(GameSessionQueueArgs $) {
+        this.destinations = $.destinations;
+        this.name = $.name;
+        this.playerLatencyPolicies = $.playerLatencyPolicies;
+        this.tags = $.tags;
+        this.timeoutInSeconds = $.timeoutInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameSessionQueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> destinations;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> timeoutInSeconds;
+        private GameSessionQueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameSessionQueueArgs();
         }
 
         public Builder(GameSessionQueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.name = defaults.name;
-    	      this.playerLatencyPolicies = defaults.playerLatencyPolicies;
-    	      this.tags = defaults.tags;
-    	      this.timeoutInSeconds = defaults.timeoutInSeconds;
+            $ = new GameSessionQueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(@Nullable Output<List<String>> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
-        public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = Codegen.ofNullable(destinations);
-            return this;
+
+        public Builder destinations(List<String> destinations) {
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder playerLatencyPolicies(@Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies) {
-            this.playerLatencyPolicies = playerLatencyPolicies;
+            $.playerLatencyPolicies = playerLatencyPolicies;
             return this;
         }
-        public Builder playerLatencyPolicies(@Nullable List<GameSessionQueuePlayerLatencyPolicyArgs> playerLatencyPolicies) {
-            this.playerLatencyPolicies = Codegen.ofNullable(playerLatencyPolicies);
-            return this;
+
+        public Builder playerLatencyPolicies(List<GameSessionQueuePlayerLatencyPolicyArgs> playerLatencyPolicies) {
+            return playerLatencyPolicies(Output.of(playerLatencyPolicies));
         }
+
         public Builder playerLatencyPolicies(GameSessionQueuePlayerLatencyPolicyArgs... playerLatencyPolicies) {
             return playerLatencyPolicies(List.of(playerLatencyPolicies));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
-            this.timeoutInSeconds = timeoutInSeconds;
+            $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
-            return this;
-        }        public GameSessionQueueArgs build() {
-            return new GameSessionQueueArgs(destinations, name, playerLatencyPolicies, tags, timeoutInSeconds);
+
+        public Builder timeoutInSeconds(Integer timeoutInSeconds) {
+            return timeoutInSeconds(Output.of(timeoutInSeconds));
+        }
+
+        public GameSessionQueueArgs build() {
+            return $;
         }
     }
+
 }

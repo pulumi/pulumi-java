@@ -22,7 +22,7 @@ public final class MigrationPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="migrationProgress", required=true)
-      private final MigrationProgressResponse migrationProgress;
+    private MigrationProgressResponse migrationProgress;
 
     public MigrationProgressResponse migrationProgress() {
         return this.migrationProgress;
@@ -33,7 +33,7 @@ public final class MigrationPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="oldSubnetId", required=true)
-      private final String oldSubnetId;
+    private String oldSubnetId;
 
     public String oldSubnetId() {
         return this.oldSubnetId;
@@ -44,64 +44,59 @@ public final class MigrationPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="oldVnetSiteId", required=true)
-      private final String oldVnetSiteId;
+    private String oldVnetSiteId;
 
     public String oldVnetSiteId() {
         return this.oldVnetSiteId;
     }
 
-    public MigrationPropertiesResponse(
-        MigrationProgressResponse migrationProgress,
-        String oldSubnetId,
-        String oldVnetSiteId) {
-        this.migrationProgress = Objects.requireNonNull(migrationProgress, "expected parameter 'migrationProgress' to be non-null");
-        this.oldSubnetId = Objects.requireNonNull(oldSubnetId, "expected parameter 'oldSubnetId' to be non-null");
-        this.oldVnetSiteId = Objects.requireNonNull(oldVnetSiteId, "expected parameter 'oldVnetSiteId' to be non-null");
-    }
+    private MigrationPropertiesResponse() {}
 
-    private MigrationPropertiesResponse() {
-        this.migrationProgress = null;
-        this.oldSubnetId = null;
-        this.oldVnetSiteId = null;
+    private MigrationPropertiesResponse(MigrationPropertiesResponse $) {
+        this.migrationProgress = $.migrationProgress;
+        this.oldSubnetId = $.oldSubnetId;
+        this.oldVnetSiteId = $.oldVnetSiteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MigrationProgressResponse migrationProgress;
-        private String oldSubnetId;
-        private String oldVnetSiteId;
+        private MigrationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationPropertiesResponse();
         }
 
         public Builder(MigrationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.migrationProgress = defaults.migrationProgress;
-    	      this.oldSubnetId = defaults.oldSubnetId;
-    	      this.oldVnetSiteId = defaults.oldVnetSiteId;
+            $ = new MigrationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder migrationProgress(MigrationProgressResponse migrationProgress) {
-            this.migrationProgress = Objects.requireNonNull(migrationProgress);
+            $.migrationProgress = migrationProgress;
             return this;
         }
+
         public Builder oldSubnetId(String oldSubnetId) {
-            this.oldSubnetId = Objects.requireNonNull(oldSubnetId);
+            $.oldSubnetId = oldSubnetId;
             return this;
         }
+
         public Builder oldVnetSiteId(String oldVnetSiteId) {
-            this.oldVnetSiteId = Objects.requireNonNull(oldVnetSiteId);
+            $.oldVnetSiteId = oldVnetSiteId;
             return this;
-        }        public MigrationPropertiesResponse build() {
-            return new MigrationPropertiesResponse(migrationProgress, oldSubnetId, oldVnetSiteId);
+        }
+
+        public MigrationPropertiesResponse build() {
+            $.migrationProgress = Objects.requireNonNull($.migrationProgress, "expected parameter 'migrationProgress' to be non-null");
+            $.oldSubnetId = Objects.requireNonNull($.oldSubnetId, "expected parameter 'oldSubnetId' to be non-null");
+            $.oldVnetSiteId = Objects.requireNonNull($.oldVnetSiteId, "expected parameter 'oldVnetSiteId' to be non-null");
+            return $;
         }
     }
+
 }

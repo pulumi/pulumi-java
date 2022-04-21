@@ -5,7 +5,6 @@ package com.pulumi.awsnative.applicationinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ApplicationLogPatternArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="pattern", required=true)
-      private final Output<String> pattern;
+    private Output<String> pattern;
 
     public Output<String> pattern() {
         return this.pattern;
@@ -35,7 +34,7 @@ public final class ApplicationLogPatternArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="patternName", required=true)
-      private final Output<String> patternName;
+    private Output<String> patternName;
 
     public Output<String> patternName() {
         return this.patternName;
@@ -46,76 +45,71 @@ public final class ApplicationLogPatternArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="rank", required=true)
-      private final Output<Integer> rank;
+    private Output<Integer> rank;
 
     public Output<Integer> rank() {
         return this.rank;
     }
 
-    public ApplicationLogPatternArgs(
-        Output<String> pattern,
-        Output<String> patternName,
-        Output<Integer> rank) {
-        this.pattern = Objects.requireNonNull(pattern, "expected parameter 'pattern' to be non-null");
-        this.patternName = Objects.requireNonNull(patternName, "expected parameter 'patternName' to be non-null");
-        this.rank = Objects.requireNonNull(rank, "expected parameter 'rank' to be non-null");
-    }
+    private ApplicationLogPatternArgs() {}
 
-    private ApplicationLogPatternArgs() {
-        this.pattern = Codegen.empty();
-        this.patternName = Codegen.empty();
-        this.rank = Codegen.empty();
+    private ApplicationLogPatternArgs(ApplicationLogPatternArgs $) {
+        this.pattern = $.pattern;
+        this.patternName = $.patternName;
+        this.rank = $.rank;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationLogPatternArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> pattern;
-        private Output<String> patternName;
-        private Output<Integer> rank;
+        private ApplicationLogPatternArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationLogPatternArgs();
         }
 
         public Builder(ApplicationLogPatternArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pattern = defaults.pattern;
-    	      this.patternName = defaults.patternName;
-    	      this.rank = defaults.rank;
+            $ = new ApplicationLogPatternArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pattern(Output<String> pattern) {
-            this.pattern = Objects.requireNonNull(pattern);
+            $.pattern = pattern;
             return this;
         }
+
         public Builder pattern(String pattern) {
-            this.pattern = Output.of(Objects.requireNonNull(pattern));
-            return this;
+            return pattern(Output.of(pattern));
         }
+
         public Builder patternName(Output<String> patternName) {
-            this.patternName = Objects.requireNonNull(patternName);
+            $.patternName = patternName;
             return this;
         }
+
         public Builder patternName(String patternName) {
-            this.patternName = Output.of(Objects.requireNonNull(patternName));
-            return this;
+            return patternName(Output.of(patternName));
         }
+
         public Builder rank(Output<Integer> rank) {
-            this.rank = Objects.requireNonNull(rank);
+            $.rank = rank;
             return this;
         }
+
         public Builder rank(Integer rank) {
-            this.rank = Output.of(Objects.requireNonNull(rank));
-            return this;
-        }        public ApplicationLogPatternArgs build() {
-            return new ApplicationLogPatternArgs(pattern, patternName, rank);
+            return rank(Output.of(rank));
+        }
+
+        public ApplicationLogPatternArgs build() {
+            $.pattern = Objects.requireNonNull($.pattern, "expected parameter 'pattern' to be non-null");
+            $.patternName = Objects.requireNonNull($.patternName, "expected parameter 'patternName' to be non-null");
+            $.rank = Objects.requireNonNull($.rank, "expected parameter 'rank' to be non-null");
+            return $;
         }
     }
+
 }

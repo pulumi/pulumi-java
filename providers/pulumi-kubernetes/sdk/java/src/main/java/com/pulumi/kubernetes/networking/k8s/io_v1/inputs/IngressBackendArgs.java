@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressServiceBackendArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resource")
-      private final @Nullable Output<TypedLocalObjectReferenceArgs> resource;
+    private @Nullable Output<TypedLocalObjectReferenceArgs> resource;
 
-    public Output<TypedLocalObjectReferenceArgs> resource() {
-        return this.resource == null ? Codegen.empty() : this.resource;
+    public Optional<Output<TypedLocalObjectReferenceArgs>> resource() {
+        return Optional.ofNullable(this.resource);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<IngressServiceBackendArgs> service;
+    private @Nullable Output<IngressServiceBackendArgs> service;
 
-    public Output<IngressServiceBackendArgs> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<IngressServiceBackendArgs>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public IngressBackendArgs(
-        @Nullable Output<TypedLocalObjectReferenceArgs> resource,
-        @Nullable Output<IngressServiceBackendArgs> service) {
-        this.resource = resource;
-        this.service = service;
-    }
+    private IngressBackendArgs() {}
 
-    private IngressBackendArgs() {
-        this.resource = Codegen.empty();
-        this.service = Codegen.empty();
+    private IngressBackendArgs(IngressBackendArgs $) {
+        this.resource = $.resource;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressBackendArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TypedLocalObjectReferenceArgs> resource;
-        private @Nullable Output<IngressServiceBackendArgs> service;
+        private IngressBackendArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressBackendArgs();
         }
 
         public Builder(IngressBackendArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resource = defaults.resource;
-    	      this.service = defaults.service;
+            $ = new IngressBackendArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resource(@Nullable Output<TypedLocalObjectReferenceArgs> resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
         }
-        public Builder resource(@Nullable TypedLocalObjectReferenceArgs resource) {
-            this.resource = Codegen.ofNullable(resource);
-            return this;
+
+        public Builder resource(TypedLocalObjectReferenceArgs resource) {
+            return resource(Output.of(resource));
         }
+
         public Builder service(@Nullable Output<IngressServiceBackendArgs> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable IngressServiceBackendArgs service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public IngressBackendArgs build() {
-            return new IngressBackendArgs(resource, service);
+
+        public Builder service(IngressServiceBackendArgs service) {
+            return service(Output.of(service));
+        }
+
+        public IngressBackendArgs build() {
+            return $;
         }
     }
+
 }

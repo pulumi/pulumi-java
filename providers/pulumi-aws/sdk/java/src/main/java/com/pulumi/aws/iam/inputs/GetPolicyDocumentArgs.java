@@ -21,10 +21,10 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="overrideJson")
-      private final @Nullable String overrideJson;
+    private @Nullable String overrideJson;
 
     public Optional<String> overrideJson() {
-        return this.overrideJson == null ? Optional.empty() : Optional.ofNullable(this.overrideJson);
+        return Optional.ofNullable(this.overrideJson);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="overridePolicyDocuments")
-      private final @Nullable List<String> overridePolicyDocuments;
+    private @Nullable List<String> overridePolicyDocuments;
 
-    public List<String> overridePolicyDocuments() {
-        return this.overridePolicyDocuments == null ? List.of() : this.overridePolicyDocuments;
+    public Optional<List<String>> overridePolicyDocuments() {
+        return Optional.ofNullable(this.overridePolicyDocuments);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="policyId")
-      private final @Nullable String policyId;
+    private @Nullable String policyId;
 
     public Optional<String> policyId() {
-        return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourceJson")
-      private final @Nullable String sourceJson;
+    private @Nullable String sourceJson;
 
     public Optional<String> sourceJson() {
-        return this.sourceJson == null ? Optional.empty() : Optional.ofNullable(this.sourceJson);
+        return Optional.ofNullable(this.sourceJson);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourcePolicyDocuments")
-      private final @Nullable List<String> sourcePolicyDocuments;
+    private @Nullable List<String> sourcePolicyDocuments;
 
-    public List<String> sourcePolicyDocuments() {
-        return this.sourcePolicyDocuments == null ? List.of() : this.sourcePolicyDocuments;
+    public Optional<List<String>> sourcePolicyDocuments() {
+        return Optional.ofNullable(this.sourcePolicyDocuments);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="statements")
-      private final @Nullable List<GetPolicyDocumentStatement> statements;
+    private @Nullable List<GetPolicyDocumentStatement> statements;
 
-    public List<GetPolicyDocumentStatement> statements() {
-        return this.statements == null ? List.of() : this.statements;
+    public Optional<List<GetPolicyDocumentStatement>> statements() {
+        return Optional.ofNullable(this.statements);
     }
 
     /**
@@ -87,109 +87,92 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public GetPolicyDocumentArgs(
-        @Nullable String overrideJson,
-        @Nullable List<String> overridePolicyDocuments,
-        @Nullable String policyId,
-        @Nullable String sourceJson,
-        @Nullable List<String> sourcePolicyDocuments,
-        @Nullable List<GetPolicyDocumentStatement> statements,
-        @Nullable String version) {
-        this.overrideJson = overrideJson;
-        this.overridePolicyDocuments = overridePolicyDocuments;
-        this.policyId = policyId;
-        this.sourceJson = sourceJson;
-        this.sourcePolicyDocuments = sourcePolicyDocuments;
-        this.statements = statements;
-        this.version = version;
-    }
+    private GetPolicyDocumentArgs() {}
 
-    private GetPolicyDocumentArgs() {
-        this.overrideJson = null;
-        this.overridePolicyDocuments = List.of();
-        this.policyId = null;
-        this.sourceJson = null;
-        this.sourcePolicyDocuments = List.of();
-        this.statements = List.of();
-        this.version = null;
+    private GetPolicyDocumentArgs(GetPolicyDocumentArgs $) {
+        this.overrideJson = $.overrideJson;
+        this.overridePolicyDocuments = $.overridePolicyDocuments;
+        this.policyId = $.policyId;
+        this.sourceJson = $.sourceJson;
+        this.sourcePolicyDocuments = $.sourcePolicyDocuments;
+        this.statements = $.statements;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyDocumentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String overrideJson;
-        private @Nullable List<String> overridePolicyDocuments;
-        private @Nullable String policyId;
-        private @Nullable String sourceJson;
-        private @Nullable List<String> sourcePolicyDocuments;
-        private @Nullable List<GetPolicyDocumentStatement> statements;
-        private @Nullable String version;
+        private GetPolicyDocumentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyDocumentArgs();
         }
 
         public Builder(GetPolicyDocumentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.overrideJson = defaults.overrideJson;
-    	      this.overridePolicyDocuments = defaults.overridePolicyDocuments;
-    	      this.policyId = defaults.policyId;
-    	      this.sourceJson = defaults.sourceJson;
-    	      this.sourcePolicyDocuments = defaults.sourcePolicyDocuments;
-    	      this.statements = defaults.statements;
-    	      this.version = defaults.version;
+            $ = new GetPolicyDocumentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder overrideJson(@Nullable String overrideJson) {
-            this.overrideJson = overrideJson;
+            $.overrideJson = overrideJson;
             return this;
         }
+
         public Builder overridePolicyDocuments(@Nullable List<String> overridePolicyDocuments) {
-            this.overridePolicyDocuments = overridePolicyDocuments;
+            $.overridePolicyDocuments = overridePolicyDocuments;
             return this;
         }
+
         public Builder overridePolicyDocuments(String... overridePolicyDocuments) {
             return overridePolicyDocuments(List.of(overridePolicyDocuments));
         }
+
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
+
         public Builder sourceJson(@Nullable String sourceJson) {
-            this.sourceJson = sourceJson;
+            $.sourceJson = sourceJson;
             return this;
         }
+
         public Builder sourcePolicyDocuments(@Nullable List<String> sourcePolicyDocuments) {
-            this.sourcePolicyDocuments = sourcePolicyDocuments;
+            $.sourcePolicyDocuments = sourcePolicyDocuments;
             return this;
         }
+
         public Builder sourcePolicyDocuments(String... sourcePolicyDocuments) {
             return sourcePolicyDocuments(List.of(sourcePolicyDocuments));
         }
+
         public Builder statements(@Nullable List<GetPolicyDocumentStatement> statements) {
-            this.statements = statements;
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(GetPolicyDocumentStatement... statements) {
             return statements(List.of(statements));
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public GetPolicyDocumentArgs build() {
-            return new GetPolicyDocumentArgs(overrideJson, overridePolicyDocuments, policyId, sourceJson, sourcePolicyDocuments, statements, version);
+        }
+
+        public GetPolicyDocumentArgs build() {
+            return $;
         }
     }
+
 }

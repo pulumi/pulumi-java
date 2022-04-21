@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AmazonS3LocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<Object> bucketName;
+    private @Nullable Output<Object> bucketName;
 
-    public Output<Object> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<Object>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class AmazonS3LocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Output<Object> fileName;
+    private @Nullable Output<Object> fileName;
 
-    public Output<Object> fileName() {
-        return this.fileName == null ? Codegen.empty() : this.fileName;
+    public Optional<Output<Object>> fileName() {
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class AmazonS3LocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Output<Object> folderPath;
+    private @Nullable Output<Object> folderPath;
 
-    public Output<Object> folderPath() {
-        return this.folderPath == null ? Codegen.empty() : this.folderPath;
+    public Optional<Output<Object>> folderPath() {
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AmazonS3LocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -70,102 +71,89 @@ public final class AmazonS3LocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Object> version;
+    private @Nullable Output<Object> version;
 
-    public Output<Object> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Object>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public AmazonS3LocationArgs(
-        @Nullable Output<Object> bucketName,
-        @Nullable Output<Object> fileName,
-        @Nullable Output<Object> folderPath,
-        Output<String> type,
-        @Nullable Output<Object> version) {
-        this.bucketName = bucketName;
-        this.fileName = fileName;
-        this.folderPath = folderPath;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.version = version;
-    }
+    private AmazonS3LocationArgs() {}
 
-    private AmazonS3LocationArgs() {
-        this.bucketName = Codegen.empty();
-        this.fileName = Codegen.empty();
-        this.folderPath = Codegen.empty();
-        this.type = Codegen.empty();
-        this.version = Codegen.empty();
+    private AmazonS3LocationArgs(AmazonS3LocationArgs $) {
+        this.bucketName = $.bucketName;
+        this.fileName = $.fileName;
+        this.folderPath = $.folderPath;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmazonS3LocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> bucketName;
-        private @Nullable Output<Object> fileName;
-        private @Nullable Output<Object> folderPath;
-        private Output<String> type;
-        private @Nullable Output<Object> version;
+        private AmazonS3LocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmazonS3LocationArgs();
         }
 
         public Builder(AmazonS3LocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.fileName = defaults.fileName;
-    	      this.folderPath = defaults.folderPath;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new AmazonS3LocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Output<Object> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable Object bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(Object bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder fileName(@Nullable Output<Object> fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
-        public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Codegen.ofNullable(fileName);
-            return this;
+
+        public Builder fileName(Object fileName) {
+            return fileName(Output.of(fileName));
         }
+
         public Builder folderPath(@Nullable Output<Object> folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
-        public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Codegen.ofNullable(folderPath);
-            return this;
+
+        public Builder folderPath(Object folderPath) {
+            return folderPath(Output.of(folderPath));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder version(@Nullable Output<Object> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Object version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public AmazonS3LocationArgs build() {
-            return new AmazonS3LocationArgs(bucketName, fileName, folderPath, type, version);
+
+        public Builder version(Object version) {
+            return version(Output.of(version));
+        }
+
+        public AmazonS3LocationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

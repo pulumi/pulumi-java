@@ -5,10 +5,10 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccountThrottleSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="burstLimit")
-      private final @Nullable Output<Integer> burstLimit;
+    private @Nullable Output<Integer> burstLimit;
 
-    public Output<Integer> burstLimit() {
-        return this.burstLimit == null ? Codegen.empty() : this.burstLimit;
+    public Optional<Output<Integer>> burstLimit() {
+        return Optional.ofNullable(this.burstLimit);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class AccountThrottleSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="rateLimit")
-      private final @Nullable Output<Double> rateLimit;
+    private @Nullable Output<Double> rateLimit;
 
-    public Output<Double> rateLimit() {
-        return this.rateLimit == null ? Codegen.empty() : this.rateLimit;
+    public Optional<Output<Double>> rateLimit() {
+        return Optional.ofNullable(this.rateLimit);
     }
 
-    public AccountThrottleSettingsArgs(
-        @Nullable Output<Integer> burstLimit,
-        @Nullable Output<Double> rateLimit) {
-        this.burstLimit = burstLimit;
-        this.rateLimit = rateLimit;
-    }
+    private AccountThrottleSettingsArgs() {}
 
-    private AccountThrottleSettingsArgs() {
-        this.burstLimit = Codegen.empty();
-        this.rateLimit = Codegen.empty();
+    private AccountThrottleSettingsArgs(AccountThrottleSettingsArgs $) {
+        this.burstLimit = $.burstLimit;
+        this.rateLimit = $.rateLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountThrottleSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> burstLimit;
-        private @Nullable Output<Double> rateLimit;
+        private AccountThrottleSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountThrottleSettingsArgs();
         }
 
         public Builder(AccountThrottleSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.burstLimit = defaults.burstLimit;
-    	      this.rateLimit = defaults.rateLimit;
+            $ = new AccountThrottleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder burstLimit(@Nullable Output<Integer> burstLimit) {
-            this.burstLimit = burstLimit;
+            $.burstLimit = burstLimit;
             return this;
         }
-        public Builder burstLimit(@Nullable Integer burstLimit) {
-            this.burstLimit = Codegen.ofNullable(burstLimit);
-            return this;
+
+        public Builder burstLimit(Integer burstLimit) {
+            return burstLimit(Output.of(burstLimit));
         }
+
         public Builder rateLimit(@Nullable Output<Double> rateLimit) {
-            this.rateLimit = rateLimit;
+            $.rateLimit = rateLimit;
             return this;
         }
-        public Builder rateLimit(@Nullable Double rateLimit) {
-            this.rateLimit = Codegen.ofNullable(rateLimit);
-            return this;
-        }        public AccountThrottleSettingsArgs build() {
-            return new AccountThrottleSettingsArgs(burstLimit, rateLimit);
+
+        public Builder rateLimit(Double rateLimit) {
+            return rateLimit(Output.of(rateLimit));
+        }
+
+        public AccountThrottleSettingsArgs build() {
+            return $;
         }
     }
+
 }

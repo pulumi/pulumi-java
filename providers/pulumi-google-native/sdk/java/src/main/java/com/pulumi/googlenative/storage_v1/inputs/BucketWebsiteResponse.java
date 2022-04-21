@@ -21,7 +21,7 @@ public final class BucketWebsiteResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="mainPageSuffix", required=true)
-      private final String mainPageSuffix;
+    private String mainPageSuffix;
 
     public String mainPageSuffix() {
         return this.mainPageSuffix;
@@ -32,55 +32,52 @@ public final class BucketWebsiteResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="notFoundPage", required=true)
-      private final String notFoundPage;
+    private String notFoundPage;
 
     public String notFoundPage() {
         return this.notFoundPage;
     }
 
-    public BucketWebsiteResponse(
-        String mainPageSuffix,
-        String notFoundPage) {
-        this.mainPageSuffix = Objects.requireNonNull(mainPageSuffix, "expected parameter 'mainPageSuffix' to be non-null");
-        this.notFoundPage = Objects.requireNonNull(notFoundPage, "expected parameter 'notFoundPage' to be non-null");
-    }
+    private BucketWebsiteResponse() {}
 
-    private BucketWebsiteResponse() {
-        this.mainPageSuffix = null;
-        this.notFoundPage = null;
+    private BucketWebsiteResponse(BucketWebsiteResponse $) {
+        this.mainPageSuffix = $.mainPageSuffix;
+        this.notFoundPage = $.notFoundPage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketWebsiteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mainPageSuffix;
-        private String notFoundPage;
+        private BucketWebsiteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketWebsiteResponse();
         }
 
         public Builder(BucketWebsiteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mainPageSuffix = defaults.mainPageSuffix;
-    	      this.notFoundPage = defaults.notFoundPage;
+            $ = new BucketWebsiteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mainPageSuffix(String mainPageSuffix) {
-            this.mainPageSuffix = Objects.requireNonNull(mainPageSuffix);
+            $.mainPageSuffix = mainPageSuffix;
             return this;
         }
+
         public Builder notFoundPage(String notFoundPage) {
-            this.notFoundPage = Objects.requireNonNull(notFoundPage);
+            $.notFoundPage = notFoundPage;
             return this;
-        }        public BucketWebsiteResponse build() {
-            return new BucketWebsiteResponse(mainPageSuffix, notFoundPage);
+        }
+
+        public BucketWebsiteResponse build() {
+            $.mainPageSuffix = Objects.requireNonNull($.mainPageSuffix, "expected parameter 'mainPageSuffix' to be non-null");
+            $.notFoundPage = Objects.requireNonNull($.notFoundPage, "expected parameter 'notFoundPage' to be non-null");
+            return $;
         }
     }
+
 }

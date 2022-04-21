@@ -5,10 +5,10 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,93 +17,88 @@ public final class PipelineRemoveAttributesArgs extends com.pulumi.resources.Res
     public static final PipelineRemoveAttributesArgs Empty = new PipelineRemoveAttributesArgs();
 
     @Import(name="attributes", required=true)
-      private final Output<List<String>> attributes;
+    private Output<List<String>> attributes;
 
     public Output<List<String>> attributes() {
         return this.attributes;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable Output<String> next;
+    private @Nullable Output<String> next;
 
-    public Output<String> next() {
-        return this.next == null ? Codegen.empty() : this.next;
+    public Optional<Output<String>> next() {
+        return Optional.ofNullable(this.next);
     }
 
-    public PipelineRemoveAttributesArgs(
-        Output<List<String>> attributes,
-        Output<String> name,
-        @Nullable Output<String> next) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-    }
+    private PipelineRemoveAttributesArgs() {}
 
-    private PipelineRemoveAttributesArgs() {
-        this.attributes = Codegen.empty();
-        this.name = Codegen.empty();
-        this.next = Codegen.empty();
+    private PipelineRemoveAttributesArgs(PipelineRemoveAttributesArgs $) {
+        this.attributes = $.attributes;
+        this.name = $.name;
+        this.next = $.next;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineRemoveAttributesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> attributes;
-        private Output<String> name;
-        private @Nullable Output<String> next;
+        private PipelineRemoveAttributesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineRemoveAttributesArgs();
         }
 
         public Builder(PipelineRemoveAttributesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
+            $ = new PipelineRemoveAttributesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(Output<List<String>> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(List<String> attributes) {
-            this.attributes = Output.of(Objects.requireNonNull(attributes));
-            return this;
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(String... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder next(@Nullable Output<String> next) {
-            this.next = next;
+            $.next = next;
             return this;
         }
-        public Builder next(@Nullable String next) {
-            this.next = Codegen.ofNullable(next);
-            return this;
-        }        public PipelineRemoveAttributesArgs build() {
-            return new PipelineRemoveAttributesArgs(attributes, name, next);
+
+        public Builder next(String next) {
+            return next(Output.of(next));
+        }
+
+        public PipelineRemoveAttributesArgs build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Double id;
+    private @Nullable Double id;
 
     public Optional<Double> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,73 +59,63 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SsisFolderResponse(
-        @Nullable String description,
-        @Nullable Double id,
-        @Nullable String name,
-        String type) {
-        this.description = description;
-        this.id = id;
-        this.name = name;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private SsisFolderResponse() {}
 
-    private SsisFolderResponse() {
-        this.description = null;
-        this.id = null;
-        this.name = null;
-        this.type = null;
+    private SsisFolderResponse(SsisFolderResponse $) {
+        this.description = $.description;
+        this.id = $.id;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SsisFolderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable Double id;
-        private @Nullable String name;
-        private String type;
+        private SsisFolderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SsisFolderResponse();
         }
 
         public Builder(SsisFolderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new SsisFolderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder id(@Nullable Double id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SsisFolderResponse build() {
-            return new SsisFolderResponse(description, id, name, type);
+        }
+
+        public SsisFolderResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

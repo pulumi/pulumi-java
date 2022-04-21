@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<String>> items;
+    private @Nullable Output<List<String>> items;
 
-    public Output<List<String>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<String>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs(@Nullable Output<List<String>> items) {
-        this.items = items;
-    }
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs() {}
 
-    private CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs() {
-        this.items = Codegen.empty();
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs(CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> items;
+        private CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs();
         }
 
         public Builder(CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<String>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<String> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<String> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs build() {
-            return new CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs(items);
+        }
+
+        public CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs build() {
+            return $;
         }
     }
+
 }

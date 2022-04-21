@@ -23,10 +23,10 @@ public final class StudioComponentComputeFarmConfiguration extends com.pulumi.re
      * 
      */
     @Import(name="activeDirectoryUser")
-      private final @Nullable String activeDirectoryUser;
+    private @Nullable String activeDirectoryUser;
 
     public Optional<String> activeDirectoryUser() {
-        return this.activeDirectoryUser == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryUser);
+        return Optional.ofNullable(this.activeDirectoryUser);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class StudioComponentComputeFarmConfiguration extends com.pulumi.re
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
-    public StudioComponentComputeFarmConfiguration(
-        @Nullable String activeDirectoryUser,
-        @Nullable String endpoint) {
-        this.activeDirectoryUser = activeDirectoryUser;
-        this.endpoint = endpoint;
-    }
+    private StudioComponentComputeFarmConfiguration() {}
 
-    private StudioComponentComputeFarmConfiguration() {
-        this.activeDirectoryUser = null;
-        this.endpoint = null;
+    private StudioComponentComputeFarmConfiguration(StudioComponentComputeFarmConfiguration $) {
+        this.activeDirectoryUser = $.activeDirectoryUser;
+        this.endpoint = $.endpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentComputeFarmConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String activeDirectoryUser;
-        private @Nullable String endpoint;
+        private StudioComponentComputeFarmConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentComputeFarmConfiguration();
         }
 
         public Builder(StudioComponentComputeFarmConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectoryUser = defaults.activeDirectoryUser;
-    	      this.endpoint = defaults.endpoint;
+            $ = new StudioComponentComputeFarmConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectoryUser(@Nullable String activeDirectoryUser) {
-            this.activeDirectoryUser = activeDirectoryUser;
+            $.activeDirectoryUser = activeDirectoryUser;
             return this;
         }
+
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
-        }        public StudioComponentComputeFarmConfiguration build() {
-            return new StudioComponentComputeFarmConfiguration(activeDirectoryUser, endpoint);
+        }
+
+        public StudioComponentComputeFarmConfiguration build() {
+            return $;
         }
     }
+
 }

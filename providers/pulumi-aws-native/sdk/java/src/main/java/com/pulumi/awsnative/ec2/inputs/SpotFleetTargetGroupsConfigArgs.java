@@ -6,7 +6,6 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.inputs.SpotFleetTargetGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,52 +15,53 @@ public final class SpotFleetTargetGroupsConfigArgs extends com.pulumi.resources.
     public static final SpotFleetTargetGroupsConfigArgs Empty = new SpotFleetTargetGroupsConfigArgs();
 
     @Import(name="targetGroups", required=true)
-      private final Output<List<SpotFleetTargetGroupArgs>> targetGroups;
+    private Output<List<SpotFleetTargetGroupArgs>> targetGroups;
 
     public Output<List<SpotFleetTargetGroupArgs>> targetGroups() {
         return this.targetGroups;
     }
 
-    public SpotFleetTargetGroupsConfigArgs(Output<List<SpotFleetTargetGroupArgs>> targetGroups) {
-        this.targetGroups = Objects.requireNonNull(targetGroups, "expected parameter 'targetGroups' to be non-null");
-    }
+    private SpotFleetTargetGroupsConfigArgs() {}
 
-    private SpotFleetTargetGroupsConfigArgs() {
-        this.targetGroups = Codegen.empty();
+    private SpotFleetTargetGroupsConfigArgs(SpotFleetTargetGroupsConfigArgs $) {
+        this.targetGroups = $.targetGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetTargetGroupsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<SpotFleetTargetGroupArgs>> targetGroups;
+        private SpotFleetTargetGroupsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetTargetGroupsConfigArgs();
         }
 
         public Builder(SpotFleetTargetGroupsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetGroups = defaults.targetGroups;
+            $ = new SpotFleetTargetGroupsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetGroups(Output<List<SpotFleetTargetGroupArgs>> targetGroups) {
-            this.targetGroups = Objects.requireNonNull(targetGroups);
+            $.targetGroups = targetGroups;
             return this;
         }
+
         public Builder targetGroups(List<SpotFleetTargetGroupArgs> targetGroups) {
-            this.targetGroups = Output.of(Objects.requireNonNull(targetGroups));
-            return this;
+            return targetGroups(Output.of(targetGroups));
         }
+
         public Builder targetGroups(SpotFleetTargetGroupArgs... targetGroups) {
             return targetGroups(List.of(targetGroups));
-        }        public SpotFleetTargetGroupsConfigArgs build() {
-            return new SpotFleetTargetGroupsConfigArgs(targetGroups);
+        }
+
+        public SpotFleetTargetGroupsConfigArgs build() {
+            $.targetGroups = Objects.requireNonNull($.targetGroups, "expected parameter 'targetGroups' to be non-null");
+            return $;
         }
     }
+
 }

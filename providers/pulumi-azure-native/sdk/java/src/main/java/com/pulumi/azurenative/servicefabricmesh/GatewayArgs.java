@@ -8,11 +8,11 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.TcpConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationNetwork", required=true)
-      private final Output<NetworkRefArgs> destinationNetwork;
+    private Output<NetworkRefArgs> destinationNetwork;
 
     public Output<NetworkRefArgs> destinationNetwork() {
         return this.destinationNetwork;
@@ -47,10 +47,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayResourceName")
-      private final @Nullable Output<String> gatewayResourceName;
+    private @Nullable Output<String> gatewayResourceName;
 
-    public Output<String> gatewayResourceName() {
-        return this.gatewayResourceName == null ? Codegen.empty() : this.gatewayResourceName;
+    public Optional<Output<String>> gatewayResourceName() {
+        return Optional.ofNullable(this.gatewayResourceName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="http")
-      private final @Nullable Output<List<HttpConfigArgs>> http;
+    private @Nullable Output<List<HttpConfigArgs>> http;
 
-    public Output<List<HttpConfigArgs>> http() {
-        return this.http == null ? Codegen.empty() : this.http;
+    public Optional<Output<List<HttpConfigArgs>>> http() {
+        return Optional.ofNullable(this.http);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceNetwork", required=true)
-      private final Output<NetworkRefArgs> sourceNetwork;
+    private Output<NetworkRefArgs> sourceNetwork;
 
     public Output<NetworkRefArgs> sourceNetwork() {
         return this.sourceNetwork;
@@ -102,10 +102,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -113,160 +113,139 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tcp")
-      private final @Nullable Output<List<TcpConfigArgs>> tcp;
+    private @Nullable Output<List<TcpConfigArgs>> tcp;
 
-    public Output<List<TcpConfigArgs>> tcp() {
-        return this.tcp == null ? Codegen.empty() : this.tcp;
+    public Optional<Output<List<TcpConfigArgs>>> tcp() {
+        return Optional.ofNullable(this.tcp);
     }
 
-    public GatewayArgs(
-        @Nullable Output<String> description,
-        Output<NetworkRefArgs> destinationNetwork,
-        @Nullable Output<String> gatewayResourceName,
-        @Nullable Output<List<HttpConfigArgs>> http,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        Output<NetworkRefArgs> sourceNetwork,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<TcpConfigArgs>> tcp) {
-        this.description = description;
-        this.destinationNetwork = Objects.requireNonNull(destinationNetwork, "expected parameter 'destinationNetwork' to be non-null");
-        this.gatewayResourceName = gatewayResourceName;
-        this.http = http;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sourceNetwork = Objects.requireNonNull(sourceNetwork, "expected parameter 'sourceNetwork' to be non-null");
-        this.tags = tags;
-        this.tcp = tcp;
-    }
+    private GatewayArgs() {}
 
-    private GatewayArgs() {
-        this.description = Codegen.empty();
-        this.destinationNetwork = Codegen.empty();
-        this.gatewayResourceName = Codegen.empty();
-        this.http = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sourceNetwork = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tcp = Codegen.empty();
+    private GatewayArgs(GatewayArgs $) {
+        this.description = $.description;
+        this.destinationNetwork = $.destinationNetwork;
+        this.gatewayResourceName = $.gatewayResourceName;
+        this.http = $.http;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sourceNetwork = $.sourceNetwork;
+        this.tags = $.tags;
+        this.tcp = $.tcp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<NetworkRefArgs> destinationNetwork;
-        private @Nullable Output<String> gatewayResourceName;
-        private @Nullable Output<List<HttpConfigArgs>> http;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private Output<NetworkRefArgs> sourceNetwork;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<TcpConfigArgs>> tcp;
+        private GatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayArgs();
         }
 
         public Builder(GatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.destinationNetwork = defaults.destinationNetwork;
-    	      this.gatewayResourceName = defaults.gatewayResourceName;
-    	      this.http = defaults.http;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sourceNetwork = defaults.sourceNetwork;
-    	      this.tags = defaults.tags;
-    	      this.tcp = defaults.tcp;
+            $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destinationNetwork(Output<NetworkRefArgs> destinationNetwork) {
-            this.destinationNetwork = Objects.requireNonNull(destinationNetwork);
+            $.destinationNetwork = destinationNetwork;
             return this;
         }
+
         public Builder destinationNetwork(NetworkRefArgs destinationNetwork) {
-            this.destinationNetwork = Output.of(Objects.requireNonNull(destinationNetwork));
-            return this;
+            return destinationNetwork(Output.of(destinationNetwork));
         }
+
         public Builder gatewayResourceName(@Nullable Output<String> gatewayResourceName) {
-            this.gatewayResourceName = gatewayResourceName;
+            $.gatewayResourceName = gatewayResourceName;
             return this;
         }
-        public Builder gatewayResourceName(@Nullable String gatewayResourceName) {
-            this.gatewayResourceName = Codegen.ofNullable(gatewayResourceName);
-            return this;
+
+        public Builder gatewayResourceName(String gatewayResourceName) {
+            return gatewayResourceName(Output.of(gatewayResourceName));
         }
+
         public Builder http(@Nullable Output<List<HttpConfigArgs>> http) {
-            this.http = http;
+            $.http = http;
             return this;
         }
-        public Builder http(@Nullable List<HttpConfigArgs> http) {
-            this.http = Codegen.ofNullable(http);
-            return this;
+
+        public Builder http(List<HttpConfigArgs> http) {
+            return http(Output.of(http));
         }
+
         public Builder http(HttpConfigArgs... http) {
             return http(List.of(http));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sourceNetwork(Output<NetworkRefArgs> sourceNetwork) {
-            this.sourceNetwork = Objects.requireNonNull(sourceNetwork);
+            $.sourceNetwork = sourceNetwork;
             return this;
         }
+
         public Builder sourceNetwork(NetworkRefArgs sourceNetwork) {
-            this.sourceNetwork = Output.of(Objects.requireNonNull(sourceNetwork));
-            return this;
+            return sourceNetwork(Output.of(sourceNetwork));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tcp(@Nullable Output<List<TcpConfigArgs>> tcp) {
-            this.tcp = tcp;
+            $.tcp = tcp;
             return this;
         }
-        public Builder tcp(@Nullable List<TcpConfigArgs> tcp) {
-            this.tcp = Codegen.ofNullable(tcp);
-            return this;
+
+        public Builder tcp(List<TcpConfigArgs> tcp) {
+            return tcp(Output.of(tcp));
         }
+
         public Builder tcp(TcpConfigArgs... tcp) {
             return tcp(List.of(tcp));
-        }        public GatewayArgs build() {
-            return new GatewayArgs(description, destinationNetwork, gatewayResourceName, http, location, resourceGroupName, sourceNetwork, tags, tcp);
+        }
+
+        public GatewayArgs build() {
+            $.destinationNetwork = Objects.requireNonNull($.destinationNetwork, "expected parameter 'destinationNetwork' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sourceNetwork = Objects.requireNonNull($.sourceNetwork, "expected parameter 'sourceNetwork' to be non-null");
+            return $;
         }
     }
+
 }

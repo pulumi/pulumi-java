@@ -25,10 +25,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="bindingParameters")
-      private final @Nullable Map<String,Object> bindingParameters;
+    private @Nullable Map<String,Object> bindingParameters;
 
-    public Map<String,Object> bindingParameters() {
-        return this.bindingParameters == null ? Map.of() : this.bindingParameters;
+    public Optional<Map<String,Object>> bindingParameters() {
+        return Optional.ofNullable(this.bindingParameters);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="createdAt", required=true)
-      private final String createdAt;
+    private String createdAt;
 
     public String createdAt() {
         return this.createdAt;
@@ -47,7 +47,7 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="generatedProperties", required=true)
-      private final String generatedProperties;
+    private String generatedProperties;
 
     public String generatedProperties() {
         return this.generatedProperties;
@@ -58,10 +58,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -91,7 +91,7 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -102,109 +102,91 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="updatedAt", required=true)
-      private final String updatedAt;
+    private String updatedAt;
 
     public String updatedAt() {
         return this.updatedAt;
     }
 
-    public BindingResourcePropertiesResponse(
-        @Nullable Map<String,Object> bindingParameters,
-        String createdAt,
-        String generatedProperties,
-        @Nullable String key,
-        @Nullable String resourceId,
-        String resourceName,
-        String resourceType,
-        String updatedAt) {
-        this.bindingParameters = bindingParameters;
-        this.createdAt = Objects.requireNonNull(createdAt, "expected parameter 'createdAt' to be non-null");
-        this.generatedProperties = Objects.requireNonNull(generatedProperties, "expected parameter 'generatedProperties' to be non-null");
-        this.key = key;
-        this.resourceId = resourceId;
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.updatedAt = Objects.requireNonNull(updatedAt, "expected parameter 'updatedAt' to be non-null");
-    }
+    private BindingResourcePropertiesResponse() {}
 
-    private BindingResourcePropertiesResponse() {
-        this.bindingParameters = Map.of();
-        this.createdAt = null;
-        this.generatedProperties = null;
-        this.key = null;
-        this.resourceId = null;
-        this.resourceName = null;
-        this.resourceType = null;
-        this.updatedAt = null;
+    private BindingResourcePropertiesResponse(BindingResourcePropertiesResponse $) {
+        this.bindingParameters = $.bindingParameters;
+        this.createdAt = $.createdAt;
+        this.generatedProperties = $.generatedProperties;
+        this.key = $.key;
+        this.resourceId = $.resourceId;
+        this.resourceName = $.resourceName;
+        this.resourceType = $.resourceType;
+        this.updatedAt = $.updatedAt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BindingResourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,Object> bindingParameters;
-        private String createdAt;
-        private String generatedProperties;
-        private @Nullable String key;
-        private @Nullable String resourceId;
-        private String resourceName;
-        private String resourceType;
-        private String updatedAt;
+        private BindingResourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BindingResourcePropertiesResponse();
         }
 
         public Builder(BindingResourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindingParameters = defaults.bindingParameters;
-    	      this.createdAt = defaults.createdAt;
-    	      this.generatedProperties = defaults.generatedProperties;
-    	      this.key = defaults.key;
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceType = defaults.resourceType;
-    	      this.updatedAt = defaults.updatedAt;
+            $ = new BindingResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bindingParameters(@Nullable Map<String,Object> bindingParameters) {
-            this.bindingParameters = bindingParameters;
+            $.bindingParameters = bindingParameters;
             return this;
         }
+
         public Builder createdAt(String createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt);
+            $.createdAt = createdAt;
             return this;
         }
+
         public Builder generatedProperties(String generatedProperties) {
-            this.generatedProperties = Objects.requireNonNull(generatedProperties);
+            $.generatedProperties = generatedProperties;
             return this;
         }
+
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder updatedAt(String updatedAt) {
-            this.updatedAt = Objects.requireNonNull(updatedAt);
+            $.updatedAt = updatedAt;
             return this;
-        }        public BindingResourcePropertiesResponse build() {
-            return new BindingResourcePropertiesResponse(bindingParameters, createdAt, generatedProperties, key, resourceId, resourceName, resourceType, updatedAt);
+        }
+
+        public BindingResourcePropertiesResponse build() {
+            $.createdAt = Objects.requireNonNull($.createdAt, "expected parameter 'createdAt' to be non-null");
+            $.generatedProperties = Objects.requireNonNull($.generatedProperties, "expected parameter 'generatedProperties' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.updatedAt = Objects.requireNonNull($.updatedAt, "expected parameter 'updatedAt' to be non-null");
+            return $;
         }
     }
+
 }

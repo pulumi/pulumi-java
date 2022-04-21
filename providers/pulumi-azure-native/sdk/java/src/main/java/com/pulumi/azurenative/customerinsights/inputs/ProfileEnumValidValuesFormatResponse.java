@@ -25,10 +25,10 @@ public final class ProfileEnumValidValuesFormatResponse extends com.pulumi.resou
      * 
      */
     @Import(name="localizedValueNames")
-      private final @Nullable Map<String,String> localizedValueNames;
+    private @Nullable Map<String,String> localizedValueNames;
 
-    public Map<String,String> localizedValueNames() {
-        return this.localizedValueNames == null ? Map.of() : this.localizedValueNames;
+    public Optional<Map<String,String>> localizedValueNames() {
+        return Optional.ofNullable(this.localizedValueNames);
     }
 
     /**
@@ -36,55 +36,50 @@ public final class ProfileEnumValidValuesFormatResponse extends com.pulumi.resou
      * 
      */
     @Import(name="value")
-      private final @Nullable Integer value;
+    private @Nullable Integer value;
 
     public Optional<Integer> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ProfileEnumValidValuesFormatResponse(
-        @Nullable Map<String,String> localizedValueNames,
-        @Nullable Integer value) {
-        this.localizedValueNames = localizedValueNames;
-        this.value = value;
-    }
+    private ProfileEnumValidValuesFormatResponse() {}
 
-    private ProfileEnumValidValuesFormatResponse() {
-        this.localizedValueNames = Map.of();
-        this.value = null;
+    private ProfileEnumValidValuesFormatResponse(ProfileEnumValidValuesFormatResponse $) {
+        this.localizedValueNames = $.localizedValueNames;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProfileEnumValidValuesFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> localizedValueNames;
-        private @Nullable Integer value;
+        private ProfileEnumValidValuesFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProfileEnumValidValuesFormatResponse();
         }
 
         public Builder(ProfileEnumValidValuesFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localizedValueNames = defaults.localizedValueNames;
-    	      this.value = defaults.value;
+            $ = new ProfileEnumValidValuesFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder localizedValueNames(@Nullable Map<String,String> localizedValueNames) {
-            this.localizedValueNames = localizedValueNames;
+            $.localizedValueNames = localizedValueNames;
             return this;
         }
+
         public Builder value(@Nullable Integer value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ProfileEnumValidValuesFormatResponse build() {
-            return new ProfileEnumValidValuesFormatResponse(localizedValueNames, value);
+        }
+
+        public ProfileEnumValidValuesFormatResponse build() {
+            return $;
         }
     }
+
 }

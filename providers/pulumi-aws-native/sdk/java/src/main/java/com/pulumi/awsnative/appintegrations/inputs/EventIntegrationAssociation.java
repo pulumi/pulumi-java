@@ -21,10 +21,10 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="clientAssociationMetadata")
-      private final @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
+    private @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
 
-    public List<EventIntegrationMetadata> clientAssociationMetadata() {
-        return this.clientAssociationMetadata == null ? List.of() : this.clientAssociationMetadata;
+    public Optional<List<EventIntegrationMetadata>> clientAssociationMetadata() {
+        return Optional.ofNullable(this.clientAssociationMetadata);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="eventBridgeRuleName")
-      private final @Nullable String eventBridgeRuleName;
+    private @Nullable String eventBridgeRuleName;
 
     public Optional<String> eventBridgeRuleName() {
-        return this.eventBridgeRuleName == null ? Optional.empty() : Optional.ofNullable(this.eventBridgeRuleName);
+        return Optional.ofNullable(this.eventBridgeRuleName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="eventIntegrationAssociationArn")
-      private final @Nullable String eventIntegrationAssociationArn;
+    private @Nullable String eventIntegrationAssociationArn;
 
     public Optional<String> eventIntegrationAssociationArn() {
-        return this.eventIntegrationAssociationArn == null ? Optional.empty() : Optional.ofNullable(this.eventIntegrationAssociationArn);
+        return Optional.ofNullable(this.eventIntegrationAssociationArn);
     }
 
     /**
@@ -65,85 +65,72 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="eventIntegrationAssociationId")
-      private final @Nullable String eventIntegrationAssociationId;
+    private @Nullable String eventIntegrationAssociationId;
 
     public Optional<String> eventIntegrationAssociationId() {
-        return this.eventIntegrationAssociationId == null ? Optional.empty() : Optional.ofNullable(this.eventIntegrationAssociationId);
+        return Optional.ofNullable(this.eventIntegrationAssociationId);
     }
 
-    public EventIntegrationAssociation(
-        @Nullable List<EventIntegrationMetadata> clientAssociationMetadata,
-        @Nullable String clientId,
-        @Nullable String eventBridgeRuleName,
-        @Nullable String eventIntegrationAssociationArn,
-        @Nullable String eventIntegrationAssociationId) {
-        this.clientAssociationMetadata = clientAssociationMetadata;
-        this.clientId = clientId;
-        this.eventBridgeRuleName = eventBridgeRuleName;
-        this.eventIntegrationAssociationArn = eventIntegrationAssociationArn;
-        this.eventIntegrationAssociationId = eventIntegrationAssociationId;
-    }
+    private EventIntegrationAssociation() {}
 
-    private EventIntegrationAssociation() {
-        this.clientAssociationMetadata = List.of();
-        this.clientId = null;
-        this.eventBridgeRuleName = null;
-        this.eventIntegrationAssociationArn = null;
-        this.eventIntegrationAssociationId = null;
+    private EventIntegrationAssociation(EventIntegrationAssociation $) {
+        this.clientAssociationMetadata = $.clientAssociationMetadata;
+        this.clientId = $.clientId;
+        this.eventBridgeRuleName = $.eventBridgeRuleName;
+        this.eventIntegrationAssociationArn = $.eventIntegrationAssociationArn;
+        this.eventIntegrationAssociationId = $.eventIntegrationAssociationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventIntegrationAssociation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
-        private @Nullable String clientId;
-        private @Nullable String eventBridgeRuleName;
-        private @Nullable String eventIntegrationAssociationArn;
-        private @Nullable String eventIntegrationAssociationId;
+        private EventIntegrationAssociation $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventIntegrationAssociation();
         }
 
         public Builder(EventIntegrationAssociation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientAssociationMetadata = defaults.clientAssociationMetadata;
-    	      this.clientId = defaults.clientId;
-    	      this.eventBridgeRuleName = defaults.eventBridgeRuleName;
-    	      this.eventIntegrationAssociationArn = defaults.eventIntegrationAssociationArn;
-    	      this.eventIntegrationAssociationId = defaults.eventIntegrationAssociationId;
+            $ = new EventIntegrationAssociation(Objects.requireNonNull(defaults));
         }
 
         public Builder clientAssociationMetadata(@Nullable List<EventIntegrationMetadata> clientAssociationMetadata) {
-            this.clientAssociationMetadata = clientAssociationMetadata;
+            $.clientAssociationMetadata = clientAssociationMetadata;
             return this;
         }
+
         public Builder clientAssociationMetadata(EventIntegrationMetadata... clientAssociationMetadata) {
             return clientAssociationMetadata(List.of(clientAssociationMetadata));
         }
+
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder eventBridgeRuleName(@Nullable String eventBridgeRuleName) {
-            this.eventBridgeRuleName = eventBridgeRuleName;
+            $.eventBridgeRuleName = eventBridgeRuleName;
             return this;
         }
+
         public Builder eventIntegrationAssociationArn(@Nullable String eventIntegrationAssociationArn) {
-            this.eventIntegrationAssociationArn = eventIntegrationAssociationArn;
+            $.eventIntegrationAssociationArn = eventIntegrationAssociationArn;
             return this;
         }
+
         public Builder eventIntegrationAssociationId(@Nullable String eventIntegrationAssociationId) {
-            this.eventIntegrationAssociationId = eventIntegrationAssociationId;
+            $.eventIntegrationAssociationId = eventIntegrationAssociationId;
             return this;
-        }        public EventIntegrationAssociation build() {
-            return new EventIntegrationAssociation(clientAssociationMetadata, clientId, eventBridgeRuleName, eventIntegrationAssociationArn, eventIntegrationAssociationId);
+        }
+
+        public EventIntegrationAssociation build() {
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.azurenative.apimanagement.inputs.OAuth2AuthenticationSettingsC
 import com.pulumi.azurenative.apimanagement.inputs.OpenIdAuthenticationSettingsContractArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AuthenticationSettingsContractArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="oAuth2")
-      private final @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2;
+    private @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2;
 
-    public Output<OAuth2AuthenticationSettingsContractArgs> oAuth2() {
-        return this.oAuth2 == null ? Codegen.empty() : this.oAuth2;
+    public Optional<Output<OAuth2AuthenticationSettingsContractArgs>> oAuth2() {
+        return Optional.ofNullable(this.oAuth2);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AuthenticationSettingsContractArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="openid")
-      private final @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid;
+    private @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid;
 
-    public Output<OpenIdAuthenticationSettingsContractArgs> openid() {
-        return this.openid == null ? Codegen.empty() : this.openid;
+    public Optional<Output<OpenIdAuthenticationSettingsContractArgs>> openid() {
+        return Optional.ofNullable(this.openid);
     }
 
-    public AuthenticationSettingsContractArgs(
-        @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2,
-        @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid) {
-        this.oAuth2 = oAuth2;
-        this.openid = openid;
-    }
+    private AuthenticationSettingsContractArgs() {}
 
-    private AuthenticationSettingsContractArgs() {
-        this.oAuth2 = Codegen.empty();
-        this.openid = Codegen.empty();
+    private AuthenticationSettingsContractArgs(AuthenticationSettingsContractArgs $) {
+        this.oAuth2 = $.oAuth2;
+        this.openid = $.openid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationSettingsContractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2;
-        private @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid;
+        private AuthenticationSettingsContractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationSettingsContractArgs();
         }
 
         public Builder(AuthenticationSettingsContractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oAuth2 = defaults.oAuth2;
-    	      this.openid = defaults.openid;
+            $ = new AuthenticationSettingsContractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder oAuth2(@Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2) {
-            this.oAuth2 = oAuth2;
+            $.oAuth2 = oAuth2;
             return this;
         }
-        public Builder oAuth2(@Nullable OAuth2AuthenticationSettingsContractArgs oAuth2) {
-            this.oAuth2 = Codegen.ofNullable(oAuth2);
-            return this;
+
+        public Builder oAuth2(OAuth2AuthenticationSettingsContractArgs oAuth2) {
+            return oAuth2(Output.of(oAuth2));
         }
+
         public Builder openid(@Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid) {
-            this.openid = openid;
+            $.openid = openid;
             return this;
         }
-        public Builder openid(@Nullable OpenIdAuthenticationSettingsContractArgs openid) {
-            this.openid = Codegen.ofNullable(openid);
-            return this;
-        }        public AuthenticationSettingsContractArgs build() {
-            return new AuthenticationSettingsContractArgs(oAuth2, openid);
+
+        public Builder openid(OpenIdAuthenticationSettingsContractArgs openid) {
+            return openid(Output.of(openid));
+        }
+
+        public AuthenticationSettingsContractArgs build() {
+            return $;
         }
     }
+
 }

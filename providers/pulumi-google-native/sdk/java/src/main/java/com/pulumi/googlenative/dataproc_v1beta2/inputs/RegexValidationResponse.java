@@ -22,48 +22,49 @@ public final class RegexValidationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="regexes", required=true)
-      private final List<String> regexes;
+    private List<String> regexes;
 
     public List<String> regexes() {
         return this.regexes;
     }
 
-    public RegexValidationResponse(List<String> regexes) {
-        this.regexes = Objects.requireNonNull(regexes, "expected parameter 'regexes' to be non-null");
-    }
+    private RegexValidationResponse() {}
 
-    private RegexValidationResponse() {
-        this.regexes = List.of();
+    private RegexValidationResponse(RegexValidationResponse $) {
+        this.regexes = $.regexes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegexValidationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> regexes;
+        private RegexValidationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegexValidationResponse();
         }
 
         public Builder(RegexValidationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regexes = defaults.regexes;
+            $ = new RegexValidationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder regexes(List<String> regexes) {
-            this.regexes = Objects.requireNonNull(regexes);
+            $.regexes = regexes;
             return this;
         }
+
         public Builder regexes(String... regexes) {
             return regexes(List.of(regexes));
-        }        public RegexValidationResponse build() {
-            return new RegexValidationResponse(regexes);
+        }
+
+        public RegexValidationResponse build() {
+            $.regexes = Objects.requireNonNull($.regexes, "expected parameter 'regexes' to be non-null");
+            return $;
         }
     }
+
 }

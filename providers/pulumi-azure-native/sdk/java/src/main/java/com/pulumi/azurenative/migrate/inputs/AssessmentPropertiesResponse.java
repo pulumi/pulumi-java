@@ -25,7 +25,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="azureDiskType", required=true)
-      private final String azureDiskType;
+    private String azureDiskType;
 
     public String azureDiskType() {
         return this.azureDiskType;
@@ -36,7 +36,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="azureHybridUseBenefit", required=true)
-      private final String azureHybridUseBenefit;
+    private String azureHybridUseBenefit;
 
     public String azureHybridUseBenefit() {
         return this.azureHybridUseBenefit;
@@ -47,7 +47,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="azureLocation", required=true)
-      private final String azureLocation;
+    private String azureLocation;
 
     public String azureLocation() {
         return this.azureLocation;
@@ -58,7 +58,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="azureOfferCode", required=true)
-      private final String azureOfferCode;
+    private String azureOfferCode;
 
     public String azureOfferCode() {
         return this.azureOfferCode;
@@ -69,7 +69,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="azurePricingTier", required=true)
-      private final String azurePricingTier;
+    private String azurePricingTier;
 
     public String azurePricingTier() {
         return this.azurePricingTier;
@@ -80,7 +80,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="azureStorageRedundancy", required=true)
-      private final String azureStorageRedundancy;
+    private String azureStorageRedundancy;
 
     public String azureStorageRedundancy() {
         return this.azureStorageRedundancy;
@@ -91,7 +91,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="azureVmFamilies", required=true)
-      private final List<String> azureVmFamilies;
+    private List<String> azureVmFamilies;
 
     public List<String> azureVmFamilies() {
         return this.azureVmFamilies;
@@ -102,7 +102,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="confidenceRatingInPercentage", required=true)
-      private final Double confidenceRatingInPercentage;
+    private Double confidenceRatingInPercentage;
 
     public Double confidenceRatingInPercentage() {
         return this.confidenceRatingInPercentage;
@@ -113,7 +113,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="createdTimestamp", required=true)
-      private final String createdTimestamp;
+    private String createdTimestamp;
 
     public String createdTimestamp() {
         return this.createdTimestamp;
@@ -124,7 +124,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="currency", required=true)
-      private final String currency;
+    private String currency;
 
     public String currency() {
         return this.currency;
@@ -135,7 +135,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="discountPercentage", required=true)
-      private final Double discountPercentage;
+    private Double discountPercentage;
 
     public Double discountPercentage() {
         return this.discountPercentage;
@@ -146,7 +146,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="eaSubscriptionId", required=true)
-      private final String eaSubscriptionId;
+    private String eaSubscriptionId;
 
     public String eaSubscriptionId() {
         return this.eaSubscriptionId;
@@ -157,7 +157,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="monthlyBandwidthCost", required=true)
-      private final Double monthlyBandwidthCost;
+    private Double monthlyBandwidthCost;
 
     public Double monthlyBandwidthCost() {
         return this.monthlyBandwidthCost;
@@ -168,7 +168,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="monthlyComputeCost", required=true)
-      private final Double monthlyComputeCost;
+    private Double monthlyComputeCost;
 
     public Double monthlyComputeCost() {
         return this.monthlyComputeCost;
@@ -179,7 +179,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="monthlyPremiumStorageCost", required=true)
-      private final Double monthlyPremiumStorageCost;
+    private Double monthlyPremiumStorageCost;
 
     public Double monthlyPremiumStorageCost() {
         return this.monthlyPremiumStorageCost;
@@ -190,7 +190,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="monthlyStandardSSDStorageCost", required=true)
-      private final Double monthlyStandardSSDStorageCost;
+    private Double monthlyStandardSSDStorageCost;
 
     public Double monthlyStandardSSDStorageCost() {
         return this.monthlyStandardSSDStorageCost;
@@ -201,7 +201,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="monthlyStorageCost", required=true)
-      private final Double monthlyStorageCost;
+    private Double monthlyStorageCost;
 
     public Double monthlyStorageCost() {
         return this.monthlyStorageCost;
@@ -212,7 +212,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="numberOfMachines", required=true)
-      private final Integer numberOfMachines;
+    private Integer numberOfMachines;
 
     public Integer numberOfMachines() {
         return this.numberOfMachines;
@@ -223,7 +223,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="percentile", required=true)
-      private final String percentile;
+    private String percentile;
 
     public String percentile() {
         return this.percentile;
@@ -234,7 +234,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="perfDataEndTime", required=true)
-      private final String perfDataEndTime;
+    private String perfDataEndTime;
 
     public String perfDataEndTime() {
         return this.perfDataEndTime;
@@ -245,7 +245,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="perfDataStartTime", required=true)
-      private final String perfDataStartTime;
+    private String perfDataStartTime;
 
     public String perfDataStartTime() {
         return this.perfDataStartTime;
@@ -256,7 +256,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="pricesTimestamp", required=true)
-      private final String pricesTimestamp;
+    private String pricesTimestamp;
 
     public String pricesTimestamp() {
         return this.pricesTimestamp;
@@ -267,7 +267,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="reservedInstance", required=true)
-      private final String reservedInstance;
+    private String reservedInstance;
 
     public String reservedInstance() {
         return this.reservedInstance;
@@ -278,7 +278,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scalingFactor", required=true)
-      private final Double scalingFactor;
+    private Double scalingFactor;
 
     public Double scalingFactor() {
         return this.scalingFactor;
@@ -289,7 +289,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sizingCriterion", required=true)
-      private final String sizingCriterion;
+    private String sizingCriterion;
 
     public String sizingCriterion() {
         return this.sizingCriterion;
@@ -300,7 +300,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="stage", required=true)
-      private final String stage;
+    private String stage;
 
     public String stage() {
         return this.stage;
@@ -311,7 +311,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -322,7 +322,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="timeRange", required=true)
-      private final String timeRange;
+    private String timeRange;
 
     public String timeRange() {
         return this.timeRange;
@@ -333,7 +333,7 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="updatedTimestamp", required=true)
-      private final String updatedTimestamp;
+    private String updatedTimestamp;
 
     public String updatedTimestamp() {
         return this.updatedTimestamp;
@@ -344,310 +344,252 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="vmUptime", required=true)
-      private final VmUptimeResponse vmUptime;
+    private VmUptimeResponse vmUptime;
 
     public VmUptimeResponse vmUptime() {
         return this.vmUptime;
     }
 
-    public AssessmentPropertiesResponse(
-        String azureDiskType,
-        String azureHybridUseBenefit,
-        String azureLocation,
-        String azureOfferCode,
-        String azurePricingTier,
-        String azureStorageRedundancy,
-        List<String> azureVmFamilies,
-        Double confidenceRatingInPercentage,
-        String createdTimestamp,
-        String currency,
-        Double discountPercentage,
-        String eaSubscriptionId,
-        Double monthlyBandwidthCost,
-        Double monthlyComputeCost,
-        Double monthlyPremiumStorageCost,
-        Double monthlyStandardSSDStorageCost,
-        Double monthlyStorageCost,
-        Integer numberOfMachines,
-        String percentile,
-        String perfDataEndTime,
-        String perfDataStartTime,
-        String pricesTimestamp,
-        String reservedInstance,
-        Double scalingFactor,
-        String sizingCriterion,
-        String stage,
-        String status,
-        String timeRange,
-        String updatedTimestamp,
-        VmUptimeResponse vmUptime) {
-        this.azureDiskType = Objects.requireNonNull(azureDiskType, "expected parameter 'azureDiskType' to be non-null");
-        this.azureHybridUseBenefit = Objects.requireNonNull(azureHybridUseBenefit, "expected parameter 'azureHybridUseBenefit' to be non-null");
-        this.azureLocation = Objects.requireNonNull(azureLocation, "expected parameter 'azureLocation' to be non-null");
-        this.azureOfferCode = Objects.requireNonNull(azureOfferCode, "expected parameter 'azureOfferCode' to be non-null");
-        this.azurePricingTier = Objects.requireNonNull(azurePricingTier, "expected parameter 'azurePricingTier' to be non-null");
-        this.azureStorageRedundancy = Objects.requireNonNull(azureStorageRedundancy, "expected parameter 'azureStorageRedundancy' to be non-null");
-        this.azureVmFamilies = Objects.requireNonNull(azureVmFamilies, "expected parameter 'azureVmFamilies' to be non-null");
-        this.confidenceRatingInPercentage = Objects.requireNonNull(confidenceRatingInPercentage, "expected parameter 'confidenceRatingInPercentage' to be non-null");
-        this.createdTimestamp = Objects.requireNonNull(createdTimestamp, "expected parameter 'createdTimestamp' to be non-null");
-        this.currency = Objects.requireNonNull(currency, "expected parameter 'currency' to be non-null");
-        this.discountPercentage = Objects.requireNonNull(discountPercentage, "expected parameter 'discountPercentage' to be non-null");
-        this.eaSubscriptionId = Objects.requireNonNull(eaSubscriptionId, "expected parameter 'eaSubscriptionId' to be non-null");
-        this.monthlyBandwidthCost = Objects.requireNonNull(monthlyBandwidthCost, "expected parameter 'monthlyBandwidthCost' to be non-null");
-        this.monthlyComputeCost = Objects.requireNonNull(monthlyComputeCost, "expected parameter 'monthlyComputeCost' to be non-null");
-        this.monthlyPremiumStorageCost = Objects.requireNonNull(monthlyPremiumStorageCost, "expected parameter 'monthlyPremiumStorageCost' to be non-null");
-        this.monthlyStandardSSDStorageCost = Objects.requireNonNull(monthlyStandardSSDStorageCost, "expected parameter 'monthlyStandardSSDStorageCost' to be non-null");
-        this.monthlyStorageCost = Objects.requireNonNull(monthlyStorageCost, "expected parameter 'monthlyStorageCost' to be non-null");
-        this.numberOfMachines = Objects.requireNonNull(numberOfMachines, "expected parameter 'numberOfMachines' to be non-null");
-        this.percentile = Objects.requireNonNull(percentile, "expected parameter 'percentile' to be non-null");
-        this.perfDataEndTime = Objects.requireNonNull(perfDataEndTime, "expected parameter 'perfDataEndTime' to be non-null");
-        this.perfDataStartTime = Objects.requireNonNull(perfDataStartTime, "expected parameter 'perfDataStartTime' to be non-null");
-        this.pricesTimestamp = Objects.requireNonNull(pricesTimestamp, "expected parameter 'pricesTimestamp' to be non-null");
-        this.reservedInstance = Objects.requireNonNull(reservedInstance, "expected parameter 'reservedInstance' to be non-null");
-        this.scalingFactor = Objects.requireNonNull(scalingFactor, "expected parameter 'scalingFactor' to be non-null");
-        this.sizingCriterion = Objects.requireNonNull(sizingCriterion, "expected parameter 'sizingCriterion' to be non-null");
-        this.stage = Objects.requireNonNull(stage, "expected parameter 'stage' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.timeRange = Objects.requireNonNull(timeRange, "expected parameter 'timeRange' to be non-null");
-        this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp, "expected parameter 'updatedTimestamp' to be non-null");
-        this.vmUptime = Objects.requireNonNull(vmUptime, "expected parameter 'vmUptime' to be non-null");
-    }
+    private AssessmentPropertiesResponse() {}
 
-    private AssessmentPropertiesResponse() {
-        this.azureDiskType = null;
-        this.azureHybridUseBenefit = null;
-        this.azureLocation = null;
-        this.azureOfferCode = null;
-        this.azurePricingTier = null;
-        this.azureStorageRedundancy = null;
-        this.azureVmFamilies = List.of();
-        this.confidenceRatingInPercentage = null;
-        this.createdTimestamp = null;
-        this.currency = null;
-        this.discountPercentage = null;
-        this.eaSubscriptionId = null;
-        this.monthlyBandwidthCost = null;
-        this.monthlyComputeCost = null;
-        this.monthlyPremiumStorageCost = null;
-        this.monthlyStandardSSDStorageCost = null;
-        this.monthlyStorageCost = null;
-        this.numberOfMachines = null;
-        this.percentile = null;
-        this.perfDataEndTime = null;
-        this.perfDataStartTime = null;
-        this.pricesTimestamp = null;
-        this.reservedInstance = null;
-        this.scalingFactor = null;
-        this.sizingCriterion = null;
-        this.stage = null;
-        this.status = null;
-        this.timeRange = null;
-        this.updatedTimestamp = null;
-        this.vmUptime = null;
+    private AssessmentPropertiesResponse(AssessmentPropertiesResponse $) {
+        this.azureDiskType = $.azureDiskType;
+        this.azureHybridUseBenefit = $.azureHybridUseBenefit;
+        this.azureLocation = $.azureLocation;
+        this.azureOfferCode = $.azureOfferCode;
+        this.azurePricingTier = $.azurePricingTier;
+        this.azureStorageRedundancy = $.azureStorageRedundancy;
+        this.azureVmFamilies = $.azureVmFamilies;
+        this.confidenceRatingInPercentage = $.confidenceRatingInPercentage;
+        this.createdTimestamp = $.createdTimestamp;
+        this.currency = $.currency;
+        this.discountPercentage = $.discountPercentage;
+        this.eaSubscriptionId = $.eaSubscriptionId;
+        this.monthlyBandwidthCost = $.monthlyBandwidthCost;
+        this.monthlyComputeCost = $.monthlyComputeCost;
+        this.monthlyPremiumStorageCost = $.monthlyPremiumStorageCost;
+        this.monthlyStandardSSDStorageCost = $.monthlyStandardSSDStorageCost;
+        this.monthlyStorageCost = $.monthlyStorageCost;
+        this.numberOfMachines = $.numberOfMachines;
+        this.percentile = $.percentile;
+        this.perfDataEndTime = $.perfDataEndTime;
+        this.perfDataStartTime = $.perfDataStartTime;
+        this.pricesTimestamp = $.pricesTimestamp;
+        this.reservedInstance = $.reservedInstance;
+        this.scalingFactor = $.scalingFactor;
+        this.sizingCriterion = $.sizingCriterion;
+        this.stage = $.stage;
+        this.status = $.status;
+        this.timeRange = $.timeRange;
+        this.updatedTimestamp = $.updatedTimestamp;
+        this.vmUptime = $.vmUptime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String azureDiskType;
-        private String azureHybridUseBenefit;
-        private String azureLocation;
-        private String azureOfferCode;
-        private String azurePricingTier;
-        private String azureStorageRedundancy;
-        private List<String> azureVmFamilies;
-        private Double confidenceRatingInPercentage;
-        private String createdTimestamp;
-        private String currency;
-        private Double discountPercentage;
-        private String eaSubscriptionId;
-        private Double monthlyBandwidthCost;
-        private Double monthlyComputeCost;
-        private Double monthlyPremiumStorageCost;
-        private Double monthlyStandardSSDStorageCost;
-        private Double monthlyStorageCost;
-        private Integer numberOfMachines;
-        private String percentile;
-        private String perfDataEndTime;
-        private String perfDataStartTime;
-        private String pricesTimestamp;
-        private String reservedInstance;
-        private Double scalingFactor;
-        private String sizingCriterion;
-        private String stage;
-        private String status;
-        private String timeRange;
-        private String updatedTimestamp;
-        private VmUptimeResponse vmUptime;
+        private AssessmentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentPropertiesResponse();
         }
 
         public Builder(AssessmentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureDiskType = defaults.azureDiskType;
-    	      this.azureHybridUseBenefit = defaults.azureHybridUseBenefit;
-    	      this.azureLocation = defaults.azureLocation;
-    	      this.azureOfferCode = defaults.azureOfferCode;
-    	      this.azurePricingTier = defaults.azurePricingTier;
-    	      this.azureStorageRedundancy = defaults.azureStorageRedundancy;
-    	      this.azureVmFamilies = defaults.azureVmFamilies;
-    	      this.confidenceRatingInPercentage = defaults.confidenceRatingInPercentage;
-    	      this.createdTimestamp = defaults.createdTimestamp;
-    	      this.currency = defaults.currency;
-    	      this.discountPercentage = defaults.discountPercentage;
-    	      this.eaSubscriptionId = defaults.eaSubscriptionId;
-    	      this.monthlyBandwidthCost = defaults.monthlyBandwidthCost;
-    	      this.monthlyComputeCost = defaults.monthlyComputeCost;
-    	      this.monthlyPremiumStorageCost = defaults.monthlyPremiumStorageCost;
-    	      this.monthlyStandardSSDStorageCost = defaults.monthlyStandardSSDStorageCost;
-    	      this.monthlyStorageCost = defaults.monthlyStorageCost;
-    	      this.numberOfMachines = defaults.numberOfMachines;
-    	      this.percentile = defaults.percentile;
-    	      this.perfDataEndTime = defaults.perfDataEndTime;
-    	      this.perfDataStartTime = defaults.perfDataStartTime;
-    	      this.pricesTimestamp = defaults.pricesTimestamp;
-    	      this.reservedInstance = defaults.reservedInstance;
-    	      this.scalingFactor = defaults.scalingFactor;
-    	      this.sizingCriterion = defaults.sizingCriterion;
-    	      this.stage = defaults.stage;
-    	      this.status = defaults.status;
-    	      this.timeRange = defaults.timeRange;
-    	      this.updatedTimestamp = defaults.updatedTimestamp;
-    	      this.vmUptime = defaults.vmUptime;
+            $ = new AssessmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureDiskType(String azureDiskType) {
-            this.azureDiskType = Objects.requireNonNull(azureDiskType);
+            $.azureDiskType = azureDiskType;
             return this;
         }
+
         public Builder azureHybridUseBenefit(String azureHybridUseBenefit) {
-            this.azureHybridUseBenefit = Objects.requireNonNull(azureHybridUseBenefit);
+            $.azureHybridUseBenefit = azureHybridUseBenefit;
             return this;
         }
+
         public Builder azureLocation(String azureLocation) {
-            this.azureLocation = Objects.requireNonNull(azureLocation);
+            $.azureLocation = azureLocation;
             return this;
         }
+
         public Builder azureOfferCode(String azureOfferCode) {
-            this.azureOfferCode = Objects.requireNonNull(azureOfferCode);
+            $.azureOfferCode = azureOfferCode;
             return this;
         }
+
         public Builder azurePricingTier(String azurePricingTier) {
-            this.azurePricingTier = Objects.requireNonNull(azurePricingTier);
+            $.azurePricingTier = azurePricingTier;
             return this;
         }
+
         public Builder azureStorageRedundancy(String azureStorageRedundancy) {
-            this.azureStorageRedundancy = Objects.requireNonNull(azureStorageRedundancy);
+            $.azureStorageRedundancy = azureStorageRedundancy;
             return this;
         }
+
         public Builder azureVmFamilies(List<String> azureVmFamilies) {
-            this.azureVmFamilies = Objects.requireNonNull(azureVmFamilies);
+            $.azureVmFamilies = azureVmFamilies;
             return this;
         }
+
         public Builder azureVmFamilies(String... azureVmFamilies) {
             return azureVmFamilies(List.of(azureVmFamilies));
         }
+
         public Builder confidenceRatingInPercentage(Double confidenceRatingInPercentage) {
-            this.confidenceRatingInPercentage = Objects.requireNonNull(confidenceRatingInPercentage);
+            $.confidenceRatingInPercentage = confidenceRatingInPercentage;
             return this;
         }
+
         public Builder createdTimestamp(String createdTimestamp) {
-            this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
+            $.createdTimestamp = createdTimestamp;
             return this;
         }
+
         public Builder currency(String currency) {
-            this.currency = Objects.requireNonNull(currency);
+            $.currency = currency;
             return this;
         }
+
         public Builder discountPercentage(Double discountPercentage) {
-            this.discountPercentage = Objects.requireNonNull(discountPercentage);
+            $.discountPercentage = discountPercentage;
             return this;
         }
+
         public Builder eaSubscriptionId(String eaSubscriptionId) {
-            this.eaSubscriptionId = Objects.requireNonNull(eaSubscriptionId);
+            $.eaSubscriptionId = eaSubscriptionId;
             return this;
         }
+
         public Builder monthlyBandwidthCost(Double monthlyBandwidthCost) {
-            this.monthlyBandwidthCost = Objects.requireNonNull(monthlyBandwidthCost);
+            $.monthlyBandwidthCost = monthlyBandwidthCost;
             return this;
         }
+
         public Builder monthlyComputeCost(Double monthlyComputeCost) {
-            this.monthlyComputeCost = Objects.requireNonNull(monthlyComputeCost);
+            $.monthlyComputeCost = monthlyComputeCost;
             return this;
         }
+
         public Builder monthlyPremiumStorageCost(Double monthlyPremiumStorageCost) {
-            this.monthlyPremiumStorageCost = Objects.requireNonNull(monthlyPremiumStorageCost);
+            $.monthlyPremiumStorageCost = monthlyPremiumStorageCost;
             return this;
         }
+
         public Builder monthlyStandardSSDStorageCost(Double monthlyStandardSSDStorageCost) {
-            this.monthlyStandardSSDStorageCost = Objects.requireNonNull(monthlyStandardSSDStorageCost);
+            $.monthlyStandardSSDStorageCost = monthlyStandardSSDStorageCost;
             return this;
         }
+
         public Builder monthlyStorageCost(Double monthlyStorageCost) {
-            this.monthlyStorageCost = Objects.requireNonNull(monthlyStorageCost);
+            $.monthlyStorageCost = monthlyStorageCost;
             return this;
         }
+
         public Builder numberOfMachines(Integer numberOfMachines) {
-            this.numberOfMachines = Objects.requireNonNull(numberOfMachines);
+            $.numberOfMachines = numberOfMachines;
             return this;
         }
+
         public Builder percentile(String percentile) {
-            this.percentile = Objects.requireNonNull(percentile);
+            $.percentile = percentile;
             return this;
         }
+
         public Builder perfDataEndTime(String perfDataEndTime) {
-            this.perfDataEndTime = Objects.requireNonNull(perfDataEndTime);
+            $.perfDataEndTime = perfDataEndTime;
             return this;
         }
+
         public Builder perfDataStartTime(String perfDataStartTime) {
-            this.perfDataStartTime = Objects.requireNonNull(perfDataStartTime);
+            $.perfDataStartTime = perfDataStartTime;
             return this;
         }
+
         public Builder pricesTimestamp(String pricesTimestamp) {
-            this.pricesTimestamp = Objects.requireNonNull(pricesTimestamp);
+            $.pricesTimestamp = pricesTimestamp;
             return this;
         }
+
         public Builder reservedInstance(String reservedInstance) {
-            this.reservedInstance = Objects.requireNonNull(reservedInstance);
+            $.reservedInstance = reservedInstance;
             return this;
         }
+
         public Builder scalingFactor(Double scalingFactor) {
-            this.scalingFactor = Objects.requireNonNull(scalingFactor);
+            $.scalingFactor = scalingFactor;
             return this;
         }
+
         public Builder sizingCriterion(String sizingCriterion) {
-            this.sizingCriterion = Objects.requireNonNull(sizingCriterion);
+            $.sizingCriterion = sizingCriterion;
             return this;
         }
+
         public Builder stage(String stage) {
-            this.stage = Objects.requireNonNull(stage);
+            $.stage = stage;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder timeRange(String timeRange) {
-            this.timeRange = Objects.requireNonNull(timeRange);
+            $.timeRange = timeRange;
             return this;
         }
+
         public Builder updatedTimestamp(String updatedTimestamp) {
-            this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
+            $.updatedTimestamp = updatedTimestamp;
             return this;
         }
+
         public Builder vmUptime(VmUptimeResponse vmUptime) {
-            this.vmUptime = Objects.requireNonNull(vmUptime);
+            $.vmUptime = vmUptime;
             return this;
-        }        public AssessmentPropertiesResponse build() {
-            return new AssessmentPropertiesResponse(azureDiskType, azureHybridUseBenefit, azureLocation, azureOfferCode, azurePricingTier, azureStorageRedundancy, azureVmFamilies, confidenceRatingInPercentage, createdTimestamp, currency, discountPercentage, eaSubscriptionId, monthlyBandwidthCost, monthlyComputeCost, monthlyPremiumStorageCost, monthlyStandardSSDStorageCost, monthlyStorageCost, numberOfMachines, percentile, perfDataEndTime, perfDataStartTime, pricesTimestamp, reservedInstance, scalingFactor, sizingCriterion, stage, status, timeRange, updatedTimestamp, vmUptime);
+        }
+
+        public AssessmentPropertiesResponse build() {
+            $.azureDiskType = Objects.requireNonNull($.azureDiskType, "expected parameter 'azureDiskType' to be non-null");
+            $.azureHybridUseBenefit = Objects.requireNonNull($.azureHybridUseBenefit, "expected parameter 'azureHybridUseBenefit' to be non-null");
+            $.azureLocation = Objects.requireNonNull($.azureLocation, "expected parameter 'azureLocation' to be non-null");
+            $.azureOfferCode = Objects.requireNonNull($.azureOfferCode, "expected parameter 'azureOfferCode' to be non-null");
+            $.azurePricingTier = Objects.requireNonNull($.azurePricingTier, "expected parameter 'azurePricingTier' to be non-null");
+            $.azureStorageRedundancy = Objects.requireNonNull($.azureStorageRedundancy, "expected parameter 'azureStorageRedundancy' to be non-null");
+            $.azureVmFamilies = Objects.requireNonNull($.azureVmFamilies, "expected parameter 'azureVmFamilies' to be non-null");
+            $.confidenceRatingInPercentage = Objects.requireNonNull($.confidenceRatingInPercentage, "expected parameter 'confidenceRatingInPercentage' to be non-null");
+            $.createdTimestamp = Objects.requireNonNull($.createdTimestamp, "expected parameter 'createdTimestamp' to be non-null");
+            $.currency = Objects.requireNonNull($.currency, "expected parameter 'currency' to be non-null");
+            $.discountPercentage = Objects.requireNonNull($.discountPercentage, "expected parameter 'discountPercentage' to be non-null");
+            $.eaSubscriptionId = Objects.requireNonNull($.eaSubscriptionId, "expected parameter 'eaSubscriptionId' to be non-null");
+            $.monthlyBandwidthCost = Objects.requireNonNull($.monthlyBandwidthCost, "expected parameter 'monthlyBandwidthCost' to be non-null");
+            $.monthlyComputeCost = Objects.requireNonNull($.monthlyComputeCost, "expected parameter 'monthlyComputeCost' to be non-null");
+            $.monthlyPremiumStorageCost = Objects.requireNonNull($.monthlyPremiumStorageCost, "expected parameter 'monthlyPremiumStorageCost' to be non-null");
+            $.monthlyStandardSSDStorageCost = Objects.requireNonNull($.monthlyStandardSSDStorageCost, "expected parameter 'monthlyStandardSSDStorageCost' to be non-null");
+            $.monthlyStorageCost = Objects.requireNonNull($.monthlyStorageCost, "expected parameter 'monthlyStorageCost' to be non-null");
+            $.numberOfMachines = Objects.requireNonNull($.numberOfMachines, "expected parameter 'numberOfMachines' to be non-null");
+            $.percentile = Objects.requireNonNull($.percentile, "expected parameter 'percentile' to be non-null");
+            $.perfDataEndTime = Objects.requireNonNull($.perfDataEndTime, "expected parameter 'perfDataEndTime' to be non-null");
+            $.perfDataStartTime = Objects.requireNonNull($.perfDataStartTime, "expected parameter 'perfDataStartTime' to be non-null");
+            $.pricesTimestamp = Objects.requireNonNull($.pricesTimestamp, "expected parameter 'pricesTimestamp' to be non-null");
+            $.reservedInstance = Objects.requireNonNull($.reservedInstance, "expected parameter 'reservedInstance' to be non-null");
+            $.scalingFactor = Objects.requireNonNull($.scalingFactor, "expected parameter 'scalingFactor' to be non-null");
+            $.sizingCriterion = Objects.requireNonNull($.sizingCriterion, "expected parameter 'sizingCriterion' to be non-null");
+            $.stage = Objects.requireNonNull($.stage, "expected parameter 'stage' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.timeRange = Objects.requireNonNull($.timeRange, "expected parameter 'timeRange' to be non-null");
+            $.updatedTimestamp = Objects.requireNonNull($.updatedTimestamp, "expected parameter 'updatedTimestamp' to be non-null");
+            $.vmUptime = Objects.requireNonNull($.vmUptime, "expected parameter 'vmUptime' to be non-null");
+            return $;
         }
     }
+
 }

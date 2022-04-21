@@ -23,10 +23,10 @@ public final class Ipv6CircuitConnectionConfigResponse extends com.pulumi.resour
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable String addressPrefix;
+    private @Nullable String addressPrefix;
 
     public Optional<String> addressPrefix() {
-        return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class Ipv6CircuitConnectionConfigResponse extends com.pulumi.resour
      * 
      */
     @Import(name="circuitConnectionStatus", required=true)
-      private final String circuitConnectionStatus;
+    private String circuitConnectionStatus;
 
     public String circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
 
-    public Ipv6CircuitConnectionConfigResponse(
-        @Nullable String addressPrefix,
-        String circuitConnectionStatus) {
-        this.addressPrefix = addressPrefix;
-        this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus, "expected parameter 'circuitConnectionStatus' to be non-null");
-    }
+    private Ipv6CircuitConnectionConfigResponse() {}
 
-    private Ipv6CircuitConnectionConfigResponse() {
-        this.addressPrefix = null;
-        this.circuitConnectionStatus = null;
+    private Ipv6CircuitConnectionConfigResponse(Ipv6CircuitConnectionConfigResponse $) {
+        this.addressPrefix = $.addressPrefix;
+        this.circuitConnectionStatus = $.circuitConnectionStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Ipv6CircuitConnectionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addressPrefix;
-        private String circuitConnectionStatus;
+        private Ipv6CircuitConnectionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Ipv6CircuitConnectionConfigResponse();
         }
 
         public Builder(Ipv6CircuitConnectionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.circuitConnectionStatus = defaults.circuitConnectionStatus;
+            $ = new Ipv6CircuitConnectionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
+
         public Builder circuitConnectionStatus(String circuitConnectionStatus) {
-            this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
+            $.circuitConnectionStatus = circuitConnectionStatus;
             return this;
-        }        public Ipv6CircuitConnectionConfigResponse build() {
-            return new Ipv6CircuitConnectionConfigResponse(addressPrefix, circuitConnectionStatus);
+        }
+
+        public Ipv6CircuitConnectionConfigResponse build() {
+            $.circuitConnectionStatus = Objects.requireNonNull($.circuitConnectionStatus, "expected parameter 'circuitConnectionStatus' to be non-null");
+            return $;
         }
     }
+
 }

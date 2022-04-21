@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class NodeGroupAffinityArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="nodeGroupUri", required=true)
-      private final Output<String> nodeGroupUri;
+    private Output<String> nodeGroupUri;
 
     public Output<String> nodeGroupUri() {
         return this.nodeGroupUri;
     }
 
-    public NodeGroupAffinityArgs(Output<String> nodeGroupUri) {
-        this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri, "expected parameter 'nodeGroupUri' to be non-null");
-    }
+    private NodeGroupAffinityArgs() {}
 
-    private NodeGroupAffinityArgs() {
-        this.nodeGroupUri = Codegen.empty();
+    private NodeGroupAffinityArgs(NodeGroupAffinityArgs $) {
+        this.nodeGroupUri = $.nodeGroupUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupAffinityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> nodeGroupUri;
+        private NodeGroupAffinityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupAffinityArgs();
         }
 
         public Builder(NodeGroupAffinityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeGroupUri = defaults.nodeGroupUri;
+            $ = new NodeGroupAffinityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeGroupUri(Output<String> nodeGroupUri) {
-            this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri);
+            $.nodeGroupUri = nodeGroupUri;
             return this;
         }
+
         public Builder nodeGroupUri(String nodeGroupUri) {
-            this.nodeGroupUri = Output.of(Objects.requireNonNull(nodeGroupUri));
-            return this;
-        }        public NodeGroupAffinityArgs build() {
-            return new NodeGroupAffinityArgs(nodeGroupUri);
+            return nodeGroupUri(Output.of(nodeGroupUri));
+        }
+
+        public NodeGroupAffinityArgs build() {
+            $.nodeGroupUri = Objects.requireNonNull($.nodeGroupUri, "expected parameter 'nodeGroupUri' to be non-null");
+            return $;
         }
     }
+
 }

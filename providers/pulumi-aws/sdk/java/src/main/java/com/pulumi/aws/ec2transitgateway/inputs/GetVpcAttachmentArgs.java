@@ -22,10 +22,10 @@ public final class GetVpcAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpcAttachmentFilter> filters;
+    private @Nullable List<GetVpcAttachmentFilter> filters;
 
-    public List<GetVpcAttachmentFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpcAttachmentFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetVpcAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -44,67 +44,60 @@ public final class GetVpcAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetVpcAttachmentArgs(
-        @Nullable List<GetVpcAttachmentFilter> filters,
-        @Nullable String id,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.id = id;
-        this.tags = tags;
-    }
+    private GetVpcAttachmentArgs() {}
 
-    private GetVpcAttachmentArgs() {
-        this.filters = List.of();
-        this.id = null;
-        this.tags = Map.of();
+    private GetVpcAttachmentArgs(GetVpcAttachmentArgs $) {
+        this.filters = $.filters;
+        this.id = $.id;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetVpcAttachmentFilter> filters;
-        private @Nullable String id;
-        private @Nullable Map<String,String> tags;
+        private GetVpcAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcAttachmentArgs();
         }
 
         public Builder(GetVpcAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.tags = defaults.tags;
+            $ = new GetVpcAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetVpcAttachmentFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpcAttachmentFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetVpcAttachmentArgs build() {
-            return new GetVpcAttachmentArgs(filters, id, tags);
+        }
+
+        public GetVpcAttachmentArgs build() {
+            return $;
         }
     }
+
 }

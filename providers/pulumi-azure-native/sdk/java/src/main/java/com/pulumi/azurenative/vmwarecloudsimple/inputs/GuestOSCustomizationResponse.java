@@ -24,10 +24,10 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable List<String> dnsServers;
+    private @Nullable List<String> dnsServers;
 
-    public List<String> dnsServers() {
-        return this.dnsServers == null ? List.of() : this.dnsServers;
+    public Optional<List<String>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="hostName")
-      private final @Nullable String hostName;
+    private @Nullable String hostName;
 
     public Optional<String> hostName() {
-        return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="policyId")
-      private final @Nullable String policyId;
+    private @Nullable String policyId;
 
     public Optional<String> policyId() {
-        return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -68,85 +68,72 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public GuestOSCustomizationResponse(
-        @Nullable List<String> dnsServers,
-        @Nullable String hostName,
-        @Nullable String password,
-        @Nullable String policyId,
-        @Nullable String username) {
-        this.dnsServers = dnsServers;
-        this.hostName = hostName;
-        this.password = password;
-        this.policyId = policyId;
-        this.username = username;
-    }
+    private GuestOSCustomizationResponse() {}
 
-    private GuestOSCustomizationResponse() {
-        this.dnsServers = List.of();
-        this.hostName = null;
-        this.password = null;
-        this.policyId = null;
-        this.username = null;
+    private GuestOSCustomizationResponse(GuestOSCustomizationResponse $) {
+        this.dnsServers = $.dnsServers;
+        this.hostName = $.hostName;
+        this.password = $.password;
+        this.policyId = $.policyId;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestOSCustomizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> dnsServers;
-        private @Nullable String hostName;
-        private @Nullable String password;
-        private @Nullable String policyId;
-        private @Nullable String username;
+        private GuestOSCustomizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestOSCustomizationResponse();
         }
 
         public Builder(GuestOSCustomizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.hostName = defaults.hostName;
-    	      this.password = defaults.password;
-    	      this.policyId = defaults.policyId;
-    	      this.username = defaults.username;
+            $ = new GuestOSCustomizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public GuestOSCustomizationResponse build() {
-            return new GuestOSCustomizationResponse(dnsServers, hostName, password, policyId, username);
+        }
+
+        public GuestOSCustomizationResponse build() {
+            return $;
         }
     }
+
 }

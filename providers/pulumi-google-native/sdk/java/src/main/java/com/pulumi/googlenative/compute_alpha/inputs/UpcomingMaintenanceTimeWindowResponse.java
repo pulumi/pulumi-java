@@ -17,62 +17,59 @@ public final class UpcomingMaintenanceTimeWindowResponse extends com.pulumi.reso
     public static final UpcomingMaintenanceTimeWindowResponse Empty = new UpcomingMaintenanceTimeWindowResponse();
 
     @Import(name="earliest", required=true)
-      private final String earliest;
+    private String earliest;
 
     public String earliest() {
         return this.earliest;
     }
 
     @Import(name="latest", required=true)
-      private final String latest;
+    private String latest;
 
     public String latest() {
         return this.latest;
     }
 
-    public UpcomingMaintenanceTimeWindowResponse(
-        String earliest,
-        String latest) {
-        this.earliest = Objects.requireNonNull(earliest, "expected parameter 'earliest' to be non-null");
-        this.latest = Objects.requireNonNull(latest, "expected parameter 'latest' to be non-null");
-    }
+    private UpcomingMaintenanceTimeWindowResponse() {}
 
-    private UpcomingMaintenanceTimeWindowResponse() {
-        this.earliest = null;
-        this.latest = null;
+    private UpcomingMaintenanceTimeWindowResponse(UpcomingMaintenanceTimeWindowResponse $) {
+        this.earliest = $.earliest;
+        this.latest = $.latest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpcomingMaintenanceTimeWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String earliest;
-        private String latest;
+        private UpcomingMaintenanceTimeWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpcomingMaintenanceTimeWindowResponse();
         }
 
         public Builder(UpcomingMaintenanceTimeWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.earliest = defaults.earliest;
-    	      this.latest = defaults.latest;
+            $ = new UpcomingMaintenanceTimeWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder earliest(String earliest) {
-            this.earliest = Objects.requireNonNull(earliest);
+            $.earliest = earliest;
             return this;
         }
+
         public Builder latest(String latest) {
-            this.latest = Objects.requireNonNull(latest);
+            $.latest = latest;
             return this;
-        }        public UpcomingMaintenanceTimeWindowResponse build() {
-            return new UpcomingMaintenanceTimeWindowResponse(earliest, latest);
+        }
+
+        public UpcomingMaintenanceTimeWindowResponse build() {
+            $.earliest = Objects.requireNonNull($.earliest, "expected parameter 'earliest' to be non-null");
+            $.latest = Objects.requireNonNull($.latest, "expected parameter 'latest' to be non-null");
+            return $;
         }
     }
+
 }

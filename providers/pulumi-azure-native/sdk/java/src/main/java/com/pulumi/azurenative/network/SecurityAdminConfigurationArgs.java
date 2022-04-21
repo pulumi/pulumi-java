@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.enums.SecurityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SecurityAdminConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="configurationName")
-      private final @Nullable Output<String> configurationName;
+    private @Nullable Output<String> configurationName;
 
-    public Output<String> configurationName() {
-        return this.configurationName == null ? Codegen.empty() : this.configurationName;
+    public Optional<Output<String>> configurationName() {
+        return Optional.ofNullable(this.configurationName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SecurityAdminConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="deleteExistingNSGs")
-      private final @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
+    private @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
 
-    public Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs() {
-        return this.deleteExistingNSGs == null ? Codegen.empty() : this.deleteExistingNSGs;
+    public Optional<Output<Either<String,DeleteExistingNSGs>>> deleteExistingNSGs() {
+        return Optional.ofNullable(this.deleteExistingNSGs);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SecurityAdminConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SecurityAdminConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class SecurityAdminConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final Output<String> networkManagerName;
+    private Output<String> networkManagerName;
 
     public Output<String> networkManagerName() {
         return this.networkManagerName;
@@ -78,7 +78,7 @@ public final class SecurityAdminConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,128 +89,110 @@ public final class SecurityAdminConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="securityType")
-      private final @Nullable Output<Either<String,SecurityType>> securityType;
+    private @Nullable Output<Either<String,SecurityType>> securityType;
 
-    public Output<Either<String,SecurityType>> securityType() {
-        return this.securityType == null ? Codegen.empty() : this.securityType;
+    public Optional<Output<Either<String,SecurityType>>> securityType() {
+        return Optional.ofNullable(this.securityType);
     }
 
-    public SecurityAdminConfigurationArgs(
-        @Nullable Output<String> configurationName,
-        @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> networkManagerName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,SecurityType>> securityType) {
-        this.configurationName = configurationName;
-        this.deleteExistingNSGs = deleteExistingNSGs;
-        this.description = description;
-        this.displayName = displayName;
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityType = securityType;
-    }
+    private SecurityAdminConfigurationArgs() {}
 
-    private SecurityAdminConfigurationArgs() {
-        this.configurationName = Codegen.empty();
-        this.deleteExistingNSGs = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.networkManagerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.securityType = Codegen.empty();
+    private SecurityAdminConfigurationArgs(SecurityAdminConfigurationArgs $) {
+        this.configurationName = $.configurationName;
+        this.deleteExistingNSGs = $.deleteExistingNSGs;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityType = $.securityType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityAdminConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configurationName;
-        private @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> networkManagerName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,SecurityType>> securityType;
+        private SecurityAdminConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityAdminConfigurationArgs();
         }
 
         public Builder(SecurityAdminConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.deleteExistingNSGs = defaults.deleteExistingNSGs;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityType = defaults.securityType;
+            $ = new SecurityAdminConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(@Nullable Output<String> configurationName) {
-            this.configurationName = configurationName;
+            $.configurationName = configurationName;
             return this;
         }
-        public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Codegen.ofNullable(configurationName);
-            return this;
+
+        public Builder configurationName(String configurationName) {
+            return configurationName(Output.of(configurationName));
         }
+
         public Builder deleteExistingNSGs(@Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs) {
-            this.deleteExistingNSGs = deleteExistingNSGs;
+            $.deleteExistingNSGs = deleteExistingNSGs;
             return this;
         }
-        public Builder deleteExistingNSGs(@Nullable Either<String,DeleteExistingNSGs> deleteExistingNSGs) {
-            this.deleteExistingNSGs = Codegen.ofNullable(deleteExistingNSGs);
-            return this;
+
+        public Builder deleteExistingNSGs(Either<String,DeleteExistingNSGs> deleteExistingNSGs) {
+            return deleteExistingNSGs(Output.of(deleteExistingNSGs));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder networkManagerName(Output<String> networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
-            return this;
+            return networkManagerName(Output.of(networkManagerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder securityType(@Nullable Output<Either<String,SecurityType>> securityType) {
-            this.securityType = securityType;
+            $.securityType = securityType;
             return this;
         }
-        public Builder securityType(@Nullable Either<String,SecurityType> securityType) {
-            this.securityType = Codegen.ofNullable(securityType);
-            return this;
-        }        public SecurityAdminConfigurationArgs build() {
-            return new SecurityAdminConfigurationArgs(configurationName, deleteExistingNSGs, description, displayName, networkManagerName, resourceGroupName, securityType);
+
+        public Builder securityType(Either<String,SecurityType> securityType) {
+            return securityType(Output.of(securityType));
+        }
+
+        public SecurityAdminConfigurationArgs build() {
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

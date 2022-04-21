@@ -5,11 +5,11 @@ package com.pulumi.aws.directconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="awsDevice")
-      private final @Nullable Output<String> awsDevice;
+    private @Nullable Output<String> awsDevice;
 
-    public Output<String> awsDevice() {
-        return this.awsDevice == null ? Codegen.empty() : this.awsDevice;
+    public Optional<Output<String>> awsDevice() {
+        return Optional.ofNullable(this.awsDevice);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="bandwidth")
-      private final @Nullable Output<String> bandwidth;
+    private @Nullable Output<String> bandwidth;
 
-    public Output<String> bandwidth() {
-        return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
+    public Optional<Output<String>> bandwidth() {
+        return Optional.ofNullable(this.bandwidth);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="connectionId")
-      private final @Nullable Output<String> connectionId;
+    private @Nullable Output<String> connectionId;
 
-    public Output<String> connectionId() {
-        return this.connectionId == null ? Codegen.empty() : this.connectionId;
+    public Optional<Output<String>> connectionId() {
+        return Optional.ofNullable(this.connectionId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hasLogicalRedundancy")
-      private final @Nullable Output<String> hasLogicalRedundancy;
+    private @Nullable Output<String> hasLogicalRedundancy;
 
-    public Output<String> hasLogicalRedundancy() {
-        return this.hasLogicalRedundancy == null ? Codegen.empty() : this.hasLogicalRedundancy;
+    public Optional<Output<String>> hasLogicalRedundancy() {
+        return Optional.ofNullable(this.hasLogicalRedundancy);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="jumboFrameCapable")
-      private final @Nullable Output<Boolean> jumboFrameCapable;
+    private @Nullable Output<Boolean> jumboFrameCapable;
 
-    public Output<Boolean> jumboFrameCapable() {
-        return this.jumboFrameCapable == null ? Codegen.empty() : this.jumboFrameCapable;
+    public Optional<Output<Boolean>> jumboFrameCapable() {
+        return Optional.ofNullable(this.jumboFrameCapable);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="lagId")
-      private final @Nullable Output<String> lagId;
+    private @Nullable Output<String> lagId;
 
-    public Output<String> lagId() {
-        return this.lagId == null ? Codegen.empty() : this.lagId;
+    public Optional<Output<String>> lagId() {
+        return Optional.ofNullable(this.lagId);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="loaIssueTime")
-      private final @Nullable Output<String> loaIssueTime;
+    private @Nullable Output<String> loaIssueTime;
 
-    public Output<String> loaIssueTime() {
-        return this.loaIssueTime == null ? Codegen.empty() : this.loaIssueTime;
+    public Optional<Output<String>> loaIssueTime() {
+        return Optional.ofNullable(this.loaIssueTime);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="ownerAccountId")
-      private final @Nullable Output<String> ownerAccountId;
+    private @Nullable Output<String> ownerAccountId;
 
-    public Output<String> ownerAccountId() {
-        return this.ownerAccountId == null ? Codegen.empty() : this.ownerAccountId;
+    public Optional<Output<String>> ownerAccountId() {
+        return Optional.ofNullable(this.ownerAccountId);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="partnerName")
-      private final @Nullable Output<String> partnerName;
+    private @Nullable Output<String> partnerName;
 
-    public Output<String> partnerName() {
-        return this.partnerName == null ? Codegen.empty() : this.partnerName;
+    public Optional<Output<String>> partnerName() {
+        return Optional.ofNullable(this.partnerName);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="providerName")
-      private final @Nullable Output<String> providerName;
+    private @Nullable Output<String> providerName;
 
-    public Output<String> providerName() {
-        return this.providerName == null ? Codegen.empty() : this.providerName;
+    public Optional<Output<String>> providerName() {
+        return Optional.ofNullable(this.providerName);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -176,232 +176,188 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="vlan")
-      private final @Nullable Output<Integer> vlan;
+    private @Nullable Output<Integer> vlan;
 
-    public Output<Integer> vlan() {
-        return this.vlan == null ? Codegen.empty() : this.vlan;
+    public Optional<Output<Integer>> vlan() {
+        return Optional.ofNullable(this.vlan);
     }
 
-    public HostedConnectionState(
-        @Nullable Output<String> awsDevice,
-        @Nullable Output<String> bandwidth,
-        @Nullable Output<String> connectionId,
-        @Nullable Output<String> hasLogicalRedundancy,
-        @Nullable Output<Boolean> jumboFrameCapable,
-        @Nullable Output<String> lagId,
-        @Nullable Output<String> loaIssueTime,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ownerAccountId,
-        @Nullable Output<String> partnerName,
-        @Nullable Output<String> providerName,
-        @Nullable Output<String> region,
-        @Nullable Output<String> state,
-        @Nullable Output<Integer> vlan) {
-        this.awsDevice = awsDevice;
-        this.bandwidth = bandwidth;
-        this.connectionId = connectionId;
-        this.hasLogicalRedundancy = hasLogicalRedundancy;
-        this.jumboFrameCapable = jumboFrameCapable;
-        this.lagId = lagId;
-        this.loaIssueTime = loaIssueTime;
-        this.location = location;
-        this.name = name;
-        this.ownerAccountId = ownerAccountId;
-        this.partnerName = partnerName;
-        this.providerName = providerName;
-        this.region = region;
-        this.state = state;
-        this.vlan = vlan;
-    }
+    private HostedConnectionState() {}
 
-    private HostedConnectionState() {
-        this.awsDevice = Codegen.empty();
-        this.bandwidth = Codegen.empty();
-        this.connectionId = Codegen.empty();
-        this.hasLogicalRedundancy = Codegen.empty();
-        this.jumboFrameCapable = Codegen.empty();
-        this.lagId = Codegen.empty();
-        this.loaIssueTime = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ownerAccountId = Codegen.empty();
-        this.partnerName = Codegen.empty();
-        this.providerName = Codegen.empty();
-        this.region = Codegen.empty();
-        this.state = Codegen.empty();
-        this.vlan = Codegen.empty();
+    private HostedConnectionState(HostedConnectionState $) {
+        this.awsDevice = $.awsDevice;
+        this.bandwidth = $.bandwidth;
+        this.connectionId = $.connectionId;
+        this.hasLogicalRedundancy = $.hasLogicalRedundancy;
+        this.jumboFrameCapable = $.jumboFrameCapable;
+        this.lagId = $.lagId;
+        this.loaIssueTime = $.loaIssueTime;
+        this.location = $.location;
+        this.name = $.name;
+        this.ownerAccountId = $.ownerAccountId;
+        this.partnerName = $.partnerName;
+        this.providerName = $.providerName;
+        this.region = $.region;
+        this.state = $.state;
+        this.vlan = $.vlan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedConnectionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> awsDevice;
-        private @Nullable Output<String> bandwidth;
-        private @Nullable Output<String> connectionId;
-        private @Nullable Output<String> hasLogicalRedundancy;
-        private @Nullable Output<Boolean> jumboFrameCapable;
-        private @Nullable Output<String> lagId;
-        private @Nullable Output<String> loaIssueTime;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ownerAccountId;
-        private @Nullable Output<String> partnerName;
-        private @Nullable Output<String> providerName;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> state;
-        private @Nullable Output<Integer> vlan;
+        private HostedConnectionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedConnectionState();
         }
 
         public Builder(HostedConnectionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsDevice = defaults.awsDevice;
-    	      this.bandwidth = defaults.bandwidth;
-    	      this.connectionId = defaults.connectionId;
-    	      this.hasLogicalRedundancy = defaults.hasLogicalRedundancy;
-    	      this.jumboFrameCapable = defaults.jumboFrameCapable;
-    	      this.lagId = defaults.lagId;
-    	      this.loaIssueTime = defaults.loaIssueTime;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.ownerAccountId = defaults.ownerAccountId;
-    	      this.partnerName = defaults.partnerName;
-    	      this.providerName = defaults.providerName;
-    	      this.region = defaults.region;
-    	      this.state = defaults.state;
-    	      this.vlan = defaults.vlan;
+            $ = new HostedConnectionState(Objects.requireNonNull(defaults));
         }
 
         public Builder awsDevice(@Nullable Output<String> awsDevice) {
-            this.awsDevice = awsDevice;
+            $.awsDevice = awsDevice;
             return this;
         }
-        public Builder awsDevice(@Nullable String awsDevice) {
-            this.awsDevice = Codegen.ofNullable(awsDevice);
-            return this;
+
+        public Builder awsDevice(String awsDevice) {
+            return awsDevice(Output.of(awsDevice));
         }
+
         public Builder bandwidth(@Nullable Output<String> bandwidth) {
-            this.bandwidth = bandwidth;
+            $.bandwidth = bandwidth;
             return this;
         }
-        public Builder bandwidth(@Nullable String bandwidth) {
-            this.bandwidth = Codegen.ofNullable(bandwidth);
-            return this;
+
+        public Builder bandwidth(String bandwidth) {
+            return bandwidth(Output.of(bandwidth));
         }
+
         public Builder connectionId(@Nullable Output<String> connectionId) {
-            this.connectionId = connectionId;
+            $.connectionId = connectionId;
             return this;
         }
-        public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Codegen.ofNullable(connectionId);
-            return this;
+
+        public Builder connectionId(String connectionId) {
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder hasLogicalRedundancy(@Nullable Output<String> hasLogicalRedundancy) {
-            this.hasLogicalRedundancy = hasLogicalRedundancy;
+            $.hasLogicalRedundancy = hasLogicalRedundancy;
             return this;
         }
-        public Builder hasLogicalRedundancy(@Nullable String hasLogicalRedundancy) {
-            this.hasLogicalRedundancy = Codegen.ofNullable(hasLogicalRedundancy);
-            return this;
+
+        public Builder hasLogicalRedundancy(String hasLogicalRedundancy) {
+            return hasLogicalRedundancy(Output.of(hasLogicalRedundancy));
         }
+
         public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
-            this.jumboFrameCapable = jumboFrameCapable;
+            $.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
-        public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
-            this.jumboFrameCapable = Codegen.ofNullable(jumboFrameCapable);
-            return this;
+
+        public Builder jumboFrameCapable(Boolean jumboFrameCapable) {
+            return jumboFrameCapable(Output.of(jumboFrameCapable));
         }
+
         public Builder lagId(@Nullable Output<String> lagId) {
-            this.lagId = lagId;
+            $.lagId = lagId;
             return this;
         }
-        public Builder lagId(@Nullable String lagId) {
-            this.lagId = Codegen.ofNullable(lagId);
-            return this;
+
+        public Builder lagId(String lagId) {
+            return lagId(Output.of(lagId));
         }
+
         public Builder loaIssueTime(@Nullable Output<String> loaIssueTime) {
-            this.loaIssueTime = loaIssueTime;
+            $.loaIssueTime = loaIssueTime;
             return this;
         }
-        public Builder loaIssueTime(@Nullable String loaIssueTime) {
-            this.loaIssueTime = Codegen.ofNullable(loaIssueTime);
-            return this;
+
+        public Builder loaIssueTime(String loaIssueTime) {
+            return loaIssueTime(Output.of(loaIssueTime));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
-            this.ownerAccountId = ownerAccountId;
+            $.ownerAccountId = ownerAccountId;
             return this;
         }
-        public Builder ownerAccountId(@Nullable String ownerAccountId) {
-            this.ownerAccountId = Codegen.ofNullable(ownerAccountId);
-            return this;
+
+        public Builder ownerAccountId(String ownerAccountId) {
+            return ownerAccountId(Output.of(ownerAccountId));
         }
+
         public Builder partnerName(@Nullable Output<String> partnerName) {
-            this.partnerName = partnerName;
+            $.partnerName = partnerName;
             return this;
         }
-        public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Codegen.ofNullable(partnerName);
-            return this;
+
+        public Builder partnerName(String partnerName) {
+            return partnerName(Output.of(partnerName));
         }
+
         public Builder providerName(@Nullable Output<String> providerName) {
-            this.providerName = providerName;
+            $.providerName = providerName;
             return this;
         }
-        public Builder providerName(@Nullable String providerName) {
-            this.providerName = Codegen.ofNullable(providerName);
-            return this;
+
+        public Builder providerName(String providerName) {
+            return providerName(Output.of(providerName));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder vlan(@Nullable Output<Integer> vlan) {
-            this.vlan = vlan;
+            $.vlan = vlan;
             return this;
         }
-        public Builder vlan(@Nullable Integer vlan) {
-            this.vlan = Codegen.ofNullable(vlan);
-            return this;
-        }        public HostedConnectionState build() {
-            return new HostedConnectionState(awsDevice, bandwidth, connectionId, hasLogicalRedundancy, jumboFrameCapable, lagId, loaIssueTime, location, name, ownerAccountId, partnerName, providerName, region, state, vlan);
+
+        public Builder vlan(Integer vlan) {
+            return vlan(Output.of(vlan));
+        }
+
+        public HostedConnectionState build() {
+            return $;
         }
     }
+
 }

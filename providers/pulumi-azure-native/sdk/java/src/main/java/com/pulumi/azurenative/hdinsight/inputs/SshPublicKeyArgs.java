@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateData")
-      private final @Nullable Output<String> certificateData;
+    private @Nullable Output<String> certificateData;
 
-    public Output<String> certificateData() {
-        return this.certificateData == null ? Codegen.empty() : this.certificateData;
+    public Optional<Output<String>> certificateData() {
+        return Optional.ofNullable(this.certificateData);
     }
 
-    public SshPublicKeyArgs(@Nullable Output<String> certificateData) {
-        this.certificateData = certificateData;
-    }
+    private SshPublicKeyArgs() {}
 
-    private SshPublicKeyArgs() {
-        this.certificateData = Codegen.empty();
+    private SshPublicKeyArgs(SshPublicKeyArgs $) {
+        this.certificateData = $.certificateData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateData;
+        private SshPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshPublicKeyArgs();
         }
 
         public Builder(SshPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateData = defaults.certificateData;
+            $ = new SshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateData(@Nullable Output<String> certificateData) {
-            this.certificateData = certificateData;
+            $.certificateData = certificateData;
             return this;
         }
-        public Builder certificateData(@Nullable String certificateData) {
-            this.certificateData = Codegen.ofNullable(certificateData);
-            return this;
-        }        public SshPublicKeyArgs build() {
-            return new SshPublicKeyArgs(certificateData);
+
+        public Builder certificateData(String certificateData) {
+            return certificateData(Output.of(certificateData));
+        }
+
+        public SshPublicKeyArgs build() {
+            return $;
         }
     }
+
 }

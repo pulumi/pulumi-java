@@ -5,7 +5,6 @@ package com.pulumi.aws.signer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SigningJobSourceS3Args extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -30,7 +29,7 @@ public final class SigningJobSourceS3Args extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -41,76 +40,71 @@ public final class SigningJobSourceS3Args extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public SigningJobSourceS3Args(
-        Output<String> bucket,
-        Output<String> key,
-        Output<String> version) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SigningJobSourceS3Args() {}
 
-    private SigningJobSourceS3Args() {
-        this.bucket = Codegen.empty();
-        this.key = Codegen.empty();
-        this.version = Codegen.empty();
+    private SigningJobSourceS3Args(SigningJobSourceS3Args $) {
+        this.bucket = $.bucket;
+        this.key = $.key;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningJobSourceS3Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private Output<String> key;
-        private Output<String> version;
+        private SigningJobSourceS3Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningJobSourceS3Args();
         }
 
         public Builder(SigningJobSourceS3Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.key = defaults.key;
-    	      this.version = defaults.version;
+            $ = new SigningJobSourceS3Args(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public SigningJobSourceS3Args build() {
-            return new SigningJobSourceS3Args(bucket, key, version);
+            return version(Output.of(version));
+        }
+
+        public SigningJobSourceS3Args build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,7 +8,6 @@ import com.pulumi.azurenative.storagepool.inputs.AttributesArgs;
 import com.pulumi.azurenative.storagepool.inputs.IscsiLunArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,7 +25,7 @@ public final class TargetPortalGroupCreateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="acls", required=true)
-      private final Output<List<AclArgs>> acls;
+    private Output<List<AclArgs>> acls;
 
     public Output<List<AclArgs>> acls() {
         return this.acls;
@@ -37,7 +36,7 @@ public final class TargetPortalGroupCreateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="attributes", required=true)
-      private final Output<AttributesArgs> attributes;
+    private Output<AttributesArgs> attributes;
 
     public Output<AttributesArgs> attributes() {
         return this.attributes;
@@ -48,82 +47,79 @@ public final class TargetPortalGroupCreateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="luns", required=true)
-      private final Output<List<IscsiLunArgs>> luns;
+    private Output<List<IscsiLunArgs>> luns;
 
     public Output<List<IscsiLunArgs>> luns() {
         return this.luns;
     }
 
-    public TargetPortalGroupCreateArgs(
-        Output<List<AclArgs>> acls,
-        Output<AttributesArgs> attributes,
-        Output<List<IscsiLunArgs>> luns) {
-        this.acls = Objects.requireNonNull(acls, "expected parameter 'acls' to be non-null");
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.luns = Objects.requireNonNull(luns, "expected parameter 'luns' to be non-null");
-    }
+    private TargetPortalGroupCreateArgs() {}
 
-    private TargetPortalGroupCreateArgs() {
-        this.acls = Codegen.empty();
-        this.attributes = Codegen.empty();
-        this.luns = Codegen.empty();
+    private TargetPortalGroupCreateArgs(TargetPortalGroupCreateArgs $) {
+        this.acls = $.acls;
+        this.attributes = $.attributes;
+        this.luns = $.luns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetPortalGroupCreateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<AclArgs>> acls;
-        private Output<AttributesArgs> attributes;
-        private Output<List<IscsiLunArgs>> luns;
+        private TargetPortalGroupCreateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetPortalGroupCreateArgs();
         }
 
         public Builder(TargetPortalGroupCreateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acls = defaults.acls;
-    	      this.attributes = defaults.attributes;
-    	      this.luns = defaults.luns;
+            $ = new TargetPortalGroupCreateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acls(Output<List<AclArgs>> acls) {
-            this.acls = Objects.requireNonNull(acls);
+            $.acls = acls;
             return this;
         }
+
         public Builder acls(List<AclArgs> acls) {
-            this.acls = Output.of(Objects.requireNonNull(acls));
-            return this;
+            return acls(Output.of(acls));
         }
+
         public Builder acls(AclArgs... acls) {
             return acls(List.of(acls));
         }
+
         public Builder attributes(Output<AttributesArgs> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(AttributesArgs attributes) {
-            this.attributes = Output.of(Objects.requireNonNull(attributes));
-            return this;
+            return attributes(Output.of(attributes));
         }
+
         public Builder luns(Output<List<IscsiLunArgs>> luns) {
-            this.luns = Objects.requireNonNull(luns);
+            $.luns = luns;
             return this;
         }
+
         public Builder luns(List<IscsiLunArgs> luns) {
-            this.luns = Output.of(Objects.requireNonNull(luns));
-            return this;
+            return luns(Output.of(luns));
         }
+
         public Builder luns(IscsiLunArgs... luns) {
             return luns(List.of(luns));
-        }        public TargetPortalGroupCreateArgs build() {
-            return new TargetPortalGroupCreateArgs(acls, attributes, luns);
+        }
+
+        public TargetPortalGroupCreateArgs build() {
+            $.acls = Objects.requireNonNull($.acls, "expected parameter 'acls' to be non-null");
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.luns = Objects.requireNonNull($.luns, "expected parameter 'luns' to be non-null");
+            return $;
         }
     }
+
 }

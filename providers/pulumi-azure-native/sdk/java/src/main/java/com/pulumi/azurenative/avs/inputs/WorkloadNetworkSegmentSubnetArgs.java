@@ -5,10 +5,10 @@ package com.pulumi.azurenative.avs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WorkloadNetworkSegmentSubnetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="dhcpRanges")
-      private final @Nullable Output<List<String>> dhcpRanges;
+    private @Nullable Output<List<String>> dhcpRanges;
 
-    public Output<List<String>> dhcpRanges() {
-        return this.dhcpRanges == null ? Codegen.empty() : this.dhcpRanges;
+    public Optional<Output<List<String>>> dhcpRanges() {
+        return Optional.ofNullable(this.dhcpRanges);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class WorkloadNetworkSegmentSubnetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="gatewayAddress")
-      private final @Nullable Output<String> gatewayAddress;
+    private @Nullable Output<String> gatewayAddress;
 
-    public Output<String> gatewayAddress() {
-        return this.gatewayAddress == null ? Codegen.empty() : this.gatewayAddress;
+    public Optional<Output<String>> gatewayAddress() {
+        return Optional.ofNullable(this.gatewayAddress);
     }
 
-    public WorkloadNetworkSegmentSubnetArgs(
-        @Nullable Output<List<String>> dhcpRanges,
-        @Nullable Output<String> gatewayAddress) {
-        this.dhcpRanges = dhcpRanges;
-        this.gatewayAddress = gatewayAddress;
-    }
+    private WorkloadNetworkSegmentSubnetArgs() {}
 
-    private WorkloadNetworkSegmentSubnetArgs() {
-        this.dhcpRanges = Codegen.empty();
-        this.gatewayAddress = Codegen.empty();
+    private WorkloadNetworkSegmentSubnetArgs(WorkloadNetworkSegmentSubnetArgs $) {
+        this.dhcpRanges = $.dhcpRanges;
+        this.gatewayAddress = $.gatewayAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadNetworkSegmentSubnetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> dhcpRanges;
-        private @Nullable Output<String> gatewayAddress;
+        private WorkloadNetworkSegmentSubnetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadNetworkSegmentSubnetArgs();
         }
 
         public Builder(WorkloadNetworkSegmentSubnetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dhcpRanges = defaults.dhcpRanges;
-    	      this.gatewayAddress = defaults.gatewayAddress;
+            $ = new WorkloadNetworkSegmentSubnetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dhcpRanges(@Nullable Output<List<String>> dhcpRanges) {
-            this.dhcpRanges = dhcpRanges;
+            $.dhcpRanges = dhcpRanges;
             return this;
         }
-        public Builder dhcpRanges(@Nullable List<String> dhcpRanges) {
-            this.dhcpRanges = Codegen.ofNullable(dhcpRanges);
-            return this;
+
+        public Builder dhcpRanges(List<String> dhcpRanges) {
+            return dhcpRanges(Output.of(dhcpRanges));
         }
+
         public Builder dhcpRanges(String... dhcpRanges) {
             return dhcpRanges(List.of(dhcpRanges));
         }
+
         public Builder gatewayAddress(@Nullable Output<String> gatewayAddress) {
-            this.gatewayAddress = gatewayAddress;
+            $.gatewayAddress = gatewayAddress;
             return this;
         }
-        public Builder gatewayAddress(@Nullable String gatewayAddress) {
-            this.gatewayAddress = Codegen.ofNullable(gatewayAddress);
-            return this;
-        }        public WorkloadNetworkSegmentSubnetArgs build() {
-            return new WorkloadNetworkSegmentSubnetArgs(dhcpRanges, gatewayAddress);
+
+        public Builder gatewayAddress(String gatewayAddress) {
+            return gatewayAddress(Output.of(gatewayAddress));
+        }
+
+        public WorkloadNetworkSegmentSubnetArgs build() {
+            return $;
         }
     }
+
 }

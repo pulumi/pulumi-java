@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +22,10 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxInstances")
-      private final @Nullable Output<Integer> maxInstances;
+    private @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> maxInstances() {
-        return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
+    public Optional<Output<Integer>> maxInstances() {
+        return Optional.ofNullable(this.maxInstances);
     }
 
     /**
@@ -32,10 +33,10 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="minInstances")
-      private final @Nullable Output<Integer> minInstances;
+    private @Nullable Output<Integer> minInstances;
 
-    public Output<Integer> minInstances() {
-        return this.minInstances == null ? Codegen.empty() : this.minInstances;
+    public Optional<Output<Integer>> minInstances() {
+        return Optional.ofNullable(this.minInstances);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="pollingInterval")
-      private final @Nullable Output<String> pollingInterval;
+    private @Nullable Output<String> pollingInterval;
 
-    public Output<String> pollingInterval() {
-        return this.pollingInterval == null ? Codegen.empty() : this.pollingInterval;
+    public Optional<Output<String>> pollingInterval() {
+        return Optional.ofNullable(this.pollingInterval);
     }
 
     /**
@@ -54,7 +55,7 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="scaleType", required=true)
-      private final Output<String> scaleType;
+    private Output<String> scaleType;
 
     public Output<String> scaleType() {
         return this.scaleType;
@@ -65,102 +66,89 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="targetUtilizationPercentage")
-      private final @Nullable Output<Integer> targetUtilizationPercentage;
+    private @Nullable Output<Integer> targetUtilizationPercentage;
 
-    public Output<Integer> targetUtilizationPercentage() {
-        return this.targetUtilizationPercentage == null ? Codegen.empty() : this.targetUtilizationPercentage;
+    public Optional<Output<Integer>> targetUtilizationPercentage() {
+        return Optional.ofNullable(this.targetUtilizationPercentage);
     }
 
-    public AutoScaleSettingsArgs(
-        @Nullable Output<Integer> maxInstances,
-        @Nullable Output<Integer> minInstances,
-        @Nullable Output<String> pollingInterval,
-        Output<String> scaleType,
-        @Nullable Output<Integer> targetUtilizationPercentage) {
-        this.maxInstances = maxInstances;
-        this.minInstances = minInstances;
-        this.pollingInterval = pollingInterval;
-        this.scaleType = Codegen.stringProp("scaleType").output().arg(scaleType).require();
-        this.targetUtilizationPercentage = targetUtilizationPercentage;
-    }
+    private AutoScaleSettingsArgs() {}
 
-    private AutoScaleSettingsArgs() {
-        this.maxInstances = Codegen.empty();
-        this.minInstances = Codegen.empty();
-        this.pollingInterval = Codegen.empty();
-        this.scaleType = Codegen.empty();
-        this.targetUtilizationPercentage = Codegen.empty();
+    private AutoScaleSettingsArgs(AutoScaleSettingsArgs $) {
+        this.maxInstances = $.maxInstances;
+        this.minInstances = $.minInstances;
+        this.pollingInterval = $.pollingInterval;
+        this.scaleType = $.scaleType;
+        this.targetUtilizationPercentage = $.targetUtilizationPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScaleSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxInstances;
-        private @Nullable Output<Integer> minInstances;
-        private @Nullable Output<String> pollingInterval;
-        private Output<String> scaleType;
-        private @Nullable Output<Integer> targetUtilizationPercentage;
+        private AutoScaleSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScaleSettingsArgs();
         }
 
         public Builder(AutoScaleSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxInstances = defaults.maxInstances;
-    	      this.minInstances = defaults.minInstances;
-    	      this.pollingInterval = defaults.pollingInterval;
-    	      this.scaleType = defaults.scaleType;
-    	      this.targetUtilizationPercentage = defaults.targetUtilizationPercentage;
+            $ = new AutoScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
-            this.maxInstances = maxInstances;
+            $.maxInstances = maxInstances;
             return this;
         }
-        public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Codegen.ofNullable(maxInstances);
-            return this;
+
+        public Builder maxInstances(Integer maxInstances) {
+            return maxInstances(Output.of(maxInstances));
         }
+
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
-            this.minInstances = minInstances;
+            $.minInstances = minInstances;
             return this;
         }
-        public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Codegen.ofNullable(minInstances);
-            return this;
+
+        public Builder minInstances(Integer minInstances) {
+            return minInstances(Output.of(minInstances));
         }
+
         public Builder pollingInterval(@Nullable Output<String> pollingInterval) {
-            this.pollingInterval = pollingInterval;
+            $.pollingInterval = pollingInterval;
             return this;
         }
-        public Builder pollingInterval(@Nullable String pollingInterval) {
-            this.pollingInterval = Codegen.ofNullable(pollingInterval);
-            return this;
+
+        public Builder pollingInterval(String pollingInterval) {
+            return pollingInterval(Output.of(pollingInterval));
         }
+
         public Builder scaleType(Output<String> scaleType) {
-            this.scaleType = Objects.requireNonNull(scaleType);
+            $.scaleType = scaleType;
             return this;
         }
+
         public Builder scaleType(String scaleType) {
-            this.scaleType = Output.of(Objects.requireNonNull(scaleType));
-            return this;
+            return scaleType(Output.of(scaleType));
         }
+
         public Builder targetUtilizationPercentage(@Nullable Output<Integer> targetUtilizationPercentage) {
-            this.targetUtilizationPercentage = targetUtilizationPercentage;
+            $.targetUtilizationPercentage = targetUtilizationPercentage;
             return this;
         }
-        public Builder targetUtilizationPercentage(@Nullable Integer targetUtilizationPercentage) {
-            this.targetUtilizationPercentage = Codegen.ofNullable(targetUtilizationPercentage);
-            return this;
-        }        public AutoScaleSettingsArgs build() {
-            return new AutoScaleSettingsArgs(maxInstances, minInstances, pollingInterval, scaleType, targetUtilizationPercentage);
+
+        public Builder targetUtilizationPercentage(Integer targetUtilizationPercentage) {
+            return targetUtilizationPercentage(Output.of(targetUtilizationPercentage));
+        }
+
+        public AutoScaleSettingsArgs build() {
+            $.scaleType = Codegen.stringProp("scaleType").output().arg($.scaleType).require();
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class SecurityContextResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="runAsUser", required=true)
-      private final Integer runAsUser;
+    private Integer runAsUser;
 
     public Integer runAsUser() {
         return this.runAsUser;
     }
 
-    public SecurityContextResponse(Integer runAsUser) {
-        this.runAsUser = Objects.requireNonNull(runAsUser, "expected parameter 'runAsUser' to be non-null");
-    }
+    private SecurityContextResponse() {}
 
-    private SecurityContextResponse() {
-        this.runAsUser = null;
+    private SecurityContextResponse(SecurityContextResponse $) {
+        this.runAsUser = $.runAsUser;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer runAsUser;
+        private SecurityContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityContextResponse();
         }
 
         public Builder(SecurityContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.runAsUser = defaults.runAsUser;
+            $ = new SecurityContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder runAsUser(Integer runAsUser) {
-            this.runAsUser = Objects.requireNonNull(runAsUser);
+            $.runAsUser = runAsUser;
             return this;
-        }        public SecurityContextResponse build() {
-            return new SecurityContextResponse(runAsUser);
+        }
+
+        public SecurityContextResponse build() {
+            $.runAsUser = Objects.requireNonNull($.runAsUser, "expected parameter 'runAsUser' to be non-null");
+            return $;
         }
     }
+
 }

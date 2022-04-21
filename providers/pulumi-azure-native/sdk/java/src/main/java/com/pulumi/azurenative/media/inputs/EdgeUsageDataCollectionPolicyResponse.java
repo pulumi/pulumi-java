@@ -20,10 +20,10 @@ public final class EdgeUsageDataCollectionPolicyResponse extends com.pulumi.reso
      * 
      */
     @Import(name="dataCollectionFrequency")
-      private final @Nullable String dataCollectionFrequency;
+    private @Nullable String dataCollectionFrequency;
 
     public Optional<String> dataCollectionFrequency() {
-        return this.dataCollectionFrequency == null ? Optional.empty() : Optional.ofNullable(this.dataCollectionFrequency);
+        return Optional.ofNullable(this.dataCollectionFrequency);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EdgeUsageDataCollectionPolicyResponse extends com.pulumi.reso
      * 
      */
     @Import(name="dataReportingFrequency")
-      private final @Nullable String dataReportingFrequency;
+    private @Nullable String dataReportingFrequency;
 
     public Optional<String> dataReportingFrequency() {
-        return this.dataReportingFrequency == null ? Optional.empty() : Optional.ofNullable(this.dataReportingFrequency);
+        return Optional.ofNullable(this.dataReportingFrequency);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EdgeUsageDataCollectionPolicyResponse extends com.pulumi.reso
      * 
      */
     @Import(name="eventHubDetails")
-      private final @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
+    private @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
 
     public Optional<EdgeUsageDataEventHubResponse> eventHubDetails() {
-        return this.eventHubDetails == null ? Optional.empty() : Optional.ofNullable(this.eventHubDetails);
+        return Optional.ofNullable(this.eventHubDetails);
     }
 
     /**
@@ -53,73 +53,62 @@ public final class EdgeUsageDataCollectionPolicyResponse extends com.pulumi.reso
      * 
      */
     @Import(name="maxAllowedUnreportedUsageDuration")
-      private final @Nullable String maxAllowedUnreportedUsageDuration;
+    private @Nullable String maxAllowedUnreportedUsageDuration;
 
     public Optional<String> maxAllowedUnreportedUsageDuration() {
-        return this.maxAllowedUnreportedUsageDuration == null ? Optional.empty() : Optional.ofNullable(this.maxAllowedUnreportedUsageDuration);
+        return Optional.ofNullable(this.maxAllowedUnreportedUsageDuration);
     }
 
-    public EdgeUsageDataCollectionPolicyResponse(
-        @Nullable String dataCollectionFrequency,
-        @Nullable String dataReportingFrequency,
-        @Nullable EdgeUsageDataEventHubResponse eventHubDetails,
-        @Nullable String maxAllowedUnreportedUsageDuration) {
-        this.dataCollectionFrequency = dataCollectionFrequency;
-        this.dataReportingFrequency = dataReportingFrequency;
-        this.eventHubDetails = eventHubDetails;
-        this.maxAllowedUnreportedUsageDuration = maxAllowedUnreportedUsageDuration;
-    }
+    private EdgeUsageDataCollectionPolicyResponse() {}
 
-    private EdgeUsageDataCollectionPolicyResponse() {
-        this.dataCollectionFrequency = null;
-        this.dataReportingFrequency = null;
-        this.eventHubDetails = null;
-        this.maxAllowedUnreportedUsageDuration = null;
+    private EdgeUsageDataCollectionPolicyResponse(EdgeUsageDataCollectionPolicyResponse $) {
+        this.dataCollectionFrequency = $.dataCollectionFrequency;
+        this.dataReportingFrequency = $.dataReportingFrequency;
+        this.eventHubDetails = $.eventHubDetails;
+        this.maxAllowedUnreportedUsageDuration = $.maxAllowedUnreportedUsageDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeUsageDataCollectionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataCollectionFrequency;
-        private @Nullable String dataReportingFrequency;
-        private @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
-        private @Nullable String maxAllowedUnreportedUsageDuration;
+        private EdgeUsageDataCollectionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeUsageDataCollectionPolicyResponse();
         }
 
         public Builder(EdgeUsageDataCollectionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCollectionFrequency = defaults.dataCollectionFrequency;
-    	      this.dataReportingFrequency = defaults.dataReportingFrequency;
-    	      this.eventHubDetails = defaults.eventHubDetails;
-    	      this.maxAllowedUnreportedUsageDuration = defaults.maxAllowedUnreportedUsageDuration;
+            $ = new EdgeUsageDataCollectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCollectionFrequency(@Nullable String dataCollectionFrequency) {
-            this.dataCollectionFrequency = dataCollectionFrequency;
+            $.dataCollectionFrequency = dataCollectionFrequency;
             return this;
         }
+
         public Builder dataReportingFrequency(@Nullable String dataReportingFrequency) {
-            this.dataReportingFrequency = dataReportingFrequency;
+            $.dataReportingFrequency = dataReportingFrequency;
             return this;
         }
+
         public Builder eventHubDetails(@Nullable EdgeUsageDataEventHubResponse eventHubDetails) {
-            this.eventHubDetails = eventHubDetails;
+            $.eventHubDetails = eventHubDetails;
             return this;
         }
+
         public Builder maxAllowedUnreportedUsageDuration(@Nullable String maxAllowedUnreportedUsageDuration) {
-            this.maxAllowedUnreportedUsageDuration = maxAllowedUnreportedUsageDuration;
+            $.maxAllowedUnreportedUsageDuration = maxAllowedUnreportedUsageDuration;
             return this;
-        }        public EdgeUsageDataCollectionPolicyResponse build() {
-            return new EdgeUsageDataCollectionPolicyResponse(dataCollectionFrequency, dataReportingFrequency, eventHubDetails, maxAllowedUnreportedUsageDuration);
+        }
+
+        public EdgeUsageDataCollectionPolicyResponse build() {
+            return $;
         }
     }
+
 }

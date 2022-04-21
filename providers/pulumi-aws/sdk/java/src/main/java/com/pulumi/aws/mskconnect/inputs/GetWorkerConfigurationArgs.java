@@ -17,45 +17,45 @@ public final class GetWorkerConfigurationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetWorkerConfigurationArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetWorkerConfigurationArgs() {}
 
-    private GetWorkerConfigurationArgs() {
-        this.name = null;
+    private GetWorkerConfigurationArgs(GetWorkerConfigurationArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkerConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetWorkerConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkerConfigurationArgs();
         }
 
         public Builder(GetWorkerConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetWorkerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetWorkerConfigurationArgs build() {
-            return new GetWorkerConfigurationArgs(name);
+        }
+
+        public GetWorkerConfigurationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

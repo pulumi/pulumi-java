@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class ServiceTemplateMetadataArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ServiceTemplateMetadataArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="generation")
-      private final @Nullable Output<Integer> generation;
+    private @Nullable Output<Integer> generation;
 
-    public Output<Integer> generation() {
-        return this.generation == null ? Codegen.empty() : this.generation;
+    public Optional<Output<Integer>> generation() {
+        return Optional.ofNullable(this.generation);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ServiceTemplateMetadataArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ServiceTemplateMetadataArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ServiceTemplateMetadataArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ServiceTemplateMetadataArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceVersion")
-      private final @Nullable Output<String> resourceVersion;
+    private @Nullable Output<String> resourceVersion;
 
-    public Output<String> resourceVersion() {
-        return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
+    public Optional<Output<String>> resourceVersion() {
+        return Optional.ofNullable(this.resourceVersion);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ServiceTemplateMetadataArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -123,141 +123,118 @@ public final class ServiceTemplateMetadataArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
-    public ServiceTemplateMetadataArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<Integer> generation,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> resourceVersion,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> uid) {
-        this.annotations = annotations;
-        this.generation = generation;
-        this.labels = labels;
-        this.name = name;
-        this.namespace = namespace;
-        this.resourceVersion = resourceVersion;
-        this.selfLink = selfLink;
-        this.uid = uid;
-    }
+    private ServiceTemplateMetadataArgs() {}
 
-    private ServiceTemplateMetadataArgs() {
-        this.annotations = Codegen.empty();
-        this.generation = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.resourceVersion = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.uid = Codegen.empty();
+    private ServiceTemplateMetadataArgs(ServiceTemplateMetadataArgs $) {
+        this.annotations = $.annotations;
+        this.generation = $.generation;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.resourceVersion = $.resourceVersion;
+        this.selfLink = $.selfLink;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<Integer> generation;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> resourceVersion;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> uid;
+        private ServiceTemplateMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateMetadataArgs();
         }
 
         public Builder(ServiceTemplateMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.generation = defaults.generation;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.resourceVersion = defaults.resourceVersion;
-    	      this.selfLink = defaults.selfLink;
-    	      this.uid = defaults.uid;
+            $ = new ServiceTemplateMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder generation(@Nullable Output<Integer> generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
-        public Builder generation(@Nullable Integer generation) {
-            this.generation = Codegen.ofNullable(generation);
-            return this;
+
+        public Builder generation(Integer generation) {
+            return generation(Output.of(generation));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
-            this.resourceVersion = resourceVersion;
+            $.resourceVersion = resourceVersion;
             return this;
         }
-        public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Codegen.ofNullable(resourceVersion);
-            return this;
+
+        public Builder resourceVersion(String resourceVersion) {
+            return resourceVersion(Output.of(resourceVersion));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
-        }        public ServiceTemplateMetadataArgs build() {
-            return new ServiceTemplateMetadataArgs(annotations, generation, labels, name, namespace, resourceVersion, selfLink, uid);
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
+        }
+
+        public ServiceTemplateMetadataArgs build() {
+            return $;
         }
     }
+
 }

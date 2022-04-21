@@ -23,6 +23,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -39,10 +40,10 @@ public final class JsonSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Output<Object> additionalColumns;
+    private @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> additionalColumns() {
-        return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
+    public Optional<Output<Object>> additionalColumns() {
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class JsonSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class JsonSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="formatSettings")
-      private final @Nullable Output<JsonReadSettingsArgs> formatSettings;
+    private @Nullable Output<JsonReadSettingsArgs> formatSettings;
 
-    public Output<JsonReadSettingsArgs> formatSettings() {
-        return this.formatSettings == null ? Codegen.empty() : this.formatSettings;
+    public Optional<Output<JsonReadSettingsArgs>> formatSettings() {
+        return Optional.ofNullable(this.formatSettings);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class JsonSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class JsonSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Output<Object> sourceRetryCount;
+    private @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
+    public Optional<Output<Object>> sourceRetryCount() {
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class JsonSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Output<Object> sourceRetryWait;
+    private @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
+    public Optional<Output<Object>> sourceRetryWait() {
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -105,10 +106,10 @@ public final class JsonSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storeSettings")
-      private final @Nullable Output<Object> storeSettings;
+    private @Nullable Output<Object> storeSettings;
 
-    public Output<Object> storeSettings() {
-        return this.storeSettings == null ? Codegen.empty() : this.storeSettings;
+    public Optional<Output<Object>> storeSettings() {
+        return Optional.ofNullable(this.storeSettings);
     }
 
     /**
@@ -117,141 +118,119 @@ public final class JsonSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public JsonSourceArgs(
-        @Nullable Output<Object> additionalColumns,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<JsonReadSettingsArgs> formatSettings,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> sourceRetryCount,
-        @Nullable Output<Object> sourceRetryWait,
-        @Nullable Output<Object> storeSettings,
-        Output<String> type) {
-        this.additionalColumns = additionalColumns;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.formatSettings = formatSettings;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.storeSettings = storeSettings;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private JsonSourceArgs() {}
 
-    private JsonSourceArgs() {
-        this.additionalColumns = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.formatSettings = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.sourceRetryCount = Codegen.empty();
-        this.sourceRetryWait = Codegen.empty();
-        this.storeSettings = Codegen.empty();
-        this.type = Codegen.empty();
+    private JsonSourceArgs(JsonSourceArgs $) {
+        this.additionalColumns = $.additionalColumns;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.formatSettings = $.formatSettings;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.storeSettings = $.storeSettings;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> additionalColumns;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<JsonReadSettingsArgs> formatSettings;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> sourceRetryCount;
-        private @Nullable Output<Object> sourceRetryWait;
-        private @Nullable Output<Object> storeSettings;
-        private Output<String> type;
+        private JsonSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonSourceArgs();
         }
 
         public Builder(JsonSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.formatSettings = defaults.formatSettings;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.storeSettings = defaults.storeSettings;
-    	      this.type = defaults.type;
+            $ = new JsonSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Output<Object> additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
-        public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Codegen.ofNullable(additionalColumns);
-            return this;
+
+        public Builder additionalColumns(Object additionalColumns) {
+            return additionalColumns(Output.of(additionalColumns));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder formatSettings(@Nullable Output<JsonReadSettingsArgs> formatSettings) {
-            this.formatSettings = formatSettings;
+            $.formatSettings = formatSettings;
             return this;
         }
-        public Builder formatSettings(@Nullable JsonReadSettingsArgs formatSettings) {
-            this.formatSettings = Codegen.ofNullable(formatSettings);
-            return this;
+
+        public Builder formatSettings(JsonReadSettingsArgs formatSettings) {
+            return formatSettings(Output.of(formatSettings));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
-        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
-            return this;
+
+        public Builder sourceRetryCount(Object sourceRetryCount) {
+            return sourceRetryCount(Output.of(sourceRetryCount));
         }
+
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
-        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
-            return this;
+
+        public Builder sourceRetryWait(Object sourceRetryWait) {
+            return sourceRetryWait(Output.of(sourceRetryWait));
         }
+
         public Builder storeSettings(@Nullable Output<Object> storeSettings) {
-            this.storeSettings = storeSettings;
+            $.storeSettings = storeSettings;
             return this;
         }
-        public Builder storeSettings(@Nullable Object storeSettings) {
-            this.storeSettings = Codegen.ofNullable(storeSettings);
-            return this;
+
+        public Builder storeSettings(Object storeSettings) {
+            return storeSettings(Output.of(storeSettings));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JsonSourceArgs build() {
-            return new JsonSourceArgs(additionalColumns, disableMetricsCollection, formatSettings, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
+            return type(Output.of(type));
+        }
+
+        public JsonSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

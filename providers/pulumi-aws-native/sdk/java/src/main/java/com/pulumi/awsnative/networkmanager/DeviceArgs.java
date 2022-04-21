@@ -7,10 +7,10 @@ import com.pulumi.awsnative.networkmanager.inputs.DeviceLocationArgs;
 import com.pulumi.awsnative.networkmanager.inputs.DeviceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="globalNetworkId", required=true)
-      private final Output<String> globalNetworkId;
+    private Output<String> globalNetworkId;
 
     public Output<String> globalNetworkId() {
         return this.globalNetworkId;
@@ -45,10 +45,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<DeviceLocationArgs> location;
+    private @Nullable Output<DeviceLocationArgs> location;
 
-    public Output<DeviceLocationArgs> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<DeviceLocationArgs>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="model")
-      private final @Nullable Output<String> model;
+    private @Nullable Output<String> model;
 
-    public Output<String> model() {
-        return this.model == null ? Codegen.empty() : this.model;
+    public Optional<Output<String>> model() {
+        return Optional.ofNullable(this.model);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serialNumber")
-      private final @Nullable Output<String> serialNumber;
+    private @Nullable Output<String> serialNumber;
 
-    public Output<String> serialNumber() {
-        return this.serialNumber == null ? Codegen.empty() : this.serialNumber;
+    public Optional<Output<String>> serialNumber() {
+        return Optional.ofNullable(this.serialNumber);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="siteId")
-      private final @Nullable Output<String> siteId;
+    private @Nullable Output<String> siteId;
 
-    public Output<String> siteId() {
-        return this.siteId == null ? Codegen.empty() : this.siteId;
+    public Optional<Output<String>> siteId() {
+        return Optional.ofNullable(this.siteId);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DeviceTagArgs>> tags;
+    private @Nullable Output<List<DeviceTagArgs>> tags;
 
-    public Output<List<DeviceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DeviceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -111,157 +111,133 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vendor")
-      private final @Nullable Output<String> vendor;
+    private @Nullable Output<String> vendor;
 
-    public Output<String> vendor() {
-        return this.vendor == null ? Codegen.empty() : this.vendor;
+    public Optional<Output<String>> vendor() {
+        return Optional.ofNullable(this.vendor);
     }
 
-    public DeviceArgs(
-        @Nullable Output<String> description,
-        Output<String> globalNetworkId,
-        @Nullable Output<DeviceLocationArgs> location,
-        @Nullable Output<String> model,
-        @Nullable Output<String> serialNumber,
-        @Nullable Output<String> siteId,
-        @Nullable Output<List<DeviceTagArgs>> tags,
-        @Nullable Output<String> type,
-        @Nullable Output<String> vendor) {
-        this.description = description;
-        this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
-        this.location = location;
-        this.model = model;
-        this.serialNumber = serialNumber;
-        this.siteId = siteId;
-        this.tags = tags;
-        this.type = type;
-        this.vendor = vendor;
-    }
+    private DeviceArgs() {}
 
-    private DeviceArgs() {
-        this.description = Codegen.empty();
-        this.globalNetworkId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.model = Codegen.empty();
-        this.serialNumber = Codegen.empty();
-        this.siteId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
-        this.vendor = Codegen.empty();
+    private DeviceArgs(DeviceArgs $) {
+        this.description = $.description;
+        this.globalNetworkId = $.globalNetworkId;
+        this.location = $.location;
+        this.model = $.model;
+        this.serialNumber = $.serialNumber;
+        this.siteId = $.siteId;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.vendor = $.vendor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> globalNetworkId;
-        private @Nullable Output<DeviceLocationArgs> location;
-        private @Nullable Output<String> model;
-        private @Nullable Output<String> serialNumber;
-        private @Nullable Output<String> siteId;
-        private @Nullable Output<List<DeviceTagArgs>> tags;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> vendor;
+        private DeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceArgs();
         }
 
         public Builder(DeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.globalNetworkId = defaults.globalNetworkId;
-    	      this.location = defaults.location;
-    	      this.model = defaults.model;
-    	      this.serialNumber = defaults.serialNumber;
-    	      this.siteId = defaults.siteId;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.vendor = defaults.vendor;
+            $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder globalNetworkId(Output<String> globalNetworkId) {
-            this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
+
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
-            return this;
+            return globalNetworkId(Output.of(globalNetworkId));
         }
+
         public Builder location(@Nullable Output<DeviceLocationArgs> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable DeviceLocationArgs location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(DeviceLocationArgs location) {
+            return location(Output.of(location));
         }
+
         public Builder model(@Nullable Output<String> model) {
-            this.model = model;
+            $.model = model;
             return this;
         }
-        public Builder model(@Nullable String model) {
-            this.model = Codegen.ofNullable(model);
-            return this;
+
+        public Builder model(String model) {
+            return model(Output.of(model));
         }
+
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
-            this.serialNumber = serialNumber;
+            $.serialNumber = serialNumber;
             return this;
         }
-        public Builder serialNumber(@Nullable String serialNumber) {
-            this.serialNumber = Codegen.ofNullable(serialNumber);
-            return this;
+
+        public Builder serialNumber(String serialNumber) {
+            return serialNumber(Output.of(serialNumber));
         }
+
         public Builder siteId(@Nullable Output<String> siteId) {
-            this.siteId = siteId;
+            $.siteId = siteId;
             return this;
         }
-        public Builder siteId(@Nullable String siteId) {
-            this.siteId = Codegen.ofNullable(siteId);
-            return this;
+
+        public Builder siteId(String siteId) {
+            return siteId(Output.of(siteId));
         }
+
         public Builder tags(@Nullable Output<List<DeviceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DeviceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DeviceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DeviceTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder vendor(@Nullable Output<String> vendor) {
-            this.vendor = vendor;
+            $.vendor = vendor;
             return this;
         }
-        public Builder vendor(@Nullable String vendor) {
-            this.vendor = Codegen.ofNullable(vendor);
-            return this;
-        }        public DeviceArgs build() {
-            return new DeviceArgs(description, globalNetworkId, location, model, serialNumber, siteId, tags, type, vendor);
+
+        public Builder vendor(String vendor) {
+            return vendor(Output.of(vendor));
+        }
+
+        public DeviceArgs build() {
+            $.globalNetworkId = Objects.requireNonNull($.globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
+            return $;
         }
     }
+
 }

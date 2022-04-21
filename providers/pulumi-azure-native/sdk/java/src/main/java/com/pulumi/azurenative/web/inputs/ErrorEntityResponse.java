@@ -24,10 +24,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="extendedCode")
-      private final @Nullable String extendedCode;
+    private @Nullable String extendedCode;
 
     public Optional<String> extendedCode() {
-        return this.extendedCode == null ? Optional.empty() : Optional.ofNullable(this.extendedCode);
+        return Optional.ofNullable(this.extendedCode);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="innerErrors")
-      private final @Nullable List<ErrorEntityResponse> innerErrors;
+    private @Nullable List<ErrorEntityResponse> innerErrors;
 
-    public List<ErrorEntityResponse> innerErrors() {
-        return this.innerErrors == null ? List.of() : this.innerErrors;
+    public Optional<List<ErrorEntityResponse>> innerErrors() {
+        return Optional.ofNullable(this.innerErrors);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="messageTemplate")
-      private final @Nullable String messageTemplate;
+    private @Nullable String messageTemplate;
 
     public Optional<String> messageTemplate() {
-        return this.messageTemplate == null ? Optional.empty() : Optional.ofNullable(this.messageTemplate);
+        return Optional.ofNullable(this.messageTemplate);
     }
 
     /**
@@ -79,97 +79,82 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable List<String> parameters;
+    private @Nullable List<String> parameters;
 
-    public List<String> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public ErrorEntityResponse(
-        @Nullable String code,
-        @Nullable String extendedCode,
-        @Nullable List<ErrorEntityResponse> innerErrors,
-        @Nullable String message,
-        @Nullable String messageTemplate,
-        @Nullable List<String> parameters) {
-        this.code = code;
-        this.extendedCode = extendedCode;
-        this.innerErrors = innerErrors;
-        this.message = message;
-        this.messageTemplate = messageTemplate;
-        this.parameters = parameters;
-    }
+    private ErrorEntityResponse() {}
 
-    private ErrorEntityResponse() {
-        this.code = null;
-        this.extendedCode = null;
-        this.innerErrors = List.of();
-        this.message = null;
-        this.messageTemplate = null;
-        this.parameters = List.of();
+    private ErrorEntityResponse(ErrorEntityResponse $) {
+        this.code = $.code;
+        this.extendedCode = $.extendedCode;
+        this.innerErrors = $.innerErrors;
+        this.message = $.message;
+        this.messageTemplate = $.messageTemplate;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorEntityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String code;
-        private @Nullable String extendedCode;
-        private @Nullable List<ErrorEntityResponse> innerErrors;
-        private @Nullable String message;
-        private @Nullable String messageTemplate;
-        private @Nullable List<String> parameters;
+        private ErrorEntityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorEntityResponse();
         }
 
         public Builder(ErrorEntityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.extendedCode = defaults.extendedCode;
-    	      this.innerErrors = defaults.innerErrors;
-    	      this.message = defaults.message;
-    	      this.messageTemplate = defaults.messageTemplate;
-    	      this.parameters = defaults.parameters;
+            $ = new ErrorEntityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder extendedCode(@Nullable String extendedCode) {
-            this.extendedCode = extendedCode;
+            $.extendedCode = extendedCode;
             return this;
         }
+
         public Builder innerErrors(@Nullable List<ErrorEntityResponse> innerErrors) {
-            this.innerErrors = innerErrors;
+            $.innerErrors = innerErrors;
             return this;
         }
+
         public Builder innerErrors(ErrorEntityResponse... innerErrors) {
             return innerErrors(List.of(innerErrors));
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder messageTemplate(@Nullable String messageTemplate) {
-            this.messageTemplate = messageTemplate;
+            $.messageTemplate = messageTemplate;
             return this;
         }
+
         public Builder parameters(@Nullable List<String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(String... parameters) {
             return parameters(List.of(parameters));
-        }        public ErrorEntityResponse build() {
-            return new ErrorEntityResponse(code, extendedCode, innerErrors, message, messageTemplate, parameters);
+        }
+
+        public ErrorEntityResponse build() {
+            return $;
         }
     }
+
 }

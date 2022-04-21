@@ -23,10 +23,10 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="ip")
-      private final @Nullable String ip;
+    private @Nullable String ip;
 
     public Optional<String> ip() {
-        return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
+        return Optional.ofNullable(this.ip);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="lastSeenDateTime")
-      private final @Nullable String lastSeenDateTime;
+    private @Nullable String lastSeenDateTime;
 
     public Optional<String> lastSeenDateTime() {
-        return this.lastSeenDateTime == null ? Optional.empty() : Optional.ofNullable(this.lastSeenDateTime);
+        return Optional.ofNullable(this.lastSeenDateTime);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="registrationTime")
-      private final @Nullable String registrationTime;
+    private @Nullable String registrationTime;
 
     public Optional<String> registrationTime() {
-        return this.registrationTime == null ? Optional.empty() : Optional.ofNullable(this.registrationTime);
+        return Optional.ofNullable(this.registrationTime);
     }
 
-    public HybridRunbookWorkerLegacyResponse(
-        @Nullable String ip,
-        @Nullable String lastSeenDateTime,
-        @Nullable String name,
-        @Nullable String registrationTime) {
-        this.ip = ip;
-        this.lastSeenDateTime = lastSeenDateTime;
-        this.name = name;
-        this.registrationTime = registrationTime;
-    }
+    private HybridRunbookWorkerLegacyResponse() {}
 
-    private HybridRunbookWorkerLegacyResponse() {
-        this.ip = null;
-        this.lastSeenDateTime = null;
-        this.name = null;
-        this.registrationTime = null;
+    private HybridRunbookWorkerLegacyResponse(HybridRunbookWorkerLegacyResponse $) {
+        this.ip = $.ip;
+        this.lastSeenDateTime = $.lastSeenDateTime;
+        this.name = $.name;
+        this.registrationTime = $.registrationTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HybridRunbookWorkerLegacyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ip;
-        private @Nullable String lastSeenDateTime;
-        private @Nullable String name;
-        private @Nullable String registrationTime;
+        private HybridRunbookWorkerLegacyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HybridRunbookWorkerLegacyResponse();
         }
 
         public Builder(HybridRunbookWorkerLegacyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
-    	      this.lastSeenDateTime = defaults.lastSeenDateTime;
-    	      this.name = defaults.name;
-    	      this.registrationTime = defaults.registrationTime;
+            $ = new HybridRunbookWorkerLegacyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
+
         public Builder lastSeenDateTime(@Nullable String lastSeenDateTime) {
-            this.lastSeenDateTime = lastSeenDateTime;
+            $.lastSeenDateTime = lastSeenDateTime;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder registrationTime(@Nullable String registrationTime) {
-            this.registrationTime = registrationTime;
+            $.registrationTime = registrationTime;
             return this;
-        }        public HybridRunbookWorkerLegacyResponse build() {
-            return new HybridRunbookWorkerLegacyResponse(ip, lastSeenDateTime, name, registrationTime);
+        }
+
+        public HybridRunbookWorkerLegacyResponse build() {
+            return $;
         }
     }
+
 }

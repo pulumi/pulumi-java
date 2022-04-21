@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
      * 
      */
     @Import(name="contains", required=true)
-      private final List<String> contains;
+    private List<String> contains;
 
     public List<String> contains() {
         return this.contains;
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
      * 
      */
     @Import(name="intervals", required=true)
-      private final List<GoogleCloudRetailV2betaIntervalResponse> intervals;
+    private List<GoogleCloudRetailV2betaIntervalResponse> intervals;
 
     public List<GoogleCloudRetailV2betaIntervalResponse> intervals() {
         return this.intervals;
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
      * 
      */
     @Import(name="orderBy", required=true)
-      private final String orderBy;
+    private String orderBy;
 
     public String orderBy() {
         return this.orderBy;
@@ -67,7 +67,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
      * 
      */
     @Import(name="prefixes", required=true)
-      private final List<String> prefixes;
+    private List<String> prefixes;
 
     public List<String> prefixes() {
         return this.prefixes;
@@ -78,7 +78,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
      * 
      */
     @Import(name="query", required=true)
-      private final String query;
+    private String query;
 
     public String query() {
         return this.query;
@@ -89,112 +89,103 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
      * 
      */
     @Import(name="restrictedValues", required=true)
-      private final List<String> restrictedValues;
+    private List<String> restrictedValues;
 
     public List<String> restrictedValues() {
         return this.restrictedValues;
     }
 
-    public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse(
-        List<String> contains,
-        List<GoogleCloudRetailV2betaIntervalResponse> intervals,
-        String key,
-        String orderBy,
-        List<String> prefixes,
-        String query,
-        List<String> restrictedValues) {
-        this.contains = Objects.requireNonNull(contains, "expected parameter 'contains' to be non-null");
-        this.intervals = Objects.requireNonNull(intervals, "expected parameter 'intervals' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.orderBy = Objects.requireNonNull(orderBy, "expected parameter 'orderBy' to be non-null");
-        this.prefixes = Objects.requireNonNull(prefixes, "expected parameter 'prefixes' to be non-null");
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.restrictedValues = Objects.requireNonNull(restrictedValues, "expected parameter 'restrictedValues' to be non-null");
-    }
+    private GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse() {}
 
-    private GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse() {
-        this.contains = List.of();
-        this.intervals = List.of();
-        this.key = null;
-        this.orderBy = null;
-        this.prefixes = List.of();
-        this.query = null;
-        this.restrictedValues = List.of();
+    private GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse(GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse $) {
+        this.contains = $.contains;
+        this.intervals = $.intervals;
+        this.key = $.key;
+        this.orderBy = $.orderBy;
+        this.prefixes = $.prefixes;
+        this.query = $.query;
+        this.restrictedValues = $.restrictedValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> contains;
-        private List<GoogleCloudRetailV2betaIntervalResponse> intervals;
-        private String key;
-        private String orderBy;
-        private List<String> prefixes;
-        private String query;
-        private List<String> restrictedValues;
+        private GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contains = defaults.contains;
-    	      this.intervals = defaults.intervals;
-    	      this.key = defaults.key;
-    	      this.orderBy = defaults.orderBy;
-    	      this.prefixes = defaults.prefixes;
-    	      this.query = defaults.query;
-    	      this.restrictedValues = defaults.restrictedValues;
+            $ = new GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contains(List<String> contains) {
-            this.contains = Objects.requireNonNull(contains);
+            $.contains = contains;
             return this;
         }
+
         public Builder contains(String... contains) {
             return contains(List.of(contains));
         }
+
         public Builder intervals(List<GoogleCloudRetailV2betaIntervalResponse> intervals) {
-            this.intervals = Objects.requireNonNull(intervals);
+            $.intervals = intervals;
             return this;
         }
+
         public Builder intervals(GoogleCloudRetailV2betaIntervalResponse... intervals) {
             return intervals(List.of(intervals));
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder orderBy(String orderBy) {
-            this.orderBy = Objects.requireNonNull(orderBy);
+            $.orderBy = orderBy;
             return this;
         }
+
         public Builder prefixes(List<String> prefixes) {
-            this.prefixes = Objects.requireNonNull(prefixes);
+            $.prefixes = prefixes;
             return this;
         }
+
         public Builder prefixes(String... prefixes) {
             return prefixes(List.of(prefixes));
         }
+
         public Builder query(String query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder restrictedValues(List<String> restrictedValues) {
-            this.restrictedValues = Objects.requireNonNull(restrictedValues);
+            $.restrictedValues = restrictedValues;
             return this;
         }
+
         public Builder restrictedValues(String... restrictedValues) {
             return restrictedValues(List.of(restrictedValues));
-        }        public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse build() {
-            return new GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse(contains, intervals, key, orderBy, prefixes, query, restrictedValues);
+        }
+
+        public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse build() {
+            $.contains = Objects.requireNonNull($.contains, "expected parameter 'contains' to be non-null");
+            $.intervals = Objects.requireNonNull($.intervals, "expected parameter 'intervals' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.orderBy = Objects.requireNonNull($.orderBy, "expected parameter 'orderBy' to be non-null");
+            $.prefixes = Objects.requireNonNull($.prefixes, "expected parameter 'prefixes' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.restrictedValues = Objects.requireNonNull($.restrictedValues, "expected parameter 'restrictedValues' to be non-null");
+            return $;
         }
     }
+
 }

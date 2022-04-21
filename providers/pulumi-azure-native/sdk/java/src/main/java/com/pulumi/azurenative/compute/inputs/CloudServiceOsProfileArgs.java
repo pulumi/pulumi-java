@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.CloudServiceVaultSecretGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class CloudServiceOsProfileArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="secrets")
-      private final @Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets;
+    private @Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets;
 
-    public Output<List<CloudServiceVaultSecretGroupArgs>> secrets() {
-        return this.secrets == null ? Codegen.empty() : this.secrets;
+    public Optional<Output<List<CloudServiceVaultSecretGroupArgs>>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
-    public CloudServiceOsProfileArgs(@Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets) {
-        this.secrets = secrets;
-    }
+    private CloudServiceOsProfileArgs() {}
 
-    private CloudServiceOsProfileArgs() {
-        this.secrets = Codegen.empty();
+    private CloudServiceOsProfileArgs(CloudServiceOsProfileArgs $) {
+        this.secrets = $.secrets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceOsProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets;
+        private CloudServiceOsProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceOsProfileArgs();
         }
 
         public Builder(CloudServiceOsProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secrets = defaults.secrets;
+            $ = new CloudServiceOsProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secrets(@Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
-        public Builder secrets(@Nullable List<CloudServiceVaultSecretGroupArgs> secrets) {
-            this.secrets = Codegen.ofNullable(secrets);
-            return this;
+
+        public Builder secrets(List<CloudServiceVaultSecretGroupArgs> secrets) {
+            return secrets(Output.of(secrets));
         }
+
         public Builder secrets(CloudServiceVaultSecretGroupArgs... secrets) {
             return secrets(List.of(secrets));
-        }        public CloudServiceOsProfileArgs build() {
-            return new CloudServiceOsProfileArgs(secrets);
+        }
+
+        public CloudServiceOsProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.signer;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,130 +16,120 @@ public final class ProfilePermissionArgs extends com.pulumi.resources.ResourceAr
     public static final ProfilePermissionArgs Empty = new ProfilePermissionArgs();
 
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
     }
 
     @Import(name="principal", required=true)
-      private final Output<String> principal;
+    private Output<String> principal;
 
     public Output<String> principal() {
         return this.principal;
     }
 
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
     }
 
     @Import(name="profileVersion")
-      private final @Nullable Output<String> profileVersion;
+    private @Nullable Output<String> profileVersion;
 
-    public Output<String> profileVersion() {
-        return this.profileVersion == null ? Codegen.empty() : this.profileVersion;
+    public Optional<Output<String>> profileVersion() {
+        return Optional.ofNullable(this.profileVersion);
     }
 
     @Import(name="statementId", required=true)
-      private final Output<String> statementId;
+    private Output<String> statementId;
 
     public Output<String> statementId() {
         return this.statementId;
     }
 
-    public ProfilePermissionArgs(
-        Output<String> action,
-        Output<String> principal,
-        Output<String> profileName,
-        @Nullable Output<String> profileVersion,
-        Output<String> statementId) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.profileVersion = profileVersion;
-        this.statementId = Objects.requireNonNull(statementId, "expected parameter 'statementId' to be non-null");
-    }
+    private ProfilePermissionArgs() {}
 
-    private ProfilePermissionArgs() {
-        this.action = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.profileVersion = Codegen.empty();
-        this.statementId = Codegen.empty();
+    private ProfilePermissionArgs(ProfilePermissionArgs $) {
+        this.action = $.action;
+        this.principal = $.principal;
+        this.profileName = $.profileName;
+        this.profileVersion = $.profileVersion;
+        this.statementId = $.statementId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProfilePermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private Output<String> principal;
-        private Output<String> profileName;
-        private @Nullable Output<String> profileVersion;
-        private Output<String> statementId;
+        private ProfilePermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProfilePermissionArgs();
         }
 
         public Builder(ProfilePermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.principal = defaults.principal;
-    	      this.profileName = defaults.profileName;
-    	      this.profileVersion = defaults.profileVersion;
-    	      this.statementId = defaults.statementId;
+            $ = new ProfilePermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder principal(Output<String> principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Output.of(Objects.requireNonNull(principal));
-            return this;
+            return principal(Output.of(principal));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
-            this.profileVersion = profileVersion;
+            $.profileVersion = profileVersion;
             return this;
         }
-        public Builder profileVersion(@Nullable String profileVersion) {
-            this.profileVersion = Codegen.ofNullable(profileVersion);
-            return this;
+
+        public Builder profileVersion(String profileVersion) {
+            return profileVersion(Output.of(profileVersion));
         }
+
         public Builder statementId(Output<String> statementId) {
-            this.statementId = Objects.requireNonNull(statementId);
+            $.statementId = statementId;
             return this;
         }
+
         public Builder statementId(String statementId) {
-            this.statementId = Output.of(Objects.requireNonNull(statementId));
-            return this;
-        }        public ProfilePermissionArgs build() {
-            return new ProfilePermissionArgs(action, principal, profileName, profileVersion, statementId);
+            return statementId(Output.of(statementId));
+        }
+
+        public ProfilePermissionArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.statementId = Objects.requireNonNull($.statementId, "expected parameter 'statementId' to be non-null");
+            return $;
         }
     }
+
 }

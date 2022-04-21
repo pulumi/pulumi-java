@@ -5,7 +5,6 @@ package com.pulumi.aws.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class StackUserSettingGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -30,63 +29,60 @@ public final class StackUserSettingGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="permission", required=true)
-      private final Output<String> permission;
+    private Output<String> permission;
 
     public Output<String> permission() {
         return this.permission;
     }
 
-    public StackUserSettingGetArgs(
-        Output<String> action,
-        Output<String> permission) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.permission = Objects.requireNonNull(permission, "expected parameter 'permission' to be non-null");
-    }
+    private StackUserSettingGetArgs() {}
 
-    private StackUserSettingGetArgs() {
-        this.action = Codegen.empty();
-        this.permission = Codegen.empty();
+    private StackUserSettingGetArgs(StackUserSettingGetArgs $) {
+        this.action = $.action;
+        this.permission = $.permission;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackUserSettingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private Output<String> permission;
+        private StackUserSettingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackUserSettingGetArgs();
         }
 
         public Builder(StackUserSettingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.permission = defaults.permission;
+            $ = new StackUserSettingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder permission(Output<String> permission) {
-            this.permission = Objects.requireNonNull(permission);
+            $.permission = permission;
             return this;
         }
+
         public Builder permission(String permission) {
-            this.permission = Output.of(Objects.requireNonNull(permission));
-            return this;
-        }        public StackUserSettingGetArgs build() {
-            return new StackUserSettingGetArgs(action, permission);
+            return permission(Output.of(permission));
+        }
+
+        public StackUserSettingGetArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.permission = Objects.requireNonNull($.permission, "expected parameter 'permission' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentId")
-      private final @Nullable Output<String> parentId;
+    private @Nullable Output<String> parentId;
 
-    public Output<String> parentId() {
-        return this.parentId == null ? Codegen.empty() : this.parentId;
+    public Optional<Output<String>> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pathPart")
-      private final @Nullable Output<String> pathPart;
+    private @Nullable Output<String> pathPart;
 
-    public Output<String> pathPart() {
-        return this.pathPart == null ? Codegen.empty() : this.pathPart;
+    public Optional<Output<String>> pathPart() {
+        return Optional.ofNullable(this.pathPart);
     }
 
     /**
@@ -53,85 +53,78 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApi")
-      private final @Nullable Output<String> restApi;
+    private @Nullable Output<String> restApi;
 
-    public Output<String> restApi() {
-        return this.restApi == null ? Codegen.empty() : this.restApi;
+    public Optional<Output<String>> restApi() {
+        return Optional.ofNullable(this.restApi);
     }
 
-    public ResourceState(
-        @Nullable Output<String> parentId,
-        @Nullable Output<String> path,
-        @Nullable Output<String> pathPart,
-        @Nullable Output<String> restApi) {
-        this.parentId = parentId;
-        this.path = path;
-        this.pathPart = pathPart;
-        this.restApi = restApi;
-    }
+    private ResourceState() {}
 
-    private ResourceState() {
-        this.parentId = Codegen.empty();
-        this.path = Codegen.empty();
-        this.pathPart = Codegen.empty();
-        this.restApi = Codegen.empty();
+    private ResourceState(ResourceState $) {
+        this.parentId = $.parentId;
+        this.path = $.path;
+        this.pathPart = $.pathPart;
+        this.restApi = $.restApi;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> parentId;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> pathPart;
-        private @Nullable Output<String> restApi;
+        private ResourceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceState();
         }
 
         public Builder(ResourceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parentId = defaults.parentId;
-    	      this.path = defaults.path;
-    	      this.pathPart = defaults.pathPart;
-    	      this.restApi = defaults.restApi;
+            $ = new ResourceState(Objects.requireNonNull(defaults));
         }
 
         public Builder parentId(@Nullable Output<String> parentId) {
-            this.parentId = parentId;
+            $.parentId = parentId;
             return this;
         }
-        public Builder parentId(@Nullable String parentId) {
-            this.parentId = Codegen.ofNullable(parentId);
-            return this;
+
+        public Builder parentId(String parentId) {
+            return parentId(Output.of(parentId));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder pathPart(@Nullable Output<String> pathPart) {
-            this.pathPart = pathPart;
+            $.pathPart = pathPart;
             return this;
         }
-        public Builder pathPart(@Nullable String pathPart) {
-            this.pathPart = Codegen.ofNullable(pathPart);
-            return this;
+
+        public Builder pathPart(String pathPart) {
+            return pathPart(Output.of(pathPart));
         }
+
         public Builder restApi(@Nullable Output<String> restApi) {
-            this.restApi = restApi;
+            $.restApi = restApi;
             return this;
-        }        public ResourceState build() {
-            return new ResourceState(parentId, path, pathPart, restApi);
+        }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
+        public ResourceState build() {
+            return $;
         }
     }
+
 }

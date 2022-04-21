@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CertificateCertificateDescriptionPublicKeyGetArgs extends com
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<String> format;
+    private @Nullable Output<String> format;
 
-    public Output<String> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<String>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class CertificateCertificateDescriptionPublicKeyGetArgs extends com
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
-    public CertificateCertificateDescriptionPublicKeyGetArgs(
-        @Nullable Output<String> format,
-        @Nullable Output<String> key) {
-        this.format = format;
-        this.key = key;
-    }
+    private CertificateCertificateDescriptionPublicKeyGetArgs() {}
 
-    private CertificateCertificateDescriptionPublicKeyGetArgs() {
-        this.format = Codegen.empty();
-        this.key = Codegen.empty();
+    private CertificateCertificateDescriptionPublicKeyGetArgs(CertificateCertificateDescriptionPublicKeyGetArgs $) {
+        this.format = $.format;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateCertificateDescriptionPublicKeyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> format;
-        private @Nullable Output<String> key;
+        private CertificateCertificateDescriptionPublicKeyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateCertificateDescriptionPublicKeyGetArgs();
         }
 
         public Builder(CertificateCertificateDescriptionPublicKeyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.key = defaults.key;
+            $ = new CertificateCertificateDescriptionPublicKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder format(@Nullable Output<String> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable String format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(String format) {
+            return format(Output.of(format));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
-        }        public CertificateCertificateDescriptionPublicKeyGetArgs build() {
-            return new CertificateCertificateDescriptionPublicKeyGetArgs(format, key);
+
+        public Builder key(String key) {
+            return key(Output.of(key));
+        }
+
+        public CertificateCertificateDescriptionPublicKeyGetArgs build() {
+            return $;
         }
     }
+
 }

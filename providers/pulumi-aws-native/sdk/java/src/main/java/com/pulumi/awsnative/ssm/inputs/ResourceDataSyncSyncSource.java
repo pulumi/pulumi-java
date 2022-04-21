@@ -18,97 +18,89 @@ public final class ResourceDataSyncSyncSource extends com.pulumi.resources.Invok
     public static final ResourceDataSyncSyncSource Empty = new ResourceDataSyncSyncSource();
 
     @Import(name="awsOrganizationsSource")
-      private final @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource;
+    private @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource;
 
     public Optional<ResourceDataSyncAwsOrganizationsSource> awsOrganizationsSource() {
-        return this.awsOrganizationsSource == null ? Optional.empty() : Optional.ofNullable(this.awsOrganizationsSource);
+        return Optional.ofNullable(this.awsOrganizationsSource);
     }
 
     @Import(name="includeFutureRegions")
-      private final @Nullable Boolean includeFutureRegions;
+    private @Nullable Boolean includeFutureRegions;
 
     public Optional<Boolean> includeFutureRegions() {
-        return this.includeFutureRegions == null ? Optional.empty() : Optional.ofNullable(this.includeFutureRegions);
+        return Optional.ofNullable(this.includeFutureRegions);
     }
 
     @Import(name="sourceRegions", required=true)
-      private final List<String> sourceRegions;
+    private List<String> sourceRegions;
 
     public List<String> sourceRegions() {
         return this.sourceRegions;
     }
 
     @Import(name="sourceType", required=true)
-      private final String sourceType;
+    private String sourceType;
 
     public String sourceType() {
         return this.sourceType;
     }
 
-    public ResourceDataSyncSyncSource(
-        @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource,
-        @Nullable Boolean includeFutureRegions,
-        List<String> sourceRegions,
-        String sourceType) {
-        this.awsOrganizationsSource = awsOrganizationsSource;
-        this.includeFutureRegions = includeFutureRegions;
-        this.sourceRegions = Objects.requireNonNull(sourceRegions, "expected parameter 'sourceRegions' to be non-null");
-        this.sourceType = Objects.requireNonNull(sourceType, "expected parameter 'sourceType' to be non-null");
-    }
+    private ResourceDataSyncSyncSource() {}
 
-    private ResourceDataSyncSyncSource() {
-        this.awsOrganizationsSource = null;
-        this.includeFutureRegions = null;
-        this.sourceRegions = List.of();
-        this.sourceType = null;
+    private ResourceDataSyncSyncSource(ResourceDataSyncSyncSource $) {
+        this.awsOrganizationsSource = $.awsOrganizationsSource;
+        this.includeFutureRegions = $.includeFutureRegions;
+        this.sourceRegions = $.sourceRegions;
+        this.sourceType = $.sourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceDataSyncSyncSource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource;
-        private @Nullable Boolean includeFutureRegions;
-        private List<String> sourceRegions;
-        private String sourceType;
+        private ResourceDataSyncSyncSource $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceDataSyncSyncSource();
         }
 
         public Builder(ResourceDataSyncSyncSource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsOrganizationsSource = defaults.awsOrganizationsSource;
-    	      this.includeFutureRegions = defaults.includeFutureRegions;
-    	      this.sourceRegions = defaults.sourceRegions;
-    	      this.sourceType = defaults.sourceType;
+            $ = new ResourceDataSyncSyncSource(Objects.requireNonNull(defaults));
         }
 
         public Builder awsOrganizationsSource(@Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource) {
-            this.awsOrganizationsSource = awsOrganizationsSource;
+            $.awsOrganizationsSource = awsOrganizationsSource;
             return this;
         }
+
         public Builder includeFutureRegions(@Nullable Boolean includeFutureRegions) {
-            this.includeFutureRegions = includeFutureRegions;
+            $.includeFutureRegions = includeFutureRegions;
             return this;
         }
+
         public Builder sourceRegions(List<String> sourceRegions) {
-            this.sourceRegions = Objects.requireNonNull(sourceRegions);
+            $.sourceRegions = sourceRegions;
             return this;
         }
+
         public Builder sourceRegions(String... sourceRegions) {
             return sourceRegions(List.of(sourceRegions));
         }
+
         public Builder sourceType(String sourceType) {
-            this.sourceType = Objects.requireNonNull(sourceType);
+            $.sourceType = sourceType;
             return this;
-        }        public ResourceDataSyncSyncSource build() {
-            return new ResourceDataSyncSyncSource(awsOrganizationsSource, includeFutureRegions, sourceRegions, sourceType);
+        }
+
+        public ResourceDataSyncSyncSource build() {
+            $.sourceRegions = Objects.requireNonNull($.sourceRegions, "expected parameter 'sourceRegions' to be non-null");
+            $.sourceType = Objects.requireNonNull($.sourceType, "expected parameter 'sourceType' to be non-null");
+            return $;
         }
     }
+
 }

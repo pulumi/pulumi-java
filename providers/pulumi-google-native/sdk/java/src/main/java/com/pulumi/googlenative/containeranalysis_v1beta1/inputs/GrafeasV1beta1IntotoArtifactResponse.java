@@ -14,62 +14,59 @@ public final class GrafeasV1beta1IntotoArtifactResponse extends com.pulumi.resou
     public static final GrafeasV1beta1IntotoArtifactResponse Empty = new GrafeasV1beta1IntotoArtifactResponse();
 
     @Import(name="hashes", required=true)
-      private final ArtifactHashesResponse hashes;
+    private ArtifactHashesResponse hashes;
 
     public ArtifactHashesResponse hashes() {
         return this.hashes;
     }
 
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public GrafeasV1beta1IntotoArtifactResponse(
-        ArtifactHashesResponse hashes,
-        String resourceUri) {
-        this.hashes = Objects.requireNonNull(hashes, "expected parameter 'hashes' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private GrafeasV1beta1IntotoArtifactResponse() {}
 
-    private GrafeasV1beta1IntotoArtifactResponse() {
-        this.hashes = null;
-        this.resourceUri = null;
+    private GrafeasV1beta1IntotoArtifactResponse(GrafeasV1beta1IntotoArtifactResponse $) {
+        this.hashes = $.hashes;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1IntotoArtifactResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ArtifactHashesResponse hashes;
-        private String resourceUri;
+        private GrafeasV1beta1IntotoArtifactResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1IntotoArtifactResponse();
         }
 
         public Builder(GrafeasV1beta1IntotoArtifactResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hashes = defaults.hashes;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new GrafeasV1beta1IntotoArtifactResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hashes(ArtifactHashesResponse hashes) {
-            this.hashes = Objects.requireNonNull(hashes);
+            $.hashes = hashes;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public GrafeasV1beta1IntotoArtifactResponse build() {
-            return new GrafeasV1beta1IntotoArtifactResponse(hashes, resourceUri);
+        }
+
+        public GrafeasV1beta1IntotoArtifactResponse build() {
+            $.hashes = Objects.requireNonNull($.hashes, "expected parameter 'hashes' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class FilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventType", required=true)
-      private final List<String> eventType;
+    private List<String> eventType;
 
     public List<String> eventType() {
         return this.eventType;
     }
 
-    public FilterResponse(List<String> eventType) {
-        this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
-    }
+    private FilterResponse() {}
 
-    private FilterResponse() {
-        this.eventType = List.of();
+    private FilterResponse(FilterResponse $) {
+        this.eventType = $.eventType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> eventType;
+        private FilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterResponse();
         }
 
         public Builder(FilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
+            $ = new FilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(List<String> eventType) {
-            this.eventType = Objects.requireNonNull(eventType);
+            $.eventType = eventType;
             return this;
         }
+
         public Builder eventType(String... eventType) {
             return eventType(List.of(eventType));
-        }        public FilterResponse build() {
-            return new FilterResponse(eventType);
+        }
+
+        public FilterResponse build() {
+            $.eventType = Objects.requireNonNull($.eventType, "expected parameter 'eventType' to be non-null");
+            return $;
         }
     }
+
 }

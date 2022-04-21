@@ -24,10 +24,10 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable String privateIPAddress;
+    private @Nullable String privateIPAddress;
 
     public Optional<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
      * 
      */
     @Import(name="publicIPAddress")
-      private final @Nullable SubResourceResponse publicIPAddress;
+    private @Nullable SubResourceResponse publicIPAddress;
 
     public Optional<SubResourceResponse> publicIPAddress() {
-        return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
+        return Optional.ofNullable(this.publicIPAddress);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubResourceResponse subnet;
+    private @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
-    public LoadBalancerFrontendIPConfigurationPropertiesResponse(
-        @Nullable String privateIPAddress,
-        @Nullable SubResourceResponse publicIPAddress,
-        @Nullable SubResourceResponse subnet) {
-        this.privateIPAddress = privateIPAddress;
-        this.publicIPAddress = publicIPAddress;
-        this.subnet = subnet;
-    }
+    private LoadBalancerFrontendIPConfigurationPropertiesResponse() {}
 
-    private LoadBalancerFrontendIPConfigurationPropertiesResponse() {
-        this.privateIPAddress = null;
-        this.publicIPAddress = null;
-        this.subnet = null;
+    private LoadBalancerFrontendIPConfigurationPropertiesResponse(LoadBalancerFrontendIPConfigurationPropertiesResponse $) {
+        this.privateIPAddress = $.privateIPAddress;
+        this.publicIPAddress = $.publicIPAddress;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerFrontendIPConfigurationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String privateIPAddress;
-        private @Nullable SubResourceResponse publicIPAddress;
-        private @Nullable SubResourceResponse subnet;
+        private LoadBalancerFrontendIPConfigurationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerFrontendIPConfigurationPropertiesResponse();
         }
 
         public Builder(LoadBalancerFrontendIPConfigurationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.subnet = defaults.subnet;
+            $ = new LoadBalancerFrontendIPConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
+
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
-            this.publicIPAddress = publicIPAddress;
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
+
         public Builder subnet(@Nullable SubResourceResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
-        }        public LoadBalancerFrontendIPConfigurationPropertiesResponse build() {
-            return new LoadBalancerFrontendIPConfigurationPropertiesResponse(privateIPAddress, publicIPAddress, subnet);
+        }
+
+        public LoadBalancerFrontendIPConfigurationPropertiesResponse build() {
+            return $;
         }
     }
+
 }

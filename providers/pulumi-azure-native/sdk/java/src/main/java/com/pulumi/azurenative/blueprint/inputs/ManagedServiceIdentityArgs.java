@@ -8,10 +8,10 @@ import com.pulumi.azurenative.blueprint.inputs.UserAssignedIdentityArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ManagedServiceIdentityType>> type;
+    private Output<Either<String,ManagedServiceIdentityType>> type;
 
     public Output<Either<String,ManagedServiceIdentityType>> type() {
         return this.type;
@@ -61,89 +61,79 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
+    private @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 
-    public Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
+    public Optional<Output<Map<String,UserAssignedIdentityArgs>>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public ManagedServiceIdentityArgs(
-        @Nullable Output<String> principalId,
-        @Nullable Output<String> tenantId,
-        Output<Either<String,ManagedServiceIdentityType>> type,
-        @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
-        this.principalId = principalId;
-        this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private ManagedServiceIdentityArgs() {}
 
-    private ManagedServiceIdentityArgs() {
-        this.principalId = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userAssignedIdentities = Codegen.empty();
+    private ManagedServiceIdentityArgs(ManagedServiceIdentityArgs $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedServiceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> principalId;
-        private @Nullable Output<String> tenantId;
-        private Output<Either<String,ManagedServiceIdentityType>> type;
-        private @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
+        private ManagedServiceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedServiceIdentityArgs();
         }
 
         public Builder(ManagedServiceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new ManagedServiceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder type(Output<Either<String,ManagedServiceIdentityType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ManagedServiceIdentityType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-        public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
-            return this;
-        }        public ManagedServiceIdentityArgs build() {
-            return new ManagedServiceIdentityArgs(principalId, tenantId, type, userAssignedIdentities);
+
+        public Builder userAssignedIdentities(Map<String,UserAssignedIdentityArgs> userAssignedIdentities) {
+            return userAssignedIdentities(Output.of(userAssignedIdentities));
+        }
+
+        public ManagedServiceIdentityArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

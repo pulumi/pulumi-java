@@ -22,7 +22,7 @@ public final class YarnApplicationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,7 +33,7 @@ public final class YarnApplicationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="progress", required=true)
-      private final Double progress;
+    private Double progress;
 
     public Double progress() {
         return this.progress;
@@ -44,7 +44,7 @@ public final class YarnApplicationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -55,73 +55,66 @@ public final class YarnApplicationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="trackingUrl", required=true)
-      private final String trackingUrl;
+    private String trackingUrl;
 
     public String trackingUrl() {
         return this.trackingUrl;
     }
 
-    public YarnApplicationResponse(
-        String name,
-        Double progress,
-        String state,
-        String trackingUrl) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.progress = Objects.requireNonNull(progress, "expected parameter 'progress' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.trackingUrl = Objects.requireNonNull(trackingUrl, "expected parameter 'trackingUrl' to be non-null");
-    }
+    private YarnApplicationResponse() {}
 
-    private YarnApplicationResponse() {
-        this.name = null;
-        this.progress = null;
-        this.state = null;
-        this.trackingUrl = null;
+    private YarnApplicationResponse(YarnApplicationResponse $) {
+        this.name = $.name;
+        this.progress = $.progress;
+        this.state = $.state;
+        this.trackingUrl = $.trackingUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(YarnApplicationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private Double progress;
-        private String state;
-        private String trackingUrl;
+        private YarnApplicationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new YarnApplicationResponse();
         }
 
         public Builder(YarnApplicationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.progress = defaults.progress;
-    	      this.state = defaults.state;
-    	      this.trackingUrl = defaults.trackingUrl;
+            $ = new YarnApplicationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder progress(Double progress) {
-            this.progress = Objects.requireNonNull(progress);
+            $.progress = progress;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder trackingUrl(String trackingUrl) {
-            this.trackingUrl = Objects.requireNonNull(trackingUrl);
+            $.trackingUrl = trackingUrl;
             return this;
-        }        public YarnApplicationResponse build() {
-            return new YarnApplicationResponse(name, progress, state, trackingUrl);
+        }
+
+        public YarnApplicationResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.progress = Objects.requireNonNull($.progress, "expected parameter 'progress' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.trackingUrl = Objects.requireNonNull($.trackingUrl, "expected parameter 'trackingUrl' to be non-null");
+            return $;
         }
     }
+
 }

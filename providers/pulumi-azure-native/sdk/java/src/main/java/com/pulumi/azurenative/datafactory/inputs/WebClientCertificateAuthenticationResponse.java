@@ -27,7 +27,7 @@ public final class WebClientCertificateAuthenticationResponse extends com.pulumi
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final String authenticationType;
+    private String authenticationType;
 
     public String authenticationType() {
         return this.authenticationType;
@@ -38,7 +38,7 @@ public final class WebClientCertificateAuthenticationResponse extends com.pulumi
      * 
      */
     @Import(name="password", required=true)
-      private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
@@ -49,7 +49,7 @@ public final class WebClientCertificateAuthenticationResponse extends com.pulumi
      * 
      */
     @Import(name="pfx", required=true)
-      private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
+    private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx() {
         return this.pfx;
@@ -60,73 +60,66 @@ public final class WebClientCertificateAuthenticationResponse extends com.pulumi
      * 
      */
     @Import(name="url", required=true)
-      private final Object url;
+    private Object url;
 
     public Object url() {
         return this.url;
     }
 
-    public WebClientCertificateAuthenticationResponse(
-        String authenticationType,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
-        Object url) {
-        this.authenticationType = Codegen.stringProp("authenticationType").arg(authenticationType).require();
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.pfx = Objects.requireNonNull(pfx, "expected parameter 'pfx' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private WebClientCertificateAuthenticationResponse() {}
 
-    private WebClientCertificateAuthenticationResponse() {
-        this.authenticationType = null;
-        this.password = null;
-        this.pfx = null;
-        this.url = null;
+    private WebClientCertificateAuthenticationResponse(WebClientCertificateAuthenticationResponse $) {
+        this.authenticationType = $.authenticationType;
+        this.password = $.password;
+        this.pfx = $.pfx;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebClientCertificateAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authenticationType;
-        private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
-        private Object url;
+        private WebClientCertificateAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebClientCertificateAuthenticationResponse();
         }
 
         public Builder(WebClientCertificateAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.password = defaults.password;
-    	      this.pfx = defaults.pfx;
-    	      this.url = defaults.url;
+            $ = new WebClientCertificateAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder pfx(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx) {
-            this.pfx = Objects.requireNonNull(pfx);
+            $.pfx = pfx;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public WebClientCertificateAuthenticationResponse build() {
-            return new WebClientCertificateAuthenticationResponse(authenticationType, password, pfx, url);
+        }
+
+        public WebClientCertificateAuthenticationResponse build() {
+            $.authenticationType = Codegen.stringProp("authenticationType").arg($.authenticationType).require();
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.pfx = Objects.requireNonNull($.pfx, "expected parameter 'pfx' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

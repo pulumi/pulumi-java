@@ -19,45 +19,44 @@ public final class BotAliasAudioLogDestination extends com.pulumi.resources.Invo
     public static final BotAliasAudioLogDestination Empty = new BotAliasAudioLogDestination();
 
     @Import(name="s3Bucket")
-      private final @Nullable BotAliasS3BucketLogDestination s3Bucket;
+    private @Nullable BotAliasS3BucketLogDestination s3Bucket;
 
     public Optional<BotAliasS3BucketLogDestination> s3Bucket() {
-        return this.s3Bucket == null ? Optional.empty() : Optional.ofNullable(this.s3Bucket);
+        return Optional.ofNullable(this.s3Bucket);
     }
 
-    public BotAliasAudioLogDestination(@Nullable BotAliasS3BucketLogDestination s3Bucket) {
-        this.s3Bucket = s3Bucket;
-    }
+    private BotAliasAudioLogDestination() {}
 
-    private BotAliasAudioLogDestination() {
-        this.s3Bucket = null;
+    private BotAliasAudioLogDestination(BotAliasAudioLogDestination $) {
+        this.s3Bucket = $.s3Bucket;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasAudioLogDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BotAliasS3BucketLogDestination s3Bucket;
+        private BotAliasAudioLogDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasAudioLogDestination();
         }
 
         public Builder(BotAliasAudioLogDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Bucket = defaults.s3Bucket;
+            $ = new BotAliasAudioLogDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Bucket(@Nullable BotAliasS3BucketLogDestination s3Bucket) {
-            this.s3Bucket = s3Bucket;
+            $.s3Bucket = s3Bucket;
             return this;
-        }        public BotAliasAudioLogDestination build() {
-            return new BotAliasAudioLogDestination(s3Bucket);
+        }
+
+        public BotAliasAudioLogDestination build() {
+            return $;
         }
     }
+
 }

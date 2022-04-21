@@ -6,9 +6,9 @@ package com.pulumi.azurenative.hdinsight.inputs;
 import com.pulumi.azurenative.hdinsight.inputs.SshPublicKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class SshProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKeys")
-      private final @Nullable Output<List<SshPublicKeyArgs>> publicKeys;
+    private @Nullable Output<List<SshPublicKeyArgs>> publicKeys;
 
-    public Output<List<SshPublicKeyArgs>> publicKeys() {
-        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
+    public Optional<Output<List<SshPublicKeyArgs>>> publicKeys() {
+        return Optional.ofNullable(this.publicKeys);
     }
 
-    public SshProfileArgs(@Nullable Output<List<SshPublicKeyArgs>> publicKeys) {
-        this.publicKeys = publicKeys;
-    }
+    private SshProfileArgs() {}
 
-    private SshProfileArgs() {
-        this.publicKeys = Codegen.empty();
+    private SshProfileArgs(SshProfileArgs $) {
+        this.publicKeys = $.publicKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SshPublicKeyArgs>> publicKeys;
+        private SshProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshProfileArgs();
         }
 
         public Builder(SshProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeys = defaults.publicKeys;
+            $ = new SshProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeys(@Nullable Output<List<SshPublicKeyArgs>> publicKeys) {
-            this.publicKeys = publicKeys;
+            $.publicKeys = publicKeys;
             return this;
         }
-        public Builder publicKeys(@Nullable List<SshPublicKeyArgs> publicKeys) {
-            this.publicKeys = Codegen.ofNullable(publicKeys);
-            return this;
+
+        public Builder publicKeys(List<SshPublicKeyArgs> publicKeys) {
+            return publicKeys(Output.of(publicKeys));
         }
+
         public Builder publicKeys(SshPublicKeyArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
-        }        public SshProfileArgs build() {
-            return new SshProfileArgs(publicKeys);
+        }
+
+        public SshProfileArgs build() {
+            return $;
         }
     }
+
 }

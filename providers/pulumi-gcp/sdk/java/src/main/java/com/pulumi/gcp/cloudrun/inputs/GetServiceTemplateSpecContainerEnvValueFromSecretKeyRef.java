@@ -13,7 +13,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef exten
     public static final GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef Empty = new GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -24,55 +24,52 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef exten
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef(
-        String key,
-        String name) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef() {}
 
-    private GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef() {
-        this.key = null;
-        this.name = null;
+    private GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef(GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef $) {
+        this.key = $.key;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String name;
+        private GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef();
         }
 
         public Builder(GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.name = defaults.name;
+            $ = new GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef build() {
-            return new GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef(key, name);
+        }
+
+        public GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -34,7 +34,7 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,58 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
-    public UserInfoResponse(
-        String email,
-        String name,
-        @Nullable String objectId) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.objectId = objectId;
-    }
+    private UserInfoResponse() {}
 
-    private UserInfoResponse() {
-        this.email = null;
-        this.name = null;
-        this.objectId = null;
+    private UserInfoResponse(UserInfoResponse $) {
+        this.email = $.email;
+        this.name = $.name;
+        this.objectId = $.objectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String email;
-        private String name;
-        private @Nullable String objectId;
+        private UserInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserInfoResponse();
         }
 
         public Builder(UserInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.name = defaults.name;
-    	      this.objectId = defaults.objectId;
+            $ = new UserInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
-        }        public UserInfoResponse build() {
-            return new UserInfoResponse(email, name, objectId);
+        }
+
+        public UserInfoResponse build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

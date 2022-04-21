@@ -17,62 +17,59 @@ public final class ReplicationConfigurationReplicationDestination extends com.pu
     public static final ReplicationConfigurationReplicationDestination Empty = new ReplicationConfigurationReplicationDestination();
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="registryId", required=true)
-      private final String registryId;
+    private String registryId;
 
     public String registryId() {
         return this.registryId;
     }
 
-    public ReplicationConfigurationReplicationDestination(
-        String region,
-        String registryId) {
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.registryId = Objects.requireNonNull(registryId, "expected parameter 'registryId' to be non-null");
-    }
+    private ReplicationConfigurationReplicationDestination() {}
 
-    private ReplicationConfigurationReplicationDestination() {
-        this.region = null;
-        this.registryId = null;
+    private ReplicationConfigurationReplicationDestination(ReplicationConfigurationReplicationDestination $) {
+        this.region = $.region;
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationReplicationDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String region;
-        private String registryId;
+        private ReplicationConfigurationReplicationDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationReplicationDestination();
         }
 
         public Builder(ReplicationConfigurationReplicationDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
-    	      this.registryId = defaults.registryId;
+            $ = new ReplicationConfigurationReplicationDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder registryId(String registryId) {
-            this.registryId = Objects.requireNonNull(registryId);
+            $.registryId = registryId;
             return this;
-        }        public ReplicationConfigurationReplicationDestination build() {
-            return new ReplicationConfigurationReplicationDestination(region, registryId);
+        }
+
+        public ReplicationConfigurationReplicationDestination build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.registryId = Objects.requireNonNull($.registryId, "expected parameter 'registryId' to be non-null");
+            return $;
         }
     }
+
 }

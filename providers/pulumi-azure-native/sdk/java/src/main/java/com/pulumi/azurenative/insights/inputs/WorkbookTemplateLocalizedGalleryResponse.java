@@ -25,10 +25,10 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends com.pulumi.r
      * 
      */
     @Import(name="galleries")
-      private final @Nullable List<WorkbookTemplateGalleryResponse> galleries;
+    private @Nullable List<WorkbookTemplateGalleryResponse> galleries;
 
-    public List<WorkbookTemplateGalleryResponse> galleries() {
-        return this.galleries == null ? List.of() : this.galleries;
+    public Optional<List<WorkbookTemplateGalleryResponse>> galleries() {
+        return Optional.ofNullable(this.galleries);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends com.pulumi.r
      * 
      */
     @Import(name="templateData")
-      private final @Nullable Object templateData;
+    private @Nullable Object templateData;
 
     public Optional<Object> templateData() {
-        return this.templateData == null ? Optional.empty() : Optional.ofNullable(this.templateData);
+        return Optional.ofNullable(this.templateData);
     }
 
-    public WorkbookTemplateLocalizedGalleryResponse(
-        @Nullable List<WorkbookTemplateGalleryResponse> galleries,
-        @Nullable Object templateData) {
-        this.galleries = galleries;
-        this.templateData = templateData;
-    }
+    private WorkbookTemplateLocalizedGalleryResponse() {}
 
-    private WorkbookTemplateLocalizedGalleryResponse() {
-        this.galleries = List.of();
-        this.templateData = null;
+    private WorkbookTemplateLocalizedGalleryResponse(WorkbookTemplateLocalizedGalleryResponse $) {
+        this.galleries = $.galleries;
+        this.templateData = $.templateData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkbookTemplateLocalizedGalleryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<WorkbookTemplateGalleryResponse> galleries;
-        private @Nullable Object templateData;
+        private WorkbookTemplateLocalizedGalleryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkbookTemplateLocalizedGalleryResponse();
         }
 
         public Builder(WorkbookTemplateLocalizedGalleryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.galleries = defaults.galleries;
-    	      this.templateData = defaults.templateData;
+            $ = new WorkbookTemplateLocalizedGalleryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder galleries(@Nullable List<WorkbookTemplateGalleryResponse> galleries) {
-            this.galleries = galleries;
+            $.galleries = galleries;
             return this;
         }
+
         public Builder galleries(WorkbookTemplateGalleryResponse... galleries) {
             return galleries(List.of(galleries));
         }
+
         public Builder templateData(@Nullable Object templateData) {
-            this.templateData = templateData;
+            $.templateData = templateData;
             return this;
-        }        public WorkbookTemplateLocalizedGalleryResponse build() {
-            return new WorkbookTemplateLocalizedGalleryResponse(galleries, templateData);
+        }
+
+        public WorkbookTemplateLocalizedGalleryResponse build() {
+            return $;
         }
     }
+
 }

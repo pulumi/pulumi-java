@@ -5,10 +5,10 @@ package com.pulumi.aws.autoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="autoscalingGroupName")
-      private final @Nullable Output<String> autoscalingGroupName;
+    private @Nullable Output<String> autoscalingGroupName;
 
-    public Output<String> autoscalingGroupName() {
-        return this.autoscalingGroupName == null ? Codegen.empty() : this.autoscalingGroupName;
+    public Optional<Output<String>> autoscalingGroupName() {
+        return Optional.ofNullable(this.autoscalingGroupName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultResult")
-      private final @Nullable Output<String> defaultResult;
+    private @Nullable Output<String> defaultResult;
 
-    public Output<String> defaultResult() {
-        return this.defaultResult == null ? Codegen.empty() : this.defaultResult;
+    public Optional<Output<String>> defaultResult() {
+        return Optional.ofNullable(this.defaultResult);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="heartbeatTimeout")
-      private final @Nullable Output<Integer> heartbeatTimeout;
+    private @Nullable Output<Integer> heartbeatTimeout;
 
-    public Output<Integer> heartbeatTimeout() {
-        return this.heartbeatTimeout == null ? Codegen.empty() : this.heartbeatTimeout;
+    public Optional<Output<Integer>> heartbeatTimeout() {
+        return Optional.ofNullable(this.heartbeatTimeout);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="lifecycleTransition")
-      private final @Nullable Output<String> lifecycleTransition;
+    private @Nullable Output<String> lifecycleTransition;
 
-    public Output<String> lifecycleTransition() {
-        return this.lifecycleTransition == null ? Codegen.empty() : this.lifecycleTransition;
+    public Optional<Output<String>> lifecycleTransition() {
+        return Optional.ofNullable(this.lifecycleTransition);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="notificationMetadata")
-      private final @Nullable Output<String> notificationMetadata;
+    private @Nullable Output<String> notificationMetadata;
 
-    public Output<String> notificationMetadata() {
-        return this.notificationMetadata == null ? Codegen.empty() : this.notificationMetadata;
+    public Optional<Output<String>> notificationMetadata() {
+        return Optional.ofNullable(this.notificationMetadata);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="notificationTargetArn")
-      private final @Nullable Output<String> notificationTargetArn;
+    private @Nullable Output<String> notificationTargetArn;
 
-    public Output<String> notificationTargetArn() {
-        return this.notificationTargetArn == null ? Codegen.empty() : this.notificationTargetArn;
+    public Optional<Output<String>> notificationTargetArn() {
+        return Optional.ofNullable(this.notificationTargetArn);
     }
 
     /**
@@ -98,141 +98,118 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public LifecycleHookState(
-        @Nullable Output<String> autoscalingGroupName,
-        @Nullable Output<String> defaultResult,
-        @Nullable Output<Integer> heartbeatTimeout,
-        @Nullable Output<String> lifecycleTransition,
-        @Nullable Output<String> name,
-        @Nullable Output<String> notificationMetadata,
-        @Nullable Output<String> notificationTargetArn,
-        @Nullable Output<String> roleArn) {
-        this.autoscalingGroupName = autoscalingGroupName;
-        this.defaultResult = defaultResult;
-        this.heartbeatTimeout = heartbeatTimeout;
-        this.lifecycleTransition = lifecycleTransition;
-        this.name = name;
-        this.notificationMetadata = notificationMetadata;
-        this.notificationTargetArn = notificationTargetArn;
-        this.roleArn = roleArn;
-    }
+    private LifecycleHookState() {}
 
-    private LifecycleHookState() {
-        this.autoscalingGroupName = Codegen.empty();
-        this.defaultResult = Codegen.empty();
-        this.heartbeatTimeout = Codegen.empty();
-        this.lifecycleTransition = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationMetadata = Codegen.empty();
-        this.notificationTargetArn = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private LifecycleHookState(LifecycleHookState $) {
+        this.autoscalingGroupName = $.autoscalingGroupName;
+        this.defaultResult = $.defaultResult;
+        this.heartbeatTimeout = $.heartbeatTimeout;
+        this.lifecycleTransition = $.lifecycleTransition;
+        this.name = $.name;
+        this.notificationMetadata = $.notificationMetadata;
+        this.notificationTargetArn = $.notificationTargetArn;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecycleHookState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoscalingGroupName;
-        private @Nullable Output<String> defaultResult;
-        private @Nullable Output<Integer> heartbeatTimeout;
-        private @Nullable Output<String> lifecycleTransition;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> notificationMetadata;
-        private @Nullable Output<String> notificationTargetArn;
-        private @Nullable Output<String> roleArn;
+        private LifecycleHookState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecycleHookState();
         }
 
         public Builder(LifecycleHookState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingGroupName = defaults.autoscalingGroupName;
-    	      this.defaultResult = defaults.defaultResult;
-    	      this.heartbeatTimeout = defaults.heartbeatTimeout;
-    	      this.lifecycleTransition = defaults.lifecycleTransition;
-    	      this.name = defaults.name;
-    	      this.notificationMetadata = defaults.notificationMetadata;
-    	      this.notificationTargetArn = defaults.notificationTargetArn;
-    	      this.roleArn = defaults.roleArn;
+            $ = new LifecycleHookState(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingGroupName(@Nullable Output<String> autoscalingGroupName) {
-            this.autoscalingGroupName = autoscalingGroupName;
+            $.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
-        public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
-            this.autoscalingGroupName = Codegen.ofNullable(autoscalingGroupName);
-            return this;
+
+        public Builder autoscalingGroupName(String autoscalingGroupName) {
+            return autoscalingGroupName(Output.of(autoscalingGroupName));
         }
+
         public Builder defaultResult(@Nullable Output<String> defaultResult) {
-            this.defaultResult = defaultResult;
+            $.defaultResult = defaultResult;
             return this;
         }
-        public Builder defaultResult(@Nullable String defaultResult) {
-            this.defaultResult = Codegen.ofNullable(defaultResult);
-            return this;
+
+        public Builder defaultResult(String defaultResult) {
+            return defaultResult(Output.of(defaultResult));
         }
+
         public Builder heartbeatTimeout(@Nullable Output<Integer> heartbeatTimeout) {
-            this.heartbeatTimeout = heartbeatTimeout;
+            $.heartbeatTimeout = heartbeatTimeout;
             return this;
         }
-        public Builder heartbeatTimeout(@Nullable Integer heartbeatTimeout) {
-            this.heartbeatTimeout = Codegen.ofNullable(heartbeatTimeout);
-            return this;
+
+        public Builder heartbeatTimeout(Integer heartbeatTimeout) {
+            return heartbeatTimeout(Output.of(heartbeatTimeout));
         }
+
         public Builder lifecycleTransition(@Nullable Output<String> lifecycleTransition) {
-            this.lifecycleTransition = lifecycleTransition;
+            $.lifecycleTransition = lifecycleTransition;
             return this;
         }
-        public Builder lifecycleTransition(@Nullable String lifecycleTransition) {
-            this.lifecycleTransition = Codegen.ofNullable(lifecycleTransition);
-            return this;
+
+        public Builder lifecycleTransition(String lifecycleTransition) {
+            return lifecycleTransition(Output.of(lifecycleTransition));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationMetadata(@Nullable Output<String> notificationMetadata) {
-            this.notificationMetadata = notificationMetadata;
+            $.notificationMetadata = notificationMetadata;
             return this;
         }
-        public Builder notificationMetadata(@Nullable String notificationMetadata) {
-            this.notificationMetadata = Codegen.ofNullable(notificationMetadata);
-            return this;
+
+        public Builder notificationMetadata(String notificationMetadata) {
+            return notificationMetadata(Output.of(notificationMetadata));
         }
+
         public Builder notificationTargetArn(@Nullable Output<String> notificationTargetArn) {
-            this.notificationTargetArn = notificationTargetArn;
+            $.notificationTargetArn = notificationTargetArn;
             return this;
         }
-        public Builder notificationTargetArn(@Nullable String notificationTargetArn) {
-            this.notificationTargetArn = Codegen.ofNullable(notificationTargetArn);
-            return this;
+
+        public Builder notificationTargetArn(String notificationTargetArn) {
+            return notificationTargetArn(Output.of(notificationTargetArn));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public LifecycleHookState build() {
-            return new LifecycleHookState(autoscalingGroupName, defaultResult, heartbeatTimeout, lifecycleTransition, name, notificationMetadata, notificationTargetArn, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public LifecycleHookState build() {
+            return $;
         }
     }
+
 }

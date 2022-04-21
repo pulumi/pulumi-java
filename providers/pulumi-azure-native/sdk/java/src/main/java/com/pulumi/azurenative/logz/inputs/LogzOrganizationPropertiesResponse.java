@@ -19,10 +19,10 @@ public final class LogzOrganizationPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="companyName")
-      private final @Nullable String companyName;
+    private @Nullable String companyName;
 
     public Optional<String> companyName() {
-        return this.companyName == null ? Optional.empty() : Optional.ofNullable(this.companyName);
+        return Optional.ofNullable(this.companyName);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class LogzOrganizationPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enterpriseAppId")
-      private final @Nullable String enterpriseAppId;
+    private @Nullable String enterpriseAppId;
 
     public Optional<String> enterpriseAppId() {
-        return this.enterpriseAppId == null ? Optional.empty() : Optional.ofNullable(this.enterpriseAppId);
+        return Optional.ofNullable(this.enterpriseAppId);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class LogzOrganizationPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -52,73 +52,63 @@ public final class LogzOrganizationPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="singleSignOnUrl")
-      private final @Nullable String singleSignOnUrl;
+    private @Nullable String singleSignOnUrl;
 
     public Optional<String> singleSignOnUrl() {
-        return this.singleSignOnUrl == null ? Optional.empty() : Optional.ofNullable(this.singleSignOnUrl);
+        return Optional.ofNullable(this.singleSignOnUrl);
     }
 
-    public LogzOrganizationPropertiesResponse(
-        @Nullable String companyName,
-        @Nullable String enterpriseAppId,
-        String id,
-        @Nullable String singleSignOnUrl) {
-        this.companyName = companyName;
-        this.enterpriseAppId = enterpriseAppId;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.singleSignOnUrl = singleSignOnUrl;
-    }
+    private LogzOrganizationPropertiesResponse() {}
 
-    private LogzOrganizationPropertiesResponse() {
-        this.companyName = null;
-        this.enterpriseAppId = null;
-        this.id = null;
-        this.singleSignOnUrl = null;
+    private LogzOrganizationPropertiesResponse(LogzOrganizationPropertiesResponse $) {
+        this.companyName = $.companyName;
+        this.enterpriseAppId = $.enterpriseAppId;
+        this.id = $.id;
+        this.singleSignOnUrl = $.singleSignOnUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogzOrganizationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String companyName;
-        private @Nullable String enterpriseAppId;
-        private String id;
-        private @Nullable String singleSignOnUrl;
+        private LogzOrganizationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogzOrganizationPropertiesResponse();
         }
 
         public Builder(LogzOrganizationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.companyName = defaults.companyName;
-    	      this.enterpriseAppId = defaults.enterpriseAppId;
-    	      this.id = defaults.id;
-    	      this.singleSignOnUrl = defaults.singleSignOnUrl;
+            $ = new LogzOrganizationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder companyName(@Nullable String companyName) {
-            this.companyName = companyName;
+            $.companyName = companyName;
             return this;
         }
+
         public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
-            this.enterpriseAppId = enterpriseAppId;
+            $.enterpriseAppId = enterpriseAppId;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder singleSignOnUrl(@Nullable String singleSignOnUrl) {
-            this.singleSignOnUrl = singleSignOnUrl;
+            $.singleSignOnUrl = singleSignOnUrl;
             return this;
-        }        public LogzOrganizationPropertiesResponse build() {
-            return new LogzOrganizationPropertiesResponse(companyName, enterpriseAppId, id, singleSignOnUrl);
+        }
+
+        public LogzOrganizationPropertiesResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

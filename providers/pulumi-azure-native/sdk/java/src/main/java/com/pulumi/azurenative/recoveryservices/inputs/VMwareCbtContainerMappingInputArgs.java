@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -36,7 +37,7 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="keyVaultId", required=true)
-      private final Output<String> keyVaultId;
+    private Output<String> keyVaultId;
 
     public Output<String> keyVaultId() {
         return this.keyVaultId;
@@ -47,7 +48,7 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="keyVaultUri", required=true)
-      private final Output<String> keyVaultUri;
+    private Output<String> keyVaultUri;
 
     public Output<String> keyVaultUri() {
         return this.keyVaultUri;
@@ -58,7 +59,7 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="serviceBusConnectionStringSecretName", required=true)
-      private final Output<String> serviceBusConnectionStringSecretName;
+    private Output<String> serviceBusConnectionStringSecretName;
 
     public Output<String> serviceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
@@ -69,7 +70,7 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="storageAccountId", required=true)
-      private final Output<String> storageAccountId;
+    private Output<String> storageAccountId;
 
     public Output<String> storageAccountId() {
         return this.storageAccountId;
@@ -80,7 +81,7 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="storageAccountSasSecretName", required=true)
-      private final Output<String> storageAccountSasSecretName;
+    private Output<String> storageAccountSasSecretName;
 
     public Output<String> storageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
@@ -91,128 +92,115 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetLocation", required=true)
-      private final Output<String> targetLocation;
+    private Output<String> targetLocation;
 
     public Output<String> targetLocation() {
         return this.targetLocation;
     }
 
-    public VMwareCbtContainerMappingInputArgs(
-        @Nullable Output<String> instanceType,
-        Output<String> keyVaultId,
-        Output<String> keyVaultUri,
-        Output<String> serviceBusConnectionStringSecretName,
-        Output<String> storageAccountId,
-        Output<String> storageAccountSasSecretName,
-        Output<String> targetLocation) {
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.keyVaultId = Objects.requireNonNull(keyVaultId, "expected parameter 'keyVaultId' to be non-null");
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
-        this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName, "expected parameter 'serviceBusConnectionStringSecretName' to be non-null");
-        this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
-        this.storageAccountSasSecretName = Objects.requireNonNull(storageAccountSasSecretName, "expected parameter 'storageAccountSasSecretName' to be non-null");
-        this.targetLocation = Objects.requireNonNull(targetLocation, "expected parameter 'targetLocation' to be non-null");
-    }
+    private VMwareCbtContainerMappingInputArgs() {}
 
-    private VMwareCbtContainerMappingInputArgs() {
-        this.instanceType = Codegen.empty();
-        this.keyVaultId = Codegen.empty();
-        this.keyVaultUri = Codegen.empty();
-        this.serviceBusConnectionStringSecretName = Codegen.empty();
-        this.storageAccountId = Codegen.empty();
-        this.storageAccountSasSecretName = Codegen.empty();
-        this.targetLocation = Codegen.empty();
+    private VMwareCbtContainerMappingInputArgs(VMwareCbtContainerMappingInputArgs $) {
+        this.instanceType = $.instanceType;
+        this.keyVaultId = $.keyVaultId;
+        this.keyVaultUri = $.keyVaultUri;
+        this.serviceBusConnectionStringSecretName = $.serviceBusConnectionStringSecretName;
+        this.storageAccountId = $.storageAccountId;
+        this.storageAccountSasSecretName = $.storageAccountSasSecretName;
+        this.targetLocation = $.targetLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMwareCbtContainerMappingInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceType;
-        private Output<String> keyVaultId;
-        private Output<String> keyVaultUri;
-        private Output<String> serviceBusConnectionStringSecretName;
-        private Output<String> storageAccountId;
-        private Output<String> storageAccountSasSecretName;
-        private Output<String> targetLocation;
+        private VMwareCbtContainerMappingInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMwareCbtContainerMappingInputArgs();
         }
 
         public Builder(VMwareCbtContainerMappingInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.keyVaultId = defaults.keyVaultId;
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.serviceBusConnectionStringSecretName = defaults.serviceBusConnectionStringSecretName;
-    	      this.storageAccountId = defaults.storageAccountId;
-    	      this.storageAccountSasSecretName = defaults.storageAccountSasSecretName;
-    	      this.targetLocation = defaults.targetLocation;
+            $ = new VMwareCbtContainerMappingInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder keyVaultId(Output<String> keyVaultId) {
-            this.keyVaultId = Objects.requireNonNull(keyVaultId);
+            $.keyVaultId = keyVaultId;
             return this;
         }
+
         public Builder keyVaultId(String keyVaultId) {
-            this.keyVaultId = Output.of(Objects.requireNonNull(keyVaultId));
-            return this;
+            return keyVaultId(Output.of(keyVaultId));
         }
+
         public Builder keyVaultUri(Output<String> keyVaultUri) {
-            this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder keyVaultUri(String keyVaultUri) {
-            this.keyVaultUri = Output.of(Objects.requireNonNull(keyVaultUri));
-            return this;
+            return keyVaultUri(Output.of(keyVaultUri));
         }
+
         public Builder serviceBusConnectionStringSecretName(Output<String> serviceBusConnectionStringSecretName) {
-            this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName);
+            $.serviceBusConnectionStringSecretName = serviceBusConnectionStringSecretName;
             return this;
         }
+
         public Builder serviceBusConnectionStringSecretName(String serviceBusConnectionStringSecretName) {
-            this.serviceBusConnectionStringSecretName = Output.of(Objects.requireNonNull(serviceBusConnectionStringSecretName));
-            return this;
+            return serviceBusConnectionStringSecretName(Output.of(serviceBusConnectionStringSecretName));
         }
+
         public Builder storageAccountId(Output<String> storageAccountId) {
-            this.storageAccountId = Objects.requireNonNull(storageAccountId);
+            $.storageAccountId = storageAccountId;
             return this;
         }
+
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Output.of(Objects.requireNonNull(storageAccountId));
-            return this;
+            return storageAccountId(Output.of(storageAccountId));
         }
+
         public Builder storageAccountSasSecretName(Output<String> storageAccountSasSecretName) {
-            this.storageAccountSasSecretName = Objects.requireNonNull(storageAccountSasSecretName);
+            $.storageAccountSasSecretName = storageAccountSasSecretName;
             return this;
         }
+
         public Builder storageAccountSasSecretName(String storageAccountSasSecretName) {
-            this.storageAccountSasSecretName = Output.of(Objects.requireNonNull(storageAccountSasSecretName));
-            return this;
+            return storageAccountSasSecretName(Output.of(storageAccountSasSecretName));
         }
+
         public Builder targetLocation(Output<String> targetLocation) {
-            this.targetLocation = Objects.requireNonNull(targetLocation);
+            $.targetLocation = targetLocation;
             return this;
         }
+
         public Builder targetLocation(String targetLocation) {
-            this.targetLocation = Output.of(Objects.requireNonNull(targetLocation));
-            return this;
-        }        public VMwareCbtContainerMappingInputArgs build() {
-            return new VMwareCbtContainerMappingInputArgs(instanceType, keyVaultId, keyVaultUri, serviceBusConnectionStringSecretName, storageAccountId, storageAccountSasSecretName, targetLocation);
+            return targetLocation(Output.of(targetLocation));
+        }
+
+        public VMwareCbtContainerMappingInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            $.keyVaultId = Objects.requireNonNull($.keyVaultId, "expected parameter 'keyVaultId' to be non-null");
+            $.keyVaultUri = Objects.requireNonNull($.keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
+            $.serviceBusConnectionStringSecretName = Objects.requireNonNull($.serviceBusConnectionStringSecretName, "expected parameter 'serviceBusConnectionStringSecretName' to be non-null");
+            $.storageAccountId = Objects.requireNonNull($.storageAccountId, "expected parameter 'storageAccountId' to be non-null");
+            $.storageAccountSasSecretName = Objects.requireNonNull($.storageAccountSasSecretName, "expected parameter 'storageAccountSasSecretName' to be non-null");
+            $.targetLocation = Objects.requireNonNull($.targetLocation, "expected parameter 'targetLocation' to be non-null");
+            return $;
         }
     }
+
 }

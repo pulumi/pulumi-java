@@ -19,10 +19,10 @@ public final class GetVirtualRouterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetVirtualRouterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetVirtualRouterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="virtualRouterName", required=true)
-      private final String virtualRouterName;
+    private String virtualRouterName;
 
     public String virtualRouterName() {
         return this.virtualRouterName;
     }
 
-    public GetVirtualRouterArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String virtualRouterName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualRouterName = Objects.requireNonNull(virtualRouterName, "expected parameter 'virtualRouterName' to be non-null");
-    }
+    private GetVirtualRouterArgs() {}
 
-    private GetVirtualRouterArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.virtualRouterName = null;
+    private GetVirtualRouterArgs(GetVirtualRouterArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualRouterName = $.virtualRouterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualRouterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String virtualRouterName;
+        private GetVirtualRouterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualRouterArgs();
         }
 
         public Builder(GetVirtualRouterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualRouterName = defaults.virtualRouterName;
+            $ = new GetVirtualRouterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualRouterName(String virtualRouterName) {
-            this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
+            $.virtualRouterName = virtualRouterName;
             return this;
-        }        public GetVirtualRouterArgs build() {
-            return new GetVirtualRouterArgs(expand, resourceGroupName, virtualRouterName);
+        }
+
+        public GetVirtualRouterArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualRouterName = Objects.requireNonNull($.virtualRouterName, "expected parameter 'virtualRouterName' to be non-null");
+            return $;
         }
     }
+
 }

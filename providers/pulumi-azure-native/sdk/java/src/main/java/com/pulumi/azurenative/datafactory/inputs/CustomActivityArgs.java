@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="autoUserSpecification")
-      private final @Nullable Output<Object> autoUserSpecification;
+    private @Nullable Output<Object> autoUserSpecification;
 
-    public Output<Object> autoUserSpecification() {
-        return this.autoUserSpecification == null ? Codegen.empty() : this.autoUserSpecification;
+    public Optional<Output<Object>> autoUserSpecification() {
+        return Optional.ofNullable(this.autoUserSpecification);
     }
 
     /**
@@ -43,7 +44,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="command", required=true)
-      private final Output<Object> command;
+    private Output<Object> command;
 
     public Output<Object> command() {
         return this.command;
@@ -54,10 +55,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="extendedProperties")
-      private final @Nullable Output<Map<String,Object>> extendedProperties;
+    private @Nullable Output<Map<String,Object>> extendedProperties;
 
-    public Output<Map<String,Object>> extendedProperties() {
-        return this.extendedProperties == null ? Codegen.empty() : this.extendedProperties;
+    public Optional<Output<Map<String,Object>>> extendedProperties() {
+        return Optional.ofNullable(this.extendedProperties);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Output<Object> folderPath;
+    private @Nullable Output<Object> folderPath;
 
-    public Output<Object> folderPath() {
-        return this.folderPath == null ? Codegen.empty() : this.folderPath;
+    public Optional<Output<Object>> folderPath() {
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
-        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -109,7 +110,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -120,10 +121,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<ActivityPolicyArgs> policy;
+    private @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<ActivityPolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -131,10 +132,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="referenceObjects")
-      private final @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects;
+    private @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects;
 
-    public Output<CustomActivityReferenceObjectArgs> referenceObjects() {
-        return this.referenceObjects == null ? Codegen.empty() : this.referenceObjects;
+    public Optional<Output<CustomActivityReferenceObjectArgs>> referenceObjects() {
+        return Optional.ofNullable(this.referenceObjects);
     }
 
     /**
@@ -142,10 +143,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceLinkedService")
-      private final @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService;
+    private @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> resourceLinkedService() {
-        return this.resourceLinkedService == null ? Codegen.empty() : this.resourceLinkedService;
+    public Optional<Output<LinkedServiceReferenceArgs>> resourceLinkedService() {
+        return Optional.ofNullable(this.resourceLinkedService);
     }
 
     /**
@@ -153,10 +154,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="retentionTimeInDays")
-      private final @Nullable Output<Object> retentionTimeInDays;
+    private @Nullable Output<Object> retentionTimeInDays;
 
-    public Output<Object> retentionTimeInDays() {
-        return this.retentionTimeInDays == null ? Codegen.empty() : this.retentionTimeInDays;
+    public Optional<Output<Object>> retentionTimeInDays() {
+        return Optional.ofNullable(this.retentionTimeInDays);
     }
 
     /**
@@ -165,7 +166,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -176,225 +177,189 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public CustomActivityArgs(
-        @Nullable Output<Object> autoUserSpecification,
-        Output<Object> command,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<Map<String,Object>> extendedProperties,
-        @Nullable Output<Object> folderPath,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
-        Output<String> name,
-        @Nullable Output<ActivityPolicyArgs> policy,
-        @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects,
-        @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService,
-        @Nullable Output<Object> retentionTimeInDays,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.autoUserSpecification = autoUserSpecification;
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.extendedProperties = extendedProperties;
-        this.folderPath = folderPath;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.referenceObjects = referenceObjects;
-        this.resourceLinkedService = resourceLinkedService;
-        this.retentionTimeInDays = retentionTimeInDays;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private CustomActivityArgs() {}
 
-    private CustomActivityArgs() {
-        this.autoUserSpecification = Codegen.empty();
-        this.command = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.extendedProperties = Codegen.empty();
-        this.folderPath = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.referenceObjects = Codegen.empty();
-        this.resourceLinkedService = Codegen.empty();
-        this.retentionTimeInDays = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private CustomActivityArgs(CustomActivityArgs $) {
+        this.autoUserSpecification = $.autoUserSpecification;
+        this.command = $.command;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.extendedProperties = $.extendedProperties;
+        this.folderPath = $.folderPath;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.referenceObjects = $.referenceObjects;
+        this.resourceLinkedService = $.resourceLinkedService;
+        this.retentionTimeInDays = $.retentionTimeInDays;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> autoUserSpecification;
-        private Output<Object> command;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Map<String,Object>> extendedProperties;
-        private @Nullable Output<Object> folderPath;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private Output<String> name;
-        private @Nullable Output<ActivityPolicyArgs> policy;
-        private @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects;
-        private @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService;
-        private @Nullable Output<Object> retentionTimeInDays;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private CustomActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomActivityArgs();
         }
 
         public Builder(CustomActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUserSpecification = defaults.autoUserSpecification;
-    	      this.command = defaults.command;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.extendedProperties = defaults.extendedProperties;
-    	      this.folderPath = defaults.folderPath;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.referenceObjects = defaults.referenceObjects;
-    	      this.resourceLinkedService = defaults.resourceLinkedService;
-    	      this.retentionTimeInDays = defaults.retentionTimeInDays;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new CustomActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUserSpecification(@Nullable Output<Object> autoUserSpecification) {
-            this.autoUserSpecification = autoUserSpecification;
+            $.autoUserSpecification = autoUserSpecification;
             return this;
         }
-        public Builder autoUserSpecification(@Nullable Object autoUserSpecification) {
-            this.autoUserSpecification = Codegen.ofNullable(autoUserSpecification);
-            return this;
+
+        public Builder autoUserSpecification(Object autoUserSpecification) {
+            return autoUserSpecification(Output.of(autoUserSpecification));
         }
+
         public Builder command(Output<Object> command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder command(Object command) {
-            this.command = Output.of(Objects.requireNonNull(command));
-            return this;
+            return command(Output.of(command));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder extendedProperties(@Nullable Output<Map<String,Object>> extendedProperties) {
-            this.extendedProperties = extendedProperties;
+            $.extendedProperties = extendedProperties;
             return this;
         }
-        public Builder extendedProperties(@Nullable Map<String,Object> extendedProperties) {
-            this.extendedProperties = Codegen.ofNullable(extendedProperties);
-            return this;
+
+        public Builder extendedProperties(Map<String,Object> extendedProperties) {
+            return extendedProperties(Output.of(extendedProperties));
         }
+
         public Builder folderPath(@Nullable Output<Object> folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
-        public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Codegen.ofNullable(folderPath);
-            return this;
+
+        public Builder folderPath(Object folderPath) {
+            return folderPath(Output.of(folderPath));
         }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
-        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
-            return this;
+
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(ActivityPolicyArgs policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder referenceObjects(@Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects) {
-            this.referenceObjects = referenceObjects;
+            $.referenceObjects = referenceObjects;
             return this;
         }
-        public Builder referenceObjects(@Nullable CustomActivityReferenceObjectArgs referenceObjects) {
-            this.referenceObjects = Codegen.ofNullable(referenceObjects);
-            return this;
+
+        public Builder referenceObjects(CustomActivityReferenceObjectArgs referenceObjects) {
+            return referenceObjects(Output.of(referenceObjects));
         }
+
         public Builder resourceLinkedService(@Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService) {
-            this.resourceLinkedService = resourceLinkedService;
+            $.resourceLinkedService = resourceLinkedService;
             return this;
         }
-        public Builder resourceLinkedService(@Nullable LinkedServiceReferenceArgs resourceLinkedService) {
-            this.resourceLinkedService = Codegen.ofNullable(resourceLinkedService);
-            return this;
+
+        public Builder resourceLinkedService(LinkedServiceReferenceArgs resourceLinkedService) {
+            return resourceLinkedService(Output.of(resourceLinkedService));
         }
+
         public Builder retentionTimeInDays(@Nullable Output<Object> retentionTimeInDays) {
-            this.retentionTimeInDays = retentionTimeInDays;
+            $.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
-        public Builder retentionTimeInDays(@Nullable Object retentionTimeInDays) {
-            this.retentionTimeInDays = Codegen.ofNullable(retentionTimeInDays);
-            return this;
+
+        public Builder retentionTimeInDays(Object retentionTimeInDays) {
+            return retentionTimeInDays(Output.of(retentionTimeInDays));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public CustomActivityArgs build() {
-            return new CustomActivityArgs(autoUserSpecification, command, dependsOn, description, extendedProperties, folderPath, linkedServiceName, name, policy, referenceObjects, resourceLinkedService, retentionTimeInDays, type, userProperties);
+        }
+
+        public CustomActivityArgs build() {
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

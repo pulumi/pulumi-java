@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2ProximityArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="windowAfter")
-      private final @Nullable Output<Integer> windowAfter;
+    private @Nullable Output<Integer> windowAfter;
 
-    public Output<Integer> windowAfter() {
-        return this.windowAfter == null ? Codegen.empty() : this.windowAfter;
+    public Optional<Output<Integer>> windowAfter() {
+        return Optional.ofNullable(this.windowAfter);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GooglePrivacyDlpV2ProximityArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="windowBefore")
-      private final @Nullable Output<Integer> windowBefore;
+    private @Nullable Output<Integer> windowBefore;
 
-    public Output<Integer> windowBefore() {
-        return this.windowBefore == null ? Codegen.empty() : this.windowBefore;
+    public Optional<Output<Integer>> windowBefore() {
+        return Optional.ofNullable(this.windowBefore);
     }
 
-    public GooglePrivacyDlpV2ProximityArgs(
-        @Nullable Output<Integer> windowAfter,
-        @Nullable Output<Integer> windowBefore) {
-        this.windowAfter = windowAfter;
-        this.windowBefore = windowBefore;
-    }
+    private GooglePrivacyDlpV2ProximityArgs() {}
 
-    private GooglePrivacyDlpV2ProximityArgs() {
-        this.windowAfter = Codegen.empty();
-        this.windowBefore = Codegen.empty();
+    private GooglePrivacyDlpV2ProximityArgs(GooglePrivacyDlpV2ProximityArgs $) {
+        this.windowAfter = $.windowAfter;
+        this.windowBefore = $.windowBefore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ProximityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> windowAfter;
-        private @Nullable Output<Integer> windowBefore;
+        private GooglePrivacyDlpV2ProximityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ProximityArgs();
         }
 
         public Builder(GooglePrivacyDlpV2ProximityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.windowAfter = defaults.windowAfter;
-    	      this.windowBefore = defaults.windowBefore;
+            $ = new GooglePrivacyDlpV2ProximityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder windowAfter(@Nullable Output<Integer> windowAfter) {
-            this.windowAfter = windowAfter;
+            $.windowAfter = windowAfter;
             return this;
         }
-        public Builder windowAfter(@Nullable Integer windowAfter) {
-            this.windowAfter = Codegen.ofNullable(windowAfter);
-            return this;
+
+        public Builder windowAfter(Integer windowAfter) {
+            return windowAfter(Output.of(windowAfter));
         }
+
         public Builder windowBefore(@Nullable Output<Integer> windowBefore) {
-            this.windowBefore = windowBefore;
+            $.windowBefore = windowBefore;
             return this;
         }
-        public Builder windowBefore(@Nullable Integer windowBefore) {
-            this.windowBefore = Codegen.ofNullable(windowBefore);
-            return this;
-        }        public GooglePrivacyDlpV2ProximityArgs build() {
-            return new GooglePrivacyDlpV2ProximityArgs(windowAfter, windowBefore);
+
+        public Builder windowBefore(Integer windowBefore) {
+            return windowBefore(Output.of(windowBefore));
+        }
+
+        public GooglePrivacyDlpV2ProximityArgs build() {
+            return $;
         }
     }
+
 }

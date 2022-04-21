@@ -21,7 +21,7 @@ public final class OperationErrorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,7 +32,7 @@ public final class OperationErrorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -43,64 +43,59 @@ public final class OperationErrorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public OperationErrorResponse(
-        String code,
-        String kind,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private OperationErrorResponse() {}
 
-    private OperationErrorResponse() {
-        this.code = null;
-        this.kind = null;
-        this.message = null;
+    private OperationErrorResponse(OperationErrorResponse $) {
+        this.code = $.code;
+        this.kind = $.kind;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String kind;
-        private String message;
+        private OperationErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationErrorResponse();
         }
 
         public Builder(OperationErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.kind = defaults.kind;
-    	      this.message = defaults.message;
+            $ = new OperationErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public OperationErrorResponse build() {
-            return new OperationErrorResponse(code, kind, message);
+        }
+
+        public OperationErrorResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

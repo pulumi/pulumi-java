@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +25,7 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="managedInstanceResourceId", required=true)
-      private final Output<String> managedInstanceResourceId;
+    private Output<String> managedInstanceResourceId;
 
     public Output<String> managedInstanceResourceId() {
         return this.managedInstanceResourceId;
@@ -35,10 +36,10 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -47,7 +48,7 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -58,89 +59,80 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public MiSqlConnectionInfoArgs(
-        Output<String> managedInstanceResourceId,
-        @Nullable Output<String> password,
-        Output<String> type,
-        @Nullable Output<String> userName) {
-        this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId, "expected parameter 'managedInstanceResourceId' to be non-null");
-        this.password = password;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userName = userName;
-    }
+    private MiSqlConnectionInfoArgs() {}
 
-    private MiSqlConnectionInfoArgs() {
-        this.managedInstanceResourceId = Codegen.empty();
-        this.password = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userName = Codegen.empty();
+    private MiSqlConnectionInfoArgs(MiSqlConnectionInfoArgs $) {
+        this.managedInstanceResourceId = $.managedInstanceResourceId;
+        this.password = $.password;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MiSqlConnectionInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> managedInstanceResourceId;
-        private @Nullable Output<String> password;
-        private Output<String> type;
-        private @Nullable Output<String> userName;
+        private MiSqlConnectionInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MiSqlConnectionInfoArgs();
         }
 
         public Builder(MiSqlConnectionInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedInstanceResourceId = defaults.managedInstanceResourceId;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new MiSqlConnectionInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managedInstanceResourceId(Output<String> managedInstanceResourceId) {
-            this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId);
+            $.managedInstanceResourceId = managedInstanceResourceId;
             return this;
         }
+
         public Builder managedInstanceResourceId(String managedInstanceResourceId) {
-            this.managedInstanceResourceId = Output.of(Objects.requireNonNull(managedInstanceResourceId));
-            return this;
+            return managedInstanceResourceId(Output.of(managedInstanceResourceId));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public MiSqlConnectionInfoArgs build() {
-            return new MiSqlConnectionInfoArgs(managedInstanceResourceId, password, type, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public MiSqlConnectionInfoArgs build() {
+            $.managedInstanceResourceId = Objects.requireNonNull($.managedInstanceResourceId, "expected parameter 'managedInstanceResourceId' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

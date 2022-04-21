@@ -12,10 +12,10 @@ import com.pulumi.azurenative.network.inputs.P2SVpnServerConfigVpnClientRootCert
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="p2SVpnServerConfigRadiusClientRootCertificates")
-      private final @Nullable Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> p2SVpnServerConfigRadiusClientRootCertificates;
+    private @Nullable Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> p2SVpnServerConfigRadiusClientRootCertificates;
 
-    public Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> p2SVpnServerConfigRadiusClientRootCertificates() {
-        return this.p2SVpnServerConfigRadiusClientRootCertificates == null ? Codegen.empty() : this.p2SVpnServerConfigRadiusClientRootCertificates;
+    public Optional<Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>>> p2SVpnServerConfigRadiusClientRootCertificates() {
+        return Optional.ofNullable(this.p2SVpnServerConfigRadiusClientRootCertificates);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="p2SVpnServerConfigRadiusServerRootCertificates")
-      private final @Nullable Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> p2SVpnServerConfigRadiusServerRootCertificates;
+    private @Nullable Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> p2SVpnServerConfigRadiusServerRootCertificates;
 
-    public Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> p2SVpnServerConfigRadiusServerRootCertificates() {
-        return this.p2SVpnServerConfigRadiusServerRootCertificates == null ? Codegen.empty() : this.p2SVpnServerConfigRadiusServerRootCertificates;
+    public Optional<Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>>> p2SVpnServerConfigRadiusServerRootCertificates() {
+        return Optional.ofNullable(this.p2SVpnServerConfigRadiusServerRootCertificates);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="p2SVpnServerConfigVpnClientRevokedCertificates")
-      private final @Nullable Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> p2SVpnServerConfigVpnClientRevokedCertificates;
+    private @Nullable Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> p2SVpnServerConfigVpnClientRevokedCertificates;
 
-    public Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> p2SVpnServerConfigVpnClientRevokedCertificates() {
-        return this.p2SVpnServerConfigVpnClientRevokedCertificates == null ? Codegen.empty() : this.p2SVpnServerConfigVpnClientRevokedCertificates;
+    public Optional<Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>>> p2SVpnServerConfigVpnClientRevokedCertificates() {
+        return Optional.ofNullable(this.p2SVpnServerConfigVpnClientRevokedCertificates);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="p2SVpnServerConfigVpnClientRootCertificates")
-      private final @Nullable Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> p2SVpnServerConfigVpnClientRootCertificates;
+    private @Nullable Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> p2SVpnServerConfigVpnClientRootCertificates;
 
-    public Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> p2SVpnServerConfigVpnClientRootCertificates() {
-        return this.p2SVpnServerConfigVpnClientRootCertificates == null ? Codegen.empty() : this.p2SVpnServerConfigVpnClientRootCertificates;
+    public Optional<Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>>> p2SVpnServerConfigVpnClientRootCertificates() {
+        return Optional.ofNullable(this.p2SVpnServerConfigVpnClientRootCertificates);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="p2SVpnServerConfigurationName")
-      private final @Nullable Output<String> p2SVpnServerConfigurationName;
+    private @Nullable Output<String> p2SVpnServerConfigurationName;
 
-    public Output<String> p2SVpnServerConfigurationName() {
-        return this.p2SVpnServerConfigurationName == null ? Codegen.empty() : this.p2SVpnServerConfigurationName;
+    public Optional<Output<String>> p2SVpnServerConfigurationName() {
+        return Optional.ofNullable(this.p2SVpnServerConfigurationName);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="radiusServerAddress")
-      private final @Nullable Output<String> radiusServerAddress;
+    private @Nullable Output<String> radiusServerAddress;
 
-    public Output<String> radiusServerAddress() {
-        return this.radiusServerAddress == null ? Codegen.empty() : this.radiusServerAddress;
+    public Optional<Output<String>> radiusServerAddress() {
+        return Optional.ofNullable(this.radiusServerAddress);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="radiusServerSecret")
-      private final @Nullable Output<String> radiusServerSecret;
+    private @Nullable Output<String> radiusServerSecret;
 
-    public Output<String> radiusServerSecret() {
-        return this.radiusServerSecret == null ? Codegen.empty() : this.radiusServerSecret;
+    public Optional<Output<String>> radiusServerSecret() {
+        return Optional.ofNullable(this.radiusServerSecret);
     }
 
     /**
@@ -127,7 +127,7 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -138,7 +138,7 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="virtualWanName", required=true)
-      private final Output<String> virtualWanName;
+    private Output<String> virtualWanName;
 
     public Output<String> virtualWanName() {
         return this.virtualWanName;
@@ -149,10 +149,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="vpnClientIpsecPolicies")
-      private final @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
+    private @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
 
-    public Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies() {
-        return this.vpnClientIpsecPolicies == null ? Codegen.empty() : this.vpnClientIpsecPolicies;
+    public Optional<Output<List<IpsecPolicyArgs>>> vpnClientIpsecPolicies() {
+        return Optional.ofNullable(this.vpnClientIpsecPolicies);
     }
 
     /**
@@ -160,224 +160,194 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="vpnProtocols")
-      private final @Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols;
+    private @Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols;
 
-    public Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols() {
-        return this.vpnProtocols == null ? Codegen.empty() : this.vpnProtocols;
+    public Optional<Output<List<Either<String,VpnGatewayTunnelingProtocol>>>> vpnProtocols() {
+        return Optional.ofNullable(this.vpnProtocols);
     }
 
-    public P2sVpnServerConfigurationArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> p2SVpnServerConfigRadiusClientRootCertificates,
-        @Nullable Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> p2SVpnServerConfigRadiusServerRootCertificates,
-        @Nullable Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> p2SVpnServerConfigVpnClientRevokedCertificates,
-        @Nullable Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> p2SVpnServerConfigVpnClientRootCertificates,
-        @Nullable Output<String> p2SVpnServerConfigurationName,
-        @Nullable Output<String> radiusServerAddress,
-        @Nullable Output<String> radiusServerSecret,
-        Output<String> resourceGroupName,
-        Output<String> virtualWanName,
-        @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies,
-        @Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols) {
-        this.id = id;
-        this.name = name;
-        this.p2SVpnServerConfigRadiusClientRootCertificates = p2SVpnServerConfigRadiusClientRootCertificates;
-        this.p2SVpnServerConfigRadiusServerRootCertificates = p2SVpnServerConfigRadiusServerRootCertificates;
-        this.p2SVpnServerConfigVpnClientRevokedCertificates = p2SVpnServerConfigVpnClientRevokedCertificates;
-        this.p2SVpnServerConfigVpnClientRootCertificates = p2SVpnServerConfigVpnClientRootCertificates;
-        this.p2SVpnServerConfigurationName = p2SVpnServerConfigurationName;
-        this.radiusServerAddress = radiusServerAddress;
-        this.radiusServerSecret = radiusServerSecret;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualWanName = Objects.requireNonNull(virtualWanName, "expected parameter 'virtualWanName' to be non-null");
-        this.vpnClientIpsecPolicies = vpnClientIpsecPolicies;
-        this.vpnProtocols = vpnProtocols;
-    }
+    private P2sVpnServerConfigurationArgs() {}
 
-    private P2sVpnServerConfigurationArgs() {
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.p2SVpnServerConfigRadiusClientRootCertificates = Codegen.empty();
-        this.p2SVpnServerConfigRadiusServerRootCertificates = Codegen.empty();
-        this.p2SVpnServerConfigVpnClientRevokedCertificates = Codegen.empty();
-        this.p2SVpnServerConfigVpnClientRootCertificates = Codegen.empty();
-        this.p2SVpnServerConfigurationName = Codegen.empty();
-        this.radiusServerAddress = Codegen.empty();
-        this.radiusServerSecret = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.virtualWanName = Codegen.empty();
-        this.vpnClientIpsecPolicies = Codegen.empty();
-        this.vpnProtocols = Codegen.empty();
+    private P2sVpnServerConfigurationArgs(P2sVpnServerConfigurationArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.p2SVpnServerConfigRadiusClientRootCertificates = $.p2SVpnServerConfigRadiusClientRootCertificates;
+        this.p2SVpnServerConfigRadiusServerRootCertificates = $.p2SVpnServerConfigRadiusServerRootCertificates;
+        this.p2SVpnServerConfigVpnClientRevokedCertificates = $.p2SVpnServerConfigVpnClientRevokedCertificates;
+        this.p2SVpnServerConfigVpnClientRootCertificates = $.p2SVpnServerConfigVpnClientRootCertificates;
+        this.p2SVpnServerConfigurationName = $.p2SVpnServerConfigurationName;
+        this.radiusServerAddress = $.radiusServerAddress;
+        this.radiusServerSecret = $.radiusServerSecret;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualWanName = $.virtualWanName;
+        this.vpnClientIpsecPolicies = $.vpnClientIpsecPolicies;
+        this.vpnProtocols = $.vpnProtocols;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(P2sVpnServerConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> p2SVpnServerConfigRadiusClientRootCertificates;
-        private @Nullable Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> p2SVpnServerConfigRadiusServerRootCertificates;
-        private @Nullable Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> p2SVpnServerConfigVpnClientRevokedCertificates;
-        private @Nullable Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> p2SVpnServerConfigVpnClientRootCertificates;
-        private @Nullable Output<String> p2SVpnServerConfigurationName;
-        private @Nullable Output<String> radiusServerAddress;
-        private @Nullable Output<String> radiusServerSecret;
-        private Output<String> resourceGroupName;
-        private Output<String> virtualWanName;
-        private @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
-        private @Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols;
+        private P2sVpnServerConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new P2sVpnServerConfigurationArgs();
         }
 
         public Builder(P2sVpnServerConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.p2SVpnServerConfigRadiusClientRootCertificates = defaults.p2SVpnServerConfigRadiusClientRootCertificates;
-    	      this.p2SVpnServerConfigRadiusServerRootCertificates = defaults.p2SVpnServerConfigRadiusServerRootCertificates;
-    	      this.p2SVpnServerConfigVpnClientRevokedCertificates = defaults.p2SVpnServerConfigVpnClientRevokedCertificates;
-    	      this.p2SVpnServerConfigVpnClientRootCertificates = defaults.p2SVpnServerConfigVpnClientRootCertificates;
-    	      this.p2SVpnServerConfigurationName = defaults.p2SVpnServerConfigurationName;
-    	      this.radiusServerAddress = defaults.radiusServerAddress;
-    	      this.radiusServerSecret = defaults.radiusServerSecret;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualWanName = defaults.virtualWanName;
-    	      this.vpnClientIpsecPolicies = defaults.vpnClientIpsecPolicies;
-    	      this.vpnProtocols = defaults.vpnProtocols;
+            $ = new P2sVpnServerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder p2SVpnServerConfigRadiusClientRootCertificates(@Nullable Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> p2SVpnServerConfigRadiusClientRootCertificates) {
-            this.p2SVpnServerConfigRadiusClientRootCertificates = p2SVpnServerConfigRadiusClientRootCertificates;
+            $.p2SVpnServerConfigRadiusClientRootCertificates = p2SVpnServerConfigRadiusClientRootCertificates;
             return this;
         }
-        public Builder p2SVpnServerConfigRadiusClientRootCertificates(@Nullable List<P2SVpnServerConfigRadiusClientRootCertificateArgs> p2SVpnServerConfigRadiusClientRootCertificates) {
-            this.p2SVpnServerConfigRadiusClientRootCertificates = Codegen.ofNullable(p2SVpnServerConfigRadiusClientRootCertificates);
-            return this;
+
+        public Builder p2SVpnServerConfigRadiusClientRootCertificates(List<P2SVpnServerConfigRadiusClientRootCertificateArgs> p2SVpnServerConfigRadiusClientRootCertificates) {
+            return p2SVpnServerConfigRadiusClientRootCertificates(Output.of(p2SVpnServerConfigRadiusClientRootCertificates));
         }
+
         public Builder p2SVpnServerConfigRadiusClientRootCertificates(P2SVpnServerConfigRadiusClientRootCertificateArgs... p2SVpnServerConfigRadiusClientRootCertificates) {
             return p2SVpnServerConfigRadiusClientRootCertificates(List.of(p2SVpnServerConfigRadiusClientRootCertificates));
         }
+
         public Builder p2SVpnServerConfigRadiusServerRootCertificates(@Nullable Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> p2SVpnServerConfigRadiusServerRootCertificates) {
-            this.p2SVpnServerConfigRadiusServerRootCertificates = p2SVpnServerConfigRadiusServerRootCertificates;
+            $.p2SVpnServerConfigRadiusServerRootCertificates = p2SVpnServerConfigRadiusServerRootCertificates;
             return this;
         }
-        public Builder p2SVpnServerConfigRadiusServerRootCertificates(@Nullable List<P2SVpnServerConfigRadiusServerRootCertificateArgs> p2SVpnServerConfigRadiusServerRootCertificates) {
-            this.p2SVpnServerConfigRadiusServerRootCertificates = Codegen.ofNullable(p2SVpnServerConfigRadiusServerRootCertificates);
-            return this;
+
+        public Builder p2SVpnServerConfigRadiusServerRootCertificates(List<P2SVpnServerConfigRadiusServerRootCertificateArgs> p2SVpnServerConfigRadiusServerRootCertificates) {
+            return p2SVpnServerConfigRadiusServerRootCertificates(Output.of(p2SVpnServerConfigRadiusServerRootCertificates));
         }
+
         public Builder p2SVpnServerConfigRadiusServerRootCertificates(P2SVpnServerConfigRadiusServerRootCertificateArgs... p2SVpnServerConfigRadiusServerRootCertificates) {
             return p2SVpnServerConfigRadiusServerRootCertificates(List.of(p2SVpnServerConfigRadiusServerRootCertificates));
         }
+
         public Builder p2SVpnServerConfigVpnClientRevokedCertificates(@Nullable Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> p2SVpnServerConfigVpnClientRevokedCertificates) {
-            this.p2SVpnServerConfigVpnClientRevokedCertificates = p2SVpnServerConfigVpnClientRevokedCertificates;
+            $.p2SVpnServerConfigVpnClientRevokedCertificates = p2SVpnServerConfigVpnClientRevokedCertificates;
             return this;
         }
-        public Builder p2SVpnServerConfigVpnClientRevokedCertificates(@Nullable List<P2SVpnServerConfigVpnClientRevokedCertificateArgs> p2SVpnServerConfigVpnClientRevokedCertificates) {
-            this.p2SVpnServerConfigVpnClientRevokedCertificates = Codegen.ofNullable(p2SVpnServerConfigVpnClientRevokedCertificates);
-            return this;
+
+        public Builder p2SVpnServerConfigVpnClientRevokedCertificates(List<P2SVpnServerConfigVpnClientRevokedCertificateArgs> p2SVpnServerConfigVpnClientRevokedCertificates) {
+            return p2SVpnServerConfigVpnClientRevokedCertificates(Output.of(p2SVpnServerConfigVpnClientRevokedCertificates));
         }
+
         public Builder p2SVpnServerConfigVpnClientRevokedCertificates(P2SVpnServerConfigVpnClientRevokedCertificateArgs... p2SVpnServerConfigVpnClientRevokedCertificates) {
             return p2SVpnServerConfigVpnClientRevokedCertificates(List.of(p2SVpnServerConfigVpnClientRevokedCertificates));
         }
+
         public Builder p2SVpnServerConfigVpnClientRootCertificates(@Nullable Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> p2SVpnServerConfigVpnClientRootCertificates) {
-            this.p2SVpnServerConfigVpnClientRootCertificates = p2SVpnServerConfigVpnClientRootCertificates;
+            $.p2SVpnServerConfigVpnClientRootCertificates = p2SVpnServerConfigVpnClientRootCertificates;
             return this;
         }
-        public Builder p2SVpnServerConfigVpnClientRootCertificates(@Nullable List<P2SVpnServerConfigVpnClientRootCertificateArgs> p2SVpnServerConfigVpnClientRootCertificates) {
-            this.p2SVpnServerConfigVpnClientRootCertificates = Codegen.ofNullable(p2SVpnServerConfigVpnClientRootCertificates);
-            return this;
+
+        public Builder p2SVpnServerConfigVpnClientRootCertificates(List<P2SVpnServerConfigVpnClientRootCertificateArgs> p2SVpnServerConfigVpnClientRootCertificates) {
+            return p2SVpnServerConfigVpnClientRootCertificates(Output.of(p2SVpnServerConfigVpnClientRootCertificates));
         }
+
         public Builder p2SVpnServerConfigVpnClientRootCertificates(P2SVpnServerConfigVpnClientRootCertificateArgs... p2SVpnServerConfigVpnClientRootCertificates) {
             return p2SVpnServerConfigVpnClientRootCertificates(List.of(p2SVpnServerConfigVpnClientRootCertificates));
         }
+
         public Builder p2SVpnServerConfigurationName(@Nullable Output<String> p2SVpnServerConfigurationName) {
-            this.p2SVpnServerConfigurationName = p2SVpnServerConfigurationName;
+            $.p2SVpnServerConfigurationName = p2SVpnServerConfigurationName;
             return this;
         }
-        public Builder p2SVpnServerConfigurationName(@Nullable String p2SVpnServerConfigurationName) {
-            this.p2SVpnServerConfigurationName = Codegen.ofNullable(p2SVpnServerConfigurationName);
-            return this;
+
+        public Builder p2SVpnServerConfigurationName(String p2SVpnServerConfigurationName) {
+            return p2SVpnServerConfigurationName(Output.of(p2SVpnServerConfigurationName));
         }
+
         public Builder radiusServerAddress(@Nullable Output<String> radiusServerAddress) {
-            this.radiusServerAddress = radiusServerAddress;
+            $.radiusServerAddress = radiusServerAddress;
             return this;
         }
-        public Builder radiusServerAddress(@Nullable String radiusServerAddress) {
-            this.radiusServerAddress = Codegen.ofNullable(radiusServerAddress);
-            return this;
+
+        public Builder radiusServerAddress(String radiusServerAddress) {
+            return radiusServerAddress(Output.of(radiusServerAddress));
         }
+
         public Builder radiusServerSecret(@Nullable Output<String> radiusServerSecret) {
-            this.radiusServerSecret = radiusServerSecret;
+            $.radiusServerSecret = radiusServerSecret;
             return this;
         }
-        public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
-            this.radiusServerSecret = Codegen.ofNullable(radiusServerSecret);
-            return this;
+
+        public Builder radiusServerSecret(String radiusServerSecret) {
+            return radiusServerSecret(Output.of(radiusServerSecret));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder virtualWanName(Output<String> virtualWanName) {
-            this.virtualWanName = Objects.requireNonNull(virtualWanName);
+            $.virtualWanName = virtualWanName;
             return this;
         }
+
         public Builder virtualWanName(String virtualWanName) {
-            this.virtualWanName = Output.of(Objects.requireNonNull(virtualWanName));
-            return this;
+            return virtualWanName(Output.of(virtualWanName));
         }
+
         public Builder vpnClientIpsecPolicies(@Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies) {
-            this.vpnClientIpsecPolicies = vpnClientIpsecPolicies;
+            $.vpnClientIpsecPolicies = vpnClientIpsecPolicies;
             return this;
         }
-        public Builder vpnClientIpsecPolicies(@Nullable List<IpsecPolicyArgs> vpnClientIpsecPolicies) {
-            this.vpnClientIpsecPolicies = Codegen.ofNullable(vpnClientIpsecPolicies);
-            return this;
+
+        public Builder vpnClientIpsecPolicies(List<IpsecPolicyArgs> vpnClientIpsecPolicies) {
+            return vpnClientIpsecPolicies(Output.of(vpnClientIpsecPolicies));
         }
+
         public Builder vpnClientIpsecPolicies(IpsecPolicyArgs... vpnClientIpsecPolicies) {
             return vpnClientIpsecPolicies(List.of(vpnClientIpsecPolicies));
         }
+
         public Builder vpnProtocols(@Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols) {
-            this.vpnProtocols = vpnProtocols;
+            $.vpnProtocols = vpnProtocols;
             return this;
         }
-        public Builder vpnProtocols(@Nullable List<Either<String,VpnGatewayTunnelingProtocol>> vpnProtocols) {
-            this.vpnProtocols = Codegen.ofNullable(vpnProtocols);
-            return this;
+
+        public Builder vpnProtocols(List<Either<String,VpnGatewayTunnelingProtocol>> vpnProtocols) {
+            return vpnProtocols(Output.of(vpnProtocols));
         }
+
         public Builder vpnProtocols(Either<String,VpnGatewayTunnelingProtocol>... vpnProtocols) {
             return vpnProtocols(List.of(vpnProtocols));
-        }        public P2sVpnServerConfigurationArgs build() {
-            return new P2sVpnServerConfigurationArgs(id, name, p2SVpnServerConfigRadiusClientRootCertificates, p2SVpnServerConfigRadiusServerRootCertificates, p2SVpnServerConfigVpnClientRevokedCertificates, p2SVpnServerConfigVpnClientRootCertificates, p2SVpnServerConfigurationName, radiusServerAddress, radiusServerSecret, resourceGroupName, virtualWanName, vpnClientIpsecPolicies, vpnProtocols);
+        }
+
+        public P2sVpnServerConfigurationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualWanName = Objects.requireNonNull($.virtualWanName, "expected parameter 'virtualWanName' to be non-null");
+            return $;
         }
     }
+
 }

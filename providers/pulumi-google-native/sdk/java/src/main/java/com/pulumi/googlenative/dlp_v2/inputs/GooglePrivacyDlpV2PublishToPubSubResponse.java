@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse extends com.pulumi.
      * 
      */
     @Import(name="topic", required=true)
-      private final String topic;
+    private String topic;
 
     public String topic() {
         return this.topic;
     }
 
-    public GooglePrivacyDlpV2PublishToPubSubResponse(String topic) {
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private GooglePrivacyDlpV2PublishToPubSubResponse() {}
 
-    private GooglePrivacyDlpV2PublishToPubSubResponse() {
-        this.topic = null;
+    private GooglePrivacyDlpV2PublishToPubSubResponse(GooglePrivacyDlpV2PublishToPubSubResponse $) {
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2PublishToPubSubResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String topic;
+        private GooglePrivacyDlpV2PublishToPubSubResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2PublishToPubSubResponse();
         }
 
         public Builder(GooglePrivacyDlpV2PublishToPubSubResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topic = defaults.topic;
+            $ = new GooglePrivacyDlpV2PublishToPubSubResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder topic(String topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public GooglePrivacyDlpV2PublishToPubSubResponse build() {
-            return new GooglePrivacyDlpV2PublishToPubSubResponse(topic);
+        }
+
+        public GooglePrivacyDlpV2PublishToPubSubResponse build() {
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

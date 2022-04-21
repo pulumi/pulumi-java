@@ -15,126 +15,112 @@ public final class GetObjectAccessControlArgs extends com.pulumi.resources.Invok
     public static final GetObjectAccessControlArgs Empty = new GetObjectAccessControlArgs();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="entity", required=true)
-      private final String entity;
+    private String entity;
 
     public String entity() {
         return this.entity;
     }
 
     @Import(name="generation")
-      private final @Nullable String generation;
+    private @Nullable String generation;
 
     public Optional<String> generation() {
-        return this.generation == null ? Optional.empty() : Optional.ofNullable(this.generation);
+        return Optional.ofNullable(this.generation);
     }
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
     @Import(name="provisionalUserProject")
-      private final @Nullable String provisionalUserProject;
+    private @Nullable String provisionalUserProject;
 
     public Optional<String> provisionalUserProject() {
-        return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
+        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     @Import(name="userProject")
-      private final @Nullable String userProject;
+    private @Nullable String userProject;
 
     public Optional<String> userProject() {
-        return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
+        return Optional.ofNullable(this.userProject);
     }
 
-    public GetObjectAccessControlArgs(
-        String bucket,
-        String entity,
-        @Nullable String generation,
-        String object,
-        @Nullable String provisionalUserProject,
-        @Nullable String userProject) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.entity = Objects.requireNonNull(entity, "expected parameter 'entity' to be non-null");
-        this.generation = generation;
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-        this.provisionalUserProject = provisionalUserProject;
-        this.userProject = userProject;
-    }
+    private GetObjectAccessControlArgs() {}
 
-    private GetObjectAccessControlArgs() {
-        this.bucket = null;
-        this.entity = null;
-        this.generation = null;
-        this.object = null;
-        this.provisionalUserProject = null;
-        this.userProject = null;
+    private GetObjectAccessControlArgs(GetObjectAccessControlArgs $) {
+        this.bucket = $.bucket;
+        this.entity = $.entity;
+        this.generation = $.generation;
+        this.object = $.object;
+        this.provisionalUserProject = $.provisionalUserProject;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetObjectAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String entity;
-        private @Nullable String generation;
-        private String object;
-        private @Nullable String provisionalUserProject;
-        private @Nullable String userProject;
+        private GetObjectAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetObjectAccessControlArgs();
         }
 
         public Builder(GetObjectAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.entity = defaults.entity;
-    	      this.generation = defaults.generation;
-    	      this.object = defaults.object;
-    	      this.provisionalUserProject = defaults.provisionalUserProject;
-    	      this.userProject = defaults.userProject;
+            $ = new GetObjectAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder entity(String entity) {
-            this.entity = Objects.requireNonNull(entity);
+            $.entity = entity;
             return this;
         }
+
         public Builder generation(@Nullable String generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = provisionalUserProject;
+            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
+
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
-        }        public GetObjectAccessControlArgs build() {
-            return new GetObjectAccessControlArgs(bucket, entity, generation, object, provisionalUserProject, userProject);
+        }
+
+        public GetObjectAccessControlArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.entity = Objects.requireNonNull($.entity, "expected parameter 'entity' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

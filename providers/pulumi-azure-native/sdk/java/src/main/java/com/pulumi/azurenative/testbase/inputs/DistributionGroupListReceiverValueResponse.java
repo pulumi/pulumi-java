@@ -24,48 +24,48 @@ public final class DistributionGroupListReceiverValueResponse extends com.pulumi
      * 
      */
     @Import(name="distributionGroups")
-      private final @Nullable List<String> distributionGroups;
+    private @Nullable List<String> distributionGroups;
 
-    public List<String> distributionGroups() {
-        return this.distributionGroups == null ? List.of() : this.distributionGroups;
+    public Optional<List<String>> distributionGroups() {
+        return Optional.ofNullable(this.distributionGroups);
     }
 
-    public DistributionGroupListReceiverValueResponse(@Nullable List<String> distributionGroups) {
-        this.distributionGroups = distributionGroups;
-    }
+    private DistributionGroupListReceiverValueResponse() {}
 
-    private DistributionGroupListReceiverValueResponse() {
-        this.distributionGroups = List.of();
+    private DistributionGroupListReceiverValueResponse(DistributionGroupListReceiverValueResponse $) {
+        this.distributionGroups = $.distributionGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionGroupListReceiverValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> distributionGroups;
+        private DistributionGroupListReceiverValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionGroupListReceiverValueResponse();
         }
 
         public Builder(DistributionGroupListReceiverValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionGroups = defaults.distributionGroups;
+            $ = new DistributionGroupListReceiverValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionGroups(@Nullable List<String> distributionGroups) {
-            this.distributionGroups = distributionGroups;
+            $.distributionGroups = distributionGroups;
             return this;
         }
+
         public Builder distributionGroups(String... distributionGroups) {
             return distributionGroups(List.of(distributionGroups));
-        }        public DistributionGroupListReceiverValueResponse build() {
-            return new DistributionGroupListReceiverValueResponse(distributionGroups);
+        }
+
+        public DistributionGroupListReceiverValueResponse build() {
+            return $;
         }
     }
+
 }

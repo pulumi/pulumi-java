@@ -21,7 +21,7 @@ public final class AttributesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authentication", required=true)
-      private final Boolean authentication;
+    private Boolean authentication;
 
     public Boolean authentication() {
         return this.authentication;
@@ -32,55 +32,52 @@ public final class AttributesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prodModeWriteProtect", required=true)
-      private final Boolean prodModeWriteProtect;
+    private Boolean prodModeWriteProtect;
 
     public Boolean prodModeWriteProtect() {
         return this.prodModeWriteProtect;
     }
 
-    public AttributesResponse(
-        Boolean authentication,
-        Boolean prodModeWriteProtect) {
-        this.authentication = Objects.requireNonNull(authentication, "expected parameter 'authentication' to be non-null");
-        this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect, "expected parameter 'prodModeWriteProtect' to be non-null");
-    }
+    private AttributesResponse() {}
 
-    private AttributesResponse() {
-        this.authentication = null;
-        this.prodModeWriteProtect = null;
+    private AttributesResponse(AttributesResponse $) {
+        this.authentication = $.authentication;
+        this.prodModeWriteProtect = $.prodModeWriteProtect;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttributesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean authentication;
-        private Boolean prodModeWriteProtect;
+        private AttributesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttributesResponse();
         }
 
         public Builder(AttributesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.prodModeWriteProtect = defaults.prodModeWriteProtect;
+            $ = new AttributesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(Boolean authentication) {
-            this.authentication = Objects.requireNonNull(authentication);
+            $.authentication = authentication;
             return this;
         }
+
         public Builder prodModeWriteProtect(Boolean prodModeWriteProtect) {
-            this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect);
+            $.prodModeWriteProtect = prodModeWriteProtect;
             return this;
-        }        public AttributesResponse build() {
-            return new AttributesResponse(authentication, prodModeWriteProtect);
+        }
+
+        public AttributesResponse build() {
+            $.authentication = Objects.requireNonNull($.authentication, "expected parameter 'authentication' to be non-null");
+            $.prodModeWriteProtect = Objects.requireNonNull($.prodModeWriteProtect, "expected parameter 'prodModeWriteProtect' to be non-null");
+            return $;
         }
     }
+
 }

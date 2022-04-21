@@ -19,11 +19,11 @@ import com.pulumi.azurenative.containerinstance.inputs.VolumeArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,10 +36,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="containerGroupName")
-      private final @Nullable Output<String> containerGroupName;
+    private @Nullable Output<String> containerGroupName;
 
-    public Output<String> containerGroupName() {
-        return this.containerGroupName == null ? Codegen.empty() : this.containerGroupName;
+    public Optional<Output<String>> containerGroupName() {
+        return Optional.ofNullable(this.containerGroupName);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="containers", required=true)
-      private final Output<List<ContainerArgs>> containers;
+    private Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> containers() {
         return this.containers;
@@ -58,10 +58,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="diagnostics")
-      private final @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics;
+    private @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics;
 
-    public Output<ContainerGroupDiagnosticsArgs> diagnostics() {
-        return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
+    public Optional<Output<ContainerGroupDiagnosticsArgs>> diagnostics() {
+        return Optional.ofNullable(this.diagnostics);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dnsConfig")
-      private final @Nullable Output<DnsConfigurationArgs> dnsConfig;
+    private @Nullable Output<DnsConfigurationArgs> dnsConfig;
 
-    public Output<DnsConfigurationArgs> dnsConfig() {
-        return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
+    public Optional<Output<DnsConfigurationArgs>> dnsConfig() {
+        return Optional.ofNullable(this.dnsConfig);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="encryptionProperties")
-      private final @Nullable Output<EncryptionPropertiesArgs> encryptionProperties;
+    private @Nullable Output<EncryptionPropertiesArgs> encryptionProperties;
 
-    public Output<EncryptionPropertiesArgs> encryptionProperties() {
-        return this.encryptionProperties == null ? Codegen.empty() : this.encryptionProperties;
+    public Optional<Output<EncryptionPropertiesArgs>> encryptionProperties() {
+        return Optional.ofNullable(this.encryptionProperties);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ContainerGroupIdentityArgs> identity;
+    private @Nullable Output<ContainerGroupIdentityArgs> identity;
 
-    public Output<ContainerGroupIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ContainerGroupIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="imageRegistryCredentials")
-      private final @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
+    private @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
 
-    public Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials() {
-        return this.imageRegistryCredentials == null ? Codegen.empty() : this.imageRegistryCredentials;
+    public Optional<Output<List<ImageRegistryCredentialArgs>>> imageRegistryCredentials() {
+        return Optional.ofNullable(this.imageRegistryCredentials);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="initContainers")
-      private final @Nullable Output<List<InitContainerDefinitionArgs>> initContainers;
+    private @Nullable Output<List<InitContainerDefinitionArgs>> initContainers;
 
-    public Output<List<InitContainerDefinitionArgs>> initContainers() {
-        return this.initContainers == null ? Codegen.empty() : this.initContainers;
+    public Optional<Output<List<InitContainerDefinitionArgs>>> initContainers() {
+        return Optional.ofNullable(this.initContainers);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<IpAddressArgs> ipAddress;
+    private @Nullable Output<IpAddressArgs> ipAddress;
 
-    public Output<IpAddressArgs> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<IpAddressArgs>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile;
+    private @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile;
 
-    public Output<ContainerGroupNetworkProfileArgs> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<ContainerGroupNetworkProfileArgs>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -157,7 +157,7 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="osType", required=true)
-      private final Output<Either<String,OperatingSystemTypes>> osType;
+    private Output<Either<String,OperatingSystemTypes>> osType;
 
     public Output<Either<String,OperatingSystemTypes>> osType() {
         return this.osType;
@@ -168,7 +168,7 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -182,10 +182,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="restartPolicy")
-      private final @Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
+    private @Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
 
-    public Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy() {
-        return this.restartPolicy == null ? Codegen.empty() : this.restartPolicy;
+    public Optional<Output<Either<String,ContainerGroupRestartPolicy>>> restartPolicy() {
+        return Optional.ofNullable(this.restartPolicy);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<Either<String,ContainerGroupSku>> sku;
+    private @Nullable Output<Either<String,ContainerGroupSku>> sku;
 
-    public Output<Either<String,ContainerGroupSku>> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<Either<String,ContainerGroupSku>>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -215,270 +215,227 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<VolumeArgs>> volumes;
+    private @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<VolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public ContainerGroupArgs(
-        @Nullable Output<String> containerGroupName,
-        Output<List<ContainerArgs>> containers,
-        @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics,
-        @Nullable Output<DnsConfigurationArgs> dnsConfig,
-        @Nullable Output<EncryptionPropertiesArgs> encryptionProperties,
-        @Nullable Output<ContainerGroupIdentityArgs> identity,
-        @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials,
-        @Nullable Output<List<InitContainerDefinitionArgs>> initContainers,
-        @Nullable Output<IpAddressArgs> ipAddress,
-        @Nullable Output<String> location,
-        @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile,
-        Output<Either<String,OperatingSystemTypes>> osType,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy,
-        @Nullable Output<Either<String,ContainerGroupSku>> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<VolumeArgs>> volumes) {
-        this.containerGroupName = containerGroupName;
-        this.containers = Objects.requireNonNull(containers, "expected parameter 'containers' to be non-null");
-        this.diagnostics = diagnostics;
-        this.dnsConfig = dnsConfig;
-        this.encryptionProperties = encryptionProperties;
-        this.identity = identity;
-        this.imageRegistryCredentials = imageRegistryCredentials;
-        this.initContainers = initContainers;
-        this.ipAddress = ipAddress;
-        this.location = location;
-        this.networkProfile = networkProfile;
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restartPolicy = restartPolicy;
-        this.sku = sku;
-        this.tags = tags;
-        this.volumes = volumes;
-    }
+    private ContainerGroupArgs() {}
 
-    private ContainerGroupArgs() {
-        this.containerGroupName = Codegen.empty();
-        this.containers = Codegen.empty();
-        this.diagnostics = Codegen.empty();
-        this.dnsConfig = Codegen.empty();
-        this.encryptionProperties = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.imageRegistryCredentials = Codegen.empty();
-        this.initContainers = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networkProfile = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.restartPolicy = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private ContainerGroupArgs(ContainerGroupArgs $) {
+        this.containerGroupName = $.containerGroupName;
+        this.containers = $.containers;
+        this.diagnostics = $.diagnostics;
+        this.dnsConfig = $.dnsConfig;
+        this.encryptionProperties = $.encryptionProperties;
+        this.identity = $.identity;
+        this.imageRegistryCredentials = $.imageRegistryCredentials;
+        this.initContainers = $.initContainers;
+        this.ipAddress = $.ipAddress;
+        this.location = $.location;
+        this.networkProfile = $.networkProfile;
+        this.osType = $.osType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.restartPolicy = $.restartPolicy;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerGroupName;
-        private Output<List<ContainerArgs>> containers;
-        private @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics;
-        private @Nullable Output<DnsConfigurationArgs> dnsConfig;
-        private @Nullable Output<EncryptionPropertiesArgs> encryptionProperties;
-        private @Nullable Output<ContainerGroupIdentityArgs> identity;
-        private @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
-        private @Nullable Output<List<InitContainerDefinitionArgs>> initContainers;
-        private @Nullable Output<IpAddressArgs> ipAddress;
-        private @Nullable Output<String> location;
-        private @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile;
-        private Output<Either<String,OperatingSystemTypes>> osType;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
-        private @Nullable Output<Either<String,ContainerGroupSku>> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<VolumeArgs>> volumes;
+        private ContainerGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerGroupArgs();
         }
 
         public Builder(ContainerGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerGroupName = defaults.containerGroupName;
-    	      this.containers = defaults.containers;
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.dnsConfig = defaults.dnsConfig;
-    	      this.encryptionProperties = defaults.encryptionProperties;
-    	      this.identity = defaults.identity;
-    	      this.imageRegistryCredentials = defaults.imageRegistryCredentials;
-    	      this.initContainers = defaults.initContainers;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.location = defaults.location;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.osType = defaults.osType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.restartPolicy = defaults.restartPolicy;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.volumes = defaults.volumes;
+            $ = new ContainerGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerGroupName(@Nullable Output<String> containerGroupName) {
-            this.containerGroupName = containerGroupName;
+            $.containerGroupName = containerGroupName;
             return this;
         }
-        public Builder containerGroupName(@Nullable String containerGroupName) {
-            this.containerGroupName = Codegen.ofNullable(containerGroupName);
-            return this;
+
+        public Builder containerGroupName(String containerGroupName) {
+            return containerGroupName(Output.of(containerGroupName));
         }
+
         public Builder containers(Output<List<ContainerArgs>> containers) {
-            this.containers = Objects.requireNonNull(containers);
+            $.containers = containers;
             return this;
         }
+
         public Builder containers(List<ContainerArgs> containers) {
-            this.containers = Output.of(Objects.requireNonNull(containers));
-            return this;
+            return containers(Output.of(containers));
         }
+
         public Builder containers(ContainerArgs... containers) {
             return containers(List.of(containers));
         }
+
         public Builder diagnostics(@Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics) {
-            this.diagnostics = diagnostics;
+            $.diagnostics = diagnostics;
             return this;
         }
-        public Builder diagnostics(@Nullable ContainerGroupDiagnosticsArgs diagnostics) {
-            this.diagnostics = Codegen.ofNullable(diagnostics);
-            return this;
+
+        public Builder diagnostics(ContainerGroupDiagnosticsArgs diagnostics) {
+            return diagnostics(Output.of(diagnostics));
         }
+
         public Builder dnsConfig(@Nullable Output<DnsConfigurationArgs> dnsConfig) {
-            this.dnsConfig = dnsConfig;
+            $.dnsConfig = dnsConfig;
             return this;
         }
-        public Builder dnsConfig(@Nullable DnsConfigurationArgs dnsConfig) {
-            this.dnsConfig = Codegen.ofNullable(dnsConfig);
-            return this;
+
+        public Builder dnsConfig(DnsConfigurationArgs dnsConfig) {
+            return dnsConfig(Output.of(dnsConfig));
         }
+
         public Builder encryptionProperties(@Nullable Output<EncryptionPropertiesArgs> encryptionProperties) {
-            this.encryptionProperties = encryptionProperties;
+            $.encryptionProperties = encryptionProperties;
             return this;
         }
-        public Builder encryptionProperties(@Nullable EncryptionPropertiesArgs encryptionProperties) {
-            this.encryptionProperties = Codegen.ofNullable(encryptionProperties);
-            return this;
+
+        public Builder encryptionProperties(EncryptionPropertiesArgs encryptionProperties) {
+            return encryptionProperties(Output.of(encryptionProperties));
         }
+
         public Builder identity(@Nullable Output<ContainerGroupIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ContainerGroupIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ContainerGroupIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder imageRegistryCredentials(@Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials) {
-            this.imageRegistryCredentials = imageRegistryCredentials;
+            $.imageRegistryCredentials = imageRegistryCredentials;
             return this;
         }
-        public Builder imageRegistryCredentials(@Nullable List<ImageRegistryCredentialArgs> imageRegistryCredentials) {
-            this.imageRegistryCredentials = Codegen.ofNullable(imageRegistryCredentials);
-            return this;
+
+        public Builder imageRegistryCredentials(List<ImageRegistryCredentialArgs> imageRegistryCredentials) {
+            return imageRegistryCredentials(Output.of(imageRegistryCredentials));
         }
+
         public Builder imageRegistryCredentials(ImageRegistryCredentialArgs... imageRegistryCredentials) {
             return imageRegistryCredentials(List.of(imageRegistryCredentials));
         }
+
         public Builder initContainers(@Nullable Output<List<InitContainerDefinitionArgs>> initContainers) {
-            this.initContainers = initContainers;
+            $.initContainers = initContainers;
             return this;
         }
-        public Builder initContainers(@Nullable List<InitContainerDefinitionArgs> initContainers) {
-            this.initContainers = Codegen.ofNullable(initContainers);
-            return this;
+
+        public Builder initContainers(List<InitContainerDefinitionArgs> initContainers) {
+            return initContainers(Output.of(initContainers));
         }
+
         public Builder initContainers(InitContainerDefinitionArgs... initContainers) {
             return initContainers(List.of(initContainers));
         }
+
         public Builder ipAddress(@Nullable Output<IpAddressArgs> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable IpAddressArgs ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(IpAddressArgs ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networkProfile(@Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable ContainerGroupNetworkProfileArgs networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
+
+        public Builder networkProfile(ContainerGroupNetworkProfileArgs networkProfile) {
+            return networkProfile(Output.of(networkProfile));
         }
+
         public Builder osType(Output<Either<String,OperatingSystemTypes>> osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder osType(Either<String,OperatingSystemTypes> osType) {
-            this.osType = Output.of(Objects.requireNonNull(osType));
-            return this;
+            return osType(Output.of(osType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder restartPolicy(@Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy) {
-            this.restartPolicy = restartPolicy;
+            $.restartPolicy = restartPolicy;
             return this;
         }
-        public Builder restartPolicy(@Nullable Either<String,ContainerGroupRestartPolicy> restartPolicy) {
-            this.restartPolicy = Codegen.ofNullable(restartPolicy);
-            return this;
+
+        public Builder restartPolicy(Either<String,ContainerGroupRestartPolicy> restartPolicy) {
+            return restartPolicy(Output.of(restartPolicy));
         }
+
         public Builder sku(@Nullable Output<Either<String,ContainerGroupSku>> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable Either<String,ContainerGroupSku> sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(Either<String,ContainerGroupSku> sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<VolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(VolumeArgs... volumes) {
             return volumes(List.of(volumes));
-        }        public ContainerGroupArgs build() {
-            return new ContainerGroupArgs(containerGroupName, containers, diagnostics, dnsConfig, encryptionProperties, identity, imageRegistryCredentials, initContainers, ipAddress, location, networkProfile, osType, resourceGroupName, restartPolicy, sku, tags, volumes);
+        }
+
+        public ContainerGroupArgs build() {
+            $.containers = Objects.requireNonNull($.containers, "expected parameter 'containers' to be non-null");
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

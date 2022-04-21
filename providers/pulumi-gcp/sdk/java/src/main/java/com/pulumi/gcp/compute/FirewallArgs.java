@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.FirewallAllowArgs;
 import com.pulumi.gcp.compute.inputs.FirewallDenyArgs;
 import com.pulumi.gcp.compute.inputs.FirewallLogConfigArgs;
@@ -14,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allows")
-      private final @Nullable Output<List<FirewallAllowArgs>> allows;
+    private @Nullable Output<List<FirewallAllowArgs>> allows;
 
-    public Output<List<FirewallAllowArgs>> allows() {
-        return this.allows == null ? Codegen.empty() : this.allows;
+    public Optional<Output<List<FirewallAllowArgs>>> allows() {
+        return Optional.ofNullable(this.allows);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="denies")
-      private final @Nullable Output<List<FirewallDenyArgs>> denies;
+    private @Nullable Output<List<FirewallDenyArgs>> denies;
 
-    public Output<List<FirewallDenyArgs>> denies() {
-        return this.denies == null ? Codegen.empty() : this.denies;
+    public Optional<Output<List<FirewallDenyArgs>>> denies() {
+        return Optional.ofNullable(this.denies);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationRanges")
-      private final @Nullable Output<List<String>> destinationRanges;
+    private @Nullable Output<List<String>> destinationRanges;
 
-    public Output<List<String>> destinationRanges() {
-        return this.destinationRanges == null ? Codegen.empty() : this.destinationRanges;
+    public Optional<Output<List<String>>> destinationRanges() {
+        return Optional.ofNullable(this.destinationRanges);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="direction")
-      private final @Nullable Output<String> direction;
+    private @Nullable Output<String> direction;
 
-    public Output<String> direction() {
-        return this.direction == null ? Codegen.empty() : this.direction;
+    public Optional<Output<String>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -113,11 +113,11 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Deprecated in favor of log_config */
     @Import(name="enableLogging")
-      private final @Nullable Output<Boolean> enableLogging;
+    private @Nullable Output<Boolean> enableLogging;
 
     @Deprecated /* Deprecated in favor of log_config */
-    public Output<Boolean> enableLogging() {
-        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
+    public Optional<Output<Boolean>> enableLogging() {
+        return Optional.ofNullable(this.enableLogging);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logConfig")
-      private final @Nullable Output<FirewallLogConfigArgs> logConfig;
+    private @Nullable Output<FirewallLogConfigArgs> logConfig;
 
-    public Output<FirewallLogConfigArgs> logConfig() {
-        return this.logConfig == null ? Codegen.empty() : this.logConfig;
+    public Optional<Output<FirewallLogConfigArgs>> logConfig() {
+        return Optional.ofNullable(this.logConfig);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -155,7 +155,7 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final Output<String> network;
+    private Output<String> network;
 
     public Output<String> network() {
         return this.network;
@@ -171,10 +171,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRanges")
-      private final @Nullable Output<List<String>> sourceRanges;
+    private @Nullable Output<List<String>> sourceRanges;
 
-    public Output<List<String>> sourceRanges() {
-        return this.sourceRanges == null ? Codegen.empty() : this.sourceRanges;
+    public Optional<Output<List<String>>> sourceRanges() {
+        return Optional.ofNullable(this.sourceRanges);
     }
 
     /**
@@ -224,10 +224,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceServiceAccounts")
-      private final @Nullable Output<List<String>> sourceServiceAccounts;
+    private @Nullable Output<List<String>> sourceServiceAccounts;
 
-    public Output<List<String>> sourceServiceAccounts() {
-        return this.sourceServiceAccounts == null ? Codegen.empty() : this.sourceServiceAccounts;
+    public Optional<Output<List<String>>> sourceServiceAccounts() {
+        return Optional.ofNullable(this.sourceServiceAccounts);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceTags")
-      private final @Nullable Output<List<String>> sourceTags;
+    private @Nullable Output<List<String>> sourceTags;
 
-    public Output<List<String>> sourceTags() {
-        return this.sourceTags == null ? Codegen.empty() : this.sourceTags;
+    public Optional<Output<List<String>>> sourceTags() {
+        return Optional.ofNullable(this.sourceTags);
     }
 
     /**
@@ -260,10 +260,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetServiceAccounts")
-      private final @Nullable Output<List<String>> targetServiceAccounts;
+    private @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Output<List<String>> targetServiceAccounts() {
-        return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
+    public Optional<Output<List<String>>> targetServiceAccounts() {
+        return Optional.ofNullable(this.targetServiceAccounts);
     }
 
     /**
@@ -274,282 +274,241 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetTags")
-      private final @Nullable Output<List<String>> targetTags;
+    private @Nullable Output<List<String>> targetTags;
 
-    public Output<List<String>> targetTags() {
-        return this.targetTags == null ? Codegen.empty() : this.targetTags;
+    public Optional<Output<List<String>>> targetTags() {
+        return Optional.ofNullable(this.targetTags);
     }
 
-    public FirewallArgs(
-        @Nullable Output<List<FirewallAllowArgs>> allows,
-        @Nullable Output<List<FirewallDenyArgs>> denies,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> destinationRanges,
-        @Nullable Output<String> direction,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<Boolean> enableLogging,
-        @Nullable Output<FirewallLogConfigArgs> logConfig,
-        @Nullable Output<String> name,
-        Output<String> network,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> project,
-        @Nullable Output<List<String>> sourceRanges,
-        @Nullable Output<List<String>> sourceServiceAccounts,
-        @Nullable Output<List<String>> sourceTags,
-        @Nullable Output<List<String>> targetServiceAccounts,
-        @Nullable Output<List<String>> targetTags) {
-        this.allows = allows;
-        this.denies = denies;
-        this.description = description;
-        this.destinationRanges = destinationRanges;
-        this.direction = direction;
-        this.disabled = disabled;
-        this.enableLogging = enableLogging;
-        this.logConfig = logConfig;
-        this.name = name;
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.priority = priority;
-        this.project = project;
-        this.sourceRanges = sourceRanges;
-        this.sourceServiceAccounts = sourceServiceAccounts;
-        this.sourceTags = sourceTags;
-        this.targetServiceAccounts = targetServiceAccounts;
-        this.targetTags = targetTags;
-    }
+    private FirewallArgs() {}
 
-    private FirewallArgs() {
-        this.allows = Codegen.empty();
-        this.denies = Codegen.empty();
-        this.description = Codegen.empty();
-        this.destinationRanges = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.enableLogging = Codegen.empty();
-        this.logConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.project = Codegen.empty();
-        this.sourceRanges = Codegen.empty();
-        this.sourceServiceAccounts = Codegen.empty();
-        this.sourceTags = Codegen.empty();
-        this.targetServiceAccounts = Codegen.empty();
-        this.targetTags = Codegen.empty();
+    private FirewallArgs(FirewallArgs $) {
+        this.allows = $.allows;
+        this.denies = $.denies;
+        this.description = $.description;
+        this.destinationRanges = $.destinationRanges;
+        this.direction = $.direction;
+        this.disabled = $.disabled;
+        this.enableLogging = $.enableLogging;
+        this.logConfig = $.logConfig;
+        this.name = $.name;
+        this.network = $.network;
+        this.priority = $.priority;
+        this.project = $.project;
+        this.sourceRanges = $.sourceRanges;
+        this.sourceServiceAccounts = $.sourceServiceAccounts;
+        this.sourceTags = $.sourceTags;
+        this.targetServiceAccounts = $.targetServiceAccounts;
+        this.targetTags = $.targetTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FirewallAllowArgs>> allows;
-        private @Nullable Output<List<FirewallDenyArgs>> denies;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> destinationRanges;
-        private @Nullable Output<String> direction;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<Boolean> enableLogging;
-        private @Nullable Output<FirewallLogConfigArgs> logConfig;
-        private @Nullable Output<String> name;
-        private Output<String> network;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<String>> sourceRanges;
-        private @Nullable Output<List<String>> sourceServiceAccounts;
-        private @Nullable Output<List<String>> sourceTags;
-        private @Nullable Output<List<String>> targetServiceAccounts;
-        private @Nullable Output<List<String>> targetTags;
+        private FirewallArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallArgs();
         }
 
         public Builder(FirewallArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allows = defaults.allows;
-    	      this.denies = defaults.denies;
-    	      this.description = defaults.description;
-    	      this.destinationRanges = defaults.destinationRanges;
-    	      this.direction = defaults.direction;
-    	      this.disabled = defaults.disabled;
-    	      this.enableLogging = defaults.enableLogging;
-    	      this.logConfig = defaults.logConfig;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.priority = defaults.priority;
-    	      this.project = defaults.project;
-    	      this.sourceRanges = defaults.sourceRanges;
-    	      this.sourceServiceAccounts = defaults.sourceServiceAccounts;
-    	      this.sourceTags = defaults.sourceTags;
-    	      this.targetServiceAccounts = defaults.targetServiceAccounts;
-    	      this.targetTags = defaults.targetTags;
+            $ = new FirewallArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allows(@Nullable Output<List<FirewallAllowArgs>> allows) {
-            this.allows = allows;
+            $.allows = allows;
             return this;
         }
-        public Builder allows(@Nullable List<FirewallAllowArgs> allows) {
-            this.allows = Codegen.ofNullable(allows);
-            return this;
+
+        public Builder allows(List<FirewallAllowArgs> allows) {
+            return allows(Output.of(allows));
         }
+
         public Builder allows(FirewallAllowArgs... allows) {
             return allows(List.of(allows));
         }
+
         public Builder denies(@Nullable Output<List<FirewallDenyArgs>> denies) {
-            this.denies = denies;
+            $.denies = denies;
             return this;
         }
-        public Builder denies(@Nullable List<FirewallDenyArgs> denies) {
-            this.denies = Codegen.ofNullable(denies);
-            return this;
+
+        public Builder denies(List<FirewallDenyArgs> denies) {
+            return denies(Output.of(denies));
         }
+
         public Builder denies(FirewallDenyArgs... denies) {
             return denies(List.of(denies));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destinationRanges(@Nullable Output<List<String>> destinationRanges) {
-            this.destinationRanges = destinationRanges;
+            $.destinationRanges = destinationRanges;
             return this;
         }
-        public Builder destinationRanges(@Nullable List<String> destinationRanges) {
-            this.destinationRanges = Codegen.ofNullable(destinationRanges);
-            return this;
+
+        public Builder destinationRanges(List<String> destinationRanges) {
+            return destinationRanges(Output.of(destinationRanges));
         }
+
         public Builder destinationRanges(String... destinationRanges) {
             return destinationRanges(List.of(destinationRanges));
         }
+
         public Builder direction(@Nullable Output<String> direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
-        public Builder direction(@Nullable String direction) {
-            this.direction = Codegen.ofNullable(direction);
-            return this;
+
+        public Builder direction(String direction) {
+            return direction(Output.of(direction));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
-            this.enableLogging = enableLogging;
+            $.enableLogging = enableLogging;
             return this;
         }
-        public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Codegen.ofNullable(enableLogging);
-            return this;
+
+        public Builder enableLogging(Boolean enableLogging) {
+            return enableLogging(Output.of(enableLogging));
         }
+
         public Builder logConfig(@Nullable Output<FirewallLogConfigArgs> logConfig) {
-            this.logConfig = logConfig;
+            $.logConfig = logConfig;
             return this;
         }
-        public Builder logConfig(@Nullable FirewallLogConfigArgs logConfig) {
-            this.logConfig = Codegen.ofNullable(logConfig);
-            return this;
+
+        public Builder logConfig(FirewallLogConfigArgs logConfig) {
+            return logConfig(Output.of(logConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(Output<String> network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Output.of(Objects.requireNonNull(network));
-            return this;
+            return network(Output.of(network));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder sourceRanges(@Nullable Output<List<String>> sourceRanges) {
-            this.sourceRanges = sourceRanges;
+            $.sourceRanges = sourceRanges;
             return this;
         }
-        public Builder sourceRanges(@Nullable List<String> sourceRanges) {
-            this.sourceRanges = Codegen.ofNullable(sourceRanges);
-            return this;
+
+        public Builder sourceRanges(List<String> sourceRanges) {
+            return sourceRanges(Output.of(sourceRanges));
         }
+
         public Builder sourceRanges(String... sourceRanges) {
             return sourceRanges(List.of(sourceRanges));
         }
+
         public Builder sourceServiceAccounts(@Nullable Output<List<String>> sourceServiceAccounts) {
-            this.sourceServiceAccounts = sourceServiceAccounts;
+            $.sourceServiceAccounts = sourceServiceAccounts;
             return this;
         }
-        public Builder sourceServiceAccounts(@Nullable List<String> sourceServiceAccounts) {
-            this.sourceServiceAccounts = Codegen.ofNullable(sourceServiceAccounts);
-            return this;
+
+        public Builder sourceServiceAccounts(List<String> sourceServiceAccounts) {
+            return sourceServiceAccounts(Output.of(sourceServiceAccounts));
         }
+
         public Builder sourceServiceAccounts(String... sourceServiceAccounts) {
             return sourceServiceAccounts(List.of(sourceServiceAccounts));
         }
+
         public Builder sourceTags(@Nullable Output<List<String>> sourceTags) {
-            this.sourceTags = sourceTags;
+            $.sourceTags = sourceTags;
             return this;
         }
-        public Builder sourceTags(@Nullable List<String> sourceTags) {
-            this.sourceTags = Codegen.ofNullable(sourceTags);
-            return this;
+
+        public Builder sourceTags(List<String> sourceTags) {
+            return sourceTags(Output.of(sourceTags));
         }
+
         public Builder sourceTags(String... sourceTags) {
             return sourceTags(List.of(sourceTags));
         }
+
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
-            this.targetServiceAccounts = targetServiceAccounts;
+            $.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
-        public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Codegen.ofNullable(targetServiceAccounts);
-            return this;
+
+        public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
+            return targetServiceAccounts(Output.of(targetServiceAccounts));
         }
+
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
         }
+
         public Builder targetTags(@Nullable Output<List<String>> targetTags) {
-            this.targetTags = targetTags;
+            $.targetTags = targetTags;
             return this;
         }
-        public Builder targetTags(@Nullable List<String> targetTags) {
-            this.targetTags = Codegen.ofNullable(targetTags);
-            return this;
+
+        public Builder targetTags(List<String> targetTags) {
+            return targetTags(Output.of(targetTags));
         }
+
         public Builder targetTags(String... targetTags) {
             return targetTags(List.of(targetTags));
-        }        public FirewallArgs build() {
-            return new FirewallArgs(allows, denies, description, destinationRanges, direction, disabled, enableLogging, logConfig, name, network, priority, project, sourceRanges, sourceServiceAccounts, sourceTags, targetServiceAccounts, targetTags);
+        }
+
+        public FirewallArgs build() {
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

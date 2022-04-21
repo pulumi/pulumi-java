@@ -22,7 +22,7 @@ public final class AccessSelectorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="permissions", required=true)
-      private final List<String> permissions;
+    private List<String> permissions;
 
     public List<String> permissions() {
         return this.permissions;
@@ -33,61 +33,60 @@ public final class AccessSelectorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="roles", required=true)
-      private final List<String> roles;
+    private List<String> roles;
 
     public List<String> roles() {
         return this.roles;
     }
 
-    public AccessSelectorResponse(
-        List<String> permissions,
-        List<String> roles) {
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.roles = Objects.requireNonNull(roles, "expected parameter 'roles' to be non-null");
-    }
+    private AccessSelectorResponse() {}
 
-    private AccessSelectorResponse() {
-        this.permissions = List.of();
-        this.roles = List.of();
+    private AccessSelectorResponse(AccessSelectorResponse $) {
+        this.permissions = $.permissions;
+        this.roles = $.roles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessSelectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> permissions;
-        private List<String> roles;
+        private AccessSelectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessSelectorResponse();
         }
 
         public Builder(AccessSelectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.permissions = defaults.permissions;
-    	      this.roles = defaults.roles;
+            $ = new AccessSelectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder permissions(List<String> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder roles(List<String> roles) {
-            this.roles = Objects.requireNonNull(roles);
+            $.roles = roles;
             return this;
         }
+
         public Builder roles(String... roles) {
             return roles(List.of(roles));
-        }        public AccessSelectorResponse build() {
-            return new AccessSelectorResponse(permissions, roles);
+        }
+
+        public AccessSelectorResponse build() {
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.roles = Objects.requireNonNull($.roles, "expected parameter 'roles' to be non-null");
+            return $;
         }
     }
+
 }

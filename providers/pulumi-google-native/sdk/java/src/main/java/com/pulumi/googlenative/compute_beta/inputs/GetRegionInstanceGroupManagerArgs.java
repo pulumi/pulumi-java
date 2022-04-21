@@ -15,78 +15,72 @@ public final class GetRegionInstanceGroupManagerArgs extends com.pulumi.resource
     public static final GetRegionInstanceGroupManagerArgs Empty = new GetRegionInstanceGroupManagerArgs();
 
     @Import(name="instanceGroupManager", required=true)
-      private final String instanceGroupManager;
+    private String instanceGroupManager;
 
     public String instanceGroupManager() {
         return this.instanceGroupManager;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionInstanceGroupManagerArgs(
-        String instanceGroupManager,
-        @Nullable String project,
-        String region) {
-        this.instanceGroupManager = Objects.requireNonNull(instanceGroupManager, "expected parameter 'instanceGroupManager' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionInstanceGroupManagerArgs() {}
 
-    private GetRegionInstanceGroupManagerArgs() {
-        this.instanceGroupManager = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionInstanceGroupManagerArgs(GetRegionInstanceGroupManagerArgs $) {
+        this.instanceGroupManager = $.instanceGroupManager;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionInstanceGroupManagerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceGroupManager;
-        private @Nullable String project;
-        private String region;
+        private GetRegionInstanceGroupManagerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionInstanceGroupManagerArgs();
         }
 
         public Builder(GetRegionInstanceGroupManagerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceGroupManager = defaults.instanceGroupManager;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionInstanceGroupManagerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceGroupManager(String instanceGroupManager) {
-            this.instanceGroupManager = Objects.requireNonNull(instanceGroupManager);
+            $.instanceGroupManager = instanceGroupManager;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionInstanceGroupManagerArgs build() {
-            return new GetRegionInstanceGroupManagerArgs(instanceGroupManager, project, region);
+        }
+
+        public GetRegionInstanceGroupManagerArgs build() {
+            $.instanceGroupManager = Objects.requireNonNull($.instanceGroupManager, "expected parameter 'instanceGroupManager' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

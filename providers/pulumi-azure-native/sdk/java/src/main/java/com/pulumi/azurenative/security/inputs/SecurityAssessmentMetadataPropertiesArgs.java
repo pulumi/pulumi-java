@@ -13,11 +13,11 @@ import com.pulumi.azurenative.security.inputs.SecurityAssessmentMetadataPartnerD
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,17 +34,17 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="assessmentType", required=true)
-      private final Output<Either<String,AssessmentType>> assessmentType;
+    private Output<Either<String,AssessmentType>> assessmentType;
 
     public Output<Either<String,AssessmentType>> assessmentType() {
         return this.assessmentType;
     }
 
     @Import(name="categories")
-      private final @Nullable Output<List<Either<String,Categories>>> categories;
+    private @Nullable Output<List<Either<String,Categories>>> categories;
 
-    public Output<List<Either<String,Categories>>> categories() {
-        return this.categories == null ? Codegen.empty() : this.categories;
+    public Optional<Output<List<Either<String,Categories>>>> categories() {
+        return Optional.ofNullable(this.categories);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -63,7 +63,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -74,10 +74,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="implementationEffort")
-      private final @Nullable Output<Either<String,ImplementationEffort>> implementationEffort;
+    private @Nullable Output<Either<String,ImplementationEffort>> implementationEffort;
 
-    public Output<Either<String,ImplementationEffort>> implementationEffort() {
-        return this.implementationEffort == null ? Codegen.empty() : this.implementationEffort;
+    public Optional<Output<Either<String,ImplementationEffort>>> implementationEffort() {
+        return Optional.ofNullable(this.implementationEffort);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="partnerData")
-      private final @Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
+    private @Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
 
-    public Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData() {
-        return this.partnerData == null ? Codegen.empty() : this.partnerData;
+    public Optional<Output<SecurityAssessmentMetadataPartnerDataArgs>> partnerData() {
+        return Optional.ofNullable(this.partnerData);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="preview")
-      private final @Nullable Output<Boolean> preview;
+    private @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> preview() {
-        return this.preview == null ? Codegen.empty() : this.preview;
+    public Optional<Output<Boolean>> preview() {
+        return Optional.ofNullable(this.preview);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="remediationDescription")
-      private final @Nullable Output<String> remediationDescription;
+    private @Nullable Output<String> remediationDescription;
 
-    public Output<String> remediationDescription() {
-        return this.remediationDescription == null ? Codegen.empty() : this.remediationDescription;
+    public Optional<Output<String>> remediationDescription() {
+        return Optional.ofNullable(this.remediationDescription);
     }
 
     /**
@@ -118,17 +118,17 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="severity", required=true)
-      private final Output<Either<String,Severity>> severity;
+    private Output<Either<String,Severity>> severity;
 
     public Output<Either<String,Severity>> severity() {
         return this.severity;
     }
 
     @Import(name="threats")
-      private final @Nullable Output<List<Either<String,Threats>>> threats;
+    private @Nullable Output<List<Either<String,Threats>>> threats;
 
-    public Output<List<Either<String,Threats>>> threats() {
-        return this.threats == null ? Codegen.empty() : this.threats;
+    public Optional<Output<List<Either<String,Threats>>>> threats() {
+        return Optional.ofNullable(this.threats);
     }
 
     /**
@@ -136,186 +136,159 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="userImpact")
-      private final @Nullable Output<Either<String,UserImpact>> userImpact;
+    private @Nullable Output<Either<String,UserImpact>> userImpact;
 
-    public Output<Either<String,UserImpact>> userImpact() {
-        return this.userImpact == null ? Codegen.empty() : this.userImpact;
+    public Optional<Output<Either<String,UserImpact>>> userImpact() {
+        return Optional.ofNullable(this.userImpact);
     }
 
-    public SecurityAssessmentMetadataPropertiesArgs(
-        Output<Either<String,AssessmentType>> assessmentType,
-        @Nullable Output<List<Either<String,Categories>>> categories,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<Either<String,ImplementationEffort>> implementationEffort,
-        @Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData,
-        @Nullable Output<Boolean> preview,
-        @Nullable Output<String> remediationDescription,
-        Output<Either<String,Severity>> severity,
-        @Nullable Output<List<Either<String,Threats>>> threats,
-        @Nullable Output<Either<String,UserImpact>> userImpact) {
-        this.assessmentType = Objects.requireNonNull(assessmentType, "expected parameter 'assessmentType' to be non-null");
-        this.categories = categories;
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.implementationEffort = implementationEffort;
-        this.partnerData = partnerData;
-        this.preview = preview;
-        this.remediationDescription = remediationDescription;
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.threats = threats;
-        this.userImpact = userImpact;
-    }
+    private SecurityAssessmentMetadataPropertiesArgs() {}
 
-    private SecurityAssessmentMetadataPropertiesArgs() {
-        this.assessmentType = Codegen.empty();
-        this.categories = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.implementationEffort = Codegen.empty();
-        this.partnerData = Codegen.empty();
-        this.preview = Codegen.empty();
-        this.remediationDescription = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.threats = Codegen.empty();
-        this.userImpact = Codegen.empty();
+    private SecurityAssessmentMetadataPropertiesArgs(SecurityAssessmentMetadataPropertiesArgs $) {
+        this.assessmentType = $.assessmentType;
+        this.categories = $.categories;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.implementationEffort = $.implementationEffort;
+        this.partnerData = $.partnerData;
+        this.preview = $.preview;
+        this.remediationDescription = $.remediationDescription;
+        this.severity = $.severity;
+        this.threats = $.threats;
+        this.userImpact = $.userImpact;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityAssessmentMetadataPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,AssessmentType>> assessmentType;
-        private @Nullable Output<List<Either<String,Categories>>> categories;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<Either<String,ImplementationEffort>> implementationEffort;
-        private @Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
-        private @Nullable Output<Boolean> preview;
-        private @Nullable Output<String> remediationDescription;
-        private Output<Either<String,Severity>> severity;
-        private @Nullable Output<List<Either<String,Threats>>> threats;
-        private @Nullable Output<Either<String,UserImpact>> userImpact;
+        private SecurityAssessmentMetadataPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityAssessmentMetadataPropertiesArgs();
         }
 
         public Builder(SecurityAssessmentMetadataPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentType = defaults.assessmentType;
-    	      this.categories = defaults.categories;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.implementationEffort = defaults.implementationEffort;
-    	      this.partnerData = defaults.partnerData;
-    	      this.preview = defaults.preview;
-    	      this.remediationDescription = defaults.remediationDescription;
-    	      this.severity = defaults.severity;
-    	      this.threats = defaults.threats;
-    	      this.userImpact = defaults.userImpact;
+            $ = new SecurityAssessmentMetadataPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentType(Output<Either<String,AssessmentType>> assessmentType) {
-            this.assessmentType = Objects.requireNonNull(assessmentType);
+            $.assessmentType = assessmentType;
             return this;
         }
+
         public Builder assessmentType(Either<String,AssessmentType> assessmentType) {
-            this.assessmentType = Output.of(Objects.requireNonNull(assessmentType));
-            return this;
+            return assessmentType(Output.of(assessmentType));
         }
+
         public Builder categories(@Nullable Output<List<Either<String,Categories>>> categories) {
-            this.categories = categories;
+            $.categories = categories;
             return this;
         }
-        public Builder categories(@Nullable List<Either<String,Categories>> categories) {
-            this.categories = Codegen.ofNullable(categories);
-            return this;
+
+        public Builder categories(List<Either<String,Categories>> categories) {
+            return categories(Output.of(categories));
         }
+
         public Builder categories(Either<String,Categories>... categories) {
             return categories(List.of(categories));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder implementationEffort(@Nullable Output<Either<String,ImplementationEffort>> implementationEffort) {
-            this.implementationEffort = implementationEffort;
+            $.implementationEffort = implementationEffort;
             return this;
         }
-        public Builder implementationEffort(@Nullable Either<String,ImplementationEffort> implementationEffort) {
-            this.implementationEffort = Codegen.ofNullable(implementationEffort);
-            return this;
+
+        public Builder implementationEffort(Either<String,ImplementationEffort> implementationEffort) {
+            return implementationEffort(Output.of(implementationEffort));
         }
+
         public Builder partnerData(@Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData) {
-            this.partnerData = partnerData;
+            $.partnerData = partnerData;
             return this;
         }
-        public Builder partnerData(@Nullable SecurityAssessmentMetadataPartnerDataArgs partnerData) {
-            this.partnerData = Codegen.ofNullable(partnerData);
-            return this;
+
+        public Builder partnerData(SecurityAssessmentMetadataPartnerDataArgs partnerData) {
+            return partnerData(Output.of(partnerData));
         }
+
         public Builder preview(@Nullable Output<Boolean> preview) {
-            this.preview = preview;
+            $.preview = preview;
             return this;
         }
-        public Builder preview(@Nullable Boolean preview) {
-            this.preview = Codegen.ofNullable(preview);
-            return this;
+
+        public Builder preview(Boolean preview) {
+            return preview(Output.of(preview));
         }
+
         public Builder remediationDescription(@Nullable Output<String> remediationDescription) {
-            this.remediationDescription = remediationDescription;
+            $.remediationDescription = remediationDescription;
             return this;
         }
-        public Builder remediationDescription(@Nullable String remediationDescription) {
-            this.remediationDescription = Codegen.ofNullable(remediationDescription);
-            return this;
+
+        public Builder remediationDescription(String remediationDescription) {
+            return remediationDescription(Output.of(remediationDescription));
         }
+
         public Builder severity(Output<Either<String,Severity>> severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder severity(Either<String,Severity> severity) {
-            this.severity = Output.of(Objects.requireNonNull(severity));
-            return this;
+            return severity(Output.of(severity));
         }
+
         public Builder threats(@Nullable Output<List<Either<String,Threats>>> threats) {
-            this.threats = threats;
+            $.threats = threats;
             return this;
         }
-        public Builder threats(@Nullable List<Either<String,Threats>> threats) {
-            this.threats = Codegen.ofNullable(threats);
-            return this;
+
+        public Builder threats(List<Either<String,Threats>> threats) {
+            return threats(Output.of(threats));
         }
+
         public Builder threats(Either<String,Threats>... threats) {
             return threats(List.of(threats));
         }
+
         public Builder userImpact(@Nullable Output<Either<String,UserImpact>> userImpact) {
-            this.userImpact = userImpact;
+            $.userImpact = userImpact;
             return this;
         }
-        public Builder userImpact(@Nullable Either<String,UserImpact> userImpact) {
-            this.userImpact = Codegen.ofNullable(userImpact);
-            return this;
-        }        public SecurityAssessmentMetadataPropertiesArgs build() {
-            return new SecurityAssessmentMetadataPropertiesArgs(assessmentType, categories, description, displayName, implementationEffort, partnerData, preview, remediationDescription, severity, threats, userImpact);
+
+        public Builder userImpact(Either<String,UserImpact> userImpact) {
+            return userImpact(Output.of(userImpact));
+        }
+
+        public SecurityAssessmentMetadataPropertiesArgs build() {
+            $.assessmentType = Objects.requireNonNull($.assessmentType, "expected parameter 'assessmentType' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            return $;
         }
     }
+
 }

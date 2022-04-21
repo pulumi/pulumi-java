@@ -23,7 +23,7 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
      * 
      */
     @Import(name="destIpRanges", required=true)
-      private final List<String> destIpRanges;
+    private List<String> destIpRanges;
 
     public List<String> destIpRanges() {
         return this.destIpRanges;
@@ -34,7 +34,7 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
      * 
      */
     @Import(name="layer4Configs", required=true)
-      private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
+    private List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
 
     public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs() {
         return this.layer4Configs;
@@ -45,73 +45,71 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
      * 
      */
     @Import(name="srcIpRanges", required=true)
-      private final List<String> srcIpRanges;
+    private List<String> srcIpRanges;
 
     public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
 
-    public FirewallPolicyRuleMatcherResponse(
-        List<String> destIpRanges,
-        List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
-        List<String> srcIpRanges) {
-        this.destIpRanges = Objects.requireNonNull(destIpRanges, "expected parameter 'destIpRanges' to be non-null");
-        this.layer4Configs = Objects.requireNonNull(layer4Configs, "expected parameter 'layer4Configs' to be non-null");
-        this.srcIpRanges = Objects.requireNonNull(srcIpRanges, "expected parameter 'srcIpRanges' to be non-null");
-    }
+    private FirewallPolicyRuleMatcherResponse() {}
 
-    private FirewallPolicyRuleMatcherResponse() {
-        this.destIpRanges = List.of();
-        this.layer4Configs = List.of();
-        this.srcIpRanges = List.of();
+    private FirewallPolicyRuleMatcherResponse(FirewallPolicyRuleMatcherResponse $) {
+        this.destIpRanges = $.destIpRanges;
+        this.layer4Configs = $.layer4Configs;
+        this.srcIpRanges = $.srcIpRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyRuleMatcherResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> destIpRanges;
-        private List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
-        private List<String> srcIpRanges;
+        private FirewallPolicyRuleMatcherResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyRuleMatcherResponse();
         }
 
         public Builder(FirewallPolicyRuleMatcherResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destIpRanges = defaults.destIpRanges;
-    	      this.layer4Configs = defaults.layer4Configs;
-    	      this.srcIpRanges = defaults.srcIpRanges;
+            $ = new FirewallPolicyRuleMatcherResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destIpRanges(List<String> destIpRanges) {
-            this.destIpRanges = Objects.requireNonNull(destIpRanges);
+            $.destIpRanges = destIpRanges;
             return this;
         }
+
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
         }
+
         public Builder layer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
-            this.layer4Configs = Objects.requireNonNull(layer4Configs);
+            $.layer4Configs = layer4Configs;
             return this;
         }
+
         public Builder layer4Configs(FirewallPolicyRuleMatcherLayer4ConfigResponse... layer4Configs) {
             return layer4Configs(List.of(layer4Configs));
         }
+
         public Builder srcIpRanges(List<String> srcIpRanges) {
-            this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
+            $.srcIpRanges = srcIpRanges;
             return this;
         }
+
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
-        }        public FirewallPolicyRuleMatcherResponse build() {
-            return new FirewallPolicyRuleMatcherResponse(destIpRanges, layer4Configs, srcIpRanges);
+        }
+
+        public FirewallPolicyRuleMatcherResponse build() {
+            $.destIpRanges = Objects.requireNonNull($.destIpRanges, "expected parameter 'destIpRanges' to be non-null");
+            $.layer4Configs = Objects.requireNonNull($.layer4Configs, "expected parameter 'layer4Configs' to be non-null");
+            $.srcIpRanges = Objects.requireNonNull($.srcIpRanges, "expected parameter 'srcIpRanges' to be non-null");
+            return $;
         }
     }
+
 }

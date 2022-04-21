@@ -17,45 +17,45 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="viewName", required=true)
-      private final String viewName;
+    private String viewName;
 
     public String viewName() {
         return this.viewName;
     }
 
-    public GetViewArgs(String viewName) {
-        this.viewName = Objects.requireNonNull(viewName, "expected parameter 'viewName' to be non-null");
-    }
+    private GetViewArgs() {}
 
-    private GetViewArgs() {
-        this.viewName = null;
+    private GetViewArgs(GetViewArgs $) {
+        this.viewName = $.viewName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetViewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String viewName;
+        private GetViewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetViewArgs();
         }
 
         public Builder(GetViewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.viewName = defaults.viewName;
+            $ = new GetViewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder viewName(String viewName) {
-            this.viewName = Objects.requireNonNull(viewName);
+            $.viewName = viewName;
             return this;
-        }        public GetViewArgs build() {
-            return new GetViewArgs(viewName);
+        }
+
+        public GetViewArgs build() {
+            $.viewName = Objects.requireNonNull($.viewName, "expected parameter 'viewName' to be non-null");
+            return $;
         }
     }
+
 }

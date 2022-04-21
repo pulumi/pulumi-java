@@ -21,7 +21,7 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="accessKey", required=true)
-      private final String accessKey;
+    private String accessKey;
 
     public String accessKey() {
         return this.accessKey;
@@ -32,55 +32,52 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="storageAccountId", required=true)
-      private final String storageAccountId;
+    private String storageAccountId;
 
     public String storageAccountId() {
         return this.storageAccountId;
     }
 
-    public StorageAccountPropertiesResponse(
-        String accessKey,
-        String storageAccountId) {
-        this.accessKey = Objects.requireNonNull(accessKey, "expected parameter 'accessKey' to be non-null");
-        this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
-    }
+    private StorageAccountPropertiesResponse() {}
 
-    private StorageAccountPropertiesResponse() {
-        this.accessKey = null;
-        this.storageAccountId = null;
+    private StorageAccountPropertiesResponse(StorageAccountPropertiesResponse $) {
+        this.accessKey = $.accessKey;
+        this.storageAccountId = $.storageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessKey;
-        private String storageAccountId;
+        private StorageAccountPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountPropertiesResponse();
         }
 
         public Builder(StorageAccountPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.storageAccountId = defaults.storageAccountId;
+            $ = new StorageAccountPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(String accessKey) {
-            this.accessKey = Objects.requireNonNull(accessKey);
+            $.accessKey = accessKey;
             return this;
         }
+
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Objects.requireNonNull(storageAccountId);
+            $.storageAccountId = storageAccountId;
             return this;
-        }        public StorageAccountPropertiesResponse build() {
-            return new StorageAccountPropertiesResponse(accessKey, storageAccountId);
+        }
+
+        public StorageAccountPropertiesResponse build() {
+            $.accessKey = Objects.requireNonNull($.accessKey, "expected parameter 'accessKey' to be non-null");
+            $.storageAccountId = Objects.requireNonNull($.storageAccountId, "expected parameter 'storageAccountId' to be non-null");
+            return $;
         }
     }
+
 }

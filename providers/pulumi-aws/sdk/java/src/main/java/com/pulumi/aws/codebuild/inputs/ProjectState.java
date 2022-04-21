@@ -16,13 +16,13 @@ import com.pulumi.aws.codebuild.inputs.ProjectSourceGetArgs;
 import com.pulumi.aws.codebuild.inputs.ProjectVpcConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifacts")
-      private final @Nullable Output<ProjectArtifactsGetArgs> artifacts;
+    private @Nullable Output<ProjectArtifactsGetArgs> artifacts;
 
-    public Output<ProjectArtifactsGetArgs> artifacts() {
-        return this.artifacts == null ? Codegen.empty() : this.artifacts;
+    public Optional<Output<ProjectArtifactsGetArgs>> artifacts() {
+        return Optional.ofNullable(this.artifacts);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="badgeEnabled")
-      private final @Nullable Output<Boolean> badgeEnabled;
+    private @Nullable Output<Boolean> badgeEnabled;
 
-    public Output<Boolean> badgeEnabled() {
-        return this.badgeEnabled == null ? Codegen.empty() : this.badgeEnabled;
+    public Optional<Output<Boolean>> badgeEnabled() {
+        return Optional.ofNullable(this.badgeEnabled);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="badgeUrl")
-      private final @Nullable Output<String> badgeUrl;
+    private @Nullable Output<String> badgeUrl;
 
-    public Output<String> badgeUrl() {
-        return this.badgeUrl == null ? Codegen.empty() : this.badgeUrl;
+    public Optional<Output<String>> badgeUrl() {
+        return Optional.ofNullable(this.badgeUrl);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildBatchConfig")
-      private final @Nullable Output<ProjectBuildBatchConfigGetArgs> buildBatchConfig;
+    private @Nullable Output<ProjectBuildBatchConfigGetArgs> buildBatchConfig;
 
-    public Output<ProjectBuildBatchConfigGetArgs> buildBatchConfig() {
-        return this.buildBatchConfig == null ? Codegen.empty() : this.buildBatchConfig;
+    public Optional<Output<ProjectBuildBatchConfigGetArgs>> buildBatchConfig() {
+        return Optional.ofNullable(this.buildBatchConfig);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildTimeout")
-      private final @Nullable Output<Integer> buildTimeout;
+    private @Nullable Output<Integer> buildTimeout;
 
-    public Output<Integer> buildTimeout() {
-        return this.buildTimeout == null ? Codegen.empty() : this.buildTimeout;
+    public Optional<Output<Integer>> buildTimeout() {
+        return Optional.ofNullable(this.buildTimeout);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cache")
-      private final @Nullable Output<ProjectCacheGetArgs> cache;
+    private @Nullable Output<ProjectCacheGetArgs> cache;
 
-    public Output<ProjectCacheGetArgs> cache() {
-        return this.cache == null ? Codegen.empty() : this.cache;
+    public Optional<Output<ProjectCacheGetArgs>> cache() {
+        return Optional.ofNullable(this.cache);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="concurrentBuildLimit")
-      private final @Nullable Output<Integer> concurrentBuildLimit;
+    private @Nullable Output<Integer> concurrentBuildLimit;
 
-    public Output<Integer> concurrentBuildLimit() {
-        return this.concurrentBuildLimit == null ? Codegen.empty() : this.concurrentBuildLimit;
+    public Optional<Output<Integer>> concurrentBuildLimit() {
+        return Optional.ofNullable(this.concurrentBuildLimit);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionKey")
-      private final @Nullable Output<String> encryptionKey;
+    private @Nullable Output<String> encryptionKey;
 
-    public Output<String> encryptionKey() {
-        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
+    public Optional<Output<String>> encryptionKey() {
+        return Optional.ofNullable(this.encryptionKey);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<ProjectEnvironmentGetArgs> environment;
+    private @Nullable Output<ProjectEnvironmentGetArgs> environment;
 
-    public Output<ProjectEnvironmentGetArgs> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<ProjectEnvironmentGetArgs>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemLocations")
-      private final @Nullable Output<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations;
+    private @Nullable Output<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations;
 
-    public Output<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations() {
-        return this.fileSystemLocations == null ? Codegen.empty() : this.fileSystemLocations;
+    public Optional<Output<List<ProjectFileSystemLocationGetArgs>>> fileSystemLocations() {
+        return Optional.ofNullable(this.fileSystemLocations);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logsConfig")
-      private final @Nullable Output<ProjectLogsConfigGetArgs> logsConfig;
+    private @Nullable Output<ProjectLogsConfigGetArgs> logsConfig;
 
-    public Output<ProjectLogsConfigGetArgs> logsConfig() {
-        return this.logsConfig == null ? Codegen.empty() : this.logsConfig;
+    public Optional<Output<ProjectLogsConfigGetArgs>> logsConfig() {
+        return Optional.ofNullable(this.logsConfig);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectVisibility")
-      private final @Nullable Output<String> projectVisibility;
+    private @Nullable Output<String> projectVisibility;
 
-    public Output<String> projectVisibility() {
-        return this.projectVisibility == null ? Codegen.empty() : this.projectVisibility;
+    public Optional<Output<String>> projectVisibility() {
+        return Optional.ofNullable(this.projectVisibility);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicProjectAlias")
-      private final @Nullable Output<String> publicProjectAlias;
+    private @Nullable Output<String> publicProjectAlias;
 
-    public Output<String> publicProjectAlias() {
-        return this.publicProjectAlias == null ? Codegen.empty() : this.publicProjectAlias;
+    public Optional<Output<String>> publicProjectAlias() {
+        return Optional.ofNullable(this.publicProjectAlias);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queuedTimeout")
-      private final @Nullable Output<Integer> queuedTimeout;
+    private @Nullable Output<Integer> queuedTimeout;
 
-    public Output<Integer> queuedTimeout() {
-        return this.queuedTimeout == null ? Codegen.empty() : this.queuedTimeout;
+    public Optional<Output<Integer>> queuedTimeout() {
+        return Optional.ofNullable(this.queuedTimeout);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceAccessRole")
-      private final @Nullable Output<String> resourceAccessRole;
+    private @Nullable Output<String> resourceAccessRole;
 
-    public Output<String> resourceAccessRole() {
-        return this.resourceAccessRole == null ? Codegen.empty() : this.resourceAccessRole;
+    public Optional<Output<String>> resourceAccessRole() {
+        return Optional.ofNullable(this.resourceAccessRole);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondaryArtifacts")
-      private final @Nullable Output<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts;
+    private @Nullable Output<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts;
 
-    public Output<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts() {
-        return this.secondaryArtifacts == null ? Codegen.empty() : this.secondaryArtifacts;
+    public Optional<Output<List<ProjectSecondaryArtifactGetArgs>>> secondaryArtifacts() {
+        return Optional.ofNullable(this.secondaryArtifacts);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondarySourceVersions")
-      private final @Nullable Output<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions;
+    private @Nullable Output<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions;
 
-    public Output<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions() {
-        return this.secondarySourceVersions == null ? Codegen.empty() : this.secondarySourceVersions;
+    public Optional<Output<List<ProjectSecondarySourceVersionGetArgs>>> secondarySourceVersions() {
+        return Optional.ofNullable(this.secondarySourceVersions);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondarySources")
-      private final @Nullable Output<List<ProjectSecondarySourceGetArgs>> secondarySources;
+    private @Nullable Output<List<ProjectSecondarySourceGetArgs>> secondarySources;
 
-    public Output<List<ProjectSecondarySourceGetArgs>> secondarySources() {
-        return this.secondarySources == null ? Codegen.empty() : this.secondarySources;
+    public Optional<Output<List<ProjectSecondarySourceGetArgs>>> secondarySources() {
+        return Optional.ofNullable(this.secondarySources);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRole")
-      private final @Nullable Output<String> serviceRole;
+    private @Nullable Output<String> serviceRole;
 
-    public Output<String> serviceRole() {
-        return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
+    public Optional<Output<String>> serviceRole() {
+        return Optional.ofNullable(this.serviceRole);
     }
 
     /**
@@ -277,10 +277,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<ProjectSourceGetArgs> source;
+    private @Nullable Output<ProjectSourceGetArgs> source;
 
-    public Output<ProjectSourceGetArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<ProjectSourceGetArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -288,10 +288,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceVersion")
-      private final @Nullable Output<String> sourceVersion;
+    private @Nullable Output<String> sourceVersion;
 
-    public Output<String> sourceVersion() {
-        return this.sourceVersion == null ? Codegen.empty() : this.sourceVersion;
+    public Optional<Output<String>> sourceVersion() {
+        return Optional.ofNullable(this.sourceVersion);
     }
 
     /**
@@ -299,10 +299,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -310,10 +310,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -321,400 +321,324 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-      private final @Nullable Output<ProjectVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<ProjectVpcConfigGetArgs> vpcConfig;
 
-    public Output<ProjectVpcConfigGetArgs> vpcConfig() {
-        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
+    public Optional<Output<ProjectVpcConfigGetArgs>> vpcConfig() {
+        return Optional.ofNullable(this.vpcConfig);
     }
 
-    public ProjectState(
-        @Nullable Output<String> arn,
-        @Nullable Output<ProjectArtifactsGetArgs> artifacts,
-        @Nullable Output<Boolean> badgeEnabled,
-        @Nullable Output<String> badgeUrl,
-        @Nullable Output<ProjectBuildBatchConfigGetArgs> buildBatchConfig,
-        @Nullable Output<Integer> buildTimeout,
-        @Nullable Output<ProjectCacheGetArgs> cache,
-        @Nullable Output<Integer> concurrentBuildLimit,
-        @Nullable Output<String> description,
-        @Nullable Output<String> encryptionKey,
-        @Nullable Output<ProjectEnvironmentGetArgs> environment,
-        @Nullable Output<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations,
-        @Nullable Output<ProjectLogsConfigGetArgs> logsConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> projectVisibility,
-        @Nullable Output<String> publicProjectAlias,
-        @Nullable Output<Integer> queuedTimeout,
-        @Nullable Output<String> resourceAccessRole,
-        @Nullable Output<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts,
-        @Nullable Output<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions,
-        @Nullable Output<List<ProjectSecondarySourceGetArgs>> secondarySources,
-        @Nullable Output<String> serviceRole,
-        @Nullable Output<ProjectSourceGetArgs> source,
-        @Nullable Output<String> sourceVersion,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<ProjectVpcConfigGetArgs> vpcConfig) {
-        this.arn = arn;
-        this.artifacts = artifacts;
-        this.badgeEnabled = badgeEnabled;
-        this.badgeUrl = badgeUrl;
-        this.buildBatchConfig = buildBatchConfig;
-        this.buildTimeout = buildTimeout;
-        this.cache = cache;
-        this.concurrentBuildLimit = concurrentBuildLimit;
-        this.description = description;
-        this.encryptionKey = encryptionKey;
-        this.environment = environment;
-        this.fileSystemLocations = fileSystemLocations;
-        this.logsConfig = logsConfig;
-        this.name = name;
-        this.projectVisibility = projectVisibility;
-        this.publicProjectAlias = publicProjectAlias;
-        this.queuedTimeout = queuedTimeout;
-        this.resourceAccessRole = resourceAccessRole;
-        this.secondaryArtifacts = secondaryArtifacts;
-        this.secondarySourceVersions = secondarySourceVersions;
-        this.secondarySources = secondarySources;
-        this.serviceRole = serviceRole;
-        this.source = source;
-        this.sourceVersion = sourceVersion;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpcConfig = vpcConfig;
-    }
+    private ProjectState() {}
 
-    private ProjectState() {
-        this.arn = Codegen.empty();
-        this.artifacts = Codegen.empty();
-        this.badgeEnabled = Codegen.empty();
-        this.badgeUrl = Codegen.empty();
-        this.buildBatchConfig = Codegen.empty();
-        this.buildTimeout = Codegen.empty();
-        this.cache = Codegen.empty();
-        this.concurrentBuildLimit = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptionKey = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.fileSystemLocations = Codegen.empty();
-        this.logsConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.projectVisibility = Codegen.empty();
-        this.publicProjectAlias = Codegen.empty();
-        this.queuedTimeout = Codegen.empty();
-        this.resourceAccessRole = Codegen.empty();
-        this.secondaryArtifacts = Codegen.empty();
-        this.secondarySourceVersions = Codegen.empty();
-        this.secondarySources = Codegen.empty();
-        this.serviceRole = Codegen.empty();
-        this.source = Codegen.empty();
-        this.sourceVersion = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpcConfig = Codegen.empty();
+    private ProjectState(ProjectState $) {
+        this.arn = $.arn;
+        this.artifacts = $.artifacts;
+        this.badgeEnabled = $.badgeEnabled;
+        this.badgeUrl = $.badgeUrl;
+        this.buildBatchConfig = $.buildBatchConfig;
+        this.buildTimeout = $.buildTimeout;
+        this.cache = $.cache;
+        this.concurrentBuildLimit = $.concurrentBuildLimit;
+        this.description = $.description;
+        this.encryptionKey = $.encryptionKey;
+        this.environment = $.environment;
+        this.fileSystemLocations = $.fileSystemLocations;
+        this.logsConfig = $.logsConfig;
+        this.name = $.name;
+        this.projectVisibility = $.projectVisibility;
+        this.publicProjectAlias = $.publicProjectAlias;
+        this.queuedTimeout = $.queuedTimeout;
+        this.resourceAccessRole = $.resourceAccessRole;
+        this.secondaryArtifacts = $.secondaryArtifacts;
+        this.secondarySourceVersions = $.secondarySourceVersions;
+        this.secondarySources = $.secondarySources;
+        this.serviceRole = $.serviceRole;
+        this.source = $.source;
+        this.sourceVersion = $.sourceVersion;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpcConfig = $.vpcConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<ProjectArtifactsGetArgs> artifacts;
-        private @Nullable Output<Boolean> badgeEnabled;
-        private @Nullable Output<String> badgeUrl;
-        private @Nullable Output<ProjectBuildBatchConfigGetArgs> buildBatchConfig;
-        private @Nullable Output<Integer> buildTimeout;
-        private @Nullable Output<ProjectCacheGetArgs> cache;
-        private @Nullable Output<Integer> concurrentBuildLimit;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> encryptionKey;
-        private @Nullable Output<ProjectEnvironmentGetArgs> environment;
-        private @Nullable Output<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations;
-        private @Nullable Output<ProjectLogsConfigGetArgs> logsConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> projectVisibility;
-        private @Nullable Output<String> publicProjectAlias;
-        private @Nullable Output<Integer> queuedTimeout;
-        private @Nullable Output<String> resourceAccessRole;
-        private @Nullable Output<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts;
-        private @Nullable Output<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions;
-        private @Nullable Output<List<ProjectSecondarySourceGetArgs>> secondarySources;
-        private @Nullable Output<String> serviceRole;
-        private @Nullable Output<ProjectSourceGetArgs> source;
-        private @Nullable Output<String> sourceVersion;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<ProjectVpcConfigGetArgs> vpcConfig;
+        private ProjectState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectState();
         }
 
         public Builder(ProjectState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.artifacts = defaults.artifacts;
-    	      this.badgeEnabled = defaults.badgeEnabled;
-    	      this.badgeUrl = defaults.badgeUrl;
-    	      this.buildBatchConfig = defaults.buildBatchConfig;
-    	      this.buildTimeout = defaults.buildTimeout;
-    	      this.cache = defaults.cache;
-    	      this.concurrentBuildLimit = defaults.concurrentBuildLimit;
-    	      this.description = defaults.description;
-    	      this.encryptionKey = defaults.encryptionKey;
-    	      this.environment = defaults.environment;
-    	      this.fileSystemLocations = defaults.fileSystemLocations;
-    	      this.logsConfig = defaults.logsConfig;
-    	      this.name = defaults.name;
-    	      this.projectVisibility = defaults.projectVisibility;
-    	      this.publicProjectAlias = defaults.publicProjectAlias;
-    	      this.queuedTimeout = defaults.queuedTimeout;
-    	      this.resourceAccessRole = defaults.resourceAccessRole;
-    	      this.secondaryArtifacts = defaults.secondaryArtifacts;
-    	      this.secondarySourceVersions = defaults.secondarySourceVersions;
-    	      this.secondarySources = defaults.secondarySources;
-    	      this.serviceRole = defaults.serviceRole;
-    	      this.source = defaults.source;
-    	      this.sourceVersion = defaults.sourceVersion;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpcConfig = defaults.vpcConfig;
+            $ = new ProjectState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder artifacts(@Nullable Output<ProjectArtifactsGetArgs> artifacts) {
-            this.artifacts = artifacts;
+            $.artifacts = artifacts;
             return this;
         }
-        public Builder artifacts(@Nullable ProjectArtifactsGetArgs artifacts) {
-            this.artifacts = Codegen.ofNullable(artifacts);
-            return this;
+
+        public Builder artifacts(ProjectArtifactsGetArgs artifacts) {
+            return artifacts(Output.of(artifacts));
         }
+
         public Builder badgeEnabled(@Nullable Output<Boolean> badgeEnabled) {
-            this.badgeEnabled = badgeEnabled;
+            $.badgeEnabled = badgeEnabled;
             return this;
         }
-        public Builder badgeEnabled(@Nullable Boolean badgeEnabled) {
-            this.badgeEnabled = Codegen.ofNullable(badgeEnabled);
-            return this;
+
+        public Builder badgeEnabled(Boolean badgeEnabled) {
+            return badgeEnabled(Output.of(badgeEnabled));
         }
+
         public Builder badgeUrl(@Nullable Output<String> badgeUrl) {
-            this.badgeUrl = badgeUrl;
+            $.badgeUrl = badgeUrl;
             return this;
         }
-        public Builder badgeUrl(@Nullable String badgeUrl) {
-            this.badgeUrl = Codegen.ofNullable(badgeUrl);
-            return this;
+
+        public Builder badgeUrl(String badgeUrl) {
+            return badgeUrl(Output.of(badgeUrl));
         }
+
         public Builder buildBatchConfig(@Nullable Output<ProjectBuildBatchConfigGetArgs> buildBatchConfig) {
-            this.buildBatchConfig = buildBatchConfig;
+            $.buildBatchConfig = buildBatchConfig;
             return this;
         }
-        public Builder buildBatchConfig(@Nullable ProjectBuildBatchConfigGetArgs buildBatchConfig) {
-            this.buildBatchConfig = Codegen.ofNullable(buildBatchConfig);
-            return this;
+
+        public Builder buildBatchConfig(ProjectBuildBatchConfigGetArgs buildBatchConfig) {
+            return buildBatchConfig(Output.of(buildBatchConfig));
         }
+
         public Builder buildTimeout(@Nullable Output<Integer> buildTimeout) {
-            this.buildTimeout = buildTimeout;
+            $.buildTimeout = buildTimeout;
             return this;
         }
-        public Builder buildTimeout(@Nullable Integer buildTimeout) {
-            this.buildTimeout = Codegen.ofNullable(buildTimeout);
-            return this;
+
+        public Builder buildTimeout(Integer buildTimeout) {
+            return buildTimeout(Output.of(buildTimeout));
         }
+
         public Builder cache(@Nullable Output<ProjectCacheGetArgs> cache) {
-            this.cache = cache;
+            $.cache = cache;
             return this;
         }
-        public Builder cache(@Nullable ProjectCacheGetArgs cache) {
-            this.cache = Codegen.ofNullable(cache);
-            return this;
+
+        public Builder cache(ProjectCacheGetArgs cache) {
+            return cache(Output.of(cache));
         }
+
         public Builder concurrentBuildLimit(@Nullable Output<Integer> concurrentBuildLimit) {
-            this.concurrentBuildLimit = concurrentBuildLimit;
+            $.concurrentBuildLimit = concurrentBuildLimit;
             return this;
         }
-        public Builder concurrentBuildLimit(@Nullable Integer concurrentBuildLimit) {
-            this.concurrentBuildLimit = Codegen.ofNullable(concurrentBuildLimit);
-            return this;
+
+        public Builder concurrentBuildLimit(Integer concurrentBuildLimit) {
+            return concurrentBuildLimit(Output.of(concurrentBuildLimit));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
-            this.encryptionKey = encryptionKey;
+            $.encryptionKey = encryptionKey;
             return this;
         }
-        public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Codegen.ofNullable(encryptionKey);
-            return this;
+
+        public Builder encryptionKey(String encryptionKey) {
+            return encryptionKey(Output.of(encryptionKey));
         }
+
         public Builder environment(@Nullable Output<ProjectEnvironmentGetArgs> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable ProjectEnvironmentGetArgs environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(ProjectEnvironmentGetArgs environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder fileSystemLocations(@Nullable Output<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations) {
-            this.fileSystemLocations = fileSystemLocations;
+            $.fileSystemLocations = fileSystemLocations;
             return this;
         }
-        public Builder fileSystemLocations(@Nullable List<ProjectFileSystemLocationGetArgs> fileSystemLocations) {
-            this.fileSystemLocations = Codegen.ofNullable(fileSystemLocations);
-            return this;
+
+        public Builder fileSystemLocations(List<ProjectFileSystemLocationGetArgs> fileSystemLocations) {
+            return fileSystemLocations(Output.of(fileSystemLocations));
         }
+
         public Builder fileSystemLocations(ProjectFileSystemLocationGetArgs... fileSystemLocations) {
             return fileSystemLocations(List.of(fileSystemLocations));
         }
+
         public Builder logsConfig(@Nullable Output<ProjectLogsConfigGetArgs> logsConfig) {
-            this.logsConfig = logsConfig;
+            $.logsConfig = logsConfig;
             return this;
         }
-        public Builder logsConfig(@Nullable ProjectLogsConfigGetArgs logsConfig) {
-            this.logsConfig = Codegen.ofNullable(logsConfig);
-            return this;
+
+        public Builder logsConfig(ProjectLogsConfigGetArgs logsConfig) {
+            return logsConfig(Output.of(logsConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder projectVisibility(@Nullable Output<String> projectVisibility) {
-            this.projectVisibility = projectVisibility;
+            $.projectVisibility = projectVisibility;
             return this;
         }
-        public Builder projectVisibility(@Nullable String projectVisibility) {
-            this.projectVisibility = Codegen.ofNullable(projectVisibility);
-            return this;
+
+        public Builder projectVisibility(String projectVisibility) {
+            return projectVisibility(Output.of(projectVisibility));
         }
+
         public Builder publicProjectAlias(@Nullable Output<String> publicProjectAlias) {
-            this.publicProjectAlias = publicProjectAlias;
+            $.publicProjectAlias = publicProjectAlias;
             return this;
         }
-        public Builder publicProjectAlias(@Nullable String publicProjectAlias) {
-            this.publicProjectAlias = Codegen.ofNullable(publicProjectAlias);
-            return this;
+
+        public Builder publicProjectAlias(String publicProjectAlias) {
+            return publicProjectAlias(Output.of(publicProjectAlias));
         }
+
         public Builder queuedTimeout(@Nullable Output<Integer> queuedTimeout) {
-            this.queuedTimeout = queuedTimeout;
+            $.queuedTimeout = queuedTimeout;
             return this;
         }
-        public Builder queuedTimeout(@Nullable Integer queuedTimeout) {
-            this.queuedTimeout = Codegen.ofNullable(queuedTimeout);
-            return this;
+
+        public Builder queuedTimeout(Integer queuedTimeout) {
+            return queuedTimeout(Output.of(queuedTimeout));
         }
+
         public Builder resourceAccessRole(@Nullable Output<String> resourceAccessRole) {
-            this.resourceAccessRole = resourceAccessRole;
+            $.resourceAccessRole = resourceAccessRole;
             return this;
         }
-        public Builder resourceAccessRole(@Nullable String resourceAccessRole) {
-            this.resourceAccessRole = Codegen.ofNullable(resourceAccessRole);
-            return this;
+
+        public Builder resourceAccessRole(String resourceAccessRole) {
+            return resourceAccessRole(Output.of(resourceAccessRole));
         }
+
         public Builder secondaryArtifacts(@Nullable Output<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts) {
-            this.secondaryArtifacts = secondaryArtifacts;
+            $.secondaryArtifacts = secondaryArtifacts;
             return this;
         }
-        public Builder secondaryArtifacts(@Nullable List<ProjectSecondaryArtifactGetArgs> secondaryArtifacts) {
-            this.secondaryArtifacts = Codegen.ofNullable(secondaryArtifacts);
-            return this;
+
+        public Builder secondaryArtifacts(List<ProjectSecondaryArtifactGetArgs> secondaryArtifacts) {
+            return secondaryArtifacts(Output.of(secondaryArtifacts));
         }
+
         public Builder secondaryArtifacts(ProjectSecondaryArtifactGetArgs... secondaryArtifacts) {
             return secondaryArtifacts(List.of(secondaryArtifacts));
         }
+
         public Builder secondarySourceVersions(@Nullable Output<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions) {
-            this.secondarySourceVersions = secondarySourceVersions;
+            $.secondarySourceVersions = secondarySourceVersions;
             return this;
         }
-        public Builder secondarySourceVersions(@Nullable List<ProjectSecondarySourceVersionGetArgs> secondarySourceVersions) {
-            this.secondarySourceVersions = Codegen.ofNullable(secondarySourceVersions);
-            return this;
+
+        public Builder secondarySourceVersions(List<ProjectSecondarySourceVersionGetArgs> secondarySourceVersions) {
+            return secondarySourceVersions(Output.of(secondarySourceVersions));
         }
+
         public Builder secondarySourceVersions(ProjectSecondarySourceVersionGetArgs... secondarySourceVersions) {
             return secondarySourceVersions(List.of(secondarySourceVersions));
         }
+
         public Builder secondarySources(@Nullable Output<List<ProjectSecondarySourceGetArgs>> secondarySources) {
-            this.secondarySources = secondarySources;
+            $.secondarySources = secondarySources;
             return this;
         }
-        public Builder secondarySources(@Nullable List<ProjectSecondarySourceGetArgs> secondarySources) {
-            this.secondarySources = Codegen.ofNullable(secondarySources);
-            return this;
+
+        public Builder secondarySources(List<ProjectSecondarySourceGetArgs> secondarySources) {
+            return secondarySources(Output.of(secondarySources));
         }
+
         public Builder secondarySources(ProjectSecondarySourceGetArgs... secondarySources) {
             return secondarySources(List.of(secondarySources));
         }
+
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
-            this.serviceRole = serviceRole;
+            $.serviceRole = serviceRole;
             return this;
         }
-        public Builder serviceRole(@Nullable String serviceRole) {
-            this.serviceRole = Codegen.ofNullable(serviceRole);
-            return this;
+
+        public Builder serviceRole(String serviceRole) {
+            return serviceRole(Output.of(serviceRole));
         }
+
         public Builder source(@Nullable Output<ProjectSourceGetArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable ProjectSourceGetArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(ProjectSourceGetArgs source) {
+            return source(Output.of(source));
         }
+
         public Builder sourceVersion(@Nullable Output<String> sourceVersion) {
-            this.sourceVersion = sourceVersion;
+            $.sourceVersion = sourceVersion;
             return this;
         }
-        public Builder sourceVersion(@Nullable String sourceVersion) {
-            this.sourceVersion = Codegen.ofNullable(sourceVersion);
-            return this;
+
+        public Builder sourceVersion(String sourceVersion) {
+            return sourceVersion(Output.of(sourceVersion));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpcConfig(@Nullable Output<ProjectVpcConfigGetArgs> vpcConfig) {
-            this.vpcConfig = vpcConfig;
+            $.vpcConfig = vpcConfig;
             return this;
         }
-        public Builder vpcConfig(@Nullable ProjectVpcConfigGetArgs vpcConfig) {
-            this.vpcConfig = Codegen.ofNullable(vpcConfig);
-            return this;
-        }        public ProjectState build() {
-            return new ProjectState(arn, artifacts, badgeEnabled, badgeUrl, buildBatchConfig, buildTimeout, cache, concurrentBuildLimit, description, encryptionKey, environment, fileSystemLocations, logsConfig, name, projectVisibility, publicProjectAlias, queuedTimeout, resourceAccessRole, secondaryArtifacts, secondarySourceVersions, secondarySources, serviceRole, source, sourceVersion, tags, tagsAll, vpcConfig);
+
+        public Builder vpcConfig(ProjectVpcConfigGetArgs vpcConfig) {
+            return vpcConfig(Output.of(vpcConfig));
+        }
+
+        public ProjectState build() {
+            return $;
         }
     }
+
 }

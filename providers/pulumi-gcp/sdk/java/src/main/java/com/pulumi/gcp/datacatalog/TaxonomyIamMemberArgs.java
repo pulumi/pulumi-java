@@ -5,10 +5,10 @@ package com.pulumi.gcp.datacatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.TaxonomyIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,14 +17,14 @@ public final class TaxonomyIamMemberArgs extends com.pulumi.resources.ResourceAr
     public static final TaxonomyIamMemberArgs Empty = new TaxonomyIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<TaxonomyIamMemberConditionArgs> condition;
+    private @Nullable Output<TaxonomyIamMemberConditionArgs> condition;
 
-    public Output<TaxonomyIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TaxonomyIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -36,17 +36,17 @@ public final class TaxonomyIamMemberArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class TaxonomyIamMemberArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -67,115 +67,101 @@ public final class TaxonomyIamMemberArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="taxonomy", required=true)
-      private final Output<String> taxonomy;
+    private Output<String> taxonomy;
 
     public Output<String> taxonomy() {
         return this.taxonomy;
     }
 
-    public TaxonomyIamMemberArgs(
-        @Nullable Output<TaxonomyIamMemberConditionArgs> condition,
-        Output<String> member,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> role,
-        Output<String> taxonomy) {
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.region = region;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.taxonomy = Objects.requireNonNull(taxonomy, "expected parameter 'taxonomy' to be non-null");
-    }
+    private TaxonomyIamMemberArgs() {}
 
-    private TaxonomyIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.role = Codegen.empty();
-        this.taxonomy = Codegen.empty();
+    private TaxonomyIamMemberArgs(TaxonomyIamMemberArgs $) {
+        this.condition = $.condition;
+        this.member = $.member;
+        this.project = $.project;
+        this.region = $.region;
+        this.role = $.role;
+        this.taxonomy = $.taxonomy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaxonomyIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TaxonomyIamMemberConditionArgs> condition;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> role;
-        private Output<String> taxonomy;
+        private TaxonomyIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaxonomyIamMemberArgs();
         }
 
         public Builder(TaxonomyIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.role = defaults.role;
-    	      this.taxonomy = defaults.taxonomy;
+            $ = new TaxonomyIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TaxonomyIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TaxonomyIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TaxonomyIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder taxonomy(Output<String> taxonomy) {
-            this.taxonomy = Objects.requireNonNull(taxonomy);
+            $.taxonomy = taxonomy;
             return this;
         }
+
         public Builder taxonomy(String taxonomy) {
-            this.taxonomy = Output.of(Objects.requireNonNull(taxonomy));
-            return this;
-        }        public TaxonomyIamMemberArgs build() {
-            return new TaxonomyIamMemberArgs(condition, member, project, region, role, taxonomy);
+            return taxonomy(Output.of(taxonomy));
+        }
+
+        public TaxonomyIamMemberArgs build() {
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.taxonomy = Objects.requireNonNull($.taxonomy, "expected parameter 'taxonomy' to be non-null");
+            return $;
         }
     }
+
 }

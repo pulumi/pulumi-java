@@ -6,10 +6,10 @@ package com.pulumi.awsnative.mediapackage;
 import com.pulumi.awsnative.mediapackage.inputs.AssetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packagingGroupId", required=true)
-      private final Output<String> packagingGroupId;
+    private Output<String> packagingGroupId;
 
     public Output<String> packagingGroupId() {
         return this.packagingGroupId;
@@ -33,10 +33,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceArn", required=true)
-      private final Output<String> sourceArn;
+    private Output<String> sourceArn;
 
     public Output<String> sourceArn() {
         return this.sourceArn;
@@ -55,7 +55,7 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRoleArn", required=true)
-      private final Output<String> sourceRoleArn;
+    private Output<String> sourceRoleArn;
 
     public Output<String> sourceRoleArn() {
         return this.sourceRoleArn;
@@ -66,105 +66,95 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<AssetTagArgs>> tags;
+    private @Nullable Output<List<AssetTagArgs>> tags;
 
-    public Output<List<AssetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<AssetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AssetArgs(
-        Output<String> packagingGroupId,
-        @Nullable Output<String> resourceId,
-        Output<String> sourceArn,
-        Output<String> sourceRoleArn,
-        @Nullable Output<List<AssetTagArgs>> tags) {
-        this.packagingGroupId = Objects.requireNonNull(packagingGroupId, "expected parameter 'packagingGroupId' to be non-null");
-        this.resourceId = resourceId;
-        this.sourceArn = Objects.requireNonNull(sourceArn, "expected parameter 'sourceArn' to be non-null");
-        this.sourceRoleArn = Objects.requireNonNull(sourceRoleArn, "expected parameter 'sourceRoleArn' to be non-null");
-        this.tags = tags;
-    }
+    private AssetArgs() {}
 
-    private AssetArgs() {
-        this.packagingGroupId = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.sourceArn = Codegen.empty();
-        this.sourceRoleArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AssetArgs(AssetArgs $) {
+        this.packagingGroupId = $.packagingGroupId;
+        this.resourceId = $.resourceId;
+        this.sourceArn = $.sourceArn;
+        this.sourceRoleArn = $.sourceRoleArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> packagingGroupId;
-        private @Nullable Output<String> resourceId;
-        private Output<String> sourceArn;
-        private Output<String> sourceRoleArn;
-        private @Nullable Output<List<AssetTagArgs>> tags;
+        private AssetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetArgs();
         }
 
         public Builder(AssetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packagingGroupId = defaults.packagingGroupId;
-    	      this.resourceId = defaults.resourceId;
-    	      this.sourceArn = defaults.sourceArn;
-    	      this.sourceRoleArn = defaults.sourceRoleArn;
-    	      this.tags = defaults.tags;
+            $ = new AssetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder packagingGroupId(Output<String> packagingGroupId) {
-            this.packagingGroupId = Objects.requireNonNull(packagingGroupId);
+            $.packagingGroupId = packagingGroupId;
             return this;
         }
+
         public Builder packagingGroupId(String packagingGroupId) {
-            this.packagingGroupId = Output.of(Objects.requireNonNull(packagingGroupId));
-            return this;
+            return packagingGroupId(Output.of(packagingGroupId));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder sourceArn(Output<String> sourceArn) {
-            this.sourceArn = Objects.requireNonNull(sourceArn);
+            $.sourceArn = sourceArn;
             return this;
         }
+
         public Builder sourceArn(String sourceArn) {
-            this.sourceArn = Output.of(Objects.requireNonNull(sourceArn));
-            return this;
+            return sourceArn(Output.of(sourceArn));
         }
+
         public Builder sourceRoleArn(Output<String> sourceRoleArn) {
-            this.sourceRoleArn = Objects.requireNonNull(sourceRoleArn);
+            $.sourceRoleArn = sourceRoleArn;
             return this;
         }
+
         public Builder sourceRoleArn(String sourceRoleArn) {
-            this.sourceRoleArn = Output.of(Objects.requireNonNull(sourceRoleArn));
-            return this;
+            return sourceRoleArn(Output.of(sourceRoleArn));
         }
+
         public Builder tags(@Nullable Output<List<AssetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<AssetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<AssetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(AssetTagArgs... tags) {
             return tags(List.of(tags));
-        }        public AssetArgs build() {
-            return new AssetArgs(packagingGroupId, resourceId, sourceArn, sourceRoleArn, tags);
+        }
+
+        public AssetArgs build() {
+            $.packagingGroupId = Objects.requireNonNull($.packagingGroupId, "expected parameter 'packagingGroupId' to be non-null");
+            $.sourceArn = Objects.requireNonNull($.sourceArn, "expected parameter 'sourceArn' to be non-null");
+            $.sourceRoleArn = Objects.requireNonNull($.sourceRoleArn, "expected parameter 'sourceRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

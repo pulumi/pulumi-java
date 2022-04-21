@@ -22,7 +22,7 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="destinationIp", required=true)
-      private final String destinationIp;
+    private String destinationIp;
 
     public String destinationIp() {
         return this.destinationIp;
@@ -33,7 +33,7 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="destinationNetworkUri", required=true)
-      private final String destinationNetworkUri;
+    private String destinationNetworkUri;
 
     public String destinationNetworkUri() {
         return this.destinationNetworkUri;
@@ -44,7 +44,7 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="destinationPort", required=true)
-      private final Integer destinationPort;
+    private Integer destinationPort;
 
     public Integer destinationPort() {
         return this.destinationPort;
@@ -55,7 +55,7 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
@@ -66,7 +66,7 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceIp", required=true)
-      private final String sourceIp;
+    private String sourceIp;
 
     public String sourceIp() {
         return this.sourceIp;
@@ -77,7 +77,7 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceNetworkUri", required=true)
-      private final String sourceNetworkUri;
+    private String sourceNetworkUri;
 
     public String sourceNetworkUri() {
         return this.sourceNetworkUri;
@@ -88,100 +88,87 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourcePort", required=true)
-      private final Integer sourcePort;
+    private Integer sourcePort;
 
     public Integer sourcePort() {
         return this.sourcePort;
     }
 
-    public EndpointInfoResponse(
-        String destinationIp,
-        String destinationNetworkUri,
-        Integer destinationPort,
-        String protocol,
-        String sourceIp,
-        String sourceNetworkUri,
-        Integer sourcePort) {
-        this.destinationIp = Objects.requireNonNull(destinationIp, "expected parameter 'destinationIp' to be non-null");
-        this.destinationNetworkUri = Objects.requireNonNull(destinationNetworkUri, "expected parameter 'destinationNetworkUri' to be non-null");
-        this.destinationPort = Objects.requireNonNull(destinationPort, "expected parameter 'destinationPort' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.sourceIp = Objects.requireNonNull(sourceIp, "expected parameter 'sourceIp' to be non-null");
-        this.sourceNetworkUri = Objects.requireNonNull(sourceNetworkUri, "expected parameter 'sourceNetworkUri' to be non-null");
-        this.sourcePort = Objects.requireNonNull(sourcePort, "expected parameter 'sourcePort' to be non-null");
-    }
+    private EndpointInfoResponse() {}
 
-    private EndpointInfoResponse() {
-        this.destinationIp = null;
-        this.destinationNetworkUri = null;
-        this.destinationPort = null;
-        this.protocol = null;
-        this.sourceIp = null;
-        this.sourceNetworkUri = null;
-        this.sourcePort = null;
+    private EndpointInfoResponse(EndpointInfoResponse $) {
+        this.destinationIp = $.destinationIp;
+        this.destinationNetworkUri = $.destinationNetworkUri;
+        this.destinationPort = $.destinationPort;
+        this.protocol = $.protocol;
+        this.sourceIp = $.sourceIp;
+        this.sourceNetworkUri = $.sourceNetworkUri;
+        this.sourcePort = $.sourcePort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destinationIp;
-        private String destinationNetworkUri;
-        private Integer destinationPort;
-        private String protocol;
-        private String sourceIp;
-        private String sourceNetworkUri;
-        private Integer sourcePort;
+        private EndpointInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointInfoResponse();
         }
 
         public Builder(EndpointInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationIp = defaults.destinationIp;
-    	      this.destinationNetworkUri = defaults.destinationNetworkUri;
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.protocol = defaults.protocol;
-    	      this.sourceIp = defaults.sourceIp;
-    	      this.sourceNetworkUri = defaults.sourceNetworkUri;
-    	      this.sourcePort = defaults.sourcePort;
+            $ = new EndpointInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationIp(String destinationIp) {
-            this.destinationIp = Objects.requireNonNull(destinationIp);
+            $.destinationIp = destinationIp;
             return this;
         }
+
         public Builder destinationNetworkUri(String destinationNetworkUri) {
-            this.destinationNetworkUri = Objects.requireNonNull(destinationNetworkUri);
+            $.destinationNetworkUri = destinationNetworkUri;
             return this;
         }
+
         public Builder destinationPort(Integer destinationPort) {
-            this.destinationPort = Objects.requireNonNull(destinationPort);
+            $.destinationPort = destinationPort;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder sourceIp(String sourceIp) {
-            this.sourceIp = Objects.requireNonNull(sourceIp);
+            $.sourceIp = sourceIp;
             return this;
         }
+
         public Builder sourceNetworkUri(String sourceNetworkUri) {
-            this.sourceNetworkUri = Objects.requireNonNull(sourceNetworkUri);
+            $.sourceNetworkUri = sourceNetworkUri;
             return this;
         }
+
         public Builder sourcePort(Integer sourcePort) {
-            this.sourcePort = Objects.requireNonNull(sourcePort);
+            $.sourcePort = sourcePort;
             return this;
-        }        public EndpointInfoResponse build() {
-            return new EndpointInfoResponse(destinationIp, destinationNetworkUri, destinationPort, protocol, sourceIp, sourceNetworkUri, sourcePort);
+        }
+
+        public EndpointInfoResponse build() {
+            $.destinationIp = Objects.requireNonNull($.destinationIp, "expected parameter 'destinationIp' to be non-null");
+            $.destinationNetworkUri = Objects.requireNonNull($.destinationNetworkUri, "expected parameter 'destinationNetworkUri' to be non-null");
+            $.destinationPort = Objects.requireNonNull($.destinationPort, "expected parameter 'destinationPort' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.sourceIp = Objects.requireNonNull($.sourceIp, "expected parameter 'sourceIp' to be non-null");
+            $.sourceNetworkUri = Objects.requireNonNull($.sourceNetworkUri, "expected parameter 'sourceNetworkUri' to be non-null");
+            $.sourcePort = Objects.requireNonNull($.sourcePort, "expected parameter 'sourcePort' to be non-null");
+            return $;
         }
     }
+
 }

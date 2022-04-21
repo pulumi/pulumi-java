@@ -13,45 +13,45 @@ public final class GetSimulationApplicationVersionArgs extends com.pulumi.resour
     public static final GetSimulationApplicationVersionArgs Empty = new GetSimulationApplicationVersionArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetSimulationApplicationVersionArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetSimulationApplicationVersionArgs() {}
 
-    private GetSimulationApplicationVersionArgs() {
-        this.arn = null;
+    private GetSimulationApplicationVersionArgs(GetSimulationApplicationVersionArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSimulationApplicationVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetSimulationApplicationVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSimulationApplicationVersionArgs();
         }
 
         public Builder(GetSimulationApplicationVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetSimulationApplicationVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetSimulationApplicationVersionArgs build() {
-            return new GetSimulationApplicationVersionArgs(arn);
+        }
+
+        public GetSimulationApplicationVersionArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

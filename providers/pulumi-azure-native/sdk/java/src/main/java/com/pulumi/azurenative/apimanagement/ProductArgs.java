@@ -6,11 +6,11 @@ package com.pulumi.azurenative.apimanagement;
 import com.pulumi.azurenative.apimanagement.enums.ProductState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="approvalRequired")
-      private final @Nullable Output<Boolean> approvalRequired;
+    private @Nullable Output<Boolean> approvalRequired;
 
-    public Output<Boolean> approvalRequired() {
-        return this.approvalRequired == null ? Codegen.empty() : this.approvalRequired;
+    public Optional<Output<Boolean>> approvalRequired() {
+        return Optional.ofNullable(this.approvalRequired);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -56,10 +56,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productId")
-      private final @Nullable Output<String> productId;
+    private @Nullable Output<String> productId;
 
-    public Output<String> productId() {
-        return this.productId == null ? Codegen.empty() : this.productId;
+    public Optional<Output<String>> productId() {
+        return Optional.ofNullable(this.productId);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -89,10 +89,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<ProductState> state;
+    private @Nullable Output<ProductState> state;
 
-    public Output<ProductState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<ProductState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscriptionRequired")
-      private final @Nullable Output<Boolean> subscriptionRequired;
+    private @Nullable Output<Boolean> subscriptionRequired;
 
-    public Output<Boolean> subscriptionRequired() {
-        return this.subscriptionRequired == null ? Codegen.empty() : this.subscriptionRequired;
+    public Optional<Output<Boolean>> subscriptionRequired() {
+        return Optional.ofNullable(this.subscriptionRequired);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscriptionsLimit")
-      private final @Nullable Output<Integer> subscriptionsLimit;
+    private @Nullable Output<Integer> subscriptionsLimit;
 
-    public Output<Integer> subscriptionsLimit() {
-        return this.subscriptionsLimit == null ? Codegen.empty() : this.subscriptionsLimit;
+    public Optional<Output<Integer>> subscriptionsLimit() {
+        return Optional.ofNullable(this.subscriptionsLimit);
     }
 
     /**
@@ -122,167 +122,141 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terms")
-      private final @Nullable Output<String> terms;
+    private @Nullable Output<String> terms;
 
-    public Output<String> terms() {
-        return this.terms == null ? Codegen.empty() : this.terms;
+    public Optional<Output<String>> terms() {
+        return Optional.ofNullable(this.terms);
     }
 
-    public ProductArgs(
-        @Nullable Output<Boolean> approvalRequired,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<String> productId,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<ProductState> state,
-        @Nullable Output<Boolean> subscriptionRequired,
-        @Nullable Output<Integer> subscriptionsLimit,
-        @Nullable Output<String> terms) {
-        this.approvalRequired = approvalRequired;
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.productId = productId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.state = state;
-        this.subscriptionRequired = subscriptionRequired;
-        this.subscriptionsLimit = subscriptionsLimit;
-        this.terms = terms;
-    }
+    private ProductArgs() {}
 
-    private ProductArgs() {
-        this.approvalRequired = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.state = Codegen.empty();
-        this.subscriptionRequired = Codegen.empty();
-        this.subscriptionsLimit = Codegen.empty();
-        this.terms = Codegen.empty();
+    private ProductArgs(ProductArgs $) {
+        this.approvalRequired = $.approvalRequired;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.productId = $.productId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.state = $.state;
+        this.subscriptionRequired = $.subscriptionRequired;
+        this.subscriptionsLimit = $.subscriptionsLimit;
+        this.terms = $.terms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> approvalRequired;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<String> productId;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<ProductState> state;
-        private @Nullable Output<Boolean> subscriptionRequired;
-        private @Nullable Output<Integer> subscriptionsLimit;
-        private @Nullable Output<String> terms;
+        private ProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductArgs();
         }
 
         public Builder(ProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approvalRequired = defaults.approvalRequired;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.productId = defaults.productId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.state = defaults.state;
-    	      this.subscriptionRequired = defaults.subscriptionRequired;
-    	      this.subscriptionsLimit = defaults.subscriptionsLimit;
-    	      this.terms = defaults.terms;
+            $ = new ProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder approvalRequired(@Nullable Output<Boolean> approvalRequired) {
-            this.approvalRequired = approvalRequired;
+            $.approvalRequired = approvalRequired;
             return this;
         }
-        public Builder approvalRequired(@Nullable Boolean approvalRequired) {
-            this.approvalRequired = Codegen.ofNullable(approvalRequired);
-            return this;
+
+        public Builder approvalRequired(Boolean approvalRequired) {
+            return approvalRequired(Output.of(approvalRequired));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder productId(@Nullable Output<String> productId) {
-            this.productId = productId;
+            $.productId = productId;
             return this;
         }
-        public Builder productId(@Nullable String productId) {
-            this.productId = Codegen.ofNullable(productId);
-            return this;
+
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder state(@Nullable Output<ProductState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable ProductState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(ProductState state) {
+            return state(Output.of(state));
         }
+
         public Builder subscriptionRequired(@Nullable Output<Boolean> subscriptionRequired) {
-            this.subscriptionRequired = subscriptionRequired;
+            $.subscriptionRequired = subscriptionRequired;
             return this;
         }
-        public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
-            this.subscriptionRequired = Codegen.ofNullable(subscriptionRequired);
-            return this;
+
+        public Builder subscriptionRequired(Boolean subscriptionRequired) {
+            return subscriptionRequired(Output.of(subscriptionRequired));
         }
+
         public Builder subscriptionsLimit(@Nullable Output<Integer> subscriptionsLimit) {
-            this.subscriptionsLimit = subscriptionsLimit;
+            $.subscriptionsLimit = subscriptionsLimit;
             return this;
         }
-        public Builder subscriptionsLimit(@Nullable Integer subscriptionsLimit) {
-            this.subscriptionsLimit = Codegen.ofNullable(subscriptionsLimit);
-            return this;
+
+        public Builder subscriptionsLimit(Integer subscriptionsLimit) {
+            return subscriptionsLimit(Output.of(subscriptionsLimit));
         }
+
         public Builder terms(@Nullable Output<String> terms) {
-            this.terms = terms;
+            $.terms = terms;
             return this;
         }
-        public Builder terms(@Nullable String terms) {
-            this.terms = Codegen.ofNullable(terms);
-            return this;
-        }        public ProductArgs build() {
-            return new ProductArgs(approvalRequired, description, displayName, productId, resourceGroupName, serviceName, state, subscriptionRequired, subscriptionsLimit, terms);
+
+        public Builder terms(String terms) {
+            return terms(Output.of(terms));
+        }
+
+        public ProductArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

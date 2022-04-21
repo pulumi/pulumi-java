@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AttestationAuthorityHintArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="humanReadableName")
-      private final @Nullable Output<String> humanReadableName;
+    private @Nullable Output<String> humanReadableName;
 
-    public Output<String> humanReadableName() {
-        return this.humanReadableName == null ? Codegen.empty() : this.humanReadableName;
+    public Optional<Output<String>> humanReadableName() {
+        return Optional.ofNullable(this.humanReadableName);
     }
 
-    public AttestationAuthorityHintArgs(@Nullable Output<String> humanReadableName) {
-        this.humanReadableName = humanReadableName;
-    }
+    private AttestationAuthorityHintArgs() {}
 
-    private AttestationAuthorityHintArgs() {
-        this.humanReadableName = Codegen.empty();
+    private AttestationAuthorityHintArgs(AttestationAuthorityHintArgs $) {
+        this.humanReadableName = $.humanReadableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationAuthorityHintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> humanReadableName;
+        private AttestationAuthorityHintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationAuthorityHintArgs();
         }
 
         public Builder(AttestationAuthorityHintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.humanReadableName = defaults.humanReadableName;
+            $ = new AttestationAuthorityHintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder humanReadableName(@Nullable Output<String> humanReadableName) {
-            this.humanReadableName = humanReadableName;
+            $.humanReadableName = humanReadableName;
             return this;
         }
-        public Builder humanReadableName(@Nullable String humanReadableName) {
-            this.humanReadableName = Codegen.ofNullable(humanReadableName);
-            return this;
-        }        public AttestationAuthorityHintArgs build() {
-            return new AttestationAuthorityHintArgs(humanReadableName);
+
+        public Builder humanReadableName(String humanReadableName) {
+            return humanReadableName(Output.of(humanReadableName));
+        }
+
+        public AttestationAuthorityHintArgs build() {
+            return $;
         }
     }
+
 }

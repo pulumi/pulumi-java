@@ -21,45 +21,45 @@ public final class ResourceIdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ResourceIdResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ResourceIdResponse() {}
 
-    private ResourceIdResponse() {
-        this.type = null;
+    private ResourceIdResponse(ResourceIdResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private ResourceIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceIdResponse();
         }
 
         public Builder(ResourceIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ResourceIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ResourceIdResponse build() {
-            return new ResourceIdResponse(type);
+        }
+
+        public ResourceIdResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

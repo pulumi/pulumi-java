@@ -5,10 +5,10 @@ package com.pulumi.aws.detective.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="administratorId")
-      private final @Nullable Output<String> administratorId;
+    private @Nullable Output<String> administratorId;
 
-    public Output<String> administratorId() {
-        return this.administratorId == null ? Codegen.empty() : this.administratorId;
+    public Optional<Output<String>> administratorId() {
+        return Optional.ofNullable(this.administratorId);
     }
 
     /**
@@ -43,17 +43,17 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableEmailNotification")
-      private final @Nullable Output<Boolean> disableEmailNotification;
+    private @Nullable Output<Boolean> disableEmailNotification;
 
-    public Output<Boolean> disableEmailNotification() {
-        return this.disableEmailNotification == null ? Codegen.empty() : this.disableEmailNotification;
+    public Optional<Output<Boolean>> disableEmailNotification() {
+        return Optional.ofNullable(this.disableEmailNotification);
     }
 
     @Import(name="disabledReason")
-      private final @Nullable Output<String> disabledReason;
+    private @Nullable Output<String> disabledReason;
 
-    public Output<String> disabledReason() {
-        return this.disabledReason == null ? Codegen.empty() : this.disabledReason;
+    public Optional<Output<String>> disabledReason() {
+        return Optional.ofNullable(this.disabledReason);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emailAddress")
-      private final @Nullable Output<String> emailAddress;
+    private @Nullable Output<String> emailAddress;
 
-    public Output<String> emailAddress() {
-        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
+    public Optional<Output<String>> emailAddress() {
+        return Optional.ofNullable(this.emailAddress);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="graphArn")
-      private final @Nullable Output<String> graphArn;
+    private @Nullable Output<String> graphArn;
 
-    public Output<String> graphArn() {
-        return this.graphArn == null ? Codegen.empty() : this.graphArn;
+    public Optional<Output<String>> graphArn() {
+        return Optional.ofNullable(this.graphArn);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invitedTime")
-      private final @Nullable Output<String> invitedTime;
+    private @Nullable Output<String> invitedTime;
 
-    public Output<String> invitedTime() {
-        return this.invitedTime == null ? Codegen.empty() : this.invitedTime;
+    public Optional<Output<String>> invitedTime() {
+        return Optional.ofNullable(this.invitedTime);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updatedTime")
-      private final @Nullable Output<String> updatedTime;
+    private @Nullable Output<String> updatedTime;
 
-    public Output<String> updatedTime() {
-        return this.updatedTime == null ? Codegen.empty() : this.updatedTime;
+    public Optional<Output<String>> updatedTime() {
+        return Optional.ofNullable(this.updatedTime);
     }
 
     /**
@@ -127,180 +127,148 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeUsageInBytes")
-      private final @Nullable Output<String> volumeUsageInBytes;
+    private @Nullable Output<String> volumeUsageInBytes;
 
-    public Output<String> volumeUsageInBytes() {
-        return this.volumeUsageInBytes == null ? Codegen.empty() : this.volumeUsageInBytes;
+    public Optional<Output<String>> volumeUsageInBytes() {
+        return Optional.ofNullable(this.volumeUsageInBytes);
     }
 
-    public MemberState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> administratorId,
-        @Nullable Output<Boolean> disableEmailNotification,
-        @Nullable Output<String> disabledReason,
-        @Nullable Output<String> emailAddress,
-        @Nullable Output<String> graphArn,
-        @Nullable Output<String> invitedTime,
-        @Nullable Output<String> message,
-        @Nullable Output<String> status,
-        @Nullable Output<String> updatedTime,
-        @Nullable Output<String> volumeUsageInBytes) {
-        this.accountId = accountId;
-        this.administratorId = administratorId;
-        this.disableEmailNotification = disableEmailNotification;
-        this.disabledReason = disabledReason;
-        this.emailAddress = emailAddress;
-        this.graphArn = graphArn;
-        this.invitedTime = invitedTime;
-        this.message = message;
-        this.status = status;
-        this.updatedTime = updatedTime;
-        this.volumeUsageInBytes = volumeUsageInBytes;
-    }
+    private MemberState() {}
 
-    private MemberState() {
-        this.accountId = Codegen.empty();
-        this.administratorId = Codegen.empty();
-        this.disableEmailNotification = Codegen.empty();
-        this.disabledReason = Codegen.empty();
-        this.emailAddress = Codegen.empty();
-        this.graphArn = Codegen.empty();
-        this.invitedTime = Codegen.empty();
-        this.message = Codegen.empty();
-        this.status = Codegen.empty();
-        this.updatedTime = Codegen.empty();
-        this.volumeUsageInBytes = Codegen.empty();
+    private MemberState(MemberState $) {
+        this.accountId = $.accountId;
+        this.administratorId = $.administratorId;
+        this.disableEmailNotification = $.disableEmailNotification;
+        this.disabledReason = $.disabledReason;
+        this.emailAddress = $.emailAddress;
+        this.graphArn = $.graphArn;
+        this.invitedTime = $.invitedTime;
+        this.message = $.message;
+        this.status = $.status;
+        this.updatedTime = $.updatedTime;
+        this.volumeUsageInBytes = $.volumeUsageInBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> administratorId;
-        private @Nullable Output<Boolean> disableEmailNotification;
-        private @Nullable Output<String> disabledReason;
-        private @Nullable Output<String> emailAddress;
-        private @Nullable Output<String> graphArn;
-        private @Nullable Output<String> invitedTime;
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> updatedTime;
-        private @Nullable Output<String> volumeUsageInBytes;
+        private MemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MemberState();
         }
 
         public Builder(MemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.administratorId = defaults.administratorId;
-    	      this.disableEmailNotification = defaults.disableEmailNotification;
-    	      this.disabledReason = defaults.disabledReason;
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.graphArn = defaults.graphArn;
-    	      this.invitedTime = defaults.invitedTime;
-    	      this.message = defaults.message;
-    	      this.status = defaults.status;
-    	      this.updatedTime = defaults.updatedTime;
-    	      this.volumeUsageInBytes = defaults.volumeUsageInBytes;
+            $ = new MemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder administratorId(@Nullable Output<String> administratorId) {
-            this.administratorId = administratorId;
+            $.administratorId = administratorId;
             return this;
         }
-        public Builder administratorId(@Nullable String administratorId) {
-            this.administratorId = Codegen.ofNullable(administratorId);
-            return this;
+
+        public Builder administratorId(String administratorId) {
+            return administratorId(Output.of(administratorId));
         }
+
         public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
-            this.disableEmailNotification = disableEmailNotification;
+            $.disableEmailNotification = disableEmailNotification;
             return this;
         }
-        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
-            this.disableEmailNotification = Codegen.ofNullable(disableEmailNotification);
-            return this;
+
+        public Builder disableEmailNotification(Boolean disableEmailNotification) {
+            return disableEmailNotification(Output.of(disableEmailNotification));
         }
+
         public Builder disabledReason(@Nullable Output<String> disabledReason) {
-            this.disabledReason = disabledReason;
+            $.disabledReason = disabledReason;
             return this;
         }
-        public Builder disabledReason(@Nullable String disabledReason) {
-            this.disabledReason = Codegen.ofNullable(disabledReason);
-            return this;
+
+        public Builder disabledReason(String disabledReason) {
+            return disabledReason(Output.of(disabledReason));
         }
+
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
-            this.emailAddress = emailAddress;
+            $.emailAddress = emailAddress;
             return this;
         }
-        public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Codegen.ofNullable(emailAddress);
-            return this;
+
+        public Builder emailAddress(String emailAddress) {
+            return emailAddress(Output.of(emailAddress));
         }
+
         public Builder graphArn(@Nullable Output<String> graphArn) {
-            this.graphArn = graphArn;
+            $.graphArn = graphArn;
             return this;
         }
-        public Builder graphArn(@Nullable String graphArn) {
-            this.graphArn = Codegen.ofNullable(graphArn);
-            return this;
+
+        public Builder graphArn(String graphArn) {
+            return graphArn(Output.of(graphArn));
         }
+
         public Builder invitedTime(@Nullable Output<String> invitedTime) {
-            this.invitedTime = invitedTime;
+            $.invitedTime = invitedTime;
             return this;
         }
-        public Builder invitedTime(@Nullable String invitedTime) {
-            this.invitedTime = Codegen.ofNullable(invitedTime);
-            return this;
+
+        public Builder invitedTime(String invitedTime) {
+            return invitedTime(Output.of(invitedTime));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder updatedTime(@Nullable Output<String> updatedTime) {
-            this.updatedTime = updatedTime;
+            $.updatedTime = updatedTime;
             return this;
         }
-        public Builder updatedTime(@Nullable String updatedTime) {
-            this.updatedTime = Codegen.ofNullable(updatedTime);
-            return this;
+
+        public Builder updatedTime(String updatedTime) {
+            return updatedTime(Output.of(updatedTime));
         }
+
         public Builder volumeUsageInBytes(@Nullable Output<String> volumeUsageInBytes) {
-            this.volumeUsageInBytes = volumeUsageInBytes;
+            $.volumeUsageInBytes = volumeUsageInBytes;
             return this;
         }
-        public Builder volumeUsageInBytes(@Nullable String volumeUsageInBytes) {
-            this.volumeUsageInBytes = Codegen.ofNullable(volumeUsageInBytes);
-            return this;
-        }        public MemberState build() {
-            return new MemberState(accountId, administratorId, disableEmailNotification, disabledReason, emailAddress, graphArn, invitedTime, message, status, updatedTime, volumeUsageInBytes);
+
+        public Builder volumeUsageInBytes(String volumeUsageInBytes) {
+            return volumeUsageInBytes(Output.of(volumeUsageInBytes));
+        }
+
+        public MemberState build() {
+            return $;
         }
     }
+
 }

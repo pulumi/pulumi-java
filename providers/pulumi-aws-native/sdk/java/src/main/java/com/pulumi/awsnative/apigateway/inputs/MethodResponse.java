@@ -20,10 +20,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="responseModels")
-      private final @Nullable Object responseModels;
+    private @Nullable Object responseModels;
 
     public Optional<Object> responseModels() {
-        return this.responseModels == null ? Optional.empty() : Optional.ofNullable(this.responseModels);
+        return Optional.ofNullable(this.responseModels);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="responseParameters")
-      private final @Nullable Object responseParameters;
+    private @Nullable Object responseParameters;
 
     public Optional<Object> responseParameters() {
-        return this.responseParameters == null ? Optional.empty() : Optional.ofNullable(this.responseParameters);
+        return Optional.ofNullable(this.responseParameters);
     }
 
     /**
@@ -42,64 +42,57 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="statusCode", required=true)
-      private final String statusCode;
+    private String statusCode;
 
     public String statusCode() {
         return this.statusCode;
     }
 
-    public MethodResponse(
-        @Nullable Object responseModels,
-        @Nullable Object responseParameters,
-        String statusCode) {
-        this.responseModels = responseModels;
-        this.responseParameters = responseParameters;
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private MethodResponse() {}
 
-    private MethodResponse() {
-        this.responseModels = null;
-        this.responseParameters = null;
-        this.statusCode = null;
+    private MethodResponse(MethodResponse $) {
+        this.responseModels = $.responseModels;
+        this.responseParameters = $.responseParameters;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object responseModels;
-        private @Nullable Object responseParameters;
-        private String statusCode;
+        private MethodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodResponse();
         }
 
         public Builder(MethodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.responseModels = defaults.responseModels;
-    	      this.responseParameters = defaults.responseParameters;
-    	      this.statusCode = defaults.statusCode;
+            $ = new MethodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder responseModels(@Nullable Object responseModels) {
-            this.responseModels = responseModels;
+            $.responseModels = responseModels;
             return this;
         }
+
         public Builder responseParameters(@Nullable Object responseParameters) {
-            this.responseParameters = responseParameters;
+            $.responseParameters = responseParameters;
             return this;
         }
+
         public Builder statusCode(String statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
-        }        public MethodResponse build() {
-            return new MethodResponse(responseModels, responseParameters, statusCode);
+        }
+
+        public MethodResponse build() {
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

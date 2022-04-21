@@ -26,14 +26,14 @@ public final class RuleGroupCustomResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="customResponseBodyKey")
-      private final @Nullable String customResponseBodyKey;
+    private @Nullable String customResponseBodyKey;
 
     public Optional<String> customResponseBodyKey() {
-        return this.customResponseBodyKey == null ? Optional.empty() : Optional.ofNullable(this.customResponseBodyKey);
+        return Optional.ofNullable(this.customResponseBodyKey);
     }
 
     @Import(name="responseCode", required=true)
-      private final Integer responseCode;
+    private Integer responseCode;
 
     public Integer responseCode() {
         return this.responseCode;
@@ -44,67 +44,61 @@ public final class RuleGroupCustomResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="responseHeaders")
-      private final @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders;
+    private @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders;
 
-    public List<RuleGroupCustomHTTPHeader> responseHeaders() {
-        return this.responseHeaders == null ? List.of() : this.responseHeaders;
+    public Optional<List<RuleGroupCustomHTTPHeader>> responseHeaders() {
+        return Optional.ofNullable(this.responseHeaders);
     }
 
-    public RuleGroupCustomResponse(
-        @Nullable String customResponseBodyKey,
-        Integer responseCode,
-        @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
-        this.customResponseBodyKey = customResponseBodyKey;
-        this.responseCode = Objects.requireNonNull(responseCode, "expected parameter 'responseCode' to be non-null");
-        this.responseHeaders = responseHeaders;
-    }
+    private RuleGroupCustomResponse() {}
 
-    private RuleGroupCustomResponse() {
-        this.customResponseBodyKey = null;
-        this.responseCode = null;
-        this.responseHeaders = List.of();
+    private RuleGroupCustomResponse(RuleGroupCustomResponse $) {
+        this.customResponseBodyKey = $.customResponseBodyKey;
+        this.responseCode = $.responseCode;
+        this.responseHeaders = $.responseHeaders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupCustomResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customResponseBodyKey;
-        private Integer responseCode;
-        private @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders;
+        private RuleGroupCustomResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupCustomResponse();
         }
 
         public Builder(RuleGroupCustomResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customResponseBodyKey = defaults.customResponseBodyKey;
-    	      this.responseCode = defaults.responseCode;
-    	      this.responseHeaders = defaults.responseHeaders;
+            $ = new RuleGroupCustomResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
-            this.customResponseBodyKey = customResponseBodyKey;
+            $.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
+
         public Builder responseCode(Integer responseCode) {
-            this.responseCode = Objects.requireNonNull(responseCode);
+            $.responseCode = responseCode;
             return this;
         }
+
         public Builder responseHeaders(@Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
-            this.responseHeaders = responseHeaders;
+            $.responseHeaders = responseHeaders;
             return this;
         }
+
         public Builder responseHeaders(RuleGroupCustomHTTPHeader... responseHeaders) {
             return responseHeaders(List.of(responseHeaders));
-        }        public RuleGroupCustomResponse build() {
-            return new RuleGroupCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
+        }
+
+        public RuleGroupCustomResponse build() {
+            $.responseCode = Objects.requireNonNull($.responseCode, "expected parameter 'responseCode' to be non-null");
+            return $;
         }
     }
+
 }

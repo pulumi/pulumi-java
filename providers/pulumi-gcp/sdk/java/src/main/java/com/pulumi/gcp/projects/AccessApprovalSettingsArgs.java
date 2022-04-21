@@ -5,11 +5,11 @@ package com.pulumi.gcp.projects;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.projects.inputs.AccessApprovalSettingsEnrolledServiceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enrolledServices", required=true)
-      private final Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
+    private Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
     public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices() {
         return this.enrolledServices;
@@ -39,10 +39,10 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="notificationEmails")
-      private final @Nullable Output<List<String>> notificationEmails;
+    private @Nullable Output<List<String>> notificationEmails;
 
-    public Output<List<String>> notificationEmails() {
-        return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
+    public Optional<Output<List<String>>> notificationEmails() {
+        return Optional.ofNullable(this.notificationEmails);
     }
 
     /**
@@ -56,11 +56,11 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      */
     @Deprecated /* Deprecated in favor of `project_id` */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
     @Deprecated /* Deprecated in favor of `project_id` */
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -68,95 +68,88 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="projectId", required=true)
-      private final Output<String> projectId;
+    private Output<String> projectId;
 
     public Output<String> projectId() {
         return this.projectId;
     }
 
-    public AccessApprovalSettingsArgs(
-        Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices,
-        @Nullable Output<List<String>> notificationEmails,
-        @Nullable Output<String> project,
-        Output<String> projectId) {
-        this.enrolledServices = Objects.requireNonNull(enrolledServices, "expected parameter 'enrolledServices' to be non-null");
-        this.notificationEmails = notificationEmails;
-        this.project = project;
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-    }
+    private AccessApprovalSettingsArgs() {}
 
-    private AccessApprovalSettingsArgs() {
-        this.enrolledServices = Codegen.empty();
-        this.notificationEmails = Codegen.empty();
-        this.project = Codegen.empty();
-        this.projectId = Codegen.empty();
+    private AccessApprovalSettingsArgs(AccessApprovalSettingsArgs $) {
+        this.enrolledServices = $.enrolledServices;
+        this.notificationEmails = $.notificationEmails;
+        this.project = $.project;
+        this.projectId = $.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessApprovalSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
-        private @Nullable Output<List<String>> notificationEmails;
-        private @Nullable Output<String> project;
-        private Output<String> projectId;
+        private AccessApprovalSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessApprovalSettingsArgs();
         }
 
         public Builder(AccessApprovalSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enrolledServices = defaults.enrolledServices;
-    	      this.notificationEmails = defaults.notificationEmails;
-    	      this.project = defaults.project;
-    	      this.projectId = defaults.projectId;
+            $ = new AccessApprovalSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enrolledServices(Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
-            this.enrolledServices = Objects.requireNonNull(enrolledServices);
+            $.enrolledServices = enrolledServices;
             return this;
         }
+
         public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
-            this.enrolledServices = Output.of(Objects.requireNonNull(enrolledServices));
-            return this;
+            return enrolledServices(Output.of(enrolledServices));
         }
+
         public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceArgs... enrolledServices) {
             return enrolledServices(List.of(enrolledServices));
         }
+
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
-            this.notificationEmails = notificationEmails;
+            $.notificationEmails = notificationEmails;
             return this;
         }
-        public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Codegen.ofNullable(notificationEmails);
-            return this;
+
+        public Builder notificationEmails(List<String> notificationEmails) {
+            return notificationEmails(Output.of(notificationEmails));
         }
+
         public Builder notificationEmails(String... notificationEmails) {
             return notificationEmails(List.of(notificationEmails));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder projectId(Output<String> projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
         }
+
         public Builder projectId(String projectId) {
-            this.projectId = Output.of(Objects.requireNonNull(projectId));
-            return this;
-        }        public AccessApprovalSettingsArgs build() {
-            return new AccessApprovalSettingsArgs(enrolledServices, notificationEmails, project, projectId);
+            return projectId(Output.of(projectId));
+        }
+
+        public AccessApprovalSettingsArgs build() {
+            $.enrolledServices = Objects.requireNonNull($.enrolledServices, "expected parameter 'enrolledServices' to be non-null");
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class RollbackConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<Integer> revision;
+    private @Nullable Output<Integer> revision;
 
-    public Output<Integer> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<Integer>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
-    public RollbackConfigArgs(@Nullable Output<Integer> revision) {
-        this.revision = revision;
-    }
+    private RollbackConfigArgs() {}
 
-    private RollbackConfigArgs() {
-        this.revision = Codegen.empty();
+    private RollbackConfigArgs(RollbackConfigArgs $) {
+        this.revision = $.revision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RollbackConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> revision;
+        private RollbackConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RollbackConfigArgs();
         }
 
         public Builder(RollbackConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revision = defaults.revision;
+            $ = new RollbackConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder revision(@Nullable Output<Integer> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable Integer revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
-        }        public RollbackConfigArgs build() {
-            return new RollbackConfigArgs(revision);
+
+        public Builder revision(Integer revision) {
+            return revision(Output.of(revision));
+        }
+
+        public RollbackConfigArgs build() {
+            return $;
         }
     }
+
 }

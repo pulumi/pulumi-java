@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="crossRealmTrustAdminServer")
-      private final @Nullable Output<String> crossRealmTrustAdminServer;
+    private @Nullable Output<String> crossRealmTrustAdminServer;
 
-    public Output<String> crossRealmTrustAdminServer() {
-        return this.crossRealmTrustAdminServer == null ? Codegen.empty() : this.crossRealmTrustAdminServer;
+    public Optional<Output<String>> crossRealmTrustAdminServer() {
+        return Optional.ofNullable(this.crossRealmTrustAdminServer);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="crossRealmTrustKdc")
-      private final @Nullable Output<String> crossRealmTrustKdc;
+    private @Nullable Output<String> crossRealmTrustKdc;
 
-    public Output<String> crossRealmTrustKdc() {
-        return this.crossRealmTrustKdc == null ? Codegen.empty() : this.crossRealmTrustKdc;
+    public Optional<Output<String>> crossRealmTrustKdc() {
+        return Optional.ofNullable(this.crossRealmTrustKdc);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="crossRealmTrustRealm")
-      private final @Nullable Output<String> crossRealmTrustRealm;
+    private @Nullable Output<String> crossRealmTrustRealm;
 
-    public Output<String> crossRealmTrustRealm() {
-        return this.crossRealmTrustRealm == null ? Codegen.empty() : this.crossRealmTrustRealm;
+    public Optional<Output<String>> crossRealmTrustRealm() {
+        return Optional.ofNullable(this.crossRealmTrustRealm);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="crossRealmTrustSharedPasswordUri")
-      private final @Nullable Output<String> crossRealmTrustSharedPasswordUri;
+    private @Nullable Output<String> crossRealmTrustSharedPasswordUri;
 
-    public Output<String> crossRealmTrustSharedPasswordUri() {
-        return this.crossRealmTrustSharedPasswordUri == null ? Codegen.empty() : this.crossRealmTrustSharedPasswordUri;
+    public Optional<Output<String>> crossRealmTrustSharedPasswordUri() {
+        return Optional.ofNullable(this.crossRealmTrustSharedPasswordUri);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="enableKerberos")
-      private final @Nullable Output<Boolean> enableKerberos;
+    private @Nullable Output<Boolean> enableKerberos;
 
-    public Output<Boolean> enableKerberos() {
-        return this.enableKerberos == null ? Codegen.empty() : this.enableKerberos;
+    public Optional<Output<Boolean>> enableKerberos() {
+        return Optional.ofNullable(this.enableKerberos);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="kdcDbKeyUri")
-      private final @Nullable Output<String> kdcDbKeyUri;
+    private @Nullable Output<String> kdcDbKeyUri;
 
-    public Output<String> kdcDbKeyUri() {
-        return this.kdcDbKeyUri == null ? Codegen.empty() : this.kdcDbKeyUri;
+    public Optional<Output<String>> kdcDbKeyUri() {
+        return Optional.ofNullable(this.kdcDbKeyUri);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="keyPasswordUri")
-      private final @Nullable Output<String> keyPasswordUri;
+    private @Nullable Output<String> keyPasswordUri;
 
-    public Output<String> keyPasswordUri() {
-        return this.keyPasswordUri == null ? Codegen.empty() : this.keyPasswordUri;
+    public Optional<Output<String>> keyPasswordUri() {
+        return Optional.ofNullable(this.keyPasswordUri);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="keystorePasswordUri")
-      private final @Nullable Output<String> keystorePasswordUri;
+    private @Nullable Output<String> keystorePasswordUri;
 
-    public Output<String> keystorePasswordUri() {
-        return this.keystorePasswordUri == null ? Codegen.empty() : this.keystorePasswordUri;
+    public Optional<Output<String>> keystorePasswordUri() {
+        return Optional.ofNullable(this.keystorePasswordUri);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="keystoreUri")
-      private final @Nullable Output<String> keystoreUri;
+    private @Nullable Output<String> keystoreUri;
 
-    public Output<String> keystoreUri() {
-        return this.keystoreUri == null ? Codegen.empty() : this.keystoreUri;
+    public Optional<Output<String>> keystoreUri() {
+        return Optional.ofNullable(this.keystoreUri);
     }
 
     /**
@@ -132,7 +132,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="kmsKeyUri", required=true)
-      private final Output<String> kmsKeyUri;
+    private Output<String> kmsKeyUri;
 
     public Output<String> kmsKeyUri() {
         return this.kmsKeyUri;
@@ -144,10 +144,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="realm")
-      private final @Nullable Output<String> realm;
+    private @Nullable Output<String> realm;
 
-    public Output<String> realm() {
-        return this.realm == null ? Codegen.empty() : this.realm;
+    public Optional<Output<String>> realm() {
+        return Optional.ofNullable(this.realm);
     }
 
     /**
@@ -156,7 +156,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="rootPrincipalPasswordUri", required=true)
-      private final Output<String> rootPrincipalPasswordUri;
+    private Output<String> rootPrincipalPasswordUri;
 
     public Output<String> rootPrincipalPasswordUri() {
         return this.rootPrincipalPasswordUri;
@@ -167,10 +167,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="tgtLifetimeHours")
-      private final @Nullable Output<Integer> tgtLifetimeHours;
+    private @Nullable Output<Integer> tgtLifetimeHours;
 
-    public Output<Integer> tgtLifetimeHours() {
-        return this.tgtLifetimeHours == null ? Codegen.empty() : this.tgtLifetimeHours;
+    public Optional<Output<Integer>> tgtLifetimeHours() {
+        return Optional.ofNullable(this.tgtLifetimeHours);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="truststorePasswordUri")
-      private final @Nullable Output<String> truststorePasswordUri;
+    private @Nullable Output<String> truststorePasswordUri;
 
-    public Output<String> truststorePasswordUri() {
-        return this.truststorePasswordUri == null ? Codegen.empty() : this.truststorePasswordUri;
+    public Optional<Output<String>> truststorePasswordUri() {
+        return Optional.ofNullable(this.truststorePasswordUri);
     }
 
     /**
@@ -192,232 +192,190 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
      * 
      */
     @Import(name="truststoreUri")
-      private final @Nullable Output<String> truststoreUri;
+    private @Nullable Output<String> truststoreUri;
 
-    public Output<String> truststoreUri() {
-        return this.truststoreUri == null ? Codegen.empty() : this.truststoreUri;
+    public Optional<Output<String>> truststoreUri() {
+        return Optional.ofNullable(this.truststoreUri);
     }
 
-    public ClusterClusterConfigSecurityConfigKerberosConfigArgs(
-        @Nullable Output<String> crossRealmTrustAdminServer,
-        @Nullable Output<String> crossRealmTrustKdc,
-        @Nullable Output<String> crossRealmTrustRealm,
-        @Nullable Output<String> crossRealmTrustSharedPasswordUri,
-        @Nullable Output<Boolean> enableKerberos,
-        @Nullable Output<String> kdcDbKeyUri,
-        @Nullable Output<String> keyPasswordUri,
-        @Nullable Output<String> keystorePasswordUri,
-        @Nullable Output<String> keystoreUri,
-        Output<String> kmsKeyUri,
-        @Nullable Output<String> realm,
-        Output<String> rootPrincipalPasswordUri,
-        @Nullable Output<Integer> tgtLifetimeHours,
-        @Nullable Output<String> truststorePasswordUri,
-        @Nullable Output<String> truststoreUri) {
-        this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
-        this.crossRealmTrustKdc = crossRealmTrustKdc;
-        this.crossRealmTrustRealm = crossRealmTrustRealm;
-        this.crossRealmTrustSharedPasswordUri = crossRealmTrustSharedPasswordUri;
-        this.enableKerberos = enableKerberos;
-        this.kdcDbKeyUri = kdcDbKeyUri;
-        this.keyPasswordUri = keyPasswordUri;
-        this.keystorePasswordUri = keystorePasswordUri;
-        this.keystoreUri = keystoreUri;
-        this.kmsKeyUri = Objects.requireNonNull(kmsKeyUri, "expected parameter 'kmsKeyUri' to be non-null");
-        this.realm = realm;
-        this.rootPrincipalPasswordUri = Objects.requireNonNull(rootPrincipalPasswordUri, "expected parameter 'rootPrincipalPasswordUri' to be non-null");
-        this.tgtLifetimeHours = tgtLifetimeHours;
-        this.truststorePasswordUri = truststorePasswordUri;
-        this.truststoreUri = truststoreUri;
-    }
+    private ClusterClusterConfigSecurityConfigKerberosConfigArgs() {}
 
-    private ClusterClusterConfigSecurityConfigKerberosConfigArgs() {
-        this.crossRealmTrustAdminServer = Codegen.empty();
-        this.crossRealmTrustKdc = Codegen.empty();
-        this.crossRealmTrustRealm = Codegen.empty();
-        this.crossRealmTrustSharedPasswordUri = Codegen.empty();
-        this.enableKerberos = Codegen.empty();
-        this.kdcDbKeyUri = Codegen.empty();
-        this.keyPasswordUri = Codegen.empty();
-        this.keystorePasswordUri = Codegen.empty();
-        this.keystoreUri = Codegen.empty();
-        this.kmsKeyUri = Codegen.empty();
-        this.realm = Codegen.empty();
-        this.rootPrincipalPasswordUri = Codegen.empty();
-        this.tgtLifetimeHours = Codegen.empty();
-        this.truststorePasswordUri = Codegen.empty();
-        this.truststoreUri = Codegen.empty();
+    private ClusterClusterConfigSecurityConfigKerberosConfigArgs(ClusterClusterConfigSecurityConfigKerberosConfigArgs $) {
+        this.crossRealmTrustAdminServer = $.crossRealmTrustAdminServer;
+        this.crossRealmTrustKdc = $.crossRealmTrustKdc;
+        this.crossRealmTrustRealm = $.crossRealmTrustRealm;
+        this.crossRealmTrustSharedPasswordUri = $.crossRealmTrustSharedPasswordUri;
+        this.enableKerberos = $.enableKerberos;
+        this.kdcDbKeyUri = $.kdcDbKeyUri;
+        this.keyPasswordUri = $.keyPasswordUri;
+        this.keystorePasswordUri = $.keystorePasswordUri;
+        this.keystoreUri = $.keystoreUri;
+        this.kmsKeyUri = $.kmsKeyUri;
+        this.realm = $.realm;
+        this.rootPrincipalPasswordUri = $.rootPrincipalPasswordUri;
+        this.tgtLifetimeHours = $.tgtLifetimeHours;
+        this.truststorePasswordUri = $.truststorePasswordUri;
+        this.truststoreUri = $.truststoreUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigSecurityConfigKerberosConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> crossRealmTrustAdminServer;
-        private @Nullable Output<String> crossRealmTrustKdc;
-        private @Nullable Output<String> crossRealmTrustRealm;
-        private @Nullable Output<String> crossRealmTrustSharedPasswordUri;
-        private @Nullable Output<Boolean> enableKerberos;
-        private @Nullable Output<String> kdcDbKeyUri;
-        private @Nullable Output<String> keyPasswordUri;
-        private @Nullable Output<String> keystorePasswordUri;
-        private @Nullable Output<String> keystoreUri;
-        private Output<String> kmsKeyUri;
-        private @Nullable Output<String> realm;
-        private Output<String> rootPrincipalPasswordUri;
-        private @Nullable Output<Integer> tgtLifetimeHours;
-        private @Nullable Output<String> truststorePasswordUri;
-        private @Nullable Output<String> truststoreUri;
+        private ClusterClusterConfigSecurityConfigKerberosConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigSecurityConfigKerberosConfigArgs();
         }
 
         public Builder(ClusterClusterConfigSecurityConfigKerberosConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crossRealmTrustAdminServer = defaults.crossRealmTrustAdminServer;
-    	      this.crossRealmTrustKdc = defaults.crossRealmTrustKdc;
-    	      this.crossRealmTrustRealm = defaults.crossRealmTrustRealm;
-    	      this.crossRealmTrustSharedPasswordUri = defaults.crossRealmTrustSharedPasswordUri;
-    	      this.enableKerberos = defaults.enableKerberos;
-    	      this.kdcDbKeyUri = defaults.kdcDbKeyUri;
-    	      this.keyPasswordUri = defaults.keyPasswordUri;
-    	      this.keystorePasswordUri = defaults.keystorePasswordUri;
-    	      this.keystoreUri = defaults.keystoreUri;
-    	      this.kmsKeyUri = defaults.kmsKeyUri;
-    	      this.realm = defaults.realm;
-    	      this.rootPrincipalPasswordUri = defaults.rootPrincipalPasswordUri;
-    	      this.tgtLifetimeHours = defaults.tgtLifetimeHours;
-    	      this.truststorePasswordUri = defaults.truststorePasswordUri;
-    	      this.truststoreUri = defaults.truststoreUri;
+            $ = new ClusterClusterConfigSecurityConfigKerberosConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crossRealmTrustAdminServer(@Nullable Output<String> crossRealmTrustAdminServer) {
-            this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
+            $.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
             return this;
         }
-        public Builder crossRealmTrustAdminServer(@Nullable String crossRealmTrustAdminServer) {
-            this.crossRealmTrustAdminServer = Codegen.ofNullable(crossRealmTrustAdminServer);
-            return this;
+
+        public Builder crossRealmTrustAdminServer(String crossRealmTrustAdminServer) {
+            return crossRealmTrustAdminServer(Output.of(crossRealmTrustAdminServer));
         }
+
         public Builder crossRealmTrustKdc(@Nullable Output<String> crossRealmTrustKdc) {
-            this.crossRealmTrustKdc = crossRealmTrustKdc;
+            $.crossRealmTrustKdc = crossRealmTrustKdc;
             return this;
         }
-        public Builder crossRealmTrustKdc(@Nullable String crossRealmTrustKdc) {
-            this.crossRealmTrustKdc = Codegen.ofNullable(crossRealmTrustKdc);
-            return this;
+
+        public Builder crossRealmTrustKdc(String crossRealmTrustKdc) {
+            return crossRealmTrustKdc(Output.of(crossRealmTrustKdc));
         }
+
         public Builder crossRealmTrustRealm(@Nullable Output<String> crossRealmTrustRealm) {
-            this.crossRealmTrustRealm = crossRealmTrustRealm;
+            $.crossRealmTrustRealm = crossRealmTrustRealm;
             return this;
         }
-        public Builder crossRealmTrustRealm(@Nullable String crossRealmTrustRealm) {
-            this.crossRealmTrustRealm = Codegen.ofNullable(crossRealmTrustRealm);
-            return this;
+
+        public Builder crossRealmTrustRealm(String crossRealmTrustRealm) {
+            return crossRealmTrustRealm(Output.of(crossRealmTrustRealm));
         }
+
         public Builder crossRealmTrustSharedPasswordUri(@Nullable Output<String> crossRealmTrustSharedPasswordUri) {
-            this.crossRealmTrustSharedPasswordUri = crossRealmTrustSharedPasswordUri;
+            $.crossRealmTrustSharedPasswordUri = crossRealmTrustSharedPasswordUri;
             return this;
         }
-        public Builder crossRealmTrustSharedPasswordUri(@Nullable String crossRealmTrustSharedPasswordUri) {
-            this.crossRealmTrustSharedPasswordUri = Codegen.ofNullable(crossRealmTrustSharedPasswordUri);
-            return this;
+
+        public Builder crossRealmTrustSharedPasswordUri(String crossRealmTrustSharedPasswordUri) {
+            return crossRealmTrustSharedPasswordUri(Output.of(crossRealmTrustSharedPasswordUri));
         }
+
         public Builder enableKerberos(@Nullable Output<Boolean> enableKerberos) {
-            this.enableKerberos = enableKerberos;
+            $.enableKerberos = enableKerberos;
             return this;
         }
-        public Builder enableKerberos(@Nullable Boolean enableKerberos) {
-            this.enableKerberos = Codegen.ofNullable(enableKerberos);
-            return this;
+
+        public Builder enableKerberos(Boolean enableKerberos) {
+            return enableKerberos(Output.of(enableKerberos));
         }
+
         public Builder kdcDbKeyUri(@Nullable Output<String> kdcDbKeyUri) {
-            this.kdcDbKeyUri = kdcDbKeyUri;
+            $.kdcDbKeyUri = kdcDbKeyUri;
             return this;
         }
-        public Builder kdcDbKeyUri(@Nullable String kdcDbKeyUri) {
-            this.kdcDbKeyUri = Codegen.ofNullable(kdcDbKeyUri);
-            return this;
+
+        public Builder kdcDbKeyUri(String kdcDbKeyUri) {
+            return kdcDbKeyUri(Output.of(kdcDbKeyUri));
         }
+
         public Builder keyPasswordUri(@Nullable Output<String> keyPasswordUri) {
-            this.keyPasswordUri = keyPasswordUri;
+            $.keyPasswordUri = keyPasswordUri;
             return this;
         }
-        public Builder keyPasswordUri(@Nullable String keyPasswordUri) {
-            this.keyPasswordUri = Codegen.ofNullable(keyPasswordUri);
-            return this;
+
+        public Builder keyPasswordUri(String keyPasswordUri) {
+            return keyPasswordUri(Output.of(keyPasswordUri));
         }
+
         public Builder keystorePasswordUri(@Nullable Output<String> keystorePasswordUri) {
-            this.keystorePasswordUri = keystorePasswordUri;
+            $.keystorePasswordUri = keystorePasswordUri;
             return this;
         }
-        public Builder keystorePasswordUri(@Nullable String keystorePasswordUri) {
-            this.keystorePasswordUri = Codegen.ofNullable(keystorePasswordUri);
-            return this;
+
+        public Builder keystorePasswordUri(String keystorePasswordUri) {
+            return keystorePasswordUri(Output.of(keystorePasswordUri));
         }
+
         public Builder keystoreUri(@Nullable Output<String> keystoreUri) {
-            this.keystoreUri = keystoreUri;
+            $.keystoreUri = keystoreUri;
             return this;
         }
-        public Builder keystoreUri(@Nullable String keystoreUri) {
-            this.keystoreUri = Codegen.ofNullable(keystoreUri);
-            return this;
+
+        public Builder keystoreUri(String keystoreUri) {
+            return keystoreUri(Output.of(keystoreUri));
         }
+
         public Builder kmsKeyUri(Output<String> kmsKeyUri) {
-            this.kmsKeyUri = Objects.requireNonNull(kmsKeyUri);
+            $.kmsKeyUri = kmsKeyUri;
             return this;
         }
+
         public Builder kmsKeyUri(String kmsKeyUri) {
-            this.kmsKeyUri = Output.of(Objects.requireNonNull(kmsKeyUri));
-            return this;
+            return kmsKeyUri(Output.of(kmsKeyUri));
         }
+
         public Builder realm(@Nullable Output<String> realm) {
-            this.realm = realm;
+            $.realm = realm;
             return this;
         }
-        public Builder realm(@Nullable String realm) {
-            this.realm = Codegen.ofNullable(realm);
-            return this;
+
+        public Builder realm(String realm) {
+            return realm(Output.of(realm));
         }
+
         public Builder rootPrincipalPasswordUri(Output<String> rootPrincipalPasswordUri) {
-            this.rootPrincipalPasswordUri = Objects.requireNonNull(rootPrincipalPasswordUri);
+            $.rootPrincipalPasswordUri = rootPrincipalPasswordUri;
             return this;
         }
+
         public Builder rootPrincipalPasswordUri(String rootPrincipalPasswordUri) {
-            this.rootPrincipalPasswordUri = Output.of(Objects.requireNonNull(rootPrincipalPasswordUri));
-            return this;
+            return rootPrincipalPasswordUri(Output.of(rootPrincipalPasswordUri));
         }
+
         public Builder tgtLifetimeHours(@Nullable Output<Integer> tgtLifetimeHours) {
-            this.tgtLifetimeHours = tgtLifetimeHours;
+            $.tgtLifetimeHours = tgtLifetimeHours;
             return this;
         }
-        public Builder tgtLifetimeHours(@Nullable Integer tgtLifetimeHours) {
-            this.tgtLifetimeHours = Codegen.ofNullable(tgtLifetimeHours);
-            return this;
+
+        public Builder tgtLifetimeHours(Integer tgtLifetimeHours) {
+            return tgtLifetimeHours(Output.of(tgtLifetimeHours));
         }
+
         public Builder truststorePasswordUri(@Nullable Output<String> truststorePasswordUri) {
-            this.truststorePasswordUri = truststorePasswordUri;
+            $.truststorePasswordUri = truststorePasswordUri;
             return this;
         }
-        public Builder truststorePasswordUri(@Nullable String truststorePasswordUri) {
-            this.truststorePasswordUri = Codegen.ofNullable(truststorePasswordUri);
-            return this;
+
+        public Builder truststorePasswordUri(String truststorePasswordUri) {
+            return truststorePasswordUri(Output.of(truststorePasswordUri));
         }
+
         public Builder truststoreUri(@Nullable Output<String> truststoreUri) {
-            this.truststoreUri = truststoreUri;
+            $.truststoreUri = truststoreUri;
             return this;
         }
-        public Builder truststoreUri(@Nullable String truststoreUri) {
-            this.truststoreUri = Codegen.ofNullable(truststoreUri);
-            return this;
-        }        public ClusterClusterConfigSecurityConfigKerberosConfigArgs build() {
-            return new ClusterClusterConfigSecurityConfigKerberosConfigArgs(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPasswordUri, enableKerberos, kdcDbKeyUri, keyPasswordUri, keystorePasswordUri, keystoreUri, kmsKeyUri, realm, rootPrincipalPasswordUri, tgtLifetimeHours, truststorePasswordUri, truststoreUri);
+
+        public Builder truststoreUri(String truststoreUri) {
+            return truststoreUri(Output.of(truststoreUri));
+        }
+
+        public ClusterClusterConfigSecurityConfigKerberosConfigArgs build() {
+            $.kmsKeyUri = Objects.requireNonNull($.kmsKeyUri, "expected parameter 'kmsKeyUri' to be non-null");
+            $.rootPrincipalPasswordUri = Objects.requireNonNull($.rootPrincipalPasswordUri, "expected parameter 'rootPrincipalPasswordUri' to be non-null");
+            return $;
         }
     }
+
 }

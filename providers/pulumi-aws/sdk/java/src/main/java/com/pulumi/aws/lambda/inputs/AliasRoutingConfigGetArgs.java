@@ -5,11 +5,11 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,49 +22,48 @@ public final class AliasRoutingConfigGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="additionalVersionWeights")
-      private final @Nullable Output<Map<String,Double>> additionalVersionWeights;
+    private @Nullable Output<Map<String,Double>> additionalVersionWeights;
 
-    public Output<Map<String,Double>> additionalVersionWeights() {
-        return this.additionalVersionWeights == null ? Codegen.empty() : this.additionalVersionWeights;
+    public Optional<Output<Map<String,Double>>> additionalVersionWeights() {
+        return Optional.ofNullable(this.additionalVersionWeights);
     }
 
-    public AliasRoutingConfigGetArgs(@Nullable Output<Map<String,Double>> additionalVersionWeights) {
-        this.additionalVersionWeights = additionalVersionWeights;
-    }
+    private AliasRoutingConfigGetArgs() {}
 
-    private AliasRoutingConfigGetArgs() {
-        this.additionalVersionWeights = Codegen.empty();
+    private AliasRoutingConfigGetArgs(AliasRoutingConfigGetArgs $) {
+        this.additionalVersionWeights = $.additionalVersionWeights;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasRoutingConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Double>> additionalVersionWeights;
+        private AliasRoutingConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasRoutingConfigGetArgs();
         }
 
         public Builder(AliasRoutingConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalVersionWeights = defaults.additionalVersionWeights;
+            $ = new AliasRoutingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalVersionWeights(@Nullable Output<Map<String,Double>> additionalVersionWeights) {
-            this.additionalVersionWeights = additionalVersionWeights;
+            $.additionalVersionWeights = additionalVersionWeights;
             return this;
         }
-        public Builder additionalVersionWeights(@Nullable Map<String,Double> additionalVersionWeights) {
-            this.additionalVersionWeights = Codegen.ofNullable(additionalVersionWeights);
-            return this;
-        }        public AliasRoutingConfigGetArgs build() {
-            return new AliasRoutingConfigGetArgs(additionalVersionWeights);
+
+        public Builder additionalVersionWeights(Map<String,Double> additionalVersionWeights) {
+            return additionalVersionWeights(Output.of(additionalVersionWeights));
+        }
+
+        public AliasRoutingConfigGetArgs build() {
+            return $;
         }
     }
+
 }

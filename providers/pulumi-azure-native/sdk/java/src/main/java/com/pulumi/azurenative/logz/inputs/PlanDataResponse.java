@@ -19,10 +19,10 @@ public final class PlanDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="billingCycle")
-      private final @Nullable String billingCycle;
+    private @Nullable String billingCycle;
 
     public Optional<String> billingCycle() {
-        return this.billingCycle == null ? Optional.empty() : Optional.ofNullable(this.billingCycle);
+        return Optional.ofNullable(this.billingCycle);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PlanDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="effectiveDate")
-      private final @Nullable String effectiveDate;
+    private @Nullable String effectiveDate;
 
     public Optional<String> effectiveDate() {
-        return this.effectiveDate == null ? Optional.empty() : Optional.ofNullable(this.effectiveDate);
+        return Optional.ofNullable(this.effectiveDate);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PlanDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="planDetails")
-      private final @Nullable String planDetails;
+    private @Nullable String planDetails;
 
     public Optional<String> planDetails() {
-        return this.planDetails == null ? Optional.empty() : Optional.ofNullable(this.planDetails);
+        return Optional.ofNullable(this.planDetails);
     }
 
     /**
@@ -52,73 +52,62 @@ public final class PlanDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="usageType")
-      private final @Nullable String usageType;
+    private @Nullable String usageType;
 
     public Optional<String> usageType() {
-        return this.usageType == null ? Optional.empty() : Optional.ofNullable(this.usageType);
+        return Optional.ofNullable(this.usageType);
     }
 
-    public PlanDataResponse(
-        @Nullable String billingCycle,
-        @Nullable String effectiveDate,
-        @Nullable String planDetails,
-        @Nullable String usageType) {
-        this.billingCycle = billingCycle;
-        this.effectiveDate = effectiveDate;
-        this.planDetails = planDetails;
-        this.usageType = usageType;
-    }
+    private PlanDataResponse() {}
 
-    private PlanDataResponse() {
-        this.billingCycle = null;
-        this.effectiveDate = null;
-        this.planDetails = null;
-        this.usageType = null;
+    private PlanDataResponse(PlanDataResponse $) {
+        this.billingCycle = $.billingCycle;
+        this.effectiveDate = $.effectiveDate;
+        this.planDetails = $.planDetails;
+        this.usageType = $.usageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String billingCycle;
-        private @Nullable String effectiveDate;
-        private @Nullable String planDetails;
-        private @Nullable String usageType;
+        private PlanDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanDataResponse();
         }
 
         public Builder(PlanDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingCycle = defaults.billingCycle;
-    	      this.effectiveDate = defaults.effectiveDate;
-    	      this.planDetails = defaults.planDetails;
-    	      this.usageType = defaults.usageType;
+            $ = new PlanDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder billingCycle(@Nullable String billingCycle) {
-            this.billingCycle = billingCycle;
+            $.billingCycle = billingCycle;
             return this;
         }
+
         public Builder effectiveDate(@Nullable String effectiveDate) {
-            this.effectiveDate = effectiveDate;
+            $.effectiveDate = effectiveDate;
             return this;
         }
+
         public Builder planDetails(@Nullable String planDetails) {
-            this.planDetails = planDetails;
+            $.planDetails = planDetails;
             return this;
         }
+
         public Builder usageType(@Nullable String usageType) {
-            this.usageType = usageType;
+            $.usageType = usageType;
             return this;
-        }        public PlanDataResponse build() {
-            return new PlanDataResponse(billingCycle, effectiveDate, planDetails, usageType);
+        }
+
+        public PlanDataResponse build() {
+            return $;
         }
     }
+
 }

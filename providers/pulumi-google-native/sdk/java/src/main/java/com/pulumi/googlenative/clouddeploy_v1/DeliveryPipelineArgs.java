@@ -5,11 +5,11 @@ package com.pulumi.googlenative.clouddeploy_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.SerialPipelineArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     @Import(name="deliveryPipelineId", required=true)
-      private final Output<String> deliveryPipelineId;
+    private Output<String> deliveryPipelineId;
 
     public Output<String> deliveryPipelineId() {
         return this.deliveryPipelineId;
@@ -40,10 +40,10 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -62,17 +62,17 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -80,24 +80,24 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -105,187 +105,156 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serialPipeline")
-      private final @Nullable Output<SerialPipelineArgs> serialPipeline;
+    private @Nullable Output<SerialPipelineArgs> serialPipeline;
 
-    public Output<SerialPipelineArgs> serialPipeline() {
-        return this.serialPipeline == null ? Codegen.empty() : this.serialPipeline;
+    public Optional<Output<SerialPipelineArgs>> serialPipeline() {
+        return Optional.ofNullable(this.serialPipeline);
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public DeliveryPipelineArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        Output<String> deliveryPipelineId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> etag,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<SerialPipelineArgs> serialPipeline,
-        @Nullable Output<String> validateOnly) {
-        this.annotations = annotations;
-        this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId, "expected parameter 'deliveryPipelineId' to be non-null");
-        this.description = description;
-        this.etag = etag;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.serialPipeline = serialPipeline;
-        this.validateOnly = validateOnly;
-    }
+    private DeliveryPipelineArgs() {}
 
-    private DeliveryPipelineArgs() {
-        this.annotations = Codegen.empty();
-        this.deliveryPipelineId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.serialPipeline = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private DeliveryPipelineArgs(DeliveryPipelineArgs $) {
+        this.annotations = $.annotations;
+        this.deliveryPipelineId = $.deliveryPipelineId;
+        this.description = $.description;
+        this.etag = $.etag;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.serialPipeline = $.serialPipeline;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryPipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private Output<String> deliveryPipelineId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<SerialPipelineArgs> serialPipeline;
-        private @Nullable Output<String> validateOnly;
+        private DeliveryPipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryPipelineArgs();
         }
 
         public Builder(DeliveryPipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.deliveryPipelineId = defaults.deliveryPipelineId;
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.serialPipeline = defaults.serialPipeline;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new DeliveryPipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder deliveryPipelineId(Output<String> deliveryPipelineId) {
-            this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId);
+            $.deliveryPipelineId = deliveryPipelineId;
             return this;
         }
+
         public Builder deliveryPipelineId(String deliveryPipelineId) {
-            this.deliveryPipelineId = Output.of(Objects.requireNonNull(deliveryPipelineId));
-            return this;
+            return deliveryPipelineId(Output.of(deliveryPipelineId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder serialPipeline(@Nullable Output<SerialPipelineArgs> serialPipeline) {
-            this.serialPipeline = serialPipeline;
+            $.serialPipeline = serialPipeline;
             return this;
         }
-        public Builder serialPipeline(@Nullable SerialPipelineArgs serialPipeline) {
-            this.serialPipeline = Codegen.ofNullable(serialPipeline);
-            return this;
+
+        public Builder serialPipeline(SerialPipelineArgs serialPipeline) {
+            return serialPipeline(Output.of(serialPipeline));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public DeliveryPipelineArgs build() {
-            return new DeliveryPipelineArgs(annotations, deliveryPipelineId, description, etag, labels, location, name, project, requestId, serialPipeline, validateOnly);
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public DeliveryPipelineArgs build() {
+            $.deliveryPipelineId = Objects.requireNonNull($.deliveryPipelineId, "expected parameter 'deliveryPipelineId' to be non-null");
+            return $;
         }
     }
+
 }

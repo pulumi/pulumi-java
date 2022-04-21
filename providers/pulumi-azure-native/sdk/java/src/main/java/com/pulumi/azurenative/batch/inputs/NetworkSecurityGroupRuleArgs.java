@@ -6,11 +6,11 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.NetworkSecurityGroupRuleAccess;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,7 +19,7 @@ public final class NetworkSecurityGroupRuleArgs extends com.pulumi.resources.Res
     public static final NetworkSecurityGroupRuleArgs Empty = new NetworkSecurityGroupRuleArgs();
 
     @Import(name="access", required=true)
-      private final Output<NetworkSecurityGroupRuleAccess> access;
+    private Output<NetworkSecurityGroupRuleAccess> access;
 
     public Output<NetworkSecurityGroupRuleAccess> access() {
         return this.access;
@@ -30,7 +30,7 @@ public final class NetworkSecurityGroupRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -41,7 +41,7 @@ public final class NetworkSecurityGroupRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sourceAddressPrefix", required=true)
-      private final Output<String> sourceAddressPrefix;
+    private Output<String> sourceAddressPrefix;
 
     public Output<String> sourceAddressPrefix() {
         return this.sourceAddressPrefix;
@@ -52,92 +52,85 @@ public final class NetworkSecurityGroupRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sourcePortRanges")
-      private final @Nullable Output<List<String>> sourcePortRanges;
+    private @Nullable Output<List<String>> sourcePortRanges;
 
-    public Output<List<String>> sourcePortRanges() {
-        return this.sourcePortRanges == null ? Codegen.empty() : this.sourcePortRanges;
+    public Optional<Output<List<String>>> sourcePortRanges() {
+        return Optional.ofNullable(this.sourcePortRanges);
     }
 
-    public NetworkSecurityGroupRuleArgs(
-        Output<NetworkSecurityGroupRuleAccess> access,
-        Output<Integer> priority,
-        Output<String> sourceAddressPrefix,
-        @Nullable Output<List<String>> sourcePortRanges) {
-        this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix, "expected parameter 'sourceAddressPrefix' to be non-null");
-        this.sourcePortRanges = sourcePortRanges;
-    }
+    private NetworkSecurityGroupRuleArgs() {}
 
-    private NetworkSecurityGroupRuleArgs() {
-        this.access = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.sourceAddressPrefix = Codegen.empty();
-        this.sourcePortRanges = Codegen.empty();
+    private NetworkSecurityGroupRuleArgs(NetworkSecurityGroupRuleArgs $) {
+        this.access = $.access;
+        this.priority = $.priority;
+        this.sourceAddressPrefix = $.sourceAddressPrefix;
+        this.sourcePortRanges = $.sourcePortRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkSecurityGroupRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<NetworkSecurityGroupRuleAccess> access;
-        private Output<Integer> priority;
-        private Output<String> sourceAddressPrefix;
-        private @Nullable Output<List<String>> sourcePortRanges;
+        private NetworkSecurityGroupRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkSecurityGroupRuleArgs();
         }
 
         public Builder(NetworkSecurityGroupRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.access = defaults.access;
-    	      this.priority = defaults.priority;
-    	      this.sourceAddressPrefix = defaults.sourceAddressPrefix;
-    	      this.sourcePortRanges = defaults.sourcePortRanges;
+            $ = new NetworkSecurityGroupRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder access(Output<NetworkSecurityGroupRuleAccess> access) {
-            this.access = Objects.requireNonNull(access);
+            $.access = access;
             return this;
         }
+
         public Builder access(NetworkSecurityGroupRuleAccess access) {
-            this.access = Output.of(Objects.requireNonNull(access));
-            return this;
+            return access(Output.of(access));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder sourceAddressPrefix(Output<String> sourceAddressPrefix) {
-            this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix);
+            $.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
+
         public Builder sourceAddressPrefix(String sourceAddressPrefix) {
-            this.sourceAddressPrefix = Output.of(Objects.requireNonNull(sourceAddressPrefix));
-            return this;
+            return sourceAddressPrefix(Output.of(sourceAddressPrefix));
         }
+
         public Builder sourcePortRanges(@Nullable Output<List<String>> sourcePortRanges) {
-            this.sourcePortRanges = sourcePortRanges;
+            $.sourcePortRanges = sourcePortRanges;
             return this;
         }
-        public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
-            this.sourcePortRanges = Codegen.ofNullable(sourcePortRanges);
-            return this;
+
+        public Builder sourcePortRanges(List<String> sourcePortRanges) {
+            return sourcePortRanges(Output.of(sourcePortRanges));
         }
+
         public Builder sourcePortRanges(String... sourcePortRanges) {
             return sourcePortRanges(List.of(sourcePortRanges));
-        }        public NetworkSecurityGroupRuleArgs build() {
-            return new NetworkSecurityGroupRuleArgs(access, priority, sourceAddressPrefix, sourcePortRanges);
+        }
+
+        public NetworkSecurityGroupRuleArgs build() {
+            $.access = Objects.requireNonNull($.access, "expected parameter 'access' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.sourceAddressPrefix = Objects.requireNonNull($.sourceAddressPrefix, "expected parameter 'sourceAddressPrefix' to be non-null");
+            return $;
         }
     }
+
 }

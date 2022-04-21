@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RegexResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="groupIndexes", required=true)
-      private final List<Integer> groupIndexes;
+    private List<Integer> groupIndexes;
 
     public List<Integer> groupIndexes() {
         return this.groupIndexes;
@@ -34,58 +34,56 @@ public final class GooglePrivacyDlpV2RegexResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="pattern", required=true)
-      private final String pattern;
+    private String pattern;
 
     public String pattern() {
         return this.pattern;
     }
 
-    public GooglePrivacyDlpV2RegexResponse(
-        List<Integer> groupIndexes,
-        String pattern) {
-        this.groupIndexes = Objects.requireNonNull(groupIndexes, "expected parameter 'groupIndexes' to be non-null");
-        this.pattern = Objects.requireNonNull(pattern, "expected parameter 'pattern' to be non-null");
-    }
+    private GooglePrivacyDlpV2RegexResponse() {}
 
-    private GooglePrivacyDlpV2RegexResponse() {
-        this.groupIndexes = List.of();
-        this.pattern = null;
+    private GooglePrivacyDlpV2RegexResponse(GooglePrivacyDlpV2RegexResponse $) {
+        this.groupIndexes = $.groupIndexes;
+        this.pattern = $.pattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RegexResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Integer> groupIndexes;
-        private String pattern;
+        private GooglePrivacyDlpV2RegexResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RegexResponse();
         }
 
         public Builder(GooglePrivacyDlpV2RegexResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupIndexes = defaults.groupIndexes;
-    	      this.pattern = defaults.pattern;
+            $ = new GooglePrivacyDlpV2RegexResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupIndexes(List<Integer> groupIndexes) {
-            this.groupIndexes = Objects.requireNonNull(groupIndexes);
+            $.groupIndexes = groupIndexes;
             return this;
         }
+
         public Builder groupIndexes(Integer... groupIndexes) {
             return groupIndexes(List.of(groupIndexes));
         }
+
         public Builder pattern(String pattern) {
-            this.pattern = Objects.requireNonNull(pattern);
+            $.pattern = pattern;
             return this;
-        }        public GooglePrivacyDlpV2RegexResponse build() {
-            return new GooglePrivacyDlpV2RegexResponse(groupIndexes, pattern);
+        }
+
+        public GooglePrivacyDlpV2RegexResponse build() {
+            $.groupIndexes = Objects.requireNonNull($.groupIndexes, "expected parameter 'groupIndexes' to be non-null");
+            $.pattern = Objects.requireNonNull($.pattern, "expected parameter 'pattern' to be non-null");
+            return $;
         }
     }
+
 }

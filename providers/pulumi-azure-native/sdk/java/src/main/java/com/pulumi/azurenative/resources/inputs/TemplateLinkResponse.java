@@ -23,10 +23,10 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="contentVersion")
-      private final @Nullable String contentVersion;
+    private @Nullable String contentVersion;
 
     public Optional<String> contentVersion() {
-        return this.contentVersion == null ? Optional.empty() : Optional.ofNullable(this.contentVersion);
+        return Optional.ofNullable(this.contentVersion);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="queryString")
-      private final @Nullable String queryString;
+    private @Nullable String queryString;
 
     public Optional<String> queryString() {
-        return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
+        return Optional.ofNullable(this.queryString);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="relativePath")
-      private final @Nullable String relativePath;
+    private @Nullable String relativePath;
 
     public Optional<String> relativePath() {
-        return this.relativePath == null ? Optional.empty() : Optional.ofNullable(this.relativePath);
+        return Optional.ofNullable(this.relativePath);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public TemplateLinkResponse(
-        @Nullable String contentVersion,
-        @Nullable String id,
-        @Nullable String queryString,
-        @Nullable String relativePath,
-        @Nullable String uri) {
-        this.contentVersion = contentVersion;
-        this.id = id;
-        this.queryString = queryString;
-        this.relativePath = relativePath;
-        this.uri = uri;
-    }
+    private TemplateLinkResponse() {}
 
-    private TemplateLinkResponse() {
-        this.contentVersion = null;
-        this.id = null;
-        this.queryString = null;
-        this.relativePath = null;
-        this.uri = null;
+    private TemplateLinkResponse(TemplateLinkResponse $) {
+        this.contentVersion = $.contentVersion;
+        this.id = $.id;
+        this.queryString = $.queryString;
+        this.relativePath = $.relativePath;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String contentVersion;
-        private @Nullable String id;
-        private @Nullable String queryString;
-        private @Nullable String relativePath;
-        private @Nullable String uri;
+        private TemplateLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateLinkResponse();
         }
 
         public Builder(TemplateLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentVersion = defaults.contentVersion;
-    	      this.id = defaults.id;
-    	      this.queryString = defaults.queryString;
-    	      this.relativePath = defaults.relativePath;
-    	      this.uri = defaults.uri;
+            $ = new TemplateLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentVersion(@Nullable String contentVersion) {
-            this.contentVersion = contentVersion;
+            $.contentVersion = contentVersion;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder queryString(@Nullable String queryString) {
-            this.queryString = queryString;
+            $.queryString = queryString;
             return this;
         }
+
         public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = relativePath;
+            $.relativePath = relativePath;
             return this;
         }
+
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public TemplateLinkResponse build() {
-            return new TemplateLinkResponse(contentVersion, id, queryString, relativePath, uri);
+        }
+
+        public TemplateLinkResponse build() {
+            return $;
         }
     }
+
 }

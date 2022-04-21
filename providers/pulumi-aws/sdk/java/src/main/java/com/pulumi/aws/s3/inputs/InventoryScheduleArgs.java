@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class InventoryScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="frequency", required=true)
-      private final Output<String> frequency;
+    private Output<String> frequency;
 
     public Output<String> frequency() {
         return this.frequency;
     }
 
-    public InventoryScheduleArgs(Output<String> frequency) {
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-    }
+    private InventoryScheduleArgs() {}
 
-    private InventoryScheduleArgs() {
-        this.frequency = Codegen.empty();
+    private InventoryScheduleArgs(InventoryScheduleArgs $) {
+        this.frequency = $.frequency;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InventoryScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> frequency;
+        private InventoryScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InventoryScheduleArgs();
         }
 
         public Builder(InventoryScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequency = defaults.frequency;
+            $ = new InventoryScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frequency(Output<String> frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder frequency(String frequency) {
-            this.frequency = Output.of(Objects.requireNonNull(frequency));
-            return this;
-        }        public InventoryScheduleArgs build() {
-            return new InventoryScheduleArgs(frequency);
+            return frequency(Output.of(frequency));
+        }
+
+        public InventoryScheduleArgs build() {
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            return $;
         }
     }
+
 }

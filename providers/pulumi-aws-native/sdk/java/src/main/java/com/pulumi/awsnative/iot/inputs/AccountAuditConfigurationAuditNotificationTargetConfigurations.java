@@ -19,45 +19,44 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     public static final AccountAuditConfigurationAuditNotificationTargetConfigurations Empty = new AccountAuditConfigurationAuditNotificationTargetConfigurations();
 
     @Import(name="sns")
-      private final @Nullable AccountAuditConfigurationAuditNotificationTarget sns;
+    private @Nullable AccountAuditConfigurationAuditNotificationTarget sns;
 
     public Optional<AccountAuditConfigurationAuditNotificationTarget> sns() {
-        return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
+        return Optional.ofNullable(this.sns);
     }
 
-    public AccountAuditConfigurationAuditNotificationTargetConfigurations(@Nullable AccountAuditConfigurationAuditNotificationTarget sns) {
-        this.sns = sns;
-    }
+    private AccountAuditConfigurationAuditNotificationTargetConfigurations() {}
 
-    private AccountAuditConfigurationAuditNotificationTargetConfigurations() {
-        this.sns = null;
+    private AccountAuditConfigurationAuditNotificationTargetConfigurations(AccountAuditConfigurationAuditNotificationTargetConfigurations $) {
+        this.sns = $.sns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountAuditConfigurationAuditNotificationTargetConfigurations defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AccountAuditConfigurationAuditNotificationTarget sns;
+        private AccountAuditConfigurationAuditNotificationTargetConfigurations $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountAuditConfigurationAuditNotificationTargetConfigurations();
         }
 
         public Builder(AccountAuditConfigurationAuditNotificationTargetConfigurations defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sns = defaults.sns;
+            $ = new AccountAuditConfigurationAuditNotificationTargetConfigurations(Objects.requireNonNull(defaults));
         }
 
         public Builder sns(@Nullable AccountAuditConfigurationAuditNotificationTarget sns) {
-            this.sns = sns;
+            $.sns = sns;
             return this;
-        }        public AccountAuditConfigurationAuditNotificationTargetConfigurations build() {
-            return new AccountAuditConfigurationAuditNotificationTargetConfigurations(sns);
+        }
+
+        public AccountAuditConfigurationAuditNotificationTargetConfigurations build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends com.pul
      * 
      */
     @Import(name="event", required=true)
-      private final String event;
+    private String event;
 
     public String event() {
         return this.event;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends com.pul
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends com.pul
      * 
      */
     @Import(name="targetFlow", required=true)
-      private final String targetFlow;
+    private String targetFlow;
 
     public String targetFlow() {
         return this.targetFlow;
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends com.pul
      * 
      */
     @Import(name="targetPage", required=true)
-      private final String targetPage;
+    private String targetPage;
 
     public String targetPage() {
         return this.targetPage;
@@ -66,82 +66,73 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends com.pul
      * 
      */
     @Import(name="triggerFulfillment", required=true)
-      private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
+    private GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
     public GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment() {
         return this.triggerFulfillment;
     }
 
-    public GoogleCloudDialogflowCxV3EventHandlerResponse(
-        String event,
-        String name,
-        String targetFlow,
-        String targetPage,
-        GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment) {
-        this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.targetFlow = Objects.requireNonNull(targetFlow, "expected parameter 'targetFlow' to be non-null");
-        this.targetPage = Objects.requireNonNull(targetPage, "expected parameter 'targetPage' to be non-null");
-        this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment, "expected parameter 'triggerFulfillment' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3EventHandlerResponse() {}
 
-    private GoogleCloudDialogflowCxV3EventHandlerResponse() {
-        this.event = null;
-        this.name = null;
-        this.targetFlow = null;
-        this.targetPage = null;
-        this.triggerFulfillment = null;
+    private GoogleCloudDialogflowCxV3EventHandlerResponse(GoogleCloudDialogflowCxV3EventHandlerResponse $) {
+        this.event = $.event;
+        this.name = $.name;
+        this.targetFlow = $.targetFlow;
+        this.targetPage = $.targetPage;
+        this.triggerFulfillment = $.triggerFulfillment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3EventHandlerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String event;
-        private String name;
-        private String targetFlow;
-        private String targetPage;
-        private GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
+        private GoogleCloudDialogflowCxV3EventHandlerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3EventHandlerResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3EventHandlerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
-    	      this.name = defaults.name;
-    	      this.targetFlow = defaults.targetFlow;
-    	      this.targetPage = defaults.targetPage;
-    	      this.triggerFulfillment = defaults.triggerFulfillment;
+            $ = new GoogleCloudDialogflowCxV3EventHandlerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder event(String event) {
-            this.event = Objects.requireNonNull(event);
+            $.event = event;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder targetFlow(String targetFlow) {
-            this.targetFlow = Objects.requireNonNull(targetFlow);
+            $.targetFlow = targetFlow;
             return this;
         }
+
         public Builder targetPage(String targetPage) {
-            this.targetPage = Objects.requireNonNull(targetPage);
+            $.targetPage = targetPage;
             return this;
         }
+
         public Builder triggerFulfillment(GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment) {
-            this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
+            $.triggerFulfillment = triggerFulfillment;
             return this;
-        }        public GoogleCloudDialogflowCxV3EventHandlerResponse build() {
-            return new GoogleCloudDialogflowCxV3EventHandlerResponse(event, name, targetFlow, targetPage, triggerFulfillment);
+        }
+
+        public GoogleCloudDialogflowCxV3EventHandlerResponse build() {
+            $.event = Objects.requireNonNull($.event, "expected parameter 'event' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.targetFlow = Objects.requireNonNull($.targetFlow, "expected parameter 'targetFlow' to be non-null");
+            $.targetPage = Objects.requireNonNull($.targetPage, "expected parameter 'targetPage' to be non-null");
+            $.triggerFulfillment = Objects.requireNonNull($.triggerFulfillment, "expected parameter 'triggerFulfillment' to be non-null");
+            return $;
         }
     }
+
 }

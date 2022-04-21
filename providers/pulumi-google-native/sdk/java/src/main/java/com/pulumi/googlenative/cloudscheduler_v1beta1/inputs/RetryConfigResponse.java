@@ -22,7 +22,7 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxBackoffDuration", required=true)
-      private final String maxBackoffDuration;
+    private String maxBackoffDuration;
 
     public String maxBackoffDuration() {
         return this.maxBackoffDuration;
@@ -33,7 +33,7 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxDoublings", required=true)
-      private final Integer maxDoublings;
+    private Integer maxDoublings;
 
     public Integer maxDoublings() {
         return this.maxDoublings;
@@ -44,7 +44,7 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxRetryDuration", required=true)
-      private final String maxRetryDuration;
+    private String maxRetryDuration;
 
     public String maxRetryDuration() {
         return this.maxRetryDuration;
@@ -55,7 +55,7 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minBackoffDuration", required=true)
-      private final String minBackoffDuration;
+    private String minBackoffDuration;
 
     public String minBackoffDuration() {
         return this.minBackoffDuration;
@@ -66,82 +66,73 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retryCount", required=true)
-      private final Integer retryCount;
+    private Integer retryCount;
 
     public Integer retryCount() {
         return this.retryCount;
     }
 
-    public RetryConfigResponse(
-        String maxBackoffDuration,
-        Integer maxDoublings,
-        String maxRetryDuration,
-        String minBackoffDuration,
-        Integer retryCount) {
-        this.maxBackoffDuration = Objects.requireNonNull(maxBackoffDuration, "expected parameter 'maxBackoffDuration' to be non-null");
-        this.maxDoublings = Objects.requireNonNull(maxDoublings, "expected parameter 'maxDoublings' to be non-null");
-        this.maxRetryDuration = Objects.requireNonNull(maxRetryDuration, "expected parameter 'maxRetryDuration' to be non-null");
-        this.minBackoffDuration = Objects.requireNonNull(minBackoffDuration, "expected parameter 'minBackoffDuration' to be non-null");
-        this.retryCount = Objects.requireNonNull(retryCount, "expected parameter 'retryCount' to be non-null");
-    }
+    private RetryConfigResponse() {}
 
-    private RetryConfigResponse() {
-        this.maxBackoffDuration = null;
-        this.maxDoublings = null;
-        this.maxRetryDuration = null;
-        this.minBackoffDuration = null;
-        this.retryCount = null;
+    private RetryConfigResponse(RetryConfigResponse $) {
+        this.maxBackoffDuration = $.maxBackoffDuration;
+        this.maxDoublings = $.maxDoublings;
+        this.maxRetryDuration = $.maxRetryDuration;
+        this.minBackoffDuration = $.minBackoffDuration;
+        this.retryCount = $.retryCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetryConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String maxBackoffDuration;
-        private Integer maxDoublings;
-        private String maxRetryDuration;
-        private String minBackoffDuration;
-        private Integer retryCount;
+        private RetryConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetryConfigResponse();
         }
 
         public Builder(RetryConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxBackoffDuration = defaults.maxBackoffDuration;
-    	      this.maxDoublings = defaults.maxDoublings;
-    	      this.maxRetryDuration = defaults.maxRetryDuration;
-    	      this.minBackoffDuration = defaults.minBackoffDuration;
-    	      this.retryCount = defaults.retryCount;
+            $ = new RetryConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxBackoffDuration(String maxBackoffDuration) {
-            this.maxBackoffDuration = Objects.requireNonNull(maxBackoffDuration);
+            $.maxBackoffDuration = maxBackoffDuration;
             return this;
         }
+
         public Builder maxDoublings(Integer maxDoublings) {
-            this.maxDoublings = Objects.requireNonNull(maxDoublings);
+            $.maxDoublings = maxDoublings;
             return this;
         }
+
         public Builder maxRetryDuration(String maxRetryDuration) {
-            this.maxRetryDuration = Objects.requireNonNull(maxRetryDuration);
+            $.maxRetryDuration = maxRetryDuration;
             return this;
         }
+
         public Builder minBackoffDuration(String minBackoffDuration) {
-            this.minBackoffDuration = Objects.requireNonNull(minBackoffDuration);
+            $.minBackoffDuration = minBackoffDuration;
             return this;
         }
+
         public Builder retryCount(Integer retryCount) {
-            this.retryCount = Objects.requireNonNull(retryCount);
+            $.retryCount = retryCount;
             return this;
-        }        public RetryConfigResponse build() {
-            return new RetryConfigResponse(maxBackoffDuration, maxDoublings, maxRetryDuration, minBackoffDuration, retryCount);
+        }
+
+        public RetryConfigResponse build() {
+            $.maxBackoffDuration = Objects.requireNonNull($.maxBackoffDuration, "expected parameter 'maxBackoffDuration' to be non-null");
+            $.maxDoublings = Objects.requireNonNull($.maxDoublings, "expected parameter 'maxDoublings' to be non-null");
+            $.maxRetryDuration = Objects.requireNonNull($.maxRetryDuration, "expected parameter 'maxRetryDuration' to be non-null");
+            $.minBackoffDuration = Objects.requireNonNull($.minBackoffDuration, "expected parameter 'minBackoffDuration' to be non-null");
+            $.retryCount = Objects.requireNonNull($.retryCount, "expected parameter 'retryCount' to be non-null");
+            return $;
         }
     }
+
 }

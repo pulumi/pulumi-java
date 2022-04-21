@@ -21,45 +21,45 @@ public final class BucketSseKmsEncryptedObjects extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="status", required=true)
-      private final BucketSseKmsEncryptedObjectsStatus status;
+    private BucketSseKmsEncryptedObjectsStatus status;
 
     public BucketSseKmsEncryptedObjectsStatus status() {
         return this.status;
     }
 
-    public BucketSseKmsEncryptedObjects(BucketSseKmsEncryptedObjectsStatus status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketSseKmsEncryptedObjects() {}
 
-    private BucketSseKmsEncryptedObjects() {
-        this.status = null;
+    private BucketSseKmsEncryptedObjects(BucketSseKmsEncryptedObjects $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketSseKmsEncryptedObjects defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketSseKmsEncryptedObjectsStatus status;
+        private BucketSseKmsEncryptedObjects $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketSseKmsEncryptedObjects();
         }
 
         public Builder(BucketSseKmsEncryptedObjects defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketSseKmsEncryptedObjects(Objects.requireNonNull(defaults));
         }
 
         public Builder status(BucketSseKmsEncryptedObjectsStatus status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public BucketSseKmsEncryptedObjects build() {
-            return new BucketSseKmsEncryptedObjects(status);
+        }
+
+        public BucketSseKmsEncryptedObjects build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

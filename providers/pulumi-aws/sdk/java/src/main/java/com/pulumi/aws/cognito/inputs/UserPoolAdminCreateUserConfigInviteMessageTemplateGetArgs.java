@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
      * 
      */
     @Import(name="emailMessage")
-      private final @Nullable Output<String> emailMessage;
+    private @Nullable Output<String> emailMessage;
 
-    public Output<String> emailMessage() {
-        return this.emailMessage == null ? Codegen.empty() : this.emailMessage;
+    public Optional<Output<String>> emailMessage() {
+        return Optional.ofNullable(this.emailMessage);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
      * 
      */
     @Import(name="emailSubject")
-      private final @Nullable Output<String> emailSubject;
+    private @Nullable Output<String> emailSubject;
 
-    public Output<String> emailSubject() {
-        return this.emailSubject == null ? Codegen.empty() : this.emailSubject;
+    public Optional<Output<String>> emailSubject() {
+        return Optional.ofNullable(this.emailSubject);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
      * 
      */
     @Import(name="smsMessage")
-      private final @Nullable Output<String> smsMessage;
+    private @Nullable Output<String> smsMessage;
 
-    public Output<String> smsMessage() {
-        return this.smsMessage == null ? Codegen.empty() : this.smsMessage;
+    public Optional<Output<String>> smsMessage() {
+        return Optional.ofNullable(this.smsMessage);
     }
 
-    public UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs(
-        @Nullable Output<String> emailMessage,
-        @Nullable Output<String> emailSubject,
-        @Nullable Output<String> smsMessage) {
-        this.emailMessage = emailMessage;
-        this.emailSubject = emailSubject;
-        this.smsMessage = smsMessage;
-    }
+    private UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs() {}
 
-    private UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs() {
-        this.emailMessage = Codegen.empty();
-        this.emailSubject = Codegen.empty();
-        this.smsMessage = Codegen.empty();
+    private UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs(UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs $) {
+        this.emailMessage = $.emailMessage;
+        this.emailSubject = $.emailSubject;
+        this.smsMessage = $.smsMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> emailMessage;
-        private @Nullable Output<String> emailSubject;
-        private @Nullable Output<String> smsMessage;
+        private UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs();
         }
 
         public Builder(UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailMessage = defaults.emailMessage;
-    	      this.emailSubject = defaults.emailSubject;
-    	      this.smsMessage = defaults.smsMessage;
+            $ = new UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder emailMessage(@Nullable Output<String> emailMessage) {
-            this.emailMessage = emailMessage;
+            $.emailMessage = emailMessage;
             return this;
         }
-        public Builder emailMessage(@Nullable String emailMessage) {
-            this.emailMessage = Codegen.ofNullable(emailMessage);
-            return this;
+
+        public Builder emailMessage(String emailMessage) {
+            return emailMessage(Output.of(emailMessage));
         }
+
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
-            this.emailSubject = emailSubject;
+            $.emailSubject = emailSubject;
             return this;
         }
-        public Builder emailSubject(@Nullable String emailSubject) {
-            this.emailSubject = Codegen.ofNullable(emailSubject);
-            return this;
+
+        public Builder emailSubject(String emailSubject) {
+            return emailSubject(Output.of(emailSubject));
         }
+
         public Builder smsMessage(@Nullable Output<String> smsMessage) {
-            this.smsMessage = smsMessage;
+            $.smsMessage = smsMessage;
             return this;
         }
-        public Builder smsMessage(@Nullable String smsMessage) {
-            this.smsMessage = Codegen.ofNullable(smsMessage);
-            return this;
-        }        public UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs build() {
-            return new UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs(emailMessage, emailSubject, smsMessage);
+
+        public Builder smsMessage(String smsMessage) {
+            return smsMessage(Output.of(smsMessage));
+        }
+
+        public UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs build() {
+            return $;
         }
     }
+
 }

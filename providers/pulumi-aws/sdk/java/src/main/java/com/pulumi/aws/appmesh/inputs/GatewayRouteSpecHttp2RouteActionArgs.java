@@ -6,7 +6,6 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttp2RouteActionTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class GatewayRouteSpecHttp2RouteActionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="target", required=true)
-      private final Output<GatewayRouteSpecHttp2RouteActionTargetArgs> target;
+    private Output<GatewayRouteSpecHttp2RouteActionTargetArgs> target;
 
     public Output<GatewayRouteSpecHttp2RouteActionTargetArgs> target() {
         return this.target;
     }
 
-    public GatewayRouteSpecHttp2RouteActionArgs(Output<GatewayRouteSpecHttp2RouteActionTargetArgs> target) {
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private GatewayRouteSpecHttp2RouteActionArgs() {}
 
-    private GatewayRouteSpecHttp2RouteActionArgs() {
-        this.target = Codegen.empty();
+    private GatewayRouteSpecHttp2RouteActionArgs(GatewayRouteSpecHttp2RouteActionArgs $) {
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteSpecHttp2RouteActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GatewayRouteSpecHttp2RouteActionTargetArgs> target;
+        private GatewayRouteSpecHttp2RouteActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteSpecHttp2RouteActionArgs();
         }
 
         public Builder(GatewayRouteSpecHttp2RouteActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
+            $ = new GatewayRouteSpecHttp2RouteActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder target(Output<GatewayRouteSpecHttp2RouteActionTargetArgs> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(GatewayRouteSpecHttp2RouteActionTargetArgs target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public GatewayRouteSpecHttp2RouteActionArgs build() {
-            return new GatewayRouteSpecHttp2RouteActionArgs(target);
+            return target(Output.of(target));
+        }
+
+        public GatewayRouteSpecHttp2RouteActionArgs build() {
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

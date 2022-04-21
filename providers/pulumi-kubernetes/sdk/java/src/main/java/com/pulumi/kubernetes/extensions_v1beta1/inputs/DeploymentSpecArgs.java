@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.DeploymentStrategyArgs;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.RollbackConfigArgs;
@@ -13,6 +12,7 @@ import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="minReadySeconds")
-      private final @Nullable Output<Integer> minReadySeconds;
+    private @Nullable Output<Integer> minReadySeconds;
 
-    public Output<Integer> minReadySeconds() {
-        return this.minReadySeconds == null ? Codegen.empty() : this.minReadySeconds;
+    public Optional<Output<Integer>> minReadySeconds() {
+        return Optional.ofNullable(this.minReadySeconds);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="paused")
-      private final @Nullable Output<Boolean> paused;
+    private @Nullable Output<Boolean> paused;
 
-    public Output<Boolean> paused() {
-        return this.paused == null ? Codegen.empty() : this.paused;
+    public Optional<Output<Boolean>> paused() {
+        return Optional.ofNullable(this.paused);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="progressDeadlineSeconds")
-      private final @Nullable Output<Integer> progressDeadlineSeconds;
+    private @Nullable Output<Integer> progressDeadlineSeconds;
 
-    public Output<Integer> progressDeadlineSeconds() {
-        return this.progressDeadlineSeconds == null ? Codegen.empty() : this.progressDeadlineSeconds;
+    public Optional<Output<Integer>> progressDeadlineSeconds() {
+        return Optional.ofNullable(this.progressDeadlineSeconds);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="replicas")
-      private final @Nullable Output<Integer> replicas;
+    private @Nullable Output<Integer> replicas;
 
-    public Output<Integer> replicas() {
-        return this.replicas == null ? Codegen.empty() : this.replicas;
+    public Optional<Output<Integer>> replicas() {
+        return Optional.ofNullable(this.replicas);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="revisionHistoryLimit")
-      private final @Nullable Output<Integer> revisionHistoryLimit;
+    private @Nullable Output<Integer> revisionHistoryLimit;
 
-    public Output<Integer> revisionHistoryLimit() {
-        return this.revisionHistoryLimit == null ? Codegen.empty() : this.revisionHistoryLimit;
+    public Optional<Output<Integer>> revisionHistoryLimit() {
+        return Optional.ofNullable(this.revisionHistoryLimit);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rollbackTo")
-      private final @Nullable Output<RollbackConfigArgs> rollbackTo;
+    private @Nullable Output<RollbackConfigArgs> rollbackTo;
 
-    public Output<RollbackConfigArgs> rollbackTo() {
-        return this.rollbackTo == null ? Codegen.empty() : this.rollbackTo;
+    public Optional<Output<RollbackConfigArgs>> rollbackTo() {
+        return Optional.ofNullable(this.rollbackTo);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<LabelSelectorArgs> selector;
+    private @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<LabelSelectorArgs>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="strategy")
-      private final @Nullable Output<DeploymentStrategyArgs> strategy;
+    private @Nullable Output<DeploymentStrategyArgs> strategy;
 
-    public Output<DeploymentStrategyArgs> strategy() {
-        return this.strategy == null ? Codegen.empty() : this.strategy;
+    public Optional<Output<DeploymentStrategyArgs>> strategy() {
+        return Optional.ofNullable(this.strategy);
     }
 
     /**
@@ -117,154 +117,129 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="template", required=true)
-      private final Output<PodTemplateSpecArgs> template;
+    private Output<PodTemplateSpecArgs> template;
 
     public Output<PodTemplateSpecArgs> template() {
         return this.template;
     }
 
-    public DeploymentSpecArgs(
-        @Nullable Output<Integer> minReadySeconds,
-        @Nullable Output<Boolean> paused,
-        @Nullable Output<Integer> progressDeadlineSeconds,
-        @Nullable Output<Integer> replicas,
-        @Nullable Output<Integer> revisionHistoryLimit,
-        @Nullable Output<RollbackConfigArgs> rollbackTo,
-        @Nullable Output<LabelSelectorArgs> selector,
-        @Nullable Output<DeploymentStrategyArgs> strategy,
-        Output<PodTemplateSpecArgs> template) {
-        this.minReadySeconds = minReadySeconds;
-        this.paused = paused;
-        this.progressDeadlineSeconds = progressDeadlineSeconds;
-        this.replicas = replicas;
-        this.revisionHistoryLimit = revisionHistoryLimit;
-        this.rollbackTo = rollbackTo;
-        this.selector = selector;
-        this.strategy = strategy;
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-    }
+    private DeploymentSpecArgs() {}
 
-    private DeploymentSpecArgs() {
-        this.minReadySeconds = Codegen.empty();
-        this.paused = Codegen.empty();
-        this.progressDeadlineSeconds = Codegen.empty();
-        this.replicas = Codegen.empty();
-        this.revisionHistoryLimit = Codegen.empty();
-        this.rollbackTo = Codegen.empty();
-        this.selector = Codegen.empty();
-        this.strategy = Codegen.empty();
-        this.template = Codegen.empty();
+    private DeploymentSpecArgs(DeploymentSpecArgs $) {
+        this.minReadySeconds = $.minReadySeconds;
+        this.paused = $.paused;
+        this.progressDeadlineSeconds = $.progressDeadlineSeconds;
+        this.replicas = $.replicas;
+        this.revisionHistoryLimit = $.revisionHistoryLimit;
+        this.rollbackTo = $.rollbackTo;
+        this.selector = $.selector;
+        this.strategy = $.strategy;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> minReadySeconds;
-        private @Nullable Output<Boolean> paused;
-        private @Nullable Output<Integer> progressDeadlineSeconds;
-        private @Nullable Output<Integer> replicas;
-        private @Nullable Output<Integer> revisionHistoryLimit;
-        private @Nullable Output<RollbackConfigArgs> rollbackTo;
-        private @Nullable Output<LabelSelectorArgs> selector;
-        private @Nullable Output<DeploymentStrategyArgs> strategy;
-        private Output<PodTemplateSpecArgs> template;
+        private DeploymentSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentSpecArgs();
         }
 
         public Builder(DeploymentSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minReadySeconds = defaults.minReadySeconds;
-    	      this.paused = defaults.paused;
-    	      this.progressDeadlineSeconds = defaults.progressDeadlineSeconds;
-    	      this.replicas = defaults.replicas;
-    	      this.revisionHistoryLimit = defaults.revisionHistoryLimit;
-    	      this.rollbackTo = defaults.rollbackTo;
-    	      this.selector = defaults.selector;
-    	      this.strategy = defaults.strategy;
-    	      this.template = defaults.template;
+            $ = new DeploymentSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minReadySeconds(@Nullable Output<Integer> minReadySeconds) {
-            this.minReadySeconds = minReadySeconds;
+            $.minReadySeconds = minReadySeconds;
             return this;
         }
-        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
-            this.minReadySeconds = Codegen.ofNullable(minReadySeconds);
-            return this;
+
+        public Builder minReadySeconds(Integer minReadySeconds) {
+            return minReadySeconds(Output.of(minReadySeconds));
         }
+
         public Builder paused(@Nullable Output<Boolean> paused) {
-            this.paused = paused;
+            $.paused = paused;
             return this;
         }
-        public Builder paused(@Nullable Boolean paused) {
-            this.paused = Codegen.ofNullable(paused);
-            return this;
+
+        public Builder paused(Boolean paused) {
+            return paused(Output.of(paused));
         }
+
         public Builder progressDeadlineSeconds(@Nullable Output<Integer> progressDeadlineSeconds) {
-            this.progressDeadlineSeconds = progressDeadlineSeconds;
+            $.progressDeadlineSeconds = progressDeadlineSeconds;
             return this;
         }
-        public Builder progressDeadlineSeconds(@Nullable Integer progressDeadlineSeconds) {
-            this.progressDeadlineSeconds = Codegen.ofNullable(progressDeadlineSeconds);
-            return this;
+
+        public Builder progressDeadlineSeconds(Integer progressDeadlineSeconds) {
+            return progressDeadlineSeconds(Output.of(progressDeadlineSeconds));
         }
+
         public Builder replicas(@Nullable Output<Integer> replicas) {
-            this.replicas = replicas;
+            $.replicas = replicas;
             return this;
         }
-        public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Codegen.ofNullable(replicas);
-            return this;
+
+        public Builder replicas(Integer replicas) {
+            return replicas(Output.of(replicas));
         }
+
         public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
-            this.revisionHistoryLimit = revisionHistoryLimit;
+            $.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
-        public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
-            this.revisionHistoryLimit = Codegen.ofNullable(revisionHistoryLimit);
-            return this;
+
+        public Builder revisionHistoryLimit(Integer revisionHistoryLimit) {
+            return revisionHistoryLimit(Output.of(revisionHistoryLimit));
         }
+
         public Builder rollbackTo(@Nullable Output<RollbackConfigArgs> rollbackTo) {
-            this.rollbackTo = rollbackTo;
+            $.rollbackTo = rollbackTo;
             return this;
         }
-        public Builder rollbackTo(@Nullable RollbackConfigArgs rollbackTo) {
-            this.rollbackTo = Codegen.ofNullable(rollbackTo);
-            return this;
+
+        public Builder rollbackTo(RollbackConfigArgs rollbackTo) {
+            return rollbackTo(Output.of(rollbackTo));
         }
+
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
+
+        public Builder selector(LabelSelectorArgs selector) {
+            return selector(Output.of(selector));
         }
+
         public Builder strategy(@Nullable Output<DeploymentStrategyArgs> strategy) {
-            this.strategy = strategy;
+            $.strategy = strategy;
             return this;
         }
-        public Builder strategy(@Nullable DeploymentStrategyArgs strategy) {
-            this.strategy = Codegen.ofNullable(strategy);
-            return this;
+
+        public Builder strategy(DeploymentStrategyArgs strategy) {
+            return strategy(Output.of(strategy));
         }
+
         public Builder template(Output<PodTemplateSpecArgs> template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
         }
+
         public Builder template(PodTemplateSpecArgs template) {
-            this.template = Output.of(Objects.requireNonNull(template));
-            return this;
-        }        public DeploymentSpecArgs build() {
-            return new DeploymentSpecArgs(minReadySeconds, paused, progressDeadlineSeconds, replicas, revisionHistoryLimit, rollbackTo, selector, strategy, template);
+            return template(Output.of(template));
+        }
+
+        public DeploymentSpecArgs build() {
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            return $;
         }
     }
+
 }

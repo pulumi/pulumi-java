@@ -13,45 +13,45 @@ public final class FlowDynatraceSourceProperties extends com.pulumi.resources.In
     public static final FlowDynatraceSourceProperties Empty = new FlowDynatraceSourceProperties();
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowDynatraceSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowDynatraceSourceProperties() {}
 
-    private FlowDynatraceSourceProperties() {
-        this.object = null;
+    private FlowDynatraceSourceProperties(FlowDynatraceSourceProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowDynatraceSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String object;
+        private FlowDynatraceSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowDynatraceSourceProperties();
         }
 
         public Builder(FlowDynatraceSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowDynatraceSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowDynatraceSourceProperties build() {
-            return new FlowDynatraceSourceProperties(object);
+        }
+
+        public FlowDynatraceSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

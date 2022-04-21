@@ -6,10 +6,10 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.DimensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CriteriaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<List<DimensionArgs>> dimensions;
+    private @Nullable Output<List<DimensionArgs>> dimensions;
 
-    public Output<List<DimensionArgs>> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<List<DimensionArgs>>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class CriteriaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
     }
 
-    public CriteriaArgs(
-        @Nullable Output<List<DimensionArgs>> dimensions,
-        Output<String> metricName) {
-        this.dimensions = dimensions;
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-    }
+    private CriteriaArgs() {}
 
-    private CriteriaArgs() {
-        this.dimensions = Codegen.empty();
-        this.metricName = Codegen.empty();
+    private CriteriaArgs(CriteriaArgs $) {
+        this.dimensions = $.dimensions;
+        this.metricName = $.metricName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DimensionArgs>> dimensions;
-        private Output<String> metricName;
+        private CriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CriteriaArgs();
         }
 
         public Builder(CriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
-    	      this.metricName = defaults.metricName;
+            $ = new CriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(@Nullable Output<List<DimensionArgs>> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable List<DimensionArgs> dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(List<DimensionArgs> dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder dimensions(DimensionArgs... dimensions) {
             return dimensions(List.of(dimensions));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
-        }        public CriteriaArgs build() {
-            return new CriteriaArgs(dimensions, metricName);
+            return metricName(Output.of(metricName));
+        }
+
+        public CriteriaArgs build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            return $;
         }
     }
+
 }

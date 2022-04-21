@@ -23,45 +23,44 @@ public final class OfficeDataConnectorDataTypesResponseTeams extends com.pulumi.
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public OfficeDataConnectorDataTypesResponseTeams(@Nullable String state) {
-        this.state = state;
-    }
+    private OfficeDataConnectorDataTypesResponseTeams() {}
 
-    private OfficeDataConnectorDataTypesResponseTeams() {
-        this.state = null;
+    private OfficeDataConnectorDataTypesResponseTeams(OfficeDataConnectorDataTypesResponseTeams $) {
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OfficeDataConnectorDataTypesResponseTeams defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String state;
+        private OfficeDataConnectorDataTypesResponseTeams $;
 
         public Builder() {
-    	      // Empty
+            $ = new OfficeDataConnectorDataTypesResponseTeams();
         }
 
         public Builder(OfficeDataConnectorDataTypesResponseTeams defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.state = defaults.state;
+            $ = new OfficeDataConnectorDataTypesResponseTeams(Objects.requireNonNull(defaults));
         }
 
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public OfficeDataConnectorDataTypesResponseTeams build() {
-            return new OfficeDataConnectorDataTypesResponseTeams(state);
+        }
+
+        public OfficeDataConnectorDataTypesResponseTeams build() {
+            return $;
         }
     }
+
 }

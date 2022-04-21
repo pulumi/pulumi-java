@@ -5,9 +5,9 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ThemeFontArgs extends com.pulumi.resources.ResourceArgs {
     public static final ThemeFontArgs Empty = new ThemeFontArgs();
 
     @Import(name="fontFamily")
-      private final @Nullable Output<String> fontFamily;
+    private @Nullable Output<String> fontFamily;
 
-    public Output<String> fontFamily() {
-        return this.fontFamily == null ? Codegen.empty() : this.fontFamily;
+    public Optional<Output<String>> fontFamily() {
+        return Optional.ofNullable(this.fontFamily);
     }
 
-    public ThemeFontArgs(@Nullable Output<String> fontFamily) {
-        this.fontFamily = fontFamily;
-    }
+    private ThemeFontArgs() {}
 
-    private ThemeFontArgs() {
-        this.fontFamily = Codegen.empty();
+    private ThemeFontArgs(ThemeFontArgs $) {
+        this.fontFamily = $.fontFamily;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeFontArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fontFamily;
+        private ThemeFontArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeFontArgs();
         }
 
         public Builder(ThemeFontArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fontFamily = defaults.fontFamily;
+            $ = new ThemeFontArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fontFamily(@Nullable Output<String> fontFamily) {
-            this.fontFamily = fontFamily;
+            $.fontFamily = fontFamily;
             return this;
         }
-        public Builder fontFamily(@Nullable String fontFamily) {
-            this.fontFamily = Codegen.ofNullable(fontFamily);
-            return this;
-        }        public ThemeFontArgs build() {
-            return new ThemeFontArgs(fontFamily);
+
+        public Builder fontFamily(String fontFamily) {
+            return fontFamily(Output.of(fontFamily));
+        }
+
+        public ThemeFontArgs build() {
+            return $;
         }
     }
+
 }

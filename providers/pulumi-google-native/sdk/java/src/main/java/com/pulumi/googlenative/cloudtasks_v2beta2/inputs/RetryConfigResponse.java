@@ -23,7 +23,7 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxAttempts", required=true)
-      private final Integer maxAttempts;
+    private Integer maxAttempts;
 
     public Integer maxAttempts() {
         return this.maxAttempts;
@@ -34,7 +34,7 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxBackoff", required=true)
-      private final String maxBackoff;
+    private String maxBackoff;
 
     public String maxBackoff() {
         return this.maxBackoff;
@@ -45,7 +45,7 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxDoublings", required=true)
-      private final Integer maxDoublings;
+    private Integer maxDoublings;
 
     public Integer maxDoublings() {
         return this.maxDoublings;
@@ -56,7 +56,7 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxRetryDuration", required=true)
-      private final String maxRetryDuration;
+    private String maxRetryDuration;
 
     public String maxRetryDuration() {
         return this.maxRetryDuration;
@@ -67,7 +67,7 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minBackoff", required=true)
-      private final String minBackoff;
+    private String minBackoff;
 
     public String minBackoff() {
         return this.minBackoff;
@@ -78,91 +78,80 @@ public final class RetryConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="unlimitedAttempts", required=true)
-      private final Boolean unlimitedAttempts;
+    private Boolean unlimitedAttempts;
 
     public Boolean unlimitedAttempts() {
         return this.unlimitedAttempts;
     }
 
-    public RetryConfigResponse(
-        Integer maxAttempts,
-        String maxBackoff,
-        Integer maxDoublings,
-        String maxRetryDuration,
-        String minBackoff,
-        Boolean unlimitedAttempts) {
-        this.maxAttempts = Objects.requireNonNull(maxAttempts, "expected parameter 'maxAttempts' to be non-null");
-        this.maxBackoff = Objects.requireNonNull(maxBackoff, "expected parameter 'maxBackoff' to be non-null");
-        this.maxDoublings = Objects.requireNonNull(maxDoublings, "expected parameter 'maxDoublings' to be non-null");
-        this.maxRetryDuration = Objects.requireNonNull(maxRetryDuration, "expected parameter 'maxRetryDuration' to be non-null");
-        this.minBackoff = Objects.requireNonNull(minBackoff, "expected parameter 'minBackoff' to be non-null");
-        this.unlimitedAttempts = Objects.requireNonNull(unlimitedAttempts, "expected parameter 'unlimitedAttempts' to be non-null");
-    }
+    private RetryConfigResponse() {}
 
-    private RetryConfigResponse() {
-        this.maxAttempts = null;
-        this.maxBackoff = null;
-        this.maxDoublings = null;
-        this.maxRetryDuration = null;
-        this.minBackoff = null;
-        this.unlimitedAttempts = null;
+    private RetryConfigResponse(RetryConfigResponse $) {
+        this.maxAttempts = $.maxAttempts;
+        this.maxBackoff = $.maxBackoff;
+        this.maxDoublings = $.maxDoublings;
+        this.maxRetryDuration = $.maxRetryDuration;
+        this.minBackoff = $.minBackoff;
+        this.unlimitedAttempts = $.unlimitedAttempts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetryConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxAttempts;
-        private String maxBackoff;
-        private Integer maxDoublings;
-        private String maxRetryDuration;
-        private String minBackoff;
-        private Boolean unlimitedAttempts;
+        private RetryConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetryConfigResponse();
         }
 
         public Builder(RetryConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxAttempts = defaults.maxAttempts;
-    	      this.maxBackoff = defaults.maxBackoff;
-    	      this.maxDoublings = defaults.maxDoublings;
-    	      this.maxRetryDuration = defaults.maxRetryDuration;
-    	      this.minBackoff = defaults.minBackoff;
-    	      this.unlimitedAttempts = defaults.unlimitedAttempts;
+            $ = new RetryConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxAttempts(Integer maxAttempts) {
-            this.maxAttempts = Objects.requireNonNull(maxAttempts);
+            $.maxAttempts = maxAttempts;
             return this;
         }
+
         public Builder maxBackoff(String maxBackoff) {
-            this.maxBackoff = Objects.requireNonNull(maxBackoff);
+            $.maxBackoff = maxBackoff;
             return this;
         }
+
         public Builder maxDoublings(Integer maxDoublings) {
-            this.maxDoublings = Objects.requireNonNull(maxDoublings);
+            $.maxDoublings = maxDoublings;
             return this;
         }
+
         public Builder maxRetryDuration(String maxRetryDuration) {
-            this.maxRetryDuration = Objects.requireNonNull(maxRetryDuration);
+            $.maxRetryDuration = maxRetryDuration;
             return this;
         }
+
         public Builder minBackoff(String minBackoff) {
-            this.minBackoff = Objects.requireNonNull(minBackoff);
+            $.minBackoff = minBackoff;
             return this;
         }
+
         public Builder unlimitedAttempts(Boolean unlimitedAttempts) {
-            this.unlimitedAttempts = Objects.requireNonNull(unlimitedAttempts);
+            $.unlimitedAttempts = unlimitedAttempts;
             return this;
-        }        public RetryConfigResponse build() {
-            return new RetryConfigResponse(maxAttempts, maxBackoff, maxDoublings, maxRetryDuration, minBackoff, unlimitedAttempts);
+        }
+
+        public RetryConfigResponse build() {
+            $.maxAttempts = Objects.requireNonNull($.maxAttempts, "expected parameter 'maxAttempts' to be non-null");
+            $.maxBackoff = Objects.requireNonNull($.maxBackoff, "expected parameter 'maxBackoff' to be non-null");
+            $.maxDoublings = Objects.requireNonNull($.maxDoublings, "expected parameter 'maxDoublings' to be non-null");
+            $.maxRetryDuration = Objects.requireNonNull($.maxRetryDuration, "expected parameter 'maxRetryDuration' to be non-null");
+            $.minBackoff = Objects.requireNonNull($.minBackoff, "expected parameter 'minBackoff' to be non-null");
+            $.unlimitedAttempts = Objects.requireNonNull($.unlimitedAttempts, "expected parameter 'unlimitedAttempts' to be non-null");
+            return $;
         }
     }
+
 }

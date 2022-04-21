@@ -6,10 +6,10 @@ package com.pulumi.aws.connect.inputs;
 import com.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quickConnectConfig")
-      private final @Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig;
+    private @Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig;
 
-    public Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig() {
-        return this.quickConnectConfig == null ? Codegen.empty() : this.quickConnectConfig;
+    public Optional<Output<QuickConnectQuickConnectConfigGetArgs>> quickConnectConfig() {
+        return Optional.ofNullable(this.quickConnectConfig);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quickConnectId")
-      private final @Nullable Output<String> quickConnectId;
+    private @Nullable Output<String> quickConnectId;
 
-    public Output<String> quickConnectId() {
-        return this.quickConnectId == null ? Codegen.empty() : this.quickConnectId;
+    public Optional<Output<String>> quickConnectId() {
+        return Optional.ofNullable(this.quickConnectId);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -99,141 +99,118 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public QuickConnectState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> name,
-        @Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig,
-        @Nullable Output<String> quickConnectId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.description = description;
-        this.instanceId = instanceId;
-        this.name = name;
-        this.quickConnectConfig = quickConnectConfig;
-        this.quickConnectId = quickConnectId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private QuickConnectState() {}
 
-    private QuickConnectState() {
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.quickConnectConfig = Codegen.empty();
-        this.quickConnectId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private QuickConnectState(QuickConnectState $) {
+        this.arn = $.arn;
+        this.description = $.description;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
+        this.quickConnectConfig = $.quickConnectConfig;
+        this.quickConnectId = $.quickConnectId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuickConnectState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig;
-        private @Nullable Output<String> quickConnectId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private QuickConnectState $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuickConnectState();
         }
 
         public Builder(QuickConnectState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
-    	      this.quickConnectConfig = defaults.quickConnectConfig;
-    	      this.quickConnectId = defaults.quickConnectId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new QuickConnectState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder quickConnectConfig(@Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig) {
-            this.quickConnectConfig = quickConnectConfig;
+            $.quickConnectConfig = quickConnectConfig;
             return this;
         }
-        public Builder quickConnectConfig(@Nullable QuickConnectQuickConnectConfigGetArgs quickConnectConfig) {
-            this.quickConnectConfig = Codegen.ofNullable(quickConnectConfig);
-            return this;
+
+        public Builder quickConnectConfig(QuickConnectQuickConnectConfigGetArgs quickConnectConfig) {
+            return quickConnectConfig(Output.of(quickConnectConfig));
         }
+
         public Builder quickConnectId(@Nullable Output<String> quickConnectId) {
-            this.quickConnectId = quickConnectId;
+            $.quickConnectId = quickConnectId;
             return this;
         }
-        public Builder quickConnectId(@Nullable String quickConnectId) {
-            this.quickConnectId = Codegen.ofNullable(quickConnectId);
-            return this;
+
+        public Builder quickConnectId(String quickConnectId) {
+            return quickConnectId(Output.of(quickConnectId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public QuickConnectState build() {
-            return new QuickConnectState(arn, description, instanceId, name, quickConnectConfig, quickConnectId, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public QuickConnectState build() {
+            return $;
         }
     }
+
 }

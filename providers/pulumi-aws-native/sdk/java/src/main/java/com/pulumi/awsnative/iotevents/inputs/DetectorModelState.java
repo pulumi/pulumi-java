@@ -22,24 +22,24 @@ public final class DetectorModelState extends com.pulumi.resources.InvokeArgs {
     public static final DetectorModelState Empty = new DetectorModelState();
 
     @Import(name="onEnter")
-      private final @Nullable DetectorModelOnEnter onEnter;
+    private @Nullable DetectorModelOnEnter onEnter;
 
     public Optional<DetectorModelOnEnter> onEnter() {
-        return this.onEnter == null ? Optional.empty() : Optional.ofNullable(this.onEnter);
+        return Optional.ofNullable(this.onEnter);
     }
 
     @Import(name="onExit")
-      private final @Nullable DetectorModelOnExit onExit;
+    private @Nullable DetectorModelOnExit onExit;
 
     public Optional<DetectorModelOnExit> onExit() {
-        return this.onExit == null ? Optional.empty() : Optional.ofNullable(this.onExit);
+        return Optional.ofNullable(this.onExit);
     }
 
     @Import(name="onInput")
-      private final @Nullable DetectorModelOnInput onInput;
+    private @Nullable DetectorModelOnInput onInput;
 
     public Optional<DetectorModelOnInput> onInput() {
-        return this.onInput == null ? Optional.empty() : Optional.ofNullable(this.onInput);
+        return Optional.ofNullable(this.onInput);
     }
 
     /**
@@ -47,73 +47,63 @@ public final class DetectorModelState extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stateName", required=true)
-      private final String stateName;
+    private String stateName;
 
     public String stateName() {
         return this.stateName;
     }
 
-    public DetectorModelState(
-        @Nullable DetectorModelOnEnter onEnter,
-        @Nullable DetectorModelOnExit onExit,
-        @Nullable DetectorModelOnInput onInput,
-        String stateName) {
-        this.onEnter = onEnter;
-        this.onExit = onExit;
-        this.onInput = onInput;
-        this.stateName = Objects.requireNonNull(stateName, "expected parameter 'stateName' to be non-null");
-    }
+    private DetectorModelState() {}
 
-    private DetectorModelState() {
-        this.onEnter = null;
-        this.onExit = null;
-        this.onInput = null;
-        this.stateName = null;
+    private DetectorModelState(DetectorModelState $) {
+        this.onEnter = $.onEnter;
+        this.onExit = $.onExit;
+        this.onInput = $.onInput;
+        this.stateName = $.stateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DetectorModelOnEnter onEnter;
-        private @Nullable DetectorModelOnExit onExit;
-        private @Nullable DetectorModelOnInput onInput;
-        private String stateName;
+        private DetectorModelState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelState();
         }
 
         public Builder(DetectorModelState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onEnter = defaults.onEnter;
-    	      this.onExit = defaults.onExit;
-    	      this.onInput = defaults.onInput;
-    	      this.stateName = defaults.stateName;
+            $ = new DetectorModelState(Objects.requireNonNull(defaults));
         }
 
         public Builder onEnter(@Nullable DetectorModelOnEnter onEnter) {
-            this.onEnter = onEnter;
+            $.onEnter = onEnter;
             return this;
         }
+
         public Builder onExit(@Nullable DetectorModelOnExit onExit) {
-            this.onExit = onExit;
+            $.onExit = onExit;
             return this;
         }
+
         public Builder onInput(@Nullable DetectorModelOnInput onInput) {
-            this.onInput = onInput;
+            $.onInput = onInput;
             return this;
         }
+
         public Builder stateName(String stateName) {
-            this.stateName = Objects.requireNonNull(stateName);
+            $.stateName = stateName;
             return this;
-        }        public DetectorModelState build() {
-            return new DetectorModelState(onEnter, onExit, onInput, stateName);
+        }
+
+        public DetectorModelState build() {
+            $.stateName = Objects.requireNonNull($.stateName, "expected parameter 'stateName' to be non-null");
+            return $;
         }
     }
+
 }

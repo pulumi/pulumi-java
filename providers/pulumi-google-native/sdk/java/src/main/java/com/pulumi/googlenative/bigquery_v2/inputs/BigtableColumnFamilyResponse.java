@@ -20,7 +20,7 @@ public final class BigtableColumnFamilyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="columns", required=true)
-      private final List<BigtableColumnResponse> columns;
+    private List<BigtableColumnResponse> columns;
 
     public List<BigtableColumnResponse> columns() {
         return this.columns;
@@ -31,7 +31,7 @@ public final class BigtableColumnFamilyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="encoding", required=true)
-      private final String encoding;
+    private String encoding;
 
     public String encoding() {
         return this.encoding;
@@ -42,7 +42,7 @@ public final class BigtableColumnFamilyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="familyId", required=true)
-      private final String familyId;
+    private String familyId;
 
     public String familyId() {
         return this.familyId;
@@ -53,7 +53,7 @@ public final class BigtableColumnFamilyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="onlyReadLatest", required=true)
-      private final Boolean onlyReadLatest;
+    private Boolean onlyReadLatest;
 
     public Boolean onlyReadLatest() {
         return this.onlyReadLatest;
@@ -64,85 +64,77 @@ public final class BigtableColumnFamilyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public BigtableColumnFamilyResponse(
-        List<BigtableColumnResponse> columns,
-        String encoding,
-        String familyId,
-        Boolean onlyReadLatest,
-        String type) {
-        this.columns = Objects.requireNonNull(columns, "expected parameter 'columns' to be non-null");
-        this.encoding = Objects.requireNonNull(encoding, "expected parameter 'encoding' to be non-null");
-        this.familyId = Objects.requireNonNull(familyId, "expected parameter 'familyId' to be non-null");
-        this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest, "expected parameter 'onlyReadLatest' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private BigtableColumnFamilyResponse() {}
 
-    private BigtableColumnFamilyResponse() {
-        this.columns = List.of();
-        this.encoding = null;
-        this.familyId = null;
-        this.onlyReadLatest = null;
-        this.type = null;
+    private BigtableColumnFamilyResponse(BigtableColumnFamilyResponse $) {
+        this.columns = $.columns;
+        this.encoding = $.encoding;
+        this.familyId = $.familyId;
+        this.onlyReadLatest = $.onlyReadLatest;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigtableColumnFamilyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BigtableColumnResponse> columns;
-        private String encoding;
-        private String familyId;
-        private Boolean onlyReadLatest;
-        private String type;
+        private BigtableColumnFamilyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigtableColumnFamilyResponse();
         }
 
         public Builder(BigtableColumnFamilyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.encoding = defaults.encoding;
-    	      this.familyId = defaults.familyId;
-    	      this.onlyReadLatest = defaults.onlyReadLatest;
-    	      this.type = defaults.type;
+            $ = new BigtableColumnFamilyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(List<BigtableColumnResponse> columns) {
-            this.columns = Objects.requireNonNull(columns);
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(BigtableColumnResponse... columns) {
             return columns(List.of(columns));
         }
+
         public Builder encoding(String encoding) {
-            this.encoding = Objects.requireNonNull(encoding);
+            $.encoding = encoding;
             return this;
         }
+
         public Builder familyId(String familyId) {
-            this.familyId = Objects.requireNonNull(familyId);
+            $.familyId = familyId;
             return this;
         }
+
         public Builder onlyReadLatest(Boolean onlyReadLatest) {
-            this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest);
+            $.onlyReadLatest = onlyReadLatest;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BigtableColumnFamilyResponse build() {
-            return new BigtableColumnFamilyResponse(columns, encoding, familyId, onlyReadLatest, type);
+        }
+
+        public BigtableColumnFamilyResponse build() {
+            $.columns = Objects.requireNonNull($.columns, "expected parameter 'columns' to be non-null");
+            $.encoding = Objects.requireNonNull($.encoding, "expected parameter 'encoding' to be non-null");
+            $.familyId = Objects.requireNonNull($.familyId, "expected parameter 'familyId' to be non-null");
+            $.onlyReadLatest = Objects.requireNonNull($.onlyReadLatest, "expected parameter 'onlyReadLatest' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

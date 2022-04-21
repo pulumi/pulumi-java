@@ -22,7 +22,7 @@ public final class AzureBlobStorageDataResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="azureCredentials", required=true)
-      private final AzureCredentialsResponse azureCredentials;
+    private AzureCredentialsResponse azureCredentials;
 
     public AzureCredentialsResponse azureCredentials() {
         return this.azureCredentials;
@@ -33,7 +33,7 @@ public final class AzureBlobStorageDataResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="container", required=true)
-      private final String container;
+    private String container;
 
     public String container() {
         return this.container;
@@ -44,7 +44,7 @@ public final class AzureBlobStorageDataResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -55,73 +55,66 @@ public final class AzureBlobStorageDataResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="storageAccount", required=true)
-      private final String storageAccount;
+    private String storageAccount;
 
     public String storageAccount() {
         return this.storageAccount;
     }
 
-    public AzureBlobStorageDataResponse(
-        AzureCredentialsResponse azureCredentials,
-        String container,
-        String path,
-        String storageAccount) {
-        this.azureCredentials = Objects.requireNonNull(azureCredentials, "expected parameter 'azureCredentials' to be non-null");
-        this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.storageAccount = Objects.requireNonNull(storageAccount, "expected parameter 'storageAccount' to be non-null");
-    }
+    private AzureBlobStorageDataResponse() {}
 
-    private AzureBlobStorageDataResponse() {
-        this.azureCredentials = null;
-        this.container = null;
-        this.path = null;
-        this.storageAccount = null;
+    private AzureBlobStorageDataResponse(AzureBlobStorageDataResponse $) {
+        this.azureCredentials = $.azureCredentials;
+        this.container = $.container;
+        this.path = $.path;
+        this.storageAccount = $.storageAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobStorageDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AzureCredentialsResponse azureCredentials;
-        private String container;
-        private String path;
-        private String storageAccount;
+        private AzureBlobStorageDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobStorageDataResponse();
         }
 
         public Builder(AzureBlobStorageDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureCredentials = defaults.azureCredentials;
-    	      this.container = defaults.container;
-    	      this.path = defaults.path;
-    	      this.storageAccount = defaults.storageAccount;
+            $ = new AzureBlobStorageDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureCredentials(AzureCredentialsResponse azureCredentials) {
-            this.azureCredentials = Objects.requireNonNull(azureCredentials);
+            $.azureCredentials = azureCredentials;
             return this;
         }
+
         public Builder container(String container) {
-            this.container = Objects.requireNonNull(container);
+            $.container = container;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder storageAccount(String storageAccount) {
-            this.storageAccount = Objects.requireNonNull(storageAccount);
+            $.storageAccount = storageAccount;
             return this;
-        }        public AzureBlobStorageDataResponse build() {
-            return new AzureBlobStorageDataResponse(azureCredentials, container, path, storageAccount);
+        }
+
+        public AzureBlobStorageDataResponse build() {
+            $.azureCredentials = Objects.requireNonNull($.azureCredentials, "expected parameter 'azureCredentials' to be non-null");
+            $.container = Objects.requireNonNull($.container, "expected parameter 'container' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.storageAccount = Objects.requireNonNull($.storageAccount, "expected parameter 'storageAccount' to be non-null");
+            return $;
         }
     }
+
 }

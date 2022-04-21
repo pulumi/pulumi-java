@@ -6,7 +6,6 @@ package com.pulumi.aws.emr.inputs;
 import com.pulumi.aws.emr.inputs.ClusterStepHadoopJarStepArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class ClusterStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionOnFailure", required=true)
-      private final Output<String> actionOnFailure;
+    private Output<String> actionOnFailure;
 
     public Output<String> actionOnFailure() {
         return this.actionOnFailure;
@@ -31,7 +30,7 @@ public final class ClusterStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hadoopJarStep", required=true)
-      private final Output<ClusterStepHadoopJarStepArgs> hadoopJarStep;
+    private Output<ClusterStepHadoopJarStepArgs> hadoopJarStep;
 
     public Output<ClusterStepHadoopJarStepArgs> hadoopJarStep() {
         return this.hadoopJarStep;
@@ -42,76 +41,71 @@ public final class ClusterStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public ClusterStepArgs(
-        Output<String> actionOnFailure,
-        Output<ClusterStepHadoopJarStepArgs> hadoopJarStep,
-        Output<String> name) {
-        this.actionOnFailure = Objects.requireNonNull(actionOnFailure, "expected parameter 'actionOnFailure' to be non-null");
-        this.hadoopJarStep = Objects.requireNonNull(hadoopJarStep, "expected parameter 'hadoopJarStep' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ClusterStepArgs() {}
 
-    private ClusterStepArgs() {
-        this.actionOnFailure = Codegen.empty();
-        this.hadoopJarStep = Codegen.empty();
-        this.name = Codegen.empty();
+    private ClusterStepArgs(ClusterStepArgs $) {
+        this.actionOnFailure = $.actionOnFailure;
+        this.hadoopJarStep = $.hadoopJarStep;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> actionOnFailure;
-        private Output<ClusterStepHadoopJarStepArgs> hadoopJarStep;
-        private Output<String> name;
+        private ClusterStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterStepArgs();
         }
 
         public Builder(ClusterStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionOnFailure = defaults.actionOnFailure;
-    	      this.hadoopJarStep = defaults.hadoopJarStep;
-    	      this.name = defaults.name;
+            $ = new ClusterStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionOnFailure(Output<String> actionOnFailure) {
-            this.actionOnFailure = Objects.requireNonNull(actionOnFailure);
+            $.actionOnFailure = actionOnFailure;
             return this;
         }
+
         public Builder actionOnFailure(String actionOnFailure) {
-            this.actionOnFailure = Output.of(Objects.requireNonNull(actionOnFailure));
-            return this;
+            return actionOnFailure(Output.of(actionOnFailure));
         }
+
         public Builder hadoopJarStep(Output<ClusterStepHadoopJarStepArgs> hadoopJarStep) {
-            this.hadoopJarStep = Objects.requireNonNull(hadoopJarStep);
+            $.hadoopJarStep = hadoopJarStep;
             return this;
         }
+
         public Builder hadoopJarStep(ClusterStepHadoopJarStepArgs hadoopJarStep) {
-            this.hadoopJarStep = Output.of(Objects.requireNonNull(hadoopJarStep));
-            return this;
+            return hadoopJarStep(Output.of(hadoopJarStep));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ClusterStepArgs build() {
-            return new ClusterStepArgs(actionOnFailure, hadoopJarStep, name);
+            return name(Output.of(name));
+        }
+
+        public ClusterStepArgs build() {
+            $.actionOnFailure = Objects.requireNonNull($.actionOnFailure, "expected parameter 'actionOnFailure' to be non-null");
+            $.hadoopJarStep = Objects.requireNonNull($.hadoopJarStep, "expected parameter 'hadoopJarStep' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

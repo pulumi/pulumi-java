@@ -6,9 +6,9 @@ package com.pulumi.awsnative.backup.inputs;
 import com.pulumi.awsnative.backup.inputs.BackupPlanLifecycleResourceTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class BackupPlanCopyActionResourceTypeArgs extends com.pulumi.resou
     public static final BackupPlanCopyActionResourceTypeArgs Empty = new BackupPlanCopyActionResourceTypeArgs();
 
     @Import(name="destinationBackupVaultArn", required=true)
-      private final Output<String> destinationBackupVaultArn;
+    private Output<String> destinationBackupVaultArn;
 
     public Output<String> destinationBackupVaultArn() {
         return this.destinationBackupVaultArn;
     }
 
     @Import(name="lifecycle")
-      private final @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
+    private @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
 
-    public Output<BackupPlanLifecycleResourceTypeArgs> lifecycle() {
-        return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
+    public Optional<Output<BackupPlanLifecycleResourceTypeArgs>> lifecycle() {
+        return Optional.ofNullable(this.lifecycle);
     }
 
-    public BackupPlanCopyActionResourceTypeArgs(
-        Output<String> destinationBackupVaultArn,
-        @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
-        this.destinationBackupVaultArn = Objects.requireNonNull(destinationBackupVaultArn, "expected parameter 'destinationBackupVaultArn' to be non-null");
-        this.lifecycle = lifecycle;
-    }
+    private BackupPlanCopyActionResourceTypeArgs() {}
 
-    private BackupPlanCopyActionResourceTypeArgs() {
-        this.destinationBackupVaultArn = Codegen.empty();
-        this.lifecycle = Codegen.empty();
+    private BackupPlanCopyActionResourceTypeArgs(BackupPlanCopyActionResourceTypeArgs $) {
+        this.destinationBackupVaultArn = $.destinationBackupVaultArn;
+        this.lifecycle = $.lifecycle;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPlanCopyActionResourceTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationBackupVaultArn;
-        private @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
+        private BackupPlanCopyActionResourceTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPlanCopyActionResourceTypeArgs();
         }
 
         public Builder(BackupPlanCopyActionResourceTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationBackupVaultArn = defaults.destinationBackupVaultArn;
-    	      this.lifecycle = defaults.lifecycle;
+            $ = new BackupPlanCopyActionResourceTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationBackupVaultArn(Output<String> destinationBackupVaultArn) {
-            this.destinationBackupVaultArn = Objects.requireNonNull(destinationBackupVaultArn);
+            $.destinationBackupVaultArn = destinationBackupVaultArn;
             return this;
         }
+
         public Builder destinationBackupVaultArn(String destinationBackupVaultArn) {
-            this.destinationBackupVaultArn = Output.of(Objects.requireNonNull(destinationBackupVaultArn));
-            return this;
+            return destinationBackupVaultArn(Output.of(destinationBackupVaultArn));
         }
+
         public Builder lifecycle(@Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
-            this.lifecycle = lifecycle;
+            $.lifecycle = lifecycle;
             return this;
         }
-        public Builder lifecycle(@Nullable BackupPlanLifecycleResourceTypeArgs lifecycle) {
-            this.lifecycle = Codegen.ofNullable(lifecycle);
-            return this;
-        }        public BackupPlanCopyActionResourceTypeArgs build() {
-            return new BackupPlanCopyActionResourceTypeArgs(destinationBackupVaultArn, lifecycle);
+
+        public Builder lifecycle(BackupPlanLifecycleResourceTypeArgs lifecycle) {
+            return lifecycle(Output.of(lifecycle));
+        }
+
+        public BackupPlanCopyActionResourceTypeArgs build() {
+            $.destinationBackupVaultArn = Objects.requireNonNull($.destinationBackupVaultArn, "expected parameter 'destinationBackupVaultArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchTemplateConfigLaunchTempl
 import com.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchTemplateConfigOverrideGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class SpotFleetRequestLaunchTemplateConfigGetArgs extends com.pulum
      * 
      */
     @Import(name="launchTemplateSpecification", required=true)
-      private final Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
+    private Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
 
     public Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification;
@@ -33,66 +33,63 @@ public final class SpotFleetRequestLaunchTemplateConfigGetArgs extends com.pulum
      * 
      */
     @Import(name="overrides")
-      private final @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides;
+    private @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides;
 
-    public Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides() {
-        return this.overrides == null ? Codegen.empty() : this.overrides;
+    public Optional<Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>>> overrides() {
+        return Optional.ofNullable(this.overrides);
     }
 
-    public SpotFleetRequestLaunchTemplateConfigGetArgs(
-        Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification,
-        @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides) {
-        this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification, "expected parameter 'launchTemplateSpecification' to be non-null");
-        this.overrides = overrides;
-    }
+    private SpotFleetRequestLaunchTemplateConfigGetArgs() {}
 
-    private SpotFleetRequestLaunchTemplateConfigGetArgs() {
-        this.launchTemplateSpecification = Codegen.empty();
-        this.overrides = Codegen.empty();
+    private SpotFleetRequestLaunchTemplateConfigGetArgs(SpotFleetRequestLaunchTemplateConfigGetArgs $) {
+        this.launchTemplateSpecification = $.launchTemplateSpecification;
+        this.overrides = $.overrides;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetRequestLaunchTemplateConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
-        private @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides;
+        private SpotFleetRequestLaunchTemplateConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetRequestLaunchTemplateConfigGetArgs();
         }
 
         public Builder(SpotFleetRequestLaunchTemplateConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchTemplateSpecification = defaults.launchTemplateSpecification;
-    	      this.overrides = defaults.overrides;
+            $ = new SpotFleetRequestLaunchTemplateConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder launchTemplateSpecification(Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification) {
-            this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
+            $.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
+
         public Builder launchTemplateSpecification(SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
-            this.launchTemplateSpecification = Output.of(Objects.requireNonNull(launchTemplateSpecification));
-            return this;
+            return launchTemplateSpecification(Output.of(launchTemplateSpecification));
         }
+
         public Builder overrides(@Nullable Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides) {
-            this.overrides = overrides;
+            $.overrides = overrides;
             return this;
         }
-        public Builder overrides(@Nullable List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs> overrides) {
-            this.overrides = Codegen.ofNullable(overrides);
-            return this;
+
+        public Builder overrides(List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs> overrides) {
+            return overrides(Output.of(overrides));
         }
+
         public Builder overrides(SpotFleetRequestLaunchTemplateConfigOverrideGetArgs... overrides) {
             return overrides(List.of(overrides));
-        }        public SpotFleetRequestLaunchTemplateConfigGetArgs build() {
-            return new SpotFleetRequestLaunchTemplateConfigGetArgs(launchTemplateSpecification, overrides);
+        }
+
+        public SpotFleetRequestLaunchTemplateConfigGetArgs build() {
+            $.launchTemplateSpecification = Objects.requireNonNull($.launchTemplateSpecification, "expected parameter 'launchTemplateSpecification' to be non-null");
+            return $;
         }
     }
+
 }

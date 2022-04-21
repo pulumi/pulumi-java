@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.enums.SandboxConfigType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SandboxConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<SandboxConfigType> type;
+    private @Nullable Output<SandboxConfigType> type;
 
-    public Output<SandboxConfigType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<SandboxConfigType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SandboxConfigArgs(@Nullable Output<SandboxConfigType> type) {
-        this.type = type;
-    }
+    private SandboxConfigArgs() {}
 
-    private SandboxConfigArgs() {
-        this.type = Codegen.empty();
+    private SandboxConfigArgs(SandboxConfigArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SandboxConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SandboxConfigType> type;
+        private SandboxConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SandboxConfigArgs();
         }
 
         public Builder(SandboxConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new SandboxConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<SandboxConfigType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable SandboxConfigType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SandboxConfigArgs build() {
-            return new SandboxConfigArgs(type);
+
+        public Builder type(SandboxConfigType type) {
+            return type(Output.of(type));
+        }
+
+        public SandboxConfigArgs build() {
+            return $;
         }
     }
+
 }

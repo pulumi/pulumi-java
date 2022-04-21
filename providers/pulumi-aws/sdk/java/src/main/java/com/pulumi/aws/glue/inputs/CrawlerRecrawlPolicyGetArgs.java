@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CrawlerRecrawlPolicyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="recrawlBehavior")
-      private final @Nullable Output<String> recrawlBehavior;
+    private @Nullable Output<String> recrawlBehavior;
 
-    public Output<String> recrawlBehavior() {
-        return this.recrawlBehavior == null ? Codegen.empty() : this.recrawlBehavior;
+    public Optional<Output<String>> recrawlBehavior() {
+        return Optional.ofNullable(this.recrawlBehavior);
     }
 
-    public CrawlerRecrawlPolicyGetArgs(@Nullable Output<String> recrawlBehavior) {
-        this.recrawlBehavior = recrawlBehavior;
-    }
+    private CrawlerRecrawlPolicyGetArgs() {}
 
-    private CrawlerRecrawlPolicyGetArgs() {
-        this.recrawlBehavior = Codegen.empty();
+    private CrawlerRecrawlPolicyGetArgs(CrawlerRecrawlPolicyGetArgs $) {
+        this.recrawlBehavior = $.recrawlBehavior;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrawlerRecrawlPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> recrawlBehavior;
+        private CrawlerRecrawlPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrawlerRecrawlPolicyGetArgs();
         }
 
         public Builder(CrawlerRecrawlPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recrawlBehavior = defaults.recrawlBehavior;
+            $ = new CrawlerRecrawlPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recrawlBehavior(@Nullable Output<String> recrawlBehavior) {
-            this.recrawlBehavior = recrawlBehavior;
+            $.recrawlBehavior = recrawlBehavior;
             return this;
         }
-        public Builder recrawlBehavior(@Nullable String recrawlBehavior) {
-            this.recrawlBehavior = Codegen.ofNullable(recrawlBehavior);
-            return this;
-        }        public CrawlerRecrawlPolicyGetArgs build() {
-            return new CrawlerRecrawlPolicyGetArgs(recrawlBehavior);
+
+        public Builder recrawlBehavior(String recrawlBehavior) {
+            return recrawlBehavior(Output.of(recrawlBehavior));
+        }
+
+        public CrawlerRecrawlPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

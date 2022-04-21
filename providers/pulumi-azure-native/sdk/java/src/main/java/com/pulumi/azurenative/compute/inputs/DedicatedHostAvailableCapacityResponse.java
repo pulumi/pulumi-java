@@ -24,48 +24,48 @@ public final class DedicatedHostAvailableCapacityResponse extends com.pulumi.res
      * 
      */
     @Import(name="allocatableVMs")
-      private final @Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs;
+    private @Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs;
 
-    public List<DedicatedHostAllocatableVMResponse> allocatableVMs() {
-        return this.allocatableVMs == null ? List.of() : this.allocatableVMs;
+    public Optional<List<DedicatedHostAllocatableVMResponse>> allocatableVMs() {
+        return Optional.ofNullable(this.allocatableVMs);
     }
 
-    public DedicatedHostAvailableCapacityResponse(@Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs) {
-        this.allocatableVMs = allocatableVMs;
-    }
+    private DedicatedHostAvailableCapacityResponse() {}
 
-    private DedicatedHostAvailableCapacityResponse() {
-        this.allocatableVMs = List.of();
+    private DedicatedHostAvailableCapacityResponse(DedicatedHostAvailableCapacityResponse $) {
+        this.allocatableVMs = $.allocatableVMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DedicatedHostAvailableCapacityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs;
+        private DedicatedHostAvailableCapacityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DedicatedHostAvailableCapacityResponse();
         }
 
         public Builder(DedicatedHostAvailableCapacityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocatableVMs = defaults.allocatableVMs;
+            $ = new DedicatedHostAvailableCapacityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allocatableVMs(@Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs) {
-            this.allocatableVMs = allocatableVMs;
+            $.allocatableVMs = allocatableVMs;
             return this;
         }
+
         public Builder allocatableVMs(DedicatedHostAllocatableVMResponse... allocatableVMs) {
             return allocatableVMs(List.of(allocatableVMs));
-        }        public DedicatedHostAvailableCapacityResponse build() {
-            return new DedicatedHostAvailableCapacityResponse(allocatableVMs);
+        }
+
+        public DedicatedHostAvailableCapacityResponse build() {
+            return $;
         }
     }
+
 }

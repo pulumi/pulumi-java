@@ -5,7 +5,6 @@ package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class StorageAccountPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public StorageAccountPropertiesArgs(Output<String> id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private StorageAccountPropertiesArgs() {}
 
-    private StorageAccountPropertiesArgs() {
-        this.id = Codegen.empty();
+    private StorageAccountPropertiesArgs(StorageAccountPropertiesArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
+        private StorageAccountPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountPropertiesArgs();
         }
 
         public Builder(StorageAccountPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new StorageAccountPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public StorageAccountPropertiesArgs build() {
-            return new StorageAccountPropertiesArgs(id);
+            return id(Output.of(id));
+        }
+
+        public StorageAccountPropertiesArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

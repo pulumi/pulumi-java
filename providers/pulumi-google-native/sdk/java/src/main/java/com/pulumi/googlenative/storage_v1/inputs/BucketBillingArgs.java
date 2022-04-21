@@ -5,9 +5,9 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BucketBillingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requesterPays")
-      private final @Nullable Output<Boolean> requesterPays;
+    private @Nullable Output<Boolean> requesterPays;
 
-    public Output<Boolean> requesterPays() {
-        return this.requesterPays == null ? Codegen.empty() : this.requesterPays;
+    public Optional<Output<Boolean>> requesterPays() {
+        return Optional.ofNullable(this.requesterPays);
     }
 
-    public BucketBillingArgs(@Nullable Output<Boolean> requesterPays) {
-        this.requesterPays = requesterPays;
-    }
+    private BucketBillingArgs() {}
 
-    private BucketBillingArgs() {
-        this.requesterPays = Codegen.empty();
+    private BucketBillingArgs(BucketBillingArgs $) {
+        this.requesterPays = $.requesterPays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketBillingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> requesterPays;
+        private BucketBillingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketBillingArgs();
         }
 
         public Builder(BucketBillingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requesterPays = defaults.requesterPays;
+            $ = new BucketBillingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
-            this.requesterPays = requesterPays;
+            $.requesterPays = requesterPays;
             return this;
         }
-        public Builder requesterPays(@Nullable Boolean requesterPays) {
-            this.requesterPays = Codegen.ofNullable(requesterPays);
-            return this;
-        }        public BucketBillingArgs build() {
-            return new BucketBillingArgs(requesterPays);
+
+        public Builder requesterPays(Boolean requesterPays) {
+            return requesterPays(Output.of(requesterPays));
+        }
+
+        public BucketBillingArgs build() {
+            return $;
         }
     }
+
 }

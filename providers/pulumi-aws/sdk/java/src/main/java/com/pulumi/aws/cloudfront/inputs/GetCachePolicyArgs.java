@@ -19,10 +19,10 @@ public final class GetCachePolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class GetCachePolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public GetCachePolicyArgs(
-        @Nullable String id,
-        @Nullable String name) {
-        this.id = id;
-        this.name = name;
-    }
+    private GetCachePolicyArgs() {}
 
-    private GetCachePolicyArgs() {
-        this.id = null;
-        this.name = null;
+    private GetCachePolicyArgs(GetCachePolicyArgs $) {
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCachePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String name;
+        private GetCachePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCachePolicyArgs();
         }
 
         public Builder(GetCachePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new GetCachePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public GetCachePolicyArgs build() {
-            return new GetCachePolicyArgs(id, name);
+        }
+
+        public GetCachePolicyArgs build() {
+            return $;
         }
     }
+
 }

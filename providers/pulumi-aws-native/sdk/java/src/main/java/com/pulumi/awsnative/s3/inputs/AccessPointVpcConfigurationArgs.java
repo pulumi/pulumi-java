@@ -5,9 +5,9 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AccessPointVpcConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public AccessPointVpcConfigurationArgs(@Nullable Output<String> vpcId) {
-        this.vpcId = vpcId;
-    }
+    private AccessPointVpcConfigurationArgs() {}
 
-    private AccessPointVpcConfigurationArgs() {
-        this.vpcId = Codegen.empty();
+    private AccessPointVpcConfigurationArgs(AccessPointVpcConfigurationArgs $) {
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointVpcConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> vpcId;
+        private AccessPointVpcConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointVpcConfigurationArgs();
         }
 
         public Builder(AccessPointVpcConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcId = defaults.vpcId;
+            $ = new AccessPointVpcConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public AccessPointVpcConfigurationArgs build() {
-            return new AccessPointVpcConfigurationArgs(vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public AccessPointVpcConfigurationArgs build() {
+            return $;
         }
     }
+
 }

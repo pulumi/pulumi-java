@@ -13,62 +13,59 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetJobArgs Empty = new GetJobArgs();
 
     @Import(name="jobId", required=true)
-      private final String jobId;
+    private String jobId;
 
     public String jobId() {
         return this.jobId;
     }
 
     @Import(name="namespaceId", required=true)
-      private final String namespaceId;
+    private String namespaceId;
 
     public String namespaceId() {
         return this.namespaceId;
     }
 
-    public GetJobArgs(
-        String jobId,
-        String namespaceId) {
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-        this.namespaceId = Objects.requireNonNull(namespaceId, "expected parameter 'namespaceId' to be non-null");
-    }
+    private GetJobArgs() {}
 
-    private GetJobArgs() {
-        this.jobId = null;
-        this.namespaceId = null;
+    private GetJobArgs(GetJobArgs $) {
+        this.jobId = $.jobId;
+        this.namespaceId = $.namespaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobId;
-        private String namespaceId;
+        private GetJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobArgs();
         }
 
         public Builder(GetJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobId = defaults.jobId;
-    	      this.namespaceId = defaults.namespaceId;
+            $ = new GetJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobId(String jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
         }
+
         public Builder namespaceId(String namespaceId) {
-            this.namespaceId = Objects.requireNonNull(namespaceId);
+            $.namespaceId = namespaceId;
             return this;
-        }        public GetJobArgs build() {
-            return new GetJobArgs(jobId, namespaceId);
+        }
+
+        public GetJobArgs build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            $.namespaceId = Objects.requireNonNull($.namespaceId, "expected parameter 'namespaceId' to be non-null");
+            return $;
         }
     }
+
 }

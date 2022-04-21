@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs ex
      * 
      */
     @Import(name="text", required=true)
-      private final Output<String> text;
+    private Output<String> text;
 
     public Output<String> text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs(Output<String> text) {
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs() {
-        this.text = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs(GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> text;
+        private GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder text(Output<String> text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Output.of(Objects.requireNonNull(text));
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs(text);
+            return text(Output.of(text));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs build() {
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

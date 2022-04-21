@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneAwsServicesAuthenticationGetArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneConfigEncryptionGetArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneDatabaseEncryptionGetArgs;
@@ -17,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="awsServicesAuthentication", required=true)
-      private final Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication;
+    private Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication;
 
     public Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication() {
         return this.awsServicesAuthentication;
@@ -40,7 +40,7 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="configEncryption", required=true)
-      private final Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption;
+    private Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption;
 
     public Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption() {
         return this.configEncryption;
@@ -51,7 +51,7 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="databaseEncryption", required=true)
-      private final Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
+    private Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
 
     public Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption() {
         return this.databaseEncryption;
@@ -62,7 +62,7 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="iamInstanceProfile", required=true)
-      private final Output<String> iamInstanceProfile;
+    private Output<String> iamInstanceProfile;
 
     public Output<String> iamInstanceProfile() {
         return this.iamInstanceProfile;
@@ -73,10 +73,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="mainVolume")
-      private final @Nullable Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume;
+    private @Nullable Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume;
 
-    public Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume() {
-        return this.mainVolume == null ? Codegen.empty() : this.mainVolume;
+    public Optional<Output<AwsClusterControlPlaneMainVolumeGetArgs>> mainVolume() {
+        return Optional.ofNullable(this.mainVolume);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="proxyConfig")
-      private final @Nullable Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig;
+    private @Nullable Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig;
 
-    public Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig() {
-        return this.proxyConfig == null ? Codegen.empty() : this.proxyConfig;
+    public Optional<Output<AwsClusterControlPlaneProxyConfigGetArgs>> proxyConfig() {
+        return Optional.ofNullable(this.proxyConfig);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="rootVolume")
-      private final @Nullable Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume;
+    private @Nullable Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume;
 
-    public Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume() {
-        return this.rootVolume == null ? Codegen.empty() : this.rootVolume;
+    public Optional<Output<AwsClusterControlPlaneRootVolumeGetArgs>> rootVolume() {
+        return Optional.ofNullable(this.rootVolume);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sshConfig")
-      private final @Nullable Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig;
+    private @Nullable Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig;
 
-    public Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig() {
-        return this.sshConfig == null ? Codegen.empty() : this.sshConfig;
+    public Optional<Output<AwsClusterControlPlaneSshConfigGetArgs>> sshConfig() {
+        return Optional.ofNullable(this.sshConfig);
     }
 
     /**
@@ -139,7 +139,7 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
@@ -150,10 +150,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -161,212 +161,182 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public AwsClusterControlPlaneGetArgs(
-        Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication,
-        Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption,
-        Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption,
-        Output<String> iamInstanceProfile,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume,
-        @Nullable Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig,
-        @Nullable Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig,
-        Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> version) {
-        this.awsServicesAuthentication = Objects.requireNonNull(awsServicesAuthentication, "expected parameter 'awsServicesAuthentication' to be non-null");
-        this.configEncryption = Objects.requireNonNull(configEncryption, "expected parameter 'configEncryption' to be non-null");
-        this.databaseEncryption = Objects.requireNonNull(databaseEncryption, "expected parameter 'databaseEncryption' to be non-null");
-        this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile, "expected parameter 'iamInstanceProfile' to be non-null");
-        this.instanceType = instanceType;
-        this.mainVolume = mainVolume;
-        this.proxyConfig = proxyConfig;
-        this.rootVolume = rootVolume;
-        this.securityGroupIds = securityGroupIds;
-        this.sshConfig = sshConfig;
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.tags = tags;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private AwsClusterControlPlaneGetArgs() {}
 
-    private AwsClusterControlPlaneGetArgs() {
-        this.awsServicesAuthentication = Codegen.empty();
-        this.configEncryption = Codegen.empty();
-        this.databaseEncryption = Codegen.empty();
-        this.iamInstanceProfile = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.mainVolume = Codegen.empty();
-        this.proxyConfig = Codegen.empty();
-        this.rootVolume = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.sshConfig = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.version = Codegen.empty();
+    private AwsClusterControlPlaneGetArgs(AwsClusterControlPlaneGetArgs $) {
+        this.awsServicesAuthentication = $.awsServicesAuthentication;
+        this.configEncryption = $.configEncryption;
+        this.databaseEncryption = $.databaseEncryption;
+        this.iamInstanceProfile = $.iamInstanceProfile;
+        this.instanceType = $.instanceType;
+        this.mainVolume = $.mainVolume;
+        this.proxyConfig = $.proxyConfig;
+        this.rootVolume = $.rootVolume;
+        this.securityGroupIds = $.securityGroupIds;
+        this.sshConfig = $.sshConfig;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsClusterControlPlaneGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication;
-        private Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption;
-        private Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
-        private Output<String> iamInstanceProfile;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume;
-        private @Nullable Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig;
-        private @Nullable Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig;
-        private Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> version;
+        private AwsClusterControlPlaneGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsClusterControlPlaneGetArgs();
         }
 
         public Builder(AwsClusterControlPlaneGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsServicesAuthentication = defaults.awsServicesAuthentication;
-    	      this.configEncryption = defaults.configEncryption;
-    	      this.databaseEncryption = defaults.databaseEncryption;
-    	      this.iamInstanceProfile = defaults.iamInstanceProfile;
-    	      this.instanceType = defaults.instanceType;
-    	      this.mainVolume = defaults.mainVolume;
-    	      this.proxyConfig = defaults.proxyConfig;
-    	      this.rootVolume = defaults.rootVolume;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.sshConfig = defaults.sshConfig;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.version = defaults.version;
+            $ = new AwsClusterControlPlaneGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsServicesAuthentication(Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication) {
-            this.awsServicesAuthentication = Objects.requireNonNull(awsServicesAuthentication);
+            $.awsServicesAuthentication = awsServicesAuthentication;
             return this;
         }
+
         public Builder awsServicesAuthentication(AwsClusterControlPlaneAwsServicesAuthenticationGetArgs awsServicesAuthentication) {
-            this.awsServicesAuthentication = Output.of(Objects.requireNonNull(awsServicesAuthentication));
-            return this;
+            return awsServicesAuthentication(Output.of(awsServicesAuthentication));
         }
+
         public Builder configEncryption(Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption) {
-            this.configEncryption = Objects.requireNonNull(configEncryption);
+            $.configEncryption = configEncryption;
             return this;
         }
+
         public Builder configEncryption(AwsClusterControlPlaneConfigEncryptionGetArgs configEncryption) {
-            this.configEncryption = Output.of(Objects.requireNonNull(configEncryption));
-            return this;
+            return configEncryption(Output.of(configEncryption));
         }
+
         public Builder databaseEncryption(Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption) {
-            this.databaseEncryption = Objects.requireNonNull(databaseEncryption);
+            $.databaseEncryption = databaseEncryption;
             return this;
         }
+
         public Builder databaseEncryption(AwsClusterControlPlaneDatabaseEncryptionGetArgs databaseEncryption) {
-            this.databaseEncryption = Output.of(Objects.requireNonNull(databaseEncryption));
-            return this;
+            return databaseEncryption(Output.of(databaseEncryption));
         }
+
         public Builder iamInstanceProfile(Output<String> iamInstanceProfile) {
-            this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
+            $.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
+
         public Builder iamInstanceProfile(String iamInstanceProfile) {
-            this.iamInstanceProfile = Output.of(Objects.requireNonNull(iamInstanceProfile));
-            return this;
+            return iamInstanceProfile(Output.of(iamInstanceProfile));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder mainVolume(@Nullable Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume) {
-            this.mainVolume = mainVolume;
+            $.mainVolume = mainVolume;
             return this;
         }
-        public Builder mainVolume(@Nullable AwsClusterControlPlaneMainVolumeGetArgs mainVolume) {
-            this.mainVolume = Codegen.ofNullable(mainVolume);
-            return this;
+
+        public Builder mainVolume(AwsClusterControlPlaneMainVolumeGetArgs mainVolume) {
+            return mainVolume(Output.of(mainVolume));
         }
+
         public Builder proxyConfig(@Nullable Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig) {
-            this.proxyConfig = proxyConfig;
+            $.proxyConfig = proxyConfig;
             return this;
         }
-        public Builder proxyConfig(@Nullable AwsClusterControlPlaneProxyConfigGetArgs proxyConfig) {
-            this.proxyConfig = Codegen.ofNullable(proxyConfig);
-            return this;
+
+        public Builder proxyConfig(AwsClusterControlPlaneProxyConfigGetArgs proxyConfig) {
+            return proxyConfig(Output.of(proxyConfig));
         }
+
         public Builder rootVolume(@Nullable Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume) {
-            this.rootVolume = rootVolume;
+            $.rootVolume = rootVolume;
             return this;
         }
-        public Builder rootVolume(@Nullable AwsClusterControlPlaneRootVolumeGetArgs rootVolume) {
-            this.rootVolume = Codegen.ofNullable(rootVolume);
-            return this;
+
+        public Builder rootVolume(AwsClusterControlPlaneRootVolumeGetArgs rootVolume) {
+            return rootVolume(Output.of(rootVolume));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder sshConfig(@Nullable Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig) {
-            this.sshConfig = sshConfig;
+            $.sshConfig = sshConfig;
             return this;
         }
-        public Builder sshConfig(@Nullable AwsClusterControlPlaneSshConfigGetArgs sshConfig) {
-            this.sshConfig = Codegen.ofNullable(sshConfig);
-            return this;
+
+        public Builder sshConfig(AwsClusterControlPlaneSshConfigGetArgs sshConfig) {
+            return sshConfig(Output.of(sshConfig));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public AwsClusterControlPlaneGetArgs build() {
-            return new AwsClusterControlPlaneGetArgs(awsServicesAuthentication, configEncryption, databaseEncryption, iamInstanceProfile, instanceType, mainVolume, proxyConfig, rootVolume, securityGroupIds, sshConfig, subnetIds, tags, version);
+            return version(Output.of(version));
+        }
+
+        public AwsClusterControlPlaneGetArgs build() {
+            $.awsServicesAuthentication = Objects.requireNonNull($.awsServicesAuthentication, "expected parameter 'awsServicesAuthentication' to be non-null");
+            $.configEncryption = Objects.requireNonNull($.configEncryption, "expected parameter 'configEncryption' to be non-null");
+            $.databaseEncryption = Objects.requireNonNull($.databaseEncryption, "expected parameter 'databaseEncryption' to be non-null");
+            $.iamInstanceProfile = Objects.requireNonNull($.iamInstanceProfile, "expected parameter 'iamInstanceProfile' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

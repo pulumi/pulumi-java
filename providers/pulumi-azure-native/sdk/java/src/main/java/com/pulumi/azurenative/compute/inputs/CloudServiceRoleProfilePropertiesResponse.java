@@ -24,10 +24,10 @@ public final class CloudServiceRoleProfilePropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class CloudServiceRoleProfilePropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="sku")
-      private final @Nullable CloudServiceRoleSkuResponse sku;
+    private @Nullable CloudServiceRoleSkuResponse sku;
 
     public Optional<CloudServiceRoleSkuResponse> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
-    public CloudServiceRoleProfilePropertiesResponse(
-        @Nullable String name,
-        @Nullable CloudServiceRoleSkuResponse sku) {
-        this.name = name;
-        this.sku = sku;
-    }
+    private CloudServiceRoleProfilePropertiesResponse() {}
 
-    private CloudServiceRoleProfilePropertiesResponse() {
-        this.name = null;
-        this.sku = null;
+    private CloudServiceRoleProfilePropertiesResponse(CloudServiceRoleProfilePropertiesResponse $) {
+        this.name = $.name;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceRoleProfilePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable CloudServiceRoleSkuResponse sku;
+        private CloudServiceRoleProfilePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceRoleProfilePropertiesResponse();
         }
 
         public Builder(CloudServiceRoleProfilePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sku = defaults.sku;
+            $ = new CloudServiceRoleProfilePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder sku(@Nullable CloudServiceRoleSkuResponse sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
-        }        public CloudServiceRoleProfilePropertiesResponse build() {
-            return new CloudServiceRoleProfilePropertiesResponse(name, sku);
+        }
+
+        public CloudServiceRoleProfilePropertiesResponse build() {
+            return $;
         }
     }
+
 }

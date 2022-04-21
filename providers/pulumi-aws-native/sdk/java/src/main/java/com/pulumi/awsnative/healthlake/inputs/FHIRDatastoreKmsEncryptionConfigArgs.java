@@ -6,9 +6,9 @@ package com.pulumi.awsnative.healthlake.inputs;
 import com.pulumi.awsnative.healthlake.enums.FHIRDatastoreKmsEncryptionConfigCmkType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="cmkType", required=true)
-      private final Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType;
+    private Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType;
 
     public Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType() {
         return this.cmkType;
@@ -36,63 +36,59 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
-    public FHIRDatastoreKmsEncryptionConfigArgs(
-        Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType,
-        @Nullable Output<String> kmsKeyId) {
-        this.cmkType = Objects.requireNonNull(cmkType, "expected parameter 'cmkType' to be non-null");
-        this.kmsKeyId = kmsKeyId;
-    }
+    private FHIRDatastoreKmsEncryptionConfigArgs() {}
 
-    private FHIRDatastoreKmsEncryptionConfigArgs() {
-        this.cmkType = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
+    private FHIRDatastoreKmsEncryptionConfigArgs(FHIRDatastoreKmsEncryptionConfigArgs $) {
+        this.cmkType = $.cmkType;
+        this.kmsKeyId = $.kmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FHIRDatastoreKmsEncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType;
-        private @Nullable Output<String> kmsKeyId;
+        private FHIRDatastoreKmsEncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FHIRDatastoreKmsEncryptionConfigArgs();
         }
 
         public Builder(FHIRDatastoreKmsEncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cmkType = defaults.cmkType;
-    	      this.kmsKeyId = defaults.kmsKeyId;
+            $ = new FHIRDatastoreKmsEncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cmkType(Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType) {
-            this.cmkType = Objects.requireNonNull(cmkType);
+            $.cmkType = cmkType;
             return this;
         }
+
         public Builder cmkType(FHIRDatastoreKmsEncryptionConfigCmkType cmkType) {
-            this.cmkType = Output.of(Objects.requireNonNull(cmkType));
-            return this;
+            return cmkType(Output.of(cmkType));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
-        }        public FHIRDatastoreKmsEncryptionConfigArgs build() {
-            return new FHIRDatastoreKmsEncryptionConfigArgs(cmkType, kmsKeyId);
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
+        }
+
+        public FHIRDatastoreKmsEncryptionConfigArgs build() {
+            $.cmkType = Objects.requireNonNull($.cmkType, "expected parameter 'cmkType' to be non-null");
+            return $;
         }
     }
+
 }

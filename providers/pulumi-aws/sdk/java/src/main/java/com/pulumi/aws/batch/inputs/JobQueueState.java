@@ -5,12 +5,12 @@ package com.pulumi.aws.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class JobQueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JobQueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computeEnvironments")
-      private final @Nullable Output<List<String>> computeEnvironments;
+    private @Nullable Output<List<String>> computeEnvironments;
 
-    public Output<List<String>> computeEnvironments() {
-        return this.computeEnvironments == null ? Codegen.empty() : this.computeEnvironments;
+    public Optional<Output<List<String>>> computeEnvironments() {
+        return Optional.ofNullable(this.computeEnvironments);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class JobQueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class JobQueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class JobQueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedulingPolicyArn")
-      private final @Nullable Output<String> schedulingPolicyArn;
+    private @Nullable Output<String> schedulingPolicyArn;
 
-    public Output<String> schedulingPolicyArn() {
-        return this.schedulingPolicyArn == null ? Codegen.empty() : this.schedulingPolicyArn;
+    public Optional<Output<String>> schedulingPolicyArn() {
+        return Optional.ofNullable(this.schedulingPolicyArn);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class JobQueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class JobQueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -103,144 +103,122 @@ public final class JobQueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public JobQueueState(
-        @Nullable Output<String> arn,
-        @Nullable Output<List<String>> computeEnvironments,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> schedulingPolicyArn,
-        @Nullable Output<String> state,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.computeEnvironments = computeEnvironments;
-        this.name = name;
-        this.priority = priority;
-        this.schedulingPolicyArn = schedulingPolicyArn;
-        this.state = state;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private JobQueueState() {}
 
-    private JobQueueState() {
-        this.arn = Codegen.empty();
-        this.computeEnvironments = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.schedulingPolicyArn = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private JobQueueState(JobQueueState $) {
+        this.arn = $.arn;
+        this.computeEnvironments = $.computeEnvironments;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.schedulingPolicyArn = $.schedulingPolicyArn;
+        this.state = $.state;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobQueueState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<String>> computeEnvironments;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> schedulingPolicyArn;
-        private @Nullable Output<String> state;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private JobQueueState $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobQueueState();
         }
 
         public Builder(JobQueueState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.computeEnvironments = defaults.computeEnvironments;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.schedulingPolicyArn = defaults.schedulingPolicyArn;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new JobQueueState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder computeEnvironments(@Nullable Output<List<String>> computeEnvironments) {
-            this.computeEnvironments = computeEnvironments;
+            $.computeEnvironments = computeEnvironments;
             return this;
         }
-        public Builder computeEnvironments(@Nullable List<String> computeEnvironments) {
-            this.computeEnvironments = Codegen.ofNullable(computeEnvironments);
-            return this;
+
+        public Builder computeEnvironments(List<String> computeEnvironments) {
+            return computeEnvironments(Output.of(computeEnvironments));
         }
+
         public Builder computeEnvironments(String... computeEnvironments) {
             return computeEnvironments(List.of(computeEnvironments));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder schedulingPolicyArn(@Nullable Output<String> schedulingPolicyArn) {
-            this.schedulingPolicyArn = schedulingPolicyArn;
+            $.schedulingPolicyArn = schedulingPolicyArn;
             return this;
         }
-        public Builder schedulingPolicyArn(@Nullable String schedulingPolicyArn) {
-            this.schedulingPolicyArn = Codegen.ofNullable(schedulingPolicyArn);
-            return this;
+
+        public Builder schedulingPolicyArn(String schedulingPolicyArn) {
+            return schedulingPolicyArn(Output.of(schedulingPolicyArn));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public JobQueueState build() {
-            return new JobQueueState(arn, computeEnvironments, name, priority, schedulingPolicyArn, state, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public JobQueueState build() {
+            return $;
         }
     }
+
 }

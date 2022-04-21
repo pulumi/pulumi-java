@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iotevents.inputs.InputDefinitionArgs;
 import com.pulumi.awsnative.iotevents.inputs.InputTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,7 +19,7 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     public static final InputArgs Empty = new InputArgs();
 
     @Import(name="inputDefinition", required=true)
-      private final Output<InputDefinitionArgs> inputDefinition;
+    private Output<InputDefinitionArgs> inputDefinition;
 
     public Output<InputDefinitionArgs> inputDefinition() {
         return this.inputDefinition;
@@ -30,10 +30,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputDescription")
-      private final @Nullable Output<String> inputDescription;
+    private @Nullable Output<String> inputDescription;
 
-    public Output<String> inputDescription() {
-        return this.inputDescription == null ? Codegen.empty() : this.inputDescription;
+    public Optional<Output<String>> inputDescription() {
+        return Optional.ofNullable(this.inputDescription);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputName")
-      private final @Nullable Output<String> inputName;
+    private @Nullable Output<String> inputName;
 
-    public Output<String> inputName() {
-        return this.inputName == null ? Codegen.empty() : this.inputName;
+    public Optional<Output<String>> inputName() {
+        return Optional.ofNullable(this.inputName);
     }
 
     /**
@@ -54,92 +54,83 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<InputTagArgs>> tags;
+    private @Nullable Output<List<InputTagArgs>> tags;
 
-    public Output<List<InputTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<InputTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public InputArgs(
-        Output<InputDefinitionArgs> inputDefinition,
-        @Nullable Output<String> inputDescription,
-        @Nullable Output<String> inputName,
-        @Nullable Output<List<InputTagArgs>> tags) {
-        this.inputDefinition = Objects.requireNonNull(inputDefinition, "expected parameter 'inputDefinition' to be non-null");
-        this.inputDescription = inputDescription;
-        this.inputName = inputName;
-        this.tags = tags;
-    }
+    private InputArgs() {}
 
-    private InputArgs() {
-        this.inputDefinition = Codegen.empty();
-        this.inputDescription = Codegen.empty();
-        this.inputName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private InputArgs(InputArgs $) {
+        this.inputDefinition = $.inputDefinition;
+        this.inputDescription = $.inputDescription;
+        this.inputName = $.inputName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<InputDefinitionArgs> inputDefinition;
-        private @Nullable Output<String> inputDescription;
-        private @Nullable Output<String> inputName;
-        private @Nullable Output<List<InputTagArgs>> tags;
+        private InputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputArgs();
         }
 
         public Builder(InputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputDefinition = defaults.inputDefinition;
-    	      this.inputDescription = defaults.inputDescription;
-    	      this.inputName = defaults.inputName;
-    	      this.tags = defaults.tags;
+            $ = new InputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputDefinition(Output<InputDefinitionArgs> inputDefinition) {
-            this.inputDefinition = Objects.requireNonNull(inputDefinition);
+            $.inputDefinition = inputDefinition;
             return this;
         }
+
         public Builder inputDefinition(InputDefinitionArgs inputDefinition) {
-            this.inputDefinition = Output.of(Objects.requireNonNull(inputDefinition));
-            return this;
+            return inputDefinition(Output.of(inputDefinition));
         }
+
         public Builder inputDescription(@Nullable Output<String> inputDescription) {
-            this.inputDescription = inputDescription;
+            $.inputDescription = inputDescription;
             return this;
         }
-        public Builder inputDescription(@Nullable String inputDescription) {
-            this.inputDescription = Codegen.ofNullable(inputDescription);
-            return this;
+
+        public Builder inputDescription(String inputDescription) {
+            return inputDescription(Output.of(inputDescription));
         }
+
         public Builder inputName(@Nullable Output<String> inputName) {
-            this.inputName = inputName;
+            $.inputName = inputName;
             return this;
         }
-        public Builder inputName(@Nullable String inputName) {
-            this.inputName = Codegen.ofNullable(inputName);
-            return this;
+
+        public Builder inputName(String inputName) {
+            return inputName(Output.of(inputName));
         }
+
         public Builder tags(@Nullable Output<List<InputTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<InputTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<InputTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(InputTagArgs... tags) {
             return tags(List.of(tags));
-        }        public InputArgs build() {
-            return new InputArgs(inputDefinition, inputDescription, inputName, tags);
+        }
+
+        public InputArgs build() {
+            $.inputDefinition = Objects.requireNonNull($.inputDefinition, "expected parameter 'inputDefinition' to be non-null");
+            return $;
         }
     }
+
 }

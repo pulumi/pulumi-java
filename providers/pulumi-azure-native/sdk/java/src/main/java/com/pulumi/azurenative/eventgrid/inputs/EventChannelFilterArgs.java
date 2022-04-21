@@ -29,6 +29,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -45,10 +46,10 @@ public final class EventChannelFilterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="advancedFilters")
-      private final @Nullable Output<List<Object>> advancedFilters;
+    private @Nullable Output<List<Object>> advancedFilters;
 
-    public Output<List<Object>> advancedFilters() {
-        return this.advancedFilters == null ? Codegen.empty() : this.advancedFilters;
+    public Optional<Output<List<Object>>> advancedFilters() {
+        return Optional.ofNullable(this.advancedFilters);
     }
 
     /**
@@ -56,66 +57,63 @@ public final class EventChannelFilterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enableAdvancedFilteringOnArrays")
-      private final @Nullable Output<Boolean> enableAdvancedFilteringOnArrays;
+    private @Nullable Output<Boolean> enableAdvancedFilteringOnArrays;
 
-    public Output<Boolean> enableAdvancedFilteringOnArrays() {
-        return this.enableAdvancedFilteringOnArrays == null ? Codegen.empty() : this.enableAdvancedFilteringOnArrays;
+    public Optional<Output<Boolean>> enableAdvancedFilteringOnArrays() {
+        return Optional.ofNullable(this.enableAdvancedFilteringOnArrays);
     }
 
-    public EventChannelFilterArgs(
-        @Nullable Output<List<Object>> advancedFilters,
-        @Nullable Output<Boolean> enableAdvancedFilteringOnArrays) {
-        this.advancedFilters = advancedFilters;
-        this.enableAdvancedFilteringOnArrays = Codegen.booleanProp("enableAdvancedFilteringOnArrays").output().arg(enableAdvancedFilteringOnArrays).def(false).getNullable();
-    }
+    private EventChannelFilterArgs() {}
 
-    private EventChannelFilterArgs() {
-        this.advancedFilters = Codegen.empty();
-        this.enableAdvancedFilteringOnArrays = Codegen.empty();
+    private EventChannelFilterArgs(EventChannelFilterArgs $) {
+        this.advancedFilters = $.advancedFilters;
+        this.enableAdvancedFilteringOnArrays = $.enableAdvancedFilteringOnArrays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventChannelFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> advancedFilters;
-        private @Nullable Output<Boolean> enableAdvancedFilteringOnArrays;
+        private EventChannelFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventChannelFilterArgs();
         }
 
         public Builder(EventChannelFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedFilters = defaults.advancedFilters;
-    	      this.enableAdvancedFilteringOnArrays = defaults.enableAdvancedFilteringOnArrays;
+            $ = new EventChannelFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedFilters(@Nullable Output<List<Object>> advancedFilters) {
-            this.advancedFilters = advancedFilters;
+            $.advancedFilters = advancedFilters;
             return this;
         }
-        public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
-            this.advancedFilters = Codegen.ofNullable(advancedFilters);
-            return this;
+
+        public Builder advancedFilters(List<Object> advancedFilters) {
+            return advancedFilters(Output.of(advancedFilters));
         }
+
         public Builder advancedFilters(Object... advancedFilters) {
             return advancedFilters(List.of(advancedFilters));
         }
+
         public Builder enableAdvancedFilteringOnArrays(@Nullable Output<Boolean> enableAdvancedFilteringOnArrays) {
-            this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
+            $.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
             return this;
         }
-        public Builder enableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
-            this.enableAdvancedFilteringOnArrays = Codegen.ofNullable(enableAdvancedFilteringOnArrays);
-            return this;
-        }        public EventChannelFilterArgs build() {
-            return new EventChannelFilterArgs(advancedFilters, enableAdvancedFilteringOnArrays);
+
+        public Builder enableAdvancedFilteringOnArrays(Boolean enableAdvancedFilteringOnArrays) {
+            return enableAdvancedFilteringOnArrays(Output.of(enableAdvancedFilteringOnArrays));
+        }
+
+        public EventChannelFilterArgs build() {
+            $.enableAdvancedFilteringOnArrays = Codegen.booleanProp("enableAdvancedFilteringOnArrays").output().arg($.enableAdvancedFilteringOnArrays).def(false).getNullable();
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class BuildSignatureResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
@@ -32,7 +32,7 @@ public final class BuildSignatureResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keyType", required=true)
-      private final String keyType;
+    private String keyType;
 
     public String keyType() {
         return this.keyType;
@@ -43,7 +43,7 @@ public final class BuildSignatureResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="publicKey", required=true)
-      private final String publicKey;
+    private String publicKey;
 
     public String publicKey() {
         return this.publicKey;
@@ -54,73 +54,66 @@ public final class BuildSignatureResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="signature", required=true)
-      private final String signature;
+    private String signature;
 
     public String signature() {
         return this.signature;
     }
 
-    public BuildSignatureResponse(
-        String keyId,
-        String keyType,
-        String publicKey,
-        String signature) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-        this.signature = Objects.requireNonNull(signature, "expected parameter 'signature' to be non-null");
-    }
+    private BuildSignatureResponse() {}
 
-    private BuildSignatureResponse() {
-        this.keyId = null;
-        this.keyType = null;
-        this.publicKey = null;
-        this.signature = null;
+    private BuildSignatureResponse(BuildSignatureResponse $) {
+        this.keyId = $.keyId;
+        this.keyType = $.keyType;
+        this.publicKey = $.publicKey;
+        this.signature = $.signature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildSignatureResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyId;
-        private String keyType;
-        private String publicKey;
-        private String signature;
+        private BuildSignatureResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildSignatureResponse();
         }
 
         public Builder(BuildSignatureResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.keyType = defaults.keyType;
-    	      this.publicKey = defaults.publicKey;
-    	      this.signature = defaults.signature;
+            $ = new BuildSignatureResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keyType(String keyType) {
-            this.keyType = Objects.requireNonNull(keyType);
+            $.keyType = keyType;
             return this;
         }
+
         public Builder publicKey(String publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
         }
+
         public Builder signature(String signature) {
-            this.signature = Objects.requireNonNull(signature);
+            $.signature = signature;
             return this;
-        }        public BuildSignatureResponse build() {
-            return new BuildSignatureResponse(keyId, keyType, publicKey, signature);
+        }
+
+        public BuildSignatureResponse build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.keyType = Objects.requireNonNull($.keyType, "expected parameter 'keyType' to be non-null");
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            $.signature = Objects.requireNonNull($.signature, "expected parameter 'signature' to be non-null");
+            return $;
         }
     }
+
 }

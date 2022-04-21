@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
      * 
      */
     @Import(name="contentSecurityPolicy", required=true)
-      private final Output<String> contentSecurityPolicy;
+    private Output<String> contentSecurityPolicy;
 
     public Output<String> contentSecurityPolicy() {
         return this.contentSecurityPolicy;
@@ -31,63 +30,60 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
      * 
      */
     @Import(name="override", required=true)
-      private final Output<Boolean> override;
+    private Output<Boolean> override;
 
     public Output<Boolean> override() {
         return this.override;
     }
 
-    public ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs(
-        Output<String> contentSecurityPolicy,
-        Output<Boolean> override) {
-        this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy, "expected parameter 'contentSecurityPolicy' to be non-null");
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-    }
+    private ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs() {}
 
-    private ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs() {
-        this.contentSecurityPolicy = Codegen.empty();
-        this.override = Codegen.empty();
+    private ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs(ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs $) {
+        this.contentSecurityPolicy = $.contentSecurityPolicy;
+        this.override = $.override;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contentSecurityPolicy;
-        private Output<Boolean> override;
+        private ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs();
         }
 
         public Builder(ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentSecurityPolicy = defaults.contentSecurityPolicy;
-    	      this.override = defaults.override;
+            $ = new ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentSecurityPolicy(Output<String> contentSecurityPolicy) {
-            this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
+            $.contentSecurityPolicy = contentSecurityPolicy;
             return this;
         }
+
         public Builder contentSecurityPolicy(String contentSecurityPolicy) {
-            this.contentSecurityPolicy = Output.of(Objects.requireNonNull(contentSecurityPolicy));
-            return this;
+            return contentSecurityPolicy(Output.of(contentSecurityPolicy));
         }
+
         public Builder override(Output<Boolean> override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Output.of(Objects.requireNonNull(override));
-            return this;
-        }        public ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs build() {
-            return new ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs(contentSecurityPolicy, override);
+            return override(Output.of(override));
+        }
+
+        public ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs build() {
+            $.contentSecurityPolicy = Objects.requireNonNull($.contentSecurityPolicy, "expected parameter 'contentSecurityPolicy' to be non-null");
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

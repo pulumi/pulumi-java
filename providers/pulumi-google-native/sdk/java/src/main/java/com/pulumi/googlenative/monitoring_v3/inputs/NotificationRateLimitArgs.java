@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NotificationRateLimitArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="period")
-      private final @Nullable Output<String> period;
+    private @Nullable Output<String> period;
 
-    public Output<String> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<String>> period() {
+        return Optional.ofNullable(this.period);
     }
 
-    public NotificationRateLimitArgs(@Nullable Output<String> period) {
-        this.period = period;
-    }
+    private NotificationRateLimitArgs() {}
 
-    private NotificationRateLimitArgs() {
-        this.period = Codegen.empty();
+    private NotificationRateLimitArgs(NotificationRateLimitArgs $) {
+        this.period = $.period;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationRateLimitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> period;
+        private NotificationRateLimitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationRateLimitArgs();
         }
 
         public Builder(NotificationRateLimitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.period = defaults.period;
+            $ = new NotificationRateLimitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder period(@Nullable Output<String> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable String period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
-        }        public NotificationRateLimitArgs build() {
-            return new NotificationRateLimitArgs(period);
+
+        public Builder period(String period) {
+            return period(Output.of(period));
+        }
+
+        public NotificationRateLimitArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
      * 
      */
     @Import(name="postback")
-      private final @Nullable Output<String> postback;
+    private @Nullable Output<String> postback;
 
-    public Output<String> postback() {
-        return this.postback == null ? Codegen.empty() : this.postback;
+    public Optional<Output<String>> postback() {
+        return Optional.ofNullable(this.postback);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<String> text;
+    private @Nullable Output<String> text;
 
-    public Output<String> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<String>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs(
-        @Nullable Output<String> postback,
-        @Nullable Output<String> text) {
-        this.postback = postback;
-        this.text = text;
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs() {
-        this.postback = Codegen.empty();
-        this.text = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs(GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs $) {
+        this.postback = $.postback;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> postback;
-        private @Nullable Output<String> text;
+        private GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.postback = defaults.postback;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder postback(@Nullable Output<String> postback) {
-            this.postback = postback;
+            $.postback = postback;
             return this;
         }
-        public Builder postback(@Nullable String postback) {
-            this.postback = Codegen.ofNullable(postback);
-            return this;
+
+        public Builder postback(String postback) {
+            return postback(Output.of(postback));
         }
+
         public Builder text(@Nullable Output<String> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable String text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs(postback, text);
+
+        public Builder text(String text) {
+            return text(Output.of(text));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs build() {
+            return $;
         }
     }
+
 }

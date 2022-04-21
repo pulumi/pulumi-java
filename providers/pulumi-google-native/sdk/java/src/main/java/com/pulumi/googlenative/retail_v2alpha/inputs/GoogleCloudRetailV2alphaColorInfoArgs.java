@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends com.pulumi.reso
      * 
      */
     @Import(name="colorFamilies")
-      private final @Nullable Output<List<String>> colorFamilies;
+    private @Nullable Output<List<String>> colorFamilies;
 
-    public Output<List<String>> colorFamilies() {
-        return this.colorFamilies == null ? Codegen.empty() : this.colorFamilies;
+    public Optional<Output<List<String>>> colorFamilies() {
+        return Optional.ofNullable(this.colorFamilies);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends com.pulumi.reso
      * 
      */
     @Import(name="colors")
-      private final @Nullable Output<List<String>> colors;
+    private @Nullable Output<List<String>> colors;
 
-    public Output<List<String>> colors() {
-        return this.colors == null ? Codegen.empty() : this.colors;
+    public Optional<Output<List<String>>> colors() {
+        return Optional.ofNullable(this.colors);
     }
 
-    public GoogleCloudRetailV2alphaColorInfoArgs(
-        @Nullable Output<List<String>> colorFamilies,
-        @Nullable Output<List<String>> colors) {
-        this.colorFamilies = colorFamilies;
-        this.colors = colors;
-    }
+    private GoogleCloudRetailV2alphaColorInfoArgs() {}
 
-    private GoogleCloudRetailV2alphaColorInfoArgs() {
-        this.colorFamilies = Codegen.empty();
-        this.colors = Codegen.empty();
+    private GoogleCloudRetailV2alphaColorInfoArgs(GoogleCloudRetailV2alphaColorInfoArgs $) {
+        this.colorFamilies = $.colorFamilies;
+        this.colors = $.colors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaColorInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> colorFamilies;
-        private @Nullable Output<List<String>> colors;
+        private GoogleCloudRetailV2alphaColorInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaColorInfoArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaColorInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.colorFamilies = defaults.colorFamilies;
-    	      this.colors = defaults.colors;
+            $ = new GoogleCloudRetailV2alphaColorInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder colorFamilies(@Nullable Output<List<String>> colorFamilies) {
-            this.colorFamilies = colorFamilies;
+            $.colorFamilies = colorFamilies;
             return this;
         }
-        public Builder colorFamilies(@Nullable List<String> colorFamilies) {
-            this.colorFamilies = Codegen.ofNullable(colorFamilies);
-            return this;
+
+        public Builder colorFamilies(List<String> colorFamilies) {
+            return colorFamilies(Output.of(colorFamilies));
         }
+
         public Builder colorFamilies(String... colorFamilies) {
             return colorFamilies(List.of(colorFamilies));
         }
+
         public Builder colors(@Nullable Output<List<String>> colors) {
-            this.colors = colors;
+            $.colors = colors;
             return this;
         }
-        public Builder colors(@Nullable List<String> colors) {
-            this.colors = Codegen.ofNullable(colors);
-            return this;
+
+        public Builder colors(List<String> colors) {
+            return colors(Output.of(colors));
         }
+
         public Builder colors(String... colors) {
             return colors(List.of(colors));
-        }        public GoogleCloudRetailV2alphaColorInfoArgs build() {
-            return new GoogleCloudRetailV2alphaColorInfoArgs(colorFamilies, colors);
+        }
+
+        public GoogleCloudRetailV2alphaColorInfoArgs build() {
+            return $;
         }
     }
+
 }

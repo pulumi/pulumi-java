@@ -5,12 +5,12 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaCategoriesArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaPolicyTagsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="categories")
-      private final @Nullable Output<TableFieldSchemaCategoriesArgs> categories;
+    private @Nullable Output<TableFieldSchemaCategoriesArgs> categories;
 
-    public Output<TableFieldSchemaCategoriesArgs> categories() {
-        return this.categories == null ? Codegen.empty() : this.categories;
+    public Optional<Output<TableFieldSchemaCategoriesArgs>> categories() {
+        return Optional.ofNullable(this.categories);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="collationSpec")
-      private final @Nullable Output<String> collationSpec;
+    private @Nullable Output<String> collationSpec;
 
-    public Output<String> collationSpec() {
-        return this.collationSpec == null ? Codegen.empty() : this.collationSpec;
+    public Optional<Output<String>> collationSpec() {
+        return Optional.ofNullable(this.collationSpec);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<TableFieldSchemaArgs>> fields;
+    private @Nullable Output<List<TableFieldSchemaArgs>> fields;
 
-    public Output<List<TableFieldSchemaArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<TableFieldSchemaArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="maxLength")
-      private final @Nullable Output<String> maxLength;
+    private @Nullable Output<String> maxLength;
 
-    public Output<String> maxLength() {
-        return this.maxLength == null ? Codegen.empty() : this.maxLength;
+    public Optional<Output<String>> maxLength() {
+        return Optional.ofNullable(this.maxLength);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -89,17 +89,17 @@ public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="policyTags")
-      private final @Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags;
+    private @Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags;
 
-    public Output<TableFieldSchemaPolicyTagsArgs> policyTags() {
-        return this.policyTags == null ? Codegen.empty() : this.policyTags;
+    public Optional<Output<TableFieldSchemaPolicyTagsArgs>> policyTags() {
+        return Optional.ofNullable(this.policyTags);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="precision")
-      private final @Nullable Output<String> precision;
+    private @Nullable Output<String> precision;
 
-    public Output<String> precision() {
-        return this.precision == null ? Codegen.empty() : this.precision;
+    public Optional<Output<String>> precision() {
+        return Optional.ofNullable(this.precision);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="scale")
-      private final @Nullable Output<String> scale;
+    private @Nullable Output<String> scale;
 
-    public Output<String> scale() {
-        return this.scale == null ? Codegen.empty() : this.scale;
+    public Optional<Output<String>> scale() {
+        return Optional.ofNullable(this.scale);
     }
 
     /**
@@ -129,183 +129,152 @@ public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public TableFieldSchemaArgs(
-        @Nullable Output<TableFieldSchemaCategoriesArgs> categories,
-        @Nullable Output<String> collationSpec,
-        @Nullable Output<String> description,
-        @Nullable Output<List<TableFieldSchemaArgs>> fields,
-        @Nullable Output<String> maxLength,
-        @Nullable Output<String> mode,
-        @Nullable Output<String> name,
-        @Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags,
-        @Nullable Output<String> precision,
-        @Nullable Output<String> scale,
-        @Nullable Output<String> type) {
-        this.categories = categories;
-        this.collationSpec = collationSpec;
-        this.description = description;
-        this.fields = fields;
-        this.maxLength = maxLength;
-        this.mode = mode;
-        this.name = name;
-        this.policyTags = policyTags;
-        this.precision = precision;
-        this.scale = scale;
-        this.type = type;
-    }
+    private TableFieldSchemaArgs() {}
 
-    private TableFieldSchemaArgs() {
-        this.categories = Codegen.empty();
-        this.collationSpec = Codegen.empty();
-        this.description = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.maxLength = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policyTags = Codegen.empty();
-        this.precision = Codegen.empty();
-        this.scale = Codegen.empty();
-        this.type = Codegen.empty();
+    private TableFieldSchemaArgs(TableFieldSchemaArgs $) {
+        this.categories = $.categories;
+        this.collationSpec = $.collationSpec;
+        this.description = $.description;
+        this.fields = $.fields;
+        this.maxLength = $.maxLength;
+        this.mode = $.mode;
+        this.name = $.name;
+        this.policyTags = $.policyTags;
+        this.precision = $.precision;
+        this.scale = $.scale;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableFieldSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TableFieldSchemaCategoriesArgs> categories;
-        private @Nullable Output<String> collationSpec;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<TableFieldSchemaArgs>> fields;
-        private @Nullable Output<String> maxLength;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<String> name;
-        private @Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags;
-        private @Nullable Output<String> precision;
-        private @Nullable Output<String> scale;
-        private @Nullable Output<String> type;
+        private TableFieldSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableFieldSchemaArgs();
         }
 
         public Builder(TableFieldSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
-    	      this.collationSpec = defaults.collationSpec;
-    	      this.description = defaults.description;
-    	      this.fields = defaults.fields;
-    	      this.maxLength = defaults.maxLength;
-    	      this.mode = defaults.mode;
-    	      this.name = defaults.name;
-    	      this.policyTags = defaults.policyTags;
-    	      this.precision = defaults.precision;
-    	      this.scale = defaults.scale;
-    	      this.type = defaults.type;
+            $ = new TableFieldSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(@Nullable Output<TableFieldSchemaCategoriesArgs> categories) {
-            this.categories = categories;
+            $.categories = categories;
             return this;
         }
-        public Builder categories(@Nullable TableFieldSchemaCategoriesArgs categories) {
-            this.categories = Codegen.ofNullable(categories);
-            return this;
+
+        public Builder categories(TableFieldSchemaCategoriesArgs categories) {
+            return categories(Output.of(categories));
         }
+
         public Builder collationSpec(@Nullable Output<String> collationSpec) {
-            this.collationSpec = collationSpec;
+            $.collationSpec = collationSpec;
             return this;
         }
-        public Builder collationSpec(@Nullable String collationSpec) {
-            this.collationSpec = Codegen.ofNullable(collationSpec);
-            return this;
+
+        public Builder collationSpec(String collationSpec) {
+            return collationSpec(Output.of(collationSpec));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fields(@Nullable Output<List<TableFieldSchemaArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<TableFieldSchemaArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<TableFieldSchemaArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(TableFieldSchemaArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder maxLength(@Nullable Output<String> maxLength) {
-            this.maxLength = maxLength;
+            $.maxLength = maxLength;
             return this;
         }
-        public Builder maxLength(@Nullable String maxLength) {
-            this.maxLength = Codegen.ofNullable(maxLength);
-            return this;
+
+        public Builder maxLength(String maxLength) {
+            return maxLength(Output.of(maxLength));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policyTags(@Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags) {
-            this.policyTags = policyTags;
+            $.policyTags = policyTags;
             return this;
         }
-        public Builder policyTags(@Nullable TableFieldSchemaPolicyTagsArgs policyTags) {
-            this.policyTags = Codegen.ofNullable(policyTags);
-            return this;
+
+        public Builder policyTags(TableFieldSchemaPolicyTagsArgs policyTags) {
+            return policyTags(Output.of(policyTags));
         }
+
         public Builder precision(@Nullable Output<String> precision) {
-            this.precision = precision;
+            $.precision = precision;
             return this;
         }
-        public Builder precision(@Nullable String precision) {
-            this.precision = Codegen.ofNullable(precision);
-            return this;
+
+        public Builder precision(String precision) {
+            return precision(Output.of(precision));
         }
+
         public Builder scale(@Nullable Output<String> scale) {
-            this.scale = scale;
+            $.scale = scale;
             return this;
         }
-        public Builder scale(@Nullable String scale) {
-            this.scale = Codegen.ofNullable(scale);
-            return this;
+
+        public Builder scale(String scale) {
+            return scale(Output.of(scale));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public TableFieldSchemaArgs build() {
-            return new TableFieldSchemaArgs(categories, collationSpec, description, fields, maxLength, mode, name, policyTags, precision, scale, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public TableFieldSchemaArgs build() {
+            return $;
         }
     }
+
 }

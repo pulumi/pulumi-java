@@ -17,45 +17,45 @@ public final class GetLiveTokenArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public GetLiveTokenArgs(String resourceUri) {
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private GetLiveTokenArgs() {}
 
-    private GetLiveTokenArgs() {
-        this.resourceUri = null;
+    private GetLiveTokenArgs(GetLiveTokenArgs $) {
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLiveTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceUri;
+        private GetLiveTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLiveTokenArgs();
         }
 
         public Builder(GetLiveTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new GetLiveTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public GetLiveTokenArgs build() {
-            return new GetLiveTokenArgs(resourceUri);
+        }
+
+        public GetLiveTokenArgs build() {
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

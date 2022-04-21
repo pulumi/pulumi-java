@@ -5,12 +5,12 @@ package com.pulumi.googlenative.domains_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.domains_v1.enums.DsRecordAlgorithm;
 import com.pulumi.googlenative.domains_v1.enums.DsRecordDigestType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="algorithm")
-      private final @Nullable Output<DsRecordAlgorithm> algorithm;
+    private @Nullable Output<DsRecordAlgorithm> algorithm;
 
-    public Output<DsRecordAlgorithm> algorithm() {
-        return this.algorithm == null ? Codegen.empty() : this.algorithm;
+    public Optional<Output<DsRecordAlgorithm>> algorithm() {
+        return Optional.ofNullable(this.algorithm);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="digest")
-      private final @Nullable Output<String> digest;
+    private @Nullable Output<String> digest;
 
-    public Output<String> digest() {
-        return this.digest == null ? Codegen.empty() : this.digest;
+    public Optional<Output<String>> digest() {
+        return Optional.ofNullable(this.digest);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="digestType")
-      private final @Nullable Output<DsRecordDigestType> digestType;
+    private @Nullable Output<DsRecordDigestType> digestType;
 
-    public Output<DsRecordDigestType> digestType() {
-        return this.digestType == null ? Codegen.empty() : this.digestType;
+    public Optional<Output<DsRecordDigestType>> digestType() {
+        return Optional.ofNullable(this.digestType);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyTag")
-      private final @Nullable Output<Integer> keyTag;
+    private @Nullable Output<Integer> keyTag;
 
-    public Output<Integer> keyTag() {
-        return this.keyTag == null ? Codegen.empty() : this.keyTag;
+    public Optional<Output<Integer>> keyTag() {
+        return Optional.ofNullable(this.keyTag);
     }
 
-    public DsRecordArgs(
-        @Nullable Output<DsRecordAlgorithm> algorithm,
-        @Nullable Output<String> digest,
-        @Nullable Output<DsRecordDigestType> digestType,
-        @Nullable Output<Integer> keyTag) {
-        this.algorithm = algorithm;
-        this.digest = digest;
-        this.digestType = digestType;
-        this.keyTag = keyTag;
-    }
+    private DsRecordArgs() {}
 
-    private DsRecordArgs() {
-        this.algorithm = Codegen.empty();
-        this.digest = Codegen.empty();
-        this.digestType = Codegen.empty();
-        this.keyTag = Codegen.empty();
+    private DsRecordArgs(DsRecordArgs $) {
+        this.algorithm = $.algorithm;
+        this.digest = $.digest;
+        this.digestType = $.digestType;
+        this.keyTag = $.keyTag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DsRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DsRecordAlgorithm> algorithm;
-        private @Nullable Output<String> digest;
-        private @Nullable Output<DsRecordDigestType> digestType;
-        private @Nullable Output<Integer> keyTag;
+        private DsRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DsRecordArgs();
         }
 
         public Builder(DsRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.digest = defaults.digest;
-    	      this.digestType = defaults.digestType;
-    	      this.keyTag = defaults.keyTag;
+            $ = new DsRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(@Nullable Output<DsRecordAlgorithm> algorithm) {
-            this.algorithm = algorithm;
+            $.algorithm = algorithm;
             return this;
         }
-        public Builder algorithm(@Nullable DsRecordAlgorithm algorithm) {
-            this.algorithm = Codegen.ofNullable(algorithm);
-            return this;
+
+        public Builder algorithm(DsRecordAlgorithm algorithm) {
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder digest(@Nullable Output<String> digest) {
-            this.digest = digest;
+            $.digest = digest;
             return this;
         }
-        public Builder digest(@Nullable String digest) {
-            this.digest = Codegen.ofNullable(digest);
-            return this;
+
+        public Builder digest(String digest) {
+            return digest(Output.of(digest));
         }
+
         public Builder digestType(@Nullable Output<DsRecordDigestType> digestType) {
-            this.digestType = digestType;
+            $.digestType = digestType;
             return this;
         }
-        public Builder digestType(@Nullable DsRecordDigestType digestType) {
-            this.digestType = Codegen.ofNullable(digestType);
-            return this;
+
+        public Builder digestType(DsRecordDigestType digestType) {
+            return digestType(Output.of(digestType));
         }
+
         public Builder keyTag(@Nullable Output<Integer> keyTag) {
-            this.keyTag = keyTag;
+            $.keyTag = keyTag;
             return this;
         }
-        public Builder keyTag(@Nullable Integer keyTag) {
-            this.keyTag = Codegen.ofNullable(keyTag);
-            return this;
-        }        public DsRecordArgs build() {
-            return new DsRecordArgs(algorithm, digest, digestType, keyTag);
+
+        public Builder keyTag(Integer keyTag) {
+            return keyTag(Output.of(keyTag));
+        }
+
+        public DsRecordArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,45 @@ public final class CopyOnExpiryOptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
     }
 
-    public CopyOnExpiryOptionResponse(String objectType) {
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-    }
+    private CopyOnExpiryOptionResponse() {}
 
-    private CopyOnExpiryOptionResponse() {
-        this.objectType = null;
+    private CopyOnExpiryOptionResponse(CopyOnExpiryOptionResponse $) {
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CopyOnExpiryOptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String objectType;
+        private CopyOnExpiryOptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CopyOnExpiryOptionResponse();
         }
 
         public Builder(CopyOnExpiryOptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectType = defaults.objectType;
+            $ = new CopyOnExpiryOptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
-        }        public CopyOnExpiryOptionResponse build() {
-            return new CopyOnExpiryOptionResponse(objectType);
+        }
+
+        public CopyOnExpiryOptionResponse build() {
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            return $;
         }
     }
+
 }

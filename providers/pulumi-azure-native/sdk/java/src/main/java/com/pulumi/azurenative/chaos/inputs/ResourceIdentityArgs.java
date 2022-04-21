@@ -6,7 +6,6 @@ package com.pulumi.azurenative.chaos.inputs;
 import com.pulumi.azurenative.chaos.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<ResourceIdentityType> type;
+    private Output<ResourceIdentityType> type;
 
     public Output<ResourceIdentityType> type() {
         return this.type;
     }
 
-    public ResourceIdentityArgs(Output<ResourceIdentityType> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ResourceIdentityArgs() {}
 
-    private ResourceIdentityArgs() {
-        this.type = Codegen.empty();
+    private ResourceIdentityArgs(ResourceIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ResourceIdentityType> type;
+        private ResourceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceIdentityArgs();
         }
 
         public Builder(ResourceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<ResourceIdentityType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ResourceIdentityType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ResourceIdentityArgs build() {
-            return new ResourceIdentityArgs(type);
+            return type(Output.of(type));
+        }
+
+        public ResourceIdentityArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

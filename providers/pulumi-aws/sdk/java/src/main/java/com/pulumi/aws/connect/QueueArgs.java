@@ -6,12 +6,12 @@ package com.pulumi.aws.connect;
 import com.pulumi.aws.connect.inputs.QueueOutboundCallerConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hoursOfOperationId", required=true)
-      private final Output<String> hoursOfOperationId;
+    private Output<String> hoursOfOperationId;
 
     public Output<String> hoursOfOperationId() {
         return this.hoursOfOperationId;
@@ -46,7 +46,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -57,10 +57,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxContacts")
-      private final @Nullable Output<Integer> maxContacts;
+    private @Nullable Output<Integer> maxContacts;
 
-    public Output<Integer> maxContacts() {
-        return this.maxContacts == null ? Codegen.empty() : this.maxContacts;
+    public Optional<Output<Integer>> maxContacts() {
+        return Optional.ofNullable(this.maxContacts);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outboundCallerConfig")
-      private final @Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig;
+    private @Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig;
 
-    public Output<QueueOutboundCallerConfigArgs> outboundCallerConfig() {
-        return this.outboundCallerConfig == null ? Codegen.empty() : this.outboundCallerConfig;
+    public Optional<Output<QueueOutboundCallerConfigArgs>> outboundCallerConfig() {
+        return Optional.ofNullable(this.outboundCallerConfig);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quickConnectIds")
-      private final @Nullable Output<List<String>> quickConnectIds;
+    private @Nullable Output<List<String>> quickConnectIds;
 
-    public Output<List<String>> quickConnectIds() {
-        return this.quickConnectIds == null ? Codegen.empty() : this.quickConnectIds;
+    public Optional<Output<List<String>>> quickConnectIds() {
+        return Optional.ofNullable(this.quickConnectIds);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -123,170 +123,144 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public QueueArgs(
-        @Nullable Output<String> description,
-        Output<String> hoursOfOperationId,
-        Output<String> instanceId,
-        @Nullable Output<Integer> maxContacts,
-        @Nullable Output<String> name,
-        @Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig,
-        @Nullable Output<List<String>> quickConnectIds,
-        @Nullable Output<String> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.description = description;
-        this.hoursOfOperationId = Objects.requireNonNull(hoursOfOperationId, "expected parameter 'hoursOfOperationId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.maxContacts = maxContacts;
-        this.name = name;
-        this.outboundCallerConfig = outboundCallerConfig;
-        this.quickConnectIds = quickConnectIds;
-        this.status = status;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private QueueArgs() {}
 
-    private QueueArgs() {
-        this.description = Codegen.empty();
-        this.hoursOfOperationId = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.maxContacts = Codegen.empty();
-        this.name = Codegen.empty();
-        this.outboundCallerConfig = Codegen.empty();
-        this.quickConnectIds = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private QueueArgs(QueueArgs $) {
+        this.description = $.description;
+        this.hoursOfOperationId = $.hoursOfOperationId;
+        this.instanceId = $.instanceId;
+        this.maxContacts = $.maxContacts;
+        this.name = $.name;
+        this.outboundCallerConfig = $.outboundCallerConfig;
+        this.quickConnectIds = $.quickConnectIds;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> hoursOfOperationId;
-        private Output<String> instanceId;
-        private @Nullable Output<Integer> maxContacts;
-        private @Nullable Output<String> name;
-        private @Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig;
-        private @Nullable Output<List<String>> quickConnectIds;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private QueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueArgs();
         }
 
         public Builder(QueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.hoursOfOperationId = defaults.hoursOfOperationId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.maxContacts = defaults.maxContacts;
-    	      this.name = defaults.name;
-    	      this.outboundCallerConfig = defaults.outboundCallerConfig;
-    	      this.quickConnectIds = defaults.quickConnectIds;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new QueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder hoursOfOperationId(Output<String> hoursOfOperationId) {
-            this.hoursOfOperationId = Objects.requireNonNull(hoursOfOperationId);
+            $.hoursOfOperationId = hoursOfOperationId;
             return this;
         }
+
         public Builder hoursOfOperationId(String hoursOfOperationId) {
-            this.hoursOfOperationId = Output.of(Objects.requireNonNull(hoursOfOperationId));
-            return this;
+            return hoursOfOperationId(Output.of(hoursOfOperationId));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder maxContacts(@Nullable Output<Integer> maxContacts) {
-            this.maxContacts = maxContacts;
+            $.maxContacts = maxContacts;
             return this;
         }
-        public Builder maxContacts(@Nullable Integer maxContacts) {
-            this.maxContacts = Codegen.ofNullable(maxContacts);
-            return this;
+
+        public Builder maxContacts(Integer maxContacts) {
+            return maxContacts(Output.of(maxContacts));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder outboundCallerConfig(@Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig) {
-            this.outboundCallerConfig = outboundCallerConfig;
+            $.outboundCallerConfig = outboundCallerConfig;
             return this;
         }
-        public Builder outboundCallerConfig(@Nullable QueueOutboundCallerConfigArgs outboundCallerConfig) {
-            this.outboundCallerConfig = Codegen.ofNullable(outboundCallerConfig);
-            return this;
+
+        public Builder outboundCallerConfig(QueueOutboundCallerConfigArgs outboundCallerConfig) {
+            return outboundCallerConfig(Output.of(outboundCallerConfig));
         }
+
         public Builder quickConnectIds(@Nullable Output<List<String>> quickConnectIds) {
-            this.quickConnectIds = quickConnectIds;
+            $.quickConnectIds = quickConnectIds;
             return this;
         }
-        public Builder quickConnectIds(@Nullable List<String> quickConnectIds) {
-            this.quickConnectIds = Codegen.ofNullable(quickConnectIds);
-            return this;
+
+        public Builder quickConnectIds(List<String> quickConnectIds) {
+            return quickConnectIds(Output.of(quickConnectIds));
         }
+
         public Builder quickConnectIds(String... quickConnectIds) {
             return quickConnectIds(List.of(quickConnectIds));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public QueueArgs build() {
-            return new QueueArgs(description, hoursOfOperationId, instanceId, maxContacts, name, outboundCallerConfig, quickConnectIds, status, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public QueueArgs build() {
+            $.hoursOfOperationId = Objects.requireNonNull($.hoursOfOperationId, "expected parameter 'hoursOfOperationId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

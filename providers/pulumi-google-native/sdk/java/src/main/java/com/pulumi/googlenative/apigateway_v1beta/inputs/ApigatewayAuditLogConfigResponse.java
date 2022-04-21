@@ -22,7 +22,7 @@ public final class ApigatewayAuditLogConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="exemptedMembers", required=true)
-      private final List<String> exemptedMembers;
+    private List<String> exemptedMembers;
 
     public List<String> exemptedMembers() {
         return this.exemptedMembers;
@@ -33,58 +33,56 @@ public final class ApigatewayAuditLogConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="logType", required=true)
-      private final String logType;
+    private String logType;
 
     public String logType() {
         return this.logType;
     }
 
-    public ApigatewayAuditLogConfigResponse(
-        List<String> exemptedMembers,
-        String logType) {
-        this.exemptedMembers = Objects.requireNonNull(exemptedMembers, "expected parameter 'exemptedMembers' to be non-null");
-        this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
-    }
+    private ApigatewayAuditLogConfigResponse() {}
 
-    private ApigatewayAuditLogConfigResponse() {
-        this.exemptedMembers = List.of();
-        this.logType = null;
+    private ApigatewayAuditLogConfigResponse(ApigatewayAuditLogConfigResponse $) {
+        this.exemptedMembers = $.exemptedMembers;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayAuditLogConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> exemptedMembers;
-        private String logType;
+        private ApigatewayAuditLogConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayAuditLogConfigResponse();
         }
 
         public Builder(ApigatewayAuditLogConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exemptedMembers = defaults.exemptedMembers;
-    	      this.logType = defaults.logType;
+            $ = new ApigatewayAuditLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exemptedMembers(List<String> exemptedMembers) {
-            this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
+            $.exemptedMembers = exemptedMembers;
             return this;
         }
+
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
+
         public Builder logType(String logType) {
-            this.logType = Objects.requireNonNull(logType);
+            $.logType = logType;
             return this;
-        }        public ApigatewayAuditLogConfigResponse build() {
-            return new ApigatewayAuditLogConfigResponse(exemptedMembers, logType);
+        }
+
+        public ApigatewayAuditLogConfigResponse build() {
+            $.exemptedMembers = Objects.requireNonNull($.exemptedMembers, "expected parameter 'exemptedMembers' to be non-null");
+            $.logType = Objects.requireNonNull($.logType, "expected parameter 'logType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.enums.GallerySharingPermissionTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class SharingProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions;
+    private @Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions;
 
-    public Output<Either<String,GallerySharingPermissionTypes>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<Either<String,GallerySharingPermissionTypes>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
-    public SharingProfileArgs(@Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions) {
-        this.permissions = permissions;
-    }
+    private SharingProfileArgs() {}
 
-    private SharingProfileArgs() {
-        this.permissions = Codegen.empty();
+    private SharingProfileArgs(SharingProfileArgs $) {
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharingProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions;
+        private SharingProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharingProfileArgs();
         }
 
         public Builder(SharingProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.permissions = defaults.permissions;
+            $ = new SharingProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder permissions(@Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable Either<String,GallerySharingPermissionTypes> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
-        }        public SharingProfileArgs build() {
-            return new SharingProfileArgs(permissions);
+
+        public Builder permissions(Either<String,GallerySharingPermissionTypes> permissions) {
+            return permissions(Output.of(permissions));
+        }
+
+        public SharingProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DomainServiceAccessPolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="accessPolicy")
-      private final @Nullable Output<String> accessPolicy;
+    private @Nullable Output<String> accessPolicy;
 
-    public Output<String> accessPolicy() {
-        return this.accessPolicy == null ? Codegen.empty() : this.accessPolicy;
+    public Optional<Output<String>> accessPolicy() {
+        return Optional.ofNullable(this.accessPolicy);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DomainServiceAccessPolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
-    public DomainServiceAccessPolicyState(
-        @Nullable Output<String> accessPolicy,
-        @Nullable Output<String> domainName) {
-        this.accessPolicy = accessPolicy;
-        this.domainName = domainName;
-    }
+    private DomainServiceAccessPolicyState() {}
 
-    private DomainServiceAccessPolicyState() {
-        this.accessPolicy = Codegen.empty();
-        this.domainName = Codegen.empty();
+    private DomainServiceAccessPolicyState(DomainServiceAccessPolicyState $) {
+        this.accessPolicy = $.accessPolicy;
+        this.domainName = $.domainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainServiceAccessPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessPolicy;
-        private @Nullable Output<String> domainName;
+        private DomainServiceAccessPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainServiceAccessPolicyState();
         }
 
         public Builder(DomainServiceAccessPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicy = defaults.accessPolicy;
-    	      this.domainName = defaults.domainName;
+            $ = new DomainServiceAccessPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicy(@Nullable Output<String> accessPolicy) {
-            this.accessPolicy = accessPolicy;
+            $.accessPolicy = accessPolicy;
             return this;
         }
-        public Builder accessPolicy(@Nullable String accessPolicy) {
-            this.accessPolicy = Codegen.ofNullable(accessPolicy);
-            return this;
+
+        public Builder accessPolicy(String accessPolicy) {
+            return accessPolicy(Output.of(accessPolicy));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
-        }        public DomainServiceAccessPolicyState build() {
-            return new DomainServiceAccessPolicyState(accessPolicy, domainName);
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
+        }
+
+        public DomainServiceAccessPolicyState build() {
+            return $;
         }
     }
+
 }

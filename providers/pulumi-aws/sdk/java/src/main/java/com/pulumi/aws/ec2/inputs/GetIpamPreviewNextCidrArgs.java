@@ -21,10 +21,10 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="disallowedCidrs")
-      private final @Nullable List<String> disallowedCidrs;
+    private @Nullable List<String> disallowedCidrs;
 
-    public List<String> disallowedCidrs() {
-        return this.disallowedCidrs == null ? List.of() : this.disallowedCidrs;
+    public Optional<List<String>> disallowedCidrs() {
+        return Optional.ofNullable(this.disallowedCidrs);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ipamPoolId", required=true)
-      private final String ipamPoolId;
+    private String ipamPoolId;
 
     public String ipamPoolId() {
         return this.ipamPoolId;
@@ -43,67 +43,61 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="netmaskLength")
-      private final @Nullable Integer netmaskLength;
+    private @Nullable Integer netmaskLength;
 
     public Optional<Integer> netmaskLength() {
-        return this.netmaskLength == null ? Optional.empty() : Optional.ofNullable(this.netmaskLength);
+        return Optional.ofNullable(this.netmaskLength);
     }
 
-    public GetIpamPreviewNextCidrArgs(
-        @Nullable List<String> disallowedCidrs,
-        String ipamPoolId,
-        @Nullable Integer netmaskLength) {
-        this.disallowedCidrs = disallowedCidrs;
-        this.ipamPoolId = Objects.requireNonNull(ipamPoolId, "expected parameter 'ipamPoolId' to be non-null");
-        this.netmaskLength = netmaskLength;
-    }
+    private GetIpamPreviewNextCidrArgs() {}
 
-    private GetIpamPreviewNextCidrArgs() {
-        this.disallowedCidrs = List.of();
-        this.ipamPoolId = null;
-        this.netmaskLength = null;
+    private GetIpamPreviewNextCidrArgs(GetIpamPreviewNextCidrArgs $) {
+        this.disallowedCidrs = $.disallowedCidrs;
+        this.ipamPoolId = $.ipamPoolId;
+        this.netmaskLength = $.netmaskLength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIpamPreviewNextCidrArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> disallowedCidrs;
-        private String ipamPoolId;
-        private @Nullable Integer netmaskLength;
+        private GetIpamPreviewNextCidrArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIpamPreviewNextCidrArgs();
         }
 
         public Builder(GetIpamPreviewNextCidrArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disallowedCidrs = defaults.disallowedCidrs;
-    	      this.ipamPoolId = defaults.ipamPoolId;
-    	      this.netmaskLength = defaults.netmaskLength;
+            $ = new GetIpamPreviewNextCidrArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
-            this.disallowedCidrs = disallowedCidrs;
+            $.disallowedCidrs = disallowedCidrs;
             return this;
         }
+
         public Builder disallowedCidrs(String... disallowedCidrs) {
             return disallowedCidrs(List.of(disallowedCidrs));
         }
+
         public Builder ipamPoolId(String ipamPoolId) {
-            this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
+            $.ipamPoolId = ipamPoolId;
             return this;
         }
+
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
-            this.netmaskLength = netmaskLength;
+            $.netmaskLength = netmaskLength;
             return this;
-        }        public GetIpamPreviewNextCidrArgs build() {
-            return new GetIpamPreviewNextCidrArgs(disallowedCidrs, ipamPoolId, netmaskLength);
+        }
+
+        public GetIpamPreviewNextCidrArgs build() {
+            $.ipamPoolId = Objects.requireNonNull($.ipamPoolId, "expected parameter 'ipamPoolId' to be non-null");
+            return $;
         }
     }
+
 }

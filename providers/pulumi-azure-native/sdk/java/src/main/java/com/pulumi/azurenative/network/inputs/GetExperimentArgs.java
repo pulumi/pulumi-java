@@ -17,7 +17,7 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="experimentName", required=true)
-      private final String experimentName;
+    private String experimentName;
 
     public String experimentName() {
         return this.experimentName;
@@ -28,7 +28,7 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -39,64 +39,59 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExperimentArgs(
-        String experimentName,
-        String profileName,
-        String resourceGroupName) {
-        this.experimentName = Objects.requireNonNull(experimentName, "expected parameter 'experimentName' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExperimentArgs() {}
 
-    private GetExperimentArgs() {
-        this.experimentName = null;
-        this.profileName = null;
-        this.resourceGroupName = null;
+    private GetExperimentArgs(GetExperimentArgs $) {
+        this.experimentName = $.experimentName;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExperimentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String experimentName;
-        private String profileName;
-        private String resourceGroupName;
+        private GetExperimentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExperimentArgs();
         }
 
         public Builder(GetExperimentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.experimentName = defaults.experimentName;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExperimentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder experimentName(String experimentName) {
-            this.experimentName = Objects.requireNonNull(experimentName);
+            $.experimentName = experimentName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExperimentArgs build() {
-            return new GetExperimentArgs(experimentName, profileName, resourceGroupName);
+        }
+
+        public GetExperimentArgs build() {
+            $.experimentName = Objects.requireNonNull($.experimentName, "expected parameter 'experimentName' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

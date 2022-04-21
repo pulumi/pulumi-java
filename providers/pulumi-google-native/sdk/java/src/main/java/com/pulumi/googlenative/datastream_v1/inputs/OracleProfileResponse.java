@@ -23,7 +23,7 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="connectionAttributes", required=true)
-      private final Map<String,String> connectionAttributes;
+    private Map<String,String> connectionAttributes;
 
     public Map<String,String> connectionAttributes() {
         return this.connectionAttributes;
@@ -34,7 +34,7 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="databaseService", required=true)
-      private final String databaseService;
+    private String databaseService;
 
     public String databaseService() {
         return this.databaseService;
@@ -45,7 +45,7 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hostname", required=true)
-      private final String hostname;
+    private String hostname;
 
     public String hostname() {
         return this.hostname;
@@ -56,7 +56,7 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -67,7 +67,7 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -78,91 +78,80 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public OracleProfileResponse(
-        Map<String,String> connectionAttributes,
-        String databaseService,
-        String hostname,
-        String password,
-        Integer port,
-        String username) {
-        this.connectionAttributes = Objects.requireNonNull(connectionAttributes, "expected parameter 'connectionAttributes' to be non-null");
-        this.databaseService = Objects.requireNonNull(databaseService, "expected parameter 'databaseService' to be non-null");
-        this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private OracleProfileResponse() {}
 
-    private OracleProfileResponse() {
-        this.connectionAttributes = Map.of();
-        this.databaseService = null;
-        this.hostname = null;
-        this.password = null;
-        this.port = null;
-        this.username = null;
+    private OracleProfileResponse(OracleProfileResponse $) {
+        this.connectionAttributes = $.connectionAttributes;
+        this.databaseService = $.databaseService;
+        this.hostname = $.hostname;
+        this.password = $.password;
+        this.port = $.port;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> connectionAttributes;
-        private String databaseService;
-        private String hostname;
-        private String password;
-        private Integer port;
-        private String username;
+        private OracleProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleProfileResponse();
         }
 
         public Builder(OracleProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionAttributes = defaults.connectionAttributes;
-    	      this.databaseService = defaults.databaseService;
-    	      this.hostname = defaults.hostname;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.username = defaults.username;
+            $ = new OracleProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionAttributes(Map<String,String> connectionAttributes) {
-            this.connectionAttributes = Objects.requireNonNull(connectionAttributes);
+            $.connectionAttributes = connectionAttributes;
             return this;
         }
+
         public Builder databaseService(String databaseService) {
-            this.databaseService = Objects.requireNonNull(databaseService);
+            $.databaseService = databaseService;
             return this;
         }
+
         public Builder hostname(String hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            $.hostname = hostname;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public OracleProfileResponse build() {
-            return new OracleProfileResponse(connectionAttributes, databaseService, hostname, password, port, username);
+        }
+
+        public OracleProfileResponse build() {
+            $.connectionAttributes = Objects.requireNonNull($.connectionAttributes, "expected parameter 'connectionAttributes' to be non-null");
+            $.databaseService = Objects.requireNonNull($.databaseService, "expected parameter 'databaseService' to be non-null");
+            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

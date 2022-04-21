@@ -17,7 +17,7 @@ public final class GetStorageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetStorageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -39,64 +39,59 @@ public final class GetStorageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageName", required=true)
-      private final String storageName;
+    private String storageName;
 
     public String storageName() {
         return this.storageName;
     }
 
-    public GetStorageArgs(
-        String resourceGroupName,
-        String serviceName,
-        String storageName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.storageName = Objects.requireNonNull(storageName, "expected parameter 'storageName' to be non-null");
-    }
+    private GetStorageArgs() {}
 
-    private GetStorageArgs() {
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.storageName = null;
+    private GetStorageArgs(GetStorageArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.storageName = $.storageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serviceName;
-        private String storageName;
+        private GetStorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStorageArgs();
         }
 
         public Builder(GetStorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.storageName = defaults.storageName;
+            $ = new GetStorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder storageName(String storageName) {
-            this.storageName = Objects.requireNonNull(storageName);
+            $.storageName = storageName;
             return this;
-        }        public GetStorageArgs build() {
-            return new GetStorageArgs(resourceGroupName, serviceName, storageName);
+        }
+
+        public GetStorageArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.storageName = Objects.requireNonNull($.storageName, "expected parameter 'storageName' to be non-null");
+            return $;
         }
     }
+
 }

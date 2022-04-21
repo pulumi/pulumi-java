@@ -17,7 +17,7 @@ public final class ListKeyByAutomationAccountArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,55 +28,52 @@ public final class ListKeyByAutomationAccountArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListKeyByAutomationAccountArgs(
-        String automationAccountName,
-        String resourceGroupName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListKeyByAutomationAccountArgs() {}
 
-    private ListKeyByAutomationAccountArgs() {
-        this.automationAccountName = null;
-        this.resourceGroupName = null;
+    private ListKeyByAutomationAccountArgs(ListKeyByAutomationAccountArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListKeyByAutomationAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String resourceGroupName;
+        private ListKeyByAutomationAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListKeyByAutomationAccountArgs();
         }
 
         public Builder(ListKeyByAutomationAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListKeyByAutomationAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListKeyByAutomationAccountArgs build() {
-            return new ListKeyByAutomationAccountArgs(automationAccountName, resourceGroupName);
+        }
+
+        public ListKeyByAutomationAccountArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

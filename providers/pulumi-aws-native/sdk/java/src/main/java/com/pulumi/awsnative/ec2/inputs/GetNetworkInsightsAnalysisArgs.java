@@ -13,45 +13,45 @@ public final class GetNetworkInsightsAnalysisArgs extends com.pulumi.resources.I
     public static final GetNetworkInsightsAnalysisArgs Empty = new GetNetworkInsightsAnalysisArgs();
 
     @Import(name="networkInsightsAnalysisId", required=true)
-      private final String networkInsightsAnalysisId;
+    private String networkInsightsAnalysisId;
 
     public String networkInsightsAnalysisId() {
         return this.networkInsightsAnalysisId;
     }
 
-    public GetNetworkInsightsAnalysisArgs(String networkInsightsAnalysisId) {
-        this.networkInsightsAnalysisId = Objects.requireNonNull(networkInsightsAnalysisId, "expected parameter 'networkInsightsAnalysisId' to be non-null");
-    }
+    private GetNetworkInsightsAnalysisArgs() {}
 
-    private GetNetworkInsightsAnalysisArgs() {
-        this.networkInsightsAnalysisId = null;
+    private GetNetworkInsightsAnalysisArgs(GetNetworkInsightsAnalysisArgs $) {
+        this.networkInsightsAnalysisId = $.networkInsightsAnalysisId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkInsightsAnalysisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkInsightsAnalysisId;
+        private GetNetworkInsightsAnalysisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkInsightsAnalysisArgs();
         }
 
         public Builder(GetNetworkInsightsAnalysisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInsightsAnalysisId = defaults.networkInsightsAnalysisId;
+            $ = new GetNetworkInsightsAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInsightsAnalysisId(String networkInsightsAnalysisId) {
-            this.networkInsightsAnalysisId = Objects.requireNonNull(networkInsightsAnalysisId);
+            $.networkInsightsAnalysisId = networkInsightsAnalysisId;
             return this;
-        }        public GetNetworkInsightsAnalysisArgs build() {
-            return new GetNetworkInsightsAnalysisArgs(networkInsightsAnalysisId);
+        }
+
+        public GetNetworkInsightsAnalysisArgs build() {
+            $.networkInsightsAnalysisId = Objects.requireNonNull($.networkInsightsAnalysisId, "expected parameter 'networkInsightsAnalysisId' to be non-null");
+            return $;
         }
     }
+
 }

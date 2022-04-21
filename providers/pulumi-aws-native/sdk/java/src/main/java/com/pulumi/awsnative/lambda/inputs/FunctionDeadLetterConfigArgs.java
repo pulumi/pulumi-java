@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FunctionDeadLetterConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="targetArn")
-      private final @Nullable Output<String> targetArn;
+    private @Nullable Output<String> targetArn;
 
-    public Output<String> targetArn() {
-        return this.targetArn == null ? Codegen.empty() : this.targetArn;
+    public Optional<Output<String>> targetArn() {
+        return Optional.ofNullable(this.targetArn);
     }
 
-    public FunctionDeadLetterConfigArgs(@Nullable Output<String> targetArn) {
-        this.targetArn = targetArn;
-    }
+    private FunctionDeadLetterConfigArgs() {}
 
-    private FunctionDeadLetterConfigArgs() {
-        this.targetArn = Codegen.empty();
+    private FunctionDeadLetterConfigArgs(FunctionDeadLetterConfigArgs $) {
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionDeadLetterConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> targetArn;
+        private FunctionDeadLetterConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionDeadLetterConfigArgs();
         }
 
         public Builder(FunctionDeadLetterConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetArn = defaults.targetArn;
+            $ = new FunctionDeadLetterConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetArn(@Nullable Output<String> targetArn) {
-            this.targetArn = targetArn;
+            $.targetArn = targetArn;
             return this;
         }
-        public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Codegen.ofNullable(targetArn);
-            return this;
-        }        public FunctionDeadLetterConfigArgs build() {
-            return new FunctionDeadLetterConfigArgs(targetArn);
+
+        public Builder targetArn(String targetArn) {
+            return targetArn(Output.of(targetArn));
+        }
+
+        public FunctionDeadLetterConfigArgs build() {
+            return $;
         }
     }
+
 }

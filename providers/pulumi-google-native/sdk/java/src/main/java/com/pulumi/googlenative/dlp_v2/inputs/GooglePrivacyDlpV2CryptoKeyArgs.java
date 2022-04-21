@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TransientCryptoKeyArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2UnwrappedCryptoKeyArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="kmsWrapped")
-      private final @Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped;
+    private @Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped;
 
-    public Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped() {
-        return this.kmsWrapped == null ? Codegen.empty() : this.kmsWrapped;
+    public Optional<Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs>> kmsWrapped() {
+        return Optional.ofNullable(this.kmsWrapped);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="transient")
-      private final @Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_;
+    private @Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_;
 
-    public Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_() {
-        return this.transient_ == null ? Codegen.empty() : this.transient_;
+    public Optional<Output<GooglePrivacyDlpV2TransientCryptoKeyArgs>> transient_() {
+        return Optional.ofNullable(this.transient_);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="unwrapped")
-      private final @Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped;
+    private @Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped;
 
-    public Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped() {
-        return this.unwrapped == null ? Codegen.empty() : this.unwrapped;
+    public Optional<Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs>> unwrapped() {
+        return Optional.ofNullable(this.unwrapped);
     }
 
-    public GooglePrivacyDlpV2CryptoKeyArgs(
-        @Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped,
-        @Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_,
-        @Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped) {
-        this.kmsWrapped = kmsWrapped;
-        this.transient_ = transient_;
-        this.unwrapped = unwrapped;
-    }
+    private GooglePrivacyDlpV2CryptoKeyArgs() {}
 
-    private GooglePrivacyDlpV2CryptoKeyArgs() {
-        this.kmsWrapped = Codegen.empty();
-        this.transient_ = Codegen.empty();
-        this.unwrapped = Codegen.empty();
+    private GooglePrivacyDlpV2CryptoKeyArgs(GooglePrivacyDlpV2CryptoKeyArgs $) {
+        this.kmsWrapped = $.kmsWrapped;
+        this.transient_ = $.transient_;
+        this.unwrapped = $.unwrapped;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CryptoKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped;
-        private @Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_;
-        private @Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped;
+        private GooglePrivacyDlpV2CryptoKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CryptoKeyArgs();
         }
 
         public Builder(GooglePrivacyDlpV2CryptoKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsWrapped = defaults.kmsWrapped;
-    	      this.transient_ = defaults.transient_;
-    	      this.unwrapped = defaults.unwrapped;
+            $ = new GooglePrivacyDlpV2CryptoKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsWrapped(@Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped) {
-            this.kmsWrapped = kmsWrapped;
+            $.kmsWrapped = kmsWrapped;
             return this;
         }
-        public Builder kmsWrapped(@Nullable GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs kmsWrapped) {
-            this.kmsWrapped = Codegen.ofNullable(kmsWrapped);
-            return this;
+
+        public Builder kmsWrapped(GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs kmsWrapped) {
+            return kmsWrapped(Output.of(kmsWrapped));
         }
+
         public Builder transient_(@Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_) {
-            this.transient_ = transient_;
+            $.transient_ = transient_;
             return this;
         }
-        public Builder transient_(@Nullable GooglePrivacyDlpV2TransientCryptoKeyArgs transient_) {
-            this.transient_ = Codegen.ofNullable(transient_);
-            return this;
+
+        public Builder transient_(GooglePrivacyDlpV2TransientCryptoKeyArgs transient_) {
+            return transient_(Output.of(transient_));
         }
+
         public Builder unwrapped(@Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped) {
-            this.unwrapped = unwrapped;
+            $.unwrapped = unwrapped;
             return this;
         }
-        public Builder unwrapped(@Nullable GooglePrivacyDlpV2UnwrappedCryptoKeyArgs unwrapped) {
-            this.unwrapped = Codegen.ofNullable(unwrapped);
-            return this;
-        }        public GooglePrivacyDlpV2CryptoKeyArgs build() {
-            return new GooglePrivacyDlpV2CryptoKeyArgs(kmsWrapped, transient_, unwrapped);
+
+        public Builder unwrapped(GooglePrivacyDlpV2UnwrappedCryptoKeyArgs unwrapped) {
+            return unwrapped(Output.of(unwrapped));
+        }
+
+        public GooglePrivacyDlpV2CryptoKeyArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.awsnative.refactorspaces.enums.RouteActivationState;
 import com.pulumi.awsnative.refactorspaces.enums.RouteMethod;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,113 +20,104 @@ public final class RouteUriPathRouteInputArgs extends com.pulumi.resources.Resou
     public static final RouteUriPathRouteInputArgs Empty = new RouteUriPathRouteInputArgs();
 
     @Import(name="activationState", required=true)
-      private final Output<RouteActivationState> activationState;
+    private Output<RouteActivationState> activationState;
 
     public Output<RouteActivationState> activationState() {
         return this.activationState;
     }
 
     @Import(name="includeChildPaths")
-      private final @Nullable Output<Boolean> includeChildPaths;
+    private @Nullable Output<Boolean> includeChildPaths;
 
-    public Output<Boolean> includeChildPaths() {
-        return this.includeChildPaths == null ? Codegen.empty() : this.includeChildPaths;
+    public Optional<Output<Boolean>> includeChildPaths() {
+        return Optional.ofNullable(this.includeChildPaths);
     }
 
     @Import(name="methods")
-      private final @Nullable Output<List<RouteMethod>> methods;
+    private @Nullable Output<List<RouteMethod>> methods;
 
-    public Output<List<RouteMethod>> methods() {
-        return this.methods == null ? Codegen.empty() : this.methods;
+    public Optional<Output<List<RouteMethod>>> methods() {
+        return Optional.ofNullable(this.methods);
     }
 
     @Import(name="sourcePath")
-      private final @Nullable Output<String> sourcePath;
+    private @Nullable Output<String> sourcePath;
 
-    public Output<String> sourcePath() {
-        return this.sourcePath == null ? Codegen.empty() : this.sourcePath;
+    public Optional<Output<String>> sourcePath() {
+        return Optional.ofNullable(this.sourcePath);
     }
 
-    public RouteUriPathRouteInputArgs(
-        Output<RouteActivationState> activationState,
-        @Nullable Output<Boolean> includeChildPaths,
-        @Nullable Output<List<RouteMethod>> methods,
-        @Nullable Output<String> sourcePath) {
-        this.activationState = Objects.requireNonNull(activationState, "expected parameter 'activationState' to be non-null");
-        this.includeChildPaths = includeChildPaths;
-        this.methods = methods;
-        this.sourcePath = sourcePath;
-    }
+    private RouteUriPathRouteInputArgs() {}
 
-    private RouteUriPathRouteInputArgs() {
-        this.activationState = Codegen.empty();
-        this.includeChildPaths = Codegen.empty();
-        this.methods = Codegen.empty();
-        this.sourcePath = Codegen.empty();
+    private RouteUriPathRouteInputArgs(RouteUriPathRouteInputArgs $) {
+        this.activationState = $.activationState;
+        this.includeChildPaths = $.includeChildPaths;
+        this.methods = $.methods;
+        this.sourcePath = $.sourcePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteUriPathRouteInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RouteActivationState> activationState;
-        private @Nullable Output<Boolean> includeChildPaths;
-        private @Nullable Output<List<RouteMethod>> methods;
-        private @Nullable Output<String> sourcePath;
+        private RouteUriPathRouteInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteUriPathRouteInputArgs();
         }
 
         public Builder(RouteUriPathRouteInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activationState = defaults.activationState;
-    	      this.includeChildPaths = defaults.includeChildPaths;
-    	      this.methods = defaults.methods;
-    	      this.sourcePath = defaults.sourcePath;
+            $ = new RouteUriPathRouteInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activationState(Output<RouteActivationState> activationState) {
-            this.activationState = Objects.requireNonNull(activationState);
+            $.activationState = activationState;
             return this;
         }
+
         public Builder activationState(RouteActivationState activationState) {
-            this.activationState = Output.of(Objects.requireNonNull(activationState));
-            return this;
+            return activationState(Output.of(activationState));
         }
+
         public Builder includeChildPaths(@Nullable Output<Boolean> includeChildPaths) {
-            this.includeChildPaths = includeChildPaths;
+            $.includeChildPaths = includeChildPaths;
             return this;
         }
-        public Builder includeChildPaths(@Nullable Boolean includeChildPaths) {
-            this.includeChildPaths = Codegen.ofNullable(includeChildPaths);
-            return this;
+
+        public Builder includeChildPaths(Boolean includeChildPaths) {
+            return includeChildPaths(Output.of(includeChildPaths));
         }
+
         public Builder methods(@Nullable Output<List<RouteMethod>> methods) {
-            this.methods = methods;
+            $.methods = methods;
             return this;
         }
-        public Builder methods(@Nullable List<RouteMethod> methods) {
-            this.methods = Codegen.ofNullable(methods);
-            return this;
+
+        public Builder methods(List<RouteMethod> methods) {
+            return methods(Output.of(methods));
         }
+
         public Builder methods(RouteMethod... methods) {
             return methods(List.of(methods));
         }
+
         public Builder sourcePath(@Nullable Output<String> sourcePath) {
-            this.sourcePath = sourcePath;
+            $.sourcePath = sourcePath;
             return this;
         }
-        public Builder sourcePath(@Nullable String sourcePath) {
-            this.sourcePath = Codegen.ofNullable(sourcePath);
-            return this;
-        }        public RouteUriPathRouteInputArgs build() {
-            return new RouteUriPathRouteInputArgs(activationState, includeChildPaths, methods, sourcePath);
+
+        public Builder sourcePath(String sourcePath) {
+            return sourcePath(Output.of(sourcePath));
+        }
+
+        public RouteUriPathRouteInputArgs build() {
+            $.activationState = Objects.requireNonNull($.activationState, "expected parameter 'activationState' to be non-null");
+            return $;
         }
     }
+
 }

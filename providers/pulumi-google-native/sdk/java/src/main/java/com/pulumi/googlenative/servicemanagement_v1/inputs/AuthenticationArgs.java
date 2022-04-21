@@ -5,11 +5,11 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.AuthProviderArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.AuthenticationRuleArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="providers")
-      private final @Nullable Output<List<AuthProviderArgs>> providers;
+    private @Nullable Output<List<AuthProviderArgs>> providers;
 
-    public Output<List<AuthProviderArgs>> providers() {
-        return this.providers == null ? Codegen.empty() : this.providers;
+    public Optional<Output<List<AuthProviderArgs>>> providers() {
+        return Optional.ofNullable(this.providers);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<AuthenticationRuleArgs>> rules;
+    private @Nullable Output<List<AuthenticationRuleArgs>> rules;
 
-    public Output<List<AuthenticationRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<AuthenticationRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public AuthenticationArgs(
-        @Nullable Output<List<AuthProviderArgs>> providers,
-        @Nullable Output<List<AuthenticationRuleArgs>> rules) {
-        this.providers = providers;
-        this.rules = rules;
-    }
+    private AuthenticationArgs() {}
 
-    private AuthenticationArgs() {
-        this.providers = Codegen.empty();
-        this.rules = Codegen.empty();
+    private AuthenticationArgs(AuthenticationArgs $) {
+        this.providers = $.providers;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AuthProviderArgs>> providers;
-        private @Nullable Output<List<AuthenticationRuleArgs>> rules;
+        private AuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationArgs();
         }
 
         public Builder(AuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.providers = defaults.providers;
-    	      this.rules = defaults.rules;
+            $ = new AuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder providers(@Nullable Output<List<AuthProviderArgs>> providers) {
-            this.providers = providers;
+            $.providers = providers;
             return this;
         }
-        public Builder providers(@Nullable List<AuthProviderArgs> providers) {
-            this.providers = Codegen.ofNullable(providers);
-            return this;
+
+        public Builder providers(List<AuthProviderArgs> providers) {
+            return providers(Output.of(providers));
         }
+
         public Builder providers(AuthProviderArgs... providers) {
             return providers(List.of(providers));
         }
+
         public Builder rules(@Nullable Output<List<AuthenticationRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<AuthenticationRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<AuthenticationRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(AuthenticationRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public AuthenticationArgs build() {
-            return new AuthenticationArgs(providers, rules);
+        }
+
+        public AuthenticationArgs build() {
+            return $;
         }
     }
+
 }

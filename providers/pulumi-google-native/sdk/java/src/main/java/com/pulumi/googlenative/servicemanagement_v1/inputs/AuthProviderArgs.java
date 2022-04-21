@@ -5,11 +5,11 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.JwtLocationArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AuthProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audiences")
-      private final @Nullable Output<String> audiences;
+    private @Nullable Output<String> audiences;
 
-    public Output<String> audiences() {
-        return this.audiences == null ? Codegen.empty() : this.audiences;
+    public Optional<Output<String>> audiences() {
+        return Optional.ofNullable(this.audiences);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AuthProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizationUrl")
-      private final @Nullable Output<String> authorizationUrl;
+    private @Nullable Output<String> authorizationUrl;
 
-    public Output<String> authorizationUrl() {
-        return this.authorizationUrl == null ? Codegen.empty() : this.authorizationUrl;
+    public Optional<Output<String>> authorizationUrl() {
+        return Optional.ofNullable(this.authorizationUrl);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AuthProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AuthProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="issuer")
-      private final @Nullable Output<String> issuer;
+    private @Nullable Output<String> issuer;
 
-    public Output<String> issuer() {
-        return this.issuer == null ? Codegen.empty() : this.issuer;
+    public Optional<Output<String>> issuer() {
+        return Optional.ofNullable(this.issuer);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class AuthProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jwksUri")
-      private final @Nullable Output<String> jwksUri;
+    private @Nullable Output<String> jwksUri;
 
-    public Output<String> jwksUri() {
-        return this.jwksUri == null ? Codegen.empty() : this.jwksUri;
+    public Optional<Output<String>> jwksUri() {
+        return Optional.ofNullable(this.jwksUri);
     }
 
     /**
@@ -81,118 +81,102 @@ public final class AuthProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jwtLocations")
-      private final @Nullable Output<List<JwtLocationArgs>> jwtLocations;
+    private @Nullable Output<List<JwtLocationArgs>> jwtLocations;
 
-    public Output<List<JwtLocationArgs>> jwtLocations() {
-        return this.jwtLocations == null ? Codegen.empty() : this.jwtLocations;
+    public Optional<Output<List<JwtLocationArgs>>> jwtLocations() {
+        return Optional.ofNullable(this.jwtLocations);
     }
 
-    public AuthProviderArgs(
-        @Nullable Output<String> audiences,
-        @Nullable Output<String> authorizationUrl,
-        @Nullable Output<String> id,
-        @Nullable Output<String> issuer,
-        @Nullable Output<String> jwksUri,
-        @Nullable Output<List<JwtLocationArgs>> jwtLocations) {
-        this.audiences = audiences;
-        this.authorizationUrl = authorizationUrl;
-        this.id = id;
-        this.issuer = issuer;
-        this.jwksUri = jwksUri;
-        this.jwtLocations = jwtLocations;
-    }
+    private AuthProviderArgs() {}
 
-    private AuthProviderArgs() {
-        this.audiences = Codegen.empty();
-        this.authorizationUrl = Codegen.empty();
-        this.id = Codegen.empty();
-        this.issuer = Codegen.empty();
-        this.jwksUri = Codegen.empty();
-        this.jwtLocations = Codegen.empty();
+    private AuthProviderArgs(AuthProviderArgs $) {
+        this.audiences = $.audiences;
+        this.authorizationUrl = $.authorizationUrl;
+        this.id = $.id;
+        this.issuer = $.issuer;
+        this.jwksUri = $.jwksUri;
+        this.jwtLocations = $.jwtLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audiences;
-        private @Nullable Output<String> authorizationUrl;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> issuer;
-        private @Nullable Output<String> jwksUri;
-        private @Nullable Output<List<JwtLocationArgs>> jwtLocations;
+        private AuthProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthProviderArgs();
         }
 
         public Builder(AuthProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audiences = defaults.audiences;
-    	      this.authorizationUrl = defaults.authorizationUrl;
-    	      this.id = defaults.id;
-    	      this.issuer = defaults.issuer;
-    	      this.jwksUri = defaults.jwksUri;
-    	      this.jwtLocations = defaults.jwtLocations;
+            $ = new AuthProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audiences(@Nullable Output<String> audiences) {
-            this.audiences = audiences;
+            $.audiences = audiences;
             return this;
         }
-        public Builder audiences(@Nullable String audiences) {
-            this.audiences = Codegen.ofNullable(audiences);
-            return this;
+
+        public Builder audiences(String audiences) {
+            return audiences(Output.of(audiences));
         }
+
         public Builder authorizationUrl(@Nullable Output<String> authorizationUrl) {
-            this.authorizationUrl = authorizationUrl;
+            $.authorizationUrl = authorizationUrl;
             return this;
         }
-        public Builder authorizationUrl(@Nullable String authorizationUrl) {
-            this.authorizationUrl = Codegen.ofNullable(authorizationUrl);
-            return this;
+
+        public Builder authorizationUrl(String authorizationUrl) {
+            return authorizationUrl(Output.of(authorizationUrl));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder issuer(@Nullable Output<String> issuer) {
-            this.issuer = issuer;
+            $.issuer = issuer;
             return this;
         }
-        public Builder issuer(@Nullable String issuer) {
-            this.issuer = Codegen.ofNullable(issuer);
-            return this;
+
+        public Builder issuer(String issuer) {
+            return issuer(Output.of(issuer));
         }
+
         public Builder jwksUri(@Nullable Output<String> jwksUri) {
-            this.jwksUri = jwksUri;
+            $.jwksUri = jwksUri;
             return this;
         }
-        public Builder jwksUri(@Nullable String jwksUri) {
-            this.jwksUri = Codegen.ofNullable(jwksUri);
-            return this;
+
+        public Builder jwksUri(String jwksUri) {
+            return jwksUri(Output.of(jwksUri));
         }
+
         public Builder jwtLocations(@Nullable Output<List<JwtLocationArgs>> jwtLocations) {
-            this.jwtLocations = jwtLocations;
+            $.jwtLocations = jwtLocations;
             return this;
         }
-        public Builder jwtLocations(@Nullable List<JwtLocationArgs> jwtLocations) {
-            this.jwtLocations = Codegen.ofNullable(jwtLocations);
-            return this;
+
+        public Builder jwtLocations(List<JwtLocationArgs> jwtLocations) {
+            return jwtLocations(Output.of(jwtLocations));
         }
+
         public Builder jwtLocations(JwtLocationArgs... jwtLocations) {
             return jwtLocations(List.of(jwtLocations));
-        }        public AuthProviderArgs build() {
-            return new AuthProviderArgs(audiences, authorizationUrl, id, issuer, jwksUri, jwtLocations);
+        }
+
+        public AuthProviderArgs build() {
+            return $;
         }
     }
+
 }

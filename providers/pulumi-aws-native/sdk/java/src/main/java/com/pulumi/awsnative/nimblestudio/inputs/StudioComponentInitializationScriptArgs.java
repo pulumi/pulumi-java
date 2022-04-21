@@ -7,9 +7,9 @@ import com.pulumi.awsnative.nimblestudio.enums.StudioComponentInitializationScri
 import com.pulumi.awsnative.nimblestudio.enums.StudioComponentLaunchProfilePlatform;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,24 +26,24 @@ public final class StudioComponentInitializationScriptArgs extends com.pulumi.re
      * 
      */
     @Import(name="launchProfileProtocolVersion")
-      private final @Nullable Output<String> launchProfileProtocolVersion;
+    private @Nullable Output<String> launchProfileProtocolVersion;
 
-    public Output<String> launchProfileProtocolVersion() {
-        return this.launchProfileProtocolVersion == null ? Codegen.empty() : this.launchProfileProtocolVersion;
+    public Optional<Output<String>> launchProfileProtocolVersion() {
+        return Optional.ofNullable(this.launchProfileProtocolVersion);
     }
 
     @Import(name="platform")
-      private final @Nullable Output<StudioComponentLaunchProfilePlatform> platform;
+    private @Nullable Output<StudioComponentLaunchProfilePlatform> platform;
 
-    public Output<StudioComponentLaunchProfilePlatform> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<StudioComponentLaunchProfilePlatform>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     @Import(name="runContext")
-      private final @Nullable Output<StudioComponentInitializationScriptRunContext> runContext;
+    private @Nullable Output<StudioComponentInitializationScriptRunContext> runContext;
 
-    public Output<StudioComponentInitializationScriptRunContext> runContext() {
-        return this.runContext == null ? Codegen.empty() : this.runContext;
+    public Optional<Output<StudioComponentInitializationScriptRunContext>> runContext() {
+        return Optional.ofNullable(this.runContext);
     }
 
     /**
@@ -51,89 +51,78 @@ public final class StudioComponentInitializationScriptArgs extends com.pulumi.re
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<String> script;
+    private @Nullable Output<String> script;
 
-    public Output<String> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<String>> script() {
+        return Optional.ofNullable(this.script);
     }
 
-    public StudioComponentInitializationScriptArgs(
-        @Nullable Output<String> launchProfileProtocolVersion,
-        @Nullable Output<StudioComponentLaunchProfilePlatform> platform,
-        @Nullable Output<StudioComponentInitializationScriptRunContext> runContext,
-        @Nullable Output<String> script) {
-        this.launchProfileProtocolVersion = launchProfileProtocolVersion;
-        this.platform = platform;
-        this.runContext = runContext;
-        this.script = script;
-    }
+    private StudioComponentInitializationScriptArgs() {}
 
-    private StudioComponentInitializationScriptArgs() {
-        this.launchProfileProtocolVersion = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.runContext = Codegen.empty();
-        this.script = Codegen.empty();
+    private StudioComponentInitializationScriptArgs(StudioComponentInitializationScriptArgs $) {
+        this.launchProfileProtocolVersion = $.launchProfileProtocolVersion;
+        this.platform = $.platform;
+        this.runContext = $.runContext;
+        this.script = $.script;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentInitializationScriptArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> launchProfileProtocolVersion;
-        private @Nullable Output<StudioComponentLaunchProfilePlatform> platform;
-        private @Nullable Output<StudioComponentInitializationScriptRunContext> runContext;
-        private @Nullable Output<String> script;
+        private StudioComponentInitializationScriptArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentInitializationScriptArgs();
         }
 
         public Builder(StudioComponentInitializationScriptArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchProfileProtocolVersion = defaults.launchProfileProtocolVersion;
-    	      this.platform = defaults.platform;
-    	      this.runContext = defaults.runContext;
-    	      this.script = defaults.script;
+            $ = new StudioComponentInitializationScriptArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder launchProfileProtocolVersion(@Nullable Output<String> launchProfileProtocolVersion) {
-            this.launchProfileProtocolVersion = launchProfileProtocolVersion;
+            $.launchProfileProtocolVersion = launchProfileProtocolVersion;
             return this;
         }
-        public Builder launchProfileProtocolVersion(@Nullable String launchProfileProtocolVersion) {
-            this.launchProfileProtocolVersion = Codegen.ofNullable(launchProfileProtocolVersion);
-            return this;
+
+        public Builder launchProfileProtocolVersion(String launchProfileProtocolVersion) {
+            return launchProfileProtocolVersion(Output.of(launchProfileProtocolVersion));
         }
+
         public Builder platform(@Nullable Output<StudioComponentLaunchProfilePlatform> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable StudioComponentLaunchProfilePlatform platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(StudioComponentLaunchProfilePlatform platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder runContext(@Nullable Output<StudioComponentInitializationScriptRunContext> runContext) {
-            this.runContext = runContext;
+            $.runContext = runContext;
             return this;
         }
-        public Builder runContext(@Nullable StudioComponentInitializationScriptRunContext runContext) {
-            this.runContext = Codegen.ofNullable(runContext);
-            return this;
+
+        public Builder runContext(StudioComponentInitializationScriptRunContext runContext) {
+            return runContext(Output.of(runContext));
         }
+
         public Builder script(@Nullable Output<String> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable String script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
-        }        public StudioComponentInitializationScriptArgs build() {
-            return new StudioComponentInitializationScriptArgs(launchProfileProtocolVersion, platform, runContext, script);
+
+        public Builder script(String script) {
+            return script(Output.of(script));
+        }
+
+        public StudioComponentInitializationScriptArgs build() {
+            return $;
         }
     }
+
 }

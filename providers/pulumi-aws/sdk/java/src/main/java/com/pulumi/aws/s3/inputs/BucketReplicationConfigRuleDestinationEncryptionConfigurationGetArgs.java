@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
      * 
      */
     @Import(name="replicaKmsKeyId", required=true)
-      private final Output<String> replicaKmsKeyId;
+    private Output<String> replicaKmsKeyId;
 
     public Output<String> replicaKmsKeyId() {
         return this.replicaKmsKeyId;
     }
 
-    public BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs(Output<String> replicaKmsKeyId) {
-        this.replicaKmsKeyId = Objects.requireNonNull(replicaKmsKeyId, "expected parameter 'replicaKmsKeyId' to be non-null");
-    }
+    private BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs() {}
 
-    private BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs() {
-        this.replicaKmsKeyId = Codegen.empty();
+    private BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs(BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs $) {
+        this.replicaKmsKeyId = $.replicaKmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> replicaKmsKeyId;
+        private BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs();
         }
 
         public Builder(BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicaKmsKeyId = defaults.replicaKmsKeyId;
+            $ = new BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replicaKmsKeyId(Output<String> replicaKmsKeyId) {
-            this.replicaKmsKeyId = Objects.requireNonNull(replicaKmsKeyId);
+            $.replicaKmsKeyId = replicaKmsKeyId;
             return this;
         }
+
         public Builder replicaKmsKeyId(String replicaKmsKeyId) {
-            this.replicaKmsKeyId = Output.of(Objects.requireNonNull(replicaKmsKeyId));
-            return this;
-        }        public BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs build() {
-            return new BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs(replicaKmsKeyId);
+            return replicaKmsKeyId(Output.of(replicaKmsKeyId));
+        }
+
+        public BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs build() {
+            $.replicaKmsKeyId = Objects.requireNonNull($.replicaKmsKeyId, "expected parameter 'replicaKmsKeyId' to be non-null");
+            return $;
         }
     }
+
 }

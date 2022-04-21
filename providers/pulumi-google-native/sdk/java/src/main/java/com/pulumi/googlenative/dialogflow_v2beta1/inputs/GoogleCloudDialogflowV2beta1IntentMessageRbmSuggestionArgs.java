@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
      * 
      */
     @Import(name="reply")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply() {
-        return this.reply == null ? Codegen.empty() : this.reply;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs>> reply() {
+        return Optional.ofNullable(this.reply);
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs(
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply) {
-        this.action = action;
-        this.reply = reply;
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs() {
-        this.action = Codegen.empty();
-        this.reply = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs $) {
+        this.action = $.action;
+        this.reply = $.reply;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.reply = defaults.reply;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs action) {
+            return action(Output.of(action));
         }
+
         public Builder reply(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply) {
-            this.reply = reply;
+            $.reply = reply;
             return this;
         }
-        public Builder reply(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs reply) {
-            this.reply = Codegen.ofNullable(reply);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs(action, reply);
+
+        public Builder reply(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs reply) {
+            return reply(Output.of(reply));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs build() {
+            return $;
         }
     }
+
 }

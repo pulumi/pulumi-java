@@ -24,10 +24,10 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
      * 
      */
     @Import(name="autoscaleEnabled")
-      private final @Nullable Boolean autoscaleEnabled;
+    private @Nullable Boolean autoscaleEnabled;
 
     public Optional<Boolean> autoscaleEnabled() {
-        return this.autoscaleEnabled == null ? Optional.empty() : Optional.ofNullable(this.autoscaleEnabled);
+        return Optional.ofNullable(this.autoscaleEnabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
      * 
      */
     @Import(name="maxReplicas")
-      private final @Nullable Integer maxReplicas;
+    private @Nullable Integer maxReplicas;
 
     public Optional<Integer> maxReplicas() {
-        return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
+        return Optional.ofNullable(this.maxReplicas);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
      * 
      */
     @Import(name="minReplicas")
-      private final @Nullable Integer minReplicas;
+    private @Nullable Integer minReplicas;
 
     public Optional<Integer> minReplicas() {
-        return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
+        return Optional.ofNullable(this.minReplicas);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
      * 
      */
     @Import(name="refreshPeriodInSeconds")
-      private final @Nullable Integer refreshPeriodInSeconds;
+    private @Nullable Integer refreshPeriodInSeconds;
 
     public Optional<Integer> refreshPeriodInSeconds() {
-        return this.refreshPeriodInSeconds == null ? Optional.empty() : Optional.ofNullable(this.refreshPeriodInSeconds);
+        return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
      * 
      */
     @Import(name="targetUtilization")
-      private final @Nullable Integer targetUtilization;
+    private @Nullable Integer targetUtilization;
 
     public Optional<Integer> targetUtilization() {
-        return this.targetUtilization == null ? Optional.empty() : Optional.ofNullable(this.targetUtilization);
+        return Optional.ofNullable(this.targetUtilization);
     }
 
-    public AKSServiceResponseResponseAutoScaler(
-        @Nullable Boolean autoscaleEnabled,
-        @Nullable Integer maxReplicas,
-        @Nullable Integer minReplicas,
-        @Nullable Integer refreshPeriodInSeconds,
-        @Nullable Integer targetUtilization) {
-        this.autoscaleEnabled = autoscaleEnabled;
-        this.maxReplicas = maxReplicas;
-        this.minReplicas = minReplicas;
-        this.refreshPeriodInSeconds = refreshPeriodInSeconds;
-        this.targetUtilization = targetUtilization;
-    }
+    private AKSServiceResponseResponseAutoScaler() {}
 
-    private AKSServiceResponseResponseAutoScaler() {
-        this.autoscaleEnabled = null;
-        this.maxReplicas = null;
-        this.minReplicas = null;
-        this.refreshPeriodInSeconds = null;
-        this.targetUtilization = null;
+    private AKSServiceResponseResponseAutoScaler(AKSServiceResponseResponseAutoScaler $) {
+        this.autoscaleEnabled = $.autoscaleEnabled;
+        this.maxReplicas = $.maxReplicas;
+        this.minReplicas = $.minReplicas;
+        this.refreshPeriodInSeconds = $.refreshPeriodInSeconds;
+        this.targetUtilization = $.targetUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AKSServiceResponseResponseAutoScaler defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean autoscaleEnabled;
-        private @Nullable Integer maxReplicas;
-        private @Nullable Integer minReplicas;
-        private @Nullable Integer refreshPeriodInSeconds;
-        private @Nullable Integer targetUtilization;
+        private AKSServiceResponseResponseAutoScaler $;
 
         public Builder() {
-    	      // Empty
+            $ = new AKSServiceResponseResponseAutoScaler();
         }
 
         public Builder(AKSServiceResponseResponseAutoScaler defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaleEnabled = defaults.autoscaleEnabled;
-    	      this.maxReplicas = defaults.maxReplicas;
-    	      this.minReplicas = defaults.minReplicas;
-    	      this.refreshPeriodInSeconds = defaults.refreshPeriodInSeconds;
-    	      this.targetUtilization = defaults.targetUtilization;
+            $ = new AKSServiceResponseResponseAutoScaler(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaleEnabled(@Nullable Boolean autoscaleEnabled) {
-            this.autoscaleEnabled = autoscaleEnabled;
+            $.autoscaleEnabled = autoscaleEnabled;
             return this;
         }
+
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = maxReplicas;
+            $.maxReplicas = maxReplicas;
             return this;
         }
+
         public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = minReplicas;
+            $.minReplicas = minReplicas;
             return this;
         }
+
         public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
-            this.refreshPeriodInSeconds = refreshPeriodInSeconds;
+            $.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
+
         public Builder targetUtilization(@Nullable Integer targetUtilization) {
-            this.targetUtilization = targetUtilization;
+            $.targetUtilization = targetUtilization;
             return this;
-        }        public AKSServiceResponseResponseAutoScaler build() {
-            return new AKSServiceResponseResponseAutoScaler(autoscaleEnabled, maxReplicas, minReplicas, refreshPeriodInSeconds, targetUtilization);
+        }
+
+        public AKSServiceResponseResponseAutoScaler build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ObjectConditionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="excludePrefixes", required=true)
-      private final List<String> excludePrefixes;
+    private List<String> excludePrefixes;
 
     public List<String> excludePrefixes() {
         return this.excludePrefixes;
@@ -33,7 +33,7 @@ public final class ObjectConditionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="includePrefixes", required=true)
-      private final List<String> includePrefixes;
+    private List<String> includePrefixes;
 
     public List<String> includePrefixes() {
         return this.includePrefixes;
@@ -44,7 +44,7 @@ public final class ObjectConditionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="lastModifiedBefore", required=true)
-      private final String lastModifiedBefore;
+    private String lastModifiedBefore;
 
     public String lastModifiedBefore() {
         return this.lastModifiedBefore;
@@ -55,7 +55,7 @@ public final class ObjectConditionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="lastModifiedSince", required=true)
-      private final String lastModifiedSince;
+    private String lastModifiedSince;
 
     public String lastModifiedSince() {
         return this.lastModifiedSince;
@@ -66,7 +66,7 @@ public final class ObjectConditionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxTimeElapsedSinceLastModification", required=true)
-      private final String maxTimeElapsedSinceLastModification;
+    private String maxTimeElapsedSinceLastModification;
 
     public String maxTimeElapsedSinceLastModification() {
         return this.maxTimeElapsedSinceLastModification;
@@ -77,97 +77,88 @@ public final class ObjectConditionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="minTimeElapsedSinceLastModification", required=true)
-      private final String minTimeElapsedSinceLastModification;
+    private String minTimeElapsedSinceLastModification;
 
     public String minTimeElapsedSinceLastModification() {
         return this.minTimeElapsedSinceLastModification;
     }
 
-    public ObjectConditionsResponse(
-        List<String> excludePrefixes,
-        List<String> includePrefixes,
-        String lastModifiedBefore,
-        String lastModifiedSince,
-        String maxTimeElapsedSinceLastModification,
-        String minTimeElapsedSinceLastModification) {
-        this.excludePrefixes = Objects.requireNonNull(excludePrefixes, "expected parameter 'excludePrefixes' to be non-null");
-        this.includePrefixes = Objects.requireNonNull(includePrefixes, "expected parameter 'includePrefixes' to be non-null");
-        this.lastModifiedBefore = Objects.requireNonNull(lastModifiedBefore, "expected parameter 'lastModifiedBefore' to be non-null");
-        this.lastModifiedSince = Objects.requireNonNull(lastModifiedSince, "expected parameter 'lastModifiedSince' to be non-null");
-        this.maxTimeElapsedSinceLastModification = Objects.requireNonNull(maxTimeElapsedSinceLastModification, "expected parameter 'maxTimeElapsedSinceLastModification' to be non-null");
-        this.minTimeElapsedSinceLastModification = Objects.requireNonNull(minTimeElapsedSinceLastModification, "expected parameter 'minTimeElapsedSinceLastModification' to be non-null");
-    }
+    private ObjectConditionsResponse() {}
 
-    private ObjectConditionsResponse() {
-        this.excludePrefixes = List.of();
-        this.includePrefixes = List.of();
-        this.lastModifiedBefore = null;
-        this.lastModifiedSince = null;
-        this.maxTimeElapsedSinceLastModification = null;
-        this.minTimeElapsedSinceLastModification = null;
+    private ObjectConditionsResponse(ObjectConditionsResponse $) {
+        this.excludePrefixes = $.excludePrefixes;
+        this.includePrefixes = $.includePrefixes;
+        this.lastModifiedBefore = $.lastModifiedBefore;
+        this.lastModifiedSince = $.lastModifiedSince;
+        this.maxTimeElapsedSinceLastModification = $.maxTimeElapsedSinceLastModification;
+        this.minTimeElapsedSinceLastModification = $.minTimeElapsedSinceLastModification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectConditionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> excludePrefixes;
-        private List<String> includePrefixes;
-        private String lastModifiedBefore;
-        private String lastModifiedSince;
-        private String maxTimeElapsedSinceLastModification;
-        private String minTimeElapsedSinceLastModification;
+        private ObjectConditionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectConditionsResponse();
         }
 
         public Builder(ObjectConditionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludePrefixes = defaults.excludePrefixes;
-    	      this.includePrefixes = defaults.includePrefixes;
-    	      this.lastModifiedBefore = defaults.lastModifiedBefore;
-    	      this.lastModifiedSince = defaults.lastModifiedSince;
-    	      this.maxTimeElapsedSinceLastModification = defaults.maxTimeElapsedSinceLastModification;
-    	      this.minTimeElapsedSinceLastModification = defaults.minTimeElapsedSinceLastModification;
+            $ = new ObjectConditionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder excludePrefixes(List<String> excludePrefixes) {
-            this.excludePrefixes = Objects.requireNonNull(excludePrefixes);
+            $.excludePrefixes = excludePrefixes;
             return this;
         }
+
         public Builder excludePrefixes(String... excludePrefixes) {
             return excludePrefixes(List.of(excludePrefixes));
         }
+
         public Builder includePrefixes(List<String> includePrefixes) {
-            this.includePrefixes = Objects.requireNonNull(includePrefixes);
+            $.includePrefixes = includePrefixes;
             return this;
         }
+
         public Builder includePrefixes(String... includePrefixes) {
             return includePrefixes(List.of(includePrefixes));
         }
+
         public Builder lastModifiedBefore(String lastModifiedBefore) {
-            this.lastModifiedBefore = Objects.requireNonNull(lastModifiedBefore);
+            $.lastModifiedBefore = lastModifiedBefore;
             return this;
         }
+
         public Builder lastModifiedSince(String lastModifiedSince) {
-            this.lastModifiedSince = Objects.requireNonNull(lastModifiedSince);
+            $.lastModifiedSince = lastModifiedSince;
             return this;
         }
+
         public Builder maxTimeElapsedSinceLastModification(String maxTimeElapsedSinceLastModification) {
-            this.maxTimeElapsedSinceLastModification = Objects.requireNonNull(maxTimeElapsedSinceLastModification);
+            $.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
             return this;
         }
+
         public Builder minTimeElapsedSinceLastModification(String minTimeElapsedSinceLastModification) {
-            this.minTimeElapsedSinceLastModification = Objects.requireNonNull(minTimeElapsedSinceLastModification);
+            $.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
             return this;
-        }        public ObjectConditionsResponse build() {
-            return new ObjectConditionsResponse(excludePrefixes, includePrefixes, lastModifiedBefore, lastModifiedSince, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);
+        }
+
+        public ObjectConditionsResponse build() {
+            $.excludePrefixes = Objects.requireNonNull($.excludePrefixes, "expected parameter 'excludePrefixes' to be non-null");
+            $.includePrefixes = Objects.requireNonNull($.includePrefixes, "expected parameter 'includePrefixes' to be non-null");
+            $.lastModifiedBefore = Objects.requireNonNull($.lastModifiedBefore, "expected parameter 'lastModifiedBefore' to be non-null");
+            $.lastModifiedSince = Objects.requireNonNull($.lastModifiedSince, "expected parameter 'lastModifiedSince' to be non-null");
+            $.maxTimeElapsedSinceLastModification = Objects.requireNonNull($.maxTimeElapsedSinceLastModification, "expected parameter 'maxTimeElapsedSinceLastModification' to be non-null");
+            $.minTimeElapsedSinceLastModification = Objects.requireNonNull($.minTimeElapsedSinceLastModification, "expected parameter 'minTimeElapsedSinceLastModification' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetDelegatedSubnetServiceDetailsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetDelegatedSubnetServiceDetailsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetDelegatedSubnetServiceDetailsArgs(
-        String resourceGroupName,
-        String resourceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetDelegatedSubnetServiceDetailsArgs() {}
 
-    private GetDelegatedSubnetServiceDetailsArgs() {
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetDelegatedSubnetServiceDetailsArgs(GetDelegatedSubnetServiceDetailsArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDelegatedSubnetServiceDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceName;
+        private GetDelegatedSubnetServiceDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDelegatedSubnetServiceDetailsArgs();
         }
 
         public Builder(GetDelegatedSubnetServiceDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetDelegatedSubnetServiceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetDelegatedSubnetServiceDetailsArgs build() {
-            return new GetDelegatedSubnetServiceDetailsArgs(resourceGroupName, resourceName);
+        }
+
+        public GetDelegatedSubnetServiceDetailsArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

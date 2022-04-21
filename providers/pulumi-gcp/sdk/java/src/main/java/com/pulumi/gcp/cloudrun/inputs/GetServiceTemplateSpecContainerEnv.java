@@ -19,81 +19,77 @@ public final class GetServiceTemplateSpecContainerEnv extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
     @Import(name="valueFroms", required=true)
-      private final List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms;
+    private List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms;
 
     public List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms() {
         return this.valueFroms;
     }
 
-    public GetServiceTemplateSpecContainerEnv(
-        String name,
-        String value,
-        List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-        this.valueFroms = Objects.requireNonNull(valueFroms, "expected parameter 'valueFroms' to be non-null");
-    }
+    private GetServiceTemplateSpecContainerEnv() {}
 
-    private GetServiceTemplateSpecContainerEnv() {
-        this.name = null;
-        this.value = null;
-        this.valueFroms = List.of();
+    private GetServiceTemplateSpecContainerEnv(GetServiceTemplateSpecContainerEnv $) {
+        this.name = $.name;
+        this.value = $.value;
+        this.valueFroms = $.valueFroms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecContainerEnv defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String value;
-        private List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms;
+        private GetServiceTemplateSpecContainerEnv $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecContainerEnv();
         }
 
         public Builder(GetServiceTemplateSpecContainerEnv defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
-    	      this.valueFroms = defaults.valueFroms;
+            $ = new GetServiceTemplateSpecContainerEnv(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder valueFroms(List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms) {
-            this.valueFroms = Objects.requireNonNull(valueFroms);
+            $.valueFroms = valueFroms;
             return this;
         }
+
         public Builder valueFroms(GetServiceTemplateSpecContainerEnvValueFrom... valueFroms) {
             return valueFroms(List.of(valueFroms));
-        }        public GetServiceTemplateSpecContainerEnv build() {
-            return new GetServiceTemplateSpecContainerEnv(name, value, valueFroms);
+        }
+
+        public GetServiceTemplateSpecContainerEnv build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            $.valueFroms = Objects.requireNonNull($.valueFroms, "expected parameter 'valueFroms' to be non-null");
+            return $;
         }
     }
+
 }

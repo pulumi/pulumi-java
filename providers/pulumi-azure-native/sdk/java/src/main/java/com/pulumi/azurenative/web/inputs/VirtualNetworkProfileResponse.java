@@ -23,7 +23,7 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -34,7 +34,7 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,10 +45,10 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="subnet")
-      private final @Nullable String subnet;
+    private @Nullable String subnet;
 
     public Optional<String> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -56,73 +56,65 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public VirtualNetworkProfileResponse(
-        String id,
-        String name,
-        @Nullable String subnet,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.subnet = subnet;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private VirtualNetworkProfileResponse() {}
 
-    private VirtualNetworkProfileResponse() {
-        this.id = null;
-        this.name = null;
-        this.subnet = null;
-        this.type = null;
+    private VirtualNetworkProfileResponse(VirtualNetworkProfileResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.subnet = $.subnet;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private @Nullable String subnet;
-        private String type;
+        private VirtualNetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkProfileResponse();
         }
 
         public Builder(VirtualNetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.subnet = defaults.subnet;
-    	      this.type = defaults.type;
+            $ = new VirtualNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public VirtualNetworkProfileResponse build() {
-            return new VirtualNetworkProfileResponse(id, name, subnet, type);
+        }
+
+        public VirtualNetworkProfileResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

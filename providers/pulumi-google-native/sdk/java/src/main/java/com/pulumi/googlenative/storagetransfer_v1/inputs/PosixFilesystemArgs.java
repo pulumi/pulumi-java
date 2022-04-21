@@ -5,9 +5,9 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PosixFilesystemArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rootDirectory")
-      private final @Nullable Output<String> rootDirectory;
+    private @Nullable Output<String> rootDirectory;
 
-    public Output<String> rootDirectory() {
-        return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
+    public Optional<Output<String>> rootDirectory() {
+        return Optional.ofNullable(this.rootDirectory);
     }
 
-    public PosixFilesystemArgs(@Nullable Output<String> rootDirectory) {
-        this.rootDirectory = rootDirectory;
-    }
+    private PosixFilesystemArgs() {}
 
-    private PosixFilesystemArgs() {
-        this.rootDirectory = Codegen.empty();
+    private PosixFilesystemArgs(PosixFilesystemArgs $) {
+        this.rootDirectory = $.rootDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PosixFilesystemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> rootDirectory;
+        private PosixFilesystemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PosixFilesystemArgs();
         }
 
         public Builder(PosixFilesystemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rootDirectory = defaults.rootDirectory;
+            $ = new PosixFilesystemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rootDirectory(@Nullable Output<String> rootDirectory) {
-            this.rootDirectory = rootDirectory;
+            $.rootDirectory = rootDirectory;
             return this;
         }
-        public Builder rootDirectory(@Nullable String rootDirectory) {
-            this.rootDirectory = Codegen.ofNullable(rootDirectory);
-            return this;
-        }        public PosixFilesystemArgs build() {
-            return new PosixFilesystemArgs(rootDirectory);
+
+        public Builder rootDirectory(String rootDirectory) {
+            return rootDirectory(Output.of(rootDirectory));
+        }
+
+        public PosixFilesystemArgs build() {
+            return $;
         }
     }
+
 }

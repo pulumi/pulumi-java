@@ -17,7 +17,7 @@ public final class GetManagementPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetManagementPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="managementPolicyName", required=true)
-      private final String managementPolicyName;
+    private String managementPolicyName;
 
     public String managementPolicyName() {
         return this.managementPolicyName;
@@ -39,64 +39,59 @@ public final class GetManagementPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagementPolicyArgs(
-        String accountName,
-        String managementPolicyName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.managementPolicyName = Objects.requireNonNull(managementPolicyName, "expected parameter 'managementPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagementPolicyArgs() {}
 
-    private GetManagementPolicyArgs() {
-        this.accountName = null;
-        this.managementPolicyName = null;
-        this.resourceGroupName = null;
+    private GetManagementPolicyArgs(GetManagementPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.managementPolicyName = $.managementPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String managementPolicyName;
-        private String resourceGroupName;
+        private GetManagementPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementPolicyArgs();
         }
 
         public Builder(GetManagementPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.managementPolicyName = defaults.managementPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder managementPolicyName(String managementPolicyName) {
-            this.managementPolicyName = Objects.requireNonNull(managementPolicyName);
+            $.managementPolicyName = managementPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagementPolicyArgs build() {
-            return new GetManagementPolicyArgs(accountName, managementPolicyName, resourceGroupName);
+        }
+
+        public GetManagementPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.managementPolicyName = Objects.requireNonNull($.managementPolicyName, "expected parameter 'managementPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

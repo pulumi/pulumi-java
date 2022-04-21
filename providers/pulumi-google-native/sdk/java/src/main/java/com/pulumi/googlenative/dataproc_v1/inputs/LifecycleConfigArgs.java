@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LifecycleConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="autoDeleteTime")
-      private final @Nullable Output<String> autoDeleteTime;
+    private @Nullable Output<String> autoDeleteTime;
 
-    public Output<String> autoDeleteTime() {
-        return this.autoDeleteTime == null ? Codegen.empty() : this.autoDeleteTime;
+    public Optional<Output<String>> autoDeleteTime() {
+        return Optional.ofNullable(this.autoDeleteTime);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LifecycleConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="autoDeleteTtl")
-      private final @Nullable Output<String> autoDeleteTtl;
+    private @Nullable Output<String> autoDeleteTtl;
 
-    public Output<String> autoDeleteTtl() {
-        return this.autoDeleteTtl == null ? Codegen.empty() : this.autoDeleteTtl;
+    public Optional<Output<String>> autoDeleteTtl() {
+        return Optional.ofNullable(this.autoDeleteTtl);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class LifecycleConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="idleDeleteTtl")
-      private final @Nullable Output<String> idleDeleteTtl;
+    private @Nullable Output<String> idleDeleteTtl;
 
-    public Output<String> idleDeleteTtl() {
-        return this.idleDeleteTtl == null ? Codegen.empty() : this.idleDeleteTtl;
+    public Optional<Output<String>> idleDeleteTtl() {
+        return Optional.ofNullable(this.idleDeleteTtl);
     }
 
-    public LifecycleConfigArgs(
-        @Nullable Output<String> autoDeleteTime,
-        @Nullable Output<String> autoDeleteTtl,
-        @Nullable Output<String> idleDeleteTtl) {
-        this.autoDeleteTime = autoDeleteTime;
-        this.autoDeleteTtl = autoDeleteTtl;
-        this.idleDeleteTtl = idleDeleteTtl;
-    }
+    private LifecycleConfigArgs() {}
 
-    private LifecycleConfigArgs() {
-        this.autoDeleteTime = Codegen.empty();
-        this.autoDeleteTtl = Codegen.empty();
-        this.idleDeleteTtl = Codegen.empty();
+    private LifecycleConfigArgs(LifecycleConfigArgs $) {
+        this.autoDeleteTime = $.autoDeleteTime;
+        this.autoDeleteTtl = $.autoDeleteTtl;
+        this.idleDeleteTtl = $.idleDeleteTtl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecycleConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoDeleteTime;
-        private @Nullable Output<String> autoDeleteTtl;
-        private @Nullable Output<String> idleDeleteTtl;
+        private LifecycleConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecycleConfigArgs();
         }
 
         public Builder(LifecycleConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDeleteTime = defaults.autoDeleteTime;
-    	      this.autoDeleteTtl = defaults.autoDeleteTtl;
-    	      this.idleDeleteTtl = defaults.idleDeleteTtl;
+            $ = new LifecycleConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDeleteTime(@Nullable Output<String> autoDeleteTime) {
-            this.autoDeleteTime = autoDeleteTime;
+            $.autoDeleteTime = autoDeleteTime;
             return this;
         }
-        public Builder autoDeleteTime(@Nullable String autoDeleteTime) {
-            this.autoDeleteTime = Codegen.ofNullable(autoDeleteTime);
-            return this;
+
+        public Builder autoDeleteTime(String autoDeleteTime) {
+            return autoDeleteTime(Output.of(autoDeleteTime));
         }
+
         public Builder autoDeleteTtl(@Nullable Output<String> autoDeleteTtl) {
-            this.autoDeleteTtl = autoDeleteTtl;
+            $.autoDeleteTtl = autoDeleteTtl;
             return this;
         }
-        public Builder autoDeleteTtl(@Nullable String autoDeleteTtl) {
-            this.autoDeleteTtl = Codegen.ofNullable(autoDeleteTtl);
-            return this;
+
+        public Builder autoDeleteTtl(String autoDeleteTtl) {
+            return autoDeleteTtl(Output.of(autoDeleteTtl));
         }
+
         public Builder idleDeleteTtl(@Nullable Output<String> idleDeleteTtl) {
-            this.idleDeleteTtl = idleDeleteTtl;
+            $.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
-        public Builder idleDeleteTtl(@Nullable String idleDeleteTtl) {
-            this.idleDeleteTtl = Codegen.ofNullable(idleDeleteTtl);
-            return this;
-        }        public LifecycleConfigArgs build() {
-            return new LifecycleConfigArgs(autoDeleteTime, autoDeleteTtl, idleDeleteTtl);
+
+        public Builder idleDeleteTtl(String idleDeleteTtl) {
+            return idleDeleteTtl(Output.of(idleDeleteTtl));
+        }
+
+        public LifecycleConfigArgs build() {
+            return $;
         }
     }
+
 }

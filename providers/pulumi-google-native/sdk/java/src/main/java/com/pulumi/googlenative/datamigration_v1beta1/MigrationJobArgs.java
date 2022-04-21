@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datamigration_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datamigration_v1beta1.enums.MigrationJobState;
 import com.pulumi.googlenative.datamigration_v1beta1.enums.MigrationJobType;
 import com.pulumi.googlenative.datamigration_v1beta1.inputs.DatabaseTypeArgs;
@@ -15,6 +14,7 @@ import com.pulumi.googlenative.datamigration_v1beta1.inputs.VpcPeeringConnectivi
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
@@ -38,10 +38,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationDatabase")
-      private final @Nullable Output<DatabaseTypeArgs> destinationDatabase;
+    private @Nullable Output<DatabaseTypeArgs> destinationDatabase;
 
-    public Output<DatabaseTypeArgs> destinationDatabase() {
-        return this.destinationDatabase == null ? Codegen.empty() : this.destinationDatabase;
+    public Optional<Output<DatabaseTypeArgs>> destinationDatabase() {
+        return Optional.ofNullable(this.destinationDatabase);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dumpPath")
-      private final @Nullable Output<String> dumpPath;
+    private @Nullable Output<String> dumpPath;
 
-    public Output<String> dumpPath() {
-        return this.dumpPath == null ? Codegen.empty() : this.dumpPath;
+    public Optional<Output<String>> dumpPath() {
+        return Optional.ofNullable(this.dumpPath);
     }
 
     /**
@@ -71,21 +71,21 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="migrationJobId", required=true)
-      private final Output<String> migrationJobId;
+    private Output<String> migrationJobId;
 
     public Output<String> migrationJobId() {
         return this.migrationJobId;
@@ -96,24 +96,24 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reverseSshConnectivity")
-      private final @Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity;
+    private @Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity;
 
-    public Output<ReverseSshConnectivityArgs> reverseSshConnectivity() {
-        return this.reverseSshConnectivity == null ? Codegen.empty() : this.reverseSshConnectivity;
+    public Optional<Output<ReverseSshConnectivityArgs>> reverseSshConnectivity() {
+        return Optional.ofNullable(this.reverseSshConnectivity);
     }
 
     /**
@@ -132,7 +132,7 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
@@ -143,10 +143,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDatabase")
-      private final @Nullable Output<DatabaseTypeArgs> sourceDatabase;
+    private @Nullable Output<DatabaseTypeArgs> sourceDatabase;
 
-    public Output<DatabaseTypeArgs> sourceDatabase() {
-        return this.sourceDatabase == null ? Codegen.empty() : this.sourceDatabase;
+    public Optional<Output<DatabaseTypeArgs>> sourceDatabase() {
+        return Optional.ofNullable(this.sourceDatabase);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<MigrationJobState> state;
+    private @Nullable Output<MigrationJobState> state;
 
-    public Output<MigrationJobState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<MigrationJobState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="staticIpConnectivity")
-      private final @Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity;
+    private @Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity;
 
-    public Output<StaticIpConnectivityArgs> staticIpConnectivity() {
-        return this.staticIpConnectivity == null ? Codegen.empty() : this.staticIpConnectivity;
+    public Optional<Output<StaticIpConnectivityArgs>> staticIpConnectivity() {
+        return Optional.ofNullable(this.staticIpConnectivity);
     }
 
     /**
@@ -176,7 +176,7 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<MigrationJobType> type;
+    private Output<MigrationJobType> type;
 
     public Output<MigrationJobType> type() {
         return this.type;
@@ -187,258 +187,212 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcPeeringConnectivity")
-      private final @Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity;
+    private @Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity;
 
-    public Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity() {
-        return this.vpcPeeringConnectivity == null ? Codegen.empty() : this.vpcPeeringConnectivity;
+    public Optional<Output<VpcPeeringConnectivityArgs>> vpcPeeringConnectivity() {
+        return Optional.ofNullable(this.vpcPeeringConnectivity);
     }
 
-    public MigrationJobArgs(
-        Output<String> destination,
-        @Nullable Output<DatabaseTypeArgs> destinationDatabase,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> dumpPath,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        Output<String> migrationJobId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity,
-        Output<String> source,
-        @Nullable Output<DatabaseTypeArgs> sourceDatabase,
-        @Nullable Output<MigrationJobState> state,
-        @Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity,
-        Output<MigrationJobType> type,
-        @Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.destinationDatabase = destinationDatabase;
-        this.displayName = displayName;
-        this.dumpPath = dumpPath;
-        this.labels = labels;
-        this.location = location;
-        this.migrationJobId = Objects.requireNonNull(migrationJobId, "expected parameter 'migrationJobId' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.reverseSshConnectivity = reverseSshConnectivity;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.sourceDatabase = sourceDatabase;
-        this.state = state;
-        this.staticIpConnectivity = staticIpConnectivity;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.vpcPeeringConnectivity = vpcPeeringConnectivity;
-    }
+    private MigrationJobArgs() {}
 
-    private MigrationJobArgs() {
-        this.destination = Codegen.empty();
-        this.destinationDatabase = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.dumpPath = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.migrationJobId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.reverseSshConnectivity = Codegen.empty();
-        this.source = Codegen.empty();
-        this.sourceDatabase = Codegen.empty();
-        this.state = Codegen.empty();
-        this.staticIpConnectivity = Codegen.empty();
-        this.type = Codegen.empty();
-        this.vpcPeeringConnectivity = Codegen.empty();
+    private MigrationJobArgs(MigrationJobArgs $) {
+        this.destination = $.destination;
+        this.destinationDatabase = $.destinationDatabase;
+        this.displayName = $.displayName;
+        this.dumpPath = $.dumpPath;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.migrationJobId = $.migrationJobId;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.reverseSshConnectivity = $.reverseSshConnectivity;
+        this.source = $.source;
+        this.sourceDatabase = $.sourceDatabase;
+        this.state = $.state;
+        this.staticIpConnectivity = $.staticIpConnectivity;
+        this.type = $.type;
+        this.vpcPeeringConnectivity = $.vpcPeeringConnectivity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destination;
-        private @Nullable Output<DatabaseTypeArgs> destinationDatabase;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> dumpPath;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private Output<String> migrationJobId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity;
-        private Output<String> source;
-        private @Nullable Output<DatabaseTypeArgs> sourceDatabase;
-        private @Nullable Output<MigrationJobState> state;
-        private @Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity;
-        private Output<MigrationJobType> type;
-        private @Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity;
+        private MigrationJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationJobArgs();
         }
 
         public Builder(MigrationJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.destinationDatabase = defaults.destinationDatabase;
-    	      this.displayName = defaults.displayName;
-    	      this.dumpPath = defaults.dumpPath;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.migrationJobId = defaults.migrationJobId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.reverseSshConnectivity = defaults.reverseSshConnectivity;
-    	      this.source = defaults.source;
-    	      this.sourceDatabase = defaults.sourceDatabase;
-    	      this.state = defaults.state;
-    	      this.staticIpConnectivity = defaults.staticIpConnectivity;
-    	      this.type = defaults.type;
-    	      this.vpcPeeringConnectivity = defaults.vpcPeeringConnectivity;
+            $ = new MigrationJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder destinationDatabase(@Nullable Output<DatabaseTypeArgs> destinationDatabase) {
-            this.destinationDatabase = destinationDatabase;
+            $.destinationDatabase = destinationDatabase;
             return this;
         }
-        public Builder destinationDatabase(@Nullable DatabaseTypeArgs destinationDatabase) {
-            this.destinationDatabase = Codegen.ofNullable(destinationDatabase);
-            return this;
+
+        public Builder destinationDatabase(DatabaseTypeArgs destinationDatabase) {
+            return destinationDatabase(Output.of(destinationDatabase));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder dumpPath(@Nullable Output<String> dumpPath) {
-            this.dumpPath = dumpPath;
+            $.dumpPath = dumpPath;
             return this;
         }
-        public Builder dumpPath(@Nullable String dumpPath) {
-            this.dumpPath = Codegen.ofNullable(dumpPath);
-            return this;
+
+        public Builder dumpPath(String dumpPath) {
+            return dumpPath(Output.of(dumpPath));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder migrationJobId(Output<String> migrationJobId) {
-            this.migrationJobId = Objects.requireNonNull(migrationJobId);
+            $.migrationJobId = migrationJobId;
             return this;
         }
+
         public Builder migrationJobId(String migrationJobId) {
-            this.migrationJobId = Output.of(Objects.requireNonNull(migrationJobId));
-            return this;
+            return migrationJobId(Output.of(migrationJobId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder reverseSshConnectivity(@Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity) {
-            this.reverseSshConnectivity = reverseSshConnectivity;
+            $.reverseSshConnectivity = reverseSshConnectivity;
             return this;
         }
-        public Builder reverseSshConnectivity(@Nullable ReverseSshConnectivityArgs reverseSshConnectivity) {
-            this.reverseSshConnectivity = Codegen.ofNullable(reverseSshConnectivity);
-            return this;
+
+        public Builder reverseSshConnectivity(ReverseSshConnectivityArgs reverseSshConnectivity) {
+            return reverseSshConnectivity(Output.of(reverseSshConnectivity));
         }
+
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder sourceDatabase(@Nullable Output<DatabaseTypeArgs> sourceDatabase) {
-            this.sourceDatabase = sourceDatabase;
+            $.sourceDatabase = sourceDatabase;
             return this;
         }
-        public Builder sourceDatabase(@Nullable DatabaseTypeArgs sourceDatabase) {
-            this.sourceDatabase = Codegen.ofNullable(sourceDatabase);
-            return this;
+
+        public Builder sourceDatabase(DatabaseTypeArgs sourceDatabase) {
+            return sourceDatabase(Output.of(sourceDatabase));
         }
+
         public Builder state(@Nullable Output<MigrationJobState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable MigrationJobState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(MigrationJobState state) {
+            return state(Output.of(state));
         }
+
         public Builder staticIpConnectivity(@Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity) {
-            this.staticIpConnectivity = staticIpConnectivity;
+            $.staticIpConnectivity = staticIpConnectivity;
             return this;
         }
-        public Builder staticIpConnectivity(@Nullable StaticIpConnectivityArgs staticIpConnectivity) {
-            this.staticIpConnectivity = Codegen.ofNullable(staticIpConnectivity);
-            return this;
+
+        public Builder staticIpConnectivity(StaticIpConnectivityArgs staticIpConnectivity) {
+            return staticIpConnectivity(Output.of(staticIpConnectivity));
         }
+
         public Builder type(Output<MigrationJobType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(MigrationJobType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder vpcPeeringConnectivity(@Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity) {
-            this.vpcPeeringConnectivity = vpcPeeringConnectivity;
+            $.vpcPeeringConnectivity = vpcPeeringConnectivity;
             return this;
         }
-        public Builder vpcPeeringConnectivity(@Nullable VpcPeeringConnectivityArgs vpcPeeringConnectivity) {
-            this.vpcPeeringConnectivity = Codegen.ofNullable(vpcPeeringConnectivity);
-            return this;
-        }        public MigrationJobArgs build() {
-            return new MigrationJobArgs(destination, destinationDatabase, displayName, dumpPath, labels, location, migrationJobId, name, project, requestId, reverseSshConnectivity, source, sourceDatabase, state, staticIpConnectivity, type, vpcPeeringConnectivity);
+
+        public Builder vpcPeeringConnectivity(VpcPeeringConnectivityArgs vpcPeeringConnectivity) {
+            return vpcPeeringConnectivity(Output.of(vpcPeeringConnectivity));
+        }
+
+        public MigrationJobArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.migrationJobId = Objects.requireNonNull($.migrationJobId, "expected parameter 'migrationJobId' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

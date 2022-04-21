@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InlineSecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="envMap")
-      private final @Nullable Output<Map<String,String>> envMap;
+    private @Nullable Output<Map<String,String>> envMap;
 
-    public Output<Map<String,String>> envMap() {
-        return this.envMap == null ? Codegen.empty() : this.envMap;
+    public Optional<Output<Map<String,String>>> envMap() {
+        return Optional.ofNullable(this.envMap);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class InlineSecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
-    public InlineSecretArgs(
-        @Nullable Output<Map<String,String>> envMap,
-        @Nullable Output<String> kmsKeyName) {
-        this.envMap = envMap;
-        this.kmsKeyName = kmsKeyName;
-    }
+    private InlineSecretArgs() {}
 
-    private InlineSecretArgs() {
-        this.envMap = Codegen.empty();
-        this.kmsKeyName = Codegen.empty();
+    private InlineSecretArgs(InlineSecretArgs $) {
+        this.envMap = $.envMap;
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InlineSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> envMap;
-        private @Nullable Output<String> kmsKeyName;
+        private InlineSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InlineSecretArgs();
         }
 
         public Builder(InlineSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.envMap = defaults.envMap;
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new InlineSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder envMap(@Nullable Output<Map<String,String>> envMap) {
-            this.envMap = envMap;
+            $.envMap = envMap;
             return this;
         }
-        public Builder envMap(@Nullable Map<String,String> envMap) {
-            this.envMap = Codegen.ofNullable(envMap);
-            return this;
+
+        public Builder envMap(Map<String,String> envMap) {
+            return envMap(Output.of(envMap));
         }
+
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
-        }        public InlineSecretArgs build() {
-            return new InlineSecretArgs(envMap, kmsKeyName);
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
+        }
+
+        public InlineSecretArgs build() {
+            return $;
         }
     }
+
 }

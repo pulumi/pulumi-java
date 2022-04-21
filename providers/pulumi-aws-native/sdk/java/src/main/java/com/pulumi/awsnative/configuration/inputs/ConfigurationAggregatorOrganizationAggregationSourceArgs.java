@@ -5,11 +5,11 @@ package com.pulumi.awsnative.configuration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,93 +18,87 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     public static final ConfigurationAggregatorOrganizationAggregationSourceArgs Empty = new ConfigurationAggregatorOrganizationAggregationSourceArgs();
 
     @Import(name="allAwsRegions")
-      private final @Nullable Output<Boolean> allAwsRegions;
+    private @Nullable Output<Boolean> allAwsRegions;
 
-    public Output<Boolean> allAwsRegions() {
-        return this.allAwsRegions == null ? Codegen.empty() : this.allAwsRegions;
+    public Optional<Output<Boolean>> allAwsRegions() {
+        return Optional.ofNullable(this.allAwsRegions);
     }
 
     @Import(name="awsRegions")
-      private final @Nullable Output<List<String>> awsRegions;
+    private @Nullable Output<List<String>> awsRegions;
 
-    public Output<List<String>> awsRegions() {
-        return this.awsRegions == null ? Codegen.empty() : this.awsRegions;
+    public Optional<Output<List<String>>> awsRegions() {
+        return Optional.ofNullable(this.awsRegions);
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public ConfigurationAggregatorOrganizationAggregationSourceArgs(
-        @Nullable Output<Boolean> allAwsRegions,
-        @Nullable Output<List<String>> awsRegions,
-        Output<String> roleArn) {
-        this.allAwsRegions = allAwsRegions;
-        this.awsRegions = awsRegions;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private ConfigurationAggregatorOrganizationAggregationSourceArgs() {}
 
-    private ConfigurationAggregatorOrganizationAggregationSourceArgs() {
-        this.allAwsRegions = Codegen.empty();
-        this.awsRegions = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private ConfigurationAggregatorOrganizationAggregationSourceArgs(ConfigurationAggregatorOrganizationAggregationSourceArgs $) {
+        this.allAwsRegions = $.allAwsRegions;
+        this.awsRegions = $.awsRegions;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationAggregatorOrganizationAggregationSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allAwsRegions;
-        private @Nullable Output<List<String>> awsRegions;
-        private Output<String> roleArn;
+        private ConfigurationAggregatorOrganizationAggregationSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationAggregatorOrganizationAggregationSourceArgs();
         }
 
         public Builder(ConfigurationAggregatorOrganizationAggregationSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allAwsRegions = defaults.allAwsRegions;
-    	      this.awsRegions = defaults.awsRegions;
-    	      this.roleArn = defaults.roleArn;
+            $ = new ConfigurationAggregatorOrganizationAggregationSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allAwsRegions(@Nullable Output<Boolean> allAwsRegions) {
-            this.allAwsRegions = allAwsRegions;
+            $.allAwsRegions = allAwsRegions;
             return this;
         }
-        public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
-            this.allAwsRegions = Codegen.ofNullable(allAwsRegions);
-            return this;
+
+        public Builder allAwsRegions(Boolean allAwsRegions) {
+            return allAwsRegions(Output.of(allAwsRegions));
         }
+
         public Builder awsRegions(@Nullable Output<List<String>> awsRegions) {
-            this.awsRegions = awsRegions;
+            $.awsRegions = awsRegions;
             return this;
         }
-        public Builder awsRegions(@Nullable List<String> awsRegions) {
-            this.awsRegions = Codegen.ofNullable(awsRegions);
-            return this;
+
+        public Builder awsRegions(List<String> awsRegions) {
+            return awsRegions(Output.of(awsRegions));
         }
+
         public Builder awsRegions(String... awsRegions) {
             return awsRegions(List.of(awsRegions));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public ConfigurationAggregatorOrganizationAggregationSourceArgs build() {
-            return new ConfigurationAggregatorOrganizationAggregationSourceArgs(allAwsRegions, awsRegions, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public ConfigurationAggregatorOrganizationAggregationSourceArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

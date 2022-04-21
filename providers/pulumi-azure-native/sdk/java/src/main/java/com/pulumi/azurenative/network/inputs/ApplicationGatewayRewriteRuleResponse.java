@@ -27,10 +27,10 @@ public final class ApplicationGatewayRewriteRuleResponse extends com.pulumi.reso
      * 
      */
     @Import(name="actionSet")
-      private final @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet;
+    private @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet;
 
     public Optional<ApplicationGatewayRewriteRuleActionSetResponse> actionSet() {
-        return this.actionSet == null ? Optional.empty() : Optional.ofNullable(this.actionSet);
+        return Optional.ofNullable(this.actionSet);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ApplicationGatewayRewriteRuleResponse extends com.pulumi.reso
      * 
      */
     @Import(name="conditions")
-      private final @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions;
+    private @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions;
 
-    public List<ApplicationGatewayRewriteRuleConditionResponse> conditions() {
-        return this.conditions == null ? List.of() : this.conditions;
+    public Optional<List<ApplicationGatewayRewriteRuleConditionResponse>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ApplicationGatewayRewriteRuleResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -60,76 +60,66 @@ public final class ApplicationGatewayRewriteRuleResponse extends com.pulumi.reso
      * 
      */
     @Import(name="ruleSequence")
-      private final @Nullable Integer ruleSequence;
+    private @Nullable Integer ruleSequence;
 
     public Optional<Integer> ruleSequence() {
-        return this.ruleSequence == null ? Optional.empty() : Optional.ofNullable(this.ruleSequence);
+        return Optional.ofNullable(this.ruleSequence);
     }
 
-    public ApplicationGatewayRewriteRuleResponse(
-        @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet,
-        @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions,
-        @Nullable String name,
-        @Nullable Integer ruleSequence) {
-        this.actionSet = actionSet;
-        this.conditions = conditions;
-        this.name = name;
-        this.ruleSequence = ruleSequence;
-    }
+    private ApplicationGatewayRewriteRuleResponse() {}
 
-    private ApplicationGatewayRewriteRuleResponse() {
-        this.actionSet = null;
-        this.conditions = List.of();
-        this.name = null;
-        this.ruleSequence = null;
+    private ApplicationGatewayRewriteRuleResponse(ApplicationGatewayRewriteRuleResponse $) {
+        this.actionSet = $.actionSet;
+        this.conditions = $.conditions;
+        this.name = $.name;
+        this.ruleSequence = $.ruleSequence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayRewriteRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet;
-        private @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions;
-        private @Nullable String name;
-        private @Nullable Integer ruleSequence;
+        private ApplicationGatewayRewriteRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayRewriteRuleResponse();
         }
 
         public Builder(ApplicationGatewayRewriteRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionSet = defaults.actionSet;
-    	      this.conditions = defaults.conditions;
-    	      this.name = defaults.name;
-    	      this.ruleSequence = defaults.ruleSequence;
+            $ = new ApplicationGatewayRewriteRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionSet(@Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet) {
-            this.actionSet = actionSet;
+            $.actionSet = actionSet;
             return this;
         }
+
         public Builder conditions(@Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(ApplicationGatewayRewriteRuleConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder ruleSequence(@Nullable Integer ruleSequence) {
-            this.ruleSequence = ruleSequence;
+            $.ruleSequence = ruleSequence;
             return this;
-        }        public ApplicationGatewayRewriteRuleResponse build() {
-            return new ApplicationGatewayRewriteRuleResponse(actionSet, conditions, name, ruleSequence);
+        }
+
+        public ApplicationGatewayRewriteRuleResponse build() {
+            return $;
         }
     }
+
 }

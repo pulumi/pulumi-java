@@ -12,11 +12,11 @@ import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleNetworkConfigArgs
 import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleStoppingConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends com.pul
     public static final MonitoringScheduleMonitoringJobDefinitionArgs Empty = new MonitoringScheduleMonitoringJobDefinitionArgs();
 
     @Import(name="baselineConfig")
-      private final @Nullable Output<MonitoringScheduleBaselineConfigArgs> baselineConfig;
+    private @Nullable Output<MonitoringScheduleBaselineConfigArgs> baselineConfig;
 
-    public Output<MonitoringScheduleBaselineConfigArgs> baselineConfig() {
-        return this.baselineConfig == null ? Codegen.empty() : this.baselineConfig;
+    public Optional<Output<MonitoringScheduleBaselineConfigArgs>> baselineConfig() {
+        return Optional.ofNullable(this.baselineConfig);
     }
 
     /**
@@ -40,45 +40,45 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends com.pul
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<Object> environment;
+    private @Nullable Output<Object> environment;
 
-    public Output<Object> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<Object>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     @Import(name="monitoringAppSpecification", required=true)
-      private final Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification;
+    private Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification;
 
     public Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification() {
         return this.monitoringAppSpecification;
     }
 
     @Import(name="monitoringInputs", required=true)
-      private final Output<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs;
+    private Output<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs;
 
     public Output<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs() {
         return this.monitoringInputs;
     }
 
     @Import(name="monitoringOutputConfig", required=true)
-      private final Output<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig;
+    private Output<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig;
 
     public Output<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig() {
         return this.monitoringOutputConfig;
     }
 
     @Import(name="monitoringResources", required=true)
-      private final Output<MonitoringScheduleMonitoringResourcesArgs> monitoringResources;
+    private Output<MonitoringScheduleMonitoringResourcesArgs> monitoringResources;
 
     public Output<MonitoringScheduleMonitoringResourcesArgs> monitoringResources() {
         return this.monitoringResources;
     }
 
     @Import(name="networkConfig")
-      private final @Nullable Output<MonitoringScheduleNetworkConfigArgs> networkConfig;
+    private @Nullable Output<MonitoringScheduleNetworkConfigArgs> networkConfig;
 
-    public Output<MonitoringScheduleNetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<MonitoringScheduleNetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     /**
@@ -86,164 +86,144 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends com.pul
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stoppingCondition")
-      private final @Nullable Output<MonitoringScheduleStoppingConditionArgs> stoppingCondition;
+    private @Nullable Output<MonitoringScheduleStoppingConditionArgs> stoppingCondition;
 
-    public Output<MonitoringScheduleStoppingConditionArgs> stoppingCondition() {
-        return this.stoppingCondition == null ? Codegen.empty() : this.stoppingCondition;
+    public Optional<Output<MonitoringScheduleStoppingConditionArgs>> stoppingCondition() {
+        return Optional.ofNullable(this.stoppingCondition);
     }
 
-    public MonitoringScheduleMonitoringJobDefinitionArgs(
-        @Nullable Output<MonitoringScheduleBaselineConfigArgs> baselineConfig,
-        @Nullable Output<Object> environment,
-        Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification,
-        Output<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs,
-        Output<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig,
-        Output<MonitoringScheduleMonitoringResourcesArgs> monitoringResources,
-        @Nullable Output<MonitoringScheduleNetworkConfigArgs> networkConfig,
-        Output<String> roleArn,
-        @Nullable Output<MonitoringScheduleStoppingConditionArgs> stoppingCondition) {
-        this.baselineConfig = baselineConfig;
-        this.environment = environment;
-        this.monitoringAppSpecification = Objects.requireNonNull(monitoringAppSpecification, "expected parameter 'monitoringAppSpecification' to be non-null");
-        this.monitoringInputs = Objects.requireNonNull(monitoringInputs, "expected parameter 'monitoringInputs' to be non-null");
-        this.monitoringOutputConfig = Objects.requireNonNull(monitoringOutputConfig, "expected parameter 'monitoringOutputConfig' to be non-null");
-        this.monitoringResources = Objects.requireNonNull(monitoringResources, "expected parameter 'monitoringResources' to be non-null");
-        this.networkConfig = networkConfig;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.stoppingCondition = stoppingCondition;
-    }
+    private MonitoringScheduleMonitoringJobDefinitionArgs() {}
 
-    private MonitoringScheduleMonitoringJobDefinitionArgs() {
-        this.baselineConfig = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.monitoringAppSpecification = Codegen.empty();
-        this.monitoringInputs = Codegen.empty();
-        this.monitoringOutputConfig = Codegen.empty();
-        this.monitoringResources = Codegen.empty();
-        this.networkConfig = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.stoppingCondition = Codegen.empty();
+    private MonitoringScheduleMonitoringJobDefinitionArgs(MonitoringScheduleMonitoringJobDefinitionArgs $) {
+        this.baselineConfig = $.baselineConfig;
+        this.environment = $.environment;
+        this.monitoringAppSpecification = $.monitoringAppSpecification;
+        this.monitoringInputs = $.monitoringInputs;
+        this.monitoringOutputConfig = $.monitoringOutputConfig;
+        this.monitoringResources = $.monitoringResources;
+        this.networkConfig = $.networkConfig;
+        this.roleArn = $.roleArn;
+        this.stoppingCondition = $.stoppingCondition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleMonitoringJobDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MonitoringScheduleBaselineConfigArgs> baselineConfig;
-        private @Nullable Output<Object> environment;
-        private Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification;
-        private Output<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs;
-        private Output<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig;
-        private Output<MonitoringScheduleMonitoringResourcesArgs> monitoringResources;
-        private @Nullable Output<MonitoringScheduleNetworkConfigArgs> networkConfig;
-        private Output<String> roleArn;
-        private @Nullable Output<MonitoringScheduleStoppingConditionArgs> stoppingCondition;
+        private MonitoringScheduleMonitoringJobDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleMonitoringJobDefinitionArgs();
         }
 
         public Builder(MonitoringScheduleMonitoringJobDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baselineConfig = defaults.baselineConfig;
-    	      this.environment = defaults.environment;
-    	      this.monitoringAppSpecification = defaults.monitoringAppSpecification;
-    	      this.monitoringInputs = defaults.monitoringInputs;
-    	      this.monitoringOutputConfig = defaults.monitoringOutputConfig;
-    	      this.monitoringResources = defaults.monitoringResources;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.roleArn = defaults.roleArn;
-    	      this.stoppingCondition = defaults.stoppingCondition;
+            $ = new MonitoringScheduleMonitoringJobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baselineConfig(@Nullable Output<MonitoringScheduleBaselineConfigArgs> baselineConfig) {
-            this.baselineConfig = baselineConfig;
+            $.baselineConfig = baselineConfig;
             return this;
         }
-        public Builder baselineConfig(@Nullable MonitoringScheduleBaselineConfigArgs baselineConfig) {
-            this.baselineConfig = Codegen.ofNullable(baselineConfig);
-            return this;
+
+        public Builder baselineConfig(MonitoringScheduleBaselineConfigArgs baselineConfig) {
+            return baselineConfig(Output.of(baselineConfig));
         }
+
         public Builder environment(@Nullable Output<Object> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable Object environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(Object environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder monitoringAppSpecification(Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification) {
-            this.monitoringAppSpecification = Objects.requireNonNull(monitoringAppSpecification);
+            $.monitoringAppSpecification = monitoringAppSpecification;
             return this;
         }
+
         public Builder monitoringAppSpecification(MonitoringScheduleMonitoringAppSpecificationArgs monitoringAppSpecification) {
-            this.monitoringAppSpecification = Output.of(Objects.requireNonNull(monitoringAppSpecification));
-            return this;
+            return monitoringAppSpecification(Output.of(monitoringAppSpecification));
         }
+
         public Builder monitoringInputs(Output<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs) {
-            this.monitoringInputs = Objects.requireNonNull(monitoringInputs);
+            $.monitoringInputs = monitoringInputs;
             return this;
         }
+
         public Builder monitoringInputs(List<MonitoringScheduleMonitoringInputArgs> monitoringInputs) {
-            this.monitoringInputs = Output.of(Objects.requireNonNull(monitoringInputs));
-            return this;
+            return monitoringInputs(Output.of(monitoringInputs));
         }
+
         public Builder monitoringInputs(MonitoringScheduleMonitoringInputArgs... monitoringInputs) {
             return monitoringInputs(List.of(monitoringInputs));
         }
+
         public Builder monitoringOutputConfig(Output<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig) {
-            this.monitoringOutputConfig = Objects.requireNonNull(monitoringOutputConfig);
+            $.monitoringOutputConfig = monitoringOutputConfig;
             return this;
         }
+
         public Builder monitoringOutputConfig(MonitoringScheduleMonitoringOutputConfigArgs monitoringOutputConfig) {
-            this.monitoringOutputConfig = Output.of(Objects.requireNonNull(monitoringOutputConfig));
-            return this;
+            return monitoringOutputConfig(Output.of(monitoringOutputConfig));
         }
+
         public Builder monitoringResources(Output<MonitoringScheduleMonitoringResourcesArgs> monitoringResources) {
-            this.monitoringResources = Objects.requireNonNull(monitoringResources);
+            $.monitoringResources = monitoringResources;
             return this;
         }
+
         public Builder monitoringResources(MonitoringScheduleMonitoringResourcesArgs monitoringResources) {
-            this.monitoringResources = Output.of(Objects.requireNonNull(monitoringResources));
-            return this;
+            return monitoringResources(Output.of(monitoringResources));
         }
+
         public Builder networkConfig(@Nullable Output<MonitoringScheduleNetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable MonitoringScheduleNetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(MonitoringScheduleNetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder stoppingCondition(@Nullable Output<MonitoringScheduleStoppingConditionArgs> stoppingCondition) {
-            this.stoppingCondition = stoppingCondition;
+            $.stoppingCondition = stoppingCondition;
             return this;
         }
-        public Builder stoppingCondition(@Nullable MonitoringScheduleStoppingConditionArgs stoppingCondition) {
-            this.stoppingCondition = Codegen.ofNullable(stoppingCondition);
-            return this;
-        }        public MonitoringScheduleMonitoringJobDefinitionArgs build() {
-            return new MonitoringScheduleMonitoringJobDefinitionArgs(baselineConfig, environment, monitoringAppSpecification, monitoringInputs, monitoringOutputConfig, monitoringResources, networkConfig, roleArn, stoppingCondition);
+
+        public Builder stoppingCondition(MonitoringScheduleStoppingConditionArgs stoppingCondition) {
+            return stoppingCondition(Output.of(stoppingCondition));
+        }
+
+        public MonitoringScheduleMonitoringJobDefinitionArgs build() {
+            $.monitoringAppSpecification = Objects.requireNonNull($.monitoringAppSpecification, "expected parameter 'monitoringAppSpecification' to be non-null");
+            $.monitoringInputs = Objects.requireNonNull($.monitoringInputs, "expected parameter 'monitoringInputs' to be non-null");
+            $.monitoringOutputConfig = Objects.requireNonNull($.monitoringOutputConfig, "expected parameter 'monitoringOutputConfig' to be non-null");
+            $.monitoringResources = Objects.requireNonNull($.monitoringResources, "expected parameter 'monitoringResources' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetKMSCryptoKeyVersionPublicKey extends com.pulumi.resources.
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -28,55 +28,52 @@ public final class GetKMSCryptoKeyVersionPublicKey extends com.pulumi.resources.
      * 
      */
     @Import(name="pem", required=true)
-      private final String pem;
+    private String pem;
 
     public String pem() {
         return this.pem;
     }
 
-    public GetKMSCryptoKeyVersionPublicKey(
-        String algorithm,
-        String pem) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.pem = Objects.requireNonNull(pem, "expected parameter 'pem' to be non-null");
-    }
+    private GetKMSCryptoKeyVersionPublicKey() {}
 
-    private GetKMSCryptoKeyVersionPublicKey() {
-        this.algorithm = null;
-        this.pem = null;
+    private GetKMSCryptoKeyVersionPublicKey(GetKMSCryptoKeyVersionPublicKey $) {
+        this.algorithm = $.algorithm;
+        this.pem = $.pem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKMSCryptoKeyVersionPublicKey defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private String pem;
+        private GetKMSCryptoKeyVersionPublicKey $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKMSCryptoKeyVersionPublicKey();
         }
 
         public Builder(GetKMSCryptoKeyVersionPublicKey defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.pem = defaults.pem;
+            $ = new GetKMSCryptoKeyVersionPublicKey(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder pem(String pem) {
-            this.pem = Objects.requireNonNull(pem);
+            $.pem = pem;
             return this;
-        }        public GetKMSCryptoKeyVersionPublicKey build() {
-            return new GetKMSCryptoKeyVersionPublicKey(algorithm, pem);
+        }
+
+        public GetKMSCryptoKeyVersionPublicKey build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.pem = Objects.requireNonNull($.pem, "expected parameter 'pem' to be non-null");
+            return $;
         }
     }
+
 }

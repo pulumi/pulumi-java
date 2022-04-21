@@ -7,10 +7,10 @@ import com.pulumi.azurenative.powerbidedicated.enums.VCoreSkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AutoScaleVCoreSkuArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Integer> capacity;
+    private @Nullable Output<Integer> capacity;
 
-    public Output<Integer> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Integer>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class AutoScaleVCoreSkuArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -49,76 +49,69 @@ public final class AutoScaleVCoreSkuArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,VCoreSkuTier>> tier;
+    private @Nullable Output<Either<String,VCoreSkuTier>> tier;
 
-    public Output<Either<String,VCoreSkuTier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,VCoreSkuTier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public AutoScaleVCoreSkuArgs(
-        @Nullable Output<Integer> capacity,
-        Output<String> name,
-        @Nullable Output<Either<String,VCoreSkuTier>> tier) {
-        this.capacity = capacity;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tier = tier;
-    }
+    private AutoScaleVCoreSkuArgs() {}
 
-    private AutoScaleVCoreSkuArgs() {
-        this.capacity = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private AutoScaleVCoreSkuArgs(AutoScaleVCoreSkuArgs $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScaleVCoreSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> capacity;
-        private Output<String> name;
-        private @Nullable Output<Either<String,VCoreSkuTier>> tier;
+        private AutoScaleVCoreSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScaleVCoreSkuArgs();
         }
 
         public Builder(AutoScaleVCoreSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new AutoScaleVCoreSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<Integer> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Integer capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<Either<String,VCoreSkuTier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,VCoreSkuTier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public AutoScaleVCoreSkuArgs build() {
-            return new AutoScaleVCoreSkuArgs(capacity, name, tier);
+
+        public Builder tier(Either<String,VCoreSkuTier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public AutoScaleVCoreSkuArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

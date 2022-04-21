@@ -5,10 +5,10 @@ package com.pulumi.googlenative.domains_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MoneyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="currencyCode")
-      private final @Nullable Output<String> currencyCode;
+    private @Nullable Output<String> currencyCode;
 
-    public Output<String> currencyCode() {
-        return this.currencyCode == null ? Codegen.empty() : this.currencyCode;
+    public Optional<Output<String>> currencyCode() {
+        return Optional.ofNullable(this.currencyCode);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MoneyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nanos")
-      private final @Nullable Output<Integer> nanos;
+    private @Nullable Output<Integer> nanos;
 
-    public Output<Integer> nanos() {
-        return this.nanos == null ? Codegen.empty() : this.nanos;
+    public Optional<Output<Integer>> nanos() {
+        return Optional.ofNullable(this.nanos);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class MoneyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="units")
-      private final @Nullable Output<String> units;
+    private @Nullable Output<String> units;
 
-    public Output<String> units() {
-        return this.units == null ? Codegen.empty() : this.units;
+    public Optional<Output<String>> units() {
+        return Optional.ofNullable(this.units);
     }
 
-    public MoneyArgs(
-        @Nullable Output<String> currencyCode,
-        @Nullable Output<Integer> nanos,
-        @Nullable Output<String> units) {
-        this.currencyCode = currencyCode;
-        this.nanos = nanos;
-        this.units = units;
-    }
+    private MoneyArgs() {}
 
-    private MoneyArgs() {
-        this.currencyCode = Codegen.empty();
-        this.nanos = Codegen.empty();
-        this.units = Codegen.empty();
+    private MoneyArgs(MoneyArgs $) {
+        this.currencyCode = $.currencyCode;
+        this.nanos = $.nanos;
+        this.units = $.units;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoneyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> currencyCode;
-        private @Nullable Output<Integer> nanos;
-        private @Nullable Output<String> units;
+        private MoneyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoneyArgs();
         }
 
         public Builder(MoneyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currencyCode = defaults.currencyCode;
-    	      this.nanos = defaults.nanos;
-    	      this.units = defaults.units;
+            $ = new MoneyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder currencyCode(@Nullable Output<String> currencyCode) {
-            this.currencyCode = currencyCode;
+            $.currencyCode = currencyCode;
             return this;
         }
-        public Builder currencyCode(@Nullable String currencyCode) {
-            this.currencyCode = Codegen.ofNullable(currencyCode);
-            return this;
+
+        public Builder currencyCode(String currencyCode) {
+            return currencyCode(Output.of(currencyCode));
         }
+
         public Builder nanos(@Nullable Output<Integer> nanos) {
-            this.nanos = nanos;
+            $.nanos = nanos;
             return this;
         }
-        public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Codegen.ofNullable(nanos);
-            return this;
+
+        public Builder nanos(Integer nanos) {
+            return nanos(Output.of(nanos));
         }
+
         public Builder units(@Nullable Output<String> units) {
-            this.units = units;
+            $.units = units;
             return this;
         }
-        public Builder units(@Nullable String units) {
-            this.units = Codegen.ofNullable(units);
-            return this;
-        }        public MoneyArgs build() {
-            return new MoneyArgs(currencyCode, nanos, units);
+
+        public Builder units(String units) {
+            return units(Output.of(units));
+        }
+
+        public MoneyArgs build() {
+            return $;
         }
     }
+
 }

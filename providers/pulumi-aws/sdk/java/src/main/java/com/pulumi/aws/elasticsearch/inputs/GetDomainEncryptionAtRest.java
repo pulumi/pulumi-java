@@ -18,7 +18,7 @@ public final class GetDomainEncryptionAtRest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -29,55 +29,52 @@ public final class GetDomainEncryptionAtRest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="kmsKeyId", required=true)
-      private final String kmsKeyId;
+    private String kmsKeyId;
 
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
 
-    public GetDomainEncryptionAtRest(
-        Boolean enabled,
-        String kmsKeyId) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId, "expected parameter 'kmsKeyId' to be non-null");
-    }
+    private GetDomainEncryptionAtRest() {}
 
-    private GetDomainEncryptionAtRest() {
-        this.enabled = null;
-        this.kmsKeyId = null;
+    private GetDomainEncryptionAtRest(GetDomainEncryptionAtRest $) {
+        this.enabled = $.enabled;
+        this.kmsKeyId = $.kmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainEncryptionAtRest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String kmsKeyId;
+        private GetDomainEncryptionAtRest $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainEncryptionAtRest();
         }
 
         public Builder(GetDomainEncryptionAtRest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.kmsKeyId = defaults.kmsKeyId;
+            $ = new GetDomainEncryptionAtRest(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder kmsKeyId(String kmsKeyId) {
-            this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
+            $.kmsKeyId = kmsKeyId;
             return this;
-        }        public GetDomainEncryptionAtRest build() {
-            return new GetDomainEncryptionAtRest(enabled, kmsKeyId);
+        }
+
+        public GetDomainEncryptionAtRest build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.kmsKeyId = Objects.requireNonNull($.kmsKeyId, "expected parameter 'kmsKeyId' to be non-null");
+            return $;
         }
     }
+
 }

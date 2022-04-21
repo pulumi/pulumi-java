@@ -5,7 +5,6 @@ package com.pulumi.awsnative.route53;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DNSSECArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostedZoneId", required=true)
-      private final Output<String> hostedZoneId;
+    private Output<String> hostedZoneId;
 
     public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 
-    public DNSSECArgs(Output<String> hostedZoneId) {
-        this.hostedZoneId = Objects.requireNonNull(hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
-    }
+    private DNSSECArgs() {}
 
-    private DNSSECArgs() {
-        this.hostedZoneId = Codegen.empty();
+    private DNSSECArgs(DNSSECArgs $) {
+        this.hostedZoneId = $.hostedZoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DNSSECArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hostedZoneId;
+        private DNSSECArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DNSSECArgs();
         }
 
         public Builder(DNSSECArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostedZoneId = defaults.hostedZoneId;
+            $ = new DNSSECArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostedZoneId(Output<String> hostedZoneId) {
-            this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
+            $.hostedZoneId = hostedZoneId;
             return this;
         }
+
         public Builder hostedZoneId(String hostedZoneId) {
-            this.hostedZoneId = Output.of(Objects.requireNonNull(hostedZoneId));
-            return this;
-        }        public DNSSECArgs build() {
-            return new DNSSECArgs(hostedZoneId);
+            return hostedZoneId(Output.of(hostedZoneId));
+        }
+
+        public DNSSECArgs build() {
+            $.hostedZoneId = Objects.requireNonNull($.hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
+            return $;
         }
     }
+
 }

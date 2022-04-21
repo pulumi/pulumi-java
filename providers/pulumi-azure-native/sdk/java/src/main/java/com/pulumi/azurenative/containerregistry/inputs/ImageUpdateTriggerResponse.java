@@ -25,10 +25,10 @@ public final class ImageUpdateTriggerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ImageUpdateTriggerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="images")
-      private final @Nullable List<ImageDescriptorResponse> images;
+    private @Nullable List<ImageDescriptorResponse> images;
 
-    public List<ImageDescriptorResponse> images() {
-        return this.images == null ? List.of() : this.images;
+    public Optional<List<ImageDescriptorResponse>> images() {
+        return Optional.ofNullable(this.images);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class ImageUpdateTriggerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timestamp")
-      private final @Nullable String timestamp;
+    private @Nullable String timestamp;
 
     public Optional<String> timestamp() {
-        return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
+        return Optional.ofNullable(this.timestamp);
     }
 
-    public ImageUpdateTriggerResponse(
-        @Nullable String id,
-        @Nullable List<ImageDescriptorResponse> images,
-        @Nullable String timestamp) {
-        this.id = id;
-        this.images = images;
-        this.timestamp = timestamp;
-    }
+    private ImageUpdateTriggerResponse() {}
 
-    private ImageUpdateTriggerResponse() {
-        this.id = null;
-        this.images = List.of();
-        this.timestamp = null;
+    private ImageUpdateTriggerResponse(ImageUpdateTriggerResponse $) {
+        this.id = $.id;
+        this.images = $.images;
+        this.timestamp = $.timestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageUpdateTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable List<ImageDescriptorResponse> images;
-        private @Nullable String timestamp;
+        private ImageUpdateTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageUpdateTriggerResponse();
         }
 
         public Builder(ImageUpdateTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.images = defaults.images;
-    	      this.timestamp = defaults.timestamp;
+            $ = new ImageUpdateTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder images(@Nullable List<ImageDescriptorResponse> images) {
-            this.images = images;
+            $.images = images;
             return this;
         }
+
         public Builder images(ImageDescriptorResponse... images) {
             return images(List.of(images));
         }
+
         public Builder timestamp(@Nullable String timestamp) {
-            this.timestamp = timestamp;
+            $.timestamp = timestamp;
             return this;
-        }        public ImageUpdateTriggerResponse build() {
-            return new ImageUpdateTriggerResponse(id, images, timestamp);
+        }
+
+        public ImageUpdateTriggerResponse build() {
+            return $;
         }
     }
+
 }

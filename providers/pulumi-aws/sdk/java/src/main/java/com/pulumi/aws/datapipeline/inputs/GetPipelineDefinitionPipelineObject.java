@@ -21,10 +21,10 @@ public final class GetPipelineDefinitionPipelineObject extends com.pulumi.resour
      * 
      */
     @Import(name="fields")
-      private final @Nullable List<GetPipelineDefinitionPipelineObjectField> fields;
+    private @Nullable List<GetPipelineDefinitionPipelineObjectField> fields;
 
-    public List<GetPipelineDefinitionPipelineObjectField> fields() {
-        return this.fields == null ? List.of() : this.fields;
+    public Optional<List<GetPipelineDefinitionPipelineObjectField>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class GetPipelineDefinitionPipelineObject extends com.pulumi.resour
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -43,67 +43,62 @@ public final class GetPipelineDefinitionPipelineObject extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetPipelineDefinitionPipelineObject(
-        @Nullable List<GetPipelineDefinitionPipelineObjectField> fields,
-        String id,
-        String name) {
-        this.fields = fields;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetPipelineDefinitionPipelineObject() {}
 
-    private GetPipelineDefinitionPipelineObject() {
-        this.fields = List.of();
-        this.id = null;
-        this.name = null;
+    private GetPipelineDefinitionPipelineObject(GetPipelineDefinitionPipelineObject $) {
+        this.fields = $.fields;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineDefinitionPipelineObject defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetPipelineDefinitionPipelineObjectField> fields;
-        private String id;
-        private String name;
+        private GetPipelineDefinitionPipelineObject $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineDefinitionPipelineObject();
         }
 
         public Builder(GetPipelineDefinitionPipelineObject defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new GetPipelineDefinitionPipelineObject(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(@Nullable List<GetPipelineDefinitionPipelineObjectField> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(GetPipelineDefinitionPipelineObjectField... fields) {
             return fields(List.of(fields));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetPipelineDefinitionPipelineObject build() {
-            return new GetPipelineDefinitionPipelineObject(fields, id, name);
+        }
+
+        public GetPipelineDefinitionPipelineObject build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

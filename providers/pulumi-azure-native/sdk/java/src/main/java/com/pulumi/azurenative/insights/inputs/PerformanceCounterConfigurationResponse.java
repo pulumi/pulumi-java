@@ -15,78 +15,72 @@ public final class PerformanceCounterConfigurationResponse extends com.pulumi.re
     public static final PerformanceCounterConfigurationResponse Empty = new PerformanceCounterConfigurationResponse();
 
     @Import(name="instance")
-      private final @Nullable String instance;
+    private @Nullable String instance;
 
     public Optional<String> instance() {
-        return this.instance == null ? Optional.empty() : Optional.ofNullable(this.instance);
+        return Optional.ofNullable(this.instance);
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="samplingPeriod", required=true)
-      private final String samplingPeriod;
+    private String samplingPeriod;
 
     public String samplingPeriod() {
         return this.samplingPeriod;
     }
 
-    public PerformanceCounterConfigurationResponse(
-        @Nullable String instance,
-        String name,
-        String samplingPeriod) {
-        this.instance = instance;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.samplingPeriod = Objects.requireNonNull(samplingPeriod, "expected parameter 'samplingPeriod' to be non-null");
-    }
+    private PerformanceCounterConfigurationResponse() {}
 
-    private PerformanceCounterConfigurationResponse() {
-        this.instance = null;
-        this.name = null;
-        this.samplingPeriod = null;
+    private PerformanceCounterConfigurationResponse(PerformanceCounterConfigurationResponse $) {
+        this.instance = $.instance;
+        this.name = $.name;
+        this.samplingPeriod = $.samplingPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerformanceCounterConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String instance;
-        private String name;
-        private String samplingPeriod;
+        private PerformanceCounterConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerformanceCounterConfigurationResponse();
         }
 
         public Builder(PerformanceCounterConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instance = defaults.instance;
-    	      this.name = defaults.name;
-    	      this.samplingPeriod = defaults.samplingPeriod;
+            $ = new PerformanceCounterConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder samplingPeriod(String samplingPeriod) {
-            this.samplingPeriod = Objects.requireNonNull(samplingPeriod);
+            $.samplingPeriod = samplingPeriod;
             return this;
-        }        public PerformanceCounterConfigurationResponse build() {
-            return new PerformanceCounterConfigurationResponse(instance, name, samplingPeriod);
+        }
+
+        public PerformanceCounterConfigurationResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.samplingPeriod = Objects.requireNonNull($.samplingPeriod, "expected parameter 'samplingPeriod' to be non-null");
+            return $;
         }
     }
+
 }

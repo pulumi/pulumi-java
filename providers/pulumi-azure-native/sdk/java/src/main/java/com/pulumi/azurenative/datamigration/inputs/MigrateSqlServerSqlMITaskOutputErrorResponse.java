@@ -19,7 +19,7 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse extends com.pulu
      * 
      */
     @Import(name="error", required=true)
-      private final ReportableExceptionResponse error;
+    private ReportableExceptionResponse error;
 
     public ReportableExceptionResponse error() {
         return this.error;
@@ -30,7 +30,7 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse extends com.pulu
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -42,64 +42,59 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse extends com.pulu
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
     }
 
-    public MigrateSqlServerSqlMITaskOutputErrorResponse(
-        ReportableExceptionResponse error,
-        String id,
-        String resultType) {
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-    }
+    private MigrateSqlServerSqlMITaskOutputErrorResponse() {}
 
-    private MigrateSqlServerSqlMITaskOutputErrorResponse() {
-        this.error = null;
-        this.id = null;
-        this.resultType = null;
+    private MigrateSqlServerSqlMITaskOutputErrorResponse(MigrateSqlServerSqlMITaskOutputErrorResponse $) {
+        this.error = $.error;
+        this.id = $.id;
+        this.resultType = $.resultType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlMITaskOutputErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ReportableExceptionResponse error;
-        private String id;
-        private String resultType;
+        private MigrateSqlServerSqlMITaskOutputErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlMITaskOutputErrorResponse();
         }
 
         public Builder(MigrateSqlServerSqlMITaskOutputErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.id = defaults.id;
-    	      this.resultType = defaults.resultType;
+            $ = new MigrateSqlServerSqlMITaskOutputErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(ReportableExceptionResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
-        }        public MigrateSqlServerSqlMITaskOutputErrorResponse build() {
-            return new MigrateSqlServerSqlMITaskOutputErrorResponse(error, id, resultType);
+        }
+
+        public MigrateSqlServerSqlMITaskOutputErrorResponse build() {
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            return $;
         }
     }
+
 }

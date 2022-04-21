@@ -5,9 +5,9 @@ package com.pulumi.aws.ssoadmin.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PermissionSetInlinePolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="inlinePolicy")
-      private final @Nullable Output<String> inlinePolicy;
+    private @Nullable Output<String> inlinePolicy;
 
-    public Output<String> inlinePolicy() {
-        return this.inlinePolicy == null ? Codegen.empty() : this.inlinePolicy;
+    public Optional<Output<String>> inlinePolicy() {
+        return Optional.ofNullable(this.inlinePolicy);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PermissionSetInlinePolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="instanceArn")
-      private final @Nullable Output<String> instanceArn;
+    private @Nullable Output<String> instanceArn;
 
-    public Output<String> instanceArn() {
-        return this.instanceArn == null ? Codegen.empty() : this.instanceArn;
+    public Optional<Output<String>> instanceArn() {
+        return Optional.ofNullable(this.instanceArn);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class PermissionSetInlinePolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="permissionSetArn")
-      private final @Nullable Output<String> permissionSetArn;
+    private @Nullable Output<String> permissionSetArn;
 
-    public Output<String> permissionSetArn() {
-        return this.permissionSetArn == null ? Codegen.empty() : this.permissionSetArn;
+    public Optional<Output<String>> permissionSetArn() {
+        return Optional.ofNullable(this.permissionSetArn);
     }
 
-    public PermissionSetInlinePolicyState(
-        @Nullable Output<String> inlinePolicy,
-        @Nullable Output<String> instanceArn,
-        @Nullable Output<String> permissionSetArn) {
-        this.inlinePolicy = inlinePolicy;
-        this.instanceArn = instanceArn;
-        this.permissionSetArn = permissionSetArn;
-    }
+    private PermissionSetInlinePolicyState() {}
 
-    private PermissionSetInlinePolicyState() {
-        this.inlinePolicy = Codegen.empty();
-        this.instanceArn = Codegen.empty();
-        this.permissionSetArn = Codegen.empty();
+    private PermissionSetInlinePolicyState(PermissionSetInlinePolicyState $) {
+        this.inlinePolicy = $.inlinePolicy;
+        this.instanceArn = $.instanceArn;
+        this.permissionSetArn = $.permissionSetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionSetInlinePolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> inlinePolicy;
-        private @Nullable Output<String> instanceArn;
-        private @Nullable Output<String> permissionSetArn;
+        private PermissionSetInlinePolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionSetInlinePolicyState();
         }
 
         public Builder(PermissionSetInlinePolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inlinePolicy = defaults.inlinePolicy;
-    	      this.instanceArn = defaults.instanceArn;
-    	      this.permissionSetArn = defaults.permissionSetArn;
+            $ = new PermissionSetInlinePolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder inlinePolicy(@Nullable Output<String> inlinePolicy) {
-            this.inlinePolicy = inlinePolicy;
+            $.inlinePolicy = inlinePolicy;
             return this;
         }
-        public Builder inlinePolicy(@Nullable String inlinePolicy) {
-            this.inlinePolicy = Codegen.ofNullable(inlinePolicy);
-            return this;
+
+        public Builder inlinePolicy(String inlinePolicy) {
+            return inlinePolicy(Output.of(inlinePolicy));
         }
+
         public Builder instanceArn(@Nullable Output<String> instanceArn) {
-            this.instanceArn = instanceArn;
+            $.instanceArn = instanceArn;
             return this;
         }
-        public Builder instanceArn(@Nullable String instanceArn) {
-            this.instanceArn = Codegen.ofNullable(instanceArn);
-            return this;
+
+        public Builder instanceArn(String instanceArn) {
+            return instanceArn(Output.of(instanceArn));
         }
+
         public Builder permissionSetArn(@Nullable Output<String> permissionSetArn) {
-            this.permissionSetArn = permissionSetArn;
+            $.permissionSetArn = permissionSetArn;
             return this;
         }
-        public Builder permissionSetArn(@Nullable String permissionSetArn) {
-            this.permissionSetArn = Codegen.ofNullable(permissionSetArn);
-            return this;
-        }        public PermissionSetInlinePolicyState build() {
-            return new PermissionSetInlinePolicyState(inlinePolicy, instanceArn, permissionSetArn);
+
+        public Builder permissionSetArn(String permissionSetArn) {
+            return permissionSetArn(Output.of(permissionSetArn));
+        }
+
+        public PermissionSetInlinePolicyState build() {
+            return $;
         }
     }
+
 }

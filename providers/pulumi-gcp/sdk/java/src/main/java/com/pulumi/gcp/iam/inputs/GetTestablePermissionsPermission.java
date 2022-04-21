@@ -18,7 +18,7 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
      * 
      */
     @Import(name="apiDisabled", required=true)
-      private final Boolean apiDisabled;
+    private Boolean apiDisabled;
 
     public Boolean apiDisabled() {
         return this.apiDisabled;
@@ -29,7 +29,7 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
      * 
      */
     @Import(name="customSupportLevel", required=true)
-      private final String customSupportLevel;
+    private String customSupportLevel;
 
     public String customSupportLevel() {
         return this.customSupportLevel;
@@ -40,7 +40,7 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -51,7 +51,7 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
      * 
      */
     @Import(name="stage", required=true)
-      private final String stage;
+    private String stage;
 
     public String stage() {
         return this.stage;
@@ -62,82 +62,73 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GetTestablePermissionsPermission(
-        Boolean apiDisabled,
-        String customSupportLevel,
-        String name,
-        String stage,
-        String title) {
-        this.apiDisabled = Objects.requireNonNull(apiDisabled, "expected parameter 'apiDisabled' to be non-null");
-        this.customSupportLevel = Objects.requireNonNull(customSupportLevel, "expected parameter 'customSupportLevel' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.stage = Objects.requireNonNull(stage, "expected parameter 'stage' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GetTestablePermissionsPermission() {}
 
-    private GetTestablePermissionsPermission() {
-        this.apiDisabled = null;
-        this.customSupportLevel = null;
-        this.name = null;
-        this.stage = null;
-        this.title = null;
+    private GetTestablePermissionsPermission(GetTestablePermissionsPermission $) {
+        this.apiDisabled = $.apiDisabled;
+        this.customSupportLevel = $.customSupportLevel;
+        this.name = $.name;
+        this.stage = $.stage;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTestablePermissionsPermission defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean apiDisabled;
-        private String customSupportLevel;
-        private String name;
-        private String stage;
-        private String title;
+        private GetTestablePermissionsPermission $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTestablePermissionsPermission();
         }
 
         public Builder(GetTestablePermissionsPermission defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiDisabled = defaults.apiDisabled;
-    	      this.customSupportLevel = defaults.customSupportLevel;
-    	      this.name = defaults.name;
-    	      this.stage = defaults.stage;
-    	      this.title = defaults.title;
+            $ = new GetTestablePermissionsPermission(Objects.requireNonNull(defaults));
         }
 
         public Builder apiDisabled(Boolean apiDisabled) {
-            this.apiDisabled = Objects.requireNonNull(apiDisabled);
+            $.apiDisabled = apiDisabled;
             return this;
         }
+
         public Builder customSupportLevel(String customSupportLevel) {
-            this.customSupportLevel = Objects.requireNonNull(customSupportLevel);
+            $.customSupportLevel = customSupportLevel;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder stage(String stage) {
-            this.stage = Objects.requireNonNull(stage);
+            $.stage = stage;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GetTestablePermissionsPermission build() {
-            return new GetTestablePermissionsPermission(apiDisabled, customSupportLevel, name, stage, title);
+        }
+
+        public GetTestablePermissionsPermission build() {
+            $.apiDisabled = Objects.requireNonNull($.apiDisabled, "expected parameter 'apiDisabled' to be non-null");
+            $.customSupportLevel = Objects.requireNonNull($.customSupportLevel, "expected parameter 'customSupportLevel' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.stage = Objects.requireNonNull($.stage, "expected parameter 'stage' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class ServerTlsSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="proxyTlsContext", required=true)
-      private final TlsContextResponse proxyTlsContext;
+    private TlsContextResponse proxyTlsContext;
 
     public TlsContextResponse proxyTlsContext() {
         return this.proxyTlsContext;
@@ -34,7 +34,7 @@ public final class ServerTlsSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="subjectAltNames", required=true)
-      private final List<String> subjectAltNames;
+    private List<String> subjectAltNames;
 
     public List<String> subjectAltNames() {
         return this.subjectAltNames;
@@ -45,67 +45,63 @@ public final class ServerTlsSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tlsMode", required=true)
-      private final String tlsMode;
+    private String tlsMode;
 
     public String tlsMode() {
         return this.tlsMode;
     }
 
-    public ServerTlsSettingsResponse(
-        TlsContextResponse proxyTlsContext,
-        List<String> subjectAltNames,
-        String tlsMode) {
-        this.proxyTlsContext = Objects.requireNonNull(proxyTlsContext, "expected parameter 'proxyTlsContext' to be non-null");
-        this.subjectAltNames = Objects.requireNonNull(subjectAltNames, "expected parameter 'subjectAltNames' to be non-null");
-        this.tlsMode = Objects.requireNonNull(tlsMode, "expected parameter 'tlsMode' to be non-null");
-    }
+    private ServerTlsSettingsResponse() {}
 
-    private ServerTlsSettingsResponse() {
-        this.proxyTlsContext = null;
-        this.subjectAltNames = List.of();
-        this.tlsMode = null;
+    private ServerTlsSettingsResponse(ServerTlsSettingsResponse $) {
+        this.proxyTlsContext = $.proxyTlsContext;
+        this.subjectAltNames = $.subjectAltNames;
+        this.tlsMode = $.tlsMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerTlsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TlsContextResponse proxyTlsContext;
-        private List<String> subjectAltNames;
-        private String tlsMode;
+        private ServerTlsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerTlsSettingsResponse();
         }
 
         public Builder(ServerTlsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.proxyTlsContext = defaults.proxyTlsContext;
-    	      this.subjectAltNames = defaults.subjectAltNames;
-    	      this.tlsMode = defaults.tlsMode;
+            $ = new ServerTlsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder proxyTlsContext(TlsContextResponse proxyTlsContext) {
-            this.proxyTlsContext = Objects.requireNonNull(proxyTlsContext);
+            $.proxyTlsContext = proxyTlsContext;
             return this;
         }
+
         public Builder subjectAltNames(List<String> subjectAltNames) {
-            this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
+            $.subjectAltNames = subjectAltNames;
             return this;
         }
+
         public Builder subjectAltNames(String... subjectAltNames) {
             return subjectAltNames(List.of(subjectAltNames));
         }
+
         public Builder tlsMode(String tlsMode) {
-            this.tlsMode = Objects.requireNonNull(tlsMode);
+            $.tlsMode = tlsMode;
             return this;
-        }        public ServerTlsSettingsResponse build() {
-            return new ServerTlsSettingsResponse(proxyTlsContext, subjectAltNames, tlsMode);
+        }
+
+        public ServerTlsSettingsResponse build() {
+            $.proxyTlsContext = Objects.requireNonNull($.proxyTlsContext, "expected parameter 'proxyTlsContext' to be non-null");
+            $.subjectAltNames = Objects.requireNonNull($.subjectAltNames, "expected parameter 'subjectAltNames' to be non-null");
+            $.tlsMode = Objects.requireNonNull($.tlsMode, "expected parameter 'tlsMode' to be non-null");
+            return $;
         }
     }
+
 }

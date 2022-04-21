@@ -9,10 +9,10 @@ import com.pulumi.azurenative.blueprint.inputs.ResourceGroupDefinitionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="blueprintName", required=true)
-      private final Output<String> blueprintName;
+    private Output<String> blueprintName;
 
     public Output<String> blueprintName() {
         return this.blueprintName;
@@ -36,10 +36,10 @@ public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="changeNotes")
-      private final @Nullable Output<String> changeNotes;
+    private @Nullable Output<String> changeNotes;
 
-    public Output<String> changeNotes() {
-        return this.changeNotes == null ? Codegen.empty() : this.changeNotes;
+    public Optional<Output<String>> changeNotes() {
+        return Optional.ofNullable(this.changeNotes);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterDefinitionArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterDefinitionArgs>> parameters;
 
-    public Output<Map<String,ParameterDefinitionArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterDefinitionArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroups")
-      private final @Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
+    private @Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
 
-    public Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups() {
-        return this.resourceGroups == null ? Codegen.empty() : this.resourceGroups;
+    public Optional<Output<Map<String,ResourceGroupDefinitionArgs>>> resourceGroups() {
+        return Optional.ofNullable(this.resourceGroups);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceScope", required=true)
-      private final Output<String> resourceScope;
+    private Output<String> resourceScope;
 
     public Output<String> resourceScope() {
         return this.resourceScope;
@@ -102,10 +102,10 @@ public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetScope")
-      private final @Nullable Output<Either<String,BlueprintTargetScope>> targetScope;
+    private @Nullable Output<Either<String,BlueprintTargetScope>> targetScope;
 
-    public Output<Either<String,BlueprintTargetScope>> targetScope() {
-        return this.targetScope == null ? Codegen.empty() : this.targetScope;
+    public Optional<Output<Either<String,BlueprintTargetScope>>> targetScope() {
+        return Optional.ofNullable(this.targetScope);
     }
 
     /**
@@ -113,154 +113,130 @@ public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="versionId")
-      private final @Nullable Output<String> versionId;
+    private @Nullable Output<String> versionId;
 
-    public Output<String> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
-    public PublishedBlueprintArgs(
-        Output<String> blueprintName,
-        @Nullable Output<String> changeNotes,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Map<String,ParameterDefinitionArgs>> parameters,
-        @Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups,
-        Output<String> resourceScope,
-        @Nullable Output<Either<String,BlueprintTargetScope>> targetScope,
-        @Nullable Output<String> versionId) {
-        this.blueprintName = Objects.requireNonNull(blueprintName, "expected parameter 'blueprintName' to be non-null");
-        this.changeNotes = changeNotes;
-        this.description = description;
-        this.displayName = displayName;
-        this.parameters = parameters;
-        this.resourceGroups = resourceGroups;
-        this.resourceScope = Objects.requireNonNull(resourceScope, "expected parameter 'resourceScope' to be non-null");
-        this.targetScope = targetScope;
-        this.versionId = versionId;
-    }
+    private PublishedBlueprintArgs() {}
 
-    private PublishedBlueprintArgs() {
-        this.blueprintName = Codegen.empty();
-        this.changeNotes = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.resourceGroups = Codegen.empty();
-        this.resourceScope = Codegen.empty();
-        this.targetScope = Codegen.empty();
-        this.versionId = Codegen.empty();
+    private PublishedBlueprintArgs(PublishedBlueprintArgs $) {
+        this.blueprintName = $.blueprintName;
+        this.changeNotes = $.changeNotes;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.parameters = $.parameters;
+        this.resourceGroups = $.resourceGroups;
+        this.resourceScope = $.resourceScope;
+        this.targetScope = $.targetScope;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublishedBlueprintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> blueprintName;
-        private @Nullable Output<String> changeNotes;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Map<String,ParameterDefinitionArgs>> parameters;
-        private @Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
-        private Output<String> resourceScope;
-        private @Nullable Output<Either<String,BlueprintTargetScope>> targetScope;
-        private @Nullable Output<String> versionId;
+        private PublishedBlueprintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublishedBlueprintArgs();
         }
 
         public Builder(PublishedBlueprintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blueprintName = defaults.blueprintName;
-    	      this.changeNotes = defaults.changeNotes;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroups = defaults.resourceGroups;
-    	      this.resourceScope = defaults.resourceScope;
-    	      this.targetScope = defaults.targetScope;
-    	      this.versionId = defaults.versionId;
+            $ = new PublishedBlueprintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blueprintName(Output<String> blueprintName) {
-            this.blueprintName = Objects.requireNonNull(blueprintName);
+            $.blueprintName = blueprintName;
             return this;
         }
+
         public Builder blueprintName(String blueprintName) {
-            this.blueprintName = Output.of(Objects.requireNonNull(blueprintName));
-            return this;
+            return blueprintName(Output.of(blueprintName));
         }
+
         public Builder changeNotes(@Nullable Output<String> changeNotes) {
-            this.changeNotes = changeNotes;
+            $.changeNotes = changeNotes;
             return this;
         }
-        public Builder changeNotes(@Nullable String changeNotes) {
-            this.changeNotes = Codegen.ofNullable(changeNotes);
-            return this;
+
+        public Builder changeNotes(String changeNotes) {
+            return changeNotes(Output.of(changeNotes));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterDefinitionArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterDefinitionArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterDefinitionArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder resourceGroups(@Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups) {
-            this.resourceGroups = resourceGroups;
+            $.resourceGroups = resourceGroups;
             return this;
         }
-        public Builder resourceGroups(@Nullable Map<String,ResourceGroupDefinitionArgs> resourceGroups) {
-            this.resourceGroups = Codegen.ofNullable(resourceGroups);
-            return this;
+
+        public Builder resourceGroups(Map<String,ResourceGroupDefinitionArgs> resourceGroups) {
+            return resourceGroups(Output.of(resourceGroups));
         }
+
         public Builder resourceScope(Output<String> resourceScope) {
-            this.resourceScope = Objects.requireNonNull(resourceScope);
+            $.resourceScope = resourceScope;
             return this;
         }
+
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
-            return this;
+            return resourceScope(Output.of(resourceScope));
         }
+
         public Builder targetScope(@Nullable Output<Either<String,BlueprintTargetScope>> targetScope) {
-            this.targetScope = targetScope;
+            $.targetScope = targetScope;
             return this;
         }
-        public Builder targetScope(@Nullable Either<String,BlueprintTargetScope> targetScope) {
-            this.targetScope = Codegen.ofNullable(targetScope);
-            return this;
+
+        public Builder targetScope(Either<String,BlueprintTargetScope> targetScope) {
+            return targetScope(Output.of(targetScope));
         }
+
         public Builder versionId(@Nullable Output<String> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable String versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
-        }        public PublishedBlueprintArgs build() {
-            return new PublishedBlueprintArgs(blueprintName, changeNotes, description, displayName, parameters, resourceGroups, resourceScope, targetScope, versionId);
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
+        }
+
+        public PublishedBlueprintArgs build() {
+            $.blueprintName = Objects.requireNonNull($.blueprintName, "expected parameter 'blueprintName' to be non-null");
+            $.resourceScope = Objects.requireNonNull($.resourceScope, "expected parameter 'resourceScope' to be non-null");
+            return $;
         }
     }
+
 }

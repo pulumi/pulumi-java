@@ -5,10 +5,10 @@ package com.pulumi.aws.elasticloadbalancing;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="cookieExpirationPeriod")
-      private final @Nullable Output<Integer> cookieExpirationPeriod;
+    private @Nullable Output<Integer> cookieExpirationPeriod;
 
-    public Output<Integer> cookieExpirationPeriod() {
-        return this.cookieExpirationPeriod == null ? Codegen.empty() : this.cookieExpirationPeriod;
+    public Optional<Output<Integer>> cookieExpirationPeriod() {
+        return Optional.ofNullable(this.cookieExpirationPeriod);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="lbPort", required=true)
-      private final Output<Integer> lbPort;
+    private Output<Integer> lbPort;
 
     public Output<Integer> lbPort() {
         return this.lbPort;
@@ -47,7 +47,7 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="loadBalancer", required=true)
-      private final Output<String> loadBalancer;
+    private Output<String> loadBalancer;
 
     public Output<String> loadBalancer() {
         return this.loadBalancer;
@@ -58,89 +58,80 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public LoadBalancerCookieStickinessPolicyArgs(
-        @Nullable Output<Integer> cookieExpirationPeriod,
-        Output<Integer> lbPort,
-        Output<String> loadBalancer,
-        @Nullable Output<String> name) {
-        this.cookieExpirationPeriod = cookieExpirationPeriod;
-        this.lbPort = Objects.requireNonNull(lbPort, "expected parameter 'lbPort' to be non-null");
-        this.loadBalancer = Objects.requireNonNull(loadBalancer, "expected parameter 'loadBalancer' to be non-null");
-        this.name = name;
-    }
+    private LoadBalancerCookieStickinessPolicyArgs() {}
 
-    private LoadBalancerCookieStickinessPolicyArgs() {
-        this.cookieExpirationPeriod = Codegen.empty();
-        this.lbPort = Codegen.empty();
-        this.loadBalancer = Codegen.empty();
-        this.name = Codegen.empty();
+    private LoadBalancerCookieStickinessPolicyArgs(LoadBalancerCookieStickinessPolicyArgs $) {
+        this.cookieExpirationPeriod = $.cookieExpirationPeriod;
+        this.lbPort = $.lbPort;
+        this.loadBalancer = $.loadBalancer;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerCookieStickinessPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cookieExpirationPeriod;
-        private Output<Integer> lbPort;
-        private Output<String> loadBalancer;
-        private @Nullable Output<String> name;
+        private LoadBalancerCookieStickinessPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerCookieStickinessPolicyArgs();
         }
 
         public Builder(LoadBalancerCookieStickinessPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookieExpirationPeriod = defaults.cookieExpirationPeriod;
-    	      this.lbPort = defaults.lbPort;
-    	      this.loadBalancer = defaults.loadBalancer;
-    	      this.name = defaults.name;
+            $ = new LoadBalancerCookieStickinessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cookieExpirationPeriod(@Nullable Output<Integer> cookieExpirationPeriod) {
-            this.cookieExpirationPeriod = cookieExpirationPeriod;
+            $.cookieExpirationPeriod = cookieExpirationPeriod;
             return this;
         }
-        public Builder cookieExpirationPeriod(@Nullable Integer cookieExpirationPeriod) {
-            this.cookieExpirationPeriod = Codegen.ofNullable(cookieExpirationPeriod);
-            return this;
+
+        public Builder cookieExpirationPeriod(Integer cookieExpirationPeriod) {
+            return cookieExpirationPeriod(Output.of(cookieExpirationPeriod));
         }
+
         public Builder lbPort(Output<Integer> lbPort) {
-            this.lbPort = Objects.requireNonNull(lbPort);
+            $.lbPort = lbPort;
             return this;
         }
+
         public Builder lbPort(Integer lbPort) {
-            this.lbPort = Output.of(Objects.requireNonNull(lbPort));
-            return this;
+            return lbPort(Output.of(lbPort));
         }
+
         public Builder loadBalancer(Output<String> loadBalancer) {
-            this.loadBalancer = Objects.requireNonNull(loadBalancer);
+            $.loadBalancer = loadBalancer;
             return this;
         }
+
         public Builder loadBalancer(String loadBalancer) {
-            this.loadBalancer = Output.of(Objects.requireNonNull(loadBalancer));
-            return this;
+            return loadBalancer(Output.of(loadBalancer));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public LoadBalancerCookieStickinessPolicyArgs build() {
-            return new LoadBalancerCookieStickinessPolicyArgs(cookieExpirationPeriod, lbPort, loadBalancer, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public LoadBalancerCookieStickinessPolicyArgs build() {
+            $.lbPort = Objects.requireNonNull($.lbPort, "expected parameter 'lbPort' to be non-null");
+            $.loadBalancer = Objects.requireNonNull($.loadBalancer, "expected parameter 'loadBalancer' to be non-null");
+            return $;
         }
     }
+
 }

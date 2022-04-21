@@ -7,11 +7,11 @@ import com.pulumi.azurenative.datafactory.enums.DataFlowComputeType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="cleanup")
-      private final @Nullable Output<Boolean> cleanup;
+    private @Nullable Output<Boolean> cleanup;
 
-    public Output<Boolean> cleanup() {
-        return this.cleanup == null ? Codegen.empty() : this.cleanup;
+    public Optional<Output<Boolean>> cleanup() {
+        return Optional.ofNullable(this.cleanup);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="computeType")
-      private final @Nullable Output<Either<String,DataFlowComputeType>> computeType;
+    private @Nullable Output<Either<String,DataFlowComputeType>> computeType;
 
-    public Output<Either<String,DataFlowComputeType>> computeType() {
-        return this.computeType == null ? Codegen.empty() : this.computeType;
+    public Optional<Output<Either<String,DataFlowComputeType>>> computeType() {
+        return Optional.ofNullable(this.computeType);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="coreCount")
-      private final @Nullable Output<Integer> coreCount;
+    private @Nullable Output<Integer> coreCount;
 
-    public Output<Integer> coreCount() {
-        return this.coreCount == null ? Codegen.empty() : this.coreCount;
+    public Optional<Output<Integer>> coreCount() {
+        return Optional.ofNullable(this.coreCount);
     }
 
     /**
@@ -61,89 +61,78 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="timeToLive")
-      private final @Nullable Output<Integer> timeToLive;
+    private @Nullable Output<Integer> timeToLive;
 
-    public Output<Integer> timeToLive() {
-        return this.timeToLive == null ? Codegen.empty() : this.timeToLive;
+    public Optional<Output<Integer>> timeToLive() {
+        return Optional.ofNullable(this.timeToLive);
     }
 
-    public IntegrationRuntimeDataFlowPropertiesArgs(
-        @Nullable Output<Boolean> cleanup,
-        @Nullable Output<Either<String,DataFlowComputeType>> computeType,
-        @Nullable Output<Integer> coreCount,
-        @Nullable Output<Integer> timeToLive) {
-        this.cleanup = cleanup;
-        this.computeType = computeType;
-        this.coreCount = coreCount;
-        this.timeToLive = timeToLive;
-    }
+    private IntegrationRuntimeDataFlowPropertiesArgs() {}
 
-    private IntegrationRuntimeDataFlowPropertiesArgs() {
-        this.cleanup = Codegen.empty();
-        this.computeType = Codegen.empty();
-        this.coreCount = Codegen.empty();
-        this.timeToLive = Codegen.empty();
+    private IntegrationRuntimeDataFlowPropertiesArgs(IntegrationRuntimeDataFlowPropertiesArgs $) {
+        this.cleanup = $.cleanup;
+        this.computeType = $.computeType;
+        this.coreCount = $.coreCount;
+        this.timeToLive = $.timeToLive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeDataFlowPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> cleanup;
-        private @Nullable Output<Either<String,DataFlowComputeType>> computeType;
-        private @Nullable Output<Integer> coreCount;
-        private @Nullable Output<Integer> timeToLive;
+        private IntegrationRuntimeDataFlowPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeDataFlowPropertiesArgs();
         }
 
         public Builder(IntegrationRuntimeDataFlowPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cleanup = defaults.cleanup;
-    	      this.computeType = defaults.computeType;
-    	      this.coreCount = defaults.coreCount;
-    	      this.timeToLive = defaults.timeToLive;
+            $ = new IntegrationRuntimeDataFlowPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cleanup(@Nullable Output<Boolean> cleanup) {
-            this.cleanup = cleanup;
+            $.cleanup = cleanup;
             return this;
         }
-        public Builder cleanup(@Nullable Boolean cleanup) {
-            this.cleanup = Codegen.ofNullable(cleanup);
-            return this;
+
+        public Builder cleanup(Boolean cleanup) {
+            return cleanup(Output.of(cleanup));
         }
+
         public Builder computeType(@Nullable Output<Either<String,DataFlowComputeType>> computeType) {
-            this.computeType = computeType;
+            $.computeType = computeType;
             return this;
         }
-        public Builder computeType(@Nullable Either<String,DataFlowComputeType> computeType) {
-            this.computeType = Codegen.ofNullable(computeType);
-            return this;
+
+        public Builder computeType(Either<String,DataFlowComputeType> computeType) {
+            return computeType(Output.of(computeType));
         }
+
         public Builder coreCount(@Nullable Output<Integer> coreCount) {
-            this.coreCount = coreCount;
+            $.coreCount = coreCount;
             return this;
         }
-        public Builder coreCount(@Nullable Integer coreCount) {
-            this.coreCount = Codegen.ofNullable(coreCount);
-            return this;
+
+        public Builder coreCount(Integer coreCount) {
+            return coreCount(Output.of(coreCount));
         }
+
         public Builder timeToLive(@Nullable Output<Integer> timeToLive) {
-            this.timeToLive = timeToLive;
+            $.timeToLive = timeToLive;
             return this;
         }
-        public Builder timeToLive(@Nullable Integer timeToLive) {
-            this.timeToLive = Codegen.ofNullable(timeToLive);
-            return this;
-        }        public IntegrationRuntimeDataFlowPropertiesArgs build() {
-            return new IntegrationRuntimeDataFlowPropertiesArgs(cleanup, computeType, coreCount, timeToLive);
+
+        public Builder timeToLive(Integer timeToLive) {
+            return timeToLive(Output.of(timeToLive));
+        }
+
+        public IntegrationRuntimeDataFlowPropertiesArgs build() {
+            return $;
         }
     }
+
 }

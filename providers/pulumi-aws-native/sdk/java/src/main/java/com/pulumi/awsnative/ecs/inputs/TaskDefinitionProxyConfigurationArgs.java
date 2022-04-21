@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.inputs.TaskDefinitionKeyValuePairArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,93 +18,87 @@ public final class TaskDefinitionProxyConfigurationArgs extends com.pulumi.resou
     public static final TaskDefinitionProxyConfigurationArgs Empty = new TaskDefinitionProxyConfigurationArgs();
 
     @Import(name="containerName", required=true)
-      private final Output<String> containerName;
+    private Output<String> containerName;
 
     public Output<String> containerName() {
         return this.containerName;
     }
 
     @Import(name="proxyConfigurationProperties")
-      private final @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties;
+    private @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties;
 
-    public Output<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties() {
-        return this.proxyConfigurationProperties == null ? Codegen.empty() : this.proxyConfigurationProperties;
+    public Optional<Output<List<TaskDefinitionKeyValuePairArgs>>> proxyConfigurationProperties() {
+        return Optional.ofNullable(this.proxyConfigurationProperties);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public TaskDefinitionProxyConfigurationArgs(
-        Output<String> containerName,
-        @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties,
-        @Nullable Output<String> type) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.proxyConfigurationProperties = proxyConfigurationProperties;
-        this.type = type;
-    }
+    private TaskDefinitionProxyConfigurationArgs() {}
 
-    private TaskDefinitionProxyConfigurationArgs() {
-        this.containerName = Codegen.empty();
-        this.proxyConfigurationProperties = Codegen.empty();
-        this.type = Codegen.empty();
+    private TaskDefinitionProxyConfigurationArgs(TaskDefinitionProxyConfigurationArgs $) {
+        this.containerName = $.containerName;
+        this.proxyConfigurationProperties = $.proxyConfigurationProperties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionProxyConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> containerName;
-        private @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties;
-        private @Nullable Output<String> type;
+        private TaskDefinitionProxyConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionProxyConfigurationArgs();
         }
 
         public Builder(TaskDefinitionProxyConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.proxyConfigurationProperties = defaults.proxyConfigurationProperties;
-    	      this.type = defaults.type;
+            $ = new TaskDefinitionProxyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(Output<String> containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Output.of(Objects.requireNonNull(containerName));
-            return this;
+            return containerName(Output.of(containerName));
         }
+
         public Builder proxyConfigurationProperties(@Nullable Output<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties) {
-            this.proxyConfigurationProperties = proxyConfigurationProperties;
+            $.proxyConfigurationProperties = proxyConfigurationProperties;
             return this;
         }
-        public Builder proxyConfigurationProperties(@Nullable List<TaskDefinitionKeyValuePairArgs> proxyConfigurationProperties) {
-            this.proxyConfigurationProperties = Codegen.ofNullable(proxyConfigurationProperties);
-            return this;
+
+        public Builder proxyConfigurationProperties(List<TaskDefinitionKeyValuePairArgs> proxyConfigurationProperties) {
+            return proxyConfigurationProperties(Output.of(proxyConfigurationProperties));
         }
+
         public Builder proxyConfigurationProperties(TaskDefinitionKeyValuePairArgs... proxyConfigurationProperties) {
             return proxyConfigurationProperties(List.of(proxyConfigurationProperties));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public TaskDefinitionProxyConfigurationArgs build() {
-            return new TaskDefinitionProxyConfigurationArgs(containerName, proxyConfigurationProperties, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public TaskDefinitionProxyConfigurationArgs build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            return $;
         }
     }
+
 }

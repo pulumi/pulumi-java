@@ -17,7 +17,7 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
      * 
      */
     @Import(name="softwareUpdateConfigurationName", required=true)
-      private final String softwareUpdateConfigurationName;
+    private String softwareUpdateConfigurationName;
 
     public String softwareUpdateConfigurationName() {
         return this.softwareUpdateConfigurationName;
     }
 
-    public GetSoftwareUpdateConfigurationByNameArgs(
-        String automationAccountName,
-        String resourceGroupName,
-        String softwareUpdateConfigurationName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.softwareUpdateConfigurationName = Objects.requireNonNull(softwareUpdateConfigurationName, "expected parameter 'softwareUpdateConfigurationName' to be non-null");
-    }
+    private GetSoftwareUpdateConfigurationByNameArgs() {}
 
-    private GetSoftwareUpdateConfigurationByNameArgs() {
-        this.automationAccountName = null;
-        this.resourceGroupName = null;
-        this.softwareUpdateConfigurationName = null;
+    private GetSoftwareUpdateConfigurationByNameArgs(GetSoftwareUpdateConfigurationByNameArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.softwareUpdateConfigurationName = $.softwareUpdateConfigurationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSoftwareUpdateConfigurationByNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String resourceGroupName;
-        private String softwareUpdateConfigurationName;
+        private GetSoftwareUpdateConfigurationByNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSoftwareUpdateConfigurationByNameArgs();
         }
 
         public Builder(GetSoftwareUpdateConfigurationByNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.softwareUpdateConfigurationName = defaults.softwareUpdateConfigurationName;
+            $ = new GetSoftwareUpdateConfigurationByNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder softwareUpdateConfigurationName(String softwareUpdateConfigurationName) {
-            this.softwareUpdateConfigurationName = Objects.requireNonNull(softwareUpdateConfigurationName);
+            $.softwareUpdateConfigurationName = softwareUpdateConfigurationName;
             return this;
-        }        public GetSoftwareUpdateConfigurationByNameArgs build() {
-            return new GetSoftwareUpdateConfigurationByNameArgs(automationAccountName, resourceGroupName, softwareUpdateConfigurationName);
+        }
+
+        public GetSoftwareUpdateConfigurationByNameArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.softwareUpdateConfigurationName = Objects.requireNonNull($.softwareUpdateConfigurationName, "expected parameter 'softwareUpdateConfigurationName' to be non-null");
+            return $;
         }
     }
+
 }

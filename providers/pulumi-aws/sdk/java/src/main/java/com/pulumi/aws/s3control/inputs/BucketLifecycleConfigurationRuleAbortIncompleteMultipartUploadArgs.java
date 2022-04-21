@@ -5,7 +5,6 @@ package com.pulumi.aws.s3control.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
      * 
      */
     @Import(name="daysAfterInitiation", required=true)
-      private final Output<Integer> daysAfterInitiation;
+    private Output<Integer> daysAfterInitiation;
 
     public Output<Integer> daysAfterInitiation() {
         return this.daysAfterInitiation;
     }
 
-    public BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs(Output<Integer> daysAfterInitiation) {
-        this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation, "expected parameter 'daysAfterInitiation' to be non-null");
-    }
+    private BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs() {}
 
-    private BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs() {
-        this.daysAfterInitiation = Codegen.empty();
+    private BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs(BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs $) {
+        this.daysAfterInitiation = $.daysAfterInitiation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> daysAfterInitiation;
+        private BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs();
         }
 
         public Builder(BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysAfterInitiation = defaults.daysAfterInitiation;
+            $ = new BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysAfterInitiation(Output<Integer> daysAfterInitiation) {
-            this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
+            $.daysAfterInitiation = daysAfterInitiation;
             return this;
         }
+
         public Builder daysAfterInitiation(Integer daysAfterInitiation) {
-            this.daysAfterInitiation = Output.of(Objects.requireNonNull(daysAfterInitiation));
-            return this;
-        }        public BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs build() {
-            return new BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs(daysAfterInitiation);
+            return daysAfterInitiation(Output.of(daysAfterInitiation));
+        }
+
+        public BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs build() {
+            $.daysAfterInitiation = Objects.requireNonNull($.daysAfterInitiation, "expected parameter 'daysAfterInitiation' to be non-null");
+            return $;
         }
     }
+
 }

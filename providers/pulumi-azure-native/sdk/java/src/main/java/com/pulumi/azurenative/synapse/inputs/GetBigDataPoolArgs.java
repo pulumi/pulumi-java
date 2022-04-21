@@ -17,7 +17,7 @@ public final class GetBigDataPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bigDataPoolName", required=true)
-      private final String bigDataPoolName;
+    private String bigDataPoolName;
 
     public String bigDataPoolName() {
         return this.bigDataPoolName;
@@ -28,7 +28,7 @@ public final class GetBigDataPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetBigDataPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetBigDataPoolArgs(
-        String bigDataPoolName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.bigDataPoolName = Objects.requireNonNull(bigDataPoolName, "expected parameter 'bigDataPoolName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetBigDataPoolArgs() {}
 
-    private GetBigDataPoolArgs() {
-        this.bigDataPoolName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetBigDataPoolArgs(GetBigDataPoolArgs $) {
+        this.bigDataPoolName = $.bigDataPoolName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBigDataPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bigDataPoolName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetBigDataPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBigDataPoolArgs();
         }
 
         public Builder(GetBigDataPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigDataPoolName = defaults.bigDataPoolName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetBigDataPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigDataPoolName(String bigDataPoolName) {
-            this.bigDataPoolName = Objects.requireNonNull(bigDataPoolName);
+            $.bigDataPoolName = bigDataPoolName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetBigDataPoolArgs build() {
-            return new GetBigDataPoolArgs(bigDataPoolName, resourceGroupName, workspaceName);
+        }
+
+        public GetBigDataPoolArgs build() {
+            $.bigDataPoolName = Objects.requireNonNull($.bigDataPoolName, "expected parameter 'bigDataPoolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

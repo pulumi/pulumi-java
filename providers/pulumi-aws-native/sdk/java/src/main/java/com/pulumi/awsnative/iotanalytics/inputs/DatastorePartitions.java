@@ -16,48 +16,48 @@ public final class DatastorePartitions extends com.pulumi.resources.InvokeArgs {
     public static final DatastorePartitions Empty = new DatastorePartitions();
 
     @Import(name="partitions")
-      private final @Nullable List<DatastorePartition> partitions;
+    private @Nullable List<DatastorePartition> partitions;
 
-    public List<DatastorePartition> partitions() {
-        return this.partitions == null ? List.of() : this.partitions;
+    public Optional<List<DatastorePartition>> partitions() {
+        return Optional.ofNullable(this.partitions);
     }
 
-    public DatastorePartitions(@Nullable List<DatastorePartition> partitions) {
-        this.partitions = partitions;
-    }
+    private DatastorePartitions() {}
 
-    private DatastorePartitions() {
-        this.partitions = List.of();
+    private DatastorePartitions(DatastorePartitions $) {
+        this.partitions = $.partitions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastorePartitions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DatastorePartition> partitions;
+        private DatastorePartitions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastorePartitions();
         }
 
         public Builder(DatastorePartitions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitions = defaults.partitions;
+            $ = new DatastorePartitions(Objects.requireNonNull(defaults));
         }
 
         public Builder partitions(@Nullable List<DatastorePartition> partitions) {
-            this.partitions = partitions;
+            $.partitions = partitions;
             return this;
         }
+
         public Builder partitions(DatastorePartition... partitions) {
             return partitions(List.of(partitions));
-        }        public DatastorePartitions build() {
-            return new DatastorePartitions(partitions);
+        }
+
+        public DatastorePartitions build() {
+            return $;
         }
     }
+
 }

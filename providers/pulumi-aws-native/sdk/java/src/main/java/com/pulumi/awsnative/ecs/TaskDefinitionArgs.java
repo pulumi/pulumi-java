@@ -13,10 +13,10 @@ import com.pulumi.awsnative.ecs.inputs.TaskDefinitionTagArgs;
 import com.pulumi.awsnative.ecs.inputs.TaskDefinitionVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,388 +25,344 @@ public final class TaskDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     public static final TaskDefinitionArgs Empty = new TaskDefinitionArgs();
 
     @Import(name="containerDefinitions")
-      private final @Nullable Output<List<TaskDefinitionContainerDefinitionArgs>> containerDefinitions;
+    private @Nullable Output<List<TaskDefinitionContainerDefinitionArgs>> containerDefinitions;
 
-    public Output<List<TaskDefinitionContainerDefinitionArgs>> containerDefinitions() {
-        return this.containerDefinitions == null ? Codegen.empty() : this.containerDefinitions;
+    public Optional<Output<List<TaskDefinitionContainerDefinitionArgs>>> containerDefinitions() {
+        return Optional.ofNullable(this.containerDefinitions);
     }
 
     @Import(name="cpu")
-      private final @Nullable Output<String> cpu;
+    private @Nullable Output<String> cpu;
 
-    public Output<String> cpu() {
-        return this.cpu == null ? Codegen.empty() : this.cpu;
+    public Optional<Output<String>> cpu() {
+        return Optional.ofNullable(this.cpu);
     }
 
     @Import(name="ephemeralStorage")
-      private final @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
+    private @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
 
-    public Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage() {
-        return this.ephemeralStorage == null ? Codegen.empty() : this.ephemeralStorage;
+    public Optional<Output<TaskDefinitionEphemeralStorageArgs>> ephemeralStorage() {
+        return Optional.ofNullable(this.ephemeralStorage);
     }
 
     @Import(name="executionRoleArn")
-      private final @Nullable Output<String> executionRoleArn;
+    private @Nullable Output<String> executionRoleArn;
 
-    public Output<String> executionRoleArn() {
-        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
+    public Optional<Output<String>> executionRoleArn() {
+        return Optional.ofNullable(this.executionRoleArn);
     }
 
     @Import(name="family")
-      private final @Nullable Output<String> family;
+    private @Nullable Output<String> family;
 
-    public Output<String> family() {
-        return this.family == null ? Codegen.empty() : this.family;
+    public Optional<Output<String>> family() {
+        return Optional.ofNullable(this.family);
     }
 
     @Import(name="inferenceAccelerators")
-      private final @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
+    private @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
 
-    public Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators() {
-        return this.inferenceAccelerators == null ? Codegen.empty() : this.inferenceAccelerators;
+    public Optional<Output<List<TaskDefinitionInferenceAcceleratorArgs>>> inferenceAccelerators() {
+        return Optional.ofNullable(this.inferenceAccelerators);
     }
 
     @Import(name="ipcMode")
-      private final @Nullable Output<String> ipcMode;
+    private @Nullable Output<String> ipcMode;
 
-    public Output<String> ipcMode() {
-        return this.ipcMode == null ? Codegen.empty() : this.ipcMode;
+    public Optional<Output<String>> ipcMode() {
+        return Optional.ofNullable(this.ipcMode);
     }
 
     @Import(name="memory")
-      private final @Nullable Output<String> memory;
+    private @Nullable Output<String> memory;
 
-    public Output<String> memory() {
-        return this.memory == null ? Codegen.empty() : this.memory;
+    public Optional<Output<String>> memory() {
+        return Optional.ofNullable(this.memory);
     }
 
     @Import(name="networkMode")
-      private final @Nullable Output<String> networkMode;
+    private @Nullable Output<String> networkMode;
 
-    public Output<String> networkMode() {
-        return this.networkMode == null ? Codegen.empty() : this.networkMode;
+    public Optional<Output<String>> networkMode() {
+        return Optional.ofNullable(this.networkMode);
     }
 
     @Import(name="pidMode")
-      private final @Nullable Output<String> pidMode;
+    private @Nullable Output<String> pidMode;
 
-    public Output<String> pidMode() {
-        return this.pidMode == null ? Codegen.empty() : this.pidMode;
+    public Optional<Output<String>> pidMode() {
+        return Optional.ofNullable(this.pidMode);
     }
 
     @Import(name="placementConstraints")
-      private final @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
+    private @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
 
-    public Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints() {
-        return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
+    public Optional<Output<List<TaskDefinitionPlacementConstraintArgs>>> placementConstraints() {
+        return Optional.ofNullable(this.placementConstraints);
     }
 
     @Import(name="proxyConfiguration")
-      private final @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
+    private @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
 
-    public Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration() {
-        return this.proxyConfiguration == null ? Codegen.empty() : this.proxyConfiguration;
+    public Optional<Output<TaskDefinitionProxyConfigurationArgs>> proxyConfiguration() {
+        return Optional.ofNullable(this.proxyConfiguration);
     }
 
     @Import(name="requiresCompatibilities")
-      private final @Nullable Output<List<String>> requiresCompatibilities;
+    private @Nullable Output<List<String>> requiresCompatibilities;
 
-    public Output<List<String>> requiresCompatibilities() {
-        return this.requiresCompatibilities == null ? Codegen.empty() : this.requiresCompatibilities;
+    public Optional<Output<List<String>>> requiresCompatibilities() {
+        return Optional.ofNullable(this.requiresCompatibilities);
     }
 
     @Import(name="runtimePlatform")
-      private final @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
+    private @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
 
-    public Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform() {
-        return this.runtimePlatform == null ? Codegen.empty() : this.runtimePlatform;
+    public Optional<Output<TaskDefinitionRuntimePlatformArgs>> runtimePlatform() {
+        return Optional.ofNullable(this.runtimePlatform);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<TaskDefinitionTagArgs>> tags;
+    private @Nullable Output<List<TaskDefinitionTagArgs>> tags;
 
-    public Output<List<TaskDefinitionTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TaskDefinitionTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="taskRoleArn")
-      private final @Nullable Output<String> taskRoleArn;
+    private @Nullable Output<String> taskRoleArn;
 
-    public Output<String> taskRoleArn() {
-        return this.taskRoleArn == null ? Codegen.empty() : this.taskRoleArn;
+    public Optional<Output<String>> taskRoleArn() {
+        return Optional.ofNullable(this.taskRoleArn);
     }
 
     @Import(name="volumes")
-      private final @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes;
+    private @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes;
 
-    public Output<List<TaskDefinitionVolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<TaskDefinitionVolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public TaskDefinitionArgs(
-        @Nullable Output<List<TaskDefinitionContainerDefinitionArgs>> containerDefinitions,
-        @Nullable Output<String> cpu,
-        @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage,
-        @Nullable Output<String> executionRoleArn,
-        @Nullable Output<String> family,
-        @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators,
-        @Nullable Output<String> ipcMode,
-        @Nullable Output<String> memory,
-        @Nullable Output<String> networkMode,
-        @Nullable Output<String> pidMode,
-        @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints,
-        @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration,
-        @Nullable Output<List<String>> requiresCompatibilities,
-        @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform,
-        @Nullable Output<List<TaskDefinitionTagArgs>> tags,
-        @Nullable Output<String> taskRoleArn,
-        @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes) {
-        this.containerDefinitions = containerDefinitions;
-        this.cpu = cpu;
-        this.ephemeralStorage = ephemeralStorage;
-        this.executionRoleArn = executionRoleArn;
-        this.family = family;
-        this.inferenceAccelerators = inferenceAccelerators;
-        this.ipcMode = ipcMode;
-        this.memory = memory;
-        this.networkMode = networkMode;
-        this.pidMode = pidMode;
-        this.placementConstraints = placementConstraints;
-        this.proxyConfiguration = proxyConfiguration;
-        this.requiresCompatibilities = requiresCompatibilities;
-        this.runtimePlatform = runtimePlatform;
-        this.tags = tags;
-        this.taskRoleArn = taskRoleArn;
-        this.volumes = volumes;
-    }
+    private TaskDefinitionArgs() {}
 
-    private TaskDefinitionArgs() {
-        this.containerDefinitions = Codegen.empty();
-        this.cpu = Codegen.empty();
-        this.ephemeralStorage = Codegen.empty();
-        this.executionRoleArn = Codegen.empty();
-        this.family = Codegen.empty();
-        this.inferenceAccelerators = Codegen.empty();
-        this.ipcMode = Codegen.empty();
-        this.memory = Codegen.empty();
-        this.networkMode = Codegen.empty();
-        this.pidMode = Codegen.empty();
-        this.placementConstraints = Codegen.empty();
-        this.proxyConfiguration = Codegen.empty();
-        this.requiresCompatibilities = Codegen.empty();
-        this.runtimePlatform = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.taskRoleArn = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private TaskDefinitionArgs(TaskDefinitionArgs $) {
+        this.containerDefinitions = $.containerDefinitions;
+        this.cpu = $.cpu;
+        this.ephemeralStorage = $.ephemeralStorage;
+        this.executionRoleArn = $.executionRoleArn;
+        this.family = $.family;
+        this.inferenceAccelerators = $.inferenceAccelerators;
+        this.ipcMode = $.ipcMode;
+        this.memory = $.memory;
+        this.networkMode = $.networkMode;
+        this.pidMode = $.pidMode;
+        this.placementConstraints = $.placementConstraints;
+        this.proxyConfiguration = $.proxyConfiguration;
+        this.requiresCompatibilities = $.requiresCompatibilities;
+        this.runtimePlatform = $.runtimePlatform;
+        this.tags = $.tags;
+        this.taskRoleArn = $.taskRoleArn;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TaskDefinitionContainerDefinitionArgs>> containerDefinitions;
-        private @Nullable Output<String> cpu;
-        private @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
-        private @Nullable Output<String> executionRoleArn;
-        private @Nullable Output<String> family;
-        private @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
-        private @Nullable Output<String> ipcMode;
-        private @Nullable Output<String> memory;
-        private @Nullable Output<String> networkMode;
-        private @Nullable Output<String> pidMode;
-        private @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
-        private @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
-        private @Nullable Output<List<String>> requiresCompatibilities;
-        private @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
-        private @Nullable Output<List<TaskDefinitionTagArgs>> tags;
-        private @Nullable Output<String> taskRoleArn;
-        private @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes;
+        private TaskDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionArgs();
         }
 
         public Builder(TaskDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerDefinitions = defaults.containerDefinitions;
-    	      this.cpu = defaults.cpu;
-    	      this.ephemeralStorage = defaults.ephemeralStorage;
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.family = defaults.family;
-    	      this.inferenceAccelerators = defaults.inferenceAccelerators;
-    	      this.ipcMode = defaults.ipcMode;
-    	      this.memory = defaults.memory;
-    	      this.networkMode = defaults.networkMode;
-    	      this.pidMode = defaults.pidMode;
-    	      this.placementConstraints = defaults.placementConstraints;
-    	      this.proxyConfiguration = defaults.proxyConfiguration;
-    	      this.requiresCompatibilities = defaults.requiresCompatibilities;
-    	      this.runtimePlatform = defaults.runtimePlatform;
-    	      this.tags = defaults.tags;
-    	      this.taskRoleArn = defaults.taskRoleArn;
-    	      this.volumes = defaults.volumes;
+            $ = new TaskDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerDefinitions(@Nullable Output<List<TaskDefinitionContainerDefinitionArgs>> containerDefinitions) {
-            this.containerDefinitions = containerDefinitions;
+            $.containerDefinitions = containerDefinitions;
             return this;
         }
-        public Builder containerDefinitions(@Nullable List<TaskDefinitionContainerDefinitionArgs> containerDefinitions) {
-            this.containerDefinitions = Codegen.ofNullable(containerDefinitions);
-            return this;
+
+        public Builder containerDefinitions(List<TaskDefinitionContainerDefinitionArgs> containerDefinitions) {
+            return containerDefinitions(Output.of(containerDefinitions));
         }
+
         public Builder containerDefinitions(TaskDefinitionContainerDefinitionArgs... containerDefinitions) {
             return containerDefinitions(List.of(containerDefinitions));
         }
+
         public Builder cpu(@Nullable Output<String> cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
-        public Builder cpu(@Nullable String cpu) {
-            this.cpu = Codegen.ofNullable(cpu);
-            return this;
+
+        public Builder cpu(String cpu) {
+            return cpu(Output.of(cpu));
         }
+
         public Builder ephemeralStorage(@Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage) {
-            this.ephemeralStorage = ephemeralStorage;
+            $.ephemeralStorage = ephemeralStorage;
             return this;
         }
-        public Builder ephemeralStorage(@Nullable TaskDefinitionEphemeralStorageArgs ephemeralStorage) {
-            this.ephemeralStorage = Codegen.ofNullable(ephemeralStorage);
-            return this;
+
+        public Builder ephemeralStorage(TaskDefinitionEphemeralStorageArgs ephemeralStorage) {
+            return ephemeralStorage(Output.of(ephemeralStorage));
         }
+
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
-            this.executionRoleArn = executionRoleArn;
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
-        public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
-            return this;
+
+        public Builder executionRoleArn(String executionRoleArn) {
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder family(@Nullable Output<String> family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
-        public Builder family(@Nullable String family) {
-            this.family = Codegen.ofNullable(family);
-            return this;
+
+        public Builder family(String family) {
+            return family(Output.of(family));
         }
+
         public Builder inferenceAccelerators(@Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators) {
-            this.inferenceAccelerators = inferenceAccelerators;
+            $.inferenceAccelerators = inferenceAccelerators;
             return this;
         }
-        public Builder inferenceAccelerators(@Nullable List<TaskDefinitionInferenceAcceleratorArgs> inferenceAccelerators) {
-            this.inferenceAccelerators = Codegen.ofNullable(inferenceAccelerators);
-            return this;
+
+        public Builder inferenceAccelerators(List<TaskDefinitionInferenceAcceleratorArgs> inferenceAccelerators) {
+            return inferenceAccelerators(Output.of(inferenceAccelerators));
         }
+
         public Builder inferenceAccelerators(TaskDefinitionInferenceAcceleratorArgs... inferenceAccelerators) {
             return inferenceAccelerators(List.of(inferenceAccelerators));
         }
+
         public Builder ipcMode(@Nullable Output<String> ipcMode) {
-            this.ipcMode = ipcMode;
+            $.ipcMode = ipcMode;
             return this;
         }
-        public Builder ipcMode(@Nullable String ipcMode) {
-            this.ipcMode = Codegen.ofNullable(ipcMode);
-            return this;
+
+        public Builder ipcMode(String ipcMode) {
+            return ipcMode(Output.of(ipcMode));
         }
+
         public Builder memory(@Nullable Output<String> memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
         }
-        public Builder memory(@Nullable String memory) {
-            this.memory = Codegen.ofNullable(memory);
-            return this;
+
+        public Builder memory(String memory) {
+            return memory(Output.of(memory));
         }
+
         public Builder networkMode(@Nullable Output<String> networkMode) {
-            this.networkMode = networkMode;
+            $.networkMode = networkMode;
             return this;
         }
-        public Builder networkMode(@Nullable String networkMode) {
-            this.networkMode = Codegen.ofNullable(networkMode);
-            return this;
+
+        public Builder networkMode(String networkMode) {
+            return networkMode(Output.of(networkMode));
         }
+
         public Builder pidMode(@Nullable Output<String> pidMode) {
-            this.pidMode = pidMode;
+            $.pidMode = pidMode;
             return this;
         }
-        public Builder pidMode(@Nullable String pidMode) {
-            this.pidMode = Codegen.ofNullable(pidMode);
-            return this;
+
+        public Builder pidMode(String pidMode) {
+            return pidMode(Output.of(pidMode));
         }
+
         public Builder placementConstraints(@Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints) {
-            this.placementConstraints = placementConstraints;
+            $.placementConstraints = placementConstraints;
             return this;
         }
-        public Builder placementConstraints(@Nullable List<TaskDefinitionPlacementConstraintArgs> placementConstraints) {
-            this.placementConstraints = Codegen.ofNullable(placementConstraints);
-            return this;
+
+        public Builder placementConstraints(List<TaskDefinitionPlacementConstraintArgs> placementConstraints) {
+            return placementConstraints(Output.of(placementConstraints));
         }
+
         public Builder placementConstraints(TaskDefinitionPlacementConstraintArgs... placementConstraints) {
             return placementConstraints(List.of(placementConstraints));
         }
+
         public Builder proxyConfiguration(@Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration) {
-            this.proxyConfiguration = proxyConfiguration;
+            $.proxyConfiguration = proxyConfiguration;
             return this;
         }
-        public Builder proxyConfiguration(@Nullable TaskDefinitionProxyConfigurationArgs proxyConfiguration) {
-            this.proxyConfiguration = Codegen.ofNullable(proxyConfiguration);
-            return this;
+
+        public Builder proxyConfiguration(TaskDefinitionProxyConfigurationArgs proxyConfiguration) {
+            return proxyConfiguration(Output.of(proxyConfiguration));
         }
+
         public Builder requiresCompatibilities(@Nullable Output<List<String>> requiresCompatibilities) {
-            this.requiresCompatibilities = requiresCompatibilities;
+            $.requiresCompatibilities = requiresCompatibilities;
             return this;
         }
-        public Builder requiresCompatibilities(@Nullable List<String> requiresCompatibilities) {
-            this.requiresCompatibilities = Codegen.ofNullable(requiresCompatibilities);
-            return this;
+
+        public Builder requiresCompatibilities(List<String> requiresCompatibilities) {
+            return requiresCompatibilities(Output.of(requiresCompatibilities));
         }
+
         public Builder requiresCompatibilities(String... requiresCompatibilities) {
             return requiresCompatibilities(List.of(requiresCompatibilities));
         }
+
         public Builder runtimePlatform(@Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform) {
-            this.runtimePlatform = runtimePlatform;
+            $.runtimePlatform = runtimePlatform;
             return this;
         }
-        public Builder runtimePlatform(@Nullable TaskDefinitionRuntimePlatformArgs runtimePlatform) {
-            this.runtimePlatform = Codegen.ofNullable(runtimePlatform);
-            return this;
+
+        public Builder runtimePlatform(TaskDefinitionRuntimePlatformArgs runtimePlatform) {
+            return runtimePlatform(Output.of(runtimePlatform));
         }
+
         public Builder tags(@Nullable Output<List<TaskDefinitionTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TaskDefinitionTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TaskDefinitionTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TaskDefinitionTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder taskRoleArn(@Nullable Output<String> taskRoleArn) {
-            this.taskRoleArn = taskRoleArn;
+            $.taskRoleArn = taskRoleArn;
             return this;
         }
-        public Builder taskRoleArn(@Nullable String taskRoleArn) {
-            this.taskRoleArn = Codegen.ofNullable(taskRoleArn);
-            return this;
+
+        public Builder taskRoleArn(String taskRoleArn) {
+            return taskRoleArn(Output.of(taskRoleArn));
         }
+
         public Builder volumes(@Nullable Output<List<TaskDefinitionVolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<TaskDefinitionVolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<TaskDefinitionVolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(TaskDefinitionVolumeArgs... volumes) {
             return volumes(List.of(volumes));
-        }        public TaskDefinitionArgs build() {
-            return new TaskDefinitionArgs(containerDefinitions, cpu, ephemeralStorage, executionRoleArn, family, inferenceAccelerators, ipcMode, memory, networkMode, pidMode, placementConstraints, proxyConfiguration, requiresCompatibilities, runtimePlatform, tags, taskRoleArn, volumes);
+        }
+
+        public TaskDefinitionArgs build() {
+            return $;
         }
     }
+
 }

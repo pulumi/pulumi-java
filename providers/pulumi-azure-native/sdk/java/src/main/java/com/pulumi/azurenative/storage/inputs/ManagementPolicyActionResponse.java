@@ -25,10 +25,10 @@ public final class ManagementPolicyActionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="baseBlob")
-      private final @Nullable ManagementPolicyBaseBlobResponse baseBlob;
+    private @Nullable ManagementPolicyBaseBlobResponse baseBlob;
 
     public Optional<ManagementPolicyBaseBlobResponse> baseBlob() {
-        return this.baseBlob == null ? Optional.empty() : Optional.ofNullable(this.baseBlob);
+        return Optional.ofNullable(this.baseBlob);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagementPolicyActionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="snapshot")
-      private final @Nullable ManagementPolicySnapShotResponse snapshot;
+    private @Nullable ManagementPolicySnapShotResponse snapshot;
 
     public Optional<ManagementPolicySnapShotResponse> snapshot() {
-        return this.snapshot == null ? Optional.empty() : Optional.ofNullable(this.snapshot);
+        return Optional.ofNullable(this.snapshot);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class ManagementPolicyActionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="version")
-      private final @Nullable ManagementPolicyVersionResponse version;
+    private @Nullable ManagementPolicyVersionResponse version;
 
     public Optional<ManagementPolicyVersionResponse> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ManagementPolicyActionResponse(
-        @Nullable ManagementPolicyBaseBlobResponse baseBlob,
-        @Nullable ManagementPolicySnapShotResponse snapshot,
-        @Nullable ManagementPolicyVersionResponse version) {
-        this.baseBlob = baseBlob;
-        this.snapshot = snapshot;
-        this.version = version;
-    }
+    private ManagementPolicyActionResponse() {}
 
-    private ManagementPolicyActionResponse() {
-        this.baseBlob = null;
-        this.snapshot = null;
-        this.version = null;
+    private ManagementPolicyActionResponse(ManagementPolicyActionResponse $) {
+        this.baseBlob = $.baseBlob;
+        this.snapshot = $.snapshot;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ManagementPolicyBaseBlobResponse baseBlob;
-        private @Nullable ManagementPolicySnapShotResponse snapshot;
-        private @Nullable ManagementPolicyVersionResponse version;
+        private ManagementPolicyActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyActionResponse();
         }
 
         public Builder(ManagementPolicyActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseBlob = defaults.baseBlob;
-    	      this.snapshot = defaults.snapshot;
-    	      this.version = defaults.version;
+            $ = new ManagementPolicyActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseBlob(@Nullable ManagementPolicyBaseBlobResponse baseBlob) {
-            this.baseBlob = baseBlob;
+            $.baseBlob = baseBlob;
             return this;
         }
+
         public Builder snapshot(@Nullable ManagementPolicySnapShotResponse snapshot) {
-            this.snapshot = snapshot;
+            $.snapshot = snapshot;
             return this;
         }
+
         public Builder version(@Nullable ManagementPolicyVersionResponse version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ManagementPolicyActionResponse build() {
-            return new ManagementPolicyActionResponse(baseBlob, snapshot, version);
+        }
+
+        public ManagementPolicyActionResponse build() {
+            return $;
         }
     }
+
 }

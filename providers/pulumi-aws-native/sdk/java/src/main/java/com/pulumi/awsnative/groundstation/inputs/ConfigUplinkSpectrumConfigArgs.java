@@ -7,8 +7,8 @@ import com.pulumi.awsnative.groundstation.enums.ConfigPolarization;
 import com.pulumi.awsnative.groundstation.inputs.ConfigFrequencyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ConfigUplinkSpectrumConfigArgs extends com.pulumi.resources.R
     public static final ConfigUplinkSpectrumConfigArgs Empty = new ConfigUplinkSpectrumConfigArgs();
 
     @Import(name="centerFrequency")
-      private final @Nullable Output<ConfigFrequencyArgs> centerFrequency;
+    private @Nullable Output<ConfigFrequencyArgs> centerFrequency;
 
-    public Output<ConfigFrequencyArgs> centerFrequency() {
-        return this.centerFrequency == null ? Codegen.empty() : this.centerFrequency;
+    public Optional<Output<ConfigFrequencyArgs>> centerFrequency() {
+        return Optional.ofNullable(this.centerFrequency);
     }
 
     @Import(name="polarization")
-      private final @Nullable Output<ConfigPolarization> polarization;
+    private @Nullable Output<ConfigPolarization> polarization;
 
-    public Output<ConfigPolarization> polarization() {
-        return this.polarization == null ? Codegen.empty() : this.polarization;
+    public Optional<Output<ConfigPolarization>> polarization() {
+        return Optional.ofNullable(this.polarization);
     }
 
-    public ConfigUplinkSpectrumConfigArgs(
-        @Nullable Output<ConfigFrequencyArgs> centerFrequency,
-        @Nullable Output<ConfigPolarization> polarization) {
-        this.centerFrequency = centerFrequency;
-        this.polarization = polarization;
-    }
+    private ConfigUplinkSpectrumConfigArgs() {}
 
-    private ConfigUplinkSpectrumConfigArgs() {
-        this.centerFrequency = Codegen.empty();
-        this.polarization = Codegen.empty();
+    private ConfigUplinkSpectrumConfigArgs(ConfigUplinkSpectrumConfigArgs $) {
+        this.centerFrequency = $.centerFrequency;
+        this.polarization = $.polarization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigUplinkSpectrumConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigFrequencyArgs> centerFrequency;
-        private @Nullable Output<ConfigPolarization> polarization;
+        private ConfigUplinkSpectrumConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigUplinkSpectrumConfigArgs();
         }
 
         public Builder(ConfigUplinkSpectrumConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.centerFrequency = defaults.centerFrequency;
-    	      this.polarization = defaults.polarization;
+            $ = new ConfigUplinkSpectrumConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder centerFrequency(@Nullable Output<ConfigFrequencyArgs> centerFrequency) {
-            this.centerFrequency = centerFrequency;
+            $.centerFrequency = centerFrequency;
             return this;
         }
-        public Builder centerFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
-            this.centerFrequency = Codegen.ofNullable(centerFrequency);
-            return this;
+
+        public Builder centerFrequency(ConfigFrequencyArgs centerFrequency) {
+            return centerFrequency(Output.of(centerFrequency));
         }
+
         public Builder polarization(@Nullable Output<ConfigPolarization> polarization) {
-            this.polarization = polarization;
+            $.polarization = polarization;
             return this;
         }
-        public Builder polarization(@Nullable ConfigPolarization polarization) {
-            this.polarization = Codegen.ofNullable(polarization);
-            return this;
-        }        public ConfigUplinkSpectrumConfigArgs build() {
-            return new ConfigUplinkSpectrumConfigArgs(centerFrequency, polarization);
+
+        public Builder polarization(ConfigPolarization polarization) {
+            return polarization(Output.of(polarization));
+        }
+
+        public ConfigUplinkSpectrumConfigArgs build() {
+            return $;
         }
     }
+
 }

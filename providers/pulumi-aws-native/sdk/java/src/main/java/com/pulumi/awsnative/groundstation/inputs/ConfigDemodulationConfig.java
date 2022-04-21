@@ -15,45 +15,44 @@ public final class ConfigDemodulationConfig extends com.pulumi.resources.InvokeA
     public static final ConfigDemodulationConfig Empty = new ConfigDemodulationConfig();
 
     @Import(name="unvalidatedJSON")
-      private final @Nullable String unvalidatedJSON;
+    private @Nullable String unvalidatedJSON;
 
     public Optional<String> unvalidatedJSON() {
-        return this.unvalidatedJSON == null ? Optional.empty() : Optional.ofNullable(this.unvalidatedJSON);
+        return Optional.ofNullable(this.unvalidatedJSON);
     }
 
-    public ConfigDemodulationConfig(@Nullable String unvalidatedJSON) {
-        this.unvalidatedJSON = unvalidatedJSON;
-    }
+    private ConfigDemodulationConfig() {}
 
-    private ConfigDemodulationConfig() {
-        this.unvalidatedJSON = null;
+    private ConfigDemodulationConfig(ConfigDemodulationConfig $) {
+        this.unvalidatedJSON = $.unvalidatedJSON;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigDemodulationConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String unvalidatedJSON;
+        private ConfigDemodulationConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigDemodulationConfig();
         }
 
         public Builder(ConfigDemodulationConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.unvalidatedJSON = defaults.unvalidatedJSON;
+            $ = new ConfigDemodulationConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
-            this.unvalidatedJSON = unvalidatedJSON;
+            $.unvalidatedJSON = unvalidatedJSON;
             return this;
-        }        public ConfigDemodulationConfig build() {
-            return new ConfigDemodulationConfig(unvalidatedJSON);
+        }
+
+        public ConfigDemodulationConfig build() {
+            return $;
         }
     }
+
 }

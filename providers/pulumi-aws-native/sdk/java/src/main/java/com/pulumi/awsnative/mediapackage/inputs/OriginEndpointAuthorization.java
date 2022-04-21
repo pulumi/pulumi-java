@@ -21,7 +21,7 @@ public final class OriginEndpointAuthorization extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="cdnIdentifierSecret", required=true)
-      private final String cdnIdentifierSecret;
+    private String cdnIdentifierSecret;
 
     public String cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
@@ -32,55 +32,52 @@ public final class OriginEndpointAuthorization extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="secretsRoleArn", required=true)
-      private final String secretsRoleArn;
+    private String secretsRoleArn;
 
     public String secretsRoleArn() {
         return this.secretsRoleArn;
     }
 
-    public OriginEndpointAuthorization(
-        String cdnIdentifierSecret,
-        String secretsRoleArn) {
-        this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret, "expected parameter 'cdnIdentifierSecret' to be non-null");
-        this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn, "expected parameter 'secretsRoleArn' to be non-null");
-    }
+    private OriginEndpointAuthorization() {}
 
-    private OriginEndpointAuthorization() {
-        this.cdnIdentifierSecret = null;
-        this.secretsRoleArn = null;
+    private OriginEndpointAuthorization(OriginEndpointAuthorization $) {
+        this.cdnIdentifierSecret = $.cdnIdentifierSecret;
+        this.secretsRoleArn = $.secretsRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointAuthorization defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cdnIdentifierSecret;
-        private String secretsRoleArn;
+        private OriginEndpointAuthorization $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointAuthorization();
         }
 
         public Builder(OriginEndpointAuthorization defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cdnIdentifierSecret = defaults.cdnIdentifierSecret;
-    	      this.secretsRoleArn = defaults.secretsRoleArn;
+            $ = new OriginEndpointAuthorization(Objects.requireNonNull(defaults));
         }
 
         public Builder cdnIdentifierSecret(String cdnIdentifierSecret) {
-            this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret);
+            $.cdnIdentifierSecret = cdnIdentifierSecret;
             return this;
         }
+
         public Builder secretsRoleArn(String secretsRoleArn) {
-            this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
+            $.secretsRoleArn = secretsRoleArn;
             return this;
-        }        public OriginEndpointAuthorization build() {
-            return new OriginEndpointAuthorization(cdnIdentifierSecret, secretsRoleArn);
+        }
+
+        public OriginEndpointAuthorization build() {
+            $.cdnIdentifierSecret = Objects.requireNonNull($.cdnIdentifierSecret, "expected parameter 'cdnIdentifierSecret' to be non-null");
+            $.secretsRoleArn = Objects.requireNonNull($.secretsRoleArn, "expected parameter 'secretsRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

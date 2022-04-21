@@ -26,10 +26,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
      * 
      */
     @Import(name="groupIds")
-      private final @Nullable List<String> groupIds;
+    private @Nullable List<String> groupIds;
 
-    public List<String> groupIds() {
-        return this.groupIds == null ? List.of() : this.groupIds;
+    public Optional<List<String>> groupIds() {
+        return Optional.ofNullable(this.groupIds);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable PrivateEndpointResponse privateEndpoint;
+    private @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> privateEndpoint() {
-        return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -48,67 +48,61 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
      * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
-      private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    private PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
 
-    public PrivateEndpointConnectionPropertiesResponse(
-        @Nullable List<String> groupIds,
-        @Nullable PrivateEndpointResponse privateEndpoint,
-        PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-        this.groupIds = groupIds;
-        this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
-    }
+    private PrivateEndpointConnectionPropertiesResponse() {}
 
-    private PrivateEndpointConnectionPropertiesResponse() {
-        this.groupIds = List.of();
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
+    private PrivateEndpointConnectionPropertiesResponse(PrivateEndpointConnectionPropertiesResponse $) {
+        this.groupIds = $.groupIds;
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> groupIds;
-        private @Nullable PrivateEndpointResponse privateEndpoint;
-        private PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+        private PrivateEndpointConnectionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionPropertiesResponse();
         }
 
         public Builder(PrivateEndpointConnectionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupIds = defaults.groupIds;
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
+            $ = new PrivateEndpointConnectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = groupIds;
+            $.groupIds = groupIds;
             return this;
         }
+
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
+
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
-        }        public PrivateEndpointConnectionPropertiesResponse build() {
-            return new PrivateEndpointConnectionPropertiesResponse(groupIds, privateEndpoint, privateLinkServiceConnectionState);
+        }
+
+        public PrivateEndpointConnectionPropertiesResponse build() {
+            $.privateLinkServiceConnectionState = Objects.requireNonNull($.privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
+            return $;
         }
     }
+
 }

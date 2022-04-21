@@ -27,7 +27,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="baseImageDependencies", required=true)
-      private final List<BaseImageDependencyResponse> baseImageDependencies;
+    private List<BaseImageDependencyResponse> baseImageDependencies;
 
     public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
@@ -38,10 +38,10 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="contextAccessToken")
-      private final @Nullable String contextAccessToken;
+    private @Nullable String contextAccessToken;
 
     public Optional<String> contextAccessToken() {
-        return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
+        return Optional.ofNullable(this.contextAccessToken);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="contextPath")
-      private final @Nullable String contextPath;
+    private @Nullable String contextPath;
 
     public Optional<String> contextPath() {
-        return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
+        return Optional.ofNullable(this.contextPath);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="taskFilePath", required=true)
-      private final String taskFilePath;
+    private String taskFilePath;
 
     public String taskFilePath() {
         return this.taskFilePath;
@@ -72,7 +72,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -83,10 +83,10 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="values")
-      private final @Nullable List<SetValueResponse> values;
+    private @Nullable List<SetValueResponse> values;
 
-    public List<SetValueResponse> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<SetValueResponse>> values() {
+        return Optional.ofNullable(this.values);
     }
 
     /**
@@ -94,106 +94,91 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="valuesFilePath")
-      private final @Nullable String valuesFilePath;
+    private @Nullable String valuesFilePath;
 
     public Optional<String> valuesFilePath() {
-        return this.valuesFilePath == null ? Optional.empty() : Optional.ofNullable(this.valuesFilePath);
+        return Optional.ofNullable(this.valuesFilePath);
     }
 
-    public FileTaskStepResponse(
-        List<BaseImageDependencyResponse> baseImageDependencies,
-        @Nullable String contextAccessToken,
-        @Nullable String contextPath,
-        String taskFilePath,
-        String type,
-        @Nullable List<SetValueResponse> values,
-        @Nullable String valuesFilePath) {
-        this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies, "expected parameter 'baseImageDependencies' to be non-null");
-        this.contextAccessToken = contextAccessToken;
-        this.contextPath = contextPath;
-        this.taskFilePath = Objects.requireNonNull(taskFilePath, "expected parameter 'taskFilePath' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.values = values;
-        this.valuesFilePath = valuesFilePath;
-    }
+    private FileTaskStepResponse() {}
 
-    private FileTaskStepResponse() {
-        this.baseImageDependencies = List.of();
-        this.contextAccessToken = null;
-        this.contextPath = null;
-        this.taskFilePath = null;
-        this.type = null;
-        this.values = List.of();
-        this.valuesFilePath = null;
+    private FileTaskStepResponse(FileTaskStepResponse $) {
+        this.baseImageDependencies = $.baseImageDependencies;
+        this.contextAccessToken = $.contextAccessToken;
+        this.contextPath = $.contextPath;
+        this.taskFilePath = $.taskFilePath;
+        this.type = $.type;
+        this.values = $.values;
+        this.valuesFilePath = $.valuesFilePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileTaskStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BaseImageDependencyResponse> baseImageDependencies;
-        private @Nullable String contextAccessToken;
-        private @Nullable String contextPath;
-        private String taskFilePath;
-        private String type;
-        private @Nullable List<SetValueResponse> values;
-        private @Nullable String valuesFilePath;
+        private FileTaskStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileTaskStepResponse();
         }
 
         public Builder(FileTaskStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseImageDependencies = defaults.baseImageDependencies;
-    	      this.contextAccessToken = defaults.contextAccessToken;
-    	      this.contextPath = defaults.contextPath;
-    	      this.taskFilePath = defaults.taskFilePath;
-    	      this.type = defaults.type;
-    	      this.values = defaults.values;
-    	      this.valuesFilePath = defaults.valuesFilePath;
+            $ = new FileTaskStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
-            this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
+            $.baseImageDependencies = baseImageDependencies;
             return this;
         }
+
         public Builder baseImageDependencies(BaseImageDependencyResponse... baseImageDependencies) {
             return baseImageDependencies(List.of(baseImageDependencies));
         }
+
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
-            this.contextAccessToken = contextAccessToken;
+            $.contextAccessToken = contextAccessToken;
             return this;
         }
+
         public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = contextPath;
+            $.contextPath = contextPath;
             return this;
         }
+
         public Builder taskFilePath(String taskFilePath) {
-            this.taskFilePath = Objects.requireNonNull(taskFilePath);
+            $.taskFilePath = taskFilePath;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder values(@Nullable List<SetValueResponse> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(SetValueResponse... values) {
             return values(List.of(values));
         }
+
         public Builder valuesFilePath(@Nullable String valuesFilePath) {
-            this.valuesFilePath = valuesFilePath;
+            $.valuesFilePath = valuesFilePath;
             return this;
-        }        public FileTaskStepResponse build() {
-            return new FileTaskStepResponse(baseImageDependencies, contextAccessToken, contextPath, taskFilePath, type, values, valuesFilePath);
+        }
+
+        public FileTaskStepResponse build() {
+            $.baseImageDependencies = Objects.requireNonNull($.baseImageDependencies, "expected parameter 'baseImageDependencies' to be non-null");
+            $.taskFilePath = Objects.requireNonNull($.taskFilePath, "expected parameter 'taskFilePath' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

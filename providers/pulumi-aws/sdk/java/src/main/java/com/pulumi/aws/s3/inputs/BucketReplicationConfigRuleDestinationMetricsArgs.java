@@ -6,9 +6,9 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BucketReplicationConfigRuleDestinationMetricsArgs extends com
      * 
      */
     @Import(name="eventThreshold")
-      private final @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs> eventThreshold;
+    private @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs> eventThreshold;
 
-    public Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs> eventThreshold() {
-        return this.eventThreshold == null ? Codegen.empty() : this.eventThreshold;
+    public Optional<Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs>> eventThreshold() {
+        return Optional.ofNullable(this.eventThreshold);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class BucketReplicationConfigRuleDestinationMetricsArgs extends com
      * 
      */
     @Import(name="status", required=true)
-      private final Output<String> status;
+    private Output<String> status;
 
     public Output<String> status() {
         return this.status;
     }
 
-    public BucketReplicationConfigRuleDestinationMetricsArgs(
-        @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs> eventThreshold,
-        Output<String> status) {
-        this.eventThreshold = eventThreshold;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketReplicationConfigRuleDestinationMetricsArgs() {}
 
-    private BucketReplicationConfigRuleDestinationMetricsArgs() {
-        this.eventThreshold = Codegen.empty();
-        this.status = Codegen.empty();
+    private BucketReplicationConfigRuleDestinationMetricsArgs(BucketReplicationConfigRuleDestinationMetricsArgs $) {
+        this.eventThreshold = $.eventThreshold;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigRuleDestinationMetricsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs> eventThreshold;
-        private Output<String> status;
+        private BucketReplicationConfigRuleDestinationMetricsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigRuleDestinationMetricsArgs();
         }
 
         public Builder(BucketReplicationConfigRuleDestinationMetricsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventThreshold = defaults.eventThreshold;
-    	      this.status = defaults.status;
+            $ = new BucketReplicationConfigRuleDestinationMetricsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventThreshold(@Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs> eventThreshold) {
-            this.eventThreshold = eventThreshold;
+            $.eventThreshold = eventThreshold;
             return this;
         }
-        public Builder eventThreshold(@Nullable BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs eventThreshold) {
-            this.eventThreshold = Codegen.ofNullable(eventThreshold);
-            return this;
+
+        public Builder eventThreshold(BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs eventThreshold) {
+            return eventThreshold(Output.of(eventThreshold));
         }
+
         public Builder status(Output<String> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public BucketReplicationConfigRuleDestinationMetricsArgs build() {
-            return new BucketReplicationConfigRuleDestinationMetricsArgs(eventThreshold, status);
+            return status(Output.of(status));
+        }
+
+        public BucketReplicationConfigRuleDestinationMetricsArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.azurenative.powerplatform.inputs;
 import com.pulumi.azurenative.powerplatform.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EnterprisePolicyIdentityArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ResourceIdentityType> type;
+    private @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ResourceIdentityType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public EnterprisePolicyIdentityArgs(@Nullable Output<ResourceIdentityType> type) {
-        this.type = type;
-    }
+    private EnterprisePolicyIdentityArgs() {}
 
-    private EnterprisePolicyIdentityArgs() {
-        this.type = Codegen.empty();
+    private EnterprisePolicyIdentityArgs(EnterprisePolicyIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterprisePolicyIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceIdentityType> type;
+        private EnterprisePolicyIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterprisePolicyIdentityArgs();
         }
 
         public Builder(EnterprisePolicyIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new EnterprisePolicyIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public EnterprisePolicyIdentityArgs build() {
-            return new EnterprisePolicyIdentityArgs(type);
+
+        public Builder type(ResourceIdentityType type) {
+            return type(Output.of(type));
+        }
+
+        public EnterprisePolicyIdentityArgs build() {
+            return $;
         }
     }
+
 }

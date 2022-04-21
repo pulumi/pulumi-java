@@ -11,6 +11,7 @@ import com.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +24,14 @@ public final class StatefulSetListArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     @Import(name="items", required=true)
-      private final Output<List<StatefulSetArgs>> items;
+    private Output<List<StatefulSetArgs>> items;
 
     public Output<List<StatefulSetArgs>> items() {
         return this.items;
@@ -41,99 +42,92 @@ public final class StatefulSetListArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     @Import(name="metadata")
-      private final @Nullable Output<ListMetaArgs> metadata;
+    private @Nullable Output<ListMetaArgs> metadata;
 
-    public Output<ListMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ListMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
-    public StatefulSetListArgs(
-        @Nullable Output<String> apiVersion,
-        Output<List<StatefulSetArgs>> items,
-        @Nullable Output<String> kind,
-        @Nullable Output<ListMetaArgs> metadata) {
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.metadata = metadata;
-    }
+    private StatefulSetListArgs() {}
 
-    private StatefulSetListArgs() {
-        this.apiVersion = Codegen.empty();
-        this.items = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.metadata = Codegen.empty();
+    private StatefulSetListArgs(StatefulSetListArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.items = $.items;
+        this.kind = $.kind;
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulSetListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private Output<List<StatefulSetArgs>> items;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ListMetaArgs> metadata;
+        private StatefulSetListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulSetListArgs();
         }
 
         public Builder(StatefulSetListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.items = defaults.items;
-    	      this.kind = defaults.kind;
-    	      this.metadata = defaults.metadata;
+            $ = new StatefulSetListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder items(Output<List<StatefulSetArgs>> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(List<StatefulSetArgs> items) {
-            this.items = Output.of(Objects.requireNonNull(items));
-            return this;
+            return items(Output.of(items));
         }
+
         public Builder items(StatefulSetArgs... items) {
             return items(List.of(items));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ListMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
-        }        public StatefulSetListArgs build() {
-            return new StatefulSetListArgs(apiVersion, items, kind, metadata);
+
+        public Builder metadata(ListMetaArgs metadata) {
+            return metadata(Output.of(metadata));
+        }
+
+        public StatefulSetListArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            return $;
         }
     }
+
 }

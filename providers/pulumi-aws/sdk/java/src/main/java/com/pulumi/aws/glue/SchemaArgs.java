@@ -5,10 +5,10 @@ package com.pulumi.aws.glue;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compatibility", required=true)
-      private final Output<String> compatibility;
+    private Output<String> compatibility;
 
     public Output<String> compatibility() {
         return this.compatibility;
@@ -32,7 +32,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataFormat", required=true)
-      private final Output<String> dataFormat;
+    private Output<String> dataFormat;
 
     public Output<String> dataFormat() {
         return this.dataFormat;
@@ -43,10 +43,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registryArn")
-      private final @Nullable Output<String> registryArn;
+    private @Nullable Output<String> registryArn;
 
-    public Output<String> registryArn() {
-        return this.registryArn == null ? Codegen.empty() : this.registryArn;
+    public Optional<Output<String>> registryArn() {
+        return Optional.ofNullable(this.registryArn);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaDefinition", required=true)
-      private final Output<String> schemaDefinition;
+    private Output<String> schemaDefinition;
 
     public Output<String> schemaDefinition() {
         return this.schemaDefinition;
@@ -76,7 +76,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaName", required=true)
-      private final Output<String> schemaName;
+    private Output<String> schemaName;
 
     public Output<String> schemaName() {
         return this.schemaName;
@@ -87,128 +87,112 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SchemaArgs(
-        Output<String> compatibility,
-        Output<String> dataFormat,
-        @Nullable Output<String> description,
-        @Nullable Output<String> registryArn,
-        Output<String> schemaDefinition,
-        Output<String> schemaName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.compatibility = Objects.requireNonNull(compatibility, "expected parameter 'compatibility' to be non-null");
-        this.dataFormat = Objects.requireNonNull(dataFormat, "expected parameter 'dataFormat' to be non-null");
-        this.description = description;
-        this.registryArn = registryArn;
-        this.schemaDefinition = Objects.requireNonNull(schemaDefinition, "expected parameter 'schemaDefinition' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-        this.tags = tags;
-    }
+    private SchemaArgs() {}
 
-    private SchemaArgs() {
-        this.compatibility = Codegen.empty();
-        this.dataFormat = Codegen.empty();
-        this.description = Codegen.empty();
-        this.registryArn = Codegen.empty();
-        this.schemaDefinition = Codegen.empty();
-        this.schemaName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SchemaArgs(SchemaArgs $) {
+        this.compatibility = $.compatibility;
+        this.dataFormat = $.dataFormat;
+        this.description = $.description;
+        this.registryArn = $.registryArn;
+        this.schemaDefinition = $.schemaDefinition;
+        this.schemaName = $.schemaName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> compatibility;
-        private Output<String> dataFormat;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> registryArn;
-        private Output<String> schemaDefinition;
-        private Output<String> schemaName;
-        private @Nullable Output<Map<String,String>> tags;
+        private SchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaArgs();
         }
 
         public Builder(SchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compatibility = defaults.compatibility;
-    	      this.dataFormat = defaults.dataFormat;
-    	      this.description = defaults.description;
-    	      this.registryArn = defaults.registryArn;
-    	      this.schemaDefinition = defaults.schemaDefinition;
-    	      this.schemaName = defaults.schemaName;
-    	      this.tags = defaults.tags;
+            $ = new SchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compatibility(Output<String> compatibility) {
-            this.compatibility = Objects.requireNonNull(compatibility);
+            $.compatibility = compatibility;
             return this;
         }
+
         public Builder compatibility(String compatibility) {
-            this.compatibility = Output.of(Objects.requireNonNull(compatibility));
-            return this;
+            return compatibility(Output.of(compatibility));
         }
+
         public Builder dataFormat(Output<String> dataFormat) {
-            this.dataFormat = Objects.requireNonNull(dataFormat);
+            $.dataFormat = dataFormat;
             return this;
         }
+
         public Builder dataFormat(String dataFormat) {
-            this.dataFormat = Output.of(Objects.requireNonNull(dataFormat));
-            return this;
+            return dataFormat(Output.of(dataFormat));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder registryArn(@Nullable Output<String> registryArn) {
-            this.registryArn = registryArn;
+            $.registryArn = registryArn;
             return this;
         }
-        public Builder registryArn(@Nullable String registryArn) {
-            this.registryArn = Codegen.ofNullable(registryArn);
-            return this;
+
+        public Builder registryArn(String registryArn) {
+            return registryArn(Output.of(registryArn));
         }
+
         public Builder schemaDefinition(Output<String> schemaDefinition) {
-            this.schemaDefinition = Objects.requireNonNull(schemaDefinition);
+            $.schemaDefinition = schemaDefinition;
             return this;
         }
+
         public Builder schemaDefinition(String schemaDefinition) {
-            this.schemaDefinition = Output.of(Objects.requireNonNull(schemaDefinition));
-            return this;
+            return schemaDefinition(Output.of(schemaDefinition));
         }
+
         public Builder schemaName(Output<String> schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Output.of(Objects.requireNonNull(schemaName));
-            return this;
+            return schemaName(Output.of(schemaName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public SchemaArgs build() {
-            return new SchemaArgs(compatibility, dataFormat, description, registryArn, schemaDefinition, schemaName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public SchemaArgs build() {
+            $.compatibility = Objects.requireNonNull($.compatibility, "expected parameter 'compatibility' to be non-null");
+            $.dataFormat = Objects.requireNonNull($.dataFormat, "expected parameter 'dataFormat' to be non-null");
+            $.schemaDefinition = Objects.requireNonNull($.schemaDefinition, "expected parameter 'schemaDefinition' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            return $;
         }
     }
+
 }

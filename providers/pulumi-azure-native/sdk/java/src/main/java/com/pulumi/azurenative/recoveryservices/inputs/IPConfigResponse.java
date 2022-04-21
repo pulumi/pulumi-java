@@ -24,10 +24,10 @@ public final class IPConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lBBackendAddressPoolIds")
-      private final @Nullable List<String> lBBackendAddressPoolIds;
+    private @Nullable List<String> lBBackendAddressPoolIds;
 
-    public List<String> lBBackendAddressPoolIds() {
-        return this.lBBackendAddressPoolIds == null ? List.of() : this.lBBackendAddressPoolIds;
+    public Optional<List<String>> lBBackendAddressPoolIds() {
+        return Optional.ofNullable(this.lBBackendAddressPoolIds);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IPConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicIpAddressId")
-      private final @Nullable String publicIpAddressId;
+    private @Nullable String publicIpAddressId;
 
     public Optional<String> publicIpAddressId() {
-        return this.publicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressId);
+        return Optional.ofNullable(this.publicIpAddressId);
     }
 
     /**
@@ -46,67 +46,60 @@ public final class IPConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="staticIPAddress")
-      private final @Nullable String staticIPAddress;
+    private @Nullable String staticIPAddress;
 
     public Optional<String> staticIPAddress() {
-        return this.staticIPAddress == null ? Optional.empty() : Optional.ofNullable(this.staticIPAddress);
+        return Optional.ofNullable(this.staticIPAddress);
     }
 
-    public IPConfigResponse(
-        @Nullable List<String> lBBackendAddressPoolIds,
-        @Nullable String publicIpAddressId,
-        @Nullable String staticIPAddress) {
-        this.lBBackendAddressPoolIds = lBBackendAddressPoolIds;
-        this.publicIpAddressId = publicIpAddressId;
-        this.staticIPAddress = staticIPAddress;
-    }
+    private IPConfigResponse() {}
 
-    private IPConfigResponse() {
-        this.lBBackendAddressPoolIds = List.of();
-        this.publicIpAddressId = null;
-        this.staticIPAddress = null;
+    private IPConfigResponse(IPConfigResponse $) {
+        this.lBBackendAddressPoolIds = $.lBBackendAddressPoolIds;
+        this.publicIpAddressId = $.publicIpAddressId;
+        this.staticIPAddress = $.staticIPAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> lBBackendAddressPoolIds;
-        private @Nullable String publicIpAddressId;
-        private @Nullable String staticIPAddress;
+        private IPConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPConfigResponse();
         }
 
         public Builder(IPConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lBBackendAddressPoolIds = defaults.lBBackendAddressPoolIds;
-    	      this.publicIpAddressId = defaults.publicIpAddressId;
-    	      this.staticIPAddress = defaults.staticIPAddress;
+            $ = new IPConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lBBackendAddressPoolIds(@Nullable List<String> lBBackendAddressPoolIds) {
-            this.lBBackendAddressPoolIds = lBBackendAddressPoolIds;
+            $.lBBackendAddressPoolIds = lBBackendAddressPoolIds;
             return this;
         }
+
         public Builder lBBackendAddressPoolIds(String... lBBackendAddressPoolIds) {
             return lBBackendAddressPoolIds(List.of(lBBackendAddressPoolIds));
         }
+
         public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
-            this.publicIpAddressId = publicIpAddressId;
+            $.publicIpAddressId = publicIpAddressId;
             return this;
         }
+
         public Builder staticIPAddress(@Nullable String staticIPAddress) {
-            this.staticIPAddress = staticIPAddress;
+            $.staticIPAddress = staticIPAddress;
             return this;
-        }        public IPConfigResponse build() {
-            return new IPConfigResponse(lBBackendAddressPoolIds, publicIpAddressId, staticIPAddress);
+        }
+
+        public IPConfigResponse build() {
+            return $;
         }
     }
+
 }

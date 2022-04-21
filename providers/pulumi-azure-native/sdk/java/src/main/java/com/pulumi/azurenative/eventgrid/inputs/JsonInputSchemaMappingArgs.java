@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataVersion")
-      private final @Nullable Output<JsonFieldWithDefaultArgs> dataVersion;
+    private @Nullable Output<JsonFieldWithDefaultArgs> dataVersion;
 
-    public Output<JsonFieldWithDefaultArgs> dataVersion() {
-        return this.dataVersion == null ? Codegen.empty() : this.dataVersion;
+    public Optional<Output<JsonFieldWithDefaultArgs>> dataVersion() {
+        return Optional.ofNullable(this.dataVersion);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="eventTime")
-      private final @Nullable Output<JsonFieldArgs> eventTime;
+    private @Nullable Output<JsonFieldArgs> eventTime;
 
-    public Output<JsonFieldArgs> eventTime() {
-        return this.eventTime == null ? Codegen.empty() : this.eventTime;
+    public Optional<Output<JsonFieldArgs>> eventTime() {
+        return Optional.ofNullable(this.eventTime);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="eventType")
-      private final @Nullable Output<JsonFieldWithDefaultArgs> eventType;
+    private @Nullable Output<JsonFieldWithDefaultArgs> eventType;
 
-    public Output<JsonFieldWithDefaultArgs> eventType() {
-        return this.eventType == null ? Codegen.empty() : this.eventType;
+    public Optional<Output<JsonFieldWithDefaultArgs>> eventType() {
+        return Optional.ofNullable(this.eventType);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<JsonFieldArgs> id;
+    private @Nullable Output<JsonFieldArgs> id;
 
-    public Output<JsonFieldArgs> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<JsonFieldArgs>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -71,7 +72,7 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="inputSchemaMappingType", required=true)
-      private final Output<String> inputSchemaMappingType;
+    private Output<String> inputSchemaMappingType;
 
     public Output<String> inputSchemaMappingType() {
         return this.inputSchemaMappingType;
@@ -82,10 +83,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="subject")
-      private final @Nullable Output<JsonFieldWithDefaultArgs> subject;
+    private @Nullable Output<JsonFieldWithDefaultArgs> subject;
 
-    public Output<JsonFieldWithDefaultArgs> subject() {
-        return this.subject == null ? Codegen.empty() : this.subject;
+    public Optional<Output<JsonFieldWithDefaultArgs>> subject() {
+        return Optional.ofNullable(this.subject);
     }
 
     /**
@@ -93,128 +94,109 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<JsonFieldArgs> topic;
+    private @Nullable Output<JsonFieldArgs> topic;
 
-    public Output<JsonFieldArgs> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<JsonFieldArgs>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public JsonInputSchemaMappingArgs(
-        @Nullable Output<JsonFieldWithDefaultArgs> dataVersion,
-        @Nullable Output<JsonFieldArgs> eventTime,
-        @Nullable Output<JsonFieldWithDefaultArgs> eventType,
-        @Nullable Output<JsonFieldArgs> id,
-        Output<String> inputSchemaMappingType,
-        @Nullable Output<JsonFieldWithDefaultArgs> subject,
-        @Nullable Output<JsonFieldArgs> topic) {
-        this.dataVersion = dataVersion;
-        this.eventTime = eventTime;
-        this.eventType = eventType;
-        this.id = id;
-        this.inputSchemaMappingType = Codegen.stringProp("inputSchemaMappingType").output().arg(inputSchemaMappingType).require();
-        this.subject = subject;
-        this.topic = topic;
-    }
+    private JsonInputSchemaMappingArgs() {}
 
-    private JsonInputSchemaMappingArgs() {
-        this.dataVersion = Codegen.empty();
-        this.eventTime = Codegen.empty();
-        this.eventType = Codegen.empty();
-        this.id = Codegen.empty();
-        this.inputSchemaMappingType = Codegen.empty();
-        this.subject = Codegen.empty();
-        this.topic = Codegen.empty();
+    private JsonInputSchemaMappingArgs(JsonInputSchemaMappingArgs $) {
+        this.dataVersion = $.dataVersion;
+        this.eventTime = $.eventTime;
+        this.eventType = $.eventType;
+        this.id = $.id;
+        this.inputSchemaMappingType = $.inputSchemaMappingType;
+        this.subject = $.subject;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonInputSchemaMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JsonFieldWithDefaultArgs> dataVersion;
-        private @Nullable Output<JsonFieldArgs> eventTime;
-        private @Nullable Output<JsonFieldWithDefaultArgs> eventType;
-        private @Nullable Output<JsonFieldArgs> id;
-        private Output<String> inputSchemaMappingType;
-        private @Nullable Output<JsonFieldWithDefaultArgs> subject;
-        private @Nullable Output<JsonFieldArgs> topic;
+        private JsonInputSchemaMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonInputSchemaMappingArgs();
         }
 
         public Builder(JsonInputSchemaMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataVersion = defaults.dataVersion;
-    	      this.eventTime = defaults.eventTime;
-    	      this.eventType = defaults.eventType;
-    	      this.id = defaults.id;
-    	      this.inputSchemaMappingType = defaults.inputSchemaMappingType;
-    	      this.subject = defaults.subject;
-    	      this.topic = defaults.topic;
+            $ = new JsonInputSchemaMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataVersion(@Nullable Output<JsonFieldWithDefaultArgs> dataVersion) {
-            this.dataVersion = dataVersion;
+            $.dataVersion = dataVersion;
             return this;
         }
-        public Builder dataVersion(@Nullable JsonFieldWithDefaultArgs dataVersion) {
-            this.dataVersion = Codegen.ofNullable(dataVersion);
-            return this;
+
+        public Builder dataVersion(JsonFieldWithDefaultArgs dataVersion) {
+            return dataVersion(Output.of(dataVersion));
         }
+
         public Builder eventTime(@Nullable Output<JsonFieldArgs> eventTime) {
-            this.eventTime = eventTime;
+            $.eventTime = eventTime;
             return this;
         }
-        public Builder eventTime(@Nullable JsonFieldArgs eventTime) {
-            this.eventTime = Codegen.ofNullable(eventTime);
-            return this;
+
+        public Builder eventTime(JsonFieldArgs eventTime) {
+            return eventTime(Output.of(eventTime));
         }
+
         public Builder eventType(@Nullable Output<JsonFieldWithDefaultArgs> eventType) {
-            this.eventType = eventType;
+            $.eventType = eventType;
             return this;
         }
-        public Builder eventType(@Nullable JsonFieldWithDefaultArgs eventType) {
-            this.eventType = Codegen.ofNullable(eventType);
-            return this;
+
+        public Builder eventType(JsonFieldWithDefaultArgs eventType) {
+            return eventType(Output.of(eventType));
         }
+
         public Builder id(@Nullable Output<JsonFieldArgs> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable JsonFieldArgs id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(JsonFieldArgs id) {
+            return id(Output.of(id));
         }
+
         public Builder inputSchemaMappingType(Output<String> inputSchemaMappingType) {
-            this.inputSchemaMappingType = Objects.requireNonNull(inputSchemaMappingType);
+            $.inputSchemaMappingType = inputSchemaMappingType;
             return this;
         }
+
         public Builder inputSchemaMappingType(String inputSchemaMappingType) {
-            this.inputSchemaMappingType = Output.of(Objects.requireNonNull(inputSchemaMappingType));
-            return this;
+            return inputSchemaMappingType(Output.of(inputSchemaMappingType));
         }
+
         public Builder subject(@Nullable Output<JsonFieldWithDefaultArgs> subject) {
-            this.subject = subject;
+            $.subject = subject;
             return this;
         }
-        public Builder subject(@Nullable JsonFieldWithDefaultArgs subject) {
-            this.subject = Codegen.ofNullable(subject);
-            return this;
+
+        public Builder subject(JsonFieldWithDefaultArgs subject) {
+            return subject(Output.of(subject));
         }
+
         public Builder topic(@Nullable Output<JsonFieldArgs> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable JsonFieldArgs topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public JsonInputSchemaMappingArgs build() {
-            return new JsonInputSchemaMappingArgs(dataVersion, eventTime, eventType, id, inputSchemaMappingType, subject, topic);
+
+        public Builder topic(JsonFieldArgs topic) {
+            return topic(Output.of(topic));
+        }
+
+        public JsonInputSchemaMappingArgs build() {
+            $.inputSchemaMappingType = Codegen.stringProp("inputSchemaMappingType").output().arg($.inputSchemaMappingType).require();
+            return $;
         }
     }
+
 }

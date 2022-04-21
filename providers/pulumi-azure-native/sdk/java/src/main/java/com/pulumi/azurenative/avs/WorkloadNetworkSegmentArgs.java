@@ -6,10 +6,10 @@ package com.pulumi.azurenative.avs;
 import com.pulumi.azurenative.avs.inputs.WorkloadNetworkSegmentSubnetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="connectedGateway")
-      private final @Nullable Output<String> connectedGateway;
+    private @Nullable Output<String> connectedGateway;
 
-    public Output<String> connectedGateway() {
-        return this.connectedGateway == null ? Codegen.empty() : this.connectedGateway;
+    public Optional<Output<String>> connectedGateway() {
+        return Optional.ofNullable(this.connectedGateway);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -55,7 +55,7 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,10 +66,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<Double> revision;
+    private @Nullable Output<Double> revision;
 
-    public Output<Double> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<Double>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="segmentId")
-      private final @Nullable Output<String> segmentId;
+    private @Nullable Output<String> segmentId;
 
-    public Output<String> segmentId() {
-        return this.segmentId == null ? Codegen.empty() : this.segmentId;
+    public Optional<Output<String>> segmentId() {
+        return Optional.ofNullable(this.segmentId);
     }
 
     /**
@@ -88,128 +88,110 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet;
+    private @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet;
 
-    public Output<WorkloadNetworkSegmentSubnetArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<WorkloadNetworkSegmentSubnetArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
-    public WorkloadNetworkSegmentArgs(
-        @Nullable Output<String> connectedGateway,
-        @Nullable Output<String> displayName,
-        Output<String> privateCloudName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Double> revision,
-        @Nullable Output<String> segmentId,
-        @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet) {
-        this.connectedGateway = connectedGateway;
-        this.displayName = displayName;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.revision = revision;
-        this.segmentId = segmentId;
-        this.subnet = subnet;
-    }
+    private WorkloadNetworkSegmentArgs() {}
 
-    private WorkloadNetworkSegmentArgs() {
-        this.connectedGateway = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.revision = Codegen.empty();
-        this.segmentId = Codegen.empty();
-        this.subnet = Codegen.empty();
+    private WorkloadNetworkSegmentArgs(WorkloadNetworkSegmentArgs $) {
+        this.connectedGateway = $.connectedGateway;
+        this.displayName = $.displayName;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.revision = $.revision;
+        this.segmentId = $.segmentId;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadNetworkSegmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectedGateway;
-        private @Nullable Output<String> displayName;
-        private Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Double> revision;
-        private @Nullable Output<String> segmentId;
-        private @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet;
+        private WorkloadNetworkSegmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadNetworkSegmentArgs();
         }
 
         public Builder(WorkloadNetworkSegmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectedGateway = defaults.connectedGateway;
-    	      this.displayName = defaults.displayName;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.revision = defaults.revision;
-    	      this.segmentId = defaults.segmentId;
-    	      this.subnet = defaults.subnet;
+            $ = new WorkloadNetworkSegmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectedGateway(@Nullable Output<String> connectedGateway) {
-            this.connectedGateway = connectedGateway;
+            $.connectedGateway = connectedGateway;
             return this;
         }
-        public Builder connectedGateway(@Nullable String connectedGateway) {
-            this.connectedGateway = Codegen.ofNullable(connectedGateway);
-            return this;
+
+        public Builder connectedGateway(String connectedGateway) {
+            return connectedGateway(Output.of(connectedGateway));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder revision(@Nullable Output<Double> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable Double revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
+
+        public Builder revision(Double revision) {
+            return revision(Output.of(revision));
         }
+
         public Builder segmentId(@Nullable Output<String> segmentId) {
-            this.segmentId = segmentId;
+            $.segmentId = segmentId;
             return this;
         }
-        public Builder segmentId(@Nullable String segmentId) {
-            this.segmentId = Codegen.ofNullable(segmentId);
-            return this;
+
+        public Builder segmentId(String segmentId) {
+            return segmentId(Output.of(segmentId));
         }
+
         public Builder subnet(@Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable WorkloadNetworkSegmentSubnetArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
-        }        public WorkloadNetworkSegmentArgs build() {
-            return new WorkloadNetworkSegmentArgs(connectedGateway, displayName, privateCloudName, resourceGroupName, revision, segmentId, subnet);
+
+        public Builder subnet(WorkloadNetworkSegmentSubnetArgs subnet) {
+            return subnet(Output.of(subnet));
+        }
+
+        public WorkloadNetworkSegmentArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

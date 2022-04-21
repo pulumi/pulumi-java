@@ -7,9 +7,9 @@ import com.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class InMageRcmDiskInputArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="diskEncryptionSetId")
-      private final @Nullable Output<String> diskEncryptionSetId;
+    private @Nullable Output<String> diskEncryptionSetId;
 
-    public Output<String> diskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
+    public Optional<Output<String>> diskEncryptionSetId() {
+        return Optional.ofNullable(this.diskEncryptionSetId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InMageRcmDiskInputArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="diskId")
-      private final @Nullable Output<String> diskId;
+    private @Nullable Output<String> diskId;
 
-    public Output<String> diskId() {
-        return this.diskId == null ? Codegen.empty() : this.diskId;
+    public Optional<Output<String>> diskId() {
+        return Optional.ofNullable(this.diskId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class InMageRcmDiskInputArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<Either<String,DiskAccountType>> diskType;
+    private @Nullable Output<Either<String,DiskAccountType>> diskType;
 
-    public Output<Either<String,DiskAccountType>> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<Either<String,DiskAccountType>>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class InMageRcmDiskInputArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="logStorageAccountId")
-      private final @Nullable Output<String> logStorageAccountId;
+    private @Nullable Output<String> logStorageAccountId;
 
-    public Output<String> logStorageAccountId() {
-        return this.logStorageAccountId == null ? Codegen.empty() : this.logStorageAccountId;
+    public Optional<Output<String>> logStorageAccountId() {
+        return Optional.ofNullable(this.logStorageAccountId);
     }
 
-    public InMageRcmDiskInputArgs(
-        @Nullable Output<String> diskEncryptionSetId,
-        @Nullable Output<String> diskId,
-        @Nullable Output<Either<String,DiskAccountType>> diskType,
-        @Nullable Output<String> logStorageAccountId) {
-        this.diskEncryptionSetId = diskEncryptionSetId;
-        this.diskId = diskId;
-        this.diskType = diskType;
-        this.logStorageAccountId = logStorageAccountId;
-    }
+    private InMageRcmDiskInputArgs() {}
 
-    private InMageRcmDiskInputArgs() {
-        this.diskEncryptionSetId = Codegen.empty();
-        this.diskId = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.logStorageAccountId = Codegen.empty();
+    private InMageRcmDiskInputArgs(InMageRcmDiskInputArgs $) {
+        this.diskEncryptionSetId = $.diskEncryptionSetId;
+        this.diskId = $.diskId;
+        this.diskType = $.diskType;
+        this.logStorageAccountId = $.logStorageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageRcmDiskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskEncryptionSetId;
-        private @Nullable Output<String> diskId;
-        private @Nullable Output<Either<String,DiskAccountType>> diskType;
-        private @Nullable Output<String> logStorageAccountId;
+        private InMageRcmDiskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageRcmDiskInputArgs();
         }
 
         public Builder(InMageRcmDiskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
-    	      this.diskId = defaults.diskId;
-    	      this.diskType = defaults.diskType;
-    	      this.logStorageAccountId = defaults.logStorageAccountId;
+            $ = new InMageRcmDiskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
-            this.diskEncryptionSetId = diskEncryptionSetId;
+            $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
-        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Codegen.ofNullable(diskEncryptionSetId);
-            return this;
+
+        public Builder diskEncryptionSetId(String diskEncryptionSetId) {
+            return diskEncryptionSetId(Output.of(diskEncryptionSetId));
         }
+
         public Builder diskId(@Nullable Output<String> diskId) {
-            this.diskId = diskId;
+            $.diskId = diskId;
             return this;
         }
-        public Builder diskId(@Nullable String diskId) {
-            this.diskId = Codegen.ofNullable(diskId);
-            return this;
+
+        public Builder diskId(String diskId) {
+            return diskId(Output.of(diskId));
         }
+
         public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(Either<String,DiskAccountType> diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder logStorageAccountId(@Nullable Output<String> logStorageAccountId) {
-            this.logStorageAccountId = logStorageAccountId;
+            $.logStorageAccountId = logStorageAccountId;
             return this;
         }
-        public Builder logStorageAccountId(@Nullable String logStorageAccountId) {
-            this.logStorageAccountId = Codegen.ofNullable(logStorageAccountId);
-            return this;
-        }        public InMageRcmDiskInputArgs build() {
-            return new InMageRcmDiskInputArgs(diskEncryptionSetId, diskId, diskType, logStorageAccountId);
+
+        public Builder logStorageAccountId(String logStorageAccountId) {
+            return logStorageAccountId(Output.of(logStorageAccountId));
+        }
+
+        public InMageRcmDiskInputArgs build() {
+            return $;
         }
     }
+
 }

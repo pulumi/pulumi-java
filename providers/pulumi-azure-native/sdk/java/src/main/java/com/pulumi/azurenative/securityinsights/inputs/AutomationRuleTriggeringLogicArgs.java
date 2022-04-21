@@ -9,11 +9,11 @@ import com.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValu
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions;
+    private @Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions;
 
-    public Output<List<AutomationRulePropertyValuesConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<AutomationRulePropertyValuesConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
      * 
      */
     @Import(name="expirationTimeUtc")
-      private final @Nullable Output<String> expirationTimeUtc;
+    private @Nullable Output<String> expirationTimeUtc;
 
-    public Output<String> expirationTimeUtc() {
-        return this.expirationTimeUtc == null ? Codegen.empty() : this.expirationTimeUtc;
+    public Optional<Output<String>> expirationTimeUtc() {
+        return Optional.ofNullable(this.expirationTimeUtc);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -63,7 +63,7 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
      * 
      */
     @Import(name="triggersOn", required=true)
-      private final Output<Either<String,TriggersOn>> triggersOn;
+    private Output<Either<String,TriggersOn>> triggersOn;
 
     public Output<Either<String,TriggersOn>> triggersOn() {
         return this.triggersOn;
@@ -74,105 +74,95 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
      * 
      */
     @Import(name="triggersWhen", required=true)
-      private final Output<Either<String,TriggersWhen>> triggersWhen;
+    private Output<Either<String,TriggersWhen>> triggersWhen;
 
     public Output<Either<String,TriggersWhen>> triggersWhen() {
         return this.triggersWhen;
     }
 
-    public AutomationRuleTriggeringLogicArgs(
-        @Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions,
-        @Nullable Output<String> expirationTimeUtc,
-        Output<Boolean> isEnabled,
-        Output<Either<String,TriggersOn>> triggersOn,
-        Output<Either<String,TriggersWhen>> triggersWhen) {
-        this.conditions = conditions;
-        this.expirationTimeUtc = expirationTimeUtc;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.triggersOn = Objects.requireNonNull(triggersOn, "expected parameter 'triggersOn' to be non-null");
-        this.triggersWhen = Objects.requireNonNull(triggersWhen, "expected parameter 'triggersWhen' to be non-null");
-    }
+    private AutomationRuleTriggeringLogicArgs() {}
 
-    private AutomationRuleTriggeringLogicArgs() {
-        this.conditions = Codegen.empty();
-        this.expirationTimeUtc = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.triggersOn = Codegen.empty();
-        this.triggersWhen = Codegen.empty();
+    private AutomationRuleTriggeringLogicArgs(AutomationRuleTriggeringLogicArgs $) {
+        this.conditions = $.conditions;
+        this.expirationTimeUtc = $.expirationTimeUtc;
+        this.isEnabled = $.isEnabled;
+        this.triggersOn = $.triggersOn;
+        this.triggersWhen = $.triggersWhen;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRuleTriggeringLogicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions;
-        private @Nullable Output<String> expirationTimeUtc;
-        private Output<Boolean> isEnabled;
-        private Output<Either<String,TriggersOn>> triggersOn;
-        private Output<Either<String,TriggersWhen>> triggersWhen;
+        private AutomationRuleTriggeringLogicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRuleTriggeringLogicArgs();
         }
 
         public Builder(AutomationRuleTriggeringLogicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.expirationTimeUtc = defaults.expirationTimeUtc;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.triggersOn = defaults.triggersOn;
-    	      this.triggersWhen = defaults.triggersWhen;
+            $ = new AutomationRuleTriggeringLogicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<AutomationRulePropertyValuesConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<AutomationRulePropertyValuesConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(AutomationRulePropertyValuesConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder expirationTimeUtc(@Nullable Output<String> expirationTimeUtc) {
-            this.expirationTimeUtc = expirationTimeUtc;
+            $.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
-        public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
-            this.expirationTimeUtc = Codegen.ofNullable(expirationTimeUtc);
-            return this;
+
+        public Builder expirationTimeUtc(String expirationTimeUtc) {
+            return expirationTimeUtc(Output.of(expirationTimeUtc));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder triggersOn(Output<Either<String,TriggersOn>> triggersOn) {
-            this.triggersOn = Objects.requireNonNull(triggersOn);
+            $.triggersOn = triggersOn;
             return this;
         }
+
         public Builder triggersOn(Either<String,TriggersOn> triggersOn) {
-            this.triggersOn = Output.of(Objects.requireNonNull(triggersOn));
-            return this;
+            return triggersOn(Output.of(triggersOn));
         }
+
         public Builder triggersWhen(Output<Either<String,TriggersWhen>> triggersWhen) {
-            this.triggersWhen = Objects.requireNonNull(triggersWhen);
+            $.triggersWhen = triggersWhen;
             return this;
         }
+
         public Builder triggersWhen(Either<String,TriggersWhen> triggersWhen) {
-            this.triggersWhen = Output.of(Objects.requireNonNull(triggersWhen));
-            return this;
-        }        public AutomationRuleTriggeringLogicArgs build() {
-            return new AutomationRuleTriggeringLogicArgs(conditions, expirationTimeUtc, isEnabled, triggersOn, triggersWhen);
+            return triggersWhen(Output.of(triggersWhen));
+        }
+
+        public AutomationRuleTriggeringLogicArgs build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.triggersOn = Objects.requireNonNull($.triggersOn, "expected parameter 'triggersOn' to be non-null");
+            $.triggersWhen = Objects.requireNonNull($.triggersWhen, "expected parameter 'triggersWhen' to be non-null");
+            return $;
         }
     }
+
 }

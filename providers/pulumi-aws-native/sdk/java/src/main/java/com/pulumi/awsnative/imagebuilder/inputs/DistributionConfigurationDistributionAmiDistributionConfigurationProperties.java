@@ -26,10 +26,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="amiTags")
-      private final @Nullable Object amiTags;
+    private @Nullable Object amiTags;
 
     public Optional<Object> amiTags() {
-        return this.amiTags == null ? Optional.empty() : Optional.ofNullable(this.amiTags);
+        return Optional.ofNullable(this.amiTags);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable String kmsKeyId;
+    private @Nullable String kmsKeyId;
 
     public Optional<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="launchPermissionConfiguration")
-      private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration;
+    private @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration;
 
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties> launchPermissionConfiguration() {
-        return this.launchPermissionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.launchPermissionConfiguration);
+        return Optional.ofNullable(this.launchPermissionConfiguration);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,94 +81,78 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="targetAccountIds")
-      private final @Nullable List<String> targetAccountIds;
+    private @Nullable List<String> targetAccountIds;
 
-    public List<String> targetAccountIds() {
-        return this.targetAccountIds == null ? List.of() : this.targetAccountIds;
+    public Optional<List<String>> targetAccountIds() {
+        return Optional.ofNullable(this.targetAccountIds);
     }
 
-    public DistributionConfigurationDistributionAmiDistributionConfigurationProperties(
-        @Nullable Object amiTags,
-        @Nullable String description,
-        @Nullable String kmsKeyId,
-        @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration,
-        @Nullable String name,
-        @Nullable List<String> targetAccountIds) {
-        this.amiTags = amiTags;
-        this.description = description;
-        this.kmsKeyId = kmsKeyId;
-        this.launchPermissionConfiguration = launchPermissionConfiguration;
-        this.name = name;
-        this.targetAccountIds = targetAccountIds;
-    }
+    private DistributionConfigurationDistributionAmiDistributionConfigurationProperties() {}
 
-    private DistributionConfigurationDistributionAmiDistributionConfigurationProperties() {
-        this.amiTags = null;
-        this.description = null;
-        this.kmsKeyId = null;
-        this.launchPermissionConfiguration = null;
-        this.name = null;
-        this.targetAccountIds = List.of();
+    private DistributionConfigurationDistributionAmiDistributionConfigurationProperties(DistributionConfigurationDistributionAmiDistributionConfigurationProperties $) {
+        this.amiTags = $.amiTags;
+        this.description = $.description;
+        this.kmsKeyId = $.kmsKeyId;
+        this.launchPermissionConfiguration = $.launchPermissionConfiguration;
+        this.name = $.name;
+        this.targetAccountIds = $.targetAccountIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationDistributionAmiDistributionConfigurationProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object amiTags;
-        private @Nullable String description;
-        private @Nullable String kmsKeyId;
-        private @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration;
-        private @Nullable String name;
-        private @Nullable List<String> targetAccountIds;
+        private DistributionConfigurationDistributionAmiDistributionConfigurationProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationDistributionAmiDistributionConfigurationProperties();
         }
 
         public Builder(DistributionConfigurationDistributionAmiDistributionConfigurationProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amiTags = defaults.amiTags;
-    	      this.description = defaults.description;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.launchPermissionConfiguration = defaults.launchPermissionConfiguration;
-    	      this.name = defaults.name;
-    	      this.targetAccountIds = defaults.targetAccountIds;
+            $ = new DistributionConfigurationDistributionAmiDistributionConfigurationProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder amiTags(@Nullable Object amiTags) {
-            this.amiTags = amiTags;
+            $.amiTags = amiTags;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
+
         public Builder launchPermissionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration) {
-            this.launchPermissionConfiguration = launchPermissionConfiguration;
+            $.launchPermissionConfiguration = launchPermissionConfiguration;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder targetAccountIds(@Nullable List<String> targetAccountIds) {
-            this.targetAccountIds = targetAccountIds;
+            $.targetAccountIds = targetAccountIds;
             return this;
         }
+
         public Builder targetAccountIds(String... targetAccountIds) {
             return targetAccountIds(List.of(targetAccountIds));
-        }        public DistributionConfigurationDistributionAmiDistributionConfigurationProperties build() {
-            return new DistributionConfigurationDistributionAmiDistributionConfigurationProperties(amiTags, description, kmsKeyId, launchPermissionConfiguration, name, targetAccountIds);
+        }
+
+        public DistributionConfigurationDistributionAmiDistributionConfigurationProperties build() {
+            return $;
         }
     }
+
 }

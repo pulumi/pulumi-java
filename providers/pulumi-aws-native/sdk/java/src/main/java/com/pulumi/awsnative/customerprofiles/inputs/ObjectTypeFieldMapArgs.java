@@ -6,9 +6,9 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 import com.pulumi.awsnative.customerprofiles.inputs.ObjectTypeFieldArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ObjectTypeFieldMapArgs extends com.pulumi.resources.ResourceA
     public static final ObjectTypeFieldMapArgs Empty = new ObjectTypeFieldMapArgs();
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="objectTypeField")
-      private final @Nullable Output<ObjectTypeFieldArgs> objectTypeField;
+    private @Nullable Output<ObjectTypeFieldArgs> objectTypeField;
 
-    public Output<ObjectTypeFieldArgs> objectTypeField() {
-        return this.objectTypeField == null ? Codegen.empty() : this.objectTypeField;
+    public Optional<Output<ObjectTypeFieldArgs>> objectTypeField() {
+        return Optional.ofNullable(this.objectTypeField);
     }
 
-    public ObjectTypeFieldMapArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<ObjectTypeFieldArgs> objectTypeField) {
-        this.name = name;
-        this.objectTypeField = objectTypeField;
-    }
+    private ObjectTypeFieldMapArgs() {}
 
-    private ObjectTypeFieldMapArgs() {
-        this.name = Codegen.empty();
-        this.objectTypeField = Codegen.empty();
+    private ObjectTypeFieldMapArgs(ObjectTypeFieldMapArgs $) {
+        this.name = $.name;
+        this.objectTypeField = $.objectTypeField;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectTypeFieldMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<ObjectTypeFieldArgs> objectTypeField;
+        private ObjectTypeFieldMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectTypeFieldMapArgs();
         }
 
         public Builder(ObjectTypeFieldMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.objectTypeField = defaults.objectTypeField;
+            $ = new ObjectTypeFieldMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder objectTypeField(@Nullable Output<ObjectTypeFieldArgs> objectTypeField) {
-            this.objectTypeField = objectTypeField;
+            $.objectTypeField = objectTypeField;
             return this;
         }
-        public Builder objectTypeField(@Nullable ObjectTypeFieldArgs objectTypeField) {
-            this.objectTypeField = Codegen.ofNullable(objectTypeField);
-            return this;
-        }        public ObjectTypeFieldMapArgs build() {
-            return new ObjectTypeFieldMapArgs(name, objectTypeField);
+
+        public Builder objectTypeField(ObjectTypeFieldArgs objectTypeField) {
+            return objectTypeField(Output.of(objectTypeField));
+        }
+
+        public ObjectTypeFieldMapArgs build() {
+            return $;
         }
     }
+
 }

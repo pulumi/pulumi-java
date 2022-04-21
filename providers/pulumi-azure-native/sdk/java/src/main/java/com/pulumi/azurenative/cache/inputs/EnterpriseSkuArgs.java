@@ -7,10 +7,10 @@ import com.pulumi.azurenative.cache.enums.SkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class EnterpriseSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Integer> capacity;
+    private @Nullable Output<Integer> capacity;
 
-    public Output<Integer> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Integer>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -38,63 +38,59 @@ public final class EnterpriseSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,SkuName>> name;
+    private Output<Either<String,SkuName>> name;
 
     public Output<Either<String,SkuName>> name() {
         return this.name;
     }
 
-    public EnterpriseSkuArgs(
-        @Nullable Output<Integer> capacity,
-        Output<Either<String,SkuName>> name) {
-        this.capacity = capacity;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private EnterpriseSkuArgs() {}
 
-    private EnterpriseSkuArgs() {
-        this.capacity = Codegen.empty();
-        this.name = Codegen.empty();
+    private EnterpriseSkuArgs(EnterpriseSkuArgs $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterpriseSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> capacity;
-        private Output<Either<String,SkuName>> name;
+        private EnterpriseSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterpriseSkuArgs();
         }
 
         public Builder(EnterpriseSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
+            $ = new EnterpriseSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<Integer> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Integer capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder name(Output<Either<String,SkuName>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,SkuName> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public EnterpriseSkuArgs build() {
-            return new EnterpriseSkuArgs(capacity, name);
+            return name(Output.of(name));
+        }
+
+        public EnterpriseSkuArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

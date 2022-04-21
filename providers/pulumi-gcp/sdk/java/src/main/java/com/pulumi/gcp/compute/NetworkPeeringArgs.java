@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NetworkPeeringArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="exportCustomRoutes")
-      private final @Nullable Output<Boolean> exportCustomRoutes;
+    private @Nullable Output<Boolean> exportCustomRoutes;
 
-    public Output<Boolean> exportCustomRoutes() {
-        return this.exportCustomRoutes == null ? Codegen.empty() : this.exportCustomRoutes;
+    public Optional<Output<Boolean>> exportCustomRoutes() {
+        return Optional.ofNullable(this.exportCustomRoutes);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NetworkPeeringArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="exportSubnetRoutesWithPublicIp")
-      private final @Nullable Output<Boolean> exportSubnetRoutesWithPublicIp;
+    private @Nullable Output<Boolean> exportSubnetRoutesWithPublicIp;
 
-    public Output<Boolean> exportSubnetRoutesWithPublicIp() {
-        return this.exportSubnetRoutesWithPublicIp == null ? Codegen.empty() : this.exportSubnetRoutesWithPublicIp;
+    public Optional<Output<Boolean>> exportSubnetRoutesWithPublicIp() {
+        return Optional.ofNullable(this.exportSubnetRoutesWithPublicIp);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NetworkPeeringArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="importCustomRoutes")
-      private final @Nullable Output<Boolean> importCustomRoutes;
+    private @Nullable Output<Boolean> importCustomRoutes;
 
-    public Output<Boolean> importCustomRoutes() {
-        return this.importCustomRoutes == null ? Codegen.empty() : this.importCustomRoutes;
+    public Optional<Output<Boolean>> importCustomRoutes() {
+        return Optional.ofNullable(this.importCustomRoutes);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NetworkPeeringArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="importSubnetRoutesWithPublicIp")
-      private final @Nullable Output<Boolean> importSubnetRoutesWithPublicIp;
+    private @Nullable Output<Boolean> importSubnetRoutesWithPublicIp;
 
-    public Output<Boolean> importSubnetRoutesWithPublicIp() {
-        return this.importSubnetRoutesWithPublicIp == null ? Codegen.empty() : this.importSubnetRoutesWithPublicIp;
+    public Optional<Output<Boolean>> importSubnetRoutesWithPublicIp() {
+        return Optional.ofNullable(this.importSubnetRoutesWithPublicIp);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class NetworkPeeringArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class NetworkPeeringArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="network", required=true)
-      private final Output<String> network;
+    private Output<String> network;
 
     public Output<String> network() {
         return this.network;
@@ -88,128 +88,110 @@ public final class NetworkPeeringArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="peerNetwork", required=true)
-      private final Output<String> peerNetwork;
+    private Output<String> peerNetwork;
 
     public Output<String> peerNetwork() {
         return this.peerNetwork;
     }
 
-    public NetworkPeeringArgs(
-        @Nullable Output<Boolean> exportCustomRoutes,
-        @Nullable Output<Boolean> exportSubnetRoutesWithPublicIp,
-        @Nullable Output<Boolean> importCustomRoutes,
-        @Nullable Output<Boolean> importSubnetRoutesWithPublicIp,
-        @Nullable Output<String> name,
-        Output<String> network,
-        Output<String> peerNetwork) {
-        this.exportCustomRoutes = exportCustomRoutes;
-        this.exportSubnetRoutesWithPublicIp = exportSubnetRoutesWithPublicIp;
-        this.importCustomRoutes = importCustomRoutes;
-        this.importSubnetRoutesWithPublicIp = importSubnetRoutesWithPublicIp;
-        this.name = name;
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.peerNetwork = Objects.requireNonNull(peerNetwork, "expected parameter 'peerNetwork' to be non-null");
-    }
+    private NetworkPeeringArgs() {}
 
-    private NetworkPeeringArgs() {
-        this.exportCustomRoutes = Codegen.empty();
-        this.exportSubnetRoutesWithPublicIp = Codegen.empty();
-        this.importCustomRoutes = Codegen.empty();
-        this.importSubnetRoutesWithPublicIp = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.peerNetwork = Codegen.empty();
+    private NetworkPeeringArgs(NetworkPeeringArgs $) {
+        this.exportCustomRoutes = $.exportCustomRoutes;
+        this.exportSubnetRoutesWithPublicIp = $.exportSubnetRoutesWithPublicIp;
+        this.importCustomRoutes = $.importCustomRoutes;
+        this.importSubnetRoutesWithPublicIp = $.importSubnetRoutesWithPublicIp;
+        this.name = $.name;
+        this.network = $.network;
+        this.peerNetwork = $.peerNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> exportCustomRoutes;
-        private @Nullable Output<Boolean> exportSubnetRoutesWithPublicIp;
-        private @Nullable Output<Boolean> importCustomRoutes;
-        private @Nullable Output<Boolean> importSubnetRoutesWithPublicIp;
-        private @Nullable Output<String> name;
-        private Output<String> network;
-        private Output<String> peerNetwork;
+        private NetworkPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPeeringArgs();
         }
 
         public Builder(NetworkPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exportCustomRoutes = defaults.exportCustomRoutes;
-    	      this.exportSubnetRoutesWithPublicIp = defaults.exportSubnetRoutesWithPublicIp;
-    	      this.importCustomRoutes = defaults.importCustomRoutes;
-    	      this.importSubnetRoutesWithPublicIp = defaults.importSubnetRoutesWithPublicIp;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.peerNetwork = defaults.peerNetwork;
+            $ = new NetworkPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exportCustomRoutes(@Nullable Output<Boolean> exportCustomRoutes) {
-            this.exportCustomRoutes = exportCustomRoutes;
+            $.exportCustomRoutes = exportCustomRoutes;
             return this;
         }
-        public Builder exportCustomRoutes(@Nullable Boolean exportCustomRoutes) {
-            this.exportCustomRoutes = Codegen.ofNullable(exportCustomRoutes);
-            return this;
+
+        public Builder exportCustomRoutes(Boolean exportCustomRoutes) {
+            return exportCustomRoutes(Output.of(exportCustomRoutes));
         }
+
         public Builder exportSubnetRoutesWithPublicIp(@Nullable Output<Boolean> exportSubnetRoutesWithPublicIp) {
-            this.exportSubnetRoutesWithPublicIp = exportSubnetRoutesWithPublicIp;
+            $.exportSubnetRoutesWithPublicIp = exportSubnetRoutesWithPublicIp;
             return this;
         }
-        public Builder exportSubnetRoutesWithPublicIp(@Nullable Boolean exportSubnetRoutesWithPublicIp) {
-            this.exportSubnetRoutesWithPublicIp = Codegen.ofNullable(exportSubnetRoutesWithPublicIp);
-            return this;
+
+        public Builder exportSubnetRoutesWithPublicIp(Boolean exportSubnetRoutesWithPublicIp) {
+            return exportSubnetRoutesWithPublicIp(Output.of(exportSubnetRoutesWithPublicIp));
         }
+
         public Builder importCustomRoutes(@Nullable Output<Boolean> importCustomRoutes) {
-            this.importCustomRoutes = importCustomRoutes;
+            $.importCustomRoutes = importCustomRoutes;
             return this;
         }
-        public Builder importCustomRoutes(@Nullable Boolean importCustomRoutes) {
-            this.importCustomRoutes = Codegen.ofNullable(importCustomRoutes);
-            return this;
+
+        public Builder importCustomRoutes(Boolean importCustomRoutes) {
+            return importCustomRoutes(Output.of(importCustomRoutes));
         }
+
         public Builder importSubnetRoutesWithPublicIp(@Nullable Output<Boolean> importSubnetRoutesWithPublicIp) {
-            this.importSubnetRoutesWithPublicIp = importSubnetRoutesWithPublicIp;
+            $.importSubnetRoutesWithPublicIp = importSubnetRoutesWithPublicIp;
             return this;
         }
-        public Builder importSubnetRoutesWithPublicIp(@Nullable Boolean importSubnetRoutesWithPublicIp) {
-            this.importSubnetRoutesWithPublicIp = Codegen.ofNullable(importSubnetRoutesWithPublicIp);
-            return this;
+
+        public Builder importSubnetRoutesWithPublicIp(Boolean importSubnetRoutesWithPublicIp) {
+            return importSubnetRoutesWithPublicIp(Output.of(importSubnetRoutesWithPublicIp));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(Output<String> network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Output.of(Objects.requireNonNull(network));
-            return this;
+            return network(Output.of(network));
         }
+
         public Builder peerNetwork(Output<String> peerNetwork) {
-            this.peerNetwork = Objects.requireNonNull(peerNetwork);
+            $.peerNetwork = peerNetwork;
             return this;
         }
+
         public Builder peerNetwork(String peerNetwork) {
-            this.peerNetwork = Output.of(Objects.requireNonNull(peerNetwork));
-            return this;
-        }        public NetworkPeeringArgs build() {
-            return new NetworkPeeringArgs(exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerNetwork);
+            return peerNetwork(Output.of(peerNetwork));
+        }
+
+        public NetworkPeeringArgs build() {
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.peerNetwork = Objects.requireNonNull($.peerNetwork, "expected parameter 'peerNetwork' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,10 +10,10 @@ import com.pulumi.azurenative.storage.inputs.LastAccessTimeTrackingPolicyArgs;
 import com.pulumi.azurenative.storage.inputs.RestorePolicyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -37,10 +37,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="automaticSnapshotPolicyEnabled")
-      private final @Nullable Output<Boolean> automaticSnapshotPolicyEnabled;
+    private @Nullable Output<Boolean> automaticSnapshotPolicyEnabled;
 
-    public Output<Boolean> automaticSnapshotPolicyEnabled() {
-        return this.automaticSnapshotPolicyEnabled == null ? Codegen.empty() : this.automaticSnapshotPolicyEnabled;
+    public Optional<Output<Boolean>> automaticSnapshotPolicyEnabled() {
+        return Optional.ofNullable(this.automaticSnapshotPolicyEnabled);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="blobServicesName")
-      private final @Nullable Output<String> blobServicesName;
+    private @Nullable Output<String> blobServicesName;
 
-    public Output<String> blobServicesName() {
-        return this.blobServicesName == null ? Codegen.empty() : this.blobServicesName;
+    public Optional<Output<String>> blobServicesName() {
+        return Optional.ofNullable(this.blobServicesName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="changeFeed")
-      private final @Nullable Output<ChangeFeedArgs> changeFeed;
+    private @Nullable Output<ChangeFeedArgs> changeFeed;
 
-    public Output<ChangeFeedArgs> changeFeed() {
-        return this.changeFeed == null ? Codegen.empty() : this.changeFeed;
+    public Optional<Output<ChangeFeedArgs>> changeFeed() {
+        return Optional.ofNullable(this.changeFeed);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="containerDeleteRetentionPolicy")
-      private final @Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy;
+    private @Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy;
 
-    public Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy() {
-        return this.containerDeleteRetentionPolicy == null ? Codegen.empty() : this.containerDeleteRetentionPolicy;
+    public Optional<Output<DeleteRetentionPolicyArgs>> containerDeleteRetentionPolicy() {
+        return Optional.ofNullable(this.containerDeleteRetentionPolicy);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cors")
-      private final @Nullable Output<CorsRulesArgs> cors;
+    private @Nullable Output<CorsRulesArgs> cors;
 
-    public Output<CorsRulesArgs> cors() {
-        return this.cors == null ? Codegen.empty() : this.cors;
+    public Optional<Output<CorsRulesArgs>> cors() {
+        return Optional.ofNullable(this.cors);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="defaultServiceVersion")
-      private final @Nullable Output<String> defaultServiceVersion;
+    private @Nullable Output<String> defaultServiceVersion;
 
-    public Output<String> defaultServiceVersion() {
-        return this.defaultServiceVersion == null ? Codegen.empty() : this.defaultServiceVersion;
+    public Optional<Output<String>> defaultServiceVersion() {
+        return Optional.ofNullable(this.defaultServiceVersion);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="deleteRetentionPolicy")
-      private final @Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy;
+    private @Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy;
 
-    public Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy() {
-        return this.deleteRetentionPolicy == null ? Codegen.empty() : this.deleteRetentionPolicy;
+    public Optional<Output<DeleteRetentionPolicyArgs>> deleteRetentionPolicy() {
+        return Optional.ofNullable(this.deleteRetentionPolicy);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="isVersioningEnabled")
-      private final @Nullable Output<Boolean> isVersioningEnabled;
+    private @Nullable Output<Boolean> isVersioningEnabled;
 
-    public Output<Boolean> isVersioningEnabled() {
-        return this.isVersioningEnabled == null ? Codegen.empty() : this.isVersioningEnabled;
+    public Optional<Output<Boolean>> isVersioningEnabled() {
+        return Optional.ofNullable(this.isVersioningEnabled);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="lastAccessTimeTrackingPolicy")
-      private final @Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy;
+    private @Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy;
 
-    public Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy() {
-        return this.lastAccessTimeTrackingPolicy == null ? Codegen.empty() : this.lastAccessTimeTrackingPolicy;
+    public Optional<Output<LastAccessTimeTrackingPolicyArgs>> lastAccessTimeTrackingPolicy() {
+        return Optional.ofNullable(this.lastAccessTimeTrackingPolicy);
     }
 
     /**
@@ -136,7 +136,7 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -147,193 +147,160 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="restorePolicy")
-      private final @Nullable Output<RestorePolicyPropertiesArgs> restorePolicy;
+    private @Nullable Output<RestorePolicyPropertiesArgs> restorePolicy;
 
-    public Output<RestorePolicyPropertiesArgs> restorePolicy() {
-        return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
+    public Optional<Output<RestorePolicyPropertiesArgs>> restorePolicy() {
+        return Optional.ofNullable(this.restorePolicy);
     }
 
-    public BlobServicePropertiesArgs(
-        Output<String> accountName,
-        @Nullable Output<Boolean> automaticSnapshotPolicyEnabled,
-        @Nullable Output<String> blobServicesName,
-        @Nullable Output<ChangeFeedArgs> changeFeed,
-        @Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy,
-        @Nullable Output<CorsRulesArgs> cors,
-        @Nullable Output<String> defaultServiceVersion,
-        @Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy,
-        @Nullable Output<Boolean> isVersioningEnabled,
-        @Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy,
-        Output<String> resourceGroupName,
-        @Nullable Output<RestorePolicyPropertiesArgs> restorePolicy) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.automaticSnapshotPolicyEnabled = automaticSnapshotPolicyEnabled;
-        this.blobServicesName = blobServicesName;
-        this.changeFeed = changeFeed;
-        this.containerDeleteRetentionPolicy = containerDeleteRetentionPolicy;
-        this.cors = cors;
-        this.defaultServiceVersion = defaultServiceVersion;
-        this.deleteRetentionPolicy = deleteRetentionPolicy;
-        this.isVersioningEnabled = isVersioningEnabled;
-        this.lastAccessTimeTrackingPolicy = lastAccessTimeTrackingPolicy;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restorePolicy = restorePolicy;
-    }
+    private BlobServicePropertiesArgs() {}
 
-    private BlobServicePropertiesArgs() {
-        this.accountName = Codegen.empty();
-        this.automaticSnapshotPolicyEnabled = Codegen.empty();
-        this.blobServicesName = Codegen.empty();
-        this.changeFeed = Codegen.empty();
-        this.containerDeleteRetentionPolicy = Codegen.empty();
-        this.cors = Codegen.empty();
-        this.defaultServiceVersion = Codegen.empty();
-        this.deleteRetentionPolicy = Codegen.empty();
-        this.isVersioningEnabled = Codegen.empty();
-        this.lastAccessTimeTrackingPolicy = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.restorePolicy = Codegen.empty();
+    private BlobServicePropertiesArgs(BlobServicePropertiesArgs $) {
+        this.accountName = $.accountName;
+        this.automaticSnapshotPolicyEnabled = $.automaticSnapshotPolicyEnabled;
+        this.blobServicesName = $.blobServicesName;
+        this.changeFeed = $.changeFeed;
+        this.containerDeleteRetentionPolicy = $.containerDeleteRetentionPolicy;
+        this.cors = $.cors;
+        this.defaultServiceVersion = $.defaultServiceVersion;
+        this.deleteRetentionPolicy = $.deleteRetentionPolicy;
+        this.isVersioningEnabled = $.isVersioningEnabled;
+        this.lastAccessTimeTrackingPolicy = $.lastAccessTimeTrackingPolicy;
+        this.resourceGroupName = $.resourceGroupName;
+        this.restorePolicy = $.restorePolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobServicePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<Boolean> automaticSnapshotPolicyEnabled;
-        private @Nullable Output<String> blobServicesName;
-        private @Nullable Output<ChangeFeedArgs> changeFeed;
-        private @Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy;
-        private @Nullable Output<CorsRulesArgs> cors;
-        private @Nullable Output<String> defaultServiceVersion;
-        private @Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy;
-        private @Nullable Output<Boolean> isVersioningEnabled;
-        private @Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<RestorePolicyPropertiesArgs> restorePolicy;
+        private BlobServicePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobServicePropertiesArgs();
         }
 
         public Builder(BlobServicePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.automaticSnapshotPolicyEnabled = defaults.automaticSnapshotPolicyEnabled;
-    	      this.blobServicesName = defaults.blobServicesName;
-    	      this.changeFeed = defaults.changeFeed;
-    	      this.containerDeleteRetentionPolicy = defaults.containerDeleteRetentionPolicy;
-    	      this.cors = defaults.cors;
-    	      this.defaultServiceVersion = defaults.defaultServiceVersion;
-    	      this.deleteRetentionPolicy = defaults.deleteRetentionPolicy;
-    	      this.isVersioningEnabled = defaults.isVersioningEnabled;
-    	      this.lastAccessTimeTrackingPolicy = defaults.lastAccessTimeTrackingPolicy;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.restorePolicy = defaults.restorePolicy;
+            $ = new BlobServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder automaticSnapshotPolicyEnabled(@Nullable Output<Boolean> automaticSnapshotPolicyEnabled) {
-            this.automaticSnapshotPolicyEnabled = automaticSnapshotPolicyEnabled;
+            $.automaticSnapshotPolicyEnabled = automaticSnapshotPolicyEnabled;
             return this;
         }
-        public Builder automaticSnapshotPolicyEnabled(@Nullable Boolean automaticSnapshotPolicyEnabled) {
-            this.automaticSnapshotPolicyEnabled = Codegen.ofNullable(automaticSnapshotPolicyEnabled);
-            return this;
+
+        public Builder automaticSnapshotPolicyEnabled(Boolean automaticSnapshotPolicyEnabled) {
+            return automaticSnapshotPolicyEnabled(Output.of(automaticSnapshotPolicyEnabled));
         }
+
         public Builder blobServicesName(@Nullable Output<String> blobServicesName) {
-            this.blobServicesName = blobServicesName;
+            $.blobServicesName = blobServicesName;
             return this;
         }
-        public Builder blobServicesName(@Nullable String blobServicesName) {
-            this.blobServicesName = Codegen.ofNullable(blobServicesName);
-            return this;
+
+        public Builder blobServicesName(String blobServicesName) {
+            return blobServicesName(Output.of(blobServicesName));
         }
+
         public Builder changeFeed(@Nullable Output<ChangeFeedArgs> changeFeed) {
-            this.changeFeed = changeFeed;
+            $.changeFeed = changeFeed;
             return this;
         }
-        public Builder changeFeed(@Nullable ChangeFeedArgs changeFeed) {
-            this.changeFeed = Codegen.ofNullable(changeFeed);
-            return this;
+
+        public Builder changeFeed(ChangeFeedArgs changeFeed) {
+            return changeFeed(Output.of(changeFeed));
         }
+
         public Builder containerDeleteRetentionPolicy(@Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy) {
-            this.containerDeleteRetentionPolicy = containerDeleteRetentionPolicy;
+            $.containerDeleteRetentionPolicy = containerDeleteRetentionPolicy;
             return this;
         }
-        public Builder containerDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs containerDeleteRetentionPolicy) {
-            this.containerDeleteRetentionPolicy = Codegen.ofNullable(containerDeleteRetentionPolicy);
-            return this;
+
+        public Builder containerDeleteRetentionPolicy(DeleteRetentionPolicyArgs containerDeleteRetentionPolicy) {
+            return containerDeleteRetentionPolicy(Output.of(containerDeleteRetentionPolicy));
         }
+
         public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
-            this.cors = cors;
+            $.cors = cors;
             return this;
         }
-        public Builder cors(@Nullable CorsRulesArgs cors) {
-            this.cors = Codegen.ofNullable(cors);
-            return this;
+
+        public Builder cors(CorsRulesArgs cors) {
+            return cors(Output.of(cors));
         }
+
         public Builder defaultServiceVersion(@Nullable Output<String> defaultServiceVersion) {
-            this.defaultServiceVersion = defaultServiceVersion;
+            $.defaultServiceVersion = defaultServiceVersion;
             return this;
         }
-        public Builder defaultServiceVersion(@Nullable String defaultServiceVersion) {
-            this.defaultServiceVersion = Codegen.ofNullable(defaultServiceVersion);
-            return this;
+
+        public Builder defaultServiceVersion(String defaultServiceVersion) {
+            return defaultServiceVersion(Output.of(defaultServiceVersion));
         }
+
         public Builder deleteRetentionPolicy(@Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy) {
-            this.deleteRetentionPolicy = deleteRetentionPolicy;
+            $.deleteRetentionPolicy = deleteRetentionPolicy;
             return this;
         }
-        public Builder deleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs deleteRetentionPolicy) {
-            this.deleteRetentionPolicy = Codegen.ofNullable(deleteRetentionPolicy);
-            return this;
+
+        public Builder deleteRetentionPolicy(DeleteRetentionPolicyArgs deleteRetentionPolicy) {
+            return deleteRetentionPolicy(Output.of(deleteRetentionPolicy));
         }
+
         public Builder isVersioningEnabled(@Nullable Output<Boolean> isVersioningEnabled) {
-            this.isVersioningEnabled = isVersioningEnabled;
+            $.isVersioningEnabled = isVersioningEnabled;
             return this;
         }
-        public Builder isVersioningEnabled(@Nullable Boolean isVersioningEnabled) {
-            this.isVersioningEnabled = Codegen.ofNullable(isVersioningEnabled);
-            return this;
+
+        public Builder isVersioningEnabled(Boolean isVersioningEnabled) {
+            return isVersioningEnabled(Output.of(isVersioningEnabled));
         }
+
         public Builder lastAccessTimeTrackingPolicy(@Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy) {
-            this.lastAccessTimeTrackingPolicy = lastAccessTimeTrackingPolicy;
+            $.lastAccessTimeTrackingPolicy = lastAccessTimeTrackingPolicy;
             return this;
         }
-        public Builder lastAccessTimeTrackingPolicy(@Nullable LastAccessTimeTrackingPolicyArgs lastAccessTimeTrackingPolicy) {
-            this.lastAccessTimeTrackingPolicy = Codegen.ofNullable(lastAccessTimeTrackingPolicy);
-            return this;
+
+        public Builder lastAccessTimeTrackingPolicy(LastAccessTimeTrackingPolicyArgs lastAccessTimeTrackingPolicy) {
+            return lastAccessTimeTrackingPolicy(Output.of(lastAccessTimeTrackingPolicy));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder restorePolicy(@Nullable Output<RestorePolicyPropertiesArgs> restorePolicy) {
-            this.restorePolicy = restorePolicy;
+            $.restorePolicy = restorePolicy;
             return this;
         }
-        public Builder restorePolicy(@Nullable RestorePolicyPropertiesArgs restorePolicy) {
-            this.restorePolicy = Codegen.ofNullable(restorePolicy);
-            return this;
-        }        public BlobServicePropertiesArgs build() {
-            return new BlobServicePropertiesArgs(accountName, automaticSnapshotPolicyEnabled, blobServicesName, changeFeed, containerDeleteRetentionPolicy, cors, defaultServiceVersion, deleteRetentionPolicy, isVersioningEnabled, lastAccessTimeTrackingPolicy, resourceGroupName, restorePolicy);
+
+        public Builder restorePolicy(RestorePolicyPropertiesArgs restorePolicy) {
+            return restorePolicy(Output.of(restorePolicy));
+        }
+
+        public BlobServicePropertiesArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

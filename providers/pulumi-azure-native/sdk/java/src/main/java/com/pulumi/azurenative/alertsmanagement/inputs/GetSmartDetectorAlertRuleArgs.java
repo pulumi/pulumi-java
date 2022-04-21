@@ -20,7 +20,7 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="alertRuleName", required=true)
-      private final String alertRuleName;
+    private String alertRuleName;
 
     public String alertRuleName() {
         return this.alertRuleName;
@@ -31,10 +31,10 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expandDetector")
-      private final @Nullable Boolean expandDetector;
+    private @Nullable Boolean expandDetector;
 
     public Optional<Boolean> expandDetector() {
-        return this.expandDetector == null ? Optional.empty() : Optional.ofNullable(this.expandDetector);
+        return Optional.ofNullable(this.expandDetector);
     }
 
     /**
@@ -42,64 +42,58 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetSmartDetectorAlertRuleArgs(
-        String alertRuleName,
-        @Nullable Boolean expandDetector,
-        String resourceGroupName) {
-        this.alertRuleName = Objects.requireNonNull(alertRuleName, "expected parameter 'alertRuleName' to be non-null");
-        this.expandDetector = expandDetector;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetSmartDetectorAlertRuleArgs() {}
 
-    private GetSmartDetectorAlertRuleArgs() {
-        this.alertRuleName = null;
-        this.expandDetector = null;
-        this.resourceGroupName = null;
+    private GetSmartDetectorAlertRuleArgs(GetSmartDetectorAlertRuleArgs $) {
+        this.alertRuleName = $.alertRuleName;
+        this.expandDetector = $.expandDetector;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSmartDetectorAlertRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alertRuleName;
-        private @Nullable Boolean expandDetector;
-        private String resourceGroupName;
+        private GetSmartDetectorAlertRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSmartDetectorAlertRuleArgs();
         }
 
         public Builder(GetSmartDetectorAlertRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertRuleName = defaults.alertRuleName;
-    	      this.expandDetector = defaults.expandDetector;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetSmartDetectorAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertRuleName(String alertRuleName) {
-            this.alertRuleName = Objects.requireNonNull(alertRuleName);
+            $.alertRuleName = alertRuleName;
             return this;
         }
+
         public Builder expandDetector(@Nullable Boolean expandDetector) {
-            this.expandDetector = expandDetector;
+            $.expandDetector = expandDetector;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetSmartDetectorAlertRuleArgs build() {
-            return new GetSmartDetectorAlertRuleArgs(alertRuleName, expandDetector, resourceGroupName);
+        }
+
+        public GetSmartDetectorAlertRuleArgs build() {
+            $.alertRuleName = Objects.requireNonNull($.alertRuleName, "expected parameter 'alertRuleName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

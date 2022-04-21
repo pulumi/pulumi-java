@@ -5,7 +5,6 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs(Output<String> name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs() {}
 
-    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs() {
-        this.name = Codegen.empty();
+    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
+        private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs();
         }
 
         public Builder(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs build() {
-            return new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs(name);
+            return name(Output.of(name));
+        }
+
+        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

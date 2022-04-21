@@ -5,9 +5,9 @@ package com.pulumi.aws.pinpoint.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AppQuietTimeGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="end")
-      private final @Nullable Output<String> end;
+    private @Nullable Output<String> end;
 
-    public Output<String> end() {
-        return this.end == null ? Codegen.empty() : this.end;
+    public Optional<Output<String>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class AppQuietTimeGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="start")
-      private final @Nullable Output<String> start;
+    private @Nullable Output<String> start;
 
-    public Output<String> start() {
-        return this.start == null ? Codegen.empty() : this.start;
+    public Optional<Output<String>> start() {
+        return Optional.ofNullable(this.start);
     }
 
-    public AppQuietTimeGetArgs(
-        @Nullable Output<String> end,
-        @Nullable Output<String> start) {
-        this.end = end;
-        this.start = start;
-    }
+    private AppQuietTimeGetArgs() {}
 
-    private AppQuietTimeGetArgs() {
-        this.end = Codegen.empty();
-        this.start = Codegen.empty();
+    private AppQuietTimeGetArgs(AppQuietTimeGetArgs $) {
+        this.end = $.end;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppQuietTimeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> end;
-        private @Nullable Output<String> start;
+        private AppQuietTimeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppQuietTimeGetArgs();
         }
 
         public Builder(AppQuietTimeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.start = defaults.start;
+            $ = new AppQuietTimeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder end(@Nullable Output<String> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
-        public Builder end(@Nullable String end) {
-            this.end = Codegen.ofNullable(end);
-            return this;
+
+        public Builder end(String end) {
+            return end(Output.of(end));
         }
+
         public Builder start(@Nullable Output<String> start) {
-            this.start = start;
+            $.start = start;
             return this;
         }
-        public Builder start(@Nullable String start) {
-            this.start = Codegen.ofNullable(start);
-            return this;
-        }        public AppQuietTimeGetArgs build() {
-            return new AppQuietTimeGetArgs(end, start);
+
+        public Builder start(String start) {
+            return start(Output.of(start));
+        }
+
+        public AppQuietTimeGetArgs build() {
+            return $;
         }
     }
+
 }

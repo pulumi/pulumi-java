@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datalabeling_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotationSpecSet", required=true)
-      private final Output<String> annotationSpecSet;
+    private Output<String> annotationSpecSet;
 
     public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
@@ -33,7 +33,7 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="evaluationJobConfig", required=true)
-      private final Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
+    private Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
 
     public Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig() {
         return this.evaluationJobConfig;
@@ -55,7 +55,7 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labelMissingGroundTruth", required=true)
-      private final Output<Boolean> labelMissingGroundTruth;
+    private Output<Boolean> labelMissingGroundTruth;
 
     public Output<Boolean> labelMissingGroundTruth() {
         return this.labelMissingGroundTruth;
@@ -66,17 +66,17 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="modelVersion", required=true)
-      private final Output<String> modelVersion;
+    private Output<String> modelVersion;
 
     public Output<String> modelVersion() {
         return this.modelVersion;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -84,128 +84,114 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<String> schedule;
+    private Output<String> schedule;
 
     public Output<String> schedule() {
         return this.schedule;
     }
 
-    public EvaluationJobArgs(
-        Output<String> annotationSpecSet,
-        Output<String> description,
-        Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig,
-        Output<Boolean> labelMissingGroundTruth,
-        Output<String> modelVersion,
-        @Nullable Output<String> project,
-        Output<String> schedule) {
-        this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.evaluationJobConfig = Objects.requireNonNull(evaluationJobConfig, "expected parameter 'evaluationJobConfig' to be non-null");
-        this.labelMissingGroundTruth = Objects.requireNonNull(labelMissingGroundTruth, "expected parameter 'labelMissingGroundTruth' to be non-null");
-        this.modelVersion = Objects.requireNonNull(modelVersion, "expected parameter 'modelVersion' to be non-null");
-        this.project = project;
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-    }
+    private EvaluationJobArgs() {}
 
-    private EvaluationJobArgs() {
-        this.annotationSpecSet = Codegen.empty();
-        this.description = Codegen.empty();
-        this.evaluationJobConfig = Codegen.empty();
-        this.labelMissingGroundTruth = Codegen.empty();
-        this.modelVersion = Codegen.empty();
-        this.project = Codegen.empty();
-        this.schedule = Codegen.empty();
+    private EvaluationJobArgs(EvaluationJobArgs $) {
+        this.annotationSpecSet = $.annotationSpecSet;
+        this.description = $.description;
+        this.evaluationJobConfig = $.evaluationJobConfig;
+        this.labelMissingGroundTruth = $.labelMissingGroundTruth;
+        this.modelVersion = $.modelVersion;
+        this.project = $.project;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EvaluationJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> annotationSpecSet;
-        private Output<String> description;
-        private Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
-        private Output<Boolean> labelMissingGroundTruth;
-        private Output<String> modelVersion;
-        private @Nullable Output<String> project;
-        private Output<String> schedule;
+        private EvaluationJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EvaluationJobArgs();
         }
 
         public Builder(EvaluationJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationSpecSet = defaults.annotationSpecSet;
-    	      this.description = defaults.description;
-    	      this.evaluationJobConfig = defaults.evaluationJobConfig;
-    	      this.labelMissingGroundTruth = defaults.labelMissingGroundTruth;
-    	      this.modelVersion = defaults.modelVersion;
-    	      this.project = defaults.project;
-    	      this.schedule = defaults.schedule;
+            $ = new EvaluationJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationSpecSet(Output<String> annotationSpecSet) {
-            this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
+            $.annotationSpecSet = annotationSpecSet;
             return this;
         }
+
         public Builder annotationSpecSet(String annotationSpecSet) {
-            this.annotationSpecSet = Output.of(Objects.requireNonNull(annotationSpecSet));
-            return this;
+            return annotationSpecSet(Output.of(annotationSpecSet));
         }
+
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder evaluationJobConfig(Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig) {
-            this.evaluationJobConfig = Objects.requireNonNull(evaluationJobConfig);
+            $.evaluationJobConfig = evaluationJobConfig;
             return this;
         }
+
         public Builder evaluationJobConfig(GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs evaluationJobConfig) {
-            this.evaluationJobConfig = Output.of(Objects.requireNonNull(evaluationJobConfig));
-            return this;
+            return evaluationJobConfig(Output.of(evaluationJobConfig));
         }
+
         public Builder labelMissingGroundTruth(Output<Boolean> labelMissingGroundTruth) {
-            this.labelMissingGroundTruth = Objects.requireNonNull(labelMissingGroundTruth);
+            $.labelMissingGroundTruth = labelMissingGroundTruth;
             return this;
         }
+
         public Builder labelMissingGroundTruth(Boolean labelMissingGroundTruth) {
-            this.labelMissingGroundTruth = Output.of(Objects.requireNonNull(labelMissingGroundTruth));
-            return this;
+            return labelMissingGroundTruth(Output.of(labelMissingGroundTruth));
         }
+
         public Builder modelVersion(Output<String> modelVersion) {
-            this.modelVersion = Objects.requireNonNull(modelVersion);
+            $.modelVersion = modelVersion;
             return this;
         }
+
         public Builder modelVersion(String modelVersion) {
-            this.modelVersion = Output.of(Objects.requireNonNull(modelVersion));
-            return this;
+            return modelVersion(Output.of(modelVersion));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder schedule(Output<String> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(String schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
-        }        public EvaluationJobArgs build() {
-            return new EvaluationJobArgs(annotationSpecSet, description, evaluationJobConfig, labelMissingGroundTruth, modelVersion, project, schedule);
+            return schedule(Output.of(schedule));
+        }
+
+        public EvaluationJobArgs build() {
+            $.annotationSpecSet = Objects.requireNonNull($.annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.evaluationJobConfig = Objects.requireNonNull($.evaluationJobConfig, "expected parameter 'evaluationJobConfig' to be non-null");
+            $.labelMissingGroundTruth = Objects.requireNonNull($.labelMissingGroundTruth, "expected parameter 'labelMissingGroundTruth' to be non-null");
+            $.modelVersion = Objects.requireNonNull($.modelVersion, "expected parameter 'modelVersion' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

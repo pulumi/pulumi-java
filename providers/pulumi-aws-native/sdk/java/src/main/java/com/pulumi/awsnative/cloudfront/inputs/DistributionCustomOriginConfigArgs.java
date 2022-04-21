@@ -5,11 +5,11 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,153 +18,138 @@ public final class DistributionCustomOriginConfigArgs extends com.pulumi.resourc
     public static final DistributionCustomOriginConfigArgs Empty = new DistributionCustomOriginConfigArgs();
 
     @Import(name="hTTPPort")
-      private final @Nullable Output<Integer> hTTPPort;
+    private @Nullable Output<Integer> hTTPPort;
 
-    public Output<Integer> hTTPPort() {
-        return this.hTTPPort == null ? Codegen.empty() : this.hTTPPort;
+    public Optional<Output<Integer>> hTTPPort() {
+        return Optional.ofNullable(this.hTTPPort);
     }
 
     @Import(name="hTTPSPort")
-      private final @Nullable Output<Integer> hTTPSPort;
+    private @Nullable Output<Integer> hTTPSPort;
 
-    public Output<Integer> hTTPSPort() {
-        return this.hTTPSPort == null ? Codegen.empty() : this.hTTPSPort;
+    public Optional<Output<Integer>> hTTPSPort() {
+        return Optional.ofNullable(this.hTTPSPort);
     }
 
     @Import(name="originKeepaliveTimeout")
-      private final @Nullable Output<Integer> originKeepaliveTimeout;
+    private @Nullable Output<Integer> originKeepaliveTimeout;
 
-    public Output<Integer> originKeepaliveTimeout() {
-        return this.originKeepaliveTimeout == null ? Codegen.empty() : this.originKeepaliveTimeout;
+    public Optional<Output<Integer>> originKeepaliveTimeout() {
+        return Optional.ofNullable(this.originKeepaliveTimeout);
     }
 
     @Import(name="originProtocolPolicy", required=true)
-      private final Output<String> originProtocolPolicy;
+    private Output<String> originProtocolPolicy;
 
     public Output<String> originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
     @Import(name="originReadTimeout")
-      private final @Nullable Output<Integer> originReadTimeout;
+    private @Nullable Output<Integer> originReadTimeout;
 
-    public Output<Integer> originReadTimeout() {
-        return this.originReadTimeout == null ? Codegen.empty() : this.originReadTimeout;
+    public Optional<Output<Integer>> originReadTimeout() {
+        return Optional.ofNullable(this.originReadTimeout);
     }
 
     @Import(name="originSSLProtocols")
-      private final @Nullable Output<List<String>> originSSLProtocols;
+    private @Nullable Output<List<String>> originSSLProtocols;
 
-    public Output<List<String>> originSSLProtocols() {
-        return this.originSSLProtocols == null ? Codegen.empty() : this.originSSLProtocols;
+    public Optional<Output<List<String>>> originSSLProtocols() {
+        return Optional.ofNullable(this.originSSLProtocols);
     }
 
-    public DistributionCustomOriginConfigArgs(
-        @Nullable Output<Integer> hTTPPort,
-        @Nullable Output<Integer> hTTPSPort,
-        @Nullable Output<Integer> originKeepaliveTimeout,
-        Output<String> originProtocolPolicy,
-        @Nullable Output<Integer> originReadTimeout,
-        @Nullable Output<List<String>> originSSLProtocols) {
-        this.hTTPPort = hTTPPort;
-        this.hTTPSPort = hTTPSPort;
-        this.originKeepaliveTimeout = originKeepaliveTimeout;
-        this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy, "expected parameter 'originProtocolPolicy' to be non-null");
-        this.originReadTimeout = originReadTimeout;
-        this.originSSLProtocols = originSSLProtocols;
-    }
+    private DistributionCustomOriginConfigArgs() {}
 
-    private DistributionCustomOriginConfigArgs() {
-        this.hTTPPort = Codegen.empty();
-        this.hTTPSPort = Codegen.empty();
-        this.originKeepaliveTimeout = Codegen.empty();
-        this.originProtocolPolicy = Codegen.empty();
-        this.originReadTimeout = Codegen.empty();
-        this.originSSLProtocols = Codegen.empty();
+    private DistributionCustomOriginConfigArgs(DistributionCustomOriginConfigArgs $) {
+        this.hTTPPort = $.hTTPPort;
+        this.hTTPSPort = $.hTTPSPort;
+        this.originKeepaliveTimeout = $.originKeepaliveTimeout;
+        this.originProtocolPolicy = $.originProtocolPolicy;
+        this.originReadTimeout = $.originReadTimeout;
+        this.originSSLProtocols = $.originSSLProtocols;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionCustomOriginConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> hTTPPort;
-        private @Nullable Output<Integer> hTTPSPort;
-        private @Nullable Output<Integer> originKeepaliveTimeout;
-        private Output<String> originProtocolPolicy;
-        private @Nullable Output<Integer> originReadTimeout;
-        private @Nullable Output<List<String>> originSSLProtocols;
+        private DistributionCustomOriginConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionCustomOriginConfigArgs();
         }
 
         public Builder(DistributionCustomOriginConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hTTPPort = defaults.hTTPPort;
-    	      this.hTTPSPort = defaults.hTTPSPort;
-    	      this.originKeepaliveTimeout = defaults.originKeepaliveTimeout;
-    	      this.originProtocolPolicy = defaults.originProtocolPolicy;
-    	      this.originReadTimeout = defaults.originReadTimeout;
-    	      this.originSSLProtocols = defaults.originSSLProtocols;
+            $ = new DistributionCustomOriginConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hTTPPort(@Nullable Output<Integer> hTTPPort) {
-            this.hTTPPort = hTTPPort;
+            $.hTTPPort = hTTPPort;
             return this;
         }
-        public Builder hTTPPort(@Nullable Integer hTTPPort) {
-            this.hTTPPort = Codegen.ofNullable(hTTPPort);
-            return this;
+
+        public Builder hTTPPort(Integer hTTPPort) {
+            return hTTPPort(Output.of(hTTPPort));
         }
+
         public Builder hTTPSPort(@Nullable Output<Integer> hTTPSPort) {
-            this.hTTPSPort = hTTPSPort;
+            $.hTTPSPort = hTTPSPort;
             return this;
         }
-        public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
-            this.hTTPSPort = Codegen.ofNullable(hTTPSPort);
-            return this;
+
+        public Builder hTTPSPort(Integer hTTPSPort) {
+            return hTTPSPort(Output.of(hTTPSPort));
         }
+
         public Builder originKeepaliveTimeout(@Nullable Output<Integer> originKeepaliveTimeout) {
-            this.originKeepaliveTimeout = originKeepaliveTimeout;
+            $.originKeepaliveTimeout = originKeepaliveTimeout;
             return this;
         }
-        public Builder originKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
-            this.originKeepaliveTimeout = Codegen.ofNullable(originKeepaliveTimeout);
-            return this;
+
+        public Builder originKeepaliveTimeout(Integer originKeepaliveTimeout) {
+            return originKeepaliveTimeout(Output.of(originKeepaliveTimeout));
         }
+
         public Builder originProtocolPolicy(Output<String> originProtocolPolicy) {
-            this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
+            $.originProtocolPolicy = originProtocolPolicy;
             return this;
         }
+
         public Builder originProtocolPolicy(String originProtocolPolicy) {
-            this.originProtocolPolicy = Output.of(Objects.requireNonNull(originProtocolPolicy));
-            return this;
+            return originProtocolPolicy(Output.of(originProtocolPolicy));
         }
+
         public Builder originReadTimeout(@Nullable Output<Integer> originReadTimeout) {
-            this.originReadTimeout = originReadTimeout;
+            $.originReadTimeout = originReadTimeout;
             return this;
         }
-        public Builder originReadTimeout(@Nullable Integer originReadTimeout) {
-            this.originReadTimeout = Codegen.ofNullable(originReadTimeout);
-            return this;
+
+        public Builder originReadTimeout(Integer originReadTimeout) {
+            return originReadTimeout(Output.of(originReadTimeout));
         }
+
         public Builder originSSLProtocols(@Nullable Output<List<String>> originSSLProtocols) {
-            this.originSSLProtocols = originSSLProtocols;
+            $.originSSLProtocols = originSSLProtocols;
             return this;
         }
-        public Builder originSSLProtocols(@Nullable List<String> originSSLProtocols) {
-            this.originSSLProtocols = Codegen.ofNullable(originSSLProtocols);
-            return this;
+
+        public Builder originSSLProtocols(List<String> originSSLProtocols) {
+            return originSSLProtocols(Output.of(originSSLProtocols));
         }
+
         public Builder originSSLProtocols(String... originSSLProtocols) {
             return originSSLProtocols(List.of(originSSLProtocols));
-        }        public DistributionCustomOriginConfigArgs build() {
-            return new DistributionCustomOriginConfigArgs(hTTPPort, hTTPSPort, originKeepaliveTimeout, originProtocolPolicy, originReadTimeout, originSSLProtocols);
+        }
+
+        public DistributionCustomOriginConfigArgs build() {
+            $.originProtocolPolicy = Objects.requireNonNull($.originProtocolPolicy, "expected parameter 'originProtocolPolicy' to be non-null");
+            return $;
         }
     }
+
 }

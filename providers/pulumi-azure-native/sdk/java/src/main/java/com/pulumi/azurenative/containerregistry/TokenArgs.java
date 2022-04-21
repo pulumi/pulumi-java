@@ -8,9 +8,9 @@ import com.pulumi.azurenative.containerregistry.inputs.TokenCredentialsPropertie
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<TokenCredentialsPropertiesArgs> credentials;
+    private @Nullable Output<TokenCredentialsPropertiesArgs> credentials;
 
-    public Output<TokenCredentialsPropertiesArgs> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<TokenCredentialsPropertiesArgs>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final Output<String> registryName;
+    private Output<String> registryName;
 
     public Output<String> registryName() {
         return this.registryName;
@@ -45,7 +45,7 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -56,10 +56,10 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scopeMapId")
-      private final @Nullable Output<String> scopeMapId;
+    private @Nullable Output<String> scopeMapId;
 
-    public Output<String> scopeMapId() {
-        return this.scopeMapId == null ? Codegen.empty() : this.scopeMapId;
+    public Optional<Output<String>> scopeMapId() {
+        return Optional.ofNullable(this.scopeMapId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,TokenStatus>> status;
+    private @Nullable Output<Either<String,TokenStatus>> status;
 
-    public Output<Either<String,TokenStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,TokenStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -78,115 +78,100 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tokenName")
-      private final @Nullable Output<String> tokenName;
+    private @Nullable Output<String> tokenName;
 
-    public Output<String> tokenName() {
-        return this.tokenName == null ? Codegen.empty() : this.tokenName;
+    public Optional<Output<String>> tokenName() {
+        return Optional.ofNullable(this.tokenName);
     }
 
-    public TokenArgs(
-        @Nullable Output<TokenCredentialsPropertiesArgs> credentials,
-        Output<String> registryName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> scopeMapId,
-        @Nullable Output<Either<String,TokenStatus>> status,
-        @Nullable Output<String> tokenName) {
-        this.credentials = credentials;
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scopeMapId = scopeMapId;
-        this.status = status;
-        this.tokenName = tokenName;
-    }
+    private TokenArgs() {}
 
-    private TokenArgs() {
-        this.credentials = Codegen.empty();
-        this.registryName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scopeMapId = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tokenName = Codegen.empty();
+    private TokenArgs(TokenArgs $) {
+        this.credentials = $.credentials;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scopeMapId = $.scopeMapId;
+        this.status = $.status;
+        this.tokenName = $.tokenName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TokenCredentialsPropertiesArgs> credentials;
-        private Output<String> registryName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> scopeMapId;
-        private @Nullable Output<Either<String,TokenStatus>> status;
-        private @Nullable Output<String> tokenName;
+        private TokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TokenArgs();
         }
 
         public Builder(TokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scopeMapId = defaults.scopeMapId;
-    	      this.status = defaults.status;
-    	      this.tokenName = defaults.tokenName;
+            $ = new TokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable Output<TokenCredentialsPropertiesArgs> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable TokenCredentialsPropertiesArgs credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(TokenCredentialsPropertiesArgs credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder registryName(Output<String> registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Output.of(Objects.requireNonNull(registryName));
-            return this;
+            return registryName(Output.of(registryName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scopeMapId(@Nullable Output<String> scopeMapId) {
-            this.scopeMapId = scopeMapId;
+            $.scopeMapId = scopeMapId;
             return this;
         }
-        public Builder scopeMapId(@Nullable String scopeMapId) {
-            this.scopeMapId = Codegen.ofNullable(scopeMapId);
-            return this;
+
+        public Builder scopeMapId(String scopeMapId) {
+            return scopeMapId(Output.of(scopeMapId));
         }
+
         public Builder status(@Nullable Output<Either<String,TokenStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,TokenStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Either<String,TokenStatus> status) {
+            return status(Output.of(status));
         }
+
         public Builder tokenName(@Nullable Output<String> tokenName) {
-            this.tokenName = tokenName;
+            $.tokenName = tokenName;
             return this;
         }
-        public Builder tokenName(@Nullable String tokenName) {
-            this.tokenName = Codegen.ofNullable(tokenName);
-            return this;
-        }        public TokenArgs build() {
-            return new TokenArgs(credentials, registryName, resourceGroupName, scopeMapId, status, tokenName);
+
+        public Builder tokenName(String tokenName) {
+            return tokenName(Output.of(tokenName));
+        }
+
+        public TokenArgs build() {
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

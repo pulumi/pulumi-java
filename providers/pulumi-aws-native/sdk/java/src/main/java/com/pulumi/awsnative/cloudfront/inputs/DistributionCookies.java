@@ -16,65 +16,62 @@ public final class DistributionCookies extends com.pulumi.resources.InvokeArgs {
     public static final DistributionCookies Empty = new DistributionCookies();
 
     @Import(name="forward", required=true)
-      private final String forward;
+    private String forward;
 
     public String forward() {
         return this.forward;
     }
 
     @Import(name="whitelistedNames")
-      private final @Nullable List<String> whitelistedNames;
+    private @Nullable List<String> whitelistedNames;
 
-    public List<String> whitelistedNames() {
-        return this.whitelistedNames == null ? List.of() : this.whitelistedNames;
+    public Optional<List<String>> whitelistedNames() {
+        return Optional.ofNullable(this.whitelistedNames);
     }
 
-    public DistributionCookies(
-        String forward,
-        @Nullable List<String> whitelistedNames) {
-        this.forward = Objects.requireNonNull(forward, "expected parameter 'forward' to be non-null");
-        this.whitelistedNames = whitelistedNames;
-    }
+    private DistributionCookies() {}
 
-    private DistributionCookies() {
-        this.forward = null;
-        this.whitelistedNames = List.of();
+    private DistributionCookies(DistributionCookies $) {
+        this.forward = $.forward;
+        this.whitelistedNames = $.whitelistedNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionCookies defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String forward;
-        private @Nullable List<String> whitelistedNames;
+        private DistributionCookies $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionCookies();
         }
 
         public Builder(DistributionCookies defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forward = defaults.forward;
-    	      this.whitelistedNames = defaults.whitelistedNames;
+            $ = new DistributionCookies(Objects.requireNonNull(defaults));
         }
 
         public Builder forward(String forward) {
-            this.forward = Objects.requireNonNull(forward);
+            $.forward = forward;
             return this;
         }
+
         public Builder whitelistedNames(@Nullable List<String> whitelistedNames) {
-            this.whitelistedNames = whitelistedNames;
+            $.whitelistedNames = whitelistedNames;
             return this;
         }
+
         public Builder whitelistedNames(String... whitelistedNames) {
             return whitelistedNames(List.of(whitelistedNames));
-        }        public DistributionCookies build() {
-            return new DistributionCookies(forward, whitelistedNames);
+        }
+
+        public DistributionCookies build() {
+            $.forward = Objects.requireNonNull($.forward, "expected parameter 'forward' to be non-null");
+            return $;
         }
     }
+
 }

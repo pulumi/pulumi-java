@@ -6,9 +6,9 @@ package com.pulumi.awsnative.efs.inputs;
 import com.pulumi.awsnative.efs.inputs.AccessPointCreationInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccessPointRootDirectoryArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="creationInfo")
-      private final @Nullable Output<AccessPointCreationInfoArgs> creationInfo;
+    private @Nullable Output<AccessPointCreationInfoArgs> creationInfo;
 
-    public Output<AccessPointCreationInfoArgs> creationInfo() {
-        return this.creationInfo == null ? Codegen.empty() : this.creationInfo;
+    public Optional<Output<AccessPointCreationInfoArgs>> creationInfo() {
+        return Optional.ofNullable(this.creationInfo);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class AccessPointRootDirectoryArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public AccessPointRootDirectoryArgs(
-        @Nullable Output<AccessPointCreationInfoArgs> creationInfo,
-        @Nullable Output<String> path) {
-        this.creationInfo = creationInfo;
-        this.path = path;
-    }
+    private AccessPointRootDirectoryArgs() {}
 
-    private AccessPointRootDirectoryArgs() {
-        this.creationInfo = Codegen.empty();
-        this.path = Codegen.empty();
+    private AccessPointRootDirectoryArgs(AccessPointRootDirectoryArgs $) {
+        this.creationInfo = $.creationInfo;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointRootDirectoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AccessPointCreationInfoArgs> creationInfo;
-        private @Nullable Output<String> path;
+        private AccessPointRootDirectoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointRootDirectoryArgs();
         }
 
         public Builder(AccessPointRootDirectoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationInfo = defaults.creationInfo;
-    	      this.path = defaults.path;
+            $ = new AccessPointRootDirectoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creationInfo(@Nullable Output<AccessPointCreationInfoArgs> creationInfo) {
-            this.creationInfo = creationInfo;
+            $.creationInfo = creationInfo;
             return this;
         }
-        public Builder creationInfo(@Nullable AccessPointCreationInfoArgs creationInfo) {
-            this.creationInfo = Codegen.ofNullable(creationInfo);
-            return this;
+
+        public Builder creationInfo(AccessPointCreationInfoArgs creationInfo) {
+            return creationInfo(Output.of(creationInfo));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public AccessPointRootDirectoryArgs build() {
-            return new AccessPointRootDirectoryArgs(creationInfo, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public AccessPointRootDirectoryArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.directconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BgpPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressFamily")
-      private final @Nullable Output<String> addressFamily;
+    private @Nullable Output<String> addressFamily;
 
-    public Output<String> addressFamily() {
-        return this.addressFamily == null ? Codegen.empty() : this.addressFamily;
+    public Optional<Output<String>> addressFamily() {
+        return Optional.ofNullable(this.addressFamily);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BgpPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="amazonAddress")
-      private final @Nullable Output<String> amazonAddress;
+    private @Nullable Output<String> amazonAddress;
 
-    public Output<String> amazonAddress() {
-        return this.amazonAddress == null ? Codegen.empty() : this.amazonAddress;
+    public Optional<Output<String>> amazonAddress() {
+        return Optional.ofNullable(this.amazonAddress);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BgpPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsDevice")
-      private final @Nullable Output<String> awsDevice;
+    private @Nullable Output<String> awsDevice;
 
-    public Output<String> awsDevice() {
-        return this.awsDevice == null ? Codegen.empty() : this.awsDevice;
+    public Optional<Output<String>> awsDevice() {
+        return Optional.ofNullable(this.awsDevice);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class BgpPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bgpAsn")
-      private final @Nullable Output<Integer> bgpAsn;
+    private @Nullable Output<Integer> bgpAsn;
 
-    public Output<Integer> bgpAsn() {
-        return this.bgpAsn == null ? Codegen.empty() : this.bgpAsn;
+    public Optional<Output<Integer>> bgpAsn() {
+        return Optional.ofNullable(this.bgpAsn);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class BgpPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bgpAuthKey")
-      private final @Nullable Output<String> bgpAuthKey;
+    private @Nullable Output<String> bgpAuthKey;
 
-    public Output<String> bgpAuthKey() {
-        return this.bgpAuthKey == null ? Codegen.empty() : this.bgpAuthKey;
+    public Optional<Output<String>> bgpAuthKey() {
+        return Optional.ofNullable(this.bgpAuthKey);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class BgpPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bgpPeerId")
-      private final @Nullable Output<String> bgpPeerId;
+    private @Nullable Output<String> bgpPeerId;
 
-    public Output<String> bgpPeerId() {
-        return this.bgpPeerId == null ? Codegen.empty() : this.bgpPeerId;
+    public Optional<Output<String>> bgpPeerId() {
+        return Optional.ofNullable(this.bgpPeerId);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class BgpPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bgpStatus")
-      private final @Nullable Output<String> bgpStatus;
+    private @Nullable Output<String> bgpStatus;
 
-    public Output<String> bgpStatus() {
-        return this.bgpStatus == null ? Codegen.empty() : this.bgpStatus;
+    public Optional<Output<String>> bgpStatus() {
+        return Optional.ofNullable(this.bgpStatus);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class BgpPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerAddress")
-      private final @Nullable Output<String> customerAddress;
+    private @Nullable Output<String> customerAddress;
 
-    public Output<String> customerAddress() {
-        return this.customerAddress == null ? Codegen.empty() : this.customerAddress;
+    public Optional<Output<String>> customerAddress() {
+        return Optional.ofNullable(this.customerAddress);
     }
 
     /**
@@ -111,154 +111,128 @@ public final class BgpPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualInterfaceId")
-      private final @Nullable Output<String> virtualInterfaceId;
+    private @Nullable Output<String> virtualInterfaceId;
 
-    public Output<String> virtualInterfaceId() {
-        return this.virtualInterfaceId == null ? Codegen.empty() : this.virtualInterfaceId;
+    public Optional<Output<String>> virtualInterfaceId() {
+        return Optional.ofNullable(this.virtualInterfaceId);
     }
 
-    public BgpPeerState(
-        @Nullable Output<String> addressFamily,
-        @Nullable Output<String> amazonAddress,
-        @Nullable Output<String> awsDevice,
-        @Nullable Output<Integer> bgpAsn,
-        @Nullable Output<String> bgpAuthKey,
-        @Nullable Output<String> bgpPeerId,
-        @Nullable Output<String> bgpStatus,
-        @Nullable Output<String> customerAddress,
-        @Nullable Output<String> virtualInterfaceId) {
-        this.addressFamily = addressFamily;
-        this.amazonAddress = amazonAddress;
-        this.awsDevice = awsDevice;
-        this.bgpAsn = bgpAsn;
-        this.bgpAuthKey = bgpAuthKey;
-        this.bgpPeerId = bgpPeerId;
-        this.bgpStatus = bgpStatus;
-        this.customerAddress = customerAddress;
-        this.virtualInterfaceId = virtualInterfaceId;
-    }
+    private BgpPeerState() {}
 
-    private BgpPeerState() {
-        this.addressFamily = Codegen.empty();
-        this.amazonAddress = Codegen.empty();
-        this.awsDevice = Codegen.empty();
-        this.bgpAsn = Codegen.empty();
-        this.bgpAuthKey = Codegen.empty();
-        this.bgpPeerId = Codegen.empty();
-        this.bgpStatus = Codegen.empty();
-        this.customerAddress = Codegen.empty();
-        this.virtualInterfaceId = Codegen.empty();
+    private BgpPeerState(BgpPeerState $) {
+        this.addressFamily = $.addressFamily;
+        this.amazonAddress = $.amazonAddress;
+        this.awsDevice = $.awsDevice;
+        this.bgpAsn = $.bgpAsn;
+        this.bgpAuthKey = $.bgpAuthKey;
+        this.bgpPeerId = $.bgpPeerId;
+        this.bgpStatus = $.bgpStatus;
+        this.customerAddress = $.customerAddress;
+        this.virtualInterfaceId = $.virtualInterfaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BgpPeerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressFamily;
-        private @Nullable Output<String> amazonAddress;
-        private @Nullable Output<String> awsDevice;
-        private @Nullable Output<Integer> bgpAsn;
-        private @Nullable Output<String> bgpAuthKey;
-        private @Nullable Output<String> bgpPeerId;
-        private @Nullable Output<String> bgpStatus;
-        private @Nullable Output<String> customerAddress;
-        private @Nullable Output<String> virtualInterfaceId;
+        private BgpPeerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BgpPeerState();
         }
 
         public Builder(BgpPeerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressFamily = defaults.addressFamily;
-    	      this.amazonAddress = defaults.amazonAddress;
-    	      this.awsDevice = defaults.awsDevice;
-    	      this.bgpAsn = defaults.bgpAsn;
-    	      this.bgpAuthKey = defaults.bgpAuthKey;
-    	      this.bgpPeerId = defaults.bgpPeerId;
-    	      this.bgpStatus = defaults.bgpStatus;
-    	      this.customerAddress = defaults.customerAddress;
-    	      this.virtualInterfaceId = defaults.virtualInterfaceId;
+            $ = new BgpPeerState(Objects.requireNonNull(defaults));
         }
 
         public Builder addressFamily(@Nullable Output<String> addressFamily) {
-            this.addressFamily = addressFamily;
+            $.addressFamily = addressFamily;
             return this;
         }
-        public Builder addressFamily(@Nullable String addressFamily) {
-            this.addressFamily = Codegen.ofNullable(addressFamily);
-            return this;
+
+        public Builder addressFamily(String addressFamily) {
+            return addressFamily(Output.of(addressFamily));
         }
+
         public Builder amazonAddress(@Nullable Output<String> amazonAddress) {
-            this.amazonAddress = amazonAddress;
+            $.amazonAddress = amazonAddress;
             return this;
         }
-        public Builder amazonAddress(@Nullable String amazonAddress) {
-            this.amazonAddress = Codegen.ofNullable(amazonAddress);
-            return this;
+
+        public Builder amazonAddress(String amazonAddress) {
+            return amazonAddress(Output.of(amazonAddress));
         }
+
         public Builder awsDevice(@Nullable Output<String> awsDevice) {
-            this.awsDevice = awsDevice;
+            $.awsDevice = awsDevice;
             return this;
         }
-        public Builder awsDevice(@Nullable String awsDevice) {
-            this.awsDevice = Codegen.ofNullable(awsDevice);
-            return this;
+
+        public Builder awsDevice(String awsDevice) {
+            return awsDevice(Output.of(awsDevice));
         }
+
         public Builder bgpAsn(@Nullable Output<Integer> bgpAsn) {
-            this.bgpAsn = bgpAsn;
+            $.bgpAsn = bgpAsn;
             return this;
         }
-        public Builder bgpAsn(@Nullable Integer bgpAsn) {
-            this.bgpAsn = Codegen.ofNullable(bgpAsn);
-            return this;
+
+        public Builder bgpAsn(Integer bgpAsn) {
+            return bgpAsn(Output.of(bgpAsn));
         }
+
         public Builder bgpAuthKey(@Nullable Output<String> bgpAuthKey) {
-            this.bgpAuthKey = bgpAuthKey;
+            $.bgpAuthKey = bgpAuthKey;
             return this;
         }
-        public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
-            this.bgpAuthKey = Codegen.ofNullable(bgpAuthKey);
-            return this;
+
+        public Builder bgpAuthKey(String bgpAuthKey) {
+            return bgpAuthKey(Output.of(bgpAuthKey));
         }
+
         public Builder bgpPeerId(@Nullable Output<String> bgpPeerId) {
-            this.bgpPeerId = bgpPeerId;
+            $.bgpPeerId = bgpPeerId;
             return this;
         }
-        public Builder bgpPeerId(@Nullable String bgpPeerId) {
-            this.bgpPeerId = Codegen.ofNullable(bgpPeerId);
-            return this;
+
+        public Builder bgpPeerId(String bgpPeerId) {
+            return bgpPeerId(Output.of(bgpPeerId));
         }
+
         public Builder bgpStatus(@Nullable Output<String> bgpStatus) {
-            this.bgpStatus = bgpStatus;
+            $.bgpStatus = bgpStatus;
             return this;
         }
-        public Builder bgpStatus(@Nullable String bgpStatus) {
-            this.bgpStatus = Codegen.ofNullable(bgpStatus);
-            return this;
+
+        public Builder bgpStatus(String bgpStatus) {
+            return bgpStatus(Output.of(bgpStatus));
         }
+
         public Builder customerAddress(@Nullable Output<String> customerAddress) {
-            this.customerAddress = customerAddress;
+            $.customerAddress = customerAddress;
             return this;
         }
-        public Builder customerAddress(@Nullable String customerAddress) {
-            this.customerAddress = Codegen.ofNullable(customerAddress);
-            return this;
+
+        public Builder customerAddress(String customerAddress) {
+            return customerAddress(Output.of(customerAddress));
         }
+
         public Builder virtualInterfaceId(@Nullable Output<String> virtualInterfaceId) {
-            this.virtualInterfaceId = virtualInterfaceId;
+            $.virtualInterfaceId = virtualInterfaceId;
             return this;
         }
-        public Builder virtualInterfaceId(@Nullable String virtualInterfaceId) {
-            this.virtualInterfaceId = Codegen.ofNullable(virtualInterfaceId);
-            return this;
-        }        public BgpPeerState build() {
-            return new BgpPeerState(addressFamily, amazonAddress, awsDevice, bgpAsn, bgpAuthKey, bgpPeerId, bgpStatus, customerAddress, virtualInterfaceId);
+
+        public Builder virtualInterfaceId(String virtualInterfaceId) {
+            return virtualInterfaceId(Output.of(virtualInterfaceId));
+        }
+
+        public BgpPeerState build() {
+            return $;
         }
     }
+
 }

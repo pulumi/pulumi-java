@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends co
      * 
      */
     @Import(name="accessibilityText")
-      private final @Nullable Output<String> accessibilityText;
+    private @Nullable Output<String> accessibilityText;
 
-    public Output<String> accessibilityText() {
-        return this.accessibilityText == null ? Codegen.empty() : this.accessibilityText;
+    public Optional<Output<String>> accessibilityText() {
+        return Optional.ofNullable(this.accessibilityText);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends co
      * 
      */
     @Import(name="imageUri")
-      private final @Nullable Output<String> imageUri;
+    private @Nullable Output<String> imageUri;
 
-    public Output<String> imageUri() {
-        return this.imageUri == null ? Codegen.empty() : this.imageUri;
+    public Optional<Output<String>> imageUri() {
+        return Optional.ofNullable(this.imageUri);
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageImageArgs(
-        @Nullable Output<String> accessibilityText,
-        @Nullable Output<String> imageUri) {
-        this.accessibilityText = accessibilityText;
-        this.imageUri = imageUri;
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageImageArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageImageArgs() {
-        this.accessibilityText = Codegen.empty();
-        this.imageUri = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageImageArgs(GoogleCloudDialogflowV2beta1IntentMessageImageArgs $) {
+        this.accessibilityText = $.accessibilityText;
+        this.imageUri = $.imageUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessibilityText;
-        private @Nullable Output<String> imageUri;
+        private GoogleCloudDialogflowV2beta1IntentMessageImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageImageArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessibilityText = defaults.accessibilityText;
-    	      this.imageUri = defaults.imageUri;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessibilityText(@Nullable Output<String> accessibilityText) {
-            this.accessibilityText = accessibilityText;
+            $.accessibilityText = accessibilityText;
             return this;
         }
-        public Builder accessibilityText(@Nullable String accessibilityText) {
-            this.accessibilityText = Codegen.ofNullable(accessibilityText);
-            return this;
+
+        public Builder accessibilityText(String accessibilityText) {
+            return accessibilityText(Output.of(accessibilityText));
         }
+
         public Builder imageUri(@Nullable Output<String> imageUri) {
-            this.imageUri = imageUri;
+            $.imageUri = imageUri;
             return this;
         }
-        public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Codegen.ofNullable(imageUri);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageImageArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageImageArgs(accessibilityText, imageUri);
+
+        public Builder imageUri(String imageUri) {
+            return imageUri(Output.of(imageUri));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageImageArgs build() {
+            return $;
         }
     }
+
 }

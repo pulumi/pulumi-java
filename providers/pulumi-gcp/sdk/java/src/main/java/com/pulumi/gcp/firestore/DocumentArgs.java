@@ -5,9 +5,9 @@ package com.pulumi.gcp.firestore;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collection", required=true)
-      private final Output<String> collection;
+    private Output<String> collection;
 
     public Output<String> collection() {
         return this.collection;
@@ -31,10 +31,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="database")
-      private final @Nullable Output<String> database;
+    private @Nullable Output<String> database;
 
-    public Output<String> database() {
-        return this.database == null ? Codegen.empty() : this.database;
+    public Optional<Output<String>> database() {
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentId", required=true)
-      private final Output<String> documentId;
+    private Output<String> documentId;
 
     public Output<String> documentId() {
         return this.documentId;
@@ -53,7 +53,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields", required=true)
-      private final Output<String> fields;
+    private Output<String> fields;
 
     public Output<String> fields() {
         return this.fields;
@@ -65,102 +65,91 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public DocumentArgs(
-        Output<String> collection,
-        @Nullable Output<String> database,
-        Output<String> documentId,
-        Output<String> fields,
-        @Nullable Output<String> project) {
-        this.collection = Objects.requireNonNull(collection, "expected parameter 'collection' to be non-null");
-        this.database = database;
-        this.documentId = Objects.requireNonNull(documentId, "expected parameter 'documentId' to be non-null");
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.project = project;
-    }
+    private DocumentArgs() {}
 
-    private DocumentArgs() {
-        this.collection = Codegen.empty();
-        this.database = Codegen.empty();
-        this.documentId = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.project = Codegen.empty();
+    private DocumentArgs(DocumentArgs $) {
+        this.collection = $.collection;
+        this.database = $.database;
+        this.documentId = $.documentId;
+        this.fields = $.fields;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> collection;
-        private @Nullable Output<String> database;
-        private Output<String> documentId;
-        private Output<String> fields;
-        private @Nullable Output<String> project;
+        private DocumentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentArgs();
         }
 
         public Builder(DocumentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collection = defaults.collection;
-    	      this.database = defaults.database;
-    	      this.documentId = defaults.documentId;
-    	      this.fields = defaults.fields;
-    	      this.project = defaults.project;
+            $ = new DocumentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collection(Output<String> collection) {
-            this.collection = Objects.requireNonNull(collection);
+            $.collection = collection;
             return this;
         }
+
         public Builder collection(String collection) {
-            this.collection = Output.of(Objects.requireNonNull(collection));
-            return this;
+            return collection(Output.of(collection));
         }
+
         public Builder database(@Nullable Output<String> database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
-        public Builder database(@Nullable String database) {
-            this.database = Codegen.ofNullable(database);
-            return this;
+
+        public Builder database(String database) {
+            return database(Output.of(database));
         }
+
         public Builder documentId(Output<String> documentId) {
-            this.documentId = Objects.requireNonNull(documentId);
+            $.documentId = documentId;
             return this;
         }
+
         public Builder documentId(String documentId) {
-            this.documentId = Output.of(Objects.requireNonNull(documentId));
-            return this;
+            return documentId(Output.of(documentId));
         }
+
         public Builder fields(Output<String> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(String fields) {
-            this.fields = Output.of(Objects.requireNonNull(fields));
-            return this;
+            return fields(Output.of(fields));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public DocumentArgs build() {
-            return new DocumentArgs(collection, database, documentId, fields, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public DocumentArgs build() {
+            $.collection = Objects.requireNonNull($.collection, "expected parameter 'collection' to be non-null");
+            $.documentId = Objects.requireNonNull($.documentId, "expected parameter 'documentId' to be non-null");
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            return $;
         }
     }
+
 }

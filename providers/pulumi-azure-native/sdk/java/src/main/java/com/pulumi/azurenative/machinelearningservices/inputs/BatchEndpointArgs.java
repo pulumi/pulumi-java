@@ -8,11 +8,11 @@ import com.pulumi.azurenative.machinelearningservices.inputs.EndpointAuthKeysArg
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authMode")
-      private final @Nullable Output<Either<String,EndpointAuthMode>> authMode;
+    private @Nullable Output<Either<String,EndpointAuthMode>> authMode;
 
-    public Output<Either<String,EndpointAuthMode>> authMode() {
-        return this.authMode == null ? Codegen.empty() : this.authMode;
+    public Optional<Output<Either<String,EndpointAuthMode>>> authMode() {
+        return Optional.ofNullable(this.authMode);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<EndpointAuthKeysArgs> keys;
+    private @Nullable Output<EndpointAuthKeysArgs> keys;
 
-    public Output<EndpointAuthKeysArgs> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<EndpointAuthKeysArgs>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -74,102 +74,88 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="traffic")
-      private final @Nullable Output<Map<String,Integer>> traffic;
+    private @Nullable Output<Map<String,Integer>> traffic;
 
-    public Output<Map<String,Integer>> traffic() {
-        return this.traffic == null ? Codegen.empty() : this.traffic;
+    public Optional<Output<Map<String,Integer>>> traffic() {
+        return Optional.ofNullable(this.traffic);
     }
 
-    public BatchEndpointArgs(
-        @Nullable Output<Either<String,EndpointAuthMode>> authMode,
-        @Nullable Output<String> description,
-        @Nullable Output<EndpointAuthKeysArgs> keys,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<Map<String,Integer>> traffic) {
-        this.authMode = authMode;
-        this.description = description;
-        this.keys = keys;
-        this.properties = properties;
-        this.traffic = traffic;
-    }
+    private BatchEndpointArgs() {}
 
-    private BatchEndpointArgs() {
-        this.authMode = Codegen.empty();
-        this.description = Codegen.empty();
-        this.keys = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.traffic = Codegen.empty();
+    private BatchEndpointArgs(BatchEndpointArgs $) {
+        this.authMode = $.authMode;
+        this.description = $.description;
+        this.keys = $.keys;
+        this.properties = $.properties;
+        this.traffic = $.traffic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,EndpointAuthMode>> authMode;
-        private @Nullable Output<String> description;
-        private @Nullable Output<EndpointAuthKeysArgs> keys;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<Map<String,Integer>> traffic;
+        private BatchEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchEndpointArgs();
         }
 
         public Builder(BatchEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authMode = defaults.authMode;
-    	      this.description = defaults.description;
-    	      this.keys = defaults.keys;
-    	      this.properties = defaults.properties;
-    	      this.traffic = defaults.traffic;
+            $ = new BatchEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authMode(@Nullable Output<Either<String,EndpointAuthMode>> authMode) {
-            this.authMode = authMode;
+            $.authMode = authMode;
             return this;
         }
-        public Builder authMode(@Nullable Either<String,EndpointAuthMode> authMode) {
-            this.authMode = Codegen.ofNullable(authMode);
-            return this;
+
+        public Builder authMode(Either<String,EndpointAuthMode> authMode) {
+            return authMode(Output.of(authMode));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder keys(@Nullable Output<EndpointAuthKeysArgs> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable EndpointAuthKeysArgs keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(EndpointAuthKeysArgs keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder traffic(@Nullable Output<Map<String,Integer>> traffic) {
-            this.traffic = traffic;
+            $.traffic = traffic;
             return this;
         }
-        public Builder traffic(@Nullable Map<String,Integer> traffic) {
-            this.traffic = Codegen.ofNullable(traffic);
-            return this;
-        }        public BatchEndpointArgs build() {
-            return new BatchEndpointArgs(authMode, description, keys, properties, traffic);
+
+        public Builder traffic(Map<String,Integer> traffic) {
+            return traffic(Output.of(traffic));
+        }
+
+        public BatchEndpointArgs build() {
+            return $;
         }
     }
+
 }

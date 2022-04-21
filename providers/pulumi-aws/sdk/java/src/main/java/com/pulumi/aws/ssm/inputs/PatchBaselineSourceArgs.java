@@ -5,7 +5,6 @@ package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class PatchBaselineSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="configuration", required=true)
-      private final Output<String> configuration;
+    private Output<String> configuration;
 
     public Output<String> configuration() {
         return this.configuration;
@@ -31,7 +30,7 @@ public final class PatchBaselineSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -42,79 +41,75 @@ public final class PatchBaselineSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="products", required=true)
-      private final Output<List<String>> products;
+    private Output<List<String>> products;
 
     public Output<List<String>> products() {
         return this.products;
     }
 
-    public PatchBaselineSourceArgs(
-        Output<String> configuration,
-        Output<String> name,
-        Output<List<String>> products) {
-        this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.products = Objects.requireNonNull(products, "expected parameter 'products' to be non-null");
-    }
+    private PatchBaselineSourceArgs() {}
 
-    private PatchBaselineSourceArgs() {
-        this.configuration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.products = Codegen.empty();
+    private PatchBaselineSourceArgs(PatchBaselineSourceArgs $) {
+        this.configuration = $.configuration;
+        this.name = $.name;
+        this.products = $.products;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchBaselineSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configuration;
-        private Output<String> name;
-        private Output<List<String>> products;
+        private PatchBaselineSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchBaselineSourceArgs();
         }
 
         public Builder(PatchBaselineSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.name = defaults.name;
-    	      this.products = defaults.products;
+            $ = new PatchBaselineSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(Output<String> configuration) {
-            this.configuration = Objects.requireNonNull(configuration);
+            $.configuration = configuration;
             return this;
         }
+
         public Builder configuration(String configuration) {
-            this.configuration = Output.of(Objects.requireNonNull(configuration));
-            return this;
+            return configuration(Output.of(configuration));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder products(Output<List<String>> products) {
-            this.products = Objects.requireNonNull(products);
+            $.products = products;
             return this;
         }
+
         public Builder products(List<String> products) {
-            this.products = Output.of(Objects.requireNonNull(products));
-            return this;
+            return products(Output.of(products));
         }
+
         public Builder products(String... products) {
             return products(List.of(products));
-        }        public PatchBaselineSourceArgs build() {
-            return new PatchBaselineSourceArgs(configuration, name, products);
+        }
+
+        public PatchBaselineSourceArgs build() {
+            $.configuration = Objects.requireNonNull($.configuration, "expected parameter 'configuration' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.products = Objects.requireNonNull($.products, "expected parameter 'products' to be non-null");
+            return $;
         }
     }
+
 }

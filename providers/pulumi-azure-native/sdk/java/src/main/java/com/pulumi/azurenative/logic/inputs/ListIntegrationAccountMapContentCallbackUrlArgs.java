@@ -21,7 +21,7 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -32,10 +32,10 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Either<String,KeyType> keyType;
+    private @Nullable Either<String,KeyType> keyType;
 
-    public Either<String,KeyType> keyType() {
-        return this.keyType == null ? null : this.keyType;
+    public Optional<Either<String,KeyType>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
      * 
      */
     @Import(name="mapName", required=true)
-      private final String mapName;
+    private String mapName;
 
     public String mapName() {
         return this.mapName;
@@ -54,10 +54,10 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
      * 
      */
     @Import(name="notAfter")
-      private final @Nullable String notAfter;
+    private @Nullable String notAfter;
 
     public Optional<String> notAfter() {
-        return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
+        return Optional.ofNullable(this.notAfter);
     }
 
     /**
@@ -65,82 +65,71 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListIntegrationAccountMapContentCallbackUrlArgs(
-        String integrationAccountName,
-        @Nullable Either<String,KeyType> keyType,
-        String mapName,
-        @Nullable String notAfter,
-        String resourceGroupName) {
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.keyType = keyType;
-        this.mapName = Objects.requireNonNull(mapName, "expected parameter 'mapName' to be non-null");
-        this.notAfter = notAfter;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListIntegrationAccountMapContentCallbackUrlArgs() {}
 
-    private ListIntegrationAccountMapContentCallbackUrlArgs() {
-        this.integrationAccountName = null;
-        this.keyType = null;
-        this.mapName = null;
-        this.notAfter = null;
-        this.resourceGroupName = null;
+    private ListIntegrationAccountMapContentCallbackUrlArgs(ListIntegrationAccountMapContentCallbackUrlArgs $) {
+        this.integrationAccountName = $.integrationAccountName;
+        this.keyType = $.keyType;
+        this.mapName = $.mapName;
+        this.notAfter = $.notAfter;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListIntegrationAccountMapContentCallbackUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String integrationAccountName;
-        private @Nullable Either<String,KeyType> keyType;
-        private String mapName;
-        private @Nullable String notAfter;
-        private String resourceGroupName;
+        private ListIntegrationAccountMapContentCallbackUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListIntegrationAccountMapContentCallbackUrlArgs();
         }
 
         public Builder(ListIntegrationAccountMapContentCallbackUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.keyType = defaults.keyType;
-    	      this.mapName = defaults.mapName;
-    	      this.notAfter = defaults.notAfter;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListIntegrationAccountMapContentCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
+
         public Builder mapName(String mapName) {
-            this.mapName = Objects.requireNonNull(mapName);
+            $.mapName = mapName;
             return this;
         }
+
         public Builder notAfter(@Nullable String notAfter) {
-            this.notAfter = notAfter;
+            $.notAfter = notAfter;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListIntegrationAccountMapContentCallbackUrlArgs build() {
-            return new ListIntegrationAccountMapContentCallbackUrlArgs(integrationAccountName, keyType, mapName, notAfter, resourceGroupName);
+        }
+
+        public ListIntegrationAccountMapContentCallbackUrlArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.mapName = Objects.requireNonNull($.mapName, "expected parameter 'mapName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

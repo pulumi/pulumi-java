@@ -21,45 +21,45 @@ public final class DetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attestation", required=true)
-      private final AttestationResponse attestation;
+    private AttestationResponse attestation;
 
     public AttestationResponse attestation() {
         return this.attestation;
     }
 
-    public DetailsResponse(AttestationResponse attestation) {
-        this.attestation = Objects.requireNonNull(attestation, "expected parameter 'attestation' to be non-null");
-    }
+    private DetailsResponse() {}
 
-    private DetailsResponse() {
-        this.attestation = null;
+    private DetailsResponse(DetailsResponse $) {
+        this.attestation = $.attestation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AttestationResponse attestation;
+        private DetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetailsResponse();
         }
 
         public Builder(DetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestation = defaults.attestation;
+            $ = new DetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attestation(AttestationResponse attestation) {
-            this.attestation = Objects.requireNonNull(attestation);
+            $.attestation = attestation;
             return this;
-        }        public DetailsResponse build() {
-            return new DetailsResponse(attestation);
+        }
+
+        public DetailsResponse build() {
+            $.attestation = Objects.requireNonNull($.attestation, "expected parameter 'attestation' to be non-null");
+            return $;
         }
     }
+
 }

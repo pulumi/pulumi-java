@@ -5,7 +5,6 @@ package com.pulumi.gcp.container;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.NodePoolAutoscalingArgs;
 import com.pulumi.gcp.container.inputs.NodePoolManagementArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNetworkConfigArgs;
@@ -15,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscaling")
-      private final @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
+    private @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
 
-    public Output<NodePoolAutoscalingArgs> autoscaling() {
-        return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
+    public Optional<Output<NodePoolAutoscalingArgs>> autoscaling() {
+        return Optional.ofNullable(this.autoscaling);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cluster", required=true)
-      private final Output<String> cluster;
+    private Output<String> cluster;
 
     public Output<String> cluster() {
         return this.cluster;
@@ -56,10 +56,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initialNodeCount")
-      private final @Nullable Output<Integer> initialNodeCount;
+    private @Nullable Output<Integer> initialNodeCount;
 
-    public Output<Integer> initialNodeCount() {
-        return this.initialNodeCount == null ? Codegen.empty() : this.initialNodeCount;
+    public Optional<Output<Integer>> initialNodeCount() {
+        return Optional.ofNullable(this.initialNodeCount);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="management")
-      private final @Nullable Output<NodePoolManagementArgs> management;
+    private @Nullable Output<NodePoolManagementArgs> management;
 
-    public Output<NodePoolManagementArgs> management() {
-        return this.management == null ? Codegen.empty() : this.management;
+    public Optional<Output<NodePoolManagementArgs>> management() {
+        return Optional.ofNullable(this.management);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxPodsPerNode")
-      private final @Nullable Output<Integer> maxPodsPerNode;
+    private @Nullable Output<Integer> maxPodsPerNode;
 
-    public Output<Integer> maxPodsPerNode() {
-        return this.maxPodsPerNode == null ? Codegen.empty() : this.maxPodsPerNode;
+    public Optional<Output<Integer>> maxPodsPerNode() {
+        return Optional.ofNullable(this.maxPodsPerNode);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-      private final @Nullable Output<NodePoolNetworkConfigArgs> networkConfig;
+    private @Nullable Output<NodePoolNetworkConfigArgs> networkConfig;
 
-    public Output<NodePoolNetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<NodePoolNetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeConfig")
-      private final @Nullable Output<NodePoolNodeConfigArgs> nodeConfig;
+    private @Nullable Output<NodePoolNodeConfigArgs> nodeConfig;
 
-    public Output<NodePoolNodeConfigArgs> nodeConfig() {
-        return this.nodeConfig == null ? Codegen.empty() : this.nodeConfig;
+    public Optional<Output<NodePoolNodeConfigArgs>> nodeConfig() {
+        return Optional.ofNullable(this.nodeConfig);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeCount")
-      private final @Nullable Output<Integer> nodeCount;
+    private @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> nodeCount() {
-        return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
+    public Optional<Output<Integer>> nodeCount() {
+        return Optional.ofNullable(this.nodeCount);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeLocations")
-      private final @Nullable Output<List<String>> nodeLocations;
+    private @Nullable Output<List<String>> nodeLocations;
 
-    public Output<List<String>> nodeLocations() {
-        return this.nodeLocations == null ? Codegen.empty() : this.nodeLocations;
+    public Optional<Output<List<String>>> nodeLocations() {
+        return Optional.ofNullable(this.nodeLocations);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upgradeSettings")
-      private final @Nullable Output<NodePoolUpgradeSettingsArgs> upgradeSettings;
+    private @Nullable Output<NodePoolUpgradeSettingsArgs> upgradeSettings;
 
-    public Output<NodePoolUpgradeSettingsArgs> upgradeSettings() {
-        return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
+    public Optional<Output<NodePoolUpgradeSettingsArgs>> upgradeSettings() {
+        return Optional.ofNullable(this.upgradeSettings);
     }
 
     /**
@@ -209,235 +209,193 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public NodePoolArgs(
-        @Nullable Output<NodePoolAutoscalingArgs> autoscaling,
-        Output<String> cluster,
-        @Nullable Output<Integer> initialNodeCount,
-        @Nullable Output<String> location,
-        @Nullable Output<NodePoolManagementArgs> management,
-        @Nullable Output<Integer> maxPodsPerNode,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<NodePoolNetworkConfigArgs> networkConfig,
-        @Nullable Output<NodePoolNodeConfigArgs> nodeConfig,
-        @Nullable Output<Integer> nodeCount,
-        @Nullable Output<List<String>> nodeLocations,
-        @Nullable Output<String> project,
-        @Nullable Output<NodePoolUpgradeSettingsArgs> upgradeSettings,
-        @Nullable Output<String> version) {
-        this.autoscaling = autoscaling;
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-        this.initialNodeCount = initialNodeCount;
-        this.location = location;
-        this.management = management;
-        this.maxPodsPerNode = maxPodsPerNode;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.networkConfig = networkConfig;
-        this.nodeConfig = nodeConfig;
-        this.nodeCount = nodeCount;
-        this.nodeLocations = nodeLocations;
-        this.project = project;
-        this.upgradeSettings = upgradeSettings;
-        this.version = version;
-    }
+    private NodePoolArgs() {}
 
-    private NodePoolArgs() {
-        this.autoscaling = Codegen.empty();
-        this.cluster = Codegen.empty();
-        this.initialNodeCount = Codegen.empty();
-        this.location = Codegen.empty();
-        this.management = Codegen.empty();
-        this.maxPodsPerNode = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.networkConfig = Codegen.empty();
-        this.nodeConfig = Codegen.empty();
-        this.nodeCount = Codegen.empty();
-        this.nodeLocations = Codegen.empty();
-        this.project = Codegen.empty();
-        this.upgradeSettings = Codegen.empty();
-        this.version = Codegen.empty();
+    private NodePoolArgs(NodePoolArgs $) {
+        this.autoscaling = $.autoscaling;
+        this.cluster = $.cluster;
+        this.initialNodeCount = $.initialNodeCount;
+        this.location = $.location;
+        this.management = $.management;
+        this.maxPodsPerNode = $.maxPodsPerNode;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.networkConfig = $.networkConfig;
+        this.nodeConfig = $.nodeConfig;
+        this.nodeCount = $.nodeCount;
+        this.nodeLocations = $.nodeLocations;
+        this.project = $.project;
+        this.upgradeSettings = $.upgradeSettings;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
-        private Output<String> cluster;
-        private @Nullable Output<Integer> initialNodeCount;
-        private @Nullable Output<String> location;
-        private @Nullable Output<NodePoolManagementArgs> management;
-        private @Nullable Output<Integer> maxPodsPerNode;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<NodePoolNetworkConfigArgs> networkConfig;
-        private @Nullable Output<NodePoolNodeConfigArgs> nodeConfig;
-        private @Nullable Output<Integer> nodeCount;
-        private @Nullable Output<List<String>> nodeLocations;
-        private @Nullable Output<String> project;
-        private @Nullable Output<NodePoolUpgradeSettingsArgs> upgradeSettings;
-        private @Nullable Output<String> version;
+        private NodePoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolArgs();
         }
 
         public Builder(NodePoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaling = defaults.autoscaling;
-    	      this.cluster = defaults.cluster;
-    	      this.initialNodeCount = defaults.initialNodeCount;
-    	      this.location = defaults.location;
-    	      this.management = defaults.management;
-    	      this.maxPodsPerNode = defaults.maxPodsPerNode;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.nodeConfig = defaults.nodeConfig;
-    	      this.nodeCount = defaults.nodeCount;
-    	      this.nodeLocations = defaults.nodeLocations;
-    	      this.project = defaults.project;
-    	      this.upgradeSettings = defaults.upgradeSettings;
-    	      this.version = defaults.version;
+            $ = new NodePoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaling(@Nullable Output<NodePoolAutoscalingArgs> autoscaling) {
-            this.autoscaling = autoscaling;
+            $.autoscaling = autoscaling;
             return this;
         }
-        public Builder autoscaling(@Nullable NodePoolAutoscalingArgs autoscaling) {
-            this.autoscaling = Codegen.ofNullable(autoscaling);
-            return this;
+
+        public Builder autoscaling(NodePoolAutoscalingArgs autoscaling) {
+            return autoscaling(Output.of(autoscaling));
         }
+
         public Builder cluster(Output<String> cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
         }
+
         public Builder cluster(String cluster) {
-            this.cluster = Output.of(Objects.requireNonNull(cluster));
-            return this;
+            return cluster(Output.of(cluster));
         }
+
         public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
-            this.initialNodeCount = initialNodeCount;
+            $.initialNodeCount = initialNodeCount;
             return this;
         }
-        public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
-            this.initialNodeCount = Codegen.ofNullable(initialNodeCount);
-            return this;
+
+        public Builder initialNodeCount(Integer initialNodeCount) {
+            return initialNodeCount(Output.of(initialNodeCount));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder management(@Nullable Output<NodePoolManagementArgs> management) {
-            this.management = management;
+            $.management = management;
             return this;
         }
-        public Builder management(@Nullable NodePoolManagementArgs management) {
-            this.management = Codegen.ofNullable(management);
-            return this;
+
+        public Builder management(NodePoolManagementArgs management) {
+            return management(Output.of(management));
         }
+
         public Builder maxPodsPerNode(@Nullable Output<Integer> maxPodsPerNode) {
-            this.maxPodsPerNode = maxPodsPerNode;
+            $.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
-        public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
-            this.maxPodsPerNode = Codegen.ofNullable(maxPodsPerNode);
-            return this;
+
+        public Builder maxPodsPerNode(Integer maxPodsPerNode) {
+            return maxPodsPerNode(Output.of(maxPodsPerNode));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder networkConfig(@Nullable Output<NodePoolNetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable NodePoolNetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(NodePoolNetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder nodeConfig(@Nullable Output<NodePoolNodeConfigArgs> nodeConfig) {
-            this.nodeConfig = nodeConfig;
+            $.nodeConfig = nodeConfig;
             return this;
         }
-        public Builder nodeConfig(@Nullable NodePoolNodeConfigArgs nodeConfig) {
-            this.nodeConfig = Codegen.ofNullable(nodeConfig);
-            return this;
+
+        public Builder nodeConfig(NodePoolNodeConfigArgs nodeConfig) {
+            return nodeConfig(Output.of(nodeConfig));
         }
+
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
-            this.nodeCount = nodeCount;
+            $.nodeCount = nodeCount;
             return this;
         }
-        public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Codegen.ofNullable(nodeCount);
-            return this;
+
+        public Builder nodeCount(Integer nodeCount) {
+            return nodeCount(Output.of(nodeCount));
         }
+
         public Builder nodeLocations(@Nullable Output<List<String>> nodeLocations) {
-            this.nodeLocations = nodeLocations;
+            $.nodeLocations = nodeLocations;
             return this;
         }
-        public Builder nodeLocations(@Nullable List<String> nodeLocations) {
-            this.nodeLocations = Codegen.ofNullable(nodeLocations);
-            return this;
+
+        public Builder nodeLocations(List<String> nodeLocations) {
+            return nodeLocations(Output.of(nodeLocations));
         }
+
         public Builder nodeLocations(String... nodeLocations) {
             return nodeLocations(List.of(nodeLocations));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder upgradeSettings(@Nullable Output<NodePoolUpgradeSettingsArgs> upgradeSettings) {
-            this.upgradeSettings = upgradeSettings;
+            $.upgradeSettings = upgradeSettings;
             return this;
         }
-        public Builder upgradeSettings(@Nullable NodePoolUpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Codegen.ofNullable(upgradeSettings);
-            return this;
+
+        public Builder upgradeSettings(NodePoolUpgradeSettingsArgs upgradeSettings) {
+            return upgradeSettings(Output.of(upgradeSettings));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public NodePoolArgs build() {
-            return new NodePoolArgs(autoscaling, cluster, initialNodeCount, location, management, maxPodsPerNode, name, namePrefix, networkConfig, nodeConfig, nodeCount, nodeLocations, project, upgradeSettings, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public NodePoolArgs build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            return $;
         }
     }
+
 }

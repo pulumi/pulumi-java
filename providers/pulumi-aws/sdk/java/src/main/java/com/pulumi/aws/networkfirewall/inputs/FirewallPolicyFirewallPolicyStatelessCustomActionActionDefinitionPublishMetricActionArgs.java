@@ -6,7 +6,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      * 
      */
     @Import(name="dimensions", required=true)
-      private final Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions;
+    private Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions;
 
     public Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions() {
         return this.dimensions;
     }
 
-    public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs(Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions) {
-        this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
-    }
+    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs() {}
 
-    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs() {
-        this.dimensions = Codegen.empty();
+    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs $) {
+        this.dimensions = $.dimensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions;
+        private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs();
         }
 
         public Builder(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
+            $ = new FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions) {
-            this.dimensions = Objects.requireNonNull(dimensions);
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder dimensions(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs> dimensions) {
-            this.dimensions = Output.of(Objects.requireNonNull(dimensions));
-            return this;
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder dimensions(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs... dimensions) {
             return dimensions(List.of(dimensions));
-        }        public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs build() {
-            return new FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs(dimensions);
+        }
+
+        public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs build() {
+            $.dimensions = Objects.requireNonNull($.dimensions, "expected parameter 'dimensions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends com
      * 
      */
     @Import(name="allowedActions")
-      private final @Nullable List<String> allowedActions;
+    private @Nullable List<String> allowedActions;
 
-    public List<String> allowedActions() {
-        return this.allowedActions == null ? List.of() : this.allowedActions;
+    public Optional<List<String>> allowedActions() {
+        return Optional.ofNullable(this.allowedActions);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends com
      * 
      */
     @Import(name="allowedDataActions")
-      private final @Nullable List<String> allowedDataActions;
+    private @Nullable List<String> allowedDataActions;
 
-    public List<String> allowedDataActions() {
-        return this.allowedDataActions == null ? List.of() : this.allowedDataActions;
+    public Optional<List<String>> allowedDataActions() {
+        return Optional.ofNullable(this.allowedDataActions);
     }
 
-    public ApplicationPackageLockingPolicyDefinitionResponse(
-        @Nullable List<String> allowedActions,
-        @Nullable List<String> allowedDataActions) {
-        this.allowedActions = allowedActions;
-        this.allowedDataActions = allowedDataActions;
-    }
+    private ApplicationPackageLockingPolicyDefinitionResponse() {}
 
-    private ApplicationPackageLockingPolicyDefinitionResponse() {
-        this.allowedActions = List.of();
-        this.allowedDataActions = List.of();
+    private ApplicationPackageLockingPolicyDefinitionResponse(ApplicationPackageLockingPolicyDefinitionResponse $) {
+        this.allowedActions = $.allowedActions;
+        this.allowedDataActions = $.allowedDataActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPackageLockingPolicyDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allowedActions;
-        private @Nullable List<String> allowedDataActions;
+        private ApplicationPackageLockingPolicyDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPackageLockingPolicyDefinitionResponse();
         }
 
         public Builder(ApplicationPackageLockingPolicyDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedActions = defaults.allowedActions;
-    	      this.allowedDataActions = defaults.allowedDataActions;
+            $ = new ApplicationPackageLockingPolicyDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedActions(@Nullable List<String> allowedActions) {
-            this.allowedActions = allowedActions;
+            $.allowedActions = allowedActions;
             return this;
         }
+
         public Builder allowedActions(String... allowedActions) {
             return allowedActions(List.of(allowedActions));
         }
+
         public Builder allowedDataActions(@Nullable List<String> allowedDataActions) {
-            this.allowedDataActions = allowedDataActions;
+            $.allowedDataActions = allowedDataActions;
             return this;
         }
+
         public Builder allowedDataActions(String... allowedDataActions) {
             return allowedDataActions(List.of(allowedDataActions));
-        }        public ApplicationPackageLockingPolicyDefinitionResponse build() {
-            return new ApplicationPackageLockingPolicyDefinitionResponse(allowedActions, allowedDataActions);
+        }
+
+        public ApplicationPackageLockingPolicyDefinitionResponse build() {
+            return $;
         }
     }
+
 }

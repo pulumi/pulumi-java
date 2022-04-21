@@ -30,7 +30,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowLargeResults", required=true)
-      private final Boolean allowLargeResults;
+    private Boolean allowLargeResults;
 
     public Boolean allowLargeResults() {
         return this.allowLargeResults;
@@ -41,7 +41,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="clustering", required=true)
-      private final ClusteringResponse clustering;
+    private ClusteringResponse clustering;
 
     public ClusteringResponse clustering() {
         return this.clustering;
@@ -52,7 +52,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectionProperties", required=true)
-      private final List<ConnectionPropertyResponse> connectionProperties;
+    private List<ConnectionPropertyResponse> connectionProperties;
 
     public List<ConnectionPropertyResponse> connectionProperties() {
         return this.connectionProperties;
@@ -63,7 +63,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="createDisposition", required=true)
-      private final String createDisposition;
+    private String createDisposition;
 
     public String createDisposition() {
         return this.createDisposition;
@@ -74,7 +74,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="createSession", required=true)
-      private final Boolean createSession;
+    private Boolean createSession;
 
     public Boolean createSession() {
         return this.createSession;
@@ -85,7 +85,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="defaultDataset", required=true)
-      private final DatasetReferenceResponse defaultDataset;
+    private DatasetReferenceResponse defaultDataset;
 
     public DatasetReferenceResponse defaultDataset() {
         return this.defaultDataset;
@@ -96,7 +96,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="destinationEncryptionConfiguration", required=true)
-      private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
+    private EncryptionConfigurationResponse destinationEncryptionConfiguration;
 
     public EncryptionConfigurationResponse destinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration;
@@ -107,7 +107,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="destinationTable", required=true)
-      private final TableReferenceResponse destinationTable;
+    private TableReferenceResponse destinationTable;
 
     public TableReferenceResponse destinationTable() {
         return this.destinationTable;
@@ -118,7 +118,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="flattenResults", required=true)
-      private final Boolean flattenResults;
+    private Boolean flattenResults;
 
     public Boolean flattenResults() {
         return this.flattenResults;
@@ -129,7 +129,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="maximumBillingTier", required=true)
-      private final Integer maximumBillingTier;
+    private Integer maximumBillingTier;
 
     public Integer maximumBillingTier() {
         return this.maximumBillingTier;
@@ -140,7 +140,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="maximumBytesBilled", required=true)
-      private final String maximumBytesBilled;
+    private String maximumBytesBilled;
 
     public String maximumBytesBilled() {
         return this.maximumBytesBilled;
@@ -151,7 +151,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="parameterMode", required=true)
-      private final String parameterMode;
+    private String parameterMode;
 
     public String parameterMode() {
         return this.parameterMode;
@@ -162,7 +162,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="priority", required=true)
-      private final String priority;
+    private String priority;
 
     public String priority() {
         return this.priority;
@@ -173,7 +173,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="query", required=true)
-      private final String query;
+    private String query;
 
     public String query() {
         return this.query;
@@ -184,7 +184,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="queryParameters", required=true)
-      private final List<QueryParameterResponse> queryParameters;
+    private List<QueryParameterResponse> queryParameters;
 
     public List<QueryParameterResponse> queryParameters() {
         return this.queryParameters;
@@ -195,7 +195,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="rangePartitioning", required=true)
-      private final RangePartitioningResponse rangePartitioning;
+    private RangePartitioningResponse rangePartitioning;
 
     public RangePartitioningResponse rangePartitioning() {
         return this.rangePartitioning;
@@ -206,7 +206,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="schemaUpdateOptions", required=true)
-      private final List<String> schemaUpdateOptions;
+    private List<String> schemaUpdateOptions;
 
     public List<String> schemaUpdateOptions() {
         return this.schemaUpdateOptions;
@@ -217,7 +217,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tableDefinitions", required=true)
-      private final Map<String,String> tableDefinitions;
+    private Map<String,String> tableDefinitions;
 
     public Map<String,String> tableDefinitions() {
         return this.tableDefinitions;
@@ -228,7 +228,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="timePartitioning", required=true)
-      private final TimePartitioningResponse timePartitioning;
+    private TimePartitioningResponse timePartitioning;
 
     public TimePartitioningResponse timePartitioning() {
         return this.timePartitioning;
@@ -239,7 +239,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="useLegacySql", required=true)
-      private final Boolean useLegacySql;
+    private Boolean useLegacySql;
 
     public Boolean useLegacySql() {
         return this.useLegacySql;
@@ -250,7 +250,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="useQueryCache", required=true)
-      private final Boolean useQueryCache;
+    private Boolean useQueryCache;
 
     public Boolean useQueryCache() {
         return this.useQueryCache;
@@ -261,7 +261,7 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="userDefinedFunctionResources", required=true)
-      private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
+    private List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
     public List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources() {
         return this.userDefinedFunctionResources;
@@ -272,256 +272,215 @@ public final class JobConfigurationQueryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="writeDisposition", required=true)
-      private final String writeDisposition;
+    private String writeDisposition;
 
     public String writeDisposition() {
         return this.writeDisposition;
     }
 
-    public JobConfigurationQueryResponse(
-        Boolean allowLargeResults,
-        ClusteringResponse clustering,
-        List<ConnectionPropertyResponse> connectionProperties,
-        String createDisposition,
-        Boolean createSession,
-        DatasetReferenceResponse defaultDataset,
-        EncryptionConfigurationResponse destinationEncryptionConfiguration,
-        TableReferenceResponse destinationTable,
-        Boolean flattenResults,
-        Integer maximumBillingTier,
-        String maximumBytesBilled,
-        String parameterMode,
-        String priority,
-        String query,
-        List<QueryParameterResponse> queryParameters,
-        RangePartitioningResponse rangePartitioning,
-        List<String> schemaUpdateOptions,
-        Map<String,String> tableDefinitions,
-        TimePartitioningResponse timePartitioning,
-        Boolean useLegacySql,
-        Boolean useQueryCache,
-        List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources,
-        String writeDisposition) {
-        this.allowLargeResults = Objects.requireNonNull(allowLargeResults, "expected parameter 'allowLargeResults' to be non-null");
-        this.clustering = Objects.requireNonNull(clustering, "expected parameter 'clustering' to be non-null");
-        this.connectionProperties = Objects.requireNonNull(connectionProperties, "expected parameter 'connectionProperties' to be non-null");
-        this.createDisposition = Objects.requireNonNull(createDisposition, "expected parameter 'createDisposition' to be non-null");
-        this.createSession = Objects.requireNonNull(createSession, "expected parameter 'createSession' to be non-null");
-        this.defaultDataset = Objects.requireNonNull(defaultDataset, "expected parameter 'defaultDataset' to be non-null");
-        this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration, "expected parameter 'destinationEncryptionConfiguration' to be non-null");
-        this.destinationTable = Objects.requireNonNull(destinationTable, "expected parameter 'destinationTable' to be non-null");
-        this.flattenResults = Objects.requireNonNull(flattenResults, "expected parameter 'flattenResults' to be non-null");
-        this.maximumBillingTier = Objects.requireNonNull(maximumBillingTier, "expected parameter 'maximumBillingTier' to be non-null");
-        this.maximumBytesBilled = Objects.requireNonNull(maximumBytesBilled, "expected parameter 'maximumBytesBilled' to be non-null");
-        this.parameterMode = Objects.requireNonNull(parameterMode, "expected parameter 'parameterMode' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.queryParameters = Objects.requireNonNull(queryParameters, "expected parameter 'queryParameters' to be non-null");
-        this.rangePartitioning = Objects.requireNonNull(rangePartitioning, "expected parameter 'rangePartitioning' to be non-null");
-        this.schemaUpdateOptions = Objects.requireNonNull(schemaUpdateOptions, "expected parameter 'schemaUpdateOptions' to be non-null");
-        this.tableDefinitions = Objects.requireNonNull(tableDefinitions, "expected parameter 'tableDefinitions' to be non-null");
-        this.timePartitioning = Objects.requireNonNull(timePartitioning, "expected parameter 'timePartitioning' to be non-null");
-        this.useLegacySql = Objects.requireNonNull(useLegacySql, "expected parameter 'useLegacySql' to be non-null");
-        this.useQueryCache = Objects.requireNonNull(useQueryCache, "expected parameter 'useQueryCache' to be non-null");
-        this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources, "expected parameter 'userDefinedFunctionResources' to be non-null");
-        this.writeDisposition = Objects.requireNonNull(writeDisposition, "expected parameter 'writeDisposition' to be non-null");
-    }
+    private JobConfigurationQueryResponse() {}
 
-    private JobConfigurationQueryResponse() {
-        this.allowLargeResults = null;
-        this.clustering = null;
-        this.connectionProperties = List.of();
-        this.createDisposition = null;
-        this.createSession = null;
-        this.defaultDataset = null;
-        this.destinationEncryptionConfiguration = null;
-        this.destinationTable = null;
-        this.flattenResults = null;
-        this.maximumBillingTier = null;
-        this.maximumBytesBilled = null;
-        this.parameterMode = null;
-        this.priority = null;
-        this.query = null;
-        this.queryParameters = List.of();
-        this.rangePartitioning = null;
-        this.schemaUpdateOptions = List.of();
-        this.tableDefinitions = Map.of();
-        this.timePartitioning = null;
-        this.useLegacySql = null;
-        this.useQueryCache = null;
-        this.userDefinedFunctionResources = List.of();
-        this.writeDisposition = null;
+    private JobConfigurationQueryResponse(JobConfigurationQueryResponse $) {
+        this.allowLargeResults = $.allowLargeResults;
+        this.clustering = $.clustering;
+        this.connectionProperties = $.connectionProperties;
+        this.createDisposition = $.createDisposition;
+        this.createSession = $.createSession;
+        this.defaultDataset = $.defaultDataset;
+        this.destinationEncryptionConfiguration = $.destinationEncryptionConfiguration;
+        this.destinationTable = $.destinationTable;
+        this.flattenResults = $.flattenResults;
+        this.maximumBillingTier = $.maximumBillingTier;
+        this.maximumBytesBilled = $.maximumBytesBilled;
+        this.parameterMode = $.parameterMode;
+        this.priority = $.priority;
+        this.query = $.query;
+        this.queryParameters = $.queryParameters;
+        this.rangePartitioning = $.rangePartitioning;
+        this.schemaUpdateOptions = $.schemaUpdateOptions;
+        this.tableDefinitions = $.tableDefinitions;
+        this.timePartitioning = $.timePartitioning;
+        this.useLegacySql = $.useLegacySql;
+        this.useQueryCache = $.useQueryCache;
+        this.userDefinedFunctionResources = $.userDefinedFunctionResources;
+        this.writeDisposition = $.writeDisposition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConfigurationQueryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowLargeResults;
-        private ClusteringResponse clustering;
-        private List<ConnectionPropertyResponse> connectionProperties;
-        private String createDisposition;
-        private Boolean createSession;
-        private DatasetReferenceResponse defaultDataset;
-        private EncryptionConfigurationResponse destinationEncryptionConfiguration;
-        private TableReferenceResponse destinationTable;
-        private Boolean flattenResults;
-        private Integer maximumBillingTier;
-        private String maximumBytesBilled;
-        private String parameterMode;
-        private String priority;
-        private String query;
-        private List<QueryParameterResponse> queryParameters;
-        private RangePartitioningResponse rangePartitioning;
-        private List<String> schemaUpdateOptions;
-        private Map<String,String> tableDefinitions;
-        private TimePartitioningResponse timePartitioning;
-        private Boolean useLegacySql;
-        private Boolean useQueryCache;
-        private List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
-        private String writeDisposition;
+        private JobConfigurationQueryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConfigurationQueryResponse();
         }
 
         public Builder(JobConfigurationQueryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowLargeResults = defaults.allowLargeResults;
-    	      this.clustering = defaults.clustering;
-    	      this.connectionProperties = defaults.connectionProperties;
-    	      this.createDisposition = defaults.createDisposition;
-    	      this.createSession = defaults.createSession;
-    	      this.defaultDataset = defaults.defaultDataset;
-    	      this.destinationEncryptionConfiguration = defaults.destinationEncryptionConfiguration;
-    	      this.destinationTable = defaults.destinationTable;
-    	      this.flattenResults = defaults.flattenResults;
-    	      this.maximumBillingTier = defaults.maximumBillingTier;
-    	      this.maximumBytesBilled = defaults.maximumBytesBilled;
-    	      this.parameterMode = defaults.parameterMode;
-    	      this.priority = defaults.priority;
-    	      this.query = defaults.query;
-    	      this.queryParameters = defaults.queryParameters;
-    	      this.rangePartitioning = defaults.rangePartitioning;
-    	      this.schemaUpdateOptions = defaults.schemaUpdateOptions;
-    	      this.tableDefinitions = defaults.tableDefinitions;
-    	      this.timePartitioning = defaults.timePartitioning;
-    	      this.useLegacySql = defaults.useLegacySql;
-    	      this.useQueryCache = defaults.useQueryCache;
-    	      this.userDefinedFunctionResources = defaults.userDefinedFunctionResources;
-    	      this.writeDisposition = defaults.writeDisposition;
+            $ = new JobConfigurationQueryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowLargeResults(Boolean allowLargeResults) {
-            this.allowLargeResults = Objects.requireNonNull(allowLargeResults);
+            $.allowLargeResults = allowLargeResults;
             return this;
         }
+
         public Builder clustering(ClusteringResponse clustering) {
-            this.clustering = Objects.requireNonNull(clustering);
+            $.clustering = clustering;
             return this;
         }
+
         public Builder connectionProperties(List<ConnectionPropertyResponse> connectionProperties) {
-            this.connectionProperties = Objects.requireNonNull(connectionProperties);
+            $.connectionProperties = connectionProperties;
             return this;
         }
+
         public Builder connectionProperties(ConnectionPropertyResponse... connectionProperties) {
             return connectionProperties(List.of(connectionProperties));
         }
+
         public Builder createDisposition(String createDisposition) {
-            this.createDisposition = Objects.requireNonNull(createDisposition);
+            $.createDisposition = createDisposition;
             return this;
         }
+
         public Builder createSession(Boolean createSession) {
-            this.createSession = Objects.requireNonNull(createSession);
+            $.createSession = createSession;
             return this;
         }
+
         public Builder defaultDataset(DatasetReferenceResponse defaultDataset) {
-            this.defaultDataset = Objects.requireNonNull(defaultDataset);
+            $.defaultDataset = defaultDataset;
             return this;
         }
+
         public Builder destinationEncryptionConfiguration(EncryptionConfigurationResponse destinationEncryptionConfiguration) {
-            this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration);
+            $.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
+
         public Builder destinationTable(TableReferenceResponse destinationTable) {
-            this.destinationTable = Objects.requireNonNull(destinationTable);
+            $.destinationTable = destinationTable;
             return this;
         }
+
         public Builder flattenResults(Boolean flattenResults) {
-            this.flattenResults = Objects.requireNonNull(flattenResults);
+            $.flattenResults = flattenResults;
             return this;
         }
+
         public Builder maximumBillingTier(Integer maximumBillingTier) {
-            this.maximumBillingTier = Objects.requireNonNull(maximumBillingTier);
+            $.maximumBillingTier = maximumBillingTier;
             return this;
         }
+
         public Builder maximumBytesBilled(String maximumBytesBilled) {
-            this.maximumBytesBilled = Objects.requireNonNull(maximumBytesBilled);
+            $.maximumBytesBilled = maximumBytesBilled;
             return this;
         }
+
         public Builder parameterMode(String parameterMode) {
-            this.parameterMode = Objects.requireNonNull(parameterMode);
+            $.parameterMode = parameterMode;
             return this;
         }
+
         public Builder priority(String priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder queryParameters(List<QueryParameterResponse> queryParameters) {
-            this.queryParameters = Objects.requireNonNull(queryParameters);
+            $.queryParameters = queryParameters;
             return this;
         }
+
         public Builder queryParameters(QueryParameterResponse... queryParameters) {
             return queryParameters(List.of(queryParameters));
         }
+
         public Builder rangePartitioning(RangePartitioningResponse rangePartitioning) {
-            this.rangePartitioning = Objects.requireNonNull(rangePartitioning);
+            $.rangePartitioning = rangePartitioning;
             return this;
         }
+
         public Builder schemaUpdateOptions(List<String> schemaUpdateOptions) {
-            this.schemaUpdateOptions = Objects.requireNonNull(schemaUpdateOptions);
+            $.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
+
         public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
             return schemaUpdateOptions(List.of(schemaUpdateOptions));
         }
+
         public Builder tableDefinitions(Map<String,String> tableDefinitions) {
-            this.tableDefinitions = Objects.requireNonNull(tableDefinitions);
+            $.tableDefinitions = tableDefinitions;
             return this;
         }
+
         public Builder timePartitioning(TimePartitioningResponse timePartitioning) {
-            this.timePartitioning = Objects.requireNonNull(timePartitioning);
+            $.timePartitioning = timePartitioning;
             return this;
         }
+
         public Builder useLegacySql(Boolean useLegacySql) {
-            this.useLegacySql = Objects.requireNonNull(useLegacySql);
+            $.useLegacySql = useLegacySql;
             return this;
         }
+
         public Builder useQueryCache(Boolean useQueryCache) {
-            this.useQueryCache = Objects.requireNonNull(useQueryCache);
+            $.useQueryCache = useQueryCache;
             return this;
         }
+
         public Builder userDefinedFunctionResources(List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
-            this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
+            $.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
+
         public Builder userDefinedFunctionResources(UserDefinedFunctionResourceResponse... userDefinedFunctionResources) {
             return userDefinedFunctionResources(List.of(userDefinedFunctionResources));
         }
+
         public Builder writeDisposition(String writeDisposition) {
-            this.writeDisposition = Objects.requireNonNull(writeDisposition);
+            $.writeDisposition = writeDisposition;
             return this;
-        }        public JobConfigurationQueryResponse build() {
-            return new JobConfigurationQueryResponse(allowLargeResults, clustering, connectionProperties, createDisposition, createSession, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, queryParameters, rangePartitioning, schemaUpdateOptions, tableDefinitions, timePartitioning, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
+        }
+
+        public JobConfigurationQueryResponse build() {
+            $.allowLargeResults = Objects.requireNonNull($.allowLargeResults, "expected parameter 'allowLargeResults' to be non-null");
+            $.clustering = Objects.requireNonNull($.clustering, "expected parameter 'clustering' to be non-null");
+            $.connectionProperties = Objects.requireNonNull($.connectionProperties, "expected parameter 'connectionProperties' to be non-null");
+            $.createDisposition = Objects.requireNonNull($.createDisposition, "expected parameter 'createDisposition' to be non-null");
+            $.createSession = Objects.requireNonNull($.createSession, "expected parameter 'createSession' to be non-null");
+            $.defaultDataset = Objects.requireNonNull($.defaultDataset, "expected parameter 'defaultDataset' to be non-null");
+            $.destinationEncryptionConfiguration = Objects.requireNonNull($.destinationEncryptionConfiguration, "expected parameter 'destinationEncryptionConfiguration' to be non-null");
+            $.destinationTable = Objects.requireNonNull($.destinationTable, "expected parameter 'destinationTable' to be non-null");
+            $.flattenResults = Objects.requireNonNull($.flattenResults, "expected parameter 'flattenResults' to be non-null");
+            $.maximumBillingTier = Objects.requireNonNull($.maximumBillingTier, "expected parameter 'maximumBillingTier' to be non-null");
+            $.maximumBytesBilled = Objects.requireNonNull($.maximumBytesBilled, "expected parameter 'maximumBytesBilled' to be non-null");
+            $.parameterMode = Objects.requireNonNull($.parameterMode, "expected parameter 'parameterMode' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.queryParameters = Objects.requireNonNull($.queryParameters, "expected parameter 'queryParameters' to be non-null");
+            $.rangePartitioning = Objects.requireNonNull($.rangePartitioning, "expected parameter 'rangePartitioning' to be non-null");
+            $.schemaUpdateOptions = Objects.requireNonNull($.schemaUpdateOptions, "expected parameter 'schemaUpdateOptions' to be non-null");
+            $.tableDefinitions = Objects.requireNonNull($.tableDefinitions, "expected parameter 'tableDefinitions' to be non-null");
+            $.timePartitioning = Objects.requireNonNull($.timePartitioning, "expected parameter 'timePartitioning' to be non-null");
+            $.useLegacySql = Objects.requireNonNull($.useLegacySql, "expected parameter 'useLegacySql' to be non-null");
+            $.useQueryCache = Objects.requireNonNull($.useQueryCache, "expected parameter 'useQueryCache' to be non-null");
+            $.userDefinedFunctionResources = Objects.requireNonNull($.userDefinedFunctionResources, "expected parameter 'userDefinedFunctionResources' to be non-null");
+            $.writeDisposition = Objects.requireNonNull($.writeDisposition, "expected parameter 'writeDisposition' to be non-null");
+            return $;
         }
     }
+
 }

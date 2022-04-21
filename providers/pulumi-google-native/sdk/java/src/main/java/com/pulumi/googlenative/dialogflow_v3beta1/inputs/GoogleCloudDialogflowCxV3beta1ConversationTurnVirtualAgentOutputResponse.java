@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @Import(name="currentPage", required=true)
-      private final GoogleCloudDialogflowCxV3beta1PageResponse currentPage;
+    private GoogleCloudDialogflowCxV3beta1PageResponse currentPage;
 
     public GoogleCloudDialogflowCxV3beta1PageResponse currentPage() {
         return this.currentPage;
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @Import(name="diagnosticInfo", required=true)
-      private final Map<String,String> diagnosticInfo;
+    private Map<String,String> diagnosticInfo;
 
     public Map<String,String> diagnosticInfo() {
         return this.diagnosticInfo;
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @Import(name="differences", required=true)
-      private final List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences;
+    private List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences;
 
     public List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences() {
         return this.differences;
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @Import(name="sessionParameters", required=true)
-      private final Map<String,String> sessionParameters;
+    private Map<String,String> sessionParameters;
 
     public Map<String,String> sessionParameters() {
         return this.sessionParameters;
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @Import(name="status", required=true)
-      private final GoogleRpcStatusResponse status;
+    private GoogleRpcStatusResponse status;
 
     public GoogleRpcStatusResponse status() {
         return this.status;
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @Import(name="textResponses", required=true)
-      private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses;
+    private List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses;
 
     public List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses() {
         return this.textResponses;
@@ -94,106 +94,95 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @Import(name="triggeredIntent", required=true)
-      private final GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent;
+    private GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent;
 
     public GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent() {
         return this.triggeredIntent;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse(
-        GoogleCloudDialogflowCxV3beta1PageResponse currentPage,
-        Map<String,String> diagnosticInfo,
-        List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences,
-        Map<String,String> sessionParameters,
-        GoogleRpcStatusResponse status,
-        List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses,
-        GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent) {
-        this.currentPage = Objects.requireNonNull(currentPage, "expected parameter 'currentPage' to be non-null");
-        this.diagnosticInfo = Objects.requireNonNull(diagnosticInfo, "expected parameter 'diagnosticInfo' to be non-null");
-        this.differences = Objects.requireNonNull(differences, "expected parameter 'differences' to be non-null");
-        this.sessionParameters = Objects.requireNonNull(sessionParameters, "expected parameter 'sessionParameters' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.textResponses = Objects.requireNonNull(textResponses, "expected parameter 'textResponses' to be non-null");
-        this.triggeredIntent = Objects.requireNonNull(triggeredIntent, "expected parameter 'triggeredIntent' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse() {
-        this.currentPage = null;
-        this.diagnosticInfo = Map.of();
-        this.differences = List.of();
-        this.sessionParameters = Map.of();
-        this.status = null;
-        this.textResponses = List.of();
-        this.triggeredIntent = null;
+    private GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse(GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse $) {
+        this.currentPage = $.currentPage;
+        this.diagnosticInfo = $.diagnosticInfo;
+        this.differences = $.differences;
+        this.sessionParameters = $.sessionParameters;
+        this.status = $.status;
+        this.textResponses = $.textResponses;
+        this.triggeredIntent = $.triggeredIntent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowCxV3beta1PageResponse currentPage;
-        private Map<String,String> diagnosticInfo;
-        private List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences;
-        private Map<String,String> sessionParameters;
-        private GoogleRpcStatusResponse status;
-        private List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses;
-        private GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent;
+        private GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentPage = defaults.currentPage;
-    	      this.diagnosticInfo = defaults.diagnosticInfo;
-    	      this.differences = defaults.differences;
-    	      this.sessionParameters = defaults.sessionParameters;
-    	      this.status = defaults.status;
-    	      this.textResponses = defaults.textResponses;
-    	      this.triggeredIntent = defaults.triggeredIntent;
+            $ = new GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentPage(GoogleCloudDialogflowCxV3beta1PageResponse currentPage) {
-            this.currentPage = Objects.requireNonNull(currentPage);
+            $.currentPage = currentPage;
             return this;
         }
+
         public Builder diagnosticInfo(Map<String,String> diagnosticInfo) {
-            this.diagnosticInfo = Objects.requireNonNull(diagnosticInfo);
+            $.diagnosticInfo = diagnosticInfo;
             return this;
         }
+
         public Builder differences(List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences) {
-            this.differences = Objects.requireNonNull(differences);
+            $.differences = differences;
             return this;
         }
+
         public Builder differences(GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse... differences) {
             return differences(List.of(differences));
         }
+
         public Builder sessionParameters(Map<String,String> sessionParameters) {
-            this.sessionParameters = Objects.requireNonNull(sessionParameters);
+            $.sessionParameters = sessionParameters;
             return this;
         }
+
         public Builder status(GoogleRpcStatusResponse status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder textResponses(List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses) {
-            this.textResponses = Objects.requireNonNull(textResponses);
+            $.textResponses = textResponses;
             return this;
         }
+
         public Builder textResponses(GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse... textResponses) {
             return textResponses(List.of(textResponses));
         }
+
         public Builder triggeredIntent(GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent) {
-            this.triggeredIntent = Objects.requireNonNull(triggeredIntent);
+            $.triggeredIntent = triggeredIntent;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse(currentPage, diagnosticInfo, differences, sessionParameters, status, textResponses, triggeredIntent);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse build() {
+            $.currentPage = Objects.requireNonNull($.currentPage, "expected parameter 'currentPage' to be non-null");
+            $.diagnosticInfo = Objects.requireNonNull($.diagnosticInfo, "expected parameter 'diagnosticInfo' to be non-null");
+            $.differences = Objects.requireNonNull($.differences, "expected parameter 'differences' to be non-null");
+            $.sessionParameters = Objects.requireNonNull($.sessionParameters, "expected parameter 'sessionParameters' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.textResponses = Objects.requireNonNull($.textResponses, "expected parameter 'textResponses' to be non-null");
+            $.triggeredIntent = Objects.requireNonNull($.triggeredIntent, "expected parameter 'triggeredIntent' to be non-null");
+            return $;
         }
     }
+
 }

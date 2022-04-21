@@ -23,10 +23,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addressLine1")
-      private final @Nullable String addressLine1;
+    private @Nullable String addressLine1;
 
     public Optional<String> addressLine1() {
-        return this.addressLine1 == null ? Optional.empty() : Optional.ofNullable(this.addressLine1);
+        return Optional.ofNullable(this.addressLine1);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addressLine2")
-      private final @Nullable String addressLine2;
+    private @Nullable String addressLine2;
 
     public Optional<String> addressLine2() {
-        return this.addressLine2 == null ? Optional.empty() : Optional.ofNullable(this.addressLine2);
+        return Optional.ofNullable(this.addressLine2);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addressLine3")
-      private final @Nullable String addressLine3;
+    private @Nullable String addressLine3;
 
     public Optional<String> addressLine3() {
-        return this.addressLine3 == null ? Optional.empty() : Optional.ofNullable(this.addressLine3);
+        return Optional.ofNullable(this.addressLine3);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="city")
-      private final @Nullable String city;
+    private @Nullable String city;
 
     public Optional<String> city() {
-        return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
+        return Optional.ofNullable(this.city);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="country", required=true)
-      private final String country;
+    private String country;
 
     public String country() {
         return this.country;
@@ -78,10 +78,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="postalCode")
-      private final @Nullable String postalCode;
+    private @Nullable String postalCode;
 
     public Optional<String> postalCode() {
-        return this.postalCode == null ? Optional.empty() : Optional.ofNullable(this.postalCode);
+        return Optional.ofNullable(this.postalCode);
     }
 
     /**
@@ -89,100 +89,81 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public AddressResponse(
-        @Nullable String addressLine1,
-        @Nullable String addressLine2,
-        @Nullable String addressLine3,
-        @Nullable String city,
-        String country,
-        @Nullable String postalCode,
-        @Nullable String state) {
-        this.addressLine1 = addressLine1;
-        this.addressLine2 = addressLine2;
-        this.addressLine3 = addressLine3;
-        this.city = city;
-        this.country = Objects.requireNonNull(country, "expected parameter 'country' to be non-null");
-        this.postalCode = postalCode;
-        this.state = state;
-    }
+    private AddressResponse() {}
 
-    private AddressResponse() {
-        this.addressLine1 = null;
-        this.addressLine2 = null;
-        this.addressLine3 = null;
-        this.city = null;
-        this.country = null;
-        this.postalCode = null;
-        this.state = null;
+    private AddressResponse(AddressResponse $) {
+        this.addressLine1 = $.addressLine1;
+        this.addressLine2 = $.addressLine2;
+        this.addressLine3 = $.addressLine3;
+        this.city = $.city;
+        this.country = $.country;
+        this.postalCode = $.postalCode;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addressLine1;
-        private @Nullable String addressLine2;
-        private @Nullable String addressLine3;
-        private @Nullable String city;
-        private String country;
-        private @Nullable String postalCode;
-        private @Nullable String state;
+        private AddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressResponse();
         }
 
         public Builder(AddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressLine1 = defaults.addressLine1;
-    	      this.addressLine2 = defaults.addressLine2;
-    	      this.addressLine3 = defaults.addressLine3;
-    	      this.city = defaults.city;
-    	      this.country = defaults.country;
-    	      this.postalCode = defaults.postalCode;
-    	      this.state = defaults.state;
+            $ = new AddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressLine1(@Nullable String addressLine1) {
-            this.addressLine1 = addressLine1;
+            $.addressLine1 = addressLine1;
             return this;
         }
+
         public Builder addressLine2(@Nullable String addressLine2) {
-            this.addressLine2 = addressLine2;
+            $.addressLine2 = addressLine2;
             return this;
         }
+
         public Builder addressLine3(@Nullable String addressLine3) {
-            this.addressLine3 = addressLine3;
+            $.addressLine3 = addressLine3;
             return this;
         }
+
         public Builder city(@Nullable String city) {
-            this.city = city;
+            $.city = city;
             return this;
         }
+
         public Builder country(String country) {
-            this.country = Objects.requireNonNull(country);
+            $.country = country;
             return this;
         }
+
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = postalCode;
+            $.postalCode = postalCode;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public AddressResponse build() {
-            return new AddressResponse(addressLine1, addressLine2, addressLine3, city, country, postalCode, state);
+        }
+
+        public AddressResponse build() {
+            $.country = Objects.requireNonNull($.country, "expected parameter 'country' to be non-null");
+            return $;
         }
     }
+
 }

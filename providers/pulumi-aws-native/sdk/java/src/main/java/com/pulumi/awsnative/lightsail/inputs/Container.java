@@ -26,10 +26,10 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable List<String> command;
+    private @Nullable List<String> command;
 
-    public List<String> command() {
-        return this.command == null ? List.of() : this.command;
+    public Optional<List<String>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="containerName")
-      private final @Nullable String containerName;
+    private @Nullable String containerName;
 
     public Optional<String> containerName() {
-        return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environment")
-      private final @Nullable List<ContainerEnvironmentVariable> environment;
+    private @Nullable List<ContainerEnvironmentVariable> environment;
 
-    public List<ContainerEnvironmentVariable> environment() {
-        return this.environment == null ? List.of() : this.environment;
+    public Optional<List<ContainerEnvironmentVariable>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable String image;
+    private @Nullable String image;
 
     public Optional<String> image() {
-        return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -70,91 +70,80 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ports")
-      private final @Nullable List<ContainerPortInfo> ports;
+    private @Nullable List<ContainerPortInfo> ports;
 
-    public List<ContainerPortInfo> ports() {
-        return this.ports == null ? List.of() : this.ports;
+    public Optional<List<ContainerPortInfo>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
-    public Container(
-        @Nullable List<String> command,
-        @Nullable String containerName,
-        @Nullable List<ContainerEnvironmentVariable> environment,
-        @Nullable String image,
-        @Nullable List<ContainerPortInfo> ports) {
-        this.command = command;
-        this.containerName = containerName;
-        this.environment = environment;
-        this.image = image;
-        this.ports = ports;
-    }
+    private Container() {}
 
-    private Container() {
-        this.command = List.of();
-        this.containerName = null;
-        this.environment = List.of();
-        this.image = null;
-        this.ports = List.of();
+    private Container(Container $) {
+        this.command = $.command;
+        this.containerName = $.containerName;
+        this.environment = $.environment;
+        this.image = $.image;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Container defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> command;
-        private @Nullable String containerName;
-        private @Nullable List<ContainerEnvironmentVariable> environment;
-        private @Nullable String image;
-        private @Nullable List<ContainerPortInfo> ports;
+        private Container $;
 
         public Builder() {
-    	      // Empty
+            $ = new Container();
         }
 
         public Builder(Container defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.containerName = defaults.containerName;
-    	      this.environment = defaults.environment;
-    	      this.image = defaults.image;
-    	      this.ports = defaults.ports;
+            $ = new Container(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
+
         public Builder environment(@Nullable List<ContainerEnvironmentVariable> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
+
         public Builder environment(ContainerEnvironmentVariable... environment) {
             return environment(List.of(environment));
         }
+
         public Builder image(@Nullable String image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
+
         public Builder ports(@Nullable List<ContainerPortInfo> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(ContainerPortInfo... ports) {
             return ports(List.of(ports));
-        }        public Container build() {
-            return new Container(command, containerName, environment, image, ports);
+        }
+
+        public Container build() {
+            return $;
         }
     }
+
 }

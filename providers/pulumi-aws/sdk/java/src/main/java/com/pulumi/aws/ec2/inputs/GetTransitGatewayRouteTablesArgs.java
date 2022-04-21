@@ -22,10 +22,10 @@ public final class GetTransitGatewayRouteTablesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetTransitGatewayRouteTablesFilter> filters;
+    private @Nullable List<GetTransitGatewayRouteTablesFilter> filters;
 
-    public List<GetTransitGatewayRouteTablesFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetTransitGatewayRouteTablesFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,58 +34,54 @@ public final class GetTransitGatewayRouteTablesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetTransitGatewayRouteTablesArgs(
-        @Nullable List<GetTransitGatewayRouteTablesFilter> filters,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.tags = tags;
-    }
+    private GetTransitGatewayRouteTablesArgs() {}
 
-    private GetTransitGatewayRouteTablesArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
+    private GetTransitGatewayRouteTablesArgs(GetTransitGatewayRouteTablesArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransitGatewayRouteTablesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetTransitGatewayRouteTablesFilter> filters;
-        private @Nullable Map<String,String> tags;
+        private GetTransitGatewayRouteTablesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransitGatewayRouteTablesArgs();
         }
 
         public Builder(GetTransitGatewayRouteTablesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
+            $ = new GetTransitGatewayRouteTablesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetTransitGatewayRouteTablesFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetTransitGatewayRouteTablesFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetTransitGatewayRouteTablesArgs build() {
-            return new GetTransitGatewayRouteTablesArgs(filters, tags);
+        }
+
+        public GetTransitGatewayRouteTablesArgs build() {
+            return $;
         }
     }
+
 }

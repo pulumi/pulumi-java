@@ -6,9 +6,9 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.enums.ImagePipelineSchedulePipelineExecutionStartCondition;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ImagePipelineScheduleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="pipelineExecutionStartCondition")
-      private final @Nullable Output<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition;
+    private @Nullable Output<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition;
 
-    public Output<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition() {
-        return this.pipelineExecutionStartCondition == null ? Codegen.empty() : this.pipelineExecutionStartCondition;
+    public Optional<Output<ImagePipelineSchedulePipelineExecutionStartCondition>> pipelineExecutionStartCondition() {
+        return Optional.ofNullable(this.pipelineExecutionStartCondition);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ImagePipelineScheduleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="scheduleExpression")
-      private final @Nullable Output<String> scheduleExpression;
+    private @Nullable Output<String> scheduleExpression;
 
-    public Output<String> scheduleExpression() {
-        return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
+    public Optional<Output<String>> scheduleExpression() {
+        return Optional.ofNullable(this.scheduleExpression);
     }
 
-    public ImagePipelineScheduleArgs(
-        @Nullable Output<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition,
-        @Nullable Output<String> scheduleExpression) {
-        this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
-        this.scheduleExpression = scheduleExpression;
-    }
+    private ImagePipelineScheduleArgs() {}
 
-    private ImagePipelineScheduleArgs() {
-        this.pipelineExecutionStartCondition = Codegen.empty();
-        this.scheduleExpression = Codegen.empty();
+    private ImagePipelineScheduleArgs(ImagePipelineScheduleArgs $) {
+        this.pipelineExecutionStartCondition = $.pipelineExecutionStartCondition;
+        this.scheduleExpression = $.scheduleExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImagePipelineScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition;
-        private @Nullable Output<String> scheduleExpression;
+        private ImagePipelineScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImagePipelineScheduleArgs();
         }
 
         public Builder(ImagePipelineScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pipelineExecutionStartCondition = defaults.pipelineExecutionStartCondition;
-    	      this.scheduleExpression = defaults.scheduleExpression;
+            $ = new ImagePipelineScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pipelineExecutionStartCondition(@Nullable Output<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition) {
-            this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
+            $.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
-        public Builder pipelineExecutionStartCondition(@Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition) {
-            this.pipelineExecutionStartCondition = Codegen.ofNullable(pipelineExecutionStartCondition);
-            return this;
+
+        public Builder pipelineExecutionStartCondition(ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition) {
+            return pipelineExecutionStartCondition(Output.of(pipelineExecutionStartCondition));
         }
+
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
-            this.scheduleExpression = scheduleExpression;
+            $.scheduleExpression = scheduleExpression;
             return this;
         }
-        public Builder scheduleExpression(@Nullable String scheduleExpression) {
-            this.scheduleExpression = Codegen.ofNullable(scheduleExpression);
-            return this;
-        }        public ImagePipelineScheduleArgs build() {
-            return new ImagePipelineScheduleArgs(pipelineExecutionStartCondition, scheduleExpression);
+
+        public Builder scheduleExpression(String scheduleExpression) {
+            return scheduleExpression(Output.of(scheduleExpression));
+        }
+
+        public ImagePipelineScheduleArgs build() {
+            return $;
         }
     }
+
 }

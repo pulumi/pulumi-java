@@ -8,10 +8,10 @@ import com.pulumi.azurenative.botservice.inputs.EnterpriseChannelNodeArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class EnterpriseChannelPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="nodes", required=true)
-      private final Output<List<EnterpriseChannelNodeArgs>> nodes;
+    private Output<List<EnterpriseChannelNodeArgs>> nodes;
 
     public Output<List<EnterpriseChannelNodeArgs>> nodes() {
         return this.nodes;
@@ -39,66 +39,63 @@ public final class EnterpriseChannelPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,EnterpriseChannelState>> state;
+    private @Nullable Output<Either<String,EnterpriseChannelState>> state;
 
-    public Output<Either<String,EnterpriseChannelState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,EnterpriseChannelState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public EnterpriseChannelPropertiesArgs(
-        Output<List<EnterpriseChannelNodeArgs>> nodes,
-        @Nullable Output<Either<String,EnterpriseChannelState>> state) {
-        this.nodes = Objects.requireNonNull(nodes, "expected parameter 'nodes' to be non-null");
-        this.state = state;
-    }
+    private EnterpriseChannelPropertiesArgs() {}
 
-    private EnterpriseChannelPropertiesArgs() {
-        this.nodes = Codegen.empty();
-        this.state = Codegen.empty();
+    private EnterpriseChannelPropertiesArgs(EnterpriseChannelPropertiesArgs $) {
+        this.nodes = $.nodes;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterpriseChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<EnterpriseChannelNodeArgs>> nodes;
-        private @Nullable Output<Either<String,EnterpriseChannelState>> state;
+        private EnterpriseChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterpriseChannelPropertiesArgs();
         }
 
         public Builder(EnterpriseChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodes = defaults.nodes;
-    	      this.state = defaults.state;
+            $ = new EnterpriseChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodes(Output<List<EnterpriseChannelNodeArgs>> nodes) {
-            this.nodes = Objects.requireNonNull(nodes);
+            $.nodes = nodes;
             return this;
         }
+
         public Builder nodes(List<EnterpriseChannelNodeArgs> nodes) {
-            this.nodes = Output.of(Objects.requireNonNull(nodes));
-            return this;
+            return nodes(Output.of(nodes));
         }
+
         public Builder nodes(EnterpriseChannelNodeArgs... nodes) {
             return nodes(List.of(nodes));
         }
+
         public Builder state(@Nullable Output<Either<String,EnterpriseChannelState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,EnterpriseChannelState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public EnterpriseChannelPropertiesArgs build() {
-            return new EnterpriseChannelPropertiesArgs(nodes, state);
+
+        public Builder state(Either<String,EnterpriseChannelState> state) {
+            return state(Output.of(state));
+        }
+
+        public EnterpriseChannelPropertiesArgs build() {
+            $.nodes = Objects.requireNonNull($.nodes, "expected parameter 'nodes' to be non-null");
+            return $;
         }
     }
+
 }

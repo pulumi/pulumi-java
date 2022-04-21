@@ -24,49 +24,49 @@ public final class ContentKeyPolicyUnknownRestrictionArgs extends com.pulumi.res
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public ContentKeyPolicyUnknownRestrictionArgs(Output<String> odataType) {
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private ContentKeyPolicyUnknownRestrictionArgs() {}
 
-    private ContentKeyPolicyUnknownRestrictionArgs() {
-        this.odataType = Codegen.empty();
+    private ContentKeyPolicyUnknownRestrictionArgs(ContentKeyPolicyUnknownRestrictionArgs $) {
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyUnknownRestrictionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> odataType;
+        private ContentKeyPolicyUnknownRestrictionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyUnknownRestrictionArgs();
         }
 
         public Builder(ContentKeyPolicyUnknownRestrictionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
+            $ = new ContentKeyPolicyUnknownRestrictionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public ContentKeyPolicyUnknownRestrictionArgs build() {
-            return new ContentKeyPolicyUnknownRestrictionArgs(odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public ContentKeyPolicyUnknownRestrictionArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

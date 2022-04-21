@@ -22,7 +22,7 @@ public final class CpuUtilizationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="aggregationWindowLength", required=true)
-      private final String aggregationWindowLength;
+    private String aggregationWindowLength;
 
     public String aggregationWindowLength() {
         return this.aggregationWindowLength;
@@ -33,55 +33,52 @@ public final class CpuUtilizationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="targetUtilization", required=true)
-      private final Double targetUtilization;
+    private Double targetUtilization;
 
     public Double targetUtilization() {
         return this.targetUtilization;
     }
 
-    public CpuUtilizationResponse(
-        String aggregationWindowLength,
-        Double targetUtilization) {
-        this.aggregationWindowLength = Objects.requireNonNull(aggregationWindowLength, "expected parameter 'aggregationWindowLength' to be non-null");
-        this.targetUtilization = Objects.requireNonNull(targetUtilization, "expected parameter 'targetUtilization' to be non-null");
-    }
+    private CpuUtilizationResponse() {}
 
-    private CpuUtilizationResponse() {
-        this.aggregationWindowLength = null;
-        this.targetUtilization = null;
+    private CpuUtilizationResponse(CpuUtilizationResponse $) {
+        this.aggregationWindowLength = $.aggregationWindowLength;
+        this.targetUtilization = $.targetUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CpuUtilizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aggregationWindowLength;
-        private Double targetUtilization;
+        private CpuUtilizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CpuUtilizationResponse();
         }
 
         public Builder(CpuUtilizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationWindowLength = defaults.aggregationWindowLength;
-    	      this.targetUtilization = defaults.targetUtilization;
+            $ = new CpuUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationWindowLength(String aggregationWindowLength) {
-            this.aggregationWindowLength = Objects.requireNonNull(aggregationWindowLength);
+            $.aggregationWindowLength = aggregationWindowLength;
             return this;
         }
+
         public Builder targetUtilization(Double targetUtilization) {
-            this.targetUtilization = Objects.requireNonNull(targetUtilization);
+            $.targetUtilization = targetUtilization;
             return this;
-        }        public CpuUtilizationResponse build() {
-            return new CpuUtilizationResponse(aggregationWindowLength, targetUtilization);
+        }
+
+        public CpuUtilizationResponse build() {
+            $.aggregationWindowLength = Objects.requireNonNull($.aggregationWindowLength, "expected parameter 'aggregationWindowLength' to be non-null");
+            $.targetUtilization = Objects.requireNonNull($.targetUtilization, "expected parameter 'targetUtilization' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WebhookNotificationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class WebhookNotificationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceUri")
-      private final @Nullable Output<String> serviceUri;
+    private @Nullable Output<String> serviceUri;
 
-    public Output<String> serviceUri() {
-        return this.serviceUri == null ? Codegen.empty() : this.serviceUri;
+    public Optional<Output<String>> serviceUri() {
+        return Optional.ofNullable(this.serviceUri);
     }
 
-    public WebhookNotificationArgs(
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<String> serviceUri) {
-        this.properties = properties;
-        this.serviceUri = serviceUri;
-    }
+    private WebhookNotificationArgs() {}
 
-    private WebhookNotificationArgs() {
-        this.properties = Codegen.empty();
-        this.serviceUri = Codegen.empty();
+    private WebhookNotificationArgs(WebhookNotificationArgs $) {
+        this.properties = $.properties;
+        this.serviceUri = $.serviceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookNotificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<String> serviceUri;
+        private WebhookNotificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookNotificationArgs();
         }
 
         public Builder(WebhookNotificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.serviceUri = defaults.serviceUri;
+            $ = new WebhookNotificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder serviceUri(@Nullable Output<String> serviceUri) {
-            this.serviceUri = serviceUri;
+            $.serviceUri = serviceUri;
             return this;
         }
-        public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = Codegen.ofNullable(serviceUri);
-            return this;
-        }        public WebhookNotificationArgs build() {
-            return new WebhookNotificationArgs(properties, serviceUri);
+
+        public Builder serviceUri(String serviceUri) {
+            return serviceUri(Output.of(serviceUri));
+        }
+
+        public WebhookNotificationArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class TarGZipReadSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="preserveCompressionFileNameAsFolder")
-      private final @Nullable Object preserveCompressionFileNameAsFolder;
+    private @Nullable Object preserveCompressionFileNameAsFolder;
 
     public Optional<Object> preserveCompressionFileNameAsFolder() {
-        return this.preserveCompressionFileNameAsFolder == null ? Optional.empty() : Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
+        return Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
 
     /**
@@ -37,55 +37,51 @@ public final class TarGZipReadSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TarGZipReadSettingsResponse(
-        @Nullable Object preserveCompressionFileNameAsFolder,
-        String type) {
-        this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private TarGZipReadSettingsResponse() {}
 
-    private TarGZipReadSettingsResponse() {
-        this.preserveCompressionFileNameAsFolder = null;
-        this.type = null;
+    private TarGZipReadSettingsResponse(TarGZipReadSettingsResponse $) {
+        this.preserveCompressionFileNameAsFolder = $.preserveCompressionFileNameAsFolder;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TarGZipReadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object preserveCompressionFileNameAsFolder;
-        private String type;
+        private TarGZipReadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TarGZipReadSettingsResponse();
         }
 
         public Builder(TarGZipReadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preserveCompressionFileNameAsFolder = defaults.preserveCompressionFileNameAsFolder;
-    	      this.type = defaults.type;
+            $ = new TarGZipReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder preserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
-            this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
+            $.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TarGZipReadSettingsResponse build() {
-            return new TarGZipReadSettingsResponse(preserveCompressionFileNameAsFolder, type);
+        }
+
+        public TarGZipReadSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

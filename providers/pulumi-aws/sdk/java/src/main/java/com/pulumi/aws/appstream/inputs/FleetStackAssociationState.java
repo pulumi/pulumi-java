@@ -5,9 +5,9 @@ package com.pulumi.aws.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FleetStackAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="fleetName")
-      private final @Nullable Output<String> fleetName;
+    private @Nullable Output<String> fleetName;
 
-    public Output<String> fleetName() {
-        return this.fleetName == null ? Codegen.empty() : this.fleetName;
+    public Optional<Output<String>> fleetName() {
+        return Optional.ofNullable(this.fleetName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class FleetStackAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="stackName")
-      private final @Nullable Output<String> stackName;
+    private @Nullable Output<String> stackName;
 
-    public Output<String> stackName() {
-        return this.stackName == null ? Codegen.empty() : this.stackName;
+    public Optional<Output<String>> stackName() {
+        return Optional.ofNullable(this.stackName);
     }
 
-    public FleetStackAssociationState(
-        @Nullable Output<String> fleetName,
-        @Nullable Output<String> stackName) {
-        this.fleetName = fleetName;
-        this.stackName = stackName;
-    }
+    private FleetStackAssociationState() {}
 
-    private FleetStackAssociationState() {
-        this.fleetName = Codegen.empty();
-        this.stackName = Codegen.empty();
+    private FleetStackAssociationState(FleetStackAssociationState $) {
+        this.fleetName = $.fleetName;
+        this.stackName = $.stackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetStackAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fleetName;
-        private @Nullable Output<String> stackName;
+        private FleetStackAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetStackAssociationState();
         }
 
         public Builder(FleetStackAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fleetName = defaults.fleetName;
-    	      this.stackName = defaults.stackName;
+            $ = new FleetStackAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder fleetName(@Nullable Output<String> fleetName) {
-            this.fleetName = fleetName;
+            $.fleetName = fleetName;
             return this;
         }
-        public Builder fleetName(@Nullable String fleetName) {
-            this.fleetName = Codegen.ofNullable(fleetName);
-            return this;
+
+        public Builder fleetName(String fleetName) {
+            return fleetName(Output.of(fleetName));
         }
+
         public Builder stackName(@Nullable Output<String> stackName) {
-            this.stackName = stackName;
+            $.stackName = stackName;
             return this;
         }
-        public Builder stackName(@Nullable String stackName) {
-            this.stackName = Codegen.ofNullable(stackName);
-            return this;
-        }        public FleetStackAssociationState build() {
-            return new FleetStackAssociationState(fleetName, stackName);
+
+        public Builder stackName(String stackName) {
+            return stackName(Output.of(stackName));
+        }
+
+        public FleetStackAssociationState build() {
+            return $;
         }
     }
+
 }

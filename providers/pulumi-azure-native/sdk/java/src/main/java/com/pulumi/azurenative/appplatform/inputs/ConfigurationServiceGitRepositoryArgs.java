@@ -5,11 +5,11 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="hostKey")
-      private final @Nullable Output<String> hostKey;
+    private @Nullable Output<String> hostKey;
 
-    public Output<String> hostKey() {
-        return this.hostKey == null ? Codegen.empty() : this.hostKey;
+    public Optional<Output<String>> hostKey() {
+        return Optional.ofNullable(this.hostKey);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="hostKeyAlgorithm")
-      private final @Nullable Output<String> hostKeyAlgorithm;
+    private @Nullable Output<String> hostKeyAlgorithm;
 
-    public Output<String> hostKeyAlgorithm() {
-        return this.hostKeyAlgorithm == null ? Codegen.empty() : this.hostKeyAlgorithm;
+    public Optional<Output<String>> hostKeyAlgorithm() {
+        return Optional.ofNullable(this.hostKeyAlgorithm);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="label", required=true)
-      private final Output<String> label;
+    private Output<String> label;
 
     public Output<String> label() {
         return this.label;
@@ -59,7 +59,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -70,10 +70,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="patterns", required=true)
-      private final Output<List<String>> patterns;
+    private Output<List<String>> patterns;
 
     public Output<List<String>> patterns() {
         return this.patterns;
@@ -92,10 +92,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="privateKey")
-      private final @Nullable Output<String> privateKey;
+    private @Nullable Output<String> privateKey;
 
-    public Output<String> privateKey() {
-        return this.privateKey == null ? Codegen.empty() : this.privateKey;
+    public Optional<Output<String>> privateKey() {
+        return Optional.ofNullable(this.privateKey);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="searchPaths")
-      private final @Nullable Output<List<String>> searchPaths;
+    private @Nullable Output<List<String>> searchPaths;
 
-    public Output<List<String>> searchPaths() {
-        return this.searchPaths == null ? Codegen.empty() : this.searchPaths;
+    public Optional<Output<List<String>>> searchPaths() {
+        return Optional.ofNullable(this.searchPaths);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="strictHostKeyChecking")
-      private final @Nullable Output<Boolean> strictHostKeyChecking;
+    private @Nullable Output<Boolean> strictHostKeyChecking;
 
-    public Output<Boolean> strictHostKeyChecking() {
-        return this.strictHostKeyChecking == null ? Codegen.empty() : this.strictHostKeyChecking;
+    public Optional<Output<Boolean>> strictHostKeyChecking() {
+        return Optional.ofNullable(this.strictHostKeyChecking);
     }
 
     /**
@@ -125,7 +125,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
@@ -136,186 +136,160 @@ public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.reso
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public ConfigurationServiceGitRepositoryArgs(
-        @Nullable Output<String> hostKey,
-        @Nullable Output<String> hostKeyAlgorithm,
-        Output<String> label,
-        Output<String> name,
-        @Nullable Output<String> password,
-        Output<List<String>> patterns,
-        @Nullable Output<String> privateKey,
-        @Nullable Output<List<String>> searchPaths,
-        @Nullable Output<Boolean> strictHostKeyChecking,
-        Output<String> uri,
-        @Nullable Output<String> username) {
-        this.hostKey = hostKey;
-        this.hostKeyAlgorithm = hostKeyAlgorithm;
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.password = password;
-        this.patterns = Objects.requireNonNull(patterns, "expected parameter 'patterns' to be non-null");
-        this.privateKey = privateKey;
-        this.searchPaths = searchPaths;
-        this.strictHostKeyChecking = strictHostKeyChecking;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.username = username;
-    }
+    private ConfigurationServiceGitRepositoryArgs() {}
 
-    private ConfigurationServiceGitRepositoryArgs() {
-        this.hostKey = Codegen.empty();
-        this.hostKeyAlgorithm = Codegen.empty();
-        this.label = Codegen.empty();
-        this.name = Codegen.empty();
-        this.password = Codegen.empty();
-        this.patterns = Codegen.empty();
-        this.privateKey = Codegen.empty();
-        this.searchPaths = Codegen.empty();
-        this.strictHostKeyChecking = Codegen.empty();
-        this.uri = Codegen.empty();
-        this.username = Codegen.empty();
+    private ConfigurationServiceGitRepositoryArgs(ConfigurationServiceGitRepositoryArgs $) {
+        this.hostKey = $.hostKey;
+        this.hostKeyAlgorithm = $.hostKeyAlgorithm;
+        this.label = $.label;
+        this.name = $.name;
+        this.password = $.password;
+        this.patterns = $.patterns;
+        this.privateKey = $.privateKey;
+        this.searchPaths = $.searchPaths;
+        this.strictHostKeyChecking = $.strictHostKeyChecking;
+        this.uri = $.uri;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationServiceGitRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hostKey;
-        private @Nullable Output<String> hostKeyAlgorithm;
-        private Output<String> label;
-        private Output<String> name;
-        private @Nullable Output<String> password;
-        private Output<List<String>> patterns;
-        private @Nullable Output<String> privateKey;
-        private @Nullable Output<List<String>> searchPaths;
-        private @Nullable Output<Boolean> strictHostKeyChecking;
-        private Output<String> uri;
-        private @Nullable Output<String> username;
+        private ConfigurationServiceGitRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationServiceGitRepositoryArgs();
         }
 
         public Builder(ConfigurationServiceGitRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostKey = defaults.hostKey;
-    	      this.hostKeyAlgorithm = defaults.hostKeyAlgorithm;
-    	      this.label = defaults.label;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.patterns = defaults.patterns;
-    	      this.privateKey = defaults.privateKey;
-    	      this.searchPaths = defaults.searchPaths;
-    	      this.strictHostKeyChecking = defaults.strictHostKeyChecking;
-    	      this.uri = defaults.uri;
-    	      this.username = defaults.username;
+            $ = new ConfigurationServiceGitRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostKey(@Nullable Output<String> hostKey) {
-            this.hostKey = hostKey;
+            $.hostKey = hostKey;
             return this;
         }
-        public Builder hostKey(@Nullable String hostKey) {
-            this.hostKey = Codegen.ofNullable(hostKey);
-            return this;
+
+        public Builder hostKey(String hostKey) {
+            return hostKey(Output.of(hostKey));
         }
+
         public Builder hostKeyAlgorithm(@Nullable Output<String> hostKeyAlgorithm) {
-            this.hostKeyAlgorithm = hostKeyAlgorithm;
+            $.hostKeyAlgorithm = hostKeyAlgorithm;
             return this;
         }
-        public Builder hostKeyAlgorithm(@Nullable String hostKeyAlgorithm) {
-            this.hostKeyAlgorithm = Codegen.ofNullable(hostKeyAlgorithm);
-            return this;
+
+        public Builder hostKeyAlgorithm(String hostKeyAlgorithm) {
+            return hostKeyAlgorithm(Output.of(hostKeyAlgorithm));
         }
+
         public Builder label(Output<String> label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder label(String label) {
-            this.label = Output.of(Objects.requireNonNull(label));
-            return this;
+            return label(Output.of(label));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder patterns(Output<List<String>> patterns) {
-            this.patterns = Objects.requireNonNull(patterns);
+            $.patterns = patterns;
             return this;
         }
+
         public Builder patterns(List<String> patterns) {
-            this.patterns = Output.of(Objects.requireNonNull(patterns));
-            return this;
+            return patterns(Output.of(patterns));
         }
+
         public Builder patterns(String... patterns) {
             return patterns(List.of(patterns));
         }
+
         public Builder privateKey(@Nullable Output<String> privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
-        public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Codegen.ofNullable(privateKey);
-            return this;
+
+        public Builder privateKey(String privateKey) {
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder searchPaths(@Nullable Output<List<String>> searchPaths) {
-            this.searchPaths = searchPaths;
+            $.searchPaths = searchPaths;
             return this;
         }
-        public Builder searchPaths(@Nullable List<String> searchPaths) {
-            this.searchPaths = Codegen.ofNullable(searchPaths);
-            return this;
+
+        public Builder searchPaths(List<String> searchPaths) {
+            return searchPaths(Output.of(searchPaths));
         }
+
         public Builder searchPaths(String... searchPaths) {
             return searchPaths(List.of(searchPaths));
         }
+
         public Builder strictHostKeyChecking(@Nullable Output<Boolean> strictHostKeyChecking) {
-            this.strictHostKeyChecking = strictHostKeyChecking;
+            $.strictHostKeyChecking = strictHostKeyChecking;
             return this;
         }
-        public Builder strictHostKeyChecking(@Nullable Boolean strictHostKeyChecking) {
-            this.strictHostKeyChecking = Codegen.ofNullable(strictHostKeyChecking);
-            return this;
+
+        public Builder strictHostKeyChecking(Boolean strictHostKeyChecking) {
+            return strictHostKeyChecking(Output.of(strictHostKeyChecking));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
+            return uri(Output.of(uri));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public ConfigurationServiceGitRepositoryArgs build() {
-            return new ConfigurationServiceGitRepositoryArgs(hostKey, hostKeyAlgorithm, label, name, password, patterns, privateKey, searchPaths, strictHostKeyChecking, uri, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public ConfigurationServiceGitRepositoryArgs build() {
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.patterns = Objects.requireNonNull($.patterns, "expected parameter 'patterns' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.costmanagement.inputs.SourceCostAllocationResource
 import com.pulumi.azurenative.costmanagement.inputs.TargetCostAllocationResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CostAllocationRuleDetailsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sourceResources")
-      private final @Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources;
+    private @Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources;
 
-    public Output<List<SourceCostAllocationResourceArgs>> sourceResources() {
-        return this.sourceResources == null ? Codegen.empty() : this.sourceResources;
+    public Optional<Output<List<SourceCostAllocationResourceArgs>>> sourceResources() {
+        return Optional.ofNullable(this.sourceResources);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class CostAllocationRuleDetailsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="targetResources")
-      private final @Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources;
+    private @Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources;
 
-    public Output<List<TargetCostAllocationResourceArgs>> targetResources() {
-        return this.targetResources == null ? Codegen.empty() : this.targetResources;
+    public Optional<Output<List<TargetCostAllocationResourceArgs>>> targetResources() {
+        return Optional.ofNullable(this.targetResources);
     }
 
-    public CostAllocationRuleDetailsArgs(
-        @Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources,
-        @Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources) {
-        this.sourceResources = sourceResources;
-        this.targetResources = targetResources;
-    }
+    private CostAllocationRuleDetailsArgs() {}
 
-    private CostAllocationRuleDetailsArgs() {
-        this.sourceResources = Codegen.empty();
-        this.targetResources = Codegen.empty();
+    private CostAllocationRuleDetailsArgs(CostAllocationRuleDetailsArgs $) {
+        this.sourceResources = $.sourceResources;
+        this.targetResources = $.targetResources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CostAllocationRuleDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources;
-        private @Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources;
+        private CostAllocationRuleDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CostAllocationRuleDetailsArgs();
         }
 
         public Builder(CostAllocationRuleDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceResources = defaults.sourceResources;
-    	      this.targetResources = defaults.targetResources;
+            $ = new CostAllocationRuleDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceResources(@Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources) {
-            this.sourceResources = sourceResources;
+            $.sourceResources = sourceResources;
             return this;
         }
-        public Builder sourceResources(@Nullable List<SourceCostAllocationResourceArgs> sourceResources) {
-            this.sourceResources = Codegen.ofNullable(sourceResources);
-            return this;
+
+        public Builder sourceResources(List<SourceCostAllocationResourceArgs> sourceResources) {
+            return sourceResources(Output.of(sourceResources));
         }
+
         public Builder sourceResources(SourceCostAllocationResourceArgs... sourceResources) {
             return sourceResources(List.of(sourceResources));
         }
+
         public Builder targetResources(@Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources) {
-            this.targetResources = targetResources;
+            $.targetResources = targetResources;
             return this;
         }
-        public Builder targetResources(@Nullable List<TargetCostAllocationResourceArgs> targetResources) {
-            this.targetResources = Codegen.ofNullable(targetResources);
-            return this;
+
+        public Builder targetResources(List<TargetCostAllocationResourceArgs> targetResources) {
+            return targetResources(Output.of(targetResources));
         }
+
         public Builder targetResources(TargetCostAllocationResourceArgs... targetResources) {
             return targetResources(List.of(targetResources));
-        }        public CostAllocationRuleDetailsArgs build() {
-            return new CostAllocationRuleDetailsArgs(sourceResources, targetResources);
+        }
+
+        public CostAllocationRuleDetailsArgs build() {
+            return $;
         }
     }
+
 }

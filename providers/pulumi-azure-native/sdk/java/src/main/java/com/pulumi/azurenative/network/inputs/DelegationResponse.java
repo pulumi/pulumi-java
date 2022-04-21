@@ -24,7 +24,7 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="actions", required=true)
-      private final List<String> actions;
+    private List<String> actions;
 
     public List<String> actions() {
         return this.actions;
@@ -35,7 +35,7 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -46,10 +46,10 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -79,10 +79,10 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable String serviceName;
+    private @Nullable String serviceName;
 
     public Optional<String> serviceName() {
-        return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -90,103 +90,87 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public DelegationResponse(
-        List<String> actions,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable String serviceName,
-        @Nullable String type) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.serviceName = serviceName;
-        this.type = type;
-    }
+    private DelegationResponse() {}
 
-    private DelegationResponse() {
-        this.actions = List.of();
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.serviceName = null;
-        this.type = null;
+    private DelegationResponse(DelegationResponse $) {
+        this.actions = $.actions;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.serviceName = $.serviceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelegationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> actions;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String provisioningState;
-        private @Nullable String serviceName;
-        private @Nullable String type;
+        private DelegationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelegationResponse();
         }
 
         public Builder(DelegationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.serviceName = defaults.serviceName;
-    	      this.type = defaults.type;
+            $ = new DelegationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(List<String> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public DelegationResponse build() {
-            return new DelegationResponse(actions, etag, id, name, provisioningState, serviceName, type);
+        }
+
+        public DelegationResponse build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

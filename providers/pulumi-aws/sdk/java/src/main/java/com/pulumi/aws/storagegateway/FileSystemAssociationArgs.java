@@ -6,10 +6,10 @@ package com.pulumi.aws.storagegateway;
 import com.pulumi.aws.storagegateway.inputs.FileSystemAssociationCacheAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FileSystemAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="auditDestinationArn")
-      private final @Nullable Output<String> auditDestinationArn;
+    private @Nullable Output<String> auditDestinationArn;
 
-    public Output<String> auditDestinationArn() {
-        return this.auditDestinationArn == null ? Codegen.empty() : this.auditDestinationArn;
+    public Optional<Output<String>> auditDestinationArn() {
+        return Optional.ofNullable(this.auditDestinationArn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FileSystemAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cacheAttributes")
-      private final @Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes;
+    private @Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes;
 
-    public Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes() {
-        return this.cacheAttributes == null ? Codegen.empty() : this.cacheAttributes;
+    public Optional<Output<FileSystemAssociationCacheAttributesArgs>> cacheAttributes() {
+        return Optional.ofNullable(this.cacheAttributes);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class FileSystemAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="gatewayArn", required=true)
-      private final Output<String> gatewayArn;
+    private Output<String> gatewayArn;
 
     public Output<String> gatewayArn() {
         return this.gatewayArn;
@@ -55,7 +55,7 @@ public final class FileSystemAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="locationArn", required=true)
-      private final Output<String> locationArn;
+    private Output<String> locationArn;
 
     public Output<String> locationArn() {
         return this.locationArn;
@@ -66,7 +66,7 @@ public final class FileSystemAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -77,10 +77,10 @@ public final class FileSystemAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,128 +88,112 @@ public final class FileSystemAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public FileSystemAssociationArgs(
-        @Nullable Output<String> auditDestinationArn,
-        @Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes,
-        Output<String> gatewayArn,
-        Output<String> locationArn,
-        Output<String> password,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> username) {
-        this.auditDestinationArn = auditDestinationArn;
-        this.cacheAttributes = cacheAttributes;
-        this.gatewayArn = Objects.requireNonNull(gatewayArn, "expected parameter 'gatewayArn' to be non-null");
-        this.locationArn = Objects.requireNonNull(locationArn, "expected parameter 'locationArn' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.tags = tags;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private FileSystemAssociationArgs() {}
 
-    private FileSystemAssociationArgs() {
-        this.auditDestinationArn = Codegen.empty();
-        this.cacheAttributes = Codegen.empty();
-        this.gatewayArn = Codegen.empty();
-        this.locationArn = Codegen.empty();
-        this.password = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.username = Codegen.empty();
+    private FileSystemAssociationArgs(FileSystemAssociationArgs $) {
+        this.auditDestinationArn = $.auditDestinationArn;
+        this.cacheAttributes = $.cacheAttributes;
+        this.gatewayArn = $.gatewayArn;
+        this.locationArn = $.locationArn;
+        this.password = $.password;
+        this.tags = $.tags;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> auditDestinationArn;
-        private @Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes;
-        private Output<String> gatewayArn;
-        private Output<String> locationArn;
-        private Output<String> password;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> username;
+        private FileSystemAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemAssociationArgs();
         }
 
         public Builder(FileSystemAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditDestinationArn = defaults.auditDestinationArn;
-    	      this.cacheAttributes = defaults.cacheAttributes;
-    	      this.gatewayArn = defaults.gatewayArn;
-    	      this.locationArn = defaults.locationArn;
-    	      this.password = defaults.password;
-    	      this.tags = defaults.tags;
-    	      this.username = defaults.username;
+            $ = new FileSystemAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditDestinationArn(@Nullable Output<String> auditDestinationArn) {
-            this.auditDestinationArn = auditDestinationArn;
+            $.auditDestinationArn = auditDestinationArn;
             return this;
         }
-        public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
-            this.auditDestinationArn = Codegen.ofNullable(auditDestinationArn);
-            return this;
+
+        public Builder auditDestinationArn(String auditDestinationArn) {
+            return auditDestinationArn(Output.of(auditDestinationArn));
         }
+
         public Builder cacheAttributes(@Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes) {
-            this.cacheAttributes = cacheAttributes;
+            $.cacheAttributes = cacheAttributes;
             return this;
         }
-        public Builder cacheAttributes(@Nullable FileSystemAssociationCacheAttributesArgs cacheAttributes) {
-            this.cacheAttributes = Codegen.ofNullable(cacheAttributes);
-            return this;
+
+        public Builder cacheAttributes(FileSystemAssociationCacheAttributesArgs cacheAttributes) {
+            return cacheAttributes(Output.of(cacheAttributes));
         }
+
         public Builder gatewayArn(Output<String> gatewayArn) {
-            this.gatewayArn = Objects.requireNonNull(gatewayArn);
+            $.gatewayArn = gatewayArn;
             return this;
         }
+
         public Builder gatewayArn(String gatewayArn) {
-            this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
-            return this;
+            return gatewayArn(Output.of(gatewayArn));
         }
+
         public Builder locationArn(Output<String> locationArn) {
-            this.locationArn = Objects.requireNonNull(locationArn);
+            $.locationArn = locationArn;
             return this;
         }
+
         public Builder locationArn(String locationArn) {
-            this.locationArn = Output.of(Objects.requireNonNull(locationArn));
-            return this;
+            return locationArn(Output.of(locationArn));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public FileSystemAssociationArgs build() {
-            return new FileSystemAssociationArgs(auditDestinationArn, cacheAttributes, gatewayArn, locationArn, password, tags, username);
+            return username(Output.of(username));
+        }
+
+        public FileSystemAssociationArgs build() {
+            $.gatewayArn = Objects.requireNonNull($.gatewayArn, "expected parameter 'gatewayArn' to be non-null");
+            $.locationArn = Objects.requireNonNull($.locationArn, "expected parameter 'locationArn' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="offer")
-      private final @Nullable Output<String> offer;
+    private @Nullable Output<String> offer;
 
-    public Output<String> offer() {
-        return this.offer == null ? Codegen.empty() : this.offer;
+    public Optional<Output<String>> offer() {
+        return Optional.ofNullable(this.offer);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<String> osType;
+    private @Nullable Output<String> osType;
 
-    public Output<String> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<String>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="publisher")
-      private final @Nullable Output<String> publisher;
+    private @Nullable Output<String> publisher;
 
-    public Output<String> publisher() {
-        return this.publisher == null ? Codegen.empty() : this.publisher;
+    public Optional<Output<String>> publisher() {
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<String> sku;
+    private @Nullable Output<String> sku;
 
-    public Output<String> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<String>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public GalleryImageReferenceArgs(
-        @Nullable Output<String> offer,
-        @Nullable Output<String> osType,
-        @Nullable Output<String> publisher,
-        @Nullable Output<String> sku,
-        @Nullable Output<String> version) {
-        this.offer = offer;
-        this.osType = osType;
-        this.publisher = publisher;
-        this.sku = sku;
-        this.version = version;
-    }
+    private GalleryImageReferenceArgs() {}
 
-    private GalleryImageReferenceArgs() {
-        this.offer = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.publisher = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.version = Codegen.empty();
+    private GalleryImageReferenceArgs(GalleryImageReferenceArgs $) {
+        this.offer = $.offer;
+        this.osType = $.osType;
+        this.publisher = $.publisher;
+        this.sku = $.sku;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryImageReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> offer;
-        private @Nullable Output<String> osType;
-        private @Nullable Output<String> publisher;
-        private @Nullable Output<String> sku;
-        private @Nullable Output<String> version;
+        private GalleryImageReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryImageReferenceArgs();
         }
 
         public Builder(GalleryImageReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offer = defaults.offer;
-    	      this.osType = defaults.osType;
-    	      this.publisher = defaults.publisher;
-    	      this.sku = defaults.sku;
-    	      this.version = defaults.version;
+            $ = new GalleryImageReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder offer(@Nullable Output<String> offer) {
-            this.offer = offer;
+            $.offer = offer;
             return this;
         }
-        public Builder offer(@Nullable String offer) {
-            this.offer = Codegen.ofNullable(offer);
-            return this;
+
+        public Builder offer(String offer) {
+            return offer(Output.of(offer));
         }
+
         public Builder osType(@Nullable Output<String> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable String osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(String osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder publisher(@Nullable Output<String> publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
-        public Builder publisher(@Nullable String publisher) {
-            this.publisher = Codegen.ofNullable(publisher);
-            return this;
+
+        public Builder publisher(String publisher) {
+            return publisher(Output.of(publisher));
         }
+
         public Builder sku(@Nullable Output<String> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable String sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(String sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public GalleryImageReferenceArgs build() {
-            return new GalleryImageReferenceArgs(offer, osType, publisher, sku, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public GalleryImageReferenceArgs build() {
+            return $;
         }
     }
+
 }

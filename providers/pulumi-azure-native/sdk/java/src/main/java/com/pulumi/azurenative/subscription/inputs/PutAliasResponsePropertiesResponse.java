@@ -23,10 +23,10 @@ public final class PutAliasResponsePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class PutAliasResponsePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="subscriptionId", required=true)
-      private final String subscriptionId;
+    private String subscriptionId;
 
     public String subscriptionId() {
         return this.subscriptionId;
     }
 
-    public PutAliasResponsePropertiesResponse(
-        @Nullable String provisioningState,
-        String subscriptionId) {
-        this.provisioningState = provisioningState;
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-    }
+    private PutAliasResponsePropertiesResponse() {}
 
-    private PutAliasResponsePropertiesResponse() {
-        this.provisioningState = null;
-        this.subscriptionId = null;
+    private PutAliasResponsePropertiesResponse(PutAliasResponsePropertiesResponse $) {
+        this.provisioningState = $.provisioningState;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PutAliasResponsePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String provisioningState;
-        private String subscriptionId;
+        private PutAliasResponsePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PutAliasResponsePropertiesResponse();
         }
 
         public Builder(PutAliasResponsePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new PutAliasResponsePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public PutAliasResponsePropertiesResponse build() {
-            return new PutAliasResponsePropertiesResponse(provisioningState, subscriptionId);
+        }
+
+        public PutAliasResponsePropertiesResponse build() {
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            return $;
         }
     }
+
 }

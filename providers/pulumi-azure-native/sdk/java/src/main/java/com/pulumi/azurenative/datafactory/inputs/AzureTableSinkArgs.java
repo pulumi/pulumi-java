@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="azureTableDefaultPartitionKeyValue")
-      private final @Nullable Output<Object> azureTableDefaultPartitionKeyValue;
+    private @Nullable Output<Object> azureTableDefaultPartitionKeyValue;
 
-    public Output<Object> azureTableDefaultPartitionKeyValue() {
-        return this.azureTableDefaultPartitionKeyValue == null ? Codegen.empty() : this.azureTableDefaultPartitionKeyValue;
+    public Optional<Output<Object>> azureTableDefaultPartitionKeyValue() {
+        return Optional.ofNullable(this.azureTableDefaultPartitionKeyValue);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="azureTableInsertType")
-      private final @Nullable Output<Object> azureTableInsertType;
+    private @Nullable Output<Object> azureTableInsertType;
 
-    public Output<Object> azureTableInsertType() {
-        return this.azureTableInsertType == null ? Codegen.empty() : this.azureTableInsertType;
+    public Optional<Output<Object>> azureTableInsertType() {
+        return Optional.ofNullable(this.azureTableInsertType);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="azureTablePartitionKeyName")
-      private final @Nullable Output<Object> azureTablePartitionKeyName;
+    private @Nullable Output<Object> azureTablePartitionKeyName;
 
-    public Output<Object> azureTablePartitionKeyName() {
-        return this.azureTablePartitionKeyName == null ? Codegen.empty() : this.azureTablePartitionKeyName;
+    public Optional<Output<Object>> azureTablePartitionKeyName() {
+        return Optional.ofNullable(this.azureTablePartitionKeyName);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="azureTableRowKeyName")
-      private final @Nullable Output<Object> azureTableRowKeyName;
+    private @Nullable Output<Object> azureTableRowKeyName;
 
-    public Output<Object> azureTableRowKeyName() {
-        return this.azureTableRowKeyName == null ? Codegen.empty() : this.azureTableRowKeyName;
+    public Optional<Output<Object>> azureTableRowKeyName() {
+        return Optional.ofNullable(this.azureTableRowKeyName);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sinkRetryCount")
-      private final @Nullable Output<Object> sinkRetryCount;
+    private @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> sinkRetryCount() {
-        return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
+    public Optional<Output<Object>> sinkRetryCount() {
+        return Optional.ofNullable(this.sinkRetryCount);
     }
 
     /**
@@ -102,10 +103,10 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sinkRetryWait")
-      private final @Nullable Output<Object> sinkRetryWait;
+    private @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> sinkRetryWait() {
-        return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
+    public Optional<Output<Object>> sinkRetryWait() {
+        return Optional.ofNullable(this.sinkRetryWait);
     }
 
     /**
@@ -114,7 +115,7 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -125,10 +126,10 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="writeBatchSize")
-      private final @Nullable Output<Object> writeBatchSize;
+    private @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> writeBatchSize() {
-        return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
+    public Optional<Output<Object>> writeBatchSize() {
+        return Optional.ofNullable(this.writeBatchSize);
     }
 
     /**
@@ -136,180 +137,149 @@ public final class AzureTableSinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="writeBatchTimeout")
-      private final @Nullable Output<Object> writeBatchTimeout;
+    private @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> writeBatchTimeout() {
-        return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
+    public Optional<Output<Object>> writeBatchTimeout() {
+        return Optional.ofNullable(this.writeBatchTimeout);
     }
 
-    public AzureTableSinkArgs(
-        @Nullable Output<Object> azureTableDefaultPartitionKeyValue,
-        @Nullable Output<Object> azureTableInsertType,
-        @Nullable Output<Object> azureTablePartitionKeyName,
-        @Nullable Output<Object> azureTableRowKeyName,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> sinkRetryCount,
-        @Nullable Output<Object> sinkRetryWait,
-        Output<String> type,
-        @Nullable Output<Object> writeBatchSize,
-        @Nullable Output<Object> writeBatchTimeout) {
-        this.azureTableDefaultPartitionKeyValue = azureTableDefaultPartitionKeyValue;
-        this.azureTableInsertType = azureTableInsertType;
-        this.azureTablePartitionKeyName = azureTablePartitionKeyName;
-        this.azureTableRowKeyName = azureTableRowKeyName;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.sinkRetryCount = sinkRetryCount;
-        this.sinkRetryWait = sinkRetryWait;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.writeBatchSize = writeBatchSize;
-        this.writeBatchTimeout = writeBatchTimeout;
-    }
+    private AzureTableSinkArgs() {}
 
-    private AzureTableSinkArgs() {
-        this.azureTableDefaultPartitionKeyValue = Codegen.empty();
-        this.azureTableInsertType = Codegen.empty();
-        this.azureTablePartitionKeyName = Codegen.empty();
-        this.azureTableRowKeyName = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.sinkRetryCount = Codegen.empty();
-        this.sinkRetryWait = Codegen.empty();
-        this.type = Codegen.empty();
-        this.writeBatchSize = Codegen.empty();
-        this.writeBatchTimeout = Codegen.empty();
+    private AzureTableSinkArgs(AzureTableSinkArgs $) {
+        this.azureTableDefaultPartitionKeyValue = $.azureTableDefaultPartitionKeyValue;
+        this.azureTableInsertType = $.azureTableInsertType;
+        this.azureTablePartitionKeyName = $.azureTablePartitionKeyName;
+        this.azureTableRowKeyName = $.azureTableRowKeyName;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.sinkRetryCount = $.sinkRetryCount;
+        this.sinkRetryWait = $.sinkRetryWait;
+        this.type = $.type;
+        this.writeBatchSize = $.writeBatchSize;
+        this.writeBatchTimeout = $.writeBatchTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureTableSinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> azureTableDefaultPartitionKeyValue;
-        private @Nullable Output<Object> azureTableInsertType;
-        private @Nullable Output<Object> azureTablePartitionKeyName;
-        private @Nullable Output<Object> azureTableRowKeyName;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> sinkRetryCount;
-        private @Nullable Output<Object> sinkRetryWait;
-        private Output<String> type;
-        private @Nullable Output<Object> writeBatchSize;
-        private @Nullable Output<Object> writeBatchTimeout;
+        private AzureTableSinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureTableSinkArgs();
         }
 
         public Builder(AzureTableSinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureTableDefaultPartitionKeyValue = defaults.azureTableDefaultPartitionKeyValue;
-    	      this.azureTableInsertType = defaults.azureTableInsertType;
-    	      this.azureTablePartitionKeyName = defaults.azureTablePartitionKeyName;
-    	      this.azureTableRowKeyName = defaults.azureTableRowKeyName;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.sinkRetryCount = defaults.sinkRetryCount;
-    	      this.sinkRetryWait = defaults.sinkRetryWait;
-    	      this.type = defaults.type;
-    	      this.writeBatchSize = defaults.writeBatchSize;
-    	      this.writeBatchTimeout = defaults.writeBatchTimeout;
+            $ = new AzureTableSinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureTableDefaultPartitionKeyValue(@Nullable Output<Object> azureTableDefaultPartitionKeyValue) {
-            this.azureTableDefaultPartitionKeyValue = azureTableDefaultPartitionKeyValue;
+            $.azureTableDefaultPartitionKeyValue = azureTableDefaultPartitionKeyValue;
             return this;
         }
-        public Builder azureTableDefaultPartitionKeyValue(@Nullable Object azureTableDefaultPartitionKeyValue) {
-            this.azureTableDefaultPartitionKeyValue = Codegen.ofNullable(azureTableDefaultPartitionKeyValue);
-            return this;
+
+        public Builder azureTableDefaultPartitionKeyValue(Object azureTableDefaultPartitionKeyValue) {
+            return azureTableDefaultPartitionKeyValue(Output.of(azureTableDefaultPartitionKeyValue));
         }
+
         public Builder azureTableInsertType(@Nullable Output<Object> azureTableInsertType) {
-            this.azureTableInsertType = azureTableInsertType;
+            $.azureTableInsertType = azureTableInsertType;
             return this;
         }
-        public Builder azureTableInsertType(@Nullable Object azureTableInsertType) {
-            this.azureTableInsertType = Codegen.ofNullable(azureTableInsertType);
-            return this;
+
+        public Builder azureTableInsertType(Object azureTableInsertType) {
+            return azureTableInsertType(Output.of(azureTableInsertType));
         }
+
         public Builder azureTablePartitionKeyName(@Nullable Output<Object> azureTablePartitionKeyName) {
-            this.azureTablePartitionKeyName = azureTablePartitionKeyName;
+            $.azureTablePartitionKeyName = azureTablePartitionKeyName;
             return this;
         }
-        public Builder azureTablePartitionKeyName(@Nullable Object azureTablePartitionKeyName) {
-            this.azureTablePartitionKeyName = Codegen.ofNullable(azureTablePartitionKeyName);
-            return this;
+
+        public Builder azureTablePartitionKeyName(Object azureTablePartitionKeyName) {
+            return azureTablePartitionKeyName(Output.of(azureTablePartitionKeyName));
         }
+
         public Builder azureTableRowKeyName(@Nullable Output<Object> azureTableRowKeyName) {
-            this.azureTableRowKeyName = azureTableRowKeyName;
+            $.azureTableRowKeyName = azureTableRowKeyName;
             return this;
         }
-        public Builder azureTableRowKeyName(@Nullable Object azureTableRowKeyName) {
-            this.azureTableRowKeyName = Codegen.ofNullable(azureTableRowKeyName);
-            return this;
+
+        public Builder azureTableRowKeyName(Object azureTableRowKeyName) {
+            return azureTableRowKeyName(Output.of(azureTableRowKeyName));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
-            this.sinkRetryCount = sinkRetryCount;
+            $.sinkRetryCount = sinkRetryCount;
             return this;
         }
-        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Codegen.ofNullable(sinkRetryCount);
-            return this;
+
+        public Builder sinkRetryCount(Object sinkRetryCount) {
+            return sinkRetryCount(Output.of(sinkRetryCount));
         }
+
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
-            this.sinkRetryWait = sinkRetryWait;
+            $.sinkRetryWait = sinkRetryWait;
             return this;
         }
-        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Codegen.ofNullable(sinkRetryWait);
-            return this;
+
+        public Builder sinkRetryWait(Object sinkRetryWait) {
+            return sinkRetryWait(Output.of(sinkRetryWait));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
-            this.writeBatchSize = writeBatchSize;
+            $.writeBatchSize = writeBatchSize;
             return this;
         }
-        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Codegen.ofNullable(writeBatchSize);
-            return this;
+
+        public Builder writeBatchSize(Object writeBatchSize) {
+            return writeBatchSize(Output.of(writeBatchSize));
         }
+
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
-            this.writeBatchTimeout = writeBatchTimeout;
+            $.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Codegen.ofNullable(writeBatchTimeout);
-            return this;
-        }        public AzureTableSinkArgs build() {
-            return new AzureTableSinkArgs(azureTableDefaultPartitionKeyValue, azureTableInsertType, azureTablePartitionKeyName, azureTableRowKeyName, disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
+
+        public Builder writeBatchTimeout(Object writeBatchTimeout) {
+            return writeBatchTimeout(Output.of(writeBatchTimeout));
+        }
+
+        public AzureTableSinkArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

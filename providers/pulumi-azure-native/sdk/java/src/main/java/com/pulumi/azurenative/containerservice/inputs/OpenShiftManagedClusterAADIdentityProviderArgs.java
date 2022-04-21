@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
      * 
      */
     @Import(name="customerAdminGroupId")
-      private final @Nullable Output<String> customerAdminGroupId;
+    private @Nullable Output<String> customerAdminGroupId;
 
-    public Output<String> customerAdminGroupId() {
-        return this.customerAdminGroupId == null ? Codegen.empty() : this.customerAdminGroupId;
+    public Optional<Output<String>> customerAdminGroupId() {
+        return Optional.ofNullable(this.customerAdminGroupId);
     }
 
     /**
@@ -47,7 +48,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -58,10 +59,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -69,102 +70,89 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public OpenShiftManagedClusterAADIdentityProviderArgs(
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> customerAdminGroupId,
-        Output<String> kind,
-        @Nullable Output<String> secret,
-        @Nullable Output<String> tenantId) {
-        this.clientId = clientId;
-        this.customerAdminGroupId = customerAdminGroupId;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.secret = secret;
-        this.tenantId = tenantId;
-    }
+    private OpenShiftManagedClusterAADIdentityProviderArgs() {}
 
-    private OpenShiftManagedClusterAADIdentityProviderArgs() {
-        this.clientId = Codegen.empty();
-        this.customerAdminGroupId = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private OpenShiftManagedClusterAADIdentityProviderArgs(OpenShiftManagedClusterAADIdentityProviderArgs $) {
+        this.clientId = $.clientId;
+        this.customerAdminGroupId = $.customerAdminGroupId;
+        this.kind = $.kind;
+        this.secret = $.secret;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenShiftManagedClusterAADIdentityProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> customerAdminGroupId;
-        private Output<String> kind;
-        private @Nullable Output<String> secret;
-        private @Nullable Output<String> tenantId;
+        private OpenShiftManagedClusterAADIdentityProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenShiftManagedClusterAADIdentityProviderArgs();
         }
 
         public Builder(OpenShiftManagedClusterAADIdentityProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.customerAdminGroupId = defaults.customerAdminGroupId;
-    	      this.kind = defaults.kind;
-    	      this.secret = defaults.secret;
-    	      this.tenantId = defaults.tenantId;
+            $ = new OpenShiftManagedClusterAADIdentityProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder customerAdminGroupId(@Nullable Output<String> customerAdminGroupId) {
-            this.customerAdminGroupId = customerAdminGroupId;
+            $.customerAdminGroupId = customerAdminGroupId;
             return this;
         }
-        public Builder customerAdminGroupId(@Nullable String customerAdminGroupId) {
-            this.customerAdminGroupId = Codegen.ofNullable(customerAdminGroupId);
-            return this;
+
+        public Builder customerAdminGroupId(String customerAdminGroupId) {
+            return customerAdminGroupId(Output.of(customerAdminGroupId));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public OpenShiftManagedClusterAADIdentityProviderArgs build() {
-            return new OpenShiftManagedClusterAADIdentityProviderArgs(clientId, customerAdminGroupId, kind, secret, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public OpenShiftManagedClusterAADIdentityProviderArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fingerprint")
-      private final @Nullable Output<String> fingerprint;
+    private @Nullable Output<String> fingerprint;
 
-    public Output<String> fingerprint() {
-        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
+    public Optional<Output<String>> fingerprint() {
+        return Optional.ofNullable(this.fingerprint);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyNamePrefix")
-      private final @Nullable Output<String> keyNamePrefix;
+    private @Nullable Output<String> keyNamePrefix;
 
-    public Output<String> keyNamePrefix() {
-        return this.keyNamePrefix == null ? Codegen.empty() : this.keyNamePrefix;
+    public Optional<Output<String>> keyNamePrefix() {
+        return Optional.ofNullable(this.keyNamePrefix);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyPairId")
-      private final @Nullable Output<String> keyPairId;
+    private @Nullable Output<String> keyPairId;
 
-    public Output<String> keyPairId() {
-        return this.keyPairId == null ? Codegen.empty() : this.keyPairId;
+    public Optional<Output<String>> keyPairId() {
+        return Optional.ofNullable(this.keyPairId);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<String> publicKey;
+    private @Nullable Output<String> publicKey;
 
-    public Output<String> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<String>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -98,141 +98,118 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public KeyPairState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> fingerprint,
-        @Nullable Output<String> keyName,
-        @Nullable Output<String> keyNamePrefix,
-        @Nullable Output<String> keyPairId,
-        @Nullable Output<String> publicKey,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.fingerprint = fingerprint;
-        this.keyName = keyName;
-        this.keyNamePrefix = keyNamePrefix;
-        this.keyPairId = keyPairId;
-        this.publicKey = publicKey;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private KeyPairState() {}
 
-    private KeyPairState() {
-        this.arn = Codegen.empty();
-        this.fingerprint = Codegen.empty();
-        this.keyName = Codegen.empty();
-        this.keyNamePrefix = Codegen.empty();
-        this.keyPairId = Codegen.empty();
-        this.publicKey = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private KeyPairState(KeyPairState $) {
+        this.arn = $.arn;
+        this.fingerprint = $.fingerprint;
+        this.keyName = $.keyName;
+        this.keyNamePrefix = $.keyNamePrefix;
+        this.keyPairId = $.keyPairId;
+        this.publicKey = $.publicKey;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyPairState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> fingerprint;
-        private @Nullable Output<String> keyName;
-        private @Nullable Output<String> keyNamePrefix;
-        private @Nullable Output<String> keyPairId;
-        private @Nullable Output<String> publicKey;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private KeyPairState $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyPairState();
         }
 
         public Builder(KeyPairState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.keyName = defaults.keyName;
-    	      this.keyNamePrefix = defaults.keyNamePrefix;
-    	      this.keyPairId = defaults.keyPairId;
-    	      this.publicKey = defaults.publicKey;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new KeyPairState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
-            this.fingerprint = fingerprint;
+            $.fingerprint = fingerprint;
             return this;
         }
-        public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Codegen.ofNullable(fingerprint);
-            return this;
+
+        public Builder fingerprint(String fingerprint) {
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder keyNamePrefix(@Nullable Output<String> keyNamePrefix) {
-            this.keyNamePrefix = keyNamePrefix;
+            $.keyNamePrefix = keyNamePrefix;
             return this;
         }
-        public Builder keyNamePrefix(@Nullable String keyNamePrefix) {
-            this.keyNamePrefix = Codegen.ofNullable(keyNamePrefix);
-            return this;
+
+        public Builder keyNamePrefix(String keyNamePrefix) {
+            return keyNamePrefix(Output.of(keyNamePrefix));
         }
+
         public Builder keyPairId(@Nullable Output<String> keyPairId) {
-            this.keyPairId = keyPairId;
+            $.keyPairId = keyPairId;
             return this;
         }
-        public Builder keyPairId(@Nullable String keyPairId) {
-            this.keyPairId = Codegen.ofNullable(keyPairId);
-            return this;
+
+        public Builder keyPairId(String keyPairId) {
+            return keyPairId(Output.of(keyPairId));
         }
+
         public Builder publicKey(@Nullable Output<String> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
+
+        public Builder publicKey(String publicKey) {
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public KeyPairState build() {
-            return new KeyPairState(arn, fingerprint, keyName, keyNamePrefix, keyPairId, publicKey, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public KeyPairState build() {
+            return $;
         }
     }
+
 }

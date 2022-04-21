@@ -21,7 +21,7 @@ public final class SchedulingConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="preemptible", required=true)
-      private final Boolean preemptible;
+    private Boolean preemptible;
 
     public Boolean preemptible() {
         return this.preemptible;
@@ -32,55 +32,52 @@ public final class SchedulingConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="reserved", required=true)
-      private final Boolean reserved;
+    private Boolean reserved;
 
     public Boolean reserved() {
         return this.reserved;
     }
 
-    public SchedulingConfigResponse(
-        Boolean preemptible,
-        Boolean reserved) {
-        this.preemptible = Objects.requireNonNull(preemptible, "expected parameter 'preemptible' to be non-null");
-        this.reserved = Objects.requireNonNull(reserved, "expected parameter 'reserved' to be non-null");
-    }
+    private SchedulingConfigResponse() {}
 
-    private SchedulingConfigResponse() {
-        this.preemptible = null;
-        this.reserved = null;
+    private SchedulingConfigResponse(SchedulingConfigResponse $) {
+        this.preemptible = $.preemptible;
+        this.reserved = $.reserved;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean preemptible;
-        private Boolean reserved;
+        private SchedulingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingConfigResponse();
         }
 
         public Builder(SchedulingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preemptible = defaults.preemptible;
-    	      this.reserved = defaults.reserved;
+            $ = new SchedulingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder preemptible(Boolean preemptible) {
-            this.preemptible = Objects.requireNonNull(preemptible);
+            $.preemptible = preemptible;
             return this;
         }
+
         public Builder reserved(Boolean reserved) {
-            this.reserved = Objects.requireNonNull(reserved);
+            $.reserved = reserved;
             return this;
-        }        public SchedulingConfigResponse build() {
-            return new SchedulingConfigResponse(preemptible, reserved);
+        }
+
+        public SchedulingConfigResponse build() {
+            $.preemptible = Objects.requireNonNull($.preemptible, "expected parameter 'preemptible' to be non-null");
+            $.reserved = Objects.requireNonNull($.reserved, "expected parameter 'reserved' to be non-null");
+            return $;
         }
     }
+
 }

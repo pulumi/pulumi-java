@@ -22,48 +22,49 @@ public final class DeployableResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final List<String> resourceUri;
+    private List<String> resourceUri;
 
     public List<String> resourceUri() {
         return this.resourceUri;
     }
 
-    public DeployableResponse(List<String> resourceUri) {
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private DeployableResponse() {}
 
-    private DeployableResponse() {
-        this.resourceUri = List.of();
+    private DeployableResponse(DeployableResponse $) {
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeployableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> resourceUri;
+        private DeployableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeployableResponse();
         }
 
         public Builder(DeployableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new DeployableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceUri(List<String> resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder resourceUri(String... resourceUri) {
             return resourceUri(List.of(resourceUri));
-        }        public DeployableResponse build() {
-            return new DeployableResponse(resourceUri);
+        }
+
+        public DeployableResponse build() {
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

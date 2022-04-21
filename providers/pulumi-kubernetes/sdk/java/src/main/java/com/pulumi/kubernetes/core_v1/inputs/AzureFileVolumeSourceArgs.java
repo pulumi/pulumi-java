@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="secretName", required=true)
-      private final Output<String> secretName;
+    private Output<String> secretName;
 
     public Output<String> secretName() {
         return this.secretName;
@@ -47,76 +47,70 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="shareName", required=true)
-      private final Output<String> shareName;
+    private Output<String> shareName;
 
     public Output<String> shareName() {
         return this.shareName;
     }
 
-    public AzureFileVolumeSourceArgs(
-        @Nullable Output<Boolean> readOnly,
-        Output<String> secretName,
-        Output<String> shareName) {
-        this.readOnly = readOnly;
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-    }
+    private AzureFileVolumeSourceArgs() {}
 
-    private AzureFileVolumeSourceArgs() {
-        this.readOnly = Codegen.empty();
-        this.secretName = Codegen.empty();
-        this.shareName = Codegen.empty();
+    private AzureFileVolumeSourceArgs(AzureFileVolumeSourceArgs $) {
+        this.readOnly = $.readOnly;
+        this.secretName = $.secretName;
+        this.shareName = $.shareName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFileVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> readOnly;
-        private Output<String> secretName;
-        private Output<String> shareName;
+        private AzureFileVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFileVolumeSourceArgs();
         }
 
         public Builder(AzureFileVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readOnly = defaults.readOnly;
-    	      this.secretName = defaults.secretName;
-    	      this.shareName = defaults.shareName;
+            $ = new AzureFileVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder secretName(Output<String> secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Output.of(Objects.requireNonNull(secretName));
-            return this;
+            return secretName(Output.of(secretName));
         }
+
         public Builder shareName(Output<String> shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Output.of(Objects.requireNonNull(shareName));
-            return this;
-        }        public AzureFileVolumeSourceArgs build() {
-            return new AzureFileVolumeSourceArgs(readOnly, secretName, shareName);
+            return shareName(Output.of(shareName));
+        }
+
+        public AzureFileVolumeSourceArgs build() {
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

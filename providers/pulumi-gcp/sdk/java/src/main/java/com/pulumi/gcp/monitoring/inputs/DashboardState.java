@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DashboardState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dashboardJson")
-      private final @Nullable Output<String> dashboardJson;
+    private @Nullable Output<String> dashboardJson;
 
-    public Output<String> dashboardJson() {
-        return this.dashboardJson == null ? Codegen.empty() : this.dashboardJson;
+    public Optional<Output<String>> dashboardJson() {
+        return Optional.ofNullable(this.dashboardJson);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class DashboardState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public DashboardState(
-        @Nullable Output<String> dashboardJson,
-        @Nullable Output<String> project) {
-        this.dashboardJson = dashboardJson;
-        this.project = project;
-    }
+    private DashboardState() {}
 
-    private DashboardState() {
-        this.dashboardJson = Codegen.empty();
-        this.project = Codegen.empty();
+    private DashboardState(DashboardState $) {
+        this.dashboardJson = $.dashboardJson;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dashboardJson;
-        private @Nullable Output<String> project;
+        private DashboardState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardState();
         }
 
         public Builder(DashboardState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dashboardJson = defaults.dashboardJson;
-    	      this.project = defaults.project;
+            $ = new DashboardState(Objects.requireNonNull(defaults));
         }
 
         public Builder dashboardJson(@Nullable Output<String> dashboardJson) {
-            this.dashboardJson = dashboardJson;
+            $.dashboardJson = dashboardJson;
             return this;
         }
-        public Builder dashboardJson(@Nullable String dashboardJson) {
-            this.dashboardJson = Codegen.ofNullable(dashboardJson);
-            return this;
+
+        public Builder dashboardJson(String dashboardJson) {
+            return dashboardJson(Output.of(dashboardJson));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public DashboardState build() {
-            return new DashboardState(dashboardJson, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public DashboardState build() {
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetWirelessDeviceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetWirelessDeviceArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetWirelessDeviceArgs() {}
 
-    private GetWirelessDeviceArgs() {
-        this.id = null;
+    private GetWirelessDeviceArgs(GetWirelessDeviceArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWirelessDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetWirelessDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWirelessDeviceArgs();
         }
 
         public Builder(GetWirelessDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetWirelessDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetWirelessDeviceArgs build() {
-            return new GetWirelessDeviceArgs(id);
+        }
+
+        public GetWirelessDeviceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

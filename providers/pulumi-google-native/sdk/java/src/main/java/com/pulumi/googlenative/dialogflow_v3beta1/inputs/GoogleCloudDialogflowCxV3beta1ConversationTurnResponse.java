@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extend
      * 
      */
     @Import(name="userInput", required=true)
-      private final GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput;
+    private GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput;
 
     public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput() {
         return this.userInput;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extend
      * 
      */
     @Import(name="virtualAgentOutput", required=true)
-      private final GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
+    private GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
     public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput() {
         return this.virtualAgentOutput;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ConversationTurnResponse(
-        GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput,
-        GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
-        this.userInput = Objects.requireNonNull(userInput, "expected parameter 'userInput' to be non-null");
-        this.virtualAgentOutput = Objects.requireNonNull(virtualAgentOutput, "expected parameter 'virtualAgentOutput' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ConversationTurnResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1ConversationTurnResponse() {
-        this.userInput = null;
-        this.virtualAgentOutput = null;
+    private GoogleCloudDialogflowCxV3beta1ConversationTurnResponse(GoogleCloudDialogflowCxV3beta1ConversationTurnResponse $) {
+        this.userInput = $.userInput;
+        this.virtualAgentOutput = $.virtualAgentOutput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ConversationTurnResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput;
-        private GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
+        private GoogleCloudDialogflowCxV3beta1ConversationTurnResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ConversationTurnResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ConversationTurnResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userInput = defaults.userInput;
-    	      this.virtualAgentOutput = defaults.virtualAgentOutput;
+            $ = new GoogleCloudDialogflowCxV3beta1ConversationTurnResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder userInput(GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput) {
-            this.userInput = Objects.requireNonNull(userInput);
+            $.userInput = userInput;
             return this;
         }
+
         public Builder virtualAgentOutput(GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
-            this.virtualAgentOutput = Objects.requireNonNull(virtualAgentOutput);
+            $.virtualAgentOutput = virtualAgentOutput;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1ConversationTurnResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ConversationTurnResponse(userInput, virtualAgentOutput);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ConversationTurnResponse build() {
+            $.userInput = Objects.requireNonNull($.userInput, "expected parameter 'userInput' to be non-null");
+            $.virtualAgentOutput = Objects.requireNonNull($.virtualAgentOutput, "expected parameter 'virtualAgentOutput' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.storsimple.enums.Kind;
 import com.pulumi.azurenative.storsimple.inputs.BandwidthScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bandwidthSettingName")
-      private final @Nullable Output<String> bandwidthSettingName;
+    private @Nullable Output<String> bandwidthSettingName;
 
-    public Output<String> bandwidthSettingName() {
-        return this.bandwidthSettingName == null ? Codegen.empty() : this.bandwidthSettingName;
+    public Optional<Output<String>> bandwidthSettingName() {
+        return Optional.ofNullable(this.bandwidthSettingName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Kind> kind;
+    private @Nullable Output<Kind> kind;
 
-    public Output<Kind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Kind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="managerName", required=true)
-      private final Output<String> managerName;
+    private Output<String> managerName;
 
     public Output<String> managerName() {
         return this.managerName;
@@ -56,7 +56,7 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,105 +67,95 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="schedules", required=true)
-      private final Output<List<BandwidthScheduleArgs>> schedules;
+    private Output<List<BandwidthScheduleArgs>> schedules;
 
     public Output<List<BandwidthScheduleArgs>> schedules() {
         return this.schedules;
     }
 
-    public BandwidthSettingArgs(
-        @Nullable Output<String> bandwidthSettingName,
-        @Nullable Output<Kind> kind,
-        Output<String> managerName,
-        Output<String> resourceGroupName,
-        Output<List<BandwidthScheduleArgs>> schedules) {
-        this.bandwidthSettingName = bandwidthSettingName;
-        this.kind = kind;
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schedules = Objects.requireNonNull(schedules, "expected parameter 'schedules' to be non-null");
-    }
+    private BandwidthSettingArgs() {}
 
-    private BandwidthSettingArgs() {
-        this.bandwidthSettingName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.managerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.schedules = Codegen.empty();
+    private BandwidthSettingArgs(BandwidthSettingArgs $) {
+        this.bandwidthSettingName = $.bandwidthSettingName;
+        this.kind = $.kind;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schedules = $.schedules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BandwidthSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bandwidthSettingName;
-        private @Nullable Output<Kind> kind;
-        private Output<String> managerName;
-        private Output<String> resourceGroupName;
-        private Output<List<BandwidthScheduleArgs>> schedules;
+        private BandwidthSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BandwidthSettingArgs();
         }
 
         public Builder(BandwidthSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandwidthSettingName = defaults.bandwidthSettingName;
-    	      this.kind = defaults.kind;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schedules = defaults.schedules;
+            $ = new BandwidthSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bandwidthSettingName(@Nullable Output<String> bandwidthSettingName) {
-            this.bandwidthSettingName = bandwidthSettingName;
+            $.bandwidthSettingName = bandwidthSettingName;
             return this;
         }
-        public Builder bandwidthSettingName(@Nullable String bandwidthSettingName) {
-            this.bandwidthSettingName = Codegen.ofNullable(bandwidthSettingName);
-            return this;
+
+        public Builder bandwidthSettingName(String bandwidthSettingName) {
+            return bandwidthSettingName(Output.of(bandwidthSettingName));
         }
+
         public Builder kind(@Nullable Output<Kind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Kind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Kind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder managerName(Output<String> managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Output.of(Objects.requireNonNull(managerName));
-            return this;
+            return managerName(Output.of(managerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder schedules(Output<List<BandwidthScheduleArgs>> schedules) {
-            this.schedules = Objects.requireNonNull(schedules);
+            $.schedules = schedules;
             return this;
         }
+
         public Builder schedules(List<BandwidthScheduleArgs> schedules) {
-            this.schedules = Output.of(Objects.requireNonNull(schedules));
-            return this;
+            return schedules(Output.of(schedules));
         }
+
         public Builder schedules(BandwidthScheduleArgs... schedules) {
             return schedules(List.of(schedules));
-        }        public BandwidthSettingArgs build() {
-            return new BandwidthSettingArgs(bandwidthSettingName, kind, managerName, resourceGroupName, schedules);
+        }
+
+        public BandwidthSettingArgs build() {
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.schedules = Objects.requireNonNull($.schedules, "expected parameter 'schedules' to be non-null");
+            return $;
         }
     }
+
 }

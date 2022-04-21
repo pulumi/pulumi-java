@@ -6,10 +6,10 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ScaleRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxReplicas")
-      private final @Nullable Output<Integer> maxReplicas;
+    private @Nullable Output<Integer> maxReplicas;
 
-    public Output<Integer> maxReplicas() {
-        return this.maxReplicas == null ? Codegen.empty() : this.maxReplicas;
+    public Optional<Output<Integer>> maxReplicas() {
+        return Optional.ofNullable(this.maxReplicas);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minReplicas")
-      private final @Nullable Output<Integer> minReplicas;
+    private @Nullable Output<Integer> minReplicas;
 
-    public Output<Integer> minReplicas() {
-        return this.minReplicas == null ? Codegen.empty() : this.minReplicas;
+    public Optional<Output<Integer>> minReplicas() {
+        return Optional.ofNullable(this.minReplicas);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<ScaleRuleArgs>> rules;
+    private @Nullable Output<List<ScaleRuleArgs>> rules;
 
-    public Output<List<ScaleRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<ScaleRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public ScaleArgs(
-        @Nullable Output<Integer> maxReplicas,
-        @Nullable Output<Integer> minReplicas,
-        @Nullable Output<List<ScaleRuleArgs>> rules) {
-        this.maxReplicas = maxReplicas;
-        this.minReplicas = minReplicas;
-        this.rules = rules;
-    }
+    private ScaleArgs() {}
 
-    private ScaleArgs() {
-        this.maxReplicas = Codegen.empty();
-        this.minReplicas = Codegen.empty();
-        this.rules = Codegen.empty();
+    private ScaleArgs(ScaleArgs $) {
+        this.maxReplicas = $.maxReplicas;
+        this.minReplicas = $.minReplicas;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxReplicas;
-        private @Nullable Output<Integer> minReplicas;
-        private @Nullable Output<List<ScaleRuleArgs>> rules;
+        private ScaleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleArgs();
         }
 
         public Builder(ScaleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxReplicas = defaults.maxReplicas;
-    	      this.minReplicas = defaults.minReplicas;
-    	      this.rules = defaults.rules;
+            $ = new ScaleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
-            this.maxReplicas = maxReplicas;
+            $.maxReplicas = maxReplicas;
             return this;
         }
-        public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = Codegen.ofNullable(maxReplicas);
-            return this;
+
+        public Builder maxReplicas(Integer maxReplicas) {
+            return maxReplicas(Output.of(maxReplicas));
         }
+
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
-            this.minReplicas = minReplicas;
+            $.minReplicas = minReplicas;
             return this;
         }
-        public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = Codegen.ofNullable(minReplicas);
-            return this;
+
+        public Builder minReplicas(Integer minReplicas) {
+            return minReplicas(Output.of(minReplicas));
         }
+
         public Builder rules(@Nullable Output<List<ScaleRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<ScaleRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<ScaleRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(ScaleRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public ScaleArgs build() {
-            return new ScaleArgs(maxReplicas, minReplicas, rules);
+        }
+
+        public ScaleArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.emr;
 import com.pulumi.aws.emr.inputs.ManagedScalingPolicyComputeLimitArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class ManagedScalingPolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="clusterId", required=true)
-      private final Output<String> clusterId;
+    private Output<String> clusterId;
 
     public Output<String> clusterId() {
         return this.clusterId;
@@ -32,66 +31,64 @@ public final class ManagedScalingPolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="computeLimits", required=true)
-      private final Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits;
+    private Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits;
 
     public Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits() {
         return this.computeLimits;
     }
 
-    public ManagedScalingPolicyArgs(
-        Output<String> clusterId,
-        Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits) {
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.computeLimits = Objects.requireNonNull(computeLimits, "expected parameter 'computeLimits' to be non-null");
-    }
+    private ManagedScalingPolicyArgs() {}
 
-    private ManagedScalingPolicyArgs() {
-        this.clusterId = Codegen.empty();
-        this.computeLimits = Codegen.empty();
+    private ManagedScalingPolicyArgs(ManagedScalingPolicyArgs $) {
+        this.clusterId = $.clusterId;
+        this.computeLimits = $.computeLimits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedScalingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterId;
-        private Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits;
+        private ManagedScalingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedScalingPolicyArgs();
         }
 
         public Builder(ManagedScalingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.computeLimits = defaults.computeLimits;
+            $ = new ManagedScalingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(Output<String> clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder clusterId(String clusterId) {
-            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
-            return this;
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder computeLimits(Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits) {
-            this.computeLimits = Objects.requireNonNull(computeLimits);
+            $.computeLimits = computeLimits;
             return this;
         }
+
         public Builder computeLimits(List<ManagedScalingPolicyComputeLimitArgs> computeLimits) {
-            this.computeLimits = Output.of(Objects.requireNonNull(computeLimits));
-            return this;
+            return computeLimits(Output.of(computeLimits));
         }
+
         public Builder computeLimits(ManagedScalingPolicyComputeLimitArgs... computeLimits) {
             return computeLimits(List.of(computeLimits));
-        }        public ManagedScalingPolicyArgs build() {
-            return new ManagedScalingPolicyArgs(clusterId, computeLimits);
+        }
+
+        public ManagedScalingPolicyArgs build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            $.computeLimits = Objects.requireNonNull($.computeLimits, "expected parameter 'computeLimits' to be non-null");
+            return $;
         }
     }
+
 }

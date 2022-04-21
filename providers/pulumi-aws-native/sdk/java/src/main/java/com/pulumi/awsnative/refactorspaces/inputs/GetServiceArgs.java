@@ -13,78 +13,73 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
     @Import(name="applicationIdentifier", required=true)
-      private final String applicationIdentifier;
+    private String applicationIdentifier;
 
     public String applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="environmentIdentifier", required=true)
-      private final String environmentIdentifier;
+    private String environmentIdentifier;
 
     public String environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @Import(name="serviceIdentifier", required=true)
-      private final String serviceIdentifier;
+    private String serviceIdentifier;
 
     public String serviceIdentifier() {
         return this.serviceIdentifier;
     }
 
-    public GetServiceArgs(
-        String applicationIdentifier,
-        String environmentIdentifier,
-        String serviceIdentifier) {
-        this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
-        this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
-        this.serviceIdentifier = Objects.requireNonNull(serviceIdentifier, "expected parameter 'serviceIdentifier' to be non-null");
-    }
+    private GetServiceArgs() {}
 
-    private GetServiceArgs() {
-        this.applicationIdentifier = null;
-        this.environmentIdentifier = null;
-        this.serviceIdentifier = null;
+    private GetServiceArgs(GetServiceArgs $) {
+        this.applicationIdentifier = $.applicationIdentifier;
+        this.environmentIdentifier = $.environmentIdentifier;
+        this.serviceIdentifier = $.serviceIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationIdentifier;
-        private String environmentIdentifier;
-        private String serviceIdentifier;
+        private GetServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceArgs();
         }
 
         public Builder(GetServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationIdentifier = defaults.applicationIdentifier;
-    	      this.environmentIdentifier = defaults.environmentIdentifier;
-    	      this.serviceIdentifier = defaults.serviceIdentifier;
+            $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationIdentifier(String applicationIdentifier) {
-            this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
+            $.applicationIdentifier = applicationIdentifier;
             return this;
         }
+
         public Builder environmentIdentifier(String environmentIdentifier) {
-            this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
+            $.environmentIdentifier = environmentIdentifier;
             return this;
         }
+
         public Builder serviceIdentifier(String serviceIdentifier) {
-            this.serviceIdentifier = Objects.requireNonNull(serviceIdentifier);
+            $.serviceIdentifier = serviceIdentifier;
             return this;
-        }        public GetServiceArgs build() {
-            return new GetServiceArgs(applicationIdentifier, environmentIdentifier, serviceIdentifier);
+        }
+
+        public GetServiceArgs build() {
+            $.applicationIdentifier = Objects.requireNonNull($.applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
+            $.environmentIdentifier = Objects.requireNonNull($.environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
+            $.serviceIdentifier = Objects.requireNonNull($.serviceIdentifier, "expected parameter 'serviceIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

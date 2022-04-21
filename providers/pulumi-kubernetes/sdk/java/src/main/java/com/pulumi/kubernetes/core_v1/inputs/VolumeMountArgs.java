@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountPath", required=true)
-      private final Output<String> mountPath;
+    private Output<String> mountPath;
 
     public Output<String> mountPath() {
         return this.mountPath;
@@ -36,10 +36,10 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountPropagation")
-      private final @Nullable Output<String> mountPropagation;
+    private @Nullable Output<String> mountPropagation;
 
-    public Output<String> mountPropagation() {
-        return this.mountPropagation == null ? Codegen.empty() : this.mountPropagation;
+    public Optional<Output<String>> mountPropagation() {
+        return Optional.ofNullable(this.mountPropagation);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -58,10 +58,10 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subPath")
-      private final @Nullable Output<String> subPath;
+    private @Nullable Output<String> subPath;
 
-    public Output<String> subPath() {
-        return this.subPath == null ? Codegen.empty() : this.subPath;
+    public Optional<Output<String>> subPath() {
+        return Optional.ofNullable(this.subPath);
     }
 
     /**
@@ -80,115 +80,100 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subPathExpr")
-      private final @Nullable Output<String> subPathExpr;
+    private @Nullable Output<String> subPathExpr;
 
-    public Output<String> subPathExpr() {
-        return this.subPathExpr == null ? Codegen.empty() : this.subPathExpr;
+    public Optional<Output<String>> subPathExpr() {
+        return Optional.ofNullable(this.subPathExpr);
     }
 
-    public VolumeMountArgs(
-        Output<String> mountPath,
-        @Nullable Output<String> mountPropagation,
-        Output<String> name,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<String> subPath,
-        @Nullable Output<String> subPathExpr) {
-        this.mountPath = Objects.requireNonNull(mountPath, "expected parameter 'mountPath' to be non-null");
-        this.mountPropagation = mountPropagation;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.readOnly = readOnly;
-        this.subPath = subPath;
-        this.subPathExpr = subPathExpr;
-    }
+    private VolumeMountArgs() {}
 
-    private VolumeMountArgs() {
-        this.mountPath = Codegen.empty();
-        this.mountPropagation = Codegen.empty();
-        this.name = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.subPath = Codegen.empty();
-        this.subPathExpr = Codegen.empty();
+    private VolumeMountArgs(VolumeMountArgs $) {
+        this.mountPath = $.mountPath;
+        this.mountPropagation = $.mountPropagation;
+        this.name = $.name;
+        this.readOnly = $.readOnly;
+        this.subPath = $.subPath;
+        this.subPathExpr = $.subPathExpr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeMountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> mountPath;
-        private @Nullable Output<String> mountPropagation;
-        private Output<String> name;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<String> subPath;
-        private @Nullable Output<String> subPathExpr;
+        private VolumeMountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeMountArgs();
         }
 
         public Builder(VolumeMountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.mountPropagation = defaults.mountPropagation;
-    	      this.name = defaults.name;
-    	      this.readOnly = defaults.readOnly;
-    	      this.subPath = defaults.subPath;
-    	      this.subPathExpr = defaults.subPathExpr;
+            $ = new VolumeMountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(Output<String> mountPath) {
-            this.mountPath = Objects.requireNonNull(mountPath);
+            $.mountPath = mountPath;
             return this;
         }
+
         public Builder mountPath(String mountPath) {
-            this.mountPath = Output.of(Objects.requireNonNull(mountPath));
-            return this;
+            return mountPath(Output.of(mountPath));
         }
+
         public Builder mountPropagation(@Nullable Output<String> mountPropagation) {
-            this.mountPropagation = mountPropagation;
+            $.mountPropagation = mountPropagation;
             return this;
         }
-        public Builder mountPropagation(@Nullable String mountPropagation) {
-            this.mountPropagation = Codegen.ofNullable(mountPropagation);
-            return this;
+
+        public Builder mountPropagation(String mountPropagation) {
+            return mountPropagation(Output.of(mountPropagation));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder subPath(@Nullable Output<String> subPath) {
-            this.subPath = subPath;
+            $.subPath = subPath;
             return this;
         }
-        public Builder subPath(@Nullable String subPath) {
-            this.subPath = Codegen.ofNullable(subPath);
-            return this;
+
+        public Builder subPath(String subPath) {
+            return subPath(Output.of(subPath));
         }
+
         public Builder subPathExpr(@Nullable Output<String> subPathExpr) {
-            this.subPathExpr = subPathExpr;
+            $.subPathExpr = subPathExpr;
             return this;
         }
-        public Builder subPathExpr(@Nullable String subPathExpr) {
-            this.subPathExpr = Codegen.ofNullable(subPathExpr);
-            return this;
-        }        public VolumeMountArgs build() {
-            return new VolumeMountArgs(mountPath, mountPropagation, name, readOnly, subPath, subPathExpr);
+
+        public Builder subPathExpr(String subPathExpr) {
+            return subPathExpr(Output.of(subPathExpr));
+        }
+
+        public VolumeMountArgs build() {
+            $.mountPath = Objects.requireNonNull($.mountPath, "expected parameter 'mountPath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

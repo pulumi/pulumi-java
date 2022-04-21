@@ -18,7 +18,7 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -29,7 +29,7 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -40,64 +40,59 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scope", required=true)
-      private final RegexPatternSetScope scope;
+    private RegexPatternSetScope scope;
 
     public RegexPatternSetScope scope() {
         return this.scope;
     }
 
-    public GetRegexPatternSetArgs(
-        String id,
-        String name,
-        RegexPatternSetScope scope) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetRegexPatternSetArgs() {}
 
-    private GetRegexPatternSetArgs() {
-        this.id = null;
-        this.name = null;
-        this.scope = null;
+    private GetRegexPatternSetArgs(GetRegexPatternSetArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegexPatternSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private RegexPatternSetScope scope;
+        private GetRegexPatternSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegexPatternSetArgs();
         }
 
         public Builder(GetRegexPatternSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.scope = defaults.scope;
+            $ = new GetRegexPatternSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder scope(RegexPatternSetScope scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetRegexPatternSetArgs build() {
-            return new GetRegexPatternSetArgs(id, name, scope);
+        }
+
+        public GetRegexPatternSetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

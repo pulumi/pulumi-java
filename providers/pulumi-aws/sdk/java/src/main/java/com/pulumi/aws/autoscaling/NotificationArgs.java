@@ -5,7 +5,6 @@ package com.pulumi.aws.autoscaling;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupNames", required=true)
-      private final Output<List<String>> groupNames;
+    private Output<List<String>> groupNames;
 
     public Output<List<String>> groupNames() {
         return this.groupNames;
@@ -32,7 +31,7 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notifications", required=true)
-      private final Output<List<String>> notifications;
+    private Output<List<String>> notifications;
 
     public Output<List<String>> notifications() {
         return this.notifications;
@@ -43,82 +42,79 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topicArn", required=true)
-      private final Output<String> topicArn;
+    private Output<String> topicArn;
 
     public Output<String> topicArn() {
         return this.topicArn;
     }
 
-    public NotificationArgs(
-        Output<List<String>> groupNames,
-        Output<List<String>> notifications,
-        Output<String> topicArn) {
-        this.groupNames = Objects.requireNonNull(groupNames, "expected parameter 'groupNames' to be non-null");
-        this.notifications = Objects.requireNonNull(notifications, "expected parameter 'notifications' to be non-null");
-        this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
-    }
+    private NotificationArgs() {}
 
-    private NotificationArgs() {
-        this.groupNames = Codegen.empty();
-        this.notifications = Codegen.empty();
-        this.topicArn = Codegen.empty();
+    private NotificationArgs(NotificationArgs $) {
+        this.groupNames = $.groupNames;
+        this.notifications = $.notifications;
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> groupNames;
-        private Output<List<String>> notifications;
-        private Output<String> topicArn;
+        private NotificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationArgs();
         }
 
         public Builder(NotificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupNames = defaults.groupNames;
-    	      this.notifications = defaults.notifications;
-    	      this.topicArn = defaults.topicArn;
+            $ = new NotificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupNames(Output<List<String>> groupNames) {
-            this.groupNames = Objects.requireNonNull(groupNames);
+            $.groupNames = groupNames;
             return this;
         }
+
         public Builder groupNames(List<String> groupNames) {
-            this.groupNames = Output.of(Objects.requireNonNull(groupNames));
-            return this;
+            return groupNames(Output.of(groupNames));
         }
+
         public Builder groupNames(String... groupNames) {
             return groupNames(List.of(groupNames));
         }
+
         public Builder notifications(Output<List<String>> notifications) {
-            this.notifications = Objects.requireNonNull(notifications);
+            $.notifications = notifications;
             return this;
         }
+
         public Builder notifications(List<String> notifications) {
-            this.notifications = Output.of(Objects.requireNonNull(notifications));
-            return this;
+            return notifications(Output.of(notifications));
         }
+
         public Builder notifications(String... notifications) {
             return notifications(List.of(notifications));
         }
+
         public Builder topicArn(Output<String> topicArn) {
-            this.topicArn = Objects.requireNonNull(topicArn);
+            $.topicArn = topicArn;
             return this;
         }
+
         public Builder topicArn(String topicArn) {
-            this.topicArn = Output.of(Objects.requireNonNull(topicArn));
-            return this;
-        }        public NotificationArgs build() {
-            return new NotificationArgs(groupNames, notifications, topicArn);
+            return topicArn(Output.of(topicArn));
+        }
+
+        public NotificationArgs build() {
+            $.groupNames = Objects.requireNonNull($.groupNames, "expected parameter 'groupNames' to be non-null");
+            $.notifications = Objects.requireNonNull($.notifications, "expected parameter 'notifications' to be non-null");
+            $.topicArn = Objects.requireNonNull($.topicArn, "expected parameter 'topicArn' to be non-null");
+            return $;
         }
     }
+
 }

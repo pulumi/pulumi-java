@@ -17,7 +17,7 @@ public final class GetApiPortalCustomDomainArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="apiPortalName", required=true)
-      private final String apiPortalName;
+    private String apiPortalName;
 
     public String apiPortalName() {
         return this.apiPortalName;
@@ -28,7 +28,7 @@ public final class GetApiPortalCustomDomainArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -39,7 +39,7 @@ public final class GetApiPortalCustomDomainArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetApiPortalCustomDomainArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetApiPortalCustomDomainArgs(
-        String apiPortalName,
-        String domainName,
-        String resourceGroupName,
-        String serviceName) {
-        this.apiPortalName = Objects.requireNonNull(apiPortalName, "expected parameter 'apiPortalName' to be non-null");
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetApiPortalCustomDomainArgs() {}
 
-    private GetApiPortalCustomDomainArgs() {
-        this.apiPortalName = null;
-        this.domainName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetApiPortalCustomDomainArgs(GetApiPortalCustomDomainArgs $) {
+        this.apiPortalName = $.apiPortalName;
+        this.domainName = $.domainName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiPortalCustomDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiPortalName;
-        private String domainName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetApiPortalCustomDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiPortalCustomDomainArgs();
         }
 
         public Builder(GetApiPortalCustomDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiPortalName = defaults.apiPortalName;
-    	      this.domainName = defaults.domainName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetApiPortalCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiPortalName(String apiPortalName) {
-            this.apiPortalName = Objects.requireNonNull(apiPortalName);
+            $.apiPortalName = apiPortalName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetApiPortalCustomDomainArgs build() {
-            return new GetApiPortalCustomDomainArgs(apiPortalName, domainName, resourceGroupName, serviceName);
+        }
+
+        public GetApiPortalCustomDomainArgs build() {
+            $.apiPortalName = Objects.requireNonNull($.apiPortalName, "expected parameter 'apiPortalName' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

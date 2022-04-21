@@ -23,10 +23,10 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ip")
-      private final @Nullable String ip;
+    private @Nullable String ip;
 
     public Optional<String> ip() {
-        return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
+        return Optional.ofNullable(this.ip);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="visibility")
-      private final @Nullable String visibility;
+    private @Nullable String visibility;
 
     public Optional<String> visibility() {
-        return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
+        return Optional.ofNullable(this.visibility);
     }
 
-    public IngressProfileResponse(
-        @Nullable String ip,
-        @Nullable String name,
-        @Nullable String visibility) {
-        this.ip = ip;
-        this.name = name;
-        this.visibility = visibility;
-    }
+    private IngressProfileResponse() {}
 
-    private IngressProfileResponse() {
-        this.ip = null;
-        this.name = null;
-        this.visibility = null;
+    private IngressProfileResponse(IngressProfileResponse $) {
+        this.ip = $.ip;
+        this.name = $.name;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ip;
-        private @Nullable String name;
-        private @Nullable String visibility;
+        private IngressProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressProfileResponse();
         }
 
         public Builder(IngressProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
-    	      this.name = defaults.name;
-    	      this.visibility = defaults.visibility;
+            $ = new IngressProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder visibility(@Nullable String visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
-        }        public IngressProfileResponse build() {
-            return new IngressProfileResponse(ip, name, visibility);
+        }
+
+        public IngressProfileResponse build() {
+            return $;
         }
     }
+
 }

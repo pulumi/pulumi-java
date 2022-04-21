@@ -24,10 +24,10 @@ public final class BucketAccessRules extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowPublicOverrides")
-      private final @Nullable Boolean allowPublicOverrides;
+    private @Nullable Boolean allowPublicOverrides;
 
     public Optional<Boolean> allowPublicOverrides() {
-        return this.allowPublicOverrides == null ? Optional.empty() : Optional.ofNullable(this.allowPublicOverrides);
+        return Optional.ofNullable(this.allowPublicOverrides);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class BucketAccessRules extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="getObject")
-      private final @Nullable String getObject;
+    private @Nullable String getObject;
 
     public Optional<String> getObject() {
-        return this.getObject == null ? Optional.empty() : Optional.ofNullable(this.getObject);
+        return Optional.ofNullable(this.getObject);
     }
 
-    public BucketAccessRules(
-        @Nullable Boolean allowPublicOverrides,
-        @Nullable String getObject) {
-        this.allowPublicOverrides = allowPublicOverrides;
-        this.getObject = getObject;
-    }
+    private BucketAccessRules() {}
 
-    private BucketAccessRules() {
-        this.allowPublicOverrides = null;
-        this.getObject = null;
+    private BucketAccessRules(BucketAccessRules $) {
+        this.allowPublicOverrides = $.allowPublicOverrides;
+        this.getObject = $.getObject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAccessRules defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowPublicOverrides;
-        private @Nullable String getObject;
+        private BucketAccessRules $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAccessRules();
         }
 
         public Builder(BucketAccessRules defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPublicOverrides = defaults.allowPublicOverrides;
-    	      this.getObject = defaults.getObject;
+            $ = new BucketAccessRules(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPublicOverrides(@Nullable Boolean allowPublicOverrides) {
-            this.allowPublicOverrides = allowPublicOverrides;
+            $.allowPublicOverrides = allowPublicOverrides;
             return this;
         }
+
         public Builder getObject(@Nullable String getObject) {
-            this.getObject = getObject;
+            $.getObject = getObject;
             return this;
-        }        public BucketAccessRules build() {
-            return new BucketAccessRules(allowPublicOverrides, getObject);
+        }
+
+        public BucketAccessRules build() {
+            return $;
         }
     }
+
 }

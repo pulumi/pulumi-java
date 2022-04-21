@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends com.pulumi.re
     public static final ApplicationCloudwatchLoggingOptionsArgs Empty = new ApplicationCloudwatchLoggingOptionsArgs();
 
     @Import(name="cloudwatchLoggingOptionId")
-      private final @Nullable Output<String> cloudwatchLoggingOptionId;
+    private @Nullable Output<String> cloudwatchLoggingOptionId;
 
-    public Output<String> cloudwatchLoggingOptionId() {
-        return this.cloudwatchLoggingOptionId == null ? Codegen.empty() : this.cloudwatchLoggingOptionId;
+    public Optional<Output<String>> cloudwatchLoggingOptionId() {
+        return Optional.ofNullable(this.cloudwatchLoggingOptionId);
     }
 
     /**
@@ -27,63 +27,59 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends com.pulumi.re
      * 
      */
     @Import(name="logStreamArn", required=true)
-      private final Output<String> logStreamArn;
+    private Output<String> logStreamArn;
 
     public Output<String> logStreamArn() {
         return this.logStreamArn;
     }
 
-    public ApplicationCloudwatchLoggingOptionsArgs(
-        @Nullable Output<String> cloudwatchLoggingOptionId,
-        Output<String> logStreamArn) {
-        this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
-        this.logStreamArn = Objects.requireNonNull(logStreamArn, "expected parameter 'logStreamArn' to be non-null");
-    }
+    private ApplicationCloudwatchLoggingOptionsArgs() {}
 
-    private ApplicationCloudwatchLoggingOptionsArgs() {
-        this.cloudwatchLoggingOptionId = Codegen.empty();
-        this.logStreamArn = Codegen.empty();
+    private ApplicationCloudwatchLoggingOptionsArgs(ApplicationCloudwatchLoggingOptionsArgs $) {
+        this.cloudwatchLoggingOptionId = $.cloudwatchLoggingOptionId;
+        this.logStreamArn = $.logStreamArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationCloudwatchLoggingOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudwatchLoggingOptionId;
-        private Output<String> logStreamArn;
+        private ApplicationCloudwatchLoggingOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationCloudwatchLoggingOptionsArgs();
         }
 
         public Builder(ApplicationCloudwatchLoggingOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchLoggingOptionId = defaults.cloudwatchLoggingOptionId;
-    	      this.logStreamArn = defaults.logStreamArn;
+            $ = new ApplicationCloudwatchLoggingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchLoggingOptionId(@Nullable Output<String> cloudwatchLoggingOptionId) {
-            this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
+            $.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
             return this;
         }
-        public Builder cloudwatchLoggingOptionId(@Nullable String cloudwatchLoggingOptionId) {
-            this.cloudwatchLoggingOptionId = Codegen.ofNullable(cloudwatchLoggingOptionId);
-            return this;
+
+        public Builder cloudwatchLoggingOptionId(String cloudwatchLoggingOptionId) {
+            return cloudwatchLoggingOptionId(Output.of(cloudwatchLoggingOptionId));
         }
+
         public Builder logStreamArn(Output<String> logStreamArn) {
-            this.logStreamArn = Objects.requireNonNull(logStreamArn);
+            $.logStreamArn = logStreamArn;
             return this;
         }
+
         public Builder logStreamArn(String logStreamArn) {
-            this.logStreamArn = Output.of(Objects.requireNonNull(logStreamArn));
-            return this;
-        }        public ApplicationCloudwatchLoggingOptionsArgs build() {
-            return new ApplicationCloudwatchLoggingOptionsArgs(cloudwatchLoggingOptionId, logStreamArn);
+            return logStreamArn(Output.of(logStreamArn));
+        }
+
+        public ApplicationCloudwatchLoggingOptionsArgs build() {
+            $.logStreamArn = Objects.requireNonNull($.logStreamArn, "expected parameter 'logStreamArn' to be non-null");
+            return $;
         }
     }
+
 }

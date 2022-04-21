@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.quicksight.inputs;
 
-import java.util.Objects;
+
 
 
 public final class DataSetFieldFolderMapArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DataSetFieldFolderMapArgs Empty = new DataSetFieldFolderMapArgs();
 
-    public DataSetFieldFolderMapArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(DataSetFieldFolderMapArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private DataSetFieldFolderMapArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(DataSetFieldFolderMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new DataSetFieldFolderMapArgs();
         }
         public DataSetFieldFolderMapArgs build() {
-            return new DataSetFieldFolderMapArgs();
+            return $;
         }
     }
+
 }

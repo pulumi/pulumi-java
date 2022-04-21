@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ClusterAddonsConfigHorizontalPodAutoscalingGetArgs extends co
      * 
      */
     @Import(name="disabled", required=true)
-      private final Output<Boolean> disabled;
+    private Output<Boolean> disabled;
 
     public Output<Boolean> disabled() {
         return this.disabled;
     }
 
-    public ClusterAddonsConfigHorizontalPodAutoscalingGetArgs(Output<Boolean> disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private ClusterAddonsConfigHorizontalPodAutoscalingGetArgs() {}
 
-    private ClusterAddonsConfigHorizontalPodAutoscalingGetArgs() {
-        this.disabled = Codegen.empty();
+    private ClusterAddonsConfigHorizontalPodAutoscalingGetArgs(ClusterAddonsConfigHorizontalPodAutoscalingGetArgs $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAddonsConfigHorizontalPodAutoscalingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> disabled;
+        private ClusterAddonsConfigHorizontalPodAutoscalingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAddonsConfigHorizontalPodAutoscalingGetArgs();
         }
 
         public Builder(ClusterAddonsConfigHorizontalPodAutoscalingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new ClusterAddonsConfigHorizontalPodAutoscalingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Output<Boolean> disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
         }
+
         public Builder disabled(Boolean disabled) {
-            this.disabled = Output.of(Objects.requireNonNull(disabled));
-            return this;
-        }        public ClusterAddonsConfigHorizontalPodAutoscalingGetArgs build() {
-            return new ClusterAddonsConfigHorizontalPodAutoscalingGetArgs(disabled);
+            return disabled(Output.of(disabled));
+        }
+
+        public ClusterAddonsConfigHorizontalPodAutoscalingGetArgs build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

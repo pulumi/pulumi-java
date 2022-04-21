@@ -5,7 +5,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs extends com.pul
      * 
      */
     @Import(name="definitions", required=true)
-      private final Output<List<String>> definitions;
+    private Output<List<String>> definitions;
 
     public Output<List<String>> definitions() {
         return this.definitions;
     }
 
-    public RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs(Output<List<String>> definitions) {
-        this.definitions = Objects.requireNonNull(definitions, "expected parameter 'definitions' to be non-null");
-    }
+    private RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs() {}
 
-    private RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs() {
-        this.definitions = Codegen.empty();
+    private RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs(RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs $) {
+        this.definitions = $.definitions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> definitions;
+        private RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs();
         }
 
         public Builder(RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definitions = defaults.definitions;
+            $ = new RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder definitions(Output<List<String>> definitions) {
-            this.definitions = Objects.requireNonNull(definitions);
+            $.definitions = definitions;
             return this;
         }
+
         public Builder definitions(List<String> definitions) {
-            this.definitions = Output.of(Objects.requireNonNull(definitions));
-            return this;
+            return definitions(Output.of(definitions));
         }
+
         public Builder definitions(String... definitions) {
             return definitions(List.of(definitions));
-        }        public RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs build() {
-            return new RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs(definitions);
+        }
+
+        public RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs build() {
+            $.definitions = Objects.requireNonNull($.definitions, "expected parameter 'definitions' to be non-null");
+            return $;
         }
     }
+
 }

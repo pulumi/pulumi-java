@@ -17,45 +17,45 @@ public final class PrivateConnectivityResponse extends com.pulumi.resources.Invo
     public static final PrivateConnectivityResponse Empty = new PrivateConnectivityResponse();
 
     @Import(name="privateConnectionName", required=true)
-      private final String privateConnectionName;
+    private String privateConnectionName;
 
     public String privateConnectionName() {
         return this.privateConnectionName;
     }
 
-    public PrivateConnectivityResponse(String privateConnectionName) {
-        this.privateConnectionName = Objects.requireNonNull(privateConnectionName, "expected parameter 'privateConnectionName' to be non-null");
-    }
+    private PrivateConnectivityResponse() {}
 
-    private PrivateConnectivityResponse() {
-        this.privateConnectionName = null;
+    private PrivateConnectivityResponse(PrivateConnectivityResponse $) {
+        this.privateConnectionName = $.privateConnectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateConnectivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateConnectionName;
+        private PrivateConnectivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateConnectivityResponse();
         }
 
         public Builder(PrivateConnectivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateConnectionName = defaults.privateConnectionName;
+            $ = new PrivateConnectivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateConnectionName(String privateConnectionName) {
-            this.privateConnectionName = Objects.requireNonNull(privateConnectionName);
+            $.privateConnectionName = privateConnectionName;
             return this;
-        }        public PrivateConnectivityResponse build() {
-            return new PrivateConnectivityResponse(privateConnectionName);
+        }
+
+        public PrivateConnectivityResponse build() {
+            $.privateConnectionName = Objects.requireNonNull($.privateConnectionName, "expected parameter 'privateConnectionName' to be non-null");
+            return $;
         }
     }
+
 }

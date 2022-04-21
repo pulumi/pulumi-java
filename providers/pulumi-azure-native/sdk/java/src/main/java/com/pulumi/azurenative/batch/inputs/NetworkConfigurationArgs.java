@@ -7,9 +7,9 @@ import com.pulumi.azurenative.batch.inputs.PoolEndpointConfigurationArgs;
 import com.pulumi.azurenative.batch.inputs.PublicIPAddressConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="endpointConfiguration")
-      private final @Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration;
+    private @Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration;
 
-    public Output<PoolEndpointConfigurationArgs> endpointConfiguration() {
-        return this.endpointConfiguration == null ? Codegen.empty() : this.endpointConfiguration;
+    public Optional<Output<PoolEndpointConfigurationArgs>> endpointConfiguration() {
+        return Optional.ofNullable(this.endpointConfiguration);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="publicIPAddressConfiguration")
-      private final @Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+    private @Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
-    public Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration() {
-        return this.publicIPAddressConfiguration == null ? Codegen.empty() : this.publicIPAddressConfiguration;
+    public Optional<Output<PublicIPAddressConfigurationArgs>> publicIPAddressConfiguration() {
+        return Optional.ofNullable(this.publicIPAddressConfiguration);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public NetworkConfigurationArgs(
-        @Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration,
-        @Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration,
-        @Nullable Output<String> subnetId) {
-        this.endpointConfiguration = endpointConfiguration;
-        this.publicIPAddressConfiguration = publicIPAddressConfiguration;
-        this.subnetId = subnetId;
-    }
+    private NetworkConfigurationArgs() {}
 
-    private NetworkConfigurationArgs() {
-        this.endpointConfiguration = Codegen.empty();
-        this.publicIPAddressConfiguration = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private NetworkConfigurationArgs(NetworkConfigurationArgs $) {
+        this.endpointConfiguration = $.endpointConfiguration;
+        this.publicIPAddressConfiguration = $.publicIPAddressConfiguration;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration;
-        private @Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
-        private @Nullable Output<String> subnetId;
+        private NetworkConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigurationArgs();
         }
 
         public Builder(NetworkConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointConfiguration = defaults.endpointConfiguration;
-    	      this.publicIPAddressConfiguration = defaults.publicIPAddressConfiguration;
-    	      this.subnetId = defaults.subnetId;
+            $ = new NetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointConfiguration(@Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration) {
-            this.endpointConfiguration = endpointConfiguration;
+            $.endpointConfiguration = endpointConfiguration;
             return this;
         }
-        public Builder endpointConfiguration(@Nullable PoolEndpointConfigurationArgs endpointConfiguration) {
-            this.endpointConfiguration = Codegen.ofNullable(endpointConfiguration);
-            return this;
+
+        public Builder endpointConfiguration(PoolEndpointConfigurationArgs endpointConfiguration) {
+            return endpointConfiguration(Output.of(endpointConfiguration));
         }
+
         public Builder publicIPAddressConfiguration(@Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = publicIPAddressConfiguration;
+            $.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
-        public Builder publicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = Codegen.ofNullable(publicIPAddressConfiguration);
-            return this;
+
+        public Builder publicIPAddressConfiguration(PublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
+            return publicIPAddressConfiguration(Output.of(publicIPAddressConfiguration));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
-        }        public NetworkConfigurationArgs build() {
-            return new NetworkConfigurationArgs(endpointConfiguration, publicIPAddressConfiguration, subnetId);
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        public NetworkConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DestinationTablePropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DestinationTablePropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DestinationTablePropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class DestinationTablePropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
-    public DestinationTablePropertiesArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> expirationTime,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<Map<String,String>> labels) {
-        this.description = description;
-        this.expirationTime = expirationTime;
-        this.friendlyName = friendlyName;
-        this.labels = labels;
-    }
+    private DestinationTablePropertiesArgs() {}
 
-    private DestinationTablePropertiesArgs() {
-        this.description = Codegen.empty();
-        this.expirationTime = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.labels = Codegen.empty();
+    private DestinationTablePropertiesArgs(DestinationTablePropertiesArgs $) {
+        this.description = $.description;
+        this.expirationTime = $.expirationTime;
+        this.friendlyName = $.friendlyName;
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationTablePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> expirationTime;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<Map<String,String>> labels;
+        private DestinationTablePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationTablePropertiesArgs();
         }
 
         public Builder(DestinationTablePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.labels = defaults.labels;
+            $ = new DestinationTablePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
-        }        public DestinationTablePropertiesArgs build() {
-            return new DestinationTablePropertiesArgs(description, expirationTime, friendlyName, labels);
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
+        }
+
+        public DestinationTablePropertiesArgs build() {
+            return $;
         }
     }
+
 }

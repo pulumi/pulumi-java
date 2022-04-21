@@ -5,9 +5,9 @@ package com.pulumi.awsnative.applicationinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends com.pulumi
      * 
      */
     @Import(name="prometheusPort")
-      private final @Nullable Output<String> prometheusPort;
+    private @Nullable Output<String> prometheusPort;
 
-    public Output<String> prometheusPort() {
-        return this.prometheusPort == null ? Codegen.empty() : this.prometheusPort;
+    public Optional<Output<String>> prometheusPort() {
+        return Optional.ofNullable(this.prometheusPort);
     }
 
-    public ApplicationHAClusterPrometheusExporterArgs(@Nullable Output<String> prometheusPort) {
-        this.prometheusPort = prometheusPort;
-    }
+    private ApplicationHAClusterPrometheusExporterArgs() {}
 
-    private ApplicationHAClusterPrometheusExporterArgs() {
-        this.prometheusPort = Codegen.empty();
+    private ApplicationHAClusterPrometheusExporterArgs(ApplicationHAClusterPrometheusExporterArgs $) {
+        this.prometheusPort = $.prometheusPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationHAClusterPrometheusExporterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> prometheusPort;
+        private ApplicationHAClusterPrometheusExporterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationHAClusterPrometheusExporterArgs();
         }
 
         public Builder(ApplicationHAClusterPrometheusExporterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.prometheusPort = defaults.prometheusPort;
+            $ = new ApplicationHAClusterPrometheusExporterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder prometheusPort(@Nullable Output<String> prometheusPort) {
-            this.prometheusPort = prometheusPort;
+            $.prometheusPort = prometheusPort;
             return this;
         }
-        public Builder prometheusPort(@Nullable String prometheusPort) {
-            this.prometheusPort = Codegen.ofNullable(prometheusPort);
-            return this;
-        }        public ApplicationHAClusterPrometheusExporterArgs build() {
-            return new ApplicationHAClusterPrometheusExporterArgs(prometheusPort);
+
+        public Builder prometheusPort(String prometheusPort) {
+            return prometheusPort(Output.of(prometheusPort));
+        }
+
+        public ApplicationHAClusterPrometheusExporterArgs build() {
+            return $;
         }
     }
+
 }

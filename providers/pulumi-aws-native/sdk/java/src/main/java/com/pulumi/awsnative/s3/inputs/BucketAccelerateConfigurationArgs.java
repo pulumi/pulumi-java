@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketAccelerateConfigurationAccelerationStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class BucketAccelerateConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="accelerationStatus", required=true)
-      private final Output<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus;
+    private Output<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus;
 
     public Output<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus() {
         return this.accelerationStatus;
     }
 
-    public BucketAccelerateConfigurationArgs(Output<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus) {
-        this.accelerationStatus = Objects.requireNonNull(accelerationStatus, "expected parameter 'accelerationStatus' to be non-null");
-    }
+    private BucketAccelerateConfigurationArgs() {}
 
-    private BucketAccelerateConfigurationArgs() {
-        this.accelerationStatus = Codegen.empty();
+    private BucketAccelerateConfigurationArgs(BucketAccelerateConfigurationArgs $) {
+        this.accelerationStatus = $.accelerationStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAccelerateConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus;
+        private BucketAccelerateConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAccelerateConfigurationArgs();
         }
 
         public Builder(BucketAccelerateConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accelerationStatus = defaults.accelerationStatus;
+            $ = new BucketAccelerateConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accelerationStatus(Output<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus) {
-            this.accelerationStatus = Objects.requireNonNull(accelerationStatus);
+            $.accelerationStatus = accelerationStatus;
             return this;
         }
+
         public Builder accelerationStatus(BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
-            this.accelerationStatus = Output.of(Objects.requireNonNull(accelerationStatus));
-            return this;
-        }        public BucketAccelerateConfigurationArgs build() {
-            return new BucketAccelerateConfigurationArgs(accelerationStatus);
+            return accelerationStatus(Output.of(accelerationStatus));
+        }
+
+        public BucketAccelerateConfigurationArgs build() {
+            $.accelerationStatus = Objects.requireNonNull($.accelerationStatus, "expected parameter 'accelerationStatus' to be non-null");
+            return $;
         }
     }
+
 }

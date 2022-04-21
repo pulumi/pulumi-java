@@ -17,45 +17,45 @@ public final class GetVpcPeeringConnectionPeerCidrBlockSet extends com.pulumi.re
      * 
      */
     @Import(name="cidrBlock", required=true)
-      private final String cidrBlock;
+    private String cidrBlock;
 
     public String cidrBlock() {
         return this.cidrBlock;
     }
 
-    public GetVpcPeeringConnectionPeerCidrBlockSet(String cidrBlock) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
-    }
+    private GetVpcPeeringConnectionPeerCidrBlockSet() {}
 
-    private GetVpcPeeringConnectionPeerCidrBlockSet() {
-        this.cidrBlock = null;
+    private GetVpcPeeringConnectionPeerCidrBlockSet(GetVpcPeeringConnectionPeerCidrBlockSet $) {
+        this.cidrBlock = $.cidrBlock;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcPeeringConnectionPeerCidrBlockSet defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cidrBlock;
+        private GetVpcPeeringConnectionPeerCidrBlockSet $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcPeeringConnectionPeerCidrBlockSet();
         }
 
         public Builder(GetVpcPeeringConnectionPeerCidrBlockSet defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
+            $ = new GetVpcPeeringConnectionPeerCidrBlockSet(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Objects.requireNonNull(cidrBlock);
+            $.cidrBlock = cidrBlock;
             return this;
-        }        public GetVpcPeeringConnectionPeerCidrBlockSet build() {
-            return new GetVpcPeeringConnectionPeerCidrBlockSet(cidrBlock);
+        }
+
+        public GetVpcPeeringConnectionPeerCidrBlockSet build() {
+            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
+            return $;
         }
     }
+
 }

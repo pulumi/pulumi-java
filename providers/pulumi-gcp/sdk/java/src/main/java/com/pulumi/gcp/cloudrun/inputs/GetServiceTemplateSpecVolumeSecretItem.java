@@ -14,78 +14,73 @@ public final class GetServiceTemplateSpecVolumeSecretItem extends com.pulumi.res
     public static final GetServiceTemplateSpecVolumeSecretItem Empty = new GetServiceTemplateSpecVolumeSecretItem();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="mode", required=true)
-      private final Integer mode;
+    private Integer mode;
 
     public Integer mode() {
         return this.mode;
     }
 
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public GetServiceTemplateSpecVolumeSecretItem(
-        String key,
-        Integer mode,
-        String path) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private GetServiceTemplateSpecVolumeSecretItem() {}
 
-    private GetServiceTemplateSpecVolumeSecretItem() {
-        this.key = null;
-        this.mode = null;
-        this.path = null;
+    private GetServiceTemplateSpecVolumeSecretItem(GetServiceTemplateSpecVolumeSecretItem $) {
+        this.key = $.key;
+        this.mode = $.mode;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecVolumeSecretItem defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private Integer mode;
-        private String path;
+        private GetServiceTemplateSpecVolumeSecretItem $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecVolumeSecretItem();
         }
 
         public Builder(GetServiceTemplateSpecVolumeSecretItem defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.mode = defaults.mode;
-    	      this.path = defaults.path;
+            $ = new GetServiceTemplateSpecVolumeSecretItem(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder mode(Integer mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public GetServiceTemplateSpecVolumeSecretItem build() {
-            return new GetServiceTemplateSpecVolumeSecretItem(key, mode, path);
+        }
+
+        public GetServiceTemplateSpecVolumeSecretItem build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

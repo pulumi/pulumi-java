@@ -13,78 +13,73 @@ public final class GetEnvironmentConfigWorkloadsConfigWebServer extends com.pulu
     public static final GetEnvironmentConfigWorkloadsConfigWebServer Empty = new GetEnvironmentConfigWorkloadsConfigWebServer();
 
     @Import(name="cpu", required=true)
-      private final Double cpu;
+    private Double cpu;
 
     public Double cpu() {
         return this.cpu;
     }
 
     @Import(name="memoryGb", required=true)
-      private final Double memoryGb;
+    private Double memoryGb;
 
     public Double memoryGb() {
         return this.memoryGb;
     }
 
     @Import(name="storageGb", required=true)
-      private final Double storageGb;
+    private Double storageGb;
 
     public Double storageGb() {
         return this.storageGb;
     }
 
-    public GetEnvironmentConfigWorkloadsConfigWebServer(
-        Double cpu,
-        Double memoryGb,
-        Double storageGb) {
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.memoryGb = Objects.requireNonNull(memoryGb, "expected parameter 'memoryGb' to be non-null");
-        this.storageGb = Objects.requireNonNull(storageGb, "expected parameter 'storageGb' to be non-null");
-    }
+    private GetEnvironmentConfigWorkloadsConfigWebServer() {}
 
-    private GetEnvironmentConfigWorkloadsConfigWebServer() {
-        this.cpu = null;
-        this.memoryGb = null;
-        this.storageGb = null;
+    private GetEnvironmentConfigWorkloadsConfigWebServer(GetEnvironmentConfigWorkloadsConfigWebServer $) {
+        this.cpu = $.cpu;
+        this.memoryGb = $.memoryGb;
+        this.storageGb = $.storageGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigWorkloadsConfigWebServer defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double cpu;
-        private Double memoryGb;
-        private Double storageGb;
+        private GetEnvironmentConfigWorkloadsConfigWebServer $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigWorkloadsConfigWebServer();
         }
 
         public Builder(GetEnvironmentConfigWorkloadsConfigWebServer defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.memoryGb = defaults.memoryGb;
-    	      this.storageGb = defaults.storageGb;
+            $ = new GetEnvironmentConfigWorkloadsConfigWebServer(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(Double cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder memoryGb(Double memoryGb) {
-            this.memoryGb = Objects.requireNonNull(memoryGb);
+            $.memoryGb = memoryGb;
             return this;
         }
+
         public Builder storageGb(Double storageGb) {
-            this.storageGb = Objects.requireNonNull(storageGb);
+            $.storageGb = storageGb;
             return this;
-        }        public GetEnvironmentConfigWorkloadsConfigWebServer build() {
-            return new GetEnvironmentConfigWorkloadsConfigWebServer(cpu, memoryGb, storageGb);
+        }
+
+        public GetEnvironmentConfigWorkloadsConfigWebServer build() {
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.memoryGb = Objects.requireNonNull($.memoryGb, "expected parameter 'memoryGb' to be non-null");
+            $.storageGb = Objects.requireNonNull($.storageGb, "expected parameter 'storageGb' to be non-null");
+            return $;
         }
     }
+
 }

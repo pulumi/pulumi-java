@@ -15,78 +15,72 @@ public final class GetCapacityCommitmentArgs extends com.pulumi.resources.Invoke
     public static final GetCapacityCommitmentArgs Empty = new GetCapacityCommitmentArgs();
 
     @Import(name="capacityCommitmentId", required=true)
-      private final String capacityCommitmentId;
+    private String capacityCommitmentId;
 
     public String capacityCommitmentId() {
         return this.capacityCommitmentId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetCapacityCommitmentArgs(
-        String capacityCommitmentId,
-        String location,
-        @Nullable String project) {
-        this.capacityCommitmentId = Objects.requireNonNull(capacityCommitmentId, "expected parameter 'capacityCommitmentId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetCapacityCommitmentArgs() {}
 
-    private GetCapacityCommitmentArgs() {
-        this.capacityCommitmentId = null;
-        this.location = null;
-        this.project = null;
+    private GetCapacityCommitmentArgs(GetCapacityCommitmentArgs $) {
+        this.capacityCommitmentId = $.capacityCommitmentId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCapacityCommitmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String capacityCommitmentId;
-        private String location;
-        private @Nullable String project;
+        private GetCapacityCommitmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCapacityCommitmentArgs();
         }
 
         public Builder(GetCapacityCommitmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityCommitmentId = defaults.capacityCommitmentId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetCapacityCommitmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityCommitmentId(String capacityCommitmentId) {
-            this.capacityCommitmentId = Objects.requireNonNull(capacityCommitmentId);
+            $.capacityCommitmentId = capacityCommitmentId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetCapacityCommitmentArgs build() {
-            return new GetCapacityCommitmentArgs(capacityCommitmentId, location, project);
+        }
+
+        public GetCapacityCommitmentArgs build() {
+            $.capacityCommitmentId = Objects.requireNonNull($.capacityCommitmentId, "expected parameter 'capacityCommitmentId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

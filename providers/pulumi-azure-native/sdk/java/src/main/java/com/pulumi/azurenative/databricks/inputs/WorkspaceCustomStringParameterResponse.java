@@ -21,7 +21,7 @@ public final class WorkspaceCustomStringParameterResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -32,55 +32,52 @@ public final class WorkspaceCustomStringParameterResponse extends com.pulumi.res
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public WorkspaceCustomStringParameterResponse(
-        String type,
-        String value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private WorkspaceCustomStringParameterResponse() {}
 
-    private WorkspaceCustomStringParameterResponse() {
-        this.type = null;
-        this.value = null;
+    private WorkspaceCustomStringParameterResponse(WorkspaceCustomStringParameterResponse $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceCustomStringParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private String value;
+        private WorkspaceCustomStringParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceCustomStringParameterResponse();
         }
 
         public Builder(WorkspaceCustomStringParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new WorkspaceCustomStringParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public WorkspaceCustomStringParameterResponse build() {
-            return new WorkspaceCustomStringParameterResponse(type, value);
+        }
+
+        public WorkspaceCustomStringParameterResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

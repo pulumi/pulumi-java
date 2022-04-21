@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.AuditConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.BindingArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.RuleArgs;
@@ -13,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FirewallPolicyIamPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="auditConfigs")
-      private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
+    private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Output<List<AuditConfigArgs>> auditConfigs() {
-        return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
+    public Optional<Output<List<AuditConfigArgs>>> auditConfigs() {
+        return Optional.ofNullable(this.auditConfigs);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FirewallPolicyIamPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     /**
@@ -47,14 +47,14 @@ public final class FirewallPolicyIamPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="resource", required=true)
-      private final Output<String> resource;
+    private Output<String> resource;
 
     public Output<String> resource() {
         return this.resource;
@@ -65,10 +65,10 @@ public final class FirewallPolicyIamPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<RuleArgs>> rules;
+    private @Nullable Output<List<RuleArgs>> rules;
 
-    public Output<List<RuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<RuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -76,124 +76,111 @@ public final class FirewallPolicyIamPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public FirewallPolicyIamPolicyArgs(
-        @Nullable Output<List<AuditConfigArgs>> auditConfigs,
-        @Nullable Output<List<BindingArgs>> bindings,
-        @Nullable Output<String> etag,
-        Output<String> resource,
-        @Nullable Output<List<RuleArgs>> rules,
-        @Nullable Output<Integer> version) {
-        this.auditConfigs = auditConfigs;
-        this.bindings = bindings;
-        this.etag = etag;
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-        this.rules = rules;
-        this.version = version;
-    }
+    private FirewallPolicyIamPolicyArgs() {}
 
-    private FirewallPolicyIamPolicyArgs() {
-        this.auditConfigs = Codegen.empty();
-        this.bindings = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.resource = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.version = Codegen.empty();
+    private FirewallPolicyIamPolicyArgs(FirewallPolicyIamPolicyArgs $) {
+        this.auditConfigs = $.auditConfigs;
+        this.bindings = $.bindings;
+        this.etag = $.etag;
+        this.resource = $.resource;
+        this.rules = $.rules;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private @Nullable Output<String> etag;
-        private Output<String> resource;
-        private @Nullable Output<List<RuleArgs>> rules;
-        private @Nullable Output<Integer> version;
+        private FirewallPolicyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyIamPolicyArgs();
         }
 
         public Builder(FirewallPolicyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditConfigs = defaults.auditConfigs;
-    	      this.bindings = defaults.bindings;
-    	      this.etag = defaults.etag;
-    	      this.resource = defaults.resource;
-    	      this.rules = defaults.rules;
-    	      this.version = defaults.version;
+            $ = new FirewallPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditConfigs(@Nullable Output<List<AuditConfigArgs>> auditConfigs) {
-            this.auditConfigs = auditConfigs;
+            $.auditConfigs = auditConfigs;
             return this;
         }
-        public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Codegen.ofNullable(auditConfigs);
-            return this;
+
+        public Builder auditConfigs(List<AuditConfigArgs> auditConfigs) {
+            return auditConfigs(Output.of(auditConfigs));
         }
+
         public Builder auditConfigs(AuditConfigArgs... auditConfigs) {
             return auditConfigs(List.of(auditConfigs));
         }
+
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder resource(Output<String> resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Output.of(Objects.requireNonNull(resource));
-            return this;
+            return resource(Output.of(resource));
         }
+
         public Builder rules(@Nullable Output<List<RuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<RuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<RuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(RuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public FirewallPolicyIamPolicyArgs build() {
-            return new FirewallPolicyIamPolicyArgs(auditConfigs, bindings, etag, resource, rules, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public FirewallPolicyIamPolicyArgs build() {
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

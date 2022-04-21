@@ -5,12 +5,12 @@ package com.pulumi.gcp.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.organizations.inputs.AccessApprovalSettingsEnrolledServiceGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enrolledAncestor")
-      private final @Nullable Output<Boolean> enrolledAncestor;
+    private @Nullable Output<Boolean> enrolledAncestor;
 
-    public Output<Boolean> enrolledAncestor() {
-        return this.enrolledAncestor == null ? Codegen.empty() : this.enrolledAncestor;
+    public Optional<Output<Boolean>> enrolledAncestor() {
+        return Optional.ofNullable(this.enrolledAncestor);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enrolledServices")
-      private final @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
+    private @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
 
-    public Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices() {
-        return this.enrolledServices == null ? Codegen.empty() : this.enrolledServices;
+    public Optional<Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>>> enrolledServices() {
+        return Optional.ofNullable(this.enrolledServices);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="notificationEmails")
-      private final @Nullable Output<List<String>> notificationEmails;
+    private @Nullable Output<List<String>> notificationEmails;
 
-    public Output<List<String>> notificationEmails() {
-        return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
+    public Optional<Output<List<String>>> notificationEmails() {
+        return Optional.ofNullable(this.notificationEmails);
     }
 
     /**
@@ -73,108 +73,96 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="organizationId")
-      private final @Nullable Output<String> organizationId;
+    private @Nullable Output<String> organizationId;
 
-    public Output<String> organizationId() {
-        return this.organizationId == null ? Codegen.empty() : this.organizationId;
+    public Optional<Output<String>> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
-    public AccessApprovalSettingsState(
-        @Nullable Output<Boolean> enrolledAncestor,
-        @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> notificationEmails,
-        @Nullable Output<String> organizationId) {
-        this.enrolledAncestor = enrolledAncestor;
-        this.enrolledServices = enrolledServices;
-        this.name = name;
-        this.notificationEmails = notificationEmails;
-        this.organizationId = organizationId;
-    }
+    private AccessApprovalSettingsState() {}
 
-    private AccessApprovalSettingsState() {
-        this.enrolledAncestor = Codegen.empty();
-        this.enrolledServices = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationEmails = Codegen.empty();
-        this.organizationId = Codegen.empty();
+    private AccessApprovalSettingsState(AccessApprovalSettingsState $) {
+        this.enrolledAncestor = $.enrolledAncestor;
+        this.enrolledServices = $.enrolledServices;
+        this.name = $.name;
+        this.notificationEmails = $.notificationEmails;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessApprovalSettingsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enrolledAncestor;
-        private @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> notificationEmails;
-        private @Nullable Output<String> organizationId;
+        private AccessApprovalSettingsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessApprovalSettingsState();
         }
 
         public Builder(AccessApprovalSettingsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enrolledAncestor = defaults.enrolledAncestor;
-    	      this.enrolledServices = defaults.enrolledServices;
-    	      this.name = defaults.name;
-    	      this.notificationEmails = defaults.notificationEmails;
-    	      this.organizationId = defaults.organizationId;
+            $ = new AccessApprovalSettingsState(Objects.requireNonNull(defaults));
         }
 
         public Builder enrolledAncestor(@Nullable Output<Boolean> enrolledAncestor) {
-            this.enrolledAncestor = enrolledAncestor;
+            $.enrolledAncestor = enrolledAncestor;
             return this;
         }
-        public Builder enrolledAncestor(@Nullable Boolean enrolledAncestor) {
-            this.enrolledAncestor = Codegen.ofNullable(enrolledAncestor);
-            return this;
+
+        public Builder enrolledAncestor(Boolean enrolledAncestor) {
+            return enrolledAncestor(Output.of(enrolledAncestor));
         }
+
         public Builder enrolledServices(@Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices) {
-            this.enrolledServices = enrolledServices;
+            $.enrolledServices = enrolledServices;
             return this;
         }
-        public Builder enrolledServices(@Nullable List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
-            this.enrolledServices = Codegen.ofNullable(enrolledServices);
-            return this;
+
+        public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
+            return enrolledServices(Output.of(enrolledServices));
         }
+
         public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceGetArgs... enrolledServices) {
             return enrolledServices(List.of(enrolledServices));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
-            this.notificationEmails = notificationEmails;
+            $.notificationEmails = notificationEmails;
             return this;
         }
-        public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Codegen.ofNullable(notificationEmails);
-            return this;
+
+        public Builder notificationEmails(List<String> notificationEmails) {
+            return notificationEmails(Output.of(notificationEmails));
         }
+
         public Builder notificationEmails(String... notificationEmails) {
             return notificationEmails(List.of(notificationEmails));
         }
+
         public Builder organizationId(@Nullable Output<String> organizationId) {
-            this.organizationId = organizationId;
+            $.organizationId = organizationId;
             return this;
         }
-        public Builder organizationId(@Nullable String organizationId) {
-            this.organizationId = Codegen.ofNullable(organizationId);
-            return this;
-        }        public AccessApprovalSettingsState build() {
-            return new AccessApprovalSettingsState(enrolledAncestor, enrolledServices, name, notificationEmails, organizationId);
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public AccessApprovalSettingsState build() {
+            return $;
         }
     }
+
 }

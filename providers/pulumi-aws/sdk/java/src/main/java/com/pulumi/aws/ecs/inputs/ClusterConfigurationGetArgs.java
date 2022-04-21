@@ -6,8 +6,8 @@ package com.pulumi.aws.ecs.inputs;
 import com.pulumi.aws.ecs.inputs.ClusterConfigurationExecuteCommandConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ClusterConfigurationGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="executeCommandConfiguration")
-      private final @Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
+    private @Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
 
-    public Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration() {
-        return this.executeCommandConfiguration == null ? Codegen.empty() : this.executeCommandConfiguration;
+    public Optional<Output<ClusterConfigurationExecuteCommandConfigurationGetArgs>> executeCommandConfiguration() {
+        return Optional.ofNullable(this.executeCommandConfiguration);
     }
 
-    public ClusterConfigurationGetArgs(@Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration) {
-        this.executeCommandConfiguration = executeCommandConfiguration;
-    }
+    private ClusterConfigurationGetArgs() {}
 
-    private ClusterConfigurationGetArgs() {
-        this.executeCommandConfiguration = Codegen.empty();
+    private ClusterConfigurationGetArgs(ClusterConfigurationGetArgs $) {
+        this.executeCommandConfiguration = $.executeCommandConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
+        private ClusterConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterConfigurationGetArgs();
         }
 
         public Builder(ClusterConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executeCommandConfiguration = defaults.executeCommandConfiguration;
+            $ = new ClusterConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executeCommandConfiguration(@Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration) {
-            this.executeCommandConfiguration = executeCommandConfiguration;
+            $.executeCommandConfiguration = executeCommandConfiguration;
             return this;
         }
-        public Builder executeCommandConfiguration(@Nullable ClusterConfigurationExecuteCommandConfigurationGetArgs executeCommandConfiguration) {
-            this.executeCommandConfiguration = Codegen.ofNullable(executeCommandConfiguration);
-            return this;
-        }        public ClusterConfigurationGetArgs build() {
-            return new ClusterConfigurationGetArgs(executeCommandConfiguration);
+
+        public Builder executeCommandConfiguration(ClusterConfigurationExecuteCommandConfigurationGetArgs executeCommandConfiguration) {
+            return executeCommandConfiguration(Output.of(executeCommandConfiguration));
+        }
+
+        public ClusterConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

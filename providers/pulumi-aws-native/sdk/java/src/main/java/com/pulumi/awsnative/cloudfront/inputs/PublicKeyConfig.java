@@ -15,94 +15,86 @@ public final class PublicKeyConfig extends com.pulumi.resources.InvokeArgs {
     public static final PublicKeyConfig Empty = new PublicKeyConfig();
 
     @Import(name="callerReference", required=true)
-      private final String callerReference;
+    private String callerReference;
 
     public String callerReference() {
         return this.callerReference;
     }
 
     @Import(name="comment")
-      private final @Nullable String comment;
+    private @Nullable String comment;
 
     public Optional<String> comment() {
-        return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
+        return Optional.ofNullable(this.comment);
     }
 
     @Import(name="encodedKey", required=true)
-      private final String encodedKey;
+    private String encodedKey;
 
     public String encodedKey() {
         return this.encodedKey;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public PublicKeyConfig(
-        String callerReference,
-        @Nullable String comment,
-        String encodedKey,
-        String name) {
-        this.callerReference = Objects.requireNonNull(callerReference, "expected parameter 'callerReference' to be non-null");
-        this.comment = comment;
-        this.encodedKey = Objects.requireNonNull(encodedKey, "expected parameter 'encodedKey' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PublicKeyConfig() {}
 
-    private PublicKeyConfig() {
-        this.callerReference = null;
-        this.comment = null;
-        this.encodedKey = null;
-        this.name = null;
+    private PublicKeyConfig(PublicKeyConfig $) {
+        this.callerReference = $.callerReference;
+        this.comment = $.comment;
+        this.encodedKey = $.encodedKey;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String callerReference;
-        private @Nullable String comment;
-        private String encodedKey;
-        private String name;
+        private PublicKeyConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyConfig();
         }
 
         public Builder(PublicKeyConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callerReference = defaults.callerReference;
-    	      this.comment = defaults.comment;
-    	      this.encodedKey = defaults.encodedKey;
-    	      this.name = defaults.name;
+            $ = new PublicKeyConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder callerReference(String callerReference) {
-            this.callerReference = Objects.requireNonNull(callerReference);
+            $.callerReference = callerReference;
             return this;
         }
+
         public Builder comment(@Nullable String comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
+
         public Builder encodedKey(String encodedKey) {
-            this.encodedKey = Objects.requireNonNull(encodedKey);
+            $.encodedKey = encodedKey;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public PublicKeyConfig build() {
-            return new PublicKeyConfig(callerReference, comment, encodedKey, name);
+        }
+
+        public PublicKeyConfig build() {
+            $.callerReference = Objects.requireNonNull($.callerReference, "expected parameter 'callerReference' to be non-null");
+            $.encodedKey = Objects.requireNonNull($.encodedKey, "expected parameter 'encodedKey' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

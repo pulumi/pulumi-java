@@ -5,9 +5,9 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DependsOnDefinitionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="kustomizationName")
-      private final @Nullable Output<String> kustomizationName;
+    private @Nullable Output<String> kustomizationName;
 
-    public Output<String> kustomizationName() {
-        return this.kustomizationName == null ? Codegen.empty() : this.kustomizationName;
+    public Optional<Output<String>> kustomizationName() {
+        return Optional.ofNullable(this.kustomizationName);
     }
 
-    public DependsOnDefinitionArgs(@Nullable Output<String> kustomizationName) {
-        this.kustomizationName = kustomizationName;
-    }
+    private DependsOnDefinitionArgs() {}
 
-    private DependsOnDefinitionArgs() {
-        this.kustomizationName = Codegen.empty();
+    private DependsOnDefinitionArgs(DependsOnDefinitionArgs $) {
+        this.kustomizationName = $.kustomizationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DependsOnDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kustomizationName;
+        private DependsOnDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DependsOnDefinitionArgs();
         }
 
         public Builder(DependsOnDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kustomizationName = defaults.kustomizationName;
+            $ = new DependsOnDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kustomizationName(@Nullable Output<String> kustomizationName) {
-            this.kustomizationName = kustomizationName;
+            $.kustomizationName = kustomizationName;
             return this;
         }
-        public Builder kustomizationName(@Nullable String kustomizationName) {
-            this.kustomizationName = Codegen.ofNullable(kustomizationName);
-            return this;
-        }        public DependsOnDefinitionArgs build() {
-            return new DependsOnDefinitionArgs(kustomizationName);
+
+        public Builder kustomizationName(String kustomizationName) {
+            return kustomizationName(Output.of(kustomizationName));
+        }
+
+        public DependsOnDefinitionArgs build() {
+            return $;
         }
     }
+
 }

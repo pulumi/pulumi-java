@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +26,49 @@ public final class SanEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
-    public SanEnableProtectionInputArgs(@Nullable Output<String> instanceType) {
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-    }
+    private SanEnableProtectionInputArgs() {}
 
-    private SanEnableProtectionInputArgs() {
-        this.instanceType = Codegen.empty();
+    private SanEnableProtectionInputArgs(SanEnableProtectionInputArgs $) {
+        this.instanceType = $.instanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SanEnableProtectionInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceType;
+        private SanEnableProtectionInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SanEnableProtectionInputArgs();
         }
 
         public Builder(SanEnableProtectionInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
+            $ = new SanEnableProtectionInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
-        }        public SanEnableProtectionInputArgs build() {
-            return new SanEnableProtectionInputArgs(instanceType);
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
+        }
+
+        public SanEnableProtectionInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

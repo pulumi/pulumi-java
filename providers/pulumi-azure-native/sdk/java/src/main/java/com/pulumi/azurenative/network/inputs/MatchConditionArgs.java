@@ -9,11 +9,11 @@ import com.pulumi.azurenative.network.inputs.MatchVariableArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="matchValues", required=true)
-      private final Output<List<String>> matchValues;
+    private Output<List<String>> matchValues;
 
     public Output<List<String>> matchValues() {
         return this.matchValues;
@@ -41,7 +41,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="matchVariables", required=true)
-      private final Output<List<MatchVariableArgs>> matchVariables;
+    private Output<List<MatchVariableArgs>> matchVariables;
 
     public Output<List<MatchVariableArgs>> matchVariables() {
         return this.matchVariables;
@@ -52,10 +52,10 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="negationConditon")
-      private final @Nullable Output<Boolean> negationConditon;
+    private @Nullable Output<Boolean> negationConditon;
 
-    public Output<Boolean> negationConditon() {
-        return this.negationConditon == null ? Codegen.empty() : this.negationConditon;
+    public Optional<Output<Boolean>> negationConditon() {
+        return Optional.ofNullable(this.negationConditon);
     }
 
     /**
@@ -63,7 +63,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="operator", required=true)
-      private final Output<Either<String,WebApplicationFirewallOperator>> operator;
+    private Output<Either<String,WebApplicationFirewallOperator>> operator;
 
     public Output<Either<String,WebApplicationFirewallOperator>> operator() {
         return this.operator;
@@ -74,111 +74,103 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="transforms")
-      private final @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms;
+    private @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms;
 
-    public Output<List<Either<String,WebApplicationFirewallTransform>>> transforms() {
-        return this.transforms == null ? Codegen.empty() : this.transforms;
+    public Optional<Output<List<Either<String,WebApplicationFirewallTransform>>>> transforms() {
+        return Optional.ofNullable(this.transforms);
     }
 
-    public MatchConditionArgs(
-        Output<List<String>> matchValues,
-        Output<List<MatchVariableArgs>> matchVariables,
-        @Nullable Output<Boolean> negationConditon,
-        Output<Either<String,WebApplicationFirewallOperator>> operator,
-        @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
-        this.matchValues = Objects.requireNonNull(matchValues, "expected parameter 'matchValues' to be non-null");
-        this.matchVariables = Objects.requireNonNull(matchVariables, "expected parameter 'matchVariables' to be non-null");
-        this.negationConditon = negationConditon;
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.transforms = transforms;
-    }
+    private MatchConditionArgs() {}
 
-    private MatchConditionArgs() {
-        this.matchValues = Codegen.empty();
-        this.matchVariables = Codegen.empty();
-        this.negationConditon = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.transforms = Codegen.empty();
+    private MatchConditionArgs(MatchConditionArgs $) {
+        this.matchValues = $.matchValues;
+        this.matchVariables = $.matchVariables;
+        this.negationConditon = $.negationConditon;
+        this.operator = $.operator;
+        this.transforms = $.transforms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MatchConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> matchValues;
-        private Output<List<MatchVariableArgs>> matchVariables;
-        private @Nullable Output<Boolean> negationConditon;
-        private Output<Either<String,WebApplicationFirewallOperator>> operator;
-        private @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms;
+        private MatchConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MatchConditionArgs();
         }
 
         public Builder(MatchConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchValues = defaults.matchValues;
-    	      this.matchVariables = defaults.matchVariables;
-    	      this.negationConditon = defaults.negationConditon;
-    	      this.operator = defaults.operator;
-    	      this.transforms = defaults.transforms;
+            $ = new MatchConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder matchValues(Output<List<String>> matchValues) {
-            this.matchValues = Objects.requireNonNull(matchValues);
+            $.matchValues = matchValues;
             return this;
         }
+
         public Builder matchValues(List<String> matchValues) {
-            this.matchValues = Output.of(Objects.requireNonNull(matchValues));
-            return this;
+            return matchValues(Output.of(matchValues));
         }
+
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
+
         public Builder matchVariables(Output<List<MatchVariableArgs>> matchVariables) {
-            this.matchVariables = Objects.requireNonNull(matchVariables);
+            $.matchVariables = matchVariables;
             return this;
         }
+
         public Builder matchVariables(List<MatchVariableArgs> matchVariables) {
-            this.matchVariables = Output.of(Objects.requireNonNull(matchVariables));
-            return this;
+            return matchVariables(Output.of(matchVariables));
         }
+
         public Builder matchVariables(MatchVariableArgs... matchVariables) {
             return matchVariables(List.of(matchVariables));
         }
+
         public Builder negationConditon(@Nullable Output<Boolean> negationConditon) {
-            this.negationConditon = negationConditon;
+            $.negationConditon = negationConditon;
             return this;
         }
-        public Builder negationConditon(@Nullable Boolean negationConditon) {
-            this.negationConditon = Codegen.ofNullable(negationConditon);
-            return this;
+
+        public Builder negationConditon(Boolean negationConditon) {
+            return negationConditon(Output.of(negationConditon));
         }
+
         public Builder operator(Output<Either<String,WebApplicationFirewallOperator>> operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder operator(Either<String,WebApplicationFirewallOperator> operator) {
-            this.operator = Output.of(Objects.requireNonNull(operator));
-            return this;
+            return operator(Output.of(operator));
         }
+
         public Builder transforms(@Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
-            this.transforms = transforms;
+            $.transforms = transforms;
             return this;
         }
-        public Builder transforms(@Nullable List<Either<String,WebApplicationFirewallTransform>> transforms) {
-            this.transforms = Codegen.ofNullable(transforms);
-            return this;
+
+        public Builder transforms(List<Either<String,WebApplicationFirewallTransform>> transforms) {
+            return transforms(Output.of(transforms));
         }
+
         public Builder transforms(Either<String,WebApplicationFirewallTransform>... transforms) {
             return transforms(List.of(transforms));
-        }        public MatchConditionArgs build() {
-            return new MatchConditionArgs(matchValues, matchVariables, negationConditon, operator, transforms);
+        }
+
+        public MatchConditionArgs build() {
+            $.matchValues = Objects.requireNonNull($.matchValues, "expected parameter 'matchValues' to be non-null");
+            $.matchVariables = Objects.requireNonNull($.matchVariables, "expected parameter 'matchVariables' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            return $;
         }
     }
+
 }

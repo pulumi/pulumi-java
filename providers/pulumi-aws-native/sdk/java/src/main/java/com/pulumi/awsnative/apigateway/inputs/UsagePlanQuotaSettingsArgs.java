@@ -5,10 +5,10 @@ package com.pulumi.awsnative.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UsagePlanQuotaSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="limit")
-      private final @Nullable Output<Integer> limit;
+    private @Nullable Output<Integer> limit;
 
-    public Output<Integer> limit() {
-        return this.limit == null ? Codegen.empty() : this.limit;
+    public Optional<Output<Integer>> limit() {
+        return Optional.ofNullable(this.limit);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UsagePlanQuotaSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="offset")
-      private final @Nullable Output<Integer> offset;
+    private @Nullable Output<Integer> offset;
 
-    public Output<Integer> offset() {
-        return this.offset == null ? Codegen.empty() : this.offset;
+    public Optional<Output<Integer>> offset() {
+        return Optional.ofNullable(this.offset);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class UsagePlanQuotaSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="period")
-      private final @Nullable Output<String> period;
+    private @Nullable Output<String> period;
 
-    public Output<String> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<String>> period() {
+        return Optional.ofNullable(this.period);
     }
 
-    public UsagePlanQuotaSettingsArgs(
-        @Nullable Output<Integer> limit,
-        @Nullable Output<Integer> offset,
-        @Nullable Output<String> period) {
-        this.limit = limit;
-        this.offset = offset;
-        this.period = period;
-    }
+    private UsagePlanQuotaSettingsArgs() {}
 
-    private UsagePlanQuotaSettingsArgs() {
-        this.limit = Codegen.empty();
-        this.offset = Codegen.empty();
-        this.period = Codegen.empty();
+    private UsagePlanQuotaSettingsArgs(UsagePlanQuotaSettingsArgs $) {
+        this.limit = $.limit;
+        this.offset = $.offset;
+        this.period = $.period;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsagePlanQuotaSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> limit;
-        private @Nullable Output<Integer> offset;
-        private @Nullable Output<String> period;
+        private UsagePlanQuotaSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsagePlanQuotaSettingsArgs();
         }
 
         public Builder(UsagePlanQuotaSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limit = defaults.limit;
-    	      this.offset = defaults.offset;
-    	      this.period = defaults.period;
+            $ = new UsagePlanQuotaSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder limit(@Nullable Output<Integer> limit) {
-            this.limit = limit;
+            $.limit = limit;
             return this;
         }
-        public Builder limit(@Nullable Integer limit) {
-            this.limit = Codegen.ofNullable(limit);
-            return this;
+
+        public Builder limit(Integer limit) {
+            return limit(Output.of(limit));
         }
+
         public Builder offset(@Nullable Output<Integer> offset) {
-            this.offset = offset;
+            $.offset = offset;
             return this;
         }
-        public Builder offset(@Nullable Integer offset) {
-            this.offset = Codegen.ofNullable(offset);
-            return this;
+
+        public Builder offset(Integer offset) {
+            return offset(Output.of(offset));
         }
+
         public Builder period(@Nullable Output<String> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable String period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
-        }        public UsagePlanQuotaSettingsArgs build() {
-            return new UsagePlanQuotaSettingsArgs(limit, offset, period);
+
+        public Builder period(String period) {
+            return period(Output.of(period));
+        }
+
+        public UsagePlanQuotaSettingsArgs build() {
+            return $;
         }
     }
+
 }

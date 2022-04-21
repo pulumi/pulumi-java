@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends com.pulumi.
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -36,63 +37,59 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends com.pulumi.
      * 
      */
     @Import(name="primaryNetworkId")
-      private final @Nullable Output<String> primaryNetworkId;
+    private @Nullable Output<String> primaryNetworkId;
 
-    public Output<String> primaryNetworkId() {
-        return this.primaryNetworkId == null ? Codegen.empty() : this.primaryNetworkId;
+    public Optional<Output<String>> primaryNetworkId() {
+        return Optional.ofNullable(this.primaryNetworkId);
     }
 
-    public AzureToAzureCreateNetworkMappingInputArgs(
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> primaryNetworkId) {
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.primaryNetworkId = primaryNetworkId;
-    }
+    private AzureToAzureCreateNetworkMappingInputArgs() {}
 
-    private AzureToAzureCreateNetworkMappingInputArgs() {
-        this.instanceType = Codegen.empty();
-        this.primaryNetworkId = Codegen.empty();
+    private AzureToAzureCreateNetworkMappingInputArgs(AzureToAzureCreateNetworkMappingInputArgs $) {
+        this.instanceType = $.instanceType;
+        this.primaryNetworkId = $.primaryNetworkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureToAzureCreateNetworkMappingInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> primaryNetworkId;
+        private AzureToAzureCreateNetworkMappingInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureToAzureCreateNetworkMappingInputArgs();
         }
 
         public Builder(AzureToAzureCreateNetworkMappingInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.primaryNetworkId = defaults.primaryNetworkId;
+            $ = new AzureToAzureCreateNetworkMappingInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder primaryNetworkId(@Nullable Output<String> primaryNetworkId) {
-            this.primaryNetworkId = primaryNetworkId;
+            $.primaryNetworkId = primaryNetworkId;
             return this;
         }
-        public Builder primaryNetworkId(@Nullable String primaryNetworkId) {
-            this.primaryNetworkId = Codegen.ofNullable(primaryNetworkId);
-            return this;
-        }        public AzureToAzureCreateNetworkMappingInputArgs build() {
-            return new AzureToAzureCreateNetworkMappingInputArgs(instanceType, primaryNetworkId);
+
+        public Builder primaryNetworkId(String primaryNetworkId) {
+            return primaryNetworkId(Output.of(primaryNetworkId));
+        }
+
+        public AzureToAzureCreateNetworkMappingInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

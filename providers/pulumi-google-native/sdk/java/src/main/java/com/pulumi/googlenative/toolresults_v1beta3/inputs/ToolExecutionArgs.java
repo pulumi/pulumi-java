@@ -5,13 +5,13 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExitCodeArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.ToolOutputReferenceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ToolExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="commandLineArguments")
-      private final @Nullable Output<List<String>> commandLineArguments;
+    private @Nullable Output<List<String>> commandLineArguments;
 
-    public Output<List<String>> commandLineArguments() {
-        return this.commandLineArguments == null ? Codegen.empty() : this.commandLineArguments;
+    public Optional<Output<List<String>>> commandLineArguments() {
+        return Optional.ofNullable(this.commandLineArguments);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ToolExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exitCode")
-      private final @Nullable Output<ToolExitCodeArgs> exitCode;
+    private @Nullable Output<ToolExitCodeArgs> exitCode;
 
-    public Output<ToolExitCodeArgs> exitCode() {
-        return this.exitCode == null ? Codegen.empty() : this.exitCode;
+    public Optional<Output<ToolExitCodeArgs>> exitCode() {
+        return Optional.ofNullable(this.exitCode);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ToolExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="toolLogs")
-      private final @Nullable Output<List<FileReferenceArgs>> toolLogs;
+    private @Nullable Output<List<FileReferenceArgs>> toolLogs;
 
-    public Output<List<FileReferenceArgs>> toolLogs() {
-        return this.toolLogs == null ? Codegen.empty() : this.toolLogs;
+    public Optional<Output<List<FileReferenceArgs>>> toolLogs() {
+        return Optional.ofNullable(this.toolLogs);
     }
 
     /**
@@ -61,98 +61,90 @@ public final class ToolExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="toolOutputs")
-      private final @Nullable Output<List<ToolOutputReferenceArgs>> toolOutputs;
+    private @Nullable Output<List<ToolOutputReferenceArgs>> toolOutputs;
 
-    public Output<List<ToolOutputReferenceArgs>> toolOutputs() {
-        return this.toolOutputs == null ? Codegen.empty() : this.toolOutputs;
+    public Optional<Output<List<ToolOutputReferenceArgs>>> toolOutputs() {
+        return Optional.ofNullable(this.toolOutputs);
     }
 
-    public ToolExecutionArgs(
-        @Nullable Output<List<String>> commandLineArguments,
-        @Nullable Output<ToolExitCodeArgs> exitCode,
-        @Nullable Output<List<FileReferenceArgs>> toolLogs,
-        @Nullable Output<List<ToolOutputReferenceArgs>> toolOutputs) {
-        this.commandLineArguments = commandLineArguments;
-        this.exitCode = exitCode;
-        this.toolLogs = toolLogs;
-        this.toolOutputs = toolOutputs;
-    }
+    private ToolExecutionArgs() {}
 
-    private ToolExecutionArgs() {
-        this.commandLineArguments = Codegen.empty();
-        this.exitCode = Codegen.empty();
-        this.toolLogs = Codegen.empty();
-        this.toolOutputs = Codegen.empty();
+    private ToolExecutionArgs(ToolExecutionArgs $) {
+        this.commandLineArguments = $.commandLineArguments;
+        this.exitCode = $.exitCode;
+        this.toolLogs = $.toolLogs;
+        this.toolOutputs = $.toolOutputs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ToolExecutionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> commandLineArguments;
-        private @Nullable Output<ToolExitCodeArgs> exitCode;
-        private @Nullable Output<List<FileReferenceArgs>> toolLogs;
-        private @Nullable Output<List<ToolOutputReferenceArgs>> toolOutputs;
+        private ToolExecutionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ToolExecutionArgs();
         }
 
         public Builder(ToolExecutionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commandLineArguments = defaults.commandLineArguments;
-    	      this.exitCode = defaults.exitCode;
-    	      this.toolLogs = defaults.toolLogs;
-    	      this.toolOutputs = defaults.toolOutputs;
+            $ = new ToolExecutionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commandLineArguments(@Nullable Output<List<String>> commandLineArguments) {
-            this.commandLineArguments = commandLineArguments;
+            $.commandLineArguments = commandLineArguments;
             return this;
         }
-        public Builder commandLineArguments(@Nullable List<String> commandLineArguments) {
-            this.commandLineArguments = Codegen.ofNullable(commandLineArguments);
-            return this;
+
+        public Builder commandLineArguments(List<String> commandLineArguments) {
+            return commandLineArguments(Output.of(commandLineArguments));
         }
+
         public Builder commandLineArguments(String... commandLineArguments) {
             return commandLineArguments(List.of(commandLineArguments));
         }
+
         public Builder exitCode(@Nullable Output<ToolExitCodeArgs> exitCode) {
-            this.exitCode = exitCode;
+            $.exitCode = exitCode;
             return this;
         }
-        public Builder exitCode(@Nullable ToolExitCodeArgs exitCode) {
-            this.exitCode = Codegen.ofNullable(exitCode);
-            return this;
+
+        public Builder exitCode(ToolExitCodeArgs exitCode) {
+            return exitCode(Output.of(exitCode));
         }
+
         public Builder toolLogs(@Nullable Output<List<FileReferenceArgs>> toolLogs) {
-            this.toolLogs = toolLogs;
+            $.toolLogs = toolLogs;
             return this;
         }
-        public Builder toolLogs(@Nullable List<FileReferenceArgs> toolLogs) {
-            this.toolLogs = Codegen.ofNullable(toolLogs);
-            return this;
+
+        public Builder toolLogs(List<FileReferenceArgs> toolLogs) {
+            return toolLogs(Output.of(toolLogs));
         }
+
         public Builder toolLogs(FileReferenceArgs... toolLogs) {
             return toolLogs(List.of(toolLogs));
         }
+
         public Builder toolOutputs(@Nullable Output<List<ToolOutputReferenceArgs>> toolOutputs) {
-            this.toolOutputs = toolOutputs;
+            $.toolOutputs = toolOutputs;
             return this;
         }
-        public Builder toolOutputs(@Nullable List<ToolOutputReferenceArgs> toolOutputs) {
-            this.toolOutputs = Codegen.ofNullable(toolOutputs);
-            return this;
+
+        public Builder toolOutputs(List<ToolOutputReferenceArgs> toolOutputs) {
+            return toolOutputs(Output.of(toolOutputs));
         }
+
         public Builder toolOutputs(ToolOutputReferenceArgs... toolOutputs) {
             return toolOutputs(List.of(toolOutputs));
-        }        public ToolExecutionArgs build() {
-            return new ToolExecutionArgs(commandLineArguments, exitCode, toolLogs, toolOutputs);
+        }
+
+        public ToolExecutionArgs build() {
+            return $;
         }
     }
+
 }

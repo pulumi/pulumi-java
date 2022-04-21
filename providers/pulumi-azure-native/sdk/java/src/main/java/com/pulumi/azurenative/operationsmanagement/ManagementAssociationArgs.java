@@ -6,9 +6,9 @@ package com.pulumi.azurenative.operationsmanagement;
 import com.pulumi.azurenative.operationsmanagement.inputs.ManagementAssociationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="managementAssociationName")
-      private final @Nullable Output<String> managementAssociationName;
+    private @Nullable Output<String> managementAssociationName;
 
-    public Output<String> managementAssociationName() {
-        return this.managementAssociationName == null ? Codegen.empty() : this.managementAssociationName;
+    public Optional<Output<String>> managementAssociationName() {
+        return Optional.ofNullable(this.managementAssociationName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ManagementAssociationPropertiesArgs> properties;
+    private @Nullable Output<ManagementAssociationPropertiesArgs> properties;
 
-    public Output<ManagementAssociationPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ManagementAssociationPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="providerName", required=true)
-      private final Output<String> providerName;
+    private Output<String> providerName;
 
     public Output<String> providerName() {
         return this.providerName;
@@ -65,7 +65,7 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -87,128 +87,112 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
     }
 
-    public ManagementAssociationArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<String> managementAssociationName,
-        @Nullable Output<ManagementAssociationPropertiesArgs> properties,
-        Output<String> providerName,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        Output<String> resourceType) {
-        this.location = location;
-        this.managementAssociationName = managementAssociationName;
-        this.properties = properties;
-        this.providerName = Objects.requireNonNull(providerName, "expected parameter 'providerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private ManagementAssociationArgs() {}
 
-    private ManagementAssociationArgs() {
-        this.location = Codegen.empty();
-        this.managementAssociationName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.providerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private ManagementAssociationArgs(ManagementAssociationArgs $) {
+        this.location = $.location;
+        this.managementAssociationName = $.managementAssociationName;
+        this.properties = $.properties;
+        this.providerName = $.providerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> managementAssociationName;
-        private @Nullable Output<ManagementAssociationPropertiesArgs> properties;
-        private Output<String> providerName;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private Output<String> resourceType;
+        private ManagementAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementAssociationArgs();
         }
 
         public Builder(ManagementAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.managementAssociationName = defaults.managementAssociationName;
-    	      this.properties = defaults.properties;
-    	      this.providerName = defaults.providerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ManagementAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managementAssociationName(@Nullable Output<String> managementAssociationName) {
-            this.managementAssociationName = managementAssociationName;
+            $.managementAssociationName = managementAssociationName;
             return this;
         }
-        public Builder managementAssociationName(@Nullable String managementAssociationName) {
-            this.managementAssociationName = Codegen.ofNullable(managementAssociationName);
-            return this;
+
+        public Builder managementAssociationName(String managementAssociationName) {
+            return managementAssociationName(Output.of(managementAssociationName));
         }
+
         public Builder properties(@Nullable Output<ManagementAssociationPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ManagementAssociationPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ManagementAssociationPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder providerName(Output<String> providerName) {
-            this.providerName = Objects.requireNonNull(providerName);
+            $.providerName = providerName;
             return this;
         }
+
         public Builder providerName(String providerName) {
-            this.providerName = Output.of(Objects.requireNonNull(providerName));
-            return this;
+            return providerName(Output.of(providerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
-        }        public ManagementAssociationArgs build() {
-            return new ManagementAssociationArgs(location, managementAssociationName, properties, providerName, resourceGroupName, resourceName, resourceType);
+            return resourceType(Output.of(resourceType));
+        }
+
+        public ManagementAssociationArgs build() {
+            $.providerName = Objects.requireNonNull($.providerName, "expected parameter 'providerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,10 +22,10 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpcEndpointServiceFilter> filters;
+    private @Nullable List<GetVpcEndpointServiceFilter> filters;
 
-    public List<GetVpcEndpointServiceFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpcEndpointServiceFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="service")
-      private final @Nullable String service;
+    private @Nullable String service;
 
     public Optional<String> service() {
-        return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable String serviceName;
+    private @Nullable String serviceName;
 
     public Optional<String> serviceName() {
-        return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceType")
-      private final @Nullable String serviceType;
+    private @Nullable String serviceType;
 
     public Optional<String> serviceType() {
-        return this.serviceType == null ? Optional.empty() : Optional.ofNullable(this.serviceType);
+        return Optional.ofNullable(this.serviceType);
     }
 
     /**
@@ -66,85 +66,72 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetVpcEndpointServiceArgs(
-        @Nullable List<GetVpcEndpointServiceFilter> filters,
-        @Nullable String service,
-        @Nullable String serviceName,
-        @Nullable String serviceType,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.service = service;
-        this.serviceName = serviceName;
-        this.serviceType = serviceType;
-        this.tags = tags;
-    }
+    private GetVpcEndpointServiceArgs() {}
 
-    private GetVpcEndpointServiceArgs() {
-        this.filters = List.of();
-        this.service = null;
-        this.serviceName = null;
-        this.serviceType = null;
-        this.tags = Map.of();
+    private GetVpcEndpointServiceArgs(GetVpcEndpointServiceArgs $) {
+        this.filters = $.filters;
+        this.service = $.service;
+        this.serviceName = $.serviceName;
+        this.serviceType = $.serviceType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcEndpointServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetVpcEndpointServiceFilter> filters;
-        private @Nullable String service;
-        private @Nullable String serviceName;
-        private @Nullable String serviceType;
-        private @Nullable Map<String,String> tags;
+        private GetVpcEndpointServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcEndpointServiceArgs();
         }
 
         public Builder(GetVpcEndpointServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.service = defaults.service;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceType = defaults.serviceType;
-    	      this.tags = defaults.tags;
+            $ = new GetVpcEndpointServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetVpcEndpointServiceFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpcEndpointServiceFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder service(@Nullable String service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
+
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceType(@Nullable String serviceType) {
-            this.serviceType = serviceType;
+            $.serviceType = serviceType;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetVpcEndpointServiceArgs build() {
-            return new GetVpcEndpointServiceArgs(filters, service, serviceName, serviceType, tags);
+        }
+
+        public GetVpcEndpointServiceArgs build() {
+            return $;
         }
     }
+
 }

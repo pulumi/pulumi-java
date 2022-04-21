@@ -5,13 +5,13 @@ package com.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.EdgeClusterArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.GkeClusterArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.KubernetesResourceArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.MultiCloudClusterArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.OnPremClusterArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class MembershipEndpointArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="edgeCluster")
-      private final @Nullable Output<EdgeClusterArgs> edgeCluster;
+    private @Nullable Output<EdgeClusterArgs> edgeCluster;
 
-    public Output<EdgeClusterArgs> edgeCluster() {
-        return this.edgeCluster == null ? Codegen.empty() : this.edgeCluster;
+    public Optional<Output<EdgeClusterArgs>> edgeCluster() {
+        return Optional.ofNullable(this.edgeCluster);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class MembershipEndpointArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="gkeCluster")
-      private final @Nullable Output<GkeClusterArgs> gkeCluster;
+    private @Nullable Output<GkeClusterArgs> gkeCluster;
 
-    public Output<GkeClusterArgs> gkeCluster() {
-        return this.gkeCluster == null ? Codegen.empty() : this.gkeCluster;
+    public Optional<Output<GkeClusterArgs>> gkeCluster() {
+        return Optional.ofNullable(this.gkeCluster);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class MembershipEndpointArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kubernetesResource")
-      private final @Nullable Output<KubernetesResourceArgs> kubernetesResource;
+    private @Nullable Output<KubernetesResourceArgs> kubernetesResource;
 
-    public Output<KubernetesResourceArgs> kubernetesResource() {
-        return this.kubernetesResource == null ? Codegen.empty() : this.kubernetesResource;
+    public Optional<Output<KubernetesResourceArgs>> kubernetesResource() {
+        return Optional.ofNullable(this.kubernetesResource);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class MembershipEndpointArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="multiCloudCluster")
-      private final @Nullable Output<MultiCloudClusterArgs> multiCloudCluster;
+    private @Nullable Output<MultiCloudClusterArgs> multiCloudCluster;
 
-    public Output<MultiCloudClusterArgs> multiCloudCluster() {
-        return this.multiCloudCluster == null ? Codegen.empty() : this.multiCloudCluster;
+    public Optional<Output<MultiCloudClusterArgs>> multiCloudCluster() {
+        return Optional.ofNullable(this.multiCloudCluster);
     }
 
     /**
@@ -72,102 +72,88 @@ public final class MembershipEndpointArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="onPremCluster")
-      private final @Nullable Output<OnPremClusterArgs> onPremCluster;
+    private @Nullable Output<OnPremClusterArgs> onPremCluster;
 
-    public Output<OnPremClusterArgs> onPremCluster() {
-        return this.onPremCluster == null ? Codegen.empty() : this.onPremCluster;
+    public Optional<Output<OnPremClusterArgs>> onPremCluster() {
+        return Optional.ofNullable(this.onPremCluster);
     }
 
-    public MembershipEndpointArgs(
-        @Nullable Output<EdgeClusterArgs> edgeCluster,
-        @Nullable Output<GkeClusterArgs> gkeCluster,
-        @Nullable Output<KubernetesResourceArgs> kubernetesResource,
-        @Nullable Output<MultiCloudClusterArgs> multiCloudCluster,
-        @Nullable Output<OnPremClusterArgs> onPremCluster) {
-        this.edgeCluster = edgeCluster;
-        this.gkeCluster = gkeCluster;
-        this.kubernetesResource = kubernetesResource;
-        this.multiCloudCluster = multiCloudCluster;
-        this.onPremCluster = onPremCluster;
-    }
+    private MembershipEndpointArgs() {}
 
-    private MembershipEndpointArgs() {
-        this.edgeCluster = Codegen.empty();
-        this.gkeCluster = Codegen.empty();
-        this.kubernetesResource = Codegen.empty();
-        this.multiCloudCluster = Codegen.empty();
-        this.onPremCluster = Codegen.empty();
+    private MembershipEndpointArgs(MembershipEndpointArgs $) {
+        this.edgeCluster = $.edgeCluster;
+        this.gkeCluster = $.gkeCluster;
+        this.kubernetesResource = $.kubernetesResource;
+        this.multiCloudCluster = $.multiCloudCluster;
+        this.onPremCluster = $.onPremCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EdgeClusterArgs> edgeCluster;
-        private @Nullable Output<GkeClusterArgs> gkeCluster;
-        private @Nullable Output<KubernetesResourceArgs> kubernetesResource;
-        private @Nullable Output<MultiCloudClusterArgs> multiCloudCluster;
-        private @Nullable Output<OnPremClusterArgs> onPremCluster;
+        private MembershipEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipEndpointArgs();
         }
 
         public Builder(MembershipEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.edgeCluster = defaults.edgeCluster;
-    	      this.gkeCluster = defaults.gkeCluster;
-    	      this.kubernetesResource = defaults.kubernetesResource;
-    	      this.multiCloudCluster = defaults.multiCloudCluster;
-    	      this.onPremCluster = defaults.onPremCluster;
+            $ = new MembershipEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder edgeCluster(@Nullable Output<EdgeClusterArgs> edgeCluster) {
-            this.edgeCluster = edgeCluster;
+            $.edgeCluster = edgeCluster;
             return this;
         }
-        public Builder edgeCluster(@Nullable EdgeClusterArgs edgeCluster) {
-            this.edgeCluster = Codegen.ofNullable(edgeCluster);
-            return this;
+
+        public Builder edgeCluster(EdgeClusterArgs edgeCluster) {
+            return edgeCluster(Output.of(edgeCluster));
         }
+
         public Builder gkeCluster(@Nullable Output<GkeClusterArgs> gkeCluster) {
-            this.gkeCluster = gkeCluster;
+            $.gkeCluster = gkeCluster;
             return this;
         }
-        public Builder gkeCluster(@Nullable GkeClusterArgs gkeCluster) {
-            this.gkeCluster = Codegen.ofNullable(gkeCluster);
-            return this;
+
+        public Builder gkeCluster(GkeClusterArgs gkeCluster) {
+            return gkeCluster(Output.of(gkeCluster));
         }
+
         public Builder kubernetesResource(@Nullable Output<KubernetesResourceArgs> kubernetesResource) {
-            this.kubernetesResource = kubernetesResource;
+            $.kubernetesResource = kubernetesResource;
             return this;
         }
-        public Builder kubernetesResource(@Nullable KubernetesResourceArgs kubernetesResource) {
-            this.kubernetesResource = Codegen.ofNullable(kubernetesResource);
-            return this;
+
+        public Builder kubernetesResource(KubernetesResourceArgs kubernetesResource) {
+            return kubernetesResource(Output.of(kubernetesResource));
         }
+
         public Builder multiCloudCluster(@Nullable Output<MultiCloudClusterArgs> multiCloudCluster) {
-            this.multiCloudCluster = multiCloudCluster;
+            $.multiCloudCluster = multiCloudCluster;
             return this;
         }
-        public Builder multiCloudCluster(@Nullable MultiCloudClusterArgs multiCloudCluster) {
-            this.multiCloudCluster = Codegen.ofNullable(multiCloudCluster);
-            return this;
+
+        public Builder multiCloudCluster(MultiCloudClusterArgs multiCloudCluster) {
+            return multiCloudCluster(Output.of(multiCloudCluster));
         }
+
         public Builder onPremCluster(@Nullable Output<OnPremClusterArgs> onPremCluster) {
-            this.onPremCluster = onPremCluster;
+            $.onPremCluster = onPremCluster;
             return this;
         }
-        public Builder onPremCluster(@Nullable OnPremClusterArgs onPremCluster) {
-            this.onPremCluster = Codegen.ofNullable(onPremCluster);
-            return this;
-        }        public MembershipEndpointArgs build() {
-            return new MembershipEndpointArgs(edgeCluster, gkeCluster, kubernetesResource, multiCloudCluster, onPremCluster);
+
+        public Builder onPremCluster(OnPremClusterArgs onPremCluster) {
+            return onPremCluster(Output.of(onPremCluster));
+        }
+
+        public MembershipEndpointArgs build() {
+            return $;
         }
     }
+
 }

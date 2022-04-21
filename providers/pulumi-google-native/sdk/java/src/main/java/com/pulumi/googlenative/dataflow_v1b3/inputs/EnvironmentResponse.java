@@ -25,7 +25,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterManagerApiService", required=true)
-      private final String clusterManagerApiService;
+    private String clusterManagerApiService;
 
     public String clusterManagerApiService() {
         return this.clusterManagerApiService;
@@ -36,7 +36,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataset", required=true)
-      private final String dataset;
+    private String dataset;
 
     public String dataset() {
         return this.dataset;
@@ -47,7 +47,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="debugOptions", required=true)
-      private final DebugOptionsResponse debugOptions;
+    private DebugOptionsResponse debugOptions;
 
     public DebugOptionsResponse debugOptions() {
         return this.debugOptions;
@@ -58,7 +58,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="experiments", required=true)
-      private final List<String> experiments;
+    private List<String> experiments;
 
     public List<String> experiments() {
         return this.experiments;
@@ -69,7 +69,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="flexResourceSchedulingGoal", required=true)
-      private final String flexResourceSchedulingGoal;
+    private String flexResourceSchedulingGoal;
 
     public String flexResourceSchedulingGoal() {
         return this.flexResourceSchedulingGoal;
@@ -80,7 +80,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="internalExperiments", required=true)
-      private final Map<String,String> internalExperiments;
+    private Map<String,String> internalExperiments;
 
     public Map<String,String> internalExperiments() {
         return this.internalExperiments;
@@ -91,7 +91,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sdkPipelineOptions", required=true)
-      private final Map<String,String> sdkPipelineOptions;
+    private Map<String,String> sdkPipelineOptions;
 
     public Map<String,String> sdkPipelineOptions() {
         return this.sdkPipelineOptions;
@@ -102,7 +102,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceAccountEmail", required=true)
-      private final String serviceAccountEmail;
+    private String serviceAccountEmail;
 
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
@@ -113,7 +113,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceKmsKeyName", required=true)
-      private final String serviceKmsKeyName;
+    private String serviceKmsKeyName;
 
     public String serviceKmsKeyName() {
         return this.serviceKmsKeyName;
@@ -124,7 +124,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceOptions", required=true)
-      private final List<String> serviceOptions;
+    private List<String> serviceOptions;
 
     public List<String> serviceOptions() {
         return this.serviceOptions;
@@ -135,7 +135,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shuffleMode", required=true)
-      private final String shuffleMode;
+    private String shuffleMode;
 
     public String shuffleMode() {
         return this.shuffleMode;
@@ -146,7 +146,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tempStoragePrefix", required=true)
-      private final String tempStoragePrefix;
+    private String tempStoragePrefix;
 
     public String tempStoragePrefix() {
         return this.tempStoragePrefix;
@@ -157,7 +157,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userAgent", required=true)
-      private final Map<String,String> userAgent;
+    private Map<String,String> userAgent;
 
     public Map<String,String> userAgent() {
         return this.userAgent;
@@ -168,7 +168,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final Map<String,String> version;
+    private Map<String,String> version;
 
     public Map<String,String> version() {
         return this.version;
@@ -179,7 +179,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workerPools", required=true)
-      private final List<WorkerPoolResponse> workerPools;
+    private List<WorkerPoolResponse> workerPools;
 
     public List<WorkerPoolResponse> workerPools() {
         return this.workerPools;
@@ -190,7 +190,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workerRegion", required=true)
-      private final String workerRegion;
+    private String workerRegion;
 
     public String workerRegion() {
         return this.workerRegion;
@@ -201,199 +201,169 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workerZone", required=true)
-      private final String workerZone;
+    private String workerZone;
 
     public String workerZone() {
         return this.workerZone;
     }
 
-    public EnvironmentResponse(
-        String clusterManagerApiService,
-        String dataset,
-        DebugOptionsResponse debugOptions,
-        List<String> experiments,
-        String flexResourceSchedulingGoal,
-        Map<String,String> internalExperiments,
-        Map<String,String> sdkPipelineOptions,
-        String serviceAccountEmail,
-        String serviceKmsKeyName,
-        List<String> serviceOptions,
-        String shuffleMode,
-        String tempStoragePrefix,
-        Map<String,String> userAgent,
-        Map<String,String> version,
-        List<WorkerPoolResponse> workerPools,
-        String workerRegion,
-        String workerZone) {
-        this.clusterManagerApiService = Objects.requireNonNull(clusterManagerApiService, "expected parameter 'clusterManagerApiService' to be non-null");
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.debugOptions = Objects.requireNonNull(debugOptions, "expected parameter 'debugOptions' to be non-null");
-        this.experiments = Objects.requireNonNull(experiments, "expected parameter 'experiments' to be non-null");
-        this.flexResourceSchedulingGoal = Objects.requireNonNull(flexResourceSchedulingGoal, "expected parameter 'flexResourceSchedulingGoal' to be non-null");
-        this.internalExperiments = Objects.requireNonNull(internalExperiments, "expected parameter 'internalExperiments' to be non-null");
-        this.sdkPipelineOptions = Objects.requireNonNull(sdkPipelineOptions, "expected parameter 'sdkPipelineOptions' to be non-null");
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
-        this.serviceKmsKeyName = Objects.requireNonNull(serviceKmsKeyName, "expected parameter 'serviceKmsKeyName' to be non-null");
-        this.serviceOptions = Objects.requireNonNull(serviceOptions, "expected parameter 'serviceOptions' to be non-null");
-        this.shuffleMode = Objects.requireNonNull(shuffleMode, "expected parameter 'shuffleMode' to be non-null");
-        this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix, "expected parameter 'tempStoragePrefix' to be non-null");
-        this.userAgent = Objects.requireNonNull(userAgent, "expected parameter 'userAgent' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-        this.workerPools = Objects.requireNonNull(workerPools, "expected parameter 'workerPools' to be non-null");
-        this.workerRegion = Objects.requireNonNull(workerRegion, "expected parameter 'workerRegion' to be non-null");
-        this.workerZone = Objects.requireNonNull(workerZone, "expected parameter 'workerZone' to be non-null");
-    }
+    private EnvironmentResponse() {}
 
-    private EnvironmentResponse() {
-        this.clusterManagerApiService = null;
-        this.dataset = null;
-        this.debugOptions = null;
-        this.experiments = List.of();
-        this.flexResourceSchedulingGoal = null;
-        this.internalExperiments = Map.of();
-        this.sdkPipelineOptions = Map.of();
-        this.serviceAccountEmail = null;
-        this.serviceKmsKeyName = null;
-        this.serviceOptions = List.of();
-        this.shuffleMode = null;
-        this.tempStoragePrefix = null;
-        this.userAgent = Map.of();
-        this.version = Map.of();
-        this.workerPools = List.of();
-        this.workerRegion = null;
-        this.workerZone = null;
+    private EnvironmentResponse(EnvironmentResponse $) {
+        this.clusterManagerApiService = $.clusterManagerApiService;
+        this.dataset = $.dataset;
+        this.debugOptions = $.debugOptions;
+        this.experiments = $.experiments;
+        this.flexResourceSchedulingGoal = $.flexResourceSchedulingGoal;
+        this.internalExperiments = $.internalExperiments;
+        this.sdkPipelineOptions = $.sdkPipelineOptions;
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.serviceKmsKeyName = $.serviceKmsKeyName;
+        this.serviceOptions = $.serviceOptions;
+        this.shuffleMode = $.shuffleMode;
+        this.tempStoragePrefix = $.tempStoragePrefix;
+        this.userAgent = $.userAgent;
+        this.version = $.version;
+        this.workerPools = $.workerPools;
+        this.workerRegion = $.workerRegion;
+        this.workerZone = $.workerZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterManagerApiService;
-        private String dataset;
-        private DebugOptionsResponse debugOptions;
-        private List<String> experiments;
-        private String flexResourceSchedulingGoal;
-        private Map<String,String> internalExperiments;
-        private Map<String,String> sdkPipelineOptions;
-        private String serviceAccountEmail;
-        private String serviceKmsKeyName;
-        private List<String> serviceOptions;
-        private String shuffleMode;
-        private String tempStoragePrefix;
-        private Map<String,String> userAgent;
-        private Map<String,String> version;
-        private List<WorkerPoolResponse> workerPools;
-        private String workerRegion;
-        private String workerZone;
+        private EnvironmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentResponse();
         }
 
         public Builder(EnvironmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterManagerApiService = defaults.clusterManagerApiService;
-    	      this.dataset = defaults.dataset;
-    	      this.debugOptions = defaults.debugOptions;
-    	      this.experiments = defaults.experiments;
-    	      this.flexResourceSchedulingGoal = defaults.flexResourceSchedulingGoal;
-    	      this.internalExperiments = defaults.internalExperiments;
-    	      this.sdkPipelineOptions = defaults.sdkPipelineOptions;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.serviceKmsKeyName = defaults.serviceKmsKeyName;
-    	      this.serviceOptions = defaults.serviceOptions;
-    	      this.shuffleMode = defaults.shuffleMode;
-    	      this.tempStoragePrefix = defaults.tempStoragePrefix;
-    	      this.userAgent = defaults.userAgent;
-    	      this.version = defaults.version;
-    	      this.workerPools = defaults.workerPools;
-    	      this.workerRegion = defaults.workerRegion;
-    	      this.workerZone = defaults.workerZone;
+            $ = new EnvironmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterManagerApiService(String clusterManagerApiService) {
-            this.clusterManagerApiService = Objects.requireNonNull(clusterManagerApiService);
+            $.clusterManagerApiService = clusterManagerApiService;
             return this;
         }
+
         public Builder dataset(String dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder debugOptions(DebugOptionsResponse debugOptions) {
-            this.debugOptions = Objects.requireNonNull(debugOptions);
+            $.debugOptions = debugOptions;
             return this;
         }
+
         public Builder experiments(List<String> experiments) {
-            this.experiments = Objects.requireNonNull(experiments);
+            $.experiments = experiments;
             return this;
         }
+
         public Builder experiments(String... experiments) {
             return experiments(List.of(experiments));
         }
+
         public Builder flexResourceSchedulingGoal(String flexResourceSchedulingGoal) {
-            this.flexResourceSchedulingGoal = Objects.requireNonNull(flexResourceSchedulingGoal);
+            $.flexResourceSchedulingGoal = flexResourceSchedulingGoal;
             return this;
         }
+
         public Builder internalExperiments(Map<String,String> internalExperiments) {
-            this.internalExperiments = Objects.requireNonNull(internalExperiments);
+            $.internalExperiments = internalExperiments;
             return this;
         }
+
         public Builder sdkPipelineOptions(Map<String,String> sdkPipelineOptions) {
-            this.sdkPipelineOptions = Objects.requireNonNull(sdkPipelineOptions);
+            $.sdkPipelineOptions = sdkPipelineOptions;
             return this;
         }
+
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
+
         public Builder serviceKmsKeyName(String serviceKmsKeyName) {
-            this.serviceKmsKeyName = Objects.requireNonNull(serviceKmsKeyName);
+            $.serviceKmsKeyName = serviceKmsKeyName;
             return this;
         }
+
         public Builder serviceOptions(List<String> serviceOptions) {
-            this.serviceOptions = Objects.requireNonNull(serviceOptions);
+            $.serviceOptions = serviceOptions;
             return this;
         }
+
         public Builder serviceOptions(String... serviceOptions) {
             return serviceOptions(List.of(serviceOptions));
         }
+
         public Builder shuffleMode(String shuffleMode) {
-            this.shuffleMode = Objects.requireNonNull(shuffleMode);
+            $.shuffleMode = shuffleMode;
             return this;
         }
+
         public Builder tempStoragePrefix(String tempStoragePrefix) {
-            this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
+            $.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
+
         public Builder userAgent(Map<String,String> userAgent) {
-            this.userAgent = Objects.requireNonNull(userAgent);
+            $.userAgent = userAgent;
             return this;
         }
+
         public Builder version(Map<String,String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder workerPools(List<WorkerPoolResponse> workerPools) {
-            this.workerPools = Objects.requireNonNull(workerPools);
+            $.workerPools = workerPools;
             return this;
         }
+
         public Builder workerPools(WorkerPoolResponse... workerPools) {
             return workerPools(List.of(workerPools));
         }
+
         public Builder workerRegion(String workerRegion) {
-            this.workerRegion = Objects.requireNonNull(workerRegion);
+            $.workerRegion = workerRegion;
             return this;
         }
+
         public Builder workerZone(String workerZone) {
-            this.workerZone = Objects.requireNonNull(workerZone);
+            $.workerZone = workerZone;
             return this;
-        }        public EnvironmentResponse build() {
-            return new EnvironmentResponse(clusterManagerApiService, dataset, debugOptions, experiments, flexResourceSchedulingGoal, internalExperiments, sdkPipelineOptions, serviceAccountEmail, serviceKmsKeyName, serviceOptions, shuffleMode, tempStoragePrefix, userAgent, version, workerPools, workerRegion, workerZone);
+        }
+
+        public EnvironmentResponse build() {
+            $.clusterManagerApiService = Objects.requireNonNull($.clusterManagerApiService, "expected parameter 'clusterManagerApiService' to be non-null");
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.debugOptions = Objects.requireNonNull($.debugOptions, "expected parameter 'debugOptions' to be non-null");
+            $.experiments = Objects.requireNonNull($.experiments, "expected parameter 'experiments' to be non-null");
+            $.flexResourceSchedulingGoal = Objects.requireNonNull($.flexResourceSchedulingGoal, "expected parameter 'flexResourceSchedulingGoal' to be non-null");
+            $.internalExperiments = Objects.requireNonNull($.internalExperiments, "expected parameter 'internalExperiments' to be non-null");
+            $.sdkPipelineOptions = Objects.requireNonNull($.sdkPipelineOptions, "expected parameter 'sdkPipelineOptions' to be non-null");
+            $.serviceAccountEmail = Objects.requireNonNull($.serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
+            $.serviceKmsKeyName = Objects.requireNonNull($.serviceKmsKeyName, "expected parameter 'serviceKmsKeyName' to be non-null");
+            $.serviceOptions = Objects.requireNonNull($.serviceOptions, "expected parameter 'serviceOptions' to be non-null");
+            $.shuffleMode = Objects.requireNonNull($.shuffleMode, "expected parameter 'shuffleMode' to be non-null");
+            $.tempStoragePrefix = Objects.requireNonNull($.tempStoragePrefix, "expected parameter 'tempStoragePrefix' to be non-null");
+            $.userAgent = Objects.requireNonNull($.userAgent, "expected parameter 'userAgent' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            $.workerPools = Objects.requireNonNull($.workerPools, "expected parameter 'workerPools' to be non-null");
+            $.workerRegion = Objects.requireNonNull($.workerRegion, "expected parameter 'workerRegion' to be non-null");
+            $.workerZone = Objects.requireNonNull($.workerZone, "expected parameter 'workerZone' to be non-null");
+            return $;
         }
     }
+
 }

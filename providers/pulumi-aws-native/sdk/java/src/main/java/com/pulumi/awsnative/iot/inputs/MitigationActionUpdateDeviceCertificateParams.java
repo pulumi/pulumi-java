@@ -17,45 +17,45 @@ public final class MitigationActionUpdateDeviceCertificateParams extends com.pul
     public static final MitigationActionUpdateDeviceCertificateParams Empty = new MitigationActionUpdateDeviceCertificateParams();
 
     @Import(name="action", required=true)
-      private final MitigationActionUpdateDeviceCertificateParamsAction action;
+    private MitigationActionUpdateDeviceCertificateParamsAction action;
 
     public MitigationActionUpdateDeviceCertificateParamsAction action() {
         return this.action;
     }
 
-    public MitigationActionUpdateDeviceCertificateParams(MitigationActionUpdateDeviceCertificateParamsAction action) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-    }
+    private MitigationActionUpdateDeviceCertificateParams() {}
 
-    private MitigationActionUpdateDeviceCertificateParams() {
-        this.action = null;
+    private MitigationActionUpdateDeviceCertificateParams(MitigationActionUpdateDeviceCertificateParams $) {
+        this.action = $.action;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionUpdateDeviceCertificateParams defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MitigationActionUpdateDeviceCertificateParamsAction action;
+        private MitigationActionUpdateDeviceCertificateParams $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionUpdateDeviceCertificateParams();
         }
 
         public Builder(MitigationActionUpdateDeviceCertificateParams defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
+            $ = new MitigationActionUpdateDeviceCertificateParams(Objects.requireNonNull(defaults));
         }
 
         public Builder action(MitigationActionUpdateDeviceCertificateParamsAction action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
-        }        public MitigationActionUpdateDeviceCertificateParams build() {
-            return new MitigationActionUpdateDeviceCertificateParams(action);
+        }
+
+        public MitigationActionUpdateDeviceCertificateParams build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

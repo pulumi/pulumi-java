@@ -24,10 +24,10 @@ public final class ManagementEventAggregationConditionResponse extends com.pulum
      * 
      */
     @Import(name="operator")
-      private final @Nullable String operator;
+    private @Nullable String operator;
 
     public Optional<String> operator() {
-        return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagementEventAggregationConditionResponse extends com.pulum
      * 
      */
     @Import(name="threshold")
-      private final @Nullable Double threshold;
+    private @Nullable Double threshold;
 
     public Optional<Double> threshold() {
-        return this.threshold == null ? Optional.empty() : Optional.ofNullable(this.threshold);
+        return Optional.ofNullable(this.threshold);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ManagementEventAggregationConditionResponse extends com.pulum
      * 
      */
     @Import(name="windowSize")
-      private final @Nullable String windowSize;
+    private @Nullable String windowSize;
 
     public Optional<String> windowSize() {
-        return this.windowSize == null ? Optional.empty() : Optional.ofNullable(this.windowSize);
+        return Optional.ofNullable(this.windowSize);
     }
 
-    public ManagementEventAggregationConditionResponse(
-        @Nullable String operator,
-        @Nullable Double threshold,
-        @Nullable String windowSize) {
-        this.operator = operator;
-        this.threshold = threshold;
-        this.windowSize = windowSize;
-    }
+    private ManagementEventAggregationConditionResponse() {}
 
-    private ManagementEventAggregationConditionResponse() {
-        this.operator = null;
-        this.threshold = null;
-        this.windowSize = null;
+    private ManagementEventAggregationConditionResponse(ManagementEventAggregationConditionResponse $) {
+        this.operator = $.operator;
+        this.threshold = $.threshold;
+        this.windowSize = $.windowSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementEventAggregationConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String operator;
-        private @Nullable Double threshold;
-        private @Nullable String windowSize;
+        private ManagementEventAggregationConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementEventAggregationConditionResponse();
         }
 
         public Builder(ManagementEventAggregationConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operator = defaults.operator;
-    	      this.threshold = defaults.threshold;
-    	      this.windowSize = defaults.windowSize;
+            $ = new ManagementEventAggregationConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operator(@Nullable String operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
+
         public Builder threshold(@Nullable Double threshold) {
-            this.threshold = threshold;
+            $.threshold = threshold;
             return this;
         }
+
         public Builder windowSize(@Nullable String windowSize) {
-            this.windowSize = windowSize;
+            $.windowSize = windowSize;
             return this;
-        }        public ManagementEventAggregationConditionResponse build() {
-            return new ManagementEventAggregationConditionResponse(operator, threshold, windowSize);
+        }
+
+        public ManagementEventAggregationConditionResponse build() {
+            return $;
         }
     }
+
 }

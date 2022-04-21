@@ -17,7 +17,7 @@ public final class GetCredentialArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetCredentialArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="credentialName", required=true)
-      private final String credentialName;
+    private String credentialName;
 
     public String credentialName() {
         return this.credentialName;
@@ -39,64 +39,59 @@ public final class GetCredentialArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCredentialArgs(
-        String automationAccountName,
-        String credentialName,
-        String resourceGroupName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.credentialName = Objects.requireNonNull(credentialName, "expected parameter 'credentialName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCredentialArgs() {}
 
-    private GetCredentialArgs() {
-        this.automationAccountName = null;
-        this.credentialName = null;
-        this.resourceGroupName = null;
+    private GetCredentialArgs(GetCredentialArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.credentialName = $.credentialName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String credentialName;
-        private String resourceGroupName;
+        private GetCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCredentialArgs();
         }
 
         public Builder(GetCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.credentialName = defaults.credentialName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder credentialName(String credentialName) {
-            this.credentialName = Objects.requireNonNull(credentialName);
+            $.credentialName = credentialName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCredentialArgs build() {
-            return new GetCredentialArgs(automationAccountName, credentialName, resourceGroupName);
+        }
+
+        public GetCredentialArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.credentialName = Objects.requireNonNull($.credentialName, "expected parameter 'credentialName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

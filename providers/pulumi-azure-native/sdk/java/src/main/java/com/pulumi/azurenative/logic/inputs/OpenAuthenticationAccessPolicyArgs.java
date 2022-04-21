@@ -8,10 +8,10 @@ import com.pulumi.azurenative.logic.inputs.OpenAuthenticationPolicyClaimArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class OpenAuthenticationAccessPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="claims")
-      private final @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims;
+    private @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims;
 
-    public Output<List<OpenAuthenticationPolicyClaimArgs>> claims() {
-        return this.claims == null ? Codegen.empty() : this.claims;
+    public Optional<Output<List<OpenAuthenticationPolicyClaimArgs>>> claims() {
+        return Optional.ofNullable(this.claims);
     }
 
     /**
@@ -39,66 +39,62 @@ public final class OpenAuthenticationAccessPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,OpenAuthenticationProviderType>> type;
+    private @Nullable Output<Either<String,OpenAuthenticationProviderType>> type;
 
-    public Output<Either<String,OpenAuthenticationProviderType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,OpenAuthenticationProviderType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public OpenAuthenticationAccessPolicyArgs(
-        @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims,
-        @Nullable Output<Either<String,OpenAuthenticationProviderType>> type) {
-        this.claims = claims;
-        this.type = type;
-    }
+    private OpenAuthenticationAccessPolicyArgs() {}
 
-    private OpenAuthenticationAccessPolicyArgs() {
-        this.claims = Codegen.empty();
-        this.type = Codegen.empty();
+    private OpenAuthenticationAccessPolicyArgs(OpenAuthenticationAccessPolicyArgs $) {
+        this.claims = $.claims;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenAuthenticationAccessPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims;
-        private @Nullable Output<Either<String,OpenAuthenticationProviderType>> type;
+        private OpenAuthenticationAccessPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenAuthenticationAccessPolicyArgs();
         }
 
         public Builder(OpenAuthenticationAccessPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claims = defaults.claims;
-    	      this.type = defaults.type;
+            $ = new OpenAuthenticationAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder claims(@Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims) {
-            this.claims = claims;
+            $.claims = claims;
             return this;
         }
-        public Builder claims(@Nullable List<OpenAuthenticationPolicyClaimArgs> claims) {
-            this.claims = Codegen.ofNullable(claims);
-            return this;
+
+        public Builder claims(List<OpenAuthenticationPolicyClaimArgs> claims) {
+            return claims(Output.of(claims));
         }
+
         public Builder claims(OpenAuthenticationPolicyClaimArgs... claims) {
             return claims(List.of(claims));
         }
+
         public Builder type(@Nullable Output<Either<String,OpenAuthenticationProviderType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,OpenAuthenticationProviderType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public OpenAuthenticationAccessPolicyArgs build() {
-            return new OpenAuthenticationAccessPolicyArgs(claims, type);
+
+        public Builder type(Either<String,OpenAuthenticationProviderType> type) {
+            return type(Output.of(type));
+        }
+
+        public OpenAuthenticationAccessPolicyArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class OracleRdbmsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oracleSchemas", required=true)
-      private final List<OracleSchemaResponse> oracleSchemas;
+    private List<OracleSchemaResponse> oracleSchemas;
 
     public List<OracleSchemaResponse> oracleSchemas() {
         return this.oracleSchemas;
     }
 
-    public OracleRdbmsResponse(List<OracleSchemaResponse> oracleSchemas) {
-        this.oracleSchemas = Objects.requireNonNull(oracleSchemas, "expected parameter 'oracleSchemas' to be non-null");
-    }
+    private OracleRdbmsResponse() {}
 
-    private OracleRdbmsResponse() {
-        this.oracleSchemas = List.of();
+    private OracleRdbmsResponse(OracleRdbmsResponse $) {
+        this.oracleSchemas = $.oracleSchemas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleRdbmsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<OracleSchemaResponse> oracleSchemas;
+        private OracleRdbmsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleRdbmsResponse();
         }
 
         public Builder(OracleRdbmsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oracleSchemas = defaults.oracleSchemas;
+            $ = new OracleRdbmsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder oracleSchemas(List<OracleSchemaResponse> oracleSchemas) {
-            this.oracleSchemas = Objects.requireNonNull(oracleSchemas);
+            $.oracleSchemas = oracleSchemas;
             return this;
         }
+
         public Builder oracleSchemas(OracleSchemaResponse... oracleSchemas) {
             return oracleSchemas(List.of(oracleSchemas));
-        }        public OracleRdbmsResponse build() {
-            return new OracleRdbmsResponse(oracleSchemas);
+        }
+
+        public OracleRdbmsResponse build() {
+            $.oracleSchemas = Objects.requireNonNull($.oracleSchemas, "expected parameter 'oracleSchemas' to be non-null");
+            return $;
         }
     }
+
 }

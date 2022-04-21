@@ -15,94 +15,86 @@ public final class GetEntryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEntryArgs Empty = new GetEntryArgs();
 
     @Import(name="entryGroupId", required=true)
-      private final String entryGroupId;
+    private String entryGroupId;
 
     public String entryGroupId() {
         return this.entryGroupId;
     }
 
     @Import(name="entryId", required=true)
-      private final String entryId;
+    private String entryId;
 
     public String entryId() {
         return this.entryId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetEntryArgs(
-        String entryGroupId,
-        String entryId,
-        String location,
-        @Nullable String project) {
-        this.entryGroupId = Objects.requireNonNull(entryGroupId, "expected parameter 'entryGroupId' to be non-null");
-        this.entryId = Objects.requireNonNull(entryId, "expected parameter 'entryId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetEntryArgs() {}
 
-    private GetEntryArgs() {
-        this.entryGroupId = null;
-        this.entryId = null;
-        this.location = null;
-        this.project = null;
+    private GetEntryArgs(GetEntryArgs $) {
+        this.entryGroupId = $.entryGroupId;
+        this.entryId = $.entryId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String entryGroupId;
-        private String entryId;
-        private String location;
-        private @Nullable String project;
+        private GetEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEntryArgs();
         }
 
         public Builder(GetEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entryGroupId = defaults.entryGroupId;
-    	      this.entryId = defaults.entryId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entryGroupId(String entryGroupId) {
-            this.entryGroupId = Objects.requireNonNull(entryGroupId);
+            $.entryGroupId = entryGroupId;
             return this;
         }
+
         public Builder entryId(String entryId) {
-            this.entryId = Objects.requireNonNull(entryId);
+            $.entryId = entryId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetEntryArgs build() {
-            return new GetEntryArgs(entryGroupId, entryId, location, project);
+        }
+
+        public GetEntryArgs build() {
+            $.entryGroupId = Objects.requireNonNull($.entryGroupId, "expected parameter 'entryGroupId' to be non-null");
+            $.entryId = Objects.requireNonNull($.entryId, "expected parameter 'entryId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

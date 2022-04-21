@@ -5,7 +5,6 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class HttpDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="listUrl", required=true)
-      private final Output<String> listUrl;
+    private Output<String> listUrl;
 
     public Output<String> listUrl() {
         return this.listUrl;
     }
 
-    public HttpDataArgs(Output<String> listUrl) {
-        this.listUrl = Objects.requireNonNull(listUrl, "expected parameter 'listUrl' to be non-null");
-    }
+    private HttpDataArgs() {}
 
-    private HttpDataArgs() {
-        this.listUrl = Codegen.empty();
+    private HttpDataArgs(HttpDataArgs $) {
+        this.listUrl = $.listUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> listUrl;
+        private HttpDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpDataArgs();
         }
 
         public Builder(HttpDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.listUrl = defaults.listUrl;
+            $ = new HttpDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder listUrl(Output<String> listUrl) {
-            this.listUrl = Objects.requireNonNull(listUrl);
+            $.listUrl = listUrl;
             return this;
         }
+
         public Builder listUrl(String listUrl) {
-            this.listUrl = Output.of(Objects.requireNonNull(listUrl));
-            return this;
-        }        public HttpDataArgs build() {
-            return new HttpDataArgs(listUrl);
+            return listUrl(Output.of(listUrl));
+        }
+
+        public HttpDataArgs build() {
+            $.listUrl = Objects.requireNonNull($.listUrl, "expected parameter 'listUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudRunService", required=true)
-      private final CloudRunServiceResponse cloudRunService;
+    private CloudRunServiceResponse cloudRunService;
 
     public CloudRunServiceResponse cloudRunService() {
         return this.cloudRunService;
     }
 
-    public DestinationResponse(CloudRunServiceResponse cloudRunService) {
-        this.cloudRunService = Objects.requireNonNull(cloudRunService, "expected parameter 'cloudRunService' to be non-null");
-    }
+    private DestinationResponse() {}
 
-    private DestinationResponse() {
-        this.cloudRunService = null;
+    private DestinationResponse(DestinationResponse $) {
+        this.cloudRunService = $.cloudRunService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CloudRunServiceResponse cloudRunService;
+        private DestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationResponse();
         }
 
         public Builder(DestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudRunService = defaults.cloudRunService;
+            $ = new DestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudRunService(CloudRunServiceResponse cloudRunService) {
-            this.cloudRunService = Objects.requireNonNull(cloudRunService);
+            $.cloudRunService = cloudRunService;
             return this;
-        }        public DestinationResponse build() {
-            return new DestinationResponse(cloudRunService);
+        }
+
+        public DestinationResponse build() {
+            $.cloudRunService = Objects.requireNonNull($.cloudRunService, "expected parameter 'cloudRunService' to be non-null");
+            return $;
         }
     }
+
 }

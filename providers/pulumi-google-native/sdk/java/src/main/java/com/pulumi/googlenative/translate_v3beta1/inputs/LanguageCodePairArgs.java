@@ -5,7 +5,6 @@ package com.pulumi.googlenative.translate_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class LanguageCodePairArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceLanguageCode", required=true)
-      private final Output<String> sourceLanguageCode;
+    private Output<String> sourceLanguageCode;
 
     public Output<String> sourceLanguageCode() {
         return this.sourceLanguageCode;
@@ -34,63 +33,60 @@ public final class LanguageCodePairArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="targetLanguageCode", required=true)
-      private final Output<String> targetLanguageCode;
+    private Output<String> targetLanguageCode;
 
     public Output<String> targetLanguageCode() {
         return this.targetLanguageCode;
     }
 
-    public LanguageCodePairArgs(
-        Output<String> sourceLanguageCode,
-        Output<String> targetLanguageCode) {
-        this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode, "expected parameter 'sourceLanguageCode' to be non-null");
-        this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode, "expected parameter 'targetLanguageCode' to be non-null");
-    }
+    private LanguageCodePairArgs() {}
 
-    private LanguageCodePairArgs() {
-        this.sourceLanguageCode = Codegen.empty();
-        this.targetLanguageCode = Codegen.empty();
+    private LanguageCodePairArgs(LanguageCodePairArgs $) {
+        this.sourceLanguageCode = $.sourceLanguageCode;
+        this.targetLanguageCode = $.targetLanguageCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LanguageCodePairArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sourceLanguageCode;
-        private Output<String> targetLanguageCode;
+        private LanguageCodePairArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LanguageCodePairArgs();
         }
 
         public Builder(LanguageCodePairArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceLanguageCode = defaults.sourceLanguageCode;
-    	      this.targetLanguageCode = defaults.targetLanguageCode;
+            $ = new LanguageCodePairArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceLanguageCode(Output<String> sourceLanguageCode) {
-            this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode);
+            $.sourceLanguageCode = sourceLanguageCode;
             return this;
         }
+
         public Builder sourceLanguageCode(String sourceLanguageCode) {
-            this.sourceLanguageCode = Output.of(Objects.requireNonNull(sourceLanguageCode));
-            return this;
+            return sourceLanguageCode(Output.of(sourceLanguageCode));
         }
+
         public Builder targetLanguageCode(Output<String> targetLanguageCode) {
-            this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
+            $.targetLanguageCode = targetLanguageCode;
             return this;
         }
+
         public Builder targetLanguageCode(String targetLanguageCode) {
-            this.targetLanguageCode = Output.of(Objects.requireNonNull(targetLanguageCode));
-            return this;
-        }        public LanguageCodePairArgs build() {
-            return new LanguageCodePairArgs(sourceLanguageCode, targetLanguageCode);
+            return targetLanguageCode(Output.of(targetLanguageCode));
+        }
+
+        public LanguageCodePairArgs build() {
+            $.sourceLanguageCode = Objects.requireNonNull($.sourceLanguageCode, "expected parameter 'sourceLanguageCode' to be non-null");
+            $.targetLanguageCode = Objects.requireNonNull($.targetLanguageCode, "expected parameter 'targetLanguageCode' to be non-null");
+            return $;
         }
     }
+
 }

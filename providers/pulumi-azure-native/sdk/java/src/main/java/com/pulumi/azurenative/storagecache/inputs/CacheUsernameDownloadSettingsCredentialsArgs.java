@@ -5,9 +5,9 @@ package com.pulumi.azurenative.storagecache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends com.pulu
      * 
      */
     @Import(name="bindDn")
-      private final @Nullable Output<String> bindDn;
+    private @Nullable Output<String> bindDn;
 
-    public Output<String> bindDn() {
-        return this.bindDn == null ? Codegen.empty() : this.bindDn;
+    public Optional<Output<String>> bindDn() {
+        return Optional.ofNullable(this.bindDn);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends com.pulu
      * 
      */
     @Import(name="bindPassword")
-      private final @Nullable Output<String> bindPassword;
+    private @Nullable Output<String> bindPassword;
 
-    public Output<String> bindPassword() {
-        return this.bindPassword == null ? Codegen.empty() : this.bindPassword;
+    public Optional<Output<String>> bindPassword() {
+        return Optional.ofNullable(this.bindPassword);
     }
 
-    public CacheUsernameDownloadSettingsCredentialsArgs(
-        @Nullable Output<String> bindDn,
-        @Nullable Output<String> bindPassword) {
-        this.bindDn = bindDn;
-        this.bindPassword = bindPassword;
-    }
+    private CacheUsernameDownloadSettingsCredentialsArgs() {}
 
-    private CacheUsernameDownloadSettingsCredentialsArgs() {
-        this.bindDn = Codegen.empty();
-        this.bindPassword = Codegen.empty();
+    private CacheUsernameDownloadSettingsCredentialsArgs(CacheUsernameDownloadSettingsCredentialsArgs $) {
+        this.bindDn = $.bindDn;
+        this.bindPassword = $.bindPassword;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheUsernameDownloadSettingsCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bindDn;
-        private @Nullable Output<String> bindPassword;
+        private CacheUsernameDownloadSettingsCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheUsernameDownloadSettingsCredentialsArgs();
         }
 
         public Builder(CacheUsernameDownloadSettingsCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindDn = defaults.bindDn;
-    	      this.bindPassword = defaults.bindPassword;
+            $ = new CacheUsernameDownloadSettingsCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindDn(@Nullable Output<String> bindDn) {
-            this.bindDn = bindDn;
+            $.bindDn = bindDn;
             return this;
         }
-        public Builder bindDn(@Nullable String bindDn) {
-            this.bindDn = Codegen.ofNullable(bindDn);
-            return this;
+
+        public Builder bindDn(String bindDn) {
+            return bindDn(Output.of(bindDn));
         }
+
         public Builder bindPassword(@Nullable Output<String> bindPassword) {
-            this.bindPassword = bindPassword;
+            $.bindPassword = bindPassword;
             return this;
         }
-        public Builder bindPassword(@Nullable String bindPassword) {
-            this.bindPassword = Codegen.ofNullable(bindPassword);
-            return this;
-        }        public CacheUsernameDownloadSettingsCredentialsArgs build() {
-            return new CacheUsernameDownloadSettingsCredentialsArgs(bindDn, bindPassword);
+
+        public Builder bindPassword(String bindPassword) {
+            return bindPassword(Output.of(bindPassword));
+        }
+
+        public CacheUsernameDownloadSettingsCredentialsArgs build() {
+            return $;
         }
     }
+
 }

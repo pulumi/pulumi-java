@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingAccessLogFileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VirtualNodeSpecLoggingAccessLogArgs extends com.pulumi.resour
      * 
      */
     @Import(name="file")
-      private final @Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file;
+    private @Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file;
 
-    public Output<VirtualNodeSpecLoggingAccessLogFileArgs> file() {
-        return this.file == null ? Codegen.empty() : this.file;
+    public Optional<Output<VirtualNodeSpecLoggingAccessLogFileArgs>> file() {
+        return Optional.ofNullable(this.file);
     }
 
-    public VirtualNodeSpecLoggingAccessLogArgs(@Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file) {
-        this.file = file;
-    }
+    private VirtualNodeSpecLoggingAccessLogArgs() {}
 
-    private VirtualNodeSpecLoggingAccessLogArgs() {
-        this.file = Codegen.empty();
+    private VirtualNodeSpecLoggingAccessLogArgs(VirtualNodeSpecLoggingAccessLogArgs $) {
+        this.file = $.file;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecLoggingAccessLogArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file;
+        private VirtualNodeSpecLoggingAccessLogArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecLoggingAccessLogArgs();
         }
 
         public Builder(VirtualNodeSpecLoggingAccessLogArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.file = defaults.file;
+            $ = new VirtualNodeSpecLoggingAccessLogArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder file(@Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
-        public Builder file(@Nullable VirtualNodeSpecLoggingAccessLogFileArgs file) {
-            this.file = Codegen.ofNullable(file);
-            return this;
-        }        public VirtualNodeSpecLoggingAccessLogArgs build() {
-            return new VirtualNodeSpecLoggingAccessLogArgs(file);
+
+        public Builder file(VirtualNodeSpecLoggingAccessLogFileArgs file) {
+            return file(Output.of(file));
+        }
+
+        public VirtualNodeSpecLoggingAccessLogArgs build() {
+            return $;
         }
     }
+
 }

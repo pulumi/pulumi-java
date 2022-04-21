@@ -20,10 +20,10 @@ public final class JobMaxRecurrenceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="frequency")
-      private final @Nullable String frequency;
+    private @Nullable String frequency;
 
     public Optional<String> frequency() {
-        return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
+        return Optional.ofNullable(this.frequency);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class JobMaxRecurrenceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="interval")
-      private final @Nullable Integer interval;
+    private @Nullable Integer interval;
 
     public Optional<Integer> interval() {
-        return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
+        return Optional.ofNullable(this.interval);
     }
 
-    public JobMaxRecurrenceResponse(
-        @Nullable String frequency,
-        @Nullable Integer interval) {
-        this.frequency = frequency;
-        this.interval = interval;
-    }
+    private JobMaxRecurrenceResponse() {}
 
-    private JobMaxRecurrenceResponse() {
-        this.frequency = null;
-        this.interval = null;
+    private JobMaxRecurrenceResponse(JobMaxRecurrenceResponse $) {
+        this.frequency = $.frequency;
+        this.interval = $.interval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobMaxRecurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String frequency;
-        private @Nullable Integer interval;
+        private JobMaxRecurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobMaxRecurrenceResponse();
         }
 
         public Builder(JobMaxRecurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
+            $ = new JobMaxRecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder frequency(@Nullable String frequency) {
-            this.frequency = frequency;
+            $.frequency = frequency;
             return this;
         }
+
         public Builder interval(@Nullable Integer interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
-        }        public JobMaxRecurrenceResponse build() {
-            return new JobMaxRecurrenceResponse(frequency, interval);
+        }
+
+        public JobMaxRecurrenceResponse build() {
+            return $;
         }
     }
+
 }

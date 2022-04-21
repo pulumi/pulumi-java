@@ -23,45 +23,44 @@ public final class ErrorResponseWrapperResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="error")
-      private final @Nullable ErrorResponseResponse error;
+    private @Nullable ErrorResponseResponse error;
 
     public Optional<ErrorResponseResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
-    public ErrorResponseWrapperResponse(@Nullable ErrorResponseResponse error) {
-        this.error = error;
-    }
+    private ErrorResponseWrapperResponse() {}
 
-    private ErrorResponseWrapperResponse() {
-        this.error = null;
+    private ErrorResponseWrapperResponse(ErrorResponseWrapperResponse $) {
+        this.error = $.error;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorResponseWrapperResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ErrorResponseResponse error;
+        private ErrorResponseWrapperResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorResponseWrapperResponse();
         }
 
         public Builder(ErrorResponseWrapperResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
+            $ = new ErrorResponseWrapperResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(@Nullable ErrorResponseResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
-        }        public ErrorResponseWrapperResponse build() {
-            return new ErrorResponseWrapperResponse(error);
+        }
+
+        public ErrorResponseWrapperResponse build() {
+            return $;
         }
     }
+
 }

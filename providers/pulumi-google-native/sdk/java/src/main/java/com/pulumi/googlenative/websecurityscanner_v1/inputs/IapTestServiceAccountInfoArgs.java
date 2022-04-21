@@ -5,7 +5,6 @@ package com.pulumi.googlenative.websecurityscanner_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class IapTestServiceAccountInfoArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="targetAudienceClientId", required=true)
-      private final Output<String> targetAudienceClientId;
+    private Output<String> targetAudienceClientId;
 
     public Output<String> targetAudienceClientId() {
         return this.targetAudienceClientId;
     }
 
-    public IapTestServiceAccountInfoArgs(Output<String> targetAudienceClientId) {
-        this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId, "expected parameter 'targetAudienceClientId' to be non-null");
-    }
+    private IapTestServiceAccountInfoArgs() {}
 
-    private IapTestServiceAccountInfoArgs() {
-        this.targetAudienceClientId = Codegen.empty();
+    private IapTestServiceAccountInfoArgs(IapTestServiceAccountInfoArgs $) {
+        this.targetAudienceClientId = $.targetAudienceClientId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IapTestServiceAccountInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> targetAudienceClientId;
+        private IapTestServiceAccountInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IapTestServiceAccountInfoArgs();
         }
 
         public Builder(IapTestServiceAccountInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetAudienceClientId = defaults.targetAudienceClientId;
+            $ = new IapTestServiceAccountInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetAudienceClientId(Output<String> targetAudienceClientId) {
-            this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId);
+            $.targetAudienceClientId = targetAudienceClientId;
             return this;
         }
+
         public Builder targetAudienceClientId(String targetAudienceClientId) {
-            this.targetAudienceClientId = Output.of(Objects.requireNonNull(targetAudienceClientId));
-            return this;
-        }        public IapTestServiceAccountInfoArgs build() {
-            return new IapTestServiceAccountInfoArgs(targetAudienceClientId);
+            return targetAudienceClientId(Output.of(targetAudienceClientId));
+        }
+
+        public IapTestServiceAccountInfoArgs build() {
+            $.targetAudienceClientId = Objects.requireNonNull($.targetAudienceClientId, "expected parameter 'targetAudienceClientId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.BootDiagnosticsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DiagnosticsProfileArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bootDiagnostics")
-      private final @Nullable Output<BootDiagnosticsArgs> bootDiagnostics;
+    private @Nullable Output<BootDiagnosticsArgs> bootDiagnostics;
 
-    public Output<BootDiagnosticsArgs> bootDiagnostics() {
-        return this.bootDiagnostics == null ? Codegen.empty() : this.bootDiagnostics;
+    public Optional<Output<BootDiagnosticsArgs>> bootDiagnostics() {
+        return Optional.ofNullable(this.bootDiagnostics);
     }
 
-    public DiagnosticsProfileArgs(@Nullable Output<BootDiagnosticsArgs> bootDiagnostics) {
-        this.bootDiagnostics = bootDiagnostics;
-    }
+    private DiagnosticsProfileArgs() {}
 
-    private DiagnosticsProfileArgs() {
-        this.bootDiagnostics = Codegen.empty();
+    private DiagnosticsProfileArgs(DiagnosticsProfileArgs $) {
+        this.bootDiagnostics = $.bootDiagnostics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticsProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BootDiagnosticsArgs> bootDiagnostics;
+        private DiagnosticsProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticsProfileArgs();
         }
 
         public Builder(DiagnosticsProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiagnostics = defaults.bootDiagnostics;
+            $ = new DiagnosticsProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiagnostics(@Nullable Output<BootDiagnosticsArgs> bootDiagnostics) {
-            this.bootDiagnostics = bootDiagnostics;
+            $.bootDiagnostics = bootDiagnostics;
             return this;
         }
-        public Builder bootDiagnostics(@Nullable BootDiagnosticsArgs bootDiagnostics) {
-            this.bootDiagnostics = Codegen.ofNullable(bootDiagnostics);
-            return this;
-        }        public DiagnosticsProfileArgs build() {
-            return new DiagnosticsProfileArgs(bootDiagnostics);
+
+        public Builder bootDiagnostics(BootDiagnosticsArgs bootDiagnostics) {
+            return bootDiagnostics(Output.of(bootDiagnostics));
+        }
+
+        public DiagnosticsProfileArgs build() {
+            return $;
         }
     }
+
 }

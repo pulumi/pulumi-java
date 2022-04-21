@@ -5,9 +5,9 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends com.pulumi.
      * 
      */
     @Import(name="authCode")
-      private final @Nullable Output<String> authCode;
+    private @Nullable Output<String> authCode;
 
-    public Output<String> authCode() {
-        return this.authCode == null ? Codegen.empty() : this.authCode;
+    public Optional<Output<String>> authCode() {
+        return Optional.ofNullable(this.authCode);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends com.pulumi.
      * 
      */
     @Import(name="redirectUri")
-      private final @Nullable Output<String> redirectUri;
+    private @Nullable Output<String> redirectUri;
 
-    public Output<String> redirectUri() {
-        return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
+    public Optional<Output<String>> redirectUri() {
+        return Optional.ofNullable(this.redirectUri);
     }
 
-    public ConnectorProfileConnectorOAuthRequestArgs(
-        @Nullable Output<String> authCode,
-        @Nullable Output<String> redirectUri) {
-        this.authCode = authCode;
-        this.redirectUri = redirectUri;
-    }
+    private ConnectorProfileConnectorOAuthRequestArgs() {}
 
-    private ConnectorProfileConnectorOAuthRequestArgs() {
-        this.authCode = Codegen.empty();
-        this.redirectUri = Codegen.empty();
+    private ConnectorProfileConnectorOAuthRequestArgs(ConnectorProfileConnectorOAuthRequestArgs $) {
+        this.authCode = $.authCode;
+        this.redirectUri = $.redirectUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileConnectorOAuthRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authCode;
-        private @Nullable Output<String> redirectUri;
+        private ConnectorProfileConnectorOAuthRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileConnectorOAuthRequestArgs();
         }
 
         public Builder(ConnectorProfileConnectorOAuthRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authCode = defaults.authCode;
-    	      this.redirectUri = defaults.redirectUri;
+            $ = new ConnectorProfileConnectorOAuthRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authCode(@Nullable Output<String> authCode) {
-            this.authCode = authCode;
+            $.authCode = authCode;
             return this;
         }
-        public Builder authCode(@Nullable String authCode) {
-            this.authCode = Codegen.ofNullable(authCode);
-            return this;
+
+        public Builder authCode(String authCode) {
+            return authCode(Output.of(authCode));
         }
+
         public Builder redirectUri(@Nullable Output<String> redirectUri) {
-            this.redirectUri = redirectUri;
+            $.redirectUri = redirectUri;
             return this;
         }
-        public Builder redirectUri(@Nullable String redirectUri) {
-            this.redirectUri = Codegen.ofNullable(redirectUri);
-            return this;
-        }        public ConnectorProfileConnectorOAuthRequestArgs build() {
-            return new ConnectorProfileConnectorOAuthRequestArgs(authCode, redirectUri);
+
+        public Builder redirectUri(String redirectUri) {
+            return redirectUri(Output.of(redirectUri));
+        }
+
+        public ConnectorProfileConnectorOAuthRequestArgs build() {
+            return $;
         }
     }
+
 }

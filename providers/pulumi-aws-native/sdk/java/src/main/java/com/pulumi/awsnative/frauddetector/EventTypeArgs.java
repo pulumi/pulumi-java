@@ -9,10 +9,10 @@ import com.pulumi.awsnative.frauddetector.inputs.EventTypeLabelArgs;
 import com.pulumi.awsnative.frauddetector.inputs.EventTypeTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,28 +25,28 @@ public final class EventTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="entityTypes", required=true)
-      private final Output<List<EventTypeEntityTypeArgs>> entityTypes;
+    private Output<List<EventTypeEntityTypeArgs>> entityTypes;
 
     public Output<List<EventTypeEntityTypeArgs>> entityTypes() {
         return this.entityTypes;
     }
 
     @Import(name="eventVariables", required=true)
-      private final Output<List<EventTypeEventVariableArgs>> eventVariables;
+    private Output<List<EventTypeEventVariableArgs>> eventVariables;
 
     public Output<List<EventTypeEventVariableArgs>> eventVariables() {
         return this.eventVariables;
     }
 
     @Import(name="labels", required=true)
-      private final Output<List<EventTypeLabelArgs>> labels;
+    private Output<List<EventTypeLabelArgs>> labels;
 
     public Output<List<EventTypeLabelArgs>> labels() {
         return this.labels;
@@ -57,10 +57,10 @@ public final class EventTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,127 +68,117 @@ public final class EventTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<EventTypeTagArgs>> tags;
+    private @Nullable Output<List<EventTypeTagArgs>> tags;
 
-    public Output<List<EventTypeTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<EventTypeTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public EventTypeArgs(
-        @Nullable Output<String> description,
-        Output<List<EventTypeEntityTypeArgs>> entityTypes,
-        Output<List<EventTypeEventVariableArgs>> eventVariables,
-        Output<List<EventTypeLabelArgs>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<List<EventTypeTagArgs>> tags) {
-        this.description = description;
-        this.entityTypes = Objects.requireNonNull(entityTypes, "expected parameter 'entityTypes' to be non-null");
-        this.eventVariables = Objects.requireNonNull(eventVariables, "expected parameter 'eventVariables' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.name = name;
-        this.tags = tags;
-    }
+    private EventTypeArgs() {}
 
-    private EventTypeArgs() {
-        this.description = Codegen.empty();
-        this.entityTypes = Codegen.empty();
-        this.eventVariables = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private EventTypeArgs(EventTypeArgs $) {
+        this.description = $.description;
+        this.entityTypes = $.entityTypes;
+        this.eventVariables = $.eventVariables;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<EventTypeEntityTypeArgs>> entityTypes;
-        private Output<List<EventTypeEventVariableArgs>> eventVariables;
-        private Output<List<EventTypeLabelArgs>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<EventTypeTagArgs>> tags;
+        private EventTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTypeArgs();
         }
 
         public Builder(EventTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.entityTypes = defaults.entityTypes;
-    	      this.eventVariables = defaults.eventVariables;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new EventTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder entityTypes(Output<List<EventTypeEntityTypeArgs>> entityTypes) {
-            this.entityTypes = Objects.requireNonNull(entityTypes);
+            $.entityTypes = entityTypes;
             return this;
         }
+
         public Builder entityTypes(List<EventTypeEntityTypeArgs> entityTypes) {
-            this.entityTypes = Output.of(Objects.requireNonNull(entityTypes));
-            return this;
+            return entityTypes(Output.of(entityTypes));
         }
+
         public Builder entityTypes(EventTypeEntityTypeArgs... entityTypes) {
             return entityTypes(List.of(entityTypes));
         }
+
         public Builder eventVariables(Output<List<EventTypeEventVariableArgs>> eventVariables) {
-            this.eventVariables = Objects.requireNonNull(eventVariables);
+            $.eventVariables = eventVariables;
             return this;
         }
+
         public Builder eventVariables(List<EventTypeEventVariableArgs> eventVariables) {
-            this.eventVariables = Output.of(Objects.requireNonNull(eventVariables));
-            return this;
+            return eventVariables(Output.of(eventVariables));
         }
+
         public Builder eventVariables(EventTypeEventVariableArgs... eventVariables) {
             return eventVariables(List.of(eventVariables));
         }
+
         public Builder labels(Output<List<EventTypeLabelArgs>> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(List<EventTypeLabelArgs> labels) {
-            this.labels = Output.of(Objects.requireNonNull(labels));
-            return this;
+            return labels(Output.of(labels));
         }
+
         public Builder labels(EventTypeLabelArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<EventTypeTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<EventTypeTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<EventTypeTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(EventTypeTagArgs... tags) {
             return tags(List.of(tags));
-        }        public EventTypeArgs build() {
-            return new EventTypeArgs(description, entityTypes, eventVariables, labels, name, tags);
+        }
+
+        public EventTypeArgs build() {
+            $.entityTypes = Objects.requireNonNull($.entityTypes, "expected parameter 'entityTypes' to be non-null");
+            $.eventVariables = Objects.requireNonNull($.eventVariables, "expected parameter 'eventVariables' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

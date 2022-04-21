@@ -23,10 +23,10 @@ public final class RegistryPasswordResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class RegistryPasswordResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public RegistryPasswordResponse(
-        @Nullable String name,
-        @Nullable String value) {
-        this.name = name;
-        this.value = value;
-    }
+    private RegistryPasswordResponse() {}
 
-    private RegistryPasswordResponse() {
-        this.name = null;
-        this.value = null;
+    private RegistryPasswordResponse(RegistryPasswordResponse $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryPasswordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String value;
+        private RegistryPasswordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryPasswordResponse();
         }
 
         public Builder(RegistryPasswordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new RegistryPasswordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public RegistryPasswordResponse build() {
-            return new RegistryPasswordResponse(name, value);
+        }
+
+        public RegistryPasswordResponse build() {
+            return $;
         }
     }
+
 }

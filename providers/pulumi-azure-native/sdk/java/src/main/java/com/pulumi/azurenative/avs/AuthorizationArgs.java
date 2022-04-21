@@ -5,9 +5,9 @@ package com.pulumi.azurenative.avs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizationName")
-      private final @Nullable Output<String> authorizationName;
+    private @Nullable Output<String> authorizationName;
 
-    public Output<String> authorizationName() {
-        return this.authorizationName == null ? Codegen.empty() : this.authorizationName;
+    public Optional<Output<String>> authorizationName() {
+        return Optional.ofNullable(this.authorizationName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -42,76 +42,70 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public AuthorizationArgs(
-        @Nullable Output<String> authorizationName,
-        Output<String> privateCloudName,
-        Output<String> resourceGroupName) {
-        this.authorizationName = authorizationName;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private AuthorizationArgs() {}
 
-    private AuthorizationArgs() {
-        this.authorizationName = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private AuthorizationArgs(AuthorizationArgs $) {
+        this.authorizationName = $.authorizationName;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authorizationName;
-        private Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
+        private AuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationArgs();
         }
 
         public Builder(AuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationName = defaults.authorizationName;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new AuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationName(@Nullable Output<String> authorizationName) {
-            this.authorizationName = authorizationName;
+            $.authorizationName = authorizationName;
             return this;
         }
-        public Builder authorizationName(@Nullable String authorizationName) {
-            this.authorizationName = Codegen.ofNullable(authorizationName);
-            return this;
+
+        public Builder authorizationName(String authorizationName) {
+            return authorizationName(Output.of(authorizationName));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public AuthorizationArgs build() {
-            return new AuthorizationArgs(authorizationName, privateCloudName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public AuthorizationArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

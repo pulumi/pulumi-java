@@ -18,48 +18,49 @@ public final class GetClusterIdentity extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oidcs", required=true)
-      private final List<GetClusterIdentityOidc> oidcs;
+    private List<GetClusterIdentityOidc> oidcs;
 
     public List<GetClusterIdentityOidc> oidcs() {
         return this.oidcs;
     }
 
-    public GetClusterIdentity(List<GetClusterIdentityOidc> oidcs) {
-        this.oidcs = Objects.requireNonNull(oidcs, "expected parameter 'oidcs' to be non-null");
-    }
+    private GetClusterIdentity() {}
 
-    private GetClusterIdentity() {
-        this.oidcs = List.of();
+    private GetClusterIdentity(GetClusterIdentity $) {
+        this.oidcs = $.oidcs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterIdentity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetClusterIdentityOidc> oidcs;
+        private GetClusterIdentity $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterIdentity();
         }
 
         public Builder(GetClusterIdentity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oidcs = defaults.oidcs;
+            $ = new GetClusterIdentity(Objects.requireNonNull(defaults));
         }
 
         public Builder oidcs(List<GetClusterIdentityOidc> oidcs) {
-            this.oidcs = Objects.requireNonNull(oidcs);
+            $.oidcs = oidcs;
             return this;
         }
+
         public Builder oidcs(GetClusterIdentityOidc... oidcs) {
             return oidcs(List.of(oidcs));
-        }        public GetClusterIdentity build() {
-            return new GetClusterIdentity(oidcs);
+        }
+
+        public GetClusterIdentity build() {
+            $.oidcs = Objects.requireNonNull($.oidcs, "expected parameter 'oidcs' to be non-null");
+            return $;
         }
     }
+
 }

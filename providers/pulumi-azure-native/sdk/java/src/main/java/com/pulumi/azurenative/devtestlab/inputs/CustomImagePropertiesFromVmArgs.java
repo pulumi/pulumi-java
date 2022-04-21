@@ -7,9 +7,9 @@ import com.pulumi.azurenative.devtestlab.inputs.LinuxOsInfoArgs;
 import com.pulumi.azurenative.devtestlab.inputs.WindowsOsInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="linuxOsInfo")
-      private final @Nullable Output<LinuxOsInfoArgs> linuxOsInfo;
+    private @Nullable Output<LinuxOsInfoArgs> linuxOsInfo;
 
-    public Output<LinuxOsInfoArgs> linuxOsInfo() {
-        return this.linuxOsInfo == null ? Codegen.empty() : this.linuxOsInfo;
+    public Optional<Output<LinuxOsInfoArgs>> linuxOsInfo() {
+        return Optional.ofNullable(this.linuxOsInfo);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceVmId")
-      private final @Nullable Output<String> sourceVmId;
+    private @Nullable Output<String> sourceVmId;
 
-    public Output<String> sourceVmId() {
-        return this.sourceVmId == null ? Codegen.empty() : this.sourceVmId;
+    public Optional<Output<String>> sourceVmId() {
+        return Optional.ofNullable(this.sourceVmId);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="windowsOsInfo")
-      private final @Nullable Output<WindowsOsInfoArgs> windowsOsInfo;
+    private @Nullable Output<WindowsOsInfoArgs> windowsOsInfo;
 
-    public Output<WindowsOsInfoArgs> windowsOsInfo() {
-        return this.windowsOsInfo == null ? Codegen.empty() : this.windowsOsInfo;
+    public Optional<Output<WindowsOsInfoArgs>> windowsOsInfo() {
+        return Optional.ofNullable(this.windowsOsInfo);
     }
 
-    public CustomImagePropertiesFromVmArgs(
-        @Nullable Output<LinuxOsInfoArgs> linuxOsInfo,
-        @Nullable Output<String> sourceVmId,
-        @Nullable Output<WindowsOsInfoArgs> windowsOsInfo) {
-        this.linuxOsInfo = linuxOsInfo;
-        this.sourceVmId = sourceVmId;
-        this.windowsOsInfo = windowsOsInfo;
-    }
+    private CustomImagePropertiesFromVmArgs() {}
 
-    private CustomImagePropertiesFromVmArgs() {
-        this.linuxOsInfo = Codegen.empty();
-        this.sourceVmId = Codegen.empty();
-        this.windowsOsInfo = Codegen.empty();
+    private CustomImagePropertiesFromVmArgs(CustomImagePropertiesFromVmArgs $) {
+        this.linuxOsInfo = $.linuxOsInfo;
+        this.sourceVmId = $.sourceVmId;
+        this.windowsOsInfo = $.windowsOsInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomImagePropertiesFromVmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LinuxOsInfoArgs> linuxOsInfo;
-        private @Nullable Output<String> sourceVmId;
-        private @Nullable Output<WindowsOsInfoArgs> windowsOsInfo;
+        private CustomImagePropertiesFromVmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomImagePropertiesFromVmArgs();
         }
 
         public Builder(CustomImagePropertiesFromVmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linuxOsInfo = defaults.linuxOsInfo;
-    	      this.sourceVmId = defaults.sourceVmId;
-    	      this.windowsOsInfo = defaults.windowsOsInfo;
+            $ = new CustomImagePropertiesFromVmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linuxOsInfo(@Nullable Output<LinuxOsInfoArgs> linuxOsInfo) {
-            this.linuxOsInfo = linuxOsInfo;
+            $.linuxOsInfo = linuxOsInfo;
             return this;
         }
-        public Builder linuxOsInfo(@Nullable LinuxOsInfoArgs linuxOsInfo) {
-            this.linuxOsInfo = Codegen.ofNullable(linuxOsInfo);
-            return this;
+
+        public Builder linuxOsInfo(LinuxOsInfoArgs linuxOsInfo) {
+            return linuxOsInfo(Output.of(linuxOsInfo));
         }
+
         public Builder sourceVmId(@Nullable Output<String> sourceVmId) {
-            this.sourceVmId = sourceVmId;
+            $.sourceVmId = sourceVmId;
             return this;
         }
-        public Builder sourceVmId(@Nullable String sourceVmId) {
-            this.sourceVmId = Codegen.ofNullable(sourceVmId);
-            return this;
+
+        public Builder sourceVmId(String sourceVmId) {
+            return sourceVmId(Output.of(sourceVmId));
         }
+
         public Builder windowsOsInfo(@Nullable Output<WindowsOsInfoArgs> windowsOsInfo) {
-            this.windowsOsInfo = windowsOsInfo;
+            $.windowsOsInfo = windowsOsInfo;
             return this;
         }
-        public Builder windowsOsInfo(@Nullable WindowsOsInfoArgs windowsOsInfo) {
-            this.windowsOsInfo = Codegen.ofNullable(windowsOsInfo);
-            return this;
-        }        public CustomImagePropertiesFromVmArgs build() {
-            return new CustomImagePropertiesFromVmArgs(linuxOsInfo, sourceVmId, windowsOsInfo);
+
+        public Builder windowsOsInfo(WindowsOsInfoArgs windowsOsInfo) {
+            return windowsOsInfo(Output.of(windowsOsInfo));
+        }
+
+        public CustomImagePropertiesFromVmArgs build() {
+            return $;
         }
     }
+
 }

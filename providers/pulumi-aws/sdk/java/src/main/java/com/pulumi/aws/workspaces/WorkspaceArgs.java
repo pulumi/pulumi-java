@@ -6,11 +6,11 @@ package com.pulumi.aws.workspaces;
 import com.pulumi.aws.workspaces.inputs.WorkspaceWorkspacePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bundleId", required=true)
-      private final Output<String> bundleId;
+    private Output<String> bundleId;
 
     public Output<String> bundleId() {
         return this.bundleId;
@@ -34,7 +34,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="directoryId", required=true)
-      private final Output<String> directoryId;
+    private Output<String> directoryId;
 
     public Output<String> directoryId() {
         return this.directoryId;
@@ -45,10 +45,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootVolumeEncryptionEnabled")
-      private final @Nullable Output<Boolean> rootVolumeEncryptionEnabled;
+    private @Nullable Output<Boolean> rootVolumeEncryptionEnabled;
 
-    public Output<Boolean> rootVolumeEncryptionEnabled() {
-        return this.rootVolumeEncryptionEnabled == null ? Codegen.empty() : this.rootVolumeEncryptionEnabled;
+    public Optional<Output<Boolean>> rootVolumeEncryptionEnabled() {
+        return Optional.ofNullable(this.rootVolumeEncryptionEnabled);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final Output<String> userName;
+    private Output<String> userName;
 
     public Output<String> userName() {
         return this.userName;
@@ -78,10 +78,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userVolumeEncryptionEnabled")
-      private final @Nullable Output<Boolean> userVolumeEncryptionEnabled;
+    private @Nullable Output<Boolean> userVolumeEncryptionEnabled;
 
-    public Output<Boolean> userVolumeEncryptionEnabled() {
-        return this.userVolumeEncryptionEnabled == null ? Codegen.empty() : this.userVolumeEncryptionEnabled;
+    public Optional<Output<Boolean>> userVolumeEncryptionEnabled() {
+        return Optional.ofNullable(this.userVolumeEncryptionEnabled);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeEncryptionKey")
-      private final @Nullable Output<String> volumeEncryptionKey;
+    private @Nullable Output<String> volumeEncryptionKey;
 
-    public Output<String> volumeEncryptionKey() {
-        return this.volumeEncryptionKey == null ? Codegen.empty() : this.volumeEncryptionKey;
+    public Optional<Output<String>> volumeEncryptionKey() {
+        return Optional.ofNullable(this.volumeEncryptionKey);
     }
 
     /**
@@ -100,141 +100,121 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceProperties")
-      private final @Nullable Output<WorkspaceWorkspacePropertiesArgs> workspaceProperties;
+    private @Nullable Output<WorkspaceWorkspacePropertiesArgs> workspaceProperties;
 
-    public Output<WorkspaceWorkspacePropertiesArgs> workspaceProperties() {
-        return this.workspaceProperties == null ? Codegen.empty() : this.workspaceProperties;
+    public Optional<Output<WorkspaceWorkspacePropertiesArgs>> workspaceProperties() {
+        return Optional.ofNullable(this.workspaceProperties);
     }
 
-    public WorkspaceArgs(
-        Output<String> bundleId,
-        Output<String> directoryId,
-        @Nullable Output<Boolean> rootVolumeEncryptionEnabled,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> userName,
-        @Nullable Output<Boolean> userVolumeEncryptionEnabled,
-        @Nullable Output<String> volumeEncryptionKey,
-        @Nullable Output<WorkspaceWorkspacePropertiesArgs> workspaceProperties) {
-        this.bundleId = Objects.requireNonNull(bundleId, "expected parameter 'bundleId' to be non-null");
-        this.directoryId = Objects.requireNonNull(directoryId, "expected parameter 'directoryId' to be non-null");
-        this.rootVolumeEncryptionEnabled = rootVolumeEncryptionEnabled;
-        this.tags = tags;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-        this.userVolumeEncryptionEnabled = userVolumeEncryptionEnabled;
-        this.volumeEncryptionKey = volumeEncryptionKey;
-        this.workspaceProperties = workspaceProperties;
-    }
+    private WorkspaceArgs() {}
 
-    private WorkspaceArgs() {
-        this.bundleId = Codegen.empty();
-        this.directoryId = Codegen.empty();
-        this.rootVolumeEncryptionEnabled = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userName = Codegen.empty();
-        this.userVolumeEncryptionEnabled = Codegen.empty();
-        this.volumeEncryptionKey = Codegen.empty();
-        this.workspaceProperties = Codegen.empty();
+    private WorkspaceArgs(WorkspaceArgs $) {
+        this.bundleId = $.bundleId;
+        this.directoryId = $.directoryId;
+        this.rootVolumeEncryptionEnabled = $.rootVolumeEncryptionEnabled;
+        this.tags = $.tags;
+        this.userName = $.userName;
+        this.userVolumeEncryptionEnabled = $.userVolumeEncryptionEnabled;
+        this.volumeEncryptionKey = $.volumeEncryptionKey;
+        this.workspaceProperties = $.workspaceProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bundleId;
-        private Output<String> directoryId;
-        private @Nullable Output<Boolean> rootVolumeEncryptionEnabled;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> userName;
-        private @Nullable Output<Boolean> userVolumeEncryptionEnabled;
-        private @Nullable Output<String> volumeEncryptionKey;
-        private @Nullable Output<WorkspaceWorkspacePropertiesArgs> workspaceProperties;
+        private WorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceArgs();
         }
 
         public Builder(WorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundleId = defaults.bundleId;
-    	      this.directoryId = defaults.directoryId;
-    	      this.rootVolumeEncryptionEnabled = defaults.rootVolumeEncryptionEnabled;
-    	      this.tags = defaults.tags;
-    	      this.userName = defaults.userName;
-    	      this.userVolumeEncryptionEnabled = defaults.userVolumeEncryptionEnabled;
-    	      this.volumeEncryptionKey = defaults.volumeEncryptionKey;
-    	      this.workspaceProperties = defaults.workspaceProperties;
+            $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bundleId(Output<String> bundleId) {
-            this.bundleId = Objects.requireNonNull(bundleId);
+            $.bundleId = bundleId;
             return this;
         }
+
         public Builder bundleId(String bundleId) {
-            this.bundleId = Output.of(Objects.requireNonNull(bundleId));
-            return this;
+            return bundleId(Output.of(bundleId));
         }
+
         public Builder directoryId(Output<String> directoryId) {
-            this.directoryId = Objects.requireNonNull(directoryId);
+            $.directoryId = directoryId;
             return this;
         }
+
         public Builder directoryId(String directoryId) {
-            this.directoryId = Output.of(Objects.requireNonNull(directoryId));
-            return this;
+            return directoryId(Output.of(directoryId));
         }
+
         public Builder rootVolumeEncryptionEnabled(@Nullable Output<Boolean> rootVolumeEncryptionEnabled) {
-            this.rootVolumeEncryptionEnabled = rootVolumeEncryptionEnabled;
+            $.rootVolumeEncryptionEnabled = rootVolumeEncryptionEnabled;
             return this;
         }
-        public Builder rootVolumeEncryptionEnabled(@Nullable Boolean rootVolumeEncryptionEnabled) {
-            this.rootVolumeEncryptionEnabled = Codegen.ofNullable(rootVolumeEncryptionEnabled);
-            return this;
+
+        public Builder rootVolumeEncryptionEnabled(Boolean rootVolumeEncryptionEnabled) {
+            return rootVolumeEncryptionEnabled(Output.of(rootVolumeEncryptionEnabled));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userName(Output<String> userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Output.of(Objects.requireNonNull(userName));
-            return this;
+            return userName(Output.of(userName));
         }
+
         public Builder userVolumeEncryptionEnabled(@Nullable Output<Boolean> userVolumeEncryptionEnabled) {
-            this.userVolumeEncryptionEnabled = userVolumeEncryptionEnabled;
+            $.userVolumeEncryptionEnabled = userVolumeEncryptionEnabled;
             return this;
         }
-        public Builder userVolumeEncryptionEnabled(@Nullable Boolean userVolumeEncryptionEnabled) {
-            this.userVolumeEncryptionEnabled = Codegen.ofNullable(userVolumeEncryptionEnabled);
-            return this;
+
+        public Builder userVolumeEncryptionEnabled(Boolean userVolumeEncryptionEnabled) {
+            return userVolumeEncryptionEnabled(Output.of(userVolumeEncryptionEnabled));
         }
+
         public Builder volumeEncryptionKey(@Nullable Output<String> volumeEncryptionKey) {
-            this.volumeEncryptionKey = volumeEncryptionKey;
+            $.volumeEncryptionKey = volumeEncryptionKey;
             return this;
         }
-        public Builder volumeEncryptionKey(@Nullable String volumeEncryptionKey) {
-            this.volumeEncryptionKey = Codegen.ofNullable(volumeEncryptionKey);
-            return this;
+
+        public Builder volumeEncryptionKey(String volumeEncryptionKey) {
+            return volumeEncryptionKey(Output.of(volumeEncryptionKey));
         }
+
         public Builder workspaceProperties(@Nullable Output<WorkspaceWorkspacePropertiesArgs> workspaceProperties) {
-            this.workspaceProperties = workspaceProperties;
+            $.workspaceProperties = workspaceProperties;
             return this;
         }
-        public Builder workspaceProperties(@Nullable WorkspaceWorkspacePropertiesArgs workspaceProperties) {
-            this.workspaceProperties = Codegen.ofNullable(workspaceProperties);
-            return this;
-        }        public WorkspaceArgs build() {
-            return new WorkspaceArgs(bundleId, directoryId, rootVolumeEncryptionEnabled, tags, userName, userVolumeEncryptionEnabled, volumeEncryptionKey, workspaceProperties);
+
+        public Builder workspaceProperties(WorkspaceWorkspacePropertiesArgs workspaceProperties) {
+            return workspaceProperties(Output.of(workspaceProperties));
+        }
+
+        public WorkspaceArgs build() {
+            $.bundleId = Objects.requireNonNull($.bundleId, "expected parameter 'bundleId' to be non-null");
+            $.directoryId = Objects.requireNonNull($.directoryId, "expected parameter 'directoryId' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="deleteFilesAfterCompletion")
-      private final @Nullable Output<Object> deleteFilesAfterCompletion;
+    private @Nullable Output<Object> deleteFilesAfterCompletion;
 
-    public Output<Object> deleteFilesAfterCompletion() {
-        return this.deleteFilesAfterCompletion == null ? Codegen.empty() : this.deleteFilesAfterCompletion;
+    public Optional<Output<Object>> deleteFilesAfterCompletion() {
+        return Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="enablePartitionDiscovery")
-      private final @Nullable Output<Boolean> enablePartitionDiscovery;
+    private @Nullable Output<Boolean> enablePartitionDiscovery;
 
-    public Output<Boolean> enablePartitionDiscovery() {
-        return this.enablePartitionDiscovery == null ? Codegen.empty() : this.enablePartitionDiscovery;
+    public Optional<Output<Boolean>> enablePartitionDiscovery() {
+        return Optional.ofNullable(this.enablePartitionDiscovery);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="fileListPath")
-      private final @Nullable Output<Object> fileListPath;
+    private @Nullable Output<Object> fileListPath;
 
-    public Output<Object> fileListPath() {
-        return this.fileListPath == null ? Codegen.empty() : this.fileListPath;
+    public Optional<Output<Object>> fileListPath() {
+        return Optional.ofNullable(this.fileListPath);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="listAfter")
-      private final @Nullable Output<Object> listAfter;
+    private @Nullable Output<Object> listAfter;
 
-    public Output<Object> listAfter() {
-        return this.listAfter == null ? Codegen.empty() : this.listAfter;
+    public Optional<Output<Object>> listAfter() {
+        return Optional.ofNullable(this.listAfter);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="listBefore")
-      private final @Nullable Output<Object> listBefore;
+    private @Nullable Output<Object> listBefore;
 
-    public Output<Object> listBefore() {
-        return this.listBefore == null ? Codegen.empty() : this.listBefore;
+    public Optional<Output<Object>> listBefore() {
+        return Optional.ofNullable(this.listBefore);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -103,10 +104,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="modifiedDatetimeEnd")
-      private final @Nullable Output<Object> modifiedDatetimeEnd;
+    private @Nullable Output<Object> modifiedDatetimeEnd;
 
-    public Output<Object> modifiedDatetimeEnd() {
-        return this.modifiedDatetimeEnd == null ? Codegen.empty() : this.modifiedDatetimeEnd;
+    public Optional<Output<Object>> modifiedDatetimeEnd() {
+        return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
 
     /**
@@ -114,10 +115,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="modifiedDatetimeStart")
-      private final @Nullable Output<Object> modifiedDatetimeStart;
+    private @Nullable Output<Object> modifiedDatetimeStart;
 
-    public Output<Object> modifiedDatetimeStart() {
-        return this.modifiedDatetimeStart == null ? Codegen.empty() : this.modifiedDatetimeStart;
+    public Optional<Output<Object>> modifiedDatetimeStart() {
+        return Optional.ofNullable(this.modifiedDatetimeStart);
     }
 
     /**
@@ -125,10 +126,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="partitionRootPath")
-      private final @Nullable Output<Object> partitionRootPath;
+    private @Nullable Output<Object> partitionRootPath;
 
-    public Output<Object> partitionRootPath() {
-        return this.partitionRootPath == null ? Codegen.empty() : this.partitionRootPath;
+    public Optional<Output<Object>> partitionRootPath() {
+        return Optional.ofNullable(this.partitionRootPath);
     }
 
     /**
@@ -136,10 +137,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="recursive")
-      private final @Nullable Output<Object> recursive;
+    private @Nullable Output<Object> recursive;
 
-    public Output<Object> recursive() {
-        return this.recursive == null ? Codegen.empty() : this.recursive;
+    public Optional<Output<Object>> recursive() {
+        return Optional.ofNullable(this.recursive);
     }
 
     /**
@@ -148,7 +149,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -159,10 +160,10 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="wildcardFileName")
-      private final @Nullable Output<Object> wildcardFileName;
+    private @Nullable Output<Object> wildcardFileName;
 
-    public Output<Object> wildcardFileName() {
-        return this.wildcardFileName == null ? Codegen.empty() : this.wildcardFileName;
+    public Optional<Output<Object>> wildcardFileName() {
+        return Optional.ofNullable(this.wildcardFileName);
     }
 
     /**
@@ -170,219 +171,179 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="wildcardFolderPath")
-      private final @Nullable Output<Object> wildcardFolderPath;
+    private @Nullable Output<Object> wildcardFolderPath;
 
-    public Output<Object> wildcardFolderPath() {
-        return this.wildcardFolderPath == null ? Codegen.empty() : this.wildcardFolderPath;
+    public Optional<Output<Object>> wildcardFolderPath() {
+        return Optional.ofNullable(this.wildcardFolderPath);
     }
 
-    public AzureDataLakeStoreReadSettingsArgs(
-        @Nullable Output<Object> deleteFilesAfterCompletion,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Boolean> enablePartitionDiscovery,
-        @Nullable Output<Object> fileListPath,
-        @Nullable Output<Object> listAfter,
-        @Nullable Output<Object> listBefore,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> modifiedDatetimeEnd,
-        @Nullable Output<Object> modifiedDatetimeStart,
-        @Nullable Output<Object> partitionRootPath,
-        @Nullable Output<Object> recursive,
-        Output<String> type,
-        @Nullable Output<Object> wildcardFileName,
-        @Nullable Output<Object> wildcardFolderPath) {
-        this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.enablePartitionDiscovery = enablePartitionDiscovery;
-        this.fileListPath = fileListPath;
-        this.listAfter = listAfter;
-        this.listBefore = listBefore;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.modifiedDatetimeEnd = modifiedDatetimeEnd;
-        this.modifiedDatetimeStart = modifiedDatetimeStart;
-        this.partitionRootPath = partitionRootPath;
-        this.recursive = recursive;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.wildcardFileName = wildcardFileName;
-        this.wildcardFolderPath = wildcardFolderPath;
-    }
+    private AzureDataLakeStoreReadSettingsArgs() {}
 
-    private AzureDataLakeStoreReadSettingsArgs() {
-        this.deleteFilesAfterCompletion = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.enablePartitionDiscovery = Codegen.empty();
-        this.fileListPath = Codegen.empty();
-        this.listAfter = Codegen.empty();
-        this.listBefore = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.modifiedDatetimeEnd = Codegen.empty();
-        this.modifiedDatetimeStart = Codegen.empty();
-        this.partitionRootPath = Codegen.empty();
-        this.recursive = Codegen.empty();
-        this.type = Codegen.empty();
-        this.wildcardFileName = Codegen.empty();
-        this.wildcardFolderPath = Codegen.empty();
+    private AzureDataLakeStoreReadSettingsArgs(AzureDataLakeStoreReadSettingsArgs $) {
+        this.deleteFilesAfterCompletion = $.deleteFilesAfterCompletion;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.enablePartitionDiscovery = $.enablePartitionDiscovery;
+        this.fileListPath = $.fileListPath;
+        this.listAfter = $.listAfter;
+        this.listBefore = $.listBefore;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.modifiedDatetimeEnd = $.modifiedDatetimeEnd;
+        this.modifiedDatetimeStart = $.modifiedDatetimeStart;
+        this.partitionRootPath = $.partitionRootPath;
+        this.recursive = $.recursive;
+        this.type = $.type;
+        this.wildcardFileName = $.wildcardFileName;
+        this.wildcardFolderPath = $.wildcardFolderPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDataLakeStoreReadSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> deleteFilesAfterCompletion;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Boolean> enablePartitionDiscovery;
-        private @Nullable Output<Object> fileListPath;
-        private @Nullable Output<Object> listAfter;
-        private @Nullable Output<Object> listBefore;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> modifiedDatetimeEnd;
-        private @Nullable Output<Object> modifiedDatetimeStart;
-        private @Nullable Output<Object> partitionRootPath;
-        private @Nullable Output<Object> recursive;
-        private Output<String> type;
-        private @Nullable Output<Object> wildcardFileName;
-        private @Nullable Output<Object> wildcardFolderPath;
+        private AzureDataLakeStoreReadSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDataLakeStoreReadSettingsArgs();
         }
 
         public Builder(AzureDataLakeStoreReadSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteFilesAfterCompletion = defaults.deleteFilesAfterCompletion;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.enablePartitionDiscovery = defaults.enablePartitionDiscovery;
-    	      this.fileListPath = defaults.fileListPath;
-    	      this.listAfter = defaults.listAfter;
-    	      this.listBefore = defaults.listBefore;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.modifiedDatetimeEnd = defaults.modifiedDatetimeEnd;
-    	      this.modifiedDatetimeStart = defaults.modifiedDatetimeStart;
-    	      this.partitionRootPath = defaults.partitionRootPath;
-    	      this.recursive = defaults.recursive;
-    	      this.type = defaults.type;
-    	      this.wildcardFileName = defaults.wildcardFileName;
-    	      this.wildcardFolderPath = defaults.wildcardFolderPath;
+            $ = new AzureDataLakeStoreReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteFilesAfterCompletion(@Nullable Output<Object> deleteFilesAfterCompletion) {
-            this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
+            $.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
-        public Builder deleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
-            this.deleteFilesAfterCompletion = Codegen.ofNullable(deleteFilesAfterCompletion);
-            return this;
+
+        public Builder deleteFilesAfterCompletion(Object deleteFilesAfterCompletion) {
+            return deleteFilesAfterCompletion(Output.of(deleteFilesAfterCompletion));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = enablePartitionDiscovery;
+            $.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
-        public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = Codegen.ofNullable(enablePartitionDiscovery);
-            return this;
+
+        public Builder enablePartitionDiscovery(Boolean enablePartitionDiscovery) {
+            return enablePartitionDiscovery(Output.of(enablePartitionDiscovery));
         }
+
         public Builder fileListPath(@Nullable Output<Object> fileListPath) {
-            this.fileListPath = fileListPath;
+            $.fileListPath = fileListPath;
             return this;
         }
-        public Builder fileListPath(@Nullable Object fileListPath) {
-            this.fileListPath = Codegen.ofNullable(fileListPath);
-            return this;
+
+        public Builder fileListPath(Object fileListPath) {
+            return fileListPath(Output.of(fileListPath));
         }
+
         public Builder listAfter(@Nullable Output<Object> listAfter) {
-            this.listAfter = listAfter;
+            $.listAfter = listAfter;
             return this;
         }
-        public Builder listAfter(@Nullable Object listAfter) {
-            this.listAfter = Codegen.ofNullable(listAfter);
-            return this;
+
+        public Builder listAfter(Object listAfter) {
+            return listAfter(Output.of(listAfter));
         }
+
         public Builder listBefore(@Nullable Output<Object> listBefore) {
-            this.listBefore = listBefore;
+            $.listBefore = listBefore;
             return this;
         }
-        public Builder listBefore(@Nullable Object listBefore) {
-            this.listBefore = Codegen.ofNullable(listBefore);
-            return this;
+
+        public Builder listBefore(Object listBefore) {
+            return listBefore(Output.of(listBefore));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder modifiedDatetimeEnd(@Nullable Output<Object> modifiedDatetimeEnd) {
-            this.modifiedDatetimeEnd = modifiedDatetimeEnd;
+            $.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
-        public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
-            this.modifiedDatetimeEnd = Codegen.ofNullable(modifiedDatetimeEnd);
-            return this;
+
+        public Builder modifiedDatetimeEnd(Object modifiedDatetimeEnd) {
+            return modifiedDatetimeEnd(Output.of(modifiedDatetimeEnd));
         }
+
         public Builder modifiedDatetimeStart(@Nullable Output<Object> modifiedDatetimeStart) {
-            this.modifiedDatetimeStart = modifiedDatetimeStart;
+            $.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
-        public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
-            this.modifiedDatetimeStart = Codegen.ofNullable(modifiedDatetimeStart);
-            return this;
+
+        public Builder modifiedDatetimeStart(Object modifiedDatetimeStart) {
+            return modifiedDatetimeStart(Output.of(modifiedDatetimeStart));
         }
+
         public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
-            this.partitionRootPath = partitionRootPath;
+            $.partitionRootPath = partitionRootPath;
             return this;
         }
-        public Builder partitionRootPath(@Nullable Object partitionRootPath) {
-            this.partitionRootPath = Codegen.ofNullable(partitionRootPath);
-            return this;
+
+        public Builder partitionRootPath(Object partitionRootPath) {
+            return partitionRootPath(Output.of(partitionRootPath));
         }
+
         public Builder recursive(@Nullable Output<Object> recursive) {
-            this.recursive = recursive;
+            $.recursive = recursive;
             return this;
         }
-        public Builder recursive(@Nullable Object recursive) {
-            this.recursive = Codegen.ofNullable(recursive);
-            return this;
+
+        public Builder recursive(Object recursive) {
+            return recursive(Output.of(recursive));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder wildcardFileName(@Nullable Output<Object> wildcardFileName) {
-            this.wildcardFileName = wildcardFileName;
+            $.wildcardFileName = wildcardFileName;
             return this;
         }
-        public Builder wildcardFileName(@Nullable Object wildcardFileName) {
-            this.wildcardFileName = Codegen.ofNullable(wildcardFileName);
-            return this;
+
+        public Builder wildcardFileName(Object wildcardFileName) {
+            return wildcardFileName(Output.of(wildcardFileName));
         }
+
         public Builder wildcardFolderPath(@Nullable Output<Object> wildcardFolderPath) {
-            this.wildcardFolderPath = wildcardFolderPath;
+            $.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
-        public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
-            this.wildcardFolderPath = Codegen.ofNullable(wildcardFolderPath);
-            return this;
-        }        public AzureDataLakeStoreReadSettingsArgs build() {
-            return new AzureDataLakeStoreReadSettingsArgs(deleteFilesAfterCompletion, disableMetricsCollection, enablePartitionDiscovery, fileListPath, listAfter, listBefore, maxConcurrentConnections, modifiedDatetimeEnd, modifiedDatetimeStart, partitionRootPath, recursive, type, wildcardFileName, wildcardFolderPath);
+
+        public Builder wildcardFolderPath(Object wildcardFolderPath) {
+            return wildcardFolderPath(Output.of(wildcardFolderPath));
+        }
+
+        public AzureDataLakeStoreReadSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

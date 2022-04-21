@@ -26,10 +26,10 @@ public final class AliasPathResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiVersions")
-      private final @Nullable List<String> apiVersions;
+    private @Nullable List<String> apiVersions;
 
-    public List<String> apiVersions() {
-        return this.apiVersions == null ? List.of() : this.apiVersions;
+    public Optional<List<String>> apiVersions() {
+        return Optional.ofNullable(this.apiVersions);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class AliasPathResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadata", required=true)
-      private final AliasPathMetadataResponse metadata;
+    private AliasPathMetadataResponse metadata;
 
     public AliasPathMetadataResponse metadata() {
         return this.metadata;
@@ -48,10 +48,10 @@ public final class AliasPathResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -59,76 +59,67 @@ public final class AliasPathResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pattern")
-      private final @Nullable AliasPatternResponse pattern;
+    private @Nullable AliasPatternResponse pattern;
 
     public Optional<AliasPatternResponse> pattern() {
-        return this.pattern == null ? Optional.empty() : Optional.ofNullable(this.pattern);
+        return Optional.ofNullable(this.pattern);
     }
 
-    public AliasPathResponse(
-        @Nullable List<String> apiVersions,
-        AliasPathMetadataResponse metadata,
-        @Nullable String path,
-        @Nullable AliasPatternResponse pattern) {
-        this.apiVersions = apiVersions;
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.path = path;
-        this.pattern = pattern;
-    }
+    private AliasPathResponse() {}
 
-    private AliasPathResponse() {
-        this.apiVersions = List.of();
-        this.metadata = null;
-        this.path = null;
-        this.pattern = null;
+    private AliasPathResponse(AliasPathResponse $) {
+        this.apiVersions = $.apiVersions;
+        this.metadata = $.metadata;
+        this.path = $.path;
+        this.pattern = $.pattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasPathResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> apiVersions;
-        private AliasPathMetadataResponse metadata;
-        private @Nullable String path;
-        private @Nullable AliasPatternResponse pattern;
+        private AliasPathResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasPathResponse();
         }
 
         public Builder(AliasPathResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersions = defaults.apiVersions;
-    	      this.metadata = defaults.metadata;
-    	      this.path = defaults.path;
-    	      this.pattern = defaults.pattern;
+            $ = new AliasPathResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = apiVersions;
+            $.apiVersions = apiVersions;
             return this;
         }
+
         public Builder apiVersions(String... apiVersions) {
             return apiVersions(List.of(apiVersions));
         }
+
         public Builder metadata(AliasPathMetadataResponse metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder pattern(@Nullable AliasPatternResponse pattern) {
-            this.pattern = pattern;
+            $.pattern = pattern;
             return this;
-        }        public AliasPathResponse build() {
-            return new AliasPathResponse(apiVersions, metadata, path, pattern);
+        }
+
+        public AliasPathResponse build() {
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            return $;
         }
     }
+
 }

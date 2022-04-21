@@ -25,7 +25,7 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="databasesToSourceTables", required=true)
-      private final Map<String,List<DatabaseTableResponse>> databasesToSourceTables;
+    private Map<String,List<DatabaseTableResponse>> databasesToSourceTables;
 
     public Map<String,List<DatabaseTableResponse>> databasesToSourceTables() {
         return this.databasesToSourceTables;
@@ -36,7 +36,7 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="databasesToTargetTables", required=true)
-      private final Map<String,List<DatabaseTableResponse>> databasesToTargetTables;
+    private Map<String,List<DatabaseTableResponse>> databasesToTargetTables;
 
     public Map<String,List<DatabaseTableResponse>> databasesToTargetTables() {
         return this.databasesToTargetTables;
@@ -47,7 +47,7 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="tableValidationErrors", required=true)
-      private final Map<String,List<String>> tableValidationErrors;
+    private Map<String,List<String>> tableValidationErrors;
 
     public Map<String,List<String>> tableValidationErrors() {
         return this.tableValidationErrors;
@@ -58,76 +58,70 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final List<ReportableExceptionResponse> validationErrors;
+    private List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 
-    public GetUserTablesSqlSyncTaskOutputResponse(
-        Map<String,List<DatabaseTableResponse>> databasesToSourceTables,
-        Map<String,List<DatabaseTableResponse>> databasesToTargetTables,
-        Map<String,List<String>> tableValidationErrors,
-        List<ReportableExceptionResponse> validationErrors) {
-        this.databasesToSourceTables = Objects.requireNonNull(databasesToSourceTables, "expected parameter 'databasesToSourceTables' to be non-null");
-        this.databasesToTargetTables = Objects.requireNonNull(databasesToTargetTables, "expected parameter 'databasesToTargetTables' to be non-null");
-        this.tableValidationErrors = Objects.requireNonNull(tableValidationErrors, "expected parameter 'tableValidationErrors' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private GetUserTablesSqlSyncTaskOutputResponse() {}
 
-    private GetUserTablesSqlSyncTaskOutputResponse() {
-        this.databasesToSourceTables = Map.of();
-        this.databasesToTargetTables = Map.of();
-        this.tableValidationErrors = Map.of();
-        this.validationErrors = List.of();
+    private GetUserTablesSqlSyncTaskOutputResponse(GetUserTablesSqlSyncTaskOutputResponse $) {
+        this.databasesToSourceTables = $.databasesToSourceTables;
+        this.databasesToTargetTables = $.databasesToTargetTables;
+        this.tableValidationErrors = $.tableValidationErrors;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserTablesSqlSyncTaskOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,List<DatabaseTableResponse>> databasesToSourceTables;
-        private Map<String,List<DatabaseTableResponse>> databasesToTargetTables;
-        private Map<String,List<String>> tableValidationErrors;
-        private List<ReportableExceptionResponse> validationErrors;
+        private GetUserTablesSqlSyncTaskOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserTablesSqlSyncTaskOutputResponse();
         }
 
         public Builder(GetUserTablesSqlSyncTaskOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databasesToSourceTables = defaults.databasesToSourceTables;
-    	      this.databasesToTargetTables = defaults.databasesToTargetTables;
-    	      this.tableValidationErrors = defaults.tableValidationErrors;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new GetUserTablesSqlSyncTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databasesToSourceTables(Map<String,List<DatabaseTableResponse>> databasesToSourceTables) {
-            this.databasesToSourceTables = Objects.requireNonNull(databasesToSourceTables);
+            $.databasesToSourceTables = databasesToSourceTables;
             return this;
         }
+
         public Builder databasesToTargetTables(Map<String,List<DatabaseTableResponse>> databasesToTargetTables) {
-            this.databasesToTargetTables = Objects.requireNonNull(databasesToTargetTables);
+            $.databasesToTargetTables = databasesToTargetTables;
             return this;
         }
+
         public Builder tableValidationErrors(Map<String,List<String>> tableValidationErrors) {
-            this.tableValidationErrors = Objects.requireNonNull(tableValidationErrors);
+            $.tableValidationErrors = tableValidationErrors;
             return this;
         }
+
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
-        }        public GetUserTablesSqlSyncTaskOutputResponse build() {
-            return new GetUserTablesSqlSyncTaskOutputResponse(databasesToSourceTables, databasesToTargetTables, tableValidationErrors, validationErrors);
+        }
+
+        public GetUserTablesSqlSyncTaskOutputResponse build() {
+            $.databasesToSourceTables = Objects.requireNonNull($.databasesToSourceTables, "expected parameter 'databasesToSourceTables' to be non-null");
+            $.databasesToTargetTables = Objects.requireNonNull($.databasesToTargetTables, "expected parameter 'databasesToTargetTables' to be non-null");
+            $.tableValidationErrors = Objects.requireNonNull($.tableValidationErrors, "expected parameter 'tableValidationErrors' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

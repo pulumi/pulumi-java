@@ -6,7 +6,6 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 import com.pulumi.awsnative.networkfirewall.inputs.RuleGroupDimensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,52 +15,53 @@ public final class RuleGroupPublishMetricActionArgs extends com.pulumi.resources
     public static final RuleGroupPublishMetricActionArgs Empty = new RuleGroupPublishMetricActionArgs();
 
     @Import(name="dimensions", required=true)
-      private final Output<List<RuleGroupDimensionArgs>> dimensions;
+    private Output<List<RuleGroupDimensionArgs>> dimensions;
 
     public Output<List<RuleGroupDimensionArgs>> dimensions() {
         return this.dimensions;
     }
 
-    public RuleGroupPublishMetricActionArgs(Output<List<RuleGroupDimensionArgs>> dimensions) {
-        this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
-    }
+    private RuleGroupPublishMetricActionArgs() {}
 
-    private RuleGroupPublishMetricActionArgs() {
-        this.dimensions = Codegen.empty();
+    private RuleGroupPublishMetricActionArgs(RuleGroupPublishMetricActionArgs $) {
+        this.dimensions = $.dimensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupPublishMetricActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<RuleGroupDimensionArgs>> dimensions;
+        private RuleGroupPublishMetricActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupPublishMetricActionArgs();
         }
 
         public Builder(RuleGroupPublishMetricActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
+            $ = new RuleGroupPublishMetricActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(Output<List<RuleGroupDimensionArgs>> dimensions) {
-            this.dimensions = Objects.requireNonNull(dimensions);
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder dimensions(List<RuleGroupDimensionArgs> dimensions) {
-            this.dimensions = Output.of(Objects.requireNonNull(dimensions));
-            return this;
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder dimensions(RuleGroupDimensionArgs... dimensions) {
             return dimensions(List.of(dimensions));
-        }        public RuleGroupPublishMetricActionArgs build() {
-            return new RuleGroupPublishMetricActionArgs(dimensions);
+        }
+
+        public RuleGroupPublishMetricActionArgs build() {
+            $.dimensions = Objects.requireNonNull($.dimensions, "expected parameter 'dimensions' to be non-null");
+            return $;
         }
     }
+
 }

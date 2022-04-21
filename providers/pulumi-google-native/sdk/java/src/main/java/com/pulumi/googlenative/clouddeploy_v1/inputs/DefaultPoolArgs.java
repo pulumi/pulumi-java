@@ -5,9 +5,9 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DefaultPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifactStorage")
-      private final @Nullable Output<String> artifactStorage;
+    private @Nullable Output<String> artifactStorage;
 
-    public Output<String> artifactStorage() {
-        return this.artifactStorage == null ? Codegen.empty() : this.artifactStorage;
+    public Optional<Output<String>> artifactStorage() {
+        return Optional.ofNullable(this.artifactStorage);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DefaultPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
-    public DefaultPoolArgs(
-        @Nullable Output<String> artifactStorage,
-        @Nullable Output<String> serviceAccount) {
-        this.artifactStorage = artifactStorage;
-        this.serviceAccount = serviceAccount;
-    }
+    private DefaultPoolArgs() {}
 
-    private DefaultPoolArgs() {
-        this.artifactStorage = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
+    private DefaultPoolArgs(DefaultPoolArgs $) {
+        this.artifactStorage = $.artifactStorage;
+        this.serviceAccount = $.serviceAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactStorage;
-        private @Nullable Output<String> serviceAccount;
+        private DefaultPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultPoolArgs();
         }
 
         public Builder(DefaultPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactStorage = defaults.artifactStorage;
-    	      this.serviceAccount = defaults.serviceAccount;
+            $ = new DefaultPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactStorage(@Nullable Output<String> artifactStorage) {
-            this.artifactStorage = artifactStorage;
+            $.artifactStorage = artifactStorage;
             return this;
         }
-        public Builder artifactStorage(@Nullable String artifactStorage) {
-            this.artifactStorage = Codegen.ofNullable(artifactStorage);
-            return this;
+
+        public Builder artifactStorage(String artifactStorage) {
+            return artifactStorage(Output.of(artifactStorage));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
-        }        public DefaultPoolArgs build() {
-            return new DefaultPoolArgs(artifactStorage, serviceAccount);
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
+        }
+
+        public DefaultPoolArgs build() {
+            return $;
         }
     }
+
 }

@@ -18,62 +18,59 @@ public final class RuleGroupTextTransformation extends com.pulumi.resources.Invo
     public static final RuleGroupTextTransformation Empty = new RuleGroupTextTransformation();
 
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
     }
 
     @Import(name="type", required=true)
-      private final RuleGroupTextTransformationType type;
+    private RuleGroupTextTransformationType type;
 
     public RuleGroupTextTransformationType type() {
         return this.type;
     }
 
-    public RuleGroupTextTransformation(
-        Integer priority,
-        RuleGroupTextTransformationType type) {
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RuleGroupTextTransformation() {}
 
-    private RuleGroupTextTransformation() {
-        this.priority = null;
-        this.type = null;
+    private RuleGroupTextTransformation(RuleGroupTextTransformation $) {
+        this.priority = $.priority;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupTextTransformation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer priority;
-        private RuleGroupTextTransformationType type;
+        private RuleGroupTextTransformation $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupTextTransformation();
         }
 
         public Builder(RuleGroupTextTransformation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.priority = defaults.priority;
-    	      this.type = defaults.type;
+            $ = new RuleGroupTextTransformation(Objects.requireNonNull(defaults));
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder type(RuleGroupTextTransformationType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RuleGroupTextTransformation build() {
-            return new RuleGroupTextTransformation(priority, type);
+        }
+
+        public RuleGroupTextTransformation build() {
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

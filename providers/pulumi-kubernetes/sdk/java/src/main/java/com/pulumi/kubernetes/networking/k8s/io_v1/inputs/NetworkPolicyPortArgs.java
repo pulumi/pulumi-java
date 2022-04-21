@@ -6,10 +6,10 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class NetworkPolicyPortArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="endPort")
-      private final @Nullable Output<Integer> endPort;
+    private @Nullable Output<Integer> endPort;
 
-    public Output<Integer> endPort() {
-        return this.endPort == null ? Codegen.empty() : this.endPort;
+    public Optional<Output<Integer>> endPort() {
+        return Optional.ofNullable(this.endPort);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkPolicyPortArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Either<Integer,String>> port;
+    private @Nullable Output<Either<Integer,String>> port;
 
-    public Output<Either<Integer,String>> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Either<Integer,String>>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class NetworkPolicyPortArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public NetworkPolicyPortArgs(
-        @Nullable Output<Integer> endPort,
-        @Nullable Output<Either<Integer,String>> port,
-        @Nullable Output<String> protocol) {
-        this.endPort = endPort;
-        this.port = port;
-        this.protocol = protocol;
-    }
+    private NetworkPolicyPortArgs() {}
 
-    private NetworkPolicyPortArgs() {
-        this.endPort = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private NetworkPolicyPortArgs(NetworkPolicyPortArgs $) {
+        this.endPort = $.endPort;
+        this.port = $.port;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPolicyPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> endPort;
-        private @Nullable Output<Either<Integer,String>> port;
-        private @Nullable Output<String> protocol;
+        private NetworkPolicyPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPolicyPortArgs();
         }
 
         public Builder(NetworkPolicyPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endPort = defaults.endPort;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
+            $ = new NetworkPolicyPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endPort(@Nullable Output<Integer> endPort) {
-            this.endPort = endPort;
+            $.endPort = endPort;
             return this;
         }
-        public Builder endPort(@Nullable Integer endPort) {
-            this.endPort = Codegen.ofNullable(endPort);
-            return this;
+
+        public Builder endPort(Integer endPort) {
+            return endPort(Output.of(endPort));
         }
+
         public Builder port(@Nullable Output<Either<Integer,String>> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Either<Integer,String> port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Either<Integer,String> port) {
+            return port(Output.of(port));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public NetworkPolicyPortArgs build() {
-            return new NetworkPolicyPortArgs(endPort, port, protocol);
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public NetworkPolicyPortArgs build() {
+            return $;
         }
     }
+
 }

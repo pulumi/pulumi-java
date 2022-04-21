@@ -6,10 +6,10 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultTtl")
-      private final @Nullable Output<Integer> defaultTtl;
+    private @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> defaultTtl() {
-        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
+    public Optional<Output<Integer>> defaultTtl() {
+        return Optional.ofNullable(this.defaultTtl);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxTtl")
-      private final @Nullable Output<Integer> maxTtl;
+    private @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> maxTtl() {
-        return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
+    public Optional<Output<Integer>> maxTtl() {
+        return Optional.ofNullable(this.maxTtl);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minTtl")
-      private final @Nullable Output<Integer> minTtl;
+    private @Nullable Output<Integer> minTtl;
 
-    public Output<Integer> minTtl() {
-        return this.minTtl == null ? Codegen.empty() : this.minTtl;
+    public Optional<Output<Integer>> minTtl() {
+        return Optional.ofNullable(this.minTtl);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -88,128 +88,108 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parametersInCacheKeyAndForwardedToOrigin")
-      private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin;
+    private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin() {
-        return this.parametersInCacheKeyAndForwardedToOrigin == null ? Codegen.empty() : this.parametersInCacheKeyAndForwardedToOrigin;
+    public Optional<Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs>> parametersInCacheKeyAndForwardedToOrigin() {
+        return Optional.ofNullable(this.parametersInCacheKeyAndForwardedToOrigin);
     }
 
-    public CachePolicyState(
-        @Nullable Output<String> comment,
-        @Nullable Output<Integer> defaultTtl,
-        @Nullable Output<String> etag,
-        @Nullable Output<Integer> maxTtl,
-        @Nullable Output<Integer> minTtl,
-        @Nullable Output<String> name,
-        @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin) {
-        this.comment = comment;
-        this.defaultTtl = defaultTtl;
-        this.etag = etag;
-        this.maxTtl = maxTtl;
-        this.minTtl = minTtl;
-        this.name = name;
-        this.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
-    }
+    private CachePolicyState() {}
 
-    private CachePolicyState() {
-        this.comment = Codegen.empty();
-        this.defaultTtl = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.maxTtl = Codegen.empty();
-        this.minTtl = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parametersInCacheKeyAndForwardedToOrigin = Codegen.empty();
+    private CachePolicyState(CachePolicyState $) {
+        this.comment = $.comment;
+        this.defaultTtl = $.defaultTtl;
+        this.etag = $.etag;
+        this.maxTtl = $.maxTtl;
+        this.minTtl = $.minTtl;
+        this.name = $.name;
+        this.parametersInCacheKeyAndForwardedToOrigin = $.parametersInCacheKeyAndForwardedToOrigin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachePolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private @Nullable Output<Integer> defaultTtl;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<Integer> maxTtl;
-        private @Nullable Output<Integer> minTtl;
-        private @Nullable Output<String> name;
-        private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin;
+        private CachePolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachePolicyState();
         }
 
         public Builder(CachePolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.defaultTtl = defaults.defaultTtl;
-    	      this.etag = defaults.etag;
-    	      this.maxTtl = defaults.maxTtl;
-    	      this.minTtl = defaults.minTtl;
-    	      this.name = defaults.name;
-    	      this.parametersInCacheKeyAndForwardedToOrigin = defaults.parametersInCacheKeyAndForwardedToOrigin;
+            $ = new CachePolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
-            this.defaultTtl = defaultTtl;
+            $.defaultTtl = defaultTtl;
             return this;
         }
-        public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Codegen.ofNullable(defaultTtl);
-            return this;
+
+        public Builder defaultTtl(Integer defaultTtl) {
+            return defaultTtl(Output.of(defaultTtl));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
-            this.maxTtl = maxTtl;
+            $.maxTtl = maxTtl;
             return this;
         }
-        public Builder maxTtl(@Nullable Integer maxTtl) {
-            this.maxTtl = Codegen.ofNullable(maxTtl);
-            return this;
+
+        public Builder maxTtl(Integer maxTtl) {
+            return maxTtl(Output.of(maxTtl));
         }
+
         public Builder minTtl(@Nullable Output<Integer> minTtl) {
-            this.minTtl = minTtl;
+            $.minTtl = minTtl;
             return this;
         }
-        public Builder minTtl(@Nullable Integer minTtl) {
-            this.minTtl = Codegen.ofNullable(minTtl);
-            return this;
+
+        public Builder minTtl(Integer minTtl) {
+            return minTtl(Output.of(minTtl));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin) {
-            this.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
+            $.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
             return this;
         }
-        public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs parametersInCacheKeyAndForwardedToOrigin) {
-            this.parametersInCacheKeyAndForwardedToOrigin = Codegen.ofNullable(parametersInCacheKeyAndForwardedToOrigin);
-            return this;
-        }        public CachePolicyState build() {
-            return new CachePolicyState(comment, defaultTtl, etag, maxTtl, minTtl, name, parametersInCacheKeyAndForwardedToOrigin);
+
+        public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs parametersInCacheKeyAndForwardedToOrigin) {
+            return parametersInCacheKeyAndForwardedToOrigin(Output.of(parametersInCacheKeyAndForwardedToOrigin));
+        }
+
+        public CachePolicyState build() {
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends com.pu
      * 
      */
     @Import(name="instanceProperties", required=true)
-      private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
+    private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties() {
         return this.instanceProperties;
@@ -29,55 +29,52 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends com.pu
      * 
      */
     @Import(name="totalCount", required=true)
-      private final String totalCount;
+    private String totalCount;
 
     public String totalCount() {
         return this.totalCount;
     }
 
-    public FutureReservationSpecificSKUPropertiesResponse(
-        AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties,
-        String totalCount) {
-        this.instanceProperties = Objects.requireNonNull(instanceProperties, "expected parameter 'instanceProperties' to be non-null");
-        this.totalCount = Objects.requireNonNull(totalCount, "expected parameter 'totalCount' to be non-null");
-    }
+    private FutureReservationSpecificSKUPropertiesResponse() {}
 
-    private FutureReservationSpecificSKUPropertiesResponse() {
-        this.instanceProperties = null;
-        this.totalCount = null;
+    private FutureReservationSpecificSKUPropertiesResponse(FutureReservationSpecificSKUPropertiesResponse $) {
+        this.instanceProperties = $.instanceProperties;
+        this.totalCount = $.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FutureReservationSpecificSKUPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
-        private String totalCount;
+        private FutureReservationSpecificSKUPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FutureReservationSpecificSKUPropertiesResponse();
         }
 
         public Builder(FutureReservationSpecificSKUPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceProperties = defaults.instanceProperties;
-    	      this.totalCount = defaults.totalCount;
+            $ = new FutureReservationSpecificSKUPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
-            this.instanceProperties = Objects.requireNonNull(instanceProperties);
+            $.instanceProperties = instanceProperties;
             return this;
         }
+
         public Builder totalCount(String totalCount) {
-            this.totalCount = Objects.requireNonNull(totalCount);
+            $.totalCount = totalCount;
             return this;
-        }        public FutureReservationSpecificSKUPropertiesResponse build() {
-            return new FutureReservationSpecificSKUPropertiesResponse(instanceProperties, totalCount);
+        }
+
+        public FutureReservationSpecificSKUPropertiesResponse build() {
+            $.instanceProperties = Objects.requireNonNull($.instanceProperties, "expected parameter 'instanceProperties' to be non-null");
+            $.totalCount = Objects.requireNonNull($.totalCount, "expected parameter 'totalCount' to be non-null");
+            return $;
         }
     }
+
 }

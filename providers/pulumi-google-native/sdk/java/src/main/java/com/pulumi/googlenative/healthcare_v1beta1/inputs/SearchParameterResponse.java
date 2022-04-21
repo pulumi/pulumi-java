@@ -21,7 +21,7 @@ public final class SearchParameterResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="canonicalUrl", required=true)
-      private final String canonicalUrl;
+    private String canonicalUrl;
 
     public String canonicalUrl() {
         return this.canonicalUrl;
@@ -32,55 +32,52 @@ public final class SearchParameterResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="parameter", required=true)
-      private final String parameter;
+    private String parameter;
 
     public String parameter() {
         return this.parameter;
     }
 
-    public SearchParameterResponse(
-        String canonicalUrl,
-        String parameter) {
-        this.canonicalUrl = Objects.requireNonNull(canonicalUrl, "expected parameter 'canonicalUrl' to be non-null");
-        this.parameter = Objects.requireNonNull(parameter, "expected parameter 'parameter' to be non-null");
-    }
+    private SearchParameterResponse() {}
 
-    private SearchParameterResponse() {
-        this.canonicalUrl = null;
-        this.parameter = null;
+    private SearchParameterResponse(SearchParameterResponse $) {
+        this.canonicalUrl = $.canonicalUrl;
+        this.parameter = $.parameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SearchParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String canonicalUrl;
-        private String parameter;
+        private SearchParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SearchParameterResponse();
         }
 
         public Builder(SearchParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canonicalUrl = defaults.canonicalUrl;
-    	      this.parameter = defaults.parameter;
+            $ = new SearchParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canonicalUrl(String canonicalUrl) {
-            this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
+            $.canonicalUrl = canonicalUrl;
             return this;
         }
+
         public Builder parameter(String parameter) {
-            this.parameter = Objects.requireNonNull(parameter);
+            $.parameter = parameter;
             return this;
-        }        public SearchParameterResponse build() {
-            return new SearchParameterResponse(canonicalUrl, parameter);
+        }
+
+        public SearchParameterResponse build() {
+            $.canonicalUrl = Objects.requireNonNull($.canonicalUrl, "expected parameter 'canonicalUrl' to be non-null");
+            $.parameter = Objects.requireNonNull($.parameter, "expected parameter 'parameter' to be non-null");
+            return $;
         }
     }
+
 }

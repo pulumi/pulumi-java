@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudresourcemanager_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LienArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LienArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LienArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="origin")
-      private final @Nullable Output<String> origin;
+    private @Nullable Output<String> origin;
 
-    public Output<String> origin() {
-        return this.origin == null ? Codegen.empty() : this.origin;
+    public Optional<Output<String>> origin() {
+        return Optional.ofNullable(this.origin);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LienArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class LienArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
     /**
@@ -76,118 +76,102 @@ public final class LienArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restrictions")
-      private final @Nullable Output<List<String>> restrictions;
+    private @Nullable Output<List<String>> restrictions;
 
-    public Output<List<String>> restrictions() {
-        return this.restrictions == null ? Codegen.empty() : this.restrictions;
+    public Optional<Output<List<String>>> restrictions() {
+        return Optional.ofNullable(this.restrictions);
     }
 
-    public LienArgs(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> name,
-        @Nullable Output<String> origin,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> reason,
-        @Nullable Output<List<String>> restrictions) {
-        this.createTime = createTime;
-        this.name = name;
-        this.origin = origin;
-        this.parent = parent;
-        this.reason = reason;
-        this.restrictions = restrictions;
-    }
+    private LienArgs() {}
 
-    private LienArgs() {
-        this.createTime = Codegen.empty();
-        this.name = Codegen.empty();
-        this.origin = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.reason = Codegen.empty();
-        this.restrictions = Codegen.empty();
+    private LienArgs(LienArgs $) {
+        this.createTime = $.createTime;
+        this.name = $.name;
+        this.origin = $.origin;
+        this.parent = $.parent;
+        this.reason = $.reason;
+        this.restrictions = $.restrictions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LienArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> origin;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> reason;
-        private @Nullable Output<List<String>> restrictions;
+        private LienArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LienArgs();
         }
 
         public Builder(LienArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.name = defaults.name;
-    	      this.origin = defaults.origin;
-    	      this.parent = defaults.parent;
-    	      this.reason = defaults.reason;
-    	      this.restrictions = defaults.restrictions;
+            $ = new LienArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder origin(@Nullable Output<String> origin) {
-            this.origin = origin;
+            $.origin = origin;
             return this;
         }
-        public Builder origin(@Nullable String origin) {
-            this.origin = Codegen.ofNullable(origin);
-            return this;
+
+        public Builder origin(String origin) {
+            return origin(Output.of(origin));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
         }
+
         public Builder restrictions(@Nullable Output<List<String>> restrictions) {
-            this.restrictions = restrictions;
+            $.restrictions = restrictions;
             return this;
         }
-        public Builder restrictions(@Nullable List<String> restrictions) {
-            this.restrictions = Codegen.ofNullable(restrictions);
-            return this;
+
+        public Builder restrictions(List<String> restrictions) {
+            return restrictions(Output.of(restrictions));
         }
+
         public Builder restrictions(String... restrictions) {
             return restrictions(List.of(restrictions));
-        }        public LienArgs build() {
-            return new LienArgs(createTime, name, origin, parent, reason, restrictions);
+        }
+
+        public LienArgs build() {
+            return $;
         }
     }
+
 }

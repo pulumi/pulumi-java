@@ -23,10 +23,10 @@ public final class ClientGroupInfoResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="groupId")
-      private final @Nullable String groupId;
+    private @Nullable String groupId;
 
     public Optional<String> groupId() {
-        return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ClientGroupInfoResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="groupName")
-      private final @Nullable String groupName;
+    private @Nullable String groupName;
 
     public Optional<String> groupName() {
-        return this.groupName == null ? Optional.empty() : Optional.ofNullable(this.groupName);
+        return Optional.ofNullable(this.groupName);
     }
 
-    public ClientGroupInfoResponse(
-        @Nullable String groupId,
-        @Nullable String groupName) {
-        this.groupId = groupId;
-        this.groupName = groupName;
-    }
+    private ClientGroupInfoResponse() {}
 
-    private ClientGroupInfoResponse() {
-        this.groupId = null;
-        this.groupName = null;
+    private ClientGroupInfoResponse(ClientGroupInfoResponse $) {
+        this.groupId = $.groupId;
+        this.groupName = $.groupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientGroupInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String groupId;
-        private @Nullable String groupName;
+        private ClientGroupInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientGroupInfoResponse();
         }
 
         public Builder(ClientGroupInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.groupName = defaults.groupName;
+            $ = new ClientGroupInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
+
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
-        }        public ClientGroupInfoResponse build() {
-            return new ClientGroupInfoResponse(groupId, groupName);
+        }
+
+        public ClientGroupInfoResponse build() {
+            return $;
         }
     }
+
 }

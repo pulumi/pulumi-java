@@ -23,10 +23,10 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends c
      * 
      */
     @Import(name="data")
-      private final @Nullable String data;
+    private @Nullable String data;
 
     public Optional<String> data() {
-        return this.data == null ? Optional.empty() : Optional.ofNullable(this.data);
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends c
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -45,10 +45,10 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends c
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends c
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends c
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -78,91 +78,77 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends c
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ApplicationGatewayAuthenticationCertificateResponse(
-        @Nullable String data,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
-        this.data = data;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationGatewayAuthenticationCertificateResponse() {}
 
-    private ApplicationGatewayAuthenticationCertificateResponse() {
-        this.data = null;
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.type = null;
+    private ApplicationGatewayAuthenticationCertificateResponse(ApplicationGatewayAuthenticationCertificateResponse $) {
+        this.data = $.data;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayAuthenticationCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String data;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String provisioningState;
-        private String type;
+        private ApplicationGatewayAuthenticationCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayAuthenticationCertificateResponse();
         }
 
         public Builder(ApplicationGatewayAuthenticationCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new ApplicationGatewayAuthenticationCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable String data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ApplicationGatewayAuthenticationCertificateResponse build() {
-            return new ApplicationGatewayAuthenticationCertificateResponse(data, etag, id, name, provisioningState, type);
+        }
+
+        public ApplicationGatewayAuthenticationCertificateResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

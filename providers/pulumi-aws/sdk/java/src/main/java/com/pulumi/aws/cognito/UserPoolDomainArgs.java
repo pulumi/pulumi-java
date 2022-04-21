@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolDomainArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class UserPoolDomainArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<String> domain;
+    private Output<String> domain;
 
     public Output<String> domain() {
         return this.domain;
@@ -42,76 +42,70 @@ public final class UserPoolDomainArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userPoolId", required=true)
-      private final Output<String> userPoolId;
+    private Output<String> userPoolId;
 
     public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
-    public UserPoolDomainArgs(
-        @Nullable Output<String> certificateArn,
-        Output<String> domain,
-        Output<String> userPoolId) {
-        this.certificateArn = certificateArn;
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
-    }
+    private UserPoolDomainArgs() {}
 
-    private UserPoolDomainArgs() {
-        this.certificateArn = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.userPoolId = Codegen.empty();
+    private UserPoolDomainArgs(UserPoolDomainArgs $) {
+        this.certificateArn = $.certificateArn;
+        this.domain = $.domain;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateArn;
-        private Output<String> domain;
-        private Output<String> userPoolId;
+        private UserPoolDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolDomainArgs();
         }
 
         public Builder(UserPoolDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.domain = defaults.domain;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new UserPoolDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder domain(Output<String> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
+            return domain(Output.of(domain));
         }
+
         public Builder userPoolId(Output<String> userPoolId) {
-            this.userPoolId = Objects.requireNonNull(userPoolId);
+            $.userPoolId = userPoolId;
             return this;
         }
+
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
-            return this;
-        }        public UserPoolDomainArgs build() {
-            return new UserPoolDomainArgs(certificateArn, domain, userPoolId);
+            return userPoolId(Output.of(userPoolId));
+        }
+
+        public UserPoolDomainArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.userPoolId = Objects.requireNonNull($.userPoolId, "expected parameter 'userPoolId' to be non-null");
+            return $;
         }
     }
+
 }

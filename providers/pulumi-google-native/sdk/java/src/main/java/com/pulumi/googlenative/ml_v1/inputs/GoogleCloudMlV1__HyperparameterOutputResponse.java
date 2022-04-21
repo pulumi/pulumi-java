@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
      * 
      */
     @Import(name="allMetrics", required=true)
-      private final List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics;
+    private List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics;
 
     public List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics() {
         return this.allMetrics;
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
      * 
      */
     @Import(name="builtInAlgorithmOutput", required=true)
-      private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
+    private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
 
     public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput() {
         return this.builtInAlgorithmOutput;
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -59,7 +59,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
      * 
      */
     @Import(name="finalMetric", required=true)
-      private final GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric;
+    private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric;
 
     public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric() {
         return this.finalMetric;
@@ -70,7 +70,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
      * 
      */
     @Import(name="hyperparameters", required=true)
-      private final Map<String,String> hyperparameters;
+    private Map<String,String> hyperparameters;
 
     public Map<String,String> hyperparameters() {
         return this.hyperparameters;
@@ -81,7 +81,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
      * 
      */
     @Import(name="isTrialStoppedEarly", required=true)
-      private final Boolean isTrialStoppedEarly;
+    private Boolean isTrialStoppedEarly;
 
     public Boolean isTrialStoppedEarly() {
         return this.isTrialStoppedEarly;
@@ -92,7 +92,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -103,7 +103,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -114,7 +114,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
      * 
      */
     @Import(name="trialId", required=true)
-      private final String trialId;
+    private String trialId;
 
     public String trialId() {
         return this.trialId;
@@ -125,130 +125,112 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
      * 
      */
     @Import(name="webAccessUris", required=true)
-      private final Map<String,String> webAccessUris;
+    private Map<String,String> webAccessUris;
 
     public Map<String,String> webAccessUris() {
         return this.webAccessUris;
     }
 
-    public GoogleCloudMlV1__HyperparameterOutputResponse(
-        List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics,
-        GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
-        String endTime,
-        GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric,
-        Map<String,String> hyperparameters,
-        Boolean isTrialStoppedEarly,
-        String startTime,
-        String state,
-        String trialId,
-        Map<String,String> webAccessUris) {
-        this.allMetrics = Objects.requireNonNull(allMetrics, "expected parameter 'allMetrics' to be non-null");
-        this.builtInAlgorithmOutput = Objects.requireNonNull(builtInAlgorithmOutput, "expected parameter 'builtInAlgorithmOutput' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.finalMetric = Objects.requireNonNull(finalMetric, "expected parameter 'finalMetric' to be non-null");
-        this.hyperparameters = Objects.requireNonNull(hyperparameters, "expected parameter 'hyperparameters' to be non-null");
-        this.isTrialStoppedEarly = Objects.requireNonNull(isTrialStoppedEarly, "expected parameter 'isTrialStoppedEarly' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.trialId = Objects.requireNonNull(trialId, "expected parameter 'trialId' to be non-null");
-        this.webAccessUris = Objects.requireNonNull(webAccessUris, "expected parameter 'webAccessUris' to be non-null");
-    }
+    private GoogleCloudMlV1__HyperparameterOutputResponse() {}
 
-    private GoogleCloudMlV1__HyperparameterOutputResponse() {
-        this.allMetrics = List.of();
-        this.builtInAlgorithmOutput = null;
-        this.endTime = null;
-        this.finalMetric = null;
-        this.hyperparameters = Map.of();
-        this.isTrialStoppedEarly = null;
-        this.startTime = null;
-        this.state = null;
-        this.trialId = null;
-        this.webAccessUris = Map.of();
+    private GoogleCloudMlV1__HyperparameterOutputResponse(GoogleCloudMlV1__HyperparameterOutputResponse $) {
+        this.allMetrics = $.allMetrics;
+        this.builtInAlgorithmOutput = $.builtInAlgorithmOutput;
+        this.endTime = $.endTime;
+        this.finalMetric = $.finalMetric;
+        this.hyperparameters = $.hyperparameters;
+        this.isTrialStoppedEarly = $.isTrialStoppedEarly;
+        this.startTime = $.startTime;
+        this.state = $.state;
+        this.trialId = $.trialId;
+        this.webAccessUris = $.webAccessUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__HyperparameterOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics;
-        private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
-        private String endTime;
-        private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric;
-        private Map<String,String> hyperparameters;
-        private Boolean isTrialStoppedEarly;
-        private String startTime;
-        private String state;
-        private String trialId;
-        private Map<String,String> webAccessUris;
+        private GoogleCloudMlV1__HyperparameterOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__HyperparameterOutputResponse();
         }
 
         public Builder(GoogleCloudMlV1__HyperparameterOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allMetrics = defaults.allMetrics;
-    	      this.builtInAlgorithmOutput = defaults.builtInAlgorithmOutput;
-    	      this.endTime = defaults.endTime;
-    	      this.finalMetric = defaults.finalMetric;
-    	      this.hyperparameters = defaults.hyperparameters;
-    	      this.isTrialStoppedEarly = defaults.isTrialStoppedEarly;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
-    	      this.trialId = defaults.trialId;
-    	      this.webAccessUris = defaults.webAccessUris;
+            $ = new GoogleCloudMlV1__HyperparameterOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allMetrics(List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics) {
-            this.allMetrics = Objects.requireNonNull(allMetrics);
+            $.allMetrics = allMetrics;
             return this;
         }
+
         public Builder allMetrics(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse... allMetrics) {
             return allMetrics(List.of(allMetrics));
         }
+
         public Builder builtInAlgorithmOutput(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput) {
-            this.builtInAlgorithmOutput = Objects.requireNonNull(builtInAlgorithmOutput);
+            $.builtInAlgorithmOutput = builtInAlgorithmOutput;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder finalMetric(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric) {
-            this.finalMetric = Objects.requireNonNull(finalMetric);
+            $.finalMetric = finalMetric;
             return this;
         }
+
         public Builder hyperparameters(Map<String,String> hyperparameters) {
-            this.hyperparameters = Objects.requireNonNull(hyperparameters);
+            $.hyperparameters = hyperparameters;
             return this;
         }
+
         public Builder isTrialStoppedEarly(Boolean isTrialStoppedEarly) {
-            this.isTrialStoppedEarly = Objects.requireNonNull(isTrialStoppedEarly);
+            $.isTrialStoppedEarly = isTrialStoppedEarly;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder trialId(String trialId) {
-            this.trialId = Objects.requireNonNull(trialId);
+            $.trialId = trialId;
             return this;
         }
+
         public Builder webAccessUris(Map<String,String> webAccessUris) {
-            this.webAccessUris = Objects.requireNonNull(webAccessUris);
+            $.webAccessUris = webAccessUris;
             return this;
-        }        public GoogleCloudMlV1__HyperparameterOutputResponse build() {
-            return new GoogleCloudMlV1__HyperparameterOutputResponse(allMetrics, builtInAlgorithmOutput, endTime, finalMetric, hyperparameters, isTrialStoppedEarly, startTime, state, trialId, webAccessUris);
+        }
+
+        public GoogleCloudMlV1__HyperparameterOutputResponse build() {
+            $.allMetrics = Objects.requireNonNull($.allMetrics, "expected parameter 'allMetrics' to be non-null");
+            $.builtInAlgorithmOutput = Objects.requireNonNull($.builtInAlgorithmOutput, "expected parameter 'builtInAlgorithmOutput' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.finalMetric = Objects.requireNonNull($.finalMetric, "expected parameter 'finalMetric' to be non-null");
+            $.hyperparameters = Objects.requireNonNull($.hyperparameters, "expected parameter 'hyperparameters' to be non-null");
+            $.isTrialStoppedEarly = Objects.requireNonNull($.isTrialStoppedEarly, "expected parameter 'isTrialStoppedEarly' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.trialId = Objects.requireNonNull($.trialId, "expected parameter 'trialId' to be non-null");
+            $.webAccessUris = Objects.requireNonNull($.webAccessUris, "expected parameter 'webAccessUris' to be non-null");
+            return $;
         }
     }
+
 }

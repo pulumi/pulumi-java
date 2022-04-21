@@ -23,7 +23,7 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="checkInterval", required=true)
-      private final String checkInterval;
+    private String checkInterval;
 
     public String checkInterval() {
         return this.checkInterval;
@@ -34,7 +34,7 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disableHealthCheck", required=true)
-      private final Boolean disableHealthCheck;
+    private Boolean disableHealthCheck;
 
     public Boolean disableHealthCheck() {
         return this.disableHealthCheck;
@@ -45,7 +45,7 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="healthyThreshold", required=true)
-      private final Integer healthyThreshold;
+    private Integer healthyThreshold;
 
     public Integer healthyThreshold() {
         return this.healthyThreshold;
@@ -56,7 +56,7 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -67,7 +67,7 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restartThreshold", required=true)
-      private final Integer restartThreshold;
+    private Integer restartThreshold;
 
     public Integer restartThreshold() {
         return this.restartThreshold;
@@ -78,7 +78,7 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeout", required=true)
-      private final String timeout;
+    private String timeout;
 
     public String timeout() {
         return this.timeout;
@@ -89,100 +89,87 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="unhealthyThreshold", required=true)
-      private final Integer unhealthyThreshold;
+    private Integer unhealthyThreshold;
 
     public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 
-    public HealthCheckResponse(
-        String checkInterval,
-        Boolean disableHealthCheck,
-        Integer healthyThreshold,
-        String host,
-        Integer restartThreshold,
-        String timeout,
-        Integer unhealthyThreshold) {
-        this.checkInterval = Objects.requireNonNull(checkInterval, "expected parameter 'checkInterval' to be non-null");
-        this.disableHealthCheck = Objects.requireNonNull(disableHealthCheck, "expected parameter 'disableHealthCheck' to be non-null");
-        this.healthyThreshold = Objects.requireNonNull(healthyThreshold, "expected parameter 'healthyThreshold' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.restartThreshold = Objects.requireNonNull(restartThreshold, "expected parameter 'restartThreshold' to be non-null");
-        this.timeout = Objects.requireNonNull(timeout, "expected parameter 'timeout' to be non-null");
-        this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold, "expected parameter 'unhealthyThreshold' to be non-null");
-    }
+    private HealthCheckResponse() {}
 
-    private HealthCheckResponse() {
-        this.checkInterval = null;
-        this.disableHealthCheck = null;
-        this.healthyThreshold = null;
-        this.host = null;
-        this.restartThreshold = null;
-        this.timeout = null;
-        this.unhealthyThreshold = null;
+    private HealthCheckResponse(HealthCheckResponse $) {
+        this.checkInterval = $.checkInterval;
+        this.disableHealthCheck = $.disableHealthCheck;
+        this.healthyThreshold = $.healthyThreshold;
+        this.host = $.host;
+        this.restartThreshold = $.restartThreshold;
+        this.timeout = $.timeout;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String checkInterval;
-        private Boolean disableHealthCheck;
-        private Integer healthyThreshold;
-        private String host;
-        private Integer restartThreshold;
-        private String timeout;
-        private Integer unhealthyThreshold;
+        private HealthCheckResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckResponse();
         }
 
         public Builder(HealthCheckResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkInterval = defaults.checkInterval;
-    	      this.disableHealthCheck = defaults.disableHealthCheck;
-    	      this.healthyThreshold = defaults.healthyThreshold;
-    	      this.host = defaults.host;
-    	      this.restartThreshold = defaults.restartThreshold;
-    	      this.timeout = defaults.timeout;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new HealthCheckResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder checkInterval(String checkInterval) {
-            this.checkInterval = Objects.requireNonNull(checkInterval);
+            $.checkInterval = checkInterval;
             return this;
         }
+
         public Builder disableHealthCheck(Boolean disableHealthCheck) {
-            this.disableHealthCheck = Objects.requireNonNull(disableHealthCheck);
+            $.disableHealthCheck = disableHealthCheck;
             return this;
         }
+
         public Builder healthyThreshold(Integer healthyThreshold) {
-            this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
+            $.healthyThreshold = healthyThreshold;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder restartThreshold(Integer restartThreshold) {
-            this.restartThreshold = Objects.requireNonNull(restartThreshold);
+            $.restartThreshold = restartThreshold;
             return this;
         }
+
         public Builder timeout(String timeout) {
-            this.timeout = Objects.requireNonNull(timeout);
+            $.timeout = timeout;
             return this;
         }
+
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
-        }        public HealthCheckResponse build() {
-            return new HealthCheckResponse(checkInterval, disableHealthCheck, healthyThreshold, host, restartThreshold, timeout, unhealthyThreshold);
+        }
+
+        public HealthCheckResponse build() {
+            $.checkInterval = Objects.requireNonNull($.checkInterval, "expected parameter 'checkInterval' to be non-null");
+            $.disableHealthCheck = Objects.requireNonNull($.disableHealthCheck, "expected parameter 'disableHealthCheck' to be non-null");
+            $.healthyThreshold = Objects.requireNonNull($.healthyThreshold, "expected parameter 'healthyThreshold' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.restartThreshold = Objects.requireNonNull($.restartThreshold, "expected parameter 'restartThreshold' to be non-null");
+            $.timeout = Objects.requireNonNull($.timeout, "expected parameter 'timeout' to be non-null");
+            $.unhealthyThreshold = Objects.requireNonNull($.unhealthyThreshold, "expected parameter 'unhealthyThreshold' to be non-null");
+            return $;
         }
     }
+
 }

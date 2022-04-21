@@ -21,45 +21,45 @@ public final class ApprovalConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="approvalRequired", required=true)
-      private final Boolean approvalRequired;
+    private Boolean approvalRequired;
 
     public Boolean approvalRequired() {
         return this.approvalRequired;
     }
 
-    public ApprovalConfigResponse(Boolean approvalRequired) {
-        this.approvalRequired = Objects.requireNonNull(approvalRequired, "expected parameter 'approvalRequired' to be non-null");
-    }
+    private ApprovalConfigResponse() {}
 
-    private ApprovalConfigResponse() {
-        this.approvalRequired = null;
+    private ApprovalConfigResponse(ApprovalConfigResponse $) {
+        this.approvalRequired = $.approvalRequired;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApprovalConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean approvalRequired;
+        private ApprovalConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApprovalConfigResponse();
         }
 
         public Builder(ApprovalConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approvalRequired = defaults.approvalRequired;
+            $ = new ApprovalConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder approvalRequired(Boolean approvalRequired) {
-            this.approvalRequired = Objects.requireNonNull(approvalRequired);
+            $.approvalRequired = approvalRequired;
             return this;
-        }        public ApprovalConfigResponse build() {
-            return new ApprovalConfigResponse(approvalRequired);
+        }
+
+        public ApprovalConfigResponse build() {
+            $.approvalRequired = Objects.requireNonNull($.approvalRequired, "expected parameter 'approvalRequired' to be non-null");
+            return $;
         }
     }
+
 }

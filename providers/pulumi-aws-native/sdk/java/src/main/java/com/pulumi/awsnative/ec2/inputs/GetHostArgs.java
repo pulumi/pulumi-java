@@ -17,45 +17,45 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostId", required=true)
-      private final String hostId;
+    private String hostId;
 
     public String hostId() {
         return this.hostId;
     }
 
-    public GetHostArgs(String hostId) {
-        this.hostId = Objects.requireNonNull(hostId, "expected parameter 'hostId' to be non-null");
-    }
+    private GetHostArgs() {}
 
-    private GetHostArgs() {
-        this.hostId = null;
+    private GetHostArgs(GetHostArgs $) {
+        this.hostId = $.hostId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostId;
+        private GetHostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHostArgs();
         }
 
         public Builder(GetHostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostId = defaults.hostId;
+            $ = new GetHostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostId(String hostId) {
-            this.hostId = Objects.requireNonNull(hostId);
+            $.hostId = hostId;
             return this;
-        }        public GetHostArgs build() {
-            return new GetHostArgs(hostId);
+        }
+
+        public GetHostArgs build() {
+            $.hostId = Objects.requireNonNull($.hostId, "expected parameter 'hostId' to be non-null");
+            return $;
         }
     }
+
 }

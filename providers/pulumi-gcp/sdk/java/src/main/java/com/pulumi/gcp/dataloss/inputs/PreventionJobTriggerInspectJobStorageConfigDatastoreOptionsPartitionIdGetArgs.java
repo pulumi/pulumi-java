@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      * 
      */
     @Import(name="namespaceId")
-      private final @Nullable Output<String> namespaceId;
+    private @Nullable Output<String> namespaceId;
 
-    public Output<String> namespaceId() {
-        return this.namespaceId == null ? Codegen.empty() : this.namespaceId;
+    public Optional<Output<String>> namespaceId() {
+        return Optional.ofNullable(this.namespaceId);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      * 
      */
     @Import(name="projectId", required=true)
-      private final Output<String> projectId;
+    private Output<String> projectId;
 
     public Output<String> projectId() {
         return this.projectId;
     }
 
-    public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs(
-        @Nullable Output<String> namespaceId,
-        Output<String> projectId) {
-        this.namespaceId = namespaceId;
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-    }
+    private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs() {}
 
-    private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs() {
-        this.namespaceId = Codegen.empty();
-        this.projectId = Codegen.empty();
+    private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs $) {
+        this.namespaceId = $.namespaceId;
+        this.projectId = $.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> namespaceId;
-        private Output<String> projectId;
+        private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs();
         }
 
         public Builder(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceId = defaults.namespaceId;
-    	      this.projectId = defaults.projectId;
+            $ = new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceId(@Nullable Output<String> namespaceId) {
-            this.namespaceId = namespaceId;
+            $.namespaceId = namespaceId;
             return this;
         }
-        public Builder namespaceId(@Nullable String namespaceId) {
-            this.namespaceId = Codegen.ofNullable(namespaceId);
-            return this;
+
+        public Builder namespaceId(String namespaceId) {
+            return namespaceId(Output.of(namespaceId));
         }
+
         public Builder projectId(Output<String> projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
         }
+
         public Builder projectId(String projectId) {
-            this.projectId = Output.of(Objects.requireNonNull(projectId));
-            return this;
-        }        public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs build() {
-            return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs(namespaceId, projectId);
+            return projectId(Output.of(projectId));
+        }
+
+        public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs build() {
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            return $;
         }
     }
+
 }

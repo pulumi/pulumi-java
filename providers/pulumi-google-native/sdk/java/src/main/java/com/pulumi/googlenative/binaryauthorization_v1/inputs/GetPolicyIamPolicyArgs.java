@@ -15,62 +15,57 @@ public final class GetPolicyIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetPolicyIamPolicyArgs Empty = new GetPolicyIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetPolicyIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetPolicyIamPolicyArgs() {}
 
-    private GetPolicyIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetPolicyIamPolicyArgs(GetPolicyIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetPolicyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyIamPolicyArgs();
         }
 
         public Builder(GetPolicyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetPolicyIamPolicyArgs build() {
-            return new GetPolicyIamPolicyArgs(optionsRequestedPolicyVersion, project);
+        }
+
+        public GetPolicyIamPolicyArgs build() {
+            return $;
         }
     }
+
 }

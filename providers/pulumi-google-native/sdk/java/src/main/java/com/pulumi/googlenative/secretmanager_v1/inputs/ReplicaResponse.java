@@ -22,7 +22,7 @@ public final class ReplicaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="customerManagedEncryption", required=true)
-      private final CustomerManagedEncryptionResponse customerManagedEncryption;
+    private CustomerManagedEncryptionResponse customerManagedEncryption;
 
     public CustomerManagedEncryptionResponse customerManagedEncryption() {
         return this.customerManagedEncryption;
@@ -33,55 +33,52 @@ public final class ReplicaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
-    public ReplicaResponse(
-        CustomerManagedEncryptionResponse customerManagedEncryption,
-        String location) {
-        this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption, "expected parameter 'customerManagedEncryption' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private ReplicaResponse() {}
 
-    private ReplicaResponse() {
-        this.customerManagedEncryption = null;
-        this.location = null;
+    private ReplicaResponse(ReplicaResponse $) {
+        this.customerManagedEncryption = $.customerManagedEncryption;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CustomerManagedEncryptionResponse customerManagedEncryption;
-        private String location;
+        private ReplicaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicaResponse();
         }
 
         public Builder(ReplicaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerManagedEncryption = defaults.customerManagedEncryption;
-    	      this.location = defaults.location;
+            $ = new ReplicaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
-            this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
+            $.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
-        }        public ReplicaResponse build() {
-            return new ReplicaResponse(customerManagedEncryption, location);
+        }
+
+        public ReplicaResponse build() {
+            $.customerManagedEncryption = Objects.requireNonNull($.customerManagedEncryption, "expected parameter 'customerManagedEncryption' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

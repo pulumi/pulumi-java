@@ -21,7 +21,7 @@ public final class EventNotificationConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="pubsubTopicName", required=true)
-      private final String pubsubTopicName;
+    private String pubsubTopicName;
 
     public String pubsubTopicName() {
         return this.pubsubTopicName;
@@ -32,55 +32,52 @@ public final class EventNotificationConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="subfolderMatches", required=true)
-      private final String subfolderMatches;
+    private String subfolderMatches;
 
     public String subfolderMatches() {
         return this.subfolderMatches;
     }
 
-    public EventNotificationConfigResponse(
-        String pubsubTopicName,
-        String subfolderMatches) {
-        this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName, "expected parameter 'pubsubTopicName' to be non-null");
-        this.subfolderMatches = Objects.requireNonNull(subfolderMatches, "expected parameter 'subfolderMatches' to be non-null");
-    }
+    private EventNotificationConfigResponse() {}
 
-    private EventNotificationConfigResponse() {
-        this.pubsubTopicName = null;
-        this.subfolderMatches = null;
+    private EventNotificationConfigResponse(EventNotificationConfigResponse $) {
+        this.pubsubTopicName = $.pubsubTopicName;
+        this.subfolderMatches = $.subfolderMatches;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventNotificationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pubsubTopicName;
-        private String subfolderMatches;
+        private EventNotificationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventNotificationConfigResponse();
         }
 
         public Builder(EventNotificationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubTopicName = defaults.pubsubTopicName;
-    	      this.subfolderMatches = defaults.subfolderMatches;
+            $ = new EventNotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubTopicName(String pubsubTopicName) {
-            this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
+            $.pubsubTopicName = pubsubTopicName;
             return this;
         }
+
         public Builder subfolderMatches(String subfolderMatches) {
-            this.subfolderMatches = Objects.requireNonNull(subfolderMatches);
+            $.subfolderMatches = subfolderMatches;
             return this;
-        }        public EventNotificationConfigResponse build() {
-            return new EventNotificationConfigResponse(pubsubTopicName, subfolderMatches);
+        }
+
+        public EventNotificationConfigResponse build() {
+            $.pubsubTopicName = Objects.requireNonNull($.pubsubTopicName, "expected parameter 'pubsubTopicName' to be non-null");
+            $.subfolderMatches = Objects.requireNonNull($.subfolderMatches, "expected parameter 'subfolderMatches' to be non-null");
+            return $;
         }
     }
+
 }

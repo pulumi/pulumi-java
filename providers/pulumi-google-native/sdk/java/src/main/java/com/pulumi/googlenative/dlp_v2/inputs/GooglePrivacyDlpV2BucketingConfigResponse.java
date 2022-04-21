@@ -22,48 +22,49 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse extends com.pulumi.
      * 
      */
     @Import(name="buckets", required=true)
-      private final List<GooglePrivacyDlpV2BucketResponse> buckets;
+    private List<GooglePrivacyDlpV2BucketResponse> buckets;
 
     public List<GooglePrivacyDlpV2BucketResponse> buckets() {
         return this.buckets;
     }
 
-    public GooglePrivacyDlpV2BucketingConfigResponse(List<GooglePrivacyDlpV2BucketResponse> buckets) {
-        this.buckets = Objects.requireNonNull(buckets, "expected parameter 'buckets' to be non-null");
-    }
+    private GooglePrivacyDlpV2BucketingConfigResponse() {}
 
-    private GooglePrivacyDlpV2BucketingConfigResponse() {
-        this.buckets = List.of();
+    private GooglePrivacyDlpV2BucketingConfigResponse(GooglePrivacyDlpV2BucketingConfigResponse $) {
+        this.buckets = $.buckets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2BucketingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2BucketResponse> buckets;
+        private GooglePrivacyDlpV2BucketingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2BucketingConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2BucketingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buckets = defaults.buckets;
+            $ = new GooglePrivacyDlpV2BucketingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder buckets(List<GooglePrivacyDlpV2BucketResponse> buckets) {
-            this.buckets = Objects.requireNonNull(buckets);
+            $.buckets = buckets;
             return this;
         }
+
         public Builder buckets(GooglePrivacyDlpV2BucketResponse... buckets) {
             return buckets(List.of(buckets));
-        }        public GooglePrivacyDlpV2BucketingConfigResponse build() {
-            return new GooglePrivacyDlpV2BucketingConfigResponse(buckets);
+        }
+
+        public GooglePrivacyDlpV2BucketingConfigResponse build() {
+            $.buckets = Objects.requireNonNull($.buckets, "expected parameter 'buckets' to be non-null");
+            return $;
         }
     }
+
 }

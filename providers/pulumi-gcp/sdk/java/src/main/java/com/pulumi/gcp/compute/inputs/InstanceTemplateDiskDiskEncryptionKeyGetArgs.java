@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class InstanceTemplateDiskDiskEncryptionKeyGetArgs extends com.pulu
      * 
      */
     @Import(name="kmsKeySelfLink", required=true)
-      private final Output<String> kmsKeySelfLink;
+    private Output<String> kmsKeySelfLink;
 
     public Output<String> kmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
 
-    public InstanceTemplateDiskDiskEncryptionKeyGetArgs(Output<String> kmsKeySelfLink) {
-        this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink, "expected parameter 'kmsKeySelfLink' to be non-null");
-    }
+    private InstanceTemplateDiskDiskEncryptionKeyGetArgs() {}
 
-    private InstanceTemplateDiskDiskEncryptionKeyGetArgs() {
-        this.kmsKeySelfLink = Codegen.empty();
+    private InstanceTemplateDiskDiskEncryptionKeyGetArgs(InstanceTemplateDiskDiskEncryptionKeyGetArgs $) {
+        this.kmsKeySelfLink = $.kmsKeySelfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceTemplateDiskDiskEncryptionKeyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kmsKeySelfLink;
+        private InstanceTemplateDiskDiskEncryptionKeyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceTemplateDiskDiskEncryptionKeyGetArgs();
         }
 
         public Builder(InstanceTemplateDiskDiskEncryptionKeyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeySelfLink = defaults.kmsKeySelfLink;
+            $ = new InstanceTemplateDiskDiskEncryptionKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeySelfLink(Output<String> kmsKeySelfLink) {
-            this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
+            $.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
+
         public Builder kmsKeySelfLink(String kmsKeySelfLink) {
-            this.kmsKeySelfLink = Output.of(Objects.requireNonNull(kmsKeySelfLink));
-            return this;
-        }        public InstanceTemplateDiskDiskEncryptionKeyGetArgs build() {
-            return new InstanceTemplateDiskDiskEncryptionKeyGetArgs(kmsKeySelfLink);
+            return kmsKeySelfLink(Output.of(kmsKeySelfLink));
+        }
+
+        public InstanceTemplateDiskDiskEncryptionKeyGetArgs build() {
+            $.kmsKeySelfLink = Objects.requireNonNull($.kmsKeySelfLink, "expected parameter 'kmsKeySelfLink' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ProxyServerPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="ip")
-      private final @Nullable String ip;
+    private @Nullable String ip;
 
     public Optional<String> ip() {
-        return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
+        return Optional.ofNullable(this.ip);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ProxyServerPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="port")
-      private final @Nullable String port;
+    private @Nullable String port;
 
     public Optional<String> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
-    public ProxyServerPropertiesResponse(
-        @Nullable String ip,
-        @Nullable String port) {
-        this.ip = ip;
-        this.port = port;
-    }
+    private ProxyServerPropertiesResponse() {}
 
-    private ProxyServerPropertiesResponse() {
-        this.ip = null;
-        this.port = null;
+    private ProxyServerPropertiesResponse(ProxyServerPropertiesResponse $) {
+        this.ip = $.ip;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProxyServerPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ip;
-        private @Nullable String port;
+        private ProxyServerPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProxyServerPropertiesResponse();
         }
 
         public Builder(ProxyServerPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
-    	      this.port = defaults.port;
+            $ = new ProxyServerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
+
         public Builder port(@Nullable String port) {
-            this.port = port;
+            $.port = port;
             return this;
-        }        public ProxyServerPropertiesResponse build() {
-            return new ProxyServerPropertiesResponse(ip, port);
+        }
+
+        public ProxyServerPropertiesResponse build() {
+            return $;
         }
     }
+
 }

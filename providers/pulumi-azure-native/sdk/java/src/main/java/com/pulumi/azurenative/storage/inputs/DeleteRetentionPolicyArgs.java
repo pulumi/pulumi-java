@@ -5,10 +5,10 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DeleteRetentionPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="days")
-      private final @Nullable Output<Integer> days;
+    private @Nullable Output<Integer> days;
 
-    public Output<Integer> days() {
-        return this.days == null ? Codegen.empty() : this.days;
+    public Optional<Output<Integer>> days() {
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DeleteRetentionPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public DeleteRetentionPolicyArgs(
-        @Nullable Output<Integer> days,
-        @Nullable Output<Boolean> enabled) {
-        this.days = days;
-        this.enabled = enabled;
-    }
+    private DeleteRetentionPolicyArgs() {}
 
-    private DeleteRetentionPolicyArgs() {
-        this.days = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private DeleteRetentionPolicyArgs(DeleteRetentionPolicyArgs $) {
+        this.days = $.days;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeleteRetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> days;
-        private @Nullable Output<Boolean> enabled;
+        private DeleteRetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeleteRetentionPolicyArgs();
         }
 
         public Builder(DeleteRetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.enabled = defaults.enabled;
+            $ = new DeleteRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Output<Integer> days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
-        public Builder days(@Nullable Integer days) {
-            this.days = Codegen.ofNullable(days);
-            return this;
+
+        public Builder days(Integer days) {
+            return days(Output.of(days));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public DeleteRetentionPolicyArgs build() {
-            return new DeleteRetentionPolicyArgs(days, enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public DeleteRetentionPolicyArgs build() {
+            return $;
         }
     }
+
 }

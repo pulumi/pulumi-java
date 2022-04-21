@@ -5,9 +5,9 @@ package com.pulumi.azurenative.redhatopenshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ClusterProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ClusterProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="pullSecret")
-      private final @Nullable Output<String> pullSecret;
+    private @Nullable Output<String> pullSecret;
 
-    public Output<String> pullSecret() {
-        return this.pullSecret == null ? Codegen.empty() : this.pullSecret;
+    public Optional<Output<String>> pullSecret() {
+        return Optional.ofNullable(this.pullSecret);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ClusterProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupId")
-      private final @Nullable Output<String> resourceGroupId;
+    private @Nullable Output<String> resourceGroupId;
 
-    public Output<String> resourceGroupId() {
-        return this.resourceGroupId == null ? Codegen.empty() : this.resourceGroupId;
+    public Optional<Output<String>> resourceGroupId() {
+        return Optional.ofNullable(this.resourceGroupId);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class ClusterProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ClusterProfileArgs(
-        @Nullable Output<String> domain,
-        @Nullable Output<String> pullSecret,
-        @Nullable Output<String> resourceGroupId,
-        @Nullable Output<String> version) {
-        this.domain = domain;
-        this.pullSecret = pullSecret;
-        this.resourceGroupId = resourceGroupId;
-        this.version = version;
-    }
+    private ClusterProfileArgs() {}
 
-    private ClusterProfileArgs() {
-        this.domain = Codegen.empty();
-        this.pullSecret = Codegen.empty();
-        this.resourceGroupId = Codegen.empty();
-        this.version = Codegen.empty();
+    private ClusterProfileArgs(ClusterProfileArgs $) {
+        this.domain = $.domain;
+        this.pullSecret = $.pullSecret;
+        this.resourceGroupId = $.resourceGroupId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> pullSecret;
-        private @Nullable Output<String> resourceGroupId;
-        private @Nullable Output<String> version;
+        private ClusterProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterProfileArgs();
         }
 
         public Builder(ClusterProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.pullSecret = defaults.pullSecret;
-    	      this.resourceGroupId = defaults.resourceGroupId;
-    	      this.version = defaults.version;
+            $ = new ClusterProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder pullSecret(@Nullable Output<String> pullSecret) {
-            this.pullSecret = pullSecret;
+            $.pullSecret = pullSecret;
             return this;
         }
-        public Builder pullSecret(@Nullable String pullSecret) {
-            this.pullSecret = Codegen.ofNullable(pullSecret);
-            return this;
+
+        public Builder pullSecret(String pullSecret) {
+            return pullSecret(Output.of(pullSecret));
         }
+
         public Builder resourceGroupId(@Nullable Output<String> resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+            $.resourceGroupId = resourceGroupId;
             return this;
         }
-        public Builder resourceGroupId(@Nullable String resourceGroupId) {
-            this.resourceGroupId = Codegen.ofNullable(resourceGroupId);
-            return this;
+
+        public Builder resourceGroupId(String resourceGroupId) {
+            return resourceGroupId(Output.of(resourceGroupId));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ClusterProfileArgs build() {
-            return new ClusterProfileArgs(domain, pullSecret, resourceGroupId, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ClusterProfileArgs build() {
+            return $;
         }
     }
+
 }

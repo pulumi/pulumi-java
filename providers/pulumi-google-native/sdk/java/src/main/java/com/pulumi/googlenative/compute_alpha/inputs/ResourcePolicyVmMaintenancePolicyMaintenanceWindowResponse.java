@@ -17,45 +17,45 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse ex
     public static final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse Empty = new ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse();
 
     @Import(name="dailyMaintenanceWindow", required=true)
-      private final ResourcePolicyDailyCycleResponse dailyMaintenanceWindow;
+    private ResourcePolicyDailyCycleResponse dailyMaintenanceWindow;
 
     public ResourcePolicyDailyCycleResponse dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
     }
 
-    public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(ResourcePolicyDailyCycleResponse dailyMaintenanceWindow) {
-        this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow, "expected parameter 'dailyMaintenanceWindow' to be non-null");
-    }
+    private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse() {}
 
-    private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse() {
-        this.dailyMaintenanceWindow = null;
+    private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse $) {
+        this.dailyMaintenanceWindow = $.dailyMaintenanceWindow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ResourcePolicyDailyCycleResponse dailyMaintenanceWindow;
+        private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse();
         }
 
         public Builder(ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailyMaintenanceWindow = defaults.dailyMaintenanceWindow;
+            $ = new ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dailyMaintenanceWindow(ResourcePolicyDailyCycleResponse dailyMaintenanceWindow) {
-            this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
+            $.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
-        }        public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse build() {
-            return new ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(dailyMaintenanceWindow);
+        }
+
+        public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse build() {
+            $.dailyMaintenanceWindow = Objects.requireNonNull($.dailyMaintenanceWindow, "expected parameter 'dailyMaintenanceWindow' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,8 +8,8 @@ import com.pulumi.azurenative.media.inputs.StreamingPolicyPlayReadyConfiguration
 import com.pulumi.azurenative.media.inputs.StreamingPolicyWidevineConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CbcsDrmConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="fairPlay")
-      private final @Nullable Output<StreamingPolicyFairPlayConfigurationArgs> fairPlay;
+    private @Nullable Output<StreamingPolicyFairPlayConfigurationArgs> fairPlay;
 
-    public Output<StreamingPolicyFairPlayConfigurationArgs> fairPlay() {
-        return this.fairPlay == null ? Codegen.empty() : this.fairPlay;
+    public Optional<Output<StreamingPolicyFairPlayConfigurationArgs>> fairPlay() {
+        return Optional.ofNullable(this.fairPlay);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CbcsDrmConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="playReady")
-      private final @Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady;
+    private @Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady;
 
-    public Output<StreamingPolicyPlayReadyConfigurationArgs> playReady() {
-        return this.playReady == null ? Codegen.empty() : this.playReady;
+    public Optional<Output<StreamingPolicyPlayReadyConfigurationArgs>> playReady() {
+        return Optional.ofNullable(this.playReady);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class CbcsDrmConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="widevine")
-      private final @Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine;
+    private @Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine;
 
-    public Output<StreamingPolicyWidevineConfigurationArgs> widevine() {
-        return this.widevine == null ? Codegen.empty() : this.widevine;
+    public Optional<Output<StreamingPolicyWidevineConfigurationArgs>> widevine() {
+        return Optional.ofNullable(this.widevine);
     }
 
-    public CbcsDrmConfigurationArgs(
-        @Nullable Output<StreamingPolicyFairPlayConfigurationArgs> fairPlay,
-        @Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady,
-        @Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine) {
-        this.fairPlay = fairPlay;
-        this.playReady = playReady;
-        this.widevine = widevine;
-    }
+    private CbcsDrmConfigurationArgs() {}
 
-    private CbcsDrmConfigurationArgs() {
-        this.fairPlay = Codegen.empty();
-        this.playReady = Codegen.empty();
-        this.widevine = Codegen.empty();
+    private CbcsDrmConfigurationArgs(CbcsDrmConfigurationArgs $) {
+        this.fairPlay = $.fairPlay;
+        this.playReady = $.playReady;
+        this.widevine = $.widevine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CbcsDrmConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StreamingPolicyFairPlayConfigurationArgs> fairPlay;
-        private @Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady;
-        private @Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine;
+        private CbcsDrmConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CbcsDrmConfigurationArgs();
         }
 
         public Builder(CbcsDrmConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fairPlay = defaults.fairPlay;
-    	      this.playReady = defaults.playReady;
-    	      this.widevine = defaults.widevine;
+            $ = new CbcsDrmConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fairPlay(@Nullable Output<StreamingPolicyFairPlayConfigurationArgs> fairPlay) {
-            this.fairPlay = fairPlay;
+            $.fairPlay = fairPlay;
             return this;
         }
-        public Builder fairPlay(@Nullable StreamingPolicyFairPlayConfigurationArgs fairPlay) {
-            this.fairPlay = Codegen.ofNullable(fairPlay);
-            return this;
+
+        public Builder fairPlay(StreamingPolicyFairPlayConfigurationArgs fairPlay) {
+            return fairPlay(Output.of(fairPlay));
         }
+
         public Builder playReady(@Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady) {
-            this.playReady = playReady;
+            $.playReady = playReady;
             return this;
         }
-        public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationArgs playReady) {
-            this.playReady = Codegen.ofNullable(playReady);
-            return this;
+
+        public Builder playReady(StreamingPolicyPlayReadyConfigurationArgs playReady) {
+            return playReady(Output.of(playReady));
         }
+
         public Builder widevine(@Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine) {
-            this.widevine = widevine;
+            $.widevine = widevine;
             return this;
         }
-        public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationArgs widevine) {
-            this.widevine = Codegen.ofNullable(widevine);
-            return this;
-        }        public CbcsDrmConfigurationArgs build() {
-            return new CbcsDrmConfigurationArgs(fairPlay, playReady, widevine);
+
+        public Builder widevine(StreamingPolicyWidevineConfigurationArgs widevine) {
+            return widevine(Output.of(widevine));
+        }
+
+        public CbcsDrmConfigurationArgs build() {
+            return $;
         }
     }
+
 }

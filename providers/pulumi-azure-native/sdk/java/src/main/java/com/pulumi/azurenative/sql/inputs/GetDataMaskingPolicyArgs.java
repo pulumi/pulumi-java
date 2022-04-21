@@ -17,7 +17,7 @@ public final class GetDataMaskingPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataMaskingPolicyName", required=true)
-      private final String dataMaskingPolicyName;
+    private String dataMaskingPolicyName;
 
     public String dataMaskingPolicyName() {
         return this.dataMaskingPolicyName;
@@ -28,7 +28,7 @@ public final class GetDataMaskingPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetDataMaskingPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetDataMaskingPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetDataMaskingPolicyArgs(
-        String dataMaskingPolicyName,
-        String databaseName,
-        String resourceGroupName,
-        String serverName) {
-        this.dataMaskingPolicyName = Objects.requireNonNull(dataMaskingPolicyName, "expected parameter 'dataMaskingPolicyName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetDataMaskingPolicyArgs() {}
 
-    private GetDataMaskingPolicyArgs() {
-        this.dataMaskingPolicyName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetDataMaskingPolicyArgs(GetDataMaskingPolicyArgs $) {
+        this.dataMaskingPolicyName = $.dataMaskingPolicyName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataMaskingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataMaskingPolicyName;
-        private String databaseName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetDataMaskingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataMaskingPolicyArgs();
         }
 
         public Builder(GetDataMaskingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataMaskingPolicyName = defaults.dataMaskingPolicyName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetDataMaskingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataMaskingPolicyName(String dataMaskingPolicyName) {
-            this.dataMaskingPolicyName = Objects.requireNonNull(dataMaskingPolicyName);
+            $.dataMaskingPolicyName = dataMaskingPolicyName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetDataMaskingPolicyArgs build() {
-            return new GetDataMaskingPolicyArgs(dataMaskingPolicyName, databaseName, resourceGroupName, serverName);
+        }
+
+        public GetDataMaskingPolicyArgs build() {
+            $.dataMaskingPolicyName = Objects.requireNonNull($.dataMaskingPolicyName, "expected parameter 'dataMaskingPolicyName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

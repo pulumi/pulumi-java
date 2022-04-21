@@ -25,10 +25,10 @@ public final class SimpleRetentionPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="retentionDuration")
-      private final @Nullable RetentionDurationResponse retentionDuration;
+    private @Nullable RetentionDurationResponse retentionDuration;
 
     public Optional<RetentionDurationResponse> retentionDuration() {
-        return this.retentionDuration == null ? Optional.empty() : Optional.ofNullable(this.retentionDuration);
+        return Optional.ofNullable(this.retentionDuration);
     }
 
     /**
@@ -37,55 +37,51 @@ public final class SimpleRetentionPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="retentionPolicyType", required=true)
-      private final String retentionPolicyType;
+    private String retentionPolicyType;
 
     public String retentionPolicyType() {
         return this.retentionPolicyType;
     }
 
-    public SimpleRetentionPolicyResponse(
-        @Nullable RetentionDurationResponse retentionDuration,
-        String retentionPolicyType) {
-        this.retentionDuration = retentionDuration;
-        this.retentionPolicyType = Codegen.stringProp("retentionPolicyType").arg(retentionPolicyType).require();
-    }
+    private SimpleRetentionPolicyResponse() {}
 
-    private SimpleRetentionPolicyResponse() {
-        this.retentionDuration = null;
-        this.retentionPolicyType = null;
+    private SimpleRetentionPolicyResponse(SimpleRetentionPolicyResponse $) {
+        this.retentionDuration = $.retentionDuration;
+        this.retentionPolicyType = $.retentionPolicyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SimpleRetentionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RetentionDurationResponse retentionDuration;
-        private String retentionPolicyType;
+        private SimpleRetentionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SimpleRetentionPolicyResponse();
         }
 
         public Builder(SimpleRetentionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retentionDuration = defaults.retentionDuration;
-    	      this.retentionPolicyType = defaults.retentionPolicyType;
+            $ = new SimpleRetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
-            this.retentionDuration = retentionDuration;
+            $.retentionDuration = retentionDuration;
             return this;
         }
+
         public Builder retentionPolicyType(String retentionPolicyType) {
-            this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
+            $.retentionPolicyType = retentionPolicyType;
             return this;
-        }        public SimpleRetentionPolicyResponse build() {
-            return new SimpleRetentionPolicyResponse(retentionDuration, retentionPolicyType);
+        }
+
+        public SimpleRetentionPolicyResponse build() {
+            $.retentionPolicyType = Codegen.stringProp("retentionPolicyType").arg($.retentionPolicyType).require();
+            return $;
         }
     }
+
 }

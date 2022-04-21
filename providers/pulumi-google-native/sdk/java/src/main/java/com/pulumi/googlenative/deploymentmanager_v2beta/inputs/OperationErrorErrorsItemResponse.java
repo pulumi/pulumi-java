@@ -17,7 +17,7 @@ public final class OperationErrorErrorsItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -28,7 +28,7 @@ public final class OperationErrorErrorsItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -39,64 +39,59 @@ public final class OperationErrorErrorsItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public OperationErrorErrorsItemResponse(
-        String code,
-        String location,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private OperationErrorErrorsItemResponse() {}
 
-    private OperationErrorErrorsItemResponse() {
-        this.code = null;
-        this.location = null;
-        this.message = null;
+    private OperationErrorErrorsItemResponse(OperationErrorErrorsItemResponse $) {
+        this.code = $.code;
+        this.location = $.location;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationErrorErrorsItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String location;
-        private String message;
+        private OperationErrorErrorsItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationErrorErrorsItemResponse();
         }
 
         public Builder(OperationErrorErrorsItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.location = defaults.location;
-    	      this.message = defaults.message;
+            $ = new OperationErrorErrorsItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public OperationErrorErrorsItemResponse build() {
-            return new OperationErrorErrorsItemResponse(code, location, message);
+        }
+
+        public OperationErrorErrorsItemResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

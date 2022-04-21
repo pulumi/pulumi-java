@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,52 +21,53 @@ public final class SecurityPolicyRuleMatchConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="srcIpRanges", required=true)
-      private final Output<List<String>> srcIpRanges;
+    private Output<List<String>> srcIpRanges;
 
     public Output<List<String>> srcIpRanges() {
         return this.srcIpRanges;
     }
 
-    public SecurityPolicyRuleMatchConfigArgs(Output<List<String>> srcIpRanges) {
-        this.srcIpRanges = Objects.requireNonNull(srcIpRanges, "expected parameter 'srcIpRanges' to be non-null");
-    }
+    private SecurityPolicyRuleMatchConfigArgs() {}
 
-    private SecurityPolicyRuleMatchConfigArgs() {
-        this.srcIpRanges = Codegen.empty();
+    private SecurityPolicyRuleMatchConfigArgs(SecurityPolicyRuleMatchConfigArgs $) {
+        this.srcIpRanges = $.srcIpRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleMatchConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> srcIpRanges;
+        private SecurityPolicyRuleMatchConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleMatchConfigArgs();
         }
 
         public Builder(SecurityPolicyRuleMatchConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.srcIpRanges = defaults.srcIpRanges;
+            $ = new SecurityPolicyRuleMatchConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder srcIpRanges(Output<List<String>> srcIpRanges) {
-            this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
+            $.srcIpRanges = srcIpRanges;
             return this;
         }
+
         public Builder srcIpRanges(List<String> srcIpRanges) {
-            this.srcIpRanges = Output.of(Objects.requireNonNull(srcIpRanges));
-            return this;
+            return srcIpRanges(Output.of(srcIpRanges));
         }
+
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
-        }        public SecurityPolicyRuleMatchConfigArgs build() {
-            return new SecurityPolicyRuleMatchConfigArgs(srcIpRanges);
+        }
+
+        public SecurityPolicyRuleMatchConfigArgs build() {
+            $.srcIpRanges = Objects.requireNonNull($.srcIpRanges, "expected parameter 'srcIpRanges' to be non-null");
+            return $;
         }
     }
+
 }

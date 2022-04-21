@@ -23,10 +23,10 @@ public final class MigrationValidationOptionsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enableDataIntegrityValidation")
-      private final @Nullable Boolean enableDataIntegrityValidation;
+    private @Nullable Boolean enableDataIntegrityValidation;
 
     public Optional<Boolean> enableDataIntegrityValidation() {
-        return this.enableDataIntegrityValidation == null ? Optional.empty() : Optional.ofNullable(this.enableDataIntegrityValidation);
+        return Optional.ofNullable(this.enableDataIntegrityValidation);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MigrationValidationOptionsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enableQueryAnalysisValidation")
-      private final @Nullable Boolean enableQueryAnalysisValidation;
+    private @Nullable Boolean enableQueryAnalysisValidation;
 
     public Optional<Boolean> enableQueryAnalysisValidation() {
-        return this.enableQueryAnalysisValidation == null ? Optional.empty() : Optional.ofNullable(this.enableQueryAnalysisValidation);
+        return Optional.ofNullable(this.enableQueryAnalysisValidation);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class MigrationValidationOptionsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enableSchemaValidation")
-      private final @Nullable Boolean enableSchemaValidation;
+    private @Nullable Boolean enableSchemaValidation;
 
     public Optional<Boolean> enableSchemaValidation() {
-        return this.enableSchemaValidation == null ? Optional.empty() : Optional.ofNullable(this.enableSchemaValidation);
+        return Optional.ofNullable(this.enableSchemaValidation);
     }
 
-    public MigrationValidationOptionsResponse(
-        @Nullable Boolean enableDataIntegrityValidation,
-        @Nullable Boolean enableQueryAnalysisValidation,
-        @Nullable Boolean enableSchemaValidation) {
-        this.enableDataIntegrityValidation = enableDataIntegrityValidation;
-        this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
-        this.enableSchemaValidation = enableSchemaValidation;
-    }
+    private MigrationValidationOptionsResponse() {}
 
-    private MigrationValidationOptionsResponse() {
-        this.enableDataIntegrityValidation = null;
-        this.enableQueryAnalysisValidation = null;
-        this.enableSchemaValidation = null;
+    private MigrationValidationOptionsResponse(MigrationValidationOptionsResponse $) {
+        this.enableDataIntegrityValidation = $.enableDataIntegrityValidation;
+        this.enableQueryAnalysisValidation = $.enableQueryAnalysisValidation;
+        this.enableSchemaValidation = $.enableSchemaValidation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationValidationOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableDataIntegrityValidation;
-        private @Nullable Boolean enableQueryAnalysisValidation;
-        private @Nullable Boolean enableSchemaValidation;
+        private MigrationValidationOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationValidationOptionsResponse();
         }
 
         public Builder(MigrationValidationOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableDataIntegrityValidation = defaults.enableDataIntegrityValidation;
-    	      this.enableQueryAnalysisValidation = defaults.enableQueryAnalysisValidation;
-    	      this.enableSchemaValidation = defaults.enableSchemaValidation;
+            $ = new MigrationValidationOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
-            this.enableDataIntegrityValidation = enableDataIntegrityValidation;
+            $.enableDataIntegrityValidation = enableDataIntegrityValidation;
             return this;
         }
+
         public Builder enableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
-            this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
+            $.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
             return this;
         }
+
         public Builder enableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
-            this.enableSchemaValidation = enableSchemaValidation;
+            $.enableSchemaValidation = enableSchemaValidation;
             return this;
-        }        public MigrationValidationOptionsResponse build() {
-            return new MigrationValidationOptionsResponse(enableDataIntegrityValidation, enableQueryAnalysisValidation, enableSchemaValidation);
+        }
+
+        public MigrationValidationOptionsResponse build() {
+            return $;
         }
     }
+
 }

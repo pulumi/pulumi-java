@@ -20,7 +20,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final String apiId;
+    private String apiId;
 
     public String apiId() {
         return this.apiId;
@@ -31,10 +31,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exportVersion")
-      private final @Nullable String exportVersion;
+    private @Nullable String exportVersion;
 
     public Optional<String> exportVersion() {
-        return this.exportVersion == null ? Optional.empty() : Optional.ofNullable(this.exportVersion);
+        return Optional.ofNullable(this.exportVersion);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeExtensions")
-      private final @Nullable Boolean includeExtensions;
+    private @Nullable Boolean includeExtensions;
 
     public Optional<Boolean> includeExtensions() {
-        return this.includeExtensions == null ? Optional.empty() : Optional.ofNullable(this.includeExtensions);
+        return Optional.ofNullable(this.includeExtensions);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputType", required=true)
-      private final String outputType;
+    private String outputType;
 
     public String outputType() {
         return this.outputType;
@@ -64,7 +64,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="specification", required=true)
-      private final String specification;
+    private String specification;
 
     public String specification() {
         return this.specification;
@@ -75,91 +75,77 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageName")
-      private final @Nullable String stageName;
+    private @Nullable String stageName;
 
     public Optional<String> stageName() {
-        return this.stageName == null ? Optional.empty() : Optional.ofNullable(this.stageName);
+        return Optional.ofNullable(this.stageName);
     }
 
-    public GetExportArgs(
-        String apiId,
-        @Nullable String exportVersion,
-        @Nullable Boolean includeExtensions,
-        String outputType,
-        String specification,
-        @Nullable String stageName) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.exportVersion = exportVersion;
-        this.includeExtensions = includeExtensions;
-        this.outputType = Objects.requireNonNull(outputType, "expected parameter 'outputType' to be non-null");
-        this.specification = Objects.requireNonNull(specification, "expected parameter 'specification' to be non-null");
-        this.stageName = stageName;
-    }
+    private GetExportArgs() {}
 
-    private GetExportArgs() {
-        this.apiId = null;
-        this.exportVersion = null;
-        this.includeExtensions = null;
-        this.outputType = null;
-        this.specification = null;
-        this.stageName = null;
+    private GetExportArgs(GetExportArgs $) {
+        this.apiId = $.apiId;
+        this.exportVersion = $.exportVersion;
+        this.includeExtensions = $.includeExtensions;
+        this.outputType = $.outputType;
+        this.specification = $.specification;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiId;
-        private @Nullable String exportVersion;
-        private @Nullable Boolean includeExtensions;
-        private String outputType;
-        private String specification;
-        private @Nullable String stageName;
+        private GetExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExportArgs();
         }
 
         public Builder(GetExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.exportVersion = defaults.exportVersion;
-    	      this.includeExtensions = defaults.includeExtensions;
-    	      this.outputType = defaults.outputType;
-    	      this.specification = defaults.specification;
-    	      this.stageName = defaults.stageName;
+            $ = new GetExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder exportVersion(@Nullable String exportVersion) {
-            this.exportVersion = exportVersion;
+            $.exportVersion = exportVersion;
             return this;
         }
+
         public Builder includeExtensions(@Nullable Boolean includeExtensions) {
-            this.includeExtensions = includeExtensions;
+            $.includeExtensions = includeExtensions;
             return this;
         }
+
         public Builder outputType(String outputType) {
-            this.outputType = Objects.requireNonNull(outputType);
+            $.outputType = outputType;
             return this;
         }
+
         public Builder specification(String specification) {
-            this.specification = Objects.requireNonNull(specification);
+            $.specification = specification;
             return this;
         }
+
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = stageName;
+            $.stageName = stageName;
             return this;
-        }        public GetExportArgs build() {
-            return new GetExportArgs(apiId, exportVersion, includeExtensions, outputType, specification, stageName);
+        }
+
+        public GetExportArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.outputType = Objects.requireNonNull($.outputType, "expected parameter 'outputType' to be non-null");
+            $.specification = Objects.requireNonNull($.specification, "expected parameter 'specification' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="reasonForLogsStatus")
-      private final @Nullable String reasonForLogsStatus;
+    private @Nullable String reasonForLogsStatus;
 
     public Optional<String> reasonForLogsStatus() {
-        return this.reasonForLogsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForLogsStatus);
+        return Optional.ofNullable(this.reasonForLogsStatus);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="reasonForMetricsStatus")
-      private final @Nullable String reasonForMetricsStatus;
+    private @Nullable String reasonForMetricsStatus;
 
     public Optional<String> reasonForMetricsStatus() {
-        return this.reasonForMetricsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForMetricsStatus);
+        return Optional.ofNullable(this.reasonForMetricsStatus);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sendingLogs")
-      private final @Nullable Boolean sendingLogs;
+    private @Nullable Boolean sendingLogs;
 
     public Optional<Boolean> sendingLogs() {
-        return this.sendingLogs == null ? Optional.empty() : Optional.ofNullable(this.sendingLogs);
+        return Optional.ofNullable(this.sendingLogs);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sendingMetrics")
-      private final @Nullable Boolean sendingMetrics;
+    private @Nullable Boolean sendingMetrics;
 
     public Optional<Boolean> sendingMetrics() {
-        return this.sendingMetrics == null ? Optional.empty() : Optional.ofNullable(this.sendingMetrics);
+        return Optional.ofNullable(this.sendingMetrics);
     }
 
-    public MonitoredResourceResponse(
-        @Nullable String id,
-        @Nullable String reasonForLogsStatus,
-        @Nullable String reasonForMetricsStatus,
-        @Nullable Boolean sendingLogs,
-        @Nullable Boolean sendingMetrics) {
-        this.id = id;
-        this.reasonForLogsStatus = reasonForLogsStatus;
-        this.reasonForMetricsStatus = reasonForMetricsStatus;
-        this.sendingLogs = sendingLogs;
-        this.sendingMetrics = sendingMetrics;
-    }
+    private MonitoredResourceResponse() {}
 
-    private MonitoredResourceResponse() {
-        this.id = null;
-        this.reasonForLogsStatus = null;
-        this.reasonForMetricsStatus = null;
-        this.sendingLogs = null;
-        this.sendingMetrics = null;
+    private MonitoredResourceResponse(MonitoredResourceResponse $) {
+        this.id = $.id;
+        this.reasonForLogsStatus = $.reasonForLogsStatus;
+        this.reasonForMetricsStatus = $.reasonForMetricsStatus;
+        this.sendingLogs = $.sendingLogs;
+        this.sendingMetrics = $.sendingMetrics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoredResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String reasonForLogsStatus;
-        private @Nullable String reasonForMetricsStatus;
-        private @Nullable Boolean sendingLogs;
-        private @Nullable Boolean sendingMetrics;
+        private MonitoredResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoredResourceResponse();
         }
 
         public Builder(MonitoredResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.reasonForLogsStatus = defaults.reasonForLogsStatus;
-    	      this.reasonForMetricsStatus = defaults.reasonForMetricsStatus;
-    	      this.sendingLogs = defaults.sendingLogs;
-    	      this.sendingMetrics = defaults.sendingMetrics;
+            $ = new MonitoredResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder reasonForLogsStatus(@Nullable String reasonForLogsStatus) {
-            this.reasonForLogsStatus = reasonForLogsStatus;
+            $.reasonForLogsStatus = reasonForLogsStatus;
             return this;
         }
+
         public Builder reasonForMetricsStatus(@Nullable String reasonForMetricsStatus) {
-            this.reasonForMetricsStatus = reasonForMetricsStatus;
+            $.reasonForMetricsStatus = reasonForMetricsStatus;
             return this;
         }
+
         public Builder sendingLogs(@Nullable Boolean sendingLogs) {
-            this.sendingLogs = sendingLogs;
+            $.sendingLogs = sendingLogs;
             return this;
         }
+
         public Builder sendingMetrics(@Nullable Boolean sendingMetrics) {
-            this.sendingMetrics = sendingMetrics;
+            $.sendingMetrics = sendingMetrics;
             return this;
-        }        public MonitoredResourceResponse build() {
-            return new MonitoredResourceResponse(id, reasonForLogsStatus, reasonForMetricsStatus, sendingLogs, sendingMetrics);
+        }
+
+        public MonitoredResourceResponse build() {
+            return $;
         }
     }
+
 }

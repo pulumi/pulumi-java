@@ -6,8 +6,8 @@ package com.pulumi.aws.acmpca.inputs;
 import com.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationCrlConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends com.p
      * 
      */
     @Import(name="crlConfiguration")
-      private final @Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration;
+    private @Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration;
 
-    public Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration() {
-        return this.crlConfiguration == null ? Codegen.empty() : this.crlConfiguration;
+    public Optional<Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs>> crlConfiguration() {
+        return Optional.ofNullable(this.crlConfiguration);
     }
 
-    public CertificateAuthorityRevocationConfigurationArgs(@Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration) {
-        this.crlConfiguration = crlConfiguration;
-    }
+    private CertificateAuthorityRevocationConfigurationArgs() {}
 
-    private CertificateAuthorityRevocationConfigurationArgs() {
-        this.crlConfiguration = Codegen.empty();
+    private CertificateAuthorityRevocationConfigurationArgs(CertificateAuthorityRevocationConfigurationArgs $) {
+        this.crlConfiguration = $.crlConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityRevocationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration;
+        private CertificateAuthorityRevocationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityRevocationConfigurationArgs();
         }
 
         public Builder(CertificateAuthorityRevocationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crlConfiguration = defaults.crlConfiguration;
+            $ = new CertificateAuthorityRevocationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crlConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration) {
-            this.crlConfiguration = crlConfiguration;
+            $.crlConfiguration = crlConfiguration;
             return this;
         }
-        public Builder crlConfiguration(@Nullable CertificateAuthorityRevocationConfigurationCrlConfigurationArgs crlConfiguration) {
-            this.crlConfiguration = Codegen.ofNullable(crlConfiguration);
-            return this;
-        }        public CertificateAuthorityRevocationConfigurationArgs build() {
-            return new CertificateAuthorityRevocationConfigurationArgs(crlConfiguration);
+
+        public Builder crlConfiguration(CertificateAuthorityRevocationConfigurationCrlConfigurationArgs crlConfiguration) {
+            return crlConfiguration(Output.of(crlConfiguration));
+        }
+
+        public CertificateAuthorityRevocationConfigurationArgs build() {
+            return $;
         }
     }
+
 }

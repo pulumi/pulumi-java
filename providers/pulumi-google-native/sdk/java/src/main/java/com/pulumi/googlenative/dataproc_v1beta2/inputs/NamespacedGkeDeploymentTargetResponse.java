@@ -21,7 +21,7 @@ public final class NamespacedGkeDeploymentTargetResponse extends com.pulumi.reso
      * 
      */
     @Import(name="clusterNamespace", required=true)
-      private final String clusterNamespace;
+    private String clusterNamespace;
 
     public String clusterNamespace() {
         return this.clusterNamespace;
@@ -32,55 +32,52 @@ public final class NamespacedGkeDeploymentTargetResponse extends com.pulumi.reso
      * 
      */
     @Import(name="targetGkeCluster", required=true)
-      private final String targetGkeCluster;
+    private String targetGkeCluster;
 
     public String targetGkeCluster() {
         return this.targetGkeCluster;
     }
 
-    public NamespacedGkeDeploymentTargetResponse(
-        String clusterNamespace,
-        String targetGkeCluster) {
-        this.clusterNamespace = Objects.requireNonNull(clusterNamespace, "expected parameter 'clusterNamespace' to be non-null");
-        this.targetGkeCluster = Objects.requireNonNull(targetGkeCluster, "expected parameter 'targetGkeCluster' to be non-null");
-    }
+    private NamespacedGkeDeploymentTargetResponse() {}
 
-    private NamespacedGkeDeploymentTargetResponse() {
-        this.clusterNamespace = null;
-        this.targetGkeCluster = null;
+    private NamespacedGkeDeploymentTargetResponse(NamespacedGkeDeploymentTargetResponse $) {
+        this.clusterNamespace = $.clusterNamespace;
+        this.targetGkeCluster = $.targetGkeCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespacedGkeDeploymentTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterNamespace;
-        private String targetGkeCluster;
+        private NamespacedGkeDeploymentTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespacedGkeDeploymentTargetResponse();
         }
 
         public Builder(NamespacedGkeDeploymentTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterNamespace = defaults.clusterNamespace;
-    	      this.targetGkeCluster = defaults.targetGkeCluster;
+            $ = new NamespacedGkeDeploymentTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterNamespace(String clusterNamespace) {
-            this.clusterNamespace = Objects.requireNonNull(clusterNamespace);
+            $.clusterNamespace = clusterNamespace;
             return this;
         }
+
         public Builder targetGkeCluster(String targetGkeCluster) {
-            this.targetGkeCluster = Objects.requireNonNull(targetGkeCluster);
+            $.targetGkeCluster = targetGkeCluster;
             return this;
-        }        public NamespacedGkeDeploymentTargetResponse build() {
-            return new NamespacedGkeDeploymentTargetResponse(clusterNamespace, targetGkeCluster);
+        }
+
+        public NamespacedGkeDeploymentTargetResponse build() {
+            $.clusterNamespace = Objects.requireNonNull($.clusterNamespace, "expected parameter 'clusterNamespace' to be non-null");
+            $.targetGkeCluster = Objects.requireNonNull($.targetGkeCluster, "expected parameter 'targetGkeCluster' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="publishMibPerSec", required=true)
-      private final Output<Integer> publishMibPerSec;
+    private Output<Integer> publishMibPerSec;
 
     public Output<Integer> publishMibPerSec() {
         return this.publishMibPerSec;
@@ -30,63 +29,60 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="subscribeMibPerSec", required=true)
-      private final Output<Integer> subscribeMibPerSec;
+    private Output<Integer> subscribeMibPerSec;
 
     public Output<Integer> subscribeMibPerSec() {
         return this.subscribeMibPerSec;
     }
 
-    public LiteTopicPartitionConfigCapacityGetArgs(
-        Output<Integer> publishMibPerSec,
-        Output<Integer> subscribeMibPerSec) {
-        this.publishMibPerSec = Objects.requireNonNull(publishMibPerSec, "expected parameter 'publishMibPerSec' to be non-null");
-        this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec, "expected parameter 'subscribeMibPerSec' to be non-null");
-    }
+    private LiteTopicPartitionConfigCapacityGetArgs() {}
 
-    private LiteTopicPartitionConfigCapacityGetArgs() {
-        this.publishMibPerSec = Codegen.empty();
-        this.subscribeMibPerSec = Codegen.empty();
+    private LiteTopicPartitionConfigCapacityGetArgs(LiteTopicPartitionConfigCapacityGetArgs $) {
+        this.publishMibPerSec = $.publishMibPerSec;
+        this.subscribeMibPerSec = $.subscribeMibPerSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiteTopicPartitionConfigCapacityGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> publishMibPerSec;
-        private Output<Integer> subscribeMibPerSec;
+        private LiteTopicPartitionConfigCapacityGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiteTopicPartitionConfigCapacityGetArgs();
         }
 
         public Builder(LiteTopicPartitionConfigCapacityGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishMibPerSec = defaults.publishMibPerSec;
-    	      this.subscribeMibPerSec = defaults.subscribeMibPerSec;
+            $ = new LiteTopicPartitionConfigCapacityGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publishMibPerSec(Output<Integer> publishMibPerSec) {
-            this.publishMibPerSec = Objects.requireNonNull(publishMibPerSec);
+            $.publishMibPerSec = publishMibPerSec;
             return this;
         }
+
         public Builder publishMibPerSec(Integer publishMibPerSec) {
-            this.publishMibPerSec = Output.of(Objects.requireNonNull(publishMibPerSec));
-            return this;
+            return publishMibPerSec(Output.of(publishMibPerSec));
         }
+
         public Builder subscribeMibPerSec(Output<Integer> subscribeMibPerSec) {
-            this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec);
+            $.subscribeMibPerSec = subscribeMibPerSec;
             return this;
         }
+
         public Builder subscribeMibPerSec(Integer subscribeMibPerSec) {
-            this.subscribeMibPerSec = Output.of(Objects.requireNonNull(subscribeMibPerSec));
-            return this;
-        }        public LiteTopicPartitionConfigCapacityGetArgs build() {
-            return new LiteTopicPartitionConfigCapacityGetArgs(publishMibPerSec, subscribeMibPerSec);
+            return subscribeMibPerSec(Output.of(subscribeMibPerSec));
+        }
+
+        public LiteTopicPartitionConfigCapacityGetArgs build() {
+            $.publishMibPerSec = Objects.requireNonNull($.publishMibPerSec, "expected parameter 'publishMibPerSec' to be non-null");
+            $.subscribeMibPerSec = Objects.requireNonNull($.subscribeMibPerSec, "expected parameter 'subscribeMibPerSec' to be non-null");
+            return $;
         }
     }
+
 }

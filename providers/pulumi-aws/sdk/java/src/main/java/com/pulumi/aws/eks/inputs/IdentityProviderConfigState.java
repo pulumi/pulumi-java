@@ -6,10 +6,10 @@ package com.pulumi.aws.eks.inputs;
 import com.pulumi.aws.eks.inputs.IdentityProviderConfigOidcGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IdentityProviderConfigState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class IdentityProviderConfigState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class IdentityProviderConfigState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="oidc")
-      private final @Nullable Output<IdentityProviderConfigOidcGetArgs> oidc;
+    private @Nullable Output<IdentityProviderConfigOidcGetArgs> oidc;
 
-    public Output<IdentityProviderConfigOidcGetArgs> oidc() {
-        return this.oidc == null ? Codegen.empty() : this.oidc;
+    public Optional<Output<IdentityProviderConfigOidcGetArgs>> oidc() {
+        return Optional.ofNullable(this.oidc);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class IdentityProviderConfigState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class IdentityProviderConfigState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -77,115 +77,98 @@ public final class IdentityProviderConfigState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public IdentityProviderConfigState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> clusterName,
-        @Nullable Output<IdentityProviderConfigOidcGetArgs> oidc,
-        @Nullable Output<String> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.clusterName = clusterName;
-        this.oidc = oidc;
-        this.status = status;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private IdentityProviderConfigState() {}
 
-    private IdentityProviderConfigState() {
-        this.arn = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.oidc = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private IdentityProviderConfigState(IdentityProviderConfigState $) {
+        this.arn = $.arn;
+        this.clusterName = $.clusterName;
+        this.oidc = $.oidc;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityProviderConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> clusterName;
-        private @Nullable Output<IdentityProviderConfigOidcGetArgs> oidc;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private IdentityProviderConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityProviderConfigState();
         }
 
         public Builder(IdentityProviderConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.clusterName = defaults.clusterName;
-    	      this.oidc = defaults.oidc;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new IdentityProviderConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder oidc(@Nullable Output<IdentityProviderConfigOidcGetArgs> oidc) {
-            this.oidc = oidc;
+            $.oidc = oidc;
             return this;
         }
-        public Builder oidc(@Nullable IdentityProviderConfigOidcGetArgs oidc) {
-            this.oidc = Codegen.ofNullable(oidc);
-            return this;
+
+        public Builder oidc(IdentityProviderConfigOidcGetArgs oidc) {
+            return oidc(Output.of(oidc));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public IdentityProviderConfigState build() {
-            return new IdentityProviderConfigState(arn, clusterName, oidc, status, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public IdentityProviderConfigState build() {
+            return $;
         }
     }
+
 }

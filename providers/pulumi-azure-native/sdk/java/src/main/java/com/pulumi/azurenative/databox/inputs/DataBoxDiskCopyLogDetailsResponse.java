@@ -23,7 +23,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="copyLogDetailsType", required=true)
-      private final String copyLogDetailsType;
+    private String copyLogDetailsType;
 
     public String copyLogDetailsType() {
         return this.copyLogDetailsType;
@@ -34,7 +34,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="diskSerialNumber", required=true)
-      private final String diskSerialNumber;
+    private String diskSerialNumber;
 
     public String diskSerialNumber() {
         return this.diskSerialNumber;
@@ -45,7 +45,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="errorLogLink", required=true)
-      private final String errorLogLink;
+    private String errorLogLink;
 
     public String errorLogLink() {
         return this.errorLogLink;
@@ -56,73 +56,66 @@ public final class DataBoxDiskCopyLogDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="verboseLogLink", required=true)
-      private final String verboseLogLink;
+    private String verboseLogLink;
 
     public String verboseLogLink() {
         return this.verboseLogLink;
     }
 
-    public DataBoxDiskCopyLogDetailsResponse(
-        String copyLogDetailsType,
-        String diskSerialNumber,
-        String errorLogLink,
-        String verboseLogLink) {
-        this.copyLogDetailsType = Codegen.stringProp("copyLogDetailsType").arg(copyLogDetailsType).require();
-        this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber, "expected parameter 'diskSerialNumber' to be non-null");
-        this.errorLogLink = Objects.requireNonNull(errorLogLink, "expected parameter 'errorLogLink' to be non-null");
-        this.verboseLogLink = Objects.requireNonNull(verboseLogLink, "expected parameter 'verboseLogLink' to be non-null");
-    }
+    private DataBoxDiskCopyLogDetailsResponse() {}
 
-    private DataBoxDiskCopyLogDetailsResponse() {
-        this.copyLogDetailsType = null;
-        this.diskSerialNumber = null;
-        this.errorLogLink = null;
-        this.verboseLogLink = null;
+    private DataBoxDiskCopyLogDetailsResponse(DataBoxDiskCopyLogDetailsResponse $) {
+        this.copyLogDetailsType = $.copyLogDetailsType;
+        this.diskSerialNumber = $.diskSerialNumber;
+        this.errorLogLink = $.errorLogLink;
+        this.verboseLogLink = $.verboseLogLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataBoxDiskCopyLogDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String copyLogDetailsType;
-        private String diskSerialNumber;
-        private String errorLogLink;
-        private String verboseLogLink;
+        private DataBoxDiskCopyLogDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataBoxDiskCopyLogDetailsResponse();
         }
 
         public Builder(DataBoxDiskCopyLogDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyLogDetailsType = defaults.copyLogDetailsType;
-    	      this.diskSerialNumber = defaults.diskSerialNumber;
-    	      this.errorLogLink = defaults.errorLogLink;
-    	      this.verboseLogLink = defaults.verboseLogLink;
+            $ = new DataBoxDiskCopyLogDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder copyLogDetailsType(String copyLogDetailsType) {
-            this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType);
+            $.copyLogDetailsType = copyLogDetailsType;
             return this;
         }
+
         public Builder diskSerialNumber(String diskSerialNumber) {
-            this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
+            $.diskSerialNumber = diskSerialNumber;
             return this;
         }
+
         public Builder errorLogLink(String errorLogLink) {
-            this.errorLogLink = Objects.requireNonNull(errorLogLink);
+            $.errorLogLink = errorLogLink;
             return this;
         }
+
         public Builder verboseLogLink(String verboseLogLink) {
-            this.verboseLogLink = Objects.requireNonNull(verboseLogLink);
+            $.verboseLogLink = verboseLogLink;
             return this;
-        }        public DataBoxDiskCopyLogDetailsResponse build() {
-            return new DataBoxDiskCopyLogDetailsResponse(copyLogDetailsType, diskSerialNumber, errorLogLink, verboseLogLink);
+        }
+
+        public DataBoxDiskCopyLogDetailsResponse build() {
+            $.copyLogDetailsType = Codegen.stringProp("copyLogDetailsType").arg($.copyLogDetailsType).require();
+            $.diskSerialNumber = Objects.requireNonNull($.diskSerialNumber, "expected parameter 'diskSerialNumber' to be non-null");
+            $.errorLogLink = Objects.requireNonNull($.errorLogLink, "expected parameter 'errorLogLink' to be non-null");
+            $.verboseLogLink = Objects.requireNonNull($.verboseLogLink, "expected parameter 'verboseLogLink' to be non-null");
+            return $;
         }
     }
+
 }

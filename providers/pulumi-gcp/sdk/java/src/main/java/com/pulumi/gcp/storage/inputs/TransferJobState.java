@@ -5,11 +5,11 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.storage.inputs.TransferJobScheduleGetArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<String> creationTime;
+    private @Nullable Output<String> creationTime;
 
-    public Output<String> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<String>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionTime")
-      private final @Nullable Output<String> deletionTime;
+    private @Nullable Output<String> deletionTime;
 
-    public Output<String> deletionTime() {
-        return this.deletionTime == null ? Codegen.empty() : this.deletionTime;
+    public Optional<Output<String>> deletionTime() {
+        return Optional.ofNullable(this.deletionTime);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModificationTime")
-      private final @Nullable Output<String> lastModificationTime;
+    private @Nullable Output<String> lastModificationTime;
 
-    public Output<String> lastModificationTime() {
-        return this.lastModificationTime == null ? Codegen.empty() : this.lastModificationTime;
+    public Optional<Output<String>> lastModificationTime() {
+        return Optional.ofNullable(this.lastModificationTime);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<TransferJobScheduleGetArgs> schedule;
+    private @Nullable Output<TransferJobScheduleGetArgs> schedule;
 
-    public Output<TransferJobScheduleGetArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<TransferJobScheduleGetArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -111,154 +111,128 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transferSpec")
-      private final @Nullable Output<TransferJobTransferSpecGetArgs> transferSpec;
+    private @Nullable Output<TransferJobTransferSpecGetArgs> transferSpec;
 
-    public Output<TransferJobTransferSpecGetArgs> transferSpec() {
-        return this.transferSpec == null ? Codegen.empty() : this.transferSpec;
+    public Optional<Output<TransferJobTransferSpecGetArgs>> transferSpec() {
+        return Optional.ofNullable(this.transferSpec);
     }
 
-    public TransferJobState(
-        @Nullable Output<String> creationTime,
-        @Nullable Output<String> deletionTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> lastModificationTime,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<TransferJobScheduleGetArgs> schedule,
-        @Nullable Output<String> status,
-        @Nullable Output<TransferJobTransferSpecGetArgs> transferSpec) {
-        this.creationTime = creationTime;
-        this.deletionTime = deletionTime;
-        this.description = description;
-        this.lastModificationTime = lastModificationTime;
-        this.name = name;
-        this.project = project;
-        this.schedule = schedule;
-        this.status = status;
-        this.transferSpec = transferSpec;
-    }
+    private TransferJobState() {}
 
-    private TransferJobState() {
-        this.creationTime = Codegen.empty();
-        this.deletionTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.lastModificationTime = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.status = Codegen.empty();
-        this.transferSpec = Codegen.empty();
+    private TransferJobState(TransferJobState $) {
+        this.creationTime = $.creationTime;
+        this.deletionTime = $.deletionTime;
+        this.description = $.description;
+        this.lastModificationTime = $.lastModificationTime;
+        this.name = $.name;
+        this.project = $.project;
+        this.schedule = $.schedule;
+        this.status = $.status;
+        this.transferSpec = $.transferSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferJobState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> creationTime;
-        private @Nullable Output<String> deletionTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> lastModificationTime;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<TransferJobScheduleGetArgs> schedule;
-        private @Nullable Output<String> status;
-        private @Nullable Output<TransferJobTransferSpecGetArgs> transferSpec;
+        private TransferJobState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferJobState();
         }
 
         public Builder(TransferJobState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTime = defaults.creationTime;
-    	      this.deletionTime = defaults.deletionTime;
-    	      this.description = defaults.description;
-    	      this.lastModificationTime = defaults.lastModificationTime;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.schedule = defaults.schedule;
-    	      this.status = defaults.status;
-    	      this.transferSpec = defaults.transferSpec;
+            $ = new TransferJobState(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTime(@Nullable Output<String> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(String creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder deletionTime(@Nullable Output<String> deletionTime) {
-            this.deletionTime = deletionTime;
+            $.deletionTime = deletionTime;
             return this;
         }
-        public Builder deletionTime(@Nullable String deletionTime) {
-            this.deletionTime = Codegen.ofNullable(deletionTime);
-            return this;
+
+        public Builder deletionTime(String deletionTime) {
+            return deletionTime(Output.of(deletionTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder lastModificationTime(@Nullable Output<String> lastModificationTime) {
-            this.lastModificationTime = lastModificationTime;
+            $.lastModificationTime = lastModificationTime;
             return this;
         }
-        public Builder lastModificationTime(@Nullable String lastModificationTime) {
-            this.lastModificationTime = Codegen.ofNullable(lastModificationTime);
-            return this;
+
+        public Builder lastModificationTime(String lastModificationTime) {
+            return lastModificationTime(Output.of(lastModificationTime));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder schedule(@Nullable Output<TransferJobScheduleGetArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable TransferJobScheduleGetArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(TransferJobScheduleGetArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder transferSpec(@Nullable Output<TransferJobTransferSpecGetArgs> transferSpec) {
-            this.transferSpec = transferSpec;
+            $.transferSpec = transferSpec;
             return this;
         }
-        public Builder transferSpec(@Nullable TransferJobTransferSpecGetArgs transferSpec) {
-            this.transferSpec = Codegen.ofNullable(transferSpec);
-            return this;
-        }        public TransferJobState build() {
-            return new TransferJobState(creationTime, deletionTime, description, lastModificationTime, name, project, schedule, status, transferSpec);
+
+        public Builder transferSpec(TransferJobTransferSpecGetArgs transferSpec) {
+            return transferSpec(Output.of(transferSpec));
+        }
+
+        public TransferJobState build() {
+            return $;
         }
     }
+
 }

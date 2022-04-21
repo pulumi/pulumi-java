@@ -13,45 +13,45 @@ public final class GetOrganizationPolicyRestorePolicy extends com.pulumi.resourc
     public static final GetOrganizationPolicyRestorePolicy Empty = new GetOrganizationPolicyRestorePolicy();
 
     @Import(name="default", required=true)
-      private final Boolean default_;
+    private Boolean default_;
 
     public Boolean default_() {
         return this.default_;
     }
 
-    public GetOrganizationPolicyRestorePolicy(Boolean default_) {
-        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default' to be non-null");
-    }
+    private GetOrganizationPolicyRestorePolicy() {}
 
-    private GetOrganizationPolicyRestorePolicy() {
-        this.default_ = null;
+    private GetOrganizationPolicyRestorePolicy(GetOrganizationPolicyRestorePolicy $) {
+        this.default_ = $.default_;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationPolicyRestorePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean default_;
+        private GetOrganizationPolicyRestorePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationPolicyRestorePolicy();
         }
 
         public Builder(GetOrganizationPolicyRestorePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
+            $ = new GetOrganizationPolicyRestorePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(Boolean default_) {
-            this.default_ = Objects.requireNonNull(default_);
+            $.default_ = default_;
             return this;
-        }        public GetOrganizationPolicyRestorePolicy build() {
-            return new GetOrganizationPolicyRestorePolicy(default_);
+        }
+
+        public GetOrganizationPolicyRestorePolicy build() {
+            $.default_ = Objects.requireNonNull($.default_, "expected parameter 'default' to be non-null");
+            return $;
         }
     }
+
 }

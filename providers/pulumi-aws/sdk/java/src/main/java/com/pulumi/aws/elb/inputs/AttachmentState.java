@@ -5,9 +5,9 @@ package com.pulumi.aws.elb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elb")
-      private final @Nullable Output<String> elb;
+    private @Nullable Output<String> elb;
 
-    public Output<String> elb() {
-        return this.elb == null ? Codegen.empty() : this.elb;
+    public Optional<Output<String>> elb() {
+        return Optional.ofNullable(this.elb);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
-    public AttachmentState(
-        @Nullable Output<String> elb,
-        @Nullable Output<String> instance) {
-        this.elb = elb;
-        this.instance = instance;
-    }
+    private AttachmentState() {}
 
-    private AttachmentState() {
-        this.elb = Codegen.empty();
-        this.instance = Codegen.empty();
+    private AttachmentState(AttachmentState $) {
+        this.elb = $.elb;
+        this.instance = $.instance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> elb;
-        private @Nullable Output<String> instance;
+        private AttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttachmentState();
         }
 
         public Builder(AttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elb = defaults.elb;
-    	      this.instance = defaults.instance;
+            $ = new AttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder elb(@Nullable Output<String> elb) {
-            this.elb = elb;
+            $.elb = elb;
             return this;
         }
-        public Builder elb(@Nullable String elb) {
-            this.elb = Codegen.ofNullable(elb);
-            return this;
+
+        public Builder elb(String elb) {
+            return elb(Output.of(elb));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
-        }        public AttachmentState build() {
-            return new AttachmentState(elb, instance);
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
+        }
+
+        public AttachmentState build() {
+            return $;
         }
     }
+
 }

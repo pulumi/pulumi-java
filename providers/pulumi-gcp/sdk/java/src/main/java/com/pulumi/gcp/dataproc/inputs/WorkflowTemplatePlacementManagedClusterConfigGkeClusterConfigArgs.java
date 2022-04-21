@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * 
      */
     @Import(name="namespacedGkeDeploymentTarget")
-      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
+    private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget() {
-        return this.namespacedGkeDeploymentTarget == null ? Codegen.empty() : this.namespacedGkeDeploymentTarget;
+    public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs>> namespacedGkeDeploymentTarget() {
+        return Optional.ofNullable(this.namespacedGkeDeploymentTarget);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget) {
-        this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs() {
-        this.namespacedGkeDeploymentTarget = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs(WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs $) {
+        this.namespacedGkeDeploymentTarget = $.namespacedGkeDeploymentTarget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
+        private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespacedGkeDeploymentTarget = defaults.namespacedGkeDeploymentTarget;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespacedGkeDeploymentTarget(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget) {
-            this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
+            $.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
             return this;
         }
-        public Builder namespacedGkeDeploymentTarget(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs namespacedGkeDeploymentTarget) {
-            this.namespacedGkeDeploymentTarget = Codegen.ofNullable(namespacedGkeDeploymentTarget);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs(namespacedGkeDeploymentTarget);
+
+        public Builder namespacedGkeDeploymentTarget(WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs namespacedGkeDeploymentTarget) {
+            return namespacedGkeDeploymentTarget(Output.of(namespacedGkeDeploymentTarget));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs build() {
+            return $;
         }
     }
+
 }

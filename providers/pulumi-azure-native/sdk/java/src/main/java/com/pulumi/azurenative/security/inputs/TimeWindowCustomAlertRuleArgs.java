@@ -25,7 +25,7 @@ public final class TimeWindowCustomAlertRuleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -36,7 +36,7 @@ public final class TimeWindowCustomAlertRuleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="maxThreshold", required=true)
-      private final Output<Integer> maxThreshold;
+    private Output<Integer> maxThreshold;
 
     public Output<Integer> maxThreshold() {
         return this.maxThreshold;
@@ -47,7 +47,7 @@ public final class TimeWindowCustomAlertRuleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="minThreshold", required=true)
-      private final Output<Integer> minThreshold;
+    private Output<Integer> minThreshold;
 
     public Output<Integer> minThreshold() {
         return this.minThreshold;
@@ -59,7 +59,7 @@ public final class TimeWindowCustomAlertRuleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ruleType", required=true)
-      private final Output<String> ruleType;
+    private Output<String> ruleType;
 
     public Output<String> ruleType() {
         return this.ruleType;
@@ -70,102 +70,93 @@ public final class TimeWindowCustomAlertRuleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="timeWindowSize", required=true)
-      private final Output<String> timeWindowSize;
+    private Output<String> timeWindowSize;
 
     public Output<String> timeWindowSize() {
         return this.timeWindowSize;
     }
 
-    public TimeWindowCustomAlertRuleArgs(
-        Output<Boolean> isEnabled,
-        Output<Integer> maxThreshold,
-        Output<Integer> minThreshold,
-        Output<String> ruleType,
-        Output<String> timeWindowSize) {
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.maxThreshold = Objects.requireNonNull(maxThreshold, "expected parameter 'maxThreshold' to be non-null");
-        this.minThreshold = Objects.requireNonNull(minThreshold, "expected parameter 'minThreshold' to be non-null");
-        this.ruleType = Codegen.stringProp("ruleType").output().arg(ruleType).require();
-        this.timeWindowSize = Objects.requireNonNull(timeWindowSize, "expected parameter 'timeWindowSize' to be non-null");
-    }
+    private TimeWindowCustomAlertRuleArgs() {}
 
-    private TimeWindowCustomAlertRuleArgs() {
-        this.isEnabled = Codegen.empty();
-        this.maxThreshold = Codegen.empty();
-        this.minThreshold = Codegen.empty();
-        this.ruleType = Codegen.empty();
-        this.timeWindowSize = Codegen.empty();
+    private TimeWindowCustomAlertRuleArgs(TimeWindowCustomAlertRuleArgs $) {
+        this.isEnabled = $.isEnabled;
+        this.maxThreshold = $.maxThreshold;
+        this.minThreshold = $.minThreshold;
+        this.ruleType = $.ruleType;
+        this.timeWindowSize = $.timeWindowSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeWindowCustomAlertRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> isEnabled;
-        private Output<Integer> maxThreshold;
-        private Output<Integer> minThreshold;
-        private Output<String> ruleType;
-        private Output<String> timeWindowSize;
+        private TimeWindowCustomAlertRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeWindowCustomAlertRuleArgs();
         }
 
         public Builder(TimeWindowCustomAlertRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.maxThreshold = defaults.maxThreshold;
-    	      this.minThreshold = defaults.minThreshold;
-    	      this.ruleType = defaults.ruleType;
-    	      this.timeWindowSize = defaults.timeWindowSize;
+            $ = new TimeWindowCustomAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder maxThreshold(Output<Integer> maxThreshold) {
-            this.maxThreshold = Objects.requireNonNull(maxThreshold);
+            $.maxThreshold = maxThreshold;
             return this;
         }
+
         public Builder maxThreshold(Integer maxThreshold) {
-            this.maxThreshold = Output.of(Objects.requireNonNull(maxThreshold));
-            return this;
+            return maxThreshold(Output.of(maxThreshold));
         }
+
         public Builder minThreshold(Output<Integer> minThreshold) {
-            this.minThreshold = Objects.requireNonNull(minThreshold);
+            $.minThreshold = minThreshold;
             return this;
         }
+
         public Builder minThreshold(Integer minThreshold) {
-            this.minThreshold = Output.of(Objects.requireNonNull(minThreshold));
-            return this;
+            return minThreshold(Output.of(minThreshold));
         }
+
         public Builder ruleType(Output<String> ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder ruleType(String ruleType) {
-            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
-            return this;
+            return ruleType(Output.of(ruleType));
         }
+
         public Builder timeWindowSize(Output<String> timeWindowSize) {
-            this.timeWindowSize = Objects.requireNonNull(timeWindowSize);
+            $.timeWindowSize = timeWindowSize;
             return this;
         }
+
         public Builder timeWindowSize(String timeWindowSize) {
-            this.timeWindowSize = Output.of(Objects.requireNonNull(timeWindowSize));
-            return this;
-        }        public TimeWindowCustomAlertRuleArgs build() {
-            return new TimeWindowCustomAlertRuleArgs(isEnabled, maxThreshold, minThreshold, ruleType, timeWindowSize);
+            return timeWindowSize(Output.of(timeWindowSize));
+        }
+
+        public TimeWindowCustomAlertRuleArgs build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.maxThreshold = Objects.requireNonNull($.maxThreshold, "expected parameter 'maxThreshold' to be non-null");
+            $.minThreshold = Objects.requireNonNull($.minThreshold, "expected parameter 'minThreshold' to be non-null");
+            $.ruleType = Codegen.stringProp("ruleType").output().arg($.ruleType).require();
+            $.timeWindowSize = Objects.requireNonNull($.timeWindowSize, "expected parameter 'timeWindowSize' to be non-null");
+            return $;
         }
     }
+
 }

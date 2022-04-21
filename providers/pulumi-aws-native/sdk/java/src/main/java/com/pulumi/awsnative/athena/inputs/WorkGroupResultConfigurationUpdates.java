@@ -21,94 +21,83 @@ public final class WorkGroupResultConfigurationUpdates extends com.pulumi.resour
     public static final WorkGroupResultConfigurationUpdates Empty = new WorkGroupResultConfigurationUpdates();
 
     @Import(name="encryptionConfiguration")
-      private final @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
+    private @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
 
     public Optional<WorkGroupEncryptionConfiguration> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="outputLocation")
-      private final @Nullable String outputLocation;
+    private @Nullable String outputLocation;
 
     public Optional<String> outputLocation() {
-        return this.outputLocation == null ? Optional.empty() : Optional.ofNullable(this.outputLocation);
+        return Optional.ofNullable(this.outputLocation);
     }
 
     @Import(name="removeEncryptionConfiguration")
-      private final @Nullable Boolean removeEncryptionConfiguration;
+    private @Nullable Boolean removeEncryptionConfiguration;
 
     public Optional<Boolean> removeEncryptionConfiguration() {
-        return this.removeEncryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.removeEncryptionConfiguration);
+        return Optional.ofNullable(this.removeEncryptionConfiguration);
     }
 
     @Import(name="removeOutputLocation")
-      private final @Nullable Boolean removeOutputLocation;
+    private @Nullable Boolean removeOutputLocation;
 
     public Optional<Boolean> removeOutputLocation() {
-        return this.removeOutputLocation == null ? Optional.empty() : Optional.ofNullable(this.removeOutputLocation);
+        return Optional.ofNullable(this.removeOutputLocation);
     }
 
-    public WorkGroupResultConfigurationUpdates(
-        @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration,
-        @Nullable String outputLocation,
-        @Nullable Boolean removeEncryptionConfiguration,
-        @Nullable Boolean removeOutputLocation) {
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.outputLocation = outputLocation;
-        this.removeEncryptionConfiguration = removeEncryptionConfiguration;
-        this.removeOutputLocation = removeOutputLocation;
-    }
+    private WorkGroupResultConfigurationUpdates() {}
 
-    private WorkGroupResultConfigurationUpdates() {
-        this.encryptionConfiguration = null;
-        this.outputLocation = null;
-        this.removeEncryptionConfiguration = null;
-        this.removeOutputLocation = null;
+    private WorkGroupResultConfigurationUpdates(WorkGroupResultConfigurationUpdates $) {
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.outputLocation = $.outputLocation;
+        this.removeEncryptionConfiguration = $.removeEncryptionConfiguration;
+        this.removeOutputLocation = $.removeOutputLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkGroupResultConfigurationUpdates defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
-        private @Nullable String outputLocation;
-        private @Nullable Boolean removeEncryptionConfiguration;
-        private @Nullable Boolean removeOutputLocation;
+        private WorkGroupResultConfigurationUpdates $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkGroupResultConfigurationUpdates();
         }
 
         public Builder(WorkGroupResultConfigurationUpdates defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.outputLocation = defaults.outputLocation;
-    	      this.removeEncryptionConfiguration = defaults.removeEncryptionConfiguration;
-    	      this.removeOutputLocation = defaults.removeOutputLocation;
+            $ = new WorkGroupResultConfigurationUpdates(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfiguration encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
+
         public Builder outputLocation(@Nullable String outputLocation) {
-            this.outputLocation = outputLocation;
+            $.outputLocation = outputLocation;
             return this;
         }
+
         public Builder removeEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
-            this.removeEncryptionConfiguration = removeEncryptionConfiguration;
+            $.removeEncryptionConfiguration = removeEncryptionConfiguration;
             return this;
         }
+
         public Builder removeOutputLocation(@Nullable Boolean removeOutputLocation) {
-            this.removeOutputLocation = removeOutputLocation;
+            $.removeOutputLocation = removeOutputLocation;
             return this;
-        }        public WorkGroupResultConfigurationUpdates build() {
-            return new WorkGroupResultConfigurationUpdates(encryptionConfiguration, outputLocation, removeEncryptionConfiguration, removeOutputLocation);
+        }
+
+        public WorkGroupResultConfigurationUpdates build() {
+            return $;
         }
     }
+
 }

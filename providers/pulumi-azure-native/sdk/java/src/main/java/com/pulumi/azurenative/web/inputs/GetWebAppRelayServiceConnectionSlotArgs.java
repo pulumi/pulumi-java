@@ -17,7 +17,7 @@ public final class GetWebAppRelayServiceConnectionSlotArgs extends com.pulumi.re
      * 
      */
     @Import(name="entityName", required=true)
-      private final String entityName;
+    private String entityName;
 
     public String entityName() {
         return this.entityName;
@@ -28,7 +28,7 @@ public final class GetWebAppRelayServiceConnectionSlotArgs extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetWebAppRelayServiceConnectionSlotArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetWebAppRelayServiceConnectionSlotArgs extends com.pulumi.re
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
     }
 
-    public GetWebAppRelayServiceConnectionSlotArgs(
-        String entityName,
-        String name,
-        String resourceGroupName,
-        String slot) {
-        this.entityName = Objects.requireNonNull(entityName, "expected parameter 'entityName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private GetWebAppRelayServiceConnectionSlotArgs() {}
 
-    private GetWebAppRelayServiceConnectionSlotArgs() {
-        this.entityName = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.slot = null;
+    private GetWebAppRelayServiceConnectionSlotArgs(GetWebAppRelayServiceConnectionSlotArgs $) {
+        this.entityName = $.entityName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppRelayServiceConnectionSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String entityName;
-        private String name;
-        private String resourceGroupName;
-        private String slot;
+        private GetWebAppRelayServiceConnectionSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppRelayServiceConnectionSlotArgs();
         }
 
         public Builder(GetWebAppRelayServiceConnectionSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityName = defaults.entityName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new GetWebAppRelayServiceConnectionSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entityName(String entityName) {
-            this.entityName = Objects.requireNonNull(entityName);
+            $.entityName = entityName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
-        }        public GetWebAppRelayServiceConnectionSlotArgs build() {
-            return new GetWebAppRelayServiceConnectionSlotArgs(entityName, name, resourceGroupName, slot);
+        }
+
+        public GetWebAppRelayServiceConnectionSlotArgs build() {
+            $.entityName = Objects.requireNonNull($.entityName, "expected parameter 'entityName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

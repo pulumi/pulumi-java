@@ -17,45 +17,45 @@ public final class EndpointNetworkInterface extends com.pulumi.resources.InvokeA
     public static final EndpointNetworkInterface Empty = new EndpointNetworkInterface();
 
     @Import(name="networkInterfaceId", required=true)
-      private final String networkInterfaceId;
+    private String networkInterfaceId;
 
     public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
-    public EndpointNetworkInterface(String networkInterfaceId) {
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
-    }
+    private EndpointNetworkInterface() {}
 
-    private EndpointNetworkInterface() {
-        this.networkInterfaceId = null;
+    private EndpointNetworkInterface(EndpointNetworkInterface $) {
+        this.networkInterfaceId = $.networkInterfaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointNetworkInterface defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkInterfaceId;
+        private EndpointNetworkInterface $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointNetworkInterface();
         }
 
         public Builder(EndpointNetworkInterface defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
+            $ = new EndpointNetworkInterface(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+            $.networkInterfaceId = networkInterfaceId;
             return this;
-        }        public EndpointNetworkInterface build() {
-            return new EndpointNetworkInterface(networkInterfaceId);
+        }
+
+        public EndpointNetworkInterface build() {
+            $.networkInterfaceId = Objects.requireNonNull($.networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
+            return $;
         }
     }
+
 }

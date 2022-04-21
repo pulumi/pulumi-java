@@ -15,94 +15,86 @@ public final class GetTaxonomyPolicyTagIamPolicyArgs extends com.pulumi.resource
     public static final GetTaxonomyPolicyTagIamPolicyArgs Empty = new GetTaxonomyPolicyTagIamPolicyArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="policyTagId", required=true)
-      private final String policyTagId;
+    private String policyTagId;
 
     public String policyTagId() {
         return this.policyTagId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="taxonomyId", required=true)
-      private final String taxonomyId;
+    private String taxonomyId;
 
     public String taxonomyId() {
         return this.taxonomyId;
     }
 
-    public GetTaxonomyPolicyTagIamPolicyArgs(
-        String location,
-        String policyTagId,
-        @Nullable String project,
-        String taxonomyId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.policyTagId = Objects.requireNonNull(policyTagId, "expected parameter 'policyTagId' to be non-null");
-        this.project = project;
-        this.taxonomyId = Objects.requireNonNull(taxonomyId, "expected parameter 'taxonomyId' to be non-null");
-    }
+    private GetTaxonomyPolicyTagIamPolicyArgs() {}
 
-    private GetTaxonomyPolicyTagIamPolicyArgs() {
-        this.location = null;
-        this.policyTagId = null;
-        this.project = null;
-        this.taxonomyId = null;
+    private GetTaxonomyPolicyTagIamPolicyArgs(GetTaxonomyPolicyTagIamPolicyArgs $) {
+        this.location = $.location;
+        this.policyTagId = $.policyTagId;
+        this.project = $.project;
+        this.taxonomyId = $.taxonomyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTaxonomyPolicyTagIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String policyTagId;
-        private @Nullable String project;
-        private String taxonomyId;
+        private GetTaxonomyPolicyTagIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTaxonomyPolicyTagIamPolicyArgs();
         }
 
         public Builder(GetTaxonomyPolicyTagIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.policyTagId = defaults.policyTagId;
-    	      this.project = defaults.project;
-    	      this.taxonomyId = defaults.taxonomyId;
+            $ = new GetTaxonomyPolicyTagIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder policyTagId(String policyTagId) {
-            this.policyTagId = Objects.requireNonNull(policyTagId);
+            $.policyTagId = policyTagId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder taxonomyId(String taxonomyId) {
-            this.taxonomyId = Objects.requireNonNull(taxonomyId);
+            $.taxonomyId = taxonomyId;
             return this;
-        }        public GetTaxonomyPolicyTagIamPolicyArgs build() {
-            return new GetTaxonomyPolicyTagIamPolicyArgs(location, policyTagId, project, taxonomyId);
+        }
+
+        public GetTaxonomyPolicyTagIamPolicyArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.policyTagId = Objects.requireNonNull($.policyTagId, "expected parameter 'policyTagId' to be non-null");
+            $.taxonomyId = Objects.requireNonNull($.taxonomyId, "expected parameter 'taxonomyId' to be non-null");
+            return $;
         }
     }
+
 }

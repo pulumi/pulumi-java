@@ -15,78 +15,72 @@ public final class PipelineChannel extends com.pulumi.resources.InvokeArgs {
     public static final PipelineChannel Empty = new PipelineChannel();
 
     @Import(name="channelName", required=true)
-      private final String channelName;
+    private String channelName;
 
     public String channelName() {
         return this.channelName;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable String next;
+    private @Nullable String next;
 
     public Optional<String> next() {
-        return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
+        return Optional.ofNullable(this.next);
     }
 
-    public PipelineChannel(
-        String channelName,
-        String name,
-        @Nullable String next) {
-        this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-    }
+    private PipelineChannel() {}
 
-    private PipelineChannel() {
-        this.channelName = null;
-        this.name = null;
-        this.next = null;
+    private PipelineChannel(PipelineChannel $) {
+        this.channelName = $.channelName;
+        this.name = $.name;
+        this.next = $.next;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineChannel defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String channelName;
-        private String name;
-        private @Nullable String next;
+        private PipelineChannel $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineChannel();
         }
 
         public Builder(PipelineChannel defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelName = defaults.channelName;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
+            $ = new PipelineChannel(Objects.requireNonNull(defaults));
         }
 
         public Builder channelName(String channelName) {
-            this.channelName = Objects.requireNonNull(channelName);
+            $.channelName = channelName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder next(@Nullable String next) {
-            this.next = next;
+            $.next = next;
             return this;
-        }        public PipelineChannel build() {
-            return new PipelineChannel(channelName, name, next);
+        }
+
+        public PipelineChannel build() {
+            $.channelName = Objects.requireNonNull($.channelName, "expected parameter 'channelName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

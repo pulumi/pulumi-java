@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1.inputs.ExecutionConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.PeripheralsConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EnvironmentConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="executionConfig")
-      private final @Nullable Output<ExecutionConfigArgs> executionConfig;
+    private @Nullable Output<ExecutionConfigArgs> executionConfig;
 
-    public Output<ExecutionConfigArgs> executionConfig() {
-        return this.executionConfig == null ? Codegen.empty() : this.executionConfig;
+    public Optional<Output<ExecutionConfigArgs>> executionConfig() {
+        return Optional.ofNullable(this.executionConfig);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class EnvironmentConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="peripheralsConfig")
-      private final @Nullable Output<PeripheralsConfigArgs> peripheralsConfig;
+    private @Nullable Output<PeripheralsConfigArgs> peripheralsConfig;
 
-    public Output<PeripheralsConfigArgs> peripheralsConfig() {
-        return this.peripheralsConfig == null ? Codegen.empty() : this.peripheralsConfig;
+    public Optional<Output<PeripheralsConfigArgs>> peripheralsConfig() {
+        return Optional.ofNullable(this.peripheralsConfig);
     }
 
-    public EnvironmentConfigArgs(
-        @Nullable Output<ExecutionConfigArgs> executionConfig,
-        @Nullable Output<PeripheralsConfigArgs> peripheralsConfig) {
-        this.executionConfig = executionConfig;
-        this.peripheralsConfig = peripheralsConfig;
-    }
+    private EnvironmentConfigArgs() {}
 
-    private EnvironmentConfigArgs() {
-        this.executionConfig = Codegen.empty();
-        this.peripheralsConfig = Codegen.empty();
+    private EnvironmentConfigArgs(EnvironmentConfigArgs $) {
+        this.executionConfig = $.executionConfig;
+        this.peripheralsConfig = $.peripheralsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExecutionConfigArgs> executionConfig;
-        private @Nullable Output<PeripheralsConfigArgs> peripheralsConfig;
+        private EnvironmentConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentConfigArgs();
         }
 
         public Builder(EnvironmentConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionConfig = defaults.executionConfig;
-    	      this.peripheralsConfig = defaults.peripheralsConfig;
+            $ = new EnvironmentConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executionConfig(@Nullable Output<ExecutionConfigArgs> executionConfig) {
-            this.executionConfig = executionConfig;
+            $.executionConfig = executionConfig;
             return this;
         }
-        public Builder executionConfig(@Nullable ExecutionConfigArgs executionConfig) {
-            this.executionConfig = Codegen.ofNullable(executionConfig);
-            return this;
+
+        public Builder executionConfig(ExecutionConfigArgs executionConfig) {
+            return executionConfig(Output.of(executionConfig));
         }
+
         public Builder peripheralsConfig(@Nullable Output<PeripheralsConfigArgs> peripheralsConfig) {
-            this.peripheralsConfig = peripheralsConfig;
+            $.peripheralsConfig = peripheralsConfig;
             return this;
         }
-        public Builder peripheralsConfig(@Nullable PeripheralsConfigArgs peripheralsConfig) {
-            this.peripheralsConfig = Codegen.ofNullable(peripheralsConfig);
-            return this;
-        }        public EnvironmentConfigArgs build() {
-            return new EnvironmentConfigArgs(executionConfig, peripheralsConfig);
+
+        public Builder peripheralsConfig(PeripheralsConfigArgs peripheralsConfig) {
+            return peripheralsConfig(Output.of(peripheralsConfig));
+        }
+
+        public EnvironmentConfigArgs build() {
+            return $;
         }
     }
+
 }

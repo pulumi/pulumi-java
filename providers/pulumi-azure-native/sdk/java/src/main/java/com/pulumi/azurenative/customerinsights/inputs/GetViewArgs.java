@@ -17,7 +17,7 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hubName", required=true)
-      private final String hubName;
+    private String hubName;
 
     public String hubName() {
         return this.hubName;
@@ -28,7 +28,7 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
@@ -50,73 +50,66 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="viewName", required=true)
-      private final String viewName;
+    private String viewName;
 
     public String viewName() {
         return this.viewName;
     }
 
-    public GetViewArgs(
-        String hubName,
-        String resourceGroupName,
-        String userId,
-        String viewName) {
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-        this.viewName = Objects.requireNonNull(viewName, "expected parameter 'viewName' to be non-null");
-    }
+    private GetViewArgs() {}
 
-    private GetViewArgs() {
-        this.hubName = null;
-        this.resourceGroupName = null;
-        this.userId = null;
-        this.viewName = null;
+    private GetViewArgs(GetViewArgs $) {
+        this.hubName = $.hubName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.userId = $.userId;
+        this.viewName = $.viewName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetViewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hubName;
-        private String resourceGroupName;
-        private String userId;
-        private String viewName;
+        private GetViewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetViewArgs();
         }
 
         public Builder(GetViewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubName = defaults.hubName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.userId = defaults.userId;
-    	      this.viewName = defaults.viewName;
+            $ = new GetViewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder viewName(String viewName) {
-            this.viewName = Objects.requireNonNull(viewName);
+            $.viewName = viewName;
             return this;
-        }        public GetViewArgs build() {
-            return new GetViewArgs(hubName, resourceGroupName, userId, viewName);
+        }
+
+        public GetViewArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            $.viewName = Objects.requireNonNull($.viewName, "expected parameter 'viewName' to be non-null");
+            return $;
         }
     }
+
 }

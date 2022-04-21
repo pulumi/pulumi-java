@@ -25,7 +25,7 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="contactName", required=true)
-      private final String contactName;
+    private String contactName;
 
     public String contactName() {
         return this.contactName;
@@ -36,7 +36,7 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="emailList", required=true)
-      private final List<String> emailList;
+    private List<String> emailList;
 
     public List<String> emailList() {
         return this.emailList;
@@ -47,10 +47,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="mobile")
-      private final @Nullable String mobile;
+    private @Nullable String mobile;
 
     public Optional<String> mobile() {
-        return this.mobile == null ? Optional.empty() : Optional.ofNullable(this.mobile);
+        return Optional.ofNullable(this.mobile);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="notificationPreference")
-      private final @Nullable List<NotificationPreferenceResponse> notificationPreference;
+    private @Nullable List<NotificationPreferenceResponse> notificationPreference;
 
-    public List<NotificationPreferenceResponse> notificationPreference() {
-        return this.notificationPreference == null ? List.of() : this.notificationPreference;
+    public Optional<List<NotificationPreferenceResponse>> notificationPreference() {
+        return Optional.ofNullable(this.notificationPreference);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="phone", required=true)
-      private final String phone;
+    private String phone;
 
     public String phone() {
         return this.phone;
@@ -80,97 +80,85 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="phoneExtension")
-      private final @Nullable String phoneExtension;
+    private @Nullable String phoneExtension;
 
     public Optional<String> phoneExtension() {
-        return this.phoneExtension == null ? Optional.empty() : Optional.ofNullable(this.phoneExtension);
+        return Optional.ofNullable(this.phoneExtension);
     }
 
-    public ContactDetailsResponse(
-        String contactName,
-        List<String> emailList,
-        @Nullable String mobile,
-        @Nullable List<NotificationPreferenceResponse> notificationPreference,
-        String phone,
-        @Nullable String phoneExtension) {
-        this.contactName = Objects.requireNonNull(contactName, "expected parameter 'contactName' to be non-null");
-        this.emailList = Objects.requireNonNull(emailList, "expected parameter 'emailList' to be non-null");
-        this.mobile = mobile;
-        this.notificationPreference = notificationPreference;
-        this.phone = Objects.requireNonNull(phone, "expected parameter 'phone' to be non-null");
-        this.phoneExtension = phoneExtension;
-    }
+    private ContactDetailsResponse() {}
 
-    private ContactDetailsResponse() {
-        this.contactName = null;
-        this.emailList = List.of();
-        this.mobile = null;
-        this.notificationPreference = List.of();
-        this.phone = null;
-        this.phoneExtension = null;
+    private ContactDetailsResponse(ContactDetailsResponse $) {
+        this.contactName = $.contactName;
+        this.emailList = $.emailList;
+        this.mobile = $.mobile;
+        this.notificationPreference = $.notificationPreference;
+        this.phone = $.phone;
+        this.phoneExtension = $.phoneExtension;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contactName;
-        private List<String> emailList;
-        private @Nullable String mobile;
-        private @Nullable List<NotificationPreferenceResponse> notificationPreference;
-        private String phone;
-        private @Nullable String phoneExtension;
+        private ContactDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactDetailsResponse();
         }
 
         public Builder(ContactDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactName = defaults.contactName;
-    	      this.emailList = defaults.emailList;
-    	      this.mobile = defaults.mobile;
-    	      this.notificationPreference = defaults.notificationPreference;
-    	      this.phone = defaults.phone;
-    	      this.phoneExtension = defaults.phoneExtension;
+            $ = new ContactDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contactName(String contactName) {
-            this.contactName = Objects.requireNonNull(contactName);
+            $.contactName = contactName;
             return this;
         }
+
         public Builder emailList(List<String> emailList) {
-            this.emailList = Objects.requireNonNull(emailList);
+            $.emailList = emailList;
             return this;
         }
+
         public Builder emailList(String... emailList) {
             return emailList(List.of(emailList));
         }
+
         public Builder mobile(@Nullable String mobile) {
-            this.mobile = mobile;
+            $.mobile = mobile;
             return this;
         }
+
         public Builder notificationPreference(@Nullable List<NotificationPreferenceResponse> notificationPreference) {
-            this.notificationPreference = notificationPreference;
+            $.notificationPreference = notificationPreference;
             return this;
         }
+
         public Builder notificationPreference(NotificationPreferenceResponse... notificationPreference) {
             return notificationPreference(List.of(notificationPreference));
         }
+
         public Builder phone(String phone) {
-            this.phone = Objects.requireNonNull(phone);
+            $.phone = phone;
             return this;
         }
+
         public Builder phoneExtension(@Nullable String phoneExtension) {
-            this.phoneExtension = phoneExtension;
+            $.phoneExtension = phoneExtension;
             return this;
-        }        public ContactDetailsResponse build() {
-            return new ContactDetailsResponse(contactName, emailList, mobile, notificationPreference, phone, phoneExtension);
+        }
+
+        public ContactDetailsResponse build() {
+            $.contactName = Objects.requireNonNull($.contactName, "expected parameter 'contactName' to be non-null");
+            $.emailList = Objects.requireNonNull($.emailList, "expected parameter 'emailList' to be non-null");
+            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
+            return $;
         }
     }
+
 }

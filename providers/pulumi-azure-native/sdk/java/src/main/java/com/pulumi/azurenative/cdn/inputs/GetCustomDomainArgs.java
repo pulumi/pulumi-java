@@ -17,7 +17,7 @@ public final class GetCustomDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="customDomainName", required=true)
-      private final String customDomainName;
+    private String customDomainName;
 
     public String customDomainName() {
         return this.customDomainName;
@@ -28,7 +28,7 @@ public final class GetCustomDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointName", required=true)
-      private final String endpointName;
+    private String endpointName;
 
     public String endpointName() {
         return this.endpointName;
@@ -39,7 +39,7 @@ public final class GetCustomDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -50,73 +50,66 @@ public final class GetCustomDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCustomDomainArgs(
-        String customDomainName,
-        String endpointName,
-        String profileName,
-        String resourceGroupName) {
-        this.customDomainName = Objects.requireNonNull(customDomainName, "expected parameter 'customDomainName' to be non-null");
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCustomDomainArgs() {}
 
-    private GetCustomDomainArgs() {
-        this.customDomainName = null;
-        this.endpointName = null;
-        this.profileName = null;
-        this.resourceGroupName = null;
+    private GetCustomDomainArgs(GetCustomDomainArgs $) {
+        this.customDomainName = $.customDomainName;
+        this.endpointName = $.endpointName;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customDomainName;
-        private String endpointName;
-        private String profileName;
-        private String resourceGroupName;
+        private GetCustomDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomDomainArgs();
         }
 
         public Builder(GetCustomDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customDomainName = defaults.customDomainName;
-    	      this.endpointName = defaults.endpointName;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customDomainName(String customDomainName) {
-            this.customDomainName = Objects.requireNonNull(customDomainName);
+            $.customDomainName = customDomainName;
             return this;
         }
+
         public Builder endpointName(String endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCustomDomainArgs build() {
-            return new GetCustomDomainArgs(customDomainName, endpointName, profileName, resourceGroupName);
+        }
+
+        public GetCustomDomainArgs build() {
+            $.customDomainName = Objects.requireNonNull($.customDomainName, "expected parameter 'customDomainName' to be non-null");
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

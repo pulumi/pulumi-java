@@ -21,10 +21,10 @@ public final class VirtualMachineResponseProperties extends com.pulumi.resources
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VirtualMachineResponseProperties extends com.pulumi.resources
      * 
      */
     @Import(name="administratorAccount")
-      private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
+    private @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
 
     public Optional<VirtualMachineSshCredentialsResponse> administratorAccount() {
-        return this.administratorAccount == null ? Optional.empty() : Optional.ofNullable(this.administratorAccount);
+        return Optional.ofNullable(this.administratorAccount);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VirtualMachineResponseProperties extends com.pulumi.resources
      * 
      */
     @Import(name="sshPort")
-      private final @Nullable Integer sshPort;
+    private @Nullable Integer sshPort;
 
     public Optional<Integer> sshPort() {
-        return this.sshPort == null ? Optional.empty() : Optional.ofNullable(this.sshPort);
+        return Optional.ofNullable(this.sshPort);
     }
 
     /**
@@ -54,73 +54,62 @@ public final class VirtualMachineResponseProperties extends com.pulumi.resources
      * 
      */
     @Import(name="virtualMachineSize")
-      private final @Nullable String virtualMachineSize;
+    private @Nullable String virtualMachineSize;
 
     public Optional<String> virtualMachineSize() {
-        return this.virtualMachineSize == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineSize);
+        return Optional.ofNullable(this.virtualMachineSize);
     }
 
-    public VirtualMachineResponseProperties(
-        @Nullable String address,
-        @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
-        @Nullable Integer sshPort,
-        @Nullable String virtualMachineSize) {
-        this.address = address;
-        this.administratorAccount = administratorAccount;
-        this.sshPort = sshPort;
-        this.virtualMachineSize = virtualMachineSize;
-    }
+    private VirtualMachineResponseProperties() {}
 
-    private VirtualMachineResponseProperties() {
-        this.address = null;
-        this.administratorAccount = null;
-        this.sshPort = null;
-        this.virtualMachineSize = null;
+    private VirtualMachineResponseProperties(VirtualMachineResponseProperties $) {
+        this.address = $.address;
+        this.administratorAccount = $.administratorAccount;
+        this.sshPort = $.sshPort;
+        this.virtualMachineSize = $.virtualMachineSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
-        private @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
-        private @Nullable Integer sshPort;
-        private @Nullable String virtualMachineSize;
+        private VirtualMachineResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineResponseProperties();
         }
 
         public Builder(VirtualMachineResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.administratorAccount = defaults.administratorAccount;
-    	      this.sshPort = defaults.sshPort;
-    	      this.virtualMachineSize = defaults.virtualMachineSize;
+            $ = new VirtualMachineResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsResponse administratorAccount) {
-            this.administratorAccount = administratorAccount;
+            $.administratorAccount = administratorAccount;
             return this;
         }
+
         public Builder sshPort(@Nullable Integer sshPort) {
-            this.sshPort = sshPort;
+            $.sshPort = sshPort;
             return this;
         }
+
         public Builder virtualMachineSize(@Nullable String virtualMachineSize) {
-            this.virtualMachineSize = virtualMachineSize;
+            $.virtualMachineSize = virtualMachineSize;
             return this;
-        }        public VirtualMachineResponseProperties build() {
-            return new VirtualMachineResponseProperties(address, administratorAccount, sshPort, virtualMachineSize);
+        }
+
+        public VirtualMachineResponseProperties build() {
+            return $;
         }
     }
+
 }

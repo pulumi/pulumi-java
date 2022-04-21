@@ -13,62 +13,59 @@ public final class DistributionOriginCustomHeader extends com.pulumi.resources.I
     public static final DistributionOriginCustomHeader Empty = new DistributionOriginCustomHeader();
 
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
     }
 
     @Import(name="headerValue", required=true)
-      private final String headerValue;
+    private String headerValue;
 
     public String headerValue() {
         return this.headerValue;
     }
 
-    public DistributionOriginCustomHeader(
-        String headerName,
-        String headerValue) {
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
-    }
+    private DistributionOriginCustomHeader() {}
 
-    private DistributionOriginCustomHeader() {
-        this.headerName = null;
-        this.headerValue = null;
+    private DistributionOriginCustomHeader(DistributionOriginCustomHeader $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginCustomHeader defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String headerName;
-        private String headerValue;
+        private DistributionOriginCustomHeader $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginCustomHeader();
         }
 
         public Builder(DistributionOriginCustomHeader defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
+            $ = new DistributionOriginCustomHeader(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerValue(String headerValue) {
-            this.headerValue = Objects.requireNonNull(headerValue);
+            $.headerValue = headerValue;
             return this;
-        }        public DistributionOriginCustomHeader build() {
-            return new DistributionOriginCustomHeader(headerName, headerValue);
+        }
+
+        public DistributionOriginCustomHeader build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.headerValue = Objects.requireNonNull($.headerValue, "expected parameter 'headerValue' to be non-null");
+            return $;
         }
     }
+
 }

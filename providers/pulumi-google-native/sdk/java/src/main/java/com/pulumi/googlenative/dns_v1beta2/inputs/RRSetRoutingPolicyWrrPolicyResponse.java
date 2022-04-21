@@ -19,65 +19,63 @@ public final class RRSetRoutingPolicyWrrPolicyResponse extends com.pulumi.resour
     public static final RRSetRoutingPolicyWrrPolicyResponse Empty = new RRSetRoutingPolicyWrrPolicyResponse();
 
     @Import(name="items", required=true)
-      private final List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items;
+    private List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items;
 
     public List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items() {
         return this.items;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public RRSetRoutingPolicyWrrPolicyResponse(
-        List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items,
-        String kind) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private RRSetRoutingPolicyWrrPolicyResponse() {}
 
-    private RRSetRoutingPolicyWrrPolicyResponse() {
-        this.items = List.of();
-        this.kind = null;
+    private RRSetRoutingPolicyWrrPolicyResponse(RRSetRoutingPolicyWrrPolicyResponse $) {
+        this.items = $.items;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RRSetRoutingPolicyWrrPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items;
-        private String kind;
+        private RRSetRoutingPolicyWrrPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RRSetRoutingPolicyWrrPolicyResponse();
         }
 
         public Builder(RRSetRoutingPolicyWrrPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
-    	      this.kind = defaults.kind;
+            $ = new RRSetRoutingPolicyWrrPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse... items) {
             return items(List.of(items));
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public RRSetRoutingPolicyWrrPolicyResponse build() {
-            return new RRSetRoutingPolicyWrrPolicyResponse(items, kind);
+        }
+
+        public RRSetRoutingPolicyWrrPolicyResponse build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

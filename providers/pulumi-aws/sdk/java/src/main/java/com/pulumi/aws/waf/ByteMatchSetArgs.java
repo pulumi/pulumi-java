@@ -6,10 +6,10 @@ package com.pulumi.aws.waf;
 import com.pulumi.aws.waf.inputs.ByteMatchSetByteMatchTupleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ByteMatchSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="byteMatchTuples")
-      private final @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
+    private @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
 
-    public Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples() {
-        return this.byteMatchTuples == null ? Codegen.empty() : this.byteMatchTuples;
+    public Optional<Output<List<ByteMatchSetByteMatchTupleArgs>>> byteMatchTuples() {
+        return Optional.ofNullable(this.byteMatchTuples);
     }
 
     /**
@@ -35,66 +35,62 @@ public final class ByteMatchSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ByteMatchSetArgs(
-        @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples,
-        @Nullable Output<String> name) {
-        this.byteMatchTuples = byteMatchTuples;
-        this.name = name;
-    }
+    private ByteMatchSetArgs() {}
 
-    private ByteMatchSetArgs() {
-        this.byteMatchTuples = Codegen.empty();
-        this.name = Codegen.empty();
+    private ByteMatchSetArgs(ByteMatchSetArgs $) {
+        this.byteMatchTuples = $.byteMatchTuples;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ByteMatchSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
-        private @Nullable Output<String> name;
+        private ByteMatchSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ByteMatchSetArgs();
         }
 
         public Builder(ByteMatchSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.byteMatchTuples = defaults.byteMatchTuples;
-    	      this.name = defaults.name;
+            $ = new ByteMatchSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder byteMatchTuples(@Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples) {
-            this.byteMatchTuples = byteMatchTuples;
+            $.byteMatchTuples = byteMatchTuples;
             return this;
         }
-        public Builder byteMatchTuples(@Nullable List<ByteMatchSetByteMatchTupleArgs> byteMatchTuples) {
-            this.byteMatchTuples = Codegen.ofNullable(byteMatchTuples);
-            return this;
+
+        public Builder byteMatchTuples(List<ByteMatchSetByteMatchTupleArgs> byteMatchTuples) {
+            return byteMatchTuples(Output.of(byteMatchTuples));
         }
+
         public Builder byteMatchTuples(ByteMatchSetByteMatchTupleArgs... byteMatchTuples) {
             return byteMatchTuples(List.of(byteMatchTuples));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ByteMatchSetArgs build() {
-            return new ByteMatchSetArgs(byteMatchTuples, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ByteMatchSetArgs build() {
+            return $;
         }
     }
+
 }

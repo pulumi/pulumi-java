@@ -22,10 +22,10 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regions")
-      private final @Nullable List<String> regions;
+    private @Nullable List<String> regions;
 
-    public List<String> regions() {
-        return this.regions == null ? List.of() : this.regions;
+    public Optional<List<String>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="services", required=true)
-      private final List<String> services;
+    private List<String> services;
 
     public List<String> services() {
         return this.services;
@@ -48,70 +48,65 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public GetIpRangesArgs(
-        @Nullable List<String> regions,
-        List<String> services,
-        @Nullable String url) {
-        this.regions = regions;
-        this.services = Objects.requireNonNull(services, "expected parameter 'services' to be non-null");
-        this.url = url;
-    }
+    private GetIpRangesArgs() {}
 
-    private GetIpRangesArgs() {
-        this.regions = List.of();
-        this.services = List.of();
-        this.url = null;
+    private GetIpRangesArgs(GetIpRangesArgs $) {
+        this.regions = $.regions;
+        this.services = $.services;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIpRangesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> regions;
-        private List<String> services;
-        private @Nullable String url;
+        private GetIpRangesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIpRangesArgs();
         }
 
         public Builder(GetIpRangesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regions = defaults.regions;
-    	      this.services = defaults.services;
-    	      this.url = defaults.url;
+            $ = new GetIpRangesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder services(List<String> services) {
-            this.services = Objects.requireNonNull(services);
+            $.services = services;
             return this;
         }
+
         public Builder services(String... services) {
             return services(List.of(services));
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public GetIpRangesArgs build() {
-            return new GetIpRangesArgs(regions, services, url);
+        }
+
+        public GetIpRangesArgs build() {
+            $.services = Objects.requireNonNull($.services, "expected parameter 'services' to be non-null");
+            return $;
         }
     }
+
 }

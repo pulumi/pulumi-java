@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,25 +23,25 @@ public final class ContainerNetworkDataArgs extends com.pulumi.resources.Resourc
      */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
     @Import(name="gateway")
-      private final @Nullable Output<String> gateway;
+    private @Nullable Output<String> gateway;
 
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
-    public Output<String> gateway() {
-        return this.gateway == null ? Codegen.empty() : this.gateway;
+    public Optional<Output<String>> gateway() {
+        return Optional.ofNullable(this.gateway);
     }
 
     @Import(name="globalIpv6Address")
-      private final @Nullable Output<String> globalIpv6Address;
+    private @Nullable Output<String> globalIpv6Address;
 
-    public Output<String> globalIpv6Address() {
-        return this.globalIpv6Address == null ? Codegen.empty() : this.globalIpv6Address;
+    public Optional<Output<String>> globalIpv6Address() {
+        return Optional.ofNullable(this.globalIpv6Address);
     }
 
     @Import(name="globalIpv6PrefixLength")
-      private final @Nullable Output<Integer> globalIpv6PrefixLength;
+    private @Nullable Output<Integer> globalIpv6PrefixLength;
 
-    public Output<Integer> globalIpv6PrefixLength() {
-        return this.globalIpv6PrefixLength == null ? Codegen.empty() : this.globalIpv6PrefixLength;
+    public Optional<Output<Integer>> globalIpv6PrefixLength() {
+        return Optional.ofNullable(this.globalIpv6PrefixLength);
     }
 
     /**
@@ -51,11 +51,11 @@ public final class ContainerNetworkDataArgs extends com.pulumi.resources.Resourc
      */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -65,143 +65,123 @@ public final class ContainerNetworkDataArgs extends com.pulumi.resources.Resourc
      */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
     @Import(name="ipPrefixLength")
-      private final @Nullable Output<Integer> ipPrefixLength;
+    private @Nullable Output<Integer> ipPrefixLength;
 
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
-    public Output<Integer> ipPrefixLength() {
-        return this.ipPrefixLength == null ? Codegen.empty() : this.ipPrefixLength;
+    public Optional<Output<Integer>> ipPrefixLength() {
+        return Optional.ofNullable(this.ipPrefixLength);
     }
 
     @Import(name="ipv6Gateway")
-      private final @Nullable Output<String> ipv6Gateway;
+    private @Nullable Output<String> ipv6Gateway;
 
-    public Output<String> ipv6Gateway() {
-        return this.ipv6Gateway == null ? Codegen.empty() : this.ipv6Gateway;
+    public Optional<Output<String>> ipv6Gateway() {
+        return Optional.ofNullable(this.ipv6Gateway);
     }
 
     @Import(name="networkName")
-      private final @Nullable Output<String> networkName;
+    private @Nullable Output<String> networkName;
 
-    public Output<String> networkName() {
-        return this.networkName == null ? Codegen.empty() : this.networkName;
+    public Optional<Output<String>> networkName() {
+        return Optional.ofNullable(this.networkName);
     }
 
-    public ContainerNetworkDataArgs(
-        @Nullable Output<String> gateway,
-        @Nullable Output<String> globalIpv6Address,
-        @Nullable Output<Integer> globalIpv6PrefixLength,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<Integer> ipPrefixLength,
-        @Nullable Output<String> ipv6Gateway,
-        @Nullable Output<String> networkName) {
-        this.gateway = gateway;
-        this.globalIpv6Address = globalIpv6Address;
-        this.globalIpv6PrefixLength = globalIpv6PrefixLength;
-        this.ipAddress = ipAddress;
-        this.ipPrefixLength = ipPrefixLength;
-        this.ipv6Gateway = ipv6Gateway;
-        this.networkName = networkName;
-    }
+    private ContainerNetworkDataArgs() {}
 
-    private ContainerNetworkDataArgs() {
-        this.gateway = Codegen.empty();
-        this.globalIpv6Address = Codegen.empty();
-        this.globalIpv6PrefixLength = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.ipPrefixLength = Codegen.empty();
-        this.ipv6Gateway = Codegen.empty();
-        this.networkName = Codegen.empty();
+    private ContainerNetworkDataArgs(ContainerNetworkDataArgs $) {
+        this.gateway = $.gateway;
+        this.globalIpv6Address = $.globalIpv6Address;
+        this.globalIpv6PrefixLength = $.globalIpv6PrefixLength;
+        this.ipAddress = $.ipAddress;
+        this.ipPrefixLength = $.ipPrefixLength;
+        this.ipv6Gateway = $.ipv6Gateway;
+        this.networkName = $.networkName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerNetworkDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gateway;
-        private @Nullable Output<String> globalIpv6Address;
-        private @Nullable Output<Integer> globalIpv6PrefixLength;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<Integer> ipPrefixLength;
-        private @Nullable Output<String> ipv6Gateway;
-        private @Nullable Output<String> networkName;
+        private ContainerNetworkDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerNetworkDataArgs();
         }
 
         public Builder(ContainerNetworkDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gateway = defaults.gateway;
-    	      this.globalIpv6Address = defaults.globalIpv6Address;
-    	      this.globalIpv6PrefixLength = defaults.globalIpv6PrefixLength;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.ipPrefixLength = defaults.ipPrefixLength;
-    	      this.ipv6Gateway = defaults.ipv6Gateway;
-    	      this.networkName = defaults.networkName;
+            $ = new ContainerNetworkDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gateway(@Nullable Output<String> gateway) {
-            this.gateway = gateway;
+            $.gateway = gateway;
             return this;
         }
-        public Builder gateway(@Nullable String gateway) {
-            this.gateway = Codegen.ofNullable(gateway);
-            return this;
+
+        public Builder gateway(String gateway) {
+            return gateway(Output.of(gateway));
         }
+
         public Builder globalIpv6Address(@Nullable Output<String> globalIpv6Address) {
-            this.globalIpv6Address = globalIpv6Address;
+            $.globalIpv6Address = globalIpv6Address;
             return this;
         }
-        public Builder globalIpv6Address(@Nullable String globalIpv6Address) {
-            this.globalIpv6Address = Codegen.ofNullable(globalIpv6Address);
-            return this;
+
+        public Builder globalIpv6Address(String globalIpv6Address) {
+            return globalIpv6Address(Output.of(globalIpv6Address));
         }
+
         public Builder globalIpv6PrefixLength(@Nullable Output<Integer> globalIpv6PrefixLength) {
-            this.globalIpv6PrefixLength = globalIpv6PrefixLength;
+            $.globalIpv6PrefixLength = globalIpv6PrefixLength;
             return this;
         }
-        public Builder globalIpv6PrefixLength(@Nullable Integer globalIpv6PrefixLength) {
-            this.globalIpv6PrefixLength = Codegen.ofNullable(globalIpv6PrefixLength);
-            return this;
+
+        public Builder globalIpv6PrefixLength(Integer globalIpv6PrefixLength) {
+            return globalIpv6PrefixLength(Output.of(globalIpv6PrefixLength));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder ipPrefixLength(@Nullable Output<Integer> ipPrefixLength) {
-            this.ipPrefixLength = ipPrefixLength;
+            $.ipPrefixLength = ipPrefixLength;
             return this;
         }
-        public Builder ipPrefixLength(@Nullable Integer ipPrefixLength) {
-            this.ipPrefixLength = Codegen.ofNullable(ipPrefixLength);
-            return this;
+
+        public Builder ipPrefixLength(Integer ipPrefixLength) {
+            return ipPrefixLength(Output.of(ipPrefixLength));
         }
+
         public Builder ipv6Gateway(@Nullable Output<String> ipv6Gateway) {
-            this.ipv6Gateway = ipv6Gateway;
+            $.ipv6Gateway = ipv6Gateway;
             return this;
         }
-        public Builder ipv6Gateway(@Nullable String ipv6Gateway) {
-            this.ipv6Gateway = Codegen.ofNullable(ipv6Gateway);
-            return this;
+
+        public Builder ipv6Gateway(String ipv6Gateway) {
+            return ipv6Gateway(Output.of(ipv6Gateway));
         }
+
         public Builder networkName(@Nullable Output<String> networkName) {
-            this.networkName = networkName;
+            $.networkName = networkName;
             return this;
         }
-        public Builder networkName(@Nullable String networkName) {
-            this.networkName = Codegen.ofNullable(networkName);
-            return this;
-        }        public ContainerNetworkDataArgs build() {
-            return new ContainerNetworkDataArgs(gateway, globalIpv6Address, globalIpv6PrefixLength, ipAddress, ipPrefixLength, ipv6Gateway, networkName);
+
+        public Builder networkName(String networkName) {
+            return networkName(Output.of(networkName));
+        }
+
+        public ContainerNetworkDataArgs build() {
+            return $;
         }
     }
+
 }

@@ -33,7 +33,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="biEngineStatistics", required=true)
-      private final BiEngineStatisticsResponse biEngineStatistics;
+    private BiEngineStatisticsResponse biEngineStatistics;
 
     public BiEngineStatisticsResponse biEngineStatistics() {
         return this.biEngineStatistics;
@@ -44,7 +44,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="billingTier", required=true)
-      private final Integer billingTier;
+    private Integer billingTier;
 
     public Integer billingTier() {
         return this.billingTier;
@@ -55,7 +55,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="cacheHit", required=true)
-      private final Boolean cacheHit;
+    private Boolean cacheHit;
 
     public Boolean cacheHit() {
         return this.cacheHit;
@@ -66,7 +66,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ddlAffectedRowAccessPolicyCount", required=true)
-      private final String ddlAffectedRowAccessPolicyCount;
+    private String ddlAffectedRowAccessPolicyCount;
 
     public String ddlAffectedRowAccessPolicyCount() {
         return this.ddlAffectedRowAccessPolicyCount;
@@ -77,7 +77,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ddlDestinationTable", required=true)
-      private final TableReferenceResponse ddlDestinationTable;
+    private TableReferenceResponse ddlDestinationTable;
 
     public TableReferenceResponse ddlDestinationTable() {
         return this.ddlDestinationTable;
@@ -88,7 +88,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ddlOperationPerformed", required=true)
-      private final String ddlOperationPerformed;
+    private String ddlOperationPerformed;
 
     public String ddlOperationPerformed() {
         return this.ddlOperationPerformed;
@@ -99,7 +99,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ddlTargetDataset", required=true)
-      private final DatasetReferenceResponse ddlTargetDataset;
+    private DatasetReferenceResponse ddlTargetDataset;
 
     public DatasetReferenceResponse ddlTargetDataset() {
         return this.ddlTargetDataset;
@@ -110,7 +110,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ddlTargetRoutine", required=true)
-      private final RoutineReferenceResponse ddlTargetRoutine;
+    private RoutineReferenceResponse ddlTargetRoutine;
 
     public RoutineReferenceResponse ddlTargetRoutine() {
         return this.ddlTargetRoutine;
@@ -121,7 +121,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ddlTargetRowAccessPolicy", required=true)
-      private final RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy;
+    private RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy;
 
     public RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy() {
         return this.ddlTargetRowAccessPolicy;
@@ -132,7 +132,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ddlTargetTable", required=true)
-      private final TableReferenceResponse ddlTargetTable;
+    private TableReferenceResponse ddlTargetTable;
 
     public TableReferenceResponse ddlTargetTable() {
         return this.ddlTargetTable;
@@ -143,7 +143,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dmlStats", required=true)
-      private final DmlStatisticsResponse dmlStats;
+    private DmlStatisticsResponse dmlStats;
 
     public DmlStatisticsResponse dmlStats() {
         return this.dmlStats;
@@ -154,7 +154,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="estimatedBytesProcessed", required=true)
-      private final String estimatedBytesProcessed;
+    private String estimatedBytesProcessed;
 
     public String estimatedBytesProcessed() {
         return this.estimatedBytesProcessed;
@@ -165,7 +165,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="mlStatistics", required=true)
-      private final MlStatisticsResponse mlStatistics;
+    private MlStatisticsResponse mlStatistics;
 
     public MlStatisticsResponse mlStatistics() {
         return this.mlStatistics;
@@ -176,7 +176,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="modelTraining", required=true)
-      private final BigQueryModelTrainingResponse modelTraining;
+    private BigQueryModelTrainingResponse modelTraining;
 
     public BigQueryModelTrainingResponse modelTraining() {
         return this.modelTraining;
@@ -187,7 +187,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="numDmlAffectedRows", required=true)
-      private final String numDmlAffectedRows;
+    private String numDmlAffectedRows;
 
     public String numDmlAffectedRows() {
         return this.numDmlAffectedRows;
@@ -198,7 +198,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="queryPlan", required=true)
-      private final List<ExplainQueryStageResponse> queryPlan;
+    private List<ExplainQueryStageResponse> queryPlan;
 
     public List<ExplainQueryStageResponse> queryPlan() {
         return this.queryPlan;
@@ -209,7 +209,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="referencedRoutines", required=true)
-      private final List<RoutineReferenceResponse> referencedRoutines;
+    private List<RoutineReferenceResponse> referencedRoutines;
 
     public List<RoutineReferenceResponse> referencedRoutines() {
         return this.referencedRoutines;
@@ -220,7 +220,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="referencedTables", required=true)
-      private final List<TableReferenceResponse> referencedTables;
+    private List<TableReferenceResponse> referencedTables;
 
     public List<TableReferenceResponse> referencedTables() {
         return this.referencedTables;
@@ -231,7 +231,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="reservationUsage", required=true)
-      private final List<JobStatistics2ReservationUsageItemResponse> reservationUsage;
+    private List<JobStatistics2ReservationUsageItemResponse> reservationUsage;
 
     public List<JobStatistics2ReservationUsageItemResponse> reservationUsage() {
         return this.reservationUsage;
@@ -242,7 +242,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="schema", required=true)
-      private final TableSchemaResponse schema;
+    private TableSchemaResponse schema;
 
     public TableSchemaResponse schema() {
         return this.schema;
@@ -253,7 +253,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="statementType", required=true)
-      private final String statementType;
+    private String statementType;
 
     public String statementType() {
         return this.statementType;
@@ -264,7 +264,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="timeline", required=true)
-      private final List<QueryTimelineSampleResponse> timeline;
+    private List<QueryTimelineSampleResponse> timeline;
 
     public List<QueryTimelineSampleResponse> timeline() {
         return this.timeline;
@@ -275,7 +275,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="totalBytesBilled", required=true)
-      private final String totalBytesBilled;
+    private String totalBytesBilled;
 
     public String totalBytesBilled() {
         return this.totalBytesBilled;
@@ -286,7 +286,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="totalBytesProcessed", required=true)
-      private final String totalBytesProcessed;
+    private String totalBytesProcessed;
 
     public String totalBytesProcessed() {
         return this.totalBytesProcessed;
@@ -297,7 +297,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="totalBytesProcessedAccuracy", required=true)
-      private final String totalBytesProcessedAccuracy;
+    private String totalBytesProcessedAccuracy;
 
     public String totalBytesProcessedAccuracy() {
         return this.totalBytesProcessedAccuracy;
@@ -308,7 +308,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="totalPartitionsProcessed", required=true)
-      private final String totalPartitionsProcessed;
+    private String totalPartitionsProcessed;
 
     public String totalPartitionsProcessed() {
         return this.totalPartitionsProcessed;
@@ -319,7 +319,7 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="totalSlotMs", required=true)
-      private final String totalSlotMs;
+    private String totalSlotMs;
 
     public String totalSlotMs() {
         return this.totalSlotMs;
@@ -330,307 +330,258 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="undeclaredQueryParameters", required=true)
-      private final List<QueryParameterResponse> undeclaredQueryParameters;
+    private List<QueryParameterResponse> undeclaredQueryParameters;
 
     public List<QueryParameterResponse> undeclaredQueryParameters() {
         return this.undeclaredQueryParameters;
     }
 
-    public JobStatistics2Response(
-        BiEngineStatisticsResponse biEngineStatistics,
-        Integer billingTier,
-        Boolean cacheHit,
-        String ddlAffectedRowAccessPolicyCount,
-        TableReferenceResponse ddlDestinationTable,
-        String ddlOperationPerformed,
-        DatasetReferenceResponse ddlTargetDataset,
-        RoutineReferenceResponse ddlTargetRoutine,
-        RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy,
-        TableReferenceResponse ddlTargetTable,
-        DmlStatisticsResponse dmlStats,
-        String estimatedBytesProcessed,
-        MlStatisticsResponse mlStatistics,
-        BigQueryModelTrainingResponse modelTraining,
-        String numDmlAffectedRows,
-        List<ExplainQueryStageResponse> queryPlan,
-        List<RoutineReferenceResponse> referencedRoutines,
-        List<TableReferenceResponse> referencedTables,
-        List<JobStatistics2ReservationUsageItemResponse> reservationUsage,
-        TableSchemaResponse schema,
-        String statementType,
-        List<QueryTimelineSampleResponse> timeline,
-        String totalBytesBilled,
-        String totalBytesProcessed,
-        String totalBytesProcessedAccuracy,
-        String totalPartitionsProcessed,
-        String totalSlotMs,
-        List<QueryParameterResponse> undeclaredQueryParameters) {
-        this.biEngineStatistics = Objects.requireNonNull(biEngineStatistics, "expected parameter 'biEngineStatistics' to be non-null");
-        this.billingTier = Objects.requireNonNull(billingTier, "expected parameter 'billingTier' to be non-null");
-        this.cacheHit = Objects.requireNonNull(cacheHit, "expected parameter 'cacheHit' to be non-null");
-        this.ddlAffectedRowAccessPolicyCount = Objects.requireNonNull(ddlAffectedRowAccessPolicyCount, "expected parameter 'ddlAffectedRowAccessPolicyCount' to be non-null");
-        this.ddlDestinationTable = Objects.requireNonNull(ddlDestinationTable, "expected parameter 'ddlDestinationTable' to be non-null");
-        this.ddlOperationPerformed = Objects.requireNonNull(ddlOperationPerformed, "expected parameter 'ddlOperationPerformed' to be non-null");
-        this.ddlTargetDataset = Objects.requireNonNull(ddlTargetDataset, "expected parameter 'ddlTargetDataset' to be non-null");
-        this.ddlTargetRoutine = Objects.requireNonNull(ddlTargetRoutine, "expected parameter 'ddlTargetRoutine' to be non-null");
-        this.ddlTargetRowAccessPolicy = Objects.requireNonNull(ddlTargetRowAccessPolicy, "expected parameter 'ddlTargetRowAccessPolicy' to be non-null");
-        this.ddlTargetTable = Objects.requireNonNull(ddlTargetTable, "expected parameter 'ddlTargetTable' to be non-null");
-        this.dmlStats = Objects.requireNonNull(dmlStats, "expected parameter 'dmlStats' to be non-null");
-        this.estimatedBytesProcessed = Objects.requireNonNull(estimatedBytesProcessed, "expected parameter 'estimatedBytesProcessed' to be non-null");
-        this.mlStatistics = Objects.requireNonNull(mlStatistics, "expected parameter 'mlStatistics' to be non-null");
-        this.modelTraining = Objects.requireNonNull(modelTraining, "expected parameter 'modelTraining' to be non-null");
-        this.numDmlAffectedRows = Objects.requireNonNull(numDmlAffectedRows, "expected parameter 'numDmlAffectedRows' to be non-null");
-        this.queryPlan = Objects.requireNonNull(queryPlan, "expected parameter 'queryPlan' to be non-null");
-        this.referencedRoutines = Objects.requireNonNull(referencedRoutines, "expected parameter 'referencedRoutines' to be non-null");
-        this.referencedTables = Objects.requireNonNull(referencedTables, "expected parameter 'referencedTables' to be non-null");
-        this.reservationUsage = Objects.requireNonNull(reservationUsage, "expected parameter 'reservationUsage' to be non-null");
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-        this.statementType = Objects.requireNonNull(statementType, "expected parameter 'statementType' to be non-null");
-        this.timeline = Objects.requireNonNull(timeline, "expected parameter 'timeline' to be non-null");
-        this.totalBytesBilled = Objects.requireNonNull(totalBytesBilled, "expected parameter 'totalBytesBilled' to be non-null");
-        this.totalBytesProcessed = Objects.requireNonNull(totalBytesProcessed, "expected parameter 'totalBytesProcessed' to be non-null");
-        this.totalBytesProcessedAccuracy = Objects.requireNonNull(totalBytesProcessedAccuracy, "expected parameter 'totalBytesProcessedAccuracy' to be non-null");
-        this.totalPartitionsProcessed = Objects.requireNonNull(totalPartitionsProcessed, "expected parameter 'totalPartitionsProcessed' to be non-null");
-        this.totalSlotMs = Objects.requireNonNull(totalSlotMs, "expected parameter 'totalSlotMs' to be non-null");
-        this.undeclaredQueryParameters = Objects.requireNonNull(undeclaredQueryParameters, "expected parameter 'undeclaredQueryParameters' to be non-null");
-    }
+    private JobStatistics2Response() {}
 
-    private JobStatistics2Response() {
-        this.biEngineStatistics = null;
-        this.billingTier = null;
-        this.cacheHit = null;
-        this.ddlAffectedRowAccessPolicyCount = null;
-        this.ddlDestinationTable = null;
-        this.ddlOperationPerformed = null;
-        this.ddlTargetDataset = null;
-        this.ddlTargetRoutine = null;
-        this.ddlTargetRowAccessPolicy = null;
-        this.ddlTargetTable = null;
-        this.dmlStats = null;
-        this.estimatedBytesProcessed = null;
-        this.mlStatistics = null;
-        this.modelTraining = null;
-        this.numDmlAffectedRows = null;
-        this.queryPlan = List.of();
-        this.referencedRoutines = List.of();
-        this.referencedTables = List.of();
-        this.reservationUsage = List.of();
-        this.schema = null;
-        this.statementType = null;
-        this.timeline = List.of();
-        this.totalBytesBilled = null;
-        this.totalBytesProcessed = null;
-        this.totalBytesProcessedAccuracy = null;
-        this.totalPartitionsProcessed = null;
-        this.totalSlotMs = null;
-        this.undeclaredQueryParameters = List.of();
+    private JobStatistics2Response(JobStatistics2Response $) {
+        this.biEngineStatistics = $.biEngineStatistics;
+        this.billingTier = $.billingTier;
+        this.cacheHit = $.cacheHit;
+        this.ddlAffectedRowAccessPolicyCount = $.ddlAffectedRowAccessPolicyCount;
+        this.ddlDestinationTable = $.ddlDestinationTable;
+        this.ddlOperationPerformed = $.ddlOperationPerformed;
+        this.ddlTargetDataset = $.ddlTargetDataset;
+        this.ddlTargetRoutine = $.ddlTargetRoutine;
+        this.ddlTargetRowAccessPolicy = $.ddlTargetRowAccessPolicy;
+        this.ddlTargetTable = $.ddlTargetTable;
+        this.dmlStats = $.dmlStats;
+        this.estimatedBytesProcessed = $.estimatedBytesProcessed;
+        this.mlStatistics = $.mlStatistics;
+        this.modelTraining = $.modelTraining;
+        this.numDmlAffectedRows = $.numDmlAffectedRows;
+        this.queryPlan = $.queryPlan;
+        this.referencedRoutines = $.referencedRoutines;
+        this.referencedTables = $.referencedTables;
+        this.reservationUsage = $.reservationUsage;
+        this.schema = $.schema;
+        this.statementType = $.statementType;
+        this.timeline = $.timeline;
+        this.totalBytesBilled = $.totalBytesBilled;
+        this.totalBytesProcessed = $.totalBytesProcessed;
+        this.totalBytesProcessedAccuracy = $.totalBytesProcessedAccuracy;
+        this.totalPartitionsProcessed = $.totalPartitionsProcessed;
+        this.totalSlotMs = $.totalSlotMs;
+        this.undeclaredQueryParameters = $.undeclaredQueryParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatistics2Response defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BiEngineStatisticsResponse biEngineStatistics;
-        private Integer billingTier;
-        private Boolean cacheHit;
-        private String ddlAffectedRowAccessPolicyCount;
-        private TableReferenceResponse ddlDestinationTable;
-        private String ddlOperationPerformed;
-        private DatasetReferenceResponse ddlTargetDataset;
-        private RoutineReferenceResponse ddlTargetRoutine;
-        private RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy;
-        private TableReferenceResponse ddlTargetTable;
-        private DmlStatisticsResponse dmlStats;
-        private String estimatedBytesProcessed;
-        private MlStatisticsResponse mlStatistics;
-        private BigQueryModelTrainingResponse modelTraining;
-        private String numDmlAffectedRows;
-        private List<ExplainQueryStageResponse> queryPlan;
-        private List<RoutineReferenceResponse> referencedRoutines;
-        private List<TableReferenceResponse> referencedTables;
-        private List<JobStatistics2ReservationUsageItemResponse> reservationUsage;
-        private TableSchemaResponse schema;
-        private String statementType;
-        private List<QueryTimelineSampleResponse> timeline;
-        private String totalBytesBilled;
-        private String totalBytesProcessed;
-        private String totalBytesProcessedAccuracy;
-        private String totalPartitionsProcessed;
-        private String totalSlotMs;
-        private List<QueryParameterResponse> undeclaredQueryParameters;
+        private JobStatistics2Response $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatistics2Response();
         }
 
         public Builder(JobStatistics2Response defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.biEngineStatistics = defaults.biEngineStatistics;
-    	      this.billingTier = defaults.billingTier;
-    	      this.cacheHit = defaults.cacheHit;
-    	      this.ddlAffectedRowAccessPolicyCount = defaults.ddlAffectedRowAccessPolicyCount;
-    	      this.ddlDestinationTable = defaults.ddlDestinationTable;
-    	      this.ddlOperationPerformed = defaults.ddlOperationPerformed;
-    	      this.ddlTargetDataset = defaults.ddlTargetDataset;
-    	      this.ddlTargetRoutine = defaults.ddlTargetRoutine;
-    	      this.ddlTargetRowAccessPolicy = defaults.ddlTargetRowAccessPolicy;
-    	      this.ddlTargetTable = defaults.ddlTargetTable;
-    	      this.dmlStats = defaults.dmlStats;
-    	      this.estimatedBytesProcessed = defaults.estimatedBytesProcessed;
-    	      this.mlStatistics = defaults.mlStatistics;
-    	      this.modelTraining = defaults.modelTraining;
-    	      this.numDmlAffectedRows = defaults.numDmlAffectedRows;
-    	      this.queryPlan = defaults.queryPlan;
-    	      this.referencedRoutines = defaults.referencedRoutines;
-    	      this.referencedTables = defaults.referencedTables;
-    	      this.reservationUsage = defaults.reservationUsage;
-    	      this.schema = defaults.schema;
-    	      this.statementType = defaults.statementType;
-    	      this.timeline = defaults.timeline;
-    	      this.totalBytesBilled = defaults.totalBytesBilled;
-    	      this.totalBytesProcessed = defaults.totalBytesProcessed;
-    	      this.totalBytesProcessedAccuracy = defaults.totalBytesProcessedAccuracy;
-    	      this.totalPartitionsProcessed = defaults.totalPartitionsProcessed;
-    	      this.totalSlotMs = defaults.totalSlotMs;
-    	      this.undeclaredQueryParameters = defaults.undeclaredQueryParameters;
+            $ = new JobStatistics2Response(Objects.requireNonNull(defaults));
         }
 
         public Builder biEngineStatistics(BiEngineStatisticsResponse biEngineStatistics) {
-            this.biEngineStatistics = Objects.requireNonNull(biEngineStatistics);
+            $.biEngineStatistics = biEngineStatistics;
             return this;
         }
+
         public Builder billingTier(Integer billingTier) {
-            this.billingTier = Objects.requireNonNull(billingTier);
+            $.billingTier = billingTier;
             return this;
         }
+
         public Builder cacheHit(Boolean cacheHit) {
-            this.cacheHit = Objects.requireNonNull(cacheHit);
+            $.cacheHit = cacheHit;
             return this;
         }
+
         public Builder ddlAffectedRowAccessPolicyCount(String ddlAffectedRowAccessPolicyCount) {
-            this.ddlAffectedRowAccessPolicyCount = Objects.requireNonNull(ddlAffectedRowAccessPolicyCount);
+            $.ddlAffectedRowAccessPolicyCount = ddlAffectedRowAccessPolicyCount;
             return this;
         }
+
         public Builder ddlDestinationTable(TableReferenceResponse ddlDestinationTable) {
-            this.ddlDestinationTable = Objects.requireNonNull(ddlDestinationTable);
+            $.ddlDestinationTable = ddlDestinationTable;
             return this;
         }
+
         public Builder ddlOperationPerformed(String ddlOperationPerformed) {
-            this.ddlOperationPerformed = Objects.requireNonNull(ddlOperationPerformed);
+            $.ddlOperationPerformed = ddlOperationPerformed;
             return this;
         }
+
         public Builder ddlTargetDataset(DatasetReferenceResponse ddlTargetDataset) {
-            this.ddlTargetDataset = Objects.requireNonNull(ddlTargetDataset);
+            $.ddlTargetDataset = ddlTargetDataset;
             return this;
         }
+
         public Builder ddlTargetRoutine(RoutineReferenceResponse ddlTargetRoutine) {
-            this.ddlTargetRoutine = Objects.requireNonNull(ddlTargetRoutine);
+            $.ddlTargetRoutine = ddlTargetRoutine;
             return this;
         }
+
         public Builder ddlTargetRowAccessPolicy(RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy) {
-            this.ddlTargetRowAccessPolicy = Objects.requireNonNull(ddlTargetRowAccessPolicy);
+            $.ddlTargetRowAccessPolicy = ddlTargetRowAccessPolicy;
             return this;
         }
+
         public Builder ddlTargetTable(TableReferenceResponse ddlTargetTable) {
-            this.ddlTargetTable = Objects.requireNonNull(ddlTargetTable);
+            $.ddlTargetTable = ddlTargetTable;
             return this;
         }
+
         public Builder dmlStats(DmlStatisticsResponse dmlStats) {
-            this.dmlStats = Objects.requireNonNull(dmlStats);
+            $.dmlStats = dmlStats;
             return this;
         }
+
         public Builder estimatedBytesProcessed(String estimatedBytesProcessed) {
-            this.estimatedBytesProcessed = Objects.requireNonNull(estimatedBytesProcessed);
+            $.estimatedBytesProcessed = estimatedBytesProcessed;
             return this;
         }
+
         public Builder mlStatistics(MlStatisticsResponse mlStatistics) {
-            this.mlStatistics = Objects.requireNonNull(mlStatistics);
+            $.mlStatistics = mlStatistics;
             return this;
         }
+
         public Builder modelTraining(BigQueryModelTrainingResponse modelTraining) {
-            this.modelTraining = Objects.requireNonNull(modelTraining);
+            $.modelTraining = modelTraining;
             return this;
         }
+
         public Builder numDmlAffectedRows(String numDmlAffectedRows) {
-            this.numDmlAffectedRows = Objects.requireNonNull(numDmlAffectedRows);
+            $.numDmlAffectedRows = numDmlAffectedRows;
             return this;
         }
+
         public Builder queryPlan(List<ExplainQueryStageResponse> queryPlan) {
-            this.queryPlan = Objects.requireNonNull(queryPlan);
+            $.queryPlan = queryPlan;
             return this;
         }
+
         public Builder queryPlan(ExplainQueryStageResponse... queryPlan) {
             return queryPlan(List.of(queryPlan));
         }
+
         public Builder referencedRoutines(List<RoutineReferenceResponse> referencedRoutines) {
-            this.referencedRoutines = Objects.requireNonNull(referencedRoutines);
+            $.referencedRoutines = referencedRoutines;
             return this;
         }
+
         public Builder referencedRoutines(RoutineReferenceResponse... referencedRoutines) {
             return referencedRoutines(List.of(referencedRoutines));
         }
+
         public Builder referencedTables(List<TableReferenceResponse> referencedTables) {
-            this.referencedTables = Objects.requireNonNull(referencedTables);
+            $.referencedTables = referencedTables;
             return this;
         }
+
         public Builder referencedTables(TableReferenceResponse... referencedTables) {
             return referencedTables(List.of(referencedTables));
         }
+
         public Builder reservationUsage(List<JobStatistics2ReservationUsageItemResponse> reservationUsage) {
-            this.reservationUsage = Objects.requireNonNull(reservationUsage);
+            $.reservationUsage = reservationUsage;
             return this;
         }
+
         public Builder reservationUsage(JobStatistics2ReservationUsageItemResponse... reservationUsage) {
             return reservationUsage(List.of(reservationUsage));
         }
+
         public Builder schema(TableSchemaResponse schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder statementType(String statementType) {
-            this.statementType = Objects.requireNonNull(statementType);
+            $.statementType = statementType;
             return this;
         }
+
         public Builder timeline(List<QueryTimelineSampleResponse> timeline) {
-            this.timeline = Objects.requireNonNull(timeline);
+            $.timeline = timeline;
             return this;
         }
+
         public Builder timeline(QueryTimelineSampleResponse... timeline) {
             return timeline(List.of(timeline));
         }
+
         public Builder totalBytesBilled(String totalBytesBilled) {
-            this.totalBytesBilled = Objects.requireNonNull(totalBytesBilled);
+            $.totalBytesBilled = totalBytesBilled;
             return this;
         }
+
         public Builder totalBytesProcessed(String totalBytesProcessed) {
-            this.totalBytesProcessed = Objects.requireNonNull(totalBytesProcessed);
+            $.totalBytesProcessed = totalBytesProcessed;
             return this;
         }
+
         public Builder totalBytesProcessedAccuracy(String totalBytesProcessedAccuracy) {
-            this.totalBytesProcessedAccuracy = Objects.requireNonNull(totalBytesProcessedAccuracy);
+            $.totalBytesProcessedAccuracy = totalBytesProcessedAccuracy;
             return this;
         }
+
         public Builder totalPartitionsProcessed(String totalPartitionsProcessed) {
-            this.totalPartitionsProcessed = Objects.requireNonNull(totalPartitionsProcessed);
+            $.totalPartitionsProcessed = totalPartitionsProcessed;
             return this;
         }
+
         public Builder totalSlotMs(String totalSlotMs) {
-            this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
+            $.totalSlotMs = totalSlotMs;
             return this;
         }
+
         public Builder undeclaredQueryParameters(List<QueryParameterResponse> undeclaredQueryParameters) {
-            this.undeclaredQueryParameters = Objects.requireNonNull(undeclaredQueryParameters);
+            $.undeclaredQueryParameters = undeclaredQueryParameters;
             return this;
         }
+
         public Builder undeclaredQueryParameters(QueryParameterResponse... undeclaredQueryParameters) {
             return undeclaredQueryParameters(List.of(undeclaredQueryParameters));
-        }        public JobStatistics2Response build() {
-            return new JobStatistics2Response(biEngineStatistics, billingTier, cacheHit, ddlAffectedRowAccessPolicyCount, ddlDestinationTable, ddlOperationPerformed, ddlTargetDataset, ddlTargetRoutine, ddlTargetRowAccessPolicy, ddlTargetTable, dmlStats, estimatedBytesProcessed, mlStatistics, modelTraining, numDmlAffectedRows, queryPlan, referencedRoutines, referencedTables, reservationUsage, schema, statementType, timeline, totalBytesBilled, totalBytesProcessed, totalBytesProcessedAccuracy, totalPartitionsProcessed, totalSlotMs, undeclaredQueryParameters);
+        }
+
+        public JobStatistics2Response build() {
+            $.biEngineStatistics = Objects.requireNonNull($.biEngineStatistics, "expected parameter 'biEngineStatistics' to be non-null");
+            $.billingTier = Objects.requireNonNull($.billingTier, "expected parameter 'billingTier' to be non-null");
+            $.cacheHit = Objects.requireNonNull($.cacheHit, "expected parameter 'cacheHit' to be non-null");
+            $.ddlAffectedRowAccessPolicyCount = Objects.requireNonNull($.ddlAffectedRowAccessPolicyCount, "expected parameter 'ddlAffectedRowAccessPolicyCount' to be non-null");
+            $.ddlDestinationTable = Objects.requireNonNull($.ddlDestinationTable, "expected parameter 'ddlDestinationTable' to be non-null");
+            $.ddlOperationPerformed = Objects.requireNonNull($.ddlOperationPerformed, "expected parameter 'ddlOperationPerformed' to be non-null");
+            $.ddlTargetDataset = Objects.requireNonNull($.ddlTargetDataset, "expected parameter 'ddlTargetDataset' to be non-null");
+            $.ddlTargetRoutine = Objects.requireNonNull($.ddlTargetRoutine, "expected parameter 'ddlTargetRoutine' to be non-null");
+            $.ddlTargetRowAccessPolicy = Objects.requireNonNull($.ddlTargetRowAccessPolicy, "expected parameter 'ddlTargetRowAccessPolicy' to be non-null");
+            $.ddlTargetTable = Objects.requireNonNull($.ddlTargetTable, "expected parameter 'ddlTargetTable' to be non-null");
+            $.dmlStats = Objects.requireNonNull($.dmlStats, "expected parameter 'dmlStats' to be non-null");
+            $.estimatedBytesProcessed = Objects.requireNonNull($.estimatedBytesProcessed, "expected parameter 'estimatedBytesProcessed' to be non-null");
+            $.mlStatistics = Objects.requireNonNull($.mlStatistics, "expected parameter 'mlStatistics' to be non-null");
+            $.modelTraining = Objects.requireNonNull($.modelTraining, "expected parameter 'modelTraining' to be non-null");
+            $.numDmlAffectedRows = Objects.requireNonNull($.numDmlAffectedRows, "expected parameter 'numDmlAffectedRows' to be non-null");
+            $.queryPlan = Objects.requireNonNull($.queryPlan, "expected parameter 'queryPlan' to be non-null");
+            $.referencedRoutines = Objects.requireNonNull($.referencedRoutines, "expected parameter 'referencedRoutines' to be non-null");
+            $.referencedTables = Objects.requireNonNull($.referencedTables, "expected parameter 'referencedTables' to be non-null");
+            $.reservationUsage = Objects.requireNonNull($.reservationUsage, "expected parameter 'reservationUsage' to be non-null");
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            $.statementType = Objects.requireNonNull($.statementType, "expected parameter 'statementType' to be non-null");
+            $.timeline = Objects.requireNonNull($.timeline, "expected parameter 'timeline' to be non-null");
+            $.totalBytesBilled = Objects.requireNonNull($.totalBytesBilled, "expected parameter 'totalBytesBilled' to be non-null");
+            $.totalBytesProcessed = Objects.requireNonNull($.totalBytesProcessed, "expected parameter 'totalBytesProcessed' to be non-null");
+            $.totalBytesProcessedAccuracy = Objects.requireNonNull($.totalBytesProcessedAccuracy, "expected parameter 'totalBytesProcessedAccuracy' to be non-null");
+            $.totalPartitionsProcessed = Objects.requireNonNull($.totalPartitionsProcessed, "expected parameter 'totalPartitionsProcessed' to be non-null");
+            $.totalSlotMs = Objects.requireNonNull($.totalSlotMs, "expected parameter 'totalSlotMs' to be non-null");
+            $.undeclaredQueryParameters = Objects.requireNonNull($.undeclaredQueryParameters, "expected parameter 'undeclaredQueryParameters' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -28,55 +28,52 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final String restApiId;
+    private String restApiId;
 
     public String restApiId() {
         return this.restApiId;
     }
 
-    public GetResourceArgs(
-        String path,
-        String restApiId) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-    }
+    private GetResourceArgs() {}
 
-    private GetResourceArgs() {
-        this.path = null;
-        this.restApiId = null;
+    private GetResourceArgs(GetResourceArgs $) {
+        this.path = $.path;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String path;
-        private String restApiId;
+        private GetResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceArgs();
         }
 
         public Builder(GetResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.restApiId = defaults.restApiId;
+            $ = new GetResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
-        }        public GetResourceArgs build() {
-            return new GetResourceArgs(path, restApiId);
+        }
+
+        public GetResourceArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetSuiteDefinitionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="suiteDefinitionId", required=true)
-      private final String suiteDefinitionId;
+    private String suiteDefinitionId;
 
     public String suiteDefinitionId() {
         return this.suiteDefinitionId;
     }
 
-    public GetSuiteDefinitionArgs(String suiteDefinitionId) {
-        this.suiteDefinitionId = Objects.requireNonNull(suiteDefinitionId, "expected parameter 'suiteDefinitionId' to be non-null");
-    }
+    private GetSuiteDefinitionArgs() {}
 
-    private GetSuiteDefinitionArgs() {
-        this.suiteDefinitionId = null;
+    private GetSuiteDefinitionArgs(GetSuiteDefinitionArgs $) {
+        this.suiteDefinitionId = $.suiteDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSuiteDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String suiteDefinitionId;
+        private GetSuiteDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSuiteDefinitionArgs();
         }
 
         public Builder(GetSuiteDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.suiteDefinitionId = defaults.suiteDefinitionId;
+            $ = new GetSuiteDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder suiteDefinitionId(String suiteDefinitionId) {
-            this.suiteDefinitionId = Objects.requireNonNull(suiteDefinitionId);
+            $.suiteDefinitionId = suiteDefinitionId;
             return this;
-        }        public GetSuiteDefinitionArgs build() {
-            return new GetSuiteDefinitionArgs(suiteDefinitionId);
+        }
+
+        public GetSuiteDefinitionArgs build() {
+            $.suiteDefinitionId = Objects.requireNonNull($.suiteDefinitionId, "expected parameter 'suiteDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

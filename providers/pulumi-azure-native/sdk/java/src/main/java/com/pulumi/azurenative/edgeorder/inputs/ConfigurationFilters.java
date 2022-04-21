@@ -25,10 +25,10 @@ public final class ConfigurationFilters extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filterableProperty")
-      private final @Nullable List<FilterableProperty> filterableProperty;
+    private @Nullable List<FilterableProperty> filterableProperty;
 
-    public List<FilterableProperty> filterableProperty() {
-        return this.filterableProperty == null ? List.of() : this.filterableProperty;
+    public Optional<List<FilterableProperty>> filterableProperty() {
+        return Optional.ofNullable(this.filterableProperty);
     }
 
     /**
@@ -36,58 +36,55 @@ public final class ConfigurationFilters extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="hierarchyInformation", required=true)
-      private final HierarchyInformation hierarchyInformation;
+    private HierarchyInformation hierarchyInformation;
 
     public HierarchyInformation hierarchyInformation() {
         return this.hierarchyInformation;
     }
 
-    public ConfigurationFilters(
-        @Nullable List<FilterableProperty> filterableProperty,
-        HierarchyInformation hierarchyInformation) {
-        this.filterableProperty = filterableProperty;
-        this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
-    }
+    private ConfigurationFilters() {}
 
-    private ConfigurationFilters() {
-        this.filterableProperty = List.of();
-        this.hierarchyInformation = null;
+    private ConfigurationFilters(ConfigurationFilters $) {
+        this.filterableProperty = $.filterableProperty;
+        this.hierarchyInformation = $.hierarchyInformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationFilters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<FilterableProperty> filterableProperty;
-        private HierarchyInformation hierarchyInformation;
+        private ConfigurationFilters $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationFilters();
         }
 
         public Builder(ConfigurationFilters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterableProperty = defaults.filterableProperty;
-    	      this.hierarchyInformation = defaults.hierarchyInformation;
+            $ = new ConfigurationFilters(Objects.requireNonNull(defaults));
         }
 
         public Builder filterableProperty(@Nullable List<FilterableProperty> filterableProperty) {
-            this.filterableProperty = filterableProperty;
+            $.filterableProperty = filterableProperty;
             return this;
         }
+
         public Builder filterableProperty(FilterableProperty... filterableProperty) {
             return filterableProperty(List.of(filterableProperty));
         }
+
         public Builder hierarchyInformation(HierarchyInformation hierarchyInformation) {
-            this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
+            $.hierarchyInformation = hierarchyInformation;
             return this;
-        }        public ConfigurationFilters build() {
-            return new ConfigurationFilters(filterableProperty, hierarchyInformation);
+        }
+
+        public ConfigurationFilters build() {
+            $.hierarchyInformation = Objects.requireNonNull($.hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
+            return $;
         }
     }
+
 }

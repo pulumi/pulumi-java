@@ -6,10 +6,10 @@ package com.pulumi.awsnative.aps;
 import com.pulumi.awsnative.aps.inputs.WorkspaceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alertManagerDefinition")
-      private final @Nullable Output<String> alertManagerDefinition;
+    private @Nullable Output<String> alertManagerDefinition;
 
-    public Output<String> alertManagerDefinition() {
-        return this.alertManagerDefinition == null ? Codegen.empty() : this.alertManagerDefinition;
+    public Optional<Output<String>> alertManagerDefinition() {
+        return Optional.ofNullable(this.alertManagerDefinition);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alias")
-      private final @Nullable Output<String> alias;
+    private @Nullable Output<String> alias;
 
-    public Output<String> alias() {
-        return this.alias == null ? Codegen.empty() : this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<WorkspaceTagArgs>> tags;
+    private @Nullable Output<List<WorkspaceTagArgs>> tags;
 
-    public Output<List<WorkspaceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<WorkspaceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public WorkspaceArgs(
-        @Nullable Output<String> alertManagerDefinition,
-        @Nullable Output<String> alias,
-        @Nullable Output<List<WorkspaceTagArgs>> tags) {
-        this.alertManagerDefinition = alertManagerDefinition;
-        this.alias = alias;
-        this.tags = tags;
-    }
+    private WorkspaceArgs() {}
 
-    private WorkspaceArgs() {
-        this.alertManagerDefinition = Codegen.empty();
-        this.alias = Codegen.empty();
-        this.tags = Codegen.empty();
+    private WorkspaceArgs(WorkspaceArgs $) {
+        this.alertManagerDefinition = $.alertManagerDefinition;
+        this.alias = $.alias;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alertManagerDefinition;
-        private @Nullable Output<String> alias;
-        private @Nullable Output<List<WorkspaceTagArgs>> tags;
+        private WorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceArgs();
         }
 
         public Builder(WorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertManagerDefinition = defaults.alertManagerDefinition;
-    	      this.alias = defaults.alias;
-    	      this.tags = defaults.tags;
+            $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertManagerDefinition(@Nullable Output<String> alertManagerDefinition) {
-            this.alertManagerDefinition = alertManagerDefinition;
+            $.alertManagerDefinition = alertManagerDefinition;
             return this;
         }
-        public Builder alertManagerDefinition(@Nullable String alertManagerDefinition) {
-            this.alertManagerDefinition = Codegen.ofNullable(alertManagerDefinition);
-            return this;
+
+        public Builder alertManagerDefinition(String alertManagerDefinition) {
+            return alertManagerDefinition(Output.of(alertManagerDefinition));
         }
+
         public Builder alias(@Nullable Output<String> alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
-        public Builder alias(@Nullable String alias) {
-            this.alias = Codegen.ofNullable(alias);
-            return this;
+
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
         }
+
         public Builder tags(@Nullable Output<List<WorkspaceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<WorkspaceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<WorkspaceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(WorkspaceTagArgs... tags) {
             return tags(List.of(tags));
-        }        public WorkspaceArgs build() {
-            return new WorkspaceArgs(alertManagerDefinition, alias, tags);
+        }
+
+        public WorkspaceArgs build() {
+            return $;
         }
     }
+
 }

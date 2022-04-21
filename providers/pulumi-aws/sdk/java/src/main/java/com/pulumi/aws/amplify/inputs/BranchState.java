@@ -5,12 +5,12 @@ package com.pulumi.aws.amplify.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="associatedResources")
-      private final @Nullable Output<List<String>> associatedResources;
+    private @Nullable Output<List<String>> associatedResources;
 
-    public Output<List<String>> associatedResources() {
-        return this.associatedResources == null ? Codegen.empty() : this.associatedResources;
+    public Optional<Output<List<String>>> associatedResources() {
+        return Optional.ofNullable(this.associatedResources);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backendEnvironmentArn")
-      private final @Nullable Output<String> backendEnvironmentArn;
+    private @Nullable Output<String> backendEnvironmentArn;
 
-    public Output<String> backendEnvironmentArn() {
-        return this.backendEnvironmentArn == null ? Codegen.empty() : this.backendEnvironmentArn;
+    public Optional<Output<String>> backendEnvironmentArn() {
+        return Optional.ofNullable(this.backendEnvironmentArn);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="basicAuthCredentials")
-      private final @Nullable Output<String> basicAuthCredentials;
+    private @Nullable Output<String> basicAuthCredentials;
 
-    public Output<String> basicAuthCredentials() {
-        return this.basicAuthCredentials == null ? Codegen.empty() : this.basicAuthCredentials;
+    public Optional<Output<String>> basicAuthCredentials() {
+        return Optional.ofNullable(this.basicAuthCredentials);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="branchName")
-      private final @Nullable Output<String> branchName;
+    private @Nullable Output<String> branchName;
 
-    public Output<String> branchName() {
-        return this.branchName == null ? Codegen.empty() : this.branchName;
+    public Optional<Output<String>> branchName() {
+        return Optional.ofNullable(this.branchName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customDomains")
-      private final @Nullable Output<List<String>> customDomains;
+    private @Nullable Output<List<String>> customDomains;
 
-    public Output<List<String>> customDomains() {
-        return this.customDomains == null ? Codegen.empty() : this.customDomains;
+    public Optional<Output<List<String>>> customDomains() {
+        return Optional.ofNullable(this.customDomains);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationBranch")
-      private final @Nullable Output<String> destinationBranch;
+    private @Nullable Output<String> destinationBranch;
 
-    public Output<String> destinationBranch() {
-        return this.destinationBranch == null ? Codegen.empty() : this.destinationBranch;
+    public Optional<Output<String>> destinationBranch() {
+        return Optional.ofNullable(this.destinationBranch);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableAutoBuild")
-      private final @Nullable Output<Boolean> enableAutoBuild;
+    private @Nullable Output<Boolean> enableAutoBuild;
 
-    public Output<Boolean> enableAutoBuild() {
-        return this.enableAutoBuild == null ? Codegen.empty() : this.enableAutoBuild;
+    public Optional<Output<Boolean>> enableAutoBuild() {
+        return Optional.ofNullable(this.enableAutoBuild);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableBasicAuth")
-      private final @Nullable Output<Boolean> enableBasicAuth;
+    private @Nullable Output<Boolean> enableBasicAuth;
 
-    public Output<Boolean> enableBasicAuth() {
-        return this.enableBasicAuth == null ? Codegen.empty() : this.enableBasicAuth;
+    public Optional<Output<Boolean>> enableBasicAuth() {
+        return Optional.ofNullable(this.enableBasicAuth);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableNotification")
-      private final @Nullable Output<Boolean> enableNotification;
+    private @Nullable Output<Boolean> enableNotification;
 
-    public Output<Boolean> enableNotification() {
-        return this.enableNotification == null ? Codegen.empty() : this.enableNotification;
+    public Optional<Output<Boolean>> enableNotification() {
+        return Optional.ofNullable(this.enableNotification);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enablePerformanceMode")
-      private final @Nullable Output<Boolean> enablePerformanceMode;
+    private @Nullable Output<Boolean> enablePerformanceMode;
 
-    public Output<Boolean> enablePerformanceMode() {
-        return this.enablePerformanceMode == null ? Codegen.empty() : this.enablePerformanceMode;
+    public Optional<Output<Boolean>> enablePerformanceMode() {
+        return Optional.ofNullable(this.enablePerformanceMode);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enablePullRequestPreview")
-      private final @Nullable Output<Boolean> enablePullRequestPreview;
+    private @Nullable Output<Boolean> enablePullRequestPreview;
 
-    public Output<Boolean> enablePullRequestPreview() {
-        return this.enablePullRequestPreview == null ? Codegen.empty() : this.enablePullRequestPreview;
+    public Optional<Output<Boolean>> enablePullRequestPreview() {
+        return Optional.ofNullable(this.enablePullRequestPreview);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<Map<String,String>> environmentVariables;
+    private @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<Map<String,String>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="framework")
-      private final @Nullable Output<String> framework;
+    private @Nullable Output<String> framework;
 
-    public Output<String> framework() {
-        return this.framework == null ? Codegen.empty() : this.framework;
+    public Optional<Output<String>> framework() {
+        return Optional.ofNullable(this.framework);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pullRequestEnvironmentName")
-      private final @Nullable Output<String> pullRequestEnvironmentName;
+    private @Nullable Output<String> pullRequestEnvironmentName;
 
-    public Output<String> pullRequestEnvironmentName() {
-        return this.pullRequestEnvironmentName == null ? Codegen.empty() : this.pullRequestEnvironmentName;
+    public Optional<Output<String>> pullRequestEnvironmentName() {
+        return Optional.ofNullable(this.pullRequestEnvironmentName);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceBranch")
-      private final @Nullable Output<String> sourceBranch;
+    private @Nullable Output<String> sourceBranch;
 
-    public Output<String> sourceBranch() {
-        return this.sourceBranch == null ? Codegen.empty() : this.sourceBranch;
+    public Optional<Output<String>> sourceBranch() {
+        return Optional.ofNullable(this.sourceBranch);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stage")
-      private final @Nullable Output<String> stage;
+    private @Nullable Output<String> stage;
 
-    public Output<String> stage() {
-        return this.stage == null ? Codegen.empty() : this.stage;
+    public Optional<Output<String>> stage() {
+        return Optional.ofNullable(this.stage);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -265,342 +265,276 @@ public final class BranchState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<String> ttl;
+    private @Nullable Output<String> ttl;
 
-    public Output<String> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<String>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
-    public BranchState(
-        @Nullable Output<String> appId,
-        @Nullable Output<String> arn,
-        @Nullable Output<List<String>> associatedResources,
-        @Nullable Output<String> backendEnvironmentArn,
-        @Nullable Output<String> basicAuthCredentials,
-        @Nullable Output<String> branchName,
-        @Nullable Output<List<String>> customDomains,
-        @Nullable Output<String> description,
-        @Nullable Output<String> destinationBranch,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> enableAutoBuild,
-        @Nullable Output<Boolean> enableBasicAuth,
-        @Nullable Output<Boolean> enableNotification,
-        @Nullable Output<Boolean> enablePerformanceMode,
-        @Nullable Output<Boolean> enablePullRequestPreview,
-        @Nullable Output<Map<String,String>> environmentVariables,
-        @Nullable Output<String> framework,
-        @Nullable Output<String> pullRequestEnvironmentName,
-        @Nullable Output<String> sourceBranch,
-        @Nullable Output<String> stage,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> ttl) {
-        this.appId = appId;
-        this.arn = arn;
-        this.associatedResources = associatedResources;
-        this.backendEnvironmentArn = backendEnvironmentArn;
-        this.basicAuthCredentials = basicAuthCredentials;
-        this.branchName = branchName;
-        this.customDomains = customDomains;
-        this.description = description;
-        this.destinationBranch = destinationBranch;
-        this.displayName = displayName;
-        this.enableAutoBuild = enableAutoBuild;
-        this.enableBasicAuth = enableBasicAuth;
-        this.enableNotification = enableNotification;
-        this.enablePerformanceMode = enablePerformanceMode;
-        this.enablePullRequestPreview = enablePullRequestPreview;
-        this.environmentVariables = environmentVariables;
-        this.framework = framework;
-        this.pullRequestEnvironmentName = pullRequestEnvironmentName;
-        this.sourceBranch = sourceBranch;
-        this.stage = stage;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.ttl = ttl;
-    }
+    private BranchState() {}
 
-    private BranchState() {
-        this.appId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.associatedResources = Codegen.empty();
-        this.backendEnvironmentArn = Codegen.empty();
-        this.basicAuthCredentials = Codegen.empty();
-        this.branchName = Codegen.empty();
-        this.customDomains = Codegen.empty();
-        this.description = Codegen.empty();
-        this.destinationBranch = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enableAutoBuild = Codegen.empty();
-        this.enableBasicAuth = Codegen.empty();
-        this.enableNotification = Codegen.empty();
-        this.enablePerformanceMode = Codegen.empty();
-        this.enablePullRequestPreview = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.framework = Codegen.empty();
-        this.pullRequestEnvironmentName = Codegen.empty();
-        this.sourceBranch = Codegen.empty();
-        this.stage = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.ttl = Codegen.empty();
+    private BranchState(BranchState $) {
+        this.appId = $.appId;
+        this.arn = $.arn;
+        this.associatedResources = $.associatedResources;
+        this.backendEnvironmentArn = $.backendEnvironmentArn;
+        this.basicAuthCredentials = $.basicAuthCredentials;
+        this.branchName = $.branchName;
+        this.customDomains = $.customDomains;
+        this.description = $.description;
+        this.destinationBranch = $.destinationBranch;
+        this.displayName = $.displayName;
+        this.enableAutoBuild = $.enableAutoBuild;
+        this.enableBasicAuth = $.enableBasicAuth;
+        this.enableNotification = $.enableNotification;
+        this.enablePerformanceMode = $.enablePerformanceMode;
+        this.enablePullRequestPreview = $.enablePullRequestPreview;
+        this.environmentVariables = $.environmentVariables;
+        this.framework = $.framework;
+        this.pullRequestEnvironmentName = $.pullRequestEnvironmentName;
+        this.sourceBranch = $.sourceBranch;
+        this.stage = $.stage;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BranchState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<String>> associatedResources;
-        private @Nullable Output<String> backendEnvironmentArn;
-        private @Nullable Output<String> basicAuthCredentials;
-        private @Nullable Output<String> branchName;
-        private @Nullable Output<List<String>> customDomains;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> destinationBranch;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> enableAutoBuild;
-        private @Nullable Output<Boolean> enableBasicAuth;
-        private @Nullable Output<Boolean> enableNotification;
-        private @Nullable Output<Boolean> enablePerformanceMode;
-        private @Nullable Output<Boolean> enablePullRequestPreview;
-        private @Nullable Output<Map<String,String>> environmentVariables;
-        private @Nullable Output<String> framework;
-        private @Nullable Output<String> pullRequestEnvironmentName;
-        private @Nullable Output<String> sourceBranch;
-        private @Nullable Output<String> stage;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> ttl;
+        private BranchState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BranchState();
         }
 
         public Builder(BranchState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.arn = defaults.arn;
-    	      this.associatedResources = defaults.associatedResources;
-    	      this.backendEnvironmentArn = defaults.backendEnvironmentArn;
-    	      this.basicAuthCredentials = defaults.basicAuthCredentials;
-    	      this.branchName = defaults.branchName;
-    	      this.customDomains = defaults.customDomains;
-    	      this.description = defaults.description;
-    	      this.destinationBranch = defaults.destinationBranch;
-    	      this.displayName = defaults.displayName;
-    	      this.enableAutoBuild = defaults.enableAutoBuild;
-    	      this.enableBasicAuth = defaults.enableBasicAuth;
-    	      this.enableNotification = defaults.enableNotification;
-    	      this.enablePerformanceMode = defaults.enablePerformanceMode;
-    	      this.enablePullRequestPreview = defaults.enablePullRequestPreview;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.framework = defaults.framework;
-    	      this.pullRequestEnvironmentName = defaults.pullRequestEnvironmentName;
-    	      this.sourceBranch = defaults.sourceBranch;
-    	      this.stage = defaults.stage;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.ttl = defaults.ttl;
+            $ = new BranchState(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder associatedResources(@Nullable Output<List<String>> associatedResources) {
-            this.associatedResources = associatedResources;
+            $.associatedResources = associatedResources;
             return this;
         }
-        public Builder associatedResources(@Nullable List<String> associatedResources) {
-            this.associatedResources = Codegen.ofNullable(associatedResources);
-            return this;
+
+        public Builder associatedResources(List<String> associatedResources) {
+            return associatedResources(Output.of(associatedResources));
         }
+
         public Builder associatedResources(String... associatedResources) {
             return associatedResources(List.of(associatedResources));
         }
+
         public Builder backendEnvironmentArn(@Nullable Output<String> backendEnvironmentArn) {
-            this.backendEnvironmentArn = backendEnvironmentArn;
+            $.backendEnvironmentArn = backendEnvironmentArn;
             return this;
         }
-        public Builder backendEnvironmentArn(@Nullable String backendEnvironmentArn) {
-            this.backendEnvironmentArn = Codegen.ofNullable(backendEnvironmentArn);
-            return this;
+
+        public Builder backendEnvironmentArn(String backendEnvironmentArn) {
+            return backendEnvironmentArn(Output.of(backendEnvironmentArn));
         }
+
         public Builder basicAuthCredentials(@Nullable Output<String> basicAuthCredentials) {
-            this.basicAuthCredentials = basicAuthCredentials;
+            $.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
-        public Builder basicAuthCredentials(@Nullable String basicAuthCredentials) {
-            this.basicAuthCredentials = Codegen.ofNullable(basicAuthCredentials);
-            return this;
+
+        public Builder basicAuthCredentials(String basicAuthCredentials) {
+            return basicAuthCredentials(Output.of(basicAuthCredentials));
         }
+
         public Builder branchName(@Nullable Output<String> branchName) {
-            this.branchName = branchName;
+            $.branchName = branchName;
             return this;
         }
-        public Builder branchName(@Nullable String branchName) {
-            this.branchName = Codegen.ofNullable(branchName);
-            return this;
+
+        public Builder branchName(String branchName) {
+            return branchName(Output.of(branchName));
         }
+
         public Builder customDomains(@Nullable Output<List<String>> customDomains) {
-            this.customDomains = customDomains;
+            $.customDomains = customDomains;
             return this;
         }
-        public Builder customDomains(@Nullable List<String> customDomains) {
-            this.customDomains = Codegen.ofNullable(customDomains);
-            return this;
+
+        public Builder customDomains(List<String> customDomains) {
+            return customDomains(Output.of(customDomains));
         }
+
         public Builder customDomains(String... customDomains) {
             return customDomains(List.of(customDomains));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destinationBranch(@Nullable Output<String> destinationBranch) {
-            this.destinationBranch = destinationBranch;
+            $.destinationBranch = destinationBranch;
             return this;
         }
-        public Builder destinationBranch(@Nullable String destinationBranch) {
-            this.destinationBranch = Codegen.ofNullable(destinationBranch);
-            return this;
+
+        public Builder destinationBranch(String destinationBranch) {
+            return destinationBranch(Output.of(destinationBranch));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder enableAutoBuild(@Nullable Output<Boolean> enableAutoBuild) {
-            this.enableAutoBuild = enableAutoBuild;
+            $.enableAutoBuild = enableAutoBuild;
             return this;
         }
-        public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
-            this.enableAutoBuild = Codegen.ofNullable(enableAutoBuild);
-            return this;
+
+        public Builder enableAutoBuild(Boolean enableAutoBuild) {
+            return enableAutoBuild(Output.of(enableAutoBuild));
         }
+
         public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
-            this.enableBasicAuth = enableBasicAuth;
+            $.enableBasicAuth = enableBasicAuth;
             return this;
         }
-        public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Codegen.ofNullable(enableBasicAuth);
-            return this;
+
+        public Builder enableBasicAuth(Boolean enableBasicAuth) {
+            return enableBasicAuth(Output.of(enableBasicAuth));
         }
+
         public Builder enableNotification(@Nullable Output<Boolean> enableNotification) {
-            this.enableNotification = enableNotification;
+            $.enableNotification = enableNotification;
             return this;
         }
-        public Builder enableNotification(@Nullable Boolean enableNotification) {
-            this.enableNotification = Codegen.ofNullable(enableNotification);
-            return this;
+
+        public Builder enableNotification(Boolean enableNotification) {
+            return enableNotification(Output.of(enableNotification));
         }
+
         public Builder enablePerformanceMode(@Nullable Output<Boolean> enablePerformanceMode) {
-            this.enablePerformanceMode = enablePerformanceMode;
+            $.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
-        public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
-            this.enablePerformanceMode = Codegen.ofNullable(enablePerformanceMode);
-            return this;
+
+        public Builder enablePerformanceMode(Boolean enablePerformanceMode) {
+            return enablePerformanceMode(Output.of(enablePerformanceMode));
         }
+
         public Builder enablePullRequestPreview(@Nullable Output<Boolean> enablePullRequestPreview) {
-            this.enablePullRequestPreview = enablePullRequestPreview;
+            $.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
-        public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
-            this.enablePullRequestPreview = Codegen.ofNullable(enablePullRequestPreview);
-            return this;
+
+        public Builder enablePullRequestPreview(Boolean enablePullRequestPreview) {
+            return enablePullRequestPreview(Output.of(enablePullRequestPreview));
         }
+
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(Map<String,String> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder framework(@Nullable Output<String> framework) {
-            this.framework = framework;
+            $.framework = framework;
             return this;
         }
-        public Builder framework(@Nullable String framework) {
-            this.framework = Codegen.ofNullable(framework);
-            return this;
+
+        public Builder framework(String framework) {
+            return framework(Output.of(framework));
         }
+
         public Builder pullRequestEnvironmentName(@Nullable Output<String> pullRequestEnvironmentName) {
-            this.pullRequestEnvironmentName = pullRequestEnvironmentName;
+            $.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
-        public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
-            this.pullRequestEnvironmentName = Codegen.ofNullable(pullRequestEnvironmentName);
-            return this;
+
+        public Builder pullRequestEnvironmentName(String pullRequestEnvironmentName) {
+            return pullRequestEnvironmentName(Output.of(pullRequestEnvironmentName));
         }
+
         public Builder sourceBranch(@Nullable Output<String> sourceBranch) {
-            this.sourceBranch = sourceBranch;
+            $.sourceBranch = sourceBranch;
             return this;
         }
-        public Builder sourceBranch(@Nullable String sourceBranch) {
-            this.sourceBranch = Codegen.ofNullable(sourceBranch);
-            return this;
+
+        public Builder sourceBranch(String sourceBranch) {
+            return sourceBranch(Output.of(sourceBranch));
         }
+
         public Builder stage(@Nullable Output<String> stage) {
-            this.stage = stage;
+            $.stage = stage;
             return this;
         }
-        public Builder stage(@Nullable String stage) {
-            this.stage = Codegen.ofNullable(stage);
-            return this;
+
+        public Builder stage(String stage) {
+            return stage(Output.of(stage));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder ttl(@Nullable Output<String> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable String ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
-        }        public BranchState build() {
-            return new BranchState(appId, arn, associatedResources, backendEnvironmentArn, basicAuthCredentials, branchName, customDomains, description, destinationBranch, displayName, enableAutoBuild, enableBasicAuth, enableNotification, enablePerformanceMode, enablePullRequestPreview, environmentVariables, framework, pullRequestEnvironmentName, sourceBranch, stage, tags, tagsAll, ttl);
+
+        public Builder ttl(String ttl) {
+            return ttl(Output.of(ttl));
+        }
+
+        public BranchState build() {
+            return $;
         }
     }
+
 }

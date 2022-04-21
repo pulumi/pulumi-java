@@ -6,9 +6,9 @@ package com.pulumi.awsnative.location;
 import com.pulumi.awsnative.location.enums.GeofenceCollectionPricingPlan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,130 +17,117 @@ public final class GeofenceCollectionArgs extends com.pulumi.resources.ResourceA
     public static final GeofenceCollectionArgs Empty = new GeofenceCollectionArgs();
 
     @Import(name="collectionName", required=true)
-      private final Output<String> collectionName;
+    private Output<String> collectionName;
 
     public Output<String> collectionName() {
         return this.collectionName;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     @Import(name="pricingPlan")
-      private final @Nullable Output<GeofenceCollectionPricingPlan> pricingPlan;
+    private @Nullable Output<GeofenceCollectionPricingPlan> pricingPlan;
 
-    public Output<GeofenceCollectionPricingPlan> pricingPlan() {
-        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
+    public Optional<Output<GeofenceCollectionPricingPlan>> pricingPlan() {
+        return Optional.ofNullable(this.pricingPlan);
     }
 
     @Import(name="pricingPlanDataSource")
-      private final @Nullable Output<String> pricingPlanDataSource;
+    private @Nullable Output<String> pricingPlanDataSource;
 
-    public Output<String> pricingPlanDataSource() {
-        return this.pricingPlanDataSource == null ? Codegen.empty() : this.pricingPlanDataSource;
+    public Optional<Output<String>> pricingPlanDataSource() {
+        return Optional.ofNullable(this.pricingPlanDataSource);
     }
 
-    public GeofenceCollectionArgs(
-        Output<String> collectionName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<GeofenceCollectionPricingPlan> pricingPlan,
-        @Nullable Output<String> pricingPlanDataSource) {
-        this.collectionName = Objects.requireNonNull(collectionName, "expected parameter 'collectionName' to be non-null");
-        this.description = description;
-        this.kmsKeyId = kmsKeyId;
-        this.pricingPlan = pricingPlan;
-        this.pricingPlanDataSource = pricingPlanDataSource;
-    }
+    private GeofenceCollectionArgs() {}
 
-    private GeofenceCollectionArgs() {
-        this.collectionName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.pricingPlan = Codegen.empty();
-        this.pricingPlanDataSource = Codegen.empty();
+    private GeofenceCollectionArgs(GeofenceCollectionArgs $) {
+        this.collectionName = $.collectionName;
+        this.description = $.description;
+        this.kmsKeyId = $.kmsKeyId;
+        this.pricingPlan = $.pricingPlan;
+        this.pricingPlanDataSource = $.pricingPlanDataSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GeofenceCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> collectionName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<GeofenceCollectionPricingPlan> pricingPlan;
-        private @Nullable Output<String> pricingPlanDataSource;
+        private GeofenceCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GeofenceCollectionArgs();
         }
 
         public Builder(GeofenceCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collectionName = defaults.collectionName;
-    	      this.description = defaults.description;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.pricingPlan = defaults.pricingPlan;
-    	      this.pricingPlanDataSource = defaults.pricingPlanDataSource;
+            $ = new GeofenceCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collectionName(Output<String> collectionName) {
-            this.collectionName = Objects.requireNonNull(collectionName);
+            $.collectionName = collectionName;
             return this;
         }
+
         public Builder collectionName(String collectionName) {
-            this.collectionName = Output.of(Objects.requireNonNull(collectionName));
-            return this;
+            return collectionName(Output.of(collectionName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder pricingPlan(@Nullable Output<GeofenceCollectionPricingPlan> pricingPlan) {
-            this.pricingPlan = pricingPlan;
+            $.pricingPlan = pricingPlan;
             return this;
         }
-        public Builder pricingPlan(@Nullable GeofenceCollectionPricingPlan pricingPlan) {
-            this.pricingPlan = Codegen.ofNullable(pricingPlan);
-            return this;
+
+        public Builder pricingPlan(GeofenceCollectionPricingPlan pricingPlan) {
+            return pricingPlan(Output.of(pricingPlan));
         }
+
         public Builder pricingPlanDataSource(@Nullable Output<String> pricingPlanDataSource) {
-            this.pricingPlanDataSource = pricingPlanDataSource;
+            $.pricingPlanDataSource = pricingPlanDataSource;
             return this;
         }
-        public Builder pricingPlanDataSource(@Nullable String pricingPlanDataSource) {
-            this.pricingPlanDataSource = Codegen.ofNullable(pricingPlanDataSource);
-            return this;
-        }        public GeofenceCollectionArgs build() {
-            return new GeofenceCollectionArgs(collectionName, description, kmsKeyId, pricingPlan, pricingPlanDataSource);
+
+        public Builder pricingPlanDataSource(String pricingPlanDataSource) {
+            return pricingPlanDataSource(Output.of(pricingPlanDataSource));
+        }
+
+        public GeofenceCollectionArgs build() {
+            $.collectionName = Objects.requireNonNull($.collectionName, "expected parameter 'collectionName' to be non-null");
+            return $;
         }
     }
+
 }

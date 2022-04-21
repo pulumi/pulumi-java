@@ -5,10 +5,10 @@ package com.pulumi.azurenative.certificateregistration;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
      * 
      */
     @Import(name="certificateOrderName", required=true)
-      private final Output<String> certificateOrderName;
+    private Output<String> certificateOrderName;
 
     public Output<String> certificateOrderName() {
         return this.certificateOrderName;
@@ -32,10 +32,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
      * 
      */
     @Import(name="keyVaultId")
-      private final @Nullable Output<String> keyVaultId;
+    private @Nullable Output<String> keyVaultId;
 
-    public Output<String> keyVaultId() {
-        return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
+    public Optional<Output<String>> keyVaultId() {
+        return Optional.ofNullable(this.keyVaultId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
      * 
      */
     @Import(name="keyVaultSecretName")
-      private final @Nullable Output<String> keyVaultSecretName;
+    private @Nullable Output<String> keyVaultSecretName;
 
-    public Output<String> keyVaultSecretName() {
-        return this.keyVaultSecretName == null ? Codegen.empty() : this.keyVaultSecretName;
+    public Optional<Output<String>> keyVaultSecretName() {
+        return Optional.ofNullable(this.keyVaultSecretName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -98,141 +98,120 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AppServiceCertificateOrderCertificateArgs(
-        Output<String> certificateOrderName,
-        @Nullable Output<String> keyVaultId,
-        @Nullable Output<String> keyVaultSecretName,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.certificateOrderName = Objects.requireNonNull(certificateOrderName, "expected parameter 'certificateOrderName' to be non-null");
-        this.keyVaultId = keyVaultId;
-        this.keyVaultSecretName = keyVaultSecretName;
-        this.kind = kind;
-        this.location = location;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private AppServiceCertificateOrderCertificateArgs() {}
 
-    private AppServiceCertificateOrderCertificateArgs() {
-        this.certificateOrderName = Codegen.empty();
-        this.keyVaultId = Codegen.empty();
-        this.keyVaultSecretName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AppServiceCertificateOrderCertificateArgs(AppServiceCertificateOrderCertificateArgs $) {
+        this.certificateOrderName = $.certificateOrderName;
+        this.keyVaultId = $.keyVaultId;
+        this.keyVaultSecretName = $.keyVaultSecretName;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppServiceCertificateOrderCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateOrderName;
-        private @Nullable Output<String> keyVaultId;
-        private @Nullable Output<String> keyVaultSecretName;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private AppServiceCertificateOrderCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppServiceCertificateOrderCertificateArgs();
         }
 
         public Builder(AppServiceCertificateOrderCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateOrderName = defaults.certificateOrderName;
-    	      this.keyVaultId = defaults.keyVaultId;
-    	      this.keyVaultSecretName = defaults.keyVaultSecretName;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new AppServiceCertificateOrderCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateOrderName(Output<String> certificateOrderName) {
-            this.certificateOrderName = Objects.requireNonNull(certificateOrderName);
+            $.certificateOrderName = certificateOrderName;
             return this;
         }
+
         public Builder certificateOrderName(String certificateOrderName) {
-            this.certificateOrderName = Output.of(Objects.requireNonNull(certificateOrderName));
-            return this;
+            return certificateOrderName(Output.of(certificateOrderName));
         }
+
         public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
-            this.keyVaultId = keyVaultId;
+            $.keyVaultId = keyVaultId;
             return this;
         }
-        public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Codegen.ofNullable(keyVaultId);
-            return this;
+
+        public Builder keyVaultId(String keyVaultId) {
+            return keyVaultId(Output.of(keyVaultId));
         }
+
         public Builder keyVaultSecretName(@Nullable Output<String> keyVaultSecretName) {
-            this.keyVaultSecretName = keyVaultSecretName;
+            $.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
-        public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
-            this.keyVaultSecretName = Codegen.ofNullable(keyVaultSecretName);
-            return this;
+
+        public Builder keyVaultSecretName(String keyVaultSecretName) {
+            return keyVaultSecretName(Output.of(keyVaultSecretName));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public AppServiceCertificateOrderCertificateArgs build() {
-            return new AppServiceCertificateOrderCertificateArgs(certificateOrderName, keyVaultId, keyVaultSecretName, kind, location, name, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public AppServiceCertificateOrderCertificateArgs build() {
+            $.certificateOrderName = Objects.requireNonNull($.certificateOrderName, "expected parameter 'certificateOrderName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

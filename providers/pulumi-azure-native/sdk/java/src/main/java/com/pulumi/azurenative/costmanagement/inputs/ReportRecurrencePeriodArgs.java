@@ -5,9 +5,9 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ReportRecurrencePeriodArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="from", required=true)
-      private final Output<String> from;
+    private Output<String> from;
 
     public Output<String> from() {
         return this.from;
@@ -35,63 +35,59 @@ public final class ReportRecurrencePeriodArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="to")
-      private final @Nullable Output<String> to;
+    private @Nullable Output<String> to;
 
-    public Output<String> to() {
-        return this.to == null ? Codegen.empty() : this.to;
+    public Optional<Output<String>> to() {
+        return Optional.ofNullable(this.to);
     }
 
-    public ReportRecurrencePeriodArgs(
-        Output<String> from,
-        @Nullable Output<String> to) {
-        this.from = Objects.requireNonNull(from, "expected parameter 'from' to be non-null");
-        this.to = to;
-    }
+    private ReportRecurrencePeriodArgs() {}
 
-    private ReportRecurrencePeriodArgs() {
-        this.from = Codegen.empty();
-        this.to = Codegen.empty();
+    private ReportRecurrencePeriodArgs(ReportRecurrencePeriodArgs $) {
+        this.from = $.from;
+        this.to = $.to;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportRecurrencePeriodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> from;
-        private @Nullable Output<String> to;
+        private ReportRecurrencePeriodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportRecurrencePeriodArgs();
         }
 
         public Builder(ReportRecurrencePeriodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.from = defaults.from;
-    	      this.to = defaults.to;
+            $ = new ReportRecurrencePeriodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder from(Output<String> from) {
-            this.from = Objects.requireNonNull(from);
+            $.from = from;
             return this;
         }
+
         public Builder from(String from) {
-            this.from = Output.of(Objects.requireNonNull(from));
-            return this;
+            return from(Output.of(from));
         }
+
         public Builder to(@Nullable Output<String> to) {
-            this.to = to;
+            $.to = to;
             return this;
         }
-        public Builder to(@Nullable String to) {
-            this.to = Codegen.ofNullable(to);
-            return this;
-        }        public ReportRecurrencePeriodArgs build() {
-            return new ReportRecurrencePeriodArgs(from, to);
+
+        public Builder to(String to) {
+            return to(Output.of(to));
+        }
+
+        public ReportRecurrencePeriodArgs build() {
+            $.from = Objects.requireNonNull($.from, "expected parameter 'from' to be non-null");
+            return $;
         }
     }
+
 }

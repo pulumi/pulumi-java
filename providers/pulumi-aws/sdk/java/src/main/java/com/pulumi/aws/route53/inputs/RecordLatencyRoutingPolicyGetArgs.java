@@ -5,7 +5,6 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class RecordLatencyRoutingPolicyGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
-    public RecordLatencyRoutingPolicyGetArgs(Output<String> region) {
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private RecordLatencyRoutingPolicyGetArgs() {}
 
-    private RecordLatencyRoutingPolicyGetArgs() {
-        this.region = Codegen.empty();
+    private RecordLatencyRoutingPolicyGetArgs(RecordLatencyRoutingPolicyGetArgs $) {
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordLatencyRoutingPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> region;
+        private RecordLatencyRoutingPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordLatencyRoutingPolicyGetArgs();
         }
 
         public Builder(RecordLatencyRoutingPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
+            $ = new RecordLatencyRoutingPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
-        }        public RecordLatencyRoutingPolicyGetArgs build() {
-            return new RecordLatencyRoutingPolicyGetArgs(region);
+            return region(Output.of(region));
+        }
+
+        public RecordLatencyRoutingPolicyGetArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetWorkloadNetworkVMGroupArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -28,7 +28,7 @@ public final class GetWorkloadNetworkVMGroupArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetWorkloadNetworkVMGroupArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="vmGroupId", required=true)
-      private final String vmGroupId;
+    private String vmGroupId;
 
     public String vmGroupId() {
         return this.vmGroupId;
     }
 
-    public GetWorkloadNetworkVMGroupArgs(
-        String privateCloudName,
-        String resourceGroupName,
-        String vmGroupId) {
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vmGroupId = Objects.requireNonNull(vmGroupId, "expected parameter 'vmGroupId' to be non-null");
-    }
+    private GetWorkloadNetworkVMGroupArgs() {}
 
-    private GetWorkloadNetworkVMGroupArgs() {
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
-        this.vmGroupId = null;
+    private GetWorkloadNetworkVMGroupArgs(GetWorkloadNetworkVMGroupArgs $) {
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vmGroupId = $.vmGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadNetworkVMGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateCloudName;
-        private String resourceGroupName;
-        private String vmGroupId;
+        private GetWorkloadNetworkVMGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadNetworkVMGroupArgs();
         }
 
         public Builder(GetWorkloadNetworkVMGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vmGroupId = defaults.vmGroupId;
+            $ = new GetWorkloadNetworkVMGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vmGroupId(String vmGroupId) {
-            this.vmGroupId = Objects.requireNonNull(vmGroupId);
+            $.vmGroupId = vmGroupId;
             return this;
-        }        public GetWorkloadNetworkVMGroupArgs build() {
-            return new GetWorkloadNetworkVMGroupArgs(privateCloudName, resourceGroupName, vmGroupId);
+        }
+
+        public GetWorkloadNetworkVMGroupArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmGroupId = Objects.requireNonNull($.vmGroupId, "expected parameter 'vmGroupId' to be non-null");
+            return $;
         }
     }
+
 }

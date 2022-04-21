@@ -21,45 +21,45 @@ public final class LiveEventOutputTranscriptionTrackResponse extends com.pulumi.
      * 
      */
     @Import(name="trackName", required=true)
-      private final String trackName;
+    private String trackName;
 
     public String trackName() {
         return this.trackName;
     }
 
-    public LiveEventOutputTranscriptionTrackResponse(String trackName) {
-        this.trackName = Objects.requireNonNull(trackName, "expected parameter 'trackName' to be non-null");
-    }
+    private LiveEventOutputTranscriptionTrackResponse() {}
 
-    private LiveEventOutputTranscriptionTrackResponse() {
-        this.trackName = null;
+    private LiveEventOutputTranscriptionTrackResponse(LiveEventOutputTranscriptionTrackResponse $) {
+        this.trackName = $.trackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventOutputTranscriptionTrackResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String trackName;
+        private LiveEventOutputTranscriptionTrackResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventOutputTranscriptionTrackResponse();
         }
 
         public Builder(LiveEventOutputTranscriptionTrackResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.trackName = defaults.trackName;
+            $ = new LiveEventOutputTranscriptionTrackResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder trackName(String trackName) {
-            this.trackName = Objects.requireNonNull(trackName);
+            $.trackName = trackName;
             return this;
-        }        public LiveEventOutputTranscriptionTrackResponse build() {
-            return new LiveEventOutputTranscriptionTrackResponse(trackName);
+        }
+
+        public LiveEventOutputTranscriptionTrackResponse build() {
+            $.trackName = Objects.requireNonNull($.trackName, "expected parameter 'trackName' to be non-null");
+            return $;
         }
     }
+
 }

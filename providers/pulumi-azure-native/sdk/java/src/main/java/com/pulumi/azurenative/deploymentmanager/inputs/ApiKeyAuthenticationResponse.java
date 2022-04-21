@@ -22,7 +22,7 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="in", required=true)
-      private final String in;
+    private String in;
 
     public String in() {
         return this.in;
@@ -33,7 +33,7 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,7 +45,7 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -56,73 +56,66 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ApiKeyAuthenticationResponse(
-        String in,
-        String name,
-        String type,
-        String value) {
-        this.in = Objects.requireNonNull(in, "expected parameter 'in' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ApiKeyAuthenticationResponse() {}
 
-    private ApiKeyAuthenticationResponse() {
-        this.in = null;
-        this.name = null;
-        this.type = null;
-        this.value = null;
+    private ApiKeyAuthenticationResponse(ApiKeyAuthenticationResponse $) {
+        this.in = $.in;
+        this.name = $.name;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiKeyAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String in;
-        private String name;
-        private String type;
-        private String value;
+        private ApiKeyAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiKeyAuthenticationResponse();
         }
 
         public Builder(ApiKeyAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.in = defaults.in;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ApiKeyAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder in(String in) {
-            this.in = Objects.requireNonNull(in);
+            $.in = in;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ApiKeyAuthenticationResponse build() {
-            return new ApiKeyAuthenticationResponse(in, name, type, value);
+        }
+
+        public ApiKeyAuthenticationResponse build() {
+            $.in = Objects.requireNonNull($.in, "expected parameter 'in' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

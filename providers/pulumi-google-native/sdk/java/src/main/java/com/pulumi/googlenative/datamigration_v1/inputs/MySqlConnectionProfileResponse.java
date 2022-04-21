@@ -24,7 +24,7 @@ public final class MySqlConnectionProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="cloudSqlId", required=true)
-      private final String cloudSqlId;
+    private String cloudSqlId;
 
     public String cloudSqlId() {
         return this.cloudSqlId;
@@ -35,7 +35,7 @@ public final class MySqlConnectionProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -46,7 +46,7 @@ public final class MySqlConnectionProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -57,7 +57,7 @@ public final class MySqlConnectionProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="passwordSet", required=true)
-      private final Boolean passwordSet;
+    private Boolean passwordSet;
 
     public Boolean passwordSet() {
         return this.passwordSet;
@@ -68,7 +68,7 @@ public final class MySqlConnectionProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -79,7 +79,7 @@ public final class MySqlConnectionProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="ssl", required=true)
-      private final SslConfigResponse ssl;
+    private SslConfigResponse ssl;
 
     public SslConfigResponse ssl() {
         return this.ssl;
@@ -90,100 +90,87 @@ public final class MySqlConnectionProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public MySqlConnectionProfileResponse(
-        String cloudSqlId,
-        String host,
-        String password,
-        Boolean passwordSet,
-        Integer port,
-        SslConfigResponse ssl,
-        String username) {
-        this.cloudSqlId = Objects.requireNonNull(cloudSqlId, "expected parameter 'cloudSqlId' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.passwordSet = Objects.requireNonNull(passwordSet, "expected parameter 'passwordSet' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.ssl = Objects.requireNonNull(ssl, "expected parameter 'ssl' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private MySqlConnectionProfileResponse() {}
 
-    private MySqlConnectionProfileResponse() {
-        this.cloudSqlId = null;
-        this.host = null;
-        this.password = null;
-        this.passwordSet = null;
-        this.port = null;
-        this.ssl = null;
-        this.username = null;
+    private MySqlConnectionProfileResponse(MySqlConnectionProfileResponse $) {
+        this.cloudSqlId = $.cloudSqlId;
+        this.host = $.host;
+        this.password = $.password;
+        this.passwordSet = $.passwordSet;
+        this.port = $.port;
+        this.ssl = $.ssl;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MySqlConnectionProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudSqlId;
-        private String host;
-        private String password;
-        private Boolean passwordSet;
-        private Integer port;
-        private SslConfigResponse ssl;
-        private String username;
+        private MySqlConnectionProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MySqlConnectionProfileResponse();
         }
 
         public Builder(MySqlConnectionProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSqlId = defaults.cloudSqlId;
-    	      this.host = defaults.host;
-    	      this.password = defaults.password;
-    	      this.passwordSet = defaults.passwordSet;
-    	      this.port = defaults.port;
-    	      this.ssl = defaults.ssl;
-    	      this.username = defaults.username;
+            $ = new MySqlConnectionProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSqlId(String cloudSqlId) {
-            this.cloudSqlId = Objects.requireNonNull(cloudSqlId);
+            $.cloudSqlId = cloudSqlId;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder passwordSet(Boolean passwordSet) {
-            this.passwordSet = Objects.requireNonNull(passwordSet);
+            $.passwordSet = passwordSet;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder ssl(SslConfigResponse ssl) {
-            this.ssl = Objects.requireNonNull(ssl);
+            $.ssl = ssl;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public MySqlConnectionProfileResponse build() {
-            return new MySqlConnectionProfileResponse(cloudSqlId, host, password, passwordSet, port, ssl, username);
+        }
+
+        public MySqlConnectionProfileResponse build() {
+            $.cloudSqlId = Objects.requireNonNull($.cloudSqlId, "expected parameter 'cloudSqlId' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.passwordSet = Objects.requireNonNull($.passwordSet, "expected parameter 'passwordSet' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.ssl = Objects.requireNonNull($.ssl, "expected parameter 'ssl' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

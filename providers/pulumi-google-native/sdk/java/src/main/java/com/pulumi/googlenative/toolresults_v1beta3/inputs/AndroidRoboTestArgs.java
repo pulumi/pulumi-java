@@ -5,10 +5,10 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="appInitialActivity")
-      private final @Nullable Output<String> appInitialActivity;
+    private @Nullable Output<String> appInitialActivity;
 
-    public Output<String> appInitialActivity() {
-        return this.appInitialActivity == null ? Codegen.empty() : this.appInitialActivity;
+    public Optional<Output<String>> appInitialActivity() {
+        return Optional.ofNullable(this.appInitialActivity);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="bootstrapPackageId")
-      private final @Nullable Output<String> bootstrapPackageId;
+    private @Nullable Output<String> bootstrapPackageId;
 
-    public Output<String> bootstrapPackageId() {
-        return this.bootstrapPackageId == null ? Codegen.empty() : this.bootstrapPackageId;
+    public Optional<Output<String>> bootstrapPackageId() {
+        return Optional.ofNullable(this.bootstrapPackageId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="bootstrapRunnerClass")
-      private final @Nullable Output<String> bootstrapRunnerClass;
+    private @Nullable Output<String> bootstrapRunnerClass;
 
-    public Output<String> bootstrapRunnerClass() {
-        return this.bootstrapRunnerClass == null ? Codegen.empty() : this.bootstrapRunnerClass;
+    public Optional<Output<String>> bootstrapRunnerClass() {
+        return Optional.ofNullable(this.bootstrapRunnerClass);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maxDepth")
-      private final @Nullable Output<Integer> maxDepth;
+    private @Nullable Output<Integer> maxDepth;
 
-    public Output<Integer> maxDepth() {
-        return this.maxDepth == null ? Codegen.empty() : this.maxDepth;
+    public Optional<Output<Integer>> maxDepth() {
+        return Optional.ofNullable(this.maxDepth);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maxSteps")
-      private final @Nullable Output<Integer> maxSteps;
+    private @Nullable Output<Integer> maxSteps;
 
-    public Output<Integer> maxSteps() {
-        return this.maxSteps == null ? Codegen.empty() : this.maxSteps;
+    public Optional<Output<Integer>> maxSteps() {
+        return Optional.ofNullable(this.maxSteps);
     }
 
-    public AndroidRoboTestArgs(
-        @Nullable Output<String> appInitialActivity,
-        @Nullable Output<String> bootstrapPackageId,
-        @Nullable Output<String> bootstrapRunnerClass,
-        @Nullable Output<Integer> maxDepth,
-        @Nullable Output<Integer> maxSteps) {
-        this.appInitialActivity = appInitialActivity;
-        this.bootstrapPackageId = bootstrapPackageId;
-        this.bootstrapRunnerClass = bootstrapRunnerClass;
-        this.maxDepth = maxDepth;
-        this.maxSteps = maxSteps;
-    }
+    private AndroidRoboTestArgs() {}
 
-    private AndroidRoboTestArgs() {
-        this.appInitialActivity = Codegen.empty();
-        this.bootstrapPackageId = Codegen.empty();
-        this.bootstrapRunnerClass = Codegen.empty();
-        this.maxDepth = Codegen.empty();
-        this.maxSteps = Codegen.empty();
+    private AndroidRoboTestArgs(AndroidRoboTestArgs $) {
+        this.appInitialActivity = $.appInitialActivity;
+        this.bootstrapPackageId = $.bootstrapPackageId;
+        this.bootstrapRunnerClass = $.bootstrapRunnerClass;
+        this.maxDepth = $.maxDepth;
+        this.maxSteps = $.maxSteps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidRoboTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appInitialActivity;
-        private @Nullable Output<String> bootstrapPackageId;
-        private @Nullable Output<String> bootstrapRunnerClass;
-        private @Nullable Output<Integer> maxDepth;
-        private @Nullable Output<Integer> maxSteps;
+        private AndroidRoboTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidRoboTestArgs();
         }
 
         public Builder(AndroidRoboTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appInitialActivity = defaults.appInitialActivity;
-    	      this.bootstrapPackageId = defaults.bootstrapPackageId;
-    	      this.bootstrapRunnerClass = defaults.bootstrapRunnerClass;
-    	      this.maxDepth = defaults.maxDepth;
-    	      this.maxSteps = defaults.maxSteps;
+            $ = new AndroidRoboTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appInitialActivity(@Nullable Output<String> appInitialActivity) {
-            this.appInitialActivity = appInitialActivity;
+            $.appInitialActivity = appInitialActivity;
             return this;
         }
-        public Builder appInitialActivity(@Nullable String appInitialActivity) {
-            this.appInitialActivity = Codegen.ofNullable(appInitialActivity);
-            return this;
+
+        public Builder appInitialActivity(String appInitialActivity) {
+            return appInitialActivity(Output.of(appInitialActivity));
         }
+
         public Builder bootstrapPackageId(@Nullable Output<String> bootstrapPackageId) {
-            this.bootstrapPackageId = bootstrapPackageId;
+            $.bootstrapPackageId = bootstrapPackageId;
             return this;
         }
-        public Builder bootstrapPackageId(@Nullable String bootstrapPackageId) {
-            this.bootstrapPackageId = Codegen.ofNullable(bootstrapPackageId);
-            return this;
+
+        public Builder bootstrapPackageId(String bootstrapPackageId) {
+            return bootstrapPackageId(Output.of(bootstrapPackageId));
         }
+
         public Builder bootstrapRunnerClass(@Nullable Output<String> bootstrapRunnerClass) {
-            this.bootstrapRunnerClass = bootstrapRunnerClass;
+            $.bootstrapRunnerClass = bootstrapRunnerClass;
             return this;
         }
-        public Builder bootstrapRunnerClass(@Nullable String bootstrapRunnerClass) {
-            this.bootstrapRunnerClass = Codegen.ofNullable(bootstrapRunnerClass);
-            return this;
+
+        public Builder bootstrapRunnerClass(String bootstrapRunnerClass) {
+            return bootstrapRunnerClass(Output.of(bootstrapRunnerClass));
         }
+
         public Builder maxDepth(@Nullable Output<Integer> maxDepth) {
-            this.maxDepth = maxDepth;
+            $.maxDepth = maxDepth;
             return this;
         }
-        public Builder maxDepth(@Nullable Integer maxDepth) {
-            this.maxDepth = Codegen.ofNullable(maxDepth);
-            return this;
+
+        public Builder maxDepth(Integer maxDepth) {
+            return maxDepth(Output.of(maxDepth));
         }
+
         public Builder maxSteps(@Nullable Output<Integer> maxSteps) {
-            this.maxSteps = maxSteps;
+            $.maxSteps = maxSteps;
             return this;
         }
-        public Builder maxSteps(@Nullable Integer maxSteps) {
-            this.maxSteps = Codegen.ofNullable(maxSteps);
-            return this;
-        }        public AndroidRoboTestArgs build() {
-            return new AndroidRoboTestArgs(appInitialActivity, bootstrapPackageId, bootstrapRunnerClass, maxDepth, maxSteps);
+
+        public Builder maxSteps(Integer maxSteps) {
+            return maxSteps(Output.of(maxSteps));
+        }
+
+        public AndroidRoboTestArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,10 +13,10 @@ import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamServerSideEncryptionA
 import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -40,17 +40,17 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
     }
 
     @Import(name="destinationId")
-      private final @Nullable Output<String> destinationId;
+    private @Nullable Output<String> destinationId;
 
-    public Output<String> destinationId() {
-        return this.destinationId == null ? Codegen.empty() : this.destinationId;
+    public Optional<Output<String>> destinationId() {
+        return Optional.ofNullable(this.destinationId);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="elasticsearchConfiguration")
-      private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration;
 
-    public Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration() {
-        return this.elasticsearchConfiguration == null ? Codegen.empty() : this.elasticsearchConfiguration;
+    public Optional<Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs>> elasticsearchConfiguration() {
+        return Optional.ofNullable(this.elasticsearchConfiguration);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="extendedS3Configuration")
-      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration;
+    private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration;
 
-    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration() {
-        return this.extendedS3Configuration == null ? Codegen.empty() : this.extendedS3Configuration;
+    public Optional<Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs>> extendedS3Configuration() {
+        return Optional.ofNullable(this.extendedS3Configuration);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="httpEndpointConfiguration")
-      private final @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration;
 
-    public Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration() {
-        return this.httpEndpointConfiguration == null ? Codegen.empty() : this.httpEndpointConfiguration;
+    public Optional<Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs>> httpEndpointConfiguration() {
+        return Optional.ofNullable(this.httpEndpointConfiguration);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kinesisSourceConfiguration")
-      private final @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration;
 
-    public Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration() {
-        return this.kinesisSourceConfiguration == null ? Codegen.empty() : this.kinesisSourceConfiguration;
+    public Optional<Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs>> kinesisSourceConfiguration() {
+        return Optional.ofNullable(this.kinesisSourceConfiguration);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="redshiftConfiguration")
-      private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration;
 
-    public Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration() {
-        return this.redshiftConfiguration == null ? Codegen.empty() : this.redshiftConfiguration;
+    public Optional<Output<FirehoseDeliveryStreamRedshiftConfigurationArgs>> redshiftConfiguration() {
+        return Optional.ofNullable(this.redshiftConfiguration);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="s3Configuration")
-      private final @Nullable Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration;
+    private @Nullable Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration;
 
-    public Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration() {
-        return this.s3Configuration == null ? Codegen.empty() : this.s3Configuration;
+    public Optional<Output<FirehoseDeliveryStreamS3ConfigurationArgs>> s3Configuration() {
+        return Optional.ofNullable(this.s3Configuration);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="serverSideEncryption")
-      private final @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption;
+    private @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption;
 
-    public Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption() {
-        return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
+    public Optional<Output<FirehoseDeliveryStreamServerSideEncryptionArgs>> serverSideEncryption() {
+        return Optional.ofNullable(this.serverSideEncryption);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="splunkConfiguration")
-      private final @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration;
 
-    public Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration() {
-        return this.splunkConfiguration == null ? Codegen.empty() : this.splunkConfiguration;
+    public Optional<Output<FirehoseDeliveryStreamSplunkConfigurationArgs>> splunkConfiguration() {
+        return Optional.ofNullable(this.splunkConfiguration);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -173,219 +173,179 @@ public final class FirehoseDeliveryStreamArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="versionId")
-      private final @Nullable Output<String> versionId;
+    private @Nullable Output<String> versionId;
 
-    public Output<String> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
-    public FirehoseDeliveryStreamArgs(
-        @Nullable Output<String> arn,
-        Output<String> destination,
-        @Nullable Output<String> destinationId,
-        @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration,
-        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration,
-        @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration,
-        @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration,
-        @Nullable Output<String> name,
-        @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration,
-        @Nullable Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration,
-        @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption,
-        @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> versionId) {
-        this.arn = arn;
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.destinationId = destinationId;
-        this.elasticsearchConfiguration = elasticsearchConfiguration;
-        this.extendedS3Configuration = extendedS3Configuration;
-        this.httpEndpointConfiguration = httpEndpointConfiguration;
-        this.kinesisSourceConfiguration = kinesisSourceConfiguration;
-        this.name = name;
-        this.redshiftConfiguration = redshiftConfiguration;
-        this.s3Configuration = s3Configuration;
-        this.serverSideEncryption = serverSideEncryption;
-        this.splunkConfiguration = splunkConfiguration;
-        this.tags = tags;
-        this.versionId = versionId;
-    }
+    private FirehoseDeliveryStreamArgs() {}
 
-    private FirehoseDeliveryStreamArgs() {
-        this.arn = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.destinationId = Codegen.empty();
-        this.elasticsearchConfiguration = Codegen.empty();
-        this.extendedS3Configuration = Codegen.empty();
-        this.httpEndpointConfiguration = Codegen.empty();
-        this.kinesisSourceConfiguration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.redshiftConfiguration = Codegen.empty();
-        this.s3Configuration = Codegen.empty();
-        this.serverSideEncryption = Codegen.empty();
-        this.splunkConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.versionId = Codegen.empty();
+    private FirehoseDeliveryStreamArgs(FirehoseDeliveryStreamArgs $) {
+        this.arn = $.arn;
+        this.destination = $.destination;
+        this.destinationId = $.destinationId;
+        this.elasticsearchConfiguration = $.elasticsearchConfiguration;
+        this.extendedS3Configuration = $.extendedS3Configuration;
+        this.httpEndpointConfiguration = $.httpEndpointConfiguration;
+        this.kinesisSourceConfiguration = $.kinesisSourceConfiguration;
+        this.name = $.name;
+        this.redshiftConfiguration = $.redshiftConfiguration;
+        this.s3Configuration = $.s3Configuration;
+        this.serverSideEncryption = $.serverSideEncryption;
+        this.splunkConfiguration = $.splunkConfiguration;
+        this.tags = $.tags;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private Output<String> destination;
-        private @Nullable Output<String> destinationId;
-        private @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration;
-        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration;
-        private @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration;
-        private @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration;
-        private @Nullable Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration;
-        private @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption;
-        private @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> versionId;
+        private FirehoseDeliveryStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamArgs();
         }
 
         public Builder(FirehoseDeliveryStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.destination = defaults.destination;
-    	      this.destinationId = defaults.destinationId;
-    	      this.elasticsearchConfiguration = defaults.elasticsearchConfiguration;
-    	      this.extendedS3Configuration = defaults.extendedS3Configuration;
-    	      this.httpEndpointConfiguration = defaults.httpEndpointConfiguration;
-    	      this.kinesisSourceConfiguration = defaults.kinesisSourceConfiguration;
-    	      this.name = defaults.name;
-    	      this.redshiftConfiguration = defaults.redshiftConfiguration;
-    	      this.s3Configuration = defaults.s3Configuration;
-    	      this.serverSideEncryption = defaults.serverSideEncryption;
-    	      this.splunkConfiguration = defaults.splunkConfiguration;
-    	      this.tags = defaults.tags;
-    	      this.versionId = defaults.versionId;
+            $ = new FirehoseDeliveryStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder destinationId(@Nullable Output<String> destinationId) {
-            this.destinationId = destinationId;
+            $.destinationId = destinationId;
             return this;
         }
-        public Builder destinationId(@Nullable String destinationId) {
-            this.destinationId = Codegen.ofNullable(destinationId);
-            return this;
+
+        public Builder destinationId(String destinationId) {
+            return destinationId(Output.of(destinationId));
         }
+
         public Builder elasticsearchConfiguration(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration) {
-            this.elasticsearchConfiguration = elasticsearchConfiguration;
+            $.elasticsearchConfiguration = elasticsearchConfiguration;
             return this;
         }
-        public Builder elasticsearchConfiguration(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationArgs elasticsearchConfiguration) {
-            this.elasticsearchConfiguration = Codegen.ofNullable(elasticsearchConfiguration);
-            return this;
+
+        public Builder elasticsearchConfiguration(FirehoseDeliveryStreamElasticsearchConfigurationArgs elasticsearchConfiguration) {
+            return elasticsearchConfiguration(Output.of(elasticsearchConfiguration));
         }
+
         public Builder extendedS3Configuration(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration) {
-            this.extendedS3Configuration = extendedS3Configuration;
+            $.extendedS3Configuration = extendedS3Configuration;
             return this;
         }
-        public Builder extendedS3Configuration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationArgs extendedS3Configuration) {
-            this.extendedS3Configuration = Codegen.ofNullable(extendedS3Configuration);
-            return this;
+
+        public Builder extendedS3Configuration(FirehoseDeliveryStreamExtendedS3ConfigurationArgs extendedS3Configuration) {
+            return extendedS3Configuration(Output.of(extendedS3Configuration));
         }
+
         public Builder httpEndpointConfiguration(@Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration) {
-            this.httpEndpointConfiguration = httpEndpointConfiguration;
+            $.httpEndpointConfiguration = httpEndpointConfiguration;
             return this;
         }
-        public Builder httpEndpointConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationArgs httpEndpointConfiguration) {
-            this.httpEndpointConfiguration = Codegen.ofNullable(httpEndpointConfiguration);
-            return this;
+
+        public Builder httpEndpointConfiguration(FirehoseDeliveryStreamHttpEndpointConfigurationArgs httpEndpointConfiguration) {
+            return httpEndpointConfiguration(Output.of(httpEndpointConfiguration));
         }
+
         public Builder kinesisSourceConfiguration(@Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration) {
-            this.kinesisSourceConfiguration = kinesisSourceConfiguration;
+            $.kinesisSourceConfiguration = kinesisSourceConfiguration;
             return this;
         }
-        public Builder kinesisSourceConfiguration(@Nullable FirehoseDeliveryStreamKinesisSourceConfigurationArgs kinesisSourceConfiguration) {
-            this.kinesisSourceConfiguration = Codegen.ofNullable(kinesisSourceConfiguration);
-            return this;
+
+        public Builder kinesisSourceConfiguration(FirehoseDeliveryStreamKinesisSourceConfigurationArgs kinesisSourceConfiguration) {
+            return kinesisSourceConfiguration(Output.of(kinesisSourceConfiguration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder redshiftConfiguration(@Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration) {
-            this.redshiftConfiguration = redshiftConfiguration;
+            $.redshiftConfiguration = redshiftConfiguration;
             return this;
         }
-        public Builder redshiftConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationArgs redshiftConfiguration) {
-            this.redshiftConfiguration = Codegen.ofNullable(redshiftConfiguration);
-            return this;
+
+        public Builder redshiftConfiguration(FirehoseDeliveryStreamRedshiftConfigurationArgs redshiftConfiguration) {
+            return redshiftConfiguration(Output.of(redshiftConfiguration));
         }
+
         public Builder s3Configuration(@Nullable Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration) {
-            this.s3Configuration = s3Configuration;
+            $.s3Configuration = s3Configuration;
             return this;
         }
-        public Builder s3Configuration(@Nullable FirehoseDeliveryStreamS3ConfigurationArgs s3Configuration) {
-            this.s3Configuration = Codegen.ofNullable(s3Configuration);
-            return this;
+
+        public Builder s3Configuration(FirehoseDeliveryStreamS3ConfigurationArgs s3Configuration) {
+            return s3Configuration(Output.of(s3Configuration));
         }
+
         public Builder serverSideEncryption(@Nullable Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption) {
-            this.serverSideEncryption = serverSideEncryption;
+            $.serverSideEncryption = serverSideEncryption;
             return this;
         }
-        public Builder serverSideEncryption(@Nullable FirehoseDeliveryStreamServerSideEncryptionArgs serverSideEncryption) {
-            this.serverSideEncryption = Codegen.ofNullable(serverSideEncryption);
-            return this;
+
+        public Builder serverSideEncryption(FirehoseDeliveryStreamServerSideEncryptionArgs serverSideEncryption) {
+            return serverSideEncryption(Output.of(serverSideEncryption));
         }
+
         public Builder splunkConfiguration(@Nullable Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration) {
-            this.splunkConfiguration = splunkConfiguration;
+            $.splunkConfiguration = splunkConfiguration;
             return this;
         }
-        public Builder splunkConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationArgs splunkConfiguration) {
-            this.splunkConfiguration = Codegen.ofNullable(splunkConfiguration);
-            return this;
+
+        public Builder splunkConfiguration(FirehoseDeliveryStreamSplunkConfigurationArgs splunkConfiguration) {
+            return splunkConfiguration(Output.of(splunkConfiguration));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder versionId(@Nullable Output<String> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable String versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
-        }        public FirehoseDeliveryStreamArgs build() {
-            return new FirehoseDeliveryStreamArgs(arn, destination, destinationId, elasticsearchConfiguration, extendedS3Configuration, httpEndpointConfiguration, kinesisSourceConfiguration, name, redshiftConfiguration, s3Configuration, serverSideEncryption, splunkConfiguration, tags, versionId);
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
+        }
+
+        public FirehoseDeliveryStreamArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            return $;
         }
     }
+
 }

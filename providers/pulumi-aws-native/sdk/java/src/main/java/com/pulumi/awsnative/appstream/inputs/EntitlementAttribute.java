@@ -13,62 +13,59 @@ public final class EntitlementAttribute extends com.pulumi.resources.InvokeArgs 
     public static final EntitlementAttribute Empty = new EntitlementAttribute();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public EntitlementAttribute(
-        String name,
-        String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private EntitlementAttribute() {}
 
-    private EntitlementAttribute() {
-        this.name = null;
-        this.value = null;
+    private EntitlementAttribute(EntitlementAttribute $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntitlementAttribute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String value;
+        private EntitlementAttribute $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntitlementAttribute();
         }
 
         public Builder(EntitlementAttribute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new EntitlementAttribute(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public EntitlementAttribute build() {
-            return new EntitlementAttribute(name, value);
+        }
+
+        public EntitlementAttribute build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

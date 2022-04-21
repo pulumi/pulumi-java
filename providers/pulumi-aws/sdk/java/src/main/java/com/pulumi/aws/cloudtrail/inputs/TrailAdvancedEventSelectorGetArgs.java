@@ -6,10 +6,10 @@ package com.pulumi.aws.cloudtrail.inputs;
 import com.pulumi.aws.cloudtrail.inputs.TrailAdvancedEventSelectorFieldSelectorGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class TrailAdvancedEventSelectorGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="fieldSelectors", required=true)
-      private final Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors;
+    private Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors;
 
     public Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors() {
         return this.fieldSelectors;
@@ -33,66 +33,63 @@ public final class TrailAdvancedEventSelectorGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public TrailAdvancedEventSelectorGetArgs(
-        Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors,
-        @Nullable Output<String> name) {
-        this.fieldSelectors = Objects.requireNonNull(fieldSelectors, "expected parameter 'fieldSelectors' to be non-null");
-        this.name = name;
-    }
+    private TrailAdvancedEventSelectorGetArgs() {}
 
-    private TrailAdvancedEventSelectorGetArgs() {
-        this.fieldSelectors = Codegen.empty();
-        this.name = Codegen.empty();
+    private TrailAdvancedEventSelectorGetArgs(TrailAdvancedEventSelectorGetArgs $) {
+        this.fieldSelectors = $.fieldSelectors;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrailAdvancedEventSelectorGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors;
-        private @Nullable Output<String> name;
+        private TrailAdvancedEventSelectorGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrailAdvancedEventSelectorGetArgs();
         }
 
         public Builder(TrailAdvancedEventSelectorGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldSelectors = defaults.fieldSelectors;
-    	      this.name = defaults.name;
+            $ = new TrailAdvancedEventSelectorGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldSelectors(Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors) {
-            this.fieldSelectors = Objects.requireNonNull(fieldSelectors);
+            $.fieldSelectors = fieldSelectors;
             return this;
         }
+
         public Builder fieldSelectors(List<TrailAdvancedEventSelectorFieldSelectorGetArgs> fieldSelectors) {
-            this.fieldSelectors = Output.of(Objects.requireNonNull(fieldSelectors));
-            return this;
+            return fieldSelectors(Output.of(fieldSelectors));
         }
+
         public Builder fieldSelectors(TrailAdvancedEventSelectorFieldSelectorGetArgs... fieldSelectors) {
             return fieldSelectors(List.of(fieldSelectors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public TrailAdvancedEventSelectorGetArgs build() {
-            return new TrailAdvancedEventSelectorGetArgs(fieldSelectors, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public TrailAdvancedEventSelectorGetArgs build() {
+            $.fieldSelectors = Objects.requireNonNull($.fieldSelectors, "expected parameter 'fieldSelectors' to be non-null");
+            return $;
         }
     }
+
 }

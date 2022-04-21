@@ -17,7 +17,7 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostName", required=true)
-      private final String hostName;
+    private String hostName;
 
     public String hostName() {
         return this.hostName;
@@ -28,55 +28,52 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetHostArgs(
-        String hostName,
-        String resourceGroupName) {
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetHostArgs() {}
 
-    private GetHostArgs() {
-        this.hostName = null;
-        this.resourceGroupName = null;
+    private GetHostArgs(GetHostArgs $) {
+        this.hostName = $.hostName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostName;
-        private String resourceGroupName;
+        private GetHostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHostArgs();
         }
 
         public Builder(GetHostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostName = defaults.hostName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetHostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetHostArgs build() {
-            return new GetHostArgs(hostName, resourceGroupName);
+        }
+
+        public GetHostArgs build() {
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

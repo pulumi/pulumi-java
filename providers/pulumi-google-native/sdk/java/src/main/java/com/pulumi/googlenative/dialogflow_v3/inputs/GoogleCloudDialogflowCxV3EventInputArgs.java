@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowCxV3EventInputArgs extends com.pulumi.re
      * 
      */
     @Import(name="event")
-      private final @Nullable Output<String> event;
+    private @Nullable Output<String> event;
 
-    public Output<String> event() {
-        return this.event == null ? Codegen.empty() : this.event;
+    public Optional<Output<String>> event() {
+        return Optional.ofNullable(this.event);
     }
 
-    public GoogleCloudDialogflowCxV3EventInputArgs(@Nullable Output<String> event) {
-        this.event = event;
-    }
+    private GoogleCloudDialogflowCxV3EventInputArgs() {}
 
-    private GoogleCloudDialogflowCxV3EventInputArgs() {
-        this.event = Codegen.empty();
+    private GoogleCloudDialogflowCxV3EventInputArgs(GoogleCloudDialogflowCxV3EventInputArgs $) {
+        this.event = $.event;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3EventInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> event;
+        private GoogleCloudDialogflowCxV3EventInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3EventInputArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3EventInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
+            $ = new GoogleCloudDialogflowCxV3EventInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder event(@Nullable Output<String> event) {
-            this.event = event;
+            $.event = event;
             return this;
         }
-        public Builder event(@Nullable String event) {
-            this.event = Codegen.ofNullable(event);
-            return this;
-        }        public GoogleCloudDialogflowCxV3EventInputArgs build() {
-            return new GoogleCloudDialogflowCxV3EventInputArgs(event);
+
+        public Builder event(String event) {
+            return event(Output.of(event));
+        }
+
+        public GoogleCloudDialogflowCxV3EventInputArgs build() {
+            return $;
         }
     }
+
 }

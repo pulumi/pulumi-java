@@ -23,45 +23,44 @@ public final class DependsOnDefinitionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="kustomizationName")
-      private final @Nullable String kustomizationName;
+    private @Nullable String kustomizationName;
 
     public Optional<String> kustomizationName() {
-        return this.kustomizationName == null ? Optional.empty() : Optional.ofNullable(this.kustomizationName);
+        return Optional.ofNullable(this.kustomizationName);
     }
 
-    public DependsOnDefinitionResponse(@Nullable String kustomizationName) {
-        this.kustomizationName = kustomizationName;
-    }
+    private DependsOnDefinitionResponse() {}
 
-    private DependsOnDefinitionResponse() {
-        this.kustomizationName = null;
+    private DependsOnDefinitionResponse(DependsOnDefinitionResponse $) {
+        this.kustomizationName = $.kustomizationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DependsOnDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kustomizationName;
+        private DependsOnDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DependsOnDefinitionResponse();
         }
 
         public Builder(DependsOnDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kustomizationName = defaults.kustomizationName;
+            $ = new DependsOnDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kustomizationName(@Nullable String kustomizationName) {
-            this.kustomizationName = kustomizationName;
+            $.kustomizationName = kustomizationName;
             return this;
-        }        public DependsOnDefinitionResponse build() {
-            return new DependsOnDefinitionResponse(kustomizationName);
+        }
+
+        public DependsOnDefinitionResponse build() {
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.awsnative.nimblestudio.inputs.StudioEncryptionConfigurationArg
 import com.pulumi.awsnative.nimblestudio.inputs.StudioTagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminRoleArn", required=true)
-      private final Output<String> adminRoleArn;
+    private Output<String> adminRoleArn;
 
     public Output<String> adminRoleArn() {
         return this.adminRoleArn;
@@ -33,17 +33,17 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="studioEncryptionConfiguration")
-      private final @Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
+    private @Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
 
-    public Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration() {
-        return this.studioEncryptionConfiguration == null ? Codegen.empty() : this.studioEncryptionConfiguration;
+    public Optional<Output<StudioEncryptionConfigurationArgs>> studioEncryptionConfiguration() {
+        return Optional.ofNullable(this.studioEncryptionConfiguration);
     }
 
     /**
@@ -51,17 +51,17 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="studioName")
-      private final @Nullable Output<String> studioName;
+    private @Nullable Output<String> studioName;
 
-    public Output<String> studioName() {
-        return this.studioName == null ? Codegen.empty() : this.studioName;
+    public Optional<Output<String>> studioName() {
+        return Optional.ofNullable(this.studioName);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<StudioTagsArgs> tags;
+    private @Nullable Output<StudioTagsArgs> tags;
 
-    public Output<StudioTagsArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<StudioTagsArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -69,115 +69,101 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userRoleArn", required=true)
-      private final Output<String> userRoleArn;
+    private Output<String> userRoleArn;
 
     public Output<String> userRoleArn() {
         return this.userRoleArn;
     }
 
-    public StudioArgs(
-        Output<String> adminRoleArn,
-        Output<String> displayName,
-        @Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration,
-        @Nullable Output<String> studioName,
-        @Nullable Output<StudioTagsArgs> tags,
-        Output<String> userRoleArn) {
-        this.adminRoleArn = Objects.requireNonNull(adminRoleArn, "expected parameter 'adminRoleArn' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.studioEncryptionConfiguration = studioEncryptionConfiguration;
-        this.studioName = studioName;
-        this.tags = tags;
-        this.userRoleArn = Objects.requireNonNull(userRoleArn, "expected parameter 'userRoleArn' to be non-null");
-    }
+    private StudioArgs() {}
 
-    private StudioArgs() {
-        this.adminRoleArn = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.studioEncryptionConfiguration = Codegen.empty();
-        this.studioName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userRoleArn = Codegen.empty();
+    private StudioArgs(StudioArgs $) {
+        this.adminRoleArn = $.adminRoleArn;
+        this.displayName = $.displayName;
+        this.studioEncryptionConfiguration = $.studioEncryptionConfiguration;
+        this.studioName = $.studioName;
+        this.tags = $.tags;
+        this.userRoleArn = $.userRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> adminRoleArn;
-        private Output<String> displayName;
-        private @Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
-        private @Nullable Output<String> studioName;
-        private @Nullable Output<StudioTagsArgs> tags;
-        private Output<String> userRoleArn;
+        private StudioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioArgs();
         }
 
         public Builder(StudioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminRoleArn = defaults.adminRoleArn;
-    	      this.displayName = defaults.displayName;
-    	      this.studioEncryptionConfiguration = defaults.studioEncryptionConfiguration;
-    	      this.studioName = defaults.studioName;
-    	      this.tags = defaults.tags;
-    	      this.userRoleArn = defaults.userRoleArn;
+            $ = new StudioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminRoleArn(Output<String> adminRoleArn) {
-            this.adminRoleArn = Objects.requireNonNull(adminRoleArn);
+            $.adminRoleArn = adminRoleArn;
             return this;
         }
+
         public Builder adminRoleArn(String adminRoleArn) {
-            this.adminRoleArn = Output.of(Objects.requireNonNull(adminRoleArn));
-            return this;
+            return adminRoleArn(Output.of(adminRoleArn));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder studioEncryptionConfiguration(@Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration) {
-            this.studioEncryptionConfiguration = studioEncryptionConfiguration;
+            $.studioEncryptionConfiguration = studioEncryptionConfiguration;
             return this;
         }
-        public Builder studioEncryptionConfiguration(@Nullable StudioEncryptionConfigurationArgs studioEncryptionConfiguration) {
-            this.studioEncryptionConfiguration = Codegen.ofNullable(studioEncryptionConfiguration);
-            return this;
+
+        public Builder studioEncryptionConfiguration(StudioEncryptionConfigurationArgs studioEncryptionConfiguration) {
+            return studioEncryptionConfiguration(Output.of(studioEncryptionConfiguration));
         }
+
         public Builder studioName(@Nullable Output<String> studioName) {
-            this.studioName = studioName;
+            $.studioName = studioName;
             return this;
         }
-        public Builder studioName(@Nullable String studioName) {
-            this.studioName = Codegen.ofNullable(studioName);
-            return this;
+
+        public Builder studioName(String studioName) {
+            return studioName(Output.of(studioName));
         }
+
         public Builder tags(@Nullable Output<StudioTagsArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable StudioTagsArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(StudioTagsArgs tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userRoleArn(Output<String> userRoleArn) {
-            this.userRoleArn = Objects.requireNonNull(userRoleArn);
+            $.userRoleArn = userRoleArn;
             return this;
         }
+
         public Builder userRoleArn(String userRoleArn) {
-            this.userRoleArn = Output.of(Objects.requireNonNull(userRoleArn));
-            return this;
-        }        public StudioArgs build() {
-            return new StudioArgs(adminRoleArn, displayName, studioEncryptionConfiguration, studioName, tags, userRoleArn);
+            return userRoleArn(Output.of(userRoleArn));
+        }
+
+        public StudioArgs build() {
+            $.adminRoleArn = Objects.requireNonNull($.adminRoleArn, "expected parameter 'adminRoleArn' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.userRoleArn = Objects.requireNonNull($.userRoleArn, "expected parameter 'userRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

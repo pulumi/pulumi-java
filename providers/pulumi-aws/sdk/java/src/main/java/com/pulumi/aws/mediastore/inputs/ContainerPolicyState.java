@@ -5,9 +5,9 @@ package com.pulumi.aws.mediastore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ContainerPolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="containerName")
-      private final @Nullable Output<String> containerName;
+    private @Nullable Output<String> containerName;
 
-    public Output<String> containerName() {
-        return this.containerName == null ? Codegen.empty() : this.containerName;
+    public Optional<Output<String>> containerName() {
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ContainerPolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public ContainerPolicyState(
-        @Nullable Output<String> containerName,
-        @Nullable Output<String> policy) {
-        this.containerName = containerName;
-        this.policy = policy;
-    }
+    private ContainerPolicyState() {}
 
-    private ContainerPolicyState() {
-        this.containerName = Codegen.empty();
-        this.policy = Codegen.empty();
+    private ContainerPolicyState(ContainerPolicyState $) {
+        this.containerName = $.containerName;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerName;
-        private @Nullable Output<String> policy;
+        private ContainerPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPolicyState();
         }
 
         public Builder(ContainerPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.policy = defaults.policy;
+            $ = new ContainerPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(@Nullable Output<String> containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
-        public Builder containerName(@Nullable String containerName) {
-            this.containerName = Codegen.ofNullable(containerName);
-            return this;
+
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public ContainerPolicyState build() {
-            return new ContainerPolicyState(containerName, policy);
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public ContainerPolicyState build() {
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @Import(name="guestAccelerators", required=true)
-      private final List<AcceleratorConfigResponse> guestAccelerators;
+    private List<AcceleratorConfigResponse> guestAccelerators;
 
     public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
@@ -35,7 +35,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @Import(name="localSsds", required=true)
-      private final List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds;
+    private List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds;
 
     public List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds() {
         return this.localSsds;
@@ -46,7 +46,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @Import(name="locationHint", required=true)
-      private final String locationHint;
+    private String locationHint;
 
     public String locationHint() {
         return this.locationHint;
@@ -57,7 +57,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -68,88 +68,81 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @Import(name="minCpuPlatform", required=true)
-      private final String minCpuPlatform;
+    private String minCpuPlatform;
 
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 
-    public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(
-        List<AcceleratorConfigResponse> guestAccelerators,
-        List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds,
-        String locationHint,
-        String machineType,
-        String minCpuPlatform) {
-        this.guestAccelerators = Objects.requireNonNull(guestAccelerators, "expected parameter 'guestAccelerators' to be non-null");
-        this.localSsds = Objects.requireNonNull(localSsds, "expected parameter 'localSsds' to be non-null");
-        this.locationHint = Objects.requireNonNull(locationHint, "expected parameter 'locationHint' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
-    }
+    private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse() {}
 
-    private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse() {
-        this.guestAccelerators = List.of();
-        this.localSsds = List.of();
-        this.locationHint = null;
-        this.machineType = null;
-        this.minCpuPlatform = null;
+    private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse $) {
+        this.guestAccelerators = $.guestAccelerators;
+        this.localSsds = $.localSsds;
+        this.locationHint = $.locationHint;
+        this.machineType = $.machineType;
+        this.minCpuPlatform = $.minCpuPlatform;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AcceleratorConfigResponse> guestAccelerators;
-        private List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds;
-        private String locationHint;
-        private String machineType;
-        private String minCpuPlatform;
+        private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllocationSpecificSKUAllocationReservedInstancePropertiesResponse();
         }
 
         public Builder(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.guestAccelerators = defaults.guestAccelerators;
-    	      this.localSsds = defaults.localSsds;
-    	      this.locationHint = defaults.locationHint;
-    	      this.machineType = defaults.machineType;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
+            $ = new AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
-            this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
+            $.guestAccelerators = guestAccelerators;
             return this;
         }
+
         public Builder guestAccelerators(AcceleratorConfigResponse... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
+
         public Builder localSsds(List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds) {
-            this.localSsds = Objects.requireNonNull(localSsds);
+            $.localSsds = localSsds;
             return this;
         }
+
         public Builder localSsds(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse... localSsds) {
             return localSsds(List.of(localSsds));
         }
+
         public Builder locationHint(String locationHint) {
-            this.locationHint = Objects.requireNonNull(locationHint);
+            $.locationHint = locationHint;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder minCpuPlatform(String minCpuPlatform) {
-            this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
+            $.minCpuPlatform = minCpuPlatform;
             return this;
-        }        public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse build() {
-            return new AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(guestAccelerators, localSsds, locationHint, machineType, minCpuPlatform);
+        }
+
+        public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse build() {
+            $.guestAccelerators = Objects.requireNonNull($.guestAccelerators, "expected parameter 'guestAccelerators' to be non-null");
+            $.localSsds = Objects.requireNonNull($.localSsds, "expected parameter 'localSsds' to be non-null");
+            $.locationHint = Objects.requireNonNull($.locationHint, "expected parameter 'locationHint' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.minCpuPlatform = Objects.requireNonNull($.minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
+            return $;
         }
     }
+
 }

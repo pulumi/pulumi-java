@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscaleConfiguration")
-      private final @Nullable Output<AutoscaleArgs> autoscaleConfiguration;
+    private @Nullable Output<AutoscaleArgs> autoscaleConfiguration;
 
-    public Output<AutoscaleArgs> autoscaleConfiguration() {
-        return this.autoscaleConfiguration == null ? Codegen.empty() : this.autoscaleConfiguration;
+    public Optional<Output<AutoscaleArgs>> autoscaleConfiguration() {
+        return Optional.ofNullable(this.autoscaleConfiguration);
     }
 
     /**
@@ -44,10 +45,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataDisksGroups")
-      private final @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups;
+    private @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups;
 
-    public Output<List<DataDisksGroupsArgs>> dataDisksGroups() {
-        return this.dataDisksGroups == null ? Codegen.empty() : this.dataDisksGroups;
+    public Optional<Output<List<DataDisksGroupsArgs>>> dataDisksGroups() {
+        return Optional.ofNullable(this.dataDisksGroups);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptDataDisks")
-      private final @Nullable Output<Boolean> encryptDataDisks;
+    private @Nullable Output<Boolean> encryptDataDisks;
 
-    public Output<Boolean> encryptDataDisks() {
-        return this.encryptDataDisks == null ? Codegen.empty() : this.encryptDataDisks;
+    public Optional<Output<Boolean>> encryptDataDisks() {
+        return Optional.ofNullable(this.encryptDataDisks);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hardwareProfile")
-      private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
+    private @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Output<HardwareProfileArgs> hardwareProfile() {
-        return this.hardwareProfile == null ? Codegen.empty() : this.hardwareProfile;
+    public Optional<Output<HardwareProfileArgs>> hardwareProfile() {
+        return Optional.ofNullable(this.hardwareProfile);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minInstanceCount")
-      private final @Nullable Output<Integer> minInstanceCount;
+    private @Nullable Output<Integer> minInstanceCount;
 
-    public Output<Integer> minInstanceCount() {
-        return this.minInstanceCount == null ? Codegen.empty() : this.minInstanceCount;
+    public Optional<Output<Integer>> minInstanceCount() {
+        return Optional.ofNullable(this.minInstanceCount);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -99,10 +100,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable Output<OsProfileArgs> osProfile;
+    private @Nullable Output<OsProfileArgs> osProfile;
 
-    public Output<OsProfileArgs> osProfile() {
-        return this.osProfile == null ? Codegen.empty() : this.osProfile;
+    public Optional<Output<OsProfileArgs>> osProfile() {
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -110,10 +111,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scriptActions")
-      private final @Nullable Output<List<ScriptActionArgs>> scriptActions;
+    private @Nullable Output<List<ScriptActionArgs>> scriptActions;
 
-    public Output<List<ScriptActionArgs>> scriptActions() {
-        return this.scriptActions == null ? Codegen.empty() : this.scriptActions;
+    public Optional<Output<List<ScriptActionArgs>>> scriptActions() {
+        return Optional.ofNullable(this.scriptActions);
     }
 
     /**
@@ -121,10 +122,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetInstanceCount")
-      private final @Nullable Output<Integer> targetInstanceCount;
+    private @Nullable Output<Integer> targetInstanceCount;
 
-    public Output<Integer> targetInstanceCount() {
-        return this.targetInstanceCount == null ? Codegen.empty() : this.targetInstanceCount;
+    public Optional<Output<Integer>> targetInstanceCount() {
+        return Optional.ofNullable(this.targetInstanceCount);
     }
 
     /**
@@ -132,10 +133,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vMGroupName")
-      private final @Nullable Output<String> vMGroupName;
+    private @Nullable Output<String> vMGroupName;
 
-    public Output<String> vMGroupName() {
-        return this.vMGroupName == null ? Codegen.empty() : this.vMGroupName;
+    public Optional<Output<String>> vMGroupName() {
+        return Optional.ofNullable(this.vMGroupName);
     }
 
     /**
@@ -143,186 +144,157 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualNetworkProfile")
-      private final @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
+    private @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
-    public Output<VirtualNetworkProfileArgs> virtualNetworkProfile() {
-        return this.virtualNetworkProfile == null ? Codegen.empty() : this.virtualNetworkProfile;
+    public Optional<Output<VirtualNetworkProfileArgs>> virtualNetworkProfile() {
+        return Optional.ofNullable(this.virtualNetworkProfile);
     }
 
-    public RoleArgs(
-        @Nullable Output<AutoscaleArgs> autoscaleConfiguration,
-        @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups,
-        @Nullable Output<Boolean> encryptDataDisks,
-        @Nullable Output<HardwareProfileArgs> hardwareProfile,
-        @Nullable Output<Integer> minInstanceCount,
-        @Nullable Output<String> name,
-        @Nullable Output<OsProfileArgs> osProfile,
-        @Nullable Output<List<ScriptActionArgs>> scriptActions,
-        @Nullable Output<Integer> targetInstanceCount,
-        @Nullable Output<String> vMGroupName,
-        @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
-        this.autoscaleConfiguration = autoscaleConfiguration;
-        this.dataDisksGroups = dataDisksGroups;
-        this.encryptDataDisks = Codegen.booleanProp("encryptDataDisks").output().arg(encryptDataDisks).def(false).getNullable();
-        this.hardwareProfile = hardwareProfile;
-        this.minInstanceCount = minInstanceCount;
-        this.name = name;
-        this.osProfile = osProfile;
-        this.scriptActions = scriptActions;
-        this.targetInstanceCount = targetInstanceCount;
-        this.vMGroupName = vMGroupName;
-        this.virtualNetworkProfile = virtualNetworkProfile;
-    }
+    private RoleArgs() {}
 
-    private RoleArgs() {
-        this.autoscaleConfiguration = Codegen.empty();
-        this.dataDisksGroups = Codegen.empty();
-        this.encryptDataDisks = Codegen.empty();
-        this.hardwareProfile = Codegen.empty();
-        this.minInstanceCount = Codegen.empty();
-        this.name = Codegen.empty();
-        this.osProfile = Codegen.empty();
-        this.scriptActions = Codegen.empty();
-        this.targetInstanceCount = Codegen.empty();
-        this.vMGroupName = Codegen.empty();
-        this.virtualNetworkProfile = Codegen.empty();
+    private RoleArgs(RoleArgs $) {
+        this.autoscaleConfiguration = $.autoscaleConfiguration;
+        this.dataDisksGroups = $.dataDisksGroups;
+        this.encryptDataDisks = $.encryptDataDisks;
+        this.hardwareProfile = $.hardwareProfile;
+        this.minInstanceCount = $.minInstanceCount;
+        this.name = $.name;
+        this.osProfile = $.osProfile;
+        this.scriptActions = $.scriptActions;
+        this.targetInstanceCount = $.targetInstanceCount;
+        this.vMGroupName = $.vMGroupName;
+        this.virtualNetworkProfile = $.virtualNetworkProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoscaleArgs> autoscaleConfiguration;
-        private @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups;
-        private @Nullable Output<Boolean> encryptDataDisks;
-        private @Nullable Output<HardwareProfileArgs> hardwareProfile;
-        private @Nullable Output<Integer> minInstanceCount;
-        private @Nullable Output<String> name;
-        private @Nullable Output<OsProfileArgs> osProfile;
-        private @Nullable Output<List<ScriptActionArgs>> scriptActions;
-        private @Nullable Output<Integer> targetInstanceCount;
-        private @Nullable Output<String> vMGroupName;
-        private @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
+        private RoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleArgs();
         }
 
         public Builder(RoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaleConfiguration = defaults.autoscaleConfiguration;
-    	      this.dataDisksGroups = defaults.dataDisksGroups;
-    	      this.encryptDataDisks = defaults.encryptDataDisks;
-    	      this.hardwareProfile = defaults.hardwareProfile;
-    	      this.minInstanceCount = defaults.minInstanceCount;
-    	      this.name = defaults.name;
-    	      this.osProfile = defaults.osProfile;
-    	      this.scriptActions = defaults.scriptActions;
-    	      this.targetInstanceCount = defaults.targetInstanceCount;
-    	      this.vMGroupName = defaults.vMGroupName;
-    	      this.virtualNetworkProfile = defaults.virtualNetworkProfile;
+            $ = new RoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaleConfiguration(@Nullable Output<AutoscaleArgs> autoscaleConfiguration) {
-            this.autoscaleConfiguration = autoscaleConfiguration;
+            $.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
-        public Builder autoscaleConfiguration(@Nullable AutoscaleArgs autoscaleConfiguration) {
-            this.autoscaleConfiguration = Codegen.ofNullable(autoscaleConfiguration);
-            return this;
+
+        public Builder autoscaleConfiguration(AutoscaleArgs autoscaleConfiguration) {
+            return autoscaleConfiguration(Output.of(autoscaleConfiguration));
         }
+
         public Builder dataDisksGroups(@Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups) {
-            this.dataDisksGroups = dataDisksGroups;
+            $.dataDisksGroups = dataDisksGroups;
             return this;
         }
-        public Builder dataDisksGroups(@Nullable List<DataDisksGroupsArgs> dataDisksGroups) {
-            this.dataDisksGroups = Codegen.ofNullable(dataDisksGroups);
-            return this;
+
+        public Builder dataDisksGroups(List<DataDisksGroupsArgs> dataDisksGroups) {
+            return dataDisksGroups(Output.of(dataDisksGroups));
         }
+
         public Builder dataDisksGroups(DataDisksGroupsArgs... dataDisksGroups) {
             return dataDisksGroups(List.of(dataDisksGroups));
         }
+
         public Builder encryptDataDisks(@Nullable Output<Boolean> encryptDataDisks) {
-            this.encryptDataDisks = encryptDataDisks;
+            $.encryptDataDisks = encryptDataDisks;
             return this;
         }
-        public Builder encryptDataDisks(@Nullable Boolean encryptDataDisks) {
-            this.encryptDataDisks = Codegen.ofNullable(encryptDataDisks);
-            return this;
+
+        public Builder encryptDataDisks(Boolean encryptDataDisks) {
+            return encryptDataDisks(Output.of(encryptDataDisks));
         }
+
         public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
-            this.hardwareProfile = hardwareProfile;
+            $.hardwareProfile = hardwareProfile;
             return this;
         }
-        public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
-            this.hardwareProfile = Codegen.ofNullable(hardwareProfile);
-            return this;
+
+        public Builder hardwareProfile(HardwareProfileArgs hardwareProfile) {
+            return hardwareProfile(Output.of(hardwareProfile));
         }
+
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
-            this.minInstanceCount = minInstanceCount;
+            $.minInstanceCount = minInstanceCount;
             return this;
         }
-        public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
-            this.minInstanceCount = Codegen.ofNullable(minInstanceCount);
-            return this;
+
+        public Builder minInstanceCount(Integer minInstanceCount) {
+            return minInstanceCount(Output.of(minInstanceCount));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder osProfile(@Nullable Output<OsProfileArgs> osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
-        public Builder osProfile(@Nullable OsProfileArgs osProfile) {
-            this.osProfile = Codegen.ofNullable(osProfile);
-            return this;
+
+        public Builder osProfile(OsProfileArgs osProfile) {
+            return osProfile(Output.of(osProfile));
         }
+
         public Builder scriptActions(@Nullable Output<List<ScriptActionArgs>> scriptActions) {
-            this.scriptActions = scriptActions;
+            $.scriptActions = scriptActions;
             return this;
         }
-        public Builder scriptActions(@Nullable List<ScriptActionArgs> scriptActions) {
-            this.scriptActions = Codegen.ofNullable(scriptActions);
-            return this;
+
+        public Builder scriptActions(List<ScriptActionArgs> scriptActions) {
+            return scriptActions(Output.of(scriptActions));
         }
+
         public Builder scriptActions(ScriptActionArgs... scriptActions) {
             return scriptActions(List.of(scriptActions));
         }
+
         public Builder targetInstanceCount(@Nullable Output<Integer> targetInstanceCount) {
-            this.targetInstanceCount = targetInstanceCount;
+            $.targetInstanceCount = targetInstanceCount;
             return this;
         }
-        public Builder targetInstanceCount(@Nullable Integer targetInstanceCount) {
-            this.targetInstanceCount = Codegen.ofNullable(targetInstanceCount);
-            return this;
+
+        public Builder targetInstanceCount(Integer targetInstanceCount) {
+            return targetInstanceCount(Output.of(targetInstanceCount));
         }
+
         public Builder vMGroupName(@Nullable Output<String> vMGroupName) {
-            this.vMGroupName = vMGroupName;
+            $.vMGroupName = vMGroupName;
             return this;
         }
-        public Builder vMGroupName(@Nullable String vMGroupName) {
-            this.vMGroupName = Codegen.ofNullable(vMGroupName);
-            return this;
+
+        public Builder vMGroupName(String vMGroupName) {
+            return vMGroupName(Output.of(vMGroupName));
         }
+
         public Builder virtualNetworkProfile(@Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
-            this.virtualNetworkProfile = virtualNetworkProfile;
+            $.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
-        public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
-            this.virtualNetworkProfile = Codegen.ofNullable(virtualNetworkProfile);
-            return this;
-        }        public RoleArgs build() {
-            return new RoleArgs(autoscaleConfiguration, dataDisksGroups, encryptDataDisks, hardwareProfile, minInstanceCount, name, osProfile, scriptActions, targetInstanceCount, vMGroupName, virtualNetworkProfile);
+
+        public Builder virtualNetworkProfile(VirtualNetworkProfileArgs virtualNetworkProfile) {
+            return virtualNetworkProfile(Output.of(virtualNetworkProfile));
+        }
+
+        public RoleArgs build() {
+            $.encryptDataDisks = Codegen.booleanProp("encryptDataDisks").output().arg($.encryptDataDisks).def(false).getNullable();
+            return $;
         }
     }
+
 }

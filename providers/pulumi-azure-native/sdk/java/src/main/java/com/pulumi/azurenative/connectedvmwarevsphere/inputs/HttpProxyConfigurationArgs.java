@@ -5,9 +5,9 @@ package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class HttpProxyConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="httpsProxy")
-      private final @Nullable Output<String> httpsProxy;
+    private @Nullable Output<String> httpsProxy;
 
-    public Output<String> httpsProxy() {
-        return this.httpsProxy == null ? Codegen.empty() : this.httpsProxy;
+    public Optional<Output<String>> httpsProxy() {
+        return Optional.ofNullable(this.httpsProxy);
     }
 
-    public HttpProxyConfigurationArgs(@Nullable Output<String> httpsProxy) {
-        this.httpsProxy = httpsProxy;
-    }
+    private HttpProxyConfigurationArgs() {}
 
-    private HttpProxyConfigurationArgs() {
-        this.httpsProxy = Codegen.empty();
+    private HttpProxyConfigurationArgs(HttpProxyConfigurationArgs $) {
+        this.httpsProxy = $.httpsProxy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpProxyConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> httpsProxy;
+        private HttpProxyConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpProxyConfigurationArgs();
         }
 
         public Builder(HttpProxyConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpsProxy = defaults.httpsProxy;
+            $ = new HttpProxyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpsProxy(@Nullable Output<String> httpsProxy) {
-            this.httpsProxy = httpsProxy;
+            $.httpsProxy = httpsProxy;
             return this;
         }
-        public Builder httpsProxy(@Nullable String httpsProxy) {
-            this.httpsProxy = Codegen.ofNullable(httpsProxy);
-            return this;
-        }        public HttpProxyConfigurationArgs build() {
-            return new HttpProxyConfigurationArgs(httpsProxy);
+
+        public Builder httpsProxy(String httpsProxy) {
+            return httpsProxy(Output.of(httpsProxy));
+        }
+
+        public HttpProxyConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GrantConstraintArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="encryptionContextEquals")
-      private final @Nullable Output<Map<String,String>> encryptionContextEquals;
+    private @Nullable Output<Map<String,String>> encryptionContextEquals;
 
-    public Output<Map<String,String>> encryptionContextEquals() {
-        return this.encryptionContextEquals == null ? Codegen.empty() : this.encryptionContextEquals;
+    public Optional<Output<Map<String,String>>> encryptionContextEquals() {
+        return Optional.ofNullable(this.encryptionContextEquals);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class GrantConstraintArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="encryptionContextSubset")
-      private final @Nullable Output<Map<String,String>> encryptionContextSubset;
+    private @Nullable Output<Map<String,String>> encryptionContextSubset;
 
-    public Output<Map<String,String>> encryptionContextSubset() {
-        return this.encryptionContextSubset == null ? Codegen.empty() : this.encryptionContextSubset;
+    public Optional<Output<Map<String,String>>> encryptionContextSubset() {
+        return Optional.ofNullable(this.encryptionContextSubset);
     }
 
-    public GrantConstraintArgs(
-        @Nullable Output<Map<String,String>> encryptionContextEquals,
-        @Nullable Output<Map<String,String>> encryptionContextSubset) {
-        this.encryptionContextEquals = encryptionContextEquals;
-        this.encryptionContextSubset = encryptionContextSubset;
-    }
+    private GrantConstraintArgs() {}
 
-    private GrantConstraintArgs() {
-        this.encryptionContextEquals = Codegen.empty();
-        this.encryptionContextSubset = Codegen.empty();
+    private GrantConstraintArgs(GrantConstraintArgs $) {
+        this.encryptionContextEquals = $.encryptionContextEquals;
+        this.encryptionContextSubset = $.encryptionContextSubset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrantConstraintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> encryptionContextEquals;
-        private @Nullable Output<Map<String,String>> encryptionContextSubset;
+        private GrantConstraintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrantConstraintArgs();
         }
 
         public Builder(GrantConstraintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionContextEquals = defaults.encryptionContextEquals;
-    	      this.encryptionContextSubset = defaults.encryptionContextSubset;
+            $ = new GrantConstraintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionContextEquals(@Nullable Output<Map<String,String>> encryptionContextEquals) {
-            this.encryptionContextEquals = encryptionContextEquals;
+            $.encryptionContextEquals = encryptionContextEquals;
             return this;
         }
-        public Builder encryptionContextEquals(@Nullable Map<String,String> encryptionContextEquals) {
-            this.encryptionContextEquals = Codegen.ofNullable(encryptionContextEquals);
-            return this;
+
+        public Builder encryptionContextEquals(Map<String,String> encryptionContextEquals) {
+            return encryptionContextEquals(Output.of(encryptionContextEquals));
         }
+
         public Builder encryptionContextSubset(@Nullable Output<Map<String,String>> encryptionContextSubset) {
-            this.encryptionContextSubset = encryptionContextSubset;
+            $.encryptionContextSubset = encryptionContextSubset;
             return this;
         }
-        public Builder encryptionContextSubset(@Nullable Map<String,String> encryptionContextSubset) {
-            this.encryptionContextSubset = Codegen.ofNullable(encryptionContextSubset);
-            return this;
-        }        public GrantConstraintArgs build() {
-            return new GrantConstraintArgs(encryptionContextEquals, encryptionContextSubset);
+
+        public Builder encryptionContextSubset(Map<String,String> encryptionContextSubset) {
+            return encryptionContextSubset(Output.of(encryptionContextSubset));
+        }
+
+        public GrantConstraintArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,78 +21,70 @@ public final class AccessPolicyIdentity extends com.pulumi.resources.InvokeArgs 
     public static final AccessPolicyIdentity Empty = new AccessPolicyIdentity();
 
     @Import(name="iamRole")
-      private final @Nullable AccessPolicyIamRole iamRole;
+    private @Nullable AccessPolicyIamRole iamRole;
 
     public Optional<AccessPolicyIamRole> iamRole() {
-        return this.iamRole == null ? Optional.empty() : Optional.ofNullable(this.iamRole);
+        return Optional.ofNullable(this.iamRole);
     }
 
     @Import(name="iamUser")
-      private final @Nullable AccessPolicyIamUser iamUser;
+    private @Nullable AccessPolicyIamUser iamUser;
 
     public Optional<AccessPolicyIamUser> iamUser() {
-        return this.iamUser == null ? Optional.empty() : Optional.ofNullable(this.iamUser);
+        return Optional.ofNullable(this.iamUser);
     }
 
     @Import(name="user")
-      private final @Nullable AccessPolicyUser user;
+    private @Nullable AccessPolicyUser user;
 
     public Optional<AccessPolicyUser> user() {
-        return this.user == null ? Optional.empty() : Optional.ofNullable(this.user);
+        return Optional.ofNullable(this.user);
     }
 
-    public AccessPolicyIdentity(
-        @Nullable AccessPolicyIamRole iamRole,
-        @Nullable AccessPolicyIamUser iamUser,
-        @Nullable AccessPolicyUser user) {
-        this.iamRole = iamRole;
-        this.iamUser = iamUser;
-        this.user = user;
-    }
+    private AccessPolicyIdentity() {}
 
-    private AccessPolicyIdentity() {
-        this.iamRole = null;
-        this.iamUser = null;
-        this.user = null;
+    private AccessPolicyIdentity(AccessPolicyIdentity $) {
+        this.iamRole = $.iamRole;
+        this.iamUser = $.iamUser;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyIdentity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AccessPolicyIamRole iamRole;
-        private @Nullable AccessPolicyIamUser iamUser;
-        private @Nullable AccessPolicyUser user;
+        private AccessPolicyIdentity $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyIdentity();
         }
 
         public Builder(AccessPolicyIdentity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iamRole = defaults.iamRole;
-    	      this.iamUser = defaults.iamUser;
-    	      this.user = defaults.user;
+            $ = new AccessPolicyIdentity(Objects.requireNonNull(defaults));
         }
 
         public Builder iamRole(@Nullable AccessPolicyIamRole iamRole) {
-            this.iamRole = iamRole;
+            $.iamRole = iamRole;
             return this;
         }
+
         public Builder iamUser(@Nullable AccessPolicyIamUser iamUser) {
-            this.iamUser = iamUser;
+            $.iamUser = iamUser;
             return this;
         }
+
         public Builder user(@Nullable AccessPolicyUser user) {
-            this.user = user;
+            $.user = user;
             return this;
-        }        public AccessPolicyIdentity build() {
-            return new AccessPolicyIdentity(iamRole, iamUser, user);
+        }
+
+        public AccessPolicyIdentity build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class PipelineDatastoreArgs extends com.pulumi.resources.ResourceAr
     public static final PipelineDatastoreArgs Empty = new PipelineDatastoreArgs();
 
     @Import(name="datastoreName", required=true)
-      private final Output<String> datastoreName;
+    private Output<String> datastoreName;
 
     public Output<String> datastoreName() {
         return this.datastoreName;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public PipelineDatastoreArgs(
-        Output<String> datastoreName,
-        Output<String> name) {
-        this.datastoreName = Objects.requireNonNull(datastoreName, "expected parameter 'datastoreName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PipelineDatastoreArgs() {}
 
-    private PipelineDatastoreArgs() {
-        this.datastoreName = Codegen.empty();
-        this.name = Codegen.empty();
+    private PipelineDatastoreArgs(PipelineDatastoreArgs $) {
+        this.datastoreName = $.datastoreName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> datastoreName;
-        private Output<String> name;
+        private PipelineDatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDatastoreArgs();
         }
 
         public Builder(PipelineDatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.name = defaults.name;
+            $ = new PipelineDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreName(Output<String> datastoreName) {
-            this.datastoreName = Objects.requireNonNull(datastoreName);
+            $.datastoreName = datastoreName;
             return this;
         }
+
         public Builder datastoreName(String datastoreName) {
-            this.datastoreName = Output.of(Objects.requireNonNull(datastoreName));
-            return this;
+            return datastoreName(Output.of(datastoreName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public PipelineDatastoreArgs build() {
-            return new PipelineDatastoreArgs(datastoreName, name);
+            return name(Output.of(name));
+        }
+
+        public PipelineDatastoreArgs build() {
+            $.datastoreName = Objects.requireNonNull($.datastoreName, "expected parameter 'datastoreName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

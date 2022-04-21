@@ -22,7 +22,7 @@ public final class ClusterSelectorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="clusterLabels", required=true)
-      private final Map<String,String> clusterLabels;
+    private Map<String,String> clusterLabels;
 
     public Map<String,String> clusterLabels() {
         return this.clusterLabels;
@@ -33,55 +33,52 @@ public final class ClusterSelectorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public ClusterSelectorResponse(
-        Map<String,String> clusterLabels,
-        String zone) {
-        this.clusterLabels = Objects.requireNonNull(clusterLabels, "expected parameter 'clusterLabels' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private ClusterSelectorResponse() {}
 
-    private ClusterSelectorResponse() {
-        this.clusterLabels = Map.of();
-        this.zone = null;
+    private ClusterSelectorResponse(ClusterSelectorResponse $) {
+        this.clusterLabels = $.clusterLabels;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterSelectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> clusterLabels;
-        private String zone;
+        private ClusterSelectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterSelectorResponse();
         }
 
         public Builder(ClusterSelectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterLabels = defaults.clusterLabels;
-    	      this.zone = defaults.zone;
+            $ = new ClusterSelectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterLabels(Map<String,String> clusterLabels) {
-            this.clusterLabels = Objects.requireNonNull(clusterLabels);
+            $.clusterLabels = clusterLabels;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public ClusterSelectorResponse build() {
-            return new ClusterSelectorResponse(clusterLabels, zone);
+        }
+
+        public ClusterSelectorResponse build() {
+            $.clusterLabels = Objects.requireNonNull($.clusterLabels, "expected parameter 'clusterLabels' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mountPath", required=true)
-      private final String mountPath;
+    private String mountPath;
 
     public String mountPath() {
         return this.mountPath;
@@ -33,7 +33,7 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -44,7 +44,7 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="readOnly", required=true)
-      private final Boolean readOnly;
+    private Boolean readOnly;
 
     public Boolean readOnly() {
         return this.readOnly;
@@ -55,73 +55,66 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subPath", required=true)
-      private final String subPath;
+    private String subPath;
 
     public String subPath() {
         return this.subPath;
     }
 
-    public VolumeMountResponse(
-        String mountPath,
-        String name,
-        Boolean readOnly,
-        String subPath) {
-        this.mountPath = Objects.requireNonNull(mountPath, "expected parameter 'mountPath' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.readOnly = Objects.requireNonNull(readOnly, "expected parameter 'readOnly' to be non-null");
-        this.subPath = Objects.requireNonNull(subPath, "expected parameter 'subPath' to be non-null");
-    }
+    private VolumeMountResponse() {}
 
-    private VolumeMountResponse() {
-        this.mountPath = null;
-        this.name = null;
-        this.readOnly = null;
-        this.subPath = null;
+    private VolumeMountResponse(VolumeMountResponse $) {
+        this.mountPath = $.mountPath;
+        this.name = $.name;
+        this.readOnly = $.readOnly;
+        this.subPath = $.subPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeMountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mountPath;
-        private String name;
-        private Boolean readOnly;
-        private String subPath;
+        private VolumeMountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeMountResponse();
         }
 
         public Builder(VolumeMountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.name = defaults.name;
-    	      this.readOnly = defaults.readOnly;
-    	      this.subPath = defaults.subPath;
+            $ = new VolumeMountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(String mountPath) {
-            this.mountPath = Objects.requireNonNull(mountPath);
+            $.mountPath = mountPath;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder readOnly(Boolean readOnly) {
-            this.readOnly = Objects.requireNonNull(readOnly);
+            $.readOnly = readOnly;
             return this;
         }
+
         public Builder subPath(String subPath) {
-            this.subPath = Objects.requireNonNull(subPath);
+            $.subPath = subPath;
             return this;
-        }        public VolumeMountResponse build() {
-            return new VolumeMountResponse(mountPath, name, readOnly, subPath);
+        }
+
+        public VolumeMountResponse build() {
+            $.mountPath = Objects.requireNonNull($.mountPath, "expected parameter 'mountPath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.readOnly = Objects.requireNonNull($.readOnly, "expected parameter 'readOnly' to be non-null");
+            $.subPath = Objects.requireNonNull($.subPath, "expected parameter 'subPath' to be non-null");
+            return $;
         }
     }
+
 }

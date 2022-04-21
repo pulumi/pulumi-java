@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.SubnetworkLogConfigAggregationInterval;
 import com.pulumi.googlenative.compute_beta.enums.SubnetworkLogConfigMetadata;
 import java.lang.Boolean;
@@ -13,6 +12,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="aggregationInterval")
-      private final @Nullable Output<SubnetworkLogConfigAggregationInterval> aggregationInterval;
+    private @Nullable Output<SubnetworkLogConfigAggregationInterval> aggregationInterval;
 
-    public Output<SubnetworkLogConfigAggregationInterval> aggregationInterval() {
-        return this.aggregationInterval == null ? Codegen.empty() : this.aggregationInterval;
+    public Optional<Output<SubnetworkLogConfigAggregationInterval>> aggregationInterval() {
+        return Optional.ofNullable(this.aggregationInterval);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="filterExpr")
-      private final @Nullable Output<String> filterExpr;
+    private @Nullable Output<String> filterExpr;
 
-    public Output<String> filterExpr() {
-        return this.filterExpr == null ? Codegen.empty() : this.filterExpr;
+    public Optional<Output<String>> filterExpr() {
+        return Optional.ofNullable(this.filterExpr);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="flowSampling")
-      private final @Nullable Output<Double> flowSampling;
+    private @Nullable Output<Double> flowSampling;
 
-    public Output<Double> flowSampling() {
-        return this.flowSampling == null ? Codegen.empty() : this.flowSampling;
+    public Optional<Output<Double>> flowSampling() {
+        return Optional.ofNullable(this.flowSampling);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<SubnetworkLogConfigMetadata> metadata;
+    private @Nullable Output<SubnetworkLogConfigMetadata> metadata;
 
-    public Output<SubnetworkLogConfigMetadata> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<SubnetworkLogConfigMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -84,118 +84,102 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="metadataFields")
-      private final @Nullable Output<List<String>> metadataFields;
+    private @Nullable Output<List<String>> metadataFields;
 
-    public Output<List<String>> metadataFields() {
-        return this.metadataFields == null ? Codegen.empty() : this.metadataFields;
+    public Optional<Output<List<String>>> metadataFields() {
+        return Optional.ofNullable(this.metadataFields);
     }
 
-    public SubnetworkLogConfigArgs(
-        @Nullable Output<SubnetworkLogConfigAggregationInterval> aggregationInterval,
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<String> filterExpr,
-        @Nullable Output<Double> flowSampling,
-        @Nullable Output<SubnetworkLogConfigMetadata> metadata,
-        @Nullable Output<List<String>> metadataFields) {
-        this.aggregationInterval = aggregationInterval;
-        this.enable = enable;
-        this.filterExpr = filterExpr;
-        this.flowSampling = flowSampling;
-        this.metadata = metadata;
-        this.metadataFields = metadataFields;
-    }
+    private SubnetworkLogConfigArgs() {}
 
-    private SubnetworkLogConfigArgs() {
-        this.aggregationInterval = Codegen.empty();
-        this.enable = Codegen.empty();
-        this.filterExpr = Codegen.empty();
-        this.flowSampling = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.metadataFields = Codegen.empty();
+    private SubnetworkLogConfigArgs(SubnetworkLogConfigArgs $) {
+        this.aggregationInterval = $.aggregationInterval;
+        this.enable = $.enable;
+        this.filterExpr = $.filterExpr;
+        this.flowSampling = $.flowSampling;
+        this.metadata = $.metadata;
+        this.metadataFields = $.metadataFields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetworkLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubnetworkLogConfigAggregationInterval> aggregationInterval;
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<String> filterExpr;
-        private @Nullable Output<Double> flowSampling;
-        private @Nullable Output<SubnetworkLogConfigMetadata> metadata;
-        private @Nullable Output<List<String>> metadataFields;
+        private SubnetworkLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetworkLogConfigArgs();
         }
 
         public Builder(SubnetworkLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationInterval = defaults.aggregationInterval;
-    	      this.enable = defaults.enable;
-    	      this.filterExpr = defaults.filterExpr;
-    	      this.flowSampling = defaults.flowSampling;
-    	      this.metadata = defaults.metadata;
-    	      this.metadataFields = defaults.metadataFields;
+            $ = new SubnetworkLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationInterval(@Nullable Output<SubnetworkLogConfigAggregationInterval> aggregationInterval) {
-            this.aggregationInterval = aggregationInterval;
+            $.aggregationInterval = aggregationInterval;
             return this;
         }
-        public Builder aggregationInterval(@Nullable SubnetworkLogConfigAggregationInterval aggregationInterval) {
-            this.aggregationInterval = Codegen.ofNullable(aggregationInterval);
-            return this;
+
+        public Builder aggregationInterval(SubnetworkLogConfigAggregationInterval aggregationInterval) {
+            return aggregationInterval(Output.of(aggregationInterval));
         }
+
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder filterExpr(@Nullable Output<String> filterExpr) {
-            this.filterExpr = filterExpr;
+            $.filterExpr = filterExpr;
             return this;
         }
-        public Builder filterExpr(@Nullable String filterExpr) {
-            this.filterExpr = Codegen.ofNullable(filterExpr);
-            return this;
+
+        public Builder filterExpr(String filterExpr) {
+            return filterExpr(Output.of(filterExpr));
         }
+
         public Builder flowSampling(@Nullable Output<Double> flowSampling) {
-            this.flowSampling = flowSampling;
+            $.flowSampling = flowSampling;
             return this;
         }
-        public Builder flowSampling(@Nullable Double flowSampling) {
-            this.flowSampling = Codegen.ofNullable(flowSampling);
-            return this;
+
+        public Builder flowSampling(Double flowSampling) {
+            return flowSampling(Output.of(flowSampling));
         }
+
         public Builder metadata(@Nullable Output<SubnetworkLogConfigMetadata> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable SubnetworkLogConfigMetadata metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(SubnetworkLogConfigMetadata metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder metadataFields(@Nullable Output<List<String>> metadataFields) {
-            this.metadataFields = metadataFields;
+            $.metadataFields = metadataFields;
             return this;
         }
-        public Builder metadataFields(@Nullable List<String> metadataFields) {
-            this.metadataFields = Codegen.ofNullable(metadataFields);
-            return this;
+
+        public Builder metadataFields(List<String> metadataFields) {
+            return metadataFields(Output.of(metadataFields));
         }
+
         public Builder metadataFields(String... metadataFields) {
             return metadataFields(List.of(metadataFields));
-        }        public SubnetworkLogConfigArgs build() {
-            return new SubnetworkLogConfigArgs(aggregationInterval, enable, filterExpr, flowSampling, metadata, metadataFields);
+        }
+
+        public SubnetworkLogConfigArgs build() {
+            return $;
         }
     }
+
 }

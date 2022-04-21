@@ -13,45 +13,45 @@ public final class GetHealthCheckLogConfig extends com.pulumi.resources.InvokeAr
     public static final GetHealthCheckLogConfig Empty = new GetHealthCheckLogConfig();
 
     @Import(name="enable", required=true)
-      private final Boolean enable;
+    private Boolean enable;
 
     public Boolean enable() {
         return this.enable;
     }
 
-    public GetHealthCheckLogConfig(Boolean enable) {
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-    }
+    private GetHealthCheckLogConfig() {}
 
-    private GetHealthCheckLogConfig() {
-        this.enable = null;
+    private GetHealthCheckLogConfig(GetHealthCheckLogConfig $) {
+        this.enable = $.enable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHealthCheckLogConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enable;
+        private GetHealthCheckLogConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHealthCheckLogConfig();
         }
 
         public Builder(GetHealthCheckLogConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
+            $ = new GetHealthCheckLogConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
-        }        public GetHealthCheckLogConfig build() {
-            return new GetHealthCheckLogConfig(enable);
+        }
+
+        public GetHealthCheckLogConfig build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            return $;
         }
     }
+
 }

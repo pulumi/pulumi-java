@@ -17,7 +17,7 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="buildServiceName", required=true)
-      private final String buildServiceName;
+    private String buildServiceName;
 
     public String buildServiceName() {
         return this.buildServiceName;
@@ -28,7 +28,7 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="builderName", required=true)
-      private final String builderName;
+    private String builderName;
 
     public String builderName() {
         return this.builderName;
@@ -39,7 +39,7 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="buildpackBindingName", required=true)
-      private final String buildpackBindingName;
+    private String buildpackBindingName;
 
     public String buildpackBindingName() {
         return this.buildpackBindingName;
@@ -50,7 +50,7 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetBuildpackBindingArgs(
-        String buildServiceName,
-        String builderName,
-        String buildpackBindingName,
-        String resourceGroupName,
-        String serviceName) {
-        this.buildServiceName = Objects.requireNonNull(buildServiceName, "expected parameter 'buildServiceName' to be non-null");
-        this.builderName = Objects.requireNonNull(builderName, "expected parameter 'builderName' to be non-null");
-        this.buildpackBindingName = Objects.requireNonNull(buildpackBindingName, "expected parameter 'buildpackBindingName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetBuildpackBindingArgs() {}
 
-    private GetBuildpackBindingArgs() {
-        this.buildServiceName = null;
-        this.builderName = null;
-        this.buildpackBindingName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetBuildpackBindingArgs(GetBuildpackBindingArgs $) {
+        this.buildServiceName = $.buildServiceName;
+        this.builderName = $.builderName;
+        this.buildpackBindingName = $.buildpackBindingName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBuildpackBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String buildServiceName;
-        private String builderName;
-        private String buildpackBindingName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetBuildpackBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBuildpackBindingArgs();
         }
 
         public Builder(GetBuildpackBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildServiceName = defaults.buildServiceName;
-    	      this.builderName = defaults.builderName;
-    	      this.buildpackBindingName = defaults.buildpackBindingName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetBuildpackBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildServiceName(String buildServiceName) {
-            this.buildServiceName = Objects.requireNonNull(buildServiceName);
+            $.buildServiceName = buildServiceName;
             return this;
         }
+
         public Builder builderName(String builderName) {
-            this.builderName = Objects.requireNonNull(builderName);
+            $.builderName = builderName;
             return this;
         }
+
         public Builder buildpackBindingName(String buildpackBindingName) {
-            this.buildpackBindingName = Objects.requireNonNull(buildpackBindingName);
+            $.buildpackBindingName = buildpackBindingName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetBuildpackBindingArgs build() {
-            return new GetBuildpackBindingArgs(buildServiceName, builderName, buildpackBindingName, resourceGroupName, serviceName);
+        }
+
+        public GetBuildpackBindingArgs build() {
+            $.buildServiceName = Objects.requireNonNull($.buildServiceName, "expected parameter 'buildServiceName' to be non-null");
+            $.builderName = Objects.requireNonNull($.builderName, "expected parameter 'builderName' to be non-null");
+            $.buildpackBindingName = Objects.requireNonNull($.buildpackBindingName, "expected parameter 'buildpackBindingName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoCreateNetwork")
-      private final @Nullable Output<Boolean> autoCreateNetwork;
+    private @Nullable Output<Boolean> autoCreateNetwork;
 
-    public Output<Boolean> autoCreateNetwork() {
-        return this.autoCreateNetwork == null ? Codegen.empty() : this.autoCreateNetwork;
+    public Optional<Output<Boolean>> autoCreateNetwork() {
+        return Optional.ofNullable(this.autoCreateNetwork);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billingAccount")
-      private final @Nullable Output<String> billingAccount;
+    private @Nullable Output<String> billingAccount;
 
-    public Output<String> billingAccount() {
-        return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
+    public Optional<Output<String>> billingAccount() {
+        return Optional.ofNullable(this.billingAccount);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="folderId")
-      private final @Nullable Output<String> folderId;
+    private @Nullable Output<String> folderId;
 
-    public Output<String> folderId() {
-        return this.folderId == null ? Codegen.empty() : this.folderId;
+    public Optional<Output<String>> folderId() {
+        return Optional.ofNullable(this.folderId);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="number")
-      private final @Nullable Output<String> number;
+    private @Nullable Output<String> number;
 
-    public Output<String> number() {
-        return this.number == null ? Codegen.empty() : this.number;
+    public Optional<Output<String>> number() {
+        return Optional.ofNullable(this.number);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orgId")
-      private final @Nullable Output<String> orgId;
+    private @Nullable Output<String> orgId;
 
-    public Output<String> orgId() {
-        return this.orgId == null ? Codegen.empty() : this.orgId;
+    public Optional<Output<String>> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     /**
@@ -127,154 +127,128 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipDelete")
-      private final @Nullable Output<Boolean> skipDelete;
+    private @Nullable Output<Boolean> skipDelete;
 
-    public Output<Boolean> skipDelete() {
-        return this.skipDelete == null ? Codegen.empty() : this.skipDelete;
+    public Optional<Output<Boolean>> skipDelete() {
+        return Optional.ofNullable(this.skipDelete);
     }
 
-    public ProjectState(
-        @Nullable Output<Boolean> autoCreateNetwork,
-        @Nullable Output<String> billingAccount,
-        @Nullable Output<String> folderId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> number,
-        @Nullable Output<String> orgId,
-        @Nullable Output<String> projectId,
-        @Nullable Output<Boolean> skipDelete) {
-        this.autoCreateNetwork = autoCreateNetwork;
-        this.billingAccount = billingAccount;
-        this.folderId = folderId;
-        this.labels = labels;
-        this.name = name;
-        this.number = number;
-        this.orgId = orgId;
-        this.projectId = projectId;
-        this.skipDelete = skipDelete;
-    }
+    private ProjectState() {}
 
-    private ProjectState() {
-        this.autoCreateNetwork = Codegen.empty();
-        this.billingAccount = Codegen.empty();
-        this.folderId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.number = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.skipDelete = Codegen.empty();
+    private ProjectState(ProjectState $) {
+        this.autoCreateNetwork = $.autoCreateNetwork;
+        this.billingAccount = $.billingAccount;
+        this.folderId = $.folderId;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.number = $.number;
+        this.orgId = $.orgId;
+        this.projectId = $.projectId;
+        this.skipDelete = $.skipDelete;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoCreateNetwork;
-        private @Nullable Output<String> billingAccount;
-        private @Nullable Output<String> folderId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> number;
-        private @Nullable Output<String> orgId;
-        private @Nullable Output<String> projectId;
-        private @Nullable Output<Boolean> skipDelete;
+        private ProjectState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectState();
         }
 
         public Builder(ProjectState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoCreateNetwork = defaults.autoCreateNetwork;
-    	      this.billingAccount = defaults.billingAccount;
-    	      this.folderId = defaults.folderId;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.number = defaults.number;
-    	      this.orgId = defaults.orgId;
-    	      this.projectId = defaults.projectId;
-    	      this.skipDelete = defaults.skipDelete;
+            $ = new ProjectState(Objects.requireNonNull(defaults));
         }
 
         public Builder autoCreateNetwork(@Nullable Output<Boolean> autoCreateNetwork) {
-            this.autoCreateNetwork = autoCreateNetwork;
+            $.autoCreateNetwork = autoCreateNetwork;
             return this;
         }
-        public Builder autoCreateNetwork(@Nullable Boolean autoCreateNetwork) {
-            this.autoCreateNetwork = Codegen.ofNullable(autoCreateNetwork);
-            return this;
+
+        public Builder autoCreateNetwork(Boolean autoCreateNetwork) {
+            return autoCreateNetwork(Output.of(autoCreateNetwork));
         }
+
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
-            this.billingAccount = billingAccount;
+            $.billingAccount = billingAccount;
             return this;
         }
-        public Builder billingAccount(@Nullable String billingAccount) {
-            this.billingAccount = Codegen.ofNullable(billingAccount);
-            return this;
+
+        public Builder billingAccount(String billingAccount) {
+            return billingAccount(Output.of(billingAccount));
         }
+
         public Builder folderId(@Nullable Output<String> folderId) {
-            this.folderId = folderId;
+            $.folderId = folderId;
             return this;
         }
-        public Builder folderId(@Nullable String folderId) {
-            this.folderId = Codegen.ofNullable(folderId);
-            return this;
+
+        public Builder folderId(String folderId) {
+            return folderId(Output.of(folderId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder number(@Nullable Output<String> number) {
-            this.number = number;
+            $.number = number;
             return this;
         }
-        public Builder number(@Nullable String number) {
-            this.number = Codegen.ofNullable(number);
-            return this;
+
+        public Builder number(String number) {
+            return number(Output.of(number));
         }
+
         public Builder orgId(@Nullable Output<String> orgId) {
-            this.orgId = orgId;
+            $.orgId = orgId;
             return this;
         }
-        public Builder orgId(@Nullable String orgId) {
-            this.orgId = Codegen.ofNullable(orgId);
-            return this;
+
+        public Builder orgId(String orgId) {
+            return orgId(Output.of(orgId));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
         }
+
         public Builder skipDelete(@Nullable Output<Boolean> skipDelete) {
-            this.skipDelete = skipDelete;
+            $.skipDelete = skipDelete;
             return this;
         }
-        public Builder skipDelete(@Nullable Boolean skipDelete) {
-            this.skipDelete = Codegen.ofNullable(skipDelete);
-            return this;
-        }        public ProjectState build() {
-            return new ProjectState(autoCreateNetwork, billingAccount, folderId, labels, name, number, orgId, projectId, skipDelete);
+
+        public Builder skipDelete(Boolean skipDelete) {
+            return skipDelete(Output.of(skipDelete));
+        }
+
+        public ProjectState build() {
+            return $;
         }
     }
+
 }

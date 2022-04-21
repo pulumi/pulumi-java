@@ -6,10 +6,10 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteMatchMetadataMatchGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="invert")
-      private final @Nullable Output<Boolean> invert;
+    private @Nullable Output<Boolean> invert;
 
-    public Output<Boolean> invert() {
-        return this.invert == null ? Codegen.empty() : this.invert;
+    public Optional<Output<Boolean>> invert() {
+        return Optional.ofNullable(this.invert);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="match")
-      private final @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match;
+    private @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match;
 
-    public Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match() {
-        return this.match == null ? Codegen.empty() : this.match;
+    public Optional<Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs>> match() {
+        return Optional.ofNullable(this.match);
     }
 
     /**
@@ -44,76 +44,69 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public RouteSpecGrpcRouteMatchMetadataGetArgs(
-        @Nullable Output<Boolean> invert,
-        @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match,
-        Output<String> name) {
-        this.invert = invert;
-        this.match = match;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private RouteSpecGrpcRouteMatchMetadataGetArgs() {}
 
-    private RouteSpecGrpcRouteMatchMetadataGetArgs() {
-        this.invert = Codegen.empty();
-        this.match = Codegen.empty();
-        this.name = Codegen.empty();
+    private RouteSpecGrpcRouteMatchMetadataGetArgs(RouteSpecGrpcRouteMatchMetadataGetArgs $) {
+        this.invert = $.invert;
+        this.match = $.match;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecGrpcRouteMatchMetadataGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> invert;
-        private @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match;
-        private Output<String> name;
+        private RouteSpecGrpcRouteMatchMetadataGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecGrpcRouteMatchMetadataGetArgs();
         }
 
         public Builder(RouteSpecGrpcRouteMatchMetadataGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.invert = defaults.invert;
-    	      this.match = defaults.match;
-    	      this.name = defaults.name;
+            $ = new RouteSpecGrpcRouteMatchMetadataGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder invert(@Nullable Output<Boolean> invert) {
-            this.invert = invert;
+            $.invert = invert;
             return this;
         }
-        public Builder invert(@Nullable Boolean invert) {
-            this.invert = Codegen.ofNullable(invert);
-            return this;
+
+        public Builder invert(Boolean invert) {
+            return invert(Output.of(invert));
         }
+
         public Builder match(@Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match) {
-            this.match = match;
+            $.match = match;
             return this;
         }
-        public Builder match(@Nullable RouteSpecGrpcRouteMatchMetadataMatchGetArgs match) {
-            this.match = Codegen.ofNullable(match);
-            return this;
+
+        public Builder match(RouteSpecGrpcRouteMatchMetadataMatchGetArgs match) {
+            return match(Output.of(match));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public RouteSpecGrpcRouteMatchMetadataGetArgs build() {
-            return new RouteSpecGrpcRouteMatchMetadataGetArgs(invert, match, name);
+            return name(Output.of(name));
+        }
+
+        public RouteSpecGrpcRouteMatchMetadataGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

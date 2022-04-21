@@ -21,45 +21,45 @@ public final class ControlResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environment", required=true)
-      private final String environment;
+    private String environment;
 
     public String environment() {
         return this.environment;
     }
 
-    public ControlResponse(String environment) {
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-    }
+    private ControlResponse() {}
 
-    private ControlResponse() {
-        this.environment = null;
+    private ControlResponse(ControlResponse $) {
+        this.environment = $.environment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ControlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environment;
+        private ControlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ControlResponse();
         }
 
         public Builder(ControlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environment = defaults.environment;
+            $ = new ControlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder environment(String environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
-        }        public ControlResponse build() {
-            return new ControlResponse(environment);
+        }
+
+        public ControlResponse build() {
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            return $;
         }
     }
+
 }

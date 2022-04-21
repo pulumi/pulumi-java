@@ -21,7 +21,7 @@ public final class ContainerImageResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="repository", required=true)
-      private final String repository;
+    private String repository;
 
     public String repository() {
         return this.repository;
@@ -32,55 +32,52 @@ public final class ContainerImageResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
     }
 
-    public ContainerImageResponse(
-        String repository,
-        String tag) {
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-    }
+    private ContainerImageResponse() {}
 
-    private ContainerImageResponse() {
-        this.repository = null;
-        this.tag = null;
+    private ContainerImageResponse(ContainerImageResponse $) {
+        this.repository = $.repository;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String repository;
-        private String tag;
+        private ContainerImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerImageResponse();
         }
 
         public Builder(ContainerImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repository = defaults.repository;
-    	      this.tag = defaults.tag;
+            $ = new ContainerImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder repository(String repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
-        }        public ContainerImageResponse build() {
-            return new ContainerImageResponse(repository, tag);
+        }
+
+        public ContainerImageResponse build() {
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            return $;
         }
     }
+
 }

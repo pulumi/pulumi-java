@@ -17,68 +17,65 @@ public final class JobStatisticsConfiguration extends com.pulumi.resources.Invok
     public static final JobStatisticsConfiguration Empty = new JobStatisticsConfiguration();
 
     @Import(name="includedStatistics")
-      private final @Nullable List<String> includedStatistics;
+    private @Nullable List<String> includedStatistics;
 
-    public List<String> includedStatistics() {
-        return this.includedStatistics == null ? List.of() : this.includedStatistics;
+    public Optional<List<String>> includedStatistics() {
+        return Optional.ofNullable(this.includedStatistics);
     }
 
     @Import(name="overrides")
-      private final @Nullable List<JobStatisticOverride> overrides;
+    private @Nullable List<JobStatisticOverride> overrides;
 
-    public List<JobStatisticOverride> overrides() {
-        return this.overrides == null ? List.of() : this.overrides;
+    public Optional<List<JobStatisticOverride>> overrides() {
+        return Optional.ofNullable(this.overrides);
     }
 
-    public JobStatisticsConfiguration(
-        @Nullable List<String> includedStatistics,
-        @Nullable List<JobStatisticOverride> overrides) {
-        this.includedStatistics = includedStatistics;
-        this.overrides = overrides;
-    }
+    private JobStatisticsConfiguration() {}
 
-    private JobStatisticsConfiguration() {
-        this.includedStatistics = List.of();
-        this.overrides = List.of();
+    private JobStatisticsConfiguration(JobStatisticsConfiguration $) {
+        this.includedStatistics = $.includedStatistics;
+        this.overrides = $.overrides;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatisticsConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> includedStatistics;
-        private @Nullable List<JobStatisticOverride> overrides;
+        private JobStatisticsConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatisticsConfiguration();
         }
 
         public Builder(JobStatisticsConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includedStatistics = defaults.includedStatistics;
-    	      this.overrides = defaults.overrides;
+            $ = new JobStatisticsConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder includedStatistics(@Nullable List<String> includedStatistics) {
-            this.includedStatistics = includedStatistics;
+            $.includedStatistics = includedStatistics;
             return this;
         }
+
         public Builder includedStatistics(String... includedStatistics) {
             return includedStatistics(List.of(includedStatistics));
         }
+
         public Builder overrides(@Nullable List<JobStatisticOverride> overrides) {
-            this.overrides = overrides;
+            $.overrides = overrides;
             return this;
         }
+
         public Builder overrides(JobStatisticOverride... overrides) {
             return overrides(List.of(overrides));
-        }        public JobStatisticsConfiguration build() {
-            return new JobStatisticsConfiguration(includedStatistics, overrides);
+        }
+
+        public JobStatisticsConfiguration build() {
+            return $;
         }
     }
+
 }

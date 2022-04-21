@@ -24,10 +24,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="containedResources")
-      private final @Nullable List<String> containedResources;
+    private @Nullable List<String> containedResources;
 
-    public List<String> containedResources() {
-        return this.containedResources == null ? List.of() : this.containedResources;
+    public Optional<List<String>> containedResources() {
+        return Optional.ofNullable(this.containedResources);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -46,10 +46,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="referencedResources")
-      private final @Nullable List<String> referencedResources;
+    private @Nullable List<String> referencedResources;
 
-    public List<String> referencedResources() {
-        return this.referencedResources == null ? List.of() : this.referencedResources;
+    public Optional<List<String>> referencedResources() {
+        return Optional.ofNullable(this.referencedResources);
     }
 
     /**
@@ -57,79 +57,72 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="workspaceResourceId", required=true)
-      private final String workspaceResourceId;
+    private String workspaceResourceId;
 
     public String workspaceResourceId() {
         return this.workspaceResourceId;
     }
 
-    public SolutionPropertiesResponse(
-        @Nullable List<String> containedResources,
-        String provisioningState,
-        @Nullable List<String> referencedResources,
-        String workspaceResourceId) {
-        this.containedResources = containedResources;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.referencedResources = referencedResources;
-        this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId, "expected parameter 'workspaceResourceId' to be non-null");
-    }
+    private SolutionPropertiesResponse() {}
 
-    private SolutionPropertiesResponse() {
-        this.containedResources = List.of();
-        this.provisioningState = null;
-        this.referencedResources = List.of();
-        this.workspaceResourceId = null;
+    private SolutionPropertiesResponse(SolutionPropertiesResponse $) {
+        this.containedResources = $.containedResources;
+        this.provisioningState = $.provisioningState;
+        this.referencedResources = $.referencedResources;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SolutionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> containedResources;
-        private String provisioningState;
-        private @Nullable List<String> referencedResources;
-        private String workspaceResourceId;
+        private SolutionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SolutionPropertiesResponse();
         }
 
         public Builder(SolutionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containedResources = defaults.containedResources;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.referencedResources = defaults.referencedResources;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new SolutionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containedResources(@Nullable List<String> containedResources) {
-            this.containedResources = containedResources;
+            $.containedResources = containedResources;
             return this;
         }
+
         public Builder containedResources(String... containedResources) {
             return containedResources(List.of(containedResources));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder referencedResources(@Nullable List<String> referencedResources) {
-            this.referencedResources = referencedResources;
+            $.referencedResources = referencedResources;
             return this;
         }
+
         public Builder referencedResources(String... referencedResources) {
             return referencedResources(List.of(referencedResources));
         }
+
         public Builder workspaceResourceId(String workspaceResourceId) {
-            this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId);
+            $.workspaceResourceId = workspaceResourceId;
             return this;
-        }        public SolutionPropertiesResponse build() {
-            return new SolutionPropertiesResponse(containedResources, provisioningState, referencedResources, workspaceResourceId);
+        }
+
+        public SolutionPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.workspaceResourceId = Objects.requireNonNull($.workspaceResourceId, "expected parameter 'workspaceResourceId' to be non-null");
+            return $;
         }
     }
+
 }

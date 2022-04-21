@@ -23,10 +23,10 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends com.
      * 
      */
     @Import(name="maxCapacity")
-      private final @Nullable Integer maxCapacity;
+    private @Nullable Integer maxCapacity;
 
     public Optional<Integer> maxCapacity() {
-        return this.maxCapacity == null ? Optional.empty() : Optional.ofNullable(this.maxCapacity);
+        return Optional.ofNullable(this.maxCapacity);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends com.
      * 
      */
     @Import(name="minCapacity", required=true)
-      private final Integer minCapacity;
+    private Integer minCapacity;
 
     public Integer minCapacity() {
         return this.minCapacity;
     }
 
-    public ApplicationGatewayAutoscaleConfigurationResponse(
-        @Nullable Integer maxCapacity,
-        Integer minCapacity) {
-        this.maxCapacity = maxCapacity;
-        this.minCapacity = Objects.requireNonNull(minCapacity, "expected parameter 'minCapacity' to be non-null");
-    }
+    private ApplicationGatewayAutoscaleConfigurationResponse() {}
 
-    private ApplicationGatewayAutoscaleConfigurationResponse() {
-        this.maxCapacity = null;
-        this.minCapacity = null;
+    private ApplicationGatewayAutoscaleConfigurationResponse(ApplicationGatewayAutoscaleConfigurationResponse $) {
+        this.maxCapacity = $.maxCapacity;
+        this.minCapacity = $.minCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayAutoscaleConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxCapacity;
-        private Integer minCapacity;
+        private ApplicationGatewayAutoscaleConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayAutoscaleConfigurationResponse();
         }
 
         public Builder(ApplicationGatewayAutoscaleConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxCapacity = defaults.maxCapacity;
-    	      this.minCapacity = defaults.minCapacity;
+            $ = new ApplicationGatewayAutoscaleConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = maxCapacity;
+            $.maxCapacity = maxCapacity;
             return this;
         }
+
         public Builder minCapacity(Integer minCapacity) {
-            this.minCapacity = Objects.requireNonNull(minCapacity);
+            $.minCapacity = minCapacity;
             return this;
-        }        public ApplicationGatewayAutoscaleConfigurationResponse build() {
-            return new ApplicationGatewayAutoscaleConfigurationResponse(maxCapacity, minCapacity);
+        }
+
+        public ApplicationGatewayAutoscaleConfigurationResponse build() {
+            $.minCapacity = Objects.requireNonNull($.minCapacity, "expected parameter 'minCapacity' to be non-null");
+            return $;
         }
     }
+
 }

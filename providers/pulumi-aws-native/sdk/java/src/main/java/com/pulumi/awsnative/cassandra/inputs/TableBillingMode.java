@@ -16,62 +16,58 @@ public final class TableBillingMode extends com.pulumi.resources.InvokeArgs {
     public static final TableBillingMode Empty = new TableBillingMode();
 
     @Import(name="mode", required=true)
-      private final TableMode mode;
+    private TableMode mode;
 
     public TableMode mode() {
         return this.mode;
     }
 
     @Import(name="provisionedThroughput")
-      private final @Nullable TableProvisionedThroughput provisionedThroughput;
+    private @Nullable TableProvisionedThroughput provisionedThroughput;
 
     public Optional<TableProvisionedThroughput> provisionedThroughput() {
-        return this.provisionedThroughput == null ? Optional.empty() : Optional.ofNullable(this.provisionedThroughput);
+        return Optional.ofNullable(this.provisionedThroughput);
     }
 
-    public TableBillingMode(
-        TableMode mode,
-        @Nullable TableProvisionedThroughput provisionedThroughput) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.provisionedThroughput = provisionedThroughput;
-    }
+    private TableBillingMode() {}
 
-    private TableBillingMode() {
-        this.mode = null;
-        this.provisionedThroughput = null;
+    private TableBillingMode(TableBillingMode $) {
+        this.mode = $.mode;
+        this.provisionedThroughput = $.provisionedThroughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableBillingMode defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TableMode mode;
-        private @Nullable TableProvisionedThroughput provisionedThroughput;
+        private TableBillingMode $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableBillingMode();
         }
 
         public Builder(TableBillingMode defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.provisionedThroughput = defaults.provisionedThroughput;
+            $ = new TableBillingMode(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(TableMode mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder provisionedThroughput(@Nullable TableProvisionedThroughput provisionedThroughput) {
-            this.provisionedThroughput = provisionedThroughput;
+            $.provisionedThroughput = provisionedThroughput;
             return this;
-        }        public TableBillingMode build() {
-            return new TableBillingMode(mode, provisionedThroughput);
+        }
+
+        public TableBillingMode build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

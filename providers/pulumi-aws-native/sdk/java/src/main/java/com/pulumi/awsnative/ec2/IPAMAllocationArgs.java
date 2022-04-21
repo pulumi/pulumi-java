@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,17 +17,17 @@ public final class IPAMAllocationArgs extends com.pulumi.resources.ResourceArgs 
     public static final IPAMAllocationArgs Empty = new IPAMAllocationArgs();
 
     @Import(name="cidr")
-      private final @Nullable Output<String> cidr;
+    private @Nullable Output<String> cidr;
 
-    public Output<String> cidr() {
-        return this.cidr == null ? Codegen.empty() : this.cidr;
+    public Optional<Output<String>> cidr() {
+        return Optional.ofNullable(this.cidr);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class IPAMAllocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ipamPoolId", required=true)
-      private final Output<String> ipamPoolId;
+    private Output<String> ipamPoolId;
 
     public Output<String> ipamPoolId() {
         return this.ipamPoolId;
@@ -46,89 +46,79 @@ public final class IPAMAllocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="netmaskLength")
-      private final @Nullable Output<Integer> netmaskLength;
+    private @Nullable Output<Integer> netmaskLength;
 
-    public Output<Integer> netmaskLength() {
-        return this.netmaskLength == null ? Codegen.empty() : this.netmaskLength;
+    public Optional<Output<Integer>> netmaskLength() {
+        return Optional.ofNullable(this.netmaskLength);
     }
 
-    public IPAMAllocationArgs(
-        @Nullable Output<String> cidr,
-        @Nullable Output<String> description,
-        Output<String> ipamPoolId,
-        @Nullable Output<Integer> netmaskLength) {
-        this.cidr = cidr;
-        this.description = description;
-        this.ipamPoolId = Objects.requireNonNull(ipamPoolId, "expected parameter 'ipamPoolId' to be non-null");
-        this.netmaskLength = netmaskLength;
-    }
+    private IPAMAllocationArgs() {}
 
-    private IPAMAllocationArgs() {
-        this.cidr = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ipamPoolId = Codegen.empty();
-        this.netmaskLength = Codegen.empty();
+    private IPAMAllocationArgs(IPAMAllocationArgs $) {
+        this.cidr = $.cidr;
+        this.description = $.description;
+        this.ipamPoolId = $.ipamPoolId;
+        this.netmaskLength = $.netmaskLength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPAMAllocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cidr;
-        private @Nullable Output<String> description;
-        private Output<String> ipamPoolId;
-        private @Nullable Output<Integer> netmaskLength;
+        private IPAMAllocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPAMAllocationArgs();
         }
 
         public Builder(IPAMAllocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.description = defaults.description;
-    	      this.ipamPoolId = defaults.ipamPoolId;
-    	      this.netmaskLength = defaults.netmaskLength;
+            $ = new IPAMAllocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(@Nullable Output<String> cidr) {
-            this.cidr = cidr;
+            $.cidr = cidr;
             return this;
         }
-        public Builder cidr(@Nullable String cidr) {
-            this.cidr = Codegen.ofNullable(cidr);
-            return this;
+
+        public Builder cidr(String cidr) {
+            return cidr(Output.of(cidr));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ipamPoolId(Output<String> ipamPoolId) {
-            this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
+            $.ipamPoolId = ipamPoolId;
             return this;
         }
+
         public Builder ipamPoolId(String ipamPoolId) {
-            this.ipamPoolId = Output.of(Objects.requireNonNull(ipamPoolId));
-            return this;
+            return ipamPoolId(Output.of(ipamPoolId));
         }
+
         public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
-            this.netmaskLength = netmaskLength;
+            $.netmaskLength = netmaskLength;
             return this;
         }
-        public Builder netmaskLength(@Nullable Integer netmaskLength) {
-            this.netmaskLength = Codegen.ofNullable(netmaskLength);
-            return this;
-        }        public IPAMAllocationArgs build() {
-            return new IPAMAllocationArgs(cidr, description, ipamPoolId, netmaskLength);
+
+        public Builder netmaskLength(Integer netmaskLength) {
+            return netmaskLength(Output.of(netmaskLength));
+        }
+
+        public IPAMAllocationArgs build() {
+            $.ipamPoolId = Objects.requireNonNull($.ipamPoolId, "expected parameter 'ipamPoolId' to be non-null");
+            return $;
         }
     }
+
 }

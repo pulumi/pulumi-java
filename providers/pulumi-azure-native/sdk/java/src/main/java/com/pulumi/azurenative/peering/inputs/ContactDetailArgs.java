@@ -7,9 +7,9 @@ import com.pulumi.azurenative.peering.enums.Role;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ContactDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContactDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phone")
-      private final @Nullable Output<String> phone;
+    private @Nullable Output<String> phone;
 
-    public Output<String> phone() {
-        return this.phone == null ? Codegen.empty() : this.phone;
+    public Optional<Output<String>> phone() {
+        return Optional.ofNullable(this.phone);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ContactDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<Either<String,Role>> role;
+    private @Nullable Output<Either<String,Role>> role;
 
-    public Output<Either<String,Role>> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<Either<String,Role>>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public ContactDetailArgs(
-        @Nullable Output<String> email,
-        @Nullable Output<String> phone,
-        @Nullable Output<Either<String,Role>> role) {
-        this.email = email;
-        this.phone = phone;
-        this.role = role;
-    }
+    private ContactDetailArgs() {}
 
-    private ContactDetailArgs() {
-        this.email = Codegen.empty();
-        this.phone = Codegen.empty();
-        this.role = Codegen.empty();
+    private ContactDetailArgs(ContactDetailArgs $) {
+        this.email = $.email;
+        this.phone = $.phone;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactDetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> phone;
-        private @Nullable Output<Either<String,Role>> role;
+        private ContactDetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactDetailArgs();
         }
 
         public Builder(ContactDetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.phone = defaults.phone;
-    	      this.role = defaults.role;
+            $ = new ContactDetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder phone(@Nullable Output<String> phone) {
-            this.phone = phone;
+            $.phone = phone;
             return this;
         }
-        public Builder phone(@Nullable String phone) {
-            this.phone = Codegen.ofNullable(phone);
-            return this;
+
+        public Builder phone(String phone) {
+            return phone(Output.of(phone));
         }
+
         public Builder role(@Nullable Output<Either<String,Role>> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable Either<String,Role> role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public ContactDetailArgs build() {
-            return new ContactDetailArgs(email, phone, role);
+
+        public Builder role(Either<String,Role> role) {
+            return role(Output.of(role));
+        }
+
+        public ContactDetailArgs build() {
+            return $;
         }
     }
+
 }

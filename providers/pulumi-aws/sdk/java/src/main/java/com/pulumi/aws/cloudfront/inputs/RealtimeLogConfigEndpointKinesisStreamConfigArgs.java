@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfigArgs extends com.
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -31,63 +30,60 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfigArgs extends com.
      * 
      */
     @Import(name="streamArn", required=true)
-      private final Output<String> streamArn;
+    private Output<String> streamArn;
 
     public Output<String> streamArn() {
         return this.streamArn;
     }
 
-    public RealtimeLogConfigEndpointKinesisStreamConfigArgs(
-        Output<String> roleArn,
-        Output<String> streamArn) {
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.streamArn = Objects.requireNonNull(streamArn, "expected parameter 'streamArn' to be non-null");
-    }
+    private RealtimeLogConfigEndpointKinesisStreamConfigArgs() {}
 
-    private RealtimeLogConfigEndpointKinesisStreamConfigArgs() {
-        this.roleArn = Codegen.empty();
-        this.streamArn = Codegen.empty();
+    private RealtimeLogConfigEndpointKinesisStreamConfigArgs(RealtimeLogConfigEndpointKinesisStreamConfigArgs $) {
+        this.roleArn = $.roleArn;
+        this.streamArn = $.streamArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RealtimeLogConfigEndpointKinesisStreamConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> roleArn;
-        private Output<String> streamArn;
+        private RealtimeLogConfigEndpointKinesisStreamConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RealtimeLogConfigEndpointKinesisStreamConfigArgs();
         }
 
         public Builder(RealtimeLogConfigEndpointKinesisStreamConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.streamArn = defaults.streamArn;
+            $ = new RealtimeLogConfigEndpointKinesisStreamConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder streamArn(Output<String> streamArn) {
-            this.streamArn = Objects.requireNonNull(streamArn);
+            $.streamArn = streamArn;
             return this;
         }
+
         public Builder streamArn(String streamArn) {
-            this.streamArn = Output.of(Objects.requireNonNull(streamArn));
-            return this;
-        }        public RealtimeLogConfigEndpointKinesisStreamConfigArgs build() {
-            return new RealtimeLogConfigEndpointKinesisStreamConfigArgs(roleArn, streamArn);
+            return streamArn(Output.of(streamArn));
+        }
+
+        public RealtimeLogConfigEndpointKinesisStreamConfigArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.streamArn = Objects.requireNonNull($.streamArn, "expected parameter 'streamArn' to be non-null");
+            return $;
         }
     }
+
 }

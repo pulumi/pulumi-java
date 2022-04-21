@@ -17,7 +17,7 @@ public final class GetBotAssociationLexBot extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="lexRegion", required=true)
-      private final String lexRegion;
+    private String lexRegion;
 
     public String lexRegion() {
         return this.lexRegion;
@@ -28,55 +28,52 @@ public final class GetBotAssociationLexBot extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetBotAssociationLexBot(
-        String lexRegion,
-        String name) {
-        this.lexRegion = Objects.requireNonNull(lexRegion, "expected parameter 'lexRegion' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetBotAssociationLexBot() {}
 
-    private GetBotAssociationLexBot() {
-        this.lexRegion = null;
-        this.name = null;
+    private GetBotAssociationLexBot(GetBotAssociationLexBot $) {
+        this.lexRegion = $.lexRegion;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBotAssociationLexBot defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lexRegion;
-        private String name;
+        private GetBotAssociationLexBot $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBotAssociationLexBot();
         }
 
         public Builder(GetBotAssociationLexBot defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lexRegion = defaults.lexRegion;
-    	      this.name = defaults.name;
+            $ = new GetBotAssociationLexBot(Objects.requireNonNull(defaults));
         }
 
         public Builder lexRegion(String lexRegion) {
-            this.lexRegion = Objects.requireNonNull(lexRegion);
+            $.lexRegion = lexRegion;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetBotAssociationLexBot build() {
-            return new GetBotAssociationLexBot(lexRegion, name);
+        }
+
+        public GetBotAssociationLexBot build() {
+            $.lexRegion = Objects.requireNonNull($.lexRegion, "expected parameter 'lexRegion' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

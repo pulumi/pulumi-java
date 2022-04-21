@@ -23,45 +23,44 @@ public final class WebTestGeolocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
-    public WebTestGeolocationResponse(@Nullable String location) {
-        this.location = location;
-    }
+    private WebTestGeolocationResponse() {}
 
-    private WebTestGeolocationResponse() {
-        this.location = null;
+    private WebTestGeolocationResponse(WebTestGeolocationResponse $) {
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebTestGeolocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String location;
+        private WebTestGeolocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebTestGeolocationResponse();
         }
 
         public Builder(WebTestGeolocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
+            $ = new WebTestGeolocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
-        }        public WebTestGeolocationResponse build() {
-            return new WebTestGeolocationResponse(location);
+        }
+
+        public WebTestGeolocationResponse build() {
+            return $;
         }
     }
+
 }

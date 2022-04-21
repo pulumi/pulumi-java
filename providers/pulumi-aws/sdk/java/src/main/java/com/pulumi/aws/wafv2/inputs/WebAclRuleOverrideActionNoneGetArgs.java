@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleOverrideActionNoneGetArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleOverrideActionNoneGetArgs Empty = new WebAclRuleOverrideActionNoneGetArgs();
 
-    public WebAclRuleOverrideActionNoneGetArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleOverrideActionNoneGetArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleOverrideActionNoneGetArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleOverrideActionNoneGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleOverrideActionNoneGetArgs();
         }
         public WebAclRuleOverrideActionNoneGetArgs build() {
-            return new WebAclRuleOverrideActionNoneGetArgs();
+            return $;
         }
     }
+
 }

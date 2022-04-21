@@ -5,10 +5,10 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.gkehub.inputs.FeatureStateStateGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class FeatureStateGetArgs extends com.pulumi.resources.ResourceArgs
     public static final FeatureStateGetArgs Empty = new FeatureStateGetArgs();
 
     @Import(name="states")
-      private final @Nullable Output<List<FeatureStateStateGetArgs>> states;
+    private @Nullable Output<List<FeatureStateStateGetArgs>> states;
 
-    public Output<List<FeatureStateStateGetArgs>> states() {
-        return this.states == null ? Codegen.empty() : this.states;
+    public Optional<Output<List<FeatureStateStateGetArgs>>> states() {
+        return Optional.ofNullable(this.states);
     }
 
-    public FeatureStateGetArgs(@Nullable Output<List<FeatureStateStateGetArgs>> states) {
-        this.states = states;
-    }
+    private FeatureStateGetArgs() {}
 
-    private FeatureStateGetArgs() {
-        this.states = Codegen.empty();
+    private FeatureStateGetArgs(FeatureStateGetArgs $) {
+        this.states = $.states;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureStateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FeatureStateStateGetArgs>> states;
+        private FeatureStateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureStateGetArgs();
         }
 
         public Builder(FeatureStateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.states = defaults.states;
+            $ = new FeatureStateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder states(@Nullable Output<List<FeatureStateStateGetArgs>> states) {
-            this.states = states;
+            $.states = states;
             return this;
         }
-        public Builder states(@Nullable List<FeatureStateStateGetArgs> states) {
-            this.states = Codegen.ofNullable(states);
-            return this;
+
+        public Builder states(List<FeatureStateStateGetArgs> states) {
+            return states(Output.of(states));
         }
+
         public Builder states(FeatureStateStateGetArgs... states) {
             return states(List.of(states));
-        }        public FeatureStateGetArgs build() {
-            return new FeatureStateGetArgs(states);
+        }
+
+        public FeatureStateGetArgs build() {
+            return $;
         }
     }
+
 }

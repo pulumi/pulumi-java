@@ -5,9 +5,9 @@ package com.pulumi.gcp.networkconnectivity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceArgs extends com.p
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceArgs extends com.p
      * 
      */
     @Import(name="virtualMachine")
-      private final @Nullable Output<String> virtualMachine;
+    private @Nullable Output<String> virtualMachine;
 
-    public Output<String> virtualMachine() {
-        return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
+    public Optional<Output<String>> virtualMachine() {
+        return Optional.ofNullable(this.virtualMachine);
     }
 
-    public SpokeLinkedRouterApplianceInstancesInstanceArgs(
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> virtualMachine) {
-        this.ipAddress = ipAddress;
-        this.virtualMachine = virtualMachine;
-    }
+    private SpokeLinkedRouterApplianceInstancesInstanceArgs() {}
 
-    private SpokeLinkedRouterApplianceInstancesInstanceArgs() {
-        this.ipAddress = Codegen.empty();
-        this.virtualMachine = Codegen.empty();
+    private SpokeLinkedRouterApplianceInstancesInstanceArgs(SpokeLinkedRouterApplianceInstancesInstanceArgs $) {
+        this.ipAddress = $.ipAddress;
+        this.virtualMachine = $.virtualMachine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpokeLinkedRouterApplianceInstancesInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> virtualMachine;
+        private SpokeLinkedRouterApplianceInstancesInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpokeLinkedRouterApplianceInstancesInstanceArgs();
         }
 
         public Builder(SpokeLinkedRouterApplianceInstancesInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.virtualMachine = defaults.virtualMachine;
+            $ = new SpokeLinkedRouterApplianceInstancesInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder virtualMachine(@Nullable Output<String> virtualMachine) {
-            this.virtualMachine = virtualMachine;
+            $.virtualMachine = virtualMachine;
             return this;
         }
-        public Builder virtualMachine(@Nullable String virtualMachine) {
-            this.virtualMachine = Codegen.ofNullable(virtualMachine);
-            return this;
-        }        public SpokeLinkedRouterApplianceInstancesInstanceArgs build() {
-            return new SpokeLinkedRouterApplianceInstancesInstanceArgs(ipAddress, virtualMachine);
+
+        public Builder virtualMachine(String virtualMachine) {
+            return virtualMachine(Output.of(virtualMachine));
+        }
+
+        public SpokeLinkedRouterApplianceInstancesInstanceArgs build() {
+            return $;
         }
     }
+
 }

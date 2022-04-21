@@ -5,7 +5,6 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class SubscriptionExpirationPolicyGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="ttl", required=true)
-      private final Output<String> ttl;
+    private Output<String> ttl;
 
     public Output<String> ttl() {
         return this.ttl;
     }
 
-    public SubscriptionExpirationPolicyGetArgs(Output<String> ttl) {
-        this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
-    }
+    private SubscriptionExpirationPolicyGetArgs() {}
 
-    private SubscriptionExpirationPolicyGetArgs() {
-        this.ttl = Codegen.empty();
+    private SubscriptionExpirationPolicyGetArgs(SubscriptionExpirationPolicyGetArgs $) {
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionExpirationPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ttl;
+        private SubscriptionExpirationPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionExpirationPolicyGetArgs();
         }
 
         public Builder(SubscriptionExpirationPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ttl = defaults.ttl;
+            $ = new SubscriptionExpirationPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ttl(Output<String> ttl) {
-            this.ttl = Objects.requireNonNull(ttl);
+            $.ttl = ttl;
             return this;
         }
+
         public Builder ttl(String ttl) {
-            this.ttl = Output.of(Objects.requireNonNull(ttl));
-            return this;
-        }        public SubscriptionExpirationPolicyGetArgs build() {
-            return new SubscriptionExpirationPolicyGetArgs(ttl);
+            return ttl(Output.of(ttl));
+        }
+
+        public SubscriptionExpirationPolicyGetArgs build() {
+            $.ttl = Objects.requireNonNull($.ttl, "expected parameter 'ttl' to be non-null");
+            return $;
         }
     }
+
 }

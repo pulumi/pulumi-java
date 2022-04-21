@@ -19,62 +19,58 @@ public final class GatewayCapabilitySummary extends com.pulumi.resources.InvokeA
     public static final GatewayCapabilitySummary Empty = new GatewayCapabilitySummary();
 
     @Import(name="capabilityConfiguration")
-      private final @Nullable String capabilityConfiguration;
+    private @Nullable String capabilityConfiguration;
 
     public Optional<String> capabilityConfiguration() {
-        return this.capabilityConfiguration == null ? Optional.empty() : Optional.ofNullable(this.capabilityConfiguration);
+        return Optional.ofNullable(this.capabilityConfiguration);
     }
 
     @Import(name="capabilityNamespace", required=true)
-      private final String capabilityNamespace;
+    private String capabilityNamespace;
 
     public String capabilityNamespace() {
         return this.capabilityNamespace;
     }
 
-    public GatewayCapabilitySummary(
-        @Nullable String capabilityConfiguration,
-        String capabilityNamespace) {
-        this.capabilityConfiguration = capabilityConfiguration;
-        this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace, "expected parameter 'capabilityNamespace' to be non-null");
-    }
+    private GatewayCapabilitySummary() {}
 
-    private GatewayCapabilitySummary() {
-        this.capabilityConfiguration = null;
-        this.capabilityNamespace = null;
+    private GatewayCapabilitySummary(GatewayCapabilitySummary $) {
+        this.capabilityConfiguration = $.capabilityConfiguration;
+        this.capabilityNamespace = $.capabilityNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayCapabilitySummary defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String capabilityConfiguration;
-        private String capabilityNamespace;
+        private GatewayCapabilitySummary $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayCapabilitySummary();
         }
 
         public Builder(GatewayCapabilitySummary defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capabilityConfiguration = defaults.capabilityConfiguration;
-    	      this.capabilityNamespace = defaults.capabilityNamespace;
+            $ = new GatewayCapabilitySummary(Objects.requireNonNull(defaults));
         }
 
         public Builder capabilityConfiguration(@Nullable String capabilityConfiguration) {
-            this.capabilityConfiguration = capabilityConfiguration;
+            $.capabilityConfiguration = capabilityConfiguration;
             return this;
         }
+
         public Builder capabilityNamespace(String capabilityNamespace) {
-            this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace);
+            $.capabilityNamespace = capabilityNamespace;
             return this;
-        }        public GatewayCapabilitySummary build() {
-            return new GatewayCapabilitySummary(capabilityConfiguration, capabilityNamespace);
+        }
+
+        public GatewayCapabilitySummary build() {
+            $.capabilityNamespace = Objects.requireNonNull($.capabilityNamespace, "expected parameter 'capabilityNamespace' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsGetArgs;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class PreventionJobTriggerInspectJobActionGetArgs extends com.pulum
      * 
      */
     @Import(name="saveFindings", required=true)
-      private final Output<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> saveFindings;
+    private Output<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> saveFindings;
 
     public Output<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> saveFindings() {
         return this.saveFindings;
     }
 
-    public PreventionJobTriggerInspectJobActionGetArgs(Output<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> saveFindings) {
-        this.saveFindings = Objects.requireNonNull(saveFindings, "expected parameter 'saveFindings' to be non-null");
-    }
+    private PreventionJobTriggerInspectJobActionGetArgs() {}
 
-    private PreventionJobTriggerInspectJobActionGetArgs() {
-        this.saveFindings = Codegen.empty();
+    private PreventionJobTriggerInspectJobActionGetArgs(PreventionJobTriggerInspectJobActionGetArgs $) {
+        this.saveFindings = $.saveFindings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerInspectJobActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> saveFindings;
+        private PreventionJobTriggerInspectJobActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerInspectJobActionGetArgs();
         }
 
         public Builder(PreventionJobTriggerInspectJobActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.saveFindings = defaults.saveFindings;
+            $ = new PreventionJobTriggerInspectJobActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder saveFindings(Output<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> saveFindings) {
-            this.saveFindings = Objects.requireNonNull(saveFindings);
+            $.saveFindings = saveFindings;
             return this;
         }
+
         public Builder saveFindings(PreventionJobTriggerInspectJobActionSaveFindingsGetArgs saveFindings) {
-            this.saveFindings = Output.of(Objects.requireNonNull(saveFindings));
-            return this;
-        }        public PreventionJobTriggerInspectJobActionGetArgs build() {
-            return new PreventionJobTriggerInspectJobActionGetArgs(saveFindings);
+            return saveFindings(Output.of(saveFindings));
+        }
+
+        public PreventionJobTriggerInspectJobActionGetArgs build() {
+            $.saveFindings = Objects.requireNonNull($.saveFindings, "expected parameter 'saveFindings' to be non-null");
+            return $;
         }
     }
+
 }

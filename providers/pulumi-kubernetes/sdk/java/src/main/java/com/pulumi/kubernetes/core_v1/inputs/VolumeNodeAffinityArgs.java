@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSelectorArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VolumeNodeAffinityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="required")
-      private final @Nullable Output<NodeSelectorArgs> required;
+    private @Nullable Output<NodeSelectorArgs> required;
 
-    public Output<NodeSelectorArgs> required() {
-        return this.required == null ? Codegen.empty() : this.required;
+    public Optional<Output<NodeSelectorArgs>> required() {
+        return Optional.ofNullable(this.required);
     }
 
-    public VolumeNodeAffinityArgs(@Nullable Output<NodeSelectorArgs> required) {
-        this.required = required;
-    }
+    private VolumeNodeAffinityArgs() {}
 
-    private VolumeNodeAffinityArgs() {
-        this.required = Codegen.empty();
+    private VolumeNodeAffinityArgs(VolumeNodeAffinityArgs $) {
+        this.required = $.required;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeNodeAffinityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NodeSelectorArgs> required;
+        private VolumeNodeAffinityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeNodeAffinityArgs();
         }
 
         public Builder(VolumeNodeAffinityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.required = defaults.required;
+            $ = new VolumeNodeAffinityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder required(@Nullable Output<NodeSelectorArgs> required) {
-            this.required = required;
+            $.required = required;
             return this;
         }
-        public Builder required(@Nullable NodeSelectorArgs required) {
-            this.required = Codegen.ofNullable(required);
-            return this;
-        }        public VolumeNodeAffinityArgs build() {
-            return new VolumeNodeAffinityArgs(required);
+
+        public Builder required(NodeSelectorArgs required) {
+            return required(Output.of(required));
+        }
+
+        public VolumeNodeAffinityArgs build() {
+            return $;
         }
     }
+
 }

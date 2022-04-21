@@ -5,10 +5,10 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CrawlerJdbcTargetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="connectionName", required=true)
-      private final Output<String> connectionName;
+    private Output<String> connectionName;
 
     public Output<String> connectionName() {
         return this.connectionName;
@@ -32,10 +32,10 @@ public final class CrawlerJdbcTargetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="exclusions")
-      private final @Nullable Output<List<String>> exclusions;
+    private @Nullable Output<List<String>> exclusions;
 
-    public Output<List<String>> exclusions() {
-        return this.exclusions == null ? Codegen.empty() : this.exclusions;
+    public Optional<Output<List<String>>> exclusions() {
+        return Optional.ofNullable(this.exclusions);
     }
 
     /**
@@ -43,79 +43,74 @@ public final class CrawlerJdbcTargetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
-    public CrawlerJdbcTargetArgs(
-        Output<String> connectionName,
-        @Nullable Output<List<String>> exclusions,
-        Output<String> path) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.exclusions = exclusions;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private CrawlerJdbcTargetArgs() {}
 
-    private CrawlerJdbcTargetArgs() {
-        this.connectionName = Codegen.empty();
-        this.exclusions = Codegen.empty();
-        this.path = Codegen.empty();
+    private CrawlerJdbcTargetArgs(CrawlerJdbcTargetArgs $) {
+        this.connectionName = $.connectionName;
+        this.exclusions = $.exclusions;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrawlerJdbcTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> connectionName;
-        private @Nullable Output<List<String>> exclusions;
-        private Output<String> path;
+        private CrawlerJdbcTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrawlerJdbcTargetArgs();
         }
 
         public Builder(CrawlerJdbcTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.exclusions = defaults.exclusions;
-    	      this.path = defaults.path;
+            $ = new CrawlerJdbcTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(Output<String> connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder connectionName(String connectionName) {
-            this.connectionName = Output.of(Objects.requireNonNull(connectionName));
-            return this;
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder exclusions(@Nullable Output<List<String>> exclusions) {
-            this.exclusions = exclusions;
+            $.exclusions = exclusions;
             return this;
         }
-        public Builder exclusions(@Nullable List<String> exclusions) {
-            this.exclusions = Codegen.ofNullable(exclusions);
-            return this;
+
+        public Builder exclusions(List<String> exclusions) {
+            return exclusions(Output.of(exclusions));
         }
+
         public Builder exclusions(String... exclusions) {
             return exclusions(List.of(exclusions));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public CrawlerJdbcTargetArgs build() {
-            return new CrawlerJdbcTargetArgs(connectionName, exclusions, path);
+            return path(Output.of(path));
+        }
+
+        public CrawlerJdbcTargetArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

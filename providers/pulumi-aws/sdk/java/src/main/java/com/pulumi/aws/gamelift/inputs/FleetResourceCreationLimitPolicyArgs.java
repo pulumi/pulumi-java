@@ -5,9 +5,9 @@ package com.pulumi.aws.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FleetResourceCreationLimitPolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="newGameSessionsPerCreator")
-      private final @Nullable Output<Integer> newGameSessionsPerCreator;
+    private @Nullable Output<Integer> newGameSessionsPerCreator;
 
-    public Output<Integer> newGameSessionsPerCreator() {
-        return this.newGameSessionsPerCreator == null ? Codegen.empty() : this.newGameSessionsPerCreator;
+    public Optional<Output<Integer>> newGameSessionsPerCreator() {
+        return Optional.ofNullable(this.newGameSessionsPerCreator);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class FleetResourceCreationLimitPolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="policyPeriodInMinutes")
-      private final @Nullable Output<Integer> policyPeriodInMinutes;
+    private @Nullable Output<Integer> policyPeriodInMinutes;
 
-    public Output<Integer> policyPeriodInMinutes() {
-        return this.policyPeriodInMinutes == null ? Codegen.empty() : this.policyPeriodInMinutes;
+    public Optional<Output<Integer>> policyPeriodInMinutes() {
+        return Optional.ofNullable(this.policyPeriodInMinutes);
     }
 
-    public FleetResourceCreationLimitPolicyArgs(
-        @Nullable Output<Integer> newGameSessionsPerCreator,
-        @Nullable Output<Integer> policyPeriodInMinutes) {
-        this.newGameSessionsPerCreator = newGameSessionsPerCreator;
-        this.policyPeriodInMinutes = policyPeriodInMinutes;
-    }
+    private FleetResourceCreationLimitPolicyArgs() {}
 
-    private FleetResourceCreationLimitPolicyArgs() {
-        this.newGameSessionsPerCreator = Codegen.empty();
-        this.policyPeriodInMinutes = Codegen.empty();
+    private FleetResourceCreationLimitPolicyArgs(FleetResourceCreationLimitPolicyArgs $) {
+        this.newGameSessionsPerCreator = $.newGameSessionsPerCreator;
+        this.policyPeriodInMinutes = $.policyPeriodInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetResourceCreationLimitPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> newGameSessionsPerCreator;
-        private @Nullable Output<Integer> policyPeriodInMinutes;
+        private FleetResourceCreationLimitPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetResourceCreationLimitPolicyArgs();
         }
 
         public Builder(FleetResourceCreationLimitPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.newGameSessionsPerCreator = defaults.newGameSessionsPerCreator;
-    	      this.policyPeriodInMinutes = defaults.policyPeriodInMinutes;
+            $ = new FleetResourceCreationLimitPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder newGameSessionsPerCreator(@Nullable Output<Integer> newGameSessionsPerCreator) {
-            this.newGameSessionsPerCreator = newGameSessionsPerCreator;
+            $.newGameSessionsPerCreator = newGameSessionsPerCreator;
             return this;
         }
-        public Builder newGameSessionsPerCreator(@Nullable Integer newGameSessionsPerCreator) {
-            this.newGameSessionsPerCreator = Codegen.ofNullable(newGameSessionsPerCreator);
-            return this;
+
+        public Builder newGameSessionsPerCreator(Integer newGameSessionsPerCreator) {
+            return newGameSessionsPerCreator(Output.of(newGameSessionsPerCreator));
         }
+
         public Builder policyPeriodInMinutes(@Nullable Output<Integer> policyPeriodInMinutes) {
-            this.policyPeriodInMinutes = policyPeriodInMinutes;
+            $.policyPeriodInMinutes = policyPeriodInMinutes;
             return this;
         }
-        public Builder policyPeriodInMinutes(@Nullable Integer policyPeriodInMinutes) {
-            this.policyPeriodInMinutes = Codegen.ofNullable(policyPeriodInMinutes);
-            return this;
-        }        public FleetResourceCreationLimitPolicyArgs build() {
-            return new FleetResourceCreationLimitPolicyArgs(newGameSessionsPerCreator, policyPeriodInMinutes);
+
+        public Builder policyPeriodInMinutes(Integer policyPeriodInMinutes) {
+            return policyPeriodInMinutes(Output.of(policyPeriodInMinutes));
+        }
+
+        public FleetResourceCreationLimitPolicyArgs build() {
+            return $;
         }
     }
+
 }

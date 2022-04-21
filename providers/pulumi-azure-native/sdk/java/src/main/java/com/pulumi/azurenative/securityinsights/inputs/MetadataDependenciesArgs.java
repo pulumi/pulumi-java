@@ -8,10 +8,10 @@ import com.pulumi.azurenative.securityinsights.enums.Operator;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="contentId")
-      private final @Nullable Output<String> contentId;
+    private @Nullable Output<String> contentId;
 
-    public Output<String> contentId() {
-        return this.contentId == null ? Codegen.empty() : this.contentId;
+    public Optional<Output<String>> contentId() {
+        return Optional.ofNullable(this.contentId);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="criteria")
-      private final @Nullable Output<List<MetadataDependenciesArgs>> criteria;
+    private @Nullable Output<List<MetadataDependenciesArgs>> criteria;
 
-    public Output<List<MetadataDependenciesArgs>> criteria() {
-        return this.criteria == null ? Codegen.empty() : this.criteria;
+    public Optional<Output<List<MetadataDependenciesArgs>>> criteria() {
+        return Optional.ofNullable(this.criteria);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Either<String,Kind>> kind;
+    private @Nullable Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Either<String,Kind>>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="operator")
-      private final @Nullable Output<Either<String,Operator>> operator;
+    private @Nullable Output<Either<String,Operator>> operator;
 
-    public Output<Either<String,Operator>> operator() {
-        return this.operator == null ? Codegen.empty() : this.operator;
+    public Optional<Output<Either<String,Operator>>> operator() {
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -83,118 +83,102 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public MetadataDependenciesArgs(
-        @Nullable Output<String> contentId,
-        @Nullable Output<List<MetadataDependenciesArgs>> criteria,
-        @Nullable Output<Either<String,Kind>> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,Operator>> operator,
-        @Nullable Output<String> version) {
-        this.contentId = contentId;
-        this.criteria = criteria;
-        this.kind = kind;
-        this.name = name;
-        this.operator = operator;
-        this.version = version;
-    }
+    private MetadataDependenciesArgs() {}
 
-    private MetadataDependenciesArgs() {
-        this.contentId = Codegen.empty();
-        this.criteria = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.version = Codegen.empty();
+    private MetadataDependenciesArgs(MetadataDependenciesArgs $) {
+        this.contentId = $.contentId;
+        this.criteria = $.criteria;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.operator = $.operator;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataDependenciesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contentId;
-        private @Nullable Output<List<MetadataDependenciesArgs>> criteria;
-        private @Nullable Output<Either<String,Kind>> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,Operator>> operator;
-        private @Nullable Output<String> version;
+        private MetadataDependenciesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataDependenciesArgs();
         }
 
         public Builder(MetadataDependenciesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentId = defaults.contentId;
-    	      this.criteria = defaults.criteria;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.operator = defaults.operator;
-    	      this.version = defaults.version;
+            $ = new MetadataDependenciesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentId(@Nullable Output<String> contentId) {
-            this.contentId = contentId;
+            $.contentId = contentId;
             return this;
         }
-        public Builder contentId(@Nullable String contentId) {
-            this.contentId = Codegen.ofNullable(contentId);
-            return this;
+
+        public Builder contentId(String contentId) {
+            return contentId(Output.of(contentId));
         }
+
         public Builder criteria(@Nullable Output<List<MetadataDependenciesArgs>> criteria) {
-            this.criteria = criteria;
+            $.criteria = criteria;
             return this;
         }
-        public Builder criteria(@Nullable List<MetadataDependenciesArgs> criteria) {
-            this.criteria = Codegen.ofNullable(criteria);
-            return this;
+
+        public Builder criteria(List<MetadataDependenciesArgs> criteria) {
+            return criteria(Output.of(criteria));
         }
+
         public Builder criteria(MetadataDependenciesArgs... criteria) {
             return criteria(List.of(criteria));
         }
+
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Either<String,Kind> kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
-        public Builder operator(@Nullable Either<String,Operator> operator) {
-            this.operator = Codegen.ofNullable(operator);
-            return this;
+
+        public Builder operator(Either<String,Operator> operator) {
+            return operator(Output.of(operator));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public MetadataDependenciesArgs build() {
-            return new MetadataDependenciesArgs(contentId, criteria, kind, name, operator, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public MetadataDependenciesArgs build() {
+            return $;
         }
     }
+
 }

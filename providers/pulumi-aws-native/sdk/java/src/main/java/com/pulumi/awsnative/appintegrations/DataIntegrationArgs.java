@@ -7,10 +7,10 @@ import com.pulumi.awsnative.appintegrations.inputs.DataIntegrationScheduleConfig
 import com.pulumi.awsnative.appintegrations.inputs.DataIntegrationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kmsKey", required=true)
-      private final Output<String> kmsKey;
+    private Output<String> kmsKey;
 
     public Output<String> kmsKey() {
         return this.kmsKey;
@@ -45,10 +45,10 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scheduleConfig", required=true)
-      private final Output<DataIntegrationScheduleConfigArgs> scheduleConfig;
+    private Output<DataIntegrationScheduleConfigArgs> scheduleConfig;
 
     public Output<DataIntegrationScheduleConfigArgs> scheduleConfig() {
         return this.scheduleConfig;
@@ -67,7 +67,7 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sourceURI", required=true)
-      private final Output<String> sourceURI;
+    private Output<String> sourceURI;
 
     public Output<String> sourceURI() {
         return this.sourceURI;
@@ -78,118 +78,105 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DataIntegrationTagArgs>> tags;
+    private @Nullable Output<List<DataIntegrationTagArgs>> tags;
 
-    public Output<List<DataIntegrationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DataIntegrationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DataIntegrationArgs(
-        @Nullable Output<String> description,
-        Output<String> kmsKey,
-        @Nullable Output<String> name,
-        Output<DataIntegrationScheduleConfigArgs> scheduleConfig,
-        Output<String> sourceURI,
-        @Nullable Output<List<DataIntegrationTagArgs>> tags) {
-        this.description = description;
-        this.kmsKey = Objects.requireNonNull(kmsKey, "expected parameter 'kmsKey' to be non-null");
-        this.name = name;
-        this.scheduleConfig = Objects.requireNonNull(scheduleConfig, "expected parameter 'scheduleConfig' to be non-null");
-        this.sourceURI = Objects.requireNonNull(sourceURI, "expected parameter 'sourceURI' to be non-null");
-        this.tags = tags;
-    }
+    private DataIntegrationArgs() {}
 
-    private DataIntegrationArgs() {
-        this.description = Codegen.empty();
-        this.kmsKey = Codegen.empty();
-        this.name = Codegen.empty();
-        this.scheduleConfig = Codegen.empty();
-        this.sourceURI = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DataIntegrationArgs(DataIntegrationArgs $) {
+        this.description = $.description;
+        this.kmsKey = $.kmsKey;
+        this.name = $.name;
+        this.scheduleConfig = $.scheduleConfig;
+        this.sourceURI = $.sourceURI;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataIntegrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> kmsKey;
-        private @Nullable Output<String> name;
-        private Output<DataIntegrationScheduleConfigArgs> scheduleConfig;
-        private Output<String> sourceURI;
-        private @Nullable Output<List<DataIntegrationTagArgs>> tags;
+        private DataIntegrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataIntegrationArgs();
         }
 
         public Builder(DataIntegrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.kmsKey = defaults.kmsKey;
-    	      this.name = defaults.name;
-    	      this.scheduleConfig = defaults.scheduleConfig;
-    	      this.sourceURI = defaults.sourceURI;
-    	      this.tags = defaults.tags;
+            $ = new DataIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kmsKey(Output<String> kmsKey) {
-            this.kmsKey = Objects.requireNonNull(kmsKey);
+            $.kmsKey = kmsKey;
             return this;
         }
+
         public Builder kmsKey(String kmsKey) {
-            this.kmsKey = Output.of(Objects.requireNonNull(kmsKey));
-            return this;
+            return kmsKey(Output.of(kmsKey));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder scheduleConfig(Output<DataIntegrationScheduleConfigArgs> scheduleConfig) {
-            this.scheduleConfig = Objects.requireNonNull(scheduleConfig);
+            $.scheduleConfig = scheduleConfig;
             return this;
         }
+
         public Builder scheduleConfig(DataIntegrationScheduleConfigArgs scheduleConfig) {
-            this.scheduleConfig = Output.of(Objects.requireNonNull(scheduleConfig));
-            return this;
+            return scheduleConfig(Output.of(scheduleConfig));
         }
+
         public Builder sourceURI(Output<String> sourceURI) {
-            this.sourceURI = Objects.requireNonNull(sourceURI);
+            $.sourceURI = sourceURI;
             return this;
         }
+
         public Builder sourceURI(String sourceURI) {
-            this.sourceURI = Output.of(Objects.requireNonNull(sourceURI));
-            return this;
+            return sourceURI(Output.of(sourceURI));
         }
+
         public Builder tags(@Nullable Output<List<DataIntegrationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DataIntegrationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DataIntegrationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DataIntegrationTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DataIntegrationArgs build() {
-            return new DataIntegrationArgs(description, kmsKey, name, scheduleConfig, sourceURI, tags);
+        }
+
+        public DataIntegrationArgs build() {
+            $.kmsKey = Objects.requireNonNull($.kmsKey, "expected parameter 'kmsKey' to be non-null");
+            $.scheduleConfig = Objects.requireNonNull($.scheduleConfig, "expected parameter 'scheduleConfig' to be non-null");
+            $.sourceURI = Objects.requireNonNull($.sourceURI, "expected parameter 'sourceURI' to be non-null");
+            return $;
         }
     }
+
 }

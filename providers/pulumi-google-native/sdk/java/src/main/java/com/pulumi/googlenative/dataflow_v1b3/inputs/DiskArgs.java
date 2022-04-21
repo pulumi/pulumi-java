@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<String> diskType;
+    private @Nullable Output<String> diskType;
 
-    public Output<String> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<String>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountPoint")
-      private final @Nullable Output<String> mountPoint;
+    private @Nullable Output<String> mountPoint;
 
-    public Output<String> mountPoint() {
-        return this.mountPoint == null ? Codegen.empty() : this.mountPoint;
+    public Optional<Output<String>> mountPoint() {
+        return Optional.ofNullable(this.mountPoint);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeGb")
-      private final @Nullable Output<Integer> sizeGb;
+    private @Nullable Output<Integer> sizeGb;
 
-    public Output<Integer> sizeGb() {
-        return this.sizeGb == null ? Codegen.empty() : this.sizeGb;
+    public Optional<Output<Integer>> sizeGb() {
+        return Optional.ofNullable(this.sizeGb);
     }
 
-    public DiskArgs(
-        @Nullable Output<String> diskType,
-        @Nullable Output<String> mountPoint,
-        @Nullable Output<Integer> sizeGb) {
-        this.diskType = diskType;
-        this.mountPoint = mountPoint;
-        this.sizeGb = sizeGb;
-    }
+    private DiskArgs() {}
 
-    private DiskArgs() {
-        this.diskType = Codegen.empty();
-        this.mountPoint = Codegen.empty();
-        this.sizeGb = Codegen.empty();
+    private DiskArgs(DiskArgs $) {
+        this.diskType = $.diskType;
+        this.mountPoint = $.mountPoint;
+        this.sizeGb = $.sizeGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskType;
-        private @Nullable Output<String> mountPoint;
-        private @Nullable Output<Integer> sizeGb;
+        private DiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskArgs();
         }
 
         public Builder(DiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskType = defaults.diskType;
-    	      this.mountPoint = defaults.mountPoint;
-    	      this.sizeGb = defaults.sizeGb;
+            $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskType(@Nullable Output<String> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable String diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(String diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder mountPoint(@Nullable Output<String> mountPoint) {
-            this.mountPoint = mountPoint;
+            $.mountPoint = mountPoint;
             return this;
         }
-        public Builder mountPoint(@Nullable String mountPoint) {
-            this.mountPoint = Codegen.ofNullable(mountPoint);
-            return this;
+
+        public Builder mountPoint(String mountPoint) {
+            return mountPoint(Output.of(mountPoint));
         }
+
         public Builder sizeGb(@Nullable Output<Integer> sizeGb) {
-            this.sizeGb = sizeGb;
+            $.sizeGb = sizeGb;
             return this;
         }
-        public Builder sizeGb(@Nullable Integer sizeGb) {
-            this.sizeGb = Codegen.ofNullable(sizeGb);
-            return this;
-        }        public DiskArgs build() {
-            return new DiskArgs(diskType, mountPoint, sizeGb);
+
+        public Builder sizeGb(Integer sizeGb) {
+            return sizeGb(Output.of(sizeGb));
+        }
+
+        public DiskArgs build() {
+            return $;
         }
     }
+
 }

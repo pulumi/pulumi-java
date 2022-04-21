@@ -8,9 +8,9 @@ import com.pulumi.azurenative.netapp.enums.ReplicationSchedule;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="endpointType")
-      private final @Nullable Output<Either<String,EndpointType>> endpointType;
+    private @Nullable Output<Either<String,EndpointType>> endpointType;
 
-    public Output<Either<String,EndpointType>> endpointType() {
-        return this.endpointType == null ? Codegen.empty() : this.endpointType;
+    public Optional<Output<Either<String,EndpointType>>> endpointType() {
+        return Optional.ofNullable(this.endpointType);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="remoteVolumeRegion")
-      private final @Nullable Output<String> remoteVolumeRegion;
+    private @Nullable Output<String> remoteVolumeRegion;
 
-    public Output<String> remoteVolumeRegion() {
-        return this.remoteVolumeRegion == null ? Codegen.empty() : this.remoteVolumeRegion;
+    public Optional<Output<String>> remoteVolumeRegion() {
+        return Optional.ofNullable(this.remoteVolumeRegion);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="remoteVolumeResourceId", required=true)
-      private final Output<String> remoteVolumeResourceId;
+    private Output<String> remoteVolumeResourceId;
 
     public Output<String> remoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
@@ -60,10 +60,10 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="replicationId")
-      private final @Nullable Output<String> replicationId;
+    private @Nullable Output<String> replicationId;
 
-    public Output<String> replicationId() {
-        return this.replicationId == null ? Codegen.empty() : this.replicationId;
+    public Optional<Output<String>> replicationId() {
+        return Optional.ofNullable(this.replicationId);
     }
 
     /**
@@ -71,102 +71,90 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="replicationSchedule", required=true)
-      private final Output<Either<String,ReplicationSchedule>> replicationSchedule;
+    private Output<Either<String,ReplicationSchedule>> replicationSchedule;
 
     public Output<Either<String,ReplicationSchedule>> replicationSchedule() {
         return this.replicationSchedule;
     }
 
-    public ReplicationObjectArgs(
-        @Nullable Output<Either<String,EndpointType>> endpointType,
-        @Nullable Output<String> remoteVolumeRegion,
-        Output<String> remoteVolumeResourceId,
-        @Nullable Output<String> replicationId,
-        Output<Either<String,ReplicationSchedule>> replicationSchedule) {
-        this.endpointType = endpointType;
-        this.remoteVolumeRegion = remoteVolumeRegion;
-        this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId, "expected parameter 'remoteVolumeResourceId' to be non-null");
-        this.replicationId = replicationId;
-        this.replicationSchedule = Objects.requireNonNull(replicationSchedule, "expected parameter 'replicationSchedule' to be non-null");
-    }
+    private ReplicationObjectArgs() {}
 
-    private ReplicationObjectArgs() {
-        this.endpointType = Codegen.empty();
-        this.remoteVolumeRegion = Codegen.empty();
-        this.remoteVolumeResourceId = Codegen.empty();
-        this.replicationId = Codegen.empty();
-        this.replicationSchedule = Codegen.empty();
+    private ReplicationObjectArgs(ReplicationObjectArgs $) {
+        this.endpointType = $.endpointType;
+        this.remoteVolumeRegion = $.remoteVolumeRegion;
+        this.remoteVolumeResourceId = $.remoteVolumeResourceId;
+        this.replicationId = $.replicationId;
+        this.replicationSchedule = $.replicationSchedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,EndpointType>> endpointType;
-        private @Nullable Output<String> remoteVolumeRegion;
-        private Output<String> remoteVolumeResourceId;
-        private @Nullable Output<String> replicationId;
-        private Output<Either<String,ReplicationSchedule>> replicationSchedule;
+        private ReplicationObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationObjectArgs();
         }
 
         public Builder(ReplicationObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
-    	      this.remoteVolumeRegion = defaults.remoteVolumeRegion;
-    	      this.remoteVolumeResourceId = defaults.remoteVolumeResourceId;
-    	      this.replicationId = defaults.replicationId;
-    	      this.replicationSchedule = defaults.replicationSchedule;
+            $ = new ReplicationObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(@Nullable Output<Either<String,EndpointType>> endpointType) {
-            this.endpointType = endpointType;
+            $.endpointType = endpointType;
             return this;
         }
-        public Builder endpointType(@Nullable Either<String,EndpointType> endpointType) {
-            this.endpointType = Codegen.ofNullable(endpointType);
-            return this;
+
+        public Builder endpointType(Either<String,EndpointType> endpointType) {
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder remoteVolumeRegion(@Nullable Output<String> remoteVolumeRegion) {
-            this.remoteVolumeRegion = remoteVolumeRegion;
+            $.remoteVolumeRegion = remoteVolumeRegion;
             return this;
         }
-        public Builder remoteVolumeRegion(@Nullable String remoteVolumeRegion) {
-            this.remoteVolumeRegion = Codegen.ofNullable(remoteVolumeRegion);
-            return this;
+
+        public Builder remoteVolumeRegion(String remoteVolumeRegion) {
+            return remoteVolumeRegion(Output.of(remoteVolumeRegion));
         }
+
         public Builder remoteVolumeResourceId(Output<String> remoteVolumeResourceId) {
-            this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId);
+            $.remoteVolumeResourceId = remoteVolumeResourceId;
             return this;
         }
+
         public Builder remoteVolumeResourceId(String remoteVolumeResourceId) {
-            this.remoteVolumeResourceId = Output.of(Objects.requireNonNull(remoteVolumeResourceId));
-            return this;
+            return remoteVolumeResourceId(Output.of(remoteVolumeResourceId));
         }
+
         public Builder replicationId(@Nullable Output<String> replicationId) {
-            this.replicationId = replicationId;
+            $.replicationId = replicationId;
             return this;
         }
-        public Builder replicationId(@Nullable String replicationId) {
-            this.replicationId = Codegen.ofNullable(replicationId);
-            return this;
+
+        public Builder replicationId(String replicationId) {
+            return replicationId(Output.of(replicationId));
         }
+
         public Builder replicationSchedule(Output<Either<String,ReplicationSchedule>> replicationSchedule) {
-            this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
+            $.replicationSchedule = replicationSchedule;
             return this;
         }
+
         public Builder replicationSchedule(Either<String,ReplicationSchedule> replicationSchedule) {
-            this.replicationSchedule = Output.of(Objects.requireNonNull(replicationSchedule));
-            return this;
-        }        public ReplicationObjectArgs build() {
-            return new ReplicationObjectArgs(endpointType, remoteVolumeRegion, remoteVolumeResourceId, replicationId, replicationSchedule);
+            return replicationSchedule(Output.of(replicationSchedule));
+        }
+
+        public ReplicationObjectArgs build() {
+            $.remoteVolumeResourceId = Objects.requireNonNull($.remoteVolumeResourceId, "expected parameter 'remoteVolumeResourceId' to be non-null");
+            $.replicationSchedule = Objects.requireNonNull($.replicationSchedule, "expected parameter 'replicationSchedule' to be non-null");
+            return $;
         }
     }
+
 }

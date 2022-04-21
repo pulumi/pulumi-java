@@ -5,12 +5,12 @@ package com.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.metastore_v1alpha.enums.HiveMetastoreConfigEndpointProtocol;
 import com.pulumi.googlenative.metastore_v1alpha.inputs.KerberosConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class HiveMetastoreConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="auxiliaryVersions")
-      private final @Nullable Output<Map<String,String>> auxiliaryVersions;
+    private @Nullable Output<Map<String,String>> auxiliaryVersions;
 
-    public Output<Map<String,String>> auxiliaryVersions() {
-        return this.auxiliaryVersions == null ? Codegen.empty() : this.auxiliaryVersions;
+    public Optional<Output<Map<String,String>>> auxiliaryVersions() {
+        return Optional.ofNullable(this.auxiliaryVersions);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HiveMetastoreConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="configOverrides")
-      private final @Nullable Output<Map<String,String>> configOverrides;
+    private @Nullable Output<Map<String,String>> configOverrides;
 
-    public Output<Map<String,String>> configOverrides() {
-        return this.configOverrides == null ? Codegen.empty() : this.configOverrides;
+    public Optional<Output<Map<String,String>>> configOverrides() {
+        return Optional.ofNullable(this.configOverrides);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class HiveMetastoreConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="endpointProtocol")
-      private final @Nullable Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol;
+    private @Nullable Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol;
 
-    public Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol() {
-        return this.endpointProtocol == null ? Codegen.empty() : this.endpointProtocol;
+    public Optional<Output<HiveMetastoreConfigEndpointProtocol>> endpointProtocol() {
+        return Optional.ofNullable(this.endpointProtocol);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class HiveMetastoreConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="kerberosConfig")
-      private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
+    private @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
-    public Output<KerberosConfigArgs> kerberosConfig() {
-        return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
+    public Optional<Output<KerberosConfigArgs>> kerberosConfig() {
+        return Optional.ofNullable(this.kerberosConfig);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class HiveMetastoreConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public HiveMetastoreConfigArgs(
-        @Nullable Output<Map<String,String>> auxiliaryVersions,
-        @Nullable Output<Map<String,String>> configOverrides,
-        @Nullable Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol,
-        @Nullable Output<KerberosConfigArgs> kerberosConfig,
-        @Nullable Output<String> version) {
-        this.auxiliaryVersions = auxiliaryVersions;
-        this.configOverrides = configOverrides;
-        this.endpointProtocol = endpointProtocol;
-        this.kerberosConfig = kerberosConfig;
-        this.version = version;
-    }
+    private HiveMetastoreConfigArgs() {}
 
-    private HiveMetastoreConfigArgs() {
-        this.auxiliaryVersions = Codegen.empty();
-        this.configOverrides = Codegen.empty();
-        this.endpointProtocol = Codegen.empty();
-        this.kerberosConfig = Codegen.empty();
-        this.version = Codegen.empty();
+    private HiveMetastoreConfigArgs(HiveMetastoreConfigArgs $) {
+        this.auxiliaryVersions = $.auxiliaryVersions;
+        this.configOverrides = $.configOverrides;
+        this.endpointProtocol = $.endpointProtocol;
+        this.kerberosConfig = $.kerberosConfig;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HiveMetastoreConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> auxiliaryVersions;
-        private @Nullable Output<Map<String,String>> configOverrides;
-        private @Nullable Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol;
-        private @Nullable Output<KerberosConfigArgs> kerberosConfig;
-        private @Nullable Output<String> version;
+        private HiveMetastoreConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HiveMetastoreConfigArgs();
         }
 
         public Builder(HiveMetastoreConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auxiliaryVersions = defaults.auxiliaryVersions;
-    	      this.configOverrides = defaults.configOverrides;
-    	      this.endpointProtocol = defaults.endpointProtocol;
-    	      this.kerberosConfig = defaults.kerberosConfig;
-    	      this.version = defaults.version;
+            $ = new HiveMetastoreConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auxiliaryVersions(@Nullable Output<Map<String,String>> auxiliaryVersions) {
-            this.auxiliaryVersions = auxiliaryVersions;
+            $.auxiliaryVersions = auxiliaryVersions;
             return this;
         }
-        public Builder auxiliaryVersions(@Nullable Map<String,String> auxiliaryVersions) {
-            this.auxiliaryVersions = Codegen.ofNullable(auxiliaryVersions);
-            return this;
+
+        public Builder auxiliaryVersions(Map<String,String> auxiliaryVersions) {
+            return auxiliaryVersions(Output.of(auxiliaryVersions));
         }
+
         public Builder configOverrides(@Nullable Output<Map<String,String>> configOverrides) {
-            this.configOverrides = configOverrides;
+            $.configOverrides = configOverrides;
             return this;
         }
-        public Builder configOverrides(@Nullable Map<String,String> configOverrides) {
-            this.configOverrides = Codegen.ofNullable(configOverrides);
-            return this;
+
+        public Builder configOverrides(Map<String,String> configOverrides) {
+            return configOverrides(Output.of(configOverrides));
         }
+
         public Builder endpointProtocol(@Nullable Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol) {
-            this.endpointProtocol = endpointProtocol;
+            $.endpointProtocol = endpointProtocol;
             return this;
         }
-        public Builder endpointProtocol(@Nullable HiveMetastoreConfigEndpointProtocol endpointProtocol) {
-            this.endpointProtocol = Codegen.ofNullable(endpointProtocol);
-            return this;
+
+        public Builder endpointProtocol(HiveMetastoreConfigEndpointProtocol endpointProtocol) {
+            return endpointProtocol(Output.of(endpointProtocol));
         }
+
         public Builder kerberosConfig(@Nullable Output<KerberosConfigArgs> kerberosConfig) {
-            this.kerberosConfig = kerberosConfig;
+            $.kerberosConfig = kerberosConfig;
             return this;
         }
-        public Builder kerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
-            this.kerberosConfig = Codegen.ofNullable(kerberosConfig);
-            return this;
+
+        public Builder kerberosConfig(KerberosConfigArgs kerberosConfig) {
+            return kerberosConfig(Output.of(kerberosConfig));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public HiveMetastoreConfigArgs build() {
-            return new HiveMetastoreConfigArgs(auxiliaryVersions, configOverrides, endpointProtocol, kerberosConfig, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public HiveMetastoreConfigArgs build() {
+            return $;
         }
     }
+
 }

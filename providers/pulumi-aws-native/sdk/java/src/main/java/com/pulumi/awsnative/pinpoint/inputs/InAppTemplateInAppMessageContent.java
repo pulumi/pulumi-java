@@ -18,126 +18,109 @@ public final class InAppTemplateInAppMessageContent extends com.pulumi.resources
     public static final InAppTemplateInAppMessageContent Empty = new InAppTemplateInAppMessageContent();
 
     @Import(name="backgroundColor")
-      private final @Nullable String backgroundColor;
+    private @Nullable String backgroundColor;
 
     public Optional<String> backgroundColor() {
-        return this.backgroundColor == null ? Optional.empty() : Optional.ofNullable(this.backgroundColor);
+        return Optional.ofNullable(this.backgroundColor);
     }
 
     @Import(name="bodyConfig")
-      private final @Nullable InAppTemplateBodyConfig bodyConfig;
+    private @Nullable InAppTemplateBodyConfig bodyConfig;
 
     public Optional<InAppTemplateBodyConfig> bodyConfig() {
-        return this.bodyConfig == null ? Optional.empty() : Optional.ofNullable(this.bodyConfig);
+        return Optional.ofNullable(this.bodyConfig);
     }
 
     @Import(name="headerConfig")
-      private final @Nullable InAppTemplateHeaderConfig headerConfig;
+    private @Nullable InAppTemplateHeaderConfig headerConfig;
 
     public Optional<InAppTemplateHeaderConfig> headerConfig() {
-        return this.headerConfig == null ? Optional.empty() : Optional.ofNullable(this.headerConfig);
+        return Optional.ofNullable(this.headerConfig);
     }
 
     @Import(name="imageUrl")
-      private final @Nullable String imageUrl;
+    private @Nullable String imageUrl;
 
     public Optional<String> imageUrl() {
-        return this.imageUrl == null ? Optional.empty() : Optional.ofNullable(this.imageUrl);
+        return Optional.ofNullable(this.imageUrl);
     }
 
     @Import(name="primaryBtn")
-      private final @Nullable InAppTemplateButtonConfig primaryBtn;
+    private @Nullable InAppTemplateButtonConfig primaryBtn;
 
     public Optional<InAppTemplateButtonConfig> primaryBtn() {
-        return this.primaryBtn == null ? Optional.empty() : Optional.ofNullable(this.primaryBtn);
+        return Optional.ofNullable(this.primaryBtn);
     }
 
     @Import(name="secondaryBtn")
-      private final @Nullable InAppTemplateButtonConfig secondaryBtn;
+    private @Nullable InAppTemplateButtonConfig secondaryBtn;
 
     public Optional<InAppTemplateButtonConfig> secondaryBtn() {
-        return this.secondaryBtn == null ? Optional.empty() : Optional.ofNullable(this.secondaryBtn);
+        return Optional.ofNullable(this.secondaryBtn);
     }
 
-    public InAppTemplateInAppMessageContent(
-        @Nullable String backgroundColor,
-        @Nullable InAppTemplateBodyConfig bodyConfig,
-        @Nullable InAppTemplateHeaderConfig headerConfig,
-        @Nullable String imageUrl,
-        @Nullable InAppTemplateButtonConfig primaryBtn,
-        @Nullable InAppTemplateButtonConfig secondaryBtn) {
-        this.backgroundColor = backgroundColor;
-        this.bodyConfig = bodyConfig;
-        this.headerConfig = headerConfig;
-        this.imageUrl = imageUrl;
-        this.primaryBtn = primaryBtn;
-        this.secondaryBtn = secondaryBtn;
-    }
+    private InAppTemplateInAppMessageContent() {}
 
-    private InAppTemplateInAppMessageContent() {
-        this.backgroundColor = null;
-        this.bodyConfig = null;
-        this.headerConfig = null;
-        this.imageUrl = null;
-        this.primaryBtn = null;
-        this.secondaryBtn = null;
+    private InAppTemplateInAppMessageContent(InAppTemplateInAppMessageContent $) {
+        this.backgroundColor = $.backgroundColor;
+        this.bodyConfig = $.bodyConfig;
+        this.headerConfig = $.headerConfig;
+        this.imageUrl = $.imageUrl;
+        this.primaryBtn = $.primaryBtn;
+        this.secondaryBtn = $.secondaryBtn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateInAppMessageContent defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backgroundColor;
-        private @Nullable InAppTemplateBodyConfig bodyConfig;
-        private @Nullable InAppTemplateHeaderConfig headerConfig;
-        private @Nullable String imageUrl;
-        private @Nullable InAppTemplateButtonConfig primaryBtn;
-        private @Nullable InAppTemplateButtonConfig secondaryBtn;
+        private InAppTemplateInAppMessageContent $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateInAppMessageContent();
         }
 
         public Builder(InAppTemplateInAppMessageContent defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backgroundColor = defaults.backgroundColor;
-    	      this.bodyConfig = defaults.bodyConfig;
-    	      this.headerConfig = defaults.headerConfig;
-    	      this.imageUrl = defaults.imageUrl;
-    	      this.primaryBtn = defaults.primaryBtn;
-    	      this.secondaryBtn = defaults.secondaryBtn;
+            $ = new InAppTemplateInAppMessageContent(Objects.requireNonNull(defaults));
         }
 
         public Builder backgroundColor(@Nullable String backgroundColor) {
-            this.backgroundColor = backgroundColor;
+            $.backgroundColor = backgroundColor;
             return this;
         }
+
         public Builder bodyConfig(@Nullable InAppTemplateBodyConfig bodyConfig) {
-            this.bodyConfig = bodyConfig;
+            $.bodyConfig = bodyConfig;
             return this;
         }
+
         public Builder headerConfig(@Nullable InAppTemplateHeaderConfig headerConfig) {
-            this.headerConfig = headerConfig;
+            $.headerConfig = headerConfig;
             return this;
         }
+
         public Builder imageUrl(@Nullable String imageUrl) {
-            this.imageUrl = imageUrl;
+            $.imageUrl = imageUrl;
             return this;
         }
+
         public Builder primaryBtn(@Nullable InAppTemplateButtonConfig primaryBtn) {
-            this.primaryBtn = primaryBtn;
+            $.primaryBtn = primaryBtn;
             return this;
         }
+
         public Builder secondaryBtn(@Nullable InAppTemplateButtonConfig secondaryBtn) {
-            this.secondaryBtn = secondaryBtn;
+            $.secondaryBtn = secondaryBtn;
             return this;
-        }        public InAppTemplateInAppMessageContent build() {
-            return new InAppTemplateInAppMessageContent(backgroundColor, bodyConfig, headerConfig, imageUrl, primaryBtn, secondaryBtn);
+        }
+
+        public InAppTemplateInAppMessageContent build() {
+            return $;
         }
     }
+
 }

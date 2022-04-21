@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DistcpSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="distcpOptions")
-      private final @Nullable Output<Object> distcpOptions;
+    private @Nullable Output<Object> distcpOptions;
 
-    public Output<Object> distcpOptions() {
-        return this.distcpOptions == null ? Codegen.empty() : this.distcpOptions;
+    public Optional<Output<Object>> distcpOptions() {
+        return Optional.ofNullable(this.distcpOptions);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class DistcpSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceManagerEndpoint", required=true)
-      private final Output<Object> resourceManagerEndpoint;
+    private Output<Object> resourceManagerEndpoint;
 
     public Output<Object> resourceManagerEndpoint() {
         return this.resourceManagerEndpoint;
@@ -46,76 +46,70 @@ public final class DistcpSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tempScriptPath", required=true)
-      private final Output<Object> tempScriptPath;
+    private Output<Object> tempScriptPath;
 
     public Output<Object> tempScriptPath() {
         return this.tempScriptPath;
     }
 
-    public DistcpSettingsArgs(
-        @Nullable Output<Object> distcpOptions,
-        Output<Object> resourceManagerEndpoint,
-        Output<Object> tempScriptPath) {
-        this.distcpOptions = distcpOptions;
-        this.resourceManagerEndpoint = Objects.requireNonNull(resourceManagerEndpoint, "expected parameter 'resourceManagerEndpoint' to be non-null");
-        this.tempScriptPath = Objects.requireNonNull(tempScriptPath, "expected parameter 'tempScriptPath' to be non-null");
-    }
+    private DistcpSettingsArgs() {}
 
-    private DistcpSettingsArgs() {
-        this.distcpOptions = Codegen.empty();
-        this.resourceManagerEndpoint = Codegen.empty();
-        this.tempScriptPath = Codegen.empty();
+    private DistcpSettingsArgs(DistcpSettingsArgs $) {
+        this.distcpOptions = $.distcpOptions;
+        this.resourceManagerEndpoint = $.resourceManagerEndpoint;
+        this.tempScriptPath = $.tempScriptPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistcpSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> distcpOptions;
-        private Output<Object> resourceManagerEndpoint;
-        private Output<Object> tempScriptPath;
+        private DistcpSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistcpSettingsArgs();
         }
 
         public Builder(DistcpSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distcpOptions = defaults.distcpOptions;
-    	      this.resourceManagerEndpoint = defaults.resourceManagerEndpoint;
-    	      this.tempScriptPath = defaults.tempScriptPath;
+            $ = new DistcpSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distcpOptions(@Nullable Output<Object> distcpOptions) {
-            this.distcpOptions = distcpOptions;
+            $.distcpOptions = distcpOptions;
             return this;
         }
-        public Builder distcpOptions(@Nullable Object distcpOptions) {
-            this.distcpOptions = Codegen.ofNullable(distcpOptions);
-            return this;
+
+        public Builder distcpOptions(Object distcpOptions) {
+            return distcpOptions(Output.of(distcpOptions));
         }
+
         public Builder resourceManagerEndpoint(Output<Object> resourceManagerEndpoint) {
-            this.resourceManagerEndpoint = Objects.requireNonNull(resourceManagerEndpoint);
+            $.resourceManagerEndpoint = resourceManagerEndpoint;
             return this;
         }
+
         public Builder resourceManagerEndpoint(Object resourceManagerEndpoint) {
-            this.resourceManagerEndpoint = Output.of(Objects.requireNonNull(resourceManagerEndpoint));
-            return this;
+            return resourceManagerEndpoint(Output.of(resourceManagerEndpoint));
         }
+
         public Builder tempScriptPath(Output<Object> tempScriptPath) {
-            this.tempScriptPath = Objects.requireNonNull(tempScriptPath);
+            $.tempScriptPath = tempScriptPath;
             return this;
         }
+
         public Builder tempScriptPath(Object tempScriptPath) {
-            this.tempScriptPath = Output.of(Objects.requireNonNull(tempScriptPath));
-            return this;
-        }        public DistcpSettingsArgs build() {
-            return new DistcpSettingsArgs(distcpOptions, resourceManagerEndpoint, tempScriptPath);
+            return tempScriptPath(Output.of(tempScriptPath));
+        }
+
+        public DistcpSettingsArgs build() {
+            $.resourceManagerEndpoint = Objects.requireNonNull($.resourceManagerEndpoint, "expected parameter 'resourceManagerEndpoint' to be non-null");
+            $.tempScriptPath = Objects.requireNonNull($.tempScriptPath, "expected parameter 'tempScriptPath' to be non-null");
+            return $;
         }
     }
+
 }

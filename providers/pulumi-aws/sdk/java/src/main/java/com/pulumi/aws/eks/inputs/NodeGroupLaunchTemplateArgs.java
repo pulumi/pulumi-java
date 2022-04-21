@@ -5,9 +5,9 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class NodeGroupLaunchTemplateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class NodeGroupLaunchTemplateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class NodeGroupLaunchTemplateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public NodeGroupLaunchTemplateArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        Output<String> version) {
-        this.id = id;
-        this.name = name;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private NodeGroupLaunchTemplateArgs() {}
 
-    private NodeGroupLaunchTemplateArgs() {
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.version = Codegen.empty();
+    private NodeGroupLaunchTemplateArgs(NodeGroupLaunchTemplateArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupLaunchTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private Output<String> version;
+        private NodeGroupLaunchTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupLaunchTemplateArgs();
         }
 
         public Builder(NodeGroupLaunchTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new NodeGroupLaunchTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public NodeGroupLaunchTemplateArgs build() {
-            return new NodeGroupLaunchTemplateArgs(id, name, version);
+            return version(Output.of(version));
+        }
+
+        public NodeGroupLaunchTemplateArgs build() {
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

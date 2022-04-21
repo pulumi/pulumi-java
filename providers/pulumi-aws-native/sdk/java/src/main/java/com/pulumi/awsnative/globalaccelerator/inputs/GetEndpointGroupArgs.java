@@ -17,45 +17,45 @@ public final class GetEndpointGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="endpointGroupArn", required=true)
-      private final String endpointGroupArn;
+    private String endpointGroupArn;
 
     public String endpointGroupArn() {
         return this.endpointGroupArn;
     }
 
-    public GetEndpointGroupArgs(String endpointGroupArn) {
-        this.endpointGroupArn = Objects.requireNonNull(endpointGroupArn, "expected parameter 'endpointGroupArn' to be non-null");
-    }
+    private GetEndpointGroupArgs() {}
 
-    private GetEndpointGroupArgs() {
-        this.endpointGroupArn = null;
+    private GetEndpointGroupArgs(GetEndpointGroupArgs $) {
+        this.endpointGroupArn = $.endpointGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEndpointGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointGroupArn;
+        private GetEndpointGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEndpointGroupArgs();
         }
 
         public Builder(GetEndpointGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointGroupArn = defaults.endpointGroupArn;
+            $ = new GetEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointGroupArn(String endpointGroupArn) {
-            this.endpointGroupArn = Objects.requireNonNull(endpointGroupArn);
+            $.endpointGroupArn = endpointGroupArn;
             return this;
-        }        public GetEndpointGroupArgs build() {
-            return new GetEndpointGroupArgs(endpointGroupArn);
+        }
+
+        public GetEndpointGroupArgs build() {
+            $.endpointGroupArn = Objects.requireNonNull($.endpointGroupArn, "expected parameter 'endpointGroupArn' to be non-null");
+            return $;
         }
     }
+
 }

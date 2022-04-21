@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RouterPeerAdvertisedIpRangeGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class RouterPeerAdvertisedIpRangeGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="range", required=true)
-      private final Output<String> range;
+    private Output<String> range;
 
     public Output<String> range() {
         return this.range;
     }
 
-    public RouterPeerAdvertisedIpRangeGetArgs(
-        @Nullable Output<String> description,
-        Output<String> range) {
-        this.description = description;
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-    }
+    private RouterPeerAdvertisedIpRangeGetArgs() {}
 
-    private RouterPeerAdvertisedIpRangeGetArgs() {
-        this.description = Codegen.empty();
-        this.range = Codegen.empty();
+    private RouterPeerAdvertisedIpRangeGetArgs(RouterPeerAdvertisedIpRangeGetArgs $) {
+        this.description = $.description;
+        this.range = $.range;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterPeerAdvertisedIpRangeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> range;
+        private RouterPeerAdvertisedIpRangeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterPeerAdvertisedIpRangeGetArgs();
         }
 
         public Builder(RouterPeerAdvertisedIpRangeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.range = defaults.range;
+            $ = new RouterPeerAdvertisedIpRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder range(Output<String> range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
         }
+
         public Builder range(String range) {
-            this.range = Output.of(Objects.requireNonNull(range));
-            return this;
-        }        public RouterPeerAdvertisedIpRangeGetArgs build() {
-            return new RouterPeerAdvertisedIpRangeGetArgs(description, range);
+            return range(Output.of(range));
+        }
+
+        public RouterPeerAdvertisedIpRangeGetArgs build() {
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            return $;
         }
     }
+
 }

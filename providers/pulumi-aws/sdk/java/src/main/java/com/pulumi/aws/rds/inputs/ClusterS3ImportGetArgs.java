@@ -5,9 +5,9 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ClusterS3ImportGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
@@ -31,10 +31,10 @@ public final class ClusterS3ImportGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bucketPrefix")
-      private final @Nullable Output<String> bucketPrefix;
+    private @Nullable Output<String> bucketPrefix;
 
-    public Output<String> bucketPrefix() {
-        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
+    public Optional<Output<String>> bucketPrefix() {
+        return Optional.ofNullable(this.bucketPrefix);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class ClusterS3ImportGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ingestionRole", required=true)
-      private final Output<String> ingestionRole;
+    private Output<String> ingestionRole;
 
     public Output<String> ingestionRole() {
         return this.ingestionRole;
@@ -53,7 +53,7 @@ public final class ClusterS3ImportGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sourceEngine", required=true)
-      private final Output<String> sourceEngine;
+    private Output<String> sourceEngine;
 
     public Output<String> sourceEngine() {
         return this.sourceEngine;
@@ -64,102 +64,92 @@ public final class ClusterS3ImportGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sourceEngineVersion", required=true)
-      private final Output<String> sourceEngineVersion;
+    private Output<String> sourceEngineVersion;
 
     public Output<String> sourceEngineVersion() {
         return this.sourceEngineVersion;
     }
 
-    public ClusterS3ImportGetArgs(
-        Output<String> bucketName,
-        @Nullable Output<String> bucketPrefix,
-        Output<String> ingestionRole,
-        Output<String> sourceEngine,
-        Output<String> sourceEngineVersion) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.bucketPrefix = bucketPrefix;
-        this.ingestionRole = Objects.requireNonNull(ingestionRole, "expected parameter 'ingestionRole' to be non-null");
-        this.sourceEngine = Objects.requireNonNull(sourceEngine, "expected parameter 'sourceEngine' to be non-null");
-        this.sourceEngineVersion = Objects.requireNonNull(sourceEngineVersion, "expected parameter 'sourceEngineVersion' to be non-null");
-    }
+    private ClusterS3ImportGetArgs() {}
 
-    private ClusterS3ImportGetArgs() {
-        this.bucketName = Codegen.empty();
-        this.bucketPrefix = Codegen.empty();
-        this.ingestionRole = Codegen.empty();
-        this.sourceEngine = Codegen.empty();
-        this.sourceEngineVersion = Codegen.empty();
+    private ClusterS3ImportGetArgs(ClusterS3ImportGetArgs $) {
+        this.bucketName = $.bucketName;
+        this.bucketPrefix = $.bucketPrefix;
+        this.ingestionRole = $.ingestionRole;
+        this.sourceEngine = $.sourceEngine;
+        this.sourceEngineVersion = $.sourceEngineVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterS3ImportGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketName;
-        private @Nullable Output<String> bucketPrefix;
-        private Output<String> ingestionRole;
-        private Output<String> sourceEngine;
-        private Output<String> sourceEngineVersion;
+        private ClusterS3ImportGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterS3ImportGetArgs();
         }
 
         public Builder(ClusterS3ImportGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.ingestionRole = defaults.ingestionRole;
-    	      this.sourceEngine = defaults.sourceEngine;
-    	      this.sourceEngineVersion = defaults.sourceEngineVersion;
+            $ = new ClusterS3ImportGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
-            this.bucketPrefix = bucketPrefix;
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
-        public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
-            return this;
+
+        public Builder bucketPrefix(String bucketPrefix) {
+            return bucketPrefix(Output.of(bucketPrefix));
         }
+
         public Builder ingestionRole(Output<String> ingestionRole) {
-            this.ingestionRole = Objects.requireNonNull(ingestionRole);
+            $.ingestionRole = ingestionRole;
             return this;
         }
+
         public Builder ingestionRole(String ingestionRole) {
-            this.ingestionRole = Output.of(Objects.requireNonNull(ingestionRole));
-            return this;
+            return ingestionRole(Output.of(ingestionRole));
         }
+
         public Builder sourceEngine(Output<String> sourceEngine) {
-            this.sourceEngine = Objects.requireNonNull(sourceEngine);
+            $.sourceEngine = sourceEngine;
             return this;
         }
+
         public Builder sourceEngine(String sourceEngine) {
-            this.sourceEngine = Output.of(Objects.requireNonNull(sourceEngine));
-            return this;
+            return sourceEngine(Output.of(sourceEngine));
         }
+
         public Builder sourceEngineVersion(Output<String> sourceEngineVersion) {
-            this.sourceEngineVersion = Objects.requireNonNull(sourceEngineVersion);
+            $.sourceEngineVersion = sourceEngineVersion;
             return this;
         }
+
         public Builder sourceEngineVersion(String sourceEngineVersion) {
-            this.sourceEngineVersion = Output.of(Objects.requireNonNull(sourceEngineVersion));
-            return this;
-        }        public ClusterS3ImportGetArgs build() {
-            return new ClusterS3ImportGetArgs(bucketName, bucketPrefix, ingestionRole, sourceEngine, sourceEngineVersion);
+            return sourceEngineVersion(Output.of(sourceEngineVersion));
+        }
+
+        public ClusterS3ImportGetArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.ingestionRole = Objects.requireNonNull($.ingestionRole, "expected parameter 'ingestionRole' to be non-null");
+            $.sourceEngine = Objects.requireNonNull($.sourceEngine, "expected parameter 'sourceEngine' to be non-null");
+            $.sourceEngineVersion = Objects.requireNonNull($.sourceEngineVersion, "expected parameter 'sourceEngineVersion' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class PathRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="paths", required=true)
-      private final List<String> paths;
+    private List<String> paths;
 
     public List<String> paths() {
         return this.paths;
@@ -35,7 +35,7 @@ public final class PathRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeAction", required=true)
-      private final HttpRouteActionResponse routeAction;
+    private HttpRouteActionResponse routeAction;
 
     public HttpRouteActionResponse routeAction() {
         return this.routeAction;
@@ -46,7 +46,7 @@ public final class PathRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
@@ -57,76 +57,70 @@ public final class PathRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="urlRedirect", required=true)
-      private final HttpRedirectActionResponse urlRedirect;
+    private HttpRedirectActionResponse urlRedirect;
 
     public HttpRedirectActionResponse urlRedirect() {
         return this.urlRedirect;
     }
 
-    public PathRuleResponse(
-        List<String> paths,
-        HttpRouteActionResponse routeAction,
-        String service,
-        HttpRedirectActionResponse urlRedirect) {
-        this.paths = Objects.requireNonNull(paths, "expected parameter 'paths' to be non-null");
-        this.routeAction = Objects.requireNonNull(routeAction, "expected parameter 'routeAction' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.urlRedirect = Objects.requireNonNull(urlRedirect, "expected parameter 'urlRedirect' to be non-null");
-    }
+    private PathRuleResponse() {}
 
-    private PathRuleResponse() {
-        this.paths = List.of();
-        this.routeAction = null;
-        this.service = null;
-        this.urlRedirect = null;
+    private PathRuleResponse(PathRuleResponse $) {
+        this.paths = $.paths;
+        this.routeAction = $.routeAction;
+        this.service = $.service;
+        this.urlRedirect = $.urlRedirect;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PathRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> paths;
-        private HttpRouteActionResponse routeAction;
-        private String service;
-        private HttpRedirectActionResponse urlRedirect;
+        private PathRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PathRuleResponse();
         }
 
         public Builder(PathRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.paths = defaults.paths;
-    	      this.routeAction = defaults.routeAction;
-    	      this.service = defaults.service;
-    	      this.urlRedirect = defaults.urlRedirect;
+            $ = new PathRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder paths(List<String> paths) {
-            this.paths = Objects.requireNonNull(paths);
+            $.paths = paths;
             return this;
         }
+
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
+
         public Builder routeAction(HttpRouteActionResponse routeAction) {
-            this.routeAction = Objects.requireNonNull(routeAction);
+            $.routeAction = routeAction;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder urlRedirect(HttpRedirectActionResponse urlRedirect) {
-            this.urlRedirect = Objects.requireNonNull(urlRedirect);
+            $.urlRedirect = urlRedirect;
             return this;
-        }        public PathRuleResponse build() {
-            return new PathRuleResponse(paths, routeAction, service, urlRedirect);
+        }
+
+        public PathRuleResponse build() {
+            $.paths = Objects.requireNonNull($.paths, "expected parameter 'paths' to be non-null");
+            $.routeAction = Objects.requireNonNull($.routeAction, "expected parameter 'routeAction' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.urlRedirect = Objects.requireNonNull($.urlRedirect, "expected parameter 'urlRedirect' to be non-null");
+            return $;
         }
     }
+
 }

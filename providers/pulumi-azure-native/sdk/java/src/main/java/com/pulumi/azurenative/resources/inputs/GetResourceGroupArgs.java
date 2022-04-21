@@ -17,45 +17,45 @@ public final class GetResourceGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetResourceGroupArgs(String resourceGroupName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetResourceGroupArgs() {}
 
-    private GetResourceGroupArgs() {
-        this.resourceGroupName = null;
+    private GetResourceGroupArgs(GetResourceGroupArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
+        private GetResourceGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceGroupArgs();
         }
 
         public Builder(GetResourceGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetResourceGroupArgs build() {
-            return new GetResourceGroupArgs(resourceGroupName);
+        }
+
+        public GetResourceGroupArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends com.
      * 
      */
     @Import(name="isNonRepudiationRequired", required=true)
-      private final Output<Boolean> isNonRepudiationRequired;
+    private Output<Boolean> isNonRepudiationRequired;
 
     public Output<Boolean> isNonRepudiationRequired() {
         return this.isNonRepudiationRequired;
@@ -35,63 +34,60 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends com.
      * 
      */
     @Import(name="timeToAcknowledgeInSeconds", required=true)
-      private final Output<Integer> timeToAcknowledgeInSeconds;
+    private Output<Integer> timeToAcknowledgeInSeconds;
 
     public Output<Integer> timeToAcknowledgeInSeconds() {
         return this.timeToAcknowledgeInSeconds;
     }
 
-    public RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(
-        Output<Boolean> isNonRepudiationRequired,
-        Output<Integer> timeToAcknowledgeInSeconds) {
-        this.isNonRepudiationRequired = Objects.requireNonNull(isNonRepudiationRequired, "expected parameter 'isNonRepudiationRequired' to be non-null");
-        this.timeToAcknowledgeInSeconds = Objects.requireNonNull(timeToAcknowledgeInSeconds, "expected parameter 'timeToAcknowledgeInSeconds' to be non-null");
-    }
+    private RosettaNetPipAcknowledgmentOfReceiptSettingsArgs() {}
 
-    private RosettaNetPipAcknowledgmentOfReceiptSettingsArgs() {
-        this.isNonRepudiationRequired = Codegen.empty();
-        this.timeToAcknowledgeInSeconds = Codegen.empty();
+    private RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(RosettaNetPipAcknowledgmentOfReceiptSettingsArgs $) {
+        this.isNonRepudiationRequired = $.isNonRepudiationRequired;
+        this.timeToAcknowledgeInSeconds = $.timeToAcknowledgeInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RosettaNetPipAcknowledgmentOfReceiptSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> isNonRepudiationRequired;
-        private Output<Integer> timeToAcknowledgeInSeconds;
+        private RosettaNetPipAcknowledgmentOfReceiptSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RosettaNetPipAcknowledgmentOfReceiptSettingsArgs();
         }
 
         public Builder(RosettaNetPipAcknowledgmentOfReceiptSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isNonRepudiationRequired = defaults.isNonRepudiationRequired;
-    	      this.timeToAcknowledgeInSeconds = defaults.timeToAcknowledgeInSeconds;
+            $ = new RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isNonRepudiationRequired(Output<Boolean> isNonRepudiationRequired) {
-            this.isNonRepudiationRequired = Objects.requireNonNull(isNonRepudiationRequired);
+            $.isNonRepudiationRequired = isNonRepudiationRequired;
             return this;
         }
+
         public Builder isNonRepudiationRequired(Boolean isNonRepudiationRequired) {
-            this.isNonRepudiationRequired = Output.of(Objects.requireNonNull(isNonRepudiationRequired));
-            return this;
+            return isNonRepudiationRequired(Output.of(isNonRepudiationRequired));
         }
+
         public Builder timeToAcknowledgeInSeconds(Output<Integer> timeToAcknowledgeInSeconds) {
-            this.timeToAcknowledgeInSeconds = Objects.requireNonNull(timeToAcknowledgeInSeconds);
+            $.timeToAcknowledgeInSeconds = timeToAcknowledgeInSeconds;
             return this;
         }
+
         public Builder timeToAcknowledgeInSeconds(Integer timeToAcknowledgeInSeconds) {
-            this.timeToAcknowledgeInSeconds = Output.of(Objects.requireNonNull(timeToAcknowledgeInSeconds));
-            return this;
-        }        public RosettaNetPipAcknowledgmentOfReceiptSettingsArgs build() {
-            return new RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(isNonRepudiationRequired, timeToAcknowledgeInSeconds);
+            return timeToAcknowledgeInSeconds(Output.of(timeToAcknowledgeInSeconds));
+        }
+
+        public RosettaNetPipAcknowledgmentOfReceiptSettingsArgs build() {
+            $.isNonRepudiationRequired = Objects.requireNonNull($.isNonRepudiationRequired, "expected parameter 'isNonRepudiationRequired' to be non-null");
+            $.timeToAcknowledgeInSeconds = Objects.requireNonNull($.timeToAcknowledgeInSeconds, "expected parameter 'timeToAcknowledgeInSeconds' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetVMwareCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="projectName", required=true)
-      private final String projectName;
+    private String projectName;
 
     public String projectName() {
         return this.projectName;
@@ -28,7 +28,7 @@ public final class GetVMwareCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetVMwareCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="vmWareCollectorName", required=true)
-      private final String vmWareCollectorName;
+    private String vmWareCollectorName;
 
     public String vmWareCollectorName() {
         return this.vmWareCollectorName;
     }
 
-    public GetVMwareCollectorArgs(
-        String projectName,
-        String resourceGroupName,
-        String vmWareCollectorName) {
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vmWareCollectorName = Objects.requireNonNull(vmWareCollectorName, "expected parameter 'vmWareCollectorName' to be non-null");
-    }
+    private GetVMwareCollectorArgs() {}
 
-    private GetVMwareCollectorArgs() {
-        this.projectName = null;
-        this.resourceGroupName = null;
-        this.vmWareCollectorName = null;
+    private GetVMwareCollectorArgs(GetVMwareCollectorArgs $) {
+        this.projectName = $.projectName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vmWareCollectorName = $.vmWareCollectorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVMwareCollectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String projectName;
-        private String resourceGroupName;
-        private String vmWareCollectorName;
+        private GetVMwareCollectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVMwareCollectorArgs();
         }
 
         public Builder(GetVMwareCollectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectName = defaults.projectName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vmWareCollectorName = defaults.vmWareCollectorName;
+            $ = new GetVMwareCollectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vmWareCollectorName(String vmWareCollectorName) {
-            this.vmWareCollectorName = Objects.requireNonNull(vmWareCollectorName);
+            $.vmWareCollectorName = vmWareCollectorName;
             return this;
-        }        public GetVMwareCollectorArgs build() {
-            return new GetVMwareCollectorArgs(projectName, resourceGroupName, vmWareCollectorName);
+        }
+
+        public GetVMwareCollectorArgs build() {
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmWareCollectorName = Objects.requireNonNull($.vmWareCollectorName, "expected parameter 'vmWareCollectorName' to be non-null");
+            return $;
         }
     }
+
 }

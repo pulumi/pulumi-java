@@ -22,10 +22,10 @@ public final class ManagedClusterPodIdentityProfileResponse extends com.pulumi.r
      * 
      */
     @Import(name="allowNetworkPluginKubenet")
-      private final @Nullable Boolean allowNetworkPluginKubenet;
+    private @Nullable Boolean allowNetworkPluginKubenet;
 
     public Optional<Boolean> allowNetworkPluginKubenet() {
-        return this.allowNetworkPluginKubenet == null ? Optional.empty() : Optional.ofNullable(this.allowNetworkPluginKubenet);
+        return Optional.ofNullable(this.allowNetworkPluginKubenet);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ManagedClusterPodIdentityProfileResponse extends com.pulumi.r
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ManagedClusterPodIdentityProfileResponse extends com.pulumi.r
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities;
+    private @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities;
 
-    public List<ManagedClusterPodIdentityResponse> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? List.of() : this.userAssignedIdentities;
+    public Optional<List<ManagedClusterPodIdentityResponse>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
     /**
@@ -55,79 +55,70 @@ public final class ManagedClusterPodIdentityProfileResponse extends com.pulumi.r
      * 
      */
     @Import(name="userAssignedIdentityExceptions")
-      private final @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
+    private @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
 
-    public List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions() {
-        return this.userAssignedIdentityExceptions == null ? List.of() : this.userAssignedIdentityExceptions;
+    public Optional<List<ManagedClusterPodIdentityExceptionResponse>> userAssignedIdentityExceptions() {
+        return Optional.ofNullable(this.userAssignedIdentityExceptions);
     }
 
-    public ManagedClusterPodIdentityProfileResponse(
-        @Nullable Boolean allowNetworkPluginKubenet,
-        @Nullable Boolean enabled,
-        @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities,
-        @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
-        this.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
-        this.enabled = enabled;
-        this.userAssignedIdentities = userAssignedIdentities;
-        this.userAssignedIdentityExceptions = userAssignedIdentityExceptions;
-    }
+    private ManagedClusterPodIdentityProfileResponse() {}
 
-    private ManagedClusterPodIdentityProfileResponse() {
-        this.allowNetworkPluginKubenet = null;
-        this.enabled = null;
-        this.userAssignedIdentities = List.of();
-        this.userAssignedIdentityExceptions = List.of();
+    private ManagedClusterPodIdentityProfileResponse(ManagedClusterPodIdentityProfileResponse $) {
+        this.allowNetworkPluginKubenet = $.allowNetworkPluginKubenet;
+        this.enabled = $.enabled;
+        this.userAssignedIdentities = $.userAssignedIdentities;
+        this.userAssignedIdentityExceptions = $.userAssignedIdentityExceptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterPodIdentityProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowNetworkPluginKubenet;
-        private @Nullable Boolean enabled;
-        private @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities;
-        private @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
+        private ManagedClusterPodIdentityProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterPodIdentityProfileResponse();
         }
 
         public Builder(ManagedClusterPodIdentityProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowNetworkPluginKubenet = defaults.allowNetworkPluginKubenet;
-    	      this.enabled = defaults.enabled;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
-    	      this.userAssignedIdentityExceptions = defaults.userAssignedIdentityExceptions;
+            $ = new ManagedClusterPodIdentityProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowNetworkPluginKubenet(@Nullable Boolean allowNetworkPluginKubenet) {
-            this.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
+            $.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder userAssignedIdentities(@Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
+
         public Builder userAssignedIdentities(ManagedClusterPodIdentityResponse... userAssignedIdentities) {
             return userAssignedIdentities(List.of(userAssignedIdentities));
         }
+
         public Builder userAssignedIdentityExceptions(@Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
-            this.userAssignedIdentityExceptions = userAssignedIdentityExceptions;
+            $.userAssignedIdentityExceptions = userAssignedIdentityExceptions;
             return this;
         }
+
         public Builder userAssignedIdentityExceptions(ManagedClusterPodIdentityExceptionResponse... userAssignedIdentityExceptions) {
             return userAssignedIdentityExceptions(List.of(userAssignedIdentityExceptions));
-        }        public ManagedClusterPodIdentityProfileResponse build() {
-            return new ManagedClusterPodIdentityProfileResponse(allowNetworkPluginKubenet, enabled, userAssignedIdentities, userAssignedIdentityExceptions);
+        }
+
+        public ManagedClusterPodIdentityProfileResponse build() {
+            return $;
         }
     }
+
 }

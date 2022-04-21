@@ -17,94 +17,84 @@ public final class DistributionCustomErrorResponse extends com.pulumi.resources.
     public static final DistributionCustomErrorResponse Empty = new DistributionCustomErrorResponse();
 
     @Import(name="errorCachingMinTTL")
-      private final @Nullable Double errorCachingMinTTL;
+    private @Nullable Double errorCachingMinTTL;
 
     public Optional<Double> errorCachingMinTTL() {
-        return this.errorCachingMinTTL == null ? Optional.empty() : Optional.ofNullable(this.errorCachingMinTTL);
+        return Optional.ofNullable(this.errorCachingMinTTL);
     }
 
     @Import(name="errorCode", required=true)
-      private final Integer errorCode;
+    private Integer errorCode;
 
     public Integer errorCode() {
         return this.errorCode;
     }
 
     @Import(name="responseCode")
-      private final @Nullable Integer responseCode;
+    private @Nullable Integer responseCode;
 
     public Optional<Integer> responseCode() {
-        return this.responseCode == null ? Optional.empty() : Optional.ofNullable(this.responseCode);
+        return Optional.ofNullable(this.responseCode);
     }
 
     @Import(name="responsePagePath")
-      private final @Nullable String responsePagePath;
+    private @Nullable String responsePagePath;
 
     public Optional<String> responsePagePath() {
-        return this.responsePagePath == null ? Optional.empty() : Optional.ofNullable(this.responsePagePath);
+        return Optional.ofNullable(this.responsePagePath);
     }
 
-    public DistributionCustomErrorResponse(
-        @Nullable Double errorCachingMinTTL,
-        Integer errorCode,
-        @Nullable Integer responseCode,
-        @Nullable String responsePagePath) {
-        this.errorCachingMinTTL = errorCachingMinTTL;
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-        this.responseCode = responseCode;
-        this.responsePagePath = responsePagePath;
-    }
+    private DistributionCustomErrorResponse() {}
 
-    private DistributionCustomErrorResponse() {
-        this.errorCachingMinTTL = null;
-        this.errorCode = null;
-        this.responseCode = null;
-        this.responsePagePath = null;
+    private DistributionCustomErrorResponse(DistributionCustomErrorResponse $) {
+        this.errorCachingMinTTL = $.errorCachingMinTTL;
+        this.errorCode = $.errorCode;
+        this.responseCode = $.responseCode;
+        this.responsePagePath = $.responsePagePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionCustomErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double errorCachingMinTTL;
-        private Integer errorCode;
-        private @Nullable Integer responseCode;
-        private @Nullable String responsePagePath;
+        private DistributionCustomErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionCustomErrorResponse();
         }
 
         public Builder(DistributionCustomErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCachingMinTTL = defaults.errorCachingMinTTL;
-    	      this.errorCode = defaults.errorCode;
-    	      this.responseCode = defaults.responseCode;
-    	      this.responsePagePath = defaults.responsePagePath;
+            $ = new DistributionCustomErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCachingMinTTL(@Nullable Double errorCachingMinTTL) {
-            this.errorCachingMinTTL = errorCachingMinTTL;
+            $.errorCachingMinTTL = errorCachingMinTTL;
             return this;
         }
+
         public Builder errorCode(Integer errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder responseCode(@Nullable Integer responseCode) {
-            this.responseCode = responseCode;
+            $.responseCode = responseCode;
             return this;
         }
+
         public Builder responsePagePath(@Nullable String responsePagePath) {
-            this.responsePagePath = responsePagePath;
+            $.responsePagePath = responsePagePath;
             return this;
-        }        public DistributionCustomErrorResponse build() {
-            return new DistributionCustomErrorResponse(errorCachingMinTTL, errorCode, responseCode, responsePagePath);
+        }
+
+        public DistributionCustomErrorResponse build() {
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            return $;
         }
     }
+
 }

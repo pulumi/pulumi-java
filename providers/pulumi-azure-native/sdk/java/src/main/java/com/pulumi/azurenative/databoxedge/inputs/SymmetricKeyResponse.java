@@ -23,45 +23,44 @@ public final class SymmetricKeyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable AsymmetricEncryptedSecretResponse connectionString;
+    private @Nullable AsymmetricEncryptedSecretResponse connectionString;
 
     public Optional<AsymmetricEncryptedSecretResponse> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
-    public SymmetricKeyResponse(@Nullable AsymmetricEncryptedSecretResponse connectionString) {
-        this.connectionString = connectionString;
-    }
+    private SymmetricKeyResponse() {}
 
-    private SymmetricKeyResponse() {
-        this.connectionString = null;
+    private SymmetricKeyResponse(SymmetricKeyResponse $) {
+        this.connectionString = $.connectionString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SymmetricKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AsymmetricEncryptedSecretResponse connectionString;
+        private SymmetricKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SymmetricKeyResponse();
         }
 
         public Builder(SymmetricKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionString = defaults.connectionString;
+            $ = new SymmetricKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionString(@Nullable AsymmetricEncryptedSecretResponse connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
-        }        public SymmetricKeyResponse build() {
-            return new SymmetricKeyResponse(connectionString);
+        }
+
+        public SymmetricKeyResponse build() {
+            return $;
         }
     }
+
 }

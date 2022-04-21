@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="percent")
-      private final @Nullable Output<Double> percent;
+    private @Nullable Output<Double> percent;
 
-    public Output<Double> percent() {
-        return this.percent == null ? Codegen.empty() : this.percent;
+    public Optional<Output<Double>> percent() {
+        return Optional.ofNullable(this.percent);
     }
 
-    public TriggerArgs(
-        @Nullable Output<Integer> count,
-        @Nullable Output<Double> percent) {
-        this.count = count;
-        this.percent = percent;
-    }
+    private TriggerArgs() {}
 
-    private TriggerArgs() {
-        this.count = Codegen.empty();
-        this.percent = Codegen.empty();
+    private TriggerArgs(TriggerArgs $) {
+        this.count = $.count;
+        this.percent = $.percent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<Double> percent;
+        private TriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerArgs();
         }
 
         public Builder(TriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.percent = defaults.percent;
+            $ = new TriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder percent(@Nullable Output<Double> percent) {
-            this.percent = percent;
+            $.percent = percent;
             return this;
         }
-        public Builder percent(@Nullable Double percent) {
-            this.percent = Codegen.ofNullable(percent);
-            return this;
-        }        public TriggerArgs build() {
-            return new TriggerArgs(count, percent);
+
+        public Builder percent(Double percent) {
+            return percent(Output.of(percent));
+        }
+
+        public TriggerArgs build() {
+            return $;
         }
     }
+
 }

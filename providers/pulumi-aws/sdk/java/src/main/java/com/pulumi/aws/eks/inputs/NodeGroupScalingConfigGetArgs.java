@@ -5,7 +5,6 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class NodeGroupScalingConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="desiredSize", required=true)
-      private final Output<Integer> desiredSize;
+    private Output<Integer> desiredSize;
 
     public Output<Integer> desiredSize() {
         return this.desiredSize;
@@ -30,7 +29,7 @@ public final class NodeGroupScalingConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="maxSize", required=true)
-      private final Output<Integer> maxSize;
+    private Output<Integer> maxSize;
 
     public Output<Integer> maxSize() {
         return this.maxSize;
@@ -41,76 +40,71 @@ public final class NodeGroupScalingConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="minSize", required=true)
-      private final Output<Integer> minSize;
+    private Output<Integer> minSize;
 
     public Output<Integer> minSize() {
         return this.minSize;
     }
 
-    public NodeGroupScalingConfigGetArgs(
-        Output<Integer> desiredSize,
-        Output<Integer> maxSize,
-        Output<Integer> minSize) {
-        this.desiredSize = Objects.requireNonNull(desiredSize, "expected parameter 'desiredSize' to be non-null");
-        this.maxSize = Objects.requireNonNull(maxSize, "expected parameter 'maxSize' to be non-null");
-        this.minSize = Objects.requireNonNull(minSize, "expected parameter 'minSize' to be non-null");
-    }
+    private NodeGroupScalingConfigGetArgs() {}
 
-    private NodeGroupScalingConfigGetArgs() {
-        this.desiredSize = Codegen.empty();
-        this.maxSize = Codegen.empty();
-        this.minSize = Codegen.empty();
+    private NodeGroupScalingConfigGetArgs(NodeGroupScalingConfigGetArgs $) {
+        this.desiredSize = $.desiredSize;
+        this.maxSize = $.maxSize;
+        this.minSize = $.minSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupScalingConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> desiredSize;
-        private Output<Integer> maxSize;
-        private Output<Integer> minSize;
+        private NodeGroupScalingConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupScalingConfigGetArgs();
         }
 
         public Builder(NodeGroupScalingConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desiredSize = defaults.desiredSize;
-    	      this.maxSize = defaults.maxSize;
-    	      this.minSize = defaults.minSize;
+            $ = new NodeGroupScalingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder desiredSize(Output<Integer> desiredSize) {
-            this.desiredSize = Objects.requireNonNull(desiredSize);
+            $.desiredSize = desiredSize;
             return this;
         }
+
         public Builder desiredSize(Integer desiredSize) {
-            this.desiredSize = Output.of(Objects.requireNonNull(desiredSize));
-            return this;
+            return desiredSize(Output.of(desiredSize));
         }
+
         public Builder maxSize(Output<Integer> maxSize) {
-            this.maxSize = Objects.requireNonNull(maxSize);
+            $.maxSize = maxSize;
             return this;
         }
+
         public Builder maxSize(Integer maxSize) {
-            this.maxSize = Output.of(Objects.requireNonNull(maxSize));
-            return this;
+            return maxSize(Output.of(maxSize));
         }
+
         public Builder minSize(Output<Integer> minSize) {
-            this.minSize = Objects.requireNonNull(minSize);
+            $.minSize = minSize;
             return this;
         }
+
         public Builder minSize(Integer minSize) {
-            this.minSize = Output.of(Objects.requireNonNull(minSize));
-            return this;
-        }        public NodeGroupScalingConfigGetArgs build() {
-            return new NodeGroupScalingConfigGetArgs(desiredSize, maxSize, minSize);
+            return minSize(Output.of(minSize));
+        }
+
+        public NodeGroupScalingConfigGetArgs build() {
+            $.desiredSize = Objects.requireNonNull($.desiredSize, "expected parameter 'desiredSize' to be non-null");
+            $.maxSize = Objects.requireNonNull($.maxSize, "expected parameter 'maxSize' to be non-null");
+            $.minSize = Objects.requireNonNull($.minSize, "expected parameter 'minSize' to be non-null");
+            return $;
         }
     }
+
 }

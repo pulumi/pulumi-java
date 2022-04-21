@@ -17,7 +17,7 @@ public final class GetTagArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetTagArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -39,64 +39,59 @@ public final class GetTagArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagId", required=true)
-      private final String tagId;
+    private String tagId;
 
     public String tagId() {
         return this.tagId;
     }
 
-    public GetTagArgs(
-        String resourceGroupName,
-        String serviceName,
-        String tagId) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.tagId = Objects.requireNonNull(tagId, "expected parameter 'tagId' to be non-null");
-    }
+    private GetTagArgs() {}
 
-    private GetTagArgs() {
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.tagId = null;
+    private GetTagArgs(GetTagArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.tagId = $.tagId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serviceName;
-        private String tagId;
+        private GetTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTagArgs();
         }
 
         public Builder(GetTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.tagId = defaults.tagId;
+            $ = new GetTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder tagId(String tagId) {
-            this.tagId = Objects.requireNonNull(tagId);
+            $.tagId = tagId;
             return this;
-        }        public GetTagArgs build() {
-            return new GetTagArgs(resourceGroupName, serviceName, tagId);
+        }
+
+        public GetTagArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.tagId = Objects.requireNonNull($.tagId, "expected parameter 'tagId' to be non-null");
+            return $;
         }
     }
+
 }

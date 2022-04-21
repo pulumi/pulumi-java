@@ -21,45 +21,45 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="smartReplyAllowlistCovered", required=true)
-      private final Boolean smartReplyAllowlistCovered;
+    private Boolean smartReplyAllowlistCovered;
 
     public Boolean smartReplyAllowlistCovered() {
         return this.smartReplyAllowlistCovered;
     }
 
-    public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(Boolean smartReplyAllowlistCovered) {
-        this.smartReplyAllowlistCovered = Objects.requireNonNull(smartReplyAllowlistCovered, "expected parameter 'smartReplyAllowlistCovered' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse() {
-        this.smartReplyAllowlistCovered = null;
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse $) {
+        this.smartReplyAllowlistCovered = $.smartReplyAllowlistCovered;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean smartReplyAllowlistCovered;
+        private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.smartReplyAllowlistCovered = defaults.smartReplyAllowlistCovered;
+            $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder smartReplyAllowlistCovered(Boolean smartReplyAllowlistCovered) {
-            this.smartReplyAllowlistCovered = Objects.requireNonNull(smartReplyAllowlistCovered);
+            $.smartReplyAllowlistCovered = smartReplyAllowlistCovered;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(smartReplyAllowlistCovered);
+        }
+
+        public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse build() {
+            $.smartReplyAllowlistCovered = Objects.requireNonNull($.smartReplyAllowlistCovered, "expected parameter 'smartReplyAllowlistCovered' to be non-null");
+            return $;
         }
     }
+
 }

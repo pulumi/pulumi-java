@@ -6,10 +6,10 @@ package com.pulumi.aws.elasticloadbalancing.inputs;
 import com.pulumi.aws.elasticloadbalancing.inputs.LoadBalancerPolicyPolicyAttributeGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="loadBalancerName")
-      private final @Nullable Output<String> loadBalancerName;
+    private @Nullable Output<String> loadBalancerName;
 
-    public Output<String> loadBalancerName() {
-        return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
+    public Optional<Output<String>> loadBalancerName() {
+        return Optional.ofNullable(this.loadBalancerName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyAttributes")
-      private final @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
+    private @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
 
-    public Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes() {
-        return this.policyAttributes == null ? Codegen.empty() : this.policyAttributes;
+    public Optional<Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>>> policyAttributes() {
+        return Optional.ofNullable(this.policyAttributes);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyName")
-      private final @Nullable Output<String> policyName;
+    private @Nullable Output<String> policyName;
 
-    public Output<String> policyName() {
-        return this.policyName == null ? Codegen.empty() : this.policyName;
+    public Optional<Output<String>> policyName() {
+        return Optional.ofNullable(this.policyName);
     }
 
     /**
@@ -55,92 +55,82 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyTypeName")
-      private final @Nullable Output<String> policyTypeName;
+    private @Nullable Output<String> policyTypeName;
 
-    public Output<String> policyTypeName() {
-        return this.policyTypeName == null ? Codegen.empty() : this.policyTypeName;
+    public Optional<Output<String>> policyTypeName() {
+        return Optional.ofNullable(this.policyTypeName);
     }
 
-    public LoadBalancerPolicyState(
-        @Nullable Output<String> loadBalancerName,
-        @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes,
-        @Nullable Output<String> policyName,
-        @Nullable Output<String> policyTypeName) {
-        this.loadBalancerName = loadBalancerName;
-        this.policyAttributes = policyAttributes;
-        this.policyName = policyName;
-        this.policyTypeName = policyTypeName;
-    }
+    private LoadBalancerPolicyState() {}
 
-    private LoadBalancerPolicyState() {
-        this.loadBalancerName = Codegen.empty();
-        this.policyAttributes = Codegen.empty();
-        this.policyName = Codegen.empty();
-        this.policyTypeName = Codegen.empty();
+    private LoadBalancerPolicyState(LoadBalancerPolicyState $) {
+        this.loadBalancerName = $.loadBalancerName;
+        this.policyAttributes = $.policyAttributes;
+        this.policyName = $.policyName;
+        this.policyTypeName = $.policyTypeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> loadBalancerName;
-        private @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
-        private @Nullable Output<String> policyName;
-        private @Nullable Output<String> policyTypeName;
+        private LoadBalancerPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerPolicyState();
         }
 
         public Builder(LoadBalancerPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loadBalancerName = defaults.loadBalancerName;
-    	      this.policyAttributes = defaults.policyAttributes;
-    	      this.policyName = defaults.policyName;
-    	      this.policyTypeName = defaults.policyTypeName;
+            $ = new LoadBalancerPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
-            this.loadBalancerName = loadBalancerName;
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
-        public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Codegen.ofNullable(loadBalancerName);
-            return this;
+
+        public Builder loadBalancerName(String loadBalancerName) {
+            return loadBalancerName(Output.of(loadBalancerName));
         }
+
         public Builder policyAttributes(@Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes) {
-            this.policyAttributes = policyAttributes;
+            $.policyAttributes = policyAttributes;
             return this;
         }
-        public Builder policyAttributes(@Nullable List<LoadBalancerPolicyPolicyAttributeGetArgs> policyAttributes) {
-            this.policyAttributes = Codegen.ofNullable(policyAttributes);
-            return this;
+
+        public Builder policyAttributes(List<LoadBalancerPolicyPolicyAttributeGetArgs> policyAttributes) {
+            return policyAttributes(Output.of(policyAttributes));
         }
+
         public Builder policyAttributes(LoadBalancerPolicyPolicyAttributeGetArgs... policyAttributes) {
             return policyAttributes(List.of(policyAttributes));
         }
+
         public Builder policyName(@Nullable Output<String> policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
-        public Builder policyName(@Nullable String policyName) {
-            this.policyName = Codegen.ofNullable(policyName);
-            return this;
+
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
         }
+
         public Builder policyTypeName(@Nullable Output<String> policyTypeName) {
-            this.policyTypeName = policyTypeName;
+            $.policyTypeName = policyTypeName;
             return this;
         }
-        public Builder policyTypeName(@Nullable String policyTypeName) {
-            this.policyTypeName = Codegen.ofNullable(policyTypeName);
-            return this;
-        }        public LoadBalancerPolicyState build() {
-            return new LoadBalancerPolicyState(loadBalancerName, policyAttributes, policyName, policyTypeName);
+
+        public Builder policyTypeName(String policyTypeName) {
+            return policyTypeName(Output.of(policyTypeName));
+        }
+
+        public LoadBalancerPolicyState build() {
+            return $;
         }
     }
+
 }

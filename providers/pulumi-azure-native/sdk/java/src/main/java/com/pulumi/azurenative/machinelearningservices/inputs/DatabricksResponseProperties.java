@@ -19,10 +19,10 @@ public final class DatabricksResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="databricksAccessToken")
-      private final @Nullable String databricksAccessToken;
+    private @Nullable String databricksAccessToken;
 
     public Optional<String> databricksAccessToken() {
-        return this.databricksAccessToken == null ? Optional.empty() : Optional.ofNullable(this.databricksAccessToken);
+        return Optional.ofNullable(this.databricksAccessToken);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class DatabricksResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="workspaceUrl")
-      private final @Nullable String workspaceUrl;
+    private @Nullable String workspaceUrl;
 
     public Optional<String> workspaceUrl() {
-        return this.workspaceUrl == null ? Optional.empty() : Optional.ofNullable(this.workspaceUrl);
+        return Optional.ofNullable(this.workspaceUrl);
     }
 
-    public DatabricksResponseProperties(
-        @Nullable String databricksAccessToken,
-        @Nullable String workspaceUrl) {
-        this.databricksAccessToken = databricksAccessToken;
-        this.workspaceUrl = workspaceUrl;
-    }
+    private DatabricksResponseProperties() {}
 
-    private DatabricksResponseProperties() {
-        this.databricksAccessToken = null;
-        this.workspaceUrl = null;
+    private DatabricksResponseProperties(DatabricksResponseProperties $) {
+        this.databricksAccessToken = $.databricksAccessToken;
+        this.workspaceUrl = $.workspaceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabricksResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String databricksAccessToken;
-        private @Nullable String workspaceUrl;
+        private DatabricksResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabricksResponseProperties();
         }
 
         public Builder(DatabricksResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databricksAccessToken = defaults.databricksAccessToken;
-    	      this.workspaceUrl = defaults.workspaceUrl;
+            $ = new DatabricksResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder databricksAccessToken(@Nullable String databricksAccessToken) {
-            this.databricksAccessToken = databricksAccessToken;
+            $.databricksAccessToken = databricksAccessToken;
             return this;
         }
+
         public Builder workspaceUrl(@Nullable String workspaceUrl) {
-            this.workspaceUrl = workspaceUrl;
+            $.workspaceUrl = workspaceUrl;
             return this;
-        }        public DatabricksResponseProperties build() {
-            return new DatabricksResponseProperties(databricksAccessToken, workspaceUrl);
+        }
+
+        public DatabricksResponseProperties build() {
+            return $;
         }
     }
+
 }

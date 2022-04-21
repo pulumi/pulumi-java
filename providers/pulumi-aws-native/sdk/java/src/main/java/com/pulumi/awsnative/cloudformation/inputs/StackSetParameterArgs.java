@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cloudformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class StackSetParameterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parameterKey", required=true)
-      private final Output<String> parameterKey;
+    private Output<String> parameterKey;
 
     public Output<String> parameterKey() {
         return this.parameterKey;
@@ -30,63 +29,60 @@ public final class StackSetParameterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parameterValue", required=true)
-      private final Output<String> parameterValue;
+    private Output<String> parameterValue;
 
     public Output<String> parameterValue() {
         return this.parameterValue;
     }
 
-    public StackSetParameterArgs(
-        Output<String> parameterKey,
-        Output<String> parameterValue) {
-        this.parameterKey = Objects.requireNonNull(parameterKey, "expected parameter 'parameterKey' to be non-null");
-        this.parameterValue = Objects.requireNonNull(parameterValue, "expected parameter 'parameterValue' to be non-null");
-    }
+    private StackSetParameterArgs() {}
 
-    private StackSetParameterArgs() {
-        this.parameterKey = Codegen.empty();
-        this.parameterValue = Codegen.empty();
+    private StackSetParameterArgs(StackSetParameterArgs $) {
+        this.parameterKey = $.parameterKey;
+        this.parameterValue = $.parameterValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> parameterKey;
-        private Output<String> parameterValue;
+        private StackSetParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetParameterArgs();
         }
 
         public Builder(StackSetParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterKey = defaults.parameterKey;
-    	      this.parameterValue = defaults.parameterValue;
+            $ = new StackSetParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterKey(Output<String> parameterKey) {
-            this.parameterKey = Objects.requireNonNull(parameterKey);
+            $.parameterKey = parameterKey;
             return this;
         }
+
         public Builder parameterKey(String parameterKey) {
-            this.parameterKey = Output.of(Objects.requireNonNull(parameterKey));
-            return this;
+            return parameterKey(Output.of(parameterKey));
         }
+
         public Builder parameterValue(Output<String> parameterValue) {
-            this.parameterValue = Objects.requireNonNull(parameterValue);
+            $.parameterValue = parameterValue;
             return this;
         }
+
         public Builder parameterValue(String parameterValue) {
-            this.parameterValue = Output.of(Objects.requireNonNull(parameterValue));
-            return this;
-        }        public StackSetParameterArgs build() {
-            return new StackSetParameterArgs(parameterKey, parameterValue);
+            return parameterValue(Output.of(parameterValue));
+        }
+
+        public StackSetParameterArgs build() {
+            $.parameterKey = Objects.requireNonNull($.parameterKey, "expected parameter 'parameterKey' to be non-null");
+            $.parameterValue = Objects.requireNonNull($.parameterValue, "expected parameter 'parameterValue' to be non-null");
+            return $;
         }
     }
+
 }

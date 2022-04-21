@@ -5,10 +5,10 @@ package com.pulumi.aws.directconnect;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class HostedConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bandwidth", required=true)
-      private final Output<String> bandwidth;
+    private Output<String> bandwidth;
 
     public Output<String> bandwidth() {
         return this.bandwidth;
@@ -32,7 +32,7 @@ public final class HostedConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="connectionId", required=true)
-      private final Output<String> connectionId;
+    private Output<String> connectionId;
 
     public Output<String> connectionId() {
         return this.connectionId;
@@ -43,10 +43,10 @@ public final class HostedConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class HostedConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ownerAccountId", required=true)
-      private final Output<String> ownerAccountId;
+    private Output<String> ownerAccountId;
 
     public Output<String> ownerAccountId() {
         return this.ownerAccountId;
@@ -65,102 +65,92 @@ public final class HostedConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="vlan", required=true)
-      private final Output<Integer> vlan;
+    private Output<Integer> vlan;
 
     public Output<Integer> vlan() {
         return this.vlan;
     }
 
-    public HostedConnectionArgs(
-        Output<String> bandwidth,
-        Output<String> connectionId,
-        @Nullable Output<String> name,
-        Output<String> ownerAccountId,
-        Output<Integer> vlan) {
-        this.bandwidth = Objects.requireNonNull(bandwidth, "expected parameter 'bandwidth' to be non-null");
-        this.connectionId = Objects.requireNonNull(connectionId, "expected parameter 'connectionId' to be non-null");
-        this.name = name;
-        this.ownerAccountId = Objects.requireNonNull(ownerAccountId, "expected parameter 'ownerAccountId' to be non-null");
-        this.vlan = Objects.requireNonNull(vlan, "expected parameter 'vlan' to be non-null");
-    }
+    private HostedConnectionArgs() {}
 
-    private HostedConnectionArgs() {
-        this.bandwidth = Codegen.empty();
-        this.connectionId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ownerAccountId = Codegen.empty();
-        this.vlan = Codegen.empty();
+    private HostedConnectionArgs(HostedConnectionArgs $) {
+        this.bandwidth = $.bandwidth;
+        this.connectionId = $.connectionId;
+        this.name = $.name;
+        this.ownerAccountId = $.ownerAccountId;
+        this.vlan = $.vlan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bandwidth;
-        private Output<String> connectionId;
-        private @Nullable Output<String> name;
-        private Output<String> ownerAccountId;
-        private Output<Integer> vlan;
+        private HostedConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedConnectionArgs();
         }
 
         public Builder(HostedConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandwidth = defaults.bandwidth;
-    	      this.connectionId = defaults.connectionId;
-    	      this.name = defaults.name;
-    	      this.ownerAccountId = defaults.ownerAccountId;
-    	      this.vlan = defaults.vlan;
+            $ = new HostedConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bandwidth(Output<String> bandwidth) {
-            this.bandwidth = Objects.requireNonNull(bandwidth);
+            $.bandwidth = bandwidth;
             return this;
         }
+
         public Builder bandwidth(String bandwidth) {
-            this.bandwidth = Output.of(Objects.requireNonNull(bandwidth));
-            return this;
+            return bandwidth(Output.of(bandwidth));
         }
+
         public Builder connectionId(Output<String> connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId);
+            $.connectionId = connectionId;
             return this;
         }
+
         public Builder connectionId(String connectionId) {
-            this.connectionId = Output.of(Objects.requireNonNull(connectionId));
-            return this;
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ownerAccountId(Output<String> ownerAccountId) {
-            this.ownerAccountId = Objects.requireNonNull(ownerAccountId);
+            $.ownerAccountId = ownerAccountId;
             return this;
         }
+
         public Builder ownerAccountId(String ownerAccountId) {
-            this.ownerAccountId = Output.of(Objects.requireNonNull(ownerAccountId));
-            return this;
+            return ownerAccountId(Output.of(ownerAccountId));
         }
+
         public Builder vlan(Output<Integer> vlan) {
-            this.vlan = Objects.requireNonNull(vlan);
+            $.vlan = vlan;
             return this;
         }
+
         public Builder vlan(Integer vlan) {
-            this.vlan = Output.of(Objects.requireNonNull(vlan));
-            return this;
-        }        public HostedConnectionArgs build() {
-            return new HostedConnectionArgs(bandwidth, connectionId, name, ownerAccountId, vlan);
+            return vlan(Output.of(vlan));
+        }
+
+        public HostedConnectionArgs build() {
+            $.bandwidth = Objects.requireNonNull($.bandwidth, "expected parameter 'bandwidth' to be non-null");
+            $.connectionId = Objects.requireNonNull($.connectionId, "expected parameter 'connectionId' to be non-null");
+            $.ownerAccountId = Objects.requireNonNull($.ownerAccountId, "expected parameter 'ownerAccountId' to be non-null");
+            $.vlan = Objects.requireNonNull($.vlan, "expected parameter 'vlan' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deleteFilesAfterCompletion")
-      private final @Nullable Output<Object> deleteFilesAfterCompletion;
+    private @Nullable Output<Object> deleteFilesAfterCompletion;
 
-    public Output<Object> deleteFilesAfterCompletion() {
-        return this.deleteFilesAfterCompletion == null ? Codegen.empty() : this.deleteFilesAfterCompletion;
+    public Optional<Output<Object>> deleteFilesAfterCompletion() {
+        return Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="disableChunking")
-      private final @Nullable Output<Object> disableChunking;
+    private @Nullable Output<Object> disableChunking;
 
-    public Output<Object> disableChunking() {
-        return this.disableChunking == null ? Codegen.empty() : this.disableChunking;
+    public Optional<Output<Object>> disableChunking() {
+        return Optional.ofNullable(this.disableChunking);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enablePartitionDiscovery")
-      private final @Nullable Output<Boolean> enablePartitionDiscovery;
+    private @Nullable Output<Boolean> enablePartitionDiscovery;
 
-    public Output<Boolean> enablePartitionDiscovery() {
-        return this.enablePartitionDiscovery == null ? Codegen.empty() : this.enablePartitionDiscovery;
+    public Optional<Output<Boolean>> enablePartitionDiscovery() {
+        return Optional.ofNullable(this.enablePartitionDiscovery);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="fileListPath")
-      private final @Nullable Output<Object> fileListPath;
+    private @Nullable Output<Object> fileListPath;
 
-    public Output<Object> fileListPath() {
-        return this.fileListPath == null ? Codegen.empty() : this.fileListPath;
+    public Optional<Output<Object>> fileListPath() {
+        return Optional.ofNullable(this.fileListPath);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="partitionRootPath")
-      private final @Nullable Output<Object> partitionRootPath;
+    private @Nullable Output<Object> partitionRootPath;
 
-    public Output<Object> partitionRootPath() {
-        return this.partitionRootPath == null ? Codegen.empty() : this.partitionRootPath;
+    public Optional<Output<Object>> partitionRootPath() {
+        return Optional.ofNullable(this.partitionRootPath);
     }
 
     /**
@@ -103,10 +104,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="recursive")
-      private final @Nullable Output<Object> recursive;
+    private @Nullable Output<Object> recursive;
 
-    public Output<Object> recursive() {
-        return this.recursive == null ? Codegen.empty() : this.recursive;
+    public Optional<Output<Object>> recursive() {
+        return Optional.ofNullable(this.recursive);
     }
 
     /**
@@ -115,7 +116,7 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -126,10 +127,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="useBinaryTransfer")
-      private final @Nullable Output<Boolean> useBinaryTransfer;
+    private @Nullable Output<Boolean> useBinaryTransfer;
 
-    public Output<Boolean> useBinaryTransfer() {
-        return this.useBinaryTransfer == null ? Codegen.empty() : this.useBinaryTransfer;
+    public Optional<Output<Boolean>> useBinaryTransfer() {
+        return Optional.ofNullable(this.useBinaryTransfer);
     }
 
     /**
@@ -137,10 +138,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="wildcardFileName")
-      private final @Nullable Output<Object> wildcardFileName;
+    private @Nullable Output<Object> wildcardFileName;
 
-    public Output<Object> wildcardFileName() {
-        return this.wildcardFileName == null ? Codegen.empty() : this.wildcardFileName;
+    public Optional<Output<Object>> wildcardFileName() {
+        return Optional.ofNullable(this.wildcardFileName);
     }
 
     /**
@@ -148,193 +149,159 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="wildcardFolderPath")
-      private final @Nullable Output<Object> wildcardFolderPath;
+    private @Nullable Output<Object> wildcardFolderPath;
 
-    public Output<Object> wildcardFolderPath() {
-        return this.wildcardFolderPath == null ? Codegen.empty() : this.wildcardFolderPath;
+    public Optional<Output<Object>> wildcardFolderPath() {
+        return Optional.ofNullable(this.wildcardFolderPath);
     }
 
-    public FtpReadSettingsArgs(
-        @Nullable Output<Object> deleteFilesAfterCompletion,
-        @Nullable Output<Object> disableChunking,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Boolean> enablePartitionDiscovery,
-        @Nullable Output<Object> fileListPath,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> partitionRootPath,
-        @Nullable Output<Object> recursive,
-        Output<String> type,
-        @Nullable Output<Boolean> useBinaryTransfer,
-        @Nullable Output<Object> wildcardFileName,
-        @Nullable Output<Object> wildcardFolderPath) {
-        this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
-        this.disableChunking = disableChunking;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.enablePartitionDiscovery = enablePartitionDiscovery;
-        this.fileListPath = fileListPath;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.partitionRootPath = partitionRootPath;
-        this.recursive = recursive;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.useBinaryTransfer = useBinaryTransfer;
-        this.wildcardFileName = wildcardFileName;
-        this.wildcardFolderPath = wildcardFolderPath;
-    }
+    private FtpReadSettingsArgs() {}
 
-    private FtpReadSettingsArgs() {
-        this.deleteFilesAfterCompletion = Codegen.empty();
-        this.disableChunking = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.enablePartitionDiscovery = Codegen.empty();
-        this.fileListPath = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.partitionRootPath = Codegen.empty();
-        this.recursive = Codegen.empty();
-        this.type = Codegen.empty();
-        this.useBinaryTransfer = Codegen.empty();
-        this.wildcardFileName = Codegen.empty();
-        this.wildcardFolderPath = Codegen.empty();
+    private FtpReadSettingsArgs(FtpReadSettingsArgs $) {
+        this.deleteFilesAfterCompletion = $.deleteFilesAfterCompletion;
+        this.disableChunking = $.disableChunking;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.enablePartitionDiscovery = $.enablePartitionDiscovery;
+        this.fileListPath = $.fileListPath;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.partitionRootPath = $.partitionRootPath;
+        this.recursive = $.recursive;
+        this.type = $.type;
+        this.useBinaryTransfer = $.useBinaryTransfer;
+        this.wildcardFileName = $.wildcardFileName;
+        this.wildcardFolderPath = $.wildcardFolderPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FtpReadSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> deleteFilesAfterCompletion;
-        private @Nullable Output<Object> disableChunking;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Boolean> enablePartitionDiscovery;
-        private @Nullable Output<Object> fileListPath;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> partitionRootPath;
-        private @Nullable Output<Object> recursive;
-        private Output<String> type;
-        private @Nullable Output<Boolean> useBinaryTransfer;
-        private @Nullable Output<Object> wildcardFileName;
-        private @Nullable Output<Object> wildcardFolderPath;
+        private FtpReadSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FtpReadSettingsArgs();
         }
 
         public Builder(FtpReadSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteFilesAfterCompletion = defaults.deleteFilesAfterCompletion;
-    	      this.disableChunking = defaults.disableChunking;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.enablePartitionDiscovery = defaults.enablePartitionDiscovery;
-    	      this.fileListPath = defaults.fileListPath;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.partitionRootPath = defaults.partitionRootPath;
-    	      this.recursive = defaults.recursive;
-    	      this.type = defaults.type;
-    	      this.useBinaryTransfer = defaults.useBinaryTransfer;
-    	      this.wildcardFileName = defaults.wildcardFileName;
-    	      this.wildcardFolderPath = defaults.wildcardFolderPath;
+            $ = new FtpReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteFilesAfterCompletion(@Nullable Output<Object> deleteFilesAfterCompletion) {
-            this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
+            $.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
-        public Builder deleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
-            this.deleteFilesAfterCompletion = Codegen.ofNullable(deleteFilesAfterCompletion);
-            return this;
+
+        public Builder deleteFilesAfterCompletion(Object deleteFilesAfterCompletion) {
+            return deleteFilesAfterCompletion(Output.of(deleteFilesAfterCompletion));
         }
+
         public Builder disableChunking(@Nullable Output<Object> disableChunking) {
-            this.disableChunking = disableChunking;
+            $.disableChunking = disableChunking;
             return this;
         }
-        public Builder disableChunking(@Nullable Object disableChunking) {
-            this.disableChunking = Codegen.ofNullable(disableChunking);
-            return this;
+
+        public Builder disableChunking(Object disableChunking) {
+            return disableChunking(Output.of(disableChunking));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = enablePartitionDiscovery;
+            $.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
-        public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = Codegen.ofNullable(enablePartitionDiscovery);
-            return this;
+
+        public Builder enablePartitionDiscovery(Boolean enablePartitionDiscovery) {
+            return enablePartitionDiscovery(Output.of(enablePartitionDiscovery));
         }
+
         public Builder fileListPath(@Nullable Output<Object> fileListPath) {
-            this.fileListPath = fileListPath;
+            $.fileListPath = fileListPath;
             return this;
         }
-        public Builder fileListPath(@Nullable Object fileListPath) {
-            this.fileListPath = Codegen.ofNullable(fileListPath);
-            return this;
+
+        public Builder fileListPath(Object fileListPath) {
+            return fileListPath(Output.of(fileListPath));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
-            this.partitionRootPath = partitionRootPath;
+            $.partitionRootPath = partitionRootPath;
             return this;
         }
-        public Builder partitionRootPath(@Nullable Object partitionRootPath) {
-            this.partitionRootPath = Codegen.ofNullable(partitionRootPath);
-            return this;
+
+        public Builder partitionRootPath(Object partitionRootPath) {
+            return partitionRootPath(Output.of(partitionRootPath));
         }
+
         public Builder recursive(@Nullable Output<Object> recursive) {
-            this.recursive = recursive;
+            $.recursive = recursive;
             return this;
         }
-        public Builder recursive(@Nullable Object recursive) {
-            this.recursive = Codegen.ofNullable(recursive);
-            return this;
+
+        public Builder recursive(Object recursive) {
+            return recursive(Output.of(recursive));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder useBinaryTransfer(@Nullable Output<Boolean> useBinaryTransfer) {
-            this.useBinaryTransfer = useBinaryTransfer;
+            $.useBinaryTransfer = useBinaryTransfer;
             return this;
         }
-        public Builder useBinaryTransfer(@Nullable Boolean useBinaryTransfer) {
-            this.useBinaryTransfer = Codegen.ofNullable(useBinaryTransfer);
-            return this;
+
+        public Builder useBinaryTransfer(Boolean useBinaryTransfer) {
+            return useBinaryTransfer(Output.of(useBinaryTransfer));
         }
+
         public Builder wildcardFileName(@Nullable Output<Object> wildcardFileName) {
-            this.wildcardFileName = wildcardFileName;
+            $.wildcardFileName = wildcardFileName;
             return this;
         }
-        public Builder wildcardFileName(@Nullable Object wildcardFileName) {
-            this.wildcardFileName = Codegen.ofNullable(wildcardFileName);
-            return this;
+
+        public Builder wildcardFileName(Object wildcardFileName) {
+            return wildcardFileName(Output.of(wildcardFileName));
         }
+
         public Builder wildcardFolderPath(@Nullable Output<Object> wildcardFolderPath) {
-            this.wildcardFolderPath = wildcardFolderPath;
+            $.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
-        public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
-            this.wildcardFolderPath = Codegen.ofNullable(wildcardFolderPath);
-            return this;
-        }        public FtpReadSettingsArgs build() {
-            return new FtpReadSettingsArgs(deleteFilesAfterCompletion, disableChunking, disableMetricsCollection, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, partitionRootPath, recursive, type, useBinaryTransfer, wildcardFileName, wildcardFolderPath);
+
+        public Builder wildcardFolderPath(Object wildcardFolderPath) {
+            return wildcardFolderPath(Output.of(wildcardFolderPath));
+        }
+
+        public FtpReadSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

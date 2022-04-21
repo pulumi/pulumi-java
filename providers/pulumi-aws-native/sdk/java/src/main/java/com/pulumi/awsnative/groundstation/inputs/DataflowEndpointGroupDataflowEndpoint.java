@@ -17,78 +17,70 @@ public final class DataflowEndpointGroupDataflowEndpoint extends com.pulumi.reso
     public static final DataflowEndpointGroupDataflowEndpoint Empty = new DataflowEndpointGroupDataflowEndpoint();
 
     @Import(name="address")
-      private final @Nullable DataflowEndpointGroupSocketAddress address;
+    private @Nullable DataflowEndpointGroupSocketAddress address;
 
     public Optional<DataflowEndpointGroupSocketAddress> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     @Import(name="mtu")
-      private final @Nullable Integer mtu;
+    private @Nullable Integer mtu;
 
     public Optional<Integer> mtu() {
-        return this.mtu == null ? Optional.empty() : Optional.ofNullable(this.mtu);
+        return Optional.ofNullable(this.mtu);
     }
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public DataflowEndpointGroupDataflowEndpoint(
-        @Nullable DataflowEndpointGroupSocketAddress address,
-        @Nullable Integer mtu,
-        @Nullable String name) {
-        this.address = address;
-        this.mtu = mtu;
-        this.name = name;
-    }
+    private DataflowEndpointGroupDataflowEndpoint() {}
 
-    private DataflowEndpointGroupDataflowEndpoint() {
-        this.address = null;
-        this.mtu = null;
-        this.name = null;
+    private DataflowEndpointGroupDataflowEndpoint(DataflowEndpointGroupDataflowEndpoint $) {
+        this.address = $.address;
+        this.mtu = $.mtu;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataflowEndpointGroupDataflowEndpoint defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataflowEndpointGroupSocketAddress address;
-        private @Nullable Integer mtu;
-        private @Nullable String name;
+        private DataflowEndpointGroupDataflowEndpoint $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataflowEndpointGroupDataflowEndpoint();
         }
 
         public Builder(DataflowEndpointGroupDataflowEndpoint defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.mtu = defaults.mtu;
-    	      this.name = defaults.name;
+            $ = new DataflowEndpointGroupDataflowEndpoint(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable DataflowEndpointGroupSocketAddress address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = mtu;
+            $.mtu = mtu;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public DataflowEndpointGroupDataflowEndpoint build() {
-            return new DataflowEndpointGroupDataflowEndpoint(address, mtu, name);
+        }
+
+        public DataflowEndpointGroupDataflowEndpoint build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.memcache_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.memcache_v1beta2.enums.InstanceMessageCode;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InstanceMessageArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<InstanceMessageCode> code;
+    private @Nullable Output<InstanceMessageCode> code;
 
-    public Output<InstanceMessageCode> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<InstanceMessageCode>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class InstanceMessageArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
-    public InstanceMessageArgs(
-        @Nullable Output<InstanceMessageCode> code,
-        @Nullable Output<String> message) {
-        this.code = code;
-        this.message = message;
-    }
+    private InstanceMessageArgs() {}
 
-    private InstanceMessageArgs() {
-        this.code = Codegen.empty();
-        this.message = Codegen.empty();
+    private InstanceMessageArgs(InstanceMessageArgs $) {
+        this.code = $.code;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceMessageCode> code;
-        private @Nullable Output<String> message;
+        private InstanceMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceMessageArgs();
         }
 
         public Builder(InstanceMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.message = defaults.message;
+            $ = new InstanceMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<InstanceMessageCode> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable InstanceMessageCode code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(InstanceMessageCode code) {
+            return code(Output.of(code));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
-        }        public InstanceMessageArgs build() {
-            return new InstanceMessageArgs(code, message);
+
+        public Builder message(String message) {
+            return message(Output.of(message));
+        }
+
+        public InstanceMessageArgs build() {
+            return $;
         }
     }
+
 }

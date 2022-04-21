@@ -6,8 +6,8 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupCustomRequestHandlingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class RuleGroupRuleActionCaptchaPropertiesArgs extends com.pulumi.r
     public static final RuleGroupRuleActionCaptchaPropertiesArgs Empty = new RuleGroupRuleActionCaptchaPropertiesArgs();
 
     @Import(name="customRequestHandling")
-      private final @Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
+    private @Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling() {
-        return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
+    public Optional<Output<RuleGroupCustomRequestHandlingArgs>> customRequestHandling() {
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public RuleGroupRuleActionCaptchaPropertiesArgs(@Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private RuleGroupRuleActionCaptchaPropertiesArgs() {}
 
-    private RuleGroupRuleActionCaptchaPropertiesArgs() {
-        this.customRequestHandling = Codegen.empty();
+    private RuleGroupRuleActionCaptchaPropertiesArgs(RuleGroupRuleActionCaptchaPropertiesArgs $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleActionCaptchaPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
+        private RuleGroupRuleActionCaptchaPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleActionCaptchaPropertiesArgs();
         }
 
         public Builder(RuleGroupRuleActionCaptchaPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new RuleGroupRuleActionCaptchaPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
         }
-        public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandlingArgs customRequestHandling) {
-            this.customRequestHandling = Codegen.ofNullable(customRequestHandling);
-            return this;
-        }        public RuleGroupRuleActionCaptchaPropertiesArgs build() {
-            return new RuleGroupRuleActionCaptchaPropertiesArgs(customRequestHandling);
+
+        public Builder customRequestHandling(RuleGroupCustomRequestHandlingArgs customRequestHandling) {
+            return customRequestHandling(Output.of(customRequestHandling));
+        }
+
+        public RuleGroupRuleActionCaptchaPropertiesArgs build() {
+            return $;
         }
     }
+
 }

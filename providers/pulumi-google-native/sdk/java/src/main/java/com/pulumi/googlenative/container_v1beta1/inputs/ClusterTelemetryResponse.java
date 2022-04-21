@@ -21,45 +21,45 @@ public final class ClusterTelemetryResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ClusterTelemetryResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ClusterTelemetryResponse() {}
 
-    private ClusterTelemetryResponse() {
-        this.type = null;
+    private ClusterTelemetryResponse(ClusterTelemetryResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterTelemetryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private ClusterTelemetryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterTelemetryResponse();
         }
 
         public Builder(ClusterTelemetryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ClusterTelemetryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ClusterTelemetryResponse build() {
-            return new ClusterTelemetryResponse(type);
+        }
+
+        public ClusterTelemetryResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

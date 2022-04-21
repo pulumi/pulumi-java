@@ -5,7 +5,6 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class CertificateQualifierArgs extends com.pulumi.resources.Resourc
     public static final CertificateQualifierArgs Empty = new CertificateQualifierArgs();
 
     @Import(name="cpsUri", required=true)
-      private final Output<String> cpsUri;
+    private Output<String> cpsUri;
 
     public Output<String> cpsUri() {
         return this.cpsUri;
     }
 
-    public CertificateQualifierArgs(Output<String> cpsUri) {
-        this.cpsUri = Objects.requireNonNull(cpsUri, "expected parameter 'cpsUri' to be non-null");
-    }
+    private CertificateQualifierArgs() {}
 
-    private CertificateQualifierArgs() {
-        this.cpsUri = Codegen.empty();
+    private CertificateQualifierArgs(CertificateQualifierArgs $) {
+        this.cpsUri = $.cpsUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateQualifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cpsUri;
+        private CertificateQualifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateQualifierArgs();
         }
 
         public Builder(CertificateQualifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpsUri = defaults.cpsUri;
+            $ = new CertificateQualifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpsUri(Output<String> cpsUri) {
-            this.cpsUri = Objects.requireNonNull(cpsUri);
+            $.cpsUri = cpsUri;
             return this;
         }
+
         public Builder cpsUri(String cpsUri) {
-            this.cpsUri = Output.of(Objects.requireNonNull(cpsUri));
-            return this;
-        }        public CertificateQualifierArgs build() {
-            return new CertificateQualifierArgs(cpsUri);
+            return cpsUri(Output.of(cpsUri));
+        }
+
+        public CertificateQualifierArgs build() {
+            $.cpsUri = Objects.requireNonNull($.cpsUri, "expected parameter 'cpsUri' to be non-null");
+            return $;
         }
     }
+
 }

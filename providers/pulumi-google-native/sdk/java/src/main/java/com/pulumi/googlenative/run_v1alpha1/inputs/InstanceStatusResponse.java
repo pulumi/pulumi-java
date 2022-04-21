@@ -23,7 +23,7 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="completionTime", required=true)
-      private final String completionTime;
+    private String completionTime;
 
     public String completionTime() {
         return this.completionTime;
@@ -34,7 +34,7 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="failed", required=true)
-      private final Integer failed;
+    private Integer failed;
 
     public Integer failed() {
         return this.failed;
@@ -45,7 +45,7 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="index", required=true)
-      private final Integer index;
+    private Integer index;
 
     public Integer index() {
         return this.index;
@@ -56,7 +56,7 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lastAttemptResult", required=true)
-      private final InstanceAttemptResultResponse lastAttemptResult;
+    private InstanceAttemptResultResponse lastAttemptResult;
 
     public InstanceAttemptResultResponse lastAttemptResult() {
         return this.lastAttemptResult;
@@ -67,7 +67,7 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lastExitCode", required=true)
-      private final Integer lastExitCode;
+    private Integer lastExitCode;
 
     public Integer lastExitCode() {
         return this.lastExitCode;
@@ -78,7 +78,7 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="restarted", required=true)
-      private final Integer restarted;
+    private Integer restarted;
 
     public Integer restarted() {
         return this.restarted;
@@ -89,7 +89,7 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -100,109 +100,94 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="succeeded", required=true)
-      private final Integer succeeded;
+    private Integer succeeded;
 
     public Integer succeeded() {
         return this.succeeded;
     }
 
-    public InstanceStatusResponse(
-        String completionTime,
-        Integer failed,
-        Integer index,
-        InstanceAttemptResultResponse lastAttemptResult,
-        Integer lastExitCode,
-        Integer restarted,
-        String startTime,
-        Integer succeeded) {
-        this.completionTime = Objects.requireNonNull(completionTime, "expected parameter 'completionTime' to be non-null");
-        this.failed = Objects.requireNonNull(failed, "expected parameter 'failed' to be non-null");
-        this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
-        this.lastAttemptResult = Objects.requireNonNull(lastAttemptResult, "expected parameter 'lastAttemptResult' to be non-null");
-        this.lastExitCode = Objects.requireNonNull(lastExitCode, "expected parameter 'lastExitCode' to be non-null");
-        this.restarted = Objects.requireNonNull(restarted, "expected parameter 'restarted' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.succeeded = Objects.requireNonNull(succeeded, "expected parameter 'succeeded' to be non-null");
-    }
+    private InstanceStatusResponse() {}
 
-    private InstanceStatusResponse() {
-        this.completionTime = null;
-        this.failed = null;
-        this.index = null;
-        this.lastAttemptResult = null;
-        this.lastExitCode = null;
-        this.restarted = null;
-        this.startTime = null;
-        this.succeeded = null;
+    private InstanceStatusResponse(InstanceStatusResponse $) {
+        this.completionTime = $.completionTime;
+        this.failed = $.failed;
+        this.index = $.index;
+        this.lastAttemptResult = $.lastAttemptResult;
+        this.lastExitCode = $.lastExitCode;
+        this.restarted = $.restarted;
+        this.startTime = $.startTime;
+        this.succeeded = $.succeeded;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String completionTime;
-        private Integer failed;
-        private Integer index;
-        private InstanceAttemptResultResponse lastAttemptResult;
-        private Integer lastExitCode;
-        private Integer restarted;
-        private String startTime;
-        private Integer succeeded;
+        private InstanceStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceStatusResponse();
         }
 
         public Builder(InstanceStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completionTime = defaults.completionTime;
-    	      this.failed = defaults.failed;
-    	      this.index = defaults.index;
-    	      this.lastAttemptResult = defaults.lastAttemptResult;
-    	      this.lastExitCode = defaults.lastExitCode;
-    	      this.restarted = defaults.restarted;
-    	      this.startTime = defaults.startTime;
-    	      this.succeeded = defaults.succeeded;
+            $ = new InstanceStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder completionTime(String completionTime) {
-            this.completionTime = Objects.requireNonNull(completionTime);
+            $.completionTime = completionTime;
             return this;
         }
+
         public Builder failed(Integer failed) {
-            this.failed = Objects.requireNonNull(failed);
+            $.failed = failed;
             return this;
         }
+
         public Builder index(Integer index) {
-            this.index = Objects.requireNonNull(index);
+            $.index = index;
             return this;
         }
+
         public Builder lastAttemptResult(InstanceAttemptResultResponse lastAttemptResult) {
-            this.lastAttemptResult = Objects.requireNonNull(lastAttemptResult);
+            $.lastAttemptResult = lastAttemptResult;
             return this;
         }
+
         public Builder lastExitCode(Integer lastExitCode) {
-            this.lastExitCode = Objects.requireNonNull(lastExitCode);
+            $.lastExitCode = lastExitCode;
             return this;
         }
+
         public Builder restarted(Integer restarted) {
-            this.restarted = Objects.requireNonNull(restarted);
+            $.restarted = restarted;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder succeeded(Integer succeeded) {
-            this.succeeded = Objects.requireNonNull(succeeded);
+            $.succeeded = succeeded;
             return this;
-        }        public InstanceStatusResponse build() {
-            return new InstanceStatusResponse(completionTime, failed, index, lastAttemptResult, lastExitCode, restarted, startTime, succeeded);
+        }
+
+        public InstanceStatusResponse build() {
+            $.completionTime = Objects.requireNonNull($.completionTime, "expected parameter 'completionTime' to be non-null");
+            $.failed = Objects.requireNonNull($.failed, "expected parameter 'failed' to be non-null");
+            $.index = Objects.requireNonNull($.index, "expected parameter 'index' to be non-null");
+            $.lastAttemptResult = Objects.requireNonNull($.lastAttemptResult, "expected parameter 'lastAttemptResult' to be non-null");
+            $.lastExitCode = Objects.requireNonNull($.lastExitCode, "expected parameter 'lastExitCode' to be non-null");
+            $.restarted = Objects.requireNonNull($.restarted, "expected parameter 'restarted' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.succeeded = Objects.requireNonNull($.succeeded, "expected parameter 'succeeded' to be non-null");
+            return $;
         }
     }
+
 }

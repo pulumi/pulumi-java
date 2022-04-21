@@ -17,7 +17,7 @@ public final class GetImagePipelineSchedule extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="pipelineExecutionStartCondition", required=true)
-      private final String pipelineExecutionStartCondition;
+    private String pipelineExecutionStartCondition;
 
     public String pipelineExecutionStartCondition() {
         return this.pipelineExecutionStartCondition;
@@ -28,55 +28,52 @@ public final class GetImagePipelineSchedule extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="scheduleExpression", required=true)
-      private final String scheduleExpression;
+    private String scheduleExpression;
 
     public String scheduleExpression() {
         return this.scheduleExpression;
     }
 
-    public GetImagePipelineSchedule(
-        String pipelineExecutionStartCondition,
-        String scheduleExpression) {
-        this.pipelineExecutionStartCondition = Objects.requireNonNull(pipelineExecutionStartCondition, "expected parameter 'pipelineExecutionStartCondition' to be non-null");
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
-    }
+    private GetImagePipelineSchedule() {}
 
-    private GetImagePipelineSchedule() {
-        this.pipelineExecutionStartCondition = null;
-        this.scheduleExpression = null;
+    private GetImagePipelineSchedule(GetImagePipelineSchedule $) {
+        this.pipelineExecutionStartCondition = $.pipelineExecutionStartCondition;
+        this.scheduleExpression = $.scheduleExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImagePipelineSchedule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pipelineExecutionStartCondition;
-        private String scheduleExpression;
+        private GetImagePipelineSchedule $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImagePipelineSchedule();
         }
 
         public Builder(GetImagePipelineSchedule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pipelineExecutionStartCondition = defaults.pipelineExecutionStartCondition;
-    	      this.scheduleExpression = defaults.scheduleExpression;
+            $ = new GetImagePipelineSchedule(Objects.requireNonNull(defaults));
         }
 
         public Builder pipelineExecutionStartCondition(String pipelineExecutionStartCondition) {
-            this.pipelineExecutionStartCondition = Objects.requireNonNull(pipelineExecutionStartCondition);
+            $.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
+
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+            $.scheduleExpression = scheduleExpression;
             return this;
-        }        public GetImagePipelineSchedule build() {
-            return new GetImagePipelineSchedule(pipelineExecutionStartCondition, scheduleExpression);
+        }
+
+        public GetImagePipelineSchedule build() {
+            $.pipelineExecutionStartCondition = Objects.requireNonNull($.pipelineExecutionStartCondition, "expected parameter 'pipelineExecutionStartCondition' to be non-null");
+            $.scheduleExpression = Objects.requireNonNull($.scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
+            return $;
         }
     }
+
 }

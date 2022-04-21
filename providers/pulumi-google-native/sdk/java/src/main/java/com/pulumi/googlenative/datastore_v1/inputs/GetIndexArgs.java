@@ -15,62 +15,58 @@ public final class GetIndexArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIndexArgs Empty = new GetIndexArgs();
 
     @Import(name="indexId", required=true)
-      private final String indexId;
+    private String indexId;
 
     public String indexId() {
         return this.indexId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetIndexArgs(
-        String indexId,
-        @Nullable String project) {
-        this.indexId = Objects.requireNonNull(indexId, "expected parameter 'indexId' to be non-null");
-        this.project = project;
-    }
+    private GetIndexArgs() {}
 
-    private GetIndexArgs() {
-        this.indexId = null;
-        this.project = null;
+    private GetIndexArgs(GetIndexArgs $) {
+        this.indexId = $.indexId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String indexId;
-        private @Nullable String project;
+        private GetIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIndexArgs();
         }
 
         public Builder(GetIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.indexId = defaults.indexId;
-    	      this.project = defaults.project;
+            $ = new GetIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder indexId(String indexId) {
-            this.indexId = Objects.requireNonNull(indexId);
+            $.indexId = indexId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetIndexArgs build() {
-            return new GetIndexArgs(indexId, project);
+        }
+
+        public GetIndexArgs build() {
+            $.indexId = Objects.requireNonNull($.indexId, "expected parameter 'indexId' to be non-null");
+            return $;
         }
     }
+
 }

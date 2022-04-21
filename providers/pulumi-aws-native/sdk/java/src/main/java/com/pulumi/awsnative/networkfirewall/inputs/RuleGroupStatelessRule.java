@@ -14,62 +14,59 @@ public final class RuleGroupStatelessRule extends com.pulumi.resources.InvokeArg
     public static final RuleGroupStatelessRule Empty = new RuleGroupStatelessRule();
 
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
     }
 
     @Import(name="ruleDefinition", required=true)
-      private final RuleGroupRuleDefinition ruleDefinition;
+    private RuleGroupRuleDefinition ruleDefinition;
 
     public RuleGroupRuleDefinition ruleDefinition() {
         return this.ruleDefinition;
     }
 
-    public RuleGroupStatelessRule(
-        Integer priority,
-        RuleGroupRuleDefinition ruleDefinition) {
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.ruleDefinition = Objects.requireNonNull(ruleDefinition, "expected parameter 'ruleDefinition' to be non-null");
-    }
+    private RuleGroupStatelessRule() {}
 
-    private RuleGroupStatelessRule() {
-        this.priority = null;
-        this.ruleDefinition = null;
+    private RuleGroupStatelessRule(RuleGroupStatelessRule $) {
+        this.priority = $.priority;
+        this.ruleDefinition = $.ruleDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupStatelessRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer priority;
-        private RuleGroupRuleDefinition ruleDefinition;
+        private RuleGroupStatelessRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupStatelessRule();
         }
 
         public Builder(RuleGroupStatelessRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.priority = defaults.priority;
-    	      this.ruleDefinition = defaults.ruleDefinition;
+            $ = new RuleGroupStatelessRule(Objects.requireNonNull(defaults));
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder ruleDefinition(RuleGroupRuleDefinition ruleDefinition) {
-            this.ruleDefinition = Objects.requireNonNull(ruleDefinition);
+            $.ruleDefinition = ruleDefinition;
             return this;
-        }        public RuleGroupStatelessRule build() {
-            return new RuleGroupStatelessRule(priority, ruleDefinition);
+        }
+
+        public RuleGroupStatelessRule build() {
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.ruleDefinition = Objects.requireNonNull($.ruleDefinition, "expected parameter 'ruleDefinition' to be non-null");
+            return $;
         }
     }
+
 }

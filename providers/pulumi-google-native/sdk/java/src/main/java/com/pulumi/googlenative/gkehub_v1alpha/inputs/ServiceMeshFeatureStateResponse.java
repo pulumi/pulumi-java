@@ -22,48 +22,49 @@ public final class ServiceMeshFeatureStateResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="analysisMessages", required=true)
-      private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
+    private List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 
     public List<ServiceMeshAnalysisMessageResponse> analysisMessages() {
         return this.analysisMessages;
     }
 
-    public ServiceMeshFeatureStateResponse(List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
-        this.analysisMessages = Objects.requireNonNull(analysisMessages, "expected parameter 'analysisMessages' to be non-null");
-    }
+    private ServiceMeshFeatureStateResponse() {}
 
-    private ServiceMeshFeatureStateResponse() {
-        this.analysisMessages = List.of();
+    private ServiceMeshFeatureStateResponse(ServiceMeshFeatureStateResponse $) {
+        this.analysisMessages = $.analysisMessages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceMeshFeatureStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ServiceMeshAnalysisMessageResponse> analysisMessages;
+        private ServiceMeshFeatureStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceMeshFeatureStateResponse();
         }
 
         public Builder(ServiceMeshFeatureStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisMessages = defaults.analysisMessages;
+            $ = new ServiceMeshFeatureStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisMessages(List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
-            this.analysisMessages = Objects.requireNonNull(analysisMessages);
+            $.analysisMessages = analysisMessages;
             return this;
         }
+
         public Builder analysisMessages(ServiceMeshAnalysisMessageResponse... analysisMessages) {
             return analysisMessages(List.of(analysisMessages));
-        }        public ServiceMeshFeatureStateResponse build() {
-            return new ServiceMeshFeatureStateResponse(analysisMessages);
+        }
+
+        public ServiceMeshFeatureStateResponse build() {
+            $.analysisMessages = Objects.requireNonNull($.analysisMessages, "expected parameter 'analysisMessages' to be non-null");
+            return $;
         }
     }
+
 }

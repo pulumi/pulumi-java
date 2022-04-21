@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -35,63 +34,60 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
      * 
      */
     @Import(name="minAcceptableMeanAveragePrecision", required=true)
-      private final Output<Double> minAcceptableMeanAveragePrecision;
+    private Output<Double> minAcceptableMeanAveragePrecision;
 
     public Output<Double> minAcceptableMeanAveragePrecision() {
         return this.minAcceptableMeanAveragePrecision;
     }
 
-    public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs(
-        Output<String> email,
-        Output<Double> minAcceptableMeanAveragePrecision) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision, "expected parameter 'minAcceptableMeanAveragePrecision' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs() {
-        this.email = Codegen.empty();
-        this.minAcceptableMeanAveragePrecision = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs $) {
+        this.email = $.email;
+        this.minAcceptableMeanAveragePrecision = $.minAcceptableMeanAveragePrecision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> email;
-        private Output<Double> minAcceptableMeanAveragePrecision;
+        private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.minAcceptableMeanAveragePrecision = defaults.minAcceptableMeanAveragePrecision;
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder minAcceptableMeanAveragePrecision(Output<Double> minAcceptableMeanAveragePrecision) {
-            this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision);
+            $.minAcceptableMeanAveragePrecision = minAcceptableMeanAveragePrecision;
             return this;
         }
+
         public Builder minAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
-            this.minAcceptableMeanAveragePrecision = Output.of(Objects.requireNonNull(minAcceptableMeanAveragePrecision));
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs build() {
-            return new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs(email, minAcceptableMeanAveragePrecision);
+            return minAcceptableMeanAveragePrecision(Output.of(minAcceptableMeanAveragePrecision));
+        }
+
+        public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.minAcceptableMeanAveragePrecision = Objects.requireNonNull($.minAcceptableMeanAveragePrecision, "expected parameter 'minAcceptableMeanAveragePrecision' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class ImageDataDiskResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="blobUri")
-      private final @Nullable String blobUri;
+    private @Nullable String blobUri;
 
     public Optional<String> blobUri() {
-        return this.blobUri == null ? Optional.empty() : Optional.ofNullable(this.blobUri);
+        return Optional.ofNullable(this.blobUri);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ImageDataDiskResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="caching")
-      private final @Nullable String caching;
+    private @Nullable String caching;
 
     public Optional<String> caching() {
-        return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ImageDataDiskResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="diskEncryptionSet")
-      private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
+    private @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
     public Optional<DiskEncryptionSetParametersResponse> diskEncryptionSet() {
-        return this.diskEncryptionSet == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSet);
+        return Optional.ofNullable(this.diskEncryptionSet);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ImageDataDiskResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class ImageDataDiskResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lun", required=true)
-      private final Integer lun;
+    private Integer lun;
 
     public Integer lun() {
         return this.lun;
@@ -81,10 +81,10 @@ public final class ImageDataDiskResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable SubResourceResponse managedDisk;
+    private @Nullable SubResourceResponse managedDisk;
 
     public Optional<SubResourceResponse> managedDisk() {
-        return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ImageDataDiskResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="snapshot")
-      private final @Nullable SubResourceResponse snapshot;
+    private @Nullable SubResourceResponse snapshot;
 
     public Optional<SubResourceResponse> snapshot() {
-        return this.snapshot == null ? Optional.empty() : Optional.ofNullable(this.snapshot);
+        return Optional.ofNullable(this.snapshot);
     }
 
     /**
@@ -103,109 +103,87 @@ public final class ImageDataDiskResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable String storageAccountType;
+    private @Nullable String storageAccountType;
 
     public Optional<String> storageAccountType() {
-        return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public ImageDataDiskResponse(
-        @Nullable String blobUri,
-        @Nullable String caching,
-        @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
-        @Nullable Integer diskSizeGB,
-        Integer lun,
-        @Nullable SubResourceResponse managedDisk,
-        @Nullable SubResourceResponse snapshot,
-        @Nullable String storageAccountType) {
-        this.blobUri = blobUri;
-        this.caching = caching;
-        this.diskEncryptionSet = diskEncryptionSet;
-        this.diskSizeGB = diskSizeGB;
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.managedDisk = managedDisk;
-        this.snapshot = snapshot;
-        this.storageAccountType = storageAccountType;
-    }
+    private ImageDataDiskResponse() {}
 
-    private ImageDataDiskResponse() {
-        this.blobUri = null;
-        this.caching = null;
-        this.diskEncryptionSet = null;
-        this.diskSizeGB = null;
-        this.lun = null;
-        this.managedDisk = null;
-        this.snapshot = null;
-        this.storageAccountType = null;
+    private ImageDataDiskResponse(ImageDataDiskResponse $) {
+        this.blobUri = $.blobUri;
+        this.caching = $.caching;
+        this.diskEncryptionSet = $.diskEncryptionSet;
+        this.diskSizeGB = $.diskSizeGB;
+        this.lun = $.lun;
+        this.managedDisk = $.managedDisk;
+        this.snapshot = $.snapshot;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageDataDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String blobUri;
-        private @Nullable String caching;
-        private @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
-        private @Nullable Integer diskSizeGB;
-        private Integer lun;
-        private @Nullable SubResourceResponse managedDisk;
-        private @Nullable SubResourceResponse snapshot;
-        private @Nullable String storageAccountType;
+        private ImageDataDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageDataDiskResponse();
         }
 
         public Builder(ImageDataDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobUri = defaults.blobUri;
-    	      this.caching = defaults.caching;
-    	      this.diskEncryptionSet = defaults.diskEncryptionSet;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.lun = defaults.lun;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.snapshot = defaults.snapshot;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new ImageDataDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blobUri(@Nullable String blobUri) {
-            this.blobUri = blobUri;
+            $.blobUri = blobUri;
             return this;
         }
+
         public Builder caching(@Nullable String caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
+
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
-            this.diskEncryptionSet = diskEncryptionSet;
+            $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
+
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder managedDisk(@Nullable SubResourceResponse managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
+
         public Builder snapshot(@Nullable SubResourceResponse snapshot) {
-            this.snapshot = snapshot;
+            $.snapshot = snapshot;
             return this;
         }
+
         public Builder storageAccountType(@Nullable String storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
-        }        public ImageDataDiskResponse build() {
-            return new ImageDataDiskResponse(blobUri, caching, diskEncryptionSet, diskSizeGB, lun, managedDisk, snapshot, storageAccountType);
+        }
+
+        public ImageDataDiskResponse build() {
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

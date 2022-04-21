@@ -5,12 +5,12 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleRpcStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<Integer> code;
+    private @Nullable Output<Integer> code;
 
-    public Output<Integer> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<Integer>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GoogleRpcStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="details")
-      private final @Nullable Output<List<Map<String,String>>> details;
+    private @Nullable Output<List<Map<String,String>>> details;
 
-    public Output<List<Map<String,String>>> details() {
-        return this.details == null ? Codegen.empty() : this.details;
+    public Optional<Output<List<Map<String,String>>>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -49,76 +49,72 @@ public final class GoogleRpcStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
-    public GoogleRpcStatusArgs(
-        @Nullable Output<Integer> code,
-        @Nullable Output<List<Map<String,String>>> details,
-        @Nullable Output<String> message) {
-        this.code = code;
-        this.details = details;
-        this.message = message;
-    }
+    private GoogleRpcStatusArgs() {}
 
-    private GoogleRpcStatusArgs() {
-        this.code = Codegen.empty();
-        this.details = Codegen.empty();
-        this.message = Codegen.empty();
+    private GoogleRpcStatusArgs(GoogleRpcStatusArgs $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleRpcStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> code;
-        private @Nullable Output<List<Map<String,String>>> details;
-        private @Nullable Output<String> message;
+        private GoogleRpcStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleRpcStatusArgs();
         }
 
         public Builder(GoogleRpcStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
+            $ = new GoogleRpcStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<Integer> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable Integer code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(Integer code) {
+            return code(Output.of(code));
         }
+
         public Builder details(@Nullable Output<List<Map<String,String>>> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
-        public Builder details(@Nullable List<Map<String,String>> details) {
-            this.details = Codegen.ofNullable(details);
-            return this;
+
+        public Builder details(List<Map<String,String>> details) {
+            return details(Output.of(details));
         }
+
+        public Builder details(Map<String,String>... details) {
+            return details(List.of(details));
+        }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
-        }        public GoogleRpcStatusArgs build() {
-            return new GoogleRpcStatusArgs(code, details, message);
+
+        public Builder message(String message) {
+            return message(Output.of(message));
+        }
+
+        public GoogleRpcStatusArgs build() {
+            return $;
         }
     }
+
 }

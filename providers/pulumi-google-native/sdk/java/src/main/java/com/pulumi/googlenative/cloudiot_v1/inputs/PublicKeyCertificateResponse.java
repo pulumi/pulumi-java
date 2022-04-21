@@ -22,7 +22,7 @@ public final class PublicKeyCertificateResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="certificate", required=true)
-      private final String certificate;
+    private String certificate;
 
     public String certificate() {
         return this.certificate;
@@ -33,7 +33,7 @@ public final class PublicKeyCertificateResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="format", required=true)
-      private final String format;
+    private String format;
 
     public String format() {
         return this.format;
@@ -44,64 +44,59 @@ public final class PublicKeyCertificateResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="x509Details", required=true)
-      private final X509CertificateDetailsResponse x509Details;
+    private X509CertificateDetailsResponse x509Details;
 
     public X509CertificateDetailsResponse x509Details() {
         return this.x509Details;
     }
 
-    public PublicKeyCertificateResponse(
-        String certificate,
-        String format,
-        X509CertificateDetailsResponse x509Details) {
-        this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.x509Details = Objects.requireNonNull(x509Details, "expected parameter 'x509Details' to be non-null");
-    }
+    private PublicKeyCertificateResponse() {}
 
-    private PublicKeyCertificateResponse() {
-        this.certificate = null;
-        this.format = null;
-        this.x509Details = null;
+    private PublicKeyCertificateResponse(PublicKeyCertificateResponse $) {
+        this.certificate = $.certificate;
+        this.format = $.format;
+        this.x509Details = $.x509Details;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificate;
-        private String format;
-        private X509CertificateDetailsResponse x509Details;
+        private PublicKeyCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyCertificateResponse();
         }
 
         public Builder(PublicKeyCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.format = defaults.format;
-    	      this.x509Details = defaults.x509Details;
+            $ = new PublicKeyCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(String certificate) {
-            this.certificate = Objects.requireNonNull(certificate);
+            $.certificate = certificate;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder x509Details(X509CertificateDetailsResponse x509Details) {
-            this.x509Details = Objects.requireNonNull(x509Details);
+            $.x509Details = x509Details;
             return this;
-        }        public PublicKeyCertificateResponse build() {
-            return new PublicKeyCertificateResponse(certificate, format, x509Details);
+        }
+
+        public PublicKeyCertificateResponse build() {
+            $.certificate = Objects.requireNonNull($.certificate, "expected parameter 'certificate' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            $.x509Details = Objects.requireNonNull($.x509Details, "expected parameter 'x509Details' to be non-null");
+            return $;
         }
     }
+
 }

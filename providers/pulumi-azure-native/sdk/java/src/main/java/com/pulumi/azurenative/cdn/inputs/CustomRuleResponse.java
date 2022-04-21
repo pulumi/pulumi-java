@@ -26,7 +26,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -37,10 +37,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable String enabledState;
+    private @Nullable String enabledState;
 
     public Optional<String> enabledState() {
-        return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="matchConditions", required=true)
-      private final List<MatchConditionResponse> matchConditions;
+    private List<MatchConditionResponse> matchConditions;
 
     public List<MatchConditionResponse> matchConditions() {
         return this.matchConditions;
@@ -59,7 +59,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -70,85 +70,76 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
     }
 
-    public CustomRuleResponse(
-        String action,
-        @Nullable String enabledState,
-        List<MatchConditionResponse> matchConditions,
-        String name,
-        Integer priority) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.enabledState = enabledState;
-        this.matchConditions = Objects.requireNonNull(matchConditions, "expected parameter 'matchConditions' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-    }
+    private CustomRuleResponse() {}
 
-    private CustomRuleResponse() {
-        this.action = null;
-        this.enabledState = null;
-        this.matchConditions = List.of();
-        this.name = null;
-        this.priority = null;
+    private CustomRuleResponse(CustomRuleResponse $) {
+        this.action = $.action;
+        this.enabledState = $.enabledState;
+        this.matchConditions = $.matchConditions;
+        this.name = $.name;
+        this.priority = $.priority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private @Nullable String enabledState;
-        private List<MatchConditionResponse> matchConditions;
-        private String name;
-        private Integer priority;
+        private CustomRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomRuleResponse();
         }
 
         public Builder(CustomRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.enabledState = defaults.enabledState;
-    	      this.matchConditions = defaults.matchConditions;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
+            $ = new CustomRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder enabledState(@Nullable String enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
+
         public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
-            this.matchConditions = Objects.requireNonNull(matchConditions);
+            $.matchConditions = matchConditions;
             return this;
         }
+
         public Builder matchConditions(MatchConditionResponse... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
-        }        public CustomRuleResponse build() {
-            return new CustomRuleResponse(action, enabledState, matchConditions, name, priority);
+        }
+
+        public CustomRuleResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.matchConditions = Objects.requireNonNull($.matchConditions, "expected parameter 'matchConditions' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.synapse;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="privateLinkHubName")
-      private final @Nullable Output<String> privateLinkHubName;
+    private @Nullable Output<String> privateLinkHubName;
 
-    public Output<String> privateLinkHubName() {
-        return this.privateLinkHubName == null ? Codegen.empty() : this.privateLinkHubName;
+    public Optional<Output<String>> privateLinkHubName() {
+        return Optional.ofNullable(this.privateLinkHubName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<String> provisioningState;
+    private @Nullable Output<String> provisioningState;
 
-    public Output<String> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<String>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,89 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PrivateLinkHubArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<String> privateLinkHubName,
-        @Nullable Output<String> provisioningState,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.location = location;
-        this.privateLinkHubName = privateLinkHubName;
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private PrivateLinkHubArgs() {}
 
-    private PrivateLinkHubArgs() {
-        this.location = Codegen.empty();
-        this.privateLinkHubName = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PrivateLinkHubArgs(PrivateLinkHubArgs $) {
+        this.location = $.location;
+        this.privateLinkHubName = $.privateLinkHubName;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> privateLinkHubName;
-        private @Nullable Output<String> provisioningState;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private PrivateLinkHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkHubArgs();
         }
 
         public Builder(PrivateLinkHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.privateLinkHubName = defaults.privateLinkHubName;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new PrivateLinkHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder privateLinkHubName(@Nullable Output<String> privateLinkHubName) {
-            this.privateLinkHubName = privateLinkHubName;
+            $.privateLinkHubName = privateLinkHubName;
             return this;
         }
-        public Builder privateLinkHubName(@Nullable String privateLinkHubName) {
-            this.privateLinkHubName = Codegen.ofNullable(privateLinkHubName);
-            return this;
+
+        public Builder privateLinkHubName(String privateLinkHubName) {
+            return privateLinkHubName(Output.of(privateLinkHubName));
         }
+
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public PrivateLinkHubArgs build() {
-            return new PrivateLinkHubArgs(location, privateLinkHubName, provisioningState, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public PrivateLinkHubArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

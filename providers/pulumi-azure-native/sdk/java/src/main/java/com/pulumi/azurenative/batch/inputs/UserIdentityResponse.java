@@ -24,10 +24,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="autoUser")
-      private final @Nullable AutoUserSpecificationResponse autoUser;
+    private @Nullable AutoUserSpecificationResponse autoUser;
 
     public Optional<AutoUserSpecificationResponse> autoUser() {
-        return this.autoUser == null ? Optional.empty() : Optional.ofNullable(this.autoUser);
+        return Optional.ofNullable(this.autoUser);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="userName")
-      private final @Nullable String userName;
+    private @Nullable String userName;
 
     public Optional<String> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public UserIdentityResponse(
-        @Nullable AutoUserSpecificationResponse autoUser,
-        @Nullable String userName) {
-        this.autoUser = autoUser;
-        this.userName = userName;
-    }
+    private UserIdentityResponse() {}
 
-    private UserIdentityResponse() {
-        this.autoUser = null;
-        this.userName = null;
+    private UserIdentityResponse(UserIdentityResponse $) {
+        this.autoUser = $.autoUser;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutoUserSpecificationResponse autoUser;
-        private @Nullable String userName;
+        private UserIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserIdentityResponse();
         }
 
         public Builder(UserIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUser = defaults.autoUser;
-    	      this.userName = defaults.userName;
+            $ = new UserIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUser(@Nullable AutoUserSpecificationResponse autoUser) {
-            this.autoUser = autoUser;
+            $.autoUser = autoUser;
             return this;
         }
+
         public Builder userName(@Nullable String userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public UserIdentityResponse build() {
-            return new UserIdentityResponse(autoUser, userName);
+        }
+
+        public UserIdentityResponse build() {
+            return $;
         }
     }
+
 }

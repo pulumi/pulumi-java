@@ -21,7 +21,7 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="family", required=true)
-      private final String family;
+    private String family;
 
     public String family() {
         return this.family;
@@ -32,55 +32,52 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public SkuResponse(
-        String family,
-        String name) {
-        this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private SkuResponse() {}
 
-    private SkuResponse() {
-        this.family = null;
-        this.name = null;
+    private SkuResponse(SkuResponse $) {
+        this.family = $.family;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String family;
-        private String name;
+        private SkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuResponse();
         }
 
         public Builder(SkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
+            $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder family(String family) {
-            this.family = Objects.requireNonNull(family);
+            $.family = family;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public SkuResponse build() {
-            return new SkuResponse(family, name);
+        }
+
+        public SkuResponse build() {
+            $.family = Objects.requireNonNull($.family, "expected parameter 'family' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

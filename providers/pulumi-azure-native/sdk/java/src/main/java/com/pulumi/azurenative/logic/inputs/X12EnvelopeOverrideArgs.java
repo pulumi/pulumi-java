@@ -8,9 +8,9 @@ import com.pulumi.azurenative.logic.enums.X12TimeFormat;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dateFormat", required=true)
-      private final Output<Either<String,X12DateFormat>> dateFormat;
+    private Output<Either<String,X12DateFormat>> dateFormat;
 
     public Output<Either<String,X12DateFormat>> dateFormat() {
         return this.dateFormat;
@@ -38,10 +38,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="functionalIdentifierCode")
-      private final @Nullable Output<String> functionalIdentifierCode;
+    private @Nullable Output<String> functionalIdentifierCode;
 
-    public Output<String> functionalIdentifierCode() {
-        return this.functionalIdentifierCode == null ? Codegen.empty() : this.functionalIdentifierCode;
+    public Optional<Output<String>> functionalIdentifierCode() {
+        return Optional.ofNullable(this.functionalIdentifierCode);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="headerVersion", required=true)
-      private final Output<String> headerVersion;
+    private Output<String> headerVersion;
 
     public Output<String> headerVersion() {
         return this.headerVersion;
@@ -60,7 +60,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="messageId", required=true)
-      private final Output<String> messageId;
+    private Output<String> messageId;
 
     public Output<String> messageId() {
         return this.messageId;
@@ -71,7 +71,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="protocolVersion", required=true)
-      private final Output<String> protocolVersion;
+    private Output<String> protocolVersion;
 
     public Output<String> protocolVersion() {
         return this.protocolVersion;
@@ -82,7 +82,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="receiverApplicationId", required=true)
-      private final Output<String> receiverApplicationId;
+    private Output<String> receiverApplicationId;
 
     public Output<String> receiverApplicationId() {
         return this.receiverApplicationId;
@@ -93,7 +93,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="responsibleAgencyCode", required=true)
-      private final Output<String> responsibleAgencyCode;
+    private Output<String> responsibleAgencyCode;
 
     public Output<String> responsibleAgencyCode() {
         return this.responsibleAgencyCode;
@@ -104,7 +104,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="senderApplicationId", required=true)
-      private final Output<String> senderApplicationId;
+    private Output<String> senderApplicationId;
 
     public Output<String> senderApplicationId() {
         return this.senderApplicationId;
@@ -115,7 +115,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="targetNamespace", required=true)
-      private final Output<String> targetNamespace;
+    private Output<String> targetNamespace;
 
     public Output<String> targetNamespace() {
         return this.targetNamespace;
@@ -126,167 +126,147 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="timeFormat", required=true)
-      private final Output<Either<String,X12TimeFormat>> timeFormat;
+    private Output<Either<String,X12TimeFormat>> timeFormat;
 
     public Output<Either<String,X12TimeFormat>> timeFormat() {
         return this.timeFormat;
     }
 
-    public X12EnvelopeOverrideArgs(
-        Output<Either<String,X12DateFormat>> dateFormat,
-        @Nullable Output<String> functionalIdentifierCode,
-        Output<String> headerVersion,
-        Output<String> messageId,
-        Output<String> protocolVersion,
-        Output<String> receiverApplicationId,
-        Output<String> responsibleAgencyCode,
-        Output<String> senderApplicationId,
-        Output<String> targetNamespace,
-        Output<Either<String,X12TimeFormat>> timeFormat) {
-        this.dateFormat = Objects.requireNonNull(dateFormat, "expected parameter 'dateFormat' to be non-null");
-        this.functionalIdentifierCode = functionalIdentifierCode;
-        this.headerVersion = Objects.requireNonNull(headerVersion, "expected parameter 'headerVersion' to be non-null");
-        this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
-        this.protocolVersion = Objects.requireNonNull(protocolVersion, "expected parameter 'protocolVersion' to be non-null");
-        this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId, "expected parameter 'receiverApplicationId' to be non-null");
-        this.responsibleAgencyCode = Objects.requireNonNull(responsibleAgencyCode, "expected parameter 'responsibleAgencyCode' to be non-null");
-        this.senderApplicationId = Objects.requireNonNull(senderApplicationId, "expected parameter 'senderApplicationId' to be non-null");
-        this.targetNamespace = Objects.requireNonNull(targetNamespace, "expected parameter 'targetNamespace' to be non-null");
-        this.timeFormat = Objects.requireNonNull(timeFormat, "expected parameter 'timeFormat' to be non-null");
-    }
+    private X12EnvelopeOverrideArgs() {}
 
-    private X12EnvelopeOverrideArgs() {
-        this.dateFormat = Codegen.empty();
-        this.functionalIdentifierCode = Codegen.empty();
-        this.headerVersion = Codegen.empty();
-        this.messageId = Codegen.empty();
-        this.protocolVersion = Codegen.empty();
-        this.receiverApplicationId = Codegen.empty();
-        this.responsibleAgencyCode = Codegen.empty();
-        this.senderApplicationId = Codegen.empty();
-        this.targetNamespace = Codegen.empty();
-        this.timeFormat = Codegen.empty();
+    private X12EnvelopeOverrideArgs(X12EnvelopeOverrideArgs $) {
+        this.dateFormat = $.dateFormat;
+        this.functionalIdentifierCode = $.functionalIdentifierCode;
+        this.headerVersion = $.headerVersion;
+        this.messageId = $.messageId;
+        this.protocolVersion = $.protocolVersion;
+        this.receiverApplicationId = $.receiverApplicationId;
+        this.responsibleAgencyCode = $.responsibleAgencyCode;
+        this.senderApplicationId = $.senderApplicationId;
+        this.targetNamespace = $.targetNamespace;
+        this.timeFormat = $.timeFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12EnvelopeOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,X12DateFormat>> dateFormat;
-        private @Nullable Output<String> functionalIdentifierCode;
-        private Output<String> headerVersion;
-        private Output<String> messageId;
-        private Output<String> protocolVersion;
-        private Output<String> receiverApplicationId;
-        private Output<String> responsibleAgencyCode;
-        private Output<String> senderApplicationId;
-        private Output<String> targetNamespace;
-        private Output<Either<String,X12TimeFormat>> timeFormat;
+        private X12EnvelopeOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12EnvelopeOverrideArgs();
         }
 
         public Builder(X12EnvelopeOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dateFormat = defaults.dateFormat;
-    	      this.functionalIdentifierCode = defaults.functionalIdentifierCode;
-    	      this.headerVersion = defaults.headerVersion;
-    	      this.messageId = defaults.messageId;
-    	      this.protocolVersion = defaults.protocolVersion;
-    	      this.receiverApplicationId = defaults.receiverApplicationId;
-    	      this.responsibleAgencyCode = defaults.responsibleAgencyCode;
-    	      this.senderApplicationId = defaults.senderApplicationId;
-    	      this.targetNamespace = defaults.targetNamespace;
-    	      this.timeFormat = defaults.timeFormat;
+            $ = new X12EnvelopeOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dateFormat(Output<Either<String,X12DateFormat>> dateFormat) {
-            this.dateFormat = Objects.requireNonNull(dateFormat);
+            $.dateFormat = dateFormat;
             return this;
         }
+
         public Builder dateFormat(Either<String,X12DateFormat> dateFormat) {
-            this.dateFormat = Output.of(Objects.requireNonNull(dateFormat));
-            return this;
+            return dateFormat(Output.of(dateFormat));
         }
+
         public Builder functionalIdentifierCode(@Nullable Output<String> functionalIdentifierCode) {
-            this.functionalIdentifierCode = functionalIdentifierCode;
+            $.functionalIdentifierCode = functionalIdentifierCode;
             return this;
         }
-        public Builder functionalIdentifierCode(@Nullable String functionalIdentifierCode) {
-            this.functionalIdentifierCode = Codegen.ofNullable(functionalIdentifierCode);
-            return this;
+
+        public Builder functionalIdentifierCode(String functionalIdentifierCode) {
+            return functionalIdentifierCode(Output.of(functionalIdentifierCode));
         }
+
         public Builder headerVersion(Output<String> headerVersion) {
-            this.headerVersion = Objects.requireNonNull(headerVersion);
+            $.headerVersion = headerVersion;
             return this;
         }
+
         public Builder headerVersion(String headerVersion) {
-            this.headerVersion = Output.of(Objects.requireNonNull(headerVersion));
-            return this;
+            return headerVersion(Output.of(headerVersion));
         }
+
         public Builder messageId(Output<String> messageId) {
-            this.messageId = Objects.requireNonNull(messageId);
+            $.messageId = messageId;
             return this;
         }
+
         public Builder messageId(String messageId) {
-            this.messageId = Output.of(Objects.requireNonNull(messageId));
-            return this;
+            return messageId(Output.of(messageId));
         }
+
         public Builder protocolVersion(Output<String> protocolVersion) {
-            this.protocolVersion = Objects.requireNonNull(protocolVersion);
+            $.protocolVersion = protocolVersion;
             return this;
         }
+
         public Builder protocolVersion(String protocolVersion) {
-            this.protocolVersion = Output.of(Objects.requireNonNull(protocolVersion));
-            return this;
+            return protocolVersion(Output.of(protocolVersion));
         }
+
         public Builder receiverApplicationId(Output<String> receiverApplicationId) {
-            this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
+            $.receiverApplicationId = receiverApplicationId;
             return this;
         }
+
         public Builder receiverApplicationId(String receiverApplicationId) {
-            this.receiverApplicationId = Output.of(Objects.requireNonNull(receiverApplicationId));
-            return this;
+            return receiverApplicationId(Output.of(receiverApplicationId));
         }
+
         public Builder responsibleAgencyCode(Output<String> responsibleAgencyCode) {
-            this.responsibleAgencyCode = Objects.requireNonNull(responsibleAgencyCode);
+            $.responsibleAgencyCode = responsibleAgencyCode;
             return this;
         }
+
         public Builder responsibleAgencyCode(String responsibleAgencyCode) {
-            this.responsibleAgencyCode = Output.of(Objects.requireNonNull(responsibleAgencyCode));
-            return this;
+            return responsibleAgencyCode(Output.of(responsibleAgencyCode));
         }
+
         public Builder senderApplicationId(Output<String> senderApplicationId) {
-            this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
+            $.senderApplicationId = senderApplicationId;
             return this;
         }
+
         public Builder senderApplicationId(String senderApplicationId) {
-            this.senderApplicationId = Output.of(Objects.requireNonNull(senderApplicationId));
-            return this;
+            return senderApplicationId(Output.of(senderApplicationId));
         }
+
         public Builder targetNamespace(Output<String> targetNamespace) {
-            this.targetNamespace = Objects.requireNonNull(targetNamespace);
+            $.targetNamespace = targetNamespace;
             return this;
         }
+
         public Builder targetNamespace(String targetNamespace) {
-            this.targetNamespace = Output.of(Objects.requireNonNull(targetNamespace));
-            return this;
+            return targetNamespace(Output.of(targetNamespace));
         }
+
         public Builder timeFormat(Output<Either<String,X12TimeFormat>> timeFormat) {
-            this.timeFormat = Objects.requireNonNull(timeFormat);
+            $.timeFormat = timeFormat;
             return this;
         }
+
         public Builder timeFormat(Either<String,X12TimeFormat> timeFormat) {
-            this.timeFormat = Output.of(Objects.requireNonNull(timeFormat));
-            return this;
-        }        public X12EnvelopeOverrideArgs build() {
-            return new X12EnvelopeOverrideArgs(dateFormat, functionalIdentifierCode, headerVersion, messageId, protocolVersion, receiverApplicationId, responsibleAgencyCode, senderApplicationId, targetNamespace, timeFormat);
+            return timeFormat(Output.of(timeFormat));
+        }
+
+        public X12EnvelopeOverrideArgs build() {
+            $.dateFormat = Objects.requireNonNull($.dateFormat, "expected parameter 'dateFormat' to be non-null");
+            $.headerVersion = Objects.requireNonNull($.headerVersion, "expected parameter 'headerVersion' to be non-null");
+            $.messageId = Objects.requireNonNull($.messageId, "expected parameter 'messageId' to be non-null");
+            $.protocolVersion = Objects.requireNonNull($.protocolVersion, "expected parameter 'protocolVersion' to be non-null");
+            $.receiverApplicationId = Objects.requireNonNull($.receiverApplicationId, "expected parameter 'receiverApplicationId' to be non-null");
+            $.responsibleAgencyCode = Objects.requireNonNull($.responsibleAgencyCode, "expected parameter 'responsibleAgencyCode' to be non-null");
+            $.senderApplicationId = Objects.requireNonNull($.senderApplicationId, "expected parameter 'senderApplicationId' to be non-null");
+            $.targetNamespace = Objects.requireNonNull($.targetNamespace, "expected parameter 'targetNamespace' to be non-null");
+            $.timeFormat = Objects.requireNonNull($.timeFormat, "expected parameter 'timeFormat' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class HttpFaultAbortResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="httpStatus", required=true)
-      private final Integer httpStatus;
+    private Integer httpStatus;
 
     public Integer httpStatus() {
         return this.httpStatus;
@@ -33,55 +33,52 @@ public final class HttpFaultAbortResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="percentage", required=true)
-      private final Double percentage;
+    private Double percentage;
 
     public Double percentage() {
         return this.percentage;
     }
 
-    public HttpFaultAbortResponse(
-        Integer httpStatus,
-        Double percentage) {
-        this.httpStatus = Objects.requireNonNull(httpStatus, "expected parameter 'httpStatus' to be non-null");
-        this.percentage = Objects.requireNonNull(percentage, "expected parameter 'percentage' to be non-null");
-    }
+    private HttpFaultAbortResponse() {}
 
-    private HttpFaultAbortResponse() {
-        this.httpStatus = null;
-        this.percentage = null;
+    private HttpFaultAbortResponse(HttpFaultAbortResponse $) {
+        this.httpStatus = $.httpStatus;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpFaultAbortResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer httpStatus;
-        private Double percentage;
+        private HttpFaultAbortResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpFaultAbortResponse();
         }
 
         public Builder(HttpFaultAbortResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpStatus = defaults.httpStatus;
-    	      this.percentage = defaults.percentage;
+            $ = new HttpFaultAbortResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder httpStatus(Integer httpStatus) {
-            this.httpStatus = Objects.requireNonNull(httpStatus);
+            $.httpStatus = httpStatus;
             return this;
         }
+
         public Builder percentage(Double percentage) {
-            this.percentage = Objects.requireNonNull(percentage);
+            $.percentage = percentage;
             return this;
-        }        public HttpFaultAbortResponse build() {
-            return new HttpFaultAbortResponse(httpStatus, percentage);
+        }
+
+        public HttpFaultAbortResponse build() {
+            $.httpStatus = Objects.requireNonNull($.httpStatus, "expected parameter 'httpStatus' to be non-null");
+            $.percentage = Objects.requireNonNull($.percentage, "expected parameter 'percentage' to be non-null");
+            return $;
         }
     }
+
 }

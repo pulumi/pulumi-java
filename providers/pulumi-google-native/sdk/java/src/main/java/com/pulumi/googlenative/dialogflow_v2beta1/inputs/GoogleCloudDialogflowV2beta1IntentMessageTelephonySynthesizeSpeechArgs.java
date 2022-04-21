@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      * 
      */
     @Import(name="ssml")
-      private final @Nullable Output<String> ssml;
+    private @Nullable Output<String> ssml;
 
-    public Output<String> ssml() {
-        return this.ssml == null ? Codegen.empty() : this.ssml;
+    public Optional<Output<String>> ssml() {
+        return Optional.ofNullable(this.ssml);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<String> text;
+    private @Nullable Output<String> text;
 
-    public Output<String> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<String>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs(
-        @Nullable Output<String> ssml,
-        @Nullable Output<String> text) {
-        this.ssml = ssml;
-        this.text = text;
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs() {
-        this.ssml = Codegen.empty();
-        this.text = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs $) {
+        this.ssml = $.ssml;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ssml;
-        private @Nullable Output<String> text;
+        private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ssml = defaults.ssml;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ssml(@Nullable Output<String> ssml) {
-            this.ssml = ssml;
+            $.ssml = ssml;
             return this;
         }
-        public Builder ssml(@Nullable String ssml) {
-            this.ssml = Codegen.ofNullable(ssml);
-            return this;
+
+        public Builder ssml(String ssml) {
+            return ssml(Output.of(ssml));
         }
+
         public Builder text(@Nullable Output<String> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable String text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs(ssml, text);
+
+        public Builder text(String text) {
+            return text(Output.of(text));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs build() {
+            return $;
         }
     }
+
 }

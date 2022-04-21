@@ -15,78 +15,72 @@ public final class GetAuthorizedCertificateArgs extends com.pulumi.resources.Inv
     public static final GetAuthorizedCertificateArgs Empty = new GetAuthorizedCertificateArgs();
 
     @Import(name="appId", required=true)
-      private final String appId;
+    private String appId;
 
     public String appId() {
         return this.appId;
     }
 
     @Import(name="authorizedCertificateId", required=true)
-      private final String authorizedCertificateId;
+    private String authorizedCertificateId;
 
     public String authorizedCertificateId() {
         return this.authorizedCertificateId;
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetAuthorizedCertificateArgs(
-        String appId,
-        String authorizedCertificateId,
-        @Nullable String view) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.authorizedCertificateId = Objects.requireNonNull(authorizedCertificateId, "expected parameter 'authorizedCertificateId' to be non-null");
-        this.view = view;
-    }
+    private GetAuthorizedCertificateArgs() {}
 
-    private GetAuthorizedCertificateArgs() {
-        this.appId = null;
-        this.authorizedCertificateId = null;
-        this.view = null;
+    private GetAuthorizedCertificateArgs(GetAuthorizedCertificateArgs $) {
+        this.appId = $.appId;
+        this.authorizedCertificateId = $.authorizedCertificateId;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAuthorizedCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appId;
-        private String authorizedCertificateId;
-        private @Nullable String view;
+        private GetAuthorizedCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAuthorizedCertificateArgs();
         }
 
         public Builder(GetAuthorizedCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.authorizedCertificateId = defaults.authorizedCertificateId;
-    	      this.view = defaults.view;
+            $ = new GetAuthorizedCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(String appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder authorizedCertificateId(String authorizedCertificateId) {
-            this.authorizedCertificateId = Objects.requireNonNull(authorizedCertificateId);
+            $.authorizedCertificateId = authorizedCertificateId;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetAuthorizedCertificateArgs build() {
-            return new GetAuthorizedCertificateArgs(appId, authorizedCertificateId, view);
+        }
+
+        public GetAuthorizedCertificateArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.authorizedCertificateId = Objects.requireNonNull($.authorizedCertificateId, "expected parameter 'authorizedCertificateId' to be non-null");
+            return $;
         }
     }
+
 }

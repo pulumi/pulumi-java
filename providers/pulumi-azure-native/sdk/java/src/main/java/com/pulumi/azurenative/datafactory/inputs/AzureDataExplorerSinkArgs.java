@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="flushImmediately")
-      private final @Nullable Output<Object> flushImmediately;
+    private @Nullable Output<Object> flushImmediately;
 
-    public Output<Object> flushImmediately() {
-        return this.flushImmediately == null ? Codegen.empty() : this.flushImmediately;
+    public Optional<Output<Object>> flushImmediately() {
+        return Optional.ofNullable(this.flushImmediately);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ingestionMappingAsJson")
-      private final @Nullable Output<Object> ingestionMappingAsJson;
+    private @Nullable Output<Object> ingestionMappingAsJson;
 
-    public Output<Object> ingestionMappingAsJson() {
-        return this.ingestionMappingAsJson == null ? Codegen.empty() : this.ingestionMappingAsJson;
+    public Optional<Output<Object>> ingestionMappingAsJson() {
+        return Optional.ofNullable(this.ingestionMappingAsJson);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ingestionMappingName")
-      private final @Nullable Output<Object> ingestionMappingName;
+    private @Nullable Output<Object> ingestionMappingName;
 
-    public Output<Object> ingestionMappingName() {
-        return this.ingestionMappingName == null ? Codegen.empty() : this.ingestionMappingName;
+    public Optional<Output<Object>> ingestionMappingName() {
+        return Optional.ofNullable(this.ingestionMappingName);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sinkRetryCount")
-      private final @Nullable Output<Object> sinkRetryCount;
+    private @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> sinkRetryCount() {
-        return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
+    public Optional<Output<Object>> sinkRetryCount() {
+        return Optional.ofNullable(this.sinkRetryCount);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sinkRetryWait")
-      private final @Nullable Output<Object> sinkRetryWait;
+    private @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> sinkRetryWait() {
-        return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
+    public Optional<Output<Object>> sinkRetryWait() {
+        return Optional.ofNullable(this.sinkRetryWait);
     }
 
     /**
@@ -103,7 +104,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -114,10 +115,10 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="writeBatchSize")
-      private final @Nullable Output<Object> writeBatchSize;
+    private @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> writeBatchSize() {
-        return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
+    public Optional<Output<Object>> writeBatchSize() {
+        return Optional.ofNullable(this.writeBatchSize);
     }
 
     /**
@@ -125,167 +126,139 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="writeBatchTimeout")
-      private final @Nullable Output<Object> writeBatchTimeout;
+    private @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> writeBatchTimeout() {
-        return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
+    public Optional<Output<Object>> writeBatchTimeout() {
+        return Optional.ofNullable(this.writeBatchTimeout);
     }
 
-    public AzureDataExplorerSinkArgs(
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> flushImmediately,
-        @Nullable Output<Object> ingestionMappingAsJson,
-        @Nullable Output<Object> ingestionMappingName,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> sinkRetryCount,
-        @Nullable Output<Object> sinkRetryWait,
-        Output<String> type,
-        @Nullable Output<Object> writeBatchSize,
-        @Nullable Output<Object> writeBatchTimeout) {
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.flushImmediately = flushImmediately;
-        this.ingestionMappingAsJson = ingestionMappingAsJson;
-        this.ingestionMappingName = ingestionMappingName;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.sinkRetryCount = sinkRetryCount;
-        this.sinkRetryWait = sinkRetryWait;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.writeBatchSize = writeBatchSize;
-        this.writeBatchTimeout = writeBatchTimeout;
-    }
+    private AzureDataExplorerSinkArgs() {}
 
-    private AzureDataExplorerSinkArgs() {
-        this.disableMetricsCollection = Codegen.empty();
-        this.flushImmediately = Codegen.empty();
-        this.ingestionMappingAsJson = Codegen.empty();
-        this.ingestionMappingName = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.sinkRetryCount = Codegen.empty();
-        this.sinkRetryWait = Codegen.empty();
-        this.type = Codegen.empty();
-        this.writeBatchSize = Codegen.empty();
-        this.writeBatchTimeout = Codegen.empty();
+    private AzureDataExplorerSinkArgs(AzureDataExplorerSinkArgs $) {
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.flushImmediately = $.flushImmediately;
+        this.ingestionMappingAsJson = $.ingestionMappingAsJson;
+        this.ingestionMappingName = $.ingestionMappingName;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.sinkRetryCount = $.sinkRetryCount;
+        this.sinkRetryWait = $.sinkRetryWait;
+        this.type = $.type;
+        this.writeBatchSize = $.writeBatchSize;
+        this.writeBatchTimeout = $.writeBatchTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDataExplorerSinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> flushImmediately;
-        private @Nullable Output<Object> ingestionMappingAsJson;
-        private @Nullable Output<Object> ingestionMappingName;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> sinkRetryCount;
-        private @Nullable Output<Object> sinkRetryWait;
-        private Output<String> type;
-        private @Nullable Output<Object> writeBatchSize;
-        private @Nullable Output<Object> writeBatchTimeout;
+        private AzureDataExplorerSinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDataExplorerSinkArgs();
         }
 
         public Builder(AzureDataExplorerSinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.flushImmediately = defaults.flushImmediately;
-    	      this.ingestionMappingAsJson = defaults.ingestionMappingAsJson;
-    	      this.ingestionMappingName = defaults.ingestionMappingName;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.sinkRetryCount = defaults.sinkRetryCount;
-    	      this.sinkRetryWait = defaults.sinkRetryWait;
-    	      this.type = defaults.type;
-    	      this.writeBatchSize = defaults.writeBatchSize;
-    	      this.writeBatchTimeout = defaults.writeBatchTimeout;
+            $ = new AzureDataExplorerSinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder flushImmediately(@Nullable Output<Object> flushImmediately) {
-            this.flushImmediately = flushImmediately;
+            $.flushImmediately = flushImmediately;
             return this;
         }
-        public Builder flushImmediately(@Nullable Object flushImmediately) {
-            this.flushImmediately = Codegen.ofNullable(flushImmediately);
-            return this;
+
+        public Builder flushImmediately(Object flushImmediately) {
+            return flushImmediately(Output.of(flushImmediately));
         }
+
         public Builder ingestionMappingAsJson(@Nullable Output<Object> ingestionMappingAsJson) {
-            this.ingestionMappingAsJson = ingestionMappingAsJson;
+            $.ingestionMappingAsJson = ingestionMappingAsJson;
             return this;
         }
-        public Builder ingestionMappingAsJson(@Nullable Object ingestionMappingAsJson) {
-            this.ingestionMappingAsJson = Codegen.ofNullable(ingestionMappingAsJson);
-            return this;
+
+        public Builder ingestionMappingAsJson(Object ingestionMappingAsJson) {
+            return ingestionMappingAsJson(Output.of(ingestionMappingAsJson));
         }
+
         public Builder ingestionMappingName(@Nullable Output<Object> ingestionMappingName) {
-            this.ingestionMappingName = ingestionMappingName;
+            $.ingestionMappingName = ingestionMappingName;
             return this;
         }
-        public Builder ingestionMappingName(@Nullable Object ingestionMappingName) {
-            this.ingestionMappingName = Codegen.ofNullable(ingestionMappingName);
-            return this;
+
+        public Builder ingestionMappingName(Object ingestionMappingName) {
+            return ingestionMappingName(Output.of(ingestionMappingName));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
-            this.sinkRetryCount = sinkRetryCount;
+            $.sinkRetryCount = sinkRetryCount;
             return this;
         }
-        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Codegen.ofNullable(sinkRetryCount);
-            return this;
+
+        public Builder sinkRetryCount(Object sinkRetryCount) {
+            return sinkRetryCount(Output.of(sinkRetryCount));
         }
+
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
-            this.sinkRetryWait = sinkRetryWait;
+            $.sinkRetryWait = sinkRetryWait;
             return this;
         }
-        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Codegen.ofNullable(sinkRetryWait);
-            return this;
+
+        public Builder sinkRetryWait(Object sinkRetryWait) {
+            return sinkRetryWait(Output.of(sinkRetryWait));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
-            this.writeBatchSize = writeBatchSize;
+            $.writeBatchSize = writeBatchSize;
             return this;
         }
-        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Codegen.ofNullable(writeBatchSize);
-            return this;
+
+        public Builder writeBatchSize(Object writeBatchSize) {
+            return writeBatchSize(Output.of(writeBatchSize));
         }
+
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
-            this.writeBatchTimeout = writeBatchTimeout;
+            $.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Codegen.ofNullable(writeBatchTimeout);
-            return this;
-        }        public AzureDataExplorerSinkArgs build() {
-            return new AzureDataExplorerSinkArgs(disableMetricsCollection, flushImmediately, ingestionMappingAsJson, ingestionMappingName, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
+
+        public Builder writeBatchTimeout(Object writeBatchTimeout) {
+            return writeBatchTimeout(Output.of(writeBatchTimeout));
+        }
+
+        public AzureDataExplorerSinkArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

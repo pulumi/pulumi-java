@@ -6,9 +6,9 @@ package com.pulumi.awsnative.lambda.inputs;
 import com.pulumi.awsnative.lambda.enums.EventSourceMappingSourceAccessConfigurationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends com.p
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<EventSourceMappingSourceAccessConfigurationType> type;
+    private @Nullable Output<EventSourceMappingSourceAccessConfigurationType> type;
 
-    public Output<EventSourceMappingSourceAccessConfigurationType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<EventSourceMappingSourceAccessConfigurationType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends com.p
      * 
      */
     @Import(name="uRI")
-      private final @Nullable Output<String> uRI;
+    private @Nullable Output<String> uRI;
 
-    public Output<String> uRI() {
-        return this.uRI == null ? Codegen.empty() : this.uRI;
+    public Optional<Output<String>> uRI() {
+        return Optional.ofNullable(this.uRI);
     }
 
-    public EventSourceMappingSourceAccessConfigurationArgs(
-        @Nullable Output<EventSourceMappingSourceAccessConfigurationType> type,
-        @Nullable Output<String> uRI) {
-        this.type = type;
-        this.uRI = uRI;
-    }
+    private EventSourceMappingSourceAccessConfigurationArgs() {}
 
-    private EventSourceMappingSourceAccessConfigurationArgs() {
-        this.type = Codegen.empty();
-        this.uRI = Codegen.empty();
+    private EventSourceMappingSourceAccessConfigurationArgs(EventSourceMappingSourceAccessConfigurationArgs $) {
+        this.type = $.type;
+        this.uRI = $.uRI;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingSourceAccessConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EventSourceMappingSourceAccessConfigurationType> type;
-        private @Nullable Output<String> uRI;
+        private EventSourceMappingSourceAccessConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingSourceAccessConfigurationArgs();
         }
 
         public Builder(EventSourceMappingSourceAccessConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.uRI = defaults.uRI;
+            $ = new EventSourceMappingSourceAccessConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<EventSourceMappingSourceAccessConfigurationType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable EventSourceMappingSourceAccessConfigurationType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(EventSourceMappingSourceAccessConfigurationType type) {
+            return type(Output.of(type));
         }
+
         public Builder uRI(@Nullable Output<String> uRI) {
-            this.uRI = uRI;
+            $.uRI = uRI;
             return this;
         }
-        public Builder uRI(@Nullable String uRI) {
-            this.uRI = Codegen.ofNullable(uRI);
-            return this;
-        }        public EventSourceMappingSourceAccessConfigurationArgs build() {
-            return new EventSourceMappingSourceAccessConfigurationArgs(type, uRI);
+
+        public Builder uRI(String uRI) {
+            return uRI(Output.of(uRI));
+        }
+
+        public EventSourceMappingSourceAccessConfigurationArgs build() {
+            return $;
         }
     }
+
 }

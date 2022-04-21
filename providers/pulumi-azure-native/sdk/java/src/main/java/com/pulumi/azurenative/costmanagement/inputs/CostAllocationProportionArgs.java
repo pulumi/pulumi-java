@@ -5,7 +5,6 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class CostAllocationProportionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -35,63 +34,60 @@ public final class CostAllocationProportionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="percentage", required=true)
-      private final Output<Double> percentage;
+    private Output<Double> percentage;
 
     public Output<Double> percentage() {
         return this.percentage;
     }
 
-    public CostAllocationProportionArgs(
-        Output<String> name,
-        Output<Double> percentage) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.percentage = Objects.requireNonNull(percentage, "expected parameter 'percentage' to be non-null");
-    }
+    private CostAllocationProportionArgs() {}
 
-    private CostAllocationProportionArgs() {
-        this.name = Codegen.empty();
-        this.percentage = Codegen.empty();
+    private CostAllocationProportionArgs(CostAllocationProportionArgs $) {
+        this.name = $.name;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CostAllocationProportionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<Double> percentage;
+        private CostAllocationProportionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CostAllocationProportionArgs();
         }
 
         public Builder(CostAllocationProportionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.percentage = defaults.percentage;
+            $ = new CostAllocationProportionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder percentage(Output<Double> percentage) {
-            this.percentage = Objects.requireNonNull(percentage);
+            $.percentage = percentage;
             return this;
         }
+
         public Builder percentage(Double percentage) {
-            this.percentage = Output.of(Objects.requireNonNull(percentage));
-            return this;
-        }        public CostAllocationProportionArgs build() {
-            return new CostAllocationProportionArgs(name, percentage);
+            return percentage(Output.of(percentage));
+        }
+
+        public CostAllocationProportionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.percentage = Objects.requireNonNull($.percentage, "expected parameter 'percentage' to be non-null");
+            return $;
         }
     }
+
 }

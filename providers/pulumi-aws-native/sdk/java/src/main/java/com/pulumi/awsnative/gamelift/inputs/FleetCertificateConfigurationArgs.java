@@ -6,7 +6,6 @@ package com.pulumi.awsnative.gamelift.inputs;
 import com.pulumi.awsnative.gamelift.enums.FleetCertificateConfigurationCertificateType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class FleetCertificateConfigurationArgs extends com.pulumi.resource
     public static final FleetCertificateConfigurationArgs Empty = new FleetCertificateConfigurationArgs();
 
     @Import(name="certificateType", required=true)
-      private final Output<FleetCertificateConfigurationCertificateType> certificateType;
+    private Output<FleetCertificateConfigurationCertificateType> certificateType;
 
     public Output<FleetCertificateConfigurationCertificateType> certificateType() {
         return this.certificateType;
     }
 
-    public FleetCertificateConfigurationArgs(Output<FleetCertificateConfigurationCertificateType> certificateType) {
-        this.certificateType = Objects.requireNonNull(certificateType, "expected parameter 'certificateType' to be non-null");
-    }
+    private FleetCertificateConfigurationArgs() {}
 
-    private FleetCertificateConfigurationArgs() {
-        this.certificateType = Codegen.empty();
+    private FleetCertificateConfigurationArgs(FleetCertificateConfigurationArgs $) {
+        this.certificateType = $.certificateType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetCertificateConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FleetCertificateConfigurationCertificateType> certificateType;
+        private FleetCertificateConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetCertificateConfigurationArgs();
         }
 
         public Builder(FleetCertificateConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateType = defaults.certificateType;
+            $ = new FleetCertificateConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateType(Output<FleetCertificateConfigurationCertificateType> certificateType) {
-            this.certificateType = Objects.requireNonNull(certificateType);
+            $.certificateType = certificateType;
             return this;
         }
+
         public Builder certificateType(FleetCertificateConfigurationCertificateType certificateType) {
-            this.certificateType = Output.of(Objects.requireNonNull(certificateType));
-            return this;
-        }        public FleetCertificateConfigurationArgs build() {
-            return new FleetCertificateConfigurationArgs(certificateType);
+            return certificateType(Output.of(certificateType));
+        }
+
+        public FleetCertificateConfigurationArgs build() {
+            $.certificateType = Objects.requireNonNull($.certificateType, "expected parameter 'certificateType' to be non-null");
+            return $;
         }
     }
+
 }

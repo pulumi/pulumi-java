@@ -17,7 +17,7 @@ public final class GetFluidRelayServerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class GetFluidRelayServerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final String resourceGroup;
+    private String resourceGroup;
 
     public String resourceGroup() {
         return this.resourceGroup;
     }
 
-    public GetFluidRelayServerArgs(
-        String name,
-        String resourceGroup) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-    }
+    private GetFluidRelayServerArgs() {}
 
-    private GetFluidRelayServerArgs() {
-        this.name = null;
-        this.resourceGroup = null;
+    private GetFluidRelayServerArgs(GetFluidRelayServerArgs $) {
+        this.name = $.name;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFluidRelayServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceGroup;
+        private GetFluidRelayServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFluidRelayServerArgs();
         }
 
         public Builder(GetFluidRelayServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new GetFluidRelayServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
-        }        public GetFluidRelayServerArgs build() {
-            return new GetFluidRelayServerArgs(name, resourceGroup);
+        }
+
+        public GetFluidRelayServerArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

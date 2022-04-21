@@ -22,48 +22,49 @@ public final class V2ServerKeyRestrictionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="allowedIps", required=true)
-      private final List<String> allowedIps;
+    private List<String> allowedIps;
 
     public List<String> allowedIps() {
         return this.allowedIps;
     }
 
-    public V2ServerKeyRestrictionsResponse(List<String> allowedIps) {
-        this.allowedIps = Objects.requireNonNull(allowedIps, "expected parameter 'allowedIps' to be non-null");
-    }
+    private V2ServerKeyRestrictionsResponse() {}
 
-    private V2ServerKeyRestrictionsResponse() {
-        this.allowedIps = List.of();
+    private V2ServerKeyRestrictionsResponse(V2ServerKeyRestrictionsResponse $) {
+        this.allowedIps = $.allowedIps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2ServerKeyRestrictionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedIps;
+        private V2ServerKeyRestrictionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2ServerKeyRestrictionsResponse();
         }
 
         public Builder(V2ServerKeyRestrictionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIps = defaults.allowedIps;
+            $ = new V2ServerKeyRestrictionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIps(List<String> allowedIps) {
-            this.allowedIps = Objects.requireNonNull(allowedIps);
+            $.allowedIps = allowedIps;
             return this;
         }
+
         public Builder allowedIps(String... allowedIps) {
             return allowedIps(List.of(allowedIps));
-        }        public V2ServerKeyRestrictionsResponse build() {
-            return new V2ServerKeyRestrictionsResponse(allowedIps);
+        }
+
+        public V2ServerKeyRestrictionsResponse build() {
+            $.allowedIps = Objects.requireNonNull($.allowedIps, "expected parameter 'allowedIps' to be non-null");
+            return $;
         }
     }
+
 }

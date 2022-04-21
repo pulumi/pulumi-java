@@ -25,10 +25,10 @@ public final class BucketRuleFilterProperties extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="andOperator")
-      private final @Nullable BucketFilterAndOperator andOperator;
+    private @Nullable BucketFilterAndOperator andOperator;
 
     public Optional<BucketFilterAndOperator> andOperator() {
-        return this.andOperator == null ? Optional.empty() : Optional.ofNullable(this.andOperator);
+        return Optional.ofNullable(this.andOperator);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BucketRuleFilterProperties extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class BucketRuleFilterProperties extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tag")
-      private final @Nullable BucketFilterTag tag;
+    private @Nullable BucketFilterTag tag;
 
     public Optional<BucketFilterTag> tag() {
-        return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
+        return Optional.ofNullable(this.tag);
     }
 
-    public BucketRuleFilterProperties(
-        @Nullable BucketFilterAndOperator andOperator,
-        @Nullable String prefix,
-        @Nullable BucketFilterTag tag) {
-        this.andOperator = andOperator;
-        this.prefix = prefix;
-        this.tag = tag;
-    }
+    private BucketRuleFilterProperties() {}
 
-    private BucketRuleFilterProperties() {
-        this.andOperator = null;
-        this.prefix = null;
-        this.tag = null;
+    private BucketRuleFilterProperties(BucketRuleFilterProperties $) {
+        this.andOperator = $.andOperator;
+        this.prefix = $.prefix;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRuleFilterProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketFilterAndOperator andOperator;
-        private @Nullable String prefix;
-        private @Nullable BucketFilterTag tag;
+        private BucketRuleFilterProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRuleFilterProperties();
         }
 
         public Builder(BucketRuleFilterProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.andOperator = defaults.andOperator;
-    	      this.prefix = defaults.prefix;
-    	      this.tag = defaults.tag;
+            $ = new BucketRuleFilterProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder andOperator(@Nullable BucketFilterAndOperator andOperator) {
-            this.andOperator = andOperator;
+            $.andOperator = andOperator;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
+
         public Builder tag(@Nullable BucketFilterTag tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
-        }        public BucketRuleFilterProperties build() {
-            return new BucketRuleFilterProperties(andOperator, prefix, tag);
+        }
+
+        public BucketRuleFilterProperties build() {
+            return $;
         }
     }
+
 }

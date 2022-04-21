@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TableReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="datasetId")
-      private final @Nullable Output<String> datasetId;
+    private @Nullable Output<String> datasetId;
 
-    public Output<String> datasetId() {
-        return this.datasetId == null ? Codegen.empty() : this.datasetId;
+    public Optional<Output<String>> datasetId() {
+        return Optional.ofNullable(this.datasetId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TableReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class TableReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tableId")
-      private final @Nullable Output<String> tableId;
+    private @Nullable Output<String> tableId;
 
-    public Output<String> tableId() {
-        return this.tableId == null ? Codegen.empty() : this.tableId;
+    public Optional<Output<String>> tableId() {
+        return Optional.ofNullable(this.tableId);
     }
 
-    public TableReferenceArgs(
-        @Nullable Output<String> datasetId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> tableId) {
-        this.datasetId = datasetId;
-        this.project = project;
-        this.tableId = tableId;
-    }
+    private TableReferenceArgs() {}
 
-    private TableReferenceArgs() {
-        this.datasetId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tableId = Codegen.empty();
+    private TableReferenceArgs(TableReferenceArgs $) {
+        this.datasetId = $.datasetId;
+        this.project = $.project;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datasetId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> tableId;
+        private TableReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableReferenceArgs();
         }
 
         public Builder(TableReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.project = defaults.project;
-    	      this.tableId = defaults.tableId;
+            $ = new TableReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(@Nullable Output<String> datasetId) {
-            this.datasetId = datasetId;
+            $.datasetId = datasetId;
             return this;
         }
-        public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Codegen.ofNullable(datasetId);
-            return this;
+
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tableId(@Nullable Output<String> tableId) {
-            this.tableId = tableId;
+            $.tableId = tableId;
             return this;
         }
-        public Builder tableId(@Nullable String tableId) {
-            this.tableId = Codegen.ofNullable(tableId);
-            return this;
-        }        public TableReferenceArgs build() {
-            return new TableReferenceArgs(datasetId, project, tableId);
+
+        public Builder tableId(String tableId) {
+            return tableId(Output.of(tableId));
+        }
+
+        public TableReferenceArgs build() {
+            return $;
         }
     }
+
 }

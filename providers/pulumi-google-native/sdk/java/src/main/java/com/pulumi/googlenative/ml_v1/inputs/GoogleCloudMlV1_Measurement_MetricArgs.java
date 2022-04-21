@@ -5,7 +5,6 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends com.pulumi.res
      * 
      */
     @Import(name="metric", required=true)
-      private final Output<String> metric;
+    private Output<String> metric;
 
     public Output<String> metric() {
         return this.metric;
@@ -35,63 +34,60 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends com.pulumi.res
      * 
      */
     @Import(name="value", required=true)
-      private final Output<Double> value;
+    private Output<Double> value;
 
     public Output<Double> value() {
         return this.value;
     }
 
-    public GoogleCloudMlV1_Measurement_MetricArgs(
-        Output<String> metric,
-        Output<Double> value) {
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GoogleCloudMlV1_Measurement_MetricArgs() {}
 
-    private GoogleCloudMlV1_Measurement_MetricArgs() {
-        this.metric = Codegen.empty();
-        this.value = Codegen.empty();
+    private GoogleCloudMlV1_Measurement_MetricArgs(GoogleCloudMlV1_Measurement_MetricArgs $) {
+        this.metric = $.metric;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_Measurement_MetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> metric;
-        private Output<Double> value;
+        private GoogleCloudMlV1_Measurement_MetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_Measurement_MetricArgs();
         }
 
         public Builder(GoogleCloudMlV1_Measurement_MetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metric = defaults.metric;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudMlV1_Measurement_MetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metric(Output<String> metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder metric(String metric) {
-            this.metric = Output.of(Objects.requireNonNull(metric));
-            return this;
+            return metric(Output.of(metric));
         }
+
         public Builder value(Output<Double> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(Double value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public GoogleCloudMlV1_Measurement_MetricArgs build() {
-            return new GoogleCloudMlV1_Measurement_MetricArgs(metric, value);
+            return value(Output.of(value));
+        }
+
+        public GoogleCloudMlV1_Measurement_MetricArgs build() {
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.run_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1.inputs.DomainMappingSpecArgs;
 import com.pulumi.googlenative.run_v1.inputs.DomainMappingStatusArgs;
 import com.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     @Import(name="dryRun")
-      private final @Nullable Output<String> dryRun;
+    private @Nullable Output<String> dryRun;
 
-    public Output<String> dryRun() {
-        return this.dryRun == null ? Codegen.empty() : this.dryRun;
+    public Optional<Output<String>> dryRun() {
+        return Optional.ofNullable(this.dryRun);
     }
 
     /**
@@ -41,17 +41,17 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -59,17 +59,17 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<DomainMappingSpecArgs> spec;
+    private @Nullable Output<DomainMappingSpecArgs> spec;
 
-    public Output<DomainMappingSpecArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<DomainMappingSpecArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
     /**
@@ -88,141 +88,118 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<DomainMappingStatusArgs> status;
+    private @Nullable Output<DomainMappingStatusArgs> status;
 
-    public Output<DomainMappingStatusArgs> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<DomainMappingStatusArgs>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public DomainMappingArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<String> dryRun,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<String> project,
-        @Nullable Output<DomainMappingSpecArgs> spec,
-        @Nullable Output<DomainMappingStatusArgs> status) {
-        this.apiVersion = apiVersion;
-        this.dryRun = dryRun;
-        this.kind = kind;
-        this.location = location;
-        this.metadata = metadata;
-        this.project = project;
-        this.spec = spec;
-        this.status = status;
-    }
+    private DomainMappingArgs() {}
 
-    private DomainMappingArgs() {
-        this.apiVersion = Codegen.empty();
-        this.dryRun = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.project = Codegen.empty();
-        this.spec = Codegen.empty();
-        this.status = Codegen.empty();
+    private DomainMappingArgs(DomainMappingArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.dryRun = $.dryRun;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.project = $.project;
+        this.spec = $.spec;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<String> dryRun;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<String> project;
-        private @Nullable Output<DomainMappingSpecArgs> spec;
-        private @Nullable Output<DomainMappingStatusArgs> status;
+        private DomainMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMappingArgs();
         }
 
         public Builder(DomainMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.dryRun = defaults.dryRun;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.project = defaults.project;
-    	      this.spec = defaults.spec;
-    	      this.status = defaults.status;
+            $ = new DomainMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder dryRun(@Nullable Output<String> dryRun) {
-            this.dryRun = dryRun;
+            $.dryRun = dryRun;
             return this;
         }
-        public Builder dryRun(@Nullable String dryRun) {
-            this.dryRun = Codegen.ofNullable(dryRun);
-            return this;
+
+        public Builder dryRun(String dryRun) {
+            return dryRun(Output.of(dryRun));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder spec(@Nullable Output<DomainMappingSpecArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable DomainMappingSpecArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
+
+        public Builder spec(DomainMappingSpecArgs spec) {
+            return spec(Output.of(spec));
         }
+
         public Builder status(@Nullable Output<DomainMappingStatusArgs> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable DomainMappingStatusArgs status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public DomainMappingArgs build() {
-            return new DomainMappingArgs(apiVersion, dryRun, kind, location, metadata, project, spec, status);
+
+        public Builder status(DomainMappingStatusArgs status) {
+            return status(Output.of(status));
+        }
+
+        public DomainMappingArgs build() {
+            return $;
         }
     }
+
 }

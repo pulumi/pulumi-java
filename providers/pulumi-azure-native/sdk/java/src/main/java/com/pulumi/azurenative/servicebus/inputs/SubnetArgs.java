@@ -5,7 +5,6 @@ package com.pulumi.azurenative.servicebus.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public SubnetArgs(Output<String> id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private SubnetArgs() {}
 
-    private SubnetArgs() {
-        this.id = Codegen.empty();
+    private SubnetArgs(SubnetArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
+        private SubnetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetArgs();
         }
 
         public Builder(SubnetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new SubnetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public SubnetArgs build() {
-            return new SubnetArgs(id);
+            return id(Output.of(id));
+        }
+
+        public SubnetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

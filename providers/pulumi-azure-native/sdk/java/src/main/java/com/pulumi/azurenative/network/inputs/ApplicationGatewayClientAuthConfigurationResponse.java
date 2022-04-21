@@ -23,45 +23,44 @@ public final class ApplicationGatewayClientAuthConfigurationResponse extends com
      * 
      */
     @Import(name="verifyClientCertIssuerDN")
-      private final @Nullable Boolean verifyClientCertIssuerDN;
+    private @Nullable Boolean verifyClientCertIssuerDN;
 
     public Optional<Boolean> verifyClientCertIssuerDN() {
-        return this.verifyClientCertIssuerDN == null ? Optional.empty() : Optional.ofNullable(this.verifyClientCertIssuerDN);
+        return Optional.ofNullable(this.verifyClientCertIssuerDN);
     }
 
-    public ApplicationGatewayClientAuthConfigurationResponse(@Nullable Boolean verifyClientCertIssuerDN) {
-        this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
-    }
+    private ApplicationGatewayClientAuthConfigurationResponse() {}
 
-    private ApplicationGatewayClientAuthConfigurationResponse() {
-        this.verifyClientCertIssuerDN = null;
+    private ApplicationGatewayClientAuthConfigurationResponse(ApplicationGatewayClientAuthConfigurationResponse $) {
+        this.verifyClientCertIssuerDN = $.verifyClientCertIssuerDN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayClientAuthConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean verifyClientCertIssuerDN;
+        private ApplicationGatewayClientAuthConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayClientAuthConfigurationResponse();
         }
 
         public Builder(ApplicationGatewayClientAuthConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.verifyClientCertIssuerDN = defaults.verifyClientCertIssuerDN;
+            $ = new ApplicationGatewayClientAuthConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder verifyClientCertIssuerDN(@Nullable Boolean verifyClientCertIssuerDN) {
-            this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
+            $.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
             return this;
-        }        public ApplicationGatewayClientAuthConfigurationResponse build() {
-            return new ApplicationGatewayClientAuthConfigurationResponse(verifyClientCertIssuerDN);
+        }
+
+        public ApplicationGatewayClientAuthConfigurationResponse build() {
+            return $;
         }
     }
+
 }

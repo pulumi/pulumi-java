@@ -19,7 +19,7 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
@@ -30,10 +30,10 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -41,64 +41,58 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public GetGlobalUserEnvironmentArgs(
-        String environmentId,
-        @Nullable String expand,
-        String userName) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.expand = expand;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private GetGlobalUserEnvironmentArgs() {}
 
-    private GetGlobalUserEnvironmentArgs() {
-        this.environmentId = null;
-        this.expand = null;
-        this.userName = null;
+    private GetGlobalUserEnvironmentArgs(GetGlobalUserEnvironmentArgs $) {
+        this.environmentId = $.environmentId;
+        this.expand = $.expand;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalUserEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
-        private @Nullable String expand;
-        private String userName;
+        private GetGlobalUserEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalUserEnvironmentArgs();
         }
 
         public Builder(GetGlobalUserEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.expand = defaults.expand;
-    	      this.userName = defaults.userName;
+            $ = new GetGlobalUserEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public GetGlobalUserEnvironmentArgs build() {
-            return new GetGlobalUserEnvironmentArgs(environmentId, expand, userName);
+        }
+
+        public GetGlobalUserEnvironmentArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

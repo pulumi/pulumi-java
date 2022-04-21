@@ -25,10 +25,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="claims")
-      private final @Nullable RuleManagementEventClaimsDataSourceResponse claims;
+    private @Nullable RuleManagementEventClaimsDataSourceResponse claims;
 
     public Optional<RuleManagementEventClaimsDataSourceResponse> claims() {
-        return this.claims == null ? Optional.empty() : Optional.ofNullable(this.claims);
+        return Optional.ofNullable(this.claims);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="eventName")
-      private final @Nullable String eventName;
+    private @Nullable String eventName;
 
     public Optional<String> eventName() {
-        return this.eventName == null ? Optional.empty() : Optional.ofNullable(this.eventName);
+        return Optional.ofNullable(this.eventName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="eventSource")
-      private final @Nullable String eventSource;
+    private @Nullable String eventSource;
 
     public Optional<String> eventSource() {
-        return this.eventSource == null ? Optional.empty() : Optional.ofNullable(this.eventSource);
+        return Optional.ofNullable(this.eventSource);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="legacyResourceId")
-      private final @Nullable String legacyResourceId;
+    private @Nullable String legacyResourceId;
 
     public Optional<String> legacyResourceId() {
-        return this.legacyResourceId == null ? Optional.empty() : Optional.ofNullable(this.legacyResourceId);
+        return Optional.ofNullable(this.legacyResourceId);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="level")
-      private final @Nullable String level;
+    private @Nullable String level;
 
     public Optional<String> level() {
-        return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="metricNamespace")
-      private final @Nullable String metricNamespace;
+    private @Nullable String metricNamespace;
 
     public Optional<String> metricNamespace() {
-        return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
+        return Optional.ofNullable(this.metricNamespace);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -103,10 +103,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="operationName")
-      private final @Nullable String operationName;
+    private @Nullable String operationName;
 
     public Optional<String> operationName() {
-        return this.operationName == null ? Optional.empty() : Optional.ofNullable(this.operationName);
+        return Optional.ofNullable(this.operationName);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName")
-      private final @Nullable String resourceGroupName;
+    private @Nullable String resourceGroupName;
 
     public Optional<String> resourceGroupName() {
-        return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="resourceLocation")
-      private final @Nullable String resourceLocation;
+    private @Nullable String resourceLocation;
 
     public Optional<String> resourceLocation() {
-        return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
+        return Optional.ofNullable(this.resourceLocation);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="resourceProviderName")
-      private final @Nullable String resourceProviderName;
+    private @Nullable String resourceProviderName;
 
     public Optional<String> resourceProviderName() {
-        return this.resourceProviderName == null ? Optional.empty() : Optional.ofNullable(this.resourceProviderName);
+        return Optional.ofNullable(this.resourceProviderName);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="resourceUri")
-      private final @Nullable String resourceUri;
+    private @Nullable String resourceUri;
 
     public Optional<String> resourceUri() {
-        return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
+        return Optional.ofNullable(this.resourceUri);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -169,163 +169,123 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="subStatus")
-      private final @Nullable String subStatus;
+    private @Nullable String subStatus;
 
     public Optional<String> subStatus() {
-        return this.subStatus == null ? Optional.empty() : Optional.ofNullable(this.subStatus);
+        return Optional.ofNullable(this.subStatus);
     }
 
-    public RuleManagementEventDataSourceResponse(
-        @Nullable RuleManagementEventClaimsDataSourceResponse claims,
-        @Nullable String eventName,
-        @Nullable String eventSource,
-        @Nullable String legacyResourceId,
-        @Nullable String level,
-        @Nullable String metricNamespace,
-        String odataType,
-        @Nullable String operationName,
-        @Nullable String resourceGroupName,
-        @Nullable String resourceLocation,
-        @Nullable String resourceProviderName,
-        @Nullable String resourceUri,
-        @Nullable String status,
-        @Nullable String subStatus) {
-        this.claims = claims;
-        this.eventName = eventName;
-        this.eventSource = eventSource;
-        this.legacyResourceId = legacyResourceId;
-        this.level = level;
-        this.metricNamespace = metricNamespace;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.operationName = operationName;
-        this.resourceGroupName = resourceGroupName;
-        this.resourceLocation = resourceLocation;
-        this.resourceProviderName = resourceProviderName;
-        this.resourceUri = resourceUri;
-        this.status = status;
-        this.subStatus = subStatus;
-    }
+    private RuleManagementEventDataSourceResponse() {}
 
-    private RuleManagementEventDataSourceResponse() {
-        this.claims = null;
-        this.eventName = null;
-        this.eventSource = null;
-        this.legacyResourceId = null;
-        this.level = null;
-        this.metricNamespace = null;
-        this.odataType = null;
-        this.operationName = null;
-        this.resourceGroupName = null;
-        this.resourceLocation = null;
-        this.resourceProviderName = null;
-        this.resourceUri = null;
-        this.status = null;
-        this.subStatus = null;
+    private RuleManagementEventDataSourceResponse(RuleManagementEventDataSourceResponse $) {
+        this.claims = $.claims;
+        this.eventName = $.eventName;
+        this.eventSource = $.eventSource;
+        this.legacyResourceId = $.legacyResourceId;
+        this.level = $.level;
+        this.metricNamespace = $.metricNamespace;
+        this.odataType = $.odataType;
+        this.operationName = $.operationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceLocation = $.resourceLocation;
+        this.resourceProviderName = $.resourceProviderName;
+        this.resourceUri = $.resourceUri;
+        this.status = $.status;
+        this.subStatus = $.subStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleManagementEventDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RuleManagementEventClaimsDataSourceResponse claims;
-        private @Nullable String eventName;
-        private @Nullable String eventSource;
-        private @Nullable String legacyResourceId;
-        private @Nullable String level;
-        private @Nullable String metricNamespace;
-        private String odataType;
-        private @Nullable String operationName;
-        private @Nullable String resourceGroupName;
-        private @Nullable String resourceLocation;
-        private @Nullable String resourceProviderName;
-        private @Nullable String resourceUri;
-        private @Nullable String status;
-        private @Nullable String subStatus;
+        private RuleManagementEventDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleManagementEventDataSourceResponse();
         }
 
         public Builder(RuleManagementEventDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claims = defaults.claims;
-    	      this.eventName = defaults.eventName;
-    	      this.eventSource = defaults.eventSource;
-    	      this.legacyResourceId = defaults.legacyResourceId;
-    	      this.level = defaults.level;
-    	      this.metricNamespace = defaults.metricNamespace;
-    	      this.odataType = defaults.odataType;
-    	      this.operationName = defaults.operationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceLocation = defaults.resourceLocation;
-    	      this.resourceProviderName = defaults.resourceProviderName;
-    	      this.resourceUri = defaults.resourceUri;
-    	      this.status = defaults.status;
-    	      this.subStatus = defaults.subStatus;
+            $ = new RuleManagementEventDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder claims(@Nullable RuleManagementEventClaimsDataSourceResponse claims) {
-            this.claims = claims;
+            $.claims = claims;
             return this;
         }
+
         public Builder eventName(@Nullable String eventName) {
-            this.eventName = eventName;
+            $.eventName = eventName;
             return this;
         }
+
         public Builder eventSource(@Nullable String eventSource) {
-            this.eventSource = eventSource;
+            $.eventSource = eventSource;
             return this;
         }
+
         public Builder legacyResourceId(@Nullable String legacyResourceId) {
-            this.legacyResourceId = legacyResourceId;
+            $.legacyResourceId = legacyResourceId;
             return this;
         }
+
         public Builder level(@Nullable String level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
+
         public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = metricNamespace;
+            $.metricNamespace = metricNamespace;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder operationName(@Nullable String operationName) {
-            this.operationName = operationName;
+            $.operationName = operationName;
             return this;
         }
+
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = resourceGroupName;
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceLocation(@Nullable String resourceLocation) {
-            this.resourceLocation = resourceLocation;
+            $.resourceLocation = resourceLocation;
             return this;
         }
+
         public Builder resourceProviderName(@Nullable String resourceProviderName) {
-            this.resourceProviderName = resourceProviderName;
+            $.resourceProviderName = resourceProviderName;
             return this;
         }
+
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = resourceUri;
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder subStatus(@Nullable String subStatus) {
-            this.subStatus = subStatus;
+            $.subStatus = subStatus;
             return this;
-        }        public RuleManagementEventDataSourceResponse build() {
-            return new RuleManagementEventDataSourceResponse(claims, eventName, eventSource, legacyResourceId, level, metricNamespace, odataType, operationName, resourceGroupName, resourceLocation, resourceProviderName, resourceUri, status, subStatus);
+        }
+
+        public RuleManagementEventDataSourceResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

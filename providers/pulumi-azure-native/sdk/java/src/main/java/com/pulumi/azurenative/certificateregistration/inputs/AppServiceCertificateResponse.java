@@ -23,10 +23,10 @@ public final class AppServiceCertificateResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="keyVaultId")
-      private final @Nullable String keyVaultId;
+    private @Nullable String keyVaultId;
 
     public Optional<String> keyVaultId() {
-        return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
+        return Optional.ofNullable(this.keyVaultId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AppServiceCertificateResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="keyVaultSecretName")
-      private final @Nullable String keyVaultSecretName;
+    private @Nullable String keyVaultSecretName;
 
     public Optional<String> keyVaultSecretName() {
-        return this.keyVaultSecretName == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretName);
+        return Optional.ofNullable(this.keyVaultSecretName);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class AppServiceCertificateResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public AppServiceCertificateResponse(
-        @Nullable String keyVaultId,
-        @Nullable String keyVaultSecretName,
-        String provisioningState) {
-        this.keyVaultId = keyVaultId;
-        this.keyVaultSecretName = keyVaultSecretName;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private AppServiceCertificateResponse() {}
 
-    private AppServiceCertificateResponse() {
-        this.keyVaultId = null;
-        this.keyVaultSecretName = null;
-        this.provisioningState = null;
+    private AppServiceCertificateResponse(AppServiceCertificateResponse $) {
+        this.keyVaultId = $.keyVaultId;
+        this.keyVaultSecretName = $.keyVaultSecretName;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppServiceCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyVaultId;
-        private @Nullable String keyVaultSecretName;
-        private String provisioningState;
+        private AppServiceCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppServiceCertificateResponse();
         }
 
         public Builder(AppServiceCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultId = defaults.keyVaultId;
-    	      this.keyVaultSecretName = defaults.keyVaultSecretName;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new AppServiceCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = keyVaultId;
+            $.keyVaultId = keyVaultId;
             return this;
         }
+
         public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
-            this.keyVaultSecretName = keyVaultSecretName;
+            $.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public AppServiceCertificateResponse build() {
-            return new AppServiceCertificateResponse(keyVaultId, keyVaultSecretName, provisioningState);
+        }
+
+        public AppServiceCertificateResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

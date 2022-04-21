@@ -23,7 +23,7 @@ public final class AutomationRulePropertyValuesConditionResponse extends com.pul
      * 
      */
     @Import(name="conditionProperties", required=true)
-      private final AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
+    private AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
 
     public AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties() {
         return this.conditionProperties;
@@ -35,55 +35,52 @@ public final class AutomationRulePropertyValuesConditionResponse extends com.pul
      * 
      */
     @Import(name="conditionType", required=true)
-      private final String conditionType;
+    private String conditionType;
 
     public String conditionType() {
         return this.conditionType;
     }
 
-    public AutomationRulePropertyValuesConditionResponse(
-        AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties,
-        String conditionType) {
-        this.conditionProperties = Objects.requireNonNull(conditionProperties, "expected parameter 'conditionProperties' to be non-null");
-        this.conditionType = Codegen.stringProp("conditionType").arg(conditionType).require();
-    }
+    private AutomationRulePropertyValuesConditionResponse() {}
 
-    private AutomationRulePropertyValuesConditionResponse() {
-        this.conditionProperties = null;
-        this.conditionType = null;
+    private AutomationRulePropertyValuesConditionResponse(AutomationRulePropertyValuesConditionResponse $) {
+        this.conditionProperties = $.conditionProperties;
+        this.conditionType = $.conditionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRulePropertyValuesConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
-        private String conditionType;
+        private AutomationRulePropertyValuesConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRulePropertyValuesConditionResponse();
         }
 
         public Builder(AutomationRulePropertyValuesConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditionProperties = defaults.conditionProperties;
-    	      this.conditionType = defaults.conditionType;
+            $ = new AutomationRulePropertyValuesConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conditionProperties(AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties) {
-            this.conditionProperties = Objects.requireNonNull(conditionProperties);
+            $.conditionProperties = conditionProperties;
             return this;
         }
+
         public Builder conditionType(String conditionType) {
-            this.conditionType = Objects.requireNonNull(conditionType);
+            $.conditionType = conditionType;
             return this;
-        }        public AutomationRulePropertyValuesConditionResponse build() {
-            return new AutomationRulePropertyValuesConditionResponse(conditionProperties, conditionType);
+        }
+
+        public AutomationRulePropertyValuesConditionResponse build() {
+            $.conditionProperties = Objects.requireNonNull($.conditionProperties, "expected parameter 'conditionProperties' to be non-null");
+            $.conditionType = Codegen.stringProp("conditionType").arg($.conditionType).require();
+            return $;
         }
     }
+
 }

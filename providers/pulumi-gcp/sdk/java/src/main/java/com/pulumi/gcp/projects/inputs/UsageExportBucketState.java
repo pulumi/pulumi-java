@@ -5,9 +5,9 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UsageExportBucketState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UsageExportBucketState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class UsageExportBucketState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public UsageExportBucketState(
-        @Nullable Output<String> bucketName,
-        @Nullable Output<String> prefix,
-        @Nullable Output<String> project) {
-        this.bucketName = bucketName;
-        this.prefix = prefix;
-        this.project = project;
-    }
+    private UsageExportBucketState() {}
 
-    private UsageExportBucketState() {
-        this.bucketName = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.project = Codegen.empty();
+    private UsageExportBucketState(UsageExportBucketState $) {
+        this.bucketName = $.bucketName;
+        this.prefix = $.prefix;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsageExportBucketState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketName;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<String> project;
+        private UsageExportBucketState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsageExportBucketState();
         }
 
         public Builder(UsageExportBucketState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.prefix = defaults.prefix;
-    	      this.project = defaults.project;
+            $ = new UsageExportBucketState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public UsageExportBucketState build() {
-            return new UsageExportBucketState(bucketName, prefix, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public UsageExportBucketState build() {
+            return $;
         }
     }
+
 }

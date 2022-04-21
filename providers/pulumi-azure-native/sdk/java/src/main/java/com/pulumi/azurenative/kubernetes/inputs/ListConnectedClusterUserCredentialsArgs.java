@@ -20,7 +20,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
      * 
      */
     @Import(name="authenticationMethod", required=true)
-      private final Either<String,AuthenticationMethod> authenticationMethod;
+    private Either<String,AuthenticationMethod> authenticationMethod;
 
     public Either<String,AuthenticationMethod> authenticationMethod() {
         return this.authenticationMethod;
@@ -31,7 +31,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
      * 
      */
     @Import(name="clientProxy", required=true)
-      private final Boolean clientProxy;
+    private Boolean clientProxy;
 
     public Boolean clientProxy() {
         return this.clientProxy;
@@ -42,7 +42,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -53,73 +53,66 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListConnectedClusterUserCredentialsArgs(
-        Either<String,AuthenticationMethod> authenticationMethod,
-        Boolean clientProxy,
-        String clusterName,
-        String resourceGroupName) {
-        this.authenticationMethod = Objects.requireNonNull(authenticationMethod, "expected parameter 'authenticationMethod' to be non-null");
-        this.clientProxy = Objects.requireNonNull(clientProxy, "expected parameter 'clientProxy' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListConnectedClusterUserCredentialsArgs() {}
 
-    private ListConnectedClusterUserCredentialsArgs() {
-        this.authenticationMethod = null;
-        this.clientProxy = null;
-        this.clusterName = null;
-        this.resourceGroupName = null;
+    private ListConnectedClusterUserCredentialsArgs(ListConnectedClusterUserCredentialsArgs $) {
+        this.authenticationMethod = $.authenticationMethod;
+        this.clientProxy = $.clientProxy;
+        this.clusterName = $.clusterName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListConnectedClusterUserCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Either<String,AuthenticationMethod> authenticationMethod;
-        private Boolean clientProxy;
-        private String clusterName;
-        private String resourceGroupName;
+        private ListConnectedClusterUserCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListConnectedClusterUserCredentialsArgs();
         }
 
         public Builder(ListConnectedClusterUserCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationMethod = defaults.authenticationMethod;
-    	      this.clientProxy = defaults.clientProxy;
-    	      this.clusterName = defaults.clusterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListConnectedClusterUserCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationMethod(Either<String,AuthenticationMethod> authenticationMethod) {
-            this.authenticationMethod = Objects.requireNonNull(authenticationMethod);
+            $.authenticationMethod = authenticationMethod;
             return this;
         }
+
         public Builder clientProxy(Boolean clientProxy) {
-            this.clientProxy = Objects.requireNonNull(clientProxy);
+            $.clientProxy = clientProxy;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListConnectedClusterUserCredentialsArgs build() {
-            return new ListConnectedClusterUserCredentialsArgs(authenticationMethod, clientProxy, clusterName, resourceGroupName);
+        }
+
+        public ListConnectedClusterUserCredentialsArgs build() {
+            $.authenticationMethod = Objects.requireNonNull($.authenticationMethod, "expected parameter 'authenticationMethod' to be non-null");
+            $.clientProxy = Objects.requireNonNull($.clientProxy, "expected parameter 'clientProxy' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

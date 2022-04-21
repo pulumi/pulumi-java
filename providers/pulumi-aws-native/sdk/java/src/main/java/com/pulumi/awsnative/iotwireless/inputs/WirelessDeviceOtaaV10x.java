@@ -13,62 +13,59 @@ public final class WirelessDeviceOtaaV10x extends com.pulumi.resources.InvokeArg
     public static final WirelessDeviceOtaaV10x Empty = new WirelessDeviceOtaaV10x();
 
     @Import(name="appEui", required=true)
-      private final String appEui;
+    private String appEui;
 
     public String appEui() {
         return this.appEui;
     }
 
     @Import(name="appKey", required=true)
-      private final String appKey;
+    private String appKey;
 
     public String appKey() {
         return this.appKey;
     }
 
-    public WirelessDeviceOtaaV10x(
-        String appEui,
-        String appKey) {
-        this.appEui = Objects.requireNonNull(appEui, "expected parameter 'appEui' to be non-null");
-        this.appKey = Objects.requireNonNull(appKey, "expected parameter 'appKey' to be non-null");
-    }
+    private WirelessDeviceOtaaV10x() {}
 
-    private WirelessDeviceOtaaV10x() {
-        this.appEui = null;
-        this.appKey = null;
+    private WirelessDeviceOtaaV10x(WirelessDeviceOtaaV10x $) {
+        this.appEui = $.appEui;
+        this.appKey = $.appKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WirelessDeviceOtaaV10x defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appEui;
-        private String appKey;
+        private WirelessDeviceOtaaV10x $;
 
         public Builder() {
-    	      // Empty
+            $ = new WirelessDeviceOtaaV10x();
         }
 
         public Builder(WirelessDeviceOtaaV10x defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEui = defaults.appEui;
-    	      this.appKey = defaults.appKey;
+            $ = new WirelessDeviceOtaaV10x(Objects.requireNonNull(defaults));
         }
 
         public Builder appEui(String appEui) {
-            this.appEui = Objects.requireNonNull(appEui);
+            $.appEui = appEui;
             return this;
         }
+
         public Builder appKey(String appKey) {
-            this.appKey = Objects.requireNonNull(appKey);
+            $.appKey = appKey;
             return this;
-        }        public WirelessDeviceOtaaV10x build() {
-            return new WirelessDeviceOtaaV10x(appEui, appKey);
+        }
+
+        public WirelessDeviceOtaaV10x build() {
+            $.appEui = Objects.requireNonNull($.appEui, "expected parameter 'appEui' to be non-null");
+            $.appKey = Objects.requireNonNull($.appKey, "expected parameter 'appKey' to be non-null");
+            return $;
         }
     }
+
 }

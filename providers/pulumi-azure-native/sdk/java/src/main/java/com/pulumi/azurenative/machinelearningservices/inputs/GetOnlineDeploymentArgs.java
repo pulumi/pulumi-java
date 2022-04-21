@@ -17,7 +17,7 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deploymentName", required=true)
-      private final String deploymentName;
+    private String deploymentName;
 
     public String deploymentName() {
         return this.deploymentName;
@@ -28,7 +28,7 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="endpointName", required=true)
-      private final String endpointName;
+    private String endpointName;
 
     public String endpointName() {
         return this.endpointName;
@@ -39,7 +39,7 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetOnlineDeploymentArgs(
-        String deploymentName,
-        String endpointName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.deploymentName = Objects.requireNonNull(deploymentName, "expected parameter 'deploymentName' to be non-null");
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetOnlineDeploymentArgs() {}
 
-    private GetOnlineDeploymentArgs() {
-        this.deploymentName = null;
-        this.endpointName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetOnlineDeploymentArgs(GetOnlineDeploymentArgs $) {
+        this.deploymentName = $.deploymentName;
+        this.endpointName = $.endpointName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOnlineDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deploymentName;
-        private String endpointName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetOnlineDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOnlineDeploymentArgs();
         }
 
         public Builder(GetOnlineDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.endpointName = defaults.endpointName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetOnlineDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentName(String deploymentName) {
-            this.deploymentName = Objects.requireNonNull(deploymentName);
+            $.deploymentName = deploymentName;
             return this;
         }
+
         public Builder endpointName(String endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetOnlineDeploymentArgs build() {
-            return new GetOnlineDeploymentArgs(deploymentName, endpointName, resourceGroupName, workspaceName);
+        }
+
+        public GetOnlineDeploymentArgs build() {
+            $.deploymentName = Objects.requireNonNull($.deploymentName, "expected parameter 'deploymentName' to be non-null");
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SqlUserDefinedFunctionResourceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class SqlUserDefinedFunctionResourceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public SqlUserDefinedFunctionResourceArgs(
-        @Nullable Output<String> body,
-        Output<String> id) {
-        this.body = body;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private SqlUserDefinedFunctionResourceArgs() {}
 
-    private SqlUserDefinedFunctionResourceArgs() {
-        this.body = Codegen.empty();
-        this.id = Codegen.empty();
+    private SqlUserDefinedFunctionResourceArgs(SqlUserDefinedFunctionResourceArgs $) {
+        this.body = $.body;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlUserDefinedFunctionResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> body;
-        private Output<String> id;
+        private SqlUserDefinedFunctionResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlUserDefinedFunctionResourceArgs();
         }
 
         public Builder(SqlUserDefinedFunctionResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.id = defaults.id;
+            $ = new SqlUserDefinedFunctionResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public SqlUserDefinedFunctionResourceArgs build() {
-            return new SqlUserDefinedFunctionResourceArgs(body, id);
+            return id(Output.of(id));
+        }
+
+        public SqlUserDefinedFunctionResourceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class LocationNFSOnPremConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="agentArns", required=true)
-      private final Output<List<String>> agentArns;
+    private Output<List<String>> agentArns;
 
     public Output<List<String>> agentArns() {
         return this.agentArns;
     }
 
-    public LocationNFSOnPremConfigArgs(Output<List<String>> agentArns) {
-        this.agentArns = Objects.requireNonNull(agentArns, "expected parameter 'agentArns' to be non-null");
-    }
+    private LocationNFSOnPremConfigArgs() {}
 
-    private LocationNFSOnPremConfigArgs() {
-        this.agentArns = Codegen.empty();
+    private LocationNFSOnPremConfigArgs(LocationNFSOnPremConfigArgs $) {
+        this.agentArns = $.agentArns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationNFSOnPremConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> agentArns;
+        private LocationNFSOnPremConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationNFSOnPremConfigArgs();
         }
 
         public Builder(LocationNFSOnPremConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentArns = defaults.agentArns;
+            $ = new LocationNFSOnPremConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentArns(Output<List<String>> agentArns) {
-            this.agentArns = Objects.requireNonNull(agentArns);
+            $.agentArns = agentArns;
             return this;
         }
+
         public Builder agentArns(List<String> agentArns) {
-            this.agentArns = Output.of(Objects.requireNonNull(agentArns));
-            return this;
+            return agentArns(Output.of(agentArns));
         }
+
         public Builder agentArns(String... agentArns) {
             return agentArns(List.of(agentArns));
-        }        public LocationNFSOnPremConfigArgs build() {
-            return new LocationNFSOnPremConfigArgs(agentArns);
+        }
+
+        public LocationNFSOnPremConfigArgs build() {
+            $.agentArns = Objects.requireNonNull($.agentArns, "expected parameter 'agentArns' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,48 +14,49 @@ public final class GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader e
     public static final GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader Empty = new GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader();
 
     @Import(name="items", required=true)
-      private final List<String> items;
+    private List<String> items;
 
     public List<String> items() {
         return this.items;
     }
 
-    public GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader(List<String> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader() {}
 
-    private GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader() {
-        this.items = List.of();
+    private GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader(GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> items;
+        private GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader();
         }
 
         public Builder(GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<String> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader build() {
-            return new GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader(items);
+        }
+
+        public GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

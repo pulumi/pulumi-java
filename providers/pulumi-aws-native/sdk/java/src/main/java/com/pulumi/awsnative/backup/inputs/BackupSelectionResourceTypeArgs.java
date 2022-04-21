@@ -7,10 +7,10 @@ import com.pulumi.awsnative.backup.inputs.BackupSelectionConditionResourceTypeAr
 import com.pulumi.awsnative.backup.inputs.BackupSelectionResourceTypeConditionsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,159 +19,147 @@ public final class BackupSelectionResourceTypeArgs extends com.pulumi.resources.
     public static final BackupSelectionResourceTypeArgs Empty = new BackupSelectionResourceTypeArgs();
 
     @Import(name="conditions")
-      private final @Nullable Output<BackupSelectionResourceTypeConditionsPropertiesArgs> conditions;
+    private @Nullable Output<BackupSelectionResourceTypeConditionsPropertiesArgs> conditions;
 
-    public Output<BackupSelectionResourceTypeConditionsPropertiesArgs> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<BackupSelectionResourceTypeConditionsPropertiesArgs>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     @Import(name="iamRoleArn", required=true)
-      private final Output<String> iamRoleArn;
+    private Output<String> iamRoleArn;
 
     public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
 
     @Import(name="listOfTags")
-      private final @Nullable Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags;
+    private @Nullable Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags;
 
-    public Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags() {
-        return this.listOfTags == null ? Codegen.empty() : this.listOfTags;
+    public Optional<Output<List<BackupSelectionConditionResourceTypeArgs>>> listOfTags() {
+        return Optional.ofNullable(this.listOfTags);
     }
 
     @Import(name="notResources")
-      private final @Nullable Output<List<String>> notResources;
+    private @Nullable Output<List<String>> notResources;
 
-    public Output<List<String>> notResources() {
-        return this.notResources == null ? Codegen.empty() : this.notResources;
+    public Optional<Output<List<String>>> notResources() {
+        return Optional.ofNullable(this.notResources);
     }
 
     @Import(name="resources")
-      private final @Nullable Output<List<String>> resources;
+    private @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<List<String>>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     @Import(name="selectionName", required=true)
-      private final Output<String> selectionName;
+    private Output<String> selectionName;
 
     public Output<String> selectionName() {
         return this.selectionName;
     }
 
-    public BackupSelectionResourceTypeArgs(
-        @Nullable Output<BackupSelectionResourceTypeConditionsPropertiesArgs> conditions,
-        Output<String> iamRoleArn,
-        @Nullable Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags,
-        @Nullable Output<List<String>> notResources,
-        @Nullable Output<List<String>> resources,
-        Output<String> selectionName) {
-        this.conditions = conditions;
-        this.iamRoleArn = Objects.requireNonNull(iamRoleArn, "expected parameter 'iamRoleArn' to be non-null");
-        this.listOfTags = listOfTags;
-        this.notResources = notResources;
-        this.resources = resources;
-        this.selectionName = Objects.requireNonNull(selectionName, "expected parameter 'selectionName' to be non-null");
-    }
+    private BackupSelectionResourceTypeArgs() {}
 
-    private BackupSelectionResourceTypeArgs() {
-        this.conditions = Codegen.empty();
-        this.iamRoleArn = Codegen.empty();
-        this.listOfTags = Codegen.empty();
-        this.notResources = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.selectionName = Codegen.empty();
+    private BackupSelectionResourceTypeArgs(BackupSelectionResourceTypeArgs $) {
+        this.conditions = $.conditions;
+        this.iamRoleArn = $.iamRoleArn;
+        this.listOfTags = $.listOfTags;
+        this.notResources = $.notResources;
+        this.resources = $.resources;
+        this.selectionName = $.selectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupSelectionResourceTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BackupSelectionResourceTypeConditionsPropertiesArgs> conditions;
-        private Output<String> iamRoleArn;
-        private @Nullable Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags;
-        private @Nullable Output<List<String>> notResources;
-        private @Nullable Output<List<String>> resources;
-        private Output<String> selectionName;
+        private BackupSelectionResourceTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupSelectionResourceTypeArgs();
         }
 
         public Builder(BackupSelectionResourceTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.iamRoleArn = defaults.iamRoleArn;
-    	      this.listOfTags = defaults.listOfTags;
-    	      this.notResources = defaults.notResources;
-    	      this.resources = defaults.resources;
-    	      this.selectionName = defaults.selectionName;
+            $ = new BackupSelectionResourceTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<BackupSelectionResourceTypeConditionsPropertiesArgs> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable BackupSelectionResourceTypeConditionsPropertiesArgs conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(BackupSelectionResourceTypeConditionsPropertiesArgs conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder iamRoleArn(Output<String> iamRoleArn) {
-            this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
+            $.iamRoleArn = iamRoleArn;
             return this;
         }
+
         public Builder iamRoleArn(String iamRoleArn) {
-            this.iamRoleArn = Output.of(Objects.requireNonNull(iamRoleArn));
-            return this;
+            return iamRoleArn(Output.of(iamRoleArn));
         }
+
         public Builder listOfTags(@Nullable Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags) {
-            this.listOfTags = listOfTags;
+            $.listOfTags = listOfTags;
             return this;
         }
-        public Builder listOfTags(@Nullable List<BackupSelectionConditionResourceTypeArgs> listOfTags) {
-            this.listOfTags = Codegen.ofNullable(listOfTags);
-            return this;
+
+        public Builder listOfTags(List<BackupSelectionConditionResourceTypeArgs> listOfTags) {
+            return listOfTags(Output.of(listOfTags));
         }
+
         public Builder listOfTags(BackupSelectionConditionResourceTypeArgs... listOfTags) {
             return listOfTags(List.of(listOfTags));
         }
+
         public Builder notResources(@Nullable Output<List<String>> notResources) {
-            this.notResources = notResources;
+            $.notResources = notResources;
             return this;
         }
-        public Builder notResources(@Nullable List<String> notResources) {
-            this.notResources = Codegen.ofNullable(notResources);
-            return this;
+
+        public Builder notResources(List<String> notResources) {
+            return notResources(Output.of(notResources));
         }
+
         public Builder notResources(String... notResources) {
             return notResources(List.of(notResources));
         }
+
         public Builder resources(@Nullable Output<List<String>> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable List<String> resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(List<String> resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
+
         public Builder selectionName(Output<String> selectionName) {
-            this.selectionName = Objects.requireNonNull(selectionName);
+            $.selectionName = selectionName;
             return this;
         }
+
         public Builder selectionName(String selectionName) {
-            this.selectionName = Output.of(Objects.requireNonNull(selectionName));
-            return this;
-        }        public BackupSelectionResourceTypeArgs build() {
-            return new BackupSelectionResourceTypeArgs(conditions, iamRoleArn, listOfTags, notResources, resources, selectionName);
+            return selectionName(Output.of(selectionName));
+        }
+
+        public BackupSelectionResourceTypeArgs build() {
+            $.iamRoleArn = Objects.requireNonNull($.iamRoleArn, "expected parameter 'iamRoleArn' to be non-null");
+            $.selectionName = Objects.requireNonNull($.selectionName, "expected parameter 'selectionName' to be non-null");
+            return $;
         }
     }
+
 }

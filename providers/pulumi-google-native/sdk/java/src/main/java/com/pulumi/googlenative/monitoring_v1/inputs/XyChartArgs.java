@@ -5,7 +5,6 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.AxisArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.ChartOptionsArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.DataSetArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.monitoring_v1.inputs.ThresholdArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="chartOptions")
-      private final @Nullable Output<ChartOptionsArgs> chartOptions;
+    private @Nullable Output<ChartOptionsArgs> chartOptions;
 
-    public Output<ChartOptionsArgs> chartOptions() {
-        return this.chartOptions == null ? Codegen.empty() : this.chartOptions;
+    public Optional<Output<ChartOptionsArgs>> chartOptions() {
+        return Optional.ofNullable(this.chartOptions);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSets", required=true)
-      private final Output<List<DataSetArgs>> dataSets;
+    private Output<List<DataSetArgs>> dataSets;
 
     public Output<List<DataSetArgs>> dataSets() {
         return this.dataSets;
@@ -51,10 +51,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thresholds")
-      private final @Nullable Output<List<ThresholdArgs>> thresholds;
+    private @Nullable Output<List<ThresholdArgs>> thresholds;
 
-    public Output<List<ThresholdArgs>> thresholds() {
-        return this.thresholds == null ? Codegen.empty() : this.thresholds;
+    public Optional<Output<List<ThresholdArgs>>> thresholds() {
+        return Optional.ofNullable(this.thresholds);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeshiftDuration")
-      private final @Nullable Output<String> timeshiftDuration;
+    private @Nullable Output<String> timeshiftDuration;
 
-    public Output<String> timeshiftDuration() {
-        return this.timeshiftDuration == null ? Codegen.empty() : this.timeshiftDuration;
+    public Optional<Output<String>> timeshiftDuration() {
+        return Optional.ofNullable(this.timeshiftDuration);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xAxis")
-      private final @Nullable Output<AxisArgs> xAxis;
+    private @Nullable Output<AxisArgs> xAxis;
 
-    public Output<AxisArgs> xAxis() {
-        return this.xAxis == null ? Codegen.empty() : this.xAxis;
+    public Optional<Output<AxisArgs>> xAxis() {
+        return Optional.ofNullable(this.xAxis);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="y2Axis")
-      private final @Nullable Output<AxisArgs> y2Axis;
+    private @Nullable Output<AxisArgs> y2Axis;
 
-    public Output<AxisArgs> y2Axis() {
-        return this.y2Axis == null ? Codegen.empty() : this.y2Axis;
+    public Optional<Output<AxisArgs>> y2Axis() {
+        return Optional.ofNullable(this.y2Axis);
     }
 
     /**
@@ -95,134 +95,117 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="yAxis")
-      private final @Nullable Output<AxisArgs> yAxis;
+    private @Nullable Output<AxisArgs> yAxis;
 
-    public Output<AxisArgs> yAxis() {
-        return this.yAxis == null ? Codegen.empty() : this.yAxis;
+    public Optional<Output<AxisArgs>> yAxis() {
+        return Optional.ofNullable(this.yAxis);
     }
 
-    public XyChartArgs(
-        @Nullable Output<ChartOptionsArgs> chartOptions,
-        Output<List<DataSetArgs>> dataSets,
-        @Nullable Output<List<ThresholdArgs>> thresholds,
-        @Nullable Output<String> timeshiftDuration,
-        @Nullable Output<AxisArgs> xAxis,
-        @Nullable Output<AxisArgs> y2Axis,
-        @Nullable Output<AxisArgs> yAxis) {
-        this.chartOptions = chartOptions;
-        this.dataSets = Objects.requireNonNull(dataSets, "expected parameter 'dataSets' to be non-null");
-        this.thresholds = thresholds;
-        this.timeshiftDuration = timeshiftDuration;
-        this.xAxis = xAxis;
-        this.y2Axis = y2Axis;
-        this.yAxis = yAxis;
-    }
+    private XyChartArgs() {}
 
-    private XyChartArgs() {
-        this.chartOptions = Codegen.empty();
-        this.dataSets = Codegen.empty();
-        this.thresholds = Codegen.empty();
-        this.timeshiftDuration = Codegen.empty();
-        this.xAxis = Codegen.empty();
-        this.y2Axis = Codegen.empty();
-        this.yAxis = Codegen.empty();
+    private XyChartArgs(XyChartArgs $) {
+        this.chartOptions = $.chartOptions;
+        this.dataSets = $.dataSets;
+        this.thresholds = $.thresholds;
+        this.timeshiftDuration = $.timeshiftDuration;
+        this.xAxis = $.xAxis;
+        this.y2Axis = $.y2Axis;
+        this.yAxis = $.yAxis;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(XyChartArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ChartOptionsArgs> chartOptions;
-        private Output<List<DataSetArgs>> dataSets;
-        private @Nullable Output<List<ThresholdArgs>> thresholds;
-        private @Nullable Output<String> timeshiftDuration;
-        private @Nullable Output<AxisArgs> xAxis;
-        private @Nullable Output<AxisArgs> y2Axis;
-        private @Nullable Output<AxisArgs> yAxis;
+        private XyChartArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new XyChartArgs();
         }
 
         public Builder(XyChartArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chartOptions = defaults.chartOptions;
-    	      this.dataSets = defaults.dataSets;
-    	      this.thresholds = defaults.thresholds;
-    	      this.timeshiftDuration = defaults.timeshiftDuration;
-    	      this.xAxis = defaults.xAxis;
-    	      this.y2Axis = defaults.y2Axis;
-    	      this.yAxis = defaults.yAxis;
+            $ = new XyChartArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder chartOptions(@Nullable Output<ChartOptionsArgs> chartOptions) {
-            this.chartOptions = chartOptions;
+            $.chartOptions = chartOptions;
             return this;
         }
-        public Builder chartOptions(@Nullable ChartOptionsArgs chartOptions) {
-            this.chartOptions = Codegen.ofNullable(chartOptions);
-            return this;
+
+        public Builder chartOptions(ChartOptionsArgs chartOptions) {
+            return chartOptions(Output.of(chartOptions));
         }
+
         public Builder dataSets(Output<List<DataSetArgs>> dataSets) {
-            this.dataSets = Objects.requireNonNull(dataSets);
+            $.dataSets = dataSets;
             return this;
         }
+
         public Builder dataSets(List<DataSetArgs> dataSets) {
-            this.dataSets = Output.of(Objects.requireNonNull(dataSets));
-            return this;
+            return dataSets(Output.of(dataSets));
         }
+
         public Builder dataSets(DataSetArgs... dataSets) {
             return dataSets(List.of(dataSets));
         }
+
         public Builder thresholds(@Nullable Output<List<ThresholdArgs>> thresholds) {
-            this.thresholds = thresholds;
+            $.thresholds = thresholds;
             return this;
         }
-        public Builder thresholds(@Nullable List<ThresholdArgs> thresholds) {
-            this.thresholds = Codegen.ofNullable(thresholds);
-            return this;
+
+        public Builder thresholds(List<ThresholdArgs> thresholds) {
+            return thresholds(Output.of(thresholds));
         }
+
         public Builder thresholds(ThresholdArgs... thresholds) {
             return thresholds(List.of(thresholds));
         }
+
         public Builder timeshiftDuration(@Nullable Output<String> timeshiftDuration) {
-            this.timeshiftDuration = timeshiftDuration;
+            $.timeshiftDuration = timeshiftDuration;
             return this;
         }
-        public Builder timeshiftDuration(@Nullable String timeshiftDuration) {
-            this.timeshiftDuration = Codegen.ofNullable(timeshiftDuration);
-            return this;
+
+        public Builder timeshiftDuration(String timeshiftDuration) {
+            return timeshiftDuration(Output.of(timeshiftDuration));
         }
+
         public Builder xAxis(@Nullable Output<AxisArgs> xAxis) {
-            this.xAxis = xAxis;
+            $.xAxis = xAxis;
             return this;
         }
-        public Builder xAxis(@Nullable AxisArgs xAxis) {
-            this.xAxis = Codegen.ofNullable(xAxis);
-            return this;
+
+        public Builder xAxis(AxisArgs xAxis) {
+            return xAxis(Output.of(xAxis));
         }
+
         public Builder y2Axis(@Nullable Output<AxisArgs> y2Axis) {
-            this.y2Axis = y2Axis;
+            $.y2Axis = y2Axis;
             return this;
         }
-        public Builder y2Axis(@Nullable AxisArgs y2Axis) {
-            this.y2Axis = Codegen.ofNullable(y2Axis);
-            return this;
+
+        public Builder y2Axis(AxisArgs y2Axis) {
+            return y2Axis(Output.of(y2Axis));
         }
+
         public Builder yAxis(@Nullable Output<AxisArgs> yAxis) {
-            this.yAxis = yAxis;
+            $.yAxis = yAxis;
             return this;
         }
-        public Builder yAxis(@Nullable AxisArgs yAxis) {
-            this.yAxis = Codegen.ofNullable(yAxis);
-            return this;
-        }        public XyChartArgs build() {
-            return new XyChartArgs(chartOptions, dataSets, thresholds, timeshiftDuration, xAxis, y2Axis, yAxis);
+
+        public Builder yAxis(AxisArgs yAxis) {
+            return yAxis(Output.of(yAxis));
+        }
+
+        public XyChartArgs build() {
+            $.dataSets = Objects.requireNonNull($.dataSets, "expected parameter 'dataSets' to be non-null");
+            return $;
         }
     }
+
 }

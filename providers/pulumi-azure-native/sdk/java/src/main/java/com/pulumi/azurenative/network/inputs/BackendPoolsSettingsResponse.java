@@ -25,10 +25,10 @@ public final class BackendPoolsSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enforceCertificateNameCheck")
-      private final @Nullable String enforceCertificateNameCheck;
+    private @Nullable String enforceCertificateNameCheck;
 
     public Optional<String> enforceCertificateNameCheck() {
-        return this.enforceCertificateNameCheck == null ? Optional.empty() : Optional.ofNullable(this.enforceCertificateNameCheck);
+        return Optional.ofNullable(this.enforceCertificateNameCheck);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class BackendPoolsSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sendRecvTimeoutSeconds")
-      private final @Nullable Integer sendRecvTimeoutSeconds;
+    private @Nullable Integer sendRecvTimeoutSeconds;
 
     public Optional<Integer> sendRecvTimeoutSeconds() {
-        return this.sendRecvTimeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.sendRecvTimeoutSeconds);
+        return Optional.ofNullable(this.sendRecvTimeoutSeconds);
     }
 
-    public BackendPoolsSettingsResponse(
-        @Nullable String enforceCertificateNameCheck,
-        @Nullable Integer sendRecvTimeoutSeconds) {
-        this.enforceCertificateNameCheck = Codegen.stringProp("enforceCertificateNameCheck").arg(enforceCertificateNameCheck).def("Enabled").getNullable();
-        this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
-    }
+    private BackendPoolsSettingsResponse() {}
 
-    private BackendPoolsSettingsResponse() {
-        this.enforceCertificateNameCheck = null;
-        this.sendRecvTimeoutSeconds = null;
+    private BackendPoolsSettingsResponse(BackendPoolsSettingsResponse $) {
+        this.enforceCertificateNameCheck = $.enforceCertificateNameCheck;
+        this.sendRecvTimeoutSeconds = $.sendRecvTimeoutSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendPoolsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String enforceCertificateNameCheck;
-        private @Nullable Integer sendRecvTimeoutSeconds;
+        private BackendPoolsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendPoolsSettingsResponse();
         }
 
         public Builder(BackendPoolsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enforceCertificateNameCheck = defaults.enforceCertificateNameCheck;
-    	      this.sendRecvTimeoutSeconds = defaults.sendRecvTimeoutSeconds;
+            $ = new BackendPoolsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enforceCertificateNameCheck(@Nullable String enforceCertificateNameCheck) {
-            this.enforceCertificateNameCheck = enforceCertificateNameCheck;
+            $.enforceCertificateNameCheck = enforceCertificateNameCheck;
             return this;
         }
+
         public Builder sendRecvTimeoutSeconds(@Nullable Integer sendRecvTimeoutSeconds) {
-            this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
+            $.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
             return this;
-        }        public BackendPoolsSettingsResponse build() {
-            return new BackendPoolsSettingsResponse(enforceCertificateNameCheck, sendRecvTimeoutSeconds);
+        }
+
+        public BackendPoolsSettingsResponse build() {
+            $.enforceCertificateNameCheck = Codegen.stringProp("enforceCertificateNameCheck").arg($.enforceCertificateNameCheck).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

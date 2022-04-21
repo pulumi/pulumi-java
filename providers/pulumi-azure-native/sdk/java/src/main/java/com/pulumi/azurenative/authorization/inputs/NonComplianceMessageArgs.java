@@ -5,9 +5,9 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class NonComplianceMessageArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="message", required=true)
-      private final Output<String> message;
+    private Output<String> message;
 
     public Output<String> message() {
         return this.message;
@@ -35,63 +35,59 @@ public final class NonComplianceMessageArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyDefinitionReferenceId")
-      private final @Nullable Output<String> policyDefinitionReferenceId;
+    private @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> policyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
+    public Optional<Output<String>> policyDefinitionReferenceId() {
+        return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
 
-    public NonComplianceMessageArgs(
-        Output<String> message,
-        @Nullable Output<String> policyDefinitionReferenceId) {
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.policyDefinitionReferenceId = policyDefinitionReferenceId;
-    }
+    private NonComplianceMessageArgs() {}
 
-    private NonComplianceMessageArgs() {
-        this.message = Codegen.empty();
-        this.policyDefinitionReferenceId = Codegen.empty();
+    private NonComplianceMessageArgs(NonComplianceMessageArgs $) {
+        this.message = $.message;
+        this.policyDefinitionReferenceId = $.policyDefinitionReferenceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NonComplianceMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> message;
-        private @Nullable Output<String> policyDefinitionReferenceId;
+        private NonComplianceMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NonComplianceMessageArgs();
         }
 
         public Builder(NonComplianceMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
+            $ = new NonComplianceMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder message(Output<String> message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Output.of(Objects.requireNonNull(message));
-            return this;
+            return message(Output.of(message));
         }
+
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = policyDefinitionReferenceId;
+            $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Codegen.ofNullable(policyDefinitionReferenceId);
-            return this;
-        }        public NonComplianceMessageArgs build() {
-            return new NonComplianceMessageArgs(message, policyDefinitionReferenceId);
+
+        public Builder policyDefinitionReferenceId(String policyDefinitionReferenceId) {
+            return policyDefinitionReferenceId(Output.of(policyDefinitionReferenceId));
+        }
+
+        public NonComplianceMessageArgs build() {
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

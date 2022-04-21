@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends com.pulu
      * 
      */
     @Import(name="end", required=true)
-      private final String end;
+    private String end;
 
     public String end() {
         return this.end;
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends com.pulu
      * 
      */
     @Import(name="sharePercentage", required=true)
-      private final Double sharePercentage;
+    private Double sharePercentage;
 
     public Double sharePercentage() {
         return this.sharePercentage;
@@ -44,64 +44,59 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends com.pulu
      * 
      */
     @Import(name="start", required=true)
-      private final String start;
+    private String start;
 
     public String start() {
         return this.start;
     }
 
-    public GoogleCloudApigeeV1RevenueShareRangeResponse(
-        String end,
-        Double sharePercentage,
-        String start) {
-        this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
-        this.sharePercentage = Objects.requireNonNull(sharePercentage, "expected parameter 'sharePercentage' to be non-null");
-        this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
-    }
+    private GoogleCloudApigeeV1RevenueShareRangeResponse() {}
 
-    private GoogleCloudApigeeV1RevenueShareRangeResponse() {
-        this.end = null;
-        this.sharePercentage = null;
-        this.start = null;
+    private GoogleCloudApigeeV1RevenueShareRangeResponse(GoogleCloudApigeeV1RevenueShareRangeResponse $) {
+        this.end = $.end;
+        this.sharePercentage = $.sharePercentage;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1RevenueShareRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String end;
-        private Double sharePercentage;
-        private String start;
+        private GoogleCloudApigeeV1RevenueShareRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1RevenueShareRangeResponse();
         }
 
         public Builder(GoogleCloudApigeeV1RevenueShareRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.sharePercentage = defaults.sharePercentage;
-    	      this.start = defaults.start;
+            $ = new GoogleCloudApigeeV1RevenueShareRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder end(String end) {
-            this.end = Objects.requireNonNull(end);
+            $.end = end;
             return this;
         }
+
         public Builder sharePercentage(Double sharePercentage) {
-            this.sharePercentage = Objects.requireNonNull(sharePercentage);
+            $.sharePercentage = sharePercentage;
             return this;
         }
+
         public Builder start(String start) {
-            this.start = Objects.requireNonNull(start);
+            $.start = start;
             return this;
-        }        public GoogleCloudApigeeV1RevenueShareRangeResponse build() {
-            return new GoogleCloudApigeeV1RevenueShareRangeResponse(end, sharePercentage, start);
+        }
+
+        public GoogleCloudApigeeV1RevenueShareRangeResponse build() {
+            $.end = Objects.requireNonNull($.end, "expected parameter 'end' to be non-null");
+            $.sharePercentage = Objects.requireNonNull($.sharePercentage, "expected parameter 'sharePercentage' to be non-null");
+            $.start = Objects.requireNonNull($.start, "expected parameter 'start' to be non-null");
+            return $;
         }
     }
+
 }

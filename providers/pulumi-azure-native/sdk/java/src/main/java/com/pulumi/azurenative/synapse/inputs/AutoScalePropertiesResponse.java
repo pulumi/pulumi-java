@@ -24,10 +24,10 @@ public final class AutoScalePropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AutoScalePropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="maxNodeCount")
-      private final @Nullable Integer maxNodeCount;
+    private @Nullable Integer maxNodeCount;
 
     public Optional<Integer> maxNodeCount() {
-        return this.maxNodeCount == null ? Optional.empty() : Optional.ofNullable(this.maxNodeCount);
+        return Optional.ofNullable(this.maxNodeCount);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class AutoScalePropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="minNodeCount")
-      private final @Nullable Integer minNodeCount;
+    private @Nullable Integer minNodeCount;
 
     public Optional<Integer> minNodeCount() {
-        return this.minNodeCount == null ? Optional.empty() : Optional.ofNullable(this.minNodeCount);
+        return Optional.ofNullable(this.minNodeCount);
     }
 
-    public AutoScalePropertiesResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer maxNodeCount,
-        @Nullable Integer minNodeCount) {
-        this.enabled = enabled;
-        this.maxNodeCount = maxNodeCount;
-        this.minNodeCount = minNodeCount;
-    }
+    private AutoScalePropertiesResponse() {}
 
-    private AutoScalePropertiesResponse() {
-        this.enabled = null;
-        this.maxNodeCount = null;
-        this.minNodeCount = null;
+    private AutoScalePropertiesResponse(AutoScalePropertiesResponse $) {
+        this.enabled = $.enabled;
+        this.maxNodeCount = $.maxNodeCount;
+        this.minNodeCount = $.minNodeCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScalePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable Integer maxNodeCount;
-        private @Nullable Integer minNodeCount;
+        private AutoScalePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScalePropertiesResponse();
         }
 
         public Builder(AutoScalePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.maxNodeCount = defaults.maxNodeCount;
-    	      this.minNodeCount = defaults.minNodeCount;
+            $ = new AutoScalePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder maxNodeCount(@Nullable Integer maxNodeCount) {
-            this.maxNodeCount = maxNodeCount;
+            $.maxNodeCount = maxNodeCount;
             return this;
         }
+
         public Builder minNodeCount(@Nullable Integer minNodeCount) {
-            this.minNodeCount = minNodeCount;
+            $.minNodeCount = minNodeCount;
             return this;
-        }        public AutoScalePropertiesResponse build() {
-            return new AutoScalePropertiesResponse(enabled, maxNodeCount, minNodeCount);
+        }
+
+        public AutoScalePropertiesResponse build() {
+            return $;
         }
     }
+
 }

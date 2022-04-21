@@ -17,7 +17,7 @@ public final class ListMediaServiceKeysArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="mediaServiceName", required=true)
-      private final String mediaServiceName;
+    private String mediaServiceName;
 
     public String mediaServiceName() {
         return this.mediaServiceName;
@@ -28,55 +28,52 @@ public final class ListMediaServiceKeysArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListMediaServiceKeysArgs(
-        String mediaServiceName,
-        String resourceGroupName) {
-        this.mediaServiceName = Objects.requireNonNull(mediaServiceName, "expected parameter 'mediaServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListMediaServiceKeysArgs() {}
 
-    private ListMediaServiceKeysArgs() {
-        this.mediaServiceName = null;
-        this.resourceGroupName = null;
+    private ListMediaServiceKeysArgs(ListMediaServiceKeysArgs $) {
+        this.mediaServiceName = $.mediaServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListMediaServiceKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mediaServiceName;
-        private String resourceGroupName;
+        private ListMediaServiceKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListMediaServiceKeysArgs();
         }
 
         public Builder(ListMediaServiceKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mediaServiceName = defaults.mediaServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListMediaServiceKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mediaServiceName(String mediaServiceName) {
-            this.mediaServiceName = Objects.requireNonNull(mediaServiceName);
+            $.mediaServiceName = mediaServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListMediaServiceKeysArgs build() {
-            return new ListMediaServiceKeysArgs(mediaServiceName, resourceGroupName);
+        }
+
+        public ListMediaServiceKeysArgs build() {
+            $.mediaServiceName = Objects.requireNonNull($.mediaServiceName, "expected parameter 'mediaServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

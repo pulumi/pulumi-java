@@ -31,10 +31,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -64,10 +64,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,Object> parameters;
+    private @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="pipeline", required=true)
-      private final PipelineReferenceResponse pipeline;
+    private PipelineReferenceResponse pipeline;
 
     public PipelineReferenceResponse pipeline() {
         return this.pipeline;
@@ -87,7 +87,7 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -98,10 +98,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
     /**
@@ -109,115 +109,97 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="waitOnCompletion")
-      private final @Nullable Boolean waitOnCompletion;
+    private @Nullable Boolean waitOnCompletion;
 
     public Optional<Boolean> waitOnCompletion() {
-        return this.waitOnCompletion == null ? Optional.empty() : Optional.ofNullable(this.waitOnCompletion);
+        return Optional.ofNullable(this.waitOnCompletion);
     }
 
-    public ExecutePipelineActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        String name,
-        @Nullable Map<String,Object> parameters,
-        PipelineReferenceResponse pipeline,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable Boolean waitOnCompletion) {
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-        this.pipeline = Objects.requireNonNull(pipeline, "expected parameter 'pipeline' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-        this.waitOnCompletion = waitOnCompletion;
-    }
+    private ExecutePipelineActivityResponse() {}
 
-    private ExecutePipelineActivityResponse() {
-        this.dependsOn = List.of();
-        this.description = null;
-        this.name = null;
-        this.parameters = Map.of();
-        this.pipeline = null;
-        this.type = null;
-        this.userProperties = List.of();
-        this.waitOnCompletion = null;
+    private ExecutePipelineActivityResponse(ExecutePipelineActivityResponse $) {
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.pipeline = $.pipeline;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
+        this.waitOnCompletion = $.waitOnCompletion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutePipelineActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private String name;
-        private @Nullable Map<String,Object> parameters;
-        private PipelineReferenceResponse pipeline;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
-        private @Nullable Boolean waitOnCompletion;
+        private ExecutePipelineActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutePipelineActivityResponse();
         }
 
         public Builder(ExecutePipelineActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.pipeline = defaults.pipeline;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
-    	      this.waitOnCompletion = defaults.waitOnCompletion;
+            $ = new ExecutePipelineActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder pipeline(PipelineReferenceResponse pipeline) {
-            this.pipeline = Objects.requireNonNull(pipeline);
+            $.pipeline = pipeline;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
+
         public Builder waitOnCompletion(@Nullable Boolean waitOnCompletion) {
-            this.waitOnCompletion = waitOnCompletion;
+            $.waitOnCompletion = waitOnCompletion;
             return this;
-        }        public ExecutePipelineActivityResponse build() {
-            return new ExecutePipelineActivityResponse(dependsOn, description, name, parameters, pipeline, type, userProperties, waitOnCompletion);
+        }
+
+        public ExecutePipelineActivityResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.pipeline = Objects.requireNonNull($.pipeline, "expected parameter 'pipeline' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

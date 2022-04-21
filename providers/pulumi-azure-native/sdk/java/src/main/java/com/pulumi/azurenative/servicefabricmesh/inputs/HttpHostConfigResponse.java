@@ -23,7 +23,7 @@ public final class HttpHostConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -34,58 +34,56 @@ public final class HttpHostConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="routes", required=true)
-      private final List<HttpRouteConfigResponse> routes;
+    private List<HttpRouteConfigResponse> routes;
 
     public List<HttpRouteConfigResponse> routes() {
         return this.routes;
     }
 
-    public HttpHostConfigResponse(
-        String name,
-        List<HttpRouteConfigResponse> routes) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.routes = Objects.requireNonNull(routes, "expected parameter 'routes' to be non-null");
-    }
+    private HttpHostConfigResponse() {}
 
-    private HttpHostConfigResponse() {
-        this.name = null;
-        this.routes = List.of();
+    private HttpHostConfigResponse(HttpHostConfigResponse $) {
+        this.name = $.name;
+        this.routes = $.routes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpHostConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<HttpRouteConfigResponse> routes;
+        private HttpHostConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpHostConfigResponse();
         }
 
         public Builder(HttpHostConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.routes = defaults.routes;
+            $ = new HttpHostConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder routes(List<HttpRouteConfigResponse> routes) {
-            this.routes = Objects.requireNonNull(routes);
+            $.routes = routes;
             return this;
         }
+
         public Builder routes(HttpRouteConfigResponse... routes) {
             return routes(List.of(routes));
-        }        public HttpHostConfigResponse build() {
-            return new HttpHostConfigResponse(name, routes);
+        }
+
+        public HttpHostConfigResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.routes = Objects.requireNonNull($.routes, "expected parameter 'routes' to be non-null");
+            return $;
         }
     }
+
 }

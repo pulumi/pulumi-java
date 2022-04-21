@@ -17,7 +17,7 @@ public final class GetSapMonitorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSapMonitorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sapMonitorName", required=true)
-      private final String sapMonitorName;
+    private String sapMonitorName;
 
     public String sapMonitorName() {
         return this.sapMonitorName;
     }
 
-    public GetSapMonitorArgs(
-        String resourceGroupName,
-        String sapMonitorName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sapMonitorName = Objects.requireNonNull(sapMonitorName, "expected parameter 'sapMonitorName' to be non-null");
-    }
+    private GetSapMonitorArgs() {}
 
-    private GetSapMonitorArgs() {
-        this.resourceGroupName = null;
-        this.sapMonitorName = null;
+    private GetSapMonitorArgs(GetSapMonitorArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sapMonitorName = $.sapMonitorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSapMonitorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String sapMonitorName;
+        private GetSapMonitorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSapMonitorArgs();
         }
 
         public Builder(GetSapMonitorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sapMonitorName = defaults.sapMonitorName;
+            $ = new GetSapMonitorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sapMonitorName(String sapMonitorName) {
-            this.sapMonitorName = Objects.requireNonNull(sapMonitorName);
+            $.sapMonitorName = sapMonitorName;
             return this;
-        }        public GetSapMonitorArgs build() {
-            return new GetSapMonitorArgs(resourceGroupName, sapMonitorName);
+        }
+
+        public GetSapMonitorArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sapMonitorName = Objects.requireNonNull($.sapMonitorName, "expected parameter 'sapMonitorName' to be non-null");
+            return $;
         }
     }
+
 }

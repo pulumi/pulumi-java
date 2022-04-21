@@ -5,7 +5,6 @@ package com.pulumi.aws.guardduty.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DetectorDatasourcesS3LogsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enable", required=true)
-      private final Output<Boolean> enable;
+    private Output<Boolean> enable;
 
     public Output<Boolean> enable() {
         return this.enable;
     }
 
-    public DetectorDatasourcesS3LogsArgs(Output<Boolean> enable) {
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-    }
+    private DetectorDatasourcesS3LogsArgs() {}
 
-    private DetectorDatasourcesS3LogsArgs() {
-        this.enable = Codegen.empty();
+    private DetectorDatasourcesS3LogsArgs(DetectorDatasourcesS3LogsArgs $) {
+        this.enable = $.enable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorDatasourcesS3LogsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enable;
+        private DetectorDatasourcesS3LogsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorDatasourcesS3LogsArgs();
         }
 
         public Builder(DetectorDatasourcesS3LogsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
+            $ = new DetectorDatasourcesS3LogsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(Output<Boolean> enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder enable(Boolean enable) {
-            this.enable = Output.of(Objects.requireNonNull(enable));
-            return this;
-        }        public DetectorDatasourcesS3LogsArgs build() {
-            return new DetectorDatasourcesS3LogsArgs(enable);
+            return enable(Output.of(enable));
+        }
+
+        public DetectorDatasourcesS3LogsArgs build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            return $;
         }
     }
+
 }

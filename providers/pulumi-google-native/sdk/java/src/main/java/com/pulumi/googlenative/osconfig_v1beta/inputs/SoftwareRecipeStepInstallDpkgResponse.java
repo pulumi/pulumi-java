@@ -21,45 +21,45 @@ public final class SoftwareRecipeStepInstallDpkgResponse extends com.pulumi.reso
      * 
      */
     @Import(name="artifactId", required=true)
-      private final String artifactId;
+    private String artifactId;
 
     public String artifactId() {
         return this.artifactId;
     }
 
-    public SoftwareRecipeStepInstallDpkgResponse(String artifactId) {
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-    }
+    private SoftwareRecipeStepInstallDpkgResponse() {}
 
-    private SoftwareRecipeStepInstallDpkgResponse() {
-        this.artifactId = null;
+    private SoftwareRecipeStepInstallDpkgResponse(SoftwareRecipeStepInstallDpkgResponse $) {
+        this.artifactId = $.artifactId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeStepInstallDpkgResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String artifactId;
+        private SoftwareRecipeStepInstallDpkgResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeStepInstallDpkgResponse();
         }
 
         public Builder(SoftwareRecipeStepInstallDpkgResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactId = defaults.artifactId;
+            $ = new SoftwareRecipeStepInstallDpkgResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactId(String artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
-        }        public SoftwareRecipeStepInstallDpkgResponse build() {
-            return new SoftwareRecipeStepInstallDpkgResponse(artifactId);
+        }
+
+        public SoftwareRecipeStepInstallDpkgResponse build() {
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            return $;
         }
     }
+
 }

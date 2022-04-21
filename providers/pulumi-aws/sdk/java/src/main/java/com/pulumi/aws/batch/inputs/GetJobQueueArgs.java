@@ -20,7 +20,7 @@ public final class GetJobQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -31,55 +31,51 @@ public final class GetJobQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetJobQueueArgs(
-        String name,
-        @Nullable Map<String,String> tags) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tags = tags;
-    }
+    private GetJobQueueArgs() {}
 
-    private GetJobQueueArgs() {
-        this.name = null;
-        this.tags = Map.of();
+    private GetJobQueueArgs(GetJobQueueArgs $) {
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobQueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable Map<String,String> tags;
+        private GetJobQueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobQueueArgs();
         }
 
         public Builder(GetJobQueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetJobQueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetJobQueueArgs build() {
-            return new GetJobQueueArgs(name, tags);
+        }
+
+        public GetJobQueueArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

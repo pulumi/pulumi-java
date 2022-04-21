@@ -6,9 +6,9 @@ package com.pulumi.azurenative.desktopvirtualization;
 import com.pulumi.azurenative.desktopvirtualization.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class PrivateEndpointConnectionByHostPoolArgs extends com.pulumi.re
      * 
      */
     @Import(name="hostPoolName", required=true)
-      private final Output<String> hostPoolName;
+    private Output<String> hostPoolName;
 
     public Output<String> hostPoolName() {
         return this.hostPoolName;
@@ -32,10 +32,10 @@ public final class PrivateEndpointConnectionByHostPoolArgs extends com.pulumi.re
      * 
      */
     @Import(name="privateEndpointConnectionName")
-      private final @Nullable Output<String> privateEndpointConnectionName;
+    private @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> privateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
+    public Optional<Output<String>> privateEndpointConnectionName() {
+        return Optional.ofNullable(this.privateEndpointConnectionName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class PrivateEndpointConnectionByHostPoolArgs extends com.pulumi.re
      * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
-      private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+    private Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -54,89 +54,81 @@ public final class PrivateEndpointConnectionByHostPoolArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public PrivateEndpointConnectionByHostPoolArgs(
-        Output<String> hostPoolName,
-        @Nullable Output<String> privateEndpointConnectionName,
-        Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
-        Output<String> resourceGroupName) {
-        this.hostPoolName = Objects.requireNonNull(hostPoolName, "expected parameter 'hostPoolName' to be non-null");
-        this.privateEndpointConnectionName = privateEndpointConnectionName;
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private PrivateEndpointConnectionByHostPoolArgs() {}
 
-    private PrivateEndpointConnectionByHostPoolArgs() {
-        this.hostPoolName = Codegen.empty();
-        this.privateEndpointConnectionName = Codegen.empty();
-        this.privateLinkServiceConnectionState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private PrivateEndpointConnectionByHostPoolArgs(PrivateEndpointConnectionByHostPoolArgs $) {
+        this.hostPoolName = $.hostPoolName;
+        this.privateEndpointConnectionName = $.privateEndpointConnectionName;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionByHostPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hostPoolName;
-        private @Nullable Output<String> privateEndpointConnectionName;
-        private Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
-        private Output<String> resourceGroupName;
+        private PrivateEndpointConnectionByHostPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionByHostPoolArgs();
         }
 
         public Builder(PrivateEndpointConnectionByHostPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostPoolName = defaults.hostPoolName;
-    	      this.privateEndpointConnectionName = defaults.privateEndpointConnectionName;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new PrivateEndpointConnectionByHostPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostPoolName(Output<String> hostPoolName) {
-            this.hostPoolName = Objects.requireNonNull(hostPoolName);
+            $.hostPoolName = hostPoolName;
             return this;
         }
+
         public Builder hostPoolName(String hostPoolName) {
-            this.hostPoolName = Output.of(Objects.requireNonNull(hostPoolName));
-            return this;
+            return hostPoolName(Output.of(hostPoolName));
         }
+
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = privateEndpointConnectionName;
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-        public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
-            return this;
+
+        public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
+
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
-            return this;
+            return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public PrivateEndpointConnectionByHostPoolArgs build() {
-            return new PrivateEndpointConnectionByHostPoolArgs(hostPoolName, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public PrivateEndpointConnectionByHostPoolArgs build() {
+            $.hostPoolName = Objects.requireNonNull($.hostPoolName, "expected parameter 'hostPoolName' to be non-null");
+            $.privateLinkServiceConnectionState = Objects.requireNonNull($.privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

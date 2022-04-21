@@ -15,78 +15,72 @@ public final class GetAutoscalingPolicyArgs extends com.pulumi.resources.InvokeA
     public static final GetAutoscalingPolicyArgs Empty = new GetAutoscalingPolicyArgs();
 
     @Import(name="autoscalingPolicyId", required=true)
-      private final String autoscalingPolicyId;
+    private String autoscalingPolicyId;
 
     public String autoscalingPolicyId() {
         return this.autoscalingPolicyId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAutoscalingPolicyArgs(
-        String autoscalingPolicyId,
-        String location,
-        @Nullable String project) {
-        this.autoscalingPolicyId = Objects.requireNonNull(autoscalingPolicyId, "expected parameter 'autoscalingPolicyId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetAutoscalingPolicyArgs() {}
 
-    private GetAutoscalingPolicyArgs() {
-        this.autoscalingPolicyId = null;
-        this.location = null;
-        this.project = null;
+    private GetAutoscalingPolicyArgs(GetAutoscalingPolicyArgs $) {
+        this.autoscalingPolicyId = $.autoscalingPolicyId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAutoscalingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoscalingPolicyId;
-        private String location;
-        private @Nullable String project;
+        private GetAutoscalingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAutoscalingPolicyArgs();
         }
 
         public Builder(GetAutoscalingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingPolicyId = defaults.autoscalingPolicyId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetAutoscalingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingPolicyId(String autoscalingPolicyId) {
-            this.autoscalingPolicyId = Objects.requireNonNull(autoscalingPolicyId);
+            $.autoscalingPolicyId = autoscalingPolicyId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAutoscalingPolicyArgs build() {
-            return new GetAutoscalingPolicyArgs(autoscalingPolicyId, location, project);
+        }
+
+        public GetAutoscalingPolicyArgs build() {
+            $.autoscalingPolicyId = Objects.requireNonNull($.autoscalingPolicyId, "expected parameter 'autoscalingPolicyId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

@@ -31,7 +31,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @Import(name="bigqueryImportKeys", required=true)
-      private final Map<String,String> bigqueryImportKeys;
+    private Map<String,String> bigqueryImportKeys;
 
     public Map<String,String> bigqueryImportKeys() {
         return this.bigqueryImportKeys;
@@ -42,7 +42,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @Import(name="boundingPolyConfig", required=true)
-      private final GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig;
+    private GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig;
 
     public GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig() {
         return this.boundingPolyConfig;
@@ -53,7 +53,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @Import(name="evaluationConfig", required=true)
-      private final GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig;
+    private GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig;
 
     public GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig() {
         return this.evaluationConfig;
@@ -64,7 +64,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @Import(name="evaluationJobAlertConfig", required=true)
-      private final GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig;
+    private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig;
 
     public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig() {
         return this.evaluationJobAlertConfig;
@@ -75,7 +75,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @Import(name="exampleCount", required=true)
-      private final Integer exampleCount;
+    private Integer exampleCount;
 
     public Integer exampleCount() {
         return this.exampleCount;
@@ -86,7 +86,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @Import(name="exampleSamplePercentage", required=true)
-      private final Double exampleSamplePercentage;
+    private Double exampleSamplePercentage;
 
     public Double exampleSamplePercentage() {
         return this.exampleSamplePercentage;
@@ -97,7 +97,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @Import(name="humanAnnotationConfig", required=true)
-      private final GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig;
+    private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig;
 
     public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig() {
         return this.humanAnnotationConfig;
@@ -108,7 +108,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @Import(name="imageClassificationConfig", required=true)
-      private final GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig;
+    private GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig;
 
     public GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig() {
         return this.imageClassificationConfig;
@@ -119,7 +119,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @Import(name="inputConfig", required=true)
-      private final GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig;
+    private GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig;
 
     public GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig() {
         return this.inputConfig;
@@ -130,127 +130,108 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @Import(name="textClassificationConfig", required=true)
-      private final GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig;
+    private GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig;
 
     public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig() {
         return this.textClassificationConfig;
     }
 
-    public GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse(
-        Map<String,String> bigqueryImportKeys,
-        GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig,
-        GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig,
-        GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig,
-        Integer exampleCount,
-        Double exampleSamplePercentage,
-        GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig,
-        GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig,
-        GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig,
-        GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig) {
-        this.bigqueryImportKeys = Objects.requireNonNull(bigqueryImportKeys, "expected parameter 'bigqueryImportKeys' to be non-null");
-        this.boundingPolyConfig = Objects.requireNonNull(boundingPolyConfig, "expected parameter 'boundingPolyConfig' to be non-null");
-        this.evaluationConfig = Objects.requireNonNull(evaluationConfig, "expected parameter 'evaluationConfig' to be non-null");
-        this.evaluationJobAlertConfig = Objects.requireNonNull(evaluationJobAlertConfig, "expected parameter 'evaluationJobAlertConfig' to be non-null");
-        this.exampleCount = Objects.requireNonNull(exampleCount, "expected parameter 'exampleCount' to be non-null");
-        this.exampleSamplePercentage = Objects.requireNonNull(exampleSamplePercentage, "expected parameter 'exampleSamplePercentage' to be non-null");
-        this.humanAnnotationConfig = Objects.requireNonNull(humanAnnotationConfig, "expected parameter 'humanAnnotationConfig' to be non-null");
-        this.imageClassificationConfig = Objects.requireNonNull(imageClassificationConfig, "expected parameter 'imageClassificationConfig' to be non-null");
-        this.inputConfig = Objects.requireNonNull(inputConfig, "expected parameter 'inputConfig' to be non-null");
-        this.textClassificationConfig = Objects.requireNonNull(textClassificationConfig, "expected parameter 'textClassificationConfig' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse() {
-        this.bigqueryImportKeys = Map.of();
-        this.boundingPolyConfig = null;
-        this.evaluationConfig = null;
-        this.evaluationJobAlertConfig = null;
-        this.exampleCount = null;
-        this.exampleSamplePercentage = null;
-        this.humanAnnotationConfig = null;
-        this.imageClassificationConfig = null;
-        this.inputConfig = null;
-        this.textClassificationConfig = null;
+    private GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse(GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse $) {
+        this.bigqueryImportKeys = $.bigqueryImportKeys;
+        this.boundingPolyConfig = $.boundingPolyConfig;
+        this.evaluationConfig = $.evaluationConfig;
+        this.evaluationJobAlertConfig = $.evaluationJobAlertConfig;
+        this.exampleCount = $.exampleCount;
+        this.exampleSamplePercentage = $.exampleSamplePercentage;
+        this.humanAnnotationConfig = $.humanAnnotationConfig;
+        this.imageClassificationConfig = $.imageClassificationConfig;
+        this.inputConfig = $.inputConfig;
+        this.textClassificationConfig = $.textClassificationConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> bigqueryImportKeys;
-        private GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig;
-        private GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig;
-        private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig;
-        private Integer exampleCount;
-        private Double exampleSamplePercentage;
-        private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig;
-        private GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig;
-        private GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig;
-        private GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig;
+        private GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryImportKeys = defaults.bigqueryImportKeys;
-    	      this.boundingPolyConfig = defaults.boundingPolyConfig;
-    	      this.evaluationConfig = defaults.evaluationConfig;
-    	      this.evaluationJobAlertConfig = defaults.evaluationJobAlertConfig;
-    	      this.exampleCount = defaults.exampleCount;
-    	      this.exampleSamplePercentage = defaults.exampleSamplePercentage;
-    	      this.humanAnnotationConfig = defaults.humanAnnotationConfig;
-    	      this.imageClassificationConfig = defaults.imageClassificationConfig;
-    	      this.inputConfig = defaults.inputConfig;
-    	      this.textClassificationConfig = defaults.textClassificationConfig;
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryImportKeys(Map<String,String> bigqueryImportKeys) {
-            this.bigqueryImportKeys = Objects.requireNonNull(bigqueryImportKeys);
+            $.bigqueryImportKeys = bigqueryImportKeys;
             return this;
         }
+
         public Builder boundingPolyConfig(GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig) {
-            this.boundingPolyConfig = Objects.requireNonNull(boundingPolyConfig);
+            $.boundingPolyConfig = boundingPolyConfig;
             return this;
         }
+
         public Builder evaluationConfig(GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig) {
-            this.evaluationConfig = Objects.requireNonNull(evaluationConfig);
+            $.evaluationConfig = evaluationConfig;
             return this;
         }
+
         public Builder evaluationJobAlertConfig(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig) {
-            this.evaluationJobAlertConfig = Objects.requireNonNull(evaluationJobAlertConfig);
+            $.evaluationJobAlertConfig = evaluationJobAlertConfig;
             return this;
         }
+
         public Builder exampleCount(Integer exampleCount) {
-            this.exampleCount = Objects.requireNonNull(exampleCount);
+            $.exampleCount = exampleCount;
             return this;
         }
+
         public Builder exampleSamplePercentage(Double exampleSamplePercentage) {
-            this.exampleSamplePercentage = Objects.requireNonNull(exampleSamplePercentage);
+            $.exampleSamplePercentage = exampleSamplePercentage;
             return this;
         }
+
         public Builder humanAnnotationConfig(GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig) {
-            this.humanAnnotationConfig = Objects.requireNonNull(humanAnnotationConfig);
+            $.humanAnnotationConfig = humanAnnotationConfig;
             return this;
         }
+
         public Builder imageClassificationConfig(GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig) {
-            this.imageClassificationConfig = Objects.requireNonNull(imageClassificationConfig);
+            $.imageClassificationConfig = imageClassificationConfig;
             return this;
         }
+
         public Builder inputConfig(GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig) {
-            this.inputConfig = Objects.requireNonNull(inputConfig);
+            $.inputConfig = inputConfig;
             return this;
         }
+
         public Builder textClassificationConfig(GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig) {
-            this.textClassificationConfig = Objects.requireNonNull(textClassificationConfig);
+            $.textClassificationConfig = textClassificationConfig;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse build() {
-            return new GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse(bigqueryImportKeys, boundingPolyConfig, evaluationConfig, evaluationJobAlertConfig, exampleCount, exampleSamplePercentage, humanAnnotationConfig, imageClassificationConfig, inputConfig, textClassificationConfig);
+        }
+
+        public GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse build() {
+            $.bigqueryImportKeys = Objects.requireNonNull($.bigqueryImportKeys, "expected parameter 'bigqueryImportKeys' to be non-null");
+            $.boundingPolyConfig = Objects.requireNonNull($.boundingPolyConfig, "expected parameter 'boundingPolyConfig' to be non-null");
+            $.evaluationConfig = Objects.requireNonNull($.evaluationConfig, "expected parameter 'evaluationConfig' to be non-null");
+            $.evaluationJobAlertConfig = Objects.requireNonNull($.evaluationJobAlertConfig, "expected parameter 'evaluationJobAlertConfig' to be non-null");
+            $.exampleCount = Objects.requireNonNull($.exampleCount, "expected parameter 'exampleCount' to be non-null");
+            $.exampleSamplePercentage = Objects.requireNonNull($.exampleSamplePercentage, "expected parameter 'exampleSamplePercentage' to be non-null");
+            $.humanAnnotationConfig = Objects.requireNonNull($.humanAnnotationConfig, "expected parameter 'humanAnnotationConfig' to be non-null");
+            $.imageClassificationConfig = Objects.requireNonNull($.imageClassificationConfig, "expected parameter 'imageClassificationConfig' to be non-null");
+            $.inputConfig = Objects.requireNonNull($.inputConfig, "expected parameter 'inputConfig' to be non-null");
+            $.textClassificationConfig = Objects.requireNonNull($.textClassificationConfig, "expected parameter 'textClassificationConfig' to be non-null");
+            return $;
         }
     }
+
 }

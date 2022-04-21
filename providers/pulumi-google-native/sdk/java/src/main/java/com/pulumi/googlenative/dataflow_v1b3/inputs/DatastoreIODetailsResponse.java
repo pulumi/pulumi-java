@@ -21,7 +21,7 @@ public final class DatastoreIODetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
@@ -32,55 +32,52 @@ public final class DatastoreIODetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public DatastoreIODetailsResponse(
-        String namespace,
-        String project) {
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private DatastoreIODetailsResponse() {}
 
-    private DatastoreIODetailsResponse() {
-        this.namespace = null;
-        this.project = null;
+    private DatastoreIODetailsResponse(DatastoreIODetailsResponse $) {
+        this.namespace = $.namespace;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreIODetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespace;
-        private String project;
+        private DatastoreIODetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreIODetailsResponse();
         }
 
         public Builder(DatastoreIODetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespace = defaults.namespace;
-    	      this.project = defaults.project;
+            $ = new DatastoreIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public DatastoreIODetailsResponse build() {
-            return new DatastoreIODetailsResponse(namespace, project);
+        }
+
+        public DatastoreIODetailsResponse build() {
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

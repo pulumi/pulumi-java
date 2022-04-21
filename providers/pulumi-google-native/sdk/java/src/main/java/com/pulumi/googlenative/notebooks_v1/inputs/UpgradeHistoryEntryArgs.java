@@ -5,11 +5,11 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.notebooks_v1.enums.UpgradeHistoryEntryAction;
 import com.pulumi.googlenative.notebooks_v1.enums.UpgradeHistoryEntryState;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<UpgradeHistoryEntryAction> action;
+    private @Nullable Output<UpgradeHistoryEntryAction> action;
 
-    public Output<UpgradeHistoryEntryAction> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<UpgradeHistoryEntryAction>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="containerImage")
-      private final @Nullable Output<String> containerImage;
+    private @Nullable Output<String> containerImage;
 
-    public Output<String> containerImage() {
-        return this.containerImage == null ? Codegen.empty() : this.containerImage;
+    public Optional<Output<String>> containerImage() {
+        return Optional.ofNullable(this.containerImage);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="framework")
-      private final @Nullable Output<String> framework;
+    private @Nullable Output<String> framework;
 
-    public Output<String> framework() {
-        return this.framework == null ? Codegen.empty() : this.framework;
+    public Optional<Output<String>> framework() {
+        return Optional.ofNullable(this.framework);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="snapshot")
-      private final @Nullable Output<String> snapshot;
+    private @Nullable Output<String> snapshot;
 
-    public Output<String> snapshot() {
-        return this.snapshot == null ? Codegen.empty() : this.snapshot;
+    public Optional<Output<String>> snapshot() {
+        return Optional.ofNullable(this.snapshot);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<UpgradeHistoryEntryState> state;
+    private @Nullable Output<UpgradeHistoryEntryState> state;
 
-    public Output<UpgradeHistoryEntryState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<UpgradeHistoryEntryState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="targetImage")
-      private final @Nullable Output<String> targetImage;
+    private @Nullable Output<String> targetImage;
 
-    public Output<String> targetImage() {
-        return this.targetImage == null ? Codegen.empty() : this.targetImage;
+    public Optional<Output<String>> targetImage() {
+        return Optional.ofNullable(this.targetImage);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="targetVersion")
-      private final @Nullable Output<String> targetVersion;
+    private @Nullable Output<String> targetVersion;
 
-    public Output<String> targetVersion() {
-        return this.targetVersion == null ? Codegen.empty() : this.targetVersion;
+    public Optional<Output<String>> targetVersion() {
+        return Optional.ofNullable(this.targetVersion);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -125,167 +125,138 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vmImage")
-      private final @Nullable Output<String> vmImage;
+    private @Nullable Output<String> vmImage;
 
-    public Output<String> vmImage() {
-        return this.vmImage == null ? Codegen.empty() : this.vmImage;
+    public Optional<Output<String>> vmImage() {
+        return Optional.ofNullable(this.vmImage);
     }
 
-    public UpgradeHistoryEntryArgs(
-        @Nullable Output<UpgradeHistoryEntryAction> action,
-        @Nullable Output<String> containerImage,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> framework,
-        @Nullable Output<String> snapshot,
-        @Nullable Output<UpgradeHistoryEntryState> state,
-        @Nullable Output<String> targetImage,
-        @Nullable Output<String> targetVersion,
-        @Nullable Output<String> version,
-        @Nullable Output<String> vmImage) {
-        this.action = action;
-        this.containerImage = containerImage;
-        this.createTime = createTime;
-        this.framework = framework;
-        this.snapshot = snapshot;
-        this.state = state;
-        this.targetImage = targetImage;
-        this.targetVersion = targetVersion;
-        this.version = version;
-        this.vmImage = vmImage;
-    }
+    private UpgradeHistoryEntryArgs() {}
 
-    private UpgradeHistoryEntryArgs() {
-        this.action = Codegen.empty();
-        this.containerImage = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.framework = Codegen.empty();
-        this.snapshot = Codegen.empty();
-        this.state = Codegen.empty();
-        this.targetImage = Codegen.empty();
-        this.targetVersion = Codegen.empty();
-        this.version = Codegen.empty();
-        this.vmImage = Codegen.empty();
+    private UpgradeHistoryEntryArgs(UpgradeHistoryEntryArgs $) {
+        this.action = $.action;
+        this.containerImage = $.containerImage;
+        this.createTime = $.createTime;
+        this.framework = $.framework;
+        this.snapshot = $.snapshot;
+        this.state = $.state;
+        this.targetImage = $.targetImage;
+        this.targetVersion = $.targetVersion;
+        this.version = $.version;
+        this.vmImage = $.vmImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradeHistoryEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<UpgradeHistoryEntryAction> action;
-        private @Nullable Output<String> containerImage;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> framework;
-        private @Nullable Output<String> snapshot;
-        private @Nullable Output<UpgradeHistoryEntryState> state;
-        private @Nullable Output<String> targetImage;
-        private @Nullable Output<String> targetVersion;
-        private @Nullable Output<String> version;
-        private @Nullable Output<String> vmImage;
+        private UpgradeHistoryEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradeHistoryEntryArgs();
         }
 
         public Builder(UpgradeHistoryEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.containerImage = defaults.containerImage;
-    	      this.createTime = defaults.createTime;
-    	      this.framework = defaults.framework;
-    	      this.snapshot = defaults.snapshot;
-    	      this.state = defaults.state;
-    	      this.targetImage = defaults.targetImage;
-    	      this.targetVersion = defaults.targetVersion;
-    	      this.version = defaults.version;
-    	      this.vmImage = defaults.vmImage;
+            $ = new UpgradeHistoryEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<UpgradeHistoryEntryAction> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable UpgradeHistoryEntryAction action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(UpgradeHistoryEntryAction action) {
+            return action(Output.of(action));
         }
+
         public Builder containerImage(@Nullable Output<String> containerImage) {
-            this.containerImage = containerImage;
+            $.containerImage = containerImage;
             return this;
         }
-        public Builder containerImage(@Nullable String containerImage) {
-            this.containerImage = Codegen.ofNullable(containerImage);
-            return this;
+
+        public Builder containerImage(String containerImage) {
+            return containerImage(Output.of(containerImage));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder framework(@Nullable Output<String> framework) {
-            this.framework = framework;
+            $.framework = framework;
             return this;
         }
-        public Builder framework(@Nullable String framework) {
-            this.framework = Codegen.ofNullable(framework);
-            return this;
+
+        public Builder framework(String framework) {
+            return framework(Output.of(framework));
         }
+
         public Builder snapshot(@Nullable Output<String> snapshot) {
-            this.snapshot = snapshot;
+            $.snapshot = snapshot;
             return this;
         }
-        public Builder snapshot(@Nullable String snapshot) {
-            this.snapshot = Codegen.ofNullable(snapshot);
-            return this;
+
+        public Builder snapshot(String snapshot) {
+            return snapshot(Output.of(snapshot));
         }
+
         public Builder state(@Nullable Output<UpgradeHistoryEntryState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable UpgradeHistoryEntryState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(UpgradeHistoryEntryState state) {
+            return state(Output.of(state));
         }
+
         public Builder targetImage(@Nullable Output<String> targetImage) {
-            this.targetImage = targetImage;
+            $.targetImage = targetImage;
             return this;
         }
-        public Builder targetImage(@Nullable String targetImage) {
-            this.targetImage = Codegen.ofNullable(targetImage);
-            return this;
+
+        public Builder targetImage(String targetImage) {
+            return targetImage(Output.of(targetImage));
         }
+
         public Builder targetVersion(@Nullable Output<String> targetVersion) {
-            this.targetVersion = targetVersion;
+            $.targetVersion = targetVersion;
             return this;
         }
-        public Builder targetVersion(@Nullable String targetVersion) {
-            this.targetVersion = Codegen.ofNullable(targetVersion);
-            return this;
+
+        public Builder targetVersion(String targetVersion) {
+            return targetVersion(Output.of(targetVersion));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder vmImage(@Nullable Output<String> vmImage) {
-            this.vmImage = vmImage;
+            $.vmImage = vmImage;
             return this;
         }
-        public Builder vmImage(@Nullable String vmImage) {
-            this.vmImage = Codegen.ofNullable(vmImage);
-            return this;
-        }        public UpgradeHistoryEntryArgs build() {
-            return new UpgradeHistoryEntryArgs(action, containerImage, createTime, framework, snapshot, state, targetImage, targetVersion, version, vmImage);
+
+        public Builder vmImage(String vmImage) {
+            return vmImage(Output.of(vmImage));
+        }
+
+        public UpgradeHistoryEntryArgs build() {
+            return $;
         }
     }
+
 }

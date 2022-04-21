@@ -5,10 +5,10 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DisallowedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskTypes")
-      private final @Nullable Output<List<String>> diskTypes;
+    private @Nullable Output<List<String>> diskTypes;
 
-    public Output<List<String>> diskTypes() {
-        return this.diskTypes == null ? Codegen.empty() : this.diskTypes;
+    public Optional<Output<List<String>>> diskTypes() {
+        return Optional.ofNullable(this.diskTypes);
     }
 
-    public DisallowedArgs(@Nullable Output<List<String>> diskTypes) {
-        this.diskTypes = diskTypes;
-    }
+    private DisallowedArgs() {}
 
-    private DisallowedArgs() {
-        this.diskTypes = Codegen.empty();
+    private DisallowedArgs(DisallowedArgs $) {
+        this.diskTypes = $.diskTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DisallowedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> diskTypes;
+        private DisallowedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DisallowedArgs();
         }
 
         public Builder(DisallowedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskTypes = defaults.diskTypes;
+            $ = new DisallowedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskTypes(@Nullable Output<List<String>> diskTypes) {
-            this.diskTypes = diskTypes;
+            $.diskTypes = diskTypes;
             return this;
         }
-        public Builder diskTypes(@Nullable List<String> diskTypes) {
-            this.diskTypes = Codegen.ofNullable(diskTypes);
-            return this;
+
+        public Builder diskTypes(List<String> diskTypes) {
+            return diskTypes(Output.of(diskTypes));
         }
+
         public Builder diskTypes(String... diskTypes) {
             return diskTypes(List.of(diskTypes));
-        }        public DisallowedArgs build() {
-            return new DisallowedArgs(diskTypes);
+        }
+
+        public DisallowedArgs build() {
+            return $;
         }
     }
+
 }

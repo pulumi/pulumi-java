@@ -5,10 +5,10 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeEnumTypeArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TagTemplateFieldTypeArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enumType")
-      private final @Nullable Output<TagTemplateFieldTypeEnumTypeArgs> enumType;
+    private @Nullable Output<TagTemplateFieldTypeEnumTypeArgs> enumType;
 
-    public Output<TagTemplateFieldTypeEnumTypeArgs> enumType() {
-        return this.enumType == null ? Codegen.empty() : this.enumType;
+    public Optional<Output<TagTemplateFieldTypeEnumTypeArgs>> enumType() {
+        return Optional.ofNullable(this.enumType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class TagTemplateFieldTypeArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="primitiveType")
-      private final @Nullable Output<String> primitiveType;
+    private @Nullable Output<String> primitiveType;
 
-    public Output<String> primitiveType() {
-        return this.primitiveType == null ? Codegen.empty() : this.primitiveType;
+    public Optional<Output<String>> primitiveType() {
+        return Optional.ofNullable(this.primitiveType);
     }
 
-    public TagTemplateFieldTypeArgs(
-        @Nullable Output<TagTemplateFieldTypeEnumTypeArgs> enumType,
-        @Nullable Output<String> primitiveType) {
-        this.enumType = enumType;
-        this.primitiveType = primitiveType;
-    }
+    private TagTemplateFieldTypeArgs() {}
 
-    private TagTemplateFieldTypeArgs() {
-        this.enumType = Codegen.empty();
-        this.primitiveType = Codegen.empty();
+    private TagTemplateFieldTypeArgs(TagTemplateFieldTypeArgs $) {
+        this.enumType = $.enumType;
+        this.primitiveType = $.primitiveType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTemplateFieldTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TagTemplateFieldTypeEnumTypeArgs> enumType;
-        private @Nullable Output<String> primitiveType;
+        private TagTemplateFieldTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTemplateFieldTypeArgs();
         }
 
         public Builder(TagTemplateFieldTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enumType = defaults.enumType;
-    	      this.primitiveType = defaults.primitiveType;
+            $ = new TagTemplateFieldTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enumType(@Nullable Output<TagTemplateFieldTypeEnumTypeArgs> enumType) {
-            this.enumType = enumType;
+            $.enumType = enumType;
             return this;
         }
-        public Builder enumType(@Nullable TagTemplateFieldTypeEnumTypeArgs enumType) {
-            this.enumType = Codegen.ofNullable(enumType);
-            return this;
+
+        public Builder enumType(TagTemplateFieldTypeEnumTypeArgs enumType) {
+            return enumType(Output.of(enumType));
         }
+
         public Builder primitiveType(@Nullable Output<String> primitiveType) {
-            this.primitiveType = primitiveType;
+            $.primitiveType = primitiveType;
             return this;
         }
-        public Builder primitiveType(@Nullable String primitiveType) {
-            this.primitiveType = Codegen.ofNullable(primitiveType);
-            return this;
-        }        public TagTemplateFieldTypeArgs build() {
-            return new TagTemplateFieldTypeArgs(enumType, primitiveType);
+
+        public Builder primitiveType(String primitiveType) {
+            return primitiveType(Output.of(primitiveType));
+        }
+
+        public TagTemplateFieldTypeArgs build() {
+            return $;
         }
     }
+
 }

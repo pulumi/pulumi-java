@@ -21,45 +21,45 @@ public final class WarmStoreConfigurationPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="dataRetention", required=true)
-      private final String dataRetention;
+    private String dataRetention;
 
     public String dataRetention() {
         return this.dataRetention;
     }
 
-    public WarmStoreConfigurationPropertiesResponse(String dataRetention) {
-        this.dataRetention = Objects.requireNonNull(dataRetention, "expected parameter 'dataRetention' to be non-null");
-    }
+    private WarmStoreConfigurationPropertiesResponse() {}
 
-    private WarmStoreConfigurationPropertiesResponse() {
-        this.dataRetention = null;
+    private WarmStoreConfigurationPropertiesResponse(WarmStoreConfigurationPropertiesResponse $) {
+        this.dataRetention = $.dataRetention;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WarmStoreConfigurationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataRetention;
+        private WarmStoreConfigurationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WarmStoreConfigurationPropertiesResponse();
         }
 
         public Builder(WarmStoreConfigurationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataRetention = defaults.dataRetention;
+            $ = new WarmStoreConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataRetention(String dataRetention) {
-            this.dataRetention = Objects.requireNonNull(dataRetention);
+            $.dataRetention = dataRetention;
             return this;
-        }        public WarmStoreConfigurationPropertiesResponse build() {
-            return new WarmStoreConfigurationPropertiesResponse(dataRetention);
+        }
+
+        public WarmStoreConfigurationPropertiesResponse build() {
+            $.dataRetention = Objects.requireNonNull($.dataRetention, "expected parameter 'dataRetention' to be non-null");
+            return $;
         }
     }
+
 }

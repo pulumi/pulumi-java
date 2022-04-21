@@ -5,10 +5,10 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -32,10 +32,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="groupsClaim")
-      private final @Nullable Output<String> groupsClaim;
+    private @Nullable Output<String> groupsClaim;
 
-    public Output<String> groupsClaim() {
-        return this.groupsClaim == null ? Codegen.empty() : this.groupsClaim;
+    public Optional<Output<String>> groupsClaim() {
+        return Optional.ofNullable(this.groupsClaim);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="groupsPrefix")
-      private final @Nullable Output<String> groupsPrefix;
+    private @Nullable Output<String> groupsPrefix;
 
-    public Output<String> groupsPrefix() {
-        return this.groupsPrefix == null ? Codegen.empty() : this.groupsPrefix;
+    public Optional<Output<String>> groupsPrefix() {
+        return Optional.ofNullable(this.groupsPrefix);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="identityProviderConfigName", required=true)
-      private final Output<String> identityProviderConfigName;
+    private Output<String> identityProviderConfigName;
 
     public Output<String> identityProviderConfigName() {
         return this.identityProviderConfigName;
@@ -65,7 +65,7 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="issuerUrl", required=true)
-      private final Output<String> issuerUrl;
+    private Output<String> issuerUrl;
 
     public Output<String> issuerUrl() {
         return this.issuerUrl;
@@ -76,10 +76,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="requiredClaims")
-      private final @Nullable Output<Map<String,String>> requiredClaims;
+    private @Nullable Output<Map<String,String>> requiredClaims;
 
-    public Output<Map<String,String>> requiredClaims() {
-        return this.requiredClaims == null ? Codegen.empty() : this.requiredClaims;
+    public Optional<Output<Map<String,String>>> requiredClaims() {
+        return Optional.ofNullable(this.requiredClaims);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="usernameClaim")
-      private final @Nullable Output<String> usernameClaim;
+    private @Nullable Output<String> usernameClaim;
 
-    public Output<String> usernameClaim() {
-        return this.usernameClaim == null ? Codegen.empty() : this.usernameClaim;
+    public Optional<Output<String>> usernameClaim() {
+        return Optional.ofNullable(this.usernameClaim);
     }
 
     /**
@@ -98,141 +98,121 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="usernamePrefix")
-      private final @Nullable Output<String> usernamePrefix;
+    private @Nullable Output<String> usernamePrefix;
 
-    public Output<String> usernamePrefix() {
-        return this.usernamePrefix == null ? Codegen.empty() : this.usernamePrefix;
+    public Optional<Output<String>> usernamePrefix() {
+        return Optional.ofNullable(this.usernamePrefix);
     }
 
-    public IdentityProviderConfigOidcGetArgs(
-        Output<String> clientId,
-        @Nullable Output<String> groupsClaim,
-        @Nullable Output<String> groupsPrefix,
-        Output<String> identityProviderConfigName,
-        Output<String> issuerUrl,
-        @Nullable Output<Map<String,String>> requiredClaims,
-        @Nullable Output<String> usernameClaim,
-        @Nullable Output<String> usernamePrefix) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.groupsClaim = groupsClaim;
-        this.groupsPrefix = groupsPrefix;
-        this.identityProviderConfigName = Objects.requireNonNull(identityProviderConfigName, "expected parameter 'identityProviderConfigName' to be non-null");
-        this.issuerUrl = Objects.requireNonNull(issuerUrl, "expected parameter 'issuerUrl' to be non-null");
-        this.requiredClaims = requiredClaims;
-        this.usernameClaim = usernameClaim;
-        this.usernamePrefix = usernamePrefix;
-    }
+    private IdentityProviderConfigOidcGetArgs() {}
 
-    private IdentityProviderConfigOidcGetArgs() {
-        this.clientId = Codegen.empty();
-        this.groupsClaim = Codegen.empty();
-        this.groupsPrefix = Codegen.empty();
-        this.identityProviderConfigName = Codegen.empty();
-        this.issuerUrl = Codegen.empty();
-        this.requiredClaims = Codegen.empty();
-        this.usernameClaim = Codegen.empty();
-        this.usernamePrefix = Codegen.empty();
+    private IdentityProviderConfigOidcGetArgs(IdentityProviderConfigOidcGetArgs $) {
+        this.clientId = $.clientId;
+        this.groupsClaim = $.groupsClaim;
+        this.groupsPrefix = $.groupsPrefix;
+        this.identityProviderConfigName = $.identityProviderConfigName;
+        this.issuerUrl = $.issuerUrl;
+        this.requiredClaims = $.requiredClaims;
+        this.usernameClaim = $.usernameClaim;
+        this.usernamePrefix = $.usernamePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityProviderConfigOidcGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientId;
-        private @Nullable Output<String> groupsClaim;
-        private @Nullable Output<String> groupsPrefix;
-        private Output<String> identityProviderConfigName;
-        private Output<String> issuerUrl;
-        private @Nullable Output<Map<String,String>> requiredClaims;
-        private @Nullable Output<String> usernameClaim;
-        private @Nullable Output<String> usernamePrefix;
+        private IdentityProviderConfigOidcGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityProviderConfigOidcGetArgs();
         }
 
         public Builder(IdentityProviderConfigOidcGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.groupsClaim = defaults.groupsClaim;
-    	      this.groupsPrefix = defaults.groupsPrefix;
-    	      this.identityProviderConfigName = defaults.identityProviderConfigName;
-    	      this.issuerUrl = defaults.issuerUrl;
-    	      this.requiredClaims = defaults.requiredClaims;
-    	      this.usernameClaim = defaults.usernameClaim;
-    	      this.usernamePrefix = defaults.usernamePrefix;
+            $ = new IdentityProviderConfigOidcGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder groupsClaim(@Nullable Output<String> groupsClaim) {
-            this.groupsClaim = groupsClaim;
+            $.groupsClaim = groupsClaim;
             return this;
         }
-        public Builder groupsClaim(@Nullable String groupsClaim) {
-            this.groupsClaim = Codegen.ofNullable(groupsClaim);
-            return this;
+
+        public Builder groupsClaim(String groupsClaim) {
+            return groupsClaim(Output.of(groupsClaim));
         }
+
         public Builder groupsPrefix(@Nullable Output<String> groupsPrefix) {
-            this.groupsPrefix = groupsPrefix;
+            $.groupsPrefix = groupsPrefix;
             return this;
         }
-        public Builder groupsPrefix(@Nullable String groupsPrefix) {
-            this.groupsPrefix = Codegen.ofNullable(groupsPrefix);
-            return this;
+
+        public Builder groupsPrefix(String groupsPrefix) {
+            return groupsPrefix(Output.of(groupsPrefix));
         }
+
         public Builder identityProviderConfigName(Output<String> identityProviderConfigName) {
-            this.identityProviderConfigName = Objects.requireNonNull(identityProviderConfigName);
+            $.identityProviderConfigName = identityProviderConfigName;
             return this;
         }
+
         public Builder identityProviderConfigName(String identityProviderConfigName) {
-            this.identityProviderConfigName = Output.of(Objects.requireNonNull(identityProviderConfigName));
-            return this;
+            return identityProviderConfigName(Output.of(identityProviderConfigName));
         }
+
         public Builder issuerUrl(Output<String> issuerUrl) {
-            this.issuerUrl = Objects.requireNonNull(issuerUrl);
+            $.issuerUrl = issuerUrl;
             return this;
         }
+
         public Builder issuerUrl(String issuerUrl) {
-            this.issuerUrl = Output.of(Objects.requireNonNull(issuerUrl));
-            return this;
+            return issuerUrl(Output.of(issuerUrl));
         }
+
         public Builder requiredClaims(@Nullable Output<Map<String,String>> requiredClaims) {
-            this.requiredClaims = requiredClaims;
+            $.requiredClaims = requiredClaims;
             return this;
         }
-        public Builder requiredClaims(@Nullable Map<String,String> requiredClaims) {
-            this.requiredClaims = Codegen.ofNullable(requiredClaims);
-            return this;
+
+        public Builder requiredClaims(Map<String,String> requiredClaims) {
+            return requiredClaims(Output.of(requiredClaims));
         }
+
         public Builder usernameClaim(@Nullable Output<String> usernameClaim) {
-            this.usernameClaim = usernameClaim;
+            $.usernameClaim = usernameClaim;
             return this;
         }
-        public Builder usernameClaim(@Nullable String usernameClaim) {
-            this.usernameClaim = Codegen.ofNullable(usernameClaim);
-            return this;
+
+        public Builder usernameClaim(String usernameClaim) {
+            return usernameClaim(Output.of(usernameClaim));
         }
+
         public Builder usernamePrefix(@Nullable Output<String> usernamePrefix) {
-            this.usernamePrefix = usernamePrefix;
+            $.usernamePrefix = usernamePrefix;
             return this;
         }
-        public Builder usernamePrefix(@Nullable String usernamePrefix) {
-            this.usernamePrefix = Codegen.ofNullable(usernamePrefix);
-            return this;
-        }        public IdentityProviderConfigOidcGetArgs build() {
-            return new IdentityProviderConfigOidcGetArgs(clientId, groupsClaim, groupsPrefix, identityProviderConfigName, issuerUrl, requiredClaims, usernameClaim, usernamePrefix);
+
+        public Builder usernamePrefix(String usernamePrefix) {
+            return usernamePrefix(Output.of(usernamePrefix));
+        }
+
+        public IdentityProviderConfigOidcGetArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.identityProviderConfigName = Objects.requireNonNull($.identityProviderConfigName, "expected parameter 'identityProviderConfigName' to be non-null");
+            $.issuerUrl = Objects.requireNonNull($.issuerUrl, "expected parameter 'issuerUrl' to be non-null");
+            return $;
         }
     }
+
 }

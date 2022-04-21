@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class JavaScriptFunctionBindingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<String> script;
+    private @Nullable Output<String> script;
 
-    public Output<String> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<String>> script() {
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -36,63 +37,59 @@ public final class JavaScriptFunctionBindingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public JavaScriptFunctionBindingArgs(
-        @Nullable Output<String> script,
-        Output<String> type) {
-        this.script = script;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private JavaScriptFunctionBindingArgs() {}
 
-    private JavaScriptFunctionBindingArgs() {
-        this.script = Codegen.empty();
-        this.type = Codegen.empty();
+    private JavaScriptFunctionBindingArgs(JavaScriptFunctionBindingArgs $) {
+        this.script = $.script;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JavaScriptFunctionBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> script;
-        private Output<String> type;
+        private JavaScriptFunctionBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JavaScriptFunctionBindingArgs();
         }
 
         public Builder(JavaScriptFunctionBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.script = defaults.script;
-    	      this.type = defaults.type;
+            $ = new JavaScriptFunctionBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder script(@Nullable Output<String> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable String script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
+
+        public Builder script(String script) {
+            return script(Output.of(script));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JavaScriptFunctionBindingArgs build() {
-            return new JavaScriptFunctionBindingArgs(script, type);
+            return type(Output.of(type));
+        }
+
+        public JavaScriptFunctionBindingArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

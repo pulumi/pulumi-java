@@ -28,7 +28,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="accelerators", required=true)
-      private final List<AcceleratorConfigResponse> accelerators;
+    private List<AcceleratorConfigResponse> accelerators;
 
     public List<AcceleratorConfigResponse> accelerators() {
         return this.accelerators;
@@ -39,7 +39,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="diskConfig", required=true)
-      private final DiskConfigResponse diskConfig;
+    private DiskConfigResponse diskConfig;
 
     public DiskConfigResponse diskConfig() {
         return this.diskConfig;
@@ -50,7 +50,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="imageUri", required=true)
-      private final String imageUri;
+    private String imageUri;
 
     public String imageUri() {
         return this.imageUri;
@@ -61,7 +61,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="instanceNames", required=true)
-      private final List<String> instanceNames;
+    private List<String> instanceNames;
 
     public List<String> instanceNames() {
         return this.instanceNames;
@@ -72,7 +72,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="instanceReferences", required=true)
-      private final List<InstanceReferenceResponse> instanceReferences;
+    private List<InstanceReferenceResponse> instanceReferences;
 
     public List<InstanceReferenceResponse> instanceReferences() {
         return this.instanceReferences;
@@ -83,7 +83,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="isPreemptible", required=true)
-      private final Boolean isPreemptible;
+    private Boolean isPreemptible;
 
     public Boolean isPreemptible() {
         return this.isPreemptible;
@@ -94,7 +94,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="machineTypeUri", required=true)
-      private final String machineTypeUri;
+    private String machineTypeUri;
 
     public String machineTypeUri() {
         return this.machineTypeUri;
@@ -105,7 +105,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="managedGroupConfig", required=true)
-      private final ManagedGroupConfigResponse managedGroupConfig;
+    private ManagedGroupConfigResponse managedGroupConfig;
 
     public ManagedGroupConfigResponse managedGroupConfig() {
         return this.managedGroupConfig;
@@ -116,7 +116,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="minCpuPlatform", required=true)
-      private final String minCpuPlatform;
+    private String minCpuPlatform;
 
     public String minCpuPlatform() {
         return this.minCpuPlatform;
@@ -127,7 +127,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="numInstances", required=true)
-      private final Integer numInstances;
+    private Integer numInstances;
 
     public Integer numInstances() {
         return this.numInstances;
@@ -138,145 +138,127 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="preemptibility", required=true)
-      private final String preemptibility;
+    private String preemptibility;
 
     public String preemptibility() {
         return this.preemptibility;
     }
 
-    public InstanceGroupConfigResponse(
-        List<AcceleratorConfigResponse> accelerators,
-        DiskConfigResponse diskConfig,
-        String imageUri,
-        List<String> instanceNames,
-        List<InstanceReferenceResponse> instanceReferences,
-        Boolean isPreemptible,
-        String machineTypeUri,
-        ManagedGroupConfigResponse managedGroupConfig,
-        String minCpuPlatform,
-        Integer numInstances,
-        String preemptibility) {
-        this.accelerators = Objects.requireNonNull(accelerators, "expected parameter 'accelerators' to be non-null");
-        this.diskConfig = Objects.requireNonNull(diskConfig, "expected parameter 'diskConfig' to be non-null");
-        this.imageUri = Objects.requireNonNull(imageUri, "expected parameter 'imageUri' to be non-null");
-        this.instanceNames = Objects.requireNonNull(instanceNames, "expected parameter 'instanceNames' to be non-null");
-        this.instanceReferences = Objects.requireNonNull(instanceReferences, "expected parameter 'instanceReferences' to be non-null");
-        this.isPreemptible = Objects.requireNonNull(isPreemptible, "expected parameter 'isPreemptible' to be non-null");
-        this.machineTypeUri = Objects.requireNonNull(machineTypeUri, "expected parameter 'machineTypeUri' to be non-null");
-        this.managedGroupConfig = Objects.requireNonNull(managedGroupConfig, "expected parameter 'managedGroupConfig' to be non-null");
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
-        this.numInstances = Objects.requireNonNull(numInstances, "expected parameter 'numInstances' to be non-null");
-        this.preemptibility = Objects.requireNonNull(preemptibility, "expected parameter 'preemptibility' to be non-null");
-    }
+    private InstanceGroupConfigResponse() {}
 
-    private InstanceGroupConfigResponse() {
-        this.accelerators = List.of();
-        this.diskConfig = null;
-        this.imageUri = null;
-        this.instanceNames = List.of();
-        this.instanceReferences = List.of();
-        this.isPreemptible = null;
-        this.machineTypeUri = null;
-        this.managedGroupConfig = null;
-        this.minCpuPlatform = null;
-        this.numInstances = null;
-        this.preemptibility = null;
+    private InstanceGroupConfigResponse(InstanceGroupConfigResponse $) {
+        this.accelerators = $.accelerators;
+        this.diskConfig = $.diskConfig;
+        this.imageUri = $.imageUri;
+        this.instanceNames = $.instanceNames;
+        this.instanceReferences = $.instanceReferences;
+        this.isPreemptible = $.isPreemptible;
+        this.machineTypeUri = $.machineTypeUri;
+        this.managedGroupConfig = $.managedGroupConfig;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.numInstances = $.numInstances;
+        this.preemptibility = $.preemptibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AcceleratorConfigResponse> accelerators;
-        private DiskConfigResponse diskConfig;
-        private String imageUri;
-        private List<String> instanceNames;
-        private List<InstanceReferenceResponse> instanceReferences;
-        private Boolean isPreemptible;
-        private String machineTypeUri;
-        private ManagedGroupConfigResponse managedGroupConfig;
-        private String minCpuPlatform;
-        private Integer numInstances;
-        private String preemptibility;
+        private InstanceGroupConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupConfigResponse();
         }
 
         public Builder(InstanceGroupConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accelerators = defaults.accelerators;
-    	      this.diskConfig = defaults.diskConfig;
-    	      this.imageUri = defaults.imageUri;
-    	      this.instanceNames = defaults.instanceNames;
-    	      this.instanceReferences = defaults.instanceReferences;
-    	      this.isPreemptible = defaults.isPreemptible;
-    	      this.machineTypeUri = defaults.machineTypeUri;
-    	      this.managedGroupConfig = defaults.managedGroupConfig;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.numInstances = defaults.numInstances;
-    	      this.preemptibility = defaults.preemptibility;
+            $ = new InstanceGroupConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accelerators(List<AcceleratorConfigResponse> accelerators) {
-            this.accelerators = Objects.requireNonNull(accelerators);
+            $.accelerators = accelerators;
             return this;
         }
+
         public Builder accelerators(AcceleratorConfigResponse... accelerators) {
             return accelerators(List.of(accelerators));
         }
+
         public Builder diskConfig(DiskConfigResponse diskConfig) {
-            this.diskConfig = Objects.requireNonNull(diskConfig);
+            $.diskConfig = diskConfig;
             return this;
         }
+
         public Builder imageUri(String imageUri) {
-            this.imageUri = Objects.requireNonNull(imageUri);
+            $.imageUri = imageUri;
             return this;
         }
+
         public Builder instanceNames(List<String> instanceNames) {
-            this.instanceNames = Objects.requireNonNull(instanceNames);
+            $.instanceNames = instanceNames;
             return this;
         }
+
         public Builder instanceNames(String... instanceNames) {
             return instanceNames(List.of(instanceNames));
         }
+
         public Builder instanceReferences(List<InstanceReferenceResponse> instanceReferences) {
-            this.instanceReferences = Objects.requireNonNull(instanceReferences);
+            $.instanceReferences = instanceReferences;
             return this;
         }
+
         public Builder instanceReferences(InstanceReferenceResponse... instanceReferences) {
             return instanceReferences(List.of(instanceReferences));
         }
+
         public Builder isPreemptible(Boolean isPreemptible) {
-            this.isPreemptible = Objects.requireNonNull(isPreemptible);
+            $.isPreemptible = isPreemptible;
             return this;
         }
+
         public Builder machineTypeUri(String machineTypeUri) {
-            this.machineTypeUri = Objects.requireNonNull(machineTypeUri);
+            $.machineTypeUri = machineTypeUri;
             return this;
         }
+
         public Builder managedGroupConfig(ManagedGroupConfigResponse managedGroupConfig) {
-            this.managedGroupConfig = Objects.requireNonNull(managedGroupConfig);
+            $.managedGroupConfig = managedGroupConfig;
             return this;
         }
+
         public Builder minCpuPlatform(String minCpuPlatform) {
-            this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
+
         public Builder numInstances(Integer numInstances) {
-            this.numInstances = Objects.requireNonNull(numInstances);
+            $.numInstances = numInstances;
             return this;
         }
+
         public Builder preemptibility(String preemptibility) {
-            this.preemptibility = Objects.requireNonNull(preemptibility);
+            $.preemptibility = preemptibility;
             return this;
-        }        public InstanceGroupConfigResponse build() {
-            return new InstanceGroupConfigResponse(accelerators, diskConfig, imageUri, instanceNames, instanceReferences, isPreemptible, machineTypeUri, managedGroupConfig, minCpuPlatform, numInstances, preemptibility);
+        }
+
+        public InstanceGroupConfigResponse build() {
+            $.accelerators = Objects.requireNonNull($.accelerators, "expected parameter 'accelerators' to be non-null");
+            $.diskConfig = Objects.requireNonNull($.diskConfig, "expected parameter 'diskConfig' to be non-null");
+            $.imageUri = Objects.requireNonNull($.imageUri, "expected parameter 'imageUri' to be non-null");
+            $.instanceNames = Objects.requireNonNull($.instanceNames, "expected parameter 'instanceNames' to be non-null");
+            $.instanceReferences = Objects.requireNonNull($.instanceReferences, "expected parameter 'instanceReferences' to be non-null");
+            $.isPreemptible = Objects.requireNonNull($.isPreemptible, "expected parameter 'isPreemptible' to be non-null");
+            $.machineTypeUri = Objects.requireNonNull($.machineTypeUri, "expected parameter 'machineTypeUri' to be non-null");
+            $.managedGroupConfig = Objects.requireNonNull($.managedGroupConfig, "expected parameter 'managedGroupConfig' to be non-null");
+            $.minCpuPlatform = Objects.requireNonNull($.minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
+            $.numInstances = Objects.requireNonNull($.numInstances, "expected parameter 'numInstances' to be non-null");
+            $.preemptibility = Objects.requireNonNull($.preemptibility, "expected parameter 'preemptibility' to be non-null");
+            return $;
         }
     }
+
 }

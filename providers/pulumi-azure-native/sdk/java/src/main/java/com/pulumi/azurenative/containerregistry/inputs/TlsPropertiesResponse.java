@@ -22,7 +22,7 @@ public final class TlsPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="certificate", required=true)
-      private final TlsCertificatePropertiesResponse certificate;
+    private TlsCertificatePropertiesResponse certificate;
 
     public TlsCertificatePropertiesResponse certificate() {
         return this.certificate;
@@ -33,55 +33,52 @@ public final class TlsPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public TlsPropertiesResponse(
-        TlsCertificatePropertiesResponse certificate,
-        String status) {
-        this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private TlsPropertiesResponse() {}
 
-    private TlsPropertiesResponse() {
-        this.certificate = null;
-        this.status = null;
+    private TlsPropertiesResponse(TlsPropertiesResponse $) {
+        this.certificate = $.certificate;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TlsCertificatePropertiesResponse certificate;
-        private String status;
+        private TlsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsPropertiesResponse();
         }
 
         public Builder(TlsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.status = defaults.status;
+            $ = new TlsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(TlsCertificatePropertiesResponse certificate) {
-            this.certificate = Objects.requireNonNull(certificate);
+            $.certificate = certificate;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public TlsPropertiesResponse build() {
-            return new TlsPropertiesResponse(certificate, status);
+        }
+
+        public TlsPropertiesResponse build() {
+            $.certificate = Objects.requireNonNull($.certificate, "expected parameter 'certificate' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.apigateway.inputs;
 import com.pulumi.aws.apigateway.inputs.DocumentationPartLocationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DocumentationPartState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<DocumentationPartLocationGetArgs> location;
+    private @Nullable Output<DocumentationPartLocationGetArgs> location;
 
-    public Output<DocumentationPartLocationGetArgs> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<DocumentationPartLocationGetArgs>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DocumentationPartState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<String> properties;
+    private @Nullable Output<String> properties;
 
-    public Output<String> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class DocumentationPartState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="restApiId")
-      private final @Nullable Output<String> restApiId;
+    private @Nullable Output<String> restApiId;
 
-    public Output<String> restApiId() {
-        return this.restApiId == null ? Codegen.empty() : this.restApiId;
+    public Optional<Output<String>> restApiId() {
+        return Optional.ofNullable(this.restApiId);
     }
 
-    public DocumentationPartState(
-        @Nullable Output<DocumentationPartLocationGetArgs> location,
-        @Nullable Output<String> properties,
-        @Nullable Output<String> restApiId) {
-        this.location = location;
-        this.properties = properties;
-        this.restApiId = restApiId;
-    }
+    private DocumentationPartState() {}
 
-    private DocumentationPartState() {
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.restApiId = Codegen.empty();
+    private DocumentationPartState(DocumentationPartState $) {
+        this.location = $.location;
+        this.properties = $.properties;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentationPartState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DocumentationPartLocationGetArgs> location;
-        private @Nullable Output<String> properties;
-        private @Nullable Output<String> restApiId;
+        private DocumentationPartState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentationPartState();
         }
 
         public Builder(DocumentationPartState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.restApiId = defaults.restApiId;
+            $ = new DocumentationPartState(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<DocumentationPartLocationGetArgs> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable DocumentationPartLocationGetArgs location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(DocumentationPartLocationGetArgs location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(@Nullable Output<String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable String properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(String properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder restApiId(@Nullable Output<String> restApiId) {
-            this.restApiId = restApiId;
+            $.restApiId = restApiId;
             return this;
         }
-        public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Codegen.ofNullable(restApiId);
-            return this;
-        }        public DocumentationPartState build() {
-            return new DocumentationPartState(location, properties, restApiId);
+
+        public Builder restApiId(String restApiId) {
+            return restApiId(Output.of(restApiId));
+        }
+
+        public DocumentationPartState build() {
+            return $;
         }
     }
+
 }

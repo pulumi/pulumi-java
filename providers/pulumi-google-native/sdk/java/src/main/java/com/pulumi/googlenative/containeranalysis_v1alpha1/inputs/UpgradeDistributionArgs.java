@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class UpgradeDistributionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="classification")
-      private final @Nullable Output<String> classification;
+    private @Nullable Output<String> classification;
 
-    public Output<String> classification() {
-        return this.classification == null ? Codegen.empty() : this.classification;
+    public Optional<Output<String>> classification() {
+        return Optional.ofNullable(this.classification);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class UpgradeDistributionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="cpeUri")
-      private final @Nullable Output<String> cpeUri;
+    private @Nullable Output<String> cpeUri;
 
-    public Output<String> cpeUri() {
-        return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
+    public Optional<Output<String>> cpeUri() {
+        return Optional.ofNullable(this.cpeUri);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class UpgradeDistributionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="cve")
-      private final @Nullable Output<List<String>> cve;
+    private @Nullable Output<List<String>> cve;
 
-    public Output<List<String>> cve() {
-        return this.cve == null ? Codegen.empty() : this.cve;
+    public Optional<Output<List<String>>> cve() {
+        return Optional.ofNullable(this.cve);
     }
 
     /**
@@ -58,92 +58,82 @@ public final class UpgradeDistributionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="severity")
-      private final @Nullable Output<String> severity;
+    private @Nullable Output<String> severity;
 
-    public Output<String> severity() {
-        return this.severity == null ? Codegen.empty() : this.severity;
+    public Optional<Output<String>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
-    public UpgradeDistributionArgs(
-        @Nullable Output<String> classification,
-        @Nullable Output<String> cpeUri,
-        @Nullable Output<List<String>> cve,
-        @Nullable Output<String> severity) {
-        this.classification = classification;
-        this.cpeUri = cpeUri;
-        this.cve = cve;
-        this.severity = severity;
-    }
+    private UpgradeDistributionArgs() {}
 
-    private UpgradeDistributionArgs() {
-        this.classification = Codegen.empty();
-        this.cpeUri = Codegen.empty();
-        this.cve = Codegen.empty();
-        this.severity = Codegen.empty();
+    private UpgradeDistributionArgs(UpgradeDistributionArgs $) {
+        this.classification = $.classification;
+        this.cpeUri = $.cpeUri;
+        this.cve = $.cve;
+        this.severity = $.severity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradeDistributionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> classification;
-        private @Nullable Output<String> cpeUri;
-        private @Nullable Output<List<String>> cve;
-        private @Nullable Output<String> severity;
+        private UpgradeDistributionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradeDistributionArgs();
         }
 
         public Builder(UpgradeDistributionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classification = defaults.classification;
-    	      this.cpeUri = defaults.cpeUri;
-    	      this.cve = defaults.cve;
-    	      this.severity = defaults.severity;
+            $ = new UpgradeDistributionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classification(@Nullable Output<String> classification) {
-            this.classification = classification;
+            $.classification = classification;
             return this;
         }
-        public Builder classification(@Nullable String classification) {
-            this.classification = Codegen.ofNullable(classification);
-            return this;
+
+        public Builder classification(String classification) {
+            return classification(Output.of(classification));
         }
+
         public Builder cpeUri(@Nullable Output<String> cpeUri) {
-            this.cpeUri = cpeUri;
+            $.cpeUri = cpeUri;
             return this;
         }
-        public Builder cpeUri(@Nullable String cpeUri) {
-            this.cpeUri = Codegen.ofNullable(cpeUri);
-            return this;
+
+        public Builder cpeUri(String cpeUri) {
+            return cpeUri(Output.of(cpeUri));
         }
+
         public Builder cve(@Nullable Output<List<String>> cve) {
-            this.cve = cve;
+            $.cve = cve;
             return this;
         }
-        public Builder cve(@Nullable List<String> cve) {
-            this.cve = Codegen.ofNullable(cve);
-            return this;
+
+        public Builder cve(List<String> cve) {
+            return cve(Output.of(cve));
         }
+
         public Builder cve(String... cve) {
             return cve(List.of(cve));
         }
+
         public Builder severity(@Nullable Output<String> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
-        public Builder severity(@Nullable String severity) {
-            this.severity = Codegen.ofNullable(severity);
-            return this;
-        }        public UpgradeDistributionArgs build() {
-            return new UpgradeDistributionArgs(classification, cpeUri, cve, severity);
+
+        public Builder severity(String severity) {
+            return severity(Output.of(severity));
+        }
+
+        public UpgradeDistributionArgs build() {
+            return $;
         }
     }
+
 }

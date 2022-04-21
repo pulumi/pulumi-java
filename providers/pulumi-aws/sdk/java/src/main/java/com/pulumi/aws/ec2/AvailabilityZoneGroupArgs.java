@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AvailabilityZoneGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="groupName", required=true)
-      private final Output<String> groupName;
+    private Output<String> groupName;
 
     public Output<String> groupName() {
         return this.groupName;
@@ -30,63 +29,60 @@ public final class AvailabilityZoneGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="optInStatus", required=true)
-      private final Output<String> optInStatus;
+    private Output<String> optInStatus;
 
     public Output<String> optInStatus() {
         return this.optInStatus;
     }
 
-    public AvailabilityZoneGroupArgs(
-        Output<String> groupName,
-        Output<String> optInStatus) {
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.optInStatus = Objects.requireNonNull(optInStatus, "expected parameter 'optInStatus' to be non-null");
-    }
+    private AvailabilityZoneGroupArgs() {}
 
-    private AvailabilityZoneGroupArgs() {
-        this.groupName = Codegen.empty();
-        this.optInStatus = Codegen.empty();
+    private AvailabilityZoneGroupArgs(AvailabilityZoneGroupArgs $) {
+        this.groupName = $.groupName;
+        this.optInStatus = $.optInStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvailabilityZoneGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> groupName;
-        private Output<String> optInStatus;
+        private AvailabilityZoneGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvailabilityZoneGroupArgs();
         }
 
         public Builder(AvailabilityZoneGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupName = defaults.groupName;
-    	      this.optInStatus = defaults.optInStatus;
+            $ = new AvailabilityZoneGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupName(Output<String> groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Output.of(Objects.requireNonNull(groupName));
-            return this;
+            return groupName(Output.of(groupName));
         }
+
         public Builder optInStatus(Output<String> optInStatus) {
-            this.optInStatus = Objects.requireNonNull(optInStatus);
+            $.optInStatus = optInStatus;
             return this;
         }
+
         public Builder optInStatus(String optInStatus) {
-            this.optInStatus = Output.of(Objects.requireNonNull(optInStatus));
-            return this;
-        }        public AvailabilityZoneGroupArgs build() {
-            return new AvailabilityZoneGroupArgs(groupName, optInStatus);
+            return optInStatus(Output.of(optInStatus));
+        }
+
+        public AvailabilityZoneGroupArgs build() {
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.optInStatus = Objects.requireNonNull($.optInStatus, "expected parameter 'optInStatus' to be non-null");
+            return $;
         }
     }
+
 }

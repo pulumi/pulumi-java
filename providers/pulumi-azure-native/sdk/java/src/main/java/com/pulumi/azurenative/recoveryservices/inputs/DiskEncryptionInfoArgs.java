@@ -7,8 +7,8 @@ import com.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionKeyInfoArgs;
 import com.pulumi.azurenative.recoveryservices.inputs.KeyEncryptionKeyInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DiskEncryptionInfoArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="diskEncryptionKeyInfo")
-      private final @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
+    private @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
 
-    public Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo() {
-        return this.diskEncryptionKeyInfo == null ? Codegen.empty() : this.diskEncryptionKeyInfo;
+    public Optional<Output<DiskEncryptionKeyInfoArgs>> diskEncryptionKeyInfo() {
+        return Optional.ofNullable(this.diskEncryptionKeyInfo);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DiskEncryptionInfoArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyEncryptionKeyInfo")
-      private final @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
+    private @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
 
-    public Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo() {
-        return this.keyEncryptionKeyInfo == null ? Codegen.empty() : this.keyEncryptionKeyInfo;
+    public Optional<Output<KeyEncryptionKeyInfoArgs>> keyEncryptionKeyInfo() {
+        return Optional.ofNullable(this.keyEncryptionKeyInfo);
     }
 
-    public DiskEncryptionInfoArgs(
-        @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo,
-        @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo) {
-        this.diskEncryptionKeyInfo = diskEncryptionKeyInfo;
-        this.keyEncryptionKeyInfo = keyEncryptionKeyInfo;
-    }
+    private DiskEncryptionInfoArgs() {}
 
-    private DiskEncryptionInfoArgs() {
-        this.diskEncryptionKeyInfo = Codegen.empty();
-        this.keyEncryptionKeyInfo = Codegen.empty();
+    private DiskEncryptionInfoArgs(DiskEncryptionInfoArgs $) {
+        this.diskEncryptionKeyInfo = $.diskEncryptionKeyInfo;
+        this.keyEncryptionKeyInfo = $.keyEncryptionKeyInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
-        private @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
+        private DiskEncryptionInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionInfoArgs();
         }
 
         public Builder(DiskEncryptionInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionKeyInfo = defaults.diskEncryptionKeyInfo;
-    	      this.keyEncryptionKeyInfo = defaults.keyEncryptionKeyInfo;
+            $ = new DiskEncryptionInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionKeyInfo(@Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo) {
-            this.diskEncryptionKeyInfo = diskEncryptionKeyInfo;
+            $.diskEncryptionKeyInfo = diskEncryptionKeyInfo;
             return this;
         }
-        public Builder diskEncryptionKeyInfo(@Nullable DiskEncryptionKeyInfoArgs diskEncryptionKeyInfo) {
-            this.diskEncryptionKeyInfo = Codegen.ofNullable(diskEncryptionKeyInfo);
-            return this;
+
+        public Builder diskEncryptionKeyInfo(DiskEncryptionKeyInfoArgs diskEncryptionKeyInfo) {
+            return diskEncryptionKeyInfo(Output.of(diskEncryptionKeyInfo));
         }
+
         public Builder keyEncryptionKeyInfo(@Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo) {
-            this.keyEncryptionKeyInfo = keyEncryptionKeyInfo;
+            $.keyEncryptionKeyInfo = keyEncryptionKeyInfo;
             return this;
         }
-        public Builder keyEncryptionKeyInfo(@Nullable KeyEncryptionKeyInfoArgs keyEncryptionKeyInfo) {
-            this.keyEncryptionKeyInfo = Codegen.ofNullable(keyEncryptionKeyInfo);
-            return this;
-        }        public DiskEncryptionInfoArgs build() {
-            return new DiskEncryptionInfoArgs(diskEncryptionKeyInfo, keyEncryptionKeyInfo);
+
+        public Builder keyEncryptionKeyInfo(KeyEncryptionKeyInfoArgs keyEncryptionKeyInfo) {
+            return keyEncryptionKeyInfo(Output.of(keyEncryptionKeyInfo));
+        }
+
+        public DiskEncryptionInfoArgs build() {
+            return $;
         }
     }
+
 }

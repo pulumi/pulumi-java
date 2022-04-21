@@ -5,9 +5,9 @@ package com.pulumi.azurenative.consumption.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BudgetTimePeriodArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="endDate")
-      private final @Nullable Output<String> endDate;
+    private @Nullable Output<String> endDate;
 
-    public Output<String> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    public Optional<Output<String>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class BudgetTimePeriodArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="startDate", required=true)
-      private final Output<String> startDate;
+    private Output<String> startDate;
 
     public Output<String> startDate() {
         return this.startDate;
     }
 
-    public BudgetTimePeriodArgs(
-        @Nullable Output<String> endDate,
-        Output<String> startDate) {
-        this.endDate = endDate;
-        this.startDate = Objects.requireNonNull(startDate, "expected parameter 'startDate' to be non-null");
-    }
+    private BudgetTimePeriodArgs() {}
 
-    private BudgetTimePeriodArgs() {
-        this.endDate = Codegen.empty();
-        this.startDate = Codegen.empty();
+    private BudgetTimePeriodArgs(BudgetTimePeriodArgs $) {
+        this.endDate = $.endDate;
+        this.startDate = $.startDate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetTimePeriodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endDate;
-        private Output<String> startDate;
+        private BudgetTimePeriodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetTimePeriodArgs();
         }
 
         public Builder(BudgetTimePeriodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDate = defaults.endDate;
-    	      this.startDate = defaults.startDate;
+            $ = new BudgetTimePeriodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endDate(@Nullable Output<String> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable String endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        public Builder endDate(String endDate) {
+            return endDate(Output.of(endDate));
         }
+
         public Builder startDate(Output<String> startDate) {
-            this.startDate = Objects.requireNonNull(startDate);
+            $.startDate = startDate;
             return this;
         }
+
         public Builder startDate(String startDate) {
-            this.startDate = Output.of(Objects.requireNonNull(startDate));
-            return this;
-        }        public BudgetTimePeriodArgs build() {
-            return new BudgetTimePeriodArgs(endDate, startDate);
+            return startDate(Output.of(startDate));
+        }
+
+        public BudgetTimePeriodArgs build() {
+            $.startDate = Objects.requireNonNull($.startDate, "expected parameter 'startDate' to be non-null");
+            return $;
         }
     }
+
 }

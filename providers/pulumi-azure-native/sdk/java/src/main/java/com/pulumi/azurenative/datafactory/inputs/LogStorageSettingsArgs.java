@@ -6,9 +6,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enableReliableLogging")
-      private final @Nullable Output<Object> enableReliableLogging;
+    private @Nullable Output<Object> enableReliableLogging;
 
-    public Output<Object> enableReliableLogging() {
-        return this.enableReliableLogging == null ? Codegen.empty() : this.enableReliableLogging;
+    public Optional<Output<Object>> enableReliableLogging() {
+        return Optional.ofNullable(this.enableReliableLogging);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
@@ -47,10 +47,10 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Output<Object> logLevel;
+    private @Nullable Output<Object> logLevel;
 
-    public Output<Object> logLevel() {
-        return this.logLevel == null ? Codegen.empty() : this.logLevel;
+    public Optional<Output<Object>> logLevel() {
+        return Optional.ofNullable(this.logLevel);
     }
 
     /**
@@ -58,89 +58,79 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<Object> path;
+    private @Nullable Output<Object> path;
 
-    public Output<Object> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<Object>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public LogStorageSettingsArgs(
-        @Nullable Output<Object> enableReliableLogging,
-        Output<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Output<Object> logLevel,
-        @Nullable Output<Object> path) {
-        this.enableReliableLogging = enableReliableLogging;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.logLevel = logLevel;
-        this.path = path;
-    }
+    private LogStorageSettingsArgs() {}
 
-    private LogStorageSettingsArgs() {
-        this.enableReliableLogging = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.logLevel = Codegen.empty();
-        this.path = Codegen.empty();
+    private LogStorageSettingsArgs(LogStorageSettingsArgs $) {
+        this.enableReliableLogging = $.enableReliableLogging;
+        this.linkedServiceName = $.linkedServiceName;
+        this.logLevel = $.logLevel;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogStorageSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> enableReliableLogging;
-        private Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Output<Object> logLevel;
-        private @Nullable Output<Object> path;
+        private LogStorageSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogStorageSettingsArgs();
         }
 
         public Builder(LogStorageSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableReliableLogging = defaults.enableReliableLogging;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.logLevel = defaults.logLevel;
-    	      this.path = defaults.path;
+            $ = new LogStorageSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableReliableLogging(@Nullable Output<Object> enableReliableLogging) {
-            this.enableReliableLogging = enableReliableLogging;
+            $.enableReliableLogging = enableReliableLogging;
             return this;
         }
-        public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
-            this.enableReliableLogging = Codegen.ofNullable(enableReliableLogging);
-            return this;
+
+        public Builder enableReliableLogging(Object enableReliableLogging) {
+            return enableReliableLogging(Output.of(enableReliableLogging));
         }
+
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
-            return this;
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder logLevel(@Nullable Output<Object> logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
-        public Builder logLevel(@Nullable Object logLevel) {
-            this.logLevel = Codegen.ofNullable(logLevel);
-            return this;
+
+        public Builder logLevel(Object logLevel) {
+            return logLevel(Output.of(logLevel));
         }
+
         public Builder path(@Nullable Output<Object> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable Object path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public LogStorageSettingsArgs build() {
-            return new LogStorageSettingsArgs(enableReliableLogging, linkedServiceName, logLevel, path);
+
+        public Builder path(Object path) {
+            return path(Output.of(path));
+        }
+
+        public LogStorageSettingsArgs build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

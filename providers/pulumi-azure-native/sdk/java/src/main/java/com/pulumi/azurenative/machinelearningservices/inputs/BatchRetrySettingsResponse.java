@@ -24,10 +24,10 @@ public final class BatchRetrySettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maxRetries")
-      private final @Nullable Integer maxRetries;
+    private @Nullable Integer maxRetries;
 
     public Optional<Integer> maxRetries() {
-        return this.maxRetries == null ? Optional.empty() : Optional.ofNullable(this.maxRetries);
+        return Optional.ofNullable(this.maxRetries);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class BatchRetrySettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
-    public BatchRetrySettingsResponse(
-        @Nullable Integer maxRetries,
-        @Nullable String timeout) {
-        this.maxRetries = maxRetries;
-        this.timeout = timeout;
-    }
+    private BatchRetrySettingsResponse() {}
 
-    private BatchRetrySettingsResponse() {
-        this.maxRetries = null;
-        this.timeout = null;
+    private BatchRetrySettingsResponse(BatchRetrySettingsResponse $) {
+        this.maxRetries = $.maxRetries;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchRetrySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxRetries;
-        private @Nullable String timeout;
+        private BatchRetrySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchRetrySettingsResponse();
         }
 
         public Builder(BatchRetrySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRetries = defaults.maxRetries;
-    	      this.timeout = defaults.timeout;
+            $ = new BatchRetrySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = maxRetries;
+            $.maxRetries = maxRetries;
             return this;
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
-        }        public BatchRetrySettingsResponse build() {
-            return new BatchRetrySettingsResponse(maxRetries, timeout);
+        }
+
+        public BatchRetrySettingsResponse build() {
+            return $;
         }
     }
+
 }

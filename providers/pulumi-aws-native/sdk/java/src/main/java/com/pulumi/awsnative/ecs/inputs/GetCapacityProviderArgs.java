@@ -13,45 +13,45 @@ public final class GetCapacityProviderArgs extends com.pulumi.resources.InvokeAr
     public static final GetCapacityProviderArgs Empty = new GetCapacityProviderArgs();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetCapacityProviderArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetCapacityProviderArgs() {}
 
-    private GetCapacityProviderArgs() {
-        this.name = null;
+    private GetCapacityProviderArgs(GetCapacityProviderArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCapacityProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetCapacityProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCapacityProviderArgs();
         }
 
         public Builder(GetCapacityProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetCapacityProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetCapacityProviderArgs build() {
-            return new GetCapacityProviderArgs(name);
+        }
+
+        public GetCapacityProviderArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

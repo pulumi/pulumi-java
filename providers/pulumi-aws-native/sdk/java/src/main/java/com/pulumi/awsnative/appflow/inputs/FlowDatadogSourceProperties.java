@@ -13,45 +13,45 @@ public final class FlowDatadogSourceProperties extends com.pulumi.resources.Invo
     public static final FlowDatadogSourceProperties Empty = new FlowDatadogSourceProperties();
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowDatadogSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowDatadogSourceProperties() {}
 
-    private FlowDatadogSourceProperties() {
-        this.object = null;
+    private FlowDatadogSourceProperties(FlowDatadogSourceProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowDatadogSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String object;
+        private FlowDatadogSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowDatadogSourceProperties();
         }
 
         public Builder(FlowDatadogSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowDatadogSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowDatadogSourceProperties build() {
-            return new FlowDatadogSourceProperties(object);
+        }
+
+        public FlowDatadogSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class IssuingOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includeCaCertUrl", required=true)
-      private final Boolean includeCaCertUrl;
+    private Boolean includeCaCertUrl;
 
     public Boolean includeCaCertUrl() {
         return this.includeCaCertUrl;
@@ -32,55 +32,52 @@ public final class IssuingOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includeCrlAccessUrl", required=true)
-      private final Boolean includeCrlAccessUrl;
+    private Boolean includeCrlAccessUrl;
 
     public Boolean includeCrlAccessUrl() {
         return this.includeCrlAccessUrl;
     }
 
-    public IssuingOptionsResponse(
-        Boolean includeCaCertUrl,
-        Boolean includeCrlAccessUrl) {
-        this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl, "expected parameter 'includeCaCertUrl' to be non-null");
-        this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl, "expected parameter 'includeCrlAccessUrl' to be non-null");
-    }
+    private IssuingOptionsResponse() {}
 
-    private IssuingOptionsResponse() {
-        this.includeCaCertUrl = null;
-        this.includeCrlAccessUrl = null;
+    private IssuingOptionsResponse(IssuingOptionsResponse $) {
+        this.includeCaCertUrl = $.includeCaCertUrl;
+        this.includeCrlAccessUrl = $.includeCrlAccessUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IssuingOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean includeCaCertUrl;
-        private Boolean includeCrlAccessUrl;
+        private IssuingOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IssuingOptionsResponse();
         }
 
         public Builder(IssuingOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeCaCertUrl = defaults.includeCaCertUrl;
-    	      this.includeCrlAccessUrl = defaults.includeCrlAccessUrl;
+            $ = new IssuingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder includeCaCertUrl(Boolean includeCaCertUrl) {
-            this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl);
+            $.includeCaCertUrl = includeCaCertUrl;
             return this;
         }
+
         public Builder includeCrlAccessUrl(Boolean includeCrlAccessUrl) {
-            this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl);
+            $.includeCrlAccessUrl = includeCrlAccessUrl;
             return this;
-        }        public IssuingOptionsResponse build() {
-            return new IssuingOptionsResponse(includeCaCertUrl, includeCrlAccessUrl);
+        }
+
+        public IssuingOptionsResponse build() {
+            $.includeCaCertUrl = Objects.requireNonNull($.includeCaCertUrl, "expected parameter 'includeCaCertUrl' to be non-null");
+            $.includeCrlAccessUrl = Objects.requireNonNull($.includeCrlAccessUrl, "expected parameter 'includeCrlAccessUrl' to be non-null");
+            return $;
         }
     }
+
 }

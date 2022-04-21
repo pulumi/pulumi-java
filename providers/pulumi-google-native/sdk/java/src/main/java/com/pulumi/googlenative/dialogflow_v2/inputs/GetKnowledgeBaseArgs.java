@@ -15,78 +15,72 @@ public final class GetKnowledgeBaseArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetKnowledgeBaseArgs Empty = new GetKnowledgeBaseArgs();
 
     @Import(name="knowledgeBaseId", required=true)
-      private final String knowledgeBaseId;
+    private String knowledgeBaseId;
 
     public String knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetKnowledgeBaseArgs(
-        String knowledgeBaseId,
-        String location,
-        @Nullable String project) {
-        this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId, "expected parameter 'knowledgeBaseId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetKnowledgeBaseArgs() {}
 
-    private GetKnowledgeBaseArgs() {
-        this.knowledgeBaseId = null;
-        this.location = null;
-        this.project = null;
+    private GetKnowledgeBaseArgs(GetKnowledgeBaseArgs $) {
+        this.knowledgeBaseId = $.knowledgeBaseId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKnowledgeBaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String knowledgeBaseId;
-        private String location;
-        private @Nullable String project;
+        private GetKnowledgeBaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKnowledgeBaseArgs();
         }
 
         public Builder(GetKnowledgeBaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.knowledgeBaseId = defaults.knowledgeBaseId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetKnowledgeBaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder knowledgeBaseId(String knowledgeBaseId) {
-            this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
+            $.knowledgeBaseId = knowledgeBaseId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetKnowledgeBaseArgs build() {
-            return new GetKnowledgeBaseArgs(knowledgeBaseId, location, project);
+        }
+
+        public GetKnowledgeBaseArgs build() {
+            $.knowledgeBaseId = Objects.requireNonNull($.knowledgeBaseId, "expected parameter 'knowledgeBaseId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

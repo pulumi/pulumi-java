@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class Ipv6CircuitConnectionConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable Output<String> addressPrefix;
+    private @Nullable Output<String> addressPrefix;
 
-    public Output<String> addressPrefix() {
-        return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
+    public Optional<Output<String>> addressPrefix() {
+        return Optional.ofNullable(this.addressPrefix);
     }
 
-    public Ipv6CircuitConnectionConfigArgs(@Nullable Output<String> addressPrefix) {
-        this.addressPrefix = addressPrefix;
-    }
+    private Ipv6CircuitConnectionConfigArgs() {}
 
-    private Ipv6CircuitConnectionConfigArgs() {
-        this.addressPrefix = Codegen.empty();
+    private Ipv6CircuitConnectionConfigArgs(Ipv6CircuitConnectionConfigArgs $) {
+        this.addressPrefix = $.addressPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Ipv6CircuitConnectionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressPrefix;
+        private Ipv6CircuitConnectionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Ipv6CircuitConnectionConfigArgs();
         }
 
         public Builder(Ipv6CircuitConnectionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
+            $ = new Ipv6CircuitConnectionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
-        public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Codegen.ofNullable(addressPrefix);
-            return this;
-        }        public Ipv6CircuitConnectionConfigArgs build() {
-            return new Ipv6CircuitConnectionConfigArgs(addressPrefix);
+
+        public Builder addressPrefix(String addressPrefix) {
+            return addressPrefix(Output.of(addressPrefix));
+        }
+
+        public Ipv6CircuitConnectionConfigArgs build() {
+            return $;
         }
     }
+
 }

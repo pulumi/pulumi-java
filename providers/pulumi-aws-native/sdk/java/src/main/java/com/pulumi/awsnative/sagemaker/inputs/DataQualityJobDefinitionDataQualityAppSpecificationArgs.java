@@ -5,11 +5,11 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @Import(name="containerArguments")
-      private final @Nullable Output<List<String>> containerArguments;
+    private @Nullable Output<List<String>> containerArguments;
 
-    public Output<List<String>> containerArguments() {
-        return this.containerArguments == null ? Codegen.empty() : this.containerArguments;
+    public Optional<Output<List<String>>> containerArguments() {
+        return Optional.ofNullable(this.containerArguments);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @Import(name="containerEntrypoint")
-      private final @Nullable Output<List<String>> containerEntrypoint;
+    private @Nullable Output<List<String>> containerEntrypoint;
 
-    public Output<List<String>> containerEntrypoint() {
-        return this.containerEntrypoint == null ? Codegen.empty() : this.containerEntrypoint;
+    public Optional<Output<List<String>>> containerEntrypoint() {
+        return Optional.ofNullable(this.containerEntrypoint);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<Object> environment;
+    private @Nullable Output<Object> environment;
 
-    public Output<Object> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<Object>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @Import(name="imageUri", required=true)
-      private final Output<String> imageUri;
+    private Output<String> imageUri;
 
     public Output<String> imageUri() {
         return this.imageUri;
@@ -70,10 +70,10 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @Import(name="postAnalyticsProcessorSourceUri")
-      private final @Nullable Output<String> postAnalyticsProcessorSourceUri;
+    private @Nullable Output<String> postAnalyticsProcessorSourceUri;
 
-    public Output<String> postAnalyticsProcessorSourceUri() {
-        return this.postAnalyticsProcessorSourceUri == null ? Codegen.empty() : this.postAnalyticsProcessorSourceUri;
+    public Optional<Output<String>> postAnalyticsProcessorSourceUri() {
+        return Optional.ofNullable(this.postAnalyticsProcessorSourceUri);
     }
 
     /**
@@ -81,121 +81,107 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @Import(name="recordPreprocessorSourceUri")
-      private final @Nullable Output<String> recordPreprocessorSourceUri;
+    private @Nullable Output<String> recordPreprocessorSourceUri;
 
-    public Output<String> recordPreprocessorSourceUri() {
-        return this.recordPreprocessorSourceUri == null ? Codegen.empty() : this.recordPreprocessorSourceUri;
+    public Optional<Output<String>> recordPreprocessorSourceUri() {
+        return Optional.ofNullable(this.recordPreprocessorSourceUri);
     }
 
-    public DataQualityJobDefinitionDataQualityAppSpecificationArgs(
-        @Nullable Output<List<String>> containerArguments,
-        @Nullable Output<List<String>> containerEntrypoint,
-        @Nullable Output<Object> environment,
-        Output<String> imageUri,
-        @Nullable Output<String> postAnalyticsProcessorSourceUri,
-        @Nullable Output<String> recordPreprocessorSourceUri) {
-        this.containerArguments = containerArguments;
-        this.containerEntrypoint = containerEntrypoint;
-        this.environment = environment;
-        this.imageUri = Objects.requireNonNull(imageUri, "expected parameter 'imageUri' to be non-null");
-        this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
-        this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
-    }
+    private DataQualityJobDefinitionDataQualityAppSpecificationArgs() {}
 
-    private DataQualityJobDefinitionDataQualityAppSpecificationArgs() {
-        this.containerArguments = Codegen.empty();
-        this.containerEntrypoint = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.imageUri = Codegen.empty();
-        this.postAnalyticsProcessorSourceUri = Codegen.empty();
-        this.recordPreprocessorSourceUri = Codegen.empty();
+    private DataQualityJobDefinitionDataQualityAppSpecificationArgs(DataQualityJobDefinitionDataQualityAppSpecificationArgs $) {
+        this.containerArguments = $.containerArguments;
+        this.containerEntrypoint = $.containerEntrypoint;
+        this.environment = $.environment;
+        this.imageUri = $.imageUri;
+        this.postAnalyticsProcessorSourceUri = $.postAnalyticsProcessorSourceUri;
+        this.recordPreprocessorSourceUri = $.recordPreprocessorSourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataQualityJobDefinitionDataQualityAppSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> containerArguments;
-        private @Nullable Output<List<String>> containerEntrypoint;
-        private @Nullable Output<Object> environment;
-        private Output<String> imageUri;
-        private @Nullable Output<String> postAnalyticsProcessorSourceUri;
-        private @Nullable Output<String> recordPreprocessorSourceUri;
+        private DataQualityJobDefinitionDataQualityAppSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataQualityJobDefinitionDataQualityAppSpecificationArgs();
         }
 
         public Builder(DataQualityJobDefinitionDataQualityAppSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerArguments = defaults.containerArguments;
-    	      this.containerEntrypoint = defaults.containerEntrypoint;
-    	      this.environment = defaults.environment;
-    	      this.imageUri = defaults.imageUri;
-    	      this.postAnalyticsProcessorSourceUri = defaults.postAnalyticsProcessorSourceUri;
-    	      this.recordPreprocessorSourceUri = defaults.recordPreprocessorSourceUri;
+            $ = new DataQualityJobDefinitionDataQualityAppSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerArguments(@Nullable Output<List<String>> containerArguments) {
-            this.containerArguments = containerArguments;
+            $.containerArguments = containerArguments;
             return this;
         }
-        public Builder containerArguments(@Nullable List<String> containerArguments) {
-            this.containerArguments = Codegen.ofNullable(containerArguments);
-            return this;
+
+        public Builder containerArguments(List<String> containerArguments) {
+            return containerArguments(Output.of(containerArguments));
         }
+
         public Builder containerArguments(String... containerArguments) {
             return containerArguments(List.of(containerArguments));
         }
+
         public Builder containerEntrypoint(@Nullable Output<List<String>> containerEntrypoint) {
-            this.containerEntrypoint = containerEntrypoint;
+            $.containerEntrypoint = containerEntrypoint;
             return this;
         }
-        public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
-            this.containerEntrypoint = Codegen.ofNullable(containerEntrypoint);
-            return this;
+
+        public Builder containerEntrypoint(List<String> containerEntrypoint) {
+            return containerEntrypoint(Output.of(containerEntrypoint));
         }
+
         public Builder containerEntrypoint(String... containerEntrypoint) {
             return containerEntrypoint(List.of(containerEntrypoint));
         }
+
         public Builder environment(@Nullable Output<Object> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable Object environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(Object environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder imageUri(Output<String> imageUri) {
-            this.imageUri = Objects.requireNonNull(imageUri);
+            $.imageUri = imageUri;
             return this;
         }
+
         public Builder imageUri(String imageUri) {
-            this.imageUri = Output.of(Objects.requireNonNull(imageUri));
-            return this;
+            return imageUri(Output.of(imageUri));
         }
+
         public Builder postAnalyticsProcessorSourceUri(@Nullable Output<String> postAnalyticsProcessorSourceUri) {
-            this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
+            $.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
-        public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
-            this.postAnalyticsProcessorSourceUri = Codegen.ofNullable(postAnalyticsProcessorSourceUri);
-            return this;
+
+        public Builder postAnalyticsProcessorSourceUri(String postAnalyticsProcessorSourceUri) {
+            return postAnalyticsProcessorSourceUri(Output.of(postAnalyticsProcessorSourceUri));
         }
+
         public Builder recordPreprocessorSourceUri(@Nullable Output<String> recordPreprocessorSourceUri) {
-            this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
+            $.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }
-        public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
-            this.recordPreprocessorSourceUri = Codegen.ofNullable(recordPreprocessorSourceUri);
-            return this;
-        }        public DataQualityJobDefinitionDataQualityAppSpecificationArgs build() {
-            return new DataQualityJobDefinitionDataQualityAppSpecificationArgs(containerArguments, containerEntrypoint, environment, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);
+
+        public Builder recordPreprocessorSourceUri(String recordPreprocessorSourceUri) {
+            return recordPreprocessorSourceUri(Output.of(recordPreprocessorSourceUri));
+        }
+
+        public DataQualityJobDefinitionDataQualityAppSpecificationArgs build() {
+            $.imageUri = Objects.requireNonNull($.imageUri, "expected parameter 'imageUri' to be non-null");
+            return $;
         }
     }
+
 }

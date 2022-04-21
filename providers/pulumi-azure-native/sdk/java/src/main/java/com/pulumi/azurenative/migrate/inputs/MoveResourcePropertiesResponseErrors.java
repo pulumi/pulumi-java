@@ -23,45 +23,44 @@ public final class MoveResourcePropertiesResponseErrors extends com.pulumi.resou
      * 
      */
     @Import(name="properties")
-      private final @Nullable MoveResourceErrorBodyResponse properties;
+    private @Nullable MoveResourceErrorBodyResponse properties;
 
     public Optional<MoveResourceErrorBodyResponse> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
-    public MoveResourcePropertiesResponseErrors(@Nullable MoveResourceErrorBodyResponse properties) {
-        this.properties = properties;
-    }
+    private MoveResourcePropertiesResponseErrors() {}
 
-    private MoveResourcePropertiesResponseErrors() {
-        this.properties = null;
+    private MoveResourcePropertiesResponseErrors(MoveResourcePropertiesResponseErrors $) {
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveResourcePropertiesResponseErrors defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MoveResourceErrorBodyResponse properties;
+        private MoveResourcePropertiesResponseErrors $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveResourcePropertiesResponseErrors();
         }
 
         public Builder(MoveResourcePropertiesResponseErrors defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
+            $ = new MoveResourcePropertiesResponseErrors(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable MoveResourceErrorBodyResponse properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
-        }        public MoveResourcePropertiesResponseErrors build() {
-            return new MoveResourcePropertiesResponseErrors(properties);
+        }
+
+        public MoveResourcePropertiesResponseErrors build() {
+            return $;
         }
     }
+
 }

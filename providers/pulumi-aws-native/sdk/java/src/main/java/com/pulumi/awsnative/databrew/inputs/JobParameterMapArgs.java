@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.databrew.inputs;
 
-import java.util.Objects;
+
 
 
 public final class JobParameterMapArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final JobParameterMapArgs Empty = new JobParameterMapArgs();
 
-    public JobParameterMapArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(JobParameterMapArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private JobParameterMapArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(JobParameterMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new JobParameterMapArgs();
         }
         public JobParameterMapArgs build() {
-            return new JobParameterMapArgs();
+            return $;
         }
     }
+
 }

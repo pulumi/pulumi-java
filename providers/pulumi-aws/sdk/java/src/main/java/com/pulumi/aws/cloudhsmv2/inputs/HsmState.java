@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudhsmv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class HsmState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class HsmState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable Output<String> clusterId;
+    private @Nullable Output<String> clusterId;
 
-    public Output<String> clusterId() {
-        return this.clusterId == null ? Codegen.empty() : this.clusterId;
+    public Optional<Output<String>> clusterId() {
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class HsmState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hsmEniId")
-      private final @Nullable Output<String> hsmEniId;
+    private @Nullable Output<String> hsmEniId;
 
-    public Output<String> hsmEniId() {
-        return this.hsmEniId == null ? Codegen.empty() : this.hsmEniId;
+    public Optional<Output<String>> hsmEniId() {
+        return Optional.ofNullable(this.hsmEniId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class HsmState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hsmId")
-      private final @Nullable Output<String> hsmId;
+    private @Nullable Output<String> hsmId;
 
-    public Output<String> hsmId() {
-        return this.hsmId == null ? Codegen.empty() : this.hsmId;
+    public Optional<Output<String>> hsmId() {
+        return Optional.ofNullable(this.hsmId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class HsmState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hsmState")
-      private final @Nullable Output<String> hsmState;
+    private @Nullable Output<String> hsmState;
 
-    public Output<String> hsmState() {
-        return this.hsmState == null ? Codegen.empty() : this.hsmState;
+    public Optional<Output<String>> hsmState() {
+        return Optional.ofNullable(this.hsmState);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class HsmState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -86,128 +86,108 @@ public final class HsmState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public HsmState(
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> clusterId,
-        @Nullable Output<String> hsmEniId,
-        @Nullable Output<String> hsmId,
-        @Nullable Output<String> hsmState,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> subnetId) {
-        this.availabilityZone = availabilityZone;
-        this.clusterId = clusterId;
-        this.hsmEniId = hsmEniId;
-        this.hsmId = hsmId;
-        this.hsmState = hsmState;
-        this.ipAddress = ipAddress;
-        this.subnetId = subnetId;
-    }
+    private HsmState() {}
 
-    private HsmState() {
-        this.availabilityZone = Codegen.empty();
-        this.clusterId = Codegen.empty();
-        this.hsmEniId = Codegen.empty();
-        this.hsmId = Codegen.empty();
-        this.hsmState = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private HsmState(HsmState $) {
+        this.availabilityZone = $.availabilityZone;
+        this.clusterId = $.clusterId;
+        this.hsmEniId = $.hsmEniId;
+        this.hsmId = $.hsmId;
+        this.hsmState = $.hsmState;
+        this.ipAddress = $.ipAddress;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HsmState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> clusterId;
-        private @Nullable Output<String> hsmEniId;
-        private @Nullable Output<String> hsmId;
-        private @Nullable Output<String> hsmState;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> subnetId;
+        private HsmState $;
 
         public Builder() {
-    	      // Empty
+            $ = new HsmState();
         }
 
         public Builder(HsmState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.clusterId = defaults.clusterId;
-    	      this.hsmEniId = defaults.hsmEniId;
-    	      this.hsmId = defaults.hsmId;
-    	      this.hsmState = defaults.hsmState;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.subnetId = defaults.subnetId;
+            $ = new HsmState(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder clusterId(@Nullable Output<String> clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
-        public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Codegen.ofNullable(clusterId);
-            return this;
+
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder hsmEniId(@Nullable Output<String> hsmEniId) {
-            this.hsmEniId = hsmEniId;
+            $.hsmEniId = hsmEniId;
             return this;
         }
-        public Builder hsmEniId(@Nullable String hsmEniId) {
-            this.hsmEniId = Codegen.ofNullable(hsmEniId);
-            return this;
+
+        public Builder hsmEniId(String hsmEniId) {
+            return hsmEniId(Output.of(hsmEniId));
         }
+
         public Builder hsmId(@Nullable Output<String> hsmId) {
-            this.hsmId = hsmId;
+            $.hsmId = hsmId;
             return this;
         }
-        public Builder hsmId(@Nullable String hsmId) {
-            this.hsmId = Codegen.ofNullable(hsmId);
-            return this;
+
+        public Builder hsmId(String hsmId) {
+            return hsmId(Output.of(hsmId));
         }
+
         public Builder hsmState(@Nullable Output<String> hsmState) {
-            this.hsmState = hsmState;
+            $.hsmState = hsmState;
             return this;
         }
-        public Builder hsmState(@Nullable String hsmState) {
-            this.hsmState = Codegen.ofNullable(hsmState);
-            return this;
+
+        public Builder hsmState(String hsmState) {
+            return hsmState(Output.of(hsmState));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
-        }        public HsmState build() {
-            return new HsmState(availabilityZone, clusterId, hsmEniId, hsmId, hsmState, ipAddress, subnetId);
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        public HsmState build() {
+            return $;
         }
     }
+
 }

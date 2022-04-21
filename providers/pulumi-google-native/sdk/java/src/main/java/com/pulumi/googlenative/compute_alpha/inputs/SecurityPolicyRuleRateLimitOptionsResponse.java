@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="banDurationSec", required=true)
-      private final Integer banDurationSec;
+    private Integer banDurationSec;
 
     public Integer banDurationSec() {
         return this.banDurationSec;
@@ -31,7 +31,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="banThreshold", required=true)
-      private final SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold;
+    private SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold;
 
     public SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold() {
         return this.banThreshold;
@@ -42,7 +42,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="conformAction", required=true)
-      private final String conformAction;
+    private String conformAction;
 
     public String conformAction() {
         return this.conformAction;
@@ -53,7 +53,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="enforceOnKey", required=true)
-      private final String enforceOnKey;
+    private String enforceOnKey;
 
     public String enforceOnKey() {
         return this.enforceOnKey;
@@ -64,7 +64,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="enforceOnKeyName", required=true)
-      private final String enforceOnKeyName;
+    private String enforceOnKeyName;
 
     public String enforceOnKeyName() {
         return this.enforceOnKeyName;
@@ -75,7 +75,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="exceedAction", required=true)
-      private final String exceedAction;
+    private String exceedAction;
 
     public String exceedAction() {
         return this.exceedAction;
@@ -86,7 +86,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="exceedRedirectOptions", required=true)
-      private final SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions;
+    private SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions;
 
     public SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions() {
         return this.exceedRedirectOptions;
@@ -97,109 +97,94 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="rateLimitThreshold", required=true)
-      private final SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold;
+    private SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold;
 
     public SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold() {
         return this.rateLimitThreshold;
     }
 
-    public SecurityPolicyRuleRateLimitOptionsResponse(
-        Integer banDurationSec,
-        SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold,
-        String conformAction,
-        String enforceOnKey,
-        String enforceOnKeyName,
-        String exceedAction,
-        SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions,
-        SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold) {
-        this.banDurationSec = Objects.requireNonNull(banDurationSec, "expected parameter 'banDurationSec' to be non-null");
-        this.banThreshold = Objects.requireNonNull(banThreshold, "expected parameter 'banThreshold' to be non-null");
-        this.conformAction = Objects.requireNonNull(conformAction, "expected parameter 'conformAction' to be non-null");
-        this.enforceOnKey = Objects.requireNonNull(enforceOnKey, "expected parameter 'enforceOnKey' to be non-null");
-        this.enforceOnKeyName = Objects.requireNonNull(enforceOnKeyName, "expected parameter 'enforceOnKeyName' to be non-null");
-        this.exceedAction = Objects.requireNonNull(exceedAction, "expected parameter 'exceedAction' to be non-null");
-        this.exceedRedirectOptions = Objects.requireNonNull(exceedRedirectOptions, "expected parameter 'exceedRedirectOptions' to be non-null");
-        this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold, "expected parameter 'rateLimitThreshold' to be non-null");
-    }
+    private SecurityPolicyRuleRateLimitOptionsResponse() {}
 
-    private SecurityPolicyRuleRateLimitOptionsResponse() {
-        this.banDurationSec = null;
-        this.banThreshold = null;
-        this.conformAction = null;
-        this.enforceOnKey = null;
-        this.enforceOnKeyName = null;
-        this.exceedAction = null;
-        this.exceedRedirectOptions = null;
-        this.rateLimitThreshold = null;
+    private SecurityPolicyRuleRateLimitOptionsResponse(SecurityPolicyRuleRateLimitOptionsResponse $) {
+        this.banDurationSec = $.banDurationSec;
+        this.banThreshold = $.banThreshold;
+        this.conformAction = $.conformAction;
+        this.enforceOnKey = $.enforceOnKey;
+        this.enforceOnKeyName = $.enforceOnKeyName;
+        this.exceedAction = $.exceedAction;
+        this.exceedRedirectOptions = $.exceedRedirectOptions;
+        this.rateLimitThreshold = $.rateLimitThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleRateLimitOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer banDurationSec;
-        private SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold;
-        private String conformAction;
-        private String enforceOnKey;
-        private String enforceOnKeyName;
-        private String exceedAction;
-        private SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions;
-        private SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold;
+        private SecurityPolicyRuleRateLimitOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleRateLimitOptionsResponse();
         }
 
         public Builder(SecurityPolicyRuleRateLimitOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.banDurationSec = defaults.banDurationSec;
-    	      this.banThreshold = defaults.banThreshold;
-    	      this.conformAction = defaults.conformAction;
-    	      this.enforceOnKey = defaults.enforceOnKey;
-    	      this.enforceOnKeyName = defaults.enforceOnKeyName;
-    	      this.exceedAction = defaults.exceedAction;
-    	      this.exceedRedirectOptions = defaults.exceedRedirectOptions;
-    	      this.rateLimitThreshold = defaults.rateLimitThreshold;
+            $ = new SecurityPolicyRuleRateLimitOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder banDurationSec(Integer banDurationSec) {
-            this.banDurationSec = Objects.requireNonNull(banDurationSec);
+            $.banDurationSec = banDurationSec;
             return this;
         }
+
         public Builder banThreshold(SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold) {
-            this.banThreshold = Objects.requireNonNull(banThreshold);
+            $.banThreshold = banThreshold;
             return this;
         }
+
         public Builder conformAction(String conformAction) {
-            this.conformAction = Objects.requireNonNull(conformAction);
+            $.conformAction = conformAction;
             return this;
         }
+
         public Builder enforceOnKey(String enforceOnKey) {
-            this.enforceOnKey = Objects.requireNonNull(enforceOnKey);
+            $.enforceOnKey = enforceOnKey;
             return this;
         }
+
         public Builder enforceOnKeyName(String enforceOnKeyName) {
-            this.enforceOnKeyName = Objects.requireNonNull(enforceOnKeyName);
+            $.enforceOnKeyName = enforceOnKeyName;
             return this;
         }
+
         public Builder exceedAction(String exceedAction) {
-            this.exceedAction = Objects.requireNonNull(exceedAction);
+            $.exceedAction = exceedAction;
             return this;
         }
+
         public Builder exceedRedirectOptions(SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions) {
-            this.exceedRedirectOptions = Objects.requireNonNull(exceedRedirectOptions);
+            $.exceedRedirectOptions = exceedRedirectOptions;
             return this;
         }
+
         public Builder rateLimitThreshold(SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold) {
-            this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
+            $.rateLimitThreshold = rateLimitThreshold;
             return this;
-        }        public SecurityPolicyRuleRateLimitOptionsResponse build() {
-            return new SecurityPolicyRuleRateLimitOptionsResponse(banDurationSec, banThreshold, conformAction, enforceOnKey, enforceOnKeyName, exceedAction, exceedRedirectOptions, rateLimitThreshold);
+        }
+
+        public SecurityPolicyRuleRateLimitOptionsResponse build() {
+            $.banDurationSec = Objects.requireNonNull($.banDurationSec, "expected parameter 'banDurationSec' to be non-null");
+            $.banThreshold = Objects.requireNonNull($.banThreshold, "expected parameter 'banThreshold' to be non-null");
+            $.conformAction = Objects.requireNonNull($.conformAction, "expected parameter 'conformAction' to be non-null");
+            $.enforceOnKey = Objects.requireNonNull($.enforceOnKey, "expected parameter 'enforceOnKey' to be non-null");
+            $.enforceOnKeyName = Objects.requireNonNull($.enforceOnKeyName, "expected parameter 'enforceOnKeyName' to be non-null");
+            $.exceedAction = Objects.requireNonNull($.exceedAction, "expected parameter 'exceedAction' to be non-null");
+            $.exceedRedirectOptions = Objects.requireNonNull($.exceedRedirectOptions, "expected parameter 'exceedRedirectOptions' to be non-null");
+            $.rateLimitThreshold = Objects.requireNonNull($.rateLimitThreshold, "expected parameter 'rateLimitThreshold' to be non-null");
+            return $;
         }
     }
+
 }

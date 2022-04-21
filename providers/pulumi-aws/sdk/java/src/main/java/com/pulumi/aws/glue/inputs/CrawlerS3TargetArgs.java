@@ -5,11 +5,11 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="connectionName")
-      private final @Nullable Output<String> connectionName;
+    private @Nullable Output<String> connectionName;
 
-    public Output<String> connectionName() {
-        return this.connectionName == null ? Codegen.empty() : this.connectionName;
+    public Optional<Output<String>> connectionName() {
+        return Optional.ofNullable(this.connectionName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dlqEventQueueArn")
-      private final @Nullable Output<String> dlqEventQueueArn;
+    private @Nullable Output<String> dlqEventQueueArn;
 
-    public Output<String> dlqEventQueueArn() {
-        return this.dlqEventQueueArn == null ? Codegen.empty() : this.dlqEventQueueArn;
+    public Optional<Output<String>> dlqEventQueueArn() {
+        return Optional.ofNullable(this.dlqEventQueueArn);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="eventQueueArn")
-      private final @Nullable Output<String> eventQueueArn;
+    private @Nullable Output<String> eventQueueArn;
 
-    public Output<String> eventQueueArn() {
-        return this.eventQueueArn == null ? Codegen.empty() : this.eventQueueArn;
+    public Optional<Output<String>> eventQueueArn() {
+        return Optional.ofNullable(this.eventQueueArn);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="exclusions")
-      private final @Nullable Output<List<String>> exclusions;
+    private @Nullable Output<List<String>> exclusions;
 
-    public Output<List<String>> exclusions() {
-        return this.exclusions == null ? Codegen.empty() : this.exclusions;
+    public Optional<Output<List<String>>> exclusions() {
+        return Optional.ofNullable(this.exclusions);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -77,118 +77,103 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sampleSize")
-      private final @Nullable Output<Integer> sampleSize;
+    private @Nullable Output<Integer> sampleSize;
 
-    public Output<Integer> sampleSize() {
-        return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
+    public Optional<Output<Integer>> sampleSize() {
+        return Optional.ofNullable(this.sampleSize);
     }
 
-    public CrawlerS3TargetArgs(
-        @Nullable Output<String> connectionName,
-        @Nullable Output<String> dlqEventQueueArn,
-        @Nullable Output<String> eventQueueArn,
-        @Nullable Output<List<String>> exclusions,
-        Output<String> path,
-        @Nullable Output<Integer> sampleSize) {
-        this.connectionName = connectionName;
-        this.dlqEventQueueArn = dlqEventQueueArn;
-        this.eventQueueArn = eventQueueArn;
-        this.exclusions = exclusions;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.sampleSize = sampleSize;
-    }
+    private CrawlerS3TargetArgs() {}
 
-    private CrawlerS3TargetArgs() {
-        this.connectionName = Codegen.empty();
-        this.dlqEventQueueArn = Codegen.empty();
-        this.eventQueueArn = Codegen.empty();
-        this.exclusions = Codegen.empty();
-        this.path = Codegen.empty();
-        this.sampleSize = Codegen.empty();
+    private CrawlerS3TargetArgs(CrawlerS3TargetArgs $) {
+        this.connectionName = $.connectionName;
+        this.dlqEventQueueArn = $.dlqEventQueueArn;
+        this.eventQueueArn = $.eventQueueArn;
+        this.exclusions = $.exclusions;
+        this.path = $.path;
+        this.sampleSize = $.sampleSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrawlerS3TargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectionName;
-        private @Nullable Output<String> dlqEventQueueArn;
-        private @Nullable Output<String> eventQueueArn;
-        private @Nullable Output<List<String>> exclusions;
-        private Output<String> path;
-        private @Nullable Output<Integer> sampleSize;
+        private CrawlerS3TargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrawlerS3TargetArgs();
         }
 
         public Builder(CrawlerS3TargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.dlqEventQueueArn = defaults.dlqEventQueueArn;
-    	      this.eventQueueArn = defaults.eventQueueArn;
-    	      this.exclusions = defaults.exclusions;
-    	      this.path = defaults.path;
-    	      this.sampleSize = defaults.sampleSize;
+            $ = new CrawlerS3TargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(@Nullable Output<String> connectionName) {
-            this.connectionName = connectionName;
+            $.connectionName = connectionName;
             return this;
         }
-        public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Codegen.ofNullable(connectionName);
-            return this;
+
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder dlqEventQueueArn(@Nullable Output<String> dlqEventQueueArn) {
-            this.dlqEventQueueArn = dlqEventQueueArn;
+            $.dlqEventQueueArn = dlqEventQueueArn;
             return this;
         }
-        public Builder dlqEventQueueArn(@Nullable String dlqEventQueueArn) {
-            this.dlqEventQueueArn = Codegen.ofNullable(dlqEventQueueArn);
-            return this;
+
+        public Builder dlqEventQueueArn(String dlqEventQueueArn) {
+            return dlqEventQueueArn(Output.of(dlqEventQueueArn));
         }
+
         public Builder eventQueueArn(@Nullable Output<String> eventQueueArn) {
-            this.eventQueueArn = eventQueueArn;
+            $.eventQueueArn = eventQueueArn;
             return this;
         }
-        public Builder eventQueueArn(@Nullable String eventQueueArn) {
-            this.eventQueueArn = Codegen.ofNullable(eventQueueArn);
-            return this;
+
+        public Builder eventQueueArn(String eventQueueArn) {
+            return eventQueueArn(Output.of(eventQueueArn));
         }
+
         public Builder exclusions(@Nullable Output<List<String>> exclusions) {
-            this.exclusions = exclusions;
+            $.exclusions = exclusions;
             return this;
         }
-        public Builder exclusions(@Nullable List<String> exclusions) {
-            this.exclusions = Codegen.ofNullable(exclusions);
-            return this;
+
+        public Builder exclusions(List<String> exclusions) {
+            return exclusions(Output.of(exclusions));
         }
+
         public Builder exclusions(String... exclusions) {
             return exclusions(List.of(exclusions));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder sampleSize(@Nullable Output<Integer> sampleSize) {
-            this.sampleSize = sampleSize;
+            $.sampleSize = sampleSize;
             return this;
         }
-        public Builder sampleSize(@Nullable Integer sampleSize) {
-            this.sampleSize = Codegen.ofNullable(sampleSize);
-            return this;
-        }        public CrawlerS3TargetArgs build() {
-            return new CrawlerS3TargetArgs(connectionName, dlqEventQueueArn, eventQueueArn, exclusions, path, sampleSize);
+
+        public Builder sampleSize(Integer sampleSize) {
+            return sampleSize(Output.of(sampleSize));
+        }
+
+        public CrawlerS3TargetArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ServiceInstanceConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="cpu")
-      private final @Nullable String cpu;
+    private @Nullable String cpu;
 
     public Optional<String> cpu() {
-        return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceInstanceConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="instanceRoleArn")
-      private final @Nullable String instanceRoleArn;
+    private @Nullable String instanceRoleArn;
 
     public Optional<String> instanceRoleArn() {
-        return this.instanceRoleArn == null ? Optional.empty() : Optional.ofNullable(this.instanceRoleArn);
+        return Optional.ofNullable(this.instanceRoleArn);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ServiceInstanceConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="memory")
-      private final @Nullable String memory;
+    private @Nullable String memory;
 
     public Optional<String> memory() {
-        return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
+        return Optional.ofNullable(this.memory);
     }
 
-    public ServiceInstanceConfiguration(
-        @Nullable String cpu,
-        @Nullable String instanceRoleArn,
-        @Nullable String memory) {
-        this.cpu = cpu;
-        this.instanceRoleArn = instanceRoleArn;
-        this.memory = memory;
-    }
+    private ServiceInstanceConfiguration() {}
 
-    private ServiceInstanceConfiguration() {
-        this.cpu = null;
-        this.instanceRoleArn = null;
-        this.memory = null;
+    private ServiceInstanceConfiguration(ServiceInstanceConfiguration $) {
+        this.cpu = $.cpu;
+        this.instanceRoleArn = $.instanceRoleArn;
+        this.memory = $.memory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceInstanceConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cpu;
-        private @Nullable String instanceRoleArn;
-        private @Nullable String memory;
+        private ServiceInstanceConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceInstanceConfiguration();
         }
 
         public Builder(ServiceInstanceConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.instanceRoleArn = defaults.instanceRoleArn;
-    	      this.memory = defaults.memory;
+            $ = new ServiceInstanceConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable String cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
+
         public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
-            this.instanceRoleArn = instanceRoleArn;
+            $.instanceRoleArn = instanceRoleArn;
             return this;
         }
+
         public Builder memory(@Nullable String memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
-        }        public ServiceInstanceConfiguration build() {
-            return new ServiceInstanceConfiguration(cpu, instanceRoleArn, memory);
+        }
+
+        public ServiceInstanceConfiguration build() {
+            return $;
         }
     }
+
 }

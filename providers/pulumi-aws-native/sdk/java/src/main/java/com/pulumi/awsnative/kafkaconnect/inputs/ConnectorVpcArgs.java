@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ConnectorVpcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroups", required=true)
-      private final Output<List<String>> securityGroups;
+    private Output<List<String>> securityGroups;
 
     public Output<List<String>> securityGroups() {
         return this.securityGroups;
@@ -35,69 +34,68 @@ public final class ConnectorVpcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnets", required=true)
-      private final Output<List<String>> subnets;
+    private Output<List<String>> subnets;
 
     public Output<List<String>> subnets() {
         return this.subnets;
     }
 
-    public ConnectorVpcArgs(
-        Output<List<String>> securityGroups,
-        Output<List<String>> subnets) {
-        this.securityGroups = Objects.requireNonNull(securityGroups, "expected parameter 'securityGroups' to be non-null");
-        this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
-    }
+    private ConnectorVpcArgs() {}
 
-    private ConnectorVpcArgs() {
-        this.securityGroups = Codegen.empty();
-        this.subnets = Codegen.empty();
+    private ConnectorVpcArgs(ConnectorVpcArgs $) {
+        this.securityGroups = $.securityGroups;
+        this.subnets = $.subnets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorVpcArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> securityGroups;
-        private Output<List<String>> subnets;
+        private ConnectorVpcArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorVpcArgs();
         }
 
         public Builder(ConnectorVpcArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnets = defaults.subnets;
+            $ = new ConnectorVpcArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroups(Output<List<String>> securityGroups) {
-            this.securityGroups = Objects.requireNonNull(securityGroups);
+            $.securityGroups = securityGroups;
             return this;
         }
+
         public Builder securityGroups(List<String> securityGroups) {
-            this.securityGroups = Output.of(Objects.requireNonNull(securityGroups));
-            return this;
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnets(Output<List<String>> subnets) {
-            this.subnets = Objects.requireNonNull(subnets);
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(List<String> subnets) {
-            this.subnets = Output.of(Objects.requireNonNull(subnets));
-            return this;
+            return subnets(Output.of(subnets));
         }
+
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
-        }        public ConnectorVpcArgs build() {
-            return new ConnectorVpcArgs(securityGroups, subnets);
+        }
+
+        public ConnectorVpcArgs build() {
+            $.securityGroups = Objects.requireNonNull($.securityGroups, "expected parameter 'securityGroups' to be non-null");
+            $.subnets = Objects.requireNonNull($.subnets, "expected parameter 'subnets' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.panorama;
 import com.pulumi.awsnative.panorama.inputs.PackageTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     public static final PackageArgs Empty = new PackageArgs();
 
     @Import(name="packageName")
-      private final @Nullable Output<String> packageName;
+    private @Nullable Output<String> packageName;
 
-    public Output<String> packageName() {
-        return this.packageName == null ? Codegen.empty() : this.packageName;
+    public Optional<Output<String>> packageName() {
+        return Optional.ofNullable(this.packageName);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<PackageTagArgs>> tags;
+    private @Nullable Output<List<PackageTagArgs>> tags;
 
-    public Output<List<PackageTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<PackageTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PackageArgs(
-        @Nullable Output<String> packageName,
-        @Nullable Output<List<PackageTagArgs>> tags) {
-        this.packageName = packageName;
-        this.tags = tags;
-    }
+    private PackageArgs() {}
 
-    private PackageArgs() {
-        this.packageName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PackageArgs(PackageArgs $) {
+        this.packageName = $.packageName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> packageName;
-        private @Nullable Output<List<PackageTagArgs>> tags;
+        private PackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageArgs();
         }
 
         public Builder(PackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packageName = defaults.packageName;
-    	      this.tags = defaults.tags;
+            $ = new PackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder packageName(@Nullable Output<String> packageName) {
-            this.packageName = packageName;
+            $.packageName = packageName;
             return this;
         }
-        public Builder packageName(@Nullable String packageName) {
-            this.packageName = Codegen.ofNullable(packageName);
-            return this;
+
+        public Builder packageName(String packageName) {
+            return packageName(Output.of(packageName));
         }
+
         public Builder tags(@Nullable Output<List<PackageTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<PackageTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<PackageTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(PackageTagArgs... tags) {
             return tags(List.of(tags));
-        }        public PackageArgs build() {
-            return new PackageArgs(packageName, tags);
+        }
+
+        public PackageArgs build() {
+            return $;
         }
     }
+
 }

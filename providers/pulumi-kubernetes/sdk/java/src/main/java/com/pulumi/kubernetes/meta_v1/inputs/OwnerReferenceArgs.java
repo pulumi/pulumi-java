@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="apiVersion", required=true)
-      private final Output<String> apiVersion;
+    private Output<String> apiVersion;
 
     public Output<String> apiVersion() {
         return this.apiVersion;
@@ -36,10 +36,10 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="blockOwnerDeletion")
-      private final @Nullable Output<Boolean> blockOwnerDeletion;
+    private @Nullable Output<Boolean> blockOwnerDeletion;
 
-    public Output<Boolean> blockOwnerDeletion() {
-        return this.blockOwnerDeletion == null ? Codegen.empty() : this.blockOwnerDeletion;
+    public Optional<Output<Boolean>> blockOwnerDeletion() {
+        return Optional.ofNullable(this.blockOwnerDeletion);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="controller")
-      private final @Nullable Output<Boolean> controller;
+    private @Nullable Output<Boolean> controller;
 
-    public Output<Boolean> controller() {
-        return this.controller == null ? Codegen.empty() : this.controller;
+    public Optional<Output<Boolean>> controller() {
+        return Optional.ofNullable(this.controller);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -69,7 +69,7 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -80,115 +80,102 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="uid", required=true)
-      private final Output<String> uid;
+    private Output<String> uid;
 
     public Output<String> uid() {
         return this.uid;
     }
 
-    public OwnerReferenceArgs(
-        Output<String> apiVersion,
-        @Nullable Output<Boolean> blockOwnerDeletion,
-        @Nullable Output<Boolean> controller,
-        Output<String> kind,
-        Output<String> name,
-        Output<String> uid) {
-        this.apiVersion = Objects.requireNonNull(apiVersion, "expected parameter 'apiVersion' to be non-null");
-        this.blockOwnerDeletion = blockOwnerDeletion;
-        this.controller = controller;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-    }
+    private OwnerReferenceArgs() {}
 
-    private OwnerReferenceArgs() {
-        this.apiVersion = Codegen.empty();
-        this.blockOwnerDeletion = Codegen.empty();
-        this.controller = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.uid = Codegen.empty();
+    private OwnerReferenceArgs(OwnerReferenceArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.blockOwnerDeletion = $.blockOwnerDeletion;
+        this.controller = $.controller;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OwnerReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiVersion;
-        private @Nullable Output<Boolean> blockOwnerDeletion;
-        private @Nullable Output<Boolean> controller;
-        private Output<String> kind;
-        private Output<String> name;
-        private Output<String> uid;
+        private OwnerReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OwnerReferenceArgs();
         }
 
         public Builder(OwnerReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.blockOwnerDeletion = defaults.blockOwnerDeletion;
-    	      this.controller = defaults.controller;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.uid = defaults.uid;
+            $ = new OwnerReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(Output<String> apiVersion) {
-            this.apiVersion = Objects.requireNonNull(apiVersion);
+            $.apiVersion = apiVersion;
             return this;
         }
+
         public Builder apiVersion(String apiVersion) {
-            this.apiVersion = Output.of(Objects.requireNonNull(apiVersion));
-            return this;
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder blockOwnerDeletion(@Nullable Output<Boolean> blockOwnerDeletion) {
-            this.blockOwnerDeletion = blockOwnerDeletion;
+            $.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
-        public Builder blockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
-            this.blockOwnerDeletion = Codegen.ofNullable(blockOwnerDeletion);
-            return this;
+
+        public Builder blockOwnerDeletion(Boolean blockOwnerDeletion) {
+            return blockOwnerDeletion(Output.of(blockOwnerDeletion));
         }
+
         public Builder controller(@Nullable Output<Boolean> controller) {
-            this.controller = controller;
+            $.controller = controller;
             return this;
         }
-        public Builder controller(@Nullable Boolean controller) {
-            this.controller = Codegen.ofNullable(controller);
-            return this;
+
+        public Builder controller(Boolean controller) {
+            return controller(Output.of(controller));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder uid(Output<String> uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
         }
+
         public Builder uid(String uid) {
-            this.uid = Output.of(Objects.requireNonNull(uid));
-            return this;
-        }        public OwnerReferenceArgs build() {
-            return new OwnerReferenceArgs(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
+            return uid(Output.of(uid));
+        }
+
+        public OwnerReferenceArgs build() {
+            $.apiVersion = Objects.requireNonNull($.apiVersion, "expected parameter 'apiVersion' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            return $;
         }
     }
+
 }

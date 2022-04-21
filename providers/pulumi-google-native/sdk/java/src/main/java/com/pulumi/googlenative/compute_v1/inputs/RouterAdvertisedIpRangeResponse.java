@@ -21,7 +21,7 @@ public final class RouterAdvertisedIpRangeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -32,55 +32,52 @@ public final class RouterAdvertisedIpRangeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="range", required=true)
-      private final String range;
+    private String range;
 
     public String range() {
         return this.range;
     }
 
-    public RouterAdvertisedIpRangeResponse(
-        String description,
-        String range) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-    }
+    private RouterAdvertisedIpRangeResponse() {}
 
-    private RouterAdvertisedIpRangeResponse() {
-        this.description = null;
-        this.range = null;
+    private RouterAdvertisedIpRangeResponse(RouterAdvertisedIpRangeResponse $) {
+        this.description = $.description;
+        this.range = $.range;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterAdvertisedIpRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String range;
+        private RouterAdvertisedIpRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterAdvertisedIpRangeResponse();
         }
 
         public Builder(RouterAdvertisedIpRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.range = defaults.range;
+            $ = new RouterAdvertisedIpRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder range(String range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
-        }        public RouterAdvertisedIpRangeResponse build() {
-            return new RouterAdvertisedIpRangeResponse(description, range);
+        }
+
+        public RouterAdvertisedIpRangeResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            return $;
         }
     }
+
 }

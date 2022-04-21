@@ -22,7 +22,7 @@ public final class EnvironmentStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ingress", required=true)
-      private final IngressEnvironmentStatusResponse ingress;
+    private IngressEnvironmentStatusResponse ingress;
 
     public IngressEnvironmentStatusResponse ingress() {
         return this.ingress;
@@ -33,55 +33,52 @@ public final class EnvironmentStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="warmStorage", required=true)
-      private final WarmStorageEnvironmentStatusResponse warmStorage;
+    private WarmStorageEnvironmentStatusResponse warmStorage;
 
     public WarmStorageEnvironmentStatusResponse warmStorage() {
         return this.warmStorage;
     }
 
-    public EnvironmentStatusResponse(
-        IngressEnvironmentStatusResponse ingress,
-        WarmStorageEnvironmentStatusResponse warmStorage) {
-        this.ingress = Objects.requireNonNull(ingress, "expected parameter 'ingress' to be non-null");
-        this.warmStorage = Objects.requireNonNull(warmStorage, "expected parameter 'warmStorage' to be non-null");
-    }
+    private EnvironmentStatusResponse() {}
 
-    private EnvironmentStatusResponse() {
-        this.ingress = null;
-        this.warmStorage = null;
+    private EnvironmentStatusResponse(EnvironmentStatusResponse $) {
+        this.ingress = $.ingress;
+        this.warmStorage = $.warmStorage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private IngressEnvironmentStatusResponse ingress;
-        private WarmStorageEnvironmentStatusResponse warmStorage;
+        private EnvironmentStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentStatusResponse();
         }
 
         public Builder(EnvironmentStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingress = defaults.ingress;
-    	      this.warmStorage = defaults.warmStorage;
+            $ = new EnvironmentStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ingress(IngressEnvironmentStatusResponse ingress) {
-            this.ingress = Objects.requireNonNull(ingress);
+            $.ingress = ingress;
             return this;
         }
+
         public Builder warmStorage(WarmStorageEnvironmentStatusResponse warmStorage) {
-            this.warmStorage = Objects.requireNonNull(warmStorage);
+            $.warmStorage = warmStorage;
             return this;
-        }        public EnvironmentStatusResponse build() {
-            return new EnvironmentStatusResponse(ingress, warmStorage);
+        }
+
+        public EnvironmentStatusResponse build() {
+            $.ingress = Objects.requireNonNull($.ingress, "expected parameter 'ingress' to be non-null");
+            $.warmStorage = Objects.requireNonNull($.warmStorage, "expected parameter 'warmStorage' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ProjectSecondarySourceVersionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sourceIdentifier", required=true)
-      private final Output<String> sourceIdentifier;
+    private Output<String> sourceIdentifier;
 
     public Output<String> sourceIdentifier() {
         return this.sourceIdentifier;
@@ -30,63 +29,60 @@ public final class ProjectSecondarySourceVersionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sourceVersion", required=true)
-      private final Output<String> sourceVersion;
+    private Output<String> sourceVersion;
 
     public Output<String> sourceVersion() {
         return this.sourceVersion;
     }
 
-    public ProjectSecondarySourceVersionArgs(
-        Output<String> sourceIdentifier,
-        Output<String> sourceVersion) {
-        this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier, "expected parameter 'sourceIdentifier' to be non-null");
-        this.sourceVersion = Objects.requireNonNull(sourceVersion, "expected parameter 'sourceVersion' to be non-null");
-    }
+    private ProjectSecondarySourceVersionArgs() {}
 
-    private ProjectSecondarySourceVersionArgs() {
-        this.sourceIdentifier = Codegen.empty();
-        this.sourceVersion = Codegen.empty();
+    private ProjectSecondarySourceVersionArgs(ProjectSecondarySourceVersionArgs $) {
+        this.sourceIdentifier = $.sourceIdentifier;
+        this.sourceVersion = $.sourceVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectSecondarySourceVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sourceIdentifier;
-        private Output<String> sourceVersion;
+        private ProjectSecondarySourceVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectSecondarySourceVersionArgs();
         }
 
         public Builder(ProjectSecondarySourceVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceIdentifier = defaults.sourceIdentifier;
-    	      this.sourceVersion = defaults.sourceVersion;
+            $ = new ProjectSecondarySourceVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceIdentifier(Output<String> sourceIdentifier) {
-            this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
+            $.sourceIdentifier = sourceIdentifier;
             return this;
         }
+
         public Builder sourceIdentifier(String sourceIdentifier) {
-            this.sourceIdentifier = Output.of(Objects.requireNonNull(sourceIdentifier));
-            return this;
+            return sourceIdentifier(Output.of(sourceIdentifier));
         }
+
         public Builder sourceVersion(Output<String> sourceVersion) {
-            this.sourceVersion = Objects.requireNonNull(sourceVersion);
+            $.sourceVersion = sourceVersion;
             return this;
         }
+
         public Builder sourceVersion(String sourceVersion) {
-            this.sourceVersion = Output.of(Objects.requireNonNull(sourceVersion));
-            return this;
-        }        public ProjectSecondarySourceVersionArgs build() {
-            return new ProjectSecondarySourceVersionArgs(sourceIdentifier, sourceVersion);
+            return sourceVersion(Output.of(sourceVersion));
+        }
+
+        public ProjectSecondarySourceVersionArgs build() {
+            $.sourceIdentifier = Objects.requireNonNull($.sourceIdentifier, "expected parameter 'sourceIdentifier' to be non-null");
+            $.sourceVersion = Objects.requireNonNull($.sourceVersion, "expected parameter 'sourceVersion' to be non-null");
+            return $;
         }
     }
+
 }

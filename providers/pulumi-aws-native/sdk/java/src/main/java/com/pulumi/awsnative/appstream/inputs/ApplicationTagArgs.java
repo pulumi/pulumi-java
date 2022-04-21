@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class ApplicationTagArgs extends com.pulumi.resources.ResourceArgs 
     public static final ApplicationTagArgs Empty = new ApplicationTagArgs();
 
     @Import(name="tagKey", required=true)
-      private final Output<String> tagKey;
+    private Output<String> tagKey;
 
     public Output<String> tagKey() {
         return this.tagKey;
     }
 
     @Import(name="tagValue", required=true)
-      private final Output<String> tagValue;
+    private Output<String> tagValue;
 
     public Output<String> tagValue() {
         return this.tagValue;
     }
 
-    public ApplicationTagArgs(
-        Output<String> tagKey,
-        Output<String> tagValue) {
-        this.tagKey = Objects.requireNonNull(tagKey, "expected parameter 'tagKey' to be non-null");
-        this.tagValue = Objects.requireNonNull(tagValue, "expected parameter 'tagValue' to be non-null");
-    }
+    private ApplicationTagArgs() {}
 
-    private ApplicationTagArgs() {
-        this.tagKey = Codegen.empty();
-        this.tagValue = Codegen.empty();
+    private ApplicationTagArgs(ApplicationTagArgs $) {
+        this.tagKey = $.tagKey;
+        this.tagValue = $.tagValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> tagKey;
-        private Output<String> tagValue;
+        private ApplicationTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationTagArgs();
         }
 
         public Builder(ApplicationTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tagKey = defaults.tagKey;
-    	      this.tagValue = defaults.tagValue;
+            $ = new ApplicationTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tagKey(Output<String> tagKey) {
-            this.tagKey = Objects.requireNonNull(tagKey);
+            $.tagKey = tagKey;
             return this;
         }
+
         public Builder tagKey(String tagKey) {
-            this.tagKey = Output.of(Objects.requireNonNull(tagKey));
-            return this;
+            return tagKey(Output.of(tagKey));
         }
+
         public Builder tagValue(Output<String> tagValue) {
-            this.tagValue = Objects.requireNonNull(tagValue);
+            $.tagValue = tagValue;
             return this;
         }
+
         public Builder tagValue(String tagValue) {
-            this.tagValue = Output.of(Objects.requireNonNull(tagValue));
-            return this;
-        }        public ApplicationTagArgs build() {
-            return new ApplicationTagArgs(tagKey, tagValue);
+            return tagValue(Output.of(tagValue));
+        }
+
+        public ApplicationTagArgs build() {
+            $.tagKey = Objects.requireNonNull($.tagKey, "expected parameter 'tagKey' to be non-null");
+            $.tagValue = Objects.requireNonNull($.tagValue, "expected parameter 'tagValue' to be non-null");
+            return $;
         }
     }
+
 }

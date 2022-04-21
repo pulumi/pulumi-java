@@ -20,62 +20,57 @@ public final class ResourceSetTargetResource extends com.pulumi.resources.Invoke
     public static final ResourceSetTargetResource Empty = new ResourceSetTargetResource();
 
     @Import(name="nLBResource")
-      private final @Nullable ResourceSetNLBResource nLBResource;
+    private @Nullable ResourceSetNLBResource nLBResource;
 
     public Optional<ResourceSetNLBResource> nLBResource() {
-        return this.nLBResource == null ? Optional.empty() : Optional.ofNullable(this.nLBResource);
+        return Optional.ofNullable(this.nLBResource);
     }
 
     @Import(name="r53Resource")
-      private final @Nullable ResourceSetR53ResourceRecord r53Resource;
+    private @Nullable ResourceSetR53ResourceRecord r53Resource;
 
     public Optional<ResourceSetR53ResourceRecord> r53Resource() {
-        return this.r53Resource == null ? Optional.empty() : Optional.ofNullable(this.r53Resource);
+        return Optional.ofNullable(this.r53Resource);
     }
 
-    public ResourceSetTargetResource(
-        @Nullable ResourceSetNLBResource nLBResource,
-        @Nullable ResourceSetR53ResourceRecord r53Resource) {
-        this.nLBResource = nLBResource;
-        this.r53Resource = r53Resource;
-    }
+    private ResourceSetTargetResource() {}
 
-    private ResourceSetTargetResource() {
-        this.nLBResource = null;
-        this.r53Resource = null;
+    private ResourceSetTargetResource(ResourceSetTargetResource $) {
+        this.nLBResource = $.nLBResource;
+        this.r53Resource = $.r53Resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetTargetResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ResourceSetNLBResource nLBResource;
-        private @Nullable ResourceSetR53ResourceRecord r53Resource;
+        private ResourceSetTargetResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetTargetResource();
         }
 
         public Builder(ResourceSetTargetResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nLBResource = defaults.nLBResource;
-    	      this.r53Resource = defaults.r53Resource;
+            $ = new ResourceSetTargetResource(Objects.requireNonNull(defaults));
         }
 
         public Builder nLBResource(@Nullable ResourceSetNLBResource nLBResource) {
-            this.nLBResource = nLBResource;
+            $.nLBResource = nLBResource;
             return this;
         }
+
         public Builder r53Resource(@Nullable ResourceSetR53ResourceRecord r53Resource) {
-            this.r53Resource = r53Resource;
+            $.r53Resource = r53Resource;
             return this;
-        }        public ResourceSetTargetResource build() {
-            return new ResourceSetTargetResource(nLBResource, r53Resource);
+        }
+
+        public ResourceSetTargetResource build() {
+            return $;
         }
     }
+
 }

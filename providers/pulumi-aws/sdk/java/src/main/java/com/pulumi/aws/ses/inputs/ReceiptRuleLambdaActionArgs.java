@@ -5,10 +5,10 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReceiptRuleLambdaActionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="functionArn", required=true)
-      private final Output<String> functionArn;
+    private Output<String> functionArn;
 
     public Output<String> functionArn() {
         return this.functionArn;
@@ -32,10 +32,10 @@ public final class ReceiptRuleLambdaActionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="invocationType")
-      private final @Nullable Output<String> invocationType;
+    private @Nullable Output<String> invocationType;
 
-    public Output<String> invocationType() {
-        return this.invocationType == null ? Codegen.empty() : this.invocationType;
+    public Optional<Output<String>> invocationType() {
+        return Optional.ofNullable(this.invocationType);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ReceiptRuleLambdaActionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="position", required=true)
-      private final Output<Integer> position;
+    private Output<Integer> position;
 
     public Output<Integer> position() {
         return this.position;
@@ -54,89 +54,80 @@ public final class ReceiptRuleLambdaActionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="topicArn")
-      private final @Nullable Output<String> topicArn;
+    private @Nullable Output<String> topicArn;
 
-    public Output<String> topicArn() {
-        return this.topicArn == null ? Codegen.empty() : this.topicArn;
+    public Optional<Output<String>> topicArn() {
+        return Optional.ofNullable(this.topicArn);
     }
 
-    public ReceiptRuleLambdaActionArgs(
-        Output<String> functionArn,
-        @Nullable Output<String> invocationType,
-        Output<Integer> position,
-        @Nullable Output<String> topicArn) {
-        this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
-        this.invocationType = invocationType;
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-        this.topicArn = topicArn;
-    }
+    private ReceiptRuleLambdaActionArgs() {}
 
-    private ReceiptRuleLambdaActionArgs() {
-        this.functionArn = Codegen.empty();
-        this.invocationType = Codegen.empty();
-        this.position = Codegen.empty();
-        this.topicArn = Codegen.empty();
+    private ReceiptRuleLambdaActionArgs(ReceiptRuleLambdaActionArgs $) {
+        this.functionArn = $.functionArn;
+        this.invocationType = $.invocationType;
+        this.position = $.position;
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReceiptRuleLambdaActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> functionArn;
-        private @Nullable Output<String> invocationType;
-        private Output<Integer> position;
-        private @Nullable Output<String> topicArn;
+        private ReceiptRuleLambdaActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReceiptRuleLambdaActionArgs();
         }
 
         public Builder(ReceiptRuleLambdaActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionArn = defaults.functionArn;
-    	      this.invocationType = defaults.invocationType;
-    	      this.position = defaults.position;
-    	      this.topicArn = defaults.topicArn;
+            $ = new ReceiptRuleLambdaActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionArn(Output<String> functionArn) {
-            this.functionArn = Objects.requireNonNull(functionArn);
+            $.functionArn = functionArn;
             return this;
         }
+
         public Builder functionArn(String functionArn) {
-            this.functionArn = Output.of(Objects.requireNonNull(functionArn));
-            return this;
+            return functionArn(Output.of(functionArn));
         }
+
         public Builder invocationType(@Nullable Output<String> invocationType) {
-            this.invocationType = invocationType;
+            $.invocationType = invocationType;
             return this;
         }
-        public Builder invocationType(@Nullable String invocationType) {
-            this.invocationType = Codegen.ofNullable(invocationType);
-            return this;
+
+        public Builder invocationType(String invocationType) {
+            return invocationType(Output.of(invocationType));
         }
+
         public Builder position(Output<Integer> position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
         }
+
         public Builder position(Integer position) {
-            this.position = Output.of(Objects.requireNonNull(position));
-            return this;
+            return position(Output.of(position));
         }
+
         public Builder topicArn(@Nullable Output<String> topicArn) {
-            this.topicArn = topicArn;
+            $.topicArn = topicArn;
             return this;
         }
-        public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Codegen.ofNullable(topicArn);
-            return this;
-        }        public ReceiptRuleLambdaActionArgs build() {
-            return new ReceiptRuleLambdaActionArgs(functionArn, invocationType, position, topicArn);
+
+        public Builder topicArn(String topicArn) {
+            return topicArn(Output.of(topicArn));
+        }
+
+        public ReceiptRuleLambdaActionArgs build() {
+            $.functionArn = Objects.requireNonNull($.functionArn, "expected parameter 'functionArn' to be non-null");
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            return $;
         }
     }
+
 }

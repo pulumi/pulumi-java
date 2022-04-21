@@ -6,10 +6,10 @@ package com.pulumi.awsnative.datasync;
 import com.pulumi.awsnative.datasync.inputs.LocationFSxWindowsTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fsxFilesystemArn", required=true)
-      private final Output<String> fsxFilesystemArn;
+    private Output<String> fsxFilesystemArn;
 
     public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn;
@@ -44,7 +44,7 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -55,7 +55,7 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="securityGroupArns", required=true)
-      private final Output<List<String>> securityGroupArns;
+    private Output<List<String>> securityGroupArns;
 
     public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
@@ -66,10 +66,10 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subdirectory")
-      private final @Nullable Output<String> subdirectory;
+    private @Nullable Output<String> subdirectory;
 
-    public Output<String> subdirectory() {
-        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
+    public Optional<Output<String>> subdirectory() {
+        return Optional.ofNullable(this.subdirectory);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<LocationFSxWindowsTagArgs>> tags;
+    private @Nullable Output<List<LocationFSxWindowsTagArgs>> tags;
 
-    public Output<List<LocationFSxWindowsTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<LocationFSxWindowsTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,134 +88,120 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="user", required=true)
-      private final Output<String> user;
+    private Output<String> user;
 
     public Output<String> user() {
         return this.user;
     }
 
-    public LocationFSxWindowsArgs(
-        @Nullable Output<String> domain,
-        Output<String> fsxFilesystemArn,
-        Output<String> password,
-        Output<List<String>> securityGroupArns,
-        @Nullable Output<String> subdirectory,
-        @Nullable Output<List<LocationFSxWindowsTagArgs>> tags,
-        Output<String> user) {
-        this.domain = domain;
-        this.fsxFilesystemArn = Objects.requireNonNull(fsxFilesystemArn, "expected parameter 'fsxFilesystemArn' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.securityGroupArns = Objects.requireNonNull(securityGroupArns, "expected parameter 'securityGroupArns' to be non-null");
-        this.subdirectory = subdirectory;
-        this.tags = tags;
-        this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
-    }
+    private LocationFSxWindowsArgs() {}
 
-    private LocationFSxWindowsArgs() {
-        this.domain = Codegen.empty();
-        this.fsxFilesystemArn = Codegen.empty();
-        this.password = Codegen.empty();
-        this.securityGroupArns = Codegen.empty();
-        this.subdirectory = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.user = Codegen.empty();
+    private LocationFSxWindowsArgs(LocationFSxWindowsArgs $) {
+        this.domain = $.domain;
+        this.fsxFilesystemArn = $.fsxFilesystemArn;
+        this.password = $.password;
+        this.securityGroupArns = $.securityGroupArns;
+        this.subdirectory = $.subdirectory;
+        this.tags = $.tags;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationFSxWindowsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domain;
-        private Output<String> fsxFilesystemArn;
-        private Output<String> password;
-        private Output<List<String>> securityGroupArns;
-        private @Nullable Output<String> subdirectory;
-        private @Nullable Output<List<LocationFSxWindowsTagArgs>> tags;
-        private Output<String> user;
+        private LocationFSxWindowsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationFSxWindowsArgs();
         }
 
         public Builder(LocationFSxWindowsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.fsxFilesystemArn = defaults.fsxFilesystemArn;
-    	      this.password = defaults.password;
-    	      this.securityGroupArns = defaults.securityGroupArns;
-    	      this.subdirectory = defaults.subdirectory;
-    	      this.tags = defaults.tags;
-    	      this.user = defaults.user;
+            $ = new LocationFSxWindowsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder fsxFilesystemArn(Output<String> fsxFilesystemArn) {
-            this.fsxFilesystemArn = Objects.requireNonNull(fsxFilesystemArn);
+            $.fsxFilesystemArn = fsxFilesystemArn;
             return this;
         }
+
         public Builder fsxFilesystemArn(String fsxFilesystemArn) {
-            this.fsxFilesystemArn = Output.of(Objects.requireNonNull(fsxFilesystemArn));
-            return this;
+            return fsxFilesystemArn(Output.of(fsxFilesystemArn));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder securityGroupArns(Output<List<String>> securityGroupArns) {
-            this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
+            $.securityGroupArns = securityGroupArns;
             return this;
         }
+
         public Builder securityGroupArns(List<String> securityGroupArns) {
-            this.securityGroupArns = Output.of(Objects.requireNonNull(securityGroupArns));
-            return this;
+            return securityGroupArns(Output.of(securityGroupArns));
         }
+
         public Builder securityGroupArns(String... securityGroupArns) {
             return securityGroupArns(List.of(securityGroupArns));
         }
+
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
-            this.subdirectory = subdirectory;
+            $.subdirectory = subdirectory;
             return this;
         }
-        public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Codegen.ofNullable(subdirectory);
-            return this;
+
+        public Builder subdirectory(String subdirectory) {
+            return subdirectory(Output.of(subdirectory));
         }
+
         public Builder tags(@Nullable Output<List<LocationFSxWindowsTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<LocationFSxWindowsTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<LocationFSxWindowsTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(LocationFSxWindowsTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder user(Output<String> user) {
-            this.user = Objects.requireNonNull(user);
+            $.user = user;
             return this;
         }
+
         public Builder user(String user) {
-            this.user = Output.of(Objects.requireNonNull(user));
-            return this;
-        }        public LocationFSxWindowsArgs build() {
-            return new LocationFSxWindowsArgs(domain, fsxFilesystemArn, password, securityGroupArns, subdirectory, tags, user);
+            return user(Output.of(user));
+        }
+
+        public LocationFSxWindowsArgs build() {
+            $.fsxFilesystemArn = Objects.requireNonNull($.fsxFilesystemArn, "expected parameter 'fsxFilesystemArn' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.securityGroupArns = Objects.requireNonNull($.securityGroupArns, "expected parameter 'securityGroupArns' to be non-null");
+            $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
+            return $;
         }
     }
+
 }

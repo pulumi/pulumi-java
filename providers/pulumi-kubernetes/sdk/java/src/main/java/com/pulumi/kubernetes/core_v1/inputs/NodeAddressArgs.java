@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class NodeAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address", required=true)
-      private final Output<String> address;
+    private Output<String> address;
 
     public Output<String> address() {
         return this.address;
@@ -41,63 +40,60 @@ public final class NodeAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public NodeAddressArgs(
-        Output<String> address,
-        Output<String> type) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private NodeAddressArgs() {}
 
-    private NodeAddressArgs() {
-        this.address = Codegen.empty();
-        this.type = Codegen.empty();
+    private NodeAddressArgs(NodeAddressArgs $) {
+        this.address = $.address;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> address;
-        private Output<String> type;
+        private NodeAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeAddressArgs();
         }
 
         public Builder(NodeAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.type = defaults.type;
+            $ = new NodeAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(Output<String> address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder address(String address) {
-            this.address = Output.of(Objects.requireNonNull(address));
-            return this;
+            return address(Output.of(address));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public NodeAddressArgs build() {
-            return new NodeAddressArgs(address, type);
+            return type(Output.of(type));
+        }
+
+        public NodeAddressArgs build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

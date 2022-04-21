@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RoutineReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="datasetId")
-      private final @Nullable Output<String> datasetId;
+    private @Nullable Output<String> datasetId;
 
-    public Output<String> datasetId() {
-        return this.datasetId == null ? Codegen.empty() : this.datasetId;
+    public Optional<Output<String>> datasetId() {
+        return Optional.ofNullable(this.datasetId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RoutineReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class RoutineReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="routineId")
-      private final @Nullable Output<String> routineId;
+    private @Nullable Output<String> routineId;
 
-    public Output<String> routineId() {
-        return this.routineId == null ? Codegen.empty() : this.routineId;
+    public Optional<Output<String>> routineId() {
+        return Optional.ofNullable(this.routineId);
     }
 
-    public RoutineReferenceArgs(
-        @Nullable Output<String> datasetId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> routineId) {
-        this.datasetId = datasetId;
-        this.project = project;
-        this.routineId = routineId;
-    }
+    private RoutineReferenceArgs() {}
 
-    private RoutineReferenceArgs() {
-        this.datasetId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.routineId = Codegen.empty();
+    private RoutineReferenceArgs(RoutineReferenceArgs $) {
+        this.datasetId = $.datasetId;
+        this.project = $.project;
+        this.routineId = $.routineId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutineReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datasetId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> routineId;
+        private RoutineReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutineReferenceArgs();
         }
 
         public Builder(RoutineReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.project = defaults.project;
-    	      this.routineId = defaults.routineId;
+            $ = new RoutineReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(@Nullable Output<String> datasetId) {
-            this.datasetId = datasetId;
+            $.datasetId = datasetId;
             return this;
         }
-        public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Codegen.ofNullable(datasetId);
-            return this;
+
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder routineId(@Nullable Output<String> routineId) {
-            this.routineId = routineId;
+            $.routineId = routineId;
             return this;
         }
-        public Builder routineId(@Nullable String routineId) {
-            this.routineId = Codegen.ofNullable(routineId);
-            return this;
-        }        public RoutineReferenceArgs build() {
-            return new RoutineReferenceArgs(datasetId, project, routineId);
+
+        public Builder routineId(String routineId) {
+            return routineId(Output.of(routineId));
+        }
+
+        public RoutineReferenceArgs build() {
+            return $;
         }
     }
+
 }

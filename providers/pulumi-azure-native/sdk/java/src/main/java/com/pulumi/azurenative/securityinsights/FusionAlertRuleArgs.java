@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +22,7 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="alertRuleTemplateName", required=true)
-      private final Output<String> alertRuleTemplateName;
+    private Output<String> alertRuleTemplateName;
 
     public Output<String> alertRuleTemplateName() {
         return this.alertRuleTemplateName;
@@ -32,7 +33,7 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -44,7 +45,7 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -55,7 +56,7 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,10 +67,10 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ruleId")
-      private final @Nullable Output<String> ruleId;
+    private @Nullable Output<String> ruleId;
 
-    public Output<String> ruleId() {
-        return this.ruleId == null ? Codegen.empty() : this.ruleId;
+    public Optional<Output<String>> ruleId() {
+        return Optional.ofNullable(this.ruleId);
     }
 
     /**
@@ -77,115 +78,103 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public FusionAlertRuleArgs(
-        Output<String> alertRuleTemplateName,
-        Output<Boolean> enabled,
-        Output<String> kind,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleId,
-        Output<String> workspaceName) {
-        this.alertRuleTemplateName = Objects.requireNonNull(alertRuleTemplateName, "expected parameter 'alertRuleTemplateName' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleId = ruleId;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private FusionAlertRuleArgs() {}
 
-    private FusionAlertRuleArgs() {
-        this.alertRuleTemplateName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleId = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private FusionAlertRuleArgs(FusionAlertRuleArgs $) {
+        this.alertRuleTemplateName = $.alertRuleTemplateName;
+        this.enabled = $.enabled;
+        this.kind = $.kind;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleId = $.ruleId;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FusionAlertRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> alertRuleTemplateName;
-        private Output<Boolean> enabled;
-        private Output<String> kind;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleId;
-        private Output<String> workspaceName;
+        private FusionAlertRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FusionAlertRuleArgs();
         }
 
         public Builder(FusionAlertRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertRuleTemplateName = defaults.alertRuleTemplateName;
-    	      this.enabled = defaults.enabled;
-    	      this.kind = defaults.kind;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleId = defaults.ruleId;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new FusionAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertRuleTemplateName(Output<String> alertRuleTemplateName) {
-            this.alertRuleTemplateName = Objects.requireNonNull(alertRuleTemplateName);
+            $.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
+
         public Builder alertRuleTemplateName(String alertRuleTemplateName) {
-            this.alertRuleTemplateName = Output.of(Objects.requireNonNull(alertRuleTemplateName));
-            return this;
+            return alertRuleTemplateName(Output.of(alertRuleTemplateName));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleId(@Nullable Output<String> ruleId) {
-            this.ruleId = ruleId;
+            $.ruleId = ruleId;
             return this;
         }
-        public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Codegen.ofNullable(ruleId);
-            return this;
+
+        public Builder ruleId(String ruleId) {
+            return ruleId(Output.of(ruleId));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public FusionAlertRuleArgs build() {
-            return new FusionAlertRuleArgs(alertRuleTemplateName, enabled, kind, resourceGroupName, ruleId, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public FusionAlertRuleArgs build() {
+            $.alertRuleTemplateName = Objects.requireNonNull($.alertRuleTemplateName, "expected parameter 'alertRuleTemplateName' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

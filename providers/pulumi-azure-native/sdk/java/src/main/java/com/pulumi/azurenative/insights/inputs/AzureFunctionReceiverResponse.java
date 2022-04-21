@@ -25,7 +25,7 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="functionAppResourceId", required=true)
-      private final String functionAppResourceId;
+    private String functionAppResourceId;
 
     public String functionAppResourceId() {
         return this.functionAppResourceId;
@@ -36,7 +36,7 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="functionName", required=true)
-      private final String functionName;
+    private String functionName;
 
     public String functionName() {
         return this.functionName;
@@ -47,7 +47,7 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="httpTriggerUrl", required=true)
-      private final String httpTriggerUrl;
+    private String httpTriggerUrl;
 
     public String httpTriggerUrl() {
         return this.httpTriggerUrl;
@@ -58,7 +58,7 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -69,82 +69,73 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="useCommonAlertSchema")
-      private final @Nullable Boolean useCommonAlertSchema;
+    private @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> useCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
+        return Optional.ofNullable(this.useCommonAlertSchema);
     }
 
-    public AzureFunctionReceiverResponse(
-        String functionAppResourceId,
-        String functionName,
-        String httpTriggerUrl,
-        String name,
-        @Nullable Boolean useCommonAlertSchema) {
-        this.functionAppResourceId = Objects.requireNonNull(functionAppResourceId, "expected parameter 'functionAppResourceId' to be non-null");
-        this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
-        this.httpTriggerUrl = Objects.requireNonNull(httpTriggerUrl, "expected parameter 'httpTriggerUrl' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").arg(useCommonAlertSchema).def(false).getNullable();
-    }
+    private AzureFunctionReceiverResponse() {}
 
-    private AzureFunctionReceiverResponse() {
-        this.functionAppResourceId = null;
-        this.functionName = null;
-        this.httpTriggerUrl = null;
-        this.name = null;
-        this.useCommonAlertSchema = null;
+    private AzureFunctionReceiverResponse(AzureFunctionReceiverResponse $) {
+        this.functionAppResourceId = $.functionAppResourceId;
+        this.functionName = $.functionName;
+        this.httpTriggerUrl = $.httpTriggerUrl;
+        this.name = $.name;
+        this.useCommonAlertSchema = $.useCommonAlertSchema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFunctionReceiverResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String functionAppResourceId;
-        private String functionName;
-        private String httpTriggerUrl;
-        private String name;
-        private @Nullable Boolean useCommonAlertSchema;
+        private AzureFunctionReceiverResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFunctionReceiverResponse();
         }
 
         public Builder(AzureFunctionReceiverResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionAppResourceId = defaults.functionAppResourceId;
-    	      this.functionName = defaults.functionName;
-    	      this.httpTriggerUrl = defaults.httpTriggerUrl;
-    	      this.name = defaults.name;
-    	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
+            $ = new AzureFunctionReceiverResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder functionAppResourceId(String functionAppResourceId) {
-            this.functionAppResourceId = Objects.requireNonNull(functionAppResourceId);
+            $.functionAppResourceId = functionAppResourceId;
             return this;
         }
+
         public Builder functionName(String functionName) {
-            this.functionName = Objects.requireNonNull(functionName);
+            $.functionName = functionName;
             return this;
         }
+
         public Builder httpTriggerUrl(String httpTriggerUrl) {
-            this.httpTriggerUrl = Objects.requireNonNull(httpTriggerUrl);
+            $.httpTriggerUrl = httpTriggerUrl;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = useCommonAlertSchema;
+            $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
-        }        public AzureFunctionReceiverResponse build() {
-            return new AzureFunctionReceiverResponse(functionAppResourceId, functionName, httpTriggerUrl, name, useCommonAlertSchema);
+        }
+
+        public AzureFunctionReceiverResponse build() {
+            $.functionAppResourceId = Objects.requireNonNull($.functionAppResourceId, "expected parameter 'functionAppResourceId' to be non-null");
+            $.functionName = Objects.requireNonNull($.functionName, "expected parameter 'functionName' to be non-null");
+            $.httpTriggerUrl = Objects.requireNonNull($.httpTriggerUrl, "expected parameter 'httpTriggerUrl' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").arg($.useCommonAlertSchema).def(false).getNullable();
+            return $;
         }
     }
+
 }

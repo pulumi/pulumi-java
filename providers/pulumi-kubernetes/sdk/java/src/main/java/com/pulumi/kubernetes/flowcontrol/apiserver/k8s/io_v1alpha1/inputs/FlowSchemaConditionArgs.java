@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FlowSchemaConditionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="lastTransitionTime")
-      private final @Nullable Output<String> lastTransitionTime;
+    private @Nullable Output<String> lastTransitionTime;
 
-    public Output<String> lastTransitionTime() {
-        return this.lastTransitionTime == null ? Codegen.empty() : this.lastTransitionTime;
+    public Optional<Output<String>> lastTransitionTime() {
+        return Optional.ofNullable(this.lastTransitionTime);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FlowSchemaConditionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FlowSchemaConditionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FlowSchemaConditionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class FlowSchemaConditionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public FlowSchemaConditionArgs(
-        @Nullable Output<String> lastTransitionTime,
-        @Nullable Output<String> message,
-        @Nullable Output<String> reason,
-        @Nullable Output<String> status,
-        @Nullable Output<String> type) {
-        this.lastTransitionTime = lastTransitionTime;
-        this.message = message;
-        this.reason = reason;
-        this.status = status;
-        this.type = type;
-    }
+    private FlowSchemaConditionArgs() {}
 
-    private FlowSchemaConditionArgs() {
-        this.lastTransitionTime = Codegen.empty();
-        this.message = Codegen.empty();
-        this.reason = Codegen.empty();
-        this.status = Codegen.empty();
-        this.type = Codegen.empty();
+    private FlowSchemaConditionArgs(FlowSchemaConditionArgs $) {
+        this.lastTransitionTime = $.lastTransitionTime;
+        this.message = $.message;
+        this.reason = $.reason;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSchemaConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> lastTransitionTime;
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> reason;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> type;
+        private FlowSchemaConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSchemaConditionArgs();
         }
 
         public Builder(FlowSchemaConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastTransitionTime = defaults.lastTransitionTime;
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new FlowSchemaConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lastTransitionTime(@Nullable Output<String> lastTransitionTime) {
-            this.lastTransitionTime = lastTransitionTime;
+            $.lastTransitionTime = lastTransitionTime;
             return this;
         }
-        public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
-            this.lastTransitionTime = Codegen.ofNullable(lastTransitionTime);
-            return this;
+
+        public Builder lastTransitionTime(String lastTransitionTime) {
+            return lastTransitionTime(Output.of(lastTransitionTime));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public FlowSchemaConditionArgs build() {
-            return new FlowSchemaConditionArgs(lastTransitionTime, message, reason, status, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public FlowSchemaConditionArgs build() {
+            return $;
         }
     }
+
 }

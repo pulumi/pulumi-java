@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2transitgateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PrefixListReferenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="blackhole")
-      private final @Nullable Output<Boolean> blackhole;
+    private @Nullable Output<Boolean> blackhole;
 
-    public Output<Boolean> blackhole() {
-        return this.blackhole == null ? Codegen.empty() : this.blackhole;
+    public Optional<Output<Boolean>> blackhole() {
+        return Optional.ofNullable(this.blackhole);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class PrefixListReferenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="prefixListId", required=true)
-      private final Output<String> prefixListId;
+    private Output<String> prefixListId;
 
     public Output<String> prefixListId() {
         return this.prefixListId;
@@ -43,10 +43,10 @@ public final class PrefixListReferenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="transitGatewayAttachmentId")
-      private final @Nullable Output<String> transitGatewayAttachmentId;
+    private @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Output<String> transitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
+    public Optional<Output<String>> transitGatewayAttachmentId() {
+        return Optional.ofNullable(this.transitGatewayAttachmentId);
     }
 
     /**
@@ -54,89 +54,80 @@ public final class PrefixListReferenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="transitGatewayRouteTableId", required=true)
-      private final Output<String> transitGatewayRouteTableId;
+    private Output<String> transitGatewayRouteTableId;
 
     public Output<String> transitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
 
-    public PrefixListReferenceArgs(
-        @Nullable Output<Boolean> blackhole,
-        Output<String> prefixListId,
-        @Nullable Output<String> transitGatewayAttachmentId,
-        Output<String> transitGatewayRouteTableId) {
-        this.blackhole = blackhole;
-        this.prefixListId = Objects.requireNonNull(prefixListId, "expected parameter 'prefixListId' to be non-null");
-        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
-        this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId, "expected parameter 'transitGatewayRouteTableId' to be non-null");
-    }
+    private PrefixListReferenceArgs() {}
 
-    private PrefixListReferenceArgs() {
-        this.blackhole = Codegen.empty();
-        this.prefixListId = Codegen.empty();
-        this.transitGatewayAttachmentId = Codegen.empty();
-        this.transitGatewayRouteTableId = Codegen.empty();
+    private PrefixListReferenceArgs(PrefixListReferenceArgs $) {
+        this.blackhole = $.blackhole;
+        this.prefixListId = $.prefixListId;
+        this.transitGatewayAttachmentId = $.transitGatewayAttachmentId;
+        this.transitGatewayRouteTableId = $.transitGatewayRouteTableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrefixListReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> blackhole;
-        private Output<String> prefixListId;
-        private @Nullable Output<String> transitGatewayAttachmentId;
-        private Output<String> transitGatewayRouteTableId;
+        private PrefixListReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrefixListReferenceArgs();
         }
 
         public Builder(PrefixListReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blackhole = defaults.blackhole;
-    	      this.prefixListId = defaults.prefixListId;
-    	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
-    	      this.transitGatewayRouteTableId = defaults.transitGatewayRouteTableId;
+            $ = new PrefixListReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blackhole(@Nullable Output<Boolean> blackhole) {
-            this.blackhole = blackhole;
+            $.blackhole = blackhole;
             return this;
         }
-        public Builder blackhole(@Nullable Boolean blackhole) {
-            this.blackhole = Codegen.ofNullable(blackhole);
-            return this;
+
+        public Builder blackhole(Boolean blackhole) {
+            return blackhole(Output.of(blackhole));
         }
+
         public Builder prefixListId(Output<String> prefixListId) {
-            this.prefixListId = Objects.requireNonNull(prefixListId);
+            $.prefixListId = prefixListId;
             return this;
         }
+
         public Builder prefixListId(String prefixListId) {
-            this.prefixListId = Output.of(Objects.requireNonNull(prefixListId));
-            return this;
+            return prefixListId(Output.of(prefixListId));
         }
+
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+            $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-        public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Codegen.ofNullable(transitGatewayAttachmentId);
-            return this;
+
+        public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
+            return transitGatewayAttachmentId(Output.of(transitGatewayAttachmentId));
         }
+
         public Builder transitGatewayRouteTableId(Output<String> transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId);
+            $.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
+
         public Builder transitGatewayRouteTableId(String transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Output.of(Objects.requireNonNull(transitGatewayRouteTableId));
-            return this;
-        }        public PrefixListReferenceArgs build() {
-            return new PrefixListReferenceArgs(blackhole, prefixListId, transitGatewayAttachmentId, transitGatewayRouteTableId);
+            return transitGatewayRouteTableId(Output.of(transitGatewayRouteTableId));
+        }
+
+        public PrefixListReferenceArgs build() {
+            $.prefixListId = Objects.requireNonNull($.prefixListId, "expected parameter 'prefixListId' to be non-null");
+            $.transitGatewayRouteTableId = Objects.requireNonNull($.transitGatewayRouteTableId, "expected parameter 'transitGatewayRouteTableId' to be non-null");
+            return $;
         }
     }
+
 }

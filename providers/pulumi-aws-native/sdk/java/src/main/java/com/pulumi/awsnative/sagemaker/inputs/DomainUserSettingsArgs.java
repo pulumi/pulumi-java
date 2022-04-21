@@ -8,10 +8,10 @@ import com.pulumi.awsnative.sagemaker.inputs.DomainKernelGatewayAppSettingsArgs;
 import com.pulumi.awsnative.sagemaker.inputs.DomainSharingSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="executionRole")
-      private final @Nullable Output<String> executionRole;
+    private @Nullable Output<String> executionRole;
 
-    public Output<String> executionRole() {
-        return this.executionRole == null ? Codegen.empty() : this.executionRole;
+    public Optional<Output<String>> executionRole() {
+        return Optional.ofNullable(this.executionRole);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="jupyterServerAppSettings")
-      private final @Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
+    private @Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
-    public Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings() {
-        return this.jupyterServerAppSettings == null ? Codegen.empty() : this.jupyterServerAppSettings;
+    public Optional<Output<DomainJupyterServerAppSettingsArgs>> jupyterServerAppSettings() {
+        return Optional.ofNullable(this.jupyterServerAppSettings);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kernelGatewayAppSettings")
-      private final @Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
+    private @Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
-    public Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings() {
-        return this.kernelGatewayAppSettings == null ? Codegen.empty() : this.kernelGatewayAppSettings;
+    public Optional<Output<DomainKernelGatewayAppSettingsArgs>> kernelGatewayAppSettings() {
+        return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -72,105 +72,92 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sharingSettings")
-      private final @Nullable Output<DomainSharingSettingsArgs> sharingSettings;
+    private @Nullable Output<DomainSharingSettingsArgs> sharingSettings;
 
-    public Output<DomainSharingSettingsArgs> sharingSettings() {
-        return this.sharingSettings == null ? Codegen.empty() : this.sharingSettings;
+    public Optional<Output<DomainSharingSettingsArgs>> sharingSettings() {
+        return Optional.ofNullable(this.sharingSettings);
     }
 
-    public DomainUserSettingsArgs(
-        @Nullable Output<String> executionRole,
-        @Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings,
-        @Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<DomainSharingSettingsArgs> sharingSettings) {
-        this.executionRole = executionRole;
-        this.jupyterServerAppSettings = jupyterServerAppSettings;
-        this.kernelGatewayAppSettings = kernelGatewayAppSettings;
-        this.securityGroups = securityGroups;
-        this.sharingSettings = sharingSettings;
-    }
+    private DomainUserSettingsArgs() {}
 
-    private DomainUserSettingsArgs() {
-        this.executionRole = Codegen.empty();
-        this.jupyterServerAppSettings = Codegen.empty();
-        this.kernelGatewayAppSettings = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.sharingSettings = Codegen.empty();
+    private DomainUserSettingsArgs(DomainUserSettingsArgs $) {
+        this.executionRole = $.executionRole;
+        this.jupyterServerAppSettings = $.jupyterServerAppSettings;
+        this.kernelGatewayAppSettings = $.kernelGatewayAppSettings;
+        this.securityGroups = $.securityGroups;
+        this.sharingSettings = $.sharingSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainUserSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> executionRole;
-        private @Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
-        private @Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<DomainSharingSettingsArgs> sharingSettings;
+        private DomainUserSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainUserSettingsArgs();
         }
 
         public Builder(DomainUserSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionRole = defaults.executionRole;
-    	      this.jupyterServerAppSettings = defaults.jupyterServerAppSettings;
-    	      this.kernelGatewayAppSettings = defaults.kernelGatewayAppSettings;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.sharingSettings = defaults.sharingSettings;
+            $ = new DomainUserSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executionRole(@Nullable Output<String> executionRole) {
-            this.executionRole = executionRole;
+            $.executionRole = executionRole;
             return this;
         }
-        public Builder executionRole(@Nullable String executionRole) {
-            this.executionRole = Codegen.ofNullable(executionRole);
-            return this;
+
+        public Builder executionRole(String executionRole) {
+            return executionRole(Output.of(executionRole));
         }
+
         public Builder jupyterServerAppSettings(@Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
-            this.jupyterServerAppSettings = jupyterServerAppSettings;
+            $.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
-        public Builder jupyterServerAppSettings(@Nullable DomainJupyterServerAppSettingsArgs jupyterServerAppSettings) {
-            this.jupyterServerAppSettings = Codegen.ofNullable(jupyterServerAppSettings);
-            return this;
+
+        public Builder jupyterServerAppSettings(DomainJupyterServerAppSettingsArgs jupyterServerAppSettings) {
+            return jupyterServerAppSettings(Output.of(jupyterServerAppSettings));
         }
+
         public Builder kernelGatewayAppSettings(@Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
-            this.kernelGatewayAppSettings = kernelGatewayAppSettings;
+            $.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
-        public Builder kernelGatewayAppSettings(@Nullable DomainKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
-            this.kernelGatewayAppSettings = Codegen.ofNullable(kernelGatewayAppSettings);
-            return this;
+
+        public Builder kernelGatewayAppSettings(DomainKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
+            return kernelGatewayAppSettings(Output.of(kernelGatewayAppSettings));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder sharingSettings(@Nullable Output<DomainSharingSettingsArgs> sharingSettings) {
-            this.sharingSettings = sharingSettings;
+            $.sharingSettings = sharingSettings;
             return this;
         }
-        public Builder sharingSettings(@Nullable DomainSharingSettingsArgs sharingSettings) {
-            this.sharingSettings = Codegen.ofNullable(sharingSettings);
-            return this;
-        }        public DomainUserSettingsArgs build() {
-            return new DomainUserSettingsArgs(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings);
+
+        public Builder sharingSettings(DomainSharingSettingsArgs sharingSettings) {
+            return sharingSettings(Output.of(sharingSettings));
+        }
+
+        public DomainUserSettingsArgs build() {
+            return $;
         }
     }
+
 }

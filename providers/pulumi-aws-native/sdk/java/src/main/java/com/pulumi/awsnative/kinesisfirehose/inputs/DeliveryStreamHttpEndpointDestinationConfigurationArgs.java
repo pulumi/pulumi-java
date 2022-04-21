@@ -12,9 +12,9 @@ import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRetryOptionsArg
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,210 +23,186 @@ public final class DeliveryStreamHttpEndpointDestinationConfigurationArgs extend
     public static final DeliveryStreamHttpEndpointDestinationConfigurationArgs Empty = new DeliveryStreamHttpEndpointDestinationConfigurationArgs();
 
     @Import(name="bufferingHints")
-      private final @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
+    private @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
 
-    public Output<DeliveryStreamBufferingHintsArgs> bufferingHints() {
-        return this.bufferingHints == null ? Codegen.empty() : this.bufferingHints;
+    public Optional<Output<DeliveryStreamBufferingHintsArgs>> bufferingHints() {
+        return Optional.ofNullable(this.bufferingHints);
     }
 
     @Import(name="cloudWatchLoggingOptions")
-      private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
+    private @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
-    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions() {
-        return this.cloudWatchLoggingOptions == null ? Codegen.empty() : this.cloudWatchLoggingOptions;
+    public Optional<Output<DeliveryStreamCloudWatchLoggingOptionsArgs>> cloudWatchLoggingOptions() {
+        return Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
 
     @Import(name="endpointConfiguration", required=true)
-      private final Output<DeliveryStreamHttpEndpointConfigurationArgs> endpointConfiguration;
+    private Output<DeliveryStreamHttpEndpointConfigurationArgs> endpointConfiguration;
 
     public Output<DeliveryStreamHttpEndpointConfigurationArgs> endpointConfiguration() {
         return this.endpointConfiguration;
     }
 
     @Import(name="processingConfiguration")
-      private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
+    private @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration() {
-        return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
+    public Optional<Output<DeliveryStreamProcessingConfigurationArgs>> processingConfiguration() {
+        return Optional.ofNullable(this.processingConfiguration);
     }
 
     @Import(name="requestConfiguration")
-      private final @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> requestConfiguration;
+    private @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> requestConfiguration;
 
-    public Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> requestConfiguration() {
-        return this.requestConfiguration == null ? Codegen.empty() : this.requestConfiguration;
+    public Optional<Output<DeliveryStreamHttpEndpointRequestConfigurationArgs>> requestConfiguration() {
+        return Optional.ofNullable(this.requestConfiguration);
     }
 
     @Import(name="retryOptions")
-      private final @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
+    private @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
 
-    public Output<DeliveryStreamRetryOptionsArgs> retryOptions() {
-        return this.retryOptions == null ? Codegen.empty() : this.retryOptions;
+    public Optional<Output<DeliveryStreamRetryOptionsArgs>> retryOptions() {
+        return Optional.ofNullable(this.retryOptions);
     }
 
     @Import(name="roleARN")
-      private final @Nullable Output<String> roleARN;
+    private @Nullable Output<String> roleARN;
 
-    public Output<String> roleARN() {
-        return this.roleARN == null ? Codegen.empty() : this.roleARN;
+    public Optional<Output<String>> roleARN() {
+        return Optional.ofNullable(this.roleARN);
     }
 
     @Import(name="s3BackupMode")
-      private final @Nullable Output<String> s3BackupMode;
+    private @Nullable Output<String> s3BackupMode;
 
-    public Output<String> s3BackupMode() {
-        return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
+    public Optional<Output<String>> s3BackupMode() {
+        return Optional.ofNullable(this.s3BackupMode);
     }
 
     @Import(name="s3Configuration", required=true)
-      private final Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
+    private Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
     public Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration() {
         return this.s3Configuration;
     }
 
-    public DeliveryStreamHttpEndpointDestinationConfigurationArgs(
-        @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints,
-        @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions,
-        Output<DeliveryStreamHttpEndpointConfigurationArgs> endpointConfiguration,
-        @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration,
-        @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> requestConfiguration,
-        @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions,
-        @Nullable Output<String> roleARN,
-        @Nullable Output<String> s3BackupMode,
-        Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
-        this.bufferingHints = bufferingHints;
-        this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
-        this.endpointConfiguration = Objects.requireNonNull(endpointConfiguration, "expected parameter 'endpointConfiguration' to be non-null");
-        this.processingConfiguration = processingConfiguration;
-        this.requestConfiguration = requestConfiguration;
-        this.retryOptions = retryOptions;
-        this.roleARN = roleARN;
-        this.s3BackupMode = s3BackupMode;
-        this.s3Configuration = Objects.requireNonNull(s3Configuration, "expected parameter 's3Configuration' to be non-null");
-    }
+    private DeliveryStreamHttpEndpointDestinationConfigurationArgs() {}
 
-    private DeliveryStreamHttpEndpointDestinationConfigurationArgs() {
-        this.bufferingHints = Codegen.empty();
-        this.cloudWatchLoggingOptions = Codegen.empty();
-        this.endpointConfiguration = Codegen.empty();
-        this.processingConfiguration = Codegen.empty();
-        this.requestConfiguration = Codegen.empty();
-        this.retryOptions = Codegen.empty();
-        this.roleARN = Codegen.empty();
-        this.s3BackupMode = Codegen.empty();
-        this.s3Configuration = Codegen.empty();
+    private DeliveryStreamHttpEndpointDestinationConfigurationArgs(DeliveryStreamHttpEndpointDestinationConfigurationArgs $) {
+        this.bufferingHints = $.bufferingHints;
+        this.cloudWatchLoggingOptions = $.cloudWatchLoggingOptions;
+        this.endpointConfiguration = $.endpointConfiguration;
+        this.processingConfiguration = $.processingConfiguration;
+        this.requestConfiguration = $.requestConfiguration;
+        this.retryOptions = $.retryOptions;
+        this.roleARN = $.roleARN;
+        this.s3BackupMode = $.s3BackupMode;
+        this.s3Configuration = $.s3Configuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamHttpEndpointDestinationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
-        private @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
-        private Output<DeliveryStreamHttpEndpointConfigurationArgs> endpointConfiguration;
-        private @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
-        private @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> requestConfiguration;
-        private @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
-        private @Nullable Output<String> roleARN;
-        private @Nullable Output<String> s3BackupMode;
-        private Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
+        private DeliveryStreamHttpEndpointDestinationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamHttpEndpointDestinationConfigurationArgs();
         }
 
         public Builder(DeliveryStreamHttpEndpointDestinationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bufferingHints = defaults.bufferingHints;
-    	      this.cloudWatchLoggingOptions = defaults.cloudWatchLoggingOptions;
-    	      this.endpointConfiguration = defaults.endpointConfiguration;
-    	      this.processingConfiguration = defaults.processingConfiguration;
-    	      this.requestConfiguration = defaults.requestConfiguration;
-    	      this.retryOptions = defaults.retryOptions;
-    	      this.roleARN = defaults.roleARN;
-    	      this.s3BackupMode = defaults.s3BackupMode;
-    	      this.s3Configuration = defaults.s3Configuration;
+            $ = new DeliveryStreamHttpEndpointDestinationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bufferingHints(@Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints) {
-            this.bufferingHints = bufferingHints;
+            $.bufferingHints = bufferingHints;
             return this;
         }
-        public Builder bufferingHints(@Nullable DeliveryStreamBufferingHintsArgs bufferingHints) {
-            this.bufferingHints = Codegen.ofNullable(bufferingHints);
-            return this;
+
+        public Builder bufferingHints(DeliveryStreamBufferingHintsArgs bufferingHints) {
+            return bufferingHints(Output.of(bufferingHints));
         }
+
         public Builder cloudWatchLoggingOptions(@Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
-            this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
+            $.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
-            this.cloudWatchLoggingOptions = Codegen.ofNullable(cloudWatchLoggingOptions);
-            return this;
+
+        public Builder cloudWatchLoggingOptions(DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
+            return cloudWatchLoggingOptions(Output.of(cloudWatchLoggingOptions));
         }
+
         public Builder endpointConfiguration(Output<DeliveryStreamHttpEndpointConfigurationArgs> endpointConfiguration) {
-            this.endpointConfiguration = Objects.requireNonNull(endpointConfiguration);
+            $.endpointConfiguration = endpointConfiguration;
             return this;
         }
+
         public Builder endpointConfiguration(DeliveryStreamHttpEndpointConfigurationArgs endpointConfiguration) {
-            this.endpointConfiguration = Output.of(Objects.requireNonNull(endpointConfiguration));
-            return this;
+            return endpointConfiguration(Output.of(endpointConfiguration));
         }
+
         public Builder processingConfiguration(@Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
-            this.processingConfiguration = processingConfiguration;
+            $.processingConfiguration = processingConfiguration;
             return this;
         }
-        public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
-            this.processingConfiguration = Codegen.ofNullable(processingConfiguration);
-            return this;
+
+        public Builder processingConfiguration(DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
+            return processingConfiguration(Output.of(processingConfiguration));
         }
+
         public Builder requestConfiguration(@Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> requestConfiguration) {
-            this.requestConfiguration = requestConfiguration;
+            $.requestConfiguration = requestConfiguration;
             return this;
         }
-        public Builder requestConfiguration(@Nullable DeliveryStreamHttpEndpointRequestConfigurationArgs requestConfiguration) {
-            this.requestConfiguration = Codegen.ofNullable(requestConfiguration);
-            return this;
+
+        public Builder requestConfiguration(DeliveryStreamHttpEndpointRequestConfigurationArgs requestConfiguration) {
+            return requestConfiguration(Output.of(requestConfiguration));
         }
+
         public Builder retryOptions(@Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions) {
-            this.retryOptions = retryOptions;
+            $.retryOptions = retryOptions;
             return this;
         }
-        public Builder retryOptions(@Nullable DeliveryStreamRetryOptionsArgs retryOptions) {
-            this.retryOptions = Codegen.ofNullable(retryOptions);
-            return this;
+
+        public Builder retryOptions(DeliveryStreamRetryOptionsArgs retryOptions) {
+            return retryOptions(Output.of(retryOptions));
         }
+
         public Builder roleARN(@Nullable Output<String> roleARN) {
-            this.roleARN = roleARN;
+            $.roleARN = roleARN;
             return this;
         }
-        public Builder roleARN(@Nullable String roleARN) {
-            this.roleARN = Codegen.ofNullable(roleARN);
-            return this;
+
+        public Builder roleARN(String roleARN) {
+            return roleARN(Output.of(roleARN));
         }
+
         public Builder s3BackupMode(@Nullable Output<String> s3BackupMode) {
-            this.s3BackupMode = s3BackupMode;
+            $.s3BackupMode = s3BackupMode;
             return this;
         }
-        public Builder s3BackupMode(@Nullable String s3BackupMode) {
-            this.s3BackupMode = Codegen.ofNullable(s3BackupMode);
-            return this;
+
+        public Builder s3BackupMode(String s3BackupMode) {
+            return s3BackupMode(Output.of(s3BackupMode));
         }
+
         public Builder s3Configuration(Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
-            this.s3Configuration = Objects.requireNonNull(s3Configuration);
+            $.s3Configuration = s3Configuration;
             return this;
         }
+
         public Builder s3Configuration(DeliveryStreamS3DestinationConfigurationArgs s3Configuration) {
-            this.s3Configuration = Output.of(Objects.requireNonNull(s3Configuration));
-            return this;
-        }        public DeliveryStreamHttpEndpointDestinationConfigurationArgs build() {
-            return new DeliveryStreamHttpEndpointDestinationConfigurationArgs(bufferingHints, cloudWatchLoggingOptions, endpointConfiguration, processingConfiguration, requestConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration);
+            return s3Configuration(Output.of(s3Configuration));
+        }
+
+        public DeliveryStreamHttpEndpointDestinationConfigurationArgs build() {
+            $.endpointConfiguration = Objects.requireNonNull($.endpointConfiguration, "expected parameter 'endpointConfiguration' to be non-null");
+            $.s3Configuration = Objects.requireNonNull($.s3Configuration, "expected parameter 's3Configuration' to be non-null");
+            return $;
         }
     }
+
 }

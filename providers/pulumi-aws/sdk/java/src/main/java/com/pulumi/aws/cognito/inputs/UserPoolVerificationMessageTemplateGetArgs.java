@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends com.pulumi
      * 
      */
     @Import(name="defaultEmailOption")
-      private final @Nullable Output<String> defaultEmailOption;
+    private @Nullable Output<String> defaultEmailOption;
 
-    public Output<String> defaultEmailOption() {
-        return this.defaultEmailOption == null ? Codegen.empty() : this.defaultEmailOption;
+    public Optional<Output<String>> defaultEmailOption() {
+        return Optional.ofNullable(this.defaultEmailOption);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends com.pulumi
      * 
      */
     @Import(name="emailMessage")
-      private final @Nullable Output<String> emailMessage;
+    private @Nullable Output<String> emailMessage;
 
-    public Output<String> emailMessage() {
-        return this.emailMessage == null ? Codegen.empty() : this.emailMessage;
+    public Optional<Output<String>> emailMessage() {
+        return Optional.ofNullable(this.emailMessage);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends com.pulumi
      * 
      */
     @Import(name="emailMessageByLink")
-      private final @Nullable Output<String> emailMessageByLink;
+    private @Nullable Output<String> emailMessageByLink;
 
-    public Output<String> emailMessageByLink() {
-        return this.emailMessageByLink == null ? Codegen.empty() : this.emailMessageByLink;
+    public Optional<Output<String>> emailMessageByLink() {
+        return Optional.ofNullable(this.emailMessageByLink);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends com.pulumi
      * 
      */
     @Import(name="emailSubject")
-      private final @Nullable Output<String> emailSubject;
+    private @Nullable Output<String> emailSubject;
 
-    public Output<String> emailSubject() {
-        return this.emailSubject == null ? Codegen.empty() : this.emailSubject;
+    public Optional<Output<String>> emailSubject() {
+        return Optional.ofNullable(this.emailSubject);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends com.pulumi
      * 
      */
     @Import(name="emailSubjectByLink")
-      private final @Nullable Output<String> emailSubjectByLink;
+    private @Nullable Output<String> emailSubjectByLink;
 
-    public Output<String> emailSubjectByLink() {
-        return this.emailSubjectByLink == null ? Codegen.empty() : this.emailSubjectByLink;
+    public Optional<Output<String>> emailSubjectByLink() {
+        return Optional.ofNullable(this.emailSubjectByLink);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends com.pulumi
      * 
      */
     @Import(name="smsMessage")
-      private final @Nullable Output<String> smsMessage;
+    private @Nullable Output<String> smsMessage;
 
-    public Output<String> smsMessage() {
-        return this.smsMessage == null ? Codegen.empty() : this.smsMessage;
+    public Optional<Output<String>> smsMessage() {
+        return Optional.ofNullable(this.smsMessage);
     }
 
-    public UserPoolVerificationMessageTemplateGetArgs(
-        @Nullable Output<String> defaultEmailOption,
-        @Nullable Output<String> emailMessage,
-        @Nullable Output<String> emailMessageByLink,
-        @Nullable Output<String> emailSubject,
-        @Nullable Output<String> emailSubjectByLink,
-        @Nullable Output<String> smsMessage) {
-        this.defaultEmailOption = defaultEmailOption;
-        this.emailMessage = emailMessage;
-        this.emailMessageByLink = emailMessageByLink;
-        this.emailSubject = emailSubject;
-        this.emailSubjectByLink = emailSubjectByLink;
-        this.smsMessage = smsMessage;
-    }
+    private UserPoolVerificationMessageTemplateGetArgs() {}
 
-    private UserPoolVerificationMessageTemplateGetArgs() {
-        this.defaultEmailOption = Codegen.empty();
-        this.emailMessage = Codegen.empty();
-        this.emailMessageByLink = Codegen.empty();
-        this.emailSubject = Codegen.empty();
-        this.emailSubjectByLink = Codegen.empty();
-        this.smsMessage = Codegen.empty();
+    private UserPoolVerificationMessageTemplateGetArgs(UserPoolVerificationMessageTemplateGetArgs $) {
+        this.defaultEmailOption = $.defaultEmailOption;
+        this.emailMessage = $.emailMessage;
+        this.emailMessageByLink = $.emailMessageByLink;
+        this.emailSubject = $.emailSubject;
+        this.emailSubjectByLink = $.emailSubjectByLink;
+        this.smsMessage = $.smsMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolVerificationMessageTemplateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultEmailOption;
-        private @Nullable Output<String> emailMessage;
-        private @Nullable Output<String> emailMessageByLink;
-        private @Nullable Output<String> emailSubject;
-        private @Nullable Output<String> emailSubjectByLink;
-        private @Nullable Output<String> smsMessage;
+        private UserPoolVerificationMessageTemplateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolVerificationMessageTemplateGetArgs();
         }
 
         public Builder(UserPoolVerificationMessageTemplateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultEmailOption = defaults.defaultEmailOption;
-    	      this.emailMessage = defaults.emailMessage;
-    	      this.emailMessageByLink = defaults.emailMessageByLink;
-    	      this.emailSubject = defaults.emailSubject;
-    	      this.emailSubjectByLink = defaults.emailSubjectByLink;
-    	      this.smsMessage = defaults.smsMessage;
+            $ = new UserPoolVerificationMessageTemplateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultEmailOption(@Nullable Output<String> defaultEmailOption) {
-            this.defaultEmailOption = defaultEmailOption;
+            $.defaultEmailOption = defaultEmailOption;
             return this;
         }
-        public Builder defaultEmailOption(@Nullable String defaultEmailOption) {
-            this.defaultEmailOption = Codegen.ofNullable(defaultEmailOption);
-            return this;
+
+        public Builder defaultEmailOption(String defaultEmailOption) {
+            return defaultEmailOption(Output.of(defaultEmailOption));
         }
+
         public Builder emailMessage(@Nullable Output<String> emailMessage) {
-            this.emailMessage = emailMessage;
+            $.emailMessage = emailMessage;
             return this;
         }
-        public Builder emailMessage(@Nullable String emailMessage) {
-            this.emailMessage = Codegen.ofNullable(emailMessage);
-            return this;
+
+        public Builder emailMessage(String emailMessage) {
+            return emailMessage(Output.of(emailMessage));
         }
+
         public Builder emailMessageByLink(@Nullable Output<String> emailMessageByLink) {
-            this.emailMessageByLink = emailMessageByLink;
+            $.emailMessageByLink = emailMessageByLink;
             return this;
         }
-        public Builder emailMessageByLink(@Nullable String emailMessageByLink) {
-            this.emailMessageByLink = Codegen.ofNullable(emailMessageByLink);
-            return this;
+
+        public Builder emailMessageByLink(String emailMessageByLink) {
+            return emailMessageByLink(Output.of(emailMessageByLink));
         }
+
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
-            this.emailSubject = emailSubject;
+            $.emailSubject = emailSubject;
             return this;
         }
-        public Builder emailSubject(@Nullable String emailSubject) {
-            this.emailSubject = Codegen.ofNullable(emailSubject);
-            return this;
+
+        public Builder emailSubject(String emailSubject) {
+            return emailSubject(Output.of(emailSubject));
         }
+
         public Builder emailSubjectByLink(@Nullable Output<String> emailSubjectByLink) {
-            this.emailSubjectByLink = emailSubjectByLink;
+            $.emailSubjectByLink = emailSubjectByLink;
             return this;
         }
-        public Builder emailSubjectByLink(@Nullable String emailSubjectByLink) {
-            this.emailSubjectByLink = Codegen.ofNullable(emailSubjectByLink);
-            return this;
+
+        public Builder emailSubjectByLink(String emailSubjectByLink) {
+            return emailSubjectByLink(Output.of(emailSubjectByLink));
         }
+
         public Builder smsMessage(@Nullable Output<String> smsMessage) {
-            this.smsMessage = smsMessage;
+            $.smsMessage = smsMessage;
             return this;
         }
-        public Builder smsMessage(@Nullable String smsMessage) {
-            this.smsMessage = Codegen.ofNullable(smsMessage);
-            return this;
-        }        public UserPoolVerificationMessageTemplateGetArgs build() {
-            return new UserPoolVerificationMessageTemplateGetArgs(defaultEmailOption, emailMessage, emailMessageByLink, emailSubject, emailSubjectByLink, smsMessage);
+
+        public Builder smsMessage(String smsMessage) {
+            return smsMessage(Output.of(smsMessage));
+        }
+
+        public UserPoolVerificationMessageTemplateGetArgs build() {
+            return $;
         }
     }
+
 }

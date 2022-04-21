@@ -23,45 +23,44 @@ public final class FirewallPolicyTransportSecurityResponse extends com.pulumi.re
      * 
      */
     @Import(name="certificateAuthority")
-      private final @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
+    private @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
 
     public Optional<FirewallPolicyCertificateAuthorityResponse> certificateAuthority() {
-        return this.certificateAuthority == null ? Optional.empty() : Optional.ofNullable(this.certificateAuthority);
+        return Optional.ofNullable(this.certificateAuthority);
     }
 
-    public FirewallPolicyTransportSecurityResponse(@Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority) {
-        this.certificateAuthority = certificateAuthority;
-    }
+    private FirewallPolicyTransportSecurityResponse() {}
 
-    private FirewallPolicyTransportSecurityResponse() {
-        this.certificateAuthority = null;
+    private FirewallPolicyTransportSecurityResponse(FirewallPolicyTransportSecurityResponse $) {
+        this.certificateAuthority = $.certificateAuthority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyTransportSecurityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
+        private FirewallPolicyTransportSecurityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyTransportSecurityResponse();
         }
 
         public Builder(FirewallPolicyTransportSecurityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthority = defaults.certificateAuthority;
+            $ = new FirewallPolicyTransportSecurityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthority(@Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority) {
-            this.certificateAuthority = certificateAuthority;
+            $.certificateAuthority = certificateAuthority;
             return this;
-        }        public FirewallPolicyTransportSecurityResponse build() {
-            return new FirewallPolicyTransportSecurityResponse(certificateAuthority);
+        }
+
+        public FirewallPolicyTransportSecurityResponse build() {
+            return $;
         }
     }
+
 }

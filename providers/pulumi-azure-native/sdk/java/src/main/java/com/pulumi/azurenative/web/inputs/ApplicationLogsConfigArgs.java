@@ -8,8 +8,8 @@ import com.pulumi.azurenative.web.inputs.AzureTableStorageApplicationLogsConfigA
 import com.pulumi.azurenative.web.inputs.FileSystemApplicationLogsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ApplicationLogsConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="azureBlobStorage")
-      private final @Nullable Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage;
+    private @Nullable Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage;
 
-    public Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage() {
-        return this.azureBlobStorage == null ? Codegen.empty() : this.azureBlobStorage;
+    public Optional<Output<AzureBlobStorageApplicationLogsConfigArgs>> azureBlobStorage() {
+        return Optional.ofNullable(this.azureBlobStorage);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationLogsConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="azureTableStorage")
-      private final @Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage;
+    private @Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage;
 
-    public Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage() {
-        return this.azureTableStorage == null ? Codegen.empty() : this.azureTableStorage;
+    public Optional<Output<AzureTableStorageApplicationLogsConfigArgs>> azureTableStorage() {
+        return Optional.ofNullable(this.azureTableStorage);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ApplicationLogsConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="fileSystem")
-      private final @Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem;
+    private @Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem;
 
-    public Output<FileSystemApplicationLogsConfigArgs> fileSystem() {
-        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
+    public Optional<Output<FileSystemApplicationLogsConfigArgs>> fileSystem() {
+        return Optional.ofNullable(this.fileSystem);
     }
 
-    public ApplicationLogsConfigArgs(
-        @Nullable Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage,
-        @Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage,
-        @Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem) {
-        this.azureBlobStorage = azureBlobStorage;
-        this.azureTableStorage = azureTableStorage;
-        this.fileSystem = fileSystem;
-    }
+    private ApplicationLogsConfigArgs() {}
 
-    private ApplicationLogsConfigArgs() {
-        this.azureBlobStorage = Codegen.empty();
-        this.azureTableStorage = Codegen.empty();
-        this.fileSystem = Codegen.empty();
+    private ApplicationLogsConfigArgs(ApplicationLogsConfigArgs $) {
+        this.azureBlobStorage = $.azureBlobStorage;
+        this.azureTableStorage = $.azureTableStorage;
+        this.fileSystem = $.fileSystem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationLogsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage;
-        private @Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage;
-        private @Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem;
+        private ApplicationLogsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationLogsConfigArgs();
         }
 
         public Builder(ApplicationLogsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureBlobStorage = defaults.azureBlobStorage;
-    	      this.azureTableStorage = defaults.azureTableStorage;
-    	      this.fileSystem = defaults.fileSystem;
+            $ = new ApplicationLogsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureBlobStorage(@Nullable Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage) {
-            this.azureBlobStorage = azureBlobStorage;
+            $.azureBlobStorage = azureBlobStorage;
             return this;
         }
-        public Builder azureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigArgs azureBlobStorage) {
-            this.azureBlobStorage = Codegen.ofNullable(azureBlobStorage);
-            return this;
+
+        public Builder azureBlobStorage(AzureBlobStorageApplicationLogsConfigArgs azureBlobStorage) {
+            return azureBlobStorage(Output.of(azureBlobStorage));
         }
+
         public Builder azureTableStorage(@Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage) {
-            this.azureTableStorage = azureTableStorage;
+            $.azureTableStorage = azureTableStorage;
             return this;
         }
-        public Builder azureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigArgs azureTableStorage) {
-            this.azureTableStorage = Codegen.ofNullable(azureTableStorage);
-            return this;
+
+        public Builder azureTableStorage(AzureTableStorageApplicationLogsConfigArgs azureTableStorage) {
+            return azureTableStorage(Output.of(azureTableStorage));
         }
+
         public Builder fileSystem(@Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem) {
-            this.fileSystem = fileSystem;
+            $.fileSystem = fileSystem;
             return this;
         }
-        public Builder fileSystem(@Nullable FileSystemApplicationLogsConfigArgs fileSystem) {
-            this.fileSystem = Codegen.ofNullable(fileSystem);
-            return this;
-        }        public ApplicationLogsConfigArgs build() {
-            return new ApplicationLogsConfigArgs(azureBlobStorage, azureTableStorage, fileSystem);
+
+        public Builder fileSystem(FileSystemApplicationLogsConfigArgs fileSystem) {
+            return fileSystem(Output.of(fileSystem));
+        }
+
+        public ApplicationLogsConfigArgs build() {
+            return $;
         }
     }
+
 }

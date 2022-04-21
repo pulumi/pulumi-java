@@ -17,7 +17,7 @@ public final class AutoscalerStatusDetailsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -28,55 +28,52 @@ public final class AutoscalerStatusDetailsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AutoscalerStatusDetailsResponse(
-        String message,
-        String type) {
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AutoscalerStatusDetailsResponse() {}
 
-    private AutoscalerStatusDetailsResponse() {
-        this.message = null;
-        this.type = null;
+    private AutoscalerStatusDetailsResponse(AutoscalerStatusDetailsResponse $) {
+        this.message = $.message;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalerStatusDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String message;
-        private String type;
+        private AutoscalerStatusDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalerStatusDetailsResponse();
         }
 
         public Builder(AutoscalerStatusDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.type = defaults.type;
+            $ = new AutoscalerStatusDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AutoscalerStatusDetailsResponse build() {
-            return new AutoscalerStatusDetailsResponse(message, type);
+        }
+
+        public AutoscalerStatusDetailsResponse build() {
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

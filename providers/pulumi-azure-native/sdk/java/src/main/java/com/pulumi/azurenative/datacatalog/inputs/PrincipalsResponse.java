@@ -23,10 +23,10 @@ public final class PrincipalsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class PrincipalsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="upn")
-      private final @Nullable String upn;
+    private @Nullable String upn;
 
     public Optional<String> upn() {
-        return this.upn == null ? Optional.empty() : Optional.ofNullable(this.upn);
+        return Optional.ofNullable(this.upn);
     }
 
-    public PrincipalsResponse(
-        @Nullable String objectId,
-        @Nullable String upn) {
-        this.objectId = objectId;
-        this.upn = upn;
-    }
+    private PrincipalsResponse() {}
 
-    private PrincipalsResponse() {
-        this.objectId = null;
-        this.upn = null;
+    private PrincipalsResponse(PrincipalsResponse $) {
+        this.objectId = $.objectId;
+        this.upn = $.upn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrincipalsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String objectId;
-        private @Nullable String upn;
+        private PrincipalsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrincipalsResponse();
         }
 
         public Builder(PrincipalsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectId = defaults.objectId;
-    	      this.upn = defaults.upn;
+            $ = new PrincipalsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
         public Builder upn(@Nullable String upn) {
-            this.upn = upn;
+            $.upn = upn;
             return this;
-        }        public PrincipalsResponse build() {
-            return new PrincipalsResponse(objectId, upn);
+        }
+
+        public PrincipalsResponse build() {
+            return $;
         }
     }
+
 }

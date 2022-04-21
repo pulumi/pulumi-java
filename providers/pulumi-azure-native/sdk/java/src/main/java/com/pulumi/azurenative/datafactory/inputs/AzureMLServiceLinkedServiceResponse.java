@@ -32,10 +32,10 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="mlWorkspaceName", required=true)
-      private final Object mlWorkspaceName;
+    private Object mlWorkspaceName;
 
     public Object mlWorkspaceName() {
         return this.mlWorkspaceName;
@@ -87,10 +87,10 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -98,7 +98,7 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Object resourceGroupName;
+    private Object resourceGroupName;
 
     public Object resourceGroupName() {
         return this.resourceGroupName;
@@ -109,10 +109,10 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Object servicePrincipalId;
+    private @Nullable Object servicePrincipalId;
 
     public Optional<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="servicePrincipalKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
-        return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
+        return Optional.ofNullable(this.servicePrincipalKey);
     }
 
     /**
@@ -131,7 +131,7 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="subscriptionId", required=true)
-      private final Object subscriptionId;
+    private Object subscriptionId;
 
     public Object subscriptionId() {
         return this.subscriptionId;
@@ -142,10 +142,10 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="tenant")
-      private final @Nullable Object tenant;
+    private @Nullable Object tenant;
 
     public Optional<Object> tenant() {
-        return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
+        return Optional.ofNullable(this.tenant);
     }
 
     /**
@@ -154,148 +154,118 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureMLServiceLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object mlWorkspaceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Object resourceGroupName,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        Object subscriptionId,
-        @Nullable Object tenant,
-        String type) {
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.mlWorkspaceName = Objects.requireNonNull(mlWorkspaceName, "expected parameter 'mlWorkspaceName' to be non-null");
-        this.parameters = parameters;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.servicePrincipalId = servicePrincipalId;
-        this.servicePrincipalKey = servicePrincipalKey;
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-        this.tenant = tenant;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureMLServiceLinkedServiceResponse() {}
 
-    private AzureMLServiceLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.connectVia = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.mlWorkspaceName = null;
-        this.parameters = Map.of();
-        this.resourceGroupName = null;
-        this.servicePrincipalId = null;
-        this.servicePrincipalKey = null;
-        this.subscriptionId = null;
-        this.tenant = null;
-        this.type = null;
+    private AzureMLServiceLinkedServiceResponse(AzureMLServiceLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.mlWorkspaceName = $.mlWorkspaceName;
+        this.parameters = $.parameters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.subscriptionId = $.subscriptionId;
+        this.tenant = $.tenant;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMLServiceLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private Object mlWorkspaceName;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private Object resourceGroupName;
-        private @Nullable Object servicePrincipalId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-        private Object subscriptionId;
-        private @Nullable Object tenant;
-        private String type;
+        private AzureMLServiceLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMLServiceLinkedServiceResponse();
         }
 
         public Builder(AzureMLServiceLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.mlWorkspaceName = defaults.mlWorkspaceName;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
+            $ = new AzureMLServiceLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder mlWorkspaceName(Object mlWorkspaceName) {
-            this.mlWorkspaceName = Objects.requireNonNull(mlWorkspaceName);
+            $.mlWorkspaceName = mlWorkspaceName;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder resourceGroupName(Object resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-            this.servicePrincipalKey = servicePrincipalKey;
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
+
         public Builder subscriptionId(Object subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureMLServiceLinkedServiceResponse build() {
-            return new AzureMLServiceLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, mlWorkspaceName, parameters, resourceGroupName, servicePrincipalId, servicePrincipalKey, subscriptionId, tenant, type);
+        }
+
+        public AzureMLServiceLinkedServiceResponse build() {
+            $.mlWorkspaceName = Objects.requireNonNull($.mlWorkspaceName, "expected parameter 'mlWorkspaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

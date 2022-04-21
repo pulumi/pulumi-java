@@ -18,10 +18,10 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCoipPoolArgs Empty = new GetCoipPoolArgs();
 
     @Import(name="filters")
-      private final @Nullable List<GetCoipPoolFilter> filters;
+    private @Nullable List<GetCoipPoolFilter> filters;
 
-    public List<GetCoipPoolFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetCoipPoolFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="localGatewayRouteTableId")
-      private final @Nullable String localGatewayRouteTableId;
+    private @Nullable String localGatewayRouteTableId;
 
     public Optional<String> localGatewayRouteTableId() {
-        return this.localGatewayRouteTableId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayRouteTableId);
+        return Optional.ofNullable(this.localGatewayRouteTableId);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="poolId")
-      private final @Nullable String poolId;
+    private @Nullable String poolId;
 
     public Optional<String> poolId() {
-        return this.poolId == null ? Optional.empty() : Optional.ofNullable(this.poolId);
+        return Optional.ofNullable(this.poolId);
     }
 
     /**
@@ -52,76 +52,66 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetCoipPoolArgs(
-        @Nullable List<GetCoipPoolFilter> filters,
-        @Nullable String localGatewayRouteTableId,
-        @Nullable String poolId,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.localGatewayRouteTableId = localGatewayRouteTableId;
-        this.poolId = poolId;
-        this.tags = tags;
-    }
+    private GetCoipPoolArgs() {}
 
-    private GetCoipPoolArgs() {
-        this.filters = List.of();
-        this.localGatewayRouteTableId = null;
-        this.poolId = null;
-        this.tags = Map.of();
+    private GetCoipPoolArgs(GetCoipPoolArgs $) {
+        this.filters = $.filters;
+        this.localGatewayRouteTableId = $.localGatewayRouteTableId;
+        this.poolId = $.poolId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCoipPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetCoipPoolFilter> filters;
-        private @Nullable String localGatewayRouteTableId;
-        private @Nullable String poolId;
-        private @Nullable Map<String,String> tags;
+        private GetCoipPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCoipPoolArgs();
         }
 
         public Builder(GetCoipPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.localGatewayRouteTableId = defaults.localGatewayRouteTableId;
-    	      this.poolId = defaults.poolId;
-    	      this.tags = defaults.tags;
+            $ = new GetCoipPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetCoipPoolFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetCoipPoolFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = localGatewayRouteTableId;
+            $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
+
         public Builder poolId(@Nullable String poolId) {
-            this.poolId = poolId;
+            $.poolId = poolId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetCoipPoolArgs build() {
-            return new GetCoipPoolArgs(filters, localGatewayRouteTableId, poolId, tags);
+        }
+
+        public GetCoipPoolArgs build() {
+            return $;
         }
     }
+
 }

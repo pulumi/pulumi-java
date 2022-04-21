@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
      * 
      */
     @Import(name="bigqueryConnectionSpec")
-      private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
+    private @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
 
-    public Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec() {
-        return this.bigqueryConnectionSpec == null ? Codegen.empty() : this.bigqueryConnectionSpec;
+    public Optional<Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs>> bigqueryConnectionSpec() {
+        return Optional.ofNullable(this.bigqueryConnectionSpec);
     }
 
-    public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(@Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec) {
-        this.bigqueryConnectionSpec = bigqueryConnectionSpec;
-    }
+    private GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs() {}
 
-    private GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs() {
-        this.bigqueryConnectionSpec = Codegen.empty();
+    private GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs $) {
+        this.bigqueryConnectionSpec = $.bigqueryConnectionSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
+        private GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryConnectionSpec = defaults.bigqueryConnectionSpec;
+            $ = new GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryConnectionSpec(@Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec) {
-            this.bigqueryConnectionSpec = bigqueryConnectionSpec;
+            $.bigqueryConnectionSpec = bigqueryConnectionSpec;
             return this;
         }
-        public Builder bigqueryConnectionSpec(@Nullable GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs bigqueryConnectionSpec) {
-            this.bigqueryConnectionSpec = Codegen.ofNullable(bigqueryConnectionSpec);
-            return this;
-        }        public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs build() {
-            return new GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(bigqueryConnectionSpec);
+
+        public Builder bigqueryConnectionSpec(GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs bigqueryConnectionSpec) {
+            return bigqueryConnectionSpec(Output.of(bigqueryConnectionSpec));
+        }
+
+        public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs build() {
+            return $;
         }
     }
+
 }

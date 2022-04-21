@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,99 @@ public final class TopicRuleAssetPropertyVariantArgs extends com.pulumi.resource
     public static final TopicRuleAssetPropertyVariantArgs Empty = new TopicRuleAssetPropertyVariantArgs();
 
     @Import(name="booleanValue")
-      private final @Nullable Output<String> booleanValue;
+    private @Nullable Output<String> booleanValue;
 
-    public Output<String> booleanValue() {
-        return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
+    public Optional<Output<String>> booleanValue() {
+        return Optional.ofNullable(this.booleanValue);
     }
 
     @Import(name="doubleValue")
-      private final @Nullable Output<String> doubleValue;
+    private @Nullable Output<String> doubleValue;
 
-    public Output<String> doubleValue() {
-        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
+    public Optional<Output<String>> doubleValue() {
+        return Optional.ofNullable(this.doubleValue);
     }
 
     @Import(name="integerValue")
-      private final @Nullable Output<String> integerValue;
+    private @Nullable Output<String> integerValue;
 
-    public Output<String> integerValue() {
-        return this.integerValue == null ? Codegen.empty() : this.integerValue;
+    public Optional<Output<String>> integerValue() {
+        return Optional.ofNullable(this.integerValue);
     }
 
     @Import(name="stringValue")
-      private final @Nullable Output<String> stringValue;
+    private @Nullable Output<String> stringValue;
 
-    public Output<String> stringValue() {
-        return this.stringValue == null ? Codegen.empty() : this.stringValue;
+    public Optional<Output<String>> stringValue() {
+        return Optional.ofNullable(this.stringValue);
     }
 
-    public TopicRuleAssetPropertyVariantArgs(
-        @Nullable Output<String> booleanValue,
-        @Nullable Output<String> doubleValue,
-        @Nullable Output<String> integerValue,
-        @Nullable Output<String> stringValue) {
-        this.booleanValue = booleanValue;
-        this.doubleValue = doubleValue;
-        this.integerValue = integerValue;
-        this.stringValue = stringValue;
-    }
+    private TopicRuleAssetPropertyVariantArgs() {}
 
-    private TopicRuleAssetPropertyVariantArgs() {
-        this.booleanValue = Codegen.empty();
-        this.doubleValue = Codegen.empty();
-        this.integerValue = Codegen.empty();
-        this.stringValue = Codegen.empty();
+    private TopicRuleAssetPropertyVariantArgs(TopicRuleAssetPropertyVariantArgs $) {
+        this.booleanValue = $.booleanValue;
+        this.doubleValue = $.doubleValue;
+        this.integerValue = $.integerValue;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleAssetPropertyVariantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> booleanValue;
-        private @Nullable Output<String> doubleValue;
-        private @Nullable Output<String> integerValue;
-        private @Nullable Output<String> stringValue;
+        private TopicRuleAssetPropertyVariantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleAssetPropertyVariantArgs();
         }
 
         public Builder(TopicRuleAssetPropertyVariantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanValue = defaults.booleanValue;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.integerValue = defaults.integerValue;
-    	      this.stringValue = defaults.stringValue;
+            $ = new TopicRuleAssetPropertyVariantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanValue(@Nullable Output<String> booleanValue) {
-            this.booleanValue = booleanValue;
+            $.booleanValue = booleanValue;
             return this;
         }
-        public Builder booleanValue(@Nullable String booleanValue) {
-            this.booleanValue = Codegen.ofNullable(booleanValue);
-            return this;
+
+        public Builder booleanValue(String booleanValue) {
+            return booleanValue(Output.of(booleanValue));
         }
+
         public Builder doubleValue(@Nullable Output<String> doubleValue) {
-            this.doubleValue = doubleValue;
+            $.doubleValue = doubleValue;
             return this;
         }
-        public Builder doubleValue(@Nullable String doubleValue) {
-            this.doubleValue = Codegen.ofNullable(doubleValue);
-            return this;
+
+        public Builder doubleValue(String doubleValue) {
+            return doubleValue(Output.of(doubleValue));
         }
+
         public Builder integerValue(@Nullable Output<String> integerValue) {
-            this.integerValue = integerValue;
+            $.integerValue = integerValue;
             return this;
         }
-        public Builder integerValue(@Nullable String integerValue) {
-            this.integerValue = Codegen.ofNullable(integerValue);
-            return this;
+
+        public Builder integerValue(String integerValue) {
+            return integerValue(Output.of(integerValue));
         }
+
         public Builder stringValue(@Nullable Output<String> stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
         }
-        public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Codegen.ofNullable(stringValue);
-            return this;
-        }        public TopicRuleAssetPropertyVariantArgs build() {
-            return new TopicRuleAssetPropertyVariantArgs(booleanValue, doubleValue, integerValue, stringValue);
+
+        public Builder stringValue(String stringValue) {
+            return stringValue(Output.of(stringValue));
+        }
+
+        public TopicRuleAssetPropertyVariantArgs build() {
+            return $;
         }
     }
+
 }

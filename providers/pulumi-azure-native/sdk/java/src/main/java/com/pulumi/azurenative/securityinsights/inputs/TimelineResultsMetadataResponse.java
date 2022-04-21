@@ -26,7 +26,7 @@ public final class TimelineResultsMetadataResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="aggregations", required=true)
-      private final List<TimelineAggregationResponse> aggregations;
+    private List<TimelineAggregationResponse> aggregations;
 
     public List<TimelineAggregationResponse> aggregations() {
         return this.aggregations;
@@ -37,10 +37,10 @@ public final class TimelineResultsMetadataResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="errors")
-      private final @Nullable List<TimelineErrorResponse> errors;
+    private @Nullable List<TimelineErrorResponse> errors;
 
-    public List<TimelineErrorResponse> errors() {
-        return this.errors == null ? List.of() : this.errors;
+    public Optional<List<TimelineErrorResponse>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     /**
@@ -48,70 +48,66 @@ public final class TimelineResultsMetadataResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="totalCount", required=true)
-      private final Integer totalCount;
+    private Integer totalCount;
 
     public Integer totalCount() {
         return this.totalCount;
     }
 
-    public TimelineResultsMetadataResponse(
-        List<TimelineAggregationResponse> aggregations,
-        @Nullable List<TimelineErrorResponse> errors,
-        Integer totalCount) {
-        this.aggregations = Objects.requireNonNull(aggregations, "expected parameter 'aggregations' to be non-null");
-        this.errors = errors;
-        this.totalCount = Objects.requireNonNull(totalCount, "expected parameter 'totalCount' to be non-null");
-    }
+    private TimelineResultsMetadataResponse() {}
 
-    private TimelineResultsMetadataResponse() {
-        this.aggregations = List.of();
-        this.errors = List.of();
-        this.totalCount = null;
+    private TimelineResultsMetadataResponse(TimelineResultsMetadataResponse $) {
+        this.aggregations = $.aggregations;
+        this.errors = $.errors;
+        this.totalCount = $.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimelineResultsMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<TimelineAggregationResponse> aggregations;
-        private @Nullable List<TimelineErrorResponse> errors;
-        private Integer totalCount;
+        private TimelineResultsMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimelineResultsMetadataResponse();
         }
 
         public Builder(TimelineResultsMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregations = defaults.aggregations;
-    	      this.errors = defaults.errors;
-    	      this.totalCount = defaults.totalCount;
+            $ = new TimelineResultsMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregations(List<TimelineAggregationResponse> aggregations) {
-            this.aggregations = Objects.requireNonNull(aggregations);
+            $.aggregations = aggregations;
             return this;
         }
+
         public Builder aggregations(TimelineAggregationResponse... aggregations) {
             return aggregations(List.of(aggregations));
         }
+
         public Builder errors(@Nullable List<TimelineErrorResponse> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(TimelineErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder totalCount(Integer totalCount) {
-            this.totalCount = Objects.requireNonNull(totalCount);
+            $.totalCount = totalCount;
             return this;
-        }        public TimelineResultsMetadataResponse build() {
-            return new TimelineResultsMetadataResponse(aggregations, errors, totalCount);
+        }
+
+        public TimelineResultsMetadataResponse build() {
+            $.aggregations = Objects.requireNonNull($.aggregations, "expected parameter 'aggregations' to be non-null");
+            $.totalCount = Objects.requireNonNull($.totalCount, "expected parameter 'totalCount' to be non-null");
+            return $;
         }
     }
+
 }

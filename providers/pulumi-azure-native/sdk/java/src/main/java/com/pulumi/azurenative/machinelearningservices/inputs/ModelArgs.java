@@ -7,13 +7,13 @@ import com.pulumi.azurenative.machinelearningservices.inputs.ContainerResourceRe
 import com.pulumi.azurenative.machinelearningservices.inputs.DatasetReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasets")
-      private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
+    private @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
-    public Output<List<DatasetReferenceArgs>> datasets() {
-        return this.datasets == null ? Codegen.empty() : this.datasets;
+    public Optional<Output<List<DatasetReferenceArgs>>> datasets() {
+        return Optional.ofNullable(this.datasets);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="derivedModelIds")
-      private final @Nullable Output<List<String>> derivedModelIds;
+    private @Nullable Output<List<String>> derivedModelIds;
 
-    public Output<List<String>> derivedModelIds() {
-        return this.derivedModelIds == null ? Codegen.empty() : this.derivedModelIds;
+    public Optional<Output<List<String>>> derivedModelIds() {
+        return Optional.ofNullable(this.derivedModelIds);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="experimentName")
-      private final @Nullable Output<String> experimentName;
+    private @Nullable Output<String> experimentName;
 
-    public Output<String> experimentName() {
-        return this.experimentName == null ? Codegen.empty() : this.experimentName;
+    public Optional<Output<String>> experimentName() {
+        return Optional.ofNullable(this.experimentName);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="framework")
-      private final @Nullable Output<String> framework;
+    private @Nullable Output<String> framework;
 
-    public Output<String> framework() {
-        return this.framework == null ? Codegen.empty() : this.framework;
+    public Optional<Output<String>> framework() {
+        return Optional.ofNullable(this.framework);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frameworkVersion")
-      private final @Nullable Output<String> frameworkVersion;
+    private @Nullable Output<String> frameworkVersion;
 
-    public Output<String> frameworkVersion() {
-        return this.frameworkVersion == null ? Codegen.empty() : this.frameworkVersion;
+    public Optional<Output<String>> frameworkVersion() {
+        return Optional.ofNullable(this.frameworkVersion);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kvTags")
-      private final @Nullable Output<Map<String,String>> kvTags;
+    private @Nullable Output<Map<String,String>> kvTags;
 
-    public Output<Map<String,String>> kvTags() {
-        return this.kvTags == null ? Codegen.empty() : this.kvTags;
+    public Optional<Output<Map<String,String>>> kvTags() {
+        return Optional.ofNullable(this.kvTags);
     }
 
     /**
@@ -129,7 +129,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mimeType", required=true)
-      private final Output<String> mimeType;
+    private Output<String> mimeType;
 
     public Output<String> mimeType() {
         return this.mimeType;
@@ -140,10 +140,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="modifiedTime")
-      private final @Nullable Output<String> modifiedTime;
+    private @Nullable Output<String> modifiedTime;
 
-    public Output<String> modifiedTime() {
-        return this.modifiedTime == null ? Codegen.empty() : this.modifiedTime;
+    public Optional<Output<String>> modifiedTime() {
+        return Optional.ofNullable(this.modifiedTime);
     }
 
     /**
@@ -151,7 +151,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -162,10 +162,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentModelId")
-      private final @Nullable Output<String> parentModelId;
+    private @Nullable Output<String> parentModelId;
 
-    public Output<String> parentModelId() {
-        return this.parentModelId == null ? Codegen.empty() : this.parentModelId;
+    public Optional<Output<String>> parentModelId() {
+        return Optional.ofNullable(this.parentModelId);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceRequirements")
-      private final @Nullable Output<ContainerResourceRequirementsArgs> resourceRequirements;
+    private @Nullable Output<ContainerResourceRequirementsArgs> resourceRequirements;
 
-    public Output<ContainerResourceRequirementsArgs> resourceRequirements() {
-        return this.resourceRequirements == null ? Codegen.empty() : this.resourceRequirements;
+    public Optional<Output<ContainerResourceRequirementsArgs>> resourceRequirements() {
+        return Optional.ofNullable(this.resourceRequirements);
     }
 
     /**
@@ -195,10 +195,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runId")
-      private final @Nullable Output<String> runId;
+    private @Nullable Output<String> runId;
 
-    public Output<String> runId() {
-        return this.runId == null ? Codegen.empty() : this.runId;
+    public Optional<Output<String>> runId() {
+        return Optional.ofNullable(this.runId);
     }
 
     /**
@@ -206,10 +206,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sampleInputData")
-      private final @Nullable Output<String> sampleInputData;
+    private @Nullable Output<String> sampleInputData;
 
-    public Output<String> sampleInputData() {
-        return this.sampleInputData == null ? Codegen.empty() : this.sampleInputData;
+    public Optional<Output<String>> sampleInputData() {
+        return Optional.ofNullable(this.sampleInputData);
     }
 
     /**
@@ -217,10 +217,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sampleOutputData")
-      private final @Nullable Output<String> sampleOutputData;
+    private @Nullable Output<String> sampleOutputData;
 
-    public Output<String> sampleOutputData() {
-        return this.sampleOutputData == null ? Codegen.empty() : this.sampleOutputData;
+    public Optional<Output<String>> sampleOutputData() {
+        return Optional.ofNullable(this.sampleOutputData);
     }
 
     /**
@@ -228,10 +228,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="unpack")
-      private final @Nullable Output<Boolean> unpack;
+    private @Nullable Output<Boolean> unpack;
 
-    public Output<Boolean> unpack() {
-        return this.unpack == null ? Codegen.empty() : this.unpack;
+    public Optional<Output<Boolean>> unpack() {
+        return Optional.ofNullable(this.unpack);
     }
 
     /**
@@ -239,7 +239,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
@@ -250,316 +250,259 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Double> version;
+    private @Nullable Output<Double> version;
 
-    public Output<Double> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Double>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ModelArgs(
-        @Nullable Output<String> createdTime,
-        @Nullable Output<List<DatasetReferenceArgs>> datasets,
-        @Nullable Output<List<String>> derivedModelIds,
-        @Nullable Output<String> description,
-        @Nullable Output<String> experimentName,
-        @Nullable Output<String> framework,
-        @Nullable Output<String> frameworkVersion,
-        @Nullable Output<String> id,
-        @Nullable Output<Map<String,String>> kvTags,
-        Output<String> mimeType,
-        @Nullable Output<String> modifiedTime,
-        Output<String> name,
-        @Nullable Output<String> parentModelId,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<ContainerResourceRequirementsArgs> resourceRequirements,
-        @Nullable Output<String> runId,
-        @Nullable Output<String> sampleInputData,
-        @Nullable Output<String> sampleOutputData,
-        @Nullable Output<Boolean> unpack,
-        Output<String> url,
-        @Nullable Output<Double> version) {
-        this.createdTime = createdTime;
-        this.datasets = datasets;
-        this.derivedModelIds = derivedModelIds;
-        this.description = description;
-        this.experimentName = experimentName;
-        this.framework = framework;
-        this.frameworkVersion = frameworkVersion;
-        this.id = id;
-        this.kvTags = kvTags;
-        this.mimeType = Objects.requireNonNull(mimeType, "expected parameter 'mimeType' to be non-null");
-        this.modifiedTime = modifiedTime;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parentModelId = parentModelId;
-        this.properties = properties;
-        this.resourceRequirements = resourceRequirements;
-        this.runId = runId;
-        this.sampleInputData = sampleInputData;
-        this.sampleOutputData = sampleOutputData;
-        this.unpack = unpack;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.version = version;
-    }
+    private ModelArgs() {}
 
-    private ModelArgs() {
-        this.createdTime = Codegen.empty();
-        this.datasets = Codegen.empty();
-        this.derivedModelIds = Codegen.empty();
-        this.description = Codegen.empty();
-        this.experimentName = Codegen.empty();
-        this.framework = Codegen.empty();
-        this.frameworkVersion = Codegen.empty();
-        this.id = Codegen.empty();
-        this.kvTags = Codegen.empty();
-        this.mimeType = Codegen.empty();
-        this.modifiedTime = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentModelId = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceRequirements = Codegen.empty();
-        this.runId = Codegen.empty();
-        this.sampleInputData = Codegen.empty();
-        this.sampleOutputData = Codegen.empty();
-        this.unpack = Codegen.empty();
-        this.url = Codegen.empty();
-        this.version = Codegen.empty();
+    private ModelArgs(ModelArgs $) {
+        this.createdTime = $.createdTime;
+        this.datasets = $.datasets;
+        this.derivedModelIds = $.derivedModelIds;
+        this.description = $.description;
+        this.experimentName = $.experimentName;
+        this.framework = $.framework;
+        this.frameworkVersion = $.frameworkVersion;
+        this.id = $.id;
+        this.kvTags = $.kvTags;
+        this.mimeType = $.mimeType;
+        this.modifiedTime = $.modifiedTime;
+        this.name = $.name;
+        this.parentModelId = $.parentModelId;
+        this.properties = $.properties;
+        this.resourceRequirements = $.resourceRequirements;
+        this.runId = $.runId;
+        this.sampleInputData = $.sampleInputData;
+        this.sampleOutputData = $.sampleOutputData;
+        this.unpack = $.unpack;
+        this.url = $.url;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<List<DatasetReferenceArgs>> datasets;
-        private @Nullable Output<List<String>> derivedModelIds;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> experimentName;
-        private @Nullable Output<String> framework;
-        private @Nullable Output<String> frameworkVersion;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Map<String,String>> kvTags;
-        private Output<String> mimeType;
-        private @Nullable Output<String> modifiedTime;
-        private Output<String> name;
-        private @Nullable Output<String> parentModelId;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<ContainerResourceRequirementsArgs> resourceRequirements;
-        private @Nullable Output<String> runId;
-        private @Nullable Output<String> sampleInputData;
-        private @Nullable Output<String> sampleOutputData;
-        private @Nullable Output<Boolean> unpack;
-        private Output<String> url;
-        private @Nullable Output<Double> version;
+        private ModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelArgs();
         }
 
         public Builder(ModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdTime = defaults.createdTime;
-    	      this.datasets = defaults.datasets;
-    	      this.derivedModelIds = defaults.derivedModelIds;
-    	      this.description = defaults.description;
-    	      this.experimentName = defaults.experimentName;
-    	      this.framework = defaults.framework;
-    	      this.frameworkVersion = defaults.frameworkVersion;
-    	      this.id = defaults.id;
-    	      this.kvTags = defaults.kvTags;
-    	      this.mimeType = defaults.mimeType;
-    	      this.modifiedTime = defaults.modifiedTime;
-    	      this.name = defaults.name;
-    	      this.parentModelId = defaults.parentModelId;
-    	      this.properties = defaults.properties;
-    	      this.resourceRequirements = defaults.resourceRequirements;
-    	      this.runId = defaults.runId;
-    	      this.sampleInputData = defaults.sampleInputData;
-    	      this.sampleOutputData = defaults.sampleOutputData;
-    	      this.unpack = defaults.unpack;
-    	      this.url = defaults.url;
-    	      this.version = defaults.version;
+            $ = new ModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder datasets(@Nullable Output<List<DatasetReferenceArgs>> datasets) {
-            this.datasets = datasets;
+            $.datasets = datasets;
             return this;
         }
-        public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
-            this.datasets = Codegen.ofNullable(datasets);
-            return this;
+
+        public Builder datasets(List<DatasetReferenceArgs> datasets) {
+            return datasets(Output.of(datasets));
         }
+
         public Builder datasets(DatasetReferenceArgs... datasets) {
             return datasets(List.of(datasets));
         }
+
         public Builder derivedModelIds(@Nullable Output<List<String>> derivedModelIds) {
-            this.derivedModelIds = derivedModelIds;
+            $.derivedModelIds = derivedModelIds;
             return this;
         }
-        public Builder derivedModelIds(@Nullable List<String> derivedModelIds) {
-            this.derivedModelIds = Codegen.ofNullable(derivedModelIds);
-            return this;
+
+        public Builder derivedModelIds(List<String> derivedModelIds) {
+            return derivedModelIds(Output.of(derivedModelIds));
         }
+
         public Builder derivedModelIds(String... derivedModelIds) {
             return derivedModelIds(List.of(derivedModelIds));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder experimentName(@Nullable Output<String> experimentName) {
-            this.experimentName = experimentName;
+            $.experimentName = experimentName;
             return this;
         }
-        public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = Codegen.ofNullable(experimentName);
-            return this;
+
+        public Builder experimentName(String experimentName) {
+            return experimentName(Output.of(experimentName));
         }
+
         public Builder framework(@Nullable Output<String> framework) {
-            this.framework = framework;
+            $.framework = framework;
             return this;
         }
-        public Builder framework(@Nullable String framework) {
-            this.framework = Codegen.ofNullable(framework);
-            return this;
+
+        public Builder framework(String framework) {
+            return framework(Output.of(framework));
         }
+
         public Builder frameworkVersion(@Nullable Output<String> frameworkVersion) {
-            this.frameworkVersion = frameworkVersion;
+            $.frameworkVersion = frameworkVersion;
             return this;
         }
-        public Builder frameworkVersion(@Nullable String frameworkVersion) {
-            this.frameworkVersion = Codegen.ofNullable(frameworkVersion);
-            return this;
+
+        public Builder frameworkVersion(String frameworkVersion) {
+            return frameworkVersion(Output.of(frameworkVersion));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
-            this.kvTags = kvTags;
+            $.kvTags = kvTags;
             return this;
         }
-        public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = Codegen.ofNullable(kvTags);
-            return this;
+
+        public Builder kvTags(Map<String,String> kvTags) {
+            return kvTags(Output.of(kvTags));
         }
+
         public Builder mimeType(Output<String> mimeType) {
-            this.mimeType = Objects.requireNonNull(mimeType);
+            $.mimeType = mimeType;
             return this;
         }
+
         public Builder mimeType(String mimeType) {
-            this.mimeType = Output.of(Objects.requireNonNull(mimeType));
-            return this;
+            return mimeType(Output.of(mimeType));
         }
+
         public Builder modifiedTime(@Nullable Output<String> modifiedTime) {
-            this.modifiedTime = modifiedTime;
+            $.modifiedTime = modifiedTime;
             return this;
         }
-        public Builder modifiedTime(@Nullable String modifiedTime) {
-            this.modifiedTime = Codegen.ofNullable(modifiedTime);
-            return this;
+
+        public Builder modifiedTime(String modifiedTime) {
+            return modifiedTime(Output.of(modifiedTime));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parentModelId(@Nullable Output<String> parentModelId) {
-            this.parentModelId = parentModelId;
+            $.parentModelId = parentModelId;
             return this;
         }
-        public Builder parentModelId(@Nullable String parentModelId) {
-            this.parentModelId = Codegen.ofNullable(parentModelId);
-            return this;
+
+        public Builder parentModelId(String parentModelId) {
+            return parentModelId(Output.of(parentModelId));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceRequirements(@Nullable Output<ContainerResourceRequirementsArgs> resourceRequirements) {
-            this.resourceRequirements = resourceRequirements;
+            $.resourceRequirements = resourceRequirements;
             return this;
         }
-        public Builder resourceRequirements(@Nullable ContainerResourceRequirementsArgs resourceRequirements) {
-            this.resourceRequirements = Codegen.ofNullable(resourceRequirements);
-            return this;
+
+        public Builder resourceRequirements(ContainerResourceRequirementsArgs resourceRequirements) {
+            return resourceRequirements(Output.of(resourceRequirements));
         }
+
         public Builder runId(@Nullable Output<String> runId) {
-            this.runId = runId;
+            $.runId = runId;
             return this;
         }
-        public Builder runId(@Nullable String runId) {
-            this.runId = Codegen.ofNullable(runId);
-            return this;
+
+        public Builder runId(String runId) {
+            return runId(Output.of(runId));
         }
+
         public Builder sampleInputData(@Nullable Output<String> sampleInputData) {
-            this.sampleInputData = sampleInputData;
+            $.sampleInputData = sampleInputData;
             return this;
         }
-        public Builder sampleInputData(@Nullable String sampleInputData) {
-            this.sampleInputData = Codegen.ofNullable(sampleInputData);
-            return this;
+
+        public Builder sampleInputData(String sampleInputData) {
+            return sampleInputData(Output.of(sampleInputData));
         }
+
         public Builder sampleOutputData(@Nullable Output<String> sampleOutputData) {
-            this.sampleOutputData = sampleOutputData;
+            $.sampleOutputData = sampleOutputData;
             return this;
         }
-        public Builder sampleOutputData(@Nullable String sampleOutputData) {
-            this.sampleOutputData = Codegen.ofNullable(sampleOutputData);
-            return this;
+
+        public Builder sampleOutputData(String sampleOutputData) {
+            return sampleOutputData(Output.of(sampleOutputData));
         }
+
         public Builder unpack(@Nullable Output<Boolean> unpack) {
-            this.unpack = unpack;
+            $.unpack = unpack;
             return this;
         }
-        public Builder unpack(@Nullable Boolean unpack) {
-            this.unpack = Codegen.ofNullable(unpack);
-            return this;
+
+        public Builder unpack(Boolean unpack) {
+            return unpack(Output.of(unpack));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
+            return url(Output.of(url));
         }
+
         public Builder version(@Nullable Output<Double> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Double version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ModelArgs build() {
-            return new ModelArgs(createdTime, datasets, derivedModelIds, description, experimentName, framework, frameworkVersion, id, kvTags, mimeType, modifiedTime, name, parentModelId, properties, resourceRequirements, runId, sampleInputData, sampleOutputData, unpack, url, version);
+
+        public Builder version(Double version) {
+            return version(Output.of(version));
+        }
+
+        public ModelArgs build() {
+            $.mimeType = Objects.requireNonNull($.mimeType, "expected parameter 'mimeType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

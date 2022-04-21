@@ -5,11 +5,11 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.CustomHttpPatternArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalBindings")
-      private final @Nullable Output<List<HttpRuleArgs>> additionalBindings;
+    private @Nullable Output<List<HttpRuleArgs>> additionalBindings;
 
-    public Output<List<HttpRuleArgs>> additionalBindings() {
-        return this.additionalBindings == null ? Codegen.empty() : this.additionalBindings;
+    public Optional<Output<List<HttpRuleArgs>>> additionalBindings() {
+        return Optional.ofNullable(this.additionalBindings);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="custom")
-      private final @Nullable Output<CustomHttpPatternArgs> custom;
+    private @Nullable Output<CustomHttpPatternArgs> custom;
 
-    public Output<CustomHttpPatternArgs> custom() {
-        return this.custom == null ? Codegen.empty() : this.custom;
+    public Optional<Output<CustomHttpPatternArgs>> custom() {
+        return Optional.ofNullable(this.custom);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="delete")
-      private final @Nullable Output<String> delete;
+    private @Nullable Output<String> delete;
 
-    public Output<String> delete() {
-        return this.delete == null ? Codegen.empty() : this.delete;
+    public Optional<Output<String>> delete() {
+        return Optional.ofNullable(this.delete);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="get")
-      private final @Nullable Output<String> get;
+    private @Nullable Output<String> get;
 
-    public Output<String> get() {
-        return this.get == null ? Codegen.empty() : this.get;
+    public Optional<Output<String>> get() {
+        return Optional.ofNullable(this.get);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="patch")
-      private final @Nullable Output<String> patch;
+    private @Nullable Output<String> patch;
 
-    public Output<String> patch() {
-        return this.patch == null ? Codegen.empty() : this.patch;
+    public Optional<Output<String>> patch() {
+        return Optional.ofNullable(this.patch);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="post")
-      private final @Nullable Output<String> post;
+    private @Nullable Output<String> post;
 
-    public Output<String> post() {
-        return this.post == null ? Codegen.empty() : this.post;
+    public Optional<Output<String>> post() {
+        return Optional.ofNullable(this.post);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="put")
-      private final @Nullable Output<String> put;
+    private @Nullable Output<String> put;
 
-    public Output<String> put() {
-        return this.put == null ? Codegen.empty() : this.put;
+    public Optional<Output<String>> put() {
+        return Optional.ofNullable(this.put);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseBody")
-      private final @Nullable Output<String> responseBody;
+    private @Nullable Output<String> responseBody;
 
-    public Output<String> responseBody() {
-        return this.responseBody == null ? Codegen.empty() : this.responseBody;
+    public Optional<Output<String>> responseBody() {
+        return Optional.ofNullable(this.responseBody);
     }
 
     /**
@@ -125,170 +125,142 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<String> selector;
+    private @Nullable Output<String> selector;
 
-    public Output<String> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<String>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public HttpRuleArgs(
-        @Nullable Output<List<HttpRuleArgs>> additionalBindings,
-        @Nullable Output<String> body,
-        @Nullable Output<CustomHttpPatternArgs> custom,
-        @Nullable Output<String> delete,
-        @Nullable Output<String> get,
-        @Nullable Output<String> patch,
-        @Nullable Output<String> post,
-        @Nullable Output<String> put,
-        @Nullable Output<String> responseBody,
-        @Nullable Output<String> selector) {
-        this.additionalBindings = additionalBindings;
-        this.body = body;
-        this.custom = custom;
-        this.delete = delete;
-        this.get = get;
-        this.patch = patch;
-        this.post = post;
-        this.put = put;
-        this.responseBody = responseBody;
-        this.selector = selector;
-    }
+    private HttpRuleArgs() {}
 
-    private HttpRuleArgs() {
-        this.additionalBindings = Codegen.empty();
-        this.body = Codegen.empty();
-        this.custom = Codegen.empty();
-        this.delete = Codegen.empty();
-        this.get = Codegen.empty();
-        this.patch = Codegen.empty();
-        this.post = Codegen.empty();
-        this.put = Codegen.empty();
-        this.responseBody = Codegen.empty();
-        this.selector = Codegen.empty();
+    private HttpRuleArgs(HttpRuleArgs $) {
+        this.additionalBindings = $.additionalBindings;
+        this.body = $.body;
+        this.custom = $.custom;
+        this.delete = $.delete;
+        this.get = $.get;
+        this.patch = $.patch;
+        this.post = $.post;
+        this.put = $.put;
+        this.responseBody = $.responseBody;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<HttpRuleArgs>> additionalBindings;
-        private @Nullable Output<String> body;
-        private @Nullable Output<CustomHttpPatternArgs> custom;
-        private @Nullable Output<String> delete;
-        private @Nullable Output<String> get;
-        private @Nullable Output<String> patch;
-        private @Nullable Output<String> post;
-        private @Nullable Output<String> put;
-        private @Nullable Output<String> responseBody;
-        private @Nullable Output<String> selector;
+        private HttpRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRuleArgs();
         }
 
         public Builder(HttpRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalBindings = defaults.additionalBindings;
-    	      this.body = defaults.body;
-    	      this.custom = defaults.custom;
-    	      this.delete = defaults.delete;
-    	      this.get = defaults.get;
-    	      this.patch = defaults.patch;
-    	      this.post = defaults.post;
-    	      this.put = defaults.put;
-    	      this.responseBody = defaults.responseBody;
-    	      this.selector = defaults.selector;
+            $ = new HttpRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalBindings(@Nullable Output<List<HttpRuleArgs>> additionalBindings) {
-            this.additionalBindings = additionalBindings;
+            $.additionalBindings = additionalBindings;
             return this;
         }
-        public Builder additionalBindings(@Nullable List<HttpRuleArgs> additionalBindings) {
-            this.additionalBindings = Codegen.ofNullable(additionalBindings);
-            return this;
+
+        public Builder additionalBindings(List<HttpRuleArgs> additionalBindings) {
+            return additionalBindings(Output.of(additionalBindings));
         }
+
         public Builder additionalBindings(HttpRuleArgs... additionalBindings) {
             return additionalBindings(List.of(additionalBindings));
         }
+
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
         public Builder custom(@Nullable Output<CustomHttpPatternArgs> custom) {
-            this.custom = custom;
+            $.custom = custom;
             return this;
         }
-        public Builder custom(@Nullable CustomHttpPatternArgs custom) {
-            this.custom = Codegen.ofNullable(custom);
-            return this;
+
+        public Builder custom(CustomHttpPatternArgs custom) {
+            return custom(Output.of(custom));
         }
+
         public Builder delete(@Nullable Output<String> delete) {
-            this.delete = delete;
+            $.delete = delete;
             return this;
         }
-        public Builder delete(@Nullable String delete) {
-            this.delete = Codegen.ofNullable(delete);
-            return this;
+
+        public Builder delete(String delete) {
+            return delete(Output.of(delete));
         }
+
         public Builder get(@Nullable Output<String> get) {
-            this.get = get;
+            $.get = get;
             return this;
         }
-        public Builder get(@Nullable String get) {
-            this.get = Codegen.ofNullable(get);
-            return this;
+
+        public Builder get(String get) {
+            return get(Output.of(get));
         }
+
         public Builder patch(@Nullable Output<String> patch) {
-            this.patch = patch;
+            $.patch = patch;
             return this;
         }
-        public Builder patch(@Nullable String patch) {
-            this.patch = Codegen.ofNullable(patch);
-            return this;
+
+        public Builder patch(String patch) {
+            return patch(Output.of(patch));
         }
+
         public Builder post(@Nullable Output<String> post) {
-            this.post = post;
+            $.post = post;
             return this;
         }
-        public Builder post(@Nullable String post) {
-            this.post = Codegen.ofNullable(post);
-            return this;
+
+        public Builder post(String post) {
+            return post(Output.of(post));
         }
+
         public Builder put(@Nullable Output<String> put) {
-            this.put = put;
+            $.put = put;
             return this;
         }
-        public Builder put(@Nullable String put) {
-            this.put = Codegen.ofNullable(put);
-            return this;
+
+        public Builder put(String put) {
+            return put(Output.of(put));
         }
+
         public Builder responseBody(@Nullable Output<String> responseBody) {
-            this.responseBody = responseBody;
+            $.responseBody = responseBody;
             return this;
         }
-        public Builder responseBody(@Nullable String responseBody) {
-            this.responseBody = Codegen.ofNullable(responseBody);
-            return this;
+
+        public Builder responseBody(String responseBody) {
+            return responseBody(Output.of(responseBody));
         }
+
         public Builder selector(@Nullable Output<String> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable String selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public HttpRuleArgs build() {
-            return new HttpRuleArgs(additionalBindings, body, custom, delete, get, patch, post, put, responseBody, selector);
+
+        public Builder selector(String selector) {
+            return selector(Output.of(selector));
+        }
+
+        public HttpRuleArgs build() {
+            return $;
         }
     }
+
 }

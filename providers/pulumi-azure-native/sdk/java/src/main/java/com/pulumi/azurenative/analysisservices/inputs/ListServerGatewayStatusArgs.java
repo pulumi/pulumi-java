@@ -17,7 +17,7 @@ public final class ListServerGatewayStatusArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class ListServerGatewayStatusArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public ListServerGatewayStatusArgs(
-        String resourceGroupName,
-        String serverName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private ListServerGatewayStatusArgs() {}
 
-    private ListServerGatewayStatusArgs() {
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private ListServerGatewayStatusArgs(ListServerGatewayStatusArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListServerGatewayStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serverName;
+        private ListServerGatewayStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListServerGatewayStatusArgs();
         }
 
         public Builder(ListServerGatewayStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new ListServerGatewayStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public ListServerGatewayStatusArgs build() {
-            return new ListServerGatewayStatusArgs(resourceGroupName, serverName);
+        }
+
+        public ListServerGatewayStatusArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     public static final VersionArgs Empty = new VersionArgs();
 
     @Import(name="agentId", required=true)
-      private final Output<String> agentId;
+    private Output<String> agentId;
 
     public Output<String> agentId() {
         return this.agentId;
@@ -27,10 +27,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,24 +38,24 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="flowId", required=true)
-      private final Output<String> flowId;
+    private Output<String> flowId;
 
     public Output<String> flowId() {
         return this.flowId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -63,135 +63,118 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public VersionArgs(
-        Output<String> agentId,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        Output<String> flowId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.flowId = Objects.requireNonNull(flowId, "expected parameter 'flowId' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.project = project;
-    }
+    private VersionArgs() {}
 
-    private VersionArgs() {
-        this.agentId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.flowId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private VersionArgs(VersionArgs $) {
+        this.agentId = $.agentId;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.flowId = $.flowId;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> agentId;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private Output<String> flowId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private VersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VersionArgs();
         }
 
         public Builder(VersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.flowId = defaults.flowId;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new VersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(Output<String> agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder agentId(String agentId) {
-            this.agentId = Output.of(Objects.requireNonNull(agentId));
-            return this;
+            return agentId(Output.of(agentId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder flowId(Output<String> flowId) {
-            this.flowId = Objects.requireNonNull(flowId);
+            $.flowId = flowId;
             return this;
         }
+
         public Builder flowId(String flowId) {
-            this.flowId = Output.of(Objects.requireNonNull(flowId));
-            return this;
+            return flowId(Output.of(flowId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public VersionArgs build() {
-            return new VersionArgs(agentId, description, displayName, flowId, location, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public VersionArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.flowId = Objects.requireNonNull($.flowId, "expected parameter 'flowId' to be non-null");
+            return $;
         }
     }
+
 }

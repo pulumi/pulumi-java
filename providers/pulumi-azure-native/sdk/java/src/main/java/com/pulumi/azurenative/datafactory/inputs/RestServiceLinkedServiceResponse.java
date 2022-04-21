@@ -33,10 +33,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="aadResourceId")
-      private final @Nullable Object aadResourceId;
+    private @Nullable Object aadResourceId;
 
     public Optional<Object> aadResourceId() {
-        return this.aadResourceId == null ? Optional.empty() : Optional.ofNullable(this.aadResourceId);
+        return Optional.ofNullable(this.aadResourceId);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="authHeaders")
-      private final @Nullable Object authHeaders;
+    private @Nullable Object authHeaders;
 
     public Optional<Object> authHeaders() {
-        return this.authHeaders == null ? Optional.empty() : Optional.ofNullable(this.authHeaders);
+        return Optional.ofNullable(this.authHeaders);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final String authenticationType;
+    private String authenticationType;
 
     public String authenticationType() {
         return this.authenticationType;
@@ -77,10 +77,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="azureCloudType")
-      private final @Nullable Object azureCloudType;
+    private @Nullable Object azureCloudType;
 
     public Optional<Object> azureCloudType() {
-        return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
+        return Optional.ofNullable(this.azureCloudType);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="enableServerCertificateValidation")
-      private final @Nullable Object enableServerCertificateValidation;
+    private @Nullable Object enableServerCertificateValidation;
 
     public Optional<Object> enableServerCertificateValidation() {
-        return this.enableServerCertificateValidation == null ? Optional.empty() : Optional.ofNullable(this.enableServerCertificateValidation);
+        return Optional.ofNullable(this.enableServerCertificateValidation);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Object servicePrincipalId;
+    private @Nullable Object servicePrincipalId;
 
     public Optional<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="servicePrincipalKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
-        return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
+        return Optional.ofNullable(this.servicePrincipalKey);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="tenant")
-      private final @Nullable Object tenant;
+    private @Nullable Object tenant;
 
     public Optional<Object> tenant() {
-        return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
+        return Optional.ofNullable(this.tenant);
     }
 
     /**
@@ -199,7 +199,7 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -210,7 +210,7 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="url", required=true)
-      private final Object url;
+    private Object url;
 
     public Object url() {
         return this.url;
@@ -221,202 +221,153 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="userName")
-      private final @Nullable Object userName;
+    private @Nullable Object userName;
 
     public Optional<Object> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public RestServiceLinkedServiceResponse(
-        @Nullable Object aadResourceId,
-        @Nullable List<Object> annotations,
-        @Nullable Object authHeaders,
-        String authenticationType,
-        @Nullable Object azureCloudType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object enableServerCertificateValidation,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object tenant,
-        String type,
-        Object url,
-        @Nullable Object userName) {
-        this.aadResourceId = aadResourceId;
-        this.annotations = annotations;
-        this.authHeaders = authHeaders;
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-        this.azureCloudType = azureCloudType;
-        this.connectVia = connectVia;
-        this.credential = credential;
-        this.description = description;
-        this.enableServerCertificateValidation = enableServerCertificateValidation;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.password = password;
-        this.servicePrincipalId = servicePrincipalId;
-        this.servicePrincipalKey = servicePrincipalKey;
-        this.tenant = tenant;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.userName = userName;
-    }
+    private RestServiceLinkedServiceResponse() {}
 
-    private RestServiceLinkedServiceResponse() {
-        this.aadResourceId = null;
-        this.annotations = List.of();
-        this.authHeaders = null;
-        this.authenticationType = null;
-        this.azureCloudType = null;
-        this.connectVia = null;
-        this.credential = null;
-        this.description = null;
-        this.enableServerCertificateValidation = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.servicePrincipalId = null;
-        this.servicePrincipalKey = null;
-        this.tenant = null;
-        this.type = null;
-        this.url = null;
-        this.userName = null;
+    private RestServiceLinkedServiceResponse(RestServiceLinkedServiceResponse $) {
+        this.aadResourceId = $.aadResourceId;
+        this.annotations = $.annotations;
+        this.authHeaders = $.authHeaders;
+        this.authenticationType = $.authenticationType;
+        this.azureCloudType = $.azureCloudType;
+        this.connectVia = $.connectVia;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.enableServerCertificateValidation = $.enableServerCertificateValidation;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.tenant = $.tenant;
+        this.type = $.type;
+        this.url = $.url;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestServiceLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object aadResourceId;
-        private @Nullable List<Object> annotations;
-        private @Nullable Object authHeaders;
-        private String authenticationType;
-        private @Nullable Object azureCloudType;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable String description;
-        private @Nullable Object enableServerCertificateValidation;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Object servicePrincipalId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-        private @Nullable Object tenant;
-        private String type;
-        private Object url;
-        private @Nullable Object userName;
+        private RestServiceLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestServiceLinkedServiceResponse();
         }
 
         public Builder(RestServiceLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadResourceId = defaults.aadResourceId;
-    	      this.annotations = defaults.annotations;
-    	      this.authHeaders = defaults.authHeaders;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.azureCloudType = defaults.azureCloudType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.enableServerCertificateValidation = defaults.enableServerCertificateValidation;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
-    	      this.userName = defaults.userName;
+            $ = new RestServiceLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aadResourceId(@Nullable Object aadResourceId) {
-            this.aadResourceId = aadResourceId;
+            $.aadResourceId = aadResourceId;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authHeaders(@Nullable Object authHeaders) {
-            this.authHeaders = authHeaders;
+            $.authHeaders = authHeaders;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = azureCloudType;
+            $.azureCloudType = azureCloudType;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder enableServerCertificateValidation(@Nullable Object enableServerCertificateValidation) {
-            this.enableServerCertificateValidation = enableServerCertificateValidation;
+            $.enableServerCertificateValidation = enableServerCertificateValidation;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-            this.servicePrincipalKey = servicePrincipalKey;
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
+
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder userName(@Nullable Object userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public RestServiceLinkedServiceResponse build() {
-            return new RestServiceLinkedServiceResponse(aadResourceId, annotations, authHeaders, authenticationType, azureCloudType, connectVia, credential, description, enableServerCertificateValidation, encryptedCredential, parameters, password, servicePrincipalId, servicePrincipalKey, tenant, type, url, userName);
+        }
+
+        public RestServiceLinkedServiceResponse build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

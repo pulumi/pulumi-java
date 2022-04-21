@@ -12,10 +12,10 @@ import com.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="classification")
-      private final @Nullable Output<Either<String,IncidentClassification>> classification;
+    private @Nullable Output<Either<String,IncidentClassification>> classification;
 
-    public Output<Either<String,IncidentClassification>> classification() {
-        return this.classification == null ? Codegen.empty() : this.classification;
+    public Optional<Output<Either<String,IncidentClassification>>> classification() {
+        return Optional.ofNullable(this.classification);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="classificationComment")
-      private final @Nullable Output<String> classificationComment;
+    private @Nullable Output<String> classificationComment;
 
-    public Output<String> classificationComment() {
-        return this.classificationComment == null ? Codegen.empty() : this.classificationComment;
+    public Optional<Output<String>> classificationComment() {
+        return Optional.ofNullable(this.classificationComment);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="classificationReason")
-      private final @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
+    private @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
 
-    public Output<Either<String,IncidentClassificationReason>> classificationReason() {
-        return this.classificationReason == null ? Codegen.empty() : this.classificationReason;
+    public Optional<Output<Either<String,IncidentClassificationReason>>> classificationReason() {
+        return Optional.ofNullable(this.classificationReason);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firstActivityTimeUtc")
-      private final @Nullable Output<String> firstActivityTimeUtc;
+    private @Nullable Output<String> firstActivityTimeUtc;
 
-    public Output<String> firstActivityTimeUtc() {
-        return this.firstActivityTimeUtc == null ? Codegen.empty() : this.firstActivityTimeUtc;
+    public Optional<Output<String>> firstActivityTimeUtc() {
+        return Optional.ofNullable(this.firstActivityTimeUtc);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="incidentId")
-      private final @Nullable Output<String> incidentId;
+    private @Nullable Output<String> incidentId;
 
-    public Output<String> incidentId() {
-        return this.incidentId == null ? Codegen.empty() : this.incidentId;
+    public Optional<Output<String>> incidentId() {
+        return Optional.ofNullable(this.incidentId);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<IncidentLabelArgs>> labels;
+    private @Nullable Output<List<IncidentLabelArgs>> labels;
 
-    public Output<List<IncidentLabelArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<IncidentLabelArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastActivityTimeUtc")
-      private final @Nullable Output<String> lastActivityTimeUtc;
+    private @Nullable Output<String> lastActivityTimeUtc;
 
-    public Output<String> lastActivityTimeUtc() {
-        return this.lastActivityTimeUtc == null ? Codegen.empty() : this.lastActivityTimeUtc;
+    public Optional<Output<String>> lastActivityTimeUtc() {
+        return Optional.ofNullable(this.lastActivityTimeUtc);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<IncidentOwnerInfoArgs> owner;
+    private @Nullable Output<IncidentOwnerInfoArgs> owner;
 
-    public Output<IncidentOwnerInfoArgs> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<IncidentOwnerInfoArgs>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -127,7 +127,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -138,7 +138,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="severity", required=true)
-      private final Output<Either<String,IncidentSeverity>> severity;
+    private Output<Either<String,IncidentSeverity>> severity;
 
     public Output<Either<String,IncidentSeverity>> severity() {
         return this.severity;
@@ -149,7 +149,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final Output<Either<String,IncidentStatus>> status;
+    private Output<Either<String,IncidentStatus>> status;
 
     public Output<Either<String,IncidentStatus>> status() {
         return this.status;
@@ -160,7 +160,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
@@ -171,222 +171,187 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public IncidentArgs(
-        @Nullable Output<Either<String,IncidentClassification>> classification,
-        @Nullable Output<String> classificationComment,
-        @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason,
-        @Nullable Output<String> description,
-        @Nullable Output<String> firstActivityTimeUtc,
-        @Nullable Output<String> incidentId,
-        @Nullable Output<List<IncidentLabelArgs>> labels,
-        @Nullable Output<String> lastActivityTimeUtc,
-        @Nullable Output<IncidentOwnerInfoArgs> owner,
-        Output<String> resourceGroupName,
-        Output<Either<String,IncidentSeverity>> severity,
-        Output<Either<String,IncidentStatus>> status,
-        Output<String> title,
-        Output<String> workspaceName) {
-        this.classification = classification;
-        this.classificationComment = classificationComment;
-        this.classificationReason = classificationReason;
-        this.description = description;
-        this.firstActivityTimeUtc = firstActivityTimeUtc;
-        this.incidentId = incidentId;
-        this.labels = labels;
-        this.lastActivityTimeUtc = lastActivityTimeUtc;
-        this.owner = owner;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private IncidentArgs() {}
 
-    private IncidentArgs() {
-        this.classification = Codegen.empty();
-        this.classificationComment = Codegen.empty();
-        this.classificationReason = Codegen.empty();
-        this.description = Codegen.empty();
-        this.firstActivityTimeUtc = Codegen.empty();
-        this.incidentId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.lastActivityTimeUtc = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.status = Codegen.empty();
-        this.title = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private IncidentArgs(IncidentArgs $) {
+        this.classification = $.classification;
+        this.classificationComment = $.classificationComment;
+        this.classificationReason = $.classificationReason;
+        this.description = $.description;
+        this.firstActivityTimeUtc = $.firstActivityTimeUtc;
+        this.incidentId = $.incidentId;
+        this.labels = $.labels;
+        this.lastActivityTimeUtc = $.lastActivityTimeUtc;
+        this.owner = $.owner;
+        this.resourceGroupName = $.resourceGroupName;
+        this.severity = $.severity;
+        this.status = $.status;
+        this.title = $.title;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncidentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,IncidentClassification>> classification;
-        private @Nullable Output<String> classificationComment;
-        private @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> firstActivityTimeUtc;
-        private @Nullable Output<String> incidentId;
-        private @Nullable Output<List<IncidentLabelArgs>> labels;
-        private @Nullable Output<String> lastActivityTimeUtc;
-        private @Nullable Output<IncidentOwnerInfoArgs> owner;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,IncidentSeverity>> severity;
-        private Output<Either<String,IncidentStatus>> status;
-        private Output<String> title;
-        private Output<String> workspaceName;
+        private IncidentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncidentArgs();
         }
 
         public Builder(IncidentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classification = defaults.classification;
-    	      this.classificationComment = defaults.classificationComment;
-    	      this.classificationReason = defaults.classificationReason;
-    	      this.description = defaults.description;
-    	      this.firstActivityTimeUtc = defaults.firstActivityTimeUtc;
-    	      this.incidentId = defaults.incidentId;
-    	      this.labels = defaults.labels;
-    	      this.lastActivityTimeUtc = defaults.lastActivityTimeUtc;
-    	      this.owner = defaults.owner;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.severity = defaults.severity;
-    	      this.status = defaults.status;
-    	      this.title = defaults.title;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new IncidentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classification(@Nullable Output<Either<String,IncidentClassification>> classification) {
-            this.classification = classification;
+            $.classification = classification;
             return this;
         }
-        public Builder classification(@Nullable Either<String,IncidentClassification> classification) {
-            this.classification = Codegen.ofNullable(classification);
-            return this;
+
+        public Builder classification(Either<String,IncidentClassification> classification) {
+            return classification(Output.of(classification));
         }
+
         public Builder classificationComment(@Nullable Output<String> classificationComment) {
-            this.classificationComment = classificationComment;
+            $.classificationComment = classificationComment;
             return this;
         }
-        public Builder classificationComment(@Nullable String classificationComment) {
-            this.classificationComment = Codegen.ofNullable(classificationComment);
-            return this;
+
+        public Builder classificationComment(String classificationComment) {
+            return classificationComment(Output.of(classificationComment));
         }
+
         public Builder classificationReason(@Nullable Output<Either<String,IncidentClassificationReason>> classificationReason) {
-            this.classificationReason = classificationReason;
+            $.classificationReason = classificationReason;
             return this;
         }
-        public Builder classificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
-            this.classificationReason = Codegen.ofNullable(classificationReason);
-            return this;
+
+        public Builder classificationReason(Either<String,IncidentClassificationReason> classificationReason) {
+            return classificationReason(Output.of(classificationReason));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder firstActivityTimeUtc(@Nullable Output<String> firstActivityTimeUtc) {
-            this.firstActivityTimeUtc = firstActivityTimeUtc;
+            $.firstActivityTimeUtc = firstActivityTimeUtc;
             return this;
         }
-        public Builder firstActivityTimeUtc(@Nullable String firstActivityTimeUtc) {
-            this.firstActivityTimeUtc = Codegen.ofNullable(firstActivityTimeUtc);
-            return this;
+
+        public Builder firstActivityTimeUtc(String firstActivityTimeUtc) {
+            return firstActivityTimeUtc(Output.of(firstActivityTimeUtc));
         }
+
         public Builder incidentId(@Nullable Output<String> incidentId) {
-            this.incidentId = incidentId;
+            $.incidentId = incidentId;
             return this;
         }
-        public Builder incidentId(@Nullable String incidentId) {
-            this.incidentId = Codegen.ofNullable(incidentId);
-            return this;
+
+        public Builder incidentId(String incidentId) {
+            return incidentId(Output.of(incidentId));
         }
+
         public Builder labels(@Nullable Output<List<IncidentLabelArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<IncidentLabelArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<IncidentLabelArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(IncidentLabelArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder lastActivityTimeUtc(@Nullable Output<String> lastActivityTimeUtc) {
-            this.lastActivityTimeUtc = lastActivityTimeUtc;
+            $.lastActivityTimeUtc = lastActivityTimeUtc;
             return this;
         }
-        public Builder lastActivityTimeUtc(@Nullable String lastActivityTimeUtc) {
-            this.lastActivityTimeUtc = Codegen.ofNullable(lastActivityTimeUtc);
-            return this;
+
+        public Builder lastActivityTimeUtc(String lastActivityTimeUtc) {
+            return lastActivityTimeUtc(Output.of(lastActivityTimeUtc));
         }
+
         public Builder owner(@Nullable Output<IncidentOwnerInfoArgs> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable IncidentOwnerInfoArgs owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(IncidentOwnerInfoArgs owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder severity(Output<Either<String,IncidentSeverity>> severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder severity(Either<String,IncidentSeverity> severity) {
-            this.severity = Output.of(Objects.requireNonNull(severity));
-            return this;
+            return severity(Output.of(severity));
         }
+
         public Builder status(Output<Either<String,IncidentStatus>> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(Either<String,IncidentStatus> status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
+            return status(Output.of(status));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
+            return title(Output.of(title));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public IncidentArgs build() {
-            return new IncidentArgs(classification, classificationComment, classificationReason, description, firstActivityTimeUtc, incidentId, labels, lastActivityTimeUtc, owner, resourceGroupName, severity, status, title, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public IncidentArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

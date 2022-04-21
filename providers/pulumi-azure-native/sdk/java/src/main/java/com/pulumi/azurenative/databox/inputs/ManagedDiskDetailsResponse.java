@@ -23,7 +23,7 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataAccountType", required=true)
-      private final String dataAccountType;
+    private String dataAccountType;
 
     public String dataAccountType() {
         return this.dataAccountType;
@@ -34,7 +34,7 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupId", required=true)
-      private final String resourceGroupId;
+    private String resourceGroupId;
 
     public String resourceGroupId() {
         return this.resourceGroupId;
@@ -45,64 +45,59 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="stagingStorageAccountId", required=true)
-      private final String stagingStorageAccountId;
+    private String stagingStorageAccountId;
 
     public String stagingStorageAccountId() {
         return this.stagingStorageAccountId;
     }
 
-    public ManagedDiskDetailsResponse(
-        String dataAccountType,
-        String resourceGroupId,
-        String stagingStorageAccountId) {
-        this.dataAccountType = Codegen.stringProp("dataAccountType").arg(dataAccountType).def("StorageAccount").require();
-        this.resourceGroupId = Objects.requireNonNull(resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
-        this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId, "expected parameter 'stagingStorageAccountId' to be non-null");
-    }
+    private ManagedDiskDetailsResponse() {}
 
-    private ManagedDiskDetailsResponse() {
-        this.dataAccountType = null;
-        this.resourceGroupId = null;
-        this.stagingStorageAccountId = null;
+    private ManagedDiskDetailsResponse(ManagedDiskDetailsResponse $) {
+        this.dataAccountType = $.dataAccountType;
+        this.resourceGroupId = $.resourceGroupId;
+        this.stagingStorageAccountId = $.stagingStorageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedDiskDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataAccountType;
-        private String resourceGroupId;
-        private String stagingStorageAccountId;
+        private ManagedDiskDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedDiskDetailsResponse();
         }
 
         public Builder(ManagedDiskDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataAccountType = defaults.dataAccountType;
-    	      this.resourceGroupId = defaults.resourceGroupId;
-    	      this.stagingStorageAccountId = defaults.stagingStorageAccountId;
+            $ = new ManagedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataAccountType(String dataAccountType) {
-            this.dataAccountType = Objects.requireNonNull(dataAccountType);
+            $.dataAccountType = dataAccountType;
             return this;
         }
+
         public Builder resourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
+            $.resourceGroupId = resourceGroupId;
             return this;
         }
+
         public Builder stagingStorageAccountId(String stagingStorageAccountId) {
-            this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId);
+            $.stagingStorageAccountId = stagingStorageAccountId;
             return this;
-        }        public ManagedDiskDetailsResponse build() {
-            return new ManagedDiskDetailsResponse(dataAccountType, resourceGroupId, stagingStorageAccountId);
+        }
+
+        public ManagedDiskDetailsResponse build() {
+            $.dataAccountType = Codegen.stringProp("dataAccountType").arg($.dataAccountType).def("StorageAccount").require();
+            $.resourceGroupId = Objects.requireNonNull($.resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
+            $.stagingStorageAccountId = Objects.requireNonNull($.stagingStorageAccountId, "expected parameter 'stagingStorageAccountId' to be non-null");
+            return $;
         }
     }
+
 }

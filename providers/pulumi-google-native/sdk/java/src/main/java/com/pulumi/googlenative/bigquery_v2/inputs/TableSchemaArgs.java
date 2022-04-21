@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class TableSchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<TableFieldSchemaArgs>> fields;
+    private @Nullable Output<List<TableFieldSchemaArgs>> fields;
 
-    public Output<List<TableFieldSchemaArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<TableFieldSchemaArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
-    public TableSchemaArgs(@Nullable Output<List<TableFieldSchemaArgs>> fields) {
-        this.fields = fields;
-    }
+    private TableSchemaArgs() {}
 
-    private TableSchemaArgs() {
-        this.fields = Codegen.empty();
+    private TableSchemaArgs(TableSchemaArgs $) {
+        this.fields = $.fields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TableFieldSchemaArgs>> fields;
+        private TableSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableSchemaArgs();
         }
 
         public Builder(TableSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
+            $ = new TableSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(@Nullable Output<List<TableFieldSchemaArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<TableFieldSchemaArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<TableFieldSchemaArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(TableFieldSchemaArgs... fields) {
             return fields(List.of(fields));
-        }        public TableSchemaArgs build() {
-            return new TableSchemaArgs(fields);
+        }
+
+        public TableSchemaArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class SoftwareConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="imageVersion", required=true)
-      private final String imageVersion;
+    private String imageVersion;
 
     public String imageVersion() {
         return this.imageVersion;
@@ -34,7 +34,7 @@ public final class SoftwareConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="optionalComponents", required=true)
-      private final List<String> optionalComponents;
+    private List<String> optionalComponents;
 
     public List<String> optionalComponents() {
         return this.optionalComponents;
@@ -45,67 +45,63 @@ public final class SoftwareConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="properties", required=true)
-      private final Map<String,String> properties;
+    private Map<String,String> properties;
 
     public Map<String,String> properties() {
         return this.properties;
     }
 
-    public SoftwareConfigResponse(
-        String imageVersion,
-        List<String> optionalComponents,
-        Map<String,String> properties) {
-        this.imageVersion = Objects.requireNonNull(imageVersion, "expected parameter 'imageVersion' to be non-null");
-        this.optionalComponents = Objects.requireNonNull(optionalComponents, "expected parameter 'optionalComponents' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private SoftwareConfigResponse() {}
 
-    private SoftwareConfigResponse() {
-        this.imageVersion = null;
-        this.optionalComponents = List.of();
-        this.properties = Map.of();
+    private SoftwareConfigResponse(SoftwareConfigResponse $) {
+        this.imageVersion = $.imageVersion;
+        this.optionalComponents = $.optionalComponents;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageVersion;
-        private List<String> optionalComponents;
-        private Map<String,String> properties;
+        private SoftwareConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareConfigResponse();
         }
 
         public Builder(SoftwareConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageVersion = defaults.imageVersion;
-    	      this.optionalComponents = defaults.optionalComponents;
-    	      this.properties = defaults.properties;
+            $ = new SoftwareConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder imageVersion(String imageVersion) {
-            this.imageVersion = Objects.requireNonNull(imageVersion);
+            $.imageVersion = imageVersion;
             return this;
         }
+
         public Builder optionalComponents(List<String> optionalComponents) {
-            this.optionalComponents = Objects.requireNonNull(optionalComponents);
+            $.optionalComponents = optionalComponents;
             return this;
         }
+
         public Builder optionalComponents(String... optionalComponents) {
             return optionalComponents(List.of(optionalComponents));
         }
+
         public Builder properties(Map<String,String> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
-        }        public SoftwareConfigResponse build() {
-            return new SoftwareConfigResponse(imageVersion, optionalComponents, properties);
+        }
+
+        public SoftwareConfigResponse build() {
+            $.imageVersion = Objects.requireNonNull($.imageVersion, "expected parameter 'imageVersion' to be non-null");
+            $.optionalComponents = Objects.requireNonNull($.optionalComponents, "expected parameter 'optionalComponents' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

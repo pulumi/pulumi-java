@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingAccessLogArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VirtualNodeSpecLoggingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="accessLog")
-      private final @Nullable Output<VirtualNodeSpecLoggingAccessLogArgs> accessLog;
+    private @Nullable Output<VirtualNodeSpecLoggingAccessLogArgs> accessLog;
 
-    public Output<VirtualNodeSpecLoggingAccessLogArgs> accessLog() {
-        return this.accessLog == null ? Codegen.empty() : this.accessLog;
+    public Optional<Output<VirtualNodeSpecLoggingAccessLogArgs>> accessLog() {
+        return Optional.ofNullable(this.accessLog);
     }
 
-    public VirtualNodeSpecLoggingArgs(@Nullable Output<VirtualNodeSpecLoggingAccessLogArgs> accessLog) {
-        this.accessLog = accessLog;
-    }
+    private VirtualNodeSpecLoggingArgs() {}
 
-    private VirtualNodeSpecLoggingArgs() {
-        this.accessLog = Codegen.empty();
+    private VirtualNodeSpecLoggingArgs(VirtualNodeSpecLoggingArgs $) {
+        this.accessLog = $.accessLog;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecLoggingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecLoggingAccessLogArgs> accessLog;
+        private VirtualNodeSpecLoggingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecLoggingArgs();
         }
 
         public Builder(VirtualNodeSpecLoggingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLog = defaults.accessLog;
+            $ = new VirtualNodeSpecLoggingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLog(@Nullable Output<VirtualNodeSpecLoggingAccessLogArgs> accessLog) {
-            this.accessLog = accessLog;
+            $.accessLog = accessLog;
             return this;
         }
-        public Builder accessLog(@Nullable VirtualNodeSpecLoggingAccessLogArgs accessLog) {
-            this.accessLog = Codegen.ofNullable(accessLog);
-            return this;
-        }        public VirtualNodeSpecLoggingArgs build() {
-            return new VirtualNodeSpecLoggingArgs(accessLog);
+
+        public Builder accessLog(VirtualNodeSpecLoggingAccessLogArgs accessLog) {
+            return accessLog(Output.of(accessLog));
+        }
+
+        public VirtualNodeSpecLoggingArgs build() {
+            return $;
         }
     }
+
 }

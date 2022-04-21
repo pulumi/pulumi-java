@@ -5,7 +5,6 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dns.inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,52 +22,53 @@ public final class PolicyAlternativeNameServerConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="targetNameServers", required=true)
-      private final Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
+    private Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
     public Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers() {
         return this.targetNameServers;
     }
 
-    public PolicyAlternativeNameServerConfigArgs(Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
-        this.targetNameServers = Objects.requireNonNull(targetNameServers, "expected parameter 'targetNameServers' to be non-null");
-    }
+    private PolicyAlternativeNameServerConfigArgs() {}
 
-    private PolicyAlternativeNameServerConfigArgs() {
-        this.targetNameServers = Codegen.empty();
+    private PolicyAlternativeNameServerConfigArgs(PolicyAlternativeNameServerConfigArgs $) {
+        this.targetNameServers = $.targetNameServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAlternativeNameServerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
+        private PolicyAlternativeNameServerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAlternativeNameServerConfigArgs();
         }
 
         public Builder(PolicyAlternativeNameServerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetNameServers = defaults.targetNameServers;
+            $ = new PolicyAlternativeNameServerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetNameServers(Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
-            this.targetNameServers = Objects.requireNonNull(targetNameServers);
+            $.targetNameServers = targetNameServers;
             return this;
         }
+
         public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerArgs> targetNameServers) {
-            this.targetNameServers = Output.of(Objects.requireNonNull(targetNameServers));
-            return this;
+            return targetNameServers(Output.of(targetNameServers));
         }
+
         public Builder targetNameServers(PolicyAlternativeNameServerConfigTargetNameServerArgs... targetNameServers) {
             return targetNameServers(List.of(targetNameServers));
-        }        public PolicyAlternativeNameServerConfigArgs build() {
-            return new PolicyAlternativeNameServerConfigArgs(targetNameServers);
+        }
+
+        public PolicyAlternativeNameServerConfigArgs build() {
+            $.targetNameServers = Objects.requireNonNull($.targetNameServers, "expected parameter 'targetNameServers' to be non-null");
+            return $;
         }
     }
+
 }

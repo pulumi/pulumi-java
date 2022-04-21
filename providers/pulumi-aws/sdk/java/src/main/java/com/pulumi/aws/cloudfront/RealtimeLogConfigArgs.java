@@ -6,11 +6,11 @@ package com.pulumi.aws.cloudfront;
 import com.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class RealtimeLogConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Output<RealtimeLogConfigEndpointArgs> endpoint;
+    private Output<RealtimeLogConfigEndpointArgs> endpoint;
 
     public Output<RealtimeLogConfigEndpointArgs> endpoint() {
         return this.endpoint;
@@ -34,7 +34,7 @@ public final class RealtimeLogConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="fields", required=true)
-      private final Output<List<String>> fields;
+    private Output<List<String>> fields;
 
     public Output<List<String>> fields() {
         return this.fields;
@@ -45,10 +45,10 @@ public final class RealtimeLogConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,92 +56,85 @@ public final class RealtimeLogConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="samplingRate", required=true)
-      private final Output<Integer> samplingRate;
+    private Output<Integer> samplingRate;
 
     public Output<Integer> samplingRate() {
         return this.samplingRate;
     }
 
-    public RealtimeLogConfigArgs(
-        Output<RealtimeLogConfigEndpointArgs> endpoint,
-        Output<List<String>> fields,
-        @Nullable Output<String> name,
-        Output<Integer> samplingRate) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.name = name;
-        this.samplingRate = Objects.requireNonNull(samplingRate, "expected parameter 'samplingRate' to be non-null");
-    }
+    private RealtimeLogConfigArgs() {}
 
-    private RealtimeLogConfigArgs() {
-        this.endpoint = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.name = Codegen.empty();
-        this.samplingRate = Codegen.empty();
+    private RealtimeLogConfigArgs(RealtimeLogConfigArgs $) {
+        this.endpoint = $.endpoint;
+        this.fields = $.fields;
+        this.name = $.name;
+        this.samplingRate = $.samplingRate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RealtimeLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RealtimeLogConfigEndpointArgs> endpoint;
-        private Output<List<String>> fields;
-        private @Nullable Output<String> name;
-        private Output<Integer> samplingRate;
+        private RealtimeLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RealtimeLogConfigArgs();
         }
 
         public Builder(RealtimeLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.samplingRate = defaults.samplingRate;
+            $ = new RealtimeLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(Output<RealtimeLogConfigEndpointArgs> endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder endpoint(RealtimeLogConfigEndpointArgs endpoint) {
-            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
-            return this;
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder fields(Output<List<String>> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(List<String> fields) {
-            this.fields = Output.of(Objects.requireNonNull(fields));
-            return this;
+            return fields(Output.of(fields));
         }
+
         public Builder fields(String... fields) {
             return fields(List.of(fields));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder samplingRate(Output<Integer> samplingRate) {
-            this.samplingRate = Objects.requireNonNull(samplingRate);
+            $.samplingRate = samplingRate;
             return this;
         }
+
         public Builder samplingRate(Integer samplingRate) {
-            this.samplingRate = Output.of(Objects.requireNonNull(samplingRate));
-            return this;
-        }        public RealtimeLogConfigArgs build() {
-            return new RealtimeLogConfigArgs(endpoint, fields, name, samplingRate);
+            return samplingRate(Output.of(samplingRate));
+        }
+
+        public RealtimeLogConfigArgs build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            $.samplingRate = Objects.requireNonNull($.samplingRate, "expected parameter 'samplingRate' to be non-null");
+            return $;
         }
     }
+
 }

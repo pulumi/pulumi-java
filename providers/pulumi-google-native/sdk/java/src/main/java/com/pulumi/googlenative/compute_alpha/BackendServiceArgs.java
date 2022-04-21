@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.BackendServiceCompressionMode;
 import com.pulumi.googlenative.compute_alpha.enums.BackendServiceLoadBalancingScheme;
 import com.pulumi.googlenative.compute_alpha.enums.BackendServiceLocalityLbPolicy;
@@ -29,6 +28,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -41,10 +41,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="affinityCookieTtlSec")
-      private final @Nullable Output<Integer> affinityCookieTtlSec;
+    private @Nullable Output<Integer> affinityCookieTtlSec;
 
-    public Output<Integer> affinityCookieTtlSec() {
-        return this.affinityCookieTtlSec == null ? Codegen.empty() : this.affinityCookieTtlSec;
+    public Optional<Output<Integer>> affinityCookieTtlSec() {
+        return Optional.ofNullable(this.affinityCookieTtlSec);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="backends")
-      private final @Nullable Output<List<BackendArgs>> backends;
+    private @Nullable Output<List<BackendArgs>> backends;
 
-    public Output<List<BackendArgs>> backends() {
-        return this.backends == null ? Codegen.empty() : this.backends;
+    public Optional<Output<List<BackendArgs>>> backends() {
+        return Optional.ofNullable(this.backends);
     }
 
     /**
@@ -63,17 +63,17 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cdnPolicy")
-      private final @Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy;
+    private @Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy;
 
-    public Output<BackendServiceCdnPolicyArgs> cdnPolicy() {
-        return this.cdnPolicy == null ? Codegen.empty() : this.cdnPolicy;
+    public Optional<Output<BackendServiceCdnPolicyArgs>> cdnPolicy() {
+        return Optional.ofNullable(this.cdnPolicy);
     }
 
     @Import(name="circuitBreakers")
-      private final @Nullable Output<CircuitBreakersArgs> circuitBreakers;
+    private @Nullable Output<CircuitBreakersArgs> circuitBreakers;
 
-    public Output<CircuitBreakersArgs> circuitBreakers() {
-        return this.circuitBreakers == null ? Codegen.empty() : this.circuitBreakers;
+    public Optional<Output<CircuitBreakersArgs>> circuitBreakers() {
+        return Optional.ofNullable(this.circuitBreakers);
     }
 
     /**
@@ -81,17 +81,17 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="compressionMode")
-      private final @Nullable Output<BackendServiceCompressionMode> compressionMode;
+    private @Nullable Output<BackendServiceCompressionMode> compressionMode;
 
-    public Output<BackendServiceCompressionMode> compressionMode() {
-        return this.compressionMode == null ? Codegen.empty() : this.compressionMode;
+    public Optional<Output<BackendServiceCompressionMode>> compressionMode() {
+        return Optional.ofNullable(this.compressionMode);
     }
 
     @Import(name="connectionDraining")
-      private final @Nullable Output<ConnectionDrainingArgs> connectionDraining;
+    private @Nullable Output<ConnectionDrainingArgs> connectionDraining;
 
-    public Output<ConnectionDrainingArgs> connectionDraining() {
-        return this.connectionDraining == null ? Codegen.empty() : this.connectionDraining;
+    public Optional<Output<ConnectionDrainingArgs>> connectionDraining() {
+        return Optional.ofNullable(this.connectionDraining);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="connectionTrackingPolicy")
-      private final @Nullable Output<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy;
+    private @Nullable Output<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy;
 
-    public Output<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy() {
-        return this.connectionTrackingPolicy == null ? Codegen.empty() : this.connectionTrackingPolicy;
+    public Optional<Output<BackendServiceConnectionTrackingPolicyArgs>> connectionTrackingPolicy() {
+        return Optional.ofNullable(this.connectionTrackingPolicy);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="consistentHash")
-      private final @Nullable Output<ConsistentHashLoadBalancerSettingsArgs> consistentHash;
+    private @Nullable Output<ConsistentHashLoadBalancerSettingsArgs> consistentHash;
 
-    public Output<ConsistentHashLoadBalancerSettingsArgs> consistentHash() {
-        return this.consistentHash == null ? Codegen.empty() : this.consistentHash;
+    public Optional<Output<ConsistentHashLoadBalancerSettingsArgs>> consistentHash() {
+        return Optional.ofNullable(this.consistentHash);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="customRequestHeaders")
-      private final @Nullable Output<List<String>> customRequestHeaders;
+    private @Nullable Output<List<String>> customRequestHeaders;
 
-    public Output<List<String>> customRequestHeaders() {
-        return this.customRequestHeaders == null ? Codegen.empty() : this.customRequestHeaders;
+    public Optional<Output<List<String>>> customRequestHeaders() {
+        return Optional.ofNullable(this.customRequestHeaders);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="customResponseHeaders")
-      private final @Nullable Output<List<String>> customResponseHeaders;
+    private @Nullable Output<List<String>> customResponseHeaders;
 
-    public Output<List<String>> customResponseHeaders() {
-        return this.customResponseHeaders == null ? Codegen.empty() : this.customResponseHeaders;
+    public Optional<Output<List<String>>> customResponseHeaders() {
+        return Optional.ofNullable(this.customResponseHeaders);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enableCDN")
-      private final @Nullable Output<Boolean> enableCDN;
+    private @Nullable Output<Boolean> enableCDN;
 
-    public Output<Boolean> enableCDN() {
-        return this.enableCDN == null ? Codegen.empty() : this.enableCDN;
+    public Optional<Output<Boolean>> enableCDN() {
+        return Optional.ofNullable(this.enableCDN);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="failoverPolicy")
-      private final @Nullable Output<BackendServiceFailoverPolicyArgs> failoverPolicy;
+    private @Nullable Output<BackendServiceFailoverPolicyArgs> failoverPolicy;
 
-    public Output<BackendServiceFailoverPolicyArgs> failoverPolicy() {
-        return this.failoverPolicy == null ? Codegen.empty() : this.failoverPolicy;
+    public Optional<Output<BackendServiceFailoverPolicyArgs>> failoverPolicy() {
+        return Optional.ofNullable(this.failoverPolicy);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="healthChecks")
-      private final @Nullable Output<List<String>> healthChecks;
+    private @Nullable Output<List<String>> healthChecks;
 
-    public Output<List<String>> healthChecks() {
-        return this.healthChecks == null ? Codegen.empty() : this.healthChecks;
+    public Optional<Output<List<String>>> healthChecks() {
+        return Optional.ofNullable(this.healthChecks);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="iap")
-      private final @Nullable Output<BackendServiceIAPArgs> iap;
+    private @Nullable Output<BackendServiceIAPArgs> iap;
 
-    public Output<BackendServiceIAPArgs> iap() {
-        return this.iap == null ? Codegen.empty() : this.iap;
+    public Optional<Output<BackendServiceIAPArgs>> iap() {
+        return Optional.ofNullable(this.iap);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="loadBalancingScheme")
-      private final @Nullable Output<BackendServiceLoadBalancingScheme> loadBalancingScheme;
+    private @Nullable Output<BackendServiceLoadBalancingScheme> loadBalancingScheme;
 
-    public Output<BackendServiceLoadBalancingScheme> loadBalancingScheme() {
-        return this.loadBalancingScheme == null ? Codegen.empty() : this.loadBalancingScheme;
+    public Optional<Output<BackendServiceLoadBalancingScheme>> loadBalancingScheme() {
+        return Optional.ofNullable(this.loadBalancingScheme);
     }
 
     /**
@@ -209,10 +209,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="localityLbPolicy")
-      private final @Nullable Output<BackendServiceLocalityLbPolicy> localityLbPolicy;
+    private @Nullable Output<BackendServiceLocalityLbPolicy> localityLbPolicy;
 
-    public Output<BackendServiceLocalityLbPolicy> localityLbPolicy() {
-        return this.localityLbPolicy == null ? Codegen.empty() : this.localityLbPolicy;
+    public Optional<Output<BackendServiceLocalityLbPolicy>> localityLbPolicy() {
+        return Optional.ofNullable(this.localityLbPolicy);
     }
 
     /**
@@ -220,10 +220,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="logConfig")
-      private final @Nullable Output<BackendServiceLogConfigArgs> logConfig;
+    private @Nullable Output<BackendServiceLogConfigArgs> logConfig;
 
-    public Output<BackendServiceLogConfigArgs> logConfig() {
-        return this.logConfig == null ? Codegen.empty() : this.logConfig;
+    public Optional<Output<BackendServiceLogConfigArgs>> logConfig() {
+        return Optional.ofNullable(this.logConfig);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maxStreamDuration")
-      private final @Nullable Output<DurationArgs> maxStreamDuration;
+    private @Nullable Output<DurationArgs> maxStreamDuration;
 
-    public Output<DurationArgs> maxStreamDuration() {
-        return this.maxStreamDuration == null ? Codegen.empty() : this.maxStreamDuration;
+    public Optional<Output<DurationArgs>> maxStreamDuration() {
+        return Optional.ofNullable(this.maxStreamDuration);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -264,10 +264,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="outlierDetection")
-      private final @Nullable Output<OutlierDetectionArgs> outlierDetection;
+    private @Nullable Output<OutlierDetectionArgs> outlierDetection;
 
-    public Output<OutlierDetectionArgs> outlierDetection() {
-        return this.outlierDetection == null ? Codegen.empty() : this.outlierDetection;
+    public Optional<Output<OutlierDetectionArgs>> outlierDetection() {
+        return Optional.ofNullable(this.outlierDetection);
     }
 
     /**
@@ -275,17 +275,17 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="portName")
-      private final @Nullable Output<String> portName;
+    private @Nullable Output<String> portName;
 
-    public Output<String> portName() {
-        return this.portName == null ? Codegen.empty() : this.portName;
+    public Optional<Output<String>> portName() {
+        return Optional.ofNullable(this.portName);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -293,17 +293,17 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<BackendServiceProtocol> protocol;
+    private @Nullable Output<BackendServiceProtocol> protocol;
 
-    public Output<BackendServiceProtocol> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<BackendServiceProtocol>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -311,10 +311,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="securitySettings")
-      private final @Nullable Output<SecuritySettingsArgs> securitySettings;
+    private @Nullable Output<SecuritySettingsArgs> securitySettings;
 
-    public Output<SecuritySettingsArgs> securitySettings() {
-        return this.securitySettings == null ? Codegen.empty() : this.securitySettings;
+    public Optional<Output<SecuritySettingsArgs>> securitySettings() {
+        return Optional.ofNullable(this.securitySettings);
     }
 
     /**
@@ -322,10 +322,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serviceBindings")
-      private final @Nullable Output<List<String>> serviceBindings;
+    private @Nullable Output<List<String>> serviceBindings;
 
-    public Output<List<String>> serviceBindings() {
-        return this.serviceBindings == null ? Codegen.empty() : this.serviceBindings;
+    public Optional<Output<List<String>>> serviceBindings() {
+        return Optional.ofNullable(this.serviceBindings);
     }
 
     /**
@@ -333,10 +333,10 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serviceLbPolicy")
-      private final @Nullable Output<String> serviceLbPolicy;
+    private @Nullable Output<String> serviceLbPolicy;
 
-    public Output<String> serviceLbPolicy() {
-        return this.serviceLbPolicy == null ? Codegen.empty() : this.serviceLbPolicy;
+    public Optional<Output<String>> serviceLbPolicy() {
+        return Optional.ofNullable(this.serviceLbPolicy);
     }
 
     /**
@@ -344,17 +344,17 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sessionAffinity")
-      private final @Nullable Output<BackendServiceSessionAffinity> sessionAffinity;
+    private @Nullable Output<BackendServiceSessionAffinity> sessionAffinity;
 
-    public Output<BackendServiceSessionAffinity> sessionAffinity() {
-        return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
+    public Optional<Output<BackendServiceSessionAffinity>> sessionAffinity() {
+        return Optional.ofNullable(this.sessionAffinity);
     }
 
     @Import(name="subsetting")
-      private final @Nullable Output<SubsettingArgs> subsetting;
+    private @Nullable Output<SubsettingArgs> subsetting;
 
-    public Output<SubsettingArgs> subsetting() {
-        return this.subsetting == null ? Codegen.empty() : this.subsetting;
+    public Optional<Output<SubsettingArgs>> subsetting() {
+        return Optional.ofNullable(this.subsetting);
     }
 
     /**
@@ -362,468 +362,378 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="timeoutSec")
-      private final @Nullable Output<Integer> timeoutSec;
+    private @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> timeoutSec() {
-        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
+    public Optional<Output<Integer>> timeoutSec() {
+        return Optional.ofNullable(this.timeoutSec);
     }
 
-    public BackendServiceArgs(
-        @Nullable Output<Integer> affinityCookieTtlSec,
-        @Nullable Output<List<BackendArgs>> backends,
-        @Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy,
-        @Nullable Output<CircuitBreakersArgs> circuitBreakers,
-        @Nullable Output<BackendServiceCompressionMode> compressionMode,
-        @Nullable Output<ConnectionDrainingArgs> connectionDraining,
-        @Nullable Output<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy,
-        @Nullable Output<ConsistentHashLoadBalancerSettingsArgs> consistentHash,
-        @Nullable Output<List<String>> customRequestHeaders,
-        @Nullable Output<List<String>> customResponseHeaders,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enableCDN,
-        @Nullable Output<BackendServiceFailoverPolicyArgs> failoverPolicy,
-        @Nullable Output<List<String>> healthChecks,
-        @Nullable Output<BackendServiceIAPArgs> iap,
-        @Nullable Output<BackendServiceLoadBalancingScheme> loadBalancingScheme,
-        @Nullable Output<BackendServiceLocalityLbPolicy> localityLbPolicy,
-        @Nullable Output<BackendServiceLogConfigArgs> logConfig,
-        @Nullable Output<DurationArgs> maxStreamDuration,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<OutlierDetectionArgs> outlierDetection,
-        @Nullable Output<String> portName,
-        @Nullable Output<String> project,
-        @Nullable Output<BackendServiceProtocol> protocol,
-        @Nullable Output<String> requestId,
-        @Nullable Output<SecuritySettingsArgs> securitySettings,
-        @Nullable Output<List<String>> serviceBindings,
-        @Nullable Output<String> serviceLbPolicy,
-        @Nullable Output<BackendServiceSessionAffinity> sessionAffinity,
-        @Nullable Output<SubsettingArgs> subsetting,
-        @Nullable Output<Integer> timeoutSec) {
-        this.affinityCookieTtlSec = affinityCookieTtlSec;
-        this.backends = backends;
-        this.cdnPolicy = cdnPolicy;
-        this.circuitBreakers = circuitBreakers;
-        this.compressionMode = compressionMode;
-        this.connectionDraining = connectionDraining;
-        this.connectionTrackingPolicy = connectionTrackingPolicy;
-        this.consistentHash = consistentHash;
-        this.customRequestHeaders = customRequestHeaders;
-        this.customResponseHeaders = customResponseHeaders;
-        this.description = description;
-        this.enableCDN = enableCDN;
-        this.failoverPolicy = failoverPolicy;
-        this.healthChecks = healthChecks;
-        this.iap = iap;
-        this.loadBalancingScheme = loadBalancingScheme;
-        this.localityLbPolicy = localityLbPolicy;
-        this.logConfig = logConfig;
-        this.maxStreamDuration = maxStreamDuration;
-        this.name = name;
-        this.network = network;
-        this.outlierDetection = outlierDetection;
-        this.portName = portName;
-        this.project = project;
-        this.protocol = protocol;
-        this.requestId = requestId;
-        this.securitySettings = securitySettings;
-        this.serviceBindings = serviceBindings;
-        this.serviceLbPolicy = serviceLbPolicy;
-        this.sessionAffinity = sessionAffinity;
-        this.subsetting = subsetting;
-        this.timeoutSec = timeoutSec;
-    }
+    private BackendServiceArgs() {}
 
-    private BackendServiceArgs() {
-        this.affinityCookieTtlSec = Codegen.empty();
-        this.backends = Codegen.empty();
-        this.cdnPolicy = Codegen.empty();
-        this.circuitBreakers = Codegen.empty();
-        this.compressionMode = Codegen.empty();
-        this.connectionDraining = Codegen.empty();
-        this.connectionTrackingPolicy = Codegen.empty();
-        this.consistentHash = Codegen.empty();
-        this.customRequestHeaders = Codegen.empty();
-        this.customResponseHeaders = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enableCDN = Codegen.empty();
-        this.failoverPolicy = Codegen.empty();
-        this.healthChecks = Codegen.empty();
-        this.iap = Codegen.empty();
-        this.loadBalancingScheme = Codegen.empty();
-        this.localityLbPolicy = Codegen.empty();
-        this.logConfig = Codegen.empty();
-        this.maxStreamDuration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.outlierDetection = Codegen.empty();
-        this.portName = Codegen.empty();
-        this.project = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.securitySettings = Codegen.empty();
-        this.serviceBindings = Codegen.empty();
-        this.serviceLbPolicy = Codegen.empty();
-        this.sessionAffinity = Codegen.empty();
-        this.subsetting = Codegen.empty();
-        this.timeoutSec = Codegen.empty();
+    private BackendServiceArgs(BackendServiceArgs $) {
+        this.affinityCookieTtlSec = $.affinityCookieTtlSec;
+        this.backends = $.backends;
+        this.cdnPolicy = $.cdnPolicy;
+        this.circuitBreakers = $.circuitBreakers;
+        this.compressionMode = $.compressionMode;
+        this.connectionDraining = $.connectionDraining;
+        this.connectionTrackingPolicy = $.connectionTrackingPolicy;
+        this.consistentHash = $.consistentHash;
+        this.customRequestHeaders = $.customRequestHeaders;
+        this.customResponseHeaders = $.customResponseHeaders;
+        this.description = $.description;
+        this.enableCDN = $.enableCDN;
+        this.failoverPolicy = $.failoverPolicy;
+        this.healthChecks = $.healthChecks;
+        this.iap = $.iap;
+        this.loadBalancingScheme = $.loadBalancingScheme;
+        this.localityLbPolicy = $.localityLbPolicy;
+        this.logConfig = $.logConfig;
+        this.maxStreamDuration = $.maxStreamDuration;
+        this.name = $.name;
+        this.network = $.network;
+        this.outlierDetection = $.outlierDetection;
+        this.portName = $.portName;
+        this.project = $.project;
+        this.protocol = $.protocol;
+        this.requestId = $.requestId;
+        this.securitySettings = $.securitySettings;
+        this.serviceBindings = $.serviceBindings;
+        this.serviceLbPolicy = $.serviceLbPolicy;
+        this.sessionAffinity = $.sessionAffinity;
+        this.subsetting = $.subsetting;
+        this.timeoutSec = $.timeoutSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> affinityCookieTtlSec;
-        private @Nullable Output<List<BackendArgs>> backends;
-        private @Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy;
-        private @Nullable Output<CircuitBreakersArgs> circuitBreakers;
-        private @Nullable Output<BackendServiceCompressionMode> compressionMode;
-        private @Nullable Output<ConnectionDrainingArgs> connectionDraining;
-        private @Nullable Output<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy;
-        private @Nullable Output<ConsistentHashLoadBalancerSettingsArgs> consistentHash;
-        private @Nullable Output<List<String>> customRequestHeaders;
-        private @Nullable Output<List<String>> customResponseHeaders;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enableCDN;
-        private @Nullable Output<BackendServiceFailoverPolicyArgs> failoverPolicy;
-        private @Nullable Output<List<String>> healthChecks;
-        private @Nullable Output<BackendServiceIAPArgs> iap;
-        private @Nullable Output<BackendServiceLoadBalancingScheme> loadBalancingScheme;
-        private @Nullable Output<BackendServiceLocalityLbPolicy> localityLbPolicy;
-        private @Nullable Output<BackendServiceLogConfigArgs> logConfig;
-        private @Nullable Output<DurationArgs> maxStreamDuration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<OutlierDetectionArgs> outlierDetection;
-        private @Nullable Output<String> portName;
-        private @Nullable Output<String> project;
-        private @Nullable Output<BackendServiceProtocol> protocol;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<SecuritySettingsArgs> securitySettings;
-        private @Nullable Output<List<String>> serviceBindings;
-        private @Nullable Output<String> serviceLbPolicy;
-        private @Nullable Output<BackendServiceSessionAffinity> sessionAffinity;
-        private @Nullable Output<SubsettingArgs> subsetting;
-        private @Nullable Output<Integer> timeoutSec;
+        private BackendServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceArgs();
         }
 
         public Builder(BackendServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affinityCookieTtlSec = defaults.affinityCookieTtlSec;
-    	      this.backends = defaults.backends;
-    	      this.cdnPolicy = defaults.cdnPolicy;
-    	      this.circuitBreakers = defaults.circuitBreakers;
-    	      this.compressionMode = defaults.compressionMode;
-    	      this.connectionDraining = defaults.connectionDraining;
-    	      this.connectionTrackingPolicy = defaults.connectionTrackingPolicy;
-    	      this.consistentHash = defaults.consistentHash;
-    	      this.customRequestHeaders = defaults.customRequestHeaders;
-    	      this.customResponseHeaders = defaults.customResponseHeaders;
-    	      this.description = defaults.description;
-    	      this.enableCDN = defaults.enableCDN;
-    	      this.failoverPolicy = defaults.failoverPolicy;
-    	      this.healthChecks = defaults.healthChecks;
-    	      this.iap = defaults.iap;
-    	      this.loadBalancingScheme = defaults.loadBalancingScheme;
-    	      this.localityLbPolicy = defaults.localityLbPolicy;
-    	      this.logConfig = defaults.logConfig;
-    	      this.maxStreamDuration = defaults.maxStreamDuration;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.outlierDetection = defaults.outlierDetection;
-    	      this.portName = defaults.portName;
-    	      this.project = defaults.project;
-    	      this.protocol = defaults.protocol;
-    	      this.requestId = defaults.requestId;
-    	      this.securitySettings = defaults.securitySettings;
-    	      this.serviceBindings = defaults.serviceBindings;
-    	      this.serviceLbPolicy = defaults.serviceLbPolicy;
-    	      this.sessionAffinity = defaults.sessionAffinity;
-    	      this.subsetting = defaults.subsetting;
-    	      this.timeoutSec = defaults.timeoutSec;
+            $ = new BackendServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder affinityCookieTtlSec(@Nullable Output<Integer> affinityCookieTtlSec) {
-            this.affinityCookieTtlSec = affinityCookieTtlSec;
+            $.affinityCookieTtlSec = affinityCookieTtlSec;
             return this;
         }
-        public Builder affinityCookieTtlSec(@Nullable Integer affinityCookieTtlSec) {
-            this.affinityCookieTtlSec = Codegen.ofNullable(affinityCookieTtlSec);
-            return this;
+
+        public Builder affinityCookieTtlSec(Integer affinityCookieTtlSec) {
+            return affinityCookieTtlSec(Output.of(affinityCookieTtlSec));
         }
+
         public Builder backends(@Nullable Output<List<BackendArgs>> backends) {
-            this.backends = backends;
+            $.backends = backends;
             return this;
         }
-        public Builder backends(@Nullable List<BackendArgs> backends) {
-            this.backends = Codegen.ofNullable(backends);
-            return this;
+
+        public Builder backends(List<BackendArgs> backends) {
+            return backends(Output.of(backends));
         }
+
         public Builder backends(BackendArgs... backends) {
             return backends(List.of(backends));
         }
+
         public Builder cdnPolicy(@Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy) {
-            this.cdnPolicy = cdnPolicy;
+            $.cdnPolicy = cdnPolicy;
             return this;
         }
-        public Builder cdnPolicy(@Nullable BackendServiceCdnPolicyArgs cdnPolicy) {
-            this.cdnPolicy = Codegen.ofNullable(cdnPolicy);
-            return this;
+
+        public Builder cdnPolicy(BackendServiceCdnPolicyArgs cdnPolicy) {
+            return cdnPolicy(Output.of(cdnPolicy));
         }
+
         public Builder circuitBreakers(@Nullable Output<CircuitBreakersArgs> circuitBreakers) {
-            this.circuitBreakers = circuitBreakers;
+            $.circuitBreakers = circuitBreakers;
             return this;
         }
-        public Builder circuitBreakers(@Nullable CircuitBreakersArgs circuitBreakers) {
-            this.circuitBreakers = Codegen.ofNullable(circuitBreakers);
-            return this;
+
+        public Builder circuitBreakers(CircuitBreakersArgs circuitBreakers) {
+            return circuitBreakers(Output.of(circuitBreakers));
         }
+
         public Builder compressionMode(@Nullable Output<BackendServiceCompressionMode> compressionMode) {
-            this.compressionMode = compressionMode;
+            $.compressionMode = compressionMode;
             return this;
         }
-        public Builder compressionMode(@Nullable BackendServiceCompressionMode compressionMode) {
-            this.compressionMode = Codegen.ofNullable(compressionMode);
-            return this;
+
+        public Builder compressionMode(BackendServiceCompressionMode compressionMode) {
+            return compressionMode(Output.of(compressionMode));
         }
+
         public Builder connectionDraining(@Nullable Output<ConnectionDrainingArgs> connectionDraining) {
-            this.connectionDraining = connectionDraining;
+            $.connectionDraining = connectionDraining;
             return this;
         }
-        public Builder connectionDraining(@Nullable ConnectionDrainingArgs connectionDraining) {
-            this.connectionDraining = Codegen.ofNullable(connectionDraining);
-            return this;
+
+        public Builder connectionDraining(ConnectionDrainingArgs connectionDraining) {
+            return connectionDraining(Output.of(connectionDraining));
         }
+
         public Builder connectionTrackingPolicy(@Nullable Output<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy) {
-            this.connectionTrackingPolicy = connectionTrackingPolicy;
+            $.connectionTrackingPolicy = connectionTrackingPolicy;
             return this;
         }
-        public Builder connectionTrackingPolicy(@Nullable BackendServiceConnectionTrackingPolicyArgs connectionTrackingPolicy) {
-            this.connectionTrackingPolicy = Codegen.ofNullable(connectionTrackingPolicy);
-            return this;
+
+        public Builder connectionTrackingPolicy(BackendServiceConnectionTrackingPolicyArgs connectionTrackingPolicy) {
+            return connectionTrackingPolicy(Output.of(connectionTrackingPolicy));
         }
+
         public Builder consistentHash(@Nullable Output<ConsistentHashLoadBalancerSettingsArgs> consistentHash) {
-            this.consistentHash = consistentHash;
+            $.consistentHash = consistentHash;
             return this;
         }
-        public Builder consistentHash(@Nullable ConsistentHashLoadBalancerSettingsArgs consistentHash) {
-            this.consistentHash = Codegen.ofNullable(consistentHash);
-            return this;
+
+        public Builder consistentHash(ConsistentHashLoadBalancerSettingsArgs consistentHash) {
+            return consistentHash(Output.of(consistentHash));
         }
+
         public Builder customRequestHeaders(@Nullable Output<List<String>> customRequestHeaders) {
-            this.customRequestHeaders = customRequestHeaders;
+            $.customRequestHeaders = customRequestHeaders;
             return this;
         }
-        public Builder customRequestHeaders(@Nullable List<String> customRequestHeaders) {
-            this.customRequestHeaders = Codegen.ofNullable(customRequestHeaders);
-            return this;
+
+        public Builder customRequestHeaders(List<String> customRequestHeaders) {
+            return customRequestHeaders(Output.of(customRequestHeaders));
         }
+
         public Builder customRequestHeaders(String... customRequestHeaders) {
             return customRequestHeaders(List.of(customRequestHeaders));
         }
+
         public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
-            this.customResponseHeaders = customResponseHeaders;
+            $.customResponseHeaders = customResponseHeaders;
             return this;
         }
-        public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
-            this.customResponseHeaders = Codegen.ofNullable(customResponseHeaders);
-            return this;
+
+        public Builder customResponseHeaders(List<String> customResponseHeaders) {
+            return customResponseHeaders(Output.of(customResponseHeaders));
         }
+
         public Builder customResponseHeaders(String... customResponseHeaders) {
             return customResponseHeaders(List.of(customResponseHeaders));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enableCDN(@Nullable Output<Boolean> enableCDN) {
-            this.enableCDN = enableCDN;
+            $.enableCDN = enableCDN;
             return this;
         }
-        public Builder enableCDN(@Nullable Boolean enableCDN) {
-            this.enableCDN = Codegen.ofNullable(enableCDN);
-            return this;
+
+        public Builder enableCDN(Boolean enableCDN) {
+            return enableCDN(Output.of(enableCDN));
         }
+
         public Builder failoverPolicy(@Nullable Output<BackendServiceFailoverPolicyArgs> failoverPolicy) {
-            this.failoverPolicy = failoverPolicy;
+            $.failoverPolicy = failoverPolicy;
             return this;
         }
-        public Builder failoverPolicy(@Nullable BackendServiceFailoverPolicyArgs failoverPolicy) {
-            this.failoverPolicy = Codegen.ofNullable(failoverPolicy);
-            return this;
+
+        public Builder failoverPolicy(BackendServiceFailoverPolicyArgs failoverPolicy) {
+            return failoverPolicy(Output.of(failoverPolicy));
         }
+
         public Builder healthChecks(@Nullable Output<List<String>> healthChecks) {
-            this.healthChecks = healthChecks;
+            $.healthChecks = healthChecks;
             return this;
         }
-        public Builder healthChecks(@Nullable List<String> healthChecks) {
-            this.healthChecks = Codegen.ofNullable(healthChecks);
-            return this;
+
+        public Builder healthChecks(List<String> healthChecks) {
+            return healthChecks(Output.of(healthChecks));
         }
+
         public Builder healthChecks(String... healthChecks) {
             return healthChecks(List.of(healthChecks));
         }
+
         public Builder iap(@Nullable Output<BackendServiceIAPArgs> iap) {
-            this.iap = iap;
+            $.iap = iap;
             return this;
         }
-        public Builder iap(@Nullable BackendServiceIAPArgs iap) {
-            this.iap = Codegen.ofNullable(iap);
-            return this;
+
+        public Builder iap(BackendServiceIAPArgs iap) {
+            return iap(Output.of(iap));
         }
+
         public Builder loadBalancingScheme(@Nullable Output<BackendServiceLoadBalancingScheme> loadBalancingScheme) {
-            this.loadBalancingScheme = loadBalancingScheme;
+            $.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
-        public Builder loadBalancingScheme(@Nullable BackendServiceLoadBalancingScheme loadBalancingScheme) {
-            this.loadBalancingScheme = Codegen.ofNullable(loadBalancingScheme);
-            return this;
+
+        public Builder loadBalancingScheme(BackendServiceLoadBalancingScheme loadBalancingScheme) {
+            return loadBalancingScheme(Output.of(loadBalancingScheme));
         }
+
         public Builder localityLbPolicy(@Nullable Output<BackendServiceLocalityLbPolicy> localityLbPolicy) {
-            this.localityLbPolicy = localityLbPolicy;
+            $.localityLbPolicy = localityLbPolicy;
             return this;
         }
-        public Builder localityLbPolicy(@Nullable BackendServiceLocalityLbPolicy localityLbPolicy) {
-            this.localityLbPolicy = Codegen.ofNullable(localityLbPolicy);
-            return this;
+
+        public Builder localityLbPolicy(BackendServiceLocalityLbPolicy localityLbPolicy) {
+            return localityLbPolicy(Output.of(localityLbPolicy));
         }
+
         public Builder logConfig(@Nullable Output<BackendServiceLogConfigArgs> logConfig) {
-            this.logConfig = logConfig;
+            $.logConfig = logConfig;
             return this;
         }
-        public Builder logConfig(@Nullable BackendServiceLogConfigArgs logConfig) {
-            this.logConfig = Codegen.ofNullable(logConfig);
-            return this;
+
+        public Builder logConfig(BackendServiceLogConfigArgs logConfig) {
+            return logConfig(Output.of(logConfig));
         }
+
         public Builder maxStreamDuration(@Nullable Output<DurationArgs> maxStreamDuration) {
-            this.maxStreamDuration = maxStreamDuration;
+            $.maxStreamDuration = maxStreamDuration;
             return this;
         }
-        public Builder maxStreamDuration(@Nullable DurationArgs maxStreamDuration) {
-            this.maxStreamDuration = Codegen.ofNullable(maxStreamDuration);
-            return this;
+
+        public Builder maxStreamDuration(DurationArgs maxStreamDuration) {
+            return maxStreamDuration(Output.of(maxStreamDuration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder outlierDetection(@Nullable Output<OutlierDetectionArgs> outlierDetection) {
-            this.outlierDetection = outlierDetection;
+            $.outlierDetection = outlierDetection;
             return this;
         }
-        public Builder outlierDetection(@Nullable OutlierDetectionArgs outlierDetection) {
-            this.outlierDetection = Codegen.ofNullable(outlierDetection);
-            return this;
+
+        public Builder outlierDetection(OutlierDetectionArgs outlierDetection) {
+            return outlierDetection(Output.of(outlierDetection));
         }
+
         public Builder portName(@Nullable Output<String> portName) {
-            this.portName = portName;
+            $.portName = portName;
             return this;
         }
-        public Builder portName(@Nullable String portName) {
-            this.portName = Codegen.ofNullable(portName);
-            return this;
+
+        public Builder portName(String portName) {
+            return portName(Output.of(portName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder protocol(@Nullable Output<BackendServiceProtocol> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable BackendServiceProtocol protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(BackendServiceProtocol protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder securitySettings(@Nullable Output<SecuritySettingsArgs> securitySettings) {
-            this.securitySettings = securitySettings;
+            $.securitySettings = securitySettings;
             return this;
         }
-        public Builder securitySettings(@Nullable SecuritySettingsArgs securitySettings) {
-            this.securitySettings = Codegen.ofNullable(securitySettings);
-            return this;
+
+        public Builder securitySettings(SecuritySettingsArgs securitySettings) {
+            return securitySettings(Output.of(securitySettings));
         }
+
         public Builder serviceBindings(@Nullable Output<List<String>> serviceBindings) {
-            this.serviceBindings = serviceBindings;
+            $.serviceBindings = serviceBindings;
             return this;
         }
-        public Builder serviceBindings(@Nullable List<String> serviceBindings) {
-            this.serviceBindings = Codegen.ofNullable(serviceBindings);
-            return this;
+
+        public Builder serviceBindings(List<String> serviceBindings) {
+            return serviceBindings(Output.of(serviceBindings));
         }
+
         public Builder serviceBindings(String... serviceBindings) {
             return serviceBindings(List.of(serviceBindings));
         }
+
         public Builder serviceLbPolicy(@Nullable Output<String> serviceLbPolicy) {
-            this.serviceLbPolicy = serviceLbPolicy;
+            $.serviceLbPolicy = serviceLbPolicy;
             return this;
         }
-        public Builder serviceLbPolicy(@Nullable String serviceLbPolicy) {
-            this.serviceLbPolicy = Codegen.ofNullable(serviceLbPolicy);
-            return this;
+
+        public Builder serviceLbPolicy(String serviceLbPolicy) {
+            return serviceLbPolicy(Output.of(serviceLbPolicy));
         }
+
         public Builder sessionAffinity(@Nullable Output<BackendServiceSessionAffinity> sessionAffinity) {
-            this.sessionAffinity = sessionAffinity;
+            $.sessionAffinity = sessionAffinity;
             return this;
         }
-        public Builder sessionAffinity(@Nullable BackendServiceSessionAffinity sessionAffinity) {
-            this.sessionAffinity = Codegen.ofNullable(sessionAffinity);
-            return this;
+
+        public Builder sessionAffinity(BackendServiceSessionAffinity sessionAffinity) {
+            return sessionAffinity(Output.of(sessionAffinity));
         }
+
         public Builder subsetting(@Nullable Output<SubsettingArgs> subsetting) {
-            this.subsetting = subsetting;
+            $.subsetting = subsetting;
             return this;
         }
-        public Builder subsetting(@Nullable SubsettingArgs subsetting) {
-            this.subsetting = Codegen.ofNullable(subsetting);
-            return this;
+
+        public Builder subsetting(SubsettingArgs subsetting) {
+            return subsetting(Output.of(subsetting));
         }
+
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
-            this.timeoutSec = timeoutSec;
+            $.timeoutSec = timeoutSec;
             return this;
         }
-        public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Codegen.ofNullable(timeoutSec);
-            return this;
-        }        public BackendServiceArgs build() {
-            return new BackendServiceArgs(affinityCookieTtlSec, backends, cdnPolicy, circuitBreakers, compressionMode, connectionDraining, connectionTrackingPolicy, consistentHash, customRequestHeaders, customResponseHeaders, description, enableCDN, failoverPolicy, healthChecks, iap, loadBalancingScheme, localityLbPolicy, logConfig, maxStreamDuration, name, network, outlierDetection, portName, project, protocol, requestId, securitySettings, serviceBindings, serviceLbPolicy, sessionAffinity, subsetting, timeoutSec);
+
+        public Builder timeoutSec(Integer timeoutSec) {
+            return timeoutSec(Output.of(timeoutSec));
+        }
+
+        public BackendServiceArgs build() {
+            return $;
         }
     }
+
 }

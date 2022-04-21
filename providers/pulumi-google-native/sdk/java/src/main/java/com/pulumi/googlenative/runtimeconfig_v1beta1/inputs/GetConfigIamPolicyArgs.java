@@ -15,78 +15,71 @@ public final class GetConfigIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetConfigIamPolicyArgs Empty = new GetConfigIamPolicyArgs();
 
     @Import(name="configId", required=true)
-      private final String configId;
+    private String configId;
 
     public String configId() {
         return this.configId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetConfigIamPolicyArgs(
-        String configId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetConfigIamPolicyArgs() {}
 
-    private GetConfigIamPolicyArgs() {
-        this.configId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetConfigIamPolicyArgs(GetConfigIamPolicyArgs $) {
+        this.configId = $.configId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetConfigIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigIamPolicyArgs();
         }
 
         public Builder(GetConfigIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetConfigIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(String configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetConfigIamPolicyArgs build() {
-            return new GetConfigIamPolicyArgs(configId, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetConfigIamPolicyArgs build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            return $;
         }
     }
+
 }

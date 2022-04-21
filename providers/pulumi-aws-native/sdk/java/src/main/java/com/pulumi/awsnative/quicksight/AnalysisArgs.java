@@ -10,10 +10,10 @@ import com.pulumi.awsnative.quicksight.inputs.AnalysisSourceEntityArgs;
 import com.pulumi.awsnative.quicksight.inputs.AnalysisTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     public static final AnalysisArgs Empty = new AnalysisArgs();
 
     @Import(name="analysisId", required=true)
-      private final Output<String> analysisId;
+    private Output<String> analysisId;
 
     public Output<String> analysisId() {
         return this.analysisId;
     }
 
     @Import(name="awsAccountId", required=true)
-      private final Output<String> awsAccountId;
+    private Output<String> awsAccountId;
 
     public Output<String> awsAccountId() {
         return this.awsAccountId;
@@ -40,10 +40,10 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="errors")
-      private final @Nullable Output<List<AnalysisErrorArgs>> errors;
+    private @Nullable Output<List<AnalysisErrorArgs>> errors;
 
-    public Output<List<AnalysisErrorArgs>> errors() {
-        return this.errors == null ? Codegen.empty() : this.errors;
+    public Optional<Output<List<AnalysisErrorArgs>>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     /**
@@ -51,17 +51,17 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="parameters")
-      private final @Nullable Output<AnalysisParametersArgs> parameters;
+    private @Nullable Output<AnalysisParametersArgs> parameters;
 
-    public Output<AnalysisParametersArgs> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<AnalysisParametersArgs>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -74,14 +74,14 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions;
+    private @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions;
 
-    public Output<List<AnalysisResourcePermissionArgs>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<AnalysisResourcePermissionArgs>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     @Import(name="sourceEntity", required=true)
-      private final Output<AnalysisSourceEntityArgs> sourceEntity;
+    private Output<AnalysisSourceEntityArgs> sourceEntity;
 
     public Output<AnalysisSourceEntityArgs> sourceEntity() {
         return this.sourceEntity;
@@ -93,10 +93,10 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<AnalysisTagArgs>> tags;
+    private @Nullable Output<List<AnalysisTagArgs>> tags;
 
-    public Output<List<AnalysisTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<AnalysisTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -104,163 +104,143 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="themeArn")
-      private final @Nullable Output<String> themeArn;
+    private @Nullable Output<String> themeArn;
 
-    public Output<String> themeArn() {
-        return this.themeArn == null ? Codegen.empty() : this.themeArn;
+    public Optional<Output<String>> themeArn() {
+        return Optional.ofNullable(this.themeArn);
     }
 
-    public AnalysisArgs(
-        Output<String> analysisId,
-        Output<String> awsAccountId,
-        @Nullable Output<List<AnalysisErrorArgs>> errors,
-        @Nullable Output<String> name,
-        @Nullable Output<AnalysisParametersArgs> parameters,
-        @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions,
-        Output<AnalysisSourceEntityArgs> sourceEntity,
-        @Nullable Output<List<AnalysisTagArgs>> tags,
-        @Nullable Output<String> themeArn) {
-        this.analysisId = Objects.requireNonNull(analysisId, "expected parameter 'analysisId' to be non-null");
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-        this.errors = errors;
-        this.name = name;
-        this.parameters = parameters;
-        this.permissions = permissions;
-        this.sourceEntity = Objects.requireNonNull(sourceEntity, "expected parameter 'sourceEntity' to be non-null");
-        this.tags = tags;
-        this.themeArn = themeArn;
-    }
+    private AnalysisArgs() {}
 
-    private AnalysisArgs() {
-        this.analysisId = Codegen.empty();
-        this.awsAccountId = Codegen.empty();
-        this.errors = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.sourceEntity = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.themeArn = Codegen.empty();
+    private AnalysisArgs(AnalysisArgs $) {
+        this.analysisId = $.analysisId;
+        this.awsAccountId = $.awsAccountId;
+        this.errors = $.errors;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.permissions = $.permissions;
+        this.sourceEntity = $.sourceEntity;
+        this.tags = $.tags;
+        this.themeArn = $.themeArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalysisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> analysisId;
-        private Output<String> awsAccountId;
-        private @Nullable Output<List<AnalysisErrorArgs>> errors;
-        private @Nullable Output<String> name;
-        private @Nullable Output<AnalysisParametersArgs> parameters;
-        private @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions;
-        private Output<AnalysisSourceEntityArgs> sourceEntity;
-        private @Nullable Output<List<AnalysisTagArgs>> tags;
-        private @Nullable Output<String> themeArn;
+        private AnalysisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalysisArgs();
         }
 
         public Builder(AnalysisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisId = defaults.analysisId;
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.errors = defaults.errors;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.permissions = defaults.permissions;
-    	      this.sourceEntity = defaults.sourceEntity;
-    	      this.tags = defaults.tags;
-    	      this.themeArn = defaults.themeArn;
+            $ = new AnalysisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisId(Output<String> analysisId) {
-            this.analysisId = Objects.requireNonNull(analysisId);
+            $.analysisId = analysisId;
             return this;
         }
+
         public Builder analysisId(String analysisId) {
-            this.analysisId = Output.of(Objects.requireNonNull(analysisId));
-            return this;
+            return analysisId(Output.of(analysisId));
         }
+
         public Builder awsAccountId(Output<String> awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
-            return this;
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder errors(@Nullable Output<List<AnalysisErrorArgs>> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
-        public Builder errors(@Nullable List<AnalysisErrorArgs> errors) {
-            this.errors = Codegen.ofNullable(errors);
-            return this;
+
+        public Builder errors(List<AnalysisErrorArgs> errors) {
+            return errors(Output.of(errors));
         }
+
         public Builder errors(AnalysisErrorArgs... errors) {
             return errors(List.of(errors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<AnalysisParametersArgs> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable AnalysisParametersArgs parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(AnalysisParametersArgs parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder permissions(@Nullable Output<List<AnalysisResourcePermissionArgs>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<AnalysisResourcePermissionArgs> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<AnalysisResourcePermissionArgs> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(AnalysisResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder sourceEntity(Output<AnalysisSourceEntityArgs> sourceEntity) {
-            this.sourceEntity = Objects.requireNonNull(sourceEntity);
+            $.sourceEntity = sourceEntity;
             return this;
         }
+
         public Builder sourceEntity(AnalysisSourceEntityArgs sourceEntity) {
-            this.sourceEntity = Output.of(Objects.requireNonNull(sourceEntity));
-            return this;
+            return sourceEntity(Output.of(sourceEntity));
         }
+
         public Builder tags(@Nullable Output<List<AnalysisTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<AnalysisTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<AnalysisTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(AnalysisTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder themeArn(@Nullable Output<String> themeArn) {
-            this.themeArn = themeArn;
+            $.themeArn = themeArn;
             return this;
         }
-        public Builder themeArn(@Nullable String themeArn) {
-            this.themeArn = Codegen.ofNullable(themeArn);
-            return this;
-        }        public AnalysisArgs build() {
-            return new AnalysisArgs(analysisId, awsAccountId, errors, name, parameters, permissions, sourceEntity, tags, themeArn);
+
+        public Builder themeArn(String themeArn) {
+            return themeArn(Output.of(themeArn));
+        }
+
+        public AnalysisArgs build() {
+            $.analysisId = Objects.requireNonNull($.analysisId, "expected parameter 'analysisId' to be non-null");
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            $.sourceEntity = Objects.requireNonNull($.sourceEntity, "expected parameter 'sourceEntity' to be non-null");
+            return $;
         }
     }
+
 }

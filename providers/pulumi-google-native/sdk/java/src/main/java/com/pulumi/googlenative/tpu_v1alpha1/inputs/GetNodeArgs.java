@@ -15,78 +15,72 @@ public final class GetNodeArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNodeArgs Empty = new GetNodeArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="nodeId", required=true)
-      private final String nodeId;
+    private String nodeId;
 
     public String nodeId() {
         return this.nodeId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetNodeArgs(
-        String location,
-        String nodeId,
-        @Nullable String project) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.nodeId = Objects.requireNonNull(nodeId, "expected parameter 'nodeId' to be non-null");
-        this.project = project;
-    }
+    private GetNodeArgs() {}
 
-    private GetNodeArgs() {
-        this.location = null;
-        this.nodeId = null;
-        this.project = null;
+    private GetNodeArgs(GetNodeArgs $) {
+        this.location = $.location;
+        this.nodeId = $.nodeId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String nodeId;
-        private @Nullable String project;
+        private GetNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodeArgs();
         }
 
         public Builder(GetNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.nodeId = defaults.nodeId;
-    	      this.project = defaults.project;
+            $ = new GetNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder nodeId(String nodeId) {
-            this.nodeId = Objects.requireNonNull(nodeId);
+            $.nodeId = nodeId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetNodeArgs build() {
-            return new GetNodeArgs(location, nodeId, project);
+        }
+
+        public GetNodeArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.nodeId = Objects.requireNonNull($.nodeId, "expected parameter 'nodeId' to be non-null");
+            return $;
         }
     }
+
 }

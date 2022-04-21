@@ -23,10 +23,10 @@ public final class NetworkPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="privateLink")
-      private final @Nullable String privateLink;
+    private @Nullable String privateLink;
 
     public Optional<String> privateLink() {
-        return this.privateLink == null ? Optional.empty() : Optional.ofNullable(this.privateLink);
+        return Optional.ofNullable(this.privateLink);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class NetworkPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceProviderConnection")
-      private final @Nullable String resourceProviderConnection;
+    private @Nullable String resourceProviderConnection;
 
     public Optional<String> resourceProviderConnection() {
-        return this.resourceProviderConnection == null ? Optional.empty() : Optional.ofNullable(this.resourceProviderConnection);
+        return Optional.ofNullable(this.resourceProviderConnection);
     }
 
-    public NetworkPropertiesResponse(
-        @Nullable String privateLink,
-        @Nullable String resourceProviderConnection) {
-        this.privateLink = privateLink;
-        this.resourceProviderConnection = resourceProviderConnection;
-    }
+    private NetworkPropertiesResponse() {}
 
-    private NetworkPropertiesResponse() {
-        this.privateLink = null;
-        this.resourceProviderConnection = null;
+    private NetworkPropertiesResponse(NetworkPropertiesResponse $) {
+        this.privateLink = $.privateLink;
+        this.resourceProviderConnection = $.resourceProviderConnection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String privateLink;
-        private @Nullable String resourceProviderConnection;
+        private NetworkPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPropertiesResponse();
         }
 
         public Builder(NetworkPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateLink = defaults.privateLink;
-    	      this.resourceProviderConnection = defaults.resourceProviderConnection;
+            $ = new NetworkPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateLink(@Nullable String privateLink) {
-            this.privateLink = privateLink;
+            $.privateLink = privateLink;
             return this;
         }
+
         public Builder resourceProviderConnection(@Nullable String resourceProviderConnection) {
-            this.resourceProviderConnection = resourceProviderConnection;
+            $.resourceProviderConnection = resourceProviderConnection;
             return this;
-        }        public NetworkPropertiesResponse build() {
-            return new NetworkPropertiesResponse(privateLink, resourceProviderConnection);
+        }
+
+        public NetworkPropertiesResponse build() {
+            return $;
         }
     }
+
 }

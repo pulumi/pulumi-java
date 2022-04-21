@@ -7,10 +7,10 @@ import com.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetResourceA
 import com.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSetName")
-      private final @Nullable Output<String> resourceSetName;
+    private @Nullable Output<String> resourceSetName;
 
-    public Output<String> resourceSetName() {
-        return this.resourceSetName == null ? Codegen.empty() : this.resourceSetName;
+    public Optional<Output<String>> resourceSetName() {
+        return Optional.ofNullable(this.resourceSetName);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSetType", required=true)
-      private final Output<String> resourceSetType;
+    private Output<String> resourceSetType;
 
     public Output<String> resourceSetType() {
         return this.resourceSetType;
@@ -47,7 +47,7 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resources", required=true)
-      private final Output<List<ResourceSetResourceArgs>> resources;
+    private Output<List<ResourceSetResourceArgs>> resources;
 
     public Output<List<ResourceSetResourceArgs>> resources() {
         return this.resources;
@@ -58,95 +58,88 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ResourceSetTagArgs>> tags;
+    private @Nullable Output<List<ResourceSetTagArgs>> tags;
 
-    public Output<List<ResourceSetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ResourceSetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ResourceSetArgs(
-        @Nullable Output<String> resourceSetName,
-        Output<String> resourceSetType,
-        Output<List<ResourceSetResourceArgs>> resources,
-        @Nullable Output<List<ResourceSetTagArgs>> tags) {
-        this.resourceSetName = resourceSetName;
-        this.resourceSetType = Objects.requireNonNull(resourceSetType, "expected parameter 'resourceSetType' to be non-null");
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-        this.tags = tags;
-    }
+    private ResourceSetArgs() {}
 
-    private ResourceSetArgs() {
-        this.resourceSetName = Codegen.empty();
-        this.resourceSetType = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ResourceSetArgs(ResourceSetArgs $) {
+        this.resourceSetName = $.resourceSetName;
+        this.resourceSetType = $.resourceSetType;
+        this.resources = $.resources;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceSetName;
-        private Output<String> resourceSetType;
-        private Output<List<ResourceSetResourceArgs>> resources;
-        private @Nullable Output<List<ResourceSetTagArgs>> tags;
+        private ResourceSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetArgs();
         }
 
         public Builder(ResourceSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceSetName = defaults.resourceSetName;
-    	      this.resourceSetType = defaults.resourceSetType;
-    	      this.resources = defaults.resources;
-    	      this.tags = defaults.tags;
+            $ = new ResourceSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
-            this.resourceSetName = resourceSetName;
+            $.resourceSetName = resourceSetName;
             return this;
         }
-        public Builder resourceSetName(@Nullable String resourceSetName) {
-            this.resourceSetName = Codegen.ofNullable(resourceSetName);
-            return this;
+
+        public Builder resourceSetName(String resourceSetName) {
+            return resourceSetName(Output.of(resourceSetName));
         }
+
         public Builder resourceSetType(Output<String> resourceSetType) {
-            this.resourceSetType = Objects.requireNonNull(resourceSetType);
+            $.resourceSetType = resourceSetType;
             return this;
         }
+
         public Builder resourceSetType(String resourceSetType) {
-            this.resourceSetType = Output.of(Objects.requireNonNull(resourceSetType));
-            return this;
+            return resourceSetType(Output.of(resourceSetType));
         }
+
         public Builder resources(Output<List<ResourceSetResourceArgs>> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(List<ResourceSetResourceArgs> resources) {
-            this.resources = Output.of(Objects.requireNonNull(resources));
-            return this;
+            return resources(Output.of(resources));
         }
+
         public Builder resources(ResourceSetResourceArgs... resources) {
             return resources(List.of(resources));
         }
+
         public Builder tags(@Nullable Output<List<ResourceSetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ResourceSetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ResourceSetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ResourceSetTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ResourceSetArgs build() {
-            return new ResourceSetArgs(resourceSetName, resourceSetType, resources, tags);
+        }
+
+        public ResourceSetArgs build() {
+            $.resourceSetType = Objects.requireNonNull($.resourceSetType, "expected parameter 'resourceSetType' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

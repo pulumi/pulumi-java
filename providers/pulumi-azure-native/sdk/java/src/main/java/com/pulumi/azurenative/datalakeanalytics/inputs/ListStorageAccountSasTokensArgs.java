@@ -17,7 +17,7 @@ public final class ListStorageAccountSasTokensArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class ListStorageAccountSasTokensArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -39,7 +39,7 @@ public final class ListStorageAccountSasTokensArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class ListStorageAccountSasTokensArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="storageAccountName", required=true)
-      private final String storageAccountName;
+    private String storageAccountName;
 
     public String storageAccountName() {
         return this.storageAccountName;
     }
 
-    public ListStorageAccountSasTokensArgs(
-        String accountName,
-        String containerName,
-        String resourceGroupName,
-        String storageAccountName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountName = Objects.requireNonNull(storageAccountName, "expected parameter 'storageAccountName' to be non-null");
-    }
+    private ListStorageAccountSasTokensArgs() {}
 
-    private ListStorageAccountSasTokensArgs() {
-        this.accountName = null;
-        this.containerName = null;
-        this.resourceGroupName = null;
-        this.storageAccountName = null;
+    private ListStorageAccountSasTokensArgs(ListStorageAccountSasTokensArgs $) {
+        this.accountName = $.accountName;
+        this.containerName = $.containerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListStorageAccountSasTokensArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String containerName;
-        private String resourceGroupName;
-        private String storageAccountName;
+        private ListStorageAccountSasTokensArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListStorageAccountSasTokensArgs();
         }
 
         public Builder(ListStorageAccountSasTokensArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.containerName = defaults.containerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new ListStorageAccountSasTokensArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Objects.requireNonNull(storageAccountName);
+            $.storageAccountName = storageAccountName;
             return this;
-        }        public ListStorageAccountSasTokensArgs build() {
-            return new ListStorageAccountSasTokensArgs(accountName, containerName, resourceGroupName, storageAccountName);
+        }
+
+        public ListStorageAccountSasTokensArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageAccountName = Objects.requireNonNull($.storageAccountName, "expected parameter 'storageAccountName' to be non-null");
+            return $;
         }
     }
+
 }

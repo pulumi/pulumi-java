@@ -19,62 +19,57 @@ public final class AnomalyDetectorTimestampColumn extends com.pulumi.resources.I
      * 
      */
     @Import(name="columnFormat")
-      private final @Nullable String columnFormat;
+    private @Nullable String columnFormat;
 
     public Optional<String> columnFormat() {
-        return this.columnFormat == null ? Optional.empty() : Optional.ofNullable(this.columnFormat);
+        return Optional.ofNullable(this.columnFormat);
     }
 
     @Import(name="columnName")
-      private final @Nullable String columnName;
+    private @Nullable String columnName;
 
     public Optional<String> columnName() {
-        return this.columnName == null ? Optional.empty() : Optional.ofNullable(this.columnName);
+        return Optional.ofNullable(this.columnName);
     }
 
-    public AnomalyDetectorTimestampColumn(
-        @Nullable String columnFormat,
-        @Nullable String columnName) {
-        this.columnFormat = columnFormat;
-        this.columnName = columnName;
-    }
+    private AnomalyDetectorTimestampColumn() {}
 
-    private AnomalyDetectorTimestampColumn() {
-        this.columnFormat = null;
-        this.columnName = null;
+    private AnomalyDetectorTimestampColumn(AnomalyDetectorTimestampColumn $) {
+        this.columnFormat = $.columnFormat;
+        this.columnName = $.columnName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorTimestampColumn defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String columnFormat;
-        private @Nullable String columnName;
+        private AnomalyDetectorTimestampColumn $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorTimestampColumn();
         }
 
         public Builder(AnomalyDetectorTimestampColumn defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnFormat = defaults.columnFormat;
-    	      this.columnName = defaults.columnName;
+            $ = new AnomalyDetectorTimestampColumn(Objects.requireNonNull(defaults));
         }
 
         public Builder columnFormat(@Nullable String columnFormat) {
-            this.columnFormat = columnFormat;
+            $.columnFormat = columnFormat;
             return this;
         }
+
         public Builder columnName(@Nullable String columnName) {
-            this.columnName = columnName;
+            $.columnName = columnName;
             return this;
-        }        public AnomalyDetectorTimestampColumn build() {
-            return new AnomalyDetectorTimestampColumn(columnFormat, columnName);
+        }
+
+        public AnomalyDetectorTimestampColumn build() {
+            return $;
         }
     }
+
 }

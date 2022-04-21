@@ -15,110 +15,100 @@ public final class GetConsentArtifactArgs extends com.pulumi.resources.InvokeArg
     public static final GetConsentArtifactArgs Empty = new GetConsentArtifactArgs();
 
     @Import(name="consentArtifactId", required=true)
-      private final String consentArtifactId;
+    private String consentArtifactId;
 
     public String consentArtifactId() {
         return this.consentArtifactId;
     }
 
     @Import(name="consentStoreId", required=true)
-      private final String consentStoreId;
+    private String consentStoreId;
 
     public String consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetConsentArtifactArgs(
-        String consentArtifactId,
-        String consentStoreId,
-        String datasetId,
-        String location,
-        @Nullable String project) {
-        this.consentArtifactId = Objects.requireNonNull(consentArtifactId, "expected parameter 'consentArtifactId' to be non-null");
-        this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetConsentArtifactArgs() {}
 
-    private GetConsentArtifactArgs() {
-        this.consentArtifactId = null;
-        this.consentStoreId = null;
-        this.datasetId = null;
-        this.location = null;
-        this.project = null;
+    private GetConsentArtifactArgs(GetConsentArtifactArgs $) {
+        this.consentArtifactId = $.consentArtifactId;
+        this.consentStoreId = $.consentStoreId;
+        this.datasetId = $.datasetId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConsentArtifactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consentArtifactId;
-        private String consentStoreId;
-        private String datasetId;
-        private String location;
-        private @Nullable String project;
+        private GetConsentArtifactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConsentArtifactArgs();
         }
 
         public Builder(GetConsentArtifactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consentArtifactId = defaults.consentArtifactId;
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.datasetId = defaults.datasetId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetConsentArtifactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consentArtifactId(String consentArtifactId) {
-            this.consentArtifactId = Objects.requireNonNull(consentArtifactId);
+            $.consentArtifactId = consentArtifactId;
             return this;
         }
+
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Objects.requireNonNull(consentStoreId);
+            $.consentStoreId = consentStoreId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetConsentArtifactArgs build() {
-            return new GetConsentArtifactArgs(consentArtifactId, consentStoreId, datasetId, location, project);
+        }
+
+        public GetConsentArtifactArgs build() {
+            $.consentArtifactId = Objects.requireNonNull($.consentArtifactId, "expected parameter 'consentArtifactId' to be non-null");
+            $.consentStoreId = Objects.requireNonNull($.consentStoreId, "expected parameter 'consentStoreId' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

@@ -12,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
      * 
      */
     @Import(name="shouldFeatureDisplayInPortal")
-      private final @Nullable Output<Boolean> shouldFeatureDisplayInPortal;
+    private @Nullable Output<Boolean> shouldFeatureDisplayInPortal;
 
-    public Output<Boolean> shouldFeatureDisplayInPortal() {
-        return this.shouldFeatureDisplayInPortal == null ? Codegen.empty() : this.shouldFeatureDisplayInPortal;
+    public Optional<Output<Boolean>> shouldFeatureDisplayInPortal() {
+        return Optional.ofNullable(this.shouldFeatureDisplayInPortal);
     }
 
     /**
@@ -57,89 +58,79 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state;
+    private @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state;
 
-    public Output<Either<String,SubscriptionFeatureRegistrationState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,SubscriptionFeatureRegistrationState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public SubscriptionFeatureRegistrationPropertiesArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<Boolean> shouldFeatureDisplayInPortal,
-        @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state) {
-        this.description = description;
-        this.metadata = metadata;
-        this.shouldFeatureDisplayInPortal = Codegen.booleanProp("shouldFeatureDisplayInPortal").output().arg(shouldFeatureDisplayInPortal).def(false).getNullable();
-        this.state = state;
-    }
+    private SubscriptionFeatureRegistrationPropertiesArgs() {}
 
-    private SubscriptionFeatureRegistrationPropertiesArgs() {
-        this.description = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.shouldFeatureDisplayInPortal = Codegen.empty();
-        this.state = Codegen.empty();
+    private SubscriptionFeatureRegistrationPropertiesArgs(SubscriptionFeatureRegistrationPropertiesArgs $) {
+        this.description = $.description;
+        this.metadata = $.metadata;
+        this.shouldFeatureDisplayInPortal = $.shouldFeatureDisplayInPortal;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionFeatureRegistrationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<Boolean> shouldFeatureDisplayInPortal;
-        private @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state;
+        private SubscriptionFeatureRegistrationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionFeatureRegistrationPropertiesArgs();
         }
 
         public Builder(SubscriptionFeatureRegistrationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.metadata = defaults.metadata;
-    	      this.shouldFeatureDisplayInPortal = defaults.shouldFeatureDisplayInPortal;
-    	      this.state = defaults.state;
+            $ = new SubscriptionFeatureRegistrationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder shouldFeatureDisplayInPortal(@Nullable Output<Boolean> shouldFeatureDisplayInPortal) {
-            this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
+            $.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
             return this;
         }
-        public Builder shouldFeatureDisplayInPortal(@Nullable Boolean shouldFeatureDisplayInPortal) {
-            this.shouldFeatureDisplayInPortal = Codegen.ofNullable(shouldFeatureDisplayInPortal);
-            return this;
+
+        public Builder shouldFeatureDisplayInPortal(Boolean shouldFeatureDisplayInPortal) {
+            return shouldFeatureDisplayInPortal(Output.of(shouldFeatureDisplayInPortal));
         }
+
         public Builder state(@Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,SubscriptionFeatureRegistrationState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public SubscriptionFeatureRegistrationPropertiesArgs build() {
-            return new SubscriptionFeatureRegistrationPropertiesArgs(description, metadata, shouldFeatureDisplayInPortal, state);
+
+        public Builder state(Either<String,SubscriptionFeatureRegistrationState> state) {
+            return state(Output.of(state));
+        }
+
+        public SubscriptionFeatureRegistrationPropertiesArgs build() {
+            $.shouldFeatureDisplayInPortal = Codegen.booleanProp("shouldFeatureDisplayInPortal").output().arg($.shouldFeatureDisplayInPortal).def(false).getNullable();
+            return $;
         }
     }
+
 }

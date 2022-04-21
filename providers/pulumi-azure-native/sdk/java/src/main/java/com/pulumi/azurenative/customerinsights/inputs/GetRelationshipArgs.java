@@ -17,7 +17,7 @@ public final class GetRelationshipArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hubName", required=true)
-      private final String hubName;
+    private String hubName;
 
     public String hubName() {
         return this.hubName;
@@ -28,7 +28,7 @@ public final class GetRelationshipArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="relationshipName", required=true)
-      private final String relationshipName;
+    private String relationshipName;
 
     public String relationshipName() {
         return this.relationshipName;
@@ -39,64 +39,59 @@ public final class GetRelationshipArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetRelationshipArgs(
-        String hubName,
-        String relationshipName,
-        String resourceGroupName) {
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.relationshipName = Objects.requireNonNull(relationshipName, "expected parameter 'relationshipName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetRelationshipArgs() {}
 
-    private GetRelationshipArgs() {
-        this.hubName = null;
-        this.relationshipName = null;
-        this.resourceGroupName = null;
+    private GetRelationshipArgs(GetRelationshipArgs $) {
+        this.hubName = $.hubName;
+        this.relationshipName = $.relationshipName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRelationshipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hubName;
-        private String relationshipName;
-        private String resourceGroupName;
+        private GetRelationshipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRelationshipArgs();
         }
 
         public Builder(GetRelationshipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubName = defaults.hubName;
-    	      this.relationshipName = defaults.relationshipName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetRelationshipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder relationshipName(String relationshipName) {
-            this.relationshipName = Objects.requireNonNull(relationshipName);
+            $.relationshipName = relationshipName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetRelationshipArgs build() {
-            return new GetRelationshipArgs(hubName, relationshipName, resourceGroupName);
+        }
+
+        public GetRelationshipArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.relationshipName = Objects.requireNonNull($.relationshipName, "expected parameter 'relationshipName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

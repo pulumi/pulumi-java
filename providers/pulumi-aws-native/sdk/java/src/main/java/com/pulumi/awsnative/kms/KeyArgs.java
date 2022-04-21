@@ -8,13 +8,13 @@ import com.pulumi.awsnative.kms.enums.KeyUsage;
 import com.pulumi.awsnative.kms.inputs.KeyTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableKeyRotation")
-      private final @Nullable Output<Boolean> enableKeyRotation;
+    private @Nullable Output<Boolean> enableKeyRotation;
 
-    public Output<Boolean> enableKeyRotation() {
-        return this.enableKeyRotation == null ? Codegen.empty() : this.enableKeyRotation;
+    public Optional<Output<Boolean>> enableKeyRotation() {
+        return Optional.ofNullable(this.enableKeyRotation);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyPolicy", required=true)
-      private final Output<Object> keyPolicy;
+    private Output<Object> keyPolicy;
 
     public Output<Object> keyPolicy() {
         return this.keyPolicy;
@@ -71,10 +71,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keySpec")
-      private final @Nullable Output<KeySpec> keySpec;
+    private @Nullable Output<KeySpec> keySpec;
 
-    public Output<KeySpec> keySpec() {
-        return this.keySpec == null ? Codegen.empty() : this.keySpec;
+    public Optional<Output<KeySpec>> keySpec() {
+        return Optional.ofNullable(this.keySpec);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyUsage")
-      private final @Nullable Output<KeyUsage> keyUsage;
+    private @Nullable Output<KeyUsage> keyUsage;
 
-    public Output<KeyUsage> keyUsage() {
-        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
+    public Optional<Output<KeyUsage>> keyUsage() {
+        return Optional.ofNullable(this.keyUsage);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="multiRegion")
-      private final @Nullable Output<Boolean> multiRegion;
+    private @Nullable Output<Boolean> multiRegion;
 
-    public Output<Boolean> multiRegion() {
-        return this.multiRegion == null ? Codegen.empty() : this.multiRegion;
+    public Optional<Output<Boolean>> multiRegion() {
+        return Optional.ofNullable(this.multiRegion);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pendingWindowInDays")
-      private final @Nullable Output<Integer> pendingWindowInDays;
+    private @Nullable Output<Integer> pendingWindowInDays;
 
-    public Output<Integer> pendingWindowInDays() {
-        return this.pendingWindowInDays == null ? Codegen.empty() : this.pendingWindowInDays;
+    public Optional<Output<Integer>> pendingWindowInDays() {
+        return Optional.ofNullable(this.pendingWindowInDays);
     }
 
     /**
@@ -115,157 +115,133 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<KeyTagArgs>> tags;
+    private @Nullable Output<List<KeyTagArgs>> tags;
 
-    public Output<List<KeyTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<KeyTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public KeyArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enableKeyRotation,
-        @Nullable Output<Boolean> enabled,
-        Output<Object> keyPolicy,
-        @Nullable Output<KeySpec> keySpec,
-        @Nullable Output<KeyUsage> keyUsage,
-        @Nullable Output<Boolean> multiRegion,
-        @Nullable Output<Integer> pendingWindowInDays,
-        @Nullable Output<List<KeyTagArgs>> tags) {
-        this.description = description;
-        this.enableKeyRotation = enableKeyRotation;
-        this.enabled = enabled;
-        this.keyPolicy = Objects.requireNonNull(keyPolicy, "expected parameter 'keyPolicy' to be non-null");
-        this.keySpec = keySpec;
-        this.keyUsage = keyUsage;
-        this.multiRegion = multiRegion;
-        this.pendingWindowInDays = pendingWindowInDays;
-        this.tags = tags;
-    }
+    private KeyArgs() {}
 
-    private KeyArgs() {
-        this.description = Codegen.empty();
-        this.enableKeyRotation = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.keyPolicy = Codegen.empty();
-        this.keySpec = Codegen.empty();
-        this.keyUsage = Codegen.empty();
-        this.multiRegion = Codegen.empty();
-        this.pendingWindowInDays = Codegen.empty();
-        this.tags = Codegen.empty();
+    private KeyArgs(KeyArgs $) {
+        this.description = $.description;
+        this.enableKeyRotation = $.enableKeyRotation;
+        this.enabled = $.enabled;
+        this.keyPolicy = $.keyPolicy;
+        this.keySpec = $.keySpec;
+        this.keyUsage = $.keyUsage;
+        this.multiRegion = $.multiRegion;
+        this.pendingWindowInDays = $.pendingWindowInDays;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enableKeyRotation;
-        private @Nullable Output<Boolean> enabled;
-        private Output<Object> keyPolicy;
-        private @Nullable Output<KeySpec> keySpec;
-        private @Nullable Output<KeyUsage> keyUsage;
-        private @Nullable Output<Boolean> multiRegion;
-        private @Nullable Output<Integer> pendingWindowInDays;
-        private @Nullable Output<List<KeyTagArgs>> tags;
+        private KeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyArgs();
         }
 
         public Builder(KeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.enableKeyRotation = defaults.enableKeyRotation;
-    	      this.enabled = defaults.enabled;
-    	      this.keyPolicy = defaults.keyPolicy;
-    	      this.keySpec = defaults.keySpec;
-    	      this.keyUsage = defaults.keyUsage;
-    	      this.multiRegion = defaults.multiRegion;
-    	      this.pendingWindowInDays = defaults.pendingWindowInDays;
-    	      this.tags = defaults.tags;
+            $ = new KeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enableKeyRotation(@Nullable Output<Boolean> enableKeyRotation) {
-            this.enableKeyRotation = enableKeyRotation;
+            $.enableKeyRotation = enableKeyRotation;
             return this;
         }
-        public Builder enableKeyRotation(@Nullable Boolean enableKeyRotation) {
-            this.enableKeyRotation = Codegen.ofNullable(enableKeyRotation);
-            return this;
+
+        public Builder enableKeyRotation(Boolean enableKeyRotation) {
+            return enableKeyRotation(Output.of(enableKeyRotation));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder keyPolicy(Output<Object> keyPolicy) {
-            this.keyPolicy = Objects.requireNonNull(keyPolicy);
+            $.keyPolicy = keyPolicy;
             return this;
         }
+
         public Builder keyPolicy(Object keyPolicy) {
-            this.keyPolicy = Output.of(Objects.requireNonNull(keyPolicy));
-            return this;
+            return keyPolicy(Output.of(keyPolicy));
         }
+
         public Builder keySpec(@Nullable Output<KeySpec> keySpec) {
-            this.keySpec = keySpec;
+            $.keySpec = keySpec;
             return this;
         }
-        public Builder keySpec(@Nullable KeySpec keySpec) {
-            this.keySpec = Codegen.ofNullable(keySpec);
-            return this;
+
+        public Builder keySpec(KeySpec keySpec) {
+            return keySpec(Output.of(keySpec));
         }
+
         public Builder keyUsage(@Nullable Output<KeyUsage> keyUsage) {
-            this.keyUsage = keyUsage;
+            $.keyUsage = keyUsage;
             return this;
         }
-        public Builder keyUsage(@Nullable KeyUsage keyUsage) {
-            this.keyUsage = Codegen.ofNullable(keyUsage);
-            return this;
+
+        public Builder keyUsage(KeyUsage keyUsage) {
+            return keyUsage(Output.of(keyUsage));
         }
+
         public Builder multiRegion(@Nullable Output<Boolean> multiRegion) {
-            this.multiRegion = multiRegion;
+            $.multiRegion = multiRegion;
             return this;
         }
-        public Builder multiRegion(@Nullable Boolean multiRegion) {
-            this.multiRegion = Codegen.ofNullable(multiRegion);
-            return this;
+
+        public Builder multiRegion(Boolean multiRegion) {
+            return multiRegion(Output.of(multiRegion));
         }
+
         public Builder pendingWindowInDays(@Nullable Output<Integer> pendingWindowInDays) {
-            this.pendingWindowInDays = pendingWindowInDays;
+            $.pendingWindowInDays = pendingWindowInDays;
             return this;
         }
-        public Builder pendingWindowInDays(@Nullable Integer pendingWindowInDays) {
-            this.pendingWindowInDays = Codegen.ofNullable(pendingWindowInDays);
-            return this;
+
+        public Builder pendingWindowInDays(Integer pendingWindowInDays) {
+            return pendingWindowInDays(Output.of(pendingWindowInDays));
         }
+
         public Builder tags(@Nullable Output<List<KeyTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<KeyTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<KeyTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(KeyTagArgs... tags) {
             return tags(List.of(tags));
-        }        public KeyArgs build() {
-            return new KeyArgs(description, enableKeyRotation, enabled, keyPolicy, keySpec, keyUsage, multiRegion, pendingWindowInDays, tags);
+        }
+
+        public KeyArgs build() {
+            $.keyPolicy = Objects.requireNonNull($.keyPolicy, "expected parameter 'keyPolicy' to be non-null");
+            return $;
         }
     }
+
 }

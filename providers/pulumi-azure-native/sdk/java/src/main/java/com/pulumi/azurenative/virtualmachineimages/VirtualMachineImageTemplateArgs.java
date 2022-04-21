@@ -25,6 +25,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,10 +38,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="buildTimeoutInMinutes")
-      private final @Nullable Output<Integer> buildTimeoutInMinutes;
+    private @Nullable Output<Integer> buildTimeoutInMinutes;
 
-    public Output<Integer> buildTimeoutInMinutes() {
-        return this.buildTimeoutInMinutes == null ? Codegen.empty() : this.buildTimeoutInMinutes;
+    public Optional<Output<Integer>> buildTimeoutInMinutes() {
+        return Optional.ofNullable(this.buildTimeoutInMinutes);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="customize")
-      private final @Nullable Output<List<Object>> customize;
+    private @Nullable Output<List<Object>> customize;
 
-    public Output<List<Object>> customize() {
-        return this.customize == null ? Codegen.empty() : this.customize;
+    public Optional<Output<List<Object>>> customize() {
+        return Optional.ofNullable(this.customize);
     }
 
     /**
@@ -59,7 +60,7 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="distribute", required=true)
-      private final Output<List<Object>> distribute;
+    private Output<List<Object>> distribute;
 
     public Output<List<Object>> distribute() {
         return this.distribute;
@@ -70,7 +71,7 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="identity", required=true)
-      private final Output<ImageTemplateIdentityArgs> identity;
+    private Output<ImageTemplateIdentityArgs> identity;
 
     public Output<ImageTemplateIdentityArgs> identity() {
         return this.identity;
@@ -81,10 +82,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="imageTemplateName")
-      private final @Nullable Output<String> imageTemplateName;
+    private @Nullable Output<String> imageTemplateName;
 
-    public Output<String> imageTemplateName() {
-        return this.imageTemplateName == null ? Codegen.empty() : this.imageTemplateName;
+    public Optional<Output<String>> imageTemplateName() {
+        return Optional.ofNullable(this.imageTemplateName);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -103,7 +104,7 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -114,7 +115,7 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="source", required=true)
-      private final Output<Object> source;
+    private Output<Object> source;
 
     public Output<Object> source() {
         return this.source;
@@ -125,10 +126,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -136,173 +137,151 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vmProfile")
-      private final @Nullable Output<ImageTemplateVmProfileArgs> vmProfile;
+    private @Nullable Output<ImageTemplateVmProfileArgs> vmProfile;
 
-    public Output<ImageTemplateVmProfileArgs> vmProfile() {
-        return this.vmProfile == null ? Codegen.empty() : this.vmProfile;
+    public Optional<Output<ImageTemplateVmProfileArgs>> vmProfile() {
+        return Optional.ofNullable(this.vmProfile);
     }
 
-    public VirtualMachineImageTemplateArgs(
-        @Nullable Output<Integer> buildTimeoutInMinutes,
-        @Nullable Output<List<Object>> customize,
-        Output<List<Object>> distribute,
-        Output<ImageTemplateIdentityArgs> identity,
-        @Nullable Output<String> imageTemplateName,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        Output<Object> source,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<ImageTemplateVmProfileArgs> vmProfile) {
-        this.buildTimeoutInMinutes = Codegen.integerProp("buildTimeoutInMinutes").output().arg(buildTimeoutInMinutes).def(0).getNullable();
-        this.customize = customize;
-        this.distribute = Objects.requireNonNull(distribute, "expected parameter 'distribute' to be non-null");
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-        this.imageTemplateName = imageTemplateName;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.tags = tags;
-        this.vmProfile = vmProfile;
-    }
+    private VirtualMachineImageTemplateArgs() {}
 
-    private VirtualMachineImageTemplateArgs() {
-        this.buildTimeoutInMinutes = Codegen.empty();
-        this.customize = Codegen.empty();
-        this.distribute = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.imageTemplateName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.source = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vmProfile = Codegen.empty();
+    private VirtualMachineImageTemplateArgs(VirtualMachineImageTemplateArgs $) {
+        this.buildTimeoutInMinutes = $.buildTimeoutInMinutes;
+        this.customize = $.customize;
+        this.distribute = $.distribute;
+        this.identity = $.identity;
+        this.imageTemplateName = $.imageTemplateName;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.source = $.source;
+        this.tags = $.tags;
+        this.vmProfile = $.vmProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineImageTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> buildTimeoutInMinutes;
-        private @Nullable Output<List<Object>> customize;
-        private Output<List<Object>> distribute;
-        private Output<ImageTemplateIdentityArgs> identity;
-        private @Nullable Output<String> imageTemplateName;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private Output<Object> source;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<ImageTemplateVmProfileArgs> vmProfile;
+        private VirtualMachineImageTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineImageTemplateArgs();
         }
 
         public Builder(VirtualMachineImageTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildTimeoutInMinutes = defaults.buildTimeoutInMinutes;
-    	      this.customize = defaults.customize;
-    	      this.distribute = defaults.distribute;
-    	      this.identity = defaults.identity;
-    	      this.imageTemplateName = defaults.imageTemplateName;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.source = defaults.source;
-    	      this.tags = defaults.tags;
-    	      this.vmProfile = defaults.vmProfile;
+            $ = new VirtualMachineImageTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildTimeoutInMinutes(@Nullable Output<Integer> buildTimeoutInMinutes) {
-            this.buildTimeoutInMinutes = buildTimeoutInMinutes;
+            $.buildTimeoutInMinutes = buildTimeoutInMinutes;
             return this;
         }
-        public Builder buildTimeoutInMinutes(@Nullable Integer buildTimeoutInMinutes) {
-            this.buildTimeoutInMinutes = Codegen.ofNullable(buildTimeoutInMinutes);
-            return this;
+
+        public Builder buildTimeoutInMinutes(Integer buildTimeoutInMinutes) {
+            return buildTimeoutInMinutes(Output.of(buildTimeoutInMinutes));
         }
+
         public Builder customize(@Nullable Output<List<Object>> customize) {
-            this.customize = customize;
+            $.customize = customize;
             return this;
         }
-        public Builder customize(@Nullable List<Object> customize) {
-            this.customize = Codegen.ofNullable(customize);
-            return this;
+
+        public Builder customize(List<Object> customize) {
+            return customize(Output.of(customize));
         }
+
         public Builder customize(Object... customize) {
             return customize(List.of(customize));
         }
+
         public Builder distribute(Output<List<Object>> distribute) {
-            this.distribute = Objects.requireNonNull(distribute);
+            $.distribute = distribute;
             return this;
         }
+
         public Builder distribute(List<Object> distribute) {
-            this.distribute = Output.of(Objects.requireNonNull(distribute));
-            return this;
+            return distribute(Output.of(distribute));
         }
+
         public Builder distribute(Object... distribute) {
             return distribute(List.of(distribute));
         }
+
         public Builder identity(Output<ImageTemplateIdentityArgs> identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
         }
+
         public Builder identity(ImageTemplateIdentityArgs identity) {
-            this.identity = Output.of(Objects.requireNonNull(identity));
-            return this;
+            return identity(Output.of(identity));
         }
+
         public Builder imageTemplateName(@Nullable Output<String> imageTemplateName) {
-            this.imageTemplateName = imageTemplateName;
+            $.imageTemplateName = imageTemplateName;
             return this;
         }
-        public Builder imageTemplateName(@Nullable String imageTemplateName) {
-            this.imageTemplateName = Codegen.ofNullable(imageTemplateName);
-            return this;
+
+        public Builder imageTemplateName(String imageTemplateName) {
+            return imageTemplateName(Output.of(imageTemplateName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder source(Output<Object> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(Object source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vmProfile(@Nullable Output<ImageTemplateVmProfileArgs> vmProfile) {
-            this.vmProfile = vmProfile;
+            $.vmProfile = vmProfile;
             return this;
         }
-        public Builder vmProfile(@Nullable ImageTemplateVmProfileArgs vmProfile) {
-            this.vmProfile = Codegen.ofNullable(vmProfile);
-            return this;
-        }        public VirtualMachineImageTemplateArgs build() {
-            return new VirtualMachineImageTemplateArgs(buildTimeoutInMinutes, customize, distribute, identity, imageTemplateName, location, resourceGroupName, source, tags, vmProfile);
+
+        public Builder vmProfile(ImageTemplateVmProfileArgs vmProfile) {
+            return vmProfile(Output.of(vmProfile));
+        }
+
+        public VirtualMachineImageTemplateArgs build() {
+            $.buildTimeoutInMinutes = Codegen.integerProp("buildTimeoutInMinutes").output().arg($.buildTimeoutInMinutes).def(0).getNullable();
+            $.distribute = Objects.requireNonNull($.distribute, "expected parameter 'distribute' to be non-null");
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

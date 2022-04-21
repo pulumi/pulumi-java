@@ -21,7 +21,7 @@ public final class CreatedByResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-      private final String applicationId;
+    private String applicationId;
 
     public String applicationId() {
         return this.applicationId;
@@ -32,7 +32,7 @@ public final class CreatedByResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oid", required=true)
-      private final String oid;
+    private String oid;
 
     public String oid() {
         return this.oid;
@@ -43,64 +43,59 @@ public final class CreatedByResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="puid", required=true)
-      private final String puid;
+    private String puid;
 
     public String puid() {
         return this.puid;
     }
 
-    public CreatedByResponse(
-        String applicationId,
-        String oid,
-        String puid) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.oid = Objects.requireNonNull(oid, "expected parameter 'oid' to be non-null");
-        this.puid = Objects.requireNonNull(puid, "expected parameter 'puid' to be non-null");
-    }
+    private CreatedByResponse() {}
 
-    private CreatedByResponse() {
-        this.applicationId = null;
-        this.oid = null;
-        this.puid = null;
+    private CreatedByResponse(CreatedByResponse $) {
+        this.applicationId = $.applicationId;
+        this.oid = $.oid;
+        this.puid = $.puid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreatedByResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationId;
-        private String oid;
-        private String puid;
+        private CreatedByResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreatedByResponse();
         }
 
         public Builder(CreatedByResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.oid = defaults.oid;
-    	      this.puid = defaults.puid;
+            $ = new CreatedByResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder oid(String oid) {
-            this.oid = Objects.requireNonNull(oid);
+            $.oid = oid;
             return this;
         }
+
         public Builder puid(String puid) {
-            this.puid = Objects.requireNonNull(puid);
+            $.puid = puid;
             return this;
-        }        public CreatedByResponse build() {
-            return new CreatedByResponse(applicationId, oid, puid);
+        }
+
+        public CreatedByResponse build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.oid = Objects.requireNonNull($.oid, "expected parameter 'oid' to be non-null");
+            $.puid = Objects.requireNonNull($.puid, "expected parameter 'puid' to be non-null");
+            return $;
         }
     }
+
 }

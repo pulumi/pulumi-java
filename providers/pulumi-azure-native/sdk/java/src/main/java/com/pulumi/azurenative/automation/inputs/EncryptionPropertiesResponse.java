@@ -25,10 +25,10 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="identity")
-      private final @Nullable EncryptionPropertiesResponseIdentity identity;
+    private @Nullable EncryptionPropertiesResponseIdentity identity;
 
     public Optional<EncryptionPropertiesResponseIdentity> identity() {
-        return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keySource")
-      private final @Nullable String keySource;
+    private @Nullable String keySource;
 
     public Optional<String> keySource() {
-        return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
+        return Optional.ofNullable(this.keySource);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+    private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
-    public EncryptionPropertiesResponse(
-        @Nullable EncryptionPropertiesResponseIdentity identity,
-        @Nullable String keySource,
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
-        this.identity = identity;
-        this.keySource = keySource;
-        this.keyVaultProperties = keyVaultProperties;
-    }
+    private EncryptionPropertiesResponse() {}
 
-    private EncryptionPropertiesResponse() {
-        this.identity = null;
-        this.keySource = null;
-        this.keyVaultProperties = null;
+    private EncryptionPropertiesResponse(EncryptionPropertiesResponse $) {
+        this.identity = $.identity;
+        this.keySource = $.keySource;
+        this.keyVaultProperties = $.keyVaultProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EncryptionPropertiesResponseIdentity identity;
-        private @Nullable String keySource;
-        private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+        private EncryptionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPropertiesResponse();
         }
 
         public Builder(EncryptionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.keySource = defaults.keySource;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
+            $ = new EncryptionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable EncryptionPropertiesResponseIdentity identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
+
         public Builder keySource(@Nullable String keySource) {
-            this.keySource = keySource;
+            $.keySource = keySource;
             return this;
         }
+
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
-        }        public EncryptionPropertiesResponse build() {
-            return new EncryptionPropertiesResponse(identity, keySource, keyVaultProperties);
+        }
+
+        public EncryptionPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class StackSetInstanceDeploymentTargetsGetArgs extends com.pulumi.r
     public static final StackSetInstanceDeploymentTargetsGetArgs Empty = new StackSetInstanceDeploymentTargetsGetArgs();
 
     @Import(name="organizationalUnitIds")
-      private final @Nullable Output<List<String>> organizationalUnitIds;
+    private @Nullable Output<List<String>> organizationalUnitIds;
 
-    public Output<List<String>> organizationalUnitIds() {
-        return this.organizationalUnitIds == null ? Codegen.empty() : this.organizationalUnitIds;
+    public Optional<Output<List<String>>> organizationalUnitIds() {
+        return Optional.ofNullable(this.organizationalUnitIds);
     }
 
-    public StackSetInstanceDeploymentTargetsGetArgs(@Nullable Output<List<String>> organizationalUnitIds) {
-        this.organizationalUnitIds = organizationalUnitIds;
-    }
+    private StackSetInstanceDeploymentTargetsGetArgs() {}
 
-    private StackSetInstanceDeploymentTargetsGetArgs() {
-        this.organizationalUnitIds = Codegen.empty();
+    private StackSetInstanceDeploymentTargetsGetArgs(StackSetInstanceDeploymentTargetsGetArgs $) {
+        this.organizationalUnitIds = $.organizationalUnitIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetInstanceDeploymentTargetsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> organizationalUnitIds;
+        private StackSetInstanceDeploymentTargetsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetInstanceDeploymentTargetsGetArgs();
         }
 
         public Builder(StackSetInstanceDeploymentTargetsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationalUnitIds = defaults.organizationalUnitIds;
+            $ = new StackSetInstanceDeploymentTargetsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationalUnitIds(@Nullable Output<List<String>> organizationalUnitIds) {
-            this.organizationalUnitIds = organizationalUnitIds;
+            $.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
-        public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
-            this.organizationalUnitIds = Codegen.ofNullable(organizationalUnitIds);
-            return this;
+
+        public Builder organizationalUnitIds(List<String> organizationalUnitIds) {
+            return organizationalUnitIds(Output.of(organizationalUnitIds));
         }
+
         public Builder organizationalUnitIds(String... organizationalUnitIds) {
             return organizationalUnitIds(List.of(organizationalUnitIds));
-        }        public StackSetInstanceDeploymentTargetsGetArgs build() {
-            return new StackSetInstanceDeploymentTargetsGetArgs(organizationalUnitIds);
+        }
+
+        public StackSetInstanceDeploymentTargetsGetArgs build() {
+            return $;
         }
     }
+
 }

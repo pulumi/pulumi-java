@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse extends com.pulu
      * 
      */
     @Import(name="defaultMode", required=true)
-      private final Integer defaultMode;
+    private Integer defaultMode;
 
     public Integer defaultMode() {
         return this.defaultMode;
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse extends com.pulu
      * 
      */
     @Import(name="items", required=true)
-      private final List<GoogleCloudRunOpV2VersionToPathResponse> items;
+    private List<GoogleCloudRunOpV2VersionToPathResponse> items;
 
     public List<GoogleCloudRunOpV2VersionToPathResponse> items() {
         return this.items;
@@ -46,67 +46,63 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse extends com.pulu
      * 
      */
     @Import(name="secret", required=true)
-      private final String secret;
+    private String secret;
 
     public String secret() {
         return this.secret;
     }
 
-    public GoogleCloudRunOpV2SecretVolumeSourceResponse(
-        Integer defaultMode,
-        List<GoogleCloudRunOpV2VersionToPathResponse> items,
-        String secret) {
-        this.defaultMode = Objects.requireNonNull(defaultMode, "expected parameter 'defaultMode' to be non-null");
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private GoogleCloudRunOpV2SecretVolumeSourceResponse() {}
 
-    private GoogleCloudRunOpV2SecretVolumeSourceResponse() {
-        this.defaultMode = null;
-        this.items = List.of();
-        this.secret = null;
+    private GoogleCloudRunOpV2SecretVolumeSourceResponse(GoogleCloudRunOpV2SecretVolumeSourceResponse $) {
+        this.defaultMode = $.defaultMode;
+        this.items = $.items;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2SecretVolumeSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer defaultMode;
-        private List<GoogleCloudRunOpV2VersionToPathResponse> items;
-        private String secret;
+        private GoogleCloudRunOpV2SecretVolumeSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2SecretVolumeSourceResponse();
         }
 
         public Builder(GoogleCloudRunOpV2SecretVolumeSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultMode = defaults.defaultMode;
-    	      this.items = defaults.items;
-    	      this.secret = defaults.secret;
+            $ = new GoogleCloudRunOpV2SecretVolumeSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultMode(Integer defaultMode) {
-            this.defaultMode = Objects.requireNonNull(defaultMode);
+            $.defaultMode = defaultMode;
             return this;
         }
+
         public Builder items(List<GoogleCloudRunOpV2VersionToPathResponse> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(GoogleCloudRunOpV2VersionToPathResponse... items) {
             return items(List.of(items));
         }
+
         public Builder secret(String secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
-        }        public GoogleCloudRunOpV2SecretVolumeSourceResponse build() {
-            return new GoogleCloudRunOpV2SecretVolumeSourceResponse(defaultMode, items, secret);
+        }
+
+        public GoogleCloudRunOpV2SecretVolumeSourceResponse build() {
+            $.defaultMode = Objects.requireNonNull($.defaultMode, "expected parameter 'defaultMode' to be non-null");
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.ReservationAffinityConsumeReservationType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="consumeReservationType")
-      private final @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
+    private @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
 
-    public Output<ReservationAffinityConsumeReservationType> consumeReservationType() {
-        return this.consumeReservationType == null ? Codegen.empty() : this.consumeReservationType;
+    public Optional<Output<ReservationAffinityConsumeReservationType>> consumeReservationType() {
+        return Optional.ofNullable(this.consumeReservationType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ReservationAffinityArgs(
-        @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType,
-        @Nullable Output<String> key,
-        @Nullable Output<List<String>> values) {
-        this.consumeReservationType = consumeReservationType;
-        this.key = key;
-        this.values = values;
-    }
+    private ReservationAffinityArgs() {}
 
-    private ReservationAffinityArgs() {
-        this.consumeReservationType = Codegen.empty();
-        this.key = Codegen.empty();
-        this.values = Codegen.empty();
+    private ReservationAffinityArgs(ReservationAffinityArgs $) {
+        this.consumeReservationType = $.consumeReservationType;
+        this.key = $.key;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationAffinityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
-        private @Nullable Output<String> key;
-        private @Nullable Output<List<String>> values;
+        private ReservationAffinityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationAffinityArgs();
         }
 
         public Builder(ReservationAffinityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumeReservationType = defaults.consumeReservationType;
-    	      this.key = defaults.key;
-    	      this.values = defaults.values;
+            $ = new ReservationAffinityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumeReservationType(@Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType) {
-            this.consumeReservationType = consumeReservationType;
+            $.consumeReservationType = consumeReservationType;
             return this;
         }
-        public Builder consumeReservationType(@Nullable ReservationAffinityConsumeReservationType consumeReservationType) {
-            this.consumeReservationType = Codegen.ofNullable(consumeReservationType);
-            return this;
+
+        public Builder consumeReservationType(ReservationAffinityConsumeReservationType consumeReservationType) {
+            return consumeReservationType(Output.of(consumeReservationType));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ReservationAffinityArgs build() {
-            return new ReservationAffinityArgs(consumeReservationType, key, values);
+        }
+
+        public ReservationAffinityArgs build() {
+            return $;
         }
     }
+
 }

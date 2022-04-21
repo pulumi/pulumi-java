@@ -5,10 +5,10 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<List<String>> actions;
+    private @Nullable Output<List<String>> actions;
 
-    public Output<List<String>> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<List<String>>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataActions")
-      private final @Nullable Output<List<String>> dataActions;
+    private @Nullable Output<List<String>> dataActions;
 
-    public Output<List<String>> dataActions() {
-        return this.dataActions == null ? Codegen.empty() : this.dataActions;
+    public Optional<Output<List<String>>> dataActions() {
+        return Optional.ofNullable(this.dataActions);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notActions")
-      private final @Nullable Output<List<String>> notActions;
+    private @Nullable Output<List<String>> notActions;
 
-    public Output<List<String>> notActions() {
-        return this.notActions == null ? Codegen.empty() : this.notActions;
+    public Optional<Output<List<String>>> notActions() {
+        return Optional.ofNullable(this.notActions);
     }
 
     /**
@@ -58,101 +58,94 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notDataActions")
-      private final @Nullable Output<List<String>> notDataActions;
+    private @Nullable Output<List<String>> notDataActions;
 
-    public Output<List<String>> notDataActions() {
-        return this.notDataActions == null ? Codegen.empty() : this.notDataActions;
+    public Optional<Output<List<String>>> notDataActions() {
+        return Optional.ofNullable(this.notDataActions);
     }
 
-    public PermissionArgs(
-        @Nullable Output<List<String>> actions,
-        @Nullable Output<List<String>> dataActions,
-        @Nullable Output<List<String>> notActions,
-        @Nullable Output<List<String>> notDataActions) {
-        this.actions = actions;
-        this.dataActions = dataActions;
-        this.notActions = notActions;
-        this.notDataActions = notDataActions;
-    }
+    private PermissionArgs() {}
 
-    private PermissionArgs() {
-        this.actions = Codegen.empty();
-        this.dataActions = Codegen.empty();
-        this.notActions = Codegen.empty();
-        this.notDataActions = Codegen.empty();
+    private PermissionArgs(PermissionArgs $) {
+        this.actions = $.actions;
+        this.dataActions = $.dataActions;
+        this.notActions = $.notActions;
+        this.notDataActions = $.notDataActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> actions;
-        private @Nullable Output<List<String>> dataActions;
-        private @Nullable Output<List<String>> notActions;
-        private @Nullable Output<List<String>> notDataActions;
+        private PermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionArgs();
         }
 
         public Builder(PermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.dataActions = defaults.dataActions;
-    	      this.notActions = defaults.notActions;
-    	      this.notDataActions = defaults.notDataActions;
+            $ = new PermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<List<String>> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable List<String> actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(List<String> actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder dataActions(@Nullable Output<List<String>> dataActions) {
-            this.dataActions = dataActions;
+            $.dataActions = dataActions;
             return this;
         }
-        public Builder dataActions(@Nullable List<String> dataActions) {
-            this.dataActions = Codegen.ofNullable(dataActions);
-            return this;
+
+        public Builder dataActions(List<String> dataActions) {
+            return dataActions(Output.of(dataActions));
         }
+
         public Builder dataActions(String... dataActions) {
             return dataActions(List.of(dataActions));
         }
+
         public Builder notActions(@Nullable Output<List<String>> notActions) {
-            this.notActions = notActions;
+            $.notActions = notActions;
             return this;
         }
-        public Builder notActions(@Nullable List<String> notActions) {
-            this.notActions = Codegen.ofNullable(notActions);
-            return this;
+
+        public Builder notActions(List<String> notActions) {
+            return notActions(Output.of(notActions));
         }
+
         public Builder notActions(String... notActions) {
             return notActions(List.of(notActions));
         }
+
         public Builder notDataActions(@Nullable Output<List<String>> notDataActions) {
-            this.notDataActions = notDataActions;
+            $.notDataActions = notDataActions;
             return this;
         }
-        public Builder notDataActions(@Nullable List<String> notDataActions) {
-            this.notDataActions = Codegen.ofNullable(notDataActions);
-            return this;
+
+        public Builder notDataActions(List<String> notDataActions) {
+            return notDataActions(Output.of(notDataActions));
         }
+
         public Builder notDataActions(String... notDataActions) {
             return notDataActions(List.of(notDataActions));
-        }        public PermissionArgs build() {
-            return new PermissionArgs(actions, dataActions, notActions, notDataActions);
+        }
+
+        public PermissionArgs build() {
+            return $;
         }
     }
+
 }

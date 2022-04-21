@@ -5,7 +5,6 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ProjectSecondarySourceGitSubmodulesConfigArgs extends com.pul
      * 
      */
     @Import(name="fetchSubmodules", required=true)
-      private final Output<Boolean> fetchSubmodules;
+    private Output<Boolean> fetchSubmodules;
 
     public Output<Boolean> fetchSubmodules() {
         return this.fetchSubmodules;
     }
 
-    public ProjectSecondarySourceGitSubmodulesConfigArgs(Output<Boolean> fetchSubmodules) {
-        this.fetchSubmodules = Objects.requireNonNull(fetchSubmodules, "expected parameter 'fetchSubmodules' to be non-null");
-    }
+    private ProjectSecondarySourceGitSubmodulesConfigArgs() {}
 
-    private ProjectSecondarySourceGitSubmodulesConfigArgs() {
-        this.fetchSubmodules = Codegen.empty();
+    private ProjectSecondarySourceGitSubmodulesConfigArgs(ProjectSecondarySourceGitSubmodulesConfigArgs $) {
+        this.fetchSubmodules = $.fetchSubmodules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectSecondarySourceGitSubmodulesConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> fetchSubmodules;
+        private ProjectSecondarySourceGitSubmodulesConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectSecondarySourceGitSubmodulesConfigArgs();
         }
 
         public Builder(ProjectSecondarySourceGitSubmodulesConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fetchSubmodules = defaults.fetchSubmodules;
+            $ = new ProjectSecondarySourceGitSubmodulesConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fetchSubmodules(Output<Boolean> fetchSubmodules) {
-            this.fetchSubmodules = Objects.requireNonNull(fetchSubmodules);
+            $.fetchSubmodules = fetchSubmodules;
             return this;
         }
+
         public Builder fetchSubmodules(Boolean fetchSubmodules) {
-            this.fetchSubmodules = Output.of(Objects.requireNonNull(fetchSubmodules));
-            return this;
-        }        public ProjectSecondarySourceGitSubmodulesConfigArgs build() {
-            return new ProjectSecondarySourceGitSubmodulesConfigArgs(fetchSubmodules);
+            return fetchSubmodules(Output.of(fetchSubmodules));
+        }
+
+        public ProjectSecondarySourceGitSubmodulesConfigArgs build() {
+            $.fetchSubmodules = Objects.requireNonNull($.fetchSubmodules, "expected parameter 'fetchSubmodules' to be non-null");
+            return $;
         }
     }
+
 }

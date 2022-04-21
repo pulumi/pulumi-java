@@ -5,10 +5,10 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="organizationArns")
-      private final @Nullable Output<List<String>> organizationArns;
+    private @Nullable Output<List<String>> organizationArns;
 
-    public Output<List<String>> organizationArns() {
-        return this.organizationArns == null ? Codegen.empty() : this.organizationArns;
+    public Optional<Output<List<String>>> organizationArns() {
+        return Optional.ofNullable(this.organizationArns);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="organizationalUnitArns")
-      private final @Nullable Output<List<String>> organizationalUnitArns;
+    private @Nullable Output<List<String>> organizationalUnitArns;
 
-    public Output<List<String>> organizationalUnitArns() {
-        return this.organizationalUnitArns == null ? Codegen.empty() : this.organizationalUnitArns;
+    public Optional<Output<List<String>>> organizationalUnitArns() {
+        return Optional.ofNullable(this.organizationalUnitArns);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="userGroups")
-      private final @Nullable Output<List<String>> userGroups;
+    private @Nullable Output<List<String>> userGroups;
 
-    public Output<List<String>> userGroups() {
-        return this.userGroups == null ? Codegen.empty() : this.userGroups;
+    public Optional<Output<List<String>>> userGroups() {
+        return Optional.ofNullable(this.userGroups);
     }
 
     /**
@@ -58,101 +58,94 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="userIds")
-      private final @Nullable Output<List<String>> userIds;
+    private @Nullable Output<List<String>> userIds;
 
-    public Output<List<String>> userIds() {
-        return this.userIds == null ? Codegen.empty() : this.userIds;
+    public Optional<Output<List<String>>> userIds() {
+        return Optional.ofNullable(this.userIds);
     }
 
-    public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs(
-        @Nullable Output<List<String>> organizationArns,
-        @Nullable Output<List<String>> organizationalUnitArns,
-        @Nullable Output<List<String>> userGroups,
-        @Nullable Output<List<String>> userIds) {
-        this.organizationArns = organizationArns;
-        this.organizationalUnitArns = organizationalUnitArns;
-        this.userGroups = userGroups;
-        this.userIds = userIds;
-    }
+    private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs() {}
 
-    private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs() {
-        this.organizationArns = Codegen.empty();
-        this.organizationalUnitArns = Codegen.empty();
-        this.userGroups = Codegen.empty();
-        this.userIds = Codegen.empty();
+    private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs(DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs $) {
+        this.organizationArns = $.organizationArns;
+        this.organizationalUnitArns = $.organizationalUnitArns;
+        this.userGroups = $.userGroups;
+        this.userIds = $.userIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> organizationArns;
-        private @Nullable Output<List<String>> organizationalUnitArns;
-        private @Nullable Output<List<String>> userGroups;
-        private @Nullable Output<List<String>> userIds;
+        private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs();
         }
 
         public Builder(DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationArns = defaults.organizationArns;
-    	      this.organizationalUnitArns = defaults.organizationalUnitArns;
-    	      this.userGroups = defaults.userGroups;
-    	      this.userIds = defaults.userIds;
+            $ = new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationArns(@Nullable Output<List<String>> organizationArns) {
-            this.organizationArns = organizationArns;
+            $.organizationArns = organizationArns;
             return this;
         }
-        public Builder organizationArns(@Nullable List<String> organizationArns) {
-            this.organizationArns = Codegen.ofNullable(organizationArns);
-            return this;
+
+        public Builder organizationArns(List<String> organizationArns) {
+            return organizationArns(Output.of(organizationArns));
         }
+
         public Builder organizationArns(String... organizationArns) {
             return organizationArns(List.of(organizationArns));
         }
+
         public Builder organizationalUnitArns(@Nullable Output<List<String>> organizationalUnitArns) {
-            this.organizationalUnitArns = organizationalUnitArns;
+            $.organizationalUnitArns = organizationalUnitArns;
             return this;
         }
-        public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
-            this.organizationalUnitArns = Codegen.ofNullable(organizationalUnitArns);
-            return this;
+
+        public Builder organizationalUnitArns(List<String> organizationalUnitArns) {
+            return organizationalUnitArns(Output.of(organizationalUnitArns));
         }
+
         public Builder organizationalUnitArns(String... organizationalUnitArns) {
             return organizationalUnitArns(List.of(organizationalUnitArns));
         }
+
         public Builder userGroups(@Nullable Output<List<String>> userGroups) {
-            this.userGroups = userGroups;
+            $.userGroups = userGroups;
             return this;
         }
-        public Builder userGroups(@Nullable List<String> userGroups) {
-            this.userGroups = Codegen.ofNullable(userGroups);
-            return this;
+
+        public Builder userGroups(List<String> userGroups) {
+            return userGroups(Output.of(userGroups));
         }
+
         public Builder userGroups(String... userGroups) {
             return userGroups(List.of(userGroups));
         }
+
         public Builder userIds(@Nullable Output<List<String>> userIds) {
-            this.userIds = userIds;
+            $.userIds = userIds;
             return this;
         }
-        public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Codegen.ofNullable(userIds);
-            return this;
+
+        public Builder userIds(List<String> userIds) {
+            return userIds(Output.of(userIds));
         }
+
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
-        }        public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs build() {
-            return new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs(organizationArns, organizationalUnitArns, userGroups, userIds);
+        }
+
+        public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

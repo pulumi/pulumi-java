@@ -17,45 +17,45 @@ public final class GetSessionContextArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetSessionContextArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetSessionContextArgs() {}
 
-    private GetSessionContextArgs() {
-        this.arn = null;
+    private GetSessionContextArgs(GetSessionContextArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSessionContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetSessionContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSessionContextArgs();
         }
 
         public Builder(GetSessionContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetSessionContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetSessionContextArgs build() {
-            return new GetSessionContextArgs(arn);
+        }
+
+        public GetSessionContextArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

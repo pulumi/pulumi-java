@@ -24,10 +24,10 @@ public final class StorageBlobDeadLetterDestinationResponse extends com.pulumi.r
      * 
      */
     @Import(name="blobContainerName")
-      private final @Nullable String blobContainerName;
+    private @Nullable String blobContainerName;
 
     public Optional<String> blobContainerName() {
-        return this.blobContainerName == null ? Optional.empty() : Optional.ofNullable(this.blobContainerName);
+        return Optional.ofNullable(this.blobContainerName);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class StorageBlobDeadLetterDestinationResponse extends com.pulumi.r
      * 
      */
     @Import(name="endpointType", required=true)
-      private final String endpointType;
+    private String endpointType;
 
     public String endpointType() {
         return this.endpointType;
@@ -47,64 +47,57 @@ public final class StorageBlobDeadLetterDestinationResponse extends com.pulumi.r
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public StorageBlobDeadLetterDestinationResponse(
-        @Nullable String blobContainerName,
-        String endpointType,
-        @Nullable String resourceId) {
-        this.blobContainerName = blobContainerName;
-        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
-        this.resourceId = resourceId;
-    }
+    private StorageBlobDeadLetterDestinationResponse() {}
 
-    private StorageBlobDeadLetterDestinationResponse() {
-        this.blobContainerName = null;
-        this.endpointType = null;
-        this.resourceId = null;
+    private StorageBlobDeadLetterDestinationResponse(StorageBlobDeadLetterDestinationResponse $) {
+        this.blobContainerName = $.blobContainerName;
+        this.endpointType = $.endpointType;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageBlobDeadLetterDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String blobContainerName;
-        private String endpointType;
-        private @Nullable String resourceId;
+        private StorageBlobDeadLetterDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageBlobDeadLetterDestinationResponse();
         }
 
         public Builder(StorageBlobDeadLetterDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobContainerName = defaults.blobContainerName;
-    	      this.endpointType = defaults.endpointType;
-    	      this.resourceId = defaults.resourceId;
+            $ = new StorageBlobDeadLetterDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blobContainerName(@Nullable String blobContainerName) {
-            this.blobContainerName = blobContainerName;
+            $.blobContainerName = blobContainerName;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public StorageBlobDeadLetterDestinationResponse build() {
-            return new StorageBlobDeadLetterDestinationResponse(blobContainerName, endpointType, resourceId);
+        }
+
+        public StorageBlobDeadLetterDestinationResponse build() {
+            $.endpointType = Codegen.stringProp("endpointType").arg($.endpointType).require();
+            return $;
         }
     }
+
 }

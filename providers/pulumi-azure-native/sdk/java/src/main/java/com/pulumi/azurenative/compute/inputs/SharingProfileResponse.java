@@ -25,7 +25,7 @@ public final class SharingProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="groups", required=true)
-      private final List<SharingProfileGroupResponse> groups;
+    private List<SharingProfileGroupResponse> groups;
 
     public List<SharingProfileGroupResponse> groups() {
         return this.groups;
@@ -36,58 +36,55 @@ public final class SharingProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="permissions")
-      private final @Nullable String permissions;
+    private @Nullable String permissions;
 
     public Optional<String> permissions() {
-        return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
+        return Optional.ofNullable(this.permissions);
     }
 
-    public SharingProfileResponse(
-        List<SharingProfileGroupResponse> groups,
-        @Nullable String permissions) {
-        this.groups = Objects.requireNonNull(groups, "expected parameter 'groups' to be non-null");
-        this.permissions = permissions;
-    }
+    private SharingProfileResponse() {}
 
-    private SharingProfileResponse() {
-        this.groups = List.of();
-        this.permissions = null;
+    private SharingProfileResponse(SharingProfileResponse $) {
+        this.groups = $.groups;
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharingProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SharingProfileGroupResponse> groups;
-        private @Nullable String permissions;
+        private SharingProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharingProfileResponse();
         }
 
         public Builder(SharingProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groups = defaults.groups;
-    	      this.permissions = defaults.permissions;
+            $ = new SharingProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groups(List<SharingProfileGroupResponse> groups) {
-            this.groups = Objects.requireNonNull(groups);
+            $.groups = groups;
             return this;
         }
+
         public Builder groups(SharingProfileGroupResponse... groups) {
             return groups(List.of(groups));
         }
+
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
-        }        public SharingProfileResponse build() {
-            return new SharingProfileResponse(groups, permissions);
+        }
+
+        public SharingProfileResponse build() {
+            $.groups = Objects.requireNonNull($.groups, "expected parameter 'groups' to be non-null");
+            return $;
         }
     }
+
 }

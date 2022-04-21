@@ -7,9 +7,9 @@ import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionBucketDefini
 import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClassificationJobS3JobDefinitionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="bucketDefinitions")
-      private final @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions;
+    private @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions;
 
-    public Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions() {
-        return this.bucketDefinitions == null ? Codegen.empty() : this.bucketDefinitions;
+    public Optional<Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>>> bucketDefinitions() {
+        return Optional.ofNullable(this.bucketDefinitions);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class ClassificationJobS3JobDefinitionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="scoping")
-      private final @Nullable Output<ClassificationJobS3JobDefinitionScopingArgs> scoping;
+    private @Nullable Output<ClassificationJobS3JobDefinitionScopingArgs> scoping;
 
-    public Output<ClassificationJobS3JobDefinitionScopingArgs> scoping() {
-        return this.scoping == null ? Codegen.empty() : this.scoping;
+    public Optional<Output<ClassificationJobS3JobDefinitionScopingArgs>> scoping() {
+        return Optional.ofNullable(this.scoping);
     }
 
-    public ClassificationJobS3JobDefinitionArgs(
-        @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions,
-        @Nullable Output<ClassificationJobS3JobDefinitionScopingArgs> scoping) {
-        this.bucketDefinitions = bucketDefinitions;
-        this.scoping = scoping;
-    }
+    private ClassificationJobS3JobDefinitionArgs() {}
 
-    private ClassificationJobS3JobDefinitionArgs() {
-        this.bucketDefinitions = Codegen.empty();
-        this.scoping = Codegen.empty();
+    private ClassificationJobS3JobDefinitionArgs(ClassificationJobS3JobDefinitionArgs $) {
+        this.bucketDefinitions = $.bucketDefinitions;
+        this.scoping = $.scoping;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClassificationJobS3JobDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions;
-        private @Nullable Output<ClassificationJobS3JobDefinitionScopingArgs> scoping;
+        private ClassificationJobS3JobDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClassificationJobS3JobDefinitionArgs();
         }
 
         public Builder(ClassificationJobS3JobDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketDefinitions = defaults.bucketDefinitions;
-    	      this.scoping = defaults.scoping;
+            $ = new ClassificationJobS3JobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketDefinitions(@Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions) {
-            this.bucketDefinitions = bucketDefinitions;
+            $.bucketDefinitions = bucketDefinitions;
             return this;
         }
-        public Builder bucketDefinitions(@Nullable List<ClassificationJobS3JobDefinitionBucketDefinitionArgs> bucketDefinitions) {
-            this.bucketDefinitions = Codegen.ofNullable(bucketDefinitions);
-            return this;
+
+        public Builder bucketDefinitions(List<ClassificationJobS3JobDefinitionBucketDefinitionArgs> bucketDefinitions) {
+            return bucketDefinitions(Output.of(bucketDefinitions));
         }
+
         public Builder bucketDefinitions(ClassificationJobS3JobDefinitionBucketDefinitionArgs... bucketDefinitions) {
             return bucketDefinitions(List.of(bucketDefinitions));
         }
+
         public Builder scoping(@Nullable Output<ClassificationJobS3JobDefinitionScopingArgs> scoping) {
-            this.scoping = scoping;
+            $.scoping = scoping;
             return this;
         }
-        public Builder scoping(@Nullable ClassificationJobS3JobDefinitionScopingArgs scoping) {
-            this.scoping = Codegen.ofNullable(scoping);
-            return this;
-        }        public ClassificationJobS3JobDefinitionArgs build() {
-            return new ClassificationJobS3JobDefinitionArgs(bucketDefinitions, scoping);
+
+        public Builder scoping(ClassificationJobS3JobDefinitionScopingArgs scoping) {
+            return scoping(Output.of(scoping));
+        }
+
+        public ClassificationJobS3JobDefinitionArgs build() {
+            return $;
         }
     }
+
 }

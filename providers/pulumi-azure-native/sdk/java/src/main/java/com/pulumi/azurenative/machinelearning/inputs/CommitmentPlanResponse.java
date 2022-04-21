@@ -21,45 +21,45 @@ public final class CommitmentPlanResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public CommitmentPlanResponse(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private CommitmentPlanResponse() {}
 
-    private CommitmentPlanResponse() {
-        this.id = null;
+    private CommitmentPlanResponse(CommitmentPlanResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommitmentPlanResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private CommitmentPlanResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommitmentPlanResponse();
         }
 
         public Builder(CommitmentPlanResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new CommitmentPlanResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public CommitmentPlanResponse build() {
-            return new CommitmentPlanResponse(id);
+        }
+
+        public CommitmentPlanResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

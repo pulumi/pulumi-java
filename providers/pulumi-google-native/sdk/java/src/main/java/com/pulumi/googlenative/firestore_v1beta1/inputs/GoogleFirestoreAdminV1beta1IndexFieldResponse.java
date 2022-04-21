@@ -21,7 +21,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends com.pul
      * 
      */
     @Import(name="fieldPath", required=true)
-      private final String fieldPath;
+    private String fieldPath;
 
     public String fieldPath() {
         return this.fieldPath;
@@ -32,55 +32,52 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends com.pul
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
     }
 
-    public GoogleFirestoreAdminV1beta1IndexFieldResponse(
-        String fieldPath,
-        String mode) {
-        this.fieldPath = Objects.requireNonNull(fieldPath, "expected parameter 'fieldPath' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private GoogleFirestoreAdminV1beta1IndexFieldResponse() {}
 
-    private GoogleFirestoreAdminV1beta1IndexFieldResponse() {
-        this.fieldPath = null;
-        this.mode = null;
+    private GoogleFirestoreAdminV1beta1IndexFieldResponse(GoogleFirestoreAdminV1beta1IndexFieldResponse $) {
+        this.fieldPath = $.fieldPath;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleFirestoreAdminV1beta1IndexFieldResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fieldPath;
-        private String mode;
+        private GoogleFirestoreAdminV1beta1IndexFieldResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleFirestoreAdminV1beta1IndexFieldResponse();
         }
 
         public Builder(GoogleFirestoreAdminV1beta1IndexFieldResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldPath = defaults.fieldPath;
-    	      this.mode = defaults.mode;
+            $ = new GoogleFirestoreAdminV1beta1IndexFieldResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldPath(String fieldPath) {
-            this.fieldPath = Objects.requireNonNull(fieldPath);
+            $.fieldPath = fieldPath;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
-        }        public GoogleFirestoreAdminV1beta1IndexFieldResponse build() {
-            return new GoogleFirestoreAdminV1beta1IndexFieldResponse(fieldPath, mode);
+        }
+
+        public GoogleFirestoreAdminV1beta1IndexFieldResponse build() {
+            $.fieldPath = Objects.requireNonNull($.fieldPath, "expected parameter 'fieldPath' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

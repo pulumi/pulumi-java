@@ -8,8 +8,8 @@ import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIamUserArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyUserArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,90 +22,82 @@ public final class AccessPolicyIdentityArgs extends com.pulumi.resources.Resourc
     public static final AccessPolicyIdentityArgs Empty = new AccessPolicyIdentityArgs();
 
     @Import(name="iamRole")
-      private final @Nullable Output<AccessPolicyIamRoleArgs> iamRole;
+    private @Nullable Output<AccessPolicyIamRoleArgs> iamRole;
 
-    public Output<AccessPolicyIamRoleArgs> iamRole() {
-        return this.iamRole == null ? Codegen.empty() : this.iamRole;
+    public Optional<Output<AccessPolicyIamRoleArgs>> iamRole() {
+        return Optional.ofNullable(this.iamRole);
     }
 
     @Import(name="iamUser")
-      private final @Nullable Output<AccessPolicyIamUserArgs> iamUser;
+    private @Nullable Output<AccessPolicyIamUserArgs> iamUser;
 
-    public Output<AccessPolicyIamUserArgs> iamUser() {
-        return this.iamUser == null ? Codegen.empty() : this.iamUser;
+    public Optional<Output<AccessPolicyIamUserArgs>> iamUser() {
+        return Optional.ofNullable(this.iamUser);
     }
 
     @Import(name="user")
-      private final @Nullable Output<AccessPolicyUserArgs> user;
+    private @Nullable Output<AccessPolicyUserArgs> user;
 
-    public Output<AccessPolicyUserArgs> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<AccessPolicyUserArgs>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public AccessPolicyIdentityArgs(
-        @Nullable Output<AccessPolicyIamRoleArgs> iamRole,
-        @Nullable Output<AccessPolicyIamUserArgs> iamUser,
-        @Nullable Output<AccessPolicyUserArgs> user) {
-        this.iamRole = iamRole;
-        this.iamUser = iamUser;
-        this.user = user;
-    }
+    private AccessPolicyIdentityArgs() {}
 
-    private AccessPolicyIdentityArgs() {
-        this.iamRole = Codegen.empty();
-        this.iamUser = Codegen.empty();
-        this.user = Codegen.empty();
+    private AccessPolicyIdentityArgs(AccessPolicyIdentityArgs $) {
+        this.iamRole = $.iamRole;
+        this.iamUser = $.iamUser;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AccessPolicyIamRoleArgs> iamRole;
-        private @Nullable Output<AccessPolicyIamUserArgs> iamUser;
-        private @Nullable Output<AccessPolicyUserArgs> user;
+        private AccessPolicyIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyIdentityArgs();
         }
 
         public Builder(AccessPolicyIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iamRole = defaults.iamRole;
-    	      this.iamUser = defaults.iamUser;
-    	      this.user = defaults.user;
+            $ = new AccessPolicyIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iamRole(@Nullable Output<AccessPolicyIamRoleArgs> iamRole) {
-            this.iamRole = iamRole;
+            $.iamRole = iamRole;
             return this;
         }
-        public Builder iamRole(@Nullable AccessPolicyIamRoleArgs iamRole) {
-            this.iamRole = Codegen.ofNullable(iamRole);
-            return this;
+
+        public Builder iamRole(AccessPolicyIamRoleArgs iamRole) {
+            return iamRole(Output.of(iamRole));
         }
+
         public Builder iamUser(@Nullable Output<AccessPolicyIamUserArgs> iamUser) {
-            this.iamUser = iamUser;
+            $.iamUser = iamUser;
             return this;
         }
-        public Builder iamUser(@Nullable AccessPolicyIamUserArgs iamUser) {
-            this.iamUser = Codegen.ofNullable(iamUser);
-            return this;
+
+        public Builder iamUser(AccessPolicyIamUserArgs iamUser) {
+            return iamUser(Output.of(iamUser));
         }
+
         public Builder user(@Nullable Output<AccessPolicyUserArgs> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable AccessPolicyUserArgs user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public AccessPolicyIdentityArgs build() {
-            return new AccessPolicyIdentityArgs(iamRole, iamUser, user);
+
+        public Builder user(AccessPolicyUserArgs user) {
+            return user(Output.of(user));
+        }
+
+        public AccessPolicyIdentityArgs build() {
+            return $;
         }
     }
+
 }

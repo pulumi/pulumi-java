@@ -7,10 +7,10 @@ import com.pulumi.awsnative.transfer.inputs.WorkflowStepArgs;
 import com.pulumi.awsnative.transfer.inputs.WorkflowTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onExceptionSteps")
-      private final @Nullable Output<List<WorkflowStepArgs>> onExceptionSteps;
+    private @Nullable Output<List<WorkflowStepArgs>> onExceptionSteps;
 
-    public Output<List<WorkflowStepArgs>> onExceptionSteps() {
-        return this.onExceptionSteps == null ? Codegen.empty() : this.onExceptionSteps;
+    public Optional<Output<List<WorkflowStepArgs>>> onExceptionSteps() {
+        return Optional.ofNullable(this.onExceptionSteps);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="steps", required=true)
-      private final Output<List<WorkflowStepArgs>> steps;
+    private Output<List<WorkflowStepArgs>> steps;
 
     public Output<List<WorkflowStepArgs>> steps() {
         return this.steps;
@@ -56,98 +56,91 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<WorkflowTagArgs>> tags;
+    private @Nullable Output<List<WorkflowTagArgs>> tags;
 
-    public Output<List<WorkflowTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<WorkflowTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public WorkflowArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<WorkflowStepArgs>> onExceptionSteps,
-        Output<List<WorkflowStepArgs>> steps,
-        @Nullable Output<List<WorkflowTagArgs>> tags) {
-        this.description = description;
-        this.onExceptionSteps = onExceptionSteps;
-        this.steps = Objects.requireNonNull(steps, "expected parameter 'steps' to be non-null");
-        this.tags = tags;
-    }
+    private WorkflowArgs() {}
 
-    private WorkflowArgs() {
-        this.description = Codegen.empty();
-        this.onExceptionSteps = Codegen.empty();
-        this.steps = Codegen.empty();
-        this.tags = Codegen.empty();
+    private WorkflowArgs(WorkflowArgs $) {
+        this.description = $.description;
+        this.onExceptionSteps = $.onExceptionSteps;
+        this.steps = $.steps;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<WorkflowStepArgs>> onExceptionSteps;
-        private Output<List<WorkflowStepArgs>> steps;
-        private @Nullable Output<List<WorkflowTagArgs>> tags;
+        private WorkflowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowArgs();
         }
 
         public Builder(WorkflowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.onExceptionSteps = defaults.onExceptionSteps;
-    	      this.steps = defaults.steps;
-    	      this.tags = defaults.tags;
+            $ = new WorkflowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder onExceptionSteps(@Nullable Output<List<WorkflowStepArgs>> onExceptionSteps) {
-            this.onExceptionSteps = onExceptionSteps;
+            $.onExceptionSteps = onExceptionSteps;
             return this;
         }
-        public Builder onExceptionSteps(@Nullable List<WorkflowStepArgs> onExceptionSteps) {
-            this.onExceptionSteps = Codegen.ofNullable(onExceptionSteps);
-            return this;
+
+        public Builder onExceptionSteps(List<WorkflowStepArgs> onExceptionSteps) {
+            return onExceptionSteps(Output.of(onExceptionSteps));
         }
+
         public Builder onExceptionSteps(WorkflowStepArgs... onExceptionSteps) {
             return onExceptionSteps(List.of(onExceptionSteps));
         }
+
         public Builder steps(Output<List<WorkflowStepArgs>> steps) {
-            this.steps = Objects.requireNonNull(steps);
+            $.steps = steps;
             return this;
         }
+
         public Builder steps(List<WorkflowStepArgs> steps) {
-            this.steps = Output.of(Objects.requireNonNull(steps));
-            return this;
+            return steps(Output.of(steps));
         }
+
         public Builder steps(WorkflowStepArgs... steps) {
             return steps(List.of(steps));
         }
+
         public Builder tags(@Nullable Output<List<WorkflowTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<WorkflowTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<WorkflowTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(WorkflowTagArgs... tags) {
             return tags(List.of(tags));
-        }        public WorkflowArgs build() {
-            return new WorkflowArgs(description, onExceptionSteps, steps, tags);
+        }
+
+        public WorkflowArgs build() {
+            $.steps = Objects.requireNonNull($.steps, "expected parameter 'steps' to be non-null");
+            return $;
         }
     }
+
 }

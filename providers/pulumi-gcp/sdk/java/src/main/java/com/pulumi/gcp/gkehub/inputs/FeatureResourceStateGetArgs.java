@@ -5,10 +5,10 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class FeatureResourceStateGetArgs extends com.pulumi.resources.Reso
     public static final FeatureResourceStateGetArgs Empty = new FeatureResourceStateGetArgs();
 
     @Import(name="hasResources")
-      private final @Nullable Output<Boolean> hasResources;
+    private @Nullable Output<Boolean> hasResources;
 
-    public Output<Boolean> hasResources() {
-        return this.hasResources == null ? Codegen.empty() : this.hasResources;
+    public Optional<Output<Boolean>> hasResources() {
+        return Optional.ofNullable(this.hasResources);
     }
 
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public FeatureResourceStateGetArgs(
-        @Nullable Output<Boolean> hasResources,
-        @Nullable Output<String> state) {
-        this.hasResources = hasResources;
-        this.state = state;
-    }
+    private FeatureResourceStateGetArgs() {}
 
-    private FeatureResourceStateGetArgs() {
-        this.hasResources = Codegen.empty();
-        this.state = Codegen.empty();
+    private FeatureResourceStateGetArgs(FeatureResourceStateGetArgs $) {
+        this.hasResources = $.hasResources;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureResourceStateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> hasResources;
-        private @Nullable Output<String> state;
+        private FeatureResourceStateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureResourceStateGetArgs();
         }
 
         public Builder(FeatureResourceStateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hasResources = defaults.hasResources;
-    	      this.state = defaults.state;
+            $ = new FeatureResourceStateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hasResources(@Nullable Output<Boolean> hasResources) {
-            this.hasResources = hasResources;
+            $.hasResources = hasResources;
             return this;
         }
-        public Builder hasResources(@Nullable Boolean hasResources) {
-            this.hasResources = Codegen.ofNullable(hasResources);
-            return this;
+
+        public Builder hasResources(Boolean hasResources) {
+            return hasResources(Output.of(hasResources));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public FeatureResourceStateGetArgs build() {
-            return new FeatureResourceStateGetArgs(hasResources, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public FeatureResourceStateGetArgs build() {
+            return $;
         }
     }
+
 }

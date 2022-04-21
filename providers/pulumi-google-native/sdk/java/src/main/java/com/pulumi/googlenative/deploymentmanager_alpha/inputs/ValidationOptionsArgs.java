@@ -5,10 +5,10 @@ package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_alpha.enums.ValidationOptionsSchemaValidation;
 import com.pulumi.googlenative.deploymentmanager_alpha.enums.ValidationOptionsUndeclaredProperties;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ValidationOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="schemaValidation")
-      private final @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation;
+    private @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation;
 
-    public Output<ValidationOptionsSchemaValidation> schemaValidation() {
-        return this.schemaValidation == null ? Codegen.empty() : this.schemaValidation;
+    public Optional<Output<ValidationOptionsSchemaValidation>> schemaValidation() {
+        return Optional.ofNullable(this.schemaValidation);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ValidationOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="undeclaredProperties")
-      private final @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties;
+    private @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties;
 
-    public Output<ValidationOptionsUndeclaredProperties> undeclaredProperties() {
-        return this.undeclaredProperties == null ? Codegen.empty() : this.undeclaredProperties;
+    public Optional<Output<ValidationOptionsUndeclaredProperties>> undeclaredProperties() {
+        return Optional.ofNullable(this.undeclaredProperties);
     }
 
-    public ValidationOptionsArgs(
-        @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation,
-        @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties) {
-        this.schemaValidation = schemaValidation;
-        this.undeclaredProperties = undeclaredProperties;
-    }
+    private ValidationOptionsArgs() {}
 
-    private ValidationOptionsArgs() {
-        this.schemaValidation = Codegen.empty();
-        this.undeclaredProperties = Codegen.empty();
+    private ValidationOptionsArgs(ValidationOptionsArgs $) {
+        this.schemaValidation = $.schemaValidation;
+        this.undeclaredProperties = $.undeclaredProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidationOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation;
-        private @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties;
+        private ValidationOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidationOptionsArgs();
         }
 
         public Builder(ValidationOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schemaValidation = defaults.schemaValidation;
-    	      this.undeclaredProperties = defaults.undeclaredProperties;
+            $ = new ValidationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schemaValidation(@Nullable Output<ValidationOptionsSchemaValidation> schemaValidation) {
-            this.schemaValidation = schemaValidation;
+            $.schemaValidation = schemaValidation;
             return this;
         }
-        public Builder schemaValidation(@Nullable ValidationOptionsSchemaValidation schemaValidation) {
-            this.schemaValidation = Codegen.ofNullable(schemaValidation);
-            return this;
+
+        public Builder schemaValidation(ValidationOptionsSchemaValidation schemaValidation) {
+            return schemaValidation(Output.of(schemaValidation));
         }
+
         public Builder undeclaredProperties(@Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties) {
-            this.undeclaredProperties = undeclaredProperties;
+            $.undeclaredProperties = undeclaredProperties;
             return this;
         }
-        public Builder undeclaredProperties(@Nullable ValidationOptionsUndeclaredProperties undeclaredProperties) {
-            this.undeclaredProperties = Codegen.ofNullable(undeclaredProperties);
-            return this;
-        }        public ValidationOptionsArgs build() {
-            return new ValidationOptionsArgs(schemaValidation, undeclaredProperties);
+
+        public Builder undeclaredProperties(ValidationOptionsUndeclaredProperties undeclaredProperties) {
+            return undeclaredProperties(Output.of(undeclaredProperties));
+        }
+
+        public ValidationOptionsArgs build() {
+            return $;
         }
     }
+
 }

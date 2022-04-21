@@ -17,7 +17,7 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="constraint", required=true)
-      private final String constraint;
+    private String constraint;
 
     public String constraint() {
         return this.constraint;
@@ -28,55 +28,52 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="folder", required=true)
-      private final String folder;
+    private String folder;
 
     public String folder() {
         return this.folder;
     }
 
-    public GetOrganizationPolicyArgs(
-        String constraint,
-        String folder) {
-        this.constraint = Objects.requireNonNull(constraint, "expected parameter 'constraint' to be non-null");
-        this.folder = Objects.requireNonNull(folder, "expected parameter 'folder' to be non-null");
-    }
+    private GetOrganizationPolicyArgs() {}
 
-    private GetOrganizationPolicyArgs() {
-        this.constraint = null;
-        this.folder = null;
+    private GetOrganizationPolicyArgs(GetOrganizationPolicyArgs $) {
+        this.constraint = $.constraint;
+        this.folder = $.folder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String constraint;
-        private String folder;
+        private GetOrganizationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationPolicyArgs();
         }
 
         public Builder(GetOrganizationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constraint = defaults.constraint;
-    	      this.folder = defaults.folder;
+            $ = new GetOrganizationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder constraint(String constraint) {
-            this.constraint = Objects.requireNonNull(constraint);
+            $.constraint = constraint;
             return this;
         }
+
         public Builder folder(String folder) {
-            this.folder = Objects.requireNonNull(folder);
+            $.folder = folder;
             return this;
-        }        public GetOrganizationPolicyArgs build() {
-            return new GetOrganizationPolicyArgs(constraint, folder);
+        }
+
+        public GetOrganizationPolicyArgs build() {
+            $.constraint = Objects.requireNonNull($.constraint, "expected parameter 'constraint' to be non-null");
+            $.folder = Objects.requireNonNull($.folder, "expected parameter 'folder' to be non-null");
+            return $;
         }
     }
+
 }

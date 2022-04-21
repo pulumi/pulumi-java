@@ -16,94 +16,83 @@ public final class InAppTemplateButtonConfig extends com.pulumi.resources.Invoke
     public static final InAppTemplateButtonConfig Empty = new InAppTemplateButtonConfig();
 
     @Import(name="android")
-      private final @Nullable InAppTemplateOverrideButtonConfiguration android;
+    private @Nullable InAppTemplateOverrideButtonConfiguration android;
 
     public Optional<InAppTemplateOverrideButtonConfiguration> android() {
-        return this.android == null ? Optional.empty() : Optional.ofNullable(this.android);
+        return Optional.ofNullable(this.android);
     }
 
     @Import(name="defaultConfig")
-      private final @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig;
+    private @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig;
 
     public Optional<InAppTemplateDefaultButtonConfiguration> defaultConfig() {
-        return this.defaultConfig == null ? Optional.empty() : Optional.ofNullable(this.defaultConfig);
+        return Optional.ofNullable(this.defaultConfig);
     }
 
     @Import(name="iOS")
-      private final @Nullable InAppTemplateOverrideButtonConfiguration iOS;
+    private @Nullable InAppTemplateOverrideButtonConfiguration iOS;
 
     public Optional<InAppTemplateOverrideButtonConfiguration> iOS() {
-        return this.iOS == null ? Optional.empty() : Optional.ofNullable(this.iOS);
+        return Optional.ofNullable(this.iOS);
     }
 
     @Import(name="web")
-      private final @Nullable InAppTemplateOverrideButtonConfiguration web;
+    private @Nullable InAppTemplateOverrideButtonConfiguration web;
 
     public Optional<InAppTemplateOverrideButtonConfiguration> web() {
-        return this.web == null ? Optional.empty() : Optional.ofNullable(this.web);
+        return Optional.ofNullable(this.web);
     }
 
-    public InAppTemplateButtonConfig(
-        @Nullable InAppTemplateOverrideButtonConfiguration android,
-        @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig,
-        @Nullable InAppTemplateOverrideButtonConfiguration iOS,
-        @Nullable InAppTemplateOverrideButtonConfiguration web) {
-        this.android = android;
-        this.defaultConfig = defaultConfig;
-        this.iOS = iOS;
-        this.web = web;
-    }
+    private InAppTemplateButtonConfig() {}
 
-    private InAppTemplateButtonConfig() {
-        this.android = null;
-        this.defaultConfig = null;
-        this.iOS = null;
-        this.web = null;
+    private InAppTemplateButtonConfig(InAppTemplateButtonConfig $) {
+        this.android = $.android;
+        this.defaultConfig = $.defaultConfig;
+        this.iOS = $.iOS;
+        this.web = $.web;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateButtonConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable InAppTemplateOverrideButtonConfiguration android;
-        private @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig;
-        private @Nullable InAppTemplateOverrideButtonConfiguration iOS;
-        private @Nullable InAppTemplateOverrideButtonConfiguration web;
+        private InAppTemplateButtonConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateButtonConfig();
         }
 
         public Builder(InAppTemplateButtonConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.android = defaults.android;
-    	      this.defaultConfig = defaults.defaultConfig;
-    	      this.iOS = defaults.iOS;
-    	      this.web = defaults.web;
+            $ = new InAppTemplateButtonConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder android(@Nullable InAppTemplateOverrideButtonConfiguration android) {
-            this.android = android;
+            $.android = android;
             return this;
         }
+
         public Builder defaultConfig(@Nullable InAppTemplateDefaultButtonConfiguration defaultConfig) {
-            this.defaultConfig = defaultConfig;
+            $.defaultConfig = defaultConfig;
             return this;
         }
+
         public Builder iOS(@Nullable InAppTemplateOverrideButtonConfiguration iOS) {
-            this.iOS = iOS;
+            $.iOS = iOS;
             return this;
         }
+
         public Builder web(@Nullable InAppTemplateOverrideButtonConfiguration web) {
-            this.web = web;
+            $.web = web;
             return this;
-        }        public InAppTemplateButtonConfig build() {
-            return new InAppTemplateButtonConfig(android, defaultConfig, iOS, web);
+        }
+
+        public InAppTemplateButtonConfig build() {
+            return $;
         }
     }
+
 }

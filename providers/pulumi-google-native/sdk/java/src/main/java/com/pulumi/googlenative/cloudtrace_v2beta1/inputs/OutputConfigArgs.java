@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudtrace_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class OutputConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
-    public OutputConfigArgs(@Nullable Output<String> destination) {
-        this.destination = destination;
-    }
+    private OutputConfigArgs() {}
 
-    private OutputConfigArgs() {
-        this.destination = Codegen.empty();
+    private OutputConfigArgs(OutputConfigArgs $) {
+        this.destination = $.destination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutputConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destination;
+        private OutputConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutputConfigArgs();
         }
 
         public Builder(OutputConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
+            $ = new OutputConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
-        }        public OutputConfigArgs build() {
-            return new OutputConfigArgs(destination);
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
+        }
+
+        public OutputConfigArgs build() {
+            return $;
         }
     }
+
 }

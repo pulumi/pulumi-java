@@ -9,9 +9,9 @@ import com.pulumi.azurenative.connectedvmwarevsphere.inputs.HttpProxyConfigurati
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<GuestCredentialArgs> credentials;
+    private @Nullable Output<GuestCredentialArgs> credentials;
 
-    public Output<GuestCredentialArgs> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<GuestCredentialArgs>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpProxyConfig")
-      private final @Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig;
+    private @Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig;
 
-    public Output<HttpProxyConfigurationArgs> httpProxyConfig() {
-        return this.httpProxyConfig == null ? Codegen.empty() : this.httpProxyConfig;
+    public Optional<Output<HttpProxyConfigurationArgs>> httpProxyConfig() {
+        return Optional.ofNullable(this.httpProxyConfig);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningAction")
-      private final @Nullable Output<Either<String,ProvisioningAction>> provisioningAction;
+    private @Nullable Output<Either<String,ProvisioningAction>> provisioningAction;
 
-    public Output<Either<String,ProvisioningAction>> provisioningAction() {
-        return this.provisioningAction == null ? Codegen.empty() : this.provisioningAction;
+    public Optional<Output<Either<String,ProvisioningAction>>> provisioningAction() {
+        return Optional.ofNullable(this.provisioningAction);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -79,115 +79,100 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualMachineName", required=true)
-      private final Output<String> virtualMachineName;
+    private Output<String> virtualMachineName;
 
     public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
 
-    public GuestAgentArgs(
-        @Nullable Output<GuestCredentialArgs> credentials,
-        @Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,ProvisioningAction>> provisioningAction,
-        Output<String> resourceGroupName,
-        Output<String> virtualMachineName) {
-        this.credentials = credentials;
-        this.httpProxyConfig = httpProxyConfig;
-        this.name = name;
-        this.provisioningAction = provisioningAction;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualMachineName = Objects.requireNonNull(virtualMachineName, "expected parameter 'virtualMachineName' to be non-null");
-    }
+    private GuestAgentArgs() {}
 
-    private GuestAgentArgs() {
-        this.credentials = Codegen.empty();
-        this.httpProxyConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.provisioningAction = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.virtualMachineName = Codegen.empty();
+    private GuestAgentArgs(GuestAgentArgs $) {
+        this.credentials = $.credentials;
+        this.httpProxyConfig = $.httpProxyConfig;
+        this.name = $.name;
+        this.provisioningAction = $.provisioningAction;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualMachineName = $.virtualMachineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestAgentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GuestCredentialArgs> credentials;
-        private @Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,ProvisioningAction>> provisioningAction;
-        private Output<String> resourceGroupName;
-        private Output<String> virtualMachineName;
+        private GuestAgentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestAgentArgs();
         }
 
         public Builder(GuestAgentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.httpProxyConfig = defaults.httpProxyConfig;
-    	      this.name = defaults.name;
-    	      this.provisioningAction = defaults.provisioningAction;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualMachineName = defaults.virtualMachineName;
+            $ = new GuestAgentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable Output<GuestCredentialArgs> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable GuestCredentialArgs credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(GuestCredentialArgs credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder httpProxyConfig(@Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig) {
-            this.httpProxyConfig = httpProxyConfig;
+            $.httpProxyConfig = httpProxyConfig;
             return this;
         }
-        public Builder httpProxyConfig(@Nullable HttpProxyConfigurationArgs httpProxyConfig) {
-            this.httpProxyConfig = Codegen.ofNullable(httpProxyConfig);
-            return this;
+
+        public Builder httpProxyConfig(HttpProxyConfigurationArgs httpProxyConfig) {
+            return httpProxyConfig(Output.of(httpProxyConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder provisioningAction(@Nullable Output<Either<String,ProvisioningAction>> provisioningAction) {
-            this.provisioningAction = provisioningAction;
+            $.provisioningAction = provisioningAction;
             return this;
         }
-        public Builder provisioningAction(@Nullable Either<String,ProvisioningAction> provisioningAction) {
-            this.provisioningAction = Codegen.ofNullable(provisioningAction);
-            return this;
+
+        public Builder provisioningAction(Either<String,ProvisioningAction> provisioningAction) {
+            return provisioningAction(Output.of(provisioningAction));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder virtualMachineName(Output<String> virtualMachineName) {
-            this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
+            $.virtualMachineName = virtualMachineName;
             return this;
         }
+
         public Builder virtualMachineName(String virtualMachineName) {
-            this.virtualMachineName = Output.of(Objects.requireNonNull(virtualMachineName));
-            return this;
-        }        public GuestAgentArgs build() {
-            return new GuestAgentArgs(credentials, httpProxyConfig, name, provisioningAction, resourceGroupName, virtualMachineName);
+            return virtualMachineName(Output.of(virtualMachineName));
+        }
+
+        public GuestAgentArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualMachineName = Objects.requireNonNull($.virtualMachineName, "expected parameter 'virtualMachineName' to be non-null");
+            return $;
         }
     }
+
 }

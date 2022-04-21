@@ -25,10 +25,10 @@ public final class VolumeContainerFailoverMetadataResponse extends com.pulumi.re
      * 
      */
     @Import(name="volumeContainerId")
-      private final @Nullable String volumeContainerId;
+    private @Nullable String volumeContainerId;
 
     public Optional<String> volumeContainerId() {
-        return this.volumeContainerId == null ? Optional.empty() : Optional.ofNullable(this.volumeContainerId);
+        return Optional.ofNullable(this.volumeContainerId);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class VolumeContainerFailoverMetadataResponse extends com.pulumi.re
      * 
      */
     @Import(name="volumes")
-      private final @Nullable List<VolumeFailoverMetadataResponse> volumes;
+    private @Nullable List<VolumeFailoverMetadataResponse> volumes;
 
-    public List<VolumeFailoverMetadataResponse> volumes() {
-        return this.volumes == null ? List.of() : this.volumes;
+    public Optional<List<VolumeFailoverMetadataResponse>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public VolumeContainerFailoverMetadataResponse(
-        @Nullable String volumeContainerId,
-        @Nullable List<VolumeFailoverMetadataResponse> volumes) {
-        this.volumeContainerId = volumeContainerId;
-        this.volumes = volumes;
-    }
+    private VolumeContainerFailoverMetadataResponse() {}
 
-    private VolumeContainerFailoverMetadataResponse() {
-        this.volumeContainerId = null;
-        this.volumes = List.of();
+    private VolumeContainerFailoverMetadataResponse(VolumeContainerFailoverMetadataResponse $) {
+        this.volumeContainerId = $.volumeContainerId;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeContainerFailoverMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String volumeContainerId;
-        private @Nullable List<VolumeFailoverMetadataResponse> volumes;
+        private VolumeContainerFailoverMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeContainerFailoverMetadataResponse();
         }
 
         public Builder(VolumeContainerFailoverMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.volumeContainerId = defaults.volumeContainerId;
-    	      this.volumes = defaults.volumes;
+            $ = new VolumeContainerFailoverMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder volumeContainerId(@Nullable String volumeContainerId) {
-            this.volumeContainerId = volumeContainerId;
+            $.volumeContainerId = volumeContainerId;
             return this;
         }
+
         public Builder volumes(@Nullable List<VolumeFailoverMetadataResponse> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
+
         public Builder volumes(VolumeFailoverMetadataResponse... volumes) {
             return volumes(List.of(volumes));
-        }        public VolumeContainerFailoverMetadataResponse build() {
-            return new VolumeContainerFailoverMetadataResponse(volumeContainerId, volumes);
+        }
+
+        public VolumeContainerFailoverMetadataResponse build() {
+            return $;
         }
     }
+
 }

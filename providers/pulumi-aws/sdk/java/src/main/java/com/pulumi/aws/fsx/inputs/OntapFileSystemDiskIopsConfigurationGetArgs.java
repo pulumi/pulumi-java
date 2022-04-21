@@ -5,10 +5,10 @@ package com.pulumi.aws.fsx.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class OntapFileSystemDiskIopsConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class OntapFileSystemDiskIopsConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public OntapFileSystemDiskIopsConfigurationGetArgs(
-        @Nullable Output<Integer> iops,
-        @Nullable Output<String> mode) {
-        this.iops = iops;
-        this.mode = mode;
-    }
+    private OntapFileSystemDiskIopsConfigurationGetArgs() {}
 
-    private OntapFileSystemDiskIopsConfigurationGetArgs() {
-        this.iops = Codegen.empty();
-        this.mode = Codegen.empty();
+    private OntapFileSystemDiskIopsConfigurationGetArgs(OntapFileSystemDiskIopsConfigurationGetArgs $) {
+        this.iops = $.iops;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OntapFileSystemDiskIopsConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> iops;
-        private @Nullable Output<String> mode;
+        private OntapFileSystemDiskIopsConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OntapFileSystemDiskIopsConfigurationGetArgs();
         }
 
         public Builder(OntapFileSystemDiskIopsConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iops = defaults.iops;
-    	      this.mode = defaults.mode;
+            $ = new OntapFileSystemDiskIopsConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public OntapFileSystemDiskIopsConfigurationGetArgs build() {
-            return new OntapFileSystemDiskIopsConfigurationGetArgs(iops, mode);
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
+        }
+
+        public OntapFileSystemDiskIopsConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

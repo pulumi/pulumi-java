@@ -21,45 +21,45 @@ public final class SparkHistoryServerConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="dataprocCluster", required=true)
-      private final String dataprocCluster;
+    private String dataprocCluster;
 
     public String dataprocCluster() {
         return this.dataprocCluster;
     }
 
-    public SparkHistoryServerConfigResponse(String dataprocCluster) {
-        this.dataprocCluster = Objects.requireNonNull(dataprocCluster, "expected parameter 'dataprocCluster' to be non-null");
-    }
+    private SparkHistoryServerConfigResponse() {}
 
-    private SparkHistoryServerConfigResponse() {
-        this.dataprocCluster = null;
+    private SparkHistoryServerConfigResponse(SparkHistoryServerConfigResponse $) {
+        this.dataprocCluster = $.dataprocCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkHistoryServerConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataprocCluster;
+        private SparkHistoryServerConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkHistoryServerConfigResponse();
         }
 
         public Builder(SparkHistoryServerConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataprocCluster = defaults.dataprocCluster;
+            $ = new SparkHistoryServerConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataprocCluster(String dataprocCluster) {
-            this.dataprocCluster = Objects.requireNonNull(dataprocCluster);
+            $.dataprocCluster = dataprocCluster;
             return this;
-        }        public SparkHistoryServerConfigResponse build() {
-            return new SparkHistoryServerConfigResponse(dataprocCluster);
+        }
+
+        public SparkHistoryServerConfigResponse build() {
+            $.dataprocCluster = Objects.requireNonNull($.dataprocCluster, "expected parameter 'dataprocCluster' to be non-null");
+            return $;
         }
     }
+
 }

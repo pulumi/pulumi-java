@@ -17,7 +17,7 @@ public final class GetLinkedStorageAccountArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dataSourceType", required=true)
-      private final String dataSourceType;
+    private String dataSourceType;
 
     public String dataSourceType() {
         return this.dataSourceType;
@@ -28,7 +28,7 @@ public final class GetLinkedStorageAccountArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetLinkedStorageAccountArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetLinkedStorageAccountArgs(
-        String dataSourceType,
-        String resourceGroupName,
-        String workspaceName) {
-        this.dataSourceType = Objects.requireNonNull(dataSourceType, "expected parameter 'dataSourceType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetLinkedStorageAccountArgs() {}
 
-    private GetLinkedStorageAccountArgs() {
-        this.dataSourceType = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetLinkedStorageAccountArgs(GetLinkedStorageAccountArgs $) {
+        this.dataSourceType = $.dataSourceType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLinkedStorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataSourceType;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetLinkedStorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLinkedStorageAccountArgs();
         }
 
         public Builder(GetLinkedStorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceType = defaults.dataSourceType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetLinkedStorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceType(String dataSourceType) {
-            this.dataSourceType = Objects.requireNonNull(dataSourceType);
+            $.dataSourceType = dataSourceType;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetLinkedStorageAccountArgs build() {
-            return new GetLinkedStorageAccountArgs(dataSourceType, resourceGroupName, workspaceName);
+        }
+
+        public GetLinkedStorageAccountArgs build() {
+            $.dataSourceType = Objects.requireNonNull($.dataSourceType, "expected parameter 'dataSourceType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

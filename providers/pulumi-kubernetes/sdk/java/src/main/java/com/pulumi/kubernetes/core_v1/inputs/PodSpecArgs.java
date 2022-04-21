@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.AffinityArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
 import com.pulumi.kubernetes.core_v1.inputs.EphemeralContainerArgs;
@@ -24,6 +23,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -40,10 +40,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activeDeadlineSeconds")
-      private final @Nullable Output<Integer> activeDeadlineSeconds;
+    private @Nullable Output<Integer> activeDeadlineSeconds;
 
-    public Output<Integer> activeDeadlineSeconds() {
-        return this.activeDeadlineSeconds == null ? Codegen.empty() : this.activeDeadlineSeconds;
+    public Optional<Output<Integer>> activeDeadlineSeconds() {
+        return Optional.ofNullable(this.activeDeadlineSeconds);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="affinity")
-      private final @Nullable Output<AffinityArgs> affinity;
+    private @Nullable Output<AffinityArgs> affinity;
 
-    public Output<AffinityArgs> affinity() {
-        return this.affinity == null ? Codegen.empty() : this.affinity;
+    public Optional<Output<AffinityArgs>> affinity() {
+        return Optional.ofNullable(this.affinity);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automountServiceAccountToken")
-      private final @Nullable Output<Boolean> automountServiceAccountToken;
+    private @Nullable Output<Boolean> automountServiceAccountToken;
 
-    public Output<Boolean> automountServiceAccountToken() {
-        return this.automountServiceAccountToken == null ? Codegen.empty() : this.automountServiceAccountToken;
+    public Optional<Output<Boolean>> automountServiceAccountToken() {
+        return Optional.ofNullable(this.automountServiceAccountToken);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containers", required=true)
-      private final Output<List<ContainerArgs>> containers;
+    private Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> containers() {
         return this.containers;
@@ -84,10 +84,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsConfig")
-      private final @Nullable Output<PodDNSConfigArgs> dnsConfig;
+    private @Nullable Output<PodDNSConfigArgs> dnsConfig;
 
-    public Output<PodDNSConfigArgs> dnsConfig() {
-        return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
+    public Optional<Output<PodDNSConfigArgs>> dnsConfig() {
+        return Optional.ofNullable(this.dnsConfig);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsPolicy")
-      private final @Nullable Output<String> dnsPolicy;
+    private @Nullable Output<String> dnsPolicy;
 
-    public Output<String> dnsPolicy() {
-        return this.dnsPolicy == null ? Codegen.empty() : this.dnsPolicy;
+    public Optional<Output<String>> dnsPolicy() {
+        return Optional.ofNullable(this.dnsPolicy);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableServiceLinks")
-      private final @Nullable Output<Boolean> enableServiceLinks;
+    private @Nullable Output<Boolean> enableServiceLinks;
 
-    public Output<Boolean> enableServiceLinks() {
-        return this.enableServiceLinks == null ? Codegen.empty() : this.enableServiceLinks;
+    public Optional<Output<Boolean>> enableServiceLinks() {
+        return Optional.ofNullable(this.enableServiceLinks);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeralContainers")
-      private final @Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers;
+    private @Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers;
 
-    public Output<List<EphemeralContainerArgs>> ephemeralContainers() {
-        return this.ephemeralContainers == null ? Codegen.empty() : this.ephemeralContainers;
+    public Optional<Output<List<EphemeralContainerArgs>>> ephemeralContainers() {
+        return Optional.ofNullable(this.ephemeralContainers);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostAliases")
-      private final @Nullable Output<List<HostAliasArgs>> hostAliases;
+    private @Nullable Output<List<HostAliasArgs>> hostAliases;
 
-    public Output<List<HostAliasArgs>> hostAliases() {
-        return this.hostAliases == null ? Codegen.empty() : this.hostAliases;
+    public Optional<Output<List<HostAliasArgs>>> hostAliases() {
+        return Optional.ofNullable(this.hostAliases);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostIPC")
-      private final @Nullable Output<Boolean> hostIPC;
+    private @Nullable Output<Boolean> hostIPC;
 
-    public Output<Boolean> hostIPC() {
-        return this.hostIPC == null ? Codegen.empty() : this.hostIPC;
+    public Optional<Output<Boolean>> hostIPC() {
+        return Optional.ofNullable(this.hostIPC);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostNetwork")
-      private final @Nullable Output<Boolean> hostNetwork;
+    private @Nullable Output<Boolean> hostNetwork;
 
-    public Output<Boolean> hostNetwork() {
-        return this.hostNetwork == null ? Codegen.empty() : this.hostNetwork;
+    public Optional<Output<Boolean>> hostNetwork() {
+        return Optional.ofNullable(this.hostNetwork);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostPID")
-      private final @Nullable Output<Boolean> hostPID;
+    private @Nullable Output<Boolean> hostPID;
 
-    public Output<Boolean> hostPID() {
-        return this.hostPID == null ? Codegen.empty() : this.hostPID;
+    public Optional<Output<Boolean>> hostPID() {
+        return Optional.ofNullable(this.hostPID);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imagePullSecrets")
-      private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
+    private @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
-    public Output<List<LocalObjectReferenceArgs>> imagePullSecrets() {
-        return this.imagePullSecrets == null ? Codegen.empty() : this.imagePullSecrets;
+    public Optional<Output<List<LocalObjectReferenceArgs>>> imagePullSecrets() {
+        return Optional.ofNullable(this.imagePullSecrets);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initContainers")
-      private final @Nullable Output<List<ContainerArgs>> initContainers;
+    private @Nullable Output<List<ContainerArgs>> initContainers;
 
-    public Output<List<ContainerArgs>> initContainers() {
-        return this.initContainers == null ? Codegen.empty() : this.initContainers;
+    public Optional<Output<List<ContainerArgs>>> initContainers() {
+        return Optional.ofNullable(this.initContainers);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeName")
-      private final @Nullable Output<String> nodeName;
+    private @Nullable Output<String> nodeName;
 
-    public Output<String> nodeName() {
-        return this.nodeName == null ? Codegen.empty() : this.nodeName;
+    public Optional<Output<String>> nodeName() {
+        return Optional.ofNullable(this.nodeName);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeSelector")
-      private final @Nullable Output<Map<String,String>> nodeSelector;
+    private @Nullable Output<Map<String,String>> nodeSelector;
 
-    public Output<Map<String,String>> nodeSelector() {
-        return this.nodeSelector == null ? Codegen.empty() : this.nodeSelector;
+    public Optional<Output<Map<String,String>>> nodeSelector() {
+        return Optional.ofNullable(this.nodeSelector);
     }
 
     /**
@@ -237,10 +237,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="os")
-      private final @Nullable Output<PodOSArgs> os;
+    private @Nullable Output<PodOSArgs> os;
 
-    public Output<PodOSArgs> os() {
-        return this.os == null ? Codegen.empty() : this.os;
+    public Optional<Output<PodOSArgs>> os() {
+        return Optional.ofNullable(this.os);
     }
 
     /**
@@ -248,10 +248,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overhead")
-      private final @Nullable Output<Map<String,String>> overhead;
+    private @Nullable Output<Map<String,String>> overhead;
 
-    public Output<Map<String,String>> overhead() {
-        return this.overhead == null ? Codegen.empty() : this.overhead;
+    public Optional<Output<Map<String,String>>> overhead() {
+        return Optional.ofNullable(this.overhead);
     }
 
     /**
@@ -259,10 +259,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preemptionPolicy")
-      private final @Nullable Output<String> preemptionPolicy;
+    private @Nullable Output<String> preemptionPolicy;
 
-    public Output<String> preemptionPolicy() {
-        return this.preemptionPolicy == null ? Codegen.empty() : this.preemptionPolicy;
+    public Optional<Output<String>> preemptionPolicy() {
+        return Optional.ofNullable(this.preemptionPolicy);
     }
 
     /**
@@ -270,10 +270,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -281,10 +281,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priorityClassName")
-      private final @Nullable Output<String> priorityClassName;
+    private @Nullable Output<String> priorityClassName;
 
-    public Output<String> priorityClassName() {
-        return this.priorityClassName == null ? Codegen.empty() : this.priorityClassName;
+    public Optional<Output<String>> priorityClassName() {
+        return Optional.ofNullable(this.priorityClassName);
     }
 
     /**
@@ -292,10 +292,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readinessGates")
-      private final @Nullable Output<List<PodReadinessGateArgs>> readinessGates;
+    private @Nullable Output<List<PodReadinessGateArgs>> readinessGates;
 
-    public Output<List<PodReadinessGateArgs>> readinessGates() {
-        return this.readinessGates == null ? Codegen.empty() : this.readinessGates;
+    public Optional<Output<List<PodReadinessGateArgs>>> readinessGates() {
+        return Optional.ofNullable(this.readinessGates);
     }
 
     /**
@@ -308,10 +308,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restartPolicy")
-      private final @Nullable Output<String> restartPolicy;
+    private @Nullable Output<String> restartPolicy;
 
-    public Output<String> restartPolicy() {
-        return this.restartPolicy == null ? Codegen.empty() : this.restartPolicy;
+    public Optional<Output<String>> restartPolicy() {
+        return Optional.ofNullable(this.restartPolicy);
     }
 
     /**
@@ -319,10 +319,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeClassName")
-      private final @Nullable Output<String> runtimeClassName;
+    private @Nullable Output<String> runtimeClassName;
 
-    public Output<String> runtimeClassName() {
-        return this.runtimeClassName == null ? Codegen.empty() : this.runtimeClassName;
+    public Optional<Output<String>> runtimeClassName() {
+        return Optional.ofNullable(this.runtimeClassName);
     }
 
     /**
@@ -330,10 +330,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedulerName")
-      private final @Nullable Output<String> schedulerName;
+    private @Nullable Output<String> schedulerName;
 
-    public Output<String> schedulerName() {
-        return this.schedulerName == null ? Codegen.empty() : this.schedulerName;
+    public Optional<Output<String>> schedulerName() {
+        return Optional.ofNullable(this.schedulerName);
     }
 
     /**
@@ -341,10 +341,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityContext")
-      private final @Nullable Output<PodSecurityContextArgs> securityContext;
+    private @Nullable Output<PodSecurityContextArgs> securityContext;
 
-    public Output<PodSecurityContextArgs> securityContext() {
-        return this.securityContext == null ? Codegen.empty() : this.securityContext;
+    public Optional<Output<PodSecurityContextArgs>> securityContext() {
+        return Optional.ofNullable(this.securityContext);
     }
 
     /**
@@ -352,10 +352,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -363,10 +363,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountName")
-      private final @Nullable Output<String> serviceAccountName;
+    private @Nullable Output<String> serviceAccountName;
 
-    public Output<String> serviceAccountName() {
-        return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
+    public Optional<Output<String>> serviceAccountName() {
+        return Optional.ofNullable(this.serviceAccountName);
     }
 
     /**
@@ -374,10 +374,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="setHostnameAsFQDN")
-      private final @Nullable Output<Boolean> setHostnameAsFQDN;
+    private @Nullable Output<Boolean> setHostnameAsFQDN;
 
-    public Output<Boolean> setHostnameAsFQDN() {
-        return this.setHostnameAsFQDN == null ? Codegen.empty() : this.setHostnameAsFQDN;
+    public Optional<Output<Boolean>> setHostnameAsFQDN() {
+        return Optional.ofNullable(this.setHostnameAsFQDN);
     }
 
     /**
@@ -385,10 +385,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareProcessNamespace")
-      private final @Nullable Output<Boolean> shareProcessNamespace;
+    private @Nullable Output<Boolean> shareProcessNamespace;
 
-    public Output<Boolean> shareProcessNamespace() {
-        return this.shareProcessNamespace == null ? Codegen.empty() : this.shareProcessNamespace;
+    public Optional<Output<Boolean>> shareProcessNamespace() {
+        return Optional.ofNullable(this.shareProcessNamespace);
     }
 
     /**
@@ -396,10 +396,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subdomain")
-      private final @Nullable Output<String> subdomain;
+    private @Nullable Output<String> subdomain;
 
-    public Output<String> subdomain() {
-        return this.subdomain == null ? Codegen.empty() : this.subdomain;
+    public Optional<Output<String>> subdomain() {
+        return Optional.ofNullable(this.subdomain);
     }
 
     /**
@@ -407,10 +407,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terminationGracePeriodSeconds")
-      private final @Nullable Output<Integer> terminationGracePeriodSeconds;
+    private @Nullable Output<Integer> terminationGracePeriodSeconds;
 
-    public Output<Integer> terminationGracePeriodSeconds() {
-        return this.terminationGracePeriodSeconds == null ? Codegen.empty() : this.terminationGracePeriodSeconds;
+    public Optional<Output<Integer>> terminationGracePeriodSeconds() {
+        return Optional.ofNullable(this.terminationGracePeriodSeconds);
     }
 
     /**
@@ -418,10 +418,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tolerations")
-      private final @Nullable Output<List<TolerationArgs>> tolerations;
+    private @Nullable Output<List<TolerationArgs>> tolerations;
 
-    public Output<List<TolerationArgs>> tolerations() {
-        return this.tolerations == null ? Codegen.empty() : this.tolerations;
+    public Optional<Output<List<TolerationArgs>>> tolerations() {
+        return Optional.ofNullable(this.tolerations);
     }
 
     /**
@@ -429,10 +429,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topologySpreadConstraints")
-      private final @Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
+    private @Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
 
-    public Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints() {
-        return this.topologySpreadConstraints == null ? Codegen.empty() : this.topologySpreadConstraints;
+    public Optional<Output<List<TopologySpreadConstraintArgs>>> topologySpreadConstraints() {
+        return Optional.ofNullable(this.topologySpreadConstraints);
     }
 
     /**
@@ -440,532 +440,435 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<VolumeArgs>> volumes;
+    private @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<VolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public PodSpecArgs(
-        @Nullable Output<Integer> activeDeadlineSeconds,
-        @Nullable Output<AffinityArgs> affinity,
-        @Nullable Output<Boolean> automountServiceAccountToken,
-        Output<List<ContainerArgs>> containers,
-        @Nullable Output<PodDNSConfigArgs> dnsConfig,
-        @Nullable Output<String> dnsPolicy,
-        @Nullable Output<Boolean> enableServiceLinks,
-        @Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers,
-        @Nullable Output<List<HostAliasArgs>> hostAliases,
-        @Nullable Output<Boolean> hostIPC,
-        @Nullable Output<Boolean> hostNetwork,
-        @Nullable Output<Boolean> hostPID,
-        @Nullable Output<String> hostname,
-        @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets,
-        @Nullable Output<List<ContainerArgs>> initContainers,
-        @Nullable Output<String> nodeName,
-        @Nullable Output<Map<String,String>> nodeSelector,
-        @Nullable Output<PodOSArgs> os,
-        @Nullable Output<Map<String,String>> overhead,
-        @Nullable Output<String> preemptionPolicy,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> priorityClassName,
-        @Nullable Output<List<PodReadinessGateArgs>> readinessGates,
-        @Nullable Output<String> restartPolicy,
-        @Nullable Output<String> runtimeClassName,
-        @Nullable Output<String> schedulerName,
-        @Nullable Output<PodSecurityContextArgs> securityContext,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<String> serviceAccountName,
-        @Nullable Output<Boolean> setHostnameAsFQDN,
-        @Nullable Output<Boolean> shareProcessNamespace,
-        @Nullable Output<String> subdomain,
-        @Nullable Output<Integer> terminationGracePeriodSeconds,
-        @Nullable Output<List<TolerationArgs>> tolerations,
-        @Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints,
-        @Nullable Output<List<VolumeArgs>> volumes) {
-        this.activeDeadlineSeconds = activeDeadlineSeconds;
-        this.affinity = affinity;
-        this.automountServiceAccountToken = automountServiceAccountToken;
-        this.containers = Objects.requireNonNull(containers, "expected parameter 'containers' to be non-null");
-        this.dnsConfig = dnsConfig;
-        this.dnsPolicy = dnsPolicy;
-        this.enableServiceLinks = enableServiceLinks;
-        this.ephemeralContainers = ephemeralContainers;
-        this.hostAliases = hostAliases;
-        this.hostIPC = hostIPC;
-        this.hostNetwork = hostNetwork;
-        this.hostPID = hostPID;
-        this.hostname = hostname;
-        this.imagePullSecrets = imagePullSecrets;
-        this.initContainers = initContainers;
-        this.nodeName = nodeName;
-        this.nodeSelector = nodeSelector;
-        this.os = os;
-        this.overhead = overhead;
-        this.preemptionPolicy = preemptionPolicy;
-        this.priority = priority;
-        this.priorityClassName = priorityClassName;
-        this.readinessGates = readinessGates;
-        this.restartPolicy = restartPolicy;
-        this.runtimeClassName = runtimeClassName;
-        this.schedulerName = schedulerName;
-        this.securityContext = securityContext;
-        this.serviceAccount = serviceAccount;
-        this.serviceAccountName = serviceAccountName;
-        this.setHostnameAsFQDN = setHostnameAsFQDN;
-        this.shareProcessNamespace = shareProcessNamespace;
-        this.subdomain = subdomain;
-        this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
-        this.tolerations = tolerations;
-        this.topologySpreadConstraints = topologySpreadConstraints;
-        this.volumes = volumes;
-    }
+    private PodSpecArgs() {}
 
-    private PodSpecArgs() {
-        this.activeDeadlineSeconds = Codegen.empty();
-        this.affinity = Codegen.empty();
-        this.automountServiceAccountToken = Codegen.empty();
-        this.containers = Codegen.empty();
-        this.dnsConfig = Codegen.empty();
-        this.dnsPolicy = Codegen.empty();
-        this.enableServiceLinks = Codegen.empty();
-        this.ephemeralContainers = Codegen.empty();
-        this.hostAliases = Codegen.empty();
-        this.hostIPC = Codegen.empty();
-        this.hostNetwork = Codegen.empty();
-        this.hostPID = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.imagePullSecrets = Codegen.empty();
-        this.initContainers = Codegen.empty();
-        this.nodeName = Codegen.empty();
-        this.nodeSelector = Codegen.empty();
-        this.os = Codegen.empty();
-        this.overhead = Codegen.empty();
-        this.preemptionPolicy = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.priorityClassName = Codegen.empty();
-        this.readinessGates = Codegen.empty();
-        this.restartPolicy = Codegen.empty();
-        this.runtimeClassName = Codegen.empty();
-        this.schedulerName = Codegen.empty();
-        this.securityContext = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.serviceAccountName = Codegen.empty();
-        this.setHostnameAsFQDN = Codegen.empty();
-        this.shareProcessNamespace = Codegen.empty();
-        this.subdomain = Codegen.empty();
-        this.terminationGracePeriodSeconds = Codegen.empty();
-        this.tolerations = Codegen.empty();
-        this.topologySpreadConstraints = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private PodSpecArgs(PodSpecArgs $) {
+        this.activeDeadlineSeconds = $.activeDeadlineSeconds;
+        this.affinity = $.affinity;
+        this.automountServiceAccountToken = $.automountServiceAccountToken;
+        this.containers = $.containers;
+        this.dnsConfig = $.dnsConfig;
+        this.dnsPolicy = $.dnsPolicy;
+        this.enableServiceLinks = $.enableServiceLinks;
+        this.ephemeralContainers = $.ephemeralContainers;
+        this.hostAliases = $.hostAliases;
+        this.hostIPC = $.hostIPC;
+        this.hostNetwork = $.hostNetwork;
+        this.hostPID = $.hostPID;
+        this.hostname = $.hostname;
+        this.imagePullSecrets = $.imagePullSecrets;
+        this.initContainers = $.initContainers;
+        this.nodeName = $.nodeName;
+        this.nodeSelector = $.nodeSelector;
+        this.os = $.os;
+        this.overhead = $.overhead;
+        this.preemptionPolicy = $.preemptionPolicy;
+        this.priority = $.priority;
+        this.priorityClassName = $.priorityClassName;
+        this.readinessGates = $.readinessGates;
+        this.restartPolicy = $.restartPolicy;
+        this.runtimeClassName = $.runtimeClassName;
+        this.schedulerName = $.schedulerName;
+        this.securityContext = $.securityContext;
+        this.serviceAccount = $.serviceAccount;
+        this.serviceAccountName = $.serviceAccountName;
+        this.setHostnameAsFQDN = $.setHostnameAsFQDN;
+        this.shareProcessNamespace = $.shareProcessNamespace;
+        this.subdomain = $.subdomain;
+        this.terminationGracePeriodSeconds = $.terminationGracePeriodSeconds;
+        this.tolerations = $.tolerations;
+        this.topologySpreadConstraints = $.topologySpreadConstraints;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> activeDeadlineSeconds;
-        private @Nullable Output<AffinityArgs> affinity;
-        private @Nullable Output<Boolean> automountServiceAccountToken;
-        private Output<List<ContainerArgs>> containers;
-        private @Nullable Output<PodDNSConfigArgs> dnsConfig;
-        private @Nullable Output<String> dnsPolicy;
-        private @Nullable Output<Boolean> enableServiceLinks;
-        private @Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers;
-        private @Nullable Output<List<HostAliasArgs>> hostAliases;
-        private @Nullable Output<Boolean> hostIPC;
-        private @Nullable Output<Boolean> hostNetwork;
-        private @Nullable Output<Boolean> hostPID;
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
-        private @Nullable Output<List<ContainerArgs>> initContainers;
-        private @Nullable Output<String> nodeName;
-        private @Nullable Output<Map<String,String>> nodeSelector;
-        private @Nullable Output<PodOSArgs> os;
-        private @Nullable Output<Map<String,String>> overhead;
-        private @Nullable Output<String> preemptionPolicy;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> priorityClassName;
-        private @Nullable Output<List<PodReadinessGateArgs>> readinessGates;
-        private @Nullable Output<String> restartPolicy;
-        private @Nullable Output<String> runtimeClassName;
-        private @Nullable Output<String> schedulerName;
-        private @Nullable Output<PodSecurityContextArgs> securityContext;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<String> serviceAccountName;
-        private @Nullable Output<Boolean> setHostnameAsFQDN;
-        private @Nullable Output<Boolean> shareProcessNamespace;
-        private @Nullable Output<String> subdomain;
-        private @Nullable Output<Integer> terminationGracePeriodSeconds;
-        private @Nullable Output<List<TolerationArgs>> tolerations;
-        private @Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
-        private @Nullable Output<List<VolumeArgs>> volumes;
+        private PodSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodSpecArgs();
         }
 
         public Builder(PodSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDeadlineSeconds = defaults.activeDeadlineSeconds;
-    	      this.affinity = defaults.affinity;
-    	      this.automountServiceAccountToken = defaults.automountServiceAccountToken;
-    	      this.containers = defaults.containers;
-    	      this.dnsConfig = defaults.dnsConfig;
-    	      this.dnsPolicy = defaults.dnsPolicy;
-    	      this.enableServiceLinks = defaults.enableServiceLinks;
-    	      this.ephemeralContainers = defaults.ephemeralContainers;
-    	      this.hostAliases = defaults.hostAliases;
-    	      this.hostIPC = defaults.hostIPC;
-    	      this.hostNetwork = defaults.hostNetwork;
-    	      this.hostPID = defaults.hostPID;
-    	      this.hostname = defaults.hostname;
-    	      this.imagePullSecrets = defaults.imagePullSecrets;
-    	      this.initContainers = defaults.initContainers;
-    	      this.nodeName = defaults.nodeName;
-    	      this.nodeSelector = defaults.nodeSelector;
-    	      this.os = defaults.os;
-    	      this.overhead = defaults.overhead;
-    	      this.preemptionPolicy = defaults.preemptionPolicy;
-    	      this.priority = defaults.priority;
-    	      this.priorityClassName = defaults.priorityClassName;
-    	      this.readinessGates = defaults.readinessGates;
-    	      this.restartPolicy = defaults.restartPolicy;
-    	      this.runtimeClassName = defaults.runtimeClassName;
-    	      this.schedulerName = defaults.schedulerName;
-    	      this.securityContext = defaults.securityContext;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.serviceAccountName = defaults.serviceAccountName;
-    	      this.setHostnameAsFQDN = defaults.setHostnameAsFQDN;
-    	      this.shareProcessNamespace = defaults.shareProcessNamespace;
-    	      this.subdomain = defaults.subdomain;
-    	      this.terminationGracePeriodSeconds = defaults.terminationGracePeriodSeconds;
-    	      this.tolerations = defaults.tolerations;
-    	      this.topologySpreadConstraints = defaults.topologySpreadConstraints;
-    	      this.volumes = defaults.volumes;
+            $ = new PodSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDeadlineSeconds(@Nullable Output<Integer> activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = activeDeadlineSeconds;
+            $.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
-        public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = Codegen.ofNullable(activeDeadlineSeconds);
-            return this;
+
+        public Builder activeDeadlineSeconds(Integer activeDeadlineSeconds) {
+            return activeDeadlineSeconds(Output.of(activeDeadlineSeconds));
         }
+
         public Builder affinity(@Nullable Output<AffinityArgs> affinity) {
-            this.affinity = affinity;
+            $.affinity = affinity;
             return this;
         }
-        public Builder affinity(@Nullable AffinityArgs affinity) {
-            this.affinity = Codegen.ofNullable(affinity);
-            return this;
+
+        public Builder affinity(AffinityArgs affinity) {
+            return affinity(Output.of(affinity));
         }
+
         public Builder automountServiceAccountToken(@Nullable Output<Boolean> automountServiceAccountToken) {
-            this.automountServiceAccountToken = automountServiceAccountToken;
+            $.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
-        public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
-            this.automountServiceAccountToken = Codegen.ofNullable(automountServiceAccountToken);
-            return this;
+
+        public Builder automountServiceAccountToken(Boolean automountServiceAccountToken) {
+            return automountServiceAccountToken(Output.of(automountServiceAccountToken));
         }
+
         public Builder containers(Output<List<ContainerArgs>> containers) {
-            this.containers = Objects.requireNonNull(containers);
+            $.containers = containers;
             return this;
         }
+
         public Builder containers(List<ContainerArgs> containers) {
-            this.containers = Output.of(Objects.requireNonNull(containers));
-            return this;
+            return containers(Output.of(containers));
         }
+
         public Builder containers(ContainerArgs... containers) {
             return containers(List.of(containers));
         }
+
         public Builder dnsConfig(@Nullable Output<PodDNSConfigArgs> dnsConfig) {
-            this.dnsConfig = dnsConfig;
+            $.dnsConfig = dnsConfig;
             return this;
         }
-        public Builder dnsConfig(@Nullable PodDNSConfigArgs dnsConfig) {
-            this.dnsConfig = Codegen.ofNullable(dnsConfig);
-            return this;
+
+        public Builder dnsConfig(PodDNSConfigArgs dnsConfig) {
+            return dnsConfig(Output.of(dnsConfig));
         }
+
         public Builder dnsPolicy(@Nullable Output<String> dnsPolicy) {
-            this.dnsPolicy = dnsPolicy;
+            $.dnsPolicy = dnsPolicy;
             return this;
         }
-        public Builder dnsPolicy(@Nullable String dnsPolicy) {
-            this.dnsPolicy = Codegen.ofNullable(dnsPolicy);
-            return this;
+
+        public Builder dnsPolicy(String dnsPolicy) {
+            return dnsPolicy(Output.of(dnsPolicy));
         }
+
         public Builder enableServiceLinks(@Nullable Output<Boolean> enableServiceLinks) {
-            this.enableServiceLinks = enableServiceLinks;
+            $.enableServiceLinks = enableServiceLinks;
             return this;
         }
-        public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
-            this.enableServiceLinks = Codegen.ofNullable(enableServiceLinks);
-            return this;
+
+        public Builder enableServiceLinks(Boolean enableServiceLinks) {
+            return enableServiceLinks(Output.of(enableServiceLinks));
         }
+
         public Builder ephemeralContainers(@Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers) {
-            this.ephemeralContainers = ephemeralContainers;
+            $.ephemeralContainers = ephemeralContainers;
             return this;
         }
-        public Builder ephemeralContainers(@Nullable List<EphemeralContainerArgs> ephemeralContainers) {
-            this.ephemeralContainers = Codegen.ofNullable(ephemeralContainers);
-            return this;
+
+        public Builder ephemeralContainers(List<EphemeralContainerArgs> ephemeralContainers) {
+            return ephemeralContainers(Output.of(ephemeralContainers));
         }
+
         public Builder ephemeralContainers(EphemeralContainerArgs... ephemeralContainers) {
             return ephemeralContainers(List.of(ephemeralContainers));
         }
+
         public Builder hostAliases(@Nullable Output<List<HostAliasArgs>> hostAliases) {
-            this.hostAliases = hostAliases;
+            $.hostAliases = hostAliases;
             return this;
         }
-        public Builder hostAliases(@Nullable List<HostAliasArgs> hostAliases) {
-            this.hostAliases = Codegen.ofNullable(hostAliases);
-            return this;
+
+        public Builder hostAliases(List<HostAliasArgs> hostAliases) {
+            return hostAliases(Output.of(hostAliases));
         }
+
         public Builder hostAliases(HostAliasArgs... hostAliases) {
             return hostAliases(List.of(hostAliases));
         }
+
         public Builder hostIPC(@Nullable Output<Boolean> hostIPC) {
-            this.hostIPC = hostIPC;
+            $.hostIPC = hostIPC;
             return this;
         }
-        public Builder hostIPC(@Nullable Boolean hostIPC) {
-            this.hostIPC = Codegen.ofNullable(hostIPC);
-            return this;
+
+        public Builder hostIPC(Boolean hostIPC) {
+            return hostIPC(Output.of(hostIPC));
         }
+
         public Builder hostNetwork(@Nullable Output<Boolean> hostNetwork) {
-            this.hostNetwork = hostNetwork;
+            $.hostNetwork = hostNetwork;
             return this;
         }
-        public Builder hostNetwork(@Nullable Boolean hostNetwork) {
-            this.hostNetwork = Codegen.ofNullable(hostNetwork);
-            return this;
+
+        public Builder hostNetwork(Boolean hostNetwork) {
+            return hostNetwork(Output.of(hostNetwork));
         }
+
         public Builder hostPID(@Nullable Output<Boolean> hostPID) {
-            this.hostPID = hostPID;
+            $.hostPID = hostPID;
             return this;
         }
-        public Builder hostPID(@Nullable Boolean hostPID) {
-            this.hostPID = Codegen.ofNullable(hostPID);
-            return this;
+
+        public Builder hostPID(Boolean hostPID) {
+            return hostPID(Output.of(hostPID));
         }
+
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
-            this.imagePullSecrets = imagePullSecrets;
+            $.imagePullSecrets = imagePullSecrets;
             return this;
         }
-        public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
-            this.imagePullSecrets = Codegen.ofNullable(imagePullSecrets);
-            return this;
+
+        public Builder imagePullSecrets(List<LocalObjectReferenceArgs> imagePullSecrets) {
+            return imagePullSecrets(Output.of(imagePullSecrets));
         }
+
         public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
             return imagePullSecrets(List.of(imagePullSecrets));
         }
+
         public Builder initContainers(@Nullable Output<List<ContainerArgs>> initContainers) {
-            this.initContainers = initContainers;
+            $.initContainers = initContainers;
             return this;
         }
-        public Builder initContainers(@Nullable List<ContainerArgs> initContainers) {
-            this.initContainers = Codegen.ofNullable(initContainers);
-            return this;
+
+        public Builder initContainers(List<ContainerArgs> initContainers) {
+            return initContainers(Output.of(initContainers));
         }
+
         public Builder initContainers(ContainerArgs... initContainers) {
             return initContainers(List.of(initContainers));
         }
+
         public Builder nodeName(@Nullable Output<String> nodeName) {
-            this.nodeName = nodeName;
+            $.nodeName = nodeName;
             return this;
         }
-        public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Codegen.ofNullable(nodeName);
-            return this;
+
+        public Builder nodeName(String nodeName) {
+            return nodeName(Output.of(nodeName));
         }
+
         public Builder nodeSelector(@Nullable Output<Map<String,String>> nodeSelector) {
-            this.nodeSelector = nodeSelector;
+            $.nodeSelector = nodeSelector;
             return this;
         }
-        public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
-            this.nodeSelector = Codegen.ofNullable(nodeSelector);
-            return this;
+
+        public Builder nodeSelector(Map<String,String> nodeSelector) {
+            return nodeSelector(Output.of(nodeSelector));
         }
+
         public Builder os(@Nullable Output<PodOSArgs> os) {
-            this.os = os;
+            $.os = os;
             return this;
         }
-        public Builder os(@Nullable PodOSArgs os) {
-            this.os = Codegen.ofNullable(os);
-            return this;
+
+        public Builder os(PodOSArgs os) {
+            return os(Output.of(os));
         }
+
         public Builder overhead(@Nullable Output<Map<String,String>> overhead) {
-            this.overhead = overhead;
+            $.overhead = overhead;
             return this;
         }
-        public Builder overhead(@Nullable Map<String,String> overhead) {
-            this.overhead = Codegen.ofNullable(overhead);
-            return this;
+
+        public Builder overhead(Map<String,String> overhead) {
+            return overhead(Output.of(overhead));
         }
+
         public Builder preemptionPolicy(@Nullable Output<String> preemptionPolicy) {
-            this.preemptionPolicy = preemptionPolicy;
+            $.preemptionPolicy = preemptionPolicy;
             return this;
         }
-        public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
-            this.preemptionPolicy = Codegen.ofNullable(preemptionPolicy);
-            return this;
+
+        public Builder preemptionPolicy(String preemptionPolicy) {
+            return preemptionPolicy(Output.of(preemptionPolicy));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder priorityClassName(@Nullable Output<String> priorityClassName) {
-            this.priorityClassName = priorityClassName;
+            $.priorityClassName = priorityClassName;
             return this;
         }
-        public Builder priorityClassName(@Nullable String priorityClassName) {
-            this.priorityClassName = Codegen.ofNullable(priorityClassName);
-            return this;
+
+        public Builder priorityClassName(String priorityClassName) {
+            return priorityClassName(Output.of(priorityClassName));
         }
+
         public Builder readinessGates(@Nullable Output<List<PodReadinessGateArgs>> readinessGates) {
-            this.readinessGates = readinessGates;
+            $.readinessGates = readinessGates;
             return this;
         }
-        public Builder readinessGates(@Nullable List<PodReadinessGateArgs> readinessGates) {
-            this.readinessGates = Codegen.ofNullable(readinessGates);
-            return this;
+
+        public Builder readinessGates(List<PodReadinessGateArgs> readinessGates) {
+            return readinessGates(Output.of(readinessGates));
         }
+
         public Builder readinessGates(PodReadinessGateArgs... readinessGates) {
             return readinessGates(List.of(readinessGates));
         }
+
         public Builder restartPolicy(@Nullable Output<String> restartPolicy) {
-            this.restartPolicy = restartPolicy;
+            $.restartPolicy = restartPolicy;
             return this;
         }
-        public Builder restartPolicy(@Nullable String restartPolicy) {
-            this.restartPolicy = Codegen.ofNullable(restartPolicy);
-            return this;
+
+        public Builder restartPolicy(String restartPolicy) {
+            return restartPolicy(Output.of(restartPolicy));
         }
+
         public Builder runtimeClassName(@Nullable Output<String> runtimeClassName) {
-            this.runtimeClassName = runtimeClassName;
+            $.runtimeClassName = runtimeClassName;
             return this;
         }
-        public Builder runtimeClassName(@Nullable String runtimeClassName) {
-            this.runtimeClassName = Codegen.ofNullable(runtimeClassName);
-            return this;
+
+        public Builder runtimeClassName(String runtimeClassName) {
+            return runtimeClassName(Output.of(runtimeClassName));
         }
+
         public Builder schedulerName(@Nullable Output<String> schedulerName) {
-            this.schedulerName = schedulerName;
+            $.schedulerName = schedulerName;
             return this;
         }
-        public Builder schedulerName(@Nullable String schedulerName) {
-            this.schedulerName = Codegen.ofNullable(schedulerName);
-            return this;
+
+        public Builder schedulerName(String schedulerName) {
+            return schedulerName(Output.of(schedulerName));
         }
+
         public Builder securityContext(@Nullable Output<PodSecurityContextArgs> securityContext) {
-            this.securityContext = securityContext;
+            $.securityContext = securityContext;
             return this;
         }
-        public Builder securityContext(@Nullable PodSecurityContextArgs securityContext) {
-            this.securityContext = Codegen.ofNullable(securityContext);
-            return this;
+
+        public Builder securityContext(PodSecurityContextArgs securityContext) {
+            return securityContext(Output.of(securityContext));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
-            this.serviceAccountName = serviceAccountName;
+            $.serviceAccountName = serviceAccountName;
             return this;
         }
-        public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Codegen.ofNullable(serviceAccountName);
-            return this;
+
+        public Builder serviceAccountName(String serviceAccountName) {
+            return serviceAccountName(Output.of(serviceAccountName));
         }
+
         public Builder setHostnameAsFQDN(@Nullable Output<Boolean> setHostnameAsFQDN) {
-            this.setHostnameAsFQDN = setHostnameAsFQDN;
+            $.setHostnameAsFQDN = setHostnameAsFQDN;
             return this;
         }
-        public Builder setHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
-            this.setHostnameAsFQDN = Codegen.ofNullable(setHostnameAsFQDN);
-            return this;
+
+        public Builder setHostnameAsFQDN(Boolean setHostnameAsFQDN) {
+            return setHostnameAsFQDN(Output.of(setHostnameAsFQDN));
         }
+
         public Builder shareProcessNamespace(@Nullable Output<Boolean> shareProcessNamespace) {
-            this.shareProcessNamespace = shareProcessNamespace;
+            $.shareProcessNamespace = shareProcessNamespace;
             return this;
         }
-        public Builder shareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
-            this.shareProcessNamespace = Codegen.ofNullable(shareProcessNamespace);
-            return this;
+
+        public Builder shareProcessNamespace(Boolean shareProcessNamespace) {
+            return shareProcessNamespace(Output.of(shareProcessNamespace));
         }
+
         public Builder subdomain(@Nullable Output<String> subdomain) {
-            this.subdomain = subdomain;
+            $.subdomain = subdomain;
             return this;
         }
-        public Builder subdomain(@Nullable String subdomain) {
-            this.subdomain = Codegen.ofNullable(subdomain);
-            return this;
+
+        public Builder subdomain(String subdomain) {
+            return subdomain(Output.of(subdomain));
         }
+
         public Builder terminationGracePeriodSeconds(@Nullable Output<Integer> terminationGracePeriodSeconds) {
-            this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
+            $.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
-        public Builder terminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
-            this.terminationGracePeriodSeconds = Codegen.ofNullable(terminationGracePeriodSeconds);
-            return this;
+
+        public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
+            return terminationGracePeriodSeconds(Output.of(terminationGracePeriodSeconds));
         }
+
         public Builder tolerations(@Nullable Output<List<TolerationArgs>> tolerations) {
-            this.tolerations = tolerations;
+            $.tolerations = tolerations;
             return this;
         }
-        public Builder tolerations(@Nullable List<TolerationArgs> tolerations) {
-            this.tolerations = Codegen.ofNullable(tolerations);
-            return this;
+
+        public Builder tolerations(List<TolerationArgs> tolerations) {
+            return tolerations(Output.of(tolerations));
         }
+
         public Builder tolerations(TolerationArgs... tolerations) {
             return tolerations(List.of(tolerations));
         }
+
         public Builder topologySpreadConstraints(@Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints) {
-            this.topologySpreadConstraints = topologySpreadConstraints;
+            $.topologySpreadConstraints = topologySpreadConstraints;
             return this;
         }
-        public Builder topologySpreadConstraints(@Nullable List<TopologySpreadConstraintArgs> topologySpreadConstraints) {
-            this.topologySpreadConstraints = Codegen.ofNullable(topologySpreadConstraints);
-            return this;
+
+        public Builder topologySpreadConstraints(List<TopologySpreadConstraintArgs> topologySpreadConstraints) {
+            return topologySpreadConstraints(Output.of(topologySpreadConstraints));
         }
+
         public Builder topologySpreadConstraints(TopologySpreadConstraintArgs... topologySpreadConstraints) {
             return topologySpreadConstraints(List.of(topologySpreadConstraints));
         }
+
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<VolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(VolumeArgs... volumes) {
             return volumes(List.of(volumes));
-        }        public PodSpecArgs build() {
-            return new PodSpecArgs(activeDeadlineSeconds, affinity, automountServiceAccountToken, containers, dnsConfig, dnsPolicy, enableServiceLinks, ephemeralContainers, hostAliases, hostIPC, hostNetwork, hostPID, hostname, imagePullSecrets, initContainers, nodeName, nodeSelector, os, overhead, preemptionPolicy, priority, priorityClassName, readinessGates, restartPolicy, runtimeClassName, schedulerName, securityContext, serviceAccount, serviceAccountName, setHostnameAsFQDN, shareProcessNamespace, subdomain, terminationGracePeriodSeconds, tolerations, topologySpreadConstraints, volumes);
+        }
+
+        public PodSpecArgs build() {
+            $.containers = Objects.requireNonNull($.containers, "expected parameter 'containers' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class BucketBillingResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="requesterPays", required=true)
-      private final Boolean requesterPays;
+    private Boolean requesterPays;
 
     public Boolean requesterPays() {
         return this.requesterPays;
     }
 
-    public BucketBillingResponse(Boolean requesterPays) {
-        this.requesterPays = Objects.requireNonNull(requesterPays, "expected parameter 'requesterPays' to be non-null");
-    }
+    private BucketBillingResponse() {}
 
-    private BucketBillingResponse() {
-        this.requesterPays = null;
+    private BucketBillingResponse(BucketBillingResponse $) {
+        this.requesterPays = $.requesterPays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketBillingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean requesterPays;
+        private BucketBillingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketBillingResponse();
         }
 
         public Builder(BucketBillingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requesterPays = defaults.requesterPays;
+            $ = new BucketBillingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder requesterPays(Boolean requesterPays) {
-            this.requesterPays = Objects.requireNonNull(requesterPays);
+            $.requesterPays = requesterPays;
             return this;
-        }        public BucketBillingResponse build() {
-            return new BucketBillingResponse(requesterPays);
+        }
+
+        public BucketBillingResponse build() {
+            $.requesterPays = Objects.requireNonNull($.requesterPays, "expected parameter 'requesterPays' to be non-null");
+            return $;
         }
     }
+
 }

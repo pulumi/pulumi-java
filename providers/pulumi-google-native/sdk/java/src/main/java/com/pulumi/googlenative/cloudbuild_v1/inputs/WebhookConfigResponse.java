@@ -21,7 +21,7 @@ public final class WebhookConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="secret", required=true)
-      private final String secret;
+    private String secret;
 
     public String secret() {
         return this.secret;
@@ -32,55 +32,52 @@ public final class WebhookConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public WebhookConfigResponse(
-        String secret,
-        String state) {
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private WebhookConfigResponse() {}
 
-    private WebhookConfigResponse() {
-        this.secret = null;
-        this.state = null;
+    private WebhookConfigResponse(WebhookConfigResponse $) {
+        this.secret = $.secret;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String secret;
-        private String state;
+        private WebhookConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookConfigResponse();
         }
 
         public Builder(WebhookConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secret = defaults.secret;
-    	      this.state = defaults.state;
+            $ = new WebhookConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder secret(String secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public WebhookConfigResponse build() {
-            return new WebhookConfigResponse(secret, state);
+        }
+
+        public WebhookConfigResponse build() {
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

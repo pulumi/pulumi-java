@@ -19,45 +19,44 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo extends com
      * 
      */
     @Import(name="error")
-      private final @Nullable CloudErrorResponse error;
+    private @Nullable CloudErrorResponse error;
 
     public Optional<CloudErrorResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
-    public ManagedClusterPodIdentityResponseProvisioningInfo(@Nullable CloudErrorResponse error) {
-        this.error = error;
-    }
+    private ManagedClusterPodIdentityResponseProvisioningInfo() {}
 
-    private ManagedClusterPodIdentityResponseProvisioningInfo() {
-        this.error = null;
+    private ManagedClusterPodIdentityResponseProvisioningInfo(ManagedClusterPodIdentityResponseProvisioningInfo $) {
+        this.error = $.error;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterPodIdentityResponseProvisioningInfo defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CloudErrorResponse error;
+        private ManagedClusterPodIdentityResponseProvisioningInfo $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterPodIdentityResponseProvisioningInfo();
         }
 
         public Builder(ManagedClusterPodIdentityResponseProvisioningInfo defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
+            $ = new ManagedClusterPodIdentityResponseProvisioningInfo(Objects.requireNonNull(defaults));
         }
 
         public Builder error(@Nullable CloudErrorResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
-        }        public ManagedClusterPodIdentityResponseProvisioningInfo build() {
-            return new ManagedClusterPodIdentityResponseProvisioningInfo(error);
+        }
+
+        public ManagedClusterPodIdentityResponseProvisioningInfo build() {
+            return $;
         }
     }
+
 }

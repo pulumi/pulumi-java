@@ -19,10 +19,10 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="privateEndpointName", required=true)
-      private final String privateEndpointName;
+    private String privateEndpointName;
 
     public String privateEndpointName() {
         return this.privateEndpointName;
@@ -41,64 +41,58 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateEndpointArgs(
-        @Nullable String expand,
-        String privateEndpointName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.privateEndpointName = Objects.requireNonNull(privateEndpointName, "expected parameter 'privateEndpointName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateEndpointArgs() {}
 
-    private GetPrivateEndpointArgs() {
-        this.expand = null;
-        this.privateEndpointName = null;
-        this.resourceGroupName = null;
+    private GetPrivateEndpointArgs(GetPrivateEndpointArgs $) {
+        this.expand = $.expand;
+        this.privateEndpointName = $.privateEndpointName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String privateEndpointName;
-        private String resourceGroupName;
+        private GetPrivateEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateEndpointArgs();
         }
 
         public Builder(GetPrivateEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.privateEndpointName = defaults.privateEndpointName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder privateEndpointName(String privateEndpointName) {
-            this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
+            $.privateEndpointName = privateEndpointName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateEndpointArgs build() {
-            return new GetPrivateEndpointArgs(expand, privateEndpointName, resourceGroupName);
+        }
+
+        public GetPrivateEndpointArgs build() {
+            $.privateEndpointName = Objects.requireNonNull($.privateEndpointName, "expected parameter 'privateEndpointName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

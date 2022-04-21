@@ -17,7 +17,7 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="customerSubscriptionName", required=true)
-      private final String customerSubscriptionName;
+    private String customerSubscriptionName;
 
     public String customerSubscriptionName() {
         return this.customerSubscriptionName;
@@ -28,7 +28,7 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="registrationName", required=true)
-      private final String registrationName;
+    private String registrationName;
 
     public String registrationName() {
         return this.registrationName;
@@ -39,64 +39,59 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final String resourceGroup;
+    private String resourceGroup;
 
     public String resourceGroup() {
         return this.resourceGroup;
     }
 
-    public GetCustomerSubscriptionArgs(
-        String customerSubscriptionName,
-        String registrationName,
-        String resourceGroup) {
-        this.customerSubscriptionName = Objects.requireNonNull(customerSubscriptionName, "expected parameter 'customerSubscriptionName' to be non-null");
-        this.registrationName = Objects.requireNonNull(registrationName, "expected parameter 'registrationName' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-    }
+    private GetCustomerSubscriptionArgs() {}
 
-    private GetCustomerSubscriptionArgs() {
-        this.customerSubscriptionName = null;
-        this.registrationName = null;
-        this.resourceGroup = null;
+    private GetCustomerSubscriptionArgs(GetCustomerSubscriptionArgs $) {
+        this.customerSubscriptionName = $.customerSubscriptionName;
+        this.registrationName = $.registrationName;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomerSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customerSubscriptionName;
-        private String registrationName;
-        private String resourceGroup;
+        private GetCustomerSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomerSubscriptionArgs();
         }
 
         public Builder(GetCustomerSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerSubscriptionName = defaults.customerSubscriptionName;
-    	      this.registrationName = defaults.registrationName;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new GetCustomerSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerSubscriptionName(String customerSubscriptionName) {
-            this.customerSubscriptionName = Objects.requireNonNull(customerSubscriptionName);
+            $.customerSubscriptionName = customerSubscriptionName;
             return this;
         }
+
         public Builder registrationName(String registrationName) {
-            this.registrationName = Objects.requireNonNull(registrationName);
+            $.registrationName = registrationName;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
-        }        public GetCustomerSubscriptionArgs build() {
-            return new GetCustomerSubscriptionArgs(customerSubscriptionName, registrationName, resourceGroup);
+        }
+
+        public GetCustomerSubscriptionArgs build() {
+            $.customerSubscriptionName = Objects.requireNonNull($.customerSubscriptionName, "expected parameter 'customerSubscriptionName' to be non-null");
+            $.registrationName = Objects.requireNonNull($.registrationName, "expected parameter 'registrationName' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

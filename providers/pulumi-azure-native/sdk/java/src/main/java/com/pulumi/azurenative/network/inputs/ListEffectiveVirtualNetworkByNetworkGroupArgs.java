@@ -19,7 +19,7 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
      * 
      */
     @Import(name="networkGroupName", required=true)
-      private final String networkGroupName;
+    private String networkGroupName;
 
     public String networkGroupName() {
         return this.networkGroupName;
@@ -30,7 +30,7 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final String networkManagerName;
+    private String networkManagerName;
 
     public String networkManagerName() {
         return this.networkManagerName;
@@ -41,7 +41,7 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -52,73 +52,65 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
-    public ListEffectiveVirtualNetworkByNetworkGroupArgs(
-        String networkGroupName,
-        String networkManagerName,
-        String resourceGroupName,
-        @Nullable String skipToken) {
-        this.networkGroupName = Objects.requireNonNull(networkGroupName, "expected parameter 'networkGroupName' to be non-null");
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.skipToken = skipToken;
-    }
+    private ListEffectiveVirtualNetworkByNetworkGroupArgs() {}
 
-    private ListEffectiveVirtualNetworkByNetworkGroupArgs() {
-        this.networkGroupName = null;
-        this.networkManagerName = null;
-        this.resourceGroupName = null;
-        this.skipToken = null;
+    private ListEffectiveVirtualNetworkByNetworkGroupArgs(ListEffectiveVirtualNetworkByNetworkGroupArgs $) {
+        this.networkGroupName = $.networkGroupName;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.skipToken = $.skipToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListEffectiveVirtualNetworkByNetworkGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkGroupName;
-        private String networkManagerName;
-        private String resourceGroupName;
-        private @Nullable String skipToken;
+        private ListEffectiveVirtualNetworkByNetworkGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListEffectiveVirtualNetworkByNetworkGroupArgs();
         }
 
         public Builder(ListEffectiveVirtualNetworkByNetworkGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkGroupName = defaults.networkGroupName;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.skipToken = defaults.skipToken;
+            $ = new ListEffectiveVirtualNetworkByNetworkGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkGroupName(String networkGroupName) {
-            this.networkGroupName = Objects.requireNonNull(networkGroupName);
+            $.networkGroupName = networkGroupName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
-        }        public ListEffectiveVirtualNetworkByNetworkGroupArgs build() {
-            return new ListEffectiveVirtualNetworkByNetworkGroupArgs(networkGroupName, networkManagerName, resourceGroupName, skipToken);
+        }
+
+        public ListEffectiveVirtualNetworkByNetworkGroupArgs build() {
+            $.networkGroupName = Objects.requireNonNull($.networkGroupName, "expected parameter 'networkGroupName' to be non-null");
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

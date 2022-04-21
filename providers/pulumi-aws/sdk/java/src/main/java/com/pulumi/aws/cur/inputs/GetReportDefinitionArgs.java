@@ -17,45 +17,45 @@ public final class GetReportDefinitionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="reportName", required=true)
-      private final String reportName;
+    private String reportName;
 
     public String reportName() {
         return this.reportName;
     }
 
-    public GetReportDefinitionArgs(String reportName) {
-        this.reportName = Objects.requireNonNull(reportName, "expected parameter 'reportName' to be non-null");
-    }
+    private GetReportDefinitionArgs() {}
 
-    private GetReportDefinitionArgs() {
-        this.reportName = null;
+    private GetReportDefinitionArgs(GetReportDefinitionArgs $) {
+        this.reportName = $.reportName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReportDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String reportName;
+        private GetReportDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReportDefinitionArgs();
         }
 
         public Builder(GetReportDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reportName = defaults.reportName;
+            $ = new GetReportDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder reportName(String reportName) {
-            this.reportName = Objects.requireNonNull(reportName);
+            $.reportName = reportName;
             return this;
-        }        public GetReportDefinitionArgs build() {
-            return new GetReportDefinitionArgs(reportName);
+        }
+
+        public GetReportDefinitionArgs build() {
+            $.reportName = Objects.requireNonNull($.reportName, "expected parameter 'reportName' to be non-null");
+            return $;
         }
     }
+
 }

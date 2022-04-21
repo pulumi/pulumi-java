@@ -26,10 +26,10 @@ import com.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServ
 import com.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -42,7 +42,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupName", required=true)
-      private final Output<String> groupName;
+    private Output<String> groupName;
 
     public Output<String> groupName() {
         return this.groupName;
@@ -53,7 +53,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName", required=true)
-      private final Output<String> projectName;
+    private Output<String> projectName;
 
     public Output<String> projectName() {
         return this.projectName;
@@ -64,10 +64,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Object> properties;
+    private @Nullable Output<Object> properties;
 
-    public Output<Object> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Object>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -86,102 +86,91 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskName")
-      private final @Nullable Output<String> taskName;
+    private @Nullable Output<String> taskName;
 
-    public Output<String> taskName() {
-        return this.taskName == null ? Codegen.empty() : this.taskName;
+    public Optional<Output<String>> taskName() {
+        return Optional.ofNullable(this.taskName);
     }
 
-    public TaskArgs(
-        Output<String> groupName,
-        Output<String> projectName,
-        @Nullable Output<Object> properties,
-        Output<String> serviceName,
-        @Nullable Output<String> taskName) {
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.properties = properties;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.taskName = taskName;
-    }
+    private TaskArgs() {}
 
-    private TaskArgs() {
-        this.groupName = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.taskName = Codegen.empty();
+    private TaskArgs(TaskArgs $) {
+        this.groupName = $.groupName;
+        this.projectName = $.projectName;
+        this.properties = $.properties;
+        this.serviceName = $.serviceName;
+        this.taskName = $.taskName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> groupName;
-        private Output<String> projectName;
-        private @Nullable Output<Object> properties;
-        private Output<String> serviceName;
-        private @Nullable Output<String> taskName;
+        private TaskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskArgs();
         }
 
         public Builder(TaskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupName = defaults.groupName;
-    	      this.projectName = defaults.projectName;
-    	      this.properties = defaults.properties;
-    	      this.serviceName = defaults.serviceName;
-    	      this.taskName = defaults.taskName;
+            $ = new TaskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupName(Output<String> groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Output.of(Objects.requireNonNull(groupName));
-            return this;
+            return groupName(Output.of(groupName));
         }
+
         public Builder projectName(Output<String> projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Output.of(Objects.requireNonNull(projectName));
-            return this;
+            return projectName(Output.of(projectName));
         }
+
         public Builder properties(@Nullable Output<Object> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Object properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Object properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder taskName(@Nullable Output<String> taskName) {
-            this.taskName = taskName;
+            $.taskName = taskName;
             return this;
         }
-        public Builder taskName(@Nullable String taskName) {
-            this.taskName = Codegen.ofNullable(taskName);
-            return this;
-        }        public TaskArgs build() {
-            return new TaskArgs(groupName, projectName, properties, serviceName, taskName);
+
+        public Builder taskName(String taskName) {
+            return taskName(Output.of(taskName));
+        }
+
+        public TaskArgs build() {
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

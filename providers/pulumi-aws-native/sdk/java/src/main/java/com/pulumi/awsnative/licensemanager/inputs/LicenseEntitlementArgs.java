@@ -5,11 +5,11 @@ package com.pulumi.awsnative.licensemanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,150 +18,135 @@ public final class LicenseEntitlementArgs extends com.pulumi.resources.ResourceA
     public static final LicenseEntitlementArgs Empty = new LicenseEntitlementArgs();
 
     @Import(name="allowCheckIn")
-      private final @Nullable Output<Boolean> allowCheckIn;
+    private @Nullable Output<Boolean> allowCheckIn;
 
-    public Output<Boolean> allowCheckIn() {
-        return this.allowCheckIn == null ? Codegen.empty() : this.allowCheckIn;
+    public Optional<Output<Boolean>> allowCheckIn() {
+        return Optional.ofNullable(this.allowCheckIn);
     }
 
     @Import(name="maxCount")
-      private final @Nullable Output<Integer> maxCount;
+    private @Nullable Output<Integer> maxCount;
 
-    public Output<Integer> maxCount() {
-        return this.maxCount == null ? Codegen.empty() : this.maxCount;
+    public Optional<Output<Integer>> maxCount() {
+        return Optional.ofNullable(this.maxCount);
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="overage")
-      private final @Nullable Output<Boolean> overage;
+    private @Nullable Output<Boolean> overage;
 
-    public Output<Boolean> overage() {
-        return this.overage == null ? Codegen.empty() : this.overage;
+    public Optional<Output<Boolean>> overage() {
+        return Optional.ofNullable(this.overage);
     }
 
     @Import(name="unit", required=true)
-      private final Output<String> unit;
+    private Output<String> unit;
 
     public Output<String> unit() {
         return this.unit;
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public LicenseEntitlementArgs(
-        @Nullable Output<Boolean> allowCheckIn,
-        @Nullable Output<Integer> maxCount,
-        Output<String> name,
-        @Nullable Output<Boolean> overage,
-        Output<String> unit,
-        @Nullable Output<String> value) {
-        this.allowCheckIn = allowCheckIn;
-        this.maxCount = maxCount;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.overage = overage;
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-        this.value = value;
-    }
+    private LicenseEntitlementArgs() {}
 
-    private LicenseEntitlementArgs() {
-        this.allowCheckIn = Codegen.empty();
-        this.maxCount = Codegen.empty();
-        this.name = Codegen.empty();
-        this.overage = Codegen.empty();
-        this.unit = Codegen.empty();
-        this.value = Codegen.empty();
+    private LicenseEntitlementArgs(LicenseEntitlementArgs $) {
+        this.allowCheckIn = $.allowCheckIn;
+        this.maxCount = $.maxCount;
+        this.name = $.name;
+        this.overage = $.overage;
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseEntitlementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowCheckIn;
-        private @Nullable Output<Integer> maxCount;
-        private Output<String> name;
-        private @Nullable Output<Boolean> overage;
-        private Output<String> unit;
-        private @Nullable Output<String> value;
+        private LicenseEntitlementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseEntitlementArgs();
         }
 
         public Builder(LicenseEntitlementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowCheckIn = defaults.allowCheckIn;
-    	      this.maxCount = defaults.maxCount;
-    	      this.name = defaults.name;
-    	      this.overage = defaults.overage;
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new LicenseEntitlementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowCheckIn(@Nullable Output<Boolean> allowCheckIn) {
-            this.allowCheckIn = allowCheckIn;
+            $.allowCheckIn = allowCheckIn;
             return this;
         }
-        public Builder allowCheckIn(@Nullable Boolean allowCheckIn) {
-            this.allowCheckIn = Codegen.ofNullable(allowCheckIn);
-            return this;
+
+        public Builder allowCheckIn(Boolean allowCheckIn) {
+            return allowCheckIn(Output.of(allowCheckIn));
         }
+
         public Builder maxCount(@Nullable Output<Integer> maxCount) {
-            this.maxCount = maxCount;
+            $.maxCount = maxCount;
             return this;
         }
-        public Builder maxCount(@Nullable Integer maxCount) {
-            this.maxCount = Codegen.ofNullable(maxCount);
-            return this;
+
+        public Builder maxCount(Integer maxCount) {
+            return maxCount(Output.of(maxCount));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder overage(@Nullable Output<Boolean> overage) {
-            this.overage = overage;
+            $.overage = overage;
             return this;
         }
-        public Builder overage(@Nullable Boolean overage) {
-            this.overage = Codegen.ofNullable(overage);
-            return this;
+
+        public Builder overage(Boolean overage) {
+            return overage(Output.of(overage));
         }
+
         public Builder unit(Output<String> unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
         }
+
         public Builder unit(String unit) {
-            this.unit = Output.of(Objects.requireNonNull(unit));
-            return this;
+            return unit(Output.of(unit));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public LicenseEntitlementArgs build() {
-            return new LicenseEntitlementArgs(allowCheckIn, maxCount, name, overage, unit, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public LicenseEntitlementArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            return $;
         }
     }
+
 }

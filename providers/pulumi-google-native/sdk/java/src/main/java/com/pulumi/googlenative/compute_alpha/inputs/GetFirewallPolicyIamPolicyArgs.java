@@ -15,62 +15,58 @@ public final class GetFirewallPolicyIamPolicyArgs extends com.pulumi.resources.I
     public static final GetFirewallPolicyIamPolicyArgs Empty = new GetFirewallPolicyIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
     }
 
-    public GetFirewallPolicyIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        String resource) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private GetFirewallPolicyIamPolicyArgs() {}
 
-    private GetFirewallPolicyIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.resource = null;
+    private GetFirewallPolicyIamPolicyArgs(GetFirewallPolicyIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallPolicyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private String resource;
+        private GetFirewallPolicyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallPolicyIamPolicyArgs();
         }
 
         public Builder(GetFirewallPolicyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.resource = defaults.resource;
+            $ = new GetFirewallPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
-        }        public GetFirewallPolicyIamPolicyArgs build() {
-            return new GetFirewallPolicyIamPolicyArgs(optionsRequestedPolicyVersion, resource);
+        }
+
+        public GetFirewallPolicyIamPolicyArgs build() {
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

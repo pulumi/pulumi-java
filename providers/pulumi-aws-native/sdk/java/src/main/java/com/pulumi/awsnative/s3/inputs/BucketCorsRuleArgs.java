@@ -6,11 +6,11 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketCorsRuleAllowedMethodsItem;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowedHeaders")
-      private final @Nullable Output<List<String>> allowedHeaders;
+    private @Nullable Output<List<String>> allowedHeaders;
 
-    public Output<List<String>> allowedHeaders() {
-        return this.allowedHeaders == null ? Codegen.empty() : this.allowedHeaders;
+    public Optional<Output<List<String>>> allowedHeaders() {
+        return Optional.ofNullable(this.allowedHeaders);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowedMethods", required=true)
-      private final Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods;
+    private Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods;
 
     public Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods() {
         return this.allowedMethods;
@@ -49,7 +49,7 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowedOrigins", required=true)
-      private final Output<List<String>> allowedOrigins;
+    private Output<List<String>> allowedOrigins;
 
     public Output<List<String>> allowedOrigins() {
         return this.allowedOrigins;
@@ -60,10 +60,10 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="exposedHeaders")
-      private final @Nullable Output<List<String>> exposedHeaders;
+    private @Nullable Output<List<String>> exposedHeaders;
 
-    public Output<List<String>> exposedHeaders() {
-        return this.exposedHeaders == null ? Codegen.empty() : this.exposedHeaders;
+    public Optional<Output<List<String>>> exposedHeaders() {
+        return Optional.ofNullable(this.exposedHeaders);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -82,127 +82,116 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maxAge")
-      private final @Nullable Output<Integer> maxAge;
+    private @Nullable Output<Integer> maxAge;
 
-    public Output<Integer> maxAge() {
-        return this.maxAge == null ? Codegen.empty() : this.maxAge;
+    public Optional<Output<Integer>> maxAge() {
+        return Optional.ofNullable(this.maxAge);
     }
 
-    public BucketCorsRuleArgs(
-        @Nullable Output<List<String>> allowedHeaders,
-        Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods,
-        Output<List<String>> allowedOrigins,
-        @Nullable Output<List<String>> exposedHeaders,
-        @Nullable Output<String> id,
-        @Nullable Output<Integer> maxAge) {
-        this.allowedHeaders = allowedHeaders;
-        this.allowedMethods = Objects.requireNonNull(allowedMethods, "expected parameter 'allowedMethods' to be non-null");
-        this.allowedOrigins = Objects.requireNonNull(allowedOrigins, "expected parameter 'allowedOrigins' to be non-null");
-        this.exposedHeaders = exposedHeaders;
-        this.id = id;
-        this.maxAge = maxAge;
-    }
+    private BucketCorsRuleArgs() {}
 
-    private BucketCorsRuleArgs() {
-        this.allowedHeaders = Codegen.empty();
-        this.allowedMethods = Codegen.empty();
-        this.allowedOrigins = Codegen.empty();
-        this.exposedHeaders = Codegen.empty();
-        this.id = Codegen.empty();
-        this.maxAge = Codegen.empty();
+    private BucketCorsRuleArgs(BucketCorsRuleArgs $) {
+        this.allowedHeaders = $.allowedHeaders;
+        this.allowedMethods = $.allowedMethods;
+        this.allowedOrigins = $.allowedOrigins;
+        this.exposedHeaders = $.exposedHeaders;
+        this.id = $.id;
+        this.maxAge = $.maxAge;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketCorsRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedHeaders;
-        private Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods;
-        private Output<List<String>> allowedOrigins;
-        private @Nullable Output<List<String>> exposedHeaders;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Integer> maxAge;
+        private BucketCorsRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketCorsRuleArgs();
         }
 
         public Builder(BucketCorsRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedHeaders = defaults.allowedHeaders;
-    	      this.allowedMethods = defaults.allowedMethods;
-    	      this.allowedOrigins = defaults.allowedOrigins;
-    	      this.exposedHeaders = defaults.exposedHeaders;
-    	      this.id = defaults.id;
-    	      this.maxAge = defaults.maxAge;
+            $ = new BucketCorsRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedHeaders(@Nullable Output<List<String>> allowedHeaders) {
-            this.allowedHeaders = allowedHeaders;
+            $.allowedHeaders = allowedHeaders;
             return this;
         }
-        public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
-            this.allowedHeaders = Codegen.ofNullable(allowedHeaders);
-            return this;
+
+        public Builder allowedHeaders(List<String> allowedHeaders) {
+            return allowedHeaders(Output.of(allowedHeaders));
         }
+
         public Builder allowedHeaders(String... allowedHeaders) {
             return allowedHeaders(List.of(allowedHeaders));
         }
+
         public Builder allowedMethods(Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods) {
-            this.allowedMethods = Objects.requireNonNull(allowedMethods);
+            $.allowedMethods = allowedMethods;
             return this;
         }
+
         public Builder allowedMethods(List<BucketCorsRuleAllowedMethodsItem> allowedMethods) {
-            this.allowedMethods = Output.of(Objects.requireNonNull(allowedMethods));
-            return this;
+            return allowedMethods(Output.of(allowedMethods));
         }
+
         public Builder allowedMethods(BucketCorsRuleAllowedMethodsItem... allowedMethods) {
             return allowedMethods(List.of(allowedMethods));
         }
+
         public Builder allowedOrigins(Output<List<String>> allowedOrigins) {
-            this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
+            $.allowedOrigins = allowedOrigins;
             return this;
         }
+
         public Builder allowedOrigins(List<String> allowedOrigins) {
-            this.allowedOrigins = Output.of(Objects.requireNonNull(allowedOrigins));
-            return this;
+            return allowedOrigins(Output.of(allowedOrigins));
         }
+
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }
+
         public Builder exposedHeaders(@Nullable Output<List<String>> exposedHeaders) {
-            this.exposedHeaders = exposedHeaders;
+            $.exposedHeaders = exposedHeaders;
             return this;
         }
-        public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
-            this.exposedHeaders = Codegen.ofNullable(exposedHeaders);
-            return this;
+
+        public Builder exposedHeaders(List<String> exposedHeaders) {
+            return exposedHeaders(Output.of(exposedHeaders));
         }
+
         public Builder exposedHeaders(String... exposedHeaders) {
             return exposedHeaders(List.of(exposedHeaders));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder maxAge(@Nullable Output<Integer> maxAge) {
-            this.maxAge = maxAge;
+            $.maxAge = maxAge;
             return this;
         }
-        public Builder maxAge(@Nullable Integer maxAge) {
-            this.maxAge = Codegen.ofNullable(maxAge);
-            return this;
-        }        public BucketCorsRuleArgs build() {
-            return new BucketCorsRuleArgs(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, id, maxAge);
+
+        public Builder maxAge(Integer maxAge) {
+            return maxAge(Output.of(maxAge));
+        }
+
+        public BucketCorsRuleArgs build() {
+            $.allowedMethods = Objects.requireNonNull($.allowedMethods, "expected parameter 'allowedMethods' to be non-null");
+            $.allowedOrigins = Objects.requireNonNull($.allowedOrigins, "expected parameter 'allowedOrigins' to be non-null");
+            return $;
         }
     }
+
 }

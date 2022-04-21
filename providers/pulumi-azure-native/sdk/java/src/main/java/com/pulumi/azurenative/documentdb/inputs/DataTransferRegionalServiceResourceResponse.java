@@ -21,7 +21,7 @@ public final class DataTransferRegionalServiceResourceResponse extends com.pulum
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -32,7 +32,7 @@ public final class DataTransferRegionalServiceResourceResponse extends com.pulum
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,64 +43,59 @@ public final class DataTransferRegionalServiceResourceResponse extends com.pulum
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public DataTransferRegionalServiceResourceResponse(
-        String location,
-        String name,
-        String status) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private DataTransferRegionalServiceResourceResponse() {}
 
-    private DataTransferRegionalServiceResourceResponse() {
-        this.location = null;
-        this.name = null;
-        this.status = null;
+    private DataTransferRegionalServiceResourceResponse(DataTransferRegionalServiceResourceResponse $) {
+        this.location = $.location;
+        this.name = $.name;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataTransferRegionalServiceResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String name;
-        private String status;
+        private DataTransferRegionalServiceResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataTransferRegionalServiceResourceResponse();
         }
 
         public Builder(DataTransferRegionalServiceResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
+            $ = new DataTransferRegionalServiceResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public DataTransferRegionalServiceResourceResponse build() {
-            return new DataTransferRegionalServiceResourceResponse(location, name, status);
+        }
+
+        public DataTransferRegionalServiceResourceResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

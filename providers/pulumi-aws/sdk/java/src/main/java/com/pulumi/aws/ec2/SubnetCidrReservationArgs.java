@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class SubnetCidrReservationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cidrBlock", required=true)
-      private final Output<String> cidrBlock;
+    private Output<String> cidrBlock;
 
     public Output<String> cidrBlock() {
         return this.cidrBlock;
@@ -31,10 +31,10 @@ public final class SubnetCidrReservationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class SubnetCidrReservationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="reservationType", required=true)
-      private final Output<String> reservationType;
+    private Output<String> reservationType;
 
     public Output<String> reservationType() {
         return this.reservationType;
@@ -53,89 +53,81 @@ public final class SubnetCidrReservationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public SubnetCidrReservationArgs(
-        Output<String> cidrBlock,
-        @Nullable Output<String> description,
-        Output<String> reservationType,
-        Output<String> subnetId) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
-        this.description = description;
-        this.reservationType = Objects.requireNonNull(reservationType, "expected parameter 'reservationType' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private SubnetCidrReservationArgs() {}
 
-    private SubnetCidrReservationArgs() {
-        this.cidrBlock = Codegen.empty();
-        this.description = Codegen.empty();
-        this.reservationType = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private SubnetCidrReservationArgs(SubnetCidrReservationArgs $) {
+        this.cidrBlock = $.cidrBlock;
+        this.description = $.description;
+        this.reservationType = $.reservationType;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetCidrReservationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cidrBlock;
-        private @Nullable Output<String> description;
-        private Output<String> reservationType;
-        private Output<String> subnetId;
+        private SubnetCidrReservationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetCidrReservationArgs();
         }
 
         public Builder(SubnetCidrReservationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.description = defaults.description;
-    	      this.reservationType = defaults.reservationType;
-    	      this.subnetId = defaults.subnetId;
+            $ = new SubnetCidrReservationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(Output<String> cidrBlock) {
-            this.cidrBlock = Objects.requireNonNull(cidrBlock);
+            $.cidrBlock = cidrBlock;
             return this;
         }
+
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Output.of(Objects.requireNonNull(cidrBlock));
-            return this;
+            return cidrBlock(Output.of(cidrBlock));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder reservationType(Output<String> reservationType) {
-            this.reservationType = Objects.requireNonNull(reservationType);
+            $.reservationType = reservationType;
             return this;
         }
+
         public Builder reservationType(String reservationType) {
-            this.reservationType = Output.of(Objects.requireNonNull(reservationType));
-            return this;
+            return reservationType(Output.of(reservationType));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public SubnetCidrReservationArgs build() {
-            return new SubnetCidrReservationArgs(cidrBlock, description, reservationType, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public SubnetCidrReservationArgs build() {
+            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
+            $.reservationType = Objects.requireNonNull($.reservationType, "expected parameter 'reservationType' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

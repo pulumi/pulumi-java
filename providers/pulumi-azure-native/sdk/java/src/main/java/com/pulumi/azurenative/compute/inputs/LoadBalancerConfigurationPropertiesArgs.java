@@ -6,7 +6,6 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.LoadBalancerFrontendIPConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class LoadBalancerConfigurationPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="frontendIPConfigurations", required=true)
-      private final Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
+    private Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
 
     public Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
 
-    public LoadBalancerConfigurationPropertiesArgs(Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations) {
-        this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations, "expected parameter 'frontendIPConfigurations' to be non-null");
-    }
+    private LoadBalancerConfigurationPropertiesArgs() {}
 
-    private LoadBalancerConfigurationPropertiesArgs() {
-        this.frontendIPConfigurations = Codegen.empty();
+    private LoadBalancerConfigurationPropertiesArgs(LoadBalancerConfigurationPropertiesArgs $) {
+        this.frontendIPConfigurations = $.frontendIPConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
+        private LoadBalancerConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerConfigurationPropertiesArgs();
         }
 
         public Builder(LoadBalancerConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frontendIPConfigurations = defaults.frontendIPConfigurations;
+            $ = new LoadBalancerConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frontendIPConfigurations(Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations) {
-            this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
+            $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
+
         public Builder frontendIPConfigurations(List<LoadBalancerFrontendIPConfigurationArgs> frontendIPConfigurations) {
-            this.frontendIPConfigurations = Output.of(Objects.requireNonNull(frontendIPConfigurations));
-            return this;
+            return frontendIPConfigurations(Output.of(frontendIPConfigurations));
         }
+
         public Builder frontendIPConfigurations(LoadBalancerFrontendIPConfigurationArgs... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
-        }        public LoadBalancerConfigurationPropertiesArgs build() {
-            return new LoadBalancerConfigurationPropertiesArgs(frontendIPConfigurations);
+        }
+
+        public LoadBalancerConfigurationPropertiesArgs build() {
+            $.frontendIPConfigurations = Objects.requireNonNull($.frontendIPConfigurations, "expected parameter 'frontendIPConfigurations' to be non-null");
+            return $;
         }
     }
+
 }

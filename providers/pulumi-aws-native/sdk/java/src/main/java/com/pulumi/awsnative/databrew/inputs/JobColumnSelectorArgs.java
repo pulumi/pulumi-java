@@ -5,9 +5,9 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class JobColumnSelectorArgs extends com.pulumi.resources.ResourceAr
     public static final JobColumnSelectorArgs Empty = new JobColumnSelectorArgs();
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="regex")
-      private final @Nullable Output<String> regex;
+    private @Nullable Output<String> regex;
 
-    public Output<String> regex() {
-        return this.regex == null ? Codegen.empty() : this.regex;
+    public Optional<Output<String>> regex() {
+        return Optional.ofNullable(this.regex);
     }
 
-    public JobColumnSelectorArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> regex) {
-        this.name = name;
-        this.regex = regex;
-    }
+    private JobColumnSelectorArgs() {}
 
-    private JobColumnSelectorArgs() {
-        this.name = Codegen.empty();
-        this.regex = Codegen.empty();
+    private JobColumnSelectorArgs(JobColumnSelectorArgs $) {
+        this.name = $.name;
+        this.regex = $.regex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobColumnSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> regex;
+        private JobColumnSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobColumnSelectorArgs();
         }
 
         public Builder(JobColumnSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.regex = defaults.regex;
+            $ = new JobColumnSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder regex(@Nullable Output<String> regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
         }
-        public Builder regex(@Nullable String regex) {
-            this.regex = Codegen.ofNullable(regex);
-            return this;
-        }        public JobColumnSelectorArgs build() {
-            return new JobColumnSelectorArgs(name, regex);
+
+        public Builder regex(String regex) {
+            return regex(Output.of(regex));
+        }
+
+        public JobColumnSelectorArgs build() {
+            return $;
         }
     }
+
 }

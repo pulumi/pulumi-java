@@ -5,9 +5,9 @@ package com.pulumi.aws.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BotAssociationLexBotGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="lexRegion")
-      private final @Nullable Output<String> lexRegion;
+    private @Nullable Output<String> lexRegion;
 
-    public Output<String> lexRegion() {
-        return this.lexRegion == null ? Codegen.empty() : this.lexRegion;
+    public Optional<Output<String>> lexRegion() {
+        return Optional.ofNullable(this.lexRegion);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class BotAssociationLexBotGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public BotAssociationLexBotGetArgs(
-        @Nullable Output<String> lexRegion,
-        Output<String> name) {
-        this.lexRegion = lexRegion;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private BotAssociationLexBotGetArgs() {}
 
-    private BotAssociationLexBotGetArgs() {
-        this.lexRegion = Codegen.empty();
-        this.name = Codegen.empty();
+    private BotAssociationLexBotGetArgs(BotAssociationLexBotGetArgs $) {
+        this.lexRegion = $.lexRegion;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAssociationLexBotGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> lexRegion;
-        private Output<String> name;
+        private BotAssociationLexBotGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAssociationLexBotGetArgs();
         }
 
         public Builder(BotAssociationLexBotGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lexRegion = defaults.lexRegion;
-    	      this.name = defaults.name;
+            $ = new BotAssociationLexBotGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lexRegion(@Nullable Output<String> lexRegion) {
-            this.lexRegion = lexRegion;
+            $.lexRegion = lexRegion;
             return this;
         }
-        public Builder lexRegion(@Nullable String lexRegion) {
-            this.lexRegion = Codegen.ofNullable(lexRegion);
-            return this;
+
+        public Builder lexRegion(String lexRegion) {
+            return lexRegion(Output.of(lexRegion));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public BotAssociationLexBotGetArgs build() {
-            return new BotAssociationLexBotGetArgs(lexRegion, name);
+            return name(Output.of(name));
+        }
+
+        public BotAssociationLexBotGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

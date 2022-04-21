@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class PageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subpages")
-      private final @Nullable Output<List<PageArgs>> subpages;
+    private @Nullable Output<List<PageArgs>> subpages;
 
-    public Output<List<PageArgs>> subpages() {
-        return this.subpages == null ? Codegen.empty() : this.subpages;
+    public Optional<Output<List<PageArgs>>> subpages() {
+        return Optional.ofNullable(this.subpages);
     }
 
-    public PageArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<String> name,
-        @Nullable Output<List<PageArgs>> subpages) {
-        this.content = content;
-        this.name = name;
-        this.subpages = subpages;
-    }
+    private PageArgs() {}
 
-    private PageArgs() {
-        this.content = Codegen.empty();
-        this.name = Codegen.empty();
-        this.subpages = Codegen.empty();
+    private PageArgs(PageArgs $) {
+        this.content = $.content;
+        this.name = $.name;
+        this.subpages = $.subpages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<PageArgs>> subpages;
+        private PageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PageArgs();
         }
 
         public Builder(PageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.name = defaults.name;
-    	      this.subpages = defaults.subpages;
+            $ = new PageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder subpages(@Nullable Output<List<PageArgs>> subpages) {
-            this.subpages = subpages;
+            $.subpages = subpages;
             return this;
         }
-        public Builder subpages(@Nullable List<PageArgs> subpages) {
-            this.subpages = Codegen.ofNullable(subpages);
-            return this;
+
+        public Builder subpages(List<PageArgs> subpages) {
+            return subpages(Output.of(subpages));
         }
+
         public Builder subpages(PageArgs... subpages) {
             return subpages(List.of(subpages));
-        }        public PageArgs build() {
-            return new PageArgs(content, name, subpages);
+        }
+
+        public PageArgs build() {
+            return $;
         }
     }
+
 }

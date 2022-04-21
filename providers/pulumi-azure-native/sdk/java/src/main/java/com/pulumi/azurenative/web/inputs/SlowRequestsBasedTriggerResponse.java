@@ -24,10 +24,10 @@ public final class SlowRequestsBasedTriggerResponse extends com.pulumi.resources
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SlowRequestsBasedTriggerResponse extends com.pulumi.resources
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SlowRequestsBasedTriggerResponse extends com.pulumi.resources
      * 
      */
     @Import(name="timeInterval")
-      private final @Nullable String timeInterval;
+    private @Nullable String timeInterval;
 
     public Optional<String> timeInterval() {
-        return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);
+        return Optional.ofNullable(this.timeInterval);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class SlowRequestsBasedTriggerResponse extends com.pulumi.resources
      * 
      */
     @Import(name="timeTaken")
-      private final @Nullable String timeTaken;
+    private @Nullable String timeTaken;
 
     public Optional<String> timeTaken() {
-        return this.timeTaken == null ? Optional.empty() : Optional.ofNullable(this.timeTaken);
+        return Optional.ofNullable(this.timeTaken);
     }
 
-    public SlowRequestsBasedTriggerResponse(
-        @Nullable Integer count,
-        @Nullable String path,
-        @Nullable String timeInterval,
-        @Nullable String timeTaken) {
-        this.count = count;
-        this.path = path;
-        this.timeInterval = timeInterval;
-        this.timeTaken = timeTaken;
-    }
+    private SlowRequestsBasedTriggerResponse() {}
 
-    private SlowRequestsBasedTriggerResponse() {
-        this.count = null;
-        this.path = null;
-        this.timeInterval = null;
-        this.timeTaken = null;
+    private SlowRequestsBasedTriggerResponse(SlowRequestsBasedTriggerResponse $) {
+        this.count = $.count;
+        this.path = $.path;
+        this.timeInterval = $.timeInterval;
+        this.timeTaken = $.timeTaken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlowRequestsBasedTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer count;
-        private @Nullable String path;
-        private @Nullable String timeInterval;
-        private @Nullable String timeTaken;
+        private SlowRequestsBasedTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlowRequestsBasedTriggerResponse();
         }
 
         public Builder(SlowRequestsBasedTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.path = defaults.path;
-    	      this.timeInterval = defaults.timeInterval;
-    	      this.timeTaken = defaults.timeTaken;
+            $ = new SlowRequestsBasedTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = timeInterval;
+            $.timeInterval = timeInterval;
             return this;
         }
+
         public Builder timeTaken(@Nullable String timeTaken) {
-            this.timeTaken = timeTaken;
+            $.timeTaken = timeTaken;
             return this;
-        }        public SlowRequestsBasedTriggerResponse build() {
-            return new SlowRequestsBasedTriggerResponse(count, path, timeInterval, timeTaken);
+        }
+
+        public SlowRequestsBasedTriggerResponse build() {
+            return $;
         }
     }
+
 }

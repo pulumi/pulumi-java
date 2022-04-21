@@ -22,7 +22,7 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse extend
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -33,55 +33,52 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse extend
      * 
      */
     @Import(name="lockedTime", required=true)
-      private final String lockedTime;
+    private String lockedTime;
 
     public String lockedTime() {
         return this.lockedTime;
     }
 
-    public BucketIamConfigurationUniformBucketLevelAccessResponse(
-        Boolean enabled,
-        String lockedTime) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.lockedTime = Objects.requireNonNull(lockedTime, "expected parameter 'lockedTime' to be non-null");
-    }
+    private BucketIamConfigurationUniformBucketLevelAccessResponse() {}
 
-    private BucketIamConfigurationUniformBucketLevelAccessResponse() {
-        this.enabled = null;
-        this.lockedTime = null;
+    private BucketIamConfigurationUniformBucketLevelAccessResponse(BucketIamConfigurationUniformBucketLevelAccessResponse $) {
+        this.enabled = $.enabled;
+        this.lockedTime = $.lockedTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketIamConfigurationUniformBucketLevelAccessResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String lockedTime;
+        private BucketIamConfigurationUniformBucketLevelAccessResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketIamConfigurationUniformBucketLevelAccessResponse();
         }
 
         public Builder(BucketIamConfigurationUniformBucketLevelAccessResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.lockedTime = defaults.lockedTime;
+            $ = new BucketIamConfigurationUniformBucketLevelAccessResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder lockedTime(String lockedTime) {
-            this.lockedTime = Objects.requireNonNull(lockedTime);
+            $.lockedTime = lockedTime;
             return this;
-        }        public BucketIamConfigurationUniformBucketLevelAccessResponse build() {
-            return new BucketIamConfigurationUniformBucketLevelAccessResponse(enabled, lockedTime);
+        }
+
+        public BucketIamConfigurationUniformBucketLevelAccessResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.lockedTime = Objects.requireNonNull($.lockedTime, "expected parameter 'lockedTime' to be non-null");
+            return $;
         }
     }
+
 }

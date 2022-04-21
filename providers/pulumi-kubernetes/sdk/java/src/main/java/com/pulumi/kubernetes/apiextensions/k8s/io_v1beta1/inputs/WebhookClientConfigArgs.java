@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.ServiceReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WebhookClientConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="caBundle")
-      private final @Nullable Output<String> caBundle;
+    private @Nullable Output<String> caBundle;
 
-    public Output<String> caBundle() {
-        return this.caBundle == null ? Codegen.empty() : this.caBundle;
+    public Optional<Output<String>> caBundle() {
+        return Optional.ofNullable(this.caBundle);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class WebhookClientConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<ServiceReferenceArgs> service;
+    private @Nullable Output<ServiceReferenceArgs> service;
 
-    public Output<ServiceReferenceArgs> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<ServiceReferenceArgs>> service() {
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -59,76 +59,68 @@ public final class WebhookClientConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public WebhookClientConfigArgs(
-        @Nullable Output<String> caBundle,
-        @Nullable Output<ServiceReferenceArgs> service,
-        @Nullable Output<String> url) {
-        this.caBundle = caBundle;
-        this.service = service;
-        this.url = url;
-    }
+    private WebhookClientConfigArgs() {}
 
-    private WebhookClientConfigArgs() {
-        this.caBundle = Codegen.empty();
-        this.service = Codegen.empty();
-        this.url = Codegen.empty();
+    private WebhookClientConfigArgs(WebhookClientConfigArgs $) {
+        this.caBundle = $.caBundle;
+        this.service = $.service;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookClientConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> caBundle;
-        private @Nullable Output<ServiceReferenceArgs> service;
-        private @Nullable Output<String> url;
+        private WebhookClientConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookClientConfigArgs();
         }
 
         public Builder(WebhookClientConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caBundle = defaults.caBundle;
-    	      this.service = defaults.service;
-    	      this.url = defaults.url;
+            $ = new WebhookClientConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caBundle(@Nullable Output<String> caBundle) {
-            this.caBundle = caBundle;
+            $.caBundle = caBundle;
             return this;
         }
-        public Builder caBundle(@Nullable String caBundle) {
-            this.caBundle = Codegen.ofNullable(caBundle);
-            return this;
+
+        public Builder caBundle(String caBundle) {
+            return caBundle(Output.of(caBundle));
         }
+
         public Builder service(@Nullable Output<ServiceReferenceArgs> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable ServiceReferenceArgs service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
+
+        public Builder service(ServiceReferenceArgs service) {
+            return service(Output.of(service));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public WebhookClientConfigArgs build() {
-            return new WebhookClientConfigArgs(caBundle, service, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public WebhookClientConfigArgs build() {
+            return $;
         }
     }
+
 }

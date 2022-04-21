@@ -25,10 +25,10 @@ public final class VideoAnalyzerPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="audioLanguage")
-      private final @Nullable String audioLanguage;
+    private @Nullable String audioLanguage;
 
     public Optional<String> audioLanguage() {
-        return this.audioLanguage == null ? Optional.empty() : Optional.ofNullable(this.audioLanguage);
+        return Optional.ofNullable(this.audioLanguage);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VideoAnalyzerPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="experimentalOptions")
-      private final @Nullable Map<String,String> experimentalOptions;
+    private @Nullable Map<String,String> experimentalOptions;
 
-    public Map<String,String> experimentalOptions() {
-        return this.experimentalOptions == null ? Map.of() : this.experimentalOptions;
+    public Optional<Map<String,String>> experimentalOptions() {
+        return Optional.ofNullable(this.experimentalOptions);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VideoAnalyzerPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="insightsToExtract")
-      private final @Nullable String insightsToExtract;
+    private @Nullable String insightsToExtract;
 
     public Optional<String> insightsToExtract() {
-        return this.insightsToExtract == null ? Optional.empty() : Optional.ofNullable(this.insightsToExtract);
+        return Optional.ofNullable(this.insightsToExtract);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class VideoAnalyzerPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -70,82 +70,69 @@ public final class VideoAnalyzerPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public VideoAnalyzerPresetResponse(
-        @Nullable String audioLanguage,
-        @Nullable Map<String,String> experimentalOptions,
-        @Nullable String insightsToExtract,
-        @Nullable String mode,
-        String odataType) {
-        this.audioLanguage = audioLanguage;
-        this.experimentalOptions = experimentalOptions;
-        this.insightsToExtract = insightsToExtract;
-        this.mode = mode;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private VideoAnalyzerPresetResponse() {}
 
-    private VideoAnalyzerPresetResponse() {
-        this.audioLanguage = null;
-        this.experimentalOptions = Map.of();
-        this.insightsToExtract = null;
-        this.mode = null;
-        this.odataType = null;
+    private VideoAnalyzerPresetResponse(VideoAnalyzerPresetResponse $) {
+        this.audioLanguage = $.audioLanguage;
+        this.experimentalOptions = $.experimentalOptions;
+        this.insightsToExtract = $.insightsToExtract;
+        this.mode = $.mode;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoAnalyzerPresetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String audioLanguage;
-        private @Nullable Map<String,String> experimentalOptions;
-        private @Nullable String insightsToExtract;
-        private @Nullable String mode;
-        private String odataType;
+        private VideoAnalyzerPresetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoAnalyzerPresetResponse();
         }
 
         public Builder(VideoAnalyzerPresetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioLanguage = defaults.audioLanguage;
-    	      this.experimentalOptions = defaults.experimentalOptions;
-    	      this.insightsToExtract = defaults.insightsToExtract;
-    	      this.mode = defaults.mode;
-    	      this.odataType = defaults.odataType;
+            $ = new VideoAnalyzerPresetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audioLanguage(@Nullable String audioLanguage) {
-            this.audioLanguage = audioLanguage;
+            $.audioLanguage = audioLanguage;
             return this;
         }
+
         public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
-            this.experimentalOptions = experimentalOptions;
+            $.experimentalOptions = experimentalOptions;
             return this;
         }
+
         public Builder insightsToExtract(@Nullable String insightsToExtract) {
-            this.insightsToExtract = insightsToExtract;
+            $.insightsToExtract = insightsToExtract;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public VideoAnalyzerPresetResponse build() {
-            return new VideoAnalyzerPresetResponse(audioLanguage, experimentalOptions, insightsToExtract, mode, odataType);
+        }
+
+        public VideoAnalyzerPresetResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

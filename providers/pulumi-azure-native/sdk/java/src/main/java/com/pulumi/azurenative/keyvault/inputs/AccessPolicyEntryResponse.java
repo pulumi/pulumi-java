@@ -24,10 +24,10 @@ public final class AccessPolicyEntryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class AccessPolicyEntryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="objectId", required=true)
-      private final String objectId;
+    private String objectId;
 
     public String objectId() {
         return this.objectId;
@@ -46,7 +46,7 @@ public final class AccessPolicyEntryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="permissions", required=true)
-      private final PermissionsResponse permissions;
+    private PermissionsResponse permissions;
 
     public PermissionsResponse permissions() {
         return this.permissions;
@@ -57,73 +57,65 @@ public final class AccessPolicyEntryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
     }
 
-    public AccessPolicyEntryResponse(
-        @Nullable String applicationId,
-        String objectId,
-        PermissionsResponse permissions,
-        String tenantId) {
-        this.applicationId = applicationId;
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private AccessPolicyEntryResponse() {}
 
-    private AccessPolicyEntryResponse() {
-        this.applicationId = null;
-        this.objectId = null;
-        this.permissions = null;
-        this.tenantId = null;
+    private AccessPolicyEntryResponse(AccessPolicyEntryResponse $) {
+        this.applicationId = $.applicationId;
+        this.objectId = $.objectId;
+        this.permissions = $.permissions;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationId;
-        private String objectId;
-        private PermissionsResponse permissions;
-        private String tenantId;
+        private AccessPolicyEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyEntryResponse();
         }
 
         public Builder(AccessPolicyEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.objectId = defaults.objectId;
-    	      this.permissions = defaults.permissions;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AccessPolicyEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder objectId(String objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder permissions(PermissionsResponse permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
-        }        public AccessPolicyEntryResponse build() {
-            return new AccessPolicyEntryResponse(applicationId, objectId, permissions, tenantId);
+        }
+
+        public AccessPolicyEntryResponse build() {
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

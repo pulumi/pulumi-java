@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GalleryArtifactVersionSourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GalleryArtifactVersionSourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public GalleryArtifactVersionSourceArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> uri) {
-        this.id = id;
-        this.uri = uri;
-    }
+    private GalleryArtifactVersionSourceArgs() {}
 
-    private GalleryArtifactVersionSourceArgs() {
-        this.id = Codegen.empty();
-        this.uri = Codegen.empty();
+    private GalleryArtifactVersionSourceArgs(GalleryArtifactVersionSourceArgs $) {
+        this.id = $.id;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryArtifactVersionSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> uri;
+        private GalleryArtifactVersionSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryArtifactVersionSourceArgs();
         }
 
         public Builder(GalleryArtifactVersionSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.uri = defaults.uri;
+            $ = new GalleryArtifactVersionSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public GalleryArtifactVersionSourceArgs build() {
-            return new GalleryArtifactVersionSourceArgs(id, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public GalleryArtifactVersionSourceArgs build() {
+            return $;
         }
     }
+
 }

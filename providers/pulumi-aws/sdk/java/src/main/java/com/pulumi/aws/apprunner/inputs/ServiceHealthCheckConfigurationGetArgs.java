@@ -5,10 +5,10 @@ package com.pulumi.aws.apprunner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="healthyThreshold")
-      private final @Nullable Output<Integer> healthyThreshold;
+    private @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> healthyThreshold() {
-        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
+    public Optional<Output<Integer>> healthyThreshold() {
+        return Optional.ofNullable(this.healthyThreshold);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Integer> interval;
+    private @Nullable Output<Integer> interval;
 
-    public Output<Integer> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Integer>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<Integer> timeout;
+    private @Nullable Output<Integer> timeout;
 
-    public Output<Integer> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<Integer>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -76,115 +76,98 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="unhealthyThreshold")
-      private final @Nullable Output<Integer> unhealthyThreshold;
+    private @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> unhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
+    public Optional<Output<Integer>> unhealthyThreshold() {
+        return Optional.ofNullable(this.unhealthyThreshold);
     }
 
-    public ServiceHealthCheckConfigurationGetArgs(
-        @Nullable Output<Integer> healthyThreshold,
-        @Nullable Output<Integer> interval,
-        @Nullable Output<String> path,
-        @Nullable Output<String> protocol,
-        @Nullable Output<Integer> timeout,
-        @Nullable Output<Integer> unhealthyThreshold) {
-        this.healthyThreshold = healthyThreshold;
-        this.interval = interval;
-        this.path = path;
-        this.protocol = protocol;
-        this.timeout = timeout;
-        this.unhealthyThreshold = unhealthyThreshold;
-    }
+    private ServiceHealthCheckConfigurationGetArgs() {}
 
-    private ServiceHealthCheckConfigurationGetArgs() {
-        this.healthyThreshold = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.path = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.unhealthyThreshold = Codegen.empty();
+    private ServiceHealthCheckConfigurationGetArgs(ServiceHealthCheckConfigurationGetArgs $) {
+        this.healthyThreshold = $.healthyThreshold;
+        this.interval = $.interval;
+        this.path = $.path;
+        this.protocol = $.protocol;
+        this.timeout = $.timeout;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceHealthCheckConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> healthyThreshold;
-        private @Nullable Output<Integer> interval;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<Integer> timeout;
-        private @Nullable Output<Integer> unhealthyThreshold;
+        private ServiceHealthCheckConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceHealthCheckConfigurationGetArgs();
         }
 
         public Builder(ServiceHealthCheckConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthyThreshold = defaults.healthyThreshold;
-    	      this.interval = defaults.interval;
-    	      this.path = defaults.path;
-    	      this.protocol = defaults.protocol;
-    	      this.timeout = defaults.timeout;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new ServiceHealthCheckConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
-            this.healthyThreshold = healthyThreshold;
+            $.healthyThreshold = healthyThreshold;
             return this;
         }
-        public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
-            return this;
+
+        public Builder healthyThreshold(Integer healthyThreshold) {
+            return healthyThreshold(Output.of(healthyThreshold));
         }
+
         public Builder interval(@Nullable Output<Integer> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Integer interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(Integer interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder timeout(@Nullable Output<Integer> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(Integer timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
-            this.unhealthyThreshold = unhealthyThreshold;
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
-            return this;
-        }        public ServiceHealthCheckConfigurationGetArgs build() {
-            return new ServiceHealthCheckConfigurationGetArgs(healthyThreshold, interval, path, protocol, timeout, unhealthyThreshold);
+
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
+            return unhealthyThreshold(Output.of(unhealthyThreshold));
+        }
+
+        public ServiceHealthCheckConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

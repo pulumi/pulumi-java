@@ -5,13 +5,13 @@ package com.pulumi.random.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keepers")
-      private final @Nullable Output<Map<String,Object>> keepers;
+    private @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> keepers() {
-        return this.keepers == null ? Codegen.empty() : this.keepers;
+    public Optional<Output<Map<String,Object>>> keepers() {
+        return Optional.ofNullable(this.keepers);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="length")
-      private final @Nullable Output<Integer> length;
+    private @Nullable Output<Integer> length;
 
-    public Output<Integer> length() {
-        return this.length == null ? Codegen.empty() : this.length;
+    public Optional<Output<Integer>> length() {
+        return Optional.ofNullable(this.length);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lower")
-      private final @Nullable Output<Boolean> lower;
+    private @Nullable Output<Boolean> lower;
 
-    public Output<Boolean> lower() {
-        return this.lower == null ? Codegen.empty() : this.lower;
+    public Optional<Output<Boolean>> lower() {
+        return Optional.ofNullable(this.lower);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minLower")
-      private final @Nullable Output<Integer> minLower;
+    private @Nullable Output<Integer> minLower;
 
-    public Output<Integer> minLower() {
-        return this.minLower == null ? Codegen.empty() : this.minLower;
+    public Optional<Output<Integer>> minLower() {
+        return Optional.ofNullable(this.minLower);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minNumeric")
-      private final @Nullable Output<Integer> minNumeric;
+    private @Nullable Output<Integer> minNumeric;
 
-    public Output<Integer> minNumeric() {
-        return this.minNumeric == null ? Codegen.empty() : this.minNumeric;
+    public Optional<Output<Integer>> minNumeric() {
+        return Optional.ofNullable(this.minNumeric);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minSpecial")
-      private final @Nullable Output<Integer> minSpecial;
+    private @Nullable Output<Integer> minSpecial;
 
-    public Output<Integer> minSpecial() {
-        return this.minSpecial == null ? Codegen.empty() : this.minSpecial;
+    public Optional<Output<Integer>> minSpecial() {
+        return Optional.ofNullable(this.minSpecial);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minUpper")
-      private final @Nullable Output<Integer> minUpper;
+    private @Nullable Output<Integer> minUpper;
 
-    public Output<Integer> minUpper() {
-        return this.minUpper == null ? Codegen.empty() : this.minUpper;
+    public Optional<Output<Integer>> minUpper() {
+        return Optional.ofNullable(this.minUpper);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="number")
-      private final @Nullable Output<Boolean> number;
+    private @Nullable Output<Boolean> number;
 
-    public Output<Boolean> number() {
-        return this.number == null ? Codegen.empty() : this.number;
+    public Optional<Output<Boolean>> number() {
+        return Optional.ofNullable(this.number);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overrideSpecial")
-      private final @Nullable Output<String> overrideSpecial;
+    private @Nullable Output<String> overrideSpecial;
 
-    public Output<String> overrideSpecial() {
-        return this.overrideSpecial == null ? Codegen.empty() : this.overrideSpecial;
+    public Optional<Output<String>> overrideSpecial() {
+        return Optional.ofNullable(this.overrideSpecial);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="result")
-      private final @Nullable Output<String> result;
+    private @Nullable Output<String> result;
 
-    public Output<String> result() {
-        return this.result == null ? Codegen.empty() : this.result;
+    public Optional<Output<String>> result() {
+        return Optional.ofNullable(this.result);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="special")
-      private final @Nullable Output<Boolean> special;
+    private @Nullable Output<Boolean> special;
 
-    public Output<Boolean> special() {
-        return this.special == null ? Codegen.empty() : this.special;
+    public Optional<Output<Boolean>> special() {
+        return Optional.ofNullable(this.special);
     }
 
     /**
@@ -145,193 +145,158 @@ public final class RandomStringState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upper")
-      private final @Nullable Output<Boolean> upper;
+    private @Nullable Output<Boolean> upper;
 
-    public Output<Boolean> upper() {
-        return this.upper == null ? Codegen.empty() : this.upper;
+    public Optional<Output<Boolean>> upper() {
+        return Optional.ofNullable(this.upper);
     }
 
-    public RandomStringState(
-        @Nullable Output<Map<String,Object>> keepers,
-        @Nullable Output<Integer> length,
-        @Nullable Output<Boolean> lower,
-        @Nullable Output<Integer> minLower,
-        @Nullable Output<Integer> minNumeric,
-        @Nullable Output<Integer> minSpecial,
-        @Nullable Output<Integer> minUpper,
-        @Nullable Output<Boolean> number,
-        @Nullable Output<String> overrideSpecial,
-        @Nullable Output<String> result,
-        @Nullable Output<Boolean> special,
-        @Nullable Output<Boolean> upper) {
-        this.keepers = keepers;
-        this.length = length;
-        this.lower = lower;
-        this.minLower = minLower;
-        this.minNumeric = minNumeric;
-        this.minSpecial = minSpecial;
-        this.minUpper = minUpper;
-        this.number = number;
-        this.overrideSpecial = overrideSpecial;
-        this.result = result;
-        this.special = special;
-        this.upper = upper;
-    }
+    private RandomStringState() {}
 
-    private RandomStringState() {
-        this.keepers = Codegen.empty();
-        this.length = Codegen.empty();
-        this.lower = Codegen.empty();
-        this.minLower = Codegen.empty();
-        this.minNumeric = Codegen.empty();
-        this.minSpecial = Codegen.empty();
-        this.minUpper = Codegen.empty();
-        this.number = Codegen.empty();
-        this.overrideSpecial = Codegen.empty();
-        this.result = Codegen.empty();
-        this.special = Codegen.empty();
-        this.upper = Codegen.empty();
+    private RandomStringState(RandomStringState $) {
+        this.keepers = $.keepers;
+        this.length = $.length;
+        this.lower = $.lower;
+        this.minLower = $.minLower;
+        this.minNumeric = $.minNumeric;
+        this.minSpecial = $.minSpecial;
+        this.minUpper = $.minUpper;
+        this.number = $.number;
+        this.overrideSpecial = $.overrideSpecial;
+        this.result = $.result;
+        this.special = $.special;
+        this.upper = $.upper;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RandomStringState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> keepers;
-        private @Nullable Output<Integer> length;
-        private @Nullable Output<Boolean> lower;
-        private @Nullable Output<Integer> minLower;
-        private @Nullable Output<Integer> minNumeric;
-        private @Nullable Output<Integer> minSpecial;
-        private @Nullable Output<Integer> minUpper;
-        private @Nullable Output<Boolean> number;
-        private @Nullable Output<String> overrideSpecial;
-        private @Nullable Output<String> result;
-        private @Nullable Output<Boolean> special;
-        private @Nullable Output<Boolean> upper;
+        private RandomStringState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RandomStringState();
         }
 
         public Builder(RandomStringState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keepers = defaults.keepers;
-    	      this.length = defaults.length;
-    	      this.lower = defaults.lower;
-    	      this.minLower = defaults.minLower;
-    	      this.minNumeric = defaults.minNumeric;
-    	      this.minSpecial = defaults.minSpecial;
-    	      this.minUpper = defaults.minUpper;
-    	      this.number = defaults.number;
-    	      this.overrideSpecial = defaults.overrideSpecial;
-    	      this.result = defaults.result;
-    	      this.special = defaults.special;
-    	      this.upper = defaults.upper;
+            $ = new RandomStringState(Objects.requireNonNull(defaults));
         }
 
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
-            this.keepers = keepers;
+            $.keepers = keepers;
             return this;
         }
-        public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Codegen.ofNullable(keepers);
-            return this;
+
+        public Builder keepers(Map<String,Object> keepers) {
+            return keepers(Output.of(keepers));
         }
+
         public Builder length(@Nullable Output<Integer> length) {
-            this.length = length;
+            $.length = length;
             return this;
         }
-        public Builder length(@Nullable Integer length) {
-            this.length = Codegen.ofNullable(length);
-            return this;
+
+        public Builder length(Integer length) {
+            return length(Output.of(length));
         }
+
         public Builder lower(@Nullable Output<Boolean> lower) {
-            this.lower = lower;
+            $.lower = lower;
             return this;
         }
-        public Builder lower(@Nullable Boolean lower) {
-            this.lower = Codegen.ofNullable(lower);
-            return this;
+
+        public Builder lower(Boolean lower) {
+            return lower(Output.of(lower));
         }
+
         public Builder minLower(@Nullable Output<Integer> minLower) {
-            this.minLower = minLower;
+            $.minLower = minLower;
             return this;
         }
-        public Builder minLower(@Nullable Integer minLower) {
-            this.minLower = Codegen.ofNullable(minLower);
-            return this;
+
+        public Builder minLower(Integer minLower) {
+            return minLower(Output.of(minLower));
         }
+
         public Builder minNumeric(@Nullable Output<Integer> minNumeric) {
-            this.minNumeric = minNumeric;
+            $.minNumeric = minNumeric;
             return this;
         }
-        public Builder minNumeric(@Nullable Integer minNumeric) {
-            this.minNumeric = Codegen.ofNullable(minNumeric);
-            return this;
+
+        public Builder minNumeric(Integer minNumeric) {
+            return minNumeric(Output.of(minNumeric));
         }
+
         public Builder minSpecial(@Nullable Output<Integer> minSpecial) {
-            this.minSpecial = minSpecial;
+            $.minSpecial = minSpecial;
             return this;
         }
-        public Builder minSpecial(@Nullable Integer minSpecial) {
-            this.minSpecial = Codegen.ofNullable(minSpecial);
-            return this;
+
+        public Builder minSpecial(Integer minSpecial) {
+            return minSpecial(Output.of(minSpecial));
         }
+
         public Builder minUpper(@Nullable Output<Integer> minUpper) {
-            this.minUpper = minUpper;
+            $.minUpper = minUpper;
             return this;
         }
-        public Builder minUpper(@Nullable Integer minUpper) {
-            this.minUpper = Codegen.ofNullable(minUpper);
-            return this;
+
+        public Builder minUpper(Integer minUpper) {
+            return minUpper(Output.of(minUpper));
         }
+
         public Builder number(@Nullable Output<Boolean> number) {
-            this.number = number;
+            $.number = number;
             return this;
         }
-        public Builder number(@Nullable Boolean number) {
-            this.number = Codegen.ofNullable(number);
-            return this;
+
+        public Builder number(Boolean number) {
+            return number(Output.of(number));
         }
+
         public Builder overrideSpecial(@Nullable Output<String> overrideSpecial) {
-            this.overrideSpecial = overrideSpecial;
+            $.overrideSpecial = overrideSpecial;
             return this;
         }
-        public Builder overrideSpecial(@Nullable String overrideSpecial) {
-            this.overrideSpecial = Codegen.ofNullable(overrideSpecial);
-            return this;
+
+        public Builder overrideSpecial(String overrideSpecial) {
+            return overrideSpecial(Output.of(overrideSpecial));
         }
+
         public Builder result(@Nullable Output<String> result) {
-            this.result = result;
+            $.result = result;
             return this;
         }
-        public Builder result(@Nullable String result) {
-            this.result = Codegen.ofNullable(result);
-            return this;
+
+        public Builder result(String result) {
+            return result(Output.of(result));
         }
+
         public Builder special(@Nullable Output<Boolean> special) {
-            this.special = special;
+            $.special = special;
             return this;
         }
-        public Builder special(@Nullable Boolean special) {
-            this.special = Codegen.ofNullable(special);
-            return this;
+
+        public Builder special(Boolean special) {
+            return special(Output.of(special));
         }
+
         public Builder upper(@Nullable Output<Boolean> upper) {
-            this.upper = upper;
+            $.upper = upper;
             return this;
         }
-        public Builder upper(@Nullable Boolean upper) {
-            this.upper = Codegen.ofNullable(upper);
-            return this;
-        }        public RandomStringState build() {
-            return new RandomStringState(keepers, length, lower, minLower, minNumeric, minSpecial, minUpper, number, overrideSpecial, result, special, upper);
+
+        public Builder upper(Boolean upper) {
+            return upper(Output.of(upper));
+        }
+
+        public RandomStringState build() {
+            return $;
         }
     }
+
 }

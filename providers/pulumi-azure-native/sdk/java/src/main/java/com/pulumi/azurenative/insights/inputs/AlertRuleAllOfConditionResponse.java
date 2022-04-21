@@ -22,48 +22,49 @@ public final class AlertRuleAllOfConditionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="allOf", required=true)
-      private final List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
+    private List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
 
     public List<AlertRuleAnyOfOrLeafConditionResponse> allOf() {
         return this.allOf;
     }
 
-    public AlertRuleAllOfConditionResponse(List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
-        this.allOf = Objects.requireNonNull(allOf, "expected parameter 'allOf' to be non-null");
-    }
+    private AlertRuleAllOfConditionResponse() {}
 
-    private AlertRuleAllOfConditionResponse() {
-        this.allOf = List.of();
+    private AlertRuleAllOfConditionResponse(AlertRuleAllOfConditionResponse $) {
+        this.allOf = $.allOf;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertRuleAllOfConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
+        private AlertRuleAllOfConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertRuleAllOfConditionResponse();
         }
 
         public Builder(AlertRuleAllOfConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allOf = defaults.allOf;
+            $ = new AlertRuleAllOfConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allOf(List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
-            this.allOf = Objects.requireNonNull(allOf);
+            $.allOf = allOf;
             return this;
         }
+
         public Builder allOf(AlertRuleAnyOfOrLeafConditionResponse... allOf) {
             return allOf(List.of(allOf));
-        }        public AlertRuleAllOfConditionResponse build() {
-            return new AlertRuleAllOfConditionResponse(allOf);
+        }
+
+        public AlertRuleAllOfConditionResponse build() {
+            $.allOf = Objects.requireNonNull($.allOf, "expected parameter 'allOf' to be non-null");
+            return $;
         }
     }
+
 }

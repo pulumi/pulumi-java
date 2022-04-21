@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudidentity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudidentity_v1.enums.DynamicGroupQueryResourceType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DynamicGroupQueryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DynamicGroupQueryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<DynamicGroupQueryResourceType> resourceType;
+    private @Nullable Output<DynamicGroupQueryResourceType> resourceType;
 
-    public Output<DynamicGroupQueryResourceType> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<DynamicGroupQueryResourceType>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public DynamicGroupQueryArgs(
-        @Nullable Output<String> query,
-        @Nullable Output<DynamicGroupQueryResourceType> resourceType) {
-        this.query = query;
-        this.resourceType = resourceType;
-    }
+    private DynamicGroupQueryArgs() {}
 
-    private DynamicGroupQueryArgs() {
-        this.query = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private DynamicGroupQueryArgs(DynamicGroupQueryArgs $) {
+        this.query = $.query;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DynamicGroupQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> query;
-        private @Nullable Output<DynamicGroupQueryResourceType> resourceType;
+        private DynamicGroupQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DynamicGroupQueryArgs();
         }
 
         public Builder(DynamicGroupQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.query = defaults.query;
-    	      this.resourceType = defaults.resourceType;
+            $ = new DynamicGroupQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
+
+        public Builder query(String query) {
+            return query(Output.of(query));
         }
+
         public Builder resourceType(@Nullable Output<DynamicGroupQueryResourceType> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable DynamicGroupQueryResourceType resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
-        }        public DynamicGroupQueryArgs build() {
-            return new DynamicGroupQueryArgs(query, resourceType);
+
+        public Builder resourceType(DynamicGroupQueryResourceType resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        public DynamicGroupQueryArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class CertificateChainsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="caviumCerts", required=true)
-      private final List<String> caviumCerts;
+    private List<String> caviumCerts;
 
     public List<String> caviumCerts() {
         return this.caviumCerts;
@@ -33,7 +33,7 @@ public final class CertificateChainsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="googleCardCerts", required=true)
-      private final List<String> googleCardCerts;
+    private List<String> googleCardCerts;
 
     public List<String> googleCardCerts() {
         return this.googleCardCerts;
@@ -44,73 +44,71 @@ public final class CertificateChainsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="googlePartitionCerts", required=true)
-      private final List<String> googlePartitionCerts;
+    private List<String> googlePartitionCerts;
 
     public List<String> googlePartitionCerts() {
         return this.googlePartitionCerts;
     }
 
-    public CertificateChainsResponse(
-        List<String> caviumCerts,
-        List<String> googleCardCerts,
-        List<String> googlePartitionCerts) {
-        this.caviumCerts = Objects.requireNonNull(caviumCerts, "expected parameter 'caviumCerts' to be non-null");
-        this.googleCardCerts = Objects.requireNonNull(googleCardCerts, "expected parameter 'googleCardCerts' to be non-null");
-        this.googlePartitionCerts = Objects.requireNonNull(googlePartitionCerts, "expected parameter 'googlePartitionCerts' to be non-null");
-    }
+    private CertificateChainsResponse() {}
 
-    private CertificateChainsResponse() {
-        this.caviumCerts = List.of();
-        this.googleCardCerts = List.of();
-        this.googlePartitionCerts = List.of();
+    private CertificateChainsResponse(CertificateChainsResponse $) {
+        this.caviumCerts = $.caviumCerts;
+        this.googleCardCerts = $.googleCardCerts;
+        this.googlePartitionCerts = $.googlePartitionCerts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateChainsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> caviumCerts;
-        private List<String> googleCardCerts;
-        private List<String> googlePartitionCerts;
+        private CertificateChainsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateChainsResponse();
         }
 
         public Builder(CertificateChainsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caviumCerts = defaults.caviumCerts;
-    	      this.googleCardCerts = defaults.googleCardCerts;
-    	      this.googlePartitionCerts = defaults.googlePartitionCerts;
+            $ = new CertificateChainsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caviumCerts(List<String> caviumCerts) {
-            this.caviumCerts = Objects.requireNonNull(caviumCerts);
+            $.caviumCerts = caviumCerts;
             return this;
         }
+
         public Builder caviumCerts(String... caviumCerts) {
             return caviumCerts(List.of(caviumCerts));
         }
+
         public Builder googleCardCerts(List<String> googleCardCerts) {
-            this.googleCardCerts = Objects.requireNonNull(googleCardCerts);
+            $.googleCardCerts = googleCardCerts;
             return this;
         }
+
         public Builder googleCardCerts(String... googleCardCerts) {
             return googleCardCerts(List.of(googleCardCerts));
         }
+
         public Builder googlePartitionCerts(List<String> googlePartitionCerts) {
-            this.googlePartitionCerts = Objects.requireNonNull(googlePartitionCerts);
+            $.googlePartitionCerts = googlePartitionCerts;
             return this;
         }
+
         public Builder googlePartitionCerts(String... googlePartitionCerts) {
             return googlePartitionCerts(List.of(googlePartitionCerts));
-        }        public CertificateChainsResponse build() {
-            return new CertificateChainsResponse(caviumCerts, googleCardCerts, googlePartitionCerts);
+        }
+
+        public CertificateChainsResponse build() {
+            $.caviumCerts = Objects.requireNonNull($.caviumCerts, "expected parameter 'caviumCerts' to be non-null");
+            $.googleCardCerts = Objects.requireNonNull($.googleCardCerts, "expected parameter 'googleCardCerts' to be non-null");
+            $.googlePartitionCerts = Objects.requireNonNull($.googlePartitionCerts, "expected parameter 'googlePartitionCerts' to be non-null");
+            return $;
         }
     }
+
 }

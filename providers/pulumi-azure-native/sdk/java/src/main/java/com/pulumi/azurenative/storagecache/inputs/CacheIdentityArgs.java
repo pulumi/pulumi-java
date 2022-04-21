@@ -6,8 +6,8 @@ package com.pulumi.azurenative.storagecache.inputs;
 import com.pulumi.azurenative.storagecache.enums.CacheIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CacheIdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<CacheIdentityType> type;
+    private @Nullable Output<CacheIdentityType> type;
 
-    public Output<CacheIdentityType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<CacheIdentityType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public CacheIdentityArgs(@Nullable Output<CacheIdentityType> type) {
-        this.type = type;
-    }
+    private CacheIdentityArgs() {}
 
-    private CacheIdentityArgs() {
-        this.type = Codegen.empty();
+    private CacheIdentityArgs(CacheIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CacheIdentityType> type;
+        private CacheIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheIdentityArgs();
         }
 
         public Builder(CacheIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new CacheIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<CacheIdentityType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable CacheIdentityType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public CacheIdentityArgs build() {
-            return new CacheIdentityArgs(type);
+
+        public Builder type(CacheIdentityType type) {
+            return type(Output.of(type));
+        }
+
+        public CacheIdentityArgs build() {
+            return $;
         }
     }
+
 }

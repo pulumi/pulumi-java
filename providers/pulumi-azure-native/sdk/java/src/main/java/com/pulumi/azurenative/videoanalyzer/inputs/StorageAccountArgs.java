@@ -6,9 +6,9 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 import com.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ResourceIdentityArgs> identity;
+    private @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ResourceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
-    public StorageAccountArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<ResourceIdentityArgs> identity) {
-        this.id = id;
-        this.identity = identity;
-    }
+    private StorageAccountArgs() {}
 
-    private StorageAccountArgs() {
-        this.id = Codegen.empty();
-        this.identity = Codegen.empty();
+    private StorageAccountArgs(StorageAccountArgs $) {
+        this.id = $.id;
+        this.identity = $.identity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<ResourceIdentityArgs> identity;
+        private StorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountArgs();
         }
 
         public Builder(StorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.identity = defaults.identity;
+            $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
-        }        public StorageAccountArgs build() {
-            return new StorageAccountArgs(id, identity);
+
+        public Builder identity(ResourceIdentityArgs identity) {
+            return identity(Output.of(identity));
+        }
+
+        public StorageAccountArgs build() {
+            return $;
         }
     }
+
 }

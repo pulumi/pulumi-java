@@ -15,45 +15,44 @@ public final class DeliveryStreamRetryOptions extends com.pulumi.resources.Invok
     public static final DeliveryStreamRetryOptions Empty = new DeliveryStreamRetryOptions();
 
     @Import(name="durationInSeconds")
-      private final @Nullable Integer durationInSeconds;
+    private @Nullable Integer durationInSeconds;
 
     public Optional<Integer> durationInSeconds() {
-        return this.durationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationInSeconds);
+        return Optional.ofNullable(this.durationInSeconds);
     }
 
-    public DeliveryStreamRetryOptions(@Nullable Integer durationInSeconds) {
-        this.durationInSeconds = durationInSeconds;
-    }
+    private DeliveryStreamRetryOptions() {}
 
-    private DeliveryStreamRetryOptions() {
-        this.durationInSeconds = null;
+    private DeliveryStreamRetryOptions(DeliveryStreamRetryOptions $) {
+        this.durationInSeconds = $.durationInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamRetryOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer durationInSeconds;
+        private DeliveryStreamRetryOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamRetryOptions();
         }
 
         public Builder(DeliveryStreamRetryOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationInSeconds = defaults.durationInSeconds;
+            $ = new DeliveryStreamRetryOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = durationInSeconds;
+            $.durationInSeconds = durationInSeconds;
             return this;
-        }        public DeliveryStreamRetryOptions build() {
-            return new DeliveryStreamRetryOptions(durationInSeconds);
+        }
+
+        public DeliveryStreamRetryOptions build() {
+            return $;
         }
     }
+
 }

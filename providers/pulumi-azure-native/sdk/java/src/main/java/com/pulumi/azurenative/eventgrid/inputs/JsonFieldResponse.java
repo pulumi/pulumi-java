@@ -23,45 +23,44 @@ public final class JsonFieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceField")
-      private final @Nullable String sourceField;
+    private @Nullable String sourceField;
 
     public Optional<String> sourceField() {
-        return this.sourceField == null ? Optional.empty() : Optional.ofNullable(this.sourceField);
+        return Optional.ofNullable(this.sourceField);
     }
 
-    public JsonFieldResponse(@Nullable String sourceField) {
-        this.sourceField = sourceField;
-    }
+    private JsonFieldResponse() {}
 
-    private JsonFieldResponse() {
-        this.sourceField = null;
+    private JsonFieldResponse(JsonFieldResponse $) {
+        this.sourceField = $.sourceField;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonFieldResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String sourceField;
+        private JsonFieldResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonFieldResponse();
         }
 
         public Builder(JsonFieldResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceField = defaults.sourceField;
+            $ = new JsonFieldResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceField(@Nullable String sourceField) {
-            this.sourceField = sourceField;
+            $.sourceField = sourceField;
             return this;
-        }        public JsonFieldResponse build() {
-            return new JsonFieldResponse(sourceField);
+        }
+
+        public JsonFieldResponse build() {
+            return $;
         }
     }
+
 }

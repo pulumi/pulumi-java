@@ -25,10 +25,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="additionalSettings")
-      private final @Nullable String additionalSettings;
+    private @Nullable String additionalSettings;
 
     public Optional<String> additionalSettings() {
-        return this.additionalSettings == null ? Optional.empty() : Optional.ofNullable(this.additionalSettings);
+        return Optional.ofNullable(this.additionalSettings);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="authentication")
-      private final @Nullable String authentication;
+    private @Nullable String authentication;
 
     public Optional<String> authentication() {
-        return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataSource", required=true)
-      private final String dataSource;
+    private String dataSource;
 
     public String dataSource() {
         return this.dataSource;
@@ -58,10 +58,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="encryptConnection")
-      private final @Nullable Boolean encryptConnection;
+    private @Nullable Boolean encryptConnection;
 
     public Optional<Boolean> encryptConnection() {
-        return this.encryptConnection == null ? Optional.empty() : Optional.ofNullable(this.encryptConnection);
+        return Optional.ofNullable(this.encryptConnection);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="platform")
-      private final @Nullable String platform;
+    private @Nullable String platform;
 
     public Optional<String> platform() {
-        return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="trustServerCertificate")
-      private final @Nullable Boolean trustServerCertificate;
+    private @Nullable Boolean trustServerCertificate;
 
     public Optional<Boolean> trustServerCertificate() {
-        return this.trustServerCertificate == null ? Optional.empty() : Optional.ofNullable(this.trustServerCertificate);
+        return Optional.ofNullable(this.trustServerCertificate);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -114,118 +114,96 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="userName")
-      private final @Nullable String userName;
+    private @Nullable String userName;
 
     public Optional<String> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public SqlConnectionInfoResponse(
-        @Nullable String additionalSettings,
-        @Nullable String authentication,
-        String dataSource,
-        @Nullable Boolean encryptConnection,
-        @Nullable String password,
-        @Nullable String platform,
-        @Nullable Boolean trustServerCertificate,
-        String type,
-        @Nullable String userName) {
-        this.additionalSettings = additionalSettings;
-        this.authentication = authentication;
-        this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
-        this.encryptConnection = Codegen.booleanProp("encryptConnection").arg(encryptConnection).def(true).getNullable();
-        this.password = password;
-        this.platform = platform;
-        this.trustServerCertificate = Codegen.booleanProp("trustServerCertificate").arg(trustServerCertificate).def(false).getNullable();
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userName = userName;
-    }
+    private SqlConnectionInfoResponse() {}
 
-    private SqlConnectionInfoResponse() {
-        this.additionalSettings = null;
-        this.authentication = null;
-        this.dataSource = null;
-        this.encryptConnection = null;
-        this.password = null;
-        this.platform = null;
-        this.trustServerCertificate = null;
-        this.type = null;
-        this.userName = null;
+    private SqlConnectionInfoResponse(SqlConnectionInfoResponse $) {
+        this.additionalSettings = $.additionalSettings;
+        this.authentication = $.authentication;
+        this.dataSource = $.dataSource;
+        this.encryptConnection = $.encryptConnection;
+        this.password = $.password;
+        this.platform = $.platform;
+        this.trustServerCertificate = $.trustServerCertificate;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlConnectionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String additionalSettings;
-        private @Nullable String authentication;
-        private String dataSource;
-        private @Nullable Boolean encryptConnection;
-        private @Nullable String password;
-        private @Nullable String platform;
-        private @Nullable Boolean trustServerCertificate;
-        private String type;
-        private @Nullable String userName;
+        private SqlConnectionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlConnectionInfoResponse();
         }
 
         public Builder(SqlConnectionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalSettings = defaults.additionalSettings;
-    	      this.authentication = defaults.authentication;
-    	      this.dataSource = defaults.dataSource;
-    	      this.encryptConnection = defaults.encryptConnection;
-    	      this.password = defaults.password;
-    	      this.platform = defaults.platform;
-    	      this.trustServerCertificate = defaults.trustServerCertificate;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new SqlConnectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalSettings(@Nullable String additionalSettings) {
-            this.additionalSettings = additionalSettings;
+            $.additionalSettings = additionalSettings;
             return this;
         }
+
         public Builder authentication(@Nullable String authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
+
         public Builder dataSource(String dataSource) {
-            this.dataSource = Objects.requireNonNull(dataSource);
+            $.dataSource = dataSource;
             return this;
         }
+
         public Builder encryptConnection(@Nullable Boolean encryptConnection) {
-            this.encryptConnection = encryptConnection;
+            $.encryptConnection = encryptConnection;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder platform(@Nullable String platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
+
         public Builder trustServerCertificate(@Nullable Boolean trustServerCertificate) {
-            this.trustServerCertificate = trustServerCertificate;
+            $.trustServerCertificate = trustServerCertificate;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userName(@Nullable String userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public SqlConnectionInfoResponse build() {
-            return new SqlConnectionInfoResponse(additionalSettings, authentication, dataSource, encryptConnection, password, platform, trustServerCertificate, type, userName);
+        }
+
+        public SqlConnectionInfoResponse build() {
+            $.dataSource = Objects.requireNonNull($.dataSource, "expected parameter 'dataSource' to be non-null");
+            $.encryptConnection = Codegen.booleanProp("encryptConnection").arg($.encryptConnection).def(true).getNullable();
+            $.trustServerCertificate = Codegen.booleanProp("trustServerCertificate").arg($.trustServerCertificate).def(false).getNullable();
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

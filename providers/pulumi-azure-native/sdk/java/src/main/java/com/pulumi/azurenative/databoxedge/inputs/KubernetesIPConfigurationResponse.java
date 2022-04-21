@@ -23,10 +23,10 @@ public final class KubernetesIPConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class KubernetesIPConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="port", required=true)
-      private final String port;
+    private String port;
 
     public String port() {
         return this.port;
     }
 
-    public KubernetesIPConfigurationResponse(
-        @Nullable String ipAddress,
-        String port) {
-        this.ipAddress = ipAddress;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private KubernetesIPConfigurationResponse() {}
 
-    private KubernetesIPConfigurationResponse() {
-        this.ipAddress = null;
-        this.port = null;
+    private KubernetesIPConfigurationResponse(KubernetesIPConfigurationResponse $) {
+        this.ipAddress = $.ipAddress;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesIPConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ipAddress;
-        private String port;
+        private KubernetesIPConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesIPConfigurationResponse();
         }
 
         public Builder(KubernetesIPConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.port = defaults.port;
+            $ = new KubernetesIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder port(String port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public KubernetesIPConfigurationResponse build() {
-            return new KubernetesIPConfigurationResponse(ipAddress, port);
+        }
+
+        public KubernetesIPConfigurationResponse build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.edgeorder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="contactName", required=true)
-      private final Output<String> contactName;
+    private Output<String> contactName;
 
     public Output<String> contactName() {
         return this.contactName;
@@ -36,7 +36,7 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="emailList", required=true)
-      private final Output<List<String>> emailList;
+    private Output<List<String>> emailList;
 
     public Output<List<String>> emailList() {
         return this.emailList;
@@ -47,10 +47,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mobile")
-      private final @Nullable Output<String> mobile;
+    private @Nullable Output<String> mobile;
 
-    public Output<String> mobile() {
-        return this.mobile == null ? Codegen.empty() : this.mobile;
+    public Optional<Output<String>> mobile() {
+        return Optional.ofNullable(this.mobile);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="phone", required=true)
-      private final Output<String> phone;
+    private Output<String> phone;
 
     public Output<String> phone() {
         return this.phone;
@@ -69,105 +69,95 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="phoneExtension")
-      private final @Nullable Output<String> phoneExtension;
+    private @Nullable Output<String> phoneExtension;
 
-    public Output<String> phoneExtension() {
-        return this.phoneExtension == null ? Codegen.empty() : this.phoneExtension;
+    public Optional<Output<String>> phoneExtension() {
+        return Optional.ofNullable(this.phoneExtension);
     }
 
-    public ContactDetailsArgs(
-        Output<String> contactName,
-        Output<List<String>> emailList,
-        @Nullable Output<String> mobile,
-        Output<String> phone,
-        @Nullable Output<String> phoneExtension) {
-        this.contactName = Objects.requireNonNull(contactName, "expected parameter 'contactName' to be non-null");
-        this.emailList = Objects.requireNonNull(emailList, "expected parameter 'emailList' to be non-null");
-        this.mobile = mobile;
-        this.phone = Objects.requireNonNull(phone, "expected parameter 'phone' to be non-null");
-        this.phoneExtension = phoneExtension;
-    }
+    private ContactDetailsArgs() {}
 
-    private ContactDetailsArgs() {
-        this.contactName = Codegen.empty();
-        this.emailList = Codegen.empty();
-        this.mobile = Codegen.empty();
-        this.phone = Codegen.empty();
-        this.phoneExtension = Codegen.empty();
+    private ContactDetailsArgs(ContactDetailsArgs $) {
+        this.contactName = $.contactName;
+        this.emailList = $.emailList;
+        this.mobile = $.mobile;
+        this.phone = $.phone;
+        this.phoneExtension = $.phoneExtension;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contactName;
-        private Output<List<String>> emailList;
-        private @Nullable Output<String> mobile;
-        private Output<String> phone;
-        private @Nullable Output<String> phoneExtension;
+        private ContactDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactDetailsArgs();
         }
 
         public Builder(ContactDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactName = defaults.contactName;
-    	      this.emailList = defaults.emailList;
-    	      this.mobile = defaults.mobile;
-    	      this.phone = defaults.phone;
-    	      this.phoneExtension = defaults.phoneExtension;
+            $ = new ContactDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactName(Output<String> contactName) {
-            this.contactName = Objects.requireNonNull(contactName);
+            $.contactName = contactName;
             return this;
         }
+
         public Builder contactName(String contactName) {
-            this.contactName = Output.of(Objects.requireNonNull(contactName));
-            return this;
+            return contactName(Output.of(contactName));
         }
+
         public Builder emailList(Output<List<String>> emailList) {
-            this.emailList = Objects.requireNonNull(emailList);
+            $.emailList = emailList;
             return this;
         }
+
         public Builder emailList(List<String> emailList) {
-            this.emailList = Output.of(Objects.requireNonNull(emailList));
-            return this;
+            return emailList(Output.of(emailList));
         }
+
         public Builder emailList(String... emailList) {
             return emailList(List.of(emailList));
         }
+
         public Builder mobile(@Nullable Output<String> mobile) {
-            this.mobile = mobile;
+            $.mobile = mobile;
             return this;
         }
-        public Builder mobile(@Nullable String mobile) {
-            this.mobile = Codegen.ofNullable(mobile);
-            return this;
+
+        public Builder mobile(String mobile) {
+            return mobile(Output.of(mobile));
         }
+
         public Builder phone(Output<String> phone) {
-            this.phone = Objects.requireNonNull(phone);
+            $.phone = phone;
             return this;
         }
+
         public Builder phone(String phone) {
-            this.phone = Output.of(Objects.requireNonNull(phone));
-            return this;
+            return phone(Output.of(phone));
         }
+
         public Builder phoneExtension(@Nullable Output<String> phoneExtension) {
-            this.phoneExtension = phoneExtension;
+            $.phoneExtension = phoneExtension;
             return this;
         }
-        public Builder phoneExtension(@Nullable String phoneExtension) {
-            this.phoneExtension = Codegen.ofNullable(phoneExtension);
-            return this;
-        }        public ContactDetailsArgs build() {
-            return new ContactDetailsArgs(contactName, emailList, mobile, phone, phoneExtension);
+
+        public Builder phoneExtension(String phoneExtension) {
+            return phoneExtension(Output.of(phoneExtension));
+        }
+
+        public ContactDetailsArgs build() {
+            $.contactName = Objects.requireNonNull($.contactName, "expected parameter 'contactName' to be non-null");
+            $.emailList = Objects.requireNonNull($.emailList, "expected parameter 'emailList' to be non-null");
+            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ContainerRegistryCredentialsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="loginServer", required=true)
-      private final String loginServer;
+    private String loginServer;
 
     public String loginServer() {
         return this.loginServer;
@@ -32,7 +32,7 @@ public final class ContainerRegistryCredentialsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -43,7 +43,7 @@ public final class ContainerRegistryCredentialsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="password2", required=true)
-      private final String password2;
+    private String password2;
 
     public String password2() {
         return this.password2;
@@ -54,73 +54,66 @@ public final class ContainerRegistryCredentialsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public ContainerRegistryCredentialsResponse(
-        String loginServer,
-        String password,
-        String password2,
-        String username) {
-        this.loginServer = Objects.requireNonNull(loginServer, "expected parameter 'loginServer' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.password2 = Objects.requireNonNull(password2, "expected parameter 'password2' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private ContainerRegistryCredentialsResponse() {}
 
-    private ContainerRegistryCredentialsResponse() {
-        this.loginServer = null;
-        this.password = null;
-        this.password2 = null;
-        this.username = null;
+    private ContainerRegistryCredentialsResponse(ContainerRegistryCredentialsResponse $) {
+        this.loginServer = $.loginServer;
+        this.password = $.password;
+        this.password2 = $.password2;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerRegistryCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String loginServer;
-        private String password;
-        private String password2;
-        private String username;
+        private ContainerRegistryCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerRegistryCredentialsResponse();
         }
 
         public Builder(ContainerRegistryCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loginServer = defaults.loginServer;
-    	      this.password = defaults.password;
-    	      this.password2 = defaults.password2;
-    	      this.username = defaults.username;
+            $ = new ContainerRegistryCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder loginServer(String loginServer) {
-            this.loginServer = Objects.requireNonNull(loginServer);
+            $.loginServer = loginServer;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password2(String password2) {
-            this.password2 = Objects.requireNonNull(password2);
+            $.password2 = password2;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public ContainerRegistryCredentialsResponse build() {
-            return new ContainerRegistryCredentialsResponse(loginServer, password, password2, username);
+        }
+
+        public ContainerRegistryCredentialsResponse build() {
+            $.loginServer = Objects.requireNonNull($.loginServer, "expected parameter 'loginServer' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.password2 = Objects.requireNonNull($.password2, "expected parameter 'password2' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.events.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="count", required=true)
-      private final Output<Integer> count;
+    private Output<Integer> count;
 
     public Output<Integer> count() {
         return this.count;
@@ -35,63 +34,60 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastObservedTime", required=true)
-      private final Output<String> lastObservedTime;
+    private Output<String> lastObservedTime;
 
     public Output<String> lastObservedTime() {
         return this.lastObservedTime;
     }
 
-    public EventSeriesArgs(
-        Output<Integer> count,
-        Output<String> lastObservedTime) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.lastObservedTime = Objects.requireNonNull(lastObservedTime, "expected parameter 'lastObservedTime' to be non-null");
-    }
+    private EventSeriesArgs() {}
 
-    private EventSeriesArgs() {
-        this.count = Codegen.empty();
-        this.lastObservedTime = Codegen.empty();
+    private EventSeriesArgs(EventSeriesArgs $) {
+        this.count = $.count;
+        this.lastObservedTime = $.lastObservedTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSeriesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> count;
-        private Output<String> lastObservedTime;
+        private EventSeriesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSeriesArgs();
         }
 
         public Builder(EventSeriesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.lastObservedTime = defaults.lastObservedTime;
+            $ = new EventSeriesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Output<Integer> count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Output.of(Objects.requireNonNull(count));
-            return this;
+            return count(Output.of(count));
         }
+
         public Builder lastObservedTime(Output<String> lastObservedTime) {
-            this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
+            $.lastObservedTime = lastObservedTime;
             return this;
         }
+
         public Builder lastObservedTime(String lastObservedTime) {
-            this.lastObservedTime = Output.of(Objects.requireNonNull(lastObservedTime));
-            return this;
-        }        public EventSeriesArgs build() {
-            return new EventSeriesArgs(count, lastObservedTime);
+            return lastObservedTime(Output.of(lastObservedTime));
+        }
+
+        public EventSeriesArgs build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.lastObservedTime = Objects.requireNonNull($.lastObservedTime, "expected parameter 'lastObservedTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class IssuanceModesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="allowConfigBasedIssuance", required=true)
-      private final Boolean allowConfigBasedIssuance;
+    private Boolean allowConfigBasedIssuance;
 
     public Boolean allowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
@@ -32,55 +32,52 @@ public final class IssuanceModesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="allowCsrBasedIssuance", required=true)
-      private final Boolean allowCsrBasedIssuance;
+    private Boolean allowCsrBasedIssuance;
 
     public Boolean allowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
     }
 
-    public IssuanceModesResponse(
-        Boolean allowConfigBasedIssuance,
-        Boolean allowCsrBasedIssuance) {
-        this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance, "expected parameter 'allowConfigBasedIssuance' to be non-null");
-        this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance, "expected parameter 'allowCsrBasedIssuance' to be non-null");
-    }
+    private IssuanceModesResponse() {}
 
-    private IssuanceModesResponse() {
-        this.allowConfigBasedIssuance = null;
-        this.allowCsrBasedIssuance = null;
+    private IssuanceModesResponse(IssuanceModesResponse $) {
+        this.allowConfigBasedIssuance = $.allowConfigBasedIssuance;
+        this.allowCsrBasedIssuance = $.allowCsrBasedIssuance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IssuanceModesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowConfigBasedIssuance;
-        private Boolean allowCsrBasedIssuance;
+        private IssuanceModesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IssuanceModesResponse();
         }
 
         public Builder(IssuanceModesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowConfigBasedIssuance = defaults.allowConfigBasedIssuance;
-    	      this.allowCsrBasedIssuance = defaults.allowCsrBasedIssuance;
+            $ = new IssuanceModesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
-            this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance);
+            $.allowConfigBasedIssuance = allowConfigBasedIssuance;
             return this;
         }
+
         public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
-            this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
+            $.allowCsrBasedIssuance = allowCsrBasedIssuance;
             return this;
-        }        public IssuanceModesResponse build() {
-            return new IssuanceModesResponse(allowConfigBasedIssuance, allowCsrBasedIssuance);
+        }
+
+        public IssuanceModesResponse build() {
+            $.allowConfigBasedIssuance = Objects.requireNonNull($.allowConfigBasedIssuance, "expected parameter 'allowConfigBasedIssuance' to be non-null");
+            $.allowCsrBasedIssuance = Objects.requireNonNull($.allowCsrBasedIssuance, "expected parameter 'allowCsrBasedIssuance' to be non-null");
+            return $;
         }
     }
+
 }

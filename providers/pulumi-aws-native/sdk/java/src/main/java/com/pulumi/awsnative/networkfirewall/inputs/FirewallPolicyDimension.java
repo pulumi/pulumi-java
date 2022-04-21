@@ -13,45 +13,45 @@ public final class FirewallPolicyDimension extends com.pulumi.resources.InvokeAr
     public static final FirewallPolicyDimension Empty = new FirewallPolicyDimension();
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public FirewallPolicyDimension(String value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private FirewallPolicyDimension() {}
 
-    private FirewallPolicyDimension() {
-        this.value = null;
+    private FirewallPolicyDimension(FirewallPolicyDimension $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyDimension defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String value;
+        private FirewallPolicyDimension $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyDimension();
         }
 
         public Builder(FirewallPolicyDimension defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new FirewallPolicyDimension(Objects.requireNonNull(defaults));
         }
 
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public FirewallPolicyDimension build() {
-            return new FirewallPolicyDimension(value);
+        }
+
+        public FirewallPolicyDimension build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

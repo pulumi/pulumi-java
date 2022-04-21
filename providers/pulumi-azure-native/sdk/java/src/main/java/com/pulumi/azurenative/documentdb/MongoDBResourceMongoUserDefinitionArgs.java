@@ -6,10 +6,10 @@ package com.pulumi.azurenative.documentdb;
 import com.pulumi.azurenative.documentdb.inputs.RoleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,10 +33,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="customData")
-      private final @Nullable Output<String> customData;
+    private @Nullable Output<String> customData;
 
-    public Output<String> customData() {
-        return this.customData == null ? Codegen.empty() : this.customData;
+    public Optional<Output<String>> customData() {
+        return Optional.ofNullable(this.customData);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="mechanisms")
-      private final @Nullable Output<String> mechanisms;
+    private @Nullable Output<String> mechanisms;
 
-    public Output<String> mechanisms() {
-        return this.mechanisms == null ? Codegen.empty() : this.mechanisms;
+    public Optional<Output<String>> mechanisms() {
+        return Optional.ofNullable(this.mechanisms);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="mongoUserDefinitionId")
-      private final @Nullable Output<String> mongoUserDefinitionId;
+    private @Nullable Output<String> mongoUserDefinitionId;
 
-    public Output<String> mongoUserDefinitionId() {
-        return this.mongoUserDefinitionId == null ? Codegen.empty() : this.mongoUserDefinitionId;
+    public Optional<Output<String>> mongoUserDefinitionId() {
+        return Optional.ofNullable(this.mongoUserDefinitionId);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -99,10 +99,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<RoleArgs>> roles;
+    private @Nullable Output<List<RoleArgs>> roles;
 
-    public Output<List<RoleArgs>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<RoleArgs>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
     /**
@@ -110,157 +110,134 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public MongoDBResourceMongoUserDefinitionArgs(
-        Output<String> accountName,
-        @Nullable Output<String> customData,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> mechanisms,
-        @Nullable Output<String> mongoUserDefinitionId,
-        @Nullable Output<String> password,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<RoleArgs>> roles,
-        @Nullable Output<String> userName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.customData = customData;
-        this.databaseName = databaseName;
-        this.mechanisms = mechanisms;
-        this.mongoUserDefinitionId = mongoUserDefinitionId;
-        this.password = password;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roles = roles;
-        this.userName = userName;
-    }
+    private MongoDBResourceMongoUserDefinitionArgs() {}
 
-    private MongoDBResourceMongoUserDefinitionArgs() {
-        this.accountName = Codegen.empty();
-        this.customData = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.mechanisms = Codegen.empty();
-        this.mongoUserDefinitionId = Codegen.empty();
-        this.password = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.roles = Codegen.empty();
-        this.userName = Codegen.empty();
+    private MongoDBResourceMongoUserDefinitionArgs(MongoDBResourceMongoUserDefinitionArgs $) {
+        this.accountName = $.accountName;
+        this.customData = $.customData;
+        this.databaseName = $.databaseName;
+        this.mechanisms = $.mechanisms;
+        this.mongoUserDefinitionId = $.mongoUserDefinitionId;
+        this.password = $.password;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roles = $.roles;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoDBResourceMongoUserDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> customData;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> mechanisms;
-        private @Nullable Output<String> mongoUserDefinitionId;
-        private @Nullable Output<String> password;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<RoleArgs>> roles;
-        private @Nullable Output<String> userName;
+        private MongoDBResourceMongoUserDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoDBResourceMongoUserDefinitionArgs();
         }
 
         public Builder(MongoDBResourceMongoUserDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.customData = defaults.customData;
-    	      this.databaseName = defaults.databaseName;
-    	      this.mechanisms = defaults.mechanisms;
-    	      this.mongoUserDefinitionId = defaults.mongoUserDefinitionId;
-    	      this.password = defaults.password;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roles = defaults.roles;
-    	      this.userName = defaults.userName;
+            $ = new MongoDBResourceMongoUserDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder customData(@Nullable Output<String> customData) {
-            this.customData = customData;
+            $.customData = customData;
             return this;
         }
-        public Builder customData(@Nullable String customData) {
-            this.customData = Codegen.ofNullable(customData);
-            return this;
+
+        public Builder customData(String customData) {
+            return customData(Output.of(customData));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder mechanisms(@Nullable Output<String> mechanisms) {
-            this.mechanisms = mechanisms;
+            $.mechanisms = mechanisms;
             return this;
         }
-        public Builder mechanisms(@Nullable String mechanisms) {
-            this.mechanisms = Codegen.ofNullable(mechanisms);
-            return this;
+
+        public Builder mechanisms(String mechanisms) {
+            return mechanisms(Output.of(mechanisms));
         }
+
         public Builder mongoUserDefinitionId(@Nullable Output<String> mongoUserDefinitionId) {
-            this.mongoUserDefinitionId = mongoUserDefinitionId;
+            $.mongoUserDefinitionId = mongoUserDefinitionId;
             return this;
         }
-        public Builder mongoUserDefinitionId(@Nullable String mongoUserDefinitionId) {
-            this.mongoUserDefinitionId = Codegen.ofNullable(mongoUserDefinitionId);
-            return this;
+
+        public Builder mongoUserDefinitionId(String mongoUserDefinitionId) {
+            return mongoUserDefinitionId(Output.of(mongoUserDefinitionId));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<RoleArgs> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<RoleArgs> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(RoleArgs... roles) {
             return roles(List.of(roles));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public MongoDBResourceMongoUserDefinitionArgs build() {
-            return new MongoDBResourceMongoUserDefinitionArgs(accountName, customData, databaseName, mechanisms, mongoUserDefinitionId, password, resourceGroupName, roles, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public MongoDBResourceMongoUserDefinitionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

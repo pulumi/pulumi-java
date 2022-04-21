@@ -16,62 +16,57 @@ public final class FlowPrefixConfig extends com.pulumi.resources.InvokeArgs {
     public static final FlowPrefixConfig Empty = new FlowPrefixConfig();
 
     @Import(name="prefixFormat")
-      private final @Nullable FlowPrefixFormat prefixFormat;
+    private @Nullable FlowPrefixFormat prefixFormat;
 
     public Optional<FlowPrefixFormat> prefixFormat() {
-        return this.prefixFormat == null ? Optional.empty() : Optional.ofNullable(this.prefixFormat);
+        return Optional.ofNullable(this.prefixFormat);
     }
 
     @Import(name="prefixType")
-      private final @Nullable FlowPrefixType prefixType;
+    private @Nullable FlowPrefixType prefixType;
 
     public Optional<FlowPrefixType> prefixType() {
-        return this.prefixType == null ? Optional.empty() : Optional.ofNullable(this.prefixType);
+        return Optional.ofNullable(this.prefixType);
     }
 
-    public FlowPrefixConfig(
-        @Nullable FlowPrefixFormat prefixFormat,
-        @Nullable FlowPrefixType prefixType) {
-        this.prefixFormat = prefixFormat;
-        this.prefixType = prefixType;
-    }
+    private FlowPrefixConfig() {}
 
-    private FlowPrefixConfig() {
-        this.prefixFormat = null;
-        this.prefixType = null;
+    private FlowPrefixConfig(FlowPrefixConfig $) {
+        this.prefixFormat = $.prefixFormat;
+        this.prefixType = $.prefixType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowPrefixConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FlowPrefixFormat prefixFormat;
-        private @Nullable FlowPrefixType prefixType;
+        private FlowPrefixConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowPrefixConfig();
         }
 
         public Builder(FlowPrefixConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.prefixFormat = defaults.prefixFormat;
-    	      this.prefixType = defaults.prefixType;
+            $ = new FlowPrefixConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder prefixFormat(@Nullable FlowPrefixFormat prefixFormat) {
-            this.prefixFormat = prefixFormat;
+            $.prefixFormat = prefixFormat;
             return this;
         }
+
         public Builder prefixType(@Nullable FlowPrefixType prefixType) {
-            this.prefixType = prefixType;
+            $.prefixType = prefixType;
             return this;
-        }        public FlowPrefixConfig build() {
-            return new FlowPrefixConfig(prefixFormat, prefixType);
+        }
+
+        public FlowPrefixConfig build() {
+            return $;
         }
     }
+
 }

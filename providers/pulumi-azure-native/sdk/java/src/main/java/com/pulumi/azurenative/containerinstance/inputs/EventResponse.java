@@ -22,7 +22,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -33,7 +33,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="firstTimestamp", required=true)
-      private final String firstTimestamp;
+    private String firstTimestamp;
 
     public String firstTimestamp() {
         return this.firstTimestamp;
@@ -44,7 +44,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastTimestamp", required=true)
-      private final String lastTimestamp;
+    private String lastTimestamp;
 
     public String lastTimestamp() {
         return this.lastTimestamp;
@@ -55,7 +55,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -66,7 +66,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -77,91 +77,80 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public EventResponse(
-        Integer count,
-        String firstTimestamp,
-        String lastTimestamp,
-        String message,
-        String name,
-        String type) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.firstTimestamp = Objects.requireNonNull(firstTimestamp, "expected parameter 'firstTimestamp' to be non-null");
-        this.lastTimestamp = Objects.requireNonNull(lastTimestamp, "expected parameter 'lastTimestamp' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private EventResponse() {}
 
-    private EventResponse() {
-        this.count = null;
-        this.firstTimestamp = null;
-        this.lastTimestamp = null;
-        this.message = null;
-        this.name = null;
-        this.type = null;
+    private EventResponse(EventResponse $) {
+        this.count = $.count;
+        this.firstTimestamp = $.firstTimestamp;
+        this.lastTimestamp = $.lastTimestamp;
+        this.message = $.message;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private String firstTimestamp;
-        private String lastTimestamp;
-        private String message;
-        private String name;
-        private String type;
+        private EventResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventResponse();
         }
 
         public Builder(EventResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.firstTimestamp = defaults.firstTimestamp;
-    	      this.lastTimestamp = defaults.lastTimestamp;
-    	      this.message = defaults.message;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new EventResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder firstTimestamp(String firstTimestamp) {
-            this.firstTimestamp = Objects.requireNonNull(firstTimestamp);
+            $.firstTimestamp = firstTimestamp;
             return this;
         }
+
         public Builder lastTimestamp(String lastTimestamp) {
-            this.lastTimestamp = Objects.requireNonNull(lastTimestamp);
+            $.lastTimestamp = lastTimestamp;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public EventResponse build() {
-            return new EventResponse(count, firstTimestamp, lastTimestamp, message, name, type);
+        }
+
+        public EventResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.firstTimestamp = Objects.requireNonNull($.firstTimestamp, "expected parameter 'firstTimestamp' to be non-null");
+            $.lastTimestamp = Objects.requireNonNull($.lastTimestamp, "expected parameter 'lastTimestamp' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

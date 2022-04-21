@@ -16,110 +16,96 @@ public final class DistributionViewerCertificate extends com.pulumi.resources.In
     public static final DistributionViewerCertificate Empty = new DistributionViewerCertificate();
 
     @Import(name="acmCertificateArn")
-      private final @Nullable String acmCertificateArn;
+    private @Nullable String acmCertificateArn;
 
     public Optional<String> acmCertificateArn() {
-        return this.acmCertificateArn == null ? Optional.empty() : Optional.ofNullable(this.acmCertificateArn);
+        return Optional.ofNullable(this.acmCertificateArn);
     }
 
     @Import(name="cloudFrontDefaultCertificate")
-      private final @Nullable Boolean cloudFrontDefaultCertificate;
+    private @Nullable Boolean cloudFrontDefaultCertificate;
 
     public Optional<Boolean> cloudFrontDefaultCertificate() {
-        return this.cloudFrontDefaultCertificate == null ? Optional.empty() : Optional.ofNullable(this.cloudFrontDefaultCertificate);
+        return Optional.ofNullable(this.cloudFrontDefaultCertificate);
     }
 
     @Import(name="iamCertificateId")
-      private final @Nullable String iamCertificateId;
+    private @Nullable String iamCertificateId;
 
     public Optional<String> iamCertificateId() {
-        return this.iamCertificateId == null ? Optional.empty() : Optional.ofNullable(this.iamCertificateId);
+        return Optional.ofNullable(this.iamCertificateId);
     }
 
     @Import(name="minimumProtocolVersion")
-      private final @Nullable String minimumProtocolVersion;
+    private @Nullable String minimumProtocolVersion;
 
     public Optional<String> minimumProtocolVersion() {
-        return this.minimumProtocolVersion == null ? Optional.empty() : Optional.ofNullable(this.minimumProtocolVersion);
+        return Optional.ofNullable(this.minimumProtocolVersion);
     }
 
     @Import(name="sslSupportMethod")
-      private final @Nullable String sslSupportMethod;
+    private @Nullable String sslSupportMethod;
 
     public Optional<String> sslSupportMethod() {
-        return this.sslSupportMethod == null ? Optional.empty() : Optional.ofNullable(this.sslSupportMethod);
+        return Optional.ofNullable(this.sslSupportMethod);
     }
 
-    public DistributionViewerCertificate(
-        @Nullable String acmCertificateArn,
-        @Nullable Boolean cloudFrontDefaultCertificate,
-        @Nullable String iamCertificateId,
-        @Nullable String minimumProtocolVersion,
-        @Nullable String sslSupportMethod) {
-        this.acmCertificateArn = acmCertificateArn;
-        this.cloudFrontDefaultCertificate = cloudFrontDefaultCertificate;
-        this.iamCertificateId = iamCertificateId;
-        this.minimumProtocolVersion = minimumProtocolVersion;
-        this.sslSupportMethod = sslSupportMethod;
-    }
+    private DistributionViewerCertificate() {}
 
-    private DistributionViewerCertificate() {
-        this.acmCertificateArn = null;
-        this.cloudFrontDefaultCertificate = null;
-        this.iamCertificateId = null;
-        this.minimumProtocolVersion = null;
-        this.sslSupportMethod = null;
+    private DistributionViewerCertificate(DistributionViewerCertificate $) {
+        this.acmCertificateArn = $.acmCertificateArn;
+        this.cloudFrontDefaultCertificate = $.cloudFrontDefaultCertificate;
+        this.iamCertificateId = $.iamCertificateId;
+        this.minimumProtocolVersion = $.minimumProtocolVersion;
+        this.sslSupportMethod = $.sslSupportMethod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionViewerCertificate defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String acmCertificateArn;
-        private @Nullable Boolean cloudFrontDefaultCertificate;
-        private @Nullable String iamCertificateId;
-        private @Nullable String minimumProtocolVersion;
-        private @Nullable String sslSupportMethod;
+        private DistributionViewerCertificate $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionViewerCertificate();
         }
 
         public Builder(DistributionViewerCertificate defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acmCertificateArn = defaults.acmCertificateArn;
-    	      this.cloudFrontDefaultCertificate = defaults.cloudFrontDefaultCertificate;
-    	      this.iamCertificateId = defaults.iamCertificateId;
-    	      this.minimumProtocolVersion = defaults.minimumProtocolVersion;
-    	      this.sslSupportMethod = defaults.sslSupportMethod;
+            $ = new DistributionViewerCertificate(Objects.requireNonNull(defaults));
         }
 
         public Builder acmCertificateArn(@Nullable String acmCertificateArn) {
-            this.acmCertificateArn = acmCertificateArn;
+            $.acmCertificateArn = acmCertificateArn;
             return this;
         }
+
         public Builder cloudFrontDefaultCertificate(@Nullable Boolean cloudFrontDefaultCertificate) {
-            this.cloudFrontDefaultCertificate = cloudFrontDefaultCertificate;
+            $.cloudFrontDefaultCertificate = cloudFrontDefaultCertificate;
             return this;
         }
+
         public Builder iamCertificateId(@Nullable String iamCertificateId) {
-            this.iamCertificateId = iamCertificateId;
+            $.iamCertificateId = iamCertificateId;
             return this;
         }
+
         public Builder minimumProtocolVersion(@Nullable String minimumProtocolVersion) {
-            this.minimumProtocolVersion = minimumProtocolVersion;
+            $.minimumProtocolVersion = minimumProtocolVersion;
             return this;
         }
+
         public Builder sslSupportMethod(@Nullable String sslSupportMethod) {
-            this.sslSupportMethod = sslSupportMethod;
+            $.sslSupportMethod = sslSupportMethod;
             return this;
-        }        public DistributionViewerCertificate build() {
-            return new DistributionViewerCertificate(acmCertificateArn, cloudFrontDefaultCertificate, iamCertificateId, minimumProtocolVersion, sslSupportMethod);
+        }
+
+        public DistributionViewerCertificate build() {
+            return $;
         }
     }
+
 }

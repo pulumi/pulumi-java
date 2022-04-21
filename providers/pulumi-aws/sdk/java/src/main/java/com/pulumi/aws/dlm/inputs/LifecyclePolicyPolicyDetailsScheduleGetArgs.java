@@ -8,12 +8,12 @@ import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegion
 import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
      * 
      */
     @Import(name="copyTags")
-      private final @Nullable Output<Boolean> copyTags;
+    private @Nullable Output<Boolean> copyTags;
 
-    public Output<Boolean> copyTags() {
-        return this.copyTags == null ? Codegen.empty() : this.copyTags;
+    public Optional<Output<Boolean>> copyTags() {
+        return Optional.ofNullable(this.copyTags);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
      * 
      */
     @Import(name="createRule", required=true)
-      private final Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule;
+    private Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule;
 
     public Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule() {
         return this.createRule;
@@ -48,10 +48,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
      * 
      */
     @Import(name="crossRegionCopyRules")
-      private final @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules;
+    private @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules;
 
-    public Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules() {
-        return this.crossRegionCopyRules == null ? Codegen.empty() : this.crossRegionCopyRules;
+    public Optional<Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>>> crossRegionCopyRules() {
+        return Optional.ofNullable(this.crossRegionCopyRules);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -70,7 +70,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
      * 
      */
     @Import(name="retainRule", required=true)
-      private final Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule;
+    private Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule;
 
     public Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule() {
         return this.retainRule;
@@ -81,118 +81,105 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
      * 
      */
     @Import(name="tagsToAdd")
-      private final @Nullable Output<Map<String,String>> tagsToAdd;
+    private @Nullable Output<Map<String,String>> tagsToAdd;
 
-    public Output<Map<String,String>> tagsToAdd() {
-        return this.tagsToAdd == null ? Codegen.empty() : this.tagsToAdd;
+    public Optional<Output<Map<String,String>>> tagsToAdd() {
+        return Optional.ofNullable(this.tagsToAdd);
     }
 
-    public LifecyclePolicyPolicyDetailsScheduleGetArgs(
-        @Nullable Output<Boolean> copyTags,
-        Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule,
-        @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules,
-        Output<String> name,
-        Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule,
-        @Nullable Output<Map<String,String>> tagsToAdd) {
-        this.copyTags = copyTags;
-        this.createRule = Objects.requireNonNull(createRule, "expected parameter 'createRule' to be non-null");
-        this.crossRegionCopyRules = crossRegionCopyRules;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.retainRule = Objects.requireNonNull(retainRule, "expected parameter 'retainRule' to be non-null");
-        this.tagsToAdd = tagsToAdd;
-    }
+    private LifecyclePolicyPolicyDetailsScheduleGetArgs() {}
 
-    private LifecyclePolicyPolicyDetailsScheduleGetArgs() {
-        this.copyTags = Codegen.empty();
-        this.createRule = Codegen.empty();
-        this.crossRegionCopyRules = Codegen.empty();
-        this.name = Codegen.empty();
-        this.retainRule = Codegen.empty();
-        this.tagsToAdd = Codegen.empty();
+    private LifecyclePolicyPolicyDetailsScheduleGetArgs(LifecyclePolicyPolicyDetailsScheduleGetArgs $) {
+        this.copyTags = $.copyTags;
+        this.createRule = $.createRule;
+        this.crossRegionCopyRules = $.crossRegionCopyRules;
+        this.name = $.name;
+        this.retainRule = $.retainRule;
+        this.tagsToAdd = $.tagsToAdd;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecyclePolicyPolicyDetailsScheduleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> copyTags;
-        private Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule;
-        private @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules;
-        private Output<String> name;
-        private Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule;
-        private @Nullable Output<Map<String,String>> tagsToAdd;
+        private LifecyclePolicyPolicyDetailsScheduleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecyclePolicyPolicyDetailsScheduleGetArgs();
         }
 
         public Builder(LifecyclePolicyPolicyDetailsScheduleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyTags = defaults.copyTags;
-    	      this.createRule = defaults.createRule;
-    	      this.crossRegionCopyRules = defaults.crossRegionCopyRules;
-    	      this.name = defaults.name;
-    	      this.retainRule = defaults.retainRule;
-    	      this.tagsToAdd = defaults.tagsToAdd;
+            $ = new LifecyclePolicyPolicyDetailsScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder copyTags(@Nullable Output<Boolean> copyTags) {
-            this.copyTags = copyTags;
+            $.copyTags = copyTags;
             return this;
         }
-        public Builder copyTags(@Nullable Boolean copyTags) {
-            this.copyTags = Codegen.ofNullable(copyTags);
-            return this;
+
+        public Builder copyTags(Boolean copyTags) {
+            return copyTags(Output.of(copyTags));
         }
+
         public Builder createRule(Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule) {
-            this.createRule = Objects.requireNonNull(createRule);
+            $.createRule = createRule;
             return this;
         }
+
         public Builder createRule(LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs createRule) {
-            this.createRule = Output.of(Objects.requireNonNull(createRule));
-            return this;
+            return createRule(Output.of(createRule));
         }
+
         public Builder crossRegionCopyRules(@Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules) {
-            this.crossRegionCopyRules = crossRegionCopyRules;
+            $.crossRegionCopyRules = crossRegionCopyRules;
             return this;
         }
-        public Builder crossRegionCopyRules(@Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs> crossRegionCopyRules) {
-            this.crossRegionCopyRules = Codegen.ofNullable(crossRegionCopyRules);
-            return this;
+
+        public Builder crossRegionCopyRules(List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs> crossRegionCopyRules) {
+            return crossRegionCopyRules(Output.of(crossRegionCopyRules));
         }
+
         public Builder crossRegionCopyRules(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs... crossRegionCopyRules) {
             return crossRegionCopyRules(List.of(crossRegionCopyRules));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder retainRule(Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule) {
-            this.retainRule = Objects.requireNonNull(retainRule);
+            $.retainRule = retainRule;
             return this;
         }
+
         public Builder retainRule(LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs retainRule) {
-            this.retainRule = Output.of(Objects.requireNonNull(retainRule));
-            return this;
+            return retainRule(Output.of(retainRule));
         }
+
         public Builder tagsToAdd(@Nullable Output<Map<String,String>> tagsToAdd) {
-            this.tagsToAdd = tagsToAdd;
+            $.tagsToAdd = tagsToAdd;
             return this;
         }
-        public Builder tagsToAdd(@Nullable Map<String,String> tagsToAdd) {
-            this.tagsToAdd = Codegen.ofNullable(tagsToAdd);
-            return this;
-        }        public LifecyclePolicyPolicyDetailsScheduleGetArgs build() {
-            return new LifecyclePolicyPolicyDetailsScheduleGetArgs(copyTags, createRule, crossRegionCopyRules, name, retainRule, tagsToAdd);
+
+        public Builder tagsToAdd(Map<String,String> tagsToAdd) {
+            return tagsToAdd(Output.of(tagsToAdd));
+        }
+
+        public LifecyclePolicyPolicyDetailsScheduleGetArgs build() {
+            $.createRule = Objects.requireNonNull($.createRule, "expected parameter 'createRule' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.retainRule = Objects.requireNonNull($.retainRule, "expected parameter 'retainRule' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.azurenative.insights.inputs.MyWorkbookManagedIdentityArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="category", required=true)
-      private final Output<String> category;
+    private Output<String> category;
 
     public Output<String> category() {
         return this.category;
@@ -35,7 +35,7 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -46,10 +46,10 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<MyWorkbookManagedIdentityArgs> identity;
+    private @Nullable Output<MyWorkbookManagedIdentityArgs> identity;
 
-    public Output<MyWorkbookManagedIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<MyWorkbookManagedIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Either<String,Kind>> kind;
+    private @Nullable Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Either<String,Kind>>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -112,10 +112,10 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serializedData", required=true)
-      private final Output<String> serializedData;
+    private Output<String> serializedData;
 
     public Output<String> serializedData() {
         return this.serializedData;
@@ -134,10 +134,10 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceId")
-      private final @Nullable Output<String> sourceId;
+    private @Nullable Output<String> sourceId;
 
-    public Output<String> sourceId() {
-        return this.sourceId == null ? Codegen.empty() : this.sourceId;
+    public Optional<Output<String>> sourceId() {
+        return Optional.ofNullable(this.sourceId);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageUri")
-      private final @Nullable Output<String> storageUri;
+    private @Nullable Output<String> storageUri;
 
-    public Output<String> storageUri() {
-        return this.storageUri == null ? Codegen.empty() : this.storageUri;
+    public Optional<Output<String>> storageUri() {
+        return Optional.ofNullable(this.storageUri);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -178,232 +178,192 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public MyWorkbookArgs(
-        Output<String> category,
-        Output<String> displayName,
-        @Nullable Output<String> id,
-        @Nullable Output<MyWorkbookManagedIdentityArgs> identity,
-        @Nullable Output<Either<String,Kind>> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        Output<String> serializedData,
-        @Nullable Output<String> sourceId,
-        @Nullable Output<String> storageUri,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> type,
-        @Nullable Output<String> version) {
-        this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.id = id;
-        this.identity = identity;
-        this.kind = kind;
-        this.location = location;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.serializedData = Objects.requireNonNull(serializedData, "expected parameter 'serializedData' to be non-null");
-        this.sourceId = sourceId;
-        this.storageUri = storageUri;
-        this.tags = tags;
-        this.type = type;
-        this.version = version;
-    }
+    private MyWorkbookArgs() {}
 
-    private MyWorkbookArgs() {
-        this.category = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.serializedData = Codegen.empty();
-        this.sourceId = Codegen.empty();
-        this.storageUri = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
-        this.version = Codegen.empty();
+    private MyWorkbookArgs(MyWorkbookArgs $) {
+        this.category = $.category;
+        this.displayName = $.displayName;
+        this.id = $.id;
+        this.identity = $.identity;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.serializedData = $.serializedData;
+        this.sourceId = $.sourceId;
+        this.storageUri = $.storageUri;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MyWorkbookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> category;
-        private Output<String> displayName;
-        private @Nullable Output<String> id;
-        private @Nullable Output<MyWorkbookManagedIdentityArgs> identity;
-        private @Nullable Output<Either<String,Kind>> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private Output<String> serializedData;
-        private @Nullable Output<String> sourceId;
-        private @Nullable Output<String> storageUri;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> version;
+        private MyWorkbookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MyWorkbookArgs();
         }
 
         public Builder(MyWorkbookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.displayName = defaults.displayName;
-    	      this.id = defaults.id;
-    	      this.identity = defaults.identity;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.serializedData = defaults.serializedData;
-    	      this.sourceId = defaults.sourceId;
-    	      this.storageUri = defaults.storageUri;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new MyWorkbookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder category(Output<String> category) {
-            this.category = Objects.requireNonNull(category);
+            $.category = category;
             return this;
         }
+
         public Builder category(String category) {
-            this.category = Output.of(Objects.requireNonNull(category));
-            return this;
+            return category(Output.of(category));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder identity(@Nullable Output<MyWorkbookManagedIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable MyWorkbookManagedIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(MyWorkbookManagedIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Either<String,Kind> kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder serializedData(Output<String> serializedData) {
-            this.serializedData = Objects.requireNonNull(serializedData);
+            $.serializedData = serializedData;
             return this;
         }
+
         public Builder serializedData(String serializedData) {
-            this.serializedData = Output.of(Objects.requireNonNull(serializedData));
-            return this;
+            return serializedData(Output.of(serializedData));
         }
+
         public Builder sourceId(@Nullable Output<String> sourceId) {
-            this.sourceId = sourceId;
+            $.sourceId = sourceId;
             return this;
         }
-        public Builder sourceId(@Nullable String sourceId) {
-            this.sourceId = Codegen.ofNullable(sourceId);
-            return this;
+
+        public Builder sourceId(String sourceId) {
+            return sourceId(Output.of(sourceId));
         }
+
         public Builder storageUri(@Nullable Output<String> storageUri) {
-            this.storageUri = storageUri;
+            $.storageUri = storageUri;
             return this;
         }
-        public Builder storageUri(@Nullable String storageUri) {
-            this.storageUri = Codegen.ofNullable(storageUri);
-            return this;
+
+        public Builder storageUri(String storageUri) {
+            return storageUri(Output.of(storageUri));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public MyWorkbookArgs build() {
-            return new MyWorkbookArgs(category, displayName, id, identity, kind, location, name, resourceGroupName, resourceName, serializedData, sourceId, storageUri, tags, type, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public MyWorkbookArgs build() {
+            $.category = Objects.requireNonNull($.category, "expected parameter 'category' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serializedData = Objects.requireNonNull($.serializedData, "expected parameter 'serializedData' to be non-null");
+            return $;
         }
     }
+
 }

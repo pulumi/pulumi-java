@@ -23,7 +23,7 @@ public final class AppEngineHttpRequestResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="appEngineRouting", required=true)
-      private final AppEngineRoutingResponse appEngineRouting;
+    private AppEngineRoutingResponse appEngineRouting;
 
     public AppEngineRoutingResponse appEngineRouting() {
         return this.appEngineRouting;
@@ -34,7 +34,7 @@ public final class AppEngineHttpRequestResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="body", required=true)
-      private final String body;
+    private String body;
 
     public String body() {
         return this.body;
@@ -45,7 +45,7 @@ public final class AppEngineHttpRequestResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="headers", required=true)
-      private final Map<String,String> headers;
+    private Map<String,String> headers;
 
     public Map<String,String> headers() {
         return this.headers;
@@ -56,7 +56,7 @@ public final class AppEngineHttpRequestResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="httpMethod", required=true)
-      private final String httpMethod;
+    private String httpMethod;
 
     public String httpMethod() {
         return this.httpMethod;
@@ -67,82 +67,73 @@ public final class AppEngineHttpRequestResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="relativeUri", required=true)
-      private final String relativeUri;
+    private String relativeUri;
 
     public String relativeUri() {
         return this.relativeUri;
     }
 
-    public AppEngineHttpRequestResponse(
-        AppEngineRoutingResponse appEngineRouting,
-        String body,
-        Map<String,String> headers,
-        String httpMethod,
-        String relativeUri) {
-        this.appEngineRouting = Objects.requireNonNull(appEngineRouting, "expected parameter 'appEngineRouting' to be non-null");
-        this.body = Objects.requireNonNull(body, "expected parameter 'body' to be non-null");
-        this.headers = Objects.requireNonNull(headers, "expected parameter 'headers' to be non-null");
-        this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
-        this.relativeUri = Objects.requireNonNull(relativeUri, "expected parameter 'relativeUri' to be non-null");
-    }
+    private AppEngineHttpRequestResponse() {}
 
-    private AppEngineHttpRequestResponse() {
-        this.appEngineRouting = null;
-        this.body = null;
-        this.headers = Map.of();
-        this.httpMethod = null;
-        this.relativeUri = null;
+    private AppEngineHttpRequestResponse(AppEngineHttpRequestResponse $) {
+        this.appEngineRouting = $.appEngineRouting;
+        this.body = $.body;
+        this.headers = $.headers;
+        this.httpMethod = $.httpMethod;
+        this.relativeUri = $.relativeUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppEngineHttpRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AppEngineRoutingResponse appEngineRouting;
-        private String body;
-        private Map<String,String> headers;
-        private String httpMethod;
-        private String relativeUri;
+        private AppEngineHttpRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppEngineHttpRequestResponse();
         }
 
         public Builder(AppEngineHttpRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngineRouting = defaults.appEngineRouting;
-    	      this.body = defaults.body;
-    	      this.headers = defaults.headers;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.relativeUri = defaults.relativeUri;
+            $ = new AppEngineHttpRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngineRouting(AppEngineRoutingResponse appEngineRouting) {
-            this.appEngineRouting = Objects.requireNonNull(appEngineRouting);
+            $.appEngineRouting = appEngineRouting;
             return this;
         }
+
         public Builder body(String body) {
-            this.body = Objects.requireNonNull(body);
+            $.body = body;
             return this;
         }
+
         public Builder headers(Map<String,String> headers) {
-            this.headers = Objects.requireNonNull(headers);
+            $.headers = headers;
             return this;
         }
+
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Objects.requireNonNull(httpMethod);
+            $.httpMethod = httpMethod;
             return this;
         }
+
         public Builder relativeUri(String relativeUri) {
-            this.relativeUri = Objects.requireNonNull(relativeUri);
+            $.relativeUri = relativeUri;
             return this;
-        }        public AppEngineHttpRequestResponse build() {
-            return new AppEngineHttpRequestResponse(appEngineRouting, body, headers, httpMethod, relativeUri);
+        }
+
+        public AppEngineHttpRequestResponse build() {
+            $.appEngineRouting = Objects.requireNonNull($.appEngineRouting, "expected parameter 'appEngineRouting' to be non-null");
+            $.body = Objects.requireNonNull($.body, "expected parameter 'body' to be non-null");
+            $.headers = Objects.requireNonNull($.headers, "expected parameter 'headers' to be non-null");
+            $.httpMethod = Objects.requireNonNull($.httpMethod, "expected parameter 'httpMethod' to be non-null");
+            $.relativeUri = Objects.requireNonNull($.relativeUri, "expected parameter 'relativeUri' to be non-null");
+            return $;
         }
     }
+
 }

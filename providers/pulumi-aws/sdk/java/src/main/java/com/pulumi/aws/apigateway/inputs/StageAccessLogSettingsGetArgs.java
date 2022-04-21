@@ -5,7 +5,6 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class StageAccessLogSettingsGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="destinationArn", required=true)
-      private final Output<String> destinationArn;
+    private Output<String> destinationArn;
 
     public Output<String> destinationArn() {
         return this.destinationArn;
@@ -31,63 +30,60 @@ public final class StageAccessLogSettingsGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="format", required=true)
-      private final Output<String> format;
+    private Output<String> format;
 
     public Output<String> format() {
         return this.format;
     }
 
-    public StageAccessLogSettingsGetArgs(
-        Output<String> destinationArn,
-        Output<String> format) {
-        this.destinationArn = Objects.requireNonNull(destinationArn, "expected parameter 'destinationArn' to be non-null");
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-    }
+    private StageAccessLogSettingsGetArgs() {}
 
-    private StageAccessLogSettingsGetArgs() {
-        this.destinationArn = Codegen.empty();
-        this.format = Codegen.empty();
+    private StageAccessLogSettingsGetArgs(StageAccessLogSettingsGetArgs $) {
+        this.destinationArn = $.destinationArn;
+        this.format = $.format;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StageAccessLogSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationArn;
-        private Output<String> format;
+        private StageAccessLogSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StageAccessLogSettingsGetArgs();
         }
 
         public Builder(StageAccessLogSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationArn = defaults.destinationArn;
-    	      this.format = defaults.format;
+            $ = new StageAccessLogSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationArn(Output<String> destinationArn) {
-            this.destinationArn = Objects.requireNonNull(destinationArn);
+            $.destinationArn = destinationArn;
             return this;
         }
+
         public Builder destinationArn(String destinationArn) {
-            this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
-            return this;
+            return destinationArn(Output.of(destinationArn));
         }
+
         public Builder format(Output<String> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
-        }        public StageAccessLogSettingsGetArgs build() {
-            return new StageAccessLogSettingsGetArgs(destinationArn, format);
+            return format(Output.of(format));
+        }
+
+        public StageAccessLogSettingsGetArgs build() {
+            $.destinationArn = Objects.requireNonNull($.destinationArn, "expected parameter 'destinationArn' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

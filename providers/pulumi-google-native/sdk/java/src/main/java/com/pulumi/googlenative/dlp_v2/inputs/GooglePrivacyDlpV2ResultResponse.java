@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends com.pulumi.resources
      * 
      */
     @Import(name="hybridStats", required=true)
-      private final GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats;
+    private GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats;
 
     public GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats() {
         return this.hybridStats;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends com.pulumi.resources
      * 
      */
     @Import(name="infoTypeStats", required=true)
-      private final List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats;
+    private List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats;
 
     public List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats() {
         return this.infoTypeStats;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends com.pulumi.resources
      * 
      */
     @Import(name="processedBytes", required=true)
-      private final String processedBytes;
+    private String processedBytes;
 
     public String processedBytes() {
         return this.processedBytes;
@@ -57,76 +57,70 @@ public final class GooglePrivacyDlpV2ResultResponse extends com.pulumi.resources
      * 
      */
     @Import(name="totalEstimatedBytes", required=true)
-      private final String totalEstimatedBytes;
+    private String totalEstimatedBytes;
 
     public String totalEstimatedBytes() {
         return this.totalEstimatedBytes;
     }
 
-    public GooglePrivacyDlpV2ResultResponse(
-        GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats,
-        List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats,
-        String processedBytes,
-        String totalEstimatedBytes) {
-        this.hybridStats = Objects.requireNonNull(hybridStats, "expected parameter 'hybridStats' to be non-null");
-        this.infoTypeStats = Objects.requireNonNull(infoTypeStats, "expected parameter 'infoTypeStats' to be non-null");
-        this.processedBytes = Objects.requireNonNull(processedBytes, "expected parameter 'processedBytes' to be non-null");
-        this.totalEstimatedBytes = Objects.requireNonNull(totalEstimatedBytes, "expected parameter 'totalEstimatedBytes' to be non-null");
-    }
+    private GooglePrivacyDlpV2ResultResponse() {}
 
-    private GooglePrivacyDlpV2ResultResponse() {
-        this.hybridStats = null;
-        this.infoTypeStats = List.of();
-        this.processedBytes = null;
-        this.totalEstimatedBytes = null;
+    private GooglePrivacyDlpV2ResultResponse(GooglePrivacyDlpV2ResultResponse $) {
+        this.hybridStats = $.hybridStats;
+        this.infoTypeStats = $.infoTypeStats;
+        this.processedBytes = $.processedBytes;
+        this.totalEstimatedBytes = $.totalEstimatedBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats;
-        private List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats;
-        private String processedBytes;
-        private String totalEstimatedBytes;
+        private GooglePrivacyDlpV2ResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ResultResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hybridStats = defaults.hybridStats;
-    	      this.infoTypeStats = defaults.infoTypeStats;
-    	      this.processedBytes = defaults.processedBytes;
-    	      this.totalEstimatedBytes = defaults.totalEstimatedBytes;
+            $ = new GooglePrivacyDlpV2ResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hybridStats(GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats) {
-            this.hybridStats = Objects.requireNonNull(hybridStats);
+            $.hybridStats = hybridStats;
             return this;
         }
+
         public Builder infoTypeStats(List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats) {
-            this.infoTypeStats = Objects.requireNonNull(infoTypeStats);
+            $.infoTypeStats = infoTypeStats;
             return this;
         }
+
         public Builder infoTypeStats(GooglePrivacyDlpV2InfoTypeStatsResponse... infoTypeStats) {
             return infoTypeStats(List.of(infoTypeStats));
         }
+
         public Builder processedBytes(String processedBytes) {
-            this.processedBytes = Objects.requireNonNull(processedBytes);
+            $.processedBytes = processedBytes;
             return this;
         }
+
         public Builder totalEstimatedBytes(String totalEstimatedBytes) {
-            this.totalEstimatedBytes = Objects.requireNonNull(totalEstimatedBytes);
+            $.totalEstimatedBytes = totalEstimatedBytes;
             return this;
-        }        public GooglePrivacyDlpV2ResultResponse build() {
-            return new GooglePrivacyDlpV2ResultResponse(hybridStats, infoTypeStats, processedBytes, totalEstimatedBytes);
+        }
+
+        public GooglePrivacyDlpV2ResultResponse build() {
+            $.hybridStats = Objects.requireNonNull($.hybridStats, "expected parameter 'hybridStats' to be non-null");
+            $.infoTypeStats = Objects.requireNonNull($.infoTypeStats, "expected parameter 'infoTypeStats' to be non-null");
+            $.processedBytes = Objects.requireNonNull($.processedBytes, "expected parameter 'processedBytes' to be non-null");
+            $.totalEstimatedBytes = Objects.requireNonNull($.totalEstimatedBytes, "expected parameter 'totalEstimatedBytes' to be non-null");
+            return $;
         }
     }
+
 }

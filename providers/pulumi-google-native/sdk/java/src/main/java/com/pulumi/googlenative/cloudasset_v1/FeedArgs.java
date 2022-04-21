@@ -5,13 +5,13 @@ package com.pulumi.googlenative.cloudasset_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudasset_v1.enums.FeedContentType;
 import com.pulumi.googlenative.cloudasset_v1.inputs.ExprArgs;
 import com.pulumi.googlenative.cloudasset_v1.inputs.FeedOutputConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetNames")
-      private final @Nullable Output<List<String>> assetNames;
+    private @Nullable Output<List<String>> assetNames;
 
-    public Output<List<String>> assetNames() {
-        return this.assetNames == null ? Codegen.empty() : this.assetNames;
+    public Optional<Output<List<String>>> assetNames() {
+        return Optional.ofNullable(this.assetNames);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetTypes")
-      private final @Nullable Output<List<String>> assetTypes;
+    private @Nullable Output<List<String>> assetTypes;
 
-    public Output<List<String>> assetTypes() {
-        return this.assetTypes == null ? Codegen.empty() : this.assetTypes;
+    public Optional<Output<List<String>>> assetTypes() {
+        return Optional.ofNullable(this.assetTypes);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<ExprArgs> condition;
+    private @Nullable Output<ExprArgs> condition;
 
-    public Output<ExprArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ExprArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<FeedContentType> contentType;
+    private @Nullable Output<FeedContentType> contentType;
 
-    public Output<FeedContentType> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<FeedContentType>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="feedId", required=true)
-      private final Output<String> feedId;
+    private Output<String> feedId;
 
     public Output<String> feedId() {
         return this.feedId;
@@ -79,7 +79,7 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="feedOutputConfig", required=true)
-      private final Output<FeedOutputConfigArgs> feedOutputConfig;
+    private Output<FeedOutputConfigArgs> feedOutputConfig;
 
     public Output<FeedOutputConfigArgs> feedOutputConfig() {
         return this.feedOutputConfig;
@@ -90,7 +90,7 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -101,190 +101,169 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relationshipTypes")
-      private final @Nullable Output<List<String>> relationshipTypes;
+    private @Nullable Output<List<String>> relationshipTypes;
 
-    public Output<List<String>> relationshipTypes() {
-        return this.relationshipTypes == null ? Codegen.empty() : this.relationshipTypes;
+    public Optional<Output<List<String>>> relationshipTypes() {
+        return Optional.ofNullable(this.relationshipTypes);
     }
 
     @Import(name="v1Id", required=true)
-      private final Output<String> v1Id;
+    private Output<String> v1Id;
 
     public Output<String> v1Id() {
         return this.v1Id;
     }
 
     @Import(name="v1Id1", required=true)
-      private final Output<String> v1Id1;
+    private Output<String> v1Id1;
 
     public Output<String> v1Id1() {
         return this.v1Id1;
     }
 
-    public FeedArgs(
-        @Nullable Output<List<String>> assetNames,
-        @Nullable Output<List<String>> assetTypes,
-        @Nullable Output<ExprArgs> condition,
-        @Nullable Output<FeedContentType> contentType,
-        Output<String> feedId,
-        Output<FeedOutputConfigArgs> feedOutputConfig,
-        Output<String> name,
-        @Nullable Output<List<String>> relationshipTypes,
-        Output<String> v1Id,
-        Output<String> v1Id1) {
-        this.assetNames = assetNames;
-        this.assetTypes = assetTypes;
-        this.condition = condition;
-        this.contentType = contentType;
-        this.feedId = Objects.requireNonNull(feedId, "expected parameter 'feedId' to be non-null");
-        this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig, "expected parameter 'feedOutputConfig' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.relationshipTypes = relationshipTypes;
-        this.v1Id = Objects.requireNonNull(v1Id, "expected parameter 'v1Id' to be non-null");
-        this.v1Id1 = Objects.requireNonNull(v1Id1, "expected parameter 'v1Id1' to be non-null");
-    }
+    private FeedArgs() {}
 
-    private FeedArgs() {
-        this.assetNames = Codegen.empty();
-        this.assetTypes = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.feedId = Codegen.empty();
-        this.feedOutputConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.relationshipTypes = Codegen.empty();
-        this.v1Id = Codegen.empty();
-        this.v1Id1 = Codegen.empty();
+    private FeedArgs(FeedArgs $) {
+        this.assetNames = $.assetNames;
+        this.assetTypes = $.assetTypes;
+        this.condition = $.condition;
+        this.contentType = $.contentType;
+        this.feedId = $.feedId;
+        this.feedOutputConfig = $.feedOutputConfig;
+        this.name = $.name;
+        this.relationshipTypes = $.relationshipTypes;
+        this.v1Id = $.v1Id;
+        this.v1Id1 = $.v1Id1;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> assetNames;
-        private @Nullable Output<List<String>> assetTypes;
-        private @Nullable Output<ExprArgs> condition;
-        private @Nullable Output<FeedContentType> contentType;
-        private Output<String> feedId;
-        private Output<FeedOutputConfigArgs> feedOutputConfig;
-        private Output<String> name;
-        private @Nullable Output<List<String>> relationshipTypes;
-        private Output<String> v1Id;
-        private Output<String> v1Id1;
+        private FeedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeedArgs();
         }
 
         public Builder(FeedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetNames = defaults.assetNames;
-    	      this.assetTypes = defaults.assetTypes;
-    	      this.condition = defaults.condition;
-    	      this.contentType = defaults.contentType;
-    	      this.feedId = defaults.feedId;
-    	      this.feedOutputConfig = defaults.feedOutputConfig;
-    	      this.name = defaults.name;
-    	      this.relationshipTypes = defaults.relationshipTypes;
-    	      this.v1Id = defaults.v1Id;
-    	      this.v1Id1 = defaults.v1Id1;
+            $ = new FeedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetNames(@Nullable Output<List<String>> assetNames) {
-            this.assetNames = assetNames;
+            $.assetNames = assetNames;
             return this;
         }
-        public Builder assetNames(@Nullable List<String> assetNames) {
-            this.assetNames = Codegen.ofNullable(assetNames);
-            return this;
+
+        public Builder assetNames(List<String> assetNames) {
+            return assetNames(Output.of(assetNames));
         }
+
         public Builder assetNames(String... assetNames) {
             return assetNames(List.of(assetNames));
         }
+
         public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
-            this.assetTypes = assetTypes;
+            $.assetTypes = assetTypes;
             return this;
         }
-        public Builder assetTypes(@Nullable List<String> assetTypes) {
-            this.assetTypes = Codegen.ofNullable(assetTypes);
-            return this;
+
+        public Builder assetTypes(List<String> assetTypes) {
+            return assetTypes(Output.of(assetTypes));
         }
+
         public Builder assetTypes(String... assetTypes) {
             return assetTypes(List.of(assetTypes));
         }
+
         public Builder condition(@Nullable Output<ExprArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ExprArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ExprArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder contentType(@Nullable Output<FeedContentType> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable FeedContentType contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(FeedContentType contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder feedId(Output<String> feedId) {
-            this.feedId = Objects.requireNonNull(feedId);
+            $.feedId = feedId;
             return this;
         }
+
         public Builder feedId(String feedId) {
-            this.feedId = Output.of(Objects.requireNonNull(feedId));
-            return this;
+            return feedId(Output.of(feedId));
         }
+
         public Builder feedOutputConfig(Output<FeedOutputConfigArgs> feedOutputConfig) {
-            this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
+            $.feedOutputConfig = feedOutputConfig;
             return this;
         }
+
         public Builder feedOutputConfig(FeedOutputConfigArgs feedOutputConfig) {
-            this.feedOutputConfig = Output.of(Objects.requireNonNull(feedOutputConfig));
-            return this;
+            return feedOutputConfig(Output.of(feedOutputConfig));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder relationshipTypes(@Nullable Output<List<String>> relationshipTypes) {
-            this.relationshipTypes = relationshipTypes;
+            $.relationshipTypes = relationshipTypes;
             return this;
         }
-        public Builder relationshipTypes(@Nullable List<String> relationshipTypes) {
-            this.relationshipTypes = Codegen.ofNullable(relationshipTypes);
-            return this;
+
+        public Builder relationshipTypes(List<String> relationshipTypes) {
+            return relationshipTypes(Output.of(relationshipTypes));
         }
+
         public Builder relationshipTypes(String... relationshipTypes) {
             return relationshipTypes(List.of(relationshipTypes));
         }
+
         public Builder v1Id(Output<String> v1Id) {
-            this.v1Id = Objects.requireNonNull(v1Id);
+            $.v1Id = v1Id;
             return this;
         }
+
         public Builder v1Id(String v1Id) {
-            this.v1Id = Output.of(Objects.requireNonNull(v1Id));
-            return this;
+            return v1Id(Output.of(v1Id));
         }
+
         public Builder v1Id1(Output<String> v1Id1) {
-            this.v1Id1 = Objects.requireNonNull(v1Id1);
+            $.v1Id1 = v1Id1;
             return this;
         }
+
         public Builder v1Id1(String v1Id1) {
-            this.v1Id1 = Output.of(Objects.requireNonNull(v1Id1));
-            return this;
-        }        public FeedArgs build() {
-            return new FeedArgs(assetNames, assetTypes, condition, contentType, feedId, feedOutputConfig, name, relationshipTypes, v1Id, v1Id1);
+            return v1Id1(Output.of(v1Id1));
+        }
+
+        public FeedArgs build() {
+            $.feedId = Objects.requireNonNull($.feedId, "expected parameter 'feedId' to be non-null");
+            $.feedOutputConfig = Objects.requireNonNull($.feedOutputConfig, "expected parameter 'feedOutputConfig' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.v1Id = Objects.requireNonNull($.v1Id, "expected parameter 'v1Id' to be non-null");
+            $.v1Id1 = Objects.requireNonNull($.v1Id1, "expected parameter 'v1Id1' to be non-null");
+            return $;
         }
     }
+
 }

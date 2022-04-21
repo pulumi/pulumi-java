@@ -22,7 +22,7 @@ public final class ResourcePolicyHourlyCycleResponse extends com.pulumi.resource
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
@@ -33,7 +33,7 @@ public final class ResourcePolicyHourlyCycleResponse extends com.pulumi.resource
      * 
      */
     @Import(name="hoursInCycle", required=true)
-      private final Integer hoursInCycle;
+    private Integer hoursInCycle;
 
     public Integer hoursInCycle() {
         return this.hoursInCycle;
@@ -44,64 +44,59 @@ public final class ResourcePolicyHourlyCycleResponse extends com.pulumi.resource
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public ResourcePolicyHourlyCycleResponse(
-        String duration,
-        Integer hoursInCycle,
-        String startTime) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.hoursInCycle = Objects.requireNonNull(hoursInCycle, "expected parameter 'hoursInCycle' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private ResourcePolicyHourlyCycleResponse() {}
 
-    private ResourcePolicyHourlyCycleResponse() {
-        this.duration = null;
-        this.hoursInCycle = null;
-        this.startTime = null;
+    private ResourcePolicyHourlyCycleResponse(ResourcePolicyHourlyCycleResponse $) {
+        this.duration = $.duration;
+        this.hoursInCycle = $.hoursInCycle;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyHourlyCycleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String duration;
-        private Integer hoursInCycle;
-        private String startTime;
+        private ResourcePolicyHourlyCycleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyHourlyCycleResponse();
         }
 
         public Builder(ResourcePolicyHourlyCycleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.hoursInCycle = defaults.hoursInCycle;
-    	      this.startTime = defaults.startTime;
+            $ = new ResourcePolicyHourlyCycleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder hoursInCycle(Integer hoursInCycle) {
-            this.hoursInCycle = Objects.requireNonNull(hoursInCycle);
+            $.hoursInCycle = hoursInCycle;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public ResourcePolicyHourlyCycleResponse build() {
-            return new ResourcePolicyHourlyCycleResponse(duration, hoursInCycle, startTime);
+        }
+
+        public ResourcePolicyHourlyCycleResponse build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.hoursInCycle = Objects.requireNonNull($.hoursInCycle, "expected parameter 'hoursInCycle' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

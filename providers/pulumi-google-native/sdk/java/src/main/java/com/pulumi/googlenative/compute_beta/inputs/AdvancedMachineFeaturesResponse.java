@@ -22,7 +22,7 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="enableNestedVirtualization", required=true)
-      private final Boolean enableNestedVirtualization;
+    private Boolean enableNestedVirtualization;
 
     public Boolean enableNestedVirtualization() {
         return this.enableNestedVirtualization;
@@ -33,7 +33,7 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="enableUefiNetworking", required=true)
-      private final Boolean enableUefiNetworking;
+    private Boolean enableUefiNetworking;
 
     public Boolean enableUefiNetworking() {
         return this.enableUefiNetworking;
@@ -44,64 +44,59 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="threadsPerCore", required=true)
-      private final Integer threadsPerCore;
+    private Integer threadsPerCore;
 
     public Integer threadsPerCore() {
         return this.threadsPerCore;
     }
 
-    public AdvancedMachineFeaturesResponse(
-        Boolean enableNestedVirtualization,
-        Boolean enableUefiNetworking,
-        Integer threadsPerCore) {
-        this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization, "expected parameter 'enableNestedVirtualization' to be non-null");
-        this.enableUefiNetworking = Objects.requireNonNull(enableUefiNetworking, "expected parameter 'enableUefiNetworking' to be non-null");
-        this.threadsPerCore = Objects.requireNonNull(threadsPerCore, "expected parameter 'threadsPerCore' to be non-null");
-    }
+    private AdvancedMachineFeaturesResponse() {}
 
-    private AdvancedMachineFeaturesResponse() {
-        this.enableNestedVirtualization = null;
-        this.enableUefiNetworking = null;
-        this.threadsPerCore = null;
+    private AdvancedMachineFeaturesResponse(AdvancedMachineFeaturesResponse $) {
+        this.enableNestedVirtualization = $.enableNestedVirtualization;
+        this.enableUefiNetworking = $.enableUefiNetworking;
+        this.threadsPerCore = $.threadsPerCore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdvancedMachineFeaturesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableNestedVirtualization;
-        private Boolean enableUefiNetworking;
-        private Integer threadsPerCore;
+        private AdvancedMachineFeaturesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdvancedMachineFeaturesResponse();
         }
 
         public Builder(AdvancedMachineFeaturesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableNestedVirtualization = defaults.enableNestedVirtualization;
-    	      this.enableUefiNetworking = defaults.enableUefiNetworking;
-    	      this.threadsPerCore = defaults.threadsPerCore;
+            $ = new AdvancedMachineFeaturesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
-            this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
+            $.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
+
         public Builder enableUefiNetworking(Boolean enableUefiNetworking) {
-            this.enableUefiNetworking = Objects.requireNonNull(enableUefiNetworking);
+            $.enableUefiNetworking = enableUefiNetworking;
             return this;
         }
+
         public Builder threadsPerCore(Integer threadsPerCore) {
-            this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
+            $.threadsPerCore = threadsPerCore;
             return this;
-        }        public AdvancedMachineFeaturesResponse build() {
-            return new AdvancedMachineFeaturesResponse(enableNestedVirtualization, enableUefiNetworking, threadsPerCore);
+        }
+
+        public AdvancedMachineFeaturesResponse build() {
+            $.enableNestedVirtualization = Objects.requireNonNull($.enableNestedVirtualization, "expected parameter 'enableNestedVirtualization' to be non-null");
+            $.enableUefiNetworking = Objects.requireNonNull($.enableUefiNetworking, "expected parameter 'enableUefiNetworking' to be non-null");
+            $.threadsPerCore = Objects.requireNonNull($.threadsPerCore, "expected parameter 'threadsPerCore' to be non-null");
+            return $;
         }
     }
+
 }

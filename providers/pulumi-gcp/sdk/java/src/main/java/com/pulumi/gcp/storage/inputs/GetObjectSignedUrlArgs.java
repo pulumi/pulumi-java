@@ -20,7 +20,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
@@ -33,10 +33,10 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="contentMd5")
-      private final @Nullable String contentMd5;
+    private @Nullable String contentMd5;
 
     public Optional<String> contentMd5() {
-        return this.contentMd5 == null ? Optional.empty() : Optional.ofNullable(this.contentMd5);
+        return Optional.ofNullable(this.contentMd5);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="contentType")
-      private final @Nullable String contentType;
+    private @Nullable String contentType;
 
     public Optional<String> contentType() {
-        return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="credentials")
-      private final @Nullable String credentials;
+    private @Nullable String credentials;
 
     public Optional<String> credentials() {
-        return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="duration")
-      private final @Nullable String duration;
+    private @Nullable String duration;
 
     public Optional<String> duration() {
-        return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="extensionHeaders")
-      private final @Nullable Map<String,String> extensionHeaders;
+    private @Nullable Map<String,String> extensionHeaders;
 
-    public Map<String,String> extensionHeaders() {
-        return this.extensionHeaders == null ? Map.of() : this.extensionHeaders;
+    public Optional<Map<String,String>> extensionHeaders() {
+        return Optional.ofNullable(this.extensionHeaders);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="httpMethod")
-      private final @Nullable String httpMethod;
+    private @Nullable String httpMethod;
 
     public Optional<String> httpMethod() {
-        return this.httpMethod == null ? Optional.empty() : Optional.ofNullable(this.httpMethod);
+        return Optional.ofNullable(this.httpMethod);
     }
 
     /**
@@ -102,109 +102,88 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public GetObjectSignedUrlArgs(
-        String bucket,
-        @Nullable String contentMd5,
-        @Nullable String contentType,
-        @Nullable String credentials,
-        @Nullable String duration,
-        @Nullable Map<String,String> extensionHeaders,
-        @Nullable String httpMethod,
-        String path) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.contentMd5 = contentMd5;
-        this.contentType = contentType;
-        this.credentials = credentials;
-        this.duration = duration;
-        this.extensionHeaders = extensionHeaders;
-        this.httpMethod = httpMethod;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private GetObjectSignedUrlArgs() {}
 
-    private GetObjectSignedUrlArgs() {
-        this.bucket = null;
-        this.contentMd5 = null;
-        this.contentType = null;
-        this.credentials = null;
-        this.duration = null;
-        this.extensionHeaders = Map.of();
-        this.httpMethod = null;
-        this.path = null;
+    private GetObjectSignedUrlArgs(GetObjectSignedUrlArgs $) {
+        this.bucket = $.bucket;
+        this.contentMd5 = $.contentMd5;
+        this.contentType = $.contentType;
+        this.credentials = $.credentials;
+        this.duration = $.duration;
+        this.extensionHeaders = $.extensionHeaders;
+        this.httpMethod = $.httpMethod;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetObjectSignedUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable String contentMd5;
-        private @Nullable String contentType;
-        private @Nullable String credentials;
-        private @Nullable String duration;
-        private @Nullable Map<String,String> extensionHeaders;
-        private @Nullable String httpMethod;
-        private String path;
+        private GetObjectSignedUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetObjectSignedUrlArgs();
         }
 
         public Builder(GetObjectSignedUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.contentMd5 = defaults.contentMd5;
-    	      this.contentType = defaults.contentType;
-    	      this.credentials = defaults.credentials;
-    	      this.duration = defaults.duration;
-    	      this.extensionHeaders = defaults.extensionHeaders;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.path = defaults.path;
+            $ = new GetObjectSignedUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder contentMd5(@Nullable String contentMd5) {
-            this.contentMd5 = contentMd5;
+            $.contentMd5 = contentMd5;
             return this;
         }
+
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
+
         public Builder credentials(@Nullable String credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
+
         public Builder duration(@Nullable String duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
+
         public Builder extensionHeaders(@Nullable Map<String,String> extensionHeaders) {
-            this.extensionHeaders = extensionHeaders;
+            $.extensionHeaders = extensionHeaders;
             return this;
         }
+
         public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = httpMethod;
+            $.httpMethod = httpMethod;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public GetObjectSignedUrlArgs build() {
-            return new GetObjectSignedUrlArgs(bucket, contentMd5, contentType, credentials, duration, extensionHeaders, httpMethod, path);
+        }
+
+        public GetObjectSignedUrlArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

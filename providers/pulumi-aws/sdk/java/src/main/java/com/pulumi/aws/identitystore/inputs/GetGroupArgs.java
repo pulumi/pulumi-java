@@ -21,7 +21,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters", required=true)
-      private final List<GetGroupFilter> filters;
+    private List<GetGroupFilter> filters;
 
     public List<GetGroupFilter> filters() {
         return this.filters;
@@ -32,10 +32,10 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupId")
-      private final @Nullable String groupId;
+    private @Nullable String groupId;
 
     public Optional<String> groupId() {
-        return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -43,67 +43,62 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityStoreId", required=true)
-      private final String identityStoreId;
+    private String identityStoreId;
 
     public String identityStoreId() {
         return this.identityStoreId;
     }
 
-    public GetGroupArgs(
-        List<GetGroupFilter> filters,
-        @Nullable String groupId,
-        String identityStoreId) {
-        this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
-        this.groupId = groupId;
-        this.identityStoreId = Objects.requireNonNull(identityStoreId, "expected parameter 'identityStoreId' to be non-null");
-    }
+    private GetGroupArgs() {}
 
-    private GetGroupArgs() {
-        this.filters = List.of();
-        this.groupId = null;
-        this.identityStoreId = null;
+    private GetGroupArgs(GetGroupArgs $) {
+        this.filters = $.filters;
+        this.groupId = $.groupId;
+        this.identityStoreId = $.identityStoreId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetGroupFilter> filters;
-        private @Nullable String groupId;
-        private String identityStoreId;
+        private GetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupArgs();
         }
 
         public Builder(GetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.groupId = defaults.groupId;
-    	      this.identityStoreId = defaults.identityStoreId;
+            $ = new GetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(List<GetGroupFilter> filters) {
-            this.filters = Objects.requireNonNull(filters);
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetGroupFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
+
         public Builder identityStoreId(String identityStoreId) {
-            this.identityStoreId = Objects.requireNonNull(identityStoreId);
+            $.identityStoreId = identityStoreId;
             return this;
-        }        public GetGroupArgs build() {
-            return new GetGroupArgs(filters, groupId, identityStoreId);
+        }
+
+        public GetGroupArgs build() {
+            $.filters = Objects.requireNonNull($.filters, "expected parameter 'filters' to be non-null");
+            $.identityStoreId = Objects.requireNonNull($.identityStoreId, "expected parameter 'identityStoreId' to be non-null");
+            return $;
         }
     }
+
 }

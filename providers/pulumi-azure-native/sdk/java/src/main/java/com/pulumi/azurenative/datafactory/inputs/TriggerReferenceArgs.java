@@ -5,7 +5,6 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class TriggerReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="referenceName", required=true)
-      private final Output<String> referenceName;
+    private Output<String> referenceName;
 
     public Output<String> referenceName() {
         return this.referenceName;
@@ -34,63 +33,60 @@ public final class TriggerReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public TriggerReferenceArgs(
-        Output<String> referenceName,
-        Output<String> type) {
-        this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TriggerReferenceArgs() {}
 
-    private TriggerReferenceArgs() {
-        this.referenceName = Codegen.empty();
-        this.type = Codegen.empty();
+    private TriggerReferenceArgs(TriggerReferenceArgs $) {
+        this.referenceName = $.referenceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> referenceName;
-        private Output<String> type;
+        private TriggerReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerReferenceArgs();
         }
 
         public Builder(TriggerReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.referenceName = defaults.referenceName;
-    	      this.type = defaults.type;
+            $ = new TriggerReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder referenceName(Output<String> referenceName) {
-            this.referenceName = Objects.requireNonNull(referenceName);
+            $.referenceName = referenceName;
             return this;
         }
+
         public Builder referenceName(String referenceName) {
-            this.referenceName = Output.of(Objects.requireNonNull(referenceName));
-            return this;
+            return referenceName(Output.of(referenceName));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TriggerReferenceArgs build() {
-            return new TriggerReferenceArgs(referenceName, type);
+            return type(Output.of(type));
+        }
+
+        public TriggerReferenceArgs build() {
+            $.referenceName = Objects.requireNonNull($.referenceName, "expected parameter 'referenceName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

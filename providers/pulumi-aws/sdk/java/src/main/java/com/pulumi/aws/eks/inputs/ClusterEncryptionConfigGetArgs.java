@@ -6,7 +6,6 @@ package com.pulumi.aws.eks.inputs;
 import com.pulumi.aws.eks.inputs.ClusterEncryptionConfigProviderGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class ClusterEncryptionConfigGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="provider", required=true)
-      private final Output<ClusterEncryptionConfigProviderGetArgs> provider;
+    private Output<ClusterEncryptionConfigProviderGetArgs> provider;
 
     public Output<ClusterEncryptionConfigProviderGetArgs> provider() {
         return this.provider;
@@ -32,66 +31,64 @@ public final class ClusterEncryptionConfigGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resources", required=true)
-      private final Output<List<String>> resources;
+    private Output<List<String>> resources;
 
     public Output<List<String>> resources() {
         return this.resources;
     }
 
-    public ClusterEncryptionConfigGetArgs(
-        Output<ClusterEncryptionConfigProviderGetArgs> provider,
-        Output<List<String>> resources) {
-        this.provider = Objects.requireNonNull(provider, "expected parameter 'provider' to be non-null");
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-    }
+    private ClusterEncryptionConfigGetArgs() {}
 
-    private ClusterEncryptionConfigGetArgs() {
-        this.provider = Codegen.empty();
-        this.resources = Codegen.empty();
+    private ClusterEncryptionConfigGetArgs(ClusterEncryptionConfigGetArgs $) {
+        this.provider = $.provider;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEncryptionConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ClusterEncryptionConfigProviderGetArgs> provider;
-        private Output<List<String>> resources;
+        private ClusterEncryptionConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEncryptionConfigGetArgs();
         }
 
         public Builder(ClusterEncryptionConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provider = defaults.provider;
-    	      this.resources = defaults.resources;
+            $ = new ClusterEncryptionConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provider(Output<ClusterEncryptionConfigProviderGetArgs> provider) {
-            this.provider = Objects.requireNonNull(provider);
+            $.provider = provider;
             return this;
         }
+
         public Builder provider(ClusterEncryptionConfigProviderGetArgs provider) {
-            this.provider = Output.of(Objects.requireNonNull(provider));
-            return this;
+            return provider(Output.of(provider));
         }
+
         public Builder resources(Output<List<String>> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(List<String> resources) {
-            this.resources = Output.of(Objects.requireNonNull(resources));
-            return this;
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
-        }        public ClusterEncryptionConfigGetArgs build() {
-            return new ClusterEncryptionConfigGetArgs(provider, resources);
+        }
+
+        public ClusterEncryptionConfigGetArgs build() {
+            $.provider = Objects.requireNonNull($.provider, "expected parameter 'provider' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

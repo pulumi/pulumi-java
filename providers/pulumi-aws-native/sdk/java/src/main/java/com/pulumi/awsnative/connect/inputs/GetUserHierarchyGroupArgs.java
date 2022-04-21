@@ -17,45 +17,45 @@ public final class GetUserHierarchyGroupArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="userHierarchyGroupArn", required=true)
-      private final String userHierarchyGroupArn;
+    private String userHierarchyGroupArn;
 
     public String userHierarchyGroupArn() {
         return this.userHierarchyGroupArn;
     }
 
-    public GetUserHierarchyGroupArgs(String userHierarchyGroupArn) {
-        this.userHierarchyGroupArn = Objects.requireNonNull(userHierarchyGroupArn, "expected parameter 'userHierarchyGroupArn' to be non-null");
-    }
+    private GetUserHierarchyGroupArgs() {}
 
-    private GetUserHierarchyGroupArgs() {
-        this.userHierarchyGroupArn = null;
+    private GetUserHierarchyGroupArgs(GetUserHierarchyGroupArgs $) {
+        this.userHierarchyGroupArn = $.userHierarchyGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserHierarchyGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String userHierarchyGroupArn;
+        private GetUserHierarchyGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserHierarchyGroupArgs();
         }
 
         public Builder(GetUserHierarchyGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userHierarchyGroupArn = defaults.userHierarchyGroupArn;
+            $ = new GetUserHierarchyGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userHierarchyGroupArn(String userHierarchyGroupArn) {
-            this.userHierarchyGroupArn = Objects.requireNonNull(userHierarchyGroupArn);
+            $.userHierarchyGroupArn = userHierarchyGroupArn;
             return this;
-        }        public GetUserHierarchyGroupArgs build() {
-            return new GetUserHierarchyGroupArgs(userHierarchyGroupArn);
+        }
+
+        public GetUserHierarchyGroupArgs build() {
+            $.userHierarchyGroupArn = Objects.requireNonNull($.userHierarchyGroupArn, "expected parameter 'userHierarchyGroupArn' to be non-null");
+            return $;
         }
     }
+
 }

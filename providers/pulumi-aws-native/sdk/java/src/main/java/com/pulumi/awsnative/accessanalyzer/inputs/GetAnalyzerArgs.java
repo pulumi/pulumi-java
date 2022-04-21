@@ -17,45 +17,45 @@ public final class GetAnalyzerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetAnalyzerArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetAnalyzerArgs() {}
 
-    private GetAnalyzerArgs() {
-        this.arn = null;
+    private GetAnalyzerArgs(GetAnalyzerArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAnalyzerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetAnalyzerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAnalyzerArgs();
         }
 
         public Builder(GetAnalyzerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetAnalyzerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetAnalyzerArgs build() {
-            return new GetAnalyzerArgs(arn);
+        }
+
+        public GetAnalyzerArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

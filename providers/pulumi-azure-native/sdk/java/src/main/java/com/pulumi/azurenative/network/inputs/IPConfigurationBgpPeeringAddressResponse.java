@@ -24,10 +24,10 @@ public final class IPConfigurationBgpPeeringAddressResponse extends com.pulumi.r
      * 
      */
     @Import(name="customBgpIpAddresses")
-      private final @Nullable List<String> customBgpIpAddresses;
+    private @Nullable List<String> customBgpIpAddresses;
 
-    public List<String> customBgpIpAddresses() {
-        return this.customBgpIpAddresses == null ? List.of() : this.customBgpIpAddresses;
+    public Optional<List<String>> customBgpIpAddresses() {
+        return Optional.ofNullable(this.customBgpIpAddresses);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class IPConfigurationBgpPeeringAddressResponse extends com.pulumi.r
      * 
      */
     @Import(name="defaultBgpIpAddresses", required=true)
-      private final List<String> defaultBgpIpAddresses;
+    private List<String> defaultBgpIpAddresses;
 
     public List<String> defaultBgpIpAddresses() {
         return this.defaultBgpIpAddresses;
@@ -46,10 +46,10 @@ public final class IPConfigurationBgpPeeringAddressResponse extends com.pulumi.r
      * 
      */
     @Import(name="ipconfigurationId")
-      private final @Nullable String ipconfigurationId;
+    private @Nullable String ipconfigurationId;
 
     public Optional<String> ipconfigurationId() {
-        return this.ipconfigurationId == null ? Optional.empty() : Optional.ofNullable(this.ipconfigurationId);
+        return Optional.ofNullable(this.ipconfigurationId);
     }
 
     /**
@@ -57,82 +57,76 @@ public final class IPConfigurationBgpPeeringAddressResponse extends com.pulumi.r
      * 
      */
     @Import(name="tunnelIpAddresses", required=true)
-      private final List<String> tunnelIpAddresses;
+    private List<String> tunnelIpAddresses;
 
     public List<String> tunnelIpAddresses() {
         return this.tunnelIpAddresses;
     }
 
-    public IPConfigurationBgpPeeringAddressResponse(
-        @Nullable List<String> customBgpIpAddresses,
-        List<String> defaultBgpIpAddresses,
-        @Nullable String ipconfigurationId,
-        List<String> tunnelIpAddresses) {
-        this.customBgpIpAddresses = customBgpIpAddresses;
-        this.defaultBgpIpAddresses = Objects.requireNonNull(defaultBgpIpAddresses, "expected parameter 'defaultBgpIpAddresses' to be non-null");
-        this.ipconfigurationId = ipconfigurationId;
-        this.tunnelIpAddresses = Objects.requireNonNull(tunnelIpAddresses, "expected parameter 'tunnelIpAddresses' to be non-null");
-    }
+    private IPConfigurationBgpPeeringAddressResponse() {}
 
-    private IPConfigurationBgpPeeringAddressResponse() {
-        this.customBgpIpAddresses = List.of();
-        this.defaultBgpIpAddresses = List.of();
-        this.ipconfigurationId = null;
-        this.tunnelIpAddresses = List.of();
+    private IPConfigurationBgpPeeringAddressResponse(IPConfigurationBgpPeeringAddressResponse $) {
+        this.customBgpIpAddresses = $.customBgpIpAddresses;
+        this.defaultBgpIpAddresses = $.defaultBgpIpAddresses;
+        this.ipconfigurationId = $.ipconfigurationId;
+        this.tunnelIpAddresses = $.tunnelIpAddresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPConfigurationBgpPeeringAddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> customBgpIpAddresses;
-        private List<String> defaultBgpIpAddresses;
-        private @Nullable String ipconfigurationId;
-        private List<String> tunnelIpAddresses;
+        private IPConfigurationBgpPeeringAddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPConfigurationBgpPeeringAddressResponse();
         }
 
         public Builder(IPConfigurationBgpPeeringAddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customBgpIpAddresses = defaults.customBgpIpAddresses;
-    	      this.defaultBgpIpAddresses = defaults.defaultBgpIpAddresses;
-    	      this.ipconfigurationId = defaults.ipconfigurationId;
-    	      this.tunnelIpAddresses = defaults.tunnelIpAddresses;
+            $ = new IPConfigurationBgpPeeringAddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customBgpIpAddresses(@Nullable List<String> customBgpIpAddresses) {
-            this.customBgpIpAddresses = customBgpIpAddresses;
+            $.customBgpIpAddresses = customBgpIpAddresses;
             return this;
         }
+
         public Builder customBgpIpAddresses(String... customBgpIpAddresses) {
             return customBgpIpAddresses(List.of(customBgpIpAddresses));
         }
+
         public Builder defaultBgpIpAddresses(List<String> defaultBgpIpAddresses) {
-            this.defaultBgpIpAddresses = Objects.requireNonNull(defaultBgpIpAddresses);
+            $.defaultBgpIpAddresses = defaultBgpIpAddresses;
             return this;
         }
+
         public Builder defaultBgpIpAddresses(String... defaultBgpIpAddresses) {
             return defaultBgpIpAddresses(List.of(defaultBgpIpAddresses));
         }
+
         public Builder ipconfigurationId(@Nullable String ipconfigurationId) {
-            this.ipconfigurationId = ipconfigurationId;
+            $.ipconfigurationId = ipconfigurationId;
             return this;
         }
+
         public Builder tunnelIpAddresses(List<String> tunnelIpAddresses) {
-            this.tunnelIpAddresses = Objects.requireNonNull(tunnelIpAddresses);
+            $.tunnelIpAddresses = tunnelIpAddresses;
             return this;
         }
+
         public Builder tunnelIpAddresses(String... tunnelIpAddresses) {
             return tunnelIpAddresses(List.of(tunnelIpAddresses));
-        }        public IPConfigurationBgpPeeringAddressResponse build() {
-            return new IPConfigurationBgpPeeringAddressResponse(customBgpIpAddresses, defaultBgpIpAddresses, ipconfigurationId, tunnelIpAddresses);
+        }
+
+        public IPConfigurationBgpPeeringAddressResponse build() {
+            $.defaultBgpIpAddresses = Objects.requireNonNull($.defaultBgpIpAddresses, "expected parameter 'defaultBgpIpAddresses' to be non-null");
+            $.tunnelIpAddresses = Objects.requireNonNull($.tunnelIpAddresses, "expected parameter 'tunnelIpAddresses' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TagTemplateFieldArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TagTemplateFieldArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class TagTemplateFieldArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fieldId", required=true)
-      private final Output<String> fieldId;
+    private Output<String> fieldId;
 
     public Output<String> fieldId() {
         return this.fieldId;
@@ -56,10 +56,10 @@ public final class TagTemplateFieldArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="isRequired")
-      private final @Nullable Output<Boolean> isRequired;
+    private @Nullable Output<Boolean> isRequired;
 
-    public Output<Boolean> isRequired() {
-        return this.isRequired == null ? Codegen.empty() : this.isRequired;
+    public Optional<Output<Boolean>> isRequired() {
+        return Optional.ofNullable(this.isRequired);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TagTemplateFieldArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class TagTemplateFieldArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="order")
-      private final @Nullable Output<Integer> order;
+    private @Nullable Output<Integer> order;
 
-    public Output<Integer> order() {
-        return this.order == null ? Codegen.empty() : this.order;
+    public Optional<Output<Integer>> order() {
+        return Optional.ofNullable(this.order);
     }
 
     /**
@@ -93,128 +93,110 @@ public final class TagTemplateFieldArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<TagTemplateFieldTypeArgs> type;
+    private Output<TagTemplateFieldTypeArgs> type;
 
     public Output<TagTemplateFieldTypeArgs> type() {
         return this.type;
     }
 
-    public TagTemplateFieldArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> fieldId,
-        @Nullable Output<Boolean> isRequired,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> order,
-        Output<TagTemplateFieldTypeArgs> type) {
-        this.description = description;
-        this.displayName = displayName;
-        this.fieldId = Objects.requireNonNull(fieldId, "expected parameter 'fieldId' to be non-null");
-        this.isRequired = isRequired;
-        this.name = name;
-        this.order = order;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TagTemplateFieldArgs() {}
 
-    private TagTemplateFieldArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.fieldId = Codegen.empty();
-        this.isRequired = Codegen.empty();
-        this.name = Codegen.empty();
-        this.order = Codegen.empty();
-        this.type = Codegen.empty();
+    private TagTemplateFieldArgs(TagTemplateFieldArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.fieldId = $.fieldId;
+        this.isRequired = $.isRequired;
+        this.name = $.name;
+        this.order = $.order;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTemplateFieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> fieldId;
-        private @Nullable Output<Boolean> isRequired;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> order;
-        private Output<TagTemplateFieldTypeArgs> type;
+        private TagTemplateFieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTemplateFieldArgs();
         }
 
         public Builder(TagTemplateFieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.fieldId = defaults.fieldId;
-    	      this.isRequired = defaults.isRequired;
-    	      this.name = defaults.name;
-    	      this.order = defaults.order;
-    	      this.type = defaults.type;
+            $ = new TagTemplateFieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder fieldId(Output<String> fieldId) {
-            this.fieldId = Objects.requireNonNull(fieldId);
+            $.fieldId = fieldId;
             return this;
         }
+
         public Builder fieldId(String fieldId) {
-            this.fieldId = Output.of(Objects.requireNonNull(fieldId));
-            return this;
+            return fieldId(Output.of(fieldId));
         }
+
         public Builder isRequired(@Nullable Output<Boolean> isRequired) {
-            this.isRequired = isRequired;
+            $.isRequired = isRequired;
             return this;
         }
-        public Builder isRequired(@Nullable Boolean isRequired) {
-            this.isRequired = Codegen.ofNullable(isRequired);
-            return this;
+
+        public Builder isRequired(Boolean isRequired) {
+            return isRequired(Output.of(isRequired));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder order(@Nullable Output<Integer> order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
-        public Builder order(@Nullable Integer order) {
-            this.order = Codegen.ofNullable(order);
-            return this;
+
+        public Builder order(Integer order) {
+            return order(Output.of(order));
         }
+
         public Builder type(Output<TagTemplateFieldTypeArgs> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(TagTemplateFieldTypeArgs type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TagTemplateFieldArgs build() {
-            return new TagTemplateFieldArgs(description, displayName, fieldId, isRequired, name, order, type);
+            return type(Output.of(type));
+        }
+
+        public TagTemplateFieldArgs build() {
+            $.fieldId = Objects.requireNonNull($.fieldId, "expected parameter 'fieldId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

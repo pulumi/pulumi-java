@@ -5,9 +5,9 @@ package com.pulumi.azurenative.storagecache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class KeyVaultKeyReferenceSourceVaultArgs extends com.pulumi.resour
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public KeyVaultKeyReferenceSourceVaultArgs(@Nullable Output<String> id) {
-        this.id = id;
-    }
+    private KeyVaultKeyReferenceSourceVaultArgs() {}
 
-    private KeyVaultKeyReferenceSourceVaultArgs() {
-        this.id = Codegen.empty();
+    private KeyVaultKeyReferenceSourceVaultArgs(KeyVaultKeyReferenceSourceVaultArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultKeyReferenceSourceVaultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
+        private KeyVaultKeyReferenceSourceVaultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultKeyReferenceSourceVaultArgs();
         }
 
         public Builder(KeyVaultKeyReferenceSourceVaultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new KeyVaultKeyReferenceSourceVaultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public KeyVaultKeyReferenceSourceVaultArgs build() {
-            return new KeyVaultKeyReferenceSourceVaultArgs(id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public KeyVaultKeyReferenceSourceVaultArgs build() {
+            return $;
         }
     }
+
 }

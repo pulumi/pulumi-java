@@ -23,45 +23,44 @@ public final class AdditionalFeaturesServerConfigurationsResponse extends com.pu
      * 
      */
     @Import(name="isRServicesEnabled")
-      private final @Nullable Boolean isRServicesEnabled;
+    private @Nullable Boolean isRServicesEnabled;
 
     public Optional<Boolean> isRServicesEnabled() {
-        return this.isRServicesEnabled == null ? Optional.empty() : Optional.ofNullable(this.isRServicesEnabled);
+        return Optional.ofNullable(this.isRServicesEnabled);
     }
 
-    public AdditionalFeaturesServerConfigurationsResponse(@Nullable Boolean isRServicesEnabled) {
-        this.isRServicesEnabled = isRServicesEnabled;
-    }
+    private AdditionalFeaturesServerConfigurationsResponse() {}
 
-    private AdditionalFeaturesServerConfigurationsResponse() {
-        this.isRServicesEnabled = null;
+    private AdditionalFeaturesServerConfigurationsResponse(AdditionalFeaturesServerConfigurationsResponse $) {
+        this.isRServicesEnabled = $.isRServicesEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalFeaturesServerConfigurationsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isRServicesEnabled;
+        private AdditionalFeaturesServerConfigurationsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalFeaturesServerConfigurationsResponse();
         }
 
         public Builder(AdditionalFeaturesServerConfigurationsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isRServicesEnabled = defaults.isRServicesEnabled;
+            $ = new AdditionalFeaturesServerConfigurationsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
-            this.isRServicesEnabled = isRServicesEnabled;
+            $.isRServicesEnabled = isRServicesEnabled;
             return this;
-        }        public AdditionalFeaturesServerConfigurationsResponse build() {
-            return new AdditionalFeaturesServerConfigurationsResponse(isRServicesEnabled);
+        }
+
+        public AdditionalFeaturesServerConfigurationsResponse build() {
+            return $;
         }
     }
+
 }

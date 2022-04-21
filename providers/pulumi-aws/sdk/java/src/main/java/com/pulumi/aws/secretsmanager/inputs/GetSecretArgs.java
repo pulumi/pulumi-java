@@ -19,10 +19,10 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public GetSecretArgs(
-        @Nullable String arn,
-        @Nullable String name) {
-        this.arn = arn;
-        this.name = name;
-    }
+    private GetSecretArgs() {}
 
-    private GetSecretArgs() {
-        this.arn = null;
-        this.name = null;
+    private GetSecretArgs(GetSecretArgs $) {
+        this.arn = $.arn;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String name;
+        private GetSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretArgs();
         }
 
         public Builder(GetSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
+            $ = new GetSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public GetSecretArgs build() {
-            return new GetSecretArgs(arn, name);
+        }
+
+        public GetSecretArgs build() {
+            return $;
         }
     }
+
 }

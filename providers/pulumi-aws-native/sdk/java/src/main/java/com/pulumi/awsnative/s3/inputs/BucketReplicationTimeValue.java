@@ -13,45 +13,45 @@ public final class BucketReplicationTimeValue extends com.pulumi.resources.Invok
     public static final BucketReplicationTimeValue Empty = new BucketReplicationTimeValue();
 
     @Import(name="minutes", required=true)
-      private final Integer minutes;
+    private Integer minutes;
 
     public Integer minutes() {
         return this.minutes;
     }
 
-    public BucketReplicationTimeValue(Integer minutes) {
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-    }
+    private BucketReplicationTimeValue() {}
 
-    private BucketReplicationTimeValue() {
-        this.minutes = null;
+    private BucketReplicationTimeValue(BucketReplicationTimeValue $) {
+        this.minutes = $.minutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationTimeValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer minutes;
+        private BucketReplicationTimeValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationTimeValue();
         }
 
         public Builder(BucketReplicationTimeValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minutes = defaults.minutes;
+            $ = new BucketReplicationTimeValue(Objects.requireNonNull(defaults));
         }
 
         public Builder minutes(Integer minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
-        }        public BucketReplicationTimeValue build() {
-            return new BucketReplicationTimeValue(minutes);
+        }
+
+        public BucketReplicationTimeValue build() {
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
      * 
      */
     @Import(name="agentJobs", required=true)
-      private final Map<String,String> agentJobs;
+    private Map<String,String> agentJobs;
 
     public Map<String,String> agentJobs() {
         return this.agentJobs;
@@ -36,7 +36,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
      * 
      */
     @Import(name="databases", required=true)
-      private final Map<String,String> databases;
+    private Map<String,String> databases;
 
     public Map<String,String> databases() {
         return this.databases;
@@ -47,7 +47,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -58,7 +58,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
      * 
      */
     @Import(name="logins", required=true)
-      private final Map<String,String> logins;
+    private Map<String,String> logins;
 
     public Map<String,String> logins() {
         return this.logins;
@@ -70,7 +70,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -81,7 +81,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
      * 
      */
     @Import(name="sourceServerBrandVersion", required=true)
-      private final String sourceServerBrandVersion;
+    private String sourceServerBrandVersion;
 
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
@@ -92,7 +92,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
      * 
      */
     @Import(name="sourceServerVersion", required=true)
-      private final String sourceServerVersion;
+    private String sourceServerVersion;
 
     public String sourceServerVersion() {
         return this.sourceServerVersion;
@@ -103,112 +103,98 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final List<ReportableExceptionResponse> validationErrors;
+    private List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 
-    public ConnectToSourceSqlServerTaskOutputTaskLevelResponse(
-        Map<String,String> agentJobs,
-        Map<String,String> databases,
-        String id,
-        Map<String,String> logins,
-        String resultType,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
-        this.agentJobs = Objects.requireNonNull(agentJobs, "expected parameter 'agentJobs' to be non-null");
-        this.databases = Objects.requireNonNull(databases, "expected parameter 'databases' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.logins = Objects.requireNonNull(logins, "expected parameter 'logins' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion, "expected parameter 'sourceServerBrandVersion' to be non-null");
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private ConnectToSourceSqlServerTaskOutputTaskLevelResponse() {}
 
-    private ConnectToSourceSqlServerTaskOutputTaskLevelResponse() {
-        this.agentJobs = Map.of();
-        this.databases = Map.of();
-        this.id = null;
-        this.logins = Map.of();
-        this.resultType = null;
-        this.sourceServerBrandVersion = null;
-        this.sourceServerVersion = null;
-        this.validationErrors = List.of();
+    private ConnectToSourceSqlServerTaskOutputTaskLevelResponse(ConnectToSourceSqlServerTaskOutputTaskLevelResponse $) {
+        this.agentJobs = $.agentJobs;
+        this.databases = $.databases;
+        this.id = $.id;
+        this.logins = $.logins;
+        this.resultType = $.resultType;
+        this.sourceServerBrandVersion = $.sourceServerBrandVersion;
+        this.sourceServerVersion = $.sourceServerVersion;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToSourceSqlServerTaskOutputTaskLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> agentJobs;
-        private Map<String,String> databases;
-        private String id;
-        private Map<String,String> logins;
-        private String resultType;
-        private String sourceServerBrandVersion;
-        private String sourceServerVersion;
-        private List<ReportableExceptionResponse> validationErrors;
+        private ConnectToSourceSqlServerTaskOutputTaskLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToSourceSqlServerTaskOutputTaskLevelResponse();
         }
 
         public Builder(ConnectToSourceSqlServerTaskOutputTaskLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentJobs = defaults.agentJobs;
-    	      this.databases = defaults.databases;
-    	      this.id = defaults.id;
-    	      this.logins = defaults.logins;
-    	      this.resultType = defaults.resultType;
-    	      this.sourceServerBrandVersion = defaults.sourceServerBrandVersion;
-    	      this.sourceServerVersion = defaults.sourceServerVersion;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new ConnectToSourceSqlServerTaskOutputTaskLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentJobs(Map<String,String> agentJobs) {
-            this.agentJobs = Objects.requireNonNull(agentJobs);
+            $.agentJobs = agentJobs;
             return this;
         }
+
         public Builder databases(Map<String,String> databases) {
-            this.databases = Objects.requireNonNull(databases);
+            $.databases = databases;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder logins(Map<String,String> logins) {
-            this.logins = Objects.requireNonNull(logins);
+            $.logins = logins;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
-            this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
+            $.sourceServerBrandVersion = sourceServerBrandVersion;
             return this;
         }
+
         public Builder sourceServerVersion(String sourceServerVersion) {
-            this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
+            $.sourceServerVersion = sourceServerVersion;
             return this;
         }
+
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
-        }        public ConnectToSourceSqlServerTaskOutputTaskLevelResponse build() {
-            return new ConnectToSourceSqlServerTaskOutputTaskLevelResponse(agentJobs, databases, id, logins, resultType, sourceServerBrandVersion, sourceServerVersion, validationErrors);
+        }
+
+        public ConnectToSourceSqlServerTaskOutputTaskLevelResponse build() {
+            $.agentJobs = Objects.requireNonNull($.agentJobs, "expected parameter 'agentJobs' to be non-null");
+            $.databases = Objects.requireNonNull($.databases, "expected parameter 'databases' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.logins = Objects.requireNonNull($.logins, "expected parameter 'logins' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.sourceServerBrandVersion = Objects.requireNonNull($.sourceServerBrandVersion, "expected parameter 'sourceServerBrandVersion' to be non-null");
+            $.sourceServerVersion = Objects.requireNonNull($.sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

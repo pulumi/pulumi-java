@@ -19,10 +19,10 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="groupConnectivity")
-      private final @Nullable String groupConnectivity;
+    private @Nullable String groupConnectivity;
 
     public Optional<String> groupConnectivity() {
-        return this.groupConnectivity == null ? Optional.empty() : Optional.ofNullable(this.groupConnectivity);
+        return Optional.ofNullable(this.groupConnectivity);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="isGlobal")
-      private final @Nullable String isGlobal;
+    private @Nullable String isGlobal;
 
     public Optional<String> isGlobal() {
-        return this.isGlobal == null ? Optional.empty() : Optional.ofNullable(this.isGlobal);
+        return Optional.ofNullable(this.isGlobal);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="networkGroupId")
-      private final @Nullable String networkGroupId;
+    private @Nullable String networkGroupId;
 
     public Optional<String> networkGroupId() {
-        return this.networkGroupId == null ? Optional.empty() : Optional.ofNullable(this.networkGroupId);
+        return Optional.ofNullable(this.networkGroupId);
     }
 
     /**
@@ -52,73 +52,62 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="useHubGateway")
-      private final @Nullable String useHubGateway;
+    private @Nullable String useHubGateway;
 
     public Optional<String> useHubGateway() {
-        return this.useHubGateway == null ? Optional.empty() : Optional.ofNullable(this.useHubGateway);
+        return Optional.ofNullable(this.useHubGateway);
     }
 
-    public ConnectivityGroupItemResponse(
-        @Nullable String groupConnectivity,
-        @Nullable String isGlobal,
-        @Nullable String networkGroupId,
-        @Nullable String useHubGateway) {
-        this.groupConnectivity = groupConnectivity;
-        this.isGlobal = isGlobal;
-        this.networkGroupId = networkGroupId;
-        this.useHubGateway = useHubGateway;
-    }
+    private ConnectivityGroupItemResponse() {}
 
-    private ConnectivityGroupItemResponse() {
-        this.groupConnectivity = null;
-        this.isGlobal = null;
-        this.networkGroupId = null;
-        this.useHubGateway = null;
+    private ConnectivityGroupItemResponse(ConnectivityGroupItemResponse $) {
+        this.groupConnectivity = $.groupConnectivity;
+        this.isGlobal = $.isGlobal;
+        this.networkGroupId = $.networkGroupId;
+        this.useHubGateway = $.useHubGateway;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectivityGroupItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String groupConnectivity;
-        private @Nullable String isGlobal;
-        private @Nullable String networkGroupId;
-        private @Nullable String useHubGateway;
+        private ConnectivityGroupItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectivityGroupItemResponse();
         }
 
         public Builder(ConnectivityGroupItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupConnectivity = defaults.groupConnectivity;
-    	      this.isGlobal = defaults.isGlobal;
-    	      this.networkGroupId = defaults.networkGroupId;
-    	      this.useHubGateway = defaults.useHubGateway;
+            $ = new ConnectivityGroupItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupConnectivity(@Nullable String groupConnectivity) {
-            this.groupConnectivity = groupConnectivity;
+            $.groupConnectivity = groupConnectivity;
             return this;
         }
+
         public Builder isGlobal(@Nullable String isGlobal) {
-            this.isGlobal = isGlobal;
+            $.isGlobal = isGlobal;
             return this;
         }
+
         public Builder networkGroupId(@Nullable String networkGroupId) {
-            this.networkGroupId = networkGroupId;
+            $.networkGroupId = networkGroupId;
             return this;
         }
+
         public Builder useHubGateway(@Nullable String useHubGateway) {
-            this.useHubGateway = useHubGateway;
+            $.useHubGateway = useHubGateway;
             return this;
-        }        public ConnectivityGroupItemResponse build() {
-            return new ConnectivityGroupItemResponse(groupConnectivity, isGlobal, networkGroupId, useHubGateway);
+        }
+
+        public ConnectivityGroupItemResponse build() {
+            return $;
         }
     }
+
 }

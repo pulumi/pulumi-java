@@ -5,9 +5,9 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class StandardsSubscriptionState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="standardsArn")
-      private final @Nullable Output<String> standardsArn;
+    private @Nullable Output<String> standardsArn;
 
-    public Output<String> standardsArn() {
-        return this.standardsArn == null ? Codegen.empty() : this.standardsArn;
+    public Optional<Output<String>> standardsArn() {
+        return Optional.ofNullable(this.standardsArn);
     }
 
-    public StandardsSubscriptionState(@Nullable Output<String> standardsArn) {
-        this.standardsArn = standardsArn;
-    }
+    private StandardsSubscriptionState() {}
 
-    private StandardsSubscriptionState() {
-        this.standardsArn = Codegen.empty();
+    private StandardsSubscriptionState(StandardsSubscriptionState $) {
+        this.standardsArn = $.standardsArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardsSubscriptionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> standardsArn;
+        private StandardsSubscriptionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardsSubscriptionState();
         }
 
         public Builder(StandardsSubscriptionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.standardsArn = defaults.standardsArn;
+            $ = new StandardsSubscriptionState(Objects.requireNonNull(defaults));
         }
 
         public Builder standardsArn(@Nullable Output<String> standardsArn) {
-            this.standardsArn = standardsArn;
+            $.standardsArn = standardsArn;
             return this;
         }
-        public Builder standardsArn(@Nullable String standardsArn) {
-            this.standardsArn = Codegen.ofNullable(standardsArn);
-            return this;
-        }        public StandardsSubscriptionState build() {
-            return new StandardsSubscriptionState(standardsArn);
+
+        public Builder standardsArn(String standardsArn) {
+            return standardsArn(Output.of(standardsArn));
+        }
+
+        public StandardsSubscriptionState build() {
+            return $;
         }
     }
+
 }

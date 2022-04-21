@@ -19,45 +19,44 @@ public final class ThemeTileStyle extends com.pulumi.resources.InvokeArgs {
     public static final ThemeTileStyle Empty = new ThemeTileStyle();
 
     @Import(name="border")
-      private final @Nullable ThemeBorderStyle border;
+    private @Nullable ThemeBorderStyle border;
 
     public Optional<ThemeBorderStyle> border() {
-        return this.border == null ? Optional.empty() : Optional.ofNullable(this.border);
+        return Optional.ofNullable(this.border);
     }
 
-    public ThemeTileStyle(@Nullable ThemeBorderStyle border) {
-        this.border = border;
-    }
+    private ThemeTileStyle() {}
 
-    private ThemeTileStyle() {
-        this.border = null;
+    private ThemeTileStyle(ThemeTileStyle $) {
+        this.border = $.border;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeTileStyle defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ThemeBorderStyle border;
+        private ThemeTileStyle $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeTileStyle();
         }
 
         public Builder(ThemeTileStyle defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.border = defaults.border;
+            $ = new ThemeTileStyle(Objects.requireNonNull(defaults));
         }
 
         public Builder border(@Nullable ThemeBorderStyle border) {
-            this.border = border;
+            $.border = border;
             return this;
-        }        public ThemeTileStyle build() {
-            return new ThemeTileStyle(border);
+        }
+
+        public ThemeTileStyle build() {
+            return $;
         }
     }
+
 }

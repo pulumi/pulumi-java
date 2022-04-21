@@ -22,45 +22,45 @@ public final class IdentityConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userServiceAccountMapping", required=true)
-      private final Map<String,String> userServiceAccountMapping;
+    private Map<String,String> userServiceAccountMapping;
 
     public Map<String,String> userServiceAccountMapping() {
         return this.userServiceAccountMapping;
     }
 
-    public IdentityConfigResponse(Map<String,String> userServiceAccountMapping) {
-        this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping, "expected parameter 'userServiceAccountMapping' to be non-null");
-    }
+    private IdentityConfigResponse() {}
 
-    private IdentityConfigResponse() {
-        this.userServiceAccountMapping = Map.of();
+    private IdentityConfigResponse(IdentityConfigResponse $) {
+        this.userServiceAccountMapping = $.userServiceAccountMapping;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> userServiceAccountMapping;
+        private IdentityConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityConfigResponse();
         }
 
         public Builder(IdentityConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userServiceAccountMapping = defaults.userServiceAccountMapping;
+            $ = new IdentityConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder userServiceAccountMapping(Map<String,String> userServiceAccountMapping) {
-            this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping);
+            $.userServiceAccountMapping = userServiceAccountMapping;
             return this;
-        }        public IdentityConfigResponse build() {
-            return new IdentityConfigResponse(userServiceAccountMapping);
+        }
+
+        public IdentityConfigResponse build() {
+            $.userServiceAccountMapping = Objects.requireNonNull($.userServiceAccountMapping, "expected parameter 'userServiceAccountMapping' to be non-null");
+            return $;
         }
     }
+
 }

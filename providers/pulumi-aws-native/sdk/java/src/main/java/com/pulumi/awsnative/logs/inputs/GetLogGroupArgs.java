@@ -17,45 +17,45 @@ public final class GetLogGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logGroupName", required=true)
-      private final String logGroupName;
+    private String logGroupName;
 
     public String logGroupName() {
         return this.logGroupName;
     }
 
-    public GetLogGroupArgs(String logGroupName) {
-        this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
-    }
+    private GetLogGroupArgs() {}
 
-    private GetLogGroupArgs() {
-        this.logGroupName = null;
+    private GetLogGroupArgs(GetLogGroupArgs $) {
+        this.logGroupName = $.logGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLogGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String logGroupName;
+        private GetLogGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLogGroupArgs();
         }
 
         public Builder(GetLogGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
+            $ = new GetLogGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Objects.requireNonNull(logGroupName);
+            $.logGroupName = logGroupName;
             return this;
-        }        public GetLogGroupArgs build() {
-            return new GetLogGroupArgs(logGroupName);
+        }
+
+        public GetLogGroupArgs build() {
+            $.logGroupName = Objects.requireNonNull($.logGroupName, "expected parameter 'logGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,94 +16,83 @@ public final class ConnectionAliasAssociation extends com.pulumi.resources.Invok
     public static final ConnectionAliasAssociation Empty = new ConnectionAliasAssociation();
 
     @Import(name="associatedAccountId")
-      private final @Nullable String associatedAccountId;
+    private @Nullable String associatedAccountId;
 
     public Optional<String> associatedAccountId() {
-        return this.associatedAccountId == null ? Optional.empty() : Optional.ofNullable(this.associatedAccountId);
+        return Optional.ofNullable(this.associatedAccountId);
     }
 
     @Import(name="associationStatus")
-      private final @Nullable ConnectionAliasAssociationAssociationStatus associationStatus;
+    private @Nullable ConnectionAliasAssociationAssociationStatus associationStatus;
 
     public Optional<ConnectionAliasAssociationAssociationStatus> associationStatus() {
-        return this.associationStatus == null ? Optional.empty() : Optional.ofNullable(this.associationStatus);
+        return Optional.ofNullable(this.associationStatus);
     }
 
     @Import(name="connectionIdentifier")
-      private final @Nullable String connectionIdentifier;
+    private @Nullable String connectionIdentifier;
 
     public Optional<String> connectionIdentifier() {
-        return this.connectionIdentifier == null ? Optional.empty() : Optional.ofNullable(this.connectionIdentifier);
+        return Optional.ofNullable(this.connectionIdentifier);
     }
 
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public ConnectionAliasAssociation(
-        @Nullable String associatedAccountId,
-        @Nullable ConnectionAliasAssociationAssociationStatus associationStatus,
-        @Nullable String connectionIdentifier,
-        @Nullable String resourceId) {
-        this.associatedAccountId = associatedAccountId;
-        this.associationStatus = associationStatus;
-        this.connectionIdentifier = connectionIdentifier;
-        this.resourceId = resourceId;
-    }
+    private ConnectionAliasAssociation() {}
 
-    private ConnectionAliasAssociation() {
-        this.associatedAccountId = null;
-        this.associationStatus = null;
-        this.connectionIdentifier = null;
-        this.resourceId = null;
+    private ConnectionAliasAssociation(ConnectionAliasAssociation $) {
+        this.associatedAccountId = $.associatedAccountId;
+        this.associationStatus = $.associationStatus;
+        this.connectionIdentifier = $.connectionIdentifier;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionAliasAssociation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String associatedAccountId;
-        private @Nullable ConnectionAliasAssociationAssociationStatus associationStatus;
-        private @Nullable String connectionIdentifier;
-        private @Nullable String resourceId;
+        private ConnectionAliasAssociation $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionAliasAssociation();
         }
 
         public Builder(ConnectionAliasAssociation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associatedAccountId = defaults.associatedAccountId;
-    	      this.associationStatus = defaults.associationStatus;
-    	      this.connectionIdentifier = defaults.connectionIdentifier;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ConnectionAliasAssociation(Objects.requireNonNull(defaults));
         }
 
         public Builder associatedAccountId(@Nullable String associatedAccountId) {
-            this.associatedAccountId = associatedAccountId;
+            $.associatedAccountId = associatedAccountId;
             return this;
         }
+
         public Builder associationStatus(@Nullable ConnectionAliasAssociationAssociationStatus associationStatus) {
-            this.associationStatus = associationStatus;
+            $.associationStatus = associationStatus;
             return this;
         }
+
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
-            this.connectionIdentifier = connectionIdentifier;
+            $.connectionIdentifier = connectionIdentifier;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public ConnectionAliasAssociation build() {
-            return new ConnectionAliasAssociation(associatedAccountId, associationStatus, connectionIdentifier, resourceId);
+        }
+
+        public ConnectionAliasAssociation build() {
+            return $;
         }
     }
+
 }

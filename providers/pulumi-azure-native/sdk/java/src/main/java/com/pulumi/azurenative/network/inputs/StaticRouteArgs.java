@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StaticRouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressPrefixes")
-      private final @Nullable Output<List<String>> addressPrefixes;
+    private @Nullable Output<List<String>> addressPrefixes;
 
-    public Output<List<String>> addressPrefixes() {
-        return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
+    public Optional<Output<List<String>>> addressPrefixes() {
+        return Optional.ofNullable(this.addressPrefixes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StaticRouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class StaticRouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopIpAddress")
-      private final @Nullable Output<String> nextHopIpAddress;
+    private @Nullable Output<String> nextHopIpAddress;
 
-    public Output<String> nextHopIpAddress() {
-        return this.nextHopIpAddress == null ? Codegen.empty() : this.nextHopIpAddress;
+    public Optional<Output<String>> nextHopIpAddress() {
+        return Optional.ofNullable(this.nextHopIpAddress);
     }
 
-    public StaticRouteArgs(
-        @Nullable Output<List<String>> addressPrefixes,
-        @Nullable Output<String> name,
-        @Nullable Output<String> nextHopIpAddress) {
-        this.addressPrefixes = addressPrefixes;
-        this.name = name;
-        this.nextHopIpAddress = nextHopIpAddress;
-    }
+    private StaticRouteArgs() {}
 
-    private StaticRouteArgs() {
-        this.addressPrefixes = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nextHopIpAddress = Codegen.empty();
+    private StaticRouteArgs(StaticRouteArgs $) {
+        this.addressPrefixes = $.addressPrefixes;
+        this.name = $.name;
+        this.nextHopIpAddress = $.nextHopIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> addressPrefixes;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> nextHopIpAddress;
+        private StaticRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticRouteArgs();
         }
 
         public Builder(StaticRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefixes = defaults.addressPrefixes;
-    	      this.name = defaults.name;
-    	      this.nextHopIpAddress = defaults.nextHopIpAddress;
+            $ = new StaticRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
-            this.addressPrefixes = addressPrefixes;
+            $.addressPrefixes = addressPrefixes;
             return this;
         }
-        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = Codegen.ofNullable(addressPrefixes);
-            return this;
+
+        public Builder addressPrefixes(List<String> addressPrefixes) {
+            return addressPrefixes(Output.of(addressPrefixes));
         }
+
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
-            this.nextHopIpAddress = nextHopIpAddress;
+            $.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
-        public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
-            this.nextHopIpAddress = Codegen.ofNullable(nextHopIpAddress);
-            return this;
-        }        public StaticRouteArgs build() {
-            return new StaticRouteArgs(addressPrefixes, name, nextHopIpAddress);
+
+        public Builder nextHopIpAddress(String nextHopIpAddress) {
+            return nextHopIpAddress(Output.of(nextHopIpAddress));
+        }
+
+        public StaticRouteArgs build() {
+            return $;
         }
     }
+
 }

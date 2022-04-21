@@ -22,48 +22,49 @@ public final class BucketEncryption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverSideEncryptionConfiguration", required=true)
-      private final List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration;
+    private List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration;
 
     public List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
 
-    public BucketEncryption(List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration) {
-        this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration, "expected parameter 'serverSideEncryptionConfiguration' to be non-null");
-    }
+    private BucketEncryption() {}
 
-    private BucketEncryption() {
-        this.serverSideEncryptionConfiguration = List.of();
+    private BucketEncryption(BucketEncryption $) {
+        this.serverSideEncryptionConfiguration = $.serverSideEncryptionConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration;
+        private BucketEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketEncryption();
         }
 
         public Builder(BucketEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverSideEncryptionConfiguration = defaults.serverSideEncryptionConfiguration;
+            $ = new BucketEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder serverSideEncryptionConfiguration(List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration);
+            $.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
+
         public Builder serverSideEncryptionConfiguration(BucketServerSideEncryptionRule... serverSideEncryptionConfiguration) {
             return serverSideEncryptionConfiguration(List.of(serverSideEncryptionConfiguration));
-        }        public BucketEncryption build() {
-            return new BucketEncryption(serverSideEncryptionConfiguration);
+        }
+
+        public BucketEncryption build() {
+            $.serverSideEncryptionConfiguration = Objects.requireNonNull($.serverSideEncryptionConfiguration, "expected parameter 'serverSideEncryptionConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

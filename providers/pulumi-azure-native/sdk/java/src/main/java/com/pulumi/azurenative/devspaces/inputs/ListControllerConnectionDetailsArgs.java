@@ -17,7 +17,7 @@ public final class ListControllerConnectionDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class ListControllerConnectionDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListControllerConnectionDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="targetContainerHostResourceId", required=true)
-      private final String targetContainerHostResourceId;
+    private String targetContainerHostResourceId;
 
     public String targetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
 
-    public ListControllerConnectionDetailsArgs(
-        String name,
-        String resourceGroupName,
-        String targetContainerHostResourceId) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.targetContainerHostResourceId = Objects.requireNonNull(targetContainerHostResourceId, "expected parameter 'targetContainerHostResourceId' to be non-null");
-    }
+    private ListControllerConnectionDetailsArgs() {}
 
-    private ListControllerConnectionDetailsArgs() {
-        this.name = null;
-        this.resourceGroupName = null;
-        this.targetContainerHostResourceId = null;
+    private ListControllerConnectionDetailsArgs(ListControllerConnectionDetailsArgs $) {
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.targetContainerHostResourceId = $.targetContainerHostResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListControllerConnectionDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceGroupName;
-        private String targetContainerHostResourceId;
+        private ListControllerConnectionDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListControllerConnectionDetailsArgs();
         }
 
         public Builder(ListControllerConnectionDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.targetContainerHostResourceId = defaults.targetContainerHostResourceId;
+            $ = new ListControllerConnectionDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder targetContainerHostResourceId(String targetContainerHostResourceId) {
-            this.targetContainerHostResourceId = Objects.requireNonNull(targetContainerHostResourceId);
+            $.targetContainerHostResourceId = targetContainerHostResourceId;
             return this;
-        }        public ListControllerConnectionDetailsArgs build() {
-            return new ListControllerConnectionDetailsArgs(name, resourceGroupName, targetContainerHostResourceId);
+        }
+
+        public ListControllerConnectionDetailsArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.targetContainerHostResourceId = Objects.requireNonNull($.targetContainerHostResourceId, "expected parameter 'targetContainerHostResourceId' to be non-null");
+            return $;
         }
     }
+
 }

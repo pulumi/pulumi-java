@@ -6,9 +6,9 @@ package com.pulumi.awsnative.auditmanager.inputs;
 import com.pulumi.awsnative.auditmanager.enums.AssessmentReportDestinationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class AssessmentReportsDestinationArgs extends com.pulumi.resources
     public static final AssessmentReportsDestinationArgs Empty = new AssessmentReportsDestinationArgs();
 
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     @Import(name="destinationType")
-      private final @Nullable Output<AssessmentReportDestinationType> destinationType;
+    private @Nullable Output<AssessmentReportDestinationType> destinationType;
 
-    public Output<AssessmentReportDestinationType> destinationType() {
-        return this.destinationType == null ? Codegen.empty() : this.destinationType;
+    public Optional<Output<AssessmentReportDestinationType>> destinationType() {
+        return Optional.ofNullable(this.destinationType);
     }
 
-    public AssessmentReportsDestinationArgs(
-        @Nullable Output<String> destination,
-        @Nullable Output<AssessmentReportDestinationType> destinationType) {
-        this.destination = destination;
-        this.destinationType = destinationType;
-    }
+    private AssessmentReportsDestinationArgs() {}
 
-    private AssessmentReportsDestinationArgs() {
-        this.destination = Codegen.empty();
-        this.destinationType = Codegen.empty();
+    private AssessmentReportsDestinationArgs(AssessmentReportsDestinationArgs $) {
+        this.destination = $.destination;
+        this.destinationType = $.destinationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentReportsDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destination;
-        private @Nullable Output<AssessmentReportDestinationType> destinationType;
+        private AssessmentReportsDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentReportsDestinationArgs();
         }
 
         public Builder(AssessmentReportsDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.destinationType = defaults.destinationType;
+            $ = new AssessmentReportsDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder destinationType(@Nullable Output<AssessmentReportDestinationType> destinationType) {
-            this.destinationType = destinationType;
+            $.destinationType = destinationType;
             return this;
         }
-        public Builder destinationType(@Nullable AssessmentReportDestinationType destinationType) {
-            this.destinationType = Codegen.ofNullable(destinationType);
-            return this;
-        }        public AssessmentReportsDestinationArgs build() {
-            return new AssessmentReportsDestinationArgs(destination, destinationType);
+
+        public Builder destinationType(AssessmentReportDestinationType destinationType) {
+            return destinationType(Output.of(destinationType));
+        }
+
+        public AssessmentReportsDestinationArgs build() {
+            return $;
         }
     }
+
 }

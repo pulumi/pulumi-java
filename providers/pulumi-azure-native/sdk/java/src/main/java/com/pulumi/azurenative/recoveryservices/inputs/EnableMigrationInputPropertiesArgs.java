@@ -6,7 +6,6 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.VMwareCbtEnableMigrationInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class EnableMigrationInputPropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="policyId", required=true)
-      private final Output<String> policyId;
+    private Output<String> policyId;
 
     public Output<String> policyId() {
         return this.policyId;
@@ -35,63 +34,60 @@ public final class EnableMigrationInputPropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="providerSpecificDetails", required=true)
-      private final Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
+    private Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
 
     public Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails() {
         return this.providerSpecificDetails;
     }
 
-    public EnableMigrationInputPropertiesArgs(
-        Output<String> policyId,
-        Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails) {
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-        this.providerSpecificDetails = Objects.requireNonNull(providerSpecificDetails, "expected parameter 'providerSpecificDetails' to be non-null");
-    }
+    private EnableMigrationInputPropertiesArgs() {}
 
-    private EnableMigrationInputPropertiesArgs() {
-        this.policyId = Codegen.empty();
-        this.providerSpecificDetails = Codegen.empty();
+    private EnableMigrationInputPropertiesArgs(EnableMigrationInputPropertiesArgs $) {
+        this.policyId = $.policyId;
+        this.providerSpecificDetails = $.providerSpecificDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnableMigrationInputPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyId;
-        private Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
+        private EnableMigrationInputPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnableMigrationInputPropertiesArgs();
         }
 
         public Builder(EnableMigrationInputPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyId = defaults.policyId;
-    	      this.providerSpecificDetails = defaults.providerSpecificDetails;
+            $ = new EnableMigrationInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyId(Output<String> policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
         }
+
         public Builder policyId(String policyId) {
-            this.policyId = Output.of(Objects.requireNonNull(policyId));
-            return this;
+            return policyId(Output.of(policyId));
         }
+
         public Builder providerSpecificDetails(Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails) {
-            this.providerSpecificDetails = Objects.requireNonNull(providerSpecificDetails);
+            $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
+
         public Builder providerSpecificDetails(VMwareCbtEnableMigrationInputArgs providerSpecificDetails) {
-            this.providerSpecificDetails = Output.of(Objects.requireNonNull(providerSpecificDetails));
-            return this;
-        }        public EnableMigrationInputPropertiesArgs build() {
-            return new EnableMigrationInputPropertiesArgs(policyId, providerSpecificDetails);
+            return providerSpecificDetails(Output.of(providerSpecificDetails));
+        }
+
+        public EnableMigrationInputPropertiesArgs build() {
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            $.providerSpecificDetails = Objects.requireNonNull($.providerSpecificDetails, "expected parameter 'providerSpecificDetails' to be non-null");
+            return $;
         }
     }
+
 }

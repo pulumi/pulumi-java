@@ -22,7 +22,7 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,7 +33,7 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="operator", required=true)
-      private final String operator;
+    private String operator;
 
     public String operator() {
         return this.operator;
@@ -44,67 +44,63 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public MetricDimensionResponse(
-        String name,
-        String operator,
-        List<String> values) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private MetricDimensionResponse() {}
 
-    private MetricDimensionResponse() {
-        this.name = null;
-        this.operator = null;
-        this.values = List.of();
+    private MetricDimensionResponse(MetricDimensionResponse $) {
+        this.name = $.name;
+        this.operator = $.operator;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricDimensionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String operator;
-        private List<String> values;
+        private MetricDimensionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricDimensionResponse();
         }
 
         public Builder(MetricDimensionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.operator = defaults.operator;
-    	      this.values = defaults.values;
+            $ = new MetricDimensionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public MetricDimensionResponse build() {
-            return new MetricDimensionResponse(name, operator, values);
+        }
+
+        public MetricDimensionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

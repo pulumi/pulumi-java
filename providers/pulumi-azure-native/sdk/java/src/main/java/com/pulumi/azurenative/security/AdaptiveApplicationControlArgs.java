@@ -8,10 +8,10 @@ import com.pulumi.azurenative.security.inputs.ProtectionModeArgs;
 import com.pulumi.azurenative.security.inputs.VmRecommendationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="ascLocation", required=true)
-      private final Output<String> ascLocation;
+    private Output<String> ascLocation;
 
     public Output<String> ascLocation() {
         return this.ascLocation;
@@ -35,10 +35,10 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enforcementMode")
-      private final @Nullable Output<String> enforcementMode;
+    private @Nullable Output<String> enforcementMode;
 
-    public Output<String> enforcementMode() {
-        return this.enforcementMode == null ? Codegen.empty() : this.enforcementMode;
+    public Optional<Output<String>> enforcementMode() {
+        return Optional.ofNullable(this.enforcementMode);
     }
 
     /**
@@ -46,17 +46,17 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="groupName")
-      private final @Nullable Output<String> groupName;
+    private @Nullable Output<String> groupName;
 
-    public Output<String> groupName() {
-        return this.groupName == null ? Codegen.empty() : this.groupName;
+    public Optional<Output<String>> groupName() {
+        return Optional.ofNullable(this.groupName);
     }
 
     @Import(name="pathRecommendations")
-      private final @Nullable Output<List<PathRecommendationArgs>> pathRecommendations;
+    private @Nullable Output<List<PathRecommendationArgs>> pathRecommendations;
 
-    public Output<List<PathRecommendationArgs>> pathRecommendations() {
-        return this.pathRecommendations == null ? Codegen.empty() : this.pathRecommendations;
+    public Optional<Output<List<PathRecommendationArgs>>> pathRecommendations() {
+        return Optional.ofNullable(this.pathRecommendations);
     }
 
     /**
@@ -64,128 +64,114 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="protectionMode")
-      private final @Nullable Output<ProtectionModeArgs> protectionMode;
+    private @Nullable Output<ProtectionModeArgs> protectionMode;
 
-    public Output<ProtectionModeArgs> protectionMode() {
-        return this.protectionMode == null ? Codegen.empty() : this.protectionMode;
+    public Optional<Output<ProtectionModeArgs>> protectionMode() {
+        return Optional.ofNullable(this.protectionMode);
     }
 
     @Import(name="vmRecommendations")
-      private final @Nullable Output<List<VmRecommendationArgs>> vmRecommendations;
+    private @Nullable Output<List<VmRecommendationArgs>> vmRecommendations;
 
-    public Output<List<VmRecommendationArgs>> vmRecommendations() {
-        return this.vmRecommendations == null ? Codegen.empty() : this.vmRecommendations;
+    public Optional<Output<List<VmRecommendationArgs>>> vmRecommendations() {
+        return Optional.ofNullable(this.vmRecommendations);
     }
 
-    public AdaptiveApplicationControlArgs(
-        Output<String> ascLocation,
-        @Nullable Output<String> enforcementMode,
-        @Nullable Output<String> groupName,
-        @Nullable Output<List<PathRecommendationArgs>> pathRecommendations,
-        @Nullable Output<ProtectionModeArgs> protectionMode,
-        @Nullable Output<List<VmRecommendationArgs>> vmRecommendations) {
-        this.ascLocation = Objects.requireNonNull(ascLocation, "expected parameter 'ascLocation' to be non-null");
-        this.enforcementMode = enforcementMode;
-        this.groupName = groupName;
-        this.pathRecommendations = pathRecommendations;
-        this.protectionMode = protectionMode;
-        this.vmRecommendations = vmRecommendations;
-    }
+    private AdaptiveApplicationControlArgs() {}
 
-    private AdaptiveApplicationControlArgs() {
-        this.ascLocation = Codegen.empty();
-        this.enforcementMode = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.pathRecommendations = Codegen.empty();
-        this.protectionMode = Codegen.empty();
-        this.vmRecommendations = Codegen.empty();
+    private AdaptiveApplicationControlArgs(AdaptiveApplicationControlArgs $) {
+        this.ascLocation = $.ascLocation;
+        this.enforcementMode = $.enforcementMode;
+        this.groupName = $.groupName;
+        this.pathRecommendations = $.pathRecommendations;
+        this.protectionMode = $.protectionMode;
+        this.vmRecommendations = $.vmRecommendations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdaptiveApplicationControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ascLocation;
-        private @Nullable Output<String> enforcementMode;
-        private @Nullable Output<String> groupName;
-        private @Nullable Output<List<PathRecommendationArgs>> pathRecommendations;
-        private @Nullable Output<ProtectionModeArgs> protectionMode;
-        private @Nullable Output<List<VmRecommendationArgs>> vmRecommendations;
+        private AdaptiveApplicationControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdaptiveApplicationControlArgs();
         }
 
         public Builder(AdaptiveApplicationControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ascLocation = defaults.ascLocation;
-    	      this.enforcementMode = defaults.enforcementMode;
-    	      this.groupName = defaults.groupName;
-    	      this.pathRecommendations = defaults.pathRecommendations;
-    	      this.protectionMode = defaults.protectionMode;
-    	      this.vmRecommendations = defaults.vmRecommendations;
+            $ = new AdaptiveApplicationControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ascLocation(Output<String> ascLocation) {
-            this.ascLocation = Objects.requireNonNull(ascLocation);
+            $.ascLocation = ascLocation;
             return this;
         }
+
         public Builder ascLocation(String ascLocation) {
-            this.ascLocation = Output.of(Objects.requireNonNull(ascLocation));
-            return this;
+            return ascLocation(Output.of(ascLocation));
         }
+
         public Builder enforcementMode(@Nullable Output<String> enforcementMode) {
-            this.enforcementMode = enforcementMode;
+            $.enforcementMode = enforcementMode;
             return this;
         }
-        public Builder enforcementMode(@Nullable String enforcementMode) {
-            this.enforcementMode = Codegen.ofNullable(enforcementMode);
-            return this;
+
+        public Builder enforcementMode(String enforcementMode) {
+            return enforcementMode(Output.of(enforcementMode));
         }
+
         public Builder groupName(@Nullable Output<String> groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
-        public Builder groupName(@Nullable String groupName) {
-            this.groupName = Codegen.ofNullable(groupName);
-            return this;
+
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
         }
+
         public Builder pathRecommendations(@Nullable Output<List<PathRecommendationArgs>> pathRecommendations) {
-            this.pathRecommendations = pathRecommendations;
+            $.pathRecommendations = pathRecommendations;
             return this;
         }
-        public Builder pathRecommendations(@Nullable List<PathRecommendationArgs> pathRecommendations) {
-            this.pathRecommendations = Codegen.ofNullable(pathRecommendations);
-            return this;
+
+        public Builder pathRecommendations(List<PathRecommendationArgs> pathRecommendations) {
+            return pathRecommendations(Output.of(pathRecommendations));
         }
+
         public Builder pathRecommendations(PathRecommendationArgs... pathRecommendations) {
             return pathRecommendations(List.of(pathRecommendations));
         }
+
         public Builder protectionMode(@Nullable Output<ProtectionModeArgs> protectionMode) {
-            this.protectionMode = protectionMode;
+            $.protectionMode = protectionMode;
             return this;
         }
-        public Builder protectionMode(@Nullable ProtectionModeArgs protectionMode) {
-            this.protectionMode = Codegen.ofNullable(protectionMode);
-            return this;
+
+        public Builder protectionMode(ProtectionModeArgs protectionMode) {
+            return protectionMode(Output.of(protectionMode));
         }
+
         public Builder vmRecommendations(@Nullable Output<List<VmRecommendationArgs>> vmRecommendations) {
-            this.vmRecommendations = vmRecommendations;
+            $.vmRecommendations = vmRecommendations;
             return this;
         }
-        public Builder vmRecommendations(@Nullable List<VmRecommendationArgs> vmRecommendations) {
-            this.vmRecommendations = Codegen.ofNullable(vmRecommendations);
-            return this;
+
+        public Builder vmRecommendations(List<VmRecommendationArgs> vmRecommendations) {
+            return vmRecommendations(Output.of(vmRecommendations));
         }
+
         public Builder vmRecommendations(VmRecommendationArgs... vmRecommendations) {
             return vmRecommendations(List.of(vmRecommendations));
-        }        public AdaptiveApplicationControlArgs build() {
-            return new AdaptiveApplicationControlArgs(ascLocation, enforcementMode, groupName, pathRecommendations, protectionMode, vmRecommendations);
+        }
+
+        public AdaptiveApplicationControlArgs build() {
+            $.ascLocation = Objects.requireNonNull($.ascLocation, "expected parameter 'ascLocation' to be non-null");
+            return $;
         }
     }
+
 }

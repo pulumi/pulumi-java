@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class EncryptionConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
-    public EncryptionConfigurationArgs(@Nullable Output<String> kmsKeyName) {
-        this.kmsKeyName = kmsKeyName;
-    }
+    private EncryptionConfigurationArgs() {}
 
-    private EncryptionConfigurationArgs() {
-        this.kmsKeyName = Codegen.empty();
+    private EncryptionConfigurationArgs(EncryptionConfigurationArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyName;
+        private EncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigurationArgs();
         }
 
         public Builder(EncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new EncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
-        }        public EncryptionConfigurationArgs build() {
-            return new EncryptionConfigurationArgs(kmsKeyName);
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
+        }
+
+        public EncryptionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

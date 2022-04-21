@@ -17,45 +17,45 @@ public final class ArtifactHashesResponse extends com.pulumi.resources.InvokeArg
     public static final ArtifactHashesResponse Empty = new ArtifactHashesResponse();
 
     @Import(name="sha256", required=true)
-      private final String sha256;
+    private String sha256;
 
     public String sha256() {
         return this.sha256;
     }
 
-    public ArtifactHashesResponse(String sha256) {
-        this.sha256 = Objects.requireNonNull(sha256, "expected parameter 'sha256' to be non-null");
-    }
+    private ArtifactHashesResponse() {}
 
-    private ArtifactHashesResponse() {
-        this.sha256 = null;
+    private ArtifactHashesResponse(ArtifactHashesResponse $) {
+        this.sha256 = $.sha256;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactHashesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sha256;
+        private ArtifactHashesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactHashesResponse();
         }
 
         public Builder(ArtifactHashesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sha256 = defaults.sha256;
+            $ = new ArtifactHashesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sha256(String sha256) {
-            this.sha256 = Objects.requireNonNull(sha256);
+            $.sha256 = sha256;
             return this;
-        }        public ArtifactHashesResponse build() {
-            return new ArtifactHashesResponse(sha256);
+        }
+
+        public ArtifactHashesResponse build() {
+            $.sha256 = Objects.requireNonNull($.sha256, "expected parameter 'sha256' to be non-null");
+            return $;
         }
     }
+
 }

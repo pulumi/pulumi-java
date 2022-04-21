@@ -5,10 +5,10 @@ package com.pulumi.gcp.identityplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TenantDefaultSupportedIdpConfigState extends com.pulumi.resou
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TenantDefaultSupportedIdpConfigState extends com.pulumi.resou
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<String> clientSecret;
+    private @Nullable Output<String> clientSecret;
 
-    public Output<String> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<String>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TenantDefaultSupportedIdpConfigState extends com.pulumi.resou
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TenantDefaultSupportedIdpConfigState extends com.pulumi.resou
      * 
      */
     @Import(name="idpId")
-      private final @Nullable Output<String> idpId;
+    private @Nullable Output<String> idpId;
 
-    public Output<String> idpId() {
-        return this.idpId == null ? Codegen.empty() : this.idpId;
+    public Optional<Output<String>> idpId() {
+        return Optional.ofNullable(this.idpId);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class TenantDefaultSupportedIdpConfigState extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class TenantDefaultSupportedIdpConfigState extends com.pulumi.resou
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -98,128 +98,108 @@ public final class TenantDefaultSupportedIdpConfigState extends com.pulumi.resou
      * 
      */
     @Import(name="tenant")
-      private final @Nullable Output<String> tenant;
+    private @Nullable Output<String> tenant;
 
-    public Output<String> tenant() {
-        return this.tenant == null ? Codegen.empty() : this.tenant;
+    public Optional<Output<String>> tenant() {
+        return Optional.ofNullable(this.tenant);
     }
 
-    public TenantDefaultSupportedIdpConfigState(
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> clientSecret,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> idpId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> tenant) {
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.enabled = enabled;
-        this.idpId = idpId;
-        this.name = name;
-        this.project = project;
-        this.tenant = tenant;
-    }
+    private TenantDefaultSupportedIdpConfigState() {}
 
-    private TenantDefaultSupportedIdpConfigState() {
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.idpId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tenant = Codegen.empty();
+    private TenantDefaultSupportedIdpConfigState(TenantDefaultSupportedIdpConfigState $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.enabled = $.enabled;
+        this.idpId = $.idpId;
+        this.name = $.name;
+        this.project = $.project;
+        this.tenant = $.tenant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TenantDefaultSupportedIdpConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> clientSecret;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> idpId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> tenant;
+        private TenantDefaultSupportedIdpConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TenantDefaultSupportedIdpConfigState();
         }
 
         public Builder(TenantDefaultSupportedIdpConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.enabled = defaults.enabled;
-    	      this.idpId = defaults.idpId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.tenant = defaults.tenant;
+            $ = new TenantDefaultSupportedIdpConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
+
+        public Builder clientSecret(String clientSecret) {
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder idpId(@Nullable Output<String> idpId) {
-            this.idpId = idpId;
+            $.idpId = idpId;
             return this;
         }
-        public Builder idpId(@Nullable String idpId) {
-            this.idpId = Codegen.ofNullable(idpId);
-            return this;
+
+        public Builder idpId(String idpId) {
+            return idpId(Output.of(idpId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tenant(@Nullable Output<String> tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
-        public Builder tenant(@Nullable String tenant) {
-            this.tenant = Codegen.ofNullable(tenant);
-            return this;
-        }        public TenantDefaultSupportedIdpConfigState build() {
-            return new TenantDefaultSupportedIdpConfigState(clientId, clientSecret, enabled, idpId, name, project, tenant);
+
+        public Builder tenant(String tenant) {
+            return tenant(Output.of(tenant));
+        }
+
+        public TenantDefaultSupportedIdpConfigState build() {
+            return $;
         }
     }
+
 }

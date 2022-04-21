@@ -24,7 +24,7 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -35,7 +35,7 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -46,7 +46,7 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -57,7 +57,7 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="maxThreshold", required=true)
-      private final Integer maxThreshold;
+    private Integer maxThreshold;
 
     public Integer maxThreshold() {
         return this.maxThreshold;
@@ -68,7 +68,7 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="minThreshold", required=true)
-      private final Integer minThreshold;
+    private Integer minThreshold;
 
     public Integer minThreshold() {
         return this.minThreshold;
@@ -80,91 +80,80 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="ruleType", required=true)
-      private final String ruleType;
+    private String ruleType;
 
     public String ruleType() {
         return this.ruleType;
     }
 
-    public ThresholdCustomAlertRuleResponse(
-        String description,
-        String displayName,
-        Boolean isEnabled,
-        Integer maxThreshold,
-        Integer minThreshold,
-        String ruleType) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.maxThreshold = Objects.requireNonNull(maxThreshold, "expected parameter 'maxThreshold' to be non-null");
-        this.minThreshold = Objects.requireNonNull(minThreshold, "expected parameter 'minThreshold' to be non-null");
-        this.ruleType = Codegen.stringProp("ruleType").arg(ruleType).require();
-    }
+    private ThresholdCustomAlertRuleResponse() {}
 
-    private ThresholdCustomAlertRuleResponse() {
-        this.description = null;
-        this.displayName = null;
-        this.isEnabled = null;
-        this.maxThreshold = null;
-        this.minThreshold = null;
-        this.ruleType = null;
+    private ThresholdCustomAlertRuleResponse(ThresholdCustomAlertRuleResponse $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.isEnabled = $.isEnabled;
+        this.maxThreshold = $.maxThreshold;
+        this.minThreshold = $.minThreshold;
+        this.ruleType = $.ruleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThresholdCustomAlertRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String displayName;
-        private Boolean isEnabled;
-        private Integer maxThreshold;
-        private Integer minThreshold;
-        private String ruleType;
+        private ThresholdCustomAlertRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThresholdCustomAlertRuleResponse();
         }
 
         public Builder(ThresholdCustomAlertRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.maxThreshold = defaults.maxThreshold;
-    	      this.minThreshold = defaults.minThreshold;
-    	      this.ruleType = defaults.ruleType;
+            $ = new ThresholdCustomAlertRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder maxThreshold(Integer maxThreshold) {
-            this.maxThreshold = Objects.requireNonNull(maxThreshold);
+            $.maxThreshold = maxThreshold;
             return this;
         }
+
         public Builder minThreshold(Integer minThreshold) {
-            this.minThreshold = Objects.requireNonNull(minThreshold);
+            $.minThreshold = minThreshold;
             return this;
         }
+
         public Builder ruleType(String ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
-        }        public ThresholdCustomAlertRuleResponse build() {
-            return new ThresholdCustomAlertRuleResponse(description, displayName, isEnabled, maxThreshold, minThreshold, ruleType);
+        }
+
+        public ThresholdCustomAlertRuleResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.maxThreshold = Objects.requireNonNull($.maxThreshold, "expected parameter 'maxThreshold' to be non-null");
+            $.minThreshold = Objects.requireNonNull($.minThreshold, "expected parameter 'minThreshold' to be non-null");
+            $.ruleType = Codegen.stringProp("ruleType").arg($.ruleType).require();
+            return $;
         }
     }
+
 }

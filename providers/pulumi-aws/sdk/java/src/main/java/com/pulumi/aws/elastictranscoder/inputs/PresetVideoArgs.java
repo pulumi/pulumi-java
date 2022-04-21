@@ -5,9 +5,9 @@ package com.pulumi.aws.elastictranscoder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aspectRatio")
-      private final @Nullable Output<String> aspectRatio;
+    private @Nullable Output<String> aspectRatio;
 
-    public Output<String> aspectRatio() {
-        return this.aspectRatio == null ? Codegen.empty() : this.aspectRatio;
+    public Optional<Output<String>> aspectRatio() {
+        return Optional.ofNullable(this.aspectRatio);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bitRate")
-      private final @Nullable Output<String> bitRate;
+    private @Nullable Output<String> bitRate;
 
-    public Output<String> bitRate() {
-        return this.bitRate == null ? Codegen.empty() : this.bitRate;
+    public Optional<Output<String>> bitRate() {
+        return Optional.ofNullable(this.bitRate);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="codec")
-      private final @Nullable Output<String> codec;
+    private @Nullable Output<String> codec;
 
-    public Output<String> codec() {
-        return this.codec == null ? Codegen.empty() : this.codec;
+    public Optional<Output<String>> codec() {
+        return Optional.ofNullable(this.codec);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayAspectRatio")
-      private final @Nullable Output<String> displayAspectRatio;
+    private @Nullable Output<String> displayAspectRatio;
 
-    public Output<String> displayAspectRatio() {
-        return this.displayAspectRatio == null ? Codegen.empty() : this.displayAspectRatio;
+    public Optional<Output<String>> displayAspectRatio() {
+        return Optional.ofNullable(this.displayAspectRatio);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedGop")
-      private final @Nullable Output<String> fixedGop;
+    private @Nullable Output<String> fixedGop;
 
-    public Output<String> fixedGop() {
-        return this.fixedGop == null ? Codegen.empty() : this.fixedGop;
+    public Optional<Output<String>> fixedGop() {
+        return Optional.ofNullable(this.fixedGop);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frameRate")
-      private final @Nullable Output<String> frameRate;
+    private @Nullable Output<String> frameRate;
 
-    public Output<String> frameRate() {
-        return this.frameRate == null ? Codegen.empty() : this.frameRate;
+    public Optional<Output<String>> frameRate() {
+        return Optional.ofNullable(this.frameRate);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyframesMaxDist")
-      private final @Nullable Output<String> keyframesMaxDist;
+    private @Nullable Output<String> keyframesMaxDist;
 
-    public Output<String> keyframesMaxDist() {
-        return this.keyframesMaxDist == null ? Codegen.empty() : this.keyframesMaxDist;
+    public Optional<Output<String>> keyframesMaxDist() {
+        return Optional.ofNullable(this.keyframesMaxDist);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxFrameRate")
-      private final @Nullable Output<String> maxFrameRate;
+    private @Nullable Output<String> maxFrameRate;
 
-    public Output<String> maxFrameRate() {
-        return this.maxFrameRate == null ? Codegen.empty() : this.maxFrameRate;
+    public Optional<Output<String>> maxFrameRate() {
+        return Optional.ofNullable(this.maxFrameRate);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxHeight")
-      private final @Nullable Output<String> maxHeight;
+    private @Nullable Output<String> maxHeight;
 
-    public Output<String> maxHeight() {
-        return this.maxHeight == null ? Codegen.empty() : this.maxHeight;
+    public Optional<Output<String>> maxHeight() {
+        return Optional.ofNullable(this.maxHeight);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxWidth")
-      private final @Nullable Output<String> maxWidth;
+    private @Nullable Output<String> maxWidth;
 
-    public Output<String> maxWidth() {
-        return this.maxWidth == null ? Codegen.empty() : this.maxWidth;
+    public Optional<Output<String>> maxWidth() {
+        return Optional.ofNullable(this.maxWidth);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="paddingPolicy")
-      private final @Nullable Output<String> paddingPolicy;
+    private @Nullable Output<String> paddingPolicy;
 
-    public Output<String> paddingPolicy() {
-        return this.paddingPolicy == null ? Codegen.empty() : this.paddingPolicy;
+    public Optional<Output<String>> paddingPolicy() {
+        return Optional.ofNullable(this.paddingPolicy);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resolution")
-      private final @Nullable Output<String> resolution;
+    private @Nullable Output<String> resolution;
 
-    public Output<String> resolution() {
-        return this.resolution == null ? Codegen.empty() : this.resolution;
+    public Optional<Output<String>> resolution() {
+        return Optional.ofNullable(this.resolution);
     }
 
     /**
@@ -152,206 +152,168 @@ public final class PresetVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizingPolicy")
-      private final @Nullable Output<String> sizingPolicy;
+    private @Nullable Output<String> sizingPolicy;
 
-    public Output<String> sizingPolicy() {
-        return this.sizingPolicy == null ? Codegen.empty() : this.sizingPolicy;
+    public Optional<Output<String>> sizingPolicy() {
+        return Optional.ofNullable(this.sizingPolicy);
     }
 
-    public PresetVideoArgs(
-        @Nullable Output<String> aspectRatio,
-        @Nullable Output<String> bitRate,
-        @Nullable Output<String> codec,
-        @Nullable Output<String> displayAspectRatio,
-        @Nullable Output<String> fixedGop,
-        @Nullable Output<String> frameRate,
-        @Nullable Output<String> keyframesMaxDist,
-        @Nullable Output<String> maxFrameRate,
-        @Nullable Output<String> maxHeight,
-        @Nullable Output<String> maxWidth,
-        @Nullable Output<String> paddingPolicy,
-        @Nullable Output<String> resolution,
-        @Nullable Output<String> sizingPolicy) {
-        this.aspectRatio = aspectRatio;
-        this.bitRate = bitRate;
-        this.codec = codec;
-        this.displayAspectRatio = displayAspectRatio;
-        this.fixedGop = fixedGop;
-        this.frameRate = frameRate;
-        this.keyframesMaxDist = keyframesMaxDist;
-        this.maxFrameRate = maxFrameRate;
-        this.maxHeight = maxHeight;
-        this.maxWidth = maxWidth;
-        this.paddingPolicy = paddingPolicy;
-        this.resolution = resolution;
-        this.sizingPolicy = sizingPolicy;
-    }
+    private PresetVideoArgs() {}
 
-    private PresetVideoArgs() {
-        this.aspectRatio = Codegen.empty();
-        this.bitRate = Codegen.empty();
-        this.codec = Codegen.empty();
-        this.displayAspectRatio = Codegen.empty();
-        this.fixedGop = Codegen.empty();
-        this.frameRate = Codegen.empty();
-        this.keyframesMaxDist = Codegen.empty();
-        this.maxFrameRate = Codegen.empty();
-        this.maxHeight = Codegen.empty();
-        this.maxWidth = Codegen.empty();
-        this.paddingPolicy = Codegen.empty();
-        this.resolution = Codegen.empty();
-        this.sizingPolicy = Codegen.empty();
+    private PresetVideoArgs(PresetVideoArgs $) {
+        this.aspectRatio = $.aspectRatio;
+        this.bitRate = $.bitRate;
+        this.codec = $.codec;
+        this.displayAspectRatio = $.displayAspectRatio;
+        this.fixedGop = $.fixedGop;
+        this.frameRate = $.frameRate;
+        this.keyframesMaxDist = $.keyframesMaxDist;
+        this.maxFrameRate = $.maxFrameRate;
+        this.maxHeight = $.maxHeight;
+        this.maxWidth = $.maxWidth;
+        this.paddingPolicy = $.paddingPolicy;
+        this.resolution = $.resolution;
+        this.sizingPolicy = $.sizingPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PresetVideoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aspectRatio;
-        private @Nullable Output<String> bitRate;
-        private @Nullable Output<String> codec;
-        private @Nullable Output<String> displayAspectRatio;
-        private @Nullable Output<String> fixedGop;
-        private @Nullable Output<String> frameRate;
-        private @Nullable Output<String> keyframesMaxDist;
-        private @Nullable Output<String> maxFrameRate;
-        private @Nullable Output<String> maxHeight;
-        private @Nullable Output<String> maxWidth;
-        private @Nullable Output<String> paddingPolicy;
-        private @Nullable Output<String> resolution;
-        private @Nullable Output<String> sizingPolicy;
+        private PresetVideoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PresetVideoArgs();
         }
 
         public Builder(PresetVideoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aspectRatio = defaults.aspectRatio;
-    	      this.bitRate = defaults.bitRate;
-    	      this.codec = defaults.codec;
-    	      this.displayAspectRatio = defaults.displayAspectRatio;
-    	      this.fixedGop = defaults.fixedGop;
-    	      this.frameRate = defaults.frameRate;
-    	      this.keyframesMaxDist = defaults.keyframesMaxDist;
-    	      this.maxFrameRate = defaults.maxFrameRate;
-    	      this.maxHeight = defaults.maxHeight;
-    	      this.maxWidth = defaults.maxWidth;
-    	      this.paddingPolicy = defaults.paddingPolicy;
-    	      this.resolution = defaults.resolution;
-    	      this.sizingPolicy = defaults.sizingPolicy;
+            $ = new PresetVideoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aspectRatio(@Nullable Output<String> aspectRatio) {
-            this.aspectRatio = aspectRatio;
+            $.aspectRatio = aspectRatio;
             return this;
         }
-        public Builder aspectRatio(@Nullable String aspectRatio) {
-            this.aspectRatio = Codegen.ofNullable(aspectRatio);
-            return this;
+
+        public Builder aspectRatio(String aspectRatio) {
+            return aspectRatio(Output.of(aspectRatio));
         }
+
         public Builder bitRate(@Nullable Output<String> bitRate) {
-            this.bitRate = bitRate;
+            $.bitRate = bitRate;
             return this;
         }
-        public Builder bitRate(@Nullable String bitRate) {
-            this.bitRate = Codegen.ofNullable(bitRate);
-            return this;
+
+        public Builder bitRate(String bitRate) {
+            return bitRate(Output.of(bitRate));
         }
+
         public Builder codec(@Nullable Output<String> codec) {
-            this.codec = codec;
+            $.codec = codec;
             return this;
         }
-        public Builder codec(@Nullable String codec) {
-            this.codec = Codegen.ofNullable(codec);
-            return this;
+
+        public Builder codec(String codec) {
+            return codec(Output.of(codec));
         }
+
         public Builder displayAspectRatio(@Nullable Output<String> displayAspectRatio) {
-            this.displayAspectRatio = displayAspectRatio;
+            $.displayAspectRatio = displayAspectRatio;
             return this;
         }
-        public Builder displayAspectRatio(@Nullable String displayAspectRatio) {
-            this.displayAspectRatio = Codegen.ofNullable(displayAspectRatio);
-            return this;
+
+        public Builder displayAspectRatio(String displayAspectRatio) {
+            return displayAspectRatio(Output.of(displayAspectRatio));
         }
+
         public Builder fixedGop(@Nullable Output<String> fixedGop) {
-            this.fixedGop = fixedGop;
+            $.fixedGop = fixedGop;
             return this;
         }
-        public Builder fixedGop(@Nullable String fixedGop) {
-            this.fixedGop = Codegen.ofNullable(fixedGop);
-            return this;
+
+        public Builder fixedGop(String fixedGop) {
+            return fixedGop(Output.of(fixedGop));
         }
+
         public Builder frameRate(@Nullable Output<String> frameRate) {
-            this.frameRate = frameRate;
+            $.frameRate = frameRate;
             return this;
         }
-        public Builder frameRate(@Nullable String frameRate) {
-            this.frameRate = Codegen.ofNullable(frameRate);
-            return this;
+
+        public Builder frameRate(String frameRate) {
+            return frameRate(Output.of(frameRate));
         }
+
         public Builder keyframesMaxDist(@Nullable Output<String> keyframesMaxDist) {
-            this.keyframesMaxDist = keyframesMaxDist;
+            $.keyframesMaxDist = keyframesMaxDist;
             return this;
         }
-        public Builder keyframesMaxDist(@Nullable String keyframesMaxDist) {
-            this.keyframesMaxDist = Codegen.ofNullable(keyframesMaxDist);
-            return this;
+
+        public Builder keyframesMaxDist(String keyframesMaxDist) {
+            return keyframesMaxDist(Output.of(keyframesMaxDist));
         }
+
         public Builder maxFrameRate(@Nullable Output<String> maxFrameRate) {
-            this.maxFrameRate = maxFrameRate;
+            $.maxFrameRate = maxFrameRate;
             return this;
         }
-        public Builder maxFrameRate(@Nullable String maxFrameRate) {
-            this.maxFrameRate = Codegen.ofNullable(maxFrameRate);
-            return this;
+
+        public Builder maxFrameRate(String maxFrameRate) {
+            return maxFrameRate(Output.of(maxFrameRate));
         }
+
         public Builder maxHeight(@Nullable Output<String> maxHeight) {
-            this.maxHeight = maxHeight;
+            $.maxHeight = maxHeight;
             return this;
         }
-        public Builder maxHeight(@Nullable String maxHeight) {
-            this.maxHeight = Codegen.ofNullable(maxHeight);
-            return this;
+
+        public Builder maxHeight(String maxHeight) {
+            return maxHeight(Output.of(maxHeight));
         }
+
         public Builder maxWidth(@Nullable Output<String> maxWidth) {
-            this.maxWidth = maxWidth;
+            $.maxWidth = maxWidth;
             return this;
         }
-        public Builder maxWidth(@Nullable String maxWidth) {
-            this.maxWidth = Codegen.ofNullable(maxWidth);
-            return this;
+
+        public Builder maxWidth(String maxWidth) {
+            return maxWidth(Output.of(maxWidth));
         }
+
         public Builder paddingPolicy(@Nullable Output<String> paddingPolicy) {
-            this.paddingPolicy = paddingPolicy;
+            $.paddingPolicy = paddingPolicy;
             return this;
         }
-        public Builder paddingPolicy(@Nullable String paddingPolicy) {
-            this.paddingPolicy = Codegen.ofNullable(paddingPolicy);
-            return this;
+
+        public Builder paddingPolicy(String paddingPolicy) {
+            return paddingPolicy(Output.of(paddingPolicy));
         }
+
         public Builder resolution(@Nullable Output<String> resolution) {
-            this.resolution = resolution;
+            $.resolution = resolution;
             return this;
         }
-        public Builder resolution(@Nullable String resolution) {
-            this.resolution = Codegen.ofNullable(resolution);
-            return this;
+
+        public Builder resolution(String resolution) {
+            return resolution(Output.of(resolution));
         }
+
         public Builder sizingPolicy(@Nullable Output<String> sizingPolicy) {
-            this.sizingPolicy = sizingPolicy;
+            $.sizingPolicy = sizingPolicy;
             return this;
         }
-        public Builder sizingPolicy(@Nullable String sizingPolicy) {
-            this.sizingPolicy = Codegen.ofNullable(sizingPolicy);
-            return this;
-        }        public PresetVideoArgs build() {
-            return new PresetVideoArgs(aspectRatio, bitRate, codec, displayAspectRatio, fixedGop, frameRate, keyframesMaxDist, maxFrameRate, maxHeight, maxWidth, paddingPolicy, resolution, sizingPolicy);
+
+        public Builder sizingPolicy(String sizingPolicy) {
+            return sizingPolicy(Output.of(sizingPolicy));
+        }
+
+        public PresetVideoArgs build() {
+            return $;
         }
     }
+
 }

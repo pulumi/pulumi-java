@@ -5,11 +5,11 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.enums.GoogleIamV1__AuditLogConfigLogType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleIamV1__AuditLogConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="exemptedMembers")
-      private final @Nullable Output<List<String>> exemptedMembers;
+    private @Nullable Output<List<String>> exemptedMembers;
 
-    public Output<List<String>> exemptedMembers() {
-        return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
+    public Optional<Output<List<String>>> exemptedMembers() {
+        return Optional.ofNullable(this.exemptedMembers);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GoogleIamV1__AuditLogConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="logType")
-      private final @Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType;
+    private @Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType;
 
-    public Output<GoogleIamV1__AuditLogConfigLogType> logType() {
-        return this.logType == null ? Codegen.empty() : this.logType;
+    public Optional<Output<GoogleIamV1__AuditLogConfigLogType>> logType() {
+        return Optional.ofNullable(this.logType);
     }
 
-    public GoogleIamV1__AuditLogConfigArgs(
-        @Nullable Output<List<String>> exemptedMembers,
-        @Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType) {
-        this.exemptedMembers = exemptedMembers;
-        this.logType = logType;
-    }
+    private GoogleIamV1__AuditLogConfigArgs() {}
 
-    private GoogleIamV1__AuditLogConfigArgs() {
-        this.exemptedMembers = Codegen.empty();
-        this.logType = Codegen.empty();
+    private GoogleIamV1__AuditLogConfigArgs(GoogleIamV1__AuditLogConfigArgs $) {
+        this.exemptedMembers = $.exemptedMembers;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleIamV1__AuditLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> exemptedMembers;
-        private @Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType;
+        private GoogleIamV1__AuditLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleIamV1__AuditLogConfigArgs();
         }
 
         public Builder(GoogleIamV1__AuditLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exemptedMembers = defaults.exemptedMembers;
-    	      this.logType = defaults.logType;
+            $ = new GoogleIamV1__AuditLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
-            this.exemptedMembers = exemptedMembers;
+            $.exemptedMembers = exemptedMembers;
             return this;
         }
-        public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Codegen.ofNullable(exemptedMembers);
-            return this;
+
+        public Builder exemptedMembers(List<String> exemptedMembers) {
+            return exemptedMembers(Output.of(exemptedMembers));
         }
+
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
+
         public Builder logType(@Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType) {
-            this.logType = logType;
+            $.logType = logType;
             return this;
         }
-        public Builder logType(@Nullable GoogleIamV1__AuditLogConfigLogType logType) {
-            this.logType = Codegen.ofNullable(logType);
-            return this;
-        }        public GoogleIamV1__AuditLogConfigArgs build() {
-            return new GoogleIamV1__AuditLogConfigArgs(exemptedMembers, logType);
+
+        public Builder logType(GoogleIamV1__AuditLogConfigLogType logType) {
+            return logType(Output.of(logType));
+        }
+
+        public GoogleIamV1__AuditLogConfigArgs build() {
+            return $;
         }
     }
+
 }

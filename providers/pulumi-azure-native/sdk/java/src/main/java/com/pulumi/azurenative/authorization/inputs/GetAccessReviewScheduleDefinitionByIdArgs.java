@@ -17,45 +17,45 @@ public final class GetAccessReviewScheduleDefinitionByIdArgs extends com.pulumi.
      * 
      */
     @Import(name="scheduleDefinitionId", required=true)
-      private final String scheduleDefinitionId;
+    private String scheduleDefinitionId;
 
     public String scheduleDefinitionId() {
         return this.scheduleDefinitionId;
     }
 
-    public GetAccessReviewScheduleDefinitionByIdArgs(String scheduleDefinitionId) {
-        this.scheduleDefinitionId = Objects.requireNonNull(scheduleDefinitionId, "expected parameter 'scheduleDefinitionId' to be non-null");
-    }
+    private GetAccessReviewScheduleDefinitionByIdArgs() {}
 
-    private GetAccessReviewScheduleDefinitionByIdArgs() {
-        this.scheduleDefinitionId = null;
+    private GetAccessReviewScheduleDefinitionByIdArgs(GetAccessReviewScheduleDefinitionByIdArgs $) {
+        this.scheduleDefinitionId = $.scheduleDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessReviewScheduleDefinitionByIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scheduleDefinitionId;
+        private GetAccessReviewScheduleDefinitionByIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessReviewScheduleDefinitionByIdArgs();
         }
 
         public Builder(GetAccessReviewScheduleDefinitionByIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduleDefinitionId = defaults.scheduleDefinitionId;
+            $ = new GetAccessReviewScheduleDefinitionByIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduleDefinitionId(String scheduleDefinitionId) {
-            this.scheduleDefinitionId = Objects.requireNonNull(scheduleDefinitionId);
+            $.scheduleDefinitionId = scheduleDefinitionId;
             return this;
-        }        public GetAccessReviewScheduleDefinitionByIdArgs build() {
-            return new GetAccessReviewScheduleDefinitionByIdArgs(scheduleDefinitionId);
+        }
+
+        public GetAccessReviewScheduleDefinitionByIdArgs build() {
+            $.scheduleDefinitionId = Objects.requireNonNull($.scheduleDefinitionId, "expected parameter 'scheduleDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

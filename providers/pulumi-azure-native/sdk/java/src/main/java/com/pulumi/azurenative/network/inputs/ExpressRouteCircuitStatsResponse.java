@@ -23,10 +23,10 @@ public final class ExpressRouteCircuitStatsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="primarybytesIn")
-      private final @Nullable Double primarybytesIn;
+    private @Nullable Double primarybytesIn;
 
     public Optional<Double> primarybytesIn() {
-        return this.primarybytesIn == null ? Optional.empty() : Optional.ofNullable(this.primarybytesIn);
+        return Optional.ofNullable(this.primarybytesIn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ExpressRouteCircuitStatsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="primarybytesOut")
-      private final @Nullable Double primarybytesOut;
+    private @Nullable Double primarybytesOut;
 
     public Optional<Double> primarybytesOut() {
-        return this.primarybytesOut == null ? Optional.empty() : Optional.ofNullable(this.primarybytesOut);
+        return Optional.ofNullable(this.primarybytesOut);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ExpressRouteCircuitStatsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="secondarybytesIn")
-      private final @Nullable Double secondarybytesIn;
+    private @Nullable Double secondarybytesIn;
 
     public Optional<Double> secondarybytesIn() {
-        return this.secondarybytesIn == null ? Optional.empty() : Optional.ofNullable(this.secondarybytesIn);
+        return Optional.ofNullable(this.secondarybytesIn);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ExpressRouteCircuitStatsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="secondarybytesOut")
-      private final @Nullable Double secondarybytesOut;
+    private @Nullable Double secondarybytesOut;
 
     public Optional<Double> secondarybytesOut() {
-        return this.secondarybytesOut == null ? Optional.empty() : Optional.ofNullable(this.secondarybytesOut);
+        return Optional.ofNullable(this.secondarybytesOut);
     }
 
-    public ExpressRouteCircuitStatsResponse(
-        @Nullable Double primarybytesIn,
-        @Nullable Double primarybytesOut,
-        @Nullable Double secondarybytesIn,
-        @Nullable Double secondarybytesOut) {
-        this.primarybytesIn = primarybytesIn;
-        this.primarybytesOut = primarybytesOut;
-        this.secondarybytesIn = secondarybytesIn;
-        this.secondarybytesOut = secondarybytesOut;
-    }
+    private ExpressRouteCircuitStatsResponse() {}
 
-    private ExpressRouteCircuitStatsResponse() {
-        this.primarybytesIn = null;
-        this.primarybytesOut = null;
-        this.secondarybytesIn = null;
-        this.secondarybytesOut = null;
+    private ExpressRouteCircuitStatsResponse(ExpressRouteCircuitStatsResponse $) {
+        this.primarybytesIn = $.primarybytesIn;
+        this.primarybytesOut = $.primarybytesOut;
+        this.secondarybytesIn = $.secondarybytesIn;
+        this.secondarybytesOut = $.secondarybytesOut;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitStatsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double primarybytesIn;
-        private @Nullable Double primarybytesOut;
-        private @Nullable Double secondarybytesIn;
-        private @Nullable Double secondarybytesOut;
+        private ExpressRouteCircuitStatsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitStatsResponse();
         }
 
         public Builder(ExpressRouteCircuitStatsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primarybytesIn = defaults.primarybytesIn;
-    	      this.primarybytesOut = defaults.primarybytesOut;
-    	      this.secondarybytesIn = defaults.secondarybytesIn;
-    	      this.secondarybytesOut = defaults.secondarybytesOut;
+            $ = new ExpressRouteCircuitStatsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder primarybytesIn(@Nullable Double primarybytesIn) {
-            this.primarybytesIn = primarybytesIn;
+            $.primarybytesIn = primarybytesIn;
             return this;
         }
+
         public Builder primarybytesOut(@Nullable Double primarybytesOut) {
-            this.primarybytesOut = primarybytesOut;
+            $.primarybytesOut = primarybytesOut;
             return this;
         }
+
         public Builder secondarybytesIn(@Nullable Double secondarybytesIn) {
-            this.secondarybytesIn = secondarybytesIn;
+            $.secondarybytesIn = secondarybytesIn;
             return this;
         }
+
         public Builder secondarybytesOut(@Nullable Double secondarybytesOut) {
-            this.secondarybytesOut = secondarybytesOut;
+            $.secondarybytesOut = secondarybytesOut;
             return this;
-        }        public ExpressRouteCircuitStatsResponse build() {
-            return new ExpressRouteCircuitStatsResponse(primarybytesIn, primarybytesOut, secondarybytesIn, secondarybytesOut);
+        }
+
+        public ExpressRouteCircuitStatsResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.inputs.HostRuleArgs;
 import com.pulumi.googlenative.compute_v1.inputs.HttpHeaderActionArgs;
 import com.pulumi.googlenative.compute_v1.inputs.HttpRedirectActionArgs;
@@ -15,6 +14,7 @@ import com.pulumi.googlenative.compute_v1.inputs.UrlMapTestArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultRouteAction")
-      private final @Nullable Output<HttpRouteActionArgs> defaultRouteAction;
+    private @Nullable Output<HttpRouteActionArgs> defaultRouteAction;
 
-    public Output<HttpRouteActionArgs> defaultRouteAction() {
-        return this.defaultRouteAction == null ? Codegen.empty() : this.defaultRouteAction;
+    public Optional<Output<HttpRouteActionArgs>> defaultRouteAction() {
+        return Optional.ofNullable(this.defaultRouteAction);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultService")
-      private final @Nullable Output<String> defaultService;
+    private @Nullable Output<String> defaultService;
 
-    public Output<String> defaultService() {
-        return this.defaultService == null ? Codegen.empty() : this.defaultService;
+    public Optional<Output<String>> defaultService() {
+        return Optional.ofNullable(this.defaultService);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultUrlRedirect")
-      private final @Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect;
+    private @Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect;
 
-    public Output<HttpRedirectActionArgs> defaultUrlRedirect() {
-        return this.defaultUrlRedirect == null ? Codegen.empty() : this.defaultUrlRedirect;
+    public Optional<Output<HttpRedirectActionArgs>> defaultUrlRedirect() {
+        return Optional.ofNullable(this.defaultUrlRedirect);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="headerAction")
-      private final @Nullable Output<HttpHeaderActionArgs> headerAction;
+    private @Nullable Output<HttpHeaderActionArgs> headerAction;
 
-    public Output<HttpHeaderActionArgs> headerAction() {
-        return this.headerAction == null ? Codegen.empty() : this.headerAction;
+    public Optional<Output<HttpHeaderActionArgs>> headerAction() {
+        return Optional.ofNullable(this.headerAction);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostRules")
-      private final @Nullable Output<List<HostRuleArgs>> hostRules;
+    private @Nullable Output<List<HostRuleArgs>> hostRules;
 
-    public Output<List<HostRuleArgs>> hostRules() {
-        return this.hostRules == null ? Codegen.empty() : this.hostRules;
+    public Optional<Output<List<HostRuleArgs>>> hostRules() {
+        return Optional.ofNullable(this.hostRules);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -104,31 +104,31 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pathMatchers")
-      private final @Nullable Output<List<PathMatcherArgs>> pathMatchers;
+    private @Nullable Output<List<PathMatcherArgs>> pathMatchers;
 
-    public Output<List<PathMatcherArgs>> pathMatchers() {
-        return this.pathMatchers == null ? Codegen.empty() : this.pathMatchers;
+    public Optional<Output<List<PathMatcherArgs>>> pathMatchers() {
+        return Optional.ofNullable(this.pathMatchers);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -136,202 +136,171 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tests")
-      private final @Nullable Output<List<UrlMapTestArgs>> tests;
+    private @Nullable Output<List<UrlMapTestArgs>> tests;
 
-    public Output<List<UrlMapTestArgs>> tests() {
-        return this.tests == null ? Codegen.empty() : this.tests;
+    public Optional<Output<List<UrlMapTestArgs>>> tests() {
+        return Optional.ofNullable(this.tests);
     }
 
-    public RegionUrlMapArgs(
-        @Nullable Output<HttpRouteActionArgs> defaultRouteAction,
-        @Nullable Output<String> defaultService,
-        @Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect,
-        @Nullable Output<String> description,
-        @Nullable Output<HttpHeaderActionArgs> headerAction,
-        @Nullable Output<List<HostRuleArgs>> hostRules,
-        @Nullable Output<String> name,
-        @Nullable Output<List<PathMatcherArgs>> pathMatchers,
-        @Nullable Output<String> project,
-        Output<String> region,
-        @Nullable Output<String> requestId,
-        @Nullable Output<List<UrlMapTestArgs>> tests) {
-        this.defaultRouteAction = defaultRouteAction;
-        this.defaultService = defaultService;
-        this.defaultUrlRedirect = defaultUrlRedirect;
-        this.description = description;
-        this.headerAction = headerAction;
-        this.hostRules = hostRules;
-        this.name = name;
-        this.pathMatchers = pathMatchers;
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.requestId = requestId;
-        this.tests = tests;
-    }
+    private RegionUrlMapArgs() {}
 
-    private RegionUrlMapArgs() {
-        this.defaultRouteAction = Codegen.empty();
-        this.defaultService = Codegen.empty();
-        this.defaultUrlRedirect = Codegen.empty();
-        this.description = Codegen.empty();
-        this.headerAction = Codegen.empty();
-        this.hostRules = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pathMatchers = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.tests = Codegen.empty();
+    private RegionUrlMapArgs(RegionUrlMapArgs $) {
+        this.defaultRouteAction = $.defaultRouteAction;
+        this.defaultService = $.defaultService;
+        this.defaultUrlRedirect = $.defaultUrlRedirect;
+        this.description = $.description;
+        this.headerAction = $.headerAction;
+        this.hostRules = $.hostRules;
+        this.name = $.name;
+        this.pathMatchers = $.pathMatchers;
+        this.project = $.project;
+        this.region = $.region;
+        this.requestId = $.requestId;
+        this.tests = $.tests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HttpRouteActionArgs> defaultRouteAction;
-        private @Nullable Output<String> defaultService;
-        private @Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect;
-        private @Nullable Output<String> description;
-        private @Nullable Output<HttpHeaderActionArgs> headerAction;
-        private @Nullable Output<List<HostRuleArgs>> hostRules;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<PathMatcherArgs>> pathMatchers;
-        private @Nullable Output<String> project;
-        private Output<String> region;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<List<UrlMapTestArgs>> tests;
+        private RegionUrlMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapArgs();
         }
 
         public Builder(RegionUrlMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultRouteAction = defaults.defaultRouteAction;
-    	      this.defaultService = defaults.defaultService;
-    	      this.defaultUrlRedirect = defaults.defaultUrlRedirect;
-    	      this.description = defaults.description;
-    	      this.headerAction = defaults.headerAction;
-    	      this.hostRules = defaults.hostRules;
-    	      this.name = defaults.name;
-    	      this.pathMatchers = defaults.pathMatchers;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.requestId = defaults.requestId;
-    	      this.tests = defaults.tests;
+            $ = new RegionUrlMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultRouteAction(@Nullable Output<HttpRouteActionArgs> defaultRouteAction) {
-            this.defaultRouteAction = defaultRouteAction;
+            $.defaultRouteAction = defaultRouteAction;
             return this;
         }
-        public Builder defaultRouteAction(@Nullable HttpRouteActionArgs defaultRouteAction) {
-            this.defaultRouteAction = Codegen.ofNullable(defaultRouteAction);
-            return this;
+
+        public Builder defaultRouteAction(HttpRouteActionArgs defaultRouteAction) {
+            return defaultRouteAction(Output.of(defaultRouteAction));
         }
+
         public Builder defaultService(@Nullable Output<String> defaultService) {
-            this.defaultService = defaultService;
+            $.defaultService = defaultService;
             return this;
         }
-        public Builder defaultService(@Nullable String defaultService) {
-            this.defaultService = Codegen.ofNullable(defaultService);
-            return this;
+
+        public Builder defaultService(String defaultService) {
+            return defaultService(Output.of(defaultService));
         }
+
         public Builder defaultUrlRedirect(@Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect) {
-            this.defaultUrlRedirect = defaultUrlRedirect;
+            $.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
-        public Builder defaultUrlRedirect(@Nullable HttpRedirectActionArgs defaultUrlRedirect) {
-            this.defaultUrlRedirect = Codegen.ofNullable(defaultUrlRedirect);
-            return this;
+
+        public Builder defaultUrlRedirect(HttpRedirectActionArgs defaultUrlRedirect) {
+            return defaultUrlRedirect(Output.of(defaultUrlRedirect));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder headerAction(@Nullable Output<HttpHeaderActionArgs> headerAction) {
-            this.headerAction = headerAction;
+            $.headerAction = headerAction;
             return this;
         }
-        public Builder headerAction(@Nullable HttpHeaderActionArgs headerAction) {
-            this.headerAction = Codegen.ofNullable(headerAction);
-            return this;
+
+        public Builder headerAction(HttpHeaderActionArgs headerAction) {
+            return headerAction(Output.of(headerAction));
         }
+
         public Builder hostRules(@Nullable Output<List<HostRuleArgs>> hostRules) {
-            this.hostRules = hostRules;
+            $.hostRules = hostRules;
             return this;
         }
-        public Builder hostRules(@Nullable List<HostRuleArgs> hostRules) {
-            this.hostRules = Codegen.ofNullable(hostRules);
-            return this;
+
+        public Builder hostRules(List<HostRuleArgs> hostRules) {
+            return hostRules(Output.of(hostRules));
         }
+
         public Builder hostRules(HostRuleArgs... hostRules) {
             return hostRules(List.of(hostRules));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pathMatchers(@Nullable Output<List<PathMatcherArgs>> pathMatchers) {
-            this.pathMatchers = pathMatchers;
+            $.pathMatchers = pathMatchers;
             return this;
         }
-        public Builder pathMatchers(@Nullable List<PathMatcherArgs> pathMatchers) {
-            this.pathMatchers = Codegen.ofNullable(pathMatchers);
-            return this;
+
+        public Builder pathMatchers(List<PathMatcherArgs> pathMatchers) {
+            return pathMatchers(Output.of(pathMatchers));
         }
+
         public Builder pathMatchers(PathMatcherArgs... pathMatchers) {
             return pathMatchers(List.of(pathMatchers));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder tests(@Nullable Output<List<UrlMapTestArgs>> tests) {
-            this.tests = tests;
+            $.tests = tests;
             return this;
         }
-        public Builder tests(@Nullable List<UrlMapTestArgs> tests) {
-            this.tests = Codegen.ofNullable(tests);
-            return this;
+
+        public Builder tests(List<UrlMapTestArgs> tests) {
+            return tests(Output.of(tests));
         }
+
         public Builder tests(UrlMapTestArgs... tests) {
             return tests(List.of(tests));
-        }        public RegionUrlMapArgs build() {
-            return new RegionUrlMapArgs(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, hostRules, name, pathMatchers, project, region, requestId, tests);
+        }
+
+        public RegionUrlMapArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

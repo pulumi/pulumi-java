@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiproduct")
-      private final @Nullable Output<String> apiproduct;
+    private @Nullable Output<String> apiproduct;
 
-    public Output<String> apiproduct() {
-        return this.apiproduct == null ? Codegen.empty() : this.apiproduct;
+    public Optional<Output<String>> apiproduct() {
+        return Optional.ofNullable(this.apiproduct);
     }
 
     @Import(name="developerId", required=true)
-      private final Output<String> developerId;
+    private Output<String> developerId;
 
     public Output<String> developerId() {
         return this.developerId;
@@ -38,14 +38,14 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -56,102 +56,90 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public SubscriptionArgs(
-        @Nullable Output<String> apiproduct,
-        Output<String> developerId,
-        @Nullable Output<String> endTime,
-        Output<String> organizationId,
-        @Nullable Output<String> startTime) {
-        this.apiproduct = apiproduct;
-        this.developerId = Objects.requireNonNull(developerId, "expected parameter 'developerId' to be non-null");
-        this.endTime = endTime;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.startTime = startTime;
-    }
+    private SubscriptionArgs() {}
 
-    private SubscriptionArgs() {
-        this.apiproduct = Codegen.empty();
-        this.developerId = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private SubscriptionArgs(SubscriptionArgs $) {
+        this.apiproduct = $.apiproduct;
+        this.developerId = $.developerId;
+        this.endTime = $.endTime;
+        this.organizationId = $.organizationId;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiproduct;
-        private Output<String> developerId;
-        private @Nullable Output<String> endTime;
-        private Output<String> organizationId;
-        private @Nullable Output<String> startTime;
+        private SubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionArgs();
         }
 
         public Builder(SubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiproduct = defaults.apiproduct;
-    	      this.developerId = defaults.developerId;
-    	      this.endTime = defaults.endTime;
-    	      this.organizationId = defaults.organizationId;
-    	      this.startTime = defaults.startTime;
+            $ = new SubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiproduct(@Nullable Output<String> apiproduct) {
-            this.apiproduct = apiproduct;
+            $.apiproduct = apiproduct;
             return this;
         }
-        public Builder apiproduct(@Nullable String apiproduct) {
-            this.apiproduct = Codegen.ofNullable(apiproduct);
-            return this;
+
+        public Builder apiproduct(String apiproduct) {
+            return apiproduct(Output.of(apiproduct));
         }
+
         public Builder developerId(Output<String> developerId) {
-            this.developerId = Objects.requireNonNull(developerId);
+            $.developerId = developerId;
             return this;
         }
+
         public Builder developerId(String developerId) {
-            this.developerId = Output.of(Objects.requireNonNull(developerId));
-            return this;
+            return developerId(Output.of(developerId));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public SubscriptionArgs build() {
-            return new SubscriptionArgs(apiproduct, developerId, endTime, organizationId, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public SubscriptionArgs build() {
+            $.developerId = Objects.requireNonNull($.developerId, "expected parameter 'developerId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

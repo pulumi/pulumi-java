@@ -24,48 +24,48 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse e
      * 
      */
     @Import(name="networkInterfaceConfigurations")
-      private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
+    private @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
-    public List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations() {
-        return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
+    public Optional<List<VirtualMachineScaleSetNetworkConfigurationResponse>> networkInterfaceConfigurations() {
+        return Optional.ofNullable(this.networkInterfaceConfigurations);
     }
 
-    public VirtualMachineScaleSetVMNetworkProfileConfigurationResponse(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
-        this.networkInterfaceConfigurations = networkInterfaceConfigurations;
-    }
+    private VirtualMachineScaleSetVMNetworkProfileConfigurationResponse() {}
 
-    private VirtualMachineScaleSetVMNetworkProfileConfigurationResponse() {
-        this.networkInterfaceConfigurations = List.of();
+    private VirtualMachineScaleSetVMNetworkProfileConfigurationResponse(VirtualMachineScaleSetVMNetworkProfileConfigurationResponse $) {
+        this.networkInterfaceConfigurations = $.networkInterfaceConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetVMNetworkProfileConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
+        private VirtualMachineScaleSetVMNetworkProfileConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetVMNetworkProfileConfigurationResponse();
         }
 
         public Builder(VirtualMachineScaleSetVMNetworkProfileConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
+            $ = new VirtualMachineScaleSetVMNetworkProfileConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = networkInterfaceConfigurations;
+            $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
+
         public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationResponse... networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
-        }        public VirtualMachineScaleSetVMNetworkProfileConfigurationResponse build() {
-            return new VirtualMachineScaleSetVMNetworkProfileConfigurationResponse(networkInterfaceConfigurations);
+        }
+
+        public VirtualMachineScaleSetVMNetworkProfileConfigurationResponse build() {
+            return $;
         }
     }
+
 }

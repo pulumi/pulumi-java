@@ -5,9 +5,9 @@ package com.pulumi.aws.codepipeline.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WebhookAuthenticationConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="allowedIpRange")
-      private final @Nullable Output<String> allowedIpRange;
+    private @Nullable Output<String> allowedIpRange;
 
-    public Output<String> allowedIpRange() {
-        return this.allowedIpRange == null ? Codegen.empty() : this.allowedIpRange;
+    public Optional<Output<String>> allowedIpRange() {
+        return Optional.ofNullable(this.allowedIpRange);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class WebhookAuthenticationConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="secretToken")
-      private final @Nullable Output<String> secretToken;
+    private @Nullable Output<String> secretToken;
 
-    public Output<String> secretToken() {
-        return this.secretToken == null ? Codegen.empty() : this.secretToken;
+    public Optional<Output<String>> secretToken() {
+        return Optional.ofNullable(this.secretToken);
     }
 
-    public WebhookAuthenticationConfigurationArgs(
-        @Nullable Output<String> allowedIpRange,
-        @Nullable Output<String> secretToken) {
-        this.allowedIpRange = allowedIpRange;
-        this.secretToken = secretToken;
-    }
+    private WebhookAuthenticationConfigurationArgs() {}
 
-    private WebhookAuthenticationConfigurationArgs() {
-        this.allowedIpRange = Codegen.empty();
-        this.secretToken = Codegen.empty();
+    private WebhookAuthenticationConfigurationArgs(WebhookAuthenticationConfigurationArgs $) {
+        this.allowedIpRange = $.allowedIpRange;
+        this.secretToken = $.secretToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookAuthenticationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allowedIpRange;
-        private @Nullable Output<String> secretToken;
+        private WebhookAuthenticationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookAuthenticationConfigurationArgs();
         }
 
         public Builder(WebhookAuthenticationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIpRange = defaults.allowedIpRange;
-    	      this.secretToken = defaults.secretToken;
+            $ = new WebhookAuthenticationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIpRange(@Nullable Output<String> allowedIpRange) {
-            this.allowedIpRange = allowedIpRange;
+            $.allowedIpRange = allowedIpRange;
             return this;
         }
-        public Builder allowedIpRange(@Nullable String allowedIpRange) {
-            this.allowedIpRange = Codegen.ofNullable(allowedIpRange);
-            return this;
+
+        public Builder allowedIpRange(String allowedIpRange) {
+            return allowedIpRange(Output.of(allowedIpRange));
         }
+
         public Builder secretToken(@Nullable Output<String> secretToken) {
-            this.secretToken = secretToken;
+            $.secretToken = secretToken;
             return this;
         }
-        public Builder secretToken(@Nullable String secretToken) {
-            this.secretToken = Codegen.ofNullable(secretToken);
-            return this;
-        }        public WebhookAuthenticationConfigurationArgs build() {
-            return new WebhookAuthenticationConfigurationArgs(allowedIpRange, secretToken);
+
+        public Builder secretToken(String secretToken) {
+            return secretToken(Output.of(secretToken));
+        }
+
+        public WebhookAuthenticationConfigurationArgs build() {
+            return $;
         }
     }
+
 }

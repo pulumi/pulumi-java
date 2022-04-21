@@ -23,45 +23,44 @@ public final class LabPlanNetworkProfileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public LabPlanNetworkProfileResponse(@Nullable String subnetId) {
-        this.subnetId = subnetId;
-    }
+    private LabPlanNetworkProfileResponse() {}
 
-    private LabPlanNetworkProfileResponse() {
-        this.subnetId = null;
+    private LabPlanNetworkProfileResponse(LabPlanNetworkProfileResponse $) {
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabPlanNetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String subnetId;
+        private LabPlanNetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabPlanNetworkProfileResponse();
         }
 
         public Builder(LabPlanNetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
+            $ = new LabPlanNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
-        }        public LabPlanNetworkProfileResponse build() {
-            return new LabPlanNetworkProfileResponse(subnetId);
+        }
+
+        public LabPlanNetworkProfileResponse build() {
+            return $;
         }
     }
+
 }

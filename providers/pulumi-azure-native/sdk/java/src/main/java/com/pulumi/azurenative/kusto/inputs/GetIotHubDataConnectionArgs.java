@@ -17,7 +17,7 @@ public final class GetIotHubDataConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetIotHubDataConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dataConnectionName", required=true)
-      private final String dataConnectionName;
+    private String dataConnectionName;
 
     public String dataConnectionName() {
         return this.dataConnectionName;
@@ -39,7 +39,7 @@ public final class GetIotHubDataConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -50,73 +50,66 @@ public final class GetIotHubDataConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetIotHubDataConnectionArgs(
-        String clusterName,
-        String dataConnectionName,
-        String databaseName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.dataConnectionName = Objects.requireNonNull(dataConnectionName, "expected parameter 'dataConnectionName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetIotHubDataConnectionArgs() {}
 
-    private GetIotHubDataConnectionArgs() {
-        this.clusterName = null;
-        this.dataConnectionName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
+    private GetIotHubDataConnectionArgs(GetIotHubDataConnectionArgs $) {
+        this.clusterName = $.clusterName;
+        this.dataConnectionName = $.dataConnectionName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIotHubDataConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String dataConnectionName;
-        private String databaseName;
-        private String resourceGroupName;
+        private GetIotHubDataConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIotHubDataConnectionArgs();
         }
 
         public Builder(GetIotHubDataConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.dataConnectionName = defaults.dataConnectionName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetIotHubDataConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder dataConnectionName(String dataConnectionName) {
-            this.dataConnectionName = Objects.requireNonNull(dataConnectionName);
+            $.dataConnectionName = dataConnectionName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetIotHubDataConnectionArgs build() {
-            return new GetIotHubDataConnectionArgs(clusterName, dataConnectionName, databaseName, resourceGroupName);
+        }
+
+        public GetIotHubDataConnectionArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.dataConnectionName = Objects.requireNonNull($.dataConnectionName, "expected parameter 'dataConnectionName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

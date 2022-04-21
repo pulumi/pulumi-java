@@ -6,8 +6,8 @@ package com.pulumi.azurenative.securityinsights.inputs;
 import com.pulumi.azurenative.securityinsights.inputs.DataConnectorDataTypeCommonArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MCASDataConnectorDataTypesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="alerts")
-      private final @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
+    private @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
 
-    public Output<DataConnectorDataTypeCommonArgs> alerts() {
-        return this.alerts == null ? Codegen.empty() : this.alerts;
+    public Optional<Output<DataConnectorDataTypeCommonArgs>> alerts() {
+        return Optional.ofNullable(this.alerts);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class MCASDataConnectorDataTypesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="discoveryLogs")
-      private final @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs;
+    private @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs;
 
-    public Output<DataConnectorDataTypeCommonArgs> discoveryLogs() {
-        return this.discoveryLogs == null ? Codegen.empty() : this.discoveryLogs;
+    public Optional<Output<DataConnectorDataTypeCommonArgs>> discoveryLogs() {
+        return Optional.ofNullable(this.discoveryLogs);
     }
 
-    public MCASDataConnectorDataTypesArgs(
-        @Nullable Output<DataConnectorDataTypeCommonArgs> alerts,
-        @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs) {
-        this.alerts = alerts;
-        this.discoveryLogs = discoveryLogs;
-    }
+    private MCASDataConnectorDataTypesArgs() {}
 
-    private MCASDataConnectorDataTypesArgs() {
-        this.alerts = Codegen.empty();
-        this.discoveryLogs = Codegen.empty();
+    private MCASDataConnectorDataTypesArgs(MCASDataConnectorDataTypesArgs $) {
+        this.alerts = $.alerts;
+        this.discoveryLogs = $.discoveryLogs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MCASDataConnectorDataTypesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
-        private @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs;
+        private MCASDataConnectorDataTypesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MCASDataConnectorDataTypesArgs();
         }
 
         public Builder(MCASDataConnectorDataTypesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alerts = defaults.alerts;
-    	      this.discoveryLogs = defaults.discoveryLogs;
+            $ = new MCASDataConnectorDataTypesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alerts(@Nullable Output<DataConnectorDataTypeCommonArgs> alerts) {
-            this.alerts = alerts;
+            $.alerts = alerts;
             return this;
         }
-        public Builder alerts(@Nullable DataConnectorDataTypeCommonArgs alerts) {
-            this.alerts = Codegen.ofNullable(alerts);
-            return this;
+
+        public Builder alerts(DataConnectorDataTypeCommonArgs alerts) {
+            return alerts(Output.of(alerts));
         }
+
         public Builder discoveryLogs(@Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs) {
-            this.discoveryLogs = discoveryLogs;
+            $.discoveryLogs = discoveryLogs;
             return this;
         }
-        public Builder discoveryLogs(@Nullable DataConnectorDataTypeCommonArgs discoveryLogs) {
-            this.discoveryLogs = Codegen.ofNullable(discoveryLogs);
-            return this;
-        }        public MCASDataConnectorDataTypesArgs build() {
-            return new MCASDataConnectorDataTypesArgs(alerts, discoveryLogs);
+
+        public Builder discoveryLogs(DataConnectorDataTypeCommonArgs discoveryLogs) {
+            return discoveryLogs(Output.of(discoveryLogs));
+        }
+
+        public MCASDataConnectorDataTypesArgs build() {
+            return $;
         }
     }
+
 }

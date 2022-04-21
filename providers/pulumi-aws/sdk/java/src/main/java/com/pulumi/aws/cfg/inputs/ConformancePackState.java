@@ -6,10 +6,10 @@ package com.pulumi.aws.cfg.inputs;
 import com.pulumi.aws.cfg.inputs.ConformancePackInputParameterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConformancePackState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConformancePackState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deliveryS3Bucket")
-      private final @Nullable Output<String> deliveryS3Bucket;
+    private @Nullable Output<String> deliveryS3Bucket;
 
-    public Output<String> deliveryS3Bucket() {
-        return this.deliveryS3Bucket == null ? Codegen.empty() : this.deliveryS3Bucket;
+    public Optional<Output<String>> deliveryS3Bucket() {
+        return Optional.ofNullable(this.deliveryS3Bucket);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConformancePackState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deliveryS3KeyPrefix")
-      private final @Nullable Output<String> deliveryS3KeyPrefix;
+    private @Nullable Output<String> deliveryS3KeyPrefix;
 
-    public Output<String> deliveryS3KeyPrefix() {
-        return this.deliveryS3KeyPrefix == null ? Codegen.empty() : this.deliveryS3KeyPrefix;
+    public Optional<Output<String>> deliveryS3KeyPrefix() {
+        return Optional.ofNullable(this.deliveryS3KeyPrefix);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConformancePackState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="inputParameters")
-      private final @Nullable Output<List<ConformancePackInputParameterGetArgs>> inputParameters;
+    private @Nullable Output<List<ConformancePackInputParameterGetArgs>> inputParameters;
 
-    public Output<List<ConformancePackInputParameterGetArgs>> inputParameters() {
-        return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
+    public Optional<Output<List<ConformancePackInputParameterGetArgs>>> inputParameters() {
+        return Optional.ofNullable(this.inputParameters);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConformancePackState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ConformancePackState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="templateBody")
-      private final @Nullable Output<String> templateBody;
+    private @Nullable Output<String> templateBody;
 
-    public Output<String> templateBody() {
-        return this.templateBody == null ? Codegen.empty() : this.templateBody;
+    public Optional<Output<String>> templateBody() {
+        return Optional.ofNullable(this.templateBody);
     }
 
     /**
@@ -88,131 +88,112 @@ public final class ConformancePackState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="templateS3Uri")
-      private final @Nullable Output<String> templateS3Uri;
+    private @Nullable Output<String> templateS3Uri;
 
-    public Output<String> templateS3Uri() {
-        return this.templateS3Uri == null ? Codegen.empty() : this.templateS3Uri;
+    public Optional<Output<String>> templateS3Uri() {
+        return Optional.ofNullable(this.templateS3Uri);
     }
 
-    public ConformancePackState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> deliveryS3Bucket,
-        @Nullable Output<String> deliveryS3KeyPrefix,
-        @Nullable Output<List<ConformancePackInputParameterGetArgs>> inputParameters,
-        @Nullable Output<String> name,
-        @Nullable Output<String> templateBody,
-        @Nullable Output<String> templateS3Uri) {
-        this.arn = arn;
-        this.deliveryS3Bucket = deliveryS3Bucket;
-        this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
-        this.inputParameters = inputParameters;
-        this.name = name;
-        this.templateBody = templateBody;
-        this.templateS3Uri = templateS3Uri;
-    }
+    private ConformancePackState() {}
 
-    private ConformancePackState() {
-        this.arn = Codegen.empty();
-        this.deliveryS3Bucket = Codegen.empty();
-        this.deliveryS3KeyPrefix = Codegen.empty();
-        this.inputParameters = Codegen.empty();
-        this.name = Codegen.empty();
-        this.templateBody = Codegen.empty();
-        this.templateS3Uri = Codegen.empty();
+    private ConformancePackState(ConformancePackState $) {
+        this.arn = $.arn;
+        this.deliveryS3Bucket = $.deliveryS3Bucket;
+        this.deliveryS3KeyPrefix = $.deliveryS3KeyPrefix;
+        this.inputParameters = $.inputParameters;
+        this.name = $.name;
+        this.templateBody = $.templateBody;
+        this.templateS3Uri = $.templateS3Uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConformancePackState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> deliveryS3Bucket;
-        private @Nullable Output<String> deliveryS3KeyPrefix;
-        private @Nullable Output<List<ConformancePackInputParameterGetArgs>> inputParameters;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> templateBody;
-        private @Nullable Output<String> templateS3Uri;
+        private ConformancePackState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConformancePackState();
         }
 
         public Builder(ConformancePackState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.deliveryS3Bucket = defaults.deliveryS3Bucket;
-    	      this.deliveryS3KeyPrefix = defaults.deliveryS3KeyPrefix;
-    	      this.inputParameters = defaults.inputParameters;
-    	      this.name = defaults.name;
-    	      this.templateBody = defaults.templateBody;
-    	      this.templateS3Uri = defaults.templateS3Uri;
+            $ = new ConformancePackState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder deliveryS3Bucket(@Nullable Output<String> deliveryS3Bucket) {
-            this.deliveryS3Bucket = deliveryS3Bucket;
+            $.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
-        public Builder deliveryS3Bucket(@Nullable String deliveryS3Bucket) {
-            this.deliveryS3Bucket = Codegen.ofNullable(deliveryS3Bucket);
-            return this;
+
+        public Builder deliveryS3Bucket(String deliveryS3Bucket) {
+            return deliveryS3Bucket(Output.of(deliveryS3Bucket));
         }
+
         public Builder deliveryS3KeyPrefix(@Nullable Output<String> deliveryS3KeyPrefix) {
-            this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
+            $.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
-        public Builder deliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
-            this.deliveryS3KeyPrefix = Codegen.ofNullable(deliveryS3KeyPrefix);
-            return this;
+
+        public Builder deliveryS3KeyPrefix(String deliveryS3KeyPrefix) {
+            return deliveryS3KeyPrefix(Output.of(deliveryS3KeyPrefix));
         }
+
         public Builder inputParameters(@Nullable Output<List<ConformancePackInputParameterGetArgs>> inputParameters) {
-            this.inputParameters = inputParameters;
+            $.inputParameters = inputParameters;
             return this;
         }
-        public Builder inputParameters(@Nullable List<ConformancePackInputParameterGetArgs> inputParameters) {
-            this.inputParameters = Codegen.ofNullable(inputParameters);
-            return this;
+
+        public Builder inputParameters(List<ConformancePackInputParameterGetArgs> inputParameters) {
+            return inputParameters(Output.of(inputParameters));
         }
+
         public Builder inputParameters(ConformancePackInputParameterGetArgs... inputParameters) {
             return inputParameters(List.of(inputParameters));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder templateBody(@Nullable Output<String> templateBody) {
-            this.templateBody = templateBody;
+            $.templateBody = templateBody;
             return this;
         }
-        public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Codegen.ofNullable(templateBody);
-            return this;
+
+        public Builder templateBody(String templateBody) {
+            return templateBody(Output.of(templateBody));
         }
+
         public Builder templateS3Uri(@Nullable Output<String> templateS3Uri) {
-            this.templateS3Uri = templateS3Uri;
+            $.templateS3Uri = templateS3Uri;
             return this;
         }
-        public Builder templateS3Uri(@Nullable String templateS3Uri) {
-            this.templateS3Uri = Codegen.ofNullable(templateS3Uri);
-            return this;
-        }        public ConformancePackState build() {
-            return new ConformancePackState(arn, deliveryS3Bucket, deliveryS3KeyPrefix, inputParameters, name, templateBody, templateS3Uri);
+
+        public Builder templateS3Uri(String templateS3Uri) {
+            return templateS3Uri(Output.of(templateS3Uri));
+        }
+
+        public ConformancePackState build() {
+            return $;
         }
     }
+
 }

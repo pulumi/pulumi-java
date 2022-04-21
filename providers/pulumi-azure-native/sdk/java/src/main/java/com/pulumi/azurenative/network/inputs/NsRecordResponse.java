@@ -23,45 +23,44 @@ public final class NsRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nsdname")
-      private final @Nullable String nsdname;
+    private @Nullable String nsdname;
 
     public Optional<String> nsdname() {
-        return this.nsdname == null ? Optional.empty() : Optional.ofNullable(this.nsdname);
+        return Optional.ofNullable(this.nsdname);
     }
 
-    public NsRecordResponse(@Nullable String nsdname) {
-        this.nsdname = nsdname;
-    }
+    private NsRecordResponse() {}
 
-    private NsRecordResponse() {
-        this.nsdname = null;
+    private NsRecordResponse(NsRecordResponse $) {
+        this.nsdname = $.nsdname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NsRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String nsdname;
+        private NsRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NsRecordResponse();
         }
 
         public Builder(NsRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nsdname = defaults.nsdname;
+            $ = new NsRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nsdname(@Nullable String nsdname) {
-            this.nsdname = nsdname;
+            $.nsdname = nsdname;
             return this;
-        }        public NsRecordResponse build() {
-            return new NsRecordResponse(nsdname);
+        }
+
+        public NsRecordResponse build() {
+            return $;
         }
     }
+
 }

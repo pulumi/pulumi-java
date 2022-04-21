@@ -5,10 +5,10 @@ package com.pulumi.aws.elasticloadbalancing;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class AppCookieStickinessPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="cookieName", required=true)
-      private final Output<String> cookieName;
+    private Output<String> cookieName;
 
     public Output<String> cookieName() {
         return this.cookieName;
@@ -34,7 +34,7 @@ public final class AppCookieStickinessPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="lbPort", required=true)
-      private final Output<Integer> lbPort;
+    private Output<Integer> lbPort;
 
     public Output<Integer> lbPort() {
         return this.lbPort;
@@ -46,7 +46,7 @@ public final class AppCookieStickinessPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="loadBalancer", required=true)
-      private final Output<String> loadBalancer;
+    private Output<String> loadBalancer;
 
     public Output<String> loadBalancer() {
         return this.loadBalancer;
@@ -57,89 +57,81 @@ public final class AppCookieStickinessPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public AppCookieStickinessPolicyArgs(
-        Output<String> cookieName,
-        Output<Integer> lbPort,
-        Output<String> loadBalancer,
-        @Nullable Output<String> name) {
-        this.cookieName = Objects.requireNonNull(cookieName, "expected parameter 'cookieName' to be non-null");
-        this.lbPort = Objects.requireNonNull(lbPort, "expected parameter 'lbPort' to be non-null");
-        this.loadBalancer = Objects.requireNonNull(loadBalancer, "expected parameter 'loadBalancer' to be non-null");
-        this.name = name;
-    }
+    private AppCookieStickinessPolicyArgs() {}
 
-    private AppCookieStickinessPolicyArgs() {
-        this.cookieName = Codegen.empty();
-        this.lbPort = Codegen.empty();
-        this.loadBalancer = Codegen.empty();
-        this.name = Codegen.empty();
+    private AppCookieStickinessPolicyArgs(AppCookieStickinessPolicyArgs $) {
+        this.cookieName = $.cookieName;
+        this.lbPort = $.lbPort;
+        this.loadBalancer = $.loadBalancer;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppCookieStickinessPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cookieName;
-        private Output<Integer> lbPort;
-        private Output<String> loadBalancer;
-        private @Nullable Output<String> name;
+        private AppCookieStickinessPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppCookieStickinessPolicyArgs();
         }
 
         public Builder(AppCookieStickinessPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookieName = defaults.cookieName;
-    	      this.lbPort = defaults.lbPort;
-    	      this.loadBalancer = defaults.loadBalancer;
-    	      this.name = defaults.name;
+            $ = new AppCookieStickinessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cookieName(Output<String> cookieName) {
-            this.cookieName = Objects.requireNonNull(cookieName);
+            $.cookieName = cookieName;
             return this;
         }
+
         public Builder cookieName(String cookieName) {
-            this.cookieName = Output.of(Objects.requireNonNull(cookieName));
-            return this;
+            return cookieName(Output.of(cookieName));
         }
+
         public Builder lbPort(Output<Integer> lbPort) {
-            this.lbPort = Objects.requireNonNull(lbPort);
+            $.lbPort = lbPort;
             return this;
         }
+
         public Builder lbPort(Integer lbPort) {
-            this.lbPort = Output.of(Objects.requireNonNull(lbPort));
-            return this;
+            return lbPort(Output.of(lbPort));
         }
+
         public Builder loadBalancer(Output<String> loadBalancer) {
-            this.loadBalancer = Objects.requireNonNull(loadBalancer);
+            $.loadBalancer = loadBalancer;
             return this;
         }
+
         public Builder loadBalancer(String loadBalancer) {
-            this.loadBalancer = Output.of(Objects.requireNonNull(loadBalancer));
-            return this;
+            return loadBalancer(Output.of(loadBalancer));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public AppCookieStickinessPolicyArgs build() {
-            return new AppCookieStickinessPolicyArgs(cookieName, lbPort, loadBalancer, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public AppCookieStickinessPolicyArgs build() {
+            $.cookieName = Objects.requireNonNull($.cookieName, "expected parameter 'cookieName' to be non-null");
+            $.lbPort = Objects.requireNonNull($.lbPort, "expected parameter 'lbPort' to be non-null");
+            $.loadBalancer = Objects.requireNonNull($.loadBalancer, "expected parameter 'loadBalancer' to be non-null");
+            return $;
         }
     }
+
 }

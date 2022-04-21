@@ -24,10 +24,10 @@ public final class AssignmentLockSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="excludedActions")
-      private final @Nullable List<String> excludedActions;
+    private @Nullable List<String> excludedActions;
 
-    public List<String> excludedActions() {
-        return this.excludedActions == null ? List.of() : this.excludedActions;
+    public Optional<List<String>> excludedActions() {
+        return Optional.ofNullable(this.excludedActions);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AssignmentLockSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="excludedPrincipals")
-      private final @Nullable List<String> excludedPrincipals;
+    private @Nullable List<String> excludedPrincipals;
 
-    public List<String> excludedPrincipals() {
-        return this.excludedPrincipals == null ? List.of() : this.excludedPrincipals;
+    public Optional<List<String>> excludedPrincipals() {
+        return Optional.ofNullable(this.excludedPrincipals);
     }
 
     /**
@@ -46,70 +46,64 @@ public final class AssignmentLockSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
-    public AssignmentLockSettingsResponse(
-        @Nullable List<String> excludedActions,
-        @Nullable List<String> excludedPrincipals,
-        @Nullable String mode) {
-        this.excludedActions = excludedActions;
-        this.excludedPrincipals = excludedPrincipals;
-        this.mode = mode;
-    }
+    private AssignmentLockSettingsResponse() {}
 
-    private AssignmentLockSettingsResponse() {
-        this.excludedActions = List.of();
-        this.excludedPrincipals = List.of();
-        this.mode = null;
+    private AssignmentLockSettingsResponse(AssignmentLockSettingsResponse $) {
+        this.excludedActions = $.excludedActions;
+        this.excludedPrincipals = $.excludedPrincipals;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentLockSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> excludedActions;
-        private @Nullable List<String> excludedPrincipals;
-        private @Nullable String mode;
+        private AssignmentLockSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentLockSettingsResponse();
         }
 
         public Builder(AssignmentLockSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedActions = defaults.excludedActions;
-    	      this.excludedPrincipals = defaults.excludedPrincipals;
-    	      this.mode = defaults.mode;
+            $ = new AssignmentLockSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder excludedActions(@Nullable List<String> excludedActions) {
-            this.excludedActions = excludedActions;
+            $.excludedActions = excludedActions;
             return this;
         }
+
         public Builder excludedActions(String... excludedActions) {
             return excludedActions(List.of(excludedActions));
         }
+
         public Builder excludedPrincipals(@Nullable List<String> excludedPrincipals) {
-            this.excludedPrincipals = excludedPrincipals;
+            $.excludedPrincipals = excludedPrincipals;
             return this;
         }
+
         public Builder excludedPrincipals(String... excludedPrincipals) {
             return excludedPrincipals(List.of(excludedPrincipals));
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
-        }        public AssignmentLockSettingsResponse build() {
-            return new AssignmentLockSettingsResponse(excludedActions, excludedPrincipals, mode);
+        }
+
+        public AssignmentLockSettingsResponse build() {
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.awsnative.backup.inputs.ReportPlanTagArgs;
 import com.pulumi.awsnative.backup.inputs.ReportSettingPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reportDeliveryChannel", required=true)
-      private final Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
+    private Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
 
     public Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel() {
         return this.reportDeliveryChannel;
@@ -35,10 +35,10 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reportPlanDescription")
-      private final @Nullable Output<String> reportPlanDescription;
+    private @Nullable Output<String> reportPlanDescription;
 
-    public Output<String> reportPlanDescription() {
-        return this.reportPlanDescription == null ? Codegen.empty() : this.reportPlanDescription;
+    public Optional<Output<String>> reportPlanDescription() {
+        return Optional.ofNullable(this.reportPlanDescription);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reportPlanName")
-      private final @Nullable Output<String> reportPlanName;
+    private @Nullable Output<String> reportPlanName;
 
-    public Output<String> reportPlanName() {
-        return this.reportPlanName == null ? Codegen.empty() : this.reportPlanName;
+    public Optional<Output<String>> reportPlanName() {
+        return Optional.ofNullable(this.reportPlanName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reportPlanTags")
-      private final @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags;
+    private @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags;
 
-    public Output<List<ReportPlanTagArgs>> reportPlanTags() {
-        return this.reportPlanTags == null ? Codegen.empty() : this.reportPlanTags;
+    public Optional<Output<List<ReportPlanTagArgs>>> reportPlanTags() {
+        return Optional.ofNullable(this.reportPlanTags);
     }
 
     /**
@@ -68,105 +68,94 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reportSetting", required=true)
-      private final Output<ReportSettingPropertiesArgs> reportSetting;
+    private Output<ReportSettingPropertiesArgs> reportSetting;
 
     public Output<ReportSettingPropertiesArgs> reportSetting() {
         return this.reportSetting;
     }
 
-    public ReportPlanArgs(
-        Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel,
-        @Nullable Output<String> reportPlanDescription,
-        @Nullable Output<String> reportPlanName,
-        @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags,
-        Output<ReportSettingPropertiesArgs> reportSetting) {
-        this.reportDeliveryChannel = Objects.requireNonNull(reportDeliveryChannel, "expected parameter 'reportDeliveryChannel' to be non-null");
-        this.reportPlanDescription = reportPlanDescription;
-        this.reportPlanName = reportPlanName;
-        this.reportPlanTags = reportPlanTags;
-        this.reportSetting = Objects.requireNonNull(reportSetting, "expected parameter 'reportSetting' to be non-null");
-    }
+    private ReportPlanArgs() {}
 
-    private ReportPlanArgs() {
-        this.reportDeliveryChannel = Codegen.empty();
-        this.reportPlanDescription = Codegen.empty();
-        this.reportPlanName = Codegen.empty();
-        this.reportPlanTags = Codegen.empty();
-        this.reportSetting = Codegen.empty();
+    private ReportPlanArgs(ReportPlanArgs $) {
+        this.reportDeliveryChannel = $.reportDeliveryChannel;
+        this.reportPlanDescription = $.reportPlanDescription;
+        this.reportPlanName = $.reportPlanName;
+        this.reportPlanTags = $.reportPlanTags;
+        this.reportSetting = $.reportSetting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
-        private @Nullable Output<String> reportPlanDescription;
-        private @Nullable Output<String> reportPlanName;
-        private @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags;
-        private Output<ReportSettingPropertiesArgs> reportSetting;
+        private ReportPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportPlanArgs();
         }
 
         public Builder(ReportPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reportDeliveryChannel = defaults.reportDeliveryChannel;
-    	      this.reportPlanDescription = defaults.reportPlanDescription;
-    	      this.reportPlanName = defaults.reportPlanName;
-    	      this.reportPlanTags = defaults.reportPlanTags;
-    	      this.reportSetting = defaults.reportSetting;
+            $ = new ReportPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder reportDeliveryChannel(Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel) {
-            this.reportDeliveryChannel = Objects.requireNonNull(reportDeliveryChannel);
+            $.reportDeliveryChannel = reportDeliveryChannel;
             return this;
         }
+
         public Builder reportDeliveryChannel(ReportDeliveryChannelPropertiesArgs reportDeliveryChannel) {
-            this.reportDeliveryChannel = Output.of(Objects.requireNonNull(reportDeliveryChannel));
-            return this;
+            return reportDeliveryChannel(Output.of(reportDeliveryChannel));
         }
+
         public Builder reportPlanDescription(@Nullable Output<String> reportPlanDescription) {
-            this.reportPlanDescription = reportPlanDescription;
+            $.reportPlanDescription = reportPlanDescription;
             return this;
         }
-        public Builder reportPlanDescription(@Nullable String reportPlanDescription) {
-            this.reportPlanDescription = Codegen.ofNullable(reportPlanDescription);
-            return this;
+
+        public Builder reportPlanDescription(String reportPlanDescription) {
+            return reportPlanDescription(Output.of(reportPlanDescription));
         }
+
         public Builder reportPlanName(@Nullable Output<String> reportPlanName) {
-            this.reportPlanName = reportPlanName;
+            $.reportPlanName = reportPlanName;
             return this;
         }
-        public Builder reportPlanName(@Nullable String reportPlanName) {
-            this.reportPlanName = Codegen.ofNullable(reportPlanName);
-            return this;
+
+        public Builder reportPlanName(String reportPlanName) {
+            return reportPlanName(Output.of(reportPlanName));
         }
+
         public Builder reportPlanTags(@Nullable Output<List<ReportPlanTagArgs>> reportPlanTags) {
-            this.reportPlanTags = reportPlanTags;
+            $.reportPlanTags = reportPlanTags;
             return this;
         }
-        public Builder reportPlanTags(@Nullable List<ReportPlanTagArgs> reportPlanTags) {
-            this.reportPlanTags = Codegen.ofNullable(reportPlanTags);
-            return this;
+
+        public Builder reportPlanTags(List<ReportPlanTagArgs> reportPlanTags) {
+            return reportPlanTags(Output.of(reportPlanTags));
         }
+
         public Builder reportPlanTags(ReportPlanTagArgs... reportPlanTags) {
             return reportPlanTags(List.of(reportPlanTags));
         }
+
         public Builder reportSetting(Output<ReportSettingPropertiesArgs> reportSetting) {
-            this.reportSetting = Objects.requireNonNull(reportSetting);
+            $.reportSetting = reportSetting;
             return this;
         }
+
         public Builder reportSetting(ReportSettingPropertiesArgs reportSetting) {
-            this.reportSetting = Output.of(Objects.requireNonNull(reportSetting));
-            return this;
-        }        public ReportPlanArgs build() {
-            return new ReportPlanArgs(reportDeliveryChannel, reportPlanDescription, reportPlanName, reportPlanTags, reportSetting);
+            return reportSetting(Output.of(reportSetting));
+        }
+
+        public ReportPlanArgs build() {
+            $.reportDeliveryChannel = Objects.requireNonNull($.reportDeliveryChannel, "expected parameter 'reportDeliveryChannel' to be non-null");
+            $.reportSetting = Objects.requireNonNull($.reportSetting, "expected parameter 'reportSetting' to be non-null");
+            return $;
         }
     }
+
 }

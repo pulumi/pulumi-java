@@ -10,10 +10,10 @@ import com.pulumi.azurenative.keyvault.inputs.MHSMVirtualNetworkRuleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class MHSMNetworkRuleSetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bypass")
-      private final @Nullable Output<Either<String,NetworkRuleBypassOptions>> bypass;
+    private @Nullable Output<Either<String,NetworkRuleBypassOptions>> bypass;
 
-    public Output<Either<String,NetworkRuleBypassOptions>> bypass() {
-        return this.bypass == null ? Codegen.empty() : this.bypass;
+    public Optional<Output<Either<String,NetworkRuleBypassOptions>>> bypass() {
+        return Optional.ofNullable(this.bypass);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class MHSMNetworkRuleSetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="defaultAction")
-      private final @Nullable Output<Either<String,NetworkRuleAction>> defaultAction;
+    private @Nullable Output<Either<String,NetworkRuleAction>> defaultAction;
 
-    public Output<Either<String,NetworkRuleAction>> defaultAction() {
-        return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
+    public Optional<Output<Either<String,NetworkRuleAction>>> defaultAction() {
+        return Optional.ofNullable(this.defaultAction);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class MHSMNetworkRuleSetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ipRules")
-      private final @Nullable Output<List<MHSMIPRuleArgs>> ipRules;
+    private @Nullable Output<List<MHSMIPRuleArgs>> ipRules;
 
-    public Output<List<MHSMIPRuleArgs>> ipRules() {
-        return this.ipRules == null ? Codegen.empty() : this.ipRules;
+    public Optional<Output<List<MHSMIPRuleArgs>>> ipRules() {
+        return Optional.ofNullable(this.ipRules);
     }
 
     /**
@@ -63,95 +63,86 @@ public final class MHSMNetworkRuleSetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="virtualNetworkRules")
-      private final @Nullable Output<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules;
+    private @Nullable Output<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules;
 
-    public Output<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
+    public Optional<Output<List<MHSMVirtualNetworkRuleArgs>>> virtualNetworkRules() {
+        return Optional.ofNullable(this.virtualNetworkRules);
     }
 
-    public MHSMNetworkRuleSetArgs(
-        @Nullable Output<Either<String,NetworkRuleBypassOptions>> bypass,
-        @Nullable Output<Either<String,NetworkRuleAction>> defaultAction,
-        @Nullable Output<List<MHSMIPRuleArgs>> ipRules,
-        @Nullable Output<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules) {
-        this.bypass = bypass;
-        this.defaultAction = defaultAction;
-        this.ipRules = ipRules;
-        this.virtualNetworkRules = virtualNetworkRules;
-    }
+    private MHSMNetworkRuleSetArgs() {}
 
-    private MHSMNetworkRuleSetArgs() {
-        this.bypass = Codegen.empty();
-        this.defaultAction = Codegen.empty();
-        this.ipRules = Codegen.empty();
-        this.virtualNetworkRules = Codegen.empty();
+    private MHSMNetworkRuleSetArgs(MHSMNetworkRuleSetArgs $) {
+        this.bypass = $.bypass;
+        this.defaultAction = $.defaultAction;
+        this.ipRules = $.ipRules;
+        this.virtualNetworkRules = $.virtualNetworkRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MHSMNetworkRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,NetworkRuleBypassOptions>> bypass;
-        private @Nullable Output<Either<String,NetworkRuleAction>> defaultAction;
-        private @Nullable Output<List<MHSMIPRuleArgs>> ipRules;
-        private @Nullable Output<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules;
+        private MHSMNetworkRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MHSMNetworkRuleSetArgs();
         }
 
         public Builder(MHSMNetworkRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bypass = defaults.bypass;
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.ipRules = defaults.ipRules;
-    	      this.virtualNetworkRules = defaults.virtualNetworkRules;
+            $ = new MHSMNetworkRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bypass(@Nullable Output<Either<String,NetworkRuleBypassOptions>> bypass) {
-            this.bypass = bypass;
+            $.bypass = bypass;
             return this;
         }
-        public Builder bypass(@Nullable Either<String,NetworkRuleBypassOptions> bypass) {
-            this.bypass = Codegen.ofNullable(bypass);
-            return this;
+
+        public Builder bypass(Either<String,NetworkRuleBypassOptions> bypass) {
+            return bypass(Output.of(bypass));
         }
+
         public Builder defaultAction(@Nullable Output<Either<String,NetworkRuleAction>> defaultAction) {
-            this.defaultAction = defaultAction;
+            $.defaultAction = defaultAction;
             return this;
         }
-        public Builder defaultAction(@Nullable Either<String,NetworkRuleAction> defaultAction) {
-            this.defaultAction = Codegen.ofNullable(defaultAction);
-            return this;
+
+        public Builder defaultAction(Either<String,NetworkRuleAction> defaultAction) {
+            return defaultAction(Output.of(defaultAction));
         }
+
         public Builder ipRules(@Nullable Output<List<MHSMIPRuleArgs>> ipRules) {
-            this.ipRules = ipRules;
+            $.ipRules = ipRules;
             return this;
         }
-        public Builder ipRules(@Nullable List<MHSMIPRuleArgs> ipRules) {
-            this.ipRules = Codegen.ofNullable(ipRules);
-            return this;
+
+        public Builder ipRules(List<MHSMIPRuleArgs> ipRules) {
+            return ipRules(Output.of(ipRules));
         }
+
         public Builder ipRules(MHSMIPRuleArgs... ipRules) {
             return ipRules(List.of(ipRules));
         }
+
         public Builder virtualNetworkRules(@Nullable Output<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules) {
-            this.virtualNetworkRules = virtualNetworkRules;
+            $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-        public Builder virtualNetworkRules(@Nullable List<MHSMVirtualNetworkRuleArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Codegen.ofNullable(virtualNetworkRules);
-            return this;
+
+        public Builder virtualNetworkRules(List<MHSMVirtualNetworkRuleArgs> virtualNetworkRules) {
+            return virtualNetworkRules(Output.of(virtualNetworkRules));
         }
+
         public Builder virtualNetworkRules(MHSMVirtualNetworkRuleArgs... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
-        }        public MHSMNetworkRuleSetArgs build() {
-            return new MHSMNetworkRuleSetArgs(bypass, defaultAction, ipRules, virtualNetworkRules);
+        }
+
+        public MHSMNetworkRuleSetArgs build() {
+            return $;
         }
     }
+
 }

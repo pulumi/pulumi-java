@@ -5,9 +5,9 @@ package com.pulumi.aws.apprunner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ServiceInstanceConfigurationGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Output<String> cpu;
+    private @Nullable Output<String> cpu;
 
-    public Output<String> cpu() {
-        return this.cpu == null ? Codegen.empty() : this.cpu;
+    public Optional<Output<String>> cpu() {
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServiceInstanceConfigurationGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="instanceRoleArn")
-      private final @Nullable Output<String> instanceRoleArn;
+    private @Nullable Output<String> instanceRoleArn;
 
-    public Output<String> instanceRoleArn() {
-        return this.instanceRoleArn == null ? Codegen.empty() : this.instanceRoleArn;
+    public Optional<Output<String>> instanceRoleArn() {
+        return Optional.ofNullable(this.instanceRoleArn);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ServiceInstanceConfigurationGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="memory")
-      private final @Nullable Output<String> memory;
+    private @Nullable Output<String> memory;
 
-    public Output<String> memory() {
-        return this.memory == null ? Codegen.empty() : this.memory;
+    public Optional<Output<String>> memory() {
+        return Optional.ofNullable(this.memory);
     }
 
-    public ServiceInstanceConfigurationGetArgs(
-        @Nullable Output<String> cpu,
-        @Nullable Output<String> instanceRoleArn,
-        @Nullable Output<String> memory) {
-        this.cpu = cpu;
-        this.instanceRoleArn = instanceRoleArn;
-        this.memory = memory;
-    }
+    private ServiceInstanceConfigurationGetArgs() {}
 
-    private ServiceInstanceConfigurationGetArgs() {
-        this.cpu = Codegen.empty();
-        this.instanceRoleArn = Codegen.empty();
-        this.memory = Codegen.empty();
+    private ServiceInstanceConfigurationGetArgs(ServiceInstanceConfigurationGetArgs $) {
+        this.cpu = $.cpu;
+        this.instanceRoleArn = $.instanceRoleArn;
+        this.memory = $.memory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceInstanceConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cpu;
-        private @Nullable Output<String> instanceRoleArn;
-        private @Nullable Output<String> memory;
+        private ServiceInstanceConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceInstanceConfigurationGetArgs();
         }
 
         public Builder(ServiceInstanceConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.instanceRoleArn = defaults.instanceRoleArn;
-    	      this.memory = defaults.memory;
+            $ = new ServiceInstanceConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Output<String> cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
-        public Builder cpu(@Nullable String cpu) {
-            this.cpu = Codegen.ofNullable(cpu);
-            return this;
+
+        public Builder cpu(String cpu) {
+            return cpu(Output.of(cpu));
         }
+
         public Builder instanceRoleArn(@Nullable Output<String> instanceRoleArn) {
-            this.instanceRoleArn = instanceRoleArn;
+            $.instanceRoleArn = instanceRoleArn;
             return this;
         }
-        public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
-            this.instanceRoleArn = Codegen.ofNullable(instanceRoleArn);
-            return this;
+
+        public Builder instanceRoleArn(String instanceRoleArn) {
+            return instanceRoleArn(Output.of(instanceRoleArn));
         }
+
         public Builder memory(@Nullable Output<String> memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
         }
-        public Builder memory(@Nullable String memory) {
-            this.memory = Codegen.ofNullable(memory);
-            return this;
-        }        public ServiceInstanceConfigurationGetArgs build() {
-            return new ServiceInstanceConfigurationGetArgs(cpu, instanceRoleArn, memory);
+
+        public Builder memory(String memory) {
+            return memory(Output.of(memory));
+        }
+
+        public ServiceInstanceConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

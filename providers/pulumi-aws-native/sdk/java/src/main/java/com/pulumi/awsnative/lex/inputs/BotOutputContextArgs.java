@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,90 +19,85 @@ public final class BotOutputContextArgs extends com.pulumi.resources.ResourceArg
     public static final BotOutputContextArgs Empty = new BotOutputContextArgs();
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="timeToLiveInSeconds", required=true)
-      private final Output<Integer> timeToLiveInSeconds;
+    private Output<Integer> timeToLiveInSeconds;
 
     public Output<Integer> timeToLiveInSeconds() {
         return this.timeToLiveInSeconds;
     }
 
     @Import(name="turnsToLive", required=true)
-      private final Output<Integer> turnsToLive;
+    private Output<Integer> turnsToLive;
 
     public Output<Integer> turnsToLive() {
         return this.turnsToLive;
     }
 
-    public BotOutputContextArgs(
-        Output<String> name,
-        Output<Integer> timeToLiveInSeconds,
-        Output<Integer> turnsToLive) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.timeToLiveInSeconds = Objects.requireNonNull(timeToLiveInSeconds, "expected parameter 'timeToLiveInSeconds' to be non-null");
-        this.turnsToLive = Objects.requireNonNull(turnsToLive, "expected parameter 'turnsToLive' to be non-null");
-    }
+    private BotOutputContextArgs() {}
 
-    private BotOutputContextArgs() {
-        this.name = Codegen.empty();
-        this.timeToLiveInSeconds = Codegen.empty();
-        this.turnsToLive = Codegen.empty();
+    private BotOutputContextArgs(BotOutputContextArgs $) {
+        this.name = $.name;
+        this.timeToLiveInSeconds = $.timeToLiveInSeconds;
+        this.turnsToLive = $.turnsToLive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotOutputContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<Integer> timeToLiveInSeconds;
-        private Output<Integer> turnsToLive;
+        private BotOutputContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotOutputContextArgs();
         }
 
         public Builder(BotOutputContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.timeToLiveInSeconds = defaults.timeToLiveInSeconds;
-    	      this.turnsToLive = defaults.turnsToLive;
+            $ = new BotOutputContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder timeToLiveInSeconds(Output<Integer> timeToLiveInSeconds) {
-            this.timeToLiveInSeconds = Objects.requireNonNull(timeToLiveInSeconds);
+            $.timeToLiveInSeconds = timeToLiveInSeconds;
             return this;
         }
+
         public Builder timeToLiveInSeconds(Integer timeToLiveInSeconds) {
-            this.timeToLiveInSeconds = Output.of(Objects.requireNonNull(timeToLiveInSeconds));
-            return this;
+            return timeToLiveInSeconds(Output.of(timeToLiveInSeconds));
         }
+
         public Builder turnsToLive(Output<Integer> turnsToLive) {
-            this.turnsToLive = Objects.requireNonNull(turnsToLive);
+            $.turnsToLive = turnsToLive;
             return this;
         }
+
         public Builder turnsToLive(Integer turnsToLive) {
-            this.turnsToLive = Output.of(Objects.requireNonNull(turnsToLive));
-            return this;
-        }        public BotOutputContextArgs build() {
-            return new BotOutputContextArgs(name, timeToLiveInSeconds, turnsToLive);
+            return turnsToLive(Output.of(turnsToLive));
+        }
+
+        public BotOutputContextArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.timeToLiveInSeconds = Objects.requireNonNull($.timeToLiveInSeconds, "expected parameter 'timeToLiveInSeconds' to be non-null");
+            $.turnsToLive = Objects.requireNonNull($.turnsToLive, "expected parameter 'turnsToLive' to be non-null");
+            return $;
         }
     }
+
 }

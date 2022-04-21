@@ -21,7 +21,7 @@ public final class FilterFileDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="filterFilePath", required=true)
-      private final String filterFilePath;
+    private String filterFilePath;
 
     public String filterFilePath() {
         return this.filterFilePath;
@@ -32,55 +32,52 @@ public final class FilterFileDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="filterFileType", required=true)
-      private final String filterFileType;
+    private String filterFileType;
 
     public String filterFileType() {
         return this.filterFileType;
     }
 
-    public FilterFileDetailsResponse(
-        String filterFilePath,
-        String filterFileType) {
-        this.filterFilePath = Objects.requireNonNull(filterFilePath, "expected parameter 'filterFilePath' to be non-null");
-        this.filterFileType = Objects.requireNonNull(filterFileType, "expected parameter 'filterFileType' to be non-null");
-    }
+    private FilterFileDetailsResponse() {}
 
-    private FilterFileDetailsResponse() {
-        this.filterFilePath = null;
-        this.filterFileType = null;
+    private FilterFileDetailsResponse(FilterFileDetailsResponse $) {
+        this.filterFilePath = $.filterFilePath;
+        this.filterFileType = $.filterFileType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterFileDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filterFilePath;
-        private String filterFileType;
+        private FilterFileDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterFileDetailsResponse();
         }
 
         public Builder(FilterFileDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterFilePath = defaults.filterFilePath;
-    	      this.filterFileType = defaults.filterFileType;
+            $ = new FilterFileDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filterFilePath(String filterFilePath) {
-            this.filterFilePath = Objects.requireNonNull(filterFilePath);
+            $.filterFilePath = filterFilePath;
             return this;
         }
+
         public Builder filterFileType(String filterFileType) {
-            this.filterFileType = Objects.requireNonNull(filterFileType);
+            $.filterFileType = filterFileType;
             return this;
-        }        public FilterFileDetailsResponse build() {
-            return new FilterFileDetailsResponse(filterFilePath, filterFileType);
+        }
+
+        public FilterFileDetailsResponse build() {
+            $.filterFilePath = Objects.requireNonNull($.filterFilePath, "expected parameter 'filterFilePath' to be non-null");
+            $.filterFileType = Objects.requireNonNull($.filterFileType, "expected parameter 'filterFileType' to be non-null");
+            return $;
         }
     }
+
 }

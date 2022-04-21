@@ -5,7 +5,6 @@ package com.pulumi.awsnative.timestream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ScheduledQuerySnsConfigurationArgs extends com.pulumi.resourc
     public static final ScheduledQuerySnsConfigurationArgs Empty = new ScheduledQuerySnsConfigurationArgs();
 
     @Import(name="topicArn", required=true)
-      private final Output<String> topicArn;
+    private Output<String> topicArn;
 
     public Output<String> topicArn() {
         return this.topicArn;
     }
 
-    public ScheduledQuerySnsConfigurationArgs(Output<String> topicArn) {
-        this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
-    }
+    private ScheduledQuerySnsConfigurationArgs() {}
 
-    private ScheduledQuerySnsConfigurationArgs() {
-        this.topicArn = Codegen.empty();
+    private ScheduledQuerySnsConfigurationArgs(ScheduledQuerySnsConfigurationArgs $) {
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledQuerySnsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> topicArn;
+        private ScheduledQuerySnsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledQuerySnsConfigurationArgs();
         }
 
         public Builder(ScheduledQuerySnsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topicArn = defaults.topicArn;
+            $ = new ScheduledQuerySnsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder topicArn(Output<String> topicArn) {
-            this.topicArn = Objects.requireNonNull(topicArn);
+            $.topicArn = topicArn;
             return this;
         }
+
         public Builder topicArn(String topicArn) {
-            this.topicArn = Output.of(Objects.requireNonNull(topicArn));
-            return this;
-        }        public ScheduledQuerySnsConfigurationArgs build() {
-            return new ScheduledQuerySnsConfigurationArgs(topicArn);
+            return topicArn(Output.of(topicArn));
+        }
+
+        public ScheduledQuerySnsConfigurationArgs build() {
+            $.topicArn = Objects.requireNonNull($.topicArn, "expected parameter 'topicArn' to be non-null");
+            return $;
         }
     }
+
 }

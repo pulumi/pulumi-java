@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.LocalGatewayRouteTableVPCAssociationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends com.pulumi.r
      * 
      */
     @Import(name="localGatewayRouteTableId", required=true)
-      private final Output<String> localGatewayRouteTableId;
+    private Output<String> localGatewayRouteTableId;
 
     public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
@@ -33,10 +33,10 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends com.pulumi.r
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags;
+    private @Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags;
 
-    public Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -44,79 +44,74 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends com.pulumi.r
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public LocalGatewayRouteTableVPCAssociationArgs(
-        Output<String> localGatewayRouteTableId,
-        @Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags,
-        Output<String> vpcId) {
-        this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId, "expected parameter 'localGatewayRouteTableId' to be non-null");
-        this.tags = tags;
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private LocalGatewayRouteTableVPCAssociationArgs() {}
 
-    private LocalGatewayRouteTableVPCAssociationArgs() {
-        this.localGatewayRouteTableId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private LocalGatewayRouteTableVPCAssociationArgs(LocalGatewayRouteTableVPCAssociationArgs $) {
+        this.localGatewayRouteTableId = $.localGatewayRouteTableId;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalGatewayRouteTableVPCAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> localGatewayRouteTableId;
-        private @Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags;
-        private Output<String> vpcId;
+        private LocalGatewayRouteTableVPCAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalGatewayRouteTableVPCAssociationArgs();
         }
 
         public Builder(LocalGatewayRouteTableVPCAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localGatewayRouteTableId = defaults.localGatewayRouteTableId;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new LocalGatewayRouteTableVPCAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder localGatewayRouteTableId(Output<String> localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
+            $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
+
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Output.of(Objects.requireNonNull(localGatewayRouteTableId));
-            return this;
+            return localGatewayRouteTableId(Output.of(localGatewayRouteTableId));
         }
+
         public Builder tags(@Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<LocalGatewayRouteTableVPCAssociationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<LocalGatewayRouteTableVPCAssociationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(LocalGatewayRouteTableVPCAssociationTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public LocalGatewayRouteTableVPCAssociationArgs build() {
-            return new LocalGatewayRouteTableVPCAssociationArgs(localGatewayRouteTableId, tags, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public LocalGatewayRouteTableVPCAssociationArgs build() {
+            $.localGatewayRouteTableId = Objects.requireNonNull($.localGatewayRouteTableId, "expected parameter 'localGatewayRouteTableId' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

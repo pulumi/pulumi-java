@@ -6,9 +6,9 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.azurenative.migrate.inputs.SolutionDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cleanupState")
-      private final @Nullable Output<String> cleanupState;
+    private @Nullable Output<String> cleanupState;
 
-    public Output<String> cleanupState() {
-        return this.cleanupState == null ? Codegen.empty() : this.cleanupState;
+    public Optional<Output<String>> cleanupState() {
+        return Optional.ofNullable(this.cleanupState);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="details")
-      private final @Nullable Output<SolutionDetailsArgs> details;
+    private @Nullable Output<SolutionDetailsArgs> details;
 
-    public Output<SolutionDetailsArgs> details() {
-        return this.details == null ? Codegen.empty() : this.details;
+    public Optional<Output<SolutionDetailsArgs>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="goal")
-      private final @Nullable Output<String> goal;
+    private @Nullable Output<String> goal;
 
-    public Output<String> goal() {
-        return this.goal == null ? Codegen.empty() : this.goal;
+    public Optional<Output<String>> goal() {
+        return Optional.ofNullable(this.goal);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="purpose")
-      private final @Nullable Output<String> purpose;
+    private @Nullable Output<String> purpose;
 
-    public Output<String> purpose() {
-        return this.purpose == null ? Codegen.empty() : this.purpose;
+    public Optional<Output<String>> purpose() {
+        return Optional.ofNullable(this.purpose);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tool")
-      private final @Nullable Output<String> tool;
+    private @Nullable Output<String> tool;
 
-    public Output<String> tool() {
-        return this.tool == null ? Codegen.empty() : this.tool;
+    public Optional<Output<String>> tool() {
+        return Optional.ofNullable(this.tool);
     }
 
-    public SolutionPropertiesArgs(
-        @Nullable Output<String> cleanupState,
-        @Nullable Output<SolutionDetailsArgs> details,
-        @Nullable Output<String> goal,
-        @Nullable Output<String> purpose,
-        @Nullable Output<String> status,
-        @Nullable Output<String> tool) {
-        this.cleanupState = cleanupState;
-        this.details = details;
-        this.goal = goal;
-        this.purpose = purpose;
-        this.status = status;
-        this.tool = tool;
-    }
+    private SolutionPropertiesArgs() {}
 
-    private SolutionPropertiesArgs() {
-        this.cleanupState = Codegen.empty();
-        this.details = Codegen.empty();
-        this.goal = Codegen.empty();
-        this.purpose = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tool = Codegen.empty();
+    private SolutionPropertiesArgs(SolutionPropertiesArgs $) {
+        this.cleanupState = $.cleanupState;
+        this.details = $.details;
+        this.goal = $.goal;
+        this.purpose = $.purpose;
+        this.status = $.status;
+        this.tool = $.tool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SolutionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cleanupState;
-        private @Nullable Output<SolutionDetailsArgs> details;
-        private @Nullable Output<String> goal;
-        private @Nullable Output<String> purpose;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> tool;
+        private SolutionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SolutionPropertiesArgs();
         }
 
         public Builder(SolutionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cleanupState = defaults.cleanupState;
-    	      this.details = defaults.details;
-    	      this.goal = defaults.goal;
-    	      this.purpose = defaults.purpose;
-    	      this.status = defaults.status;
-    	      this.tool = defaults.tool;
+            $ = new SolutionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cleanupState(@Nullable Output<String> cleanupState) {
-            this.cleanupState = cleanupState;
+            $.cleanupState = cleanupState;
             return this;
         }
-        public Builder cleanupState(@Nullable String cleanupState) {
-            this.cleanupState = Codegen.ofNullable(cleanupState);
-            return this;
+
+        public Builder cleanupState(String cleanupState) {
+            return cleanupState(Output.of(cleanupState));
         }
+
         public Builder details(@Nullable Output<SolutionDetailsArgs> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
-        public Builder details(@Nullable SolutionDetailsArgs details) {
-            this.details = Codegen.ofNullable(details);
-            return this;
+
+        public Builder details(SolutionDetailsArgs details) {
+            return details(Output.of(details));
         }
+
         public Builder goal(@Nullable Output<String> goal) {
-            this.goal = goal;
+            $.goal = goal;
             return this;
         }
-        public Builder goal(@Nullable String goal) {
-            this.goal = Codegen.ofNullable(goal);
-            return this;
+
+        public Builder goal(String goal) {
+            return goal(Output.of(goal));
         }
+
         public Builder purpose(@Nullable Output<String> purpose) {
-            this.purpose = purpose;
+            $.purpose = purpose;
             return this;
         }
-        public Builder purpose(@Nullable String purpose) {
-            this.purpose = Codegen.ofNullable(purpose);
-            return this;
+
+        public Builder purpose(String purpose) {
+            return purpose(Output.of(purpose));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tool(@Nullable Output<String> tool) {
-            this.tool = tool;
+            $.tool = tool;
             return this;
         }
-        public Builder tool(@Nullable String tool) {
-            this.tool = Codegen.ofNullable(tool);
-            return this;
-        }        public SolutionPropertiesArgs build() {
-            return new SolutionPropertiesArgs(cleanupState, details, goal, purpose, status, tool);
+
+        public Builder tool(String tool) {
+            return tool(Output.of(tool));
+        }
+
+        public SolutionPropertiesArgs build() {
+            return $;
         }
     }
+
 }

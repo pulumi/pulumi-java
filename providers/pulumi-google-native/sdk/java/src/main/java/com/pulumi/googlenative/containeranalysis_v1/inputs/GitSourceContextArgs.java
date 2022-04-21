@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GitSourceContextArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="revisionId")
-      private final @Nullable Output<String> revisionId;
+    private @Nullable Output<String> revisionId;
 
-    public Output<String> revisionId() {
-        return this.revisionId == null ? Codegen.empty() : this.revisionId;
+    public Optional<Output<String>> revisionId() {
+        return Optional.ofNullable(this.revisionId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GitSourceContextArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public GitSourceContextArgs(
-        @Nullable Output<String> revisionId,
-        @Nullable Output<String> url) {
-        this.revisionId = revisionId;
-        this.url = url;
-    }
+    private GitSourceContextArgs() {}
 
-    private GitSourceContextArgs() {
-        this.revisionId = Codegen.empty();
-        this.url = Codegen.empty();
+    private GitSourceContextArgs(GitSourceContextArgs $) {
+        this.revisionId = $.revisionId;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitSourceContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> revisionId;
-        private @Nullable Output<String> url;
+        private GitSourceContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitSourceContextArgs();
         }
 
         public Builder(GitSourceContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revisionId = defaults.revisionId;
-    	      this.url = defaults.url;
+            $ = new GitSourceContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder revisionId(@Nullable Output<String> revisionId) {
-            this.revisionId = revisionId;
+            $.revisionId = revisionId;
             return this;
         }
-        public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Codegen.ofNullable(revisionId);
-            return this;
+
+        public Builder revisionId(String revisionId) {
+            return revisionId(Output.of(revisionId));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public GitSourceContextArgs build() {
-            return new GitSourceContextArgs(revisionId, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public GitSourceContextArgs build() {
+            return $;
         }
     }
+
 }

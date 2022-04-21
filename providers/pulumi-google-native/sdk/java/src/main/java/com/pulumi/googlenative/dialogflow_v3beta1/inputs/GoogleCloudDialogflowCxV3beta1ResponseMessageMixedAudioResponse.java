@@ -22,48 +22,49 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioRespon
      * 
      */
     @Import(name="segments", required=true)
-      private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments;
+    private List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments;
 
     public List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments() {
         return this.segments;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse(List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments) {
-        this.segments = Objects.requireNonNull(segments, "expected parameter 'segments' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse() {
-        this.segments = List.of();
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse(GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse $) {
+        this.segments = $.segments;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments;
+        private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.segments = defaults.segments;
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder segments(List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments) {
-            this.segments = Objects.requireNonNull(segments);
+            $.segments = segments;
             return this;
         }
+
         public Builder segments(GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse... segments) {
             return segments(List.of(segments));
-        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse(segments);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse build() {
+            $.segments = Objects.requireNonNull($.segments, "expected parameter 'segments' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs extends com.pu
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -32,63 +32,59 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs extends com.pu
      * 
      */
     @Import(name="logGroup")
-      private final @Nullable Output<String> logGroup;
+    private @Nullable Output<String> logGroup;
 
-    public Output<String> logGroup() {
-        return this.logGroup == null ? Codegen.empty() : this.logGroup;
+    public Optional<Output<String>> logGroup() {
+        return Optional.ofNullable(this.logGroup);
     }
 
-    public ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs(
-        Output<Boolean> enabled,
-        @Nullable Output<String> logGroup) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.logGroup = logGroup;
-    }
+    private ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs() {}
 
-    private ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs() {
-        this.enabled = Codegen.empty();
-        this.logGroup = Codegen.empty();
+    private ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs(ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs $) {
+        this.enabled = $.enabled;
+        this.logGroup = $.logGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
-        private @Nullable Output<String> logGroup;
+        private ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs();
         }
 
         public Builder(ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.logGroup = defaults.logGroup;
+            $ = new ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder logGroup(@Nullable Output<String> logGroup) {
-            this.logGroup = logGroup;
+            $.logGroup = logGroup;
             return this;
         }
-        public Builder logGroup(@Nullable String logGroup) {
-            this.logGroup = Codegen.ofNullable(logGroup);
-            return this;
-        }        public ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs build() {
-            return new ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs(enabled, logGroup);
+
+        public Builder logGroup(String logGroup) {
+            return logGroup(Output.of(logGroup));
+        }
+
+        public ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

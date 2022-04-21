@@ -26,10 +26,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encryptionPreferences")
-      private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
+    private @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
     public Optional<EncryptionPreferencesResponse> encryptionPreferences() {
-        return this.encryptionPreferences == null ? Optional.empty() : Optional.ofNullable(this.encryptionPreferences);
+        return Optional.ofNullable(this.encryptionPreferences);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="preferredDataCenterRegion")
-      private final @Nullable List<String> preferredDataCenterRegion;
+    private @Nullable List<String> preferredDataCenterRegion;
 
-    public List<String> preferredDataCenterRegion() {
-        return this.preferredDataCenterRegion == null ? List.of() : this.preferredDataCenterRegion;
+    public Optional<List<String>> preferredDataCenterRegion() {
+        return Optional.ofNullable(this.preferredDataCenterRegion);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transportPreferences")
-      private final @Nullable TransportPreferencesResponse transportPreferences;
+    private @Nullable TransportPreferencesResponse transportPreferences;
 
     public Optional<TransportPreferencesResponse> transportPreferences() {
-        return this.transportPreferences == null ? Optional.empty() : Optional.ofNullable(this.transportPreferences);
+        return Optional.ofNullable(this.transportPreferences);
     }
 
-    public PreferencesResponse(
-        @Nullable EncryptionPreferencesResponse encryptionPreferences,
-        @Nullable List<String> preferredDataCenterRegion,
-        @Nullable TransportPreferencesResponse transportPreferences) {
-        this.encryptionPreferences = encryptionPreferences;
-        this.preferredDataCenterRegion = preferredDataCenterRegion;
-        this.transportPreferences = transportPreferences;
-    }
+    private PreferencesResponse() {}
 
-    private PreferencesResponse() {
-        this.encryptionPreferences = null;
-        this.preferredDataCenterRegion = List.of();
-        this.transportPreferences = null;
+    private PreferencesResponse(PreferencesResponse $) {
+        this.encryptionPreferences = $.encryptionPreferences;
+        this.preferredDataCenterRegion = $.preferredDataCenterRegion;
+        this.transportPreferences = $.transportPreferences;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreferencesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EncryptionPreferencesResponse encryptionPreferences;
-        private @Nullable List<String> preferredDataCenterRegion;
-        private @Nullable TransportPreferencesResponse transportPreferences;
+        private PreferencesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreferencesResponse();
         }
 
         public Builder(PreferencesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionPreferences = defaults.encryptionPreferences;
-    	      this.preferredDataCenterRegion = defaults.preferredDataCenterRegion;
-    	      this.transportPreferences = defaults.transportPreferences;
+            $ = new PreferencesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
-            this.encryptionPreferences = encryptionPreferences;
+            $.encryptionPreferences = encryptionPreferences;
             return this;
         }
+
         public Builder preferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
-            this.preferredDataCenterRegion = preferredDataCenterRegion;
+            $.preferredDataCenterRegion = preferredDataCenterRegion;
             return this;
         }
+
         public Builder preferredDataCenterRegion(String... preferredDataCenterRegion) {
             return preferredDataCenterRegion(List.of(preferredDataCenterRegion));
         }
+
         public Builder transportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
-            this.transportPreferences = transportPreferences;
+            $.transportPreferences = transportPreferences;
             return this;
-        }        public PreferencesResponse build() {
-            return new PreferencesResponse(encryptionPreferences, preferredDataCenterRegion, transportPreferences);
+        }
+
+        public PreferencesResponse build() {
+            return $;
         }
     }
+
 }

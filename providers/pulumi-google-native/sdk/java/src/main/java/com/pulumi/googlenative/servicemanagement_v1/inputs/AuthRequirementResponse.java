@@ -21,7 +21,7 @@ public final class AuthRequirementResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="audiences", required=true)
-      private final String audiences;
+    private String audiences;
 
     public String audiences() {
         return this.audiences;
@@ -32,55 +32,52 @@ public final class AuthRequirementResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="providerId", required=true)
-      private final String providerId;
+    private String providerId;
 
     public String providerId() {
         return this.providerId;
     }
 
-    public AuthRequirementResponse(
-        String audiences,
-        String providerId) {
-        this.audiences = Objects.requireNonNull(audiences, "expected parameter 'audiences' to be non-null");
-        this.providerId = Objects.requireNonNull(providerId, "expected parameter 'providerId' to be non-null");
-    }
+    private AuthRequirementResponse() {}
 
-    private AuthRequirementResponse() {
-        this.audiences = null;
-        this.providerId = null;
+    private AuthRequirementResponse(AuthRequirementResponse $) {
+        this.audiences = $.audiences;
+        this.providerId = $.providerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthRequirementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String audiences;
-        private String providerId;
+        private AuthRequirementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthRequirementResponse();
         }
 
         public Builder(AuthRequirementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audiences = defaults.audiences;
-    	      this.providerId = defaults.providerId;
+            $ = new AuthRequirementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audiences(String audiences) {
-            this.audiences = Objects.requireNonNull(audiences);
+            $.audiences = audiences;
             return this;
         }
+
         public Builder providerId(String providerId) {
-            this.providerId = Objects.requireNonNull(providerId);
+            $.providerId = providerId;
             return this;
-        }        public AuthRequirementResponse build() {
-            return new AuthRequirementResponse(audiences, providerId);
+        }
+
+        public AuthRequirementResponse build() {
+            $.audiences = Objects.requireNonNull($.audiences, "expected parameter 'audiences' to be non-null");
+            $.providerId = Objects.requireNonNull($.providerId, "expected parameter 'providerId' to be non-null");
+            return $;
         }
     }
+
 }

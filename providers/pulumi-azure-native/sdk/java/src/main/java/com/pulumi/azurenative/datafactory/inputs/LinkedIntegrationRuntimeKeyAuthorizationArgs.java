@@ -25,7 +25,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends com.pulu
      * 
      */
     @Import(name="authorizationType", required=true)
-      private final Output<String> authorizationType;
+    private Output<String> authorizationType;
 
     public Output<String> authorizationType() {
         return this.authorizationType;
@@ -36,63 +36,60 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends com.pulu
      * 
      */
     @Import(name="key", required=true)
-      private final Output<SecureStringArgs> key;
+    private Output<SecureStringArgs> key;
 
     public Output<SecureStringArgs> key() {
         return this.key;
     }
 
-    public LinkedIntegrationRuntimeKeyAuthorizationArgs(
-        Output<String> authorizationType,
-        Output<SecureStringArgs> key) {
-        this.authorizationType = Codegen.stringProp("authorizationType").output().arg(authorizationType).require();
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private LinkedIntegrationRuntimeKeyAuthorizationArgs() {}
 
-    private LinkedIntegrationRuntimeKeyAuthorizationArgs() {
-        this.authorizationType = Codegen.empty();
-        this.key = Codegen.empty();
+    private LinkedIntegrationRuntimeKeyAuthorizationArgs(LinkedIntegrationRuntimeKeyAuthorizationArgs $) {
+        this.authorizationType = $.authorizationType;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedIntegrationRuntimeKeyAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authorizationType;
-        private Output<SecureStringArgs> key;
+        private LinkedIntegrationRuntimeKeyAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedIntegrationRuntimeKeyAuthorizationArgs();
         }
 
         public Builder(LinkedIntegrationRuntimeKeyAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationType = defaults.authorizationType;
-    	      this.key = defaults.key;
+            $ = new LinkedIntegrationRuntimeKeyAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationType(Output<String> authorizationType) {
-            this.authorizationType = Objects.requireNonNull(authorizationType);
+            $.authorizationType = authorizationType;
             return this;
         }
+
         public Builder authorizationType(String authorizationType) {
-            this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
-            return this;
+            return authorizationType(Output.of(authorizationType));
         }
+
         public Builder key(Output<SecureStringArgs> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(SecureStringArgs key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
-        }        public LinkedIntegrationRuntimeKeyAuthorizationArgs build() {
-            return new LinkedIntegrationRuntimeKeyAuthorizationArgs(authorizationType, key);
+            return key(Output.of(key));
+        }
+
+        public LinkedIntegrationRuntimeKeyAuthorizationArgs build() {
+            $.authorizationType = Codegen.stringProp("authorizationType").output().arg($.authorizationType).require();
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

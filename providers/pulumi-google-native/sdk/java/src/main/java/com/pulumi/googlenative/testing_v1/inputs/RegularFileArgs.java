@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class RegularFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final Output<FileReferenceArgs> content;
+    private Output<FileReferenceArgs> content;
 
     public Output<FileReferenceArgs> content() {
         return this.content;
@@ -35,63 +34,60 @@ public final class RegularFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="devicePath", required=true)
-      private final Output<String> devicePath;
+    private Output<String> devicePath;
 
     public Output<String> devicePath() {
         return this.devicePath;
     }
 
-    public RegularFileArgs(
-        Output<FileReferenceArgs> content,
-        Output<String> devicePath) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.devicePath = Objects.requireNonNull(devicePath, "expected parameter 'devicePath' to be non-null");
-    }
+    private RegularFileArgs() {}
 
-    private RegularFileArgs() {
-        this.content = Codegen.empty();
-        this.devicePath = Codegen.empty();
+    private RegularFileArgs(RegularFileArgs $) {
+        this.content = $.content;
+        this.devicePath = $.devicePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegularFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FileReferenceArgs> content;
-        private Output<String> devicePath;
+        private RegularFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegularFileArgs();
         }
 
         public Builder(RegularFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.devicePath = defaults.devicePath;
+            $ = new RegularFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(Output<FileReferenceArgs> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(FileReferenceArgs content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder devicePath(Output<String> devicePath) {
-            this.devicePath = Objects.requireNonNull(devicePath);
+            $.devicePath = devicePath;
             return this;
         }
+
         public Builder devicePath(String devicePath) {
-            this.devicePath = Output.of(Objects.requireNonNull(devicePath));
-            return this;
-        }        public RegularFileArgs build() {
-            return new RegularFileArgs(content, devicePath);
+            return devicePath(Output.of(devicePath));
+        }
+
+        public RegularFileArgs build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.devicePath = Objects.requireNonNull($.devicePath, "expected parameter 'devicePath' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.azurenative.labservices.enums.RecurrenceFrequency;
 import com.pulumi.azurenative.labservices.enums.WeekDay;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class RecurrencePatternArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="expirationDate", required=true)
-      private final Output<String> expirationDate;
+    private Output<String> expirationDate;
 
     public Output<String> expirationDate() {
         return this.expirationDate;
@@ -39,7 +39,7 @@ public final class RecurrencePatternArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="frequency", required=true)
-      private final Output<RecurrenceFrequency> frequency;
+    private Output<RecurrenceFrequency> frequency;
 
     public Output<RecurrenceFrequency> frequency() {
         return this.frequency;
@@ -50,10 +50,10 @@ public final class RecurrencePatternArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Integer> interval;
+    private @Nullable Output<Integer> interval;
 
-    public Output<Integer> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Integer>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -61,92 +61,84 @@ public final class RecurrencePatternArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="weekDays")
-      private final @Nullable Output<List<WeekDay>> weekDays;
+    private @Nullable Output<List<WeekDay>> weekDays;
 
-    public Output<List<WeekDay>> weekDays() {
-        return this.weekDays == null ? Codegen.empty() : this.weekDays;
+    public Optional<Output<List<WeekDay>>> weekDays() {
+        return Optional.ofNullable(this.weekDays);
     }
 
-    public RecurrencePatternArgs(
-        Output<String> expirationDate,
-        Output<RecurrenceFrequency> frequency,
-        @Nullable Output<Integer> interval,
-        @Nullable Output<List<WeekDay>> weekDays) {
-        this.expirationDate = Objects.requireNonNull(expirationDate, "expected parameter 'expirationDate' to be non-null");
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.interval = interval;
-        this.weekDays = weekDays;
-    }
+    private RecurrencePatternArgs() {}
 
-    private RecurrencePatternArgs() {
-        this.expirationDate = Codegen.empty();
-        this.frequency = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.weekDays = Codegen.empty();
+    private RecurrencePatternArgs(RecurrencePatternArgs $) {
+        this.expirationDate = $.expirationDate;
+        this.frequency = $.frequency;
+        this.interval = $.interval;
+        this.weekDays = $.weekDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurrencePatternArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> expirationDate;
-        private Output<RecurrenceFrequency> frequency;
-        private @Nullable Output<Integer> interval;
-        private @Nullable Output<List<WeekDay>> weekDays;
+        private RecurrencePatternArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurrencePatternArgs();
         }
 
         public Builder(RecurrencePatternArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
-    	      this.weekDays = defaults.weekDays;
+            $ = new RecurrencePatternArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationDate(Output<String> expirationDate) {
-            this.expirationDate = Objects.requireNonNull(expirationDate);
+            $.expirationDate = expirationDate;
             return this;
         }
+
         public Builder expirationDate(String expirationDate) {
-            this.expirationDate = Output.of(Objects.requireNonNull(expirationDate));
-            return this;
+            return expirationDate(Output.of(expirationDate));
         }
+
         public Builder frequency(Output<RecurrenceFrequency> frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder frequency(RecurrenceFrequency frequency) {
-            this.frequency = Output.of(Objects.requireNonNull(frequency));
-            return this;
+            return frequency(Output.of(frequency));
         }
+
         public Builder interval(@Nullable Output<Integer> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Integer interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(Integer interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder weekDays(@Nullable Output<List<WeekDay>> weekDays) {
-            this.weekDays = weekDays;
+            $.weekDays = weekDays;
             return this;
         }
-        public Builder weekDays(@Nullable List<WeekDay> weekDays) {
-            this.weekDays = Codegen.ofNullable(weekDays);
-            return this;
+
+        public Builder weekDays(List<WeekDay> weekDays) {
+            return weekDays(Output.of(weekDays));
         }
+
         public Builder weekDays(WeekDay... weekDays) {
             return weekDays(List.of(weekDays));
-        }        public RecurrencePatternArgs build() {
-            return new RecurrencePatternArgs(expirationDate, frequency, interval, weekDays);
+        }
+
+        public RecurrencePatternArgs build() {
+            $.expirationDate = Objects.requireNonNull($.expirationDate, "expected parameter 'expirationDate' to be non-null");
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            return $;
         }
     }
+
 }

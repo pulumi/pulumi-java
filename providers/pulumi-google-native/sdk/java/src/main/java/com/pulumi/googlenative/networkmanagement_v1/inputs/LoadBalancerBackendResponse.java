@@ -22,7 +22,7 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="healthCheckAllowingFirewallRules", required=true)
-      private final List<String> healthCheckAllowingFirewallRules;
+    private List<String> healthCheckAllowingFirewallRules;
 
     public List<String> healthCheckAllowingFirewallRules() {
         return this.healthCheckAllowingFirewallRules;
@@ -44,7 +44,7 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="healthCheckBlockingFirewallRules", required=true)
-      private final List<String> healthCheckBlockingFirewallRules;
+    private List<String> healthCheckBlockingFirewallRules;
 
     public List<String> healthCheckBlockingFirewallRules() {
         return this.healthCheckBlockingFirewallRules;
@@ -55,7 +55,7 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="healthCheckFirewallState", required=true)
-      private final String healthCheckFirewallState;
+    private String healthCheckFirewallState;
 
     public String healthCheckFirewallState() {
         return this.healthCheckFirewallState;
@@ -66,88 +66,81 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public LoadBalancerBackendResponse(
-        String displayName,
-        List<String> healthCheckAllowingFirewallRules,
-        List<String> healthCheckBlockingFirewallRules,
-        String healthCheckFirewallState,
-        String uri) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.healthCheckAllowingFirewallRules = Objects.requireNonNull(healthCheckAllowingFirewallRules, "expected parameter 'healthCheckAllowingFirewallRules' to be non-null");
-        this.healthCheckBlockingFirewallRules = Objects.requireNonNull(healthCheckBlockingFirewallRules, "expected parameter 'healthCheckBlockingFirewallRules' to be non-null");
-        this.healthCheckFirewallState = Objects.requireNonNull(healthCheckFirewallState, "expected parameter 'healthCheckFirewallState' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private LoadBalancerBackendResponse() {}
 
-    private LoadBalancerBackendResponse() {
-        this.displayName = null;
-        this.healthCheckAllowingFirewallRules = List.of();
-        this.healthCheckBlockingFirewallRules = List.of();
-        this.healthCheckFirewallState = null;
-        this.uri = null;
+    private LoadBalancerBackendResponse(LoadBalancerBackendResponse $) {
+        this.displayName = $.displayName;
+        this.healthCheckAllowingFirewallRules = $.healthCheckAllowingFirewallRules;
+        this.healthCheckBlockingFirewallRules = $.healthCheckBlockingFirewallRules;
+        this.healthCheckFirewallState = $.healthCheckFirewallState;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerBackendResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private List<String> healthCheckAllowingFirewallRules;
-        private List<String> healthCheckBlockingFirewallRules;
-        private String healthCheckFirewallState;
-        private String uri;
+        private LoadBalancerBackendResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerBackendResponse();
         }
 
         public Builder(LoadBalancerBackendResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.healthCheckAllowingFirewallRules = defaults.healthCheckAllowingFirewallRules;
-    	      this.healthCheckBlockingFirewallRules = defaults.healthCheckBlockingFirewallRules;
-    	      this.healthCheckFirewallState = defaults.healthCheckFirewallState;
-    	      this.uri = defaults.uri;
+            $ = new LoadBalancerBackendResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder healthCheckAllowingFirewallRules(List<String> healthCheckAllowingFirewallRules) {
-            this.healthCheckAllowingFirewallRules = Objects.requireNonNull(healthCheckAllowingFirewallRules);
+            $.healthCheckAllowingFirewallRules = healthCheckAllowingFirewallRules;
             return this;
         }
+
         public Builder healthCheckAllowingFirewallRules(String... healthCheckAllowingFirewallRules) {
             return healthCheckAllowingFirewallRules(List.of(healthCheckAllowingFirewallRules));
         }
+
         public Builder healthCheckBlockingFirewallRules(List<String> healthCheckBlockingFirewallRules) {
-            this.healthCheckBlockingFirewallRules = Objects.requireNonNull(healthCheckBlockingFirewallRules);
+            $.healthCheckBlockingFirewallRules = healthCheckBlockingFirewallRules;
             return this;
         }
+
         public Builder healthCheckBlockingFirewallRules(String... healthCheckBlockingFirewallRules) {
             return healthCheckBlockingFirewallRules(List.of(healthCheckBlockingFirewallRules));
         }
+
         public Builder healthCheckFirewallState(String healthCheckFirewallState) {
-            this.healthCheckFirewallState = Objects.requireNonNull(healthCheckFirewallState);
+            $.healthCheckFirewallState = healthCheckFirewallState;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public LoadBalancerBackendResponse build() {
-            return new LoadBalancerBackendResponse(displayName, healthCheckAllowingFirewallRules, healthCheckBlockingFirewallRules, healthCheckFirewallState, uri);
+        }
+
+        public LoadBalancerBackendResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.healthCheckAllowingFirewallRules = Objects.requireNonNull($.healthCheckAllowingFirewallRules, "expected parameter 'healthCheckAllowingFirewallRules' to be non-null");
+            $.healthCheckBlockingFirewallRules = Objects.requireNonNull($.healthCheckBlockingFirewallRules, "expected parameter 'healthCheckBlockingFirewallRules' to be non-null");
+            $.healthCheckFirewallState = Objects.requireNonNull($.healthCheckFirewallState, "expected parameter 'healthCheckFirewallState' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

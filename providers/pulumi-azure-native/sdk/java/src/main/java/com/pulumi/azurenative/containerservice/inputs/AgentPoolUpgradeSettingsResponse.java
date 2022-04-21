@@ -23,45 +23,44 @@ public final class AgentPoolUpgradeSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="maxSurge")
-      private final @Nullable String maxSurge;
+    private @Nullable String maxSurge;
 
     public Optional<String> maxSurge() {
-        return this.maxSurge == null ? Optional.empty() : Optional.ofNullable(this.maxSurge);
+        return Optional.ofNullable(this.maxSurge);
     }
 
-    public AgentPoolUpgradeSettingsResponse(@Nullable String maxSurge) {
-        this.maxSurge = maxSurge;
-    }
+    private AgentPoolUpgradeSettingsResponse() {}
 
-    private AgentPoolUpgradeSettingsResponse() {
-        this.maxSurge = null;
+    private AgentPoolUpgradeSettingsResponse(AgentPoolUpgradeSettingsResponse $) {
+        this.maxSurge = $.maxSurge;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentPoolUpgradeSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String maxSurge;
+        private AgentPoolUpgradeSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentPoolUpgradeSettingsResponse();
         }
 
         public Builder(AgentPoolUpgradeSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSurge = defaults.maxSurge;
+            $ = new AgentPoolUpgradeSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSurge(@Nullable String maxSurge) {
-            this.maxSurge = maxSurge;
+            $.maxSurge = maxSurge;
             return this;
-        }        public AgentPoolUpgradeSettingsResponse build() {
-            return new AgentPoolUpgradeSettingsResponse(maxSurge);
+        }
+
+        public AgentPoolUpgradeSettingsResponse build() {
+            return $;
         }
     }
+
 }

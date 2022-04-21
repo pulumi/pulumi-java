@@ -17,7 +17,7 @@ public final class GetVpcEndpointDnsEntry extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dnsName", required=true)
-      private final String dnsName;
+    private String dnsName;
 
     public String dnsName() {
         return this.dnsName;
@@ -28,55 +28,52 @@ public final class GetVpcEndpointDnsEntry extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="hostedZoneId", required=true)
-      private final String hostedZoneId;
+    private String hostedZoneId;
 
     public String hostedZoneId() {
         return this.hostedZoneId;
     }
 
-    public GetVpcEndpointDnsEntry(
-        String dnsName,
-        String hostedZoneId) {
-        this.dnsName = Objects.requireNonNull(dnsName, "expected parameter 'dnsName' to be non-null");
-        this.hostedZoneId = Objects.requireNonNull(hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
-    }
+    private GetVpcEndpointDnsEntry() {}
 
-    private GetVpcEndpointDnsEntry() {
-        this.dnsName = null;
-        this.hostedZoneId = null;
+    private GetVpcEndpointDnsEntry(GetVpcEndpointDnsEntry $) {
+        this.dnsName = $.dnsName;
+        this.hostedZoneId = $.hostedZoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcEndpointDnsEntry defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dnsName;
-        private String hostedZoneId;
+        private GetVpcEndpointDnsEntry $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcEndpointDnsEntry();
         }
 
         public Builder(GetVpcEndpointDnsEntry defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsName = defaults.dnsName;
-    	      this.hostedZoneId = defaults.hostedZoneId;
+            $ = new GetVpcEndpointDnsEntry(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsName(String dnsName) {
-            this.dnsName = Objects.requireNonNull(dnsName);
+            $.dnsName = dnsName;
             return this;
         }
+
         public Builder hostedZoneId(String hostedZoneId) {
-            this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
+            $.hostedZoneId = hostedZoneId;
             return this;
-        }        public GetVpcEndpointDnsEntry build() {
-            return new GetVpcEndpointDnsEntry(dnsName, hostedZoneId);
+        }
+
+        public GetVpcEndpointDnsEntry build() {
+            $.dnsName = Objects.requireNonNull($.dnsName, "expected parameter 'dnsName' to be non-null");
+            $.hostedZoneId = Objects.requireNonNull($.hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -43,24 +43,24 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamUserAccessToBilling")
-      private final @Nullable Output<String> iamUserAccessToBilling;
+    private @Nullable Output<String> iamUserAccessToBilling;
 
-    public Output<String> iamUserAccessToBilling() {
-        return this.iamUserAccessToBilling == null ? Codegen.empty() : this.iamUserAccessToBilling;
+    public Optional<Output<String>> iamUserAccessToBilling() {
+        return Optional.ofNullable(this.iamUserAccessToBilling);
     }
 
     @Import(name="joinedMethod")
-      private final @Nullable Output<String> joinedMethod;
+    private @Nullable Output<String> joinedMethod;
 
-    public Output<String> joinedMethod() {
-        return this.joinedMethod == null ? Codegen.empty() : this.joinedMethod;
+    public Optional<Output<String>> joinedMethod() {
+        return Optional.ofNullable(this.joinedMethod);
     }
 
     @Import(name="joinedTimestamp")
-      private final @Nullable Output<String> joinedTimestamp;
+    private @Nullable Output<String> joinedTimestamp;
 
-    public Output<String> joinedTimestamp() {
-        return this.joinedTimestamp == null ? Codegen.empty() : this.joinedTimestamp;
+    public Optional<Output<String>> joinedTimestamp() {
+        return Optional.ofNullable(this.joinedTimestamp);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentId")
-      private final @Nullable Output<String> parentId;
+    private @Nullable Output<String> parentId;
 
-    public Output<String> parentId() {
-        return this.parentId == null ? Codegen.empty() : this.parentId;
+    public Optional<Output<String>> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     /**
@@ -90,17 +90,17 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleName")
-      private final @Nullable Output<String> roleName;
+    private @Nullable Output<String> roleName;
 
-    public Output<String> roleName() {
-        return this.roleName == null ? Codegen.empty() : this.roleName;
+    public Optional<Output<String>> roleName() {
+        return Optional.ofNullable(this.roleName);
     }
 
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -119,180 +119,148 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public AccountState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> email,
-        @Nullable Output<String> iamUserAccessToBilling,
-        @Nullable Output<String> joinedMethod,
-        @Nullable Output<String> joinedTimestamp,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parentId,
-        @Nullable Output<String> roleName,
-        @Nullable Output<String> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.email = email;
-        this.iamUserAccessToBilling = iamUserAccessToBilling;
-        this.joinedMethod = joinedMethod;
-        this.joinedTimestamp = joinedTimestamp;
-        this.name = name;
-        this.parentId = parentId;
-        this.roleName = roleName;
-        this.status = status;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private AccountState() {}
 
-    private AccountState() {
-        this.arn = Codegen.empty();
-        this.email = Codegen.empty();
-        this.iamUserAccessToBilling = Codegen.empty();
-        this.joinedMethod = Codegen.empty();
-        this.joinedTimestamp = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentId = Codegen.empty();
-        this.roleName = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private AccountState(AccountState $) {
+        this.arn = $.arn;
+        this.email = $.email;
+        this.iamUserAccessToBilling = $.iamUserAccessToBilling;
+        this.joinedMethod = $.joinedMethod;
+        this.joinedTimestamp = $.joinedTimestamp;
+        this.name = $.name;
+        this.parentId = $.parentId;
+        this.roleName = $.roleName;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> iamUserAccessToBilling;
-        private @Nullable Output<String> joinedMethod;
-        private @Nullable Output<String> joinedTimestamp;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parentId;
-        private @Nullable Output<String> roleName;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private AccountState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountState();
         }
 
         public Builder(AccountState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.email = defaults.email;
-    	      this.iamUserAccessToBilling = defaults.iamUserAccessToBilling;
-    	      this.joinedMethod = defaults.joinedMethod;
-    	      this.joinedTimestamp = defaults.joinedTimestamp;
-    	      this.name = defaults.name;
-    	      this.parentId = defaults.parentId;
-    	      this.roleName = defaults.roleName;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new AccountState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder iamUserAccessToBilling(@Nullable Output<String> iamUserAccessToBilling) {
-            this.iamUserAccessToBilling = iamUserAccessToBilling;
+            $.iamUserAccessToBilling = iamUserAccessToBilling;
             return this;
         }
-        public Builder iamUserAccessToBilling(@Nullable String iamUserAccessToBilling) {
-            this.iamUserAccessToBilling = Codegen.ofNullable(iamUserAccessToBilling);
-            return this;
+
+        public Builder iamUserAccessToBilling(String iamUserAccessToBilling) {
+            return iamUserAccessToBilling(Output.of(iamUserAccessToBilling));
         }
+
         public Builder joinedMethod(@Nullable Output<String> joinedMethod) {
-            this.joinedMethod = joinedMethod;
+            $.joinedMethod = joinedMethod;
             return this;
         }
-        public Builder joinedMethod(@Nullable String joinedMethod) {
-            this.joinedMethod = Codegen.ofNullable(joinedMethod);
-            return this;
+
+        public Builder joinedMethod(String joinedMethod) {
+            return joinedMethod(Output.of(joinedMethod));
         }
+
         public Builder joinedTimestamp(@Nullable Output<String> joinedTimestamp) {
-            this.joinedTimestamp = joinedTimestamp;
+            $.joinedTimestamp = joinedTimestamp;
             return this;
         }
-        public Builder joinedTimestamp(@Nullable String joinedTimestamp) {
-            this.joinedTimestamp = Codegen.ofNullable(joinedTimestamp);
-            return this;
+
+        public Builder joinedTimestamp(String joinedTimestamp) {
+            return joinedTimestamp(Output.of(joinedTimestamp));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentId(@Nullable Output<String> parentId) {
-            this.parentId = parentId;
+            $.parentId = parentId;
             return this;
         }
-        public Builder parentId(@Nullable String parentId) {
-            this.parentId = Codegen.ofNullable(parentId);
-            return this;
+
+        public Builder parentId(String parentId) {
+            return parentId(Output.of(parentId));
         }
+
         public Builder roleName(@Nullable Output<String> roleName) {
-            this.roleName = roleName;
+            $.roleName = roleName;
             return this;
         }
-        public Builder roleName(@Nullable String roleName) {
-            this.roleName = Codegen.ofNullable(roleName);
-            return this;
+
+        public Builder roleName(String roleName) {
+            return roleName(Output.of(roleName));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public AccountState build() {
-            return new AccountState(arn, email, iamUserAccessToBilling, joinedMethod, joinedTimestamp, name, parentId, roleName, status, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public AccountState build() {
+            return $;
         }
     }
+
 }

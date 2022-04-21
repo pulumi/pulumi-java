@@ -17,45 +17,45 @@ public final class GetFlowEntitlementArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="entitlementArn", required=true)
-      private final String entitlementArn;
+    private String entitlementArn;
 
     public String entitlementArn() {
         return this.entitlementArn;
     }
 
-    public GetFlowEntitlementArgs(String entitlementArn) {
-        this.entitlementArn = Objects.requireNonNull(entitlementArn, "expected parameter 'entitlementArn' to be non-null");
-    }
+    private GetFlowEntitlementArgs() {}
 
-    private GetFlowEntitlementArgs() {
-        this.entitlementArn = null;
+    private GetFlowEntitlementArgs(GetFlowEntitlementArgs $) {
+        this.entitlementArn = $.entitlementArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFlowEntitlementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String entitlementArn;
+        private GetFlowEntitlementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFlowEntitlementArgs();
         }
 
         public Builder(GetFlowEntitlementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entitlementArn = defaults.entitlementArn;
+            $ = new GetFlowEntitlementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entitlementArn(String entitlementArn) {
-            this.entitlementArn = Objects.requireNonNull(entitlementArn);
+            $.entitlementArn = entitlementArn;
             return this;
-        }        public GetFlowEntitlementArgs build() {
-            return new GetFlowEntitlementArgs(entitlementArn);
+        }
+
+        public GetFlowEntitlementArgs build() {
+            $.entitlementArn = Objects.requireNonNull($.entitlementArn, "expected parameter 'entitlementArn' to be non-null");
+            return $;
         }
     }
+
 }

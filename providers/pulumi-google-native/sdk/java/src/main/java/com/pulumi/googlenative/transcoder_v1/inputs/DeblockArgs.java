@@ -5,10 +5,10 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DeblockArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DeblockArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="strength")
-      private final @Nullable Output<Double> strength;
+    private @Nullable Output<Double> strength;
 
-    public Output<Double> strength() {
-        return this.strength == null ? Codegen.empty() : this.strength;
+    public Optional<Output<Double>> strength() {
+        return Optional.ofNullable(this.strength);
     }
 
-    public DeblockArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Double> strength) {
-        this.enabled = enabled;
-        this.strength = strength;
-    }
+    private DeblockArgs() {}
 
-    private DeblockArgs() {
-        this.enabled = Codegen.empty();
-        this.strength = Codegen.empty();
+    private DeblockArgs(DeblockArgs $) {
+        this.enabled = $.enabled;
+        this.strength = $.strength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeblockArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Double> strength;
+        private DeblockArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeblockArgs();
         }
 
         public Builder(DeblockArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.strength = defaults.strength;
+            $ = new DeblockArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder strength(@Nullable Output<Double> strength) {
-            this.strength = strength;
+            $.strength = strength;
             return this;
         }
-        public Builder strength(@Nullable Double strength) {
-            this.strength = Codegen.ofNullable(strength);
-            return this;
-        }        public DeblockArgs build() {
-            return new DeblockArgs(enabled, strength);
+
+        public Builder strength(Double strength) {
+            return strength(Output.of(strength));
+        }
+
+        public DeblockArgs build() {
+            return $;
         }
     }
+
 }

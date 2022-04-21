@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ClusterAddonsConfigConfigConnectorConfigGetArgs extends com.p
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public ClusterAddonsConfigConfigConnectorConfigGetArgs(Output<Boolean> enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ClusterAddonsConfigConfigConnectorConfigGetArgs() {}
 
-    private ClusterAddonsConfigConfigConnectorConfigGetArgs() {
-        this.enabled = Codegen.empty();
+    private ClusterAddonsConfigConfigConnectorConfigGetArgs(ClusterAddonsConfigConfigConnectorConfigGetArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAddonsConfigConfigConnectorConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
+        private ClusterAddonsConfigConfigConnectorConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAddonsConfigConfigConnectorConfigGetArgs();
         }
 
         public Builder(ClusterAddonsConfigConfigConnectorConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new ClusterAddonsConfigConfigConnectorConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public ClusterAddonsConfigConfigConnectorConfigGetArgs build() {
-            return new ClusterAddonsConfigConfigConnectorConfigGetArgs(enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public ClusterAddonsConfigConfigConnectorConfigGetArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

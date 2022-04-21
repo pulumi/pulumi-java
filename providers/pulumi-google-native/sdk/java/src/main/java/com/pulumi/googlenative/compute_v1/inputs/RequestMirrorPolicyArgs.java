@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class RequestMirrorPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="backendService")
-      private final @Nullable Output<String> backendService;
+    private @Nullable Output<String> backendService;
 
-    public Output<String> backendService() {
-        return this.backendService == null ? Codegen.empty() : this.backendService;
+    public Optional<Output<String>> backendService() {
+        return Optional.ofNullable(this.backendService);
     }
 
-    public RequestMirrorPolicyArgs(@Nullable Output<String> backendService) {
-        this.backendService = backendService;
-    }
+    private RequestMirrorPolicyArgs() {}
 
-    private RequestMirrorPolicyArgs() {
-        this.backendService = Codegen.empty();
+    private RequestMirrorPolicyArgs(RequestMirrorPolicyArgs $) {
+        this.backendService = $.backendService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestMirrorPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backendService;
+        private RequestMirrorPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestMirrorPolicyArgs();
         }
 
         public Builder(RequestMirrorPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendService = defaults.backendService;
+            $ = new RequestMirrorPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendService(@Nullable Output<String> backendService) {
-            this.backendService = backendService;
+            $.backendService = backendService;
             return this;
         }
-        public Builder backendService(@Nullable String backendService) {
-            this.backendService = Codegen.ofNullable(backendService);
-            return this;
-        }        public RequestMirrorPolicyArgs build() {
-            return new RequestMirrorPolicyArgs(backendService);
+
+        public Builder backendService(String backendService) {
+            return backendService(Output.of(backendService));
+        }
+
+        public RequestMirrorPolicyArgs build() {
+            return $;
         }
     }
+
 }

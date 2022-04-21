@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.TableRangePartitioningRangeGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class TableRangePartitioningGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="field", required=true)
-      private final Output<String> field;
+    private Output<String> field;
 
     public Output<String> field() {
         return this.field;
@@ -33,63 +32,60 @@ public final class TableRangePartitioningGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="range", required=true)
-      private final Output<TableRangePartitioningRangeGetArgs> range;
+    private Output<TableRangePartitioningRangeGetArgs> range;
 
     public Output<TableRangePartitioningRangeGetArgs> range() {
         return this.range;
     }
 
-    public TableRangePartitioningGetArgs(
-        Output<String> field,
-        Output<TableRangePartitioningRangeGetArgs> range) {
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-    }
+    private TableRangePartitioningGetArgs() {}
 
-    private TableRangePartitioningGetArgs() {
-        this.field = Codegen.empty();
-        this.range = Codegen.empty();
+    private TableRangePartitioningGetArgs(TableRangePartitioningGetArgs $) {
+        this.field = $.field;
+        this.range = $.range;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableRangePartitioningGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> field;
-        private Output<TableRangePartitioningRangeGetArgs> range;
+        private TableRangePartitioningGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableRangePartitioningGetArgs();
         }
 
         public Builder(TableRangePartitioningGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.range = defaults.range;
+            $ = new TableRangePartitioningGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(Output<String> field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder field(String field) {
-            this.field = Output.of(Objects.requireNonNull(field));
-            return this;
+            return field(Output.of(field));
         }
+
         public Builder range(Output<TableRangePartitioningRangeGetArgs> range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
         }
+
         public Builder range(TableRangePartitioningRangeGetArgs range) {
-            this.range = Output.of(Objects.requireNonNull(range));
-            return this;
-        }        public TableRangePartitioningGetArgs build() {
-            return new TableRangePartitioningGetArgs(field, range);
+            return range(Output.of(range));
+        }
+
+        public TableRangePartitioningGetArgs build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            return $;
         }
     }
+
 }

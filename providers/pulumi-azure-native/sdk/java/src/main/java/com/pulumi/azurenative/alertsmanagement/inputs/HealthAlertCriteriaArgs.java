@@ -6,9 +6,9 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 import com.pulumi.azurenative.alertsmanagement.inputs.VmGuestHealthAlertCriterionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class HealthAlertCriteriaArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="allOf")
-      private final @Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf;
+    private @Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf;
 
-    public Output<List<VmGuestHealthAlertCriterionArgs>> allOf() {
-        return this.allOf == null ? Codegen.empty() : this.allOf;
+    public Optional<Output<List<VmGuestHealthAlertCriterionArgs>>> allOf() {
+        return Optional.ofNullable(this.allOf);
     }
 
-    public HealthAlertCriteriaArgs(@Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf) {
-        this.allOf = allOf;
-    }
+    private HealthAlertCriteriaArgs() {}
 
-    private HealthAlertCriteriaArgs() {
-        this.allOf = Codegen.empty();
+    private HealthAlertCriteriaArgs(HealthAlertCriteriaArgs $) {
+        this.allOf = $.allOf;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthAlertCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf;
+        private HealthAlertCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthAlertCriteriaArgs();
         }
 
         public Builder(HealthAlertCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allOf = defaults.allOf;
+            $ = new HealthAlertCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allOf(@Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf) {
-            this.allOf = allOf;
+            $.allOf = allOf;
             return this;
         }
-        public Builder allOf(@Nullable List<VmGuestHealthAlertCriterionArgs> allOf) {
-            this.allOf = Codegen.ofNullable(allOf);
-            return this;
+
+        public Builder allOf(List<VmGuestHealthAlertCriterionArgs> allOf) {
+            return allOf(Output.of(allOf));
         }
+
         public Builder allOf(VmGuestHealthAlertCriterionArgs... allOf) {
             return allOf(List.of(allOf));
-        }        public HealthAlertCriteriaArgs build() {
-            return new HealthAlertCriteriaArgs(allOf);
+        }
+
+        public HealthAlertCriteriaArgs build() {
+            return $;
         }
     }
+
 }

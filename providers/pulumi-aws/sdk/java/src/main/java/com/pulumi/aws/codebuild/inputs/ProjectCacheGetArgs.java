@@ -5,10 +5,10 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProjectCacheGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProjectCacheGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="modes")
-      private final @Nullable Output<List<String>> modes;
+    private @Nullable Output<List<String>> modes;
 
-    public Output<List<String>> modes() {
-        return this.modes == null ? Codegen.empty() : this.modes;
+    public Optional<Output<List<String>>> modes() {
+        return Optional.ofNullable(this.modes);
     }
 
     /**
@@ -43,79 +43,72 @@ public final class ProjectCacheGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ProjectCacheGetArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<List<String>> modes,
-        @Nullable Output<String> type) {
-        this.location = location;
-        this.modes = modes;
-        this.type = type;
-    }
+    private ProjectCacheGetArgs() {}
 
-    private ProjectCacheGetArgs() {
-        this.location = Codegen.empty();
-        this.modes = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProjectCacheGetArgs(ProjectCacheGetArgs $) {
+        this.location = $.location;
+        this.modes = $.modes;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectCacheGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<String>> modes;
-        private @Nullable Output<String> type;
+        private ProjectCacheGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectCacheGetArgs();
         }
 
         public Builder(ProjectCacheGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.modes = defaults.modes;
-    	      this.type = defaults.type;
+            $ = new ProjectCacheGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder modes(@Nullable Output<List<String>> modes) {
-            this.modes = modes;
+            $.modes = modes;
             return this;
         }
-        public Builder modes(@Nullable List<String> modes) {
-            this.modes = Codegen.ofNullable(modes);
-            return this;
+
+        public Builder modes(List<String> modes) {
+            return modes(Output.of(modes));
         }
+
         public Builder modes(String... modes) {
             return modes(List.of(modes));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ProjectCacheGetArgs build() {
-            return new ProjectCacheGetArgs(location, modes, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ProjectCacheGetArgs build() {
+            return $;
         }
     }
+
 }

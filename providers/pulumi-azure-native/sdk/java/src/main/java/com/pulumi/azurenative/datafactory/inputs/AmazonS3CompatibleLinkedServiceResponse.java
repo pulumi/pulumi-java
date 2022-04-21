@@ -32,10 +32,10 @@ public final class AmazonS3CompatibleLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="accessKeyId")
-      private final @Nullable Object accessKeyId;
+    private @Nullable Object accessKeyId;
 
     public Optional<Object> accessKeyId() {
-        return this.accessKeyId == null ? Optional.empty() : Optional.ofNullable(this.accessKeyId);
+        return Optional.ofNullable(this.accessKeyId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AmazonS3CompatibleLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AmazonS3CompatibleLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AmazonS3CompatibleLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AmazonS3CompatibleLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AmazonS3CompatibleLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="forcePathStyle")
-      private final @Nullable Object forcePathStyle;
+    private @Nullable Object forcePathStyle;
 
     public Optional<Object> forcePathStyle() {
-        return this.forcePathStyle == null ? Optional.empty() : Optional.ofNullable(this.forcePathStyle);
+        return Optional.ofNullable(this.forcePathStyle);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AmazonS3CompatibleLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AmazonS3CompatibleLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="secretAccessKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey() {
-        return this.secretAccessKey == null ? null : this.secretAccessKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> secretAccessKey() {
+        return Optional.ofNullable(this.secretAccessKey);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AmazonS3CompatibleLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="serviceUrl")
-      private final @Nullable Object serviceUrl;
+    private @Nullable Object serviceUrl;
 
     public Optional<Object> serviceUrl() {
-        return this.serviceUrl == null ? Optional.empty() : Optional.ofNullable(this.serviceUrl);
+        return Optional.ofNullable(this.serviceUrl);
     }
 
     /**
@@ -132,130 +132,103 @@ public final class AmazonS3CompatibleLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AmazonS3CompatibleLinkedServiceResponse(
-        @Nullable Object accessKeyId,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object forcePathStyle,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey,
-        @Nullable Object serviceUrl,
-        String type) {
-        this.accessKeyId = accessKeyId;
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.forcePathStyle = forcePathStyle;
-        this.parameters = parameters;
-        this.secretAccessKey = secretAccessKey;
-        this.serviceUrl = serviceUrl;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AmazonS3CompatibleLinkedServiceResponse() {}
 
-    private AmazonS3CompatibleLinkedServiceResponse() {
-        this.accessKeyId = null;
-        this.annotations = List.of();
-        this.connectVia = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.forcePathStyle = null;
-        this.parameters = Map.of();
-        this.secretAccessKey = null;
-        this.serviceUrl = null;
-        this.type = null;
+    private AmazonS3CompatibleLinkedServiceResponse(AmazonS3CompatibleLinkedServiceResponse $) {
+        this.accessKeyId = $.accessKeyId;
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.forcePathStyle = $.forcePathStyle;
+        this.parameters = $.parameters;
+        this.secretAccessKey = $.secretAccessKey;
+        this.serviceUrl = $.serviceUrl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmazonS3CompatibleLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object accessKeyId;
-        private @Nullable List<Object> annotations;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object forcePathStyle;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey;
-        private @Nullable Object serviceUrl;
-        private String type;
+        private AmazonS3CompatibleLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmazonS3CompatibleLinkedServiceResponse();
         }
 
         public Builder(AmazonS3CompatibleLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKeyId = defaults.accessKeyId;
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.forcePathStyle = defaults.forcePathStyle;
-    	      this.parameters = defaults.parameters;
-    	      this.secretAccessKey = defaults.secretAccessKey;
-    	      this.serviceUrl = defaults.serviceUrl;
-    	      this.type = defaults.type;
+            $ = new AmazonS3CompatibleLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKeyId(@Nullable Object accessKeyId) {
-            this.accessKeyId = accessKeyId;
+            $.accessKeyId = accessKeyId;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder forcePathStyle(@Nullable Object forcePathStyle) {
-            this.forcePathStyle = forcePathStyle;
+            $.forcePathStyle = forcePathStyle;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder secretAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey) {
-            this.secretAccessKey = secretAccessKey;
+            $.secretAccessKey = secretAccessKey;
             return this;
         }
+
         public Builder serviceUrl(@Nullable Object serviceUrl) {
-            this.serviceUrl = serviceUrl;
+            $.serviceUrl = serviceUrl;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AmazonS3CompatibleLinkedServiceResponse build() {
-            return new AmazonS3CompatibleLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, forcePathStyle, parameters, secretAccessKey, serviceUrl, type);
+        }
+
+        public AmazonS3CompatibleLinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

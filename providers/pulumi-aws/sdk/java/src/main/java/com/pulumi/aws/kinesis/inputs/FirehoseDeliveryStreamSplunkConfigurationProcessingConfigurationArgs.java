@@ -6,10 +6,10 @@ package com.pulumi.aws.kinesis.inputs;
 import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
      * 
      */
     @Import(name="processors")
-      private final @Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors;
+    private @Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors;
 
-    public Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors() {
-        return this.processors == null ? Codegen.empty() : this.processors;
+    public Optional<Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>>> processors() {
+        return Optional.ofNullable(this.processors);
     }
 
-    public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors) {
-        this.enabled = enabled;
-        this.processors = processors;
-    }
+    private FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs() {}
 
-    private FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs() {
-        this.enabled = Codegen.empty();
-        this.processors = Codegen.empty();
+    private FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs $) {
+        this.enabled = $.enabled;
+        this.processors = $.processors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors;
+        private FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs();
         }
 
         public Builder(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.processors = defaults.processors;
+            $ = new FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder processors(@Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors) {
-            this.processors = processors;
+            $.processors = processors;
             return this;
         }
-        public Builder processors(@Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs> processors) {
-            this.processors = Codegen.ofNullable(processors);
-            return this;
+
+        public Builder processors(List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs> processors) {
+            return processors(Output.of(processors));
         }
+
         public Builder processors(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs... processors) {
             return processors(List.of(processors));
-        }        public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs build() {
-            return new FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs(enabled, processors);
+        }
+
+        public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs build() {
+            return $;
         }
     }
+
 }

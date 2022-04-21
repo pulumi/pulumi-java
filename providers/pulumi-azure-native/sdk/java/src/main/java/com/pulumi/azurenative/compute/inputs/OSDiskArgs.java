@@ -14,11 +14,11 @@ import com.pulumi.azurenative.compute.inputs.VirtualHardDiskArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="caching")
-      private final @Nullable Output<CachingTypes> caching;
+    private @Nullable Output<CachingTypes> caching;
 
-    public Output<CachingTypes> caching() {
-        return this.caching == null ? Codegen.empty() : this.caching;
+    public Optional<Output<CachingTypes>> caching() {
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createOption", required=true)
-      private final Output<Either<String,DiskCreateOptionTypes>> createOption;
+    private Output<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Output<Either<String,DiskCreateOptionTypes>> createOption() {
         return this.createOption;
@@ -57,10 +57,10 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption;
+    private @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption;
 
-    public Output<Either<String,DiskDeleteOptionTypes>> deleteOption() {
-        return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
+    public Optional<Output<Either<String,DiskDeleteOptionTypes>>> deleteOption() {
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diffDiskSettings")
-      private final @Nullable Output<DiffDiskSettingsArgs> diffDiskSettings;
+    private @Nullable Output<DiffDiskSettingsArgs> diffDiskSettings;
 
-    public Output<DiffDiskSettingsArgs> diffDiskSettings() {
-        return this.diffDiskSettings == null ? Codegen.empty() : this.diffDiskSettings;
+    public Optional<Output<DiffDiskSettingsArgs>> diffDiskSettings() {
+        return Optional.ofNullable(this.diffDiskSettings);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Output<Integer> diskSizeGB;
+    private @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
+    public Optional<Output<Integer>> diskSizeGB() {
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionSettings")
-      private final @Nullable Output<DiskEncryptionSettingsArgs> encryptionSettings;
+    private @Nullable Output<DiskEncryptionSettingsArgs> encryptionSettings;
 
-    public Output<DiskEncryptionSettingsArgs> encryptionSettings() {
-        return this.encryptionSettings == null ? Codegen.empty() : this.encryptionSettings;
+    public Optional<Output<DiskEncryptionSettingsArgs>> encryptionSettings() {
+        return Optional.ofNullable(this.encryptionSettings);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<VirtualHardDiskArgs> image;
+    private @Nullable Output<VirtualHardDiskArgs> image;
 
-    public Output<VirtualHardDiskArgs> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<VirtualHardDiskArgs>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable Output<ManagedDiskParametersArgs> managedDisk;
+    private @Nullable Output<ManagedDiskParametersArgs> managedDisk;
 
-    public Output<ManagedDiskParametersArgs> managedDisk() {
-        return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
+    public Optional<Output<ManagedDiskParametersArgs>> managedDisk() {
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<OperatingSystemTypes> osType;
+    private @Nullable Output<OperatingSystemTypes> osType;
 
-    public Output<OperatingSystemTypes> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<OperatingSystemTypes>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vhd")
-      private final @Nullable Output<VirtualHardDiskArgs> vhd;
+    private @Nullable Output<VirtualHardDiskArgs> vhd;
 
-    public Output<VirtualHardDiskArgs> vhd() {
-        return this.vhd == null ? Codegen.empty() : this.vhd;
+    public Optional<Output<VirtualHardDiskArgs>> vhd() {
+        return Optional.ofNullable(this.vhd);
     }
 
     /**
@@ -156,193 +156,159 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="writeAcceleratorEnabled")
-      private final @Nullable Output<Boolean> writeAcceleratorEnabled;
+    private @Nullable Output<Boolean> writeAcceleratorEnabled;
 
-    public Output<Boolean> writeAcceleratorEnabled() {
-        return this.writeAcceleratorEnabled == null ? Codegen.empty() : this.writeAcceleratorEnabled;
+    public Optional<Output<Boolean>> writeAcceleratorEnabled() {
+        return Optional.ofNullable(this.writeAcceleratorEnabled);
     }
 
-    public OSDiskArgs(
-        @Nullable Output<CachingTypes> caching,
-        Output<Either<String,DiskCreateOptionTypes>> createOption,
-        @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption,
-        @Nullable Output<DiffDiskSettingsArgs> diffDiskSettings,
-        @Nullable Output<Integer> diskSizeGB,
-        @Nullable Output<DiskEncryptionSettingsArgs> encryptionSettings,
-        @Nullable Output<VirtualHardDiskArgs> image,
-        @Nullable Output<ManagedDiskParametersArgs> managedDisk,
-        @Nullable Output<String> name,
-        @Nullable Output<OperatingSystemTypes> osType,
-        @Nullable Output<VirtualHardDiskArgs> vhd,
-        @Nullable Output<Boolean> writeAcceleratorEnabled) {
-        this.caching = caching;
-        this.createOption = Objects.requireNonNull(createOption, "expected parameter 'createOption' to be non-null");
-        this.deleteOption = deleteOption;
-        this.diffDiskSettings = diffDiskSettings;
-        this.diskSizeGB = diskSizeGB;
-        this.encryptionSettings = encryptionSettings;
-        this.image = image;
-        this.managedDisk = managedDisk;
-        this.name = name;
-        this.osType = osType;
-        this.vhd = vhd;
-        this.writeAcceleratorEnabled = writeAcceleratorEnabled;
-    }
+    private OSDiskArgs() {}
 
-    private OSDiskArgs() {
-        this.caching = Codegen.empty();
-        this.createOption = Codegen.empty();
-        this.deleteOption = Codegen.empty();
-        this.diffDiskSettings = Codegen.empty();
-        this.diskSizeGB = Codegen.empty();
-        this.encryptionSettings = Codegen.empty();
-        this.image = Codegen.empty();
-        this.managedDisk = Codegen.empty();
-        this.name = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.vhd = Codegen.empty();
-        this.writeAcceleratorEnabled = Codegen.empty();
+    private OSDiskArgs(OSDiskArgs $) {
+        this.caching = $.caching;
+        this.createOption = $.createOption;
+        this.deleteOption = $.deleteOption;
+        this.diffDiskSettings = $.diffDiskSettings;
+        this.diskSizeGB = $.diskSizeGB;
+        this.encryptionSettings = $.encryptionSettings;
+        this.image = $.image;
+        this.managedDisk = $.managedDisk;
+        this.name = $.name;
+        this.osType = $.osType;
+        this.vhd = $.vhd;
+        this.writeAcceleratorEnabled = $.writeAcceleratorEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CachingTypes> caching;
-        private Output<Either<String,DiskCreateOptionTypes>> createOption;
-        private @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption;
-        private @Nullable Output<DiffDiskSettingsArgs> diffDiskSettings;
-        private @Nullable Output<Integer> diskSizeGB;
-        private @Nullable Output<DiskEncryptionSettingsArgs> encryptionSettings;
-        private @Nullable Output<VirtualHardDiskArgs> image;
-        private @Nullable Output<ManagedDiskParametersArgs> managedDisk;
-        private @Nullable Output<String> name;
-        private @Nullable Output<OperatingSystemTypes> osType;
-        private @Nullable Output<VirtualHardDiskArgs> vhd;
-        private @Nullable Output<Boolean> writeAcceleratorEnabled;
+        private OSDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSDiskArgs();
         }
 
         public Builder(OSDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caching = defaults.caching;
-    	      this.createOption = defaults.createOption;
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.diffDiskSettings = defaults.diffDiskSettings;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.encryptionSettings = defaults.encryptionSettings;
-    	      this.image = defaults.image;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.name = defaults.name;
-    	      this.osType = defaults.osType;
-    	      this.vhd = defaults.vhd;
-    	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
+            $ = new OSDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caching(@Nullable Output<CachingTypes> caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
-        public Builder caching(@Nullable CachingTypes caching) {
-            this.caching = Codegen.ofNullable(caching);
-            return this;
+
+        public Builder caching(CachingTypes caching) {
+            return caching(Output.of(caching));
         }
+
         public Builder createOption(Output<Either<String,DiskCreateOptionTypes>> createOption) {
-            this.createOption = Objects.requireNonNull(createOption);
+            $.createOption = createOption;
             return this;
         }
+
         public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
-            this.createOption = Output.of(Objects.requireNonNull(createOption));
-            return this;
+            return createOption(Output.of(createOption));
         }
+
         public Builder deleteOption(@Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
-        public Builder deleteOption(@Nullable Either<String,DiskDeleteOptionTypes> deleteOption) {
-            this.deleteOption = Codegen.ofNullable(deleteOption);
-            return this;
+
+        public Builder deleteOption(Either<String,DiskDeleteOptionTypes> deleteOption) {
+            return deleteOption(Output.of(deleteOption));
         }
+
         public Builder diffDiskSettings(@Nullable Output<DiffDiskSettingsArgs> diffDiskSettings) {
-            this.diffDiskSettings = diffDiskSettings;
+            $.diffDiskSettings = diffDiskSettings;
             return this;
         }
-        public Builder diffDiskSettings(@Nullable DiffDiskSettingsArgs diffDiskSettings) {
-            this.diffDiskSettings = Codegen.ofNullable(diffDiskSettings);
-            return this;
+
+        public Builder diffDiskSettings(DiffDiskSettingsArgs diffDiskSettings) {
+            return diffDiskSettings(Output.of(diffDiskSettings));
         }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
-        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
-            return this;
+
+        public Builder diskSizeGB(Integer diskSizeGB) {
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder encryptionSettings(@Nullable Output<DiskEncryptionSettingsArgs> encryptionSettings) {
-            this.encryptionSettings = encryptionSettings;
+            $.encryptionSettings = encryptionSettings;
             return this;
         }
-        public Builder encryptionSettings(@Nullable DiskEncryptionSettingsArgs encryptionSettings) {
-            this.encryptionSettings = Codegen.ofNullable(encryptionSettings);
-            return this;
+
+        public Builder encryptionSettings(DiskEncryptionSettingsArgs encryptionSettings) {
+            return encryptionSettings(Output.of(encryptionSettings));
         }
+
         public Builder image(@Nullable Output<VirtualHardDiskArgs> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable VirtualHardDiskArgs image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(VirtualHardDiskArgs image) {
+            return image(Output.of(image));
         }
+
         public Builder managedDisk(@Nullable Output<ManagedDiskParametersArgs> managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
-        public Builder managedDisk(@Nullable ManagedDiskParametersArgs managedDisk) {
-            this.managedDisk = Codegen.ofNullable(managedDisk);
-            return this;
+
+        public Builder managedDisk(ManagedDiskParametersArgs managedDisk) {
+            return managedDisk(Output.of(managedDisk));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder osType(@Nullable Output<OperatingSystemTypes> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable OperatingSystemTypes osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(OperatingSystemTypes osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder vhd(@Nullable Output<VirtualHardDiskArgs> vhd) {
-            this.vhd = vhd;
+            $.vhd = vhd;
             return this;
         }
-        public Builder vhd(@Nullable VirtualHardDiskArgs vhd) {
-            this.vhd = Codegen.ofNullable(vhd);
-            return this;
+
+        public Builder vhd(VirtualHardDiskArgs vhd) {
+            return vhd(Output.of(vhd));
         }
+
         public Builder writeAcceleratorEnabled(@Nullable Output<Boolean> writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = writeAcceleratorEnabled;
+            $.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-        public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = Codegen.ofNullable(writeAcceleratorEnabled);
-            return this;
-        }        public OSDiskArgs build() {
-            return new OSDiskArgs(caching, createOption, deleteOption, diffDiskSettings, diskSizeGB, encryptionSettings, image, managedDisk, name, osType, vhd, writeAcceleratorEnabled);
+
+        public Builder writeAcceleratorEnabled(Boolean writeAcceleratorEnabled) {
+            return writeAcceleratorEnabled(Output.of(writeAcceleratorEnabled));
+        }
+
+        public OSDiskArgs build() {
+            $.createOption = Objects.requireNonNull($.createOption, "expected parameter 'createOption' to be non-null");
+            return $;
         }
     }
+
 }

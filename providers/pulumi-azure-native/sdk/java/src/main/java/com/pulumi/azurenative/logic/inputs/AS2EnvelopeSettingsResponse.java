@@ -22,7 +22,7 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="autogenerateFileName", required=true)
-      private final Boolean autogenerateFileName;
+    private Boolean autogenerateFileName;
 
     public Boolean autogenerateFileName() {
         return this.autogenerateFileName;
@@ -33,7 +33,7 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="fileNameTemplate", required=true)
-      private final String fileNameTemplate;
+    private String fileNameTemplate;
 
     public String fileNameTemplate() {
         return this.fileNameTemplate;
@@ -44,7 +44,7 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="messageContentType", required=true)
-      private final String messageContentType;
+    private String messageContentType;
 
     public String messageContentType() {
         return this.messageContentType;
@@ -55,7 +55,7 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="suspendMessageOnFileNameGenerationError", required=true)
-      private final Boolean suspendMessageOnFileNameGenerationError;
+    private Boolean suspendMessageOnFileNameGenerationError;
 
     public Boolean suspendMessageOnFileNameGenerationError() {
         return this.suspendMessageOnFileNameGenerationError;
@@ -66,82 +66,73 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="transmitFileNameInMimeHeader", required=true)
-      private final Boolean transmitFileNameInMimeHeader;
+    private Boolean transmitFileNameInMimeHeader;
 
     public Boolean transmitFileNameInMimeHeader() {
         return this.transmitFileNameInMimeHeader;
     }
 
-    public AS2EnvelopeSettingsResponse(
-        Boolean autogenerateFileName,
-        String fileNameTemplate,
-        String messageContentType,
-        Boolean suspendMessageOnFileNameGenerationError,
-        Boolean transmitFileNameInMimeHeader) {
-        this.autogenerateFileName = Objects.requireNonNull(autogenerateFileName, "expected parameter 'autogenerateFileName' to be non-null");
-        this.fileNameTemplate = Objects.requireNonNull(fileNameTemplate, "expected parameter 'fileNameTemplate' to be non-null");
-        this.messageContentType = Objects.requireNonNull(messageContentType, "expected parameter 'messageContentType' to be non-null");
-        this.suspendMessageOnFileNameGenerationError = Objects.requireNonNull(suspendMessageOnFileNameGenerationError, "expected parameter 'suspendMessageOnFileNameGenerationError' to be non-null");
-        this.transmitFileNameInMimeHeader = Objects.requireNonNull(transmitFileNameInMimeHeader, "expected parameter 'transmitFileNameInMimeHeader' to be non-null");
-    }
+    private AS2EnvelopeSettingsResponse() {}
 
-    private AS2EnvelopeSettingsResponse() {
-        this.autogenerateFileName = null;
-        this.fileNameTemplate = null;
-        this.messageContentType = null;
-        this.suspendMessageOnFileNameGenerationError = null;
-        this.transmitFileNameInMimeHeader = null;
+    private AS2EnvelopeSettingsResponse(AS2EnvelopeSettingsResponse $) {
+        this.autogenerateFileName = $.autogenerateFileName;
+        this.fileNameTemplate = $.fileNameTemplate;
+        this.messageContentType = $.messageContentType;
+        this.suspendMessageOnFileNameGenerationError = $.suspendMessageOnFileNameGenerationError;
+        this.transmitFileNameInMimeHeader = $.transmitFileNameInMimeHeader;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2EnvelopeSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autogenerateFileName;
-        private String fileNameTemplate;
-        private String messageContentType;
-        private Boolean suspendMessageOnFileNameGenerationError;
-        private Boolean transmitFileNameInMimeHeader;
+        private AS2EnvelopeSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2EnvelopeSettingsResponse();
         }
 
         public Builder(AS2EnvelopeSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autogenerateFileName = defaults.autogenerateFileName;
-    	      this.fileNameTemplate = defaults.fileNameTemplate;
-    	      this.messageContentType = defaults.messageContentType;
-    	      this.suspendMessageOnFileNameGenerationError = defaults.suspendMessageOnFileNameGenerationError;
-    	      this.transmitFileNameInMimeHeader = defaults.transmitFileNameInMimeHeader;
+            $ = new AS2EnvelopeSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autogenerateFileName(Boolean autogenerateFileName) {
-            this.autogenerateFileName = Objects.requireNonNull(autogenerateFileName);
+            $.autogenerateFileName = autogenerateFileName;
             return this;
         }
+
         public Builder fileNameTemplate(String fileNameTemplate) {
-            this.fileNameTemplate = Objects.requireNonNull(fileNameTemplate);
+            $.fileNameTemplate = fileNameTemplate;
             return this;
         }
+
         public Builder messageContentType(String messageContentType) {
-            this.messageContentType = Objects.requireNonNull(messageContentType);
+            $.messageContentType = messageContentType;
             return this;
         }
+
         public Builder suspendMessageOnFileNameGenerationError(Boolean suspendMessageOnFileNameGenerationError) {
-            this.suspendMessageOnFileNameGenerationError = Objects.requireNonNull(suspendMessageOnFileNameGenerationError);
+            $.suspendMessageOnFileNameGenerationError = suspendMessageOnFileNameGenerationError;
             return this;
         }
+
         public Builder transmitFileNameInMimeHeader(Boolean transmitFileNameInMimeHeader) {
-            this.transmitFileNameInMimeHeader = Objects.requireNonNull(transmitFileNameInMimeHeader);
+            $.transmitFileNameInMimeHeader = transmitFileNameInMimeHeader;
             return this;
-        }        public AS2EnvelopeSettingsResponse build() {
-            return new AS2EnvelopeSettingsResponse(autogenerateFileName, fileNameTemplate, messageContentType, suspendMessageOnFileNameGenerationError, transmitFileNameInMimeHeader);
+        }
+
+        public AS2EnvelopeSettingsResponse build() {
+            $.autogenerateFileName = Objects.requireNonNull($.autogenerateFileName, "expected parameter 'autogenerateFileName' to be non-null");
+            $.fileNameTemplate = Objects.requireNonNull($.fileNameTemplate, "expected parameter 'fileNameTemplate' to be non-null");
+            $.messageContentType = Objects.requireNonNull($.messageContentType, "expected parameter 'messageContentType' to be non-null");
+            $.suspendMessageOnFileNameGenerationError = Objects.requireNonNull($.suspendMessageOnFileNameGenerationError, "expected parameter 'suspendMessageOnFileNameGenerationError' to be non-null");
+            $.transmitFileNameInMimeHeader = Objects.requireNonNull($.transmitFileNameInMimeHeader, "expected parameter 'transmitFileNameInMimeHeader' to be non-null");
+            return $;
         }
     }
+
 }

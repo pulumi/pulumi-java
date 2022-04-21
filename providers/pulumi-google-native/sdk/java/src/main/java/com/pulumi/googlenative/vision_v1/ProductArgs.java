@@ -5,11 +5,11 @@ package com.pulumi.googlenative.vision_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.vision_v1.inputs.KeyValueArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,17 +33,17 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -62,17 +62,17 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productCategory")
-      private final @Nullable Output<String> productCategory;
+    private @Nullable Output<String> productCategory;
 
-    public Output<String> productCategory() {
-        return this.productCategory == null ? Codegen.empty() : this.productCategory;
+    public Optional<Output<String>> productCategory() {
+        return Optional.ofNullable(this.productCategory);
     }
 
     @Import(name="productId")
-      private final @Nullable Output<String> productId;
+    private @Nullable Output<String> productId;
 
-    public Output<String> productId() {
-        return this.productId == null ? Codegen.empty() : this.productId;
+    public Optional<Output<String>> productId() {
+        return Optional.ofNullable(this.productId);
     }
 
     /**
@@ -80,151 +80,129 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productLabels")
-      private final @Nullable Output<List<KeyValueArgs>> productLabels;
+    private @Nullable Output<List<KeyValueArgs>> productLabels;
 
-    public Output<List<KeyValueArgs>> productLabels() {
-        return this.productLabels == null ? Codegen.empty() : this.productLabels;
+    public Optional<Output<List<KeyValueArgs>>> productLabels() {
+        return Optional.ofNullable(this.productLabels);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ProductArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> productCategory,
-        @Nullable Output<String> productId,
-        @Nullable Output<List<KeyValueArgs>> productLabels,
-        @Nullable Output<String> project) {
-        this.description = description;
-        this.displayName = displayName;
-        this.location = location;
-        this.name = name;
-        this.productCategory = productCategory;
-        this.productId = productId;
-        this.productLabels = productLabels;
-        this.project = project;
-    }
+    private ProductArgs() {}
 
-    private ProductArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.productCategory = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.productLabels = Codegen.empty();
-        this.project = Codegen.empty();
+    private ProductArgs(ProductArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.name = $.name;
+        this.productCategory = $.productCategory;
+        this.productId = $.productId;
+        this.productLabels = $.productLabels;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> productCategory;
-        private @Nullable Output<String> productId;
-        private @Nullable Output<List<KeyValueArgs>> productLabels;
-        private @Nullable Output<String> project;
+        private ProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductArgs();
         }
 
         public Builder(ProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.productCategory = defaults.productCategory;
-    	      this.productId = defaults.productId;
-    	      this.productLabels = defaults.productLabels;
-    	      this.project = defaults.project;
+            $ = new ProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder productCategory(@Nullable Output<String> productCategory) {
-            this.productCategory = productCategory;
+            $.productCategory = productCategory;
             return this;
         }
-        public Builder productCategory(@Nullable String productCategory) {
-            this.productCategory = Codegen.ofNullable(productCategory);
-            return this;
+
+        public Builder productCategory(String productCategory) {
+            return productCategory(Output.of(productCategory));
         }
+
         public Builder productId(@Nullable Output<String> productId) {
-            this.productId = productId;
+            $.productId = productId;
             return this;
         }
-        public Builder productId(@Nullable String productId) {
-            this.productId = Codegen.ofNullable(productId);
-            return this;
+
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
         }
+
         public Builder productLabels(@Nullable Output<List<KeyValueArgs>> productLabels) {
-            this.productLabels = productLabels;
+            $.productLabels = productLabels;
             return this;
         }
-        public Builder productLabels(@Nullable List<KeyValueArgs> productLabels) {
-            this.productLabels = Codegen.ofNullable(productLabels);
-            return this;
+
+        public Builder productLabels(List<KeyValueArgs> productLabels) {
+            return productLabels(Output.of(productLabels));
         }
+
         public Builder productLabels(KeyValueArgs... productLabels) {
             return productLabels(List.of(productLabels));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ProductArgs build() {
-            return new ProductArgs(description, displayName, location, name, productCategory, productId, productLabels, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ProductArgs build() {
+            return $;
         }
     }
+
 }

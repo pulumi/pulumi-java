@@ -5,11 +5,11 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterBrokerNodeGroupInfoArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="azDistribution")
-      private final @Nullable Output<String> azDistribution;
+    private @Nullable Output<String> azDistribution;
 
-    public Output<String> azDistribution() {
-        return this.azDistribution == null ? Codegen.empty() : this.azDistribution;
+    public Optional<Output<String>> azDistribution() {
+        return Optional.ofNullable(this.azDistribution);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="clientSubnets", required=true)
-      private final Output<List<String>> clientSubnets;
+    private Output<List<String>> clientSubnets;
 
     public Output<List<String>> clientSubnets() {
         return this.clientSubnets;
@@ -44,7 +44,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="ebsVolumeSize", required=true)
-      private final Output<Integer> ebsVolumeSize;
+    private Output<Integer> ebsVolumeSize;
 
     public Output<Integer> ebsVolumeSize() {
         return this.ebsVolumeSize;
@@ -55,7 +55,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
@@ -66,108 +66,100 @@ public final class ClusterBrokerNodeGroupInfoArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="securityGroups", required=true)
-      private final Output<List<String>> securityGroups;
+    private Output<List<String>> securityGroups;
 
     public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
 
-    public ClusterBrokerNodeGroupInfoArgs(
-        @Nullable Output<String> azDistribution,
-        Output<List<String>> clientSubnets,
-        Output<Integer> ebsVolumeSize,
-        Output<String> instanceType,
-        Output<List<String>> securityGroups) {
-        this.azDistribution = azDistribution;
-        this.clientSubnets = Objects.requireNonNull(clientSubnets, "expected parameter 'clientSubnets' to be non-null");
-        this.ebsVolumeSize = Objects.requireNonNull(ebsVolumeSize, "expected parameter 'ebsVolumeSize' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.securityGroups = Objects.requireNonNull(securityGroups, "expected parameter 'securityGroups' to be non-null");
-    }
+    private ClusterBrokerNodeGroupInfoArgs() {}
 
-    private ClusterBrokerNodeGroupInfoArgs() {
-        this.azDistribution = Codegen.empty();
-        this.clientSubnets = Codegen.empty();
-        this.ebsVolumeSize = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.securityGroups = Codegen.empty();
+    private ClusterBrokerNodeGroupInfoArgs(ClusterBrokerNodeGroupInfoArgs $) {
+        this.azDistribution = $.azDistribution;
+        this.clientSubnets = $.clientSubnets;
+        this.ebsVolumeSize = $.ebsVolumeSize;
+        this.instanceType = $.instanceType;
+        this.securityGroups = $.securityGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterBrokerNodeGroupInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> azDistribution;
-        private Output<List<String>> clientSubnets;
-        private Output<Integer> ebsVolumeSize;
-        private Output<String> instanceType;
-        private Output<List<String>> securityGroups;
+        private ClusterBrokerNodeGroupInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterBrokerNodeGroupInfoArgs();
         }
 
         public Builder(ClusterBrokerNodeGroupInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azDistribution = defaults.azDistribution;
-    	      this.clientSubnets = defaults.clientSubnets;
-    	      this.ebsVolumeSize = defaults.ebsVolumeSize;
-    	      this.instanceType = defaults.instanceType;
-    	      this.securityGroups = defaults.securityGroups;
+            $ = new ClusterBrokerNodeGroupInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azDistribution(@Nullable Output<String> azDistribution) {
-            this.azDistribution = azDistribution;
+            $.azDistribution = azDistribution;
             return this;
         }
-        public Builder azDistribution(@Nullable String azDistribution) {
-            this.azDistribution = Codegen.ofNullable(azDistribution);
-            return this;
+
+        public Builder azDistribution(String azDistribution) {
+            return azDistribution(Output.of(azDistribution));
         }
+
         public Builder clientSubnets(Output<List<String>> clientSubnets) {
-            this.clientSubnets = Objects.requireNonNull(clientSubnets);
+            $.clientSubnets = clientSubnets;
             return this;
         }
+
         public Builder clientSubnets(List<String> clientSubnets) {
-            this.clientSubnets = Output.of(Objects.requireNonNull(clientSubnets));
-            return this;
+            return clientSubnets(Output.of(clientSubnets));
         }
+
         public Builder clientSubnets(String... clientSubnets) {
             return clientSubnets(List.of(clientSubnets));
         }
+
         public Builder ebsVolumeSize(Output<Integer> ebsVolumeSize) {
-            this.ebsVolumeSize = Objects.requireNonNull(ebsVolumeSize);
+            $.ebsVolumeSize = ebsVolumeSize;
             return this;
         }
+
         public Builder ebsVolumeSize(Integer ebsVolumeSize) {
-            this.ebsVolumeSize = Output.of(Objects.requireNonNull(ebsVolumeSize));
-            return this;
+            return ebsVolumeSize(Output.of(ebsVolumeSize));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder securityGroups(Output<List<String>> securityGroups) {
-            this.securityGroups = Objects.requireNonNull(securityGroups);
+            $.securityGroups = securityGroups;
             return this;
         }
+
         public Builder securityGroups(List<String> securityGroups) {
-            this.securityGroups = Output.of(Objects.requireNonNull(securityGroups));
-            return this;
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
-        }        public ClusterBrokerNodeGroupInfoArgs build() {
-            return new ClusterBrokerNodeGroupInfoArgs(azDistribution, clientSubnets, ebsVolumeSize, instanceType, securityGroups);
+        }
+
+        public ClusterBrokerNodeGroupInfoArgs build() {
+            $.clientSubnets = Objects.requireNonNull($.clientSubnets, "expected parameter 'clientSubnets' to be non-null");
+            $.ebsVolumeSize = Objects.requireNonNull($.ebsVolumeSize, "expected parameter 'ebsVolumeSize' to be non-null");
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            $.securityGroups = Objects.requireNonNull($.securityGroups, "expected parameter 'securityGroups' to be non-null");
+            return $;
         }
     }
+
 }

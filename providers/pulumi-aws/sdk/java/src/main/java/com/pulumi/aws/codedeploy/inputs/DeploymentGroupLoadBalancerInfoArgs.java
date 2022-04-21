@@ -8,9 +8,9 @@ import com.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGro
 import com.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends com.pulumi.resour
      * 
      */
     @Import(name="elbInfos")
-      private final @Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos;
+    private @Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos;
 
-    public Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos() {
-        return this.elbInfos == null ? Codegen.empty() : this.elbInfos;
+    public Optional<Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>>> elbInfos() {
+        return Optional.ofNullable(this.elbInfos);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends com.pulumi.resour
      * 
      */
     @Import(name="targetGroupInfos")
-      private final @Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos;
+    private @Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos;
 
-    public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos() {
-        return this.targetGroupInfos == null ? Codegen.empty() : this.targetGroupInfos;
+    public Optional<Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>>> targetGroupInfos() {
+        return Optional.ofNullable(this.targetGroupInfos);
     }
 
     /**
@@ -45,82 +45,76 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends com.pulumi.resour
      * 
      */
     @Import(name="targetGroupPairInfo")
-      private final @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo;
+    private @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo;
 
-    public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo() {
-        return this.targetGroupPairInfo == null ? Codegen.empty() : this.targetGroupPairInfo;
+    public Optional<Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs>> targetGroupPairInfo() {
+        return Optional.ofNullable(this.targetGroupPairInfo);
     }
 
-    public DeploymentGroupLoadBalancerInfoArgs(
-        @Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos,
-        @Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos,
-        @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo) {
-        this.elbInfos = elbInfos;
-        this.targetGroupInfos = targetGroupInfos;
-        this.targetGroupPairInfo = targetGroupPairInfo;
-    }
+    private DeploymentGroupLoadBalancerInfoArgs() {}
 
-    private DeploymentGroupLoadBalancerInfoArgs() {
-        this.elbInfos = Codegen.empty();
-        this.targetGroupInfos = Codegen.empty();
-        this.targetGroupPairInfo = Codegen.empty();
+    private DeploymentGroupLoadBalancerInfoArgs(DeploymentGroupLoadBalancerInfoArgs $) {
+        this.elbInfos = $.elbInfos;
+        this.targetGroupInfos = $.targetGroupInfos;
+        this.targetGroupPairInfo = $.targetGroupPairInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupLoadBalancerInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos;
-        private @Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos;
-        private @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo;
+        private DeploymentGroupLoadBalancerInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupLoadBalancerInfoArgs();
         }
 
         public Builder(DeploymentGroupLoadBalancerInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elbInfos = defaults.elbInfos;
-    	      this.targetGroupInfos = defaults.targetGroupInfos;
-    	      this.targetGroupPairInfo = defaults.targetGroupPairInfo;
+            $ = new DeploymentGroupLoadBalancerInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder elbInfos(@Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos) {
-            this.elbInfos = elbInfos;
+            $.elbInfos = elbInfos;
             return this;
         }
-        public Builder elbInfos(@Nullable List<DeploymentGroupLoadBalancerInfoElbInfoArgs> elbInfos) {
-            this.elbInfos = Codegen.ofNullable(elbInfos);
-            return this;
+
+        public Builder elbInfos(List<DeploymentGroupLoadBalancerInfoElbInfoArgs> elbInfos) {
+            return elbInfos(Output.of(elbInfos));
         }
+
         public Builder elbInfos(DeploymentGroupLoadBalancerInfoElbInfoArgs... elbInfos) {
             return elbInfos(List.of(elbInfos));
         }
+
         public Builder targetGroupInfos(@Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos) {
-            this.targetGroupInfos = targetGroupInfos;
+            $.targetGroupInfos = targetGroupInfos;
             return this;
         }
-        public Builder targetGroupInfos(@Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs> targetGroupInfos) {
-            this.targetGroupInfos = Codegen.ofNullable(targetGroupInfos);
-            return this;
+
+        public Builder targetGroupInfos(List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs> targetGroupInfos) {
+            return targetGroupInfos(Output.of(targetGroupInfos));
         }
+
         public Builder targetGroupInfos(DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs... targetGroupInfos) {
             return targetGroupInfos(List.of(targetGroupInfos));
         }
+
         public Builder targetGroupPairInfo(@Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo) {
-            this.targetGroupPairInfo = targetGroupPairInfo;
+            $.targetGroupPairInfo = targetGroupPairInfo;
             return this;
         }
-        public Builder targetGroupPairInfo(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs targetGroupPairInfo) {
-            this.targetGroupPairInfo = Codegen.ofNullable(targetGroupPairInfo);
-            return this;
-        }        public DeploymentGroupLoadBalancerInfoArgs build() {
-            return new DeploymentGroupLoadBalancerInfoArgs(elbInfos, targetGroupInfos, targetGroupPairInfo);
+
+        public Builder targetGroupPairInfo(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs targetGroupPairInfo) {
+            return targetGroupPairInfo(Output.of(targetGroupPairInfo));
+        }
+
+        public DeploymentGroupLoadBalancerInfoArgs build() {
+            return $;
         }
     }
+
 }

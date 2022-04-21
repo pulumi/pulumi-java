@@ -21,7 +21,7 @@ public final class RouterApplianceInstanceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
@@ -32,55 +32,52 @@ public final class RouterApplianceInstanceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="virtualMachine", required=true)
-      private final String virtualMachine;
+    private String virtualMachine;
 
     public String virtualMachine() {
         return this.virtualMachine;
     }
 
-    public RouterApplianceInstanceResponse(
-        String ipAddress,
-        String virtualMachine) {
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.virtualMachine = Objects.requireNonNull(virtualMachine, "expected parameter 'virtualMachine' to be non-null");
-    }
+    private RouterApplianceInstanceResponse() {}
 
-    private RouterApplianceInstanceResponse() {
-        this.ipAddress = null;
-        this.virtualMachine = null;
+    private RouterApplianceInstanceResponse(RouterApplianceInstanceResponse $) {
+        this.ipAddress = $.ipAddress;
+        this.virtualMachine = $.virtualMachine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterApplianceInstanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipAddress;
-        private String virtualMachine;
+        private RouterApplianceInstanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterApplianceInstanceResponse();
         }
 
         public Builder(RouterApplianceInstanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.virtualMachine = defaults.virtualMachine;
+            $ = new RouterApplianceInstanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder virtualMachine(String virtualMachine) {
-            this.virtualMachine = Objects.requireNonNull(virtualMachine);
+            $.virtualMachine = virtualMachine;
             return this;
-        }        public RouterApplianceInstanceResponse build() {
-            return new RouterApplianceInstanceResponse(ipAddress, virtualMachine);
+        }
+
+        public RouterApplianceInstanceResponse build() {
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.virtualMachine = Objects.requireNonNull($.virtualMachine, "expected parameter 'virtualMachine' to be non-null");
+            return $;
         }
     }
+
 }

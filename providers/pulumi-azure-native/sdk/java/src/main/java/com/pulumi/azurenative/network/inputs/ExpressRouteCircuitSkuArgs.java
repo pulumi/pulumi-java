@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.enums.ExpressRouteCircuitSkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ExpressRouteCircuitSkuArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="family")
-      private final @Nullable Output<Either<String,ExpressRouteCircuitSkuFamily>> family;
+    private @Nullable Output<Either<String,ExpressRouteCircuitSkuFamily>> family;
 
-    public Output<Either<String,ExpressRouteCircuitSkuFamily>> family() {
-        return this.family == null ? Codegen.empty() : this.family;
+    public Optional<Output<Either<String,ExpressRouteCircuitSkuFamily>>> family() {
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ExpressRouteCircuitSkuArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class ExpressRouteCircuitSkuArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier;
+    private @Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier;
 
-    public Output<Either<String,ExpressRouteCircuitSkuTier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,ExpressRouteCircuitSkuTier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public ExpressRouteCircuitSkuArgs(
-        @Nullable Output<Either<String,ExpressRouteCircuitSkuFamily>> family,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier) {
-        this.family = family;
-        this.name = name;
-        this.tier = tier;
-    }
+    private ExpressRouteCircuitSkuArgs() {}
 
-    private ExpressRouteCircuitSkuArgs() {
-        this.family = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private ExpressRouteCircuitSkuArgs(ExpressRouteCircuitSkuArgs $) {
+        this.family = $.family;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ExpressRouteCircuitSkuFamily>> family;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier;
+        private ExpressRouteCircuitSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitSkuArgs();
         }
 
         public Builder(ExpressRouteCircuitSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new ExpressRouteCircuitSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder family(@Nullable Output<Either<String,ExpressRouteCircuitSkuFamily>> family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
-        public Builder family(@Nullable Either<String,ExpressRouteCircuitSkuFamily> family) {
-            this.family = Codegen.ofNullable(family);
-            return this;
+
+        public Builder family(Either<String,ExpressRouteCircuitSkuFamily> family) {
+            return family(Output.of(family));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,ExpressRouteCircuitSkuTier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public ExpressRouteCircuitSkuArgs build() {
-            return new ExpressRouteCircuitSkuArgs(family, name, tier);
+
+        public Builder tier(Either<String,ExpressRouteCircuitSkuTier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public ExpressRouteCircuitSkuArgs build() {
+            return $;
         }
     }
+
 }

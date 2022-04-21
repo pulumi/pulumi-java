@@ -17,7 +17,7 @@ public final class ListStaticSiteUsersArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="authprovider", required=true)
-      private final String authprovider;
+    private String authprovider;
 
     public String authprovider() {
         return this.authprovider;
@@ -28,7 +28,7 @@ public final class ListStaticSiteUsersArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,64 +39,59 @@ public final class ListStaticSiteUsersArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListStaticSiteUsersArgs(
-        String authprovider,
-        String name,
-        String resourceGroupName) {
-        this.authprovider = Objects.requireNonNull(authprovider, "expected parameter 'authprovider' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListStaticSiteUsersArgs() {}
 
-    private ListStaticSiteUsersArgs() {
-        this.authprovider = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private ListStaticSiteUsersArgs(ListStaticSiteUsersArgs $) {
+        this.authprovider = $.authprovider;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListStaticSiteUsersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authprovider;
-        private String name;
-        private String resourceGroupName;
+        private ListStaticSiteUsersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListStaticSiteUsersArgs();
         }
 
         public Builder(ListStaticSiteUsersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authprovider = defaults.authprovider;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListStaticSiteUsersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authprovider(String authprovider) {
-            this.authprovider = Objects.requireNonNull(authprovider);
+            $.authprovider = authprovider;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListStaticSiteUsersArgs build() {
-            return new ListStaticSiteUsersArgs(authprovider, name, resourceGroupName);
+        }
+
+        public ListStaticSiteUsersArgs build() {
+            $.authprovider = Objects.requireNonNull($.authprovider, "expected parameter 'authprovider' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

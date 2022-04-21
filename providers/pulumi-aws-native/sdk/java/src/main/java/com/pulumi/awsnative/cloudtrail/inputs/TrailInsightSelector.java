@@ -23,45 +23,44 @@ public final class TrailInsightSelector extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="insightType")
-      private final @Nullable String insightType;
+    private @Nullable String insightType;
 
     public Optional<String> insightType() {
-        return this.insightType == null ? Optional.empty() : Optional.ofNullable(this.insightType);
+        return Optional.ofNullable(this.insightType);
     }
 
-    public TrailInsightSelector(@Nullable String insightType) {
-        this.insightType = insightType;
-    }
+    private TrailInsightSelector() {}
 
-    private TrailInsightSelector() {
-        this.insightType = null;
+    private TrailInsightSelector(TrailInsightSelector $) {
+        this.insightType = $.insightType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrailInsightSelector defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String insightType;
+        private TrailInsightSelector $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrailInsightSelector();
         }
 
         public Builder(TrailInsightSelector defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.insightType = defaults.insightType;
+            $ = new TrailInsightSelector(Objects.requireNonNull(defaults));
         }
 
         public Builder insightType(@Nullable String insightType) {
-            this.insightType = insightType;
+            $.insightType = insightType;
             return this;
-        }        public TrailInsightSelector build() {
-            return new TrailInsightSelector(insightType);
+        }
+
+        public TrailInsightSelector build() {
+            return $;
         }
     }
+
 }

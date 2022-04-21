@@ -5,7 +5,6 @@ package com.pulumi.aws.lb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="httpHeaderName", required=true)
-      private final Output<String> httpHeaderName;
+    private Output<String> httpHeaderName;
 
     public Output<String> httpHeaderName() {
         return this.httpHeaderName;
@@ -31,66 +30,64 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="values", required=true)
-      private final Output<List<String>> values;
+    private Output<List<String>> values;
 
     public Output<List<String>> values() {
         return this.values;
     }
 
-    public ListenerRuleConditionHttpHeaderGetArgs(
-        Output<String> httpHeaderName,
-        Output<List<String>> values) {
-        this.httpHeaderName = Objects.requireNonNull(httpHeaderName, "expected parameter 'httpHeaderName' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private ListenerRuleConditionHttpHeaderGetArgs() {}
 
-    private ListenerRuleConditionHttpHeaderGetArgs() {
-        this.httpHeaderName = Codegen.empty();
-        this.values = Codegen.empty();
+    private ListenerRuleConditionHttpHeaderGetArgs(ListenerRuleConditionHttpHeaderGetArgs $) {
+        this.httpHeaderName = $.httpHeaderName;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleConditionHttpHeaderGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> httpHeaderName;
-        private Output<List<String>> values;
+        private ListenerRuleConditionHttpHeaderGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleConditionHttpHeaderGetArgs();
         }
 
         public Builder(ListenerRuleConditionHttpHeaderGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpHeaderName = defaults.httpHeaderName;
-    	      this.values = defaults.values;
+            $ = new ListenerRuleConditionHttpHeaderGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpHeaderName(Output<String> httpHeaderName) {
-            this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
+            $.httpHeaderName = httpHeaderName;
             return this;
         }
+
         public Builder httpHeaderName(String httpHeaderName) {
-            this.httpHeaderName = Output.of(Objects.requireNonNull(httpHeaderName));
-            return this;
+            return httpHeaderName(Output.of(httpHeaderName));
         }
+
         public Builder values(Output<List<String>> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Output.of(Objects.requireNonNull(values));
-            return this;
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ListenerRuleConditionHttpHeaderGetArgs build() {
-            return new ListenerRuleConditionHttpHeaderGetArgs(httpHeaderName, values);
+        }
+
+        public ListenerRuleConditionHttpHeaderGetArgs build() {
+            $.httpHeaderName = Objects.requireNonNull($.httpHeaderName, "expected parameter 'httpHeaderName' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

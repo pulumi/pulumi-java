@@ -25,10 +25,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="hostName", required=true)
-      private final String hostName;
+    private String hostName;
 
     public String hostName() {
         return this.hostName;
@@ -47,10 +47,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="httpPort")
-      private final @Nullable Integer httpPort;
+    private @Nullable Integer httpPort;
 
     public Optional<Integer> httpPort() {
-        return this.httpPort == null ? Optional.empty() : Optional.ofNullable(this.httpPort);
+        return Optional.ofNullable(this.httpPort);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="httpsPort")
-      private final @Nullable Integer httpsPort;
+    private @Nullable Integer httpsPort;
 
     public Optional<Integer> httpsPort() {
-        return this.httpsPort == null ? Optional.empty() : Optional.ofNullable(this.httpsPort);
+        return Optional.ofNullable(this.httpsPort);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -80,10 +80,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="originHostHeader")
-      private final @Nullable String originHostHeader;
+    private @Nullable String originHostHeader;
 
     public Optional<String> originHostHeader() {
-        return this.originHostHeader == null ? Optional.empty() : Optional.ofNullable(this.originHostHeader);
+        return Optional.ofNullable(this.originHostHeader);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="privateLinkAlias")
-      private final @Nullable String privateLinkAlias;
+    private @Nullable String privateLinkAlias;
 
     public Optional<String> privateLinkAlias() {
-        return this.privateLinkAlias == null ? Optional.empty() : Optional.ofNullable(this.privateLinkAlias);
+        return Optional.ofNullable(this.privateLinkAlias);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="privateLinkApprovalMessage")
-      private final @Nullable String privateLinkApprovalMessage;
+    private @Nullable String privateLinkApprovalMessage;
 
     public Optional<String> privateLinkApprovalMessage() {
-        return this.privateLinkApprovalMessage == null ? Optional.empty() : Optional.ofNullable(this.privateLinkApprovalMessage);
+        return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="privateLinkLocation")
-      private final @Nullable String privateLinkLocation;
+    private @Nullable String privateLinkLocation;
 
     public Optional<String> privateLinkLocation() {
-        return this.privateLinkLocation == null ? Optional.empty() : Optional.ofNullable(this.privateLinkLocation);
+        return Optional.ofNullable(this.privateLinkLocation);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="privateLinkResourceId")
-      private final @Nullable String privateLinkResourceId;
+    private @Nullable String privateLinkResourceId;
 
     public Optional<String> privateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
+        return Optional.ofNullable(this.privateLinkResourceId);
     }
 
     /**
@@ -146,145 +146,112 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="weight")
-      private final @Nullable Integer weight;
+    private @Nullable Integer weight;
 
     public Optional<Integer> weight() {
-        return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
+        return Optional.ofNullable(this.weight);
     }
 
-    public DeepCreatedOriginResponse(
-        @Nullable Boolean enabled,
-        String hostName,
-        @Nullable Integer httpPort,
-        @Nullable Integer httpsPort,
-        String name,
-        @Nullable String originHostHeader,
-        @Nullable Integer priority,
-        @Nullable String privateLinkAlias,
-        @Nullable String privateLinkApprovalMessage,
-        @Nullable String privateLinkLocation,
-        @Nullable String privateLinkResourceId,
-        @Nullable Integer weight) {
-        this.enabled = enabled;
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.httpPort = httpPort;
-        this.httpsPort = httpsPort;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.originHostHeader = originHostHeader;
-        this.priority = priority;
-        this.privateLinkAlias = privateLinkAlias;
-        this.privateLinkApprovalMessage = privateLinkApprovalMessage;
-        this.privateLinkLocation = privateLinkLocation;
-        this.privateLinkResourceId = privateLinkResourceId;
-        this.weight = weight;
-    }
+    private DeepCreatedOriginResponse() {}
 
-    private DeepCreatedOriginResponse() {
-        this.enabled = null;
-        this.hostName = null;
-        this.httpPort = null;
-        this.httpsPort = null;
-        this.name = null;
-        this.originHostHeader = null;
-        this.priority = null;
-        this.privateLinkAlias = null;
-        this.privateLinkApprovalMessage = null;
-        this.privateLinkLocation = null;
-        this.privateLinkResourceId = null;
-        this.weight = null;
+    private DeepCreatedOriginResponse(DeepCreatedOriginResponse $) {
+        this.enabled = $.enabled;
+        this.hostName = $.hostName;
+        this.httpPort = $.httpPort;
+        this.httpsPort = $.httpsPort;
+        this.name = $.name;
+        this.originHostHeader = $.originHostHeader;
+        this.priority = $.priority;
+        this.privateLinkAlias = $.privateLinkAlias;
+        this.privateLinkApprovalMessage = $.privateLinkApprovalMessage;
+        this.privateLinkLocation = $.privateLinkLocation;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeepCreatedOriginResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private String hostName;
-        private @Nullable Integer httpPort;
-        private @Nullable Integer httpsPort;
-        private String name;
-        private @Nullable String originHostHeader;
-        private @Nullable Integer priority;
-        private @Nullable String privateLinkAlias;
-        private @Nullable String privateLinkApprovalMessage;
-        private @Nullable String privateLinkLocation;
-        private @Nullable String privateLinkResourceId;
-        private @Nullable Integer weight;
+        private DeepCreatedOriginResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeepCreatedOriginResponse();
         }
 
         public Builder(DeepCreatedOriginResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.hostName = defaults.hostName;
-    	      this.httpPort = defaults.httpPort;
-    	      this.httpsPort = defaults.httpsPort;
-    	      this.name = defaults.name;
-    	      this.originHostHeader = defaults.originHostHeader;
-    	      this.priority = defaults.priority;
-    	      this.privateLinkAlias = defaults.privateLinkAlias;
-    	      this.privateLinkApprovalMessage = defaults.privateLinkApprovalMessage;
-    	      this.privateLinkLocation = defaults.privateLinkLocation;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.weight = defaults.weight;
+            $ = new DeepCreatedOriginResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder hostName(String hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder httpPort(@Nullable Integer httpPort) {
-            this.httpPort = httpPort;
+            $.httpPort = httpPort;
             return this;
         }
+
         public Builder httpsPort(@Nullable Integer httpsPort) {
-            this.httpsPort = httpsPort;
+            $.httpsPort = httpsPort;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder originHostHeader(@Nullable String originHostHeader) {
-            this.originHostHeader = originHostHeader;
+            $.originHostHeader = originHostHeader;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
-            this.privateLinkAlias = privateLinkAlias;
+            $.privateLinkAlias = privateLinkAlias;
             return this;
         }
+
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
-            this.privateLinkApprovalMessage = privateLinkApprovalMessage;
+            $.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
+
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
-            this.privateLinkLocation = privateLinkLocation;
+            $.privateLinkLocation = privateLinkLocation;
             return this;
         }
+
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = privateLinkResourceId;
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
+
         public Builder weight(@Nullable Integer weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
-        }        public DeepCreatedOriginResponse build() {
-            return new DeepCreatedOriginResponse(enabled, hostName, httpPort, httpsPort, name, originHostHeader, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
+        }
+
+        public DeepCreatedOriginResponse build() {
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

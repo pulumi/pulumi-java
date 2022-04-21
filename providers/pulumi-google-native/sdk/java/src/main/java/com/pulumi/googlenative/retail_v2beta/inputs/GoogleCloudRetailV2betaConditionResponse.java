@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="activeTimeRange", required=true)
-      private final List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange;
+    private List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange;
 
     public List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange() {
         return this.activeTimeRange;
@@ -34,61 +34,60 @@ public final class GoogleCloudRetailV2betaConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="queryTerms", required=true)
-      private final List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms;
+    private List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms;
 
     public List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms() {
         return this.queryTerms;
     }
 
-    public GoogleCloudRetailV2betaConditionResponse(
-        List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange,
-        List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
-        this.activeTimeRange = Objects.requireNonNull(activeTimeRange, "expected parameter 'activeTimeRange' to be non-null");
-        this.queryTerms = Objects.requireNonNull(queryTerms, "expected parameter 'queryTerms' to be non-null");
-    }
+    private GoogleCloudRetailV2betaConditionResponse() {}
 
-    private GoogleCloudRetailV2betaConditionResponse() {
-        this.activeTimeRange = List.of();
-        this.queryTerms = List.of();
+    private GoogleCloudRetailV2betaConditionResponse(GoogleCloudRetailV2betaConditionResponse $) {
+        this.activeTimeRange = $.activeTimeRange;
+        this.queryTerms = $.queryTerms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange;
-        private List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms;
+        private GoogleCloudRetailV2betaConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaConditionResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeTimeRange = defaults.activeTimeRange;
-    	      this.queryTerms = defaults.queryTerms;
+            $ = new GoogleCloudRetailV2betaConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeTimeRange(List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange) {
-            this.activeTimeRange = Objects.requireNonNull(activeTimeRange);
+            $.activeTimeRange = activeTimeRange;
             return this;
         }
+
         public Builder activeTimeRange(GoogleCloudRetailV2betaConditionTimeRangeResponse... activeTimeRange) {
             return activeTimeRange(List.of(activeTimeRange));
         }
+
         public Builder queryTerms(List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
-            this.queryTerms = Objects.requireNonNull(queryTerms);
+            $.queryTerms = queryTerms;
             return this;
         }
+
         public Builder queryTerms(GoogleCloudRetailV2betaConditionQueryTermResponse... queryTerms) {
             return queryTerms(List.of(queryTerms));
-        }        public GoogleCloudRetailV2betaConditionResponse build() {
-            return new GoogleCloudRetailV2betaConditionResponse(activeTimeRange, queryTerms);
+        }
+
+        public GoogleCloudRetailV2betaConditionResponse build() {
+            $.activeTimeRange = Objects.requireNonNull($.activeTimeRange, "expected parameter 'activeTimeRange' to be non-null");
+            $.queryTerms = Objects.requireNonNull($.queryTerms, "expected parameter 'queryTerms' to be non-null");
+            return $;
         }
     }
+
 }

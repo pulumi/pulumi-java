@@ -17,7 +17,7 @@ public final class GetDedicatedCloudNodeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dedicatedCloudNodeName", required=true)
-      private final String dedicatedCloudNodeName;
+    private String dedicatedCloudNodeName;
 
     public String dedicatedCloudNodeName() {
         return this.dedicatedCloudNodeName;
@@ -28,55 +28,52 @@ public final class GetDedicatedCloudNodeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDedicatedCloudNodeArgs(
-        String dedicatedCloudNodeName,
-        String resourceGroupName) {
-        this.dedicatedCloudNodeName = Objects.requireNonNull(dedicatedCloudNodeName, "expected parameter 'dedicatedCloudNodeName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDedicatedCloudNodeArgs() {}
 
-    private GetDedicatedCloudNodeArgs() {
-        this.dedicatedCloudNodeName = null;
-        this.resourceGroupName = null;
+    private GetDedicatedCloudNodeArgs(GetDedicatedCloudNodeArgs $) {
+        this.dedicatedCloudNodeName = $.dedicatedCloudNodeName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDedicatedCloudNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dedicatedCloudNodeName;
-        private String resourceGroupName;
+        private GetDedicatedCloudNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDedicatedCloudNodeArgs();
         }
 
         public Builder(GetDedicatedCloudNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dedicatedCloudNodeName = defaults.dedicatedCloudNodeName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDedicatedCloudNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dedicatedCloudNodeName(String dedicatedCloudNodeName) {
-            this.dedicatedCloudNodeName = Objects.requireNonNull(dedicatedCloudNodeName);
+            $.dedicatedCloudNodeName = dedicatedCloudNodeName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDedicatedCloudNodeArgs build() {
-            return new GetDedicatedCloudNodeArgs(dedicatedCloudNodeName, resourceGroupName);
+        }
+
+        public GetDedicatedCloudNodeArgs build() {
+            $.dedicatedCloudNodeName = Objects.requireNonNull($.dedicatedCloudNodeName, "expected parameter 'dedicatedCloudNodeName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

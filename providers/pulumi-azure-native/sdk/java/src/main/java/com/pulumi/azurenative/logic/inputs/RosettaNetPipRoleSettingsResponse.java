@@ -24,7 +24,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -35,7 +35,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="businessDocument", required=true)
-      private final RosettaNetPipBusinessDocumentResponse businessDocument;
+    private RosettaNetPipBusinessDocumentResponse businessDocument;
 
     public RosettaNetPipBusinessDocumentResponse businessDocument() {
         return this.businessDocument;
@@ -46,10 +46,10 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="role", required=true)
-      private final String role;
+    private String role;
 
     public String role() {
         return this.role;
@@ -68,7 +68,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="roleType", required=true)
-      private final String roleType;
+    private String roleType;
 
     public String roleType() {
         return this.roleType;
@@ -79,7 +79,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
@@ -90,100 +90,86 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="serviceClassification", required=true)
-      private final String serviceClassification;
+    private String serviceClassification;
 
     public String serviceClassification() {
         return this.serviceClassification;
     }
 
-    public RosettaNetPipRoleSettingsResponse(
-        String action,
-        RosettaNetPipBusinessDocumentResponse businessDocument,
-        @Nullable String description,
-        String role,
-        String roleType,
-        String service,
-        String serviceClassification) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.businessDocument = Objects.requireNonNull(businessDocument, "expected parameter 'businessDocument' to be non-null");
-        this.description = description;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.roleType = Objects.requireNonNull(roleType, "expected parameter 'roleType' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.serviceClassification = Objects.requireNonNull(serviceClassification, "expected parameter 'serviceClassification' to be non-null");
-    }
+    private RosettaNetPipRoleSettingsResponse() {}
 
-    private RosettaNetPipRoleSettingsResponse() {
-        this.action = null;
-        this.businessDocument = null;
-        this.description = null;
-        this.role = null;
-        this.roleType = null;
-        this.service = null;
-        this.serviceClassification = null;
+    private RosettaNetPipRoleSettingsResponse(RosettaNetPipRoleSettingsResponse $) {
+        this.action = $.action;
+        this.businessDocument = $.businessDocument;
+        this.description = $.description;
+        this.role = $.role;
+        this.roleType = $.roleType;
+        this.service = $.service;
+        this.serviceClassification = $.serviceClassification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RosettaNetPipRoleSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private RosettaNetPipBusinessDocumentResponse businessDocument;
-        private @Nullable String description;
-        private String role;
-        private String roleType;
-        private String service;
-        private String serviceClassification;
+        private RosettaNetPipRoleSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RosettaNetPipRoleSettingsResponse();
         }
 
         public Builder(RosettaNetPipRoleSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.businessDocument = defaults.businessDocument;
-    	      this.description = defaults.description;
-    	      this.role = defaults.role;
-    	      this.roleType = defaults.roleType;
-    	      this.service = defaults.service;
-    	      this.serviceClassification = defaults.serviceClassification;
+            $ = new RosettaNetPipRoleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder businessDocument(RosettaNetPipBusinessDocumentResponse businessDocument) {
-            this.businessDocument = Objects.requireNonNull(businessDocument);
+            $.businessDocument = businessDocument;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder roleType(String roleType) {
-            this.roleType = Objects.requireNonNull(roleType);
+            $.roleType = roleType;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder serviceClassification(String serviceClassification) {
-            this.serviceClassification = Objects.requireNonNull(serviceClassification);
+            $.serviceClassification = serviceClassification;
             return this;
-        }        public RosettaNetPipRoleSettingsResponse build() {
-            return new RosettaNetPipRoleSettingsResponse(action, businessDocument, description, role, roleType, service, serviceClassification);
+        }
+
+        public RosettaNetPipRoleSettingsResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.businessDocument = Objects.requireNonNull($.businessDocument, "expected parameter 'businessDocument' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.roleType = Objects.requireNonNull($.roleType, "expected parameter 'roleType' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.serviceClassification = Objects.requireNonNull($.serviceClassification, "expected parameter 'serviceClassification' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetCompositeAlarmArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="alarmName", required=true)
-      private final String alarmName;
+    private String alarmName;
 
     public String alarmName() {
         return this.alarmName;
     }
 
-    public GetCompositeAlarmArgs(String alarmName) {
-        this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
-    }
+    private GetCompositeAlarmArgs() {}
 
-    private GetCompositeAlarmArgs() {
-        this.alarmName = null;
+    private GetCompositeAlarmArgs(GetCompositeAlarmArgs $) {
+        this.alarmName = $.alarmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCompositeAlarmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alarmName;
+        private GetCompositeAlarmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCompositeAlarmArgs();
         }
 
         public Builder(GetCompositeAlarmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmName = defaults.alarmName;
+            $ = new GetCompositeAlarmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmName(String alarmName) {
-            this.alarmName = Objects.requireNonNull(alarmName);
+            $.alarmName = alarmName;
             return this;
-        }        public GetCompositeAlarmArgs build() {
-            return new GetCompositeAlarmArgs(alarmName);
+        }
+
+        public GetCompositeAlarmArgs build() {
+            $.alarmName = Objects.requireNonNull($.alarmName, "expected parameter 'alarmName' to be non-null");
+            return $;
         }
     }
+
 }

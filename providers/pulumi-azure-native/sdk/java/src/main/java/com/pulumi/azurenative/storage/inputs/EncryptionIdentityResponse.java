@@ -23,45 +23,44 @@ public final class EncryptionIdentityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="encryptionUserAssignedIdentity")
-      private final @Nullable String encryptionUserAssignedIdentity;
+    private @Nullable String encryptionUserAssignedIdentity;
 
     public Optional<String> encryptionUserAssignedIdentity() {
-        return this.encryptionUserAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.encryptionUserAssignedIdentity);
+        return Optional.ofNullable(this.encryptionUserAssignedIdentity);
     }
 
-    public EncryptionIdentityResponse(@Nullable String encryptionUserAssignedIdentity) {
-        this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
-    }
+    private EncryptionIdentityResponse() {}
 
-    private EncryptionIdentityResponse() {
-        this.encryptionUserAssignedIdentity = null;
+    private EncryptionIdentityResponse(EncryptionIdentityResponse $) {
+        this.encryptionUserAssignedIdentity = $.encryptionUserAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String encryptionUserAssignedIdentity;
+        private EncryptionIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionIdentityResponse();
         }
 
         public Builder(EncryptionIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionUserAssignedIdentity = defaults.encryptionUserAssignedIdentity;
+            $ = new EncryptionIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionUserAssignedIdentity(@Nullable String encryptionUserAssignedIdentity) {
-            this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
+            $.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;
-        }        public EncryptionIdentityResponse build() {
-            return new EncryptionIdentityResponse(encryptionUserAssignedIdentity);
+        }
+
+        public EncryptionIdentityResponse build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class WorkloadCertificatesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enableCertificates", required=true)
-      private final Boolean enableCertificates;
+    private Boolean enableCertificates;
 
     public Boolean enableCertificates() {
         return this.enableCertificates;
     }
 
-    public WorkloadCertificatesResponse(Boolean enableCertificates) {
-        this.enableCertificates = Objects.requireNonNull(enableCertificates, "expected parameter 'enableCertificates' to be non-null");
-    }
+    private WorkloadCertificatesResponse() {}
 
-    private WorkloadCertificatesResponse() {
-        this.enableCertificates = null;
+    private WorkloadCertificatesResponse(WorkloadCertificatesResponse $) {
+        this.enableCertificates = $.enableCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadCertificatesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableCertificates;
+        private WorkloadCertificatesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadCertificatesResponse();
         }
 
         public Builder(WorkloadCertificatesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableCertificates = defaults.enableCertificates;
+            $ = new WorkloadCertificatesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableCertificates(Boolean enableCertificates) {
-            this.enableCertificates = Objects.requireNonNull(enableCertificates);
+            $.enableCertificates = enableCertificates;
             return this;
-        }        public WorkloadCertificatesResponse build() {
-            return new WorkloadCertificatesResponse(enableCertificates);
+        }
+
+        public WorkloadCertificatesResponse build() {
+            $.enableCertificates = Objects.requireNonNull($.enableCertificates, "expected parameter 'enableCertificates' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="bgpSession")
-      private final @Nullable BgpSessionResponse bgpSession;
+    private @Nullable BgpSessionResponse bgpSession;
 
     public Optional<BgpSessionResponse> bgpSession() {
-        return this.bgpSession == null ? Optional.empty() : Optional.ofNullable(this.bgpSession);
+        return Optional.ofNullable(this.bgpSession);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="connectionIdentifier")
-      private final @Nullable String connectionIdentifier;
+    private @Nullable String connectionIdentifier;
 
     public Optional<String> connectionIdentifier() {
-        return this.connectionIdentifier == null ? Optional.empty() : Optional.ofNullable(this.connectionIdentifier);
+        return Optional.ofNullable(this.connectionIdentifier);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="connectionState", required=true)
-      private final String connectionState;
+    private String connectionState;
 
     public String connectionState() {
         return this.connectionState;
@@ -58,7 +58,7 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -69,82 +69,70 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="peeringDBFacilityId")
-      private final @Nullable Integer peeringDBFacilityId;
+    private @Nullable Integer peeringDBFacilityId;
 
     public Optional<Integer> peeringDBFacilityId() {
-        return this.peeringDBFacilityId == null ? Optional.empty() : Optional.ofNullable(this.peeringDBFacilityId);
+        return Optional.ofNullable(this.peeringDBFacilityId);
     }
 
-    public ExchangeConnectionResponse(
-        @Nullable BgpSessionResponse bgpSession,
-        @Nullable String connectionIdentifier,
-        String connectionState,
-        String errorMessage,
-        @Nullable Integer peeringDBFacilityId) {
-        this.bgpSession = bgpSession;
-        this.connectionIdentifier = connectionIdentifier;
-        this.connectionState = Objects.requireNonNull(connectionState, "expected parameter 'connectionState' to be non-null");
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.peeringDBFacilityId = peeringDBFacilityId;
-    }
+    private ExchangeConnectionResponse() {}
 
-    private ExchangeConnectionResponse() {
-        this.bgpSession = null;
-        this.connectionIdentifier = null;
-        this.connectionState = null;
-        this.errorMessage = null;
-        this.peeringDBFacilityId = null;
+    private ExchangeConnectionResponse(ExchangeConnectionResponse $) {
+        this.bgpSession = $.bgpSession;
+        this.connectionIdentifier = $.connectionIdentifier;
+        this.connectionState = $.connectionState;
+        this.errorMessage = $.errorMessage;
+        this.peeringDBFacilityId = $.peeringDBFacilityId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExchangeConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BgpSessionResponse bgpSession;
-        private @Nullable String connectionIdentifier;
-        private String connectionState;
-        private String errorMessage;
-        private @Nullable Integer peeringDBFacilityId;
+        private ExchangeConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExchangeConnectionResponse();
         }
 
         public Builder(ExchangeConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bgpSession = defaults.bgpSession;
-    	      this.connectionIdentifier = defaults.connectionIdentifier;
-    	      this.connectionState = defaults.connectionState;
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.peeringDBFacilityId = defaults.peeringDBFacilityId;
+            $ = new ExchangeConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bgpSession(@Nullable BgpSessionResponse bgpSession) {
-            this.bgpSession = bgpSession;
+            $.bgpSession = bgpSession;
             return this;
         }
+
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
-            this.connectionIdentifier = connectionIdentifier;
+            $.connectionIdentifier = connectionIdentifier;
             return this;
         }
+
         public Builder connectionState(String connectionState) {
-            this.connectionState = Objects.requireNonNull(connectionState);
+            $.connectionState = connectionState;
             return this;
         }
+
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
-            this.peeringDBFacilityId = peeringDBFacilityId;
+            $.peeringDBFacilityId = peeringDBFacilityId;
             return this;
-        }        public ExchangeConnectionResponse build() {
-            return new ExchangeConnectionResponse(bgpSession, connectionIdentifier, connectionState, errorMessage, peeringDBFacilityId);
+        }
+
+        public ExchangeConnectionResponse build() {
+            $.connectionState = Objects.requireNonNull($.connectionState, "expected parameter 'connectionState' to be non-null");
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            return $;
         }
     }
+
 }

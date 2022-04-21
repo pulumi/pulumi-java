@@ -7,7 +7,6 @@ import com.pulumi.azurenative.servicefabric.enums.ServicePlacementPolicyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class ServicePlacementPolicyDescriptionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ServicePlacementPolicyType>> type;
+    private Output<Either<String,ServicePlacementPolicyType>> type;
 
     public Output<Either<String,ServicePlacementPolicyType>> type() {
         return this.type;
     }
 
-    public ServicePlacementPolicyDescriptionArgs(Output<Either<String,ServicePlacementPolicyType>> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ServicePlacementPolicyDescriptionArgs() {}
 
-    private ServicePlacementPolicyDescriptionArgs() {
-        this.type = Codegen.empty();
+    private ServicePlacementPolicyDescriptionArgs(ServicePlacementPolicyDescriptionArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePlacementPolicyDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ServicePlacementPolicyType>> type;
+        private ServicePlacementPolicyDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePlacementPolicyDescriptionArgs();
         }
 
         public Builder(ServicePlacementPolicyDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ServicePlacementPolicyDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<Either<String,ServicePlacementPolicyType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ServicePlacementPolicyType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ServicePlacementPolicyDescriptionArgs build() {
-            return new ServicePlacementPolicyDescriptionArgs(type);
+            return type(Output.of(type));
+        }
+
+        public ServicePlacementPolicyDescriptionArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

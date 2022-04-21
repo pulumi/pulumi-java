@@ -7,10 +7,10 @@ import com.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchArgs;
 import com.pulumi.awsnative.wafv2.inputs.LoggingFilterPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="logDestinationConfigs", required=true)
-      private final Output<List<String>> logDestinationConfigs;
+    private Output<List<String>> logDestinationConfigs;
 
     public Output<List<String>> logDestinationConfigs() {
         return this.logDestinationConfigs;
@@ -34,10 +34,10 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="loggingFilter")
-      private final @Nullable Output<LoggingFilterPropertiesArgs> loggingFilter;
+    private @Nullable Output<LoggingFilterPropertiesArgs> loggingFilter;
 
-    public Output<LoggingFilterPropertiesArgs> loggingFilter() {
-        return this.loggingFilter == null ? Codegen.empty() : this.loggingFilter;
+    public Optional<Output<LoggingFilterPropertiesArgs>> loggingFilter() {
+        return Optional.ofNullable(this.loggingFilter);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="redactedFields")
-      private final @Nullable Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields;
+    private @Nullable Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields;
 
-    public Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields() {
-        return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
+    public Optional<Output<List<LoggingConfigurationFieldToMatchArgs>>> redactedFields() {
+        return Optional.ofNullable(this.redactedFields);
     }
 
     /**
@@ -56,95 +56,88 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
-    public LoggingConfigurationArgs(
-        Output<List<String>> logDestinationConfigs,
-        @Nullable Output<LoggingFilterPropertiesArgs> loggingFilter,
-        @Nullable Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields,
-        Output<String> resourceArn) {
-        this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs, "expected parameter 'logDestinationConfigs' to be non-null");
-        this.loggingFilter = loggingFilter;
-        this.redactedFields = redactedFields;
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-    }
+    private LoggingConfigurationArgs() {}
 
-    private LoggingConfigurationArgs() {
-        this.logDestinationConfigs = Codegen.empty();
-        this.loggingFilter = Codegen.empty();
-        this.redactedFields = Codegen.empty();
-        this.resourceArn = Codegen.empty();
+    private LoggingConfigurationArgs(LoggingConfigurationArgs $) {
+        this.logDestinationConfigs = $.logDestinationConfigs;
+        this.loggingFilter = $.loggingFilter;
+        this.redactedFields = $.redactedFields;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> logDestinationConfigs;
-        private @Nullable Output<LoggingFilterPropertiesArgs> loggingFilter;
-        private @Nullable Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields;
-        private Output<String> resourceArn;
+        private LoggingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationArgs();
         }
 
         public Builder(LoggingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logDestinationConfigs = defaults.logDestinationConfigs;
-    	      this.loggingFilter = defaults.loggingFilter;
-    	      this.redactedFields = defaults.redactedFields;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new LoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logDestinationConfigs(Output<List<String>> logDestinationConfigs) {
-            this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
+            $.logDestinationConfigs = logDestinationConfigs;
             return this;
         }
+
         public Builder logDestinationConfigs(List<String> logDestinationConfigs) {
-            this.logDestinationConfigs = Output.of(Objects.requireNonNull(logDestinationConfigs));
-            return this;
+            return logDestinationConfigs(Output.of(logDestinationConfigs));
         }
+
         public Builder logDestinationConfigs(String... logDestinationConfigs) {
             return logDestinationConfigs(List.of(logDestinationConfigs));
         }
+
         public Builder loggingFilter(@Nullable Output<LoggingFilterPropertiesArgs> loggingFilter) {
-            this.loggingFilter = loggingFilter;
+            $.loggingFilter = loggingFilter;
             return this;
         }
-        public Builder loggingFilter(@Nullable LoggingFilterPropertiesArgs loggingFilter) {
-            this.loggingFilter = Codegen.ofNullable(loggingFilter);
-            return this;
+
+        public Builder loggingFilter(LoggingFilterPropertiesArgs loggingFilter) {
+            return loggingFilter(Output.of(loggingFilter));
         }
+
         public Builder redactedFields(@Nullable Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields) {
-            this.redactedFields = redactedFields;
+            $.redactedFields = redactedFields;
             return this;
         }
-        public Builder redactedFields(@Nullable List<LoggingConfigurationFieldToMatchArgs> redactedFields) {
-            this.redactedFields = Codegen.ofNullable(redactedFields);
-            return this;
+
+        public Builder redactedFields(List<LoggingConfigurationFieldToMatchArgs> redactedFields) {
+            return redactedFields(Output.of(redactedFields));
         }
+
         public Builder redactedFields(LoggingConfigurationFieldToMatchArgs... redactedFields) {
             return redactedFields(List.of(redactedFields));
         }
+
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
-        }        public LoggingConfigurationArgs build() {
-            return new LoggingConfigurationArgs(logDestinationConfigs, loggingFilter, redactedFields, resourceArn);
+            return resourceArn(Output.of(resourceArn));
+        }
+
+        public LoggingConfigurationArgs build() {
+            $.logDestinationConfigs = Objects.requireNonNull($.logDestinationConfigs, "expected parameter 'logDestinationConfigs' to be non-null");
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            return $;
         }
     }
+
 }

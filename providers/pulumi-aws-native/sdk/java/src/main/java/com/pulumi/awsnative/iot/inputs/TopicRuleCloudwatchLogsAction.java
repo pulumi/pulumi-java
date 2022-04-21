@@ -13,62 +13,59 @@ public final class TopicRuleCloudwatchLogsAction extends com.pulumi.resources.In
     public static final TopicRuleCloudwatchLogsAction Empty = new TopicRuleCloudwatchLogsAction();
 
     @Import(name="logGroupName", required=true)
-      private final String logGroupName;
+    private String logGroupName;
 
     public String logGroupName() {
         return this.logGroupName;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleCloudwatchLogsAction(
-        String logGroupName,
-        String roleArn) {
-        this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleCloudwatchLogsAction() {}
 
-    private TopicRuleCloudwatchLogsAction() {
-        this.logGroupName = null;
-        this.roleArn = null;
+    private TopicRuleCloudwatchLogsAction(TopicRuleCloudwatchLogsAction $) {
+        this.logGroupName = $.logGroupName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleCloudwatchLogsAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String logGroupName;
-        private String roleArn;
+        private TopicRuleCloudwatchLogsAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleCloudwatchLogsAction();
         }
 
         public Builder(TopicRuleCloudwatchLogsAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleCloudwatchLogsAction(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Objects.requireNonNull(logGroupName);
+            $.logGroupName = logGroupName;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public TopicRuleCloudwatchLogsAction build() {
-            return new TopicRuleCloudwatchLogsAction(logGroupName, roleArn);
+        }
+
+        public TopicRuleCloudwatchLogsAction build() {
+            $.logGroupName = Objects.requireNonNull($.logGroupName, "expected parameter 'logGroupName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,81 +19,77 @@ public final class EnvelopeResponse extends com.pulumi.resources.InvokeArgs {
     public static final EnvelopeResponse Empty = new EnvelopeResponse();
 
     @Import(name="payload", required=true)
-      private final String payload;
+    private String payload;
 
     public String payload() {
         return this.payload;
     }
 
     @Import(name="payloadType", required=true)
-      private final String payloadType;
+    private String payloadType;
 
     public String payloadType() {
         return this.payloadType;
     }
 
     @Import(name="signatures", required=true)
-      private final List<EnvelopeSignatureResponse> signatures;
+    private List<EnvelopeSignatureResponse> signatures;
 
     public List<EnvelopeSignatureResponse> signatures() {
         return this.signatures;
     }
 
-    public EnvelopeResponse(
-        String payload,
-        String payloadType,
-        List<EnvelopeSignatureResponse> signatures) {
-        this.payload = Objects.requireNonNull(payload, "expected parameter 'payload' to be non-null");
-        this.payloadType = Objects.requireNonNull(payloadType, "expected parameter 'payloadType' to be non-null");
-        this.signatures = Objects.requireNonNull(signatures, "expected parameter 'signatures' to be non-null");
-    }
+    private EnvelopeResponse() {}
 
-    private EnvelopeResponse() {
-        this.payload = null;
-        this.payloadType = null;
-        this.signatures = List.of();
+    private EnvelopeResponse(EnvelopeResponse $) {
+        this.payload = $.payload;
+        this.payloadType = $.payloadType;
+        this.signatures = $.signatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvelopeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String payload;
-        private String payloadType;
-        private List<EnvelopeSignatureResponse> signatures;
+        private EnvelopeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvelopeResponse();
         }
 
         public Builder(EnvelopeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.payload = defaults.payload;
-    	      this.payloadType = defaults.payloadType;
-    	      this.signatures = defaults.signatures;
+            $ = new EnvelopeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder payload(String payload) {
-            this.payload = Objects.requireNonNull(payload);
+            $.payload = payload;
             return this;
         }
+
         public Builder payloadType(String payloadType) {
-            this.payloadType = Objects.requireNonNull(payloadType);
+            $.payloadType = payloadType;
             return this;
         }
+
         public Builder signatures(List<EnvelopeSignatureResponse> signatures) {
-            this.signatures = Objects.requireNonNull(signatures);
+            $.signatures = signatures;
             return this;
         }
+
         public Builder signatures(EnvelopeSignatureResponse... signatures) {
             return signatures(List.of(signatures));
-        }        public EnvelopeResponse build() {
-            return new EnvelopeResponse(payload, payloadType, signatures);
+        }
+
+        public EnvelopeResponse build() {
+            $.payload = Objects.requireNonNull($.payload, "expected parameter 'payload' to be non-null");
+            $.payloadType = Objects.requireNonNull($.payloadType, "expected parameter 'payloadType' to be non-null");
+            $.signatures = Objects.requireNonNull($.signatures, "expected parameter 'signatures' to be non-null");
+            return $;
         }
     }
+
 }

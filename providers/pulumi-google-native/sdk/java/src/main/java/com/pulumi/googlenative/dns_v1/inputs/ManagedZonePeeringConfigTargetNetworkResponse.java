@@ -17,14 +17,14 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends com.pul
      * 
      */
     @Import(name="deactivateTime", required=true)
-      private final String deactivateTime;
+    private String deactivateTime;
 
     public String deactivateTime() {
         return this.deactivateTime;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -35,64 +35,59 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends com.pul
      * 
      */
     @Import(name="networkUrl", required=true)
-      private final String networkUrl;
+    private String networkUrl;
 
     public String networkUrl() {
         return this.networkUrl;
     }
 
-    public ManagedZonePeeringConfigTargetNetworkResponse(
-        String deactivateTime,
-        String kind,
-        String networkUrl) {
-        this.deactivateTime = Objects.requireNonNull(deactivateTime, "expected parameter 'deactivateTime' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.networkUrl = Objects.requireNonNull(networkUrl, "expected parameter 'networkUrl' to be non-null");
-    }
+    private ManagedZonePeeringConfigTargetNetworkResponse() {}
 
-    private ManagedZonePeeringConfigTargetNetworkResponse() {
-        this.deactivateTime = null;
-        this.kind = null;
-        this.networkUrl = null;
+    private ManagedZonePeeringConfigTargetNetworkResponse(ManagedZonePeeringConfigTargetNetworkResponse $) {
+        this.deactivateTime = $.deactivateTime;
+        this.kind = $.kind;
+        this.networkUrl = $.networkUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePeeringConfigTargetNetworkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deactivateTime;
-        private String kind;
-        private String networkUrl;
+        private ManagedZonePeeringConfigTargetNetworkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePeeringConfigTargetNetworkResponse();
         }
 
         public Builder(ManagedZonePeeringConfigTargetNetworkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deactivateTime = defaults.deactivateTime;
-    	      this.kind = defaults.kind;
-    	      this.networkUrl = defaults.networkUrl;
+            $ = new ManagedZonePeeringConfigTargetNetworkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deactivateTime(String deactivateTime) {
-            this.deactivateTime = Objects.requireNonNull(deactivateTime);
+            $.deactivateTime = deactivateTime;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder networkUrl(String networkUrl) {
-            this.networkUrl = Objects.requireNonNull(networkUrl);
+            $.networkUrl = networkUrl;
             return this;
-        }        public ManagedZonePeeringConfigTargetNetworkResponse build() {
-            return new ManagedZonePeeringConfigTargetNetworkResponse(deactivateTime, kind, networkUrl);
+        }
+
+        public ManagedZonePeeringConfigTargetNetworkResponse build() {
+            $.deactivateTime = Objects.requireNonNull($.deactivateTime, "expected parameter 'deactivateTime' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.networkUrl = Objects.requireNonNull($.networkUrl, "expected parameter 'networkUrl' to be non-null");
+            return $;
         }
     }
+
 }

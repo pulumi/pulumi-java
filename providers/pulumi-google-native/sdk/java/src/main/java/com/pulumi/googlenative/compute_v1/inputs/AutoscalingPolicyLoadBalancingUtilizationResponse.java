@@ -21,45 +21,45 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse extends com
      * 
      */
     @Import(name="utilizationTarget", required=true)
-      private final Double utilizationTarget;
+    private Double utilizationTarget;
 
     public Double utilizationTarget() {
         return this.utilizationTarget;
     }
 
-    public AutoscalingPolicyLoadBalancingUtilizationResponse(Double utilizationTarget) {
-        this.utilizationTarget = Objects.requireNonNull(utilizationTarget, "expected parameter 'utilizationTarget' to be non-null");
-    }
+    private AutoscalingPolicyLoadBalancingUtilizationResponse() {}
 
-    private AutoscalingPolicyLoadBalancingUtilizationResponse() {
-        this.utilizationTarget = null;
+    private AutoscalingPolicyLoadBalancingUtilizationResponse(AutoscalingPolicyLoadBalancingUtilizationResponse $) {
+        this.utilizationTarget = $.utilizationTarget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyLoadBalancingUtilizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double utilizationTarget;
+        private AutoscalingPolicyLoadBalancingUtilizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyLoadBalancingUtilizationResponse();
         }
 
         public Builder(AutoscalingPolicyLoadBalancingUtilizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.utilizationTarget = defaults.utilizationTarget;
+            $ = new AutoscalingPolicyLoadBalancingUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder utilizationTarget(Double utilizationTarget) {
-            this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
+            $.utilizationTarget = utilizationTarget;
             return this;
-        }        public AutoscalingPolicyLoadBalancingUtilizationResponse build() {
-            return new AutoscalingPolicyLoadBalancingUtilizationResponse(utilizationTarget);
+        }
+
+        public AutoscalingPolicyLoadBalancingUtilizationResponse build() {
+            $.utilizationTarget = Objects.requireNonNull($.utilizationTarget, "expected parameter 'utilizationTarget' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.AwsS3DataArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.AzureBlobStorageDataArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.GcsDataArgs;
@@ -16,6 +15,7 @@ import com.pulumi.googlenative.storagetransfer_v1.inputs.TransferManifestArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.TransferOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsS3DataSource")
-      private final @Nullable Output<AwsS3DataArgs> awsS3DataSource;
+    private @Nullable Output<AwsS3DataArgs> awsS3DataSource;
 
-    public Output<AwsS3DataArgs> awsS3DataSource() {
-        return this.awsS3DataSource == null ? Codegen.empty() : this.awsS3DataSource;
+    public Optional<Output<AwsS3DataArgs>> awsS3DataSource() {
+        return Optional.ofNullable(this.awsS3DataSource);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureBlobStorageDataSource")
-      private final @Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource;
+    private @Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource;
 
-    public Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource() {
-        return this.azureBlobStorageDataSource == null ? Codegen.empty() : this.azureBlobStorageDataSource;
+    public Optional<Output<AzureBlobStorageDataArgs>> azureBlobStorageDataSource() {
+        return Optional.ofNullable(this.azureBlobStorageDataSource);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsDataSink")
-      private final @Nullable Output<GcsDataArgs> gcsDataSink;
+    private @Nullable Output<GcsDataArgs> gcsDataSink;
 
-    public Output<GcsDataArgs> gcsDataSink() {
-        return this.gcsDataSink == null ? Codegen.empty() : this.gcsDataSink;
+    public Optional<Output<GcsDataArgs>> gcsDataSink() {
+        return Optional.ofNullable(this.gcsDataSink);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsDataSource")
-      private final @Nullable Output<GcsDataArgs> gcsDataSource;
+    private @Nullable Output<GcsDataArgs> gcsDataSource;
 
-    public Output<GcsDataArgs> gcsDataSource() {
-        return this.gcsDataSource == null ? Codegen.empty() : this.gcsDataSource;
+    public Optional<Output<GcsDataArgs>> gcsDataSource() {
+        return Optional.ofNullable(this.gcsDataSource);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsIntermediateDataLocation")
-      private final @Nullable Output<GcsDataArgs> gcsIntermediateDataLocation;
+    private @Nullable Output<GcsDataArgs> gcsIntermediateDataLocation;
 
-    public Output<GcsDataArgs> gcsIntermediateDataLocation() {
-        return this.gcsIntermediateDataLocation == null ? Codegen.empty() : this.gcsIntermediateDataLocation;
+    public Optional<Output<GcsDataArgs>> gcsIntermediateDataLocation() {
+        return Optional.ofNullable(this.gcsIntermediateDataLocation);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpDataSource")
-      private final @Nullable Output<HttpDataArgs> httpDataSource;
+    private @Nullable Output<HttpDataArgs> httpDataSource;
 
-    public Output<HttpDataArgs> httpDataSource() {
-        return this.httpDataSource == null ? Codegen.empty() : this.httpDataSource;
+    public Optional<Output<HttpDataArgs>> httpDataSource() {
+        return Optional.ofNullable(this.httpDataSource);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectConditions")
-      private final @Nullable Output<ObjectConditionsArgs> objectConditions;
+    private @Nullable Output<ObjectConditionsArgs> objectConditions;
 
-    public Output<ObjectConditionsArgs> objectConditions() {
-        return this.objectConditions == null ? Codegen.empty() : this.objectConditions;
+    public Optional<Output<ObjectConditionsArgs>> objectConditions() {
+        return Optional.ofNullable(this.objectConditions);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="posixDataSink")
-      private final @Nullable Output<PosixFilesystemArgs> posixDataSink;
+    private @Nullable Output<PosixFilesystemArgs> posixDataSink;
 
-    public Output<PosixFilesystemArgs> posixDataSink() {
-        return this.posixDataSink == null ? Codegen.empty() : this.posixDataSink;
+    public Optional<Output<PosixFilesystemArgs>> posixDataSink() {
+        return Optional.ofNullable(this.posixDataSink);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="posixDataSource")
-      private final @Nullable Output<PosixFilesystemArgs> posixDataSource;
+    private @Nullable Output<PosixFilesystemArgs> posixDataSource;
 
-    public Output<PosixFilesystemArgs> posixDataSource() {
-        return this.posixDataSource == null ? Codegen.empty() : this.posixDataSource;
+    public Optional<Output<PosixFilesystemArgs>> posixDataSource() {
+        return Optional.ofNullable(this.posixDataSource);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sinkAgentPoolName")
-      private final @Nullable Output<String> sinkAgentPoolName;
+    private @Nullable Output<String> sinkAgentPoolName;
 
-    public Output<String> sinkAgentPoolName() {
-        return this.sinkAgentPoolName == null ? Codegen.empty() : this.sinkAgentPoolName;
+    public Optional<Output<String>> sinkAgentPoolName() {
+        return Optional.ofNullable(this.sinkAgentPoolName);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceAgentPoolName")
-      private final @Nullable Output<String> sourceAgentPoolName;
+    private @Nullable Output<String> sourceAgentPoolName;
 
-    public Output<String> sourceAgentPoolName() {
-        return this.sourceAgentPoolName == null ? Codegen.empty() : this.sourceAgentPoolName;
+    public Optional<Output<String>> sourceAgentPoolName() {
+        return Optional.ofNullable(this.sourceAgentPoolName);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transferManifest")
-      private final @Nullable Output<TransferManifestArgs> transferManifest;
+    private @Nullable Output<TransferManifestArgs> transferManifest;
 
-    public Output<TransferManifestArgs> transferManifest() {
-        return this.transferManifest == null ? Codegen.empty() : this.transferManifest;
+    public Optional<Output<TransferManifestArgs>> transferManifest() {
+        return Optional.ofNullable(this.transferManifest);
     }
 
     /**
@@ -164,206 +164,168 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transferOptions")
-      private final @Nullable Output<TransferOptionsArgs> transferOptions;
+    private @Nullable Output<TransferOptionsArgs> transferOptions;
 
-    public Output<TransferOptionsArgs> transferOptions() {
-        return this.transferOptions == null ? Codegen.empty() : this.transferOptions;
+    public Optional<Output<TransferOptionsArgs>> transferOptions() {
+        return Optional.ofNullable(this.transferOptions);
     }
 
-    public TransferSpecArgs(
-        @Nullable Output<AwsS3DataArgs> awsS3DataSource,
-        @Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource,
-        @Nullable Output<GcsDataArgs> gcsDataSink,
-        @Nullable Output<GcsDataArgs> gcsDataSource,
-        @Nullable Output<GcsDataArgs> gcsIntermediateDataLocation,
-        @Nullable Output<HttpDataArgs> httpDataSource,
-        @Nullable Output<ObjectConditionsArgs> objectConditions,
-        @Nullable Output<PosixFilesystemArgs> posixDataSink,
-        @Nullable Output<PosixFilesystemArgs> posixDataSource,
-        @Nullable Output<String> sinkAgentPoolName,
-        @Nullable Output<String> sourceAgentPoolName,
-        @Nullable Output<TransferManifestArgs> transferManifest,
-        @Nullable Output<TransferOptionsArgs> transferOptions) {
-        this.awsS3DataSource = awsS3DataSource;
-        this.azureBlobStorageDataSource = azureBlobStorageDataSource;
-        this.gcsDataSink = gcsDataSink;
-        this.gcsDataSource = gcsDataSource;
-        this.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
-        this.httpDataSource = httpDataSource;
-        this.objectConditions = objectConditions;
-        this.posixDataSink = posixDataSink;
-        this.posixDataSource = posixDataSource;
-        this.sinkAgentPoolName = sinkAgentPoolName;
-        this.sourceAgentPoolName = sourceAgentPoolName;
-        this.transferManifest = transferManifest;
-        this.transferOptions = transferOptions;
-    }
+    private TransferSpecArgs() {}
 
-    private TransferSpecArgs() {
-        this.awsS3DataSource = Codegen.empty();
-        this.azureBlobStorageDataSource = Codegen.empty();
-        this.gcsDataSink = Codegen.empty();
-        this.gcsDataSource = Codegen.empty();
-        this.gcsIntermediateDataLocation = Codegen.empty();
-        this.httpDataSource = Codegen.empty();
-        this.objectConditions = Codegen.empty();
-        this.posixDataSink = Codegen.empty();
-        this.posixDataSource = Codegen.empty();
-        this.sinkAgentPoolName = Codegen.empty();
-        this.sourceAgentPoolName = Codegen.empty();
-        this.transferManifest = Codegen.empty();
-        this.transferOptions = Codegen.empty();
+    private TransferSpecArgs(TransferSpecArgs $) {
+        this.awsS3DataSource = $.awsS3DataSource;
+        this.azureBlobStorageDataSource = $.azureBlobStorageDataSource;
+        this.gcsDataSink = $.gcsDataSink;
+        this.gcsDataSource = $.gcsDataSource;
+        this.gcsIntermediateDataLocation = $.gcsIntermediateDataLocation;
+        this.httpDataSource = $.httpDataSource;
+        this.objectConditions = $.objectConditions;
+        this.posixDataSink = $.posixDataSink;
+        this.posixDataSource = $.posixDataSource;
+        this.sinkAgentPoolName = $.sinkAgentPoolName;
+        this.sourceAgentPoolName = $.sourceAgentPoolName;
+        this.transferManifest = $.transferManifest;
+        this.transferOptions = $.transferOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AwsS3DataArgs> awsS3DataSource;
-        private @Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource;
-        private @Nullable Output<GcsDataArgs> gcsDataSink;
-        private @Nullable Output<GcsDataArgs> gcsDataSource;
-        private @Nullable Output<GcsDataArgs> gcsIntermediateDataLocation;
-        private @Nullable Output<HttpDataArgs> httpDataSource;
-        private @Nullable Output<ObjectConditionsArgs> objectConditions;
-        private @Nullable Output<PosixFilesystemArgs> posixDataSink;
-        private @Nullable Output<PosixFilesystemArgs> posixDataSource;
-        private @Nullable Output<String> sinkAgentPoolName;
-        private @Nullable Output<String> sourceAgentPoolName;
-        private @Nullable Output<TransferManifestArgs> transferManifest;
-        private @Nullable Output<TransferOptionsArgs> transferOptions;
+        private TransferSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferSpecArgs();
         }
 
         public Builder(TransferSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsS3DataSource = defaults.awsS3DataSource;
-    	      this.azureBlobStorageDataSource = defaults.azureBlobStorageDataSource;
-    	      this.gcsDataSink = defaults.gcsDataSink;
-    	      this.gcsDataSource = defaults.gcsDataSource;
-    	      this.gcsIntermediateDataLocation = defaults.gcsIntermediateDataLocation;
-    	      this.httpDataSource = defaults.httpDataSource;
-    	      this.objectConditions = defaults.objectConditions;
-    	      this.posixDataSink = defaults.posixDataSink;
-    	      this.posixDataSource = defaults.posixDataSource;
-    	      this.sinkAgentPoolName = defaults.sinkAgentPoolName;
-    	      this.sourceAgentPoolName = defaults.sourceAgentPoolName;
-    	      this.transferManifest = defaults.transferManifest;
-    	      this.transferOptions = defaults.transferOptions;
+            $ = new TransferSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsS3DataSource(@Nullable Output<AwsS3DataArgs> awsS3DataSource) {
-            this.awsS3DataSource = awsS3DataSource;
+            $.awsS3DataSource = awsS3DataSource;
             return this;
         }
-        public Builder awsS3DataSource(@Nullable AwsS3DataArgs awsS3DataSource) {
-            this.awsS3DataSource = Codegen.ofNullable(awsS3DataSource);
-            return this;
+
+        public Builder awsS3DataSource(AwsS3DataArgs awsS3DataSource) {
+            return awsS3DataSource(Output.of(awsS3DataSource));
         }
+
         public Builder azureBlobStorageDataSource(@Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource) {
-            this.azureBlobStorageDataSource = azureBlobStorageDataSource;
+            $.azureBlobStorageDataSource = azureBlobStorageDataSource;
             return this;
         }
-        public Builder azureBlobStorageDataSource(@Nullable AzureBlobStorageDataArgs azureBlobStorageDataSource) {
-            this.azureBlobStorageDataSource = Codegen.ofNullable(azureBlobStorageDataSource);
-            return this;
+
+        public Builder azureBlobStorageDataSource(AzureBlobStorageDataArgs azureBlobStorageDataSource) {
+            return azureBlobStorageDataSource(Output.of(azureBlobStorageDataSource));
         }
+
         public Builder gcsDataSink(@Nullable Output<GcsDataArgs> gcsDataSink) {
-            this.gcsDataSink = gcsDataSink;
+            $.gcsDataSink = gcsDataSink;
             return this;
         }
-        public Builder gcsDataSink(@Nullable GcsDataArgs gcsDataSink) {
-            this.gcsDataSink = Codegen.ofNullable(gcsDataSink);
-            return this;
+
+        public Builder gcsDataSink(GcsDataArgs gcsDataSink) {
+            return gcsDataSink(Output.of(gcsDataSink));
         }
+
         public Builder gcsDataSource(@Nullable Output<GcsDataArgs> gcsDataSource) {
-            this.gcsDataSource = gcsDataSource;
+            $.gcsDataSource = gcsDataSource;
             return this;
         }
-        public Builder gcsDataSource(@Nullable GcsDataArgs gcsDataSource) {
-            this.gcsDataSource = Codegen.ofNullable(gcsDataSource);
-            return this;
+
+        public Builder gcsDataSource(GcsDataArgs gcsDataSource) {
+            return gcsDataSource(Output.of(gcsDataSource));
         }
+
         public Builder gcsIntermediateDataLocation(@Nullable Output<GcsDataArgs> gcsIntermediateDataLocation) {
-            this.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
+            $.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
             return this;
         }
-        public Builder gcsIntermediateDataLocation(@Nullable GcsDataArgs gcsIntermediateDataLocation) {
-            this.gcsIntermediateDataLocation = Codegen.ofNullable(gcsIntermediateDataLocation);
-            return this;
+
+        public Builder gcsIntermediateDataLocation(GcsDataArgs gcsIntermediateDataLocation) {
+            return gcsIntermediateDataLocation(Output.of(gcsIntermediateDataLocation));
         }
+
         public Builder httpDataSource(@Nullable Output<HttpDataArgs> httpDataSource) {
-            this.httpDataSource = httpDataSource;
+            $.httpDataSource = httpDataSource;
             return this;
         }
-        public Builder httpDataSource(@Nullable HttpDataArgs httpDataSource) {
-            this.httpDataSource = Codegen.ofNullable(httpDataSource);
-            return this;
+
+        public Builder httpDataSource(HttpDataArgs httpDataSource) {
+            return httpDataSource(Output.of(httpDataSource));
         }
+
         public Builder objectConditions(@Nullable Output<ObjectConditionsArgs> objectConditions) {
-            this.objectConditions = objectConditions;
+            $.objectConditions = objectConditions;
             return this;
         }
-        public Builder objectConditions(@Nullable ObjectConditionsArgs objectConditions) {
-            this.objectConditions = Codegen.ofNullable(objectConditions);
-            return this;
+
+        public Builder objectConditions(ObjectConditionsArgs objectConditions) {
+            return objectConditions(Output.of(objectConditions));
         }
+
         public Builder posixDataSink(@Nullable Output<PosixFilesystemArgs> posixDataSink) {
-            this.posixDataSink = posixDataSink;
+            $.posixDataSink = posixDataSink;
             return this;
         }
-        public Builder posixDataSink(@Nullable PosixFilesystemArgs posixDataSink) {
-            this.posixDataSink = Codegen.ofNullable(posixDataSink);
-            return this;
+
+        public Builder posixDataSink(PosixFilesystemArgs posixDataSink) {
+            return posixDataSink(Output.of(posixDataSink));
         }
+
         public Builder posixDataSource(@Nullable Output<PosixFilesystemArgs> posixDataSource) {
-            this.posixDataSource = posixDataSource;
+            $.posixDataSource = posixDataSource;
             return this;
         }
-        public Builder posixDataSource(@Nullable PosixFilesystemArgs posixDataSource) {
-            this.posixDataSource = Codegen.ofNullable(posixDataSource);
-            return this;
+
+        public Builder posixDataSource(PosixFilesystemArgs posixDataSource) {
+            return posixDataSource(Output.of(posixDataSource));
         }
+
         public Builder sinkAgentPoolName(@Nullable Output<String> sinkAgentPoolName) {
-            this.sinkAgentPoolName = sinkAgentPoolName;
+            $.sinkAgentPoolName = sinkAgentPoolName;
             return this;
         }
-        public Builder sinkAgentPoolName(@Nullable String sinkAgentPoolName) {
-            this.sinkAgentPoolName = Codegen.ofNullable(sinkAgentPoolName);
-            return this;
+
+        public Builder sinkAgentPoolName(String sinkAgentPoolName) {
+            return sinkAgentPoolName(Output.of(sinkAgentPoolName));
         }
+
         public Builder sourceAgentPoolName(@Nullable Output<String> sourceAgentPoolName) {
-            this.sourceAgentPoolName = sourceAgentPoolName;
+            $.sourceAgentPoolName = sourceAgentPoolName;
             return this;
         }
-        public Builder sourceAgentPoolName(@Nullable String sourceAgentPoolName) {
-            this.sourceAgentPoolName = Codegen.ofNullable(sourceAgentPoolName);
-            return this;
+
+        public Builder sourceAgentPoolName(String sourceAgentPoolName) {
+            return sourceAgentPoolName(Output.of(sourceAgentPoolName));
         }
+
         public Builder transferManifest(@Nullable Output<TransferManifestArgs> transferManifest) {
-            this.transferManifest = transferManifest;
+            $.transferManifest = transferManifest;
             return this;
         }
-        public Builder transferManifest(@Nullable TransferManifestArgs transferManifest) {
-            this.transferManifest = Codegen.ofNullable(transferManifest);
-            return this;
+
+        public Builder transferManifest(TransferManifestArgs transferManifest) {
+            return transferManifest(Output.of(transferManifest));
         }
+
         public Builder transferOptions(@Nullable Output<TransferOptionsArgs> transferOptions) {
-            this.transferOptions = transferOptions;
+            $.transferOptions = transferOptions;
             return this;
         }
-        public Builder transferOptions(@Nullable TransferOptionsArgs transferOptions) {
-            this.transferOptions = Codegen.ofNullable(transferOptions);
-            return this;
-        }        public TransferSpecArgs build() {
-            return new TransferSpecArgs(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, gcsIntermediateDataLocation, httpDataSource, objectConditions, posixDataSink, posixDataSource, sinkAgentPoolName, sourceAgentPoolName, transferManifest, transferOptions);
+
+        public Builder transferOptions(TransferOptionsArgs transferOptions) {
+            return transferOptions(Output.of(transferOptions));
+        }
+
+        public TransferSpecArgs build() {
+            return $;
         }
     }
+
 }

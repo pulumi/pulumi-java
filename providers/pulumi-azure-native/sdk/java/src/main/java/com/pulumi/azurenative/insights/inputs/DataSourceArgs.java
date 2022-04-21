@@ -7,7 +7,6 @@ import com.pulumi.azurenative.insights.inputs.DataSourceConfigurationArgs;
 import com.pulumi.azurenative.insights.inputs.SinkConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +21,7 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
     @Import(name="configuration", required=true)
-      private final Output<DataSourceConfigurationArgs> configuration;
+    private Output<DataSourceConfigurationArgs> configuration;
 
     public Output<DataSourceConfigurationArgs> configuration() {
         return this.configuration;
@@ -33,86 +32,82 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
     }
 
     @Import(name="sinks", required=true)
-      private final Output<List<SinkConfigurationArgs>> sinks;
+    private Output<List<SinkConfigurationArgs>> sinks;
 
     public Output<List<SinkConfigurationArgs>> sinks() {
         return this.sinks;
     }
 
-    public DataSourceArgs(
-        Output<DataSourceConfigurationArgs> configuration,
-        Output<String> kind,
-        Output<List<SinkConfigurationArgs>> sinks) {
-        this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.sinks = Objects.requireNonNull(sinks, "expected parameter 'sinks' to be non-null");
-    }
+    private DataSourceArgs() {}
 
-    private DataSourceArgs() {
-        this.configuration = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.sinks = Codegen.empty();
+    private DataSourceArgs(DataSourceArgs $) {
+        this.configuration = $.configuration;
+        this.kind = $.kind;
+        this.sinks = $.sinks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DataSourceConfigurationArgs> configuration;
-        private Output<String> kind;
-        private Output<List<SinkConfigurationArgs>> sinks;
+        private DataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceArgs();
         }
 
         public Builder(DataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.kind = defaults.kind;
-    	      this.sinks = defaults.sinks;
+            $ = new DataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(Output<DataSourceConfigurationArgs> configuration) {
-            this.configuration = Objects.requireNonNull(configuration);
+            $.configuration = configuration;
             return this;
         }
+
         public Builder configuration(DataSourceConfigurationArgs configuration) {
-            this.configuration = Output.of(Objects.requireNonNull(configuration));
-            return this;
+            return configuration(Output.of(configuration));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder sinks(Output<List<SinkConfigurationArgs>> sinks) {
-            this.sinks = Objects.requireNonNull(sinks);
+            $.sinks = sinks;
             return this;
         }
+
         public Builder sinks(List<SinkConfigurationArgs> sinks) {
-            this.sinks = Output.of(Objects.requireNonNull(sinks));
-            return this;
+            return sinks(Output.of(sinks));
         }
+
         public Builder sinks(SinkConfigurationArgs... sinks) {
             return sinks(List.of(sinks));
-        }        public DataSourceArgs build() {
-            return new DataSourceArgs(configuration, kind, sinks);
+        }
+
+        public DataSourceArgs build() {
+            $.configuration = Objects.requireNonNull($.configuration, "expected parameter 'configuration' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.sinks = Objects.requireNonNull($.sinks, "expected parameter 'sinks' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
      * 
      */
     @Import(name="cloudWatchLogGroupArn", required=true)
-      private final Output<String> cloudWatchLogGroupArn;
+    private Output<String> cloudWatchLogGroupArn;
 
     public Output<String> cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
@@ -30,63 +29,60 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
      * 
      */
     @Import(name="logPrefix", required=true)
-      private final Output<String> logPrefix;
+    private Output<String> logPrefix;
 
     public Output<String> logPrefix() {
         return this.logPrefix;
     }
 
-    public BotAliasCloudWatchLogGroupLogDestinationArgs(
-        Output<String> cloudWatchLogGroupArn,
-        Output<String> logPrefix) {
-        this.cloudWatchLogGroupArn = Objects.requireNonNull(cloudWatchLogGroupArn, "expected parameter 'cloudWatchLogGroupArn' to be non-null");
-        this.logPrefix = Objects.requireNonNull(logPrefix, "expected parameter 'logPrefix' to be non-null");
-    }
+    private BotAliasCloudWatchLogGroupLogDestinationArgs() {}
 
-    private BotAliasCloudWatchLogGroupLogDestinationArgs() {
-        this.cloudWatchLogGroupArn = Codegen.empty();
-        this.logPrefix = Codegen.empty();
+    private BotAliasCloudWatchLogGroupLogDestinationArgs(BotAliasCloudWatchLogGroupLogDestinationArgs $) {
+        this.cloudWatchLogGroupArn = $.cloudWatchLogGroupArn;
+        this.logPrefix = $.logPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasCloudWatchLogGroupLogDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cloudWatchLogGroupArn;
-        private Output<String> logPrefix;
+        private BotAliasCloudWatchLogGroupLogDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasCloudWatchLogGroupLogDestinationArgs();
         }
 
         public Builder(BotAliasCloudWatchLogGroupLogDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchLogGroupArn = defaults.cloudWatchLogGroupArn;
-    	      this.logPrefix = defaults.logPrefix;
+            $ = new BotAliasCloudWatchLogGroupLogDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchLogGroupArn(Output<String> cloudWatchLogGroupArn) {
-            this.cloudWatchLogGroupArn = Objects.requireNonNull(cloudWatchLogGroupArn);
+            $.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
+
         public Builder cloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
-            this.cloudWatchLogGroupArn = Output.of(Objects.requireNonNull(cloudWatchLogGroupArn));
-            return this;
+            return cloudWatchLogGroupArn(Output.of(cloudWatchLogGroupArn));
         }
+
         public Builder logPrefix(Output<String> logPrefix) {
-            this.logPrefix = Objects.requireNonNull(logPrefix);
+            $.logPrefix = logPrefix;
             return this;
         }
+
         public Builder logPrefix(String logPrefix) {
-            this.logPrefix = Output.of(Objects.requireNonNull(logPrefix));
-            return this;
-        }        public BotAliasCloudWatchLogGroupLogDestinationArgs build() {
-            return new BotAliasCloudWatchLogGroupLogDestinationArgs(cloudWatchLogGroupArn, logPrefix);
+            return logPrefix(Output.of(logPrefix));
+        }
+
+        public BotAliasCloudWatchLogGroupLogDestinationArgs build() {
+            $.cloudWatchLogGroupArn = Objects.requireNonNull($.cloudWatchLogGroupArn, "expected parameter 'cloudWatchLogGroupArn' to be non-null");
+            $.logPrefix = Objects.requireNonNull($.logPrefix, "expected parameter 'logPrefix' to be non-null");
+            return $;
         }
     }
+
 }

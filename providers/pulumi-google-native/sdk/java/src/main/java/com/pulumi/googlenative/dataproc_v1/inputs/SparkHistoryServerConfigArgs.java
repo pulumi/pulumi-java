@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SparkHistoryServerConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dataprocCluster")
-      private final @Nullable Output<String> dataprocCluster;
+    private @Nullable Output<String> dataprocCluster;
 
-    public Output<String> dataprocCluster() {
-        return this.dataprocCluster == null ? Codegen.empty() : this.dataprocCluster;
+    public Optional<Output<String>> dataprocCluster() {
+        return Optional.ofNullable(this.dataprocCluster);
     }
 
-    public SparkHistoryServerConfigArgs(@Nullable Output<String> dataprocCluster) {
-        this.dataprocCluster = dataprocCluster;
-    }
+    private SparkHistoryServerConfigArgs() {}
 
-    private SparkHistoryServerConfigArgs() {
-        this.dataprocCluster = Codegen.empty();
+    private SparkHistoryServerConfigArgs(SparkHistoryServerConfigArgs $) {
+        this.dataprocCluster = $.dataprocCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkHistoryServerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataprocCluster;
+        private SparkHistoryServerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkHistoryServerConfigArgs();
         }
 
         public Builder(SparkHistoryServerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataprocCluster = defaults.dataprocCluster;
+            $ = new SparkHistoryServerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataprocCluster(@Nullable Output<String> dataprocCluster) {
-            this.dataprocCluster = dataprocCluster;
+            $.dataprocCluster = dataprocCluster;
             return this;
         }
-        public Builder dataprocCluster(@Nullable String dataprocCluster) {
-            this.dataprocCluster = Codegen.ofNullable(dataprocCluster);
-            return this;
-        }        public SparkHistoryServerConfigArgs build() {
-            return new SparkHistoryServerConfigArgs(dataprocCluster);
+
+        public Builder dataprocCluster(String dataprocCluster) {
+            return dataprocCluster(Output.of(dataprocCluster));
+        }
+
+        public SparkHistoryServerConfigArgs build() {
+            return $;
         }
     }
+
 }

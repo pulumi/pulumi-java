@@ -23,7 +23,7 @@ public final class TriggerDependencyReferenceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="referenceTrigger", required=true)
-      private final TriggerReferenceResponse referenceTrigger;
+    private TriggerReferenceResponse referenceTrigger;
 
     public TriggerReferenceResponse referenceTrigger() {
         return this.referenceTrigger;
@@ -35,55 +35,52 @@ public final class TriggerDependencyReferenceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TriggerDependencyReferenceResponse(
-        TriggerReferenceResponse referenceTrigger,
-        String type) {
-        this.referenceTrigger = Objects.requireNonNull(referenceTrigger, "expected parameter 'referenceTrigger' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private TriggerDependencyReferenceResponse() {}
 
-    private TriggerDependencyReferenceResponse() {
-        this.referenceTrigger = null;
-        this.type = null;
+    private TriggerDependencyReferenceResponse(TriggerDependencyReferenceResponse $) {
+        this.referenceTrigger = $.referenceTrigger;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerDependencyReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TriggerReferenceResponse referenceTrigger;
-        private String type;
+        private TriggerDependencyReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerDependencyReferenceResponse();
         }
 
         public Builder(TriggerDependencyReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.referenceTrigger = defaults.referenceTrigger;
-    	      this.type = defaults.type;
+            $ = new TriggerDependencyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder referenceTrigger(TriggerReferenceResponse referenceTrigger) {
-            this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
+            $.referenceTrigger = referenceTrigger;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TriggerDependencyReferenceResponse build() {
-            return new TriggerDependencyReferenceResponse(referenceTrigger, type);
+        }
+
+        public TriggerDependencyReferenceResponse build() {
+            $.referenceTrigger = Objects.requireNonNull($.referenceTrigger, "expected parameter 'referenceTrigger' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

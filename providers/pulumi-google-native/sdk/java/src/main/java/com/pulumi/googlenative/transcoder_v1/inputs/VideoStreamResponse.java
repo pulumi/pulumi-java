@@ -23,7 +23,7 @@ public final class VideoStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="h264", required=true)
-      private final H264CodecSettingsResponse h264;
+    private H264CodecSettingsResponse h264;
 
     public H264CodecSettingsResponse h264() {
         return this.h264;
@@ -34,7 +34,7 @@ public final class VideoStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="h265", required=true)
-      private final H265CodecSettingsResponse h265;
+    private H265CodecSettingsResponse h265;
 
     public H265CodecSettingsResponse h265() {
         return this.h265;
@@ -45,64 +45,59 @@ public final class VideoStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vp9", required=true)
-      private final Vp9CodecSettingsResponse vp9;
+    private Vp9CodecSettingsResponse vp9;
 
     public Vp9CodecSettingsResponse vp9() {
         return this.vp9;
     }
 
-    public VideoStreamResponse(
-        H264CodecSettingsResponse h264,
-        H265CodecSettingsResponse h265,
-        Vp9CodecSettingsResponse vp9) {
-        this.h264 = Objects.requireNonNull(h264, "expected parameter 'h264' to be non-null");
-        this.h265 = Objects.requireNonNull(h265, "expected parameter 'h265' to be non-null");
-        this.vp9 = Objects.requireNonNull(vp9, "expected parameter 'vp9' to be non-null");
-    }
+    private VideoStreamResponse() {}
 
-    private VideoStreamResponse() {
-        this.h264 = null;
-        this.h265 = null;
-        this.vp9 = null;
+    private VideoStreamResponse(VideoStreamResponse $) {
+        this.h264 = $.h264;
+        this.h265 = $.h265;
+        this.vp9 = $.vp9;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoStreamResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private H264CodecSettingsResponse h264;
-        private H265CodecSettingsResponse h265;
-        private Vp9CodecSettingsResponse vp9;
+        private VideoStreamResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoStreamResponse();
         }
 
         public Builder(VideoStreamResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.h264 = defaults.h264;
-    	      this.h265 = defaults.h265;
-    	      this.vp9 = defaults.vp9;
+            $ = new VideoStreamResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder h264(H264CodecSettingsResponse h264) {
-            this.h264 = Objects.requireNonNull(h264);
+            $.h264 = h264;
             return this;
         }
+
         public Builder h265(H265CodecSettingsResponse h265) {
-            this.h265 = Objects.requireNonNull(h265);
+            $.h265 = h265;
             return this;
         }
+
         public Builder vp9(Vp9CodecSettingsResponse vp9) {
-            this.vp9 = Objects.requireNonNull(vp9);
+            $.vp9 = vp9;
             return this;
-        }        public VideoStreamResponse build() {
-            return new VideoStreamResponse(h264, h265, vp9);
+        }
+
+        public VideoStreamResponse build() {
+            $.h264 = Objects.requireNonNull($.h264, "expected parameter 'h264' to be non-null");
+            $.h265 = Objects.requireNonNull($.h265, "expected parameter 'h265' to be non-null");
+            $.vp9 = Objects.requireNonNull($.vp9, "expected parameter 'vp9' to be non-null");
+            return $;
         }
     }
+
 }

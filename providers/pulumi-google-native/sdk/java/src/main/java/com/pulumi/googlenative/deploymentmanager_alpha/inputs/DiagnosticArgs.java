@@ -5,10 +5,10 @@ package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_alpha.enums.DiagnosticLevel;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<String> field;
+    private @Nullable Output<String> field;
 
-    public Output<String> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<String>> field() {
+        return Optional.ofNullable(this.field);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="level")
-      private final @Nullable Output<DiagnosticLevel> level;
+    private @Nullable Output<DiagnosticLevel> level;
 
-    public Output<DiagnosticLevel> level() {
-        return this.level == null ? Codegen.empty() : this.level;
+    public Optional<Output<DiagnosticLevel>> level() {
+        return Optional.ofNullable(this.level);
     }
 
-    public DiagnosticArgs(
-        @Nullable Output<String> field,
-        @Nullable Output<DiagnosticLevel> level) {
-        this.field = field;
-        this.level = level;
-    }
+    private DiagnosticArgs() {}
 
-    private DiagnosticArgs() {
-        this.field = Codegen.empty();
-        this.level = Codegen.empty();
+    private DiagnosticArgs(DiagnosticArgs $) {
+        this.field = $.field;
+        this.level = $.level;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> field;
-        private @Nullable Output<DiagnosticLevel> level;
+        private DiagnosticArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticArgs();
         }
 
         public Builder(DiagnosticArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.level = defaults.level;
+            $ = new DiagnosticArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable Output<String> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable String field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
+
+        public Builder field(String field) {
+            return field(Output.of(field));
         }
+
         public Builder level(@Nullable Output<DiagnosticLevel> level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
-        public Builder level(@Nullable DiagnosticLevel level) {
-            this.level = Codegen.ofNullable(level);
-            return this;
-        }        public DiagnosticArgs build() {
-            return new DiagnosticArgs(field, level);
+
+        public Builder level(DiagnosticLevel level) {
+            return level(Output.of(level));
+        }
+
+        public DiagnosticArgs build() {
+            return $;
         }
     }
+
 }

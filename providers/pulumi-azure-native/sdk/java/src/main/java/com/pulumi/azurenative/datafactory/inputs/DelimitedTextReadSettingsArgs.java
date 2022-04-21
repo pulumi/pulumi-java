@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class DelimitedTextReadSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="compressionProperties")
-      private final @Nullable Output<Object> compressionProperties;
+    private @Nullable Output<Object> compressionProperties;
 
-    public Output<Object> compressionProperties() {
-        return this.compressionProperties == null ? Codegen.empty() : this.compressionProperties;
+    public Optional<Output<Object>> compressionProperties() {
+        return Optional.ofNullable(this.compressionProperties);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class DelimitedTextReadSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="skipLineCount")
-      private final @Nullable Output<Object> skipLineCount;
+    private @Nullable Output<Object> skipLineCount;
 
-    public Output<Object> skipLineCount() {
-        return this.skipLineCount == null ? Codegen.empty() : this.skipLineCount;
+    public Optional<Output<Object>> skipLineCount() {
+        return Optional.ofNullable(this.skipLineCount);
     }
 
     /**
@@ -51,76 +52,69 @@ public final class DelimitedTextReadSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public DelimitedTextReadSettingsArgs(
-        @Nullable Output<Object> compressionProperties,
-        @Nullable Output<Object> skipLineCount,
-        Output<String> type) {
-        this.compressionProperties = compressionProperties;
-        this.skipLineCount = skipLineCount;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private DelimitedTextReadSettingsArgs() {}
 
-    private DelimitedTextReadSettingsArgs() {
-        this.compressionProperties = Codegen.empty();
-        this.skipLineCount = Codegen.empty();
-        this.type = Codegen.empty();
+    private DelimitedTextReadSettingsArgs(DelimitedTextReadSettingsArgs $) {
+        this.compressionProperties = $.compressionProperties;
+        this.skipLineCount = $.skipLineCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelimitedTextReadSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> compressionProperties;
-        private @Nullable Output<Object> skipLineCount;
-        private Output<String> type;
+        private DelimitedTextReadSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelimitedTextReadSettingsArgs();
         }
 
         public Builder(DelimitedTextReadSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compressionProperties = defaults.compressionProperties;
-    	      this.skipLineCount = defaults.skipLineCount;
-    	      this.type = defaults.type;
+            $ = new DelimitedTextReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compressionProperties(@Nullable Output<Object> compressionProperties) {
-            this.compressionProperties = compressionProperties;
+            $.compressionProperties = compressionProperties;
             return this;
         }
-        public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = Codegen.ofNullable(compressionProperties);
-            return this;
+
+        public Builder compressionProperties(Object compressionProperties) {
+            return compressionProperties(Output.of(compressionProperties));
         }
+
         public Builder skipLineCount(@Nullable Output<Object> skipLineCount) {
-            this.skipLineCount = skipLineCount;
+            $.skipLineCount = skipLineCount;
             return this;
         }
-        public Builder skipLineCount(@Nullable Object skipLineCount) {
-            this.skipLineCount = Codegen.ofNullable(skipLineCount);
-            return this;
+
+        public Builder skipLineCount(Object skipLineCount) {
+            return skipLineCount(Output.of(skipLineCount));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DelimitedTextReadSettingsArgs build() {
-            return new DelimitedTextReadSettingsArgs(compressionProperties, skipLineCount, type);
+            return type(Output.of(type));
+        }
+
+        public DelimitedTextReadSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

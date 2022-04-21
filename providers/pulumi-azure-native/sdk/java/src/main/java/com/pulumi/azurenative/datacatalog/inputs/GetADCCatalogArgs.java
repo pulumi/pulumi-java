@@ -17,7 +17,7 @@ public final class GetADCCatalogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogName", required=true)
-      private final String catalogName;
+    private String catalogName;
 
     public String catalogName() {
         return this.catalogName;
@@ -28,55 +28,52 @@ public final class GetADCCatalogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetADCCatalogArgs(
-        String catalogName,
-        String resourceGroupName) {
-        this.catalogName = Objects.requireNonNull(catalogName, "expected parameter 'catalogName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetADCCatalogArgs() {}
 
-    private GetADCCatalogArgs() {
-        this.catalogName = null;
-        this.resourceGroupName = null;
+    private GetADCCatalogArgs(GetADCCatalogArgs $) {
+        this.catalogName = $.catalogName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetADCCatalogArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String catalogName;
-        private String resourceGroupName;
+        private GetADCCatalogArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetADCCatalogArgs();
         }
 
         public Builder(GetADCCatalogArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogName = defaults.catalogName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetADCCatalogArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogName(String catalogName) {
-            this.catalogName = Objects.requireNonNull(catalogName);
+            $.catalogName = catalogName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetADCCatalogArgs build() {
-            return new GetADCCatalogArgs(catalogName, resourceGroupName);
+        }
+
+        public GetADCCatalogArgs build() {
+            $.catalogName = Objects.requireNonNull($.catalogName, "expected parameter 'catalogName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

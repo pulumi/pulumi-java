@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class KeyGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class KeyGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class KeyGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<String>> items;
+    private @Nullable Output<List<String>> items;
 
-    public Output<List<String>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<String>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
     /**
@@ -54,92 +54,82 @@ public final class KeyGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public KeyGroupState(
-        @Nullable Output<String> comment,
-        @Nullable Output<String> etag,
-        @Nullable Output<List<String>> items,
-        @Nullable Output<String> name) {
-        this.comment = comment;
-        this.etag = etag;
-        this.items = items;
-        this.name = name;
-    }
+    private KeyGroupState() {}
 
-    private KeyGroupState() {
-        this.comment = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.items = Codegen.empty();
-        this.name = Codegen.empty();
+    private KeyGroupState(KeyGroupState $) {
+        this.comment = $.comment;
+        this.etag = $.etag;
+        this.items = $.items;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<List<String>> items;
-        private @Nullable Output<String> name;
+        private KeyGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyGroupState();
         }
 
         public Builder(KeyGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.etag = defaults.etag;
-    	      this.items = defaults.items;
-    	      this.name = defaults.name;
+            $ = new KeyGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder items(@Nullable Output<List<String>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<String> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<String> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public KeyGroupState build() {
-            return new KeyGroupState(comment, etag, items, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public KeyGroupState build() {
+            return $;
         }
     }
+
 }

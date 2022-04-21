@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OAuth2AuthenticationSettingsContractArgs extends com.pulumi.r
      * 
      */
     @Import(name="authorizationServerId")
-      private final @Nullable Output<String> authorizationServerId;
+    private @Nullable Output<String> authorizationServerId;
 
-    public Output<String> authorizationServerId() {
-        return this.authorizationServerId == null ? Codegen.empty() : this.authorizationServerId;
+    public Optional<Output<String>> authorizationServerId() {
+        return Optional.ofNullable(this.authorizationServerId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class OAuth2AuthenticationSettingsContractArgs extends com.pulumi.r
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public OAuth2AuthenticationSettingsContractArgs(
-        @Nullable Output<String> authorizationServerId,
-        @Nullable Output<String> scope) {
-        this.authorizationServerId = authorizationServerId;
-        this.scope = scope;
-    }
+    private OAuth2AuthenticationSettingsContractArgs() {}
 
-    private OAuth2AuthenticationSettingsContractArgs() {
-        this.authorizationServerId = Codegen.empty();
-        this.scope = Codegen.empty();
+    private OAuth2AuthenticationSettingsContractArgs(OAuth2AuthenticationSettingsContractArgs $) {
+        this.authorizationServerId = $.authorizationServerId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OAuth2AuthenticationSettingsContractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authorizationServerId;
-        private @Nullable Output<String> scope;
+        private OAuth2AuthenticationSettingsContractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OAuth2AuthenticationSettingsContractArgs();
         }
 
         public Builder(OAuth2AuthenticationSettingsContractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationServerId = defaults.authorizationServerId;
-    	      this.scope = defaults.scope;
+            $ = new OAuth2AuthenticationSettingsContractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationServerId(@Nullable Output<String> authorizationServerId) {
-            this.authorizationServerId = authorizationServerId;
+            $.authorizationServerId = authorizationServerId;
             return this;
         }
-        public Builder authorizationServerId(@Nullable String authorizationServerId) {
-            this.authorizationServerId = Codegen.ofNullable(authorizationServerId);
-            return this;
+
+        public Builder authorizationServerId(String authorizationServerId) {
+            return authorizationServerId(Output.of(authorizationServerId));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
-        }        public OAuth2AuthenticationSettingsContractArgs build() {
-            return new OAuth2AuthenticationSettingsContractArgs(authorizationServerId, scope);
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
+        }
+
+        public OAuth2AuthenticationSettingsContractArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LaunchTemplateTagSpecificationGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class LaunchTemplateTagSpecificationGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LaunchTemplateTagSpecificationGetArgs(
-        @Nullable Output<String> resourceType,
-        @Nullable Output<Map<String,String>> tags) {
-        this.resourceType = resourceType;
-        this.tags = tags;
-    }
+    private LaunchTemplateTagSpecificationGetArgs() {}
 
-    private LaunchTemplateTagSpecificationGetArgs() {
-        this.resourceType = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LaunchTemplateTagSpecificationGetArgs(LaunchTemplateTagSpecificationGetArgs $) {
+        this.resourceType = $.resourceType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateTagSpecificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceType;
-        private @Nullable Output<Map<String,String>> tags;
+        private LaunchTemplateTagSpecificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateTagSpecificationGetArgs();
         }
 
         public Builder(LaunchTemplateTagSpecificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.tags = defaults.tags;
+            $ = new LaunchTemplateTagSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LaunchTemplateTagSpecificationGetArgs build() {
-            return new LaunchTemplateTagSpecificationGetArgs(resourceType, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LaunchTemplateTagSpecificationGetArgs build() {
+            return $;
         }
     }
+
 }

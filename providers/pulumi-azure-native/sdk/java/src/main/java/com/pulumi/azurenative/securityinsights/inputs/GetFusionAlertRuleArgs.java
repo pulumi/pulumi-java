@@ -17,7 +17,7 @@ public final class GetFusionAlertRuleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetFusionAlertRuleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ruleId", required=true)
-      private final String ruleId;
+    private String ruleId;
 
     public String ruleId() {
         return this.ruleId;
@@ -39,64 +39,59 @@ public final class GetFusionAlertRuleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetFusionAlertRuleArgs(
-        String resourceGroupName,
-        String ruleId,
-        String workspaceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetFusionAlertRuleArgs() {}
 
-    private GetFusionAlertRuleArgs() {
-        this.resourceGroupName = null;
-        this.ruleId = null;
-        this.workspaceName = null;
+    private GetFusionAlertRuleArgs(GetFusionAlertRuleArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleId = $.ruleId;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFusionAlertRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String ruleId;
-        private String workspaceName;
+        private GetFusionAlertRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFusionAlertRuleArgs();
         }
 
         public Builder(GetFusionAlertRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleId = defaults.ruleId;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetFusionAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleId(String ruleId) {
-            this.ruleId = Objects.requireNonNull(ruleId);
+            $.ruleId = ruleId;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetFusionAlertRuleArgs build() {
-            return new GetFusionAlertRuleArgs(resourceGroupName, ruleId, workspaceName);
+        }
+
+        public GetFusionAlertRuleArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="fsType")
-      private final @Nullable Output<String> fsType;
+    private @Nullable Output<String> fsType;
 
-    public Output<String> fsType() {
-        return this.fsType == null ? Codegen.empty() : this.fsType;
+    public Optional<Output<String>> fsType() {
+        return Optional.ofNullable(this.fsType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="storagePolicyID")
-      private final @Nullable Output<String> storagePolicyID;
+    private @Nullable Output<String> storagePolicyID;
 
-    public Output<String> storagePolicyID() {
-        return this.storagePolicyID == null ? Codegen.empty() : this.storagePolicyID;
+    public Optional<Output<String>> storagePolicyID() {
+        return Optional.ofNullable(this.storagePolicyID);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="storagePolicyName")
-      private final @Nullable Output<String> storagePolicyName;
+    private @Nullable Output<String> storagePolicyName;
 
-    public Output<String> storagePolicyName() {
-        return this.storagePolicyName == null ? Codegen.empty() : this.storagePolicyName;
+    public Optional<Output<String>> storagePolicyName() {
+        return Optional.ofNullable(this.storagePolicyName);
     }
 
     /**
@@ -57,89 +57,79 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="volumePath", required=true)
-      private final Output<String> volumePath;
+    private Output<String> volumePath;
 
     public Output<String> volumePath() {
         return this.volumePath;
     }
 
-    public VsphereVirtualDiskVolumeSourceArgs(
-        @Nullable Output<String> fsType,
-        @Nullable Output<String> storagePolicyID,
-        @Nullable Output<String> storagePolicyName,
-        Output<String> volumePath) {
-        this.fsType = fsType;
-        this.storagePolicyID = storagePolicyID;
-        this.storagePolicyName = storagePolicyName;
-        this.volumePath = Objects.requireNonNull(volumePath, "expected parameter 'volumePath' to be non-null");
-    }
+    private VsphereVirtualDiskVolumeSourceArgs() {}
 
-    private VsphereVirtualDiskVolumeSourceArgs() {
-        this.fsType = Codegen.empty();
-        this.storagePolicyID = Codegen.empty();
-        this.storagePolicyName = Codegen.empty();
-        this.volumePath = Codegen.empty();
+    private VsphereVirtualDiskVolumeSourceArgs(VsphereVirtualDiskVolumeSourceArgs $) {
+        this.fsType = $.fsType;
+        this.storagePolicyID = $.storagePolicyID;
+        this.storagePolicyName = $.storagePolicyName;
+        this.volumePath = $.volumePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VsphereVirtualDiskVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fsType;
-        private @Nullable Output<String> storagePolicyID;
-        private @Nullable Output<String> storagePolicyName;
-        private Output<String> volumePath;
+        private VsphereVirtualDiskVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VsphereVirtualDiskVolumeSourceArgs();
         }
 
         public Builder(VsphereVirtualDiskVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fsType = defaults.fsType;
-    	      this.storagePolicyID = defaults.storagePolicyID;
-    	      this.storagePolicyName = defaults.storagePolicyName;
-    	      this.volumePath = defaults.volumePath;
+            $ = new VsphereVirtualDiskVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fsType(@Nullable Output<String> fsType) {
-            this.fsType = fsType;
+            $.fsType = fsType;
             return this;
         }
-        public Builder fsType(@Nullable String fsType) {
-            this.fsType = Codegen.ofNullable(fsType);
-            return this;
+
+        public Builder fsType(String fsType) {
+            return fsType(Output.of(fsType));
         }
+
         public Builder storagePolicyID(@Nullable Output<String> storagePolicyID) {
-            this.storagePolicyID = storagePolicyID;
+            $.storagePolicyID = storagePolicyID;
             return this;
         }
-        public Builder storagePolicyID(@Nullable String storagePolicyID) {
-            this.storagePolicyID = Codegen.ofNullable(storagePolicyID);
-            return this;
+
+        public Builder storagePolicyID(String storagePolicyID) {
+            return storagePolicyID(Output.of(storagePolicyID));
         }
+
         public Builder storagePolicyName(@Nullable Output<String> storagePolicyName) {
-            this.storagePolicyName = storagePolicyName;
+            $.storagePolicyName = storagePolicyName;
             return this;
         }
-        public Builder storagePolicyName(@Nullable String storagePolicyName) {
-            this.storagePolicyName = Codegen.ofNullable(storagePolicyName);
-            return this;
+
+        public Builder storagePolicyName(String storagePolicyName) {
+            return storagePolicyName(Output.of(storagePolicyName));
         }
+
         public Builder volumePath(Output<String> volumePath) {
-            this.volumePath = Objects.requireNonNull(volumePath);
+            $.volumePath = volumePath;
             return this;
         }
+
         public Builder volumePath(String volumePath) {
-            this.volumePath = Output.of(Objects.requireNonNull(volumePath));
-            return this;
-        }        public VsphereVirtualDiskVolumeSourceArgs build() {
-            return new VsphereVirtualDiskVolumeSourceArgs(fsType, storagePolicyID, storagePolicyName, volumePath);
+            return volumePath(Output.of(volumePath));
+        }
+
+        public VsphereVirtualDiskVolumeSourceArgs build() {
+            $.volumePath = Objects.requireNonNull($.volumePath, "expected parameter 'volumePath' to be non-null");
+            return $;
         }
     }
+
 }

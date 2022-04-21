@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveryAnalysisKind;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DiscoveryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analysisKind")
-      private final @Nullable Output<DiscoveryAnalysisKind> analysisKind;
+    private @Nullable Output<DiscoveryAnalysisKind> analysisKind;
 
-    public Output<DiscoveryAnalysisKind> analysisKind() {
-        return this.analysisKind == null ? Codegen.empty() : this.analysisKind;
+    public Optional<Output<DiscoveryAnalysisKind>> analysisKind() {
+        return Optional.ofNullable(this.analysisKind);
     }
 
-    public DiscoveryArgs(@Nullable Output<DiscoveryAnalysisKind> analysisKind) {
-        this.analysisKind = analysisKind;
-    }
+    private DiscoveryArgs() {}
 
-    private DiscoveryArgs() {
-        this.analysisKind = Codegen.empty();
+    private DiscoveryArgs(DiscoveryArgs $) {
+        this.analysisKind = $.analysisKind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiscoveryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiscoveryAnalysisKind> analysisKind;
+        private DiscoveryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiscoveryArgs();
         }
 
         public Builder(DiscoveryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisKind = defaults.analysisKind;
+            $ = new DiscoveryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisKind(@Nullable Output<DiscoveryAnalysisKind> analysisKind) {
-            this.analysisKind = analysisKind;
+            $.analysisKind = analysisKind;
             return this;
         }
-        public Builder analysisKind(@Nullable DiscoveryAnalysisKind analysisKind) {
-            this.analysisKind = Codegen.ofNullable(analysisKind);
-            return this;
-        }        public DiscoveryArgs build() {
-            return new DiscoveryArgs(analysisKind);
+
+        public Builder analysisKind(DiscoveryAnalysisKind analysisKind) {
+            return analysisKind(Output.of(analysisKind));
+        }
+
+        public DiscoveryArgs build() {
+            return $;
         }
     }
+
 }

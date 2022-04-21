@@ -26,7 +26,7 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalVariables", required=true)
-      private final List<ConfigVariableResponse> additionalVariables;
+    private List<ConfigVariableResponse> additionalVariables;
 
     public List<ConfigVariableResponse> additionalVariables() {
         return this.additionalVariables;
@@ -37,7 +37,7 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authType", required=true)
-      private final String authType;
+    private String authType;
 
     public String authType() {
         return this.authType;
@@ -48,7 +48,7 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oauth2ClientCredentials", required=true)
-      private final Oauth2ClientCredentialsResponse oauth2ClientCredentials;
+    private Oauth2ClientCredentialsResponse oauth2ClientCredentials;
 
     public Oauth2ClientCredentialsResponse oauth2ClientCredentials() {
         return this.oauth2ClientCredentials;
@@ -59,7 +59,7 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oauth2JwtBearer", required=true)
-      private final Oauth2JwtBearerResponse oauth2JwtBearer;
+    private Oauth2JwtBearerResponse oauth2JwtBearer;
 
     public Oauth2JwtBearerResponse oauth2JwtBearer() {
         return this.oauth2JwtBearer;
@@ -70,85 +70,77 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userPassword", required=true)
-      private final UserPasswordResponse userPassword;
+    private UserPasswordResponse userPassword;
 
     public UserPasswordResponse userPassword() {
         return this.userPassword;
     }
 
-    public AuthConfigResponse(
-        List<ConfigVariableResponse> additionalVariables,
-        String authType,
-        Oauth2ClientCredentialsResponse oauth2ClientCredentials,
-        Oauth2JwtBearerResponse oauth2JwtBearer,
-        UserPasswordResponse userPassword) {
-        this.additionalVariables = Objects.requireNonNull(additionalVariables, "expected parameter 'additionalVariables' to be non-null");
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
-        this.oauth2ClientCredentials = Objects.requireNonNull(oauth2ClientCredentials, "expected parameter 'oauth2ClientCredentials' to be non-null");
-        this.oauth2JwtBearer = Objects.requireNonNull(oauth2JwtBearer, "expected parameter 'oauth2JwtBearer' to be non-null");
-        this.userPassword = Objects.requireNonNull(userPassword, "expected parameter 'userPassword' to be non-null");
-    }
+    private AuthConfigResponse() {}
 
-    private AuthConfigResponse() {
-        this.additionalVariables = List.of();
-        this.authType = null;
-        this.oauth2ClientCredentials = null;
-        this.oauth2JwtBearer = null;
-        this.userPassword = null;
+    private AuthConfigResponse(AuthConfigResponse $) {
+        this.additionalVariables = $.additionalVariables;
+        this.authType = $.authType;
+        this.oauth2ClientCredentials = $.oauth2ClientCredentials;
+        this.oauth2JwtBearer = $.oauth2JwtBearer;
+        this.userPassword = $.userPassword;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ConfigVariableResponse> additionalVariables;
-        private String authType;
-        private Oauth2ClientCredentialsResponse oauth2ClientCredentials;
-        private Oauth2JwtBearerResponse oauth2JwtBearer;
-        private UserPasswordResponse userPassword;
+        private AuthConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthConfigResponse();
         }
 
         public Builder(AuthConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalVariables = defaults.additionalVariables;
-    	      this.authType = defaults.authType;
-    	      this.oauth2ClientCredentials = defaults.oauth2ClientCredentials;
-    	      this.oauth2JwtBearer = defaults.oauth2JwtBearer;
-    	      this.userPassword = defaults.userPassword;
+            $ = new AuthConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalVariables(List<ConfigVariableResponse> additionalVariables) {
-            this.additionalVariables = Objects.requireNonNull(additionalVariables);
+            $.additionalVariables = additionalVariables;
             return this;
         }
+
         public Builder additionalVariables(ConfigVariableResponse... additionalVariables) {
             return additionalVariables(List.of(additionalVariables));
         }
+
         public Builder authType(String authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
         }
+
         public Builder oauth2ClientCredentials(Oauth2ClientCredentialsResponse oauth2ClientCredentials) {
-            this.oauth2ClientCredentials = Objects.requireNonNull(oauth2ClientCredentials);
+            $.oauth2ClientCredentials = oauth2ClientCredentials;
             return this;
         }
+
         public Builder oauth2JwtBearer(Oauth2JwtBearerResponse oauth2JwtBearer) {
-            this.oauth2JwtBearer = Objects.requireNonNull(oauth2JwtBearer);
+            $.oauth2JwtBearer = oauth2JwtBearer;
             return this;
         }
+
         public Builder userPassword(UserPasswordResponse userPassword) {
-            this.userPassword = Objects.requireNonNull(userPassword);
+            $.userPassword = userPassword;
             return this;
-        }        public AuthConfigResponse build() {
-            return new AuthConfigResponse(additionalVariables, authType, oauth2ClientCredentials, oauth2JwtBearer, userPassword);
+        }
+
+        public AuthConfigResponse build() {
+            $.additionalVariables = Objects.requireNonNull($.additionalVariables, "expected parameter 'additionalVariables' to be non-null");
+            $.authType = Objects.requireNonNull($.authType, "expected parameter 'authType' to be non-null");
+            $.oauth2ClientCredentials = Objects.requireNonNull($.oauth2ClientCredentials, "expected parameter 'oauth2ClientCredentials' to be non-null");
+            $.oauth2JwtBearer = Objects.requireNonNull($.oauth2JwtBearer, "expected parameter 'oauth2JwtBearer' to be non-null");
+            $.userPassword = Objects.requireNonNull($.userPassword, "expected parameter 'userPassword' to be non-null");
+            return $;
         }
     }
+
 }

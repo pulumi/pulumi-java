@@ -17,7 +17,7 @@ public final class GetIscsiTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskPoolName", required=true)
-      private final String diskPoolName;
+    private String diskPoolName;
 
     public String diskPoolName() {
         return this.diskPoolName;
@@ -28,7 +28,7 @@ public final class GetIscsiTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iscsiTargetName", required=true)
-      private final String iscsiTargetName;
+    private String iscsiTargetName;
 
     public String iscsiTargetName() {
         return this.iscsiTargetName;
@@ -39,64 +39,59 @@ public final class GetIscsiTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetIscsiTargetArgs(
-        String diskPoolName,
-        String iscsiTargetName,
-        String resourceGroupName) {
-        this.diskPoolName = Objects.requireNonNull(diskPoolName, "expected parameter 'diskPoolName' to be non-null");
-        this.iscsiTargetName = Objects.requireNonNull(iscsiTargetName, "expected parameter 'iscsiTargetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetIscsiTargetArgs() {}
 
-    private GetIscsiTargetArgs() {
-        this.diskPoolName = null;
-        this.iscsiTargetName = null;
-        this.resourceGroupName = null;
+    private GetIscsiTargetArgs(GetIscsiTargetArgs $) {
+        this.diskPoolName = $.diskPoolName;
+        this.iscsiTargetName = $.iscsiTargetName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIscsiTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskPoolName;
-        private String iscsiTargetName;
-        private String resourceGroupName;
+        private GetIscsiTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIscsiTargetArgs();
         }
 
         public Builder(GetIscsiTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskPoolName = defaults.diskPoolName;
-    	      this.iscsiTargetName = defaults.iscsiTargetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetIscsiTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskPoolName(String diskPoolName) {
-            this.diskPoolName = Objects.requireNonNull(diskPoolName);
+            $.diskPoolName = diskPoolName;
             return this;
         }
+
         public Builder iscsiTargetName(String iscsiTargetName) {
-            this.iscsiTargetName = Objects.requireNonNull(iscsiTargetName);
+            $.iscsiTargetName = iscsiTargetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetIscsiTargetArgs build() {
-            return new GetIscsiTargetArgs(diskPoolName, iscsiTargetName, resourceGroupName);
+        }
+
+        public GetIscsiTargetArgs build() {
+            $.diskPoolName = Objects.requireNonNull($.diskPoolName, "expected parameter 'diskPoolName' to be non-null");
+            $.iscsiTargetName = Objects.requireNonNull($.iscsiTargetName, "expected parameter 'iscsiTargetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

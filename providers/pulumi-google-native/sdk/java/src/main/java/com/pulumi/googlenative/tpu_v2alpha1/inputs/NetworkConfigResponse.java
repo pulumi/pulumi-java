@@ -22,7 +22,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="canIpForward", required=true)
-      private final Boolean canIpForward;
+    private Boolean canIpForward;
 
     public Boolean canIpForward() {
         return this.canIpForward;
@@ -33,7 +33,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enableExternalIps", required=true)
-      private final Boolean enableExternalIps;
+    private Boolean enableExternalIps;
 
     public Boolean enableExternalIps() {
         return this.enableExternalIps;
@@ -44,7 +44,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -55,73 +55,66 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
     }
 
-    public NetworkConfigResponse(
-        Boolean canIpForward,
-        Boolean enableExternalIps,
-        String network,
-        String subnetwork) {
-        this.canIpForward = Objects.requireNonNull(canIpForward, "expected parameter 'canIpForward' to be non-null");
-        this.enableExternalIps = Objects.requireNonNull(enableExternalIps, "expected parameter 'enableExternalIps' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-    }
+    private NetworkConfigResponse() {}
 
-    private NetworkConfigResponse() {
-        this.canIpForward = null;
-        this.enableExternalIps = null;
-        this.network = null;
-        this.subnetwork = null;
+    private NetworkConfigResponse(NetworkConfigResponse $) {
+        this.canIpForward = $.canIpForward;
+        this.enableExternalIps = $.enableExternalIps;
+        this.network = $.network;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean canIpForward;
-        private Boolean enableExternalIps;
-        private String network;
-        private String subnetwork;
+        private NetworkConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigResponse();
         }
 
         public Builder(NetworkConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canIpForward = defaults.canIpForward;
-    	      this.enableExternalIps = defaults.enableExternalIps;
-    	      this.network = defaults.network;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canIpForward(Boolean canIpForward) {
-            this.canIpForward = Objects.requireNonNull(canIpForward);
+            $.canIpForward = canIpForward;
             return this;
         }
+
         public Builder enableExternalIps(Boolean enableExternalIps) {
-            this.enableExternalIps = Objects.requireNonNull(enableExternalIps);
+            $.enableExternalIps = enableExternalIps;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
-        }        public NetworkConfigResponse build() {
-            return new NetworkConfigResponse(canIpForward, enableExternalIps, network, subnetwork);
+        }
+
+        public NetworkConfigResponse build() {
+            $.canIpForward = Objects.requireNonNull($.canIpForward, "expected parameter 'canIpForward' to be non-null");
+            $.enableExternalIps = Objects.requireNonNull($.enableExternalIps, "expected parameter 'enableExternalIps' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            return $;
         }
     }
+
 }

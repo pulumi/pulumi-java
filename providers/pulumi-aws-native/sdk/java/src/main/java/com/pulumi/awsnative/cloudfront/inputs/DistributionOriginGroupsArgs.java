@@ -6,10 +6,10 @@ package com.pulumi.awsnative.cloudfront.inputs;
 import com.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,70 @@ public final class DistributionOriginGroupsArgs extends com.pulumi.resources.Res
     public static final DistributionOriginGroupsArgs Empty = new DistributionOriginGroupsArgs();
 
     @Import(name="items")
-      private final @Nullable Output<List<DistributionOriginGroupArgs>> items;
+    private @Nullable Output<List<DistributionOriginGroupArgs>> items;
 
-    public Output<List<DistributionOriginGroupArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<DistributionOriginGroupArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
     @Import(name="quantity", required=true)
-      private final Output<Integer> quantity;
+    private Output<Integer> quantity;
 
     public Output<Integer> quantity() {
         return this.quantity;
     }
 
-    public DistributionOriginGroupsArgs(
-        @Nullable Output<List<DistributionOriginGroupArgs>> items,
-        Output<Integer> quantity) {
-        this.items = items;
-        this.quantity = Objects.requireNonNull(quantity, "expected parameter 'quantity' to be non-null");
-    }
+    private DistributionOriginGroupsArgs() {}
 
-    private DistributionOriginGroupsArgs() {
-        this.items = Codegen.empty();
-        this.quantity = Codegen.empty();
+    private DistributionOriginGroupsArgs(DistributionOriginGroupsArgs $) {
+        this.items = $.items;
+        this.quantity = $.quantity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginGroupsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DistributionOriginGroupArgs>> items;
-        private Output<Integer> quantity;
+        private DistributionOriginGroupsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginGroupsArgs();
         }
 
         public Builder(DistributionOriginGroupsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
-    	      this.quantity = defaults.quantity;
+            $ = new DistributionOriginGroupsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<DistributionOriginGroupArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<DistributionOriginGroupArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<DistributionOriginGroupArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(DistributionOriginGroupArgs... items) {
             return items(List.of(items));
         }
+
         public Builder quantity(Output<Integer> quantity) {
-            this.quantity = Objects.requireNonNull(quantity);
+            $.quantity = quantity;
             return this;
         }
+
         public Builder quantity(Integer quantity) {
-            this.quantity = Output.of(Objects.requireNonNull(quantity));
-            return this;
-        }        public DistributionOriginGroupsArgs build() {
-            return new DistributionOriginGroupsArgs(items, quantity);
+            return quantity(Output.of(quantity));
+        }
+
+        public DistributionOriginGroupsArgs build() {
+            $.quantity = Objects.requireNonNull($.quantity, "expected parameter 'quantity' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
      * 
      */
     @Import(name="issueModel", required=true)
-      private final String issueModel;
+    private String issueModel;
 
     public String issueModel() {
         return this.issueModel;
@@ -34,58 +34,56 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
      * 
      */
     @Import(name="issues", required=true)
-      private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
+    private List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
 
     public List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues() {
         return this.issues;
     }
 
-    public GoogleCloudContactcenterinsightsV1IssueModelResultResponse(
-        String issueModel,
-        List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
-        this.issueModel = Objects.requireNonNull(issueModel, "expected parameter 'issueModel' to be non-null");
-        this.issues = Objects.requireNonNull(issues, "expected parameter 'issues' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1IssueModelResultResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1IssueModelResultResponse() {
-        this.issueModel = null;
-        this.issues = List.of();
+    private GoogleCloudContactcenterinsightsV1IssueModelResultResponse(GoogleCloudContactcenterinsightsV1IssueModelResultResponse $) {
+        this.issueModel = $.issueModel;
+        this.issues = $.issues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1IssueModelResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String issueModel;
-        private List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
+        private GoogleCloudContactcenterinsightsV1IssueModelResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1IssueModelResultResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1IssueModelResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issueModel = defaults.issueModel;
-    	      this.issues = defaults.issues;
+            $ = new GoogleCloudContactcenterinsightsV1IssueModelResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder issueModel(String issueModel) {
-            this.issueModel = Objects.requireNonNull(issueModel);
+            $.issueModel = issueModel;
             return this;
         }
+
         public Builder issues(List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
-            this.issues = Objects.requireNonNull(issues);
+            $.issues = issues;
             return this;
         }
+
         public Builder issues(GoogleCloudContactcenterinsightsV1IssueAssignmentResponse... issues) {
             return issues(List.of(issues));
-        }        public GoogleCloudContactcenterinsightsV1IssueModelResultResponse build() {
-            return new GoogleCloudContactcenterinsightsV1IssueModelResultResponse(issueModel, issues);
+        }
+
+        public GoogleCloudContactcenterinsightsV1IssueModelResultResponse build() {
+            $.issueModel = Objects.requireNonNull($.issueModel, "expected parameter 'issueModel' to be non-null");
+            $.issues = Objects.requireNonNull($.issues, "expected parameter 'issues' to be non-null");
+            return $;
         }
     }
+
 }

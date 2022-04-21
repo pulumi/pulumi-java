@@ -5,9 +5,9 @@ package com.pulumi.awsnative.evidently.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class FeatureEntityOverrideArgs extends com.pulumi.resources.Resour
     public static final FeatureEntityOverrideArgs Empty = new FeatureEntityOverrideArgs();
 
     @Import(name="entityId")
-      private final @Nullable Output<String> entityId;
+    private @Nullable Output<String> entityId;
 
-    public Output<String> entityId() {
-        return this.entityId == null ? Codegen.empty() : this.entityId;
+    public Optional<Output<String>> entityId() {
+        return Optional.ofNullable(this.entityId);
     }
 
     @Import(name="variation")
-      private final @Nullable Output<String> variation;
+    private @Nullable Output<String> variation;
 
-    public Output<String> variation() {
-        return this.variation == null ? Codegen.empty() : this.variation;
+    public Optional<Output<String>> variation() {
+        return Optional.ofNullable(this.variation);
     }
 
-    public FeatureEntityOverrideArgs(
-        @Nullable Output<String> entityId,
-        @Nullable Output<String> variation) {
-        this.entityId = entityId;
-        this.variation = variation;
-    }
+    private FeatureEntityOverrideArgs() {}
 
-    private FeatureEntityOverrideArgs() {
-        this.entityId = Codegen.empty();
-        this.variation = Codegen.empty();
+    private FeatureEntityOverrideArgs(FeatureEntityOverrideArgs $) {
+        this.entityId = $.entityId;
+        this.variation = $.variation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureEntityOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> entityId;
-        private @Nullable Output<String> variation;
+        private FeatureEntityOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureEntityOverrideArgs();
         }
 
         public Builder(FeatureEntityOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityId = defaults.entityId;
-    	      this.variation = defaults.variation;
+            $ = new FeatureEntityOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entityId(@Nullable Output<String> entityId) {
-            this.entityId = entityId;
+            $.entityId = entityId;
             return this;
         }
-        public Builder entityId(@Nullable String entityId) {
-            this.entityId = Codegen.ofNullable(entityId);
-            return this;
+
+        public Builder entityId(String entityId) {
+            return entityId(Output.of(entityId));
         }
+
         public Builder variation(@Nullable Output<String> variation) {
-            this.variation = variation;
+            $.variation = variation;
             return this;
         }
-        public Builder variation(@Nullable String variation) {
-            this.variation = Codegen.ofNullable(variation);
-            return this;
-        }        public FeatureEntityOverrideArgs build() {
-            return new FeatureEntityOverrideArgs(entityId, variation);
+
+        public Builder variation(String variation) {
+            return variation(Output.of(variation));
+        }
+
+        public FeatureEntityOverrideArgs build() {
+            return $;
         }
     }
+
 }

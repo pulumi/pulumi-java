@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterArgs extends com.
      * 
      */
     @Import(name="gkeClusterName")
-      private final @Nullable Output<String> gkeClusterName;
+    private @Nullable Output<String> gkeClusterName;
 
-    public Output<String> gkeClusterName() {
-        return this.gkeClusterName == null ? Codegen.empty() : this.gkeClusterName;
+    public Optional<Output<String>> gkeClusterName() {
+        return Optional.ofNullable(this.gkeClusterName);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public ManagedZonePrivateVisibilityConfigGKEClusterArgs(
-        @Nullable Output<String> gkeClusterName,
-        @Nullable Output<String> kind) {
-        this.gkeClusterName = gkeClusterName;
-        this.kind = kind;
-    }
+    private ManagedZonePrivateVisibilityConfigGKEClusterArgs() {}
 
-    private ManagedZonePrivateVisibilityConfigGKEClusterArgs() {
-        this.gkeClusterName = Codegen.empty();
-        this.kind = Codegen.empty();
+    private ManagedZonePrivateVisibilityConfigGKEClusterArgs(ManagedZonePrivateVisibilityConfigGKEClusterArgs $) {
+        this.gkeClusterName = $.gkeClusterName;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePrivateVisibilityConfigGKEClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gkeClusterName;
-        private @Nullable Output<String> kind;
+        private ManagedZonePrivateVisibilityConfigGKEClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePrivateVisibilityConfigGKEClusterArgs();
         }
 
         public Builder(ManagedZonePrivateVisibilityConfigGKEClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gkeClusterName = defaults.gkeClusterName;
-    	      this.kind = defaults.kind;
+            $ = new ManagedZonePrivateVisibilityConfigGKEClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gkeClusterName(@Nullable Output<String> gkeClusterName) {
-            this.gkeClusterName = gkeClusterName;
+            $.gkeClusterName = gkeClusterName;
             return this;
         }
-        public Builder gkeClusterName(@Nullable String gkeClusterName) {
-            this.gkeClusterName = Codegen.ofNullable(gkeClusterName);
-            return this;
+
+        public Builder gkeClusterName(String gkeClusterName) {
+            return gkeClusterName(Output.of(gkeClusterName));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public ManagedZonePrivateVisibilityConfigGKEClusterArgs build() {
-            return new ManagedZonePrivateVisibilityConfigGKEClusterArgs(gkeClusterName, kind);
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
+        }
+
+        public ManagedZonePrivateVisibilityConfigGKEClusterArgs build() {
+            return $;
         }
     }
+
 }

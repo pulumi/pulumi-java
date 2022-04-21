@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class FlowSlackSourcePropertiesArgs extends com.pulumi.resources.Re
     public static final FlowSlackSourcePropertiesArgs Empty = new FlowSlackSourcePropertiesArgs();
 
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
     }
 
-    public FlowSlackSourcePropertiesArgs(Output<String> object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowSlackSourcePropertiesArgs() {}
 
-    private FlowSlackSourcePropertiesArgs() {
-        this.object = Codegen.empty();
+    private FlowSlackSourcePropertiesArgs(FlowSlackSourcePropertiesArgs $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSlackSourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> object;
+        private FlowSlackSourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSlackSourcePropertiesArgs();
         }
 
         public Builder(FlowSlackSourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowSlackSourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
-        }        public FlowSlackSourcePropertiesArgs build() {
-            return new FlowSlackSourcePropertiesArgs(object);
+            return object(Output.of(object));
+        }
+
+        public FlowSlackSourcePropertiesArgs build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

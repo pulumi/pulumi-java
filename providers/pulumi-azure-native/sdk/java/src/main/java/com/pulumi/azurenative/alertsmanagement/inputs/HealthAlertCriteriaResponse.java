@@ -24,48 +24,48 @@ public final class HealthAlertCriteriaResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="allOf")
-      private final @Nullable List<VmGuestHealthAlertCriterionResponse> allOf;
+    private @Nullable List<VmGuestHealthAlertCriterionResponse> allOf;
 
-    public List<VmGuestHealthAlertCriterionResponse> allOf() {
-        return this.allOf == null ? List.of() : this.allOf;
+    public Optional<List<VmGuestHealthAlertCriterionResponse>> allOf() {
+        return Optional.ofNullable(this.allOf);
     }
 
-    public HealthAlertCriteriaResponse(@Nullable List<VmGuestHealthAlertCriterionResponse> allOf) {
-        this.allOf = allOf;
-    }
+    private HealthAlertCriteriaResponse() {}
 
-    private HealthAlertCriteriaResponse() {
-        this.allOf = List.of();
+    private HealthAlertCriteriaResponse(HealthAlertCriteriaResponse $) {
+        this.allOf = $.allOf;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthAlertCriteriaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<VmGuestHealthAlertCriterionResponse> allOf;
+        private HealthAlertCriteriaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthAlertCriteriaResponse();
         }
 
         public Builder(HealthAlertCriteriaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allOf = defaults.allOf;
+            $ = new HealthAlertCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allOf(@Nullable List<VmGuestHealthAlertCriterionResponse> allOf) {
-            this.allOf = allOf;
+            $.allOf = allOf;
             return this;
         }
+
         public Builder allOf(VmGuestHealthAlertCriterionResponse... allOf) {
             return allOf(List.of(allOf));
-        }        public HealthAlertCriteriaResponse build() {
-            return new HealthAlertCriteriaResponse(allOf);
+        }
+
+        public HealthAlertCriteriaResponse build() {
+            return $;
         }
     }
+
 }

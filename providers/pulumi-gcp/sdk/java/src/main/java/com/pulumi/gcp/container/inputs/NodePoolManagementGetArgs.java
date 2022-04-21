@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class NodePoolManagementGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="autoRepair")
-      private final @Nullable Output<Boolean> autoRepair;
+    private @Nullable Output<Boolean> autoRepair;
 
-    public Output<Boolean> autoRepair() {
-        return this.autoRepair == null ? Codegen.empty() : this.autoRepair;
+    public Optional<Output<Boolean>> autoRepair() {
+        return Optional.ofNullable(this.autoRepair);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class NodePoolManagementGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="autoUpgrade")
-      private final @Nullable Output<Boolean> autoUpgrade;
+    private @Nullable Output<Boolean> autoUpgrade;
 
-    public Output<Boolean> autoUpgrade() {
-        return this.autoUpgrade == null ? Codegen.empty() : this.autoUpgrade;
+    public Optional<Output<Boolean>> autoUpgrade() {
+        return Optional.ofNullable(this.autoUpgrade);
     }
 
-    public NodePoolManagementGetArgs(
-        @Nullable Output<Boolean> autoRepair,
-        @Nullable Output<Boolean> autoUpgrade) {
-        this.autoRepair = autoRepair;
-        this.autoUpgrade = autoUpgrade;
-    }
+    private NodePoolManagementGetArgs() {}
 
-    private NodePoolManagementGetArgs() {
-        this.autoRepair = Codegen.empty();
-        this.autoUpgrade = Codegen.empty();
+    private NodePoolManagementGetArgs(NodePoolManagementGetArgs $) {
+        this.autoRepair = $.autoRepair;
+        this.autoUpgrade = $.autoUpgrade;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolManagementGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoRepair;
-        private @Nullable Output<Boolean> autoUpgrade;
+        private NodePoolManagementGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolManagementGetArgs();
         }
 
         public Builder(NodePoolManagementGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoRepair = defaults.autoRepair;
-    	      this.autoUpgrade = defaults.autoUpgrade;
+            $ = new NodePoolManagementGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoRepair(@Nullable Output<Boolean> autoRepair) {
-            this.autoRepair = autoRepair;
+            $.autoRepair = autoRepair;
             return this;
         }
-        public Builder autoRepair(@Nullable Boolean autoRepair) {
-            this.autoRepair = Codegen.ofNullable(autoRepair);
-            return this;
+
+        public Builder autoRepair(Boolean autoRepair) {
+            return autoRepair(Output.of(autoRepair));
         }
+
         public Builder autoUpgrade(@Nullable Output<Boolean> autoUpgrade) {
-            this.autoUpgrade = autoUpgrade;
+            $.autoUpgrade = autoUpgrade;
             return this;
         }
-        public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
-            this.autoUpgrade = Codegen.ofNullable(autoUpgrade);
-            return this;
-        }        public NodePoolManagementGetArgs build() {
-            return new NodePoolManagementGetArgs(autoRepair, autoUpgrade);
+
+        public Builder autoUpgrade(Boolean autoUpgrade) {
+            return autoUpgrade(Output.of(autoUpgrade));
+        }
+
+        public NodePoolManagementGetArgs build() {
+            return $;
         }
     }
+
 }

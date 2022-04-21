@@ -10,12 +10,12 @@ import com.pulumi.azurenative.documentdb.inputs.SeedNodeArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="authenticationMethod")
-      private final @Nullable Output<Either<String,AuthenticationMethod>> authenticationMethod;
+    private @Nullable Output<Either<String,AuthenticationMethod>> authenticationMethod;
 
-    public Output<Either<String,AuthenticationMethod>> authenticationMethod() {
-        return this.authenticationMethod == null ? Codegen.empty() : this.authenticationMethod;
+    public Optional<Output<Either<String,AuthenticationMethod>>> authenticationMethod() {
+        return Optional.ofNullable(this.authenticationMethod);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="cassandraVersion")
-      private final @Nullable Output<String> cassandraVersion;
+    private @Nullable Output<String> cassandraVersion;
 
-    public Output<String> cassandraVersion() {
-        return this.cassandraVersion == null ? Codegen.empty() : this.cassandraVersion;
+    public Optional<Output<String>> cassandraVersion() {
+        return Optional.ofNullable(this.cassandraVersion);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="clientCertificates")
-      private final @Nullable Output<List<CertificateArgs>> clientCertificates;
+    private @Nullable Output<List<CertificateArgs>> clientCertificates;
 
-    public Output<List<CertificateArgs>> clientCertificates() {
-        return this.clientCertificates == null ? Codegen.empty() : this.clientCertificates;
+    public Optional<Output<List<CertificateArgs>>> clientCertificates() {
+        return Optional.ofNullable(this.clientCertificates);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="clusterNameOverride")
-      private final @Nullable Output<String> clusterNameOverride;
+    private @Nullable Output<String> clusterNameOverride;
 
-    public Output<String> clusterNameOverride() {
-        return this.clusterNameOverride == null ? Codegen.empty() : this.clusterNameOverride;
+    public Optional<Output<String>> clusterNameOverride() {
+        return Optional.ofNullable(this.clusterNameOverride);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="delegatedManagementSubnetId")
-      private final @Nullable Output<String> delegatedManagementSubnetId;
+    private @Nullable Output<String> delegatedManagementSubnetId;
 
-    public Output<String> delegatedManagementSubnetId() {
-        return this.delegatedManagementSubnetId == null ? Codegen.empty() : this.delegatedManagementSubnetId;
+    public Optional<Output<String>> delegatedManagementSubnetId() {
+        return Optional.ofNullable(this.delegatedManagementSubnetId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="externalGossipCertificates")
-      private final @Nullable Output<List<CertificateArgs>> externalGossipCertificates;
+    private @Nullable Output<List<CertificateArgs>> externalGossipCertificates;
 
-    public Output<List<CertificateArgs>> externalGossipCertificates() {
-        return this.externalGossipCertificates == null ? Codegen.empty() : this.externalGossipCertificates;
+    public Optional<Output<List<CertificateArgs>>> externalGossipCertificates() {
+        return Optional.ofNullable(this.externalGossipCertificates);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="externalSeedNodes")
-      private final @Nullable Output<List<SeedNodeArgs>> externalSeedNodes;
+    private @Nullable Output<List<SeedNodeArgs>> externalSeedNodes;
 
-    public Output<List<SeedNodeArgs>> externalSeedNodes() {
-        return this.externalSeedNodes == null ? Codegen.empty() : this.externalSeedNodes;
+    public Optional<Output<List<SeedNodeArgs>>> externalSeedNodes() {
+        return Optional.ofNullable(this.externalSeedNodes);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="hoursBetweenBackups")
-      private final @Nullable Output<Integer> hoursBetweenBackups;
+    private @Nullable Output<Integer> hoursBetweenBackups;
 
-    public Output<Integer> hoursBetweenBackups() {
-        return this.hoursBetweenBackups == null ? Codegen.empty() : this.hoursBetweenBackups;
+    public Optional<Output<Integer>> hoursBetweenBackups() {
+        return Optional.ofNullable(this.hoursBetweenBackups);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="initialCassandraAdminPassword")
-      private final @Nullable Output<String> initialCassandraAdminPassword;
+    private @Nullable Output<String> initialCassandraAdminPassword;
 
-    public Output<String> initialCassandraAdminPassword() {
-        return this.initialCassandraAdminPassword == null ? Codegen.empty() : this.initialCassandraAdminPassword;
+    public Optional<Output<String>> initialCassandraAdminPassword() {
+        return Optional.ofNullable(this.initialCassandraAdminPassword);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="prometheusEndpoint")
-      private final @Nullable Output<SeedNodeArgs> prometheusEndpoint;
+    private @Nullable Output<SeedNodeArgs> prometheusEndpoint;
 
-    public Output<SeedNodeArgs> prometheusEndpoint() {
-        return this.prometheusEndpoint == null ? Codegen.empty() : this.prometheusEndpoint;
+    public Optional<Output<SeedNodeArgs>> prometheusEndpoint() {
+        return Optional.ofNullable(this.prometheusEndpoint);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState;
+    private @Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState;
 
-    public Output<Either<String,ManagedCassandraProvisioningState>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ManagedCassandraProvisioningState>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="repairEnabled")
-      private final @Nullable Output<Boolean> repairEnabled;
+    private @Nullable Output<Boolean> repairEnabled;
 
-    public Output<Boolean> repairEnabled() {
-        return this.repairEnabled == null ? Codegen.empty() : this.repairEnabled;
+    public Optional<Output<Boolean>> repairEnabled() {
+        return Optional.ofNullable(this.repairEnabled);
     }
 
     /**
@@ -164,215 +164,180 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="restoreFromBackupId")
-      private final @Nullable Output<String> restoreFromBackupId;
+    private @Nullable Output<String> restoreFromBackupId;
 
-    public Output<String> restoreFromBackupId() {
-        return this.restoreFromBackupId == null ? Codegen.empty() : this.restoreFromBackupId;
+    public Optional<Output<String>> restoreFromBackupId() {
+        return Optional.ofNullable(this.restoreFromBackupId);
     }
 
-    public ClusterResourcePropertiesArgs(
-        @Nullable Output<Either<String,AuthenticationMethod>> authenticationMethod,
-        @Nullable Output<String> cassandraVersion,
-        @Nullable Output<List<CertificateArgs>> clientCertificates,
-        @Nullable Output<String> clusterNameOverride,
-        @Nullable Output<String> delegatedManagementSubnetId,
-        @Nullable Output<List<CertificateArgs>> externalGossipCertificates,
-        @Nullable Output<List<SeedNodeArgs>> externalSeedNodes,
-        @Nullable Output<Integer> hoursBetweenBackups,
-        @Nullable Output<String> initialCassandraAdminPassword,
-        @Nullable Output<SeedNodeArgs> prometheusEndpoint,
-        @Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState,
-        @Nullable Output<Boolean> repairEnabled,
-        @Nullable Output<String> restoreFromBackupId) {
-        this.authenticationMethod = authenticationMethod;
-        this.cassandraVersion = cassandraVersion;
-        this.clientCertificates = clientCertificates;
-        this.clusterNameOverride = clusterNameOverride;
-        this.delegatedManagementSubnetId = delegatedManagementSubnetId;
-        this.externalGossipCertificates = externalGossipCertificates;
-        this.externalSeedNodes = externalSeedNodes;
-        this.hoursBetweenBackups = hoursBetweenBackups;
-        this.initialCassandraAdminPassword = initialCassandraAdminPassword;
-        this.prometheusEndpoint = prometheusEndpoint;
-        this.provisioningState = provisioningState;
-        this.repairEnabled = repairEnabled;
-        this.restoreFromBackupId = restoreFromBackupId;
-    }
+    private ClusterResourcePropertiesArgs() {}
 
-    private ClusterResourcePropertiesArgs() {
-        this.authenticationMethod = Codegen.empty();
-        this.cassandraVersion = Codegen.empty();
-        this.clientCertificates = Codegen.empty();
-        this.clusterNameOverride = Codegen.empty();
-        this.delegatedManagementSubnetId = Codegen.empty();
-        this.externalGossipCertificates = Codegen.empty();
-        this.externalSeedNodes = Codegen.empty();
-        this.hoursBetweenBackups = Codegen.empty();
-        this.initialCassandraAdminPassword = Codegen.empty();
-        this.prometheusEndpoint = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.repairEnabled = Codegen.empty();
-        this.restoreFromBackupId = Codegen.empty();
+    private ClusterResourcePropertiesArgs(ClusterResourcePropertiesArgs $) {
+        this.authenticationMethod = $.authenticationMethod;
+        this.cassandraVersion = $.cassandraVersion;
+        this.clientCertificates = $.clientCertificates;
+        this.clusterNameOverride = $.clusterNameOverride;
+        this.delegatedManagementSubnetId = $.delegatedManagementSubnetId;
+        this.externalGossipCertificates = $.externalGossipCertificates;
+        this.externalSeedNodes = $.externalSeedNodes;
+        this.hoursBetweenBackups = $.hoursBetweenBackups;
+        this.initialCassandraAdminPassword = $.initialCassandraAdminPassword;
+        this.prometheusEndpoint = $.prometheusEndpoint;
+        this.provisioningState = $.provisioningState;
+        this.repairEnabled = $.repairEnabled;
+        this.restoreFromBackupId = $.restoreFromBackupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AuthenticationMethod>> authenticationMethod;
-        private @Nullable Output<String> cassandraVersion;
-        private @Nullable Output<List<CertificateArgs>> clientCertificates;
-        private @Nullable Output<String> clusterNameOverride;
-        private @Nullable Output<String> delegatedManagementSubnetId;
-        private @Nullable Output<List<CertificateArgs>> externalGossipCertificates;
-        private @Nullable Output<List<SeedNodeArgs>> externalSeedNodes;
-        private @Nullable Output<Integer> hoursBetweenBackups;
-        private @Nullable Output<String> initialCassandraAdminPassword;
-        private @Nullable Output<SeedNodeArgs> prometheusEndpoint;
-        private @Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState;
-        private @Nullable Output<Boolean> repairEnabled;
-        private @Nullable Output<String> restoreFromBackupId;
+        private ClusterResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterResourcePropertiesArgs();
         }
 
         public Builder(ClusterResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationMethod = defaults.authenticationMethod;
-    	      this.cassandraVersion = defaults.cassandraVersion;
-    	      this.clientCertificates = defaults.clientCertificates;
-    	      this.clusterNameOverride = defaults.clusterNameOverride;
-    	      this.delegatedManagementSubnetId = defaults.delegatedManagementSubnetId;
-    	      this.externalGossipCertificates = defaults.externalGossipCertificates;
-    	      this.externalSeedNodes = defaults.externalSeedNodes;
-    	      this.hoursBetweenBackups = defaults.hoursBetweenBackups;
-    	      this.initialCassandraAdminPassword = defaults.initialCassandraAdminPassword;
-    	      this.prometheusEndpoint = defaults.prometheusEndpoint;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.repairEnabled = defaults.repairEnabled;
-    	      this.restoreFromBackupId = defaults.restoreFromBackupId;
+            $ = new ClusterResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationMethod(@Nullable Output<Either<String,AuthenticationMethod>> authenticationMethod) {
-            this.authenticationMethod = authenticationMethod;
+            $.authenticationMethod = authenticationMethod;
             return this;
         }
-        public Builder authenticationMethod(@Nullable Either<String,AuthenticationMethod> authenticationMethod) {
-            this.authenticationMethod = Codegen.ofNullable(authenticationMethod);
-            return this;
+
+        public Builder authenticationMethod(Either<String,AuthenticationMethod> authenticationMethod) {
+            return authenticationMethod(Output.of(authenticationMethod));
         }
+
         public Builder cassandraVersion(@Nullable Output<String> cassandraVersion) {
-            this.cassandraVersion = cassandraVersion;
+            $.cassandraVersion = cassandraVersion;
             return this;
         }
-        public Builder cassandraVersion(@Nullable String cassandraVersion) {
-            this.cassandraVersion = Codegen.ofNullable(cassandraVersion);
-            return this;
+
+        public Builder cassandraVersion(String cassandraVersion) {
+            return cassandraVersion(Output.of(cassandraVersion));
         }
+
         public Builder clientCertificates(@Nullable Output<List<CertificateArgs>> clientCertificates) {
-            this.clientCertificates = clientCertificates;
+            $.clientCertificates = clientCertificates;
             return this;
         }
-        public Builder clientCertificates(@Nullable List<CertificateArgs> clientCertificates) {
-            this.clientCertificates = Codegen.ofNullable(clientCertificates);
-            return this;
+
+        public Builder clientCertificates(List<CertificateArgs> clientCertificates) {
+            return clientCertificates(Output.of(clientCertificates));
         }
+
         public Builder clientCertificates(CertificateArgs... clientCertificates) {
             return clientCertificates(List.of(clientCertificates));
         }
+
         public Builder clusterNameOverride(@Nullable Output<String> clusterNameOverride) {
-            this.clusterNameOverride = clusterNameOverride;
+            $.clusterNameOverride = clusterNameOverride;
             return this;
         }
-        public Builder clusterNameOverride(@Nullable String clusterNameOverride) {
-            this.clusterNameOverride = Codegen.ofNullable(clusterNameOverride);
-            return this;
+
+        public Builder clusterNameOverride(String clusterNameOverride) {
+            return clusterNameOverride(Output.of(clusterNameOverride));
         }
+
         public Builder delegatedManagementSubnetId(@Nullable Output<String> delegatedManagementSubnetId) {
-            this.delegatedManagementSubnetId = delegatedManagementSubnetId;
+            $.delegatedManagementSubnetId = delegatedManagementSubnetId;
             return this;
         }
-        public Builder delegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
-            this.delegatedManagementSubnetId = Codegen.ofNullable(delegatedManagementSubnetId);
-            return this;
+
+        public Builder delegatedManagementSubnetId(String delegatedManagementSubnetId) {
+            return delegatedManagementSubnetId(Output.of(delegatedManagementSubnetId));
         }
+
         public Builder externalGossipCertificates(@Nullable Output<List<CertificateArgs>> externalGossipCertificates) {
-            this.externalGossipCertificates = externalGossipCertificates;
+            $.externalGossipCertificates = externalGossipCertificates;
             return this;
         }
-        public Builder externalGossipCertificates(@Nullable List<CertificateArgs> externalGossipCertificates) {
-            this.externalGossipCertificates = Codegen.ofNullable(externalGossipCertificates);
-            return this;
+
+        public Builder externalGossipCertificates(List<CertificateArgs> externalGossipCertificates) {
+            return externalGossipCertificates(Output.of(externalGossipCertificates));
         }
+
         public Builder externalGossipCertificates(CertificateArgs... externalGossipCertificates) {
             return externalGossipCertificates(List.of(externalGossipCertificates));
         }
+
         public Builder externalSeedNodes(@Nullable Output<List<SeedNodeArgs>> externalSeedNodes) {
-            this.externalSeedNodes = externalSeedNodes;
+            $.externalSeedNodes = externalSeedNodes;
             return this;
         }
-        public Builder externalSeedNodes(@Nullable List<SeedNodeArgs> externalSeedNodes) {
-            this.externalSeedNodes = Codegen.ofNullable(externalSeedNodes);
-            return this;
+
+        public Builder externalSeedNodes(List<SeedNodeArgs> externalSeedNodes) {
+            return externalSeedNodes(Output.of(externalSeedNodes));
         }
+
         public Builder externalSeedNodes(SeedNodeArgs... externalSeedNodes) {
             return externalSeedNodes(List.of(externalSeedNodes));
         }
+
         public Builder hoursBetweenBackups(@Nullable Output<Integer> hoursBetweenBackups) {
-            this.hoursBetweenBackups = hoursBetweenBackups;
+            $.hoursBetweenBackups = hoursBetweenBackups;
             return this;
         }
-        public Builder hoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
-            this.hoursBetweenBackups = Codegen.ofNullable(hoursBetweenBackups);
-            return this;
+
+        public Builder hoursBetweenBackups(Integer hoursBetweenBackups) {
+            return hoursBetweenBackups(Output.of(hoursBetweenBackups));
         }
+
         public Builder initialCassandraAdminPassword(@Nullable Output<String> initialCassandraAdminPassword) {
-            this.initialCassandraAdminPassword = initialCassandraAdminPassword;
+            $.initialCassandraAdminPassword = initialCassandraAdminPassword;
             return this;
         }
-        public Builder initialCassandraAdminPassword(@Nullable String initialCassandraAdminPassword) {
-            this.initialCassandraAdminPassword = Codegen.ofNullable(initialCassandraAdminPassword);
-            return this;
+
+        public Builder initialCassandraAdminPassword(String initialCassandraAdminPassword) {
+            return initialCassandraAdminPassword(Output.of(initialCassandraAdminPassword));
         }
+
         public Builder prometheusEndpoint(@Nullable Output<SeedNodeArgs> prometheusEndpoint) {
-            this.prometheusEndpoint = prometheusEndpoint;
+            $.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
-        public Builder prometheusEndpoint(@Nullable SeedNodeArgs prometheusEndpoint) {
-            this.prometheusEndpoint = Codegen.ofNullable(prometheusEndpoint);
-            return this;
+
+        public Builder prometheusEndpoint(SeedNodeArgs prometheusEndpoint) {
+            return prometheusEndpoint(Output.of(prometheusEndpoint));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ManagedCassandraProvisioningState> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,ManagedCassandraProvisioningState> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder repairEnabled(@Nullable Output<Boolean> repairEnabled) {
-            this.repairEnabled = repairEnabled;
+            $.repairEnabled = repairEnabled;
             return this;
         }
-        public Builder repairEnabled(@Nullable Boolean repairEnabled) {
-            this.repairEnabled = Codegen.ofNullable(repairEnabled);
-            return this;
+
+        public Builder repairEnabled(Boolean repairEnabled) {
+            return repairEnabled(Output.of(repairEnabled));
         }
+
         public Builder restoreFromBackupId(@Nullable Output<String> restoreFromBackupId) {
-            this.restoreFromBackupId = restoreFromBackupId;
+            $.restoreFromBackupId = restoreFromBackupId;
             return this;
         }
-        public Builder restoreFromBackupId(@Nullable String restoreFromBackupId) {
-            this.restoreFromBackupId = Codegen.ofNullable(restoreFromBackupId);
-            return this;
-        }        public ClusterResourcePropertiesArgs build() {
-            return new ClusterResourcePropertiesArgs(authenticationMethod, cassandraVersion, clientCertificates, clusterNameOverride, delegatedManagementSubnetId, externalGossipCertificates, externalSeedNodes, hoursBetweenBackups, initialCassandraAdminPassword, prometheusEndpoint, provisioningState, repairEnabled, restoreFromBackupId);
+
+        public Builder restoreFromBackupId(String restoreFromBackupId) {
+            return restoreFromBackupId(Output.of(restoreFromBackupId));
+        }
+
+        public ClusterResourcePropertiesArgs build() {
+            return $;
         }
     }
+
 }

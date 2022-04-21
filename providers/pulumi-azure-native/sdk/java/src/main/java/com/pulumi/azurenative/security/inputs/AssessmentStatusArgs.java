@@ -7,9 +7,9 @@ import com.pulumi.azurenative.security.enums.AssessmentStatusCode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cause")
-      private final @Nullable Output<String> cause;
+    private @Nullable Output<String> cause;
 
-    public Output<String> cause() {
-        return this.cause == null ? Codegen.empty() : this.cause;
+    public Optional<Output<String>> cause() {
+        return Optional.ofNullable(this.cause);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="code", required=true)
-      private final Output<Either<String,AssessmentStatusCode>> code;
+    private Output<Either<String,AssessmentStatusCode>> code;
 
     public Output<Either<String,AssessmentStatusCode>> code() {
         return this.code;
@@ -48,76 +48,69 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
-    public AssessmentStatusArgs(
-        @Nullable Output<String> cause,
-        Output<Either<String,AssessmentStatusCode>> code,
-        @Nullable Output<String> description) {
-        this.cause = cause;
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.description = description;
-    }
+    private AssessmentStatusArgs() {}
 
-    private AssessmentStatusArgs() {
-        this.cause = Codegen.empty();
-        this.code = Codegen.empty();
-        this.description = Codegen.empty();
+    private AssessmentStatusArgs(AssessmentStatusArgs $) {
+        this.cause = $.cause;
+        this.code = $.code;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cause;
-        private Output<Either<String,AssessmentStatusCode>> code;
-        private @Nullable Output<String> description;
+        private AssessmentStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentStatusArgs();
         }
 
         public Builder(AssessmentStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cause = defaults.cause;
-    	      this.code = defaults.code;
-    	      this.description = defaults.description;
+            $ = new AssessmentStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cause(@Nullable Output<String> cause) {
-            this.cause = cause;
+            $.cause = cause;
             return this;
         }
-        public Builder cause(@Nullable String cause) {
-            this.cause = Codegen.ofNullable(cause);
-            return this;
+
+        public Builder cause(String cause) {
+            return cause(Output.of(cause));
         }
+
         public Builder code(Output<Either<String,AssessmentStatusCode>> code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder code(Either<String,AssessmentStatusCode> code) {
-            this.code = Output.of(Objects.requireNonNull(code));
-            return this;
+            return code(Output.of(code));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
-        }        public AssessmentStatusArgs build() {
-            return new AssessmentStatusArgs(cause, code, description);
+
+        public Builder description(String description) {
+            return description(Output.of(description));
+        }
+
+        public AssessmentStatusArgs build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            return $;
         }
     }
+
 }

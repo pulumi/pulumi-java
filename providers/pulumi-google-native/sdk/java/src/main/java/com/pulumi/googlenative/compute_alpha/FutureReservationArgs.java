@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.FutureReservationSpecificSKUPropertiesArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.FutureReservationTimeWindowArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.ShareSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -52,24 +52,24 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="shareSettings")
-      private final @Nullable Output<ShareSettingsArgs> shareSettings;
+    private @Nullable Output<ShareSettingsArgs> shareSettings;
 
-    public Output<ShareSettingsArgs> shareSettings() {
-        return this.shareSettings == null ? Codegen.empty() : this.shareSettings;
+    public Optional<Output<ShareSettingsArgs>> shareSettings() {
+        return Optional.ofNullable(this.shareSettings);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="specificSkuProperties")
-      private final @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
+    private @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
 
-    public Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties() {
-        return this.specificSkuProperties == null ? Codegen.empty() : this.specificSkuProperties;
+    public Optional<Output<FutureReservationSpecificSKUPropertiesArgs>> specificSkuProperties() {
+        return Optional.ofNullable(this.specificSkuProperties);
     }
 
     /**
@@ -99,174 +99,145 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timeWindow")
-      private final @Nullable Output<FutureReservationTimeWindowArgs> timeWindow;
+    private @Nullable Output<FutureReservationTimeWindowArgs> timeWindow;
 
-    public Output<FutureReservationTimeWindowArgs> timeWindow() {
-        return this.timeWindow == null ? Codegen.empty() : this.timeWindow;
+    public Optional<Output<FutureReservationTimeWindowArgs>> timeWindow() {
+        return Optional.ofNullable(this.timeWindow);
     }
 
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public FutureReservationArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<ShareSettingsArgs> shareSettings,
-        @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties,
-        @Nullable Output<FutureReservationTimeWindowArgs> timeWindow,
-        @Nullable Output<String> zone) {
-        this.description = description;
-        this.kind = kind;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.project = project;
-        this.requestId = requestId;
-        this.shareSettings = shareSettings;
-        this.specificSkuProperties = specificSkuProperties;
-        this.timeWindow = timeWindow;
-        this.zone = zone;
-    }
+    private FutureReservationArgs() {}
 
-    private FutureReservationArgs() {
-        this.description = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.shareSettings = Codegen.empty();
-        this.specificSkuProperties = Codegen.empty();
-        this.timeWindow = Codegen.empty();
-        this.zone = Codegen.empty();
+    private FutureReservationArgs(FutureReservationArgs $) {
+        this.description = $.description;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.shareSettings = $.shareSettings;
+        this.specificSkuProperties = $.specificSkuProperties;
+        this.timeWindow = $.timeWindow;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FutureReservationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<ShareSettingsArgs> shareSettings;
-        private @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
-        private @Nullable Output<FutureReservationTimeWindowArgs> timeWindow;
-        private @Nullable Output<String> zone;
+        private FutureReservationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FutureReservationArgs();
         }
 
         public Builder(FutureReservationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.shareSettings = defaults.shareSettings;
-    	      this.specificSkuProperties = defaults.specificSkuProperties;
-    	      this.timeWindow = defaults.timeWindow;
-    	      this.zone = defaults.zone;
+            $ = new FutureReservationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder shareSettings(@Nullable Output<ShareSettingsArgs> shareSettings) {
-            this.shareSettings = shareSettings;
+            $.shareSettings = shareSettings;
             return this;
         }
-        public Builder shareSettings(@Nullable ShareSettingsArgs shareSettings) {
-            this.shareSettings = Codegen.ofNullable(shareSettings);
-            return this;
+
+        public Builder shareSettings(ShareSettingsArgs shareSettings) {
+            return shareSettings(Output.of(shareSettings));
         }
+
         public Builder specificSkuProperties(@Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties) {
-            this.specificSkuProperties = specificSkuProperties;
+            $.specificSkuProperties = specificSkuProperties;
             return this;
         }
-        public Builder specificSkuProperties(@Nullable FutureReservationSpecificSKUPropertiesArgs specificSkuProperties) {
-            this.specificSkuProperties = Codegen.ofNullable(specificSkuProperties);
-            return this;
+
+        public Builder specificSkuProperties(FutureReservationSpecificSKUPropertiesArgs specificSkuProperties) {
+            return specificSkuProperties(Output.of(specificSkuProperties));
         }
+
         public Builder timeWindow(@Nullable Output<FutureReservationTimeWindowArgs> timeWindow) {
-            this.timeWindow = timeWindow;
+            $.timeWindow = timeWindow;
             return this;
         }
-        public Builder timeWindow(@Nullable FutureReservationTimeWindowArgs timeWindow) {
-            this.timeWindow = Codegen.ofNullable(timeWindow);
-            return this;
+
+        public Builder timeWindow(FutureReservationTimeWindowArgs timeWindow) {
+            return timeWindow(Output.of(timeWindow));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public FutureReservationArgs build() {
-            return new FutureReservationArgs(description, kind, name, namePrefix, project, requestId, shareSettings, specificSkuProperties, timeWindow, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public FutureReservationArgs build() {
+            return $;
         }
     }
+
 }

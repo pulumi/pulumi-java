@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @Import(name="bucketArn", required=true)
-      private final Output<String> bucketArn;
+    private Output<String> bucketArn;
 
     public Output<String> bucketArn() {
         return this.bucketArn;
@@ -31,7 +31,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @Import(name="fileKey", required=true)
-      private final Output<String> fileKey;
+    private Output<String> fileKey;
 
     public Output<String> fileKey() {
         return this.fileKey;
@@ -42,76 +42,70 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @Import(name="objectVersion")
-      private final @Nullable Output<String> objectVersion;
+    private @Nullable Output<String> objectVersion;
 
-    public Output<String> objectVersion() {
-        return this.objectVersion == null ? Codegen.empty() : this.objectVersion;
+    public Optional<Output<String>> objectVersion() {
+        return Optional.ofNullable(this.objectVersion);
     }
 
-    public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs(
-        Output<String> bucketArn,
-        Output<String> fileKey,
-        @Nullable Output<String> objectVersion) {
-        this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
-        this.fileKey = Objects.requireNonNull(fileKey, "expected parameter 'fileKey' to be non-null");
-        this.objectVersion = objectVersion;
-    }
+    private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs() {}
 
-    private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs() {
-        this.bucketArn = Codegen.empty();
-        this.fileKey = Codegen.empty();
-        this.objectVersion = Codegen.empty();
+    private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs(ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs $) {
+        this.bucketArn = $.bucketArn;
+        this.fileKey = $.fileKey;
+        this.objectVersion = $.objectVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketArn;
-        private Output<String> fileKey;
-        private @Nullable Output<String> objectVersion;
+        private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketArn = defaults.bucketArn;
-    	      this.fileKey = defaults.fileKey;
-    	      this.objectVersion = defaults.objectVersion;
+            $ = new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketArn(Output<String> bucketArn) {
-            this.bucketArn = Objects.requireNonNull(bucketArn);
+            $.bucketArn = bucketArn;
             return this;
         }
+
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
-            return this;
+            return bucketArn(Output.of(bucketArn));
         }
+
         public Builder fileKey(Output<String> fileKey) {
-            this.fileKey = Objects.requireNonNull(fileKey);
+            $.fileKey = fileKey;
             return this;
         }
+
         public Builder fileKey(String fileKey) {
-            this.fileKey = Output.of(Objects.requireNonNull(fileKey));
-            return this;
+            return fileKey(Output.of(fileKey));
         }
+
         public Builder objectVersion(@Nullable Output<String> objectVersion) {
-            this.objectVersion = objectVersion;
+            $.objectVersion = objectVersion;
             return this;
         }
-        public Builder objectVersion(@Nullable String objectVersion) {
-            this.objectVersion = Codegen.ofNullable(objectVersion);
-            return this;
-        }        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs build() {
-            return new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs(bucketArn, fileKey, objectVersion);
+
+        public Builder objectVersion(String objectVersion) {
+            return objectVersion(Output.of(objectVersion));
+        }
+
+        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs build() {
+            $.bucketArn = Objects.requireNonNull($.bucketArn, "expected parameter 'bucketArn' to be non-null");
+            $.fileKey = Objects.requireNonNull($.fileKey, "expected parameter 'fileKey' to be non-null");
+            return $;
         }
     }
+
 }

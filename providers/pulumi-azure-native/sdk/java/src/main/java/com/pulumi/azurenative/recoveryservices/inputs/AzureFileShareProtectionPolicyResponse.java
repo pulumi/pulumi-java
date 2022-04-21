@@ -33,7 +33,7 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
      * 
      */
     @Import(name="backupManagementType", required=true)
-      private final String backupManagementType;
+    private String backupManagementType;
 
     public String backupManagementType() {
         return this.backupManagementType;
@@ -44,10 +44,10 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
      * 
      */
     @Import(name="protectedItemsCount")
-      private final @Nullable Integer protectedItemsCount;
+    private @Nullable Integer protectedItemsCount;
 
     public Optional<Integer> protectedItemsCount() {
-        return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
+        return Optional.ofNullable(this.protectedItemsCount);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
+    private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy() {
-        return this.retentionPolicy == null ? null : this.retentionPolicy;
+    public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
      * 
      */
     @Import(name="schedulePolicy")
-      private final @Nullable Object schedulePolicy;
+    private @Nullable Object schedulePolicy;
 
-    public Object schedulePolicy() {
-        return this.schedulePolicy == null ? null : this.schedulePolicy;
+    public Optional<Object> schedulePolicy() {
+        return Optional.ofNullable(this.schedulePolicy);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable String timeZone;
+    private @Nullable String timeZone;
 
     public Optional<String> timeZone() {
-        return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
+        return Optional.ofNullable(this.timeZone);
     }
 
     /**
@@ -88,91 +88,75 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
      * 
      */
     @Import(name="workLoadType")
-      private final @Nullable String workLoadType;
+    private @Nullable String workLoadType;
 
     public Optional<String> workLoadType() {
-        return this.workLoadType == null ? Optional.empty() : Optional.ofNullable(this.workLoadType);
+        return Optional.ofNullable(this.workLoadType);
     }
 
-    public AzureFileShareProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable Integer protectedItemsCount,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @Nullable Object schedulePolicy,
-        @Nullable String timeZone,
-        @Nullable String workLoadType) {
-        this.backupManagementType = Codegen.stringProp("backupManagementType").arg(backupManagementType).require();
-        this.protectedItemsCount = protectedItemsCount;
-        this.retentionPolicy = retentionPolicy;
-        this.schedulePolicy = schedulePolicy;
-        this.timeZone = timeZone;
-        this.workLoadType = workLoadType;
-    }
+    private AzureFileShareProtectionPolicyResponse() {}
 
-    private AzureFileShareProtectionPolicyResponse() {
-        this.backupManagementType = null;
-        this.protectedItemsCount = null;
-        this.retentionPolicy = null;
-        this.schedulePolicy = null;
-        this.timeZone = null;
-        this.workLoadType = null;
+    private AzureFileShareProtectionPolicyResponse(AzureFileShareProtectionPolicyResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.protectedItemsCount = $.protectedItemsCount;
+        this.retentionPolicy = $.retentionPolicy;
+        this.schedulePolicy = $.schedulePolicy;
+        this.timeZone = $.timeZone;
+        this.workLoadType = $.workLoadType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFileShareProtectionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupManagementType;
-        private @Nullable Integer protectedItemsCount;
-        private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
-        private @Nullable Object schedulePolicy;
-        private @Nullable String timeZone;
-        private @Nullable String workLoadType;
+        private AzureFileShareProtectionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFileShareProtectionPolicyResponse();
         }
 
         public Builder(AzureFileShareProtectionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.protectedItemsCount = defaults.protectedItemsCount;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.schedulePolicy = defaults.schedulePolicy;
-    	      this.timeZone = defaults.timeZone;
-    	      this.workLoadType = defaults.workLoadType;
+            $ = new AzureFileShareProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Objects.requireNonNull(backupManagementType);
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = protectedItemsCount;
+            $.protectedItemsCount = protectedItemsCount;
             return this;
         }
+
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
+
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = schedulePolicy;
+            $.schedulePolicy = schedulePolicy;
             return this;
         }
+
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
+
         public Builder workLoadType(@Nullable String workLoadType) {
-            this.workLoadType = workLoadType;
+            $.workLoadType = workLoadType;
             return this;
-        }        public AzureFileShareProtectionPolicyResponse build() {
-            return new AzureFileShareProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy, timeZone, workLoadType);
+        }
+
+        public AzureFileShareProtectionPolicyResponse build() {
+            $.backupManagementType = Codegen.stringProp("backupManagementType").arg($.backupManagementType).require();
+            return $;
         }
     }
+
 }

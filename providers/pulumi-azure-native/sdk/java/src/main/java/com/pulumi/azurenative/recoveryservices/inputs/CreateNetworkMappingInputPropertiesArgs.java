@@ -8,10 +8,10 @@ import com.pulumi.azurenative.recoveryservices.inputs.VmmToAzureCreateNetworkMap
 import com.pulumi.azurenative.recoveryservices.inputs.VmmToVmmCreateNetworkMappingInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class CreateNetworkMappingInputPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="fabricSpecificDetails")
-      private final @Nullable Output<Object> fabricSpecificDetails;
+    private @Nullable Output<Object> fabricSpecificDetails;
 
-    public Output<Object> fabricSpecificDetails() {
-        return this.fabricSpecificDetails == null ? Codegen.empty() : this.fabricSpecificDetails;
+    public Optional<Output<Object>> fabricSpecificDetails() {
+        return Optional.ofNullable(this.fabricSpecificDetails);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class CreateNetworkMappingInputPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="recoveryFabricName")
-      private final @Nullable Output<String> recoveryFabricName;
+    private @Nullable Output<String> recoveryFabricName;
 
-    public Output<String> recoveryFabricName() {
-        return this.recoveryFabricName == null ? Codegen.empty() : this.recoveryFabricName;
+    public Optional<Output<String>> recoveryFabricName() {
+        return Optional.ofNullable(this.recoveryFabricName);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class CreateNetworkMappingInputPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="recoveryNetworkId")
-      private final @Nullable Output<String> recoveryNetworkId;
+    private @Nullable Output<String> recoveryNetworkId;
 
-    public Output<String> recoveryNetworkId() {
-        return this.recoveryNetworkId == null ? Codegen.empty() : this.recoveryNetworkId;
+    public Optional<Output<String>> recoveryNetworkId() {
+        return Optional.ofNullable(this.recoveryNetworkId);
     }
 
-    public CreateNetworkMappingInputPropertiesArgs(
-        @Nullable Output<Object> fabricSpecificDetails,
-        @Nullable Output<String> recoveryFabricName,
-        @Nullable Output<String> recoveryNetworkId) {
-        this.fabricSpecificDetails = fabricSpecificDetails;
-        this.recoveryFabricName = recoveryFabricName;
-        this.recoveryNetworkId = recoveryNetworkId;
-    }
+    private CreateNetworkMappingInputPropertiesArgs() {}
 
-    private CreateNetworkMappingInputPropertiesArgs() {
-        this.fabricSpecificDetails = Codegen.empty();
-        this.recoveryFabricName = Codegen.empty();
-        this.recoveryNetworkId = Codegen.empty();
+    private CreateNetworkMappingInputPropertiesArgs(CreateNetworkMappingInputPropertiesArgs $) {
+        this.fabricSpecificDetails = $.fabricSpecificDetails;
+        this.recoveryFabricName = $.recoveryFabricName;
+        this.recoveryNetworkId = $.recoveryNetworkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreateNetworkMappingInputPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> fabricSpecificDetails;
-        private @Nullable Output<String> recoveryFabricName;
-        private @Nullable Output<String> recoveryNetworkId;
+        private CreateNetworkMappingInputPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreateNetworkMappingInputPropertiesArgs();
         }
 
         public Builder(CreateNetworkMappingInputPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricSpecificDetails = defaults.fabricSpecificDetails;
-    	      this.recoveryFabricName = defaults.recoveryFabricName;
-    	      this.recoveryNetworkId = defaults.recoveryNetworkId;
+            $ = new CreateNetworkMappingInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricSpecificDetails(@Nullable Output<Object> fabricSpecificDetails) {
-            this.fabricSpecificDetails = fabricSpecificDetails;
+            $.fabricSpecificDetails = fabricSpecificDetails;
             return this;
         }
-        public Builder fabricSpecificDetails(@Nullable Object fabricSpecificDetails) {
-            this.fabricSpecificDetails = Codegen.ofNullable(fabricSpecificDetails);
-            return this;
+
+        public Builder fabricSpecificDetails(Object fabricSpecificDetails) {
+            return fabricSpecificDetails(Output.of(fabricSpecificDetails));
         }
+
         public Builder recoveryFabricName(@Nullable Output<String> recoveryFabricName) {
-            this.recoveryFabricName = recoveryFabricName;
+            $.recoveryFabricName = recoveryFabricName;
             return this;
         }
-        public Builder recoveryFabricName(@Nullable String recoveryFabricName) {
-            this.recoveryFabricName = Codegen.ofNullable(recoveryFabricName);
-            return this;
+
+        public Builder recoveryFabricName(String recoveryFabricName) {
+            return recoveryFabricName(Output.of(recoveryFabricName));
         }
+
         public Builder recoveryNetworkId(@Nullable Output<String> recoveryNetworkId) {
-            this.recoveryNetworkId = recoveryNetworkId;
+            $.recoveryNetworkId = recoveryNetworkId;
             return this;
         }
-        public Builder recoveryNetworkId(@Nullable String recoveryNetworkId) {
-            this.recoveryNetworkId = Codegen.ofNullable(recoveryNetworkId);
-            return this;
-        }        public CreateNetworkMappingInputPropertiesArgs build() {
-            return new CreateNetworkMappingInputPropertiesArgs(fabricSpecificDetails, recoveryFabricName, recoveryNetworkId);
+
+        public Builder recoveryNetworkId(String recoveryNetworkId) {
+            return recoveryNetworkId(Output.of(recoveryNetworkId));
+        }
+
+        public CreateNetworkMappingInputPropertiesArgs build() {
+            return $;
         }
     }
+
 }

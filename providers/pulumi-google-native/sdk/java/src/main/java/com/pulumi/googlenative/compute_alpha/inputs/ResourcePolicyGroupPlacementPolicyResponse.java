@@ -22,7 +22,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends com.pulumi
      * 
      */
     @Import(name="availabilityDomainCount", required=true)
-      private final Integer availabilityDomainCount;
+    private Integer availabilityDomainCount;
 
     public Integer availabilityDomainCount() {
         return this.availabilityDomainCount;
@@ -33,7 +33,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends com.pulumi
      * 
      */
     @Import(name="collocation", required=true)
-      private final String collocation;
+    private String collocation;
 
     public String collocation() {
         return this.collocation;
@@ -44,7 +44,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends com.pulumi
      * 
      */
     @Import(name="locality", required=true)
-      private final String locality;
+    private String locality;
 
     public String locality() {
         return this.locality;
@@ -55,7 +55,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends com.pulumi
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
@@ -66,7 +66,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends com.pulumi
      * 
      */
     @Import(name="style", required=true)
-      private final String style;
+    private String style;
 
     public String style() {
         return this.style;
@@ -77,91 +77,80 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends com.pulumi
      * 
      */
     @Import(name="vmCount", required=true)
-      private final Integer vmCount;
+    private Integer vmCount;
 
     public Integer vmCount() {
         return this.vmCount;
     }
 
-    public ResourcePolicyGroupPlacementPolicyResponse(
-        Integer availabilityDomainCount,
-        String collocation,
-        String locality,
-        String scope,
-        String style,
-        Integer vmCount) {
-        this.availabilityDomainCount = Objects.requireNonNull(availabilityDomainCount, "expected parameter 'availabilityDomainCount' to be non-null");
-        this.collocation = Objects.requireNonNull(collocation, "expected parameter 'collocation' to be non-null");
-        this.locality = Objects.requireNonNull(locality, "expected parameter 'locality' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.style = Objects.requireNonNull(style, "expected parameter 'style' to be non-null");
-        this.vmCount = Objects.requireNonNull(vmCount, "expected parameter 'vmCount' to be non-null");
-    }
+    private ResourcePolicyGroupPlacementPolicyResponse() {}
 
-    private ResourcePolicyGroupPlacementPolicyResponse() {
-        this.availabilityDomainCount = null;
-        this.collocation = null;
-        this.locality = null;
-        this.scope = null;
-        this.style = null;
-        this.vmCount = null;
+    private ResourcePolicyGroupPlacementPolicyResponse(ResourcePolicyGroupPlacementPolicyResponse $) {
+        this.availabilityDomainCount = $.availabilityDomainCount;
+        this.collocation = $.collocation;
+        this.locality = $.locality;
+        this.scope = $.scope;
+        this.style = $.style;
+        this.vmCount = $.vmCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyGroupPlacementPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer availabilityDomainCount;
-        private String collocation;
-        private String locality;
-        private String scope;
-        private String style;
-        private Integer vmCount;
+        private ResourcePolicyGroupPlacementPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyGroupPlacementPolicyResponse();
         }
 
         public Builder(ResourcePolicyGroupPlacementPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityDomainCount = defaults.availabilityDomainCount;
-    	      this.collocation = defaults.collocation;
-    	      this.locality = defaults.locality;
-    	      this.scope = defaults.scope;
-    	      this.style = defaults.style;
-    	      this.vmCount = defaults.vmCount;
+            $ = new ResourcePolicyGroupPlacementPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityDomainCount(Integer availabilityDomainCount) {
-            this.availabilityDomainCount = Objects.requireNonNull(availabilityDomainCount);
+            $.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
+
         public Builder collocation(String collocation) {
-            this.collocation = Objects.requireNonNull(collocation);
+            $.collocation = collocation;
             return this;
         }
+
         public Builder locality(String locality) {
-            this.locality = Objects.requireNonNull(locality);
+            $.locality = locality;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder style(String style) {
-            this.style = Objects.requireNonNull(style);
+            $.style = style;
             return this;
         }
+
         public Builder vmCount(Integer vmCount) {
-            this.vmCount = Objects.requireNonNull(vmCount);
+            $.vmCount = vmCount;
             return this;
-        }        public ResourcePolicyGroupPlacementPolicyResponse build() {
-            return new ResourcePolicyGroupPlacementPolicyResponse(availabilityDomainCount, collocation, locality, scope, style, vmCount);
+        }
+
+        public ResourcePolicyGroupPlacementPolicyResponse build() {
+            $.availabilityDomainCount = Objects.requireNonNull($.availabilityDomainCount, "expected parameter 'availabilityDomainCount' to be non-null");
+            $.collocation = Objects.requireNonNull($.collocation, "expected parameter 'collocation' to be non-null");
+            $.locality = Objects.requireNonNull($.locality, "expected parameter 'locality' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.style = Objects.requireNonNull($.style, "expected parameter 'style' to be non-null");
+            $.vmCount = Objects.requireNonNull($.vmCount, "expected parameter 'vmCount' to be non-null");
+            return $;
         }
     }
+
 }

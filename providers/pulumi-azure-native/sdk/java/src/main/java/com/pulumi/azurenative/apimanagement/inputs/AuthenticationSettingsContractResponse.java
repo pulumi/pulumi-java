@@ -24,10 +24,10 @@ public final class AuthenticationSettingsContractResponse extends com.pulumi.res
      * 
      */
     @Import(name="oAuth2")
-      private final @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2;
+    private @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2;
 
     public Optional<OAuth2AuthenticationSettingsContractResponse> oAuth2() {
-        return this.oAuth2 == null ? Optional.empty() : Optional.ofNullable(this.oAuth2);
+        return Optional.ofNullable(this.oAuth2);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AuthenticationSettingsContractResponse extends com.pulumi.res
      * 
      */
     @Import(name="openid")
-      private final @Nullable OpenIdAuthenticationSettingsContractResponse openid;
+    private @Nullable OpenIdAuthenticationSettingsContractResponse openid;
 
     public Optional<OpenIdAuthenticationSettingsContractResponse> openid() {
-        return this.openid == null ? Optional.empty() : Optional.ofNullable(this.openid);
+        return Optional.ofNullable(this.openid);
     }
 
-    public AuthenticationSettingsContractResponse(
-        @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2,
-        @Nullable OpenIdAuthenticationSettingsContractResponse openid) {
-        this.oAuth2 = oAuth2;
-        this.openid = openid;
-    }
+    private AuthenticationSettingsContractResponse() {}
 
-    private AuthenticationSettingsContractResponse() {
-        this.oAuth2 = null;
-        this.openid = null;
+    private AuthenticationSettingsContractResponse(AuthenticationSettingsContractResponse $) {
+        this.oAuth2 = $.oAuth2;
+        this.openid = $.openid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationSettingsContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2;
-        private @Nullable OpenIdAuthenticationSettingsContractResponse openid;
+        private AuthenticationSettingsContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationSettingsContractResponse();
         }
 
         public Builder(AuthenticationSettingsContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oAuth2 = defaults.oAuth2;
-    	      this.openid = defaults.openid;
+            $ = new AuthenticationSettingsContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder oAuth2(@Nullable OAuth2AuthenticationSettingsContractResponse oAuth2) {
-            this.oAuth2 = oAuth2;
+            $.oAuth2 = oAuth2;
             return this;
         }
+
         public Builder openid(@Nullable OpenIdAuthenticationSettingsContractResponse openid) {
-            this.openid = openid;
+            $.openid = openid;
             return this;
-        }        public AuthenticationSettingsContractResponse build() {
-            return new AuthenticationSettingsContractResponse(oAuth2, openid);
+        }
+
+        public AuthenticationSettingsContractResponse build() {
+            return $;
         }
     }
+
 }

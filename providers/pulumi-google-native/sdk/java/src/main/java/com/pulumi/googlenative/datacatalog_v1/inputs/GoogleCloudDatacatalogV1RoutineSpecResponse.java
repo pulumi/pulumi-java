@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends com.pulum
      * 
      */
     @Import(name="bigqueryRoutineSpec", required=true)
-      private final GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec;
+    private GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec;
 
     public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec() {
         return this.bigqueryRoutineSpec;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends com.pulum
      * 
      */
     @Import(name="definitionBody", required=true)
-      private final String definitionBody;
+    private String definitionBody;
 
     public String definitionBody() {
         return this.definitionBody;
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends com.pulum
      * 
      */
     @Import(name="language", required=true)
-      private final String language;
+    private String language;
 
     public String language() {
         return this.language;
@@ -57,7 +57,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends com.pulum
      * 
      */
     @Import(name="returnType", required=true)
-      private final String returnType;
+    private String returnType;
 
     public String returnType() {
         return this.returnType;
@@ -68,7 +68,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends com.pulum
      * 
      */
     @Import(name="routineArguments", required=true)
-      private final List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments;
+    private List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments;
 
     public List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments() {
         return this.routineArguments;
@@ -79,94 +79,84 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends com.pulum
      * 
      */
     @Import(name="routineType", required=true)
-      private final String routineType;
+    private String routineType;
 
     public String routineType() {
         return this.routineType;
     }
 
-    public GoogleCloudDatacatalogV1RoutineSpecResponse(
-        GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec,
-        String definitionBody,
-        String language,
-        String returnType,
-        List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments,
-        String routineType) {
-        this.bigqueryRoutineSpec = Objects.requireNonNull(bigqueryRoutineSpec, "expected parameter 'bigqueryRoutineSpec' to be non-null");
-        this.definitionBody = Objects.requireNonNull(definitionBody, "expected parameter 'definitionBody' to be non-null");
-        this.language = Objects.requireNonNull(language, "expected parameter 'language' to be non-null");
-        this.returnType = Objects.requireNonNull(returnType, "expected parameter 'returnType' to be non-null");
-        this.routineArguments = Objects.requireNonNull(routineArguments, "expected parameter 'routineArguments' to be non-null");
-        this.routineType = Objects.requireNonNull(routineType, "expected parameter 'routineType' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1RoutineSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1RoutineSpecResponse() {
-        this.bigqueryRoutineSpec = null;
-        this.definitionBody = null;
-        this.language = null;
-        this.returnType = null;
-        this.routineArguments = List.of();
-        this.routineType = null;
+    private GoogleCloudDatacatalogV1RoutineSpecResponse(GoogleCloudDatacatalogV1RoutineSpecResponse $) {
+        this.bigqueryRoutineSpec = $.bigqueryRoutineSpec;
+        this.definitionBody = $.definitionBody;
+        this.language = $.language;
+        this.returnType = $.returnType;
+        this.routineArguments = $.routineArguments;
+        this.routineType = $.routineType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1RoutineSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec;
-        private String definitionBody;
-        private String language;
-        private String returnType;
-        private List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments;
-        private String routineType;
+        private GoogleCloudDatacatalogV1RoutineSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1RoutineSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1RoutineSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryRoutineSpec = defaults.bigqueryRoutineSpec;
-    	      this.definitionBody = defaults.definitionBody;
-    	      this.language = defaults.language;
-    	      this.returnType = defaults.returnType;
-    	      this.routineArguments = defaults.routineArguments;
-    	      this.routineType = defaults.routineType;
+            $ = new GoogleCloudDatacatalogV1RoutineSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryRoutineSpec(GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec) {
-            this.bigqueryRoutineSpec = Objects.requireNonNull(bigqueryRoutineSpec);
+            $.bigqueryRoutineSpec = bigqueryRoutineSpec;
             return this;
         }
+
         public Builder definitionBody(String definitionBody) {
-            this.definitionBody = Objects.requireNonNull(definitionBody);
+            $.definitionBody = definitionBody;
             return this;
         }
+
         public Builder language(String language) {
-            this.language = Objects.requireNonNull(language);
+            $.language = language;
             return this;
         }
+
         public Builder returnType(String returnType) {
-            this.returnType = Objects.requireNonNull(returnType);
+            $.returnType = returnType;
             return this;
         }
+
         public Builder routineArguments(List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments) {
-            this.routineArguments = Objects.requireNonNull(routineArguments);
+            $.routineArguments = routineArguments;
             return this;
         }
+
         public Builder routineArguments(GoogleCloudDatacatalogV1RoutineSpecArgumentResponse... routineArguments) {
             return routineArguments(List.of(routineArguments));
         }
+
         public Builder routineType(String routineType) {
-            this.routineType = Objects.requireNonNull(routineType);
+            $.routineType = routineType;
             return this;
-        }        public GoogleCloudDatacatalogV1RoutineSpecResponse build() {
-            return new GoogleCloudDatacatalogV1RoutineSpecResponse(bigqueryRoutineSpec, definitionBody, language, returnType, routineArguments, routineType);
+        }
+
+        public GoogleCloudDatacatalogV1RoutineSpecResponse build() {
+            $.bigqueryRoutineSpec = Objects.requireNonNull($.bigqueryRoutineSpec, "expected parameter 'bigqueryRoutineSpec' to be non-null");
+            $.definitionBody = Objects.requireNonNull($.definitionBody, "expected parameter 'definitionBody' to be non-null");
+            $.language = Objects.requireNonNull($.language, "expected parameter 'language' to be non-null");
+            $.returnType = Objects.requireNonNull($.returnType, "expected parameter 'returnType' to be non-null");
+            $.routineArguments = Objects.requireNonNull($.routineArguments, "expected parameter 'routineArguments' to be non-null");
+            $.routineType = Objects.requireNonNull($.routineType, "expected parameter 'routineType' to be non-null");
+            return $;
         }
     }
+
 }

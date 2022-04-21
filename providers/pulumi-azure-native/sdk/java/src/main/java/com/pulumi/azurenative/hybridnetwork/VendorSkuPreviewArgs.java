@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hybridnetwork;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VendorSkuPreviewArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="previewSubscription")
-      private final @Nullable Output<String> previewSubscription;
+    private @Nullable Output<String> previewSubscription;
 
-    public Output<String> previewSubscription() {
-        return this.previewSubscription == null ? Codegen.empty() : this.previewSubscription;
+    public Optional<Output<String>> previewSubscription() {
+        return Optional.ofNullable(this.previewSubscription);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class VendorSkuPreviewArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="skuName", required=true)
-      private final Output<String> skuName;
+    private Output<String> skuName;
 
     public Output<String> skuName() {
         return this.skuName;
@@ -42,76 +42,70 @@ public final class VendorSkuPreviewArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="vendorName", required=true)
-      private final Output<String> vendorName;
+    private Output<String> vendorName;
 
     public Output<String> vendorName() {
         return this.vendorName;
     }
 
-    public VendorSkuPreviewArgs(
-        @Nullable Output<String> previewSubscription,
-        Output<String> skuName,
-        Output<String> vendorName) {
-        this.previewSubscription = previewSubscription;
-        this.skuName = Objects.requireNonNull(skuName, "expected parameter 'skuName' to be non-null");
-        this.vendorName = Objects.requireNonNull(vendorName, "expected parameter 'vendorName' to be non-null");
-    }
+    private VendorSkuPreviewArgs() {}
 
-    private VendorSkuPreviewArgs() {
-        this.previewSubscription = Codegen.empty();
-        this.skuName = Codegen.empty();
-        this.vendorName = Codegen.empty();
+    private VendorSkuPreviewArgs(VendorSkuPreviewArgs $) {
+        this.previewSubscription = $.previewSubscription;
+        this.skuName = $.skuName;
+        this.vendorName = $.vendorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VendorSkuPreviewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> previewSubscription;
-        private Output<String> skuName;
-        private Output<String> vendorName;
+        private VendorSkuPreviewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VendorSkuPreviewArgs();
         }
 
         public Builder(VendorSkuPreviewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.previewSubscription = defaults.previewSubscription;
-    	      this.skuName = defaults.skuName;
-    	      this.vendorName = defaults.vendorName;
+            $ = new VendorSkuPreviewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder previewSubscription(@Nullable Output<String> previewSubscription) {
-            this.previewSubscription = previewSubscription;
+            $.previewSubscription = previewSubscription;
             return this;
         }
-        public Builder previewSubscription(@Nullable String previewSubscription) {
-            this.previewSubscription = Codegen.ofNullable(previewSubscription);
-            return this;
+
+        public Builder previewSubscription(String previewSubscription) {
+            return previewSubscription(Output.of(previewSubscription));
         }
+
         public Builder skuName(Output<String> skuName) {
-            this.skuName = Objects.requireNonNull(skuName);
+            $.skuName = skuName;
             return this;
         }
+
         public Builder skuName(String skuName) {
-            this.skuName = Output.of(Objects.requireNonNull(skuName));
-            return this;
+            return skuName(Output.of(skuName));
         }
+
         public Builder vendorName(Output<String> vendorName) {
-            this.vendorName = Objects.requireNonNull(vendorName);
+            $.vendorName = vendorName;
             return this;
         }
+
         public Builder vendorName(String vendorName) {
-            this.vendorName = Output.of(Objects.requireNonNull(vendorName));
-            return this;
-        }        public VendorSkuPreviewArgs build() {
-            return new VendorSkuPreviewArgs(previewSubscription, skuName, vendorName);
+            return vendorName(Output.of(vendorName));
+        }
+
+        public VendorSkuPreviewArgs build() {
+            $.skuName = Objects.requireNonNull($.skuName, "expected parameter 'skuName' to be non-null");
+            $.vendorName = Objects.requireNonNull($.vendorName, "expected parameter 'vendorName' to be non-null");
+            return $;
         }
     }
+
 }

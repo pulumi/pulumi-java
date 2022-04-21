@@ -21,45 +21,45 @@ public final class GkeClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="namespacedGkeDeploymentTarget", required=true)
-      private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
+    private NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
 
     public NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget;
     }
 
-    public GkeClusterConfigResponse(NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
-        this.namespacedGkeDeploymentTarget = Objects.requireNonNull(namespacedGkeDeploymentTarget, "expected parameter 'namespacedGkeDeploymentTarget' to be non-null");
-    }
+    private GkeClusterConfigResponse() {}
 
-    private GkeClusterConfigResponse() {
-        this.namespacedGkeDeploymentTarget = null;
+    private GkeClusterConfigResponse(GkeClusterConfigResponse $) {
+        this.namespacedGkeDeploymentTarget = $.namespacedGkeDeploymentTarget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GkeClusterConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
+        private GkeClusterConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GkeClusterConfigResponse();
         }
 
         public Builder(GkeClusterConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespacedGkeDeploymentTarget = defaults.namespacedGkeDeploymentTarget;
+            $ = new GkeClusterConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder namespacedGkeDeploymentTarget(NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
-            this.namespacedGkeDeploymentTarget = Objects.requireNonNull(namespacedGkeDeploymentTarget);
+            $.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
             return this;
-        }        public GkeClusterConfigResponse build() {
-            return new GkeClusterConfigResponse(namespacedGkeDeploymentTarget);
+        }
+
+        public GkeClusterConfigResponse build() {
+            $.namespacedGkeDeploymentTarget = Objects.requireNonNull($.namespacedGkeDeploymentTarget, "expected parameter 'namespacedGkeDeploymentTarget' to be non-null");
+            return $;
         }
     }
+
 }

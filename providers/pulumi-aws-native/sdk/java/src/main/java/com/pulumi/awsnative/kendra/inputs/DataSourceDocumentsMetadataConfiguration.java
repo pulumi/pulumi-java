@@ -15,45 +15,44 @@ public final class DataSourceDocumentsMetadataConfiguration extends com.pulumi.r
     public static final DataSourceDocumentsMetadataConfiguration Empty = new DataSourceDocumentsMetadataConfiguration();
 
     @Import(name="s3Prefix")
-      private final @Nullable String s3Prefix;
+    private @Nullable String s3Prefix;
 
     public Optional<String> s3Prefix() {
-        return this.s3Prefix == null ? Optional.empty() : Optional.ofNullable(this.s3Prefix);
+        return Optional.ofNullable(this.s3Prefix);
     }
 
-    public DataSourceDocumentsMetadataConfiguration(@Nullable String s3Prefix) {
-        this.s3Prefix = s3Prefix;
-    }
+    private DataSourceDocumentsMetadataConfiguration() {}
 
-    private DataSourceDocumentsMetadataConfiguration() {
-        this.s3Prefix = null;
+    private DataSourceDocumentsMetadataConfiguration(DataSourceDocumentsMetadataConfiguration $) {
+        this.s3Prefix = $.s3Prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceDocumentsMetadataConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String s3Prefix;
+        private DataSourceDocumentsMetadataConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceDocumentsMetadataConfiguration();
         }
 
         public Builder(DataSourceDocumentsMetadataConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Prefix = defaults.s3Prefix;
+            $ = new DataSourceDocumentsMetadataConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Prefix(@Nullable String s3Prefix) {
-            this.s3Prefix = s3Prefix;
+            $.s3Prefix = s3Prefix;
             return this;
-        }        public DataSourceDocumentsMetadataConfiguration build() {
-            return new DataSourceDocumentsMetadataConfiguration(s3Prefix);
+        }
+
+        public DataSourceDocumentsMetadataConfiguration build() {
+            return $;
         }
     }
+
 }

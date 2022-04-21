@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="jobConfig", required=true)
-      private final GooglePrivacyDlpV2InspectJobConfigResponse jobConfig;
+    private GooglePrivacyDlpV2InspectJobConfigResponse jobConfig;
 
     public GooglePrivacyDlpV2InspectJobConfigResponse jobConfig() {
         return this.jobConfig;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends com.pulumi
      * 
      */
     @Import(name="snapshotInspectTemplate", required=true)
-      private final GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
+    private GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
 
     public GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate() {
         return this.snapshotInspectTemplate;
     }
 
-    public GooglePrivacyDlpV2RequestedOptionsResponse(
-        GooglePrivacyDlpV2InspectJobConfigResponse jobConfig,
-        GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
-        this.jobConfig = Objects.requireNonNull(jobConfig, "expected parameter 'jobConfig' to be non-null");
-        this.snapshotInspectTemplate = Objects.requireNonNull(snapshotInspectTemplate, "expected parameter 'snapshotInspectTemplate' to be non-null");
-    }
+    private GooglePrivacyDlpV2RequestedOptionsResponse() {}
 
-    private GooglePrivacyDlpV2RequestedOptionsResponse() {
-        this.jobConfig = null;
-        this.snapshotInspectTemplate = null;
+    private GooglePrivacyDlpV2RequestedOptionsResponse(GooglePrivacyDlpV2RequestedOptionsResponse $) {
+        this.jobConfig = $.jobConfig;
+        this.snapshotInspectTemplate = $.snapshotInspectTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RequestedOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2InspectJobConfigResponse jobConfig;
-        private GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
+        private GooglePrivacyDlpV2RequestedOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RequestedOptionsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2RequestedOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobConfig = defaults.jobConfig;
-    	      this.snapshotInspectTemplate = defaults.snapshotInspectTemplate;
+            $ = new GooglePrivacyDlpV2RequestedOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jobConfig(GooglePrivacyDlpV2InspectJobConfigResponse jobConfig) {
-            this.jobConfig = Objects.requireNonNull(jobConfig);
+            $.jobConfig = jobConfig;
             return this;
         }
+
         public Builder snapshotInspectTemplate(GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
-            this.snapshotInspectTemplate = Objects.requireNonNull(snapshotInspectTemplate);
+            $.snapshotInspectTemplate = snapshotInspectTemplate;
             return this;
-        }        public GooglePrivacyDlpV2RequestedOptionsResponse build() {
-            return new GooglePrivacyDlpV2RequestedOptionsResponse(jobConfig, snapshotInspectTemplate);
+        }
+
+        public GooglePrivacyDlpV2RequestedOptionsResponse build() {
+            $.jobConfig = Objects.requireNonNull($.jobConfig, "expected parameter 'jobConfig' to be non-null");
+            $.snapshotInspectTemplate = Objects.requireNonNull($.snapshotInspectTemplate, "expected parameter 'snapshotInspectTemplate' to be non-null");
+            return $;
         }
     }
+
 }

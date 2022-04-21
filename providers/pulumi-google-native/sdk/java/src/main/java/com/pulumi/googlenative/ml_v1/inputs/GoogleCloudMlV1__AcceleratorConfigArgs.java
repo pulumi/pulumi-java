@@ -5,10 +5,10 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__AcceleratorConfigType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<String> count;
+    private @Nullable Output<String> count;
 
-    public Output<String> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<String>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type;
+    private @Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type;
 
-    public Output<GoogleCloudMlV1__AcceleratorConfigType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<GoogleCloudMlV1__AcceleratorConfigType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public GoogleCloudMlV1__AcceleratorConfigArgs(
-        @Nullable Output<String> count,
-        @Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type) {
-        this.count = count;
-        this.type = type;
-    }
+    private GoogleCloudMlV1__AcceleratorConfigArgs() {}
 
-    private GoogleCloudMlV1__AcceleratorConfigArgs() {
-        this.count = Codegen.empty();
-        this.type = Codegen.empty();
+    private GoogleCloudMlV1__AcceleratorConfigArgs(GoogleCloudMlV1__AcceleratorConfigArgs $) {
+        this.count = $.count;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__AcceleratorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> count;
-        private @Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type;
+        private GoogleCloudMlV1__AcceleratorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__AcceleratorConfigArgs();
         }
 
         public Builder(GoogleCloudMlV1__AcceleratorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudMlV1__AcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<String> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable String count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(String count) {
+            return count(Output.of(count));
         }
+
         public Builder type(@Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable GoogleCloudMlV1__AcceleratorConfigType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public GoogleCloudMlV1__AcceleratorConfigArgs build() {
-            return new GoogleCloudMlV1__AcceleratorConfigArgs(count, type);
+
+        public Builder type(GoogleCloudMlV1__AcceleratorConfigType type) {
+            return type(Output.of(type));
+        }
+
+        public GoogleCloudMlV1__AcceleratorConfigArgs build() {
+            return $;
         }
     }
+
 }

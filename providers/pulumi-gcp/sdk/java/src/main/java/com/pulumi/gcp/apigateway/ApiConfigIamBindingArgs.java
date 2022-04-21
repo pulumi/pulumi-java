@@ -5,11 +5,11 @@ package com.pulumi.gcp.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.apigateway.inputs.ApiConfigIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,28 +23,28 @@ public final class ApiConfigIamBindingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="api", required=true)
-      private final Output<String> api;
+    private Output<String> api;
 
     public Output<String> api() {
         return this.api;
     }
 
     @Import(name="apiConfig", required=true)
-      private final Output<String> apiConfig;
+    private Output<String> apiConfig;
 
     public Output<String> apiConfig() {
         return this.apiConfig;
     }
 
     @Import(name="condition")
-      private final @Nullable Output<ApiConfigIamBindingConditionArgs> condition;
+    private @Nullable Output<ApiConfigIamBindingConditionArgs> condition;
 
-    public Output<ApiConfigIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ApiConfigIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -56,10 +56,10 @@ public final class ApiConfigIamBindingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -69,118 +69,106 @@ public final class ApiConfigIamBindingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public ApiConfigIamBindingArgs(
-        Output<String> api,
-        Output<String> apiConfig,
-        @Nullable Output<ApiConfigIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        Output<String> role) {
-        this.api = Objects.requireNonNull(api, "expected parameter 'api' to be non-null");
-        this.apiConfig = Objects.requireNonNull(apiConfig, "expected parameter 'apiConfig' to be non-null");
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private ApiConfigIamBindingArgs() {}
 
-    private ApiConfigIamBindingArgs() {
-        this.api = Codegen.empty();
-        this.apiConfig = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
+    private ApiConfigIamBindingArgs(ApiConfigIamBindingArgs $) {
+        this.api = $.api;
+        this.apiConfig = $.apiConfig;
+        this.condition = $.condition;
+        this.members = $.members;
+        this.project = $.project;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> api;
-        private Output<String> apiConfig;
-        private @Nullable Output<ApiConfigIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private Output<String> role;
+        private ApiConfigIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigIamBindingArgs();
         }
 
         public Builder(ApiConfigIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.api = defaults.api;
-    	      this.apiConfig = defaults.apiConfig;
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
+            $ = new ApiConfigIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder api(Output<String> api) {
-            this.api = Objects.requireNonNull(api);
+            $.api = api;
             return this;
         }
+
         public Builder api(String api) {
-            this.api = Output.of(Objects.requireNonNull(api));
-            return this;
+            return api(Output.of(api));
         }
+
         public Builder apiConfig(Output<String> apiConfig) {
-            this.apiConfig = Objects.requireNonNull(apiConfig);
+            $.apiConfig = apiConfig;
             return this;
         }
+
         public Builder apiConfig(String apiConfig) {
-            this.apiConfig = Output.of(Objects.requireNonNull(apiConfig));
-            return this;
+            return apiConfig(Output.of(apiConfig));
         }
+
         public Builder condition(@Nullable Output<ApiConfigIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ApiConfigIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ApiConfigIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public ApiConfigIamBindingArgs build() {
-            return new ApiConfigIamBindingArgs(api, apiConfig, condition, members, project, role);
+            return role(Output.of(role));
+        }
+
+        public ApiConfigIamBindingArgs build() {
+            $.api = Objects.requireNonNull($.api, "expected parameter 'api' to be non-null");
+            $.apiConfig = Objects.requireNonNull($.apiConfig, "expected parameter 'apiConfig' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

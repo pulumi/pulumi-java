@@ -25,10 +25,10 @@ public final class AppImageConfigKernelGatewayImageConfig extends com.pulumi.res
      * 
      */
     @Import(name="fileSystemConfig")
-      private final @Nullable AppImageConfigFileSystemConfig fileSystemConfig;
+    private @Nullable AppImageConfigFileSystemConfig fileSystemConfig;
 
     public Optional<AppImageConfigFileSystemConfig> fileSystemConfig() {
-        return this.fileSystemConfig == null ? Optional.empty() : Optional.ofNullable(this.fileSystemConfig);
+        return Optional.ofNullable(this.fileSystemConfig);
     }
 
     /**
@@ -36,58 +36,55 @@ public final class AppImageConfigKernelGatewayImageConfig extends com.pulumi.res
      * 
      */
     @Import(name="kernelSpecs", required=true)
-      private final List<AppImageConfigKernelSpec> kernelSpecs;
+    private List<AppImageConfigKernelSpec> kernelSpecs;
 
     public List<AppImageConfigKernelSpec> kernelSpecs() {
         return this.kernelSpecs;
     }
 
-    public AppImageConfigKernelGatewayImageConfig(
-        @Nullable AppImageConfigFileSystemConfig fileSystemConfig,
-        List<AppImageConfigKernelSpec> kernelSpecs) {
-        this.fileSystemConfig = fileSystemConfig;
-        this.kernelSpecs = Objects.requireNonNull(kernelSpecs, "expected parameter 'kernelSpecs' to be non-null");
-    }
+    private AppImageConfigKernelGatewayImageConfig() {}
 
-    private AppImageConfigKernelGatewayImageConfig() {
-        this.fileSystemConfig = null;
-        this.kernelSpecs = List.of();
+    private AppImageConfigKernelGatewayImageConfig(AppImageConfigKernelGatewayImageConfig $) {
+        this.fileSystemConfig = $.fileSystemConfig;
+        this.kernelSpecs = $.kernelSpecs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppImageConfigKernelGatewayImageConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AppImageConfigFileSystemConfig fileSystemConfig;
-        private List<AppImageConfigKernelSpec> kernelSpecs;
+        private AppImageConfigKernelGatewayImageConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppImageConfigKernelGatewayImageConfig();
         }
 
         public Builder(AppImageConfigKernelGatewayImageConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileSystemConfig = defaults.fileSystemConfig;
-    	      this.kernelSpecs = defaults.kernelSpecs;
+            $ = new AppImageConfigKernelGatewayImageConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder fileSystemConfig(@Nullable AppImageConfigFileSystemConfig fileSystemConfig) {
-            this.fileSystemConfig = fileSystemConfig;
+            $.fileSystemConfig = fileSystemConfig;
             return this;
         }
+
         public Builder kernelSpecs(List<AppImageConfigKernelSpec> kernelSpecs) {
-            this.kernelSpecs = Objects.requireNonNull(kernelSpecs);
+            $.kernelSpecs = kernelSpecs;
             return this;
         }
+
         public Builder kernelSpecs(AppImageConfigKernelSpec... kernelSpecs) {
             return kernelSpecs(List.of(kernelSpecs));
-        }        public AppImageConfigKernelGatewayImageConfig build() {
-            return new AppImageConfigKernelGatewayImageConfig(fileSystemConfig, kernelSpecs);
+        }
+
+        public AppImageConfigKernelGatewayImageConfig build() {
+            $.kernelSpecs = Objects.requireNonNull($.kernelSpecs, "expected parameter 'kernelSpecs' to be non-null");
+            return $;
         }
     }
+
 }

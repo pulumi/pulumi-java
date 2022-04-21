@@ -19,45 +19,44 @@ public final class ManagedExecutionProperties extends com.pulumi.resources.Invok
     public static final ManagedExecutionProperties Empty = new ManagedExecutionProperties();
 
     @Import(name="active")
-      private final @Nullable Boolean active;
+    private @Nullable Boolean active;
 
     public Optional<Boolean> active() {
-        return this.active == null ? Optional.empty() : Optional.ofNullable(this.active);
+        return Optional.ofNullable(this.active);
     }
 
-    public ManagedExecutionProperties(@Nullable Boolean active) {
-        this.active = active;
-    }
+    private ManagedExecutionProperties() {}
 
-    private ManagedExecutionProperties() {
-        this.active = null;
+    private ManagedExecutionProperties(ManagedExecutionProperties $) {
+        this.active = $.active;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedExecutionProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean active;
+        private ManagedExecutionProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedExecutionProperties();
         }
 
         public Builder(ManagedExecutionProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
+            $ = new ManagedExecutionProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder active(@Nullable Boolean active) {
-            this.active = active;
+            $.active = active;
             return this;
-        }        public ManagedExecutionProperties build() {
-            return new ManagedExecutionProperties(active);
+        }
+
+        public ManagedExecutionProperties build() {
+            return $;
         }
     }
+
 }

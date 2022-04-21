@@ -9,10 +9,10 @@ import com.pulumi.azurenative.automation.inputs.TargetPropertiesArgs;
 import com.pulumi.azurenative.automation.inputs.WindowsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class UpdateConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="azureVirtualMachines")
-      private final @Nullable Output<List<String>> azureVirtualMachines;
+    private @Nullable Output<List<String>> azureVirtualMachines;
 
-    public Output<List<String>> azureVirtualMachines() {
-        return this.azureVirtualMachines == null ? Codegen.empty() : this.azureVirtualMachines;
+    public Optional<Output<List<String>>> azureVirtualMachines() {
+        return Optional.ofNullable(this.azureVirtualMachines);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class UpdateConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class UpdateConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="linux")
-      private final @Nullable Output<LinuxPropertiesArgs> linux;
+    private @Nullable Output<LinuxPropertiesArgs> linux;
 
-    public Output<LinuxPropertiesArgs> linux() {
-        return this.linux == null ? Codegen.empty() : this.linux;
+    public Optional<Output<LinuxPropertiesArgs>> linux() {
+        return Optional.ofNullable(this.linux);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class UpdateConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="nonAzureComputerNames")
-      private final @Nullable Output<List<String>> nonAzureComputerNames;
+    private @Nullable Output<List<String>> nonAzureComputerNames;
 
-    public Output<List<String>> nonAzureComputerNames() {
-        return this.nonAzureComputerNames == null ? Codegen.empty() : this.nonAzureComputerNames;
+    public Optional<Output<List<String>>> nonAzureComputerNames() {
+        return Optional.ofNullable(this.nonAzureComputerNames);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class UpdateConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="operatingSystem", required=true)
-      private final Output<OperatingSystemType> operatingSystem;
+    private Output<OperatingSystemType> operatingSystem;
 
     public Output<OperatingSystemType> operatingSystem() {
         return this.operatingSystem;
@@ -84,10 +84,10 @@ public final class UpdateConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="targets")
-      private final @Nullable Output<TargetPropertiesArgs> targets;
+    private @Nullable Output<TargetPropertiesArgs> targets;
 
-    public Output<TargetPropertiesArgs> targets() {
-        return this.targets == null ? Codegen.empty() : this.targets;
+    public Optional<Output<TargetPropertiesArgs>> targets() {
+        return Optional.ofNullable(this.targets);
     }
 
     /**
@@ -95,134 +95,117 @@ public final class UpdateConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="windows")
-      private final @Nullable Output<WindowsPropertiesArgs> windows;
+    private @Nullable Output<WindowsPropertiesArgs> windows;
 
-    public Output<WindowsPropertiesArgs> windows() {
-        return this.windows == null ? Codegen.empty() : this.windows;
+    public Optional<Output<WindowsPropertiesArgs>> windows() {
+        return Optional.ofNullable(this.windows);
     }
 
-    public UpdateConfigurationArgs(
-        @Nullable Output<List<String>> azureVirtualMachines,
-        @Nullable Output<String> duration,
-        @Nullable Output<LinuxPropertiesArgs> linux,
-        @Nullable Output<List<String>> nonAzureComputerNames,
-        Output<OperatingSystemType> operatingSystem,
-        @Nullable Output<TargetPropertiesArgs> targets,
-        @Nullable Output<WindowsPropertiesArgs> windows) {
-        this.azureVirtualMachines = azureVirtualMachines;
-        this.duration = duration;
-        this.linux = linux;
-        this.nonAzureComputerNames = nonAzureComputerNames;
-        this.operatingSystem = Objects.requireNonNull(operatingSystem, "expected parameter 'operatingSystem' to be non-null");
-        this.targets = targets;
-        this.windows = windows;
-    }
+    private UpdateConfigurationArgs() {}
 
-    private UpdateConfigurationArgs() {
-        this.azureVirtualMachines = Codegen.empty();
-        this.duration = Codegen.empty();
-        this.linux = Codegen.empty();
-        this.nonAzureComputerNames = Codegen.empty();
-        this.operatingSystem = Codegen.empty();
-        this.targets = Codegen.empty();
-        this.windows = Codegen.empty();
+    private UpdateConfigurationArgs(UpdateConfigurationArgs $) {
+        this.azureVirtualMachines = $.azureVirtualMachines;
+        this.duration = $.duration;
+        this.linux = $.linux;
+        this.nonAzureComputerNames = $.nonAzureComputerNames;
+        this.operatingSystem = $.operatingSystem;
+        this.targets = $.targets;
+        this.windows = $.windows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpdateConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> azureVirtualMachines;
-        private @Nullable Output<String> duration;
-        private @Nullable Output<LinuxPropertiesArgs> linux;
-        private @Nullable Output<List<String>> nonAzureComputerNames;
-        private Output<OperatingSystemType> operatingSystem;
-        private @Nullable Output<TargetPropertiesArgs> targets;
-        private @Nullable Output<WindowsPropertiesArgs> windows;
+        private UpdateConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpdateConfigurationArgs();
         }
 
         public Builder(UpdateConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureVirtualMachines = defaults.azureVirtualMachines;
-    	      this.duration = defaults.duration;
-    	      this.linux = defaults.linux;
-    	      this.nonAzureComputerNames = defaults.nonAzureComputerNames;
-    	      this.operatingSystem = defaults.operatingSystem;
-    	      this.targets = defaults.targets;
-    	      this.windows = defaults.windows;
+            $ = new UpdateConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureVirtualMachines(@Nullable Output<List<String>> azureVirtualMachines) {
-            this.azureVirtualMachines = azureVirtualMachines;
+            $.azureVirtualMachines = azureVirtualMachines;
             return this;
         }
-        public Builder azureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
-            this.azureVirtualMachines = Codegen.ofNullable(azureVirtualMachines);
-            return this;
+
+        public Builder azureVirtualMachines(List<String> azureVirtualMachines) {
+            return azureVirtualMachines(Output.of(azureVirtualMachines));
         }
+
         public Builder azureVirtualMachines(String... azureVirtualMachines) {
             return azureVirtualMachines(List.of(azureVirtualMachines));
         }
+
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder linux(@Nullable Output<LinuxPropertiesArgs> linux) {
-            this.linux = linux;
+            $.linux = linux;
             return this;
         }
-        public Builder linux(@Nullable LinuxPropertiesArgs linux) {
-            this.linux = Codegen.ofNullable(linux);
-            return this;
+
+        public Builder linux(LinuxPropertiesArgs linux) {
+            return linux(Output.of(linux));
         }
+
         public Builder nonAzureComputerNames(@Nullable Output<List<String>> nonAzureComputerNames) {
-            this.nonAzureComputerNames = nonAzureComputerNames;
+            $.nonAzureComputerNames = nonAzureComputerNames;
             return this;
         }
-        public Builder nonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
-            this.nonAzureComputerNames = Codegen.ofNullable(nonAzureComputerNames);
-            return this;
+
+        public Builder nonAzureComputerNames(List<String> nonAzureComputerNames) {
+            return nonAzureComputerNames(Output.of(nonAzureComputerNames));
         }
+
         public Builder nonAzureComputerNames(String... nonAzureComputerNames) {
             return nonAzureComputerNames(List.of(nonAzureComputerNames));
         }
+
         public Builder operatingSystem(Output<OperatingSystemType> operatingSystem) {
-            this.operatingSystem = Objects.requireNonNull(operatingSystem);
+            $.operatingSystem = operatingSystem;
             return this;
         }
+
         public Builder operatingSystem(OperatingSystemType operatingSystem) {
-            this.operatingSystem = Output.of(Objects.requireNonNull(operatingSystem));
-            return this;
+            return operatingSystem(Output.of(operatingSystem));
         }
+
         public Builder targets(@Nullable Output<TargetPropertiesArgs> targets) {
-            this.targets = targets;
+            $.targets = targets;
             return this;
         }
-        public Builder targets(@Nullable TargetPropertiesArgs targets) {
-            this.targets = Codegen.ofNullable(targets);
-            return this;
+
+        public Builder targets(TargetPropertiesArgs targets) {
+            return targets(Output.of(targets));
         }
+
         public Builder windows(@Nullable Output<WindowsPropertiesArgs> windows) {
-            this.windows = windows;
+            $.windows = windows;
             return this;
         }
-        public Builder windows(@Nullable WindowsPropertiesArgs windows) {
-            this.windows = Codegen.ofNullable(windows);
-            return this;
-        }        public UpdateConfigurationArgs build() {
-            return new UpdateConfigurationArgs(azureVirtualMachines, duration, linux, nonAzureComputerNames, operatingSystem, targets, windows);
+
+        public Builder windows(WindowsPropertiesArgs windows) {
+            return windows(Output.of(windows));
+        }
+
+        public UpdateConfigurationArgs build() {
+            $.operatingSystem = Objects.requireNonNull($.operatingSystem, "expected parameter 'operatingSystem' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @Import(name="dropHandoffMessages", required=true)
-      private final Boolean dropHandoffMessages;
+    private Boolean dropHandoffMessages;
 
     public Boolean dropHandoffMessages() {
         return this.dropHandoffMessages;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @Import(name="dropIvrMessages", required=true)
-      private final Boolean dropIvrMessages;
+    private Boolean dropIvrMessages;
 
     public Boolean dropIvrMessages() {
         return this.dropIvrMessages;
@@ -43,64 +43,59 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @Import(name="dropVirtualAgentMessages", required=true)
-      private final Boolean dropVirtualAgentMessages;
+    private Boolean dropVirtualAgentMessages;
 
     public Boolean dropVirtualAgentMessages() {
         return this.dropVirtualAgentMessages;
     }
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse(
-        Boolean dropHandoffMessages,
-        Boolean dropIvrMessages,
-        Boolean dropVirtualAgentMessages) {
-        this.dropHandoffMessages = Objects.requireNonNull(dropHandoffMessages, "expected parameter 'dropHandoffMessages' to be non-null");
-        this.dropIvrMessages = Objects.requireNonNull(dropIvrMessages, "expected parameter 'dropIvrMessages' to be non-null");
-        this.dropVirtualAgentMessages = Objects.requireNonNull(dropVirtualAgentMessages, "expected parameter 'dropVirtualAgentMessages' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse() {}
 
-    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse() {
-        this.dropHandoffMessages = null;
-        this.dropIvrMessages = null;
-        this.dropVirtualAgentMessages = null;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse $) {
+        this.dropHandoffMessages = $.dropHandoffMessages;
+        this.dropIvrMessages = $.dropIvrMessages;
+        this.dropVirtualAgentMessages = $.dropVirtualAgentMessages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean dropHandoffMessages;
-        private Boolean dropIvrMessages;
-        private Boolean dropVirtualAgentMessages;
+        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dropHandoffMessages = defaults.dropHandoffMessages;
-    	      this.dropIvrMessages = defaults.dropIvrMessages;
-    	      this.dropVirtualAgentMessages = defaults.dropVirtualAgentMessages;
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dropHandoffMessages(Boolean dropHandoffMessages) {
-            this.dropHandoffMessages = Objects.requireNonNull(dropHandoffMessages);
+            $.dropHandoffMessages = dropHandoffMessages;
             return this;
         }
+
         public Builder dropIvrMessages(Boolean dropIvrMessages) {
-            this.dropIvrMessages = Objects.requireNonNull(dropIvrMessages);
+            $.dropIvrMessages = dropIvrMessages;
             return this;
         }
+
         public Builder dropVirtualAgentMessages(Boolean dropVirtualAgentMessages) {
-            this.dropVirtualAgentMessages = Objects.requireNonNull(dropVirtualAgentMessages);
+            $.dropVirtualAgentMessages = dropVirtualAgentMessages;
             return this;
-        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse build() {
-            return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse(dropHandoffMessages, dropIvrMessages, dropVirtualAgentMessages);
+        }
+
+        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse build() {
+            $.dropHandoffMessages = Objects.requireNonNull($.dropHandoffMessages, "expected parameter 'dropHandoffMessages' to be non-null");
+            $.dropIvrMessages = Objects.requireNonNull($.dropIvrMessages, "expected parameter 'dropIvrMessages' to be non-null");
+            $.dropVirtualAgentMessages = Objects.requireNonNull($.dropVirtualAgentMessages, "expected parameter 'dropVirtualAgentMessages' to be non-null");
+            return $;
         }
     }
+
 }

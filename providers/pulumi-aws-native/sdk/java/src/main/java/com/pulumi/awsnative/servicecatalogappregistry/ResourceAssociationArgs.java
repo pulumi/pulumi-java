@@ -6,7 +6,6 @@ package com.pulumi.awsnative.servicecatalogappregistry;
 import com.pulumi.awsnative.servicecatalogappregistry.enums.ResourceAssociationResourceType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="application", required=true)
-      private final Output<String> application;
+    private Output<String> application;
 
     public Output<String> application() {
         return this.application;
@@ -31,7 +30,7 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resource", required=true)
-      private final Output<String> resource;
+    private Output<String> resource;
 
     public Output<String> resource() {
         return this.resource;
@@ -42,76 +41,71 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<ResourceAssociationResourceType> resourceType;
+    private Output<ResourceAssociationResourceType> resourceType;
 
     public Output<ResourceAssociationResourceType> resourceType() {
         return this.resourceType;
     }
 
-    public ResourceAssociationArgs(
-        Output<String> application,
-        Output<String> resource,
-        Output<ResourceAssociationResourceType> resourceType) {
-        this.application = Objects.requireNonNull(application, "expected parameter 'application' to be non-null");
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private ResourceAssociationArgs() {}
 
-    private ResourceAssociationArgs() {
-        this.application = Codegen.empty();
-        this.resource = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private ResourceAssociationArgs(ResourceAssociationArgs $) {
+        this.application = $.application;
+        this.resource = $.resource;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> application;
-        private Output<String> resource;
-        private Output<ResourceAssociationResourceType> resourceType;
+        private ResourceAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceAssociationArgs();
         }
 
         public Builder(ResourceAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.application = defaults.application;
-    	      this.resource = defaults.resource;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ResourceAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder application(Output<String> application) {
-            this.application = Objects.requireNonNull(application);
+            $.application = application;
             return this;
         }
+
         public Builder application(String application) {
-            this.application = Output.of(Objects.requireNonNull(application));
-            return this;
+            return application(Output.of(application));
         }
+
         public Builder resource(Output<String> resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Output.of(Objects.requireNonNull(resource));
-            return this;
+            return resource(Output.of(resource));
         }
+
         public Builder resourceType(Output<ResourceAssociationResourceType> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(ResourceAssociationResourceType resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
-        }        public ResourceAssociationArgs build() {
-            return new ResourceAssociationArgs(application, resource, resourceType);
+            return resourceType(Output.of(resourceType));
+        }
+
+        public ResourceAssociationArgs build() {
+            $.application = Objects.requireNonNull($.application, "expected parameter 'application' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

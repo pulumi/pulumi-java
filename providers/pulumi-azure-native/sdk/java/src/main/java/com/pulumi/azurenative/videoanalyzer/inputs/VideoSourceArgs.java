@@ -24,7 +24,7 @@ public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -35,7 +35,7 @@ public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeSequences", required=true)
-      private final Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
+    private Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
 
     public Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences() {
         return this.timeSequences;
@@ -47,7 +47,7 @@ public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -58,89 +58,82 @@ public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="videoName", required=true)
-      private final Output<String> videoName;
+    private Output<String> videoName;
 
     public Output<String> videoName() {
         return this.videoName;
     }
 
-    public VideoSourceArgs(
-        Output<String> name,
-        Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences,
-        Output<String> type,
-        Output<String> videoName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.timeSequences = Objects.requireNonNull(timeSequences, "expected parameter 'timeSequences' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.videoName = Objects.requireNonNull(videoName, "expected parameter 'videoName' to be non-null");
-    }
+    private VideoSourceArgs() {}
 
-    private VideoSourceArgs() {
-        this.name = Codegen.empty();
-        this.timeSequences = Codegen.empty();
-        this.type = Codegen.empty();
-        this.videoName = Codegen.empty();
+    private VideoSourceArgs(VideoSourceArgs $) {
+        this.name = $.name;
+        this.timeSequences = $.timeSequences;
+        this.type = $.type;
+        this.videoName = $.videoName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
-        private Output<String> type;
-        private Output<String> videoName;
+        private VideoSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoSourceArgs();
         }
 
         public Builder(VideoSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.timeSequences = defaults.timeSequences;
-    	      this.type = defaults.type;
-    	      this.videoName = defaults.videoName;
+            $ = new VideoSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder timeSequences(Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences) {
-            this.timeSequences = Objects.requireNonNull(timeSequences);
+            $.timeSequences = timeSequences;
             return this;
         }
+
         public Builder timeSequences(VideoSequenceAbsoluteTimeMarkersArgs timeSequences) {
-            this.timeSequences = Output.of(Objects.requireNonNull(timeSequences));
-            return this;
+            return timeSequences(Output.of(timeSequences));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder videoName(Output<String> videoName) {
-            this.videoName = Objects.requireNonNull(videoName);
+            $.videoName = videoName;
             return this;
         }
+
         public Builder videoName(String videoName) {
-            this.videoName = Output.of(Objects.requireNonNull(videoName));
-            return this;
-        }        public VideoSourceArgs build() {
-            return new VideoSourceArgs(name, timeSequences, type, videoName);
+            return videoName(Output.of(videoName));
+        }
+
+        public VideoSourceArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.timeSequences = Objects.requireNonNull($.timeSequences, "expected parameter 'timeSequences' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.videoName = Objects.requireNonNull($.videoName, "expected parameter 'videoName' to be non-null");
+            return $;
         }
     }
+
 }

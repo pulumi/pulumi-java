@@ -13,7 +13,7 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork ex
     public static final GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork Empty = new GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork();
 
     @Import(name="expirationTime", required=true)
-      private final String expirationTime;
+    private String expirationTime;
 
     public String expirationTime() {
         return this.expirationTime;
@@ -24,71 +24,66 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork ex
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork(
-        String expirationTime,
-        String name,
-        String value) {
-        this.expirationTime = Objects.requireNonNull(expirationTime, "expected parameter 'expirationTime' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork() {}
 
-    private GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork() {
-        this.expirationTime = null;
-        this.name = null;
-        this.value = null;
+    private GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork(GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork $) {
+        this.expirationTime = $.expirationTime;
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expirationTime;
-        private String name;
-        private String value;
+        private GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork();
         }
 
         public Builder(GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTime(String expirationTime) {
-            this.expirationTime = Objects.requireNonNull(expirationTime);
+            $.expirationTime = expirationTime;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork build() {
-            return new GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork(expirationTime, name, value);
+        }
+
+        public GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork build() {
+            $.expirationTime = Objects.requireNonNull($.expirationTime, "expected parameter 'expirationTime' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

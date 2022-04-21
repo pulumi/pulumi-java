@@ -24,10 +24,10 @@ public final class AutoHealRulesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="actions")
-      private final @Nullable AutoHealActionsResponse actions;
+    private @Nullable AutoHealActionsResponse actions;
 
     public Optional<AutoHealActionsResponse> actions() {
-        return this.actions == null ? Optional.empty() : Optional.ofNullable(this.actions);
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AutoHealRulesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="triggers")
-      private final @Nullable AutoHealTriggersResponse triggers;
+    private @Nullable AutoHealTriggersResponse triggers;
 
     public Optional<AutoHealTriggersResponse> triggers() {
-        return this.triggers == null ? Optional.empty() : Optional.ofNullable(this.triggers);
+        return Optional.ofNullable(this.triggers);
     }
 
-    public AutoHealRulesResponse(
-        @Nullable AutoHealActionsResponse actions,
-        @Nullable AutoHealTriggersResponse triggers) {
-        this.actions = actions;
-        this.triggers = triggers;
-    }
+    private AutoHealRulesResponse() {}
 
-    private AutoHealRulesResponse() {
-        this.actions = null;
-        this.triggers = null;
+    private AutoHealRulesResponse(AutoHealRulesResponse $) {
+        this.actions = $.actions;
+        this.triggers = $.triggers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoHealRulesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutoHealActionsResponse actions;
-        private @Nullable AutoHealTriggersResponse triggers;
+        private AutoHealRulesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoHealRulesResponse();
         }
 
         public Builder(AutoHealRulesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.triggers = defaults.triggers;
+            $ = new AutoHealRulesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable AutoHealActionsResponse actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
+
         public Builder triggers(@Nullable AutoHealTriggersResponse triggers) {
-            this.triggers = triggers;
+            $.triggers = triggers;
             return this;
-        }        public AutoHealRulesResponse build() {
-            return new AutoHealRulesResponse(actions, triggers);
+        }
+
+        public AutoHealRulesResponse build() {
+            return $;
         }
     }
+
 }

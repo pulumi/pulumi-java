@@ -5,9 +5,9 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,84 @@ public final class PolicyTagIamMemberConditionArgs extends com.pulumi.resources.
     public static final PolicyTagIamMemberConditionArgs Empty = new PolicyTagIamMemberConditionArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="expression", required=true)
-      private final Output<String> expression;
+    private Output<String> expression;
 
     public Output<String> expression() {
         return this.expression;
     }
 
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public PolicyTagIamMemberConditionArgs(
-        @Nullable Output<String> description,
-        Output<String> expression,
-        Output<String> title) {
-        this.description = description;
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private PolicyTagIamMemberConditionArgs() {}
 
-    private PolicyTagIamMemberConditionArgs() {
-        this.description = Codegen.empty();
-        this.expression = Codegen.empty();
-        this.title = Codegen.empty();
+    private PolicyTagIamMemberConditionArgs(PolicyTagIamMemberConditionArgs $) {
+        this.description = $.description;
+        this.expression = $.expression;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyTagIamMemberConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> expression;
-        private Output<String> title;
+        private PolicyTagIamMemberConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyTagIamMemberConditionArgs();
         }
 
         public Builder(PolicyTagIamMemberConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.expression = defaults.expression;
-    	      this.title = defaults.title;
+            $ = new PolicyTagIamMemberConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expression(Output<String> expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Output.of(Objects.requireNonNull(expression));
-            return this;
+            return expression(Output.of(expression));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public PolicyTagIamMemberConditionArgs build() {
-            return new PolicyTagIamMemberConditionArgs(description, expression, title);
+            return title(Output.of(title));
+        }
+
+        public PolicyTagIamMemberConditionArgs build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

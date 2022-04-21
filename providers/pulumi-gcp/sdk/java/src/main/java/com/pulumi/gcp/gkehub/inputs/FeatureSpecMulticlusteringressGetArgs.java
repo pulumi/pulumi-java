@@ -5,7 +5,6 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FeatureSpecMulticlusteringressGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="configMembership", required=true)
-      private final Output<String> configMembership;
+    private Output<String> configMembership;
 
     public Output<String> configMembership() {
         return this.configMembership;
     }
 
-    public FeatureSpecMulticlusteringressGetArgs(Output<String> configMembership) {
-        this.configMembership = Objects.requireNonNull(configMembership, "expected parameter 'configMembership' to be non-null");
-    }
+    private FeatureSpecMulticlusteringressGetArgs() {}
 
-    private FeatureSpecMulticlusteringressGetArgs() {
-        this.configMembership = Codegen.empty();
+    private FeatureSpecMulticlusteringressGetArgs(FeatureSpecMulticlusteringressGetArgs $) {
+        this.configMembership = $.configMembership;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureSpecMulticlusteringressGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configMembership;
+        private FeatureSpecMulticlusteringressGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureSpecMulticlusteringressGetArgs();
         }
 
         public Builder(FeatureSpecMulticlusteringressGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMembership = defaults.configMembership;
+            $ = new FeatureSpecMulticlusteringressGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configMembership(Output<String> configMembership) {
-            this.configMembership = Objects.requireNonNull(configMembership);
+            $.configMembership = configMembership;
             return this;
         }
+
         public Builder configMembership(String configMembership) {
-            this.configMembership = Output.of(Objects.requireNonNull(configMembership));
-            return this;
-        }        public FeatureSpecMulticlusteringressGetArgs build() {
-            return new FeatureSpecMulticlusteringressGetArgs(configMembership);
+            return configMembership(Output.of(configMembership));
+        }
+
+        public FeatureSpecMulticlusteringressGetArgs build() {
+            $.configMembership = Objects.requireNonNull($.configMembership, "expected parameter 'configMembership' to be non-null");
+            return $;
         }
     }
+
 }

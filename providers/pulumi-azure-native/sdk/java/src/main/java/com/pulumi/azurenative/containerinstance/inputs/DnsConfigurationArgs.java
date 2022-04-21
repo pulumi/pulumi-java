@@ -5,10 +5,10 @@ package com.pulumi.azurenative.containerinstance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class DnsConfigurationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="nameServers", required=true)
-      private final Output<List<String>> nameServers;
+    private Output<List<String>> nameServers;
 
     public Output<List<String>> nameServers() {
         return this.nameServers;
@@ -36,10 +36,10 @@ public final class DnsConfigurationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<String> options;
+    private @Nullable Output<String> options;
 
-    public Output<String> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<String>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -47,79 +47,73 @@ public final class DnsConfigurationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="searchDomains")
-      private final @Nullable Output<String> searchDomains;
+    private @Nullable Output<String> searchDomains;
 
-    public Output<String> searchDomains() {
-        return this.searchDomains == null ? Codegen.empty() : this.searchDomains;
+    public Optional<Output<String>> searchDomains() {
+        return Optional.ofNullable(this.searchDomains);
     }
 
-    public DnsConfigurationArgs(
-        Output<List<String>> nameServers,
-        @Nullable Output<String> options,
-        @Nullable Output<String> searchDomains) {
-        this.nameServers = Objects.requireNonNull(nameServers, "expected parameter 'nameServers' to be non-null");
-        this.options = options;
-        this.searchDomains = searchDomains;
-    }
+    private DnsConfigurationArgs() {}
 
-    private DnsConfigurationArgs() {
-        this.nameServers = Codegen.empty();
-        this.options = Codegen.empty();
-        this.searchDomains = Codegen.empty();
+    private DnsConfigurationArgs(DnsConfigurationArgs $) {
+        this.nameServers = $.nameServers;
+        this.options = $.options;
+        this.searchDomains = $.searchDomains;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> nameServers;
-        private @Nullable Output<String> options;
-        private @Nullable Output<String> searchDomains;
+        private DnsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsConfigurationArgs();
         }
 
         public Builder(DnsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nameServers = defaults.nameServers;
-    	      this.options = defaults.options;
-    	      this.searchDomains = defaults.searchDomains;
+            $ = new DnsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nameServers(Output<List<String>> nameServers) {
-            this.nameServers = Objects.requireNonNull(nameServers);
+            $.nameServers = nameServers;
             return this;
         }
+
         public Builder nameServers(List<String> nameServers) {
-            this.nameServers = Output.of(Objects.requireNonNull(nameServers));
-            return this;
+            return nameServers(Output.of(nameServers));
         }
+
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
         }
+
         public Builder options(@Nullable Output<String> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable String options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(String options) {
+            return options(Output.of(options));
         }
+
         public Builder searchDomains(@Nullable Output<String> searchDomains) {
-            this.searchDomains = searchDomains;
+            $.searchDomains = searchDomains;
             return this;
         }
-        public Builder searchDomains(@Nullable String searchDomains) {
-            this.searchDomains = Codegen.ofNullable(searchDomains);
-            return this;
-        }        public DnsConfigurationArgs build() {
-            return new DnsConfigurationArgs(nameServers, options, searchDomains);
+
+        public Builder searchDomains(String searchDomains) {
+            return searchDomains(Output.of(searchDomains));
+        }
+
+        public DnsConfigurationArgs build() {
+            $.nameServers = Objects.requireNonNull($.nameServers, "expected parameter 'nameServers' to be non-null");
+            return $;
         }
     }
+
 }

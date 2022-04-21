@@ -5,7 +5,6 @@ package com.pulumi.awsnative.networkmanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TransitGatewayRegistrationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="globalNetworkId", required=true)
-      private final Output<String> globalNetworkId;
+    private Output<String> globalNetworkId;
 
     public Output<String> globalNetworkId() {
         return this.globalNetworkId;
@@ -30,63 +29,60 @@ public final class TransitGatewayRegistrationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="transitGatewayArn", required=true)
-      private final Output<String> transitGatewayArn;
+    private Output<String> transitGatewayArn;
 
     public Output<String> transitGatewayArn() {
         return this.transitGatewayArn;
     }
 
-    public TransitGatewayRegistrationArgs(
-        Output<String> globalNetworkId,
-        Output<String> transitGatewayArn) {
-        this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
-        this.transitGatewayArn = Objects.requireNonNull(transitGatewayArn, "expected parameter 'transitGatewayArn' to be non-null");
-    }
+    private TransitGatewayRegistrationArgs() {}
 
-    private TransitGatewayRegistrationArgs() {
-        this.globalNetworkId = Codegen.empty();
-        this.transitGatewayArn = Codegen.empty();
+    private TransitGatewayRegistrationArgs(TransitGatewayRegistrationArgs $) {
+        this.globalNetworkId = $.globalNetworkId;
+        this.transitGatewayArn = $.transitGatewayArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> globalNetworkId;
-        private Output<String> transitGatewayArn;
+        private TransitGatewayRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayRegistrationArgs();
         }
 
         public Builder(TransitGatewayRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalNetworkId = defaults.globalNetworkId;
-    	      this.transitGatewayArn = defaults.transitGatewayArn;
+            $ = new TransitGatewayRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder globalNetworkId(Output<String> globalNetworkId) {
-            this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
+
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
-            return this;
+            return globalNetworkId(Output.of(globalNetworkId));
         }
+
         public Builder transitGatewayArn(Output<String> transitGatewayArn) {
-            this.transitGatewayArn = Objects.requireNonNull(transitGatewayArn);
+            $.transitGatewayArn = transitGatewayArn;
             return this;
         }
+
         public Builder transitGatewayArn(String transitGatewayArn) {
-            this.transitGatewayArn = Output.of(Objects.requireNonNull(transitGatewayArn));
-            return this;
-        }        public TransitGatewayRegistrationArgs build() {
-            return new TransitGatewayRegistrationArgs(globalNetworkId, transitGatewayArn);
+            return transitGatewayArn(Output.of(transitGatewayArn));
+        }
+
+        public TransitGatewayRegistrationArgs build() {
+            $.globalNetworkId = Objects.requireNonNull($.globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
+            $.transitGatewayArn = Objects.requireNonNull($.transitGatewayArn, "expected parameter 'transitGatewayArn' to be non-null");
+            return $;
         }
     }
+
 }

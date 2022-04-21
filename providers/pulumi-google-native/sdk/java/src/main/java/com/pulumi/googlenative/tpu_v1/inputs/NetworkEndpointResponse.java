@@ -22,7 +22,7 @@ public final class NetworkEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
@@ -33,55 +33,52 @@ public final class NetworkEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public NetworkEndpointResponse(
-        String ipAddress,
-        Integer port) {
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private NetworkEndpointResponse() {}
 
-    private NetworkEndpointResponse() {
-        this.ipAddress = null;
-        this.port = null;
+    private NetworkEndpointResponse(NetworkEndpointResponse $) {
+        this.ipAddress = $.ipAddress;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipAddress;
-        private Integer port;
+        private NetworkEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointResponse();
         }
 
         public Builder(NetworkEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.port = defaults.port;
+            $ = new NetworkEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public NetworkEndpointResponse build() {
-            return new NetworkEndpointResponse(ipAddress, port);
+        }
+
+        public NetworkEndpointResponse build() {
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

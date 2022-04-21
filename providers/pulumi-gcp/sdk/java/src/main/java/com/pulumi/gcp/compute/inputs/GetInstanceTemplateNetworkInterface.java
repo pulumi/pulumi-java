@@ -27,7 +27,7 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
      * 
      */
     @Import(name="accessConfigs", required=true)
-      private final List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs;
+    private List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs;
 
     public List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs() {
         return this.accessConfigs;
@@ -40,21 +40,21 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
      * 
      */
     @Import(name="aliasIpRanges", required=true)
-      private final List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
+    private List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
 
     public List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges() {
         return this.aliasIpRanges;
     }
 
     @Import(name="ipv6AccessConfigs", required=true)
-      private final List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
+    private List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
 
     public List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs;
     }
 
     @Import(name="ipv6AccessType", required=true)
-      private final String ipv6AccessType;
+    private String ipv6AccessType;
 
     public String ipv6AccessType() {
         return this.ipv6AccessType;
@@ -65,7 +65,7 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -78,7 +78,7 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -90,28 +90,28 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
      * 
      */
     @Import(name="networkIp", required=true)
-      private final String networkIp;
+    private String networkIp;
 
     public String networkIp() {
         return this.networkIp;
     }
 
     @Import(name="nicType", required=true)
-      private final String nicType;
+    private String nicType;
 
     public String nicType() {
         return this.nicType;
     }
 
     @Import(name="queueCount", required=true)
-      private final Integer queueCount;
+    private Integer queueCount;
 
     public Integer queueCount() {
         return this.queueCount;
     }
 
     @Import(name="stackType", required=true)
-      private final String stackType;
+    private String stackType;
 
     public String stackType() {
         return this.stackType;
@@ -124,7 +124,7 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
@@ -136,154 +136,134 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
      * 
      */
     @Import(name="subnetworkProject", required=true)
-      private final String subnetworkProject;
+    private String subnetworkProject;
 
     public String subnetworkProject() {
         return this.subnetworkProject;
     }
 
-    public GetInstanceTemplateNetworkInterface(
-        List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs,
-        List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges,
-        List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs,
-        String ipv6AccessType,
-        String name,
-        String network,
-        String networkIp,
-        String nicType,
-        Integer queueCount,
-        String stackType,
-        String subnetwork,
-        String subnetworkProject) {
-        this.accessConfigs = Objects.requireNonNull(accessConfigs, "expected parameter 'accessConfigs' to be non-null");
-        this.aliasIpRanges = Objects.requireNonNull(aliasIpRanges, "expected parameter 'aliasIpRanges' to be non-null");
-        this.ipv6AccessConfigs = Objects.requireNonNull(ipv6AccessConfigs, "expected parameter 'ipv6AccessConfigs' to be non-null");
-        this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType, "expected parameter 'ipv6AccessType' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.networkIp = Objects.requireNonNull(networkIp, "expected parameter 'networkIp' to be non-null");
-        this.nicType = Objects.requireNonNull(nicType, "expected parameter 'nicType' to be non-null");
-        this.queueCount = Objects.requireNonNull(queueCount, "expected parameter 'queueCount' to be non-null");
-        this.stackType = Objects.requireNonNull(stackType, "expected parameter 'stackType' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-        this.subnetworkProject = Objects.requireNonNull(subnetworkProject, "expected parameter 'subnetworkProject' to be non-null");
-    }
+    private GetInstanceTemplateNetworkInterface() {}
 
-    private GetInstanceTemplateNetworkInterface() {
-        this.accessConfigs = List.of();
-        this.aliasIpRanges = List.of();
-        this.ipv6AccessConfigs = List.of();
-        this.ipv6AccessType = null;
-        this.name = null;
-        this.network = null;
-        this.networkIp = null;
-        this.nicType = null;
-        this.queueCount = null;
-        this.stackType = null;
-        this.subnetwork = null;
-        this.subnetworkProject = null;
+    private GetInstanceTemplateNetworkInterface(GetInstanceTemplateNetworkInterface $) {
+        this.accessConfigs = $.accessConfigs;
+        this.aliasIpRanges = $.aliasIpRanges;
+        this.ipv6AccessConfigs = $.ipv6AccessConfigs;
+        this.ipv6AccessType = $.ipv6AccessType;
+        this.name = $.name;
+        this.network = $.network;
+        this.networkIp = $.networkIp;
+        this.nicType = $.nicType;
+        this.queueCount = $.queueCount;
+        this.stackType = $.stackType;
+        this.subnetwork = $.subnetwork;
+        this.subnetworkProject = $.subnetworkProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTemplateNetworkInterface defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs;
-        private List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
-        private List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
-        private String ipv6AccessType;
-        private String name;
-        private String network;
-        private String networkIp;
-        private String nicType;
-        private Integer queueCount;
-        private String stackType;
-        private String subnetwork;
-        private String subnetworkProject;
+        private GetInstanceTemplateNetworkInterface $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTemplateNetworkInterface();
         }
 
         public Builder(GetInstanceTemplateNetworkInterface defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessConfigs = defaults.accessConfigs;
-    	      this.aliasIpRanges = defaults.aliasIpRanges;
-    	      this.ipv6AccessConfigs = defaults.ipv6AccessConfigs;
-    	      this.ipv6AccessType = defaults.ipv6AccessType;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.networkIp = defaults.networkIp;
-    	      this.nicType = defaults.nicType;
-    	      this.queueCount = defaults.queueCount;
-    	      this.stackType = defaults.stackType;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.subnetworkProject = defaults.subnetworkProject;
+            $ = new GetInstanceTemplateNetworkInterface(Objects.requireNonNull(defaults));
         }
 
         public Builder accessConfigs(List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs) {
-            this.accessConfigs = Objects.requireNonNull(accessConfigs);
+            $.accessConfigs = accessConfigs;
             return this;
         }
+
         public Builder accessConfigs(GetInstanceTemplateNetworkInterfaceAccessConfig... accessConfigs) {
             return accessConfigs(List.of(accessConfigs));
         }
+
         public Builder aliasIpRanges(List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges) {
-            this.aliasIpRanges = Objects.requireNonNull(aliasIpRanges);
+            $.aliasIpRanges = aliasIpRanges;
             return this;
         }
+
         public Builder aliasIpRanges(GetInstanceTemplateNetworkInterfaceAliasIpRange... aliasIpRanges) {
             return aliasIpRanges(List.of(aliasIpRanges));
         }
+
         public Builder ipv6AccessConfigs(List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs) {
-            this.ipv6AccessConfigs = Objects.requireNonNull(ipv6AccessConfigs);
+            $.ipv6AccessConfigs = ipv6AccessConfigs;
             return this;
         }
+
         public Builder ipv6AccessConfigs(GetInstanceTemplateNetworkInterfaceIpv6AccessConfig... ipv6AccessConfigs) {
             return ipv6AccessConfigs(List.of(ipv6AccessConfigs));
         }
+
         public Builder ipv6AccessType(String ipv6AccessType) {
-            this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType);
+            $.ipv6AccessType = ipv6AccessType;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder networkIp(String networkIp) {
-            this.networkIp = Objects.requireNonNull(networkIp);
+            $.networkIp = networkIp;
             return this;
         }
+
         public Builder nicType(String nicType) {
-            this.nicType = Objects.requireNonNull(nicType);
+            $.nicType = nicType;
             return this;
         }
+
         public Builder queueCount(Integer queueCount) {
-            this.queueCount = Objects.requireNonNull(queueCount);
+            $.queueCount = queueCount;
             return this;
         }
+
         public Builder stackType(String stackType) {
-            this.stackType = Objects.requireNonNull(stackType);
+            $.stackType = stackType;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
         }
+
         public Builder subnetworkProject(String subnetworkProject) {
-            this.subnetworkProject = Objects.requireNonNull(subnetworkProject);
+            $.subnetworkProject = subnetworkProject;
             return this;
-        }        public GetInstanceTemplateNetworkInterface build() {
-            return new GetInstanceTemplateNetworkInterface(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
+        }
+
+        public GetInstanceTemplateNetworkInterface build() {
+            $.accessConfigs = Objects.requireNonNull($.accessConfigs, "expected parameter 'accessConfigs' to be non-null");
+            $.aliasIpRanges = Objects.requireNonNull($.aliasIpRanges, "expected parameter 'aliasIpRanges' to be non-null");
+            $.ipv6AccessConfigs = Objects.requireNonNull($.ipv6AccessConfigs, "expected parameter 'ipv6AccessConfigs' to be non-null");
+            $.ipv6AccessType = Objects.requireNonNull($.ipv6AccessType, "expected parameter 'ipv6AccessType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.networkIp = Objects.requireNonNull($.networkIp, "expected parameter 'networkIp' to be non-null");
+            $.nicType = Objects.requireNonNull($.nicType, "expected parameter 'nicType' to be non-null");
+            $.queueCount = Objects.requireNonNull($.queueCount, "expected parameter 'queueCount' to be non-null");
+            $.stackType = Objects.requireNonNull($.stackType, "expected parameter 'stackType' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            $.subnetworkProject = Objects.requireNonNull($.subnetworkProject, "expected parameter 'subnetworkProject' to be non-null");
+            return $;
         }
     }
+
 }

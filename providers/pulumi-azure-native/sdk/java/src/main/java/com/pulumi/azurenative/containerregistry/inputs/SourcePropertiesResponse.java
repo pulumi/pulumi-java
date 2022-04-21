@@ -24,10 +24,10 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="branch")
-      private final @Nullable String branch;
+    private @Nullable String branch;
 
     public Optional<String> branch() {
-        return this.branch == null ? Optional.empty() : Optional.ofNullable(this.branch);
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="repositoryUrl", required=true)
-      private final String repositoryUrl;
+    private String repositoryUrl;
 
     public String repositoryUrl() {
         return this.repositoryUrl;
@@ -47,10 +47,10 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sourceControlAuthProperties")
-      private final @Nullable AuthInfoResponse sourceControlAuthProperties;
+    private @Nullable AuthInfoResponse sourceControlAuthProperties;
 
     public Optional<AuthInfoResponse> sourceControlAuthProperties() {
-        return this.sourceControlAuthProperties == null ? Optional.empty() : Optional.ofNullable(this.sourceControlAuthProperties);
+        return Optional.ofNullable(this.sourceControlAuthProperties);
     }
 
     /**
@@ -58,73 +58,64 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sourceControlType", required=true)
-      private final String sourceControlType;
+    private String sourceControlType;
 
     public String sourceControlType() {
         return this.sourceControlType;
     }
 
-    public SourcePropertiesResponse(
-        @Nullable String branch,
-        String repositoryUrl,
-        @Nullable AuthInfoResponse sourceControlAuthProperties,
-        String sourceControlType) {
-        this.branch = branch;
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
-        this.sourceControlAuthProperties = sourceControlAuthProperties;
-        this.sourceControlType = Objects.requireNonNull(sourceControlType, "expected parameter 'sourceControlType' to be non-null");
-    }
+    private SourcePropertiesResponse() {}
 
-    private SourcePropertiesResponse() {
-        this.branch = null;
-        this.repositoryUrl = null;
-        this.sourceControlAuthProperties = null;
-        this.sourceControlType = null;
+    private SourcePropertiesResponse(SourcePropertiesResponse $) {
+        this.branch = $.branch;
+        this.repositoryUrl = $.repositoryUrl;
+        this.sourceControlAuthProperties = $.sourceControlAuthProperties;
+        this.sourceControlType = $.sourceControlType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String branch;
-        private String repositoryUrl;
-        private @Nullable AuthInfoResponse sourceControlAuthProperties;
-        private String sourceControlType;
+        private SourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourcePropertiesResponse();
         }
 
         public Builder(SourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.repositoryUrl = defaults.repositoryUrl;
-    	      this.sourceControlAuthProperties = defaults.sourceControlAuthProperties;
-    	      this.sourceControlType = defaults.sourceControlType;
+            $ = new SourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
+
         public Builder repositoryUrl(String repositoryUrl) {
-            this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
+            $.repositoryUrl = repositoryUrl;
             return this;
         }
+
         public Builder sourceControlAuthProperties(@Nullable AuthInfoResponse sourceControlAuthProperties) {
-            this.sourceControlAuthProperties = sourceControlAuthProperties;
+            $.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
+
         public Builder sourceControlType(String sourceControlType) {
-            this.sourceControlType = Objects.requireNonNull(sourceControlType);
+            $.sourceControlType = sourceControlType;
             return this;
-        }        public SourcePropertiesResponse build() {
-            return new SourcePropertiesResponse(branch, repositoryUrl, sourceControlAuthProperties, sourceControlType);
+        }
+
+        public SourcePropertiesResponse build() {
+            $.repositoryUrl = Objects.requireNonNull($.repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
+            $.sourceControlType = Objects.requireNonNull($.sourceControlType, "expected parameter 'sourceControlType' to be non-null");
+            return $;
         }
     }
+
 }

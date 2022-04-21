@@ -15,78 +15,72 @@ public final class GetOrganizationEnvironmentIamPolicyArgs extends com.pulumi.re
     public static final GetOrganizationEnvironmentIamPolicyArgs Empty = new GetOrganizationEnvironmentIamPolicyArgs();
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetOrganizationEnvironmentIamPolicyArgs(
-        String environmentId,
-        @Nullable String optionsRequestedPolicyVersion,
-        String organizationId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetOrganizationEnvironmentIamPolicyArgs() {}
 
-    private GetOrganizationEnvironmentIamPolicyArgs() {
-        this.environmentId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.organizationId = null;
+    private GetOrganizationEnvironmentIamPolicyArgs(GetOrganizationEnvironmentIamPolicyArgs $) {
+        this.environmentId = $.environmentId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationEnvironmentIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private String organizationId;
+        private GetOrganizationEnvironmentIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationEnvironmentIamPolicyArgs();
         }
 
         public Builder(GetOrganizationEnvironmentIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetOrganizationEnvironmentIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetOrganizationEnvironmentIamPolicyArgs build() {
-            return new GetOrganizationEnvironmentIamPolicyArgs(environmentId, optionsRequestedPolicyVersion, organizationId);
+        }
+
+        public GetOrganizationEnvironmentIamPolicyArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsOnDemandSpecif
 import com.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InstanceFleetLaunchSpecificationsGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="onDemandSpecifications")
-      private final @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications;
+    private @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications;
 
-    public Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications() {
-        return this.onDemandSpecifications == null ? Codegen.empty() : this.onDemandSpecifications;
+    public Optional<Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>>> onDemandSpecifications() {
+        return Optional.ofNullable(this.onDemandSpecifications);
     }
 
     /**
@@ -33,69 +33,66 @@ public final class InstanceFleetLaunchSpecificationsGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="spotSpecifications")
-      private final @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications;
+    private @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications;
 
-    public Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications() {
-        return this.spotSpecifications == null ? Codegen.empty() : this.spotSpecifications;
+    public Optional<Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>>> spotSpecifications() {
+        return Optional.ofNullable(this.spotSpecifications);
     }
 
-    public InstanceFleetLaunchSpecificationsGetArgs(
-        @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications,
-        @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications) {
-        this.onDemandSpecifications = onDemandSpecifications;
-        this.spotSpecifications = spotSpecifications;
-    }
+    private InstanceFleetLaunchSpecificationsGetArgs() {}
 
-    private InstanceFleetLaunchSpecificationsGetArgs() {
-        this.onDemandSpecifications = Codegen.empty();
-        this.spotSpecifications = Codegen.empty();
+    private InstanceFleetLaunchSpecificationsGetArgs(InstanceFleetLaunchSpecificationsGetArgs $) {
+        this.onDemandSpecifications = $.onDemandSpecifications;
+        this.spotSpecifications = $.spotSpecifications;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFleetLaunchSpecificationsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications;
-        private @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications;
+        private InstanceFleetLaunchSpecificationsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFleetLaunchSpecificationsGetArgs();
         }
 
         public Builder(InstanceFleetLaunchSpecificationsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onDemandSpecifications = defaults.onDemandSpecifications;
-    	      this.spotSpecifications = defaults.spotSpecifications;
+            $ = new InstanceFleetLaunchSpecificationsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onDemandSpecifications(@Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications) {
-            this.onDemandSpecifications = onDemandSpecifications;
+            $.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
-        public Builder onDemandSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs> onDemandSpecifications) {
-            this.onDemandSpecifications = Codegen.ofNullable(onDemandSpecifications);
-            return this;
+
+        public Builder onDemandSpecifications(List<InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs> onDemandSpecifications) {
+            return onDemandSpecifications(Output.of(onDemandSpecifications));
         }
+
         public Builder onDemandSpecifications(InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs... onDemandSpecifications) {
             return onDemandSpecifications(List.of(onDemandSpecifications));
         }
+
         public Builder spotSpecifications(@Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications) {
-            this.spotSpecifications = spotSpecifications;
+            $.spotSpecifications = spotSpecifications;
             return this;
         }
-        public Builder spotSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs> spotSpecifications) {
-            this.spotSpecifications = Codegen.ofNullable(spotSpecifications);
-            return this;
+
+        public Builder spotSpecifications(List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs> spotSpecifications) {
+            return spotSpecifications(Output.of(spotSpecifications));
         }
+
         public Builder spotSpecifications(InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs... spotSpecifications) {
             return spotSpecifications(List.of(spotSpecifications));
-        }        public InstanceFleetLaunchSpecificationsGetArgs build() {
-            return new InstanceFleetLaunchSpecificationsGetArgs(onDemandSpecifications, spotSpecifications);
+        }
+
+        public InstanceFleetLaunchSpecificationsGetArgs build() {
+            return $;
         }
     }
+
 }

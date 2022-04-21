@@ -6,9 +6,9 @@ package com.pulumi.aws.codepipeline.inputs;
 import com.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreEncryptionKeyGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PipelineArtifactStoreGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="encryptionKey")
-      private final @Nullable Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey;
+    private @Nullable Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey;
 
-    public Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey() {
-        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
+    public Optional<Output<PipelineArtifactStoreEncryptionKeyGetArgs>> encryptionKey() {
+        return Optional.ofNullable(this.encryptionKey);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class PipelineArtifactStoreGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -43,10 +43,10 @@ public final class PipelineArtifactStoreGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -54,89 +54,80 @@ public final class PipelineArtifactStoreGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public PipelineArtifactStoreGetArgs(
-        @Nullable Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey,
-        Output<String> location,
-        @Nullable Output<String> region,
-        Output<String> type) {
-        this.encryptionKey = encryptionKey;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.region = region;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PipelineArtifactStoreGetArgs() {}
 
-    private PipelineArtifactStoreGetArgs() {
-        this.encryptionKey = Codegen.empty();
-        this.location = Codegen.empty();
-        this.region = Codegen.empty();
-        this.type = Codegen.empty();
+    private PipelineArtifactStoreGetArgs(PipelineArtifactStoreGetArgs $) {
+        this.encryptionKey = $.encryptionKey;
+        this.location = $.location;
+        this.region = $.region;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineArtifactStoreGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey;
-        private Output<String> location;
-        private @Nullable Output<String> region;
-        private Output<String> type;
+        private PipelineArtifactStoreGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineArtifactStoreGetArgs();
         }
 
         public Builder(PipelineArtifactStoreGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionKey = defaults.encryptionKey;
-    	      this.location = defaults.location;
-    	      this.region = defaults.region;
-    	      this.type = defaults.type;
+            $ = new PipelineArtifactStoreGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionKey(@Nullable Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey) {
-            this.encryptionKey = encryptionKey;
+            $.encryptionKey = encryptionKey;
             return this;
         }
-        public Builder encryptionKey(@Nullable PipelineArtifactStoreEncryptionKeyGetArgs encryptionKey) {
-            this.encryptionKey = Codegen.ofNullable(encryptionKey);
-            return this;
+
+        public Builder encryptionKey(PipelineArtifactStoreEncryptionKeyGetArgs encryptionKey) {
+            return encryptionKey(Output.of(encryptionKey));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public PipelineArtifactStoreGetArgs build() {
-            return new PipelineArtifactStoreGetArgs(encryptionKey, location, region, type);
+            return type(Output.of(type));
+        }
+
+        public PipelineArtifactStoreGetArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

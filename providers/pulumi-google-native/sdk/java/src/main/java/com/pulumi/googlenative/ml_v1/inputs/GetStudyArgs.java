@@ -15,78 +15,72 @@ public final class GetStudyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStudyArgs Empty = new GetStudyArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="studyId", required=true)
-      private final String studyId;
+    private String studyId;
 
     public String studyId() {
         return this.studyId;
     }
 
-    public GetStudyArgs(
-        String location,
-        @Nullable String project,
-        String studyId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.studyId = Objects.requireNonNull(studyId, "expected parameter 'studyId' to be non-null");
-    }
+    private GetStudyArgs() {}
 
-    private GetStudyArgs() {
-        this.location = null;
-        this.project = null;
-        this.studyId = null;
+    private GetStudyArgs(GetStudyArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.studyId = $.studyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStudyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String studyId;
+        private GetStudyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStudyArgs();
         }
 
         public Builder(GetStudyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.studyId = defaults.studyId;
+            $ = new GetStudyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder studyId(String studyId) {
-            this.studyId = Objects.requireNonNull(studyId);
+            $.studyId = studyId;
             return this;
-        }        public GetStudyArgs build() {
-            return new GetStudyArgs(location, project, studyId);
+        }
+
+        public GetStudyArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.studyId = Objects.requireNonNull($.studyId, "expected parameter 'studyId' to be non-null");
+            return $;
         }
     }
+
 }

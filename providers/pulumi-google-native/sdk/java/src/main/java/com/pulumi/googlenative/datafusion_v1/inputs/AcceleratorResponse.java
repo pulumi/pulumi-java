@@ -21,7 +21,7 @@ public final class AcceleratorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceleratorType", required=true)
-      private final String acceleratorType;
+    private String acceleratorType;
 
     public String acceleratorType() {
         return this.acceleratorType;
@@ -32,55 +32,52 @@ public final class AcceleratorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public AcceleratorResponse(
-        String acceleratorType,
-        String state) {
-        this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private AcceleratorResponse() {}
 
-    private AcceleratorResponse() {
-        this.acceleratorType = null;
-        this.state = null;
+    private AcceleratorResponse(AcceleratorResponse $) {
+        this.acceleratorType = $.acceleratorType;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcceleratorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String acceleratorType;
-        private String state;
+        private AcceleratorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcceleratorResponse();
         }
 
         public Builder(AcceleratorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorType = defaults.acceleratorType;
-    	      this.state = defaults.state;
+            $ = new AcceleratorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Objects.requireNonNull(acceleratorType);
+            $.acceleratorType = acceleratorType;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public AcceleratorResponse build() {
-            return new AcceleratorResponse(acceleratorType, state);
+        }
+
+        public AcceleratorResponse build() {
+            $.acceleratorType = Objects.requireNonNull($.acceleratorType, "expected parameter 'acceleratorType' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

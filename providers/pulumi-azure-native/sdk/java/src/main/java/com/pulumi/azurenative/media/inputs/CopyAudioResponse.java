@@ -24,10 +24,10 @@ public final class CopyAudioResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class CopyAudioResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public CopyAudioResponse(
-        @Nullable String label,
-        String odataType) {
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private CopyAudioResponse() {}
 
-    private CopyAudioResponse() {
-        this.label = null;
-        this.odataType = null;
+    private CopyAudioResponse(CopyAudioResponse $) {
+        this.label = $.label;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CopyAudioResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String label;
-        private String odataType;
+        private CopyAudioResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CopyAudioResponse();
         }
 
         public Builder(CopyAudioResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
+            $ = new CopyAudioResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public CopyAudioResponse build() {
-            return new CopyAudioResponse(label, odataType);
+        }
+
+        public CopyAudioResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

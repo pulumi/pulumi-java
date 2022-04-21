@@ -6,11 +6,11 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<RealtimeLogConfigEndpointGetArgs> endpoint;
+    private @Nullable Output<RealtimeLogConfigEndpointGetArgs> endpoint;
 
-    public Output<RealtimeLogConfigEndpointGetArgs> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<RealtimeLogConfigEndpointGetArgs>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<String>> fields;
+    private @Nullable Output<List<String>> fields;
 
-    public Output<List<String>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<String>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,105 +67,92 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="samplingRate")
-      private final @Nullable Output<Integer> samplingRate;
+    private @Nullable Output<Integer> samplingRate;
 
-    public Output<Integer> samplingRate() {
-        return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
+    public Optional<Output<Integer>> samplingRate() {
+        return Optional.ofNullable(this.samplingRate);
     }
 
-    public RealtimeLogConfigState(
-        @Nullable Output<String> arn,
-        @Nullable Output<RealtimeLogConfigEndpointGetArgs> endpoint,
-        @Nullable Output<List<String>> fields,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> samplingRate) {
-        this.arn = arn;
-        this.endpoint = endpoint;
-        this.fields = fields;
-        this.name = name;
-        this.samplingRate = samplingRate;
-    }
+    private RealtimeLogConfigState() {}
 
-    private RealtimeLogConfigState() {
-        this.arn = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.name = Codegen.empty();
-        this.samplingRate = Codegen.empty();
+    private RealtimeLogConfigState(RealtimeLogConfigState $) {
+        this.arn = $.arn;
+        this.endpoint = $.endpoint;
+        this.fields = $.fields;
+        this.name = $.name;
+        this.samplingRate = $.samplingRate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RealtimeLogConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<RealtimeLogConfigEndpointGetArgs> endpoint;
-        private @Nullable Output<List<String>> fields;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> samplingRate;
+        private RealtimeLogConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RealtimeLogConfigState();
         }
 
         public Builder(RealtimeLogConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.endpoint = defaults.endpoint;
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.samplingRate = defaults.samplingRate;
+            $ = new RealtimeLogConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder endpoint(@Nullable Output<RealtimeLogConfigEndpointGetArgs> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable RealtimeLogConfigEndpointGetArgs endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(RealtimeLogConfigEndpointGetArgs endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder fields(@Nullable Output<List<String>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<String> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<String> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(String... fields) {
             return fields(List.of(fields));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
-            this.samplingRate = samplingRate;
+            $.samplingRate = samplingRate;
             return this;
         }
-        public Builder samplingRate(@Nullable Integer samplingRate) {
-            this.samplingRate = Codegen.ofNullable(samplingRate);
-            return this;
-        }        public RealtimeLogConfigState build() {
-            return new RealtimeLogConfigState(arn, endpoint, fields, name, samplingRate);
+
+        public Builder samplingRate(Integer samplingRate) {
+            return samplingRate(Output.of(samplingRate));
+        }
+
+        public RealtimeLogConfigState build() {
+            return $;
         }
     }
+
 }

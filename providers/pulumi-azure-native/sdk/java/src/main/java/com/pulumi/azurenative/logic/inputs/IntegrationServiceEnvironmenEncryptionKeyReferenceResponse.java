@@ -24,10 +24,10 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
      * 
      */
     @Import(name="keyName")
-      private final @Nullable String keyName;
+    private @Nullable String keyName;
 
     public Optional<String> keyName() {
-        return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
      * 
      */
     @Import(name="keyVault")
-      private final @Nullable ResourceReferenceResponse keyVault;
+    private @Nullable ResourceReferenceResponse keyVault;
 
     public Optional<ResourceReferenceResponse> keyVault() {
-        return this.keyVault == null ? Optional.empty() : Optional.ofNullable(this.keyVault);
+        return Optional.ofNullable(this.keyVault);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
      * 
      */
     @Import(name="keyVersion")
-      private final @Nullable String keyVersion;
+    private @Nullable String keyVersion;
 
     public Optional<String> keyVersion() {
-        return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
+        return Optional.ofNullable(this.keyVersion);
     }
 
-    public IntegrationServiceEnvironmenEncryptionKeyReferenceResponse(
-        @Nullable String keyName,
-        @Nullable ResourceReferenceResponse keyVault,
-        @Nullable String keyVersion) {
-        this.keyName = keyName;
-        this.keyVault = keyVault;
-        this.keyVersion = keyVersion;
-    }
+    private IntegrationServiceEnvironmenEncryptionKeyReferenceResponse() {}
 
-    private IntegrationServiceEnvironmenEncryptionKeyReferenceResponse() {
-        this.keyName = null;
-        this.keyVault = null;
-        this.keyVersion = null;
+    private IntegrationServiceEnvironmenEncryptionKeyReferenceResponse(IntegrationServiceEnvironmenEncryptionKeyReferenceResponse $) {
+        this.keyName = $.keyName;
+        this.keyVault = $.keyVault;
+        this.keyVersion = $.keyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationServiceEnvironmenEncryptionKeyReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyName;
-        private @Nullable ResourceReferenceResponse keyVault;
-        private @Nullable String keyVersion;
+        private IntegrationServiceEnvironmenEncryptionKeyReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationServiceEnvironmenEncryptionKeyReferenceResponse();
         }
 
         public Builder(IntegrationServiceEnvironmenEncryptionKeyReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.keyVault = defaults.keyVault;
-    	      this.keyVersion = defaults.keyVersion;
+            $ = new IntegrationServiceEnvironmenEncryptionKeyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyVault(@Nullable ResourceReferenceResponse keyVault) {
-            this.keyVault = keyVault;
+            $.keyVault = keyVault;
             return this;
         }
+
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = keyVersion;
+            $.keyVersion = keyVersion;
             return this;
-        }        public IntegrationServiceEnvironmenEncryptionKeyReferenceResponse build() {
-            return new IntegrationServiceEnvironmenEncryptionKeyReferenceResponse(keyName, keyVault, keyVersion);
+        }
+
+        public IntegrationServiceEnvironmenEncryptionKeyReferenceResponse build() {
+            return $;
         }
     }
+
 }

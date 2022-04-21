@@ -25,10 +25,10 @@ public final class PeeringPropertiesExchangeResponse extends com.pulumi.resource
      * 
      */
     @Import(name="connections")
-      private final @Nullable List<ExchangeConnectionResponse> connections;
+    private @Nullable List<ExchangeConnectionResponse> connections;
 
-    public List<ExchangeConnectionResponse> connections() {
-        return this.connections == null ? List.of() : this.connections;
+    public Optional<List<ExchangeConnectionResponse>> connections() {
+        return Optional.ofNullable(this.connections);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class PeeringPropertiesExchangeResponse extends com.pulumi.resource
      * 
      */
     @Import(name="peerAsn")
-      private final @Nullable SubResourceResponse peerAsn;
+    private @Nullable SubResourceResponse peerAsn;
 
     public Optional<SubResourceResponse> peerAsn() {
-        return this.peerAsn == null ? Optional.empty() : Optional.ofNullable(this.peerAsn);
+        return Optional.ofNullable(this.peerAsn);
     }
 
-    public PeeringPropertiesExchangeResponse(
-        @Nullable List<ExchangeConnectionResponse> connections,
-        @Nullable SubResourceResponse peerAsn) {
-        this.connections = connections;
-        this.peerAsn = peerAsn;
-    }
+    private PeeringPropertiesExchangeResponse() {}
 
-    private PeeringPropertiesExchangeResponse() {
-        this.connections = List.of();
-        this.peerAsn = null;
+    private PeeringPropertiesExchangeResponse(PeeringPropertiesExchangeResponse $) {
+        this.connections = $.connections;
+        this.peerAsn = $.peerAsn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringPropertiesExchangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ExchangeConnectionResponse> connections;
-        private @Nullable SubResourceResponse peerAsn;
+        private PeeringPropertiesExchangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringPropertiesExchangeResponse();
         }
 
         public Builder(PeeringPropertiesExchangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connections = defaults.connections;
-    	      this.peerAsn = defaults.peerAsn;
+            $ = new PeeringPropertiesExchangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connections(@Nullable List<ExchangeConnectionResponse> connections) {
-            this.connections = connections;
+            $.connections = connections;
             return this;
         }
+
         public Builder connections(ExchangeConnectionResponse... connections) {
             return connections(List.of(connections));
         }
+
         public Builder peerAsn(@Nullable SubResourceResponse peerAsn) {
-            this.peerAsn = peerAsn;
+            $.peerAsn = peerAsn;
             return this;
-        }        public PeeringPropertiesExchangeResponse build() {
-            return new PeeringPropertiesExchangeResponse(connections, peerAsn);
+        }
+
+        public PeeringPropertiesExchangeResponse build() {
+            return $;
         }
     }
+
 }

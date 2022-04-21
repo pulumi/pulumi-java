@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class DatasetTriggeringDatasetArgs extends com.pulumi.resources.Res
     public static final DatasetTriggeringDatasetArgs Empty = new DatasetTriggeringDatasetArgs();
 
     @Import(name="datasetName", required=true)
-      private final Output<String> datasetName;
+    private Output<String> datasetName;
 
     public Output<String> datasetName() {
         return this.datasetName;
     }
 
-    public DatasetTriggeringDatasetArgs(Output<String> datasetName) {
-        this.datasetName = Objects.requireNonNull(datasetName, "expected parameter 'datasetName' to be non-null");
-    }
+    private DatasetTriggeringDatasetArgs() {}
 
-    private DatasetTriggeringDatasetArgs() {
-        this.datasetName = Codegen.empty();
+    private DatasetTriggeringDatasetArgs(DatasetTriggeringDatasetArgs $) {
+        this.datasetName = $.datasetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetTriggeringDatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> datasetName;
+        private DatasetTriggeringDatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetTriggeringDatasetArgs();
         }
 
         public Builder(DatasetTriggeringDatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetName = defaults.datasetName;
+            $ = new DatasetTriggeringDatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetName(Output<String> datasetName) {
-            this.datasetName = Objects.requireNonNull(datasetName);
+            $.datasetName = datasetName;
             return this;
         }
+
         public Builder datasetName(String datasetName) {
-            this.datasetName = Output.of(Objects.requireNonNull(datasetName));
-            return this;
-        }        public DatasetTriggeringDatasetArgs build() {
-            return new DatasetTriggeringDatasetArgs(datasetName);
+            return datasetName(Output.of(datasetName));
+        }
+
+        public DatasetTriggeringDatasetArgs build() {
+            $.datasetName = Objects.requireNonNull($.datasetName, "expected parameter 'datasetName' to be non-null");
+            return $;
         }
     }
+
 }

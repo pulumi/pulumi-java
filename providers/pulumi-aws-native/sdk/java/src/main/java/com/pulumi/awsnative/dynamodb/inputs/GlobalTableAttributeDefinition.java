@@ -13,62 +13,59 @@ public final class GlobalTableAttributeDefinition extends com.pulumi.resources.I
     public static final GlobalTableAttributeDefinition Empty = new GlobalTableAttributeDefinition();
 
     @Import(name="attributeName", required=true)
-      private final String attributeName;
+    private String attributeName;
 
     public String attributeName() {
         return this.attributeName;
     }
 
     @Import(name="attributeType", required=true)
-      private final String attributeType;
+    private String attributeType;
 
     public String attributeType() {
         return this.attributeType;
     }
 
-    public GlobalTableAttributeDefinition(
-        String attributeName,
-        String attributeType) {
-        this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
-        this.attributeType = Objects.requireNonNull(attributeType, "expected parameter 'attributeType' to be non-null");
-    }
+    private GlobalTableAttributeDefinition() {}
 
-    private GlobalTableAttributeDefinition() {
-        this.attributeName = null;
-        this.attributeType = null;
+    private GlobalTableAttributeDefinition(GlobalTableAttributeDefinition $) {
+        this.attributeName = $.attributeName;
+        this.attributeType = $.attributeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableAttributeDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attributeName;
-        private String attributeType;
+        private GlobalTableAttributeDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableAttributeDefinition();
         }
 
         public Builder(GlobalTableAttributeDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.attributeType = defaults.attributeType;
+            $ = new GlobalTableAttributeDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(String attributeName) {
-            this.attributeName = Objects.requireNonNull(attributeName);
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder attributeType(String attributeType) {
-            this.attributeType = Objects.requireNonNull(attributeType);
+            $.attributeType = attributeType;
             return this;
-        }        public GlobalTableAttributeDefinition build() {
-            return new GlobalTableAttributeDefinition(attributeName, attributeType);
+        }
+
+        public GlobalTableAttributeDefinition build() {
+            $.attributeName = Objects.requireNonNull($.attributeName, "expected parameter 'attributeName' to be non-null");
+            $.attributeType = Objects.requireNonNull($.attributeType, "expected parameter 'attributeType' to be non-null");
+            return $;
         }
     }
+
 }

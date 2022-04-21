@@ -17,7 +17,7 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="vpnServerConfigurationName", required=true)
-      private final String vpnServerConfigurationName;
+    private String vpnServerConfigurationName;
 
     public String vpnServerConfigurationName() {
         return this.vpnServerConfigurationName;
     }
 
-    public GetVpnServerConfigurationArgs(
-        String resourceGroupName,
-        String vpnServerConfigurationName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vpnServerConfigurationName = Objects.requireNonNull(vpnServerConfigurationName, "expected parameter 'vpnServerConfigurationName' to be non-null");
-    }
+    private GetVpnServerConfigurationArgs() {}
 
-    private GetVpnServerConfigurationArgs() {
-        this.resourceGroupName = null;
-        this.vpnServerConfigurationName = null;
+    private GetVpnServerConfigurationArgs(GetVpnServerConfigurationArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.vpnServerConfigurationName = $.vpnServerConfigurationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpnServerConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String vpnServerConfigurationName;
+        private GetVpnServerConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpnServerConfigurationArgs();
         }
 
         public Builder(GetVpnServerConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vpnServerConfigurationName = defaults.vpnServerConfigurationName;
+            $ = new GetVpnServerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vpnServerConfigurationName(String vpnServerConfigurationName) {
-            this.vpnServerConfigurationName = Objects.requireNonNull(vpnServerConfigurationName);
+            $.vpnServerConfigurationName = vpnServerConfigurationName;
             return this;
-        }        public GetVpnServerConfigurationArgs build() {
-            return new GetVpnServerConfigurationArgs(resourceGroupName, vpnServerConfigurationName);
+        }
+
+        public GetVpnServerConfigurationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vpnServerConfigurationName = Objects.requireNonNull($.vpnServerConfigurationName, "expected parameter 'vpnServerConfigurationName' to be non-null");
+            return $;
         }
     }
+
 }

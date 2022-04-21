@@ -23,45 +23,44 @@ public final class FirewallPolicyFilterRuleCollectionActionResponse extends com.
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public FirewallPolicyFilterRuleCollectionActionResponse(@Nullable String type) {
-        this.type = type;
-    }
+    private FirewallPolicyFilterRuleCollectionActionResponse() {}
 
-    private FirewallPolicyFilterRuleCollectionActionResponse() {
-        this.type = null;
+    private FirewallPolicyFilterRuleCollectionActionResponse(FirewallPolicyFilterRuleCollectionActionResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyFilterRuleCollectionActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
+        private FirewallPolicyFilterRuleCollectionActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyFilterRuleCollectionActionResponse();
         }
 
         public Builder(FirewallPolicyFilterRuleCollectionActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new FirewallPolicyFilterRuleCollectionActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public FirewallPolicyFilterRuleCollectionActionResponse build() {
-            return new FirewallPolicyFilterRuleCollectionActionResponse(type);
+        }
+
+        public FirewallPolicyFilterRuleCollectionActionResponse build() {
+            return $;
         }
     }
+
 }

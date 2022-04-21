@@ -17,45 +17,45 @@ public final class GetFirehoseDeliveryStreamArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetFirehoseDeliveryStreamArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetFirehoseDeliveryStreamArgs() {}
 
-    private GetFirehoseDeliveryStreamArgs() {
-        this.name = null;
+    private GetFirehoseDeliveryStreamArgs(GetFirehoseDeliveryStreamArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirehoseDeliveryStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetFirehoseDeliveryStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirehoseDeliveryStreamArgs();
         }
 
         public Builder(GetFirehoseDeliveryStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetFirehoseDeliveryStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetFirehoseDeliveryStreamArgs build() {
-            return new GetFirehoseDeliveryStreamArgs(name);
+        }
+
+        public GetFirehoseDeliveryStreamArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeProtocol;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,191 +18,178 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
     public static final NetworkInsightsAccessScopePacketHeaderStatementRequestArgs Empty = new NetworkInsightsAccessScopePacketHeaderStatementRequestArgs();
 
     @Import(name="destinationAddresses")
-      private final @Nullable Output<List<String>> destinationAddresses;
+    private @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> destinationAddresses() {
-        return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
+    public Optional<Output<List<String>>> destinationAddresses() {
+        return Optional.ofNullable(this.destinationAddresses);
     }
 
     @Import(name="destinationPorts")
-      private final @Nullable Output<List<String>> destinationPorts;
+    private @Nullable Output<List<String>> destinationPorts;
 
-    public Output<List<String>> destinationPorts() {
-        return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
+    public Optional<Output<List<String>>> destinationPorts() {
+        return Optional.ofNullable(this.destinationPorts);
     }
 
     @Import(name="destinationPrefixLists")
-      private final @Nullable Output<List<String>> destinationPrefixLists;
+    private @Nullable Output<List<String>> destinationPrefixLists;
 
-    public Output<List<String>> destinationPrefixLists() {
-        return this.destinationPrefixLists == null ? Codegen.empty() : this.destinationPrefixLists;
+    public Optional<Output<List<String>>> destinationPrefixLists() {
+        return Optional.ofNullable(this.destinationPrefixLists);
     }
 
     @Import(name="protocols")
-      private final @Nullable Output<List<NetworkInsightsAccessScopeProtocol>> protocols;
+    private @Nullable Output<List<NetworkInsightsAccessScopeProtocol>> protocols;
 
-    public Output<List<NetworkInsightsAccessScopeProtocol>> protocols() {
-        return this.protocols == null ? Codegen.empty() : this.protocols;
+    public Optional<Output<List<NetworkInsightsAccessScopeProtocol>>> protocols() {
+        return Optional.ofNullable(this.protocols);
     }
 
     @Import(name="sourceAddresses")
-      private final @Nullable Output<List<String>> sourceAddresses;
+    private @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> sourceAddresses() {
-        return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
+    public Optional<Output<List<String>>> sourceAddresses() {
+        return Optional.ofNullable(this.sourceAddresses);
     }
 
     @Import(name="sourcePorts")
-      private final @Nullable Output<List<String>> sourcePorts;
+    private @Nullable Output<List<String>> sourcePorts;
 
-    public Output<List<String>> sourcePorts() {
-        return this.sourcePorts == null ? Codegen.empty() : this.sourcePorts;
+    public Optional<Output<List<String>>> sourcePorts() {
+        return Optional.ofNullable(this.sourcePorts);
     }
 
     @Import(name="sourcePrefixLists")
-      private final @Nullable Output<List<String>> sourcePrefixLists;
+    private @Nullable Output<List<String>> sourcePrefixLists;
 
-    public Output<List<String>> sourcePrefixLists() {
-        return this.sourcePrefixLists == null ? Codegen.empty() : this.sourcePrefixLists;
+    public Optional<Output<List<String>>> sourcePrefixLists() {
+        return Optional.ofNullable(this.sourcePrefixLists);
     }
 
-    public NetworkInsightsAccessScopePacketHeaderStatementRequestArgs(
-        @Nullable Output<List<String>> destinationAddresses,
-        @Nullable Output<List<String>> destinationPorts,
-        @Nullable Output<List<String>> destinationPrefixLists,
-        @Nullable Output<List<NetworkInsightsAccessScopeProtocol>> protocols,
-        @Nullable Output<List<String>> sourceAddresses,
-        @Nullable Output<List<String>> sourcePorts,
-        @Nullable Output<List<String>> sourcePrefixLists) {
-        this.destinationAddresses = destinationAddresses;
-        this.destinationPorts = destinationPorts;
-        this.destinationPrefixLists = destinationPrefixLists;
-        this.protocols = protocols;
-        this.sourceAddresses = sourceAddresses;
-        this.sourcePorts = sourcePorts;
-        this.sourcePrefixLists = sourcePrefixLists;
-    }
+    private NetworkInsightsAccessScopePacketHeaderStatementRequestArgs() {}
 
-    private NetworkInsightsAccessScopePacketHeaderStatementRequestArgs() {
-        this.destinationAddresses = Codegen.empty();
-        this.destinationPorts = Codegen.empty();
-        this.destinationPrefixLists = Codegen.empty();
-        this.protocols = Codegen.empty();
-        this.sourceAddresses = Codegen.empty();
-        this.sourcePorts = Codegen.empty();
-        this.sourcePrefixLists = Codegen.empty();
+    private NetworkInsightsAccessScopePacketHeaderStatementRequestArgs(NetworkInsightsAccessScopePacketHeaderStatementRequestArgs $) {
+        this.destinationAddresses = $.destinationAddresses;
+        this.destinationPorts = $.destinationPorts;
+        this.destinationPrefixLists = $.destinationPrefixLists;
+        this.protocols = $.protocols;
+        this.sourceAddresses = $.sourceAddresses;
+        this.sourcePorts = $.sourcePorts;
+        this.sourcePrefixLists = $.sourcePrefixLists;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAccessScopePacketHeaderStatementRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> destinationAddresses;
-        private @Nullable Output<List<String>> destinationPorts;
-        private @Nullable Output<List<String>> destinationPrefixLists;
-        private @Nullable Output<List<NetworkInsightsAccessScopeProtocol>> protocols;
-        private @Nullable Output<List<String>> sourceAddresses;
-        private @Nullable Output<List<String>> sourcePorts;
-        private @Nullable Output<List<String>> sourcePrefixLists;
+        private NetworkInsightsAccessScopePacketHeaderStatementRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAccessScopePacketHeaderStatementRequestArgs();
         }
 
         public Builder(NetworkInsightsAccessScopePacketHeaderStatementRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationAddresses = defaults.destinationAddresses;
-    	      this.destinationPorts = defaults.destinationPorts;
-    	      this.destinationPrefixLists = defaults.destinationPrefixLists;
-    	      this.protocols = defaults.protocols;
-    	      this.sourceAddresses = defaults.sourceAddresses;
-    	      this.sourcePorts = defaults.sourcePorts;
-    	      this.sourcePrefixLists = defaults.sourcePrefixLists;
+            $ = new NetworkInsightsAccessScopePacketHeaderStatementRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
-            this.destinationAddresses = destinationAddresses;
+            $.destinationAddresses = destinationAddresses;
             return this;
         }
-        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Codegen.ofNullable(destinationAddresses);
-            return this;
+
+        public Builder destinationAddresses(List<String> destinationAddresses) {
+            return destinationAddresses(Output.of(destinationAddresses));
         }
+
         public Builder destinationAddresses(String... destinationAddresses) {
             return destinationAddresses(List.of(destinationAddresses));
         }
+
         public Builder destinationPorts(@Nullable Output<List<String>> destinationPorts) {
-            this.destinationPorts = destinationPorts;
+            $.destinationPorts = destinationPorts;
             return this;
         }
-        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = Codegen.ofNullable(destinationPorts);
-            return this;
+
+        public Builder destinationPorts(List<String> destinationPorts) {
+            return destinationPorts(Output.of(destinationPorts));
         }
+
         public Builder destinationPorts(String... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
+
         public Builder destinationPrefixLists(@Nullable Output<List<String>> destinationPrefixLists) {
-            this.destinationPrefixLists = destinationPrefixLists;
+            $.destinationPrefixLists = destinationPrefixLists;
             return this;
         }
-        public Builder destinationPrefixLists(@Nullable List<String> destinationPrefixLists) {
-            this.destinationPrefixLists = Codegen.ofNullable(destinationPrefixLists);
-            return this;
+
+        public Builder destinationPrefixLists(List<String> destinationPrefixLists) {
+            return destinationPrefixLists(Output.of(destinationPrefixLists));
         }
+
         public Builder destinationPrefixLists(String... destinationPrefixLists) {
             return destinationPrefixLists(List.of(destinationPrefixLists));
         }
+
         public Builder protocols(@Nullable Output<List<NetworkInsightsAccessScopeProtocol>> protocols) {
-            this.protocols = protocols;
+            $.protocols = protocols;
             return this;
         }
-        public Builder protocols(@Nullable List<NetworkInsightsAccessScopeProtocol> protocols) {
-            this.protocols = Codegen.ofNullable(protocols);
-            return this;
+
+        public Builder protocols(List<NetworkInsightsAccessScopeProtocol> protocols) {
+            return protocols(Output.of(protocols));
         }
+
         public Builder protocols(NetworkInsightsAccessScopeProtocol... protocols) {
             return protocols(List.of(protocols));
         }
+
         public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
-            this.sourceAddresses = sourceAddresses;
+            $.sourceAddresses = sourceAddresses;
             return this;
         }
-        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Codegen.ofNullable(sourceAddresses);
-            return this;
+
+        public Builder sourceAddresses(List<String> sourceAddresses) {
+            return sourceAddresses(Output.of(sourceAddresses));
         }
+
         public Builder sourceAddresses(String... sourceAddresses) {
             return sourceAddresses(List.of(sourceAddresses));
         }
+
         public Builder sourcePorts(@Nullable Output<List<String>> sourcePorts) {
-            this.sourcePorts = sourcePorts;
+            $.sourcePorts = sourcePorts;
             return this;
         }
-        public Builder sourcePorts(@Nullable List<String> sourcePorts) {
-            this.sourcePorts = Codegen.ofNullable(sourcePorts);
-            return this;
+
+        public Builder sourcePorts(List<String> sourcePorts) {
+            return sourcePorts(Output.of(sourcePorts));
         }
+
         public Builder sourcePorts(String... sourcePorts) {
             return sourcePorts(List.of(sourcePorts));
         }
+
         public Builder sourcePrefixLists(@Nullable Output<List<String>> sourcePrefixLists) {
-            this.sourcePrefixLists = sourcePrefixLists;
+            $.sourcePrefixLists = sourcePrefixLists;
             return this;
         }
-        public Builder sourcePrefixLists(@Nullable List<String> sourcePrefixLists) {
-            this.sourcePrefixLists = Codegen.ofNullable(sourcePrefixLists);
-            return this;
+
+        public Builder sourcePrefixLists(List<String> sourcePrefixLists) {
+            return sourcePrefixLists(Output.of(sourcePrefixLists));
         }
+
         public Builder sourcePrefixLists(String... sourcePrefixLists) {
             return sourcePrefixLists(List.of(sourcePrefixLists));
-        }        public NetworkInsightsAccessScopePacketHeaderStatementRequestArgs build() {
-            return new NetworkInsightsAccessScopePacketHeaderStatementRequestArgs(destinationAddresses, destinationPorts, destinationPrefixLists, protocols, sourceAddresses, sourcePorts, sourcePrefixLists);
+        }
+
+        public NetworkInsightsAccessScopePacketHeaderStatementRequestArgs build() {
+            return $;
         }
     }
+
 }

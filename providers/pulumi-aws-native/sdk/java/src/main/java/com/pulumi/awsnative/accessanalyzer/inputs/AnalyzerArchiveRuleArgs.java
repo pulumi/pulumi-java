@@ -6,7 +6,6 @@ package com.pulumi.awsnative.accessanalyzer.inputs;
 import com.pulumi.awsnative.accessanalyzer.inputs.AnalyzerFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class AnalyzerArchiveRuleArgs extends com.pulumi.resources.Resource
     public static final AnalyzerArchiveRuleArgs Empty = new AnalyzerArchiveRuleArgs();
 
     @Import(name="filter", required=true)
-      private final Output<List<AnalyzerFilterArgs>> filter;
+    private Output<List<AnalyzerFilterArgs>> filter;
 
     public Output<List<AnalyzerFilterArgs>> filter() {
         return this.filter;
@@ -32,66 +31,64 @@ public final class AnalyzerArchiveRuleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ruleName", required=true)
-      private final Output<String> ruleName;
+    private Output<String> ruleName;
 
     public Output<String> ruleName() {
         return this.ruleName;
     }
 
-    public AnalyzerArchiveRuleArgs(
-        Output<List<AnalyzerFilterArgs>> filter,
-        Output<String> ruleName) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-    }
+    private AnalyzerArchiveRuleArgs() {}
 
-    private AnalyzerArchiveRuleArgs() {
-        this.filter = Codegen.empty();
-        this.ruleName = Codegen.empty();
+    private AnalyzerArchiveRuleArgs(AnalyzerArchiveRuleArgs $) {
+        this.filter = $.filter;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyzerArchiveRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<AnalyzerFilterArgs>> filter;
-        private Output<String> ruleName;
+        private AnalyzerArchiveRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyzerArchiveRuleArgs();
         }
 
         public Builder(AnalyzerArchiveRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.ruleName = defaults.ruleName;
+            $ = new AnalyzerArchiveRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(Output<List<AnalyzerFilterArgs>> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(List<AnalyzerFilterArgs> filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder filter(AnalyzerFilterArgs... filter) {
             return filter(List.of(filter));
         }
+
         public Builder ruleName(Output<String> ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
         }
+
         public Builder ruleName(String ruleName) {
-            this.ruleName = Output.of(Objects.requireNonNull(ruleName));
-            return this;
-        }        public AnalyzerArchiveRuleArgs build() {
-            return new AnalyzerArchiveRuleArgs(filter, ruleName);
+            return ruleName(Output.of(ruleName));
+        }
+
+        public AnalyzerArchiveRuleArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RouteTableAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="gatewayId")
-      private final @Nullable Output<String> gatewayId;
+    private @Nullable Output<String> gatewayId;
 
-    public Output<String> gatewayId() {
-        return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
+    public Optional<Output<String>> gatewayId() {
+        return Optional.ofNullable(this.gatewayId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class RouteTableAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="routeTableId", required=true)
-      private final Output<String> routeTableId;
+    private Output<String> routeTableId;
 
     public Output<String> routeTableId() {
         return this.routeTableId;
@@ -42,76 +42,69 @@ public final class RouteTableAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public RouteTableAssociationArgs(
-        @Nullable Output<String> gatewayId,
-        Output<String> routeTableId,
-        @Nullable Output<String> subnetId) {
-        this.gatewayId = gatewayId;
-        this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
-        this.subnetId = subnetId;
-    }
+    private RouteTableAssociationArgs() {}
 
-    private RouteTableAssociationArgs() {
-        this.gatewayId = Codegen.empty();
-        this.routeTableId = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private RouteTableAssociationArgs(RouteTableAssociationArgs $) {
+        this.gatewayId = $.gatewayId;
+        this.routeTableId = $.routeTableId;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteTableAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gatewayId;
-        private Output<String> routeTableId;
-        private @Nullable Output<String> subnetId;
+        private RouteTableAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteTableAssociationArgs();
         }
 
         public Builder(RouteTableAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.routeTableId = defaults.routeTableId;
-    	      this.subnetId = defaults.subnetId;
+            $ = new RouteTableAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
-            this.gatewayId = gatewayId;
+            $.gatewayId = gatewayId;
             return this;
         }
-        public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Codegen.ofNullable(gatewayId);
-            return this;
+
+        public Builder gatewayId(String gatewayId) {
+            return gatewayId(Output.of(gatewayId));
         }
+
         public Builder routeTableId(Output<String> routeTableId) {
-            this.routeTableId = Objects.requireNonNull(routeTableId);
+            $.routeTableId = routeTableId;
             return this;
         }
+
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
-            return this;
+            return routeTableId(Output.of(routeTableId));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
-        }        public RouteTableAssociationArgs build() {
-            return new RouteTableAssociationArgs(gatewayId, routeTableId, subnetId);
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        public RouteTableAssociationArgs build() {
+            $.routeTableId = Objects.requireNonNull($.routeTableId, "expected parameter 'routeTableId' to be non-null");
+            return $;
         }
     }
+
 }

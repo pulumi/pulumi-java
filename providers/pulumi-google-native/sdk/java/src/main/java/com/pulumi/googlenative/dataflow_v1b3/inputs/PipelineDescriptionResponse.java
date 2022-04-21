@@ -24,7 +24,7 @@ public final class PipelineDescriptionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="displayData", required=true)
-      private final List<DisplayDataResponse> displayData;
+    private List<DisplayDataResponse> displayData;
 
     public List<DisplayDataResponse> displayData() {
         return this.displayData;
@@ -35,7 +35,7 @@ public final class PipelineDescriptionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="executionPipelineStage", required=true)
-      private final List<ExecutionStageSummaryResponse> executionPipelineStage;
+    private List<ExecutionStageSummaryResponse> executionPipelineStage;
 
     public List<ExecutionStageSummaryResponse> executionPipelineStage() {
         return this.executionPipelineStage;
@@ -46,73 +46,71 @@ public final class PipelineDescriptionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="originalPipelineTransform", required=true)
-      private final List<TransformSummaryResponse> originalPipelineTransform;
+    private List<TransformSummaryResponse> originalPipelineTransform;
 
     public List<TransformSummaryResponse> originalPipelineTransform() {
         return this.originalPipelineTransform;
     }
 
-    public PipelineDescriptionResponse(
-        List<DisplayDataResponse> displayData,
-        List<ExecutionStageSummaryResponse> executionPipelineStage,
-        List<TransformSummaryResponse> originalPipelineTransform) {
-        this.displayData = Objects.requireNonNull(displayData, "expected parameter 'displayData' to be non-null");
-        this.executionPipelineStage = Objects.requireNonNull(executionPipelineStage, "expected parameter 'executionPipelineStage' to be non-null");
-        this.originalPipelineTransform = Objects.requireNonNull(originalPipelineTransform, "expected parameter 'originalPipelineTransform' to be non-null");
-    }
+    private PipelineDescriptionResponse() {}
 
-    private PipelineDescriptionResponse() {
-        this.displayData = List.of();
-        this.executionPipelineStage = List.of();
-        this.originalPipelineTransform = List.of();
+    private PipelineDescriptionResponse(PipelineDescriptionResponse $) {
+        this.displayData = $.displayData;
+        this.executionPipelineStage = $.executionPipelineStage;
+        this.originalPipelineTransform = $.originalPipelineTransform;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DisplayDataResponse> displayData;
-        private List<ExecutionStageSummaryResponse> executionPipelineStage;
-        private List<TransformSummaryResponse> originalPipelineTransform;
+        private PipelineDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDescriptionResponse();
         }
 
         public Builder(PipelineDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayData = defaults.displayData;
-    	      this.executionPipelineStage = defaults.executionPipelineStage;
-    	      this.originalPipelineTransform = defaults.originalPipelineTransform;
+            $ = new PipelineDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayData(List<DisplayDataResponse> displayData) {
-            this.displayData = Objects.requireNonNull(displayData);
+            $.displayData = displayData;
             return this;
         }
+
         public Builder displayData(DisplayDataResponse... displayData) {
             return displayData(List.of(displayData));
         }
+
         public Builder executionPipelineStage(List<ExecutionStageSummaryResponse> executionPipelineStage) {
-            this.executionPipelineStage = Objects.requireNonNull(executionPipelineStage);
+            $.executionPipelineStage = executionPipelineStage;
             return this;
         }
+
         public Builder executionPipelineStage(ExecutionStageSummaryResponse... executionPipelineStage) {
             return executionPipelineStage(List.of(executionPipelineStage));
         }
+
         public Builder originalPipelineTransform(List<TransformSummaryResponse> originalPipelineTransform) {
-            this.originalPipelineTransform = Objects.requireNonNull(originalPipelineTransform);
+            $.originalPipelineTransform = originalPipelineTransform;
             return this;
         }
+
         public Builder originalPipelineTransform(TransformSummaryResponse... originalPipelineTransform) {
             return originalPipelineTransform(List.of(originalPipelineTransform));
-        }        public PipelineDescriptionResponse build() {
-            return new PipelineDescriptionResponse(displayData, executionPipelineStage, originalPipelineTransform);
+        }
+
+        public PipelineDescriptionResponse build() {
+            $.displayData = Objects.requireNonNull($.displayData, "expected parameter 'displayData' to be non-null");
+            $.executionPipelineStage = Objects.requireNonNull($.executionPipelineStage, "expected parameter 'executionPipelineStage' to be non-null");
+            $.originalPipelineTransform = Objects.requireNonNull($.originalPipelineTransform, "expected parameter 'originalPipelineTransform' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -30,55 +30,51 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public GetIntentArgs(
-        String name,
-        @Nullable String version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = version;
-    }
+    private GetIntentArgs() {}
 
-    private GetIntentArgs() {
-        this.name = null;
-        this.version = null;
+    private GetIntentArgs(GetIntentArgs $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String version;
+        private GetIntentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntentArgs();
         }
 
         public Builder(GetIntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new GetIntentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public GetIntentArgs build() {
-            return new GetIntentArgs(name, version);
+        }
+
+        public GetIntentArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,94 +13,87 @@ public final class GetPeeredDnsDomainArgs extends com.pulumi.resources.InvokeArg
     public static final GetPeeredDnsDomainArgs Empty = new GetPeeredDnsDomainArgs();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
     }
 
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public GetPeeredDnsDomainArgs(
-        String name,
-        String network,
-        String project,
-        String service) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private GetPeeredDnsDomainArgs() {}
 
-    private GetPeeredDnsDomainArgs() {
-        this.name = null;
-        this.network = null;
-        this.project = null;
-        this.service = null;
+    private GetPeeredDnsDomainArgs(GetPeeredDnsDomainArgs $) {
+        this.name = $.name;
+        this.network = $.network;
+        this.project = $.project;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPeeredDnsDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String network;
-        private String project;
-        private String service;
+        private GetPeeredDnsDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPeeredDnsDomainArgs();
         }
 
         public Builder(GetPeeredDnsDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
+            $ = new GetPeeredDnsDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public GetPeeredDnsDomainArgs build() {
-            return new GetPeeredDnsDomainArgs(name, network, project, service);
+        }
+
+        public GetPeeredDnsDomainArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

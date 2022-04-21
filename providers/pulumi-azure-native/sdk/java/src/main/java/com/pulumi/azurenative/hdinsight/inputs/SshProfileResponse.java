@@ -24,48 +24,48 @@ public final class SshProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicKeys")
-      private final @Nullable List<SshPublicKeyResponse> publicKeys;
+    private @Nullable List<SshPublicKeyResponse> publicKeys;
 
-    public List<SshPublicKeyResponse> publicKeys() {
-        return this.publicKeys == null ? List.of() : this.publicKeys;
+    public Optional<List<SshPublicKeyResponse>> publicKeys() {
+        return Optional.ofNullable(this.publicKeys);
     }
 
-    public SshProfileResponse(@Nullable List<SshPublicKeyResponse> publicKeys) {
-        this.publicKeys = publicKeys;
-    }
+    private SshProfileResponse() {}
 
-    private SshProfileResponse() {
-        this.publicKeys = List.of();
+    private SshProfileResponse(SshProfileResponse $) {
+        this.publicKeys = $.publicKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SshPublicKeyResponse> publicKeys;
+        private SshProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshProfileResponse();
         }
 
         public Builder(SshProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeys = defaults.publicKeys;
+            $ = new SshProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeys(@Nullable List<SshPublicKeyResponse> publicKeys) {
-            this.publicKeys = publicKeys;
+            $.publicKeys = publicKeys;
             return this;
         }
+
         public Builder publicKeys(SshPublicKeyResponse... publicKeys) {
             return publicKeys(List.of(publicKeys));
-        }        public SshProfileResponse build() {
-            return new SshProfileResponse(publicKeys);
+        }
+
+        public SshProfileResponse build() {
+            return $;
         }
     }
+
 }

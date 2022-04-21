@@ -27,7 +27,7 @@ public final class ScheduleBasedTriggerContextArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<String> objectType;
+    private Output<String> objectType;
 
     public Output<String> objectType() {
         return this.objectType;
@@ -38,7 +38,7 @@ public final class ScheduleBasedTriggerContextArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<BackupScheduleArgs> schedule;
+    private Output<BackupScheduleArgs> schedule;
 
     public Output<BackupScheduleArgs> schedule() {
         return this.schedule;
@@ -49,79 +49,75 @@ public final class ScheduleBasedTriggerContextArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="taggingCriteria", required=true)
-      private final Output<List<TaggingCriteriaArgs>> taggingCriteria;
+    private Output<List<TaggingCriteriaArgs>> taggingCriteria;
 
     public Output<List<TaggingCriteriaArgs>> taggingCriteria() {
         return this.taggingCriteria;
     }
 
-    public ScheduleBasedTriggerContextArgs(
-        Output<String> objectType,
-        Output<BackupScheduleArgs> schedule,
-        Output<List<TaggingCriteriaArgs>> taggingCriteria) {
-        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.taggingCriteria = Objects.requireNonNull(taggingCriteria, "expected parameter 'taggingCriteria' to be non-null");
-    }
+    private ScheduleBasedTriggerContextArgs() {}
 
-    private ScheduleBasedTriggerContextArgs() {
-        this.objectType = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.taggingCriteria = Codegen.empty();
+    private ScheduleBasedTriggerContextArgs(ScheduleBasedTriggerContextArgs $) {
+        this.objectType = $.objectType;
+        this.schedule = $.schedule;
+        this.taggingCriteria = $.taggingCriteria;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleBasedTriggerContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> objectType;
-        private Output<BackupScheduleArgs> schedule;
-        private Output<List<TaggingCriteriaArgs>> taggingCriteria;
+        private ScheduleBasedTriggerContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleBasedTriggerContextArgs();
         }
 
         public Builder(ScheduleBasedTriggerContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectType = defaults.objectType;
-    	      this.schedule = defaults.schedule;
-    	      this.taggingCriteria = defaults.taggingCriteria;
+            $ = new ScheduleBasedTriggerContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectType(Output<String> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
+            return objectType(Output.of(objectType));
         }
+
         public Builder schedule(Output<BackupScheduleArgs> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(BackupScheduleArgs schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
+            return schedule(Output.of(schedule));
         }
+
         public Builder taggingCriteria(Output<List<TaggingCriteriaArgs>> taggingCriteria) {
-            this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
+            $.taggingCriteria = taggingCriteria;
             return this;
         }
+
         public Builder taggingCriteria(List<TaggingCriteriaArgs> taggingCriteria) {
-            this.taggingCriteria = Output.of(Objects.requireNonNull(taggingCriteria));
-            return this;
+            return taggingCriteria(Output.of(taggingCriteria));
         }
+
         public Builder taggingCriteria(TaggingCriteriaArgs... taggingCriteria) {
             return taggingCriteria(List.of(taggingCriteria));
-        }        public ScheduleBasedTriggerContextArgs build() {
-            return new ScheduleBasedTriggerContextArgs(objectType, schedule, taggingCriteria);
+        }
+
+        public ScheduleBasedTriggerContextArgs build() {
+            $.objectType = Codegen.stringProp("objectType").output().arg($.objectType).require();
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            $.taggingCriteria = Objects.requireNonNull($.taggingCriteria, "expected parameter 'taggingCriteria' to be non-null");
+            return $;
         }
     }
+
 }

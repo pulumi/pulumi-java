@@ -5,10 +5,10 @@ package com.pulumi.aws.cfg;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class RecorderStatusArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -32,63 +32,59 @@ public final class RecorderStatusArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public RecorderStatusArgs(
-        Output<Boolean> isEnabled,
-        @Nullable Output<String> name) {
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.name = name;
-    }
+    private RecorderStatusArgs() {}
 
-    private RecorderStatusArgs() {
-        this.isEnabled = Codegen.empty();
-        this.name = Codegen.empty();
+    private RecorderStatusArgs(RecorderStatusArgs $) {
+        this.isEnabled = $.isEnabled;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecorderStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> isEnabled;
-        private @Nullable Output<String> name;
+        private RecorderStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecorderStatusArgs();
         }
 
         public Builder(RecorderStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.name = defaults.name;
+            $ = new RecorderStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public RecorderStatusArgs build() {
-            return new RecorderStatusArgs(isEnabled, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public RecorderStatusArgs build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

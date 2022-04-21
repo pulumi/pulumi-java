@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1alpha1.inputs.ConfigMapKeySelectorArgs;
 import com.pulumi.googlenative.run_v1alpha1.inputs.SecretKeySelectorArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EnvVarSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configMapKeyRef")
-      private final @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef;
+    private @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef;
 
-    public Output<ConfigMapKeySelectorArgs> configMapKeyRef() {
-        return this.configMapKeyRef == null ? Codegen.empty() : this.configMapKeyRef;
+    public Optional<Output<ConfigMapKeySelectorArgs>> configMapKeyRef() {
+        return Optional.ofNullable(this.configMapKeyRef);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class EnvVarSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretKeyRef")
-      private final @Nullable Output<SecretKeySelectorArgs> secretKeyRef;
+    private @Nullable Output<SecretKeySelectorArgs> secretKeyRef;
 
-    public Output<SecretKeySelectorArgs> secretKeyRef() {
-        return this.secretKeyRef == null ? Codegen.empty() : this.secretKeyRef;
+    public Optional<Output<SecretKeySelectorArgs>> secretKeyRef() {
+        return Optional.ofNullable(this.secretKeyRef);
     }
 
-    public EnvVarSourceArgs(
-        @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef,
-        @Nullable Output<SecretKeySelectorArgs> secretKeyRef) {
-        this.configMapKeyRef = configMapKeyRef;
-        this.secretKeyRef = secretKeyRef;
-    }
+    private EnvVarSourceArgs() {}
 
-    private EnvVarSourceArgs() {
-        this.configMapKeyRef = Codegen.empty();
-        this.secretKeyRef = Codegen.empty();
+    private EnvVarSourceArgs(EnvVarSourceArgs $) {
+        this.configMapKeyRef = $.configMapKeyRef;
+        this.secretKeyRef = $.secretKeyRef;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvVarSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef;
-        private @Nullable Output<SecretKeySelectorArgs> secretKeyRef;
+        private EnvVarSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvVarSourceArgs();
         }
 
         public Builder(EnvVarSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMapKeyRef = defaults.configMapKeyRef;
-    	      this.secretKeyRef = defaults.secretKeyRef;
+            $ = new EnvVarSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configMapKeyRef(@Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef) {
-            this.configMapKeyRef = configMapKeyRef;
+            $.configMapKeyRef = configMapKeyRef;
             return this;
         }
-        public Builder configMapKeyRef(@Nullable ConfigMapKeySelectorArgs configMapKeyRef) {
-            this.configMapKeyRef = Codegen.ofNullable(configMapKeyRef);
-            return this;
+
+        public Builder configMapKeyRef(ConfigMapKeySelectorArgs configMapKeyRef) {
+            return configMapKeyRef(Output.of(configMapKeyRef));
         }
+
         public Builder secretKeyRef(@Nullable Output<SecretKeySelectorArgs> secretKeyRef) {
-            this.secretKeyRef = secretKeyRef;
+            $.secretKeyRef = secretKeyRef;
             return this;
         }
-        public Builder secretKeyRef(@Nullable SecretKeySelectorArgs secretKeyRef) {
-            this.secretKeyRef = Codegen.ofNullable(secretKeyRef);
-            return this;
-        }        public EnvVarSourceArgs build() {
-            return new EnvVarSourceArgs(configMapKeyRef, secretKeyRef);
+
+        public Builder secretKeyRef(SecretKeySelectorArgs secretKeyRef) {
+            return secretKeyRef(Output.of(secretKeyRef));
+        }
+
+        public EnvVarSourceArgs build() {
+            return $;
         }
     }
+
 }

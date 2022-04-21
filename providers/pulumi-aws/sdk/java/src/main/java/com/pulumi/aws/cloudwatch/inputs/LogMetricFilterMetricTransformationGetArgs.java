@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LogMetricFilterMetricTransformationGetArgs extends com.pulumi
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<String> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
-    public Output<String> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<String>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LogMetricFilterMetricTransformationGetArgs extends com.pulumi
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<Map<String,String>> dimensions;
+    private @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<Map<String,String>>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -54,7 +54,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends com.pulumi
      * 
      */
     @Import(name="namespace", required=true)
-      private final Output<String> namespace;
+    private Output<String> namespace;
 
     public Output<String> namespace() {
         return this.namespace;
@@ -65,10 +65,10 @@ public final class LogMetricFilterMetricTransformationGetArgs extends com.pulumi
      * 
      */
     @Import(name="unit")
-      private final @Nullable Output<String> unit;
+    private @Nullable Output<String> unit;
 
-    public Output<String> unit() {
-        return this.unit == null ? Codegen.empty() : this.unit;
+    public Optional<Output<String>> unit() {
+        return Optional.ofNullable(this.unit);
     }
 
     /**
@@ -76,115 +76,101 @@ public final class LogMetricFilterMetricTransformationGetArgs extends com.pulumi
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public LogMetricFilterMetricTransformationGetArgs(
-        @Nullable Output<String> defaultValue,
-        @Nullable Output<Map<String,String>> dimensions,
-        Output<String> name,
-        Output<String> namespace,
-        @Nullable Output<String> unit,
-        Output<String> value) {
-        this.defaultValue = defaultValue;
-        this.dimensions = dimensions;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.unit = unit;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private LogMetricFilterMetricTransformationGetArgs() {}
 
-    private LogMetricFilterMetricTransformationGetArgs() {
-        this.defaultValue = Codegen.empty();
-        this.dimensions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.unit = Codegen.empty();
-        this.value = Codegen.empty();
+    private LogMetricFilterMetricTransformationGetArgs(LogMetricFilterMetricTransformationGetArgs $) {
+        this.defaultValue = $.defaultValue;
+        this.dimensions = $.dimensions;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogMetricFilterMetricTransformationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultValue;
-        private @Nullable Output<Map<String,String>> dimensions;
-        private Output<String> name;
-        private Output<String> namespace;
-        private @Nullable Output<String> unit;
-        private Output<String> value;
+        private LogMetricFilterMetricTransformationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogMetricFilterMetricTransformationGetArgs();
         }
 
         public Builder(LogMetricFilterMetricTransformationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.dimensions = defaults.dimensions;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new LogMetricFilterMetricTransformationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(String defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(Map<String,String> dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder namespace(Output<String> namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Output.of(Objects.requireNonNull(namespace));
-            return this;
+            return namespace(Output.of(namespace));
         }
+
         public Builder unit(@Nullable Output<String> unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
-        public Builder unit(@Nullable String unit) {
-            this.unit = Codegen.ofNullable(unit);
-            return this;
+
+        public Builder unit(String unit) {
+            return unit(Output.of(unit));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public LogMetricFilterMetricTransformationGetArgs build() {
-            return new LogMetricFilterMetricTransformationGetArgs(defaultValue, dimensions, name, namespace, unit, value);
+            return value(Output.of(value));
+        }
+
+        public LogMetricFilterMetricTransformationGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

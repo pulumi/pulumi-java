@@ -5,10 +5,10 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxOccurs")
-      private final @Nullable Output<Integer> maxOccurs;
+    private @Nullable Output<Integer> maxOccurs;
 
-    public Output<Integer> maxOccurs() {
-        return this.maxOccurs == null ? Codegen.empty() : this.maxOccurs;
+    public Optional<Output<Integer>> maxOccurs() {
+        return Optional.ofNullable(this.maxOccurs);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minOccurs")
-      private final @Nullable Output<Integer> minOccurs;
+    private @Nullable Output<Integer> minOccurs;
 
-    public Output<Integer> minOccurs() {
-        return this.minOccurs == null ? Codegen.empty() : this.minOccurs;
+    public Optional<Output<Integer>> minOccurs() {
+        return Optional.ofNullable(this.minOccurs);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="table")
-      private final @Nullable Output<String> table;
+    private @Nullable Output<String> table;
 
-    public Output<String> table() {
-        return this.table == null ? Codegen.empty() : this.table;
+    public Optional<Output<String>> table() {
+        return Optional.ofNullable(this.table);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public FieldArgs(
-        @Nullable Output<Integer> maxOccurs,
-        @Nullable Output<Integer> minOccurs,
-        @Nullable Output<String> name,
-        @Nullable Output<String> table,
-        @Nullable Output<String> type) {
-        this.maxOccurs = maxOccurs;
-        this.minOccurs = minOccurs;
-        this.name = name;
-        this.table = table;
-        this.type = type;
-    }
+    private FieldArgs() {}
 
-    private FieldArgs() {
-        this.maxOccurs = Codegen.empty();
-        this.minOccurs = Codegen.empty();
-        this.name = Codegen.empty();
-        this.table = Codegen.empty();
-        this.type = Codegen.empty();
+    private FieldArgs(FieldArgs $) {
+        this.maxOccurs = $.maxOccurs;
+        this.minOccurs = $.minOccurs;
+        this.name = $.name;
+        this.table = $.table;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxOccurs;
-        private @Nullable Output<Integer> minOccurs;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> table;
-        private @Nullable Output<String> type;
+        private FieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldArgs();
         }
 
         public Builder(FieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxOccurs = defaults.maxOccurs;
-    	      this.minOccurs = defaults.minOccurs;
-    	      this.name = defaults.name;
-    	      this.table = defaults.table;
-    	      this.type = defaults.type;
+            $ = new FieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxOccurs(@Nullable Output<Integer> maxOccurs) {
-            this.maxOccurs = maxOccurs;
+            $.maxOccurs = maxOccurs;
             return this;
         }
-        public Builder maxOccurs(@Nullable Integer maxOccurs) {
-            this.maxOccurs = Codegen.ofNullable(maxOccurs);
-            return this;
+
+        public Builder maxOccurs(Integer maxOccurs) {
+            return maxOccurs(Output.of(maxOccurs));
         }
+
         public Builder minOccurs(@Nullable Output<Integer> minOccurs) {
-            this.minOccurs = minOccurs;
+            $.minOccurs = minOccurs;
             return this;
         }
-        public Builder minOccurs(@Nullable Integer minOccurs) {
-            this.minOccurs = Codegen.ofNullable(minOccurs);
-            return this;
+
+        public Builder minOccurs(Integer minOccurs) {
+            return minOccurs(Output.of(minOccurs));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder table(@Nullable Output<String> table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
-        public Builder table(@Nullable String table) {
-            this.table = Codegen.ofNullable(table);
-            return this;
+
+        public Builder table(String table) {
+            return table(Output.of(table));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public FieldArgs build() {
-            return new FieldArgs(maxOccurs, minOccurs, name, table, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public FieldArgs build() {
+            return $;
         }
     }
+
 }

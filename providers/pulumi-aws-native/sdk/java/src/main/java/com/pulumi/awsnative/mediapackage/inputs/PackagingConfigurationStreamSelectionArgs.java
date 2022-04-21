@@ -6,9 +6,9 @@ package com.pulumi.awsnative.mediapackage.inputs;
 import com.pulumi.awsnative.mediapackage.enums.PackagingConfigurationStreamSelectionStreamOrder;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PackagingConfigurationStreamSelectionArgs extends com.pulumi.
      * 
      */
     @Import(name="maxVideoBitsPerSecond")
-      private final @Nullable Output<Integer> maxVideoBitsPerSecond;
+    private @Nullable Output<Integer> maxVideoBitsPerSecond;
 
-    public Output<Integer> maxVideoBitsPerSecond() {
-        return this.maxVideoBitsPerSecond == null ? Codegen.empty() : this.maxVideoBitsPerSecond;
+    public Optional<Output<Integer>> maxVideoBitsPerSecond() {
+        return Optional.ofNullable(this.maxVideoBitsPerSecond);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PackagingConfigurationStreamSelectionArgs extends com.pulumi.
      * 
      */
     @Import(name="minVideoBitsPerSecond")
-      private final @Nullable Output<Integer> minVideoBitsPerSecond;
+    private @Nullable Output<Integer> minVideoBitsPerSecond;
 
-    public Output<Integer> minVideoBitsPerSecond() {
-        return this.minVideoBitsPerSecond == null ? Codegen.empty() : this.minVideoBitsPerSecond;
+    public Optional<Output<Integer>> minVideoBitsPerSecond() {
+        return Optional.ofNullable(this.minVideoBitsPerSecond);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class PackagingConfigurationStreamSelectionArgs extends com.pulumi.
      * 
      */
     @Import(name="streamOrder")
-      private final @Nullable Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder;
+    private @Nullable Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder;
 
-    public Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder() {
-        return this.streamOrder == null ? Codegen.empty() : this.streamOrder;
+    public Optional<Output<PackagingConfigurationStreamSelectionStreamOrder>> streamOrder() {
+        return Optional.ofNullable(this.streamOrder);
     }
 
-    public PackagingConfigurationStreamSelectionArgs(
-        @Nullable Output<Integer> maxVideoBitsPerSecond,
-        @Nullable Output<Integer> minVideoBitsPerSecond,
-        @Nullable Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder) {
-        this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
-        this.minVideoBitsPerSecond = minVideoBitsPerSecond;
-        this.streamOrder = streamOrder;
-    }
+    private PackagingConfigurationStreamSelectionArgs() {}
 
-    private PackagingConfigurationStreamSelectionArgs() {
-        this.maxVideoBitsPerSecond = Codegen.empty();
-        this.minVideoBitsPerSecond = Codegen.empty();
-        this.streamOrder = Codegen.empty();
+    private PackagingConfigurationStreamSelectionArgs(PackagingConfigurationStreamSelectionArgs $) {
+        this.maxVideoBitsPerSecond = $.maxVideoBitsPerSecond;
+        this.minVideoBitsPerSecond = $.minVideoBitsPerSecond;
+        this.streamOrder = $.streamOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationStreamSelectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxVideoBitsPerSecond;
-        private @Nullable Output<Integer> minVideoBitsPerSecond;
-        private @Nullable Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder;
+        private PackagingConfigurationStreamSelectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationStreamSelectionArgs();
         }
 
         public Builder(PackagingConfigurationStreamSelectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxVideoBitsPerSecond = defaults.maxVideoBitsPerSecond;
-    	      this.minVideoBitsPerSecond = defaults.minVideoBitsPerSecond;
-    	      this.streamOrder = defaults.streamOrder;
+            $ = new PackagingConfigurationStreamSelectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxVideoBitsPerSecond(@Nullable Output<Integer> maxVideoBitsPerSecond) {
-            this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
+            $.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
-        public Builder maxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
-            this.maxVideoBitsPerSecond = Codegen.ofNullable(maxVideoBitsPerSecond);
-            return this;
+
+        public Builder maxVideoBitsPerSecond(Integer maxVideoBitsPerSecond) {
+            return maxVideoBitsPerSecond(Output.of(maxVideoBitsPerSecond));
         }
+
         public Builder minVideoBitsPerSecond(@Nullable Output<Integer> minVideoBitsPerSecond) {
-            this.minVideoBitsPerSecond = minVideoBitsPerSecond;
+            $.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
-        public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
-            this.minVideoBitsPerSecond = Codegen.ofNullable(minVideoBitsPerSecond);
-            return this;
+
+        public Builder minVideoBitsPerSecond(Integer minVideoBitsPerSecond) {
+            return minVideoBitsPerSecond(Output.of(minVideoBitsPerSecond));
         }
+
         public Builder streamOrder(@Nullable Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder) {
-            this.streamOrder = streamOrder;
+            $.streamOrder = streamOrder;
             return this;
         }
-        public Builder streamOrder(@Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
-            this.streamOrder = Codegen.ofNullable(streamOrder);
-            return this;
-        }        public PackagingConfigurationStreamSelectionArgs build() {
-            return new PackagingConfigurationStreamSelectionArgs(maxVideoBitsPerSecond, minVideoBitsPerSecond, streamOrder);
+
+        public Builder streamOrder(PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
+            return streamOrder(Output.of(streamOrder));
+        }
+
+        public PackagingConfigurationStreamSelectionArgs build() {
+            return $;
         }
     }
+
 }

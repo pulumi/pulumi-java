@@ -23,10 +23,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable String availabilityZone;
+    private @Nullable String availabilityZone;
 
     public Optional<String> availabilityZone() {
-        return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZoneId")
-      private final @Nullable String availabilityZoneId;
+    private @Nullable String availabilityZoneId;
 
     public Optional<String> availabilityZoneId() {
-        return this.availabilityZoneId == null ? Optional.empty() : Optional.ofNullable(this.availabilityZoneId);
+        return Optional.ofNullable(this.availabilityZoneId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cidrBlock")
-      private final @Nullable String cidrBlock;
+    private @Nullable String cidrBlock;
 
     public Optional<String> cidrBlock() {
-        return this.cidrBlock == null ? Optional.empty() : Optional.ofNullable(this.cidrBlock);
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultForAz")
-      private final @Nullable Boolean defaultForAz;
+    private @Nullable Boolean defaultForAz;
 
     public Optional<Boolean> defaultForAz() {
-        return this.defaultForAz == null ? Optional.empty() : Optional.ofNullable(this.defaultForAz);
+        return Optional.ofNullable(this.defaultForAz);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetSubnetFilter> filters;
+    private @Nullable List<GetSubnetFilter> filters;
 
-    public List<GetSubnetFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetSubnetFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipv6CidrBlock")
-      private final @Nullable String ipv6CidrBlock;
+    private @Nullable String ipv6CidrBlock;
 
     public Optional<String> ipv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Optional.empty() : Optional.ofNullable(this.ipv6CidrBlock);
+        return Optional.ofNullable(this.ipv6CidrBlock);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -122,130 +122,102 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable String vpcId;
+    private @Nullable String vpcId;
 
     public Optional<String> vpcId() {
-        return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public GetSubnetArgs(
-        @Nullable String availabilityZone,
-        @Nullable String availabilityZoneId,
-        @Nullable String cidrBlock,
-        @Nullable Boolean defaultForAz,
-        @Nullable List<GetSubnetFilter> filters,
-        @Nullable String id,
-        @Nullable String ipv6CidrBlock,
-        @Nullable String state,
-        @Nullable Map<String,String> tags,
-        @Nullable String vpcId) {
-        this.availabilityZone = availabilityZone;
-        this.availabilityZoneId = availabilityZoneId;
-        this.cidrBlock = cidrBlock;
-        this.defaultForAz = defaultForAz;
-        this.filters = filters;
-        this.id = id;
-        this.ipv6CidrBlock = ipv6CidrBlock;
-        this.state = state;
-        this.tags = tags;
-        this.vpcId = vpcId;
-    }
+    private GetSubnetArgs() {}
 
-    private GetSubnetArgs() {
-        this.availabilityZone = null;
-        this.availabilityZoneId = null;
-        this.cidrBlock = null;
-        this.defaultForAz = null;
-        this.filters = List.of();
-        this.id = null;
-        this.ipv6CidrBlock = null;
-        this.state = null;
-        this.tags = Map.of();
-        this.vpcId = null;
+    private GetSubnetArgs(GetSubnetArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.availabilityZoneId = $.availabilityZoneId;
+        this.cidrBlock = $.cidrBlock;
+        this.defaultForAz = $.defaultForAz;
+        this.filters = $.filters;
+        this.id = $.id;
+        this.ipv6CidrBlock = $.ipv6CidrBlock;
+        this.state = $.state;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubnetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String availabilityZone;
-        private @Nullable String availabilityZoneId;
-        private @Nullable String cidrBlock;
-        private @Nullable Boolean defaultForAz;
-        private @Nullable List<GetSubnetFilter> filters;
-        private @Nullable String id;
-        private @Nullable String ipv6CidrBlock;
-        private @Nullable String state;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String vpcId;
+        private GetSubnetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubnetArgs();
         }
 
         public Builder(GetSubnetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.availabilityZoneId = defaults.availabilityZoneId;
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.defaultForAz = defaults.defaultForAz;
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.ipv6CidrBlock = defaults.ipv6CidrBlock;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetSubnetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            this.availabilityZoneId = availabilityZoneId;
+            $.availabilityZoneId = availabilityZoneId;
             return this;
         }
+
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = cidrBlock;
+            $.cidrBlock = cidrBlock;
             return this;
         }
+
         public Builder defaultForAz(@Nullable Boolean defaultForAz) {
-            this.defaultForAz = defaultForAz;
+            $.defaultForAz = defaultForAz;
             return this;
         }
+
         public Builder filters(@Nullable List<GetSubnetFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetSubnetFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = ipv6CidrBlock;
+            $.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
-        }        public GetSubnetArgs build() {
-            return new GetSubnetArgs(availabilityZone, availabilityZoneId, cidrBlock, defaultForAz, filters, id, ipv6CidrBlock, state, tags, vpcId);
+        }
+
+        public GetSubnetArgs build() {
+            return $;
         }
     }
+
 }

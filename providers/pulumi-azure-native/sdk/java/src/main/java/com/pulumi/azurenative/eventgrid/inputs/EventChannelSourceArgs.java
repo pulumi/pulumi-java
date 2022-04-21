@@ -5,9 +5,9 @@ package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class EventChannelSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public EventChannelSourceArgs(@Nullable Output<String> source) {
-        this.source = source;
-    }
+    private EventChannelSourceArgs() {}
 
-    private EventChannelSourceArgs() {
-        this.source = Codegen.empty();
+    private EventChannelSourceArgs(EventChannelSourceArgs $) {
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventChannelSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> source;
+        private EventChannelSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventChannelSourceArgs();
         }
 
         public Builder(EventChannelSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
+            $ = new EventChannelSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public EventChannelSourceArgs build() {
-            return new EventChannelSourceArgs(source);
+
+        public Builder source(String source) {
+            return source(Output.of(source));
+        }
+
+        public EventChannelSourceArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cidrBlock")
-      private final @Nullable String cidrBlock;
+    private @Nullable String cidrBlock;
 
     public Optional<String> cidrBlock() {
-        return this.cidrBlock == null ? Optional.empty() : Optional.ofNullable(this.cidrBlock);
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="default")
-      private final @Nullable Boolean default_;
+    private @Nullable Boolean default_;
 
     public Optional<Boolean> default_() {
-        return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dhcpOptionsId")
-      private final @Nullable String dhcpOptionsId;
+    private @Nullable String dhcpOptionsId;
 
     public Optional<String> dhcpOptionsId() {
-        return this.dhcpOptionsId == null ? Optional.empty() : Optional.ofNullable(this.dhcpOptionsId);
+        return Optional.ofNullable(this.dhcpOptionsId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpcFilter> filters;
+    private @Nullable List<GetVpcFilter> filters;
 
-    public List<GetVpcFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpcFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -92,103 +92,84 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetVpcArgs(
-        @Nullable String cidrBlock,
-        @Nullable Boolean default_,
-        @Nullable String dhcpOptionsId,
-        @Nullable List<GetVpcFilter> filters,
-        @Nullable String id,
-        @Nullable String state,
-        @Nullable Map<String,String> tags) {
-        this.cidrBlock = cidrBlock;
-        this.default_ = default_;
-        this.dhcpOptionsId = dhcpOptionsId;
-        this.filters = filters;
-        this.id = id;
-        this.state = state;
-        this.tags = tags;
-    }
+    private GetVpcArgs() {}
 
-    private GetVpcArgs() {
-        this.cidrBlock = null;
-        this.default_ = null;
-        this.dhcpOptionsId = null;
-        this.filters = List.of();
-        this.id = null;
-        this.state = null;
-        this.tags = Map.of();
+    private GetVpcArgs(GetVpcArgs $) {
+        this.cidrBlock = $.cidrBlock;
+        this.default_ = $.default_;
+        this.dhcpOptionsId = $.dhcpOptionsId;
+        this.filters = $.filters;
+        this.id = $.id;
+        this.state = $.state;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cidrBlock;
-        private @Nullable Boolean default_;
-        private @Nullable String dhcpOptionsId;
-        private @Nullable List<GetVpcFilter> filters;
-        private @Nullable String id;
-        private @Nullable String state;
-        private @Nullable Map<String,String> tags;
+        private GetVpcArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcArgs();
         }
 
         public Builder(GetVpcArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.default_ = defaults.default_;
-    	      this.dhcpOptionsId = defaults.dhcpOptionsId;
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
+            $ = new GetVpcArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = cidrBlock;
+            $.cidrBlock = cidrBlock;
             return this;
         }
+
         public Builder default_(@Nullable Boolean default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
+
         public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
-            this.dhcpOptionsId = dhcpOptionsId;
+            $.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
+
         public Builder filters(@Nullable List<GetVpcFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpcFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetVpcArgs build() {
-            return new GetVpcArgs(cidrBlock, default_, dhcpOptionsId, filters, id, state, tags);
+        }
+
+        public GetVpcArgs build() {
+            return $;
         }
     }
+
 }

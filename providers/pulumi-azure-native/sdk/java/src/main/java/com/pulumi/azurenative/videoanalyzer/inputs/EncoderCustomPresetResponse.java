@@ -26,10 +26,10 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="audioEncoder")
-      private final @Nullable AudioEncoderAacResponse audioEncoder;
+    private @Nullable AudioEncoderAacResponse audioEncoder;
 
     public Optional<AudioEncoderAacResponse> audioEncoder() {
-        return this.audioEncoder == null ? Optional.empty() : Optional.ofNullable(this.audioEncoder);
+        return Optional.ofNullable(this.audioEncoder);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -49,64 +49,57 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="videoEncoder")
-      private final @Nullable VideoEncoderH264Response videoEncoder;
+    private @Nullable VideoEncoderH264Response videoEncoder;
 
     public Optional<VideoEncoderH264Response> videoEncoder() {
-        return this.videoEncoder == null ? Optional.empty() : Optional.ofNullable(this.videoEncoder);
+        return Optional.ofNullable(this.videoEncoder);
     }
 
-    public EncoderCustomPresetResponse(
-        @Nullable AudioEncoderAacResponse audioEncoder,
-        String type,
-        @Nullable VideoEncoderH264Response videoEncoder) {
-        this.audioEncoder = audioEncoder;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.videoEncoder = videoEncoder;
-    }
+    private EncoderCustomPresetResponse() {}
 
-    private EncoderCustomPresetResponse() {
-        this.audioEncoder = null;
-        this.type = null;
-        this.videoEncoder = null;
+    private EncoderCustomPresetResponse(EncoderCustomPresetResponse $) {
+        this.audioEncoder = $.audioEncoder;
+        this.type = $.type;
+        this.videoEncoder = $.videoEncoder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncoderCustomPresetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AudioEncoderAacResponse audioEncoder;
-        private String type;
-        private @Nullable VideoEncoderH264Response videoEncoder;
+        private EncoderCustomPresetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncoderCustomPresetResponse();
         }
 
         public Builder(EncoderCustomPresetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioEncoder = defaults.audioEncoder;
-    	      this.type = defaults.type;
-    	      this.videoEncoder = defaults.videoEncoder;
+            $ = new EncoderCustomPresetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audioEncoder(@Nullable AudioEncoderAacResponse audioEncoder) {
-            this.audioEncoder = audioEncoder;
+            $.audioEncoder = audioEncoder;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder videoEncoder(@Nullable VideoEncoderH264Response videoEncoder) {
-            this.videoEncoder = videoEncoder;
+            $.videoEncoder = videoEncoder;
             return this;
-        }        public EncoderCustomPresetResponse build() {
-            return new EncoderCustomPresetResponse(audioEncoder, type, videoEncoder);
+        }
+
+        public EncoderCustomPresetResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

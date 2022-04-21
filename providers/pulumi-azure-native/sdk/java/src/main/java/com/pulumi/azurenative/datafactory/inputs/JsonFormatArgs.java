@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deserializer")
-      private final @Nullable Output<Object> deserializer;
+    private @Nullable Output<Object> deserializer;
 
-    public Output<Object> deserializer() {
-        return this.deserializer == null ? Codegen.empty() : this.deserializer;
+    public Optional<Output<Object>> deserializer() {
+        return Optional.ofNullable(this.deserializer);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encodingName")
-      private final @Nullable Output<Object> encodingName;
+    private @Nullable Output<Object> encodingName;
 
-    public Output<Object> encodingName() {
-        return this.encodingName == null ? Codegen.empty() : this.encodingName;
+    public Optional<Output<Object>> encodingName() {
+        return Optional.ofNullable(this.encodingName);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filePattern")
-      private final @Nullable Output<Object> filePattern;
+    private @Nullable Output<Object> filePattern;
 
-    public Output<Object> filePattern() {
-        return this.filePattern == null ? Codegen.empty() : this.filePattern;
+    public Optional<Output<Object>> filePattern() {
+        return Optional.ofNullable(this.filePattern);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jsonNodeReference")
-      private final @Nullable Output<Object> jsonNodeReference;
+    private @Nullable Output<Object> jsonNodeReference;
 
-    public Output<Object> jsonNodeReference() {
-        return this.jsonNodeReference == null ? Codegen.empty() : this.jsonNodeReference;
+    public Optional<Output<Object>> jsonNodeReference() {
+        return Optional.ofNullable(this.jsonNodeReference);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jsonPathDefinition")
-      private final @Nullable Output<Object> jsonPathDefinition;
+    private @Nullable Output<Object> jsonPathDefinition;
 
-    public Output<Object> jsonPathDefinition() {
-        return this.jsonPathDefinition == null ? Codegen.empty() : this.jsonPathDefinition;
+    public Optional<Output<Object>> jsonPathDefinition() {
+        return Optional.ofNullable(this.jsonPathDefinition);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nestingSeparator")
-      private final @Nullable Output<Object> nestingSeparator;
+    private @Nullable Output<Object> nestingSeparator;
 
-    public Output<Object> nestingSeparator() {
-        return this.nestingSeparator == null ? Codegen.empty() : this.nestingSeparator;
+    public Optional<Output<Object>> nestingSeparator() {
+        return Optional.ofNullable(this.nestingSeparator);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serializer")
-      private final @Nullable Output<Object> serializer;
+    private @Nullable Output<Object> serializer;
 
-    public Output<Object> serializer() {
-        return this.serializer == null ? Codegen.empty() : this.serializer;
+    public Optional<Output<Object>> serializer() {
+        return Optional.ofNullable(this.serializer);
     }
 
     /**
@@ -103,141 +104,119 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public JsonFormatArgs(
-        @Nullable Output<Object> deserializer,
-        @Nullable Output<Object> encodingName,
-        @Nullable Output<Object> filePattern,
-        @Nullable Output<Object> jsonNodeReference,
-        @Nullable Output<Object> jsonPathDefinition,
-        @Nullable Output<Object> nestingSeparator,
-        @Nullable Output<Object> serializer,
-        Output<String> type) {
-        this.deserializer = deserializer;
-        this.encodingName = encodingName;
-        this.filePattern = filePattern;
-        this.jsonNodeReference = jsonNodeReference;
-        this.jsonPathDefinition = jsonPathDefinition;
-        this.nestingSeparator = nestingSeparator;
-        this.serializer = serializer;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private JsonFormatArgs() {}
 
-    private JsonFormatArgs() {
-        this.deserializer = Codegen.empty();
-        this.encodingName = Codegen.empty();
-        this.filePattern = Codegen.empty();
-        this.jsonNodeReference = Codegen.empty();
-        this.jsonPathDefinition = Codegen.empty();
-        this.nestingSeparator = Codegen.empty();
-        this.serializer = Codegen.empty();
-        this.type = Codegen.empty();
+    private JsonFormatArgs(JsonFormatArgs $) {
+        this.deserializer = $.deserializer;
+        this.encodingName = $.encodingName;
+        this.filePattern = $.filePattern;
+        this.jsonNodeReference = $.jsonNodeReference;
+        this.jsonPathDefinition = $.jsonPathDefinition;
+        this.nestingSeparator = $.nestingSeparator;
+        this.serializer = $.serializer;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> deserializer;
-        private @Nullable Output<Object> encodingName;
-        private @Nullable Output<Object> filePattern;
-        private @Nullable Output<Object> jsonNodeReference;
-        private @Nullable Output<Object> jsonPathDefinition;
-        private @Nullable Output<Object> nestingSeparator;
-        private @Nullable Output<Object> serializer;
-        private Output<String> type;
+        private JsonFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonFormatArgs();
         }
 
         public Builder(JsonFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deserializer = defaults.deserializer;
-    	      this.encodingName = defaults.encodingName;
-    	      this.filePattern = defaults.filePattern;
-    	      this.jsonNodeReference = defaults.jsonNodeReference;
-    	      this.jsonPathDefinition = defaults.jsonPathDefinition;
-    	      this.nestingSeparator = defaults.nestingSeparator;
-    	      this.serializer = defaults.serializer;
-    	      this.type = defaults.type;
+            $ = new JsonFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deserializer(@Nullable Output<Object> deserializer) {
-            this.deserializer = deserializer;
+            $.deserializer = deserializer;
             return this;
         }
-        public Builder deserializer(@Nullable Object deserializer) {
-            this.deserializer = Codegen.ofNullable(deserializer);
-            return this;
+
+        public Builder deserializer(Object deserializer) {
+            return deserializer(Output.of(deserializer));
         }
+
         public Builder encodingName(@Nullable Output<Object> encodingName) {
-            this.encodingName = encodingName;
+            $.encodingName = encodingName;
             return this;
         }
-        public Builder encodingName(@Nullable Object encodingName) {
-            this.encodingName = Codegen.ofNullable(encodingName);
-            return this;
+
+        public Builder encodingName(Object encodingName) {
+            return encodingName(Output.of(encodingName));
         }
+
         public Builder filePattern(@Nullable Output<Object> filePattern) {
-            this.filePattern = filePattern;
+            $.filePattern = filePattern;
             return this;
         }
-        public Builder filePattern(@Nullable Object filePattern) {
-            this.filePattern = Codegen.ofNullable(filePattern);
-            return this;
+
+        public Builder filePattern(Object filePattern) {
+            return filePattern(Output.of(filePattern));
         }
+
         public Builder jsonNodeReference(@Nullable Output<Object> jsonNodeReference) {
-            this.jsonNodeReference = jsonNodeReference;
+            $.jsonNodeReference = jsonNodeReference;
             return this;
         }
-        public Builder jsonNodeReference(@Nullable Object jsonNodeReference) {
-            this.jsonNodeReference = Codegen.ofNullable(jsonNodeReference);
-            return this;
+
+        public Builder jsonNodeReference(Object jsonNodeReference) {
+            return jsonNodeReference(Output.of(jsonNodeReference));
         }
+
         public Builder jsonPathDefinition(@Nullable Output<Object> jsonPathDefinition) {
-            this.jsonPathDefinition = jsonPathDefinition;
+            $.jsonPathDefinition = jsonPathDefinition;
             return this;
         }
-        public Builder jsonPathDefinition(@Nullable Object jsonPathDefinition) {
-            this.jsonPathDefinition = Codegen.ofNullable(jsonPathDefinition);
-            return this;
+
+        public Builder jsonPathDefinition(Object jsonPathDefinition) {
+            return jsonPathDefinition(Output.of(jsonPathDefinition));
         }
+
         public Builder nestingSeparator(@Nullable Output<Object> nestingSeparator) {
-            this.nestingSeparator = nestingSeparator;
+            $.nestingSeparator = nestingSeparator;
             return this;
         }
-        public Builder nestingSeparator(@Nullable Object nestingSeparator) {
-            this.nestingSeparator = Codegen.ofNullable(nestingSeparator);
-            return this;
+
+        public Builder nestingSeparator(Object nestingSeparator) {
+            return nestingSeparator(Output.of(nestingSeparator));
         }
+
         public Builder serializer(@Nullable Output<Object> serializer) {
-            this.serializer = serializer;
+            $.serializer = serializer;
             return this;
         }
-        public Builder serializer(@Nullable Object serializer) {
-            this.serializer = Codegen.ofNullable(serializer);
-            return this;
+
+        public Builder serializer(Object serializer) {
+            return serializer(Output.of(serializer));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JsonFormatArgs build() {
-            return new JsonFormatArgs(deserializer, encodingName, filePattern, jsonNodeReference, jsonPathDefinition, nestingSeparator, serializer, type);
+            return type(Output.of(type));
+        }
+
+        public JsonFormatArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

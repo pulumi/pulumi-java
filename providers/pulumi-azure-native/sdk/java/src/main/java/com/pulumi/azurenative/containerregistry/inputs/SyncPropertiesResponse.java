@@ -23,7 +23,7 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="gatewayEndpoint", required=true)
-      private final String gatewayEndpoint;
+    private String gatewayEndpoint;
 
     public String gatewayEndpoint() {
         return this.gatewayEndpoint;
@@ -34,7 +34,7 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lastSyncTime", required=true)
-      private final String lastSyncTime;
+    private String lastSyncTime;
 
     public String lastSyncTime() {
         return this.lastSyncTime;
@@ -45,7 +45,7 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="messageTtl", required=true)
-      private final String messageTtl;
+    private String messageTtl;
 
     public String messageTtl() {
         return this.messageTtl;
@@ -56,10 +56,10 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="schedule")
-      private final @Nullable String schedule;
+    private @Nullable String schedule;
 
     public Optional<String> schedule() {
-        return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="syncWindow")
-      private final @Nullable String syncWindow;
+    private @Nullable String syncWindow;
 
     public Optional<String> syncWindow() {
-        return this.syncWindow == null ? Optional.empty() : Optional.ofNullable(this.syncWindow);
+        return Optional.ofNullable(this.syncWindow);
     }
 
     /**
@@ -78,91 +78,78 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tokenId", required=true)
-      private final String tokenId;
+    private String tokenId;
 
     public String tokenId() {
         return this.tokenId;
     }
 
-    public SyncPropertiesResponse(
-        String gatewayEndpoint,
-        String lastSyncTime,
-        String messageTtl,
-        @Nullable String schedule,
-        @Nullable String syncWindow,
-        String tokenId) {
-        this.gatewayEndpoint = Objects.requireNonNull(gatewayEndpoint, "expected parameter 'gatewayEndpoint' to be non-null");
-        this.lastSyncTime = Objects.requireNonNull(lastSyncTime, "expected parameter 'lastSyncTime' to be non-null");
-        this.messageTtl = Objects.requireNonNull(messageTtl, "expected parameter 'messageTtl' to be non-null");
-        this.schedule = schedule;
-        this.syncWindow = syncWindow;
-        this.tokenId = Objects.requireNonNull(tokenId, "expected parameter 'tokenId' to be non-null");
-    }
+    private SyncPropertiesResponse() {}
 
-    private SyncPropertiesResponse() {
-        this.gatewayEndpoint = null;
-        this.lastSyncTime = null;
-        this.messageTtl = null;
-        this.schedule = null;
-        this.syncWindow = null;
-        this.tokenId = null;
+    private SyncPropertiesResponse(SyncPropertiesResponse $) {
+        this.gatewayEndpoint = $.gatewayEndpoint;
+        this.lastSyncTime = $.lastSyncTime;
+        this.messageTtl = $.messageTtl;
+        this.schedule = $.schedule;
+        this.syncWindow = $.syncWindow;
+        this.tokenId = $.tokenId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayEndpoint;
-        private String lastSyncTime;
-        private String messageTtl;
-        private @Nullable String schedule;
-        private @Nullable String syncWindow;
-        private String tokenId;
+        private SyncPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncPropertiesResponse();
         }
 
         public Builder(SyncPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayEndpoint = defaults.gatewayEndpoint;
-    	      this.lastSyncTime = defaults.lastSyncTime;
-    	      this.messageTtl = defaults.messageTtl;
-    	      this.schedule = defaults.schedule;
-    	      this.syncWindow = defaults.syncWindow;
-    	      this.tokenId = defaults.tokenId;
+            $ = new SyncPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayEndpoint(String gatewayEndpoint) {
-            this.gatewayEndpoint = Objects.requireNonNull(gatewayEndpoint);
+            $.gatewayEndpoint = gatewayEndpoint;
             return this;
         }
+
         public Builder lastSyncTime(String lastSyncTime) {
-            this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
+            $.lastSyncTime = lastSyncTime;
             return this;
         }
+
         public Builder messageTtl(String messageTtl) {
-            this.messageTtl = Objects.requireNonNull(messageTtl);
+            $.messageTtl = messageTtl;
             return this;
         }
+
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
+
         public Builder syncWindow(@Nullable String syncWindow) {
-            this.syncWindow = syncWindow;
+            $.syncWindow = syncWindow;
             return this;
         }
+
         public Builder tokenId(String tokenId) {
-            this.tokenId = Objects.requireNonNull(tokenId);
+            $.tokenId = tokenId;
             return this;
-        }        public SyncPropertiesResponse build() {
-            return new SyncPropertiesResponse(gatewayEndpoint, lastSyncTime, messageTtl, schedule, syncWindow, tokenId);
+        }
+
+        public SyncPropertiesResponse build() {
+            $.gatewayEndpoint = Objects.requireNonNull($.gatewayEndpoint, "expected parameter 'gatewayEndpoint' to be non-null");
+            $.lastSyncTime = Objects.requireNonNull($.lastSyncTime, "expected parameter 'lastSyncTime' to be non-null");
+            $.messageTtl = Objects.requireNonNull($.messageTtl, "expected parameter 'messageTtl' to be non-null");
+            $.tokenId = Objects.requireNonNull($.tokenId, "expected parameter 'tokenId' to be non-null");
+            return $;
         }
     }
+
 }

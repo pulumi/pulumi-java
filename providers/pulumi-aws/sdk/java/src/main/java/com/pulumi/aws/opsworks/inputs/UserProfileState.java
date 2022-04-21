@@ -5,10 +5,10 @@ package com.pulumi.aws.opsworks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowSelfManagement")
-      private final @Nullable Output<Boolean> allowSelfManagement;
+    private @Nullable Output<Boolean> allowSelfManagement;
 
-    public Output<Boolean> allowSelfManagement() {
-        return this.allowSelfManagement == null ? Codegen.empty() : this.allowSelfManagement;
+    public Optional<Output<Boolean>> allowSelfManagement() {
+        return Optional.ofNullable(this.allowSelfManagement);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sshPublicKey")
-      private final @Nullable Output<String> sshPublicKey;
+    private @Nullable Output<String> sshPublicKey;
 
-    public Output<String> sshPublicKey() {
-        return this.sshPublicKey == null ? Codegen.empty() : this.sshPublicKey;
+    public Optional<Output<String>> sshPublicKey() {
+        return Optional.ofNullable(this.sshPublicKey);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sshUsername")
-      private final @Nullable Output<String> sshUsername;
+    private @Nullable Output<String> sshUsername;
 
-    public Output<String> sshUsername() {
-        return this.sshUsername == null ? Codegen.empty() : this.sshUsername;
+    public Optional<Output<String>> sshUsername() {
+        return Optional.ofNullable(this.sshUsername);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userArn")
-      private final @Nullable Output<String> userArn;
+    private @Nullable Output<String> userArn;
 
-    public Output<String> userArn() {
-        return this.userArn == null ? Codegen.empty() : this.userArn;
+    public Optional<Output<String>> userArn() {
+        return Optional.ofNullable(this.userArn);
     }
 
-    public UserProfileState(
-        @Nullable Output<Boolean> allowSelfManagement,
-        @Nullable Output<String> sshPublicKey,
-        @Nullable Output<String> sshUsername,
-        @Nullable Output<String> userArn) {
-        this.allowSelfManagement = allowSelfManagement;
-        this.sshPublicKey = sshPublicKey;
-        this.sshUsername = sshUsername;
-        this.userArn = userArn;
-    }
+    private UserProfileState() {}
 
-    private UserProfileState() {
-        this.allowSelfManagement = Codegen.empty();
-        this.sshPublicKey = Codegen.empty();
-        this.sshUsername = Codegen.empty();
-        this.userArn = Codegen.empty();
+    private UserProfileState(UserProfileState $) {
+        this.allowSelfManagement = $.allowSelfManagement;
+        this.sshPublicKey = $.sshPublicKey;
+        this.sshUsername = $.sshUsername;
+        this.userArn = $.userArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowSelfManagement;
-        private @Nullable Output<String> sshPublicKey;
-        private @Nullable Output<String> sshUsername;
-        private @Nullable Output<String> userArn;
+        private UserProfileState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileState();
         }
 
         public Builder(UserProfileState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowSelfManagement = defaults.allowSelfManagement;
-    	      this.sshPublicKey = defaults.sshPublicKey;
-    	      this.sshUsername = defaults.sshUsername;
-    	      this.userArn = defaults.userArn;
+            $ = new UserProfileState(Objects.requireNonNull(defaults));
         }
 
         public Builder allowSelfManagement(@Nullable Output<Boolean> allowSelfManagement) {
-            this.allowSelfManagement = allowSelfManagement;
+            $.allowSelfManagement = allowSelfManagement;
             return this;
         }
-        public Builder allowSelfManagement(@Nullable Boolean allowSelfManagement) {
-            this.allowSelfManagement = Codegen.ofNullable(allowSelfManagement);
-            return this;
+
+        public Builder allowSelfManagement(Boolean allowSelfManagement) {
+            return allowSelfManagement(Output.of(allowSelfManagement));
         }
+
         public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
-            this.sshPublicKey = sshPublicKey;
+            $.sshPublicKey = sshPublicKey;
             return this;
         }
-        public Builder sshPublicKey(@Nullable String sshPublicKey) {
-            this.sshPublicKey = Codegen.ofNullable(sshPublicKey);
-            return this;
+
+        public Builder sshPublicKey(String sshPublicKey) {
+            return sshPublicKey(Output.of(sshPublicKey));
         }
+
         public Builder sshUsername(@Nullable Output<String> sshUsername) {
-            this.sshUsername = sshUsername;
+            $.sshUsername = sshUsername;
             return this;
         }
-        public Builder sshUsername(@Nullable String sshUsername) {
-            this.sshUsername = Codegen.ofNullable(sshUsername);
-            return this;
+
+        public Builder sshUsername(String sshUsername) {
+            return sshUsername(Output.of(sshUsername));
         }
+
         public Builder userArn(@Nullable Output<String> userArn) {
-            this.userArn = userArn;
+            $.userArn = userArn;
             return this;
         }
-        public Builder userArn(@Nullable String userArn) {
-            this.userArn = Codegen.ofNullable(userArn);
-            return this;
-        }        public UserProfileState build() {
-            return new UserProfileState(allowSelfManagement, sshPublicKey, sshUsername, userArn);
+
+        public Builder userArn(String userArn) {
+            return userArn(Output.of(userArn));
+        }
+
+        public UserProfileState build() {
+            return $;
         }
     }
+
 }

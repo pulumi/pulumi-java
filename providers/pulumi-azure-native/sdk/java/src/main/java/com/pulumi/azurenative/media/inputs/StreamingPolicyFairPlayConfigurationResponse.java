@@ -24,7 +24,7 @@ public final class StreamingPolicyFairPlayConfigurationResponse extends com.pulu
      * 
      */
     @Import(name="allowPersistentLicense", required=true)
-      private final Boolean allowPersistentLicense;
+    private Boolean allowPersistentLicense;
 
     public Boolean allowPersistentLicense() {
         return this.allowPersistentLicense;
@@ -35,55 +35,51 @@ public final class StreamingPolicyFairPlayConfigurationResponse extends com.pulu
      * 
      */
     @Import(name="customLicenseAcquisitionUrlTemplate")
-      private final @Nullable String customLicenseAcquisitionUrlTemplate;
+    private @Nullable String customLicenseAcquisitionUrlTemplate;
 
     public Optional<String> customLicenseAcquisitionUrlTemplate() {
-        return this.customLicenseAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
+        return Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
     }
 
-    public StreamingPolicyFairPlayConfigurationResponse(
-        Boolean allowPersistentLicense,
-        @Nullable String customLicenseAcquisitionUrlTemplate) {
-        this.allowPersistentLicense = Objects.requireNonNull(allowPersistentLicense, "expected parameter 'allowPersistentLicense' to be non-null");
-        this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
-    }
+    private StreamingPolicyFairPlayConfigurationResponse() {}
 
-    private StreamingPolicyFairPlayConfigurationResponse() {
-        this.allowPersistentLicense = null;
-        this.customLicenseAcquisitionUrlTemplate = null;
+    private StreamingPolicyFairPlayConfigurationResponse(StreamingPolicyFairPlayConfigurationResponse $) {
+        this.allowPersistentLicense = $.allowPersistentLicense;
+        this.customLicenseAcquisitionUrlTemplate = $.customLicenseAcquisitionUrlTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPolicyFairPlayConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowPersistentLicense;
-        private @Nullable String customLicenseAcquisitionUrlTemplate;
+        private StreamingPolicyFairPlayConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPolicyFairPlayConfigurationResponse();
         }
 
         public Builder(StreamingPolicyFairPlayConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPersistentLicense = defaults.allowPersistentLicense;
-    	      this.customLicenseAcquisitionUrlTemplate = defaults.customLicenseAcquisitionUrlTemplate;
+            $ = new StreamingPolicyFairPlayConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPersistentLicense(Boolean allowPersistentLicense) {
-            this.allowPersistentLicense = Objects.requireNonNull(allowPersistentLicense);
+            $.allowPersistentLicense = allowPersistentLicense;
             return this;
         }
+
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
+            $.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
-        }        public StreamingPolicyFairPlayConfigurationResponse build() {
-            return new StreamingPolicyFairPlayConfigurationResponse(allowPersistentLicense, customLicenseAcquisitionUrlTemplate);
+        }
+
+        public StreamingPolicyFairPlayConfigurationResponse build() {
+            $.allowPersistentLicense = Objects.requireNonNull($.allowPersistentLicense, "expected parameter 'allowPersistentLicense' to be non-null");
+            return $;
         }
     }
+
 }

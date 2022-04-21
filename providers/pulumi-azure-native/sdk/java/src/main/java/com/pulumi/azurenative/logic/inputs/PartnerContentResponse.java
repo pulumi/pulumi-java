@@ -23,45 +23,44 @@ public final class PartnerContentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="b2b")
-      private final @Nullable B2BPartnerContentResponse b2b;
+    private @Nullable B2BPartnerContentResponse b2b;
 
     public Optional<B2BPartnerContentResponse> b2b() {
-        return this.b2b == null ? Optional.empty() : Optional.ofNullable(this.b2b);
+        return Optional.ofNullable(this.b2b);
     }
 
-    public PartnerContentResponse(@Nullable B2BPartnerContentResponse b2b) {
-        this.b2b = b2b;
-    }
+    private PartnerContentResponse() {}
 
-    private PartnerContentResponse() {
-        this.b2b = null;
+    private PartnerContentResponse(PartnerContentResponse $) {
+        this.b2b = $.b2b;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartnerContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable B2BPartnerContentResponse b2b;
+        private PartnerContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartnerContentResponse();
         }
 
         public Builder(PartnerContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.b2b = defaults.b2b;
+            $ = new PartnerContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder b2b(@Nullable B2BPartnerContentResponse b2b) {
-            this.b2b = b2b;
+            $.b2b = b2b;
             return this;
-        }        public PartnerContentResponse build() {
-            return new PartnerContentResponse(b2b);
+        }
+
+        public PartnerContentResponse build() {
+            return $;
         }
     }
+
 }

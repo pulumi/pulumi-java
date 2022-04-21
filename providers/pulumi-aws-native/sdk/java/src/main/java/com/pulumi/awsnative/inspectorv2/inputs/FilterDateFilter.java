@@ -15,62 +15,57 @@ public final class FilterDateFilter extends com.pulumi.resources.InvokeArgs {
     public static final FilterDateFilter Empty = new FilterDateFilter();
 
     @Import(name="endInclusive")
-      private final @Nullable Integer endInclusive;
+    private @Nullable Integer endInclusive;
 
     public Optional<Integer> endInclusive() {
-        return this.endInclusive == null ? Optional.empty() : Optional.ofNullable(this.endInclusive);
+        return Optional.ofNullable(this.endInclusive);
     }
 
     @Import(name="startInclusive")
-      private final @Nullable Integer startInclusive;
+    private @Nullable Integer startInclusive;
 
     public Optional<Integer> startInclusive() {
-        return this.startInclusive == null ? Optional.empty() : Optional.ofNullable(this.startInclusive);
+        return Optional.ofNullable(this.startInclusive);
     }
 
-    public FilterDateFilter(
-        @Nullable Integer endInclusive,
-        @Nullable Integer startInclusive) {
-        this.endInclusive = endInclusive;
-        this.startInclusive = startInclusive;
-    }
+    private FilterDateFilter() {}
 
-    private FilterDateFilter() {
-        this.endInclusive = null;
-        this.startInclusive = null;
+    private FilterDateFilter(FilterDateFilter $) {
+        this.endInclusive = $.endInclusive;
+        this.startInclusive = $.startInclusive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterDateFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer endInclusive;
-        private @Nullable Integer startInclusive;
+        private FilterDateFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterDateFilter();
         }
 
         public Builder(FilterDateFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endInclusive = defaults.endInclusive;
-    	      this.startInclusive = defaults.startInclusive;
+            $ = new FilterDateFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder endInclusive(@Nullable Integer endInclusive) {
-            this.endInclusive = endInclusive;
+            $.endInclusive = endInclusive;
             return this;
         }
+
         public Builder startInclusive(@Nullable Integer startInclusive) {
-            this.startInclusive = startInclusive;
+            $.startInclusive = startInclusive;
             return this;
-        }        public FilterDateFilter build() {
-            return new FilterDateFilter(endInclusive, startInclusive);
+        }
+
+        public FilterDateFilter build() {
+            return $;
         }
     }
+
 }

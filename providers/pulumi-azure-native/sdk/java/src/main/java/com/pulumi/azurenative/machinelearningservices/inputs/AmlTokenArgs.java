@@ -24,49 +24,49 @@ public final class AmlTokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identityType", required=true)
-      private final Output<String> identityType;
+    private Output<String> identityType;
 
     public Output<String> identityType() {
         return this.identityType;
     }
 
-    public AmlTokenArgs(Output<String> identityType) {
-        this.identityType = Codegen.stringProp("identityType").output().arg(identityType).require();
-    }
+    private AmlTokenArgs() {}
 
-    private AmlTokenArgs() {
-        this.identityType = Codegen.empty();
+    private AmlTokenArgs(AmlTokenArgs $) {
+        this.identityType = $.identityType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmlTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> identityType;
+        private AmlTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmlTokenArgs();
         }
 
         public Builder(AmlTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityType = defaults.identityType;
+            $ = new AmlTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identityType(Output<String> identityType) {
-            this.identityType = Objects.requireNonNull(identityType);
+            $.identityType = identityType;
             return this;
         }
+
         public Builder identityType(String identityType) {
-            this.identityType = Output.of(Objects.requireNonNull(identityType));
-            return this;
-        }        public AmlTokenArgs build() {
-            return new AmlTokenArgs(identityType);
+            return identityType(Output.of(identityType));
+        }
+
+        public AmlTokenArgs build() {
+            $.identityType = Codegen.stringProp("identityType").output().arg($.identityType).require();
+            return $;
         }
     }
+
 }

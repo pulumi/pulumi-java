@@ -6,9 +6,9 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupIPSetForwardedIPConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class RuleGroupIPSetReferenceStatementArgs extends com.pulumi.resou
     public static final RuleGroupIPSetReferenceStatementArgs Empty = new RuleGroupIPSetReferenceStatementArgs();
 
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="iPSetForwardedIPConfig")
-      private final @Nullable Output<RuleGroupIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
+    private @Nullable Output<RuleGroupIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
 
-    public Output<RuleGroupIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig() {
-        return this.iPSetForwardedIPConfig == null ? Codegen.empty() : this.iPSetForwardedIPConfig;
+    public Optional<Output<RuleGroupIPSetForwardedIPConfigurationArgs>> iPSetForwardedIPConfig() {
+        return Optional.ofNullable(this.iPSetForwardedIPConfig);
     }
 
-    public RuleGroupIPSetReferenceStatementArgs(
-        Output<String> arn,
-        @Nullable Output<RuleGroupIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
-    }
+    private RuleGroupIPSetReferenceStatementArgs() {}
 
-    private RuleGroupIPSetReferenceStatementArgs() {
-        this.arn = Codegen.empty();
-        this.iPSetForwardedIPConfig = Codegen.empty();
+    private RuleGroupIPSetReferenceStatementArgs(RuleGroupIPSetReferenceStatementArgs $) {
+        this.arn = $.arn;
+        this.iPSetForwardedIPConfig = $.iPSetForwardedIPConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupIPSetReferenceStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
-        private @Nullable Output<RuleGroupIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
+        private RuleGroupIPSetReferenceStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupIPSetReferenceStatementArgs();
         }
 
         public Builder(RuleGroupIPSetReferenceStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.iPSetForwardedIPConfig = defaults.iPSetForwardedIPConfig;
+            $ = new RuleGroupIPSetReferenceStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
+            return arn(Output.of(arn));
         }
+
         public Builder iPSetForwardedIPConfig(@Nullable Output<RuleGroupIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig) {
-            this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
+            $.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
         }
-        public Builder iPSetForwardedIPConfig(@Nullable RuleGroupIPSetForwardedIPConfigurationArgs iPSetForwardedIPConfig) {
-            this.iPSetForwardedIPConfig = Codegen.ofNullable(iPSetForwardedIPConfig);
-            return this;
-        }        public RuleGroupIPSetReferenceStatementArgs build() {
-            return new RuleGroupIPSetReferenceStatementArgs(arn, iPSetForwardedIPConfig);
+
+        public Builder iPSetForwardedIPConfig(RuleGroupIPSetForwardedIPConfigurationArgs iPSetForwardedIPConfig) {
+            return iPSetForwardedIPConfig(Output.of(iPSetForwardedIPConfig));
+        }
+
+        public RuleGroupIPSetReferenceStatementArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

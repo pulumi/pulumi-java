@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="azureResourceName", required=true)
-      private final String azureResourceName;
+    private String azureResourceName;
 
     public String azureResourceName() {
         return this.azureResourceName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateEndpointName", required=true)
-      private final String privateEndpointName;
+    private String privateEndpointName;
 
     public String privateEndpointName() {
         return this.privateEndpointName;
@@ -39,64 +39,59 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateEndpointConnectionArgs(
-        String azureResourceName,
-        String privateEndpointName,
-        String resourceGroupName) {
-        this.azureResourceName = Objects.requireNonNull(azureResourceName, "expected parameter 'azureResourceName' to be non-null");
-        this.privateEndpointName = Objects.requireNonNull(privateEndpointName, "expected parameter 'privateEndpointName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateEndpointConnectionArgs() {}
 
-    private GetPrivateEndpointConnectionArgs() {
-        this.azureResourceName = null;
-        this.privateEndpointName = null;
-        this.resourceGroupName = null;
+    private GetPrivateEndpointConnectionArgs(GetPrivateEndpointConnectionArgs $) {
+        this.azureResourceName = $.azureResourceName;
+        this.privateEndpointName = $.privateEndpointName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String azureResourceName;
-        private String privateEndpointName;
-        private String resourceGroupName;
+        private GetPrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateEndpointConnectionArgs();
         }
 
         public Builder(GetPrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureResourceName = defaults.azureResourceName;
-    	      this.privateEndpointName = defaults.privateEndpointName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureResourceName(String azureResourceName) {
-            this.azureResourceName = Objects.requireNonNull(azureResourceName);
+            $.azureResourceName = azureResourceName;
             return this;
         }
+
         public Builder privateEndpointName(String privateEndpointName) {
-            this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
+            $.privateEndpointName = privateEndpointName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateEndpointConnectionArgs build() {
-            return new GetPrivateEndpointConnectionArgs(azureResourceName, privateEndpointName, resourceGroupName);
+        }
+
+        public GetPrivateEndpointConnectionArgs build() {
+            $.azureResourceName = Objects.requireNonNull($.azureResourceName, "expected parameter 'azureResourceName' to be non-null");
+            $.privateEndpointName = Objects.requireNonNull($.privateEndpointName, "expected parameter 'privateEndpointName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

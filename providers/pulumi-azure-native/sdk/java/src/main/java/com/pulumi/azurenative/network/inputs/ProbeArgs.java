@@ -7,10 +7,10 @@ import com.pulumi.azurenative.network.enums.ProbeProtocol;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="intervalInSeconds")
-      private final @Nullable Output<Integer> intervalInSeconds;
+    private @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
+    public Optional<Output<Integer>> intervalInSeconds() {
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfProbes")
-      private final @Nullable Output<Integer> numberOfProbes;
+    private @Nullable Output<Integer> numberOfProbes;
 
-    public Output<Integer> numberOfProbes() {
-        return this.numberOfProbes == null ? Codegen.empty() : this.numberOfProbes;
+    public Optional<Output<Integer>> numberOfProbes() {
+        return Optional.ofNullable(this.numberOfProbes);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -82,7 +82,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<Either<String,ProbeProtocol>> protocol;
+    private Output<Either<String,ProbeProtocol>> protocol;
 
     public Output<Either<String,ProbeProtocol>> protocol() {
         return this.protocol;
@@ -93,128 +93,110 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestPath")
-      private final @Nullable Output<String> requestPath;
+    private @Nullable Output<String> requestPath;
 
-    public Output<String> requestPath() {
-        return this.requestPath == null ? Codegen.empty() : this.requestPath;
+    public Optional<Output<String>> requestPath() {
+        return Optional.ofNullable(this.requestPath);
     }
 
-    public ProbeArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<Integer> intervalInSeconds,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> numberOfProbes,
-        Output<Integer> port,
-        Output<Either<String,ProbeProtocol>> protocol,
-        @Nullable Output<String> requestPath) {
-        this.id = id;
-        this.intervalInSeconds = intervalInSeconds;
-        this.name = name;
-        this.numberOfProbes = numberOfProbes;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.requestPath = requestPath;
-    }
+    private ProbeArgs() {}
 
-    private ProbeArgs() {
-        this.id = Codegen.empty();
-        this.intervalInSeconds = Codegen.empty();
-        this.name = Codegen.empty();
-        this.numberOfProbes = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.requestPath = Codegen.empty();
+    private ProbeArgs(ProbeArgs $) {
+        this.id = $.id;
+        this.intervalInSeconds = $.intervalInSeconds;
+        this.name = $.name;
+        this.numberOfProbes = $.numberOfProbes;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.requestPath = $.requestPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProbeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<Integer> intervalInSeconds;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> numberOfProbes;
-        private Output<Integer> port;
-        private Output<Either<String,ProbeProtocol>> protocol;
-        private @Nullable Output<String> requestPath;
+        private ProbeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProbeArgs();
         }
 
         public Builder(ProbeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
-    	      this.name = defaults.name;
-    	      this.numberOfProbes = defaults.numberOfProbes;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.requestPath = defaults.requestPath;
+            $ = new ProbeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
-        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Codegen.ofNullable(intervalInSeconds);
-            return this;
+
+        public Builder intervalInSeconds(Integer intervalInSeconds) {
+            return intervalInSeconds(Output.of(intervalInSeconds));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder numberOfProbes(@Nullable Output<Integer> numberOfProbes) {
-            this.numberOfProbes = numberOfProbes;
+            $.numberOfProbes = numberOfProbes;
             return this;
         }
-        public Builder numberOfProbes(@Nullable Integer numberOfProbes) {
-            this.numberOfProbes = Codegen.ofNullable(numberOfProbes);
-            return this;
+
+        public Builder numberOfProbes(Integer numberOfProbes) {
+            return numberOfProbes(Output.of(numberOfProbes));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder protocol(Output<Either<String,ProbeProtocol>> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(Either<String,ProbeProtocol> protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder requestPath(@Nullable Output<String> requestPath) {
-            this.requestPath = requestPath;
+            $.requestPath = requestPath;
             return this;
         }
-        public Builder requestPath(@Nullable String requestPath) {
-            this.requestPath = Codegen.ofNullable(requestPath);
-            return this;
-        }        public ProbeArgs build() {
-            return new ProbeArgs(id, intervalInSeconds, name, numberOfProbes, port, protocol, requestPath);
+
+        public Builder requestPath(String requestPath) {
+            return requestPath(Output.of(requestPath));
+        }
+
+        public ProbeArgs build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

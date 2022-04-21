@@ -21,7 +21,7 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="certSign", required=true)
-      private final Boolean certSign;
+    private Boolean certSign;
 
     public Boolean certSign() {
         return this.certSign;
@@ -32,7 +32,7 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="contentCommitment", required=true)
-      private final Boolean contentCommitment;
+    private Boolean contentCommitment;
 
     public Boolean contentCommitment() {
         return this.contentCommitment;
@@ -43,7 +43,7 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="crlSign", required=true)
-      private final Boolean crlSign;
+    private Boolean crlSign;
 
     public Boolean crlSign() {
         return this.crlSign;
@@ -54,7 +54,7 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dataEncipherment", required=true)
-      private final Boolean dataEncipherment;
+    private Boolean dataEncipherment;
 
     public Boolean dataEncipherment() {
         return this.dataEncipherment;
@@ -65,7 +65,7 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="decipherOnly", required=true)
-      private final Boolean decipherOnly;
+    private Boolean decipherOnly;
 
     public Boolean decipherOnly() {
         return this.decipherOnly;
@@ -76,7 +76,7 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="digitalSignature", required=true)
-      private final Boolean digitalSignature;
+    private Boolean digitalSignature;
 
     public Boolean digitalSignature() {
         return this.digitalSignature;
@@ -87,7 +87,7 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="encipherOnly", required=true)
-      private final Boolean encipherOnly;
+    private Boolean encipherOnly;
 
     public Boolean encipherOnly() {
         return this.encipherOnly;
@@ -98,7 +98,7 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="keyAgreement", required=true)
-      private final Boolean keyAgreement;
+    private Boolean keyAgreement;
 
     public Boolean keyAgreement() {
         return this.keyAgreement;
@@ -109,118 +109,101 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="keyEncipherment", required=true)
-      private final Boolean keyEncipherment;
+    private Boolean keyEncipherment;
 
     public Boolean keyEncipherment() {
         return this.keyEncipherment;
     }
 
-    public KeyUsageOptionsResponse(
-        Boolean certSign,
-        Boolean contentCommitment,
-        Boolean crlSign,
-        Boolean dataEncipherment,
-        Boolean decipherOnly,
-        Boolean digitalSignature,
-        Boolean encipherOnly,
-        Boolean keyAgreement,
-        Boolean keyEncipherment) {
-        this.certSign = Objects.requireNonNull(certSign, "expected parameter 'certSign' to be non-null");
-        this.contentCommitment = Objects.requireNonNull(contentCommitment, "expected parameter 'contentCommitment' to be non-null");
-        this.crlSign = Objects.requireNonNull(crlSign, "expected parameter 'crlSign' to be non-null");
-        this.dataEncipherment = Objects.requireNonNull(dataEncipherment, "expected parameter 'dataEncipherment' to be non-null");
-        this.decipherOnly = Objects.requireNonNull(decipherOnly, "expected parameter 'decipherOnly' to be non-null");
-        this.digitalSignature = Objects.requireNonNull(digitalSignature, "expected parameter 'digitalSignature' to be non-null");
-        this.encipherOnly = Objects.requireNonNull(encipherOnly, "expected parameter 'encipherOnly' to be non-null");
-        this.keyAgreement = Objects.requireNonNull(keyAgreement, "expected parameter 'keyAgreement' to be non-null");
-        this.keyEncipherment = Objects.requireNonNull(keyEncipherment, "expected parameter 'keyEncipherment' to be non-null");
-    }
+    private KeyUsageOptionsResponse() {}
 
-    private KeyUsageOptionsResponse() {
-        this.certSign = null;
-        this.contentCommitment = null;
-        this.crlSign = null;
-        this.dataEncipherment = null;
-        this.decipherOnly = null;
-        this.digitalSignature = null;
-        this.encipherOnly = null;
-        this.keyAgreement = null;
-        this.keyEncipherment = null;
+    private KeyUsageOptionsResponse(KeyUsageOptionsResponse $) {
+        this.certSign = $.certSign;
+        this.contentCommitment = $.contentCommitment;
+        this.crlSign = $.crlSign;
+        this.dataEncipherment = $.dataEncipherment;
+        this.decipherOnly = $.decipherOnly;
+        this.digitalSignature = $.digitalSignature;
+        this.encipherOnly = $.encipherOnly;
+        this.keyAgreement = $.keyAgreement;
+        this.keyEncipherment = $.keyEncipherment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyUsageOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean certSign;
-        private Boolean contentCommitment;
-        private Boolean crlSign;
-        private Boolean dataEncipherment;
-        private Boolean decipherOnly;
-        private Boolean digitalSignature;
-        private Boolean encipherOnly;
-        private Boolean keyAgreement;
-        private Boolean keyEncipherment;
+        private KeyUsageOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyUsageOptionsResponse();
         }
 
         public Builder(KeyUsageOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certSign = defaults.certSign;
-    	      this.contentCommitment = defaults.contentCommitment;
-    	      this.crlSign = defaults.crlSign;
-    	      this.dataEncipherment = defaults.dataEncipherment;
-    	      this.decipherOnly = defaults.decipherOnly;
-    	      this.digitalSignature = defaults.digitalSignature;
-    	      this.encipherOnly = defaults.encipherOnly;
-    	      this.keyAgreement = defaults.keyAgreement;
-    	      this.keyEncipherment = defaults.keyEncipherment;
+            $ = new KeyUsageOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certSign(Boolean certSign) {
-            this.certSign = Objects.requireNonNull(certSign);
+            $.certSign = certSign;
             return this;
         }
+
         public Builder contentCommitment(Boolean contentCommitment) {
-            this.contentCommitment = Objects.requireNonNull(contentCommitment);
+            $.contentCommitment = contentCommitment;
             return this;
         }
+
         public Builder crlSign(Boolean crlSign) {
-            this.crlSign = Objects.requireNonNull(crlSign);
+            $.crlSign = crlSign;
             return this;
         }
+
         public Builder dataEncipherment(Boolean dataEncipherment) {
-            this.dataEncipherment = Objects.requireNonNull(dataEncipherment);
+            $.dataEncipherment = dataEncipherment;
             return this;
         }
+
         public Builder decipherOnly(Boolean decipherOnly) {
-            this.decipherOnly = Objects.requireNonNull(decipherOnly);
+            $.decipherOnly = decipherOnly;
             return this;
         }
+
         public Builder digitalSignature(Boolean digitalSignature) {
-            this.digitalSignature = Objects.requireNonNull(digitalSignature);
+            $.digitalSignature = digitalSignature;
             return this;
         }
+
         public Builder encipherOnly(Boolean encipherOnly) {
-            this.encipherOnly = Objects.requireNonNull(encipherOnly);
+            $.encipherOnly = encipherOnly;
             return this;
         }
+
         public Builder keyAgreement(Boolean keyAgreement) {
-            this.keyAgreement = Objects.requireNonNull(keyAgreement);
+            $.keyAgreement = keyAgreement;
             return this;
         }
+
         public Builder keyEncipherment(Boolean keyEncipherment) {
-            this.keyEncipherment = Objects.requireNonNull(keyEncipherment);
+            $.keyEncipherment = keyEncipherment;
             return this;
-        }        public KeyUsageOptionsResponse build() {
-            return new KeyUsageOptionsResponse(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
+        }
+
+        public KeyUsageOptionsResponse build() {
+            $.certSign = Objects.requireNonNull($.certSign, "expected parameter 'certSign' to be non-null");
+            $.contentCommitment = Objects.requireNonNull($.contentCommitment, "expected parameter 'contentCommitment' to be non-null");
+            $.crlSign = Objects.requireNonNull($.crlSign, "expected parameter 'crlSign' to be non-null");
+            $.dataEncipherment = Objects.requireNonNull($.dataEncipherment, "expected parameter 'dataEncipherment' to be non-null");
+            $.decipherOnly = Objects.requireNonNull($.decipherOnly, "expected parameter 'decipherOnly' to be non-null");
+            $.digitalSignature = Objects.requireNonNull($.digitalSignature, "expected parameter 'digitalSignature' to be non-null");
+            $.encipherOnly = Objects.requireNonNull($.encipherOnly, "expected parameter 'encipherOnly' to be non-null");
+            $.keyAgreement = Objects.requireNonNull($.keyAgreement, "expected parameter 'keyAgreement' to be non-null");
+            $.keyEncipherment = Objects.requireNonNull($.keyEncipherment, "expected parameter 'keyEncipherment' to be non-null");
+            return $;
         }
     }
+
 }

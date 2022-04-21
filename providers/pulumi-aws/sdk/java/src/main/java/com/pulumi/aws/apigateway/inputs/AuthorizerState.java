@@ -5,11 +5,11 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizerCredentials")
-      private final @Nullable Output<String> authorizerCredentials;
+    private @Nullable Output<String> authorizerCredentials;
 
-    public Output<String> authorizerCredentials() {
-        return this.authorizerCredentials == null ? Codegen.empty() : this.authorizerCredentials;
+    public Optional<Output<String>> authorizerCredentials() {
+        return Optional.ofNullable(this.authorizerCredentials);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizerResultTtlInSeconds")
-      private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
+    private @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
-    public Output<Integer> authorizerResultTtlInSeconds() {
-        return this.authorizerResultTtlInSeconds == null ? Codegen.empty() : this.authorizerResultTtlInSeconds;
+    public Optional<Output<Integer>> authorizerResultTtlInSeconds() {
+        return Optional.ofNullable(this.authorizerResultTtlInSeconds);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizerUri")
-      private final @Nullable Output<String> authorizerUri;
+    private @Nullable Output<String> authorizerUri;
 
-    public Output<String> authorizerUri() {
-        return this.authorizerUri == null ? Codegen.empty() : this.authorizerUri;
+    public Optional<Output<String>> authorizerUri() {
+        return Optional.ofNullable(this.authorizerUri);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identitySource")
-      private final @Nullable Output<String> identitySource;
+    private @Nullable Output<String> identitySource;
 
-    public Output<String> identitySource() {
-        return this.identitySource == null ? Codegen.empty() : this.identitySource;
+    public Optional<Output<String>> identitySource() {
+        return Optional.ofNullable(this.identitySource);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identityValidationExpression")
-      private final @Nullable Output<String> identityValidationExpression;
+    private @Nullable Output<String> identityValidationExpression;
 
-    public Output<String> identityValidationExpression() {
-        return this.identityValidationExpression == null ? Codegen.empty() : this.identityValidationExpression;
+    public Optional<Output<String>> identityValidationExpression() {
+        return Optional.ofNullable(this.identityValidationExpression);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="providerArns")
-      private final @Nullable Output<List<String>> providerArns;
+    private @Nullable Output<List<String>> providerArns;
 
-    public Output<List<String>> providerArns() {
-        return this.providerArns == null ? Codegen.empty() : this.providerArns;
+    public Optional<Output<List<String>>> providerArns() {
+        return Optional.ofNullable(this.providerArns);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApi")
-      private final @Nullable Output<String> restApi;
+    private @Nullable Output<String> restApi;
 
-    public Output<String> restApi() {
-        return this.restApi == null ? Codegen.empty() : this.restApi;
+    public Optional<Output<String>> restApi() {
+        return Optional.ofNullable(this.restApi);
     }
 
     /**
@@ -111,153 +111,132 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AuthorizerState(
-        @Nullable Output<String> authorizerCredentials,
-        @Nullable Output<Integer> authorizerResultTtlInSeconds,
-        @Nullable Output<String> authorizerUri,
-        @Nullable Output<String> identitySource,
-        @Nullable Output<String> identityValidationExpression,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> providerArns,
-        @Nullable Output<String> restApi,
-        @Nullable Output<String> type) {
-        this.authorizerCredentials = authorizerCredentials;
-        this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
-        this.authorizerUri = authorizerUri;
-        this.identitySource = identitySource;
-        this.identityValidationExpression = identityValidationExpression;
-        this.name = name;
-        this.providerArns = providerArns;
-        this.restApi = restApi;
-        this.type = type;
-    }
+    private AuthorizerState() {}
 
-    private AuthorizerState() {
-        this.authorizerCredentials = Codegen.empty();
-        this.authorizerResultTtlInSeconds = Codegen.empty();
-        this.authorizerUri = Codegen.empty();
-        this.identitySource = Codegen.empty();
-        this.identityValidationExpression = Codegen.empty();
-        this.name = Codegen.empty();
-        this.providerArns = Codegen.empty();
-        this.restApi = Codegen.empty();
-        this.type = Codegen.empty();
+    private AuthorizerState(AuthorizerState $) {
+        this.authorizerCredentials = $.authorizerCredentials;
+        this.authorizerResultTtlInSeconds = $.authorizerResultTtlInSeconds;
+        this.authorizerUri = $.authorizerUri;
+        this.identitySource = $.identitySource;
+        this.identityValidationExpression = $.identityValidationExpression;
+        this.name = $.name;
+        this.providerArns = $.providerArns;
+        this.restApi = $.restApi;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authorizerCredentials;
-        private @Nullable Output<Integer> authorizerResultTtlInSeconds;
-        private @Nullable Output<String> authorizerUri;
-        private @Nullable Output<String> identitySource;
-        private @Nullable Output<String> identityValidationExpression;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> providerArns;
-        private @Nullable Output<String> restApi;
-        private @Nullable Output<String> type;
+        private AuthorizerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizerState();
         }
 
         public Builder(AuthorizerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizerCredentials = defaults.authorizerCredentials;
-    	      this.authorizerResultTtlInSeconds = defaults.authorizerResultTtlInSeconds;
-    	      this.authorizerUri = defaults.authorizerUri;
-    	      this.identitySource = defaults.identitySource;
-    	      this.identityValidationExpression = defaults.identityValidationExpression;
-    	      this.name = defaults.name;
-    	      this.providerArns = defaults.providerArns;
-    	      this.restApi = defaults.restApi;
-    	      this.type = defaults.type;
+            $ = new AuthorizerState(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizerCredentials(@Nullable Output<String> authorizerCredentials) {
-            this.authorizerCredentials = authorizerCredentials;
+            $.authorizerCredentials = authorizerCredentials;
             return this;
         }
-        public Builder authorizerCredentials(@Nullable String authorizerCredentials) {
-            this.authorizerCredentials = Codegen.ofNullable(authorizerCredentials);
-            return this;
+
+        public Builder authorizerCredentials(String authorizerCredentials) {
+            return authorizerCredentials(Output.of(authorizerCredentials));
         }
+
         public Builder authorizerResultTtlInSeconds(@Nullable Output<Integer> authorizerResultTtlInSeconds) {
-            this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
+            $.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
-        public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
-            this.authorizerResultTtlInSeconds = Codegen.ofNullable(authorizerResultTtlInSeconds);
-            return this;
+
+        public Builder authorizerResultTtlInSeconds(Integer authorizerResultTtlInSeconds) {
+            return authorizerResultTtlInSeconds(Output.of(authorizerResultTtlInSeconds));
         }
+
         public Builder authorizerUri(@Nullable Output<String> authorizerUri) {
-            this.authorizerUri = authorizerUri;
+            $.authorizerUri = authorizerUri;
             return this;
         }
-        public Builder authorizerUri(@Nullable String authorizerUri) {
-            this.authorizerUri = Codegen.ofNullable(authorizerUri);
-            return this;
+
+        public Builder authorizerUri(String authorizerUri) {
+            return authorizerUri(Output.of(authorizerUri));
         }
+
         public Builder identitySource(@Nullable Output<String> identitySource) {
-            this.identitySource = identitySource;
+            $.identitySource = identitySource;
             return this;
         }
-        public Builder identitySource(@Nullable String identitySource) {
-            this.identitySource = Codegen.ofNullable(identitySource);
-            return this;
+
+        public Builder identitySource(String identitySource) {
+            return identitySource(Output.of(identitySource));
         }
+
         public Builder identityValidationExpression(@Nullable Output<String> identityValidationExpression) {
-            this.identityValidationExpression = identityValidationExpression;
+            $.identityValidationExpression = identityValidationExpression;
             return this;
         }
-        public Builder identityValidationExpression(@Nullable String identityValidationExpression) {
-            this.identityValidationExpression = Codegen.ofNullable(identityValidationExpression);
-            return this;
+
+        public Builder identityValidationExpression(String identityValidationExpression) {
+            return identityValidationExpression(Output.of(identityValidationExpression));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder providerArns(@Nullable Output<List<String>> providerArns) {
-            this.providerArns = providerArns;
+            $.providerArns = providerArns;
             return this;
         }
-        public Builder providerArns(@Nullable List<String> providerArns) {
-            this.providerArns = Codegen.ofNullable(providerArns);
-            return this;
+
+        public Builder providerArns(List<String> providerArns) {
+            return providerArns(Output.of(providerArns));
         }
+
         public Builder providerArns(String... providerArns) {
             return providerArns(List.of(providerArns));
         }
+
         public Builder restApi(@Nullable Output<String> restApi) {
-            this.restApi = restApi;
+            $.restApi = restApi;
             return this;
         }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AuthorizerState build() {
-            return new AuthorizerState(authorizerCredentials, authorizerResultTtlInSeconds, authorizerUri, identitySource, identityValidationExpression, name, providerArns, restApi, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public AuthorizerState build() {
+            return $;
         }
     }
+
 }

@@ -21,10 +21,10 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancerArn")
-      private final @Nullable String loadBalancerArn;
+    private @Nullable String loadBalancerArn;
 
     public Optional<String> loadBalancerArn() {
-        return this.loadBalancerArn == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerArn);
+        return Optional.ofNullable(this.loadBalancerArn);
     }
 
     /**
@@ -43,80 +43,69 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetListenerArgs(
-        @Nullable String arn,
-        @Nullable String loadBalancerArn,
-        @Nullable Integer port,
-        @Nullable Map<String,String> tags) {
-        this.arn = arn;
-        this.loadBalancerArn = loadBalancerArn;
-        this.port = port;
-        this.tags = tags;
-    }
+    private GetListenerArgs() {}
 
-    private GetListenerArgs() {
-        this.arn = null;
-        this.loadBalancerArn = null;
-        this.port = null;
-        this.tags = Map.of();
+    private GetListenerArgs(GetListenerArgs $) {
+        this.arn = $.arn;
+        this.loadBalancerArn = $.loadBalancerArn;
+        this.port = $.port;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetListenerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String loadBalancerArn;
-        private @Nullable Integer port;
-        private @Nullable Map<String,String> tags;
+        private GetListenerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetListenerArgs();
         }
 
         public Builder(GetListenerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.loadBalancerArn = defaults.loadBalancerArn;
-    	      this.port = defaults.port;
-    	      this.tags = defaults.tags;
+            $ = new GetListenerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder loadBalancerArn(@Nullable String loadBalancerArn) {
-            this.loadBalancerArn = loadBalancerArn;
+            $.loadBalancerArn = loadBalancerArn;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetListenerArgs build() {
-            return new GetListenerArgs(arn, loadBalancerArn, port, tags);
+        }
+
+        public GetListenerArgs build() {
+            return $;
         }
     }
+
 }

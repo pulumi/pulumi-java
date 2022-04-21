@@ -8,10 +8,10 @@ import com.pulumi.azurenative.authorization.inputs.ManagementLockOwnerArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
      * 
      */
     @Import(name="level", required=true)
-      private final Output<Either<String,LockLevel>> level;
+    private Output<Either<String,LockLevel>> level;
 
     public Output<Either<String,LockLevel>> level() {
         return this.level;
@@ -35,10 +35,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
      * 
      */
     @Import(name="lockName")
-      private final @Nullable Output<String> lockName;
+    private @Nullable Output<String> lockName;
 
-    public Output<String> lockName() {
-        return this.lockName == null ? Codegen.empty() : this.lockName;
+    public Optional<Output<String>> lockName() {
+        return Optional.ofNullable(this.lockName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
      * 
      */
     @Import(name="notes")
-      private final @Nullable Output<String> notes;
+    private @Nullable Output<String> notes;
 
-    public Output<String> notes() {
-        return this.notes == null ? Codegen.empty() : this.notes;
+    public Optional<Output<String>> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
      * 
      */
     @Import(name="owners")
-      private final @Nullable Output<List<ManagementLockOwnerArgs>> owners;
+    private @Nullable Output<List<ManagementLockOwnerArgs>> owners;
 
-    public Output<List<ManagementLockOwnerArgs>> owners() {
-        return this.owners == null ? Codegen.empty() : this.owners;
+    public Optional<Output<List<ManagementLockOwnerArgs>>> owners() {
+        return Optional.ofNullable(this.owners);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
      * 
      */
     @Import(name="parentResourcePath", required=true)
-      private final Output<String> parentResourcePath;
+    private Output<String> parentResourcePath;
 
     public Output<String> parentResourcePath() {
         return this.parentResourcePath;
@@ -79,7 +79,7 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -101,7 +101,7 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceProviderNamespace", required=true)
-      private final Output<String> resourceProviderNamespace;
+    private Output<String> resourceProviderNamespace;
 
     public Output<String> resourceProviderNamespace() {
         return this.resourceProviderNamespace;
@@ -112,157 +112,138 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
     }
 
-    public ManagementLockAtResourceLevelArgs(
-        Output<Either<String,LockLevel>> level,
-        @Nullable Output<String> lockName,
-        @Nullable Output<String> notes,
-        @Nullable Output<List<ManagementLockOwnerArgs>> owners,
-        Output<String> parentResourcePath,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        Output<String> resourceProviderNamespace,
-        Output<String> resourceType) {
-        this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
-        this.lockName = lockName;
-        this.notes = notes;
-        this.owners = owners;
-        this.parentResourcePath = Objects.requireNonNull(parentResourcePath, "expected parameter 'parentResourcePath' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace, "expected parameter 'resourceProviderNamespace' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private ManagementLockAtResourceLevelArgs() {}
 
-    private ManagementLockAtResourceLevelArgs() {
-        this.level = Codegen.empty();
-        this.lockName = Codegen.empty();
-        this.notes = Codegen.empty();
-        this.owners = Codegen.empty();
-        this.parentResourcePath = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.resourceProviderNamespace = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private ManagementLockAtResourceLevelArgs(ManagementLockAtResourceLevelArgs $) {
+        this.level = $.level;
+        this.lockName = $.lockName;
+        this.notes = $.notes;
+        this.owners = $.owners;
+        this.parentResourcePath = $.parentResourcePath;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.resourceProviderNamespace = $.resourceProviderNamespace;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementLockAtResourceLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,LockLevel>> level;
-        private @Nullable Output<String> lockName;
-        private @Nullable Output<String> notes;
-        private @Nullable Output<List<ManagementLockOwnerArgs>> owners;
-        private Output<String> parentResourcePath;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private Output<String> resourceProviderNamespace;
-        private Output<String> resourceType;
+        private ManagementLockAtResourceLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementLockAtResourceLevelArgs();
         }
 
         public Builder(ManagementLockAtResourceLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
-    	      this.lockName = defaults.lockName;
-    	      this.notes = defaults.notes;
-    	      this.owners = defaults.owners;
-    	      this.parentResourcePath = defaults.parentResourcePath;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceProviderNamespace = defaults.resourceProviderNamespace;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ManagementLockAtResourceLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder level(Output<Either<String,LockLevel>> level) {
-            this.level = Objects.requireNonNull(level);
+            $.level = level;
             return this;
         }
+
         public Builder level(Either<String,LockLevel> level) {
-            this.level = Output.of(Objects.requireNonNull(level));
-            return this;
+            return level(Output.of(level));
         }
+
         public Builder lockName(@Nullable Output<String> lockName) {
-            this.lockName = lockName;
+            $.lockName = lockName;
             return this;
         }
-        public Builder lockName(@Nullable String lockName) {
-            this.lockName = Codegen.ofNullable(lockName);
-            return this;
+
+        public Builder lockName(String lockName) {
+            return lockName(Output.of(lockName));
         }
+
         public Builder notes(@Nullable Output<String> notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
-        public Builder notes(@Nullable String notes) {
-            this.notes = Codegen.ofNullable(notes);
-            return this;
+
+        public Builder notes(String notes) {
+            return notes(Output.of(notes));
         }
+
         public Builder owners(@Nullable Output<List<ManagementLockOwnerArgs>> owners) {
-            this.owners = owners;
+            $.owners = owners;
             return this;
         }
-        public Builder owners(@Nullable List<ManagementLockOwnerArgs> owners) {
-            this.owners = Codegen.ofNullable(owners);
-            return this;
+
+        public Builder owners(List<ManagementLockOwnerArgs> owners) {
+            return owners(Output.of(owners));
         }
+
         public Builder owners(ManagementLockOwnerArgs... owners) {
             return owners(List.of(owners));
         }
+
         public Builder parentResourcePath(Output<String> parentResourcePath) {
-            this.parentResourcePath = Objects.requireNonNull(parentResourcePath);
+            $.parentResourcePath = parentResourcePath;
             return this;
         }
+
         public Builder parentResourcePath(String parentResourcePath) {
-            this.parentResourcePath = Output.of(Objects.requireNonNull(parentResourcePath));
-            return this;
+            return parentResourcePath(Output.of(parentResourcePath));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
-            this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
+            $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
+
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
-            this.resourceProviderNamespace = Output.of(Objects.requireNonNull(resourceProviderNamespace));
-            return this;
+            return resourceProviderNamespace(Output.of(resourceProviderNamespace));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
-        }        public ManagementLockAtResourceLevelArgs build() {
-            return new ManagementLockAtResourceLevelArgs(level, lockName, notes, owners, parentResourcePath, resourceGroupName, resourceName, resourceProviderNamespace, resourceType);
+            return resourceType(Output.of(resourceType));
+        }
+
+        public ManagementLockAtResourceLevelArgs build() {
+            $.level = Objects.requireNonNull($.level, "expected parameter 'level' to be non-null");
+            $.parentResourcePath = Objects.requireNonNull($.parentResourcePath, "expected parameter 'parentResourcePath' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.resourceProviderNamespace = Objects.requireNonNull($.resourceProviderNamespace, "expected parameter 'resourceProviderNamespace' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

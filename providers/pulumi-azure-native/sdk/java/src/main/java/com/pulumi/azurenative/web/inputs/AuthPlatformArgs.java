@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AuthPlatformArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configFilePath")
-      private final @Nullable Output<String> configFilePath;
+    private @Nullable Output<String> configFilePath;
 
-    public Output<String> configFilePath() {
-        return this.configFilePath == null ? Codegen.empty() : this.configFilePath;
+    public Optional<Output<String>> configFilePath() {
+        return Optional.ofNullable(this.configFilePath);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AuthPlatformArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class AuthPlatformArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeVersion")
-      private final @Nullable Output<String> runtimeVersion;
+    private @Nullable Output<String> runtimeVersion;
 
-    public Output<String> runtimeVersion() {
-        return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
+    public Optional<Output<String>> runtimeVersion() {
+        return Optional.ofNullable(this.runtimeVersion);
     }
 
-    public AuthPlatformArgs(
-        @Nullable Output<String> configFilePath,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> runtimeVersion) {
-        this.configFilePath = configFilePath;
-        this.enabled = enabled;
-        this.runtimeVersion = runtimeVersion;
-    }
+    private AuthPlatformArgs() {}
 
-    private AuthPlatformArgs() {
-        this.configFilePath = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.runtimeVersion = Codegen.empty();
+    private AuthPlatformArgs(AuthPlatformArgs $) {
+        this.configFilePath = $.configFilePath;
+        this.enabled = $.enabled;
+        this.runtimeVersion = $.runtimeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthPlatformArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configFilePath;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> runtimeVersion;
+        private AuthPlatformArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthPlatformArgs();
         }
 
         public Builder(AuthPlatformArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configFilePath = defaults.configFilePath;
-    	      this.enabled = defaults.enabled;
-    	      this.runtimeVersion = defaults.runtimeVersion;
+            $ = new AuthPlatformArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configFilePath(@Nullable Output<String> configFilePath) {
-            this.configFilePath = configFilePath;
+            $.configFilePath = configFilePath;
             return this;
         }
-        public Builder configFilePath(@Nullable String configFilePath) {
-            this.configFilePath = Codegen.ofNullable(configFilePath);
-            return this;
+
+        public Builder configFilePath(String configFilePath) {
+            return configFilePath(Output.of(configFilePath));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
-            this.runtimeVersion = runtimeVersion;
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
-        public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Codegen.ofNullable(runtimeVersion);
-            return this;
-        }        public AuthPlatformArgs build() {
-            return new AuthPlatformArgs(configFilePath, enabled, runtimeVersion);
+
+        public Builder runtimeVersion(String runtimeVersion) {
+            return runtimeVersion(Output.of(runtimeVersion));
+        }
+
+        public AuthPlatformArgs build() {
+            return $;
         }
     }
+
 }

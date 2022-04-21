@@ -23,10 +23,10 @@ public final class RestoredLogsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="endRestoreTime")
-      private final @Nullable String endRestoreTime;
+    private @Nullable String endRestoreTime;
 
     public Optional<String> endRestoreTime() {
-        return this.endRestoreTime == null ? Optional.empty() : Optional.ofNullable(this.endRestoreTime);
+        return Optional.ofNullable(this.endRestoreTime);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class RestoredLogsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceTable", required=true)
-      private final String sourceTable;
+    private String sourceTable;
 
     public String sourceTable() {
         return this.sourceTable;
@@ -45,64 +45,57 @@ public final class RestoredLogsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="startRestoreTime")
-      private final @Nullable String startRestoreTime;
+    private @Nullable String startRestoreTime;
 
     public Optional<String> startRestoreTime() {
-        return this.startRestoreTime == null ? Optional.empty() : Optional.ofNullable(this.startRestoreTime);
+        return Optional.ofNullable(this.startRestoreTime);
     }
 
-    public RestoredLogsResponse(
-        @Nullable String endRestoreTime,
-        String sourceTable,
-        @Nullable String startRestoreTime) {
-        this.endRestoreTime = endRestoreTime;
-        this.sourceTable = Objects.requireNonNull(sourceTable, "expected parameter 'sourceTable' to be non-null");
-        this.startRestoreTime = startRestoreTime;
-    }
+    private RestoredLogsResponse() {}
 
-    private RestoredLogsResponse() {
-        this.endRestoreTime = null;
-        this.sourceTable = null;
-        this.startRestoreTime = null;
+    private RestoredLogsResponse(RestoredLogsResponse $) {
+        this.endRestoreTime = $.endRestoreTime;
+        this.sourceTable = $.sourceTable;
+        this.startRestoreTime = $.startRestoreTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestoredLogsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endRestoreTime;
-        private String sourceTable;
-        private @Nullable String startRestoreTime;
+        private RestoredLogsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestoredLogsResponse();
         }
 
         public Builder(RestoredLogsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endRestoreTime = defaults.endRestoreTime;
-    	      this.sourceTable = defaults.sourceTable;
-    	      this.startRestoreTime = defaults.startRestoreTime;
+            $ = new RestoredLogsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endRestoreTime(@Nullable String endRestoreTime) {
-            this.endRestoreTime = endRestoreTime;
+            $.endRestoreTime = endRestoreTime;
             return this;
         }
+
         public Builder sourceTable(String sourceTable) {
-            this.sourceTable = Objects.requireNonNull(sourceTable);
+            $.sourceTable = sourceTable;
             return this;
         }
+
         public Builder startRestoreTime(@Nullable String startRestoreTime) {
-            this.startRestoreTime = startRestoreTime;
+            $.startRestoreTime = startRestoreTime;
             return this;
-        }        public RestoredLogsResponse build() {
-            return new RestoredLogsResponse(endRestoreTime, sourceTable, startRestoreTime);
+        }
+
+        public RestoredLogsResponse build() {
+            $.sourceTable = Objects.requireNonNull($.sourceTable, "expected parameter 'sourceTable' to be non-null");
+            return $;
         }
     }
+
 }

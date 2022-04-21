@@ -8,10 +8,10 @@ import com.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointFilterItem
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ConnectionMonitorEndpointFilterArgs extends com.pulumi.resour
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items;
+    private @Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items;
 
-    public Output<List<ConnectionMonitorEndpointFilterItemArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<ConnectionMonitorEndpointFilterItemArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
     /**
@@ -39,66 +39,62 @@ public final class ConnectionMonitorEndpointFilterArgs extends com.pulumi.resour
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type;
+    private @Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type;
 
-    public Output<Either<String,ConnectionMonitorEndpointFilterType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ConnectionMonitorEndpointFilterType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ConnectionMonitorEndpointFilterArgs(
-        @Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items,
-        @Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type) {
-        this.items = items;
-        this.type = type;
-    }
+    private ConnectionMonitorEndpointFilterArgs() {}
 
-    private ConnectionMonitorEndpointFilterArgs() {
-        this.items = Codegen.empty();
-        this.type = Codegen.empty();
+    private ConnectionMonitorEndpointFilterArgs(ConnectionMonitorEndpointFilterArgs $) {
+        this.items = $.items;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorEndpointFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items;
-        private @Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type;
+        private ConnectionMonitorEndpointFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorEndpointFilterArgs();
         }
 
         public Builder(ConnectionMonitorEndpointFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
-    	      this.type = defaults.type;
+            $ = new ConnectionMonitorEndpointFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<ConnectionMonitorEndpointFilterItemArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<ConnectionMonitorEndpointFilterItemArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(ConnectionMonitorEndpointFilterItemArgs... items) {
             return items(List.of(items));
         }
+
         public Builder type(@Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ConnectionMonitorEndpointFilterType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ConnectionMonitorEndpointFilterArgs build() {
-            return new ConnectionMonitorEndpointFilterArgs(items, type);
+
+        public Builder type(Either<String,ConnectionMonitorEndpointFilterType> type) {
+            return type(Output.of(type));
+        }
+
+        public ConnectionMonitorEndpointFilterArgs build() {
+            return $;
         }
     }
+
 }

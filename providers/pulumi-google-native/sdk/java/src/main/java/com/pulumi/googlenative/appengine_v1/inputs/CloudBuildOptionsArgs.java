@@ -5,9 +5,9 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CloudBuildOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="appYamlPath")
-      private final @Nullable Output<String> appYamlPath;
+    private @Nullable Output<String> appYamlPath;
 
-    public Output<String> appYamlPath() {
-        return this.appYamlPath == null ? Codegen.empty() : this.appYamlPath;
+    public Optional<Output<String>> appYamlPath() {
+        return Optional.ofNullable(this.appYamlPath);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CloudBuildOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cloudBuildTimeout")
-      private final @Nullable Output<String> cloudBuildTimeout;
+    private @Nullable Output<String> cloudBuildTimeout;
 
-    public Output<String> cloudBuildTimeout() {
-        return this.cloudBuildTimeout == null ? Codegen.empty() : this.cloudBuildTimeout;
+    public Optional<Output<String>> cloudBuildTimeout() {
+        return Optional.ofNullable(this.cloudBuildTimeout);
     }
 
-    public CloudBuildOptionsArgs(
-        @Nullable Output<String> appYamlPath,
-        @Nullable Output<String> cloudBuildTimeout) {
-        this.appYamlPath = appYamlPath;
-        this.cloudBuildTimeout = cloudBuildTimeout;
-    }
+    private CloudBuildOptionsArgs() {}
 
-    private CloudBuildOptionsArgs() {
-        this.appYamlPath = Codegen.empty();
-        this.cloudBuildTimeout = Codegen.empty();
+    private CloudBuildOptionsArgs(CloudBuildOptionsArgs $) {
+        this.appYamlPath = $.appYamlPath;
+        this.cloudBuildTimeout = $.cloudBuildTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudBuildOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appYamlPath;
-        private @Nullable Output<String> cloudBuildTimeout;
+        private CloudBuildOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudBuildOptionsArgs();
         }
 
         public Builder(CloudBuildOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appYamlPath = defaults.appYamlPath;
-    	      this.cloudBuildTimeout = defaults.cloudBuildTimeout;
+            $ = new CloudBuildOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appYamlPath(@Nullable Output<String> appYamlPath) {
-            this.appYamlPath = appYamlPath;
+            $.appYamlPath = appYamlPath;
             return this;
         }
-        public Builder appYamlPath(@Nullable String appYamlPath) {
-            this.appYamlPath = Codegen.ofNullable(appYamlPath);
-            return this;
+
+        public Builder appYamlPath(String appYamlPath) {
+            return appYamlPath(Output.of(appYamlPath));
         }
+
         public Builder cloudBuildTimeout(@Nullable Output<String> cloudBuildTimeout) {
-            this.cloudBuildTimeout = cloudBuildTimeout;
+            $.cloudBuildTimeout = cloudBuildTimeout;
             return this;
         }
-        public Builder cloudBuildTimeout(@Nullable String cloudBuildTimeout) {
-            this.cloudBuildTimeout = Codegen.ofNullable(cloudBuildTimeout);
-            return this;
-        }        public CloudBuildOptionsArgs build() {
-            return new CloudBuildOptionsArgs(appYamlPath, cloudBuildTimeout);
+
+        public Builder cloudBuildTimeout(String cloudBuildTimeout) {
+            return cloudBuildTimeout(Output.of(cloudBuildTimeout));
+        }
+
+        public CloudBuildOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetArchiveArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetArchiveArgs Empty = new GetArchiveArgs();
 
     @Import(name="archiveName", required=true)
-      private final String archiveName;
+    private String archiveName;
 
     public String archiveName() {
         return this.archiveName;
     }
 
-    public GetArchiveArgs(String archiveName) {
-        this.archiveName = Objects.requireNonNull(archiveName, "expected parameter 'archiveName' to be non-null");
-    }
+    private GetArchiveArgs() {}
 
-    private GetArchiveArgs() {
-        this.archiveName = null;
+    private GetArchiveArgs(GetArchiveArgs $) {
+        this.archiveName = $.archiveName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetArchiveArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String archiveName;
+        private GetArchiveArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetArchiveArgs();
         }
 
         public Builder(GetArchiveArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveName = defaults.archiveName;
+            $ = new GetArchiveArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveName(String archiveName) {
-            this.archiveName = Objects.requireNonNull(archiveName);
+            $.archiveName = archiveName;
             return this;
-        }        public GetArchiveArgs build() {
-            return new GetArchiveArgs(archiveName);
+        }
+
+        public GetArchiveArgs build() {
+            $.archiveName = Objects.requireNonNull($.archiveName, "expected parameter 'archiveName' to be non-null");
+            return $;
         }
     }
+
 }

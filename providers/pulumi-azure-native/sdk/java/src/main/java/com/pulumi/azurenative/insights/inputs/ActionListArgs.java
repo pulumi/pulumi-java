@@ -6,9 +6,9 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.ActionGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ActionListArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionGroups")
-      private final @Nullable Output<List<ActionGroupArgs>> actionGroups;
+    private @Nullable Output<List<ActionGroupArgs>> actionGroups;
 
-    public Output<List<ActionGroupArgs>> actionGroups() {
-        return this.actionGroups == null ? Codegen.empty() : this.actionGroups;
+    public Optional<Output<List<ActionGroupArgs>>> actionGroups() {
+        return Optional.ofNullable(this.actionGroups);
     }
 
-    public ActionListArgs(@Nullable Output<List<ActionGroupArgs>> actionGroups) {
-        this.actionGroups = actionGroups;
-    }
+    private ActionListArgs() {}
 
-    private ActionListArgs() {
-        this.actionGroups = Codegen.empty();
+    private ActionListArgs(ActionListArgs $) {
+        this.actionGroups = $.actionGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ActionGroupArgs>> actionGroups;
+        private ActionListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionListArgs();
         }
 
         public Builder(ActionListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionGroups = defaults.actionGroups;
+            $ = new ActionListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionGroups(@Nullable Output<List<ActionGroupArgs>> actionGroups) {
-            this.actionGroups = actionGroups;
+            $.actionGroups = actionGroups;
             return this;
         }
-        public Builder actionGroups(@Nullable List<ActionGroupArgs> actionGroups) {
-            this.actionGroups = Codegen.ofNullable(actionGroups);
-            return this;
+
+        public Builder actionGroups(List<ActionGroupArgs> actionGroups) {
+            return actionGroups(Output.of(actionGroups));
         }
+
         public Builder actionGroups(ActionGroupArgs... actionGroups) {
             return actionGroups(List.of(actionGroups));
-        }        public ActionListArgs build() {
-            return new ActionListArgs(actionGroups);
+        }
+
+        public ActionListArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class StartMigrationScenarioServerRoleResultResponse extends com.pu
      * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
-      private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+    private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -34,7 +34,7 @@ public final class StartMigrationScenarioServerRoleResultResponse extends com.pu
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,67 +45,63 @@ public final class StartMigrationScenarioServerRoleResultResponse extends com.pu
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public StartMigrationScenarioServerRoleResultResponse(
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String name,
-        String state) {
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private StartMigrationScenarioServerRoleResultResponse() {}
 
-    private StartMigrationScenarioServerRoleResultResponse() {
-        this.exceptionsAndWarnings = List.of();
-        this.name = null;
-        this.state = null;
+    private StartMigrationScenarioServerRoleResultResponse(StartMigrationScenarioServerRoleResultResponse $) {
+        this.exceptionsAndWarnings = $.exceptionsAndWarnings;
+        this.name = $.name;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StartMigrationScenarioServerRoleResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ReportableExceptionResponse> exceptionsAndWarnings;
-        private String name;
-        private String state;
+        private StartMigrationScenarioServerRoleResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StartMigrationScenarioServerRoleResultResponse();
         }
 
         public Builder(StartMigrationScenarioServerRoleResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exceptionsAndWarnings = defaults.exceptionsAndWarnings;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
+            $ = new StartMigrationScenarioServerRoleResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
-            this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
+            $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
+
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public StartMigrationScenarioServerRoleResultResponse build() {
-            return new StartMigrationScenarioServerRoleResultResponse(exceptionsAndWarnings, name, state);
+        }
+
+        public StartMigrationScenarioServerRoleResultResponse build() {
+            $.exceptionsAndWarnings = Objects.requireNonNull($.exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

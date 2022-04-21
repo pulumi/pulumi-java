@@ -6,10 +6,10 @@ package com.pulumi.azurenative.dynamics365fraudprotection;
 import com.pulumi.azurenative.dynamics365fraudprotection.inputs.DFPInstanceAdministratorsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="administration")
-      private final @Nullable Output<DFPInstanceAdministratorsArgs> administration;
+    private @Nullable Output<DFPInstanceAdministratorsArgs> administration;
 
-    public Output<DFPInstanceAdministratorsArgs> administration() {
-        return this.administration == null ? Codegen.empty() : this.administration;
+    public Optional<Output<DFPInstanceAdministratorsArgs>> administration() {
+        return Optional.ofNullable(this.administration);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable Output<String> instanceName;
+    private @Nullable Output<String> instanceName;
 
-    public Output<String> instanceName() {
-        return this.instanceName == null ? Codegen.empty() : this.instanceName;
+    public Optional<Output<String>> instanceName() {
+        return Optional.ofNullable(this.instanceName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,102 +66,89 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public InstanceDetailsArgs(
-        @Nullable Output<DFPInstanceAdministratorsArgs> administration,
-        @Nullable Output<String> instanceName,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.administration = administration;
-        this.instanceName = instanceName;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private InstanceDetailsArgs() {}
 
-    private InstanceDetailsArgs() {
-        this.administration = Codegen.empty();
-        this.instanceName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private InstanceDetailsArgs(InstanceDetailsArgs $) {
+        this.administration = $.administration;
+        this.instanceName = $.instanceName;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DFPInstanceAdministratorsArgs> administration;
-        private @Nullable Output<String> instanceName;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private InstanceDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceDetailsArgs();
         }
 
         public Builder(InstanceDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administration = defaults.administration;
-    	      this.instanceName = defaults.instanceName;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new InstanceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder administration(@Nullable Output<DFPInstanceAdministratorsArgs> administration) {
-            this.administration = administration;
+            $.administration = administration;
             return this;
         }
-        public Builder administration(@Nullable DFPInstanceAdministratorsArgs administration) {
-            this.administration = Codegen.ofNullable(administration);
-            return this;
+
+        public Builder administration(DFPInstanceAdministratorsArgs administration) {
+            return administration(Output.of(administration));
         }
+
         public Builder instanceName(@Nullable Output<String> instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
-        public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Codegen.ofNullable(instanceName);
-            return this;
+
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public InstanceDetailsArgs build() {
-            return new InstanceDetailsArgs(administration, instanceName, location, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public InstanceDetailsArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

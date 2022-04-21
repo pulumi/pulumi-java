@@ -7,9 +7,9 @@ import com.pulumi.azurenative.batch.enums.CachingType;
 import com.pulumi.azurenative.batch.enums.StorageAccountType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,14 +32,14 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="caching")
-      private final @Nullable Output<CachingType> caching;
+    private @Nullable Output<CachingType> caching;
 
-    public Output<CachingType> caching() {
-        return this.caching == null ? Codegen.empty() : this.caching;
+    public Optional<Output<CachingType>> caching() {
+        return Optional.ofNullable(this.caching);
     }
 
     @Import(name="diskSizeGB", required=true)
-      private final Output<Integer> diskSizeGB;
+    private Output<Integer> diskSizeGB;
 
     public Output<Integer> diskSizeGB() {
         return this.diskSizeGB;
@@ -50,7 +50,7 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lun", required=true)
-      private final Output<Integer> lun;
+    private Output<Integer> lun;
 
     public Output<Integer> lun() {
         return this.lun;
@@ -64,89 +64,80 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable Output<StorageAccountType> storageAccountType;
+    private @Nullable Output<StorageAccountType> storageAccountType;
 
-    public Output<StorageAccountType> storageAccountType() {
-        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
+    public Optional<Output<StorageAccountType>> storageAccountType() {
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public DataDiskArgs(
-        @Nullable Output<CachingType> caching,
-        Output<Integer> diskSizeGB,
-        Output<Integer> lun,
-        @Nullable Output<StorageAccountType> storageAccountType) {
-        this.caching = caching;
-        this.diskSizeGB = Objects.requireNonNull(diskSizeGB, "expected parameter 'diskSizeGB' to be non-null");
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.storageAccountType = storageAccountType;
-    }
+    private DataDiskArgs() {}
 
-    private DataDiskArgs() {
-        this.caching = Codegen.empty();
-        this.diskSizeGB = Codegen.empty();
-        this.lun = Codegen.empty();
-        this.storageAccountType = Codegen.empty();
+    private DataDiskArgs(DataDiskArgs $) {
+        this.caching = $.caching;
+        this.diskSizeGB = $.diskSizeGB;
+        this.lun = $.lun;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CachingType> caching;
-        private Output<Integer> diskSizeGB;
-        private Output<Integer> lun;
-        private @Nullable Output<StorageAccountType> storageAccountType;
+        private DataDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskArgs();
         }
 
         public Builder(DataDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caching = defaults.caching;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.lun = defaults.lun;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new DataDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caching(@Nullable Output<CachingType> caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
-        public Builder caching(@Nullable CachingType caching) {
-            this.caching = Codegen.ofNullable(caching);
-            return this;
+
+        public Builder caching(CachingType caching) {
+            return caching(Output.of(caching));
         }
+
         public Builder diskSizeGB(Output<Integer> diskSizeGB) {
-            this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder diskSizeGB(Integer diskSizeGB) {
-            this.diskSizeGB = Output.of(Objects.requireNonNull(diskSizeGB));
-            return this;
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder lun(Output<Integer> lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Output.of(Objects.requireNonNull(lun));
-            return this;
+            return lun(Output.of(lun));
         }
+
         public Builder storageAccountType(@Nullable Output<StorageAccountType> storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
         }
-        public Builder storageAccountType(@Nullable StorageAccountType storageAccountType) {
-            this.storageAccountType = Codegen.ofNullable(storageAccountType);
-            return this;
-        }        public DataDiskArgs build() {
-            return new DataDiskArgs(caching, diskSizeGB, lun, storageAccountType);
+
+        public Builder storageAccountType(StorageAccountType storageAccountType) {
+            return storageAccountType(Output.of(storageAccountType));
+        }
+
+        public DataDiskArgs build() {
+            $.diskSizeGB = Objects.requireNonNull($.diskSizeGB, "expected parameter 'diskSizeGB' to be non-null");
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

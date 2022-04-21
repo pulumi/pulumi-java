@@ -5,10 +5,10 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UserGroupMembershipState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="groups")
-      private final @Nullable Output<List<String>> groups;
+    private @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> groups() {
-        return this.groups == null ? Codegen.empty() : this.groups;
+    public Optional<Output<List<String>>> groups() {
+        return Optional.ofNullable(this.groups);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class UserGroupMembershipState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public UserGroupMembershipState(
-        @Nullable Output<List<String>> groups,
-        @Nullable Output<String> user) {
-        this.groups = groups;
-        this.user = user;
-    }
+    private UserGroupMembershipState() {}
 
-    private UserGroupMembershipState() {
-        this.groups = Codegen.empty();
-        this.user = Codegen.empty();
+    private UserGroupMembershipState(UserGroupMembershipState $) {
+        this.groups = $.groups;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserGroupMembershipState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> groups;
-        private @Nullable Output<String> user;
+        private UserGroupMembershipState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserGroupMembershipState();
         }
 
         public Builder(UserGroupMembershipState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groups = defaults.groups;
-    	      this.user = defaults.user;
+            $ = new UserGroupMembershipState(Objects.requireNonNull(defaults));
         }
 
         public Builder groups(@Nullable Output<List<String>> groups) {
-            this.groups = groups;
+            $.groups = groups;
             return this;
         }
-        public Builder groups(@Nullable List<String> groups) {
-            this.groups = Codegen.ofNullable(groups);
-            return this;
+
+        public Builder groups(List<String> groups) {
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public UserGroupMembershipState build() {
-            return new UserGroupMembershipState(groups, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public UserGroupMembershipState build() {
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.aws.datasync.inputs;
 import com.pulumi.aws.datasync.inputs.LocationSmbMountOptionsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentArns")
-      private final @Nullable Output<List<String>> agentArns;
+    private @Nullable Output<List<String>> agentArns;
 
-    public Output<List<String>> agentArns() {
-        return this.agentArns == null ? Codegen.empty() : this.agentArns;
+    public Optional<Output<List<String>>> agentArns() {
+        return Optional.ofNullable(this.agentArns);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountOptions")
-      private final @Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions;
+    private @Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions;
 
-    public Output<LocationSmbMountOptionsGetArgs> mountOptions() {
-        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
+    public Optional<Output<LocationSmbMountOptionsGetArgs>> mountOptions() {
+        return Optional.ofNullable(this.mountOptions);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverHostname")
-      private final @Nullable Output<String> serverHostname;
+    private @Nullable Output<String> serverHostname;
 
-    public Output<String> serverHostname() {
-        return this.serverHostname == null ? Codegen.empty() : this.serverHostname;
+    public Optional<Output<String>> serverHostname() {
+        return Optional.ofNullable(this.serverHostname);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subdirectory")
-      private final @Nullable Output<String> subdirectory;
+    private @Nullable Output<String> subdirectory;
 
-    public Output<String> subdirectory() {
-        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
+    public Optional<Output<String>> subdirectory() {
+        return Optional.ofNullable(this.subdirectory);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -111,17 +111,17 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
     /**
@@ -129,183 +129,152 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public LocationSmbState(
-        @Nullable Output<List<String>> agentArns,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> domain,
-        @Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions,
-        @Nullable Output<String> password,
-        @Nullable Output<String> serverHostname,
-        @Nullable Output<String> subdirectory,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> uri,
-        @Nullable Output<String> user) {
-        this.agentArns = agentArns;
-        this.arn = arn;
-        this.domain = domain;
-        this.mountOptions = mountOptions;
-        this.password = password;
-        this.serverHostname = serverHostname;
-        this.subdirectory = subdirectory;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.uri = uri;
-        this.user = user;
-    }
+    private LocationSmbState() {}
 
-    private LocationSmbState() {
-        this.agentArns = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.mountOptions = Codegen.empty();
-        this.password = Codegen.empty();
-        this.serverHostname = Codegen.empty();
-        this.subdirectory = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.uri = Codegen.empty();
-        this.user = Codegen.empty();
+    private LocationSmbState(LocationSmbState $) {
+        this.agentArns = $.agentArns;
+        this.arn = $.arn;
+        this.domain = $.domain;
+        this.mountOptions = $.mountOptions;
+        this.password = $.password;
+        this.serverHostname = $.serverHostname;
+        this.subdirectory = $.subdirectory;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.uri = $.uri;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationSmbState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> agentArns;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> serverHostname;
-        private @Nullable Output<String> subdirectory;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> uri;
-        private @Nullable Output<String> user;
+        private LocationSmbState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationSmbState();
         }
 
         public Builder(LocationSmbState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentArns = defaults.agentArns;
-    	      this.arn = defaults.arn;
-    	      this.domain = defaults.domain;
-    	      this.mountOptions = defaults.mountOptions;
-    	      this.password = defaults.password;
-    	      this.serverHostname = defaults.serverHostname;
-    	      this.subdirectory = defaults.subdirectory;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.uri = defaults.uri;
-    	      this.user = defaults.user;
+            $ = new LocationSmbState(Objects.requireNonNull(defaults));
         }
 
         public Builder agentArns(@Nullable Output<List<String>> agentArns) {
-            this.agentArns = agentArns;
+            $.agentArns = agentArns;
             return this;
         }
-        public Builder agentArns(@Nullable List<String> agentArns) {
-            this.agentArns = Codegen.ofNullable(agentArns);
-            return this;
+
+        public Builder agentArns(List<String> agentArns) {
+            return agentArns(Output.of(agentArns));
         }
+
         public Builder agentArns(String... agentArns) {
             return agentArns(List.of(agentArns));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder mountOptions(@Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions) {
-            this.mountOptions = mountOptions;
+            $.mountOptions = mountOptions;
             return this;
         }
-        public Builder mountOptions(@Nullable LocationSmbMountOptionsGetArgs mountOptions) {
-            this.mountOptions = Codegen.ofNullable(mountOptions);
-            return this;
+
+        public Builder mountOptions(LocationSmbMountOptionsGetArgs mountOptions) {
+            return mountOptions(Output.of(mountOptions));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder serverHostname(@Nullable Output<String> serverHostname) {
-            this.serverHostname = serverHostname;
+            $.serverHostname = serverHostname;
             return this;
         }
-        public Builder serverHostname(@Nullable String serverHostname) {
-            this.serverHostname = Codegen.ofNullable(serverHostname);
-            return this;
+
+        public Builder serverHostname(String serverHostname) {
+            return serverHostname(Output.of(serverHostname));
         }
+
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
-            this.subdirectory = subdirectory;
+            $.subdirectory = subdirectory;
             return this;
         }
-        public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Codegen.ofNullable(subdirectory);
-            return this;
+
+        public Builder subdirectory(String subdirectory) {
+            return subdirectory(Output.of(subdirectory));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public LocationSmbState build() {
-            return new LocationSmbState(agentArns, arn, domain, mountOptions, password, serverHostname, subdirectory, tags, tagsAll, uri, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public LocationSmbState build() {
+            return $;
         }
     }
+
 }

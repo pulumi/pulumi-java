@@ -8,10 +8,10 @@ import com.pulumi.awsnative.iotanalytics.inputs.ChannelStorageArgs;
 import com.pulumi.awsnative.iotanalytics.inputs.ChannelTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,113 +20,103 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     public static final ChannelArgs Empty = new ChannelArgs();
 
     @Import(name="channelName")
-      private final @Nullable Output<String> channelName;
+    private @Nullable Output<String> channelName;
 
-    public Output<String> channelName() {
-        return this.channelName == null ? Codegen.empty() : this.channelName;
+    public Optional<Output<String>> channelName() {
+        return Optional.ofNullable(this.channelName);
     }
 
     @Import(name="channelStorage")
-      private final @Nullable Output<ChannelStorageArgs> channelStorage;
+    private @Nullable Output<ChannelStorageArgs> channelStorage;
 
-    public Output<ChannelStorageArgs> channelStorage() {
-        return this.channelStorage == null ? Codegen.empty() : this.channelStorage;
+    public Optional<Output<ChannelStorageArgs>> channelStorage() {
+        return Optional.ofNullable(this.channelStorage);
     }
 
     @Import(name="retentionPeriod")
-      private final @Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod;
+    private @Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod;
 
-    public Output<ChannelRetentionPeriodArgs> retentionPeriod() {
-        return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
+    public Optional<Output<ChannelRetentionPeriodArgs>> retentionPeriod() {
+        return Optional.ofNullable(this.retentionPeriod);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ChannelTagArgs>> tags;
+    private @Nullable Output<List<ChannelTagArgs>> tags;
 
-    public Output<List<ChannelTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ChannelTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ChannelArgs(
-        @Nullable Output<String> channelName,
-        @Nullable Output<ChannelStorageArgs> channelStorage,
-        @Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod,
-        @Nullable Output<List<ChannelTagArgs>> tags) {
-        this.channelName = channelName;
-        this.channelStorage = channelStorage;
-        this.retentionPeriod = retentionPeriod;
-        this.tags = tags;
-    }
+    private ChannelArgs() {}
 
-    private ChannelArgs() {
-        this.channelName = Codegen.empty();
-        this.channelStorage = Codegen.empty();
-        this.retentionPeriod = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ChannelArgs(ChannelArgs $) {
+        this.channelName = $.channelName;
+        this.channelStorage = $.channelStorage;
+        this.retentionPeriod = $.retentionPeriod;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> channelName;
-        private @Nullable Output<ChannelStorageArgs> channelStorage;
-        private @Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod;
-        private @Nullable Output<List<ChannelTagArgs>> tags;
+        private ChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelArgs();
         }
 
         public Builder(ChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelName = defaults.channelName;
-    	      this.channelStorage = defaults.channelStorage;
-    	      this.retentionPeriod = defaults.retentionPeriod;
-    	      this.tags = defaults.tags;
+            $ = new ChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelName(@Nullable Output<String> channelName) {
-            this.channelName = channelName;
+            $.channelName = channelName;
             return this;
         }
-        public Builder channelName(@Nullable String channelName) {
-            this.channelName = Codegen.ofNullable(channelName);
-            return this;
+
+        public Builder channelName(String channelName) {
+            return channelName(Output.of(channelName));
         }
+
         public Builder channelStorage(@Nullable Output<ChannelStorageArgs> channelStorage) {
-            this.channelStorage = channelStorage;
+            $.channelStorage = channelStorage;
             return this;
         }
-        public Builder channelStorage(@Nullable ChannelStorageArgs channelStorage) {
-            this.channelStorage = Codegen.ofNullable(channelStorage);
-            return this;
+
+        public Builder channelStorage(ChannelStorageArgs channelStorage) {
+            return channelStorage(Output.of(channelStorage));
         }
+
         public Builder retentionPeriod(@Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod) {
-            this.retentionPeriod = retentionPeriod;
+            $.retentionPeriod = retentionPeriod;
             return this;
         }
-        public Builder retentionPeriod(@Nullable ChannelRetentionPeriodArgs retentionPeriod) {
-            this.retentionPeriod = Codegen.ofNullable(retentionPeriod);
-            return this;
+
+        public Builder retentionPeriod(ChannelRetentionPeriodArgs retentionPeriod) {
+            return retentionPeriod(Output.of(retentionPeriod));
         }
+
         public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ChannelTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ChannelTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ChannelTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ChannelArgs build() {
-            return new ChannelArgs(channelName, channelStorage, retentionPeriod, tags);
+        }
+
+        public ChannelArgs build() {
+            return $;
         }
     }
+
 }

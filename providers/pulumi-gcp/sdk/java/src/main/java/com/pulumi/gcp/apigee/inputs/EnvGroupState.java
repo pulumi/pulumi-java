@@ -5,10 +5,10 @@ package com.pulumi.gcp.apigee.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EnvGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostnames")
-      private final @Nullable Output<List<String>> hostnames;
+    private @Nullable Output<List<String>> hostnames;
 
-    public Output<List<String>> hostnames() {
-        return this.hostnames == null ? Codegen.empty() : this.hostnames;
+    public Optional<Output<List<String>>> hostnames() {
+        return Optional.ofNullable(this.hostnames);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EnvGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class EnvGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orgId")
-      private final @Nullable Output<String> orgId;
+    private @Nullable Output<String> orgId;
 
-    public Output<String> orgId() {
-        return this.orgId == null ? Codegen.empty() : this.orgId;
+    public Optional<Output<String>> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
-    public EnvGroupState(
-        @Nullable Output<List<String>> hostnames,
-        @Nullable Output<String> name,
-        @Nullable Output<String> orgId) {
-        this.hostnames = hostnames;
-        this.name = name;
-        this.orgId = orgId;
-    }
+    private EnvGroupState() {}
 
-    private EnvGroupState() {
-        this.hostnames = Codegen.empty();
-        this.name = Codegen.empty();
-        this.orgId = Codegen.empty();
+    private EnvGroupState(EnvGroupState $) {
+        this.hostnames = $.hostnames;
+        this.name = $.name;
+        this.orgId = $.orgId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> hostnames;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> orgId;
+        private EnvGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvGroupState();
         }
 
         public Builder(EnvGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostnames = defaults.hostnames;
-    	      this.name = defaults.name;
-    	      this.orgId = defaults.orgId;
+            $ = new EnvGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder hostnames(@Nullable Output<List<String>> hostnames) {
-            this.hostnames = hostnames;
+            $.hostnames = hostnames;
             return this;
         }
-        public Builder hostnames(@Nullable List<String> hostnames) {
-            this.hostnames = Codegen.ofNullable(hostnames);
-            return this;
+
+        public Builder hostnames(List<String> hostnames) {
+            return hostnames(Output.of(hostnames));
         }
+
         public Builder hostnames(String... hostnames) {
             return hostnames(List.of(hostnames));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder orgId(@Nullable Output<String> orgId) {
-            this.orgId = orgId;
+            $.orgId = orgId;
             return this;
         }
-        public Builder orgId(@Nullable String orgId) {
-            this.orgId = Codegen.ofNullable(orgId);
-            return this;
-        }        public EnvGroupState build() {
-            return new EnvGroupState(hostnames, name, orgId);
+
+        public Builder orgId(String orgId) {
+            return orgId(Output.of(orgId));
+        }
+
+        public EnvGroupState build() {
+            return $;
         }
     }
+
 }

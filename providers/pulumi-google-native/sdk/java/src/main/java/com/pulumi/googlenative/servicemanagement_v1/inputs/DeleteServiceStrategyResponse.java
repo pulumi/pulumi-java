@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class DeleteServiceStrategyResponse extends com.pulumi.resources.In
 
     public static final DeleteServiceStrategyResponse Empty = new DeleteServiceStrategyResponse();
 
-    public DeleteServiceStrategyResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(DeleteServiceStrategyResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private DeleteServiceStrategyResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(DeleteServiceStrategyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new DeleteServiceStrategyResponse();
         }
         public DeleteServiceStrategyResponse build() {
-            return new DeleteServiceStrategyResponse();
+            return $;
         }
     }
+
 }

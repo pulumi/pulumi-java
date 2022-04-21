@@ -23,10 +23,10 @@ public final class DeviceLocation extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DeviceLocation extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="latitude")
-      private final @Nullable String latitude;
+    private @Nullable String latitude;
 
     public Optional<String> latitude() {
-        return this.latitude == null ? Optional.empty() : Optional.ofNullable(this.latitude);
+        return Optional.ofNullable(this.latitude);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class DeviceLocation extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="longitude")
-      private final @Nullable String longitude;
+    private @Nullable String longitude;
 
     public Optional<String> longitude() {
-        return this.longitude == null ? Optional.empty() : Optional.ofNullable(this.longitude);
+        return Optional.ofNullable(this.longitude);
     }
 
-    public DeviceLocation(
-        @Nullable String address,
-        @Nullable String latitude,
-        @Nullable String longitude) {
-        this.address = address;
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
+    private DeviceLocation() {}
 
-    private DeviceLocation() {
-        this.address = null;
-        this.latitude = null;
-        this.longitude = null;
+    private DeviceLocation(DeviceLocation $) {
+        this.address = $.address;
+        this.latitude = $.latitude;
+        this.longitude = $.longitude;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceLocation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
-        private @Nullable String latitude;
-        private @Nullable String longitude;
+        private DeviceLocation $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceLocation();
         }
 
         public Builder(DeviceLocation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.latitude = defaults.latitude;
-    	      this.longitude = defaults.longitude;
+            $ = new DeviceLocation(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder latitude(@Nullable String latitude) {
-            this.latitude = latitude;
+            $.latitude = latitude;
             return this;
         }
+
         public Builder longitude(@Nullable String longitude) {
-            this.longitude = longitude;
+            $.longitude = longitude;
             return this;
-        }        public DeviceLocation build() {
-            return new DeviceLocation(address, latitude, longitude);
+        }
+
+        public DeviceLocation build() {
+            return $;
         }
     }
+
 }

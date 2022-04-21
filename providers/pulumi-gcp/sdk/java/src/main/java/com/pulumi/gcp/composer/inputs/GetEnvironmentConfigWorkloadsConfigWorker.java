@@ -14,110 +14,101 @@ public final class GetEnvironmentConfigWorkloadsConfigWorker extends com.pulumi.
     public static final GetEnvironmentConfigWorkloadsConfigWorker Empty = new GetEnvironmentConfigWorkloadsConfigWorker();
 
     @Import(name="cpu", required=true)
-      private final Double cpu;
+    private Double cpu;
 
     public Double cpu() {
         return this.cpu;
     }
 
     @Import(name="maxCount", required=true)
-      private final Integer maxCount;
+    private Integer maxCount;
 
     public Integer maxCount() {
         return this.maxCount;
     }
 
     @Import(name="memoryGb", required=true)
-      private final Double memoryGb;
+    private Double memoryGb;
 
     public Double memoryGb() {
         return this.memoryGb;
     }
 
     @Import(name="minCount", required=true)
-      private final Integer minCount;
+    private Integer minCount;
 
     public Integer minCount() {
         return this.minCount;
     }
 
     @Import(name="storageGb", required=true)
-      private final Double storageGb;
+    private Double storageGb;
 
     public Double storageGb() {
         return this.storageGb;
     }
 
-    public GetEnvironmentConfigWorkloadsConfigWorker(
-        Double cpu,
-        Integer maxCount,
-        Double memoryGb,
-        Integer minCount,
-        Double storageGb) {
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.maxCount = Objects.requireNonNull(maxCount, "expected parameter 'maxCount' to be non-null");
-        this.memoryGb = Objects.requireNonNull(memoryGb, "expected parameter 'memoryGb' to be non-null");
-        this.minCount = Objects.requireNonNull(minCount, "expected parameter 'minCount' to be non-null");
-        this.storageGb = Objects.requireNonNull(storageGb, "expected parameter 'storageGb' to be non-null");
-    }
+    private GetEnvironmentConfigWorkloadsConfigWorker() {}
 
-    private GetEnvironmentConfigWorkloadsConfigWorker() {
-        this.cpu = null;
-        this.maxCount = null;
-        this.memoryGb = null;
-        this.minCount = null;
-        this.storageGb = null;
+    private GetEnvironmentConfigWorkloadsConfigWorker(GetEnvironmentConfigWorkloadsConfigWorker $) {
+        this.cpu = $.cpu;
+        this.maxCount = $.maxCount;
+        this.memoryGb = $.memoryGb;
+        this.minCount = $.minCount;
+        this.storageGb = $.storageGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigWorkloadsConfigWorker defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double cpu;
-        private Integer maxCount;
-        private Double memoryGb;
-        private Integer minCount;
-        private Double storageGb;
+        private GetEnvironmentConfigWorkloadsConfigWorker $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigWorkloadsConfigWorker();
         }
 
         public Builder(GetEnvironmentConfigWorkloadsConfigWorker defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.maxCount = defaults.maxCount;
-    	      this.memoryGb = defaults.memoryGb;
-    	      this.minCount = defaults.minCount;
-    	      this.storageGb = defaults.storageGb;
+            $ = new GetEnvironmentConfigWorkloadsConfigWorker(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(Double cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder maxCount(Integer maxCount) {
-            this.maxCount = Objects.requireNonNull(maxCount);
+            $.maxCount = maxCount;
             return this;
         }
+
         public Builder memoryGb(Double memoryGb) {
-            this.memoryGb = Objects.requireNonNull(memoryGb);
+            $.memoryGb = memoryGb;
             return this;
         }
+
         public Builder minCount(Integer minCount) {
-            this.minCount = Objects.requireNonNull(minCount);
+            $.minCount = minCount;
             return this;
         }
+
         public Builder storageGb(Double storageGb) {
-            this.storageGb = Objects.requireNonNull(storageGb);
+            $.storageGb = storageGb;
             return this;
-        }        public GetEnvironmentConfigWorkloadsConfigWorker build() {
-            return new GetEnvironmentConfigWorkloadsConfigWorker(cpu, maxCount, memoryGb, minCount, storageGb);
+        }
+
+        public GetEnvironmentConfigWorkloadsConfigWorker build() {
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.maxCount = Objects.requireNonNull($.maxCount, "expected parameter 'maxCount' to be non-null");
+            $.memoryGb = Objects.requireNonNull($.memoryGb, "expected parameter 'memoryGb' to be non-null");
+            $.minCount = Objects.requireNonNull($.minCount, "expected parameter 'minCount' to be non-null");
+            $.storageGb = Objects.requireNonNull($.storageGb, "expected parameter 'storageGb' to be non-null");
+            return $;
         }
     }
+
 }

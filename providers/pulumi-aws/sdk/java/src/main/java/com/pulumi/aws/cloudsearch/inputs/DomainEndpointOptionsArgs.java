@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DomainEndpointOptionsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="enforceHttps")
-      private final @Nullable Output<Boolean> enforceHttps;
+    private @Nullable Output<Boolean> enforceHttps;
 
-    public Output<Boolean> enforceHttps() {
-        return this.enforceHttps == null ? Codegen.empty() : this.enforceHttps;
+    public Optional<Output<Boolean>> enforceHttps() {
+        return Optional.ofNullable(this.enforceHttps);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class DomainEndpointOptionsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tlsSecurityPolicy")
-      private final @Nullable Output<String> tlsSecurityPolicy;
+    private @Nullable Output<String> tlsSecurityPolicy;
 
-    public Output<String> tlsSecurityPolicy() {
-        return this.tlsSecurityPolicy == null ? Codegen.empty() : this.tlsSecurityPolicy;
+    public Optional<Output<String>> tlsSecurityPolicy() {
+        return Optional.ofNullable(this.tlsSecurityPolicy);
     }
 
-    public DomainEndpointOptionsArgs(
-        @Nullable Output<Boolean> enforceHttps,
-        @Nullable Output<String> tlsSecurityPolicy) {
-        this.enforceHttps = enforceHttps;
-        this.tlsSecurityPolicy = tlsSecurityPolicy;
-    }
+    private DomainEndpointOptionsArgs() {}
 
-    private DomainEndpointOptionsArgs() {
-        this.enforceHttps = Codegen.empty();
-        this.tlsSecurityPolicy = Codegen.empty();
+    private DomainEndpointOptionsArgs(DomainEndpointOptionsArgs $) {
+        this.enforceHttps = $.enforceHttps;
+        this.tlsSecurityPolicy = $.tlsSecurityPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainEndpointOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enforceHttps;
-        private @Nullable Output<String> tlsSecurityPolicy;
+        private DomainEndpointOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainEndpointOptionsArgs();
         }
 
         public Builder(DomainEndpointOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enforceHttps = defaults.enforceHttps;
-    	      this.tlsSecurityPolicy = defaults.tlsSecurityPolicy;
+            $ = new DomainEndpointOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enforceHttps(@Nullable Output<Boolean> enforceHttps) {
-            this.enforceHttps = enforceHttps;
+            $.enforceHttps = enforceHttps;
             return this;
         }
-        public Builder enforceHttps(@Nullable Boolean enforceHttps) {
-            this.enforceHttps = Codegen.ofNullable(enforceHttps);
-            return this;
+
+        public Builder enforceHttps(Boolean enforceHttps) {
+            return enforceHttps(Output.of(enforceHttps));
         }
+
         public Builder tlsSecurityPolicy(@Nullable Output<String> tlsSecurityPolicy) {
-            this.tlsSecurityPolicy = tlsSecurityPolicy;
+            $.tlsSecurityPolicy = tlsSecurityPolicy;
             return this;
         }
-        public Builder tlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
-            this.tlsSecurityPolicy = Codegen.ofNullable(tlsSecurityPolicy);
-            return this;
-        }        public DomainEndpointOptionsArgs build() {
-            return new DomainEndpointOptionsArgs(enforceHttps, tlsSecurityPolicy);
+
+        public Builder tlsSecurityPolicy(String tlsSecurityPolicy) {
+            return tlsSecurityPolicy(Output.of(tlsSecurityPolicy));
+        }
+
+        public DomainEndpointOptionsArgs build() {
+            return $;
         }
     }
+
 }

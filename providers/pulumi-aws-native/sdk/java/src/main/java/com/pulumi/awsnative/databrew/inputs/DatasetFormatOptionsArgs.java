@@ -8,8 +8,8 @@ import com.pulumi.awsnative.databrew.inputs.DatasetExcelOptionsArgs;
 import com.pulumi.awsnative.databrew.inputs.DatasetJsonOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,90 +22,82 @@ public final class DatasetFormatOptionsArgs extends com.pulumi.resources.Resourc
     public static final DatasetFormatOptionsArgs Empty = new DatasetFormatOptionsArgs();
 
     @Import(name="csv")
-      private final @Nullable Output<DatasetCsvOptionsArgs> csv;
+    private @Nullable Output<DatasetCsvOptionsArgs> csv;
 
-    public Output<DatasetCsvOptionsArgs> csv() {
-        return this.csv == null ? Codegen.empty() : this.csv;
+    public Optional<Output<DatasetCsvOptionsArgs>> csv() {
+        return Optional.ofNullable(this.csv);
     }
 
     @Import(name="excel")
-      private final @Nullable Output<DatasetExcelOptionsArgs> excel;
+    private @Nullable Output<DatasetExcelOptionsArgs> excel;
 
-    public Output<DatasetExcelOptionsArgs> excel() {
-        return this.excel == null ? Codegen.empty() : this.excel;
+    public Optional<Output<DatasetExcelOptionsArgs>> excel() {
+        return Optional.ofNullable(this.excel);
     }
 
     @Import(name="json")
-      private final @Nullable Output<DatasetJsonOptionsArgs> json;
+    private @Nullable Output<DatasetJsonOptionsArgs> json;
 
-    public Output<DatasetJsonOptionsArgs> json() {
-        return this.json == null ? Codegen.empty() : this.json;
+    public Optional<Output<DatasetJsonOptionsArgs>> json() {
+        return Optional.ofNullable(this.json);
     }
 
-    public DatasetFormatOptionsArgs(
-        @Nullable Output<DatasetCsvOptionsArgs> csv,
-        @Nullable Output<DatasetExcelOptionsArgs> excel,
-        @Nullable Output<DatasetJsonOptionsArgs> json) {
-        this.csv = csv;
-        this.excel = excel;
-        this.json = json;
-    }
+    private DatasetFormatOptionsArgs() {}
 
-    private DatasetFormatOptionsArgs() {
-        this.csv = Codegen.empty();
-        this.excel = Codegen.empty();
-        this.json = Codegen.empty();
+    private DatasetFormatOptionsArgs(DatasetFormatOptionsArgs $) {
+        this.csv = $.csv;
+        this.excel = $.excel;
+        this.json = $.json;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetFormatOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetCsvOptionsArgs> csv;
-        private @Nullable Output<DatasetExcelOptionsArgs> excel;
-        private @Nullable Output<DatasetJsonOptionsArgs> json;
+        private DatasetFormatOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetFormatOptionsArgs();
         }
 
         public Builder(DatasetFormatOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.csv = defaults.csv;
-    	      this.excel = defaults.excel;
-    	      this.json = defaults.json;
+            $ = new DatasetFormatOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder csv(@Nullable Output<DatasetCsvOptionsArgs> csv) {
-            this.csv = csv;
+            $.csv = csv;
             return this;
         }
-        public Builder csv(@Nullable DatasetCsvOptionsArgs csv) {
-            this.csv = Codegen.ofNullable(csv);
-            return this;
+
+        public Builder csv(DatasetCsvOptionsArgs csv) {
+            return csv(Output.of(csv));
         }
+
         public Builder excel(@Nullable Output<DatasetExcelOptionsArgs> excel) {
-            this.excel = excel;
+            $.excel = excel;
             return this;
         }
-        public Builder excel(@Nullable DatasetExcelOptionsArgs excel) {
-            this.excel = Codegen.ofNullable(excel);
-            return this;
+
+        public Builder excel(DatasetExcelOptionsArgs excel) {
+            return excel(Output.of(excel));
         }
+
         public Builder json(@Nullable Output<DatasetJsonOptionsArgs> json) {
-            this.json = json;
+            $.json = json;
             return this;
         }
-        public Builder json(@Nullable DatasetJsonOptionsArgs json) {
-            this.json = Codegen.ofNullable(json);
-            return this;
-        }        public DatasetFormatOptionsArgs build() {
-            return new DatasetFormatOptionsArgs(csv, excel, json);
+
+        public Builder json(DatasetJsonOptionsArgs json) {
+            return json(Output.of(json));
+        }
+
+        public DatasetFormatOptionsArgs build() {
+            return $;
         }
     }
+
 }

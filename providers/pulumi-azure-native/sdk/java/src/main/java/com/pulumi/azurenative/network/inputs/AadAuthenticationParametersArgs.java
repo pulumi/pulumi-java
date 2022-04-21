@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AadAuthenticationParametersArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="aadAudience")
-      private final @Nullable Output<String> aadAudience;
+    private @Nullable Output<String> aadAudience;
 
-    public Output<String> aadAudience() {
-        return this.aadAudience == null ? Codegen.empty() : this.aadAudience;
+    public Optional<Output<String>> aadAudience() {
+        return Optional.ofNullable(this.aadAudience);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AadAuthenticationParametersArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="aadIssuer")
-      private final @Nullable Output<String> aadIssuer;
+    private @Nullable Output<String> aadIssuer;
 
-    public Output<String> aadIssuer() {
-        return this.aadIssuer == null ? Codegen.empty() : this.aadIssuer;
+    public Optional<Output<String>> aadIssuer() {
+        return Optional.ofNullable(this.aadIssuer);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class AadAuthenticationParametersArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="aadTenant")
-      private final @Nullable Output<String> aadTenant;
+    private @Nullable Output<String> aadTenant;
 
-    public Output<String> aadTenant() {
-        return this.aadTenant == null ? Codegen.empty() : this.aadTenant;
+    public Optional<Output<String>> aadTenant() {
+        return Optional.ofNullable(this.aadTenant);
     }
 
-    public AadAuthenticationParametersArgs(
-        @Nullable Output<String> aadAudience,
-        @Nullable Output<String> aadIssuer,
-        @Nullable Output<String> aadTenant) {
-        this.aadAudience = aadAudience;
-        this.aadIssuer = aadIssuer;
-        this.aadTenant = aadTenant;
-    }
+    private AadAuthenticationParametersArgs() {}
 
-    private AadAuthenticationParametersArgs() {
-        this.aadAudience = Codegen.empty();
-        this.aadIssuer = Codegen.empty();
-        this.aadTenant = Codegen.empty();
+    private AadAuthenticationParametersArgs(AadAuthenticationParametersArgs $) {
+        this.aadAudience = $.aadAudience;
+        this.aadIssuer = $.aadIssuer;
+        this.aadTenant = $.aadTenant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AadAuthenticationParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aadAudience;
-        private @Nullable Output<String> aadIssuer;
-        private @Nullable Output<String> aadTenant;
+        private AadAuthenticationParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AadAuthenticationParametersArgs();
         }
 
         public Builder(AadAuthenticationParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadAudience = defaults.aadAudience;
-    	      this.aadIssuer = defaults.aadIssuer;
-    	      this.aadTenant = defaults.aadTenant;
+            $ = new AadAuthenticationParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aadAudience(@Nullable Output<String> aadAudience) {
-            this.aadAudience = aadAudience;
+            $.aadAudience = aadAudience;
             return this;
         }
-        public Builder aadAudience(@Nullable String aadAudience) {
-            this.aadAudience = Codegen.ofNullable(aadAudience);
-            return this;
+
+        public Builder aadAudience(String aadAudience) {
+            return aadAudience(Output.of(aadAudience));
         }
+
         public Builder aadIssuer(@Nullable Output<String> aadIssuer) {
-            this.aadIssuer = aadIssuer;
+            $.aadIssuer = aadIssuer;
             return this;
         }
-        public Builder aadIssuer(@Nullable String aadIssuer) {
-            this.aadIssuer = Codegen.ofNullable(aadIssuer);
-            return this;
+
+        public Builder aadIssuer(String aadIssuer) {
+            return aadIssuer(Output.of(aadIssuer));
         }
+
         public Builder aadTenant(@Nullable Output<String> aadTenant) {
-            this.aadTenant = aadTenant;
+            $.aadTenant = aadTenant;
             return this;
         }
-        public Builder aadTenant(@Nullable String aadTenant) {
-            this.aadTenant = Codegen.ofNullable(aadTenant);
-            return this;
-        }        public AadAuthenticationParametersArgs build() {
-            return new AadAuthenticationParametersArgs(aadAudience, aadIssuer, aadTenant);
+
+        public Builder aadTenant(String aadTenant) {
+            return aadTenant(Output.of(aadTenant));
+        }
+
+        public AadAuthenticationParametersArgs build() {
+            return $;
         }
     }
+
 }

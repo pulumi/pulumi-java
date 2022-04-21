@@ -9,10 +9,10 @@ import com.pulumi.azurenative.security.inputs.GcpCredentialsDetailsPropertiesArg
 import com.pulumi.azurenative.security.inputs.HybridComputeSettingsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationDetails")
-      private final @Nullable Output<Object> authenticationDetails;
+    private @Nullable Output<Object> authenticationDetails;
 
-    public Output<Object> authenticationDetails() {
-        return this.authenticationDetails == null ? Codegen.empty() : this.authenticationDetails;
+    public Optional<Output<Object>> authenticationDetails() {
+        return Optional.ofNullable(this.authenticationDetails);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectorName")
-      private final @Nullable Output<String> connectorName;
+    private @Nullable Output<String> connectorName;
 
-    public Output<String> connectorName() {
-        return this.connectorName == null ? Codegen.empty() : this.connectorName;
+    public Optional<Output<String>> connectorName() {
+        return Optional.ofNullable(this.connectorName);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hybridComputeSettings")
-      private final @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
+    private @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
 
-    public Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings() {
-        return this.hybridComputeSettings == null ? Codegen.empty() : this.hybridComputeSettings;
+    public Optional<Output<HybridComputeSettingsPropertiesArgs>> hybridComputeSettings() {
+        return Optional.ofNullable(this.hybridComputeSettings);
     }
 
-    public ConnectorArgs(
-        @Nullable Output<Object> authenticationDetails,
-        @Nullable Output<String> connectorName,
-        @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings) {
-        this.authenticationDetails = authenticationDetails;
-        this.connectorName = connectorName;
-        this.hybridComputeSettings = hybridComputeSettings;
-    }
+    private ConnectorArgs() {}
 
-    private ConnectorArgs() {
-        this.authenticationDetails = Codegen.empty();
-        this.connectorName = Codegen.empty();
-        this.hybridComputeSettings = Codegen.empty();
+    private ConnectorArgs(ConnectorArgs $) {
+        this.authenticationDetails = $.authenticationDetails;
+        this.connectorName = $.connectorName;
+        this.hybridComputeSettings = $.hybridComputeSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> authenticationDetails;
-        private @Nullable Output<String> connectorName;
-        private @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
+        private ConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorArgs();
         }
 
         public Builder(ConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationDetails = defaults.authenticationDetails;
-    	      this.connectorName = defaults.connectorName;
-    	      this.hybridComputeSettings = defaults.hybridComputeSettings;
+            $ = new ConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationDetails(@Nullable Output<Object> authenticationDetails) {
-            this.authenticationDetails = authenticationDetails;
+            $.authenticationDetails = authenticationDetails;
             return this;
         }
-        public Builder authenticationDetails(@Nullable Object authenticationDetails) {
-            this.authenticationDetails = Codegen.ofNullable(authenticationDetails);
-            return this;
+
+        public Builder authenticationDetails(Object authenticationDetails) {
+            return authenticationDetails(Output.of(authenticationDetails));
         }
+
         public Builder connectorName(@Nullable Output<String> connectorName) {
-            this.connectorName = connectorName;
+            $.connectorName = connectorName;
             return this;
         }
-        public Builder connectorName(@Nullable String connectorName) {
-            this.connectorName = Codegen.ofNullable(connectorName);
-            return this;
+
+        public Builder connectorName(String connectorName) {
+            return connectorName(Output.of(connectorName));
         }
+
         public Builder hybridComputeSettings(@Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings) {
-            this.hybridComputeSettings = hybridComputeSettings;
+            $.hybridComputeSettings = hybridComputeSettings;
             return this;
         }
-        public Builder hybridComputeSettings(@Nullable HybridComputeSettingsPropertiesArgs hybridComputeSettings) {
-            this.hybridComputeSettings = Codegen.ofNullable(hybridComputeSettings);
-            return this;
-        }        public ConnectorArgs build() {
-            return new ConnectorArgs(authenticationDetails, connectorName, hybridComputeSettings);
+
+        public Builder hybridComputeSettings(HybridComputeSettingsPropertiesArgs hybridComputeSettings) {
+            return hybridComputeSettings(Output.of(hybridComputeSettings));
+        }
+
+        public ConnectorArgs build() {
+            return $;
         }
     }
+
 }

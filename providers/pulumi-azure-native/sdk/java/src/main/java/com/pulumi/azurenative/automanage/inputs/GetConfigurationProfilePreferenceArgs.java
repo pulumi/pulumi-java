@@ -17,7 +17,7 @@ public final class GetConfigurationProfilePreferenceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="configurationProfilePreferenceName", required=true)
-      private final String configurationProfilePreferenceName;
+    private String configurationProfilePreferenceName;
 
     public String configurationProfilePreferenceName() {
         return this.configurationProfilePreferenceName;
@@ -28,55 +28,52 @@ public final class GetConfigurationProfilePreferenceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetConfigurationProfilePreferenceArgs(
-        String configurationProfilePreferenceName,
-        String resourceGroupName) {
-        this.configurationProfilePreferenceName = Objects.requireNonNull(configurationProfilePreferenceName, "expected parameter 'configurationProfilePreferenceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetConfigurationProfilePreferenceArgs() {}
 
-    private GetConfigurationProfilePreferenceArgs() {
-        this.configurationProfilePreferenceName = null;
-        this.resourceGroupName = null;
+    private GetConfigurationProfilePreferenceArgs(GetConfigurationProfilePreferenceArgs $) {
+        this.configurationProfilePreferenceName = $.configurationProfilePreferenceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigurationProfilePreferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationProfilePreferenceName;
-        private String resourceGroupName;
+        private GetConfigurationProfilePreferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigurationProfilePreferenceArgs();
         }
 
         public Builder(GetConfigurationProfilePreferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationProfilePreferenceName = defaults.configurationProfilePreferenceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetConfigurationProfilePreferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationProfilePreferenceName(String configurationProfilePreferenceName) {
-            this.configurationProfilePreferenceName = Objects.requireNonNull(configurationProfilePreferenceName);
+            $.configurationProfilePreferenceName = configurationProfilePreferenceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetConfigurationProfilePreferenceArgs build() {
-            return new GetConfigurationProfilePreferenceArgs(configurationProfilePreferenceName, resourceGroupName);
+        }
+
+        public GetConfigurationProfilePreferenceArgs build() {
+            $.configurationProfilePreferenceName = Objects.requireNonNull($.configurationProfilePreferenceName, "expected parameter 'configurationProfilePreferenceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkEndpointGroupAppEngineArgs extends com.pulumi.resource
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkEndpointGroupAppEngineArgs extends com.pulumi.resource
      * 
      */
     @Import(name="urlMask")
-      private final @Nullable Output<String> urlMask;
+    private @Nullable Output<String> urlMask;
 
-    public Output<String> urlMask() {
-        return this.urlMask == null ? Codegen.empty() : this.urlMask;
+    public Optional<Output<String>> urlMask() {
+        return Optional.ofNullable(this.urlMask);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class NetworkEndpointGroupAppEngineArgs extends com.pulumi.resource
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public NetworkEndpointGroupAppEngineArgs(
-        @Nullable Output<String> service,
-        @Nullable Output<String> urlMask,
-        @Nullable Output<String> version) {
-        this.service = service;
-        this.urlMask = urlMask;
-        this.version = version;
-    }
+    private NetworkEndpointGroupAppEngineArgs() {}
 
-    private NetworkEndpointGroupAppEngineArgs() {
-        this.service = Codegen.empty();
-        this.urlMask = Codegen.empty();
-        this.version = Codegen.empty();
+    private NetworkEndpointGroupAppEngineArgs(NetworkEndpointGroupAppEngineArgs $) {
+        this.service = $.service;
+        this.urlMask = $.urlMask;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointGroupAppEngineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> service;
-        private @Nullable Output<String> urlMask;
-        private @Nullable Output<String> version;
+        private NetworkEndpointGroupAppEngineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointGroupAppEngineArgs();
         }
 
         public Builder(NetworkEndpointGroupAppEngineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.service = defaults.service;
-    	      this.urlMask = defaults.urlMask;
-    	      this.version = defaults.version;
+            $ = new NetworkEndpointGroupAppEngineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
+
+        public Builder service(String service) {
+            return service(Output.of(service));
         }
+
         public Builder urlMask(@Nullable Output<String> urlMask) {
-            this.urlMask = urlMask;
+            $.urlMask = urlMask;
             return this;
         }
-        public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Codegen.ofNullable(urlMask);
-            return this;
+
+        public Builder urlMask(String urlMask) {
+            return urlMask(Output.of(urlMask));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public NetworkEndpointGroupAppEngineArgs build() {
-            return new NetworkEndpointGroupAppEngineArgs(service, urlMask, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public NetworkEndpointGroupAppEngineArgs build() {
+            return $;
         }
     }
+
 }

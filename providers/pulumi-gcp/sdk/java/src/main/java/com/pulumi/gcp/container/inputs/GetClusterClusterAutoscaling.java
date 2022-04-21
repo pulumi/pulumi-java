@@ -17,100 +17,95 @@ public final class GetClusterClusterAutoscaling extends com.pulumi.resources.Inv
     public static final GetClusterClusterAutoscaling Empty = new GetClusterClusterAutoscaling();
 
     @Import(name="autoProvisioningDefaults", required=true)
-      private final List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults;
+    private List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults;
 
     public List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults() {
         return this.autoProvisioningDefaults;
     }
 
     @Import(name="autoscalingProfile", required=true)
-      private final String autoscalingProfile;
+    private String autoscalingProfile;
 
     public String autoscalingProfile() {
         return this.autoscalingProfile;
     }
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="resourceLimits", required=true)
-      private final List<GetClusterClusterAutoscalingResourceLimit> resourceLimits;
+    private List<GetClusterClusterAutoscalingResourceLimit> resourceLimits;
 
     public List<GetClusterClusterAutoscalingResourceLimit> resourceLimits() {
         return this.resourceLimits;
     }
 
-    public GetClusterClusterAutoscaling(
-        List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults,
-        String autoscalingProfile,
-        Boolean enabled,
-        List<GetClusterClusterAutoscalingResourceLimit> resourceLimits) {
-        this.autoProvisioningDefaults = Objects.requireNonNull(autoProvisioningDefaults, "expected parameter 'autoProvisioningDefaults' to be non-null");
-        this.autoscalingProfile = Objects.requireNonNull(autoscalingProfile, "expected parameter 'autoscalingProfile' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.resourceLimits = Objects.requireNonNull(resourceLimits, "expected parameter 'resourceLimits' to be non-null");
-    }
+    private GetClusterClusterAutoscaling() {}
 
-    private GetClusterClusterAutoscaling() {
-        this.autoProvisioningDefaults = List.of();
-        this.autoscalingProfile = null;
-        this.enabled = null;
-        this.resourceLimits = List.of();
+    private GetClusterClusterAutoscaling(GetClusterClusterAutoscaling $) {
+        this.autoProvisioningDefaults = $.autoProvisioningDefaults;
+        this.autoscalingProfile = $.autoscalingProfile;
+        this.enabled = $.enabled;
+        this.resourceLimits = $.resourceLimits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterClusterAutoscaling defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults;
-        private String autoscalingProfile;
-        private Boolean enabled;
-        private List<GetClusterClusterAutoscalingResourceLimit> resourceLimits;
+        private GetClusterClusterAutoscaling $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterClusterAutoscaling();
         }
 
         public Builder(GetClusterClusterAutoscaling defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoProvisioningDefaults = defaults.autoProvisioningDefaults;
-    	      this.autoscalingProfile = defaults.autoscalingProfile;
-    	      this.enabled = defaults.enabled;
-    	      this.resourceLimits = defaults.resourceLimits;
+            $ = new GetClusterClusterAutoscaling(Objects.requireNonNull(defaults));
         }
 
         public Builder autoProvisioningDefaults(List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults) {
-            this.autoProvisioningDefaults = Objects.requireNonNull(autoProvisioningDefaults);
+            $.autoProvisioningDefaults = autoProvisioningDefaults;
             return this;
         }
+
         public Builder autoProvisioningDefaults(GetClusterClusterAutoscalingAutoProvisioningDefault... autoProvisioningDefaults) {
             return autoProvisioningDefaults(List.of(autoProvisioningDefaults));
         }
+
         public Builder autoscalingProfile(String autoscalingProfile) {
-            this.autoscalingProfile = Objects.requireNonNull(autoscalingProfile);
+            $.autoscalingProfile = autoscalingProfile;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder resourceLimits(List<GetClusterClusterAutoscalingResourceLimit> resourceLimits) {
-            this.resourceLimits = Objects.requireNonNull(resourceLimits);
+            $.resourceLimits = resourceLimits;
             return this;
         }
+
         public Builder resourceLimits(GetClusterClusterAutoscalingResourceLimit... resourceLimits) {
             return resourceLimits(List.of(resourceLimits));
-        }        public GetClusterClusterAutoscaling build() {
-            return new GetClusterClusterAutoscaling(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
+        }
+
+        public GetClusterClusterAutoscaling build() {
+            $.autoProvisioningDefaults = Objects.requireNonNull($.autoProvisioningDefaults, "expected parameter 'autoProvisioningDefaults' to be non-null");
+            $.autoscalingProfile = Objects.requireNonNull($.autoscalingProfile, "expected parameter 'autoscalingProfile' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.resourceLimits = Objects.requireNonNull($.resourceLimits, "expected parameter 'resourceLimits' to be non-null");
+            return $;
         }
     }
+
 }

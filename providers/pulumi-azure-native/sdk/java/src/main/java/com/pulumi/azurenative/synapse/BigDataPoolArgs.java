@@ -13,13 +13,13 @@ import com.pulumi.azurenative.synapse.inputs.LibraryRequirementsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoPause")
-      private final @Nullable Output<AutoPausePropertiesArgs> autoPause;
+    private @Nullable Output<AutoPausePropertiesArgs> autoPause;
 
-    public Output<AutoPausePropertiesArgs> autoPause() {
-        return this.autoPause == null ? Codegen.empty() : this.autoPause;
+    public Optional<Output<AutoPausePropertiesArgs>> autoPause() {
+        return Optional.ofNullable(this.autoPause);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoScale")
-      private final @Nullable Output<AutoScalePropertiesArgs> autoScale;
+    private @Nullable Output<AutoScalePropertiesArgs> autoScale;
 
-    public Output<AutoScalePropertiesArgs> autoScale() {
-        return this.autoScale == null ? Codegen.empty() : this.autoScale;
+    public Optional<Output<AutoScalePropertiesArgs>> autoScale() {
+        return Optional.ofNullable(this.autoScale);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bigDataPoolName")
-      private final @Nullable Output<String> bigDataPoolName;
+    private @Nullable Output<String> bigDataPoolName;
 
-    public Output<String> bigDataPoolName() {
-        return this.bigDataPoolName == null ? Codegen.empty() : this.bigDataPoolName;
+    public Optional<Output<String>> bigDataPoolName() {
+        return Optional.ofNullable(this.bigDataPoolName);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheSize")
-      private final @Nullable Output<Integer> cacheSize;
+    private @Nullable Output<Integer> cacheSize;
 
-    public Output<Integer> cacheSize() {
-        return this.cacheSize == null ? Codegen.empty() : this.cacheSize;
+    public Optional<Output<Integer>> cacheSize() {
+        return Optional.ofNullable(this.cacheSize);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationDate")
-      private final @Nullable Output<String> creationDate;
+    private @Nullable Output<String> creationDate;
 
-    public Output<String> creationDate() {
-        return this.creationDate == null ? Codegen.empty() : this.creationDate;
+    public Optional<Output<String>> creationDate() {
+        return Optional.ofNullable(this.creationDate);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customLibraries")
-      private final @Nullable Output<List<LibraryInfoArgs>> customLibraries;
+    private @Nullable Output<List<LibraryInfoArgs>> customLibraries;
 
-    public Output<List<LibraryInfoArgs>> customLibraries() {
-        return this.customLibraries == null ? Codegen.empty() : this.customLibraries;
+    public Optional<Output<List<LibraryInfoArgs>>> customLibraries() {
+        return Optional.ofNullable(this.customLibraries);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultSparkLogFolder")
-      private final @Nullable Output<String> defaultSparkLogFolder;
+    private @Nullable Output<String> defaultSparkLogFolder;
 
-    public Output<String> defaultSparkLogFolder() {
-        return this.defaultSparkLogFolder == null ? Codegen.empty() : this.defaultSparkLogFolder;
+    public Optional<Output<String>> defaultSparkLogFolder() {
+        return Optional.ofNullable(this.defaultSparkLogFolder);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dynamicExecutorAllocation")
-      private final @Nullable Output<DynamicExecutorAllocationArgs> dynamicExecutorAllocation;
+    private @Nullable Output<DynamicExecutorAllocationArgs> dynamicExecutorAllocation;
 
-    public Output<DynamicExecutorAllocationArgs> dynamicExecutorAllocation() {
-        return this.dynamicExecutorAllocation == null ? Codegen.empty() : this.dynamicExecutorAllocation;
+    public Optional<Output<DynamicExecutorAllocationArgs>> dynamicExecutorAllocation() {
+        return Optional.ofNullable(this.dynamicExecutorAllocation);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="force")
-      private final @Nullable Output<Boolean> force;
+    private @Nullable Output<Boolean> force;
 
-    public Output<Boolean> force() {
-        return this.force == null ? Codegen.empty() : this.force;
+    public Optional<Output<Boolean>> force() {
+        return Optional.ofNullable(this.force);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isComputeIsolationEnabled")
-      private final @Nullable Output<Boolean> isComputeIsolationEnabled;
+    private @Nullable Output<Boolean> isComputeIsolationEnabled;
 
-    public Output<Boolean> isComputeIsolationEnabled() {
-        return this.isComputeIsolationEnabled == null ? Codegen.empty() : this.isComputeIsolationEnabled;
+    public Optional<Output<Boolean>> isComputeIsolationEnabled() {
+        return Optional.ofNullable(this.isComputeIsolationEnabled);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="libraryRequirements")
-      private final @Nullable Output<LibraryRequirementsArgs> libraryRequirements;
+    private @Nullable Output<LibraryRequirementsArgs> libraryRequirements;
 
-    public Output<LibraryRequirementsArgs> libraryRequirements() {
-        return this.libraryRequirements == null ? Codegen.empty() : this.libraryRequirements;
+    public Optional<Output<LibraryRequirementsArgs>> libraryRequirements() {
+        return Optional.ofNullable(this.libraryRequirements);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeCount")
-      private final @Nullable Output<Integer> nodeCount;
+    private @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> nodeCount() {
-        return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
+    public Optional<Output<Integer>> nodeCount() {
+        return Optional.ofNullable(this.nodeCount);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeSize")
-      private final @Nullable Output<Either<String,NodeSize>> nodeSize;
+    private @Nullable Output<Either<String,NodeSize>> nodeSize;
 
-    public Output<Either<String,NodeSize>> nodeSize() {
-        return this.nodeSize == null ? Codegen.empty() : this.nodeSize;
+    public Optional<Output<Either<String,NodeSize>>> nodeSize() {
+        return Optional.ofNullable(this.nodeSize);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeSizeFamily")
-      private final @Nullable Output<Either<String,NodeSizeFamily>> nodeSizeFamily;
+    private @Nullable Output<Either<String,NodeSizeFamily>> nodeSizeFamily;
 
-    public Output<Either<String,NodeSizeFamily>> nodeSizeFamily() {
-        return this.nodeSizeFamily == null ? Codegen.empty() : this.nodeSizeFamily;
+    public Optional<Output<Either<String,NodeSizeFamily>>> nodeSizeFamily() {
+        return Optional.ofNullable(this.nodeSizeFamily);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<String> provisioningState;
+    private @Nullable Output<String> provisioningState;
 
-    public Output<String> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<String>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -208,7 +208,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -219,10 +219,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sessionLevelPackagesEnabled")
-      private final @Nullable Output<Boolean> sessionLevelPackagesEnabled;
+    private @Nullable Output<Boolean> sessionLevelPackagesEnabled;
 
-    public Output<Boolean> sessionLevelPackagesEnabled() {
-        return this.sessionLevelPackagesEnabled == null ? Codegen.empty() : this.sessionLevelPackagesEnabled;
+    public Optional<Output<Boolean>> sessionLevelPackagesEnabled() {
+        return Optional.ofNullable(this.sessionLevelPackagesEnabled);
     }
 
     /**
@@ -230,10 +230,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkConfigProperties")
-      private final @Nullable Output<LibraryRequirementsArgs> sparkConfigProperties;
+    private @Nullable Output<LibraryRequirementsArgs> sparkConfigProperties;
 
-    public Output<LibraryRequirementsArgs> sparkConfigProperties() {
-        return this.sparkConfigProperties == null ? Codegen.empty() : this.sparkConfigProperties;
+    public Optional<Output<LibraryRequirementsArgs>> sparkConfigProperties() {
+        return Optional.ofNullable(this.sparkConfigProperties);
     }
 
     /**
@@ -241,10 +241,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkEventsFolder")
-      private final @Nullable Output<String> sparkEventsFolder;
+    private @Nullable Output<String> sparkEventsFolder;
 
-    public Output<String> sparkEventsFolder() {
-        return this.sparkEventsFolder == null ? Codegen.empty() : this.sparkEventsFolder;
+    public Optional<Output<String>> sparkEventsFolder() {
+        return Optional.ofNullable(this.sparkEventsFolder);
     }
 
     /**
@@ -252,10 +252,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkVersion")
-      private final @Nullable Output<String> sparkVersion;
+    private @Nullable Output<String> sparkVersion;
 
-    public Output<String> sparkVersion() {
-        return this.sparkVersion == null ? Codegen.empty() : this.sparkVersion;
+    public Optional<Output<String>> sparkVersion() {
+        return Optional.ofNullable(this.sparkVersion);
     }
 
     /**
@@ -263,10 +263,10 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -274,339 +274,274 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public BigDataPoolArgs(
-        @Nullable Output<AutoPausePropertiesArgs> autoPause,
-        @Nullable Output<AutoScalePropertiesArgs> autoScale,
-        @Nullable Output<String> bigDataPoolName,
-        @Nullable Output<Integer> cacheSize,
-        @Nullable Output<String> creationDate,
-        @Nullable Output<List<LibraryInfoArgs>> customLibraries,
-        @Nullable Output<String> defaultSparkLogFolder,
-        @Nullable Output<DynamicExecutorAllocationArgs> dynamicExecutorAllocation,
-        @Nullable Output<Boolean> force,
-        @Nullable Output<Boolean> isComputeIsolationEnabled,
-        @Nullable Output<LibraryRequirementsArgs> libraryRequirements,
-        @Nullable Output<String> location,
-        @Nullable Output<Integer> nodeCount,
-        @Nullable Output<Either<String,NodeSize>> nodeSize,
-        @Nullable Output<Either<String,NodeSizeFamily>> nodeSizeFamily,
-        @Nullable Output<String> provisioningState,
-        Output<String> resourceGroupName,
-        @Nullable Output<Boolean> sessionLevelPackagesEnabled,
-        @Nullable Output<LibraryRequirementsArgs> sparkConfigProperties,
-        @Nullable Output<String> sparkEventsFolder,
-        @Nullable Output<String> sparkVersion,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> workspaceName) {
-        this.autoPause = autoPause;
-        this.autoScale = autoScale;
-        this.bigDataPoolName = bigDataPoolName;
-        this.cacheSize = cacheSize;
-        this.creationDate = creationDate;
-        this.customLibraries = customLibraries;
-        this.defaultSparkLogFolder = defaultSparkLogFolder;
-        this.dynamicExecutorAllocation = dynamicExecutorAllocation;
-        this.force = force;
-        this.isComputeIsolationEnabled = isComputeIsolationEnabled;
-        this.libraryRequirements = libraryRequirements;
-        this.location = location;
-        this.nodeCount = nodeCount;
-        this.nodeSize = nodeSize;
-        this.nodeSizeFamily = nodeSizeFamily;
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sessionLevelPackagesEnabled = sessionLevelPackagesEnabled;
-        this.sparkConfigProperties = sparkConfigProperties;
-        this.sparkEventsFolder = sparkEventsFolder;
-        this.sparkVersion = sparkVersion;
-        this.tags = tags;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private BigDataPoolArgs() {}
 
-    private BigDataPoolArgs() {
-        this.autoPause = Codegen.empty();
-        this.autoScale = Codegen.empty();
-        this.bigDataPoolName = Codegen.empty();
-        this.cacheSize = Codegen.empty();
-        this.creationDate = Codegen.empty();
-        this.customLibraries = Codegen.empty();
-        this.defaultSparkLogFolder = Codegen.empty();
-        this.dynamicExecutorAllocation = Codegen.empty();
-        this.force = Codegen.empty();
-        this.isComputeIsolationEnabled = Codegen.empty();
-        this.libraryRequirements = Codegen.empty();
-        this.location = Codegen.empty();
-        this.nodeCount = Codegen.empty();
-        this.nodeSize = Codegen.empty();
-        this.nodeSizeFamily = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sessionLevelPackagesEnabled = Codegen.empty();
-        this.sparkConfigProperties = Codegen.empty();
-        this.sparkEventsFolder = Codegen.empty();
-        this.sparkVersion = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private BigDataPoolArgs(BigDataPoolArgs $) {
+        this.autoPause = $.autoPause;
+        this.autoScale = $.autoScale;
+        this.bigDataPoolName = $.bigDataPoolName;
+        this.cacheSize = $.cacheSize;
+        this.creationDate = $.creationDate;
+        this.customLibraries = $.customLibraries;
+        this.defaultSparkLogFolder = $.defaultSparkLogFolder;
+        this.dynamicExecutorAllocation = $.dynamicExecutorAllocation;
+        this.force = $.force;
+        this.isComputeIsolationEnabled = $.isComputeIsolationEnabled;
+        this.libraryRequirements = $.libraryRequirements;
+        this.location = $.location;
+        this.nodeCount = $.nodeCount;
+        this.nodeSize = $.nodeSize;
+        this.nodeSizeFamily = $.nodeSizeFamily;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sessionLevelPackagesEnabled = $.sessionLevelPackagesEnabled;
+        this.sparkConfigProperties = $.sparkConfigProperties;
+        this.sparkEventsFolder = $.sparkEventsFolder;
+        this.sparkVersion = $.sparkVersion;
+        this.tags = $.tags;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigDataPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoPausePropertiesArgs> autoPause;
-        private @Nullable Output<AutoScalePropertiesArgs> autoScale;
-        private @Nullable Output<String> bigDataPoolName;
-        private @Nullable Output<Integer> cacheSize;
-        private @Nullable Output<String> creationDate;
-        private @Nullable Output<List<LibraryInfoArgs>> customLibraries;
-        private @Nullable Output<String> defaultSparkLogFolder;
-        private @Nullable Output<DynamicExecutorAllocationArgs> dynamicExecutorAllocation;
-        private @Nullable Output<Boolean> force;
-        private @Nullable Output<Boolean> isComputeIsolationEnabled;
-        private @Nullable Output<LibraryRequirementsArgs> libraryRequirements;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Integer> nodeCount;
-        private @Nullable Output<Either<String,NodeSize>> nodeSize;
-        private @Nullable Output<Either<String,NodeSizeFamily>> nodeSizeFamily;
-        private @Nullable Output<String> provisioningState;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Boolean> sessionLevelPackagesEnabled;
-        private @Nullable Output<LibraryRequirementsArgs> sparkConfigProperties;
-        private @Nullable Output<String> sparkEventsFolder;
-        private @Nullable Output<String> sparkVersion;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> workspaceName;
+        private BigDataPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigDataPoolArgs();
         }
 
         public Builder(BigDataPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoPause = defaults.autoPause;
-    	      this.autoScale = defaults.autoScale;
-    	      this.bigDataPoolName = defaults.bigDataPoolName;
-    	      this.cacheSize = defaults.cacheSize;
-    	      this.creationDate = defaults.creationDate;
-    	      this.customLibraries = defaults.customLibraries;
-    	      this.defaultSparkLogFolder = defaults.defaultSparkLogFolder;
-    	      this.dynamicExecutorAllocation = defaults.dynamicExecutorAllocation;
-    	      this.force = defaults.force;
-    	      this.isComputeIsolationEnabled = defaults.isComputeIsolationEnabled;
-    	      this.libraryRequirements = defaults.libraryRequirements;
-    	      this.location = defaults.location;
-    	      this.nodeCount = defaults.nodeCount;
-    	      this.nodeSize = defaults.nodeSize;
-    	      this.nodeSizeFamily = defaults.nodeSizeFamily;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sessionLevelPackagesEnabled = defaults.sessionLevelPackagesEnabled;
-    	      this.sparkConfigProperties = defaults.sparkConfigProperties;
-    	      this.sparkEventsFolder = defaults.sparkEventsFolder;
-    	      this.sparkVersion = defaults.sparkVersion;
-    	      this.tags = defaults.tags;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new BigDataPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoPause(@Nullable Output<AutoPausePropertiesArgs> autoPause) {
-            this.autoPause = autoPause;
+            $.autoPause = autoPause;
             return this;
         }
-        public Builder autoPause(@Nullable AutoPausePropertiesArgs autoPause) {
-            this.autoPause = Codegen.ofNullable(autoPause);
-            return this;
+
+        public Builder autoPause(AutoPausePropertiesArgs autoPause) {
+            return autoPause(Output.of(autoPause));
         }
+
         public Builder autoScale(@Nullable Output<AutoScalePropertiesArgs> autoScale) {
-            this.autoScale = autoScale;
+            $.autoScale = autoScale;
             return this;
         }
-        public Builder autoScale(@Nullable AutoScalePropertiesArgs autoScale) {
-            this.autoScale = Codegen.ofNullable(autoScale);
-            return this;
+
+        public Builder autoScale(AutoScalePropertiesArgs autoScale) {
+            return autoScale(Output.of(autoScale));
         }
+
         public Builder bigDataPoolName(@Nullable Output<String> bigDataPoolName) {
-            this.bigDataPoolName = bigDataPoolName;
+            $.bigDataPoolName = bigDataPoolName;
             return this;
         }
-        public Builder bigDataPoolName(@Nullable String bigDataPoolName) {
-            this.bigDataPoolName = Codegen.ofNullable(bigDataPoolName);
-            return this;
+
+        public Builder bigDataPoolName(String bigDataPoolName) {
+            return bigDataPoolName(Output.of(bigDataPoolName));
         }
+
         public Builder cacheSize(@Nullable Output<Integer> cacheSize) {
-            this.cacheSize = cacheSize;
+            $.cacheSize = cacheSize;
             return this;
         }
-        public Builder cacheSize(@Nullable Integer cacheSize) {
-            this.cacheSize = Codegen.ofNullable(cacheSize);
-            return this;
+
+        public Builder cacheSize(Integer cacheSize) {
+            return cacheSize(Output.of(cacheSize));
         }
+
         public Builder creationDate(@Nullable Output<String> creationDate) {
-            this.creationDate = creationDate;
+            $.creationDate = creationDate;
             return this;
         }
-        public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Codegen.ofNullable(creationDate);
-            return this;
+
+        public Builder creationDate(String creationDate) {
+            return creationDate(Output.of(creationDate));
         }
+
         public Builder customLibraries(@Nullable Output<List<LibraryInfoArgs>> customLibraries) {
-            this.customLibraries = customLibraries;
+            $.customLibraries = customLibraries;
             return this;
         }
-        public Builder customLibraries(@Nullable List<LibraryInfoArgs> customLibraries) {
-            this.customLibraries = Codegen.ofNullable(customLibraries);
-            return this;
+
+        public Builder customLibraries(List<LibraryInfoArgs> customLibraries) {
+            return customLibraries(Output.of(customLibraries));
         }
+
         public Builder customLibraries(LibraryInfoArgs... customLibraries) {
             return customLibraries(List.of(customLibraries));
         }
+
         public Builder defaultSparkLogFolder(@Nullable Output<String> defaultSparkLogFolder) {
-            this.defaultSparkLogFolder = defaultSparkLogFolder;
+            $.defaultSparkLogFolder = defaultSparkLogFolder;
             return this;
         }
-        public Builder defaultSparkLogFolder(@Nullable String defaultSparkLogFolder) {
-            this.defaultSparkLogFolder = Codegen.ofNullable(defaultSparkLogFolder);
-            return this;
+
+        public Builder defaultSparkLogFolder(String defaultSparkLogFolder) {
+            return defaultSparkLogFolder(Output.of(defaultSparkLogFolder));
         }
+
         public Builder dynamicExecutorAllocation(@Nullable Output<DynamicExecutorAllocationArgs> dynamicExecutorAllocation) {
-            this.dynamicExecutorAllocation = dynamicExecutorAllocation;
+            $.dynamicExecutorAllocation = dynamicExecutorAllocation;
             return this;
         }
-        public Builder dynamicExecutorAllocation(@Nullable DynamicExecutorAllocationArgs dynamicExecutorAllocation) {
-            this.dynamicExecutorAllocation = Codegen.ofNullable(dynamicExecutorAllocation);
-            return this;
+
+        public Builder dynamicExecutorAllocation(DynamicExecutorAllocationArgs dynamicExecutorAllocation) {
+            return dynamicExecutorAllocation(Output.of(dynamicExecutorAllocation));
         }
+
         public Builder force(@Nullable Output<Boolean> force) {
-            this.force = force;
+            $.force = force;
             return this;
         }
-        public Builder force(@Nullable Boolean force) {
-            this.force = Codegen.ofNullable(force);
-            return this;
+
+        public Builder force(Boolean force) {
+            return force(Output.of(force));
         }
+
         public Builder isComputeIsolationEnabled(@Nullable Output<Boolean> isComputeIsolationEnabled) {
-            this.isComputeIsolationEnabled = isComputeIsolationEnabled;
+            $.isComputeIsolationEnabled = isComputeIsolationEnabled;
             return this;
         }
-        public Builder isComputeIsolationEnabled(@Nullable Boolean isComputeIsolationEnabled) {
-            this.isComputeIsolationEnabled = Codegen.ofNullable(isComputeIsolationEnabled);
-            return this;
+
+        public Builder isComputeIsolationEnabled(Boolean isComputeIsolationEnabled) {
+            return isComputeIsolationEnabled(Output.of(isComputeIsolationEnabled));
         }
+
         public Builder libraryRequirements(@Nullable Output<LibraryRequirementsArgs> libraryRequirements) {
-            this.libraryRequirements = libraryRequirements;
+            $.libraryRequirements = libraryRequirements;
             return this;
         }
-        public Builder libraryRequirements(@Nullable LibraryRequirementsArgs libraryRequirements) {
-            this.libraryRequirements = Codegen.ofNullable(libraryRequirements);
-            return this;
+
+        public Builder libraryRequirements(LibraryRequirementsArgs libraryRequirements) {
+            return libraryRequirements(Output.of(libraryRequirements));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
-            this.nodeCount = nodeCount;
+            $.nodeCount = nodeCount;
             return this;
         }
-        public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Codegen.ofNullable(nodeCount);
-            return this;
+
+        public Builder nodeCount(Integer nodeCount) {
+            return nodeCount(Output.of(nodeCount));
         }
+
         public Builder nodeSize(@Nullable Output<Either<String,NodeSize>> nodeSize) {
-            this.nodeSize = nodeSize;
+            $.nodeSize = nodeSize;
             return this;
         }
-        public Builder nodeSize(@Nullable Either<String,NodeSize> nodeSize) {
-            this.nodeSize = Codegen.ofNullable(nodeSize);
-            return this;
+
+        public Builder nodeSize(Either<String,NodeSize> nodeSize) {
+            return nodeSize(Output.of(nodeSize));
         }
+
         public Builder nodeSizeFamily(@Nullable Output<Either<String,NodeSizeFamily>> nodeSizeFamily) {
-            this.nodeSizeFamily = nodeSizeFamily;
+            $.nodeSizeFamily = nodeSizeFamily;
             return this;
         }
-        public Builder nodeSizeFamily(@Nullable Either<String,NodeSizeFamily> nodeSizeFamily) {
-            this.nodeSizeFamily = Codegen.ofNullable(nodeSizeFamily);
-            return this;
+
+        public Builder nodeSizeFamily(Either<String,NodeSizeFamily> nodeSizeFamily) {
+            return nodeSizeFamily(Output.of(nodeSizeFamily));
         }
+
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sessionLevelPackagesEnabled(@Nullable Output<Boolean> sessionLevelPackagesEnabled) {
-            this.sessionLevelPackagesEnabled = sessionLevelPackagesEnabled;
+            $.sessionLevelPackagesEnabled = sessionLevelPackagesEnabled;
             return this;
         }
-        public Builder sessionLevelPackagesEnabled(@Nullable Boolean sessionLevelPackagesEnabled) {
-            this.sessionLevelPackagesEnabled = Codegen.ofNullable(sessionLevelPackagesEnabled);
-            return this;
+
+        public Builder sessionLevelPackagesEnabled(Boolean sessionLevelPackagesEnabled) {
+            return sessionLevelPackagesEnabled(Output.of(sessionLevelPackagesEnabled));
         }
+
         public Builder sparkConfigProperties(@Nullable Output<LibraryRequirementsArgs> sparkConfigProperties) {
-            this.sparkConfigProperties = sparkConfigProperties;
+            $.sparkConfigProperties = sparkConfigProperties;
             return this;
         }
-        public Builder sparkConfigProperties(@Nullable LibraryRequirementsArgs sparkConfigProperties) {
-            this.sparkConfigProperties = Codegen.ofNullable(sparkConfigProperties);
-            return this;
+
+        public Builder sparkConfigProperties(LibraryRequirementsArgs sparkConfigProperties) {
+            return sparkConfigProperties(Output.of(sparkConfigProperties));
         }
+
         public Builder sparkEventsFolder(@Nullable Output<String> sparkEventsFolder) {
-            this.sparkEventsFolder = sparkEventsFolder;
+            $.sparkEventsFolder = sparkEventsFolder;
             return this;
         }
-        public Builder sparkEventsFolder(@Nullable String sparkEventsFolder) {
-            this.sparkEventsFolder = Codegen.ofNullable(sparkEventsFolder);
-            return this;
+
+        public Builder sparkEventsFolder(String sparkEventsFolder) {
+            return sparkEventsFolder(Output.of(sparkEventsFolder));
         }
+
         public Builder sparkVersion(@Nullable Output<String> sparkVersion) {
-            this.sparkVersion = sparkVersion;
+            $.sparkVersion = sparkVersion;
             return this;
         }
-        public Builder sparkVersion(@Nullable String sparkVersion) {
-            this.sparkVersion = Codegen.ofNullable(sparkVersion);
-            return this;
+
+        public Builder sparkVersion(String sparkVersion) {
+            return sparkVersion(Output.of(sparkVersion));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public BigDataPoolArgs build() {
-            return new BigDataPoolArgs(autoPause, autoScale, bigDataPoolName, cacheSize, creationDate, customLibraries, defaultSparkLogFolder, dynamicExecutorAllocation, force, isComputeIsolationEnabled, libraryRequirements, location, nodeCount, nodeSize, nodeSizeFamily, provisioningState, resourceGroupName, sessionLevelPackagesEnabled, sparkConfigProperties, sparkEventsFolder, sparkVersion, tags, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public BigDataPoolArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

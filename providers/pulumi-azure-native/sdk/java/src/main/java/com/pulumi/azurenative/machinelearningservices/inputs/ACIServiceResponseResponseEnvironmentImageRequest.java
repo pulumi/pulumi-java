@@ -28,10 +28,10 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends com
      * 
      */
     @Import(name="assets")
-      private final @Nullable List<ImageAssetResponse> assets;
+    private @Nullable List<ImageAssetResponse> assets;
 
-    public List<ImageAssetResponse> assets() {
-        return this.assets == null ? List.of() : this.assets;
+    public Optional<List<ImageAssetResponse>> assets() {
+        return Optional.ofNullable(this.assets);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends com
      * 
      */
     @Import(name="driverProgram")
-      private final @Nullable String driverProgram;
+    private @Nullable String driverProgram;
 
     public Optional<String> driverProgram() {
-        return this.driverProgram == null ? Optional.empty() : Optional.ofNullable(this.driverProgram);
+        return Optional.ofNullable(this.driverProgram);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends com
      * 
      */
     @Import(name="environment")
-      private final @Nullable EnvironmentImageResponseResponseEnvironment environment;
+    private @Nullable EnvironmentImageResponseResponseEnvironment environment;
 
     public Optional<EnvironmentImageResponseResponseEnvironment> environment() {
-        return this.environment == null ? Optional.empty() : Optional.ofNullable(this.environment);
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends com
      * 
      */
     @Import(name="environmentReference")
-      private final @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
+    private @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
 
     public Optional<EnvironmentImageResponseResponseEnvironmentReference> environmentReference() {
-        return this.environmentReference == null ? Optional.empty() : Optional.ofNullable(this.environmentReference);
+        return Optional.ofNullable(this.environmentReference);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends com
      * 
      */
     @Import(name="modelIds")
-      private final @Nullable List<String> modelIds;
+    private @Nullable List<String> modelIds;
 
-    public List<String> modelIds() {
-        return this.modelIds == null ? List.of() : this.modelIds;
+    public Optional<List<String>> modelIds() {
+        return Optional.ofNullable(this.modelIds);
     }
 
     /**
@@ -83,100 +83,86 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends com
      * 
      */
     @Import(name="models")
-      private final @Nullable List<ModelResponse> models;
+    private @Nullable List<ModelResponse> models;
 
-    public List<ModelResponse> models() {
-        return this.models == null ? List.of() : this.models;
+    public Optional<List<ModelResponse>> models() {
+        return Optional.ofNullable(this.models);
     }
 
-    public ACIServiceResponseResponseEnvironmentImageRequest(
-        @Nullable List<ImageAssetResponse> assets,
-        @Nullable String driverProgram,
-        @Nullable EnvironmentImageResponseResponseEnvironment environment,
-        @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference,
-        @Nullable List<String> modelIds,
-        @Nullable List<ModelResponse> models) {
-        this.assets = assets;
-        this.driverProgram = driverProgram;
-        this.environment = environment;
-        this.environmentReference = environmentReference;
-        this.modelIds = modelIds;
-        this.models = models;
-    }
+    private ACIServiceResponseResponseEnvironmentImageRequest() {}
 
-    private ACIServiceResponseResponseEnvironmentImageRequest() {
-        this.assets = List.of();
-        this.driverProgram = null;
-        this.environment = null;
-        this.environmentReference = null;
-        this.modelIds = List.of();
-        this.models = List.of();
+    private ACIServiceResponseResponseEnvironmentImageRequest(ACIServiceResponseResponseEnvironmentImageRequest $) {
+        this.assets = $.assets;
+        this.driverProgram = $.driverProgram;
+        this.environment = $.environment;
+        this.environmentReference = $.environmentReference;
+        this.modelIds = $.modelIds;
+        this.models = $.models;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ACIServiceResponseResponseEnvironmentImageRequest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ImageAssetResponse> assets;
-        private @Nullable String driverProgram;
-        private @Nullable EnvironmentImageResponseResponseEnvironment environment;
-        private @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
-        private @Nullable List<String> modelIds;
-        private @Nullable List<ModelResponse> models;
+        private ACIServiceResponseResponseEnvironmentImageRequest $;
 
         public Builder() {
-    	      // Empty
+            $ = new ACIServiceResponseResponseEnvironmentImageRequest();
         }
 
         public Builder(ACIServiceResponseResponseEnvironmentImageRequest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assets = defaults.assets;
-    	      this.driverProgram = defaults.driverProgram;
-    	      this.environment = defaults.environment;
-    	      this.environmentReference = defaults.environmentReference;
-    	      this.modelIds = defaults.modelIds;
-    	      this.models = defaults.models;
+            $ = new ACIServiceResponseResponseEnvironmentImageRequest(Objects.requireNonNull(defaults));
         }
 
         public Builder assets(@Nullable List<ImageAssetResponse> assets) {
-            this.assets = assets;
+            $.assets = assets;
             return this;
         }
+
         public Builder assets(ImageAssetResponse... assets) {
             return assets(List.of(assets));
         }
+
         public Builder driverProgram(@Nullable String driverProgram) {
-            this.driverProgram = driverProgram;
+            $.driverProgram = driverProgram;
             return this;
         }
+
         public Builder environment(@Nullable EnvironmentImageResponseResponseEnvironment environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
+
         public Builder environmentReference(@Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference) {
-            this.environmentReference = environmentReference;
+            $.environmentReference = environmentReference;
             return this;
         }
+
         public Builder modelIds(@Nullable List<String> modelIds) {
-            this.modelIds = modelIds;
+            $.modelIds = modelIds;
             return this;
         }
+
         public Builder modelIds(String... modelIds) {
             return modelIds(List.of(modelIds));
         }
+
         public Builder models(@Nullable List<ModelResponse> models) {
-            this.models = models;
+            $.models = models;
             return this;
         }
+
         public Builder models(ModelResponse... models) {
             return models(List.of(models));
-        }        public ACIServiceResponseResponseEnvironmentImageRequest build() {
-            return new ACIServiceResponseResponseEnvironmentImageRequest(assets, driverProgram, environment, environmentReference, modelIds, models);
+        }
+
+        public ACIServiceResponseResponseEnvironmentImageRequest build() {
+            return $;
         }
     }
+
 }

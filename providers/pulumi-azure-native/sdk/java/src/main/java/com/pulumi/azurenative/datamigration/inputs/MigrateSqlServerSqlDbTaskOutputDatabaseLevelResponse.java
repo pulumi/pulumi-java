@@ -27,7 +27,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -38,7 +38,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -49,7 +49,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="errorCount", required=true)
-      private final Double errorCount;
+    private Double errorCount;
 
     public Double errorCount() {
         return this.errorCount;
@@ -60,7 +60,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="errorPrefix", required=true)
-      private final String errorPrefix;
+    private String errorPrefix;
 
     public String errorPrefix() {
         return this.errorPrefix;
@@ -71,7 +71,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
-      private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+    private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -82,7 +82,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -93,7 +93,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -104,7 +104,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="numberOfObjects", required=true)
-      private final Double numberOfObjects;
+    private Double numberOfObjects;
 
     public Double numberOfObjects() {
         return this.numberOfObjects;
@@ -115,7 +115,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="numberOfObjectsCompleted", required=true)
-      private final Double numberOfObjectsCompleted;
+    private Double numberOfObjectsCompleted;
 
     public Double numberOfObjectsCompleted() {
         return this.numberOfObjectsCompleted;
@@ -126,7 +126,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="objectSummary", required=true)
-      private final Map<String,DataItemMigrationSummaryResultResponse> objectSummary;
+    private Map<String,DataItemMigrationSummaryResultResponse> objectSummary;
 
     public Map<String,DataItemMigrationSummaryResultResponse> objectSummary() {
         return this.objectSummary;
@@ -137,7 +137,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="resultPrefix", required=true)
-      private final String resultPrefix;
+    private String resultPrefix;
 
     public String resultPrefix() {
         return this.resultPrefix;
@@ -149,7 +149,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -160,7 +160,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="stage", required=true)
-      private final String stage;
+    private String stage;
 
     public String stage() {
         return this.stage;
@@ -171,7 +171,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -182,7 +182,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -193,184 +193,154 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="statusMessage", required=true)
-      private final String statusMessage;
+    private String statusMessage;
 
     public String statusMessage() {
         return this.statusMessage;
     }
 
-    public MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse(
-        String databaseName,
-        String endedOn,
-        Double errorCount,
-        String errorPrefix,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String message,
-        Double numberOfObjects,
-        Double numberOfObjectsCompleted,
-        Map<String,DataItemMigrationSummaryResultResponse> objectSummary,
-        String resultPrefix,
-        String resultType,
-        String stage,
-        String startedOn,
-        String state,
-        String statusMessage) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.errorCount = Objects.requireNonNull(errorCount, "expected parameter 'errorCount' to be non-null");
-        this.errorPrefix = Objects.requireNonNull(errorPrefix, "expected parameter 'errorPrefix' to be non-null");
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.numberOfObjects = Objects.requireNonNull(numberOfObjects, "expected parameter 'numberOfObjects' to be non-null");
-        this.numberOfObjectsCompleted = Objects.requireNonNull(numberOfObjectsCompleted, "expected parameter 'numberOfObjectsCompleted' to be non-null");
-        this.objectSummary = Objects.requireNonNull(objectSummary, "expected parameter 'objectSummary' to be non-null");
-        this.resultPrefix = Objects.requireNonNull(resultPrefix, "expected parameter 'resultPrefix' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.stage = Objects.requireNonNull(stage, "expected parameter 'stage' to be non-null");
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.statusMessage = Objects.requireNonNull(statusMessage, "expected parameter 'statusMessage' to be non-null");
-    }
+    private MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse() {}
 
-    private MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse() {
-        this.databaseName = null;
-        this.endedOn = null;
-        this.errorCount = null;
-        this.errorPrefix = null;
-        this.exceptionsAndWarnings = List.of();
-        this.id = null;
-        this.message = null;
-        this.numberOfObjects = null;
-        this.numberOfObjectsCompleted = null;
-        this.objectSummary = Map.of();
-        this.resultPrefix = null;
-        this.resultType = null;
-        this.stage = null;
-        this.startedOn = null;
-        this.state = null;
-        this.statusMessage = null;
+    private MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse(MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse $) {
+        this.databaseName = $.databaseName;
+        this.endedOn = $.endedOn;
+        this.errorCount = $.errorCount;
+        this.errorPrefix = $.errorPrefix;
+        this.exceptionsAndWarnings = $.exceptionsAndWarnings;
+        this.id = $.id;
+        this.message = $.message;
+        this.numberOfObjects = $.numberOfObjects;
+        this.numberOfObjectsCompleted = $.numberOfObjectsCompleted;
+        this.objectSummary = $.objectSummary;
+        this.resultPrefix = $.resultPrefix;
+        this.resultType = $.resultType;
+        this.stage = $.stage;
+        this.startedOn = $.startedOn;
+        this.state = $.state;
+        this.statusMessage = $.statusMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String endedOn;
-        private Double errorCount;
-        private String errorPrefix;
-        private List<ReportableExceptionResponse> exceptionsAndWarnings;
-        private String id;
-        private String message;
-        private Double numberOfObjects;
-        private Double numberOfObjectsCompleted;
-        private Map<String,DataItemMigrationSummaryResultResponse> objectSummary;
-        private String resultPrefix;
-        private String resultType;
-        private String stage;
-        private String startedOn;
-        private String state;
-        private String statusMessage;
+        private MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse();
         }
 
         public Builder(MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.endedOn = defaults.endedOn;
-    	      this.errorCount = defaults.errorCount;
-    	      this.errorPrefix = defaults.errorPrefix;
-    	      this.exceptionsAndWarnings = defaults.exceptionsAndWarnings;
-    	      this.id = defaults.id;
-    	      this.message = defaults.message;
-    	      this.numberOfObjects = defaults.numberOfObjects;
-    	      this.numberOfObjectsCompleted = defaults.numberOfObjectsCompleted;
-    	      this.objectSummary = defaults.objectSummary;
-    	      this.resultPrefix = defaults.resultPrefix;
-    	      this.resultType = defaults.resultType;
-    	      this.stage = defaults.stage;
-    	      this.startedOn = defaults.startedOn;
-    	      this.state = defaults.state;
-    	      this.statusMessage = defaults.statusMessage;
+            $ = new MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder errorCount(Double errorCount) {
-            this.errorCount = Objects.requireNonNull(errorCount);
+            $.errorCount = errorCount;
             return this;
         }
+
         public Builder errorPrefix(String errorPrefix) {
-            this.errorPrefix = Objects.requireNonNull(errorPrefix);
+            $.errorPrefix = errorPrefix;
             return this;
         }
+
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
-            this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
+            $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
+
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder numberOfObjects(Double numberOfObjects) {
-            this.numberOfObjects = Objects.requireNonNull(numberOfObjects);
+            $.numberOfObjects = numberOfObjects;
             return this;
         }
+
         public Builder numberOfObjectsCompleted(Double numberOfObjectsCompleted) {
-            this.numberOfObjectsCompleted = Objects.requireNonNull(numberOfObjectsCompleted);
+            $.numberOfObjectsCompleted = numberOfObjectsCompleted;
             return this;
         }
+
         public Builder objectSummary(Map<String,DataItemMigrationSummaryResultResponse> objectSummary) {
-            this.objectSummary = Objects.requireNonNull(objectSummary);
+            $.objectSummary = objectSummary;
             return this;
         }
+
         public Builder resultPrefix(String resultPrefix) {
-            this.resultPrefix = Objects.requireNonNull(resultPrefix);
+            $.resultPrefix = resultPrefix;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder stage(String stage) {
-            this.stage = Objects.requireNonNull(stage);
+            $.stage = stage;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder statusMessage(String statusMessage) {
-            this.statusMessage = Objects.requireNonNull(statusMessage);
+            $.statusMessage = statusMessage;
             return this;
-        }        public MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse build() {
-            return new MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse(databaseName, endedOn, errorCount, errorPrefix, exceptionsAndWarnings, id, message, numberOfObjects, numberOfObjectsCompleted, objectSummary, resultPrefix, resultType, stage, startedOn, state, statusMessage);
+        }
+
+        public MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.errorCount = Objects.requireNonNull($.errorCount, "expected parameter 'errorCount' to be non-null");
+            $.errorPrefix = Objects.requireNonNull($.errorPrefix, "expected parameter 'errorPrefix' to be non-null");
+            $.exceptionsAndWarnings = Objects.requireNonNull($.exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.numberOfObjects = Objects.requireNonNull($.numberOfObjects, "expected parameter 'numberOfObjects' to be non-null");
+            $.numberOfObjectsCompleted = Objects.requireNonNull($.numberOfObjectsCompleted, "expected parameter 'numberOfObjectsCompleted' to be non-null");
+            $.objectSummary = Objects.requireNonNull($.objectSummary, "expected parameter 'objectSummary' to be non-null");
+            $.resultPrefix = Objects.requireNonNull($.resultPrefix, "expected parameter 'resultPrefix' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.stage = Objects.requireNonNull($.stage, "expected parameter 'stage' to be non-null");
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.statusMessage = Objects.requireNonNull($.statusMessage, "expected parameter 'statusMessage' to be non-null");
+            return $;
         }
     }
+
 }

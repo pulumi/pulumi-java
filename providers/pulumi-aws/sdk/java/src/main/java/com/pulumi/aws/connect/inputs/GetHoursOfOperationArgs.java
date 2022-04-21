@@ -20,10 +20,10 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hoursOfOperationId")
-      private final @Nullable String hoursOfOperationId;
+    private @Nullable String hoursOfOperationId;
 
     public Optional<String> hoursOfOperationId() {
-        return this.hoursOfOperationId == null ? Optional.empty() : Optional.ofNullable(this.hoursOfOperationId);
+        return Optional.ofNullable(this.hoursOfOperationId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -42,10 +42,10 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,73 +53,63 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetHoursOfOperationArgs(
-        @Nullable String hoursOfOperationId,
-        String instanceId,
-        @Nullable String name,
-        @Nullable Map<String,String> tags) {
-        this.hoursOfOperationId = hoursOfOperationId;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.name = name;
-        this.tags = tags;
-    }
+    private GetHoursOfOperationArgs() {}
 
-    private GetHoursOfOperationArgs() {
-        this.hoursOfOperationId = null;
-        this.instanceId = null;
-        this.name = null;
-        this.tags = Map.of();
+    private GetHoursOfOperationArgs(GetHoursOfOperationArgs $) {
+        this.hoursOfOperationId = $.hoursOfOperationId;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHoursOfOperationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String hoursOfOperationId;
-        private String instanceId;
-        private @Nullable String name;
-        private @Nullable Map<String,String> tags;
+        private GetHoursOfOperationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHoursOfOperationArgs();
         }
 
         public Builder(GetHoursOfOperationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hoursOfOperationId = defaults.hoursOfOperationId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetHoursOfOperationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hoursOfOperationId(@Nullable String hoursOfOperationId) {
-            this.hoursOfOperationId = hoursOfOperationId;
+            $.hoursOfOperationId = hoursOfOperationId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetHoursOfOperationArgs build() {
-            return new GetHoursOfOperationArgs(hoursOfOperationId, instanceId, name, tags);
+        }
+
+        public GetHoursOfOperationArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

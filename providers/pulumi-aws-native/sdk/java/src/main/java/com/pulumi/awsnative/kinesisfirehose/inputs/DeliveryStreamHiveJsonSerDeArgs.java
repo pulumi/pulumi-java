@@ -5,10 +5,10 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class DeliveryStreamHiveJsonSerDeArgs extends com.pulumi.resources.
     public static final DeliveryStreamHiveJsonSerDeArgs Empty = new DeliveryStreamHiveJsonSerDeArgs();
 
     @Import(name="timestampFormats")
-      private final @Nullable Output<List<String>> timestampFormats;
+    private @Nullable Output<List<String>> timestampFormats;
 
-    public Output<List<String>> timestampFormats() {
-        return this.timestampFormats == null ? Codegen.empty() : this.timestampFormats;
+    public Optional<Output<List<String>>> timestampFormats() {
+        return Optional.ofNullable(this.timestampFormats);
     }
 
-    public DeliveryStreamHiveJsonSerDeArgs(@Nullable Output<List<String>> timestampFormats) {
-        this.timestampFormats = timestampFormats;
-    }
+    private DeliveryStreamHiveJsonSerDeArgs() {}
 
-    private DeliveryStreamHiveJsonSerDeArgs() {
-        this.timestampFormats = Codegen.empty();
+    private DeliveryStreamHiveJsonSerDeArgs(DeliveryStreamHiveJsonSerDeArgs $) {
+        this.timestampFormats = $.timestampFormats;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamHiveJsonSerDeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> timestampFormats;
+        private DeliveryStreamHiveJsonSerDeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamHiveJsonSerDeArgs();
         }
 
         public Builder(DeliveryStreamHiveJsonSerDeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timestampFormats = defaults.timestampFormats;
+            $ = new DeliveryStreamHiveJsonSerDeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder timestampFormats(@Nullable Output<List<String>> timestampFormats) {
-            this.timestampFormats = timestampFormats;
+            $.timestampFormats = timestampFormats;
             return this;
         }
-        public Builder timestampFormats(@Nullable List<String> timestampFormats) {
-            this.timestampFormats = Codegen.ofNullable(timestampFormats);
-            return this;
+
+        public Builder timestampFormats(List<String> timestampFormats) {
+            return timestampFormats(Output.of(timestampFormats));
         }
+
         public Builder timestampFormats(String... timestampFormats) {
             return timestampFormats(List.of(timestampFormats));
-        }        public DeliveryStreamHiveJsonSerDeArgs build() {
-            return new DeliveryStreamHiveJsonSerDeArgs(timestampFormats);
+        }
+
+        public DeliveryStreamHiveJsonSerDeArgs build() {
+            return $;
         }
     }
+
 }

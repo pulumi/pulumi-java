@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v2beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1FulfillmentArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable Output<String> agentVersion;
+    private @Nullable Output<String> agentVersion;
 
-    public Output<String> agentVersion() {
-        return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
+    public Optional<Output<String>> agentVersion() {
+        return Optional.ofNullable(this.agentVersion);
     }
 
     /**
@@ -33,14 +33,14 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -51,24 +51,24 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fulfillment")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment;
 
-    public Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment() {
-        return this.fulfillment == null ? Codegen.empty() : this.fulfillment;
+    public Optional<Output<GoogleCloudDialogflowV2beta1FulfillmentArgs>> fulfillment() {
+        return Optional.ofNullable(this.fulfillment);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -76,128 +76,109 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="textToSpeechSettings")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings;
 
-    public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings() {
-        return this.textToSpeechSettings == null ? Codegen.empty() : this.textToSpeechSettings;
+    public Optional<Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs>> textToSpeechSettings() {
+        return Optional.ofNullable(this.textToSpeechSettings);
     }
 
-    public EnvironmentArgs(
-        @Nullable Output<String> agentVersion,
-        @Nullable Output<String> description,
-        Output<String> environmentId,
-        @Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings) {
-        this.agentVersion = agentVersion;
-        this.description = description;
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.fulfillment = fulfillment;
-        this.location = location;
-        this.project = project;
-        this.textToSpeechSettings = textToSpeechSettings;
-    }
+    private EnvironmentArgs() {}
 
-    private EnvironmentArgs() {
-        this.agentVersion = Codegen.empty();
-        this.description = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.fulfillment = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.textToSpeechSettings = Codegen.empty();
+    private EnvironmentArgs(EnvironmentArgs $) {
+        this.agentVersion = $.agentVersion;
+        this.description = $.description;
+        this.environmentId = $.environmentId;
+        this.fulfillment = $.fulfillment;
+        this.location = $.location;
+        this.project = $.project;
+        this.textToSpeechSettings = $.textToSpeechSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> agentVersion;
-        private @Nullable Output<String> description;
-        private Output<String> environmentId;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings;
+        private EnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentArgs();
         }
 
         public Builder(EnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.description = defaults.description;
-    	      this.environmentId = defaults.environmentId;
-    	      this.fulfillment = defaults.fulfillment;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.textToSpeechSettings = defaults.textToSpeechSettings;
+            $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentVersion(@Nullable Output<String> agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
-        public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Codegen.ofNullable(agentVersion);
-            return this;
+
+        public Builder agentVersion(String agentVersion) {
+            return agentVersion(Output.of(agentVersion));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder fulfillment(@Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment) {
-            this.fulfillment = fulfillment;
+            $.fulfillment = fulfillment;
             return this;
         }
-        public Builder fulfillment(@Nullable GoogleCloudDialogflowV2beta1FulfillmentArgs fulfillment) {
-            this.fulfillment = Codegen.ofNullable(fulfillment);
-            return this;
+
+        public Builder fulfillment(GoogleCloudDialogflowV2beta1FulfillmentArgs fulfillment) {
+            return fulfillment(Output.of(fulfillment));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder textToSpeechSettings(@Nullable Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings) {
-            this.textToSpeechSettings = textToSpeechSettings;
+            $.textToSpeechSettings = textToSpeechSettings;
             return this;
         }
-        public Builder textToSpeechSettings(@Nullable GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs textToSpeechSettings) {
-            this.textToSpeechSettings = Codegen.ofNullable(textToSpeechSettings);
-            return this;
-        }        public EnvironmentArgs build() {
-            return new EnvironmentArgs(agentVersion, description, environmentId, fulfillment, location, project, textToSpeechSettings);
+
+        public Builder textToSpeechSettings(GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs textToSpeechSettings) {
+            return textToSpeechSettings(Output.of(textToSpeechSettings));
+        }
+
+        public EnvironmentArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            return $;
         }
     }
+
 }

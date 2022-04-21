@@ -13,110 +13,101 @@ public final class GetClusterClusterCertificates extends com.pulumi.resources.In
     public static final GetClusterClusterCertificates Empty = new GetClusterClusterCertificates();
 
     @Import(name="awsHardwareCertificate", required=true)
-      private final String awsHardwareCertificate;
+    private String awsHardwareCertificate;
 
     public String awsHardwareCertificate() {
         return this.awsHardwareCertificate;
     }
 
     @Import(name="clusterCertificate", required=true)
-      private final String clusterCertificate;
+    private String clusterCertificate;
 
     public String clusterCertificate() {
         return this.clusterCertificate;
     }
 
     @Import(name="clusterCsr", required=true)
-      private final String clusterCsr;
+    private String clusterCsr;
 
     public String clusterCsr() {
         return this.clusterCsr;
     }
 
     @Import(name="hsmCertificate", required=true)
-      private final String hsmCertificate;
+    private String hsmCertificate;
 
     public String hsmCertificate() {
         return this.hsmCertificate;
     }
 
     @Import(name="manufacturerHardwareCertificate", required=true)
-      private final String manufacturerHardwareCertificate;
+    private String manufacturerHardwareCertificate;
 
     public String manufacturerHardwareCertificate() {
         return this.manufacturerHardwareCertificate;
     }
 
-    public GetClusterClusterCertificates(
-        String awsHardwareCertificate,
-        String clusterCertificate,
-        String clusterCsr,
-        String hsmCertificate,
-        String manufacturerHardwareCertificate) {
-        this.awsHardwareCertificate = Objects.requireNonNull(awsHardwareCertificate, "expected parameter 'awsHardwareCertificate' to be non-null");
-        this.clusterCertificate = Objects.requireNonNull(clusterCertificate, "expected parameter 'clusterCertificate' to be non-null");
-        this.clusterCsr = Objects.requireNonNull(clusterCsr, "expected parameter 'clusterCsr' to be non-null");
-        this.hsmCertificate = Objects.requireNonNull(hsmCertificate, "expected parameter 'hsmCertificate' to be non-null");
-        this.manufacturerHardwareCertificate = Objects.requireNonNull(manufacturerHardwareCertificate, "expected parameter 'manufacturerHardwareCertificate' to be non-null");
-    }
+    private GetClusterClusterCertificates() {}
 
-    private GetClusterClusterCertificates() {
-        this.awsHardwareCertificate = null;
-        this.clusterCertificate = null;
-        this.clusterCsr = null;
-        this.hsmCertificate = null;
-        this.manufacturerHardwareCertificate = null;
+    private GetClusterClusterCertificates(GetClusterClusterCertificates $) {
+        this.awsHardwareCertificate = $.awsHardwareCertificate;
+        this.clusterCertificate = $.clusterCertificate;
+        this.clusterCsr = $.clusterCsr;
+        this.hsmCertificate = $.hsmCertificate;
+        this.manufacturerHardwareCertificate = $.manufacturerHardwareCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterClusterCertificates defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String awsHardwareCertificate;
-        private String clusterCertificate;
-        private String clusterCsr;
-        private String hsmCertificate;
-        private String manufacturerHardwareCertificate;
+        private GetClusterClusterCertificates $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterClusterCertificates();
         }
 
         public Builder(GetClusterClusterCertificates defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsHardwareCertificate = defaults.awsHardwareCertificate;
-    	      this.clusterCertificate = defaults.clusterCertificate;
-    	      this.clusterCsr = defaults.clusterCsr;
-    	      this.hsmCertificate = defaults.hsmCertificate;
-    	      this.manufacturerHardwareCertificate = defaults.manufacturerHardwareCertificate;
+            $ = new GetClusterClusterCertificates(Objects.requireNonNull(defaults));
         }
 
         public Builder awsHardwareCertificate(String awsHardwareCertificate) {
-            this.awsHardwareCertificate = Objects.requireNonNull(awsHardwareCertificate);
+            $.awsHardwareCertificate = awsHardwareCertificate;
             return this;
         }
+
         public Builder clusterCertificate(String clusterCertificate) {
-            this.clusterCertificate = Objects.requireNonNull(clusterCertificate);
+            $.clusterCertificate = clusterCertificate;
             return this;
         }
+
         public Builder clusterCsr(String clusterCsr) {
-            this.clusterCsr = Objects.requireNonNull(clusterCsr);
+            $.clusterCsr = clusterCsr;
             return this;
         }
+
         public Builder hsmCertificate(String hsmCertificate) {
-            this.hsmCertificate = Objects.requireNonNull(hsmCertificate);
+            $.hsmCertificate = hsmCertificate;
             return this;
         }
+
         public Builder manufacturerHardwareCertificate(String manufacturerHardwareCertificate) {
-            this.manufacturerHardwareCertificate = Objects.requireNonNull(manufacturerHardwareCertificate);
+            $.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
             return this;
-        }        public GetClusterClusterCertificates build() {
-            return new GetClusterClusterCertificates(awsHardwareCertificate, clusterCertificate, clusterCsr, hsmCertificate, manufacturerHardwareCertificate);
+        }
+
+        public GetClusterClusterCertificates build() {
+            $.awsHardwareCertificate = Objects.requireNonNull($.awsHardwareCertificate, "expected parameter 'awsHardwareCertificate' to be non-null");
+            $.clusterCertificate = Objects.requireNonNull($.clusterCertificate, "expected parameter 'clusterCertificate' to be non-null");
+            $.clusterCsr = Objects.requireNonNull($.clusterCsr, "expected parameter 'clusterCsr' to be non-null");
+            $.hsmCertificate = Objects.requireNonNull($.hsmCertificate, "expected parameter 'hsmCertificate' to be non-null");
+            $.manufacturerHardwareCertificate = Objects.requireNonNull($.manufacturerHardwareCertificate, "expected parameter 'manufacturerHardwareCertificate' to be non-null");
+            return $;
         }
     }
+
 }

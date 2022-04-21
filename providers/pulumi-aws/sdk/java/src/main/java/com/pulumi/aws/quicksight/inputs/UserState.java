@@ -5,9 +5,9 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsAccountId")
-      private final @Nullable Output<String> awsAccountId;
+    private @Nullable Output<String> awsAccountId;
 
-    public Output<String> awsAccountId() {
-        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
+    public Optional<Output<String>> awsAccountId() {
+        return Optional.ofNullable(this.awsAccountId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamArn")
-      private final @Nullable Output<String> iamArn;
+    private @Nullable Output<String> iamArn;
 
-    public Output<String> iamArn() {
-        return this.iamArn == null ? Codegen.empty() : this.iamArn;
+    public Optional<Output<String>> iamArn() {
+        return Optional.ofNullable(this.iamArn);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identityType")
-      private final @Nullable Output<String> identityType;
+    private @Nullable Output<String> identityType;
 
-    public Output<String> identityType() {
-        return this.identityType == null ? Codegen.empty() : this.identityType;
+    public Optional<Output<String>> identityType() {
+        return Optional.ofNullable(this.identityType);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sessionName")
-      private final @Nullable Output<String> sessionName;
+    private @Nullable Output<String> sessionName;
 
-    public Output<String> sessionName() {
-        return this.sessionName == null ? Codegen.empty() : this.sessionName;
+    public Optional<Output<String>> sessionName() {
+        return Optional.ofNullable(this.sessionName);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
     /**
@@ -108,154 +108,128 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userRole")
-      private final @Nullable Output<String> userRole;
+    private @Nullable Output<String> userRole;
 
-    public Output<String> userRole() {
-        return this.userRole == null ? Codegen.empty() : this.userRole;
+    public Optional<Output<String>> userRole() {
+        return Optional.ofNullable(this.userRole);
     }
 
-    public UserState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> awsAccountId,
-        @Nullable Output<String> email,
-        @Nullable Output<String> iamArn,
-        @Nullable Output<String> identityType,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> sessionName,
-        @Nullable Output<String> userName,
-        @Nullable Output<String> userRole) {
-        this.arn = arn;
-        this.awsAccountId = awsAccountId;
-        this.email = email;
-        this.iamArn = iamArn;
-        this.identityType = identityType;
-        this.namespace = namespace;
-        this.sessionName = sessionName;
-        this.userName = userName;
-        this.userRole = userRole;
-    }
+    private UserState() {}
 
-    private UserState() {
-        this.arn = Codegen.empty();
-        this.awsAccountId = Codegen.empty();
-        this.email = Codegen.empty();
-        this.iamArn = Codegen.empty();
-        this.identityType = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.sessionName = Codegen.empty();
-        this.userName = Codegen.empty();
-        this.userRole = Codegen.empty();
+    private UserState(UserState $) {
+        this.arn = $.arn;
+        this.awsAccountId = $.awsAccountId;
+        this.email = $.email;
+        this.iamArn = $.iamArn;
+        this.identityType = $.identityType;
+        this.namespace = $.namespace;
+        this.sessionName = $.sessionName;
+        this.userName = $.userName;
+        this.userRole = $.userRole;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> awsAccountId;
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> iamArn;
-        private @Nullable Output<String> identityType;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> sessionName;
-        private @Nullable Output<String> userName;
-        private @Nullable Output<String> userRole;
+        private UserState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserState();
         }
 
         public Builder(UserState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.email = defaults.email;
-    	      this.iamArn = defaults.iamArn;
-    	      this.identityType = defaults.identityType;
-    	      this.namespace = defaults.namespace;
-    	      this.sessionName = defaults.sessionName;
-    	      this.userName = defaults.userName;
-    	      this.userRole = defaults.userRole;
+            $ = new UserState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
-            this.awsAccountId = awsAccountId;
+            $.awsAccountId = awsAccountId;
             return this;
         }
-        public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Codegen.ofNullable(awsAccountId);
-            return this;
+
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder iamArn(@Nullable Output<String> iamArn) {
-            this.iamArn = iamArn;
+            $.iamArn = iamArn;
             return this;
         }
-        public Builder iamArn(@Nullable String iamArn) {
-            this.iamArn = Codegen.ofNullable(iamArn);
-            return this;
+
+        public Builder iamArn(String iamArn) {
+            return iamArn(Output.of(iamArn));
         }
+
         public Builder identityType(@Nullable Output<String> identityType) {
-            this.identityType = identityType;
+            $.identityType = identityType;
             return this;
         }
-        public Builder identityType(@Nullable String identityType) {
-            this.identityType = Codegen.ofNullable(identityType);
-            return this;
+
+        public Builder identityType(String identityType) {
+            return identityType(Output.of(identityType));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder sessionName(@Nullable Output<String> sessionName) {
-            this.sessionName = sessionName;
+            $.sessionName = sessionName;
             return this;
         }
-        public Builder sessionName(@Nullable String sessionName) {
-            this.sessionName = Codegen.ofNullable(sessionName);
-            return this;
+
+        public Builder sessionName(String sessionName) {
+            return sessionName(Output.of(sessionName));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
         }
+
         public Builder userRole(@Nullable Output<String> userRole) {
-            this.userRole = userRole;
+            $.userRole = userRole;
             return this;
         }
-        public Builder userRole(@Nullable String userRole) {
-            this.userRole = Codegen.ofNullable(userRole);
-            return this;
-        }        public UserState build() {
-            return new UserState(arn, awsAccountId, email, iamArn, identityType, namespace, sessionName, userName, userRole);
+
+        public Builder userRole(String userRole) {
+            return userRole(Output.of(userRole));
+        }
+
+        public UserState build() {
+            return $;
         }
     }
+
 }

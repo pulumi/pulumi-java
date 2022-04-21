@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.BuildSignatureKeyType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BuildSignatureArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BuildSignatureArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Output<BuildSignatureKeyType> keyType;
+    private @Nullable Output<BuildSignatureKeyType> keyType;
 
-    public Output<BuildSignatureKeyType> keyType() {
-        return this.keyType == null ? Codegen.empty() : this.keyType;
+    public Optional<Output<BuildSignatureKeyType>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BuildSignatureArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<String> publicKey;
+    private @Nullable Output<String> publicKey;
 
-    public Output<String> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<String>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class BuildSignatureArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="signature")
-      private final @Nullable Output<String> signature;
+    private @Nullable Output<String> signature;
 
-    public Output<String> signature() {
-        return this.signature == null ? Codegen.empty() : this.signature;
+    public Optional<Output<String>> signature() {
+        return Optional.ofNullable(this.signature);
     }
 
-    public BuildSignatureArgs(
-        @Nullable Output<String> keyId,
-        @Nullable Output<BuildSignatureKeyType> keyType,
-        @Nullable Output<String> publicKey,
-        @Nullable Output<String> signature) {
-        this.keyId = keyId;
-        this.keyType = keyType;
-        this.publicKey = publicKey;
-        this.signature = signature;
-    }
+    private BuildSignatureArgs() {}
 
-    private BuildSignatureArgs() {
-        this.keyId = Codegen.empty();
-        this.keyType = Codegen.empty();
-        this.publicKey = Codegen.empty();
-        this.signature = Codegen.empty();
+    private BuildSignatureArgs(BuildSignatureArgs $) {
+        this.keyId = $.keyId;
+        this.keyType = $.keyType;
+        this.publicKey = $.publicKey;
+        this.signature = $.signature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildSignatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyId;
-        private @Nullable Output<BuildSignatureKeyType> keyType;
-        private @Nullable Output<String> publicKey;
-        private @Nullable Output<String> signature;
+        private BuildSignatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildSignatureArgs();
         }
 
         public Builder(BuildSignatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.keyType = defaults.keyType;
-    	      this.publicKey = defaults.publicKey;
-    	      this.signature = defaults.signature;
+            $ = new BuildSignatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
+
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
+
         public Builder keyType(@Nullable Output<BuildSignatureKeyType> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
-        public Builder keyType(@Nullable BuildSignatureKeyType keyType) {
-            this.keyType = Codegen.ofNullable(keyType);
-            return this;
+
+        public Builder keyType(BuildSignatureKeyType keyType) {
+            return keyType(Output.of(keyType));
         }
+
         public Builder publicKey(@Nullable Output<String> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
+
+        public Builder publicKey(String publicKey) {
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder signature(@Nullable Output<String> signature) {
-            this.signature = signature;
+            $.signature = signature;
             return this;
         }
-        public Builder signature(@Nullable String signature) {
-            this.signature = Codegen.ofNullable(signature);
-            return this;
-        }        public BuildSignatureArgs build() {
-            return new BuildSignatureArgs(keyId, keyType, publicKey, signature);
+
+        public Builder signature(String signature) {
+            return signature(Output.of(signature));
+        }
+
+        public BuildSignatureArgs build() {
+            return $;
         }
     }
+
 }

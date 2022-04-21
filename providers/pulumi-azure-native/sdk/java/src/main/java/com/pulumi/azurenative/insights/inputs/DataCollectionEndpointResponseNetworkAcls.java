@@ -23,45 +23,44 @@ public final class DataCollectionEndpointResponseNetworkAcls extends com.pulumi.
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable String publicNetworkAccess;
+    private @Nullable String publicNetworkAccess;
 
     public Optional<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
-    public DataCollectionEndpointResponseNetworkAcls(@Nullable String publicNetworkAccess) {
-        this.publicNetworkAccess = publicNetworkAccess;
-    }
+    private DataCollectionEndpointResponseNetworkAcls() {}
 
-    private DataCollectionEndpointResponseNetworkAcls() {
-        this.publicNetworkAccess = null;
+    private DataCollectionEndpointResponseNetworkAcls(DataCollectionEndpointResponseNetworkAcls $) {
+        this.publicNetworkAccess = $.publicNetworkAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectionEndpointResponseNetworkAcls defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String publicNetworkAccess;
+        private DataCollectionEndpointResponseNetworkAcls $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectionEndpointResponseNetworkAcls();
         }
 
         public Builder(DataCollectionEndpointResponseNetworkAcls defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
+            $ = new DataCollectionEndpointResponseNetworkAcls(Objects.requireNonNull(defaults));
         }
 
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
-        }        public DataCollectionEndpointResponseNetworkAcls build() {
-            return new DataCollectionEndpointResponseNetworkAcls(publicNetworkAccess);
+        }
+
+        public DataCollectionEndpointResponseNetworkAcls build() {
+            return $;
         }
     }
+
 }

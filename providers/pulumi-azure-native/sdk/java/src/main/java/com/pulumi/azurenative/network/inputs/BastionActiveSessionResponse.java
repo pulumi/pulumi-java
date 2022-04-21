@@ -23,7 +23,7 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
@@ -34,7 +34,7 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -45,7 +45,7 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sessionDurationInMins", required=true)
-      private final Double sessionDurationInMins;
+    private Double sessionDurationInMins;
 
     public Double sessionDurationInMins() {
         return this.sessionDurationInMins;
@@ -56,7 +56,7 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sessionId", required=true)
-      private final String sessionId;
+    private String sessionId;
 
     public String sessionId() {
         return this.sessionId;
@@ -67,7 +67,7 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="startTime", required=true)
-      private final Object startTime;
+    private Object startTime;
 
     public Object startTime() {
         return this.startTime;
@@ -78,7 +78,7 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="targetHostName", required=true)
-      private final String targetHostName;
+    private String targetHostName;
 
     public String targetHostName() {
         return this.targetHostName;
@@ -89,7 +89,7 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="targetIpAddress", required=true)
-      private final String targetIpAddress;
+    private String targetIpAddress;
 
     public String targetIpAddress() {
         return this.targetIpAddress;
@@ -100,7 +100,7 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="targetResourceGroup", required=true)
-      private final String targetResourceGroup;
+    private String targetResourceGroup;
 
     public String targetResourceGroup() {
         return this.targetResourceGroup;
@@ -111,7 +111,7 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="targetResourceId", required=true)
-      private final String targetResourceId;
+    private String targetResourceId;
 
     public String targetResourceId() {
         return this.targetResourceId;
@@ -122,7 +122,7 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="targetSubscriptionId", required=true)
-      private final String targetSubscriptionId;
+    private String targetSubscriptionId;
 
     public String targetSubscriptionId() {
         return this.targetSubscriptionId;
@@ -133,136 +133,115 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public BastionActiveSessionResponse(
-        String protocol,
-        String resourceType,
-        Double sessionDurationInMins,
-        String sessionId,
-        Object startTime,
-        String targetHostName,
-        String targetIpAddress,
-        String targetResourceGroup,
-        String targetResourceId,
-        String targetSubscriptionId,
-        String userName) {
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.sessionDurationInMins = Objects.requireNonNull(sessionDurationInMins, "expected parameter 'sessionDurationInMins' to be non-null");
-        this.sessionId = Objects.requireNonNull(sessionId, "expected parameter 'sessionId' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.targetHostName = Objects.requireNonNull(targetHostName, "expected parameter 'targetHostName' to be non-null");
-        this.targetIpAddress = Objects.requireNonNull(targetIpAddress, "expected parameter 'targetIpAddress' to be non-null");
-        this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup, "expected parameter 'targetResourceGroup' to be non-null");
-        this.targetResourceId = Objects.requireNonNull(targetResourceId, "expected parameter 'targetResourceId' to be non-null");
-        this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId, "expected parameter 'targetSubscriptionId' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private BastionActiveSessionResponse() {}
 
-    private BastionActiveSessionResponse() {
-        this.protocol = null;
-        this.resourceType = null;
-        this.sessionDurationInMins = null;
-        this.sessionId = null;
-        this.startTime = null;
-        this.targetHostName = null;
-        this.targetIpAddress = null;
-        this.targetResourceGroup = null;
-        this.targetResourceId = null;
-        this.targetSubscriptionId = null;
-        this.userName = null;
+    private BastionActiveSessionResponse(BastionActiveSessionResponse $) {
+        this.protocol = $.protocol;
+        this.resourceType = $.resourceType;
+        this.sessionDurationInMins = $.sessionDurationInMins;
+        this.sessionId = $.sessionId;
+        this.startTime = $.startTime;
+        this.targetHostName = $.targetHostName;
+        this.targetIpAddress = $.targetIpAddress;
+        this.targetResourceGroup = $.targetResourceGroup;
+        this.targetResourceId = $.targetResourceId;
+        this.targetSubscriptionId = $.targetSubscriptionId;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BastionActiveSessionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String protocol;
-        private String resourceType;
-        private Double sessionDurationInMins;
-        private String sessionId;
-        private Object startTime;
-        private String targetHostName;
-        private String targetIpAddress;
-        private String targetResourceGroup;
-        private String targetResourceId;
-        private String targetSubscriptionId;
-        private String userName;
+        private BastionActiveSessionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BastionActiveSessionResponse();
         }
 
         public Builder(BastionActiveSessionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.protocol = defaults.protocol;
-    	      this.resourceType = defaults.resourceType;
-    	      this.sessionDurationInMins = defaults.sessionDurationInMins;
-    	      this.sessionId = defaults.sessionId;
-    	      this.startTime = defaults.startTime;
-    	      this.targetHostName = defaults.targetHostName;
-    	      this.targetIpAddress = defaults.targetIpAddress;
-    	      this.targetResourceGroup = defaults.targetResourceGroup;
-    	      this.targetResourceId = defaults.targetResourceId;
-    	      this.targetSubscriptionId = defaults.targetSubscriptionId;
-    	      this.userName = defaults.userName;
+            $ = new BastionActiveSessionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder sessionDurationInMins(Double sessionDurationInMins) {
-            this.sessionDurationInMins = Objects.requireNonNull(sessionDurationInMins);
+            $.sessionDurationInMins = sessionDurationInMins;
             return this;
         }
+
         public Builder sessionId(String sessionId) {
-            this.sessionId = Objects.requireNonNull(sessionId);
+            $.sessionId = sessionId;
             return this;
         }
+
         public Builder startTime(Object startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder targetHostName(String targetHostName) {
-            this.targetHostName = Objects.requireNonNull(targetHostName);
+            $.targetHostName = targetHostName;
             return this;
         }
+
         public Builder targetIpAddress(String targetIpAddress) {
-            this.targetIpAddress = Objects.requireNonNull(targetIpAddress);
+            $.targetIpAddress = targetIpAddress;
             return this;
         }
+
         public Builder targetResourceGroup(String targetResourceGroup) {
-            this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
+            $.targetResourceGroup = targetResourceGroup;
             return this;
         }
+
         public Builder targetResourceId(String targetResourceId) {
-            this.targetResourceId = Objects.requireNonNull(targetResourceId);
+            $.targetResourceId = targetResourceId;
             return this;
         }
+
         public Builder targetSubscriptionId(String targetSubscriptionId) {
-            this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
+            $.targetSubscriptionId = targetSubscriptionId;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public BastionActiveSessionResponse build() {
-            return new BastionActiveSessionResponse(protocol, resourceType, sessionDurationInMins, sessionId, startTime, targetHostName, targetIpAddress, targetResourceGroup, targetResourceId, targetSubscriptionId, userName);
+        }
+
+        public BastionActiveSessionResponse build() {
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.sessionDurationInMins = Objects.requireNonNull($.sessionDurationInMins, "expected parameter 'sessionDurationInMins' to be non-null");
+            $.sessionId = Objects.requireNonNull($.sessionId, "expected parameter 'sessionId' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.targetHostName = Objects.requireNonNull($.targetHostName, "expected parameter 'targetHostName' to be non-null");
+            $.targetIpAddress = Objects.requireNonNull($.targetIpAddress, "expected parameter 'targetIpAddress' to be non-null");
+            $.targetResourceGroup = Objects.requireNonNull($.targetResourceGroup, "expected parameter 'targetResourceGroup' to be non-null");
+            $.targetResourceId = Objects.requireNonNull($.targetResourceId, "expected parameter 'targetResourceId' to be non-null");
+            $.targetSubscriptionId = Objects.requireNonNull($.targetSubscriptionId, "expected parameter 'targetSubscriptionId' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends com
      * 
      */
     @Import(name="lastUpdateTime", required=true)
-      private final String lastUpdateTime;
+    private String lastUpdateTime;
 
     public String lastUpdateTime() {
         return this.lastUpdateTime;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends com
      * 
      */
     @Import(name="versionMetrics", required=true)
-      private final List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics;
+    private List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics;
 
     public List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics() {
         return this.versionMetrics;
     }
 
-    public GoogleCloudDialogflowCxV3ExperimentResultResponse(
-        String lastUpdateTime,
-        List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics) {
-        this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime, "expected parameter 'lastUpdateTime' to be non-null");
-        this.versionMetrics = Objects.requireNonNull(versionMetrics, "expected parameter 'versionMetrics' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3ExperimentResultResponse() {}
 
-    private GoogleCloudDialogflowCxV3ExperimentResultResponse() {
-        this.lastUpdateTime = null;
-        this.versionMetrics = List.of();
+    private GoogleCloudDialogflowCxV3ExperimentResultResponse(GoogleCloudDialogflowCxV3ExperimentResultResponse $) {
+        this.lastUpdateTime = $.lastUpdateTime;
+        this.versionMetrics = $.versionMetrics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3ExperimentResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastUpdateTime;
-        private List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics;
+        private GoogleCloudDialogflowCxV3ExperimentResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3ExperimentResultResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3ExperimentResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastUpdateTime = defaults.lastUpdateTime;
-    	      this.versionMetrics = defaults.versionMetrics;
+            $ = new GoogleCloudDialogflowCxV3ExperimentResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastUpdateTime(String lastUpdateTime) {
-            this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
+            $.lastUpdateTime = lastUpdateTime;
             return this;
         }
+
         public Builder versionMetrics(List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics) {
-            this.versionMetrics = Objects.requireNonNull(versionMetrics);
+            $.versionMetrics = versionMetrics;
             return this;
         }
+
         public Builder versionMetrics(GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse... versionMetrics) {
             return versionMetrics(List.of(versionMetrics));
-        }        public GoogleCloudDialogflowCxV3ExperimentResultResponse build() {
-            return new GoogleCloudDialogflowCxV3ExperimentResultResponse(lastUpdateTime, versionMetrics);
+        }
+
+        public GoogleCloudDialogflowCxV3ExperimentResultResponse build() {
+            $.lastUpdateTime = Objects.requireNonNull($.lastUpdateTime, "expected parameter 'lastUpdateTime' to be non-null");
+            $.versionMetrics = Objects.requireNonNull($.versionMetrics, "expected parameter 'versionMetrics' to be non-null");
+            return $;
         }
     }
+
 }

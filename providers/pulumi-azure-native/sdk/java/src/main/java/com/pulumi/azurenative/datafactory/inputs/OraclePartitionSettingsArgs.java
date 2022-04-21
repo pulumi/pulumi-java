@@ -5,10 +5,10 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OraclePartitionSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="partitionColumnName")
-      private final @Nullable Output<Object> partitionColumnName;
+    private @Nullable Output<Object> partitionColumnName;
 
-    public Output<Object> partitionColumnName() {
-        return this.partitionColumnName == null ? Codegen.empty() : this.partitionColumnName;
+    public Optional<Output<Object>> partitionColumnName() {
+        return Optional.ofNullable(this.partitionColumnName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OraclePartitionSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="partitionLowerBound")
-      private final @Nullable Output<Object> partitionLowerBound;
+    private @Nullable Output<Object> partitionLowerBound;
 
-    public Output<Object> partitionLowerBound() {
-        return this.partitionLowerBound == null ? Codegen.empty() : this.partitionLowerBound;
+    public Optional<Output<Object>> partitionLowerBound() {
+        return Optional.ofNullable(this.partitionLowerBound);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OraclePartitionSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="partitionNames")
-      private final @Nullable Output<List<Object>> partitionNames;
+    private @Nullable Output<List<Object>> partitionNames;
 
-    public Output<List<Object>> partitionNames() {
-        return this.partitionNames == null ? Codegen.empty() : this.partitionNames;
+    public Optional<Output<List<Object>>> partitionNames() {
+        return Optional.ofNullable(this.partitionNames);
     }
 
     /**
@@ -58,92 +58,82 @@ public final class OraclePartitionSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="partitionUpperBound")
-      private final @Nullable Output<Object> partitionUpperBound;
+    private @Nullable Output<Object> partitionUpperBound;
 
-    public Output<Object> partitionUpperBound() {
-        return this.partitionUpperBound == null ? Codegen.empty() : this.partitionUpperBound;
+    public Optional<Output<Object>> partitionUpperBound() {
+        return Optional.ofNullable(this.partitionUpperBound);
     }
 
-    public OraclePartitionSettingsArgs(
-        @Nullable Output<Object> partitionColumnName,
-        @Nullable Output<Object> partitionLowerBound,
-        @Nullable Output<List<Object>> partitionNames,
-        @Nullable Output<Object> partitionUpperBound) {
-        this.partitionColumnName = partitionColumnName;
-        this.partitionLowerBound = partitionLowerBound;
-        this.partitionNames = partitionNames;
-        this.partitionUpperBound = partitionUpperBound;
-    }
+    private OraclePartitionSettingsArgs() {}
 
-    private OraclePartitionSettingsArgs() {
-        this.partitionColumnName = Codegen.empty();
-        this.partitionLowerBound = Codegen.empty();
-        this.partitionNames = Codegen.empty();
-        this.partitionUpperBound = Codegen.empty();
+    private OraclePartitionSettingsArgs(OraclePartitionSettingsArgs $) {
+        this.partitionColumnName = $.partitionColumnName;
+        this.partitionLowerBound = $.partitionLowerBound;
+        this.partitionNames = $.partitionNames;
+        this.partitionUpperBound = $.partitionUpperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OraclePartitionSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> partitionColumnName;
-        private @Nullable Output<Object> partitionLowerBound;
-        private @Nullable Output<List<Object>> partitionNames;
-        private @Nullable Output<Object> partitionUpperBound;
+        private OraclePartitionSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OraclePartitionSettingsArgs();
         }
 
         public Builder(OraclePartitionSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionColumnName = defaults.partitionColumnName;
-    	      this.partitionLowerBound = defaults.partitionLowerBound;
-    	      this.partitionNames = defaults.partitionNames;
-    	      this.partitionUpperBound = defaults.partitionUpperBound;
+            $ = new OraclePartitionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionColumnName(@Nullable Output<Object> partitionColumnName) {
-            this.partitionColumnName = partitionColumnName;
+            $.partitionColumnName = partitionColumnName;
             return this;
         }
-        public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = Codegen.ofNullable(partitionColumnName);
-            return this;
+
+        public Builder partitionColumnName(Object partitionColumnName) {
+            return partitionColumnName(Output.of(partitionColumnName));
         }
+
         public Builder partitionLowerBound(@Nullable Output<Object> partitionLowerBound) {
-            this.partitionLowerBound = partitionLowerBound;
+            $.partitionLowerBound = partitionLowerBound;
             return this;
         }
-        public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
-            this.partitionLowerBound = Codegen.ofNullable(partitionLowerBound);
-            return this;
+
+        public Builder partitionLowerBound(Object partitionLowerBound) {
+            return partitionLowerBound(Output.of(partitionLowerBound));
         }
+
         public Builder partitionNames(@Nullable Output<List<Object>> partitionNames) {
-            this.partitionNames = partitionNames;
+            $.partitionNames = partitionNames;
             return this;
         }
-        public Builder partitionNames(@Nullable List<Object> partitionNames) {
-            this.partitionNames = Codegen.ofNullable(partitionNames);
-            return this;
+
+        public Builder partitionNames(List<Object> partitionNames) {
+            return partitionNames(Output.of(partitionNames));
         }
+
         public Builder partitionNames(Object... partitionNames) {
             return partitionNames(List.of(partitionNames));
         }
+
         public Builder partitionUpperBound(@Nullable Output<Object> partitionUpperBound) {
-            this.partitionUpperBound = partitionUpperBound;
+            $.partitionUpperBound = partitionUpperBound;
             return this;
         }
-        public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
-            this.partitionUpperBound = Codegen.ofNullable(partitionUpperBound);
-            return this;
-        }        public OraclePartitionSettingsArgs build() {
-            return new OraclePartitionSettingsArgs(partitionColumnName, partitionLowerBound, partitionNames, partitionUpperBound);
+
+        public Builder partitionUpperBound(Object partitionUpperBound) {
+            return partitionUpperBound(Output.of(partitionUpperBound));
+        }
+
+        public OraclePartitionSettingsArgs build() {
+            return $;
         }
     }
+
 }

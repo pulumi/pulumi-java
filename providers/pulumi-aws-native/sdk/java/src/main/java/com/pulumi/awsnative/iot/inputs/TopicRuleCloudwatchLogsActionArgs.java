@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class TopicRuleCloudwatchLogsActionArgs extends com.pulumi.resource
     public static final TopicRuleCloudwatchLogsActionArgs Empty = new TopicRuleCloudwatchLogsActionArgs();
 
     @Import(name="logGroupName", required=true)
-      private final Output<String> logGroupName;
+    private Output<String> logGroupName;
 
     public Output<String> logGroupName() {
         return this.logGroupName;
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleCloudwatchLogsActionArgs(
-        Output<String> logGroupName,
-        Output<String> roleArn) {
-        this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleCloudwatchLogsActionArgs() {}
 
-    private TopicRuleCloudwatchLogsActionArgs() {
-        this.logGroupName = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private TopicRuleCloudwatchLogsActionArgs(TopicRuleCloudwatchLogsActionArgs $) {
+        this.logGroupName = $.logGroupName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleCloudwatchLogsActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> logGroupName;
-        private Output<String> roleArn;
+        private TopicRuleCloudwatchLogsActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleCloudwatchLogsActionArgs();
         }
 
         public Builder(TopicRuleCloudwatchLogsActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleCloudwatchLogsActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(Output<String> logGroupName) {
-            this.logGroupName = Objects.requireNonNull(logGroupName);
+            $.logGroupName = logGroupName;
             return this;
         }
+
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
-            return this;
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public TopicRuleCloudwatchLogsActionArgs build() {
-            return new TopicRuleCloudwatchLogsActionArgs(logGroupName, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public TopicRuleCloudwatchLogsActionArgs build() {
+            $.logGroupName = Objects.requireNonNull($.logGroupName, "expected parameter 'logGroupName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

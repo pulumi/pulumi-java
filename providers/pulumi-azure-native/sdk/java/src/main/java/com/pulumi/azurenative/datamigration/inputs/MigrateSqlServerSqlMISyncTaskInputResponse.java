@@ -29,7 +29,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends com.pulumi
      * 
      */
     @Import(name="azureApp", required=true)
-      private final AzureActiveDirectoryAppResponse azureApp;
+    private AzureActiveDirectoryAppResponse azureApp;
 
     public AzureActiveDirectoryAppResponse azureApp() {
         return this.azureApp;
@@ -40,10 +40,10 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends com.pulumi
      * 
      */
     @Import(name="backupFileShare")
-      private final @Nullable FileShareResponse backupFileShare;
+    private @Nullable FileShareResponse backupFileShare;
 
     public Optional<FileShareResponse> backupFileShare() {
-        return this.backupFileShare == null ? Optional.empty() : Optional.ofNullable(this.backupFileShare);
+        return Optional.ofNullable(this.backupFileShare);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends com.pulumi
      * 
      */
     @Import(name="selectedDatabases", required=true)
-      private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
+    private List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
@@ -62,7 +62,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends com.pulumi
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final SqlConnectionInfoResponse sourceConnectionInfo;
+    private SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -73,7 +73,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends com.pulumi
      * 
      */
     @Import(name="storageResourceId", required=true)
-      private final String storageResourceId;
+    private String storageResourceId;
 
     public String storageResourceId() {
         return this.storageResourceId;
@@ -84,94 +84,83 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends com.pulumi
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final MiSqlConnectionInfoResponse targetConnectionInfo;
+    private MiSqlConnectionInfoResponse targetConnectionInfo;
 
     public MiSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public MigrateSqlServerSqlMISyncTaskInputResponse(
-        AzureActiveDirectoryAppResponse azureApp,
-        @Nullable FileShareResponse backupFileShare,
-        List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        String storageResourceId,
-        MiSqlConnectionInfoResponse targetConnectionInfo) {
-        this.azureApp = Objects.requireNonNull(azureApp, "expected parameter 'azureApp' to be non-null");
-        this.backupFileShare = backupFileShare;
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.storageResourceId = Objects.requireNonNull(storageResourceId, "expected parameter 'storageResourceId' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private MigrateSqlServerSqlMISyncTaskInputResponse() {}
 
-    private MigrateSqlServerSqlMISyncTaskInputResponse() {
-        this.azureApp = null;
-        this.backupFileShare = null;
-        this.selectedDatabases = List.of();
-        this.sourceConnectionInfo = null;
-        this.storageResourceId = null;
-        this.targetConnectionInfo = null;
+    private MigrateSqlServerSqlMISyncTaskInputResponse(MigrateSqlServerSqlMISyncTaskInputResponse $) {
+        this.azureApp = $.azureApp;
+        this.backupFileShare = $.backupFileShare;
+        this.selectedDatabases = $.selectedDatabases;
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.storageResourceId = $.storageResourceId;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlMISyncTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AzureActiveDirectoryAppResponse azureApp;
-        private @Nullable FileShareResponse backupFileShare;
-        private List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
-        private SqlConnectionInfoResponse sourceConnectionInfo;
-        private String storageResourceId;
-        private MiSqlConnectionInfoResponse targetConnectionInfo;
+        private MigrateSqlServerSqlMISyncTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlMISyncTaskInputResponse();
         }
 
         public Builder(MigrateSqlServerSqlMISyncTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureApp = defaults.azureApp;
-    	      this.backupFileShare = defaults.backupFileShare;
-    	      this.selectedDatabases = defaults.selectedDatabases;
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.storageResourceId = defaults.storageResourceId;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new MigrateSqlServerSqlMISyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureApp(AzureActiveDirectoryAppResponse azureApp) {
-            this.azureApp = Objects.requireNonNull(azureApp);
+            $.azureApp = azureApp;
             return this;
         }
+
         public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
-            this.backupFileShare = backupFileShare;
+            $.backupFileShare = backupFileShare;
             return this;
         }
+
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
-            this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+            $.selectedDatabases = selectedDatabases;
             return this;
         }
+
         public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputResponse... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
+
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder storageResourceId(String storageResourceId) {
-            this.storageResourceId = Objects.requireNonNull(storageResourceId);
+            $.storageResourceId = storageResourceId;
             return this;
         }
+
         public Builder targetConnectionInfo(MiSqlConnectionInfoResponse targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
-        }        public MigrateSqlServerSqlMISyncTaskInputResponse build() {
-            return new MigrateSqlServerSqlMISyncTaskInputResponse(azureApp, backupFileShare, selectedDatabases, sourceConnectionInfo, storageResourceId, targetConnectionInfo);
+        }
+
+        public MigrateSqlServerSqlMISyncTaskInputResponse build() {
+            $.azureApp = Objects.requireNonNull($.azureApp, "expected parameter 'azureApp' to be non-null");
+            $.selectedDatabases = Objects.requireNonNull($.selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.storageResourceId = Objects.requireNonNull($.storageResourceId, "expected parameter 'storageResourceId' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

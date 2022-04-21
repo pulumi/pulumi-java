@@ -24,10 +24,10 @@ public final class CacheDirectorySettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="activeDirectory")
-      private final @Nullable CacheActiveDirectorySettingsResponse activeDirectory;
+    private @Nullable CacheActiveDirectorySettingsResponse activeDirectory;
 
     public Optional<CacheActiveDirectorySettingsResponse> activeDirectory() {
-        return this.activeDirectory == null ? Optional.empty() : Optional.ofNullable(this.activeDirectory);
+        return Optional.ofNullable(this.activeDirectory);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class CacheDirectorySettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="usernameDownload")
-      private final @Nullable CacheUsernameDownloadSettingsResponse usernameDownload;
+    private @Nullable CacheUsernameDownloadSettingsResponse usernameDownload;
 
     public Optional<CacheUsernameDownloadSettingsResponse> usernameDownload() {
-        return this.usernameDownload == null ? Optional.empty() : Optional.ofNullable(this.usernameDownload);
+        return Optional.ofNullable(this.usernameDownload);
     }
 
-    public CacheDirectorySettingsResponse(
-        @Nullable CacheActiveDirectorySettingsResponse activeDirectory,
-        @Nullable CacheUsernameDownloadSettingsResponse usernameDownload) {
-        this.activeDirectory = activeDirectory;
-        this.usernameDownload = usernameDownload;
-    }
+    private CacheDirectorySettingsResponse() {}
 
-    private CacheDirectorySettingsResponse() {
-        this.activeDirectory = null;
-        this.usernameDownload = null;
+    private CacheDirectorySettingsResponse(CacheDirectorySettingsResponse $) {
+        this.activeDirectory = $.activeDirectory;
+        this.usernameDownload = $.usernameDownload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheDirectorySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CacheActiveDirectorySettingsResponse activeDirectory;
-        private @Nullable CacheUsernameDownloadSettingsResponse usernameDownload;
+        private CacheDirectorySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheDirectorySettingsResponse();
         }
 
         public Builder(CacheDirectorySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectory = defaults.activeDirectory;
-    	      this.usernameDownload = defaults.usernameDownload;
+            $ = new CacheDirectorySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectory(@Nullable CacheActiveDirectorySettingsResponse activeDirectory) {
-            this.activeDirectory = activeDirectory;
+            $.activeDirectory = activeDirectory;
             return this;
         }
+
         public Builder usernameDownload(@Nullable CacheUsernameDownloadSettingsResponse usernameDownload) {
-            this.usernameDownload = usernameDownload;
+            $.usernameDownload = usernameDownload;
             return this;
-        }        public CacheDirectorySettingsResponse build() {
-            return new CacheDirectorySettingsResponse(activeDirectory, usernameDownload);
+        }
+
+        public CacheDirectorySettingsResponse build() {
+            return $;
         }
     }
+
 }

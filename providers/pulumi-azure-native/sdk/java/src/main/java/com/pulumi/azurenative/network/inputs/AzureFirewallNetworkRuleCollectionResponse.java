@@ -27,10 +27,10 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="action")
-      private final @Nullable AzureFirewallRCActionResponse action;
+    private @Nullable AzureFirewallRCActionResponse action;
 
     public Optional<AzureFirewallRCActionResponse> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -49,10 +49,10 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -93,103 +93,86 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<AzureFirewallNetworkRuleResponse> rules;
+    private @Nullable List<AzureFirewallNetworkRuleResponse> rules;
 
-    public List<AzureFirewallNetworkRuleResponse> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<AzureFirewallNetworkRuleResponse>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public AzureFirewallNetworkRuleCollectionResponse(
-        @Nullable AzureFirewallRCActionResponse action,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String provisioningState,
-        @Nullable List<AzureFirewallNetworkRuleResponse> rules) {
-        this.action = action;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.priority = priority;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.rules = rules;
-    }
+    private AzureFirewallNetworkRuleCollectionResponse() {}
 
-    private AzureFirewallNetworkRuleCollectionResponse() {
-        this.action = null;
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.priority = null;
-        this.provisioningState = null;
-        this.rules = List.of();
+    private AzureFirewallNetworkRuleCollectionResponse(AzureFirewallNetworkRuleCollectionResponse $) {
+        this.action = $.action;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.provisioningState = $.provisioningState;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallNetworkRuleCollectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzureFirewallRCActionResponse action;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable Integer priority;
-        private String provisioningState;
-        private @Nullable List<AzureFirewallNetworkRuleResponse> rules;
+        private AzureFirewallNetworkRuleCollectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallNetworkRuleCollectionResponse();
         }
 
         public Builder(AzureFirewallNetworkRuleCollectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.rules = defaults.rules;
+            $ = new AzureFirewallNetworkRuleCollectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable AzureFirewallRCActionResponse action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder rules(@Nullable List<AzureFirewallNetworkRuleResponse> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(AzureFirewallNetworkRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public AzureFirewallNetworkRuleCollectionResponse build() {
-            return new AzureFirewallNetworkRuleCollectionResponse(action, etag, id, name, priority, provisioningState, rules);
+        }
+
+        public AzureFirewallNetworkRuleCollectionResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

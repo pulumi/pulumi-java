@@ -20,48 +20,48 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse exte
      * 
      */
     @Import(name="privateEndpointConnections")
-      private final @Nullable List<String> privateEndpointConnections;
+    private @Nullable List<String> privateEndpointConnections;
 
-    public List<String> privateEndpointConnections() {
-        return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
+    public Optional<List<String>> privateEndpointConnections() {
+        return Optional.ofNullable(this.privateEndpointConnections);
     }
 
-    public ResourceManagementPrivateLinkEndpointConnectionsResponse(@Nullable List<String> privateEndpointConnections) {
-        this.privateEndpointConnections = privateEndpointConnections;
-    }
+    private ResourceManagementPrivateLinkEndpointConnectionsResponse() {}
 
-    private ResourceManagementPrivateLinkEndpointConnectionsResponse() {
-        this.privateEndpointConnections = List.of();
+    private ResourceManagementPrivateLinkEndpointConnectionsResponse(ResourceManagementPrivateLinkEndpointConnectionsResponse $) {
+        this.privateEndpointConnections = $.privateEndpointConnections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceManagementPrivateLinkEndpointConnectionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> privateEndpointConnections;
+        private ResourceManagementPrivateLinkEndpointConnectionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceManagementPrivateLinkEndpointConnectionsResponse();
         }
 
         public Builder(ResourceManagementPrivateLinkEndpointConnectionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
+            $ = new ResourceManagementPrivateLinkEndpointConnectionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateEndpointConnections(@Nullable List<String> privateEndpointConnections) {
-            this.privateEndpointConnections = privateEndpointConnections;
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(String... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
-        }        public ResourceManagementPrivateLinkEndpointConnectionsResponse build() {
-            return new ResourceManagementPrivateLinkEndpointConnectionsResponse(privateEndpointConnections);
+        }
+
+        public ResourceManagementPrivateLinkEndpointConnectionsResponse build() {
+            return $;
         }
     }
+
 }

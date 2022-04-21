@@ -21,45 +21,45 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="externalIp", required=true)
-      private final String externalIp;
+    private String externalIp;
 
     public String externalIp() {
         return this.externalIp;
     }
 
-    public AccessConfigResponse(String externalIp) {
-        this.externalIp = Objects.requireNonNull(externalIp, "expected parameter 'externalIp' to be non-null");
-    }
+    private AccessConfigResponse() {}
 
-    private AccessConfigResponse() {
-        this.externalIp = null;
+    private AccessConfigResponse(AccessConfigResponse $) {
+        this.externalIp = $.externalIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String externalIp;
+        private AccessConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessConfigResponse();
         }
 
         public Builder(AccessConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalIp = defaults.externalIp;
+            $ = new AccessConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder externalIp(String externalIp) {
-            this.externalIp = Objects.requireNonNull(externalIp);
+            $.externalIp = externalIp;
             return this;
-        }        public AccessConfigResponse build() {
-            return new AccessConfigResponse(externalIp);
+        }
+
+        public AccessConfigResponse build() {
+            $.externalIp = Objects.requireNonNull($.externalIp, "expected parameter 'externalIp' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class CloudAuditOptionsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="authorizationLoggingOptions", required=true)
-      private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
+    private AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
 
     public AuthorizationLoggingOptionsResponse authorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
@@ -33,55 +33,52 @@ public final class CloudAuditOptionsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="logName", required=true)
-      private final String logName;
+    private String logName;
 
     public String logName() {
         return this.logName;
     }
 
-    public CloudAuditOptionsResponse(
-        AuthorizationLoggingOptionsResponse authorizationLoggingOptions,
-        String logName) {
-        this.authorizationLoggingOptions = Objects.requireNonNull(authorizationLoggingOptions, "expected parameter 'authorizationLoggingOptions' to be non-null");
-        this.logName = Objects.requireNonNull(logName, "expected parameter 'logName' to be non-null");
-    }
+    private CloudAuditOptionsResponse() {}
 
-    private CloudAuditOptionsResponse() {
-        this.authorizationLoggingOptions = null;
-        this.logName = null;
+    private CloudAuditOptionsResponse(CloudAuditOptionsResponse $) {
+        this.authorizationLoggingOptions = $.authorizationLoggingOptions;
+        this.logName = $.logName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudAuditOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
-        private String logName;
+        private CloudAuditOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudAuditOptionsResponse();
         }
 
         public Builder(CloudAuditOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationLoggingOptions = defaults.authorizationLoggingOptions;
-    	      this.logName = defaults.logName;
+            $ = new CloudAuditOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationLoggingOptions(AuthorizationLoggingOptionsResponse authorizationLoggingOptions) {
-            this.authorizationLoggingOptions = Objects.requireNonNull(authorizationLoggingOptions);
+            $.authorizationLoggingOptions = authorizationLoggingOptions;
             return this;
         }
+
         public Builder logName(String logName) {
-            this.logName = Objects.requireNonNull(logName);
+            $.logName = logName;
             return this;
-        }        public CloudAuditOptionsResponse build() {
-            return new CloudAuditOptionsResponse(authorizationLoggingOptions, logName);
+        }
+
+        public CloudAuditOptionsResponse build() {
+            $.authorizationLoggingOptions = Objects.requireNonNull($.authorizationLoggingOptions, "expected parameter 'authorizationLoggingOptions' to be non-null");
+            $.logName = Objects.requireNonNull($.logName, "expected parameter 'logName' to be non-null");
+            return $;
         }
     }
+
 }

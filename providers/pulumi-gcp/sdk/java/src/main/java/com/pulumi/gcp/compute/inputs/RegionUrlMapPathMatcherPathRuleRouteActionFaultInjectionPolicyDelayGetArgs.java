@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * 
      */
     @Import(name="fixedDelay", required=true)
-      private final Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
+    private Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
 
     public Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay() {
         return this.fixedDelay;
@@ -34,63 +33,60 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * 
      */
     @Import(name="percentage", required=true)
-      private final Output<Double> percentage;
+    private Output<Double> percentage;
 
     public Output<Double> percentage() {
         return this.percentage;
     }
 
-    public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs(
-        Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay,
-        Output<Double> percentage) {
-        this.fixedDelay = Objects.requireNonNull(fixedDelay, "expected parameter 'fixedDelay' to be non-null");
-        this.percentage = Objects.requireNonNull(percentage, "expected parameter 'percentage' to be non-null");
-    }
+    private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs() {}
 
-    private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs() {
-        this.fixedDelay = Codegen.empty();
-        this.percentage = Codegen.empty();
+    private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs $) {
+        this.fixedDelay = $.fixedDelay;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
-        private Output<Double> percentage;
+        private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs();
         }
 
         public Builder(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fixedDelay = defaults.fixedDelay;
-    	      this.percentage = defaults.percentage;
+            $ = new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fixedDelay(Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay) {
-            this.fixedDelay = Objects.requireNonNull(fixedDelay);
+            $.fixedDelay = fixedDelay;
             return this;
         }
+
         public Builder fixedDelay(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs fixedDelay) {
-            this.fixedDelay = Output.of(Objects.requireNonNull(fixedDelay));
-            return this;
+            return fixedDelay(Output.of(fixedDelay));
         }
+
         public Builder percentage(Output<Double> percentage) {
-            this.percentage = Objects.requireNonNull(percentage);
+            $.percentage = percentage;
             return this;
         }
+
         public Builder percentage(Double percentage) {
-            this.percentage = Output.of(Objects.requireNonNull(percentage));
-            return this;
-        }        public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs build() {
-            return new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs(fixedDelay, percentage);
+            return percentage(Output.of(percentage));
+        }
+
+        public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs build() {
+            $.fixedDelay = Objects.requireNonNull($.fixedDelay, "expected parameter 'fixedDelay' to be non-null");
+            $.percentage = Objects.requireNonNull($.percentage, "expected parameter 'percentage' to be non-null");
+            return $;
         }
     }
+
 }

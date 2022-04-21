@@ -25,10 +25,10 @@ public final class BuildpacksGroupPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="buildpacks")
-      private final @Nullable List<BuildpackPropertiesResponse> buildpacks;
+    private @Nullable List<BuildpackPropertiesResponse> buildpacks;
 
-    public List<BuildpackPropertiesResponse> buildpacks() {
-        return this.buildpacks == null ? List.of() : this.buildpacks;
+    public Optional<List<BuildpackPropertiesResponse>> buildpacks() {
+        return Optional.ofNullable(this.buildpacks);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class BuildpacksGroupPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public BuildpacksGroupPropertiesResponse(
-        @Nullable List<BuildpackPropertiesResponse> buildpacks,
-        @Nullable String name) {
-        this.buildpacks = buildpacks;
-        this.name = name;
-    }
+    private BuildpacksGroupPropertiesResponse() {}
 
-    private BuildpacksGroupPropertiesResponse() {
-        this.buildpacks = List.of();
-        this.name = null;
+    private BuildpacksGroupPropertiesResponse(BuildpacksGroupPropertiesResponse $) {
+        this.buildpacks = $.buildpacks;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildpacksGroupPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<BuildpackPropertiesResponse> buildpacks;
-        private @Nullable String name;
+        private BuildpacksGroupPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildpacksGroupPropertiesResponse();
         }
 
         public Builder(BuildpacksGroupPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildpacks = defaults.buildpacks;
-    	      this.name = defaults.name;
+            $ = new BuildpacksGroupPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder buildpacks(@Nullable List<BuildpackPropertiesResponse> buildpacks) {
-            this.buildpacks = buildpacks;
+            $.buildpacks = buildpacks;
             return this;
         }
+
         public Builder buildpacks(BuildpackPropertiesResponse... buildpacks) {
             return buildpacks(List.of(buildpacks));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public BuildpacksGroupPropertiesResponse build() {
-            return new BuildpacksGroupPropertiesResponse(buildpacks, name);
+        }
+
+        public BuildpacksGroupPropertiesResponse build() {
+            return $;
         }
     }
+
 }

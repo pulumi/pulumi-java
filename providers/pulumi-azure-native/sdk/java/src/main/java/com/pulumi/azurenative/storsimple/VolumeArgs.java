@@ -9,11 +9,11 @@ import com.pulumi.azurenative.storsimple.enums.VolumeStatus;
 import com.pulumi.azurenative.storsimple.enums.VolumeType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessControlRecordIds", required=true)
-      private final Output<List<String>> accessControlRecordIds;
+    private Output<List<String>> accessControlRecordIds;
 
     public Output<List<String>> accessControlRecordIds() {
         return this.accessControlRecordIds;
@@ -37,7 +37,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -48,10 +48,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Kind> kind;
+    private @Nullable Output<Kind> kind;
 
-    public Output<Kind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Kind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managerName", required=true)
-      private final Output<String> managerName;
+    private Output<String> managerName;
 
     public Output<String> managerName() {
         return this.managerName;
@@ -70,7 +70,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitoringStatus", required=true)
-      private final Output<MonitoringStatus> monitoringStatus;
+    private Output<MonitoringStatus> monitoringStatus;
 
     public Output<MonitoringStatus> monitoringStatus() {
         return this.monitoringStatus;
@@ -81,7 +81,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -92,7 +92,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeInBytes", required=true)
-      private final Output<Double> sizeInBytes;
+    private Output<Double> sizeInBytes;
 
     public Output<Double> sizeInBytes() {
         return this.sizeInBytes;
@@ -103,7 +103,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeContainerName", required=true)
-      private final Output<String> volumeContainerName;
+    private Output<String> volumeContainerName;
 
     public Output<String> volumeContainerName() {
         return this.volumeContainerName;
@@ -114,10 +114,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeName")
-      private final @Nullable Output<String> volumeName;
+    private @Nullable Output<String> volumeName;
 
-    public Output<String> volumeName() {
-        return this.volumeName == null ? Codegen.empty() : this.volumeName;
+    public Optional<Output<String>> volumeName() {
+        return Optional.ofNullable(this.volumeName);
     }
 
     /**
@@ -125,7 +125,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeStatus", required=true)
-      private final Output<VolumeStatus> volumeStatus;
+    private Output<VolumeStatus> volumeStatus;
 
     public Output<VolumeStatus> volumeStatus() {
         return this.volumeStatus;
@@ -136,183 +136,161 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeType", required=true)
-      private final Output<VolumeType> volumeType;
+    private Output<VolumeType> volumeType;
 
     public Output<VolumeType> volumeType() {
         return this.volumeType;
     }
 
-    public VolumeArgs(
-        Output<List<String>> accessControlRecordIds,
-        Output<String> deviceName,
-        @Nullable Output<Kind> kind,
-        Output<String> managerName,
-        Output<MonitoringStatus> monitoringStatus,
-        Output<String> resourceGroupName,
-        Output<Double> sizeInBytes,
-        Output<String> volumeContainerName,
-        @Nullable Output<String> volumeName,
-        Output<VolumeStatus> volumeStatus,
-        Output<VolumeType> volumeType) {
-        this.accessControlRecordIds = Objects.requireNonNull(accessControlRecordIds, "expected parameter 'accessControlRecordIds' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.kind = kind;
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.monitoringStatus = Objects.requireNonNull(monitoringStatus, "expected parameter 'monitoringStatus' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sizeInBytes = Objects.requireNonNull(sizeInBytes, "expected parameter 'sizeInBytes' to be non-null");
-        this.volumeContainerName = Objects.requireNonNull(volumeContainerName, "expected parameter 'volumeContainerName' to be non-null");
-        this.volumeName = volumeName;
-        this.volumeStatus = Objects.requireNonNull(volumeStatus, "expected parameter 'volumeStatus' to be non-null");
-        this.volumeType = Objects.requireNonNull(volumeType, "expected parameter 'volumeType' to be non-null");
-    }
+    private VolumeArgs() {}
 
-    private VolumeArgs() {
-        this.accessControlRecordIds = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.managerName = Codegen.empty();
-        this.monitoringStatus = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sizeInBytes = Codegen.empty();
-        this.volumeContainerName = Codegen.empty();
-        this.volumeName = Codegen.empty();
-        this.volumeStatus = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private VolumeArgs(VolumeArgs $) {
+        this.accessControlRecordIds = $.accessControlRecordIds;
+        this.deviceName = $.deviceName;
+        this.kind = $.kind;
+        this.managerName = $.managerName;
+        this.monitoringStatus = $.monitoringStatus;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sizeInBytes = $.sizeInBytes;
+        this.volumeContainerName = $.volumeContainerName;
+        this.volumeName = $.volumeName;
+        this.volumeStatus = $.volumeStatus;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> accessControlRecordIds;
-        private Output<String> deviceName;
-        private @Nullable Output<Kind> kind;
-        private Output<String> managerName;
-        private Output<MonitoringStatus> monitoringStatus;
-        private Output<String> resourceGroupName;
-        private Output<Double> sizeInBytes;
-        private Output<String> volumeContainerName;
-        private @Nullable Output<String> volumeName;
-        private Output<VolumeStatus> volumeStatus;
-        private Output<VolumeType> volumeType;
+        private VolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeArgs();
         }
 
         public Builder(VolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlRecordIds = defaults.accessControlRecordIds;
-    	      this.deviceName = defaults.deviceName;
-    	      this.kind = defaults.kind;
-    	      this.managerName = defaults.managerName;
-    	      this.monitoringStatus = defaults.monitoringStatus;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sizeInBytes = defaults.sizeInBytes;
-    	      this.volumeContainerName = defaults.volumeContainerName;
-    	      this.volumeName = defaults.volumeName;
-    	      this.volumeStatus = defaults.volumeStatus;
-    	      this.volumeType = defaults.volumeType;
+            $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlRecordIds(Output<List<String>> accessControlRecordIds) {
-            this.accessControlRecordIds = Objects.requireNonNull(accessControlRecordIds);
+            $.accessControlRecordIds = accessControlRecordIds;
             return this;
         }
+
         public Builder accessControlRecordIds(List<String> accessControlRecordIds) {
-            this.accessControlRecordIds = Output.of(Objects.requireNonNull(accessControlRecordIds));
-            return this;
+            return accessControlRecordIds(Output.of(accessControlRecordIds));
         }
+
         public Builder accessControlRecordIds(String... accessControlRecordIds) {
             return accessControlRecordIds(List.of(accessControlRecordIds));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder kind(@Nullable Output<Kind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Kind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Kind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder managerName(Output<String> managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Output.of(Objects.requireNonNull(managerName));
-            return this;
+            return managerName(Output.of(managerName));
         }
+
         public Builder monitoringStatus(Output<MonitoringStatus> monitoringStatus) {
-            this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
+            $.monitoringStatus = monitoringStatus;
             return this;
         }
+
         public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
-            this.monitoringStatus = Output.of(Objects.requireNonNull(monitoringStatus));
-            return this;
+            return monitoringStatus(Output.of(monitoringStatus));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sizeInBytes(Output<Double> sizeInBytes) {
-            this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
+            $.sizeInBytes = sizeInBytes;
             return this;
         }
+
         public Builder sizeInBytes(Double sizeInBytes) {
-            this.sizeInBytes = Output.of(Objects.requireNonNull(sizeInBytes));
-            return this;
+            return sizeInBytes(Output.of(sizeInBytes));
         }
+
         public Builder volumeContainerName(Output<String> volumeContainerName) {
-            this.volumeContainerName = Objects.requireNonNull(volumeContainerName);
+            $.volumeContainerName = volumeContainerName;
             return this;
         }
+
         public Builder volumeContainerName(String volumeContainerName) {
-            this.volumeContainerName = Output.of(Objects.requireNonNull(volumeContainerName));
-            return this;
+            return volumeContainerName(Output.of(volumeContainerName));
         }
+
         public Builder volumeName(@Nullable Output<String> volumeName) {
-            this.volumeName = volumeName;
+            $.volumeName = volumeName;
             return this;
         }
-        public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Codegen.ofNullable(volumeName);
-            return this;
+
+        public Builder volumeName(String volumeName) {
+            return volumeName(Output.of(volumeName));
         }
+
         public Builder volumeStatus(Output<VolumeStatus> volumeStatus) {
-            this.volumeStatus = Objects.requireNonNull(volumeStatus);
+            $.volumeStatus = volumeStatus;
             return this;
         }
+
         public Builder volumeStatus(VolumeStatus volumeStatus) {
-            this.volumeStatus = Output.of(Objects.requireNonNull(volumeStatus));
-            return this;
+            return volumeStatus(Output.of(volumeStatus));
         }
+
         public Builder volumeType(Output<VolumeType> volumeType) {
-            this.volumeType = Objects.requireNonNull(volumeType);
+            $.volumeType = volumeType;
             return this;
         }
+
         public Builder volumeType(VolumeType volumeType) {
-            this.volumeType = Output.of(Objects.requireNonNull(volumeType));
-            return this;
-        }        public VolumeArgs build() {
-            return new VolumeArgs(accessControlRecordIds, deviceName, kind, managerName, monitoringStatus, resourceGroupName, sizeInBytes, volumeContainerName, volumeName, volumeStatus, volumeType);
+            return volumeType(Output.of(volumeType));
+        }
+
+        public VolumeArgs build() {
+            $.accessControlRecordIds = Objects.requireNonNull($.accessControlRecordIds, "expected parameter 'accessControlRecordIds' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.monitoringStatus = Objects.requireNonNull($.monitoringStatus, "expected parameter 'monitoringStatus' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sizeInBytes = Objects.requireNonNull($.sizeInBytes, "expected parameter 'sizeInBytes' to be non-null");
+            $.volumeContainerName = Objects.requireNonNull($.volumeContainerName, "expected parameter 'volumeContainerName' to be non-null");
+            $.volumeStatus = Objects.requireNonNull($.volumeStatus, "expected parameter 'volumeStatus' to be non-null");
+            $.volumeType = Objects.requireNonNull($.volumeType, "expected parameter 'volumeType' to be non-null");
+            return $;
         }
     }
+
 }

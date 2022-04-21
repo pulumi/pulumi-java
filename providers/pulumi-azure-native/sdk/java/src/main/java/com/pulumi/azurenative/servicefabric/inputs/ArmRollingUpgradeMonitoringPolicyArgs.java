@@ -7,9 +7,9 @@ import com.pulumi.azurenative.servicefabric.enums.ArmUpgradeFailureAction;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="failureAction")
-      private final @Nullable Output<Either<String,ArmUpgradeFailureAction>> failureAction;
+    private @Nullable Output<Either<String,ArmUpgradeFailureAction>> failureAction;
 
-    public Output<Either<String,ArmUpgradeFailureAction>> failureAction() {
-        return this.failureAction == null ? Codegen.empty() : this.failureAction;
+    public Optional<Output<Either<String,ArmUpgradeFailureAction>>> failureAction() {
+        return Optional.ofNullable(this.failureAction);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="healthCheckRetryTimeout")
-      private final @Nullable Output<String> healthCheckRetryTimeout;
+    private @Nullable Output<String> healthCheckRetryTimeout;
 
-    public Output<String> healthCheckRetryTimeout() {
-        return this.healthCheckRetryTimeout == null ? Codegen.empty() : this.healthCheckRetryTimeout;
+    public Optional<Output<String>> healthCheckRetryTimeout() {
+        return Optional.ofNullable(this.healthCheckRetryTimeout);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="healthCheckStableDuration")
-      private final @Nullable Output<String> healthCheckStableDuration;
+    private @Nullable Output<String> healthCheckStableDuration;
 
-    public Output<String> healthCheckStableDuration() {
-        return this.healthCheckStableDuration == null ? Codegen.empty() : this.healthCheckStableDuration;
+    public Optional<Output<String>> healthCheckStableDuration() {
+        return Optional.ofNullable(this.healthCheckStableDuration);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="healthCheckWaitDuration")
-      private final @Nullable Output<String> healthCheckWaitDuration;
+    private @Nullable Output<String> healthCheckWaitDuration;
 
-    public Output<String> healthCheckWaitDuration() {
-        return this.healthCheckWaitDuration == null ? Codegen.empty() : this.healthCheckWaitDuration;
+    public Optional<Output<String>> healthCheckWaitDuration() {
+        return Optional.ofNullable(this.healthCheckWaitDuration);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="upgradeDomainTimeout")
-      private final @Nullable Output<String> upgradeDomainTimeout;
+    private @Nullable Output<String> upgradeDomainTimeout;
 
-    public Output<String> upgradeDomainTimeout() {
-        return this.upgradeDomainTimeout == null ? Codegen.empty() : this.upgradeDomainTimeout;
+    public Optional<Output<String>> upgradeDomainTimeout() {
+        return Optional.ofNullable(this.upgradeDomainTimeout);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="upgradeTimeout")
-      private final @Nullable Output<String> upgradeTimeout;
+    private @Nullable Output<String> upgradeTimeout;
 
-    public Output<String> upgradeTimeout() {
-        return this.upgradeTimeout == null ? Codegen.empty() : this.upgradeTimeout;
+    public Optional<Output<String>> upgradeTimeout() {
+        return Optional.ofNullable(this.upgradeTimeout);
     }
 
-    public ArmRollingUpgradeMonitoringPolicyArgs(
-        @Nullable Output<Either<String,ArmUpgradeFailureAction>> failureAction,
-        @Nullable Output<String> healthCheckRetryTimeout,
-        @Nullable Output<String> healthCheckStableDuration,
-        @Nullable Output<String> healthCheckWaitDuration,
-        @Nullable Output<String> upgradeDomainTimeout,
-        @Nullable Output<String> upgradeTimeout) {
-        this.failureAction = failureAction;
-        this.healthCheckRetryTimeout = healthCheckRetryTimeout;
-        this.healthCheckStableDuration = healthCheckStableDuration;
-        this.healthCheckWaitDuration = healthCheckWaitDuration;
-        this.upgradeDomainTimeout = upgradeDomainTimeout;
-        this.upgradeTimeout = upgradeTimeout;
-    }
+    private ArmRollingUpgradeMonitoringPolicyArgs() {}
 
-    private ArmRollingUpgradeMonitoringPolicyArgs() {
-        this.failureAction = Codegen.empty();
-        this.healthCheckRetryTimeout = Codegen.empty();
-        this.healthCheckStableDuration = Codegen.empty();
-        this.healthCheckWaitDuration = Codegen.empty();
-        this.upgradeDomainTimeout = Codegen.empty();
-        this.upgradeTimeout = Codegen.empty();
+    private ArmRollingUpgradeMonitoringPolicyArgs(ArmRollingUpgradeMonitoringPolicyArgs $) {
+        this.failureAction = $.failureAction;
+        this.healthCheckRetryTimeout = $.healthCheckRetryTimeout;
+        this.healthCheckStableDuration = $.healthCheckStableDuration;
+        this.healthCheckWaitDuration = $.healthCheckWaitDuration;
+        this.upgradeDomainTimeout = $.upgradeDomainTimeout;
+        this.upgradeTimeout = $.upgradeTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArmRollingUpgradeMonitoringPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ArmUpgradeFailureAction>> failureAction;
-        private @Nullable Output<String> healthCheckRetryTimeout;
-        private @Nullable Output<String> healthCheckStableDuration;
-        private @Nullable Output<String> healthCheckWaitDuration;
-        private @Nullable Output<String> upgradeDomainTimeout;
-        private @Nullable Output<String> upgradeTimeout;
+        private ArmRollingUpgradeMonitoringPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArmRollingUpgradeMonitoringPolicyArgs();
         }
 
         public Builder(ArmRollingUpgradeMonitoringPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureAction = defaults.failureAction;
-    	      this.healthCheckRetryTimeout = defaults.healthCheckRetryTimeout;
-    	      this.healthCheckStableDuration = defaults.healthCheckStableDuration;
-    	      this.healthCheckWaitDuration = defaults.healthCheckWaitDuration;
-    	      this.upgradeDomainTimeout = defaults.upgradeDomainTimeout;
-    	      this.upgradeTimeout = defaults.upgradeTimeout;
+            $ = new ArmRollingUpgradeMonitoringPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failureAction(@Nullable Output<Either<String,ArmUpgradeFailureAction>> failureAction) {
-            this.failureAction = failureAction;
+            $.failureAction = failureAction;
             return this;
         }
-        public Builder failureAction(@Nullable Either<String,ArmUpgradeFailureAction> failureAction) {
-            this.failureAction = Codegen.ofNullable(failureAction);
-            return this;
+
+        public Builder failureAction(Either<String,ArmUpgradeFailureAction> failureAction) {
+            return failureAction(Output.of(failureAction));
         }
+
         public Builder healthCheckRetryTimeout(@Nullable Output<String> healthCheckRetryTimeout) {
-            this.healthCheckRetryTimeout = healthCheckRetryTimeout;
+            $.healthCheckRetryTimeout = healthCheckRetryTimeout;
             return this;
         }
-        public Builder healthCheckRetryTimeout(@Nullable String healthCheckRetryTimeout) {
-            this.healthCheckRetryTimeout = Codegen.ofNullable(healthCheckRetryTimeout);
-            return this;
+
+        public Builder healthCheckRetryTimeout(String healthCheckRetryTimeout) {
+            return healthCheckRetryTimeout(Output.of(healthCheckRetryTimeout));
         }
+
         public Builder healthCheckStableDuration(@Nullable Output<String> healthCheckStableDuration) {
-            this.healthCheckStableDuration = healthCheckStableDuration;
+            $.healthCheckStableDuration = healthCheckStableDuration;
             return this;
         }
-        public Builder healthCheckStableDuration(@Nullable String healthCheckStableDuration) {
-            this.healthCheckStableDuration = Codegen.ofNullable(healthCheckStableDuration);
-            return this;
+
+        public Builder healthCheckStableDuration(String healthCheckStableDuration) {
+            return healthCheckStableDuration(Output.of(healthCheckStableDuration));
         }
+
         public Builder healthCheckWaitDuration(@Nullable Output<String> healthCheckWaitDuration) {
-            this.healthCheckWaitDuration = healthCheckWaitDuration;
+            $.healthCheckWaitDuration = healthCheckWaitDuration;
             return this;
         }
-        public Builder healthCheckWaitDuration(@Nullable String healthCheckWaitDuration) {
-            this.healthCheckWaitDuration = Codegen.ofNullable(healthCheckWaitDuration);
-            return this;
+
+        public Builder healthCheckWaitDuration(String healthCheckWaitDuration) {
+            return healthCheckWaitDuration(Output.of(healthCheckWaitDuration));
         }
+
         public Builder upgradeDomainTimeout(@Nullable Output<String> upgradeDomainTimeout) {
-            this.upgradeDomainTimeout = upgradeDomainTimeout;
+            $.upgradeDomainTimeout = upgradeDomainTimeout;
             return this;
         }
-        public Builder upgradeDomainTimeout(@Nullable String upgradeDomainTimeout) {
-            this.upgradeDomainTimeout = Codegen.ofNullable(upgradeDomainTimeout);
-            return this;
+
+        public Builder upgradeDomainTimeout(String upgradeDomainTimeout) {
+            return upgradeDomainTimeout(Output.of(upgradeDomainTimeout));
         }
+
         public Builder upgradeTimeout(@Nullable Output<String> upgradeTimeout) {
-            this.upgradeTimeout = upgradeTimeout;
+            $.upgradeTimeout = upgradeTimeout;
             return this;
         }
-        public Builder upgradeTimeout(@Nullable String upgradeTimeout) {
-            this.upgradeTimeout = Codegen.ofNullable(upgradeTimeout);
-            return this;
-        }        public ArmRollingUpgradeMonitoringPolicyArgs build() {
-            return new ArmRollingUpgradeMonitoringPolicyArgs(failureAction, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, upgradeDomainTimeout, upgradeTimeout);
+
+        public Builder upgradeTimeout(String upgradeTimeout) {
+            return upgradeTimeout(Output.of(upgradeTimeout));
+        }
+
+        public ArmRollingUpgradeMonitoringPolicyArgs build() {
+            return $;
         }
     }
+
 }

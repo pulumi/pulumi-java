@@ -16,78 +16,72 @@ public final class ConnectionParameter extends com.pulumi.resources.InvokeArgs {
     public static final ConnectionParameter Empty = new ConnectionParameter();
 
     @Import(name="isValueSecret")
-      private final @Nullable Boolean isValueSecret;
+    private @Nullable Boolean isValueSecret;
 
     public Optional<Boolean> isValueSecret() {
-        return this.isValueSecret == null ? Optional.empty() : Optional.ofNullable(this.isValueSecret);
+        return Optional.ofNullable(this.isValueSecret);
     }
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ConnectionParameter(
-        @Nullable Boolean isValueSecret,
-        String key,
-        String value) {
-        this.isValueSecret = isValueSecret;
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ConnectionParameter() {}
 
-    private ConnectionParameter() {
-        this.isValueSecret = null;
-        this.key = null;
-        this.value = null;
+    private ConnectionParameter(ConnectionParameter $) {
+        this.isValueSecret = $.isValueSecret;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionParameter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isValueSecret;
-        private String key;
-        private String value;
+        private ConnectionParameter $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionParameter();
         }
 
         public Builder(ConnectionParameter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isValueSecret = defaults.isValueSecret;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ConnectionParameter(Objects.requireNonNull(defaults));
         }
 
         public Builder isValueSecret(@Nullable Boolean isValueSecret) {
-            this.isValueSecret = isValueSecret;
+            $.isValueSecret = isValueSecret;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ConnectionParameter build() {
-            return new ConnectionParameter(isValueSecret, key, value);
+        }
+
+        public ConnectionParameter build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="isCa", required=true)
-      private final Output<Boolean> isCa;
+    private Output<Boolean> isCa;
 
     public Output<Boolean> isCa() {
         return this.isCa;
@@ -33,10 +33,10 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="maxIssuerPathLength")
-      private final @Nullable Output<Integer> maxIssuerPathLength;
+    private @Nullable Output<Integer> maxIssuerPathLength;
 
-    public Output<Integer> maxIssuerPathLength() {
-        return this.maxIssuerPathLength == null ? Codegen.empty() : this.maxIssuerPathLength;
+    public Optional<Output<Integer>> maxIssuerPathLength() {
+        return Optional.ofNullable(this.maxIssuerPathLength);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="nonCa")
-      private final @Nullable Output<Boolean> nonCa;
+    private @Nullable Output<Boolean> nonCa;
 
-    public Output<Boolean> nonCa() {
-        return this.nonCa == null ? Codegen.empty() : this.nonCa;
+    public Optional<Output<Boolean>> nonCa() {
+        return Optional.ofNullable(this.nonCa);
     }
 
     /**
@@ -58,89 +58,79 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="zeroMaxIssuerPathLength")
-      private final @Nullable Output<Boolean> zeroMaxIssuerPathLength;
+    private @Nullable Output<Boolean> zeroMaxIssuerPathLength;
 
-    public Output<Boolean> zeroMaxIssuerPathLength() {
-        return this.zeroMaxIssuerPathLength == null ? Codegen.empty() : this.zeroMaxIssuerPathLength;
+    public Optional<Output<Boolean>> zeroMaxIssuerPathLength() {
+        return Optional.ofNullable(this.zeroMaxIssuerPathLength);
     }
 
-    public AuthorityConfigX509ConfigCaOptionsArgs(
-        Output<Boolean> isCa,
-        @Nullable Output<Integer> maxIssuerPathLength,
-        @Nullable Output<Boolean> nonCa,
-        @Nullable Output<Boolean> zeroMaxIssuerPathLength) {
-        this.isCa = Objects.requireNonNull(isCa, "expected parameter 'isCa' to be non-null");
-        this.maxIssuerPathLength = maxIssuerPathLength;
-        this.nonCa = nonCa;
-        this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
-    }
+    private AuthorityConfigX509ConfigCaOptionsArgs() {}
 
-    private AuthorityConfigX509ConfigCaOptionsArgs() {
-        this.isCa = Codegen.empty();
-        this.maxIssuerPathLength = Codegen.empty();
-        this.nonCa = Codegen.empty();
-        this.zeroMaxIssuerPathLength = Codegen.empty();
+    private AuthorityConfigX509ConfigCaOptionsArgs(AuthorityConfigX509ConfigCaOptionsArgs $) {
+        this.isCa = $.isCa;
+        this.maxIssuerPathLength = $.maxIssuerPathLength;
+        this.nonCa = $.nonCa;
+        this.zeroMaxIssuerPathLength = $.zeroMaxIssuerPathLength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityConfigX509ConfigCaOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> isCa;
-        private @Nullable Output<Integer> maxIssuerPathLength;
-        private @Nullable Output<Boolean> nonCa;
-        private @Nullable Output<Boolean> zeroMaxIssuerPathLength;
+        private AuthorityConfigX509ConfigCaOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityConfigX509ConfigCaOptionsArgs();
         }
 
         public Builder(AuthorityConfigX509ConfigCaOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isCa = defaults.isCa;
-    	      this.maxIssuerPathLength = defaults.maxIssuerPathLength;
-    	      this.nonCa = defaults.nonCa;
-    	      this.zeroMaxIssuerPathLength = defaults.zeroMaxIssuerPathLength;
+            $ = new AuthorityConfigX509ConfigCaOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isCa(Output<Boolean> isCa) {
-            this.isCa = Objects.requireNonNull(isCa);
+            $.isCa = isCa;
             return this;
         }
+
         public Builder isCa(Boolean isCa) {
-            this.isCa = Output.of(Objects.requireNonNull(isCa));
-            return this;
+            return isCa(Output.of(isCa));
         }
+
         public Builder maxIssuerPathLength(@Nullable Output<Integer> maxIssuerPathLength) {
-            this.maxIssuerPathLength = maxIssuerPathLength;
+            $.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
-        public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
-            this.maxIssuerPathLength = Codegen.ofNullable(maxIssuerPathLength);
-            return this;
+
+        public Builder maxIssuerPathLength(Integer maxIssuerPathLength) {
+            return maxIssuerPathLength(Output.of(maxIssuerPathLength));
         }
+
         public Builder nonCa(@Nullable Output<Boolean> nonCa) {
-            this.nonCa = nonCa;
+            $.nonCa = nonCa;
             return this;
         }
-        public Builder nonCa(@Nullable Boolean nonCa) {
-            this.nonCa = Codegen.ofNullable(nonCa);
-            return this;
+
+        public Builder nonCa(Boolean nonCa) {
+            return nonCa(Output.of(nonCa));
         }
+
         public Builder zeroMaxIssuerPathLength(@Nullable Output<Boolean> zeroMaxIssuerPathLength) {
-            this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
+            $.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }
-        public Builder zeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
-            this.zeroMaxIssuerPathLength = Codegen.ofNullable(zeroMaxIssuerPathLength);
-            return this;
-        }        public AuthorityConfigX509ConfigCaOptionsArgs build() {
-            return new AuthorityConfigX509ConfigCaOptionsArgs(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);
+
+        public Builder zeroMaxIssuerPathLength(Boolean zeroMaxIssuerPathLength) {
+            return zeroMaxIssuerPathLength(Output.of(zeroMaxIssuerPathLength));
+        }
+
+        public AuthorityConfigX509ConfigCaOptionsArgs build() {
+            $.isCa = Objects.requireNonNull($.isCa, "expected parameter 'isCa' to be non-null");
+            return $;
         }
     }
+
 }

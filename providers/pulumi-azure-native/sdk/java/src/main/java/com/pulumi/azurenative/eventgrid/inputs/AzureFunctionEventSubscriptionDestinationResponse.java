@@ -26,7 +26,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends com
      * 
      */
     @Import(name="endpointType", required=true)
-      private final String endpointType;
+    private String endpointType;
 
     public String endpointType() {
         return this.endpointType;
@@ -37,10 +37,10 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends com
      * 
      */
     @Import(name="maxEventsPerBatch")
-      private final @Nullable Integer maxEventsPerBatch;
+    private @Nullable Integer maxEventsPerBatch;
 
     public Optional<Integer> maxEventsPerBatch() {
-        return this.maxEventsPerBatch == null ? Optional.empty() : Optional.ofNullable(this.maxEventsPerBatch);
+        return Optional.ofNullable(this.maxEventsPerBatch);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends com
      * 
      */
     @Import(name="preferredBatchSizeInKilobytes")
-      private final @Nullable Integer preferredBatchSizeInKilobytes;
+    private @Nullable Integer preferredBatchSizeInKilobytes;
 
     public Optional<Integer> preferredBatchSizeInKilobytes() {
-        return this.preferredBatchSizeInKilobytes == null ? Optional.empty() : Optional.ofNullable(this.preferredBatchSizeInKilobytes);
+        return Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
 
     /**
@@ -59,73 +59,65 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends com
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public AzureFunctionEventSubscriptionDestinationResponse(
-        String endpointType,
-        @Nullable Integer maxEventsPerBatch,
-        @Nullable Integer preferredBatchSizeInKilobytes,
-        @Nullable String resourceId) {
-        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
-        this.maxEventsPerBatch = Codegen.integerProp("maxEventsPerBatch").arg(maxEventsPerBatch).def(1).getNullable();
-        this.preferredBatchSizeInKilobytes = Codegen.integerProp("preferredBatchSizeInKilobytes").arg(preferredBatchSizeInKilobytes).def(64).getNullable();
-        this.resourceId = resourceId;
-    }
+    private AzureFunctionEventSubscriptionDestinationResponse() {}
 
-    private AzureFunctionEventSubscriptionDestinationResponse() {
-        this.endpointType = null;
-        this.maxEventsPerBatch = null;
-        this.preferredBatchSizeInKilobytes = null;
-        this.resourceId = null;
+    private AzureFunctionEventSubscriptionDestinationResponse(AzureFunctionEventSubscriptionDestinationResponse $) {
+        this.endpointType = $.endpointType;
+        this.maxEventsPerBatch = $.maxEventsPerBatch;
+        this.preferredBatchSizeInKilobytes = $.preferredBatchSizeInKilobytes;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFunctionEventSubscriptionDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointType;
-        private @Nullable Integer maxEventsPerBatch;
-        private @Nullable Integer preferredBatchSizeInKilobytes;
-        private @Nullable String resourceId;
+        private AzureFunctionEventSubscriptionDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFunctionEventSubscriptionDestinationResponse();
         }
 
         public Builder(AzureFunctionEventSubscriptionDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
-    	      this.maxEventsPerBatch = defaults.maxEventsPerBatch;
-    	      this.preferredBatchSizeInKilobytes = defaults.preferredBatchSizeInKilobytes;
-    	      this.resourceId = defaults.resourceId;
+            $ = new AzureFunctionEventSubscriptionDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(String endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder maxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
-            this.maxEventsPerBatch = maxEventsPerBatch;
+            $.maxEventsPerBatch = maxEventsPerBatch;
             return this;
         }
+
         public Builder preferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
-            this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
+            $.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public AzureFunctionEventSubscriptionDestinationResponse build() {
-            return new AzureFunctionEventSubscriptionDestinationResponse(endpointType, maxEventsPerBatch, preferredBatchSizeInKilobytes, resourceId);
+        }
+
+        public AzureFunctionEventSubscriptionDestinationResponse build() {
+            $.endpointType = Codegen.stringProp("endpointType").arg($.endpointType).require();
+            $.maxEventsPerBatch = Codegen.integerProp("maxEventsPerBatch").arg($.maxEventsPerBatch).def(1).getNullable();
+            $.preferredBatchSizeInKilobytes = Codegen.integerProp("preferredBatchSizeInKilobytes").arg($.preferredBatchSizeInKilobytes).def(64).getNullable();
+            return $;
         }
     }
+
 }

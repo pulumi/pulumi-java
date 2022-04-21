@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
      * 
      */
     @Import(name="accountNumber", required=true)
-      private final String accountNumber;
+    private String accountNumber;
 
     public String accountNumber() {
         return this.accountNumber;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse(String accountNumber) {
-        this.accountNumber = Objects.requireNonNull(accountNumber, "expected parameter 'accountNumber' to be non-null");
-    }
+    private GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse() {}
 
-    private GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse() {
-        this.accountNumber = null;
+    private GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse(GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse $) {
+        this.accountNumber = $.accountNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountNumber;
+        private GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountNumber = defaults.accountNumber;
+            $ = new GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountNumber(String accountNumber) {
-            this.accountNumber = Objects.requireNonNull(accountNumber);
+            $.accountNumber = accountNumber;
             return this;
-        }        public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse build() {
-            return new GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse(accountNumber);
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse build() {
+            $.accountNumber = Objects.requireNonNull($.accountNumber, "expected parameter 'accountNumber' to be non-null");
+            return $;
         }
     }
+
 }

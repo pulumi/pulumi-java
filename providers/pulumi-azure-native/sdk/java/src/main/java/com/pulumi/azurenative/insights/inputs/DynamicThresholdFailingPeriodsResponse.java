@@ -21,7 +21,7 @@ public final class DynamicThresholdFailingPeriodsResponse extends com.pulumi.res
      * 
      */
     @Import(name="minFailingPeriodsToAlert", required=true)
-      private final Double minFailingPeriodsToAlert;
+    private Double minFailingPeriodsToAlert;
 
     public Double minFailingPeriodsToAlert() {
         return this.minFailingPeriodsToAlert;
@@ -32,55 +32,52 @@ public final class DynamicThresholdFailingPeriodsResponse extends com.pulumi.res
      * 
      */
     @Import(name="numberOfEvaluationPeriods", required=true)
-      private final Double numberOfEvaluationPeriods;
+    private Double numberOfEvaluationPeriods;
 
     public Double numberOfEvaluationPeriods() {
         return this.numberOfEvaluationPeriods;
     }
 
-    public DynamicThresholdFailingPeriodsResponse(
-        Double minFailingPeriodsToAlert,
-        Double numberOfEvaluationPeriods) {
-        this.minFailingPeriodsToAlert = Objects.requireNonNull(minFailingPeriodsToAlert, "expected parameter 'minFailingPeriodsToAlert' to be non-null");
-        this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods, "expected parameter 'numberOfEvaluationPeriods' to be non-null");
-    }
+    private DynamicThresholdFailingPeriodsResponse() {}
 
-    private DynamicThresholdFailingPeriodsResponse() {
-        this.minFailingPeriodsToAlert = null;
-        this.numberOfEvaluationPeriods = null;
+    private DynamicThresholdFailingPeriodsResponse(DynamicThresholdFailingPeriodsResponse $) {
+        this.minFailingPeriodsToAlert = $.minFailingPeriodsToAlert;
+        this.numberOfEvaluationPeriods = $.numberOfEvaluationPeriods;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DynamicThresholdFailingPeriodsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double minFailingPeriodsToAlert;
-        private Double numberOfEvaluationPeriods;
+        private DynamicThresholdFailingPeriodsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DynamicThresholdFailingPeriodsResponse();
         }
 
         public Builder(DynamicThresholdFailingPeriodsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minFailingPeriodsToAlert = defaults.minFailingPeriodsToAlert;
-    	      this.numberOfEvaluationPeriods = defaults.numberOfEvaluationPeriods;
+            $ = new DynamicThresholdFailingPeriodsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder minFailingPeriodsToAlert(Double minFailingPeriodsToAlert) {
-            this.minFailingPeriodsToAlert = Objects.requireNonNull(minFailingPeriodsToAlert);
+            $.minFailingPeriodsToAlert = minFailingPeriodsToAlert;
             return this;
         }
+
         public Builder numberOfEvaluationPeriods(Double numberOfEvaluationPeriods) {
-            this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods);
+            $.numberOfEvaluationPeriods = numberOfEvaluationPeriods;
             return this;
-        }        public DynamicThresholdFailingPeriodsResponse build() {
-            return new DynamicThresholdFailingPeriodsResponse(minFailingPeriodsToAlert, numberOfEvaluationPeriods);
+        }
+
+        public DynamicThresholdFailingPeriodsResponse build() {
+            $.minFailingPeriodsToAlert = Objects.requireNonNull($.minFailingPeriodsToAlert, "expected parameter 'minFailingPeriodsToAlert' to be non-null");
+            $.numberOfEvaluationPeriods = Objects.requireNonNull($.numberOfEvaluationPeriods, "expected parameter 'numberOfEvaluationPeriods' to be non-null");
+            return $;
         }
     }
+
 }

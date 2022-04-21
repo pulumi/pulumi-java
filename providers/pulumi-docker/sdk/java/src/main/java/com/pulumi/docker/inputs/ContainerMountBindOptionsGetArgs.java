@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ContainerMountBindOptionsGetArgs extends com.pulumi.resources
     public static final ContainerMountBindOptionsGetArgs Empty = new ContainerMountBindOptionsGetArgs();
 
     @Import(name="propagation")
-      private final @Nullable Output<String> propagation;
+    private @Nullable Output<String> propagation;
 
-    public Output<String> propagation() {
-        return this.propagation == null ? Codegen.empty() : this.propagation;
+    public Optional<Output<String>> propagation() {
+        return Optional.ofNullable(this.propagation);
     }
 
-    public ContainerMountBindOptionsGetArgs(@Nullable Output<String> propagation) {
-        this.propagation = propagation;
-    }
+    private ContainerMountBindOptionsGetArgs() {}
 
-    private ContainerMountBindOptionsGetArgs() {
-        this.propagation = Codegen.empty();
+    private ContainerMountBindOptionsGetArgs(ContainerMountBindOptionsGetArgs $) {
+        this.propagation = $.propagation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerMountBindOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> propagation;
+        private ContainerMountBindOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerMountBindOptionsGetArgs();
         }
 
         public Builder(ContainerMountBindOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.propagation = defaults.propagation;
+            $ = new ContainerMountBindOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder propagation(@Nullable Output<String> propagation) {
-            this.propagation = propagation;
+            $.propagation = propagation;
             return this;
         }
-        public Builder propagation(@Nullable String propagation) {
-            this.propagation = Codegen.ofNullable(propagation);
-            return this;
-        }        public ContainerMountBindOptionsGetArgs build() {
-            return new ContainerMountBindOptionsGetArgs(propagation);
+
+        public Builder propagation(String propagation) {
+            return propagation(Output.of(propagation));
+        }
+
+        public ContainerMountBindOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

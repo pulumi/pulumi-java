@@ -23,45 +23,44 @@ public final class RealtimeConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="maxConcurrentCalls")
-      private final @Nullable Integer maxConcurrentCalls;
+    private @Nullable Integer maxConcurrentCalls;
 
     public Optional<Integer> maxConcurrentCalls() {
-        return this.maxConcurrentCalls == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentCalls);
+        return Optional.ofNullable(this.maxConcurrentCalls);
     }
 
-    public RealtimeConfigurationResponse(@Nullable Integer maxConcurrentCalls) {
-        this.maxConcurrentCalls = maxConcurrentCalls;
-    }
+    private RealtimeConfigurationResponse() {}
 
-    private RealtimeConfigurationResponse() {
-        this.maxConcurrentCalls = null;
+    private RealtimeConfigurationResponse(RealtimeConfigurationResponse $) {
+        this.maxConcurrentCalls = $.maxConcurrentCalls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RealtimeConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxConcurrentCalls;
+        private RealtimeConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RealtimeConfigurationResponse();
         }
 
         public Builder(RealtimeConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxConcurrentCalls = defaults.maxConcurrentCalls;
+            $ = new RealtimeConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxConcurrentCalls(@Nullable Integer maxConcurrentCalls) {
-            this.maxConcurrentCalls = maxConcurrentCalls;
+            $.maxConcurrentCalls = maxConcurrentCalls;
             return this;
-        }        public RealtimeConfigurationResponse build() {
-            return new RealtimeConfigurationResponse(maxConcurrentCalls);
+        }
+
+        public RealtimeConfigurationResponse build() {
+            return $;
         }
     }
+
 }

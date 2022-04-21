@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.PublicDelegatedPrefixPublicDelegatedSubPrefixArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PublicDelegatedPrefixArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PublicDelegatedPrefixArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ipCidrRange")
-      private final @Nullable Output<String> ipCidrRange;
+    private @Nullable Output<String> ipCidrRange;
 
-    public Output<String> ipCidrRange() {
-        return this.ipCidrRange == null ? Codegen.empty() : this.ipCidrRange;
+    public Optional<Output<String>> ipCidrRange() {
+        return Optional.ofNullable(this.ipCidrRange);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PublicDelegatedPrefixArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="isLiveMigration")
-      private final @Nullable Output<Boolean> isLiveMigration;
+    private @Nullable Output<Boolean> isLiveMigration;
 
-    public Output<Boolean> isLiveMigration() {
-        return this.isLiveMigration == null ? Codegen.empty() : this.isLiveMigration;
+    public Optional<Output<Boolean>> isLiveMigration() {
+        return Optional.ofNullable(this.isLiveMigration);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PublicDelegatedPrefixArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,17 +67,17 @@ public final class PublicDelegatedPrefixArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="parentPrefix")
-      private final @Nullable Output<String> parentPrefix;
+    private @Nullable Output<String> parentPrefix;
 
-    public Output<String> parentPrefix() {
-        return this.parentPrefix == null ? Codegen.empty() : this.parentPrefix;
+    public Optional<Output<String>> parentPrefix() {
+        return Optional.ofNullable(this.parentPrefix);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -85,171 +85,147 @@ public final class PublicDelegatedPrefixArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="publicDelegatedSubPrefixs")
-      private final @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
+    private @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
 
-    public Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs() {
-        return this.publicDelegatedSubPrefixs == null ? Codegen.empty() : this.publicDelegatedSubPrefixs;
+    public Optional<Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>>> publicDelegatedSubPrefixs() {
+        return Optional.ofNullable(this.publicDelegatedSubPrefixs);
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
-    public PublicDelegatedPrefixArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> ipCidrRange,
-        @Nullable Output<Boolean> isLiveMigration,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parentPrefix,
-        @Nullable Output<String> project,
-        @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs,
-        Output<String> region,
-        @Nullable Output<String> requestId) {
-        this.description = description;
-        this.ipCidrRange = ipCidrRange;
-        this.isLiveMigration = isLiveMigration;
-        this.name = name;
-        this.parentPrefix = parentPrefix;
-        this.project = project;
-        this.publicDelegatedSubPrefixs = publicDelegatedSubPrefixs;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.requestId = requestId;
-    }
+    private PublicDelegatedPrefixArgs() {}
 
-    private PublicDelegatedPrefixArgs() {
-        this.description = Codegen.empty();
-        this.ipCidrRange = Codegen.empty();
-        this.isLiveMigration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentPrefix = Codegen.empty();
-        this.project = Codegen.empty();
-        this.publicDelegatedSubPrefixs = Codegen.empty();
-        this.region = Codegen.empty();
-        this.requestId = Codegen.empty();
+    private PublicDelegatedPrefixArgs(PublicDelegatedPrefixArgs $) {
+        this.description = $.description;
+        this.ipCidrRange = $.ipCidrRange;
+        this.isLiveMigration = $.isLiveMigration;
+        this.name = $.name;
+        this.parentPrefix = $.parentPrefix;
+        this.project = $.project;
+        this.publicDelegatedSubPrefixs = $.publicDelegatedSubPrefixs;
+        this.region = $.region;
+        this.requestId = $.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicDelegatedPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> ipCidrRange;
-        private @Nullable Output<Boolean> isLiveMigration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parentPrefix;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
-        private Output<String> region;
-        private @Nullable Output<String> requestId;
+        private PublicDelegatedPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicDelegatedPrefixArgs();
         }
 
         public Builder(PublicDelegatedPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.isLiveMigration = defaults.isLiveMigration;
-    	      this.name = defaults.name;
-    	      this.parentPrefix = defaults.parentPrefix;
-    	      this.project = defaults.project;
-    	      this.publicDelegatedSubPrefixs = defaults.publicDelegatedSubPrefixs;
-    	      this.region = defaults.region;
-    	      this.requestId = defaults.requestId;
+            $ = new PublicDelegatedPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
-            this.ipCidrRange = ipCidrRange;
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
-        public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Codegen.ofNullable(ipCidrRange);
-            return this;
+
+        public Builder ipCidrRange(String ipCidrRange) {
+            return ipCidrRange(Output.of(ipCidrRange));
         }
+
         public Builder isLiveMigration(@Nullable Output<Boolean> isLiveMigration) {
-            this.isLiveMigration = isLiveMigration;
+            $.isLiveMigration = isLiveMigration;
             return this;
         }
-        public Builder isLiveMigration(@Nullable Boolean isLiveMigration) {
-            this.isLiveMigration = Codegen.ofNullable(isLiveMigration);
-            return this;
+
+        public Builder isLiveMigration(Boolean isLiveMigration) {
+            return isLiveMigration(Output.of(isLiveMigration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentPrefix(@Nullable Output<String> parentPrefix) {
-            this.parentPrefix = parentPrefix;
+            $.parentPrefix = parentPrefix;
             return this;
         }
-        public Builder parentPrefix(@Nullable String parentPrefix) {
-            this.parentPrefix = Codegen.ofNullable(parentPrefix);
-            return this;
+
+        public Builder parentPrefix(String parentPrefix) {
+            return parentPrefix(Output.of(parentPrefix));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder publicDelegatedSubPrefixs(@Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs) {
-            this.publicDelegatedSubPrefixs = publicDelegatedSubPrefixs;
+            $.publicDelegatedSubPrefixs = publicDelegatedSubPrefixs;
             return this;
         }
-        public Builder publicDelegatedSubPrefixs(@Nullable List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs> publicDelegatedSubPrefixs) {
-            this.publicDelegatedSubPrefixs = Codegen.ofNullable(publicDelegatedSubPrefixs);
-            return this;
+
+        public Builder publicDelegatedSubPrefixs(List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs> publicDelegatedSubPrefixs) {
+            return publicDelegatedSubPrefixs(Output.of(publicDelegatedSubPrefixs));
         }
+
         public Builder publicDelegatedSubPrefixs(PublicDelegatedPrefixPublicDelegatedSubPrefixArgs... publicDelegatedSubPrefixs) {
             return publicDelegatedSubPrefixs(List.of(publicDelegatedSubPrefixs));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
-        }        public PublicDelegatedPrefixArgs build() {
-            return new PublicDelegatedPrefixArgs(description, ipCidrRange, isLiveMigration, name, parentPrefix, project, publicDelegatedSubPrefixs, region, requestId);
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
+        }
+
+        public PublicDelegatedPrefixArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

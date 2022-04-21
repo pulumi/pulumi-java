@@ -21,7 +21,7 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="databaseDumpType", required=true)
-      private final String databaseDumpType;
+    private String databaseDumpType;
 
     public String databaseDumpType() {
         return this.databaseDumpType;
@@ -32,7 +32,7 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="destinationGcsUri", required=true)
-      private final String destinationGcsUri;
+    private String destinationGcsUri;
 
     public String destinationGcsUri() {
         return this.destinationGcsUri;
@@ -43,7 +43,7 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -54,7 +54,7 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -65,82 +65,73 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public MetadataExportResponse(
-        String databaseDumpType,
-        String destinationGcsUri,
-        String endTime,
-        String startTime,
-        String state) {
-        this.databaseDumpType = Objects.requireNonNull(databaseDumpType, "expected parameter 'databaseDumpType' to be non-null");
-        this.destinationGcsUri = Objects.requireNonNull(destinationGcsUri, "expected parameter 'destinationGcsUri' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private MetadataExportResponse() {}
 
-    private MetadataExportResponse() {
-        this.databaseDumpType = null;
-        this.destinationGcsUri = null;
-        this.endTime = null;
-        this.startTime = null;
-        this.state = null;
+    private MetadataExportResponse(MetadataExportResponse $) {
+        this.databaseDumpType = $.databaseDumpType;
+        this.destinationGcsUri = $.destinationGcsUri;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataExportResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseDumpType;
-        private String destinationGcsUri;
-        private String endTime;
-        private String startTime;
-        private String state;
+        private MetadataExportResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataExportResponse();
         }
 
         public Builder(MetadataExportResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseDumpType = defaults.databaseDumpType;
-    	      this.destinationGcsUri = defaults.destinationGcsUri;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
+            $ = new MetadataExportResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseDumpType(String databaseDumpType) {
-            this.databaseDumpType = Objects.requireNonNull(databaseDumpType);
+            $.databaseDumpType = databaseDumpType;
             return this;
         }
+
         public Builder destinationGcsUri(String destinationGcsUri) {
-            this.destinationGcsUri = Objects.requireNonNull(destinationGcsUri);
+            $.destinationGcsUri = destinationGcsUri;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public MetadataExportResponse build() {
-            return new MetadataExportResponse(databaseDumpType, destinationGcsUri, endTime, startTime, state);
+        }
+
+        public MetadataExportResponse build() {
+            $.databaseDumpType = Objects.requireNonNull($.databaseDumpType, "expected parameter 'databaseDumpType' to be non-null");
+            $.destinationGcsUri = Objects.requireNonNull($.destinationGcsUri, "expected parameter 'destinationGcsUri' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

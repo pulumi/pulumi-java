@@ -6,9 +6,9 @@ package com.pulumi.awsnative.pinpoint.inputs;
 import com.pulumi.awsnative.pinpoint.enums.InAppTemplateAlignment;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class InAppTemplateHeaderConfigArgs extends com.pulumi.resources.Re
     public static final InAppTemplateHeaderConfigArgs Empty = new InAppTemplateHeaderConfigArgs();
 
     @Import(name="alignment")
-      private final @Nullable Output<InAppTemplateAlignment> alignment;
+    private @Nullable Output<InAppTemplateAlignment> alignment;
 
-    public Output<InAppTemplateAlignment> alignment() {
-        return this.alignment == null ? Codegen.empty() : this.alignment;
+    public Optional<Output<InAppTemplateAlignment>> alignment() {
+        return Optional.ofNullable(this.alignment);
     }
 
     @Import(name="header")
-      private final @Nullable Output<String> header;
+    private @Nullable Output<String> header;
 
-    public Output<String> header() {
-        return this.header == null ? Codegen.empty() : this.header;
+    public Optional<Output<String>> header() {
+        return Optional.ofNullable(this.header);
     }
 
     @Import(name="textColor")
-      private final @Nullable Output<String> textColor;
+    private @Nullable Output<String> textColor;
 
-    public Output<String> textColor() {
-        return this.textColor == null ? Codegen.empty() : this.textColor;
+    public Optional<Output<String>> textColor() {
+        return Optional.ofNullable(this.textColor);
     }
 
-    public InAppTemplateHeaderConfigArgs(
-        @Nullable Output<InAppTemplateAlignment> alignment,
-        @Nullable Output<String> header,
-        @Nullable Output<String> textColor) {
-        this.alignment = alignment;
-        this.header = header;
-        this.textColor = textColor;
-    }
+    private InAppTemplateHeaderConfigArgs() {}
 
-    private InAppTemplateHeaderConfigArgs() {
-        this.alignment = Codegen.empty();
-        this.header = Codegen.empty();
-        this.textColor = Codegen.empty();
+    private InAppTemplateHeaderConfigArgs(InAppTemplateHeaderConfigArgs $) {
+        this.alignment = $.alignment;
+        this.header = $.header;
+        this.textColor = $.textColor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateHeaderConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InAppTemplateAlignment> alignment;
-        private @Nullable Output<String> header;
-        private @Nullable Output<String> textColor;
+        private InAppTemplateHeaderConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateHeaderConfigArgs();
         }
 
         public Builder(InAppTemplateHeaderConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alignment = defaults.alignment;
-    	      this.header = defaults.header;
-    	      this.textColor = defaults.textColor;
+            $ = new InAppTemplateHeaderConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alignment(@Nullable Output<InAppTemplateAlignment> alignment) {
-            this.alignment = alignment;
+            $.alignment = alignment;
             return this;
         }
-        public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
-            this.alignment = Codegen.ofNullable(alignment);
-            return this;
+
+        public Builder alignment(InAppTemplateAlignment alignment) {
+            return alignment(Output.of(alignment));
         }
+
         public Builder header(@Nullable Output<String> header) {
-            this.header = header;
+            $.header = header;
             return this;
         }
-        public Builder header(@Nullable String header) {
-            this.header = Codegen.ofNullable(header);
-            return this;
+
+        public Builder header(String header) {
+            return header(Output.of(header));
         }
+
         public Builder textColor(@Nullable Output<String> textColor) {
-            this.textColor = textColor;
+            $.textColor = textColor;
             return this;
         }
-        public Builder textColor(@Nullable String textColor) {
-            this.textColor = Codegen.ofNullable(textColor);
-            return this;
-        }        public InAppTemplateHeaderConfigArgs build() {
-            return new InAppTemplateHeaderConfigArgs(alignment, header, textColor);
+
+        public Builder textColor(String textColor) {
+            return textColor(Output.of(textColor));
+        }
+
+        public InAppTemplateHeaderConfigArgs build() {
+            return $;
         }
     }
+
 }

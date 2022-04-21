@@ -8,7 +8,6 @@ import com.pulumi.azurenative.datamigration.inputs.SelectedCertificateInputArgs;
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,7 +25,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="backupFileShare", required=true)
-      private final Output<FileShareArgs> backupFileShare;
+    private Output<FileShareArgs> backupFileShare;
 
     public Output<FileShareArgs> backupFileShare() {
         return this.backupFileShare;
@@ -37,7 +36,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="connectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> connectionInfo;
+    private Output<SqlConnectionInfoArgs> connectionInfo;
 
     public Output<SqlConnectionInfoArgs> connectionInfo() {
         return this.connectionInfo;
@@ -48,79 +47,75 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="selectedCertificates", required=true)
-      private final Output<List<SelectedCertificateInputArgs>> selectedCertificates;
+    private Output<List<SelectedCertificateInputArgs>> selectedCertificates;
 
     public Output<List<SelectedCertificateInputArgs>> selectedCertificates() {
         return this.selectedCertificates;
     }
 
-    public GetTdeCertificatesSqlTaskInputArgs(
-        Output<FileShareArgs> backupFileShare,
-        Output<SqlConnectionInfoArgs> connectionInfo,
-        Output<List<SelectedCertificateInputArgs>> selectedCertificates) {
-        this.backupFileShare = Objects.requireNonNull(backupFileShare, "expected parameter 'backupFileShare' to be non-null");
-        this.connectionInfo = Objects.requireNonNull(connectionInfo, "expected parameter 'connectionInfo' to be non-null");
-        this.selectedCertificates = Objects.requireNonNull(selectedCertificates, "expected parameter 'selectedCertificates' to be non-null");
-    }
+    private GetTdeCertificatesSqlTaskInputArgs() {}
 
-    private GetTdeCertificatesSqlTaskInputArgs() {
-        this.backupFileShare = Codegen.empty();
-        this.connectionInfo = Codegen.empty();
-        this.selectedCertificates = Codegen.empty();
+    private GetTdeCertificatesSqlTaskInputArgs(GetTdeCertificatesSqlTaskInputArgs $) {
+        this.backupFileShare = $.backupFileShare;
+        this.connectionInfo = $.connectionInfo;
+        this.selectedCertificates = $.selectedCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTdeCertificatesSqlTaskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FileShareArgs> backupFileShare;
-        private Output<SqlConnectionInfoArgs> connectionInfo;
-        private Output<List<SelectedCertificateInputArgs>> selectedCertificates;
+        private GetTdeCertificatesSqlTaskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTdeCertificatesSqlTaskInputArgs();
         }
 
         public Builder(GetTdeCertificatesSqlTaskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupFileShare = defaults.backupFileShare;
-    	      this.connectionInfo = defaults.connectionInfo;
-    	      this.selectedCertificates = defaults.selectedCertificates;
+            $ = new GetTdeCertificatesSqlTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupFileShare(Output<FileShareArgs> backupFileShare) {
-            this.backupFileShare = Objects.requireNonNull(backupFileShare);
+            $.backupFileShare = backupFileShare;
             return this;
         }
+
         public Builder backupFileShare(FileShareArgs backupFileShare) {
-            this.backupFileShare = Output.of(Objects.requireNonNull(backupFileShare));
-            return this;
+            return backupFileShare(Output.of(backupFileShare));
         }
+
         public Builder connectionInfo(Output<SqlConnectionInfoArgs> connectionInfo) {
-            this.connectionInfo = Objects.requireNonNull(connectionInfo);
+            $.connectionInfo = connectionInfo;
             return this;
         }
+
         public Builder connectionInfo(SqlConnectionInfoArgs connectionInfo) {
-            this.connectionInfo = Output.of(Objects.requireNonNull(connectionInfo));
-            return this;
+            return connectionInfo(Output.of(connectionInfo));
         }
+
         public Builder selectedCertificates(Output<List<SelectedCertificateInputArgs>> selectedCertificates) {
-            this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
+            $.selectedCertificates = selectedCertificates;
             return this;
         }
+
         public Builder selectedCertificates(List<SelectedCertificateInputArgs> selectedCertificates) {
-            this.selectedCertificates = Output.of(Objects.requireNonNull(selectedCertificates));
-            return this;
+            return selectedCertificates(Output.of(selectedCertificates));
         }
+
         public Builder selectedCertificates(SelectedCertificateInputArgs... selectedCertificates) {
             return selectedCertificates(List.of(selectedCertificates));
-        }        public GetTdeCertificatesSqlTaskInputArgs build() {
-            return new GetTdeCertificatesSqlTaskInputArgs(backupFileShare, connectionInfo, selectedCertificates);
+        }
+
+        public GetTdeCertificatesSqlTaskInputArgs build() {
+            $.backupFileShare = Objects.requireNonNull($.backupFileShare, "expected parameter 'backupFileShare' to be non-null");
+            $.connectionInfo = Objects.requireNonNull($.connectionInfo, "expected parameter 'connectionInfo' to be non-null");
+            $.selectedCertificates = Objects.requireNonNull($.selectedCertificates, "expected parameter 'selectedCertificates' to be non-null");
+            return $;
         }
     }
+
 }

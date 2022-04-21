@@ -15,62 +15,58 @@ public final class CanarySchedule extends com.pulumi.resources.InvokeArgs {
     public static final CanarySchedule Empty = new CanarySchedule();
 
     @Import(name="durationInSeconds")
-      private final @Nullable String durationInSeconds;
+    private @Nullable String durationInSeconds;
 
     public Optional<String> durationInSeconds() {
-        return this.durationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationInSeconds);
+        return Optional.ofNullable(this.durationInSeconds);
     }
 
     @Import(name="expression", required=true)
-      private final String expression;
+    private String expression;
 
     public String expression() {
         return this.expression;
     }
 
-    public CanarySchedule(
-        @Nullable String durationInSeconds,
-        String expression) {
-        this.durationInSeconds = durationInSeconds;
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-    }
+    private CanarySchedule() {}
 
-    private CanarySchedule() {
-        this.durationInSeconds = null;
-        this.expression = null;
+    private CanarySchedule(CanarySchedule $) {
+        this.durationInSeconds = $.durationInSeconds;
+        this.expression = $.expression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanarySchedule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String durationInSeconds;
-        private String expression;
+        private CanarySchedule $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanarySchedule();
         }
 
         public Builder(CanarySchedule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationInSeconds = defaults.durationInSeconds;
-    	      this.expression = defaults.expression;
+            $ = new CanarySchedule(Objects.requireNonNull(defaults));
         }
 
         public Builder durationInSeconds(@Nullable String durationInSeconds) {
-            this.durationInSeconds = durationInSeconds;
+            $.durationInSeconds = durationInSeconds;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
-        }        public CanarySchedule build() {
-            return new CanarySchedule(durationInSeconds, expression);
+        }
+
+        public CanarySchedule build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            return $;
         }
     }
+
 }

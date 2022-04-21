@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * 
      */
     @Import(name="acceleratorCount")
-      private final @Nullable Output<Integer> acceleratorCount;
+    private @Nullable Output<Integer> acceleratorCount;
 
-    public Output<Integer> acceleratorCount() {
-        return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
+    public Optional<Output<Integer>> acceleratorCount() {
+        return Optional.ofNullable(this.acceleratorCount);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * 
      */
     @Import(name="acceleratorType")
-      private final @Nullable Output<String> acceleratorType;
+    private @Nullable Output<String> acceleratorType;
 
-    public Output<String> acceleratorType() {
-        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
+    public Optional<Output<String>> acceleratorType() {
+        return Optional.ofNullable(this.acceleratorType);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs(
-        @Nullable Output<Integer> acceleratorCount,
-        @Nullable Output<String> acceleratorType) {
-        this.acceleratorCount = acceleratorCount;
-        this.acceleratorType = acceleratorType;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs() {
-        this.acceleratorCount = Codegen.empty();
-        this.acceleratorType = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorType = $.acceleratorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> acceleratorCount;
-        private @Nullable Output<String> acceleratorType;
+        private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorType = defaults.acceleratorType;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(@Nullable Output<Integer> acceleratorCount) {
-            this.acceleratorCount = acceleratorCount;
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
-        public Builder acceleratorCount(@Nullable Integer acceleratorCount) {
-            this.acceleratorCount = Codegen.ofNullable(acceleratorCount);
-            return this;
+
+        public Builder acceleratorCount(Integer acceleratorCount) {
+            return acceleratorCount(Output.of(acceleratorCount));
         }
+
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
-            this.acceleratorType = acceleratorType;
+            $.acceleratorType = acceleratorType;
             return this;
         }
-        public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Codegen.ofNullable(acceleratorType);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs(acceleratorCount, acceleratorType);
+
+        public Builder acceleratorType(String acceleratorType) {
+            return acceleratorType(Output.of(acceleratorType));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs build() {
+            return $;
         }
     }
+
 }

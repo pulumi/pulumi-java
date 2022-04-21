@@ -21,7 +21,7 @@ public final class GatewayConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="gatewayAuthMethod", required=true)
-      private final String gatewayAuthMethod;
+    private String gatewayAuthMethod;
 
     public String gatewayAuthMethod() {
         return this.gatewayAuthMethod;
@@ -32,7 +32,7 @@ public final class GatewayConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="gatewayType", required=true)
-      private final String gatewayType;
+    private String gatewayType;
 
     public String gatewayType() {
         return this.gatewayType;
@@ -43,7 +43,7 @@ public final class GatewayConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lastAccessedGatewayId", required=true)
-      private final String lastAccessedGatewayId;
+    private String lastAccessedGatewayId;
 
     public String lastAccessedGatewayId() {
         return this.lastAccessedGatewayId;
@@ -54,73 +54,66 @@ public final class GatewayConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lastAccessedGatewayTime", required=true)
-      private final String lastAccessedGatewayTime;
+    private String lastAccessedGatewayTime;
 
     public String lastAccessedGatewayTime() {
         return this.lastAccessedGatewayTime;
     }
 
-    public GatewayConfigResponse(
-        String gatewayAuthMethod,
-        String gatewayType,
-        String lastAccessedGatewayId,
-        String lastAccessedGatewayTime) {
-        this.gatewayAuthMethod = Objects.requireNonNull(gatewayAuthMethod, "expected parameter 'gatewayAuthMethod' to be non-null");
-        this.gatewayType = Objects.requireNonNull(gatewayType, "expected parameter 'gatewayType' to be non-null");
-        this.lastAccessedGatewayId = Objects.requireNonNull(lastAccessedGatewayId, "expected parameter 'lastAccessedGatewayId' to be non-null");
-        this.lastAccessedGatewayTime = Objects.requireNonNull(lastAccessedGatewayTime, "expected parameter 'lastAccessedGatewayTime' to be non-null");
-    }
+    private GatewayConfigResponse() {}
 
-    private GatewayConfigResponse() {
-        this.gatewayAuthMethod = null;
-        this.gatewayType = null;
-        this.lastAccessedGatewayId = null;
-        this.lastAccessedGatewayTime = null;
+    private GatewayConfigResponse(GatewayConfigResponse $) {
+        this.gatewayAuthMethod = $.gatewayAuthMethod;
+        this.gatewayType = $.gatewayType;
+        this.lastAccessedGatewayId = $.lastAccessedGatewayId;
+        this.lastAccessedGatewayTime = $.lastAccessedGatewayTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayAuthMethod;
-        private String gatewayType;
-        private String lastAccessedGatewayId;
-        private String lastAccessedGatewayTime;
+        private GatewayConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayConfigResponse();
         }
 
         public Builder(GatewayConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayAuthMethod = defaults.gatewayAuthMethod;
-    	      this.gatewayType = defaults.gatewayType;
-    	      this.lastAccessedGatewayId = defaults.lastAccessedGatewayId;
-    	      this.lastAccessedGatewayTime = defaults.lastAccessedGatewayTime;
+            $ = new GatewayConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayAuthMethod(String gatewayAuthMethod) {
-            this.gatewayAuthMethod = Objects.requireNonNull(gatewayAuthMethod);
+            $.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
+
         public Builder gatewayType(String gatewayType) {
-            this.gatewayType = Objects.requireNonNull(gatewayType);
+            $.gatewayType = gatewayType;
             return this;
         }
+
         public Builder lastAccessedGatewayId(String lastAccessedGatewayId) {
-            this.lastAccessedGatewayId = Objects.requireNonNull(lastAccessedGatewayId);
+            $.lastAccessedGatewayId = lastAccessedGatewayId;
             return this;
         }
+
         public Builder lastAccessedGatewayTime(String lastAccessedGatewayTime) {
-            this.lastAccessedGatewayTime = Objects.requireNonNull(lastAccessedGatewayTime);
+            $.lastAccessedGatewayTime = lastAccessedGatewayTime;
             return this;
-        }        public GatewayConfigResponse build() {
-            return new GatewayConfigResponse(gatewayAuthMethod, gatewayType, lastAccessedGatewayId, lastAccessedGatewayTime);
+        }
+
+        public GatewayConfigResponse build() {
+            $.gatewayAuthMethod = Objects.requireNonNull($.gatewayAuthMethod, "expected parameter 'gatewayAuthMethod' to be non-null");
+            $.gatewayType = Objects.requireNonNull($.gatewayType, "expected parameter 'gatewayType' to be non-null");
+            $.lastAccessedGatewayId = Objects.requireNonNull($.lastAccessedGatewayId, "expected parameter 'lastAccessedGatewayId' to be non-null");
+            $.lastAccessedGatewayTime = Objects.requireNonNull($.lastAccessedGatewayTime, "expected parameter 'lastAccessedGatewayTime' to be non-null");
+            return $;
         }
     }
+
 }

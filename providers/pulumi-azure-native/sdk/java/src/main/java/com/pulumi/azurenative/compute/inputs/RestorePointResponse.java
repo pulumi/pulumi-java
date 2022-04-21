@@ -26,7 +26,7 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="consistencyMode", required=true)
-      private final String consistencyMode;
+    private String consistencyMode;
 
     public String consistencyMode() {
         return this.consistencyMode;
@@ -37,10 +37,10 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="excludeDisks")
-      private final @Nullable List<ApiEntityReferenceResponse> excludeDisks;
+    private @Nullable List<ApiEntityReferenceResponse> excludeDisks;
 
-    public List<ApiEntityReferenceResponse> excludeDisks() {
-        return this.excludeDisks == null ? List.of() : this.excludeDisks;
+    public Optional<List<ApiEntityReferenceResponse>> excludeDisks() {
+        return Optional.ofNullable(this.excludeDisks);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -59,7 +59,7 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -70,7 +70,7 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -81,7 +81,7 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceMetadata", required=true)
-      private final RestorePointSourceMetadataResponse sourceMetadata;
+    private RestorePointSourceMetadataResponse sourceMetadata;
 
     public RestorePointSourceMetadataResponse sourceMetadata() {
         return this.sourceMetadata;
@@ -92,10 +92,10 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="timeCreated")
-      private final @Nullable String timeCreated;
+    private @Nullable String timeCreated;
 
     public Optional<String> timeCreated() {
-        return this.timeCreated == null ? Optional.empty() : Optional.ofNullable(this.timeCreated);
+        return Optional.ofNullable(this.timeCreated);
     }
 
     /**
@@ -103,112 +103,96 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RestorePointResponse(
-        String consistencyMode,
-        @Nullable List<ApiEntityReferenceResponse> excludeDisks,
-        String id,
-        String name,
-        String provisioningState,
-        RestorePointSourceMetadataResponse sourceMetadata,
-        @Nullable String timeCreated,
-        String type) {
-        this.consistencyMode = Objects.requireNonNull(consistencyMode, "expected parameter 'consistencyMode' to be non-null");
-        this.excludeDisks = excludeDisks;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.sourceMetadata = Objects.requireNonNull(sourceMetadata, "expected parameter 'sourceMetadata' to be non-null");
-        this.timeCreated = timeCreated;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RestorePointResponse() {}
 
-    private RestorePointResponse() {
-        this.consistencyMode = null;
-        this.excludeDisks = List.of();
-        this.id = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.sourceMetadata = null;
-        this.timeCreated = null;
-        this.type = null;
+    private RestorePointResponse(RestorePointResponse $) {
+        this.consistencyMode = $.consistencyMode;
+        this.excludeDisks = $.excludeDisks;
+        this.id = $.id;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.sourceMetadata = $.sourceMetadata;
+        this.timeCreated = $.timeCreated;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestorePointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consistencyMode;
-        private @Nullable List<ApiEntityReferenceResponse> excludeDisks;
-        private String id;
-        private String name;
-        private String provisioningState;
-        private RestorePointSourceMetadataResponse sourceMetadata;
-        private @Nullable String timeCreated;
-        private String type;
+        private RestorePointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestorePointResponse();
         }
 
         public Builder(RestorePointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consistencyMode = defaults.consistencyMode;
-    	      this.excludeDisks = defaults.excludeDisks;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.sourceMetadata = defaults.sourceMetadata;
-    	      this.timeCreated = defaults.timeCreated;
-    	      this.type = defaults.type;
+            $ = new RestorePointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder consistencyMode(String consistencyMode) {
-            this.consistencyMode = Objects.requireNonNull(consistencyMode);
+            $.consistencyMode = consistencyMode;
             return this;
         }
+
         public Builder excludeDisks(@Nullable List<ApiEntityReferenceResponse> excludeDisks) {
-            this.excludeDisks = excludeDisks;
+            $.excludeDisks = excludeDisks;
             return this;
         }
+
         public Builder excludeDisks(ApiEntityReferenceResponse... excludeDisks) {
             return excludeDisks(List.of(excludeDisks));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder sourceMetadata(RestorePointSourceMetadataResponse sourceMetadata) {
-            this.sourceMetadata = Objects.requireNonNull(sourceMetadata);
+            $.sourceMetadata = sourceMetadata;
             return this;
         }
+
         public Builder timeCreated(@Nullable String timeCreated) {
-            this.timeCreated = timeCreated;
+            $.timeCreated = timeCreated;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RestorePointResponse build() {
-            return new RestorePointResponse(consistencyMode, excludeDisks, id, name, provisioningState, sourceMetadata, timeCreated, type);
+        }
+
+        public RestorePointResponse build() {
+            $.consistencyMode = Objects.requireNonNull($.consistencyMode, "expected parameter 'consistencyMode' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.sourceMetadata = Objects.requireNonNull($.sourceMetadata, "expected parameter 'sourceMetadata' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

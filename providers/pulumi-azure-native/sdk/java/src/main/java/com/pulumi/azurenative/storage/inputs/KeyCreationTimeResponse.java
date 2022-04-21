@@ -19,62 +19,57 @@ public final class KeyCreationTimeResponse extends com.pulumi.resources.InvokeAr
     public static final KeyCreationTimeResponse Empty = new KeyCreationTimeResponse();
 
     @Import(name="key1")
-      private final @Nullable String key1;
+    private @Nullable String key1;
 
     public Optional<String> key1() {
-        return this.key1 == null ? Optional.empty() : Optional.ofNullable(this.key1);
+        return Optional.ofNullable(this.key1);
     }
 
     @Import(name="key2")
-      private final @Nullable String key2;
+    private @Nullable String key2;
 
     public Optional<String> key2() {
-        return this.key2 == null ? Optional.empty() : Optional.ofNullable(this.key2);
+        return Optional.ofNullable(this.key2);
     }
 
-    public KeyCreationTimeResponse(
-        @Nullable String key1,
-        @Nullable String key2) {
-        this.key1 = key1;
-        this.key2 = key2;
-    }
+    private KeyCreationTimeResponse() {}
 
-    private KeyCreationTimeResponse() {
-        this.key1 = null;
-        this.key2 = null;
+    private KeyCreationTimeResponse(KeyCreationTimeResponse $) {
+        this.key1 = $.key1;
+        this.key2 = $.key2;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyCreationTimeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key1;
-        private @Nullable String key2;
+        private KeyCreationTimeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyCreationTimeResponse();
         }
 
         public Builder(KeyCreationTimeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key1 = defaults.key1;
-    	      this.key2 = defaults.key2;
+            $ = new KeyCreationTimeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key1(@Nullable String key1) {
-            this.key1 = key1;
+            $.key1 = key1;
             return this;
         }
+
         public Builder key2(@Nullable String key2) {
-            this.key2 = key2;
+            $.key2 = key2;
             return this;
-        }        public KeyCreationTimeResponse build() {
-            return new KeyCreationTimeResponse(key1, key2);
+        }
+
+        public KeyCreationTimeResponse build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="routeFilterName", required=true)
-      private final String routeFilterName;
+    private String routeFilterName;
 
     public String routeFilterName() {
         return this.routeFilterName;
@@ -39,64 +39,59 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ruleName", required=true)
-      private final String ruleName;
+    private String ruleName;
 
     public String ruleName() {
         return this.ruleName;
     }
 
-    public GetRouteFilterRuleArgs(
-        String resourceGroupName,
-        String routeFilterName,
-        String ruleName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeFilterName = Objects.requireNonNull(routeFilterName, "expected parameter 'routeFilterName' to be non-null");
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-    }
+    private GetRouteFilterRuleArgs() {}
 
-    private GetRouteFilterRuleArgs() {
-        this.resourceGroupName = null;
-        this.routeFilterName = null;
-        this.ruleName = null;
+    private GetRouteFilterRuleArgs(GetRouteFilterRuleArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeFilterName = $.routeFilterName;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteFilterRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String routeFilterName;
-        private String ruleName;
+        private GetRouteFilterRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteFilterRuleArgs();
         }
 
         public Builder(GetRouteFilterRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeFilterName = defaults.routeFilterName;
-    	      this.ruleName = defaults.ruleName;
+            $ = new GetRouteFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder routeFilterName(String routeFilterName) {
-            this.routeFilterName = Objects.requireNonNull(routeFilterName);
+            $.routeFilterName = routeFilterName;
             return this;
         }
+
         public Builder ruleName(String ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
-        }        public GetRouteFilterRuleArgs build() {
-            return new GetRouteFilterRuleArgs(resourceGroupName, routeFilterName, ruleName);
+        }
+
+        public GetRouteFilterRuleArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.routeFilterName = Objects.requireNonNull($.routeFilterName, "expected parameter 'routeFilterName' to be non-null");
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            return $;
         }
     }
+
 }

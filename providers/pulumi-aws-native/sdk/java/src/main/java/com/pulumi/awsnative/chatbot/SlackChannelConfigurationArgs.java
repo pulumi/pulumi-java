@@ -5,11 +5,11 @@ package com.pulumi.awsnative.chatbot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class SlackChannelConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="configurationName", required=true)
-      private final Output<String> configurationName;
+    private Output<String> configurationName;
 
     public Output<String> configurationName() {
         return this.configurationName;
@@ -33,10 +33,10 @@ public final class SlackChannelConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="guardrailPolicies")
-      private final @Nullable Output<List<String>> guardrailPolicies;
+    private @Nullable Output<List<String>> guardrailPolicies;
 
-    public Output<List<String>> guardrailPolicies() {
-        return this.guardrailPolicies == null ? Codegen.empty() : this.guardrailPolicies;
+    public Optional<Output<List<String>>> guardrailPolicies() {
+        return Optional.ofNullable(this.guardrailPolicies);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class SlackChannelConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="iamRoleArn", required=true)
-      private final Output<String> iamRoleArn;
+    private Output<String> iamRoleArn;
 
     public Output<String> iamRoleArn() {
         return this.iamRoleArn;
@@ -55,10 +55,10 @@ public final class SlackChannelConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="loggingLevel")
-      private final @Nullable Output<String> loggingLevel;
+    private @Nullable Output<String> loggingLevel;
 
-    public Output<String> loggingLevel() {
-        return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
+    public Optional<Output<String>> loggingLevel() {
+        return Optional.ofNullable(this.loggingLevel);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class SlackChannelConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="slackChannelId", required=true)
-      private final Output<String> slackChannelId;
+    private Output<String> slackChannelId;
 
     public Output<String> slackChannelId() {
         return this.slackChannelId;
@@ -77,7 +77,7 @@ public final class SlackChannelConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="slackWorkspaceId", required=true)
-      private final Output<String> slackWorkspaceId;
+    private Output<String> slackWorkspaceId;
 
     public Output<String> slackWorkspaceId() {
         return this.slackWorkspaceId;
@@ -88,10 +88,10 @@ public final class SlackChannelConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="snsTopicArns")
-      private final @Nullable Output<List<String>> snsTopicArns;
+    private @Nullable Output<List<String>> snsTopicArns;
 
-    public Output<List<String>> snsTopicArns() {
-        return this.snsTopicArns == null ? Codegen.empty() : this.snsTopicArns;
+    public Optional<Output<List<String>>> snsTopicArns() {
+        return Optional.ofNullable(this.snsTopicArns);
     }
 
     /**
@@ -99,147 +99,130 @@ public final class SlackChannelConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="userRoleRequired")
-      private final @Nullable Output<Boolean> userRoleRequired;
+    private @Nullable Output<Boolean> userRoleRequired;
 
-    public Output<Boolean> userRoleRequired() {
-        return this.userRoleRequired == null ? Codegen.empty() : this.userRoleRequired;
+    public Optional<Output<Boolean>> userRoleRequired() {
+        return Optional.ofNullable(this.userRoleRequired);
     }
 
-    public SlackChannelConfigurationArgs(
-        Output<String> configurationName,
-        @Nullable Output<List<String>> guardrailPolicies,
-        Output<String> iamRoleArn,
-        @Nullable Output<String> loggingLevel,
-        Output<String> slackChannelId,
-        Output<String> slackWorkspaceId,
-        @Nullable Output<List<String>> snsTopicArns,
-        @Nullable Output<Boolean> userRoleRequired) {
-        this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
-        this.guardrailPolicies = guardrailPolicies;
-        this.iamRoleArn = Objects.requireNonNull(iamRoleArn, "expected parameter 'iamRoleArn' to be non-null");
-        this.loggingLevel = loggingLevel;
-        this.slackChannelId = Objects.requireNonNull(slackChannelId, "expected parameter 'slackChannelId' to be non-null");
-        this.slackWorkspaceId = Objects.requireNonNull(slackWorkspaceId, "expected parameter 'slackWorkspaceId' to be non-null");
-        this.snsTopicArns = snsTopicArns;
-        this.userRoleRequired = userRoleRequired;
-    }
+    private SlackChannelConfigurationArgs() {}
 
-    private SlackChannelConfigurationArgs() {
-        this.configurationName = Codegen.empty();
-        this.guardrailPolicies = Codegen.empty();
-        this.iamRoleArn = Codegen.empty();
-        this.loggingLevel = Codegen.empty();
-        this.slackChannelId = Codegen.empty();
-        this.slackWorkspaceId = Codegen.empty();
-        this.snsTopicArns = Codegen.empty();
-        this.userRoleRequired = Codegen.empty();
+    private SlackChannelConfigurationArgs(SlackChannelConfigurationArgs $) {
+        this.configurationName = $.configurationName;
+        this.guardrailPolicies = $.guardrailPolicies;
+        this.iamRoleArn = $.iamRoleArn;
+        this.loggingLevel = $.loggingLevel;
+        this.slackChannelId = $.slackChannelId;
+        this.slackWorkspaceId = $.slackWorkspaceId;
+        this.snsTopicArns = $.snsTopicArns;
+        this.userRoleRequired = $.userRoleRequired;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlackChannelConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configurationName;
-        private @Nullable Output<List<String>> guardrailPolicies;
-        private Output<String> iamRoleArn;
-        private @Nullable Output<String> loggingLevel;
-        private Output<String> slackChannelId;
-        private Output<String> slackWorkspaceId;
-        private @Nullable Output<List<String>> snsTopicArns;
-        private @Nullable Output<Boolean> userRoleRequired;
+        private SlackChannelConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlackChannelConfigurationArgs();
         }
 
         public Builder(SlackChannelConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.guardrailPolicies = defaults.guardrailPolicies;
-    	      this.iamRoleArn = defaults.iamRoleArn;
-    	      this.loggingLevel = defaults.loggingLevel;
-    	      this.slackChannelId = defaults.slackChannelId;
-    	      this.slackWorkspaceId = defaults.slackWorkspaceId;
-    	      this.snsTopicArns = defaults.snsTopicArns;
-    	      this.userRoleRequired = defaults.userRoleRequired;
+            $ = new SlackChannelConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(Output<String> configurationName) {
-            this.configurationName = Objects.requireNonNull(configurationName);
+            $.configurationName = configurationName;
             return this;
         }
+
         public Builder configurationName(String configurationName) {
-            this.configurationName = Output.of(Objects.requireNonNull(configurationName));
-            return this;
+            return configurationName(Output.of(configurationName));
         }
+
         public Builder guardrailPolicies(@Nullable Output<List<String>> guardrailPolicies) {
-            this.guardrailPolicies = guardrailPolicies;
+            $.guardrailPolicies = guardrailPolicies;
             return this;
         }
-        public Builder guardrailPolicies(@Nullable List<String> guardrailPolicies) {
-            this.guardrailPolicies = Codegen.ofNullable(guardrailPolicies);
-            return this;
+
+        public Builder guardrailPolicies(List<String> guardrailPolicies) {
+            return guardrailPolicies(Output.of(guardrailPolicies));
         }
+
         public Builder guardrailPolicies(String... guardrailPolicies) {
             return guardrailPolicies(List.of(guardrailPolicies));
         }
+
         public Builder iamRoleArn(Output<String> iamRoleArn) {
-            this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
+            $.iamRoleArn = iamRoleArn;
             return this;
         }
+
         public Builder iamRoleArn(String iamRoleArn) {
-            this.iamRoleArn = Output.of(Objects.requireNonNull(iamRoleArn));
-            return this;
+            return iamRoleArn(Output.of(iamRoleArn));
         }
+
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
-            this.loggingLevel = loggingLevel;
+            $.loggingLevel = loggingLevel;
             return this;
         }
-        public Builder loggingLevel(@Nullable String loggingLevel) {
-            this.loggingLevel = Codegen.ofNullable(loggingLevel);
-            return this;
+
+        public Builder loggingLevel(String loggingLevel) {
+            return loggingLevel(Output.of(loggingLevel));
         }
+
         public Builder slackChannelId(Output<String> slackChannelId) {
-            this.slackChannelId = Objects.requireNonNull(slackChannelId);
+            $.slackChannelId = slackChannelId;
             return this;
         }
+
         public Builder slackChannelId(String slackChannelId) {
-            this.slackChannelId = Output.of(Objects.requireNonNull(slackChannelId));
-            return this;
+            return slackChannelId(Output.of(slackChannelId));
         }
+
         public Builder slackWorkspaceId(Output<String> slackWorkspaceId) {
-            this.slackWorkspaceId = Objects.requireNonNull(slackWorkspaceId);
+            $.slackWorkspaceId = slackWorkspaceId;
             return this;
         }
+
         public Builder slackWorkspaceId(String slackWorkspaceId) {
-            this.slackWorkspaceId = Output.of(Objects.requireNonNull(slackWorkspaceId));
-            return this;
+            return slackWorkspaceId(Output.of(slackWorkspaceId));
         }
+
         public Builder snsTopicArns(@Nullable Output<List<String>> snsTopicArns) {
-            this.snsTopicArns = snsTopicArns;
+            $.snsTopicArns = snsTopicArns;
             return this;
         }
-        public Builder snsTopicArns(@Nullable List<String> snsTopicArns) {
-            this.snsTopicArns = Codegen.ofNullable(snsTopicArns);
-            return this;
+
+        public Builder snsTopicArns(List<String> snsTopicArns) {
+            return snsTopicArns(Output.of(snsTopicArns));
         }
+
         public Builder snsTopicArns(String... snsTopicArns) {
             return snsTopicArns(List.of(snsTopicArns));
         }
+
         public Builder userRoleRequired(@Nullable Output<Boolean> userRoleRequired) {
-            this.userRoleRequired = userRoleRequired;
+            $.userRoleRequired = userRoleRequired;
             return this;
         }
-        public Builder userRoleRequired(@Nullable Boolean userRoleRequired) {
-            this.userRoleRequired = Codegen.ofNullable(userRoleRequired);
-            return this;
-        }        public SlackChannelConfigurationArgs build() {
-            return new SlackChannelConfigurationArgs(configurationName, guardrailPolicies, iamRoleArn, loggingLevel, slackChannelId, slackWorkspaceId, snsTopicArns, userRoleRequired);
+
+        public Builder userRoleRequired(Boolean userRoleRequired) {
+            return userRoleRequired(Output.of(userRoleRequired));
+        }
+
+        public SlackChannelConfigurationArgs build() {
+            $.configurationName = Objects.requireNonNull($.configurationName, "expected parameter 'configurationName' to be non-null");
+            $.iamRoleArn = Objects.requireNonNull($.iamRoleArn, "expected parameter 'iamRoleArn' to be non-null");
+            $.slackChannelId = Objects.requireNonNull($.slackChannelId, "expected parameter 'slackChannelId' to be non-null");
+            $.slackWorkspaceId = Objects.requireNonNull($.slackWorkspaceId, "expected parameter 'slackWorkspaceId' to be non-null");
+            return $;
         }
     }
+
 }

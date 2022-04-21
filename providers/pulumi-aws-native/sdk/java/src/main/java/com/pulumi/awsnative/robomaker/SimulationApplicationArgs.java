@@ -10,10 +10,10 @@ import com.pulumi.awsnative.robomaker.inputs.SimulationApplicationSourceConfigAr
 import com.pulumi.awsnative.robomaker.inputs.SimulationApplicationTagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="currentRevisionId")
-      private final @Nullable Output<String> currentRevisionId;
+    private @Nullable Output<String> currentRevisionId;
 
-    public Output<String> currentRevisionId() {
-        return this.currentRevisionId == null ? Codegen.empty() : this.currentRevisionId;
+    public Optional<Output<String>> currentRevisionId() {
+        return Optional.ofNullable(this.currentRevisionId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<String> environment;
+    private @Nullable Output<String> environment;
 
-    public Output<String> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<String>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="renderingEngine")
-      private final @Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine;
+    private @Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine;
 
-    public Output<SimulationApplicationRenderingEngineArgs> renderingEngine() {
-        return this.renderingEngine == null ? Codegen.empty() : this.renderingEngine;
+    public Optional<Output<SimulationApplicationRenderingEngineArgs>> renderingEngine() {
+        return Optional.ofNullable(this.renderingEngine);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="robotSoftwareSuite", required=true)
-      private final Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
+    private Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
 
     public Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite() {
         return this.robotSoftwareSuite;
@@ -81,7 +81,7 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="simulationSoftwareSuite", required=true)
-      private final Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite;
+    private Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite;
 
     public Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite() {
         return this.simulationSoftwareSuite;
@@ -92,151 +92,131 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sources")
-      private final @Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources;
+    private @Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources;
 
-    public Output<List<SimulationApplicationSourceConfigArgs>> sources() {
-        return this.sources == null ? Codegen.empty() : this.sources;
+    public Optional<Output<List<SimulationApplicationSourceConfigArgs>>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<SimulationApplicationTagsArgs> tags;
+    private @Nullable Output<SimulationApplicationTagsArgs> tags;
 
-    public Output<SimulationApplicationTagsArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<SimulationApplicationTagsArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SimulationApplicationArgs(
-        @Nullable Output<String> currentRevisionId,
-        @Nullable Output<String> environment,
-        @Nullable Output<String> name,
-        @Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine,
-        Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite,
-        Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite,
-        @Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources,
-        @Nullable Output<SimulationApplicationTagsArgs> tags) {
-        this.currentRevisionId = currentRevisionId;
-        this.environment = environment;
-        this.name = name;
-        this.renderingEngine = renderingEngine;
-        this.robotSoftwareSuite = Objects.requireNonNull(robotSoftwareSuite, "expected parameter 'robotSoftwareSuite' to be non-null");
-        this.simulationSoftwareSuite = Objects.requireNonNull(simulationSoftwareSuite, "expected parameter 'simulationSoftwareSuite' to be non-null");
-        this.sources = sources;
-        this.tags = tags;
-    }
+    private SimulationApplicationArgs() {}
 
-    private SimulationApplicationArgs() {
-        this.currentRevisionId = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.name = Codegen.empty();
-        this.renderingEngine = Codegen.empty();
-        this.robotSoftwareSuite = Codegen.empty();
-        this.simulationSoftwareSuite = Codegen.empty();
-        this.sources = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SimulationApplicationArgs(SimulationApplicationArgs $) {
+        this.currentRevisionId = $.currentRevisionId;
+        this.environment = $.environment;
+        this.name = $.name;
+        this.renderingEngine = $.renderingEngine;
+        this.robotSoftwareSuite = $.robotSoftwareSuite;
+        this.simulationSoftwareSuite = $.simulationSoftwareSuite;
+        this.sources = $.sources;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SimulationApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> currentRevisionId;
-        private @Nullable Output<String> environment;
-        private @Nullable Output<String> name;
-        private @Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine;
-        private Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
-        private Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite;
-        private @Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources;
-        private @Nullable Output<SimulationApplicationTagsArgs> tags;
+        private SimulationApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SimulationApplicationArgs();
         }
 
         public Builder(SimulationApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentRevisionId = defaults.currentRevisionId;
-    	      this.environment = defaults.environment;
-    	      this.name = defaults.name;
-    	      this.renderingEngine = defaults.renderingEngine;
-    	      this.robotSoftwareSuite = defaults.robotSoftwareSuite;
-    	      this.simulationSoftwareSuite = defaults.simulationSoftwareSuite;
-    	      this.sources = defaults.sources;
-    	      this.tags = defaults.tags;
+            $ = new SimulationApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder currentRevisionId(@Nullable Output<String> currentRevisionId) {
-            this.currentRevisionId = currentRevisionId;
+            $.currentRevisionId = currentRevisionId;
             return this;
         }
-        public Builder currentRevisionId(@Nullable String currentRevisionId) {
-            this.currentRevisionId = Codegen.ofNullable(currentRevisionId);
-            return this;
+
+        public Builder currentRevisionId(String currentRevisionId) {
+            return currentRevisionId(Output.of(currentRevisionId));
         }
+
         public Builder environment(@Nullable Output<String> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable String environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(String environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder renderingEngine(@Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine) {
-            this.renderingEngine = renderingEngine;
+            $.renderingEngine = renderingEngine;
             return this;
         }
-        public Builder renderingEngine(@Nullable SimulationApplicationRenderingEngineArgs renderingEngine) {
-            this.renderingEngine = Codegen.ofNullable(renderingEngine);
-            return this;
+
+        public Builder renderingEngine(SimulationApplicationRenderingEngineArgs renderingEngine) {
+            return renderingEngine(Output.of(renderingEngine));
         }
+
         public Builder robotSoftwareSuite(Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite) {
-            this.robotSoftwareSuite = Objects.requireNonNull(robotSoftwareSuite);
+            $.robotSoftwareSuite = robotSoftwareSuite;
             return this;
         }
+
         public Builder robotSoftwareSuite(SimulationApplicationRobotSoftwareSuiteArgs robotSoftwareSuite) {
-            this.robotSoftwareSuite = Output.of(Objects.requireNonNull(robotSoftwareSuite));
-            return this;
+            return robotSoftwareSuite(Output.of(robotSoftwareSuite));
         }
+
         public Builder simulationSoftwareSuite(Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite) {
-            this.simulationSoftwareSuite = Objects.requireNonNull(simulationSoftwareSuite);
+            $.simulationSoftwareSuite = simulationSoftwareSuite;
             return this;
         }
+
         public Builder simulationSoftwareSuite(SimulationApplicationSimulationSoftwareSuiteArgs simulationSoftwareSuite) {
-            this.simulationSoftwareSuite = Output.of(Objects.requireNonNull(simulationSoftwareSuite));
-            return this;
+            return simulationSoftwareSuite(Output.of(simulationSoftwareSuite));
         }
+
         public Builder sources(@Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
-        public Builder sources(@Nullable List<SimulationApplicationSourceConfigArgs> sources) {
-            this.sources = Codegen.ofNullable(sources);
-            return this;
+
+        public Builder sources(List<SimulationApplicationSourceConfigArgs> sources) {
+            return sources(Output.of(sources));
         }
+
         public Builder sources(SimulationApplicationSourceConfigArgs... sources) {
             return sources(List.of(sources));
         }
+
         public Builder tags(@Nullable Output<SimulationApplicationTagsArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable SimulationApplicationTagsArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public SimulationApplicationArgs build() {
-            return new SimulationApplicationArgs(currentRevisionId, environment, name, renderingEngine, robotSoftwareSuite, simulationSoftwareSuite, sources, tags);
+
+        public Builder tags(SimulationApplicationTagsArgs tags) {
+            return tags(Output.of(tags));
+        }
+
+        public SimulationApplicationArgs build() {
+            $.robotSoftwareSuite = Objects.requireNonNull($.robotSoftwareSuite, "expected parameter 'robotSoftwareSuite' to be non-null");
+            $.simulationSoftwareSuite = Objects.requireNonNull($.simulationSoftwareSuite, "expected parameter 'simulationSoftwareSuite' to be non-null");
+            return $;
         }
     }
+
 }

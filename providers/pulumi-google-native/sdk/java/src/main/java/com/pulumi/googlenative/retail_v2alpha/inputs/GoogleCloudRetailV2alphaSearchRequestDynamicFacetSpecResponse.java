@@ -21,45 +21,45 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
     }
 
-    public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse(String mode) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse() {}
 
-    private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse() {
-        this.mode = null;
+    private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse(GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mode;
+        private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
-        }        public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse build() {
-            return new GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse(mode);
+        }
+
+        public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

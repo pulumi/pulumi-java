@@ -22,7 +22,7 @@ public final class BasicYarnAutoscalingConfigResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="gracefulDecommissionTimeout", required=true)
-      private final String gracefulDecommissionTimeout;
+    private String gracefulDecommissionTimeout;
 
     public String gracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
@@ -33,7 +33,7 @@ public final class BasicYarnAutoscalingConfigResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="scaleDownFactor", required=true)
-      private final Double scaleDownFactor;
+    private Double scaleDownFactor;
 
     public Double scaleDownFactor() {
         return this.scaleDownFactor;
@@ -44,7 +44,7 @@ public final class BasicYarnAutoscalingConfigResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="scaleDownMinWorkerFraction", required=true)
-      private final Double scaleDownMinWorkerFraction;
+    private Double scaleDownMinWorkerFraction;
 
     public Double scaleDownMinWorkerFraction() {
         return this.scaleDownMinWorkerFraction;
@@ -55,7 +55,7 @@ public final class BasicYarnAutoscalingConfigResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="scaleUpFactor", required=true)
-      private final Double scaleUpFactor;
+    private Double scaleUpFactor;
 
     public Double scaleUpFactor() {
         return this.scaleUpFactor;
@@ -66,82 +66,73 @@ public final class BasicYarnAutoscalingConfigResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="scaleUpMinWorkerFraction", required=true)
-      private final Double scaleUpMinWorkerFraction;
+    private Double scaleUpMinWorkerFraction;
 
     public Double scaleUpMinWorkerFraction() {
         return this.scaleUpMinWorkerFraction;
     }
 
-    public BasicYarnAutoscalingConfigResponse(
-        String gracefulDecommissionTimeout,
-        Double scaleDownFactor,
-        Double scaleDownMinWorkerFraction,
-        Double scaleUpFactor,
-        Double scaleUpMinWorkerFraction) {
-        this.gracefulDecommissionTimeout = Objects.requireNonNull(gracefulDecommissionTimeout, "expected parameter 'gracefulDecommissionTimeout' to be non-null");
-        this.scaleDownFactor = Objects.requireNonNull(scaleDownFactor, "expected parameter 'scaleDownFactor' to be non-null");
-        this.scaleDownMinWorkerFraction = Objects.requireNonNull(scaleDownMinWorkerFraction, "expected parameter 'scaleDownMinWorkerFraction' to be non-null");
-        this.scaleUpFactor = Objects.requireNonNull(scaleUpFactor, "expected parameter 'scaleUpFactor' to be non-null");
-        this.scaleUpMinWorkerFraction = Objects.requireNonNull(scaleUpMinWorkerFraction, "expected parameter 'scaleUpMinWorkerFraction' to be non-null");
-    }
+    private BasicYarnAutoscalingConfigResponse() {}
 
-    private BasicYarnAutoscalingConfigResponse() {
-        this.gracefulDecommissionTimeout = null;
-        this.scaleDownFactor = null;
-        this.scaleDownMinWorkerFraction = null;
-        this.scaleUpFactor = null;
-        this.scaleUpMinWorkerFraction = null;
+    private BasicYarnAutoscalingConfigResponse(BasicYarnAutoscalingConfigResponse $) {
+        this.gracefulDecommissionTimeout = $.gracefulDecommissionTimeout;
+        this.scaleDownFactor = $.scaleDownFactor;
+        this.scaleDownMinWorkerFraction = $.scaleDownMinWorkerFraction;
+        this.scaleUpFactor = $.scaleUpFactor;
+        this.scaleUpMinWorkerFraction = $.scaleUpMinWorkerFraction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicYarnAutoscalingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gracefulDecommissionTimeout;
-        private Double scaleDownFactor;
-        private Double scaleDownMinWorkerFraction;
-        private Double scaleUpFactor;
-        private Double scaleUpMinWorkerFraction;
+        private BasicYarnAutoscalingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicYarnAutoscalingConfigResponse();
         }
 
         public Builder(BasicYarnAutoscalingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gracefulDecommissionTimeout = defaults.gracefulDecommissionTimeout;
-    	      this.scaleDownFactor = defaults.scaleDownFactor;
-    	      this.scaleDownMinWorkerFraction = defaults.scaleDownMinWorkerFraction;
-    	      this.scaleUpFactor = defaults.scaleUpFactor;
-    	      this.scaleUpMinWorkerFraction = defaults.scaleUpMinWorkerFraction;
+            $ = new BasicYarnAutoscalingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
-            this.gracefulDecommissionTimeout = Objects.requireNonNull(gracefulDecommissionTimeout);
+            $.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
             return this;
         }
+
         public Builder scaleDownFactor(Double scaleDownFactor) {
-            this.scaleDownFactor = Objects.requireNonNull(scaleDownFactor);
+            $.scaleDownFactor = scaleDownFactor;
             return this;
         }
+
         public Builder scaleDownMinWorkerFraction(Double scaleDownMinWorkerFraction) {
-            this.scaleDownMinWorkerFraction = Objects.requireNonNull(scaleDownMinWorkerFraction);
+            $.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
             return this;
         }
+
         public Builder scaleUpFactor(Double scaleUpFactor) {
-            this.scaleUpFactor = Objects.requireNonNull(scaleUpFactor);
+            $.scaleUpFactor = scaleUpFactor;
             return this;
         }
+
         public Builder scaleUpMinWorkerFraction(Double scaleUpMinWorkerFraction) {
-            this.scaleUpMinWorkerFraction = Objects.requireNonNull(scaleUpMinWorkerFraction);
+            $.scaleUpMinWorkerFraction = scaleUpMinWorkerFraction;
             return this;
-        }        public BasicYarnAutoscalingConfigResponse build() {
-            return new BasicYarnAutoscalingConfigResponse(gracefulDecommissionTimeout, scaleDownFactor, scaleDownMinWorkerFraction, scaleUpFactor, scaleUpMinWorkerFraction);
+        }
+
+        public BasicYarnAutoscalingConfigResponse build() {
+            $.gracefulDecommissionTimeout = Objects.requireNonNull($.gracefulDecommissionTimeout, "expected parameter 'gracefulDecommissionTimeout' to be non-null");
+            $.scaleDownFactor = Objects.requireNonNull($.scaleDownFactor, "expected parameter 'scaleDownFactor' to be non-null");
+            $.scaleDownMinWorkerFraction = Objects.requireNonNull($.scaleDownMinWorkerFraction, "expected parameter 'scaleDownMinWorkerFraction' to be non-null");
+            $.scaleUpFactor = Objects.requireNonNull($.scaleUpFactor, "expected parameter 'scaleUpFactor' to be non-null");
+            $.scaleUpMinWorkerFraction = Objects.requireNonNull($.scaleUpMinWorkerFraction, "expected parameter 'scaleUpMinWorkerFraction' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class ConfigurationServiceSettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="gitProperty")
-      private final @Nullable ConfigurationServiceGitPropertyResponse gitProperty;
+    private @Nullable ConfigurationServiceGitPropertyResponse gitProperty;
 
     public Optional<ConfigurationServiceGitPropertyResponse> gitProperty() {
-        return this.gitProperty == null ? Optional.empty() : Optional.ofNullable(this.gitProperty);
+        return Optional.ofNullable(this.gitProperty);
     }
 
-    public ConfigurationServiceSettingsResponse(@Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
-        this.gitProperty = gitProperty;
-    }
+    private ConfigurationServiceSettingsResponse() {}
 
-    private ConfigurationServiceSettingsResponse() {
-        this.gitProperty = null;
+    private ConfigurationServiceSettingsResponse(ConfigurationServiceSettingsResponse $) {
+        this.gitProperty = $.gitProperty;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationServiceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigurationServiceGitPropertyResponse gitProperty;
+        private ConfigurationServiceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationServiceSettingsResponse();
         }
 
         public Builder(ConfigurationServiceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gitProperty = defaults.gitProperty;
+            $ = new ConfigurationServiceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gitProperty(@Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
-            this.gitProperty = gitProperty;
+            $.gitProperty = gitProperty;
             return this;
-        }        public ConfigurationServiceSettingsResponse build() {
-            return new ConfigurationServiceSettingsResponse(gitProperty);
+        }
+
+        public ConfigurationServiceSettingsResponse build() {
+            return $;
         }
     }
+
 }

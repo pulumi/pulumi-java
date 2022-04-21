@@ -17,7 +17,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends com.pulumi.resources
      * 
      */
     @Import(name="hostName", required=true)
-      private final String hostName;
+    private String hostName;
 
     public String hostName() {
         return this.hostName;
@@ -28,7 +28,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetWebAppHostNameBindingSlotArgs extends com.pulumi.resources
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
     }
 
-    public GetWebAppHostNameBindingSlotArgs(
-        String hostName,
-        String name,
-        String resourceGroupName,
-        String slot) {
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private GetWebAppHostNameBindingSlotArgs() {}
 
-    private GetWebAppHostNameBindingSlotArgs() {
-        this.hostName = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.slot = null;
+    private GetWebAppHostNameBindingSlotArgs(GetWebAppHostNameBindingSlotArgs $) {
+        this.hostName = $.hostName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppHostNameBindingSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostName;
-        private String name;
-        private String resourceGroupName;
-        private String slot;
+        private GetWebAppHostNameBindingSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppHostNameBindingSlotArgs();
         }
 
         public Builder(GetWebAppHostNameBindingSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostName = defaults.hostName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new GetWebAppHostNameBindingSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
-        }        public GetWebAppHostNameBindingSlotArgs build() {
-            return new GetWebAppHostNameBindingSlotArgs(hostName, name, resourceGroupName, slot);
+        }
+
+        public GetWebAppHostNameBindingSlotArgs build() {
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

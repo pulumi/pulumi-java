@@ -22,7 +22,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * 
      */
     @Import(name="allowedValues", required=true)
-      private final List<String> allowedValues;
+    private List<String> allowedValues;
 
     public List<String> allowedValues() {
         return this.allowedValues;
@@ -33,58 +33,56 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * 
      */
     @Import(name="policy", required=true)
-      private final String policy;
+    private String policy;
 
     public String policy() {
         return this.policy;
     }
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(
-        List<String> allowedValues,
-        String policy) {
-        this.allowedValues = Objects.requireNonNull(allowedValues, "expected parameter 'allowedValues' to be non-null");
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse() {}
 
-    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse() {
-        this.allowedValues = List.of();
-        this.policy = null;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse $) {
+        this.allowedValues = $.allowedValues;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedValues;
-        private String policy;
+        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse();
         }
 
         public Builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedValues = defaults.allowedValues;
-    	      this.policy = defaults.policy;
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedValues(List<String> allowedValues) {
-            this.allowedValues = Objects.requireNonNull(allowedValues);
+            $.allowedValues = allowedValues;
             return this;
         }
+
         public Builder allowedValues(String... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
+
         public Builder policy(String policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
-        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse build() {
-            return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(allowedValues, policy);
+        }
+
+        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse build() {
+            $.allowedValues = Objects.requireNonNull($.allowedValues, "expected parameter 'allowedValues' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

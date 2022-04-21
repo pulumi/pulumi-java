@@ -5,10 +5,10 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="certificateBody")
-      private final @Nullable Output<String> certificateBody;
+    private @Nullable Output<String> certificateBody;
 
-    public Output<String> certificateBody() {
-        return this.certificateBody == null ? Codegen.empty() : this.certificateBody;
+    public Optional<Output<String>> certificateBody() {
+        return Optional.ofNullable(this.certificateBody);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="certificateChain")
-      private final @Nullable Output<String> certificateChain;
+    private @Nullable Output<String> certificateChain;
 
-    public Output<String> certificateChain() {
-        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
+    public Optional<Output<String>> certificateChain() {
+        return Optional.ofNullable(this.certificateChain);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="expiration")
-      private final @Nullable Output<String> expiration;
+    private @Nullable Output<String> expiration;
 
-    public Output<String> expiration() {
-        return this.expiration == null ? Codegen.empty() : this.expiration;
+    public Optional<Output<String>> expiration() {
+        return Optional.ofNullable(this.expiration);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="privateKey")
-      private final @Nullable Output<String> privateKey;
+    private @Nullable Output<String> privateKey;
 
-    public Output<String> privateKey() {
-        return this.privateKey == null ? Codegen.empty() : this.privateKey;
+    public Optional<Output<String>> privateKey() {
+        return Optional.ofNullable(this.privateKey);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -139,180 +139,148 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="uploadDate")
-      private final @Nullable Output<String> uploadDate;
+    private @Nullable Output<String> uploadDate;
 
-    public Output<String> uploadDate() {
-        return this.uploadDate == null ? Codegen.empty() : this.uploadDate;
+    public Optional<Output<String>> uploadDate() {
+        return Optional.ofNullable(this.uploadDate);
     }
 
-    public ServerCertificateState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> certificateBody,
-        @Nullable Output<String> certificateChain,
-        @Nullable Output<String> expiration,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> path,
-        @Nullable Output<String> privateKey,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> uploadDate) {
-        this.arn = arn;
-        this.certificateBody = certificateBody;
-        this.certificateChain = certificateChain;
-        this.expiration = expiration;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.path = path;
-        this.privateKey = privateKey;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.uploadDate = uploadDate;
-    }
+    private ServerCertificateState() {}
 
-    private ServerCertificateState() {
-        this.arn = Codegen.empty();
-        this.certificateBody = Codegen.empty();
-        this.certificateChain = Codegen.empty();
-        this.expiration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.path = Codegen.empty();
-        this.privateKey = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.uploadDate = Codegen.empty();
+    private ServerCertificateState(ServerCertificateState $) {
+        this.arn = $.arn;
+        this.certificateBody = $.certificateBody;
+        this.certificateChain = $.certificateChain;
+        this.expiration = $.expiration;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.path = $.path;
+        this.privateKey = $.privateKey;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.uploadDate = $.uploadDate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerCertificateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> certificateBody;
-        private @Nullable Output<String> certificateChain;
-        private @Nullable Output<String> expiration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> privateKey;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> uploadDate;
+        private ServerCertificateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerCertificateState();
         }
 
         public Builder(ServerCertificateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.certificateBody = defaults.certificateBody;
-    	      this.certificateChain = defaults.certificateChain;
-    	      this.expiration = defaults.expiration;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.path = defaults.path;
-    	      this.privateKey = defaults.privateKey;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.uploadDate = defaults.uploadDate;
+            $ = new ServerCertificateState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder certificateBody(@Nullable Output<String> certificateBody) {
-            this.certificateBody = certificateBody;
+            $.certificateBody = certificateBody;
             return this;
         }
-        public Builder certificateBody(@Nullable String certificateBody) {
-            this.certificateBody = Codegen.ofNullable(certificateBody);
-            return this;
+
+        public Builder certificateBody(String certificateBody) {
+            return certificateBody(Output.of(certificateBody));
         }
+
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
-            this.certificateChain = certificateChain;
+            $.certificateChain = certificateChain;
             return this;
         }
-        public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Codegen.ofNullable(certificateChain);
-            return this;
+
+        public Builder certificateChain(String certificateChain) {
+            return certificateChain(Output.of(certificateChain));
         }
+
         public Builder expiration(@Nullable Output<String> expiration) {
-            this.expiration = expiration;
+            $.expiration = expiration;
             return this;
         }
-        public Builder expiration(@Nullable String expiration) {
-            this.expiration = Codegen.ofNullable(expiration);
-            return this;
+
+        public Builder expiration(String expiration) {
+            return expiration(Output.of(expiration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder privateKey(@Nullable Output<String> privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
-        public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Codegen.ofNullable(privateKey);
-            return this;
+
+        public Builder privateKey(String privateKey) {
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder uploadDate(@Nullable Output<String> uploadDate) {
-            this.uploadDate = uploadDate;
+            $.uploadDate = uploadDate;
             return this;
         }
-        public Builder uploadDate(@Nullable String uploadDate) {
-            this.uploadDate = Codegen.ofNullable(uploadDate);
-            return this;
-        }        public ServerCertificateState build() {
-            return new ServerCertificateState(arn, certificateBody, certificateChain, expiration, name, namePrefix, path, privateKey, tags, tagsAll, uploadDate);
+
+        public Builder uploadDate(String uploadDate) {
+            return uploadDate(Output.of(uploadDate));
+        }
+
+        public ServerCertificateState build() {
+            return $;
         }
     }
+
 }

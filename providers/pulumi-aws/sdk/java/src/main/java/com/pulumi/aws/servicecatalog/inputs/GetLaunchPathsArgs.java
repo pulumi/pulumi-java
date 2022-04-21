@@ -19,10 +19,10 @@ public final class GetLaunchPathsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable String acceptLanguage;
+    private @Nullable String acceptLanguage;
 
     public Optional<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -30,55 +30,51 @@ public final class GetLaunchPathsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="productId", required=true)
-      private final String productId;
+    private String productId;
 
     public String productId() {
         return this.productId;
     }
 
-    public GetLaunchPathsArgs(
-        @Nullable String acceptLanguage,
-        String productId) {
-        this.acceptLanguage = acceptLanguage;
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-    }
+    private GetLaunchPathsArgs() {}
 
-    private GetLaunchPathsArgs() {
-        this.acceptLanguage = null;
-        this.productId = null;
+    private GetLaunchPathsArgs(GetLaunchPathsArgs $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.productId = $.productId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchPathsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String acceptLanguage;
-        private String productId;
+        private GetLaunchPathsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchPathsArgs();
         }
 
         public Builder(GetLaunchPathsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.productId = defaults.productId;
+            $ = new GetLaunchPathsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
+
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
-        }        public GetLaunchPathsArgs build() {
-            return new GetLaunchPathsArgs(acceptLanguage, productId);
+        }
+
+        public GetLaunchPathsArgs build() {
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            return $;
         }
     }
+
 }

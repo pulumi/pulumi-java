@@ -7,8 +7,8 @@ import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyPortalArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyProjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class AccessPolicyResourceArgs extends com.pulumi.resources.Resourc
     public static final AccessPolicyResourceArgs Empty = new AccessPolicyResourceArgs();
 
     @Import(name="portal")
-      private final @Nullable Output<AccessPolicyPortalArgs> portal;
+    private @Nullable Output<AccessPolicyPortalArgs> portal;
 
-    public Output<AccessPolicyPortalArgs> portal() {
-        return this.portal == null ? Codegen.empty() : this.portal;
+    public Optional<Output<AccessPolicyPortalArgs>> portal() {
+        return Optional.ofNullable(this.portal);
     }
 
     @Import(name="project")
-      private final @Nullable Output<AccessPolicyProjectArgs> project;
+    private @Nullable Output<AccessPolicyProjectArgs> project;
 
-    public Output<AccessPolicyProjectArgs> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<AccessPolicyProjectArgs>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public AccessPolicyResourceArgs(
-        @Nullable Output<AccessPolicyPortalArgs> portal,
-        @Nullable Output<AccessPolicyProjectArgs> project) {
-        this.portal = portal;
-        this.project = project;
-    }
+    private AccessPolicyResourceArgs() {}
 
-    private AccessPolicyResourceArgs() {
-        this.portal = Codegen.empty();
-        this.project = Codegen.empty();
+    private AccessPolicyResourceArgs(AccessPolicyResourceArgs $) {
+        this.portal = $.portal;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AccessPolicyPortalArgs> portal;
-        private @Nullable Output<AccessPolicyProjectArgs> project;
+        private AccessPolicyResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyResourceArgs();
         }
 
         public Builder(AccessPolicyResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.portal = defaults.portal;
-    	      this.project = defaults.project;
+            $ = new AccessPolicyResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder portal(@Nullable Output<AccessPolicyPortalArgs> portal) {
-            this.portal = portal;
+            $.portal = portal;
             return this;
         }
-        public Builder portal(@Nullable AccessPolicyPortalArgs portal) {
-            this.portal = Codegen.ofNullable(portal);
-            return this;
+
+        public Builder portal(AccessPolicyPortalArgs portal) {
+            return portal(Output.of(portal));
         }
+
         public Builder project(@Nullable Output<AccessPolicyProjectArgs> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable AccessPolicyProjectArgs project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public AccessPolicyResourceArgs build() {
-            return new AccessPolicyResourceArgs(portal, project);
+
+        public Builder project(AccessPolicyProjectArgs project) {
+            return project(Output.of(project));
+        }
+
+        public AccessPolicyResourceArgs build() {
+            return $;
         }
     }
+
 }

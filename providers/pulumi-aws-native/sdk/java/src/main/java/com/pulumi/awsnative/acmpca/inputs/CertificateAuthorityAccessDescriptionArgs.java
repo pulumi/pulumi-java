@@ -7,7 +7,6 @@ import com.pulumi.awsnative.acmpca.inputs.CertificateAuthorityAccessMethodArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificateAuthorityGeneralNameArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,70 +19,67 @@ public final class CertificateAuthorityAccessDescriptionArgs extends com.pulumi.
     public static final CertificateAuthorityAccessDescriptionArgs Empty = new CertificateAuthorityAccessDescriptionArgs();
 
     @Import(name="accessLocation", required=true)
-      private final Output<CertificateAuthorityGeneralNameArgs> accessLocation;
+    private Output<CertificateAuthorityGeneralNameArgs> accessLocation;
 
     public Output<CertificateAuthorityGeneralNameArgs> accessLocation() {
         return this.accessLocation;
     }
 
     @Import(name="accessMethod", required=true)
-      private final Output<CertificateAuthorityAccessMethodArgs> accessMethod;
+    private Output<CertificateAuthorityAccessMethodArgs> accessMethod;
 
     public Output<CertificateAuthorityAccessMethodArgs> accessMethod() {
         return this.accessMethod;
     }
 
-    public CertificateAuthorityAccessDescriptionArgs(
-        Output<CertificateAuthorityGeneralNameArgs> accessLocation,
-        Output<CertificateAuthorityAccessMethodArgs> accessMethod) {
-        this.accessLocation = Objects.requireNonNull(accessLocation, "expected parameter 'accessLocation' to be non-null");
-        this.accessMethod = Objects.requireNonNull(accessMethod, "expected parameter 'accessMethod' to be non-null");
-    }
+    private CertificateAuthorityAccessDescriptionArgs() {}
 
-    private CertificateAuthorityAccessDescriptionArgs() {
-        this.accessLocation = Codegen.empty();
-        this.accessMethod = Codegen.empty();
+    private CertificateAuthorityAccessDescriptionArgs(CertificateAuthorityAccessDescriptionArgs $) {
+        this.accessLocation = $.accessLocation;
+        this.accessMethod = $.accessMethod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityAccessDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CertificateAuthorityGeneralNameArgs> accessLocation;
-        private Output<CertificateAuthorityAccessMethodArgs> accessMethod;
+        private CertificateAuthorityAccessDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityAccessDescriptionArgs();
         }
 
         public Builder(CertificateAuthorityAccessDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLocation = defaults.accessLocation;
-    	      this.accessMethod = defaults.accessMethod;
+            $ = new CertificateAuthorityAccessDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLocation(Output<CertificateAuthorityGeneralNameArgs> accessLocation) {
-            this.accessLocation = Objects.requireNonNull(accessLocation);
+            $.accessLocation = accessLocation;
             return this;
         }
+
         public Builder accessLocation(CertificateAuthorityGeneralNameArgs accessLocation) {
-            this.accessLocation = Output.of(Objects.requireNonNull(accessLocation));
-            return this;
+            return accessLocation(Output.of(accessLocation));
         }
+
         public Builder accessMethod(Output<CertificateAuthorityAccessMethodArgs> accessMethod) {
-            this.accessMethod = Objects.requireNonNull(accessMethod);
+            $.accessMethod = accessMethod;
             return this;
         }
+
         public Builder accessMethod(CertificateAuthorityAccessMethodArgs accessMethod) {
-            this.accessMethod = Output.of(Objects.requireNonNull(accessMethod));
-            return this;
-        }        public CertificateAuthorityAccessDescriptionArgs build() {
-            return new CertificateAuthorityAccessDescriptionArgs(accessLocation, accessMethod);
+            return accessMethod(Output.of(accessMethod));
+        }
+
+        public CertificateAuthorityAccessDescriptionArgs build() {
+            $.accessLocation = Objects.requireNonNull($.accessLocation, "expected parameter 'accessLocation' to be non-null");
+            $.accessMethod = Objects.requireNonNull($.accessMethod, "expected parameter 'accessMethod' to be non-null");
+            return $;
         }
     }
+
 }

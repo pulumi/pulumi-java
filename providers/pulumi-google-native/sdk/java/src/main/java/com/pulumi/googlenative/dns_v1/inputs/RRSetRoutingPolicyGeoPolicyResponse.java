@@ -23,65 +23,63 @@ public final class RRSetRoutingPolicyGeoPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="items", required=true)
-      private final List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
+    private List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
 
     public List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items() {
         return this.items;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public RRSetRoutingPolicyGeoPolicyResponse(
-        List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items,
-        String kind) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private RRSetRoutingPolicyGeoPolicyResponse() {}
 
-    private RRSetRoutingPolicyGeoPolicyResponse() {
-        this.items = List.of();
-        this.kind = null;
+    private RRSetRoutingPolicyGeoPolicyResponse(RRSetRoutingPolicyGeoPolicyResponse $) {
+        this.items = $.items;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RRSetRoutingPolicyGeoPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
-        private String kind;
+        private RRSetRoutingPolicyGeoPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RRSetRoutingPolicyGeoPolicyResponse();
         }
 
         public Builder(RRSetRoutingPolicyGeoPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
-    	      this.kind = defaults.kind;
+            $ = new RRSetRoutingPolicyGeoPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse... items) {
             return items(List.of(items));
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public RRSetRoutingPolicyGeoPolicyResponse build() {
-            return new RRSetRoutingPolicyGeoPolicyResponse(items, kind);
+        }
+
+        public RRSetRoutingPolicyGeoPolicyResponse build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

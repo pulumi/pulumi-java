@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudbuild_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.PrivatePoolV1ConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -33,17 +33,17 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -51,149 +51,130 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privatePoolV1Config")
-      private final @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config;
+    private @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config;
 
-    public Output<PrivatePoolV1ConfigArgs> privatePoolV1Config() {
-        return this.privatePoolV1Config == null ? Codegen.empty() : this.privatePoolV1Config;
+    public Optional<Output<PrivatePoolV1ConfigArgs>> privatePoolV1Config() {
+        return Optional.ofNullable(this.privatePoolV1Config);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
     @Import(name="workerPoolId", required=true)
-      private final Output<String> workerPoolId;
+    private Output<String> workerPoolId;
 
     public Output<String> workerPoolId() {
         return this.workerPoolId;
     }
 
-    public WorkerPoolArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> location,
-        @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config,
-        @Nullable Output<String> project,
-        @Nullable Output<String> validateOnly,
-        Output<String> workerPoolId) {
-        this.annotations = annotations;
-        this.displayName = displayName;
-        this.location = location;
-        this.privatePoolV1Config = privatePoolV1Config;
-        this.project = project;
-        this.validateOnly = validateOnly;
-        this.workerPoolId = Objects.requireNonNull(workerPoolId, "expected parameter 'workerPoolId' to be non-null");
-    }
+    private WorkerPoolArgs() {}
 
-    private WorkerPoolArgs() {
-        this.annotations = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.privatePoolV1Config = Codegen.empty();
-        this.project = Codegen.empty();
-        this.validateOnly = Codegen.empty();
-        this.workerPoolId = Codegen.empty();
+    private WorkerPoolArgs(WorkerPoolArgs $) {
+        this.annotations = $.annotations;
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.privatePoolV1Config = $.privatePoolV1Config;
+        this.project = $.project;
+        this.validateOnly = $.validateOnly;
+        this.workerPoolId = $.workerPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> validateOnly;
-        private Output<String> workerPoolId;
+        private WorkerPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerPoolArgs();
         }
 
         public Builder(WorkerPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.privatePoolV1Config = defaults.privatePoolV1Config;
-    	      this.project = defaults.project;
-    	      this.validateOnly = defaults.validateOnly;
-    	      this.workerPoolId = defaults.workerPoolId;
+            $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder privatePoolV1Config(@Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config) {
-            this.privatePoolV1Config = privatePoolV1Config;
+            $.privatePoolV1Config = privatePoolV1Config;
             return this;
         }
-        public Builder privatePoolV1Config(@Nullable PrivatePoolV1ConfigArgs privatePoolV1Config) {
-            this.privatePoolV1Config = Codegen.ofNullable(privatePoolV1Config);
-            return this;
+
+        public Builder privatePoolV1Config(PrivatePoolV1ConfigArgs privatePoolV1Config) {
+            return privatePoolV1Config(Output.of(privatePoolV1Config));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
         }
+
         public Builder workerPoolId(Output<String> workerPoolId) {
-            this.workerPoolId = Objects.requireNonNull(workerPoolId);
+            $.workerPoolId = workerPoolId;
             return this;
         }
+
         public Builder workerPoolId(String workerPoolId) {
-            this.workerPoolId = Output.of(Objects.requireNonNull(workerPoolId));
-            return this;
-        }        public WorkerPoolArgs build() {
-            return new WorkerPoolArgs(annotations, displayName, location, privatePoolV1Config, project, validateOnly, workerPoolId);
+            return workerPoolId(Output.of(workerPoolId));
+        }
+
+        public WorkerPoolArgs build() {
+            $.workerPoolId = Objects.requireNonNull($.workerPoolId, "expected parameter 'workerPoolId' to be non-null");
+            return $;
         }
     }
+
 }

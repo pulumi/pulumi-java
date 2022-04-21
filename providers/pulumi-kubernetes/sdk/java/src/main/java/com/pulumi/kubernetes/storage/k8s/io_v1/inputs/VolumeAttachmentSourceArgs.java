@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeSpecArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VolumeAttachmentSourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="inlineVolumeSpec")
-      private final @Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec;
+    private @Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec;
 
-    public Output<PersistentVolumeSpecArgs> inlineVolumeSpec() {
-        return this.inlineVolumeSpec == null ? Codegen.empty() : this.inlineVolumeSpec;
+    public Optional<Output<PersistentVolumeSpecArgs>> inlineVolumeSpec() {
+        return Optional.ofNullable(this.inlineVolumeSpec);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class VolumeAttachmentSourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="persistentVolumeName")
-      private final @Nullable Output<String> persistentVolumeName;
+    private @Nullable Output<String> persistentVolumeName;
 
-    public Output<String> persistentVolumeName() {
-        return this.persistentVolumeName == null ? Codegen.empty() : this.persistentVolumeName;
+    public Optional<Output<String>> persistentVolumeName() {
+        return Optional.ofNullable(this.persistentVolumeName);
     }
 
-    public VolumeAttachmentSourceArgs(
-        @Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec,
-        @Nullable Output<String> persistentVolumeName) {
-        this.inlineVolumeSpec = inlineVolumeSpec;
-        this.persistentVolumeName = persistentVolumeName;
-    }
+    private VolumeAttachmentSourceArgs() {}
 
-    private VolumeAttachmentSourceArgs() {
-        this.inlineVolumeSpec = Codegen.empty();
-        this.persistentVolumeName = Codegen.empty();
+    private VolumeAttachmentSourceArgs(VolumeAttachmentSourceArgs $) {
+        this.inlineVolumeSpec = $.inlineVolumeSpec;
+        this.persistentVolumeName = $.persistentVolumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeAttachmentSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec;
-        private @Nullable Output<String> persistentVolumeName;
+        private VolumeAttachmentSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeAttachmentSourceArgs();
         }
 
         public Builder(VolumeAttachmentSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inlineVolumeSpec = defaults.inlineVolumeSpec;
-    	      this.persistentVolumeName = defaults.persistentVolumeName;
+            $ = new VolumeAttachmentSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inlineVolumeSpec(@Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec) {
-            this.inlineVolumeSpec = inlineVolumeSpec;
+            $.inlineVolumeSpec = inlineVolumeSpec;
             return this;
         }
-        public Builder inlineVolumeSpec(@Nullable PersistentVolumeSpecArgs inlineVolumeSpec) {
-            this.inlineVolumeSpec = Codegen.ofNullable(inlineVolumeSpec);
-            return this;
+
+        public Builder inlineVolumeSpec(PersistentVolumeSpecArgs inlineVolumeSpec) {
+            return inlineVolumeSpec(Output.of(inlineVolumeSpec));
         }
+
         public Builder persistentVolumeName(@Nullable Output<String> persistentVolumeName) {
-            this.persistentVolumeName = persistentVolumeName;
+            $.persistentVolumeName = persistentVolumeName;
             return this;
         }
-        public Builder persistentVolumeName(@Nullable String persistentVolumeName) {
-            this.persistentVolumeName = Codegen.ofNullable(persistentVolumeName);
-            return this;
-        }        public VolumeAttachmentSourceArgs build() {
-            return new VolumeAttachmentSourceArgs(inlineVolumeSpec, persistentVolumeName);
+
+        public Builder persistentVolumeName(String persistentVolumeName) {
+            return persistentVolumeName(Output.of(persistentVolumeName));
+        }
+
+        public VolumeAttachmentSourceArgs build() {
+            return $;
         }
     }
+
 }

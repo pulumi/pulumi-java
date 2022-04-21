@@ -15,62 +15,58 @@ public final class PrefixListEntry extends com.pulumi.resources.InvokeArgs {
     public static final PrefixListEntry Empty = new PrefixListEntry();
 
     @Import(name="cidr", required=true)
-      private final String cidr;
+    private String cidr;
 
     public String cidr() {
         return this.cidr;
     }
 
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
-    public PrefixListEntry(
-        String cidr,
-        @Nullable String description) {
-        this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
-        this.description = description;
-    }
+    private PrefixListEntry() {}
 
-    private PrefixListEntry() {
-        this.cidr = null;
-        this.description = null;
+    private PrefixListEntry(PrefixListEntry $) {
+        this.cidr = $.cidr;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrefixListEntry defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cidr;
-        private @Nullable String description;
+        private PrefixListEntry $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrefixListEntry();
         }
 
         public Builder(PrefixListEntry defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.description = defaults.description;
+            $ = new PrefixListEntry(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(String cidr) {
-            this.cidr = Objects.requireNonNull(cidr);
+            $.cidr = cidr;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
-        }        public PrefixListEntry build() {
-            return new PrefixListEntry(cidr, description);
+        }
+
+        public PrefixListEntry build() {
+            $.cidr = Objects.requireNonNull($.cidr, "expected parameter 'cidr' to be non-null");
+            return $;
         }
     }
+
 }

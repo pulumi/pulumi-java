@@ -5,10 +5,10 @@ package com.pulumi.aws.appsync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class GraphQLApiLogConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cloudwatchLogsRoleArn", required=true)
-      private final Output<String> cloudwatchLogsRoleArn;
+    private Output<String> cloudwatchLogsRoleArn;
 
     public Output<String> cloudwatchLogsRoleArn() {
         return this.cloudwatchLogsRoleArn;
@@ -32,10 +32,10 @@ public final class GraphQLApiLogConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="excludeVerboseContent")
-      private final @Nullable Output<Boolean> excludeVerboseContent;
+    private @Nullable Output<Boolean> excludeVerboseContent;
 
-    public Output<Boolean> excludeVerboseContent() {
-        return this.excludeVerboseContent == null ? Codegen.empty() : this.excludeVerboseContent;
+    public Optional<Output<Boolean>> excludeVerboseContent() {
+        return Optional.ofNullable(this.excludeVerboseContent);
     }
 
     /**
@@ -43,76 +43,70 @@ public final class GraphQLApiLogConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="fieldLogLevel", required=true)
-      private final Output<String> fieldLogLevel;
+    private Output<String> fieldLogLevel;
 
     public Output<String> fieldLogLevel() {
         return this.fieldLogLevel;
     }
 
-    public GraphQLApiLogConfigGetArgs(
-        Output<String> cloudwatchLogsRoleArn,
-        @Nullable Output<Boolean> excludeVerboseContent,
-        Output<String> fieldLogLevel) {
-        this.cloudwatchLogsRoleArn = Objects.requireNonNull(cloudwatchLogsRoleArn, "expected parameter 'cloudwatchLogsRoleArn' to be non-null");
-        this.excludeVerboseContent = excludeVerboseContent;
-        this.fieldLogLevel = Objects.requireNonNull(fieldLogLevel, "expected parameter 'fieldLogLevel' to be non-null");
-    }
+    private GraphQLApiLogConfigGetArgs() {}
 
-    private GraphQLApiLogConfigGetArgs() {
-        this.cloudwatchLogsRoleArn = Codegen.empty();
-        this.excludeVerboseContent = Codegen.empty();
-        this.fieldLogLevel = Codegen.empty();
+    private GraphQLApiLogConfigGetArgs(GraphQLApiLogConfigGetArgs $) {
+        this.cloudwatchLogsRoleArn = $.cloudwatchLogsRoleArn;
+        this.excludeVerboseContent = $.excludeVerboseContent;
+        this.fieldLogLevel = $.fieldLogLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphQLApiLogConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cloudwatchLogsRoleArn;
-        private @Nullable Output<Boolean> excludeVerboseContent;
-        private Output<String> fieldLogLevel;
+        private GraphQLApiLogConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphQLApiLogConfigGetArgs();
         }
 
         public Builder(GraphQLApiLogConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchLogsRoleArn = defaults.cloudwatchLogsRoleArn;
-    	      this.excludeVerboseContent = defaults.excludeVerboseContent;
-    	      this.fieldLogLevel = defaults.fieldLogLevel;
+            $ = new GraphQLApiLogConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchLogsRoleArn(Output<String> cloudwatchLogsRoleArn) {
-            this.cloudwatchLogsRoleArn = Objects.requireNonNull(cloudwatchLogsRoleArn);
+            $.cloudwatchLogsRoleArn = cloudwatchLogsRoleArn;
             return this;
         }
+
         public Builder cloudwatchLogsRoleArn(String cloudwatchLogsRoleArn) {
-            this.cloudwatchLogsRoleArn = Output.of(Objects.requireNonNull(cloudwatchLogsRoleArn));
-            return this;
+            return cloudwatchLogsRoleArn(Output.of(cloudwatchLogsRoleArn));
         }
+
         public Builder excludeVerboseContent(@Nullable Output<Boolean> excludeVerboseContent) {
-            this.excludeVerboseContent = excludeVerboseContent;
+            $.excludeVerboseContent = excludeVerboseContent;
             return this;
         }
-        public Builder excludeVerboseContent(@Nullable Boolean excludeVerboseContent) {
-            this.excludeVerboseContent = Codegen.ofNullable(excludeVerboseContent);
-            return this;
+
+        public Builder excludeVerboseContent(Boolean excludeVerboseContent) {
+            return excludeVerboseContent(Output.of(excludeVerboseContent));
         }
+
         public Builder fieldLogLevel(Output<String> fieldLogLevel) {
-            this.fieldLogLevel = Objects.requireNonNull(fieldLogLevel);
+            $.fieldLogLevel = fieldLogLevel;
             return this;
         }
+
         public Builder fieldLogLevel(String fieldLogLevel) {
-            this.fieldLogLevel = Output.of(Objects.requireNonNull(fieldLogLevel));
-            return this;
-        }        public GraphQLApiLogConfigGetArgs build() {
-            return new GraphQLApiLogConfigGetArgs(cloudwatchLogsRoleArn, excludeVerboseContent, fieldLogLevel);
+            return fieldLogLevel(Output.of(fieldLogLevel));
+        }
+
+        public GraphQLApiLogConfigGetArgs build() {
+            $.cloudwatchLogsRoleArn = Objects.requireNonNull($.cloudwatchLogsRoleArn, "expected parameter 'cloudwatchLogsRoleArn' to be non-null");
+            $.fieldLogLevel = Objects.requireNonNull($.fieldLogLevel, "expected parameter 'fieldLogLevel' to be non-null");
+            return $;
         }
     }
+
 }

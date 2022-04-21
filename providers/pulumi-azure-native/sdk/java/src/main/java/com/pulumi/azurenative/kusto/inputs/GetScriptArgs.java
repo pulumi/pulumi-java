@@ -17,7 +17,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scriptName", required=true)
-      private final String scriptName;
+    private String scriptName;
 
     public String scriptName() {
         return this.scriptName;
     }
 
-    public GetScriptArgs(
-        String clusterName,
-        String databaseName,
-        String resourceGroupName,
-        String scriptName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scriptName = Objects.requireNonNull(scriptName, "expected parameter 'scriptName' to be non-null");
-    }
+    private GetScriptArgs() {}
 
-    private GetScriptArgs() {
-        this.clusterName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.scriptName = null;
+    private GetScriptArgs(GetScriptArgs $) {
+        this.clusterName = $.clusterName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scriptName = $.scriptName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScriptArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String databaseName;
-        private String resourceGroupName;
-        private String scriptName;
+        private GetScriptArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScriptArgs();
         }
 
         public Builder(GetScriptArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scriptName = defaults.scriptName;
+            $ = new GetScriptArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder scriptName(String scriptName) {
-            this.scriptName = Objects.requireNonNull(scriptName);
+            $.scriptName = scriptName;
             return this;
-        }        public GetScriptArgs build() {
-            return new GetScriptArgs(clusterName, databaseName, resourceGroupName, scriptName);
+        }
+
+        public GetScriptArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scriptName = Objects.requireNonNull($.scriptName, "expected parameter 'scriptName' to be non-null");
+            return $;
         }
     }
+
 }

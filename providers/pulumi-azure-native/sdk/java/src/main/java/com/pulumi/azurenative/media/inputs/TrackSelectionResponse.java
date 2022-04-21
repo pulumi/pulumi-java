@@ -24,48 +24,48 @@ public final class TrackSelectionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="trackSelections")
-      private final @Nullable List<TrackPropertyConditionResponse> trackSelections;
+    private @Nullable List<TrackPropertyConditionResponse> trackSelections;
 
-    public List<TrackPropertyConditionResponse> trackSelections() {
-        return this.trackSelections == null ? List.of() : this.trackSelections;
+    public Optional<List<TrackPropertyConditionResponse>> trackSelections() {
+        return Optional.ofNullable(this.trackSelections);
     }
 
-    public TrackSelectionResponse(@Nullable List<TrackPropertyConditionResponse> trackSelections) {
-        this.trackSelections = trackSelections;
-    }
+    private TrackSelectionResponse() {}
 
-    private TrackSelectionResponse() {
-        this.trackSelections = List.of();
+    private TrackSelectionResponse(TrackSelectionResponse $) {
+        this.trackSelections = $.trackSelections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrackSelectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<TrackPropertyConditionResponse> trackSelections;
+        private TrackSelectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrackSelectionResponse();
         }
 
         public Builder(TrackSelectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.trackSelections = defaults.trackSelections;
+            $ = new TrackSelectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder trackSelections(@Nullable List<TrackPropertyConditionResponse> trackSelections) {
-            this.trackSelections = trackSelections;
+            $.trackSelections = trackSelections;
             return this;
         }
+
         public Builder trackSelections(TrackPropertyConditionResponse... trackSelections) {
             return trackSelections(List.of(trackSelections));
-        }        public TrackSelectionResponse build() {
-            return new TrackSelectionResponse(trackSelections);
+        }
+
+        public TrackSelectionResponse build() {
+            return $;
         }
     }
+
 }

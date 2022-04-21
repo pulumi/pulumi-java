@@ -6,8 +6,8 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ResourceTypeRegistrationArgs extends com.pulumi.resources.Res
     public static final ResourceTypeRegistrationArgs Empty = new ResourceTypeRegistrationArgs();
 
     @Import(name="properties")
-      private final @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
+    private @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
 
-    public Output<ResourceTypeRegistrationPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ResourceTypeRegistrationPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public ResourceTypeRegistrationArgs(@Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties) {
-        this.properties = properties;
-    }
+    private ResourceTypeRegistrationArgs() {}
 
-    private ResourceTypeRegistrationArgs() {
-        this.properties = Codegen.empty();
+    private ResourceTypeRegistrationArgs(ResourceTypeRegistrationArgs $) {
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
+        private ResourceTypeRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationArgs();
         }
 
         public Builder(ResourceTypeRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
+            $ = new ResourceTypeRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ResourceTypeRegistrationPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public ResourceTypeRegistrationArgs build() {
-            return new ResourceTypeRegistrationArgs(properties);
+
+        public Builder properties(ResourceTypeRegistrationPropertiesArgs properties) {
+            return properties(Output.of(properties));
+        }
+
+        public ResourceTypeRegistrationArgs build() {
+            return $;
         }
     }
+
 }

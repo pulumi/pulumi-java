@@ -9,9 +9,9 @@ import com.pulumi.awsnative.acmpca.inputs.CertificateKeyUsageArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificatePolicyInformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,119 +24,111 @@ public final class CertificateExtensionsArgs extends com.pulumi.resources.Resour
     public static final CertificateExtensionsArgs Empty = new CertificateExtensionsArgs();
 
     @Import(name="certificatePolicies")
-      private final @Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies;
+    private @Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies;
 
-    public Output<List<CertificatePolicyInformationArgs>> certificatePolicies() {
-        return this.certificatePolicies == null ? Codegen.empty() : this.certificatePolicies;
+    public Optional<Output<List<CertificatePolicyInformationArgs>>> certificatePolicies() {
+        return Optional.ofNullable(this.certificatePolicies);
     }
 
     @Import(name="extendedKeyUsage")
-      private final @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
+    private @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
 
-    public Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage() {
-        return this.extendedKeyUsage == null ? Codegen.empty() : this.extendedKeyUsage;
+    public Optional<Output<List<CertificateExtendedKeyUsageArgs>>> extendedKeyUsage() {
+        return Optional.ofNullable(this.extendedKeyUsage);
     }
 
     @Import(name="keyUsage")
-      private final @Nullable Output<CertificateKeyUsageArgs> keyUsage;
+    private @Nullable Output<CertificateKeyUsageArgs> keyUsage;
 
-    public Output<CertificateKeyUsageArgs> keyUsage() {
-        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
+    public Optional<Output<CertificateKeyUsageArgs>> keyUsage() {
+        return Optional.ofNullable(this.keyUsage);
     }
 
     @Import(name="subjectAlternativeNames")
-      private final @Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
+    private @Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
 
-    public Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
+    public Optional<Output<List<CertificateGeneralNameArgs>>> subjectAlternativeNames() {
+        return Optional.ofNullable(this.subjectAlternativeNames);
     }
 
-    public CertificateExtensionsArgs(
-        @Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies,
-        @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage,
-        @Nullable Output<CertificateKeyUsageArgs> keyUsage,
-        @Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames) {
-        this.certificatePolicies = certificatePolicies;
-        this.extendedKeyUsage = extendedKeyUsage;
-        this.keyUsage = keyUsage;
-        this.subjectAlternativeNames = subjectAlternativeNames;
-    }
+    private CertificateExtensionsArgs() {}
 
-    private CertificateExtensionsArgs() {
-        this.certificatePolicies = Codegen.empty();
-        this.extendedKeyUsage = Codegen.empty();
-        this.keyUsage = Codegen.empty();
-        this.subjectAlternativeNames = Codegen.empty();
+    private CertificateExtensionsArgs(CertificateExtensionsArgs $) {
+        this.certificatePolicies = $.certificatePolicies;
+        this.extendedKeyUsage = $.extendedKeyUsage;
+        this.keyUsage = $.keyUsage;
+        this.subjectAlternativeNames = $.subjectAlternativeNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateExtensionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies;
-        private @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
-        private @Nullable Output<CertificateKeyUsageArgs> keyUsage;
-        private @Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
+        private CertificateExtensionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateExtensionsArgs();
         }
 
         public Builder(CertificateExtensionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificatePolicies = defaults.certificatePolicies;
-    	      this.extendedKeyUsage = defaults.extendedKeyUsage;
-    	      this.keyUsage = defaults.keyUsage;
-    	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
+            $ = new CertificateExtensionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificatePolicies(@Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies) {
-            this.certificatePolicies = certificatePolicies;
+            $.certificatePolicies = certificatePolicies;
             return this;
         }
-        public Builder certificatePolicies(@Nullable List<CertificatePolicyInformationArgs> certificatePolicies) {
-            this.certificatePolicies = Codegen.ofNullable(certificatePolicies);
-            return this;
+
+        public Builder certificatePolicies(List<CertificatePolicyInformationArgs> certificatePolicies) {
+            return certificatePolicies(Output.of(certificatePolicies));
         }
+
         public Builder certificatePolicies(CertificatePolicyInformationArgs... certificatePolicies) {
             return certificatePolicies(List.of(certificatePolicies));
         }
+
         public Builder extendedKeyUsage(@Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage) {
-            this.extendedKeyUsage = extendedKeyUsage;
+            $.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
-        public Builder extendedKeyUsage(@Nullable List<CertificateExtendedKeyUsageArgs> extendedKeyUsage) {
-            this.extendedKeyUsage = Codegen.ofNullable(extendedKeyUsage);
-            return this;
+
+        public Builder extendedKeyUsage(List<CertificateExtendedKeyUsageArgs> extendedKeyUsage) {
+            return extendedKeyUsage(Output.of(extendedKeyUsage));
         }
+
         public Builder extendedKeyUsage(CertificateExtendedKeyUsageArgs... extendedKeyUsage) {
             return extendedKeyUsage(List.of(extendedKeyUsage));
         }
+
         public Builder keyUsage(@Nullable Output<CertificateKeyUsageArgs> keyUsage) {
-            this.keyUsage = keyUsage;
+            $.keyUsage = keyUsage;
             return this;
         }
-        public Builder keyUsage(@Nullable CertificateKeyUsageArgs keyUsage) {
-            this.keyUsage = Codegen.ofNullable(keyUsage);
-            return this;
+
+        public Builder keyUsage(CertificateKeyUsageArgs keyUsage) {
+            return keyUsage(Output.of(keyUsage));
         }
+
         public Builder subjectAlternativeNames(@Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames) {
-            this.subjectAlternativeNames = subjectAlternativeNames;
+            $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-        public Builder subjectAlternativeNames(@Nullable List<CertificateGeneralNameArgs> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Codegen.ofNullable(subjectAlternativeNames);
-            return this;
+
+        public Builder subjectAlternativeNames(List<CertificateGeneralNameArgs> subjectAlternativeNames) {
+            return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
+
         public Builder subjectAlternativeNames(CertificateGeneralNameArgs... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
-        }        public CertificateExtensionsArgs build() {
-            return new CertificateExtensionsArgs(certificatePolicies, extendedKeyUsage, keyUsage, subjectAlternativeNames);
+        }
+
+        public CertificateExtensionsArgs build() {
+            return $;
         }
     }
+
 }

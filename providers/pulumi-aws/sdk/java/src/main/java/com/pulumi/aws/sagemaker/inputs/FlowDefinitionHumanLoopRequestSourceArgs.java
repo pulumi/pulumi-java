@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FlowDefinitionHumanLoopRequestSourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="awsManagedHumanLoopRequestSource", required=true)
-      private final Output<String> awsManagedHumanLoopRequestSource;
+    private Output<String> awsManagedHumanLoopRequestSource;
 
     public Output<String> awsManagedHumanLoopRequestSource() {
         return this.awsManagedHumanLoopRequestSource;
     }
 
-    public FlowDefinitionHumanLoopRequestSourceArgs(Output<String> awsManagedHumanLoopRequestSource) {
-        this.awsManagedHumanLoopRequestSource = Objects.requireNonNull(awsManagedHumanLoopRequestSource, "expected parameter 'awsManagedHumanLoopRequestSource' to be non-null");
-    }
+    private FlowDefinitionHumanLoopRequestSourceArgs() {}
 
-    private FlowDefinitionHumanLoopRequestSourceArgs() {
-        this.awsManagedHumanLoopRequestSource = Codegen.empty();
+    private FlowDefinitionHumanLoopRequestSourceArgs(FlowDefinitionHumanLoopRequestSourceArgs $) {
+        this.awsManagedHumanLoopRequestSource = $.awsManagedHumanLoopRequestSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowDefinitionHumanLoopRequestSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> awsManagedHumanLoopRequestSource;
+        private FlowDefinitionHumanLoopRequestSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowDefinitionHumanLoopRequestSourceArgs();
         }
 
         public Builder(FlowDefinitionHumanLoopRequestSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsManagedHumanLoopRequestSource = defaults.awsManagedHumanLoopRequestSource;
+            $ = new FlowDefinitionHumanLoopRequestSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsManagedHumanLoopRequestSource(Output<String> awsManagedHumanLoopRequestSource) {
-            this.awsManagedHumanLoopRequestSource = Objects.requireNonNull(awsManagedHumanLoopRequestSource);
+            $.awsManagedHumanLoopRequestSource = awsManagedHumanLoopRequestSource;
             return this;
         }
+
         public Builder awsManagedHumanLoopRequestSource(String awsManagedHumanLoopRequestSource) {
-            this.awsManagedHumanLoopRequestSource = Output.of(Objects.requireNonNull(awsManagedHumanLoopRequestSource));
-            return this;
-        }        public FlowDefinitionHumanLoopRequestSourceArgs build() {
-            return new FlowDefinitionHumanLoopRequestSourceArgs(awsManagedHumanLoopRequestSource);
+            return awsManagedHumanLoopRequestSource(Output.of(awsManagedHumanLoopRequestSource));
+        }
+
+        public FlowDefinitionHumanLoopRequestSourceArgs build() {
+            $.awsManagedHumanLoopRequestSource = Objects.requireNonNull($.awsManagedHumanLoopRequestSource, "expected parameter 'awsManagedHumanLoopRequestSource' to be non-null");
+            return $;
         }
     }
+
 }

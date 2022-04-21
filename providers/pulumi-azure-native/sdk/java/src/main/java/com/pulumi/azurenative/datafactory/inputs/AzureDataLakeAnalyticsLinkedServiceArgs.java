@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,7 +33,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<Object> accountName;
+    private Output<Object> accountName;
 
     public Output<Object> accountName() {
         return this.accountName;
@@ -43,10 +44,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="dataLakeAnalyticsUri")
-      private final @Nullable Output<Object> dataLakeAnalyticsUri;
+    private @Nullable Output<Object> dataLakeAnalyticsUri;
 
-    public Output<Object> dataLakeAnalyticsUri() {
-        return this.dataLakeAnalyticsUri == null ? Codegen.empty() : this.dataLakeAnalyticsUri;
+    public Optional<Output<Object>> dataLakeAnalyticsUri() {
+        return Optional.ofNullable(this.dataLakeAnalyticsUri);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName")
-      private final @Nullable Output<Object> resourceGroupName;
+    private @Nullable Output<Object> resourceGroupName;
 
-    public Output<Object> resourceGroupName() {
-        return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
+    public Optional<Output<Object>> resourceGroupName() {
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     /**
@@ -120,10 +121,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Output<Object> servicePrincipalId;
+    private @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
+    public Optional<Output<Object>> servicePrincipalId() {
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -131,10 +132,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="servicePrincipalKey")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
-        return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> servicePrincipalKey() {
+        return Optional.ofNullable(this.servicePrincipalKey);
     }
 
     /**
@@ -142,10 +143,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Output<Object> subscriptionId;
+    private @Nullable Output<Object> subscriptionId;
 
-    public Output<Object> subscriptionId() {
-        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
+    public Optional<Output<Object>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -153,7 +154,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="tenant", required=true)
-      private final Output<Object> tenant;
+    private Output<Object> tenant;
 
     public Output<Object> tenant() {
         return this.tenant;
@@ -165,209 +166,175 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AzureDataLakeAnalyticsLinkedServiceArgs(
-        Output<Object> accountName,
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<Object> dataLakeAnalyticsUri,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Object> resourceGroupName,
-        @Nullable Output<Object> servicePrincipalId,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey,
-        @Nullable Output<Object> subscriptionId,
-        Output<Object> tenant,
-        Output<String> type) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.dataLakeAnalyticsUri = dataLakeAnalyticsUri;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.resourceGroupName = resourceGroupName;
-        this.servicePrincipalId = servicePrincipalId;
-        this.servicePrincipalKey = servicePrincipalKey;
-        this.subscriptionId = subscriptionId;
-        this.tenant = Objects.requireNonNull(tenant, "expected parameter 'tenant' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AzureDataLakeAnalyticsLinkedServiceArgs() {}
 
-    private AzureDataLakeAnalyticsLinkedServiceArgs() {
-        this.accountName = Codegen.empty();
-        this.annotations = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.dataLakeAnalyticsUri = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.servicePrincipalId = Codegen.empty();
-        this.servicePrincipalKey = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
-        this.tenant = Codegen.empty();
-        this.type = Codegen.empty();
+    private AzureDataLakeAnalyticsLinkedServiceArgs(AzureDataLakeAnalyticsLinkedServiceArgs $) {
+        this.accountName = $.accountName;
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.dataLakeAnalyticsUri = $.dataLakeAnalyticsUri;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.subscriptionId = $.subscriptionId;
+        this.tenant = $.tenant;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDataLakeAnalyticsLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> accountName;
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<Object> dataLakeAnalyticsUri;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Object> resourceGroupName;
-        private @Nullable Output<Object> servicePrincipalId;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
-        private @Nullable Output<Object> subscriptionId;
-        private Output<Object> tenant;
-        private Output<String> type;
+        private AzureDataLakeAnalyticsLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDataLakeAnalyticsLinkedServiceArgs();
         }
 
         public Builder(AzureDataLakeAnalyticsLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.dataLakeAnalyticsUri = defaults.dataLakeAnalyticsUri;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
+            $ = new AzureDataLakeAnalyticsLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<Object> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(Object accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder dataLakeAnalyticsUri(@Nullable Output<Object> dataLakeAnalyticsUri) {
-            this.dataLakeAnalyticsUri = dataLakeAnalyticsUri;
+            $.dataLakeAnalyticsUri = dataLakeAnalyticsUri;
             return this;
         }
-        public Builder dataLakeAnalyticsUri(@Nullable Object dataLakeAnalyticsUri) {
-            this.dataLakeAnalyticsUri = Codegen.ofNullable(dataLakeAnalyticsUri);
-            return this;
+
+        public Builder dataLakeAnalyticsUri(Object dataLakeAnalyticsUri) {
+            return dataLakeAnalyticsUri(Output.of(dataLakeAnalyticsUri));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder resourceGroupName(@Nullable Output<Object> resourceGroupName) {
-            this.resourceGroupName = resourceGroupName;
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
-        public Builder resourceGroupName(@Nullable Object resourceGroupName) {
-            this.resourceGroupName = Codegen.ofNullable(resourceGroupName);
-            return this;
+
+        public Builder resourceGroupName(Object resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
-        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Codegen.ofNullable(servicePrincipalId);
-            return this;
+
+        public Builder servicePrincipalId(Object servicePrincipalId) {
+            return servicePrincipalId(Output.of(servicePrincipalId));
         }
+
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
-            this.servicePrincipalKey = servicePrincipalKey;
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
-        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Codegen.ofNullable(servicePrincipalKey);
-            return this;
+
+        public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
+            return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
+
         public Builder subscriptionId(@Nullable Output<Object> subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
-        public Builder subscriptionId(@Nullable Object subscriptionId) {
-            this.subscriptionId = Codegen.ofNullable(subscriptionId);
-            return this;
+
+        public Builder subscriptionId(Object subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
+
         public Builder tenant(Output<Object> tenant) {
-            this.tenant = Objects.requireNonNull(tenant);
+            $.tenant = tenant;
             return this;
         }
+
         public Builder tenant(Object tenant) {
-            this.tenant = Output.of(Objects.requireNonNull(tenant));
-            return this;
+            return tenant(Output.of(tenant));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AzureDataLakeAnalyticsLinkedServiceArgs build() {
-            return new AzureDataLakeAnalyticsLinkedServiceArgs(accountName, annotations, connectVia, dataLakeAnalyticsUri, description, encryptedCredential, parameters, resourceGroupName, servicePrincipalId, servicePrincipalKey, subscriptionId, tenant, type);
+            return type(Output.of(type));
+        }
+
+        public AzureDataLakeAnalyticsLinkedServiceArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.tenant = Objects.requireNonNull($.tenant, "expected parameter 'tenant' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

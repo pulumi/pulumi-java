@@ -38,10 +38,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="assets")
-      private final @Nullable Map<String,AssetItemResponse> assets;
+    private @Nullable Map<String,AssetItemResponse> assets;
 
-    public Map<String,AssetItemResponse> assets() {
-        return this.assets == null ? Map.of() : this.assets;
+    public Optional<Map<String,AssetItemResponse>> assets() {
+        return Optional.ofNullable(this.assets);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="commitmentPlan")
-      private final @Nullable CommitmentPlanResponse commitmentPlan;
+    private @Nullable CommitmentPlanResponse commitmentPlan;
 
     public Optional<CommitmentPlanResponse> commitmentPlan() {
-        return this.commitmentPlan == null ? Optional.empty() : Optional.ofNullable(this.commitmentPlan);
+        return Optional.ofNullable(this.commitmentPlan);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="createdOn", required=true)
-      private final String createdOn;
+    private String createdOn;
 
     public String createdOn() {
         return this.createdOn;
@@ -71,10 +71,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="diagnostics")
-      private final @Nullable DiagnosticsConfigurationResponse diagnostics;
+    private @Nullable DiagnosticsConfigurationResponse diagnostics;
 
     public Optional<DiagnosticsConfigurationResponse> diagnostics() {
-        return this.diagnostics == null ? Optional.empty() : Optional.ofNullable(this.diagnostics);
+        return Optional.ofNullable(this.diagnostics);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="exampleRequest")
-      private final @Nullable ExampleRequestResponse exampleRequest;
+    private @Nullable ExampleRequestResponse exampleRequest;
 
     public Optional<ExampleRequestResponse> exampleRequest() {
-        return this.exampleRequest == null ? Optional.empty() : Optional.ofNullable(this.exampleRequest);
+        return Optional.ofNullable(this.exampleRequest);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="exposeSampleData")
-      private final @Nullable Boolean exposeSampleData;
+    private @Nullable Boolean exposeSampleData;
 
     public Optional<Boolean> exposeSampleData() {
-        return this.exposeSampleData == null ? Optional.empty() : Optional.ofNullable(this.exposeSampleData);
+        return Optional.ofNullable(this.exposeSampleData);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="input")
-      private final @Nullable ServiceInputOutputSpecificationResponse input;
+    private @Nullable ServiceInputOutputSpecificationResponse input;
 
     public Optional<ServiceInputOutputSpecificationResponse> input() {
-        return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="keys")
-      private final @Nullable WebServiceKeysResponse keys;
+    private @Nullable WebServiceKeysResponse keys;
 
     public Optional<WebServiceKeysResponse> keys() {
-        return this.keys == null ? Optional.empty() : Optional.ofNullable(this.keys);
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="machineLearningWorkspace")
-      private final @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace;
+    private @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace;
 
     public Optional<MachineLearningWorkspaceResponse> machineLearningWorkspace() {
-        return this.machineLearningWorkspace == null ? Optional.empty() : Optional.ofNullable(this.machineLearningWorkspace);
+        return Optional.ofNullable(this.machineLearningWorkspace);
     }
 
     /**
@@ -148,7 +148,7 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="modifiedOn", required=true)
-      private final String modifiedOn;
+    private String modifiedOn;
 
     public String modifiedOn() {
         return this.modifiedOn;
@@ -159,10 +159,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="output")
-      private final @Nullable ServiceInputOutputSpecificationResponse output;
+    private @Nullable ServiceInputOutputSpecificationResponse output;
 
     public Optional<ServiceInputOutputSpecificationResponse> output() {
-        return this.output == null ? Optional.empty() : Optional.ofNullable(this.output);
+        return Optional.ofNullable(this.output);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="package")
-      private final @Nullable GraphPackageResponse package_;
+    private @Nullable GraphPackageResponse package_;
 
     public Optional<GraphPackageResponse> package_() {
-        return this.package_ == null ? Optional.empty() : Optional.ofNullable(this.package_);
+        return Optional.ofNullable(this.package_);
     }
 
     /**
@@ -182,7 +182,7 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="packageType", required=true)
-      private final String packageType;
+    private String packageType;
 
     public String packageType() {
         return this.packageType;
@@ -193,10 +193,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,WebServiceParameterResponse> parameters;
+    private @Nullable Map<String,WebServiceParameterResponse> parameters;
 
-    public Map<String,WebServiceParameterResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,WebServiceParameterResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="payloadsInBlobStorage")
-      private final @Nullable Boolean payloadsInBlobStorage;
+    private @Nullable Boolean payloadsInBlobStorage;
 
     public Optional<Boolean> payloadsInBlobStorage() {
-        return this.payloadsInBlobStorage == null ? Optional.empty() : Optional.ofNullable(this.payloadsInBlobStorage);
+        return Optional.ofNullable(this.payloadsInBlobStorage);
     }
 
     /**
@@ -215,10 +215,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="payloadsLocation")
-      private final @Nullable BlobLocationResponse payloadsLocation;
+    private @Nullable BlobLocationResponse payloadsLocation;
 
     public Optional<BlobLocationResponse> payloadsLocation() {
-        return this.payloadsLocation == null ? Optional.empty() : Optional.ofNullable(this.payloadsLocation);
+        return Optional.ofNullable(this.payloadsLocation);
     }
 
     /**
@@ -226,7 +226,7 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -237,10 +237,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Boolean readOnly;
+    private @Nullable Boolean readOnly;
 
     public Optional<Boolean> readOnly() {
-        return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -248,10 +248,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="realtimeConfiguration")
-      private final @Nullable RealtimeConfigurationResponse realtimeConfiguration;
+    private @Nullable RealtimeConfigurationResponse realtimeConfiguration;
 
     public Optional<RealtimeConfigurationResponse> realtimeConfiguration() {
-        return this.realtimeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.realtimeConfiguration);
+        return Optional.ofNullable(this.realtimeConfiguration);
     }
 
     /**
@@ -259,10 +259,10 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="storageAccount")
-      private final @Nullable StorageAccountResponse storageAccount;
+    private @Nullable StorageAccountResponse storageAccount;
 
     public Optional<StorageAccountResponse> storageAccount() {
-        return this.storageAccount == null ? Optional.empty() : Optional.ofNullable(this.storageAccount);
+        return Optional.ofNullable(this.storageAccount);
     }
 
     /**
@@ -270,7 +270,7 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="swaggerLocation", required=true)
-      private final String swaggerLocation;
+    private String swaggerLocation;
 
     public String swaggerLocation() {
         return this.swaggerLocation;
@@ -281,244 +281,181 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
-    public WebServicePropertiesForGraphResponse(
-        @Nullable Map<String,AssetItemResponse> assets,
-        @Nullable CommitmentPlanResponse commitmentPlan,
-        String createdOn,
-        @Nullable String description,
-        @Nullable DiagnosticsConfigurationResponse diagnostics,
-        @Nullable ExampleRequestResponse exampleRequest,
-        @Nullable Boolean exposeSampleData,
-        @Nullable ServiceInputOutputSpecificationResponse input,
-        @Nullable WebServiceKeysResponse keys,
-        @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace,
-        String modifiedOn,
-        @Nullable ServiceInputOutputSpecificationResponse output,
-        @Nullable GraphPackageResponse package_,
-        String packageType,
-        @Nullable Map<String,WebServiceParameterResponse> parameters,
-        @Nullable Boolean payloadsInBlobStorage,
-        @Nullable BlobLocationResponse payloadsLocation,
-        String provisioningState,
-        @Nullable Boolean readOnly,
-        @Nullable RealtimeConfigurationResponse realtimeConfiguration,
-        @Nullable StorageAccountResponse storageAccount,
-        String swaggerLocation,
-        @Nullable String title) {
-        this.assets = assets;
-        this.commitmentPlan = commitmentPlan;
-        this.createdOn = Objects.requireNonNull(createdOn, "expected parameter 'createdOn' to be non-null");
-        this.description = description;
-        this.diagnostics = diagnostics;
-        this.exampleRequest = exampleRequest;
-        this.exposeSampleData = exposeSampleData;
-        this.input = input;
-        this.keys = keys;
-        this.machineLearningWorkspace = machineLearningWorkspace;
-        this.modifiedOn = Objects.requireNonNull(modifiedOn, "expected parameter 'modifiedOn' to be non-null");
-        this.output = output;
-        this.package_ = package_;
-        this.packageType = Codegen.stringProp("packageType").arg(packageType).require();
-        this.parameters = parameters;
-        this.payloadsInBlobStorage = payloadsInBlobStorage;
-        this.payloadsLocation = payloadsLocation;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.readOnly = readOnly;
-        this.realtimeConfiguration = realtimeConfiguration;
-        this.storageAccount = storageAccount;
-        this.swaggerLocation = Objects.requireNonNull(swaggerLocation, "expected parameter 'swaggerLocation' to be non-null");
-        this.title = title;
-    }
+    private WebServicePropertiesForGraphResponse() {}
 
-    private WebServicePropertiesForGraphResponse() {
-        this.assets = Map.of();
-        this.commitmentPlan = null;
-        this.createdOn = null;
-        this.description = null;
-        this.diagnostics = null;
-        this.exampleRequest = null;
-        this.exposeSampleData = null;
-        this.input = null;
-        this.keys = null;
-        this.machineLearningWorkspace = null;
-        this.modifiedOn = null;
-        this.output = null;
-        this.package_ = null;
-        this.packageType = null;
-        this.parameters = Map.of();
-        this.payloadsInBlobStorage = null;
-        this.payloadsLocation = null;
-        this.provisioningState = null;
-        this.readOnly = null;
-        this.realtimeConfiguration = null;
-        this.storageAccount = null;
-        this.swaggerLocation = null;
-        this.title = null;
+    private WebServicePropertiesForGraphResponse(WebServicePropertiesForGraphResponse $) {
+        this.assets = $.assets;
+        this.commitmentPlan = $.commitmentPlan;
+        this.createdOn = $.createdOn;
+        this.description = $.description;
+        this.diagnostics = $.diagnostics;
+        this.exampleRequest = $.exampleRequest;
+        this.exposeSampleData = $.exposeSampleData;
+        this.input = $.input;
+        this.keys = $.keys;
+        this.machineLearningWorkspace = $.machineLearningWorkspace;
+        this.modifiedOn = $.modifiedOn;
+        this.output = $.output;
+        this.package_ = $.package_;
+        this.packageType = $.packageType;
+        this.parameters = $.parameters;
+        this.payloadsInBlobStorage = $.payloadsInBlobStorage;
+        this.payloadsLocation = $.payloadsLocation;
+        this.provisioningState = $.provisioningState;
+        this.readOnly = $.readOnly;
+        this.realtimeConfiguration = $.realtimeConfiguration;
+        this.storageAccount = $.storageAccount;
+        this.swaggerLocation = $.swaggerLocation;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServicePropertiesForGraphResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,AssetItemResponse> assets;
-        private @Nullable CommitmentPlanResponse commitmentPlan;
-        private String createdOn;
-        private @Nullable String description;
-        private @Nullable DiagnosticsConfigurationResponse diagnostics;
-        private @Nullable ExampleRequestResponse exampleRequest;
-        private @Nullable Boolean exposeSampleData;
-        private @Nullable ServiceInputOutputSpecificationResponse input;
-        private @Nullable WebServiceKeysResponse keys;
-        private @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace;
-        private String modifiedOn;
-        private @Nullable ServiceInputOutputSpecificationResponse output;
-        private @Nullable GraphPackageResponse package_;
-        private String packageType;
-        private @Nullable Map<String,WebServiceParameterResponse> parameters;
-        private @Nullable Boolean payloadsInBlobStorage;
-        private @Nullable BlobLocationResponse payloadsLocation;
-        private String provisioningState;
-        private @Nullable Boolean readOnly;
-        private @Nullable RealtimeConfigurationResponse realtimeConfiguration;
-        private @Nullable StorageAccountResponse storageAccount;
-        private String swaggerLocation;
-        private @Nullable String title;
+        private WebServicePropertiesForGraphResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServicePropertiesForGraphResponse();
         }
 
         public Builder(WebServicePropertiesForGraphResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assets = defaults.assets;
-    	      this.commitmentPlan = defaults.commitmentPlan;
-    	      this.createdOn = defaults.createdOn;
-    	      this.description = defaults.description;
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.exampleRequest = defaults.exampleRequest;
-    	      this.exposeSampleData = defaults.exposeSampleData;
-    	      this.input = defaults.input;
-    	      this.keys = defaults.keys;
-    	      this.machineLearningWorkspace = defaults.machineLearningWorkspace;
-    	      this.modifiedOn = defaults.modifiedOn;
-    	      this.output = defaults.output;
-    	      this.package_ = defaults.package_;
-    	      this.packageType = defaults.packageType;
-    	      this.parameters = defaults.parameters;
-    	      this.payloadsInBlobStorage = defaults.payloadsInBlobStorage;
-    	      this.payloadsLocation = defaults.payloadsLocation;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.readOnly = defaults.readOnly;
-    	      this.realtimeConfiguration = defaults.realtimeConfiguration;
-    	      this.storageAccount = defaults.storageAccount;
-    	      this.swaggerLocation = defaults.swaggerLocation;
-    	      this.title = defaults.title;
+            $ = new WebServicePropertiesForGraphResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assets(@Nullable Map<String,AssetItemResponse> assets) {
-            this.assets = assets;
+            $.assets = assets;
             return this;
         }
+
         public Builder commitmentPlan(@Nullable CommitmentPlanResponse commitmentPlan) {
-            this.commitmentPlan = commitmentPlan;
+            $.commitmentPlan = commitmentPlan;
             return this;
         }
+
         public Builder createdOn(String createdOn) {
-            this.createdOn = Objects.requireNonNull(createdOn);
+            $.createdOn = createdOn;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder diagnostics(@Nullable DiagnosticsConfigurationResponse diagnostics) {
-            this.diagnostics = diagnostics;
+            $.diagnostics = diagnostics;
             return this;
         }
+
         public Builder exampleRequest(@Nullable ExampleRequestResponse exampleRequest) {
-            this.exampleRequest = exampleRequest;
+            $.exampleRequest = exampleRequest;
             return this;
         }
+
         public Builder exposeSampleData(@Nullable Boolean exposeSampleData) {
-            this.exposeSampleData = exposeSampleData;
+            $.exposeSampleData = exposeSampleData;
             return this;
         }
+
         public Builder input(@Nullable ServiceInputOutputSpecificationResponse input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
+
         public Builder keys(@Nullable WebServiceKeysResponse keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
+
         public Builder machineLearningWorkspace(@Nullable MachineLearningWorkspaceResponse machineLearningWorkspace) {
-            this.machineLearningWorkspace = machineLearningWorkspace;
+            $.machineLearningWorkspace = machineLearningWorkspace;
             return this;
         }
+
         public Builder modifiedOn(String modifiedOn) {
-            this.modifiedOn = Objects.requireNonNull(modifiedOn);
+            $.modifiedOn = modifiedOn;
             return this;
         }
+
         public Builder output(@Nullable ServiceInputOutputSpecificationResponse output) {
-            this.output = output;
+            $.output = output;
             return this;
         }
+
         public Builder package_(@Nullable GraphPackageResponse package_) {
-            this.package_ = package_;
+            $.package_ = package_;
             return this;
         }
+
         public Builder packageType(String packageType) {
-            this.packageType = Objects.requireNonNull(packageType);
+            $.packageType = packageType;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder payloadsInBlobStorage(@Nullable Boolean payloadsInBlobStorage) {
-            this.payloadsInBlobStorage = payloadsInBlobStorage;
+            $.payloadsInBlobStorage = payloadsInBlobStorage;
             return this;
         }
+
         public Builder payloadsLocation(@Nullable BlobLocationResponse payloadsLocation) {
-            this.payloadsLocation = payloadsLocation;
+            $.payloadsLocation = payloadsLocation;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
+
         public Builder realtimeConfiguration(@Nullable RealtimeConfigurationResponse realtimeConfiguration) {
-            this.realtimeConfiguration = realtimeConfiguration;
+            $.realtimeConfiguration = realtimeConfiguration;
             return this;
         }
+
         public Builder storageAccount(@Nullable StorageAccountResponse storageAccount) {
-            this.storageAccount = storageAccount;
+            $.storageAccount = storageAccount;
             return this;
         }
+
         public Builder swaggerLocation(String swaggerLocation) {
-            this.swaggerLocation = Objects.requireNonNull(swaggerLocation);
+            $.swaggerLocation = swaggerLocation;
             return this;
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
-        }        public WebServicePropertiesForGraphResponse build() {
-            return new WebServicePropertiesForGraphResponse(assets, commitmentPlan, createdOn, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, modifiedOn, output, package_, packageType, parameters, payloadsInBlobStorage, payloadsLocation, provisioningState, readOnly, realtimeConfiguration, storageAccount, swaggerLocation, title);
+        }
+
+        public WebServicePropertiesForGraphResponse build() {
+            $.createdOn = Objects.requireNonNull($.createdOn, "expected parameter 'createdOn' to be non-null");
+            $.modifiedOn = Objects.requireNonNull($.modifiedOn, "expected parameter 'modifiedOn' to be non-null");
+            $.packageType = Codegen.stringProp("packageType").arg($.packageType).require();
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.swaggerLocation = Objects.requireNonNull($.swaggerLocation, "expected parameter 'swaggerLocation' to be non-null");
+            return $;
         }
     }
+
 }

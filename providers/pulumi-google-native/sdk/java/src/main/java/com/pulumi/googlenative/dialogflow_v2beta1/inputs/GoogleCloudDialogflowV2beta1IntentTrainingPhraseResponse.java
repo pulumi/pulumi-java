@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * 
      */
     @Import(name="parts", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts;
+    private List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts;
 
     public List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts() {
         return this.parts;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * 
      */
     @Import(name="timesAddedCount", required=true)
-      private final Integer timesAddedCount;
+    private Integer timesAddedCount;
 
     public Integer timesAddedCount() {
         return this.timesAddedCount;
@@ -57,76 +57,70 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse(
-        String name,
-        List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts,
-        Integer timesAddedCount,
-        String type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parts = Objects.requireNonNull(parts, "expected parameter 'parts' to be non-null");
-        this.timesAddedCount = Objects.requireNonNull(timesAddedCount, "expected parameter 'timesAddedCount' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse() {
-        this.name = null;
-        this.parts = List.of();
-        this.timesAddedCount = null;
-        this.type = null;
+    private GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse(GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse $) {
+        this.name = $.name;
+        this.parts = $.parts;
+        this.timesAddedCount = $.timesAddedCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts;
-        private Integer timesAddedCount;
-        private String type;
+        private GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parts = defaults.parts;
-    	      this.timesAddedCount = defaults.timesAddedCount;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parts(List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts) {
-            this.parts = Objects.requireNonNull(parts);
+            $.parts = parts;
             return this;
         }
+
         public Builder parts(GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse... parts) {
             return parts(List.of(parts));
         }
+
         public Builder timesAddedCount(Integer timesAddedCount) {
-            this.timesAddedCount = Objects.requireNonNull(timesAddedCount);
+            $.timesAddedCount = timesAddedCount;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse(name, parts, timesAddedCount, type);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parts = Objects.requireNonNull($.parts, "expected parameter 'parts' to be non-null");
+            $.timesAddedCount = Objects.requireNonNull($.timesAddedCount, "expected parameter 'timesAddedCount' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

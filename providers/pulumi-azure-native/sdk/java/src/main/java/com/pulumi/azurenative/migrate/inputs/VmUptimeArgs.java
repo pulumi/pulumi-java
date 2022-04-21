@@ -5,9 +5,9 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VmUptimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="daysPerMonth")
-      private final @Nullable Output<Double> daysPerMonth;
+    private @Nullable Output<Double> daysPerMonth;
 
-    public Output<Double> daysPerMonth() {
-        return this.daysPerMonth == null ? Codegen.empty() : this.daysPerMonth;
+    public Optional<Output<Double>> daysPerMonth() {
+        return Optional.ofNullable(this.daysPerMonth);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class VmUptimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hoursPerDay")
-      private final @Nullable Output<Double> hoursPerDay;
+    private @Nullable Output<Double> hoursPerDay;
 
-    public Output<Double> hoursPerDay() {
-        return this.hoursPerDay == null ? Codegen.empty() : this.hoursPerDay;
+    public Optional<Output<Double>> hoursPerDay() {
+        return Optional.ofNullable(this.hoursPerDay);
     }
 
-    public VmUptimeArgs(
-        @Nullable Output<Double> daysPerMonth,
-        @Nullable Output<Double> hoursPerDay) {
-        this.daysPerMonth = daysPerMonth;
-        this.hoursPerDay = hoursPerDay;
-    }
+    private VmUptimeArgs() {}
 
-    private VmUptimeArgs() {
-        this.daysPerMonth = Codegen.empty();
-        this.hoursPerDay = Codegen.empty();
+    private VmUptimeArgs(VmUptimeArgs $) {
+        this.daysPerMonth = $.daysPerMonth;
+        this.hoursPerDay = $.hoursPerDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmUptimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> daysPerMonth;
-        private @Nullable Output<Double> hoursPerDay;
+        private VmUptimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmUptimeArgs();
         }
 
         public Builder(VmUptimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysPerMonth = defaults.daysPerMonth;
-    	      this.hoursPerDay = defaults.hoursPerDay;
+            $ = new VmUptimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysPerMonth(@Nullable Output<Double> daysPerMonth) {
-            this.daysPerMonth = daysPerMonth;
+            $.daysPerMonth = daysPerMonth;
             return this;
         }
-        public Builder daysPerMonth(@Nullable Double daysPerMonth) {
-            this.daysPerMonth = Codegen.ofNullable(daysPerMonth);
-            return this;
+
+        public Builder daysPerMonth(Double daysPerMonth) {
+            return daysPerMonth(Output.of(daysPerMonth));
         }
+
         public Builder hoursPerDay(@Nullable Output<Double> hoursPerDay) {
-            this.hoursPerDay = hoursPerDay;
+            $.hoursPerDay = hoursPerDay;
             return this;
         }
-        public Builder hoursPerDay(@Nullable Double hoursPerDay) {
-            this.hoursPerDay = Codegen.ofNullable(hoursPerDay);
-            return this;
-        }        public VmUptimeArgs build() {
-            return new VmUptimeArgs(daysPerMonth, hoursPerDay);
+
+        public Builder hoursPerDay(Double hoursPerDay) {
+            return hoursPerDay(Output.of(hoursPerDay));
+        }
+
+        public VmUptimeArgs build() {
+            return $;
         }
     }
+
 }

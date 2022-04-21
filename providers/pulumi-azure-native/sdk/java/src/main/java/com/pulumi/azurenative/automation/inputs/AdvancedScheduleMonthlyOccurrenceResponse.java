@@ -24,10 +24,10 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse extends com.pulumi.
      * 
      */
     @Import(name="day")
-      private final @Nullable String day;
+    private @Nullable String day;
 
     public Optional<String> day() {
-        return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse extends com.pulumi.
      * 
      */
     @Import(name="occurrence")
-      private final @Nullable Integer occurrence;
+    private @Nullable Integer occurrence;
 
     public Optional<Integer> occurrence() {
-        return this.occurrence == null ? Optional.empty() : Optional.ofNullable(this.occurrence);
+        return Optional.ofNullable(this.occurrence);
     }
 
-    public AdvancedScheduleMonthlyOccurrenceResponse(
-        @Nullable String day,
-        @Nullable Integer occurrence) {
-        this.day = day;
-        this.occurrence = occurrence;
-    }
+    private AdvancedScheduleMonthlyOccurrenceResponse() {}
 
-    private AdvancedScheduleMonthlyOccurrenceResponse() {
-        this.day = null;
-        this.occurrence = null;
+    private AdvancedScheduleMonthlyOccurrenceResponse(AdvancedScheduleMonthlyOccurrenceResponse $) {
+        this.day = $.day;
+        this.occurrence = $.occurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdvancedScheduleMonthlyOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String day;
-        private @Nullable Integer occurrence;
+        private AdvancedScheduleMonthlyOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdvancedScheduleMonthlyOccurrenceResponse();
         }
 
         public Builder(AdvancedScheduleMonthlyOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.occurrence = defaults.occurrence;
+            $ = new AdvancedScheduleMonthlyOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable String day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
+
         public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = occurrence;
+            $.occurrence = occurrence;
             return this;
-        }        public AdvancedScheduleMonthlyOccurrenceResponse build() {
-            return new AdvancedScheduleMonthlyOccurrenceResponse(day, occurrence);
+        }
+
+        public AdvancedScheduleMonthlyOccurrenceResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.sqladmin_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sqladmin_v1.enums.BackupRunBackupKind;
 import com.pulumi.googlenative.sqladmin_v1.enums.BackupRunStatus;
 import com.pulumi.googlenative.sqladmin_v1.enums.BackupRunType;
@@ -14,6 +13,7 @@ import com.pulumi.googlenative.sqladmin_v1.inputs.DiskEncryptionStatusArgs;
 import com.pulumi.googlenative.sqladmin_v1.inputs.OperationErrorArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupKind")
-      private final @Nullable Output<BackupRunBackupKind> backupKind;
+    private @Nullable Output<BackupRunBackupKind> backupKind;
 
-    public Output<BackupRunBackupKind> backupKind() {
-        return this.backupKind == null ? Codegen.empty() : this.backupKind;
+    public Optional<Output<BackupRunBackupKind>> backupKind() {
+        return Optional.ofNullable(this.backupKind);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionConfiguration")
-      private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+    private @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
-    public Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration() {
-        return this.diskEncryptionConfiguration == null ? Codegen.empty() : this.diskEncryptionConfiguration;
+    public Optional<Output<DiskEncryptionConfigurationArgs>> diskEncryptionConfiguration() {
+        return Optional.ofNullable(this.diskEncryptionConfiguration);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionStatus")
-      private final @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
+    private @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
-    public Output<DiskEncryptionStatusArgs> diskEncryptionStatus() {
-        return this.diskEncryptionStatus == null ? Codegen.empty() : this.diskEncryptionStatus;
+    public Optional<Output<DiskEncryptionStatusArgs>> diskEncryptionStatus() {
+        return Optional.ofNullable(this.diskEncryptionStatus);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enqueuedTime")
-      private final @Nullable Output<String> enqueuedTime;
+    private @Nullable Output<String> enqueuedTime;
 
-    public Output<String> enqueuedTime() {
-        return this.enqueuedTime == null ? Codegen.empty() : this.enqueuedTime;
+    public Optional<Output<String>> enqueuedTime() {
+        return Optional.ofNullable(this.enqueuedTime);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="error")
-      private final @Nullable Output<OperationErrorArgs> error;
+    private @Nullable Output<OperationErrorArgs> error;
 
-    public Output<OperationErrorArgs> error() {
-        return this.error == null ? Codegen.empty() : this.error;
+    public Optional<Output<OperationErrorArgs>> error() {
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -114,7 +114,7 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
@@ -125,10 +125,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -136,17 +136,17 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<BackupRunStatus> status;
+    private @Nullable Output<BackupRunStatus> status;
 
-    public Output<BackupRunStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<BackupRunStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<BackupRunType> type;
+    private @Nullable Output<BackupRunType> type;
 
-    public Output<BackupRunType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<BackupRunType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -198,258 +198,209 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowStartTime")
-      private final @Nullable Output<String> windowStartTime;
+    private @Nullable Output<String> windowStartTime;
 
-    public Output<String> windowStartTime() {
-        return this.windowStartTime == null ? Codegen.empty() : this.windowStartTime;
+    public Optional<Output<String>> windowStartTime() {
+        return Optional.ofNullable(this.windowStartTime);
     }
 
-    public BackupRunArgs(
-        @Nullable Output<BackupRunBackupKind> backupKind,
-        @Nullable Output<String> description,
-        @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration,
-        @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus,
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> enqueuedTime,
-        @Nullable Output<OperationErrorArgs> error,
-        @Nullable Output<String> id,
-        Output<String> instance,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> startTime,
-        @Nullable Output<BackupRunStatus> status,
-        @Nullable Output<BackupRunType> type,
-        @Nullable Output<String> windowStartTime) {
-        this.backupKind = backupKind;
-        this.description = description;
-        this.diskEncryptionConfiguration = diskEncryptionConfiguration;
-        this.diskEncryptionStatus = diskEncryptionStatus;
-        this.endTime = endTime;
-        this.enqueuedTime = enqueuedTime;
-        this.error = error;
-        this.id = id;
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.kind = kind;
-        this.location = location;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.startTime = startTime;
-        this.status = status;
-        this.type = type;
-        this.windowStartTime = windowStartTime;
-    }
+    private BackupRunArgs() {}
 
-    private BackupRunArgs() {
-        this.backupKind = Codegen.empty();
-        this.description = Codegen.empty();
-        this.diskEncryptionConfiguration = Codegen.empty();
-        this.diskEncryptionStatus = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.enqueuedTime = Codegen.empty();
-        this.error = Codegen.empty();
-        this.id = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.status = Codegen.empty();
-        this.type = Codegen.empty();
-        this.windowStartTime = Codegen.empty();
+    private BackupRunArgs(BackupRunArgs $) {
+        this.backupKind = $.backupKind;
+        this.description = $.description;
+        this.diskEncryptionConfiguration = $.diskEncryptionConfiguration;
+        this.diskEncryptionStatus = $.diskEncryptionStatus;
+        this.endTime = $.endTime;
+        this.enqueuedTime = $.enqueuedTime;
+        this.error = $.error;
+        this.id = $.id;
+        this.instance = $.instance;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.startTime = $.startTime;
+        this.status = $.status;
+        this.type = $.type;
+        this.windowStartTime = $.windowStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupRunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BackupRunBackupKind> backupKind;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
-        private @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> enqueuedTime;
-        private @Nullable Output<OperationErrorArgs> error;
-        private @Nullable Output<String> id;
-        private Output<String> instance;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<BackupRunStatus> status;
-        private @Nullable Output<BackupRunType> type;
-        private @Nullable Output<String> windowStartTime;
+        private BackupRunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupRunArgs();
         }
 
         public Builder(BackupRunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupKind = defaults.backupKind;
-    	      this.description = defaults.description;
-    	      this.diskEncryptionConfiguration = defaults.diskEncryptionConfiguration;
-    	      this.diskEncryptionStatus = defaults.diskEncryptionStatus;
-    	      this.endTime = defaults.endTime;
-    	      this.enqueuedTime = defaults.enqueuedTime;
-    	      this.error = defaults.error;
-    	      this.id = defaults.id;
-    	      this.instance = defaults.instance;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
-    	      this.windowStartTime = defaults.windowStartTime;
+            $ = new BackupRunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupKind(@Nullable Output<BackupRunBackupKind> backupKind) {
-            this.backupKind = backupKind;
+            $.backupKind = backupKind;
             return this;
         }
-        public Builder backupKind(@Nullable BackupRunBackupKind backupKind) {
-            this.backupKind = Codegen.ofNullable(backupKind);
-            return this;
+
+        public Builder backupKind(BackupRunBackupKind backupKind) {
+            return backupKind(Output.of(backupKind));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diskEncryptionConfiguration(@Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
-            this.diskEncryptionConfiguration = diskEncryptionConfiguration;
+            $.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
-        public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
-            this.diskEncryptionConfiguration = Codegen.ofNullable(diskEncryptionConfiguration);
-            return this;
+
+        public Builder diskEncryptionConfiguration(DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
+            return diskEncryptionConfiguration(Output.of(diskEncryptionConfiguration));
         }
+
         public Builder diskEncryptionStatus(@Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus) {
-            this.diskEncryptionStatus = diskEncryptionStatus;
+            $.diskEncryptionStatus = diskEncryptionStatus;
             return this;
         }
-        public Builder diskEncryptionStatus(@Nullable DiskEncryptionStatusArgs diskEncryptionStatus) {
-            this.diskEncryptionStatus = Codegen.ofNullable(diskEncryptionStatus);
-            return this;
+
+        public Builder diskEncryptionStatus(DiskEncryptionStatusArgs diskEncryptionStatus) {
+            return diskEncryptionStatus(Output.of(diskEncryptionStatus));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder enqueuedTime(@Nullable Output<String> enqueuedTime) {
-            this.enqueuedTime = enqueuedTime;
+            $.enqueuedTime = enqueuedTime;
             return this;
         }
-        public Builder enqueuedTime(@Nullable String enqueuedTime) {
-            this.enqueuedTime = Codegen.ofNullable(enqueuedTime);
-            return this;
+
+        public Builder enqueuedTime(String enqueuedTime) {
+            return enqueuedTime(Output.of(enqueuedTime));
         }
+
         public Builder error(@Nullable Output<OperationErrorArgs> error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
-        public Builder error(@Nullable OperationErrorArgs error) {
-            this.error = Codegen.ofNullable(error);
-            return this;
+
+        public Builder error(OperationErrorArgs error) {
+            return error(Output.of(error));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder status(@Nullable Output<BackupRunStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable BackupRunStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(BackupRunStatus status) {
+            return status(Output.of(status));
         }
+
         public Builder type(@Nullable Output<BackupRunType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable BackupRunType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(BackupRunType type) {
+            return type(Output.of(type));
         }
+
         public Builder windowStartTime(@Nullable Output<String> windowStartTime) {
-            this.windowStartTime = windowStartTime;
+            $.windowStartTime = windowStartTime;
             return this;
         }
-        public Builder windowStartTime(@Nullable String windowStartTime) {
-            this.windowStartTime = Codegen.ofNullable(windowStartTime);
-            return this;
-        }        public BackupRunArgs build() {
-            return new BackupRunArgs(backupKind, description, diskEncryptionConfiguration, diskEncryptionStatus, endTime, enqueuedTime, error, id, instance, kind, location, project, selfLink, startTime, status, type, windowStartTime);
+
+        public Builder windowStartTime(String windowStartTime) {
+            return windowStartTime(Output.of(windowStartTime));
+        }
+
+        public BackupRunArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            return $;
         }
     }
+
 }

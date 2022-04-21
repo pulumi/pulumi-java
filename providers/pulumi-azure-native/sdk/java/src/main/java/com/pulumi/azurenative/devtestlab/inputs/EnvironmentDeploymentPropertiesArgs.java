@@ -6,10 +6,10 @@ package com.pulumi.azurenative.devtestlab.inputs;
 import com.pulumi.azurenative.devtestlab.inputs.ArmTemplateParameterPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EnvironmentDeploymentPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="armTemplateId")
-      private final @Nullable Output<String> armTemplateId;
+    private @Nullable Output<String> armTemplateId;
 
-    public Output<String> armTemplateId() {
-        return this.armTemplateId == null ? Codegen.empty() : this.armTemplateId;
+    public Optional<Output<String>> armTemplateId() {
+        return Optional.ofNullable(this.armTemplateId);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class EnvironmentDeploymentPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters;
+    private @Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters;
 
-    public Output<List<ArmTemplateParameterPropertiesArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<ArmTemplateParameterPropertiesArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public EnvironmentDeploymentPropertiesArgs(
-        @Nullable Output<String> armTemplateId,
-        @Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters) {
-        this.armTemplateId = armTemplateId;
-        this.parameters = parameters;
-    }
+    private EnvironmentDeploymentPropertiesArgs() {}
 
-    private EnvironmentDeploymentPropertiesArgs() {
-        this.armTemplateId = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private EnvironmentDeploymentPropertiesArgs(EnvironmentDeploymentPropertiesArgs $) {
+        this.armTemplateId = $.armTemplateId;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentDeploymentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> armTemplateId;
-        private @Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters;
+        private EnvironmentDeploymentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentDeploymentPropertiesArgs();
         }
 
         public Builder(EnvironmentDeploymentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.armTemplateId = defaults.armTemplateId;
-    	      this.parameters = defaults.parameters;
+            $ = new EnvironmentDeploymentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder armTemplateId(@Nullable Output<String> armTemplateId) {
-            this.armTemplateId = armTemplateId;
+            $.armTemplateId = armTemplateId;
             return this;
         }
-        public Builder armTemplateId(@Nullable String armTemplateId) {
-            this.armTemplateId = Codegen.ofNullable(armTemplateId);
-            return this;
+
+        public Builder armTemplateId(String armTemplateId) {
+            return armTemplateId(Output.of(armTemplateId));
         }
+
         public Builder parameters(@Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<ArmTemplateParameterPropertiesArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<ArmTemplateParameterPropertiesArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ArmTemplateParameterPropertiesArgs... parameters) {
             return parameters(List.of(parameters));
-        }        public EnvironmentDeploymentPropertiesArgs build() {
-            return new EnvironmentDeploymentPropertiesArgs(armTemplateId, parameters);
+        }
+
+        public EnvironmentDeploymentPropertiesArgs build() {
+            return $;
         }
     }
+
 }

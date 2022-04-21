@@ -21,7 +21,7 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,55 +32,52 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
-    public StatusResponse(
-        String code,
-        String description) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-    }
+    private StatusResponse() {}
 
-    private StatusResponse() {
-        this.code = null;
-        this.description = null;
+    private StatusResponse(StatusResponse $) {
+        this.code = $.code;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String description;
+        private StatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusResponse();
         }
 
         public Builder(StatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.description = defaults.description;
+            $ = new StatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
-        }        public StatusResponse build() {
-            return new StatusResponse(code, description);
+        }
+
+        public StatusResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            return $;
         }
     }
+
 }

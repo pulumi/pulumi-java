@@ -5,10 +5,10 @@ package com.pulumi.googlenative.remotebuildexecution_v1alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="featurePolicy")
-      private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
+    private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
 
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy() {
-        return this.featurePolicy == null ? Codegen.empty() : this.featurePolicy;
+    public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs>> featurePolicy() {
+        return Optional.ofNullable(this.featurePolicy);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -54,109 +54,95 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public InstanceArgs(
-        @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> project) {
-        this.featurePolicy = featurePolicy;
-        this.instanceId = instanceId;
-        this.location = location;
-        this.parent = parent;
-        this.project = project;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.featurePolicy = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.project = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.featurePolicy = $.featurePolicy;
+        this.instanceId = $.instanceId;
+        this.location = $.location;
+        this.parent = $.parent;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> project;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.featurePolicy = defaults.featurePolicy;
-    	      this.instanceId = defaults.instanceId;
-    	      this.location = defaults.location;
-    	      this.parent = defaults.parent;
-    	      this.project = defaults.project;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder featurePolicy(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy) {
-            this.featurePolicy = featurePolicy;
+            $.featurePolicy = featurePolicy;
             return this;
         }
-        public Builder featurePolicy(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs featurePolicy) {
-            this.featurePolicy = Codegen.ofNullable(featurePolicy);
-            return this;
+
+        public Builder featurePolicy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs featurePolicy) {
+            return featurePolicy(Output.of(featurePolicy));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(featurePolicy, instanceId, location, parent, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public InstanceArgs build() {
+            return $;
         }
     }
+
 }

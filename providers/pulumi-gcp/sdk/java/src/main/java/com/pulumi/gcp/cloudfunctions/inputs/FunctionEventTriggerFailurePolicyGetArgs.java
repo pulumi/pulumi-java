@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudfunctions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FunctionEventTriggerFailurePolicyGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="retry", required=true)
-      private final Output<Boolean> retry;
+    private Output<Boolean> retry;
 
     public Output<Boolean> retry() {
         return this.retry;
     }
 
-    public FunctionEventTriggerFailurePolicyGetArgs(Output<Boolean> retry) {
-        this.retry = Objects.requireNonNull(retry, "expected parameter 'retry' to be non-null");
-    }
+    private FunctionEventTriggerFailurePolicyGetArgs() {}
 
-    private FunctionEventTriggerFailurePolicyGetArgs() {
-        this.retry = Codegen.empty();
+    private FunctionEventTriggerFailurePolicyGetArgs(FunctionEventTriggerFailurePolicyGetArgs $) {
+        this.retry = $.retry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionEventTriggerFailurePolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> retry;
+        private FunctionEventTriggerFailurePolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionEventTriggerFailurePolicyGetArgs();
         }
 
         public Builder(FunctionEventTriggerFailurePolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retry = defaults.retry;
+            $ = new FunctionEventTriggerFailurePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder retry(Output<Boolean> retry) {
-            this.retry = Objects.requireNonNull(retry);
+            $.retry = retry;
             return this;
         }
+
         public Builder retry(Boolean retry) {
-            this.retry = Output.of(Objects.requireNonNull(retry));
-            return this;
-        }        public FunctionEventTriggerFailurePolicyGetArgs build() {
-            return new FunctionEventTriggerFailurePolicyGetArgs(retry);
+            return retry(Output.of(retry));
+        }
+
+        public FunctionEventTriggerFailurePolicyGetArgs build() {
+            $.retry = Objects.requireNonNull($.retry, "expected parameter 'retry' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerStateArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="containerID")
-      private final @Nullable Output<String> containerID;
+    private @Nullable Output<String> containerID;
 
-    public Output<String> containerID() {
-        return this.containerID == null ? Codegen.empty() : this.containerID;
+    public Optional<Output<String>> containerID() {
+        return Optional.ofNullable(this.containerID);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
@@ -49,7 +49,7 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="imageID", required=true)
-      private final Output<String> imageID;
+    private Output<String> imageID;
 
     public Output<String> imageID() {
         return this.imageID;
@@ -60,10 +60,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="lastState")
-      private final @Nullable Output<ContainerStateArgs> lastState;
+    private @Nullable Output<ContainerStateArgs> lastState;
 
-    public Output<ContainerStateArgs> lastState() {
-        return this.lastState == null ? Codegen.empty() : this.lastState;
+    public Optional<Output<ContainerStateArgs>> lastState() {
+        return Optional.ofNullable(this.lastState);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -82,7 +82,7 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ready", required=true)
-      private final Output<Boolean> ready;
+    private Output<Boolean> ready;
 
     public Output<Boolean> ready() {
         return this.ready;
@@ -93,7 +93,7 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="restartCount", required=true)
-      private final Output<Integer> restartCount;
+    private Output<Integer> restartCount;
 
     public Output<Integer> restartCount() {
         return this.restartCount;
@@ -104,10 +104,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="started")
-      private final @Nullable Output<Boolean> started;
+    private @Nullable Output<Boolean> started;
 
-    public Output<Boolean> started() {
-        return this.started == null ? Codegen.empty() : this.started;
+    public Optional<Output<Boolean>> started() {
+        return Optional.ofNullable(this.started);
     }
 
     /**
@@ -115,154 +115,133 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<ContainerStateArgs> state;
+    private @Nullable Output<ContainerStateArgs> state;
 
-    public Output<ContainerStateArgs> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<ContainerStateArgs>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public ContainerStatusArgs(
-        @Nullable Output<String> containerID,
-        Output<String> image,
-        Output<String> imageID,
-        @Nullable Output<ContainerStateArgs> lastState,
-        Output<String> name,
-        Output<Boolean> ready,
-        Output<Integer> restartCount,
-        @Nullable Output<Boolean> started,
-        @Nullable Output<ContainerStateArgs> state) {
-        this.containerID = containerID;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.imageID = Objects.requireNonNull(imageID, "expected parameter 'imageID' to be non-null");
-        this.lastState = lastState;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.ready = Objects.requireNonNull(ready, "expected parameter 'ready' to be non-null");
-        this.restartCount = Objects.requireNonNull(restartCount, "expected parameter 'restartCount' to be non-null");
-        this.started = started;
-        this.state = state;
-    }
+    private ContainerStatusArgs() {}
 
-    private ContainerStatusArgs() {
-        this.containerID = Codegen.empty();
-        this.image = Codegen.empty();
-        this.imageID = Codegen.empty();
-        this.lastState = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ready = Codegen.empty();
-        this.restartCount = Codegen.empty();
-        this.started = Codegen.empty();
-        this.state = Codegen.empty();
+    private ContainerStatusArgs(ContainerStatusArgs $) {
+        this.containerID = $.containerID;
+        this.image = $.image;
+        this.imageID = $.imageID;
+        this.lastState = $.lastState;
+        this.name = $.name;
+        this.ready = $.ready;
+        this.restartCount = $.restartCount;
+        this.started = $.started;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerID;
-        private Output<String> image;
-        private Output<String> imageID;
-        private @Nullable Output<ContainerStateArgs> lastState;
-        private Output<String> name;
-        private Output<Boolean> ready;
-        private Output<Integer> restartCount;
-        private @Nullable Output<Boolean> started;
-        private @Nullable Output<ContainerStateArgs> state;
+        private ContainerStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerStatusArgs();
         }
 
         public Builder(ContainerStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerID = defaults.containerID;
-    	      this.image = defaults.image;
-    	      this.imageID = defaults.imageID;
-    	      this.lastState = defaults.lastState;
-    	      this.name = defaults.name;
-    	      this.ready = defaults.ready;
-    	      this.restartCount = defaults.restartCount;
-    	      this.started = defaults.started;
-    	      this.state = defaults.state;
+            $ = new ContainerStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerID(@Nullable Output<String> containerID) {
-            this.containerID = containerID;
+            $.containerID = containerID;
             return this;
         }
-        public Builder containerID(@Nullable String containerID) {
-            this.containerID = Codegen.ofNullable(containerID);
-            return this;
+
+        public Builder containerID(String containerID) {
+            return containerID(Output.of(containerID));
         }
+
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder imageID(Output<String> imageID) {
-            this.imageID = Objects.requireNonNull(imageID);
+            $.imageID = imageID;
             return this;
         }
+
         public Builder imageID(String imageID) {
-            this.imageID = Output.of(Objects.requireNonNull(imageID));
-            return this;
+            return imageID(Output.of(imageID));
         }
+
         public Builder lastState(@Nullable Output<ContainerStateArgs> lastState) {
-            this.lastState = lastState;
+            $.lastState = lastState;
             return this;
         }
-        public Builder lastState(@Nullable ContainerStateArgs lastState) {
-            this.lastState = Codegen.ofNullable(lastState);
-            return this;
+
+        public Builder lastState(ContainerStateArgs lastState) {
+            return lastState(Output.of(lastState));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder ready(Output<Boolean> ready) {
-            this.ready = Objects.requireNonNull(ready);
+            $.ready = ready;
             return this;
         }
+
         public Builder ready(Boolean ready) {
-            this.ready = Output.of(Objects.requireNonNull(ready));
-            return this;
+            return ready(Output.of(ready));
         }
+
         public Builder restartCount(Output<Integer> restartCount) {
-            this.restartCount = Objects.requireNonNull(restartCount);
+            $.restartCount = restartCount;
             return this;
         }
+
         public Builder restartCount(Integer restartCount) {
-            this.restartCount = Output.of(Objects.requireNonNull(restartCount));
-            return this;
+            return restartCount(Output.of(restartCount));
         }
+
         public Builder started(@Nullable Output<Boolean> started) {
-            this.started = started;
+            $.started = started;
             return this;
         }
-        public Builder started(@Nullable Boolean started) {
-            this.started = Codegen.ofNullable(started);
-            return this;
+
+        public Builder started(Boolean started) {
+            return started(Output.of(started));
         }
+
         public Builder state(@Nullable Output<ContainerStateArgs> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable ContainerStateArgs state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public ContainerStatusArgs build() {
-            return new ContainerStatusArgs(containerID, image, imageID, lastState, name, ready, restartCount, started, state);
+
+        public Builder state(ContainerStateArgs state) {
+            return state(Output.of(state));
+        }
+
+        public ContainerStatusArgs build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.imageID = Objects.requireNonNull($.imageID, "expected parameter 'imageID' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.ready = Objects.requireNonNull($.ready, "expected parameter 'ready' to be non-null");
+            $.restartCount = Objects.requireNonNull($.restartCount, "expected parameter 'restartCount' to be non-null");
+            return $;
         }
     }
+
 }

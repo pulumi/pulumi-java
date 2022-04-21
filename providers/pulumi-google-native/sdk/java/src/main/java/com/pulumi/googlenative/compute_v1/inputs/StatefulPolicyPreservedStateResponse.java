@@ -22,45 +22,45 @@ public final class StatefulPolicyPreservedStateResponse extends com.pulumi.resou
      * 
      */
     @Import(name="disks", required=true)
-      private final Map<String,String> disks;
+    private Map<String,String> disks;
 
     public Map<String,String> disks() {
         return this.disks;
     }
 
-    public StatefulPolicyPreservedStateResponse(Map<String,String> disks) {
-        this.disks = Objects.requireNonNull(disks, "expected parameter 'disks' to be non-null");
-    }
+    private StatefulPolicyPreservedStateResponse() {}
 
-    private StatefulPolicyPreservedStateResponse() {
-        this.disks = Map.of();
+    private StatefulPolicyPreservedStateResponse(StatefulPolicyPreservedStateResponse $) {
+        this.disks = $.disks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulPolicyPreservedStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> disks;
+        private StatefulPolicyPreservedStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulPolicyPreservedStateResponse();
         }
 
         public Builder(StatefulPolicyPreservedStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disks = defaults.disks;
+            $ = new StatefulPolicyPreservedStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disks(Map<String,String> disks) {
-            this.disks = Objects.requireNonNull(disks);
+            $.disks = disks;
             return this;
-        }        public StatefulPolicyPreservedStateResponse build() {
-            return new StatefulPolicyPreservedStateResponse(disks);
+        }
+
+        public StatefulPolicyPreservedStateResponse build() {
+            $.disks = Objects.requireNonNull($.disks, "expected parameter 'disks' to be non-null");
+            return $;
         }
     }
+
 }

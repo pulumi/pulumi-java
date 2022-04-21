@@ -17,7 +17,7 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="certificateName", required=true)
-      private final String certificateName;
+    private String certificateName;
 
     public String certificateName() {
         return this.certificateName;
@@ -28,7 +28,7 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final String managedInstanceName;
+    private String managedInstanceName;
 
     public String managedInstanceName() {
         return this.managedInstanceName;
@@ -39,64 +39,59 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetServerTrustCertificateArgs(
-        String certificateName,
-        String managedInstanceName,
-        String resourceGroupName) {
-        this.certificateName = Objects.requireNonNull(certificateName, "expected parameter 'certificateName' to be non-null");
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetServerTrustCertificateArgs() {}
 
-    private GetServerTrustCertificateArgs() {
-        this.certificateName = null;
-        this.managedInstanceName = null;
-        this.resourceGroupName = null;
+    private GetServerTrustCertificateArgs(GetServerTrustCertificateArgs $) {
+        this.certificateName = $.certificateName;
+        this.managedInstanceName = $.managedInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerTrustCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateName;
-        private String managedInstanceName;
-        private String resourceGroupName;
+        private GetServerTrustCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerTrustCertificateArgs();
         }
 
         public Builder(GetServerTrustCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetServerTrustCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(String certificateName) {
-            this.certificateName = Objects.requireNonNull(certificateName);
+            $.certificateName = certificateName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetServerTrustCertificateArgs build() {
-            return new GetServerTrustCertificateArgs(certificateName, managedInstanceName, resourceGroupName);
+        }
+
+        public GetServerTrustCertificateArgs build() {
+            $.certificateName = Objects.requireNonNull($.certificateName, "expected parameter 'certificateName' to be non-null");
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

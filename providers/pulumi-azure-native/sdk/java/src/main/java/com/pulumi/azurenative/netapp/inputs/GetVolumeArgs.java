@@ -17,7 +17,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="poolName", required=true)
-      private final String poolName;
+    private String poolName;
 
     public String poolName() {
         return this.poolName;
@@ -39,7 +39,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeName", required=true)
-      private final String volumeName;
+    private String volumeName;
 
     public String volumeName() {
         return this.volumeName;
     }
 
-    public GetVolumeArgs(
-        String accountName,
-        String poolName,
-        String resourceGroupName,
-        String volumeName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.poolName = Objects.requireNonNull(poolName, "expected parameter 'poolName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.volumeName = Objects.requireNonNull(volumeName, "expected parameter 'volumeName' to be non-null");
-    }
+    private GetVolumeArgs() {}
 
-    private GetVolumeArgs() {
-        this.accountName = null;
-        this.poolName = null;
-        this.resourceGroupName = null;
-        this.volumeName = null;
+    private GetVolumeArgs(GetVolumeArgs $) {
+        this.accountName = $.accountName;
+        this.poolName = $.poolName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.volumeName = $.volumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String poolName;
-        private String resourceGroupName;
-        private String volumeName;
+        private GetVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVolumeArgs();
         }
 
         public Builder(GetVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.poolName = defaults.poolName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.volumeName = defaults.volumeName;
+            $ = new GetVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder poolName(String poolName) {
-            this.poolName = Objects.requireNonNull(poolName);
+            $.poolName = poolName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder volumeName(String volumeName) {
-            this.volumeName = Objects.requireNonNull(volumeName);
+            $.volumeName = volumeName;
             return this;
-        }        public GetVolumeArgs build() {
-            return new GetVolumeArgs(accountName, poolName, resourceGroupName, volumeName);
+        }
+
+        public GetVolumeArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.poolName = Objects.requireNonNull($.poolName, "expected parameter 'poolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.volumeName = Objects.requireNonNull($.volumeName, "expected parameter 'volumeName' to be non-null");
+            return $;
         }
     }
+
 }

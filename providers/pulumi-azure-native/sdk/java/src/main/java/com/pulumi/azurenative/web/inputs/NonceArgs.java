@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NonceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nonceExpirationInterval")
-      private final @Nullable Output<String> nonceExpirationInterval;
+    private @Nullable Output<String> nonceExpirationInterval;
 
-    public Output<String> nonceExpirationInterval() {
-        return this.nonceExpirationInterval == null ? Codegen.empty() : this.nonceExpirationInterval;
+    public Optional<Output<String>> nonceExpirationInterval() {
+        return Optional.ofNullable(this.nonceExpirationInterval);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class NonceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validateNonce")
-      private final @Nullable Output<Boolean> validateNonce;
+    private @Nullable Output<Boolean> validateNonce;
 
-    public Output<Boolean> validateNonce() {
-        return this.validateNonce == null ? Codegen.empty() : this.validateNonce;
+    public Optional<Output<Boolean>> validateNonce() {
+        return Optional.ofNullable(this.validateNonce);
     }
 
-    public NonceArgs(
-        @Nullable Output<String> nonceExpirationInterval,
-        @Nullable Output<Boolean> validateNonce) {
-        this.nonceExpirationInterval = nonceExpirationInterval;
-        this.validateNonce = validateNonce;
-    }
+    private NonceArgs() {}
 
-    private NonceArgs() {
-        this.nonceExpirationInterval = Codegen.empty();
-        this.validateNonce = Codegen.empty();
+    private NonceArgs(NonceArgs $) {
+        this.nonceExpirationInterval = $.nonceExpirationInterval;
+        this.validateNonce = $.validateNonce;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NonceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> nonceExpirationInterval;
-        private @Nullable Output<Boolean> validateNonce;
+        private NonceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NonceArgs();
         }
 
         public Builder(NonceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nonceExpirationInterval = defaults.nonceExpirationInterval;
-    	      this.validateNonce = defaults.validateNonce;
+            $ = new NonceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nonceExpirationInterval(@Nullable Output<String> nonceExpirationInterval) {
-            this.nonceExpirationInterval = nonceExpirationInterval;
+            $.nonceExpirationInterval = nonceExpirationInterval;
             return this;
         }
-        public Builder nonceExpirationInterval(@Nullable String nonceExpirationInterval) {
-            this.nonceExpirationInterval = Codegen.ofNullable(nonceExpirationInterval);
-            return this;
+
+        public Builder nonceExpirationInterval(String nonceExpirationInterval) {
+            return nonceExpirationInterval(Output.of(nonceExpirationInterval));
         }
+
         public Builder validateNonce(@Nullable Output<Boolean> validateNonce) {
-            this.validateNonce = validateNonce;
+            $.validateNonce = validateNonce;
             return this;
         }
-        public Builder validateNonce(@Nullable Boolean validateNonce) {
-            this.validateNonce = Codegen.ofNullable(validateNonce);
-            return this;
-        }        public NonceArgs build() {
-            return new NonceArgs(nonceExpirationInterval, validateNonce);
+
+        public Builder validateNonce(Boolean validateNonce) {
+            return validateNonce(Output.of(validateNonce));
+        }
+
+        public NonceArgs build() {
+            return $;
         }
     }
+
 }

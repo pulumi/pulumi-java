@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="kmsWrapped", required=true)
-      private final GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
+    private GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
 
     public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped() {
         return this.kmsWrapped;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="transient", required=true)
-      private final GooglePrivacyDlpV2TransientCryptoKeyResponse transient_;
+    private GooglePrivacyDlpV2TransientCryptoKeyResponse transient_;
 
     public GooglePrivacyDlpV2TransientCryptoKeyResponse transient_() {
         return this.transient_;
@@ -45,64 +45,59 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="unwrapped", required=true)
-      private final GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
+    private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 
     public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped() {
         return this.unwrapped;
     }
 
-    public GooglePrivacyDlpV2CryptoKeyResponse(
-        GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped,
-        GooglePrivacyDlpV2TransientCryptoKeyResponse transient_,
-        GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
-        this.kmsWrapped = Objects.requireNonNull(kmsWrapped, "expected parameter 'kmsWrapped' to be non-null");
-        this.transient_ = Objects.requireNonNull(transient_, "expected parameter 'transient' to be non-null");
-        this.unwrapped = Objects.requireNonNull(unwrapped, "expected parameter 'unwrapped' to be non-null");
-    }
+    private GooglePrivacyDlpV2CryptoKeyResponse() {}
 
-    private GooglePrivacyDlpV2CryptoKeyResponse() {
-        this.kmsWrapped = null;
-        this.transient_ = null;
-        this.unwrapped = null;
+    private GooglePrivacyDlpV2CryptoKeyResponse(GooglePrivacyDlpV2CryptoKeyResponse $) {
+        this.kmsWrapped = $.kmsWrapped;
+        this.transient_ = $.transient_;
+        this.unwrapped = $.unwrapped;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CryptoKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
-        private GooglePrivacyDlpV2TransientCryptoKeyResponse transient_;
-        private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
+        private GooglePrivacyDlpV2CryptoKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CryptoKeyResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CryptoKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsWrapped = defaults.kmsWrapped;
-    	      this.transient_ = defaults.transient_;
-    	      this.unwrapped = defaults.unwrapped;
+            $ = new GooglePrivacyDlpV2CryptoKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsWrapped(GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped) {
-            this.kmsWrapped = Objects.requireNonNull(kmsWrapped);
+            $.kmsWrapped = kmsWrapped;
             return this;
         }
+
         public Builder transient_(GooglePrivacyDlpV2TransientCryptoKeyResponse transient_) {
-            this.transient_ = Objects.requireNonNull(transient_);
+            $.transient_ = transient_;
             return this;
         }
+
         public Builder unwrapped(GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
-            this.unwrapped = Objects.requireNonNull(unwrapped);
+            $.unwrapped = unwrapped;
             return this;
-        }        public GooglePrivacyDlpV2CryptoKeyResponse build() {
-            return new GooglePrivacyDlpV2CryptoKeyResponse(kmsWrapped, transient_, unwrapped);
+        }
+
+        public GooglePrivacyDlpV2CryptoKeyResponse build() {
+            $.kmsWrapped = Objects.requireNonNull($.kmsWrapped, "expected parameter 'kmsWrapped' to be non-null");
+            $.transient_ = Objects.requireNonNull($.transient_, "expected parameter 'transient' to be non-null");
+            $.unwrapped = Objects.requireNonNull($.unwrapped, "expected parameter 'unwrapped' to be non-null");
+            return $;
         }
     }
+
 }

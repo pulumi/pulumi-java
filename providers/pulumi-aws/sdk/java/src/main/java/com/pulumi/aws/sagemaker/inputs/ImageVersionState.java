@@ -5,10 +5,10 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ImageVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ImageVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="baseImage")
-      private final @Nullable Output<String> baseImage;
+    private @Nullable Output<String> baseImage;
 
-    public Output<String> baseImage() {
-        return this.baseImage == null ? Codegen.empty() : this.baseImage;
+    public Optional<Output<String>> baseImage() {
+        return Optional.ofNullable(this.baseImage);
     }
 
     /**
@@ -44,17 +44,17 @@ public final class ImageVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerImage")
-      private final @Nullable Output<String> containerImage;
+    private @Nullable Output<String> containerImage;
 
-    public Output<String> containerImage() {
-        return this.containerImage == null ? Codegen.empty() : this.containerImage;
+    public Optional<Output<String>> containerImage() {
+        return Optional.ofNullable(this.containerImage);
     }
 
     @Import(name="imageArn")
-      private final @Nullable Output<String> imageArn;
+    private @Nullable Output<String> imageArn;
 
-    public Output<String> imageArn() {
-        return this.imageArn == null ? Codegen.empty() : this.imageArn;
+    public Optional<Output<String>> imageArn() {
+        return Optional.ofNullable(this.imageArn);
     }
 
     /**
@@ -62,122 +62,105 @@ public final class ImageVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageName")
-      private final @Nullable Output<String> imageName;
+    private @Nullable Output<String> imageName;
 
-    public Output<String> imageName() {
-        return this.imageName == null ? Codegen.empty() : this.imageName;
+    public Optional<Output<String>> imageName() {
+        return Optional.ofNullable(this.imageName);
     }
 
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ImageVersionState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> baseImage,
-        @Nullable Output<String> containerImage,
-        @Nullable Output<String> imageArn,
-        @Nullable Output<String> imageName,
-        @Nullable Output<Integer> version) {
-        this.arn = arn;
-        this.baseImage = baseImage;
-        this.containerImage = containerImage;
-        this.imageArn = imageArn;
-        this.imageName = imageName;
-        this.version = version;
-    }
+    private ImageVersionState() {}
 
-    private ImageVersionState() {
-        this.arn = Codegen.empty();
-        this.baseImage = Codegen.empty();
-        this.containerImage = Codegen.empty();
-        this.imageArn = Codegen.empty();
-        this.imageName = Codegen.empty();
-        this.version = Codegen.empty();
+    private ImageVersionState(ImageVersionState $) {
+        this.arn = $.arn;
+        this.baseImage = $.baseImage;
+        this.containerImage = $.containerImage;
+        this.imageArn = $.imageArn;
+        this.imageName = $.imageName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageVersionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> baseImage;
-        private @Nullable Output<String> containerImage;
-        private @Nullable Output<String> imageArn;
-        private @Nullable Output<String> imageName;
-        private @Nullable Output<Integer> version;
+        private ImageVersionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageVersionState();
         }
 
         public Builder(ImageVersionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.baseImage = defaults.baseImage;
-    	      this.containerImage = defaults.containerImage;
-    	      this.imageArn = defaults.imageArn;
-    	      this.imageName = defaults.imageName;
-    	      this.version = defaults.version;
+            $ = new ImageVersionState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder baseImage(@Nullable Output<String> baseImage) {
-            this.baseImage = baseImage;
+            $.baseImage = baseImage;
             return this;
         }
-        public Builder baseImage(@Nullable String baseImage) {
-            this.baseImage = Codegen.ofNullable(baseImage);
-            return this;
+
+        public Builder baseImage(String baseImage) {
+            return baseImage(Output.of(baseImage));
         }
+
         public Builder containerImage(@Nullable Output<String> containerImage) {
-            this.containerImage = containerImage;
+            $.containerImage = containerImage;
             return this;
         }
-        public Builder containerImage(@Nullable String containerImage) {
-            this.containerImage = Codegen.ofNullable(containerImage);
-            return this;
+
+        public Builder containerImage(String containerImage) {
+            return containerImage(Output.of(containerImage));
         }
+
         public Builder imageArn(@Nullable Output<String> imageArn) {
-            this.imageArn = imageArn;
+            $.imageArn = imageArn;
             return this;
         }
-        public Builder imageArn(@Nullable String imageArn) {
-            this.imageArn = Codegen.ofNullable(imageArn);
-            return this;
+
+        public Builder imageArn(String imageArn) {
+            return imageArn(Output.of(imageArn));
         }
+
         public Builder imageName(@Nullable Output<String> imageName) {
-            this.imageName = imageName;
+            $.imageName = imageName;
             return this;
         }
-        public Builder imageName(@Nullable String imageName) {
-            this.imageName = Codegen.ofNullable(imageName);
-            return this;
+
+        public Builder imageName(String imageName) {
+            return imageName(Output.of(imageName));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ImageVersionState build() {
-            return new ImageVersionState(arn, baseImage, containerImage, imageArn, imageName, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public ImageVersionState build() {
+            return $;
         }
     }
+
 }

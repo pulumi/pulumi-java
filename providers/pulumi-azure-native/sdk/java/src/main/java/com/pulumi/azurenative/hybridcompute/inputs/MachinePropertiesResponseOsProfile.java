@@ -21,45 +21,45 @@ public final class MachinePropertiesResponseOsProfile extends com.pulumi.resourc
      * 
      */
     @Import(name="computerName", required=true)
-      private final String computerName;
+    private String computerName;
 
     public String computerName() {
         return this.computerName;
     }
 
-    public MachinePropertiesResponseOsProfile(String computerName) {
-        this.computerName = Objects.requireNonNull(computerName, "expected parameter 'computerName' to be non-null");
-    }
+    private MachinePropertiesResponseOsProfile() {}
 
-    private MachinePropertiesResponseOsProfile() {
-        this.computerName = null;
+    private MachinePropertiesResponseOsProfile(MachinePropertiesResponseOsProfile $) {
+        this.computerName = $.computerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachinePropertiesResponseOsProfile defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String computerName;
+        private MachinePropertiesResponseOsProfile $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachinePropertiesResponseOsProfile();
         }
 
         public Builder(MachinePropertiesResponseOsProfile defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computerName = defaults.computerName;
+            $ = new MachinePropertiesResponseOsProfile(Objects.requireNonNull(defaults));
         }
 
         public Builder computerName(String computerName) {
-            this.computerName = Objects.requireNonNull(computerName);
+            $.computerName = computerName;
             return this;
-        }        public MachinePropertiesResponseOsProfile build() {
-            return new MachinePropertiesResponseOsProfile(computerName);
+        }
+
+        public MachinePropertiesResponseOsProfile build() {
+            $.computerName = Objects.requireNonNull($.computerName, "expected parameter 'computerName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="activeDeadlineSeconds", required=true)
-      private final String activeDeadlineSeconds;
+    private String activeDeadlineSeconds;
 
     public String activeDeadlineSeconds() {
         return this.activeDeadlineSeconds;
@@ -34,7 +34,7 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backoffLimit", required=true)
-      private final Integer backoffLimit;
+    private Integer backoffLimit;
 
     public Integer backoffLimit() {
         return this.backoffLimit;
@@ -45,7 +45,7 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="completions", required=true)
-      private final Integer completions;
+    private Integer completions;
 
     public Integer completions() {
         return this.completions;
@@ -56,7 +56,7 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parallelism", required=true)
-      private final Integer parallelism;
+    private Integer parallelism;
 
     public Integer parallelism() {
         return this.parallelism;
@@ -67,7 +67,7 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="template", required=true)
-      private final InstanceTemplateSpecResponse template;
+    private InstanceTemplateSpecResponse template;
 
     public InstanceTemplateSpecResponse template() {
         return this.template;
@@ -78,91 +78,80 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ttlSecondsAfterFinished", required=true)
-      private final Integer ttlSecondsAfterFinished;
+    private Integer ttlSecondsAfterFinished;
 
     public Integer ttlSecondsAfterFinished() {
         return this.ttlSecondsAfterFinished;
     }
 
-    public JobSpecResponse(
-        String activeDeadlineSeconds,
-        Integer backoffLimit,
-        Integer completions,
-        Integer parallelism,
-        InstanceTemplateSpecResponse template,
-        Integer ttlSecondsAfterFinished) {
-        this.activeDeadlineSeconds = Objects.requireNonNull(activeDeadlineSeconds, "expected parameter 'activeDeadlineSeconds' to be non-null");
-        this.backoffLimit = Objects.requireNonNull(backoffLimit, "expected parameter 'backoffLimit' to be non-null");
-        this.completions = Objects.requireNonNull(completions, "expected parameter 'completions' to be non-null");
-        this.parallelism = Objects.requireNonNull(parallelism, "expected parameter 'parallelism' to be non-null");
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-        this.ttlSecondsAfterFinished = Objects.requireNonNull(ttlSecondsAfterFinished, "expected parameter 'ttlSecondsAfterFinished' to be non-null");
-    }
+    private JobSpecResponse() {}
 
-    private JobSpecResponse() {
-        this.activeDeadlineSeconds = null;
-        this.backoffLimit = null;
-        this.completions = null;
-        this.parallelism = null;
-        this.template = null;
-        this.ttlSecondsAfterFinished = null;
+    private JobSpecResponse(JobSpecResponse $) {
+        this.activeDeadlineSeconds = $.activeDeadlineSeconds;
+        this.backoffLimit = $.backoffLimit;
+        this.completions = $.completions;
+        this.parallelism = $.parallelism;
+        this.template = $.template;
+        this.ttlSecondsAfterFinished = $.ttlSecondsAfterFinished;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String activeDeadlineSeconds;
-        private Integer backoffLimit;
-        private Integer completions;
-        private Integer parallelism;
-        private InstanceTemplateSpecResponse template;
-        private Integer ttlSecondsAfterFinished;
+        private JobSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobSpecResponse();
         }
 
         public Builder(JobSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDeadlineSeconds = defaults.activeDeadlineSeconds;
-    	      this.backoffLimit = defaults.backoffLimit;
-    	      this.completions = defaults.completions;
-    	      this.parallelism = defaults.parallelism;
-    	      this.template = defaults.template;
-    	      this.ttlSecondsAfterFinished = defaults.ttlSecondsAfterFinished;
+            $ = new JobSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDeadlineSeconds(String activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = Objects.requireNonNull(activeDeadlineSeconds);
+            $.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
+
         public Builder backoffLimit(Integer backoffLimit) {
-            this.backoffLimit = Objects.requireNonNull(backoffLimit);
+            $.backoffLimit = backoffLimit;
             return this;
         }
+
         public Builder completions(Integer completions) {
-            this.completions = Objects.requireNonNull(completions);
+            $.completions = completions;
             return this;
         }
+
         public Builder parallelism(Integer parallelism) {
-            this.parallelism = Objects.requireNonNull(parallelism);
+            $.parallelism = parallelism;
             return this;
         }
+
         public Builder template(InstanceTemplateSpecResponse template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
         }
+
         public Builder ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
-            this.ttlSecondsAfterFinished = Objects.requireNonNull(ttlSecondsAfterFinished);
+            $.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
-        }        public JobSpecResponse build() {
-            return new JobSpecResponse(activeDeadlineSeconds, backoffLimit, completions, parallelism, template, ttlSecondsAfterFinished);
+        }
+
+        public JobSpecResponse build() {
+            $.activeDeadlineSeconds = Objects.requireNonNull($.activeDeadlineSeconds, "expected parameter 'activeDeadlineSeconds' to be non-null");
+            $.backoffLimit = Objects.requireNonNull($.backoffLimit, "expected parameter 'backoffLimit' to be non-null");
+            $.completions = Objects.requireNonNull($.completions, "expected parameter 'completions' to be non-null");
+            $.parallelism = Objects.requireNonNull($.parallelism, "expected parameter 'parallelism' to be non-null");
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            $.ttlSecondsAfterFinished = Objects.requireNonNull($.ttlSecondsAfterFinished, "expected parameter 'ttlSecondsAfterFinished' to be non-null");
+            return $;
         }
     }
+
 }

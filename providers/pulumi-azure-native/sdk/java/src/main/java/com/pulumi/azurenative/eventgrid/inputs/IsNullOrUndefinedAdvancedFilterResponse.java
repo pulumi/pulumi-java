@@ -24,10 +24,10 @@ public final class IsNullOrUndefinedAdvancedFilterResponse extends com.pulumi.re
      * 
      */
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class IsNullOrUndefinedAdvancedFilterResponse extends com.pulumi.re
      * 
      */
     @Import(name="operatorType", required=true)
-      private final String operatorType;
+    private String operatorType;
 
     public String operatorType() {
         return this.operatorType;
     }
 
-    public IsNullOrUndefinedAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType) {
-        this.key = key;
-        this.operatorType = Codegen.stringProp("operatorType").arg(operatorType).require();
-    }
+    private IsNullOrUndefinedAdvancedFilterResponse() {}
 
-    private IsNullOrUndefinedAdvancedFilterResponse() {
-        this.key = null;
-        this.operatorType = null;
+    private IsNullOrUndefinedAdvancedFilterResponse(IsNullOrUndefinedAdvancedFilterResponse $) {
+        this.key = $.key;
+        this.operatorType = $.operatorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IsNullOrUndefinedAdvancedFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
-        private String operatorType;
+        private IsNullOrUndefinedAdvancedFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IsNullOrUndefinedAdvancedFilterResponse();
         }
 
         public Builder(IsNullOrUndefinedAdvancedFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.operatorType = defaults.operatorType;
+            $ = new IsNullOrUndefinedAdvancedFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder operatorType(String operatorType) {
-            this.operatorType = Objects.requireNonNull(operatorType);
+            $.operatorType = operatorType;
             return this;
-        }        public IsNullOrUndefinedAdvancedFilterResponse build() {
-            return new IsNullOrUndefinedAdvancedFilterResponse(key, operatorType);
+        }
+
+        public IsNullOrUndefinedAdvancedFilterResponse build() {
+            $.operatorType = Codegen.stringProp("operatorType").arg($.operatorType).require();
+            return $;
         }
     }
+
 }

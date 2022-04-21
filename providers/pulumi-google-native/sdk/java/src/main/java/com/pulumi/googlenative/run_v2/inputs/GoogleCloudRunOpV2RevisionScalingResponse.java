@@ -21,7 +21,7 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse extends com.pulumi.
      * 
      */
     @Import(name="maxInstanceCount", required=true)
-      private final Integer maxInstanceCount;
+    private Integer maxInstanceCount;
 
     public Integer maxInstanceCount() {
         return this.maxInstanceCount;
@@ -32,55 +32,52 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse extends com.pulumi.
      * 
      */
     @Import(name="minInstanceCount", required=true)
-      private final Integer minInstanceCount;
+    private Integer minInstanceCount;
 
     public Integer minInstanceCount() {
         return this.minInstanceCount;
     }
 
-    public GoogleCloudRunOpV2RevisionScalingResponse(
-        Integer maxInstanceCount,
-        Integer minInstanceCount) {
-        this.maxInstanceCount = Objects.requireNonNull(maxInstanceCount, "expected parameter 'maxInstanceCount' to be non-null");
-        this.minInstanceCount = Objects.requireNonNull(minInstanceCount, "expected parameter 'minInstanceCount' to be non-null");
-    }
+    private GoogleCloudRunOpV2RevisionScalingResponse() {}
 
-    private GoogleCloudRunOpV2RevisionScalingResponse() {
-        this.maxInstanceCount = null;
-        this.minInstanceCount = null;
+    private GoogleCloudRunOpV2RevisionScalingResponse(GoogleCloudRunOpV2RevisionScalingResponse $) {
+        this.maxInstanceCount = $.maxInstanceCount;
+        this.minInstanceCount = $.minInstanceCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2RevisionScalingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxInstanceCount;
-        private Integer minInstanceCount;
+        private GoogleCloudRunOpV2RevisionScalingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2RevisionScalingResponse();
         }
 
         public Builder(GoogleCloudRunOpV2RevisionScalingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxInstanceCount = defaults.maxInstanceCount;
-    	      this.minInstanceCount = defaults.minInstanceCount;
+            $ = new GoogleCloudRunOpV2RevisionScalingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxInstanceCount(Integer maxInstanceCount) {
-            this.maxInstanceCount = Objects.requireNonNull(maxInstanceCount);
+            $.maxInstanceCount = maxInstanceCount;
             return this;
         }
+
         public Builder minInstanceCount(Integer minInstanceCount) {
-            this.minInstanceCount = Objects.requireNonNull(minInstanceCount);
+            $.minInstanceCount = minInstanceCount;
             return this;
-        }        public GoogleCloudRunOpV2RevisionScalingResponse build() {
-            return new GoogleCloudRunOpV2RevisionScalingResponse(maxInstanceCount, minInstanceCount);
+        }
+
+        public GoogleCloudRunOpV2RevisionScalingResponse build() {
+            $.maxInstanceCount = Objects.requireNonNull($.maxInstanceCount, "expected parameter 'maxInstanceCount' to be non-null");
+            $.minInstanceCount = Objects.requireNonNull($.minInstanceCount, "expected parameter 'minInstanceCount' to be non-null");
+            return $;
         }
     }
+
 }

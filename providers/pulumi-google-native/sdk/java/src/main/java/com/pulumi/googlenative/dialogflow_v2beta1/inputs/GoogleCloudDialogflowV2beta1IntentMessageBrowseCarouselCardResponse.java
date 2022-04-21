@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
      * 
      */
     @Import(name="imageDisplayOptions", required=true)
-      private final String imageDisplayOptions;
+    private String imageDisplayOptions;
 
     public String imageDisplayOptions() {
         return this.imageDisplayOptions;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
      * 
      */
     @Import(name="items", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items() {
         return this.items;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse(
-        String imageDisplayOptions,
-        List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
-        this.imageDisplayOptions = Objects.requireNonNull(imageDisplayOptions, "expected parameter 'imageDisplayOptions' to be non-null");
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse() {
-        this.imageDisplayOptions = null;
-        this.items = List.of();
+    private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse $) {
+        this.imageDisplayOptions = $.imageDisplayOptions;
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageDisplayOptions;
-        private List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
+        private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageDisplayOptions = defaults.imageDisplayOptions;
-    	      this.items = defaults.items;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder imageDisplayOptions(String imageDisplayOptions) {
-            this.imageDisplayOptions = Objects.requireNonNull(imageDisplayOptions);
+            $.imageDisplayOptions = imageDisplayOptions;
             return this;
         }
+
         public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse... items) {
             return items(List.of(items));
-        }        public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse(imageDisplayOptions, items);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse build() {
+            $.imageDisplayOptions = Objects.requireNonNull($.imageDisplayOptions, "expected parameter 'imageDisplayOptions' to be non-null");
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

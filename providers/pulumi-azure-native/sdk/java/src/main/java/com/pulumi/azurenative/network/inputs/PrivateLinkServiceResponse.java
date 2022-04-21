@@ -33,7 +33,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="alias", required=true)
-      private final String alias;
+    private String alias;
 
     public String alias() {
         return this.alias;
@@ -44,10 +44,10 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="autoApproval")
-      private final @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval;
+    private @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval;
 
     public Optional<PrivateLinkServicePropertiesResponseAutoApproval> autoApproval() {
-        return this.autoApproval == null ? Optional.empty() : Optional.ofNullable(this.autoApproval);
+        return Optional.ofNullable(this.autoApproval);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enableProxyProtocol")
-      private final @Nullable Boolean enableProxyProtocol;
+    private @Nullable Boolean enableProxyProtocol;
 
     public Optional<Boolean> enableProxyProtocol() {
-        return this.enableProxyProtocol == null ? Optional.empty() : Optional.ofNullable(this.enableProxyProtocol);
+        return Optional.ofNullable(this.enableProxyProtocol);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -77,10 +77,10 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable ExtendedLocationResponse extendedLocation;
+    private @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fqdns")
-      private final @Nullable List<String> fqdns;
+    private @Nullable List<String> fqdns;
 
-    public List<String> fqdns() {
-        return this.fqdns == null ? List.of() : this.fqdns;
+    public Optional<List<String>> fqdns() {
+        return Optional.ofNullable(this.fqdns);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations;
+    private @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations;
 
-    public List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations() {
-        return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
+    public Optional<List<PrivateLinkServiceIpConfigurationResponse>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="loadBalancerFrontendIpConfigurations")
-      private final @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations;
+    private @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations;
 
-    public List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations() {
-        return this.loadBalancerFrontendIpConfigurations == null ? List.of() : this.loadBalancerFrontendIpConfigurations;
+    public Optional<List<FrontendIPConfigurationResponse>> loadBalancerFrontendIpConfigurations() {
+        return Optional.ofNullable(this.loadBalancerFrontendIpConfigurations);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -143,7 +143,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -154,7 +154,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="networkInterfaces", required=true)
-      private final List<NetworkInterfaceResponse> networkInterfaces;
+    private List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
@@ -165,7 +165,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateEndpointConnections", required=true)
-      private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+    private List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
@@ -176,7 +176,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -187,10 +187,10 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -198,7 +198,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -209,205 +209,167 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="visibility")
-      private final @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
+    private @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
 
     public Optional<PrivateLinkServicePropertiesResponseVisibility> visibility() {
-        return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
+        return Optional.ofNullable(this.visibility);
     }
 
-    public PrivateLinkServiceResponse(
-        String alias,
-        @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval,
-        @Nullable Boolean enableProxyProtocol,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable List<String> fqdns,
-        @Nullable String id,
-        @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations,
-        @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations,
-        @Nullable String location,
-        String name,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable PrivateLinkServicePropertiesResponseVisibility visibility) {
-        this.alias = Objects.requireNonNull(alias, "expected parameter 'alias' to be non-null");
-        this.autoApproval = autoApproval;
-        this.enableProxyProtocol = enableProxyProtocol;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.extendedLocation = extendedLocation;
-        this.fqdns = fqdns;
-        this.id = id;
-        this.ipConfigurations = ipConfigurations;
-        this.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces, "expected parameter 'networkInterfaces' to be non-null");
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.visibility = visibility;
-    }
+    private PrivateLinkServiceResponse() {}
 
-    private PrivateLinkServiceResponse() {
-        this.alias = null;
-        this.autoApproval = null;
-        this.enableProxyProtocol = null;
-        this.etag = null;
-        this.extendedLocation = null;
-        this.fqdns = List.of();
-        this.id = null;
-        this.ipConfigurations = List.of();
-        this.loadBalancerFrontendIpConfigurations = List.of();
-        this.location = null;
-        this.name = null;
-        this.networkInterfaces = List.of();
-        this.privateEndpointConnections = List.of();
-        this.provisioningState = null;
-        this.tags = Map.of();
-        this.type = null;
-        this.visibility = null;
+    private PrivateLinkServiceResponse(PrivateLinkServiceResponse $) {
+        this.alias = $.alias;
+        this.autoApproval = $.autoApproval;
+        this.enableProxyProtocol = $.enableProxyProtocol;
+        this.etag = $.etag;
+        this.extendedLocation = $.extendedLocation;
+        this.fqdns = $.fqdns;
+        this.id = $.id;
+        this.ipConfigurations = $.ipConfigurations;
+        this.loadBalancerFrontendIpConfigurations = $.loadBalancerFrontendIpConfigurations;
+        this.location = $.location;
+        this.name = $.name;
+        this.networkInterfaces = $.networkInterfaces;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.provisioningState = $.provisioningState;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alias;
-        private @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval;
-        private @Nullable Boolean enableProxyProtocol;
-        private String etag;
-        private @Nullable ExtendedLocationResponse extendedLocation;
-        private @Nullable List<String> fqdns;
-        private @Nullable String id;
-        private @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations;
-        private @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations;
-        private @Nullable String location;
-        private String name;
-        private List<NetworkInterfaceResponse> networkInterfaces;
-        private List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-        private String provisioningState;
-        private @Nullable Map<String,String> tags;
-        private String type;
-        private @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
+        private PrivateLinkServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceResponse();
         }
 
         public Builder(PrivateLinkServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.autoApproval = defaults.autoApproval;
-    	      this.enableProxyProtocol = defaults.enableProxyProtocol;
-    	      this.etag = defaults.etag;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.fqdns = defaults.fqdns;
-    	      this.id = defaults.id;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.loadBalancerFrontendIpConfigurations = defaults.loadBalancerFrontendIpConfigurations;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.visibility = defaults.visibility;
+            $ = new PrivateLinkServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(String alias) {
-            this.alias = Objects.requireNonNull(alias);
+            $.alias = alias;
             return this;
         }
+
         public Builder autoApproval(@Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval) {
-            this.autoApproval = autoApproval;
+            $.autoApproval = autoApproval;
             return this;
         }
+
         public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
-            this.enableProxyProtocol = enableProxyProtocol;
+            $.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
+
         public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = fqdns;
+            $.fqdns = fqdns;
             return this;
         }
+
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipConfigurations(@Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(PrivateLinkServiceIpConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder loadBalancerFrontendIpConfigurations(@Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations) {
-            this.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
+            $.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
             return this;
         }
+
         public Builder loadBalancerFrontendIpConfigurations(FrontendIPConfigurationResponse... loadBalancerFrontendIpConfigurations) {
             return loadBalancerFrontendIpConfigurations(List.of(loadBalancerFrontendIpConfigurations));
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
-            this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
-            this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder visibility(@Nullable PrivateLinkServicePropertiesResponseVisibility visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
-        }        public PrivateLinkServiceResponse build() {
-            return new PrivateLinkServiceResponse(alias, autoApproval, enableProxyProtocol, etag, extendedLocation, fqdns, id, ipConfigurations, loadBalancerFrontendIpConfigurations, location, name, networkInterfaces, privateEndpointConnections, provisioningState, tags, type, visibility);
+        }
+
+        public PrivateLinkServiceResponse build() {
+            $.alias = Objects.requireNonNull($.alias, "expected parameter 'alias' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.networkInterfaces = Objects.requireNonNull($.networkInterfaces, "expected parameter 'networkInterfaces' to be non-null");
+            $.privateEndpointConnections = Objects.requireNonNull($.privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

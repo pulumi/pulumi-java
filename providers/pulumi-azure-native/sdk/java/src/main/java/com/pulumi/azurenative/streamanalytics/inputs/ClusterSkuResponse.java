@@ -24,10 +24,10 @@ public final class ClusterSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ClusterSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public ClusterSkuResponse(
-        @Nullable Integer capacity,
-        @Nullable String name) {
-        this.capacity = capacity;
-        this.name = name;
-    }
+    private ClusterSkuResponse() {}
 
-    private ClusterSkuResponse() {
-        this.capacity = null;
-        this.name = null;
+    private ClusterSkuResponse(ClusterSkuResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer capacity;
-        private @Nullable String name;
+        private ClusterSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterSkuResponse();
         }
 
         public Builder(ClusterSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
+            $ = new ClusterSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public ClusterSkuResponse build() {
-            return new ClusterSkuResponse(capacity, name);
+        }
+
+        public ClusterSkuResponse build() {
+            return $;
         }
     }
+
 }

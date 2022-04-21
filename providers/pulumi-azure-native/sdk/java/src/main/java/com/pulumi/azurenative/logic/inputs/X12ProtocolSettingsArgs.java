@@ -17,9 +17,9 @@ import com.pulumi.azurenative.logic.inputs.X12ValidationOverrideArgs;
 import com.pulumi.azurenative.logic.inputs.X12ValidationSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,7 +36,7 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="acknowledgementSettings", required=true)
-      private final Output<X12AcknowledgementSettingsArgs> acknowledgementSettings;
+    private Output<X12AcknowledgementSettingsArgs> acknowledgementSettings;
 
     public Output<X12AcknowledgementSettingsArgs> acknowledgementSettings() {
         return this.acknowledgementSettings;
@@ -47,10 +47,10 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="envelopeOverrides")
-      private final @Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides;
+    private @Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides;
 
-    public Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides() {
-        return this.envelopeOverrides == null ? Codegen.empty() : this.envelopeOverrides;
+    public Optional<Output<List<X12EnvelopeOverrideArgs>>> envelopeOverrides() {
+        return Optional.ofNullable(this.envelopeOverrides);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="envelopeSettings", required=true)
-      private final Output<X12EnvelopeSettingsArgs> envelopeSettings;
+    private Output<X12EnvelopeSettingsArgs> envelopeSettings;
 
     public Output<X12EnvelopeSettingsArgs> envelopeSettings() {
         return this.envelopeSettings;
@@ -69,7 +69,7 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="framingSettings", required=true)
-      private final Output<X12FramingSettingsArgs> framingSettings;
+    private Output<X12FramingSettingsArgs> framingSettings;
 
     public Output<X12FramingSettingsArgs> framingSettings() {
         return this.framingSettings;
@@ -80,7 +80,7 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="messageFilter", required=true)
-      private final Output<X12MessageFilterArgs> messageFilter;
+    private Output<X12MessageFilterArgs> messageFilter;
 
     public Output<X12MessageFilterArgs> messageFilter() {
         return this.messageFilter;
@@ -91,10 +91,10 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="messageFilterList")
-      private final @Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList;
+    private @Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList;
 
-    public Output<List<X12MessageIdentifierArgs>> messageFilterList() {
-        return this.messageFilterList == null ? Codegen.empty() : this.messageFilterList;
+    public Optional<Output<List<X12MessageIdentifierArgs>>> messageFilterList() {
+        return Optional.ofNullable(this.messageFilterList);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="processingSettings", required=true)
-      private final Output<X12ProcessingSettingsArgs> processingSettings;
+    private Output<X12ProcessingSettingsArgs> processingSettings;
 
     public Output<X12ProcessingSettingsArgs> processingSettings() {
         return this.processingSettings;
@@ -113,7 +113,7 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="schemaReferences", required=true)
-      private final Output<List<X12SchemaReferenceArgs>> schemaReferences;
+    private Output<List<X12SchemaReferenceArgs>> schemaReferences;
 
     public Output<List<X12SchemaReferenceArgs>> schemaReferences() {
         return this.schemaReferences;
@@ -124,7 +124,7 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="securitySettings", required=true)
-      private final Output<X12SecuritySettingsArgs> securitySettings;
+    private Output<X12SecuritySettingsArgs> securitySettings;
 
     public Output<X12SecuritySettingsArgs> securitySettings() {
         return this.securitySettings;
@@ -135,10 +135,10 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="validationOverrides")
-      private final @Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides;
+    private @Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides;
 
-    public Output<List<X12ValidationOverrideArgs>> validationOverrides() {
-        return this.validationOverrides == null ? Codegen.empty() : this.validationOverrides;
+    public Optional<Output<List<X12ValidationOverrideArgs>>> validationOverrides() {
+        return Optional.ofNullable(this.validationOverrides);
     }
 
     /**
@@ -146,7 +146,7 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="validationSettings", required=true)
-      private final Output<X12ValidationSettingsArgs> validationSettings;
+    private Output<X12ValidationSettingsArgs> validationSettings;
 
     public Output<X12ValidationSettingsArgs> validationSettings() {
         return this.validationSettings;
@@ -157,208 +157,186 @@ public final class X12ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="x12DelimiterOverrides")
-      private final @Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides;
+    private @Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides;
 
-    public Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides() {
-        return this.x12DelimiterOverrides == null ? Codegen.empty() : this.x12DelimiterOverrides;
+    public Optional<Output<List<X12DelimiterOverridesArgs>>> x12DelimiterOverrides() {
+        return Optional.ofNullable(this.x12DelimiterOverrides);
     }
 
-    public X12ProtocolSettingsArgs(
-        Output<X12AcknowledgementSettingsArgs> acknowledgementSettings,
-        @Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides,
-        Output<X12EnvelopeSettingsArgs> envelopeSettings,
-        Output<X12FramingSettingsArgs> framingSettings,
-        Output<X12MessageFilterArgs> messageFilter,
-        @Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList,
-        Output<X12ProcessingSettingsArgs> processingSettings,
-        Output<List<X12SchemaReferenceArgs>> schemaReferences,
-        Output<X12SecuritySettingsArgs> securitySettings,
-        @Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides,
-        Output<X12ValidationSettingsArgs> validationSettings,
-        @Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides) {
-        this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings, "expected parameter 'acknowledgementSettings' to be non-null");
-        this.envelopeOverrides = envelopeOverrides;
-        this.envelopeSettings = Objects.requireNonNull(envelopeSettings, "expected parameter 'envelopeSettings' to be non-null");
-        this.framingSettings = Objects.requireNonNull(framingSettings, "expected parameter 'framingSettings' to be non-null");
-        this.messageFilter = Objects.requireNonNull(messageFilter, "expected parameter 'messageFilter' to be non-null");
-        this.messageFilterList = messageFilterList;
-        this.processingSettings = Objects.requireNonNull(processingSettings, "expected parameter 'processingSettings' to be non-null");
-        this.schemaReferences = Objects.requireNonNull(schemaReferences, "expected parameter 'schemaReferences' to be non-null");
-        this.securitySettings = Objects.requireNonNull(securitySettings, "expected parameter 'securitySettings' to be non-null");
-        this.validationOverrides = validationOverrides;
-        this.validationSettings = Objects.requireNonNull(validationSettings, "expected parameter 'validationSettings' to be non-null");
-        this.x12DelimiterOverrides = x12DelimiterOverrides;
-    }
+    private X12ProtocolSettingsArgs() {}
 
-    private X12ProtocolSettingsArgs() {
-        this.acknowledgementSettings = Codegen.empty();
-        this.envelopeOverrides = Codegen.empty();
-        this.envelopeSettings = Codegen.empty();
-        this.framingSettings = Codegen.empty();
-        this.messageFilter = Codegen.empty();
-        this.messageFilterList = Codegen.empty();
-        this.processingSettings = Codegen.empty();
-        this.schemaReferences = Codegen.empty();
-        this.securitySettings = Codegen.empty();
-        this.validationOverrides = Codegen.empty();
-        this.validationSettings = Codegen.empty();
-        this.x12DelimiterOverrides = Codegen.empty();
+    private X12ProtocolSettingsArgs(X12ProtocolSettingsArgs $) {
+        this.acknowledgementSettings = $.acknowledgementSettings;
+        this.envelopeOverrides = $.envelopeOverrides;
+        this.envelopeSettings = $.envelopeSettings;
+        this.framingSettings = $.framingSettings;
+        this.messageFilter = $.messageFilter;
+        this.messageFilterList = $.messageFilterList;
+        this.processingSettings = $.processingSettings;
+        this.schemaReferences = $.schemaReferences;
+        this.securitySettings = $.securitySettings;
+        this.validationOverrides = $.validationOverrides;
+        this.validationSettings = $.validationSettings;
+        this.x12DelimiterOverrides = $.x12DelimiterOverrides;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12ProtocolSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<X12AcknowledgementSettingsArgs> acknowledgementSettings;
-        private @Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides;
-        private Output<X12EnvelopeSettingsArgs> envelopeSettings;
-        private Output<X12FramingSettingsArgs> framingSettings;
-        private Output<X12MessageFilterArgs> messageFilter;
-        private @Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList;
-        private Output<X12ProcessingSettingsArgs> processingSettings;
-        private Output<List<X12SchemaReferenceArgs>> schemaReferences;
-        private Output<X12SecuritySettingsArgs> securitySettings;
-        private @Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides;
-        private Output<X12ValidationSettingsArgs> validationSettings;
-        private @Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides;
+        private X12ProtocolSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12ProtocolSettingsArgs();
         }
 
         public Builder(X12ProtocolSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acknowledgementSettings = defaults.acknowledgementSettings;
-    	      this.envelopeOverrides = defaults.envelopeOverrides;
-    	      this.envelopeSettings = defaults.envelopeSettings;
-    	      this.framingSettings = defaults.framingSettings;
-    	      this.messageFilter = defaults.messageFilter;
-    	      this.messageFilterList = defaults.messageFilterList;
-    	      this.processingSettings = defaults.processingSettings;
-    	      this.schemaReferences = defaults.schemaReferences;
-    	      this.securitySettings = defaults.securitySettings;
-    	      this.validationOverrides = defaults.validationOverrides;
-    	      this.validationSettings = defaults.validationSettings;
-    	      this.x12DelimiterOverrides = defaults.x12DelimiterOverrides;
+            $ = new X12ProtocolSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acknowledgementSettings(Output<X12AcknowledgementSettingsArgs> acknowledgementSettings) {
-            this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
+            $.acknowledgementSettings = acknowledgementSettings;
             return this;
         }
+
         public Builder acknowledgementSettings(X12AcknowledgementSettingsArgs acknowledgementSettings) {
-            this.acknowledgementSettings = Output.of(Objects.requireNonNull(acknowledgementSettings));
-            return this;
+            return acknowledgementSettings(Output.of(acknowledgementSettings));
         }
+
         public Builder envelopeOverrides(@Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides) {
-            this.envelopeOverrides = envelopeOverrides;
+            $.envelopeOverrides = envelopeOverrides;
             return this;
         }
-        public Builder envelopeOverrides(@Nullable List<X12EnvelopeOverrideArgs> envelopeOverrides) {
-            this.envelopeOverrides = Codegen.ofNullable(envelopeOverrides);
-            return this;
+
+        public Builder envelopeOverrides(List<X12EnvelopeOverrideArgs> envelopeOverrides) {
+            return envelopeOverrides(Output.of(envelopeOverrides));
         }
+
         public Builder envelopeOverrides(X12EnvelopeOverrideArgs... envelopeOverrides) {
             return envelopeOverrides(List.of(envelopeOverrides));
         }
+
         public Builder envelopeSettings(Output<X12EnvelopeSettingsArgs> envelopeSettings) {
-            this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
+            $.envelopeSettings = envelopeSettings;
             return this;
         }
+
         public Builder envelopeSettings(X12EnvelopeSettingsArgs envelopeSettings) {
-            this.envelopeSettings = Output.of(Objects.requireNonNull(envelopeSettings));
-            return this;
+            return envelopeSettings(Output.of(envelopeSettings));
         }
+
         public Builder framingSettings(Output<X12FramingSettingsArgs> framingSettings) {
-            this.framingSettings = Objects.requireNonNull(framingSettings);
+            $.framingSettings = framingSettings;
             return this;
         }
+
         public Builder framingSettings(X12FramingSettingsArgs framingSettings) {
-            this.framingSettings = Output.of(Objects.requireNonNull(framingSettings));
-            return this;
+            return framingSettings(Output.of(framingSettings));
         }
+
         public Builder messageFilter(Output<X12MessageFilterArgs> messageFilter) {
-            this.messageFilter = Objects.requireNonNull(messageFilter);
+            $.messageFilter = messageFilter;
             return this;
         }
+
         public Builder messageFilter(X12MessageFilterArgs messageFilter) {
-            this.messageFilter = Output.of(Objects.requireNonNull(messageFilter));
-            return this;
+            return messageFilter(Output.of(messageFilter));
         }
+
         public Builder messageFilterList(@Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList) {
-            this.messageFilterList = messageFilterList;
+            $.messageFilterList = messageFilterList;
             return this;
         }
-        public Builder messageFilterList(@Nullable List<X12MessageIdentifierArgs> messageFilterList) {
-            this.messageFilterList = Codegen.ofNullable(messageFilterList);
-            return this;
+
+        public Builder messageFilterList(List<X12MessageIdentifierArgs> messageFilterList) {
+            return messageFilterList(Output.of(messageFilterList));
         }
+
         public Builder messageFilterList(X12MessageIdentifierArgs... messageFilterList) {
             return messageFilterList(List.of(messageFilterList));
         }
+
         public Builder processingSettings(Output<X12ProcessingSettingsArgs> processingSettings) {
-            this.processingSettings = Objects.requireNonNull(processingSettings);
+            $.processingSettings = processingSettings;
             return this;
         }
+
         public Builder processingSettings(X12ProcessingSettingsArgs processingSettings) {
-            this.processingSettings = Output.of(Objects.requireNonNull(processingSettings));
-            return this;
+            return processingSettings(Output.of(processingSettings));
         }
+
         public Builder schemaReferences(Output<List<X12SchemaReferenceArgs>> schemaReferences) {
-            this.schemaReferences = Objects.requireNonNull(schemaReferences);
+            $.schemaReferences = schemaReferences;
             return this;
         }
+
         public Builder schemaReferences(List<X12SchemaReferenceArgs> schemaReferences) {
-            this.schemaReferences = Output.of(Objects.requireNonNull(schemaReferences));
-            return this;
+            return schemaReferences(Output.of(schemaReferences));
         }
+
         public Builder schemaReferences(X12SchemaReferenceArgs... schemaReferences) {
             return schemaReferences(List.of(schemaReferences));
         }
+
         public Builder securitySettings(Output<X12SecuritySettingsArgs> securitySettings) {
-            this.securitySettings = Objects.requireNonNull(securitySettings);
+            $.securitySettings = securitySettings;
             return this;
         }
+
         public Builder securitySettings(X12SecuritySettingsArgs securitySettings) {
-            this.securitySettings = Output.of(Objects.requireNonNull(securitySettings));
-            return this;
+            return securitySettings(Output.of(securitySettings));
         }
+
         public Builder validationOverrides(@Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides) {
-            this.validationOverrides = validationOverrides;
+            $.validationOverrides = validationOverrides;
             return this;
         }
-        public Builder validationOverrides(@Nullable List<X12ValidationOverrideArgs> validationOverrides) {
-            this.validationOverrides = Codegen.ofNullable(validationOverrides);
-            return this;
+
+        public Builder validationOverrides(List<X12ValidationOverrideArgs> validationOverrides) {
+            return validationOverrides(Output.of(validationOverrides));
         }
+
         public Builder validationOverrides(X12ValidationOverrideArgs... validationOverrides) {
             return validationOverrides(List.of(validationOverrides));
         }
+
         public Builder validationSettings(Output<X12ValidationSettingsArgs> validationSettings) {
-            this.validationSettings = Objects.requireNonNull(validationSettings);
+            $.validationSettings = validationSettings;
             return this;
         }
+
         public Builder validationSettings(X12ValidationSettingsArgs validationSettings) {
-            this.validationSettings = Output.of(Objects.requireNonNull(validationSettings));
-            return this;
+            return validationSettings(Output.of(validationSettings));
         }
+
         public Builder x12DelimiterOverrides(@Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides) {
-            this.x12DelimiterOverrides = x12DelimiterOverrides;
+            $.x12DelimiterOverrides = x12DelimiterOverrides;
             return this;
         }
-        public Builder x12DelimiterOverrides(@Nullable List<X12DelimiterOverridesArgs> x12DelimiterOverrides) {
-            this.x12DelimiterOverrides = Codegen.ofNullable(x12DelimiterOverrides);
-            return this;
+
+        public Builder x12DelimiterOverrides(List<X12DelimiterOverridesArgs> x12DelimiterOverrides) {
+            return x12DelimiterOverrides(Output.of(x12DelimiterOverrides));
         }
+
         public Builder x12DelimiterOverrides(X12DelimiterOverridesArgs... x12DelimiterOverrides) {
             return x12DelimiterOverrides(List.of(x12DelimiterOverrides));
-        }        public X12ProtocolSettingsArgs build() {
-            return new X12ProtocolSettingsArgs(acknowledgementSettings, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, securitySettings, validationOverrides, validationSettings, x12DelimiterOverrides);
+        }
+
+        public X12ProtocolSettingsArgs build() {
+            $.acknowledgementSettings = Objects.requireNonNull($.acknowledgementSettings, "expected parameter 'acknowledgementSettings' to be non-null");
+            $.envelopeSettings = Objects.requireNonNull($.envelopeSettings, "expected parameter 'envelopeSettings' to be non-null");
+            $.framingSettings = Objects.requireNonNull($.framingSettings, "expected parameter 'framingSettings' to be non-null");
+            $.messageFilter = Objects.requireNonNull($.messageFilter, "expected parameter 'messageFilter' to be non-null");
+            $.processingSettings = Objects.requireNonNull($.processingSettings, "expected parameter 'processingSettings' to be non-null");
+            $.schemaReferences = Objects.requireNonNull($.schemaReferences, "expected parameter 'schemaReferences' to be non-null");
+            $.securitySettings = Objects.requireNonNull($.securitySettings, "expected parameter 'securitySettings' to be non-null");
+            $.validationSettings = Objects.requireNonNull($.validationSettings, "expected parameter 'validationSettings' to be non-null");
+            return $;
         }
     }
+
 }

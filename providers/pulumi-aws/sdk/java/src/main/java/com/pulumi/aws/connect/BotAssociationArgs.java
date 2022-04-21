@@ -6,7 +6,6 @@ package com.pulumi.aws.connect;
 import com.pulumi.aws.connect.inputs.BotAssociationLexBotArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class BotAssociationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -31,63 +30,60 @@ public final class BotAssociationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="lexBot", required=true)
-      private final Output<BotAssociationLexBotArgs> lexBot;
+    private Output<BotAssociationLexBotArgs> lexBot;
 
     public Output<BotAssociationLexBotArgs> lexBot() {
         return this.lexBot;
     }
 
-    public BotAssociationArgs(
-        Output<String> instanceId,
-        Output<BotAssociationLexBotArgs> lexBot) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.lexBot = Objects.requireNonNull(lexBot, "expected parameter 'lexBot' to be non-null");
-    }
+    private BotAssociationArgs() {}
 
-    private BotAssociationArgs() {
-        this.instanceId = Codegen.empty();
-        this.lexBot = Codegen.empty();
+    private BotAssociationArgs(BotAssociationArgs $) {
+        this.instanceId = $.instanceId;
+        this.lexBot = $.lexBot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceId;
-        private Output<BotAssociationLexBotArgs> lexBot;
+        private BotAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAssociationArgs();
         }
 
         public Builder(BotAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.lexBot = defaults.lexBot;
+            $ = new BotAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder lexBot(Output<BotAssociationLexBotArgs> lexBot) {
-            this.lexBot = Objects.requireNonNull(lexBot);
+            $.lexBot = lexBot;
             return this;
         }
+
         public Builder lexBot(BotAssociationLexBotArgs lexBot) {
-            this.lexBot = Output.of(Objects.requireNonNull(lexBot));
-            return this;
-        }        public BotAssociationArgs build() {
-            return new BotAssociationArgs(instanceId, lexBot);
+            return lexBot(Output.of(lexBot));
+        }
+
+        public BotAssociationArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.lexBot = Objects.requireNonNull($.lexBot, "expected parameter 'lexBot' to be non-null");
+            return $;
         }
     }
+
 }

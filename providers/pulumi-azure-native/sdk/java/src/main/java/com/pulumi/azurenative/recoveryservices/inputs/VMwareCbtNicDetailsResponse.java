@@ -23,10 +23,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="isPrimaryNic")
-      private final @Nullable String isPrimaryNic;
+    private @Nullable String isPrimaryNic;
 
     public Optional<String> isPrimaryNic() {
-        return this.isPrimaryNic == null ? Optional.empty() : Optional.ofNullable(this.isPrimaryNic);
+        return Optional.ofNullable(this.isPrimaryNic);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="isSelectedForMigration")
-      private final @Nullable String isSelectedForMigration;
+    private @Nullable String isSelectedForMigration;
 
     public Optional<String> isSelectedForMigration() {
-        return this.isSelectedForMigration == null ? Optional.empty() : Optional.ofNullable(this.isSelectedForMigration);
+        return Optional.ofNullable(this.isSelectedForMigration);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="nicId", required=true)
-      private final String nicId;
+    private String nicId;
 
     public String nicId() {
         return this.nicId;
@@ -56,7 +56,7 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceIPAddress", required=true)
-      private final String sourceIPAddress;
+    private String sourceIPAddress;
 
     public String sourceIPAddress() {
         return this.sourceIPAddress;
@@ -67,7 +67,7 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceIPAddressType", required=true)
-      private final String sourceIPAddressType;
+    private String sourceIPAddressType;
 
     public String sourceIPAddressType() {
         return this.sourceIPAddressType;
@@ -78,7 +78,7 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceNetworkId", required=true)
-      private final String sourceNetworkId;
+    private String sourceNetworkId;
 
     public String sourceNetworkId() {
         return this.sourceNetworkId;
@@ -89,10 +89,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="targetIPAddress")
-      private final @Nullable String targetIPAddress;
+    private @Nullable String targetIPAddress;
 
     public Optional<String> targetIPAddress() {
-        return this.targetIPAddress == null ? Optional.empty() : Optional.ofNullable(this.targetIPAddress);
+        return Optional.ofNullable(this.targetIPAddress);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="targetIPAddressType")
-      private final @Nullable String targetIPAddressType;
+    private @Nullable String targetIPAddressType;
 
     public Optional<String> targetIPAddressType() {
-        return this.targetIPAddressType == null ? Optional.empty() : Optional.ofNullable(this.targetIPAddressType);
+        return Optional.ofNullable(this.targetIPAddressType);
     }
 
     /**
@@ -111,118 +111,96 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="targetSubnetName")
-      private final @Nullable String targetSubnetName;
+    private @Nullable String targetSubnetName;
 
     public Optional<String> targetSubnetName() {
-        return this.targetSubnetName == null ? Optional.empty() : Optional.ofNullable(this.targetSubnetName);
+        return Optional.ofNullable(this.targetSubnetName);
     }
 
-    public VMwareCbtNicDetailsResponse(
-        @Nullable String isPrimaryNic,
-        @Nullable String isSelectedForMigration,
-        String nicId,
-        String sourceIPAddress,
-        String sourceIPAddressType,
-        String sourceNetworkId,
-        @Nullable String targetIPAddress,
-        @Nullable String targetIPAddressType,
-        @Nullable String targetSubnetName) {
-        this.isPrimaryNic = isPrimaryNic;
-        this.isSelectedForMigration = isSelectedForMigration;
-        this.nicId = Objects.requireNonNull(nicId, "expected parameter 'nicId' to be non-null");
-        this.sourceIPAddress = Objects.requireNonNull(sourceIPAddress, "expected parameter 'sourceIPAddress' to be non-null");
-        this.sourceIPAddressType = Objects.requireNonNull(sourceIPAddressType, "expected parameter 'sourceIPAddressType' to be non-null");
-        this.sourceNetworkId = Objects.requireNonNull(sourceNetworkId, "expected parameter 'sourceNetworkId' to be non-null");
-        this.targetIPAddress = targetIPAddress;
-        this.targetIPAddressType = targetIPAddressType;
-        this.targetSubnetName = targetSubnetName;
-    }
+    private VMwareCbtNicDetailsResponse() {}
 
-    private VMwareCbtNicDetailsResponse() {
-        this.isPrimaryNic = null;
-        this.isSelectedForMigration = null;
-        this.nicId = null;
-        this.sourceIPAddress = null;
-        this.sourceIPAddressType = null;
-        this.sourceNetworkId = null;
-        this.targetIPAddress = null;
-        this.targetIPAddressType = null;
-        this.targetSubnetName = null;
+    private VMwareCbtNicDetailsResponse(VMwareCbtNicDetailsResponse $) {
+        this.isPrimaryNic = $.isPrimaryNic;
+        this.isSelectedForMigration = $.isSelectedForMigration;
+        this.nicId = $.nicId;
+        this.sourceIPAddress = $.sourceIPAddress;
+        this.sourceIPAddressType = $.sourceIPAddressType;
+        this.sourceNetworkId = $.sourceNetworkId;
+        this.targetIPAddress = $.targetIPAddress;
+        this.targetIPAddressType = $.targetIPAddressType;
+        this.targetSubnetName = $.targetSubnetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMwareCbtNicDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String isPrimaryNic;
-        private @Nullable String isSelectedForMigration;
-        private String nicId;
-        private String sourceIPAddress;
-        private String sourceIPAddressType;
-        private String sourceNetworkId;
-        private @Nullable String targetIPAddress;
-        private @Nullable String targetIPAddressType;
-        private @Nullable String targetSubnetName;
+        private VMwareCbtNicDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMwareCbtNicDetailsResponse();
         }
 
         public Builder(VMwareCbtNicDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isPrimaryNic = defaults.isPrimaryNic;
-    	      this.isSelectedForMigration = defaults.isSelectedForMigration;
-    	      this.nicId = defaults.nicId;
-    	      this.sourceIPAddress = defaults.sourceIPAddress;
-    	      this.sourceIPAddressType = defaults.sourceIPAddressType;
-    	      this.sourceNetworkId = defaults.sourceNetworkId;
-    	      this.targetIPAddress = defaults.targetIPAddress;
-    	      this.targetIPAddressType = defaults.targetIPAddressType;
-    	      this.targetSubnetName = defaults.targetSubnetName;
+            $ = new VMwareCbtNicDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isPrimaryNic(@Nullable String isPrimaryNic) {
-            this.isPrimaryNic = isPrimaryNic;
+            $.isPrimaryNic = isPrimaryNic;
             return this;
         }
+
         public Builder isSelectedForMigration(@Nullable String isSelectedForMigration) {
-            this.isSelectedForMigration = isSelectedForMigration;
+            $.isSelectedForMigration = isSelectedForMigration;
             return this;
         }
+
         public Builder nicId(String nicId) {
-            this.nicId = Objects.requireNonNull(nicId);
+            $.nicId = nicId;
             return this;
         }
+
         public Builder sourceIPAddress(String sourceIPAddress) {
-            this.sourceIPAddress = Objects.requireNonNull(sourceIPAddress);
+            $.sourceIPAddress = sourceIPAddress;
             return this;
         }
+
         public Builder sourceIPAddressType(String sourceIPAddressType) {
-            this.sourceIPAddressType = Objects.requireNonNull(sourceIPAddressType);
+            $.sourceIPAddressType = sourceIPAddressType;
             return this;
         }
+
         public Builder sourceNetworkId(String sourceNetworkId) {
-            this.sourceNetworkId = Objects.requireNonNull(sourceNetworkId);
+            $.sourceNetworkId = sourceNetworkId;
             return this;
         }
+
         public Builder targetIPAddress(@Nullable String targetIPAddress) {
-            this.targetIPAddress = targetIPAddress;
+            $.targetIPAddress = targetIPAddress;
             return this;
         }
+
         public Builder targetIPAddressType(@Nullable String targetIPAddressType) {
-            this.targetIPAddressType = targetIPAddressType;
+            $.targetIPAddressType = targetIPAddressType;
             return this;
         }
+
         public Builder targetSubnetName(@Nullable String targetSubnetName) {
-            this.targetSubnetName = targetSubnetName;
+            $.targetSubnetName = targetSubnetName;
             return this;
-        }        public VMwareCbtNicDetailsResponse build() {
-            return new VMwareCbtNicDetailsResponse(isPrimaryNic, isSelectedForMigration, nicId, sourceIPAddress, sourceIPAddressType, sourceNetworkId, targetIPAddress, targetIPAddressType, targetSubnetName);
+        }
+
+        public VMwareCbtNicDetailsResponse build() {
+            $.nicId = Objects.requireNonNull($.nicId, "expected parameter 'nicId' to be non-null");
+            $.sourceIPAddress = Objects.requireNonNull($.sourceIPAddress, "expected parameter 'sourceIPAddress' to be non-null");
+            $.sourceIPAddressType = Objects.requireNonNull($.sourceIPAddressType, "expected parameter 'sourceIPAddressType' to be non-null");
+            $.sourceNetworkId = Objects.requireNonNull($.sourceNetworkId, "expected parameter 'sourceNetworkId' to be non-null");
+            return $;
         }
     }
+
 }

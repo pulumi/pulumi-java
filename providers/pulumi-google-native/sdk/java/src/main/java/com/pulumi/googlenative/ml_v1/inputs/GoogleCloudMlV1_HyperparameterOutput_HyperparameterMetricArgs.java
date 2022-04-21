@@ -5,10 +5,10 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
      * 
      */
     @Import(name="objectiveValue")
-      private final @Nullable Output<Double> objectiveValue;
+    private @Nullable Output<Double> objectiveValue;
 
-    public Output<Double> objectiveValue() {
-        return this.objectiveValue == null ? Codegen.empty() : this.objectiveValue;
+    public Optional<Output<Double>> objectiveValue() {
+        return Optional.ofNullable(this.objectiveValue);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
      * 
      */
     @Import(name="trainingStep")
-      private final @Nullable Output<String> trainingStep;
+    private @Nullable Output<String> trainingStep;
 
-    public Output<String> trainingStep() {
-        return this.trainingStep == null ? Codegen.empty() : this.trainingStep;
+    public Optional<Output<String>> trainingStep() {
+        return Optional.ofNullable(this.trainingStep);
     }
 
-    public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs(
-        @Nullable Output<Double> objectiveValue,
-        @Nullable Output<String> trainingStep) {
-        this.objectiveValue = objectiveValue;
-        this.trainingStep = trainingStep;
-    }
+    private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs() {}
 
-    private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs() {
-        this.objectiveValue = Codegen.empty();
-        this.trainingStep = Codegen.empty();
+    private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs $) {
+        this.objectiveValue = $.objectiveValue;
+        this.trainingStep = $.trainingStep;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> objectiveValue;
-        private @Nullable Output<String> trainingStep;
+        private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs();
         }
 
         public Builder(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectiveValue = defaults.objectiveValue;
-    	      this.trainingStep = defaults.trainingStep;
+            $ = new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectiveValue(@Nullable Output<Double> objectiveValue) {
-            this.objectiveValue = objectiveValue;
+            $.objectiveValue = objectiveValue;
             return this;
         }
-        public Builder objectiveValue(@Nullable Double objectiveValue) {
-            this.objectiveValue = Codegen.ofNullable(objectiveValue);
-            return this;
+
+        public Builder objectiveValue(Double objectiveValue) {
+            return objectiveValue(Output.of(objectiveValue));
         }
+
         public Builder trainingStep(@Nullable Output<String> trainingStep) {
-            this.trainingStep = trainingStep;
+            $.trainingStep = trainingStep;
             return this;
         }
-        public Builder trainingStep(@Nullable String trainingStep) {
-            this.trainingStep = Codegen.ofNullable(trainingStep);
-            return this;
-        }        public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs build() {
-            return new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs(objectiveValue, trainingStep);
+
+        public Builder trainingStep(String trainingStep) {
+            return trainingStep(Output.of(trainingStep));
+        }
+
+        public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs build() {
+            return $;
         }
     }
+
 }

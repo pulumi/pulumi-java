@@ -14,78 +14,73 @@ public final class GetIPSetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIPSetArgs Empty = new GetIPSetArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="scope", required=true)
-      private final IPSetScope scope;
+    private IPSetScope scope;
 
     public IPSetScope scope() {
         return this.scope;
     }
 
-    public GetIPSetArgs(
-        String id,
-        String name,
-        IPSetScope scope) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetIPSetArgs() {}
 
-    private GetIPSetArgs() {
-        this.id = null;
-        this.name = null;
-        this.scope = null;
+    private GetIPSetArgs(GetIPSetArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIPSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private IPSetScope scope;
+        private GetIPSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIPSetArgs();
         }
 
         public Builder(GetIPSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.scope = defaults.scope;
+            $ = new GetIPSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder scope(IPSetScope scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetIPSetArgs build() {
-            return new GetIPSetArgs(id, name, scope);
+        }
+
+        public GetIPSetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

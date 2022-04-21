@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends com
      * 
      */
     @Import(name="classificationThreshold", required=true)
-      private final Double classificationThreshold;
+    private Double classificationThreshold;
 
     public Double classificationThreshold() {
         return this.classificationThreshold;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends com
      * 
      */
     @Import(name="modelTrainingMode", required=true)
-      private final String modelTrainingMode;
+    private String modelTrainingMode;
 
     public String modelTrainingMode() {
         return this.modelTrainingMode;
@@ -44,64 +44,59 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends com
      * 
      */
     @Import(name="modelType", required=true)
-      private final String modelType;
+    private String modelType;
 
     public String modelType() {
         return this.modelType;
     }
 
-    public GoogleCloudDialogflowCxV3beta1NluSettingsResponse(
-        Double classificationThreshold,
-        String modelTrainingMode,
-        String modelType) {
-        this.classificationThreshold = Objects.requireNonNull(classificationThreshold, "expected parameter 'classificationThreshold' to be non-null");
-        this.modelTrainingMode = Objects.requireNonNull(modelTrainingMode, "expected parameter 'modelTrainingMode' to be non-null");
-        this.modelType = Objects.requireNonNull(modelType, "expected parameter 'modelType' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1NluSettingsResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1NluSettingsResponse() {
-        this.classificationThreshold = null;
-        this.modelTrainingMode = null;
-        this.modelType = null;
+    private GoogleCloudDialogflowCxV3beta1NluSettingsResponse(GoogleCloudDialogflowCxV3beta1NluSettingsResponse $) {
+        this.classificationThreshold = $.classificationThreshold;
+        this.modelTrainingMode = $.modelTrainingMode;
+        this.modelType = $.modelType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1NluSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double classificationThreshold;
-        private String modelTrainingMode;
-        private String modelType;
+        private GoogleCloudDialogflowCxV3beta1NluSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1NluSettingsResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1NluSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classificationThreshold = defaults.classificationThreshold;
-    	      this.modelTrainingMode = defaults.modelTrainingMode;
-    	      this.modelType = defaults.modelType;
+            $ = new GoogleCloudDialogflowCxV3beta1NluSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder classificationThreshold(Double classificationThreshold) {
-            this.classificationThreshold = Objects.requireNonNull(classificationThreshold);
+            $.classificationThreshold = classificationThreshold;
             return this;
         }
+
         public Builder modelTrainingMode(String modelTrainingMode) {
-            this.modelTrainingMode = Objects.requireNonNull(modelTrainingMode);
+            $.modelTrainingMode = modelTrainingMode;
             return this;
         }
+
         public Builder modelType(String modelType) {
-            this.modelType = Objects.requireNonNull(modelType);
+            $.modelType = modelType;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1NluSettingsResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1NluSettingsResponse(classificationThreshold, modelTrainingMode, modelType);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1NluSettingsResponse build() {
+            $.classificationThreshold = Objects.requireNonNull($.classificationThreshold, "expected parameter 'classificationThreshold' to be non-null");
+            $.modelTrainingMode = Objects.requireNonNull($.modelTrainingMode, "expected parameter 'modelTrainingMode' to be non-null");
+            $.modelType = Objects.requireNonNull($.modelType, "expected parameter 'modelType' to be non-null");
+            return $;
         }
     }
+
 }

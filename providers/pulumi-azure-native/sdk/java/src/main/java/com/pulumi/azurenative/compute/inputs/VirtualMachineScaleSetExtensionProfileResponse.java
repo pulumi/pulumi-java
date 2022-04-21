@@ -25,10 +25,10 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends com.pu
      * 
      */
     @Import(name="extensions")
-      private final @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions;
+    private @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions;
 
-    public List<VirtualMachineScaleSetExtensionResponse> extensions() {
-        return this.extensions == null ? List.of() : this.extensions;
+    public Optional<List<VirtualMachineScaleSetExtensionResponse>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends com.pu
      * 
      */
     @Import(name="extensionsTimeBudget")
-      private final @Nullable String extensionsTimeBudget;
+    private @Nullable String extensionsTimeBudget;
 
     public Optional<String> extensionsTimeBudget() {
-        return this.extensionsTimeBudget == null ? Optional.empty() : Optional.ofNullable(this.extensionsTimeBudget);
+        return Optional.ofNullable(this.extensionsTimeBudget);
     }
 
-    public VirtualMachineScaleSetExtensionProfileResponse(
-        @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions,
-        @Nullable String extensionsTimeBudget) {
-        this.extensions = extensions;
-        this.extensionsTimeBudget = extensionsTimeBudget;
-    }
+    private VirtualMachineScaleSetExtensionProfileResponse() {}
 
-    private VirtualMachineScaleSetExtensionProfileResponse() {
-        this.extensions = List.of();
-        this.extensionsTimeBudget = null;
+    private VirtualMachineScaleSetExtensionProfileResponse(VirtualMachineScaleSetExtensionProfileResponse $) {
+        this.extensions = $.extensions;
+        this.extensionsTimeBudget = $.extensionsTimeBudget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetExtensionProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions;
-        private @Nullable String extensionsTimeBudget;
+        private VirtualMachineScaleSetExtensionProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetExtensionProfileResponse();
         }
 
         public Builder(VirtualMachineScaleSetExtensionProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensions = defaults.extensions;
-    	      this.extensionsTimeBudget = defaults.extensionsTimeBudget;
+            $ = new VirtualMachineScaleSetExtensionProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder extensions(@Nullable List<VirtualMachineScaleSetExtensionResponse> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
+
         public Builder extensions(VirtualMachineScaleSetExtensionResponse... extensions) {
             return extensions(List.of(extensions));
         }
+
         public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
-            this.extensionsTimeBudget = extensionsTimeBudget;
+            $.extensionsTimeBudget = extensionsTimeBudget;
             return this;
-        }        public VirtualMachineScaleSetExtensionProfileResponse build() {
-            return new VirtualMachineScaleSetExtensionProfileResponse(extensions, extensionsTimeBudget);
+        }
+
+        public VirtualMachineScaleSetExtensionProfileResponse build() {
+            return $;
         }
     }
+
 }

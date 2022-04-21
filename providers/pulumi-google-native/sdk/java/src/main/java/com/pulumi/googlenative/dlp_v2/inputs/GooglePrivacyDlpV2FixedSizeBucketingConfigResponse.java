@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse extends co
      * 
      */
     @Import(name="bucketSize", required=true)
-      private final Double bucketSize;
+    private Double bucketSize;
 
     public Double bucketSize() {
         return this.bucketSize;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse extends co
      * 
      */
     @Import(name="lowerBound", required=true)
-      private final GooglePrivacyDlpV2ValueResponse lowerBound;
+    private GooglePrivacyDlpV2ValueResponse lowerBound;
 
     public GooglePrivacyDlpV2ValueResponse lowerBound() {
         return this.lowerBound;
@@ -44,64 +44,59 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse extends co
      * 
      */
     @Import(name="upperBound", required=true)
-      private final GooglePrivacyDlpV2ValueResponse upperBound;
+    private GooglePrivacyDlpV2ValueResponse upperBound;
 
     public GooglePrivacyDlpV2ValueResponse upperBound() {
         return this.upperBound;
     }
 
-    public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse(
-        Double bucketSize,
-        GooglePrivacyDlpV2ValueResponse lowerBound,
-        GooglePrivacyDlpV2ValueResponse upperBound) {
-        this.bucketSize = Objects.requireNonNull(bucketSize, "expected parameter 'bucketSize' to be non-null");
-        this.lowerBound = Objects.requireNonNull(lowerBound, "expected parameter 'lowerBound' to be non-null");
-        this.upperBound = Objects.requireNonNull(upperBound, "expected parameter 'upperBound' to be non-null");
-    }
+    private GooglePrivacyDlpV2FixedSizeBucketingConfigResponse() {}
 
-    private GooglePrivacyDlpV2FixedSizeBucketingConfigResponse() {
-        this.bucketSize = null;
-        this.lowerBound = null;
-        this.upperBound = null;
+    private GooglePrivacyDlpV2FixedSizeBucketingConfigResponse(GooglePrivacyDlpV2FixedSizeBucketingConfigResponse $) {
+        this.bucketSize = $.bucketSize;
+        this.lowerBound = $.lowerBound;
+        this.upperBound = $.upperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2FixedSizeBucketingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double bucketSize;
-        private GooglePrivacyDlpV2ValueResponse lowerBound;
-        private GooglePrivacyDlpV2ValueResponse upperBound;
+        private GooglePrivacyDlpV2FixedSizeBucketingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2FixedSizeBucketingConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2FixedSizeBucketingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketSize = defaults.bucketSize;
-    	      this.lowerBound = defaults.lowerBound;
-    	      this.upperBound = defaults.upperBound;
+            $ = new GooglePrivacyDlpV2FixedSizeBucketingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketSize(Double bucketSize) {
-            this.bucketSize = Objects.requireNonNull(bucketSize);
+            $.bucketSize = bucketSize;
             return this;
         }
+
         public Builder lowerBound(GooglePrivacyDlpV2ValueResponse lowerBound) {
-            this.lowerBound = Objects.requireNonNull(lowerBound);
+            $.lowerBound = lowerBound;
             return this;
         }
+
         public Builder upperBound(GooglePrivacyDlpV2ValueResponse upperBound) {
-            this.upperBound = Objects.requireNonNull(upperBound);
+            $.upperBound = upperBound;
             return this;
-        }        public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse build() {
-            return new GooglePrivacyDlpV2FixedSizeBucketingConfigResponse(bucketSize, lowerBound, upperBound);
+        }
+
+        public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse build() {
+            $.bucketSize = Objects.requireNonNull($.bucketSize, "expected parameter 'bucketSize' to be non-null");
+            $.lowerBound = Objects.requireNonNull($.lowerBound, "expected parameter 'lowerBound' to be non-null");
+            $.upperBound = Objects.requireNonNull($.upperBound, "expected parameter 'upperBound' to be non-null");
+            return $;
         }
     }
+
 }

@@ -31,10 +31,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="libraries")
-      private final @Nullable List<Map<String,Object>> libraries;
+    private @Nullable List<Map<String,Object>> libraries;
 
-    public List<Map<String,Object>> libraries() {
-        return this.libraries == null ? List.of() : this.libraries;
+    public Optional<List<Map<String,Object>>> libraries() {
+        return Optional.ofNullable(this.libraries);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -86,10 +86,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="parameters")
-      private final @Nullable List<Object> parameters;
+    private @Nullable List<Object> parameters;
 
-    public List<Object> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="pythonFile", required=true)
-      private final Object pythonFile;
+    private Object pythonFile;
 
     public Object pythonFile() {
         return this.pythonFile;
@@ -120,7 +120,7 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -131,136 +131,117 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public DatabricksSparkPythonActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable List<Map<String,Object>> libraries,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable List<Object> parameters,
-        @Nullable ActivityPolicyResponse policy,
-        Object pythonFile,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.libraries = libraries;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-        this.policy = policy;
-        this.pythonFile = Objects.requireNonNull(pythonFile, "expected parameter 'pythonFile' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private DatabricksSparkPythonActivityResponse() {}
 
-    private DatabricksSparkPythonActivityResponse() {
-        this.dependsOn = List.of();
-        this.description = null;
-        this.libraries = List.of();
-        this.linkedServiceName = null;
-        this.name = null;
-        this.parameters = List.of();
-        this.policy = null;
-        this.pythonFile = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private DatabricksSparkPythonActivityResponse(DatabricksSparkPythonActivityResponse $) {
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.libraries = $.libraries;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.policy = $.policy;
+        this.pythonFile = $.pythonFile;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabricksSparkPythonActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable List<Map<String,Object>> libraries;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private @Nullable List<Object> parameters;
-        private @Nullable ActivityPolicyResponse policy;
-        private Object pythonFile;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private DatabricksSparkPythonActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabricksSparkPythonActivityResponse();
         }
 
         public Builder(DatabricksSparkPythonActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.libraries = defaults.libraries;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.policy = defaults.policy;
-    	      this.pythonFile = defaults.pythonFile;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new DatabricksSparkPythonActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder libraries(@Nullable List<Map<String,Object>> libraries) {
-            this.libraries = libraries;
+            $.libraries = libraries;
             return this;
         }
+
+        public Builder libraries(Map<String,Object>... libraries) {
+            return libraries(List.of(libraries));
+        }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(@Nullable List<Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(Object... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder pythonFile(Object pythonFile) {
-            this.pythonFile = Objects.requireNonNull(pythonFile);
+            $.pythonFile = pythonFile;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public DatabricksSparkPythonActivityResponse build() {
-            return new DatabricksSparkPythonActivityResponse(dependsOn, description, libraries, linkedServiceName, name, parameters, policy, pythonFile, type, userProperties);
+        }
+
+        public DatabricksSparkPythonActivityResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.pythonFile = Objects.requireNonNull($.pythonFile, "expected parameter 'pythonFile' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

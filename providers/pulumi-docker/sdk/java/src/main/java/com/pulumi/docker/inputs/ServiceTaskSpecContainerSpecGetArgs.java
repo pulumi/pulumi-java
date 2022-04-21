@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecConfigGetArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecDnsConfigGetArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecHealthcheckGetArgs;
@@ -19,6 +18,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,454 +27,404 @@ public final class ServiceTaskSpecContainerSpecGetArgs extends com.pulumi.resour
     public static final ServiceTaskSpecContainerSpecGetArgs Empty = new ServiceTaskSpecContainerSpecGetArgs();
 
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     @Import(name="commands")
-      private final @Nullable Output<List<String>> commands;
+    private @Nullable Output<List<String>> commands;
 
-    public Output<List<String>> commands() {
-        return this.commands == null ? Codegen.empty() : this.commands;
+    public Optional<Output<List<String>>> commands() {
+        return Optional.ofNullable(this.commands);
     }
 
     @Import(name="configs")
-      private final @Nullable Output<List<ServiceTaskSpecContainerSpecConfigGetArgs>> configs;
+    private @Nullable Output<List<ServiceTaskSpecContainerSpecConfigGetArgs>> configs;
 
-    public Output<List<ServiceTaskSpecContainerSpecConfigGetArgs>> configs() {
-        return this.configs == null ? Codegen.empty() : this.configs;
+    public Optional<Output<List<ServiceTaskSpecContainerSpecConfigGetArgs>>> configs() {
+        return Optional.ofNullable(this.configs);
     }
 
     @Import(name="dir")
-      private final @Nullable Output<String> dir;
+    private @Nullable Output<String> dir;
 
-    public Output<String> dir() {
-        return this.dir == null ? Codegen.empty() : this.dir;
+    public Optional<Output<String>> dir() {
+        return Optional.ofNullable(this.dir);
     }
 
     @Import(name="dnsConfig")
-      private final @Nullable Output<ServiceTaskSpecContainerSpecDnsConfigGetArgs> dnsConfig;
+    private @Nullable Output<ServiceTaskSpecContainerSpecDnsConfigGetArgs> dnsConfig;
 
-    public Output<ServiceTaskSpecContainerSpecDnsConfigGetArgs> dnsConfig() {
-        return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
+    public Optional<Output<ServiceTaskSpecContainerSpecDnsConfigGetArgs>> dnsConfig() {
+        return Optional.ofNullable(this.dnsConfig);
     }
 
     @Import(name="env")
-      private final @Nullable Output<Map<String,String>> env;
+    private @Nullable Output<Map<String,String>> env;
 
-    public Output<Map<String,String>> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<Map<String,String>>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     @Import(name="groups")
-      private final @Nullable Output<List<String>> groups;
+    private @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> groups() {
-        return this.groups == null ? Codegen.empty() : this.groups;
+    public Optional<Output<List<String>>> groups() {
+        return Optional.ofNullable(this.groups);
     }
 
     @Import(name="healthcheck")
-      private final @Nullable Output<ServiceTaskSpecContainerSpecHealthcheckGetArgs> healthcheck;
+    private @Nullable Output<ServiceTaskSpecContainerSpecHealthcheckGetArgs> healthcheck;
 
-    public Output<ServiceTaskSpecContainerSpecHealthcheckGetArgs> healthcheck() {
-        return this.healthcheck == null ? Codegen.empty() : this.healthcheck;
+    public Optional<Output<ServiceTaskSpecContainerSpecHealthcheckGetArgs>> healthcheck() {
+        return Optional.ofNullable(this.healthcheck);
     }
 
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     @Import(name="hosts")
-      private final @Nullable Output<List<ServiceTaskSpecContainerSpecHostGetArgs>> hosts;
+    private @Nullable Output<List<ServiceTaskSpecContainerSpecHostGetArgs>> hosts;
 
-    public Output<List<ServiceTaskSpecContainerSpecHostGetArgs>> hosts() {
-        return this.hosts == null ? Codegen.empty() : this.hosts;
+    public Optional<Output<List<ServiceTaskSpecContainerSpecHostGetArgs>>> hosts() {
+        return Optional.ofNullable(this.hosts);
     }
 
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
     }
 
     @Import(name="isolation")
-      private final @Nullable Output<String> isolation;
+    private @Nullable Output<String> isolation;
 
-    public Output<String> isolation() {
-        return this.isolation == null ? Codegen.empty() : this.isolation;
+    public Optional<Output<String>> isolation() {
+        return Optional.ofNullable(this.isolation);
     }
 
     @Import(name="labels")
-      private final @Nullable Output<List<ServiceTaskSpecContainerSpecLabelGetArgs>> labels;
+    private @Nullable Output<List<ServiceTaskSpecContainerSpecLabelGetArgs>> labels;
 
-    public Output<List<ServiceTaskSpecContainerSpecLabelGetArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<ServiceTaskSpecContainerSpecLabelGetArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="mounts")
-      private final @Nullable Output<List<ServiceTaskSpecContainerSpecMountGetArgs>> mounts;
+    private @Nullable Output<List<ServiceTaskSpecContainerSpecMountGetArgs>> mounts;
 
-    public Output<List<ServiceTaskSpecContainerSpecMountGetArgs>> mounts() {
-        return this.mounts == null ? Codegen.empty() : this.mounts;
+    public Optional<Output<List<ServiceTaskSpecContainerSpecMountGetArgs>>> mounts() {
+        return Optional.ofNullable(this.mounts);
     }
 
     @Import(name="privileges")
-      private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesGetArgs> privileges;
+    private @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesGetArgs> privileges;
 
-    public Output<ServiceTaskSpecContainerSpecPrivilegesGetArgs> privileges() {
-        return this.privileges == null ? Codegen.empty() : this.privileges;
+    public Optional<Output<ServiceTaskSpecContainerSpecPrivilegesGetArgs>> privileges() {
+        return Optional.ofNullable(this.privileges);
     }
 
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     @Import(name="secrets")
-      private final @Nullable Output<List<ServiceTaskSpecContainerSpecSecretGetArgs>> secrets;
+    private @Nullable Output<List<ServiceTaskSpecContainerSpecSecretGetArgs>> secrets;
 
-    public Output<List<ServiceTaskSpecContainerSpecSecretGetArgs>> secrets() {
-        return this.secrets == null ? Codegen.empty() : this.secrets;
+    public Optional<Output<List<ServiceTaskSpecContainerSpecSecretGetArgs>>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
     @Import(name="stopGracePeriod")
-      private final @Nullable Output<String> stopGracePeriod;
+    private @Nullable Output<String> stopGracePeriod;
 
-    public Output<String> stopGracePeriod() {
-        return this.stopGracePeriod == null ? Codegen.empty() : this.stopGracePeriod;
+    public Optional<Output<String>> stopGracePeriod() {
+        return Optional.ofNullable(this.stopGracePeriod);
     }
 
     @Import(name="stopSignal")
-      private final @Nullable Output<String> stopSignal;
+    private @Nullable Output<String> stopSignal;
 
-    public Output<String> stopSignal() {
-        return this.stopSignal == null ? Codegen.empty() : this.stopSignal;
+    public Optional<Output<String>> stopSignal() {
+        return Optional.ofNullable(this.stopSignal);
     }
 
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public ServiceTaskSpecContainerSpecGetArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> commands,
-        @Nullable Output<List<ServiceTaskSpecContainerSpecConfigGetArgs>> configs,
-        @Nullable Output<String> dir,
-        @Nullable Output<ServiceTaskSpecContainerSpecDnsConfigGetArgs> dnsConfig,
-        @Nullable Output<Map<String,String>> env,
-        @Nullable Output<List<String>> groups,
-        @Nullable Output<ServiceTaskSpecContainerSpecHealthcheckGetArgs> healthcheck,
-        @Nullable Output<String> hostname,
-        @Nullable Output<List<ServiceTaskSpecContainerSpecHostGetArgs>> hosts,
-        Output<String> image,
-        @Nullable Output<String> isolation,
-        @Nullable Output<List<ServiceTaskSpecContainerSpecLabelGetArgs>> labels,
-        @Nullable Output<List<ServiceTaskSpecContainerSpecMountGetArgs>> mounts,
-        @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesGetArgs> privileges,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<List<ServiceTaskSpecContainerSpecSecretGetArgs>> secrets,
-        @Nullable Output<String> stopGracePeriod,
-        @Nullable Output<String> stopSignal,
-        @Nullable Output<String> user) {
-        this.args = args;
-        this.commands = commands;
-        this.configs = configs;
-        this.dir = dir;
-        this.dnsConfig = dnsConfig;
-        this.env = env;
-        this.groups = groups;
-        this.healthcheck = healthcheck;
-        this.hostname = hostname;
-        this.hosts = hosts;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.isolation = isolation;
-        this.labels = labels;
-        this.mounts = mounts;
-        this.privileges = privileges;
-        this.readOnly = readOnly;
-        this.secrets = secrets;
-        this.stopGracePeriod = stopGracePeriod;
-        this.stopSignal = stopSignal;
-        this.user = user;
-    }
+    private ServiceTaskSpecContainerSpecGetArgs() {}
 
-    private ServiceTaskSpecContainerSpecGetArgs() {
-        this.args = Codegen.empty();
-        this.commands = Codegen.empty();
-        this.configs = Codegen.empty();
-        this.dir = Codegen.empty();
-        this.dnsConfig = Codegen.empty();
-        this.env = Codegen.empty();
-        this.groups = Codegen.empty();
-        this.healthcheck = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.hosts = Codegen.empty();
-        this.image = Codegen.empty();
-        this.isolation = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.mounts = Codegen.empty();
-        this.privileges = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.secrets = Codegen.empty();
-        this.stopGracePeriod = Codegen.empty();
-        this.stopSignal = Codegen.empty();
-        this.user = Codegen.empty();
+    private ServiceTaskSpecContainerSpecGetArgs(ServiceTaskSpecContainerSpecGetArgs $) {
+        this.args = $.args;
+        this.commands = $.commands;
+        this.configs = $.configs;
+        this.dir = $.dir;
+        this.dnsConfig = $.dnsConfig;
+        this.env = $.env;
+        this.groups = $.groups;
+        this.healthcheck = $.healthcheck;
+        this.hostname = $.hostname;
+        this.hosts = $.hosts;
+        this.image = $.image;
+        this.isolation = $.isolation;
+        this.labels = $.labels;
+        this.mounts = $.mounts;
+        this.privileges = $.privileges;
+        this.readOnly = $.readOnly;
+        this.secrets = $.secrets;
+        this.stopGracePeriod = $.stopGracePeriod;
+        this.stopSignal = $.stopSignal;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecContainerSpecGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> commands;
-        private @Nullable Output<List<ServiceTaskSpecContainerSpecConfigGetArgs>> configs;
-        private @Nullable Output<String> dir;
-        private @Nullable Output<ServiceTaskSpecContainerSpecDnsConfigGetArgs> dnsConfig;
-        private @Nullable Output<Map<String,String>> env;
-        private @Nullable Output<List<String>> groups;
-        private @Nullable Output<ServiceTaskSpecContainerSpecHealthcheckGetArgs> healthcheck;
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<List<ServiceTaskSpecContainerSpecHostGetArgs>> hosts;
-        private Output<String> image;
-        private @Nullable Output<String> isolation;
-        private @Nullable Output<List<ServiceTaskSpecContainerSpecLabelGetArgs>> labels;
-        private @Nullable Output<List<ServiceTaskSpecContainerSpecMountGetArgs>> mounts;
-        private @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesGetArgs> privileges;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<List<ServiceTaskSpecContainerSpecSecretGetArgs>> secrets;
-        private @Nullable Output<String> stopGracePeriod;
-        private @Nullable Output<String> stopSignal;
-        private @Nullable Output<String> user;
+        private ServiceTaskSpecContainerSpecGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecContainerSpecGetArgs();
         }
 
         public Builder(ServiceTaskSpecContainerSpecGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.commands = defaults.commands;
-    	      this.configs = defaults.configs;
-    	      this.dir = defaults.dir;
-    	      this.dnsConfig = defaults.dnsConfig;
-    	      this.env = defaults.env;
-    	      this.groups = defaults.groups;
-    	      this.healthcheck = defaults.healthcheck;
-    	      this.hostname = defaults.hostname;
-    	      this.hosts = defaults.hosts;
-    	      this.image = defaults.image;
-    	      this.isolation = defaults.isolation;
-    	      this.labels = defaults.labels;
-    	      this.mounts = defaults.mounts;
-    	      this.privileges = defaults.privileges;
-    	      this.readOnly = defaults.readOnly;
-    	      this.secrets = defaults.secrets;
-    	      this.stopGracePeriod = defaults.stopGracePeriod;
-    	      this.stopSignal = defaults.stopSignal;
-    	      this.user = defaults.user;
+            $ = new ServiceTaskSpecContainerSpecGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder commands(@Nullable Output<List<String>> commands) {
-            this.commands = commands;
+            $.commands = commands;
             return this;
         }
-        public Builder commands(@Nullable List<String> commands) {
-            this.commands = Codegen.ofNullable(commands);
-            return this;
+
+        public Builder commands(List<String> commands) {
+            return commands(Output.of(commands));
         }
+
         public Builder commands(String... commands) {
             return commands(List.of(commands));
         }
+
         public Builder configs(@Nullable Output<List<ServiceTaskSpecContainerSpecConfigGetArgs>> configs) {
-            this.configs = configs;
+            $.configs = configs;
             return this;
         }
-        public Builder configs(@Nullable List<ServiceTaskSpecContainerSpecConfigGetArgs> configs) {
-            this.configs = Codegen.ofNullable(configs);
-            return this;
+
+        public Builder configs(List<ServiceTaskSpecContainerSpecConfigGetArgs> configs) {
+            return configs(Output.of(configs));
         }
+
         public Builder configs(ServiceTaskSpecContainerSpecConfigGetArgs... configs) {
             return configs(List.of(configs));
         }
+
         public Builder dir(@Nullable Output<String> dir) {
-            this.dir = dir;
+            $.dir = dir;
             return this;
         }
-        public Builder dir(@Nullable String dir) {
-            this.dir = Codegen.ofNullable(dir);
-            return this;
+
+        public Builder dir(String dir) {
+            return dir(Output.of(dir));
         }
+
         public Builder dnsConfig(@Nullable Output<ServiceTaskSpecContainerSpecDnsConfigGetArgs> dnsConfig) {
-            this.dnsConfig = dnsConfig;
+            $.dnsConfig = dnsConfig;
             return this;
         }
-        public Builder dnsConfig(@Nullable ServiceTaskSpecContainerSpecDnsConfigGetArgs dnsConfig) {
-            this.dnsConfig = Codegen.ofNullable(dnsConfig);
-            return this;
+
+        public Builder dnsConfig(ServiceTaskSpecContainerSpecDnsConfigGetArgs dnsConfig) {
+            return dnsConfig(Output.of(dnsConfig));
         }
+
         public Builder env(@Nullable Output<Map<String,String>> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable Map<String,String> env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(Map<String,String> env) {
+            return env(Output.of(env));
         }
+
         public Builder groups(@Nullable Output<List<String>> groups) {
-            this.groups = groups;
+            $.groups = groups;
             return this;
         }
-        public Builder groups(@Nullable List<String> groups) {
-            this.groups = Codegen.ofNullable(groups);
-            return this;
+
+        public Builder groups(List<String> groups) {
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder healthcheck(@Nullable Output<ServiceTaskSpecContainerSpecHealthcheckGetArgs> healthcheck) {
-            this.healthcheck = healthcheck;
+            $.healthcheck = healthcheck;
             return this;
         }
-        public Builder healthcheck(@Nullable ServiceTaskSpecContainerSpecHealthcheckGetArgs healthcheck) {
-            this.healthcheck = Codegen.ofNullable(healthcheck);
-            return this;
+
+        public Builder healthcheck(ServiceTaskSpecContainerSpecHealthcheckGetArgs healthcheck) {
+            return healthcheck(Output.of(healthcheck));
         }
+
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder hosts(@Nullable Output<List<ServiceTaskSpecContainerSpecHostGetArgs>> hosts) {
-            this.hosts = hosts;
+            $.hosts = hosts;
             return this;
         }
-        public Builder hosts(@Nullable List<ServiceTaskSpecContainerSpecHostGetArgs> hosts) {
-            this.hosts = Codegen.ofNullable(hosts);
-            return this;
+
+        public Builder hosts(List<ServiceTaskSpecContainerSpecHostGetArgs> hosts) {
+            return hosts(Output.of(hosts));
         }
+
         public Builder hosts(ServiceTaskSpecContainerSpecHostGetArgs... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder isolation(@Nullable Output<String> isolation) {
-            this.isolation = isolation;
+            $.isolation = isolation;
             return this;
         }
-        public Builder isolation(@Nullable String isolation) {
-            this.isolation = Codegen.ofNullable(isolation);
-            return this;
+
+        public Builder isolation(String isolation) {
+            return isolation(Output.of(isolation));
         }
+
         public Builder labels(@Nullable Output<List<ServiceTaskSpecContainerSpecLabelGetArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<ServiceTaskSpecContainerSpecLabelGetArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<ServiceTaskSpecContainerSpecLabelGetArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(ServiceTaskSpecContainerSpecLabelGetArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder mounts(@Nullable Output<List<ServiceTaskSpecContainerSpecMountGetArgs>> mounts) {
-            this.mounts = mounts;
+            $.mounts = mounts;
             return this;
         }
-        public Builder mounts(@Nullable List<ServiceTaskSpecContainerSpecMountGetArgs> mounts) {
-            this.mounts = Codegen.ofNullable(mounts);
-            return this;
+
+        public Builder mounts(List<ServiceTaskSpecContainerSpecMountGetArgs> mounts) {
+            return mounts(Output.of(mounts));
         }
+
         public Builder mounts(ServiceTaskSpecContainerSpecMountGetArgs... mounts) {
             return mounts(List.of(mounts));
         }
+
         public Builder privileges(@Nullable Output<ServiceTaskSpecContainerSpecPrivilegesGetArgs> privileges) {
-            this.privileges = privileges;
+            $.privileges = privileges;
             return this;
         }
-        public Builder privileges(@Nullable ServiceTaskSpecContainerSpecPrivilegesGetArgs privileges) {
-            this.privileges = Codegen.ofNullable(privileges);
-            return this;
+
+        public Builder privileges(ServiceTaskSpecContainerSpecPrivilegesGetArgs privileges) {
+            return privileges(Output.of(privileges));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder secrets(@Nullable Output<List<ServiceTaskSpecContainerSpecSecretGetArgs>> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
-        public Builder secrets(@Nullable List<ServiceTaskSpecContainerSpecSecretGetArgs> secrets) {
-            this.secrets = Codegen.ofNullable(secrets);
-            return this;
+
+        public Builder secrets(List<ServiceTaskSpecContainerSpecSecretGetArgs> secrets) {
+            return secrets(Output.of(secrets));
         }
+
         public Builder secrets(ServiceTaskSpecContainerSpecSecretGetArgs... secrets) {
             return secrets(List.of(secrets));
         }
+
         public Builder stopGracePeriod(@Nullable Output<String> stopGracePeriod) {
-            this.stopGracePeriod = stopGracePeriod;
+            $.stopGracePeriod = stopGracePeriod;
             return this;
         }
-        public Builder stopGracePeriod(@Nullable String stopGracePeriod) {
-            this.stopGracePeriod = Codegen.ofNullable(stopGracePeriod);
-            return this;
+
+        public Builder stopGracePeriod(String stopGracePeriod) {
+            return stopGracePeriod(Output.of(stopGracePeriod));
         }
+
         public Builder stopSignal(@Nullable Output<String> stopSignal) {
-            this.stopSignal = stopSignal;
+            $.stopSignal = stopSignal;
             return this;
         }
-        public Builder stopSignal(@Nullable String stopSignal) {
-            this.stopSignal = Codegen.ofNullable(stopSignal);
-            return this;
+
+        public Builder stopSignal(String stopSignal) {
+            return stopSignal(Output.of(stopSignal));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public ServiceTaskSpecContainerSpecGetArgs build() {
-            return new ServiceTaskSpecContainerSpecGetArgs(args, commands, configs, dir, dnsConfig, env, groups, healthcheck, hostname, hosts, image, isolation, labels, mounts, privileges, readOnly, secrets, stopGracePeriod, stopSignal, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public ServiceTaskSpecContainerSpecGetArgs build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class RecordWeightedRoutingPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="weight", required=true)
-      private final Output<Integer> weight;
+    private Output<Integer> weight;
 
     public Output<Integer> weight() {
         return this.weight;
     }
 
-    public RecordWeightedRoutingPolicyArgs(Output<Integer> weight) {
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-    }
+    private RecordWeightedRoutingPolicyArgs() {}
 
-    private RecordWeightedRoutingPolicyArgs() {
-        this.weight = Codegen.empty();
+    private RecordWeightedRoutingPolicyArgs(RecordWeightedRoutingPolicyArgs $) {
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordWeightedRoutingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> weight;
+        private RecordWeightedRoutingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordWeightedRoutingPolicyArgs();
         }
 
         public Builder(RecordWeightedRoutingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.weight = defaults.weight;
+            $ = new RecordWeightedRoutingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder weight(Output<Integer> weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
         }
+
         public Builder weight(Integer weight) {
-            this.weight = Output.of(Objects.requireNonNull(weight));
-            return this;
-        }        public RecordWeightedRoutingPolicyArgs build() {
-            return new RecordWeightedRoutingPolicyArgs(weight);
+            return weight(Output.of(weight));
+        }
+
+        public RecordWeightedRoutingPolicyArgs build() {
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            return $;
         }
     }
+
 }

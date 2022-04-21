@@ -5,10 +5,10 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SamlProviderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SamlProviderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SamlProviderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="samlMetadataDocument")
-      private final @Nullable Output<String> samlMetadataDocument;
+    private @Nullable Output<String> samlMetadataDocument;
 
-    public Output<String> samlMetadataDocument() {
-        return this.samlMetadataDocument == null ? Codegen.empty() : this.samlMetadataDocument;
+    public Optional<Output<String>> samlMetadataDocument() {
+        return Optional.ofNullable(this.samlMetadataDocument);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SamlProviderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SamlProviderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -76,115 +76,98 @@ public final class SamlProviderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validUntil")
-      private final @Nullable Output<String> validUntil;
+    private @Nullable Output<String> validUntil;
 
-    public Output<String> validUntil() {
-        return this.validUntil == null ? Codegen.empty() : this.validUntil;
+    public Optional<Output<String>> validUntil() {
+        return Optional.ofNullable(this.validUntil);
     }
 
-    public SamlProviderState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> samlMetadataDocument,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> validUntil) {
-        this.arn = arn;
-        this.name = name;
-        this.samlMetadataDocument = samlMetadataDocument;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.validUntil = validUntil;
-    }
+    private SamlProviderState() {}
 
-    private SamlProviderState() {
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.samlMetadataDocument = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.validUntil = Codegen.empty();
+    private SamlProviderState(SamlProviderState $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.samlMetadataDocument = $.samlMetadataDocument;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.validUntil = $.validUntil;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SamlProviderState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> samlMetadataDocument;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> validUntil;
+        private SamlProviderState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SamlProviderState();
         }
 
         public Builder(SamlProviderState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.samlMetadataDocument = defaults.samlMetadataDocument;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.validUntil = defaults.validUntil;
+            $ = new SamlProviderState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder samlMetadataDocument(@Nullable Output<String> samlMetadataDocument) {
-            this.samlMetadataDocument = samlMetadataDocument;
+            $.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
-        public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
-            this.samlMetadataDocument = Codegen.ofNullable(samlMetadataDocument);
-            return this;
+
+        public Builder samlMetadataDocument(String samlMetadataDocument) {
+            return samlMetadataDocument(Output.of(samlMetadataDocument));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder validUntil(@Nullable Output<String> validUntil) {
-            this.validUntil = validUntil;
+            $.validUntil = validUntil;
             return this;
         }
-        public Builder validUntil(@Nullable String validUntil) {
-            this.validUntil = Codegen.ofNullable(validUntil);
-            return this;
-        }        public SamlProviderState build() {
-            return new SamlProviderState(arn, name, samlMetadataDocument, tags, tagsAll, validUntil);
+
+        public Builder validUntil(String validUntil) {
+            return validUntil(Output.of(validUntil));
+        }
+
+        public SamlProviderState build() {
+            return $;
         }
     }
+
 }

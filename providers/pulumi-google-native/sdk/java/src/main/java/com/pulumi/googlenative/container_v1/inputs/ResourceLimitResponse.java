@@ -21,7 +21,7 @@ public final class ResourceLimitResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="maximum", required=true)
-      private final String maximum;
+    private String maximum;
 
     public String maximum() {
         return this.maximum;
@@ -32,7 +32,7 @@ public final class ResourceLimitResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="minimum", required=true)
-      private final String minimum;
+    private String minimum;
 
     public String minimum() {
         return this.minimum;
@@ -43,64 +43,59 @@ public final class ResourceLimitResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public ResourceLimitResponse(
-        String maximum,
-        String minimum,
-        String resourceType) {
-        this.maximum = Objects.requireNonNull(maximum, "expected parameter 'maximum' to be non-null");
-        this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private ResourceLimitResponse() {}
 
-    private ResourceLimitResponse() {
-        this.maximum = null;
-        this.minimum = null;
-        this.resourceType = null;
+    private ResourceLimitResponse(ResourceLimitResponse $) {
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceLimitResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String maximum;
-        private String minimum;
-        private String resourceType;
+        private ResourceLimitResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceLimitResponse();
         }
 
         public Builder(ResourceLimitResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ResourceLimitResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maximum(String maximum) {
-            this.maximum = Objects.requireNonNull(maximum);
+            $.maximum = maximum;
             return this;
         }
+
         public Builder minimum(String minimum) {
-            this.minimum = Objects.requireNonNull(minimum);
+            $.minimum = minimum;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public ResourceLimitResponse build() {
-            return new ResourceLimitResponse(maximum, minimum, resourceType);
+        }
+
+        public ResourceLimitResponse build() {
+            $.maximum = Objects.requireNonNull($.maximum, "expected parameter 'maximum' to be non-null");
+            $.minimum = Objects.requireNonNull($.minimum, "expected parameter 'minimum' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

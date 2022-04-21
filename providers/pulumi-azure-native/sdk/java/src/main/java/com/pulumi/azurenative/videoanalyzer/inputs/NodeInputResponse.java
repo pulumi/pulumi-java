@@ -21,45 +21,45 @@ public final class NodeInputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nodeName", required=true)
-      private final String nodeName;
+    private String nodeName;
 
     public String nodeName() {
         return this.nodeName;
     }
 
-    public NodeInputResponse(String nodeName) {
-        this.nodeName = Objects.requireNonNull(nodeName, "expected parameter 'nodeName' to be non-null");
-    }
+    private NodeInputResponse() {}
 
-    private NodeInputResponse() {
-        this.nodeName = null;
+    private NodeInputResponse(NodeInputResponse $) {
+        this.nodeName = $.nodeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nodeName;
+        private NodeInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeInputResponse();
         }
 
         public Builder(NodeInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeName = defaults.nodeName;
+            $ = new NodeInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeName(String nodeName) {
-            this.nodeName = Objects.requireNonNull(nodeName);
+            $.nodeName = nodeName;
             return this;
-        }        public NodeInputResponse build() {
-            return new NodeInputResponse(nodeName);
+        }
+
+        public NodeInputResponse build() {
+            $.nodeName = Objects.requireNonNull($.nodeName, "expected parameter 'nodeName' to be non-null");
+            return $;
         }
     }
+
 }

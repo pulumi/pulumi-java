@@ -18,7 +18,7 @@ public final class BotAliasLocaleSettingsItem extends com.pulumi.resources.Invok
     public static final BotAliasLocaleSettingsItem Empty = new BotAliasLocaleSettingsItem();
 
     @Import(name="botAliasLocaleSetting", required=true)
-      private final BotAliasLocaleSettings botAliasLocaleSetting;
+    private BotAliasLocaleSettings botAliasLocaleSetting;
 
     public BotAliasLocaleSettings botAliasLocaleSetting() {
         return this.botAliasLocaleSetting;
@@ -29,55 +29,52 @@ public final class BotAliasLocaleSettingsItem extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="localeId", required=true)
-      private final String localeId;
+    private String localeId;
 
     public String localeId() {
         return this.localeId;
     }
 
-    public BotAliasLocaleSettingsItem(
-        BotAliasLocaleSettings botAliasLocaleSetting,
-        String localeId) {
-        this.botAliasLocaleSetting = Objects.requireNonNull(botAliasLocaleSetting, "expected parameter 'botAliasLocaleSetting' to be non-null");
-        this.localeId = Objects.requireNonNull(localeId, "expected parameter 'localeId' to be non-null");
-    }
+    private BotAliasLocaleSettingsItem() {}
 
-    private BotAliasLocaleSettingsItem() {
-        this.botAliasLocaleSetting = null;
-        this.localeId = null;
+    private BotAliasLocaleSettingsItem(BotAliasLocaleSettingsItem $) {
+        this.botAliasLocaleSetting = $.botAliasLocaleSetting;
+        this.localeId = $.localeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasLocaleSettingsItem defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BotAliasLocaleSettings botAliasLocaleSetting;
-        private String localeId;
+        private BotAliasLocaleSettingsItem $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasLocaleSettingsItem();
         }
 
         public Builder(BotAliasLocaleSettingsItem defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.botAliasLocaleSetting = defaults.botAliasLocaleSetting;
-    	      this.localeId = defaults.localeId;
+            $ = new BotAliasLocaleSettingsItem(Objects.requireNonNull(defaults));
         }
 
         public Builder botAliasLocaleSetting(BotAliasLocaleSettings botAliasLocaleSetting) {
-            this.botAliasLocaleSetting = Objects.requireNonNull(botAliasLocaleSetting);
+            $.botAliasLocaleSetting = botAliasLocaleSetting;
             return this;
         }
+
         public Builder localeId(String localeId) {
-            this.localeId = Objects.requireNonNull(localeId);
+            $.localeId = localeId;
             return this;
-        }        public BotAliasLocaleSettingsItem build() {
-            return new BotAliasLocaleSettingsItem(botAliasLocaleSetting, localeId);
+        }
+
+        public BotAliasLocaleSettingsItem build() {
+            $.botAliasLocaleSetting = Objects.requireNonNull($.botAliasLocaleSetting, "expected parameter 'botAliasLocaleSetting' to be non-null");
+            $.localeId = Objects.requireNonNull($.localeId, "expected parameter 'localeId' to be non-null");
+            return $;
         }
     }
+
 }

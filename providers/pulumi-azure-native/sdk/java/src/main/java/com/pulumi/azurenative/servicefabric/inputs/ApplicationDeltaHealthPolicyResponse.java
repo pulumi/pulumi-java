@@ -25,10 +25,10 @@ public final class ApplicationDeltaHealthPolicyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="defaultServiceTypeDeltaHealthPolicy")
-      private final @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy;
+    private @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy;
 
     public Optional<ServiceTypeDeltaHealthPolicyResponse> defaultServiceTypeDeltaHealthPolicy() {
-        return this.defaultServiceTypeDeltaHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeDeltaHealthPolicy);
+        return Optional.ofNullable(this.defaultServiceTypeDeltaHealthPolicy);
     }
 
     /**
@@ -36,55 +36,50 @@ public final class ApplicationDeltaHealthPolicyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="serviceTypeDeltaHealthPolicies")
-      private final @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
+    private @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
 
-    public Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies() {
-        return this.serviceTypeDeltaHealthPolicies == null ? Map.of() : this.serviceTypeDeltaHealthPolicies;
+    public Optional<Map<String,ServiceTypeDeltaHealthPolicyResponse>> serviceTypeDeltaHealthPolicies() {
+        return Optional.ofNullable(this.serviceTypeDeltaHealthPolicies);
     }
 
-    public ApplicationDeltaHealthPolicyResponse(
-        @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy,
-        @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies) {
-        this.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
-        this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
-    }
+    private ApplicationDeltaHealthPolicyResponse() {}
 
-    private ApplicationDeltaHealthPolicyResponse() {
-        this.defaultServiceTypeDeltaHealthPolicy = null;
-        this.serviceTypeDeltaHealthPolicies = Map.of();
+    private ApplicationDeltaHealthPolicyResponse(ApplicationDeltaHealthPolicyResponse $) {
+        this.defaultServiceTypeDeltaHealthPolicy = $.defaultServiceTypeDeltaHealthPolicy;
+        this.serviceTypeDeltaHealthPolicies = $.serviceTypeDeltaHealthPolicies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationDeltaHealthPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy;
-        private @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
+        private ApplicationDeltaHealthPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationDeltaHealthPolicyResponse();
         }
 
         public Builder(ApplicationDeltaHealthPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultServiceTypeDeltaHealthPolicy = defaults.defaultServiceTypeDeltaHealthPolicy;
-    	      this.serviceTypeDeltaHealthPolicies = defaults.serviceTypeDeltaHealthPolicies;
+            $ = new ApplicationDeltaHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultServiceTypeDeltaHealthPolicy(@Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy) {
-            this.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
+            $.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
             return this;
         }
+
         public Builder serviceTypeDeltaHealthPolicies(@Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies) {
-            this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
+            $.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
             return this;
-        }        public ApplicationDeltaHealthPolicyResponse build() {
-            return new ApplicationDeltaHealthPolicyResponse(defaultServiceTypeDeltaHealthPolicy, serviceTypeDeltaHealthPolicies);
+        }
+
+        public ApplicationDeltaHealthPolicyResponse build() {
+            return $;
         }
     }
+
 }

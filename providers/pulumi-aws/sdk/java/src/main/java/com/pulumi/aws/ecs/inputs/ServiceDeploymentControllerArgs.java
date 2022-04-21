@@ -5,9 +5,9 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ServiceDeploymentControllerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ServiceDeploymentControllerArgs(@Nullable Output<String> type) {
-        this.type = type;
-    }
+    private ServiceDeploymentControllerArgs() {}
 
-    private ServiceDeploymentControllerArgs() {
-        this.type = Codegen.empty();
+    private ServiceDeploymentControllerArgs(ServiceDeploymentControllerArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceDeploymentControllerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> type;
+        private ServiceDeploymentControllerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceDeploymentControllerArgs();
         }
 
         public Builder(ServiceDeploymentControllerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ServiceDeploymentControllerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ServiceDeploymentControllerArgs build() {
-            return new ServiceDeploymentControllerArgs(type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ServiceDeploymentControllerArgs build() {
+            return $;
         }
     }
+
 }

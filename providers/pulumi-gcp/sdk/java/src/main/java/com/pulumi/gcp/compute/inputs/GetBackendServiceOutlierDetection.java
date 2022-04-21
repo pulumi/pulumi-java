@@ -16,212 +16,193 @@ public final class GetBackendServiceOutlierDetection extends com.pulumi.resource
     public static final GetBackendServiceOutlierDetection Empty = new GetBackendServiceOutlierDetection();
 
     @Import(name="baseEjectionTimes", required=true)
-      private final List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes;
+    private List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes;
 
     public List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes() {
         return this.baseEjectionTimes;
     }
 
     @Import(name="consecutiveErrors", required=true)
-      private final Integer consecutiveErrors;
+    private Integer consecutiveErrors;
 
     public Integer consecutiveErrors() {
         return this.consecutiveErrors;
     }
 
     @Import(name="consecutiveGatewayFailure", required=true)
-      private final Integer consecutiveGatewayFailure;
+    private Integer consecutiveGatewayFailure;
 
     public Integer consecutiveGatewayFailure() {
         return this.consecutiveGatewayFailure;
     }
 
     @Import(name="enforcingConsecutiveErrors", required=true)
-      private final Integer enforcingConsecutiveErrors;
+    private Integer enforcingConsecutiveErrors;
 
     public Integer enforcingConsecutiveErrors() {
         return this.enforcingConsecutiveErrors;
     }
 
     @Import(name="enforcingConsecutiveGatewayFailure", required=true)
-      private final Integer enforcingConsecutiveGatewayFailure;
+    private Integer enforcingConsecutiveGatewayFailure;
 
     public Integer enforcingConsecutiveGatewayFailure() {
         return this.enforcingConsecutiveGatewayFailure;
     }
 
     @Import(name="enforcingSuccessRate", required=true)
-      private final Integer enforcingSuccessRate;
+    private Integer enforcingSuccessRate;
 
     public Integer enforcingSuccessRate() {
         return this.enforcingSuccessRate;
     }
 
     @Import(name="intervals", required=true)
-      private final List<GetBackendServiceOutlierDetectionInterval> intervals;
+    private List<GetBackendServiceOutlierDetectionInterval> intervals;
 
     public List<GetBackendServiceOutlierDetectionInterval> intervals() {
         return this.intervals;
     }
 
     @Import(name="maxEjectionPercent", required=true)
-      private final Integer maxEjectionPercent;
+    private Integer maxEjectionPercent;
 
     public Integer maxEjectionPercent() {
         return this.maxEjectionPercent;
     }
 
     @Import(name="successRateMinimumHosts", required=true)
-      private final Integer successRateMinimumHosts;
+    private Integer successRateMinimumHosts;
 
     public Integer successRateMinimumHosts() {
         return this.successRateMinimumHosts;
     }
 
     @Import(name="successRateRequestVolume", required=true)
-      private final Integer successRateRequestVolume;
+    private Integer successRateRequestVolume;
 
     public Integer successRateRequestVolume() {
         return this.successRateRequestVolume;
     }
 
     @Import(name="successRateStdevFactor", required=true)
-      private final Integer successRateStdevFactor;
+    private Integer successRateStdevFactor;
 
     public Integer successRateStdevFactor() {
         return this.successRateStdevFactor;
     }
 
-    public GetBackendServiceOutlierDetection(
-        List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes,
-        Integer consecutiveErrors,
-        Integer consecutiveGatewayFailure,
-        Integer enforcingConsecutiveErrors,
-        Integer enforcingConsecutiveGatewayFailure,
-        Integer enforcingSuccessRate,
-        List<GetBackendServiceOutlierDetectionInterval> intervals,
-        Integer maxEjectionPercent,
-        Integer successRateMinimumHosts,
-        Integer successRateRequestVolume,
-        Integer successRateStdevFactor) {
-        this.baseEjectionTimes = Objects.requireNonNull(baseEjectionTimes, "expected parameter 'baseEjectionTimes' to be non-null");
-        this.consecutiveErrors = Objects.requireNonNull(consecutiveErrors, "expected parameter 'consecutiveErrors' to be non-null");
-        this.consecutiveGatewayFailure = Objects.requireNonNull(consecutiveGatewayFailure, "expected parameter 'consecutiveGatewayFailure' to be non-null");
-        this.enforcingConsecutiveErrors = Objects.requireNonNull(enforcingConsecutiveErrors, "expected parameter 'enforcingConsecutiveErrors' to be non-null");
-        this.enforcingConsecutiveGatewayFailure = Objects.requireNonNull(enforcingConsecutiveGatewayFailure, "expected parameter 'enforcingConsecutiveGatewayFailure' to be non-null");
-        this.enforcingSuccessRate = Objects.requireNonNull(enforcingSuccessRate, "expected parameter 'enforcingSuccessRate' to be non-null");
-        this.intervals = Objects.requireNonNull(intervals, "expected parameter 'intervals' to be non-null");
-        this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent, "expected parameter 'maxEjectionPercent' to be non-null");
-        this.successRateMinimumHosts = Objects.requireNonNull(successRateMinimumHosts, "expected parameter 'successRateMinimumHosts' to be non-null");
-        this.successRateRequestVolume = Objects.requireNonNull(successRateRequestVolume, "expected parameter 'successRateRequestVolume' to be non-null");
-        this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor, "expected parameter 'successRateStdevFactor' to be non-null");
-    }
+    private GetBackendServiceOutlierDetection() {}
 
-    private GetBackendServiceOutlierDetection() {
-        this.baseEjectionTimes = List.of();
-        this.consecutiveErrors = null;
-        this.consecutiveGatewayFailure = null;
-        this.enforcingConsecutiveErrors = null;
-        this.enforcingConsecutiveGatewayFailure = null;
-        this.enforcingSuccessRate = null;
-        this.intervals = List.of();
-        this.maxEjectionPercent = null;
-        this.successRateMinimumHosts = null;
-        this.successRateRequestVolume = null;
-        this.successRateStdevFactor = null;
+    private GetBackendServiceOutlierDetection(GetBackendServiceOutlierDetection $) {
+        this.baseEjectionTimes = $.baseEjectionTimes;
+        this.consecutiveErrors = $.consecutiveErrors;
+        this.consecutiveGatewayFailure = $.consecutiveGatewayFailure;
+        this.enforcingConsecutiveErrors = $.enforcingConsecutiveErrors;
+        this.enforcingConsecutiveGatewayFailure = $.enforcingConsecutiveGatewayFailure;
+        this.enforcingSuccessRate = $.enforcingSuccessRate;
+        this.intervals = $.intervals;
+        this.maxEjectionPercent = $.maxEjectionPercent;
+        this.successRateMinimumHosts = $.successRateMinimumHosts;
+        this.successRateRequestVolume = $.successRateRequestVolume;
+        this.successRateStdevFactor = $.successRateStdevFactor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceOutlierDetection defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes;
-        private Integer consecutiveErrors;
-        private Integer consecutiveGatewayFailure;
-        private Integer enforcingConsecutiveErrors;
-        private Integer enforcingConsecutiveGatewayFailure;
-        private Integer enforcingSuccessRate;
-        private List<GetBackendServiceOutlierDetectionInterval> intervals;
-        private Integer maxEjectionPercent;
-        private Integer successRateMinimumHosts;
-        private Integer successRateRequestVolume;
-        private Integer successRateStdevFactor;
+        private GetBackendServiceOutlierDetection $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceOutlierDetection();
         }
 
         public Builder(GetBackendServiceOutlierDetection defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseEjectionTimes = defaults.baseEjectionTimes;
-    	      this.consecutiveErrors = defaults.consecutiveErrors;
-    	      this.consecutiveGatewayFailure = defaults.consecutiveGatewayFailure;
-    	      this.enforcingConsecutiveErrors = defaults.enforcingConsecutiveErrors;
-    	      this.enforcingConsecutiveGatewayFailure = defaults.enforcingConsecutiveGatewayFailure;
-    	      this.enforcingSuccessRate = defaults.enforcingSuccessRate;
-    	      this.intervals = defaults.intervals;
-    	      this.maxEjectionPercent = defaults.maxEjectionPercent;
-    	      this.successRateMinimumHosts = defaults.successRateMinimumHosts;
-    	      this.successRateRequestVolume = defaults.successRateRequestVolume;
-    	      this.successRateStdevFactor = defaults.successRateStdevFactor;
+            $ = new GetBackendServiceOutlierDetection(Objects.requireNonNull(defaults));
         }
 
         public Builder baseEjectionTimes(List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes) {
-            this.baseEjectionTimes = Objects.requireNonNull(baseEjectionTimes);
+            $.baseEjectionTimes = baseEjectionTimes;
             return this;
         }
+
         public Builder baseEjectionTimes(GetBackendServiceOutlierDetectionBaseEjectionTime... baseEjectionTimes) {
             return baseEjectionTimes(List.of(baseEjectionTimes));
         }
+
         public Builder consecutiveErrors(Integer consecutiveErrors) {
-            this.consecutiveErrors = Objects.requireNonNull(consecutiveErrors);
+            $.consecutiveErrors = consecutiveErrors;
             return this;
         }
+
         public Builder consecutiveGatewayFailure(Integer consecutiveGatewayFailure) {
-            this.consecutiveGatewayFailure = Objects.requireNonNull(consecutiveGatewayFailure);
+            $.consecutiveGatewayFailure = consecutiveGatewayFailure;
             return this;
         }
+
         public Builder enforcingConsecutiveErrors(Integer enforcingConsecutiveErrors) {
-            this.enforcingConsecutiveErrors = Objects.requireNonNull(enforcingConsecutiveErrors);
+            $.enforcingConsecutiveErrors = enforcingConsecutiveErrors;
             return this;
         }
+
         public Builder enforcingConsecutiveGatewayFailure(Integer enforcingConsecutiveGatewayFailure) {
-            this.enforcingConsecutiveGatewayFailure = Objects.requireNonNull(enforcingConsecutiveGatewayFailure);
+            $.enforcingConsecutiveGatewayFailure = enforcingConsecutiveGatewayFailure;
             return this;
         }
+
         public Builder enforcingSuccessRate(Integer enforcingSuccessRate) {
-            this.enforcingSuccessRate = Objects.requireNonNull(enforcingSuccessRate);
+            $.enforcingSuccessRate = enforcingSuccessRate;
             return this;
         }
+
         public Builder intervals(List<GetBackendServiceOutlierDetectionInterval> intervals) {
-            this.intervals = Objects.requireNonNull(intervals);
+            $.intervals = intervals;
             return this;
         }
+
         public Builder intervals(GetBackendServiceOutlierDetectionInterval... intervals) {
             return intervals(List.of(intervals));
         }
+
         public Builder maxEjectionPercent(Integer maxEjectionPercent) {
-            this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
+            $.maxEjectionPercent = maxEjectionPercent;
             return this;
         }
+
         public Builder successRateMinimumHosts(Integer successRateMinimumHosts) {
-            this.successRateMinimumHosts = Objects.requireNonNull(successRateMinimumHosts);
+            $.successRateMinimumHosts = successRateMinimumHosts;
             return this;
         }
+
         public Builder successRateRequestVolume(Integer successRateRequestVolume) {
-            this.successRateRequestVolume = Objects.requireNonNull(successRateRequestVolume);
+            $.successRateRequestVolume = successRateRequestVolume;
             return this;
         }
+
         public Builder successRateStdevFactor(Integer successRateStdevFactor) {
-            this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor);
+            $.successRateStdevFactor = successRateStdevFactor;
             return this;
-        }        public GetBackendServiceOutlierDetection build() {
-            return new GetBackendServiceOutlierDetection(baseEjectionTimes, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, intervals, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
+        }
+
+        public GetBackendServiceOutlierDetection build() {
+            $.baseEjectionTimes = Objects.requireNonNull($.baseEjectionTimes, "expected parameter 'baseEjectionTimes' to be non-null");
+            $.consecutiveErrors = Objects.requireNonNull($.consecutiveErrors, "expected parameter 'consecutiveErrors' to be non-null");
+            $.consecutiveGatewayFailure = Objects.requireNonNull($.consecutiveGatewayFailure, "expected parameter 'consecutiveGatewayFailure' to be non-null");
+            $.enforcingConsecutiveErrors = Objects.requireNonNull($.enforcingConsecutiveErrors, "expected parameter 'enforcingConsecutiveErrors' to be non-null");
+            $.enforcingConsecutiveGatewayFailure = Objects.requireNonNull($.enforcingConsecutiveGatewayFailure, "expected parameter 'enforcingConsecutiveGatewayFailure' to be non-null");
+            $.enforcingSuccessRate = Objects.requireNonNull($.enforcingSuccessRate, "expected parameter 'enforcingSuccessRate' to be non-null");
+            $.intervals = Objects.requireNonNull($.intervals, "expected parameter 'intervals' to be non-null");
+            $.maxEjectionPercent = Objects.requireNonNull($.maxEjectionPercent, "expected parameter 'maxEjectionPercent' to be non-null");
+            $.successRateMinimumHosts = Objects.requireNonNull($.successRateMinimumHosts, "expected parameter 'successRateMinimumHosts' to be non-null");
+            $.successRateRequestVolume = Objects.requireNonNull($.successRateRequestVolume, "expected parameter 'successRateRequestVolume' to be non-null");
+            $.successRateStdevFactor = Objects.requireNonNull($.successRateStdevFactor, "expected parameter 'successRateStdevFactor' to be non-null");
+            return $;
         }
     }
+
 }

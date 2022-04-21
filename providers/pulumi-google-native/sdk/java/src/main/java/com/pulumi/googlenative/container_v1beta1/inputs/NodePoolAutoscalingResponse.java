@@ -22,7 +22,7 @@ public final class NodePoolAutoscalingResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="autoprovisioned", required=true)
-      private final Boolean autoprovisioned;
+    private Boolean autoprovisioned;
 
     public Boolean autoprovisioned() {
         return this.autoprovisioned;
@@ -33,7 +33,7 @@ public final class NodePoolAutoscalingResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -44,7 +44,7 @@ public final class NodePoolAutoscalingResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="maxNodeCount", required=true)
-      private final Integer maxNodeCount;
+    private Integer maxNodeCount;
 
     public Integer maxNodeCount() {
         return this.maxNodeCount;
@@ -55,73 +55,66 @@ public final class NodePoolAutoscalingResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="minNodeCount", required=true)
-      private final Integer minNodeCount;
+    private Integer minNodeCount;
 
     public Integer minNodeCount() {
         return this.minNodeCount;
     }
 
-    public NodePoolAutoscalingResponse(
-        Boolean autoprovisioned,
-        Boolean enabled,
-        Integer maxNodeCount,
-        Integer minNodeCount) {
-        this.autoprovisioned = Objects.requireNonNull(autoprovisioned, "expected parameter 'autoprovisioned' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.maxNodeCount = Objects.requireNonNull(maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
-        this.minNodeCount = Objects.requireNonNull(minNodeCount, "expected parameter 'minNodeCount' to be non-null");
-    }
+    private NodePoolAutoscalingResponse() {}
 
-    private NodePoolAutoscalingResponse() {
-        this.autoprovisioned = null;
-        this.enabled = null;
-        this.maxNodeCount = null;
-        this.minNodeCount = null;
+    private NodePoolAutoscalingResponse(NodePoolAutoscalingResponse $) {
+        this.autoprovisioned = $.autoprovisioned;
+        this.enabled = $.enabled;
+        this.maxNodeCount = $.maxNodeCount;
+        this.minNodeCount = $.minNodeCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolAutoscalingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autoprovisioned;
-        private Boolean enabled;
-        private Integer maxNodeCount;
-        private Integer minNodeCount;
+        private NodePoolAutoscalingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolAutoscalingResponse();
         }
 
         public Builder(NodePoolAutoscalingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoprovisioned = defaults.autoprovisioned;
-    	      this.enabled = defaults.enabled;
-    	      this.maxNodeCount = defaults.maxNodeCount;
-    	      this.minNodeCount = defaults.minNodeCount;
+            $ = new NodePoolAutoscalingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoprovisioned(Boolean autoprovisioned) {
-            this.autoprovisioned = Objects.requireNonNull(autoprovisioned);
+            $.autoprovisioned = autoprovisioned;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder maxNodeCount(Integer maxNodeCount) {
-            this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
+            $.maxNodeCount = maxNodeCount;
             return this;
         }
+
         public Builder minNodeCount(Integer minNodeCount) {
-            this.minNodeCount = Objects.requireNonNull(minNodeCount);
+            $.minNodeCount = minNodeCount;
             return this;
-        }        public NodePoolAutoscalingResponse build() {
-            return new NodePoolAutoscalingResponse(autoprovisioned, enabled, maxNodeCount, minNodeCount);
+        }
+
+        public NodePoolAutoscalingResponse build() {
+            $.autoprovisioned = Objects.requireNonNull($.autoprovisioned, "expected parameter 'autoprovisioned' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.maxNodeCount = Objects.requireNonNull($.maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
+            $.minNodeCount = Objects.requireNonNull($.minNodeCount, "expected parameter 'minNodeCount' to be non-null");
+            return $;
         }
     }
+
 }

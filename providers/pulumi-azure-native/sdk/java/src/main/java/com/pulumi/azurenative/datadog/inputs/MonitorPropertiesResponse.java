@@ -26,14 +26,14 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="datadogOrganizationProperties")
-      private final @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties;
+    private @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties;
 
     public Optional<DatadogOrganizationPropertiesResponse> datadogOrganizationProperties() {
-        return this.datadogOrganizationProperties == null ? Optional.empty() : Optional.ofNullable(this.datadogOrganizationProperties);
+        return Optional.ofNullable(this.datadogOrganizationProperties);
     }
 
     @Import(name="liftrResourceCategory", required=true)
-      private final String liftrResourceCategory;
+    private String liftrResourceCategory;
 
     public String liftrResourceCategory() {
         return this.liftrResourceCategory;
@@ -44,7 +44,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="liftrResourcePreference", required=true)
-      private final Integer liftrResourcePreference;
+    private Integer liftrResourcePreference;
 
     public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
@@ -55,7 +55,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="marketplaceSubscriptionStatus", required=true)
-      private final String marketplaceSubscriptionStatus;
+    private String marketplaceSubscriptionStatus;
 
     public String marketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus;
@@ -66,14 +66,14 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="monitoringStatus")
-      private final @Nullable String monitoringStatus;
+    private @Nullable String monitoringStatus;
 
     public Optional<String> monitoringStatus() {
-        return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
+        return Optional.ofNullable(this.monitoringStatus);
     }
 
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -84,100 +84,84 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="userInfo")
-      private final @Nullable UserInfoResponse userInfo;
+    private @Nullable UserInfoResponse userInfo;
 
     public Optional<UserInfoResponse> userInfo() {
-        return this.userInfo == null ? Optional.empty() : Optional.ofNullable(this.userInfo);
+        return Optional.ofNullable(this.userInfo);
     }
 
-    public MonitorPropertiesResponse(
-        @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties,
-        String liftrResourceCategory,
-        Integer liftrResourcePreference,
-        String marketplaceSubscriptionStatus,
-        @Nullable String monitoringStatus,
-        String provisioningState,
-        @Nullable UserInfoResponse userInfo) {
-        this.datadogOrganizationProperties = datadogOrganizationProperties;
-        this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory, "expected parameter 'liftrResourceCategory' to be non-null");
-        this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference, "expected parameter 'liftrResourcePreference' to be non-null");
-        this.marketplaceSubscriptionStatus = Objects.requireNonNull(marketplaceSubscriptionStatus, "expected parameter 'marketplaceSubscriptionStatus' to be non-null");
-        this.monitoringStatus = monitoringStatus;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.userInfo = userInfo;
-    }
+    private MonitorPropertiesResponse() {}
 
-    private MonitorPropertiesResponse() {
-        this.datadogOrganizationProperties = null;
-        this.liftrResourceCategory = null;
-        this.liftrResourcePreference = null;
-        this.marketplaceSubscriptionStatus = null;
-        this.monitoringStatus = null;
-        this.provisioningState = null;
-        this.userInfo = null;
+    private MonitorPropertiesResponse(MonitorPropertiesResponse $) {
+        this.datadogOrganizationProperties = $.datadogOrganizationProperties;
+        this.liftrResourceCategory = $.liftrResourceCategory;
+        this.liftrResourcePreference = $.liftrResourcePreference;
+        this.marketplaceSubscriptionStatus = $.marketplaceSubscriptionStatus;
+        this.monitoringStatus = $.monitoringStatus;
+        this.provisioningState = $.provisioningState;
+        this.userInfo = $.userInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitorPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties;
-        private String liftrResourceCategory;
-        private Integer liftrResourcePreference;
-        private String marketplaceSubscriptionStatus;
-        private @Nullable String monitoringStatus;
-        private String provisioningState;
-        private @Nullable UserInfoResponse userInfo;
+        private MonitorPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitorPropertiesResponse();
         }
 
         public Builder(MonitorPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datadogOrganizationProperties = defaults.datadogOrganizationProperties;
-    	      this.liftrResourceCategory = defaults.liftrResourceCategory;
-    	      this.liftrResourcePreference = defaults.liftrResourcePreference;
-    	      this.marketplaceSubscriptionStatus = defaults.marketplaceSubscriptionStatus;
-    	      this.monitoringStatus = defaults.monitoringStatus;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.userInfo = defaults.userInfo;
+            $ = new MonitorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datadogOrganizationProperties(@Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties) {
-            this.datadogOrganizationProperties = datadogOrganizationProperties;
+            $.datadogOrganizationProperties = datadogOrganizationProperties;
             return this;
         }
+
         public Builder liftrResourceCategory(String liftrResourceCategory) {
-            this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
+            $.liftrResourceCategory = liftrResourceCategory;
             return this;
         }
+
         public Builder liftrResourcePreference(Integer liftrResourcePreference) {
-            this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
+            $.liftrResourcePreference = liftrResourcePreference;
             return this;
         }
+
         public Builder marketplaceSubscriptionStatus(String marketplaceSubscriptionStatus) {
-            this.marketplaceSubscriptionStatus = Objects.requireNonNull(marketplaceSubscriptionStatus);
+            $.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
+
         public Builder monitoringStatus(@Nullable String monitoringStatus) {
-            this.monitoringStatus = monitoringStatus;
+            $.monitoringStatus = monitoringStatus;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder userInfo(@Nullable UserInfoResponse userInfo) {
-            this.userInfo = userInfo;
+            $.userInfo = userInfo;
             return this;
-        }        public MonitorPropertiesResponse build() {
-            return new MonitorPropertiesResponse(datadogOrganizationProperties, liftrResourceCategory, liftrResourcePreference, marketplaceSubscriptionStatus, monitoringStatus, provisioningState, userInfo);
+        }
+
+        public MonitorPropertiesResponse build() {
+            $.liftrResourceCategory = Objects.requireNonNull($.liftrResourceCategory, "expected parameter 'liftrResourceCategory' to be non-null");
+            $.liftrResourcePreference = Objects.requireNonNull($.liftrResourcePreference, "expected parameter 'liftrResourcePreference' to be non-null");
+            $.marketplaceSubscriptionStatus = Objects.requireNonNull($.marketplaceSubscriptionStatus, "expected parameter 'marketplaceSubscriptionStatus' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

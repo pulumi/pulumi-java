@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AwsNodePoolConfigSshConfigGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ec2KeyPair", required=true)
-      private final Output<String> ec2KeyPair;
+    private Output<String> ec2KeyPair;
 
     public Output<String> ec2KeyPair() {
         return this.ec2KeyPair;
     }
 
-    public AwsNodePoolConfigSshConfigGetArgs(Output<String> ec2KeyPair) {
-        this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair, "expected parameter 'ec2KeyPair' to be non-null");
-    }
+    private AwsNodePoolConfigSshConfigGetArgs() {}
 
-    private AwsNodePoolConfigSshConfigGetArgs() {
-        this.ec2KeyPair = Codegen.empty();
+    private AwsNodePoolConfigSshConfigGetArgs(AwsNodePoolConfigSshConfigGetArgs $) {
+        this.ec2KeyPair = $.ec2KeyPair;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsNodePoolConfigSshConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ec2KeyPair;
+        private AwsNodePoolConfigSshConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsNodePoolConfigSshConfigGetArgs();
         }
 
         public Builder(AwsNodePoolConfigSshConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ec2KeyPair = defaults.ec2KeyPair;
+            $ = new AwsNodePoolConfigSshConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ec2KeyPair(Output<String> ec2KeyPair) {
-            this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair);
+            $.ec2KeyPair = ec2KeyPair;
             return this;
         }
+
         public Builder ec2KeyPair(String ec2KeyPair) {
-            this.ec2KeyPair = Output.of(Objects.requireNonNull(ec2KeyPair));
-            return this;
-        }        public AwsNodePoolConfigSshConfigGetArgs build() {
-            return new AwsNodePoolConfigSshConfigGetArgs(ec2KeyPair);
+            return ec2KeyPair(Output.of(ec2KeyPair));
+        }
+
+        public AwsNodePoolConfigSshConfigGetArgs build() {
+            $.ec2KeyPair = Objects.requireNonNull($.ec2KeyPair, "expected parameter 'ec2KeyPair' to be non-null");
+            return $;
         }
     }
+
 }

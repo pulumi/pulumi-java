@@ -19,10 +19,10 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="orderItemName", required=true)
-      private final String orderItemName;
+    private String orderItemName;
 
     public String orderItemName() {
         return this.orderItemName;
@@ -41,64 +41,58 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetOrderItemByNameArgs(
-        @Nullable String expand,
-        String orderItemName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.orderItemName = Objects.requireNonNull(orderItemName, "expected parameter 'orderItemName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetOrderItemByNameArgs() {}
 
-    private GetOrderItemByNameArgs() {
-        this.expand = null;
-        this.orderItemName = null;
-        this.resourceGroupName = null;
+    private GetOrderItemByNameArgs(GetOrderItemByNameArgs $) {
+        this.expand = $.expand;
+        this.orderItemName = $.orderItemName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrderItemByNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String orderItemName;
-        private String resourceGroupName;
+        private GetOrderItemByNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrderItemByNameArgs();
         }
 
         public Builder(GetOrderItemByNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.orderItemName = defaults.orderItemName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetOrderItemByNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder orderItemName(String orderItemName) {
-            this.orderItemName = Objects.requireNonNull(orderItemName);
+            $.orderItemName = orderItemName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetOrderItemByNameArgs build() {
-            return new GetOrderItemByNameArgs(expand, orderItemName, resourceGroupName);
+        }
+
+        public GetOrderItemByNameArgs build() {
+            $.orderItemName = Objects.requireNonNull($.orderItemName, "expected parameter 'orderItemName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class ApplicationAlarm extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alarmName", required=true)
-      private final String alarmName;
+    private String alarmName;
 
     public String alarmName() {
         return this.alarmName;
@@ -35,55 +35,51 @@ public final class ApplicationAlarm extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="severity")
-      private final @Nullable ApplicationAlarmSeverity severity;
+    private @Nullable ApplicationAlarmSeverity severity;
 
     public Optional<ApplicationAlarmSeverity> severity() {
-        return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
+        return Optional.ofNullable(this.severity);
     }
 
-    public ApplicationAlarm(
-        String alarmName,
-        @Nullable ApplicationAlarmSeverity severity) {
-        this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
-        this.severity = severity;
-    }
+    private ApplicationAlarm() {}
 
-    private ApplicationAlarm() {
-        this.alarmName = null;
-        this.severity = null;
+    private ApplicationAlarm(ApplicationAlarm $) {
+        this.alarmName = $.alarmName;
+        this.severity = $.severity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationAlarm defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alarmName;
-        private @Nullable ApplicationAlarmSeverity severity;
+        private ApplicationAlarm $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationAlarm();
         }
 
         public Builder(ApplicationAlarm defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmName = defaults.alarmName;
-    	      this.severity = defaults.severity;
+            $ = new ApplicationAlarm(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmName(String alarmName) {
-            this.alarmName = Objects.requireNonNull(alarmName);
+            $.alarmName = alarmName;
             return this;
         }
+
         public Builder severity(@Nullable ApplicationAlarmSeverity severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
-        }        public ApplicationAlarm build() {
-            return new ApplicationAlarm(alarmName, severity);
+        }
+
+        public ApplicationAlarm build() {
+            $.alarmName = Objects.requireNonNull($.alarmName, "expected parameter 'alarmName' to be non-null");
+            return $;
         }
     }
+
 }

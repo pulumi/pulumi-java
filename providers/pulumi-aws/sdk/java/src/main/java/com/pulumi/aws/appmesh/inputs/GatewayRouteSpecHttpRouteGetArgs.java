@@ -7,7 +7,6 @@ import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteActionGetArgs;
 import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteMatchGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +19,7 @@ public final class GatewayRouteSpecHttpRouteGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="action", required=true)
-      private final Output<GatewayRouteSpecHttpRouteActionGetArgs> action;
+    private Output<GatewayRouteSpecHttpRouteActionGetArgs> action;
 
     public Output<GatewayRouteSpecHttpRouteActionGetArgs> action() {
         return this.action;
@@ -31,63 +30,60 @@ public final class GatewayRouteSpecHttpRouteGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="match", required=true)
-      private final Output<GatewayRouteSpecHttpRouteMatchGetArgs> match;
+    private Output<GatewayRouteSpecHttpRouteMatchGetArgs> match;
 
     public Output<GatewayRouteSpecHttpRouteMatchGetArgs> match() {
         return this.match;
     }
 
-    public GatewayRouteSpecHttpRouteGetArgs(
-        Output<GatewayRouteSpecHttpRouteActionGetArgs> action,
-        Output<GatewayRouteSpecHttpRouteMatchGetArgs> match) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
-    }
+    private GatewayRouteSpecHttpRouteGetArgs() {}
 
-    private GatewayRouteSpecHttpRouteGetArgs() {
-        this.action = Codegen.empty();
-        this.match = Codegen.empty();
+    private GatewayRouteSpecHttpRouteGetArgs(GatewayRouteSpecHttpRouteGetArgs $) {
+        this.action = $.action;
+        this.match = $.match;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteSpecHttpRouteGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GatewayRouteSpecHttpRouteActionGetArgs> action;
-        private Output<GatewayRouteSpecHttpRouteMatchGetArgs> match;
+        private GatewayRouteSpecHttpRouteGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteSpecHttpRouteGetArgs();
         }
 
         public Builder(GatewayRouteSpecHttpRouteGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.match = defaults.match;
+            $ = new GatewayRouteSpecHttpRouteGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<GatewayRouteSpecHttpRouteActionGetArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(GatewayRouteSpecHttpRouteActionGetArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder match(Output<GatewayRouteSpecHttpRouteMatchGetArgs> match) {
-            this.match = Objects.requireNonNull(match);
+            $.match = match;
             return this;
         }
+
         public Builder match(GatewayRouteSpecHttpRouteMatchGetArgs match) {
-            this.match = Output.of(Objects.requireNonNull(match));
-            return this;
-        }        public GatewayRouteSpecHttpRouteGetArgs build() {
-            return new GatewayRouteSpecHttpRouteGetArgs(action, match);
+            return match(Output.of(match));
+        }
+
+        public GatewayRouteSpecHttpRouteGetArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.match = Objects.requireNonNull($.match, "expected parameter 'match' to be non-null");
+            return $;
         }
     }
+
 }

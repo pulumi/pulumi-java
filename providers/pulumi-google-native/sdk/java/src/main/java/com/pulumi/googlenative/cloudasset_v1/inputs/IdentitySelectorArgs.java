@@ -5,7 +5,6 @@ package com.pulumi.googlenative.cloudasset_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class IdentitySelectorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="identity", required=true)
-      private final Output<String> identity;
+    private Output<String> identity;
 
     public Output<String> identity() {
         return this.identity;
     }
 
-    public IdentitySelectorArgs(Output<String> identity) {
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-    }
+    private IdentitySelectorArgs() {}
 
-    private IdentitySelectorArgs() {
-        this.identity = Codegen.empty();
+    private IdentitySelectorArgs(IdentitySelectorArgs $) {
+        this.identity = $.identity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentitySelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> identity;
+        private IdentitySelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentitySelectorArgs();
         }
 
         public Builder(IdentitySelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
+            $ = new IdentitySelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(Output<String> identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
         }
+
         public Builder identity(String identity) {
-            this.identity = Output.of(Objects.requireNonNull(identity));
-            return this;
-        }        public IdentitySelectorArgs build() {
-            return new IdentitySelectorArgs(identity);
+            return identity(Output.of(identity));
+        }
+
+        public IdentitySelectorArgs build() {
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            return $;
         }
     }
+
 }

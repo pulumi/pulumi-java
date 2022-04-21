@@ -23,7 +23,7 @@ public final class VpcAccessibleServicesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowedServices", required=true)
-      private final List<String> allowedServices;
+    private List<String> allowedServices;
 
     public List<String> allowedServices() {
         return this.allowedServices;
@@ -34,58 +34,56 @@ public final class VpcAccessibleServicesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="enableRestriction", required=true)
-      private final Boolean enableRestriction;
+    private Boolean enableRestriction;
 
     public Boolean enableRestriction() {
         return this.enableRestriction;
     }
 
-    public VpcAccessibleServicesResponse(
-        List<String> allowedServices,
-        Boolean enableRestriction) {
-        this.allowedServices = Objects.requireNonNull(allowedServices, "expected parameter 'allowedServices' to be non-null");
-        this.enableRestriction = Objects.requireNonNull(enableRestriction, "expected parameter 'enableRestriction' to be non-null");
-    }
+    private VpcAccessibleServicesResponse() {}
 
-    private VpcAccessibleServicesResponse() {
-        this.allowedServices = List.of();
-        this.enableRestriction = null;
+    private VpcAccessibleServicesResponse(VpcAccessibleServicesResponse $) {
+        this.allowedServices = $.allowedServices;
+        this.enableRestriction = $.enableRestriction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcAccessibleServicesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedServices;
-        private Boolean enableRestriction;
+        private VpcAccessibleServicesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcAccessibleServicesResponse();
         }
 
         public Builder(VpcAccessibleServicesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedServices = defaults.allowedServices;
-    	      this.enableRestriction = defaults.enableRestriction;
+            $ = new VpcAccessibleServicesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedServices(List<String> allowedServices) {
-            this.allowedServices = Objects.requireNonNull(allowedServices);
+            $.allowedServices = allowedServices;
             return this;
         }
+
         public Builder allowedServices(String... allowedServices) {
             return allowedServices(List.of(allowedServices));
         }
+
         public Builder enableRestriction(Boolean enableRestriction) {
-            this.enableRestriction = Objects.requireNonNull(enableRestriction);
+            $.enableRestriction = enableRestriction;
             return this;
-        }        public VpcAccessibleServicesResponse build() {
-            return new VpcAccessibleServicesResponse(allowedServices, enableRestriction);
+        }
+
+        public VpcAccessibleServicesResponse build() {
+            $.allowedServices = Objects.requireNonNull($.allowedServices, "expected parameter 'allowedServices' to be non-null");
+            $.enableRestriction = Objects.requireNonNull($.enableRestriction, "expected parameter 'enableRestriction' to be non-null");
+            return $;
         }
     }
+
 }

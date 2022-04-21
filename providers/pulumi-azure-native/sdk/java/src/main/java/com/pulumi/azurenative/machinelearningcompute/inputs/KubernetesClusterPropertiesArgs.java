@@ -6,8 +6,8 @@ package com.pulumi.azurenative.machinelearningcompute.inputs;
 import com.pulumi.azurenative.machinelearningcompute.inputs.ServicePrincipalPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class KubernetesClusterPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="servicePrincipal")
-      private final @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
+    private @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
-    public Output<ServicePrincipalPropertiesArgs> servicePrincipal() {
-        return this.servicePrincipal == null ? Codegen.empty() : this.servicePrincipal;
+    public Optional<Output<ServicePrincipalPropertiesArgs>> servicePrincipal() {
+        return Optional.ofNullable(this.servicePrincipal);
     }
 
-    public KubernetesClusterPropertiesArgs(@Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
-        this.servicePrincipal = servicePrincipal;
-    }
+    private KubernetesClusterPropertiesArgs() {}
 
-    private KubernetesClusterPropertiesArgs() {
-        this.servicePrincipal = Codegen.empty();
+    private KubernetesClusterPropertiesArgs(KubernetesClusterPropertiesArgs $) {
+        this.servicePrincipal = $.servicePrincipal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesClusterPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
+        private KubernetesClusterPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesClusterPropertiesArgs();
         }
 
         public Builder(KubernetesClusterPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.servicePrincipal = defaults.servicePrincipal;
+            $ = new KubernetesClusterPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder servicePrincipal(@Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
-            this.servicePrincipal = servicePrincipal;
+            $.servicePrincipal = servicePrincipal;
             return this;
         }
-        public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesArgs servicePrincipal) {
-            this.servicePrincipal = Codegen.ofNullable(servicePrincipal);
-            return this;
-        }        public KubernetesClusterPropertiesArgs build() {
-            return new KubernetesClusterPropertiesArgs(servicePrincipal);
+
+        public Builder servicePrincipal(ServicePrincipalPropertiesArgs servicePrincipal) {
+            return servicePrincipal(Output.of(servicePrincipal));
+        }
+
+        public KubernetesClusterPropertiesArgs build() {
+            return $;
         }
     }
+
 }

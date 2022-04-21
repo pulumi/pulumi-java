@@ -6,8 +6,8 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 import com.pulumi.awsnative.networkfirewall.inputs.RuleGroupPublishMetricActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class RuleGroupActionDefinitionArgs extends com.pulumi.resources.Re
     public static final RuleGroupActionDefinitionArgs Empty = new RuleGroupActionDefinitionArgs();
 
     @Import(name="publishMetricAction")
-      private final @Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction;
+    private @Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction;
 
-    public Output<RuleGroupPublishMetricActionArgs> publishMetricAction() {
-        return this.publishMetricAction == null ? Codegen.empty() : this.publishMetricAction;
+    public Optional<Output<RuleGroupPublishMetricActionArgs>> publishMetricAction() {
+        return Optional.ofNullable(this.publishMetricAction);
     }
 
-    public RuleGroupActionDefinitionArgs(@Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction) {
-        this.publishMetricAction = publishMetricAction;
-    }
+    private RuleGroupActionDefinitionArgs() {}
 
-    private RuleGroupActionDefinitionArgs() {
-        this.publishMetricAction = Codegen.empty();
+    private RuleGroupActionDefinitionArgs(RuleGroupActionDefinitionArgs $) {
+        this.publishMetricAction = $.publishMetricAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupActionDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction;
+        private RuleGroupActionDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupActionDefinitionArgs();
         }
 
         public Builder(RuleGroupActionDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishMetricAction = defaults.publishMetricAction;
+            $ = new RuleGroupActionDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publishMetricAction(@Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction) {
-            this.publishMetricAction = publishMetricAction;
+            $.publishMetricAction = publishMetricAction;
             return this;
         }
-        public Builder publishMetricAction(@Nullable RuleGroupPublishMetricActionArgs publishMetricAction) {
-            this.publishMetricAction = Codegen.ofNullable(publishMetricAction);
-            return this;
-        }        public RuleGroupActionDefinitionArgs build() {
-            return new RuleGroupActionDefinitionArgs(publishMetricAction);
+
+        public Builder publishMetricAction(RuleGroupPublishMetricActionArgs publishMetricAction) {
+            return publishMetricAction(Output.of(publishMetricAction));
+        }
+
+        public RuleGroupActionDefinitionArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class DiskEncryptionConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -32,55 +32,52 @@ public final class DiskEncryptionConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final String kmsKeyName;
+    private String kmsKeyName;
 
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public DiskEncryptionConfigurationResponse(
-        String kind,
-        String kmsKeyName) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private DiskEncryptionConfigurationResponse() {}
 
-    private DiskEncryptionConfigurationResponse() {
-        this.kind = null;
-        this.kmsKeyName = null;
+    private DiskEncryptionConfigurationResponse(DiskEncryptionConfigurationResponse $) {
+        this.kind = $.kind;
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private String kmsKeyName;
+        private DiskEncryptionConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionConfigurationResponse();
         }
 
         public Builder(DiskEncryptionConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new DiskEncryptionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
-        }        public DiskEncryptionConfigurationResponse build() {
-            return new DiskEncryptionConfigurationResponse(kind, kmsKeyName);
+        }
+
+        public DiskEncryptionConfigurationResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

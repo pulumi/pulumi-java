@@ -19,45 +19,44 @@ public final class RuleGroupRuleActionBlockProperties extends com.pulumi.resourc
     public static final RuleGroupRuleActionBlockProperties Empty = new RuleGroupRuleActionBlockProperties();
 
     @Import(name="customResponse")
-      private final @Nullable RuleGroupCustomResponse customResponse;
+    private @Nullable RuleGroupCustomResponse customResponse;
 
     public Optional<RuleGroupCustomResponse> customResponse() {
-        return this.customResponse == null ? Optional.empty() : Optional.ofNullable(this.customResponse);
+        return Optional.ofNullable(this.customResponse);
     }
 
-    public RuleGroupRuleActionBlockProperties(@Nullable RuleGroupCustomResponse customResponse) {
-        this.customResponse = customResponse;
-    }
+    private RuleGroupRuleActionBlockProperties() {}
 
-    private RuleGroupRuleActionBlockProperties() {
-        this.customResponse = null;
+    private RuleGroupRuleActionBlockProperties(RuleGroupRuleActionBlockProperties $) {
+        this.customResponse = $.customResponse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleActionBlockProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RuleGroupCustomResponse customResponse;
+        private RuleGroupRuleActionBlockProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleActionBlockProperties();
         }
 
         public Builder(RuleGroupRuleActionBlockProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customResponse = defaults.customResponse;
+            $ = new RuleGroupRuleActionBlockProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder customResponse(@Nullable RuleGroupCustomResponse customResponse) {
-            this.customResponse = customResponse;
+            $.customResponse = customResponse;
             return this;
-        }        public RuleGroupRuleActionBlockProperties build() {
-            return new RuleGroupRuleActionBlockProperties(customResponse);
+        }
+
+        public RuleGroupRuleActionBlockProperties build() {
+            return $;
         }
     }
+
 }

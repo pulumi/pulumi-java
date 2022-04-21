@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +25,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends com.
      * 
      */
     @Import(name="offset", required=true)
-      private final Output<String> offset;
+    private Output<String> offset;
 
     public Output<String> offset() {
         return this.offset;
@@ -35,10 +36,10 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends com.
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<String> size;
+    private @Nullable Output<String> size;
 
-    public Output<String> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<String>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -47,76 +48,70 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends com.
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SelfDependencyTumblingWindowTriggerReferenceArgs(
-        Output<String> offset,
-        @Nullable Output<String> size,
-        Output<String> type) {
-        this.offset = Objects.requireNonNull(offset, "expected parameter 'offset' to be non-null");
-        this.size = size;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private SelfDependencyTumblingWindowTriggerReferenceArgs() {}
 
-    private SelfDependencyTumblingWindowTriggerReferenceArgs() {
-        this.offset = Codegen.empty();
-        this.size = Codegen.empty();
-        this.type = Codegen.empty();
+    private SelfDependencyTumblingWindowTriggerReferenceArgs(SelfDependencyTumblingWindowTriggerReferenceArgs $) {
+        this.offset = $.offset;
+        this.size = $.size;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelfDependencyTumblingWindowTriggerReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> offset;
-        private @Nullable Output<String> size;
-        private Output<String> type;
+        private SelfDependencyTumblingWindowTriggerReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelfDependencyTumblingWindowTriggerReferenceArgs();
         }
 
         public Builder(SelfDependencyTumblingWindowTriggerReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offset = defaults.offset;
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
+            $ = new SelfDependencyTumblingWindowTriggerReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder offset(Output<String> offset) {
-            this.offset = Objects.requireNonNull(offset);
+            $.offset = offset;
             return this;
         }
+
         public Builder offset(String offset) {
-            this.offset = Output.of(Objects.requireNonNull(offset));
-            return this;
+            return offset(Output.of(offset));
         }
+
         public Builder size(@Nullable Output<String> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable String size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(String size) {
+            return size(Output.of(size));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SelfDependencyTumblingWindowTriggerReferenceArgs build() {
-            return new SelfDependencyTumblingWindowTriggerReferenceArgs(offset, size, type);
+            return type(Output.of(type));
+        }
+
+        public SelfDependencyTumblingWindowTriggerReferenceArgs build() {
+            $.offset = Objects.requireNonNull($.offset, "expected parameter 'offset' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

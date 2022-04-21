@@ -5,9 +5,9 @@ package com.pulumi.awsnative.wisdom.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends com.pulumi.re
     public static final KnowledgeBaseRenderingConfigurationArgs Empty = new KnowledgeBaseRenderingConfigurationArgs();
 
     @Import(name="templateUri")
-      private final @Nullable Output<String> templateUri;
+    private @Nullable Output<String> templateUri;
 
-    public Output<String> templateUri() {
-        return this.templateUri == null ? Codegen.empty() : this.templateUri;
+    public Optional<Output<String>> templateUri() {
+        return Optional.ofNullable(this.templateUri);
     }
 
-    public KnowledgeBaseRenderingConfigurationArgs(@Nullable Output<String> templateUri) {
-        this.templateUri = templateUri;
-    }
+    private KnowledgeBaseRenderingConfigurationArgs() {}
 
-    private KnowledgeBaseRenderingConfigurationArgs() {
-        this.templateUri = Codegen.empty();
+    private KnowledgeBaseRenderingConfigurationArgs(KnowledgeBaseRenderingConfigurationArgs $) {
+        this.templateUri = $.templateUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KnowledgeBaseRenderingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> templateUri;
+        private KnowledgeBaseRenderingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KnowledgeBaseRenderingConfigurationArgs();
         }
 
         public Builder(KnowledgeBaseRenderingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.templateUri = defaults.templateUri;
+            $ = new KnowledgeBaseRenderingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder templateUri(@Nullable Output<String> templateUri) {
-            this.templateUri = templateUri;
+            $.templateUri = templateUri;
             return this;
         }
-        public Builder templateUri(@Nullable String templateUri) {
-            this.templateUri = Codegen.ofNullable(templateUri);
-            return this;
-        }        public KnowledgeBaseRenderingConfigurationArgs build() {
-            return new KnowledgeBaseRenderingConfigurationArgs(templateUri);
+
+        public Builder templateUri(String templateUri) {
+            return templateUri(Output.of(templateUri));
+        }
+
+        public KnowledgeBaseRenderingConfigurationArgs build() {
+            return $;
         }
     }
+
 }

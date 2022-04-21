@@ -5,11 +5,11 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="atomKey", required=true)
-      private final Output<String> atomKey;
+    private Output<String> atomKey;
 
     public Output<String> atomKey() {
         return this.atomKey;
@@ -37,10 +37,10 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gainDb")
-      private final @Nullable Output<Double> gainDb;
+    private @Nullable Output<Double> gainDb;
 
-    public Output<Double> gainDb() {
-        return this.gainDb == null ? Codegen.empty() : this.gainDb;
+    public Optional<Output<Double>> gainDb() {
+        return Optional.ofNullable(this.gainDb);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputChannel", required=true)
-      private final Output<Integer> inputChannel;
+    private Output<Integer> inputChannel;
 
     public Output<Integer> inputChannel() {
         return this.inputChannel;
@@ -59,7 +59,7 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputKey", required=true)
-      private final Output<String> inputKey;
+    private Output<String> inputKey;
 
     public Output<String> inputKey() {
         return this.inputKey;
@@ -70,7 +70,7 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputTrack", required=true)
-      private final Output<Integer> inputTrack;
+    private Output<Integer> inputTrack;
 
     public Output<Integer> inputTrack() {
         return this.inputTrack;
@@ -81,115 +81,103 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputChannel", required=true)
-      private final Output<Integer> outputChannel;
+    private Output<Integer> outputChannel;
 
     public Output<Integer> outputChannel() {
         return this.outputChannel;
     }
 
-    public AudioMappingArgs(
-        Output<String> atomKey,
-        @Nullable Output<Double> gainDb,
-        Output<Integer> inputChannel,
-        Output<String> inputKey,
-        Output<Integer> inputTrack,
-        Output<Integer> outputChannel) {
-        this.atomKey = Objects.requireNonNull(atomKey, "expected parameter 'atomKey' to be non-null");
-        this.gainDb = gainDb;
-        this.inputChannel = Objects.requireNonNull(inputChannel, "expected parameter 'inputChannel' to be non-null");
-        this.inputKey = Objects.requireNonNull(inputKey, "expected parameter 'inputKey' to be non-null");
-        this.inputTrack = Objects.requireNonNull(inputTrack, "expected parameter 'inputTrack' to be non-null");
-        this.outputChannel = Objects.requireNonNull(outputChannel, "expected parameter 'outputChannel' to be non-null");
-    }
+    private AudioMappingArgs() {}
 
-    private AudioMappingArgs() {
-        this.atomKey = Codegen.empty();
-        this.gainDb = Codegen.empty();
-        this.inputChannel = Codegen.empty();
-        this.inputKey = Codegen.empty();
-        this.inputTrack = Codegen.empty();
-        this.outputChannel = Codegen.empty();
+    private AudioMappingArgs(AudioMappingArgs $) {
+        this.atomKey = $.atomKey;
+        this.gainDb = $.gainDb;
+        this.inputChannel = $.inputChannel;
+        this.inputKey = $.inputKey;
+        this.inputTrack = $.inputTrack;
+        this.outputChannel = $.outputChannel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> atomKey;
-        private @Nullable Output<Double> gainDb;
-        private Output<Integer> inputChannel;
-        private Output<String> inputKey;
-        private Output<Integer> inputTrack;
-        private Output<Integer> outputChannel;
+        private AudioMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioMappingArgs();
         }
 
         public Builder(AudioMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.atomKey = defaults.atomKey;
-    	      this.gainDb = defaults.gainDb;
-    	      this.inputChannel = defaults.inputChannel;
-    	      this.inputKey = defaults.inputKey;
-    	      this.inputTrack = defaults.inputTrack;
-    	      this.outputChannel = defaults.outputChannel;
+            $ = new AudioMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder atomKey(Output<String> atomKey) {
-            this.atomKey = Objects.requireNonNull(atomKey);
+            $.atomKey = atomKey;
             return this;
         }
+
         public Builder atomKey(String atomKey) {
-            this.atomKey = Output.of(Objects.requireNonNull(atomKey));
-            return this;
+            return atomKey(Output.of(atomKey));
         }
+
         public Builder gainDb(@Nullable Output<Double> gainDb) {
-            this.gainDb = gainDb;
+            $.gainDb = gainDb;
             return this;
         }
-        public Builder gainDb(@Nullable Double gainDb) {
-            this.gainDb = Codegen.ofNullable(gainDb);
-            return this;
+
+        public Builder gainDb(Double gainDb) {
+            return gainDb(Output.of(gainDb));
         }
+
         public Builder inputChannel(Output<Integer> inputChannel) {
-            this.inputChannel = Objects.requireNonNull(inputChannel);
+            $.inputChannel = inputChannel;
             return this;
         }
+
         public Builder inputChannel(Integer inputChannel) {
-            this.inputChannel = Output.of(Objects.requireNonNull(inputChannel));
-            return this;
+            return inputChannel(Output.of(inputChannel));
         }
+
         public Builder inputKey(Output<String> inputKey) {
-            this.inputKey = Objects.requireNonNull(inputKey);
+            $.inputKey = inputKey;
             return this;
         }
+
         public Builder inputKey(String inputKey) {
-            this.inputKey = Output.of(Objects.requireNonNull(inputKey));
-            return this;
+            return inputKey(Output.of(inputKey));
         }
+
         public Builder inputTrack(Output<Integer> inputTrack) {
-            this.inputTrack = Objects.requireNonNull(inputTrack);
+            $.inputTrack = inputTrack;
             return this;
         }
+
         public Builder inputTrack(Integer inputTrack) {
-            this.inputTrack = Output.of(Objects.requireNonNull(inputTrack));
-            return this;
+            return inputTrack(Output.of(inputTrack));
         }
+
         public Builder outputChannel(Output<Integer> outputChannel) {
-            this.outputChannel = Objects.requireNonNull(outputChannel);
+            $.outputChannel = outputChannel;
             return this;
         }
+
         public Builder outputChannel(Integer outputChannel) {
-            this.outputChannel = Output.of(Objects.requireNonNull(outputChannel));
-            return this;
-        }        public AudioMappingArgs build() {
-            return new AudioMappingArgs(atomKey, gainDb, inputChannel, inputKey, inputTrack, outputChannel);
+            return outputChannel(Output.of(outputChannel));
+        }
+
+        public AudioMappingArgs build() {
+            $.atomKey = Objects.requireNonNull($.atomKey, "expected parameter 'atomKey' to be non-null");
+            $.inputChannel = Objects.requireNonNull($.inputChannel, "expected parameter 'inputChannel' to be non-null");
+            $.inputKey = Objects.requireNonNull($.inputKey, "expected parameter 'inputKey' to be non-null");
+            $.inputTrack = Objects.requireNonNull($.inputTrack, "expected parameter 'inputTrack' to be non-null");
+            $.outputChannel = Objects.requireNonNull($.outputChannel, "expected parameter 'outputChannel' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ManagedCertificateResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="lastRenewalTime", required=true)
-      private final String lastRenewalTime;
+    private String lastRenewalTime;
 
     public String lastRenewalTime() {
         return this.lastRenewalTime;
@@ -32,55 +32,52 @@ public final class ManagedCertificateResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public ManagedCertificateResponse(
-        String lastRenewalTime,
-        String status) {
-        this.lastRenewalTime = Objects.requireNonNull(lastRenewalTime, "expected parameter 'lastRenewalTime' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private ManagedCertificateResponse() {}
 
-    private ManagedCertificateResponse() {
-        this.lastRenewalTime = null;
-        this.status = null;
+    private ManagedCertificateResponse(ManagedCertificateResponse $) {
+        this.lastRenewalTime = $.lastRenewalTime;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastRenewalTime;
-        private String status;
+        private ManagedCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedCertificateResponse();
         }
 
         public Builder(ManagedCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastRenewalTime = defaults.lastRenewalTime;
-    	      this.status = defaults.status;
+            $ = new ManagedCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastRenewalTime(String lastRenewalTime) {
-            this.lastRenewalTime = Objects.requireNonNull(lastRenewalTime);
+            $.lastRenewalTime = lastRenewalTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public ManagedCertificateResponse build() {
-            return new ManagedCertificateResponse(lastRenewalTime, status);
+        }
+
+        public ManagedCertificateResponse build() {
+            $.lastRenewalTime = Objects.requireNonNull($.lastRenewalTime, "expected parameter 'lastRenewalTime' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

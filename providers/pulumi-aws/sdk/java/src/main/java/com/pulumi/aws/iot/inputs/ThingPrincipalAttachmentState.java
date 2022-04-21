@@ -5,9 +5,9 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ThingPrincipalAttachmentState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="principal")
-      private final @Nullable Output<String> principal;
+    private @Nullable Output<String> principal;
 
-    public Output<String> principal() {
-        return this.principal == null ? Codegen.empty() : this.principal;
+    public Optional<Output<String>> principal() {
+        return Optional.ofNullable(this.principal);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ThingPrincipalAttachmentState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="thing")
-      private final @Nullable Output<String> thing;
+    private @Nullable Output<String> thing;
 
-    public Output<String> thing() {
-        return this.thing == null ? Codegen.empty() : this.thing;
+    public Optional<Output<String>> thing() {
+        return Optional.ofNullable(this.thing);
     }
 
-    public ThingPrincipalAttachmentState(
-        @Nullable Output<String> principal,
-        @Nullable Output<String> thing) {
-        this.principal = principal;
-        this.thing = thing;
-    }
+    private ThingPrincipalAttachmentState() {}
 
-    private ThingPrincipalAttachmentState() {
-        this.principal = Codegen.empty();
-        this.thing = Codegen.empty();
+    private ThingPrincipalAttachmentState(ThingPrincipalAttachmentState $) {
+        this.principal = $.principal;
+        this.thing = $.thing;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingPrincipalAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> principal;
-        private @Nullable Output<String> thing;
+        private ThingPrincipalAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingPrincipalAttachmentState();
         }
 
         public Builder(ThingPrincipalAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principal = defaults.principal;
-    	      this.thing = defaults.thing;
+            $ = new ThingPrincipalAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder principal(@Nullable Output<String> principal) {
-            this.principal = principal;
+            $.principal = principal;
             return this;
         }
-        public Builder principal(@Nullable String principal) {
-            this.principal = Codegen.ofNullable(principal);
-            return this;
+
+        public Builder principal(String principal) {
+            return principal(Output.of(principal));
         }
+
         public Builder thing(@Nullable Output<String> thing) {
-            this.thing = thing;
+            $.thing = thing;
             return this;
         }
-        public Builder thing(@Nullable String thing) {
-            this.thing = Codegen.ofNullable(thing);
-            return this;
-        }        public ThingPrincipalAttachmentState build() {
-            return new ThingPrincipalAttachmentState(principal, thing);
+
+        public Builder thing(String thing) {
+            return thing(Output.of(thing));
+        }
+
+        public ThingPrincipalAttachmentState build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.lambda;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -31,10 +31,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventSourceToken")
-      private final @Nullable Output<String> eventSourceToken;
+    private @Nullable Output<String> eventSourceToken;
 
-    public Output<String> eventSourceToken() {
-        return this.eventSourceToken == null ? Codegen.empty() : this.eventSourceToken;
+    public Optional<Output<String>> eventSourceToken() {
+        return Optional.ofNullable(this.eventSourceToken);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="function", required=true)
-      private final Output<String> function;
+    private Output<String> function;
 
     public Output<String> function() {
         return this.function;
@@ -53,7 +53,7 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="principal", required=true)
-      private final Output<String> principal;
+    private Output<String> principal;
 
     public Output<String> principal() {
         return this.principal;
@@ -64,10 +64,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="qualifier")
-      private final @Nullable Output<String> qualifier;
+    private @Nullable Output<String> qualifier;
 
-    public Output<String> qualifier() {
-        return this.qualifier == null ? Codegen.empty() : this.qualifier;
+    public Optional<Output<String>> qualifier() {
+        return Optional.ofNullable(this.qualifier);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceAccount")
-      private final @Nullable Output<String> sourceAccount;
+    private @Nullable Output<String> sourceAccount;
 
-    public Output<String> sourceAccount() {
-        return this.sourceAccount == null ? Codegen.empty() : this.sourceAccount;
+    public Optional<Output<String>> sourceAccount() {
+        return Optional.ofNullable(this.sourceAccount);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceArn")
-      private final @Nullable Output<String> sourceArn;
+    private @Nullable Output<String> sourceArn;
 
-    public Output<String> sourceArn() {
-        return this.sourceArn == null ? Codegen.empty() : this.sourceArn;
+    public Optional<Output<String>> sourceArn() {
+        return Optional.ofNullable(this.sourceArn);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statementId")
-      private final @Nullable Output<String> statementId;
+    private @Nullable Output<String> statementId;
 
-    public Output<String> statementId() {
-        return this.statementId == null ? Codegen.empty() : this.statementId;
+    public Optional<Output<String>> statementId() {
+        return Optional.ofNullable(this.statementId);
     }
 
     /**
@@ -112,150 +112,131 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statementIdPrefix")
-      private final @Nullable Output<String> statementIdPrefix;
+    private @Nullable Output<String> statementIdPrefix;
 
-    public Output<String> statementIdPrefix() {
-        return this.statementIdPrefix == null ? Codegen.empty() : this.statementIdPrefix;
+    public Optional<Output<String>> statementIdPrefix() {
+        return Optional.ofNullable(this.statementIdPrefix);
     }
 
-    public PermissionArgs(
-        Output<String> action,
-        @Nullable Output<String> eventSourceToken,
-        Output<String> function,
-        Output<String> principal,
-        @Nullable Output<String> qualifier,
-        @Nullable Output<String> sourceAccount,
-        @Nullable Output<String> sourceArn,
-        @Nullable Output<String> statementId,
-        @Nullable Output<String> statementIdPrefix) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.eventSourceToken = eventSourceToken;
-        this.function = Objects.requireNonNull(function, "expected parameter 'function' to be non-null");
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-        this.qualifier = qualifier;
-        this.sourceAccount = sourceAccount;
-        this.sourceArn = sourceArn;
-        this.statementId = statementId;
-        this.statementIdPrefix = statementIdPrefix;
-    }
+    private PermissionArgs() {}
 
-    private PermissionArgs() {
-        this.action = Codegen.empty();
-        this.eventSourceToken = Codegen.empty();
-        this.function = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.qualifier = Codegen.empty();
-        this.sourceAccount = Codegen.empty();
-        this.sourceArn = Codegen.empty();
-        this.statementId = Codegen.empty();
-        this.statementIdPrefix = Codegen.empty();
+    private PermissionArgs(PermissionArgs $) {
+        this.action = $.action;
+        this.eventSourceToken = $.eventSourceToken;
+        this.function = $.function;
+        this.principal = $.principal;
+        this.qualifier = $.qualifier;
+        this.sourceAccount = $.sourceAccount;
+        this.sourceArn = $.sourceArn;
+        this.statementId = $.statementId;
+        this.statementIdPrefix = $.statementIdPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private @Nullable Output<String> eventSourceToken;
-        private Output<String> function;
-        private Output<String> principal;
-        private @Nullable Output<String> qualifier;
-        private @Nullable Output<String> sourceAccount;
-        private @Nullable Output<String> sourceArn;
-        private @Nullable Output<String> statementId;
-        private @Nullable Output<String> statementIdPrefix;
+        private PermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionArgs();
         }
 
         public Builder(PermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.eventSourceToken = defaults.eventSourceToken;
-    	      this.function = defaults.function;
-    	      this.principal = defaults.principal;
-    	      this.qualifier = defaults.qualifier;
-    	      this.sourceAccount = defaults.sourceAccount;
-    	      this.sourceArn = defaults.sourceArn;
-    	      this.statementId = defaults.statementId;
-    	      this.statementIdPrefix = defaults.statementIdPrefix;
+            $ = new PermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder eventSourceToken(@Nullable Output<String> eventSourceToken) {
-            this.eventSourceToken = eventSourceToken;
+            $.eventSourceToken = eventSourceToken;
             return this;
         }
-        public Builder eventSourceToken(@Nullable String eventSourceToken) {
-            this.eventSourceToken = Codegen.ofNullable(eventSourceToken);
-            return this;
+
+        public Builder eventSourceToken(String eventSourceToken) {
+            return eventSourceToken(Output.of(eventSourceToken));
         }
+
         public Builder function(Output<String> function) {
-            this.function = Objects.requireNonNull(function);
+            $.function = function;
             return this;
         }
+
+        public Builder function(String function) {
+            return function(Output.of(function));
+        }
+
         public Builder principal(Output<String> principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Output.of(Objects.requireNonNull(principal));
-            return this;
+            return principal(Output.of(principal));
         }
+
         public Builder qualifier(@Nullable Output<String> qualifier) {
-            this.qualifier = qualifier;
+            $.qualifier = qualifier;
             return this;
         }
-        public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Codegen.ofNullable(qualifier);
-            return this;
+
+        public Builder qualifier(String qualifier) {
+            return qualifier(Output.of(qualifier));
         }
+
         public Builder sourceAccount(@Nullable Output<String> sourceAccount) {
-            this.sourceAccount = sourceAccount;
+            $.sourceAccount = sourceAccount;
             return this;
         }
-        public Builder sourceAccount(@Nullable String sourceAccount) {
-            this.sourceAccount = Codegen.ofNullable(sourceAccount);
-            return this;
+
+        public Builder sourceAccount(String sourceAccount) {
+            return sourceAccount(Output.of(sourceAccount));
         }
+
         public Builder sourceArn(@Nullable Output<String> sourceArn) {
-            this.sourceArn = sourceArn;
+            $.sourceArn = sourceArn;
             return this;
         }
-        public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = Codegen.ofNullable(sourceArn);
-            return this;
+
+        public Builder sourceArn(String sourceArn) {
+            return sourceArn(Output.of(sourceArn));
         }
+
         public Builder statementId(@Nullable Output<String> statementId) {
-            this.statementId = statementId;
+            $.statementId = statementId;
             return this;
         }
-        public Builder statementId(@Nullable String statementId) {
-            this.statementId = Codegen.ofNullable(statementId);
-            return this;
+
+        public Builder statementId(String statementId) {
+            return statementId(Output.of(statementId));
         }
+
         public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
-            this.statementIdPrefix = statementIdPrefix;
+            $.statementIdPrefix = statementIdPrefix;
             return this;
         }
-        public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
-            this.statementIdPrefix = Codegen.ofNullable(statementIdPrefix);
-            return this;
-        }        public PermissionArgs build() {
-            return new PermissionArgs(action, eventSourceToken, function, principal, qualifier, sourceAccount, sourceArn, statementId, statementIdPrefix);
+
+        public Builder statementIdPrefix(String statementIdPrefix) {
+            return statementIdPrefix(Output.of(statementIdPrefix));
+        }
+
+        public PermissionArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.function = Objects.requireNonNull($.function, "expected parameter 'function' to be non-null");
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            return $;
         }
     }
+
 }

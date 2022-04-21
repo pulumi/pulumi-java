@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.FixedOrPercentArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AutoscalingPolicyScaleInControlArgs extends com.pulumi.resour
      * 
      */
     @Import(name="maxScaledInReplicas")
-      private final @Nullable Output<FixedOrPercentArgs> maxScaledInReplicas;
+    private @Nullable Output<FixedOrPercentArgs> maxScaledInReplicas;
 
-    public Output<FixedOrPercentArgs> maxScaledInReplicas() {
-        return this.maxScaledInReplicas == null ? Codegen.empty() : this.maxScaledInReplicas;
+    public Optional<Output<FixedOrPercentArgs>> maxScaledInReplicas() {
+        return Optional.ofNullable(this.maxScaledInReplicas);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AutoscalingPolicyScaleInControlArgs extends com.pulumi.resour
      * 
      */
     @Import(name="timeWindowSec")
-      private final @Nullable Output<Integer> timeWindowSec;
+    private @Nullable Output<Integer> timeWindowSec;
 
-    public Output<Integer> timeWindowSec() {
-        return this.timeWindowSec == null ? Codegen.empty() : this.timeWindowSec;
+    public Optional<Output<Integer>> timeWindowSec() {
+        return Optional.ofNullable(this.timeWindowSec);
     }
 
-    public AutoscalingPolicyScaleInControlArgs(
-        @Nullable Output<FixedOrPercentArgs> maxScaledInReplicas,
-        @Nullable Output<Integer> timeWindowSec) {
-        this.maxScaledInReplicas = maxScaledInReplicas;
-        this.timeWindowSec = timeWindowSec;
-    }
+    private AutoscalingPolicyScaleInControlArgs() {}
 
-    private AutoscalingPolicyScaleInControlArgs() {
-        this.maxScaledInReplicas = Codegen.empty();
-        this.timeWindowSec = Codegen.empty();
+    private AutoscalingPolicyScaleInControlArgs(AutoscalingPolicyScaleInControlArgs $) {
+        this.maxScaledInReplicas = $.maxScaledInReplicas;
+        this.timeWindowSec = $.timeWindowSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyScaleInControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FixedOrPercentArgs> maxScaledInReplicas;
-        private @Nullable Output<Integer> timeWindowSec;
+        private AutoscalingPolicyScaleInControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyScaleInControlArgs();
         }
 
         public Builder(AutoscalingPolicyScaleInControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxScaledInReplicas = defaults.maxScaledInReplicas;
-    	      this.timeWindowSec = defaults.timeWindowSec;
+            $ = new AutoscalingPolicyScaleInControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxScaledInReplicas(@Nullable Output<FixedOrPercentArgs> maxScaledInReplicas) {
-            this.maxScaledInReplicas = maxScaledInReplicas;
+            $.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
-        public Builder maxScaledInReplicas(@Nullable FixedOrPercentArgs maxScaledInReplicas) {
-            this.maxScaledInReplicas = Codegen.ofNullable(maxScaledInReplicas);
-            return this;
+
+        public Builder maxScaledInReplicas(FixedOrPercentArgs maxScaledInReplicas) {
+            return maxScaledInReplicas(Output.of(maxScaledInReplicas));
         }
+
         public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
-            this.timeWindowSec = timeWindowSec;
+            $.timeWindowSec = timeWindowSec;
             return this;
         }
-        public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
-            this.timeWindowSec = Codegen.ofNullable(timeWindowSec);
-            return this;
-        }        public AutoscalingPolicyScaleInControlArgs build() {
-            return new AutoscalingPolicyScaleInControlArgs(maxScaledInReplicas, timeWindowSec);
+
+        public Builder timeWindowSec(Integer timeWindowSec) {
+            return timeWindowSec(Output.of(timeWindowSec));
+        }
+
+        public AutoscalingPolicyScaleInControlArgs build() {
+            return $;
         }
     }
+
 }

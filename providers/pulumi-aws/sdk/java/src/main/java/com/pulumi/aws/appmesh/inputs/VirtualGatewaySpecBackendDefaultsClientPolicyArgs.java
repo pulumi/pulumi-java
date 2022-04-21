@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyArgs extends com
      * 
      */
     @Import(name="tls")
-      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls;
+    private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls() {
-        return this.tls == null ? Codegen.empty() : this.tls;
+    public Optional<Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs>> tls() {
+        return Optional.ofNullable(this.tls);
     }
 
-    public VirtualGatewaySpecBackendDefaultsClientPolicyArgs(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls) {
-        this.tls = tls;
-    }
+    private VirtualGatewaySpecBackendDefaultsClientPolicyArgs() {}
 
-    private VirtualGatewaySpecBackendDefaultsClientPolicyArgs() {
-        this.tls = Codegen.empty();
+    private VirtualGatewaySpecBackendDefaultsClientPolicyArgs(VirtualGatewaySpecBackendDefaultsClientPolicyArgs $) {
+        this.tls = $.tls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualGatewaySpecBackendDefaultsClientPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls;
+        private VirtualGatewaySpecBackendDefaultsClientPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualGatewaySpecBackendDefaultsClientPolicyArgs();
         }
 
         public Builder(VirtualGatewaySpecBackendDefaultsClientPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tls = defaults.tls;
+            $ = new VirtualGatewaySpecBackendDefaultsClientPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tls(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls) {
-            this.tls = tls;
+            $.tls = tls;
             return this;
         }
-        public Builder tls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs tls) {
-            this.tls = Codegen.ofNullable(tls);
-            return this;
-        }        public VirtualGatewaySpecBackendDefaultsClientPolicyArgs build() {
-            return new VirtualGatewaySpecBackendDefaultsClientPolicyArgs(tls);
+
+        public Builder tls(VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs tls) {
+            return tls(Output.of(tls));
+        }
+
+        public VirtualGatewaySpecBackendDefaultsClientPolicyArgs build() {
+            return $;
         }
     }
+
 }

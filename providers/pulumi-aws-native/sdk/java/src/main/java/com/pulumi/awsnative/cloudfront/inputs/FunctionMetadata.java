@@ -15,45 +15,44 @@ public final class FunctionMetadata extends com.pulumi.resources.InvokeArgs {
     public static final FunctionMetadata Empty = new FunctionMetadata();
 
     @Import(name="functionARN")
-      private final @Nullable String functionARN;
+    private @Nullable String functionARN;
 
     public Optional<String> functionARN() {
-        return this.functionARN == null ? Optional.empty() : Optional.ofNullable(this.functionARN);
+        return Optional.ofNullable(this.functionARN);
     }
 
-    public FunctionMetadata(@Nullable String functionARN) {
-        this.functionARN = functionARN;
-    }
+    private FunctionMetadata() {}
 
-    private FunctionMetadata() {
-        this.functionARN = null;
+    private FunctionMetadata(FunctionMetadata $) {
+        this.functionARN = $.functionARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionMetadata defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String functionARN;
+        private FunctionMetadata $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionMetadata();
         }
 
         public Builder(FunctionMetadata defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionARN = defaults.functionARN;
+            $ = new FunctionMetadata(Objects.requireNonNull(defaults));
         }
 
         public Builder functionARN(@Nullable String functionARN) {
-            this.functionARN = functionARN;
+            $.functionARN = functionARN;
             return this;
-        }        public FunctionMetadata build() {
-            return new FunctionMetadata(functionARN);
+        }
+
+        public FunctionMetadata build() {
+            return $;
         }
     }
+
 }

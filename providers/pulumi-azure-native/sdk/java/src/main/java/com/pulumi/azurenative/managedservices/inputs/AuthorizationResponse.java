@@ -24,10 +24,10 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="delegatedRoleDefinitionIds")
-      private final @Nullable List<String> delegatedRoleDefinitionIds;
+    private @Nullable List<String> delegatedRoleDefinitionIds;
 
-    public List<String> delegatedRoleDefinitionIds() {
-        return this.delegatedRoleDefinitionIds == null ? List.of() : this.delegatedRoleDefinitionIds;
+    public Optional<List<String>> delegatedRoleDefinitionIds() {
+        return Optional.ofNullable(this.delegatedRoleDefinitionIds);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -46,10 +46,10 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="principalIdDisplayName")
-      private final @Nullable String principalIdDisplayName;
+    private @Nullable String principalIdDisplayName;
 
     public Optional<String> principalIdDisplayName() {
-        return this.principalIdDisplayName == null ? Optional.empty() : Optional.ofNullable(this.principalIdDisplayName);
+        return Optional.ofNullable(this.principalIdDisplayName);
     }
 
     /**
@@ -57,76 +57,68 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="roleDefinitionId", required=true)
-      private final String roleDefinitionId;
+    private String roleDefinitionId;
 
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
-    public AuthorizationResponse(
-        @Nullable List<String> delegatedRoleDefinitionIds,
-        String principalId,
-        @Nullable String principalIdDisplayName,
-        String roleDefinitionId) {
-        this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalIdDisplayName = principalIdDisplayName;
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
-    }
+    private AuthorizationResponse() {}
 
-    private AuthorizationResponse() {
-        this.delegatedRoleDefinitionIds = List.of();
-        this.principalId = null;
-        this.principalIdDisplayName = null;
-        this.roleDefinitionId = null;
+    private AuthorizationResponse(AuthorizationResponse $) {
+        this.delegatedRoleDefinitionIds = $.delegatedRoleDefinitionIds;
+        this.principalId = $.principalId;
+        this.principalIdDisplayName = $.principalIdDisplayName;
+        this.roleDefinitionId = $.roleDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> delegatedRoleDefinitionIds;
-        private String principalId;
-        private @Nullable String principalIdDisplayName;
-        private String roleDefinitionId;
+        private AuthorizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationResponse();
         }
 
         public Builder(AuthorizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delegatedRoleDefinitionIds = defaults.delegatedRoleDefinitionIds;
-    	      this.principalId = defaults.principalId;
-    	      this.principalIdDisplayName = defaults.principalIdDisplayName;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
+            $ = new AuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder delegatedRoleDefinitionIds(@Nullable List<String> delegatedRoleDefinitionIds) {
-            this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
+            $.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
             return this;
         }
+
         public Builder delegatedRoleDefinitionIds(String... delegatedRoleDefinitionIds) {
             return delegatedRoleDefinitionIds(List.of(delegatedRoleDefinitionIds));
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalIdDisplayName(@Nullable String principalIdDisplayName) {
-            this.principalIdDisplayName = principalIdDisplayName;
+            $.principalIdDisplayName = principalIdDisplayName;
             return this;
         }
+
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+            $.roleDefinitionId = roleDefinitionId;
             return this;
-        }        public AuthorizationResponse build() {
-            return new AuthorizationResponse(delegatedRoleDefinitionIds, principalId, principalIdDisplayName, roleDefinitionId);
+        }
+
+        public AuthorizationResponse build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.roleDefinitionId = Objects.requireNonNull($.roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

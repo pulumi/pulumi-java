@@ -23,7 +23,7 @@ public final class UsageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="producerNotificationChannel", required=true)
-      private final String producerNotificationChannel;
+    private String producerNotificationChannel;
 
     public String producerNotificationChannel() {
         return this.producerNotificationChannel;
@@ -34,7 +34,7 @@ public final class UsageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requirements", required=true)
-      private final List<String> requirements;
+    private List<String> requirements;
 
     public List<String> requirements() {
         return this.requirements;
@@ -45,70 +45,67 @@ public final class UsageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rules", required=true)
-      private final List<UsageRuleResponse> rules;
+    private List<UsageRuleResponse> rules;
 
     public List<UsageRuleResponse> rules() {
         return this.rules;
     }
 
-    public UsageResponse(
-        String producerNotificationChannel,
-        List<String> requirements,
-        List<UsageRuleResponse> rules) {
-        this.producerNotificationChannel = Objects.requireNonNull(producerNotificationChannel, "expected parameter 'producerNotificationChannel' to be non-null");
-        this.requirements = Objects.requireNonNull(requirements, "expected parameter 'requirements' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private UsageResponse() {}
 
-    private UsageResponse() {
-        this.producerNotificationChannel = null;
-        this.requirements = List.of();
-        this.rules = List.of();
+    private UsageResponse(UsageResponse $) {
+        this.producerNotificationChannel = $.producerNotificationChannel;
+        this.requirements = $.requirements;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String producerNotificationChannel;
-        private List<String> requirements;
-        private List<UsageRuleResponse> rules;
+        private UsageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsageResponse();
         }
 
         public Builder(UsageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.producerNotificationChannel = defaults.producerNotificationChannel;
-    	      this.requirements = defaults.requirements;
-    	      this.rules = defaults.rules;
+            $ = new UsageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder producerNotificationChannel(String producerNotificationChannel) {
-            this.producerNotificationChannel = Objects.requireNonNull(producerNotificationChannel);
+            $.producerNotificationChannel = producerNotificationChannel;
             return this;
         }
+
         public Builder requirements(List<String> requirements) {
-            this.requirements = Objects.requireNonNull(requirements);
+            $.requirements = requirements;
             return this;
         }
+
         public Builder requirements(String... requirements) {
             return requirements(List.of(requirements));
         }
+
         public Builder rules(List<UsageRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(UsageRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public UsageResponse build() {
-            return new UsageResponse(producerNotificationChannel, requirements, rules);
+        }
+
+        public UsageResponse build() {
+            $.producerNotificationChannel = Objects.requireNonNull($.producerNotificationChannel, "expected parameter 'producerNotificationChannel' to be non-null");
+            $.requirements = Objects.requireNonNull($.requirements, "expected parameter 'requirements' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

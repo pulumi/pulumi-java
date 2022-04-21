@@ -27,10 +27,10 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
      * 
      */
     @Import(name="associations")
-      private final @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
+    private @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
 
-    public List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations() {
-        return this.associations == null ? List.of() : this.associations;
+    public Optional<List<SecurityPolicyWebApplicationFirewallAssociationResponse>> associations() {
+        return Optional.ofNullable(this.associations);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -50,67 +50,61 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
      * 
      */
     @Import(name="wafPolicy")
-      private final @Nullable ResourceReferenceResponse wafPolicy;
+    private @Nullable ResourceReferenceResponse wafPolicy;
 
     public Optional<ResourceReferenceResponse> wafPolicy() {
-        return this.wafPolicy == null ? Optional.empty() : Optional.ofNullable(this.wafPolicy);
+        return Optional.ofNullable(this.wafPolicy);
     }
 
-    public SecurityPolicyWebApplicationFirewallParametersResponse(
-        @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations,
-        String type,
-        @Nullable ResourceReferenceResponse wafPolicy) {
-        this.associations = associations;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.wafPolicy = wafPolicy;
-    }
+    private SecurityPolicyWebApplicationFirewallParametersResponse() {}
 
-    private SecurityPolicyWebApplicationFirewallParametersResponse() {
-        this.associations = List.of();
-        this.type = null;
-        this.wafPolicy = null;
+    private SecurityPolicyWebApplicationFirewallParametersResponse(SecurityPolicyWebApplicationFirewallParametersResponse $) {
+        this.associations = $.associations;
+        this.type = $.type;
+        this.wafPolicy = $.wafPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyWebApplicationFirewallParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
-        private String type;
-        private @Nullable ResourceReferenceResponse wafPolicy;
+        private SecurityPolicyWebApplicationFirewallParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyWebApplicationFirewallParametersResponse();
         }
 
         public Builder(SecurityPolicyWebApplicationFirewallParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associations = defaults.associations;
-    	      this.type = defaults.type;
-    	      this.wafPolicy = defaults.wafPolicy;
+            $ = new SecurityPolicyWebApplicationFirewallParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder associations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations) {
-            this.associations = associations;
+            $.associations = associations;
             return this;
         }
+
         public Builder associations(SecurityPolicyWebApplicationFirewallAssociationResponse... associations) {
             return associations(List.of(associations));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder wafPolicy(@Nullable ResourceReferenceResponse wafPolicy) {
-            this.wafPolicy = wafPolicy;
+            $.wafPolicy = wafPolicy;
             return this;
-        }        public SecurityPolicyWebApplicationFirewallParametersResponse build() {
-            return new SecurityPolicyWebApplicationFirewallParametersResponse(associations, type, wafPolicy);
+        }
+
+        public SecurityPolicyWebApplicationFirewallParametersResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

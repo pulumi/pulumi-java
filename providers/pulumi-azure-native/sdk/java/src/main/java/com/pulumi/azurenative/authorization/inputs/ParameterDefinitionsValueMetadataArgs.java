@@ -5,10 +5,10 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ParameterDefinitionsValueMetadataArgs extends com.pulumi.reso
      * 
      */
     @Import(name="assignPermissions")
-      private final @Nullable Output<Boolean> assignPermissions;
+    private @Nullable Output<Boolean> assignPermissions;
 
-    public Output<Boolean> assignPermissions() {
-        return this.assignPermissions == null ? Codegen.empty() : this.assignPermissions;
+    public Optional<Output<Boolean>> assignPermissions() {
+        return Optional.ofNullable(this.assignPermissions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ParameterDefinitionsValueMetadataArgs extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ParameterDefinitionsValueMetadataArgs extends com.pulumi.reso
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class ParameterDefinitionsValueMetadataArgs extends com.pulumi.reso
      * 
      */
     @Import(name="strongType")
-      private final @Nullable Output<String> strongType;
+    private @Nullable Output<String> strongType;
 
-    public Output<String> strongType() {
-        return this.strongType == null ? Codegen.empty() : this.strongType;
+    public Optional<Output<String>> strongType() {
+        return Optional.ofNullable(this.strongType);
     }
 
-    public ParameterDefinitionsValueMetadataArgs(
-        @Nullable Output<Boolean> assignPermissions,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> strongType) {
-        this.assignPermissions = assignPermissions;
-        this.description = description;
-        this.displayName = displayName;
-        this.strongType = strongType;
-    }
+    private ParameterDefinitionsValueMetadataArgs() {}
 
-    private ParameterDefinitionsValueMetadataArgs() {
-        this.assignPermissions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.strongType = Codegen.empty();
+    private ParameterDefinitionsValueMetadataArgs(ParameterDefinitionsValueMetadataArgs $) {
+        this.assignPermissions = $.assignPermissions;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.strongType = $.strongType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterDefinitionsValueMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> assignPermissions;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> strongType;
+        private ParameterDefinitionsValueMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterDefinitionsValueMetadataArgs();
         }
 
         public Builder(ParameterDefinitionsValueMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignPermissions = defaults.assignPermissions;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.strongType = defaults.strongType;
+            $ = new ParameterDefinitionsValueMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignPermissions(@Nullable Output<Boolean> assignPermissions) {
-            this.assignPermissions = assignPermissions;
+            $.assignPermissions = assignPermissions;
             return this;
         }
-        public Builder assignPermissions(@Nullable Boolean assignPermissions) {
-            this.assignPermissions = Codegen.ofNullable(assignPermissions);
-            return this;
+
+        public Builder assignPermissions(Boolean assignPermissions) {
+            return assignPermissions(Output.of(assignPermissions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder strongType(@Nullable Output<String> strongType) {
-            this.strongType = strongType;
+            $.strongType = strongType;
             return this;
         }
-        public Builder strongType(@Nullable String strongType) {
-            this.strongType = Codegen.ofNullable(strongType);
-            return this;
-        }        public ParameterDefinitionsValueMetadataArgs build() {
-            return new ParameterDefinitionsValueMetadataArgs(assignPermissions, description, displayName, strongType);
+
+        public Builder strongType(String strongType) {
+            return strongType(Output.of(strongType));
+        }
+
+        public ParameterDefinitionsValueMetadataArgs build() {
+            return $;
         }
     }
+
 }

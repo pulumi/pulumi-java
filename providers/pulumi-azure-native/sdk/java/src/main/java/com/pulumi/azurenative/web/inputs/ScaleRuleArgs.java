@@ -8,9 +8,9 @@ import com.pulumi.azurenative.web.inputs.HttpScaleRuleArgs;
 import com.pulumi.azurenative.web.inputs.QueueScaleRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureQueue")
-      private final @Nullable Output<QueueScaleRuleArgs> azureQueue;
+    private @Nullable Output<QueueScaleRuleArgs> azureQueue;
 
-    public Output<QueueScaleRuleArgs> azureQueue() {
-        return this.azureQueue == null ? Codegen.empty() : this.azureQueue;
+    public Optional<Output<QueueScaleRuleArgs>> azureQueue() {
+        return Optional.ofNullable(this.azureQueue);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="custom")
-      private final @Nullable Output<CustomScaleRuleArgs> custom;
+    private @Nullable Output<CustomScaleRuleArgs> custom;
 
-    public Output<CustomScaleRuleArgs> custom() {
-        return this.custom == null ? Codegen.empty() : this.custom;
+    public Optional<Output<CustomScaleRuleArgs>> custom() {
+        return Optional.ofNullable(this.custom);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="http")
-      private final @Nullable Output<HttpScaleRuleArgs> http;
+    private @Nullable Output<HttpScaleRuleArgs> http;
 
-    public Output<HttpScaleRuleArgs> http() {
-        return this.http == null ? Codegen.empty() : this.http;
+    public Optional<Output<HttpScaleRuleArgs>> http() {
+        return Optional.ofNullable(this.http);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ScaleRuleArgs(
-        @Nullable Output<QueueScaleRuleArgs> azureQueue,
-        @Nullable Output<CustomScaleRuleArgs> custom,
-        @Nullable Output<HttpScaleRuleArgs> http,
-        @Nullable Output<String> name) {
-        this.azureQueue = azureQueue;
-        this.custom = custom;
-        this.http = http;
-        this.name = name;
-    }
+    private ScaleRuleArgs() {}
 
-    private ScaleRuleArgs() {
-        this.azureQueue = Codegen.empty();
-        this.custom = Codegen.empty();
-        this.http = Codegen.empty();
-        this.name = Codegen.empty();
+    private ScaleRuleArgs(ScaleRuleArgs $) {
+        this.azureQueue = $.azureQueue;
+        this.custom = $.custom;
+        this.http = $.http;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<QueueScaleRuleArgs> azureQueue;
-        private @Nullable Output<CustomScaleRuleArgs> custom;
-        private @Nullable Output<HttpScaleRuleArgs> http;
-        private @Nullable Output<String> name;
+        private ScaleRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleRuleArgs();
         }
 
         public Builder(ScaleRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureQueue = defaults.azureQueue;
-    	      this.custom = defaults.custom;
-    	      this.http = defaults.http;
-    	      this.name = defaults.name;
+            $ = new ScaleRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureQueue(@Nullable Output<QueueScaleRuleArgs> azureQueue) {
-            this.azureQueue = azureQueue;
+            $.azureQueue = azureQueue;
             return this;
         }
-        public Builder azureQueue(@Nullable QueueScaleRuleArgs azureQueue) {
-            this.azureQueue = Codegen.ofNullable(azureQueue);
-            return this;
+
+        public Builder azureQueue(QueueScaleRuleArgs azureQueue) {
+            return azureQueue(Output.of(azureQueue));
         }
+
         public Builder custom(@Nullable Output<CustomScaleRuleArgs> custom) {
-            this.custom = custom;
+            $.custom = custom;
             return this;
         }
-        public Builder custom(@Nullable CustomScaleRuleArgs custom) {
-            this.custom = Codegen.ofNullable(custom);
-            return this;
+
+        public Builder custom(CustomScaleRuleArgs custom) {
+            return custom(Output.of(custom));
         }
+
         public Builder http(@Nullable Output<HttpScaleRuleArgs> http) {
-            this.http = http;
+            $.http = http;
             return this;
         }
-        public Builder http(@Nullable HttpScaleRuleArgs http) {
-            this.http = Codegen.ofNullable(http);
-            return this;
+
+        public Builder http(HttpScaleRuleArgs http) {
+            return http(Output.of(http));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ScaleRuleArgs build() {
-            return new ScaleRuleArgs(azureQueue, custom, http, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ScaleRuleArgs build() {
+            return $;
         }
     }
+
 }

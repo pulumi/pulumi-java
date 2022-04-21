@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,49 +23,49 @@ public final class ClusterReleaseChannelGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="channel", required=true)
-      private final Output<String> channel;
+    private Output<String> channel;
 
     public Output<String> channel() {
         return this.channel;
     }
 
-    public ClusterReleaseChannelGetArgs(Output<String> channel) {
-        this.channel = Objects.requireNonNull(channel, "expected parameter 'channel' to be non-null");
-    }
+    private ClusterReleaseChannelGetArgs() {}
 
-    private ClusterReleaseChannelGetArgs() {
-        this.channel = Codegen.empty();
+    private ClusterReleaseChannelGetArgs(ClusterReleaseChannelGetArgs $) {
+        this.channel = $.channel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterReleaseChannelGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> channel;
+        private ClusterReleaseChannelGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterReleaseChannelGetArgs();
         }
 
         public Builder(ClusterReleaseChannelGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channel = defaults.channel;
+            $ = new ClusterReleaseChannelGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channel(Output<String> channel) {
-            this.channel = Objects.requireNonNull(channel);
+            $.channel = channel;
             return this;
         }
+
         public Builder channel(String channel) {
-            this.channel = Output.of(Objects.requireNonNull(channel));
-            return this;
-        }        public ClusterReleaseChannelGetArgs build() {
-            return new ClusterReleaseChannelGetArgs(channel);
+            return channel(Output.of(channel));
+        }
+
+        public ClusterReleaseChannelGetArgs build() {
+            $.channel = Objects.requireNonNull($.channel, "expected parameter 'channel' to be non-null");
+            return $;
         }
     }
+
 }

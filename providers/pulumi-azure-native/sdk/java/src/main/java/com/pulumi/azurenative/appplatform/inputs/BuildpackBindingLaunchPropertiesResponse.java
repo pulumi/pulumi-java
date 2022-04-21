@@ -24,10 +24,10 @@ public final class BuildpackBindingLaunchPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class BuildpackBindingLaunchPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="secrets")
-      private final @Nullable Map<String,String> secrets;
+    private @Nullable Map<String,String> secrets;
 
-    public Map<String,String> secrets() {
-        return this.secrets == null ? Map.of() : this.secrets;
+    public Optional<Map<String,String>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
-    public BuildpackBindingLaunchPropertiesResponse(
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> secrets) {
-        this.properties = properties;
-        this.secrets = secrets;
-    }
+    private BuildpackBindingLaunchPropertiesResponse() {}
 
-    private BuildpackBindingLaunchPropertiesResponse() {
-        this.properties = Map.of();
-        this.secrets = Map.of();
+    private BuildpackBindingLaunchPropertiesResponse(BuildpackBindingLaunchPropertiesResponse $) {
+        this.properties = $.properties;
+        this.secrets = $.secrets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildpackBindingLaunchPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> properties;
-        private @Nullable Map<String,String> secrets;
+        private BuildpackBindingLaunchPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildpackBindingLaunchPropertiesResponse();
         }
 
         public Builder(BuildpackBindingLaunchPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.secrets = defaults.secrets;
+            $ = new BuildpackBindingLaunchPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder secrets(@Nullable Map<String,String> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
-        }        public BuildpackBindingLaunchPropertiesResponse build() {
-            return new BuildpackBindingLaunchPropertiesResponse(properties, secrets);
+        }
+
+        public BuildpackBindingLaunchPropertiesResponse build() {
+            return $;
         }
     }
+
 }

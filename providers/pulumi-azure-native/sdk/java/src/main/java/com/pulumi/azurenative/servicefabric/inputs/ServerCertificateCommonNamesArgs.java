@@ -6,10 +6,10 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.azurenative.servicefabric.inputs.ServerCertificateCommonNameArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ServerCertificateCommonNamesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="commonNames")
-      private final @Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames;
+    private @Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames;
 
-    public Output<List<ServerCertificateCommonNameArgs>> commonNames() {
-        return this.commonNames == null ? Codegen.empty() : this.commonNames;
+    public Optional<Output<List<ServerCertificateCommonNameArgs>>> commonNames() {
+        return Optional.ofNullable(this.commonNames);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ServerCertificateCommonNamesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="x509StoreName")
-      private final @Nullable Output<String> x509StoreName;
+    private @Nullable Output<String> x509StoreName;
 
-    public Output<String> x509StoreName() {
-        return this.x509StoreName == null ? Codegen.empty() : this.x509StoreName;
+    public Optional<Output<String>> x509StoreName() {
+        return Optional.ofNullable(this.x509StoreName);
     }
 
-    public ServerCertificateCommonNamesArgs(
-        @Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames,
-        @Nullable Output<String> x509StoreName) {
-        this.commonNames = commonNames;
-        this.x509StoreName = x509StoreName;
-    }
+    private ServerCertificateCommonNamesArgs() {}
 
-    private ServerCertificateCommonNamesArgs() {
-        this.commonNames = Codegen.empty();
-        this.x509StoreName = Codegen.empty();
+    private ServerCertificateCommonNamesArgs(ServerCertificateCommonNamesArgs $) {
+        this.commonNames = $.commonNames;
+        this.x509StoreName = $.x509StoreName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerCertificateCommonNamesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames;
-        private @Nullable Output<String> x509StoreName;
+        private ServerCertificateCommonNamesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerCertificateCommonNamesArgs();
         }
 
         public Builder(ServerCertificateCommonNamesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commonNames = defaults.commonNames;
-    	      this.x509StoreName = defaults.x509StoreName;
+            $ = new ServerCertificateCommonNamesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commonNames(@Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames) {
-            this.commonNames = commonNames;
+            $.commonNames = commonNames;
             return this;
         }
-        public Builder commonNames(@Nullable List<ServerCertificateCommonNameArgs> commonNames) {
-            this.commonNames = Codegen.ofNullable(commonNames);
-            return this;
+
+        public Builder commonNames(List<ServerCertificateCommonNameArgs> commonNames) {
+            return commonNames(Output.of(commonNames));
         }
+
         public Builder commonNames(ServerCertificateCommonNameArgs... commonNames) {
             return commonNames(List.of(commonNames));
         }
+
         public Builder x509StoreName(@Nullable Output<String> x509StoreName) {
-            this.x509StoreName = x509StoreName;
+            $.x509StoreName = x509StoreName;
             return this;
         }
-        public Builder x509StoreName(@Nullable String x509StoreName) {
-            this.x509StoreName = Codegen.ofNullable(x509StoreName);
-            return this;
-        }        public ServerCertificateCommonNamesArgs build() {
-            return new ServerCertificateCommonNamesArgs(commonNames, x509StoreName);
+
+        public Builder x509StoreName(String x509StoreName) {
+            return x509StoreName(Output.of(x509StoreName));
+        }
+
+        public ServerCertificateCommonNamesArgs build() {
+            return $;
         }
     }
+
 }

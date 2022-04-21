@@ -17,7 +17,7 @@ public final class GetWebAppHybridConnectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppHybridConnectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class GetWebAppHybridConnectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="relayName", required=true)
-      private final String relayName;
+    private String relayName;
 
     public String relayName() {
         return this.relayName;
@@ -50,73 +50,66 @@ public final class GetWebAppHybridConnectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetWebAppHybridConnectionArgs(
-        String name,
-        String namespaceName,
-        String relayName,
-        String resourceGroupName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.relayName = Objects.requireNonNull(relayName, "expected parameter 'relayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetWebAppHybridConnectionArgs() {}
 
-    private GetWebAppHybridConnectionArgs() {
-        this.name = null;
-        this.namespaceName = null;
-        this.relayName = null;
-        this.resourceGroupName = null;
+    private GetWebAppHybridConnectionArgs(GetWebAppHybridConnectionArgs $) {
+        this.name = $.name;
+        this.namespaceName = $.namespaceName;
+        this.relayName = $.relayName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppHybridConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String namespaceName;
-        private String relayName;
-        private String resourceGroupName;
+        private GetWebAppHybridConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppHybridConnectionArgs();
         }
 
         public Builder(GetWebAppHybridConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.relayName = defaults.relayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetWebAppHybridConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder relayName(String relayName) {
-            this.relayName = Objects.requireNonNull(relayName);
+            $.relayName = relayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetWebAppHybridConnectionArgs build() {
-            return new GetWebAppHybridConnectionArgs(name, namespaceName, relayName, resourceGroupName);
+        }
+
+        public GetWebAppHybridConnectionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.relayName = Objects.requireNonNull($.relayName, "expected parameter 'relayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

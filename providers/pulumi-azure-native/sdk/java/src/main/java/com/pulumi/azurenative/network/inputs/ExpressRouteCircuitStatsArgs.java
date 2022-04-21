@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ExpressRouteCircuitStatsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="primarybytesIn")
-      private final @Nullable Output<Double> primarybytesIn;
+    private @Nullable Output<Double> primarybytesIn;
 
-    public Output<Double> primarybytesIn() {
-        return this.primarybytesIn == null ? Codegen.empty() : this.primarybytesIn;
+    public Optional<Output<Double>> primarybytesIn() {
+        return Optional.ofNullable(this.primarybytesIn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExpressRouteCircuitStatsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="primarybytesOut")
-      private final @Nullable Output<Double> primarybytesOut;
+    private @Nullable Output<Double> primarybytesOut;
 
-    public Output<Double> primarybytesOut() {
-        return this.primarybytesOut == null ? Codegen.empty() : this.primarybytesOut;
+    public Optional<Output<Double>> primarybytesOut() {
+        return Optional.ofNullable(this.primarybytesOut);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ExpressRouteCircuitStatsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="secondarybytesIn")
-      private final @Nullable Output<Double> secondarybytesIn;
+    private @Nullable Output<Double> secondarybytesIn;
 
-    public Output<Double> secondarybytesIn() {
-        return this.secondarybytesIn == null ? Codegen.empty() : this.secondarybytesIn;
+    public Optional<Output<Double>> secondarybytesIn() {
+        return Optional.ofNullable(this.secondarybytesIn);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class ExpressRouteCircuitStatsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="secondarybytesOut")
-      private final @Nullable Output<Double> secondarybytesOut;
+    private @Nullable Output<Double> secondarybytesOut;
 
-    public Output<Double> secondarybytesOut() {
-        return this.secondarybytesOut == null ? Codegen.empty() : this.secondarybytesOut;
+    public Optional<Output<Double>> secondarybytesOut() {
+        return Optional.ofNullable(this.secondarybytesOut);
     }
 
-    public ExpressRouteCircuitStatsArgs(
-        @Nullable Output<Double> primarybytesIn,
-        @Nullable Output<Double> primarybytesOut,
-        @Nullable Output<Double> secondarybytesIn,
-        @Nullable Output<Double> secondarybytesOut) {
-        this.primarybytesIn = primarybytesIn;
-        this.primarybytesOut = primarybytesOut;
-        this.secondarybytesIn = secondarybytesIn;
-        this.secondarybytesOut = secondarybytesOut;
-    }
+    private ExpressRouteCircuitStatsArgs() {}
 
-    private ExpressRouteCircuitStatsArgs() {
-        this.primarybytesIn = Codegen.empty();
-        this.primarybytesOut = Codegen.empty();
-        this.secondarybytesIn = Codegen.empty();
-        this.secondarybytesOut = Codegen.empty();
+    private ExpressRouteCircuitStatsArgs(ExpressRouteCircuitStatsArgs $) {
+        this.primarybytesIn = $.primarybytesIn;
+        this.primarybytesOut = $.primarybytesOut;
+        this.secondarybytesIn = $.secondarybytesIn;
+        this.secondarybytesOut = $.secondarybytesOut;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitStatsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> primarybytesIn;
-        private @Nullable Output<Double> primarybytesOut;
-        private @Nullable Output<Double> secondarybytesIn;
-        private @Nullable Output<Double> secondarybytesOut;
+        private ExpressRouteCircuitStatsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitStatsArgs();
         }
 
         public Builder(ExpressRouteCircuitStatsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primarybytesIn = defaults.primarybytesIn;
-    	      this.primarybytesOut = defaults.primarybytesOut;
-    	      this.secondarybytesIn = defaults.secondarybytesIn;
-    	      this.secondarybytesOut = defaults.secondarybytesOut;
+            $ = new ExpressRouteCircuitStatsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder primarybytesIn(@Nullable Output<Double> primarybytesIn) {
-            this.primarybytesIn = primarybytesIn;
+            $.primarybytesIn = primarybytesIn;
             return this;
         }
-        public Builder primarybytesIn(@Nullable Double primarybytesIn) {
-            this.primarybytesIn = Codegen.ofNullable(primarybytesIn);
-            return this;
+
+        public Builder primarybytesIn(Double primarybytesIn) {
+            return primarybytesIn(Output.of(primarybytesIn));
         }
+
         public Builder primarybytesOut(@Nullable Output<Double> primarybytesOut) {
-            this.primarybytesOut = primarybytesOut;
+            $.primarybytesOut = primarybytesOut;
             return this;
         }
-        public Builder primarybytesOut(@Nullable Double primarybytesOut) {
-            this.primarybytesOut = Codegen.ofNullable(primarybytesOut);
-            return this;
+
+        public Builder primarybytesOut(Double primarybytesOut) {
+            return primarybytesOut(Output.of(primarybytesOut));
         }
+
         public Builder secondarybytesIn(@Nullable Output<Double> secondarybytesIn) {
-            this.secondarybytesIn = secondarybytesIn;
+            $.secondarybytesIn = secondarybytesIn;
             return this;
         }
-        public Builder secondarybytesIn(@Nullable Double secondarybytesIn) {
-            this.secondarybytesIn = Codegen.ofNullable(secondarybytesIn);
-            return this;
+
+        public Builder secondarybytesIn(Double secondarybytesIn) {
+            return secondarybytesIn(Output.of(secondarybytesIn));
         }
+
         public Builder secondarybytesOut(@Nullable Output<Double> secondarybytesOut) {
-            this.secondarybytesOut = secondarybytesOut;
+            $.secondarybytesOut = secondarybytesOut;
             return this;
         }
-        public Builder secondarybytesOut(@Nullable Double secondarybytesOut) {
-            this.secondarybytesOut = Codegen.ofNullable(secondarybytesOut);
-            return this;
-        }        public ExpressRouteCircuitStatsArgs build() {
-            return new ExpressRouteCircuitStatsArgs(primarybytesIn, primarybytesOut, secondarybytesIn, secondarybytesOut);
+
+        public Builder secondarybytesOut(Double secondarybytesOut) {
+            return secondarybytesOut(Output.of(secondarybytesOut));
+        }
+
+        public ExpressRouteCircuitStatsArgs build() {
+            return $;
         }
     }
+
 }

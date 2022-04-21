@@ -26,10 +26,10 @@ public final class DataFlowSinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dataset")
-      private final @Nullable DatasetReferenceResponse dataset;
+    private @Nullable DatasetReferenceResponse dataset;
 
     public Optional<DatasetReferenceResponse> dataset() {
-        return this.dataset == null ? Optional.empty() : Optional.ofNullable(this.dataset);
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DataFlowSinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DataFlowSinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="flowlet")
-      private final @Nullable DataFlowReferenceResponse flowlet;
+    private @Nullable DataFlowReferenceResponse flowlet;
 
     public Optional<DataFlowReferenceResponse> flowlet() {
-        return this.flowlet == null ? Optional.empty() : Optional.ofNullable(this.flowlet);
+        return Optional.ofNullable(this.flowlet);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DataFlowSinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="linkedService")
-      private final @Nullable LinkedServiceReferenceResponse linkedService;
+    private @Nullable LinkedServiceReferenceResponse linkedService;
 
     public Optional<LinkedServiceReferenceResponse> linkedService() {
-        return this.linkedService == null ? Optional.empty() : Optional.ofNullable(this.linkedService);
+        return Optional.ofNullable(this.linkedService);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class DataFlowSinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -81,91 +81,75 @@ public final class DataFlowSinkResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="schemaLinkedService")
-      private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;
+    private @Nullable LinkedServiceReferenceResponse schemaLinkedService;
 
     public Optional<LinkedServiceReferenceResponse> schemaLinkedService() {
-        return this.schemaLinkedService == null ? Optional.empty() : Optional.ofNullable(this.schemaLinkedService);
+        return Optional.ofNullable(this.schemaLinkedService);
     }
 
-    public DataFlowSinkResponse(
-        @Nullable DatasetReferenceResponse dataset,
-        @Nullable String description,
-        @Nullable DataFlowReferenceResponse flowlet,
-        @Nullable LinkedServiceReferenceResponse linkedService,
-        String name,
-        @Nullable LinkedServiceReferenceResponse schemaLinkedService) {
-        this.dataset = dataset;
-        this.description = description;
-        this.flowlet = flowlet;
-        this.linkedService = linkedService;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.schemaLinkedService = schemaLinkedService;
-    }
+    private DataFlowSinkResponse() {}
 
-    private DataFlowSinkResponse() {
-        this.dataset = null;
-        this.description = null;
-        this.flowlet = null;
-        this.linkedService = null;
-        this.name = null;
-        this.schemaLinkedService = null;
+    private DataFlowSinkResponse(DataFlowSinkResponse $) {
+        this.dataset = $.dataset;
+        this.description = $.description;
+        this.flowlet = $.flowlet;
+        this.linkedService = $.linkedService;
+        this.name = $.name;
+        this.schemaLinkedService = $.schemaLinkedService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataFlowSinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatasetReferenceResponse dataset;
-        private @Nullable String description;
-        private @Nullable DataFlowReferenceResponse flowlet;
-        private @Nullable LinkedServiceReferenceResponse linkedService;
-        private String name;
-        private @Nullable LinkedServiceReferenceResponse schemaLinkedService;
+        private DataFlowSinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataFlowSinkResponse();
         }
 
         public Builder(DataFlowSinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.description = defaults.description;
-    	      this.flowlet = defaults.flowlet;
-    	      this.linkedService = defaults.linkedService;
-    	      this.name = defaults.name;
-    	      this.schemaLinkedService = defaults.schemaLinkedService;
+            $ = new DataFlowSinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable DatasetReferenceResponse dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder flowlet(@Nullable DataFlowReferenceResponse flowlet) {
-            this.flowlet = flowlet;
+            $.flowlet = flowlet;
             return this;
         }
+
         public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
-            this.linkedService = linkedService;
+            $.linkedService = linkedService;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder schemaLinkedService(@Nullable LinkedServiceReferenceResponse schemaLinkedService) {
-            this.schemaLinkedService = schemaLinkedService;
+            $.schemaLinkedService = schemaLinkedService;
             return this;
-        }        public DataFlowSinkResponse build() {
-            return new DataFlowSinkResponse(dataset, description, flowlet, linkedService, name, schemaLinkedService);
+        }
+
+        public DataFlowSinkResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

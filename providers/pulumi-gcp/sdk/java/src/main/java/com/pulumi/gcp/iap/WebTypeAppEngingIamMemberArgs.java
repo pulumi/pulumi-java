@@ -5,10 +5,10 @@ package com.pulumi.gcp.iap;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iap.inputs.WebTypeAppEngingIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class WebTypeAppEngingIamMemberArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -33,14 +33,14 @@ public final class WebTypeAppEngingIamMemberArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<WebTypeAppEngingIamMemberConditionArgs> condition;
+    private @Nullable Output<WebTypeAppEngingIamMemberConditionArgs> condition;
 
-    public Output<WebTypeAppEngingIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<WebTypeAppEngingIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -52,10 +52,10 @@ public final class WebTypeAppEngingIamMemberArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -65,102 +65,91 @@ public final class WebTypeAppEngingIamMemberArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public WebTypeAppEngingIamMemberArgs(
-        Output<String> appId,
-        @Nullable Output<WebTypeAppEngingIamMemberConditionArgs> condition,
-        Output<String> member,
-        @Nullable Output<String> project,
-        Output<String> role) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private WebTypeAppEngingIamMemberArgs() {}
 
-    private WebTypeAppEngingIamMemberArgs() {
-        this.appId = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
+    private WebTypeAppEngingIamMemberArgs(WebTypeAppEngingIamMemberArgs $) {
+        this.appId = $.appId;
+        this.condition = $.condition;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebTypeAppEngingIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appId;
-        private @Nullable Output<WebTypeAppEngingIamMemberConditionArgs> condition;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private Output<String> role;
+        private WebTypeAppEngingIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebTypeAppEngingIamMemberArgs();
         }
 
         public Builder(WebTypeAppEngingIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
+            $ = new WebTypeAppEngingIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder condition(@Nullable Output<WebTypeAppEngingIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable WebTypeAppEngingIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(WebTypeAppEngingIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public WebTypeAppEngingIamMemberArgs build() {
-            return new WebTypeAppEngingIamMemberArgs(appId, condition, member, project, role);
+            return role(Output.of(role));
+        }
+
+        public WebTypeAppEngingIamMemberArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

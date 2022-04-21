@@ -5,9 +5,9 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class EntryBigqueryTableSpecViewSpecArgs extends com.pulumi.resourc
     public static final EntryBigqueryTableSpecViewSpecArgs Empty = new EntryBigqueryTableSpecViewSpecArgs();
 
     @Import(name="viewQuery")
-      private final @Nullable Output<String> viewQuery;
+    private @Nullable Output<String> viewQuery;
 
-    public Output<String> viewQuery() {
-        return this.viewQuery == null ? Codegen.empty() : this.viewQuery;
+    public Optional<Output<String>> viewQuery() {
+        return Optional.ofNullable(this.viewQuery);
     }
 
-    public EntryBigqueryTableSpecViewSpecArgs(@Nullable Output<String> viewQuery) {
-        this.viewQuery = viewQuery;
-    }
+    private EntryBigqueryTableSpecViewSpecArgs() {}
 
-    private EntryBigqueryTableSpecViewSpecArgs() {
-        this.viewQuery = Codegen.empty();
+    private EntryBigqueryTableSpecViewSpecArgs(EntryBigqueryTableSpecViewSpecArgs $) {
+        this.viewQuery = $.viewQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntryBigqueryTableSpecViewSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> viewQuery;
+        private EntryBigqueryTableSpecViewSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntryBigqueryTableSpecViewSpecArgs();
         }
 
         public Builder(EntryBigqueryTableSpecViewSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.viewQuery = defaults.viewQuery;
+            $ = new EntryBigqueryTableSpecViewSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder viewQuery(@Nullable Output<String> viewQuery) {
-            this.viewQuery = viewQuery;
+            $.viewQuery = viewQuery;
             return this;
         }
-        public Builder viewQuery(@Nullable String viewQuery) {
-            this.viewQuery = Codegen.ofNullable(viewQuery);
-            return this;
-        }        public EntryBigqueryTableSpecViewSpecArgs build() {
-            return new EntryBigqueryTableSpecViewSpecArgs(viewQuery);
+
+        public Builder viewQuery(String viewQuery) {
+            return viewQuery(Output.of(viewQuery));
+        }
+
+        public EntryBigqueryTableSpecViewSpecArgs build() {
+            return $;
         }
     }
+
 }

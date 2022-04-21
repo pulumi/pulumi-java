@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse exte
      * 
      */
     @Import(name="agent", required=true)
-      private final String agent;
+    private String agent;
 
     public String agent() {
         return this.agent;
     }
 
-    public GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse(String agent) {
-        this.agent = Objects.requireNonNull(agent, "expected parameter 'agent' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse() {}
 
-    private GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse() {
-        this.agent = null;
+    private GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse(GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse $) {
+        this.agent = $.agent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agent;
+        private GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agent = defaults.agent;
+            $ = new GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agent(String agent) {
-            this.agent = Objects.requireNonNull(agent);
+            $.agent = agent;
             return this;
-        }        public GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse build() {
-            return new GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse(agent);
+        }
+
+        public GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse build() {
+            $.agent = Objects.requireNonNull($.agent, "expected parameter 'agent' to be non-null");
+            return $;
         }
     }
+
 }

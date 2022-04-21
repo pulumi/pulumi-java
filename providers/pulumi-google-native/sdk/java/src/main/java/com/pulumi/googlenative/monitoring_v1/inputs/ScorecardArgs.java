@@ -5,13 +5,13 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.GaugeViewArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.SparkChartViewArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.ThresholdArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ScorecardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gaugeView")
-      private final @Nullable Output<GaugeViewArgs> gaugeView;
+    private @Nullable Output<GaugeViewArgs> gaugeView;
 
-    public Output<GaugeViewArgs> gaugeView() {
-        return this.gaugeView == null ? Codegen.empty() : this.gaugeView;
+    public Optional<Output<GaugeViewArgs>> gaugeView() {
+        return Optional.ofNullable(this.gaugeView);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ScorecardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkChartView")
-      private final @Nullable Output<SparkChartViewArgs> sparkChartView;
+    private @Nullable Output<SparkChartViewArgs> sparkChartView;
 
-    public Output<SparkChartViewArgs> sparkChartView() {
-        return this.sparkChartView == null ? Codegen.empty() : this.sparkChartView;
+    public Optional<Output<SparkChartViewArgs>> sparkChartView() {
+        return Optional.ofNullable(this.sparkChartView);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ScorecardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thresholds")
-      private final @Nullable Output<List<ThresholdArgs>> thresholds;
+    private @Nullable Output<List<ThresholdArgs>> thresholds;
 
-    public Output<List<ThresholdArgs>> thresholds() {
-        return this.thresholds == null ? Codegen.empty() : this.thresholds;
+    public Optional<Output<List<ThresholdArgs>>> thresholds() {
+        return Optional.ofNullable(this.thresholds);
     }
 
     /**
@@ -61,92 +61,83 @@ public final class ScorecardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeSeriesQuery", required=true)
-      private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
+    private Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
     public Output<TimeSeriesQueryArgs> timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 
-    public ScorecardArgs(
-        @Nullable Output<GaugeViewArgs> gaugeView,
-        @Nullable Output<SparkChartViewArgs> sparkChartView,
-        @Nullable Output<List<ThresholdArgs>> thresholds,
-        Output<TimeSeriesQueryArgs> timeSeriesQuery) {
-        this.gaugeView = gaugeView;
-        this.sparkChartView = sparkChartView;
-        this.thresholds = thresholds;
-        this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
-    }
+    private ScorecardArgs() {}
 
-    private ScorecardArgs() {
-        this.gaugeView = Codegen.empty();
-        this.sparkChartView = Codegen.empty();
-        this.thresholds = Codegen.empty();
-        this.timeSeriesQuery = Codegen.empty();
+    private ScorecardArgs(ScorecardArgs $) {
+        this.gaugeView = $.gaugeView;
+        this.sparkChartView = $.sparkChartView;
+        this.thresholds = $.thresholds;
+        this.timeSeriesQuery = $.timeSeriesQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScorecardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GaugeViewArgs> gaugeView;
-        private @Nullable Output<SparkChartViewArgs> sparkChartView;
-        private @Nullable Output<List<ThresholdArgs>> thresholds;
-        private Output<TimeSeriesQueryArgs> timeSeriesQuery;
+        private ScorecardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScorecardArgs();
         }
 
         public Builder(ScorecardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gaugeView = defaults.gaugeView;
-    	      this.sparkChartView = defaults.sparkChartView;
-    	      this.thresholds = defaults.thresholds;
-    	      this.timeSeriesQuery = defaults.timeSeriesQuery;
+            $ = new ScorecardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gaugeView(@Nullable Output<GaugeViewArgs> gaugeView) {
-            this.gaugeView = gaugeView;
+            $.gaugeView = gaugeView;
             return this;
         }
-        public Builder gaugeView(@Nullable GaugeViewArgs gaugeView) {
-            this.gaugeView = Codegen.ofNullable(gaugeView);
-            return this;
+
+        public Builder gaugeView(GaugeViewArgs gaugeView) {
+            return gaugeView(Output.of(gaugeView));
         }
+
         public Builder sparkChartView(@Nullable Output<SparkChartViewArgs> sparkChartView) {
-            this.sparkChartView = sparkChartView;
+            $.sparkChartView = sparkChartView;
             return this;
         }
-        public Builder sparkChartView(@Nullable SparkChartViewArgs sparkChartView) {
-            this.sparkChartView = Codegen.ofNullable(sparkChartView);
-            return this;
+
+        public Builder sparkChartView(SparkChartViewArgs sparkChartView) {
+            return sparkChartView(Output.of(sparkChartView));
         }
+
         public Builder thresholds(@Nullable Output<List<ThresholdArgs>> thresholds) {
-            this.thresholds = thresholds;
+            $.thresholds = thresholds;
             return this;
         }
-        public Builder thresholds(@Nullable List<ThresholdArgs> thresholds) {
-            this.thresholds = Codegen.ofNullable(thresholds);
-            return this;
+
+        public Builder thresholds(List<ThresholdArgs> thresholds) {
+            return thresholds(Output.of(thresholds));
         }
+
         public Builder thresholds(ThresholdArgs... thresholds) {
             return thresholds(List.of(thresholds));
         }
+
         public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {
-            this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
+            $.timeSeriesQuery = timeSeriesQuery;
             return this;
         }
+
         public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
-            this.timeSeriesQuery = Output.of(Objects.requireNonNull(timeSeriesQuery));
-            return this;
-        }        public ScorecardArgs build() {
-            return new ScorecardArgs(gaugeView, sparkChartView, thresholds, timeSeriesQuery);
+            return timeSeriesQuery(Output.of(timeSeriesQuery));
+        }
+
+        public ScorecardArgs build() {
+            $.timeSeriesQuery = Objects.requireNonNull($.timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
+            return $;
         }
     }
+
 }

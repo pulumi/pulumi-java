@@ -23,7 +23,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
      * 
      */
     @Import(name="gcsPath", required=true)
-      private final String gcsPath;
+    private String gcsPath;
 
     public String gcsPath() {
         return this.gcsPath;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
      * 
      */
     @Import(name="launchParameters", required=true)
-      private final GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters;
+    private GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters;
 
     public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters() {
         return this.launchParameters;
@@ -45,7 +45,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -56,7 +56,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -67,82 +67,73 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
      * 
      */
     @Import(name="validateOnly", required=true)
-      private final Boolean validateOnly;
+    private Boolean validateOnly;
 
     public Boolean validateOnly() {
         return this.validateOnly;
     }
 
-    public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse(
-        String gcsPath,
-        GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters,
-        String location,
-        String project,
-        Boolean validateOnly) {
-        this.gcsPath = Objects.requireNonNull(gcsPath, "expected parameter 'gcsPath' to be non-null");
-        this.launchParameters = Objects.requireNonNull(launchParameters, "expected parameter 'launchParameters' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.validateOnly = Objects.requireNonNull(validateOnly, "expected parameter 'validateOnly' to be non-null");
-    }
+    private GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse() {}
 
-    private GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse() {
-        this.gcsPath = null;
-        this.launchParameters = null;
-        this.location = null;
-        this.project = null;
-        this.validateOnly = null;
+    private GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse(GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse $) {
+        this.gcsPath = $.gcsPath;
+        this.launchParameters = $.launchParameters;
+        this.location = $.location;
+        this.project = $.project;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gcsPath;
-        private GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters;
-        private String location;
-        private String project;
-        private Boolean validateOnly;
+        private GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse();
         }
 
         public Builder(GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsPath = defaults.gcsPath;
-    	      this.launchParameters = defaults.launchParameters;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsPath(String gcsPath) {
-            this.gcsPath = Objects.requireNonNull(gcsPath);
+            $.gcsPath = gcsPath;
             return this;
         }
+
         public Builder launchParameters(GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters) {
-            this.launchParameters = Objects.requireNonNull(launchParameters);
+            $.launchParameters = launchParameters;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder validateOnly(Boolean validateOnly) {
-            this.validateOnly = Objects.requireNonNull(validateOnly);
+            $.validateOnly = validateOnly;
             return this;
-        }        public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse build() {
-            return new GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse(gcsPath, launchParameters, location, project, validateOnly);
+        }
+
+        public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse build() {
+            $.gcsPath = Objects.requireNonNull($.gcsPath, "expected parameter 'gcsPath' to be non-null");
+            $.launchParameters = Objects.requireNonNull($.launchParameters, "expected parameter 'launchParameters' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.validateOnly = Objects.requireNonNull($.validateOnly, "expected parameter 'validateOnly' to be non-null");
+            return $;
         }
     }
+
 }

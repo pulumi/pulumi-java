@@ -5,9 +5,9 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
      * 
      */
     @Import(name="logicAppResourceId")
-      private final @Nullable Output<String> logicAppResourceId;
+    private @Nullable Output<String> logicAppResourceId;
 
-    public Output<String> logicAppResourceId() {
-        return this.logicAppResourceId == null ? Codegen.empty() : this.logicAppResourceId;
+    public Optional<Output<String>> logicAppResourceId() {
+        return Optional.ofNullable(this.logicAppResourceId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public AutomationRuleRunPlaybookActionActionConfigurationArgs(
-        @Nullable Output<String> logicAppResourceId,
-        @Nullable Output<String> tenantId) {
-        this.logicAppResourceId = logicAppResourceId;
-        this.tenantId = tenantId;
-    }
+    private AutomationRuleRunPlaybookActionActionConfigurationArgs() {}
 
-    private AutomationRuleRunPlaybookActionActionConfigurationArgs() {
-        this.logicAppResourceId = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private AutomationRuleRunPlaybookActionActionConfigurationArgs(AutomationRuleRunPlaybookActionActionConfigurationArgs $) {
+        this.logicAppResourceId = $.logicAppResourceId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRuleRunPlaybookActionActionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> logicAppResourceId;
-        private @Nullable Output<String> tenantId;
+        private AutomationRuleRunPlaybookActionActionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRuleRunPlaybookActionActionConfigurationArgs();
         }
 
         public Builder(AutomationRuleRunPlaybookActionActionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logicAppResourceId = defaults.logicAppResourceId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AutomationRuleRunPlaybookActionActionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logicAppResourceId(@Nullable Output<String> logicAppResourceId) {
-            this.logicAppResourceId = logicAppResourceId;
+            $.logicAppResourceId = logicAppResourceId;
             return this;
         }
-        public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
-            this.logicAppResourceId = Codegen.ofNullable(logicAppResourceId);
-            return this;
+
+        public Builder logicAppResourceId(String logicAppResourceId) {
+            return logicAppResourceId(Output.of(logicAppResourceId));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public AutomationRuleRunPlaybookActionActionConfigurationArgs build() {
-            return new AutomationRuleRunPlaybookActionActionConfigurationArgs(logicAppResourceId, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public AutomationRuleRunPlaybookActionActionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

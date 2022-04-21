@@ -23,45 +23,44 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema exten
      * 
      */
     @Import(name="ref")
-      private final @Nullable String ref;
+    private @Nullable String ref;
 
     public Optional<String> ref() {
-        return this.ref == null ? Optional.empty() : Optional.ofNullable(this.ref);
+        return Optional.ofNullable(this.ref);
     }
 
-    public IntegrationAccountMapPropertiesResponseParametersSchema(@Nullable String ref) {
-        this.ref = ref;
-    }
+    private IntegrationAccountMapPropertiesResponseParametersSchema() {}
 
-    private IntegrationAccountMapPropertiesResponseParametersSchema() {
-        this.ref = null;
+    private IntegrationAccountMapPropertiesResponseParametersSchema(IntegrationAccountMapPropertiesResponseParametersSchema $) {
+        this.ref = $.ref;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationAccountMapPropertiesResponseParametersSchema defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ref;
+        private IntegrationAccountMapPropertiesResponseParametersSchema $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationAccountMapPropertiesResponseParametersSchema();
         }
 
         public Builder(IntegrationAccountMapPropertiesResponseParametersSchema defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ref = defaults.ref;
+            $ = new IntegrationAccountMapPropertiesResponseParametersSchema(Objects.requireNonNull(defaults));
         }
 
         public Builder ref(@Nullable String ref) {
-            this.ref = ref;
+            $.ref = ref;
             return this;
-        }        public IntegrationAccountMapPropertiesResponseParametersSchema build() {
-            return new IntegrationAccountMapPropertiesResponseParametersSchema(ref);
+        }
+
+        public IntegrationAccountMapPropertiesResponseParametersSchema build() {
+            return $;
         }
     }
+
 }

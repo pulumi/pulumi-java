@@ -17,7 +17,7 @@ public final class GetFarmBeatsModelArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="farmBeatsResourceName", required=true)
-      private final String farmBeatsResourceName;
+    private String farmBeatsResourceName;
 
     public String farmBeatsResourceName() {
         return this.farmBeatsResourceName;
@@ -28,55 +28,52 @@ public final class GetFarmBeatsModelArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetFarmBeatsModelArgs(
-        String farmBeatsResourceName,
-        String resourceGroupName) {
-        this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName, "expected parameter 'farmBeatsResourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetFarmBeatsModelArgs() {}
 
-    private GetFarmBeatsModelArgs() {
-        this.farmBeatsResourceName = null;
-        this.resourceGroupName = null;
+    private GetFarmBeatsModelArgs(GetFarmBeatsModelArgs $) {
+        this.farmBeatsResourceName = $.farmBeatsResourceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFarmBeatsModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String farmBeatsResourceName;
-        private String resourceGroupName;
+        private GetFarmBeatsModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFarmBeatsModelArgs();
         }
 
         public Builder(GetFarmBeatsModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.farmBeatsResourceName = defaults.farmBeatsResourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetFarmBeatsModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder farmBeatsResourceName(String farmBeatsResourceName) {
-            this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName);
+            $.farmBeatsResourceName = farmBeatsResourceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetFarmBeatsModelArgs build() {
-            return new GetFarmBeatsModelArgs(farmBeatsResourceName, resourceGroupName);
+        }
+
+        public GetFarmBeatsModelArgs build() {
+            $.farmBeatsResourceName = Objects.requireNonNull($.farmBeatsResourceName, "expected parameter 'farmBeatsResourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

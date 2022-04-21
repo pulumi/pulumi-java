@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class H264VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="complexity")
-      private final @Nullable Output<Either<String,H264Complexity>> complexity;
+    private @Nullable Output<Either<String,H264Complexity>> complexity;
 
-    public Output<Either<String,H264Complexity>> complexity() {
-        return this.complexity == null ? Codegen.empty() : this.complexity;
+    public Optional<Output<Either<String,H264Complexity>>> complexity() {
+        return Optional.ofNullable(this.complexity);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class H264VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyFrameInterval")
-      private final @Nullable Output<String> keyFrameInterval;
+    private @Nullable Output<String> keyFrameInterval;
 
-    public Output<String> keyFrameInterval() {
-        return this.keyFrameInterval == null ? Codegen.empty() : this.keyFrameInterval;
+    public Optional<Output<String>> keyFrameInterval() {
+        return Optional.ofNullable(this.keyFrameInterval);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class H264VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class H264VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="layers")
-      private final @Nullable Output<List<H264LayerArgs>> layers;
+    private @Nullable Output<List<H264LayerArgs>> layers;
 
-    public Output<List<H264LayerArgs>> layers() {
-        return this.layers == null ? Codegen.empty() : this.layers;
+    public Optional<Output<List<H264LayerArgs>>> layers() {
+        return Optional.ofNullable(this.layers);
     }
 
     /**
@@ -76,7 +77,7 @@ public final class H264VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -87,10 +88,10 @@ public final class H264VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sceneChangeDetection")
-      private final @Nullable Output<Boolean> sceneChangeDetection;
+    private @Nullable Output<Boolean> sceneChangeDetection;
 
-    public Output<Boolean> sceneChangeDetection() {
-        return this.sceneChangeDetection == null ? Codegen.empty() : this.sceneChangeDetection;
+    public Optional<Output<Boolean>> sceneChangeDetection() {
+        return Optional.ofNullable(this.sceneChangeDetection);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class H264VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stretchMode")
-      private final @Nullable Output<Either<String,StretchMode>> stretchMode;
+    private @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Output<Either<String,StretchMode>> stretchMode() {
-        return this.stretchMode == null ? Codegen.empty() : this.stretchMode;
+    public Optional<Output<Either<String,StretchMode>>> stretchMode() {
+        return Optional.ofNullable(this.stretchMode);
     }
 
     /**
@@ -109,144 +110,123 @@ public final class H264VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncMode")
-      private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
+    private @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
-    public Output<Either<String,VideoSyncMode>> syncMode() {
-        return this.syncMode == null ? Codegen.empty() : this.syncMode;
+    public Optional<Output<Either<String,VideoSyncMode>>> syncMode() {
+        return Optional.ofNullable(this.syncMode);
     }
 
-    public H264VideoArgs(
-        @Nullable Output<Either<String,H264Complexity>> complexity,
-        @Nullable Output<String> keyFrameInterval,
-        @Nullable Output<String> label,
-        @Nullable Output<List<H264LayerArgs>> layers,
-        Output<String> odataType,
-        @Nullable Output<Boolean> sceneChangeDetection,
-        @Nullable Output<Either<String,StretchMode>> stretchMode,
-        @Nullable Output<Either<String,VideoSyncMode>> syncMode) {
-        this.complexity = complexity;
-        this.keyFrameInterval = keyFrameInterval;
-        this.label = label;
-        this.layers = layers;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.sceneChangeDetection = sceneChangeDetection;
-        this.stretchMode = stretchMode;
-        this.syncMode = syncMode;
-    }
+    private H264VideoArgs() {}
 
-    private H264VideoArgs() {
-        this.complexity = Codegen.empty();
-        this.keyFrameInterval = Codegen.empty();
-        this.label = Codegen.empty();
-        this.layers = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.sceneChangeDetection = Codegen.empty();
-        this.stretchMode = Codegen.empty();
-        this.syncMode = Codegen.empty();
+    private H264VideoArgs(H264VideoArgs $) {
+        this.complexity = $.complexity;
+        this.keyFrameInterval = $.keyFrameInterval;
+        this.label = $.label;
+        this.layers = $.layers;
+        this.odataType = $.odataType;
+        this.sceneChangeDetection = $.sceneChangeDetection;
+        this.stretchMode = $.stretchMode;
+        this.syncMode = $.syncMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(H264VideoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,H264Complexity>> complexity;
-        private @Nullable Output<String> keyFrameInterval;
-        private @Nullable Output<String> label;
-        private @Nullable Output<List<H264LayerArgs>> layers;
-        private Output<String> odataType;
-        private @Nullable Output<Boolean> sceneChangeDetection;
-        private @Nullable Output<Either<String,StretchMode>> stretchMode;
-        private @Nullable Output<Either<String,VideoSyncMode>> syncMode;
+        private H264VideoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new H264VideoArgs();
         }
 
         public Builder(H264VideoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complexity = defaults.complexity;
-    	      this.keyFrameInterval = defaults.keyFrameInterval;
-    	      this.label = defaults.label;
-    	      this.layers = defaults.layers;
-    	      this.odataType = defaults.odataType;
-    	      this.sceneChangeDetection = defaults.sceneChangeDetection;
-    	      this.stretchMode = defaults.stretchMode;
-    	      this.syncMode = defaults.syncMode;
+            $ = new H264VideoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder complexity(@Nullable Output<Either<String,H264Complexity>> complexity) {
-            this.complexity = complexity;
+            $.complexity = complexity;
             return this;
         }
-        public Builder complexity(@Nullable Either<String,H264Complexity> complexity) {
-            this.complexity = Codegen.ofNullable(complexity);
-            return this;
+
+        public Builder complexity(Either<String,H264Complexity> complexity) {
+            return complexity(Output.of(complexity));
         }
+
         public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
-            this.keyFrameInterval = keyFrameInterval;
+            $.keyFrameInterval = keyFrameInterval;
             return this;
         }
-        public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = Codegen.ofNullable(keyFrameInterval);
-            return this;
+
+        public Builder keyFrameInterval(String keyFrameInterval) {
+            return keyFrameInterval(Output.of(keyFrameInterval));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder layers(@Nullable Output<List<H264LayerArgs>> layers) {
-            this.layers = layers;
+            $.layers = layers;
             return this;
         }
-        public Builder layers(@Nullable List<H264LayerArgs> layers) {
-            this.layers = Codegen.ofNullable(layers);
-            return this;
+
+        public Builder layers(List<H264LayerArgs> layers) {
+            return layers(Output.of(layers));
         }
+
         public Builder layers(H264LayerArgs... layers) {
             return layers(List.of(layers));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder sceneChangeDetection(@Nullable Output<Boolean> sceneChangeDetection) {
-            this.sceneChangeDetection = sceneChangeDetection;
+            $.sceneChangeDetection = sceneChangeDetection;
             return this;
         }
-        public Builder sceneChangeDetection(@Nullable Boolean sceneChangeDetection) {
-            this.sceneChangeDetection = Codegen.ofNullable(sceneChangeDetection);
-            return this;
+
+        public Builder sceneChangeDetection(Boolean sceneChangeDetection) {
+            return sceneChangeDetection(Output.of(sceneChangeDetection));
         }
+
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
-            this.stretchMode = stretchMode;
+            $.stretchMode = stretchMode;
             return this;
         }
-        public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
-            this.stretchMode = Codegen.ofNullable(stretchMode);
-            return this;
+
+        public Builder stretchMode(Either<String,StretchMode> stretchMode) {
+            return stretchMode(Output.of(stretchMode));
         }
+
         public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
-            this.syncMode = syncMode;
+            $.syncMode = syncMode;
             return this;
         }
-        public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
-            this.syncMode = Codegen.ofNullable(syncMode);
-            return this;
-        }        public H264VideoArgs build() {
-            return new H264VideoArgs(complexity, keyFrameInterval, label, layers, odataType, sceneChangeDetection, stretchMode, syncMode);
+
+        public Builder syncMode(Either<String,VideoSyncMode> syncMode) {
+            return syncMode(Output.of(syncMode));
+        }
+
+        public H264VideoArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

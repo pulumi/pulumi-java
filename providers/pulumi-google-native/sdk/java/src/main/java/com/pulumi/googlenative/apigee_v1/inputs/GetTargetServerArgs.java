@@ -13,78 +13,73 @@ public final class GetTargetServerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTargetServerArgs Empty = new GetTargetServerArgs();
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="targetserverId", required=true)
-      private final String targetserverId;
+    private String targetserverId;
 
     public String targetserverId() {
         return this.targetserverId;
     }
 
-    public GetTargetServerArgs(
-        String environmentId,
-        String organizationId,
-        String targetserverId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.targetserverId = Objects.requireNonNull(targetserverId, "expected parameter 'targetserverId' to be non-null");
-    }
+    private GetTargetServerArgs() {}
 
-    private GetTargetServerArgs() {
-        this.environmentId = null;
-        this.organizationId = null;
-        this.targetserverId = null;
+    private GetTargetServerArgs(GetTargetServerArgs $) {
+        this.environmentId = $.environmentId;
+        this.organizationId = $.organizationId;
+        this.targetserverId = $.targetserverId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
-        private String organizationId;
-        private String targetserverId;
+        private GetTargetServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetServerArgs();
         }
 
         public Builder(GetTargetServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.organizationId = defaults.organizationId;
-    	      this.targetserverId = defaults.targetserverId;
+            $ = new GetTargetServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder targetserverId(String targetserverId) {
-            this.targetserverId = Objects.requireNonNull(targetserverId);
+            $.targetserverId = targetserverId;
             return this;
-        }        public GetTargetServerArgs build() {
-            return new GetTargetServerArgs(environmentId, organizationId, targetserverId);
+        }
+
+        public GetTargetServerArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.targetserverId = Objects.requireNonNull($.targetserverId, "expected parameter 'targetserverId' to be non-null");
+            return $;
         }
     }
+
 }

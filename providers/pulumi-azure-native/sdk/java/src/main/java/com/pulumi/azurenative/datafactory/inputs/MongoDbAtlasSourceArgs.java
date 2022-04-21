@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class MongoDbAtlasSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Output<Object> additionalColumns;
+    private @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> additionalColumns() {
-        return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
+    public Optional<Output<Object>> additionalColumns() {
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class MongoDbAtlasSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="batchSize")
-      private final @Nullable Output<Object> batchSize;
+    private @Nullable Output<Object> batchSize;
 
-    public Output<Object> batchSize() {
-        return this.batchSize == null ? Codegen.empty() : this.batchSize;
+    public Optional<Output<Object>> batchSize() {
+        return Optional.ofNullable(this.batchSize);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class MongoDbAtlasSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cursorMethods")
-      private final @Nullable Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods;
+    private @Nullable Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods;
 
-    public Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods() {
-        return this.cursorMethods == null ? Codegen.empty() : this.cursorMethods;
+    public Optional<Output<MongoDbCursorMethodsPropertiesArgs>> cursorMethods() {
+        return Optional.ofNullable(this.cursorMethods);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class MongoDbAtlasSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class MongoDbAtlasSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<Object> filter;
+    private @Nullable Output<Object> filter;
 
-    public Output<Object> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<Object>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class MongoDbAtlasSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class MongoDbAtlasSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="queryTimeout")
-      private final @Nullable Output<Object> queryTimeout;
+    private @Nullable Output<Object> queryTimeout;
 
-    public Output<Object> queryTimeout() {
-        return this.queryTimeout == null ? Codegen.empty() : this.queryTimeout;
+    public Optional<Output<Object>> queryTimeout() {
+        return Optional.ofNullable(this.queryTimeout);
     }
 
     /**
@@ -103,10 +104,10 @@ public final class MongoDbAtlasSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Output<Object> sourceRetryCount;
+    private @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
+    public Optional<Output<Object>> sourceRetryCount() {
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -114,10 +115,10 @@ public final class MongoDbAtlasSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Output<Object> sourceRetryWait;
+    private @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
+    public Optional<Output<Object>> sourceRetryWait() {
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -126,167 +127,139 @@ public final class MongoDbAtlasSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public MongoDbAtlasSourceArgs(
-        @Nullable Output<Object> additionalColumns,
-        @Nullable Output<Object> batchSize,
-        @Nullable Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> filter,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> queryTimeout,
-        @Nullable Output<Object> sourceRetryCount,
-        @Nullable Output<Object> sourceRetryWait,
-        Output<String> type) {
-        this.additionalColumns = additionalColumns;
-        this.batchSize = batchSize;
-        this.cursorMethods = cursorMethods;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.filter = filter;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.queryTimeout = queryTimeout;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private MongoDbAtlasSourceArgs() {}
 
-    private MongoDbAtlasSourceArgs() {
-        this.additionalColumns = Codegen.empty();
-        this.batchSize = Codegen.empty();
-        this.cursorMethods = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.queryTimeout = Codegen.empty();
-        this.sourceRetryCount = Codegen.empty();
-        this.sourceRetryWait = Codegen.empty();
-        this.type = Codegen.empty();
+    private MongoDbAtlasSourceArgs(MongoDbAtlasSourceArgs $) {
+        this.additionalColumns = $.additionalColumns;
+        this.batchSize = $.batchSize;
+        this.cursorMethods = $.cursorMethods;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.filter = $.filter;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.queryTimeout = $.queryTimeout;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoDbAtlasSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> additionalColumns;
-        private @Nullable Output<Object> batchSize;
-        private @Nullable Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> filter;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> queryTimeout;
-        private @Nullable Output<Object> sourceRetryCount;
-        private @Nullable Output<Object> sourceRetryWait;
-        private Output<String> type;
+        private MongoDbAtlasSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoDbAtlasSourceArgs();
         }
 
         public Builder(MongoDbAtlasSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.batchSize = defaults.batchSize;
-    	      this.cursorMethods = defaults.cursorMethods;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.filter = defaults.filter;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new MongoDbAtlasSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Output<Object> additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
-        public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Codegen.ofNullable(additionalColumns);
-            return this;
+
+        public Builder additionalColumns(Object additionalColumns) {
+            return additionalColumns(Output.of(additionalColumns));
         }
+
         public Builder batchSize(@Nullable Output<Object> batchSize) {
-            this.batchSize = batchSize;
+            $.batchSize = batchSize;
             return this;
         }
-        public Builder batchSize(@Nullable Object batchSize) {
-            this.batchSize = Codegen.ofNullable(batchSize);
-            return this;
+
+        public Builder batchSize(Object batchSize) {
+            return batchSize(Output.of(batchSize));
         }
+
         public Builder cursorMethods(@Nullable Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods) {
-            this.cursorMethods = cursorMethods;
+            $.cursorMethods = cursorMethods;
             return this;
         }
-        public Builder cursorMethods(@Nullable MongoDbCursorMethodsPropertiesArgs cursorMethods) {
-            this.cursorMethods = Codegen.ofNullable(cursorMethods);
-            return this;
+
+        public Builder cursorMethods(MongoDbCursorMethodsPropertiesArgs cursorMethods) {
+            return cursorMethods(Output.of(cursorMethods));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder filter(@Nullable Output<Object> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable Object filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(Object filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
-            this.queryTimeout = queryTimeout;
+            $.queryTimeout = queryTimeout;
             return this;
         }
-        public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = Codegen.ofNullable(queryTimeout);
-            return this;
+
+        public Builder queryTimeout(Object queryTimeout) {
+            return queryTimeout(Output.of(queryTimeout));
         }
+
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
-        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
-            return this;
+
+        public Builder sourceRetryCount(Object sourceRetryCount) {
+            return sourceRetryCount(Output.of(sourceRetryCount));
         }
+
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
-        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
-            return this;
+
+        public Builder sourceRetryWait(Object sourceRetryWait) {
+            return sourceRetryWait(Output.of(sourceRetryWait));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public MongoDbAtlasSourceArgs build() {
-            return new MongoDbAtlasSourceArgs(additionalColumns, batchSize, cursorMethods, disableMetricsCollection, filter, maxConcurrentConnections, queryTimeout, sourceRetryCount, sourceRetryWait, type);
+            return type(Output.of(type));
+        }
+
+        public MongoDbAtlasSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

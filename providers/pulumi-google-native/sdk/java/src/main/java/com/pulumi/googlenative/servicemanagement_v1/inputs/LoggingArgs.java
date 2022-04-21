@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.LoggingDestinationArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="consumerDestinations")
-      private final @Nullable Output<List<LoggingDestinationArgs>> consumerDestinations;
+    private @Nullable Output<List<LoggingDestinationArgs>> consumerDestinations;
 
-    public Output<List<LoggingDestinationArgs>> consumerDestinations() {
-        return this.consumerDestinations == null ? Codegen.empty() : this.consumerDestinations;
+    public Optional<Output<List<LoggingDestinationArgs>>> consumerDestinations() {
+        return Optional.ofNullable(this.consumerDestinations);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="producerDestinations")
-      private final @Nullable Output<List<LoggingDestinationArgs>> producerDestinations;
+    private @Nullable Output<List<LoggingDestinationArgs>> producerDestinations;
 
-    public Output<List<LoggingDestinationArgs>> producerDestinations() {
-        return this.producerDestinations == null ? Codegen.empty() : this.producerDestinations;
+    public Optional<Output<List<LoggingDestinationArgs>>> producerDestinations() {
+        return Optional.ofNullable(this.producerDestinations);
     }
 
-    public LoggingArgs(
-        @Nullable Output<List<LoggingDestinationArgs>> consumerDestinations,
-        @Nullable Output<List<LoggingDestinationArgs>> producerDestinations) {
-        this.consumerDestinations = consumerDestinations;
-        this.producerDestinations = producerDestinations;
-    }
+    private LoggingArgs() {}
 
-    private LoggingArgs() {
-        this.consumerDestinations = Codegen.empty();
-        this.producerDestinations = Codegen.empty();
+    private LoggingArgs(LoggingArgs $) {
+        this.consumerDestinations = $.consumerDestinations;
+        this.producerDestinations = $.producerDestinations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LoggingDestinationArgs>> consumerDestinations;
-        private @Nullable Output<List<LoggingDestinationArgs>> producerDestinations;
+        private LoggingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingArgs();
         }
 
         public Builder(LoggingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerDestinations = defaults.consumerDestinations;
-    	      this.producerDestinations = defaults.producerDestinations;
+            $ = new LoggingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerDestinations(@Nullable Output<List<LoggingDestinationArgs>> consumerDestinations) {
-            this.consumerDestinations = consumerDestinations;
+            $.consumerDestinations = consumerDestinations;
             return this;
         }
-        public Builder consumerDestinations(@Nullable List<LoggingDestinationArgs> consumerDestinations) {
-            this.consumerDestinations = Codegen.ofNullable(consumerDestinations);
-            return this;
+
+        public Builder consumerDestinations(List<LoggingDestinationArgs> consumerDestinations) {
+            return consumerDestinations(Output.of(consumerDestinations));
         }
+
         public Builder consumerDestinations(LoggingDestinationArgs... consumerDestinations) {
             return consumerDestinations(List.of(consumerDestinations));
         }
+
         public Builder producerDestinations(@Nullable Output<List<LoggingDestinationArgs>> producerDestinations) {
-            this.producerDestinations = producerDestinations;
+            $.producerDestinations = producerDestinations;
             return this;
         }
-        public Builder producerDestinations(@Nullable List<LoggingDestinationArgs> producerDestinations) {
-            this.producerDestinations = Codegen.ofNullable(producerDestinations);
-            return this;
+
+        public Builder producerDestinations(List<LoggingDestinationArgs> producerDestinations) {
+            return producerDestinations(Output.of(producerDestinations));
         }
+
         public Builder producerDestinations(LoggingDestinationArgs... producerDestinations) {
             return producerDestinations(List.of(producerDestinations));
-        }        public LoggingArgs build() {
-            return new LoggingArgs(consumerDestinations, producerDestinations);
+        }
+
+        public LoggingArgs build() {
+            return $;
         }
     }
+
 }

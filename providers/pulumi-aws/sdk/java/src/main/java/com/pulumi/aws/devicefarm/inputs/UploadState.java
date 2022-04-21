@@ -5,9 +5,9 @@ package com.pulumi.aws.devicefarm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="category")
-      private final @Nullable Output<String> category;
+    private @Nullable Output<String> category;
 
-    public Output<String> category() {
-        return this.category == null ? Codegen.empty() : this.category;
+    public Optional<Output<String>> category() {
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<String> metadata;
+    private @Nullable Output<String> metadata;
 
-    public Output<String> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<String>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectArn")
-      private final @Nullable Output<String> projectArn;
+    private @Nullable Output<String> projectArn;
 
-    public Output<String> projectArn() {
-        return this.projectArn == null ? Codegen.empty() : this.projectArn;
+    public Optional<Output<String>> projectArn() {
+        return Optional.ofNullable(this.projectArn);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -97,141 +97,118 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public UploadState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> category,
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> metadata,
-        @Nullable Output<String> name,
-        @Nullable Output<String> projectArn,
-        @Nullable Output<String> type,
-        @Nullable Output<String> url) {
-        this.arn = arn;
-        this.category = category;
-        this.contentType = contentType;
-        this.metadata = metadata;
-        this.name = name;
-        this.projectArn = projectArn;
-        this.type = type;
-        this.url = url;
-    }
+    private UploadState() {}
 
-    private UploadState() {
-        this.arn = Codegen.empty();
-        this.category = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.projectArn = Codegen.empty();
-        this.type = Codegen.empty();
-        this.url = Codegen.empty();
+    private UploadState(UploadState $) {
+        this.arn = $.arn;
+        this.category = $.category;
+        this.contentType = $.contentType;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.projectArn = $.projectArn;
+        this.type = $.type;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UploadState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> category;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> metadata;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> projectArn;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> url;
+        private UploadState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UploadState();
         }
 
         public Builder(UploadState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.category = defaults.category;
-    	      this.contentType = defaults.contentType;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.projectArn = defaults.projectArn;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
+            $ = new UploadState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder category(@Nullable Output<String> category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
-        public Builder category(@Nullable String category) {
-            this.category = Codegen.ofNullable(category);
-            return this;
+
+        public Builder category(String category) {
+            return category(Output.of(category));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder metadata(@Nullable Output<String> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable String metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(String metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder projectArn(@Nullable Output<String> projectArn) {
-            this.projectArn = projectArn;
+            $.projectArn = projectArn;
             return this;
         }
-        public Builder projectArn(@Nullable String projectArn) {
-            this.projectArn = Codegen.ofNullable(projectArn);
-            return this;
+
+        public Builder projectArn(String projectArn) {
+            return projectArn(Output.of(projectArn));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public UploadState build() {
-            return new UploadState(arn, category, contentType, metadata, name, projectArn, type, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public UploadState build() {
+            return $;
         }
     }
+
 }

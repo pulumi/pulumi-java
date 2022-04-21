@@ -24,10 +24,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable String authenticationType;
+    private @Nullable String authenticationType;
 
     public Optional<String> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="batchFrequencyInSeconds")
-      private final @Nullable Integer batchFrequencyInSeconds;
+    private @Nullable Integer batchFrequencyInSeconds;
 
     public Optional<Integer> batchFrequencyInSeconds() {
-        return this.batchFrequencyInSeconds == null ? Optional.empty() : Optional.ofNullable(this.batchFrequencyInSeconds);
+        return Optional.ofNullable(this.batchFrequencyInSeconds);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable String connectionString;
+    private @Nullable String connectionString;
 
     public Optional<String> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -68,10 +68,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="encoding")
-      private final @Nullable String encoding;
+    private @Nullable String encoding;
 
     public Optional<String> encoding() {
-        return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="endpointUri")
-      private final @Nullable String endpointUri;
+    private @Nullable String endpointUri;
 
     public Optional<String> endpointUri() {
-        return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
+        return Optional.ofNullable(this.endpointUri);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="fileNameFormat")
-      private final @Nullable String fileNameFormat;
+    private @Nullable String fileNameFormat;
 
     public Optional<String> fileNameFormat() {
-        return this.fileNameFormat == null ? Optional.empty() : Optional.ofNullable(this.fileNameFormat);
+        return Optional.ofNullable(this.fileNameFormat);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="maxChunkSizeInBytes")
-      private final @Nullable Integer maxChunkSizeInBytes;
+    private @Nullable Integer maxChunkSizeInBytes;
 
     public Optional<Integer> maxChunkSizeInBytes() {
-        return this.maxChunkSizeInBytes == null ? Optional.empty() : Optional.ofNullable(this.maxChunkSizeInBytes);
+        return Optional.ofNullable(this.maxChunkSizeInBytes);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -134,10 +134,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable String resourceGroup;
+    private @Nullable String resourceGroup;
 
     public Optional<String> resourceGroup() {
-        return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -145,145 +145,112 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public RoutingStorageContainerPropertiesResponse(
-        @Nullable String authenticationType,
-        @Nullable Integer batchFrequencyInSeconds,
-        @Nullable String connectionString,
-        String containerName,
-        @Nullable String encoding,
-        @Nullable String endpointUri,
-        @Nullable String fileNameFormat,
-        @Nullable String id,
-        @Nullable Integer maxChunkSizeInBytes,
-        String name,
-        @Nullable String resourceGroup,
-        @Nullable String subscriptionId) {
-        this.authenticationType = authenticationType;
-        this.batchFrequencyInSeconds = batchFrequencyInSeconds;
-        this.connectionString = connectionString;
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.encoding = encoding;
-        this.endpointUri = endpointUri;
-        this.fileNameFormat = fileNameFormat;
-        this.id = id;
-        this.maxChunkSizeInBytes = maxChunkSizeInBytes;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroup = resourceGroup;
-        this.subscriptionId = subscriptionId;
-    }
+    private RoutingStorageContainerPropertiesResponse() {}
 
-    private RoutingStorageContainerPropertiesResponse() {
-        this.authenticationType = null;
-        this.batchFrequencyInSeconds = null;
-        this.connectionString = null;
-        this.containerName = null;
-        this.encoding = null;
-        this.endpointUri = null;
-        this.fileNameFormat = null;
-        this.id = null;
-        this.maxChunkSizeInBytes = null;
-        this.name = null;
-        this.resourceGroup = null;
-        this.subscriptionId = null;
+    private RoutingStorageContainerPropertiesResponse(RoutingStorageContainerPropertiesResponse $) {
+        this.authenticationType = $.authenticationType;
+        this.batchFrequencyInSeconds = $.batchFrequencyInSeconds;
+        this.connectionString = $.connectionString;
+        this.containerName = $.containerName;
+        this.encoding = $.encoding;
+        this.endpointUri = $.endpointUri;
+        this.fileNameFormat = $.fileNameFormat;
+        this.id = $.id;
+        this.maxChunkSizeInBytes = $.maxChunkSizeInBytes;
+        this.name = $.name;
+        this.resourceGroup = $.resourceGroup;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingStorageContainerPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authenticationType;
-        private @Nullable Integer batchFrequencyInSeconds;
-        private @Nullable String connectionString;
-        private String containerName;
-        private @Nullable String encoding;
-        private @Nullable String endpointUri;
-        private @Nullable String fileNameFormat;
-        private @Nullable String id;
-        private @Nullable Integer maxChunkSizeInBytes;
-        private String name;
-        private @Nullable String resourceGroup;
-        private @Nullable String subscriptionId;
+        private RoutingStorageContainerPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingStorageContainerPropertiesResponse();
         }
 
         public Builder(RoutingStorageContainerPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.batchFrequencyInSeconds = defaults.batchFrequencyInSeconds;
-    	      this.connectionString = defaults.connectionString;
-    	      this.containerName = defaults.containerName;
-    	      this.encoding = defaults.encoding;
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.fileNameFormat = defaults.fileNameFormat;
-    	      this.id = defaults.id;
-    	      this.maxChunkSizeInBytes = defaults.maxChunkSizeInBytes;
-    	      this.name = defaults.name;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new RoutingStorageContainerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder batchFrequencyInSeconds(@Nullable Integer batchFrequencyInSeconds) {
-            this.batchFrequencyInSeconds = batchFrequencyInSeconds;
+            $.batchFrequencyInSeconds = batchFrequencyInSeconds;
             return this;
         }
+
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
+
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = endpointUri;
+            $.endpointUri = endpointUri;
             return this;
         }
+
         public Builder fileNameFormat(@Nullable String fileNameFormat) {
-            this.fileNameFormat = fileNameFormat;
+            $.fileNameFormat = fileNameFormat;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder maxChunkSizeInBytes(@Nullable Integer maxChunkSizeInBytes) {
-            this.maxChunkSizeInBytes = maxChunkSizeInBytes;
+            $.maxChunkSizeInBytes = maxChunkSizeInBytes;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public RoutingStorageContainerPropertiesResponse build() {
-            return new RoutingStorageContainerPropertiesResponse(authenticationType, batchFrequencyInSeconds, connectionString, containerName, encoding, endpointUri, fileNameFormat, id, maxChunkSizeInBytes, name, resourceGroup, subscriptionId);
+        }
+
+        public RoutingStorageContainerPropertiesResponse build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

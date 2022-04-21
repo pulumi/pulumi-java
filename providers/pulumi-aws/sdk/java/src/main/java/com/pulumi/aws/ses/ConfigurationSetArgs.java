@@ -6,10 +6,10 @@ package com.pulumi.aws.ses;
 import com.pulumi.aws.ses.inputs.ConfigurationSetDeliveryOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConfigurationSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deliveryOptions")
-      private final @Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
+    private @Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
 
-    public Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions() {
-        return this.deliveryOptions == null ? Codegen.empty() : this.deliveryOptions;
+    public Optional<Output<ConfigurationSetDeliveryOptionsArgs>> deliveryOptions() {
+        return Optional.ofNullable(this.deliveryOptions);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConfigurationSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConfigurationSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="reputationMetricsEnabled")
-      private final @Nullable Output<Boolean> reputationMetricsEnabled;
+    private @Nullable Output<Boolean> reputationMetricsEnabled;
 
-    public Output<Boolean> reputationMetricsEnabled() {
-        return this.reputationMetricsEnabled == null ? Codegen.empty() : this.reputationMetricsEnabled;
+    public Optional<Output<Boolean>> reputationMetricsEnabled() {
+        return Optional.ofNullable(this.reputationMetricsEnabled);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class ConfigurationSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sendingEnabled")
-      private final @Nullable Output<Boolean> sendingEnabled;
+    private @Nullable Output<Boolean> sendingEnabled;
 
-    public Output<Boolean> sendingEnabled() {
-        return this.sendingEnabled == null ? Codegen.empty() : this.sendingEnabled;
+    public Optional<Output<Boolean>> sendingEnabled() {
+        return Optional.ofNullable(this.sendingEnabled);
     }
 
-    public ConfigurationSetArgs(
-        @Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> reputationMetricsEnabled,
-        @Nullable Output<Boolean> sendingEnabled) {
-        this.deliveryOptions = deliveryOptions;
-        this.name = name;
-        this.reputationMetricsEnabled = reputationMetricsEnabled;
-        this.sendingEnabled = sendingEnabled;
-    }
+    private ConfigurationSetArgs() {}
 
-    private ConfigurationSetArgs() {
-        this.deliveryOptions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.reputationMetricsEnabled = Codegen.empty();
-        this.sendingEnabled = Codegen.empty();
+    private ConfigurationSetArgs(ConfigurationSetArgs $) {
+        this.deliveryOptions = $.deliveryOptions;
+        this.name = $.name;
+        this.reputationMetricsEnabled = $.reputationMetricsEnabled;
+        this.sendingEnabled = $.sendingEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> reputationMetricsEnabled;
-        private @Nullable Output<Boolean> sendingEnabled;
+        private ConfigurationSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationSetArgs();
         }
 
         public Builder(ConfigurationSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryOptions = defaults.deliveryOptions;
-    	      this.name = defaults.name;
-    	      this.reputationMetricsEnabled = defaults.reputationMetricsEnabled;
-    	      this.sendingEnabled = defaults.sendingEnabled;
+            $ = new ConfigurationSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryOptions(@Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions) {
-            this.deliveryOptions = deliveryOptions;
+            $.deliveryOptions = deliveryOptions;
             return this;
         }
-        public Builder deliveryOptions(@Nullable ConfigurationSetDeliveryOptionsArgs deliveryOptions) {
-            this.deliveryOptions = Codegen.ofNullable(deliveryOptions);
-            return this;
+
+        public Builder deliveryOptions(ConfigurationSetDeliveryOptionsArgs deliveryOptions) {
+            return deliveryOptions(Output.of(deliveryOptions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder reputationMetricsEnabled(@Nullable Output<Boolean> reputationMetricsEnabled) {
-            this.reputationMetricsEnabled = reputationMetricsEnabled;
+            $.reputationMetricsEnabled = reputationMetricsEnabled;
             return this;
         }
-        public Builder reputationMetricsEnabled(@Nullable Boolean reputationMetricsEnabled) {
-            this.reputationMetricsEnabled = Codegen.ofNullable(reputationMetricsEnabled);
-            return this;
+
+        public Builder reputationMetricsEnabled(Boolean reputationMetricsEnabled) {
+            return reputationMetricsEnabled(Output.of(reputationMetricsEnabled));
         }
+
         public Builder sendingEnabled(@Nullable Output<Boolean> sendingEnabled) {
-            this.sendingEnabled = sendingEnabled;
+            $.sendingEnabled = sendingEnabled;
             return this;
         }
-        public Builder sendingEnabled(@Nullable Boolean sendingEnabled) {
-            this.sendingEnabled = Codegen.ofNullable(sendingEnabled);
-            return this;
-        }        public ConfigurationSetArgs build() {
-            return new ConfigurationSetArgs(deliveryOptions, name, reputationMetricsEnabled, sendingEnabled);
+
+        public Builder sendingEnabled(Boolean sendingEnabled) {
+            return sendingEnabled(Output.of(sendingEnabled));
+        }
+
+        public ConfigurationSetArgs build() {
+            return $;
         }
     }
+
 }

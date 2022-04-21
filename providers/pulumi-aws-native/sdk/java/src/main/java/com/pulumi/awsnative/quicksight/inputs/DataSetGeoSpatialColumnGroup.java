@@ -25,17 +25,17 @@ public final class DataSetGeoSpatialColumnGroup extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="columns", required=true)
-      private final List<String> columns;
+    private List<String> columns;
 
     public List<String> columns() {
         return this.columns;
     }
 
     @Import(name="countryCode")
-      private final @Nullable DataSetGeoSpatialCountryCode countryCode;
+    private @Nullable DataSetGeoSpatialCountryCode countryCode;
 
     public Optional<DataSetGeoSpatialCountryCode> countryCode() {
-        return this.countryCode == null ? Optional.empty() : Optional.ofNullable(this.countryCode);
+        return Optional.ofNullable(this.countryCode);
     }
 
     /**
@@ -43,67 +43,62 @@ public final class DataSetGeoSpatialColumnGroup extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public DataSetGeoSpatialColumnGroup(
-        List<String> columns,
-        @Nullable DataSetGeoSpatialCountryCode countryCode,
-        String name) {
-        this.columns = Objects.requireNonNull(columns, "expected parameter 'columns' to be non-null");
-        this.countryCode = countryCode;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private DataSetGeoSpatialColumnGroup() {}
 
-    private DataSetGeoSpatialColumnGroup() {
-        this.columns = List.of();
-        this.countryCode = null;
-        this.name = null;
+    private DataSetGeoSpatialColumnGroup(DataSetGeoSpatialColumnGroup $) {
+        this.columns = $.columns;
+        this.countryCode = $.countryCode;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetGeoSpatialColumnGroup defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> columns;
-        private @Nullable DataSetGeoSpatialCountryCode countryCode;
-        private String name;
+        private DataSetGeoSpatialColumnGroup $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetGeoSpatialColumnGroup();
         }
 
         public Builder(DataSetGeoSpatialColumnGroup defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.countryCode = defaults.countryCode;
-    	      this.name = defaults.name;
+            $ = new DataSetGeoSpatialColumnGroup(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(List<String> columns) {
-            this.columns = Objects.requireNonNull(columns);
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(String... columns) {
             return columns(List.of(columns));
         }
+
         public Builder countryCode(@Nullable DataSetGeoSpatialCountryCode countryCode) {
-            this.countryCode = countryCode;
+            $.countryCode = countryCode;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public DataSetGeoSpatialColumnGroup build() {
-            return new DataSetGeoSpatialColumnGroup(columns, countryCode, name);
+        }
+
+        public DataSetGeoSpatialColumnGroup build() {
+            $.columns = Objects.requireNonNull($.columns, "expected parameter 'columns' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

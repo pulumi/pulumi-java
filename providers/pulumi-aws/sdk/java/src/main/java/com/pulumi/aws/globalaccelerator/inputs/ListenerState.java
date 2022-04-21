@@ -6,10 +6,10 @@ package com.pulumi.aws.globalaccelerator.inputs;
 import com.pulumi.aws.globalaccelerator.inputs.ListenerPortRangeGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceleratorArn")
-      private final @Nullable Output<String> acceleratorArn;
+    private @Nullable Output<String> acceleratorArn;
 
-    public Output<String> acceleratorArn() {
-        return this.acceleratorArn == null ? Codegen.empty() : this.acceleratorArn;
+    public Optional<Output<String>> acceleratorArn() {
+        return Optional.ofNullable(this.acceleratorArn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientAffinity")
-      private final @Nullable Output<String> clientAffinity;
+    private @Nullable Output<String> clientAffinity;
 
-    public Output<String> clientAffinity() {
-        return this.clientAffinity == null ? Codegen.empty() : this.clientAffinity;
+    public Optional<Output<String>> clientAffinity() {
+        return Optional.ofNullable(this.clientAffinity);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portRanges")
-      private final @Nullable Output<List<ListenerPortRangeGetArgs>> portRanges;
+    private @Nullable Output<List<ListenerPortRangeGetArgs>> portRanges;
 
-    public Output<List<ListenerPortRangeGetArgs>> portRanges() {
-        return this.portRanges == null ? Codegen.empty() : this.portRanges;
+    public Optional<Output<List<ListenerPortRangeGetArgs>>> portRanges() {
+        return Optional.ofNullable(this.portRanges);
     }
 
     /**
@@ -55,92 +55,82 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public ListenerState(
-        @Nullable Output<String> acceleratorArn,
-        @Nullable Output<String> clientAffinity,
-        @Nullable Output<List<ListenerPortRangeGetArgs>> portRanges,
-        @Nullable Output<String> protocol) {
-        this.acceleratorArn = acceleratorArn;
-        this.clientAffinity = clientAffinity;
-        this.portRanges = portRanges;
-        this.protocol = protocol;
-    }
+    private ListenerState() {}
 
-    private ListenerState() {
-        this.acceleratorArn = Codegen.empty();
-        this.clientAffinity = Codegen.empty();
-        this.portRanges = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private ListenerState(ListenerState $) {
+        this.acceleratorArn = $.acceleratorArn;
+        this.clientAffinity = $.clientAffinity;
+        this.portRanges = $.portRanges;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceleratorArn;
-        private @Nullable Output<String> clientAffinity;
-        private @Nullable Output<List<ListenerPortRangeGetArgs>> portRanges;
-        private @Nullable Output<String> protocol;
+        private ListenerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerState();
         }
 
         public Builder(ListenerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorArn = defaults.acceleratorArn;
-    	      this.clientAffinity = defaults.clientAffinity;
-    	      this.portRanges = defaults.portRanges;
-    	      this.protocol = defaults.protocol;
+            $ = new ListenerState(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorArn(@Nullable Output<String> acceleratorArn) {
-            this.acceleratorArn = acceleratorArn;
+            $.acceleratorArn = acceleratorArn;
             return this;
         }
-        public Builder acceleratorArn(@Nullable String acceleratorArn) {
-            this.acceleratorArn = Codegen.ofNullable(acceleratorArn);
-            return this;
+
+        public Builder acceleratorArn(String acceleratorArn) {
+            return acceleratorArn(Output.of(acceleratorArn));
         }
+
         public Builder clientAffinity(@Nullable Output<String> clientAffinity) {
-            this.clientAffinity = clientAffinity;
+            $.clientAffinity = clientAffinity;
             return this;
         }
-        public Builder clientAffinity(@Nullable String clientAffinity) {
-            this.clientAffinity = Codegen.ofNullable(clientAffinity);
-            return this;
+
+        public Builder clientAffinity(String clientAffinity) {
+            return clientAffinity(Output.of(clientAffinity));
         }
+
         public Builder portRanges(@Nullable Output<List<ListenerPortRangeGetArgs>> portRanges) {
-            this.portRanges = portRanges;
+            $.portRanges = portRanges;
             return this;
         }
-        public Builder portRanges(@Nullable List<ListenerPortRangeGetArgs> portRanges) {
-            this.portRanges = Codegen.ofNullable(portRanges);
-            return this;
+
+        public Builder portRanges(List<ListenerPortRangeGetArgs> portRanges) {
+            return portRanges(Output.of(portRanges));
         }
+
         public Builder portRanges(ListenerPortRangeGetArgs... portRanges) {
             return portRanges(List.of(portRanges));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public ListenerState build() {
-            return new ListenerState(acceleratorArn, clientAffinity, portRanges, protocol);
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public ListenerState build() {
+            return $;
         }
     }
+
 }

@@ -10,11 +10,11 @@ import com.pulumi.aws.elastictranscoder.inputs.PresetVideoGetArgs;
 import com.pulumi.aws.elastictranscoder.inputs.PresetVideoWatermarkGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audio")
-      private final @Nullable Output<PresetAudioGetArgs> audio;
+    private @Nullable Output<PresetAudioGetArgs> audio;
 
-    public Output<PresetAudioGetArgs> audio() {
-        return this.audio == null ? Codegen.empty() : this.audio;
+    public Optional<Output<PresetAudioGetArgs>> audio() {
+        return Optional.ofNullable(this.audio);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audioCodecOptions")
-      private final @Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions;
+    private @Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions;
 
-    public Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions() {
-        return this.audioCodecOptions == null ? Codegen.empty() : this.audioCodecOptions;
+    public Optional<Output<PresetAudioCodecOptionsGetArgs>> audioCodecOptions() {
+        return Optional.ofNullable(this.audioCodecOptions);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="container")
-      private final @Nullable Output<String> container;
+    private @Nullable Output<String> container;
 
-    public Output<String> container() {
-        return this.container == null ? Codegen.empty() : this.container;
+    public Optional<Output<String>> container() {
+        return Optional.ofNullable(this.container);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -93,17 +93,17 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thumbnails")
-      private final @Nullable Output<PresetThumbnailsGetArgs> thumbnails;
+    private @Nullable Output<PresetThumbnailsGetArgs> thumbnails;
 
-    public Output<PresetThumbnailsGetArgs> thumbnails() {
-        return this.thumbnails == null ? Codegen.empty() : this.thumbnails;
+    public Optional<Output<PresetThumbnailsGetArgs>> thumbnails() {
+        return Optional.ofNullable(this.thumbnails);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="video")
-      private final @Nullable Output<PresetVideoGetArgs> video;
+    private @Nullable Output<PresetVideoGetArgs> video;
 
-    public Output<PresetVideoGetArgs> video() {
-        return this.video == null ? Codegen.empty() : this.video;
+    public Optional<Output<PresetVideoGetArgs>> video() {
+        return Optional.ofNullable(this.video);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="videoCodecOptions")
-      private final @Nullable Output<Map<String,String>> videoCodecOptions;
+    private @Nullable Output<Map<String,String>> videoCodecOptions;
 
-    public Output<Map<String,String>> videoCodecOptions() {
-        return this.videoCodecOptions == null ? Codegen.empty() : this.videoCodecOptions;
+    public Optional<Output<Map<String,String>>> videoCodecOptions() {
+        return Optional.ofNullable(this.videoCodecOptions);
     }
 
     /**
@@ -133,183 +133,152 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="videoWatermarks")
-      private final @Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks;
+    private @Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks;
 
-    public Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks() {
-        return this.videoWatermarks == null ? Codegen.empty() : this.videoWatermarks;
+    public Optional<Output<List<PresetVideoWatermarkGetArgs>>> videoWatermarks() {
+        return Optional.ofNullable(this.videoWatermarks);
     }
 
-    public PresetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<PresetAudioGetArgs> audio,
-        @Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions,
-        @Nullable Output<String> container,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<PresetThumbnailsGetArgs> thumbnails,
-        @Nullable Output<String> type,
-        @Nullable Output<PresetVideoGetArgs> video,
-        @Nullable Output<Map<String,String>> videoCodecOptions,
-        @Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks) {
-        this.arn = arn;
-        this.audio = audio;
-        this.audioCodecOptions = audioCodecOptions;
-        this.container = container;
-        this.description = description;
-        this.name = name;
-        this.thumbnails = thumbnails;
-        this.type = type;
-        this.video = video;
-        this.videoCodecOptions = videoCodecOptions;
-        this.videoWatermarks = videoWatermarks;
-    }
+    private PresetState() {}
 
-    private PresetState() {
-        this.arn = Codegen.empty();
-        this.audio = Codegen.empty();
-        this.audioCodecOptions = Codegen.empty();
-        this.container = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.thumbnails = Codegen.empty();
-        this.type = Codegen.empty();
-        this.video = Codegen.empty();
-        this.videoCodecOptions = Codegen.empty();
-        this.videoWatermarks = Codegen.empty();
+    private PresetState(PresetState $) {
+        this.arn = $.arn;
+        this.audio = $.audio;
+        this.audioCodecOptions = $.audioCodecOptions;
+        this.container = $.container;
+        this.description = $.description;
+        this.name = $.name;
+        this.thumbnails = $.thumbnails;
+        this.type = $.type;
+        this.video = $.video;
+        this.videoCodecOptions = $.videoCodecOptions;
+        this.videoWatermarks = $.videoWatermarks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PresetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<PresetAudioGetArgs> audio;
-        private @Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions;
-        private @Nullable Output<String> container;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<PresetThumbnailsGetArgs> thumbnails;
-        private @Nullable Output<String> type;
-        private @Nullable Output<PresetVideoGetArgs> video;
-        private @Nullable Output<Map<String,String>> videoCodecOptions;
-        private @Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks;
+        private PresetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PresetState();
         }
 
         public Builder(PresetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.audio = defaults.audio;
-    	      this.audioCodecOptions = defaults.audioCodecOptions;
-    	      this.container = defaults.container;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.thumbnails = defaults.thumbnails;
-    	      this.type = defaults.type;
-    	      this.video = defaults.video;
-    	      this.videoCodecOptions = defaults.videoCodecOptions;
-    	      this.videoWatermarks = defaults.videoWatermarks;
+            $ = new PresetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder audio(@Nullable Output<PresetAudioGetArgs> audio) {
-            this.audio = audio;
+            $.audio = audio;
             return this;
         }
-        public Builder audio(@Nullable PresetAudioGetArgs audio) {
-            this.audio = Codegen.ofNullable(audio);
-            return this;
+
+        public Builder audio(PresetAudioGetArgs audio) {
+            return audio(Output.of(audio));
         }
+
         public Builder audioCodecOptions(@Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions) {
-            this.audioCodecOptions = audioCodecOptions;
+            $.audioCodecOptions = audioCodecOptions;
             return this;
         }
-        public Builder audioCodecOptions(@Nullable PresetAudioCodecOptionsGetArgs audioCodecOptions) {
-            this.audioCodecOptions = Codegen.ofNullable(audioCodecOptions);
-            return this;
+
+        public Builder audioCodecOptions(PresetAudioCodecOptionsGetArgs audioCodecOptions) {
+            return audioCodecOptions(Output.of(audioCodecOptions));
         }
+
         public Builder container(@Nullable Output<String> container) {
-            this.container = container;
+            $.container = container;
             return this;
         }
-        public Builder container(@Nullable String container) {
-            this.container = Codegen.ofNullable(container);
-            return this;
+
+        public Builder container(String container) {
+            return container(Output.of(container));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder thumbnails(@Nullable Output<PresetThumbnailsGetArgs> thumbnails) {
-            this.thumbnails = thumbnails;
+            $.thumbnails = thumbnails;
             return this;
         }
-        public Builder thumbnails(@Nullable PresetThumbnailsGetArgs thumbnails) {
-            this.thumbnails = Codegen.ofNullable(thumbnails);
-            return this;
+
+        public Builder thumbnails(PresetThumbnailsGetArgs thumbnails) {
+            return thumbnails(Output.of(thumbnails));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder video(@Nullable Output<PresetVideoGetArgs> video) {
-            this.video = video;
+            $.video = video;
             return this;
         }
-        public Builder video(@Nullable PresetVideoGetArgs video) {
-            this.video = Codegen.ofNullable(video);
-            return this;
+
+        public Builder video(PresetVideoGetArgs video) {
+            return video(Output.of(video));
         }
+
         public Builder videoCodecOptions(@Nullable Output<Map<String,String>> videoCodecOptions) {
-            this.videoCodecOptions = videoCodecOptions;
+            $.videoCodecOptions = videoCodecOptions;
             return this;
         }
-        public Builder videoCodecOptions(@Nullable Map<String,String> videoCodecOptions) {
-            this.videoCodecOptions = Codegen.ofNullable(videoCodecOptions);
-            return this;
+
+        public Builder videoCodecOptions(Map<String,String> videoCodecOptions) {
+            return videoCodecOptions(Output.of(videoCodecOptions));
         }
+
         public Builder videoWatermarks(@Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks) {
-            this.videoWatermarks = videoWatermarks;
+            $.videoWatermarks = videoWatermarks;
             return this;
         }
-        public Builder videoWatermarks(@Nullable List<PresetVideoWatermarkGetArgs> videoWatermarks) {
-            this.videoWatermarks = Codegen.ofNullable(videoWatermarks);
-            return this;
+
+        public Builder videoWatermarks(List<PresetVideoWatermarkGetArgs> videoWatermarks) {
+            return videoWatermarks(Output.of(videoWatermarks));
         }
+
         public Builder videoWatermarks(PresetVideoWatermarkGetArgs... videoWatermarks) {
             return videoWatermarks(List.of(videoWatermarks));
-        }        public PresetState build() {
-            return new PresetState(arn, audio, audioCodecOptions, container, description, name, thumbnails, type, video, videoCodecOptions, videoWatermarks);
+        }
+
+        public PresetState build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigGetArgs extends com.p
     public static final NodePoolNodeConfigWorkloadMetadataConfigGetArgs Empty = new NodePoolNodeConfigWorkloadMetadataConfigGetArgs();
 
     @Import(name="mode", required=true)
-      private final Output<String> mode;
+    private Output<String> mode;
 
     public Output<String> mode() {
         return this.mode;
     }
 
-    public NodePoolNodeConfigWorkloadMetadataConfigGetArgs(Output<String> mode) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private NodePoolNodeConfigWorkloadMetadataConfigGetArgs() {}
 
-    private NodePoolNodeConfigWorkloadMetadataConfigGetArgs() {
-        this.mode = Codegen.empty();
+    private NodePoolNodeConfigWorkloadMetadataConfigGetArgs(NodePoolNodeConfigWorkloadMetadataConfigGetArgs $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolNodeConfigWorkloadMetadataConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> mode;
+        private NodePoolNodeConfigWorkloadMetadataConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolNodeConfigWorkloadMetadataConfigGetArgs();
         }
 
         public Builder(NodePoolNodeConfigWorkloadMetadataConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new NodePoolNodeConfigWorkloadMetadataConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(Output<String> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
-        }        public NodePoolNodeConfigWorkloadMetadataConfigGetArgs build() {
-            return new NodePoolNodeConfigWorkloadMetadataConfigGetArgs(mode);
+            return mode(Output.of(mode));
+        }
+
+        public NodePoolNodeConfigWorkloadMetadataConfigGetArgs build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

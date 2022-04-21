@@ -9,12 +9,12 @@ import com.pulumi.azurenative.batch.inputs.TaskContainerSettingsArgs;
 import com.pulumi.azurenative.batch.inputs.UserIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="commandLine")
-      private final @Nullable Output<String> commandLine;
+    private @Nullable Output<String> commandLine;
 
-    public Output<String> commandLine() {
-        return this.commandLine == null ? Codegen.empty() : this.commandLine;
+    public Optional<Output<String>> commandLine() {
+        return Optional.ofNullable(this.commandLine);
     }
 
     /**
@@ -42,17 +42,17 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerSettings")
-      private final @Nullable Output<TaskContainerSettingsArgs> containerSettings;
+    private @Nullable Output<TaskContainerSettingsArgs> containerSettings;
 
-    public Output<TaskContainerSettingsArgs> containerSettings() {
-        return this.containerSettings == null ? Codegen.empty() : this.containerSettings;
+    public Optional<Output<TaskContainerSettingsArgs>> containerSettings() {
+        return Optional.ofNullable(this.containerSettings);
     }
 
     @Import(name="environmentSettings")
-      private final @Nullable Output<List<EnvironmentSettingArgs>> environmentSettings;
+    private @Nullable Output<List<EnvironmentSettingArgs>> environmentSettings;
 
-    public Output<List<EnvironmentSettingArgs>> environmentSettings() {
-        return this.environmentSettings == null ? Codegen.empty() : this.environmentSettings;
+    public Optional<Output<List<EnvironmentSettingArgs>>> environmentSettings() {
+        return Optional.ofNullable(this.environmentSettings);
     }
 
     /**
@@ -60,17 +60,17 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxTaskRetryCount")
-      private final @Nullable Output<Integer> maxTaskRetryCount;
+    private @Nullable Output<Integer> maxTaskRetryCount;
 
-    public Output<Integer> maxTaskRetryCount() {
-        return this.maxTaskRetryCount == null ? Codegen.empty() : this.maxTaskRetryCount;
+    public Optional<Output<Integer>> maxTaskRetryCount() {
+        return Optional.ofNullable(this.maxTaskRetryCount);
     }
 
     @Import(name="resourceFiles")
-      private final @Nullable Output<List<ResourceFileArgs>> resourceFiles;
+    private @Nullable Output<List<ResourceFileArgs>> resourceFiles;
 
-    public Output<List<ResourceFileArgs>> resourceFiles() {
-        return this.resourceFiles == null ? Codegen.empty() : this.resourceFiles;
+    public Optional<Output<List<ResourceFileArgs>>> resourceFiles() {
+        return Optional.ofNullable(this.resourceFiles);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userIdentity")
-      private final @Nullable Output<UserIdentityArgs> userIdentity;
+    private @Nullable Output<UserIdentityArgs> userIdentity;
 
-    public Output<UserIdentityArgs> userIdentity() {
-        return this.userIdentity == null ? Codegen.empty() : this.userIdentity;
+    public Optional<Output<UserIdentityArgs>> userIdentity() {
+        return Optional.ofNullable(this.userIdentity);
     }
 
     /**
@@ -89,134 +89,116 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="waitForSuccess")
-      private final @Nullable Output<Boolean> waitForSuccess;
+    private @Nullable Output<Boolean> waitForSuccess;
 
-    public Output<Boolean> waitForSuccess() {
-        return this.waitForSuccess == null ? Codegen.empty() : this.waitForSuccess;
+    public Optional<Output<Boolean>> waitForSuccess() {
+        return Optional.ofNullable(this.waitForSuccess);
     }
 
-    public StartTaskArgs(
-        @Nullable Output<String> commandLine,
-        @Nullable Output<TaskContainerSettingsArgs> containerSettings,
-        @Nullable Output<List<EnvironmentSettingArgs>> environmentSettings,
-        @Nullable Output<Integer> maxTaskRetryCount,
-        @Nullable Output<List<ResourceFileArgs>> resourceFiles,
-        @Nullable Output<UserIdentityArgs> userIdentity,
-        @Nullable Output<Boolean> waitForSuccess) {
-        this.commandLine = commandLine;
-        this.containerSettings = containerSettings;
-        this.environmentSettings = environmentSettings;
-        this.maxTaskRetryCount = maxTaskRetryCount;
-        this.resourceFiles = resourceFiles;
-        this.userIdentity = userIdentity;
-        this.waitForSuccess = waitForSuccess;
-    }
+    private StartTaskArgs() {}
 
-    private StartTaskArgs() {
-        this.commandLine = Codegen.empty();
-        this.containerSettings = Codegen.empty();
-        this.environmentSettings = Codegen.empty();
-        this.maxTaskRetryCount = Codegen.empty();
-        this.resourceFiles = Codegen.empty();
-        this.userIdentity = Codegen.empty();
-        this.waitForSuccess = Codegen.empty();
+    private StartTaskArgs(StartTaskArgs $) {
+        this.commandLine = $.commandLine;
+        this.containerSettings = $.containerSettings;
+        this.environmentSettings = $.environmentSettings;
+        this.maxTaskRetryCount = $.maxTaskRetryCount;
+        this.resourceFiles = $.resourceFiles;
+        this.userIdentity = $.userIdentity;
+        this.waitForSuccess = $.waitForSuccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StartTaskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> commandLine;
-        private @Nullable Output<TaskContainerSettingsArgs> containerSettings;
-        private @Nullable Output<List<EnvironmentSettingArgs>> environmentSettings;
-        private @Nullable Output<Integer> maxTaskRetryCount;
-        private @Nullable Output<List<ResourceFileArgs>> resourceFiles;
-        private @Nullable Output<UserIdentityArgs> userIdentity;
-        private @Nullable Output<Boolean> waitForSuccess;
+        private StartTaskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StartTaskArgs();
         }
 
         public Builder(StartTaskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commandLine = defaults.commandLine;
-    	      this.containerSettings = defaults.containerSettings;
-    	      this.environmentSettings = defaults.environmentSettings;
-    	      this.maxTaskRetryCount = defaults.maxTaskRetryCount;
-    	      this.resourceFiles = defaults.resourceFiles;
-    	      this.userIdentity = defaults.userIdentity;
-    	      this.waitForSuccess = defaults.waitForSuccess;
+            $ = new StartTaskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commandLine(@Nullable Output<String> commandLine) {
-            this.commandLine = commandLine;
+            $.commandLine = commandLine;
             return this;
         }
-        public Builder commandLine(@Nullable String commandLine) {
-            this.commandLine = Codegen.ofNullable(commandLine);
-            return this;
+
+        public Builder commandLine(String commandLine) {
+            return commandLine(Output.of(commandLine));
         }
+
         public Builder containerSettings(@Nullable Output<TaskContainerSettingsArgs> containerSettings) {
-            this.containerSettings = containerSettings;
+            $.containerSettings = containerSettings;
             return this;
         }
-        public Builder containerSettings(@Nullable TaskContainerSettingsArgs containerSettings) {
-            this.containerSettings = Codegen.ofNullable(containerSettings);
-            return this;
+
+        public Builder containerSettings(TaskContainerSettingsArgs containerSettings) {
+            return containerSettings(Output.of(containerSettings));
         }
+
         public Builder environmentSettings(@Nullable Output<List<EnvironmentSettingArgs>> environmentSettings) {
-            this.environmentSettings = environmentSettings;
+            $.environmentSettings = environmentSettings;
             return this;
         }
-        public Builder environmentSettings(@Nullable List<EnvironmentSettingArgs> environmentSettings) {
-            this.environmentSettings = Codegen.ofNullable(environmentSettings);
-            return this;
+
+        public Builder environmentSettings(List<EnvironmentSettingArgs> environmentSettings) {
+            return environmentSettings(Output.of(environmentSettings));
         }
+
         public Builder environmentSettings(EnvironmentSettingArgs... environmentSettings) {
             return environmentSettings(List.of(environmentSettings));
         }
+
         public Builder maxTaskRetryCount(@Nullable Output<Integer> maxTaskRetryCount) {
-            this.maxTaskRetryCount = maxTaskRetryCount;
+            $.maxTaskRetryCount = maxTaskRetryCount;
             return this;
         }
-        public Builder maxTaskRetryCount(@Nullable Integer maxTaskRetryCount) {
-            this.maxTaskRetryCount = Codegen.ofNullable(maxTaskRetryCount);
-            return this;
+
+        public Builder maxTaskRetryCount(Integer maxTaskRetryCount) {
+            return maxTaskRetryCount(Output.of(maxTaskRetryCount));
         }
+
         public Builder resourceFiles(@Nullable Output<List<ResourceFileArgs>> resourceFiles) {
-            this.resourceFiles = resourceFiles;
+            $.resourceFiles = resourceFiles;
             return this;
         }
-        public Builder resourceFiles(@Nullable List<ResourceFileArgs> resourceFiles) {
-            this.resourceFiles = Codegen.ofNullable(resourceFiles);
-            return this;
+
+        public Builder resourceFiles(List<ResourceFileArgs> resourceFiles) {
+            return resourceFiles(Output.of(resourceFiles));
         }
+
         public Builder resourceFiles(ResourceFileArgs... resourceFiles) {
             return resourceFiles(List.of(resourceFiles));
         }
+
         public Builder userIdentity(@Nullable Output<UserIdentityArgs> userIdentity) {
-            this.userIdentity = userIdentity;
+            $.userIdentity = userIdentity;
             return this;
         }
-        public Builder userIdentity(@Nullable UserIdentityArgs userIdentity) {
-            this.userIdentity = Codegen.ofNullable(userIdentity);
-            return this;
+
+        public Builder userIdentity(UserIdentityArgs userIdentity) {
+            return userIdentity(Output.of(userIdentity));
         }
+
         public Builder waitForSuccess(@Nullable Output<Boolean> waitForSuccess) {
-            this.waitForSuccess = waitForSuccess;
+            $.waitForSuccess = waitForSuccess;
             return this;
         }
-        public Builder waitForSuccess(@Nullable Boolean waitForSuccess) {
-            this.waitForSuccess = Codegen.ofNullable(waitForSuccess);
-            return this;
-        }        public StartTaskArgs build() {
-            return new StartTaskArgs(commandLine, containerSettings, environmentSettings, maxTaskRetryCount, resourceFiles, userIdentity, waitForSuccess);
+
+        public Builder waitForSuccess(Boolean waitForSuccess) {
+            return waitForSuccess(Output.of(waitForSuccess));
+        }
+
+        public StartTaskArgs build() {
+            return $;
         }
     }
+
 }

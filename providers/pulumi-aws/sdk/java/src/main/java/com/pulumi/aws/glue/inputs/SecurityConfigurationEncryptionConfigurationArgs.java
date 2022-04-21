@@ -8,7 +8,6 @@ import com.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationJo
 import com.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationS3EncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -17,14 +16,14 @@ public final class SecurityConfigurationEncryptionConfigurationArgs extends com.
     public static final SecurityConfigurationEncryptionConfigurationArgs Empty = new SecurityConfigurationEncryptionConfigurationArgs();
 
     @Import(name="cloudwatchEncryption", required=true)
-      private final Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption;
+    private Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption;
 
     public Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption() {
         return this.cloudwatchEncryption;
     }
 
     @Import(name="jobBookmarksEncryption", required=true)
-      private final Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption;
+    private Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption;
 
     public Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption() {
         return this.jobBookmarksEncryption;
@@ -35,76 +34,71 @@ public final class SecurityConfigurationEncryptionConfigurationArgs extends com.
      * 
      */
     @Import(name="s3Encryption", required=true)
-      private final Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption;
+    private Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption;
 
     public Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption() {
         return this.s3Encryption;
     }
 
-    public SecurityConfigurationEncryptionConfigurationArgs(
-        Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption,
-        Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption,
-        Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption) {
-        this.cloudwatchEncryption = Objects.requireNonNull(cloudwatchEncryption, "expected parameter 'cloudwatchEncryption' to be non-null");
-        this.jobBookmarksEncryption = Objects.requireNonNull(jobBookmarksEncryption, "expected parameter 'jobBookmarksEncryption' to be non-null");
-        this.s3Encryption = Objects.requireNonNull(s3Encryption, "expected parameter 's3Encryption' to be non-null");
-    }
+    private SecurityConfigurationEncryptionConfigurationArgs() {}
 
-    private SecurityConfigurationEncryptionConfigurationArgs() {
-        this.cloudwatchEncryption = Codegen.empty();
-        this.jobBookmarksEncryption = Codegen.empty();
-        this.s3Encryption = Codegen.empty();
+    private SecurityConfigurationEncryptionConfigurationArgs(SecurityConfigurationEncryptionConfigurationArgs $) {
+        this.cloudwatchEncryption = $.cloudwatchEncryption;
+        this.jobBookmarksEncryption = $.jobBookmarksEncryption;
+        this.s3Encryption = $.s3Encryption;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityConfigurationEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption;
-        private Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption;
-        private Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption;
+        private SecurityConfigurationEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityConfigurationEncryptionConfigurationArgs();
         }
 
         public Builder(SecurityConfigurationEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchEncryption = defaults.cloudwatchEncryption;
-    	      this.jobBookmarksEncryption = defaults.jobBookmarksEncryption;
-    	      this.s3Encryption = defaults.s3Encryption;
+            $ = new SecurityConfigurationEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchEncryption(Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption) {
-            this.cloudwatchEncryption = Objects.requireNonNull(cloudwatchEncryption);
+            $.cloudwatchEncryption = cloudwatchEncryption;
             return this;
         }
+
         public Builder cloudwatchEncryption(SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs cloudwatchEncryption) {
-            this.cloudwatchEncryption = Output.of(Objects.requireNonNull(cloudwatchEncryption));
-            return this;
+            return cloudwatchEncryption(Output.of(cloudwatchEncryption));
         }
+
         public Builder jobBookmarksEncryption(Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption) {
-            this.jobBookmarksEncryption = Objects.requireNonNull(jobBookmarksEncryption);
+            $.jobBookmarksEncryption = jobBookmarksEncryption;
             return this;
         }
+
         public Builder jobBookmarksEncryption(SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs jobBookmarksEncryption) {
-            this.jobBookmarksEncryption = Output.of(Objects.requireNonNull(jobBookmarksEncryption));
-            return this;
+            return jobBookmarksEncryption(Output.of(jobBookmarksEncryption));
         }
+
         public Builder s3Encryption(Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption) {
-            this.s3Encryption = Objects.requireNonNull(s3Encryption);
+            $.s3Encryption = s3Encryption;
             return this;
         }
+
         public Builder s3Encryption(SecurityConfigurationEncryptionConfigurationS3EncryptionArgs s3Encryption) {
-            this.s3Encryption = Output.of(Objects.requireNonNull(s3Encryption));
-            return this;
-        }        public SecurityConfigurationEncryptionConfigurationArgs build() {
-            return new SecurityConfigurationEncryptionConfigurationArgs(cloudwatchEncryption, jobBookmarksEncryption, s3Encryption);
+            return s3Encryption(Output.of(s3Encryption));
+        }
+
+        public SecurityConfigurationEncryptionConfigurationArgs build() {
+            $.cloudwatchEncryption = Objects.requireNonNull($.cloudwatchEncryption, "expected parameter 'cloudwatchEncryption' to be non-null");
+            $.jobBookmarksEncryption = Objects.requireNonNull($.jobBookmarksEncryption, "expected parameter 'jobBookmarksEncryption' to be non-null");
+            $.s3Encryption = Objects.requireNonNull($.s3Encryption, "expected parameter 's3Encryption' to be non-null");
+            return $;
         }
     }
+
 }

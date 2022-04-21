@@ -16,62 +16,58 @@ public final class SpotFleetPrivateIpAddressSpecification extends com.pulumi.res
     public static final SpotFleetPrivateIpAddressSpecification Empty = new SpotFleetPrivateIpAddressSpecification();
 
     @Import(name="primary")
-      private final @Nullable Boolean primary;
+    private @Nullable Boolean primary;
 
     public Optional<Boolean> primary() {
-        return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
+        return Optional.ofNullable(this.primary);
     }
 
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
-    public SpotFleetPrivateIpAddressSpecification(
-        @Nullable Boolean primary,
-        String privateIpAddress) {
-        this.primary = primary;
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-    }
+    private SpotFleetPrivateIpAddressSpecification() {}
 
-    private SpotFleetPrivateIpAddressSpecification() {
-        this.primary = null;
-        this.privateIpAddress = null;
+    private SpotFleetPrivateIpAddressSpecification(SpotFleetPrivateIpAddressSpecification $) {
+        this.primary = $.primary;
+        this.privateIpAddress = $.privateIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetPrivateIpAddressSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean primary;
-        private String privateIpAddress;
+        private SpotFleetPrivateIpAddressSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetPrivateIpAddressSpecification();
         }
 
         public Builder(SpotFleetPrivateIpAddressSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primary = defaults.primary;
-    	      this.privateIpAddress = defaults.privateIpAddress;
+            $ = new SpotFleetPrivateIpAddressSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
-        }        public SpotFleetPrivateIpAddressSpecification build() {
-            return new SpotFleetPrivateIpAddressSpecification(primary, privateIpAddress);
+        }
+
+        public SpotFleetPrivateIpAddressSpecification build() {
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

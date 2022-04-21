@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @Import(name="annotatedDatasetDescription")
-      private final @Nullable Output<String> annotatedDatasetDescription;
+    private @Nullable Output<String> annotatedDatasetDescription;
 
-    public Output<String> annotatedDatasetDescription() {
-        return this.annotatedDatasetDescription == null ? Codegen.empty() : this.annotatedDatasetDescription;
+    public Optional<Output<String>> annotatedDatasetDescription() {
+        return Optional.ofNullable(this.annotatedDatasetDescription);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @Import(name="annotatedDatasetDisplayName", required=true)
-      private final Output<String> annotatedDatasetDisplayName;
+    private Output<String> annotatedDatasetDisplayName;
 
     public Output<String> annotatedDatasetDisplayName() {
         return this.annotatedDatasetDisplayName;
@@ -48,10 +48,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @Import(name="contributorEmails")
-      private final @Nullable Output<List<String>> contributorEmails;
+    private @Nullable Output<List<String>> contributorEmails;
 
-    public Output<List<String>> contributorEmails() {
-        return this.contributorEmails == null ? Codegen.empty() : this.contributorEmails;
+    public Optional<Output<List<String>>> contributorEmails() {
+        return Optional.ofNullable(this.contributorEmails);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @Import(name="instruction", required=true)
-      private final Output<String> instruction;
+    private Output<String> instruction;
 
     public Output<String> instruction() {
         return this.instruction;
@@ -70,10 +70,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @Import(name="labelGroup")
-      private final @Nullable Output<String> labelGroup;
+    private @Nullable Output<String> labelGroup;
 
-    public Output<String> labelGroup() {
-        return this.labelGroup == null ? Codegen.empty() : this.labelGroup;
+    public Optional<Output<String>> labelGroup() {
+        return Optional.ofNullable(this.labelGroup);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @Import(name="questionDuration")
-      private final @Nullable Output<String> questionDuration;
+    private @Nullable Output<String> questionDuration;
 
-    public Output<String> questionDuration() {
-        return this.questionDuration == null ? Codegen.empty() : this.questionDuration;
+    public Optional<Output<String>> questionDuration() {
+        return Optional.ofNullable(this.questionDuration);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @Import(name="replicaCount")
-      private final @Nullable Output<Integer> replicaCount;
+    private @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> replicaCount() {
-        return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
+    public Optional<Output<Integer>> replicaCount() {
+        return Optional.ofNullable(this.replicaCount);
     }
 
     /**
@@ -114,157 +114,134 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @Import(name="userEmailAddress")
-      private final @Nullable Output<String> userEmailAddress;
+    private @Nullable Output<String> userEmailAddress;
 
-    public Output<String> userEmailAddress() {
-        return this.userEmailAddress == null ? Codegen.empty() : this.userEmailAddress;
+    public Optional<Output<String>> userEmailAddress() {
+        return Optional.ofNullable(this.userEmailAddress);
     }
 
-    public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs(
-        @Nullable Output<String> annotatedDatasetDescription,
-        Output<String> annotatedDatasetDisplayName,
-        @Nullable Output<List<String>> contributorEmails,
-        Output<String> instruction,
-        @Nullable Output<String> labelGroup,
-        @Nullable Output<String> languageCode,
-        @Nullable Output<String> questionDuration,
-        @Nullable Output<Integer> replicaCount,
-        @Nullable Output<String> userEmailAddress) {
-        this.annotatedDatasetDescription = annotatedDatasetDescription;
-        this.annotatedDatasetDisplayName = Objects.requireNonNull(annotatedDatasetDisplayName, "expected parameter 'annotatedDatasetDisplayName' to be non-null");
-        this.contributorEmails = contributorEmails;
-        this.instruction = Objects.requireNonNull(instruction, "expected parameter 'instruction' to be non-null");
-        this.labelGroup = labelGroup;
-        this.languageCode = languageCode;
-        this.questionDuration = questionDuration;
-        this.replicaCount = replicaCount;
-        this.userEmailAddress = userEmailAddress;
-    }
+    private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs() {
-        this.annotatedDatasetDescription = Codegen.empty();
-        this.annotatedDatasetDisplayName = Codegen.empty();
-        this.contributorEmails = Codegen.empty();
-        this.instruction = Codegen.empty();
-        this.labelGroup = Codegen.empty();
-        this.languageCode = Codegen.empty();
-        this.questionDuration = Codegen.empty();
-        this.replicaCount = Codegen.empty();
-        this.userEmailAddress = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs(GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs $) {
+        this.annotatedDatasetDescription = $.annotatedDatasetDescription;
+        this.annotatedDatasetDisplayName = $.annotatedDatasetDisplayName;
+        this.contributorEmails = $.contributorEmails;
+        this.instruction = $.instruction;
+        this.labelGroup = $.labelGroup;
+        this.languageCode = $.languageCode;
+        this.questionDuration = $.questionDuration;
+        this.replicaCount = $.replicaCount;
+        this.userEmailAddress = $.userEmailAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> annotatedDatasetDescription;
-        private Output<String> annotatedDatasetDisplayName;
-        private @Nullable Output<List<String>> contributorEmails;
-        private Output<String> instruction;
-        private @Nullable Output<String> labelGroup;
-        private @Nullable Output<String> languageCode;
-        private @Nullable Output<String> questionDuration;
-        private @Nullable Output<Integer> replicaCount;
-        private @Nullable Output<String> userEmailAddress;
+        private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotatedDatasetDescription = defaults.annotatedDatasetDescription;
-    	      this.annotatedDatasetDisplayName = defaults.annotatedDatasetDisplayName;
-    	      this.contributorEmails = defaults.contributorEmails;
-    	      this.instruction = defaults.instruction;
-    	      this.labelGroup = defaults.labelGroup;
-    	      this.languageCode = defaults.languageCode;
-    	      this.questionDuration = defaults.questionDuration;
-    	      this.replicaCount = defaults.replicaCount;
-    	      this.userEmailAddress = defaults.userEmailAddress;
+            $ = new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotatedDatasetDescription(@Nullable Output<String> annotatedDatasetDescription) {
-            this.annotatedDatasetDescription = annotatedDatasetDescription;
+            $.annotatedDatasetDescription = annotatedDatasetDescription;
             return this;
         }
-        public Builder annotatedDatasetDescription(@Nullable String annotatedDatasetDescription) {
-            this.annotatedDatasetDescription = Codegen.ofNullable(annotatedDatasetDescription);
-            return this;
+
+        public Builder annotatedDatasetDescription(String annotatedDatasetDescription) {
+            return annotatedDatasetDescription(Output.of(annotatedDatasetDescription));
         }
+
         public Builder annotatedDatasetDisplayName(Output<String> annotatedDatasetDisplayName) {
-            this.annotatedDatasetDisplayName = Objects.requireNonNull(annotatedDatasetDisplayName);
+            $.annotatedDatasetDisplayName = annotatedDatasetDisplayName;
             return this;
         }
+
         public Builder annotatedDatasetDisplayName(String annotatedDatasetDisplayName) {
-            this.annotatedDatasetDisplayName = Output.of(Objects.requireNonNull(annotatedDatasetDisplayName));
-            return this;
+            return annotatedDatasetDisplayName(Output.of(annotatedDatasetDisplayName));
         }
+
         public Builder contributorEmails(@Nullable Output<List<String>> contributorEmails) {
-            this.contributorEmails = contributorEmails;
+            $.contributorEmails = contributorEmails;
             return this;
         }
-        public Builder contributorEmails(@Nullable List<String> contributorEmails) {
-            this.contributorEmails = Codegen.ofNullable(contributorEmails);
-            return this;
+
+        public Builder contributorEmails(List<String> contributorEmails) {
+            return contributorEmails(Output.of(contributorEmails));
         }
+
         public Builder contributorEmails(String... contributorEmails) {
             return contributorEmails(List.of(contributorEmails));
         }
+
         public Builder instruction(Output<String> instruction) {
-            this.instruction = Objects.requireNonNull(instruction);
+            $.instruction = instruction;
             return this;
         }
+
         public Builder instruction(String instruction) {
-            this.instruction = Output.of(Objects.requireNonNull(instruction));
-            return this;
+            return instruction(Output.of(instruction));
         }
+
         public Builder labelGroup(@Nullable Output<String> labelGroup) {
-            this.labelGroup = labelGroup;
+            $.labelGroup = labelGroup;
             return this;
         }
-        public Builder labelGroup(@Nullable String labelGroup) {
-            this.labelGroup = Codegen.ofNullable(labelGroup);
-            return this;
+
+        public Builder labelGroup(String labelGroup) {
+            return labelGroup(Output.of(labelGroup));
         }
+
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
+
         public Builder questionDuration(@Nullable Output<String> questionDuration) {
-            this.questionDuration = questionDuration;
+            $.questionDuration = questionDuration;
             return this;
         }
-        public Builder questionDuration(@Nullable String questionDuration) {
-            this.questionDuration = Codegen.ofNullable(questionDuration);
-            return this;
+
+        public Builder questionDuration(String questionDuration) {
+            return questionDuration(Output.of(questionDuration));
         }
+
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
-            this.replicaCount = replicaCount;
+            $.replicaCount = replicaCount;
             return this;
         }
-        public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Codegen.ofNullable(replicaCount);
-            return this;
+
+        public Builder replicaCount(Integer replicaCount) {
+            return replicaCount(Output.of(replicaCount));
         }
+
         public Builder userEmailAddress(@Nullable Output<String> userEmailAddress) {
-            this.userEmailAddress = userEmailAddress;
+            $.userEmailAddress = userEmailAddress;
             return this;
         }
-        public Builder userEmailAddress(@Nullable String userEmailAddress) {
-            this.userEmailAddress = Codegen.ofNullable(userEmailAddress);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs build() {
-            return new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs(annotatedDatasetDescription, annotatedDatasetDisplayName, contributorEmails, instruction, labelGroup, languageCode, questionDuration, replicaCount, userEmailAddress);
+
+        public Builder userEmailAddress(String userEmailAddress) {
+            return userEmailAddress(Output.of(userEmailAddress));
+        }
+
+        public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs build() {
+            $.annotatedDatasetDisplayName = Objects.requireNonNull($.annotatedDatasetDisplayName, "expected parameter 'annotatedDatasetDisplayName' to be non-null");
+            $.instruction = Objects.requireNonNull($.instruction, "expected parameter 'instruction' to be non-null");
+            return $;
         }
     }
+
 }

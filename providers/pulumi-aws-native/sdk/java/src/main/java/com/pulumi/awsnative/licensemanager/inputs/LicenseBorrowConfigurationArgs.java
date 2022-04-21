@@ -5,7 +5,6 @@ package com.pulumi.awsnative.licensemanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,70 +15,67 @@ public final class LicenseBorrowConfigurationArgs extends com.pulumi.resources.R
     public static final LicenseBorrowConfigurationArgs Empty = new LicenseBorrowConfigurationArgs();
 
     @Import(name="allowEarlyCheckIn", required=true)
-      private final Output<Boolean> allowEarlyCheckIn;
+    private Output<Boolean> allowEarlyCheckIn;
 
     public Output<Boolean> allowEarlyCheckIn() {
         return this.allowEarlyCheckIn;
     }
 
     @Import(name="maxTimeToLiveInMinutes", required=true)
-      private final Output<Integer> maxTimeToLiveInMinutes;
+    private Output<Integer> maxTimeToLiveInMinutes;
 
     public Output<Integer> maxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;
     }
 
-    public LicenseBorrowConfigurationArgs(
-        Output<Boolean> allowEarlyCheckIn,
-        Output<Integer> maxTimeToLiveInMinutes) {
-        this.allowEarlyCheckIn = Objects.requireNonNull(allowEarlyCheckIn, "expected parameter 'allowEarlyCheckIn' to be non-null");
-        this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes, "expected parameter 'maxTimeToLiveInMinutes' to be non-null");
-    }
+    private LicenseBorrowConfigurationArgs() {}
 
-    private LicenseBorrowConfigurationArgs() {
-        this.allowEarlyCheckIn = Codegen.empty();
-        this.maxTimeToLiveInMinutes = Codegen.empty();
+    private LicenseBorrowConfigurationArgs(LicenseBorrowConfigurationArgs $) {
+        this.allowEarlyCheckIn = $.allowEarlyCheckIn;
+        this.maxTimeToLiveInMinutes = $.maxTimeToLiveInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseBorrowConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> allowEarlyCheckIn;
-        private Output<Integer> maxTimeToLiveInMinutes;
+        private LicenseBorrowConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseBorrowConfigurationArgs();
         }
 
         public Builder(LicenseBorrowConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowEarlyCheckIn = defaults.allowEarlyCheckIn;
-    	      this.maxTimeToLiveInMinutes = defaults.maxTimeToLiveInMinutes;
+            $ = new LicenseBorrowConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowEarlyCheckIn(Output<Boolean> allowEarlyCheckIn) {
-            this.allowEarlyCheckIn = Objects.requireNonNull(allowEarlyCheckIn);
+            $.allowEarlyCheckIn = allowEarlyCheckIn;
             return this;
         }
+
         public Builder allowEarlyCheckIn(Boolean allowEarlyCheckIn) {
-            this.allowEarlyCheckIn = Output.of(Objects.requireNonNull(allowEarlyCheckIn));
-            return this;
+            return allowEarlyCheckIn(Output.of(allowEarlyCheckIn));
         }
+
         public Builder maxTimeToLiveInMinutes(Output<Integer> maxTimeToLiveInMinutes) {
-            this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
+            $.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
             return this;
         }
+
         public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
-            this.maxTimeToLiveInMinutes = Output.of(Objects.requireNonNull(maxTimeToLiveInMinutes));
-            return this;
-        }        public LicenseBorrowConfigurationArgs build() {
-            return new LicenseBorrowConfigurationArgs(allowEarlyCheckIn, maxTimeToLiveInMinutes);
+            return maxTimeToLiveInMinutes(Output.of(maxTimeToLiveInMinutes));
+        }
+
+        public LicenseBorrowConfigurationArgs build() {
+            $.allowEarlyCheckIn = Objects.requireNonNull($.allowEarlyCheckIn, "expected parameter 'allowEarlyCheckIn' to be non-null");
+            $.maxTimeToLiveInMinutes = Objects.requireNonNull($.maxTimeToLiveInMinutes, "expected parameter 'maxTimeToLiveInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

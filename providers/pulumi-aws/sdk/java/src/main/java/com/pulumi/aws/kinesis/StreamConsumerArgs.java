@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesis;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class StreamConsumerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class StreamConsumerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="streamArn", required=true)
-      private final Output<String> streamArn;
+    private Output<String> streamArn;
 
     public Output<String> streamArn() {
         return this.streamArn;
     }
 
-    public StreamConsumerArgs(
-        @Nullable Output<String> name,
-        Output<String> streamArn) {
-        this.name = name;
-        this.streamArn = Objects.requireNonNull(streamArn, "expected parameter 'streamArn' to be non-null");
-    }
+    private StreamConsumerArgs() {}
 
-    private StreamConsumerArgs() {
-        this.name = Codegen.empty();
-        this.streamArn = Codegen.empty();
+    private StreamConsumerArgs(StreamConsumerArgs $) {
+        this.name = $.name;
+        this.streamArn = $.streamArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamConsumerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> streamArn;
+        private StreamConsumerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamConsumerArgs();
         }
 
         public Builder(StreamConsumerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.streamArn = defaults.streamArn;
+            $ = new StreamConsumerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder streamArn(Output<String> streamArn) {
-            this.streamArn = Objects.requireNonNull(streamArn);
+            $.streamArn = streamArn;
             return this;
         }
+
         public Builder streamArn(String streamArn) {
-            this.streamArn = Output.of(Objects.requireNonNull(streamArn));
-            return this;
-        }        public StreamConsumerArgs build() {
-            return new StreamConsumerArgs(name, streamArn);
+            return streamArn(Output.of(streamArn));
+        }
+
+        public StreamConsumerArgs build() {
+            $.streamArn = Objects.requireNonNull($.streamArn, "expected parameter 'streamArn' to be non-null");
+            return $;
         }
     }
+
 }

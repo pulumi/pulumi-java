@@ -9,9 +9,9 @@ import com.pulumi.azurenative.insights.inputs.SyslogDataSourceArgs;
 import com.pulumi.azurenative.insights.inputs.WindowsEventLogDataSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class DataCollectionRuleDataSourcesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="extensions")
-      private final @Nullable Output<List<ExtensionDataSourceArgs>> extensions;
+    private @Nullable Output<List<ExtensionDataSourceArgs>> extensions;
 
-    public Output<List<ExtensionDataSourceArgs>> extensions() {
-        return this.extensions == null ? Codegen.empty() : this.extensions;
+    public Optional<Output<List<ExtensionDataSourceArgs>>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class DataCollectionRuleDataSourcesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="performanceCounters")
-      private final @Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters;
+    private @Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters;
 
-    public Output<List<PerfCounterDataSourceArgs>> performanceCounters() {
-        return this.performanceCounters == null ? Codegen.empty() : this.performanceCounters;
+    public Optional<Output<List<PerfCounterDataSourceArgs>>> performanceCounters() {
+        return Optional.ofNullable(this.performanceCounters);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class DataCollectionRuleDataSourcesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="syslog")
-      private final @Nullable Output<List<SyslogDataSourceArgs>> syslog;
+    private @Nullable Output<List<SyslogDataSourceArgs>> syslog;
 
-    public Output<List<SyslogDataSourceArgs>> syslog() {
-        return this.syslog == null ? Codegen.empty() : this.syslog;
+    public Optional<Output<List<SyslogDataSourceArgs>>> syslog() {
+        return Optional.ofNullable(this.syslog);
     }
 
     /**
@@ -62,101 +62,94 @@ public final class DataCollectionRuleDataSourcesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="windowsEventLogs")
-      private final @Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
+    private @Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
 
-    public Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs() {
-        return this.windowsEventLogs == null ? Codegen.empty() : this.windowsEventLogs;
+    public Optional<Output<List<WindowsEventLogDataSourceArgs>>> windowsEventLogs() {
+        return Optional.ofNullable(this.windowsEventLogs);
     }
 
-    public DataCollectionRuleDataSourcesArgs(
-        @Nullable Output<List<ExtensionDataSourceArgs>> extensions,
-        @Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters,
-        @Nullable Output<List<SyslogDataSourceArgs>> syslog,
-        @Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs) {
-        this.extensions = extensions;
-        this.performanceCounters = performanceCounters;
-        this.syslog = syslog;
-        this.windowsEventLogs = windowsEventLogs;
-    }
+    private DataCollectionRuleDataSourcesArgs() {}
 
-    private DataCollectionRuleDataSourcesArgs() {
-        this.extensions = Codegen.empty();
-        this.performanceCounters = Codegen.empty();
-        this.syslog = Codegen.empty();
-        this.windowsEventLogs = Codegen.empty();
+    private DataCollectionRuleDataSourcesArgs(DataCollectionRuleDataSourcesArgs $) {
+        this.extensions = $.extensions;
+        this.performanceCounters = $.performanceCounters;
+        this.syslog = $.syslog;
+        this.windowsEventLogs = $.windowsEventLogs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectionRuleDataSourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ExtensionDataSourceArgs>> extensions;
-        private @Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters;
-        private @Nullable Output<List<SyslogDataSourceArgs>> syslog;
-        private @Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
+        private DataCollectionRuleDataSourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectionRuleDataSourcesArgs();
         }
 
         public Builder(DataCollectionRuleDataSourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensions = defaults.extensions;
-    	      this.performanceCounters = defaults.performanceCounters;
-    	      this.syslog = defaults.syslog;
-    	      this.windowsEventLogs = defaults.windowsEventLogs;
+            $ = new DataCollectionRuleDataSourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extensions(@Nullable Output<List<ExtensionDataSourceArgs>> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
-        public Builder extensions(@Nullable List<ExtensionDataSourceArgs> extensions) {
-            this.extensions = Codegen.ofNullable(extensions);
-            return this;
+
+        public Builder extensions(List<ExtensionDataSourceArgs> extensions) {
+            return extensions(Output.of(extensions));
         }
+
         public Builder extensions(ExtensionDataSourceArgs... extensions) {
             return extensions(List.of(extensions));
         }
+
         public Builder performanceCounters(@Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters) {
-            this.performanceCounters = performanceCounters;
+            $.performanceCounters = performanceCounters;
             return this;
         }
-        public Builder performanceCounters(@Nullable List<PerfCounterDataSourceArgs> performanceCounters) {
-            this.performanceCounters = Codegen.ofNullable(performanceCounters);
-            return this;
+
+        public Builder performanceCounters(List<PerfCounterDataSourceArgs> performanceCounters) {
+            return performanceCounters(Output.of(performanceCounters));
         }
+
         public Builder performanceCounters(PerfCounterDataSourceArgs... performanceCounters) {
             return performanceCounters(List.of(performanceCounters));
         }
+
         public Builder syslog(@Nullable Output<List<SyslogDataSourceArgs>> syslog) {
-            this.syslog = syslog;
+            $.syslog = syslog;
             return this;
         }
-        public Builder syslog(@Nullable List<SyslogDataSourceArgs> syslog) {
-            this.syslog = Codegen.ofNullable(syslog);
-            return this;
+
+        public Builder syslog(List<SyslogDataSourceArgs> syslog) {
+            return syslog(Output.of(syslog));
         }
+
         public Builder syslog(SyslogDataSourceArgs... syslog) {
             return syslog(List.of(syslog));
         }
+
         public Builder windowsEventLogs(@Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs) {
-            this.windowsEventLogs = windowsEventLogs;
+            $.windowsEventLogs = windowsEventLogs;
             return this;
         }
-        public Builder windowsEventLogs(@Nullable List<WindowsEventLogDataSourceArgs> windowsEventLogs) {
-            this.windowsEventLogs = Codegen.ofNullable(windowsEventLogs);
-            return this;
+
+        public Builder windowsEventLogs(List<WindowsEventLogDataSourceArgs> windowsEventLogs) {
+            return windowsEventLogs(Output.of(windowsEventLogs));
         }
+
         public Builder windowsEventLogs(WindowsEventLogDataSourceArgs... windowsEventLogs) {
             return windowsEventLogs(List.of(windowsEventLogs));
-        }        public DataCollectionRuleDataSourcesArgs build() {
-            return new DataCollectionRuleDataSourcesArgs(extensions, performanceCounters, syslog, windowsEventLogs);
+        }
+
+        public DataCollectionRuleDataSourcesArgs build() {
+            return $;
         }
     }
+
 }

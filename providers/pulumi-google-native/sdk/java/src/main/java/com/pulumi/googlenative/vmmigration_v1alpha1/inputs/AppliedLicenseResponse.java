@@ -21,7 +21,7 @@ public final class AppliedLicenseResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="osLicense", required=true)
-      private final String osLicense;
+    private String osLicense;
 
     public String osLicense() {
         return this.osLicense;
@@ -32,55 +32,52 @@ public final class AppliedLicenseResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AppliedLicenseResponse(
-        String osLicense,
-        String type) {
-        this.osLicense = Objects.requireNonNull(osLicense, "expected parameter 'osLicense' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AppliedLicenseResponse() {}
 
-    private AppliedLicenseResponse() {
-        this.osLicense = null;
-        this.type = null;
+    private AppliedLicenseResponse(AppliedLicenseResponse $) {
+        this.osLicense = $.osLicense;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppliedLicenseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String osLicense;
-        private String type;
+        private AppliedLicenseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppliedLicenseResponse();
         }
 
         public Builder(AppliedLicenseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osLicense = defaults.osLicense;
-    	      this.type = defaults.type;
+            $ = new AppliedLicenseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder osLicense(String osLicense) {
-            this.osLicense = Objects.requireNonNull(osLicense);
+            $.osLicense = osLicense;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AppliedLicenseResponse build() {
-            return new AppliedLicenseResponse(osLicense, type);
+        }
+
+        public AppliedLicenseResponse build() {
+            $.osLicense = Objects.requireNonNull($.osLicense, "expected parameter 'osLicense' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

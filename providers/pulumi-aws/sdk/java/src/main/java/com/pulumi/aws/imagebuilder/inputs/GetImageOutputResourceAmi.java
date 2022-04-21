@@ -17,7 +17,7 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
@@ -28,7 +28,7 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -39,7 +39,7 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="image", required=true)
-      private final String image;
+    private String image;
 
     public String image() {
         return this.image;
@@ -50,7 +50,7 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -61,82 +61,73 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetImageOutputResourceAmi(
-        String accountId,
-        String description,
-        String image,
-        String name,
-        String region) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetImageOutputResourceAmi() {}
 
-    private GetImageOutputResourceAmi() {
-        this.accountId = null;
-        this.description = null;
-        this.image = null;
-        this.name = null;
-        this.region = null;
+    private GetImageOutputResourceAmi(GetImageOutputResourceAmi $) {
+        this.accountId = $.accountId;
+        this.description = $.description;
+        this.image = $.image;
+        this.name = $.name;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageOutputResourceAmi defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
-        private String description;
-        private String image;
-        private String name;
-        private String region;
+        private GetImageOutputResourceAmi $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageOutputResourceAmi();
         }
 
         public Builder(GetImageOutputResourceAmi defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.description = defaults.description;
-    	      this.image = defaults.image;
-    	      this.name = defaults.name;
-    	      this.region = defaults.region;
+            $ = new GetImageOutputResourceAmi(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetImageOutputResourceAmi build() {
-            return new GetImageOutputResourceAmi(accountId, description, image, name, region);
+        }
+
+        public GetImageOutputResourceAmi build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

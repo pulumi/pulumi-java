@@ -21,7 +21,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
     public static final BucketInventoryConfiguration Empty = new BucketInventoryConfiguration();
 
     @Import(name="destination", required=true)
-      private final BucketDestination destination;
+    private BucketDestination destination;
 
     public BucketDestination destination() {
         return this.destination;
@@ -32,7 +32,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -43,7 +43,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -54,7 +54,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="includedObjectVersions", required=true)
-      private final BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions;
+    private BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions;
 
     public BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions() {
         return this.includedObjectVersions;
@@ -65,10 +65,10 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="optionalFields")
-      private final @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields;
+    private @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields;
 
-    public List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields() {
-        return this.optionalFields == null ? List.of() : this.optionalFields;
+    public Optional<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields() {
+        return Optional.ofNullable(this.optionalFields);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -87,103 +87,89 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scheduleFrequency", required=true)
-      private final BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
+    private BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
 
     public BucketInventoryConfigurationScheduleFrequency scheduleFrequency() {
         return this.scheduleFrequency;
     }
 
-    public BucketInventoryConfiguration(
-        BucketDestination destination,
-        Boolean enabled,
-        String id,
-        BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions,
-        @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields,
-        @Nullable String prefix,
-        BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.includedObjectVersions = Objects.requireNonNull(includedObjectVersions, "expected parameter 'includedObjectVersions' to be non-null");
-        this.optionalFields = optionalFields;
-        this.prefix = prefix;
-        this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency, "expected parameter 'scheduleFrequency' to be non-null");
-    }
+    private BucketInventoryConfiguration() {}
 
-    private BucketInventoryConfiguration() {
-        this.destination = null;
-        this.enabled = null;
-        this.id = null;
-        this.includedObjectVersions = null;
-        this.optionalFields = List.of();
-        this.prefix = null;
-        this.scheduleFrequency = null;
+    private BucketInventoryConfiguration(BucketInventoryConfiguration $) {
+        this.destination = $.destination;
+        this.enabled = $.enabled;
+        this.id = $.id;
+        this.includedObjectVersions = $.includedObjectVersions;
+        this.optionalFields = $.optionalFields;
+        this.prefix = $.prefix;
+        this.scheduleFrequency = $.scheduleFrequency;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketInventoryConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketDestination destination;
-        private Boolean enabled;
-        private String id;
-        private BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions;
-        private @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields;
-        private @Nullable String prefix;
-        private BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
+        private BucketInventoryConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketInventoryConfiguration();
         }
 
         public Builder(BucketInventoryConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.enabled = defaults.enabled;
-    	      this.id = defaults.id;
-    	      this.includedObjectVersions = defaults.includedObjectVersions;
-    	      this.optionalFields = defaults.optionalFields;
-    	      this.prefix = defaults.prefix;
-    	      this.scheduleFrequency = defaults.scheduleFrequency;
+            $ = new BucketInventoryConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(BucketDestination destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder includedObjectVersions(BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions) {
-            this.includedObjectVersions = Objects.requireNonNull(includedObjectVersions);
+            $.includedObjectVersions = includedObjectVersions;
             return this;
         }
+
         public Builder optionalFields(@Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields) {
-            this.optionalFields = optionalFields;
+            $.optionalFields = optionalFields;
             return this;
         }
+
         public Builder optionalFields(BucketInventoryConfigurationOptionalFieldsItem... optionalFields) {
             return optionalFields(List.of(optionalFields));
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
+
         public Builder scheduleFrequency(BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
-            this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency);
+            $.scheduleFrequency = scheduleFrequency;
             return this;
-        }        public BucketInventoryConfiguration build() {
-            return new BucketInventoryConfiguration(destination, enabled, id, includedObjectVersions, optionalFields, prefix, scheduleFrequency);
+        }
+
+        public BucketInventoryConfiguration build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.includedObjectVersions = Objects.requireNonNull($.includedObjectVersions, "expected parameter 'includedObjectVersions' to be non-null");
+            $.scheduleFrequency = Objects.requireNonNull($.scheduleFrequency, "expected parameter 'scheduleFrequency' to be non-null");
+            return $;
         }
     }
+
 }

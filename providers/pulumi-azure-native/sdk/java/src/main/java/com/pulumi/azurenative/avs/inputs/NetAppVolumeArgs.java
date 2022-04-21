@@ -5,9 +5,9 @@ package com.pulumi.azurenative.avs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetAppVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nfsFilePath")
-      private final @Nullable Output<String> nfsFilePath;
+    private @Nullable Output<String> nfsFilePath;
 
-    public Output<String> nfsFilePath() {
-        return this.nfsFilePath == null ? Codegen.empty() : this.nfsFilePath;
+    public Optional<Output<String>> nfsFilePath() {
+        return Optional.ofNullable(this.nfsFilePath);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class NetAppVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nfsProviderIp")
-      private final @Nullable Output<String> nfsProviderIp;
+    private @Nullable Output<String> nfsProviderIp;
 
-    public Output<String> nfsProviderIp() {
-        return this.nfsProviderIp == null ? Codegen.empty() : this.nfsProviderIp;
+    public Optional<Output<String>> nfsProviderIp() {
+        return Optional.ofNullable(this.nfsProviderIp);
     }
 
-    public NetAppVolumeArgs(
-        @Nullable Output<String> nfsFilePath,
-        @Nullable Output<String> nfsProviderIp) {
-        this.nfsFilePath = nfsFilePath;
-        this.nfsProviderIp = nfsProviderIp;
-    }
+    private NetAppVolumeArgs() {}
 
-    private NetAppVolumeArgs() {
-        this.nfsFilePath = Codegen.empty();
-        this.nfsProviderIp = Codegen.empty();
+    private NetAppVolumeArgs(NetAppVolumeArgs $) {
+        this.nfsFilePath = $.nfsFilePath;
+        this.nfsProviderIp = $.nfsProviderIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetAppVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> nfsFilePath;
-        private @Nullable Output<String> nfsProviderIp;
+        private NetAppVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetAppVolumeArgs();
         }
 
         public Builder(NetAppVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nfsFilePath = defaults.nfsFilePath;
-    	      this.nfsProviderIp = defaults.nfsProviderIp;
+            $ = new NetAppVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nfsFilePath(@Nullable Output<String> nfsFilePath) {
-            this.nfsFilePath = nfsFilePath;
+            $.nfsFilePath = nfsFilePath;
             return this;
         }
-        public Builder nfsFilePath(@Nullable String nfsFilePath) {
-            this.nfsFilePath = Codegen.ofNullable(nfsFilePath);
-            return this;
+
+        public Builder nfsFilePath(String nfsFilePath) {
+            return nfsFilePath(Output.of(nfsFilePath));
         }
+
         public Builder nfsProviderIp(@Nullable Output<String> nfsProviderIp) {
-            this.nfsProviderIp = nfsProviderIp;
+            $.nfsProviderIp = nfsProviderIp;
             return this;
         }
-        public Builder nfsProviderIp(@Nullable String nfsProviderIp) {
-            this.nfsProviderIp = Codegen.ofNullable(nfsProviderIp);
-            return this;
-        }        public NetAppVolumeArgs build() {
-            return new NetAppVolumeArgs(nfsFilePath, nfsProviderIp);
+
+        public Builder nfsProviderIp(String nfsProviderIp) {
+            return nfsProviderIp(Output.of(nfsProviderIp));
+        }
+
+        public NetAppVolumeArgs build() {
+            return $;
         }
     }
+
 }

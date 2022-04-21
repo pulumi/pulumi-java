@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class AudioEncoderAacArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="bitrateKbps")
-      private final @Nullable Output<String> bitrateKbps;
+    private @Nullable Output<String> bitrateKbps;
 
-    public Output<String> bitrateKbps() {
-        return this.bitrateKbps == null ? Codegen.empty() : this.bitrateKbps;
+    public Optional<Output<String>> bitrateKbps() {
+        return Optional.ofNullable(this.bitrateKbps);
     }
 
     /**
@@ -36,63 +37,59 @@ public final class AudioEncoderAacArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AudioEncoderAacArgs(
-        @Nullable Output<String> bitrateKbps,
-        Output<String> type) {
-        this.bitrateKbps = bitrateKbps;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AudioEncoderAacArgs() {}
 
-    private AudioEncoderAacArgs() {
-        this.bitrateKbps = Codegen.empty();
-        this.type = Codegen.empty();
+    private AudioEncoderAacArgs(AudioEncoderAacArgs $) {
+        this.bitrateKbps = $.bitrateKbps;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioEncoderAacArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bitrateKbps;
-        private Output<String> type;
+        private AudioEncoderAacArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioEncoderAacArgs();
         }
 
         public Builder(AudioEncoderAacArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitrateKbps = defaults.bitrateKbps;
-    	      this.type = defaults.type;
+            $ = new AudioEncoderAacArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bitrateKbps(@Nullable Output<String> bitrateKbps) {
-            this.bitrateKbps = bitrateKbps;
+            $.bitrateKbps = bitrateKbps;
             return this;
         }
-        public Builder bitrateKbps(@Nullable String bitrateKbps) {
-            this.bitrateKbps = Codegen.ofNullable(bitrateKbps);
-            return this;
+
+        public Builder bitrateKbps(String bitrateKbps) {
+            return bitrateKbps(Output.of(bitrateKbps));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AudioEncoderAacArgs build() {
-            return new AudioEncoderAacArgs(bitrateKbps, type);
+            return type(Output.of(type));
+        }
+
+        public AudioEncoderAacArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

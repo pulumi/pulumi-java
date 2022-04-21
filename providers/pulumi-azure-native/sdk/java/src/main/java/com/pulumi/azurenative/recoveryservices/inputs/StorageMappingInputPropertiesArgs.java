@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class StorageMappingInputPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetStorageClassificationId")
-      private final @Nullable Output<String> targetStorageClassificationId;
+    private @Nullable Output<String> targetStorageClassificationId;
 
-    public Output<String> targetStorageClassificationId() {
-        return this.targetStorageClassificationId == null ? Codegen.empty() : this.targetStorageClassificationId;
+    public Optional<Output<String>> targetStorageClassificationId() {
+        return Optional.ofNullable(this.targetStorageClassificationId);
     }
 
-    public StorageMappingInputPropertiesArgs(@Nullable Output<String> targetStorageClassificationId) {
-        this.targetStorageClassificationId = targetStorageClassificationId;
-    }
+    private StorageMappingInputPropertiesArgs() {}
 
-    private StorageMappingInputPropertiesArgs() {
-        this.targetStorageClassificationId = Codegen.empty();
+    private StorageMappingInputPropertiesArgs(StorageMappingInputPropertiesArgs $) {
+        this.targetStorageClassificationId = $.targetStorageClassificationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageMappingInputPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> targetStorageClassificationId;
+        private StorageMappingInputPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageMappingInputPropertiesArgs();
         }
 
         public Builder(StorageMappingInputPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetStorageClassificationId = defaults.targetStorageClassificationId;
+            $ = new StorageMappingInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetStorageClassificationId(@Nullable Output<String> targetStorageClassificationId) {
-            this.targetStorageClassificationId = targetStorageClassificationId;
+            $.targetStorageClassificationId = targetStorageClassificationId;
             return this;
         }
-        public Builder targetStorageClassificationId(@Nullable String targetStorageClassificationId) {
-            this.targetStorageClassificationId = Codegen.ofNullable(targetStorageClassificationId);
-            return this;
-        }        public StorageMappingInputPropertiesArgs build() {
-            return new StorageMappingInputPropertiesArgs(targetStorageClassificationId);
+
+        public Builder targetStorageClassificationId(String targetStorageClassificationId) {
+            return targetStorageClassificationId(Output.of(targetStorageClassificationId));
+        }
+
+        public StorageMappingInputPropertiesArgs build() {
+            return $;
         }
     }
+
 }

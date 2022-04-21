@@ -6,9 +6,9 @@ package com.pulumi.azurenative.databox.inputs;
 import com.pulumi.azurenative.databox.inputs.UserAssignedPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="userAssigned")
-      private final @Nullable Output<UserAssignedPropertiesArgs> userAssigned;
+    private @Nullable Output<UserAssignedPropertiesArgs> userAssigned;
 
-    public Output<UserAssignedPropertiesArgs> userAssigned() {
-        return this.userAssigned == null ? Codegen.empty() : this.userAssigned;
+    public Optional<Output<UserAssignedPropertiesArgs>> userAssigned() {
+        return Optional.ofNullable(this.userAssigned);
     }
 
-    public IdentityPropertiesArgs(
-        @Nullable Output<String> type,
-        @Nullable Output<UserAssignedPropertiesArgs> userAssigned) {
-        this.type = type;
-        this.userAssigned = userAssigned;
-    }
+    private IdentityPropertiesArgs() {}
 
-    private IdentityPropertiesArgs() {
-        this.type = Codegen.empty();
-        this.userAssigned = Codegen.empty();
+    private IdentityPropertiesArgs(IdentityPropertiesArgs $) {
+        this.type = $.type;
+        this.userAssigned = $.userAssigned;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> type;
-        private @Nullable Output<UserAssignedPropertiesArgs> userAssigned;
+        private IdentityPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityPropertiesArgs();
         }
 
         public Builder(IdentityPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssigned = defaults.userAssigned;
+            $ = new IdentityPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder userAssigned(@Nullable Output<UserAssignedPropertiesArgs> userAssigned) {
-            this.userAssigned = userAssigned;
+            $.userAssigned = userAssigned;
             return this;
         }
-        public Builder userAssigned(@Nullable UserAssignedPropertiesArgs userAssigned) {
-            this.userAssigned = Codegen.ofNullable(userAssigned);
-            return this;
-        }        public IdentityPropertiesArgs build() {
-            return new IdentityPropertiesArgs(type, userAssigned);
+
+        public Builder userAssigned(UserAssignedPropertiesArgs userAssigned) {
+            return userAssigned(Output.of(userAssigned));
+        }
+
+        public IdentityPropertiesArgs build() {
+            return $;
         }
     }
+
 }

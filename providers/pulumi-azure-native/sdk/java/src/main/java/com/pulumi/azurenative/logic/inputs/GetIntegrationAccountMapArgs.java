@@ -17,7 +17,7 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -28,7 +28,7 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="mapName", required=true)
-      private final String mapName;
+    private String mapName;
 
     public String mapName() {
         return this.mapName;
@@ -39,64 +39,59 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetIntegrationAccountMapArgs(
-        String integrationAccountName,
-        String mapName,
-        String resourceGroupName) {
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.mapName = Objects.requireNonNull(mapName, "expected parameter 'mapName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetIntegrationAccountMapArgs() {}
 
-    private GetIntegrationAccountMapArgs() {
-        this.integrationAccountName = null;
-        this.mapName = null;
-        this.resourceGroupName = null;
+    private GetIntegrationAccountMapArgs(GetIntegrationAccountMapArgs $) {
+        this.integrationAccountName = $.integrationAccountName;
+        this.mapName = $.mapName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationAccountMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String integrationAccountName;
-        private String mapName;
-        private String resourceGroupName;
+        private GetIntegrationAccountMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationAccountMapArgs();
         }
 
         public Builder(GetIntegrationAccountMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.mapName = defaults.mapName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetIntegrationAccountMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder mapName(String mapName) {
-            this.mapName = Objects.requireNonNull(mapName);
+            $.mapName = mapName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetIntegrationAccountMapArgs build() {
-            return new GetIntegrationAccountMapArgs(integrationAccountName, mapName, resourceGroupName);
+        }
+
+        public GetIntegrationAccountMapArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.mapName = Objects.requireNonNull($.mapName, "expected parameter 'mapName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

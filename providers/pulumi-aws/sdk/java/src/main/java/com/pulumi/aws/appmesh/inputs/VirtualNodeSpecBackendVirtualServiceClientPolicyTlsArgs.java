@@ -7,11 +7,11 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientP
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs exten
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs> certificate;
+    private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs> certificate;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs exten
      * 
      */
     @Import(name="enforce")
-      private final @Nullable Output<Boolean> enforce;
+    private @Nullable Output<Boolean> enforce;
 
-    public Output<Boolean> enforce() {
-        return this.enforce == null ? Codegen.empty() : this.enforce;
+    public Optional<Output<Boolean>> enforce() {
+        return Optional.ofNullable(this.enforce);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs exten
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<Integer>> ports;
+    private @Nullable Output<List<Integer>> ports;
 
-    public Output<List<Integer>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<Integer>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -57,92 +57,83 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs exten
      * 
      */
     @Import(name="validation", required=true)
-      private final Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs> validation;
+    private Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs> validation;
 
     public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs> validation() {
         return this.validation;
     }
 
-    public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs(
-        @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs> certificate,
-        @Nullable Output<Boolean> enforce,
-        @Nullable Output<List<Integer>> ports,
-        Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs> validation) {
-        this.certificate = certificate;
-        this.enforce = enforce;
-        this.ports = ports;
-        this.validation = Objects.requireNonNull(validation, "expected parameter 'validation' to be non-null");
-    }
+    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs() {}
 
-    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs() {
-        this.certificate = Codegen.empty();
-        this.enforce = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.validation = Codegen.empty();
+    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs $) {
+        this.certificate = $.certificate;
+        this.enforce = $.enforce;
+        this.ports = $.ports;
+        this.validation = $.validation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs> certificate;
-        private @Nullable Output<Boolean> enforce;
-        private @Nullable Output<List<Integer>> ports;
-        private Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs> validation;
+        private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs();
         }
 
         public Builder(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.enforce = defaults.enforce;
-    	      this.ports = defaults.ports;
-    	      this.validation = defaults.validation;
+            $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder enforce(@Nullable Output<Boolean> enforce) {
-            this.enforce = enforce;
+            $.enforce = enforce;
             return this;
         }
-        public Builder enforce(@Nullable Boolean enforce) {
-            this.enforce = Codegen.ofNullable(enforce);
-            return this;
+
+        public Builder enforce(Boolean enforce) {
+            return enforce(Output.of(enforce));
         }
+
         public Builder ports(@Nullable Output<List<Integer>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<Integer> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<Integer> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(Integer... ports) {
             return ports(List.of(ports));
         }
+
         public Builder validation(Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs> validation) {
-            this.validation = Objects.requireNonNull(validation);
+            $.validation = validation;
             return this;
         }
+
         public Builder validation(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs validation) {
-            this.validation = Output.of(Objects.requireNonNull(validation));
-            return this;
-        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs build() {
-            return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs(certificate, enforce, ports, validation);
+            return validation(Output.of(validation));
+        }
+
+        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs build() {
+            $.validation = Objects.requireNonNull($.validation, "expected parameter 'validation' to be non-null");
+            return $;
         }
     }
+
 }

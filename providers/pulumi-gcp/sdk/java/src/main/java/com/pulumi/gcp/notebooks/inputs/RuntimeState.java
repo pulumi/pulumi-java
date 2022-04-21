@@ -5,7 +5,6 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigGetArgs;
 import com.pulumi.gcp.notebooks.inputs.RuntimeMetricGetArgs;
 import com.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigGetArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessConfig")
-      private final @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig;
+    private @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig;
 
-    public Output<RuntimeAccessConfigGetArgs> accessConfig() {
-        return this.accessConfig == null ? Codegen.empty() : this.accessConfig;
+    public Optional<Output<RuntimeAccessConfigGetArgs>> accessConfig() {
+        return Optional.ofNullable(this.accessConfig);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthState")
-      private final @Nullable Output<String> healthState;
+    private @Nullable Output<String> healthState;
 
-    public Output<String> healthState() {
-        return this.healthState == null ? Codegen.empty() : this.healthState;
+    public Optional<Output<String>> healthState() {
+        return Optional.ofNullable(this.healthState);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metrics")
-      private final @Nullable Output<List<RuntimeMetricGetArgs>> metrics;
+    private @Nullable Output<List<RuntimeMetricGetArgs>> metrics;
 
-    public Output<List<RuntimeMetricGetArgs>> metrics() {
-        return this.metrics == null ? Codegen.empty() : this.metrics;
+    public Optional<Output<List<RuntimeMetricGetArgs>>> metrics() {
+        return Optional.ofNullable(this.metrics);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="softwareConfig")
-      private final @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig;
+    private @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig;
 
-    public Output<RuntimeSoftwareConfigGetArgs> softwareConfig() {
-        return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
+    public Optional<Output<RuntimeSoftwareConfigGetArgs>> softwareConfig() {
+        return Optional.ofNullable(this.softwareConfig);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -118,157 +118,132 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualMachine")
-      private final @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine;
+    private @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine;
 
-    public Output<RuntimeVirtualMachineGetArgs> virtualMachine() {
-        return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
+    public Optional<Output<RuntimeVirtualMachineGetArgs>> virtualMachine() {
+        return Optional.ofNullable(this.virtualMachine);
     }
 
-    public RuntimeState(
-        @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig,
-        @Nullable Output<String> healthState,
-        @Nullable Output<String> location,
-        @Nullable Output<List<RuntimeMetricGetArgs>> metrics,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig,
-        @Nullable Output<String> state,
-        @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine) {
-        this.accessConfig = accessConfig;
-        this.healthState = healthState;
-        this.location = location;
-        this.metrics = metrics;
-        this.name = name;
-        this.project = project;
-        this.softwareConfig = softwareConfig;
-        this.state = state;
-        this.virtualMachine = virtualMachine;
-    }
+    private RuntimeState() {}
 
-    private RuntimeState() {
-        this.accessConfig = Codegen.empty();
-        this.healthState = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metrics = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.softwareConfig = Codegen.empty();
-        this.state = Codegen.empty();
-        this.virtualMachine = Codegen.empty();
+    private RuntimeState(RuntimeState $) {
+        this.accessConfig = $.accessConfig;
+        this.healthState = $.healthState;
+        this.location = $.location;
+        this.metrics = $.metrics;
+        this.name = $.name;
+        this.project = $.project;
+        this.softwareConfig = $.softwareConfig;
+        this.state = $.state;
+        this.virtualMachine = $.virtualMachine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig;
-        private @Nullable Output<String> healthState;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<RuntimeMetricGetArgs>> metrics;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig;
-        private @Nullable Output<String> state;
-        private @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine;
+        private RuntimeState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeState();
         }
 
         public Builder(RuntimeState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessConfig = defaults.accessConfig;
-    	      this.healthState = defaults.healthState;
-    	      this.location = defaults.location;
-    	      this.metrics = defaults.metrics;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.softwareConfig = defaults.softwareConfig;
-    	      this.state = defaults.state;
-    	      this.virtualMachine = defaults.virtualMachine;
+            $ = new RuntimeState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessConfig(@Nullable Output<RuntimeAccessConfigGetArgs> accessConfig) {
-            this.accessConfig = accessConfig;
+            $.accessConfig = accessConfig;
             return this;
         }
-        public Builder accessConfig(@Nullable RuntimeAccessConfigGetArgs accessConfig) {
-            this.accessConfig = Codegen.ofNullable(accessConfig);
-            return this;
+
+        public Builder accessConfig(RuntimeAccessConfigGetArgs accessConfig) {
+            return accessConfig(Output.of(accessConfig));
         }
+
         public Builder healthState(@Nullable Output<String> healthState) {
-            this.healthState = healthState;
+            $.healthState = healthState;
             return this;
         }
-        public Builder healthState(@Nullable String healthState) {
-            this.healthState = Codegen.ofNullable(healthState);
-            return this;
+
+        public Builder healthState(String healthState) {
+            return healthState(Output.of(healthState));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metrics(@Nullable Output<List<RuntimeMetricGetArgs>> metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
-        public Builder metrics(@Nullable List<RuntimeMetricGetArgs> metrics) {
-            this.metrics = Codegen.ofNullable(metrics);
-            return this;
+
+        public Builder metrics(List<RuntimeMetricGetArgs> metrics) {
+            return metrics(Output.of(metrics));
         }
+
         public Builder metrics(RuntimeMetricGetArgs... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig) {
-            this.softwareConfig = softwareConfig;
+            $.softwareConfig = softwareConfig;
             return this;
         }
-        public Builder softwareConfig(@Nullable RuntimeSoftwareConfigGetArgs softwareConfig) {
-            this.softwareConfig = Codegen.ofNullable(softwareConfig);
-            return this;
+
+        public Builder softwareConfig(RuntimeSoftwareConfigGetArgs softwareConfig) {
+            return softwareConfig(Output.of(softwareConfig));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder virtualMachine(@Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine) {
-            this.virtualMachine = virtualMachine;
+            $.virtualMachine = virtualMachine;
             return this;
         }
-        public Builder virtualMachine(@Nullable RuntimeVirtualMachineGetArgs virtualMachine) {
-            this.virtualMachine = Codegen.ofNullable(virtualMachine);
-            return this;
-        }        public RuntimeState build() {
-            return new RuntimeState(accessConfig, healthState, location, metrics, name, project, softwareConfig, state, virtualMachine);
+
+        public Builder virtualMachine(RuntimeVirtualMachineGetArgs virtualMachine) {
+            return virtualMachine(Output.of(virtualMachine));
+        }
+
+        public RuntimeState build() {
+            return $;
         }
     }
+
 }

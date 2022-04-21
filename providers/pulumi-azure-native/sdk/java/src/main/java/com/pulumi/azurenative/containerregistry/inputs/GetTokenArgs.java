@@ -17,7 +17,7 @@ public final class GetTokenArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class GetTokenArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetTokenArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tokenName", required=true)
-      private final String tokenName;
+    private String tokenName;
 
     public String tokenName() {
         return this.tokenName;
     }
 
-    public GetTokenArgs(
-        String registryName,
-        String resourceGroupName,
-        String tokenName) {
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tokenName = Objects.requireNonNull(tokenName, "expected parameter 'tokenName' to be non-null");
-    }
+    private GetTokenArgs() {}
 
-    private GetTokenArgs() {
-        this.registryName = null;
-        this.resourceGroupName = null;
-        this.tokenName = null;
+    private GetTokenArgs(GetTokenArgs $) {
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tokenName = $.tokenName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registryName;
-        private String resourceGroupName;
-        private String tokenName;
+        private GetTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTokenArgs();
         }
 
         public Builder(GetTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tokenName = defaults.tokenName;
+            $ = new GetTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder tokenName(String tokenName) {
-            this.tokenName = Objects.requireNonNull(tokenName);
+            $.tokenName = tokenName;
             return this;
-        }        public GetTokenArgs build() {
-            return new GetTokenArgs(registryName, resourceGroupName, tokenName);
+        }
+
+        public GetTokenArgs build() {
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.tokenName = Objects.requireNonNull($.tokenName, "expected parameter 'tokenName' to be non-null");
+            return $;
         }
     }
+
 }

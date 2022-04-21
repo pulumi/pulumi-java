@@ -24,10 +24,10 @@ public final class BackendTlsPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="validateCertificateChain")
-      private final @Nullable Boolean validateCertificateChain;
+    private @Nullable Boolean validateCertificateChain;
 
     public Optional<Boolean> validateCertificateChain() {
-        return this.validateCertificateChain == null ? Optional.empty() : Optional.ofNullable(this.validateCertificateChain);
+        return Optional.ofNullable(this.validateCertificateChain);
     }
 
     /**
@@ -35,55 +35,52 @@ public final class BackendTlsPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="validateCertificateName")
-      private final @Nullable Boolean validateCertificateName;
+    private @Nullable Boolean validateCertificateName;
 
     public Optional<Boolean> validateCertificateName() {
-        return this.validateCertificateName == null ? Optional.empty() : Optional.ofNullable(this.validateCertificateName);
+        return Optional.ofNullable(this.validateCertificateName);
     }
 
-    public BackendTlsPropertiesResponse(
-        @Nullable Boolean validateCertificateChain,
-        @Nullable Boolean validateCertificateName) {
-        this.validateCertificateChain = Codegen.booleanProp("validateCertificateChain").arg(validateCertificateChain).def(true).getNullable();
-        this.validateCertificateName = Codegen.booleanProp("validateCertificateName").arg(validateCertificateName).def(true).getNullable();
-    }
+    private BackendTlsPropertiesResponse() {}
 
-    private BackendTlsPropertiesResponse() {
-        this.validateCertificateChain = null;
-        this.validateCertificateName = null;
+    private BackendTlsPropertiesResponse(BackendTlsPropertiesResponse $) {
+        this.validateCertificateChain = $.validateCertificateChain;
+        this.validateCertificateName = $.validateCertificateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendTlsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean validateCertificateChain;
-        private @Nullable Boolean validateCertificateName;
+        private BackendTlsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendTlsPropertiesResponse();
         }
 
         public Builder(BackendTlsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.validateCertificateChain = defaults.validateCertificateChain;
-    	      this.validateCertificateName = defaults.validateCertificateName;
+            $ = new BackendTlsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder validateCertificateChain(@Nullable Boolean validateCertificateChain) {
-            this.validateCertificateChain = validateCertificateChain;
+            $.validateCertificateChain = validateCertificateChain;
             return this;
         }
+
         public Builder validateCertificateName(@Nullable Boolean validateCertificateName) {
-            this.validateCertificateName = validateCertificateName;
+            $.validateCertificateName = validateCertificateName;
             return this;
-        }        public BackendTlsPropertiesResponse build() {
-            return new BackendTlsPropertiesResponse(validateCertificateChain, validateCertificateName);
+        }
+
+        public BackendTlsPropertiesResponse build() {
+            $.validateCertificateChain = Codegen.booleanProp("validateCertificateChain").arg($.validateCertificateChain).def(true).getNullable();
+            $.validateCertificateName = Codegen.booleanProp("validateCertificateName").arg($.validateCertificateName).def(true).getNullable();
+            return $;
         }
     }
+
 }

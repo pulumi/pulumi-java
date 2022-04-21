@@ -26,10 +26,10 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
      * 
      */
     @Import(name="computeProperties")
-      private final @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
+    private @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
 
     public Optional<IntegrationRuntimeComputePropertiesResponse> computeProperties() {
-        return this.computeProperties == null ? Optional.empty() : Optional.ofNullable(this.computeProperties);
+        return Optional.ofNullable(this.computeProperties);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
      * 
      */
     @Import(name="ssisProperties")
-      private final @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
+    private @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
 
     public Optional<IntegrationRuntimeSsisPropertiesResponse> ssisProperties() {
-        return this.ssisProperties == null ? Optional.empty() : Optional.ofNullable(this.ssisProperties);
+        return Optional.ofNullable(this.ssisProperties);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -71,82 +71,70 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManagedIntegrationRuntimeResponse(
-        @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties,
-        @Nullable String description,
-        @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties,
-        String state,
-        String type) {
-        this.computeProperties = computeProperties;
-        this.description = description;
-        this.ssisProperties = ssisProperties;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ManagedIntegrationRuntimeResponse() {}
 
-    private ManagedIntegrationRuntimeResponse() {
-        this.computeProperties = null;
-        this.description = null;
-        this.ssisProperties = null;
-        this.state = null;
-        this.type = null;
+    private ManagedIntegrationRuntimeResponse(ManagedIntegrationRuntimeResponse $) {
+        this.computeProperties = $.computeProperties;
+        this.description = $.description;
+        this.ssisProperties = $.ssisProperties;
+        this.state = $.state;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIntegrationRuntimeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
-        private @Nullable String description;
-        private @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
-        private String state;
-        private String type;
+        private ManagedIntegrationRuntimeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIntegrationRuntimeResponse();
         }
 
         public Builder(ManagedIntegrationRuntimeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeProperties = defaults.computeProperties;
-    	      this.description = defaults.description;
-    	      this.ssisProperties = defaults.ssisProperties;
-    	      this.state = defaults.state;
-    	      this.type = defaults.type;
+            $ = new ManagedIntegrationRuntimeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesResponse computeProperties) {
-            this.computeProperties = computeProperties;
+            $.computeProperties = computeProperties;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties) {
-            this.ssisProperties = ssisProperties;
+            $.ssisProperties = ssisProperties;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManagedIntegrationRuntimeResponse build() {
-            return new ManagedIntegrationRuntimeResponse(computeProperties, description, ssisProperties, state, type);
+        }
+
+        public ManagedIntegrationRuntimeResponse build() {
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

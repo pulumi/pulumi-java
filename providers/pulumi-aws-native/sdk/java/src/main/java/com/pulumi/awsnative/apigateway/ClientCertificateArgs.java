@@ -6,10 +6,10 @@ package com.pulumi.awsnative.apigateway;
 import com.pulumi.awsnative.apigateway.inputs.ClientCertificateTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ClientCertificateTagArgs>> tags;
+    private @Nullable Output<List<ClientCertificateTagArgs>> tags;
 
-    public Output<List<ClientCertificateTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ClientCertificateTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ClientCertificateArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<ClientCertificateTagArgs>> tags) {
-        this.description = description;
-        this.tags = tags;
-    }
+    private ClientCertificateArgs() {}
 
-    private ClientCertificateArgs() {
-        this.description = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ClientCertificateArgs(ClientCertificateArgs $) {
+        this.description = $.description;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<ClientCertificateTagArgs>> tags;
+        private ClientCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientCertificateArgs();
         }
 
         public Builder(ClientCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.tags = defaults.tags;
+            $ = new ClientCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder tags(@Nullable Output<List<ClientCertificateTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ClientCertificateTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ClientCertificateTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ClientCertificateTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ClientCertificateArgs build() {
-            return new ClientCertificateArgs(description, tags);
+        }
+
+        public ClientCertificateArgs build() {
+            return $;
         }
     }
+
 }

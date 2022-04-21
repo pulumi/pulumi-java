@@ -17,45 +17,45 @@ public final class GetOrganizationalUnitsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="parentId", required=true)
-      private final String parentId;
+    private String parentId;
 
     public String parentId() {
         return this.parentId;
     }
 
-    public GetOrganizationalUnitsArgs(String parentId) {
-        this.parentId = Objects.requireNonNull(parentId, "expected parameter 'parentId' to be non-null");
-    }
+    private GetOrganizationalUnitsArgs() {}
 
-    private GetOrganizationalUnitsArgs() {
-        this.parentId = null;
+    private GetOrganizationalUnitsArgs(GetOrganizationalUnitsArgs $) {
+        this.parentId = $.parentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationalUnitsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parentId;
+        private GetOrganizationalUnitsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationalUnitsArgs();
         }
 
         public Builder(GetOrganizationalUnitsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parentId = defaults.parentId;
+            $ = new GetOrganizationalUnitsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parentId(String parentId) {
-            this.parentId = Objects.requireNonNull(parentId);
+            $.parentId = parentId;
             return this;
-        }        public GetOrganizationalUnitsArgs build() {
-            return new GetOrganizationalUnitsArgs(parentId);
+        }
+
+        public GetOrganizationalUnitsArgs build() {
+            $.parentId = Objects.requireNonNull($.parentId, "expected parameter 'parentId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="natIp")
-      private final @Nullable Output<String> natIp;
+    private @Nullable Output<String> natIp;
 
-    public Output<String> natIp() {
-        return this.natIp == null ? Codegen.empty() : this.natIp;
+    public Optional<Output<String>> natIp() {
+        return Optional.ofNullable(this.natIp);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="networkTier")
-      private final @Nullable Output<String> networkTier;
+    private @Nullable Output<String> networkTier;
 
-    public Output<String> networkTier() {
-        return this.networkTier == null ? Codegen.empty() : this.networkTier;
+    public Optional<Output<String>> networkTier() {
+        return Optional.ofNullable(this.networkTier);
     }
 
     /**
@@ -45,76 +45,68 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="publicPtrDomainName")
-      private final @Nullable Output<String> publicPtrDomainName;
+    private @Nullable Output<String> publicPtrDomainName;
 
-    public Output<String> publicPtrDomainName() {
-        return this.publicPtrDomainName == null ? Codegen.empty() : this.publicPtrDomainName;
+    public Optional<Output<String>> publicPtrDomainName() {
+        return Optional.ofNullable(this.publicPtrDomainName);
     }
 
-    public InstanceNetworkInterfaceAccessConfigArgs(
-        @Nullable Output<String> natIp,
-        @Nullable Output<String> networkTier,
-        @Nullable Output<String> publicPtrDomainName) {
-        this.natIp = natIp;
-        this.networkTier = networkTier;
-        this.publicPtrDomainName = publicPtrDomainName;
-    }
+    private InstanceNetworkInterfaceAccessConfigArgs() {}
 
-    private InstanceNetworkInterfaceAccessConfigArgs() {
-        this.natIp = Codegen.empty();
-        this.networkTier = Codegen.empty();
-        this.publicPtrDomainName = Codegen.empty();
+    private InstanceNetworkInterfaceAccessConfigArgs(InstanceNetworkInterfaceAccessConfigArgs $) {
+        this.natIp = $.natIp;
+        this.networkTier = $.networkTier;
+        this.publicPtrDomainName = $.publicPtrDomainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceNetworkInterfaceAccessConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> natIp;
-        private @Nullable Output<String> networkTier;
-        private @Nullable Output<String> publicPtrDomainName;
+        private InstanceNetworkInterfaceAccessConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceNetworkInterfaceAccessConfigArgs();
         }
 
         public Builder(InstanceNetworkInterfaceAccessConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.natIp = defaults.natIp;
-    	      this.networkTier = defaults.networkTier;
-    	      this.publicPtrDomainName = defaults.publicPtrDomainName;
+            $ = new InstanceNetworkInterfaceAccessConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder natIp(@Nullable Output<String> natIp) {
-            this.natIp = natIp;
+            $.natIp = natIp;
             return this;
         }
-        public Builder natIp(@Nullable String natIp) {
-            this.natIp = Codegen.ofNullable(natIp);
-            return this;
+
+        public Builder natIp(String natIp) {
+            return natIp(Output.of(natIp));
         }
+
         public Builder networkTier(@Nullable Output<String> networkTier) {
-            this.networkTier = networkTier;
+            $.networkTier = networkTier;
             return this;
         }
-        public Builder networkTier(@Nullable String networkTier) {
-            this.networkTier = Codegen.ofNullable(networkTier);
-            return this;
+
+        public Builder networkTier(String networkTier) {
+            return networkTier(Output.of(networkTier));
         }
+
         public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
-            this.publicPtrDomainName = publicPtrDomainName;
+            $.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-        public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
-            this.publicPtrDomainName = Codegen.ofNullable(publicPtrDomainName);
-            return this;
-        }        public InstanceNetworkInterfaceAccessConfigArgs build() {
-            return new InstanceNetworkInterfaceAccessConfigArgs(natIp, networkTier, publicPtrDomainName);
+
+        public Builder publicPtrDomainName(String publicPtrDomainName) {
+            return publicPtrDomainName(Output.of(publicPtrDomainName));
+        }
+
+        public InstanceNetworkInterfaceAccessConfigArgs build() {
+            return $;
         }
     }
+
 }

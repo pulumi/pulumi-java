@@ -25,10 +25,10 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="blockSizeInMB")
-      private final @Nullable Object blockSizeInMB;
+    private @Nullable Object blockSizeInMB;
 
     public Optional<Object> blockSizeInMB() {
-        return this.blockSizeInMB == null ? Optional.empty() : Optional.ofNullable(this.blockSizeInMB);
+        return Optional.ofNullable(this.blockSizeInMB);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="copyBehavior")
-      private final @Nullable Object copyBehavior;
+    private @Nullable Object copyBehavior;
 
     public Optional<Object> copyBehavior() {
-        return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
+        return Optional.ofNullable(this.copyBehavior);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -70,82 +70,69 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureBlobStorageWriteSettingsResponse(
-        @Nullable Object blockSizeInMB,
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        String type) {
-        this.blockSizeInMB = blockSizeInMB;
-        this.copyBehavior = copyBehavior;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureBlobStorageWriteSettingsResponse() {}
 
-    private AzureBlobStorageWriteSettingsResponse() {
-        this.blockSizeInMB = null;
-        this.copyBehavior = null;
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.type = null;
+    private AzureBlobStorageWriteSettingsResponse(AzureBlobStorageWriteSettingsResponse $) {
+        this.blockSizeInMB = $.blockSizeInMB;
+        this.copyBehavior = $.copyBehavior;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobStorageWriteSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object blockSizeInMB;
-        private @Nullable Object copyBehavior;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private String type;
+        private AzureBlobStorageWriteSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobStorageWriteSettingsResponse();
         }
 
         public Builder(AzureBlobStorageWriteSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockSizeInMB = defaults.blockSizeInMB;
-    	      this.copyBehavior = defaults.copyBehavior;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.type = defaults.type;
+            $ = new AzureBlobStorageWriteSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blockSizeInMB(@Nullable Object blockSizeInMB) {
-            this.blockSizeInMB = blockSizeInMB;
+            $.blockSizeInMB = blockSizeInMB;
             return this;
         }
+
         public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = copyBehavior;
+            $.copyBehavior = copyBehavior;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureBlobStorageWriteSettingsResponse build() {
-            return new AzureBlobStorageWriteSettingsResponse(blockSizeInMB, copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
+        }
+
+        public AzureBlobStorageWriteSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

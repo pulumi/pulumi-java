@@ -17,7 +17,7 @@ public final class GetActivityCustomEntityQueryArgs extends com.pulumi.resources
      * 
      */
     @Import(name="entityQueryId", required=true)
-      private final String entityQueryId;
+    private String entityQueryId;
 
     public String entityQueryId() {
         return this.entityQueryId;
@@ -28,7 +28,7 @@ public final class GetActivityCustomEntityQueryArgs extends com.pulumi.resources
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -39,7 +39,7 @@ public final class GetActivityCustomEntityQueryArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetActivityCustomEntityQueryArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetActivityCustomEntityQueryArgs(
-        String entityQueryId,
-        String operationalInsightsResourceProvider,
-        String resourceGroupName,
-        String workspaceName) {
-        this.entityQueryId = Objects.requireNonNull(entityQueryId, "expected parameter 'entityQueryId' to be non-null");
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetActivityCustomEntityQueryArgs() {}
 
-    private GetActivityCustomEntityQueryArgs() {
-        this.entityQueryId = null;
-        this.operationalInsightsResourceProvider = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetActivityCustomEntityQueryArgs(GetActivityCustomEntityQueryArgs $) {
+        this.entityQueryId = $.entityQueryId;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetActivityCustomEntityQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String entityQueryId;
-        private String operationalInsightsResourceProvider;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetActivityCustomEntityQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetActivityCustomEntityQueryArgs();
         }
 
         public Builder(GetActivityCustomEntityQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityQueryId = defaults.entityQueryId;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetActivityCustomEntityQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entityQueryId(String entityQueryId) {
-            this.entityQueryId = Objects.requireNonNull(entityQueryId);
+            $.entityQueryId = entityQueryId;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetActivityCustomEntityQueryArgs build() {
-            return new GetActivityCustomEntityQueryArgs(entityQueryId, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
+        }
+
+        public GetActivityCustomEntityQueryArgs build() {
+            $.entityQueryId = Objects.requireNonNull($.entityQueryId, "expected parameter 'entityQueryId' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

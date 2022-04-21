@@ -13,94 +13,87 @@ public final class GetResourcefileArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetResourcefileArgs Empty = new GetResourcefileArgs();
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetResourcefileArgs(
-        String environmentId,
-        String name,
-        String organizationId,
-        String type) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetResourcefileArgs() {}
 
-    private GetResourcefileArgs() {
-        this.environmentId = null;
-        this.name = null;
-        this.organizationId = null;
-        this.type = null;
+    private GetResourcefileArgs(GetResourcefileArgs $) {
+        this.environmentId = $.environmentId;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcefileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
-        private String name;
-        private String organizationId;
-        private String type;
+        private GetResourcefileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcefileArgs();
         }
 
         public Builder(GetResourcefileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.type = defaults.type;
+            $ = new GetResourcefileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetResourcefileArgs build() {
-            return new GetResourcefileArgs(environmentId, name, organizationId, type);
+        }
+
+        public GetResourcefileArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse exten
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse exten
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public OSPolicyResourceRepositoryResourceGooRepositoryResponse(
-        String name,
-        String url) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private OSPolicyResourceRepositoryResourceGooRepositoryResponse() {}
 
-    private OSPolicyResourceRepositoryResourceGooRepositoryResponse() {
-        this.name = null;
-        this.url = null;
+    private OSPolicyResourceRepositoryResourceGooRepositoryResponse(OSPolicyResourceRepositoryResourceGooRepositoryResponse $) {
+        this.name = $.name;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceRepositoryResourceGooRepositoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String url;
+        private OSPolicyResourceRepositoryResourceGooRepositoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceRepositoryResourceGooRepositoryResponse();
         }
 
         public Builder(OSPolicyResourceRepositoryResourceGooRepositoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.url = defaults.url;
+            $ = new OSPolicyResourceRepositoryResourceGooRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public OSPolicyResourceRepositoryResourceGooRepositoryResponse build() {
-            return new OSPolicyResourceRepositoryResourceGooRepositoryResponse(name, url);
+        }
+
+        public OSPolicyResourceRepositoryResourceGooRepositoryResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

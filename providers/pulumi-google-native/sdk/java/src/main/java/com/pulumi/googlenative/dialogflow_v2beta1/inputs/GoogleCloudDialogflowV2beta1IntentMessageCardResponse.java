@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
      * 
      */
     @Import(name="buttons", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons() {
         return this.buttons;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
      * 
      */
     @Import(name="imageUri", required=true)
-      private final String imageUri;
+    private String imageUri;
 
     public String imageUri() {
         return this.imageUri;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
      * 
      */
     @Import(name="subtitle", required=true)
-      private final String subtitle;
+    private String subtitle;
 
     public String subtitle() {
         return this.subtitle;
@@ -56,76 +56,70 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageCardResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons,
-        String imageUri,
-        String subtitle,
-        String title) {
-        this.buttons = Objects.requireNonNull(buttons, "expected parameter 'buttons' to be non-null");
-        this.imageUri = Objects.requireNonNull(imageUri, "expected parameter 'imageUri' to be non-null");
-        this.subtitle = Objects.requireNonNull(subtitle, "expected parameter 'subtitle' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageCardResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageCardResponse() {
-        this.buttons = List.of();
-        this.imageUri = null;
-        this.subtitle = null;
-        this.title = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageCardResponse(GoogleCloudDialogflowV2beta1IntentMessageCardResponse $) {
+        this.buttons = $.buttons;
+        this.imageUri = $.imageUri;
+        this.subtitle = $.subtitle;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageCardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons;
-        private String imageUri;
-        private String subtitle;
-        private String title;
+        private GoogleCloudDialogflowV2beta1IntentMessageCardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageCardResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageCardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buttons = defaults.buttons;
-    	      this.imageUri = defaults.imageUri;
-    	      this.subtitle = defaults.subtitle;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageCardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder buttons(List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons) {
-            this.buttons = Objects.requireNonNull(buttons);
+            $.buttons = buttons;
             return this;
         }
+
         public Builder buttons(GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse... buttons) {
             return buttons(List.of(buttons));
         }
+
         public Builder imageUri(String imageUri) {
-            this.imageUri = Objects.requireNonNull(imageUri);
+            $.imageUri = imageUri;
             return this;
         }
+
         public Builder subtitle(String subtitle) {
-            this.subtitle = Objects.requireNonNull(subtitle);
+            $.subtitle = subtitle;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageCardResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageCardResponse(buttons, imageUri, subtitle, title);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageCardResponse build() {
+            $.buttons = Objects.requireNonNull($.buttons, "expected parameter 'buttons' to be non-null");
+            $.imageUri = Objects.requireNonNull($.imageUri, "expected parameter 'imageUri' to be non-null");
+            $.subtitle = Objects.requireNonNull($.subtitle, "expected parameter 'subtitle' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

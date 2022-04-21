@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PublicIPAddressDnsSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="domainNameLabel")
-      private final @Nullable Output<String> domainNameLabel;
+    private @Nullable Output<String> domainNameLabel;
 
-    public Output<String> domainNameLabel() {
-        return this.domainNameLabel == null ? Codegen.empty() : this.domainNameLabel;
+    public Optional<Output<String>> domainNameLabel() {
+        return Optional.ofNullable(this.domainNameLabel);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PublicIPAddressDnsSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable Output<String> fqdn;
+    private @Nullable Output<String> fqdn;
 
-    public Output<String> fqdn() {
-        return this.fqdn == null ? Codegen.empty() : this.fqdn;
+    public Optional<Output<String>> fqdn() {
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class PublicIPAddressDnsSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="reverseFqdn")
-      private final @Nullable Output<String> reverseFqdn;
+    private @Nullable Output<String> reverseFqdn;
 
-    public Output<String> reverseFqdn() {
-        return this.reverseFqdn == null ? Codegen.empty() : this.reverseFqdn;
+    public Optional<Output<String>> reverseFqdn() {
+        return Optional.ofNullable(this.reverseFqdn);
     }
 
-    public PublicIPAddressDnsSettingsArgs(
-        @Nullable Output<String> domainNameLabel,
-        @Nullable Output<String> fqdn,
-        @Nullable Output<String> reverseFqdn) {
-        this.domainNameLabel = domainNameLabel;
-        this.fqdn = fqdn;
-        this.reverseFqdn = reverseFqdn;
-    }
+    private PublicIPAddressDnsSettingsArgs() {}
 
-    private PublicIPAddressDnsSettingsArgs() {
-        this.domainNameLabel = Codegen.empty();
-        this.fqdn = Codegen.empty();
-        this.reverseFqdn = Codegen.empty();
+    private PublicIPAddressDnsSettingsArgs(PublicIPAddressDnsSettingsArgs $) {
+        this.domainNameLabel = $.domainNameLabel;
+        this.fqdn = $.fqdn;
+        this.reverseFqdn = $.reverseFqdn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicIPAddressDnsSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainNameLabel;
-        private @Nullable Output<String> fqdn;
-        private @Nullable Output<String> reverseFqdn;
+        private PublicIPAddressDnsSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicIPAddressDnsSettingsArgs();
         }
 
         public Builder(PublicIPAddressDnsSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainNameLabel = defaults.domainNameLabel;
-    	      this.fqdn = defaults.fqdn;
-    	      this.reverseFqdn = defaults.reverseFqdn;
+            $ = new PublicIPAddressDnsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainNameLabel(@Nullable Output<String> domainNameLabel) {
-            this.domainNameLabel = domainNameLabel;
+            $.domainNameLabel = domainNameLabel;
             return this;
         }
-        public Builder domainNameLabel(@Nullable String domainNameLabel) {
-            this.domainNameLabel = Codegen.ofNullable(domainNameLabel);
-            return this;
+
+        public Builder domainNameLabel(String domainNameLabel) {
+            return domainNameLabel(Output.of(domainNameLabel));
         }
+
         public Builder fqdn(@Nullable Output<String> fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
-        public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Codegen.ofNullable(fqdn);
-            return this;
+
+        public Builder fqdn(String fqdn) {
+            return fqdn(Output.of(fqdn));
         }
+
         public Builder reverseFqdn(@Nullable Output<String> reverseFqdn) {
-            this.reverseFqdn = reverseFqdn;
+            $.reverseFqdn = reverseFqdn;
             return this;
         }
-        public Builder reverseFqdn(@Nullable String reverseFqdn) {
-            this.reverseFqdn = Codegen.ofNullable(reverseFqdn);
-            return this;
-        }        public PublicIPAddressDnsSettingsArgs build() {
-            return new PublicIPAddressDnsSettingsArgs(domainNameLabel, fqdn, reverseFqdn);
+
+        public Builder reverseFqdn(String reverseFqdn) {
+            return reverseFqdn(Output.of(reverseFqdn));
+        }
+
+        public PublicIPAddressDnsSettingsArgs build() {
+            return $;
         }
     }
+
 }

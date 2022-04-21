@@ -21,7 +21,7 @@ public final class PubsubResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscription", required=true)
-      private final String subscription;
+    private String subscription;
 
     public String subscription() {
         return this.subscription;
@@ -32,55 +32,52 @@ public final class PubsubResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="topic", required=true)
-      private final String topic;
+    private String topic;
 
     public String topic() {
         return this.topic;
     }
 
-    public PubsubResponse(
-        String subscription,
-        String topic) {
-        this.subscription = Objects.requireNonNull(subscription, "expected parameter 'subscription' to be non-null");
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private PubsubResponse() {}
 
-    private PubsubResponse() {
-        this.subscription = null;
-        this.topic = null;
+    private PubsubResponse(PubsubResponse $) {
+        this.subscription = $.subscription;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PubsubResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String subscription;
-        private String topic;
+        private PubsubResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PubsubResponse();
         }
 
         public Builder(PubsubResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subscription = defaults.subscription;
-    	      this.topic = defaults.topic;
+            $ = new PubsubResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder subscription(String subscription) {
-            this.subscription = Objects.requireNonNull(subscription);
+            $.subscription = subscription;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public PubsubResponse build() {
-            return new PubsubResponse(subscription, topic);
+        }
+
+        public PubsubResponse build() {
+            $.subscription = Objects.requireNonNull($.subscription, "expected parameter 'subscription' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.firestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collection")
-      private final @Nullable Output<String> collection;
+    private @Nullable Output<String> collection;
 
-    public Output<String> collection() {
-        return this.collection == null ? Codegen.empty() : this.collection;
+    public Optional<Output<String>> collection() {
+        return Optional.ofNullable(this.collection);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="database")
-      private final @Nullable Output<String> database;
+    private @Nullable Output<String> database;
 
-    public Output<String> database() {
-        return this.database == null ? Codegen.empty() : this.database;
+    public Optional<Output<String>> database() {
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentId")
-      private final @Nullable Output<String> documentId;
+    private @Nullable Output<String> documentId;
 
-    public Output<String> documentId() {
-        return this.documentId == null ? Codegen.empty() : this.documentId;
+    public Optional<Output<String>> documentId() {
+        return Optional.ofNullable(this.documentId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<String> fields;
+    private @Nullable Output<String> fields;
 
-    public Output<String> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<String>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -110,154 +110,128 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public DocumentState(
-        @Nullable Output<String> collection,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> database,
-        @Nullable Output<String> documentId,
-        @Nullable Output<String> fields,
-        @Nullable Output<String> name,
-        @Nullable Output<String> path,
-        @Nullable Output<String> project,
-        @Nullable Output<String> updateTime) {
-        this.collection = collection;
-        this.createTime = createTime;
-        this.database = database;
-        this.documentId = documentId;
-        this.fields = fields;
-        this.name = name;
-        this.path = path;
-        this.project = project;
-        this.updateTime = updateTime;
-    }
+    private DocumentState() {}
 
-    private DocumentState() {
-        this.collection = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.database = Codegen.empty();
-        this.documentId = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.name = Codegen.empty();
-        this.path = Codegen.empty();
-        this.project = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private DocumentState(DocumentState $) {
+        this.collection = $.collection;
+        this.createTime = $.createTime;
+        this.database = $.database;
+        this.documentId = $.documentId;
+        this.fields = $.fields;
+        this.name = $.name;
+        this.path = $.path;
+        this.project = $.project;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> collection;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> database;
-        private @Nullable Output<String> documentId;
-        private @Nullable Output<String> fields;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> updateTime;
+        private DocumentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentState();
         }
 
         public Builder(DocumentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collection = defaults.collection;
-    	      this.createTime = defaults.createTime;
-    	      this.database = defaults.database;
-    	      this.documentId = defaults.documentId;
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.project = defaults.project;
-    	      this.updateTime = defaults.updateTime;
+            $ = new DocumentState(Objects.requireNonNull(defaults));
         }
 
         public Builder collection(@Nullable Output<String> collection) {
-            this.collection = collection;
+            $.collection = collection;
             return this;
         }
-        public Builder collection(@Nullable String collection) {
-            this.collection = Codegen.ofNullable(collection);
-            return this;
+
+        public Builder collection(String collection) {
+            return collection(Output.of(collection));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder database(@Nullable Output<String> database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
-        public Builder database(@Nullable String database) {
-            this.database = Codegen.ofNullable(database);
-            return this;
+
+        public Builder database(String database) {
+            return database(Output.of(database));
         }
+
         public Builder documentId(@Nullable Output<String> documentId) {
-            this.documentId = documentId;
+            $.documentId = documentId;
             return this;
         }
-        public Builder documentId(@Nullable String documentId) {
-            this.documentId = Codegen.ofNullable(documentId);
-            return this;
+
+        public Builder documentId(String documentId) {
+            return documentId(Output.of(documentId));
         }
+
         public Builder fields(@Nullable Output<String> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable String fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(String fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public DocumentState build() {
-            return new DocumentState(collection, createTime, database, documentId, fields, name, path, project, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public DocumentState build() {
+            return $;
         }
     }
+
 }

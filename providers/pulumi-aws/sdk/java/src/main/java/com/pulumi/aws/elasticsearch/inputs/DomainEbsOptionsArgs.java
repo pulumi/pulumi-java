@@ -5,11 +5,11 @@ package com.pulumi.aws.elasticsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class DomainEbsOptionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ebsEnabled", required=true)
-      private final Output<Boolean> ebsEnabled;
+    private Output<Boolean> ebsEnabled;
 
     public Output<Boolean> ebsEnabled() {
         return this.ebsEnabled;
@@ -33,10 +33,10 @@ public final class DomainEbsOptionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DomainEbsOptionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="volumeSize")
-      private final @Nullable Output<Integer> volumeSize;
+    private @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> volumeSize() {
-        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
+    public Optional<Output<Integer>> volumeSize() {
+        return Optional.ofNullable(this.volumeSize);
     }
 
     /**
@@ -55,89 +55,79 @@ public final class DomainEbsOptionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="volumeType")
-      private final @Nullable Output<String> volumeType;
+    private @Nullable Output<String> volumeType;
 
-    public Output<String> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<String>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public DomainEbsOptionsArgs(
-        Output<Boolean> ebsEnabled,
-        @Nullable Output<Integer> iops,
-        @Nullable Output<Integer> volumeSize,
-        @Nullable Output<String> volumeType) {
-        this.ebsEnabled = Objects.requireNonNull(ebsEnabled, "expected parameter 'ebsEnabled' to be non-null");
-        this.iops = iops;
-        this.volumeSize = volumeSize;
-        this.volumeType = volumeType;
-    }
+    private DomainEbsOptionsArgs() {}
 
-    private DomainEbsOptionsArgs() {
-        this.ebsEnabled = Codegen.empty();
-        this.iops = Codegen.empty();
-        this.volumeSize = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private DomainEbsOptionsArgs(DomainEbsOptionsArgs $) {
+        this.ebsEnabled = $.ebsEnabled;
+        this.iops = $.iops;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainEbsOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> ebsEnabled;
-        private @Nullable Output<Integer> iops;
-        private @Nullable Output<Integer> volumeSize;
-        private @Nullable Output<String> volumeType;
+        private DomainEbsOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainEbsOptionsArgs();
         }
 
         public Builder(DomainEbsOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ebsEnabled = defaults.ebsEnabled;
-    	      this.iops = defaults.iops;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new DomainEbsOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ebsEnabled(Output<Boolean> ebsEnabled) {
-            this.ebsEnabled = Objects.requireNonNull(ebsEnabled);
+            $.ebsEnabled = ebsEnabled;
             return this;
         }
+
         public Builder ebsEnabled(Boolean ebsEnabled) {
-            this.ebsEnabled = Output.of(Objects.requireNonNull(ebsEnabled));
-            return this;
+            return ebsEnabled(Output.of(ebsEnabled));
         }
+
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
-            this.volumeSize = volumeSize;
+            $.volumeSize = volumeSize;
             return this;
         }
-        public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Codegen.ofNullable(volumeSize);
-            return this;
+
+        public Builder volumeSize(Integer volumeSize) {
+            return volumeSize(Output.of(volumeSize));
         }
+
         public Builder volumeType(@Nullable Output<String> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public DomainEbsOptionsArgs build() {
-            return new DomainEbsOptionsArgs(ebsEnabled, iops, volumeSize, volumeType);
+
+        public Builder volumeType(String volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public DomainEbsOptionsArgs build() {
+            $.ebsEnabled = Objects.requireNonNull($.ebsEnabled, "expected parameter 'ebsEnabled' to be non-null");
+            return $;
         }
     }
+
 }

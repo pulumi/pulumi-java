@@ -5,10 +5,10 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOpt
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOpt
      * 
      */
     @Import(name="logGroupName")
-      private final @Nullable Output<String> logGroupName;
+    private @Nullable Output<String> logGroupName;
 
-    public Output<String> logGroupName() {
-        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
+    public Optional<Output<String>> logGroupName() {
+        return Optional.ofNullable(this.logGroupName);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOpt
      * 
      */
     @Import(name="logStreamName")
-      private final @Nullable Output<String> logStreamName;
+    private @Nullable Output<String> logStreamName;
 
-    public Output<String> logStreamName() {
-        return this.logStreamName == null ? Codegen.empty() : this.logStreamName;
+    public Optional<Output<String>> logStreamName() {
+        return Optional.ofNullable(this.logStreamName);
     }
 
-    public FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> logGroupName,
-        @Nullable Output<String> logStreamName) {
-        this.enabled = enabled;
-        this.logGroupName = logGroupName;
-        this.logStreamName = logStreamName;
-    }
+    private FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs() {}
 
-    private FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs() {
-        this.enabled = Codegen.empty();
-        this.logGroupName = Codegen.empty();
-        this.logStreamName = Codegen.empty();
+    private FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs(FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs $) {
+        this.enabled = $.enabled;
+        this.logGroupName = $.logGroupName;
+        this.logStreamName = $.logStreamName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> logGroupName;
-        private @Nullable Output<String> logStreamName;
+        private FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs();
         }
 
         public Builder(FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.logStreamName = defaults.logStreamName;
+            $ = new FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
         }
-        public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Codegen.ofNullable(logGroupName);
-            return this;
+
+        public Builder logGroupName(String logGroupName) {
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder logStreamName(@Nullable Output<String> logStreamName) {
-            this.logStreamName = logStreamName;
+            $.logStreamName = logStreamName;
             return this;
         }
-        public Builder logStreamName(@Nullable String logStreamName) {
-            this.logStreamName = Codegen.ofNullable(logStreamName);
-            return this;
-        }        public FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs build() {
-            return new FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs(enabled, logGroupName, logStreamName);
+
+        public Builder logStreamName(String logStreamName) {
+            return logStreamName(Output.of(logStreamName));
+        }
+
+        public FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs build() {
+            return $;
         }
     }
+
 }

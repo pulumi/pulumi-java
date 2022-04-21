@@ -8,9 +8,9 @@ import com.pulumi.azurenative.datafactory.inputs.SelfHostedIntegrationRuntimeArg
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="factoryName", required=true)
-      private final Output<String> factoryName;
+    private Output<String> factoryName;
 
     public Output<String> factoryName() {
         return this.factoryName;
@@ -34,10 +34,10 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="integrationRuntimeName")
-      private final @Nullable Output<String> integrationRuntimeName;
+    private @Nullable Output<String> integrationRuntimeName;
 
-    public Output<String> integrationRuntimeName() {
-        return this.integrationRuntimeName == null ? Codegen.empty() : this.integrationRuntimeName;
+    public Optional<Output<String>> integrationRuntimeName() {
+        return Optional.ofNullable(this.integrationRuntimeName);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
+    private Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
     public Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties() {
         return this.properties;
@@ -56,89 +56,81 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public IntegrationRuntimeArgs(
-        Output<String> factoryName,
-        @Nullable Output<String> integrationRuntimeName,
-        Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties,
-        Output<String> resourceGroupName) {
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.integrationRuntimeName = integrationRuntimeName;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private IntegrationRuntimeArgs() {}
 
-    private IntegrationRuntimeArgs() {
-        this.factoryName = Codegen.empty();
-        this.integrationRuntimeName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private IntegrationRuntimeArgs(IntegrationRuntimeArgs $) {
+        this.factoryName = $.factoryName;
+        this.integrationRuntimeName = $.integrationRuntimeName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> factoryName;
-        private @Nullable Output<String> integrationRuntimeName;
-        private Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
-        private Output<String> resourceGroupName;
+        private IntegrationRuntimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeArgs();
         }
 
         public Builder(IntegrationRuntimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.factoryName = defaults.factoryName;
-    	      this.integrationRuntimeName = defaults.integrationRuntimeName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new IntegrationRuntimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder factoryName(Output<String> factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder factoryName(String factoryName) {
-            this.factoryName = Output.of(Objects.requireNonNull(factoryName));
-            return this;
+            return factoryName(Output.of(factoryName));
         }
+
         public Builder integrationRuntimeName(@Nullable Output<String> integrationRuntimeName) {
-            this.integrationRuntimeName = integrationRuntimeName;
+            $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
-        public Builder integrationRuntimeName(@Nullable String integrationRuntimeName) {
-            this.integrationRuntimeName = Codegen.ofNullable(integrationRuntimeName);
-            return this;
+
+        public Builder integrationRuntimeName(String integrationRuntimeName) {
+            return integrationRuntimeName(Output.of(integrationRuntimeName));
         }
+
         public Builder properties(Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs> properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public IntegrationRuntimeArgs build() {
-            return new IntegrationRuntimeArgs(factoryName, integrationRuntimeName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public IntegrationRuntimeArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

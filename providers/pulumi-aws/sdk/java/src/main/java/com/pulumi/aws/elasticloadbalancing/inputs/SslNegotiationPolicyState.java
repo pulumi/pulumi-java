@@ -6,11 +6,11 @@ package com.pulumi.aws.elasticloadbalancing.inputs;
 import com.pulumi.aws.elasticloadbalancing.inputs.SslNegotiationPolicyAttributeGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes;
+    private @Nullable Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes;
 
-    public Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<List<SslNegotiationPolicyAttributeGetArgs>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="lbPort")
-      private final @Nullable Output<Integer> lbPort;
+    private @Nullable Output<Integer> lbPort;
 
-    public Output<Integer> lbPort() {
-        return this.lbPort == null ? Codegen.empty() : this.lbPort;
+    public Optional<Output<Integer>> lbPort() {
+        return Optional.ofNullable(this.lbPort);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="loadBalancer")
-      private final @Nullable Output<String> loadBalancer;
+    private @Nullable Output<String> loadBalancer;
 
-    public Output<String> loadBalancer() {
-        return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
+    public Optional<Output<String>> loadBalancer() {
+        return Optional.ofNullable(this.loadBalancer);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SslNegotiationPolicyState(
-        @Nullable Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes,
-        @Nullable Output<Integer> lbPort,
-        @Nullable Output<String> loadBalancer,
-        @Nullable Output<String> name) {
-        this.attributes = attributes;
-        this.lbPort = lbPort;
-        this.loadBalancer = loadBalancer;
-        this.name = name;
-    }
+    private SslNegotiationPolicyState() {}
 
-    private SslNegotiationPolicyState() {
-        this.attributes = Codegen.empty();
-        this.lbPort = Codegen.empty();
-        this.loadBalancer = Codegen.empty();
-        this.name = Codegen.empty();
+    private SslNegotiationPolicyState(SslNegotiationPolicyState $) {
+        this.attributes = $.attributes;
+        this.lbPort = $.lbPort;
+        this.loadBalancer = $.loadBalancer;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslNegotiationPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes;
-        private @Nullable Output<Integer> lbPort;
-        private @Nullable Output<String> loadBalancer;
-        private @Nullable Output<String> name;
+        private SslNegotiationPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslNegotiationPolicyState();
         }
 
         public Builder(SslNegotiationPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.lbPort = defaults.lbPort;
-    	      this.loadBalancer = defaults.loadBalancer;
-    	      this.name = defaults.name;
+            $ = new SslNegotiationPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable List<SslNegotiationPolicyAttributeGetArgs> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(List<SslNegotiationPolicyAttributeGetArgs> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(SslNegotiationPolicyAttributeGetArgs... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder lbPort(@Nullable Output<Integer> lbPort) {
-            this.lbPort = lbPort;
+            $.lbPort = lbPort;
             return this;
         }
-        public Builder lbPort(@Nullable Integer lbPort) {
-            this.lbPort = Codegen.ofNullable(lbPort);
-            return this;
+
+        public Builder lbPort(Integer lbPort) {
+            return lbPort(Output.of(lbPort));
         }
+
         public Builder loadBalancer(@Nullable Output<String> loadBalancer) {
-            this.loadBalancer = loadBalancer;
+            $.loadBalancer = loadBalancer;
             return this;
         }
-        public Builder loadBalancer(@Nullable String loadBalancer) {
-            this.loadBalancer = Codegen.ofNullable(loadBalancer);
-            return this;
+
+        public Builder loadBalancer(String loadBalancer) {
+            return loadBalancer(Output.of(loadBalancer));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SslNegotiationPolicyState build() {
-            return new SslNegotiationPolicyState(attributes, lbPort, loadBalancer, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public SslNegotiationPolicyState build() {
+            return $;
         }
     }
+
 }

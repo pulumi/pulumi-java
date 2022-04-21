@@ -6,10 +6,10 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.SkuCapabilityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,76 +18,73 @@ public final class SkuZoneDetailArgs extends com.pulumi.resources.ResourceArgs {
     public static final SkuZoneDetailArgs Empty = new SkuZoneDetailArgs();
 
     @Import(name="capabilities")
-      private final @Nullable Output<List<SkuCapabilityArgs>> capabilities;
+    private @Nullable Output<List<SkuCapabilityArgs>> capabilities;
 
-    public Output<List<SkuCapabilityArgs>> capabilities() {
-        return this.capabilities == null ? Codegen.empty() : this.capabilities;
+    public Optional<Output<List<SkuCapabilityArgs>>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
     }
 
     @Import(name="name")
-      private final @Nullable Output<List<String>> name;
+    private @Nullable Output<List<String>> name;
 
-    public Output<List<String>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<List<String>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SkuZoneDetailArgs(
-        @Nullable Output<List<SkuCapabilityArgs>> capabilities,
-        @Nullable Output<List<String>> name) {
-        this.capabilities = capabilities;
-        this.name = name;
-    }
+    private SkuZoneDetailArgs() {}
 
-    private SkuZoneDetailArgs() {
-        this.capabilities = Codegen.empty();
-        this.name = Codegen.empty();
+    private SkuZoneDetailArgs(SkuZoneDetailArgs $) {
+        this.capabilities = $.capabilities;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuZoneDetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SkuCapabilityArgs>> capabilities;
-        private @Nullable Output<List<String>> name;
+        private SkuZoneDetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuZoneDetailArgs();
         }
 
         public Builder(SkuZoneDetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capabilities = defaults.capabilities;
-    	      this.name = defaults.name;
+            $ = new SkuZoneDetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capabilities(@Nullable Output<List<SkuCapabilityArgs>> capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
-        public Builder capabilities(@Nullable List<SkuCapabilityArgs> capabilities) {
-            this.capabilities = Codegen.ofNullable(capabilities);
-            return this;
+
+        public Builder capabilities(List<SkuCapabilityArgs> capabilities) {
+            return capabilities(Output.of(capabilities));
         }
+
         public Builder capabilities(SkuCapabilityArgs... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder name(@Nullable Output<List<String>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable List<String> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(List<String> name) {
+            return name(Output.of(name));
         }
+
         public Builder name(String... name) {
             return name(List.of(name));
-        }        public SkuZoneDetailArgs build() {
-            return new SkuZoneDetailArgs(capabilities, name);
+        }
+
+        public SkuZoneDetailArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.googlenative.ml_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.enums.TrialState;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_Trial_ParameterArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__MeasurementArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="finalMeasurement")
-      private final @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
+    private @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
 
-    public Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement() {
-        return this.finalMeasurement == null ? Codegen.empty() : this.finalMeasurement;
+    public Optional<Output<GoogleCloudMlV1__MeasurementArgs>> finalMeasurement() {
+        return Optional.ofNullable(this.finalMeasurement);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="measurements")
-      private final @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
+    private @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
 
-    public Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements() {
-        return this.measurements == null ? Codegen.empty() : this.measurements;
+    public Optional<Output<List<GoogleCloudMlV1__MeasurementArgs>>> measurements() {
+        return Optional.ofNullable(this.measurements);
     }
 
     /**
@@ -53,17 +53,17 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
+    private @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
 
-    public Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<GoogleCloudMlV1_Trial_ParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -71,141 +71,124 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<TrialState> state;
+    private @Nullable Output<TrialState> state;
 
-    public Output<TrialState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<TrialState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     @Import(name="studyId", required=true)
-      private final Output<String> studyId;
+    private Output<String> studyId;
 
     public Output<String> studyId() {
         return this.studyId;
     }
 
-    public TrialArgs(
-        @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement,
-        @Nullable Output<String> location,
-        @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements,
-        @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters,
-        @Nullable Output<String> project,
-        @Nullable Output<TrialState> state,
-        Output<String> studyId) {
-        this.finalMeasurement = finalMeasurement;
-        this.location = location;
-        this.measurements = measurements;
-        this.parameters = parameters;
-        this.project = project;
-        this.state = state;
-        this.studyId = Objects.requireNonNull(studyId, "expected parameter 'studyId' to be non-null");
-    }
+    private TrialArgs() {}
 
-    private TrialArgs() {
-        this.finalMeasurement = Codegen.empty();
-        this.location = Codegen.empty();
-        this.measurements = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.project = Codegen.empty();
-        this.state = Codegen.empty();
-        this.studyId = Codegen.empty();
+    private TrialArgs(TrialArgs $) {
+        this.finalMeasurement = $.finalMeasurement;
+        this.location = $.location;
+        this.measurements = $.measurements;
+        this.parameters = $.parameters;
+        this.project = $.project;
+        this.state = $.state;
+        this.studyId = $.studyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
-        private @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
-        private @Nullable Output<String> project;
-        private @Nullable Output<TrialState> state;
-        private Output<String> studyId;
+        private TrialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrialArgs();
         }
 
         public Builder(TrialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.finalMeasurement = defaults.finalMeasurement;
-    	      this.location = defaults.location;
-    	      this.measurements = defaults.measurements;
-    	      this.parameters = defaults.parameters;
-    	      this.project = defaults.project;
-    	      this.state = defaults.state;
-    	      this.studyId = defaults.studyId;
+            $ = new TrialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder finalMeasurement(@Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement) {
-            this.finalMeasurement = finalMeasurement;
+            $.finalMeasurement = finalMeasurement;
             return this;
         }
-        public Builder finalMeasurement(@Nullable GoogleCloudMlV1__MeasurementArgs finalMeasurement) {
-            this.finalMeasurement = Codegen.ofNullable(finalMeasurement);
-            return this;
+
+        public Builder finalMeasurement(GoogleCloudMlV1__MeasurementArgs finalMeasurement) {
+            return finalMeasurement(Output.of(finalMeasurement));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder measurements(@Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements) {
-            this.measurements = measurements;
+            $.measurements = measurements;
             return this;
         }
-        public Builder measurements(@Nullable List<GoogleCloudMlV1__MeasurementArgs> measurements) {
-            this.measurements = Codegen.ofNullable(measurements);
-            return this;
+
+        public Builder measurements(List<GoogleCloudMlV1__MeasurementArgs> measurements) {
+            return measurements(Output.of(measurements));
         }
+
         public Builder measurements(GoogleCloudMlV1__MeasurementArgs... measurements) {
             return measurements(List.of(measurements));
         }
+
         public Builder parameters(@Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<GoogleCloudMlV1_Trial_ParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<GoogleCloudMlV1_Trial_ParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(GoogleCloudMlV1_Trial_ParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder state(@Nullable Output<TrialState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable TrialState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(TrialState state) {
+            return state(Output.of(state));
         }
+
         public Builder studyId(Output<String> studyId) {
-            this.studyId = Objects.requireNonNull(studyId);
+            $.studyId = studyId;
             return this;
         }
+
         public Builder studyId(String studyId) {
-            this.studyId = Output.of(Objects.requireNonNull(studyId));
-            return this;
-        }        public TrialArgs build() {
-            return new TrialArgs(finalMeasurement, location, measurements, parameters, project, state, studyId);
+            return studyId(Output.of(studyId));
+        }
+
+        public TrialArgs build() {
+            $.studyId = Objects.requireNonNull($.studyId, "expected parameter 'studyId' to be non-null");
+            return $;
         }
     }
+
 }

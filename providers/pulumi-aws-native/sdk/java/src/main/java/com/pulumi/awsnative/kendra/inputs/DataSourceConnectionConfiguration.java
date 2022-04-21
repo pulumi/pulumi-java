@@ -14,110 +14,101 @@ public final class DataSourceConnectionConfiguration extends com.pulumi.resource
     public static final DataSourceConnectionConfiguration Empty = new DataSourceConnectionConfiguration();
 
     @Import(name="databaseHost", required=true)
-      private final String databaseHost;
+    private String databaseHost;
 
     public String databaseHost() {
         return this.databaseHost;
     }
 
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databasePort", required=true)
-      private final Integer databasePort;
+    private Integer databasePort;
 
     public Integer databasePort() {
         return this.databasePort;
     }
 
     @Import(name="secretArn", required=true)
-      private final String secretArn;
+    private String secretArn;
 
     public String secretArn() {
         return this.secretArn;
     }
 
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public DataSourceConnectionConfiguration(
-        String databaseHost,
-        String databaseName,
-        Integer databasePort,
-        String secretArn,
-        String tableName) {
-        this.databaseHost = Objects.requireNonNull(databaseHost, "expected parameter 'databaseHost' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.databasePort = Objects.requireNonNull(databasePort, "expected parameter 'databasePort' to be non-null");
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private DataSourceConnectionConfiguration() {}
 
-    private DataSourceConnectionConfiguration() {
-        this.databaseHost = null;
-        this.databaseName = null;
-        this.databasePort = null;
-        this.secretArn = null;
-        this.tableName = null;
+    private DataSourceConnectionConfiguration(DataSourceConnectionConfiguration $) {
+        this.databaseHost = $.databaseHost;
+        this.databaseName = $.databaseName;
+        this.databasePort = $.databasePort;
+        this.secretArn = $.secretArn;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConnectionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseHost;
-        private String databaseName;
-        private Integer databasePort;
-        private String secretArn;
-        private String tableName;
+        private DataSourceConnectionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConnectionConfiguration();
         }
 
         public Builder(DataSourceConnectionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseHost = defaults.databaseHost;
-    	      this.databaseName = defaults.databaseName;
-    	      this.databasePort = defaults.databasePort;
-    	      this.secretArn = defaults.secretArn;
-    	      this.tableName = defaults.tableName;
+            $ = new DataSourceConnectionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseHost(String databaseHost) {
-            this.databaseHost = Objects.requireNonNull(databaseHost);
+            $.databaseHost = databaseHost;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databasePort(Integer databasePort) {
-            this.databasePort = Objects.requireNonNull(databasePort);
+            $.databasePort = databasePort;
             return this;
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public DataSourceConnectionConfiguration build() {
-            return new DataSourceConnectionConfiguration(databaseHost, databaseName, databasePort, secretArn, tableName);
+        }
+
+        public DataSourceConnectionConfiguration build() {
+            $.databaseHost = Objects.requireNonNull($.databaseHost, "expected parameter 'databaseHost' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.databasePort = Objects.requireNonNull($.databasePort, "expected parameter 'databasePort' to be non-null");
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class ContainerGroupDiagnosticsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="logAnalytics")
-      private final @Nullable LogAnalyticsResponse logAnalytics;
+    private @Nullable LogAnalyticsResponse logAnalytics;
 
     public Optional<LogAnalyticsResponse> logAnalytics() {
-        return this.logAnalytics == null ? Optional.empty() : Optional.ofNullable(this.logAnalytics);
+        return Optional.ofNullable(this.logAnalytics);
     }
 
-    public ContainerGroupDiagnosticsResponse(@Nullable LogAnalyticsResponse logAnalytics) {
-        this.logAnalytics = logAnalytics;
-    }
+    private ContainerGroupDiagnosticsResponse() {}
 
-    private ContainerGroupDiagnosticsResponse() {
-        this.logAnalytics = null;
+    private ContainerGroupDiagnosticsResponse(ContainerGroupDiagnosticsResponse $) {
+        this.logAnalytics = $.logAnalytics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerGroupDiagnosticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LogAnalyticsResponse logAnalytics;
+        private ContainerGroupDiagnosticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerGroupDiagnosticsResponse();
         }
 
         public Builder(ContainerGroupDiagnosticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logAnalytics = defaults.logAnalytics;
+            $ = new ContainerGroupDiagnosticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder logAnalytics(@Nullable LogAnalyticsResponse logAnalytics) {
-            this.logAnalytics = logAnalytics;
+            $.logAnalytics = logAnalytics;
             return this;
-        }        public ContainerGroupDiagnosticsResponse build() {
-            return new ContainerGroupDiagnosticsResponse(logAnalytics);
+        }
+
+        public ContainerGroupDiagnosticsResponse build() {
+            return $;
         }
     }
+
 }

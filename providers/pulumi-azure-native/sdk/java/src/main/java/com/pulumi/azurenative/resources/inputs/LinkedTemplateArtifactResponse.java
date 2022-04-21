@@ -22,7 +22,7 @@ public final class LinkedTemplateArtifactResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -33,55 +33,52 @@ public final class LinkedTemplateArtifactResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="template", required=true)
-      private final Object template;
+    private Object template;
 
     public Object template() {
         return this.template;
     }
 
-    public LinkedTemplateArtifactResponse(
-        String path,
-        Object template) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-    }
+    private LinkedTemplateArtifactResponse() {}
 
-    private LinkedTemplateArtifactResponse() {
-        this.path = null;
-        this.template = null;
+    private LinkedTemplateArtifactResponse(LinkedTemplateArtifactResponse $) {
+        this.path = $.path;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedTemplateArtifactResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String path;
-        private Object template;
+        private LinkedTemplateArtifactResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedTemplateArtifactResponse();
         }
 
         public Builder(LinkedTemplateArtifactResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.template = defaults.template;
+            $ = new LinkedTemplateArtifactResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder template(Object template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
-        }        public LinkedTemplateArtifactResponse build() {
-            return new LinkedTemplateArtifactResponse(path, template);
+        }
+
+        public LinkedTemplateArtifactResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            return $;
         }
     }
+
 }

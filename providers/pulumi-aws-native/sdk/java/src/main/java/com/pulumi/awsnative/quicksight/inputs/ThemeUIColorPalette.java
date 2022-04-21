@@ -27,10 +27,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accent")
-      private final @Nullable String accent;
+    private @Nullable String accent;
 
     public Optional<String> accent() {
-        return this.accent == null ? Optional.empty() : Optional.ofNullable(this.accent);
+        return Optional.ofNullable(this.accent);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accentForeground")
-      private final @Nullable String accentForeground;
+    private @Nullable String accentForeground;
 
     public Optional<String> accentForeground() {
-        return this.accentForeground == null ? Optional.empty() : Optional.ofNullable(this.accentForeground);
+        return Optional.ofNullable(this.accentForeground);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="danger")
-      private final @Nullable String danger;
+    private @Nullable String danger;
 
     public Optional<String> danger() {
-        return this.danger == null ? Optional.empty() : Optional.ofNullable(this.danger);
+        return Optional.ofNullable(this.danger);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dangerForeground")
-      private final @Nullable String dangerForeground;
+    private @Nullable String dangerForeground;
 
     public Optional<String> dangerForeground() {
-        return this.dangerForeground == null ? Optional.empty() : Optional.ofNullable(this.dangerForeground);
+        return Optional.ofNullable(this.dangerForeground);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dimension")
-      private final @Nullable String dimension;
+    private @Nullable String dimension;
 
     public Optional<String> dimension() {
-        return this.dimension == null ? Optional.empty() : Optional.ofNullable(this.dimension);
+        return Optional.ofNullable(this.dimension);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dimensionForeground")
-      private final @Nullable String dimensionForeground;
+    private @Nullable String dimensionForeground;
 
     public Optional<String> dimensionForeground() {
-        return this.dimensionForeground == null ? Optional.empty() : Optional.ofNullable(this.dimensionForeground);
+        return Optional.ofNullable(this.dimensionForeground);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="measure")
-      private final @Nullable String measure;
+    private @Nullable String measure;
 
     public Optional<String> measure() {
-        return this.measure == null ? Optional.empty() : Optional.ofNullable(this.measure);
+        return Optional.ofNullable(this.measure);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="measureForeground")
-      private final @Nullable String measureForeground;
+    private @Nullable String measureForeground;
 
     public Optional<String> measureForeground() {
-        return this.measureForeground == null ? Optional.empty() : Optional.ofNullable(this.measureForeground);
+        return Optional.ofNullable(this.measureForeground);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="primaryBackground")
-      private final @Nullable String primaryBackground;
+    private @Nullable String primaryBackground;
 
     public Optional<String> primaryBackground() {
-        return this.primaryBackground == null ? Optional.empty() : Optional.ofNullable(this.primaryBackground);
+        return Optional.ofNullable(this.primaryBackground);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="primaryForeground")
-      private final @Nullable String primaryForeground;
+    private @Nullable String primaryForeground;
 
     public Optional<String> primaryForeground() {
-        return this.primaryForeground == null ? Optional.empty() : Optional.ofNullable(this.primaryForeground);
+        return Optional.ofNullable(this.primaryForeground);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secondaryBackground")
-      private final @Nullable String secondaryBackground;
+    private @Nullable String secondaryBackground;
 
     public Optional<String> secondaryBackground() {
-        return this.secondaryBackground == null ? Optional.empty() : Optional.ofNullable(this.secondaryBackground);
+        return Optional.ofNullable(this.secondaryBackground);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secondaryForeground")
-      private final @Nullable String secondaryForeground;
+    private @Nullable String secondaryForeground;
 
     public Optional<String> secondaryForeground() {
-        return this.secondaryForeground == null ? Optional.empty() : Optional.ofNullable(this.secondaryForeground);
+        return Optional.ofNullable(this.secondaryForeground);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="success")
-      private final @Nullable String success;
+    private @Nullable String success;
 
     public Optional<String> success() {
-        return this.success == null ? Optional.empty() : Optional.ofNullable(this.success);
+        return Optional.ofNullable(this.success);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="successForeground")
-      private final @Nullable String successForeground;
+    private @Nullable String successForeground;
 
     public Optional<String> successForeground() {
-        return this.successForeground == null ? Optional.empty() : Optional.ofNullable(this.successForeground);
+        return Optional.ofNullable(this.successForeground);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="warning")
-      private final @Nullable String warning;
+    private @Nullable String warning;
 
     public Optional<String> warning() {
-        return this.warning == null ? Optional.empty() : Optional.ofNullable(this.warning);
+        return Optional.ofNullable(this.warning);
     }
 
     /**
@@ -202,181 +202,134 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="warningForeground")
-      private final @Nullable String warningForeground;
+    private @Nullable String warningForeground;
 
     public Optional<String> warningForeground() {
-        return this.warningForeground == null ? Optional.empty() : Optional.ofNullable(this.warningForeground);
+        return Optional.ofNullable(this.warningForeground);
     }
 
-    public ThemeUIColorPalette(
-        @Nullable String accent,
-        @Nullable String accentForeground,
-        @Nullable String danger,
-        @Nullable String dangerForeground,
-        @Nullable String dimension,
-        @Nullable String dimensionForeground,
-        @Nullable String measure,
-        @Nullable String measureForeground,
-        @Nullable String primaryBackground,
-        @Nullable String primaryForeground,
-        @Nullable String secondaryBackground,
-        @Nullable String secondaryForeground,
-        @Nullable String success,
-        @Nullable String successForeground,
-        @Nullable String warning,
-        @Nullable String warningForeground) {
-        this.accent = accent;
-        this.accentForeground = accentForeground;
-        this.danger = danger;
-        this.dangerForeground = dangerForeground;
-        this.dimension = dimension;
-        this.dimensionForeground = dimensionForeground;
-        this.measure = measure;
-        this.measureForeground = measureForeground;
-        this.primaryBackground = primaryBackground;
-        this.primaryForeground = primaryForeground;
-        this.secondaryBackground = secondaryBackground;
-        this.secondaryForeground = secondaryForeground;
-        this.success = success;
-        this.successForeground = successForeground;
-        this.warning = warning;
-        this.warningForeground = warningForeground;
-    }
+    private ThemeUIColorPalette() {}
 
-    private ThemeUIColorPalette() {
-        this.accent = null;
-        this.accentForeground = null;
-        this.danger = null;
-        this.dangerForeground = null;
-        this.dimension = null;
-        this.dimensionForeground = null;
-        this.measure = null;
-        this.measureForeground = null;
-        this.primaryBackground = null;
-        this.primaryForeground = null;
-        this.secondaryBackground = null;
-        this.secondaryForeground = null;
-        this.success = null;
-        this.successForeground = null;
-        this.warning = null;
-        this.warningForeground = null;
+    private ThemeUIColorPalette(ThemeUIColorPalette $) {
+        this.accent = $.accent;
+        this.accentForeground = $.accentForeground;
+        this.danger = $.danger;
+        this.dangerForeground = $.dangerForeground;
+        this.dimension = $.dimension;
+        this.dimensionForeground = $.dimensionForeground;
+        this.measure = $.measure;
+        this.measureForeground = $.measureForeground;
+        this.primaryBackground = $.primaryBackground;
+        this.primaryForeground = $.primaryForeground;
+        this.secondaryBackground = $.secondaryBackground;
+        this.secondaryForeground = $.secondaryForeground;
+        this.success = $.success;
+        this.successForeground = $.successForeground;
+        this.warning = $.warning;
+        this.warningForeground = $.warningForeground;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeUIColorPalette defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accent;
-        private @Nullable String accentForeground;
-        private @Nullable String danger;
-        private @Nullable String dangerForeground;
-        private @Nullable String dimension;
-        private @Nullable String dimensionForeground;
-        private @Nullable String measure;
-        private @Nullable String measureForeground;
-        private @Nullable String primaryBackground;
-        private @Nullable String primaryForeground;
-        private @Nullable String secondaryBackground;
-        private @Nullable String secondaryForeground;
-        private @Nullable String success;
-        private @Nullable String successForeground;
-        private @Nullable String warning;
-        private @Nullable String warningForeground;
+        private ThemeUIColorPalette $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeUIColorPalette();
         }
 
         public Builder(ThemeUIColorPalette defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accent = defaults.accent;
-    	      this.accentForeground = defaults.accentForeground;
-    	      this.danger = defaults.danger;
-    	      this.dangerForeground = defaults.dangerForeground;
-    	      this.dimension = defaults.dimension;
-    	      this.dimensionForeground = defaults.dimensionForeground;
-    	      this.measure = defaults.measure;
-    	      this.measureForeground = defaults.measureForeground;
-    	      this.primaryBackground = defaults.primaryBackground;
-    	      this.primaryForeground = defaults.primaryForeground;
-    	      this.secondaryBackground = defaults.secondaryBackground;
-    	      this.secondaryForeground = defaults.secondaryForeground;
-    	      this.success = defaults.success;
-    	      this.successForeground = defaults.successForeground;
-    	      this.warning = defaults.warning;
-    	      this.warningForeground = defaults.warningForeground;
+            $ = new ThemeUIColorPalette(Objects.requireNonNull(defaults));
         }
 
         public Builder accent(@Nullable String accent) {
-            this.accent = accent;
+            $.accent = accent;
             return this;
         }
+
         public Builder accentForeground(@Nullable String accentForeground) {
-            this.accentForeground = accentForeground;
+            $.accentForeground = accentForeground;
             return this;
         }
+
         public Builder danger(@Nullable String danger) {
-            this.danger = danger;
+            $.danger = danger;
             return this;
         }
+
         public Builder dangerForeground(@Nullable String dangerForeground) {
-            this.dangerForeground = dangerForeground;
+            $.dangerForeground = dangerForeground;
             return this;
         }
+
         public Builder dimension(@Nullable String dimension) {
-            this.dimension = dimension;
+            $.dimension = dimension;
             return this;
         }
+
         public Builder dimensionForeground(@Nullable String dimensionForeground) {
-            this.dimensionForeground = dimensionForeground;
+            $.dimensionForeground = dimensionForeground;
             return this;
         }
+
         public Builder measure(@Nullable String measure) {
-            this.measure = measure;
+            $.measure = measure;
             return this;
         }
+
         public Builder measureForeground(@Nullable String measureForeground) {
-            this.measureForeground = measureForeground;
+            $.measureForeground = measureForeground;
             return this;
         }
+
         public Builder primaryBackground(@Nullable String primaryBackground) {
-            this.primaryBackground = primaryBackground;
+            $.primaryBackground = primaryBackground;
             return this;
         }
+
         public Builder primaryForeground(@Nullable String primaryForeground) {
-            this.primaryForeground = primaryForeground;
+            $.primaryForeground = primaryForeground;
             return this;
         }
+
         public Builder secondaryBackground(@Nullable String secondaryBackground) {
-            this.secondaryBackground = secondaryBackground;
+            $.secondaryBackground = secondaryBackground;
             return this;
         }
+
         public Builder secondaryForeground(@Nullable String secondaryForeground) {
-            this.secondaryForeground = secondaryForeground;
+            $.secondaryForeground = secondaryForeground;
             return this;
         }
+
         public Builder success(@Nullable String success) {
-            this.success = success;
+            $.success = success;
             return this;
         }
+
         public Builder successForeground(@Nullable String successForeground) {
-            this.successForeground = successForeground;
+            $.successForeground = successForeground;
             return this;
         }
+
         public Builder warning(@Nullable String warning) {
-            this.warning = warning;
+            $.warning = warning;
             return this;
         }
+
         public Builder warningForeground(@Nullable String warningForeground) {
-            this.warningForeground = warningForeground;
+            $.warningForeground = warningForeground;
             return this;
-        }        public ThemeUIColorPalette build() {
-            return new ThemeUIColorPalette(accent, accentForeground, danger, dangerForeground, dimension, dimensionForeground, measure, measureForeground, primaryBackground, primaryForeground, secondaryBackground, secondaryForeground, success, successForeground, warning, warningForeground);
+        }
+
+        public ThemeUIColorPalette build() {
+            return $;
         }
     }
+
 }

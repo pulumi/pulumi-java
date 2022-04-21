@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,90 +14,85 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionArgs extends com.
     public static final ClusterMaintenancePolicyMaintenanceExclusionArgs Empty = new ClusterMaintenancePolicyMaintenanceExclusionArgs();
 
     @Import(name="endTime", required=true)
-      private final Output<String> endTime;
+    private Output<String> endTime;
 
     public Output<String> endTime() {
         return this.endTime;
     }
 
     @Import(name="exclusionName", required=true)
-      private final Output<String> exclusionName;
+    private Output<String> exclusionName;
 
     public Output<String> exclusionName() {
         return this.exclusionName;
     }
 
     @Import(name="startTime", required=true)
-      private final Output<String> startTime;
+    private Output<String> startTime;
 
     public Output<String> startTime() {
         return this.startTime;
     }
 
-    public ClusterMaintenancePolicyMaintenanceExclusionArgs(
-        Output<String> endTime,
-        Output<String> exclusionName,
-        Output<String> startTime) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.exclusionName = Objects.requireNonNull(exclusionName, "expected parameter 'exclusionName' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private ClusterMaintenancePolicyMaintenanceExclusionArgs() {}
 
-    private ClusterMaintenancePolicyMaintenanceExclusionArgs() {
-        this.endTime = Codegen.empty();
-        this.exclusionName = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private ClusterMaintenancePolicyMaintenanceExclusionArgs(ClusterMaintenancePolicyMaintenanceExclusionArgs $) {
+        this.endTime = $.endTime;
+        this.exclusionName = $.exclusionName;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterMaintenancePolicyMaintenanceExclusionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> endTime;
-        private Output<String> exclusionName;
-        private Output<String> startTime;
+        private ClusterMaintenancePolicyMaintenanceExclusionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterMaintenancePolicyMaintenanceExclusionArgs();
         }
 
         public Builder(ClusterMaintenancePolicyMaintenanceExclusionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.exclusionName = defaults.exclusionName;
-    	      this.startTime = defaults.startTime;
+            $ = new ClusterMaintenancePolicyMaintenanceExclusionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(Output<String> endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Output.of(Objects.requireNonNull(endTime));
-            return this;
+            return endTime(Output.of(endTime));
         }
+
         public Builder exclusionName(Output<String> exclusionName) {
-            this.exclusionName = Objects.requireNonNull(exclusionName);
+            $.exclusionName = exclusionName;
             return this;
         }
+
         public Builder exclusionName(String exclusionName) {
-            this.exclusionName = Output.of(Objects.requireNonNull(exclusionName));
-            return this;
+            return exclusionName(Output.of(exclusionName));
         }
+
         public Builder startTime(Output<String> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
-        }        public ClusterMaintenancePolicyMaintenanceExclusionArgs build() {
-            return new ClusterMaintenancePolicyMaintenanceExclusionArgs(endTime, exclusionName, startTime);
+            return startTime(Output.of(startTime));
+        }
+
+        public ClusterMaintenancePolicyMaintenanceExclusionArgs build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.exclusionName = Objects.requireNonNull($.exclusionName, "expected parameter 'exclusionName' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

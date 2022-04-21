@@ -8,7 +8,6 @@ import com.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -23,113 +22,107 @@ public final class RuleGroupSizeConstraintStatementArgs extends com.pulumi.resou
     public static final RuleGroupSizeConstraintStatementArgs Empty = new RuleGroupSizeConstraintStatementArgs();
 
     @Import(name="comparisonOperator", required=true)
-      private final Output<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator;
+    private Output<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator;
 
     public Output<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator() {
         return this.comparisonOperator;
     }
 
     @Import(name="fieldToMatch", required=true)
-      private final Output<RuleGroupFieldToMatchArgs> fieldToMatch;
+    private Output<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Output<RuleGroupFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="size", required=true)
-      private final Output<Double> size;
+    private Output<Double> size;
 
     public Output<Double> size() {
         return this.size;
     }
 
     @Import(name="textTransformations", required=true)
-      private final Output<List<RuleGroupTextTransformationArgs>> textTransformations;
+    private Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Output<List<RuleGroupTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 
-    public RuleGroupSizeConstraintStatementArgs(
-        Output<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator,
-        Output<RuleGroupFieldToMatchArgs> fieldToMatch,
-        Output<Double> size,
-        Output<List<RuleGroupTextTransformationArgs>> textTransformations) {
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private RuleGroupSizeConstraintStatementArgs() {}
 
-    private RuleGroupSizeConstraintStatementArgs() {
-        this.comparisonOperator = Codegen.empty();
-        this.fieldToMatch = Codegen.empty();
-        this.size = Codegen.empty();
-        this.textTransformations = Codegen.empty();
+    private RuleGroupSizeConstraintStatementArgs(RuleGroupSizeConstraintStatementArgs $) {
+        this.comparisonOperator = $.comparisonOperator;
+        this.fieldToMatch = $.fieldToMatch;
+        this.size = $.size;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupSizeConstraintStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator;
-        private Output<RuleGroupFieldToMatchArgs> fieldToMatch;
-        private Output<Double> size;
-        private Output<List<RuleGroupTextTransformationArgs>> textTransformations;
+        private RuleGroupSizeConstraintStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupSizeConstraintStatementArgs();
         }
 
         public Builder(RuleGroupSizeConstraintStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparisonOperator = defaults.comparisonOperator;
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.size = defaults.size;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new RuleGroupSizeConstraintStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comparisonOperator(Output<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator) {
-            this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
+            $.comparisonOperator = comparisonOperator;
             return this;
         }
+
         public Builder comparisonOperator(RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator) {
-            this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
-            return this;
+            return comparisonOperator(Output.of(comparisonOperator));
         }
+
         public Builder fieldToMatch(Output<RuleGroupFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder fieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
-            return this;
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder size(Output<Double> size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder size(Double size) {
-            this.size = Output.of(Objects.requireNonNull(size));
-            return this;
+            return size(Output.of(size));
         }
+
         public Builder textTransformations(Output<List<RuleGroupTextTransformationArgs>> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
-            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
-            return this;
+            return textTransformations(Output.of(textTransformations));
         }
+
         public Builder textTransformations(RuleGroupTextTransformationArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public RuleGroupSizeConstraintStatementArgs build() {
-            return new RuleGroupSizeConstraintStatementArgs(comparisonOperator, fieldToMatch, size, textTransformations);
+        }
+
+        public RuleGroupSizeConstraintStatementArgs build() {
+            $.comparisonOperator = Objects.requireNonNull($.comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

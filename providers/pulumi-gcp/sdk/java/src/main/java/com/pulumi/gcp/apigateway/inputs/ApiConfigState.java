@@ -5,13 +5,13 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigGetArgs;
 import com.pulumi.gcp.apigateway.inputs.ApiConfigOpenapiDocumentGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="api")
-      private final @Nullable Output<String> api;
+    private @Nullable Output<String> api;
 
-    public Output<String> api() {
-        return this.api == null ? Codegen.empty() : this.api;
+    public Optional<Output<String>> api() {
+        return Optional.ofNullable(this.api);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiConfigId")
-      private final @Nullable Output<String> apiConfigId;
+    private @Nullable Output<String> apiConfigId;
 
-    public Output<String> apiConfigId() {
-        return this.apiConfigId == null ? Codegen.empty() : this.apiConfigId;
+    public Optional<Output<String>> apiConfigId() {
+        return Optional.ofNullable(this.apiConfigId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiConfigIdPrefix")
-      private final @Nullable Output<String> apiConfigIdPrefix;
+    private @Nullable Output<String> apiConfigIdPrefix;
 
-    public Output<String> apiConfigIdPrefix() {
-        return this.apiConfigIdPrefix == null ? Codegen.empty() : this.apiConfigIdPrefix;
+    public Optional<Output<String>> apiConfigIdPrefix() {
+        return Optional.ofNullable(this.apiConfigIdPrefix);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayConfig")
-      private final @Nullable Output<ApiConfigGatewayConfigGetArgs> gatewayConfig;
+    private @Nullable Output<ApiConfigGatewayConfigGetArgs> gatewayConfig;
 
-    public Output<ApiConfigGatewayConfigGetArgs> gatewayConfig() {
-        return this.gatewayConfig == null ? Codegen.empty() : this.gatewayConfig;
+    public Optional<Output<ApiConfigGatewayConfigGetArgs>> gatewayConfig() {
+        return Optional.ofNullable(this.gatewayConfig);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="openapiDocuments")
-      private final @Nullable Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments;
+    private @Nullable Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments;
 
-    public Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments() {
-        return this.openapiDocuments == null ? Codegen.empty() : this.openapiDocuments;
+    public Optional<Output<List<ApiConfigOpenapiDocumentGetArgs>>> openapiDocuments() {
+        return Optional.ofNullable(this.openapiDocuments);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -128,170 +128,142 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceConfigId")
-      private final @Nullable Output<String> serviceConfigId;
+    private @Nullable Output<String> serviceConfigId;
 
-    public Output<String> serviceConfigId() {
-        return this.serviceConfigId == null ? Codegen.empty() : this.serviceConfigId;
+    public Optional<Output<String>> serviceConfigId() {
+        return Optional.ofNullable(this.serviceConfigId);
     }
 
-    public ApiConfigState(
-        @Nullable Output<String> api,
-        @Nullable Output<String> apiConfigId,
-        @Nullable Output<String> apiConfigIdPrefix,
-        @Nullable Output<String> displayName,
-        @Nullable Output<ApiConfigGatewayConfigGetArgs> gatewayConfig,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments,
-        @Nullable Output<String> project,
-        @Nullable Output<String> serviceConfigId) {
-        this.api = api;
-        this.apiConfigId = apiConfigId;
-        this.apiConfigIdPrefix = apiConfigIdPrefix;
-        this.displayName = displayName;
-        this.gatewayConfig = gatewayConfig;
-        this.labels = labels;
-        this.name = name;
-        this.openapiDocuments = openapiDocuments;
-        this.project = project;
-        this.serviceConfigId = serviceConfigId;
-    }
+    private ApiConfigState() {}
 
-    private ApiConfigState() {
-        this.api = Codegen.empty();
-        this.apiConfigId = Codegen.empty();
-        this.apiConfigIdPrefix = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.gatewayConfig = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.openapiDocuments = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serviceConfigId = Codegen.empty();
+    private ApiConfigState(ApiConfigState $) {
+        this.api = $.api;
+        this.apiConfigId = $.apiConfigId;
+        this.apiConfigIdPrefix = $.apiConfigIdPrefix;
+        this.displayName = $.displayName;
+        this.gatewayConfig = $.gatewayConfig;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.openapiDocuments = $.openapiDocuments;
+        this.project = $.project;
+        this.serviceConfigId = $.serviceConfigId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> api;
-        private @Nullable Output<String> apiConfigId;
-        private @Nullable Output<String> apiConfigIdPrefix;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<ApiConfigGatewayConfigGetArgs> gatewayConfig;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> serviceConfigId;
+        private ApiConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigState();
         }
 
         public Builder(ApiConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.api = defaults.api;
-    	      this.apiConfigId = defaults.apiConfigId;
-    	      this.apiConfigIdPrefix = defaults.apiConfigIdPrefix;
-    	      this.displayName = defaults.displayName;
-    	      this.gatewayConfig = defaults.gatewayConfig;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.openapiDocuments = defaults.openapiDocuments;
-    	      this.project = defaults.project;
-    	      this.serviceConfigId = defaults.serviceConfigId;
+            $ = new ApiConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder api(@Nullable Output<String> api) {
-            this.api = api;
+            $.api = api;
             return this;
         }
-        public Builder api(@Nullable String api) {
-            this.api = Codegen.ofNullable(api);
-            return this;
+
+        public Builder api(String api) {
+            return api(Output.of(api));
         }
+
         public Builder apiConfigId(@Nullable Output<String> apiConfigId) {
-            this.apiConfigId = apiConfigId;
+            $.apiConfigId = apiConfigId;
             return this;
         }
-        public Builder apiConfigId(@Nullable String apiConfigId) {
-            this.apiConfigId = Codegen.ofNullable(apiConfigId);
-            return this;
+
+        public Builder apiConfigId(String apiConfigId) {
+            return apiConfigId(Output.of(apiConfigId));
         }
+
         public Builder apiConfigIdPrefix(@Nullable Output<String> apiConfigIdPrefix) {
-            this.apiConfigIdPrefix = apiConfigIdPrefix;
+            $.apiConfigIdPrefix = apiConfigIdPrefix;
             return this;
         }
-        public Builder apiConfigIdPrefix(@Nullable String apiConfigIdPrefix) {
-            this.apiConfigIdPrefix = Codegen.ofNullable(apiConfigIdPrefix);
-            return this;
+
+        public Builder apiConfigIdPrefix(String apiConfigIdPrefix) {
+            return apiConfigIdPrefix(Output.of(apiConfigIdPrefix));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder gatewayConfig(@Nullable Output<ApiConfigGatewayConfigGetArgs> gatewayConfig) {
-            this.gatewayConfig = gatewayConfig;
+            $.gatewayConfig = gatewayConfig;
             return this;
         }
-        public Builder gatewayConfig(@Nullable ApiConfigGatewayConfigGetArgs gatewayConfig) {
-            this.gatewayConfig = Codegen.ofNullable(gatewayConfig);
-            return this;
+
+        public Builder gatewayConfig(ApiConfigGatewayConfigGetArgs gatewayConfig) {
+            return gatewayConfig(Output.of(gatewayConfig));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder openapiDocuments(@Nullable Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments) {
-            this.openapiDocuments = openapiDocuments;
+            $.openapiDocuments = openapiDocuments;
             return this;
         }
-        public Builder openapiDocuments(@Nullable List<ApiConfigOpenapiDocumentGetArgs> openapiDocuments) {
-            this.openapiDocuments = Codegen.ofNullable(openapiDocuments);
-            return this;
+
+        public Builder openapiDocuments(List<ApiConfigOpenapiDocumentGetArgs> openapiDocuments) {
+            return openapiDocuments(Output.of(openapiDocuments));
         }
+
         public Builder openapiDocuments(ApiConfigOpenapiDocumentGetArgs... openapiDocuments) {
             return openapiDocuments(List.of(openapiDocuments));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceConfigId(@Nullable Output<String> serviceConfigId) {
-            this.serviceConfigId = serviceConfigId;
+            $.serviceConfigId = serviceConfigId;
             return this;
         }
-        public Builder serviceConfigId(@Nullable String serviceConfigId) {
-            this.serviceConfigId = Codegen.ofNullable(serviceConfigId);
-            return this;
-        }        public ApiConfigState build() {
-            return new ApiConfigState(api, apiConfigId, apiConfigIdPrefix, displayName, gatewayConfig, labels, name, openapiDocuments, project, serviceConfigId);
+
+        public Builder serviceConfigId(String serviceConfigId) {
+            return serviceConfigId(Output.of(serviceConfigId));
+        }
+
+        public ApiConfigState build() {
+            return $;
         }
     }
+
 }

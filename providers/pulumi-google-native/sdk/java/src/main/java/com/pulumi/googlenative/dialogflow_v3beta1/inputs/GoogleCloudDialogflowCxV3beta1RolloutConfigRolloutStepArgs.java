@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
      * 
      */
     @Import(name="minDuration")
-      private final @Nullable Output<String> minDuration;
+    private @Nullable Output<String> minDuration;
 
-    public Output<String> minDuration() {
-        return this.minDuration == null ? Codegen.empty() : this.minDuration;
+    public Optional<Output<String>> minDuration() {
+        return Optional.ofNullable(this.minDuration);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
      * 
      */
     @Import(name="trafficPercent")
-      private final @Nullable Output<Integer> trafficPercent;
+    private @Nullable Output<Integer> trafficPercent;
 
-    public Output<Integer> trafficPercent() {
-        return this.trafficPercent == null ? Codegen.empty() : this.trafficPercent;
+    public Optional<Output<Integer>> trafficPercent() {
+        return Optional.ofNullable(this.trafficPercent);
     }
 
-    public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> minDuration,
-        @Nullable Output<Integer> trafficPercent) {
-        this.displayName = displayName;
-        this.minDuration = minDuration;
-        this.trafficPercent = trafficPercent;
-    }
+    private GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs() {
-        this.displayName = Codegen.empty();
-        this.minDuration = Codegen.empty();
-        this.trafficPercent = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs(GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs $) {
+        this.displayName = $.displayName;
+        this.minDuration = $.minDuration;
+        this.trafficPercent = $.trafficPercent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> minDuration;
-        private @Nullable Output<Integer> trafficPercent;
+        private GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.minDuration = defaults.minDuration;
-    	      this.trafficPercent = defaults.trafficPercent;
+            $ = new GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder minDuration(@Nullable Output<String> minDuration) {
-            this.minDuration = minDuration;
+            $.minDuration = minDuration;
             return this;
         }
-        public Builder minDuration(@Nullable String minDuration) {
-            this.minDuration = Codegen.ofNullable(minDuration);
-            return this;
+
+        public Builder minDuration(String minDuration) {
+            return minDuration(Output.of(minDuration));
         }
+
         public Builder trafficPercent(@Nullable Output<Integer> trafficPercent) {
-            this.trafficPercent = trafficPercent;
+            $.trafficPercent = trafficPercent;
             return this;
         }
-        public Builder trafficPercent(@Nullable Integer trafficPercent) {
-            this.trafficPercent = Codegen.ofNullable(trafficPercent);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs(displayName, minDuration, trafficPercent);
+
+        public Builder trafficPercent(Integer trafficPercent) {
+            return trafficPercent(Output.of(trafficPercent));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs build() {
+            return $;
         }
     }
+
 }

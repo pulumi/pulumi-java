@@ -5,9 +5,9 @@ package com.pulumi.aws.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType", required=true)
-      private final Output<String> contentType;
+    private Output<String> contentType;
 
     public Output<String> contentType() {
         return this.contentType;
@@ -31,10 +31,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApi", required=true)
-      private final Output<String> restApi;
+    private Output<String> restApi;
 
     public Output<String> restApi() {
         return this.restApi;
@@ -64,98 +64,90 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<String> schema;
+    private @Nullable Output<String> schema;
 
-    public Output<String> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<String>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
-    public ModelArgs(
-        Output<String> contentType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        Output<String> restApi,
-        @Nullable Output<String> schema) {
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.restApi = Objects.requireNonNull(restApi, "expected parameter 'restApi' to be non-null");
-        this.schema = schema;
-    }
+    private ModelArgs() {}
 
-    private ModelArgs() {
-        this.contentType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.restApi = Codegen.empty();
-        this.schema = Codegen.empty();
+    private ModelArgs(ModelArgs $) {
+        this.contentType = $.contentType;
+        this.description = $.description;
+        this.name = $.name;
+        this.restApi = $.restApi;
+        this.schema = $.schema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contentType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private Output<String> restApi;
-        private @Nullable Output<String> schema;
+        private ModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelArgs();
         }
 
         public Builder(ModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.restApi = defaults.restApi;
-    	      this.schema = defaults.schema;
+            $ = new ModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(Output<String> contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder contentType(String contentType) {
-            this.contentType = Output.of(Objects.requireNonNull(contentType));
-            return this;
+            return contentType(Output.of(contentType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder restApi(Output<String> restApi) {
-            this.restApi = Objects.requireNonNull(restApi);
+            $.restApi = restApi;
             return this;
         }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
         public Builder schema(@Nullable Output<String> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable String schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
-        }        public ModelArgs build() {
-            return new ModelArgs(contentType, description, name, restApi, schema);
+
+        public Builder schema(String schema) {
+            return schema(Output.of(schema));
+        }
+
+        public ModelArgs build() {
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.restApi = Objects.requireNonNull($.restApi, "expected parameter 'restApi' to be non-null");
+            return $;
         }
     }
+
 }

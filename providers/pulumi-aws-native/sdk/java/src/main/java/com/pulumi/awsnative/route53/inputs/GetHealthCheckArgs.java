@@ -13,45 +13,45 @@ public final class GetHealthCheckArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHealthCheckArgs Empty = new GetHealthCheckArgs();
 
     @Import(name="healthCheckId", required=true)
-      private final String healthCheckId;
+    private String healthCheckId;
 
     public String healthCheckId() {
         return this.healthCheckId;
     }
 
-    public GetHealthCheckArgs(String healthCheckId) {
-        this.healthCheckId = Objects.requireNonNull(healthCheckId, "expected parameter 'healthCheckId' to be non-null");
-    }
+    private GetHealthCheckArgs() {}
 
-    private GetHealthCheckArgs() {
-        this.healthCheckId = null;
+    private GetHealthCheckArgs(GetHealthCheckArgs $) {
+        this.healthCheckId = $.healthCheckId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String healthCheckId;
+        private GetHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHealthCheckArgs();
         }
 
         public Builder(GetHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthCheckId = defaults.healthCheckId;
+            $ = new GetHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthCheckId(String healthCheckId) {
-            this.healthCheckId = Objects.requireNonNull(healthCheckId);
+            $.healthCheckId = healthCheckId;
             return this;
-        }        public GetHealthCheckArgs build() {
-            return new GetHealthCheckArgs(healthCheckId);
+        }
+
+        public GetHealthCheckArgs build() {
+            $.healthCheckId = Objects.requireNonNull($.healthCheckId, "expected parameter 'healthCheckId' to be non-null");
+            return $;
         }
     }
+
 }

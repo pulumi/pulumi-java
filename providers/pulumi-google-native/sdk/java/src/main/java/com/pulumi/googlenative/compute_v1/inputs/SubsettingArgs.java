@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.SubsettingPolicy;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class SubsettingArgs extends com.pulumi.resources.ResourceArgs {
     public static final SubsettingArgs Empty = new SubsettingArgs();
 
     @Import(name="policy")
-      private final @Nullable Output<SubsettingPolicy> policy;
+    private @Nullable Output<SubsettingPolicy> policy;
 
-    public Output<SubsettingPolicy> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<SubsettingPolicy>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public SubsettingArgs(@Nullable Output<SubsettingPolicy> policy) {
-        this.policy = policy;
-    }
+    private SubsettingArgs() {}
 
-    private SubsettingArgs() {
-        this.policy = Codegen.empty();
+    private SubsettingArgs(SubsettingArgs $) {
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubsettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubsettingPolicy> policy;
+        private SubsettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubsettingArgs();
         }
 
         public Builder(SubsettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
+            $ = new SubsettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(@Nullable Output<SubsettingPolicy> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable SubsettingPolicy policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public SubsettingArgs build() {
-            return new SubsettingArgs(policy);
+
+        public Builder policy(SubsettingPolicy policy) {
+            return policy(Output.of(policy));
+        }
+
+        public SubsettingArgs build() {
+            return $;
         }
     }
+
 }

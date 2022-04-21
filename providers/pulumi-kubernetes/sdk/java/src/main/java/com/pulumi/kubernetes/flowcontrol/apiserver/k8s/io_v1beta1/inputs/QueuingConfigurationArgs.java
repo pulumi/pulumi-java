@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class QueuingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="handSize")
-      private final @Nullable Output<Integer> handSize;
+    private @Nullable Output<Integer> handSize;
 
-    public Output<Integer> handSize() {
-        return this.handSize == null ? Codegen.empty() : this.handSize;
+    public Optional<Output<Integer>> handSize() {
+        return Optional.ofNullable(this.handSize);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class QueuingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="queueLengthLimit")
-      private final @Nullable Output<Integer> queueLengthLimit;
+    private @Nullable Output<Integer> queueLengthLimit;
 
-    public Output<Integer> queueLengthLimit() {
-        return this.queueLengthLimit == null ? Codegen.empty() : this.queueLengthLimit;
+    public Optional<Output<Integer>> queueLengthLimit() {
+        return Optional.ofNullable(this.queueLengthLimit);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class QueuingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="queues")
-      private final @Nullable Output<Integer> queues;
+    private @Nullable Output<Integer> queues;
 
-    public Output<Integer> queues() {
-        return this.queues == null ? Codegen.empty() : this.queues;
+    public Optional<Output<Integer>> queues() {
+        return Optional.ofNullable(this.queues);
     }
 
-    public QueuingConfigurationArgs(
-        @Nullable Output<Integer> handSize,
-        @Nullable Output<Integer> queueLengthLimit,
-        @Nullable Output<Integer> queues) {
-        this.handSize = handSize;
-        this.queueLengthLimit = queueLengthLimit;
-        this.queues = queues;
-    }
+    private QueuingConfigurationArgs() {}
 
-    private QueuingConfigurationArgs() {
-        this.handSize = Codegen.empty();
-        this.queueLengthLimit = Codegen.empty();
-        this.queues = Codegen.empty();
+    private QueuingConfigurationArgs(QueuingConfigurationArgs $) {
+        this.handSize = $.handSize;
+        this.queueLengthLimit = $.queueLengthLimit;
+        this.queues = $.queues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueuingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> handSize;
-        private @Nullable Output<Integer> queueLengthLimit;
-        private @Nullable Output<Integer> queues;
+        private QueuingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueuingConfigurationArgs();
         }
 
         public Builder(QueuingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.handSize = defaults.handSize;
-    	      this.queueLengthLimit = defaults.queueLengthLimit;
-    	      this.queues = defaults.queues;
+            $ = new QueuingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder handSize(@Nullable Output<Integer> handSize) {
-            this.handSize = handSize;
+            $.handSize = handSize;
             return this;
         }
-        public Builder handSize(@Nullable Integer handSize) {
-            this.handSize = Codegen.ofNullable(handSize);
-            return this;
+
+        public Builder handSize(Integer handSize) {
+            return handSize(Output.of(handSize));
         }
+
         public Builder queueLengthLimit(@Nullable Output<Integer> queueLengthLimit) {
-            this.queueLengthLimit = queueLengthLimit;
+            $.queueLengthLimit = queueLengthLimit;
             return this;
         }
-        public Builder queueLengthLimit(@Nullable Integer queueLengthLimit) {
-            this.queueLengthLimit = Codegen.ofNullable(queueLengthLimit);
-            return this;
+
+        public Builder queueLengthLimit(Integer queueLengthLimit) {
+            return queueLengthLimit(Output.of(queueLengthLimit));
         }
+
         public Builder queues(@Nullable Output<Integer> queues) {
-            this.queues = queues;
+            $.queues = queues;
             return this;
         }
-        public Builder queues(@Nullable Integer queues) {
-            this.queues = Codegen.ofNullable(queues);
-            return this;
-        }        public QueuingConfigurationArgs build() {
-            return new QueuingConfigurationArgs(handSize, queueLengthLimit, queues);
+
+        public Builder queues(Integer queues) {
+            return queues(Output.of(queues));
+        }
+
+        public QueuingConfigurationArgs build() {
+            return $;
         }
     }
+
 }

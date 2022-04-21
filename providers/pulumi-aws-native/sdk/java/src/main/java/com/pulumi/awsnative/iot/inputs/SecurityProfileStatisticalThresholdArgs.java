@@ -6,8 +6,8 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.SecurityProfileStatisticalThresholdStatistic;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SecurityProfileStatisticalThresholdArgs extends com.pulumi.re
      * 
      */
     @Import(name="statistic")
-      private final @Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic;
+    private @Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic;
 
-    public Output<SecurityProfileStatisticalThresholdStatistic> statistic() {
-        return this.statistic == null ? Codegen.empty() : this.statistic;
+    public Optional<Output<SecurityProfileStatisticalThresholdStatistic>> statistic() {
+        return Optional.ofNullable(this.statistic);
     }
 
-    public SecurityProfileStatisticalThresholdArgs(@Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic) {
-        this.statistic = statistic;
-    }
+    private SecurityProfileStatisticalThresholdArgs() {}
 
-    private SecurityProfileStatisticalThresholdArgs() {
-        this.statistic = Codegen.empty();
+    private SecurityProfileStatisticalThresholdArgs(SecurityProfileStatisticalThresholdArgs $) {
+        this.statistic = $.statistic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileStatisticalThresholdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic;
+        private SecurityProfileStatisticalThresholdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileStatisticalThresholdArgs();
         }
 
         public Builder(SecurityProfileStatisticalThresholdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statistic = defaults.statistic;
+            $ = new SecurityProfileStatisticalThresholdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder statistic(@Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic) {
-            this.statistic = statistic;
+            $.statistic = statistic;
             return this;
         }
-        public Builder statistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
-            this.statistic = Codegen.ofNullable(statistic);
-            return this;
-        }        public SecurityProfileStatisticalThresholdArgs build() {
-            return new SecurityProfileStatisticalThresholdArgs(statistic);
+
+        public Builder statistic(SecurityProfileStatisticalThresholdStatistic statistic) {
+            return statistic(Output.of(statistic));
+        }
+
+        public SecurityProfileStatisticalThresholdArgs build() {
+            return $;
         }
     }
+
 }

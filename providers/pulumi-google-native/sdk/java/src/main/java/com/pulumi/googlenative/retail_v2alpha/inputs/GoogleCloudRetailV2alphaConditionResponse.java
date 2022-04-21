@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaConditionResponse extends com.pulumi.
      * 
      */
     @Import(name="activeTimeRange", required=true)
-      private final List<GoogleCloudRetailV2alphaConditionTimeRangeResponse> activeTimeRange;
+    private List<GoogleCloudRetailV2alphaConditionTimeRangeResponse> activeTimeRange;
 
     public List<GoogleCloudRetailV2alphaConditionTimeRangeResponse> activeTimeRange() {
         return this.activeTimeRange;
@@ -34,61 +34,60 @@ public final class GoogleCloudRetailV2alphaConditionResponse extends com.pulumi.
      * 
      */
     @Import(name="queryTerms", required=true)
-      private final List<GoogleCloudRetailV2alphaConditionQueryTermResponse> queryTerms;
+    private List<GoogleCloudRetailV2alphaConditionQueryTermResponse> queryTerms;
 
     public List<GoogleCloudRetailV2alphaConditionQueryTermResponse> queryTerms() {
         return this.queryTerms;
     }
 
-    public GoogleCloudRetailV2alphaConditionResponse(
-        List<GoogleCloudRetailV2alphaConditionTimeRangeResponse> activeTimeRange,
-        List<GoogleCloudRetailV2alphaConditionQueryTermResponse> queryTerms) {
-        this.activeTimeRange = Objects.requireNonNull(activeTimeRange, "expected parameter 'activeTimeRange' to be non-null");
-        this.queryTerms = Objects.requireNonNull(queryTerms, "expected parameter 'queryTerms' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaConditionResponse() {}
 
-    private GoogleCloudRetailV2alphaConditionResponse() {
-        this.activeTimeRange = List.of();
-        this.queryTerms = List.of();
+    private GoogleCloudRetailV2alphaConditionResponse(GoogleCloudRetailV2alphaConditionResponse $) {
+        this.activeTimeRange = $.activeTimeRange;
+        this.queryTerms = $.queryTerms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudRetailV2alphaConditionTimeRangeResponse> activeTimeRange;
-        private List<GoogleCloudRetailV2alphaConditionQueryTermResponse> queryTerms;
+        private GoogleCloudRetailV2alphaConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaConditionResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeTimeRange = defaults.activeTimeRange;
-    	      this.queryTerms = defaults.queryTerms;
+            $ = new GoogleCloudRetailV2alphaConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeTimeRange(List<GoogleCloudRetailV2alphaConditionTimeRangeResponse> activeTimeRange) {
-            this.activeTimeRange = Objects.requireNonNull(activeTimeRange);
+            $.activeTimeRange = activeTimeRange;
             return this;
         }
+
         public Builder activeTimeRange(GoogleCloudRetailV2alphaConditionTimeRangeResponse... activeTimeRange) {
             return activeTimeRange(List.of(activeTimeRange));
         }
+
         public Builder queryTerms(List<GoogleCloudRetailV2alphaConditionQueryTermResponse> queryTerms) {
-            this.queryTerms = Objects.requireNonNull(queryTerms);
+            $.queryTerms = queryTerms;
             return this;
         }
+
         public Builder queryTerms(GoogleCloudRetailV2alphaConditionQueryTermResponse... queryTerms) {
             return queryTerms(List.of(queryTerms));
-        }        public GoogleCloudRetailV2alphaConditionResponse build() {
-            return new GoogleCloudRetailV2alphaConditionResponse(activeTimeRange, queryTerms);
+        }
+
+        public GoogleCloudRetailV2alphaConditionResponse build() {
+            $.activeTimeRange = Objects.requireNonNull($.activeTimeRange, "expected parameter 'activeTimeRange' to be non-null");
+            $.queryTerms = Objects.requireNonNull($.queryTerms, "expected parameter 'queryTerms' to be non-null");
+            return $;
         }
     }
+
 }

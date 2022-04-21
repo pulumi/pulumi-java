@@ -15,94 +15,85 @@ public final class GetRoutineArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRoutineArgs Empty = new GetRoutineArgs();
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="readMask")
-      private final @Nullable String readMask;
+    private @Nullable String readMask;
 
     public Optional<String> readMask() {
-        return this.readMask == null ? Optional.empty() : Optional.ofNullable(this.readMask);
+        return Optional.ofNullable(this.readMask);
     }
 
     @Import(name="routineId", required=true)
-      private final String routineId;
+    private String routineId;
 
     public String routineId() {
         return this.routineId;
     }
 
-    public GetRoutineArgs(
-        String datasetId,
-        @Nullable String project,
-        @Nullable String readMask,
-        String routineId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.project = project;
-        this.readMask = readMask;
-        this.routineId = Objects.requireNonNull(routineId, "expected parameter 'routineId' to be non-null");
-    }
+    private GetRoutineArgs() {}
 
-    private GetRoutineArgs() {
-        this.datasetId = null;
-        this.project = null;
-        this.readMask = null;
-        this.routineId = null;
+    private GetRoutineArgs(GetRoutineArgs $) {
+        this.datasetId = $.datasetId;
+        this.project = $.project;
+        this.readMask = $.readMask;
+        this.routineId = $.routineId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRoutineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private @Nullable String project;
-        private @Nullable String readMask;
-        private String routineId;
+        private GetRoutineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRoutineArgs();
         }
 
         public Builder(GetRoutineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.project = defaults.project;
-    	      this.readMask = defaults.readMask;
-    	      this.routineId = defaults.routineId;
+            $ = new GetRoutineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder readMask(@Nullable String readMask) {
-            this.readMask = readMask;
+            $.readMask = readMask;
             return this;
         }
+
         public Builder routineId(String routineId) {
-            this.routineId = Objects.requireNonNull(routineId);
+            $.routineId = routineId;
             return this;
-        }        public GetRoutineArgs build() {
-            return new GetRoutineArgs(datasetId, project, readMask, routineId);
+        }
+
+        public GetRoutineArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.routineId = Objects.requireNonNull($.routineId, "expected parameter 'routineId' to be non-null");
+            return $;
         }
     }
+
 }

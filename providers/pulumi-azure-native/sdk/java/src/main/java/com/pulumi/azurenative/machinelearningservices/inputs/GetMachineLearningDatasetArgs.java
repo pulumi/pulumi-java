@@ -17,7 +17,7 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="datasetName", required=true)
-      private final String datasetName;
+    private String datasetName;
 
     public String datasetName() {
         return this.datasetName;
@@ -28,7 +28,7 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetMachineLearningDatasetArgs(
-        String datasetName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.datasetName = Objects.requireNonNull(datasetName, "expected parameter 'datasetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetMachineLearningDatasetArgs() {}
 
-    private GetMachineLearningDatasetArgs() {
-        this.datasetName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetMachineLearningDatasetArgs(GetMachineLearningDatasetArgs $) {
+        this.datasetName = $.datasetName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMachineLearningDatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetMachineLearningDatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMachineLearningDatasetArgs();
         }
 
         public Builder(GetMachineLearningDatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetName = defaults.datasetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetMachineLearningDatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetName(String datasetName) {
-            this.datasetName = Objects.requireNonNull(datasetName);
+            $.datasetName = datasetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetMachineLearningDatasetArgs build() {
-            return new GetMachineLearningDatasetArgs(datasetName, resourceGroupName, workspaceName);
+        }
+
+        public GetMachineLearningDatasetArgs build() {
+            $.datasetName = Objects.requireNonNull($.datasetName, "expected parameter 'datasetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

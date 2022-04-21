@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.AppResourceSpecGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appName")
-      private final @Nullable Output<String> appName;
+    private @Nullable Output<String> appName;
 
-    public Output<String> appName() {
-        return this.appName == null ? Codegen.empty() : this.appName;
+    public Optional<Output<String>> appName() {
+        return Optional.ofNullable(this.appName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appType")
-      private final @Nullable Output<String> appType;
+    private @Nullable Output<String> appType;
 
-    public Output<String> appType() {
-        return this.appType == null ? Codegen.empty() : this.appType;
+    public Optional<Output<String>> appType() {
+        return Optional.ofNullable(this.appType);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainId")
-      private final @Nullable Output<String> domainId;
+    private @Nullable Output<String> domainId;
 
-    public Output<String> domainId() {
-        return this.domainId == null ? Codegen.empty() : this.domainId;
+    public Optional<Output<String>> domainId() {
+        return Optional.ofNullable(this.domainId);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSpec")
-      private final @Nullable Output<AppResourceSpecGetArgs> resourceSpec;
+    private @Nullable Output<AppResourceSpecGetArgs> resourceSpec;
 
-    public Output<AppResourceSpecGetArgs> resourceSpec() {
-        return this.resourceSpec == null ? Codegen.empty() : this.resourceSpec;
+    public Optional<Output<AppResourceSpecGetArgs>> resourceSpec() {
+        return Optional.ofNullable(this.resourceSpec);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -99,141 +99,118 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userProfileName")
-      private final @Nullable Output<String> userProfileName;
+    private @Nullable Output<String> userProfileName;
 
-    public Output<String> userProfileName() {
-        return this.userProfileName == null ? Codegen.empty() : this.userProfileName;
+    public Optional<Output<String>> userProfileName() {
+        return Optional.ofNullable(this.userProfileName);
     }
 
-    public AppState(
-        @Nullable Output<String> appName,
-        @Nullable Output<String> appType,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> domainId,
-        @Nullable Output<AppResourceSpecGetArgs> resourceSpec,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> userProfileName) {
-        this.appName = appName;
-        this.appType = appType;
-        this.arn = arn;
-        this.domainId = domainId;
-        this.resourceSpec = resourceSpec;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.userProfileName = userProfileName;
-    }
+    private AppState() {}
 
-    private AppState() {
-        this.appName = Codegen.empty();
-        this.appType = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.domainId = Codegen.empty();
-        this.resourceSpec = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.userProfileName = Codegen.empty();
+    private AppState(AppState $) {
+        this.appName = $.appName;
+        this.appType = $.appType;
+        this.arn = $.arn;
+        this.domainId = $.domainId;
+        this.resourceSpec = $.resourceSpec;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.userProfileName = $.userProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appName;
-        private @Nullable Output<String> appType;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> domainId;
-        private @Nullable Output<AppResourceSpecGetArgs> resourceSpec;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> userProfileName;
+        private AppState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppState();
         }
 
         public Builder(AppState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appName = defaults.appName;
-    	      this.appType = defaults.appType;
-    	      this.arn = defaults.arn;
-    	      this.domainId = defaults.domainId;
-    	      this.resourceSpec = defaults.resourceSpec;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.userProfileName = defaults.userProfileName;
+            $ = new AppState(Objects.requireNonNull(defaults));
         }
 
         public Builder appName(@Nullable Output<String> appName) {
-            this.appName = appName;
+            $.appName = appName;
             return this;
         }
-        public Builder appName(@Nullable String appName) {
-            this.appName = Codegen.ofNullable(appName);
-            return this;
+
+        public Builder appName(String appName) {
+            return appName(Output.of(appName));
         }
+
         public Builder appType(@Nullable Output<String> appType) {
-            this.appType = appType;
+            $.appType = appType;
             return this;
         }
-        public Builder appType(@Nullable String appType) {
-            this.appType = Codegen.ofNullable(appType);
-            return this;
+
+        public Builder appType(String appType) {
+            return appType(Output.of(appType));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder domainId(@Nullable Output<String> domainId) {
-            this.domainId = domainId;
+            $.domainId = domainId;
             return this;
         }
-        public Builder domainId(@Nullable String domainId) {
-            this.domainId = Codegen.ofNullable(domainId);
-            return this;
+
+        public Builder domainId(String domainId) {
+            return domainId(Output.of(domainId));
         }
+
         public Builder resourceSpec(@Nullable Output<AppResourceSpecGetArgs> resourceSpec) {
-            this.resourceSpec = resourceSpec;
+            $.resourceSpec = resourceSpec;
             return this;
         }
-        public Builder resourceSpec(@Nullable AppResourceSpecGetArgs resourceSpec) {
-            this.resourceSpec = Codegen.ofNullable(resourceSpec);
-            return this;
+
+        public Builder resourceSpec(AppResourceSpecGetArgs resourceSpec) {
+            return resourceSpec(Output.of(resourceSpec));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder userProfileName(@Nullable Output<String> userProfileName) {
-            this.userProfileName = userProfileName;
+            $.userProfileName = userProfileName;
             return this;
         }
-        public Builder userProfileName(@Nullable String userProfileName) {
-            this.userProfileName = Codegen.ofNullable(userProfileName);
-            return this;
-        }        public AppState build() {
-            return new AppState(appName, appType, arn, domainId, resourceSpec, tags, tagsAll, userProfileName);
+
+        public Builder userProfileName(String userProfileName) {
+            return userProfileName(Output.of(userProfileName));
+        }
+
+        public AppState build() {
+            return $;
         }
     }
+
 }

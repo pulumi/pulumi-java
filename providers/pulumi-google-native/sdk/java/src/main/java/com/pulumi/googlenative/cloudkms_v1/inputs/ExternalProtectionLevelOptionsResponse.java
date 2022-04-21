@@ -21,7 +21,7 @@ public final class ExternalProtectionLevelOptionsResponse extends com.pulumi.res
      * 
      */
     @Import(name="ekmConnectionKeyPath", required=true)
-      private final String ekmConnectionKeyPath;
+    private String ekmConnectionKeyPath;
 
     public String ekmConnectionKeyPath() {
         return this.ekmConnectionKeyPath;
@@ -32,55 +32,52 @@ public final class ExternalProtectionLevelOptionsResponse extends com.pulumi.res
      * 
      */
     @Import(name="externalKeyUri", required=true)
-      private final String externalKeyUri;
+    private String externalKeyUri;
 
     public String externalKeyUri() {
         return this.externalKeyUri;
     }
 
-    public ExternalProtectionLevelOptionsResponse(
-        String ekmConnectionKeyPath,
-        String externalKeyUri) {
-        this.ekmConnectionKeyPath = Objects.requireNonNull(ekmConnectionKeyPath, "expected parameter 'ekmConnectionKeyPath' to be non-null");
-        this.externalKeyUri = Objects.requireNonNull(externalKeyUri, "expected parameter 'externalKeyUri' to be non-null");
-    }
+    private ExternalProtectionLevelOptionsResponse() {}
 
-    private ExternalProtectionLevelOptionsResponse() {
-        this.ekmConnectionKeyPath = null;
-        this.externalKeyUri = null;
+    private ExternalProtectionLevelOptionsResponse(ExternalProtectionLevelOptionsResponse $) {
+        this.ekmConnectionKeyPath = $.ekmConnectionKeyPath;
+        this.externalKeyUri = $.externalKeyUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalProtectionLevelOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ekmConnectionKeyPath;
-        private String externalKeyUri;
+        private ExternalProtectionLevelOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalProtectionLevelOptionsResponse();
         }
 
         public Builder(ExternalProtectionLevelOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ekmConnectionKeyPath = defaults.ekmConnectionKeyPath;
-    	      this.externalKeyUri = defaults.externalKeyUri;
+            $ = new ExternalProtectionLevelOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ekmConnectionKeyPath(String ekmConnectionKeyPath) {
-            this.ekmConnectionKeyPath = Objects.requireNonNull(ekmConnectionKeyPath);
+            $.ekmConnectionKeyPath = ekmConnectionKeyPath;
             return this;
         }
+
         public Builder externalKeyUri(String externalKeyUri) {
-            this.externalKeyUri = Objects.requireNonNull(externalKeyUri);
+            $.externalKeyUri = externalKeyUri;
             return this;
-        }        public ExternalProtectionLevelOptionsResponse build() {
-            return new ExternalProtectionLevelOptionsResponse(ekmConnectionKeyPath, externalKeyUri);
+        }
+
+        public ExternalProtectionLevelOptionsResponse build() {
+            $.ekmConnectionKeyPath = Objects.requireNonNull($.ekmConnectionKeyPath, "expected parameter 'ekmConnectionKeyPath' to be non-null");
+            $.externalKeyUri = Objects.requireNonNull($.externalKeyUri, "expected parameter 'externalKeyUri' to be non-null");
+            return $;
         }
     }
+
 }

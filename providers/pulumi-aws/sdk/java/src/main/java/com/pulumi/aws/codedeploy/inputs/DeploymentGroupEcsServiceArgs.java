@@ -5,7 +5,6 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DeploymentGroupEcsServiceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -30,63 +29,60 @@ public final class DeploymentGroupEcsServiceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public DeploymentGroupEcsServiceArgs(
-        Output<String> clusterName,
-        Output<String> serviceName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private DeploymentGroupEcsServiceArgs() {}
 
-    private DeploymentGroupEcsServiceArgs() {
-        this.clusterName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private DeploymentGroupEcsServiceArgs(DeploymentGroupEcsServiceArgs $) {
+        this.clusterName = $.clusterName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupEcsServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private Output<String> serviceName;
+        private DeploymentGroupEcsServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupEcsServiceArgs();
         }
 
         public Builder(DeploymentGroupEcsServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new DeploymentGroupEcsServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public DeploymentGroupEcsServiceArgs build() {
-            return new DeploymentGroupEcsServiceArgs(clusterName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public DeploymentGroupEcsServiceArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.testbase.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DistributionGroupListReceiverValueArgs extends com.pulumi.res
      * 
      */
     @Import(name="distributionGroups")
-      private final @Nullable Output<List<String>> distributionGroups;
+    private @Nullable Output<List<String>> distributionGroups;
 
-    public Output<List<String>> distributionGroups() {
-        return this.distributionGroups == null ? Codegen.empty() : this.distributionGroups;
+    public Optional<Output<List<String>>> distributionGroups() {
+        return Optional.ofNullable(this.distributionGroups);
     }
 
-    public DistributionGroupListReceiverValueArgs(@Nullable Output<List<String>> distributionGroups) {
-        this.distributionGroups = distributionGroups;
-    }
+    private DistributionGroupListReceiverValueArgs() {}
 
-    private DistributionGroupListReceiverValueArgs() {
-        this.distributionGroups = Codegen.empty();
+    private DistributionGroupListReceiverValueArgs(DistributionGroupListReceiverValueArgs $) {
+        this.distributionGroups = $.distributionGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionGroupListReceiverValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> distributionGroups;
+        private DistributionGroupListReceiverValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionGroupListReceiverValueArgs();
         }
 
         public Builder(DistributionGroupListReceiverValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionGroups = defaults.distributionGroups;
+            $ = new DistributionGroupListReceiverValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionGroups(@Nullable Output<List<String>> distributionGroups) {
-            this.distributionGroups = distributionGroups;
+            $.distributionGroups = distributionGroups;
             return this;
         }
-        public Builder distributionGroups(@Nullable List<String> distributionGroups) {
-            this.distributionGroups = Codegen.ofNullable(distributionGroups);
-            return this;
+
+        public Builder distributionGroups(List<String> distributionGroups) {
+            return distributionGroups(Output.of(distributionGroups));
         }
+
         public Builder distributionGroups(String... distributionGroups) {
             return distributionGroups(List.of(distributionGroups));
-        }        public DistributionGroupListReceiverValueArgs build() {
-            return new DistributionGroupListReceiverValueArgs(distributionGroups);
+        }
+
+        public DistributionGroupListReceiverValueArgs build() {
+            return $;
         }
     }
+
 }

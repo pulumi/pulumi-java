@@ -23,220 +23,211 @@ public final class GetClusterAddonsConfig extends com.pulumi.resources.InvokeArg
     public static final GetClusterAddonsConfig Empty = new GetClusterAddonsConfig();
 
     @Import(name="cloudrunConfigs", required=true)
-      private final List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs;
+    private List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs;
 
     public List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs() {
         return this.cloudrunConfigs;
     }
 
     @Import(name="configConnectorConfigs", required=true)
-      private final List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs;
+    private List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs;
 
     public List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs() {
         return this.configConnectorConfigs;
     }
 
     @Import(name="dnsCacheConfigs", required=true)
-      private final List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs;
+    private List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs;
 
     public List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs() {
         return this.dnsCacheConfigs;
     }
 
     @Import(name="gcePersistentDiskCsiDriverConfigs", required=true)
-      private final List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs;
+    private List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs;
 
     public List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs() {
         return this.gcePersistentDiskCsiDriverConfigs;
     }
 
     @Import(name="gcpFilestoreCsiDriverConfigs", required=true)
-      private final List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs;
+    private List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs;
 
     public List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs() {
         return this.gcpFilestoreCsiDriverConfigs;
     }
 
     @Import(name="horizontalPodAutoscalings", required=true)
-      private final List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings;
+    private List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings;
 
     public List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings() {
         return this.horizontalPodAutoscalings;
     }
 
     @Import(name="httpLoadBalancings", required=true)
-      private final List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings;
+    private List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings;
 
     public List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings() {
         return this.httpLoadBalancings;
     }
 
     @Import(name="istioConfigs", required=true)
-      private final List<GetClusterAddonsConfigIstioConfig> istioConfigs;
+    private List<GetClusterAddonsConfigIstioConfig> istioConfigs;
 
     public List<GetClusterAddonsConfigIstioConfig> istioConfigs() {
         return this.istioConfigs;
     }
 
     @Import(name="kalmConfigs", required=true)
-      private final List<GetClusterAddonsConfigKalmConfig> kalmConfigs;
+    private List<GetClusterAddonsConfigKalmConfig> kalmConfigs;
 
     public List<GetClusterAddonsConfigKalmConfig> kalmConfigs() {
         return this.kalmConfigs;
     }
 
     @Import(name="networkPolicyConfigs", required=true)
-      private final List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs;
+    private List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs;
 
     public List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs() {
         return this.networkPolicyConfigs;
     }
 
-    public GetClusterAddonsConfig(
-        List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs,
-        List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs,
-        List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs,
-        List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs,
-        List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs,
-        List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings,
-        List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings,
-        List<GetClusterAddonsConfigIstioConfig> istioConfigs,
-        List<GetClusterAddonsConfigKalmConfig> kalmConfigs,
-        List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs) {
-        this.cloudrunConfigs = Objects.requireNonNull(cloudrunConfigs, "expected parameter 'cloudrunConfigs' to be non-null");
-        this.configConnectorConfigs = Objects.requireNonNull(configConnectorConfigs, "expected parameter 'configConnectorConfigs' to be non-null");
-        this.dnsCacheConfigs = Objects.requireNonNull(dnsCacheConfigs, "expected parameter 'dnsCacheConfigs' to be non-null");
-        this.gcePersistentDiskCsiDriverConfigs = Objects.requireNonNull(gcePersistentDiskCsiDriverConfigs, "expected parameter 'gcePersistentDiskCsiDriverConfigs' to be non-null");
-        this.gcpFilestoreCsiDriverConfigs = Objects.requireNonNull(gcpFilestoreCsiDriverConfigs, "expected parameter 'gcpFilestoreCsiDriverConfigs' to be non-null");
-        this.horizontalPodAutoscalings = Objects.requireNonNull(horizontalPodAutoscalings, "expected parameter 'horizontalPodAutoscalings' to be non-null");
-        this.httpLoadBalancings = Objects.requireNonNull(httpLoadBalancings, "expected parameter 'httpLoadBalancings' to be non-null");
-        this.istioConfigs = Objects.requireNonNull(istioConfigs, "expected parameter 'istioConfigs' to be non-null");
-        this.kalmConfigs = Objects.requireNonNull(kalmConfigs, "expected parameter 'kalmConfigs' to be non-null");
-        this.networkPolicyConfigs = Objects.requireNonNull(networkPolicyConfigs, "expected parameter 'networkPolicyConfigs' to be non-null");
-    }
+    private GetClusterAddonsConfig() {}
 
-    private GetClusterAddonsConfig() {
-        this.cloudrunConfigs = List.of();
-        this.configConnectorConfigs = List.of();
-        this.dnsCacheConfigs = List.of();
-        this.gcePersistentDiskCsiDriverConfigs = List.of();
-        this.gcpFilestoreCsiDriverConfigs = List.of();
-        this.horizontalPodAutoscalings = List.of();
-        this.httpLoadBalancings = List.of();
-        this.istioConfigs = List.of();
-        this.kalmConfigs = List.of();
-        this.networkPolicyConfigs = List.of();
+    private GetClusterAddonsConfig(GetClusterAddonsConfig $) {
+        this.cloudrunConfigs = $.cloudrunConfigs;
+        this.configConnectorConfigs = $.configConnectorConfigs;
+        this.dnsCacheConfigs = $.dnsCacheConfigs;
+        this.gcePersistentDiskCsiDriverConfigs = $.gcePersistentDiskCsiDriverConfigs;
+        this.gcpFilestoreCsiDriverConfigs = $.gcpFilestoreCsiDriverConfigs;
+        this.horizontalPodAutoscalings = $.horizontalPodAutoscalings;
+        this.httpLoadBalancings = $.httpLoadBalancings;
+        this.istioConfigs = $.istioConfigs;
+        this.kalmConfigs = $.kalmConfigs;
+        this.networkPolicyConfigs = $.networkPolicyConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterAddonsConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs;
-        private List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs;
-        private List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs;
-        private List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs;
-        private List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs;
-        private List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings;
-        private List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings;
-        private List<GetClusterAddonsConfigIstioConfig> istioConfigs;
-        private List<GetClusterAddonsConfigKalmConfig> kalmConfigs;
-        private List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs;
+        private GetClusterAddonsConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterAddonsConfig();
         }
 
         public Builder(GetClusterAddonsConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudrunConfigs = defaults.cloudrunConfigs;
-    	      this.configConnectorConfigs = defaults.configConnectorConfigs;
-    	      this.dnsCacheConfigs = defaults.dnsCacheConfigs;
-    	      this.gcePersistentDiskCsiDriverConfigs = defaults.gcePersistentDiskCsiDriverConfigs;
-    	      this.gcpFilestoreCsiDriverConfigs = defaults.gcpFilestoreCsiDriverConfigs;
-    	      this.horizontalPodAutoscalings = defaults.horizontalPodAutoscalings;
-    	      this.httpLoadBalancings = defaults.httpLoadBalancings;
-    	      this.istioConfigs = defaults.istioConfigs;
-    	      this.kalmConfigs = defaults.kalmConfigs;
-    	      this.networkPolicyConfigs = defaults.networkPolicyConfigs;
+            $ = new GetClusterAddonsConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudrunConfigs(List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs) {
-            this.cloudrunConfigs = Objects.requireNonNull(cloudrunConfigs);
+            $.cloudrunConfigs = cloudrunConfigs;
             return this;
         }
+
         public Builder cloudrunConfigs(GetClusterAddonsConfigCloudrunConfig... cloudrunConfigs) {
             return cloudrunConfigs(List.of(cloudrunConfigs));
         }
+
         public Builder configConnectorConfigs(List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs) {
-            this.configConnectorConfigs = Objects.requireNonNull(configConnectorConfigs);
+            $.configConnectorConfigs = configConnectorConfigs;
             return this;
         }
+
         public Builder configConnectorConfigs(GetClusterAddonsConfigConfigConnectorConfig... configConnectorConfigs) {
             return configConnectorConfigs(List.of(configConnectorConfigs));
         }
+
         public Builder dnsCacheConfigs(List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs) {
-            this.dnsCacheConfigs = Objects.requireNonNull(dnsCacheConfigs);
+            $.dnsCacheConfigs = dnsCacheConfigs;
             return this;
         }
+
         public Builder dnsCacheConfigs(GetClusterAddonsConfigDnsCacheConfig... dnsCacheConfigs) {
             return dnsCacheConfigs(List.of(dnsCacheConfigs));
         }
+
         public Builder gcePersistentDiskCsiDriverConfigs(List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs) {
-            this.gcePersistentDiskCsiDriverConfigs = Objects.requireNonNull(gcePersistentDiskCsiDriverConfigs);
+            $.gcePersistentDiskCsiDriverConfigs = gcePersistentDiskCsiDriverConfigs;
             return this;
         }
+
         public Builder gcePersistentDiskCsiDriverConfigs(GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig... gcePersistentDiskCsiDriverConfigs) {
             return gcePersistentDiskCsiDriverConfigs(List.of(gcePersistentDiskCsiDriverConfigs));
         }
+
         public Builder gcpFilestoreCsiDriverConfigs(List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs) {
-            this.gcpFilestoreCsiDriverConfigs = Objects.requireNonNull(gcpFilestoreCsiDriverConfigs);
+            $.gcpFilestoreCsiDriverConfigs = gcpFilestoreCsiDriverConfigs;
             return this;
         }
+
         public Builder gcpFilestoreCsiDriverConfigs(GetClusterAddonsConfigGcpFilestoreCsiDriverConfig... gcpFilestoreCsiDriverConfigs) {
             return gcpFilestoreCsiDriverConfigs(List.of(gcpFilestoreCsiDriverConfigs));
         }
+
         public Builder horizontalPodAutoscalings(List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings) {
-            this.horizontalPodAutoscalings = Objects.requireNonNull(horizontalPodAutoscalings);
+            $.horizontalPodAutoscalings = horizontalPodAutoscalings;
             return this;
         }
+
         public Builder horizontalPodAutoscalings(GetClusterAddonsConfigHorizontalPodAutoscaling... horizontalPodAutoscalings) {
             return horizontalPodAutoscalings(List.of(horizontalPodAutoscalings));
         }
+
         public Builder httpLoadBalancings(List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings) {
-            this.httpLoadBalancings = Objects.requireNonNull(httpLoadBalancings);
+            $.httpLoadBalancings = httpLoadBalancings;
             return this;
         }
+
         public Builder httpLoadBalancings(GetClusterAddonsConfigHttpLoadBalancing... httpLoadBalancings) {
             return httpLoadBalancings(List.of(httpLoadBalancings));
         }
+
         public Builder istioConfigs(List<GetClusterAddonsConfigIstioConfig> istioConfigs) {
-            this.istioConfigs = Objects.requireNonNull(istioConfigs);
+            $.istioConfigs = istioConfigs;
             return this;
         }
+
         public Builder istioConfigs(GetClusterAddonsConfigIstioConfig... istioConfigs) {
             return istioConfigs(List.of(istioConfigs));
         }
+
         public Builder kalmConfigs(List<GetClusterAddonsConfigKalmConfig> kalmConfigs) {
-            this.kalmConfigs = Objects.requireNonNull(kalmConfigs);
+            $.kalmConfigs = kalmConfigs;
             return this;
         }
+
         public Builder kalmConfigs(GetClusterAddonsConfigKalmConfig... kalmConfigs) {
             return kalmConfigs(List.of(kalmConfigs));
         }
+
         public Builder networkPolicyConfigs(List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs) {
-            this.networkPolicyConfigs = Objects.requireNonNull(networkPolicyConfigs);
+            $.networkPolicyConfigs = networkPolicyConfigs;
             return this;
         }
+
         public Builder networkPolicyConfigs(GetClusterAddonsConfigNetworkPolicyConfig... networkPolicyConfigs) {
             return networkPolicyConfigs(List.of(networkPolicyConfigs));
-        }        public GetClusterAddonsConfig build() {
-            return new GetClusterAddonsConfig(cloudrunConfigs, configConnectorConfigs, dnsCacheConfigs, gcePersistentDiskCsiDriverConfigs, gcpFilestoreCsiDriverConfigs, horizontalPodAutoscalings, httpLoadBalancings, istioConfigs, kalmConfigs, networkPolicyConfigs);
+        }
+
+        public GetClusterAddonsConfig build() {
+            $.cloudrunConfigs = Objects.requireNonNull($.cloudrunConfigs, "expected parameter 'cloudrunConfigs' to be non-null");
+            $.configConnectorConfigs = Objects.requireNonNull($.configConnectorConfigs, "expected parameter 'configConnectorConfigs' to be non-null");
+            $.dnsCacheConfigs = Objects.requireNonNull($.dnsCacheConfigs, "expected parameter 'dnsCacheConfigs' to be non-null");
+            $.gcePersistentDiskCsiDriverConfigs = Objects.requireNonNull($.gcePersistentDiskCsiDriverConfigs, "expected parameter 'gcePersistentDiskCsiDriverConfigs' to be non-null");
+            $.gcpFilestoreCsiDriverConfigs = Objects.requireNonNull($.gcpFilestoreCsiDriverConfigs, "expected parameter 'gcpFilestoreCsiDriverConfigs' to be non-null");
+            $.horizontalPodAutoscalings = Objects.requireNonNull($.horizontalPodAutoscalings, "expected parameter 'horizontalPodAutoscalings' to be non-null");
+            $.httpLoadBalancings = Objects.requireNonNull($.httpLoadBalancings, "expected parameter 'httpLoadBalancings' to be non-null");
+            $.istioConfigs = Objects.requireNonNull($.istioConfigs, "expected parameter 'istioConfigs' to be non-null");
+            $.kalmConfigs = Objects.requireNonNull($.kalmConfigs, "expected parameter 'kalmConfigs' to be non-null");
+            $.networkPolicyConfigs = Objects.requireNonNull($.networkPolicyConfigs, "expected parameter 'networkPolicyConfigs' to be non-null");
+            return $;
         }
     }
+
 }

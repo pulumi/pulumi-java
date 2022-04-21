@@ -17,7 +17,7 @@ public final class GetFlowVpcInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="flowArn", required=true)
-      private final String flowArn;
+    private String flowArn;
 
     public String flowArn() {
         return this.flowArn;
@@ -28,55 +28,52 @@ public final class GetFlowVpcInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetFlowVpcInterfaceArgs(
-        String flowArn,
-        String name) {
-        this.flowArn = Objects.requireNonNull(flowArn, "expected parameter 'flowArn' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetFlowVpcInterfaceArgs() {}
 
-    private GetFlowVpcInterfaceArgs() {
-        this.flowArn = null;
-        this.name = null;
+    private GetFlowVpcInterfaceArgs(GetFlowVpcInterfaceArgs $) {
+        this.flowArn = $.flowArn;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFlowVpcInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String flowArn;
-        private String name;
+        private GetFlowVpcInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFlowVpcInterfaceArgs();
         }
 
         public Builder(GetFlowVpcInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flowArn = defaults.flowArn;
-    	      this.name = defaults.name;
+            $ = new GetFlowVpcInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flowArn(String flowArn) {
-            this.flowArn = Objects.requireNonNull(flowArn);
+            $.flowArn = flowArn;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetFlowVpcInterfaceArgs build() {
-            return new GetFlowVpcInterfaceArgs(flowArn, name);
+        }
+
+        public GetFlowVpcInterfaceArgs build() {
+            $.flowArn = Objects.requireNonNull($.flowArn, "expected parameter 'flowArn' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

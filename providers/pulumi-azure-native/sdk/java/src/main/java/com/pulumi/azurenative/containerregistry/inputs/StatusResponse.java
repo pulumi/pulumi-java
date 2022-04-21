@@ -21,7 +21,7 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayStatus", required=true)
-      private final String displayStatus;
+    private String displayStatus;
 
     public String displayStatus() {
         return this.displayStatus;
@@ -32,7 +32,7 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -43,64 +43,59 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timestamp", required=true)
-      private final String timestamp;
+    private String timestamp;
 
     public String timestamp() {
         return this.timestamp;
     }
 
-    public StatusResponse(
-        String displayStatus,
-        String message,
-        String timestamp) {
-        this.displayStatus = Objects.requireNonNull(displayStatus, "expected parameter 'displayStatus' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.timestamp = Objects.requireNonNull(timestamp, "expected parameter 'timestamp' to be non-null");
-    }
+    private StatusResponse() {}
 
-    private StatusResponse() {
-        this.displayStatus = null;
-        this.message = null;
-        this.timestamp = null;
+    private StatusResponse(StatusResponse $) {
+        this.displayStatus = $.displayStatus;
+        this.message = $.message;
+        this.timestamp = $.timestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayStatus;
-        private String message;
-        private String timestamp;
+        private StatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusResponse();
         }
 
         public Builder(StatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayStatus = defaults.displayStatus;
-    	      this.message = defaults.message;
-    	      this.timestamp = defaults.timestamp;
+            $ = new StatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayStatus(String displayStatus) {
-            this.displayStatus = Objects.requireNonNull(displayStatus);
+            $.displayStatus = displayStatus;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder timestamp(String timestamp) {
-            this.timestamp = Objects.requireNonNull(timestamp);
+            $.timestamp = timestamp;
             return this;
-        }        public StatusResponse build() {
-            return new StatusResponse(displayStatus, message, timestamp);
+        }
+
+        public StatusResponse build() {
+            $.displayStatus = Objects.requireNonNull($.displayStatus, "expected parameter 'displayStatus' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.timestamp = Objects.requireNonNull($.timestamp, "expected parameter 'timestamp' to be non-null");
+            return $;
         }
     }
+
 }

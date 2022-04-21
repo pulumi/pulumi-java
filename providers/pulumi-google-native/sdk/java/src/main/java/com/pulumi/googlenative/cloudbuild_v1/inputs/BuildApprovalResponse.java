@@ -23,7 +23,7 @@ public final class BuildApprovalResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="config", required=true)
-      private final ApprovalConfigResponse config;
+    private ApprovalConfigResponse config;
 
     public ApprovalConfigResponse config() {
         return this.config;
@@ -34,7 +34,7 @@ public final class BuildApprovalResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="result", required=true)
-      private final ApprovalResultResponse result;
+    private ApprovalResultResponse result;
 
     public ApprovalResultResponse result() {
         return this.result;
@@ -45,64 +45,59 @@ public final class BuildApprovalResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public BuildApprovalResponse(
-        ApprovalConfigResponse config,
-        ApprovalResultResponse result,
-        String state) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.result = Objects.requireNonNull(result, "expected parameter 'result' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private BuildApprovalResponse() {}
 
-    private BuildApprovalResponse() {
-        this.config = null;
-        this.result = null;
-        this.state = null;
+    private BuildApprovalResponse(BuildApprovalResponse $) {
+        this.config = $.config;
+        this.result = $.result;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildApprovalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ApprovalConfigResponse config;
-        private ApprovalResultResponse result;
-        private String state;
+        private BuildApprovalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildApprovalResponse();
         }
 
         public Builder(BuildApprovalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.result = defaults.result;
-    	      this.state = defaults.state;
+            $ = new BuildApprovalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder config(ApprovalConfigResponse config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder result(ApprovalResultResponse result) {
-            this.result = Objects.requireNonNull(result);
+            $.result = result;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public BuildApprovalResponse build() {
-            return new BuildApprovalResponse(config, result, state);
+        }
+
+        public BuildApprovalResponse build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.result = Objects.requireNonNull($.result, "expected parameter 'result' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

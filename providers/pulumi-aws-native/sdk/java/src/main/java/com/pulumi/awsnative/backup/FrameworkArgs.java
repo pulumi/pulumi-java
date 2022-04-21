@@ -7,10 +7,10 @@ import com.pulumi.awsnative.backup.inputs.FrameworkControlArgs;
 import com.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class FrameworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frameworkControls", required=true)
-      private final Output<List<FrameworkControlArgs>> frameworkControls;
+    private Output<List<FrameworkControlArgs>> frameworkControls;
 
     public Output<List<FrameworkControlArgs>> frameworkControls() {
         return this.frameworkControls;
@@ -34,10 +34,10 @@ public final class FrameworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frameworkDescription")
-      private final @Nullable Output<String> frameworkDescription;
+    private @Nullable Output<String> frameworkDescription;
 
-    public Output<String> frameworkDescription() {
-        return this.frameworkDescription == null ? Codegen.empty() : this.frameworkDescription;
+    public Optional<Output<String>> frameworkDescription() {
+        return Optional.ofNullable(this.frameworkDescription);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FrameworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frameworkName")
-      private final @Nullable Output<String> frameworkName;
+    private @Nullable Output<String> frameworkName;
 
-    public Output<String> frameworkName() {
-        return this.frameworkName == null ? Codegen.empty() : this.frameworkName;
+    public Optional<Output<String>> frameworkName() {
+        return Optional.ofNullable(this.frameworkName);
     }
 
     /**
@@ -56,95 +56,87 @@ public final class FrameworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frameworkTags")
-      private final @Nullable Output<List<FrameworkTagArgs>> frameworkTags;
+    private @Nullable Output<List<FrameworkTagArgs>> frameworkTags;
 
-    public Output<List<FrameworkTagArgs>> frameworkTags() {
-        return this.frameworkTags == null ? Codegen.empty() : this.frameworkTags;
+    public Optional<Output<List<FrameworkTagArgs>>> frameworkTags() {
+        return Optional.ofNullable(this.frameworkTags);
     }
 
-    public FrameworkArgs(
-        Output<List<FrameworkControlArgs>> frameworkControls,
-        @Nullable Output<String> frameworkDescription,
-        @Nullable Output<String> frameworkName,
-        @Nullable Output<List<FrameworkTagArgs>> frameworkTags) {
-        this.frameworkControls = Objects.requireNonNull(frameworkControls, "expected parameter 'frameworkControls' to be non-null");
-        this.frameworkDescription = frameworkDescription;
-        this.frameworkName = frameworkName;
-        this.frameworkTags = frameworkTags;
-    }
+    private FrameworkArgs() {}
 
-    private FrameworkArgs() {
-        this.frameworkControls = Codegen.empty();
-        this.frameworkDescription = Codegen.empty();
-        this.frameworkName = Codegen.empty();
-        this.frameworkTags = Codegen.empty();
+    private FrameworkArgs(FrameworkArgs $) {
+        this.frameworkControls = $.frameworkControls;
+        this.frameworkDescription = $.frameworkDescription;
+        this.frameworkName = $.frameworkName;
+        this.frameworkTags = $.frameworkTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrameworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<FrameworkControlArgs>> frameworkControls;
-        private @Nullable Output<String> frameworkDescription;
-        private @Nullable Output<String> frameworkName;
-        private @Nullable Output<List<FrameworkTagArgs>> frameworkTags;
+        private FrameworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrameworkArgs();
         }
 
         public Builder(FrameworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frameworkControls = defaults.frameworkControls;
-    	      this.frameworkDescription = defaults.frameworkDescription;
-    	      this.frameworkName = defaults.frameworkName;
-    	      this.frameworkTags = defaults.frameworkTags;
+            $ = new FrameworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frameworkControls(Output<List<FrameworkControlArgs>> frameworkControls) {
-            this.frameworkControls = Objects.requireNonNull(frameworkControls);
+            $.frameworkControls = frameworkControls;
             return this;
         }
+
         public Builder frameworkControls(List<FrameworkControlArgs> frameworkControls) {
-            this.frameworkControls = Output.of(Objects.requireNonNull(frameworkControls));
-            return this;
+            return frameworkControls(Output.of(frameworkControls));
         }
+
         public Builder frameworkControls(FrameworkControlArgs... frameworkControls) {
             return frameworkControls(List.of(frameworkControls));
         }
+
         public Builder frameworkDescription(@Nullable Output<String> frameworkDescription) {
-            this.frameworkDescription = frameworkDescription;
+            $.frameworkDescription = frameworkDescription;
             return this;
         }
-        public Builder frameworkDescription(@Nullable String frameworkDescription) {
-            this.frameworkDescription = Codegen.ofNullable(frameworkDescription);
-            return this;
+
+        public Builder frameworkDescription(String frameworkDescription) {
+            return frameworkDescription(Output.of(frameworkDescription));
         }
+
         public Builder frameworkName(@Nullable Output<String> frameworkName) {
-            this.frameworkName = frameworkName;
+            $.frameworkName = frameworkName;
             return this;
         }
-        public Builder frameworkName(@Nullable String frameworkName) {
-            this.frameworkName = Codegen.ofNullable(frameworkName);
-            return this;
+
+        public Builder frameworkName(String frameworkName) {
+            return frameworkName(Output.of(frameworkName));
         }
+
         public Builder frameworkTags(@Nullable Output<List<FrameworkTagArgs>> frameworkTags) {
-            this.frameworkTags = frameworkTags;
+            $.frameworkTags = frameworkTags;
             return this;
         }
-        public Builder frameworkTags(@Nullable List<FrameworkTagArgs> frameworkTags) {
-            this.frameworkTags = Codegen.ofNullable(frameworkTags);
-            return this;
+
+        public Builder frameworkTags(List<FrameworkTagArgs> frameworkTags) {
+            return frameworkTags(Output.of(frameworkTags));
         }
+
         public Builder frameworkTags(FrameworkTagArgs... frameworkTags) {
             return frameworkTags(List.of(frameworkTags));
-        }        public FrameworkArgs build() {
-            return new FrameworkArgs(frameworkControls, frameworkDescription, frameworkName, frameworkTags);
+        }
+
+        public FrameworkArgs build() {
+            $.frameworkControls = Objects.requireNonNull($.frameworkControls, "expected parameter 'frameworkControls' to be non-null");
+            return $;
         }
     }
+
 }

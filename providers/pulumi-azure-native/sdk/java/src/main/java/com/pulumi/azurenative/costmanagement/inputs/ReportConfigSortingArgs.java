@@ -5,9 +5,9 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ReportConfigSortingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="direction")
-      private final @Nullable Output<String> direction;
+    private @Nullable Output<String> direction;
 
-    public Output<String> direction() {
-        return this.direction == null ? Codegen.empty() : this.direction;
+    public Optional<Output<String>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class ReportConfigSortingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public ReportConfigSortingArgs(
-        @Nullable Output<String> direction,
-        Output<String> name) {
-        this.direction = direction;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ReportConfigSortingArgs() {}
 
-    private ReportConfigSortingArgs() {
-        this.direction = Codegen.empty();
-        this.name = Codegen.empty();
+    private ReportConfigSortingArgs(ReportConfigSortingArgs $) {
+        this.direction = $.direction;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportConfigSortingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> direction;
-        private Output<String> name;
+        private ReportConfigSortingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportConfigSortingArgs();
         }
 
         public Builder(ReportConfigSortingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.direction = defaults.direction;
-    	      this.name = defaults.name;
+            $ = new ReportConfigSortingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder direction(@Nullable Output<String> direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
-        public Builder direction(@Nullable String direction) {
-            this.direction = Codegen.ofNullable(direction);
-            return this;
+
+        public Builder direction(String direction) {
+            return direction(Output.of(direction));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ReportConfigSortingArgs build() {
-            return new ReportConfigSortingArgs(direction, name);
+            return name(Output.of(name));
+        }
+
+        public ReportConfigSortingArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

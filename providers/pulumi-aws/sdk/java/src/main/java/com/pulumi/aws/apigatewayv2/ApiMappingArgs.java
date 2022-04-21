@@ -5,9 +5,9 @@ package com.pulumi.aws.apigatewayv2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -31,10 +31,10 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiMappingKey")
-      private final @Nullable Output<String> apiMappingKey;
+    private @Nullable Output<String> apiMappingKey;
 
-    public Output<String> apiMappingKey() {
-        return this.apiMappingKey == null ? Codegen.empty() : this.apiMappingKey;
+    public Optional<Output<String>> apiMappingKey() {
+        return Optional.ofNullable(this.apiMappingKey);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -53,89 +53,81 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stage", required=true)
-      private final Output<String> stage;
+    private Output<String> stage;
 
     public Output<String> stage() {
         return this.stage;
     }
 
-    public ApiMappingArgs(
-        Output<String> apiId,
-        @Nullable Output<String> apiMappingKey,
-        Output<String> domainName,
-        Output<String> stage) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.apiMappingKey = apiMappingKey;
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.stage = Objects.requireNonNull(stage, "expected parameter 'stage' to be non-null");
-    }
+    private ApiMappingArgs() {}
 
-    private ApiMappingArgs() {
-        this.apiId = Codegen.empty();
-        this.apiMappingKey = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.stage = Codegen.empty();
+    private ApiMappingArgs(ApiMappingArgs $) {
+        this.apiId = $.apiId;
+        this.apiMappingKey = $.apiMappingKey;
+        this.domainName = $.domainName;
+        this.stage = $.stage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<String> apiMappingKey;
-        private Output<String> domainName;
-        private Output<String> stage;
+        private ApiMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiMappingArgs();
         }
 
         public Builder(ApiMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.apiMappingKey = defaults.apiMappingKey;
-    	      this.domainName = defaults.domainName;
-    	      this.stage = defaults.stage;
+            $ = new ApiMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder apiMappingKey(@Nullable Output<String> apiMappingKey) {
-            this.apiMappingKey = apiMappingKey;
+            $.apiMappingKey = apiMappingKey;
             return this;
         }
-        public Builder apiMappingKey(@Nullable String apiMappingKey) {
-            this.apiMappingKey = Codegen.ofNullable(apiMappingKey);
-            return this;
+
+        public Builder apiMappingKey(String apiMappingKey) {
+            return apiMappingKey(Output.of(apiMappingKey));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder stage(Output<String> stage) {
-            this.stage = Objects.requireNonNull(stage);
+            $.stage = stage;
             return this;
         }
+
         public Builder stage(String stage) {
-            this.stage = Output.of(Objects.requireNonNull(stage));
-            return this;
-        }        public ApiMappingArgs build() {
-            return new ApiMappingArgs(apiId, apiMappingKey, domainName, stage);
+            return stage(Output.of(stage));
+        }
+
+        public ApiMappingArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.stage = Objects.requireNonNull($.stage, "expected parameter 'stage' to be non-null");
+            return $;
         }
     }
+
 }

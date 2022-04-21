@@ -16,48 +16,48 @@ public final class SchemaProperties extends com.pulumi.resources.InvokeArgs {
     public static final SchemaProperties Empty = new SchemaProperties();
 
     @Import(name="attributes")
-      private final @Nullable List<AttributesItemProperties> attributes;
+    private @Nullable List<AttributesItemProperties> attributes;
 
-    public List<AttributesItemProperties> attributes() {
-        return this.attributes == null ? List.of() : this.attributes;
+    public Optional<List<AttributesItemProperties>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
-    public SchemaProperties(@Nullable List<AttributesItemProperties> attributes) {
-        this.attributes = attributes;
-    }
+    private SchemaProperties() {}
 
-    private SchemaProperties() {
-        this.attributes = List.of();
+    private SchemaProperties(SchemaProperties $) {
+        this.attributes = $.attributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AttributesItemProperties> attributes;
+        private SchemaProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaProperties();
         }
 
         public Builder(SchemaProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
+            $ = new SchemaProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable List<AttributesItemProperties> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(AttributesItemProperties... attributes) {
             return attributes(List.of(attributes));
-        }        public SchemaProperties build() {
-            return new SchemaProperties(attributes);
+        }
+
+        public SchemaProperties build() {
+            return $;
         }
     }
+
 }

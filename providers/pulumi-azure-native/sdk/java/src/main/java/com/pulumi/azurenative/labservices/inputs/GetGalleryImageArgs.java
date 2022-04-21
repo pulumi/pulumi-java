@@ -19,10 +19,10 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="galleryImageName", required=true)
-      private final String galleryImageName;
+    private String galleryImageName;
 
     public String galleryImageName() {
         return this.galleryImageName;
@@ -41,7 +41,7 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labAccountName", required=true)
-      private final String labAccountName;
+    private String labAccountName;
 
     public String labAccountName() {
         return this.labAccountName;
@@ -52,73 +52,65 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetGalleryImageArgs(
-        @Nullable String expand,
-        String galleryImageName,
-        String labAccountName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.galleryImageName = Objects.requireNonNull(galleryImageName, "expected parameter 'galleryImageName' to be non-null");
-        this.labAccountName = Objects.requireNonNull(labAccountName, "expected parameter 'labAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetGalleryImageArgs() {}
 
-    private GetGalleryImageArgs() {
-        this.expand = null;
-        this.galleryImageName = null;
-        this.labAccountName = null;
-        this.resourceGroupName = null;
+    private GetGalleryImageArgs(GetGalleryImageArgs $) {
+        this.expand = $.expand;
+        this.galleryImageName = $.galleryImageName;
+        this.labAccountName = $.labAccountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGalleryImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String galleryImageName;
-        private String labAccountName;
-        private String resourceGroupName;
+        private GetGalleryImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGalleryImageArgs();
         }
 
         public Builder(GetGalleryImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.galleryImageName = defaults.galleryImageName;
-    	      this.labAccountName = defaults.labAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetGalleryImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder galleryImageName(String galleryImageName) {
-            this.galleryImageName = Objects.requireNonNull(galleryImageName);
+            $.galleryImageName = galleryImageName;
             return this;
         }
+
         public Builder labAccountName(String labAccountName) {
-            this.labAccountName = Objects.requireNonNull(labAccountName);
+            $.labAccountName = labAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetGalleryImageArgs build() {
-            return new GetGalleryImageArgs(expand, galleryImageName, labAccountName, resourceGroupName);
+        }
+
+        public GetGalleryImageArgs build() {
+            $.galleryImageName = Objects.requireNonNull($.galleryImageName, "expected parameter 'galleryImageName' to be non-null");
+            $.labAccountName = Objects.requireNonNull($.labAccountName, "expected parameter 'labAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

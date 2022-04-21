@@ -24,62 +24,58 @@ public final class SecurityProfileMetricToRetain extends com.pulumi.resources.In
      * 
      */
     @Import(name="metric", required=true)
-      private final String metric;
+    private String metric;
 
     public String metric() {
         return this.metric;
     }
 
     @Import(name="metricDimension")
-      private final @Nullable SecurityProfileMetricDimension metricDimension;
+    private @Nullable SecurityProfileMetricDimension metricDimension;
 
     public Optional<SecurityProfileMetricDimension> metricDimension() {
-        return this.metricDimension == null ? Optional.empty() : Optional.ofNullable(this.metricDimension);
+        return Optional.ofNullable(this.metricDimension);
     }
 
-    public SecurityProfileMetricToRetain(
-        String metric,
-        @Nullable SecurityProfileMetricDimension metricDimension) {
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-        this.metricDimension = metricDimension;
-    }
+    private SecurityProfileMetricToRetain() {}
 
-    private SecurityProfileMetricToRetain() {
-        this.metric = null;
-        this.metricDimension = null;
+    private SecurityProfileMetricToRetain(SecurityProfileMetricToRetain $) {
+        this.metric = $.metric;
+        this.metricDimension = $.metricDimension;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileMetricToRetain defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metric;
-        private @Nullable SecurityProfileMetricDimension metricDimension;
+        private SecurityProfileMetricToRetain $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileMetricToRetain();
         }
 
         public Builder(SecurityProfileMetricToRetain defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metric = defaults.metric;
-    	      this.metricDimension = defaults.metricDimension;
+            $ = new SecurityProfileMetricToRetain(Objects.requireNonNull(defaults));
         }
 
         public Builder metric(String metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder metricDimension(@Nullable SecurityProfileMetricDimension metricDimension) {
-            this.metricDimension = metricDimension;
+            $.metricDimension = metricDimension;
             return this;
-        }        public SecurityProfileMetricToRetain build() {
-            return new SecurityProfileMetricToRetain(metric, metricDimension);
+        }
+
+        public SecurityProfileMetricToRetain build() {
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            return $;
         }
     }
+
 }

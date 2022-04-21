@@ -23,45 +23,44 @@ public final class ThemeBorderStyle extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="show")
-      private final @Nullable Boolean show;
+    private @Nullable Boolean show;
 
     public Optional<Boolean> show() {
-        return this.show == null ? Optional.empty() : Optional.ofNullable(this.show);
+        return Optional.ofNullable(this.show);
     }
 
-    public ThemeBorderStyle(@Nullable Boolean show) {
-        this.show = show;
-    }
+    private ThemeBorderStyle() {}
 
-    private ThemeBorderStyle() {
-        this.show = null;
+    private ThemeBorderStyle(ThemeBorderStyle $) {
+        this.show = $.show;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeBorderStyle defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean show;
+        private ThemeBorderStyle $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeBorderStyle();
         }
 
         public Builder(ThemeBorderStyle defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.show = defaults.show;
+            $ = new ThemeBorderStyle(Objects.requireNonNull(defaults));
         }
 
         public Builder show(@Nullable Boolean show) {
-            this.show = show;
+            $.show = show;
             return this;
-        }        public ThemeBorderStyle build() {
-            return new ThemeBorderStyle(show);
+        }
+
+        public ThemeBorderStyle build() {
+            return $;
         }
     }
+
 }

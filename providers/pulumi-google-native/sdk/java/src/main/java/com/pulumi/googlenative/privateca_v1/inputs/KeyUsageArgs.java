@@ -5,12 +5,12 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1.inputs.ExtendedKeyUsageOptionsArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.KeyUsageOptionsArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class KeyUsageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="baseKeyUsage")
-      private final @Nullable Output<KeyUsageOptionsArgs> baseKeyUsage;
+    private @Nullable Output<KeyUsageOptionsArgs> baseKeyUsage;
 
-    public Output<KeyUsageOptionsArgs> baseKeyUsage() {
-        return this.baseKeyUsage == null ? Codegen.empty() : this.baseKeyUsage;
+    public Optional<Output<KeyUsageOptionsArgs>> baseKeyUsage() {
+        return Optional.ofNullable(this.baseKeyUsage);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class KeyUsageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extendedKeyUsage")
-      private final @Nullable Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage;
+    private @Nullable Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage;
 
-    public Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage() {
-        return this.extendedKeyUsage == null ? Codegen.empty() : this.extendedKeyUsage;
+    public Optional<Output<ExtendedKeyUsageOptionsArgs>> extendedKeyUsage() {
+        return Optional.ofNullable(this.extendedKeyUsage);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class KeyUsageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="unknownExtendedKeyUsages")
-      private final @Nullable Output<List<ObjectIdArgs>> unknownExtendedKeyUsages;
+    private @Nullable Output<List<ObjectIdArgs>> unknownExtendedKeyUsages;
 
-    public Output<List<ObjectIdArgs>> unknownExtendedKeyUsages() {
-        return this.unknownExtendedKeyUsages == null ? Codegen.empty() : this.unknownExtendedKeyUsages;
+    public Optional<Output<List<ObjectIdArgs>>> unknownExtendedKeyUsages() {
+        return Optional.ofNullable(this.unknownExtendedKeyUsages);
     }
 
-    public KeyUsageArgs(
-        @Nullable Output<KeyUsageOptionsArgs> baseKeyUsage,
-        @Nullable Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage,
-        @Nullable Output<List<ObjectIdArgs>> unknownExtendedKeyUsages) {
-        this.baseKeyUsage = baseKeyUsage;
-        this.extendedKeyUsage = extendedKeyUsage;
-        this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
-    }
+    private KeyUsageArgs() {}
 
-    private KeyUsageArgs() {
-        this.baseKeyUsage = Codegen.empty();
-        this.extendedKeyUsage = Codegen.empty();
-        this.unknownExtendedKeyUsages = Codegen.empty();
+    private KeyUsageArgs(KeyUsageArgs $) {
+        this.baseKeyUsage = $.baseKeyUsage;
+        this.extendedKeyUsage = $.extendedKeyUsage;
+        this.unknownExtendedKeyUsages = $.unknownExtendedKeyUsages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyUsageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KeyUsageOptionsArgs> baseKeyUsage;
-        private @Nullable Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage;
-        private @Nullable Output<List<ObjectIdArgs>> unknownExtendedKeyUsages;
+        private KeyUsageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyUsageArgs();
         }
 
         public Builder(KeyUsageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseKeyUsage = defaults.baseKeyUsage;
-    	      this.extendedKeyUsage = defaults.extendedKeyUsage;
-    	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
+            $ = new KeyUsageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseKeyUsage(@Nullable Output<KeyUsageOptionsArgs> baseKeyUsage) {
-            this.baseKeyUsage = baseKeyUsage;
+            $.baseKeyUsage = baseKeyUsage;
             return this;
         }
-        public Builder baseKeyUsage(@Nullable KeyUsageOptionsArgs baseKeyUsage) {
-            this.baseKeyUsage = Codegen.ofNullable(baseKeyUsage);
-            return this;
+
+        public Builder baseKeyUsage(KeyUsageOptionsArgs baseKeyUsage) {
+            return baseKeyUsage(Output.of(baseKeyUsage));
         }
+
         public Builder extendedKeyUsage(@Nullable Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage) {
-            this.extendedKeyUsage = extendedKeyUsage;
+            $.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
-        public Builder extendedKeyUsage(@Nullable ExtendedKeyUsageOptionsArgs extendedKeyUsage) {
-            this.extendedKeyUsage = Codegen.ofNullable(extendedKeyUsage);
-            return this;
+
+        public Builder extendedKeyUsage(ExtendedKeyUsageOptionsArgs extendedKeyUsage) {
+            return extendedKeyUsage(Output.of(extendedKeyUsage));
         }
+
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<ObjectIdArgs>> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
+            $.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-        public Builder unknownExtendedKeyUsages(@Nullable List<ObjectIdArgs> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = Codegen.ofNullable(unknownExtendedKeyUsages);
-            return this;
+
+        public Builder unknownExtendedKeyUsages(List<ObjectIdArgs> unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(Output.of(unknownExtendedKeyUsages));
         }
+
         public Builder unknownExtendedKeyUsages(ObjectIdArgs... unknownExtendedKeyUsages) {
             return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
-        }        public KeyUsageArgs build() {
-            return new KeyUsageArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
+        }
+
+        public KeyUsageArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGet
      * 
      */
     @Import(name="objectIdPaths", required=true)
-      private final Output<List<Integer>> objectIdPaths;
+    private Output<List<Integer>> objectIdPaths;
 
     public Output<List<Integer>> objectIdPaths() {
         return this.objectIdPaths;
     }
 
-    public CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs(Output<List<Integer>> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths, "expected parameter 'objectIdPaths' to be non-null");
-    }
+    private CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs() {}
 
-    private CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs() {
-        this.objectIdPaths = Codegen.empty();
+    private CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs(CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs $) {
+        this.objectIdPaths = $.objectIdPaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Integer>> objectIdPaths;
+        private CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs();
         }
 
         public Builder(CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectIdPaths = defaults.objectIdPaths;
+            $ = new CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectIdPaths(Output<List<Integer>> objectIdPaths) {
-            this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+            $.objectIdPaths = objectIdPaths;
             return this;
         }
+
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
-            this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
-            return this;
+            return objectIdPaths(Output.of(objectIdPaths));
         }
+
         public Builder objectIdPaths(Integer... objectIdPaths) {
             return objectIdPaths(List.of(objectIdPaths));
-        }        public CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs build() {
-            return new CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs(objectIdPaths);
+        }
+
+        public CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs build() {
+            $.objectIdPaths = Objects.requireNonNull($.objectIdPaths, "expected parameter 'objectIdPaths' to be non-null");
+            return $;
         }
     }
+
 }

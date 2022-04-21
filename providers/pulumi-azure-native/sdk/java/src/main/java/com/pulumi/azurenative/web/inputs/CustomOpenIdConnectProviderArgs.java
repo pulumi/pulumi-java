@@ -7,9 +7,9 @@ import com.pulumi.azurenative.web.inputs.OpenIdConnectLoginArgs;
 import com.pulumi.azurenative.web.inputs.OpenIdConnectRegistrationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<OpenIdConnectLoginArgs> login;
+    private @Nullable Output<OpenIdConnectLoginArgs> login;
 
-    public Output<OpenIdConnectLoginArgs> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<OpenIdConnectLoginArgs>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="registration")
-      private final @Nullable Output<OpenIdConnectRegistrationArgs> registration;
+    private @Nullable Output<OpenIdConnectRegistrationArgs> registration;
 
-    public Output<OpenIdConnectRegistrationArgs> registration() {
-        return this.registration == null ? Codegen.empty() : this.registration;
+    public Optional<Output<OpenIdConnectRegistrationArgs>> registration() {
+        return Optional.ofNullable(this.registration);
     }
 
-    public CustomOpenIdConnectProviderArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<OpenIdConnectLoginArgs> login,
-        @Nullable Output<OpenIdConnectRegistrationArgs> registration) {
-        this.enabled = enabled;
-        this.login = login;
-        this.registration = registration;
-    }
+    private CustomOpenIdConnectProviderArgs() {}
 
-    private CustomOpenIdConnectProviderArgs() {
-        this.enabled = Codegen.empty();
-        this.login = Codegen.empty();
-        this.registration = Codegen.empty();
+    private CustomOpenIdConnectProviderArgs(CustomOpenIdConnectProviderArgs $) {
+        this.enabled = $.enabled;
+        this.login = $.login;
+        this.registration = $.registration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomOpenIdConnectProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<OpenIdConnectLoginArgs> login;
-        private @Nullable Output<OpenIdConnectRegistrationArgs> registration;
+        private CustomOpenIdConnectProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomOpenIdConnectProviderArgs();
         }
 
         public Builder(CustomOpenIdConnectProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.login = defaults.login;
-    	      this.registration = defaults.registration;
+            $ = new CustomOpenIdConnectProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder login(@Nullable Output<OpenIdConnectLoginArgs> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable OpenIdConnectLoginArgs login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(OpenIdConnectLoginArgs login) {
+            return login(Output.of(login));
         }
+
         public Builder registration(@Nullable Output<OpenIdConnectRegistrationArgs> registration) {
-            this.registration = registration;
+            $.registration = registration;
             return this;
         }
-        public Builder registration(@Nullable OpenIdConnectRegistrationArgs registration) {
-            this.registration = Codegen.ofNullable(registration);
-            return this;
-        }        public CustomOpenIdConnectProviderArgs build() {
-            return new CustomOpenIdConnectProviderArgs(enabled, login, registration);
+
+        public Builder registration(OpenIdConnectRegistrationArgs registration) {
+            return registration(Output.of(registration));
+        }
+
+        public CustomOpenIdConnectProviderArgs build() {
+            return $;
         }
     }
+
 }

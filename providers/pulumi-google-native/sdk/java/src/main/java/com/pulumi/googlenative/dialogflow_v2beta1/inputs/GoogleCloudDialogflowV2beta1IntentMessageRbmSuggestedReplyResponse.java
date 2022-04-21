@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
      * 
      */
     @Import(name="postbackData", required=true)
-      private final String postbackData;
+    private String postbackData;
 
     public String postbackData() {
         return this.postbackData;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse(
-        String postbackData,
-        String text) {
-        this.postbackData = Objects.requireNonNull(postbackData, "expected parameter 'postbackData' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse() {
-        this.postbackData = null;
-        this.text = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse $) {
+        this.postbackData = $.postbackData;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String postbackData;
-        private String text;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.postbackData = defaults.postbackData;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder postbackData(String postbackData) {
-            this.postbackData = Objects.requireNonNull(postbackData);
+            $.postbackData = postbackData;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse(postbackData, text);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse build() {
+            $.postbackData = Objects.requireNonNull($.postbackData, "expected parameter 'postbackData' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

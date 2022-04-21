@@ -17,45 +17,45 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetNetworkInterfaceArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetNetworkInterfaceArgs() {}
 
-    private GetNetworkInterfaceArgs() {
-        this.id = null;
+    private GetNetworkInterfaceArgs(GetNetworkInterfaceArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetNetworkInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkInterfaceArgs();
         }
 
         public Builder(GetNetworkInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetNetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetNetworkInterfaceArgs build() {
-            return new GetNetworkInterfaceArgs(id);
+        }
+
+        public GetNetworkInterfaceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

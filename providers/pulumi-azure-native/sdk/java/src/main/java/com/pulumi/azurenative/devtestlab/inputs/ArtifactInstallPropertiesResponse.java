@@ -25,10 +25,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="artifactId")
-      private final @Nullable String artifactId;
+    private @Nullable String artifactId;
 
     public Optional<String> artifactId() {
-        return this.artifactId == null ? Optional.empty() : Optional.ofNullable(this.artifactId);
+        return Optional.ofNullable(this.artifactId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="artifactTitle")
-      private final @Nullable String artifactTitle;
+    private @Nullable String artifactTitle;
 
     public Optional<String> artifactTitle() {
-        return this.artifactTitle == null ? Optional.empty() : Optional.ofNullable(this.artifactTitle);
+        return Optional.ofNullable(this.artifactTitle);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="deploymentStatusMessage")
-      private final @Nullable String deploymentStatusMessage;
+    private @Nullable String deploymentStatusMessage;
 
     public Optional<String> deploymentStatusMessage() {
-        return this.deploymentStatusMessage == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatusMessage);
+        return Optional.ofNullable(this.deploymentStatusMessage);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="installTime")
-      private final @Nullable String installTime;
+    private @Nullable String installTime;
 
     public Optional<String> installTime() {
-        return this.installTime == null ? Optional.empty() : Optional.ofNullable(this.installTime);
+        return Optional.ofNullable(this.installTime);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="parameters")
-      private final @Nullable List<ArtifactParameterPropertiesResponse> parameters;
+    private @Nullable List<ArtifactParameterPropertiesResponse> parameters;
 
-    public List<ArtifactParameterPropertiesResponse> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<ArtifactParameterPropertiesResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -91,103 +91,84 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="vmExtensionStatusMessage")
-      private final @Nullable String vmExtensionStatusMessage;
+    private @Nullable String vmExtensionStatusMessage;
 
     public Optional<String> vmExtensionStatusMessage() {
-        return this.vmExtensionStatusMessage == null ? Optional.empty() : Optional.ofNullable(this.vmExtensionStatusMessage);
+        return Optional.ofNullable(this.vmExtensionStatusMessage);
     }
 
-    public ArtifactInstallPropertiesResponse(
-        @Nullable String artifactId,
-        @Nullable String artifactTitle,
-        @Nullable String deploymentStatusMessage,
-        @Nullable String installTime,
-        @Nullable List<ArtifactParameterPropertiesResponse> parameters,
-        @Nullable String status,
-        @Nullable String vmExtensionStatusMessage) {
-        this.artifactId = artifactId;
-        this.artifactTitle = artifactTitle;
-        this.deploymentStatusMessage = deploymentStatusMessage;
-        this.installTime = installTime;
-        this.parameters = parameters;
-        this.status = status;
-        this.vmExtensionStatusMessage = vmExtensionStatusMessage;
-    }
+    private ArtifactInstallPropertiesResponse() {}
 
-    private ArtifactInstallPropertiesResponse() {
-        this.artifactId = null;
-        this.artifactTitle = null;
-        this.deploymentStatusMessage = null;
-        this.installTime = null;
-        this.parameters = List.of();
-        this.status = null;
-        this.vmExtensionStatusMessage = null;
+    private ArtifactInstallPropertiesResponse(ArtifactInstallPropertiesResponse $) {
+        this.artifactId = $.artifactId;
+        this.artifactTitle = $.artifactTitle;
+        this.deploymentStatusMessage = $.deploymentStatusMessage;
+        this.installTime = $.installTime;
+        this.parameters = $.parameters;
+        this.status = $.status;
+        this.vmExtensionStatusMessage = $.vmExtensionStatusMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactInstallPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String artifactId;
-        private @Nullable String artifactTitle;
-        private @Nullable String deploymentStatusMessage;
-        private @Nullable String installTime;
-        private @Nullable List<ArtifactParameterPropertiesResponse> parameters;
-        private @Nullable String status;
-        private @Nullable String vmExtensionStatusMessage;
+        private ArtifactInstallPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactInstallPropertiesResponse();
         }
 
         public Builder(ArtifactInstallPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactId = defaults.artifactId;
-    	      this.artifactTitle = defaults.artifactTitle;
-    	      this.deploymentStatusMessage = defaults.deploymentStatusMessage;
-    	      this.installTime = defaults.installTime;
-    	      this.parameters = defaults.parameters;
-    	      this.status = defaults.status;
-    	      this.vmExtensionStatusMessage = defaults.vmExtensionStatusMessage;
+            $ = new ArtifactInstallPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactId(@Nullable String artifactId) {
-            this.artifactId = artifactId;
+            $.artifactId = artifactId;
             return this;
         }
+
         public Builder artifactTitle(@Nullable String artifactTitle) {
-            this.artifactTitle = artifactTitle;
+            $.artifactTitle = artifactTitle;
             return this;
         }
+
         public Builder deploymentStatusMessage(@Nullable String deploymentStatusMessage) {
-            this.deploymentStatusMessage = deploymentStatusMessage;
+            $.deploymentStatusMessage = deploymentStatusMessage;
             return this;
         }
+
         public Builder installTime(@Nullable String installTime) {
-            this.installTime = installTime;
+            $.installTime = installTime;
             return this;
         }
+
         public Builder parameters(@Nullable List<ArtifactParameterPropertiesResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(ArtifactParameterPropertiesResponse... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder vmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
-            this.vmExtensionStatusMessage = vmExtensionStatusMessage;
+            $.vmExtensionStatusMessage = vmExtensionStatusMessage;
             return this;
-        }        public ArtifactInstallPropertiesResponse build() {
-            return new ArtifactInstallPropertiesResponse(artifactId, artifactTitle, deploymentStatusMessage, installTime, parameters, status, vmExtensionStatusMessage);
+        }
+
+        public ArtifactInstallPropertiesResponse build() {
+            return $;
         }
     }
+
 }

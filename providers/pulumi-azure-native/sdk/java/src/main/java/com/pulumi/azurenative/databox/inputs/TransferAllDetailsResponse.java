@@ -25,7 +25,7 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataAccountType", required=true)
-      private final String dataAccountType;
+    private String dataAccountType;
 
     public String dataAccountType() {
         return this.dataAccountType;
@@ -36,10 +36,10 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="transferAllBlobs")
-      private final @Nullable Boolean transferAllBlobs;
+    private @Nullable Boolean transferAllBlobs;
 
     public Optional<Boolean> transferAllBlobs() {
-        return this.transferAllBlobs == null ? Optional.empty() : Optional.ofNullable(this.transferAllBlobs);
+        return Optional.ofNullable(this.transferAllBlobs);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="transferAllFiles")
-      private final @Nullable Boolean transferAllFiles;
+    private @Nullable Boolean transferAllFiles;
 
     public Optional<Boolean> transferAllFiles() {
-        return this.transferAllFiles == null ? Optional.empty() : Optional.ofNullable(this.transferAllFiles);
+        return Optional.ofNullable(this.transferAllFiles);
     }
 
-    public TransferAllDetailsResponse(
-        String dataAccountType,
-        @Nullable Boolean transferAllBlobs,
-        @Nullable Boolean transferAllFiles) {
-        this.dataAccountType = Codegen.stringProp("dataAccountType").arg(dataAccountType).def("StorageAccount").require();
-        this.transferAllBlobs = transferAllBlobs;
-        this.transferAllFiles = transferAllFiles;
-    }
+    private TransferAllDetailsResponse() {}
 
-    private TransferAllDetailsResponse() {
-        this.dataAccountType = null;
-        this.transferAllBlobs = null;
-        this.transferAllFiles = null;
+    private TransferAllDetailsResponse(TransferAllDetailsResponse $) {
+        this.dataAccountType = $.dataAccountType;
+        this.transferAllBlobs = $.transferAllBlobs;
+        this.transferAllFiles = $.transferAllFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferAllDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataAccountType;
-        private @Nullable Boolean transferAllBlobs;
-        private @Nullable Boolean transferAllFiles;
+        private TransferAllDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferAllDetailsResponse();
         }
 
         public Builder(TransferAllDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataAccountType = defaults.dataAccountType;
-    	      this.transferAllBlobs = defaults.transferAllBlobs;
-    	      this.transferAllFiles = defaults.transferAllFiles;
+            $ = new TransferAllDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataAccountType(String dataAccountType) {
-            this.dataAccountType = Objects.requireNonNull(dataAccountType);
+            $.dataAccountType = dataAccountType;
             return this;
         }
+
         public Builder transferAllBlobs(@Nullable Boolean transferAllBlobs) {
-            this.transferAllBlobs = transferAllBlobs;
+            $.transferAllBlobs = transferAllBlobs;
             return this;
         }
+
         public Builder transferAllFiles(@Nullable Boolean transferAllFiles) {
-            this.transferAllFiles = transferAllFiles;
+            $.transferAllFiles = transferAllFiles;
             return this;
-        }        public TransferAllDetailsResponse build() {
-            return new TransferAllDetailsResponse(dataAccountType, transferAllBlobs, transferAllFiles);
+        }
+
+        public TransferAllDetailsResponse build() {
+            $.dataAccountType = Codegen.stringProp("dataAccountType").arg($.dataAccountType).def("StorageAccount").require();
+            return $;
         }
     }
+
 }

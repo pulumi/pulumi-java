@@ -24,7 +24,7 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="boolValue", required=true)
-      private final Boolean boolValue;
+    private Boolean boolValue;
 
     public Boolean boolValue() {
         return this.boolValue;
@@ -35,7 +35,7 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="doubleValue", required=true)
-      private final Double doubleValue;
+    private Double doubleValue;
 
     public Double doubleValue() {
         return this.doubleValue;
@@ -46,7 +46,7 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="int64Value", required=true)
-      private final String int64Value;
+    private String int64Value;
 
     public String int64Value() {
         return this.int64Value;
@@ -57,7 +57,7 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="protoValue", required=true)
-      private final Map<String,String> protoValue;
+    private Map<String,String> protoValue;
 
     public Map<String,String> protoValue() {
         return this.protoValue;
@@ -68,82 +68,73 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="stringValue", required=true)
-      private final String stringValue;
+    private String stringValue;
 
     public String stringValue() {
         return this.stringValue;
     }
 
-    public GoogleCloudChannelV1ValueResponse(
-        Boolean boolValue,
-        Double doubleValue,
-        String int64Value,
-        Map<String,String> protoValue,
-        String stringValue) {
-        this.boolValue = Objects.requireNonNull(boolValue, "expected parameter 'boolValue' to be non-null");
-        this.doubleValue = Objects.requireNonNull(doubleValue, "expected parameter 'doubleValue' to be non-null");
-        this.int64Value = Objects.requireNonNull(int64Value, "expected parameter 'int64Value' to be non-null");
-        this.protoValue = Objects.requireNonNull(protoValue, "expected parameter 'protoValue' to be non-null");
-        this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
-    }
+    private GoogleCloudChannelV1ValueResponse() {}
 
-    private GoogleCloudChannelV1ValueResponse() {
-        this.boolValue = null;
-        this.doubleValue = null;
-        this.int64Value = null;
-        this.protoValue = Map.of();
-        this.stringValue = null;
+    private GoogleCloudChannelV1ValueResponse(GoogleCloudChannelV1ValueResponse $) {
+        this.boolValue = $.boolValue;
+        this.doubleValue = $.doubleValue;
+        this.int64Value = $.int64Value;
+        this.protoValue = $.protoValue;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1ValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean boolValue;
-        private Double doubleValue;
-        private String int64Value;
-        private Map<String,String> protoValue;
-        private String stringValue;
+        private GoogleCloudChannelV1ValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1ValueResponse();
         }
 
         public Builder(GoogleCloudChannelV1ValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boolValue = defaults.boolValue;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.int64Value = defaults.int64Value;
-    	      this.protoValue = defaults.protoValue;
-    	      this.stringValue = defaults.stringValue;
+            $ = new GoogleCloudChannelV1ValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder boolValue(Boolean boolValue) {
-            this.boolValue = Objects.requireNonNull(boolValue);
+            $.boolValue = boolValue;
             return this;
         }
+
         public Builder doubleValue(Double doubleValue) {
-            this.doubleValue = Objects.requireNonNull(doubleValue);
+            $.doubleValue = doubleValue;
             return this;
         }
+
         public Builder int64Value(String int64Value) {
-            this.int64Value = Objects.requireNonNull(int64Value);
+            $.int64Value = int64Value;
             return this;
         }
+
         public Builder protoValue(Map<String,String> protoValue) {
-            this.protoValue = Objects.requireNonNull(protoValue);
+            $.protoValue = protoValue;
             return this;
         }
+
         public Builder stringValue(String stringValue) {
-            this.stringValue = Objects.requireNonNull(stringValue);
+            $.stringValue = stringValue;
             return this;
-        }        public GoogleCloudChannelV1ValueResponse build() {
-            return new GoogleCloudChannelV1ValueResponse(boolValue, doubleValue, int64Value, protoValue, stringValue);
+        }
+
+        public GoogleCloudChannelV1ValueResponse build() {
+            $.boolValue = Objects.requireNonNull($.boolValue, "expected parameter 'boolValue' to be non-null");
+            $.doubleValue = Objects.requireNonNull($.doubleValue, "expected parameter 'doubleValue' to be non-null");
+            $.int64Value = Objects.requireNonNull($.int64Value, "expected parameter 'int64Value' to be non-null");
+            $.protoValue = Objects.requireNonNull($.protoValue, "expected parameter 'protoValue' to be non-null");
+            $.stringValue = Objects.requireNonNull($.stringValue, "expected parameter 'stringValue' to be non-null");
+            return $;
         }
     }
+
 }

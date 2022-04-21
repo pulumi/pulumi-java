@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destRange")
-      private final @Nullable Output<String> destRange;
+    private @Nullable Output<String> destRange;
 
-    public Output<String> destRange() {
-        return this.destRange == null ? Codegen.empty() : this.destRange;
+    public Optional<Output<String>> destRange() {
+        return Optional.ofNullable(this.destRange);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopGateway")
-      private final @Nullable Output<String> nextHopGateway;
+    private @Nullable Output<String> nextHopGateway;
 
-    public Output<String> nextHopGateway() {
-        return this.nextHopGateway == null ? Codegen.empty() : this.nextHopGateway;
+    public Optional<Output<String>> nextHopGateway() {
+        return Optional.ofNullable(this.nextHopGateway);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopIlb")
-      private final @Nullable Output<String> nextHopIlb;
+    private @Nullable Output<String> nextHopIlb;
 
-    public Output<String> nextHopIlb() {
-        return this.nextHopIlb == null ? Codegen.empty() : this.nextHopIlb;
+    public Optional<Output<String>> nextHopIlb() {
+        return Optional.ofNullable(this.nextHopIlb);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopInstance")
-      private final @Nullable Output<String> nextHopInstance;
+    private @Nullable Output<String> nextHopInstance;
 
-    public Output<String> nextHopInstance() {
-        return this.nextHopInstance == null ? Codegen.empty() : this.nextHopInstance;
+    public Optional<Output<String>> nextHopInstance() {
+        return Optional.ofNullable(this.nextHopInstance);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopInstanceZone")
-      private final @Nullable Output<String> nextHopInstanceZone;
+    private @Nullable Output<String> nextHopInstanceZone;
 
-    public Output<String> nextHopInstanceZone() {
-        return this.nextHopInstanceZone == null ? Codegen.empty() : this.nextHopInstanceZone;
+    public Optional<Output<String>> nextHopInstanceZone() {
+        return Optional.ofNullable(this.nextHopInstanceZone);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopIp")
-      private final @Nullable Output<String> nextHopIp;
+    private @Nullable Output<String> nextHopIp;
 
-    public Output<String> nextHopIp() {
-        return this.nextHopIp == null ? Codegen.empty() : this.nextHopIp;
+    public Optional<Output<String>> nextHopIp() {
+        return Optional.ofNullable(this.nextHopIp);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopNetwork")
-      private final @Nullable Output<String> nextHopNetwork;
+    private @Nullable Output<String> nextHopNetwork;
 
-    public Output<String> nextHopNetwork() {
-        return this.nextHopNetwork == null ? Codegen.empty() : this.nextHopNetwork;
+    public Optional<Output<String>> nextHopNetwork() {
+        return Optional.ofNullable(this.nextHopNetwork);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopVpnTunnel")
-      private final @Nullable Output<String> nextHopVpnTunnel;
+    private @Nullable Output<String> nextHopVpnTunnel;
 
-    public Output<String> nextHopVpnTunnel() {
-        return this.nextHopVpnTunnel == null ? Codegen.empty() : this.nextHopVpnTunnel;
+    public Optional<Output<String>> nextHopVpnTunnel() {
+        return Optional.ofNullable(this.nextHopVpnTunnel);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -215,235 +215,192 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RouteState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> destRange,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<String> nextHopGateway,
-        @Nullable Output<String> nextHopIlb,
-        @Nullable Output<String> nextHopInstance,
-        @Nullable Output<String> nextHopInstanceZone,
-        @Nullable Output<String> nextHopIp,
-        @Nullable Output<String> nextHopNetwork,
-        @Nullable Output<String> nextHopVpnTunnel,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<List<String>> tags) {
-        this.description = description;
-        this.destRange = destRange;
-        this.name = name;
-        this.network = network;
-        this.nextHopGateway = nextHopGateway;
-        this.nextHopIlb = nextHopIlb;
-        this.nextHopInstance = nextHopInstance;
-        this.nextHopInstanceZone = nextHopInstanceZone;
-        this.nextHopIp = nextHopIp;
-        this.nextHopNetwork = nextHopNetwork;
-        this.nextHopVpnTunnel = nextHopVpnTunnel;
-        this.priority = priority;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.tags = tags;
-    }
+    private RouteState() {}
 
-    private RouteState() {
-        this.description = Codegen.empty();
-        this.destRange = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.nextHopGateway = Codegen.empty();
-        this.nextHopIlb = Codegen.empty();
-        this.nextHopInstance = Codegen.empty();
-        this.nextHopInstanceZone = Codegen.empty();
-        this.nextHopIp = Codegen.empty();
-        this.nextHopNetwork = Codegen.empty();
-        this.nextHopVpnTunnel = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RouteState(RouteState $) {
+        this.description = $.description;
+        this.destRange = $.destRange;
+        this.name = $.name;
+        this.network = $.network;
+        this.nextHopGateway = $.nextHopGateway;
+        this.nextHopIlb = $.nextHopIlb;
+        this.nextHopInstance = $.nextHopInstance;
+        this.nextHopInstanceZone = $.nextHopInstanceZone;
+        this.nextHopIp = $.nextHopIp;
+        this.nextHopNetwork = $.nextHopNetwork;
+        this.nextHopVpnTunnel = $.nextHopVpnTunnel;
+        this.priority = $.priority;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> destRange;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> nextHopGateway;
-        private @Nullable Output<String> nextHopIlb;
-        private @Nullable Output<String> nextHopInstance;
-        private @Nullable Output<String> nextHopInstanceZone;
-        private @Nullable Output<String> nextHopIp;
-        private @Nullable Output<String> nextHopNetwork;
-        private @Nullable Output<String> nextHopVpnTunnel;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<List<String>> tags;
+        private RouteState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteState();
         }
 
         public Builder(RouteState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.destRange = defaults.destRange;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.nextHopGateway = defaults.nextHopGateway;
-    	      this.nextHopIlb = defaults.nextHopIlb;
-    	      this.nextHopInstance = defaults.nextHopInstance;
-    	      this.nextHopInstanceZone = defaults.nextHopInstanceZone;
-    	      this.nextHopIp = defaults.nextHopIp;
-    	      this.nextHopNetwork = defaults.nextHopNetwork;
-    	      this.nextHopVpnTunnel = defaults.nextHopVpnTunnel;
-    	      this.priority = defaults.priority;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.tags = defaults.tags;
+            $ = new RouteState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destRange(@Nullable Output<String> destRange) {
-            this.destRange = destRange;
+            $.destRange = destRange;
             return this;
         }
-        public Builder destRange(@Nullable String destRange) {
-            this.destRange = Codegen.ofNullable(destRange);
-            return this;
+
+        public Builder destRange(String destRange) {
+            return destRange(Output.of(destRange));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder nextHopGateway(@Nullable Output<String> nextHopGateway) {
-            this.nextHopGateway = nextHopGateway;
+            $.nextHopGateway = nextHopGateway;
             return this;
         }
-        public Builder nextHopGateway(@Nullable String nextHopGateway) {
-            this.nextHopGateway = Codegen.ofNullable(nextHopGateway);
-            return this;
+
+        public Builder nextHopGateway(String nextHopGateway) {
+            return nextHopGateway(Output.of(nextHopGateway));
         }
+
         public Builder nextHopIlb(@Nullable Output<String> nextHopIlb) {
-            this.nextHopIlb = nextHopIlb;
+            $.nextHopIlb = nextHopIlb;
             return this;
         }
-        public Builder nextHopIlb(@Nullable String nextHopIlb) {
-            this.nextHopIlb = Codegen.ofNullable(nextHopIlb);
-            return this;
+
+        public Builder nextHopIlb(String nextHopIlb) {
+            return nextHopIlb(Output.of(nextHopIlb));
         }
+
         public Builder nextHopInstance(@Nullable Output<String> nextHopInstance) {
-            this.nextHopInstance = nextHopInstance;
+            $.nextHopInstance = nextHopInstance;
             return this;
         }
-        public Builder nextHopInstance(@Nullable String nextHopInstance) {
-            this.nextHopInstance = Codegen.ofNullable(nextHopInstance);
-            return this;
+
+        public Builder nextHopInstance(String nextHopInstance) {
+            return nextHopInstance(Output.of(nextHopInstance));
         }
+
         public Builder nextHopInstanceZone(@Nullable Output<String> nextHopInstanceZone) {
-            this.nextHopInstanceZone = nextHopInstanceZone;
+            $.nextHopInstanceZone = nextHopInstanceZone;
             return this;
         }
-        public Builder nextHopInstanceZone(@Nullable String nextHopInstanceZone) {
-            this.nextHopInstanceZone = Codegen.ofNullable(nextHopInstanceZone);
-            return this;
+
+        public Builder nextHopInstanceZone(String nextHopInstanceZone) {
+            return nextHopInstanceZone(Output.of(nextHopInstanceZone));
         }
+
         public Builder nextHopIp(@Nullable Output<String> nextHopIp) {
-            this.nextHopIp = nextHopIp;
+            $.nextHopIp = nextHopIp;
             return this;
         }
-        public Builder nextHopIp(@Nullable String nextHopIp) {
-            this.nextHopIp = Codegen.ofNullable(nextHopIp);
-            return this;
+
+        public Builder nextHopIp(String nextHopIp) {
+            return nextHopIp(Output.of(nextHopIp));
         }
+
         public Builder nextHopNetwork(@Nullable Output<String> nextHopNetwork) {
-            this.nextHopNetwork = nextHopNetwork;
+            $.nextHopNetwork = nextHopNetwork;
             return this;
         }
-        public Builder nextHopNetwork(@Nullable String nextHopNetwork) {
-            this.nextHopNetwork = Codegen.ofNullable(nextHopNetwork);
-            return this;
+
+        public Builder nextHopNetwork(String nextHopNetwork) {
+            return nextHopNetwork(Output.of(nextHopNetwork));
         }
+
         public Builder nextHopVpnTunnel(@Nullable Output<String> nextHopVpnTunnel) {
-            this.nextHopVpnTunnel = nextHopVpnTunnel;
+            $.nextHopVpnTunnel = nextHopVpnTunnel;
             return this;
         }
-        public Builder nextHopVpnTunnel(@Nullable String nextHopVpnTunnel) {
-            this.nextHopVpnTunnel = Codegen.ofNullable(nextHopVpnTunnel);
-            return this;
+
+        public Builder nextHopVpnTunnel(String nextHopVpnTunnel) {
+            return nextHopVpnTunnel(Output.of(nextHopVpnTunnel));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
-        }        public RouteState build() {
-            return new RouteState(description, destRange, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopInstanceZone, nextHopIp, nextHopNetwork, nextHopVpnTunnel, priority, project, selfLink, tags);
+        }
+
+        public RouteState build() {
+            return $;
         }
     }
+
 }

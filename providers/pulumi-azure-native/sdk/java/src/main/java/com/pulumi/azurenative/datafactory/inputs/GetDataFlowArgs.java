@@ -17,7 +17,7 @@ public final class GetDataFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataFlowName", required=true)
-      private final String dataFlowName;
+    private String dataFlowName;
 
     public String dataFlowName() {
         return this.dataFlowName;
@@ -28,7 +28,7 @@ public final class GetDataFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="factoryName", required=true)
-      private final String factoryName;
+    private String factoryName;
 
     public String factoryName() {
         return this.factoryName;
@@ -39,64 +39,59 @@ public final class GetDataFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDataFlowArgs(
-        String dataFlowName,
-        String factoryName,
-        String resourceGroupName) {
-        this.dataFlowName = Objects.requireNonNull(dataFlowName, "expected parameter 'dataFlowName' to be non-null");
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDataFlowArgs() {}
 
-    private GetDataFlowArgs() {
-        this.dataFlowName = null;
-        this.factoryName = null;
-        this.resourceGroupName = null;
+    private GetDataFlowArgs(GetDataFlowArgs $) {
+        this.dataFlowName = $.dataFlowName;
+        this.factoryName = $.factoryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataFlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataFlowName;
-        private String factoryName;
-        private String resourceGroupName;
+        private GetDataFlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataFlowArgs();
         }
 
         public Builder(GetDataFlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataFlowName = defaults.dataFlowName;
-    	      this.factoryName = defaults.factoryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDataFlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataFlowName(String dataFlowName) {
-            this.dataFlowName = Objects.requireNonNull(dataFlowName);
+            $.dataFlowName = dataFlowName;
             return this;
         }
+
         public Builder factoryName(String factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDataFlowArgs build() {
-            return new GetDataFlowArgs(dataFlowName, factoryName, resourceGroupName);
+        }
+
+        public GetDataFlowArgs build() {
+            $.dataFlowName = Objects.requireNonNull($.dataFlowName, "expected parameter 'dataFlowName' to be non-null");
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

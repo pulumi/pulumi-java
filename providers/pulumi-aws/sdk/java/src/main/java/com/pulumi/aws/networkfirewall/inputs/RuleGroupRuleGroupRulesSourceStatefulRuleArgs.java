@@ -7,7 +7,6 @@ import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatef
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +21,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends com.pul
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -33,7 +32,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends com.pul
      * 
      */
     @Import(name="header", required=true)
-      private final Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header;
+    private Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header;
 
     public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header() {
         return this.header;
@@ -44,79 +43,75 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends com.pul
      * 
      */
     @Import(name="ruleOptions", required=true)
-      private final Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions;
+    private Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions() {
         return this.ruleOptions;
     }
 
-    public RuleGroupRuleGroupRulesSourceStatefulRuleArgs(
-        Output<String> action,
-        Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header,
-        Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.header = Objects.requireNonNull(header, "expected parameter 'header' to be non-null");
-        this.ruleOptions = Objects.requireNonNull(ruleOptions, "expected parameter 'ruleOptions' to be non-null");
-    }
+    private RuleGroupRuleGroupRulesSourceStatefulRuleArgs() {}
 
-    private RuleGroupRuleGroupRulesSourceStatefulRuleArgs() {
-        this.action = Codegen.empty();
-        this.header = Codegen.empty();
-        this.ruleOptions = Codegen.empty();
+    private RuleGroupRuleGroupRulesSourceStatefulRuleArgs(RuleGroupRuleGroupRulesSourceStatefulRuleArgs $) {
+        this.action = $.action;
+        this.header = $.header;
+        this.ruleOptions = $.ruleOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRulesSourceStatefulRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header;
-        private Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions;
+        private RuleGroupRuleGroupRulesSourceStatefulRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRulesSourceStatefulRuleArgs();
         }
 
         public Builder(RuleGroupRuleGroupRulesSourceStatefulRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.header = defaults.header;
-    	      this.ruleOptions = defaults.ruleOptions;
+            $ = new RuleGroupRuleGroupRulesSourceStatefulRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder header(Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header) {
-            this.header = Objects.requireNonNull(header);
+            $.header = header;
             return this;
         }
+
         public Builder header(RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs header) {
-            this.header = Output.of(Objects.requireNonNull(header));
-            return this;
+            return header(Output.of(header));
         }
+
         public Builder ruleOptions(Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions) {
-            this.ruleOptions = Objects.requireNonNull(ruleOptions);
+            $.ruleOptions = ruleOptions;
             return this;
         }
+
         public Builder ruleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs> ruleOptions) {
-            this.ruleOptions = Output.of(Objects.requireNonNull(ruleOptions));
-            return this;
+            return ruleOptions(Output.of(ruleOptions));
         }
+
         public Builder ruleOptions(RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs... ruleOptions) {
             return ruleOptions(List.of(ruleOptions));
-        }        public RuleGroupRuleGroupRulesSourceStatefulRuleArgs build() {
-            return new RuleGroupRuleGroupRulesSourceStatefulRuleArgs(action, header, ruleOptions);
+        }
+
+        public RuleGroupRuleGroupRulesSourceStatefulRuleArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.header = Objects.requireNonNull($.header, "expected parameter 'header' to be non-null");
+            $.ruleOptions = Objects.requireNonNull($.ruleOptions, "expected parameter 'ruleOptions' to be non-null");
+            return $;
         }
     }
+
 }

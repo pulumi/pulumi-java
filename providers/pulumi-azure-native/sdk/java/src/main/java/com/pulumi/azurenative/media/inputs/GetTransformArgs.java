@@ -17,7 +17,7 @@ public final class GetTransformArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetTransformArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetTransformArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transformName", required=true)
-      private final String transformName;
+    private String transformName;
 
     public String transformName() {
         return this.transformName;
     }
 
-    public GetTransformArgs(
-        String accountName,
-        String resourceGroupName,
-        String transformName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.transformName = Objects.requireNonNull(transformName, "expected parameter 'transformName' to be non-null");
-    }
+    private GetTransformArgs() {}
 
-    private GetTransformArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.transformName = null;
+    private GetTransformArgs(GetTransformArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.transformName = $.transformName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransformArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String transformName;
+        private GetTransformArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransformArgs();
         }
 
         public Builder(GetTransformArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.transformName = defaults.transformName;
+            $ = new GetTransformArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder transformName(String transformName) {
-            this.transformName = Objects.requireNonNull(transformName);
+            $.transformName = transformName;
             return this;
-        }        public GetTransformArgs build() {
-            return new GetTransformArgs(accountName, resourceGroupName, transformName);
+        }
+
+        public GetTransformArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.transformName = Objects.requireNonNull($.transformName, "expected parameter 'transformName' to be non-null");
+            return $;
         }
     }
+
 }

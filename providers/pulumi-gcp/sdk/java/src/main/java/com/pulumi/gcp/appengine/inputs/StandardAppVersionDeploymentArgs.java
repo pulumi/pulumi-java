@@ -5,11 +5,11 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentFileArgs;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentZipArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class StandardAppVersionDeploymentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="files")
-      private final @Nullable Output<List<StandardAppVersionDeploymentFileArgs>> files;
+    private @Nullable Output<List<StandardAppVersionDeploymentFileArgs>> files;
 
-    public Output<List<StandardAppVersionDeploymentFileArgs>> files() {
-        return this.files == null ? Codegen.empty() : this.files;
+    public Optional<Output<List<StandardAppVersionDeploymentFileArgs>>> files() {
+        return Optional.ofNullable(this.files);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class StandardAppVersionDeploymentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="zip")
-      private final @Nullable Output<StandardAppVersionDeploymentZipArgs> zip;
+    private @Nullable Output<StandardAppVersionDeploymentZipArgs> zip;
 
-    public Output<StandardAppVersionDeploymentZipArgs> zip() {
-        return this.zip == null ? Codegen.empty() : this.zip;
+    public Optional<Output<StandardAppVersionDeploymentZipArgs>> zip() {
+        return Optional.ofNullable(this.zip);
     }
 
-    public StandardAppVersionDeploymentArgs(
-        @Nullable Output<List<StandardAppVersionDeploymentFileArgs>> files,
-        @Nullable Output<StandardAppVersionDeploymentZipArgs> zip) {
-        this.files = files;
-        this.zip = zip;
-    }
+    private StandardAppVersionDeploymentArgs() {}
 
-    private StandardAppVersionDeploymentArgs() {
-        this.files = Codegen.empty();
-        this.zip = Codegen.empty();
+    private StandardAppVersionDeploymentArgs(StandardAppVersionDeploymentArgs $) {
+        this.files = $.files;
+        this.zip = $.zip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardAppVersionDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<StandardAppVersionDeploymentFileArgs>> files;
-        private @Nullable Output<StandardAppVersionDeploymentZipArgs> zip;
+        private StandardAppVersionDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardAppVersionDeploymentArgs();
         }
 
         public Builder(StandardAppVersionDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.files = defaults.files;
-    	      this.zip = defaults.zip;
+            $ = new StandardAppVersionDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder files(@Nullable Output<List<StandardAppVersionDeploymentFileArgs>> files) {
-            this.files = files;
+            $.files = files;
             return this;
         }
-        public Builder files(@Nullable List<StandardAppVersionDeploymentFileArgs> files) {
-            this.files = Codegen.ofNullable(files);
-            return this;
+
+        public Builder files(List<StandardAppVersionDeploymentFileArgs> files) {
+            return files(Output.of(files));
         }
+
         public Builder files(StandardAppVersionDeploymentFileArgs... files) {
             return files(List.of(files));
         }
+
         public Builder zip(@Nullable Output<StandardAppVersionDeploymentZipArgs> zip) {
-            this.zip = zip;
+            $.zip = zip;
             return this;
         }
-        public Builder zip(@Nullable StandardAppVersionDeploymentZipArgs zip) {
-            this.zip = Codegen.ofNullable(zip);
-            return this;
-        }        public StandardAppVersionDeploymentArgs build() {
-            return new StandardAppVersionDeploymentArgs(files, zip);
+
+        public Builder zip(StandardAppVersionDeploymentZipArgs zip) {
+            return zip(Output.of(zip));
+        }
+
+        public StandardAppVersionDeploymentArgs build() {
+            return $;
         }
     }
+
 }

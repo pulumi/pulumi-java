@@ -5,10 +5,10 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FieldDefinitionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="isEncrypted")
-      private final @Nullable Output<Boolean> isEncrypted;
+    private @Nullable Output<Boolean> isEncrypted;
 
-    public Output<Boolean> isEncrypted() {
-        return this.isEncrypted == null ? Codegen.empty() : this.isEncrypted;
+    public Optional<Output<Boolean>> isEncrypted() {
+        return Optional.ofNullable(this.isEncrypted);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FieldDefinitionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="isOptional")
-      private final @Nullable Output<Boolean> isOptional;
+    private @Nullable Output<Boolean> isOptional;
 
-    public Output<Boolean> isOptional() {
-        return this.isOptional == null ? Codegen.empty() : this.isOptional;
+    public Optional<Output<Boolean>> isOptional() {
+        return Optional.ofNullable(this.isOptional);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class FieldDefinitionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public FieldDefinitionArgs(
-        @Nullable Output<Boolean> isEncrypted,
-        @Nullable Output<Boolean> isOptional,
-        Output<String> type) {
-        this.isEncrypted = isEncrypted;
-        this.isOptional = isOptional;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FieldDefinitionArgs() {}
 
-    private FieldDefinitionArgs() {
-        this.isEncrypted = Codegen.empty();
-        this.isOptional = Codegen.empty();
-        this.type = Codegen.empty();
+    private FieldDefinitionArgs(FieldDefinitionArgs $) {
+        this.isEncrypted = $.isEncrypted;
+        this.isOptional = $.isOptional;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isEncrypted;
-        private @Nullable Output<Boolean> isOptional;
-        private Output<String> type;
+        private FieldDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldDefinitionArgs();
         }
 
         public Builder(FieldDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEncrypted = defaults.isEncrypted;
-    	      this.isOptional = defaults.isOptional;
-    	      this.type = defaults.type;
+            $ = new FieldDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
-            this.isEncrypted = isEncrypted;
+            $.isEncrypted = isEncrypted;
             return this;
         }
-        public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = Codegen.ofNullable(isEncrypted);
-            return this;
+
+        public Builder isEncrypted(Boolean isEncrypted) {
+            return isEncrypted(Output.of(isEncrypted));
         }
+
         public Builder isOptional(@Nullable Output<Boolean> isOptional) {
-            this.isOptional = isOptional;
+            $.isOptional = isOptional;
             return this;
         }
-        public Builder isOptional(@Nullable Boolean isOptional) {
-            this.isOptional = Codegen.ofNullable(isOptional);
-            return this;
+
+        public Builder isOptional(Boolean isOptional) {
+            return isOptional(Output.of(isOptional));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public FieldDefinitionArgs build() {
-            return new FieldDefinitionArgs(isEncrypted, isOptional, type);
+            return type(Output.of(type));
+        }
+
+        public FieldDefinitionArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

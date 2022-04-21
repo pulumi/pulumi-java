@@ -37,7 +37,7 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterDefinition", required=true)
-      private final ClusterDefinitionResponse clusterDefinition;
+    private ClusterDefinitionResponse clusterDefinition;
 
     public ClusterDefinitionResponse clusterDefinition() {
         return this.clusterDefinition;
@@ -48,10 +48,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterHdpVersion")
-      private final @Nullable String clusterHdpVersion;
+    private @Nullable String clusterHdpVersion;
 
     public Optional<String> clusterHdpVersion() {
-        return this.clusterHdpVersion == null ? Optional.empty() : Optional.ofNullable(this.clusterHdpVersion);
+        return Optional.ofNullable(this.clusterHdpVersion);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable String clusterId;
+    private @Nullable String clusterId;
 
     public Optional<String> clusterId() {
-        return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterState")
-      private final @Nullable String clusterState;
+    private @Nullable String clusterState;
 
     public Optional<String> clusterState() {
-        return this.clusterState == null ? Optional.empty() : Optional.ofNullable(this.clusterState);
+        return Optional.ofNullable(this.clusterState);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterVersion")
-      private final @Nullable String clusterVersion;
+    private @Nullable String clusterVersion;
 
     public Optional<String> clusterVersion() {
-        return this.clusterVersion == null ? Optional.empty() : Optional.ofNullable(this.clusterVersion);
+        return Optional.ofNullable(this.clusterVersion);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="computeIsolationProperties")
-      private final @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties;
+    private @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties;
 
     public Optional<ComputeIsolationPropertiesResponse> computeIsolationProperties() {
-        return this.computeIsolationProperties == null ? Optional.empty() : Optional.ofNullable(this.computeIsolationProperties);
+        return Optional.ofNullable(this.computeIsolationProperties);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="computeProfile")
-      private final @Nullable ComputeProfileResponse computeProfile;
+    private @Nullable ComputeProfileResponse computeProfile;
 
     public Optional<ComputeProfileResponse> computeProfile() {
-        return this.computeProfile == null ? Optional.empty() : Optional.ofNullable(this.computeProfile);
+        return Optional.ofNullable(this.computeProfile);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="connectivityEndpoints")
-      private final @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints;
+    private @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints;
 
-    public List<ConnectivityEndpointResponse> connectivityEndpoints() {
-        return this.connectivityEndpoints == null ? List.of() : this.connectivityEndpoints;
+    public Optional<List<ConnectivityEndpointResponse>> connectivityEndpoints() {
+        return Optional.ofNullable(this.connectivityEndpoints);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable String createdDate;
+    private @Nullable String createdDate;
 
     public Optional<String> createdDate() {
-        return this.createdDate == null ? Optional.empty() : Optional.ofNullable(this.createdDate);
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="diskEncryptionProperties")
-      private final @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties;
+    private @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties;
 
     public Optional<DiskEncryptionPropertiesResponse> diskEncryptionProperties() {
-        return this.diskEncryptionProperties == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionProperties);
+        return Optional.ofNullable(this.diskEncryptionProperties);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="encryptionInTransitProperties")
-      private final @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties;
+    private @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties;
 
     public Optional<EncryptionInTransitPropertiesResponse> encryptionInTransitProperties() {
-        return this.encryptionInTransitProperties == null ? Optional.empty() : Optional.ofNullable(this.encryptionInTransitProperties);
+        return Optional.ofNullable(this.encryptionInTransitProperties);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="errors")
-      private final @Nullable List<ErrorsResponse> errors;
+    private @Nullable List<ErrorsResponse> errors;
 
-    public List<ErrorsResponse> errors() {
-        return this.errors == null ? List.of() : this.errors;
+    public Optional<List<ErrorsResponse>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="excludedServicesConfig")
-      private final @Nullable ExcludedServicesConfigResponse excludedServicesConfig;
+    private @Nullable ExcludedServicesConfigResponse excludedServicesConfig;
 
     public Optional<ExcludedServicesConfigResponse> excludedServicesConfig() {
-        return this.excludedServicesConfig == null ? Optional.empty() : Optional.ofNullable(this.excludedServicesConfig);
+        return Optional.ofNullable(this.excludedServicesConfig);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="kafkaRestProperties")
-      private final @Nullable KafkaRestPropertiesResponse kafkaRestProperties;
+    private @Nullable KafkaRestPropertiesResponse kafkaRestProperties;
 
     public Optional<KafkaRestPropertiesResponse> kafkaRestProperties() {
-        return this.kafkaRestProperties == null ? Optional.empty() : Optional.ofNullable(this.kafkaRestProperties);
+        return Optional.ofNullable(this.kafkaRestProperties);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="minSupportedTlsVersion")
-      private final @Nullable String minSupportedTlsVersion;
+    private @Nullable String minSupportedTlsVersion;
 
     public Optional<String> minSupportedTlsVersion() {
-        return this.minSupportedTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minSupportedTlsVersion);
+        return Optional.ofNullable(this.minSupportedTlsVersion);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="networkProperties")
-      private final @Nullable NetworkPropertiesResponse networkProperties;
+    private @Nullable NetworkPropertiesResponse networkProperties;
 
     public Optional<NetworkPropertiesResponse> networkProperties() {
-        return this.networkProperties == null ? Optional.empty() : Optional.ofNullable(this.networkProperties);
+        return Optional.ofNullable(this.networkProperties);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -224,10 +224,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -235,10 +235,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="quotaInfo")
-      private final @Nullable QuotaInfoResponse quotaInfo;
+    private @Nullable QuotaInfoResponse quotaInfo;
 
     public Optional<QuotaInfoResponse> quotaInfo() {
-        return this.quotaInfo == null ? Optional.empty() : Optional.ofNullable(this.quotaInfo);
+        return Optional.ofNullable(this.quotaInfo);
     }
 
     /**
@@ -246,10 +246,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="securityProfile")
-      private final @Nullable SecurityProfileResponse securityProfile;
+    private @Nullable SecurityProfileResponse securityProfile;
 
     public Optional<SecurityProfileResponse> securityProfile() {
-        return this.securityProfile == null ? Optional.empty() : Optional.ofNullable(this.securityProfile);
+        return Optional.ofNullable(this.securityProfile);
     }
 
     /**
@@ -257,10 +257,10 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable StorageProfileResponse storageProfile;
+    private @Nullable StorageProfileResponse storageProfile;
 
     public Optional<StorageProfileResponse> storageProfile() {
-        return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -268,241 +268,179 @@ public final class ClusterGetPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public ClusterGetPropertiesResponse(
-        ClusterDefinitionResponse clusterDefinition,
-        @Nullable String clusterHdpVersion,
-        @Nullable String clusterId,
-        @Nullable String clusterState,
-        @Nullable String clusterVersion,
-        @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties,
-        @Nullable ComputeProfileResponse computeProfile,
-        @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints,
-        @Nullable String createdDate,
-        @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties,
-        @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties,
-        @Nullable List<ErrorsResponse> errors,
-        @Nullable ExcludedServicesConfigResponse excludedServicesConfig,
-        @Nullable KafkaRestPropertiesResponse kafkaRestProperties,
-        @Nullable String minSupportedTlsVersion,
-        @Nullable NetworkPropertiesResponse networkProperties,
-        @Nullable String osType,
-        @Nullable String provisioningState,
-        @Nullable QuotaInfoResponse quotaInfo,
-        @Nullable SecurityProfileResponse securityProfile,
-        @Nullable StorageProfileResponse storageProfile,
-        @Nullable String tier) {
-        this.clusterDefinition = Objects.requireNonNull(clusterDefinition, "expected parameter 'clusterDefinition' to be non-null");
-        this.clusterHdpVersion = clusterHdpVersion;
-        this.clusterId = clusterId;
-        this.clusterState = clusterState;
-        this.clusterVersion = clusterVersion;
-        this.computeIsolationProperties = computeIsolationProperties;
-        this.computeProfile = computeProfile;
-        this.connectivityEndpoints = connectivityEndpoints;
-        this.createdDate = createdDate;
-        this.diskEncryptionProperties = diskEncryptionProperties;
-        this.encryptionInTransitProperties = encryptionInTransitProperties;
-        this.errors = errors;
-        this.excludedServicesConfig = excludedServicesConfig;
-        this.kafkaRestProperties = kafkaRestProperties;
-        this.minSupportedTlsVersion = minSupportedTlsVersion;
-        this.networkProperties = networkProperties;
-        this.osType = osType;
-        this.provisioningState = provisioningState;
-        this.quotaInfo = quotaInfo;
-        this.securityProfile = securityProfile;
-        this.storageProfile = storageProfile;
-        this.tier = tier;
-    }
+    private ClusterGetPropertiesResponse() {}
 
-    private ClusterGetPropertiesResponse() {
-        this.clusterDefinition = null;
-        this.clusterHdpVersion = null;
-        this.clusterId = null;
-        this.clusterState = null;
-        this.clusterVersion = null;
-        this.computeIsolationProperties = null;
-        this.computeProfile = null;
-        this.connectivityEndpoints = List.of();
-        this.createdDate = null;
-        this.diskEncryptionProperties = null;
-        this.encryptionInTransitProperties = null;
-        this.errors = List.of();
-        this.excludedServicesConfig = null;
-        this.kafkaRestProperties = null;
-        this.minSupportedTlsVersion = null;
-        this.networkProperties = null;
-        this.osType = null;
-        this.provisioningState = null;
-        this.quotaInfo = null;
-        this.securityProfile = null;
-        this.storageProfile = null;
-        this.tier = null;
+    private ClusterGetPropertiesResponse(ClusterGetPropertiesResponse $) {
+        this.clusterDefinition = $.clusterDefinition;
+        this.clusterHdpVersion = $.clusterHdpVersion;
+        this.clusterId = $.clusterId;
+        this.clusterState = $.clusterState;
+        this.clusterVersion = $.clusterVersion;
+        this.computeIsolationProperties = $.computeIsolationProperties;
+        this.computeProfile = $.computeProfile;
+        this.connectivityEndpoints = $.connectivityEndpoints;
+        this.createdDate = $.createdDate;
+        this.diskEncryptionProperties = $.diskEncryptionProperties;
+        this.encryptionInTransitProperties = $.encryptionInTransitProperties;
+        this.errors = $.errors;
+        this.excludedServicesConfig = $.excludedServicesConfig;
+        this.kafkaRestProperties = $.kafkaRestProperties;
+        this.minSupportedTlsVersion = $.minSupportedTlsVersion;
+        this.networkProperties = $.networkProperties;
+        this.osType = $.osType;
+        this.provisioningState = $.provisioningState;
+        this.quotaInfo = $.quotaInfo;
+        this.securityProfile = $.securityProfile;
+        this.storageProfile = $.storageProfile;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterGetPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ClusterDefinitionResponse clusterDefinition;
-        private @Nullable String clusterHdpVersion;
-        private @Nullable String clusterId;
-        private @Nullable String clusterState;
-        private @Nullable String clusterVersion;
-        private @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties;
-        private @Nullable ComputeProfileResponse computeProfile;
-        private @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints;
-        private @Nullable String createdDate;
-        private @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties;
-        private @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties;
-        private @Nullable List<ErrorsResponse> errors;
-        private @Nullable ExcludedServicesConfigResponse excludedServicesConfig;
-        private @Nullable KafkaRestPropertiesResponse kafkaRestProperties;
-        private @Nullable String minSupportedTlsVersion;
-        private @Nullable NetworkPropertiesResponse networkProperties;
-        private @Nullable String osType;
-        private @Nullable String provisioningState;
-        private @Nullable QuotaInfoResponse quotaInfo;
-        private @Nullable SecurityProfileResponse securityProfile;
-        private @Nullable StorageProfileResponse storageProfile;
-        private @Nullable String tier;
+        private ClusterGetPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterGetPropertiesResponse();
         }
 
         public Builder(ClusterGetPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterDefinition = defaults.clusterDefinition;
-    	      this.clusterHdpVersion = defaults.clusterHdpVersion;
-    	      this.clusterId = defaults.clusterId;
-    	      this.clusterState = defaults.clusterState;
-    	      this.clusterVersion = defaults.clusterVersion;
-    	      this.computeIsolationProperties = defaults.computeIsolationProperties;
-    	      this.computeProfile = defaults.computeProfile;
-    	      this.connectivityEndpoints = defaults.connectivityEndpoints;
-    	      this.createdDate = defaults.createdDate;
-    	      this.diskEncryptionProperties = defaults.diskEncryptionProperties;
-    	      this.encryptionInTransitProperties = defaults.encryptionInTransitProperties;
-    	      this.errors = defaults.errors;
-    	      this.excludedServicesConfig = defaults.excludedServicesConfig;
-    	      this.kafkaRestProperties = defaults.kafkaRestProperties;
-    	      this.minSupportedTlsVersion = defaults.minSupportedTlsVersion;
-    	      this.networkProperties = defaults.networkProperties;
-    	      this.osType = defaults.osType;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.quotaInfo = defaults.quotaInfo;
-    	      this.securityProfile = defaults.securityProfile;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.tier = defaults.tier;
+            $ = new ClusterGetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterDefinition(ClusterDefinitionResponse clusterDefinition) {
-            this.clusterDefinition = Objects.requireNonNull(clusterDefinition);
+            $.clusterDefinition = clusterDefinition;
             return this;
         }
+
         public Builder clusterHdpVersion(@Nullable String clusterHdpVersion) {
-            this.clusterHdpVersion = clusterHdpVersion;
+            $.clusterHdpVersion = clusterHdpVersion;
             return this;
         }
+
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder clusterState(@Nullable String clusterState) {
-            this.clusterState = clusterState;
+            $.clusterState = clusterState;
             return this;
         }
+
         public Builder clusterVersion(@Nullable String clusterVersion) {
-            this.clusterVersion = clusterVersion;
+            $.clusterVersion = clusterVersion;
             return this;
         }
+
         public Builder computeIsolationProperties(@Nullable ComputeIsolationPropertiesResponse computeIsolationProperties) {
-            this.computeIsolationProperties = computeIsolationProperties;
+            $.computeIsolationProperties = computeIsolationProperties;
             return this;
         }
+
         public Builder computeProfile(@Nullable ComputeProfileResponse computeProfile) {
-            this.computeProfile = computeProfile;
+            $.computeProfile = computeProfile;
             return this;
         }
+
         public Builder connectivityEndpoints(@Nullable List<ConnectivityEndpointResponse> connectivityEndpoints) {
-            this.connectivityEndpoints = connectivityEndpoints;
+            $.connectivityEndpoints = connectivityEndpoints;
             return this;
         }
+
         public Builder connectivityEndpoints(ConnectivityEndpointResponse... connectivityEndpoints) {
             return connectivityEndpoints(List.of(connectivityEndpoints));
         }
+
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
+
         public Builder diskEncryptionProperties(@Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties) {
-            this.diskEncryptionProperties = diskEncryptionProperties;
+            $.diskEncryptionProperties = diskEncryptionProperties;
             return this;
         }
+
         public Builder encryptionInTransitProperties(@Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties) {
-            this.encryptionInTransitProperties = encryptionInTransitProperties;
+            $.encryptionInTransitProperties = encryptionInTransitProperties;
             return this;
         }
+
         public Builder errors(@Nullable List<ErrorsResponse> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ErrorsResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder excludedServicesConfig(@Nullable ExcludedServicesConfigResponse excludedServicesConfig) {
-            this.excludedServicesConfig = excludedServicesConfig;
+            $.excludedServicesConfig = excludedServicesConfig;
             return this;
         }
+
         public Builder kafkaRestProperties(@Nullable KafkaRestPropertiesResponse kafkaRestProperties) {
-            this.kafkaRestProperties = kafkaRestProperties;
+            $.kafkaRestProperties = kafkaRestProperties;
             return this;
         }
+
         public Builder minSupportedTlsVersion(@Nullable String minSupportedTlsVersion) {
-            this.minSupportedTlsVersion = minSupportedTlsVersion;
+            $.minSupportedTlsVersion = minSupportedTlsVersion;
             return this;
         }
+
         public Builder networkProperties(@Nullable NetworkPropertiesResponse networkProperties) {
-            this.networkProperties = networkProperties;
+            $.networkProperties = networkProperties;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder quotaInfo(@Nullable QuotaInfoResponse quotaInfo) {
-            this.quotaInfo = quotaInfo;
+            $.quotaInfo = quotaInfo;
             return this;
         }
+
         public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
-            this.securityProfile = securityProfile;
+            $.securityProfile = securityProfile;
             return this;
         }
+
         public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public ClusterGetPropertiesResponse build() {
-            return new ClusterGetPropertiesResponse(clusterDefinition, clusterHdpVersion, clusterId, clusterState, clusterVersion, computeIsolationProperties, computeProfile, connectivityEndpoints, createdDate, diskEncryptionProperties, encryptionInTransitProperties, errors, excludedServicesConfig, kafkaRestProperties, minSupportedTlsVersion, networkProperties, osType, provisioningState, quotaInfo, securityProfile, storageProfile, tier);
+        }
+
+        public ClusterGetPropertiesResponse build() {
+            $.clusterDefinition = Objects.requireNonNull($.clusterDefinition, "expected parameter 'clusterDefinition' to be non-null");
+            return $;
         }
     }
+
 }

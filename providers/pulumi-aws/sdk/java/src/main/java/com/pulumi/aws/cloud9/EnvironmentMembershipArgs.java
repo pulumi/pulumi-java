@@ -5,7 +5,6 @@ package com.pulumi.aws.cloud9;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class EnvironmentMembershipArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -30,7 +29,7 @@ public final class EnvironmentMembershipArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="permissions", required=true)
-      private final Output<String> permissions;
+    private Output<String> permissions;
 
     public Output<String> permissions() {
         return this.permissions;
@@ -41,76 +40,71 @@ public final class EnvironmentMembershipArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="userArn", required=true)
-      private final Output<String> userArn;
+    private Output<String> userArn;
 
     public Output<String> userArn() {
         return this.userArn;
     }
 
-    public EnvironmentMembershipArgs(
-        Output<String> environmentId,
-        Output<String> permissions,
-        Output<String> userArn) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.userArn = Objects.requireNonNull(userArn, "expected parameter 'userArn' to be non-null");
-    }
+    private EnvironmentMembershipArgs() {}
 
-    private EnvironmentMembershipArgs() {
-        this.environmentId = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.userArn = Codegen.empty();
+    private EnvironmentMembershipArgs(EnvironmentMembershipArgs $) {
+        this.environmentId = $.environmentId;
+        this.permissions = $.permissions;
+        this.userArn = $.userArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentMembershipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> environmentId;
-        private Output<String> permissions;
-        private Output<String> userArn;
+        private EnvironmentMembershipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentMembershipArgs();
         }
 
         public Builder(EnvironmentMembershipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.permissions = defaults.permissions;
-    	      this.userArn = defaults.userArn;
+            $ = new EnvironmentMembershipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder permissions(Output<String> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder permissions(String permissions) {
-            this.permissions = Output.of(Objects.requireNonNull(permissions));
-            return this;
+            return permissions(Output.of(permissions));
         }
+
         public Builder userArn(Output<String> userArn) {
-            this.userArn = Objects.requireNonNull(userArn);
+            $.userArn = userArn;
             return this;
         }
+
         public Builder userArn(String userArn) {
-            this.userArn = Output.of(Objects.requireNonNull(userArn));
-            return this;
-        }        public EnvironmentMembershipArgs build() {
-            return new EnvironmentMembershipArgs(environmentId, permissions, userArn);
+            return userArn(Output.of(userArn));
+        }
+
+        public EnvironmentMembershipArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.userArn = Objects.requireNonNull($.userArn, "expected parameter 'userArn' to be non-null");
+            return $;
         }
     }
+
 }

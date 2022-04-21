@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="absoluteCriteria")
-      private final @Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
+    private @Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
 
-    public Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria() {
-        return this.absoluteCriteria == null ? Codegen.empty() : this.absoluteCriteria;
+    public Optional<Output<List<Either<String,AbsoluteMarker>>>> absoluteCriteria() {
+        return Optional.ofNullable(this.absoluteCriteria);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="daysOfMonth")
-      private final @Nullable Output<List<DayArgs>> daysOfMonth;
+    private @Nullable Output<List<DayArgs>> daysOfMonth;
 
-    public Output<List<DayArgs>> daysOfMonth() {
-        return this.daysOfMonth == null ? Codegen.empty() : this.daysOfMonth;
+    public Optional<Output<List<DayArgs>>> daysOfMonth() {
+        return Optional.ofNullable(this.daysOfMonth);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="daysOfTheWeek")
-      private final @Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek;
+    private @Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek;
 
-    public Output<List<Either<String,DayOfWeek>>> daysOfTheWeek() {
-        return this.daysOfTheWeek == null ? Codegen.empty() : this.daysOfTheWeek;
+    public Optional<Output<List<Either<String,DayOfWeek>>>> daysOfTheWeek() {
+        return Optional.ofNullable(this.daysOfTheWeek);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="monthsOfYear")
-      private final @Nullable Output<List<Either<String,Month>>> monthsOfYear;
+    private @Nullable Output<List<Either<String,Month>>> monthsOfYear;
 
-    public Output<List<Either<String,Month>>> monthsOfYear() {
-        return this.monthsOfYear == null ? Codegen.empty() : this.monthsOfYear;
+    public Optional<Output<List<Either<String,Month>>>> monthsOfYear() {
+        return Optional.ofNullable(this.monthsOfYear);
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<String> objectType;
+    private Output<String> objectType;
 
     public Output<String> objectType() {
         return this.objectType;
@@ -88,10 +89,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="scheduleTimes")
-      private final @Nullable Output<List<String>> scheduleTimes;
+    private @Nullable Output<List<String>> scheduleTimes;
 
-    public Output<List<String>> scheduleTimes() {
-        return this.scheduleTimes == null ? Codegen.empty() : this.scheduleTimes;
+    public Optional<Output<List<String>>> scheduleTimes() {
+        return Optional.ofNullable(this.scheduleTimes);
     }
 
     /**
@@ -99,146 +100,133 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="weeksOfTheMonth")
-      private final @Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth;
+    private @Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth;
 
-    public Output<List<Either<String,WeekNumber>>> weeksOfTheMonth() {
-        return this.weeksOfTheMonth == null ? Codegen.empty() : this.weeksOfTheMonth;
+    public Optional<Output<List<Either<String,WeekNumber>>>> weeksOfTheMonth() {
+        return Optional.ofNullable(this.weeksOfTheMonth);
     }
 
-    public ScheduleBasedBackupCriteriaArgs(
-        @Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria,
-        @Nullable Output<List<DayArgs>> daysOfMonth,
-        @Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek,
-        @Nullable Output<List<Either<String,Month>>> monthsOfYear,
-        Output<String> objectType,
-        @Nullable Output<List<String>> scheduleTimes,
-        @Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth) {
-        this.absoluteCriteria = absoluteCriteria;
-        this.daysOfMonth = daysOfMonth;
-        this.daysOfTheWeek = daysOfTheWeek;
-        this.monthsOfYear = monthsOfYear;
-        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
-        this.scheduleTimes = scheduleTimes;
-        this.weeksOfTheMonth = weeksOfTheMonth;
-    }
+    private ScheduleBasedBackupCriteriaArgs() {}
 
-    private ScheduleBasedBackupCriteriaArgs() {
-        this.absoluteCriteria = Codegen.empty();
-        this.daysOfMonth = Codegen.empty();
-        this.daysOfTheWeek = Codegen.empty();
-        this.monthsOfYear = Codegen.empty();
-        this.objectType = Codegen.empty();
-        this.scheduleTimes = Codegen.empty();
-        this.weeksOfTheMonth = Codegen.empty();
+    private ScheduleBasedBackupCriteriaArgs(ScheduleBasedBackupCriteriaArgs $) {
+        this.absoluteCriteria = $.absoluteCriteria;
+        this.daysOfMonth = $.daysOfMonth;
+        this.daysOfTheWeek = $.daysOfTheWeek;
+        this.monthsOfYear = $.monthsOfYear;
+        this.objectType = $.objectType;
+        this.scheduleTimes = $.scheduleTimes;
+        this.weeksOfTheMonth = $.weeksOfTheMonth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleBasedBackupCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
-        private @Nullable Output<List<DayArgs>> daysOfMonth;
-        private @Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek;
-        private @Nullable Output<List<Either<String,Month>>> monthsOfYear;
-        private Output<String> objectType;
-        private @Nullable Output<List<String>> scheduleTimes;
-        private @Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth;
+        private ScheduleBasedBackupCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleBasedBackupCriteriaArgs();
         }
 
         public Builder(ScheduleBasedBackupCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.absoluteCriteria = defaults.absoluteCriteria;
-    	      this.daysOfMonth = defaults.daysOfMonth;
-    	      this.daysOfTheWeek = defaults.daysOfTheWeek;
-    	      this.monthsOfYear = defaults.monthsOfYear;
-    	      this.objectType = defaults.objectType;
-    	      this.scheduleTimes = defaults.scheduleTimes;
-    	      this.weeksOfTheMonth = defaults.weeksOfTheMonth;
+            $ = new ScheduleBasedBackupCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder absoluteCriteria(@Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria) {
-            this.absoluteCriteria = absoluteCriteria;
+            $.absoluteCriteria = absoluteCriteria;
             return this;
         }
-        public Builder absoluteCriteria(@Nullable List<Either<String,AbsoluteMarker>> absoluteCriteria) {
-            this.absoluteCriteria = Codegen.ofNullable(absoluteCriteria);
-            return this;
+
+        public Builder absoluteCriteria(List<Either<String,AbsoluteMarker>> absoluteCriteria) {
+            return absoluteCriteria(Output.of(absoluteCriteria));
         }
+
         public Builder absoluteCriteria(Either<String,AbsoluteMarker>... absoluteCriteria) {
             return absoluteCriteria(List.of(absoluteCriteria));
         }
+
         public Builder daysOfMonth(@Nullable Output<List<DayArgs>> daysOfMonth) {
-            this.daysOfMonth = daysOfMonth;
+            $.daysOfMonth = daysOfMonth;
             return this;
         }
-        public Builder daysOfMonth(@Nullable List<DayArgs> daysOfMonth) {
-            this.daysOfMonth = Codegen.ofNullable(daysOfMonth);
-            return this;
+
+        public Builder daysOfMonth(List<DayArgs> daysOfMonth) {
+            return daysOfMonth(Output.of(daysOfMonth));
         }
+
         public Builder daysOfMonth(DayArgs... daysOfMonth) {
             return daysOfMonth(List.of(daysOfMonth));
         }
+
         public Builder daysOfTheWeek(@Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek) {
-            this.daysOfTheWeek = daysOfTheWeek;
+            $.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
-        public Builder daysOfTheWeek(@Nullable List<Either<String,DayOfWeek>> daysOfTheWeek) {
-            this.daysOfTheWeek = Codegen.ofNullable(daysOfTheWeek);
-            return this;
+
+        public Builder daysOfTheWeek(List<Either<String,DayOfWeek>> daysOfTheWeek) {
+            return daysOfTheWeek(Output.of(daysOfTheWeek));
         }
+
         public Builder daysOfTheWeek(Either<String,DayOfWeek>... daysOfTheWeek) {
             return daysOfTheWeek(List.of(daysOfTheWeek));
         }
+
         public Builder monthsOfYear(@Nullable Output<List<Either<String,Month>>> monthsOfYear) {
-            this.monthsOfYear = monthsOfYear;
+            $.monthsOfYear = monthsOfYear;
             return this;
         }
-        public Builder monthsOfYear(@Nullable List<Either<String,Month>> monthsOfYear) {
-            this.monthsOfYear = Codegen.ofNullable(monthsOfYear);
-            return this;
+
+        public Builder monthsOfYear(List<Either<String,Month>> monthsOfYear) {
+            return monthsOfYear(Output.of(monthsOfYear));
         }
+
         public Builder monthsOfYear(Either<String,Month>... monthsOfYear) {
             return monthsOfYear(List.of(monthsOfYear));
         }
+
         public Builder objectType(Output<String> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
+            return objectType(Output.of(objectType));
         }
+
         public Builder scheduleTimes(@Nullable Output<List<String>> scheduleTimes) {
-            this.scheduleTimes = scheduleTimes;
+            $.scheduleTimes = scheduleTimes;
             return this;
         }
-        public Builder scheduleTimes(@Nullable List<String> scheduleTimes) {
-            this.scheduleTimes = Codegen.ofNullable(scheduleTimes);
-            return this;
+
+        public Builder scheduleTimes(List<String> scheduleTimes) {
+            return scheduleTimes(Output.of(scheduleTimes));
         }
+
         public Builder scheduleTimes(String... scheduleTimes) {
             return scheduleTimes(List.of(scheduleTimes));
         }
+
         public Builder weeksOfTheMonth(@Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth) {
-            this.weeksOfTheMonth = weeksOfTheMonth;
+            $.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
-        public Builder weeksOfTheMonth(@Nullable List<Either<String,WeekNumber>> weeksOfTheMonth) {
-            this.weeksOfTheMonth = Codegen.ofNullable(weeksOfTheMonth);
-            return this;
+
+        public Builder weeksOfTheMonth(List<Either<String,WeekNumber>> weeksOfTheMonth) {
+            return weeksOfTheMonth(Output.of(weeksOfTheMonth));
         }
+
         public Builder weeksOfTheMonth(Either<String,WeekNumber>... weeksOfTheMonth) {
             return weeksOfTheMonth(List.of(weeksOfTheMonth));
-        }        public ScheduleBasedBackupCriteriaArgs build() {
-            return new ScheduleBasedBackupCriteriaArgs(absoluteCriteria, daysOfMonth, daysOfTheWeek, monthsOfYear, objectType, scheduleTimes, weeksOfTheMonth);
+        }
+
+        public ScheduleBasedBackupCriteriaArgs build() {
+            $.objectType = Codegen.stringProp("objectType").output().arg($.objectType).require();
+            return $;
         }
     }
+
 }

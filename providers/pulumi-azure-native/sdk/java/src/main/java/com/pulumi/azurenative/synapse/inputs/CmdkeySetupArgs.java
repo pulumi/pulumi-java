@@ -25,7 +25,7 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final Output<SecureStringArgs> password;
+    private Output<SecureStringArgs> password;
 
     public Output<SecureStringArgs> password() {
         return this.password;
@@ -36,7 +36,7 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetName", required=true)
-      private final Output<Object> targetName;
+    private Output<Object> targetName;
 
     public Output<Object> targetName() {
         return this.targetName;
@@ -48,7 +48,7 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -59,89 +59,82 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final Output<Object> userName;
+    private Output<Object> userName;
 
     public Output<Object> userName() {
         return this.userName;
     }
 
-    public CmdkeySetupArgs(
-        Output<SecureStringArgs> password,
-        Output<Object> targetName,
-        Output<String> type,
-        Output<Object> userName) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.targetName = Objects.requireNonNull(targetName, "expected parameter 'targetName' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private CmdkeySetupArgs() {}
 
-    private CmdkeySetupArgs() {
-        this.password = Codegen.empty();
-        this.targetName = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userName = Codegen.empty();
+    private CmdkeySetupArgs(CmdkeySetupArgs $) {
+        this.password = $.password;
+        this.targetName = $.targetName;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CmdkeySetupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SecureStringArgs> password;
-        private Output<Object> targetName;
-        private Output<String> type;
-        private Output<Object> userName;
+        private CmdkeySetupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CmdkeySetupArgs();
         }
 
         public Builder(CmdkeySetupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.targetName = defaults.targetName;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new CmdkeySetupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(Output<SecureStringArgs> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(SecureStringArgs password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder targetName(Output<Object> targetName) {
-            this.targetName = Objects.requireNonNull(targetName);
+            $.targetName = targetName;
             return this;
         }
+
         public Builder targetName(Object targetName) {
-            this.targetName = Output.of(Objects.requireNonNull(targetName));
-            return this;
+            return targetName(Output.of(targetName));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userName(Output<Object> userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userName(Object userName) {
-            this.userName = Output.of(Objects.requireNonNull(userName));
-            return this;
-        }        public CmdkeySetupArgs build() {
-            return new CmdkeySetupArgs(password, targetName, type, userName);
+            return userName(Output.of(userName));
+        }
+
+        public CmdkeySetupArgs build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.targetName = Objects.requireNonNull($.targetName, "expected parameter 'targetName' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

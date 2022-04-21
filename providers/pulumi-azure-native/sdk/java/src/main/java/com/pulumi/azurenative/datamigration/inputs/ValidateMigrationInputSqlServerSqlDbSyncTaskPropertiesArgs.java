@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs ex
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> input;
+    private @Nullable Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> input;
 
-    public Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<ValidateSyncMigrationInputSqlServerTaskInputArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs ex
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<String> taskType;
+    private Output<String> taskType;
 
     public Output<String> taskType() {
         return this.taskType;
     }
 
-    public ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs(
-        @Nullable Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> input,
-        Output<String> taskType) {
-        this.input = input;
-        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
-    }
+    private ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs() {}
 
-    private ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs() {
-        this.input = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs(ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs $) {
+        this.input = $.input;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> input;
-        private Output<String> taskType;
+        private ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs();
         }
 
         public Builder(ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.taskType = defaults.taskType;
+            $ = new ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable ValidateSyncMigrationInputSqlServerTaskInputArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(ValidateSyncMigrationInputSqlServerTaskInputArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder taskType(Output<String> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs build() {
-            return new ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs(input, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs build() {
+            $.taskType = Codegen.stringProp("taskType").output().arg($.taskType).require();
+            return $;
         }
     }
+
 }

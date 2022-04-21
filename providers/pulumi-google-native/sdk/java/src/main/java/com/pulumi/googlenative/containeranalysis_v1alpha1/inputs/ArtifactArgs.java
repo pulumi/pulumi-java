@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="checksum")
-      private final @Nullable Output<String> checksum;
+    private @Nullable Output<String> checksum;
 
-    public Output<String> checksum() {
-        return this.checksum == null ? Codegen.empty() : this.checksum;
+    public Optional<Output<String>> checksum() {
+        return Optional.ofNullable(this.checksum);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="names")
-      private final @Nullable Output<List<String>> names;
+    private @Nullable Output<List<String>> names;
 
-    public Output<List<String>> names() {
-        return this.names == null ? Codegen.empty() : this.names;
+    public Optional<Output<List<String>>> names() {
+        return Optional.ofNullable(this.names);
     }
 
-    public ArtifactArgs(
-        @Nullable Output<String> checksum,
-        @Nullable Output<String> id,
-        @Nullable Output<List<String>> names) {
-        this.checksum = checksum;
-        this.id = id;
-        this.names = names;
-    }
+    private ArtifactArgs() {}
 
-    private ArtifactArgs() {
-        this.checksum = Codegen.empty();
-        this.id = Codegen.empty();
-        this.names = Codegen.empty();
+    private ArtifactArgs(ArtifactArgs $) {
+        this.checksum = $.checksum;
+        this.id = $.id;
+        this.names = $.names;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> checksum;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<String>> names;
+        private ArtifactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactArgs();
         }
 
         public Builder(ArtifactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checksum = defaults.checksum;
-    	      this.id = defaults.id;
-    	      this.names = defaults.names;
+            $ = new ArtifactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checksum(@Nullable Output<String> checksum) {
-            this.checksum = checksum;
+            $.checksum = checksum;
             return this;
         }
-        public Builder checksum(@Nullable String checksum) {
-            this.checksum = Codegen.ofNullable(checksum);
-            return this;
+
+        public Builder checksum(String checksum) {
+            return checksum(Output.of(checksum));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder names(@Nullable Output<List<String>> names) {
-            this.names = names;
+            $.names = names;
             return this;
         }
-        public Builder names(@Nullable List<String> names) {
-            this.names = Codegen.ofNullable(names);
-            return this;
+
+        public Builder names(List<String> names) {
+            return names(Output.of(names));
         }
+
         public Builder names(String... names) {
             return names(List.of(names));
-        }        public ArtifactArgs build() {
-            return new ArtifactArgs(checksum, id, names);
+        }
+
+        public ArtifactArgs build() {
+            return $;
         }
     }
+
 }

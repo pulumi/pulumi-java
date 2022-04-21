@@ -22,7 +22,7 @@ public final class OnPremClusterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="adminCluster", required=true)
-      private final Boolean adminCluster;
+    private Boolean adminCluster;
 
     public Boolean adminCluster() {
         return this.adminCluster;
@@ -33,7 +33,7 @@ public final class OnPremClusterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clusterMissing", required=true)
-      private final Boolean clusterMissing;
+    private Boolean clusterMissing;
 
     public Boolean clusterMissing() {
         return this.clusterMissing;
@@ -44,64 +44,59 @@ public final class OnPremClusterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceLink", required=true)
-      private final String resourceLink;
+    private String resourceLink;
 
     public String resourceLink() {
         return this.resourceLink;
     }
 
-    public OnPremClusterResponse(
-        Boolean adminCluster,
-        Boolean clusterMissing,
-        String resourceLink) {
-        this.adminCluster = Objects.requireNonNull(adminCluster, "expected parameter 'adminCluster' to be non-null");
-        this.clusterMissing = Objects.requireNonNull(clusterMissing, "expected parameter 'clusterMissing' to be non-null");
-        this.resourceLink = Objects.requireNonNull(resourceLink, "expected parameter 'resourceLink' to be non-null");
-    }
+    private OnPremClusterResponse() {}
 
-    private OnPremClusterResponse() {
-        this.adminCluster = null;
-        this.clusterMissing = null;
-        this.resourceLink = null;
+    private OnPremClusterResponse(OnPremClusterResponse $) {
+        this.adminCluster = $.adminCluster;
+        this.clusterMissing = $.clusterMissing;
+        this.resourceLink = $.resourceLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnPremClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean adminCluster;
-        private Boolean clusterMissing;
-        private String resourceLink;
+        private OnPremClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnPremClusterResponse();
         }
 
         public Builder(OnPremClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminCluster = defaults.adminCluster;
-    	      this.clusterMissing = defaults.clusterMissing;
-    	      this.resourceLink = defaults.resourceLink;
+            $ = new OnPremClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminCluster(Boolean adminCluster) {
-            this.adminCluster = Objects.requireNonNull(adminCluster);
+            $.adminCluster = adminCluster;
             return this;
         }
+
         public Builder clusterMissing(Boolean clusterMissing) {
-            this.clusterMissing = Objects.requireNonNull(clusterMissing);
+            $.clusterMissing = clusterMissing;
             return this;
         }
+
         public Builder resourceLink(String resourceLink) {
-            this.resourceLink = Objects.requireNonNull(resourceLink);
+            $.resourceLink = resourceLink;
             return this;
-        }        public OnPremClusterResponse build() {
-            return new OnPremClusterResponse(adminCluster, clusterMissing, resourceLink);
+        }
+
+        public OnPremClusterResponse build() {
+            $.adminCluster = Objects.requireNonNull($.adminCluster, "expected parameter 'adminCluster' to be non-null");
+            $.clusterMissing = Objects.requireNonNull($.clusterMissing, "expected parameter 'clusterMissing' to be non-null");
+            $.resourceLink = Objects.requireNonNull($.resourceLink, "expected parameter 'resourceLink' to be non-null");
+            return $;
         }
     }
+
 }

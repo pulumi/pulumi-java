@@ -8,10 +8,10 @@ import com.pulumi.azurenative.scheduler.inputs.ServiceBusAuthenticationArgs;
 import com.pulumi.azurenative.scheduler.inputs.ServiceBusBrokeredMessagePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServiceBusQueueMessageArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<ServiceBusAuthenticationArgs> authentication;
+    private @Nullable Output<ServiceBusAuthenticationArgs> authentication;
 
-    public Output<ServiceBusAuthenticationArgs> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<ServiceBusAuthenticationArgs>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceBusQueueMessageArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="brokeredMessageProperties")
-      private final @Nullable Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties;
+    private @Nullable Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties;
 
-    public Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties() {
-        return this.brokeredMessageProperties == null ? Codegen.empty() : this.brokeredMessageProperties;
+    public Optional<Output<ServiceBusBrokeredMessagePropertiesArgs>> brokeredMessageProperties() {
+        return Optional.ofNullable(this.brokeredMessageProperties);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServiceBusQueueMessageArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="customMessageProperties")
-      private final @Nullable Output<Map<String,String>> customMessageProperties;
+    private @Nullable Output<Map<String,String>> customMessageProperties;
 
-    public Output<Map<String,String>> customMessageProperties() {
-        return this.customMessageProperties == null ? Codegen.empty() : this.customMessageProperties;
+    public Optional<Output<Map<String,String>>> customMessageProperties() {
+        return Optional.ofNullable(this.customMessageProperties);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServiceBusQueueMessageArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ServiceBusQueueMessageArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ServiceBusQueueMessageArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="queueName")
-      private final @Nullable Output<String> queueName;
+    private @Nullable Output<String> queueName;
 
-    public Output<String> queueName() {
-        return this.queueName == null ? Codegen.empty() : this.queueName;
+    public Optional<Output<String>> queueName() {
+        return Optional.ofNullable(this.queueName);
     }
 
     /**
@@ -90,128 +90,108 @@ public final class ServiceBusQueueMessageArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="transportType")
-      private final @Nullable Output<ServiceBusTransportType> transportType;
+    private @Nullable Output<ServiceBusTransportType> transportType;
 
-    public Output<ServiceBusTransportType> transportType() {
-        return this.transportType == null ? Codegen.empty() : this.transportType;
+    public Optional<Output<ServiceBusTransportType>> transportType() {
+        return Optional.ofNullable(this.transportType);
     }
 
-    public ServiceBusQueueMessageArgs(
-        @Nullable Output<ServiceBusAuthenticationArgs> authentication,
-        @Nullable Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties,
-        @Nullable Output<Map<String,String>> customMessageProperties,
-        @Nullable Output<String> message,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> queueName,
-        @Nullable Output<ServiceBusTransportType> transportType) {
-        this.authentication = authentication;
-        this.brokeredMessageProperties = brokeredMessageProperties;
-        this.customMessageProperties = customMessageProperties;
-        this.message = message;
-        this.namespace = namespace;
-        this.queueName = queueName;
-        this.transportType = transportType;
-    }
+    private ServiceBusQueueMessageArgs() {}
 
-    private ServiceBusQueueMessageArgs() {
-        this.authentication = Codegen.empty();
-        this.brokeredMessageProperties = Codegen.empty();
-        this.customMessageProperties = Codegen.empty();
-        this.message = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.queueName = Codegen.empty();
-        this.transportType = Codegen.empty();
+    private ServiceBusQueueMessageArgs(ServiceBusQueueMessageArgs $) {
+        this.authentication = $.authentication;
+        this.brokeredMessageProperties = $.brokeredMessageProperties;
+        this.customMessageProperties = $.customMessageProperties;
+        this.message = $.message;
+        this.namespace = $.namespace;
+        this.queueName = $.queueName;
+        this.transportType = $.transportType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBusQueueMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceBusAuthenticationArgs> authentication;
-        private @Nullable Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties;
-        private @Nullable Output<Map<String,String>> customMessageProperties;
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> queueName;
-        private @Nullable Output<ServiceBusTransportType> transportType;
+        private ServiceBusQueueMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBusQueueMessageArgs();
         }
 
         public Builder(ServiceBusQueueMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.brokeredMessageProperties = defaults.brokeredMessageProperties;
-    	      this.customMessageProperties = defaults.customMessageProperties;
-    	      this.message = defaults.message;
-    	      this.namespace = defaults.namespace;
-    	      this.queueName = defaults.queueName;
-    	      this.transportType = defaults.transportType;
+            $ = new ServiceBusQueueMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(@Nullable Output<ServiceBusAuthenticationArgs> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable ServiceBusAuthenticationArgs authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(ServiceBusAuthenticationArgs authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder brokeredMessageProperties(@Nullable Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties) {
-            this.brokeredMessageProperties = brokeredMessageProperties;
+            $.brokeredMessageProperties = brokeredMessageProperties;
             return this;
         }
-        public Builder brokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesArgs brokeredMessageProperties) {
-            this.brokeredMessageProperties = Codegen.ofNullable(brokeredMessageProperties);
-            return this;
+
+        public Builder brokeredMessageProperties(ServiceBusBrokeredMessagePropertiesArgs brokeredMessageProperties) {
+            return brokeredMessageProperties(Output.of(brokeredMessageProperties));
         }
+
         public Builder customMessageProperties(@Nullable Output<Map<String,String>> customMessageProperties) {
-            this.customMessageProperties = customMessageProperties;
+            $.customMessageProperties = customMessageProperties;
             return this;
         }
-        public Builder customMessageProperties(@Nullable Map<String,String> customMessageProperties) {
-            this.customMessageProperties = Codegen.ofNullable(customMessageProperties);
-            return this;
+
+        public Builder customMessageProperties(Map<String,String> customMessageProperties) {
+            return customMessageProperties(Output.of(customMessageProperties));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder queueName(@Nullable Output<String> queueName) {
-            this.queueName = queueName;
+            $.queueName = queueName;
             return this;
         }
-        public Builder queueName(@Nullable String queueName) {
-            this.queueName = Codegen.ofNullable(queueName);
-            return this;
+
+        public Builder queueName(String queueName) {
+            return queueName(Output.of(queueName));
         }
+
         public Builder transportType(@Nullable Output<ServiceBusTransportType> transportType) {
-            this.transportType = transportType;
+            $.transportType = transportType;
             return this;
         }
-        public Builder transportType(@Nullable ServiceBusTransportType transportType) {
-            this.transportType = Codegen.ofNullable(transportType);
-            return this;
-        }        public ServiceBusQueueMessageArgs build() {
-            return new ServiceBusQueueMessageArgs(authentication, brokeredMessageProperties, customMessageProperties, message, namespace, queueName, transportType);
+
+        public Builder transportType(ServiceBusTransportType transportType) {
+            return transportType(Output.of(transportType));
+        }
+
+        public ServiceBusQueueMessageArgs build() {
+            return $;
         }
     }
+
 }

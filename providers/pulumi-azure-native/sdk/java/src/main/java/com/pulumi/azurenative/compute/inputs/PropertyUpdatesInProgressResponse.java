@@ -23,45 +23,44 @@ public final class PropertyUpdatesInProgressResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetTier")
-      private final @Nullable String targetTier;
+    private @Nullable String targetTier;
 
     public Optional<String> targetTier() {
-        return this.targetTier == null ? Optional.empty() : Optional.ofNullable(this.targetTier);
+        return Optional.ofNullable(this.targetTier);
     }
 
-    public PropertyUpdatesInProgressResponse(@Nullable String targetTier) {
-        this.targetTier = targetTier;
-    }
+    private PropertyUpdatesInProgressResponse() {}
 
-    private PropertyUpdatesInProgressResponse() {
-        this.targetTier = null;
+    private PropertyUpdatesInProgressResponse(PropertyUpdatesInProgressResponse $) {
+        this.targetTier = $.targetTier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropertyUpdatesInProgressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String targetTier;
+        private PropertyUpdatesInProgressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropertyUpdatesInProgressResponse();
         }
 
         public Builder(PropertyUpdatesInProgressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetTier = defaults.targetTier;
+            $ = new PropertyUpdatesInProgressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetTier(@Nullable String targetTier) {
-            this.targetTier = targetTier;
+            $.targetTier = targetTier;
             return this;
-        }        public PropertyUpdatesInProgressResponse build() {
-            return new PropertyUpdatesInProgressResponse(targetTier);
+        }
+
+        public PropertyUpdatesInProgressResponse build() {
+            return $;
         }
     }
+
 }

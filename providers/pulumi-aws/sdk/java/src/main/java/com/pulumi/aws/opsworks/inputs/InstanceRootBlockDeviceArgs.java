@@ -5,11 +5,11 @@ package com.pulumi.aws.opsworks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,110 +18,99 @@ public final class InstanceRootBlockDeviceArgs extends com.pulumi.resources.Reso
     public static final InstanceRootBlockDeviceArgs Empty = new InstanceRootBlockDeviceArgs();
 
     @Import(name="deleteOnTermination")
-      private final @Nullable Output<Boolean> deleteOnTermination;
+    private @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> deleteOnTermination() {
-        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
+    public Optional<Output<Boolean>> deleteOnTermination() {
+        return Optional.ofNullable(this.deleteOnTermination);
     }
 
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     @Import(name="volumeSize")
-      private final @Nullable Output<Integer> volumeSize;
+    private @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> volumeSize() {
-        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
+    public Optional<Output<Integer>> volumeSize() {
+        return Optional.ofNullable(this.volumeSize);
     }
 
     @Import(name="volumeType")
-      private final @Nullable Output<String> volumeType;
+    private @Nullable Output<String> volumeType;
 
-    public Output<String> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<String>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public InstanceRootBlockDeviceArgs(
-        @Nullable Output<Boolean> deleteOnTermination,
-        @Nullable Output<Integer> iops,
-        @Nullable Output<Integer> volumeSize,
-        @Nullable Output<String> volumeType) {
-        this.deleteOnTermination = deleteOnTermination;
-        this.iops = iops;
-        this.volumeSize = volumeSize;
-        this.volumeType = volumeType;
-    }
+    private InstanceRootBlockDeviceArgs() {}
 
-    private InstanceRootBlockDeviceArgs() {
-        this.deleteOnTermination = Codegen.empty();
-        this.iops = Codegen.empty();
-        this.volumeSize = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private InstanceRootBlockDeviceArgs(InstanceRootBlockDeviceArgs $) {
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.iops = $.iops;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceRootBlockDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deleteOnTermination;
-        private @Nullable Output<Integer> iops;
-        private @Nullable Output<Integer> volumeSize;
-        private @Nullable Output<String> volumeType;
+        private InstanceRootBlockDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceRootBlockDeviceArgs();
         }
 
         public Builder(InstanceRootBlockDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.iops = defaults.iops;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new InstanceRootBlockDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
-            this.deleteOnTermination = deleteOnTermination;
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
-        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
-            return this;
+
+        public Builder deleteOnTermination(Boolean deleteOnTermination) {
+            return deleteOnTermination(Output.of(deleteOnTermination));
         }
+
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
-            this.volumeSize = volumeSize;
+            $.volumeSize = volumeSize;
             return this;
         }
-        public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Codegen.ofNullable(volumeSize);
-            return this;
+
+        public Builder volumeSize(Integer volumeSize) {
+            return volumeSize(Output.of(volumeSize));
         }
+
         public Builder volumeType(@Nullable Output<String> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public InstanceRootBlockDeviceArgs build() {
-            return new InstanceRootBlockDeviceArgs(deleteOnTermination, iops, volumeSize, volumeType);
+
+        public Builder volumeType(String volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public InstanceRootBlockDeviceArgs build() {
+            return $;
         }
     }
+
 }

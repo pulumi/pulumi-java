@@ -6,9 +6,9 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.StaticRouteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class VnetRouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="staticRoutes")
-      private final @Nullable Output<List<StaticRouteArgs>> staticRoutes;
+    private @Nullable Output<List<StaticRouteArgs>> staticRoutes;
 
-    public Output<List<StaticRouteArgs>> staticRoutes() {
-        return this.staticRoutes == null ? Codegen.empty() : this.staticRoutes;
+    public Optional<Output<List<StaticRouteArgs>>> staticRoutes() {
+        return Optional.ofNullable(this.staticRoutes);
     }
 
-    public VnetRouteArgs(@Nullable Output<List<StaticRouteArgs>> staticRoutes) {
-        this.staticRoutes = staticRoutes;
-    }
+    private VnetRouteArgs() {}
 
-    private VnetRouteArgs() {
-        this.staticRoutes = Codegen.empty();
+    private VnetRouteArgs(VnetRouteArgs $) {
+        this.staticRoutes = $.staticRoutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VnetRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<StaticRouteArgs>> staticRoutes;
+        private VnetRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VnetRouteArgs();
         }
 
         public Builder(VnetRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.staticRoutes = defaults.staticRoutes;
+            $ = new VnetRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder staticRoutes(@Nullable Output<List<StaticRouteArgs>> staticRoutes) {
-            this.staticRoutes = staticRoutes;
+            $.staticRoutes = staticRoutes;
             return this;
         }
-        public Builder staticRoutes(@Nullable List<StaticRouteArgs> staticRoutes) {
-            this.staticRoutes = Codegen.ofNullable(staticRoutes);
-            return this;
+
+        public Builder staticRoutes(List<StaticRouteArgs> staticRoutes) {
+            return staticRoutes(Output.of(staticRoutes));
         }
+
         public Builder staticRoutes(StaticRouteArgs... staticRoutes) {
             return staticRoutes(List.of(staticRoutes));
-        }        public VnetRouteArgs build() {
-            return new VnetRouteArgs(staticRoutes);
+        }
+
+        public VnetRouteArgs build() {
+            return $;
         }
     }
+
 }

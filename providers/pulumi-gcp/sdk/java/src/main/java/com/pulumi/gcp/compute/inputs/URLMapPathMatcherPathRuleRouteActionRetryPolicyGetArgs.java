@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs extend
      * 
      */
     @Import(name="numRetries")
-      private final @Nullable Output<Integer> numRetries;
+    private @Nullable Output<Integer> numRetries;
 
-    public Output<Integer> numRetries() {
-        return this.numRetries == null ? Codegen.empty() : this.numRetries;
+    public Optional<Output<Integer>> numRetries() {
+        return Optional.ofNullable(this.numRetries);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs extend
      * 
      */
     @Import(name="perTryTimeout")
-      private final @Nullable Output<URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout;
+    private @Nullable Output<URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout;
 
-    public Output<URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout() {
-        return this.perTryTimeout == null ? Codegen.empty() : this.perTryTimeout;
+    public Optional<Output<URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs>> perTryTimeout() {
+        return Optional.ofNullable(this.perTryTimeout);
     }
 
     /**
@@ -62,79 +62,72 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs extend
      * 
      */
     @Import(name="retryConditions")
-      private final @Nullable Output<List<String>> retryConditions;
+    private @Nullable Output<List<String>> retryConditions;
 
-    public Output<List<String>> retryConditions() {
-        return this.retryConditions == null ? Codegen.empty() : this.retryConditions;
+    public Optional<Output<List<String>>> retryConditions() {
+        return Optional.ofNullable(this.retryConditions);
     }
 
-    public URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs(
-        @Nullable Output<Integer> numRetries,
-        @Nullable Output<URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout,
-        @Nullable Output<List<String>> retryConditions) {
-        this.numRetries = numRetries;
-        this.perTryTimeout = perTryTimeout;
-        this.retryConditions = retryConditions;
-    }
+    private URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs() {}
 
-    private URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs() {
-        this.numRetries = Codegen.empty();
-        this.perTryTimeout = Codegen.empty();
-        this.retryConditions = Codegen.empty();
+    private URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs(URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs $) {
+        this.numRetries = $.numRetries;
+        this.perTryTimeout = $.perTryTimeout;
+        this.retryConditions = $.retryConditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> numRetries;
-        private @Nullable Output<URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout;
-        private @Nullable Output<List<String>> retryConditions;
+        private URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs();
         }
 
         public Builder(URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numRetries = defaults.numRetries;
-    	      this.perTryTimeout = defaults.perTryTimeout;
-    	      this.retryConditions = defaults.retryConditions;
+            $ = new URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numRetries(@Nullable Output<Integer> numRetries) {
-            this.numRetries = numRetries;
+            $.numRetries = numRetries;
             return this;
         }
-        public Builder numRetries(@Nullable Integer numRetries) {
-            this.numRetries = Codegen.ofNullable(numRetries);
-            return this;
+
+        public Builder numRetries(Integer numRetries) {
+            return numRetries(Output.of(numRetries));
         }
+
         public Builder perTryTimeout(@Nullable Output<URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout) {
-            this.perTryTimeout = perTryTimeout;
+            $.perTryTimeout = perTryTimeout;
             return this;
         }
-        public Builder perTryTimeout(@Nullable URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs perTryTimeout) {
-            this.perTryTimeout = Codegen.ofNullable(perTryTimeout);
-            return this;
+
+        public Builder perTryTimeout(URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs perTryTimeout) {
+            return perTryTimeout(Output.of(perTryTimeout));
         }
+
         public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
-            this.retryConditions = retryConditions;
+            $.retryConditions = retryConditions;
             return this;
         }
-        public Builder retryConditions(@Nullable List<String> retryConditions) {
-            this.retryConditions = Codegen.ofNullable(retryConditions);
-            return this;
+
+        public Builder retryConditions(List<String> retryConditions) {
+            return retryConditions(Output.of(retryConditions));
         }
+
         public Builder retryConditions(String... retryConditions) {
             return retryConditions(List.of(retryConditions));
-        }        public URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs build() {
-            return new URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs(numRetries, perTryTimeout, retryConditions);
+        }
+
+        public URLMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

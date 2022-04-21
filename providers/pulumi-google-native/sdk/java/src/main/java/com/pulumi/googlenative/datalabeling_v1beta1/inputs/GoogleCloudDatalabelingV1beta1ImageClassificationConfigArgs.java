@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datalabeling_v1beta1.enums.GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * 
      */
     @Import(name="allowMultiLabel")
-      private final @Nullable Output<Boolean> allowMultiLabel;
+    private @Nullable Output<Boolean> allowMultiLabel;
 
-    public Output<Boolean> allowMultiLabel() {
-        return this.allowMultiLabel == null ? Codegen.empty() : this.allowMultiLabel;
+    public Optional<Output<Boolean>> allowMultiLabel() {
+        return Optional.ofNullable(this.allowMultiLabel);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * 
      */
     @Import(name="annotationSpecSet", required=true)
-      private final Output<String> annotationSpecSet;
+    private Output<String> annotationSpecSet;
 
     public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
@@ -48,76 +48,69 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * 
      */
     @Import(name="answerAggregationType")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
 
-    public Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType() {
-        return this.answerAggregationType == null ? Codegen.empty() : this.answerAggregationType;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType>> answerAggregationType() {
+        return Optional.ofNullable(this.answerAggregationType);
     }
 
-    public GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs(
-        @Nullable Output<Boolean> allowMultiLabel,
-        Output<String> annotationSpecSet,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType) {
-        this.allowMultiLabel = allowMultiLabel;
-        this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
-        this.answerAggregationType = answerAggregationType;
-    }
+    private GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs() {
-        this.allowMultiLabel = Codegen.empty();
-        this.annotationSpecSet = Codegen.empty();
-        this.answerAggregationType = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs(GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs $) {
+        this.allowMultiLabel = $.allowMultiLabel;
+        this.annotationSpecSet = $.annotationSpecSet;
+        this.answerAggregationType = $.answerAggregationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowMultiLabel;
-        private Output<String> annotationSpecSet;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
+        private GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowMultiLabel = defaults.allowMultiLabel;
-    	      this.annotationSpecSet = defaults.annotationSpecSet;
-    	      this.answerAggregationType = defaults.answerAggregationType;
+            $ = new GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowMultiLabel(@Nullable Output<Boolean> allowMultiLabel) {
-            this.allowMultiLabel = allowMultiLabel;
+            $.allowMultiLabel = allowMultiLabel;
             return this;
         }
-        public Builder allowMultiLabel(@Nullable Boolean allowMultiLabel) {
-            this.allowMultiLabel = Codegen.ofNullable(allowMultiLabel);
-            return this;
+
+        public Builder allowMultiLabel(Boolean allowMultiLabel) {
+            return allowMultiLabel(Output.of(allowMultiLabel));
         }
+
         public Builder annotationSpecSet(Output<String> annotationSpecSet) {
-            this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
+            $.annotationSpecSet = annotationSpecSet;
             return this;
         }
+
         public Builder annotationSpecSet(String annotationSpecSet) {
-            this.annotationSpecSet = Output.of(Objects.requireNonNull(annotationSpecSet));
-            return this;
+            return annotationSpecSet(Output.of(annotationSpecSet));
         }
+
         public Builder answerAggregationType(@Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType) {
-            this.answerAggregationType = answerAggregationType;
+            $.answerAggregationType = answerAggregationType;
             return this;
         }
-        public Builder answerAggregationType(@Nullable GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType answerAggregationType) {
-            this.answerAggregationType = Codegen.ofNullable(answerAggregationType);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs build() {
-            return new GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs(allowMultiLabel, annotationSpecSet, answerAggregationType);
+
+        public Builder answerAggregationType(GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType answerAggregationType) {
+            return answerAggregationType(Output.of(answerAggregationType));
+        }
+
+        public GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs build() {
+            $.annotationSpecSet = Objects.requireNonNull($.annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
+            return $;
         }
     }
+
 }

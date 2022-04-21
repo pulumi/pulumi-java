@@ -23,45 +23,44 @@ public final class BackendPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceFabricCluster")
-      private final @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster;
+    private @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster;
 
     public Optional<BackendServiceFabricClusterPropertiesResponse> serviceFabricCluster() {
-        return this.serviceFabricCluster == null ? Optional.empty() : Optional.ofNullable(this.serviceFabricCluster);
+        return Optional.ofNullable(this.serviceFabricCluster);
     }
 
-    public BackendPropertiesResponse(@Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster) {
-        this.serviceFabricCluster = serviceFabricCluster;
-    }
+    private BackendPropertiesResponse() {}
 
-    private BackendPropertiesResponse() {
-        this.serviceFabricCluster = null;
+    private BackendPropertiesResponse(BackendPropertiesResponse $) {
+        this.serviceFabricCluster = $.serviceFabricCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster;
+        private BackendPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendPropertiesResponse();
         }
 
         public Builder(BackendPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceFabricCluster = defaults.serviceFabricCluster;
+            $ = new BackendPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceFabricCluster(@Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster) {
-            this.serviceFabricCluster = serviceFabricCluster;
+            $.serviceFabricCluster = serviceFabricCluster;
             return this;
-        }        public BackendPropertiesResponse build() {
-            return new BackendPropertiesResponse(serviceFabricCluster);
+        }
+
+        public BackendPropertiesResponse build() {
+            return $;
         }
     }
+
 }

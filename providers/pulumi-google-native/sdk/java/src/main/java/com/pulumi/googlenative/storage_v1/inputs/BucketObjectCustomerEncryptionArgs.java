@@ -5,9 +5,9 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BucketObjectCustomerEncryptionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="encryptionAlgorithm")
-      private final @Nullable Output<String> encryptionAlgorithm;
+    private @Nullable Output<String> encryptionAlgorithm;
 
-    public Output<String> encryptionAlgorithm() {
-        return this.encryptionAlgorithm == null ? Codegen.empty() : this.encryptionAlgorithm;
+    public Optional<Output<String>> encryptionAlgorithm() {
+        return Optional.ofNullable(this.encryptionAlgorithm);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class BucketObjectCustomerEncryptionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="keySha256")
-      private final @Nullable Output<String> keySha256;
+    private @Nullable Output<String> keySha256;
 
-    public Output<String> keySha256() {
-        return this.keySha256 == null ? Codegen.empty() : this.keySha256;
+    public Optional<Output<String>> keySha256() {
+        return Optional.ofNullable(this.keySha256);
     }
 
-    public BucketObjectCustomerEncryptionArgs(
-        @Nullable Output<String> encryptionAlgorithm,
-        @Nullable Output<String> keySha256) {
-        this.encryptionAlgorithm = encryptionAlgorithm;
-        this.keySha256 = keySha256;
-    }
+    private BucketObjectCustomerEncryptionArgs() {}
 
-    private BucketObjectCustomerEncryptionArgs() {
-        this.encryptionAlgorithm = Codegen.empty();
-        this.keySha256 = Codegen.empty();
+    private BucketObjectCustomerEncryptionArgs(BucketObjectCustomerEncryptionArgs $) {
+        this.encryptionAlgorithm = $.encryptionAlgorithm;
+        this.keySha256 = $.keySha256;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectCustomerEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encryptionAlgorithm;
-        private @Nullable Output<String> keySha256;
+        private BucketObjectCustomerEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectCustomerEncryptionArgs();
         }
 
         public Builder(BucketObjectCustomerEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionAlgorithm = defaults.encryptionAlgorithm;
-    	      this.keySha256 = defaults.keySha256;
+            $ = new BucketObjectCustomerEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionAlgorithm(@Nullable Output<String> encryptionAlgorithm) {
-            this.encryptionAlgorithm = encryptionAlgorithm;
+            $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
-        public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
-            this.encryptionAlgorithm = Codegen.ofNullable(encryptionAlgorithm);
-            return this;
+
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
+            return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
+
         public Builder keySha256(@Nullable Output<String> keySha256) {
-            this.keySha256 = keySha256;
+            $.keySha256 = keySha256;
             return this;
         }
-        public Builder keySha256(@Nullable String keySha256) {
-            this.keySha256 = Codegen.ofNullable(keySha256);
-            return this;
-        }        public BucketObjectCustomerEncryptionArgs build() {
-            return new BucketObjectCustomerEncryptionArgs(encryptionAlgorithm, keySha256);
+
+        public Builder keySha256(String keySha256) {
+            return keySha256(Output.of(keySha256));
+        }
+
+        public BucketObjectCustomerEncryptionArgs build() {
+            return $;
         }
     }
+
 }

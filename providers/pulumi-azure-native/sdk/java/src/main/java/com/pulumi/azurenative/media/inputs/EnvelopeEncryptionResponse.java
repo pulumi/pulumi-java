@@ -27,10 +27,10 @@ public final class EnvelopeEncryptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="clearTracks")
-      private final @Nullable List<TrackSelectionResponse> clearTracks;
+    private @Nullable List<TrackSelectionResponse> clearTracks;
 
-    public List<TrackSelectionResponse> clearTracks() {
-        return this.clearTracks == null ? List.of() : this.clearTracks;
+    public Optional<List<TrackSelectionResponse>> clearTracks() {
+        return Optional.ofNullable(this.clearTracks);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class EnvelopeEncryptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="contentKeys")
-      private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
+    private @Nullable StreamingPolicyContentKeysResponse contentKeys;
 
     public Optional<StreamingPolicyContentKeysResponse> contentKeys() {
-        return this.contentKeys == null ? Optional.empty() : Optional.ofNullable(this.contentKeys);
+        return Optional.ofNullable(this.contentKeys);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class EnvelopeEncryptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="customKeyAcquisitionUrlTemplate")
-      private final @Nullable String customKeyAcquisitionUrlTemplate;
+    private @Nullable String customKeyAcquisitionUrlTemplate;
 
     public Optional<String> customKeyAcquisitionUrlTemplate() {
-        return this.customKeyAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customKeyAcquisitionUrlTemplate);
+        return Optional.ofNullable(this.customKeyAcquisitionUrlTemplate);
     }
 
     /**
@@ -60,76 +60,66 @@ public final class EnvelopeEncryptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enabledProtocols")
-      private final @Nullable EnabledProtocolsResponse enabledProtocols;
+    private @Nullable EnabledProtocolsResponse enabledProtocols;
 
     public Optional<EnabledProtocolsResponse> enabledProtocols() {
-        return this.enabledProtocols == null ? Optional.empty() : Optional.ofNullable(this.enabledProtocols);
+        return Optional.ofNullable(this.enabledProtocols);
     }
 
-    public EnvelopeEncryptionResponse(
-        @Nullable List<TrackSelectionResponse> clearTracks,
-        @Nullable StreamingPolicyContentKeysResponse contentKeys,
-        @Nullable String customKeyAcquisitionUrlTemplate,
-        @Nullable EnabledProtocolsResponse enabledProtocols) {
-        this.clearTracks = clearTracks;
-        this.contentKeys = contentKeys;
-        this.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
-        this.enabledProtocols = enabledProtocols;
-    }
+    private EnvelopeEncryptionResponse() {}
 
-    private EnvelopeEncryptionResponse() {
-        this.clearTracks = List.of();
-        this.contentKeys = null;
-        this.customKeyAcquisitionUrlTemplate = null;
-        this.enabledProtocols = null;
+    private EnvelopeEncryptionResponse(EnvelopeEncryptionResponse $) {
+        this.clearTracks = $.clearTracks;
+        this.contentKeys = $.contentKeys;
+        this.customKeyAcquisitionUrlTemplate = $.customKeyAcquisitionUrlTemplate;
+        this.enabledProtocols = $.enabledProtocols;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvelopeEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<TrackSelectionResponse> clearTracks;
-        private @Nullable StreamingPolicyContentKeysResponse contentKeys;
-        private @Nullable String customKeyAcquisitionUrlTemplate;
-        private @Nullable EnabledProtocolsResponse enabledProtocols;
+        private EnvelopeEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvelopeEncryptionResponse();
         }
 
         public Builder(EnvelopeEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clearTracks = defaults.clearTracks;
-    	      this.contentKeys = defaults.contentKeys;
-    	      this.customKeyAcquisitionUrlTemplate = defaults.customKeyAcquisitionUrlTemplate;
-    	      this.enabledProtocols = defaults.enabledProtocols;
+            $ = new EnvelopeEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
-            this.clearTracks = clearTracks;
+            $.clearTracks = clearTracks;
             return this;
         }
+
         public Builder clearTracks(TrackSelectionResponse... clearTracks) {
             return clearTracks(List.of(clearTracks));
         }
+
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
-            this.contentKeys = contentKeys;
+            $.contentKeys = contentKeys;
             return this;
         }
+
         public Builder customKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
-            this.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
+            $.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
             return this;
         }
+
         public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
-            this.enabledProtocols = enabledProtocols;
+            $.enabledProtocols = enabledProtocols;
             return this;
-        }        public EnvelopeEncryptionResponse build() {
-            return new EnvelopeEncryptionResponse(clearTracks, contentKeys, customKeyAcquisitionUrlTemplate, enabledProtocols);
+        }
+
+        public EnvelopeEncryptionResponse build() {
+            return $;
         }
     }
+
 }

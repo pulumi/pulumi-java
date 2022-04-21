@@ -5,7 +5,6 @@ package com.pulumi.aws.lb;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ListenerCertificateArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="certificateArn", required=true)
-      private final Output<String> certificateArn;
+    private Output<String> certificateArn;
 
     public Output<String> certificateArn() {
         return this.certificateArn;
@@ -30,63 +29,60 @@ public final class ListenerCertificateArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="listenerArn", required=true)
-      private final Output<String> listenerArn;
+    private Output<String> listenerArn;
 
     public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
-    public ListenerCertificateArgs(
-        Output<String> certificateArn,
-        Output<String> listenerArn) {
-        this.certificateArn = Objects.requireNonNull(certificateArn, "expected parameter 'certificateArn' to be non-null");
-        this.listenerArn = Objects.requireNonNull(listenerArn, "expected parameter 'listenerArn' to be non-null");
-    }
+    private ListenerCertificateArgs() {}
 
-    private ListenerCertificateArgs() {
-        this.certificateArn = Codegen.empty();
-        this.listenerArn = Codegen.empty();
+    private ListenerCertificateArgs(ListenerCertificateArgs $) {
+        this.certificateArn = $.certificateArn;
+        this.listenerArn = $.listenerArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateArn;
-        private Output<String> listenerArn;
+        private ListenerCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerCertificateArgs();
         }
 
         public Builder(ListenerCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.listenerArn = defaults.listenerArn;
+            $ = new ListenerCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(Output<String> certificateArn) {
-            this.certificateArn = Objects.requireNonNull(certificateArn);
+            $.certificateArn = certificateArn;
             return this;
         }
+
         public Builder certificateArn(String certificateArn) {
-            this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
-            return this;
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder listenerArn(Output<String> listenerArn) {
-            this.listenerArn = Objects.requireNonNull(listenerArn);
+            $.listenerArn = listenerArn;
             return this;
         }
+
         public Builder listenerArn(String listenerArn) {
-            this.listenerArn = Output.of(Objects.requireNonNull(listenerArn));
-            return this;
-        }        public ListenerCertificateArgs build() {
-            return new ListenerCertificateArgs(certificateArn, listenerArn);
+            return listenerArn(Output.of(listenerArn));
+        }
+
+        public ListenerCertificateArgs build() {
+            $.certificateArn = Objects.requireNonNull($.certificateArn, "expected parameter 'certificateArn' to be non-null");
+            $.listenerArn = Objects.requireNonNull($.listenerArn, "expected parameter 'listenerArn' to be non-null");
+            return $;
         }
     }
+
 }

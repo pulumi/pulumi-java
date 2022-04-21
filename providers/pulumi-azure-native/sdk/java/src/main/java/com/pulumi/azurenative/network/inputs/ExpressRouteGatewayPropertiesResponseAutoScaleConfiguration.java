@@ -23,45 +23,44 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration e
      * 
      */
     @Import(name="bounds")
-      private final @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
+    private @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
 
     public Optional<ExpressRouteGatewayPropertiesResponseBounds> bounds() {
-        return this.bounds == null ? Optional.empty() : Optional.ofNullable(this.bounds);
+        return Optional.ofNullable(this.bounds);
     }
 
-    public ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(@Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
-        this.bounds = bounds;
-    }
+    private ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration() {}
 
-    private ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration() {
-        this.bounds = null;
+    private ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration $) {
+        this.bounds = $.bounds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
+        private ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration();
         }
 
         public Builder(ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bounds = defaults.bounds;
+            $ = new ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder bounds(@Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
-            this.bounds = bounds;
+            $.bounds = bounds;
             return this;
-        }        public ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration build() {
-            return new ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(bounds);
+        }
+
+        public ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration build() {
+            return $;
         }
     }
+
 }

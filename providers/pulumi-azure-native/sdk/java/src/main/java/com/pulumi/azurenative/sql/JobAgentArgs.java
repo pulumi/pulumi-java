@@ -6,10 +6,10 @@ package com.pulumi.azurenative.sql;
 import com.pulumi.azurenative.sql.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseId", required=true)
-      private final Output<String> databaseId;
+    private Output<String> databaseId;
 
     public Output<String> databaseId() {
         return this.databaseId;
@@ -33,10 +33,10 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobAgentName")
-      private final @Nullable Output<String> jobAgentName;
+    private @Nullable Output<String> jobAgentName;
 
-    public Output<String> jobAgentName() {
-        return this.jobAgentName == null ? Codegen.empty() : this.jobAgentName;
+    public Optional<Output<String>> jobAgentName() {
+        return Optional.ofNullable(this.jobAgentName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -77,10 +77,10 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -88,128 +88,111 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public JobAgentArgs(
-        Output<String> databaseId,
-        @Nullable Output<String> jobAgentName,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.databaseId = Objects.requireNonNull(databaseId, "expected parameter 'databaseId' to be non-null");
-        this.jobAgentName = jobAgentName;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private JobAgentArgs() {}
 
-    private JobAgentArgs() {
-        this.databaseId = Codegen.empty();
-        this.jobAgentName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private JobAgentArgs(JobAgentArgs $) {
+        this.databaseId = $.databaseId;
+        this.jobAgentName = $.jobAgentName;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobAgentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseId;
-        private @Nullable Output<String> jobAgentName;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private JobAgentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobAgentArgs();
         }
 
         public Builder(JobAgentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseId = defaults.databaseId;
-    	      this.jobAgentName = defaults.jobAgentName;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new JobAgentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseId(Output<String> databaseId) {
-            this.databaseId = Objects.requireNonNull(databaseId);
+            $.databaseId = databaseId;
             return this;
         }
+
         public Builder databaseId(String databaseId) {
-            this.databaseId = Output.of(Objects.requireNonNull(databaseId));
-            return this;
+            return databaseId(Output.of(databaseId));
         }
+
         public Builder jobAgentName(@Nullable Output<String> jobAgentName) {
-            this.jobAgentName = jobAgentName;
+            $.jobAgentName = jobAgentName;
             return this;
         }
-        public Builder jobAgentName(@Nullable String jobAgentName) {
-            this.jobAgentName = Codegen.ofNullable(jobAgentName);
-            return this;
+
+        public Builder jobAgentName(String jobAgentName) {
+            return jobAgentName(Output.of(jobAgentName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public JobAgentArgs build() {
-            return new JobAgentArgs(databaseId, jobAgentName, location, resourceGroupName, serverName, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public JobAgentArgs build() {
+            $.databaseId = Objects.requireNonNull($.databaseId, "expected parameter 'databaseId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

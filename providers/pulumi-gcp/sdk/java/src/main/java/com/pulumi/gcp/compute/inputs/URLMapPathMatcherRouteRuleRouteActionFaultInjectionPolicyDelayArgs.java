@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
      * 
      */
     @Import(name="fixedDelay")
-      private final @Nullable Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
+    private @Nullable Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
 
-    public Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay() {
-        return this.fixedDelay == null ? Codegen.empty() : this.fixedDelay;
+    public Optional<Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs>> fixedDelay() {
+        return Optional.ofNullable(this.fixedDelay);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
      * 
      */
     @Import(name="percentage")
-      private final @Nullable Output<Double> percentage;
+    private @Nullable Output<Double> percentage;
 
-    public Output<Double> percentage() {
-        return this.percentage == null ? Codegen.empty() : this.percentage;
+    public Optional<Output<Double>> percentage() {
+        return Optional.ofNullable(this.percentage);
     }
 
-    public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs(
-        @Nullable Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay,
-        @Nullable Output<Double> percentage) {
-        this.fixedDelay = fixedDelay;
-        this.percentage = percentage;
-    }
+    private URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs() {}
 
-    private URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs() {
-        this.fixedDelay = Codegen.empty();
-        this.percentage = Codegen.empty();
+    private URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs(URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs $) {
+        this.fixedDelay = $.fixedDelay;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
-        private @Nullable Output<Double> percentage;
+        private URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs();
         }
 
         public Builder(URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fixedDelay = defaults.fixedDelay;
-    	      this.percentage = defaults.percentage;
+            $ = new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fixedDelay(@Nullable Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay) {
-            this.fixedDelay = fixedDelay;
+            $.fixedDelay = fixedDelay;
             return this;
         }
-        public Builder fixedDelay(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs fixedDelay) {
-            this.fixedDelay = Codegen.ofNullable(fixedDelay);
-            return this;
+
+        public Builder fixedDelay(URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs fixedDelay) {
+            return fixedDelay(Output.of(fixedDelay));
         }
+
         public Builder percentage(@Nullable Output<Double> percentage) {
-            this.percentage = percentage;
+            $.percentage = percentage;
             return this;
         }
-        public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Codegen.ofNullable(percentage);
-            return this;
-        }        public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs build() {
-            return new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs(fixedDelay, percentage);
+
+        public Builder percentage(Double percentage) {
+            return percentage(Output.of(percentage));
+        }
+
+        public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs build() {
+            return $;
         }
     }
+
 }

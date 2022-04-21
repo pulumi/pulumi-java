@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ParquetOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enableListInference")
-      private final @Nullable Output<Boolean> enableListInference;
+    private @Nullable Output<Boolean> enableListInference;
 
-    public Output<Boolean> enableListInference() {
-        return this.enableListInference == null ? Codegen.empty() : this.enableListInference;
+    public Optional<Output<Boolean>> enableListInference() {
+        return Optional.ofNullable(this.enableListInference);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ParquetOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enumAsString")
-      private final @Nullable Output<Boolean> enumAsString;
+    private @Nullable Output<Boolean> enumAsString;
 
-    public Output<Boolean> enumAsString() {
-        return this.enumAsString == null ? Codegen.empty() : this.enumAsString;
+    public Optional<Output<Boolean>> enumAsString() {
+        return Optional.ofNullable(this.enumAsString);
     }
 
-    public ParquetOptionsArgs(
-        @Nullable Output<Boolean> enableListInference,
-        @Nullable Output<Boolean> enumAsString) {
-        this.enableListInference = enableListInference;
-        this.enumAsString = enumAsString;
-    }
+    private ParquetOptionsArgs() {}
 
-    private ParquetOptionsArgs() {
-        this.enableListInference = Codegen.empty();
-        this.enumAsString = Codegen.empty();
+    private ParquetOptionsArgs(ParquetOptionsArgs $) {
+        this.enableListInference = $.enableListInference;
+        this.enumAsString = $.enumAsString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParquetOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableListInference;
-        private @Nullable Output<Boolean> enumAsString;
+        private ParquetOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParquetOptionsArgs();
         }
 
         public Builder(ParquetOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableListInference = defaults.enableListInference;
-    	      this.enumAsString = defaults.enumAsString;
+            $ = new ParquetOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableListInference(@Nullable Output<Boolean> enableListInference) {
-            this.enableListInference = enableListInference;
+            $.enableListInference = enableListInference;
             return this;
         }
-        public Builder enableListInference(@Nullable Boolean enableListInference) {
-            this.enableListInference = Codegen.ofNullable(enableListInference);
-            return this;
+
+        public Builder enableListInference(Boolean enableListInference) {
+            return enableListInference(Output.of(enableListInference));
         }
+
         public Builder enumAsString(@Nullable Output<Boolean> enumAsString) {
-            this.enumAsString = enumAsString;
+            $.enumAsString = enumAsString;
             return this;
         }
-        public Builder enumAsString(@Nullable Boolean enumAsString) {
-            this.enumAsString = Codegen.ofNullable(enumAsString);
-            return this;
-        }        public ParquetOptionsArgs build() {
-            return new ParquetOptionsArgs(enableListInference, enumAsString);
+
+        public Builder enumAsString(Boolean enumAsString) {
+            return enumAsString(Output.of(enumAsString));
+        }
+
+        public ParquetOptionsArgs build() {
+            return $;
         }
     }
+
 }

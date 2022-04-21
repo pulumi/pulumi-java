@@ -23,45 +23,44 @@ public final class SecurityProfileMachineLearningDetectionConfig extends com.pul
      * 
      */
     @Import(name="confidenceLevel")
-      private final @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel;
+    private @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel;
 
     public Optional<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel() {
-        return this.confidenceLevel == null ? Optional.empty() : Optional.ofNullable(this.confidenceLevel);
+        return Optional.ofNullable(this.confidenceLevel);
     }
 
-    public SecurityProfileMachineLearningDetectionConfig(@Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
-        this.confidenceLevel = confidenceLevel;
-    }
+    private SecurityProfileMachineLearningDetectionConfig() {}
 
-    private SecurityProfileMachineLearningDetectionConfig() {
-        this.confidenceLevel = null;
+    private SecurityProfileMachineLearningDetectionConfig(SecurityProfileMachineLearningDetectionConfig $) {
+        this.confidenceLevel = $.confidenceLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileMachineLearningDetectionConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel;
+        private SecurityProfileMachineLearningDetectionConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileMachineLearningDetectionConfig();
         }
 
         public Builder(SecurityProfileMachineLearningDetectionConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confidenceLevel = defaults.confidenceLevel;
+            $ = new SecurityProfileMachineLearningDetectionConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder confidenceLevel(@Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
-            this.confidenceLevel = confidenceLevel;
+            $.confidenceLevel = confidenceLevel;
             return this;
-        }        public SecurityProfileMachineLearningDetectionConfig build() {
-            return new SecurityProfileMachineLearningDetectionConfig(confidenceLevel);
+        }
+
+        public SecurityProfileMachineLearningDetectionConfig build() {
+            return $;
         }
     }
+
 }

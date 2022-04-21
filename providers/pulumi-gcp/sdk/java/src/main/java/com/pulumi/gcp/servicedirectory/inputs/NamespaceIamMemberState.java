@@ -5,10 +5,10 @@ package com.pulumi.gcp.servicedirectory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.servicedirectory.inputs.NamespaceIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class NamespaceIamMemberState extends com.pulumi.resources.Resource
     public static final NamespaceIamMemberState Empty = new NamespaceIamMemberState();
 
     @Import(name="condition")
-      private final @Nullable Output<NamespaceIamMemberConditionGetArgs> condition;
+    private @Nullable Output<NamespaceIamMemberConditionGetArgs> condition;
 
-    public Output<NamespaceIamMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<NamespaceIamMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -28,17 +28,17 @@ public final class NamespaceIamMemberState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NamespaceIamMemberState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,102 +59,88 @@ public final class NamespaceIamMemberState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public NamespaceIamMemberState(
-        @Nullable Output<NamespaceIamMemberConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> member,
-        @Nullable Output<String> name,
-        @Nullable Output<String> role) {
-        this.condition = condition;
-        this.etag = etag;
-        this.member = member;
-        this.name = name;
-        this.role = role;
-    }
+    private NamespaceIamMemberState() {}
 
-    private NamespaceIamMemberState() {
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.member = Codegen.empty();
-        this.name = Codegen.empty();
-        this.role = Codegen.empty();
+    private NamespaceIamMemberState(NamespaceIamMemberState $) {
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.member = $.member;
+        this.name = $.name;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespaceIamMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NamespaceIamMemberConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> role;
+        private NamespaceIamMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespaceIamMemberState();
         }
 
         public Builder(NamespaceIamMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.member = defaults.member;
-    	      this.name = defaults.name;
-    	      this.role = defaults.role;
+            $ = new NamespaceIamMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<NamespaceIamMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable NamespaceIamMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(NamespaceIamMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public NamespaceIamMemberState build() {
-            return new NamespaceIamMemberState(condition, etag, member, name, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public NamespaceIamMemberState build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.location.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class MapConfigurationArgs extends com.pulumi.resources.ResourceArg
     public static final MapConfigurationArgs Empty = new MapConfigurationArgs();
 
     @Import(name="style", required=true)
-      private final Output<String> style;
+    private Output<String> style;
 
     public Output<String> style() {
         return this.style;
     }
 
-    public MapConfigurationArgs(Output<String> style) {
-        this.style = Objects.requireNonNull(style, "expected parameter 'style' to be non-null");
-    }
+    private MapConfigurationArgs() {}
 
-    private MapConfigurationArgs() {
-        this.style = Codegen.empty();
+    private MapConfigurationArgs(MapConfigurationArgs $) {
+        this.style = $.style;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MapConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> style;
+        private MapConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MapConfigurationArgs();
         }
 
         public Builder(MapConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.style = defaults.style;
+            $ = new MapConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder style(Output<String> style) {
-            this.style = Objects.requireNonNull(style);
+            $.style = style;
             return this;
         }
+
         public Builder style(String style) {
-            this.style = Output.of(Objects.requireNonNull(style));
-            return this;
-        }        public MapConfigurationArgs build() {
-            return new MapConfigurationArgs(style);
+            return style(Output.of(style));
+        }
+
+        public MapConfigurationArgs build() {
+            $.style = Objects.requireNonNull($.style, "expected parameter 'style' to be non-null");
+            return $;
         }
     }
+
 }

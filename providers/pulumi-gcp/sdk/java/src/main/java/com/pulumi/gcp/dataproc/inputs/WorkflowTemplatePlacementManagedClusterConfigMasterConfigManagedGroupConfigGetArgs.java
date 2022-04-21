@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigMana
     public static final WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs();
 
     @Import(name="instanceGroupManagerName")
-      private final @Nullable Output<String> instanceGroupManagerName;
+    private @Nullable Output<String> instanceGroupManagerName;
 
-    public Output<String> instanceGroupManagerName() {
-        return this.instanceGroupManagerName == null ? Codegen.empty() : this.instanceGroupManagerName;
+    public Optional<Output<String>> instanceGroupManagerName() {
+        return Optional.ofNullable(this.instanceGroupManagerName);
     }
 
     @Import(name="instanceTemplateName")
-      private final @Nullable Output<String> instanceTemplateName;
+    private @Nullable Output<String> instanceTemplateName;
 
-    public Output<String> instanceTemplateName() {
-        return this.instanceTemplateName == null ? Codegen.empty() : this.instanceTemplateName;
+    public Optional<Output<String>> instanceTemplateName() {
+        return Optional.ofNullable(this.instanceTemplateName);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs(
-        @Nullable Output<String> instanceGroupManagerName,
-        @Nullable Output<String> instanceTemplateName) {
-        this.instanceGroupManagerName = instanceGroupManagerName;
-        this.instanceTemplateName = instanceTemplateName;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs() {
-        this.instanceGroupManagerName = Codegen.empty();
-        this.instanceTemplateName = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs(WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs $) {
+        this.instanceGroupManagerName = $.instanceGroupManagerName;
+        this.instanceTemplateName = $.instanceTemplateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceGroupManagerName;
-        private @Nullable Output<String> instanceTemplateName;
+        private WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceGroupManagerName = defaults.instanceGroupManagerName;
-    	      this.instanceTemplateName = defaults.instanceTemplateName;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceGroupManagerName(@Nullable Output<String> instanceGroupManagerName) {
-            this.instanceGroupManagerName = instanceGroupManagerName;
+            $.instanceGroupManagerName = instanceGroupManagerName;
             return this;
         }
-        public Builder instanceGroupManagerName(@Nullable String instanceGroupManagerName) {
-            this.instanceGroupManagerName = Codegen.ofNullable(instanceGroupManagerName);
-            return this;
+
+        public Builder instanceGroupManagerName(String instanceGroupManagerName) {
+            return instanceGroupManagerName(Output.of(instanceGroupManagerName));
         }
+
         public Builder instanceTemplateName(@Nullable Output<String> instanceTemplateName) {
-            this.instanceTemplateName = instanceTemplateName;
+            $.instanceTemplateName = instanceTemplateName;
             return this;
         }
-        public Builder instanceTemplateName(@Nullable String instanceTemplateName) {
-            this.instanceTemplateName = Codegen.ofNullable(instanceTemplateName);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs(instanceGroupManagerName, instanceTemplateName);
+
+        public Builder instanceTemplateName(String instanceTemplateName) {
+            return instanceTemplateName(Output.of(instanceTemplateName));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,45 +15,44 @@ public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOption
     public static final ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions Empty = new ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions();
 
     @Import(name="optInHeaders")
-      private final @Nullable String optInHeaders;
+    private @Nullable String optInHeaders;
 
     public Optional<String> optInHeaders() {
-        return this.optInHeaders == null ? Optional.empty() : Optional.ofNullable(this.optInHeaders);
+        return Optional.ofNullable(this.optInHeaders);
     }
 
-    public ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions(@Nullable String optInHeaders) {
-        this.optInHeaders = optInHeaders;
-    }
+    private ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions() {}
 
-    private ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions() {
-        this.optInHeaders = null;
+    private ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions(ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions $) {
+        this.optInHeaders = $.optInHeaders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optInHeaders;
+        private ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions();
         }
 
         public Builder(ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optInHeaders = defaults.optInHeaders;
+            $ = new ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder optInHeaders(@Nullable String optInHeaders) {
-            this.optInHeaders = optInHeaders;
+            $.optInHeaders = optInHeaders;
             return this;
-        }        public ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions build() {
-            return new ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions(optInHeaders);
+        }
+
+        public ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions build() {
+            return $;
         }
     }
+
 }

@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kerberosArmoring")
-      private final @Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring;
+    private @Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring;
 
-    public Output<Either<String,KerberosArmoring>> kerberosArmoring() {
-        return this.kerberosArmoring == null ? Codegen.empty() : this.kerberosArmoring;
+    public Optional<Output<Either<String,KerberosArmoring>>> kerberosArmoring() {
+        return Optional.ofNullable(this.kerberosArmoring);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kerberosRc4Encryption")
-      private final @Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
+    private @Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
 
-    public Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption() {
-        return this.kerberosRc4Encryption == null ? Codegen.empty() : this.kerberosRc4Encryption;
+    public Optional<Output<Either<String,KerberosRc4Encryption>>> kerberosRc4Encryption() {
+        return Optional.ofNullable(this.kerberosRc4Encryption);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="ntlmV1")
-      private final @Nullable Output<Either<String,NtlmV1>> ntlmV1;
+    private @Nullable Output<Either<String,NtlmV1>> ntlmV1;
 
-    public Output<Either<String,NtlmV1>> ntlmV1() {
-        return this.ntlmV1 == null ? Codegen.empty() : this.ntlmV1;
+    public Optional<Output<Either<String,NtlmV1>>> ntlmV1() {
+        return Optional.ofNullable(this.ntlmV1);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="syncKerberosPasswords")
-      private final @Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
+    private @Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
 
-    public Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords() {
-        return this.syncKerberosPasswords == null ? Codegen.empty() : this.syncKerberosPasswords;
+    public Optional<Output<Either<String,SyncKerberosPasswords>>> syncKerberosPasswords() {
+        return Optional.ofNullable(this.syncKerberosPasswords);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="syncNtlmPasswords")
-      private final @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
+    private @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
 
-    public Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords() {
-        return this.syncNtlmPasswords == null ? Codegen.empty() : this.syncNtlmPasswords;
+    public Optional<Output<Either<String,SyncNtlmPasswords>>> syncNtlmPasswords() {
+        return Optional.ofNullable(this.syncNtlmPasswords);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="syncOnPremPasswords")
-      private final @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
+    private @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
 
-    public Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords() {
-        return this.syncOnPremPasswords == null ? Codegen.empty() : this.syncOnPremPasswords;
+    public Optional<Output<Either<String,SyncOnPremPasswords>>> syncOnPremPasswords() {
+        return Optional.ofNullable(this.syncOnPremPasswords);
     }
 
     /**
@@ -98,128 +99,115 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tlsV1")
-      private final @Nullable Output<Either<String,TlsV1>> tlsV1;
+    private @Nullable Output<Either<String,TlsV1>> tlsV1;
 
-    public Output<Either<String,TlsV1>> tlsV1() {
-        return this.tlsV1 == null ? Codegen.empty() : this.tlsV1;
+    public Optional<Output<Either<String,TlsV1>>> tlsV1() {
+        return Optional.ofNullable(this.tlsV1);
     }
 
-    public DomainSecuritySettingsArgs(
-        @Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring,
-        @Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption,
-        @Nullable Output<Either<String,NtlmV1>> ntlmV1,
-        @Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords,
-        @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords,
-        @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords,
-        @Nullable Output<Either<String,TlsV1>> tlsV1) {
-        this.kerberosArmoring = Codegen.stringProp("kerberosArmoring").left(KerberosArmoring.class).output().arg(kerberosArmoring).def("Disabled").getNullable();
-        this.kerberosRc4Encryption = Codegen.stringProp("kerberosRc4Encryption").left(KerberosRc4Encryption.class).output().arg(kerberosRc4Encryption).def("Enabled").getNullable();
-        this.ntlmV1 = Codegen.stringProp("ntlmV1").left(NtlmV1.class).output().arg(ntlmV1).def("Enabled").getNullable();
-        this.syncKerberosPasswords = Codegen.stringProp("syncKerberosPasswords").left(SyncKerberosPasswords.class).output().arg(syncKerberosPasswords).def("Enabled").getNullable();
-        this.syncNtlmPasswords = Codegen.stringProp("syncNtlmPasswords").left(SyncNtlmPasswords.class).output().arg(syncNtlmPasswords).def("Enabled").getNullable();
-        this.syncOnPremPasswords = Codegen.stringProp("syncOnPremPasswords").left(SyncOnPremPasswords.class).output().arg(syncOnPremPasswords).def("Enabled").getNullable();
-        this.tlsV1 = Codegen.stringProp("tlsV1").left(TlsV1.class).output().arg(tlsV1).def("Enabled").getNullable();
-    }
+    private DomainSecuritySettingsArgs() {}
 
-    private DomainSecuritySettingsArgs() {
-        this.kerberosArmoring = Codegen.empty();
-        this.kerberosRc4Encryption = Codegen.empty();
-        this.ntlmV1 = Codegen.empty();
-        this.syncKerberosPasswords = Codegen.empty();
-        this.syncNtlmPasswords = Codegen.empty();
-        this.syncOnPremPasswords = Codegen.empty();
-        this.tlsV1 = Codegen.empty();
+    private DomainSecuritySettingsArgs(DomainSecuritySettingsArgs $) {
+        this.kerberosArmoring = $.kerberosArmoring;
+        this.kerberosRc4Encryption = $.kerberosRc4Encryption;
+        this.ntlmV1 = $.ntlmV1;
+        this.syncKerberosPasswords = $.syncKerberosPasswords;
+        this.syncNtlmPasswords = $.syncNtlmPasswords;
+        this.syncOnPremPasswords = $.syncOnPremPasswords;
+        this.tlsV1 = $.tlsV1;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSecuritySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring;
-        private @Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
-        private @Nullable Output<Either<String,NtlmV1>> ntlmV1;
-        private @Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
-        private @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
-        private @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
-        private @Nullable Output<Either<String,TlsV1>> tlsV1;
+        private DomainSecuritySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSecuritySettingsArgs();
         }
 
         public Builder(DomainSecuritySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kerberosArmoring = defaults.kerberosArmoring;
-    	      this.kerberosRc4Encryption = defaults.kerberosRc4Encryption;
-    	      this.ntlmV1 = defaults.ntlmV1;
-    	      this.syncKerberosPasswords = defaults.syncKerberosPasswords;
-    	      this.syncNtlmPasswords = defaults.syncNtlmPasswords;
-    	      this.syncOnPremPasswords = defaults.syncOnPremPasswords;
-    	      this.tlsV1 = defaults.tlsV1;
+            $ = new DomainSecuritySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kerberosArmoring(@Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring) {
-            this.kerberosArmoring = kerberosArmoring;
+            $.kerberosArmoring = kerberosArmoring;
             return this;
         }
-        public Builder kerberosArmoring(@Nullable Either<String,KerberosArmoring> kerberosArmoring) {
-            this.kerberosArmoring = Codegen.ofNullable(kerberosArmoring);
-            return this;
+
+        public Builder kerberosArmoring(Either<String,KerberosArmoring> kerberosArmoring) {
+            return kerberosArmoring(Output.of(kerberosArmoring));
         }
+
         public Builder kerberosRc4Encryption(@Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption) {
-            this.kerberosRc4Encryption = kerberosRc4Encryption;
+            $.kerberosRc4Encryption = kerberosRc4Encryption;
             return this;
         }
-        public Builder kerberosRc4Encryption(@Nullable Either<String,KerberosRc4Encryption> kerberosRc4Encryption) {
-            this.kerberosRc4Encryption = Codegen.ofNullable(kerberosRc4Encryption);
-            return this;
+
+        public Builder kerberosRc4Encryption(Either<String,KerberosRc4Encryption> kerberosRc4Encryption) {
+            return kerberosRc4Encryption(Output.of(kerberosRc4Encryption));
         }
+
         public Builder ntlmV1(@Nullable Output<Either<String,NtlmV1>> ntlmV1) {
-            this.ntlmV1 = ntlmV1;
+            $.ntlmV1 = ntlmV1;
             return this;
         }
-        public Builder ntlmV1(@Nullable Either<String,NtlmV1> ntlmV1) {
-            this.ntlmV1 = Codegen.ofNullable(ntlmV1);
-            return this;
+
+        public Builder ntlmV1(Either<String,NtlmV1> ntlmV1) {
+            return ntlmV1(Output.of(ntlmV1));
         }
+
         public Builder syncKerberosPasswords(@Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords) {
-            this.syncKerberosPasswords = syncKerberosPasswords;
+            $.syncKerberosPasswords = syncKerberosPasswords;
             return this;
         }
-        public Builder syncKerberosPasswords(@Nullable Either<String,SyncKerberosPasswords> syncKerberosPasswords) {
-            this.syncKerberosPasswords = Codegen.ofNullable(syncKerberosPasswords);
-            return this;
+
+        public Builder syncKerberosPasswords(Either<String,SyncKerberosPasswords> syncKerberosPasswords) {
+            return syncKerberosPasswords(Output.of(syncKerberosPasswords));
         }
+
         public Builder syncNtlmPasswords(@Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords) {
-            this.syncNtlmPasswords = syncNtlmPasswords;
+            $.syncNtlmPasswords = syncNtlmPasswords;
             return this;
         }
-        public Builder syncNtlmPasswords(@Nullable Either<String,SyncNtlmPasswords> syncNtlmPasswords) {
-            this.syncNtlmPasswords = Codegen.ofNullable(syncNtlmPasswords);
-            return this;
+
+        public Builder syncNtlmPasswords(Either<String,SyncNtlmPasswords> syncNtlmPasswords) {
+            return syncNtlmPasswords(Output.of(syncNtlmPasswords));
         }
+
         public Builder syncOnPremPasswords(@Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords) {
-            this.syncOnPremPasswords = syncOnPremPasswords;
+            $.syncOnPremPasswords = syncOnPremPasswords;
             return this;
         }
-        public Builder syncOnPremPasswords(@Nullable Either<String,SyncOnPremPasswords> syncOnPremPasswords) {
-            this.syncOnPremPasswords = Codegen.ofNullable(syncOnPremPasswords);
-            return this;
+
+        public Builder syncOnPremPasswords(Either<String,SyncOnPremPasswords> syncOnPremPasswords) {
+            return syncOnPremPasswords(Output.of(syncOnPremPasswords));
         }
+
         public Builder tlsV1(@Nullable Output<Either<String,TlsV1>> tlsV1) {
-            this.tlsV1 = tlsV1;
+            $.tlsV1 = tlsV1;
             return this;
         }
-        public Builder tlsV1(@Nullable Either<String,TlsV1> tlsV1) {
-            this.tlsV1 = Codegen.ofNullable(tlsV1);
-            return this;
-        }        public DomainSecuritySettingsArgs build() {
-            return new DomainSecuritySettingsArgs(kerberosArmoring, kerberosRc4Encryption, ntlmV1, syncKerberosPasswords, syncNtlmPasswords, syncOnPremPasswords, tlsV1);
+
+        public Builder tlsV1(Either<String,TlsV1> tlsV1) {
+            return tlsV1(Output.of(tlsV1));
+        }
+
+        public DomainSecuritySettingsArgs build() {
+            $.kerberosArmoring = Codegen.stringProp("kerberosArmoring").left(KerberosArmoring.class).output().arg($.kerberosArmoring).def("Disabled").getNullable();
+            $.kerberosRc4Encryption = Codegen.stringProp("kerberosRc4Encryption").left(KerberosRc4Encryption.class).output().arg($.kerberosRc4Encryption).def("Enabled").getNullable();
+            $.ntlmV1 = Codegen.stringProp("ntlmV1").left(NtlmV1.class).output().arg($.ntlmV1).def("Enabled").getNullable();
+            $.syncKerberosPasswords = Codegen.stringProp("syncKerberosPasswords").left(SyncKerberosPasswords.class).output().arg($.syncKerberosPasswords).def("Enabled").getNullable();
+            $.syncNtlmPasswords = Codegen.stringProp("syncNtlmPasswords").left(SyncNtlmPasswords.class).output().arg($.syncNtlmPasswords).def("Enabled").getNullable();
+            $.syncOnPremPasswords = Codegen.stringProp("syncOnPremPasswords").left(SyncOnPremPasswords.class).output().arg($.syncOnPremPasswords).def("Enabled").getNullable();
+            $.tlsV1 = Codegen.stringProp("tlsV1").left(TlsV1.class).output().arg($.tlsV1).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

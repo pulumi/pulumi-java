@@ -28,7 +28,7 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputs", required=true)
-      private final List<NodeInputResponse> inputs;
+    private List<NodeInputResponse> inputs;
 
     public List<NodeInputResponse> inputs() {
         return this.inputs;
@@ -39,7 +39,7 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -51,7 +51,7 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -62,10 +62,10 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="videoCreationProperties")
-      private final @Nullable VideoCreationPropertiesResponse videoCreationProperties;
+    private @Nullable VideoCreationPropertiesResponse videoCreationProperties;
 
     public Optional<VideoCreationPropertiesResponse> videoCreationProperties() {
-        return this.videoCreationProperties == null ? Optional.empty() : Optional.ofNullable(this.videoCreationProperties);
+        return Optional.ofNullable(this.videoCreationProperties);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="videoName", required=true)
-      private final String videoName;
+    private String videoName;
 
     public String videoName() {
         return this.videoName;
@@ -84,94 +84,82 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="videoPublishingOptions")
-      private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
+    private @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
 
     public Optional<VideoPublishingOptionsResponse> videoPublishingOptions() {
-        return this.videoPublishingOptions == null ? Optional.empty() : Optional.ofNullable(this.videoPublishingOptions);
+        return Optional.ofNullable(this.videoPublishingOptions);
     }
 
-    public VideoSinkResponse(
-        List<NodeInputResponse> inputs,
-        String name,
-        String type,
-        @Nullable VideoCreationPropertiesResponse videoCreationProperties,
-        String videoName,
-        @Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
-        this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.videoCreationProperties = videoCreationProperties;
-        this.videoName = Objects.requireNonNull(videoName, "expected parameter 'videoName' to be non-null");
-        this.videoPublishingOptions = videoPublishingOptions;
-    }
+    private VideoSinkResponse() {}
 
-    private VideoSinkResponse() {
-        this.inputs = List.of();
-        this.name = null;
-        this.type = null;
-        this.videoCreationProperties = null;
-        this.videoName = null;
-        this.videoPublishingOptions = null;
+    private VideoSinkResponse(VideoSinkResponse $) {
+        this.inputs = $.inputs;
+        this.name = $.name;
+        this.type = $.type;
+        this.videoCreationProperties = $.videoCreationProperties;
+        this.videoName = $.videoName;
+        this.videoPublishingOptions = $.videoPublishingOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoSinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<NodeInputResponse> inputs;
-        private String name;
-        private String type;
-        private @Nullable VideoCreationPropertiesResponse videoCreationProperties;
-        private String videoName;
-        private @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
+        private VideoSinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoSinkResponse();
         }
 
         public Builder(VideoSinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputs = defaults.inputs;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.videoCreationProperties = defaults.videoCreationProperties;
-    	      this.videoName = defaults.videoName;
-    	      this.videoPublishingOptions = defaults.videoPublishingOptions;
+            $ = new VideoSinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inputs(List<NodeInputResponse> inputs) {
-            this.inputs = Objects.requireNonNull(inputs);
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(NodeInputResponse... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder videoCreationProperties(@Nullable VideoCreationPropertiesResponse videoCreationProperties) {
-            this.videoCreationProperties = videoCreationProperties;
+            $.videoCreationProperties = videoCreationProperties;
             return this;
         }
+
         public Builder videoName(String videoName) {
-            this.videoName = Objects.requireNonNull(videoName);
+            $.videoName = videoName;
             return this;
         }
+
         public Builder videoPublishingOptions(@Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
-            this.videoPublishingOptions = videoPublishingOptions;
+            $.videoPublishingOptions = videoPublishingOptions;
             return this;
-        }        public VideoSinkResponse build() {
-            return new VideoSinkResponse(inputs, name, type, videoCreationProperties, videoName, videoPublishingOptions);
+        }
+
+        public VideoSinkResponse build() {
+            $.inputs = Objects.requireNonNull($.inputs, "expected parameter 'inputs' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.videoName = Objects.requireNonNull($.videoName, "expected parameter 'videoName' to be non-null");
+            return $;
         }
     }
+
 }

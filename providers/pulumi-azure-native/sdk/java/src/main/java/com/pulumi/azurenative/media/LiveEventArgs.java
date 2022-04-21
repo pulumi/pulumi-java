@@ -12,12 +12,12 @@ import com.pulumi.azurenative.media.inputs.LiveEventTranscriptionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -41,10 +41,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoStart")
-      private final @Nullable Output<Boolean> autoStart;
+    private @Nullable Output<Boolean> autoStart;
 
-    public Output<Boolean> autoStart() {
-        return this.autoStart == null ? Codegen.empty() : this.autoStart;
+    public Optional<Output<Boolean>> autoStart() {
+        return Optional.ofNullable(this.autoStart);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="crossSiteAccessPolicies")
-      private final @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
+    private @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
-    public Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies() {
-        return this.crossSiteAccessPolicies == null ? Codegen.empty() : this.crossSiteAccessPolicies;
+    public Optional<Output<CrossSiteAccessPoliciesArgs>> crossSiteAccessPolicies() {
+        return Optional.ofNullable(this.crossSiteAccessPolicies);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<LiveEventEncodingArgs> encoding;
+    private @Nullable Output<LiveEventEncodingArgs> encoding;
 
-    public Output<LiveEventEncodingArgs> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<LiveEventEncodingArgs>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostnamePrefix")
-      private final @Nullable Output<String> hostnamePrefix;
+    private @Nullable Output<String> hostnamePrefix;
 
-    public Output<String> hostnamePrefix() {
-        return this.hostnamePrefix == null ? Codegen.empty() : this.hostnamePrefix;
+    public Optional<Output<String>> hostnamePrefix() {
+        return Optional.ofNullable(this.hostnamePrefix);
     }
 
     /**
@@ -96,7 +96,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="input", required=true)
-      private final Output<LiveEventInputArgs> input;
+    private Output<LiveEventInputArgs> input;
 
     public Output<LiveEventInputArgs> input() {
         return this.input;
@@ -107,10 +107,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="liveEventName")
-      private final @Nullable Output<String> liveEventName;
+    private @Nullable Output<String> liveEventName;
 
-    public Output<String> liveEventName() {
-        return this.liveEventName == null ? Codegen.empty() : this.liveEventName;
+    public Optional<Output<String>> liveEventName() {
+        return Optional.ofNullable(this.liveEventName);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preview")
-      private final @Nullable Output<LiveEventPreviewArgs> preview;
+    private @Nullable Output<LiveEventPreviewArgs> preview;
 
-    public Output<LiveEventPreviewArgs> preview() {
-        return this.preview == null ? Codegen.empty() : this.preview;
+    public Optional<Output<LiveEventPreviewArgs>> preview() {
+        return Optional.ofNullable(this.preview);
     }
 
     /**
@@ -140,7 +140,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -151,10 +151,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamOptions")
-      private final @Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions;
+    private @Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions;
 
-    public Output<List<Either<String,StreamOptionsFlag>>> streamOptions() {
-        return this.streamOptions == null ? Codegen.empty() : this.streamOptions;
+    public Optional<Output<List<Either<String,StreamOptionsFlag>>>> streamOptions() {
+        return Optional.ofNullable(this.streamOptions);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transcriptions")
-      private final @Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions;
+    private @Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions;
 
-    public Output<List<LiveEventTranscriptionArgs>> transcriptions() {
-        return this.transcriptions == null ? Codegen.empty() : this.transcriptions;
+    public Optional<Output<List<LiveEventTranscriptionArgs>>> transcriptions() {
+        return Optional.ofNullable(this.transcriptions);
     }
 
     /**
@@ -184,238 +184,199 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useStaticHostname")
-      private final @Nullable Output<Boolean> useStaticHostname;
+    private @Nullable Output<Boolean> useStaticHostname;
 
-    public Output<Boolean> useStaticHostname() {
-        return this.useStaticHostname == null ? Codegen.empty() : this.useStaticHostname;
+    public Optional<Output<Boolean>> useStaticHostname() {
+        return Optional.ofNullable(this.useStaticHostname);
     }
 
-    public LiveEventArgs(
-        Output<String> accountName,
-        @Nullable Output<Boolean> autoStart,
-        @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies,
-        @Nullable Output<String> description,
-        @Nullable Output<LiveEventEncodingArgs> encoding,
-        @Nullable Output<String> hostnamePrefix,
-        Output<LiveEventInputArgs> input,
-        @Nullable Output<String> liveEventName,
-        @Nullable Output<String> location,
-        @Nullable Output<LiveEventPreviewArgs> preview,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions,
-        @Nullable Output<Boolean> useStaticHostname) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.autoStart = autoStart;
-        this.crossSiteAccessPolicies = crossSiteAccessPolicies;
-        this.description = description;
-        this.encoding = encoding;
-        this.hostnamePrefix = hostnamePrefix;
-        this.input = Objects.requireNonNull(input, "expected parameter 'input' to be non-null");
-        this.liveEventName = liveEventName;
-        this.location = location;
-        this.preview = preview;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.streamOptions = streamOptions;
-        this.tags = tags;
-        this.transcriptions = transcriptions;
-        this.useStaticHostname = useStaticHostname;
-    }
+    private LiveEventArgs() {}
 
-    private LiveEventArgs() {
-        this.accountName = Codegen.empty();
-        this.autoStart = Codegen.empty();
-        this.crossSiteAccessPolicies = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encoding = Codegen.empty();
-        this.hostnamePrefix = Codegen.empty();
-        this.input = Codegen.empty();
-        this.liveEventName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.preview = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.streamOptions = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transcriptions = Codegen.empty();
-        this.useStaticHostname = Codegen.empty();
+    private LiveEventArgs(LiveEventArgs $) {
+        this.accountName = $.accountName;
+        this.autoStart = $.autoStart;
+        this.crossSiteAccessPolicies = $.crossSiteAccessPolicies;
+        this.description = $.description;
+        this.encoding = $.encoding;
+        this.hostnamePrefix = $.hostnamePrefix;
+        this.input = $.input;
+        this.liveEventName = $.liveEventName;
+        this.location = $.location;
+        this.preview = $.preview;
+        this.resourceGroupName = $.resourceGroupName;
+        this.streamOptions = $.streamOptions;
+        this.tags = $.tags;
+        this.transcriptions = $.transcriptions;
+        this.useStaticHostname = $.useStaticHostname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<Boolean> autoStart;
-        private @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
-        private @Nullable Output<String> description;
-        private @Nullable Output<LiveEventEncodingArgs> encoding;
-        private @Nullable Output<String> hostnamePrefix;
-        private Output<LiveEventInputArgs> input;
-        private @Nullable Output<String> liveEventName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<LiveEventPreviewArgs> preview;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions;
-        private @Nullable Output<Boolean> useStaticHostname;
+        private LiveEventArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventArgs();
         }
 
         public Builder(LiveEventArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.autoStart = defaults.autoStart;
-    	      this.crossSiteAccessPolicies = defaults.crossSiteAccessPolicies;
-    	      this.description = defaults.description;
-    	      this.encoding = defaults.encoding;
-    	      this.hostnamePrefix = defaults.hostnamePrefix;
-    	      this.input = defaults.input;
-    	      this.liveEventName = defaults.liveEventName;
-    	      this.location = defaults.location;
-    	      this.preview = defaults.preview;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.streamOptions = defaults.streamOptions;
-    	      this.tags = defaults.tags;
-    	      this.transcriptions = defaults.transcriptions;
-    	      this.useStaticHostname = defaults.useStaticHostname;
+            $ = new LiveEventArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder autoStart(@Nullable Output<Boolean> autoStart) {
-            this.autoStart = autoStart;
+            $.autoStart = autoStart;
             return this;
         }
-        public Builder autoStart(@Nullable Boolean autoStart) {
-            this.autoStart = Codegen.ofNullable(autoStart);
-            return this;
+
+        public Builder autoStart(Boolean autoStart) {
+            return autoStart(Output.of(autoStart));
         }
+
         public Builder crossSiteAccessPolicies(@Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
-            this.crossSiteAccessPolicies = crossSiteAccessPolicies;
+            $.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
-        public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
-            this.crossSiteAccessPolicies = Codegen.ofNullable(crossSiteAccessPolicies);
-            return this;
+
+        public Builder crossSiteAccessPolicies(CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
+            return crossSiteAccessPolicies(Output.of(crossSiteAccessPolicies));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encoding(@Nullable Output<LiveEventEncodingArgs> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable LiveEventEncodingArgs encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(LiveEventEncodingArgs encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder hostnamePrefix(@Nullable Output<String> hostnamePrefix) {
-            this.hostnamePrefix = hostnamePrefix;
+            $.hostnamePrefix = hostnamePrefix;
             return this;
         }
-        public Builder hostnamePrefix(@Nullable String hostnamePrefix) {
-            this.hostnamePrefix = Codegen.ofNullable(hostnamePrefix);
-            return this;
+
+        public Builder hostnamePrefix(String hostnamePrefix) {
+            return hostnamePrefix(Output.of(hostnamePrefix));
         }
+
         public Builder input(Output<LiveEventInputArgs> input) {
-            this.input = Objects.requireNonNull(input);
+            $.input = input;
             return this;
         }
+
         public Builder input(LiveEventInputArgs input) {
-            this.input = Output.of(Objects.requireNonNull(input));
-            return this;
+            return input(Output.of(input));
         }
+
         public Builder liveEventName(@Nullable Output<String> liveEventName) {
-            this.liveEventName = liveEventName;
+            $.liveEventName = liveEventName;
             return this;
         }
-        public Builder liveEventName(@Nullable String liveEventName) {
-            this.liveEventName = Codegen.ofNullable(liveEventName);
-            return this;
+
+        public Builder liveEventName(String liveEventName) {
+            return liveEventName(Output.of(liveEventName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder preview(@Nullable Output<LiveEventPreviewArgs> preview) {
-            this.preview = preview;
+            $.preview = preview;
             return this;
         }
-        public Builder preview(@Nullable LiveEventPreviewArgs preview) {
-            this.preview = Codegen.ofNullable(preview);
-            return this;
+
+        public Builder preview(LiveEventPreviewArgs preview) {
+            return preview(Output.of(preview));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder streamOptions(@Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions) {
-            this.streamOptions = streamOptions;
+            $.streamOptions = streamOptions;
             return this;
         }
-        public Builder streamOptions(@Nullable List<Either<String,StreamOptionsFlag>> streamOptions) {
-            this.streamOptions = Codegen.ofNullable(streamOptions);
-            return this;
+
+        public Builder streamOptions(List<Either<String,StreamOptionsFlag>> streamOptions) {
+            return streamOptions(Output.of(streamOptions));
         }
+
         public Builder streamOptions(Either<String,StreamOptionsFlag>... streamOptions) {
             return streamOptions(List.of(streamOptions));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder transcriptions(@Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions) {
-            this.transcriptions = transcriptions;
+            $.transcriptions = transcriptions;
             return this;
         }
-        public Builder transcriptions(@Nullable List<LiveEventTranscriptionArgs> transcriptions) {
-            this.transcriptions = Codegen.ofNullable(transcriptions);
-            return this;
+
+        public Builder transcriptions(List<LiveEventTranscriptionArgs> transcriptions) {
+            return transcriptions(Output.of(transcriptions));
         }
+
         public Builder transcriptions(LiveEventTranscriptionArgs... transcriptions) {
             return transcriptions(List.of(transcriptions));
         }
+
         public Builder useStaticHostname(@Nullable Output<Boolean> useStaticHostname) {
-            this.useStaticHostname = useStaticHostname;
+            $.useStaticHostname = useStaticHostname;
             return this;
         }
-        public Builder useStaticHostname(@Nullable Boolean useStaticHostname) {
-            this.useStaticHostname = Codegen.ofNullable(useStaticHostname);
-            return this;
-        }        public LiveEventArgs build() {
-            return new LiveEventArgs(accountName, autoStart, crossSiteAccessPolicies, description, encoding, hostnamePrefix, input, liveEventName, location, preview, resourceGroupName, streamOptions, tags, transcriptions, useStaticHostname);
+
+        public Builder useStaticHostname(Boolean useStaticHostname) {
+            return useStaticHostname(Output.of(useStaticHostname));
+        }
+
+        public LiveEventArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.input = Objects.requireNonNull($.input, "expected parameter 'input' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

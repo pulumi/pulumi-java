@@ -5,9 +5,9 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class TableEncryptionConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final Output<String> kmsKeyName;
+    private Output<String> kmsKeyName;
 
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
@@ -35,63 +35,59 @@ public final class TableEncryptionConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="kmsKeyVersion")
-      private final @Nullable Output<String> kmsKeyVersion;
+    private @Nullable Output<String> kmsKeyVersion;
 
-    public Output<String> kmsKeyVersion() {
-        return this.kmsKeyVersion == null ? Codegen.empty() : this.kmsKeyVersion;
+    public Optional<Output<String>> kmsKeyVersion() {
+        return Optional.ofNullable(this.kmsKeyVersion);
     }
 
-    public TableEncryptionConfigurationArgs(
-        Output<String> kmsKeyName,
-        @Nullable Output<String> kmsKeyVersion) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-        this.kmsKeyVersion = kmsKeyVersion;
-    }
+    private TableEncryptionConfigurationArgs() {}
 
-    private TableEncryptionConfigurationArgs() {
-        this.kmsKeyName = Codegen.empty();
-        this.kmsKeyVersion = Codegen.empty();
+    private TableEncryptionConfigurationArgs(TableEncryptionConfigurationArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
+        this.kmsKeyVersion = $.kmsKeyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kmsKeyName;
-        private @Nullable Output<String> kmsKeyVersion;
+        private TableEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableEncryptionConfigurationArgs();
         }
 
         public Builder(TableEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.kmsKeyVersion = defaults.kmsKeyVersion;
+            $ = new TableEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(Output<String> kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
+
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
-            return this;
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder kmsKeyVersion(@Nullable Output<String> kmsKeyVersion) {
-            this.kmsKeyVersion = kmsKeyVersion;
+            $.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
-        public Builder kmsKeyVersion(@Nullable String kmsKeyVersion) {
-            this.kmsKeyVersion = Codegen.ofNullable(kmsKeyVersion);
-            return this;
-        }        public TableEncryptionConfigurationArgs build() {
-            return new TableEncryptionConfigurationArgs(kmsKeyName, kmsKeyVersion);
+
+        public Builder kmsKeyVersion(String kmsKeyVersion) {
+            return kmsKeyVersion(Output.of(kmsKeyVersion));
+        }
+
+        public TableEncryptionConfigurationArgs build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

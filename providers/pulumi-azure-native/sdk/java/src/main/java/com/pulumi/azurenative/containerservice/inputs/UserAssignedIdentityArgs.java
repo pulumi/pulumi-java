@@ -5,9 +5,9 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public UserAssignedIdentityArgs(
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> objectId,
-        @Nullable Output<String> resourceId) {
-        this.clientId = clientId;
-        this.objectId = objectId;
-        this.resourceId = resourceId;
-    }
+    private UserAssignedIdentityArgs() {}
 
-    private UserAssignedIdentityArgs() {
-        this.clientId = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private UserAssignedIdentityArgs(UserAssignedIdentityArgs $) {
+        this.clientId = $.clientId;
+        this.objectId = $.objectId;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAssignedIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<String> resourceId;
+        private UserAssignedIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAssignedIdentityArgs();
         }
 
         public Builder(UserAssignedIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.objectId = defaults.objectId;
-    	      this.resourceId = defaults.resourceId;
+            $ = new UserAssignedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public UserAssignedIdentityArgs build() {
-            return new UserAssignedIdentityArgs(clientId, objectId, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public UserAssignedIdentityArgs build() {
+            return $;
         }
     }
+
 }

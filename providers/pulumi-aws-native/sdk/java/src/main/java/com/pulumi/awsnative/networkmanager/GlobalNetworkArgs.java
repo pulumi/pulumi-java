@@ -6,10 +6,10 @@ package com.pulumi.awsnative.networkmanager;
 import com.pulumi.awsnative.networkmanager.inputs.GlobalNetworkTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GlobalNetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class GlobalNetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<GlobalNetworkTagArgs>> tags;
+    private @Nullable Output<List<GlobalNetworkTagArgs>> tags;
 
-    public Output<List<GlobalNetworkTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<GlobalNetworkTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GlobalNetworkArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<GlobalNetworkTagArgs>> tags) {
-        this.description = description;
-        this.tags = tags;
-    }
+    private GlobalNetworkArgs() {}
 
-    private GlobalNetworkArgs() {
-        this.description = Codegen.empty();
-        this.tags = Codegen.empty();
+    private GlobalNetworkArgs(GlobalNetworkArgs $) {
+        this.description = $.description;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<GlobalNetworkTagArgs>> tags;
+        private GlobalNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalNetworkArgs();
         }
 
         public Builder(GlobalNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.tags = defaults.tags;
+            $ = new GlobalNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder tags(@Nullable Output<List<GlobalNetworkTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<GlobalNetworkTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<GlobalNetworkTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(GlobalNetworkTagArgs... tags) {
             return tags(List.of(tags));
-        }        public GlobalNetworkArgs build() {
-            return new GlobalNetworkArgs(description, tags);
+        }
+
+        public GlobalNetworkArgs build() {
+            return $;
         }
     }
+
 }

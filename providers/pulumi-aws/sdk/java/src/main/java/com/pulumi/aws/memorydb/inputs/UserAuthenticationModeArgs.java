@@ -5,11 +5,11 @@ package com.pulumi.aws.memorydb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class UserAuthenticationModeArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="passwordCount")
-      private final @Nullable Output<Integer> passwordCount;
+    private @Nullable Output<Integer> passwordCount;
 
-    public Output<Integer> passwordCount() {
-        return this.passwordCount == null ? Codegen.empty() : this.passwordCount;
+    public Optional<Output<Integer>> passwordCount() {
+        return Optional.ofNullable(this.passwordCount);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class UserAuthenticationModeArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="passwords", required=true)
-      private final Output<List<String>> passwords;
+    private Output<List<String>> passwords;
 
     public Output<List<String>> passwords() {
         return this.passwords;
@@ -44,79 +44,74 @@ public final class UserAuthenticationModeArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public UserAuthenticationModeArgs(
-        @Nullable Output<Integer> passwordCount,
-        Output<List<String>> passwords,
-        Output<String> type) {
-        this.passwordCount = passwordCount;
-        this.passwords = Objects.requireNonNull(passwords, "expected parameter 'passwords' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private UserAuthenticationModeArgs() {}
 
-    private UserAuthenticationModeArgs() {
-        this.passwordCount = Codegen.empty();
-        this.passwords = Codegen.empty();
-        this.type = Codegen.empty();
+    private UserAuthenticationModeArgs(UserAuthenticationModeArgs $) {
+        this.passwordCount = $.passwordCount;
+        this.passwords = $.passwords;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAuthenticationModeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> passwordCount;
-        private Output<List<String>> passwords;
-        private Output<String> type;
+        private UserAuthenticationModeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAuthenticationModeArgs();
         }
 
         public Builder(UserAuthenticationModeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.passwordCount = defaults.passwordCount;
-    	      this.passwords = defaults.passwords;
-    	      this.type = defaults.type;
+            $ = new UserAuthenticationModeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder passwordCount(@Nullable Output<Integer> passwordCount) {
-            this.passwordCount = passwordCount;
+            $.passwordCount = passwordCount;
             return this;
         }
-        public Builder passwordCount(@Nullable Integer passwordCount) {
-            this.passwordCount = Codegen.ofNullable(passwordCount);
-            return this;
+
+        public Builder passwordCount(Integer passwordCount) {
+            return passwordCount(Output.of(passwordCount));
         }
+
         public Builder passwords(Output<List<String>> passwords) {
-            this.passwords = Objects.requireNonNull(passwords);
+            $.passwords = passwords;
             return this;
         }
+
         public Builder passwords(List<String> passwords) {
-            this.passwords = Output.of(Objects.requireNonNull(passwords));
-            return this;
+            return passwords(Output.of(passwords));
         }
+
         public Builder passwords(String... passwords) {
             return passwords(List.of(passwords));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public UserAuthenticationModeArgs build() {
-            return new UserAuthenticationModeArgs(passwordCount, passwords, type);
+            return type(Output.of(type));
+        }
+
+        public UserAuthenticationModeArgs build() {
+            $.passwords = Objects.requireNonNull($.passwords, "expected parameter 'passwords' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

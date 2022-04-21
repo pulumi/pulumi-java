@@ -17,45 +17,45 @@ public final class WebACLExcludedRule extends com.pulumi.resources.InvokeArgs {
     public static final WebACLExcludedRule Empty = new WebACLExcludedRule();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public WebACLExcludedRule(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private WebACLExcludedRule() {}
 
-    private WebACLExcludedRule() {
-        this.name = null;
+    private WebACLExcludedRule(WebACLExcludedRule $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLExcludedRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private WebACLExcludedRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLExcludedRule();
         }
 
         public Builder(WebACLExcludedRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new WebACLExcludedRule(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public WebACLExcludedRule build() {
-            return new WebACLExcludedRule(name);
+        }
+
+        public WebACLExcludedRule build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

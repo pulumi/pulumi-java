@@ -24,7 +24,7 @@ public final class AssignmentPrincipalResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -35,10 +35,10 @@ public final class AssignmentPrincipalResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="principalMetadata")
-      private final @Nullable Map<String,String> principalMetadata;
+    private @Nullable Map<String,String> principalMetadata;
 
-    public Map<String,String> principalMetadata() {
-        return this.principalMetadata == null ? Map.of() : this.principalMetadata;
+    public Optional<Map<String,String>> principalMetadata() {
+        return Optional.ofNullable(this.principalMetadata);
     }
 
     /**
@@ -46,64 +46,58 @@ public final class AssignmentPrincipalResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="principalType", required=true)
-      private final String principalType;
+    private String principalType;
 
     public String principalType() {
         return this.principalType;
     }
 
-    public AssignmentPrincipalResponse(
-        String principalId,
-        @Nullable Map<String,String> principalMetadata,
-        String principalType) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalMetadata = principalMetadata;
-        this.principalType = Objects.requireNonNull(principalType, "expected parameter 'principalType' to be non-null");
-    }
+    private AssignmentPrincipalResponse() {}
 
-    private AssignmentPrincipalResponse() {
-        this.principalId = null;
-        this.principalMetadata = Map.of();
-        this.principalType = null;
+    private AssignmentPrincipalResponse(AssignmentPrincipalResponse $) {
+        this.principalId = $.principalId;
+        this.principalMetadata = $.principalMetadata;
+        this.principalType = $.principalType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentPrincipalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String principalId;
-        private @Nullable Map<String,String> principalMetadata;
-        private String principalType;
+        private AssignmentPrincipalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentPrincipalResponse();
         }
 
         public Builder(AssignmentPrincipalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.principalMetadata = defaults.principalMetadata;
-    	      this.principalType = defaults.principalType;
+            $ = new AssignmentPrincipalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalMetadata(@Nullable Map<String,String> principalMetadata) {
-            this.principalMetadata = principalMetadata;
+            $.principalMetadata = principalMetadata;
             return this;
         }
+
         public Builder principalType(String principalType) {
-            this.principalType = Objects.requireNonNull(principalType);
+            $.principalType = principalType;
             return this;
-        }        public AssignmentPrincipalResponse build() {
-            return new AssignmentPrincipalResponse(principalId, principalMetadata, principalType);
+        }
+
+        public AssignmentPrincipalResponse build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.principalType = Objects.requireNonNull($.principalType, "expected parameter 'principalType' to be non-null");
+            return $;
         }
     }
+
 }

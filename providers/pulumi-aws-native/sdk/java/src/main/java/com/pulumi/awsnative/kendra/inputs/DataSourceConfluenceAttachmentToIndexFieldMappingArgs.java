@@ -6,9 +6,9 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.enums.DataSourceConfluenceAttachmentFieldName;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,84 @@ public final class DataSourceConfluenceAttachmentToIndexFieldMappingArgs extends
     public static final DataSourceConfluenceAttachmentToIndexFieldMappingArgs Empty = new DataSourceConfluenceAttachmentToIndexFieldMappingArgs();
 
     @Import(name="dataSourceFieldName", required=true)
-      private final Output<DataSourceConfluenceAttachmentFieldName> dataSourceFieldName;
+    private Output<DataSourceConfluenceAttachmentFieldName> dataSourceFieldName;
 
     public Output<DataSourceConfluenceAttachmentFieldName> dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @Import(name="dateFieldFormat")
-      private final @Nullable Output<String> dateFieldFormat;
+    private @Nullable Output<String> dateFieldFormat;
 
-    public Output<String> dateFieldFormat() {
-        return this.dateFieldFormat == null ? Codegen.empty() : this.dateFieldFormat;
+    public Optional<Output<String>> dateFieldFormat() {
+        return Optional.ofNullable(this.dateFieldFormat);
     }
 
     @Import(name="indexFieldName", required=true)
-      private final Output<String> indexFieldName;
+    private Output<String> indexFieldName;
 
     public Output<String> indexFieldName() {
         return this.indexFieldName;
     }
 
-    public DataSourceConfluenceAttachmentToIndexFieldMappingArgs(
-        Output<DataSourceConfluenceAttachmentFieldName> dataSourceFieldName,
-        @Nullable Output<String> dateFieldFormat,
-        Output<String> indexFieldName) {
-        this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName, "expected parameter 'dataSourceFieldName' to be non-null");
-        this.dateFieldFormat = dateFieldFormat;
-        this.indexFieldName = Objects.requireNonNull(indexFieldName, "expected parameter 'indexFieldName' to be non-null");
-    }
+    private DataSourceConfluenceAttachmentToIndexFieldMappingArgs() {}
 
-    private DataSourceConfluenceAttachmentToIndexFieldMappingArgs() {
-        this.dataSourceFieldName = Codegen.empty();
-        this.dateFieldFormat = Codegen.empty();
-        this.indexFieldName = Codegen.empty();
+    private DataSourceConfluenceAttachmentToIndexFieldMappingArgs(DataSourceConfluenceAttachmentToIndexFieldMappingArgs $) {
+        this.dataSourceFieldName = $.dataSourceFieldName;
+        this.dateFieldFormat = $.dateFieldFormat;
+        this.indexFieldName = $.indexFieldName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfluenceAttachmentToIndexFieldMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DataSourceConfluenceAttachmentFieldName> dataSourceFieldName;
-        private @Nullable Output<String> dateFieldFormat;
-        private Output<String> indexFieldName;
+        private DataSourceConfluenceAttachmentToIndexFieldMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfluenceAttachmentToIndexFieldMappingArgs();
         }
 
         public Builder(DataSourceConfluenceAttachmentToIndexFieldMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceFieldName = defaults.dataSourceFieldName;
-    	      this.dateFieldFormat = defaults.dateFieldFormat;
-    	      this.indexFieldName = defaults.indexFieldName;
+            $ = new DataSourceConfluenceAttachmentToIndexFieldMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceFieldName(Output<DataSourceConfluenceAttachmentFieldName> dataSourceFieldName) {
-            this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
+            $.dataSourceFieldName = dataSourceFieldName;
             return this;
         }
+
         public Builder dataSourceFieldName(DataSourceConfluenceAttachmentFieldName dataSourceFieldName) {
-            this.dataSourceFieldName = Output.of(Objects.requireNonNull(dataSourceFieldName));
-            return this;
+            return dataSourceFieldName(Output.of(dataSourceFieldName));
         }
+
         public Builder dateFieldFormat(@Nullable Output<String> dateFieldFormat) {
-            this.dateFieldFormat = dateFieldFormat;
+            $.dateFieldFormat = dateFieldFormat;
             return this;
         }
-        public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
-            this.dateFieldFormat = Codegen.ofNullable(dateFieldFormat);
-            return this;
+
+        public Builder dateFieldFormat(String dateFieldFormat) {
+            return dateFieldFormat(Output.of(dateFieldFormat));
         }
+
         public Builder indexFieldName(Output<String> indexFieldName) {
-            this.indexFieldName = Objects.requireNonNull(indexFieldName);
+            $.indexFieldName = indexFieldName;
             return this;
         }
+
         public Builder indexFieldName(String indexFieldName) {
-            this.indexFieldName = Output.of(Objects.requireNonNull(indexFieldName));
-            return this;
-        }        public DataSourceConfluenceAttachmentToIndexFieldMappingArgs build() {
-            return new DataSourceConfluenceAttachmentToIndexFieldMappingArgs(dataSourceFieldName, dateFieldFormat, indexFieldName);
+            return indexFieldName(Output.of(indexFieldName));
+        }
+
+        public DataSourceConfluenceAttachmentToIndexFieldMappingArgs build() {
+            $.dataSourceFieldName = Objects.requireNonNull($.dataSourceFieldName, "expected parameter 'dataSourceFieldName' to be non-null");
+            $.indexFieldName = Objects.requireNonNull($.indexFieldName, "expected parameter 'indexFieldName' to be non-null");
+            return $;
         }
     }
+
 }

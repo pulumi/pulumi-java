@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ssmincidents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ResponsePlanChatChannelArgs extends com.pulumi.resources.Reso
     public static final ResponsePlanChatChannelArgs Empty = new ResponsePlanChatChannelArgs();
 
     @Import(name="chatbotSns")
-      private final @Nullable Output<List<String>> chatbotSns;
+    private @Nullable Output<List<String>> chatbotSns;
 
-    public Output<List<String>> chatbotSns() {
-        return this.chatbotSns == null ? Codegen.empty() : this.chatbotSns;
+    public Optional<Output<List<String>>> chatbotSns() {
+        return Optional.ofNullable(this.chatbotSns);
     }
 
-    public ResponsePlanChatChannelArgs(@Nullable Output<List<String>> chatbotSns) {
-        this.chatbotSns = chatbotSns;
-    }
+    private ResponsePlanChatChannelArgs() {}
 
-    private ResponsePlanChatChannelArgs() {
-        this.chatbotSns = Codegen.empty();
+    private ResponsePlanChatChannelArgs(ResponsePlanChatChannelArgs $) {
+        this.chatbotSns = $.chatbotSns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanChatChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> chatbotSns;
+        private ResponsePlanChatChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanChatChannelArgs();
         }
 
         public Builder(ResponsePlanChatChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chatbotSns = defaults.chatbotSns;
+            $ = new ResponsePlanChatChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder chatbotSns(@Nullable Output<List<String>> chatbotSns) {
-            this.chatbotSns = chatbotSns;
+            $.chatbotSns = chatbotSns;
             return this;
         }
-        public Builder chatbotSns(@Nullable List<String> chatbotSns) {
-            this.chatbotSns = Codegen.ofNullable(chatbotSns);
-            return this;
+
+        public Builder chatbotSns(List<String> chatbotSns) {
+            return chatbotSns(Output.of(chatbotSns));
         }
+
         public Builder chatbotSns(String... chatbotSns) {
             return chatbotSns(List.of(chatbotSns));
-        }        public ResponsePlanChatChannelArgs build() {
-            return new ResponsePlanChatChannelArgs(chatbotSns);
+        }
+
+        public ResponsePlanChatChannelArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationName", required=true)
-      private final String automationName;
+    private String automationName;
 
     public String automationName() {
         return this.automationName;
@@ -28,55 +28,52 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAutomationArgs(
-        String automationName,
-        String resourceGroupName) {
-        this.automationName = Objects.requireNonNull(automationName, "expected parameter 'automationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAutomationArgs() {}
 
-    private GetAutomationArgs() {
-        this.automationName = null;
-        this.resourceGroupName = null;
+    private GetAutomationArgs(GetAutomationArgs $) {
+        this.automationName = $.automationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAutomationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationName;
-        private String resourceGroupName;
+        private GetAutomationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAutomationArgs();
         }
 
         public Builder(GetAutomationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationName = defaults.automationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAutomationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationName(String automationName) {
-            this.automationName = Objects.requireNonNull(automationName);
+            $.automationName = automationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAutomationArgs build() {
-            return new GetAutomationArgs(automationName, resourceGroupName);
+        }
+
+        public GetAutomationArgs build() {
+            $.automationName = Objects.requireNonNull($.automationName, "expected parameter 'automationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

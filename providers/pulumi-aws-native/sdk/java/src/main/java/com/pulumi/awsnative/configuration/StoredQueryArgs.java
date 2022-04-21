@@ -6,10 +6,10 @@ package com.pulumi.awsnative.configuration;
 import com.pulumi.awsnative.configuration.inputs.StoredQueryTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,21 +18,21 @@ public final class StoredQueryArgs extends com.pulumi.resources.ResourceArgs {
     public static final StoredQueryArgs Empty = new StoredQueryArgs();
 
     @Import(name="queryDescription")
-      private final @Nullable Output<String> queryDescription;
+    private @Nullable Output<String> queryDescription;
 
-    public Output<String> queryDescription() {
-        return this.queryDescription == null ? Codegen.empty() : this.queryDescription;
+    public Optional<Output<String>> queryDescription() {
+        return Optional.ofNullable(this.queryDescription);
     }
 
     @Import(name="queryExpression", required=true)
-      private final Output<String> queryExpression;
+    private Output<String> queryExpression;
 
     public Output<String> queryExpression() {
         return this.queryExpression;
     }
 
     @Import(name="queryName", required=true)
-      private final Output<String> queryName;
+    private Output<String> queryName;
 
     public Output<String> queryName() {
         return this.queryName;
@@ -43,92 +43,84 @@ public final class StoredQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<StoredQueryTagArgs>> tags;
+    private @Nullable Output<List<StoredQueryTagArgs>> tags;
 
-    public Output<List<StoredQueryTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<StoredQueryTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public StoredQueryArgs(
-        @Nullable Output<String> queryDescription,
-        Output<String> queryExpression,
-        Output<String> queryName,
-        @Nullable Output<List<StoredQueryTagArgs>> tags) {
-        this.queryDescription = queryDescription;
-        this.queryExpression = Objects.requireNonNull(queryExpression, "expected parameter 'queryExpression' to be non-null");
-        this.queryName = Objects.requireNonNull(queryName, "expected parameter 'queryName' to be non-null");
-        this.tags = tags;
-    }
+    private StoredQueryArgs() {}
 
-    private StoredQueryArgs() {
-        this.queryDescription = Codegen.empty();
-        this.queryExpression = Codegen.empty();
-        this.queryName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private StoredQueryArgs(StoredQueryArgs $) {
+        this.queryDescription = $.queryDescription;
+        this.queryExpression = $.queryExpression;
+        this.queryName = $.queryName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StoredQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> queryDescription;
-        private Output<String> queryExpression;
-        private Output<String> queryName;
-        private @Nullable Output<List<StoredQueryTagArgs>> tags;
+        private StoredQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StoredQueryArgs();
         }
 
         public Builder(StoredQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryDescription = defaults.queryDescription;
-    	      this.queryExpression = defaults.queryExpression;
-    	      this.queryName = defaults.queryName;
-    	      this.tags = defaults.tags;
+            $ = new StoredQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queryDescription(@Nullable Output<String> queryDescription) {
-            this.queryDescription = queryDescription;
+            $.queryDescription = queryDescription;
             return this;
         }
-        public Builder queryDescription(@Nullable String queryDescription) {
-            this.queryDescription = Codegen.ofNullable(queryDescription);
-            return this;
+
+        public Builder queryDescription(String queryDescription) {
+            return queryDescription(Output.of(queryDescription));
         }
+
         public Builder queryExpression(Output<String> queryExpression) {
-            this.queryExpression = Objects.requireNonNull(queryExpression);
+            $.queryExpression = queryExpression;
             return this;
         }
+
         public Builder queryExpression(String queryExpression) {
-            this.queryExpression = Output.of(Objects.requireNonNull(queryExpression));
-            return this;
+            return queryExpression(Output.of(queryExpression));
         }
+
         public Builder queryName(Output<String> queryName) {
-            this.queryName = Objects.requireNonNull(queryName);
+            $.queryName = queryName;
             return this;
         }
+
         public Builder queryName(String queryName) {
-            this.queryName = Output.of(Objects.requireNonNull(queryName));
-            return this;
+            return queryName(Output.of(queryName));
         }
+
         public Builder tags(@Nullable Output<List<StoredQueryTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<StoredQueryTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<StoredQueryTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(StoredQueryTagArgs... tags) {
             return tags(List.of(tags));
-        }        public StoredQueryArgs build() {
-            return new StoredQueryArgs(queryDescription, queryExpression, queryName, tags);
+        }
+
+        public StoredQueryArgs build() {
+            $.queryExpression = Objects.requireNonNull($.queryExpression, "expected parameter 'queryExpression' to be non-null");
+            $.queryName = Objects.requireNonNull($.queryName, "expected parameter 'queryName' to be non-null");
+            return $;
         }
     }
+
 }

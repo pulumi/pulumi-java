@@ -5,11 +5,11 @@ package com.pulumi.googlenative.domains_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.domains_v1beta1.enums.AuditLogConfigLogType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AuditLogConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="exemptedMembers")
-      private final @Nullable Output<List<String>> exemptedMembers;
+    private @Nullable Output<List<String>> exemptedMembers;
 
-    public Output<List<String>> exemptedMembers() {
-        return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
+    public Optional<Output<List<String>>> exemptedMembers() {
+        return Optional.ofNullable(this.exemptedMembers);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class AuditLogConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="logType")
-      private final @Nullable Output<AuditLogConfigLogType> logType;
+    private @Nullable Output<AuditLogConfigLogType> logType;
 
-    public Output<AuditLogConfigLogType> logType() {
-        return this.logType == null ? Codegen.empty() : this.logType;
+    public Optional<Output<AuditLogConfigLogType>> logType() {
+        return Optional.ofNullable(this.logType);
     }
 
-    public AuditLogConfigArgs(
-        @Nullable Output<List<String>> exemptedMembers,
-        @Nullable Output<AuditLogConfigLogType> logType) {
-        this.exemptedMembers = exemptedMembers;
-        this.logType = logType;
-    }
+    private AuditLogConfigArgs() {}
 
-    private AuditLogConfigArgs() {
-        this.exemptedMembers = Codegen.empty();
-        this.logType = Codegen.empty();
+    private AuditLogConfigArgs(AuditLogConfigArgs $) {
+        this.exemptedMembers = $.exemptedMembers;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuditLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> exemptedMembers;
-        private @Nullable Output<AuditLogConfigLogType> logType;
+        private AuditLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuditLogConfigArgs();
         }
 
         public Builder(AuditLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exemptedMembers = defaults.exemptedMembers;
-    	      this.logType = defaults.logType;
+            $ = new AuditLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
-            this.exemptedMembers = exemptedMembers;
+            $.exemptedMembers = exemptedMembers;
             return this;
         }
-        public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Codegen.ofNullable(exemptedMembers);
-            return this;
+
+        public Builder exemptedMembers(List<String> exemptedMembers) {
+            return exemptedMembers(Output.of(exemptedMembers));
         }
+
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
+
         public Builder logType(@Nullable Output<AuditLogConfigLogType> logType) {
-            this.logType = logType;
+            $.logType = logType;
             return this;
         }
-        public Builder logType(@Nullable AuditLogConfigLogType logType) {
-            this.logType = Codegen.ofNullable(logType);
-            return this;
-        }        public AuditLogConfigArgs build() {
-            return new AuditLogConfigArgs(exemptedMembers, logType);
+
+        public Builder logType(AuditLogConfigLogType logType) {
+            return logType(Output.of(logType));
+        }
+
+        public AuditLogConfigArgs build() {
+            return $;
         }
     }
+
 }

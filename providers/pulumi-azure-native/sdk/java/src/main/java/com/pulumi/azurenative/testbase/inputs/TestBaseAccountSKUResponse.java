@@ -25,7 +25,7 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="capabilities", required=true)
-      private final List<TestBaseAccountSKUCapabilityResponse> capabilities;
+    private List<TestBaseAccountSKUCapabilityResponse> capabilities;
 
     public List<TestBaseAccountSKUCapabilityResponse> capabilities() {
         return this.capabilities;
@@ -36,10 +36,10 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="locations")
-      private final @Nullable List<String> locations;
+    private @Nullable List<String> locations;
 
-    public List<String> locations() {
-        return this.locations == null ? List.of() : this.locations;
+    public Optional<List<String>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -58,10 +58,10 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable String resourceType;
+    private @Nullable String resourceType;
 
     public Optional<String> resourceType() {
-        return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -69,88 +69,79 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tier", required=true)
-      private final String tier;
+    private String tier;
 
     public String tier() {
         return this.tier;
     }
 
-    public TestBaseAccountSKUResponse(
-        List<TestBaseAccountSKUCapabilityResponse> capabilities,
-        @Nullable List<String> locations,
-        String name,
-        @Nullable String resourceType,
-        String tier) {
-        this.capabilities = Objects.requireNonNull(capabilities, "expected parameter 'capabilities' to be non-null");
-        this.locations = locations;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceType = resourceType;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private TestBaseAccountSKUResponse() {}
 
-    private TestBaseAccountSKUResponse() {
-        this.capabilities = List.of();
-        this.locations = List.of();
-        this.name = null;
-        this.resourceType = null;
-        this.tier = null;
+    private TestBaseAccountSKUResponse(TestBaseAccountSKUResponse $) {
+        this.capabilities = $.capabilities;
+        this.locations = $.locations;
+        this.name = $.name;
+        this.resourceType = $.resourceType;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestBaseAccountSKUResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<TestBaseAccountSKUCapabilityResponse> capabilities;
-        private @Nullable List<String> locations;
-        private String name;
-        private @Nullable String resourceType;
-        private String tier;
+        private TestBaseAccountSKUResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestBaseAccountSKUResponse();
         }
 
         public Builder(TestBaseAccountSKUResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capabilities = defaults.capabilities;
-    	      this.locations = defaults.locations;
-    	      this.name = defaults.name;
-    	      this.resourceType = defaults.resourceType;
-    	      this.tier = defaults.tier;
+            $ = new TestBaseAccountSKUResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capabilities(List<TestBaseAccountSKUCapabilityResponse> capabilities) {
-            this.capabilities = Objects.requireNonNull(capabilities);
+            $.capabilities = capabilities;
             return this;
         }
+
         public Builder capabilities(TestBaseAccountSKUCapabilityResponse... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
-        }        public TestBaseAccountSKUResponse build() {
-            return new TestBaseAccountSKUResponse(capabilities, locations, name, resourceType, tier);
+        }
+
+        public TestBaseAccountSKUResponse build() {
+            $.capabilities = Objects.requireNonNull($.capabilities, "expected parameter 'capabilities' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

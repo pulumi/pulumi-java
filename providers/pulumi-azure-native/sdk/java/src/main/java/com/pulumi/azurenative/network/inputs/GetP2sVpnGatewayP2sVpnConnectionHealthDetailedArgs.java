@@ -20,7 +20,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
      * 
      */
     @Import(name="gatewayName", required=true)
-      private final String gatewayName;
+    private String gatewayName;
 
     public String gatewayName() {
         return this.gatewayName;
@@ -31,10 +31,10 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
      * 
      */
     @Import(name="outputBlobSasUrl")
-      private final @Nullable String outputBlobSasUrl;
+    private @Nullable String outputBlobSasUrl;
 
     public Optional<String> outputBlobSasUrl() {
-        return this.outputBlobSasUrl == null ? Optional.empty() : Optional.ofNullable(this.outputBlobSasUrl);
+        return Optional.ofNullable(this.outputBlobSasUrl);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -53,76 +53,68 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
      * 
      */
     @Import(name="vpnUserNamesFilter")
-      private final @Nullable List<String> vpnUserNamesFilter;
+    private @Nullable List<String> vpnUserNamesFilter;
 
-    public List<String> vpnUserNamesFilter() {
-        return this.vpnUserNamesFilter == null ? List.of() : this.vpnUserNamesFilter;
+    public Optional<List<String>> vpnUserNamesFilter() {
+        return Optional.ofNullable(this.vpnUserNamesFilter);
     }
 
-    public GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs(
-        String gatewayName,
-        @Nullable String outputBlobSasUrl,
-        String resourceGroupName,
-        @Nullable List<String> vpnUserNamesFilter) {
-        this.gatewayName = Objects.requireNonNull(gatewayName, "expected parameter 'gatewayName' to be non-null");
-        this.outputBlobSasUrl = outputBlobSasUrl;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vpnUserNamesFilter = vpnUserNamesFilter;
-    }
+    private GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs() {}
 
-    private GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs() {
-        this.gatewayName = null;
-        this.outputBlobSasUrl = null;
-        this.resourceGroupName = null;
-        this.vpnUserNamesFilter = List.of();
+    private GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs(GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs $) {
+        this.gatewayName = $.gatewayName;
+        this.outputBlobSasUrl = $.outputBlobSasUrl;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vpnUserNamesFilter = $.vpnUserNamesFilter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayName;
-        private @Nullable String outputBlobSasUrl;
-        private String resourceGroupName;
-        private @Nullable List<String> vpnUserNamesFilter;
+        private GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs();
         }
 
         public Builder(GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.outputBlobSasUrl = defaults.outputBlobSasUrl;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vpnUserNamesFilter = defaults.vpnUserNamesFilter;
+            $ = new GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayName(String gatewayName) {
-            this.gatewayName = Objects.requireNonNull(gatewayName);
+            $.gatewayName = gatewayName;
             return this;
         }
+
         public Builder outputBlobSasUrl(@Nullable String outputBlobSasUrl) {
-            this.outputBlobSasUrl = outputBlobSasUrl;
+            $.outputBlobSasUrl = outputBlobSasUrl;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vpnUserNamesFilter(@Nullable List<String> vpnUserNamesFilter) {
-            this.vpnUserNamesFilter = vpnUserNamesFilter;
+            $.vpnUserNamesFilter = vpnUserNamesFilter;
             return this;
         }
+
         public Builder vpnUserNamesFilter(String... vpnUserNamesFilter) {
             return vpnUserNamesFilter(List.of(vpnUserNamesFilter));
-        }        public GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs build() {
-            return new GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs(gatewayName, outputBlobSasUrl, resourceGroupName, vpnUserNamesFilter);
+        }
+
+        public GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs build() {
+            $.gatewayName = Objects.requireNonNull($.gatewayName, "expected parameter 'gatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
-    public EncryptionConfigArgs(@Nullable Output<String> kmsKey) {
-        this.kmsKey = kmsKey;
-    }
+    private EncryptionConfigArgs() {}
 
-    private EncryptionConfigArgs() {
-        this.kmsKey = Codegen.empty();
+    private EncryptionConfigArgs(EncryptionConfigArgs $) {
+        this.kmsKey = $.kmsKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKey;
+        private EncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigArgs();
         }
 
         public Builder(EncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKey = defaults.kmsKey;
+            $ = new EncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
-        }        public EncryptionConfigArgs build() {
-            return new EncryptionConfigArgs(kmsKey);
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
+        }
+
+        public EncryptionConfigArgs build() {
+            return $;
         }
     }
+
 }

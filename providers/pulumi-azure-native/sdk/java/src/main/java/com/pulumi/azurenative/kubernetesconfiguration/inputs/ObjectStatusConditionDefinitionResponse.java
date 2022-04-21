@@ -23,10 +23,10 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="lastTransitionTime")
-      private final @Nullable String lastTransitionTime;
+    private @Nullable String lastTransitionTime;
 
     public Optional<String> lastTransitionTime() {
-        return this.lastTransitionTime == null ? Optional.empty() : Optional.ofNullable(this.lastTransitionTime);
+        return Optional.ofNullable(this.lastTransitionTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="reason")
-      private final @Nullable String reason;
+    private @Nullable String reason;
 
     public Optional<String> reason() {
-        return this.reason == null ? Optional.empty() : Optional.ofNullable(this.reason);
+        return Optional.ofNullable(this.reason);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ObjectStatusConditionDefinitionResponse(
-        @Nullable String lastTransitionTime,
-        @Nullable String message,
-        @Nullable String reason,
-        @Nullable String status,
-        @Nullable String type) {
-        this.lastTransitionTime = lastTransitionTime;
-        this.message = message;
-        this.reason = reason;
-        this.status = status;
-        this.type = type;
-    }
+    private ObjectStatusConditionDefinitionResponse() {}
 
-    private ObjectStatusConditionDefinitionResponse() {
-        this.lastTransitionTime = null;
-        this.message = null;
-        this.reason = null;
-        this.status = null;
-        this.type = null;
+    private ObjectStatusConditionDefinitionResponse(ObjectStatusConditionDefinitionResponse $) {
+        this.lastTransitionTime = $.lastTransitionTime;
+        this.message = $.message;
+        this.reason = $.reason;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectStatusConditionDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String lastTransitionTime;
-        private @Nullable String message;
-        private @Nullable String reason;
-        private @Nullable String status;
-        private @Nullable String type;
+        private ObjectStatusConditionDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectStatusConditionDefinitionResponse();
         }
 
         public Builder(ObjectStatusConditionDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastTransitionTime = defaults.lastTransitionTime;
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new ObjectStatusConditionDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
-            this.lastTransitionTime = lastTransitionTime;
+            $.lastTransitionTime = lastTransitionTime;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder reason(@Nullable String reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ObjectStatusConditionDefinitionResponse build() {
-            return new ObjectStatusConditionDefinitionResponse(lastTransitionTime, message, reason, status, type);
+        }
+
+        public ObjectStatusConditionDefinitionResponse build() {
+            return $;
         }
     }
+
 }

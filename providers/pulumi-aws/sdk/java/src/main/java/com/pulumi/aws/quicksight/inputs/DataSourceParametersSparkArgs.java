@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class DataSourceParametersSparkArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
@@ -31,63 +30,60 @@ public final class DataSourceParametersSparkArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
     }
 
-    public DataSourceParametersSparkArgs(
-        Output<String> host,
-        Output<Integer> port) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private DataSourceParametersSparkArgs() {}
 
-    private DataSourceParametersSparkArgs() {
-        this.host = Codegen.empty();
-        this.port = Codegen.empty();
+    private DataSourceParametersSparkArgs(DataSourceParametersSparkArgs $) {
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersSparkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> host;
-        private Output<Integer> port;
+        private DataSourceParametersSparkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersSparkArgs();
         }
 
         public Builder(DataSourceParametersSparkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new DataSourceParametersSparkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
-        }        public DataSourceParametersSparkArgs build() {
-            return new DataSourceParametersSparkArgs(host, port);
+            return port(Output.of(port));
+        }
+
+        public DataSourceParametersSparkArgs build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

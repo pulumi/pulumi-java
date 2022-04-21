@@ -6,11 +6,11 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLCustomHTTPHeaderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,14 +27,14 @@ public final class WebACLCustomResponseArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="customResponseBodyKey")
-      private final @Nullable Output<String> customResponseBodyKey;
+    private @Nullable Output<String> customResponseBodyKey;
 
-    public Output<String> customResponseBodyKey() {
-        return this.customResponseBodyKey == null ? Codegen.empty() : this.customResponseBodyKey;
+    public Optional<Output<String>> customResponseBodyKey() {
+        return Optional.ofNullable(this.customResponseBodyKey);
     }
 
     @Import(name="responseCode", required=true)
-      private final Output<Integer> responseCode;
+    private Output<Integer> responseCode;
 
     public Output<Integer> responseCode() {
         return this.responseCode;
@@ -45,79 +45,73 @@ public final class WebACLCustomResponseArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="responseHeaders")
-      private final @Nullable Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders;
+    private @Nullable Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders;
 
-    public Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders() {
-        return this.responseHeaders == null ? Codegen.empty() : this.responseHeaders;
+    public Optional<Output<List<WebACLCustomHTTPHeaderArgs>>> responseHeaders() {
+        return Optional.ofNullable(this.responseHeaders);
     }
 
-    public WebACLCustomResponseArgs(
-        @Nullable Output<String> customResponseBodyKey,
-        Output<Integer> responseCode,
-        @Nullable Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders) {
-        this.customResponseBodyKey = customResponseBodyKey;
-        this.responseCode = Objects.requireNonNull(responseCode, "expected parameter 'responseCode' to be non-null");
-        this.responseHeaders = responseHeaders;
-    }
+    private WebACLCustomResponseArgs() {}
 
-    private WebACLCustomResponseArgs() {
-        this.customResponseBodyKey = Codegen.empty();
-        this.responseCode = Codegen.empty();
-        this.responseHeaders = Codegen.empty();
+    private WebACLCustomResponseArgs(WebACLCustomResponseArgs $) {
+        this.customResponseBodyKey = $.customResponseBodyKey;
+        this.responseCode = $.responseCode;
+        this.responseHeaders = $.responseHeaders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLCustomResponseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customResponseBodyKey;
-        private Output<Integer> responseCode;
-        private @Nullable Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders;
+        private WebACLCustomResponseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLCustomResponseArgs();
         }
 
         public Builder(WebACLCustomResponseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customResponseBodyKey = defaults.customResponseBodyKey;
-    	      this.responseCode = defaults.responseCode;
-    	      this.responseHeaders = defaults.responseHeaders;
+            $ = new WebACLCustomResponseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customResponseBodyKey(@Nullable Output<String> customResponseBodyKey) {
-            this.customResponseBodyKey = customResponseBodyKey;
+            $.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
-        public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
-            this.customResponseBodyKey = Codegen.ofNullable(customResponseBodyKey);
-            return this;
+
+        public Builder customResponseBodyKey(String customResponseBodyKey) {
+            return customResponseBodyKey(Output.of(customResponseBodyKey));
         }
+
         public Builder responseCode(Output<Integer> responseCode) {
-            this.responseCode = Objects.requireNonNull(responseCode);
+            $.responseCode = responseCode;
             return this;
         }
+
         public Builder responseCode(Integer responseCode) {
-            this.responseCode = Output.of(Objects.requireNonNull(responseCode));
-            return this;
+            return responseCode(Output.of(responseCode));
         }
+
         public Builder responseHeaders(@Nullable Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders) {
-            this.responseHeaders = responseHeaders;
+            $.responseHeaders = responseHeaders;
             return this;
         }
-        public Builder responseHeaders(@Nullable List<WebACLCustomHTTPHeaderArgs> responseHeaders) {
-            this.responseHeaders = Codegen.ofNullable(responseHeaders);
-            return this;
+
+        public Builder responseHeaders(List<WebACLCustomHTTPHeaderArgs> responseHeaders) {
+            return responseHeaders(Output.of(responseHeaders));
         }
+
         public Builder responseHeaders(WebACLCustomHTTPHeaderArgs... responseHeaders) {
             return responseHeaders(List.of(responseHeaders));
-        }        public WebACLCustomResponseArgs build() {
-            return new WebACLCustomResponseArgs(customResponseBodyKey, responseCode, responseHeaders);
+        }
+
+        public WebACLCustomResponseArgs build() {
+            $.responseCode = Objects.requireNonNull($.responseCode, "expected parameter 'responseCode' to be non-null");
+            return $;
         }
     }
+
 }

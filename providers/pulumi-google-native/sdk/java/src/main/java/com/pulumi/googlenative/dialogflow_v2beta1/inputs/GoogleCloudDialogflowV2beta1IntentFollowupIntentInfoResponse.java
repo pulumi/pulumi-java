@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse 
      * 
      */
     @Import(name="followupIntentName", required=true)
-      private final String followupIntentName;
+    private String followupIntentName;
 
     public String followupIntentName() {
         return this.followupIntentName;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse 
      * 
      */
     @Import(name="parentFollowupIntentName", required=true)
-      private final String parentFollowupIntentName;
+    private String parentFollowupIntentName;
 
     public String parentFollowupIntentName() {
         return this.parentFollowupIntentName;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse(
-        String followupIntentName,
-        String parentFollowupIntentName) {
-        this.followupIntentName = Objects.requireNonNull(followupIntentName, "expected parameter 'followupIntentName' to be non-null");
-        this.parentFollowupIntentName = Objects.requireNonNull(parentFollowupIntentName, "expected parameter 'parentFollowupIntentName' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse() {
-        this.followupIntentName = null;
-        this.parentFollowupIntentName = null;
+    private GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse(GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse $) {
+        this.followupIntentName = $.followupIntentName;
+        this.parentFollowupIntentName = $.parentFollowupIntentName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String followupIntentName;
-        private String parentFollowupIntentName;
+        private GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.followupIntentName = defaults.followupIntentName;
-    	      this.parentFollowupIntentName = defaults.parentFollowupIntentName;
+            $ = new GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder followupIntentName(String followupIntentName) {
-            this.followupIntentName = Objects.requireNonNull(followupIntentName);
+            $.followupIntentName = followupIntentName;
             return this;
         }
+
         public Builder parentFollowupIntentName(String parentFollowupIntentName) {
-            this.parentFollowupIntentName = Objects.requireNonNull(parentFollowupIntentName);
+            $.parentFollowupIntentName = parentFollowupIntentName;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse(followupIntentName, parentFollowupIntentName);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse build() {
+            $.followupIntentName = Objects.requireNonNull($.followupIntentName, "expected parameter 'followupIntentName' to be non-null");
+            $.parentFollowupIntentName = Objects.requireNonNull($.parentFollowupIntentName, "expected parameter 'parentFollowupIntentName' to be non-null");
+            return $;
         }
     }
+
 }

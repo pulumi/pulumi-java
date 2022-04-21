@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class NotificationRecipientUserArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="notificationName", required=true)
-      private final Output<String> notificationName;
+    private Output<String> notificationName;
 
     public Output<String> notificationName() {
         return this.notificationName;
@@ -31,7 +31,7 @@ public final class NotificationRecipientUserArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class NotificationRecipientUserArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -53,89 +53,81 @@ public final class NotificationRecipientUserArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="userId")
-      private final @Nullable Output<String> userId;
+    private @Nullable Output<String> userId;
 
-    public Output<String> userId() {
-        return this.userId == null ? Codegen.empty() : this.userId;
+    public Optional<Output<String>> userId() {
+        return Optional.ofNullable(this.userId);
     }
 
-    public NotificationRecipientUserArgs(
-        Output<String> notificationName,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<String> userId) {
-        this.notificationName = Objects.requireNonNull(notificationName, "expected parameter 'notificationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.userId = userId;
-    }
+    private NotificationRecipientUserArgs() {}
 
-    private NotificationRecipientUserArgs() {
-        this.notificationName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.userId = Codegen.empty();
+    private NotificationRecipientUserArgs(NotificationRecipientUserArgs $) {
+        this.notificationName = $.notificationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationRecipientUserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> notificationName;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<String> userId;
+        private NotificationRecipientUserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationRecipientUserArgs();
         }
 
         public Builder(NotificationRecipientUserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notificationName = defaults.notificationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.userId = defaults.userId;
+            $ = new NotificationRecipientUserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notificationName(Output<String> notificationName) {
-            this.notificationName = Objects.requireNonNull(notificationName);
+            $.notificationName = notificationName;
             return this;
         }
+
         public Builder notificationName(String notificationName) {
-            this.notificationName = Output.of(Objects.requireNonNull(notificationName));
-            return this;
+            return notificationName(Output.of(notificationName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder userId(@Nullable Output<String> userId) {
-            this.userId = userId;
+            $.userId = userId;
             return this;
         }
-        public Builder userId(@Nullable String userId) {
-            this.userId = Codegen.ofNullable(userId);
-            return this;
-        }        public NotificationRecipientUserArgs build() {
-            return new NotificationRecipientUserArgs(notificationName, resourceGroupName, serviceName, userId);
+
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
+        }
+
+        public NotificationRecipientUserArgs build() {
+            $.notificationName = Objects.requireNonNull($.notificationName, "expected parameter 'notificationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

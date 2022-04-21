@@ -24,7 +24,7 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,55 +35,51 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="plan")
-      private final @Nullable ResourceReferenceResponse plan;
+    private @Nullable ResourceReferenceResponse plan;
 
     public Optional<ResourceReferenceResponse> plan() {
-        return this.plan == null ? Optional.empty() : Optional.ofNullable(this.plan);
+        return Optional.ofNullable(this.plan);
     }
 
-    public SkuResponse(
-        String name,
-        @Nullable ResourceReferenceResponse plan) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.plan = plan;
-    }
+    private SkuResponse() {}
 
-    private SkuResponse() {
-        this.name = null;
-        this.plan = null;
+    private SkuResponse(SkuResponse $) {
+        this.name = $.name;
+        this.plan = $.plan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable ResourceReferenceResponse plan;
+        private SkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuResponse();
         }
 
         public Builder(SkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.plan = defaults.plan;
+            $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder plan(@Nullable ResourceReferenceResponse plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
-        }        public SkuResponse build() {
-            return new SkuResponse(name, plan);
+        }
+
+        public SkuResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

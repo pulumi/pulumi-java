@@ -5,10 +5,10 @@ package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressFromArgs;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressToArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IngressPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingressFrom")
-      private final @Nullable Output<IngressFromArgs> ingressFrom;
+    private @Nullable Output<IngressFromArgs> ingressFrom;
 
-    public Output<IngressFromArgs> ingressFrom() {
-        return this.ingressFrom == null ? Codegen.empty() : this.ingressFrom;
+    public Optional<Output<IngressFromArgs>> ingressFrom() {
+        return Optional.ofNullable(this.ingressFrom);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class IngressPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingressTo")
-      private final @Nullable Output<IngressToArgs> ingressTo;
+    private @Nullable Output<IngressToArgs> ingressTo;
 
-    public Output<IngressToArgs> ingressTo() {
-        return this.ingressTo == null ? Codegen.empty() : this.ingressTo;
+    public Optional<Output<IngressToArgs>> ingressTo() {
+        return Optional.ofNullable(this.ingressTo);
     }
 
-    public IngressPolicyArgs(
-        @Nullable Output<IngressFromArgs> ingressFrom,
-        @Nullable Output<IngressToArgs> ingressTo) {
-        this.ingressFrom = ingressFrom;
-        this.ingressTo = ingressTo;
-    }
+    private IngressPolicyArgs() {}
 
-    private IngressPolicyArgs() {
-        this.ingressFrom = Codegen.empty();
-        this.ingressTo = Codegen.empty();
+    private IngressPolicyArgs(IngressPolicyArgs $) {
+        this.ingressFrom = $.ingressFrom;
+        this.ingressTo = $.ingressTo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IngressFromArgs> ingressFrom;
-        private @Nullable Output<IngressToArgs> ingressTo;
+        private IngressPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressPolicyArgs();
         }
 
         public Builder(IngressPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingressFrom = defaults.ingressFrom;
-    	      this.ingressTo = defaults.ingressTo;
+            $ = new IngressPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ingressFrom(@Nullable Output<IngressFromArgs> ingressFrom) {
-            this.ingressFrom = ingressFrom;
+            $.ingressFrom = ingressFrom;
             return this;
         }
-        public Builder ingressFrom(@Nullable IngressFromArgs ingressFrom) {
-            this.ingressFrom = Codegen.ofNullable(ingressFrom);
-            return this;
+
+        public Builder ingressFrom(IngressFromArgs ingressFrom) {
+            return ingressFrom(Output.of(ingressFrom));
         }
+
         public Builder ingressTo(@Nullable Output<IngressToArgs> ingressTo) {
-            this.ingressTo = ingressTo;
+            $.ingressTo = ingressTo;
             return this;
         }
-        public Builder ingressTo(@Nullable IngressToArgs ingressTo) {
-            this.ingressTo = Codegen.ofNullable(ingressTo);
-            return this;
-        }        public IngressPolicyArgs build() {
-            return new IngressPolicyArgs(ingressFrom, ingressTo);
+
+        public Builder ingressTo(IngressToArgs ingressTo) {
+            return ingressTo(Output.of(ingressTo));
+        }
+
+        public IngressPolicyArgs build() {
+            return $;
         }
     }
+
 }

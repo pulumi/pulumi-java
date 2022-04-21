@@ -16,62 +16,57 @@ public final class DataflowEndpointGroupSocketAddress extends com.pulumi.resourc
     public static final DataflowEndpointGroupSocketAddress Empty = new DataflowEndpointGroupSocketAddress();
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
-    public DataflowEndpointGroupSocketAddress(
-        @Nullable String name,
-        @Nullable Integer port) {
-        this.name = name;
-        this.port = port;
-    }
+    private DataflowEndpointGroupSocketAddress() {}
 
-    private DataflowEndpointGroupSocketAddress() {
-        this.name = null;
-        this.port = null;
+    private DataflowEndpointGroupSocketAddress(DataflowEndpointGroupSocketAddress $) {
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataflowEndpointGroupSocketAddress defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable Integer port;
+        private DataflowEndpointGroupSocketAddress $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataflowEndpointGroupSocketAddress();
         }
 
         public Builder(DataflowEndpointGroupSocketAddress defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new DataflowEndpointGroupSocketAddress(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
-        }        public DataflowEndpointGroupSocketAddress build() {
-            return new DataflowEndpointGroupSocketAddress(name, port);
+        }
+
+        public DataflowEndpointGroupSocketAddress build() {
+            return $;
         }
     }
+
 }

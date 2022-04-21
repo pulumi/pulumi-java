@@ -25,10 +25,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="assemblyCulture")
-      private final @Nullable String assemblyCulture;
+    private @Nullable String assemblyCulture;
 
     public Optional<String> assemblyCulture() {
-        return this.assemblyCulture == null ? Optional.empty() : Optional.ofNullable(this.assemblyCulture);
+        return Optional.ofNullable(this.assemblyCulture);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="assemblyName", required=true)
-      private final String assemblyName;
+    private String assemblyName;
 
     public String assemblyName() {
         return this.assemblyName;
@@ -47,10 +47,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="assemblyPublicKeyToken")
-      private final @Nullable String assemblyPublicKeyToken;
+    private @Nullable String assemblyPublicKeyToken;
 
     public Optional<String> assemblyPublicKeyToken() {
-        return this.assemblyPublicKeyToken == null ? Optional.empty() : Optional.ofNullable(this.assemblyPublicKeyToken);
+        return Optional.ofNullable(this.assemblyPublicKeyToken);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="assemblyVersion")
-      private final @Nullable String assemblyVersion;
+    private @Nullable String assemblyVersion;
 
     public Optional<String> assemblyVersion() {
-        return this.assemblyVersion == null ? Optional.empty() : Optional.ofNullable(this.assemblyVersion);
+        return Optional.ofNullable(this.assemblyVersion);
     }
 
     /**
@@ -69,17 +69,17 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="changedTime")
-      private final @Nullable String changedTime;
+    private @Nullable String changedTime;
 
     public Optional<String> changedTime() {
-        return this.changedTime == null ? Optional.empty() : Optional.ofNullable(this.changedTime);
+        return Optional.ofNullable(this.changedTime);
     }
 
     @Import(name="content")
-      private final @Nullable Object content;
+    private @Nullable Object content;
 
     public Optional<Object> content() {
-        return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="contentLink")
-      private final @Nullable ContentLinkResponse contentLink;
+    private @Nullable ContentLinkResponse contentLink;
 
     public Optional<ContentLinkResponse> contentLink() {
-        return this.contentLink == null ? Optional.empty() : Optional.ofNullable(this.contentLink);
+        return Optional.ofNullable(this.contentLink);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="contentType")
-      private final @Nullable String contentType;
+    private @Nullable String contentType;
 
     public Optional<String> contentType() {
-        return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -109,134 +109,106 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable String createdTime;
+    private @Nullable String createdTime;
 
     public Optional<String> createdTime() {
-        return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
+        return Optional.ofNullable(this.createdTime);
     }
 
     @Import(name="metadata")
-      private final @Nullable Object metadata;
+    private @Nullable Object metadata;
 
     public Optional<Object> metadata() {
-        return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
+        return Optional.ofNullable(this.metadata);
     }
 
-    public AssemblyPropertiesResponse(
-        @Nullable String assemblyCulture,
-        String assemblyName,
-        @Nullable String assemblyPublicKeyToken,
-        @Nullable String assemblyVersion,
-        @Nullable String changedTime,
-        @Nullable Object content,
-        @Nullable ContentLinkResponse contentLink,
-        @Nullable String contentType,
-        @Nullable String createdTime,
-        @Nullable Object metadata) {
-        this.assemblyCulture = assemblyCulture;
-        this.assemblyName = Objects.requireNonNull(assemblyName, "expected parameter 'assemblyName' to be non-null");
-        this.assemblyPublicKeyToken = assemblyPublicKeyToken;
-        this.assemblyVersion = assemblyVersion;
-        this.changedTime = changedTime;
-        this.content = content;
-        this.contentLink = contentLink;
-        this.contentType = contentType;
-        this.createdTime = createdTime;
-        this.metadata = metadata;
-    }
+    private AssemblyPropertiesResponse() {}
 
-    private AssemblyPropertiesResponse() {
-        this.assemblyCulture = null;
-        this.assemblyName = null;
-        this.assemblyPublicKeyToken = null;
-        this.assemblyVersion = null;
-        this.changedTime = null;
-        this.content = null;
-        this.contentLink = null;
-        this.contentType = null;
-        this.createdTime = null;
-        this.metadata = null;
+    private AssemblyPropertiesResponse(AssemblyPropertiesResponse $) {
+        this.assemblyCulture = $.assemblyCulture;
+        this.assemblyName = $.assemblyName;
+        this.assemblyPublicKeyToken = $.assemblyPublicKeyToken;
+        this.assemblyVersion = $.assemblyVersion;
+        this.changedTime = $.changedTime;
+        this.content = $.content;
+        this.contentLink = $.contentLink;
+        this.contentType = $.contentType;
+        this.createdTime = $.createdTime;
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssemblyPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String assemblyCulture;
-        private String assemblyName;
-        private @Nullable String assemblyPublicKeyToken;
-        private @Nullable String assemblyVersion;
-        private @Nullable String changedTime;
-        private @Nullable Object content;
-        private @Nullable ContentLinkResponse contentLink;
-        private @Nullable String contentType;
-        private @Nullable String createdTime;
-        private @Nullable Object metadata;
+        private AssemblyPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssemblyPropertiesResponse();
         }
 
         public Builder(AssemblyPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assemblyCulture = defaults.assemblyCulture;
-    	      this.assemblyName = defaults.assemblyName;
-    	      this.assemblyPublicKeyToken = defaults.assemblyPublicKeyToken;
-    	      this.assemblyVersion = defaults.assemblyVersion;
-    	      this.changedTime = defaults.changedTime;
-    	      this.content = defaults.content;
-    	      this.contentLink = defaults.contentLink;
-    	      this.contentType = defaults.contentType;
-    	      this.createdTime = defaults.createdTime;
-    	      this.metadata = defaults.metadata;
+            $ = new AssemblyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assemblyCulture(@Nullable String assemblyCulture) {
-            this.assemblyCulture = assemblyCulture;
+            $.assemblyCulture = assemblyCulture;
             return this;
         }
+
         public Builder assemblyName(String assemblyName) {
-            this.assemblyName = Objects.requireNonNull(assemblyName);
+            $.assemblyName = assemblyName;
             return this;
         }
+
         public Builder assemblyPublicKeyToken(@Nullable String assemblyPublicKeyToken) {
-            this.assemblyPublicKeyToken = assemblyPublicKeyToken;
+            $.assemblyPublicKeyToken = assemblyPublicKeyToken;
             return this;
         }
+
         public Builder assemblyVersion(@Nullable String assemblyVersion) {
-            this.assemblyVersion = assemblyVersion;
+            $.assemblyVersion = assemblyVersion;
             return this;
         }
+
         public Builder changedTime(@Nullable String changedTime) {
-            this.changedTime = changedTime;
+            $.changedTime = changedTime;
             return this;
         }
+
         public Builder content(@Nullable Object content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
+
         public Builder contentLink(@Nullable ContentLinkResponse contentLink) {
-            this.contentLink = contentLink;
+            $.contentLink = contentLink;
             return this;
         }
+
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
+
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
-        }        public AssemblyPropertiesResponse build() {
-            return new AssemblyPropertiesResponse(assemblyCulture, assemblyName, assemblyPublicKeyToken, assemblyVersion, changedTime, content, contentLink, contentType, createdTime, metadata);
+        }
+
+        public AssemblyPropertiesResponse build() {
+            $.assemblyName = Objects.requireNonNull($.assemblyName, "expected parameter 'assemblyName' to be non-null");
+            return $;
         }
     }
+
 }

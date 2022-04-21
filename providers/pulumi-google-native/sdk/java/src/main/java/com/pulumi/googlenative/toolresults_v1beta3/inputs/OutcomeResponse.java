@@ -25,7 +25,7 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="failureDetail", required=true)
-      private final FailureDetailResponse failureDetail;
+    private FailureDetailResponse failureDetail;
 
     public FailureDetailResponse failureDetail() {
         return this.failureDetail;
@@ -36,7 +36,7 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inconclusiveDetail", required=true)
-      private final InconclusiveDetailResponse inconclusiveDetail;
+    private InconclusiveDetailResponse inconclusiveDetail;
 
     public InconclusiveDetailResponse inconclusiveDetail() {
         return this.inconclusiveDetail;
@@ -47,7 +47,7 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skippedDetail", required=true)
-      private final SkippedDetailResponse skippedDetail;
+    private SkippedDetailResponse skippedDetail;
 
     public SkippedDetailResponse skippedDetail() {
         return this.skippedDetail;
@@ -58,7 +58,7 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="successDetail", required=true)
-      private final SuccessDetailResponse successDetail;
+    private SuccessDetailResponse successDetail;
 
     public SuccessDetailResponse successDetail() {
         return this.successDetail;
@@ -69,82 +69,73 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="summary", required=true)
-      private final String summary;
+    private String summary;
 
     public String summary() {
         return this.summary;
     }
 
-    public OutcomeResponse(
-        FailureDetailResponse failureDetail,
-        InconclusiveDetailResponse inconclusiveDetail,
-        SkippedDetailResponse skippedDetail,
-        SuccessDetailResponse successDetail,
-        String summary) {
-        this.failureDetail = Objects.requireNonNull(failureDetail, "expected parameter 'failureDetail' to be non-null");
-        this.inconclusiveDetail = Objects.requireNonNull(inconclusiveDetail, "expected parameter 'inconclusiveDetail' to be non-null");
-        this.skippedDetail = Objects.requireNonNull(skippedDetail, "expected parameter 'skippedDetail' to be non-null");
-        this.successDetail = Objects.requireNonNull(successDetail, "expected parameter 'successDetail' to be non-null");
-        this.summary = Objects.requireNonNull(summary, "expected parameter 'summary' to be non-null");
-    }
+    private OutcomeResponse() {}
 
-    private OutcomeResponse() {
-        this.failureDetail = null;
-        this.inconclusiveDetail = null;
-        this.skippedDetail = null;
-        this.successDetail = null;
-        this.summary = null;
+    private OutcomeResponse(OutcomeResponse $) {
+        this.failureDetail = $.failureDetail;
+        this.inconclusiveDetail = $.inconclusiveDetail;
+        this.skippedDetail = $.skippedDetail;
+        this.successDetail = $.successDetail;
+        this.summary = $.summary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutcomeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FailureDetailResponse failureDetail;
-        private InconclusiveDetailResponse inconclusiveDetail;
-        private SkippedDetailResponse skippedDetail;
-        private SuccessDetailResponse successDetail;
-        private String summary;
+        private OutcomeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutcomeResponse();
         }
 
         public Builder(OutcomeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureDetail = defaults.failureDetail;
-    	      this.inconclusiveDetail = defaults.inconclusiveDetail;
-    	      this.skippedDetail = defaults.skippedDetail;
-    	      this.successDetail = defaults.successDetail;
-    	      this.summary = defaults.summary;
+            $ = new OutcomeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failureDetail(FailureDetailResponse failureDetail) {
-            this.failureDetail = Objects.requireNonNull(failureDetail);
+            $.failureDetail = failureDetail;
             return this;
         }
+
         public Builder inconclusiveDetail(InconclusiveDetailResponse inconclusiveDetail) {
-            this.inconclusiveDetail = Objects.requireNonNull(inconclusiveDetail);
+            $.inconclusiveDetail = inconclusiveDetail;
             return this;
         }
+
         public Builder skippedDetail(SkippedDetailResponse skippedDetail) {
-            this.skippedDetail = Objects.requireNonNull(skippedDetail);
+            $.skippedDetail = skippedDetail;
             return this;
         }
+
         public Builder successDetail(SuccessDetailResponse successDetail) {
-            this.successDetail = Objects.requireNonNull(successDetail);
+            $.successDetail = successDetail;
             return this;
         }
+
         public Builder summary(String summary) {
-            this.summary = Objects.requireNonNull(summary);
+            $.summary = summary;
             return this;
-        }        public OutcomeResponse build() {
-            return new OutcomeResponse(failureDetail, inconclusiveDetail, skippedDetail, successDetail, summary);
+        }
+
+        public OutcomeResponse build() {
+            $.failureDetail = Objects.requireNonNull($.failureDetail, "expected parameter 'failureDetail' to be non-null");
+            $.inconclusiveDetail = Objects.requireNonNull($.inconclusiveDetail, "expected parameter 'inconclusiveDetail' to be non-null");
+            $.skippedDetail = Objects.requireNonNull($.skippedDetail, "expected parameter 'skippedDetail' to be non-null");
+            $.successDetail = Objects.requireNonNull($.successDetail, "expected parameter 'successDetail' to be non-null");
+            $.summary = Objects.requireNonNull($.summary, "expected parameter 'summary' to be non-null");
+            return $;
         }
     }
+
 }

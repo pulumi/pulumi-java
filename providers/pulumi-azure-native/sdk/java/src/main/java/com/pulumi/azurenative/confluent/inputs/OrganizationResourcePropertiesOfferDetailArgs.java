@@ -5,9 +5,9 @@ package com.pulumi.azurenative.confluent.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
      * 
      */
     @Import(name="planId")
-      private final @Nullable Output<String> planId;
+    private @Nullable Output<String> planId;
 
-    public Output<String> planId() {
-        return this.planId == null ? Codegen.empty() : this.planId;
+    public Optional<Output<String>> planId() {
+        return Optional.ofNullable(this.planId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
      * 
      */
     @Import(name="planName")
-      private final @Nullable Output<String> planName;
+    private @Nullable Output<String> planName;
 
-    public Output<String> planName() {
-        return this.planName == null ? Codegen.empty() : this.planName;
+    public Optional<Output<String>> planName() {
+        return Optional.ofNullable(this.planName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
      * 
      */
     @Import(name="publisherId")
-      private final @Nullable Output<String> publisherId;
+    private @Nullable Output<String> publisherId;
 
-    public Output<String> publisherId() {
-        return this.publisherId == null ? Codegen.empty() : this.publisherId;
+    public Optional<Output<String>> publisherId() {
+        return Optional.ofNullable(this.publisherId);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
      * 
      */
     @Import(name="termUnit")
-      private final @Nullable Output<String> termUnit;
+    private @Nullable Output<String> termUnit;
 
-    public Output<String> termUnit() {
-        return this.termUnit == null ? Codegen.empty() : this.termUnit;
+    public Optional<Output<String>> termUnit() {
+        return Optional.ofNullable(this.termUnit);
     }
 
-    public OrganizationResourcePropertiesOfferDetailArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> planId,
-        @Nullable Output<String> planName,
-        @Nullable Output<String> publisherId,
-        @Nullable Output<String> termUnit) {
-        this.id = id;
-        this.planId = planId;
-        this.planName = planName;
-        this.publisherId = publisherId;
-        this.termUnit = termUnit;
-    }
+    private OrganizationResourcePropertiesOfferDetailArgs() {}
 
-    private OrganizationResourcePropertiesOfferDetailArgs() {
-        this.id = Codegen.empty();
-        this.planId = Codegen.empty();
-        this.planName = Codegen.empty();
-        this.publisherId = Codegen.empty();
-        this.termUnit = Codegen.empty();
+    private OrganizationResourcePropertiesOfferDetailArgs(OrganizationResourcePropertiesOfferDetailArgs $) {
+        this.id = $.id;
+        this.planId = $.planId;
+        this.planName = $.planName;
+        this.publisherId = $.publisherId;
+        this.termUnit = $.termUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationResourcePropertiesOfferDetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> planId;
-        private @Nullable Output<String> planName;
-        private @Nullable Output<String> publisherId;
-        private @Nullable Output<String> termUnit;
+        private OrganizationResourcePropertiesOfferDetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationResourcePropertiesOfferDetailArgs();
         }
 
         public Builder(OrganizationResourcePropertiesOfferDetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.planId = defaults.planId;
-    	      this.planName = defaults.planName;
-    	      this.publisherId = defaults.publisherId;
-    	      this.termUnit = defaults.termUnit;
+            $ = new OrganizationResourcePropertiesOfferDetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder planId(@Nullable Output<String> planId) {
-            this.planId = planId;
+            $.planId = planId;
             return this;
         }
-        public Builder planId(@Nullable String planId) {
-            this.planId = Codegen.ofNullable(planId);
-            return this;
+
+        public Builder planId(String planId) {
+            return planId(Output.of(planId));
         }
+
         public Builder planName(@Nullable Output<String> planName) {
-            this.planName = planName;
+            $.planName = planName;
             return this;
         }
-        public Builder planName(@Nullable String planName) {
-            this.planName = Codegen.ofNullable(planName);
-            return this;
+
+        public Builder planName(String planName) {
+            return planName(Output.of(planName));
         }
+
         public Builder publisherId(@Nullable Output<String> publisherId) {
-            this.publisherId = publisherId;
+            $.publisherId = publisherId;
             return this;
         }
-        public Builder publisherId(@Nullable String publisherId) {
-            this.publisherId = Codegen.ofNullable(publisherId);
-            return this;
+
+        public Builder publisherId(String publisherId) {
+            return publisherId(Output.of(publisherId));
         }
+
         public Builder termUnit(@Nullable Output<String> termUnit) {
-            this.termUnit = termUnit;
+            $.termUnit = termUnit;
             return this;
         }
-        public Builder termUnit(@Nullable String termUnit) {
-            this.termUnit = Codegen.ofNullable(termUnit);
-            return this;
-        }        public OrganizationResourcePropertiesOfferDetailArgs build() {
-            return new OrganizationResourcePropertiesOfferDetailArgs(id, planId, planName, publisherId, termUnit);
+
+        public Builder termUnit(String termUnit) {
+            return termUnit(Output.of(termUnit));
+        }
+
+        public OrganizationResourcePropertiesOfferDetailArgs build() {
+            return $;
         }
     }
+
 }

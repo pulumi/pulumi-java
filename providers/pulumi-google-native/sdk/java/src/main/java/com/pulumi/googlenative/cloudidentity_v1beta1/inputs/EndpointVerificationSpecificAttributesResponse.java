@@ -22,48 +22,49 @@ public final class EndpointVerificationSpecificAttributesResponse extends com.pu
      * 
      */
     @Import(name="certificateAttributes", required=true)
-      private final List<CertificateAttributesResponse> certificateAttributes;
+    private List<CertificateAttributesResponse> certificateAttributes;
 
     public List<CertificateAttributesResponse> certificateAttributes() {
         return this.certificateAttributes;
     }
 
-    public EndpointVerificationSpecificAttributesResponse(List<CertificateAttributesResponse> certificateAttributes) {
-        this.certificateAttributes = Objects.requireNonNull(certificateAttributes, "expected parameter 'certificateAttributes' to be non-null");
-    }
+    private EndpointVerificationSpecificAttributesResponse() {}
 
-    private EndpointVerificationSpecificAttributesResponse() {
-        this.certificateAttributes = List.of();
+    private EndpointVerificationSpecificAttributesResponse(EndpointVerificationSpecificAttributesResponse $) {
+        this.certificateAttributes = $.certificateAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointVerificationSpecificAttributesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<CertificateAttributesResponse> certificateAttributes;
+        private EndpointVerificationSpecificAttributesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointVerificationSpecificAttributesResponse();
         }
 
         public Builder(EndpointVerificationSpecificAttributesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAttributes = defaults.certificateAttributes;
+            $ = new EndpointVerificationSpecificAttributesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAttributes(List<CertificateAttributesResponse> certificateAttributes) {
-            this.certificateAttributes = Objects.requireNonNull(certificateAttributes);
+            $.certificateAttributes = certificateAttributes;
             return this;
         }
+
         public Builder certificateAttributes(CertificateAttributesResponse... certificateAttributes) {
             return certificateAttributes(List.of(certificateAttributes));
-        }        public EndpointVerificationSpecificAttributesResponse build() {
-            return new EndpointVerificationSpecificAttributesResponse(certificateAttributes);
+        }
+
+        public EndpointVerificationSpecificAttributesResponse build() {
+            $.certificateAttributes = Objects.requireNonNull($.certificateAttributes, "expected parameter 'certificateAttributes' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,62 +15,58 @@ public final class GetWebAppArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWebAppArgs Empty = new GetWebAppArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="webAppId", required=true)
-      private final String webAppId;
+    private String webAppId;
 
     public String webAppId() {
         return this.webAppId;
     }
 
-    public GetWebAppArgs(
-        @Nullable String project,
-        String webAppId) {
-        this.project = project;
-        this.webAppId = Objects.requireNonNull(webAppId, "expected parameter 'webAppId' to be non-null");
-    }
+    private GetWebAppArgs() {}
 
-    private GetWebAppArgs() {
-        this.project = null;
-        this.webAppId = null;
+    private GetWebAppArgs(GetWebAppArgs $) {
+        this.project = $.project;
+        this.webAppId = $.webAppId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String webAppId;
+        private GetWebAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppArgs();
         }
 
         public Builder(GetWebAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.webAppId = defaults.webAppId;
+            $ = new GetWebAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder webAppId(String webAppId) {
-            this.webAppId = Objects.requireNonNull(webAppId);
+            $.webAppId = webAppId;
             return this;
-        }        public GetWebAppArgs build() {
-            return new GetWebAppArgs(project, webAppId);
+        }
+
+        public GetWebAppArgs build() {
+            $.webAppId = Objects.requireNonNull($.webAppId, "expected parameter 'webAppId' to be non-null");
+            return $;
         }
     }
+
 }

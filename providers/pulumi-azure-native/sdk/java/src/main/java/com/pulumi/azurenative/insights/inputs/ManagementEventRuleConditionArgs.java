@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class ManagementEventRuleConditionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="aggregation")
-      private final @Nullable Output<ManagementEventAggregationConditionArgs> aggregation;
+    private @Nullable Output<ManagementEventAggregationConditionArgs> aggregation;
 
-    public Output<ManagementEventAggregationConditionArgs> aggregation() {
-        return this.aggregation == null ? Codegen.empty() : this.aggregation;
+    public Optional<Output<ManagementEventAggregationConditionArgs>> aggregation() {
+        return Optional.ofNullable(this.aggregation);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class ManagementEventRuleConditionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="dataSource")
-      private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+    private @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
-    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource() {
-        return this.dataSource == null ? Codegen.empty() : this.dataSource;
+    public Optional<Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>>> dataSource() {
+        return Optional.ofNullable(this.dataSource);
     }
 
     /**
@@ -51,76 +52,69 @@ public final class ManagementEventRuleConditionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public ManagementEventRuleConditionArgs(
-        @Nullable Output<ManagementEventAggregationConditionArgs> aggregation,
-        @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource,
-        Output<String> odataType) {
-        this.aggregation = aggregation;
-        this.dataSource = dataSource;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private ManagementEventRuleConditionArgs() {}
 
-    private ManagementEventRuleConditionArgs() {
-        this.aggregation = Codegen.empty();
-        this.dataSource = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private ManagementEventRuleConditionArgs(ManagementEventRuleConditionArgs $) {
+        this.aggregation = $.aggregation;
+        this.dataSource = $.dataSource;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementEventRuleConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ManagementEventAggregationConditionArgs> aggregation;
-        private @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
-        private Output<String> odataType;
+        private ManagementEventRuleConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementEventRuleConditionArgs();
         }
 
         public Builder(ManagementEventRuleConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregation = defaults.aggregation;
-    	      this.dataSource = defaults.dataSource;
-    	      this.odataType = defaults.odataType;
+            $ = new ManagementEventRuleConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregation(@Nullable Output<ManagementEventAggregationConditionArgs> aggregation) {
-            this.aggregation = aggregation;
+            $.aggregation = aggregation;
             return this;
         }
-        public Builder aggregation(@Nullable ManagementEventAggregationConditionArgs aggregation) {
-            this.aggregation = Codegen.ofNullable(aggregation);
-            return this;
+
+        public Builder aggregation(ManagementEventAggregationConditionArgs aggregation) {
+            return aggregation(Output.of(aggregation));
         }
+
         public Builder dataSource(@Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
-            this.dataSource = dataSource;
+            $.dataSource = dataSource;
             return this;
         }
-        public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
-            this.dataSource = Codegen.ofNullable(dataSource);
-            return this;
+
+        public Builder dataSource(Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
+            return dataSource(Output.of(dataSource));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public ManagementEventRuleConditionArgs build() {
-            return new ManagementEventRuleConditionArgs(aggregation, dataSource, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public ManagementEventRuleConditionArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

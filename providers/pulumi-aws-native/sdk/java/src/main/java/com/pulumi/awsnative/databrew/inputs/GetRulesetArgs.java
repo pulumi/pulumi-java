@@ -17,45 +17,45 @@ public final class GetRulesetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetRulesetArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetRulesetArgs() {}
 
-    private GetRulesetArgs() {
-        this.name = null;
+    private GetRulesetArgs(GetRulesetArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRulesetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetRulesetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRulesetArgs();
         }
 
         public Builder(GetRulesetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetRulesetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetRulesetArgs build() {
-            return new GetRulesetArgs(name);
+        }
+
+        public GetRulesetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

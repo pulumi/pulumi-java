@@ -6,8 +6,8 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 import com.pulumi.awsnative.networkfirewall.enums.FirewallPolicyRuleOrder;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends com.pulumi.re
     public static final FirewallPolicyStatefulEngineOptionsArgs Empty = new FirewallPolicyStatefulEngineOptionsArgs();
 
     @Import(name="ruleOrder")
-      private final @Nullable Output<FirewallPolicyRuleOrder> ruleOrder;
+    private @Nullable Output<FirewallPolicyRuleOrder> ruleOrder;
 
-    public Output<FirewallPolicyRuleOrder> ruleOrder() {
-        return this.ruleOrder == null ? Codegen.empty() : this.ruleOrder;
+    public Optional<Output<FirewallPolicyRuleOrder>> ruleOrder() {
+        return Optional.ofNullable(this.ruleOrder);
     }
 
-    public FirewallPolicyStatefulEngineOptionsArgs(@Nullable Output<FirewallPolicyRuleOrder> ruleOrder) {
-        this.ruleOrder = ruleOrder;
-    }
+    private FirewallPolicyStatefulEngineOptionsArgs() {}
 
-    private FirewallPolicyStatefulEngineOptionsArgs() {
-        this.ruleOrder = Codegen.empty();
+    private FirewallPolicyStatefulEngineOptionsArgs(FirewallPolicyStatefulEngineOptionsArgs $) {
+        this.ruleOrder = $.ruleOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyStatefulEngineOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FirewallPolicyRuleOrder> ruleOrder;
+        private FirewallPolicyStatefulEngineOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyStatefulEngineOptionsArgs();
         }
 
         public Builder(FirewallPolicyStatefulEngineOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleOrder = defaults.ruleOrder;
+            $ = new FirewallPolicyStatefulEngineOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleOrder(@Nullable Output<FirewallPolicyRuleOrder> ruleOrder) {
-            this.ruleOrder = ruleOrder;
+            $.ruleOrder = ruleOrder;
             return this;
         }
-        public Builder ruleOrder(@Nullable FirewallPolicyRuleOrder ruleOrder) {
-            this.ruleOrder = Codegen.ofNullable(ruleOrder);
-            return this;
-        }        public FirewallPolicyStatefulEngineOptionsArgs build() {
-            return new FirewallPolicyStatefulEngineOptionsArgs(ruleOrder);
+
+        public Builder ruleOrder(FirewallPolicyRuleOrder ruleOrder) {
+            return ruleOrder(Output.of(ruleOrder));
+        }
+
+        public FirewallPolicyStatefulEngineOptionsArgs build() {
+            return $;
         }
     }
+
 }

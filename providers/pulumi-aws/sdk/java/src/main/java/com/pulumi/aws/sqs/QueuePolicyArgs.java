@@ -5,7 +5,6 @@ package com.pulumi.aws.sqs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class QueuePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
@@ -30,59 +29,60 @@ public final class QueuePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queueUrl", required=true)
-      private final Output<String> queueUrl;
+    private Output<String> queueUrl;
 
     public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
-    public QueuePolicyArgs(
-        Output<String> policy,
-        Output<String> queueUrl) {
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.queueUrl = Objects.requireNonNull(queueUrl, "expected parameter 'queueUrl' to be non-null");
-    }
+    private QueuePolicyArgs() {}
 
-    private QueuePolicyArgs() {
-        this.policy = Codegen.empty();
-        this.queueUrl = Codegen.empty();
+    private QueuePolicyArgs(QueuePolicyArgs $) {
+        this.policy = $.policy;
+        this.queueUrl = $.queueUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueuePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policy;
-        private Output<String> queueUrl;
+        private QueuePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueuePolicyArgs();
         }
 
         public Builder(QueuePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.queueUrl = defaults.queueUrl;
+            $ = new QueuePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
         public Builder queueUrl(Output<String> queueUrl) {
-            this.queueUrl = Objects.requireNonNull(queueUrl);
+            $.queueUrl = queueUrl;
             return this;
         }
+
         public Builder queueUrl(String queueUrl) {
-            this.queueUrl = Output.of(Objects.requireNonNull(queueUrl));
-            return this;
-        }        public QueuePolicyArgs build() {
-            return new QueuePolicyArgs(policy, queueUrl);
+            return queueUrl(Output.of(queueUrl));
+        }
+
+        public QueuePolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.queueUrl = Objects.requireNonNull($.queueUrl, "expected parameter 'queueUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -32,7 +32,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hadoopJob", required=true)
-      private final HadoopJobResponse hadoopJob;
+    private HadoopJobResponse hadoopJob;
 
     public HadoopJobResponse hadoopJob() {
         return this.hadoopJob;
@@ -43,7 +43,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hiveJob", required=true)
-      private final HiveJobResponse hiveJob;
+    private HiveJobResponse hiveJob;
 
     public HiveJobResponse hiveJob() {
         return this.hiveJob;
@@ -54,7 +54,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -65,7 +65,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pigJob", required=true)
-      private final PigJobResponse pigJob;
+    private PigJobResponse pigJob;
 
     public PigJobResponse pigJob() {
         return this.pigJob;
@@ -76,7 +76,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prerequisiteStepIds", required=true)
-      private final List<String> prerequisiteStepIds;
+    private List<String> prerequisiteStepIds;
 
     public List<String> prerequisiteStepIds() {
         return this.prerequisiteStepIds;
@@ -87,7 +87,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prestoJob", required=true)
-      private final PrestoJobResponse prestoJob;
+    private PrestoJobResponse prestoJob;
 
     public PrestoJobResponse prestoJob() {
         return this.prestoJob;
@@ -98,7 +98,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pysparkJob", required=true)
-      private final PySparkJobResponse pysparkJob;
+    private PySparkJobResponse pysparkJob;
 
     public PySparkJobResponse pysparkJob() {
         return this.pysparkJob;
@@ -109,7 +109,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scheduling", required=true)
-      private final JobSchedulingResponse scheduling;
+    private JobSchedulingResponse scheduling;
 
     public JobSchedulingResponse scheduling() {
         return this.scheduling;
@@ -120,7 +120,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sparkJob", required=true)
-      private final SparkJobResponse sparkJob;
+    private SparkJobResponse sparkJob;
 
     public SparkJobResponse sparkJob() {
         return this.sparkJob;
@@ -131,7 +131,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sparkRJob", required=true)
-      private final SparkRJobResponse sparkRJob;
+    private SparkRJobResponse sparkRJob;
 
     public SparkRJobResponse sparkRJob() {
         return this.sparkRJob;
@@ -142,7 +142,7 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sparkSqlJob", required=true)
-      private final SparkSqlJobResponse sparkSqlJob;
+    private SparkSqlJobResponse sparkSqlJob;
 
     public SparkSqlJobResponse sparkSqlJob() {
         return this.sparkSqlJob;
@@ -153,148 +153,126 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stepId", required=true)
-      private final String stepId;
+    private String stepId;
 
     public String stepId() {
         return this.stepId;
     }
 
-    public OrderedJobResponse(
-        HadoopJobResponse hadoopJob,
-        HiveJobResponse hiveJob,
-        Map<String,String> labels,
-        PigJobResponse pigJob,
-        List<String> prerequisiteStepIds,
-        PrestoJobResponse prestoJob,
-        PySparkJobResponse pysparkJob,
-        JobSchedulingResponse scheduling,
-        SparkJobResponse sparkJob,
-        SparkRJobResponse sparkRJob,
-        SparkSqlJobResponse sparkSqlJob,
-        String stepId) {
-        this.hadoopJob = Objects.requireNonNull(hadoopJob, "expected parameter 'hadoopJob' to be non-null");
-        this.hiveJob = Objects.requireNonNull(hiveJob, "expected parameter 'hiveJob' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.pigJob = Objects.requireNonNull(pigJob, "expected parameter 'pigJob' to be non-null");
-        this.prerequisiteStepIds = Objects.requireNonNull(prerequisiteStepIds, "expected parameter 'prerequisiteStepIds' to be non-null");
-        this.prestoJob = Objects.requireNonNull(prestoJob, "expected parameter 'prestoJob' to be non-null");
-        this.pysparkJob = Objects.requireNonNull(pysparkJob, "expected parameter 'pysparkJob' to be non-null");
-        this.scheduling = Objects.requireNonNull(scheduling, "expected parameter 'scheduling' to be non-null");
-        this.sparkJob = Objects.requireNonNull(sparkJob, "expected parameter 'sparkJob' to be non-null");
-        this.sparkRJob = Objects.requireNonNull(sparkRJob, "expected parameter 'sparkRJob' to be non-null");
-        this.sparkSqlJob = Objects.requireNonNull(sparkSqlJob, "expected parameter 'sparkSqlJob' to be non-null");
-        this.stepId = Objects.requireNonNull(stepId, "expected parameter 'stepId' to be non-null");
-    }
+    private OrderedJobResponse() {}
 
-    private OrderedJobResponse() {
-        this.hadoopJob = null;
-        this.hiveJob = null;
-        this.labels = Map.of();
-        this.pigJob = null;
-        this.prerequisiteStepIds = List.of();
-        this.prestoJob = null;
-        this.pysparkJob = null;
-        this.scheduling = null;
-        this.sparkJob = null;
-        this.sparkRJob = null;
-        this.sparkSqlJob = null;
-        this.stepId = null;
+    private OrderedJobResponse(OrderedJobResponse $) {
+        this.hadoopJob = $.hadoopJob;
+        this.hiveJob = $.hiveJob;
+        this.labels = $.labels;
+        this.pigJob = $.pigJob;
+        this.prerequisiteStepIds = $.prerequisiteStepIds;
+        this.prestoJob = $.prestoJob;
+        this.pysparkJob = $.pysparkJob;
+        this.scheduling = $.scheduling;
+        this.sparkJob = $.sparkJob;
+        this.sparkRJob = $.sparkRJob;
+        this.sparkSqlJob = $.sparkSqlJob;
+        this.stepId = $.stepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrderedJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private HadoopJobResponse hadoopJob;
-        private HiveJobResponse hiveJob;
-        private Map<String,String> labels;
-        private PigJobResponse pigJob;
-        private List<String> prerequisiteStepIds;
-        private PrestoJobResponse prestoJob;
-        private PySparkJobResponse pysparkJob;
-        private JobSchedulingResponse scheduling;
-        private SparkJobResponse sparkJob;
-        private SparkRJobResponse sparkRJob;
-        private SparkSqlJobResponse sparkSqlJob;
-        private String stepId;
+        private OrderedJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrderedJobResponse();
         }
 
         public Builder(OrderedJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hadoopJob = defaults.hadoopJob;
-    	      this.hiveJob = defaults.hiveJob;
-    	      this.labels = defaults.labels;
-    	      this.pigJob = defaults.pigJob;
-    	      this.prerequisiteStepIds = defaults.prerequisiteStepIds;
-    	      this.prestoJob = defaults.prestoJob;
-    	      this.pysparkJob = defaults.pysparkJob;
-    	      this.scheduling = defaults.scheduling;
-    	      this.sparkJob = defaults.sparkJob;
-    	      this.sparkRJob = defaults.sparkRJob;
-    	      this.sparkSqlJob = defaults.sparkSqlJob;
-    	      this.stepId = defaults.stepId;
+            $ = new OrderedJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hadoopJob(HadoopJobResponse hadoopJob) {
-            this.hadoopJob = Objects.requireNonNull(hadoopJob);
+            $.hadoopJob = hadoopJob;
             return this;
         }
+
         public Builder hiveJob(HiveJobResponse hiveJob) {
-            this.hiveJob = Objects.requireNonNull(hiveJob);
+            $.hiveJob = hiveJob;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder pigJob(PigJobResponse pigJob) {
-            this.pigJob = Objects.requireNonNull(pigJob);
+            $.pigJob = pigJob;
             return this;
         }
+
         public Builder prerequisiteStepIds(List<String> prerequisiteStepIds) {
-            this.prerequisiteStepIds = Objects.requireNonNull(prerequisiteStepIds);
+            $.prerequisiteStepIds = prerequisiteStepIds;
             return this;
         }
+
         public Builder prerequisiteStepIds(String... prerequisiteStepIds) {
             return prerequisiteStepIds(List.of(prerequisiteStepIds));
         }
+
         public Builder prestoJob(PrestoJobResponse prestoJob) {
-            this.prestoJob = Objects.requireNonNull(prestoJob);
+            $.prestoJob = prestoJob;
             return this;
         }
+
         public Builder pysparkJob(PySparkJobResponse pysparkJob) {
-            this.pysparkJob = Objects.requireNonNull(pysparkJob);
+            $.pysparkJob = pysparkJob;
             return this;
         }
+
         public Builder scheduling(JobSchedulingResponse scheduling) {
-            this.scheduling = Objects.requireNonNull(scheduling);
+            $.scheduling = scheduling;
             return this;
         }
+
         public Builder sparkJob(SparkJobResponse sparkJob) {
-            this.sparkJob = Objects.requireNonNull(sparkJob);
+            $.sparkJob = sparkJob;
             return this;
         }
+
         public Builder sparkRJob(SparkRJobResponse sparkRJob) {
-            this.sparkRJob = Objects.requireNonNull(sparkRJob);
+            $.sparkRJob = sparkRJob;
             return this;
         }
+
         public Builder sparkSqlJob(SparkSqlJobResponse sparkSqlJob) {
-            this.sparkSqlJob = Objects.requireNonNull(sparkSqlJob);
+            $.sparkSqlJob = sparkSqlJob;
             return this;
         }
+
         public Builder stepId(String stepId) {
-            this.stepId = Objects.requireNonNull(stepId);
+            $.stepId = stepId;
             return this;
-        }        public OrderedJobResponse build() {
-            return new OrderedJobResponse(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
+        }
+
+        public OrderedJobResponse build() {
+            $.hadoopJob = Objects.requireNonNull($.hadoopJob, "expected parameter 'hadoopJob' to be non-null");
+            $.hiveJob = Objects.requireNonNull($.hiveJob, "expected parameter 'hiveJob' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.pigJob = Objects.requireNonNull($.pigJob, "expected parameter 'pigJob' to be non-null");
+            $.prerequisiteStepIds = Objects.requireNonNull($.prerequisiteStepIds, "expected parameter 'prerequisiteStepIds' to be non-null");
+            $.prestoJob = Objects.requireNonNull($.prestoJob, "expected parameter 'prestoJob' to be non-null");
+            $.pysparkJob = Objects.requireNonNull($.pysparkJob, "expected parameter 'pysparkJob' to be non-null");
+            $.scheduling = Objects.requireNonNull($.scheduling, "expected parameter 'scheduling' to be non-null");
+            $.sparkJob = Objects.requireNonNull($.sparkJob, "expected parameter 'sparkJob' to be non-null");
+            $.sparkRJob = Objects.requireNonNull($.sparkRJob, "expected parameter 'sparkRJob' to be non-null");
+            $.sparkSqlJob = Objects.requireNonNull($.sparkSqlJob, "expected parameter 'sparkSqlJob' to be non-null");
+            $.stepId = Objects.requireNonNull($.stepId, "expected parameter 'stepId' to be non-null");
+            return $;
         }
     }
+
 }

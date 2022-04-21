@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.InterconnectMacsecPreSharedKeyArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class InterconnectMacsecArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="failOpen")
-      private final @Nullable Output<Boolean> failOpen;
+    private @Nullable Output<Boolean> failOpen;
 
-    public Output<Boolean> failOpen() {
-        return this.failOpen == null ? Codegen.empty() : this.failOpen;
+    public Optional<Output<Boolean>> failOpen() {
+        return Optional.ofNullable(this.failOpen);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class InterconnectMacsecArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="preSharedKeys", required=true)
-      private final Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys;
+    private Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys;
 
     public Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys() {
         return this.preSharedKeys;
     }
 
-    public InterconnectMacsecArgs(
-        @Nullable Output<Boolean> failOpen,
-        Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys) {
-        this.failOpen = failOpen;
-        this.preSharedKeys = Objects.requireNonNull(preSharedKeys, "expected parameter 'preSharedKeys' to be non-null");
-    }
+    private InterconnectMacsecArgs() {}
 
-    private InterconnectMacsecArgs() {
-        this.failOpen = Codegen.empty();
-        this.preSharedKeys = Codegen.empty();
+    private InterconnectMacsecArgs(InterconnectMacsecArgs $) {
+        this.failOpen = $.failOpen;
+        this.preSharedKeys = $.preSharedKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectMacsecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> failOpen;
-        private Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys;
+        private InterconnectMacsecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectMacsecArgs();
         }
 
         public Builder(InterconnectMacsecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failOpen = defaults.failOpen;
-    	      this.preSharedKeys = defaults.preSharedKeys;
+            $ = new InterconnectMacsecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failOpen(@Nullable Output<Boolean> failOpen) {
-            this.failOpen = failOpen;
+            $.failOpen = failOpen;
             return this;
         }
-        public Builder failOpen(@Nullable Boolean failOpen) {
-            this.failOpen = Codegen.ofNullable(failOpen);
-            return this;
+
+        public Builder failOpen(Boolean failOpen) {
+            return failOpen(Output.of(failOpen));
         }
+
         public Builder preSharedKeys(Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys) {
-            this.preSharedKeys = Objects.requireNonNull(preSharedKeys);
+            $.preSharedKeys = preSharedKeys;
             return this;
         }
+
         public Builder preSharedKeys(List<InterconnectMacsecPreSharedKeyArgs> preSharedKeys) {
-            this.preSharedKeys = Output.of(Objects.requireNonNull(preSharedKeys));
-            return this;
+            return preSharedKeys(Output.of(preSharedKeys));
         }
+
         public Builder preSharedKeys(InterconnectMacsecPreSharedKeyArgs... preSharedKeys) {
             return preSharedKeys(List.of(preSharedKeys));
-        }        public InterconnectMacsecArgs build() {
-            return new InterconnectMacsecArgs(failOpen, preSharedKeys);
+        }
+
+        public InterconnectMacsecArgs build() {
+            $.preSharedKeys = Objects.requireNonNull($.preSharedKeys, "expected parameter 'preSharedKeys' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BatchRetrySettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="maxRetries")
-      private final @Nullable Output<Integer> maxRetries;
+    private @Nullable Output<Integer> maxRetries;
 
-    public Output<Integer> maxRetries() {
-        return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
+    public Optional<Output<Integer>> maxRetries() {
+        return Optional.ofNullable(this.maxRetries);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class BatchRetrySettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public BatchRetrySettingsArgs(
-        @Nullable Output<Integer> maxRetries,
-        @Nullable Output<String> timeout) {
-        this.maxRetries = maxRetries;
-        this.timeout = timeout;
-    }
+    private BatchRetrySettingsArgs() {}
 
-    private BatchRetrySettingsArgs() {
-        this.maxRetries = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private BatchRetrySettingsArgs(BatchRetrySettingsArgs $) {
+        this.maxRetries = $.maxRetries;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchRetrySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxRetries;
-        private @Nullable Output<String> timeout;
+        private BatchRetrySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchRetrySettingsArgs();
         }
 
         public Builder(BatchRetrySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRetries = defaults.maxRetries;
-    	      this.timeout = defaults.timeout;
+            $ = new BatchRetrySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
-            this.maxRetries = maxRetries;
+            $.maxRetries = maxRetries;
             return this;
         }
-        public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Codegen.ofNullable(maxRetries);
-            return this;
+
+        public Builder maxRetries(Integer maxRetries) {
+            return maxRetries(Output.of(maxRetries));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public BatchRetrySettingsArgs build() {
-            return new BatchRetrySettingsArgs(maxRetries, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public BatchRetrySettingsArgs build() {
+            return $;
         }
     }
+
 }

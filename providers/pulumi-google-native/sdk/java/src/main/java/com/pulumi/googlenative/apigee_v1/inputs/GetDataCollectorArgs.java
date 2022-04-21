@@ -13,62 +13,59 @@ public final class GetDataCollectorArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetDataCollectorArgs Empty = new GetDataCollectorArgs();
 
     @Import(name="datacollectorId", required=true)
-      private final String datacollectorId;
+    private String datacollectorId;
 
     public String datacollectorId() {
         return this.datacollectorId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetDataCollectorArgs(
-        String datacollectorId,
-        String organizationId) {
-        this.datacollectorId = Objects.requireNonNull(datacollectorId, "expected parameter 'datacollectorId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetDataCollectorArgs() {}
 
-    private GetDataCollectorArgs() {
-        this.datacollectorId = null;
-        this.organizationId = null;
+    private GetDataCollectorArgs(GetDataCollectorArgs $) {
+        this.datacollectorId = $.datacollectorId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataCollectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datacollectorId;
-        private String organizationId;
+        private GetDataCollectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataCollectorArgs();
         }
 
         public Builder(GetDataCollectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datacollectorId = defaults.datacollectorId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetDataCollectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datacollectorId(String datacollectorId) {
-            this.datacollectorId = Objects.requireNonNull(datacollectorId);
+            $.datacollectorId = datacollectorId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetDataCollectorArgs build() {
-            return new GetDataCollectorArgs(datacollectorId, organizationId);
+        }
+
+        public GetDataCollectorArgs build() {
+            $.datacollectorId = Objects.requireNonNull($.datacollectorId, "expected parameter 'datacollectorId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

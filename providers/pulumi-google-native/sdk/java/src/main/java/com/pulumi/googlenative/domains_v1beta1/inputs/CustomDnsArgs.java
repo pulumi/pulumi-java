@@ -5,11 +5,11 @@ package com.pulumi.googlenative.domains_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.domains_v1beta1.inputs.DsRecordArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CustomDnsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dsRecords")
-      private final @Nullable Output<List<DsRecordArgs>> dsRecords;
+    private @Nullable Output<List<DsRecordArgs>> dsRecords;
 
-    public Output<List<DsRecordArgs>> dsRecords() {
-        return this.dsRecords == null ? Codegen.empty() : this.dsRecords;
+    public Optional<Output<List<DsRecordArgs>>> dsRecords() {
+        return Optional.ofNullable(this.dsRecords);
     }
 
     /**
@@ -37,69 +37,67 @@ public final class CustomDnsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nameServers", required=true)
-      private final Output<List<String>> nameServers;
+    private Output<List<String>> nameServers;
 
     public Output<List<String>> nameServers() {
         return this.nameServers;
     }
 
-    public CustomDnsArgs(
-        @Nullable Output<List<DsRecordArgs>> dsRecords,
-        Output<List<String>> nameServers) {
-        this.dsRecords = dsRecords;
-        this.nameServers = Objects.requireNonNull(nameServers, "expected parameter 'nameServers' to be non-null");
-    }
+    private CustomDnsArgs() {}
 
-    private CustomDnsArgs() {
-        this.dsRecords = Codegen.empty();
-        this.nameServers = Codegen.empty();
+    private CustomDnsArgs(CustomDnsArgs $) {
+        this.dsRecords = $.dsRecords;
+        this.nameServers = $.nameServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDnsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DsRecordArgs>> dsRecords;
-        private Output<List<String>> nameServers;
+        private CustomDnsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDnsArgs();
         }
 
         public Builder(CustomDnsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dsRecords = defaults.dsRecords;
-    	      this.nameServers = defaults.nameServers;
+            $ = new CustomDnsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dsRecords(@Nullable Output<List<DsRecordArgs>> dsRecords) {
-            this.dsRecords = dsRecords;
+            $.dsRecords = dsRecords;
             return this;
         }
-        public Builder dsRecords(@Nullable List<DsRecordArgs> dsRecords) {
-            this.dsRecords = Codegen.ofNullable(dsRecords);
-            return this;
+
+        public Builder dsRecords(List<DsRecordArgs> dsRecords) {
+            return dsRecords(Output.of(dsRecords));
         }
+
         public Builder dsRecords(DsRecordArgs... dsRecords) {
             return dsRecords(List.of(dsRecords));
         }
+
         public Builder nameServers(Output<List<String>> nameServers) {
-            this.nameServers = Objects.requireNonNull(nameServers);
+            $.nameServers = nameServers;
             return this;
         }
+
         public Builder nameServers(List<String> nameServers) {
-            this.nameServers = Output.of(Objects.requireNonNull(nameServers));
-            return this;
+            return nameServers(Output.of(nameServers));
         }
+
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
-        }        public CustomDnsArgs build() {
-            return new CustomDnsArgs(dsRecords, nameServers);
+        }
+
+        public CustomDnsArgs build() {
+            $.nameServers = Objects.requireNonNull($.nameServers, "expected parameter 'nameServers' to be non-null");
+            return $;
         }
     }
+
 }

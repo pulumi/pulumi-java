@@ -5,10 +5,10 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HourlyScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="minute")
-      private final @Nullable Output<Integer> minute;
+    private @Nullable Output<Integer> minute;
 
-    public Output<Integer> minute() {
-        return this.minute == null ? Codegen.empty() : this.minute;
+    public Optional<Output<Integer>> minute() {
+        return Optional.ofNullable(this.minute);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HourlyScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="snapshotsToKeep")
-      private final @Nullable Output<Integer> snapshotsToKeep;
+    private @Nullable Output<Integer> snapshotsToKeep;
 
-    public Output<Integer> snapshotsToKeep() {
-        return this.snapshotsToKeep == null ? Codegen.empty() : this.snapshotsToKeep;
+    public Optional<Output<Integer>> snapshotsToKeep() {
+        return Optional.ofNullable(this.snapshotsToKeep);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class HourlyScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="usedBytes")
-      private final @Nullable Output<Double> usedBytes;
+    private @Nullable Output<Double> usedBytes;
 
-    public Output<Double> usedBytes() {
-        return this.usedBytes == null ? Codegen.empty() : this.usedBytes;
+    public Optional<Output<Double>> usedBytes() {
+        return Optional.ofNullable(this.usedBytes);
     }
 
-    public HourlyScheduleArgs(
-        @Nullable Output<Integer> minute,
-        @Nullable Output<Integer> snapshotsToKeep,
-        @Nullable Output<Double> usedBytes) {
-        this.minute = minute;
-        this.snapshotsToKeep = snapshotsToKeep;
-        this.usedBytes = usedBytes;
-    }
+    private HourlyScheduleArgs() {}
 
-    private HourlyScheduleArgs() {
-        this.minute = Codegen.empty();
-        this.snapshotsToKeep = Codegen.empty();
-        this.usedBytes = Codegen.empty();
+    private HourlyScheduleArgs(HourlyScheduleArgs $) {
+        this.minute = $.minute;
+        this.snapshotsToKeep = $.snapshotsToKeep;
+        this.usedBytes = $.usedBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HourlyScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> minute;
-        private @Nullable Output<Integer> snapshotsToKeep;
-        private @Nullable Output<Double> usedBytes;
+        private HourlyScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HourlyScheduleArgs();
         }
 
         public Builder(HourlyScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minute = defaults.minute;
-    	      this.snapshotsToKeep = defaults.snapshotsToKeep;
-    	      this.usedBytes = defaults.usedBytes;
+            $ = new HourlyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minute(@Nullable Output<Integer> minute) {
-            this.minute = minute;
+            $.minute = minute;
             return this;
         }
-        public Builder minute(@Nullable Integer minute) {
-            this.minute = Codegen.ofNullable(minute);
-            return this;
+
+        public Builder minute(Integer minute) {
+            return minute(Output.of(minute));
         }
+
         public Builder snapshotsToKeep(@Nullable Output<Integer> snapshotsToKeep) {
-            this.snapshotsToKeep = snapshotsToKeep;
+            $.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
-        public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
-            this.snapshotsToKeep = Codegen.ofNullable(snapshotsToKeep);
-            return this;
+
+        public Builder snapshotsToKeep(Integer snapshotsToKeep) {
+            return snapshotsToKeep(Output.of(snapshotsToKeep));
         }
+
         public Builder usedBytes(@Nullable Output<Double> usedBytes) {
-            this.usedBytes = usedBytes;
+            $.usedBytes = usedBytes;
             return this;
         }
-        public Builder usedBytes(@Nullable Double usedBytes) {
-            this.usedBytes = Codegen.ofNullable(usedBytes);
-            return this;
-        }        public HourlyScheduleArgs build() {
-            return new HourlyScheduleArgs(minute, snapshotsToKeep, usedBytes);
+
+        public Builder usedBytes(Double usedBytes) {
+            return usedBytes(Output.of(usedBytes));
+        }
+
+        public HourlyScheduleArgs build() {
+            return $;
         }
     }
+
 }

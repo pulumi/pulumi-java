@@ -7,9 +7,9 @@ import com.pulumi.azurenative.appplatform.inputs.ApiPortalPropertiesArgs;
 import com.pulumi.azurenative.appplatform.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiPortalName")
-      private final @Nullable Output<String> apiPortalName;
+    private @Nullable Output<String> apiPortalName;
 
-    public Output<String> apiPortalName() {
-        return this.apiPortalName == null ? Codegen.empty() : this.apiPortalName;
+    public Optional<Output<String>> apiPortalName() {
+        return Optional.ofNullable(this.apiPortalName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ApiPortalPropertiesArgs> properties;
+    private @Nullable Output<ApiPortalPropertiesArgs> properties;
 
-    public Output<ApiPortalPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ApiPortalPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -66,102 +66,90 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
-    public ApiPortalArgs(
-        @Nullable Output<String> apiPortalName,
-        @Nullable Output<ApiPortalPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<SkuArgs> sku) {
-        this.apiPortalName = apiPortalName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.sku = sku;
-    }
+    private ApiPortalArgs() {}
 
-    private ApiPortalArgs() {
-        this.apiPortalName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.sku = Codegen.empty();
+    private ApiPortalArgs(ApiPortalArgs $) {
+        this.apiPortalName = $.apiPortalName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiPortalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiPortalName;
-        private @Nullable Output<ApiPortalPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<SkuArgs> sku;
+        private ApiPortalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiPortalArgs();
         }
 
         public Builder(ApiPortalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiPortalName = defaults.apiPortalName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.sku = defaults.sku;
+            $ = new ApiPortalArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiPortalName(@Nullable Output<String> apiPortalName) {
-            this.apiPortalName = apiPortalName;
+            $.apiPortalName = apiPortalName;
             return this;
         }
-        public Builder apiPortalName(@Nullable String apiPortalName) {
-            this.apiPortalName = Codegen.ofNullable(apiPortalName);
-            return this;
+
+        public Builder apiPortalName(String apiPortalName) {
+            return apiPortalName(Output.of(apiPortalName));
         }
+
         public Builder properties(@Nullable Output<ApiPortalPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ApiPortalPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ApiPortalPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
-        }        public ApiPortalArgs build() {
-            return new ApiPortalArgs(apiPortalName, properties, resourceGroupName, serviceName, sku);
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
+        }
+
+        public ApiPortalArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

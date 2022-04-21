@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
      * 
      */
     @Import(name="forwardWhenQueryArgProfileIsUnknown", required=true)
-      private final Output<Boolean> forwardWhenQueryArgProfileIsUnknown;
+    private Output<Boolean> forwardWhenQueryArgProfileIsUnknown;
 
     public Output<Boolean> forwardWhenQueryArgProfileIsUnknown() {
         return this.forwardWhenQueryArgProfileIsUnknown;
@@ -32,63 +32,59 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
      * 
      */
     @Import(name="queryArgProfiles")
-      private final @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
+    private @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
 
-    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles() {
-        return this.queryArgProfiles == null ? Codegen.empty() : this.queryArgProfiles;
+    public Optional<Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs>> queryArgProfiles() {
+        return Optional.ofNullable(this.queryArgProfiles);
     }
 
-    public FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs(
-        Output<Boolean> forwardWhenQueryArgProfileIsUnknown,
-        @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles) {
-        this.forwardWhenQueryArgProfileIsUnknown = Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown, "expected parameter 'forwardWhenQueryArgProfileIsUnknown' to be non-null");
-        this.queryArgProfiles = queryArgProfiles;
-    }
+    private FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs() {}
 
-    private FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs() {
-        this.forwardWhenQueryArgProfileIsUnknown = Codegen.empty();
-        this.queryArgProfiles = Codegen.empty();
+    private FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs(FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs $) {
+        this.forwardWhenQueryArgProfileIsUnknown = $.forwardWhenQueryArgProfileIsUnknown;
+        this.queryArgProfiles = $.queryArgProfiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> forwardWhenQueryArgProfileIsUnknown;
-        private @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
+        private FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs();
         }
 
         public Builder(FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardWhenQueryArgProfileIsUnknown = defaults.forwardWhenQueryArgProfileIsUnknown;
-    	      this.queryArgProfiles = defaults.queryArgProfiles;
+            $ = new FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardWhenQueryArgProfileIsUnknown(Output<Boolean> forwardWhenQueryArgProfileIsUnknown) {
-            this.forwardWhenQueryArgProfileIsUnknown = Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown);
+            $.forwardWhenQueryArgProfileIsUnknown = forwardWhenQueryArgProfileIsUnknown;
             return this;
         }
+
         public Builder forwardWhenQueryArgProfileIsUnknown(Boolean forwardWhenQueryArgProfileIsUnknown) {
-            this.forwardWhenQueryArgProfileIsUnknown = Output.of(Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown));
-            return this;
+            return forwardWhenQueryArgProfileIsUnknown(Output.of(forwardWhenQueryArgProfileIsUnknown));
         }
+
         public Builder queryArgProfiles(@Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles) {
-            this.queryArgProfiles = queryArgProfiles;
+            $.queryArgProfiles = queryArgProfiles;
             return this;
         }
-        public Builder queryArgProfiles(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs queryArgProfiles) {
-            this.queryArgProfiles = Codegen.ofNullable(queryArgProfiles);
-            return this;
-        }        public FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs build() {
-            return new FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs(forwardWhenQueryArgProfileIsUnknown, queryArgProfiles);
+
+        public Builder queryArgProfiles(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs queryArgProfiles) {
+            return queryArgProfiles(Output.of(queryArgProfiles));
+        }
+
+        public FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs build() {
+            $.forwardWhenQueryArgProfileIsUnknown = Objects.requireNonNull($.forwardWhenQueryArgProfileIsUnknown, "expected parameter 'forwardWhenQueryArgProfileIsUnknown' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetBuildServiceResourceUploadUrlArgs extends com.pulumi.resou
      * 
      */
     @Import(name="buildServiceName", required=true)
-      private final String buildServiceName;
+    private String buildServiceName;
 
     public String buildServiceName() {
         return this.buildServiceName;
@@ -28,7 +28,7 @@ public final class GetBuildServiceResourceUploadUrlArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetBuildServiceResourceUploadUrlArgs extends com.pulumi.resou
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetBuildServiceResourceUploadUrlArgs(
-        String buildServiceName,
-        String resourceGroupName,
-        String serviceName) {
-        this.buildServiceName = Objects.requireNonNull(buildServiceName, "expected parameter 'buildServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetBuildServiceResourceUploadUrlArgs() {}
 
-    private GetBuildServiceResourceUploadUrlArgs() {
-        this.buildServiceName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetBuildServiceResourceUploadUrlArgs(GetBuildServiceResourceUploadUrlArgs $) {
+        this.buildServiceName = $.buildServiceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBuildServiceResourceUploadUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String buildServiceName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetBuildServiceResourceUploadUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBuildServiceResourceUploadUrlArgs();
         }
 
         public Builder(GetBuildServiceResourceUploadUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildServiceName = defaults.buildServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetBuildServiceResourceUploadUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildServiceName(String buildServiceName) {
-            this.buildServiceName = Objects.requireNonNull(buildServiceName);
+            $.buildServiceName = buildServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetBuildServiceResourceUploadUrlArgs build() {
-            return new GetBuildServiceResourceUploadUrlArgs(buildServiceName, resourceGroupName, serviceName);
+        }
+
+        public GetBuildServiceResourceUploadUrlArgs build() {
+            $.buildServiceName = Objects.requireNonNull($.buildServiceName, "expected parameter 'buildServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class AuditLogConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exemptedMembers", required=true)
-      private final List<String> exemptedMembers;
+    private List<String> exemptedMembers;
 
     public List<String> exemptedMembers() {
         return this.exemptedMembers;
@@ -34,7 +34,7 @@ public final class AuditLogConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ignoreChildExemptions", required=true)
-      private final Boolean ignoreChildExemptions;
+    private Boolean ignoreChildExemptions;
 
     public Boolean ignoreChildExemptions() {
         return this.ignoreChildExemptions;
@@ -45,67 +45,63 @@ public final class AuditLogConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="logType", required=true)
-      private final String logType;
+    private String logType;
 
     public String logType() {
         return this.logType;
     }
 
-    public AuditLogConfigResponse(
-        List<String> exemptedMembers,
-        Boolean ignoreChildExemptions,
-        String logType) {
-        this.exemptedMembers = Objects.requireNonNull(exemptedMembers, "expected parameter 'exemptedMembers' to be non-null");
-        this.ignoreChildExemptions = Objects.requireNonNull(ignoreChildExemptions, "expected parameter 'ignoreChildExemptions' to be non-null");
-        this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
-    }
+    private AuditLogConfigResponse() {}
 
-    private AuditLogConfigResponse() {
-        this.exemptedMembers = List.of();
-        this.ignoreChildExemptions = null;
-        this.logType = null;
+    private AuditLogConfigResponse(AuditLogConfigResponse $) {
+        this.exemptedMembers = $.exemptedMembers;
+        this.ignoreChildExemptions = $.ignoreChildExemptions;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuditLogConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> exemptedMembers;
-        private Boolean ignoreChildExemptions;
-        private String logType;
+        private AuditLogConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuditLogConfigResponse();
         }
 
         public Builder(AuditLogConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exemptedMembers = defaults.exemptedMembers;
-    	      this.ignoreChildExemptions = defaults.ignoreChildExemptions;
-    	      this.logType = defaults.logType;
+            $ = new AuditLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exemptedMembers(List<String> exemptedMembers) {
-            this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
+            $.exemptedMembers = exemptedMembers;
             return this;
         }
+
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
+
         public Builder ignoreChildExemptions(Boolean ignoreChildExemptions) {
-            this.ignoreChildExemptions = Objects.requireNonNull(ignoreChildExemptions);
+            $.ignoreChildExemptions = ignoreChildExemptions;
             return this;
         }
+
         public Builder logType(String logType) {
-            this.logType = Objects.requireNonNull(logType);
+            $.logType = logType;
             return this;
-        }        public AuditLogConfigResponse build() {
-            return new AuditLogConfigResponse(exemptedMembers, ignoreChildExemptions, logType);
+        }
+
+        public AuditLogConfigResponse build() {
+            $.exemptedMembers = Objects.requireNonNull($.exemptedMembers, "expected parameter 'exemptedMembers' to be non-null");
+            $.ignoreChildExemptions = Objects.requireNonNull($.ignoreChildExemptions, "expected parameter 'ignoreChildExemptions' to be non-null");
+            $.logType = Objects.requireNonNull($.logType, "expected parameter 'logType' to be non-null");
+            return $;
         }
     }
+
 }

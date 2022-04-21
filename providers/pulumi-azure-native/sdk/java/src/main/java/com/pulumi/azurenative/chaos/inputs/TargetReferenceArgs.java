@@ -6,7 +6,6 @@ package com.pulumi.azurenative.chaos.inputs;
 import com.pulumi.azurenative.chaos.enums.TargetReferenceType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class TargetReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -35,63 +34,60 @@ public final class TargetReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<TargetReferenceType> type;
+    private Output<TargetReferenceType> type;
 
     public Output<TargetReferenceType> type() {
         return this.type;
     }
 
-    public TargetReferenceArgs(
-        Output<String> id,
-        Output<TargetReferenceType> type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TargetReferenceArgs() {}
 
-    private TargetReferenceArgs() {
-        this.id = Codegen.empty();
-        this.type = Codegen.empty();
+    private TargetReferenceArgs(TargetReferenceArgs $) {
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<TargetReferenceType> type;
+        private TargetReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetReferenceArgs();
         }
 
         public Builder(TargetReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new TargetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder type(Output<TargetReferenceType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(TargetReferenceType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TargetReferenceArgs build() {
-            return new TargetReferenceArgs(id, type);
+            return type(Output.of(type));
+        }
+
+        public TargetReferenceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

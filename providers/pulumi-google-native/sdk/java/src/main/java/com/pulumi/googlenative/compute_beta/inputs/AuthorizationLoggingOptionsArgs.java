@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.AuthorizationLoggingOptionsPermissionType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AuthorizationLoggingOptionsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="permissionType")
-      private final @Nullable Output<AuthorizationLoggingOptionsPermissionType> permissionType;
+    private @Nullable Output<AuthorizationLoggingOptionsPermissionType> permissionType;
 
-    public Output<AuthorizationLoggingOptionsPermissionType> permissionType() {
-        return this.permissionType == null ? Codegen.empty() : this.permissionType;
+    public Optional<Output<AuthorizationLoggingOptionsPermissionType>> permissionType() {
+        return Optional.ofNullable(this.permissionType);
     }
 
-    public AuthorizationLoggingOptionsArgs(@Nullable Output<AuthorizationLoggingOptionsPermissionType> permissionType) {
-        this.permissionType = permissionType;
-    }
+    private AuthorizationLoggingOptionsArgs() {}
 
-    private AuthorizationLoggingOptionsArgs() {
-        this.permissionType = Codegen.empty();
+    private AuthorizationLoggingOptionsArgs(AuthorizationLoggingOptionsArgs $) {
+        this.permissionType = $.permissionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationLoggingOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AuthorizationLoggingOptionsPermissionType> permissionType;
+        private AuthorizationLoggingOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationLoggingOptionsArgs();
         }
 
         public Builder(AuthorizationLoggingOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.permissionType = defaults.permissionType;
+            $ = new AuthorizationLoggingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder permissionType(@Nullable Output<AuthorizationLoggingOptionsPermissionType> permissionType) {
-            this.permissionType = permissionType;
+            $.permissionType = permissionType;
             return this;
         }
-        public Builder permissionType(@Nullable AuthorizationLoggingOptionsPermissionType permissionType) {
-            this.permissionType = Codegen.ofNullable(permissionType);
-            return this;
-        }        public AuthorizationLoggingOptionsArgs build() {
-            return new AuthorizationLoggingOptionsArgs(permissionType);
+
+        public Builder permissionType(AuthorizationLoggingOptionsPermissionType permissionType) {
+            return permissionType(Output.of(permissionType));
+        }
+
+        public AuthorizationLoggingOptionsArgs build() {
+            return $;
         }
     }
+
 }

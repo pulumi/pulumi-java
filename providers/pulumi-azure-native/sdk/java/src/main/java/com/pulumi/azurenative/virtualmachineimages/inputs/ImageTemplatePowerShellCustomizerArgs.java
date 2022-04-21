@@ -11,6 +11,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="inline")
-      private final @Nullable Output<List<String>> inline;
+    private @Nullable Output<List<String>> inline;
 
-    public Output<List<String>> inline() {
-        return this.inline == null ? Codegen.empty() : this.inline;
+    public Optional<Output<List<String>>> inline() {
+        return Optional.ofNullable(this.inline);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="runAsSystem")
-      private final @Nullable Output<Boolean> runAsSystem;
+    private @Nullable Output<Boolean> runAsSystem;
 
-    public Output<Boolean> runAsSystem() {
-        return this.runAsSystem == null ? Codegen.empty() : this.runAsSystem;
+    public Optional<Output<Boolean>> runAsSystem() {
+        return Optional.ofNullable(this.runAsSystem);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="runElevated")
-      private final @Nullable Output<Boolean> runElevated;
+    private @Nullable Output<Boolean> runElevated;
 
-    public Output<Boolean> runElevated() {
-        return this.runElevated == null ? Codegen.empty() : this.runElevated;
+    public Optional<Output<Boolean>> runElevated() {
+        return Optional.ofNullable(this.runElevated);
     }
 
     /**
@@ -71,10 +72,10 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="scriptUri")
-      private final @Nullable Output<String> scriptUri;
+    private @Nullable Output<String> scriptUri;
 
-    public Output<String> scriptUri() {
-        return this.scriptUri == null ? Codegen.empty() : this.scriptUri;
+    public Optional<Output<String>> scriptUri() {
+        return Optional.ofNullable(this.scriptUri);
     }
 
     /**
@@ -82,10 +83,10 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="sha256Checksum")
-      private final @Nullable Output<String> sha256Checksum;
+    private @Nullable Output<String> sha256Checksum;
 
-    public Output<String> sha256Checksum() {
-        return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
+    public Optional<Output<String>> sha256Checksum() {
+        return Optional.ofNullable(this.sha256Checksum);
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -105,147 +106,130 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="validExitCodes")
-      private final @Nullable Output<List<Integer>> validExitCodes;
+    private @Nullable Output<List<Integer>> validExitCodes;
 
-    public Output<List<Integer>> validExitCodes() {
-        return this.validExitCodes == null ? Codegen.empty() : this.validExitCodes;
+    public Optional<Output<List<Integer>>> validExitCodes() {
+        return Optional.ofNullable(this.validExitCodes);
     }
 
-    public ImageTemplatePowerShellCustomizerArgs(
-        @Nullable Output<List<String>> inline,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> runAsSystem,
-        @Nullable Output<Boolean> runElevated,
-        @Nullable Output<String> scriptUri,
-        @Nullable Output<String> sha256Checksum,
-        Output<String> type,
-        @Nullable Output<List<Integer>> validExitCodes) {
-        this.inline = inline;
-        this.name = name;
-        this.runAsSystem = Codegen.booleanProp("runAsSystem").output().arg(runAsSystem).def(false).getNullable();
-        this.runElevated = Codegen.booleanProp("runElevated").output().arg(runElevated).def(false).getNullable();
-        this.scriptUri = scriptUri;
-        this.sha256Checksum = Codegen.stringProp("sha256Checksum").output().arg(sha256Checksum).def("").getNullable();
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.validExitCodes = validExitCodes;
-    }
+    private ImageTemplatePowerShellCustomizerArgs() {}
 
-    private ImageTemplatePowerShellCustomizerArgs() {
-        this.inline = Codegen.empty();
-        this.name = Codegen.empty();
-        this.runAsSystem = Codegen.empty();
-        this.runElevated = Codegen.empty();
-        this.scriptUri = Codegen.empty();
-        this.sha256Checksum = Codegen.empty();
-        this.type = Codegen.empty();
-        this.validExitCodes = Codegen.empty();
+    private ImageTemplatePowerShellCustomizerArgs(ImageTemplatePowerShellCustomizerArgs $) {
+        this.inline = $.inline;
+        this.name = $.name;
+        this.runAsSystem = $.runAsSystem;
+        this.runElevated = $.runElevated;
+        this.scriptUri = $.scriptUri;
+        this.sha256Checksum = $.sha256Checksum;
+        this.type = $.type;
+        this.validExitCodes = $.validExitCodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplatePowerShellCustomizerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> inline;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> runAsSystem;
-        private @Nullable Output<Boolean> runElevated;
-        private @Nullable Output<String> scriptUri;
-        private @Nullable Output<String> sha256Checksum;
-        private Output<String> type;
-        private @Nullable Output<List<Integer>> validExitCodes;
+        private ImageTemplatePowerShellCustomizerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplatePowerShellCustomizerArgs();
         }
 
         public Builder(ImageTemplatePowerShellCustomizerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inline = defaults.inline;
-    	      this.name = defaults.name;
-    	      this.runAsSystem = defaults.runAsSystem;
-    	      this.runElevated = defaults.runElevated;
-    	      this.scriptUri = defaults.scriptUri;
-    	      this.sha256Checksum = defaults.sha256Checksum;
-    	      this.type = defaults.type;
-    	      this.validExitCodes = defaults.validExitCodes;
+            $ = new ImageTemplatePowerShellCustomizerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inline(@Nullable Output<List<String>> inline) {
-            this.inline = inline;
+            $.inline = inline;
             return this;
         }
-        public Builder inline(@Nullable List<String> inline) {
-            this.inline = Codegen.ofNullable(inline);
-            return this;
+
+        public Builder inline(List<String> inline) {
+            return inline(Output.of(inline));
         }
+
         public Builder inline(String... inline) {
             return inline(List.of(inline));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder runAsSystem(@Nullable Output<Boolean> runAsSystem) {
-            this.runAsSystem = runAsSystem;
+            $.runAsSystem = runAsSystem;
             return this;
         }
-        public Builder runAsSystem(@Nullable Boolean runAsSystem) {
-            this.runAsSystem = Codegen.ofNullable(runAsSystem);
-            return this;
+
+        public Builder runAsSystem(Boolean runAsSystem) {
+            return runAsSystem(Output.of(runAsSystem));
         }
+
         public Builder runElevated(@Nullable Output<Boolean> runElevated) {
-            this.runElevated = runElevated;
+            $.runElevated = runElevated;
             return this;
         }
-        public Builder runElevated(@Nullable Boolean runElevated) {
-            this.runElevated = Codegen.ofNullable(runElevated);
-            return this;
+
+        public Builder runElevated(Boolean runElevated) {
+            return runElevated(Output.of(runElevated));
         }
+
         public Builder scriptUri(@Nullable Output<String> scriptUri) {
-            this.scriptUri = scriptUri;
+            $.scriptUri = scriptUri;
             return this;
         }
-        public Builder scriptUri(@Nullable String scriptUri) {
-            this.scriptUri = Codegen.ofNullable(scriptUri);
-            return this;
+
+        public Builder scriptUri(String scriptUri) {
+            return scriptUri(Output.of(scriptUri));
         }
+
         public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
-            this.sha256Checksum = sha256Checksum;
+            $.sha256Checksum = sha256Checksum;
             return this;
         }
-        public Builder sha256Checksum(@Nullable String sha256Checksum) {
-            this.sha256Checksum = Codegen.ofNullable(sha256Checksum);
-            return this;
+
+        public Builder sha256Checksum(String sha256Checksum) {
+            return sha256Checksum(Output.of(sha256Checksum));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder validExitCodes(@Nullable Output<List<Integer>> validExitCodes) {
-            this.validExitCodes = validExitCodes;
+            $.validExitCodes = validExitCodes;
             return this;
         }
-        public Builder validExitCodes(@Nullable List<Integer> validExitCodes) {
-            this.validExitCodes = Codegen.ofNullable(validExitCodes);
-            return this;
+
+        public Builder validExitCodes(List<Integer> validExitCodes) {
+            return validExitCodes(Output.of(validExitCodes));
         }
+
         public Builder validExitCodes(Integer... validExitCodes) {
             return validExitCodes(List.of(validExitCodes));
-        }        public ImageTemplatePowerShellCustomizerArgs build() {
-            return new ImageTemplatePowerShellCustomizerArgs(inline, name, runAsSystem, runElevated, scriptUri, sha256Checksum, type, validExitCodes);
+        }
+
+        public ImageTemplatePowerShellCustomizerArgs build() {
+            $.runAsSystem = Codegen.booleanProp("runAsSystem").output().arg($.runAsSystem).def(false).getNullable();
+            $.runElevated = Codegen.booleanProp("runElevated").output().arg($.runElevated).def(false).getNullable();
+            $.sha256Checksum = Codegen.stringProp("sha256Checksum").output().arg($.sha256Checksum).def("").getNullable();
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

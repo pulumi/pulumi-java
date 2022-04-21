@@ -23,10 +23,10 @@ public final class BasicDependencyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BasicDependencyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable String resourceName;
+    private @Nullable String resourceName;
 
     public Optional<String> resourceName() {
-        return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class BasicDependencyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable String resourceType;
+    private @Nullable String resourceType;
 
     public Optional<String> resourceType() {
-        return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public BasicDependencyResponse(
-        @Nullable String id,
-        @Nullable String resourceName,
-        @Nullable String resourceType) {
-        this.id = id;
-        this.resourceName = resourceName;
-        this.resourceType = resourceType;
-    }
+    private BasicDependencyResponse() {}
 
-    private BasicDependencyResponse() {
-        this.id = null;
-        this.resourceName = null;
-        this.resourceType = null;
+    private BasicDependencyResponse(BasicDependencyResponse $) {
+        this.id = $.id;
+        this.resourceName = $.resourceName;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicDependencyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String resourceName;
-        private @Nullable String resourceType;
+        private BasicDependencyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicDependencyResponse();
         }
 
         public Builder(BasicDependencyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceType = defaults.resourceType;
+            $ = new BasicDependencyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
-        }        public BasicDependencyResponse build() {
-            return new BasicDependencyResponse(id, resourceName, resourceType);
+        }
+
+        public BasicDependencyResponse build() {
+            return $;
         }
     }
+
 }

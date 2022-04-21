@@ -26,10 +26,10 @@ public final class FrontDoorManagedRuleSetResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="exclusions")
-      private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
+    private @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
-    public List<ManagedRuleExclusionResponse> exclusions() {
-        return this.exclusions == null ? List.of() : this.exclusions;
+    public Optional<List<ManagedRuleExclusionResponse>> exclusions() {
+        return Optional.ofNullable(this.exclusions);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FrontDoorManagedRuleSetResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="ruleGroupOverrides")
-      private final @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides;
+    private @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides;
 
-    public List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides() {
-        return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
+    public Optional<List<FrontDoorManagedRuleGroupOverrideResponse>> ruleGroupOverrides() {
+        return Optional.ofNullable(this.ruleGroupOverrides);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FrontDoorManagedRuleSetResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="ruleSetAction")
-      private final @Nullable String ruleSetAction;
+    private @Nullable String ruleSetAction;
 
     public Optional<String> ruleSetAction() {
-        return this.ruleSetAction == null ? Optional.empty() : Optional.ofNullable(this.ruleSetAction);
+        return Optional.ofNullable(this.ruleSetAction);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class FrontDoorManagedRuleSetResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="ruleSetType", required=true)
-      private final String ruleSetType;
+    private String ruleSetType;
 
     public String ruleSetType() {
         return this.ruleSetType;
@@ -70,88 +70,78 @@ public final class FrontDoorManagedRuleSetResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="ruleSetVersion", required=true)
-      private final String ruleSetVersion;
+    private String ruleSetVersion;
 
     public String ruleSetVersion() {
         return this.ruleSetVersion;
     }
 
-    public FrontDoorManagedRuleSetResponse(
-        @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides,
-        @Nullable String ruleSetAction,
-        String ruleSetType,
-        String ruleSetVersion) {
-        this.exclusions = exclusions;
-        this.ruleGroupOverrides = ruleGroupOverrides;
-        this.ruleSetAction = ruleSetAction;
-        this.ruleSetType = Objects.requireNonNull(ruleSetType, "expected parameter 'ruleSetType' to be non-null");
-        this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion, "expected parameter 'ruleSetVersion' to be non-null");
-    }
+    private FrontDoorManagedRuleSetResponse() {}
 
-    private FrontDoorManagedRuleSetResponse() {
-        this.exclusions = List.of();
-        this.ruleGroupOverrides = List.of();
-        this.ruleSetAction = null;
-        this.ruleSetType = null;
-        this.ruleSetVersion = null;
+    private FrontDoorManagedRuleSetResponse(FrontDoorManagedRuleSetResponse $) {
+        this.exclusions = $.exclusions;
+        this.ruleGroupOverrides = $.ruleGroupOverrides;
+        this.ruleSetAction = $.ruleSetAction;
+        this.ruleSetType = $.ruleSetType;
+        this.ruleSetVersion = $.ruleSetVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontDoorManagedRuleSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ManagedRuleExclusionResponse> exclusions;
-        private @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides;
-        private @Nullable String ruleSetAction;
-        private String ruleSetType;
-        private String ruleSetVersion;
+        private FrontDoorManagedRuleSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontDoorManagedRuleSetResponse();
         }
 
         public Builder(FrontDoorManagedRuleSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exclusions = defaults.exclusions;
-    	      this.ruleGroupOverrides = defaults.ruleGroupOverrides;
-    	      this.ruleSetAction = defaults.ruleSetAction;
-    	      this.ruleSetType = defaults.ruleSetType;
-    	      this.ruleSetVersion = defaults.ruleSetVersion;
+            $ = new FrontDoorManagedRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
-            this.exclusions = exclusions;
+            $.exclusions = exclusions;
             return this;
         }
+
         public Builder exclusions(ManagedRuleExclusionResponse... exclusions) {
             return exclusions(List.of(exclusions));
         }
+
         public Builder ruleGroupOverrides(@Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides) {
-            this.ruleGroupOverrides = ruleGroupOverrides;
+            $.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
+
         public Builder ruleGroupOverrides(FrontDoorManagedRuleGroupOverrideResponse... ruleGroupOverrides) {
             return ruleGroupOverrides(List.of(ruleGroupOverrides));
         }
+
         public Builder ruleSetAction(@Nullable String ruleSetAction) {
-            this.ruleSetAction = ruleSetAction;
+            $.ruleSetAction = ruleSetAction;
             return this;
         }
+
         public Builder ruleSetType(String ruleSetType) {
-            this.ruleSetType = Objects.requireNonNull(ruleSetType);
+            $.ruleSetType = ruleSetType;
             return this;
         }
+
         public Builder ruleSetVersion(String ruleSetVersion) {
-            this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
+            $.ruleSetVersion = ruleSetVersion;
             return this;
-        }        public FrontDoorManagedRuleSetResponse build() {
-            return new FrontDoorManagedRuleSetResponse(exclusions, ruleGroupOverrides, ruleSetAction, ruleSetType, ruleSetVersion);
+        }
+
+        public FrontDoorManagedRuleSetResponse build() {
+            $.ruleSetType = Objects.requireNonNull($.ruleSetType, "expected parameter 'ruleSetType' to be non-null");
+            $.ruleSetVersion = Objects.requireNonNull($.ruleSetVersion, "expected parameter 'ruleSetVersion' to be non-null");
+            return $;
         }
     }
+
 }

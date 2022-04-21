@@ -20,7 +20,7 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -31,10 +31,10 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryId")
-      private final @Nullable String registryId;
+    private @Nullable String registryId;
 
     public Optional<String> registryId() {
-        return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);
+        return Optional.ofNullable(this.registryId);
     }
 
     /**
@@ -42,64 +42,57 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetRepositoryArgs(
-        String name,
-        @Nullable String registryId,
-        @Nullable Map<String,String> tags) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.registryId = registryId;
-        this.tags = tags;
-    }
+    private GetRepositoryArgs() {}
 
-    private GetRepositoryArgs() {
-        this.name = null;
-        this.registryId = null;
-        this.tags = Map.of();
+    private GetRepositoryArgs(GetRepositoryArgs $) {
+        this.name = $.name;
+        this.registryId = $.registryId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String registryId;
-        private @Nullable Map<String,String> tags;
+        private GetRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRepositoryArgs();
         }
 
         public Builder(GetRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.registryId = defaults.registryId;
-    	      this.tags = defaults.tags;
+            $ = new GetRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = registryId;
+            $.registryId = registryId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetRepositoryArgs build() {
-            return new GetRepositoryArgs(name, registryId, tags);
+        }
+
+        public GetRepositoryArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

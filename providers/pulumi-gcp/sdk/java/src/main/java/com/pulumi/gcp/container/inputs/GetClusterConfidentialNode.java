@@ -13,45 +13,45 @@ public final class GetClusterConfidentialNode extends com.pulumi.resources.Invok
     public static final GetClusterConfidentialNode Empty = new GetClusterConfidentialNode();
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetClusterConfidentialNode(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetClusterConfidentialNode() {}
 
-    private GetClusterConfidentialNode() {
-        this.enabled = null;
+    private GetClusterConfidentialNode(GetClusterConfidentialNode $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterConfidentialNode defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private GetClusterConfidentialNode $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterConfidentialNode();
         }
 
         public Builder(GetClusterConfidentialNode defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GetClusterConfidentialNode(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetClusterConfidentialNode build() {
-            return new GetClusterConfidentialNode(enabled);
+        }
+
+        public GetClusterConfidentialNode build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

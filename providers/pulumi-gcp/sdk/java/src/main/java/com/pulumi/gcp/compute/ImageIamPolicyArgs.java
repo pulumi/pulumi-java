@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ImageIamPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
@@ -32,7 +32,7 @@ public final class ImageIamPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -44,76 +44,70 @@ public final class ImageIamPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ImageIamPolicyArgs(
-        Output<String> image,
-        Output<String> policyData,
-        @Nullable Output<String> project) {
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-    }
+    private ImageIamPolicyArgs() {}
 
-    private ImageIamPolicyArgs() {
-        this.image = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
+    private ImageIamPolicyArgs(ImageIamPolicyArgs $) {
+        this.image = $.image;
+        this.policyData = $.policyData;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> image;
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
+        private ImageIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageIamPolicyArgs();
         }
 
         public Builder(ImageIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.image = defaults.image;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
+            $ = new ImageIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ImageIamPolicyArgs build() {
-            return new ImageIamPolicyArgs(image, policyData, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ImageIamPolicyArgs build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

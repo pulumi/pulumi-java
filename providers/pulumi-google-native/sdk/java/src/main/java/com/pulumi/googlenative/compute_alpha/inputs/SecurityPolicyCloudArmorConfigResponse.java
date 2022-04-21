@@ -21,45 +21,45 @@ public final class SecurityPolicyCloudArmorConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="enableMl", required=true)
-      private final Boolean enableMl;
+    private Boolean enableMl;
 
     public Boolean enableMl() {
         return this.enableMl;
     }
 
-    public SecurityPolicyCloudArmorConfigResponse(Boolean enableMl) {
-        this.enableMl = Objects.requireNonNull(enableMl, "expected parameter 'enableMl' to be non-null");
-    }
+    private SecurityPolicyCloudArmorConfigResponse() {}
 
-    private SecurityPolicyCloudArmorConfigResponse() {
-        this.enableMl = null;
+    private SecurityPolicyCloudArmorConfigResponse(SecurityPolicyCloudArmorConfigResponse $) {
+        this.enableMl = $.enableMl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyCloudArmorConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableMl;
+        private SecurityPolicyCloudArmorConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyCloudArmorConfigResponse();
         }
 
         public Builder(SecurityPolicyCloudArmorConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableMl = defaults.enableMl;
+            $ = new SecurityPolicyCloudArmorConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableMl(Boolean enableMl) {
-            this.enableMl = Objects.requireNonNull(enableMl);
+            $.enableMl = enableMl;
             return this;
-        }        public SecurityPolicyCloudArmorConfigResponse build() {
-            return new SecurityPolicyCloudArmorConfigResponse(enableMl);
+        }
+
+        public SecurityPolicyCloudArmorConfigResponse build() {
+            $.enableMl = Objects.requireNonNull($.enableMl, "expected parameter 'enableMl' to be non-null");
+            return $;
         }
     }
+
 }

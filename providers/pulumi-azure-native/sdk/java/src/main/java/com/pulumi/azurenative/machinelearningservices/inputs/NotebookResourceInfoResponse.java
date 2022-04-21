@@ -16,10 +16,10 @@ public final class NotebookResourceInfoResponse extends com.pulumi.resources.Inv
     public static final NotebookResourceInfoResponse Empty = new NotebookResourceInfoResponse();
 
     @Import(name="fqdn")
-      private final @Nullable String fqdn;
+    private @Nullable String fqdn;
 
     public Optional<String> fqdn() {
-        return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -27,10 +27,10 @@ public final class NotebookResourceInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="notebookPreparationError")
-      private final @Nullable NotebookPreparationErrorResponse notebookPreparationError;
+    private @Nullable NotebookPreparationErrorResponse notebookPreparationError;
 
     public Optional<NotebookPreparationErrorResponse> notebookPreparationError() {
-        return this.notebookPreparationError == null ? Optional.empty() : Optional.ofNullable(this.notebookPreparationError);
+        return Optional.ofNullable(this.notebookPreparationError);
     }
 
     /**
@@ -38,64 +38,56 @@ public final class NotebookResourceInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public NotebookResourceInfoResponse(
-        @Nullable String fqdn,
-        @Nullable NotebookPreparationErrorResponse notebookPreparationError,
-        @Nullable String resourceId) {
-        this.fqdn = fqdn;
-        this.notebookPreparationError = notebookPreparationError;
-        this.resourceId = resourceId;
-    }
+    private NotebookResourceInfoResponse() {}
 
-    private NotebookResourceInfoResponse() {
-        this.fqdn = null;
-        this.notebookPreparationError = null;
-        this.resourceId = null;
+    private NotebookResourceInfoResponse(NotebookResourceInfoResponse $) {
+        this.fqdn = $.fqdn;
+        this.notebookPreparationError = $.notebookPreparationError;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotebookResourceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String fqdn;
-        private @Nullable NotebookPreparationErrorResponse notebookPreparationError;
-        private @Nullable String resourceId;
+        private NotebookResourceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotebookResourceInfoResponse();
         }
 
         public Builder(NotebookResourceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdn = defaults.fqdn;
-    	      this.notebookPreparationError = defaults.notebookPreparationError;
-    	      this.resourceId = defaults.resourceId;
+            $ = new NotebookResourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder notebookPreparationError(@Nullable NotebookPreparationErrorResponse notebookPreparationError) {
-            this.notebookPreparationError = notebookPreparationError;
+            $.notebookPreparationError = notebookPreparationError;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public NotebookResourceInfoResponse build() {
-            return new NotebookResourceInfoResponse(fqdn, notebookPreparationError, resourceId);
+        }
+
+        public NotebookResourceInfoResponse build() {
+            return $;
         }
     }
+
 }

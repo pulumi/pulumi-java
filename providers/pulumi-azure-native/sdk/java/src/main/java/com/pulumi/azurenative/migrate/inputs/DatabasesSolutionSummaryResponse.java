@@ -25,10 +25,10 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
      * 
      */
     @Import(name="databaseInstancesAssessedCount")
-      private final @Nullable Integer databaseInstancesAssessedCount;
+    private @Nullable Integer databaseInstancesAssessedCount;
 
     public Optional<Integer> databaseInstancesAssessedCount() {
-        return this.databaseInstancesAssessedCount == null ? Optional.empty() : Optional.ofNullable(this.databaseInstancesAssessedCount);
+        return Optional.ofNullable(this.databaseInstancesAssessedCount);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
      * 
      */
     @Import(name="databasesAssessedCount")
-      private final @Nullable Integer databasesAssessedCount;
+    private @Nullable Integer databasesAssessedCount;
 
     public Optional<Integer> databasesAssessedCount() {
-        return this.databasesAssessedCount == null ? Optional.empty() : Optional.ofNullable(this.databasesAssessedCount);
+        return Optional.ofNullable(this.databasesAssessedCount);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -59,73 +59,63 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
      * 
      */
     @Import(name="migrationReadyCount")
-      private final @Nullable Integer migrationReadyCount;
+    private @Nullable Integer migrationReadyCount;
 
     public Optional<Integer> migrationReadyCount() {
-        return this.migrationReadyCount == null ? Optional.empty() : Optional.ofNullable(this.migrationReadyCount);
+        return Optional.ofNullable(this.migrationReadyCount);
     }
 
-    public DatabasesSolutionSummaryResponse(
-        @Nullable Integer databaseInstancesAssessedCount,
-        @Nullable Integer databasesAssessedCount,
-        String instanceType,
-        @Nullable Integer migrationReadyCount) {
-        this.databaseInstancesAssessedCount = databaseInstancesAssessedCount;
-        this.databasesAssessedCount = databasesAssessedCount;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.migrationReadyCount = migrationReadyCount;
-    }
+    private DatabasesSolutionSummaryResponse() {}
 
-    private DatabasesSolutionSummaryResponse() {
-        this.databaseInstancesAssessedCount = null;
-        this.databasesAssessedCount = null;
-        this.instanceType = null;
-        this.migrationReadyCount = null;
+    private DatabasesSolutionSummaryResponse(DatabasesSolutionSummaryResponse $) {
+        this.databaseInstancesAssessedCount = $.databaseInstancesAssessedCount;
+        this.databasesAssessedCount = $.databasesAssessedCount;
+        this.instanceType = $.instanceType;
+        this.migrationReadyCount = $.migrationReadyCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabasesSolutionSummaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer databaseInstancesAssessedCount;
-        private @Nullable Integer databasesAssessedCount;
-        private String instanceType;
-        private @Nullable Integer migrationReadyCount;
+        private DatabasesSolutionSummaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabasesSolutionSummaryResponse();
         }
 
         public Builder(DatabasesSolutionSummaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseInstancesAssessedCount = defaults.databaseInstancesAssessedCount;
-    	      this.databasesAssessedCount = defaults.databasesAssessedCount;
-    	      this.instanceType = defaults.instanceType;
-    	      this.migrationReadyCount = defaults.migrationReadyCount;
+            $ = new DatabasesSolutionSummaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseInstancesAssessedCount(@Nullable Integer databaseInstancesAssessedCount) {
-            this.databaseInstancesAssessedCount = databaseInstancesAssessedCount;
+            $.databaseInstancesAssessedCount = databaseInstancesAssessedCount;
             return this;
         }
+
         public Builder databasesAssessedCount(@Nullable Integer databasesAssessedCount) {
-            this.databasesAssessedCount = databasesAssessedCount;
+            $.databasesAssessedCount = databasesAssessedCount;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder migrationReadyCount(@Nullable Integer migrationReadyCount) {
-            this.migrationReadyCount = migrationReadyCount;
+            $.migrationReadyCount = migrationReadyCount;
             return this;
-        }        public DatabasesSolutionSummaryResponse build() {
-            return new DatabasesSolutionSummaryResponse(databaseInstancesAssessedCount, databasesAssessedCount, instanceType, migrationReadyCount);
+        }
+
+        public DatabasesSolutionSummaryResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

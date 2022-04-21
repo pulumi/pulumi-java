@@ -5,12 +5,12 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @Import(name="critical")
-      private final @Nullable Output<Boolean> critical;
+    private @Nullable Output<Boolean> critical;
 
-    public Output<Boolean> critical() {
-        return this.critical == null ? Codegen.empty() : this.critical;
+    public Optional<Output<Boolean>> critical() {
+        return Optional.ofNullable(this.critical);
     }
 
     @Import(name="obectIds")
-      private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> obectIds;
+    private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> obectIds;
 
-    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> obectIds() {
-        return this.obectIds == null ? Codegen.empty() : this.obectIds;
+    public Optional<Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>>> obectIds() {
+        return Optional.ofNullable(this.obectIds);
     }
 
     /**
@@ -42,79 +42,72 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs(
-        @Nullable Output<Boolean> critical,
-        @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> obectIds,
-        @Nullable Output<String> value) {
-        this.critical = critical;
-        this.obectIds = obectIds;
-        this.value = value;
-    }
+    private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs() {}
 
-    private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs() {
-        this.critical = Codegen.empty();
-        this.obectIds = Codegen.empty();
-        this.value = Codegen.empty();
+    private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs $) {
+        this.critical = $.critical;
+        this.obectIds = $.obectIds;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> critical;
-        private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> obectIds;
-        private @Nullable Output<String> value;
+        private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs();
         }
 
         public Builder(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.critical = defaults.critical;
-    	      this.obectIds = defaults.obectIds;
-    	      this.value = defaults.value;
+            $ = new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder critical(@Nullable Output<Boolean> critical) {
-            this.critical = critical;
+            $.critical = critical;
             return this;
         }
-        public Builder critical(@Nullable Boolean critical) {
-            this.critical = Codegen.ofNullable(critical);
-            return this;
+
+        public Builder critical(Boolean critical) {
+            return critical(Output.of(critical));
         }
+
         public Builder obectIds(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> obectIds) {
-            this.obectIds = obectIds;
+            $.obectIds = obectIds;
             return this;
         }
-        public Builder obectIds(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs> obectIds) {
-            this.obectIds = Codegen.ofNullable(obectIds);
-            return this;
+
+        public Builder obectIds(List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs> obectIds) {
+            return obectIds(Output.of(obectIds));
         }
+
         public Builder obectIds(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs... obectIds) {
             return obectIds(List.of(obectIds));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs build() {
-            return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs(critical, obectIds, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs build() {
+            return $;
         }
     }
+
 }

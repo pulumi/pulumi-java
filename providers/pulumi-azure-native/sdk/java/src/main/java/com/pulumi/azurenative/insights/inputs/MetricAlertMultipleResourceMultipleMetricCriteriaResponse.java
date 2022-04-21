@@ -28,10 +28,10 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse ext
      * 
      */
     @Import(name="allOf")
-      private final @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf;
+    private @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf;
 
-    public List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf() {
-        return this.allOf == null ? List.of() : this.allOf;
+    public Optional<List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>>> allOf() {
+        return Optional.ofNullable(this.allOf);
     }
 
     /**
@@ -40,58 +40,55 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse ext
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public MetricAlertMultipleResourceMultipleMetricCriteriaResponse(
-        @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf,
-        String odataType) {
-        this.allOf = allOf;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private MetricAlertMultipleResourceMultipleMetricCriteriaResponse() {}
 
-    private MetricAlertMultipleResourceMultipleMetricCriteriaResponse() {
-        this.allOf = List.of();
-        this.odataType = null;
+    private MetricAlertMultipleResourceMultipleMetricCriteriaResponse(MetricAlertMultipleResourceMultipleMetricCriteriaResponse $) {
+        this.allOf = $.allOf;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricAlertMultipleResourceMultipleMetricCriteriaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf;
-        private String odataType;
+        private MetricAlertMultipleResourceMultipleMetricCriteriaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricAlertMultipleResourceMultipleMetricCriteriaResponse();
         }
 
         public Builder(MetricAlertMultipleResourceMultipleMetricCriteriaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allOf = defaults.allOf;
-    	      this.odataType = defaults.odataType;
+            $ = new MetricAlertMultipleResourceMultipleMetricCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allOf(@Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf) {
-            this.allOf = allOf;
+            $.allOf = allOf;
             return this;
         }
+
         public Builder allOf(Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>... allOf) {
             return allOf(List.of(allOf));
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public MetricAlertMultipleResourceMultipleMetricCriteriaResponse build() {
-            return new MetricAlertMultipleResourceMultipleMetricCriteriaResponse(allOf, odataType);
+        }
+
+        public MetricAlertMultipleResourceMultipleMetricCriteriaResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

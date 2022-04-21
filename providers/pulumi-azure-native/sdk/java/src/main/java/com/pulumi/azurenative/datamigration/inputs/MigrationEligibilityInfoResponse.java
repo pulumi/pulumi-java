@@ -23,7 +23,7 @@ public final class MigrationEligibilityInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="isEligibleForMigration", required=true)
-      private final Boolean isEligibleForMigration;
+    private Boolean isEligibleForMigration;
 
     public Boolean isEligibleForMigration() {
         return this.isEligibleForMigration;
@@ -34,58 +34,56 @@ public final class MigrationEligibilityInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="validationMessages", required=true)
-      private final List<String> validationMessages;
+    private List<String> validationMessages;
 
     public List<String> validationMessages() {
         return this.validationMessages;
     }
 
-    public MigrationEligibilityInfoResponse(
-        Boolean isEligibleForMigration,
-        List<String> validationMessages) {
-        this.isEligibleForMigration = Objects.requireNonNull(isEligibleForMigration, "expected parameter 'isEligibleForMigration' to be non-null");
-        this.validationMessages = Objects.requireNonNull(validationMessages, "expected parameter 'validationMessages' to be non-null");
-    }
+    private MigrationEligibilityInfoResponse() {}
 
-    private MigrationEligibilityInfoResponse() {
-        this.isEligibleForMigration = null;
-        this.validationMessages = List.of();
+    private MigrationEligibilityInfoResponse(MigrationEligibilityInfoResponse $) {
+        this.isEligibleForMigration = $.isEligibleForMigration;
+        this.validationMessages = $.validationMessages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationEligibilityInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isEligibleForMigration;
-        private List<String> validationMessages;
+        private MigrationEligibilityInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationEligibilityInfoResponse();
         }
 
         public Builder(MigrationEligibilityInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEligibleForMigration = defaults.isEligibleForMigration;
-    	      this.validationMessages = defaults.validationMessages;
+            $ = new MigrationEligibilityInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isEligibleForMigration(Boolean isEligibleForMigration) {
-            this.isEligibleForMigration = Objects.requireNonNull(isEligibleForMigration);
+            $.isEligibleForMigration = isEligibleForMigration;
             return this;
         }
+
         public Builder validationMessages(List<String> validationMessages) {
-            this.validationMessages = Objects.requireNonNull(validationMessages);
+            $.validationMessages = validationMessages;
             return this;
         }
+
         public Builder validationMessages(String... validationMessages) {
             return validationMessages(List.of(validationMessages));
-        }        public MigrationEligibilityInfoResponse build() {
-            return new MigrationEligibilityInfoResponse(isEligibleForMigration, validationMessages);
+        }
+
+        public MigrationEligibilityInfoResponse build() {
+            $.isEligibleForMigration = Objects.requireNonNull($.isEligibleForMigration, "expected parameter 'isEligibleForMigration' to be non-null");
+            $.validationMessages = Objects.requireNonNull($.validationMessages, "expected parameter 'validationMessages' to be non-null");
+            return $;
         }
     }
+
 }

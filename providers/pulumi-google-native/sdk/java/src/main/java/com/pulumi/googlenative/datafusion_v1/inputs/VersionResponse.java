@@ -23,7 +23,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availableFeatures", required=true)
-      private final List<String> availableFeatures;
+    private List<String> availableFeatures;
 
     public List<String> availableFeatures() {
         return this.availableFeatures;
@@ -34,7 +34,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultVersion", required=true)
-      private final Boolean defaultVersion;
+    private Boolean defaultVersion;
 
     public Boolean defaultVersion() {
         return this.defaultVersion;
@@ -45,7 +45,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -56,76 +56,70 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionNumber", required=true)
-      private final String versionNumber;
+    private String versionNumber;
 
     public String versionNumber() {
         return this.versionNumber;
     }
 
-    public VersionResponse(
-        List<String> availableFeatures,
-        Boolean defaultVersion,
-        String type,
-        String versionNumber) {
-        this.availableFeatures = Objects.requireNonNull(availableFeatures, "expected parameter 'availableFeatures' to be non-null");
-        this.defaultVersion = Objects.requireNonNull(defaultVersion, "expected parameter 'defaultVersion' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.versionNumber = Objects.requireNonNull(versionNumber, "expected parameter 'versionNumber' to be non-null");
-    }
+    private VersionResponse() {}
 
-    private VersionResponse() {
-        this.availableFeatures = List.of();
-        this.defaultVersion = null;
-        this.type = null;
-        this.versionNumber = null;
+    private VersionResponse(VersionResponse $) {
+        this.availableFeatures = $.availableFeatures;
+        this.defaultVersion = $.defaultVersion;
+        this.type = $.type;
+        this.versionNumber = $.versionNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> availableFeatures;
-        private Boolean defaultVersion;
-        private String type;
-        private String versionNumber;
+        private VersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VersionResponse();
         }
 
         public Builder(VersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availableFeatures = defaults.availableFeatures;
-    	      this.defaultVersion = defaults.defaultVersion;
-    	      this.type = defaults.type;
-    	      this.versionNumber = defaults.versionNumber;
+            $ = new VersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availableFeatures(List<String> availableFeatures) {
-            this.availableFeatures = Objects.requireNonNull(availableFeatures);
+            $.availableFeatures = availableFeatures;
             return this;
         }
+
         public Builder availableFeatures(String... availableFeatures) {
             return availableFeatures(List.of(availableFeatures));
         }
+
         public Builder defaultVersion(Boolean defaultVersion) {
-            this.defaultVersion = Objects.requireNonNull(defaultVersion);
+            $.defaultVersion = defaultVersion;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder versionNumber(String versionNumber) {
-            this.versionNumber = Objects.requireNonNull(versionNumber);
+            $.versionNumber = versionNumber;
             return this;
-        }        public VersionResponse build() {
-            return new VersionResponse(availableFeatures, defaultVersion, type, versionNumber);
+        }
+
+        public VersionResponse build() {
+            $.availableFeatures = Objects.requireNonNull($.availableFeatures, "expected parameter 'availableFeatures' to be non-null");
+            $.defaultVersion = Objects.requireNonNull($.defaultVersion, "expected parameter 'defaultVersion' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.versionNumber = Objects.requireNonNull($.versionNumber, "expected parameter 'versionNumber' to be non-null");
+            return $;
         }
     }
+
 }

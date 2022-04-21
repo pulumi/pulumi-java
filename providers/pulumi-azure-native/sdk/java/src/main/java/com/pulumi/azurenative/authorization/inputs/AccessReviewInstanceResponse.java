@@ -23,10 +23,10 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="endDateTime")
-      private final @Nullable String endDateTime;
+    private @Nullable String endDateTime;
 
     public Optional<String> endDateTime() {
-        return this.endDateTime == null ? Optional.empty() : Optional.ofNullable(this.endDateTime);
+        return Optional.ofNullable(this.endDateTime);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -45,7 +45,7 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -56,10 +56,10 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="startDateTime")
-      private final @Nullable String startDateTime;
+    private @Nullable String startDateTime;
 
     public Optional<String> startDateTime() {
-        return this.startDateTime == null ? Optional.empty() : Optional.ofNullable(this.startDateTime);
+        return Optional.ofNullable(this.startDateTime);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -78,91 +78,78 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AccessReviewInstanceResponse(
-        @Nullable String endDateTime,
-        String id,
-        String name,
-        @Nullable String startDateTime,
-        String status,
-        String type) {
-        this.endDateTime = endDateTime;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.startDateTime = startDateTime;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AccessReviewInstanceResponse() {}
 
-    private AccessReviewInstanceResponse() {
-        this.endDateTime = null;
-        this.id = null;
-        this.name = null;
-        this.startDateTime = null;
-        this.status = null;
-        this.type = null;
+    private AccessReviewInstanceResponse(AccessReviewInstanceResponse $) {
+        this.endDateTime = $.endDateTime;
+        this.id = $.id;
+        this.name = $.name;
+        this.startDateTime = $.startDateTime;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessReviewInstanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endDateTime;
-        private String id;
-        private String name;
-        private @Nullable String startDateTime;
-        private String status;
-        private String type;
+        private AccessReviewInstanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessReviewInstanceResponse();
         }
 
         public Builder(AccessReviewInstanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDateTime = defaults.endDateTime;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.startDateTime = defaults.startDateTime;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new AccessReviewInstanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endDateTime(@Nullable String endDateTime) {
-            this.endDateTime = endDateTime;
+            $.endDateTime = endDateTime;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder startDateTime(@Nullable String startDateTime) {
-            this.startDateTime = startDateTime;
+            $.startDateTime = startDateTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AccessReviewInstanceResponse build() {
-            return new AccessReviewInstanceResponse(endDateTime, id, name, startDateTime, status, type);
+        }
+
+        public AccessReviewInstanceResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

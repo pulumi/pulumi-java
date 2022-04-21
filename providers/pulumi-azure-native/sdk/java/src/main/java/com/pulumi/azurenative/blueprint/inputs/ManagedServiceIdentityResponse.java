@@ -25,10 +25,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="principalId")
-      private final @Nullable String principalId;
+    private @Nullable String principalId;
 
     public Optional<String> principalId() {
-        return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -58,73 +58,63 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
+    private @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
-    public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
+    public Optional<Map<String,UserAssignedIdentityResponse>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public ManagedServiceIdentityResponse(
-        @Nullable String principalId,
-        @Nullable String tenantId,
-        String type,
-        @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
-        this.principalId = principalId;
-        this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private ManagedServiceIdentityResponse() {}
 
-    private ManagedServiceIdentityResponse() {
-        this.principalId = null;
-        this.tenantId = null;
-        this.type = null;
-        this.userAssignedIdentities = Map.of();
+    private ManagedServiceIdentityResponse(ManagedServiceIdentityResponse $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedServiceIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String principalId;
-        private @Nullable String tenantId;
-        private String type;
-        private @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
+        private ManagedServiceIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedServiceIdentityResponse();
         }
 
         public Builder(ManagedServiceIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new ManagedServiceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }        public ManagedServiceIdentityResponse build() {
-            return new ManagedServiceIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
+        }
+
+        public ManagedServiceIdentityResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

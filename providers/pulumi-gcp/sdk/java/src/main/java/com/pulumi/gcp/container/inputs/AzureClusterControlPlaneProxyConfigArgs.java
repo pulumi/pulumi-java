@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupId", required=true)
-      private final Output<String> resourceGroupId;
+    private Output<String> resourceGroupId;
 
     public Output<String> resourceGroupId() {
         return this.resourceGroupId;
@@ -30,63 +29,60 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends com.pulumi.re
      * 
      */
     @Import(name="secretId", required=true)
-      private final Output<String> secretId;
+    private Output<String> secretId;
 
     public Output<String> secretId() {
         return this.secretId;
     }
 
-    public AzureClusterControlPlaneProxyConfigArgs(
-        Output<String> resourceGroupId,
-        Output<String> secretId) {
-        this.resourceGroupId = Objects.requireNonNull(resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
-        this.secretId = Objects.requireNonNull(secretId, "expected parameter 'secretId' to be non-null");
-    }
+    private AzureClusterControlPlaneProxyConfigArgs() {}
 
-    private AzureClusterControlPlaneProxyConfigArgs() {
-        this.resourceGroupId = Codegen.empty();
-        this.secretId = Codegen.empty();
+    private AzureClusterControlPlaneProxyConfigArgs(AzureClusterControlPlaneProxyConfigArgs $) {
+        this.resourceGroupId = $.resourceGroupId;
+        this.secretId = $.secretId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureClusterControlPlaneProxyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceGroupId;
-        private Output<String> secretId;
+        private AzureClusterControlPlaneProxyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureClusterControlPlaneProxyConfigArgs();
         }
 
         public Builder(AzureClusterControlPlaneProxyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupId = defaults.resourceGroupId;
-    	      this.secretId = defaults.secretId;
+            $ = new AzureClusterControlPlaneProxyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupId(Output<String> resourceGroupId) {
-            this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
+            $.resourceGroupId = resourceGroupId;
             return this;
         }
+
         public Builder resourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = Output.of(Objects.requireNonNull(resourceGroupId));
-            return this;
+            return resourceGroupId(Output.of(resourceGroupId));
         }
+
         public Builder secretId(Output<String> secretId) {
-            this.secretId = Objects.requireNonNull(secretId);
+            $.secretId = secretId;
             return this;
         }
+
         public Builder secretId(String secretId) {
-            this.secretId = Output.of(Objects.requireNonNull(secretId));
-            return this;
-        }        public AzureClusterControlPlaneProxyConfigArgs build() {
-            return new AzureClusterControlPlaneProxyConfigArgs(resourceGroupId, secretId);
+            return secretId(Output.of(secretId));
+        }
+
+        public AzureClusterControlPlaneProxyConfigArgs build() {
+            $.resourceGroupId = Objects.requireNonNull($.resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
+            $.secretId = Objects.requireNonNull($.secretId, "expected parameter 'secretId' to be non-null");
+            return $;
         }
     }
+
 }

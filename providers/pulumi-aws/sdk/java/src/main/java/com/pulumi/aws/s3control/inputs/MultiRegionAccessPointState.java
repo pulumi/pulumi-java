@@ -6,9 +6,9 @@ package com.pulumi.aws.s3control.inputs;
 import com.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="alias")
-      private final @Nullable Output<String> alias;
+    private @Nullable Output<String> alias;
 
-    public Output<String> alias() {
-        return this.alias == null ? Codegen.empty() : this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="details")
-      private final @Nullable Output<MultiRegionAccessPointDetailsGetArgs> details;
+    private @Nullable Output<MultiRegionAccessPointDetailsGetArgs> details;
 
-    public Output<MultiRegionAccessPointDetailsGetArgs> details() {
-        return this.details == null ? Codegen.empty() : this.details;
+    public Optional<Output<MultiRegionAccessPointDetailsGetArgs>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -76,115 +76,98 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public MultiRegionAccessPointState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> alias,
-        @Nullable Output<String> arn,
-        @Nullable Output<MultiRegionAccessPointDetailsGetArgs> details,
-        @Nullable Output<String> domainName,
-        @Nullable Output<String> status) {
-        this.accountId = accountId;
-        this.alias = alias;
-        this.arn = arn;
-        this.details = details;
-        this.domainName = domainName;
-        this.status = status;
-    }
+    private MultiRegionAccessPointState() {}
 
-    private MultiRegionAccessPointState() {
-        this.accountId = Codegen.empty();
-        this.alias = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.details = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.status = Codegen.empty();
+    private MultiRegionAccessPointState(MultiRegionAccessPointState $) {
+        this.accountId = $.accountId;
+        this.alias = $.alias;
+        this.arn = $.arn;
+        this.details = $.details;
+        this.domainName = $.domainName;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiRegionAccessPointState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> alias;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<MultiRegionAccessPointDetailsGetArgs> details;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<String> status;
+        private MultiRegionAccessPointState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiRegionAccessPointState();
         }
 
         public Builder(MultiRegionAccessPointState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.alias = defaults.alias;
-    	      this.arn = defaults.arn;
-    	      this.details = defaults.details;
-    	      this.domainName = defaults.domainName;
-    	      this.status = defaults.status;
+            $ = new MultiRegionAccessPointState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder alias(@Nullable Output<String> alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
-        public Builder alias(@Nullable String alias) {
-            this.alias = Codegen.ofNullable(alias);
-            return this;
+
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder details(@Nullable Output<MultiRegionAccessPointDetailsGetArgs> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
-        public Builder details(@Nullable MultiRegionAccessPointDetailsGetArgs details) {
-            this.details = Codegen.ofNullable(details);
-            return this;
+
+        public Builder details(MultiRegionAccessPointDetailsGetArgs details) {
+            return details(Output.of(details));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public MultiRegionAccessPointState build() {
-            return new MultiRegionAccessPointState(accountId, alias, arn, details, domainName, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public MultiRegionAccessPointState build() {
+            return $;
         }
     }
+
 }

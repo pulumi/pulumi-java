@@ -5,7 +5,6 @@ package com.pulumi.awsnative.route53recoverycontrol.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +24,7 @@ public final class SafetyRuleGatingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="gatingControls", required=true)
-      private final Output<List<String>> gatingControls;
+    private Output<List<String>> gatingControls;
 
     public Output<List<String>> gatingControls() {
         return this.gatingControls;
@@ -37,7 +36,7 @@ public final class SafetyRuleGatingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="targetControls", required=true)
-      private final Output<List<String>> targetControls;
+    private Output<List<String>> targetControls;
 
     public Output<List<String>> targetControls() {
         return this.targetControls;
@@ -48,82 +47,79 @@ public final class SafetyRuleGatingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="waitPeriodMs", required=true)
-      private final Output<Integer> waitPeriodMs;
+    private Output<Integer> waitPeriodMs;
 
     public Output<Integer> waitPeriodMs() {
         return this.waitPeriodMs;
     }
 
-    public SafetyRuleGatingRuleArgs(
-        Output<List<String>> gatingControls,
-        Output<List<String>> targetControls,
-        Output<Integer> waitPeriodMs) {
-        this.gatingControls = Objects.requireNonNull(gatingControls, "expected parameter 'gatingControls' to be non-null");
-        this.targetControls = Objects.requireNonNull(targetControls, "expected parameter 'targetControls' to be non-null");
-        this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
-    }
+    private SafetyRuleGatingRuleArgs() {}
 
-    private SafetyRuleGatingRuleArgs() {
-        this.gatingControls = Codegen.empty();
-        this.targetControls = Codegen.empty();
-        this.waitPeriodMs = Codegen.empty();
+    private SafetyRuleGatingRuleArgs(SafetyRuleGatingRuleArgs $) {
+        this.gatingControls = $.gatingControls;
+        this.targetControls = $.targetControls;
+        this.waitPeriodMs = $.waitPeriodMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SafetyRuleGatingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> gatingControls;
-        private Output<List<String>> targetControls;
-        private Output<Integer> waitPeriodMs;
+        private SafetyRuleGatingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SafetyRuleGatingRuleArgs();
         }
 
         public Builder(SafetyRuleGatingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatingControls = defaults.gatingControls;
-    	      this.targetControls = defaults.targetControls;
-    	      this.waitPeriodMs = defaults.waitPeriodMs;
+            $ = new SafetyRuleGatingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatingControls(Output<List<String>> gatingControls) {
-            this.gatingControls = Objects.requireNonNull(gatingControls);
+            $.gatingControls = gatingControls;
             return this;
         }
+
         public Builder gatingControls(List<String> gatingControls) {
-            this.gatingControls = Output.of(Objects.requireNonNull(gatingControls));
-            return this;
+            return gatingControls(Output.of(gatingControls));
         }
+
         public Builder gatingControls(String... gatingControls) {
             return gatingControls(List.of(gatingControls));
         }
+
         public Builder targetControls(Output<List<String>> targetControls) {
-            this.targetControls = Objects.requireNonNull(targetControls);
+            $.targetControls = targetControls;
             return this;
         }
+
         public Builder targetControls(List<String> targetControls) {
-            this.targetControls = Output.of(Objects.requireNonNull(targetControls));
-            return this;
+            return targetControls(Output.of(targetControls));
         }
+
         public Builder targetControls(String... targetControls) {
             return targetControls(List.of(targetControls));
         }
+
         public Builder waitPeriodMs(Output<Integer> waitPeriodMs) {
-            this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
+            $.waitPeriodMs = waitPeriodMs;
             return this;
         }
+
         public Builder waitPeriodMs(Integer waitPeriodMs) {
-            this.waitPeriodMs = Output.of(Objects.requireNonNull(waitPeriodMs));
-            return this;
-        }        public SafetyRuleGatingRuleArgs build() {
-            return new SafetyRuleGatingRuleArgs(gatingControls, targetControls, waitPeriodMs);
+            return waitPeriodMs(Output.of(waitPeriodMs));
+        }
+
+        public SafetyRuleGatingRuleArgs build() {
+            $.gatingControls = Objects.requireNonNull($.gatingControls, "expected parameter 'gatingControls' to be non-null");
+            $.targetControls = Objects.requireNonNull($.targetControls, "expected parameter 'targetControls' to be non-null");
+            $.waitPeriodMs = Objects.requireNonNull($.waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
+            return $;
         }
     }
+
 }

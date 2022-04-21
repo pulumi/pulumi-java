@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TriggerPredicateConditionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="crawlState")
-      private final @Nullable Output<String> crawlState;
+    private @Nullable Output<String> crawlState;
 
-    public Output<String> crawlState() {
-        return this.crawlState == null ? Codegen.empty() : this.crawlState;
+    public Optional<Output<String>> crawlState() {
+        return Optional.ofNullable(this.crawlState);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TriggerPredicateConditionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="crawlerName")
-      private final @Nullable Output<String> crawlerName;
+    private @Nullable Output<String> crawlerName;
 
-    public Output<String> crawlerName() {
-        return this.crawlerName == null ? Codegen.empty() : this.crawlerName;
+    public Optional<Output<String>> crawlerName() {
+        return Optional.ofNullable(this.crawlerName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TriggerPredicateConditionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="jobName")
-      private final @Nullable Output<String> jobName;
+    private @Nullable Output<String> jobName;
 
-    public Output<String> jobName() {
-        return this.jobName == null ? Codegen.empty() : this.jobName;
+    public Optional<Output<String>> jobName() {
+        return Optional.ofNullable(this.jobName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TriggerPredicateConditionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="logicalOperator")
-      private final @Nullable Output<String> logicalOperator;
+    private @Nullable Output<String> logicalOperator;
 
-    public Output<String> logicalOperator() {
-        return this.logicalOperator == null ? Codegen.empty() : this.logicalOperator;
+    public Optional<Output<String>> logicalOperator() {
+        return Optional.ofNullable(this.logicalOperator);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class TriggerPredicateConditionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public TriggerPredicateConditionGetArgs(
-        @Nullable Output<String> crawlState,
-        @Nullable Output<String> crawlerName,
-        @Nullable Output<String> jobName,
-        @Nullable Output<String> logicalOperator,
-        @Nullable Output<String> state) {
-        this.crawlState = crawlState;
-        this.crawlerName = crawlerName;
-        this.jobName = jobName;
-        this.logicalOperator = logicalOperator;
-        this.state = state;
-    }
+    private TriggerPredicateConditionGetArgs() {}
 
-    private TriggerPredicateConditionGetArgs() {
-        this.crawlState = Codegen.empty();
-        this.crawlerName = Codegen.empty();
-        this.jobName = Codegen.empty();
-        this.logicalOperator = Codegen.empty();
-        this.state = Codegen.empty();
+    private TriggerPredicateConditionGetArgs(TriggerPredicateConditionGetArgs $) {
+        this.crawlState = $.crawlState;
+        this.crawlerName = $.crawlerName;
+        this.jobName = $.jobName;
+        this.logicalOperator = $.logicalOperator;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerPredicateConditionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> crawlState;
-        private @Nullable Output<String> crawlerName;
-        private @Nullable Output<String> jobName;
-        private @Nullable Output<String> logicalOperator;
-        private @Nullable Output<String> state;
+        private TriggerPredicateConditionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerPredicateConditionGetArgs();
         }
 
         public Builder(TriggerPredicateConditionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crawlState = defaults.crawlState;
-    	      this.crawlerName = defaults.crawlerName;
-    	      this.jobName = defaults.jobName;
-    	      this.logicalOperator = defaults.logicalOperator;
-    	      this.state = defaults.state;
+            $ = new TriggerPredicateConditionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crawlState(@Nullable Output<String> crawlState) {
-            this.crawlState = crawlState;
+            $.crawlState = crawlState;
             return this;
         }
-        public Builder crawlState(@Nullable String crawlState) {
-            this.crawlState = Codegen.ofNullable(crawlState);
-            return this;
+
+        public Builder crawlState(String crawlState) {
+            return crawlState(Output.of(crawlState));
         }
+
         public Builder crawlerName(@Nullable Output<String> crawlerName) {
-            this.crawlerName = crawlerName;
+            $.crawlerName = crawlerName;
             return this;
         }
-        public Builder crawlerName(@Nullable String crawlerName) {
-            this.crawlerName = Codegen.ofNullable(crawlerName);
-            return this;
+
+        public Builder crawlerName(String crawlerName) {
+            return crawlerName(Output.of(crawlerName));
         }
+
         public Builder jobName(@Nullable Output<String> jobName) {
-            this.jobName = jobName;
+            $.jobName = jobName;
             return this;
         }
-        public Builder jobName(@Nullable String jobName) {
-            this.jobName = Codegen.ofNullable(jobName);
-            return this;
+
+        public Builder jobName(String jobName) {
+            return jobName(Output.of(jobName));
         }
+
         public Builder logicalOperator(@Nullable Output<String> logicalOperator) {
-            this.logicalOperator = logicalOperator;
+            $.logicalOperator = logicalOperator;
             return this;
         }
-        public Builder logicalOperator(@Nullable String logicalOperator) {
-            this.logicalOperator = Codegen.ofNullable(logicalOperator);
-            return this;
+
+        public Builder logicalOperator(String logicalOperator) {
+            return logicalOperator(Output.of(logicalOperator));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public TriggerPredicateConditionGetArgs build() {
-            return new TriggerPredicateConditionGetArgs(crawlState, crawlerName, jobName, logicalOperator, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public TriggerPredicateConditionGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SuppressionScheduleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="endDate")
-      private final @Nullable Output<String> endDate;
+    private @Nullable Output<String> endDate;
 
-    public Output<String> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    public Optional<Output<String>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SuppressionScheduleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SuppressionScheduleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="recurrenceValues")
-      private final @Nullable Output<List<Integer>> recurrenceValues;
+    private @Nullable Output<List<Integer>> recurrenceValues;
 
-    public Output<List<Integer>> recurrenceValues() {
-        return this.recurrenceValues == null ? Codegen.empty() : this.recurrenceValues;
+    public Optional<Output<List<Integer>>> recurrenceValues() {
+        return Optional.ofNullable(this.recurrenceValues);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SuppressionScheduleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="startDate")
-      private final @Nullable Output<String> startDate;
+    private @Nullable Output<String> startDate;
 
-    public Output<String> startDate() {
-        return this.startDate == null ? Codegen.empty() : this.startDate;
+    public Optional<Output<String>> startDate() {
+        return Optional.ofNullable(this.startDate);
     }
 
     /**
@@ -70,105 +70,92 @@ public final class SuppressionScheduleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public SuppressionScheduleArgs(
-        @Nullable Output<String> endDate,
-        @Nullable Output<String> endTime,
-        @Nullable Output<List<Integer>> recurrenceValues,
-        @Nullable Output<String> startDate,
-        @Nullable Output<String> startTime) {
-        this.endDate = endDate;
-        this.endTime = endTime;
-        this.recurrenceValues = recurrenceValues;
-        this.startDate = startDate;
-        this.startTime = startTime;
-    }
+    private SuppressionScheduleArgs() {}
 
-    private SuppressionScheduleArgs() {
-        this.endDate = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.recurrenceValues = Codegen.empty();
-        this.startDate = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private SuppressionScheduleArgs(SuppressionScheduleArgs $) {
+        this.endDate = $.endDate;
+        this.endTime = $.endTime;
+        this.recurrenceValues = $.recurrenceValues;
+        this.startDate = $.startDate;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuppressionScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endDate;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<List<Integer>> recurrenceValues;
-        private @Nullable Output<String> startDate;
-        private @Nullable Output<String> startTime;
+        private SuppressionScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuppressionScheduleArgs();
         }
 
         public Builder(SuppressionScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDate = defaults.endDate;
-    	      this.endTime = defaults.endTime;
-    	      this.recurrenceValues = defaults.recurrenceValues;
-    	      this.startDate = defaults.startDate;
-    	      this.startTime = defaults.startTime;
+            $ = new SuppressionScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endDate(@Nullable Output<String> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable String endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        public Builder endDate(String endDate) {
+            return endDate(Output.of(endDate));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder recurrenceValues(@Nullable Output<List<Integer>> recurrenceValues) {
-            this.recurrenceValues = recurrenceValues;
+            $.recurrenceValues = recurrenceValues;
             return this;
         }
-        public Builder recurrenceValues(@Nullable List<Integer> recurrenceValues) {
-            this.recurrenceValues = Codegen.ofNullable(recurrenceValues);
-            return this;
+
+        public Builder recurrenceValues(List<Integer> recurrenceValues) {
+            return recurrenceValues(Output.of(recurrenceValues));
         }
+
         public Builder recurrenceValues(Integer... recurrenceValues) {
             return recurrenceValues(List.of(recurrenceValues));
         }
+
         public Builder startDate(@Nullable Output<String> startDate) {
-            this.startDate = startDate;
+            $.startDate = startDate;
             return this;
         }
-        public Builder startDate(@Nullable String startDate) {
-            this.startDate = Codegen.ofNullable(startDate);
-            return this;
+
+        public Builder startDate(String startDate) {
+            return startDate(Output.of(startDate));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public SuppressionScheduleArgs build() {
-            return new SuppressionScheduleArgs(endDate, endTime, recurrenceValues, startDate, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public SuppressionScheduleArgs build() {
+            return $;
         }
     }
+
 }

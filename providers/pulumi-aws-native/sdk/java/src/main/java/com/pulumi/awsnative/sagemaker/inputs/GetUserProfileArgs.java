@@ -17,7 +17,7 @@ public final class GetUserProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainId", required=true)
-      private final String domainId;
+    private String domainId;
 
     public String domainId() {
         return this.domainId;
@@ -28,55 +28,52 @@ public final class GetUserProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userProfileName", required=true)
-      private final String userProfileName;
+    private String userProfileName;
 
     public String userProfileName() {
         return this.userProfileName;
     }
 
-    public GetUserProfileArgs(
-        String domainId,
-        String userProfileName) {
-        this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
-        this.userProfileName = Objects.requireNonNull(userProfileName, "expected parameter 'userProfileName' to be non-null");
-    }
+    private GetUserProfileArgs() {}
 
-    private GetUserProfileArgs() {
-        this.domainId = null;
-        this.userProfileName = null;
+    private GetUserProfileArgs(GetUserProfileArgs $) {
+        this.domainId = $.domainId;
+        this.userProfileName = $.userProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainId;
-        private String userProfileName;
+        private GetUserProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserProfileArgs();
         }
 
         public Builder(GetUserProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainId = defaults.domainId;
-    	      this.userProfileName = defaults.userProfileName;
+            $ = new GetUserProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainId(String domainId) {
-            this.domainId = Objects.requireNonNull(domainId);
+            $.domainId = domainId;
             return this;
         }
+
         public Builder userProfileName(String userProfileName) {
-            this.userProfileName = Objects.requireNonNull(userProfileName);
+            $.userProfileName = userProfileName;
             return this;
-        }        public GetUserProfileArgs build() {
-            return new GetUserProfileArgs(domainId, userProfileName);
+        }
+
+        public GetUserProfileArgs build() {
+            $.domainId = Objects.requireNonNull($.domainId, "expected parameter 'domainId' to be non-null");
+            $.userProfileName = Objects.requireNonNull($.userProfileName, "expected parameter 'userProfileName' to be non-null");
+            return $;
         }
     }
+
 }

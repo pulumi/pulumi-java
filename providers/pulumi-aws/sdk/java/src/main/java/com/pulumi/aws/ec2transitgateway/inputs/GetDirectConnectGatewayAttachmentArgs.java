@@ -22,10 +22,10 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="dxGatewayId")
-      private final @Nullable String dxGatewayId;
+    private @Nullable String dxGatewayId;
 
     public Optional<String> dxGatewayId() {
-        return this.dxGatewayId == null ? Optional.empty() : Optional.ofNullable(this.dxGatewayId);
+        return Optional.ofNullable(this.dxGatewayId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters;
+    private @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters;
 
-    public List<GetDirectConnectGatewayAttachmentFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetDirectConnectGatewayAttachmentFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -55,76 +55,66 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="transitGatewayId")
-      private final @Nullable String transitGatewayId;
+    private @Nullable String transitGatewayId;
 
     public Optional<String> transitGatewayId() {
-        return this.transitGatewayId == null ? Optional.empty() : Optional.ofNullable(this.transitGatewayId);
+        return Optional.ofNullable(this.transitGatewayId);
     }
 
-    public GetDirectConnectGatewayAttachmentArgs(
-        @Nullable String dxGatewayId,
-        @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters,
-        @Nullable Map<String,String> tags,
-        @Nullable String transitGatewayId) {
-        this.dxGatewayId = dxGatewayId;
-        this.filters = filters;
-        this.tags = tags;
-        this.transitGatewayId = transitGatewayId;
-    }
+    private GetDirectConnectGatewayAttachmentArgs() {}
 
-    private GetDirectConnectGatewayAttachmentArgs() {
-        this.dxGatewayId = null;
-        this.filters = List.of();
-        this.tags = Map.of();
-        this.transitGatewayId = null;
+    private GetDirectConnectGatewayAttachmentArgs(GetDirectConnectGatewayAttachmentArgs $) {
+        this.dxGatewayId = $.dxGatewayId;
+        this.filters = $.filters;
+        this.tags = $.tags;
+        this.transitGatewayId = $.transitGatewayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDirectConnectGatewayAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dxGatewayId;
-        private @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String transitGatewayId;
+        private GetDirectConnectGatewayAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDirectConnectGatewayAttachmentArgs();
         }
 
         public Builder(GetDirectConnectGatewayAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dxGatewayId = defaults.dxGatewayId;
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
-    	      this.transitGatewayId = defaults.transitGatewayId;
+            $ = new GetDirectConnectGatewayAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dxGatewayId(@Nullable String dxGatewayId) {
-            this.dxGatewayId = dxGatewayId;
+            $.dxGatewayId = dxGatewayId;
             return this;
         }
+
         public Builder filters(@Nullable List<GetDirectConnectGatewayAttachmentFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetDirectConnectGatewayAttachmentFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = transitGatewayId;
+            $.transitGatewayId = transitGatewayId;
             return this;
-        }        public GetDirectConnectGatewayAttachmentArgs build() {
-            return new GetDirectConnectGatewayAttachmentArgs(dxGatewayId, filters, tags, transitGatewayId);
+        }
+
+        public GetDirectConnectGatewayAttachmentArgs build() {
+            return $;
         }
     }
+
 }

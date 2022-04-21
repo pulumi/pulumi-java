@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceArgs extends com.
      * 
      */
     @Import(name="inputUri", required=true)
-      private final Output<String> inputUri;
+    private Output<String> inputUri;
 
     public Output<String> inputUri() {
         return this.inputUri;
     }
 
-    public GoogleCloudDatalabelingV1beta1BigQuerySourceArgs(Output<String> inputUri) {
-        this.inputUri = Objects.requireNonNull(inputUri, "expected parameter 'inputUri' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1BigQuerySourceArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1BigQuerySourceArgs() {
-        this.inputUri = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1BigQuerySourceArgs(GoogleCloudDatalabelingV1beta1BigQuerySourceArgs $) {
+        this.inputUri = $.inputUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1BigQuerySourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> inputUri;
+        private GoogleCloudDatalabelingV1beta1BigQuerySourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1BigQuerySourceArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1BigQuerySourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputUri = defaults.inputUri;
+            $ = new GoogleCloudDatalabelingV1beta1BigQuerySourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputUri(Output<String> inputUri) {
-            this.inputUri = Objects.requireNonNull(inputUri);
+            $.inputUri = inputUri;
             return this;
         }
+
         public Builder inputUri(String inputUri) {
-            this.inputUri = Output.of(Objects.requireNonNull(inputUri));
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1BigQuerySourceArgs build() {
-            return new GoogleCloudDatalabelingV1beta1BigQuerySourceArgs(inputUri);
+            return inputUri(Output.of(inputUri));
+        }
+
+        public GoogleCloudDatalabelingV1beta1BigQuerySourceArgs build() {
+            $.inputUri = Objects.requireNonNull($.inputUri, "expected parameter 'inputUri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,62 +14,59 @@ public final class GetInstanceAdvancedMachineFeature extends com.pulumi.resource
     public static final GetInstanceAdvancedMachineFeature Empty = new GetInstanceAdvancedMachineFeature();
 
     @Import(name="enableNestedVirtualization", required=true)
-      private final Boolean enableNestedVirtualization;
+    private Boolean enableNestedVirtualization;
 
     public Boolean enableNestedVirtualization() {
         return this.enableNestedVirtualization;
     }
 
     @Import(name="threadsPerCore", required=true)
-      private final Integer threadsPerCore;
+    private Integer threadsPerCore;
 
     public Integer threadsPerCore() {
         return this.threadsPerCore;
     }
 
-    public GetInstanceAdvancedMachineFeature(
-        Boolean enableNestedVirtualization,
-        Integer threadsPerCore) {
-        this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization, "expected parameter 'enableNestedVirtualization' to be non-null");
-        this.threadsPerCore = Objects.requireNonNull(threadsPerCore, "expected parameter 'threadsPerCore' to be non-null");
-    }
+    private GetInstanceAdvancedMachineFeature() {}
 
-    private GetInstanceAdvancedMachineFeature() {
-        this.enableNestedVirtualization = null;
-        this.threadsPerCore = null;
+    private GetInstanceAdvancedMachineFeature(GetInstanceAdvancedMachineFeature $) {
+        this.enableNestedVirtualization = $.enableNestedVirtualization;
+        this.threadsPerCore = $.threadsPerCore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceAdvancedMachineFeature defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableNestedVirtualization;
-        private Integer threadsPerCore;
+        private GetInstanceAdvancedMachineFeature $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceAdvancedMachineFeature();
         }
 
         public Builder(GetInstanceAdvancedMachineFeature defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableNestedVirtualization = defaults.enableNestedVirtualization;
-    	      this.threadsPerCore = defaults.threadsPerCore;
+            $ = new GetInstanceAdvancedMachineFeature(Objects.requireNonNull(defaults));
         }
 
         public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
-            this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
+            $.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
+
         public Builder threadsPerCore(Integer threadsPerCore) {
-            this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
+            $.threadsPerCore = threadsPerCore;
             return this;
-        }        public GetInstanceAdvancedMachineFeature build() {
-            return new GetInstanceAdvancedMachineFeature(enableNestedVirtualization, threadsPerCore);
+        }
+
+        public GetInstanceAdvancedMachineFeature build() {
+            $.enableNestedVirtualization = Objects.requireNonNull($.enableNestedVirtualization, "expected parameter 'enableNestedVirtualization' to be non-null");
+            $.threadsPerCore = Objects.requireNonNull($.threadsPerCore, "expected parameter 'threadsPerCore' to be non-null");
+            return $;
         }
     }
+
 }

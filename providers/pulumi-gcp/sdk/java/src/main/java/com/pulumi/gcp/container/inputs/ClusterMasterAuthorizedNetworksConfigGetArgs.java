@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,52 +22,52 @@ public final class ClusterMasterAuthorizedNetworksConfigGetArgs extends com.pulu
      * 
      */
     @Import(name="cidrBlocks")
-      private final @Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
+    private @Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
 
-    public Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks() {
-        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
+    public Optional<Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>>> cidrBlocks() {
+        return Optional.ofNullable(this.cidrBlocks);
     }
 
-    public ClusterMasterAuthorizedNetworksConfigGetArgs(@Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks) {
-        this.cidrBlocks = cidrBlocks;
-    }
+    private ClusterMasterAuthorizedNetworksConfigGetArgs() {}
 
-    private ClusterMasterAuthorizedNetworksConfigGetArgs() {
-        this.cidrBlocks = Codegen.empty();
+    private ClusterMasterAuthorizedNetworksConfigGetArgs(ClusterMasterAuthorizedNetworksConfigGetArgs $) {
+        this.cidrBlocks = $.cidrBlocks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterMasterAuthorizedNetworksConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
+        private ClusterMasterAuthorizedNetworksConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterMasterAuthorizedNetworksConfigGetArgs();
         }
 
         public Builder(ClusterMasterAuthorizedNetworksConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlocks = defaults.cidrBlocks;
+            $ = new ClusterMasterAuthorizedNetworksConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlocks(@Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks) {
-            this.cidrBlocks = cidrBlocks;
+            $.cidrBlocks = cidrBlocks;
             return this;
         }
-        public Builder cidrBlocks(@Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs> cidrBlocks) {
-            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
-            return this;
+
+        public Builder cidrBlocks(List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs> cidrBlocks) {
+            return cidrBlocks(Output.of(cidrBlocks));
         }
+
         public Builder cidrBlocks(ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
-        }        public ClusterMasterAuthorizedNetworksConfigGetArgs build() {
-            return new ClusterMasterAuthorizedNetworksConfigGetArgs(cidrBlocks);
+        }
+
+        public ClusterMasterAuthorizedNetworksConfigGetArgs build() {
+            return $;
         }
     }
+
 }

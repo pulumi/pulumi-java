@@ -13,45 +13,45 @@ public final class SecurityPolicyDdosProtectionConfigResponse extends com.pulumi
     public static final SecurityPolicyDdosProtectionConfigResponse Empty = new SecurityPolicyDdosProtectionConfigResponse();
 
     @Import(name="ddosProtection", required=true)
-      private final String ddosProtection;
+    private String ddosProtection;
 
     public String ddosProtection() {
         return this.ddosProtection;
     }
 
-    public SecurityPolicyDdosProtectionConfigResponse(String ddosProtection) {
-        this.ddosProtection = Objects.requireNonNull(ddosProtection, "expected parameter 'ddosProtection' to be non-null");
-    }
+    private SecurityPolicyDdosProtectionConfigResponse() {}
 
-    private SecurityPolicyDdosProtectionConfigResponse() {
-        this.ddosProtection = null;
+    private SecurityPolicyDdosProtectionConfigResponse(SecurityPolicyDdosProtectionConfigResponse $) {
+        this.ddosProtection = $.ddosProtection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyDdosProtectionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ddosProtection;
+        private SecurityPolicyDdosProtectionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyDdosProtectionConfigResponse();
         }
 
         public Builder(SecurityPolicyDdosProtectionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ddosProtection = defaults.ddosProtection;
+            $ = new SecurityPolicyDdosProtectionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ddosProtection(String ddosProtection) {
-            this.ddosProtection = Objects.requireNonNull(ddosProtection);
+            $.ddosProtection = ddosProtection;
             return this;
-        }        public SecurityPolicyDdosProtectionConfigResponse build() {
-            return new SecurityPolicyDdosProtectionConfigResponse(ddosProtection);
+        }
+
+        public SecurityPolicyDdosProtectionConfigResponse build() {
+            $.ddosProtection = Objects.requireNonNull($.ddosProtection, "expected parameter 'ddosProtection' to be non-null");
+            return $;
         }
     }
+
 }

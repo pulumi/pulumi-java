@@ -21,7 +21,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends c
      * 
      */
     @Import(name="wafFeature", required=true)
-      private final String wafFeature;
+    private String wafFeature;
 
     public String wafFeature() {
         return this.wafFeature;
@@ -32,55 +32,52 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends c
      * 
      */
     @Import(name="wafService", required=true)
-      private final String wafService;
+    private String wafService;
 
     public String wafService() {
         return this.wafService;
     }
 
-    public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(
-        String wafFeature,
-        String wafService) {
-        this.wafFeature = Objects.requireNonNull(wafFeature, "expected parameter 'wafFeature' to be non-null");
-        this.wafService = Objects.requireNonNull(wafService, "expected parameter 'wafService' to be non-null");
-    }
+    private GoogleCloudRecaptchaenterpriseV1WafSettingsResponse() {}
 
-    private GoogleCloudRecaptchaenterpriseV1WafSettingsResponse() {
-        this.wafFeature = null;
-        this.wafService = null;
+    private GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(GoogleCloudRecaptchaenterpriseV1WafSettingsResponse $) {
+        this.wafFeature = $.wafFeature;
+        this.wafService = $.wafService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecaptchaenterpriseV1WafSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String wafFeature;
-        private String wafService;
+        private GoogleCloudRecaptchaenterpriseV1WafSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecaptchaenterpriseV1WafSettingsResponse();
         }
 
         public Builder(GoogleCloudRecaptchaenterpriseV1WafSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.wafFeature = defaults.wafFeature;
-    	      this.wafService = defaults.wafService;
+            $ = new GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder wafFeature(String wafFeature) {
-            this.wafFeature = Objects.requireNonNull(wafFeature);
+            $.wafFeature = wafFeature;
             return this;
         }
+
         public Builder wafService(String wafService) {
-            this.wafService = Objects.requireNonNull(wafService);
+            $.wafService = wafService;
             return this;
-        }        public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse build() {
-            return new GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(wafFeature, wafService);
+        }
+
+        public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse build() {
+            $.wafFeature = Objects.requireNonNull($.wafFeature, "expected parameter 'wafFeature' to be non-null");
+            $.wafService = Objects.requireNonNull($.wafService, "expected parameter 'wafService' to be non-null");
+            return $;
         }
     }
+
 }

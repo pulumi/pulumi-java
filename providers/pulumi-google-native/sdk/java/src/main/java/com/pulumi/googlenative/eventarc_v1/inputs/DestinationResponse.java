@@ -23,7 +23,7 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudFunction", required=true)
-      private final String cloudFunction;
+    private String cloudFunction;
 
     public String cloudFunction() {
         return this.cloudFunction;
@@ -34,7 +34,7 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudRun", required=true)
-      private final CloudRunResponse cloudRun;
+    private CloudRunResponse cloudRun;
 
     public CloudRunResponse cloudRun() {
         return this.cloudRun;
@@ -45,64 +45,59 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gke", required=true)
-      private final GKEResponse gke;
+    private GKEResponse gke;
 
     public GKEResponse gke() {
         return this.gke;
     }
 
-    public DestinationResponse(
-        String cloudFunction,
-        CloudRunResponse cloudRun,
-        GKEResponse gke) {
-        this.cloudFunction = Objects.requireNonNull(cloudFunction, "expected parameter 'cloudFunction' to be non-null");
-        this.cloudRun = Objects.requireNonNull(cloudRun, "expected parameter 'cloudRun' to be non-null");
-        this.gke = Objects.requireNonNull(gke, "expected parameter 'gke' to be non-null");
-    }
+    private DestinationResponse() {}
 
-    private DestinationResponse() {
-        this.cloudFunction = null;
-        this.cloudRun = null;
-        this.gke = null;
+    private DestinationResponse(DestinationResponse $) {
+        this.cloudFunction = $.cloudFunction;
+        this.cloudRun = $.cloudRun;
+        this.gke = $.gke;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudFunction;
-        private CloudRunResponse cloudRun;
-        private GKEResponse gke;
+        private DestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationResponse();
         }
 
         public Builder(DestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudFunction = defaults.cloudFunction;
-    	      this.cloudRun = defaults.cloudRun;
-    	      this.gke = defaults.gke;
+            $ = new DestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudFunction(String cloudFunction) {
-            this.cloudFunction = Objects.requireNonNull(cloudFunction);
+            $.cloudFunction = cloudFunction;
             return this;
         }
+
         public Builder cloudRun(CloudRunResponse cloudRun) {
-            this.cloudRun = Objects.requireNonNull(cloudRun);
+            $.cloudRun = cloudRun;
             return this;
         }
+
         public Builder gke(GKEResponse gke) {
-            this.gke = Objects.requireNonNull(gke);
+            $.gke = gke;
             return this;
-        }        public DestinationResponse build() {
-            return new DestinationResponse(cloudFunction, cloudRun, gke);
+        }
+
+        public DestinationResponse build() {
+            $.cloudFunction = Objects.requireNonNull($.cloudFunction, "expected parameter 'cloudFunction' to be non-null");
+            $.cloudRun = Objects.requireNonNull($.cloudRun, "expected parameter 'cloudRun' to be non-null");
+            $.gke = Objects.requireNonNull($.gke, "expected parameter 'gke' to be non-null");
+            return $;
         }
     }
+
 }

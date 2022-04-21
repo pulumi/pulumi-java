@@ -5,11 +5,11 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.logging.inputs.MetricMetricDescriptorLabelGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<MetricMetricDescriptorLabelGetArgs>> labels;
+    private @Nullable Output<List<MetricMetricDescriptorLabelGetArgs>> labels;
 
-    public Output<List<MetricMetricDescriptorLabelGetArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<MetricMetricDescriptorLabelGetArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="metricKind", required=true)
-      private final Output<String> metricKind;
+    private Output<String> metricKind;
 
     public Output<String> metricKind() {
         return this.metricKind;
@@ -66,10 +66,10 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="unit")
-      private final @Nullable Output<String> unit;
+    private @Nullable Output<String> unit;
 
-    public Output<String> unit() {
-        return this.unit == null ? Codegen.empty() : this.unit;
+    public Optional<Output<String>> unit() {
+        return Optional.ofNullable(this.unit);
     }
 
     /**
@@ -79,105 +79,94 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="valueType", required=true)
-      private final Output<String> valueType;
+    private Output<String> valueType;
 
     public Output<String> valueType() {
         return this.valueType;
     }
 
-    public MetricMetricDescriptorGetArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<List<MetricMetricDescriptorLabelGetArgs>> labels,
-        Output<String> metricKind,
-        @Nullable Output<String> unit,
-        Output<String> valueType) {
-        this.displayName = displayName;
-        this.labels = labels;
-        this.metricKind = Objects.requireNonNull(metricKind, "expected parameter 'metricKind' to be non-null");
-        this.unit = unit;
-        this.valueType = Objects.requireNonNull(valueType, "expected parameter 'valueType' to be non-null");
-    }
+    private MetricMetricDescriptorGetArgs() {}
 
-    private MetricMetricDescriptorGetArgs() {
-        this.displayName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.metricKind = Codegen.empty();
-        this.unit = Codegen.empty();
-        this.valueType = Codegen.empty();
+    private MetricMetricDescriptorGetArgs(MetricMetricDescriptorGetArgs $) {
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.metricKind = $.metricKind;
+        this.unit = $.unit;
+        this.valueType = $.valueType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricMetricDescriptorGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<List<MetricMetricDescriptorLabelGetArgs>> labels;
-        private Output<String> metricKind;
-        private @Nullable Output<String> unit;
-        private Output<String> valueType;
+        private MetricMetricDescriptorGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricMetricDescriptorGetArgs();
         }
 
         public Builder(MetricMetricDescriptorGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.metricKind = defaults.metricKind;
-    	      this.unit = defaults.unit;
-    	      this.valueType = defaults.valueType;
+            $ = new MetricMetricDescriptorGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder labels(@Nullable Output<List<MetricMetricDescriptorLabelGetArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<MetricMetricDescriptorLabelGetArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<MetricMetricDescriptorLabelGetArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(MetricMetricDescriptorLabelGetArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder metricKind(Output<String> metricKind) {
-            this.metricKind = Objects.requireNonNull(metricKind);
+            $.metricKind = metricKind;
             return this;
         }
+
         public Builder metricKind(String metricKind) {
-            this.metricKind = Output.of(Objects.requireNonNull(metricKind));
-            return this;
+            return metricKind(Output.of(metricKind));
         }
+
         public Builder unit(@Nullable Output<String> unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
-        public Builder unit(@Nullable String unit) {
-            this.unit = Codegen.ofNullable(unit);
-            return this;
+
+        public Builder unit(String unit) {
+            return unit(Output.of(unit));
         }
+
         public Builder valueType(Output<String> valueType) {
-            this.valueType = Objects.requireNonNull(valueType);
+            $.valueType = valueType;
             return this;
         }
+
         public Builder valueType(String valueType) {
-            this.valueType = Output.of(Objects.requireNonNull(valueType));
-            return this;
-        }        public MetricMetricDescriptorGetArgs build() {
-            return new MetricMetricDescriptorGetArgs(displayName, labels, metricKind, unit, valueType);
+            return valueType(Output.of(valueType));
+        }
+
+        public MetricMetricDescriptorGetArgs build() {
+            $.metricKind = Objects.requireNonNull($.metricKind, "expected parameter 'metricKind' to be non-null");
+            $.valueType = Objects.requireNonNull($.valueType, "expected parameter 'valueType' to be non-null");
+            return $;
         }
     }
+
 }

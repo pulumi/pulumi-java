@@ -7,11 +7,11 @@ import com.pulumi.azurenative.testbase.inputs.TargetOSInfoArgs;
 import com.pulumi.azurenative.testbase.inputs.TestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationName", required=true)
-      private final Output<String> applicationName;
+    private Output<String> applicationName;
 
     public Output<String> applicationName() {
         return this.applicationName;
@@ -35,7 +35,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blobPath", required=true)
-      private final Output<String> blobPath;
+    private Output<String> blobPath;
 
     public Output<String> blobPath() {
         return this.blobPath;
@@ -46,7 +46,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flightingRing", required=true)
-      private final Output<String> flightingRing;
+    private Output<String> flightingRing;
 
     public Output<String> flightingRing() {
         return this.flightingRing;
@@ -57,10 +57,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packageName")
-      private final @Nullable Output<String> packageName;
+    private @Nullable Output<String> packageName;
 
-    public Output<String> packageName() {
-        return this.packageName == null ? Codegen.empty() : this.packageName;
+    public Optional<Output<String>> packageName() {
+        return Optional.ofNullable(this.packageName);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,10 +90,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetOSList", required=true)
-      private final Output<List<TargetOSInfoArgs>> targetOSList;
+    private Output<List<TargetOSInfoArgs>> targetOSList;
 
     public Output<List<TargetOSInfoArgs>> targetOSList() {
         return this.targetOSList;
@@ -112,7 +112,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testBaseAccountName", required=true)
-      private final Output<String> testBaseAccountName;
+    private Output<String> testBaseAccountName;
 
     public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
@@ -123,7 +123,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tests", required=true)
-      private final Output<List<TestArgs>> tests;
+    private Output<List<TestArgs>> tests;
 
     public Output<List<TestArgs>> tests() {
         return this.tests;
@@ -134,186 +134,164 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public PackageArgs(
-        Output<String> applicationName,
-        Output<String> blobPath,
-        Output<String> flightingRing,
-        @Nullable Output<String> location,
-        @Nullable Output<String> packageName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        Output<List<TargetOSInfoArgs>> targetOSList,
-        Output<String> testBaseAccountName,
-        Output<List<TestArgs>> tests,
-        Output<String> version) {
-        this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
-        this.blobPath = Objects.requireNonNull(blobPath, "expected parameter 'blobPath' to be non-null");
-        this.flightingRing = Objects.requireNonNull(flightingRing, "expected parameter 'flightingRing' to be non-null");
-        this.location = location;
-        this.packageName = packageName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.targetOSList = Objects.requireNonNull(targetOSList, "expected parameter 'targetOSList' to be non-null");
-        this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
-        this.tests = Objects.requireNonNull(tests, "expected parameter 'tests' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private PackageArgs() {}
 
-    private PackageArgs() {
-        this.applicationName = Codegen.empty();
-        this.blobPath = Codegen.empty();
-        this.flightingRing = Codegen.empty();
-        this.location = Codegen.empty();
-        this.packageName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetOSList = Codegen.empty();
-        this.testBaseAccountName = Codegen.empty();
-        this.tests = Codegen.empty();
-        this.version = Codegen.empty();
+    private PackageArgs(PackageArgs $) {
+        this.applicationName = $.applicationName;
+        this.blobPath = $.blobPath;
+        this.flightingRing = $.flightingRing;
+        this.location = $.location;
+        this.packageName = $.packageName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.targetOSList = $.targetOSList;
+        this.testBaseAccountName = $.testBaseAccountName;
+        this.tests = $.tests;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationName;
-        private Output<String> blobPath;
-        private Output<String> flightingRing;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> packageName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<List<TargetOSInfoArgs>> targetOSList;
-        private Output<String> testBaseAccountName;
-        private Output<List<TestArgs>> tests;
-        private Output<String> version;
+        private PackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageArgs();
         }
 
         public Builder(PackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationName = defaults.applicationName;
-    	      this.blobPath = defaults.blobPath;
-    	      this.flightingRing = defaults.flightingRing;
-    	      this.location = defaults.location;
-    	      this.packageName = defaults.packageName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.targetOSList = defaults.targetOSList;
-    	      this.testBaseAccountName = defaults.testBaseAccountName;
-    	      this.tests = defaults.tests;
-    	      this.version = defaults.version;
+            $ = new PackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationName(Output<String> applicationName) {
-            this.applicationName = Objects.requireNonNull(applicationName);
+            $.applicationName = applicationName;
             return this;
         }
+
         public Builder applicationName(String applicationName) {
-            this.applicationName = Output.of(Objects.requireNonNull(applicationName));
-            return this;
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder blobPath(Output<String> blobPath) {
-            this.blobPath = Objects.requireNonNull(blobPath);
+            $.blobPath = blobPath;
             return this;
         }
+
         public Builder blobPath(String blobPath) {
-            this.blobPath = Output.of(Objects.requireNonNull(blobPath));
-            return this;
+            return blobPath(Output.of(blobPath));
         }
+
         public Builder flightingRing(Output<String> flightingRing) {
-            this.flightingRing = Objects.requireNonNull(flightingRing);
+            $.flightingRing = flightingRing;
             return this;
         }
+
         public Builder flightingRing(String flightingRing) {
-            this.flightingRing = Output.of(Objects.requireNonNull(flightingRing));
-            return this;
+            return flightingRing(Output.of(flightingRing));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder packageName(@Nullable Output<String> packageName) {
-            this.packageName = packageName;
+            $.packageName = packageName;
             return this;
         }
-        public Builder packageName(@Nullable String packageName) {
-            this.packageName = Codegen.ofNullable(packageName);
-            return this;
+
+        public Builder packageName(String packageName) {
+            return packageName(Output.of(packageName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetOSList(Output<List<TargetOSInfoArgs>> targetOSList) {
-            this.targetOSList = Objects.requireNonNull(targetOSList);
+            $.targetOSList = targetOSList;
             return this;
         }
+
         public Builder targetOSList(List<TargetOSInfoArgs> targetOSList) {
-            this.targetOSList = Output.of(Objects.requireNonNull(targetOSList));
-            return this;
+            return targetOSList(Output.of(targetOSList));
         }
+
         public Builder targetOSList(TargetOSInfoArgs... targetOSList) {
             return targetOSList(List.of(targetOSList));
         }
+
         public Builder testBaseAccountName(Output<String> testBaseAccountName) {
-            this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
+            $.testBaseAccountName = testBaseAccountName;
             return this;
         }
+
         public Builder testBaseAccountName(String testBaseAccountName) {
-            this.testBaseAccountName = Output.of(Objects.requireNonNull(testBaseAccountName));
-            return this;
+            return testBaseAccountName(Output.of(testBaseAccountName));
         }
+
         public Builder tests(Output<List<TestArgs>> tests) {
-            this.tests = Objects.requireNonNull(tests);
+            $.tests = tests;
             return this;
         }
+
         public Builder tests(List<TestArgs> tests) {
-            this.tests = Output.of(Objects.requireNonNull(tests));
-            return this;
+            return tests(Output.of(tests));
         }
+
         public Builder tests(TestArgs... tests) {
             return tests(List.of(tests));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public PackageArgs build() {
-            return new PackageArgs(applicationName, blobPath, flightingRing, location, packageName, resourceGroupName, tags, targetOSList, testBaseAccountName, tests, version);
+            return version(Output.of(version));
+        }
+
+        public PackageArgs build() {
+            $.applicationName = Objects.requireNonNull($.applicationName, "expected parameter 'applicationName' to be non-null");
+            $.blobPath = Objects.requireNonNull($.blobPath, "expected parameter 'blobPath' to be non-null");
+            $.flightingRing = Objects.requireNonNull($.flightingRing, "expected parameter 'flightingRing' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.targetOSList = Objects.requireNonNull($.targetOSList, "expected parameter 'targetOSList' to be non-null");
+            $.testBaseAccountName = Objects.requireNonNull($.testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
+            $.tests = Objects.requireNonNull($.tests, "expected parameter 'tests' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

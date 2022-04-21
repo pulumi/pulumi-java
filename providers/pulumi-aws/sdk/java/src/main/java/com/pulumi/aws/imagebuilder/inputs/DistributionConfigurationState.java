@@ -6,11 +6,11 @@ package com.pulumi.aws.imagebuilder.inputs;
 import com.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="dateCreated")
-      private final @Nullable Output<String> dateCreated;
+    private @Nullable Output<String> dateCreated;
 
-    public Output<String> dateCreated() {
-        return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
+    public Optional<Output<String>> dateCreated() {
+        return Optional.ofNullable(this.dateCreated);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="dateUpdated")
-      private final @Nullable Output<String> dateUpdated;
+    private @Nullable Output<String> dateUpdated;
 
-    public Output<String> dateUpdated() {
-        return this.dateUpdated == null ? Codegen.empty() : this.dateUpdated;
+    public Optional<Output<String>> dateUpdated() {
+        return Optional.ofNullable(this.dateUpdated);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="distributions")
-      private final @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions;
+    private @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions;
 
-    public Output<List<DistributionConfigurationDistributionGetArgs>> distributions() {
-        return this.distributions == null ? Codegen.empty() : this.distributions;
+    public Optional<Output<List<DistributionConfigurationDistributionGetArgs>>> distributions() {
+        return Optional.ofNullable(this.distributions);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -100,144 +100,122 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public DistributionConfigurationState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> dateCreated,
-        @Nullable Output<String> dateUpdated,
-        @Nullable Output<String> description,
-        @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.dateCreated = dateCreated;
-        this.dateUpdated = dateUpdated;
-        this.description = description;
-        this.distributions = distributions;
-        this.name = name;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private DistributionConfigurationState() {}
 
-    private DistributionConfigurationState() {
-        this.arn = Codegen.empty();
-        this.dateCreated = Codegen.empty();
-        this.dateUpdated = Codegen.empty();
-        this.description = Codegen.empty();
-        this.distributions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private DistributionConfigurationState(DistributionConfigurationState $) {
+        this.arn = $.arn;
+        this.dateCreated = $.dateCreated;
+        this.dateUpdated = $.dateUpdated;
+        this.description = $.description;
+        this.distributions = $.distributions;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> dateCreated;
-        private @Nullable Output<String> dateUpdated;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private DistributionConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationState();
         }
 
         public Builder(DistributionConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.dateCreated = defaults.dateCreated;
-    	      this.dateUpdated = defaults.dateUpdated;
-    	      this.description = defaults.description;
-    	      this.distributions = defaults.distributions;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new DistributionConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
-            this.dateCreated = dateCreated;
+            $.dateCreated = dateCreated;
             return this;
         }
-        public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Codegen.ofNullable(dateCreated);
-            return this;
+
+        public Builder dateCreated(String dateCreated) {
+            return dateCreated(Output.of(dateCreated));
         }
+
         public Builder dateUpdated(@Nullable Output<String> dateUpdated) {
-            this.dateUpdated = dateUpdated;
+            $.dateUpdated = dateUpdated;
             return this;
         }
-        public Builder dateUpdated(@Nullable String dateUpdated) {
-            this.dateUpdated = Codegen.ofNullable(dateUpdated);
-            return this;
+
+        public Builder dateUpdated(String dateUpdated) {
+            return dateUpdated(Output.of(dateUpdated));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder distributions(@Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions) {
-            this.distributions = distributions;
+            $.distributions = distributions;
             return this;
         }
-        public Builder distributions(@Nullable List<DistributionConfigurationDistributionGetArgs> distributions) {
-            this.distributions = Codegen.ofNullable(distributions);
-            return this;
+
+        public Builder distributions(List<DistributionConfigurationDistributionGetArgs> distributions) {
+            return distributions(Output.of(distributions));
         }
+
         public Builder distributions(DistributionConfigurationDistributionGetArgs... distributions) {
             return distributions(List.of(distributions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public DistributionConfigurationState build() {
-            return new DistributionConfigurationState(arn, dateCreated, dateUpdated, description, distributions, name, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public DistributionConfigurationState build() {
+            return $;
         }
     }
+
 }

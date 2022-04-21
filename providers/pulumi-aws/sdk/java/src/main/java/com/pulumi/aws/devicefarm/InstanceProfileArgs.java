@@ -5,12 +5,12 @@ package com.pulumi.aws.devicefarm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="excludeAppPackagesFromCleanups")
-      private final @Nullable Output<List<String>> excludeAppPackagesFromCleanups;
+    private @Nullable Output<List<String>> excludeAppPackagesFromCleanups;
 
-    public Output<List<String>> excludeAppPackagesFromCleanups() {
-        return this.excludeAppPackagesFromCleanups == null ? Codegen.empty() : this.excludeAppPackagesFromCleanups;
+    public Optional<Output<List<String>>> excludeAppPackagesFromCleanups() {
+        return Optional.ofNullable(this.excludeAppPackagesFromCleanups);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="packageCleanup")
-      private final @Nullable Output<Boolean> packageCleanup;
+    private @Nullable Output<Boolean> packageCleanup;
 
-    public Output<Boolean> packageCleanup() {
-        return this.packageCleanup == null ? Codegen.empty() : this.packageCleanup;
+    public Optional<Output<Boolean>> packageCleanup() {
+        return Optional.ofNullable(this.packageCleanup);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rebootAfterUse")
-      private final @Nullable Output<Boolean> rebootAfterUse;
+    private @Nullable Output<Boolean> rebootAfterUse;
 
-    public Output<Boolean> rebootAfterUse() {
-        return this.rebootAfterUse == null ? Codegen.empty() : this.rebootAfterUse;
+    public Optional<Output<Boolean>> rebootAfterUse() {
+        return Optional.ofNullable(this.rebootAfterUse);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -89,131 +89,112 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public InstanceProfileArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> excludeAppPackagesFromCleanups,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> packageCleanup,
-        @Nullable Output<Boolean> rebootAfterUse,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.description = description;
-        this.excludeAppPackagesFromCleanups = excludeAppPackagesFromCleanups;
-        this.name = name;
-        this.packageCleanup = packageCleanup;
-        this.rebootAfterUse = rebootAfterUse;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private InstanceProfileArgs() {}
 
-    private InstanceProfileArgs() {
-        this.description = Codegen.empty();
-        this.excludeAppPackagesFromCleanups = Codegen.empty();
-        this.name = Codegen.empty();
-        this.packageCleanup = Codegen.empty();
-        this.rebootAfterUse = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private InstanceProfileArgs(InstanceProfileArgs $) {
+        this.description = $.description;
+        this.excludeAppPackagesFromCleanups = $.excludeAppPackagesFromCleanups;
+        this.name = $.name;
+        this.packageCleanup = $.packageCleanup;
+        this.rebootAfterUse = $.rebootAfterUse;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> excludeAppPackagesFromCleanups;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> packageCleanup;
-        private @Nullable Output<Boolean> rebootAfterUse;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private InstanceProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceProfileArgs();
         }
 
         public Builder(InstanceProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.excludeAppPackagesFromCleanups = defaults.excludeAppPackagesFromCleanups;
-    	      this.name = defaults.name;
-    	      this.packageCleanup = defaults.packageCleanup;
-    	      this.rebootAfterUse = defaults.rebootAfterUse;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new InstanceProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder excludeAppPackagesFromCleanups(@Nullable Output<List<String>> excludeAppPackagesFromCleanups) {
-            this.excludeAppPackagesFromCleanups = excludeAppPackagesFromCleanups;
+            $.excludeAppPackagesFromCleanups = excludeAppPackagesFromCleanups;
             return this;
         }
-        public Builder excludeAppPackagesFromCleanups(@Nullable List<String> excludeAppPackagesFromCleanups) {
-            this.excludeAppPackagesFromCleanups = Codegen.ofNullable(excludeAppPackagesFromCleanups);
-            return this;
+
+        public Builder excludeAppPackagesFromCleanups(List<String> excludeAppPackagesFromCleanups) {
+            return excludeAppPackagesFromCleanups(Output.of(excludeAppPackagesFromCleanups));
         }
+
         public Builder excludeAppPackagesFromCleanups(String... excludeAppPackagesFromCleanups) {
             return excludeAppPackagesFromCleanups(List.of(excludeAppPackagesFromCleanups));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder packageCleanup(@Nullable Output<Boolean> packageCleanup) {
-            this.packageCleanup = packageCleanup;
+            $.packageCleanup = packageCleanup;
             return this;
         }
-        public Builder packageCleanup(@Nullable Boolean packageCleanup) {
-            this.packageCleanup = Codegen.ofNullable(packageCleanup);
-            return this;
+
+        public Builder packageCleanup(Boolean packageCleanup) {
+            return packageCleanup(Output.of(packageCleanup));
         }
+
         public Builder rebootAfterUse(@Nullable Output<Boolean> rebootAfterUse) {
-            this.rebootAfterUse = rebootAfterUse;
+            $.rebootAfterUse = rebootAfterUse;
             return this;
         }
-        public Builder rebootAfterUse(@Nullable Boolean rebootAfterUse) {
-            this.rebootAfterUse = Codegen.ofNullable(rebootAfterUse);
-            return this;
+
+        public Builder rebootAfterUse(Boolean rebootAfterUse) {
+            return rebootAfterUse(Output.of(rebootAfterUse));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public InstanceProfileArgs build() {
-            return new InstanceProfileArgs(description, excludeAppPackagesFromCleanups, name, packageCleanup, rebootAfterUse, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public InstanceProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="action")
-      private final @Nullable String action;
+    private @Nullable String action;
 
     public Optional<String> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="actor")
-      private final @Nullable ActorResponse actor;
+    private @Nullable ActorResponse actor;
 
     public Optional<ActorResponse> actor() {
-        return this.actor == null ? Optional.empty() : Optional.ofNullable(this.actor);
+        return Optional.ofNullable(this.actor);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="request")
-      private final @Nullable RequestResponse request;
+    private @Nullable RequestResponse request;
 
     public Optional<RequestResponse> request() {
-        return this.request == null ? Optional.empty() : Optional.ofNullable(this.request);
+        return Optional.ofNullable(this.request);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="source")
-      private final @Nullable SourceResponse source;
+    private @Nullable SourceResponse source;
 
     public Optional<SourceResponse> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="target")
-      private final @Nullable TargetResponse target;
+    private @Nullable TargetResponse target;
 
     public Optional<TargetResponse> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -93,100 +93,80 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="timestamp")
-      private final @Nullable String timestamp;
+    private @Nullable String timestamp;
 
     public Optional<String> timestamp() {
-        return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
+        return Optional.ofNullable(this.timestamp);
     }
 
-    public EventContentResponse(
-        @Nullable String action,
-        @Nullable ActorResponse actor,
-        @Nullable String id,
-        @Nullable RequestResponse request,
-        @Nullable SourceResponse source,
-        @Nullable TargetResponse target,
-        @Nullable String timestamp) {
-        this.action = action;
-        this.actor = actor;
-        this.id = id;
-        this.request = request;
-        this.source = source;
-        this.target = target;
-        this.timestamp = timestamp;
-    }
+    private EventContentResponse() {}
 
-    private EventContentResponse() {
-        this.action = null;
-        this.actor = null;
-        this.id = null;
-        this.request = null;
-        this.source = null;
-        this.target = null;
-        this.timestamp = null;
+    private EventContentResponse(EventContentResponse $) {
+        this.action = $.action;
+        this.actor = $.actor;
+        this.id = $.id;
+        this.request = $.request;
+        this.source = $.source;
+        this.target = $.target;
+        this.timestamp = $.timestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String action;
-        private @Nullable ActorResponse actor;
-        private @Nullable String id;
-        private @Nullable RequestResponse request;
-        private @Nullable SourceResponse source;
-        private @Nullable TargetResponse target;
-        private @Nullable String timestamp;
+        private EventContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventContentResponse();
         }
 
         public Builder(EventContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.actor = defaults.actor;
-    	      this.id = defaults.id;
-    	      this.request = defaults.request;
-    	      this.source = defaults.source;
-    	      this.target = defaults.target;
-    	      this.timestamp = defaults.timestamp;
+            $ = new EventContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable String action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder actor(@Nullable ActorResponse actor) {
-            this.actor = actor;
+            $.actor = actor;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder request(@Nullable RequestResponse request) {
-            this.request = request;
+            $.request = request;
             return this;
         }
+
         public Builder source(@Nullable SourceResponse source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
+
         public Builder target(@Nullable TargetResponse target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
+
         public Builder timestamp(@Nullable String timestamp) {
-            this.timestamp = timestamp;
+            $.timestamp = timestamp;
             return this;
-        }        public EventContentResponse build() {
-            return new EventContentResponse(action, actor, id, request, source, target, timestamp);
+        }
+
+        public EventContentResponse build() {
+            return $;
         }
     }
+
 }

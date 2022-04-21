@@ -7,9 +7,9 @@ import com.pulumi.azurenative.changeanalysis.enums.ChangeDetailsMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="includeChangeDetails")
-      private final @Nullable Output<Either<String,ChangeDetailsMode>> includeChangeDetails;
+    private @Nullable Output<Either<String,ChangeDetailsMode>> includeChangeDetails;
 
-    public Output<Either<String,ChangeDetailsMode>> includeChangeDetails() {
-        return this.includeChangeDetails == null ? Codegen.empty() : this.includeChangeDetails;
+    public Optional<Output<Either<String,ChangeDetailsMode>>> includeChangeDetails() {
+        return Optional.ofNullable(this.includeChangeDetails);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable Output<String> workspaceId;
+    private @Nullable Output<String> workspaceId;
 
-    public Output<String> workspaceId() {
-        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
+    public Optional<Output<String>> workspaceId() {
+        return Optional.ofNullable(this.workspaceId);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable Output<String> workspaceResourceId;
+    private @Nullable Output<String> workspaceResourceId;
 
-    public Output<String> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
+    public Optional<Output<String>> workspaceResourceId() {
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public AzureMonitorWorkspacePropertiesArgs(
-        @Nullable Output<Either<String,ChangeDetailsMode>> includeChangeDetails,
-        @Nullable Output<String> workspaceId,
-        @Nullable Output<String> workspaceResourceId) {
-        this.includeChangeDetails = includeChangeDetails;
-        this.workspaceId = workspaceId;
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private AzureMonitorWorkspacePropertiesArgs() {}
 
-    private AzureMonitorWorkspacePropertiesArgs() {
-        this.includeChangeDetails = Codegen.empty();
-        this.workspaceId = Codegen.empty();
-        this.workspaceResourceId = Codegen.empty();
+    private AzureMonitorWorkspacePropertiesArgs(AzureMonitorWorkspacePropertiesArgs $) {
+        this.includeChangeDetails = $.includeChangeDetails;
+        this.workspaceId = $.workspaceId;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMonitorWorkspacePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ChangeDetailsMode>> includeChangeDetails;
-        private @Nullable Output<String> workspaceId;
-        private @Nullable Output<String> workspaceResourceId;
+        private AzureMonitorWorkspacePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMonitorWorkspacePropertiesArgs();
         }
 
         public Builder(AzureMonitorWorkspacePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeChangeDetails = defaults.includeChangeDetails;
-    	      this.workspaceId = defaults.workspaceId;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new AzureMonitorWorkspacePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder includeChangeDetails(@Nullable Output<Either<String,ChangeDetailsMode>> includeChangeDetails) {
-            this.includeChangeDetails = includeChangeDetails;
+            $.includeChangeDetails = includeChangeDetails;
             return this;
         }
-        public Builder includeChangeDetails(@Nullable Either<String,ChangeDetailsMode> includeChangeDetails) {
-            this.includeChangeDetails = Codegen.ofNullable(includeChangeDetails);
-            return this;
+
+        public Builder includeChangeDetails(Either<String,ChangeDetailsMode> includeChangeDetails) {
+            return includeChangeDetails(Output.of(includeChangeDetails));
         }
+
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
         }
-        public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Codegen.ofNullable(workspaceId);
-            return this;
+
+        public Builder workspaceId(String workspaceId) {
+            return workspaceId(Output.of(workspaceId));
         }
+
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
         }
-        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = Codegen.ofNullable(workspaceResourceId);
-            return this;
-        }        public AzureMonitorWorkspacePropertiesArgs build() {
-            return new AzureMonitorWorkspacePropertiesArgs(includeChangeDetails, workspaceId, workspaceResourceId);
+
+        public Builder workspaceResourceId(String workspaceResourceId) {
+            return workspaceResourceId(Output.of(workspaceResourceId));
+        }
+
+        public AzureMonitorWorkspacePropertiesArgs build() {
+            return $;
         }
     }
+
 }

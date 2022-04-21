@@ -7,7 +7,6 @@ import com.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import com.pulumi.azurenative.logic.inputs.X12ProtocolSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +23,7 @@ public final class X12OneWayAgreementArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="protocolSettings", required=true)
-      private final Output<X12ProtocolSettingsArgs> protocolSettings;
+    private Output<X12ProtocolSettingsArgs> protocolSettings;
 
     public Output<X12ProtocolSettingsArgs> protocolSettings() {
         return this.protocolSettings;
@@ -35,7 +34,7 @@ public final class X12OneWayAgreementArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="receiverBusinessIdentity", required=true)
-      private final Output<BusinessIdentityArgs> receiverBusinessIdentity;
+    private Output<BusinessIdentityArgs> receiverBusinessIdentity;
 
     public Output<BusinessIdentityArgs> receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
@@ -46,76 +45,71 @@ public final class X12OneWayAgreementArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="senderBusinessIdentity", required=true)
-      private final Output<BusinessIdentityArgs> senderBusinessIdentity;
+    private Output<BusinessIdentityArgs> senderBusinessIdentity;
 
     public Output<BusinessIdentityArgs> senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
 
-    public X12OneWayAgreementArgs(
-        Output<X12ProtocolSettingsArgs> protocolSettings,
-        Output<BusinessIdentityArgs> receiverBusinessIdentity,
-        Output<BusinessIdentityArgs> senderBusinessIdentity) {
-        this.protocolSettings = Objects.requireNonNull(protocolSettings, "expected parameter 'protocolSettings' to be non-null");
-        this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity, "expected parameter 'receiverBusinessIdentity' to be non-null");
-        this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity, "expected parameter 'senderBusinessIdentity' to be non-null");
-    }
+    private X12OneWayAgreementArgs() {}
 
-    private X12OneWayAgreementArgs() {
-        this.protocolSettings = Codegen.empty();
-        this.receiverBusinessIdentity = Codegen.empty();
-        this.senderBusinessIdentity = Codegen.empty();
+    private X12OneWayAgreementArgs(X12OneWayAgreementArgs $) {
+        this.protocolSettings = $.protocolSettings;
+        this.receiverBusinessIdentity = $.receiverBusinessIdentity;
+        this.senderBusinessIdentity = $.senderBusinessIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12OneWayAgreementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<X12ProtocolSettingsArgs> protocolSettings;
-        private Output<BusinessIdentityArgs> receiverBusinessIdentity;
-        private Output<BusinessIdentityArgs> senderBusinessIdentity;
+        private X12OneWayAgreementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12OneWayAgreementArgs();
         }
 
         public Builder(X12OneWayAgreementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.protocolSettings = defaults.protocolSettings;
-    	      this.receiverBusinessIdentity = defaults.receiverBusinessIdentity;
-    	      this.senderBusinessIdentity = defaults.senderBusinessIdentity;
+            $ = new X12OneWayAgreementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder protocolSettings(Output<X12ProtocolSettingsArgs> protocolSettings) {
-            this.protocolSettings = Objects.requireNonNull(protocolSettings);
+            $.protocolSettings = protocolSettings;
             return this;
         }
+
         public Builder protocolSettings(X12ProtocolSettingsArgs protocolSettings) {
-            this.protocolSettings = Output.of(Objects.requireNonNull(protocolSettings));
-            return this;
+            return protocolSettings(Output.of(protocolSettings));
         }
+
         public Builder receiverBusinessIdentity(Output<BusinessIdentityArgs> receiverBusinessIdentity) {
-            this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
+            $.receiverBusinessIdentity = receiverBusinessIdentity;
             return this;
         }
+
         public Builder receiverBusinessIdentity(BusinessIdentityArgs receiverBusinessIdentity) {
-            this.receiverBusinessIdentity = Output.of(Objects.requireNonNull(receiverBusinessIdentity));
-            return this;
+            return receiverBusinessIdentity(Output.of(receiverBusinessIdentity));
         }
+
         public Builder senderBusinessIdentity(Output<BusinessIdentityArgs> senderBusinessIdentity) {
-            this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
+            $.senderBusinessIdentity = senderBusinessIdentity;
             return this;
         }
+
         public Builder senderBusinessIdentity(BusinessIdentityArgs senderBusinessIdentity) {
-            this.senderBusinessIdentity = Output.of(Objects.requireNonNull(senderBusinessIdentity));
-            return this;
-        }        public X12OneWayAgreementArgs build() {
-            return new X12OneWayAgreementArgs(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
+            return senderBusinessIdentity(Output.of(senderBusinessIdentity));
+        }
+
+        public X12OneWayAgreementArgs build() {
+            $.protocolSettings = Objects.requireNonNull($.protocolSettings, "expected parameter 'protocolSettings' to be non-null");
+            $.receiverBusinessIdentity = Objects.requireNonNull($.receiverBusinessIdentity, "expected parameter 'receiverBusinessIdentity' to be non-null");
+            $.senderBusinessIdentity = Objects.requireNonNull($.senderBusinessIdentity, "expected parameter 'senderBusinessIdentity' to be non-null");
+            return $;
         }
     }
+
 }

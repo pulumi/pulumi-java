@@ -5,10 +5,10 @@ package com.pulumi.aws.dms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateId")
-      private final @Nullable Output<String> certificateId;
+    private @Nullable Output<String> certificateId;
 
-    public Output<String> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<String>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificatePem")
-      private final @Nullable Output<String> certificatePem;
+    private @Nullable Output<String> certificatePem;
 
-    public Output<String> certificatePem() {
-        return this.certificatePem == null ? Codegen.empty() : this.certificatePem;
+    public Optional<Output<String>> certificatePem() {
+        return Optional.ofNullable(this.certificatePem);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateWallet")
-      private final @Nullable Output<String> certificateWallet;
+    private @Nullable Output<String> certificateWallet;
 
-    public Output<String> certificateWallet() {
-        return this.certificateWallet == null ? Codegen.empty() : this.certificateWallet;
+    public Optional<Output<String>> certificateWallet() {
+        return Optional.ofNullable(this.certificateWallet);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -76,115 +76,98 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public CertificateState(
-        @Nullable Output<String> certificateArn,
-        @Nullable Output<String> certificateId,
-        @Nullable Output<String> certificatePem,
-        @Nullable Output<String> certificateWallet,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.certificateArn = certificateArn;
-        this.certificateId = certificateId;
-        this.certificatePem = certificatePem;
-        this.certificateWallet = certificateWallet;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private CertificateState() {}
 
-    private CertificateState() {
-        this.certificateArn = Codegen.empty();
-        this.certificateId = Codegen.empty();
-        this.certificatePem = Codegen.empty();
-        this.certificateWallet = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private CertificateState(CertificateState $) {
+        this.certificateArn = $.certificateArn;
+        this.certificateId = $.certificateId;
+        this.certificatePem = $.certificatePem;
+        this.certificateWallet = $.certificateWallet;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateArn;
-        private @Nullable Output<String> certificateId;
-        private @Nullable Output<String> certificatePem;
-        private @Nullable Output<String> certificateWallet;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private CertificateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateState();
         }
 
         public Builder(CertificateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.certificateId = defaults.certificateId;
-    	      this.certificatePem = defaults.certificatePem;
-    	      this.certificateWallet = defaults.certificateWallet;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new CertificateState(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder certificateId(@Nullable Output<String> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
+
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder certificatePem(@Nullable Output<String> certificatePem) {
-            this.certificatePem = certificatePem;
+            $.certificatePem = certificatePem;
             return this;
         }
-        public Builder certificatePem(@Nullable String certificatePem) {
-            this.certificatePem = Codegen.ofNullable(certificatePem);
-            return this;
+
+        public Builder certificatePem(String certificatePem) {
+            return certificatePem(Output.of(certificatePem));
         }
+
         public Builder certificateWallet(@Nullable Output<String> certificateWallet) {
-            this.certificateWallet = certificateWallet;
+            $.certificateWallet = certificateWallet;
             return this;
         }
-        public Builder certificateWallet(@Nullable String certificateWallet) {
-            this.certificateWallet = Codegen.ofNullable(certificateWallet);
-            return this;
+
+        public Builder certificateWallet(String certificateWallet) {
+            return certificateWallet(Output.of(certificateWallet));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public CertificateState build() {
-            return new CertificateState(certificateArn, certificateId, certificatePem, certificateWallet, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public CertificateState build() {
+            return $;
         }
     }
+
 }

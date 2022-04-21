@@ -5,11 +5,11 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterStepHadoopJarStepGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ClusterStepHadoopJarStepGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="jar", required=true)
-      private final Output<String> jar;
+    private Output<String> jar;
 
     public Output<String> jar() {
         return this.jar;
@@ -44,10 +44,10 @@ public final class ClusterStepHadoopJarStepGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="mainClass")
-      private final @Nullable Output<String> mainClass;
+    private @Nullable Output<String> mainClass;
 
-    public Output<String> mainClass() {
-        return this.mainClass == null ? Codegen.empty() : this.mainClass;
+    public Optional<Output<String>> mainClass() {
+        return Optional.ofNullable(this.mainClass);
     }
 
     /**
@@ -55,92 +55,83 @@ public final class ClusterStepHadoopJarStepGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public ClusterStepHadoopJarStepGetArgs(
-        @Nullable Output<List<String>> args,
-        Output<String> jar,
-        @Nullable Output<String> mainClass,
-        @Nullable Output<Map<String,String>> properties) {
-        this.args = args;
-        this.jar = Objects.requireNonNull(jar, "expected parameter 'jar' to be non-null");
-        this.mainClass = mainClass;
-        this.properties = properties;
-    }
+    private ClusterStepHadoopJarStepGetArgs() {}
 
-    private ClusterStepHadoopJarStepGetArgs() {
-        this.args = Codegen.empty();
-        this.jar = Codegen.empty();
-        this.mainClass = Codegen.empty();
-        this.properties = Codegen.empty();
+    private ClusterStepHadoopJarStepGetArgs(ClusterStepHadoopJarStepGetArgs $) {
+        this.args = $.args;
+        this.jar = $.jar;
+        this.mainClass = $.mainClass;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterStepHadoopJarStepGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private Output<String> jar;
-        private @Nullable Output<String> mainClass;
-        private @Nullable Output<Map<String,String>> properties;
+        private ClusterStepHadoopJarStepGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterStepHadoopJarStepGetArgs();
         }
 
         public Builder(ClusterStepHadoopJarStepGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.jar = defaults.jar;
-    	      this.mainClass = defaults.mainClass;
-    	      this.properties = defaults.properties;
+            $ = new ClusterStepHadoopJarStepGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder jar(Output<String> jar) {
-            this.jar = Objects.requireNonNull(jar);
+            $.jar = jar;
             return this;
         }
+
         public Builder jar(String jar) {
-            this.jar = Output.of(Objects.requireNonNull(jar));
-            return this;
+            return jar(Output.of(jar));
         }
+
         public Builder mainClass(@Nullable Output<String> mainClass) {
-            this.mainClass = mainClass;
+            $.mainClass = mainClass;
             return this;
         }
-        public Builder mainClass(@Nullable String mainClass) {
-            this.mainClass = Codegen.ofNullable(mainClass);
-            return this;
+
+        public Builder mainClass(String mainClass) {
+            return mainClass(Output.of(mainClass));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public ClusterStepHadoopJarStepGetArgs build() {
-            return new ClusterStepHadoopJarStepGetArgs(args, jar, mainClass, properties);
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
+        }
+
+        public ClusterStepHadoopJarStepGetArgs build() {
+            $.jar = Objects.requireNonNull($.jar, "expected parameter 'jar' to be non-null");
+            return $;
         }
     }
+
 }

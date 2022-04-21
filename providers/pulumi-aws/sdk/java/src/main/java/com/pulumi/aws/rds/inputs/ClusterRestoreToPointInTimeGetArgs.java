@@ -5,10 +5,10 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterRestoreToPointInTimeGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="restoreToTime")
-      private final @Nullable Output<String> restoreToTime;
+    private @Nullable Output<String> restoreToTime;
 
-    public Output<String> restoreToTime() {
-        return this.restoreToTime == null ? Codegen.empty() : this.restoreToTime;
+    public Optional<Output<String>> restoreToTime() {
+        return Optional.ofNullable(this.restoreToTime);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClusterRestoreToPointInTimeGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="restoreType")
-      private final @Nullable Output<String> restoreType;
+    private @Nullable Output<String> restoreType;
 
-    public Output<String> restoreType() {
-        return this.restoreType == null ? Codegen.empty() : this.restoreType;
+    public Optional<Output<String>> restoreType() {
+        return Optional.ofNullable(this.restoreType);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="sourceClusterIdentifier", required=true)
-      private final Output<String> sourceClusterIdentifier;
+    private Output<String> sourceClusterIdentifier;
 
     public Output<String> sourceClusterIdentifier() {
         return this.sourceClusterIdentifier;
@@ -55,89 +55,79 @@ public final class ClusterRestoreToPointInTimeGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="useLatestRestorableTime")
-      private final @Nullable Output<Boolean> useLatestRestorableTime;
+    private @Nullable Output<Boolean> useLatestRestorableTime;
 
-    public Output<Boolean> useLatestRestorableTime() {
-        return this.useLatestRestorableTime == null ? Codegen.empty() : this.useLatestRestorableTime;
+    public Optional<Output<Boolean>> useLatestRestorableTime() {
+        return Optional.ofNullable(this.useLatestRestorableTime);
     }
 
-    public ClusterRestoreToPointInTimeGetArgs(
-        @Nullable Output<String> restoreToTime,
-        @Nullable Output<String> restoreType,
-        Output<String> sourceClusterIdentifier,
-        @Nullable Output<Boolean> useLatestRestorableTime) {
-        this.restoreToTime = restoreToTime;
-        this.restoreType = restoreType;
-        this.sourceClusterIdentifier = Objects.requireNonNull(sourceClusterIdentifier, "expected parameter 'sourceClusterIdentifier' to be non-null");
-        this.useLatestRestorableTime = useLatestRestorableTime;
-    }
+    private ClusterRestoreToPointInTimeGetArgs() {}
 
-    private ClusterRestoreToPointInTimeGetArgs() {
-        this.restoreToTime = Codegen.empty();
-        this.restoreType = Codegen.empty();
-        this.sourceClusterIdentifier = Codegen.empty();
-        this.useLatestRestorableTime = Codegen.empty();
+    private ClusterRestoreToPointInTimeGetArgs(ClusterRestoreToPointInTimeGetArgs $) {
+        this.restoreToTime = $.restoreToTime;
+        this.restoreType = $.restoreType;
+        this.sourceClusterIdentifier = $.sourceClusterIdentifier;
+        this.useLatestRestorableTime = $.useLatestRestorableTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterRestoreToPointInTimeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> restoreToTime;
-        private @Nullable Output<String> restoreType;
-        private Output<String> sourceClusterIdentifier;
-        private @Nullable Output<Boolean> useLatestRestorableTime;
+        private ClusterRestoreToPointInTimeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterRestoreToPointInTimeGetArgs();
         }
 
         public Builder(ClusterRestoreToPointInTimeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.restoreToTime = defaults.restoreToTime;
-    	      this.restoreType = defaults.restoreType;
-    	      this.sourceClusterIdentifier = defaults.sourceClusterIdentifier;
-    	      this.useLatestRestorableTime = defaults.useLatestRestorableTime;
+            $ = new ClusterRestoreToPointInTimeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder restoreToTime(@Nullable Output<String> restoreToTime) {
-            this.restoreToTime = restoreToTime;
+            $.restoreToTime = restoreToTime;
             return this;
         }
-        public Builder restoreToTime(@Nullable String restoreToTime) {
-            this.restoreToTime = Codegen.ofNullable(restoreToTime);
-            return this;
+
+        public Builder restoreToTime(String restoreToTime) {
+            return restoreToTime(Output.of(restoreToTime));
         }
+
         public Builder restoreType(@Nullable Output<String> restoreType) {
-            this.restoreType = restoreType;
+            $.restoreType = restoreType;
             return this;
         }
-        public Builder restoreType(@Nullable String restoreType) {
-            this.restoreType = Codegen.ofNullable(restoreType);
-            return this;
+
+        public Builder restoreType(String restoreType) {
+            return restoreType(Output.of(restoreType));
         }
+
         public Builder sourceClusterIdentifier(Output<String> sourceClusterIdentifier) {
-            this.sourceClusterIdentifier = Objects.requireNonNull(sourceClusterIdentifier);
+            $.sourceClusterIdentifier = sourceClusterIdentifier;
             return this;
         }
+
         public Builder sourceClusterIdentifier(String sourceClusterIdentifier) {
-            this.sourceClusterIdentifier = Output.of(Objects.requireNonNull(sourceClusterIdentifier));
-            return this;
+            return sourceClusterIdentifier(Output.of(sourceClusterIdentifier));
         }
+
         public Builder useLatestRestorableTime(@Nullable Output<Boolean> useLatestRestorableTime) {
-            this.useLatestRestorableTime = useLatestRestorableTime;
+            $.useLatestRestorableTime = useLatestRestorableTime;
             return this;
         }
-        public Builder useLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
-            this.useLatestRestorableTime = Codegen.ofNullable(useLatestRestorableTime);
-            return this;
-        }        public ClusterRestoreToPointInTimeGetArgs build() {
-            return new ClusterRestoreToPointInTimeGetArgs(restoreToTime, restoreType, sourceClusterIdentifier, useLatestRestorableTime);
+
+        public Builder useLatestRestorableTime(Boolean useLatestRestorableTime) {
+            return useLatestRestorableTime(Output.of(useLatestRestorableTime));
+        }
+
+        public ClusterRestoreToPointInTimeGetArgs build() {
+            $.sourceClusterIdentifier = Objects.requireNonNull($.sourceClusterIdentifier, "expected parameter 'sourceClusterIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

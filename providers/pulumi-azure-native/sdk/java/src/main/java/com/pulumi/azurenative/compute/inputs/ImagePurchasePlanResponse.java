@@ -23,10 +23,10 @@ public final class ImagePurchasePlanResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ImagePurchasePlanResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="product")
-      private final @Nullable String product;
+    private @Nullable String product;
 
     public Optional<String> product() {
-        return this.product == null ? Optional.empty() : Optional.ofNullable(this.product);
+        return Optional.ofNullable(this.product);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ImagePurchasePlanResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publisher")
-      private final @Nullable String publisher;
+    private @Nullable String publisher;
 
     public Optional<String> publisher() {
-        return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
+        return Optional.ofNullable(this.publisher);
     }
 
-    public ImagePurchasePlanResponse(
-        @Nullable String name,
-        @Nullable String product,
-        @Nullable String publisher) {
-        this.name = name;
-        this.product = product;
-        this.publisher = publisher;
-    }
+    private ImagePurchasePlanResponse() {}
 
-    private ImagePurchasePlanResponse() {
-        this.name = null;
-        this.product = null;
-        this.publisher = null;
+    private ImagePurchasePlanResponse(ImagePurchasePlanResponse $) {
+        this.name = $.name;
+        this.product = $.product;
+        this.publisher = $.publisher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImagePurchasePlanResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String product;
-        private @Nullable String publisher;
+        private ImagePurchasePlanResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImagePurchasePlanResponse();
         }
 
         public Builder(ImagePurchasePlanResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.product = defaults.product;
-    	      this.publisher = defaults.publisher;
+            $ = new ImagePurchasePlanResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder product(@Nullable String product) {
-            this.product = product;
+            $.product = product;
             return this;
         }
+
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
-        }        public ImagePurchasePlanResponse build() {
-            return new ImagePurchasePlanResponse(name, product, publisher);
+        }
+
+        public ImagePurchasePlanResponse build() {
+            return $;
         }
     }
+
 }

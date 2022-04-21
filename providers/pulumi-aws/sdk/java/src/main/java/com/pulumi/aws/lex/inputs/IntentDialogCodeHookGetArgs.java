@@ -5,7 +5,6 @@ package com.pulumi.aws.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class IntentDialogCodeHookGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="messageVersion", required=true)
-      private final Output<String> messageVersion;
+    private Output<String> messageVersion;
 
     public Output<String> messageVersion() {
         return this.messageVersion;
@@ -32,63 +31,60 @@ public final class IntentDialogCodeHookGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public IntentDialogCodeHookGetArgs(
-        Output<String> messageVersion,
-        Output<String> uri) {
-        this.messageVersion = Objects.requireNonNull(messageVersion, "expected parameter 'messageVersion' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private IntentDialogCodeHookGetArgs() {}
 
-    private IntentDialogCodeHookGetArgs() {
-        this.messageVersion = Codegen.empty();
-        this.uri = Codegen.empty();
+    private IntentDialogCodeHookGetArgs(IntentDialogCodeHookGetArgs $) {
+        this.messageVersion = $.messageVersion;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentDialogCodeHookGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> messageVersion;
-        private Output<String> uri;
+        private IntentDialogCodeHookGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentDialogCodeHookGetArgs();
         }
 
         public Builder(IntentDialogCodeHookGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageVersion = defaults.messageVersion;
-    	      this.uri = defaults.uri;
+            $ = new IntentDialogCodeHookGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageVersion(Output<String> messageVersion) {
-            this.messageVersion = Objects.requireNonNull(messageVersion);
+            $.messageVersion = messageVersion;
             return this;
         }
+
         public Builder messageVersion(String messageVersion) {
-            this.messageVersion = Output.of(Objects.requireNonNull(messageVersion));
-            return this;
+            return messageVersion(Output.of(messageVersion));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public IntentDialogCodeHookGetArgs build() {
-            return new IntentDialogCodeHookGetArgs(messageVersion, uri);
+            return uri(Output.of(uri));
+        }
+
+        public IntentDialogCodeHookGetArgs build() {
+            $.messageVersion = Objects.requireNonNull($.messageVersion, "expected parameter 'messageVersion' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

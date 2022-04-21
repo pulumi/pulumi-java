@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ResponsePolicyRuleLocalDataArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="localDatas")
-      private final @Nullable Output<List<ResourceRecordSetArgs>> localDatas;
+    private @Nullable Output<List<ResourceRecordSetArgs>> localDatas;
 
-    public Output<List<ResourceRecordSetArgs>> localDatas() {
-        return this.localDatas == null ? Codegen.empty() : this.localDatas;
+    public Optional<Output<List<ResourceRecordSetArgs>>> localDatas() {
+        return Optional.ofNullable(this.localDatas);
     }
 
-    public ResponsePolicyRuleLocalDataArgs(@Nullable Output<List<ResourceRecordSetArgs>> localDatas) {
-        this.localDatas = localDatas;
-    }
+    private ResponsePolicyRuleLocalDataArgs() {}
 
-    private ResponsePolicyRuleLocalDataArgs() {
-        this.localDatas = Codegen.empty();
+    private ResponsePolicyRuleLocalDataArgs(ResponsePolicyRuleLocalDataArgs $) {
+        this.localDatas = $.localDatas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePolicyRuleLocalDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ResourceRecordSetArgs>> localDatas;
+        private ResponsePolicyRuleLocalDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePolicyRuleLocalDataArgs();
         }
 
         public Builder(ResponsePolicyRuleLocalDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localDatas = defaults.localDatas;
+            $ = new ResponsePolicyRuleLocalDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder localDatas(@Nullable Output<List<ResourceRecordSetArgs>> localDatas) {
-            this.localDatas = localDatas;
+            $.localDatas = localDatas;
             return this;
         }
-        public Builder localDatas(@Nullable List<ResourceRecordSetArgs> localDatas) {
-            this.localDatas = Codegen.ofNullable(localDatas);
-            return this;
+
+        public Builder localDatas(List<ResourceRecordSetArgs> localDatas) {
+            return localDatas(Output.of(localDatas));
         }
+
         public Builder localDatas(ResourceRecordSetArgs... localDatas) {
             return localDatas(List.of(localDatas));
-        }        public ResponsePolicyRuleLocalDataArgs build() {
-            return new ResponsePolicyRuleLocalDataArgs(localDatas);
+        }
+
+        public ResponsePolicyRuleLocalDataArgs build() {
+            return $;
         }
     }
+
 }

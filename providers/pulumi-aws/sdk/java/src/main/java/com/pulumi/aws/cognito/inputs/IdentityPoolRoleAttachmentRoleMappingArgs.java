@@ -6,10 +6,10 @@ package com.pulumi.aws.cognito.inputs;
 import com.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends com.pulumi.
      * 
      */
     @Import(name="ambiguousRoleResolution")
-      private final @Nullable Output<String> ambiguousRoleResolution;
+    private @Nullable Output<String> ambiguousRoleResolution;
 
-    public Output<String> ambiguousRoleResolution() {
-        return this.ambiguousRoleResolution == null ? Codegen.empty() : this.ambiguousRoleResolution;
+    public Optional<Output<String>> ambiguousRoleResolution() {
+        return Optional.ofNullable(this.ambiguousRoleResolution);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends com.pulumi.
      * 
      */
     @Import(name="identityProvider", required=true)
-      private final Output<String> identityProvider;
+    private Output<String> identityProvider;
 
     public Output<String> identityProvider() {
         return this.identityProvider;
@@ -44,10 +44,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends com.pulumi.
      * 
      */
     @Import(name="mappingRules")
-      private final @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules;
+    private @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules;
 
-    public Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules() {
-        return this.mappingRules == null ? Codegen.empty() : this.mappingRules;
+    public Optional<Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>>> mappingRules() {
+        return Optional.ofNullable(this.mappingRules);
     }
 
     /**
@@ -55,92 +55,84 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends com.pulumi.
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public IdentityPoolRoleAttachmentRoleMappingArgs(
-        @Nullable Output<String> ambiguousRoleResolution,
-        Output<String> identityProvider,
-        @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules,
-        Output<String> type) {
-        this.ambiguousRoleResolution = ambiguousRoleResolution;
-        this.identityProvider = Objects.requireNonNull(identityProvider, "expected parameter 'identityProvider' to be non-null");
-        this.mappingRules = mappingRules;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private IdentityPoolRoleAttachmentRoleMappingArgs() {}
 
-    private IdentityPoolRoleAttachmentRoleMappingArgs() {
-        this.ambiguousRoleResolution = Codegen.empty();
-        this.identityProvider = Codegen.empty();
-        this.mappingRules = Codegen.empty();
-        this.type = Codegen.empty();
+    private IdentityPoolRoleAttachmentRoleMappingArgs(IdentityPoolRoleAttachmentRoleMappingArgs $) {
+        this.ambiguousRoleResolution = $.ambiguousRoleResolution;
+        this.identityProvider = $.identityProvider;
+        this.mappingRules = $.mappingRules;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityPoolRoleAttachmentRoleMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ambiguousRoleResolution;
-        private Output<String> identityProvider;
-        private @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules;
-        private Output<String> type;
+        private IdentityPoolRoleAttachmentRoleMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityPoolRoleAttachmentRoleMappingArgs();
         }
 
         public Builder(IdentityPoolRoleAttachmentRoleMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ambiguousRoleResolution = defaults.ambiguousRoleResolution;
-    	      this.identityProvider = defaults.identityProvider;
-    	      this.mappingRules = defaults.mappingRules;
-    	      this.type = defaults.type;
+            $ = new IdentityPoolRoleAttachmentRoleMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ambiguousRoleResolution(@Nullable Output<String> ambiguousRoleResolution) {
-            this.ambiguousRoleResolution = ambiguousRoleResolution;
+            $.ambiguousRoleResolution = ambiguousRoleResolution;
             return this;
         }
-        public Builder ambiguousRoleResolution(@Nullable String ambiguousRoleResolution) {
-            this.ambiguousRoleResolution = Codegen.ofNullable(ambiguousRoleResolution);
-            return this;
+
+        public Builder ambiguousRoleResolution(String ambiguousRoleResolution) {
+            return ambiguousRoleResolution(Output.of(ambiguousRoleResolution));
         }
+
         public Builder identityProvider(Output<String> identityProvider) {
-            this.identityProvider = Objects.requireNonNull(identityProvider);
+            $.identityProvider = identityProvider;
             return this;
         }
+
         public Builder identityProvider(String identityProvider) {
-            this.identityProvider = Output.of(Objects.requireNonNull(identityProvider));
-            return this;
+            return identityProvider(Output.of(identityProvider));
         }
+
         public Builder mappingRules(@Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules) {
-            this.mappingRules = mappingRules;
+            $.mappingRules = mappingRules;
             return this;
         }
-        public Builder mappingRules(@Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs> mappingRules) {
-            this.mappingRules = Codegen.ofNullable(mappingRules);
-            return this;
+
+        public Builder mappingRules(List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs> mappingRules) {
+            return mappingRules(Output.of(mappingRules));
         }
+
         public Builder mappingRules(IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs... mappingRules) {
             return mappingRules(List.of(mappingRules));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public IdentityPoolRoleAttachmentRoleMappingArgs build() {
-            return new IdentityPoolRoleAttachmentRoleMappingArgs(ambiguousRoleResolution, identityProvider, mappingRules, type);
+            return type(Output.of(type));
+        }
+
+        public IdentityPoolRoleAttachmentRoleMappingArgs build() {
+            $.identityProvider = Objects.requireNonNull($.identityProvider, "expected parameter 'identityProvider' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

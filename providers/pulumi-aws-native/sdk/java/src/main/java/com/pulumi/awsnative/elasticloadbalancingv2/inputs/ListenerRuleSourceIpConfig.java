@@ -16,48 +16,48 @@ public final class ListenerRuleSourceIpConfig extends com.pulumi.resources.Invok
     public static final ListenerRuleSourceIpConfig Empty = new ListenerRuleSourceIpConfig();
 
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ListenerRuleSourceIpConfig(@Nullable List<String> values) {
-        this.values = values;
-    }
+    private ListenerRuleSourceIpConfig() {}
 
-    private ListenerRuleSourceIpConfig() {
-        this.values = List.of();
+    private ListenerRuleSourceIpConfig(ListenerRuleSourceIpConfig $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleSourceIpConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> values;
+        private ListenerRuleSourceIpConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleSourceIpConfig();
         }
 
         public Builder(ListenerRuleSourceIpConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new ListenerRuleSourceIpConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ListenerRuleSourceIpConfig build() {
-            return new ListenerRuleSourceIpConfig(values);
+        }
+
+        public ListenerRuleSourceIpConfig build() {
+            return $;
         }
     }
+
 }

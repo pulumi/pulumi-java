@@ -24,7 +24,7 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="avroFileFormat", required=true)
-      private final AvroFileFormatResponse avroFileFormat;
+    private AvroFileFormatResponse avroFileFormat;
 
     public AvroFileFormatResponse avroFileFormat() {
         return this.avroFileFormat;
@@ -35,7 +35,7 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="fileRotationInterval", required=true)
-      private final String fileRotationInterval;
+    private String fileRotationInterval;
 
     public String fileRotationInterval() {
         return this.fileRotationInterval;
@@ -46,7 +46,7 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="fileRotationMb", required=true)
-      private final Integer fileRotationMb;
+    private Integer fileRotationMb;
 
     public Integer fileRotationMb() {
         return this.fileRotationMb;
@@ -57,7 +57,7 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="jsonFileFormat", required=true)
-      private final JsonFileFormatResponse jsonFileFormat;
+    private JsonFileFormatResponse jsonFileFormat;
 
     public JsonFileFormatResponse jsonFileFormat() {
         return this.jsonFileFormat;
@@ -68,82 +68,73 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public GcsDestinationConfigResponse(
-        AvroFileFormatResponse avroFileFormat,
-        String fileRotationInterval,
-        Integer fileRotationMb,
-        JsonFileFormatResponse jsonFileFormat,
-        String path) {
-        this.avroFileFormat = Objects.requireNonNull(avroFileFormat, "expected parameter 'avroFileFormat' to be non-null");
-        this.fileRotationInterval = Objects.requireNonNull(fileRotationInterval, "expected parameter 'fileRotationInterval' to be non-null");
-        this.fileRotationMb = Objects.requireNonNull(fileRotationMb, "expected parameter 'fileRotationMb' to be non-null");
-        this.jsonFileFormat = Objects.requireNonNull(jsonFileFormat, "expected parameter 'jsonFileFormat' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private GcsDestinationConfigResponse() {}
 
-    private GcsDestinationConfigResponse() {
-        this.avroFileFormat = null;
-        this.fileRotationInterval = null;
-        this.fileRotationMb = null;
-        this.jsonFileFormat = null;
-        this.path = null;
+    private GcsDestinationConfigResponse(GcsDestinationConfigResponse $) {
+        this.avroFileFormat = $.avroFileFormat;
+        this.fileRotationInterval = $.fileRotationInterval;
+        this.fileRotationMb = $.fileRotationMb;
+        this.jsonFileFormat = $.jsonFileFormat;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcsDestinationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AvroFileFormatResponse avroFileFormat;
-        private String fileRotationInterval;
-        private Integer fileRotationMb;
-        private JsonFileFormatResponse jsonFileFormat;
-        private String path;
+        private GcsDestinationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcsDestinationConfigResponse();
         }
 
         public Builder(GcsDestinationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.avroFileFormat = defaults.avroFileFormat;
-    	      this.fileRotationInterval = defaults.fileRotationInterval;
-    	      this.fileRotationMb = defaults.fileRotationMb;
-    	      this.jsonFileFormat = defaults.jsonFileFormat;
-    	      this.path = defaults.path;
+            $ = new GcsDestinationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder avroFileFormat(AvroFileFormatResponse avroFileFormat) {
-            this.avroFileFormat = Objects.requireNonNull(avroFileFormat);
+            $.avroFileFormat = avroFileFormat;
             return this;
         }
+
         public Builder fileRotationInterval(String fileRotationInterval) {
-            this.fileRotationInterval = Objects.requireNonNull(fileRotationInterval);
+            $.fileRotationInterval = fileRotationInterval;
             return this;
         }
+
         public Builder fileRotationMb(Integer fileRotationMb) {
-            this.fileRotationMb = Objects.requireNonNull(fileRotationMb);
+            $.fileRotationMb = fileRotationMb;
             return this;
         }
+
         public Builder jsonFileFormat(JsonFileFormatResponse jsonFileFormat) {
-            this.jsonFileFormat = Objects.requireNonNull(jsonFileFormat);
+            $.jsonFileFormat = jsonFileFormat;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public GcsDestinationConfigResponse build() {
-            return new GcsDestinationConfigResponse(avroFileFormat, fileRotationInterval, fileRotationMb, jsonFileFormat, path);
+        }
+
+        public GcsDestinationConfigResponse build() {
+            $.avroFileFormat = Objects.requireNonNull($.avroFileFormat, "expected parameter 'avroFileFormat' to be non-null");
+            $.fileRotationInterval = Objects.requireNonNull($.fileRotationInterval, "expected parameter 'fileRotationInterval' to be non-null");
+            $.fileRotationMb = Objects.requireNonNull($.fileRotationMb, "expected parameter 'fileRotationMb' to be non-null");
+            $.jsonFileFormat = Objects.requireNonNull($.jsonFileFormat, "expected parameter 'jsonFileFormat' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

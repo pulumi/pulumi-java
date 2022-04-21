@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ScaleRuleAuthArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretRef")
-      private final @Nullable Output<String> secretRef;
+    private @Nullable Output<String> secretRef;
 
-    public Output<String> secretRef() {
-        return this.secretRef == null ? Codegen.empty() : this.secretRef;
+    public Optional<Output<String>> secretRef() {
+        return Optional.ofNullable(this.secretRef);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ScaleRuleAuthArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="triggerParameter")
-      private final @Nullable Output<String> triggerParameter;
+    private @Nullable Output<String> triggerParameter;
 
-    public Output<String> triggerParameter() {
-        return this.triggerParameter == null ? Codegen.empty() : this.triggerParameter;
+    public Optional<Output<String>> triggerParameter() {
+        return Optional.ofNullable(this.triggerParameter);
     }
 
-    public ScaleRuleAuthArgs(
-        @Nullable Output<String> secretRef,
-        @Nullable Output<String> triggerParameter) {
-        this.secretRef = secretRef;
-        this.triggerParameter = triggerParameter;
-    }
+    private ScaleRuleAuthArgs() {}
 
-    private ScaleRuleAuthArgs() {
-        this.secretRef = Codegen.empty();
-        this.triggerParameter = Codegen.empty();
+    private ScaleRuleAuthArgs(ScaleRuleAuthArgs $) {
+        this.secretRef = $.secretRef;
+        this.triggerParameter = $.triggerParameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleRuleAuthArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> secretRef;
-        private @Nullable Output<String> triggerParameter;
+        private ScaleRuleAuthArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleRuleAuthArgs();
         }
 
         public Builder(ScaleRuleAuthArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretRef = defaults.secretRef;
-    	      this.triggerParameter = defaults.triggerParameter;
+            $ = new ScaleRuleAuthArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretRef(@Nullable Output<String> secretRef) {
-            this.secretRef = secretRef;
+            $.secretRef = secretRef;
             return this;
         }
-        public Builder secretRef(@Nullable String secretRef) {
-            this.secretRef = Codegen.ofNullable(secretRef);
-            return this;
+
+        public Builder secretRef(String secretRef) {
+            return secretRef(Output.of(secretRef));
         }
+
         public Builder triggerParameter(@Nullable Output<String> triggerParameter) {
-            this.triggerParameter = triggerParameter;
+            $.triggerParameter = triggerParameter;
             return this;
         }
-        public Builder triggerParameter(@Nullable String triggerParameter) {
-            this.triggerParameter = Codegen.ofNullable(triggerParameter);
-            return this;
-        }        public ScaleRuleAuthArgs build() {
-            return new ScaleRuleAuthArgs(secretRef, triggerParameter);
+
+        public Builder triggerParameter(String triggerParameter) {
+            return triggerParameter(Output.of(triggerParameter));
+        }
+
+        public ScaleRuleAuthArgs build() {
+            return $;
         }
     }
+
 }

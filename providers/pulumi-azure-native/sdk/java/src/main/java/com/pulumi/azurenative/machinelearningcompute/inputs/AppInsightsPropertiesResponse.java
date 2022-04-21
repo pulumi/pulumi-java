@@ -23,45 +23,44 @@ public final class AppInsightsPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public AppInsightsPropertiesResponse(@Nullable String resourceId) {
-        this.resourceId = resourceId;
-    }
+    private AppInsightsPropertiesResponse() {}
 
-    private AppInsightsPropertiesResponse() {
-        this.resourceId = null;
+    private AppInsightsPropertiesResponse(AppInsightsPropertiesResponse $) {
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppInsightsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceId;
+        private AppInsightsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppInsightsPropertiesResponse();
         }
 
         public Builder(AppInsightsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
+            $ = new AppInsightsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public AppInsightsPropertiesResponse build() {
-            return new AppInsightsPropertiesResponse(resourceId);
+        }
+
+        public AppInsightsPropertiesResponse build() {
+            return $;
         }
     }
+
 }

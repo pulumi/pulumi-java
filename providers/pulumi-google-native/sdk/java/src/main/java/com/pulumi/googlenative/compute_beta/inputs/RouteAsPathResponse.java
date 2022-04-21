@@ -19,7 +19,7 @@ public final class RouteAsPathResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="asLists", required=true)
-      private final List<Integer> asLists;
+    private List<Integer> asLists;
 
     public List<Integer> asLists() {
         return this.asLists;
@@ -30,58 +30,56 @@ public final class RouteAsPathResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pathSegmentType", required=true)
-      private final String pathSegmentType;
+    private String pathSegmentType;
 
     public String pathSegmentType() {
         return this.pathSegmentType;
     }
 
-    public RouteAsPathResponse(
-        List<Integer> asLists,
-        String pathSegmentType) {
-        this.asLists = Objects.requireNonNull(asLists, "expected parameter 'asLists' to be non-null");
-        this.pathSegmentType = Objects.requireNonNull(pathSegmentType, "expected parameter 'pathSegmentType' to be non-null");
-    }
+    private RouteAsPathResponse() {}
 
-    private RouteAsPathResponse() {
-        this.asLists = List.of();
-        this.pathSegmentType = null;
+    private RouteAsPathResponse(RouteAsPathResponse $) {
+        this.asLists = $.asLists;
+        this.pathSegmentType = $.pathSegmentType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteAsPathResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Integer> asLists;
-        private String pathSegmentType;
+        private RouteAsPathResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteAsPathResponse();
         }
 
         public Builder(RouteAsPathResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asLists = defaults.asLists;
-    	      this.pathSegmentType = defaults.pathSegmentType;
+            $ = new RouteAsPathResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder asLists(List<Integer> asLists) {
-            this.asLists = Objects.requireNonNull(asLists);
+            $.asLists = asLists;
             return this;
         }
+
         public Builder asLists(Integer... asLists) {
             return asLists(List.of(asLists));
         }
+
         public Builder pathSegmentType(String pathSegmentType) {
-            this.pathSegmentType = Objects.requireNonNull(pathSegmentType);
+            $.pathSegmentType = pathSegmentType;
             return this;
-        }        public RouteAsPathResponse build() {
-            return new RouteAsPathResponse(asLists, pathSegmentType);
+        }
+
+        public RouteAsPathResponse build() {
+            $.asLists = Objects.requireNonNull($.asLists, "expected parameter 'asLists' to be non-null");
+            $.pathSegmentType = Objects.requireNonNull($.pathSegmentType, "expected parameter 'pathSegmentType' to be non-null");
+            return $;
         }
     }
+
 }

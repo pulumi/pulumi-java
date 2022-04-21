@@ -7,9 +7,9 @@ import com.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEncryptionAlgorith
 import com.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEncryptionKeyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class FlowEntitlementEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="algorithm", required=true)
-      private final Output<FlowEntitlementEncryptionAlgorithm> algorithm;
+    private Output<FlowEntitlementEncryptionAlgorithm> algorithm;
 
     public Output<FlowEntitlementEncryptionAlgorithm> algorithm() {
         return this.algorithm;
@@ -37,10 +37,10 @@ public final class FlowEntitlementEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="constantInitializationVector")
-      private final @Nullable Output<String> constantInitializationVector;
+    private @Nullable Output<String> constantInitializationVector;
 
-    public Output<String> constantInitializationVector() {
-        return this.constantInitializationVector == null ? Codegen.empty() : this.constantInitializationVector;
+    public Optional<Output<String>> constantInitializationVector() {
+        return Optional.ofNullable(this.constantInitializationVector);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FlowEntitlementEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="deviceId")
-      private final @Nullable Output<String> deviceId;
+    private @Nullable Output<String> deviceId;
 
-    public Output<String> deviceId() {
-        return this.deviceId == null ? Codegen.empty() : this.deviceId;
+    public Optional<Output<String>> deviceId() {
+        return Optional.ofNullable(this.deviceId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FlowEntitlementEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Output<FlowEntitlementEncryptionKeyType> keyType;
+    private @Nullable Output<FlowEntitlementEncryptionKeyType> keyType;
 
-    public Output<FlowEntitlementEncryptionKeyType> keyType() {
-        return this.keyType == null ? Codegen.empty() : this.keyType;
+    public Optional<Output<FlowEntitlementEncryptionKeyType>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FlowEntitlementEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class FlowEntitlementEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class FlowEntitlementEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -103,10 +103,10 @@ public final class FlowEntitlementEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="secretArn")
-      private final @Nullable Output<String> secretArn;
+    private @Nullable Output<String> secretArn;
 
-    public Output<String> secretArn() {
-        return this.secretArn == null ? Codegen.empty() : this.secretArn;
+    public Optional<Output<String>> secretArn() {
+        return Optional.ofNullable(this.secretArn);
     }
 
     /**
@@ -114,154 +114,130 @@ public final class FlowEntitlementEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public FlowEntitlementEncryptionArgs(
-        Output<FlowEntitlementEncryptionAlgorithm> algorithm,
-        @Nullable Output<String> constantInitializationVector,
-        @Nullable Output<String> deviceId,
-        @Nullable Output<FlowEntitlementEncryptionKeyType> keyType,
-        @Nullable Output<String> region,
-        @Nullable Output<String> resourceId,
-        Output<String> roleArn,
-        @Nullable Output<String> secretArn,
-        @Nullable Output<String> url) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.constantInitializationVector = constantInitializationVector;
-        this.deviceId = deviceId;
-        this.keyType = keyType;
-        this.region = region;
-        this.resourceId = resourceId;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.secretArn = secretArn;
-        this.url = url;
-    }
+    private FlowEntitlementEncryptionArgs() {}
 
-    private FlowEntitlementEncryptionArgs() {
-        this.algorithm = Codegen.empty();
-        this.constantInitializationVector = Codegen.empty();
-        this.deviceId = Codegen.empty();
-        this.keyType = Codegen.empty();
-        this.region = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.secretArn = Codegen.empty();
-        this.url = Codegen.empty();
+    private FlowEntitlementEncryptionArgs(FlowEntitlementEncryptionArgs $) {
+        this.algorithm = $.algorithm;
+        this.constantInitializationVector = $.constantInitializationVector;
+        this.deviceId = $.deviceId;
+        this.keyType = $.keyType;
+        this.region = $.region;
+        this.resourceId = $.resourceId;
+        this.roleArn = $.roleArn;
+        this.secretArn = $.secretArn;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowEntitlementEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FlowEntitlementEncryptionAlgorithm> algorithm;
-        private @Nullable Output<String> constantInitializationVector;
-        private @Nullable Output<String> deviceId;
-        private @Nullable Output<FlowEntitlementEncryptionKeyType> keyType;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> resourceId;
-        private Output<String> roleArn;
-        private @Nullable Output<String> secretArn;
-        private @Nullable Output<String> url;
+        private FlowEntitlementEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowEntitlementEncryptionArgs();
         }
 
         public Builder(FlowEntitlementEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.constantInitializationVector = defaults.constantInitializationVector;
-    	      this.deviceId = defaults.deviceId;
-    	      this.keyType = defaults.keyType;
-    	      this.region = defaults.region;
-    	      this.resourceId = defaults.resourceId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.secretArn = defaults.secretArn;
-    	      this.url = defaults.url;
+            $ = new FlowEntitlementEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(Output<FlowEntitlementEncryptionAlgorithm> algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder algorithm(FlowEntitlementEncryptionAlgorithm algorithm) {
-            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
-            return this;
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder constantInitializationVector(@Nullable Output<String> constantInitializationVector) {
-            this.constantInitializationVector = constantInitializationVector;
+            $.constantInitializationVector = constantInitializationVector;
             return this;
         }
-        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = Codegen.ofNullable(constantInitializationVector);
-            return this;
+
+        public Builder constantInitializationVector(String constantInitializationVector) {
+            return constantInitializationVector(Output.of(constantInitializationVector));
         }
+
         public Builder deviceId(@Nullable Output<String> deviceId) {
-            this.deviceId = deviceId;
+            $.deviceId = deviceId;
             return this;
         }
-        public Builder deviceId(@Nullable String deviceId) {
-            this.deviceId = Codegen.ofNullable(deviceId);
-            return this;
+
+        public Builder deviceId(String deviceId) {
+            return deviceId(Output.of(deviceId));
         }
+
         public Builder keyType(@Nullable Output<FlowEntitlementEncryptionKeyType> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
-        public Builder keyType(@Nullable FlowEntitlementEncryptionKeyType keyType) {
-            this.keyType = Codegen.ofNullable(keyType);
-            return this;
+
+        public Builder keyType(FlowEntitlementEncryptionKeyType keyType) {
+            return keyType(Output.of(keyType));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder secretArn(@Nullable Output<String> secretArn) {
-            this.secretArn = secretArn;
+            $.secretArn = secretArn;
             return this;
         }
-        public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Codegen.ofNullable(secretArn);
-            return this;
+
+        public Builder secretArn(String secretArn) {
+            return secretArn(Output.of(secretArn));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public FlowEntitlementEncryptionArgs build() {
-            return new FlowEntitlementEncryptionArgs(algorithm, constantInitializationVector, deviceId, keyType, region, resourceId, roleArn, secretArn, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public FlowEntitlementEncryptionArgs build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

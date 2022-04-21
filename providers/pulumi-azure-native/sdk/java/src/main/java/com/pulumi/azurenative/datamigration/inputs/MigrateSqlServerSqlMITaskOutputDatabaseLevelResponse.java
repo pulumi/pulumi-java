@@ -21,7 +21,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -32,7 +32,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -43,7 +43,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
-      private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+    private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -54,7 +54,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -65,7 +65,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -77,7 +77,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -88,7 +88,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="sizeMB", required=true)
-      private final Double sizeMB;
+    private Double sizeMB;
 
     public Double sizeMB() {
         return this.sizeMB;
@@ -99,7 +99,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="stage", required=true)
-      private final String stage;
+    private String stage;
 
     public String stage() {
         return this.stage;
@@ -110,7 +110,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -121,130 +121,112 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(
-        String databaseName,
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String message,
-        String resultType,
-        Double sizeMB,
-        String stage,
-        String startedOn,
-        String state) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.sizeMB = Objects.requireNonNull(sizeMB, "expected parameter 'sizeMB' to be non-null");
-        this.stage = Objects.requireNonNull(stage, "expected parameter 'stage' to be non-null");
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse() {}
 
-    private MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse() {
-        this.databaseName = null;
-        this.endedOn = null;
-        this.exceptionsAndWarnings = List.of();
-        this.id = null;
-        this.message = null;
-        this.resultType = null;
-        this.sizeMB = null;
-        this.stage = null;
-        this.startedOn = null;
-        this.state = null;
+    private MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse $) {
+        this.databaseName = $.databaseName;
+        this.endedOn = $.endedOn;
+        this.exceptionsAndWarnings = $.exceptionsAndWarnings;
+        this.id = $.id;
+        this.message = $.message;
+        this.resultType = $.resultType;
+        this.sizeMB = $.sizeMB;
+        this.stage = $.stage;
+        this.startedOn = $.startedOn;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String endedOn;
-        private List<ReportableExceptionResponse> exceptionsAndWarnings;
-        private String id;
-        private String message;
-        private String resultType;
-        private Double sizeMB;
-        private String stage;
-        private String startedOn;
-        private String state;
+        private MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse();
         }
 
         public Builder(MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.endedOn = defaults.endedOn;
-    	      this.exceptionsAndWarnings = defaults.exceptionsAndWarnings;
-    	      this.id = defaults.id;
-    	      this.message = defaults.message;
-    	      this.resultType = defaults.resultType;
-    	      this.sizeMB = defaults.sizeMB;
-    	      this.stage = defaults.stage;
-    	      this.startedOn = defaults.startedOn;
-    	      this.state = defaults.state;
+            $ = new MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
-            this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
+            $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
+
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder sizeMB(Double sizeMB) {
-            this.sizeMB = Objects.requireNonNull(sizeMB);
+            $.sizeMB = sizeMB;
             return this;
         }
+
         public Builder stage(String stage) {
-            this.stage = Objects.requireNonNull(stage);
+            $.stage = stage;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse build() {
-            return new MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(databaseName, endedOn, exceptionsAndWarnings, id, message, resultType, sizeMB, stage, startedOn, state);
+        }
+
+        public MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.exceptionsAndWarnings = Objects.requireNonNull($.exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.sizeMB = Objects.requireNonNull($.sizeMB, "expected parameter 'sizeMB' to be non-null");
+            $.stage = Objects.requireNonNull($.stage, "expected parameter 'stage' to be non-null");
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

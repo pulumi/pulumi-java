@@ -21,7 +21,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
      * 
      */
     @Import(name="revisionId", required=true)
-      private final String revisionId;
+    private String revisionId;
 
     public String revisionId() {
         return this.revisionId;
@@ -32,55 +32,52 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse(
-        String revisionId,
-        String url) {
-        this.revisionId = Objects.requireNonNull(revisionId, "expected parameter 'revisionId' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse() {}
 
-    private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse() {
-        this.revisionId = null;
-        this.url = null;
+    private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse $) {
+        this.revisionId = $.revisionId;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String revisionId;
-        private String url;
+        private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse();
         }
 
         public Builder(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revisionId = defaults.revisionId;
-    	      this.url = defaults.url;
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder revisionId(String revisionId) {
-            this.revisionId = Objects.requireNonNull(revisionId);
+            $.revisionId = revisionId;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse build() {
-            return new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse(revisionId, url);
+        }
+
+        public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse build() {
+            $.revisionId = Objects.requireNonNull($.revisionId, "expected parameter 'revisionId' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

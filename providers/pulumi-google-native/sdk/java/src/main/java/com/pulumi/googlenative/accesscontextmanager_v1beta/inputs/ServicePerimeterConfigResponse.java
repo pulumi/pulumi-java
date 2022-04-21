@@ -23,7 +23,7 @@ public final class ServicePerimeterConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="accessLevels", required=true)
-      private final List<String> accessLevels;
+    private List<String> accessLevels;
 
     public List<String> accessLevels() {
         return this.accessLevels;
@@ -34,7 +34,7 @@ public final class ServicePerimeterConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resources", required=true)
-      private final List<String> resources;
+    private List<String> resources;
 
     public List<String> resources() {
         return this.resources;
@@ -45,7 +45,7 @@ public final class ServicePerimeterConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="restrictedServices", required=true)
-      private final List<String> restrictedServices;
+    private List<String> restrictedServices;
 
     public List<String> restrictedServices() {
         return this.restrictedServices;
@@ -56,82 +56,78 @@ public final class ServicePerimeterConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vpcAccessibleServices", required=true)
-      private final VpcAccessibleServicesResponse vpcAccessibleServices;
+    private VpcAccessibleServicesResponse vpcAccessibleServices;
 
     public VpcAccessibleServicesResponse vpcAccessibleServices() {
         return this.vpcAccessibleServices;
     }
 
-    public ServicePerimeterConfigResponse(
-        List<String> accessLevels,
-        List<String> resources,
-        List<String> restrictedServices,
-        VpcAccessibleServicesResponse vpcAccessibleServices) {
-        this.accessLevels = Objects.requireNonNull(accessLevels, "expected parameter 'accessLevels' to be non-null");
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-        this.restrictedServices = Objects.requireNonNull(restrictedServices, "expected parameter 'restrictedServices' to be non-null");
-        this.vpcAccessibleServices = Objects.requireNonNull(vpcAccessibleServices, "expected parameter 'vpcAccessibleServices' to be non-null");
-    }
+    private ServicePerimeterConfigResponse() {}
 
-    private ServicePerimeterConfigResponse() {
-        this.accessLevels = List.of();
-        this.resources = List.of();
-        this.restrictedServices = List.of();
-        this.vpcAccessibleServices = null;
+    private ServicePerimeterConfigResponse(ServicePerimeterConfigResponse $) {
+        this.accessLevels = $.accessLevels;
+        this.resources = $.resources;
+        this.restrictedServices = $.restrictedServices;
+        this.vpcAccessibleServices = $.vpcAccessibleServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimeterConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> accessLevels;
-        private List<String> resources;
-        private List<String> restrictedServices;
-        private VpcAccessibleServicesResponse vpcAccessibleServices;
+        private ServicePerimeterConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimeterConfigResponse();
         }
 
         public Builder(ServicePerimeterConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLevels = defaults.accessLevels;
-    	      this.resources = defaults.resources;
-    	      this.restrictedServices = defaults.restrictedServices;
-    	      this.vpcAccessibleServices = defaults.vpcAccessibleServices;
+            $ = new ServicePerimeterConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLevels(List<String> accessLevels) {
-            this.accessLevels = Objects.requireNonNull(accessLevels);
+            $.accessLevels = accessLevels;
             return this;
         }
+
         public Builder accessLevels(String... accessLevels) {
             return accessLevels(List.of(accessLevels));
         }
+
         public Builder resources(List<String> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
+
         public Builder restrictedServices(List<String> restrictedServices) {
-            this.restrictedServices = Objects.requireNonNull(restrictedServices);
+            $.restrictedServices = restrictedServices;
             return this;
         }
+
         public Builder restrictedServices(String... restrictedServices) {
             return restrictedServices(List.of(restrictedServices));
         }
+
         public Builder vpcAccessibleServices(VpcAccessibleServicesResponse vpcAccessibleServices) {
-            this.vpcAccessibleServices = Objects.requireNonNull(vpcAccessibleServices);
+            $.vpcAccessibleServices = vpcAccessibleServices;
             return this;
-        }        public ServicePerimeterConfigResponse build() {
-            return new ServicePerimeterConfigResponse(accessLevels, resources, restrictedServices, vpcAccessibleServices);
+        }
+
+        public ServicePerimeterConfigResponse build() {
+            $.accessLevels = Objects.requireNonNull($.accessLevels, "expected parameter 'accessLevels' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            $.restrictedServices = Objects.requireNonNull($.restrictedServices, "expected parameter 'restrictedServices' to be non-null");
+            $.vpcAccessibleServices = Objects.requireNonNull($.vpcAccessibleServices, "expected parameter 'vpcAccessibleServices' to be non-null");
+            return $;
         }
     }
+
 }

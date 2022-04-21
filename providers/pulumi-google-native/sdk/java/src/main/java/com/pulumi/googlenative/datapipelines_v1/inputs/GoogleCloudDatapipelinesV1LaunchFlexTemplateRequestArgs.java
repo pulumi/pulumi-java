@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datapipelines_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @Import(name="launchParameter", required=true)
-      private final Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
+    private Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
 
     public Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter() {
         return this.launchParameter;
@@ -37,7 +37,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -48,7 +48,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @Import(name="project", required=true)
-      private final Output<String> project;
+    private Output<String> project;
 
     public Output<String> project() {
         return this.project;
@@ -59,89 +59,81 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @Import(name="validateOnly")
-      private final @Nullable Output<Boolean> validateOnly;
+    private @Nullable Output<Boolean> validateOnly;
 
-    public Output<Boolean> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<Boolean>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs(
-        Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter,
-        Output<String> location,
-        Output<String> project,
-        @Nullable Output<Boolean> validateOnly) {
-        this.launchParameter = Objects.requireNonNull(launchParameter, "expected parameter 'launchParameter' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.validateOnly = validateOnly;
-    }
+    private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs() {}
 
-    private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs() {
-        this.launchParameter = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs $) {
+        this.launchParameter = $.launchParameter;
+        this.location = $.location;
+        this.project = $.project;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
-        private Output<String> location;
-        private Output<String> project;
-        private @Nullable Output<Boolean> validateOnly;
+        private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs();
         }
 
         public Builder(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchParameter = defaults.launchParameter;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder launchParameter(Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter) {
-            this.launchParameter = Objects.requireNonNull(launchParameter);
+            $.launchParameter = launchParameter;
             return this;
         }
+
         public Builder launchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs launchParameter) {
-            this.launchParameter = Output.of(Objects.requireNonNull(launchParameter));
-            return this;
+            return launchParameter(Output.of(launchParameter));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder project(Output<String> project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Output.of(Objects.requireNonNull(project));
-            return this;
+            return project(Output.of(project));
         }
+
         public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable Boolean validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs build() {
-            return new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs(launchParameter, location, project, validateOnly);
+
+        public Builder validateOnly(Boolean validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs build() {
+            $.launchParameter = Objects.requireNonNull($.launchParameter, "expected parameter 'launchParameter' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AnthosClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="membership")
-      private final @Nullable Output<String> membership;
+    private @Nullable Output<String> membership;
 
-    public Output<String> membership() {
-        return this.membership == null ? Codegen.empty() : this.membership;
+    public Optional<Output<String>> membership() {
+        return Optional.ofNullable(this.membership);
     }
 
-    public AnthosClusterArgs(@Nullable Output<String> membership) {
-        this.membership = membership;
-    }
+    private AnthosClusterArgs() {}
 
-    private AnthosClusterArgs() {
-        this.membership = Codegen.empty();
+    private AnthosClusterArgs(AnthosClusterArgs $) {
+        this.membership = $.membership;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnthosClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> membership;
+        private AnthosClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnthosClusterArgs();
         }
 
         public Builder(AnthosClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.membership = defaults.membership;
+            $ = new AnthosClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder membership(@Nullable Output<String> membership) {
-            this.membership = membership;
+            $.membership = membership;
             return this;
         }
-        public Builder membership(@Nullable String membership) {
-            this.membership = Codegen.ofNullable(membership);
-            return this;
-        }        public AnthosClusterArgs build() {
-            return new AnthosClusterArgs(membership);
+
+        public Builder membership(String membership) {
+            return membership(Output.of(membership));
+        }
+
+        public AnthosClusterArgs build() {
+            return $;
         }
     }
+
 }

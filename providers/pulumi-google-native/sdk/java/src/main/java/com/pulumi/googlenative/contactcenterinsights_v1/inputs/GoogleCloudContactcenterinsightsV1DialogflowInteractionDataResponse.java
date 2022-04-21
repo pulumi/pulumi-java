@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
      * 
      */
     @Import(name="confidence", required=true)
-      private final Double confidence;
+    private Double confidence;
 
     public Double confidence() {
         return this.confidence;
@@ -33,55 +33,52 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
      * 
      */
     @Import(name="dialogflowIntentId", required=true)
-      private final String dialogflowIntentId;
+    private String dialogflowIntentId;
 
     public String dialogflowIntentId() {
         return this.dialogflowIntentId;
     }
 
-    public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(
-        Double confidence,
-        String dialogflowIntentId) {
-        this.confidence = Objects.requireNonNull(confidence, "expected parameter 'confidence' to be non-null");
-        this.dialogflowIntentId = Objects.requireNonNull(dialogflowIntentId, "expected parameter 'dialogflowIntentId' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse() {
-        this.confidence = null;
-        this.dialogflowIntentId = null;
+    private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse $) {
+        this.confidence = $.confidence;
+        this.dialogflowIntentId = $.dialogflowIntentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double confidence;
-        private String dialogflowIntentId;
+        private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confidence = defaults.confidence;
-    	      this.dialogflowIntentId = defaults.dialogflowIntentId;
+            $ = new GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder confidence(Double confidence) {
-            this.confidence = Objects.requireNonNull(confidence);
+            $.confidence = confidence;
             return this;
         }
+
         public Builder dialogflowIntentId(String dialogflowIntentId) {
-            this.dialogflowIntentId = Objects.requireNonNull(dialogflowIntentId);
+            $.dialogflowIntentId = dialogflowIntentId;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse build() {
-            return new GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(confidence, dialogflowIntentId);
+        }
+
+        public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse build() {
+            $.confidence = Objects.requireNonNull($.confidence, "expected parameter 'confidence' to be non-null");
+            $.dialogflowIntentId = Objects.requireNonNull($.dialogflowIntentId, "expected parameter 'dialogflowIntentId' to be non-null");
+            return $;
         }
     }
+
 }

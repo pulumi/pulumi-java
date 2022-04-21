@@ -17,7 +17,7 @@ public final class GetBookmarkRelationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="bookmarkId", required=true)
-      private final String bookmarkId;
+    private String bookmarkId;
 
     public String bookmarkId() {
         return this.bookmarkId;
@@ -28,7 +28,7 @@ public final class GetBookmarkRelationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -39,7 +39,7 @@ public final class GetBookmarkRelationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="relationName", required=true)
-      private final String relationName;
+    private String relationName;
 
     public String relationName() {
         return this.relationName;
@@ -50,7 +50,7 @@ public final class GetBookmarkRelationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetBookmarkRelationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetBookmarkRelationArgs(
-        String bookmarkId,
-        String operationalInsightsResourceProvider,
-        String relationName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.bookmarkId = Objects.requireNonNull(bookmarkId, "expected parameter 'bookmarkId' to be non-null");
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.relationName = Objects.requireNonNull(relationName, "expected parameter 'relationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetBookmarkRelationArgs() {}
 
-    private GetBookmarkRelationArgs() {
-        this.bookmarkId = null;
-        this.operationalInsightsResourceProvider = null;
-        this.relationName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetBookmarkRelationArgs(GetBookmarkRelationArgs $) {
+        this.bookmarkId = $.bookmarkId;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.relationName = $.relationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBookmarkRelationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bookmarkId;
-        private String operationalInsightsResourceProvider;
-        private String relationName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetBookmarkRelationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBookmarkRelationArgs();
         }
 
         public Builder(GetBookmarkRelationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bookmarkId = defaults.bookmarkId;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.relationName = defaults.relationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetBookmarkRelationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bookmarkId(String bookmarkId) {
-            this.bookmarkId = Objects.requireNonNull(bookmarkId);
+            $.bookmarkId = bookmarkId;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder relationName(String relationName) {
-            this.relationName = Objects.requireNonNull(relationName);
+            $.relationName = relationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetBookmarkRelationArgs build() {
-            return new GetBookmarkRelationArgs(bookmarkId, operationalInsightsResourceProvider, relationName, resourceGroupName, workspaceName);
+        }
+
+        public GetBookmarkRelationArgs build() {
+            $.bookmarkId = Objects.requireNonNull($.bookmarkId, "expected parameter 'bookmarkId' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.relationName = Objects.requireNonNull($.relationName, "expected parameter 'relationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

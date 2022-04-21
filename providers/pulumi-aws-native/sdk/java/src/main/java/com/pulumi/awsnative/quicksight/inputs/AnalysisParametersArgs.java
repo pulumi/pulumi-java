@@ -9,9 +9,9 @@ import com.pulumi.awsnative.quicksight.inputs.AnalysisIntegerParameterArgs;
 import com.pulumi.awsnative.quicksight.inputs.AnalysisStringParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AnalysisParametersArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dateTimeParameters")
-      private final @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
+    private @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
 
-    public Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters() {
-        return this.dateTimeParameters == null ? Codegen.empty() : this.dateTimeParameters;
+    public Optional<Output<List<AnalysisDateTimeParameterArgs>>> dateTimeParameters() {
+        return Optional.ofNullable(this.dateTimeParameters);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AnalysisParametersArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="decimalParameters")
-      private final @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters;
+    private @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters;
 
-    public Output<List<AnalysisDecimalParameterArgs>> decimalParameters() {
-        return this.decimalParameters == null ? Codegen.empty() : this.decimalParameters;
+    public Optional<Output<List<AnalysisDecimalParameterArgs>>> decimalParameters() {
+        return Optional.ofNullable(this.decimalParameters);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AnalysisParametersArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="integerParameters")
-      private final @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters;
+    private @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters;
 
-    public Output<List<AnalysisIntegerParameterArgs>> integerParameters() {
-        return this.integerParameters == null ? Codegen.empty() : this.integerParameters;
+    public Optional<Output<List<AnalysisIntegerParameterArgs>>> integerParameters() {
+        return Optional.ofNullable(this.integerParameters);
     }
 
     /**
@@ -61,101 +61,94 @@ public final class AnalysisParametersArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="stringParameters")
-      private final @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters;
+    private @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters;
 
-    public Output<List<AnalysisStringParameterArgs>> stringParameters() {
-        return this.stringParameters == null ? Codegen.empty() : this.stringParameters;
+    public Optional<Output<List<AnalysisStringParameterArgs>>> stringParameters() {
+        return Optional.ofNullable(this.stringParameters);
     }
 
-    public AnalysisParametersArgs(
-        @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters,
-        @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters,
-        @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters,
-        @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters) {
-        this.dateTimeParameters = dateTimeParameters;
-        this.decimalParameters = decimalParameters;
-        this.integerParameters = integerParameters;
-        this.stringParameters = stringParameters;
-    }
+    private AnalysisParametersArgs() {}
 
-    private AnalysisParametersArgs() {
-        this.dateTimeParameters = Codegen.empty();
-        this.decimalParameters = Codegen.empty();
-        this.integerParameters = Codegen.empty();
-        this.stringParameters = Codegen.empty();
+    private AnalysisParametersArgs(AnalysisParametersArgs $) {
+        this.dateTimeParameters = $.dateTimeParameters;
+        this.decimalParameters = $.decimalParameters;
+        this.integerParameters = $.integerParameters;
+        this.stringParameters = $.stringParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalysisParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
-        private @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters;
-        private @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters;
-        private @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters;
+        private AnalysisParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalysisParametersArgs();
         }
 
         public Builder(AnalysisParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dateTimeParameters = defaults.dateTimeParameters;
-    	      this.decimalParameters = defaults.decimalParameters;
-    	      this.integerParameters = defaults.integerParameters;
-    	      this.stringParameters = defaults.stringParameters;
+            $ = new AnalysisParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dateTimeParameters(@Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters) {
-            this.dateTimeParameters = dateTimeParameters;
+            $.dateTimeParameters = dateTimeParameters;
             return this;
         }
-        public Builder dateTimeParameters(@Nullable List<AnalysisDateTimeParameterArgs> dateTimeParameters) {
-            this.dateTimeParameters = Codegen.ofNullable(dateTimeParameters);
-            return this;
+
+        public Builder dateTimeParameters(List<AnalysisDateTimeParameterArgs> dateTimeParameters) {
+            return dateTimeParameters(Output.of(dateTimeParameters));
         }
+
         public Builder dateTimeParameters(AnalysisDateTimeParameterArgs... dateTimeParameters) {
             return dateTimeParameters(List.of(dateTimeParameters));
         }
+
         public Builder decimalParameters(@Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters) {
-            this.decimalParameters = decimalParameters;
+            $.decimalParameters = decimalParameters;
             return this;
         }
-        public Builder decimalParameters(@Nullable List<AnalysisDecimalParameterArgs> decimalParameters) {
-            this.decimalParameters = Codegen.ofNullable(decimalParameters);
-            return this;
+
+        public Builder decimalParameters(List<AnalysisDecimalParameterArgs> decimalParameters) {
+            return decimalParameters(Output.of(decimalParameters));
         }
+
         public Builder decimalParameters(AnalysisDecimalParameterArgs... decimalParameters) {
             return decimalParameters(List.of(decimalParameters));
         }
+
         public Builder integerParameters(@Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters) {
-            this.integerParameters = integerParameters;
+            $.integerParameters = integerParameters;
             return this;
         }
-        public Builder integerParameters(@Nullable List<AnalysisIntegerParameterArgs> integerParameters) {
-            this.integerParameters = Codegen.ofNullable(integerParameters);
-            return this;
+
+        public Builder integerParameters(List<AnalysisIntegerParameterArgs> integerParameters) {
+            return integerParameters(Output.of(integerParameters));
         }
+
         public Builder integerParameters(AnalysisIntegerParameterArgs... integerParameters) {
             return integerParameters(List.of(integerParameters));
         }
+
         public Builder stringParameters(@Nullable Output<List<AnalysisStringParameterArgs>> stringParameters) {
-            this.stringParameters = stringParameters;
+            $.stringParameters = stringParameters;
             return this;
         }
-        public Builder stringParameters(@Nullable List<AnalysisStringParameterArgs> stringParameters) {
-            this.stringParameters = Codegen.ofNullable(stringParameters);
-            return this;
+
+        public Builder stringParameters(List<AnalysisStringParameterArgs> stringParameters) {
+            return stringParameters(Output.of(stringParameters));
         }
+
         public Builder stringParameters(AnalysisStringParameterArgs... stringParameters) {
             return stringParameters(List.of(stringParameters));
-        }        public AnalysisParametersArgs build() {
-            return new AnalysisParametersArgs(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
+        }
+
+        public AnalysisParametersArgs build() {
+            return $;
         }
     }
+
 }

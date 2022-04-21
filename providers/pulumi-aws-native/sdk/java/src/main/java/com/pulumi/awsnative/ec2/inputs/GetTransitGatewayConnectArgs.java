@@ -17,45 +17,45 @@ public final class GetTransitGatewayConnectArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="transitGatewayAttachmentId", required=true)
-      private final String transitGatewayAttachmentId;
+    private String transitGatewayAttachmentId;
 
     public String transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
-    public GetTransitGatewayConnectArgs(String transitGatewayAttachmentId) {
-        this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
-    }
+    private GetTransitGatewayConnectArgs() {}
 
-    private GetTransitGatewayConnectArgs() {
-        this.transitGatewayAttachmentId = null;
+    private GetTransitGatewayConnectArgs(GetTransitGatewayConnectArgs $) {
+        this.transitGatewayAttachmentId = $.transitGatewayAttachmentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransitGatewayConnectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String transitGatewayAttachmentId;
+        private GetTransitGatewayConnectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransitGatewayConnectArgs();
         }
 
         public Builder(GetTransitGatewayConnectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
+            $ = new GetTransitGatewayConnectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
+            $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
-        }        public GetTransitGatewayConnectArgs build() {
-            return new GetTransitGatewayConnectArgs(transitGatewayAttachmentId);
+        }
+
+        public GetTransitGatewayConnectArgs build() {
+            $.transitGatewayAttachmentId = Objects.requireNonNull($.transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
+            return $;
         }
     }
+
 }

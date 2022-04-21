@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="identityType", required=true)
-      private final Output<String> identityType;
+    private Output<String> identityType;
 
     public Output<String> identityType() {
         return this.identityType;
@@ -47,10 +48,10 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -58,89 +59,79 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public ManagedIdentityArgs(
-        @Nullable Output<String> clientId,
-        Output<String> identityType,
-        @Nullable Output<String> objectId,
-        @Nullable Output<String> resourceId) {
-        this.clientId = clientId;
-        this.identityType = Codegen.stringProp("identityType").output().arg(identityType).require();
-        this.objectId = objectId;
-        this.resourceId = resourceId;
-    }
+    private ManagedIdentityArgs() {}
 
-    private ManagedIdentityArgs() {
-        this.clientId = Codegen.empty();
-        this.identityType = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private ManagedIdentityArgs(ManagedIdentityArgs $) {
+        this.clientId = $.clientId;
+        this.identityType = $.identityType;
+        this.objectId = $.objectId;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private Output<String> identityType;
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<String> resourceId;
+        private ManagedIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIdentityArgs();
         }
 
         public Builder(ManagedIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.identityType = defaults.identityType;
-    	      this.objectId = defaults.objectId;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ManagedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder identityType(Output<String> identityType) {
-            this.identityType = Objects.requireNonNull(identityType);
+            $.identityType = identityType;
             return this;
         }
+
         public Builder identityType(String identityType) {
-            this.identityType = Output.of(Objects.requireNonNull(identityType));
-            return this;
+            return identityType(Output.of(identityType));
         }
+
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public ManagedIdentityArgs build() {
-            return new ManagedIdentityArgs(clientId, identityType, objectId, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public ManagedIdentityArgs build() {
+            $.identityType = Codegen.stringProp("identityType").output().arg($.identityType).require();
+            return $;
         }
     }
+
 }

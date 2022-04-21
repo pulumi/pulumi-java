@@ -22,7 +22,7 @@ public final class ApiManagementServiceSkuPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="capacity", required=true)
-      private final Integer capacity;
+    private Integer capacity;
 
     public Integer capacity() {
         return this.capacity;
@@ -33,55 +33,52 @@ public final class ApiManagementServiceSkuPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ApiManagementServiceSkuPropertiesResponse(
-        Integer capacity,
-        String name) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ApiManagementServiceSkuPropertiesResponse() {}
 
-    private ApiManagementServiceSkuPropertiesResponse() {
-        this.capacity = null;
-        this.name = null;
+    private ApiManagementServiceSkuPropertiesResponse(ApiManagementServiceSkuPropertiesResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiManagementServiceSkuPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer capacity;
-        private String name;
+        private ApiManagementServiceSkuPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiManagementServiceSkuPropertiesResponse();
         }
 
         public Builder(ApiManagementServiceSkuPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
+            $ = new ApiManagementServiceSkuPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(Integer capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ApiManagementServiceSkuPropertiesResponse build() {
-            return new ApiManagementServiceSkuPropertiesResponse(capacity, name);
+        }
+
+        public ApiManagementServiceSkuPropertiesResponse build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

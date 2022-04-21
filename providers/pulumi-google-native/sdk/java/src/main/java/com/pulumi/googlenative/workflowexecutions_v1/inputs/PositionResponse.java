@@ -21,7 +21,7 @@ public final class PositionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="column", required=true)
-      private final String column;
+    private String column;
 
     public String column() {
         return this.column;
@@ -32,7 +32,7 @@ public final class PositionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="length", required=true)
-      private final String length;
+    private String length;
 
     public String length() {
         return this.length;
@@ -43,64 +43,59 @@ public final class PositionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="line", required=true)
-      private final String line;
+    private String line;
 
     public String line() {
         return this.line;
     }
 
-    public PositionResponse(
-        String column,
-        String length,
-        String line) {
-        this.column = Objects.requireNonNull(column, "expected parameter 'column' to be non-null");
-        this.length = Objects.requireNonNull(length, "expected parameter 'length' to be non-null");
-        this.line = Objects.requireNonNull(line, "expected parameter 'line' to be non-null");
-    }
+    private PositionResponse() {}
 
-    private PositionResponse() {
-        this.column = null;
-        this.length = null;
-        this.line = null;
+    private PositionResponse(PositionResponse $) {
+        this.column = $.column;
+        this.length = $.length;
+        this.line = $.line;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PositionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String column;
-        private String length;
-        private String line;
+        private PositionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PositionResponse();
         }
 
         public Builder(PositionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.column = defaults.column;
-    	      this.length = defaults.length;
-    	      this.line = defaults.line;
+            $ = new PositionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder column(String column) {
-            this.column = Objects.requireNonNull(column);
+            $.column = column;
             return this;
         }
+
         public Builder length(String length) {
-            this.length = Objects.requireNonNull(length);
+            $.length = length;
             return this;
         }
+
         public Builder line(String line) {
-            this.line = Objects.requireNonNull(line);
+            $.line = line;
             return this;
-        }        public PositionResponse build() {
-            return new PositionResponse(column, length, line);
+        }
+
+        public PositionResponse build() {
+            $.column = Objects.requireNonNull($.column, "expected parameter 'column' to be non-null");
+            $.length = Objects.requireNonNull($.length, "expected parameter 'length' to be non-null");
+            $.line = Objects.requireNonNull($.line, "expected parameter 'line' to be non-null");
+            return $;
         }
     }
+
 }

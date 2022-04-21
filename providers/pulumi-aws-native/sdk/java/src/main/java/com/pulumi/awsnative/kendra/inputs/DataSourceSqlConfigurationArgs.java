@@ -6,8 +6,8 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.enums.DataSourceQueryIdentifiersEnclosingOption;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DataSourceSqlConfigurationArgs extends com.pulumi.resources.R
     public static final DataSourceSqlConfigurationArgs Empty = new DataSourceSqlConfigurationArgs();
 
     @Import(name="queryIdentifiersEnclosingOption")
-      private final @Nullable Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption;
+    private @Nullable Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption;
 
-    public Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption() {
-        return this.queryIdentifiersEnclosingOption == null ? Codegen.empty() : this.queryIdentifiersEnclosingOption;
+    public Optional<Output<DataSourceQueryIdentifiersEnclosingOption>> queryIdentifiersEnclosingOption() {
+        return Optional.ofNullable(this.queryIdentifiersEnclosingOption);
     }
 
-    public DataSourceSqlConfigurationArgs(@Nullable Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption) {
-        this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
-    }
+    private DataSourceSqlConfigurationArgs() {}
 
-    private DataSourceSqlConfigurationArgs() {
-        this.queryIdentifiersEnclosingOption = Codegen.empty();
+    private DataSourceSqlConfigurationArgs(DataSourceSqlConfigurationArgs $) {
+        this.queryIdentifiersEnclosingOption = $.queryIdentifiersEnclosingOption;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSqlConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption;
+        private DataSourceSqlConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSqlConfigurationArgs();
         }
 
         public Builder(DataSourceSqlConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryIdentifiersEnclosingOption = defaults.queryIdentifiersEnclosingOption;
+            $ = new DataSourceSqlConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queryIdentifiersEnclosingOption(@Nullable Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption) {
-            this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
+            $.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
             return this;
         }
-        public Builder queryIdentifiersEnclosingOption(@Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
-            this.queryIdentifiersEnclosingOption = Codegen.ofNullable(queryIdentifiersEnclosingOption);
-            return this;
-        }        public DataSourceSqlConfigurationArgs build() {
-            return new DataSourceSqlConfigurationArgs(queryIdentifiersEnclosingOption);
+
+        public Builder queryIdentifiersEnclosingOption(DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
+            return queryIdentifiersEnclosingOption(Output.of(queryIdentifiersEnclosingOption));
+        }
+
+        public DataSourceSqlConfigurationArgs build() {
+            return $;
         }
     }
+
 }

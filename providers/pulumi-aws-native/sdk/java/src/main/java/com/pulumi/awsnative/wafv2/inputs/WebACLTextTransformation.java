@@ -18,62 +18,59 @@ public final class WebACLTextTransformation extends com.pulumi.resources.InvokeA
     public static final WebACLTextTransformation Empty = new WebACLTextTransformation();
 
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
     }
 
     @Import(name="type", required=true)
-      private final WebACLTextTransformationType type;
+    private WebACLTextTransformationType type;
 
     public WebACLTextTransformationType type() {
         return this.type;
     }
 
-    public WebACLTextTransformation(
-        Integer priority,
-        WebACLTextTransformationType type) {
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private WebACLTextTransformation() {}
 
-    private WebACLTextTransformation() {
-        this.priority = null;
-        this.type = null;
+    private WebACLTextTransformation(WebACLTextTransformation $) {
+        this.priority = $.priority;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLTextTransformation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer priority;
-        private WebACLTextTransformationType type;
+        private WebACLTextTransformation $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLTextTransformation();
         }
 
         public Builder(WebACLTextTransformation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.priority = defaults.priority;
-    	      this.type = defaults.type;
+            $ = new WebACLTextTransformation(Objects.requireNonNull(defaults));
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder type(WebACLTextTransformationType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public WebACLTextTransformation build() {
-            return new WebACLTextTransformation(priority, type);
+        }
+
+        public WebACLTextTransformation build() {
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class CustomCopyOptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -36,63 +37,59 @@ public final class CustomCopyOptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<String> objectType;
+    private Output<String> objectType;
 
     public Output<String> objectType() {
         return this.objectType;
     }
 
-    public CustomCopyOptionArgs(
-        @Nullable Output<String> duration,
-        Output<String> objectType) {
-        this.duration = duration;
-        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
-    }
+    private CustomCopyOptionArgs() {}
 
-    private CustomCopyOptionArgs() {
-        this.duration = Codegen.empty();
-        this.objectType = Codegen.empty();
+    private CustomCopyOptionArgs(CustomCopyOptionArgs $) {
+        this.duration = $.duration;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomCopyOptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> duration;
-        private Output<String> objectType;
+        private CustomCopyOptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomCopyOptionArgs();
         }
 
         public Builder(CustomCopyOptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.objectType = defaults.objectType;
+            $ = new CustomCopyOptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder objectType(Output<String> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
-        }        public CustomCopyOptionArgs build() {
-            return new CustomCopyOptionArgs(duration, objectType);
+            return objectType(Output.of(objectType));
+        }
+
+        public CustomCopyOptionArgs build() {
+            $.objectType = Codegen.stringProp("objectType").output().arg($.objectType).require();
+            return $;
         }
     }
+
 }

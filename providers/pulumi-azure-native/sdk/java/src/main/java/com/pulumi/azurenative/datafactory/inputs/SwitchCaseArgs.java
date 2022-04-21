@@ -43,11 +43,11 @@ import com.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -64,10 +64,10 @@ public final class SwitchCaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activities")
-      private final @Nullable Output<List<Object>> activities;
+    private @Nullable Output<List<Object>> activities;
 
-    public Output<List<Object>> activities() {
-        return this.activities == null ? Codegen.empty() : this.activities;
+    public Optional<Output<List<Object>>> activities() {
+        return Optional.ofNullable(this.activities);
     }
 
     /**
@@ -75,66 +75,62 @@ public final class SwitchCaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public SwitchCaseArgs(
-        @Nullable Output<List<Object>> activities,
-        @Nullable Output<String> value) {
-        this.activities = activities;
-        this.value = value;
-    }
+    private SwitchCaseArgs() {}
 
-    private SwitchCaseArgs() {
-        this.activities = Codegen.empty();
-        this.value = Codegen.empty();
+    private SwitchCaseArgs(SwitchCaseArgs $) {
+        this.activities = $.activities;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SwitchCaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> activities;
-        private @Nullable Output<String> value;
+        private SwitchCaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SwitchCaseArgs();
         }
 
         public Builder(SwitchCaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activities = defaults.activities;
-    	      this.value = defaults.value;
+            $ = new SwitchCaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activities(@Nullable Output<List<Object>> activities) {
-            this.activities = activities;
+            $.activities = activities;
             return this;
         }
-        public Builder activities(@Nullable List<Object> activities) {
-            this.activities = Codegen.ofNullable(activities);
-            return this;
+
+        public Builder activities(List<Object> activities) {
+            return activities(Output.of(activities));
         }
+
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public SwitchCaseArgs build() {
-            return new SwitchCaseArgs(activities, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public SwitchCaseArgs build() {
+            return $;
         }
     }
+
 }

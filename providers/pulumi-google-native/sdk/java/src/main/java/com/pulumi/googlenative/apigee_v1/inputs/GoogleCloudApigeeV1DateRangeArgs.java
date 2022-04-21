@@ -5,7 +5,6 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="end", required=true)
-      private final Output<String> end;
+    private Output<String> end;
 
     public Output<String> end() {
         return this.end;
@@ -34,63 +33,60 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="start", required=true)
-      private final Output<String> start;
+    private Output<String> start;
 
     public Output<String> start() {
         return this.start;
     }
 
-    public GoogleCloudApigeeV1DateRangeArgs(
-        Output<String> end,
-        Output<String> start) {
-        this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
-        this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
-    }
+    private GoogleCloudApigeeV1DateRangeArgs() {}
 
-    private GoogleCloudApigeeV1DateRangeArgs() {
-        this.end = Codegen.empty();
-        this.start = Codegen.empty();
+    private GoogleCloudApigeeV1DateRangeArgs(GoogleCloudApigeeV1DateRangeArgs $) {
+        this.end = $.end;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1DateRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> end;
-        private Output<String> start;
+        private GoogleCloudApigeeV1DateRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1DateRangeArgs();
         }
 
         public Builder(GoogleCloudApigeeV1DateRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.start = defaults.start;
+            $ = new GoogleCloudApigeeV1DateRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder end(Output<String> end) {
-            this.end = Objects.requireNonNull(end);
+            $.end = end;
             return this;
         }
+
         public Builder end(String end) {
-            this.end = Output.of(Objects.requireNonNull(end));
-            return this;
+            return end(Output.of(end));
         }
+
         public Builder start(Output<String> start) {
-            this.start = Objects.requireNonNull(start);
+            $.start = start;
             return this;
         }
+
         public Builder start(String start) {
-            this.start = Output.of(Objects.requireNonNull(start));
-            return this;
-        }        public GoogleCloudApigeeV1DateRangeArgs build() {
-            return new GoogleCloudApigeeV1DateRangeArgs(end, start);
+            return start(Output.of(start));
+        }
+
+        public GoogleCloudApigeeV1DateRangeArgs build() {
+            $.end = Objects.requireNonNull($.end, "expected parameter 'end' to be non-null");
+            $.start = Objects.requireNonNull($.start, "expected parameter 'start' to be non-null");
+            return $;
         }
     }
+
 }

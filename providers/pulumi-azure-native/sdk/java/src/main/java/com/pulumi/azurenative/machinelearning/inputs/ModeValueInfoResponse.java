@@ -25,10 +25,10 @@ public final class ModeValueInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="interfaceString")
-      private final @Nullable String interfaceString;
+    private @Nullable String interfaceString;
 
     public Optional<String> interfaceString() {
-        return this.interfaceString == null ? Optional.empty() : Optional.ofNullable(this.interfaceString);
+        return Optional.ofNullable(this.interfaceString);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class ModeValueInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="parameters")
-      private final @Nullable List<ModuleAssetParameterResponse> parameters;
+    private @Nullable List<ModuleAssetParameterResponse> parameters;
 
-    public List<ModuleAssetParameterResponse> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<ModuleAssetParameterResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public ModeValueInfoResponse(
-        @Nullable String interfaceString,
-        @Nullable List<ModuleAssetParameterResponse> parameters) {
-        this.interfaceString = interfaceString;
-        this.parameters = parameters;
-    }
+    private ModeValueInfoResponse() {}
 
-    private ModeValueInfoResponse() {
-        this.interfaceString = null;
-        this.parameters = List.of();
+    private ModeValueInfoResponse(ModeValueInfoResponse $) {
+        this.interfaceString = $.interfaceString;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModeValueInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String interfaceString;
-        private @Nullable List<ModuleAssetParameterResponse> parameters;
+        private ModeValueInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModeValueInfoResponse();
         }
 
         public Builder(ModeValueInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interfaceString = defaults.interfaceString;
-    	      this.parameters = defaults.parameters;
+            $ = new ModeValueInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder interfaceString(@Nullable String interfaceString) {
-            this.interfaceString = interfaceString;
+            $.interfaceString = interfaceString;
             return this;
         }
+
         public Builder parameters(@Nullable List<ModuleAssetParameterResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(ModuleAssetParameterResponse... parameters) {
             return parameters(List.of(parameters));
-        }        public ModeValueInfoResponse build() {
-            return new ModeValueInfoResponse(interfaceString, parameters);
+        }
+
+        public ModeValueInfoResponse build() {
+            return $;
         }
     }
+
 }

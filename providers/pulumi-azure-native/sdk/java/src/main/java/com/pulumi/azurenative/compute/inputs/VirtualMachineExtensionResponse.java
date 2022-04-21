@@ -27,10 +27,10 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="autoUpgradeMinorVersion")
-      private final @Nullable Boolean autoUpgradeMinorVersion;
+    private @Nullable Boolean autoUpgradeMinorVersion;
 
     public Optional<Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
+        return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="enableAutomaticUpgrade")
-      private final @Nullable Boolean enableAutomaticUpgrade;
+    private @Nullable Boolean enableAutomaticUpgrade;
 
     public Optional<Boolean> enableAutomaticUpgrade() {
-        return this.enableAutomaticUpgrade == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticUpgrade);
+        return Optional.ofNullable(this.enableAutomaticUpgrade);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="forceUpdateTag")
-      private final @Nullable String forceUpdateTag;
+    private @Nullable String forceUpdateTag;
 
     public Optional<String> forceUpdateTag() {
-        return this.forceUpdateTag == null ? Optional.empty() : Optional.ofNullable(this.forceUpdateTag);
+        return Optional.ofNullable(this.forceUpdateTag);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -71,10 +71,10 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceView")
-      private final @Nullable VirtualMachineExtensionInstanceViewResponse instanceView;
+    private @Nullable VirtualMachineExtensionInstanceViewResponse instanceView;
 
     public Optional<VirtualMachineExtensionInstanceViewResponse> instanceView() {
-        return this.instanceView == null ? Optional.empty() : Optional.ofNullable(this.instanceView);
+        return Optional.ofNullable(this.instanceView);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -93,7 +93,7 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -104,10 +104,10 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="protectedSettings")
-      private final @Nullable Object protectedSettings;
+    private @Nullable Object protectedSettings;
 
     public Optional<Object> protectedSettings() {
-        return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
+        return Optional.ofNullable(this.protectedSettings);
     }
 
     /**
@@ -115,7 +115,7 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -126,10 +126,10 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="publisher")
-      private final @Nullable String publisher;
+    private @Nullable String publisher;
 
     public Optional<String> publisher() {
-        return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="settings")
-      private final @Nullable Object settings;
+    private @Nullable Object settings;
 
     public Optional<Object> settings() {
-        return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -159,7 +159,7 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -170,163 +170,127 @@ public final class VirtualMachineExtensionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="typeHandlerVersion")
-      private final @Nullable String typeHandlerVersion;
+    private @Nullable String typeHandlerVersion;
 
     public Optional<String> typeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
+        return Optional.ofNullable(this.typeHandlerVersion);
     }
 
-    public VirtualMachineExtensionResponse(
-        @Nullable Boolean autoUpgradeMinorVersion,
-        @Nullable Boolean enableAutomaticUpgrade,
-        @Nullable String forceUpdateTag,
-        String id,
-        @Nullable VirtualMachineExtensionInstanceViewResponse instanceView,
-        String location,
-        String name,
-        @Nullable Object protectedSettings,
-        String provisioningState,
-        @Nullable String publisher,
-        @Nullable Object settings,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String typeHandlerVersion) {
-        this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
-        this.enableAutomaticUpgrade = enableAutomaticUpgrade;
-        this.forceUpdateTag = forceUpdateTag;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.instanceView = instanceView;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.protectedSettings = protectedSettings;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publisher = publisher;
-        this.settings = settings;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.typeHandlerVersion = typeHandlerVersion;
-    }
+    private VirtualMachineExtensionResponse() {}
 
-    private VirtualMachineExtensionResponse() {
-        this.autoUpgradeMinorVersion = null;
-        this.enableAutomaticUpgrade = null;
-        this.forceUpdateTag = null;
-        this.id = null;
-        this.instanceView = null;
-        this.location = null;
-        this.name = null;
-        this.protectedSettings = null;
-        this.provisioningState = null;
-        this.publisher = null;
-        this.settings = null;
-        this.tags = Map.of();
-        this.type = null;
-        this.typeHandlerVersion = null;
+    private VirtualMachineExtensionResponse(VirtualMachineExtensionResponse $) {
+        this.autoUpgradeMinorVersion = $.autoUpgradeMinorVersion;
+        this.enableAutomaticUpgrade = $.enableAutomaticUpgrade;
+        this.forceUpdateTag = $.forceUpdateTag;
+        this.id = $.id;
+        this.instanceView = $.instanceView;
+        this.location = $.location;
+        this.name = $.name;
+        this.protectedSettings = $.protectedSettings;
+        this.provisioningState = $.provisioningState;
+        this.publisher = $.publisher;
+        this.settings = $.settings;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineExtensionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean autoUpgradeMinorVersion;
-        private @Nullable Boolean enableAutomaticUpgrade;
-        private @Nullable String forceUpdateTag;
-        private String id;
-        private @Nullable VirtualMachineExtensionInstanceViewResponse instanceView;
-        private String location;
-        private String name;
-        private @Nullable Object protectedSettings;
-        private String provisioningState;
-        private @Nullable String publisher;
-        private @Nullable Object settings;
-        private @Nullable Map<String,String> tags;
-        private String type;
-        private @Nullable String typeHandlerVersion;
+        private VirtualMachineExtensionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineExtensionResponse();
         }
 
         public Builder(VirtualMachineExtensionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUpgradeMinorVersion = defaults.autoUpgradeMinorVersion;
-    	      this.enableAutomaticUpgrade = defaults.enableAutomaticUpgrade;
-    	      this.forceUpdateTag = defaults.forceUpdateTag;
-    	      this.id = defaults.id;
-    	      this.instanceView = defaults.instanceView;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.protectedSettings = defaults.protectedSettings;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publisher = defaults.publisher;
-    	      this.settings = defaults.settings;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
+            $ = new VirtualMachineExtensionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+            $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
+
         public Builder enableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
-            this.enableAutomaticUpgrade = enableAutomaticUpgrade;
+            $.enableAutomaticUpgrade = enableAutomaticUpgrade;
             return this;
         }
+
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = forceUpdateTag;
+            $.forceUpdateTag = forceUpdateTag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder instanceView(@Nullable VirtualMachineExtensionInstanceViewResponse instanceView) {
-            this.instanceView = instanceView;
+            $.instanceView = instanceView;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = protectedSettings;
+            $.protectedSettings = protectedSettings;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
+
         public Builder settings(@Nullable Object settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = typeHandlerVersion;
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }        public VirtualMachineExtensionResponse build() {
-            return new VirtualMachineExtensionResponse(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, id, instanceView, location, name, protectedSettings, provisioningState, publisher, settings, tags, type, typeHandlerVersion);
+        }
+
+        public VirtualMachineExtensionResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

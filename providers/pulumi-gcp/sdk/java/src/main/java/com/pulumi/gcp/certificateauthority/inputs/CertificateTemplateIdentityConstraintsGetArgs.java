@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplateIdentityConstraintsCelExpressionGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CertificateTemplateIdentityConstraintsGetArgs extends com.pul
      * 
      */
     @Import(name="allowSubjectAltNamesPassthrough", required=true)
-      private final Output<Boolean> allowSubjectAltNamesPassthrough;
+    private Output<Boolean> allowSubjectAltNamesPassthrough;
 
     public Output<Boolean> allowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
@@ -32,7 +32,7 @@ public final class CertificateTemplateIdentityConstraintsGetArgs extends com.pul
      * 
      */
     @Import(name="allowSubjectPassthrough", required=true)
-      private final Output<Boolean> allowSubjectPassthrough;
+    private Output<Boolean> allowSubjectPassthrough;
 
     public Output<Boolean> allowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
@@ -43,76 +43,70 @@ public final class CertificateTemplateIdentityConstraintsGetArgs extends com.pul
      * 
      */
     @Import(name="celExpression")
-      private final @Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionGetArgs> celExpression;
+    private @Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionGetArgs> celExpression;
 
-    public Output<CertificateTemplateIdentityConstraintsCelExpressionGetArgs> celExpression() {
-        return this.celExpression == null ? Codegen.empty() : this.celExpression;
+    public Optional<Output<CertificateTemplateIdentityConstraintsCelExpressionGetArgs>> celExpression() {
+        return Optional.ofNullable(this.celExpression);
     }
 
-    public CertificateTemplateIdentityConstraintsGetArgs(
-        Output<Boolean> allowSubjectAltNamesPassthrough,
-        Output<Boolean> allowSubjectPassthrough,
-        @Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionGetArgs> celExpression) {
-        this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough, "expected parameter 'allowSubjectAltNamesPassthrough' to be non-null");
-        this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough, "expected parameter 'allowSubjectPassthrough' to be non-null");
-        this.celExpression = celExpression;
-    }
+    private CertificateTemplateIdentityConstraintsGetArgs() {}
 
-    private CertificateTemplateIdentityConstraintsGetArgs() {
-        this.allowSubjectAltNamesPassthrough = Codegen.empty();
-        this.allowSubjectPassthrough = Codegen.empty();
-        this.celExpression = Codegen.empty();
+    private CertificateTemplateIdentityConstraintsGetArgs(CertificateTemplateIdentityConstraintsGetArgs $) {
+        this.allowSubjectAltNamesPassthrough = $.allowSubjectAltNamesPassthrough;
+        this.allowSubjectPassthrough = $.allowSubjectPassthrough;
+        this.celExpression = $.celExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateTemplateIdentityConstraintsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> allowSubjectAltNamesPassthrough;
-        private Output<Boolean> allowSubjectPassthrough;
-        private @Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionGetArgs> celExpression;
+        private CertificateTemplateIdentityConstraintsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateTemplateIdentityConstraintsGetArgs();
         }
 
         public Builder(CertificateTemplateIdentityConstraintsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowSubjectAltNamesPassthrough = defaults.allowSubjectAltNamesPassthrough;
-    	      this.allowSubjectPassthrough = defaults.allowSubjectPassthrough;
-    	      this.celExpression = defaults.celExpression;
+            $ = new CertificateTemplateIdentityConstraintsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowSubjectAltNamesPassthrough(Output<Boolean> allowSubjectAltNamesPassthrough) {
-            this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
+            $.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
             return this;
         }
+
         public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
-            this.allowSubjectAltNamesPassthrough = Output.of(Objects.requireNonNull(allowSubjectAltNamesPassthrough));
-            return this;
+            return allowSubjectAltNamesPassthrough(Output.of(allowSubjectAltNamesPassthrough));
         }
+
         public Builder allowSubjectPassthrough(Output<Boolean> allowSubjectPassthrough) {
-            this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
+            $.allowSubjectPassthrough = allowSubjectPassthrough;
             return this;
         }
+
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
-            this.allowSubjectPassthrough = Output.of(Objects.requireNonNull(allowSubjectPassthrough));
-            return this;
+            return allowSubjectPassthrough(Output.of(allowSubjectPassthrough));
         }
+
         public Builder celExpression(@Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionGetArgs> celExpression) {
-            this.celExpression = celExpression;
+            $.celExpression = celExpression;
             return this;
         }
-        public Builder celExpression(@Nullable CertificateTemplateIdentityConstraintsCelExpressionGetArgs celExpression) {
-            this.celExpression = Codegen.ofNullable(celExpression);
-            return this;
-        }        public CertificateTemplateIdentityConstraintsGetArgs build() {
-            return new CertificateTemplateIdentityConstraintsGetArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
+
+        public Builder celExpression(CertificateTemplateIdentityConstraintsCelExpressionGetArgs celExpression) {
+            return celExpression(Output.of(celExpression));
+        }
+
+        public CertificateTemplateIdentityConstraintsGetArgs build() {
+            $.allowSubjectAltNamesPassthrough = Objects.requireNonNull($.allowSubjectAltNamesPassthrough, "expected parameter 'allowSubjectAltNamesPassthrough' to be non-null");
+            $.allowSubjectPassthrough = Objects.requireNonNull($.allowSubjectPassthrough, "expected parameter 'allowSubjectPassthrough' to be non-null");
+            return $;
         }
     }
+
 }

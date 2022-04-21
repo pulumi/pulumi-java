@@ -22,7 +22,7 @@ public final class BackendServiceFailoverPolicyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="disableConnectionDrainOnFailover", required=true)
-      private final Boolean disableConnectionDrainOnFailover;
+    private Boolean disableConnectionDrainOnFailover;
 
     public Boolean disableConnectionDrainOnFailover() {
         return this.disableConnectionDrainOnFailover;
@@ -33,7 +33,7 @@ public final class BackendServiceFailoverPolicyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="dropTrafficIfUnhealthy", required=true)
-      private final Boolean dropTrafficIfUnhealthy;
+    private Boolean dropTrafficIfUnhealthy;
 
     public Boolean dropTrafficIfUnhealthy() {
         return this.dropTrafficIfUnhealthy;
@@ -44,64 +44,59 @@ public final class BackendServiceFailoverPolicyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="failoverRatio", required=true)
-      private final Double failoverRatio;
+    private Double failoverRatio;
 
     public Double failoverRatio() {
         return this.failoverRatio;
     }
 
-    public BackendServiceFailoverPolicyResponse(
-        Boolean disableConnectionDrainOnFailover,
-        Boolean dropTrafficIfUnhealthy,
-        Double failoverRatio) {
-        this.disableConnectionDrainOnFailover = Objects.requireNonNull(disableConnectionDrainOnFailover, "expected parameter 'disableConnectionDrainOnFailover' to be non-null");
-        this.dropTrafficIfUnhealthy = Objects.requireNonNull(dropTrafficIfUnhealthy, "expected parameter 'dropTrafficIfUnhealthy' to be non-null");
-        this.failoverRatio = Objects.requireNonNull(failoverRatio, "expected parameter 'failoverRatio' to be non-null");
-    }
+    private BackendServiceFailoverPolicyResponse() {}
 
-    private BackendServiceFailoverPolicyResponse() {
-        this.disableConnectionDrainOnFailover = null;
-        this.dropTrafficIfUnhealthy = null;
-        this.failoverRatio = null;
+    private BackendServiceFailoverPolicyResponse(BackendServiceFailoverPolicyResponse $) {
+        this.disableConnectionDrainOnFailover = $.disableConnectionDrainOnFailover;
+        this.dropTrafficIfUnhealthy = $.dropTrafficIfUnhealthy;
+        this.failoverRatio = $.failoverRatio;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceFailoverPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disableConnectionDrainOnFailover;
-        private Boolean dropTrafficIfUnhealthy;
-        private Double failoverRatio;
+        private BackendServiceFailoverPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceFailoverPolicyResponse();
         }
 
         public Builder(BackendServiceFailoverPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableConnectionDrainOnFailover = defaults.disableConnectionDrainOnFailover;
-    	      this.dropTrafficIfUnhealthy = defaults.dropTrafficIfUnhealthy;
-    	      this.failoverRatio = defaults.failoverRatio;
+            $ = new BackendServiceFailoverPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableConnectionDrainOnFailover(Boolean disableConnectionDrainOnFailover) {
-            this.disableConnectionDrainOnFailover = Objects.requireNonNull(disableConnectionDrainOnFailover);
+            $.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
             return this;
         }
+
         public Builder dropTrafficIfUnhealthy(Boolean dropTrafficIfUnhealthy) {
-            this.dropTrafficIfUnhealthy = Objects.requireNonNull(dropTrafficIfUnhealthy);
+            $.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
             return this;
         }
+
         public Builder failoverRatio(Double failoverRatio) {
-            this.failoverRatio = Objects.requireNonNull(failoverRatio);
+            $.failoverRatio = failoverRatio;
             return this;
-        }        public BackendServiceFailoverPolicyResponse build() {
-            return new BackendServiceFailoverPolicyResponse(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
+        }
+
+        public BackendServiceFailoverPolicyResponse build() {
+            $.disableConnectionDrainOnFailover = Objects.requireNonNull($.disableConnectionDrainOnFailover, "expected parameter 'disableConnectionDrainOnFailover' to be non-null");
+            $.dropTrafficIfUnhealthy = Objects.requireNonNull($.dropTrafficIfUnhealthy, "expected parameter 'dropTrafficIfUnhealthy' to be non-null");
+            $.failoverRatio = Objects.requireNonNull($.failoverRatio, "expected parameter 'failoverRatio' to be non-null");
+            return $;
         }
     }
+
 }

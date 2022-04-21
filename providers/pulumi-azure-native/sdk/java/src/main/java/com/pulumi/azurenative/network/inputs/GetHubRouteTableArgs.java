@@ -17,7 +17,7 @@ public final class GetHubRouteTableArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetHubRouteTableArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="routeTableName", required=true)
-      private final String routeTableName;
+    private String routeTableName;
 
     public String routeTableName() {
         return this.routeTableName;
@@ -39,64 +39,59 @@ public final class GetHubRouteTableArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="virtualHubName", required=true)
-      private final String virtualHubName;
+    private String virtualHubName;
 
     public String virtualHubName() {
         return this.virtualHubName;
     }
 
-    public GetHubRouteTableArgs(
-        String resourceGroupName,
-        String routeTableName,
-        String virtualHubName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeTableName = Objects.requireNonNull(routeTableName, "expected parameter 'routeTableName' to be non-null");
-        this.virtualHubName = Objects.requireNonNull(virtualHubName, "expected parameter 'virtualHubName' to be non-null");
-    }
+    private GetHubRouteTableArgs() {}
 
-    private GetHubRouteTableArgs() {
-        this.resourceGroupName = null;
-        this.routeTableName = null;
-        this.virtualHubName = null;
+    private GetHubRouteTableArgs(GetHubRouteTableArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeTableName = $.routeTableName;
+        this.virtualHubName = $.virtualHubName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHubRouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String routeTableName;
-        private String virtualHubName;
+        private GetHubRouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHubRouteTableArgs();
         }
 
         public Builder(GetHubRouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeTableName = defaults.routeTableName;
-    	      this.virtualHubName = defaults.virtualHubName;
+            $ = new GetHubRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder routeTableName(String routeTableName) {
-            this.routeTableName = Objects.requireNonNull(routeTableName);
+            $.routeTableName = routeTableName;
             return this;
         }
+
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Objects.requireNonNull(virtualHubName);
+            $.virtualHubName = virtualHubName;
             return this;
-        }        public GetHubRouteTableArgs build() {
-            return new GetHubRouteTableArgs(resourceGroupName, routeTableName, virtualHubName);
+        }
+
+        public GetHubRouteTableArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.routeTableName = Objects.requireNonNull($.routeTableName, "expected parameter 'routeTableName' to be non-null");
+            $.virtualHubName = Objects.requireNonNull($.virtualHubName, "expected parameter 'virtualHubName' to be non-null");
+            return $;
         }
     }
+
 }

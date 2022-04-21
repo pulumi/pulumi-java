@@ -24,10 +24,10 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable String catalogId;
+    private @Nullable String catalogId;
 
     public Optional<String> catalogId() {
-        return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogResource")
-      private final @Nullable Boolean catalogResource;
+    private @Nullable Boolean catalogResource;
 
     public Optional<Boolean> catalogResource() {
-        return this.catalogResource == null ? Optional.empty() : Optional.ofNullable(this.catalogResource);
+        return Optional.ofNullable(this.catalogResource);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataLocation")
-      private final @Nullable GetPermissionsDataLocation dataLocation;
+    private @Nullable GetPermissionsDataLocation dataLocation;
 
     public Optional<GetPermissionsDataLocation> dataLocation() {
-        return this.dataLocation == null ? Optional.empty() : Optional.ofNullable(this.dataLocation);
+        return Optional.ofNullable(this.dataLocation);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="database")
-      private final @Nullable GetPermissionsDatabase database;
+    private @Nullable GetPermissionsDatabase database;
 
     public Optional<GetPermissionsDatabase> database() {
-        return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principal", required=true)
-      private final String principal;
+    private String principal;
 
     public String principal() {
         return this.principal;
@@ -79,10 +79,10 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="table")
-      private final @Nullable GetPermissionsTable table;
+    private @Nullable GetPermissionsTable table;
 
     public Optional<GetPermissionsTable> table() {
-        return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
+        return Optional.ofNullable(this.table);
     }
 
     /**
@@ -90,100 +90,81 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableWithColumns")
-      private final @Nullable GetPermissionsTableWithColumns tableWithColumns;
+    private @Nullable GetPermissionsTableWithColumns tableWithColumns;
 
     public Optional<GetPermissionsTableWithColumns> tableWithColumns() {
-        return this.tableWithColumns == null ? Optional.empty() : Optional.ofNullable(this.tableWithColumns);
+        return Optional.ofNullable(this.tableWithColumns);
     }
 
-    public GetPermissionsArgs(
-        @Nullable String catalogId,
-        @Nullable Boolean catalogResource,
-        @Nullable GetPermissionsDataLocation dataLocation,
-        @Nullable GetPermissionsDatabase database,
-        String principal,
-        @Nullable GetPermissionsTable table,
-        @Nullable GetPermissionsTableWithColumns tableWithColumns) {
-        this.catalogId = catalogId;
-        this.catalogResource = catalogResource;
-        this.dataLocation = dataLocation;
-        this.database = database;
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-        this.table = table;
-        this.tableWithColumns = tableWithColumns;
-    }
+    private GetPermissionsArgs() {}
 
-    private GetPermissionsArgs() {
-        this.catalogId = null;
-        this.catalogResource = null;
-        this.dataLocation = null;
-        this.database = null;
-        this.principal = null;
-        this.table = null;
-        this.tableWithColumns = null;
+    private GetPermissionsArgs(GetPermissionsArgs $) {
+        this.catalogId = $.catalogId;
+        this.catalogResource = $.catalogResource;
+        this.dataLocation = $.dataLocation;
+        this.database = $.database;
+        this.principal = $.principal;
+        this.table = $.table;
+        this.tableWithColumns = $.tableWithColumns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPermissionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String catalogId;
-        private @Nullable Boolean catalogResource;
-        private @Nullable GetPermissionsDataLocation dataLocation;
-        private @Nullable GetPermissionsDatabase database;
-        private String principal;
-        private @Nullable GetPermissionsTable table;
-        private @Nullable GetPermissionsTableWithColumns tableWithColumns;
+        private GetPermissionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPermissionsArgs();
         }
 
         public Builder(GetPermissionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.catalogResource = defaults.catalogResource;
-    	      this.dataLocation = defaults.dataLocation;
-    	      this.database = defaults.database;
-    	      this.principal = defaults.principal;
-    	      this.table = defaults.table;
-    	      this.tableWithColumns = defaults.tableWithColumns;
+            $ = new GetPermissionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder catalogResource(@Nullable Boolean catalogResource) {
-            this.catalogResource = catalogResource;
+            $.catalogResource = catalogResource;
             return this;
         }
+
         public Builder dataLocation(@Nullable GetPermissionsDataLocation dataLocation) {
-            this.dataLocation = dataLocation;
+            $.dataLocation = dataLocation;
             return this;
         }
+
         public Builder database(@Nullable GetPermissionsDatabase database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
         }
+
         public Builder table(@Nullable GetPermissionsTable table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
+
         public Builder tableWithColumns(@Nullable GetPermissionsTableWithColumns tableWithColumns) {
-            this.tableWithColumns = tableWithColumns;
+            $.tableWithColumns = tableWithColumns;
             return this;
-        }        public GetPermissionsArgs build() {
-            return new GetPermissionsArgs(catalogId, catalogResource, dataLocation, database, principal, table, tableWithColumns);
+        }
+
+        public GetPermissionsArgs build() {
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            return $;
         }
     }
+
 }

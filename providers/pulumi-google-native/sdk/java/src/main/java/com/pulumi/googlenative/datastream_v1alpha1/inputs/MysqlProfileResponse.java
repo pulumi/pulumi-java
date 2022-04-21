@@ -23,7 +23,7 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="hostname", required=true)
-      private final String hostname;
+    private String hostname;
 
     public String hostname() {
         return this.hostname;
@@ -34,7 +34,7 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -45,7 +45,7 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -56,7 +56,7 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sslConfig", required=true)
-      private final MysqlSslConfigResponse sslConfig;
+    private MysqlSslConfigResponse sslConfig;
 
     public MysqlSslConfigResponse sslConfig() {
         return this.sslConfig;
@@ -67,82 +67,73 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public MysqlProfileResponse(
-        String hostname,
-        String password,
-        Integer port,
-        MysqlSslConfigResponse sslConfig,
-        String username) {
-        this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.sslConfig = Objects.requireNonNull(sslConfig, "expected parameter 'sslConfig' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private MysqlProfileResponse() {}
 
-    private MysqlProfileResponse() {
-        this.hostname = null;
-        this.password = null;
-        this.port = null;
-        this.sslConfig = null;
-        this.username = null;
+    private MysqlProfileResponse(MysqlProfileResponse $) {
+        this.hostname = $.hostname;
+        this.password = $.password;
+        this.port = $.port;
+        this.sslConfig = $.sslConfig;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostname;
-        private String password;
-        private Integer port;
-        private MysqlSslConfigResponse sslConfig;
-        private String username;
+        private MysqlProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlProfileResponse();
         }
 
         public Builder(MysqlProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostname = defaults.hostname;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.sslConfig = defaults.sslConfig;
-    	      this.username = defaults.username;
+            $ = new MysqlProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostname(String hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            $.hostname = hostname;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder sslConfig(MysqlSslConfigResponse sslConfig) {
-            this.sslConfig = Objects.requireNonNull(sslConfig);
+            $.sslConfig = sslConfig;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public MysqlProfileResponse build() {
-            return new MysqlProfileResponse(hostname, password, port, sslConfig, username);
+        }
+
+        public MysqlProfileResponse build() {
+            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.sslConfig = Objects.requireNonNull($.sslConfig, "expected parameter 'sslConfig' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

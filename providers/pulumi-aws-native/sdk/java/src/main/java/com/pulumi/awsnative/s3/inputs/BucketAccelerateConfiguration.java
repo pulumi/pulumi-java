@@ -17,45 +17,45 @@ public final class BucketAccelerateConfiguration extends com.pulumi.resources.In
      * 
      */
     @Import(name="accelerationStatus", required=true)
-      private final BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
+    private BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
 
     public BucketAccelerateConfigurationAccelerationStatus accelerationStatus() {
         return this.accelerationStatus;
     }
 
-    public BucketAccelerateConfiguration(BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
-        this.accelerationStatus = Objects.requireNonNull(accelerationStatus, "expected parameter 'accelerationStatus' to be non-null");
-    }
+    private BucketAccelerateConfiguration() {}
 
-    private BucketAccelerateConfiguration() {
-        this.accelerationStatus = null;
+    private BucketAccelerateConfiguration(BucketAccelerateConfiguration $) {
+        this.accelerationStatus = $.accelerationStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAccelerateConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
+        private BucketAccelerateConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAccelerateConfiguration();
         }
 
         public Builder(BucketAccelerateConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accelerationStatus = defaults.accelerationStatus;
+            $ = new BucketAccelerateConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder accelerationStatus(BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
-            this.accelerationStatus = Objects.requireNonNull(accelerationStatus);
+            $.accelerationStatus = accelerationStatus;
             return this;
-        }        public BucketAccelerateConfiguration build() {
-            return new BucketAccelerateConfiguration(accelerationStatus);
+        }
+
+        public BucketAccelerateConfiguration build() {
+            $.accelerationStatus = Objects.requireNonNull($.accelerationStatus, "expected parameter 'accelerationStatus' to be non-null");
+            return $;
         }
     }
+
 }

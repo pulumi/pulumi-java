@@ -17,7 +17,7 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthArgs extends
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthArgs extends
      * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
-      private final String virtualNetworkGatewayName;
+    private String virtualNetworkGatewayName;
 
     public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 
-    public GetVirtualNetworkGatewayVpnclientConnectionHealthArgs(
-        String resourceGroupName,
-        String virtualNetworkGatewayName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName, "expected parameter 'virtualNetworkGatewayName' to be non-null");
-    }
+    private GetVirtualNetworkGatewayVpnclientConnectionHealthArgs() {}
 
-    private GetVirtualNetworkGatewayVpnclientConnectionHealthArgs() {
-        this.resourceGroupName = null;
-        this.virtualNetworkGatewayName = null;
+    private GetVirtualNetworkGatewayVpnclientConnectionHealthArgs(GetVirtualNetworkGatewayVpnclientConnectionHealthArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkGatewayName = $.virtualNetworkGatewayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualNetworkGatewayVpnclientConnectionHealthArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String virtualNetworkGatewayName;
+        private GetVirtualNetworkGatewayVpnclientConnectionHealthArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualNetworkGatewayVpnclientConnectionHealthArgs();
         }
 
         public Builder(GetVirtualNetworkGatewayVpnclientConnectionHealthArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkGatewayName = defaults.virtualNetworkGatewayName;
+            $ = new GetVirtualNetworkGatewayVpnclientConnectionHealthArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
-            this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
+            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;
-        }        public GetVirtualNetworkGatewayVpnclientConnectionHealthArgs build() {
-            return new GetVirtualNetworkGatewayVpnclientConnectionHealthArgs(resourceGroupName, virtualNetworkGatewayName);
+        }
+
+        public GetVirtualNetworkGatewayVpnclientConnectionHealthArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkGatewayName = Objects.requireNonNull($.virtualNetworkGatewayName, "expected parameter 'virtualNetworkGatewayName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cidrBlocks")
-      private final @Nullable Output<List<String>> cidrBlocks;
+    private @Nullable Output<List<String>> cidrBlocks;
 
-    public Output<List<String>> cidrBlocks() {
-        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
+    public Optional<Output<List<String>>> cidrBlocks() {
+        return Optional.ofNullable(this.cidrBlocks);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="fromPort", required=true)
-      private final Output<Integer> fromPort;
+    private Output<Integer> fromPort;
 
     public Output<Integer> fromPort() {
         return this.fromPort;
@@ -56,10 +56,10 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ipv6CidrBlocks")
-      private final @Nullable Output<List<String>> ipv6CidrBlocks;
+    private @Nullable Output<List<String>> ipv6CidrBlocks;
 
-    public Output<List<String>> ipv6CidrBlocks() {
-        return this.ipv6CidrBlocks == null ? Codegen.empty() : this.ipv6CidrBlocks;
+    public Optional<Output<List<String>>> ipv6CidrBlocks() {
+        return Optional.ofNullable(this.ipv6CidrBlocks);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="prefixListIds")
-      private final @Nullable Output<List<String>> prefixListIds;
+    private @Nullable Output<List<String>> prefixListIds;
 
-    public Output<List<String>> prefixListIds() {
-        return this.prefixListIds == null ? Codegen.empty() : this.prefixListIds;
+    public Optional<Output<List<String>>> prefixListIds() {
+        return Optional.ofNullable(this.prefixListIds);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<String> protocol;
+    private Output<String> protocol;
 
     public Output<String> protocol() {
         return this.protocol;
@@ -89,10 +89,10 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="self")
-      private final @Nullable Output<Boolean> self;
+    private @Nullable Output<Boolean> self;
 
-    public Output<Boolean> self() {
-        return this.self == null ? Codegen.empty() : this.self;
+    public Optional<Output<Boolean>> self() {
+        return Optional.ofNullable(this.self);
     }
 
     /**
@@ -111,166 +111,147 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="toPort", required=true)
-      private final Output<Integer> toPort;
+    private Output<Integer> toPort;
 
     public Output<Integer> toPort() {
         return this.toPort;
     }
 
-    public SecurityGroupIngressArgs(
-        @Nullable Output<List<String>> cidrBlocks,
-        @Nullable Output<String> description,
-        Output<Integer> fromPort,
-        @Nullable Output<List<String>> ipv6CidrBlocks,
-        @Nullable Output<List<String>> prefixListIds,
-        Output<String> protocol,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<Boolean> self,
-        Output<Integer> toPort) {
-        this.cidrBlocks = cidrBlocks;
-        this.description = description;
-        this.fromPort = Objects.requireNonNull(fromPort, "expected parameter 'fromPort' to be non-null");
-        this.ipv6CidrBlocks = ipv6CidrBlocks;
-        this.prefixListIds = prefixListIds;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.securityGroups = securityGroups;
-        this.self = self;
-        this.toPort = Objects.requireNonNull(toPort, "expected parameter 'toPort' to be non-null");
-    }
+    private SecurityGroupIngressArgs() {}
 
-    private SecurityGroupIngressArgs() {
-        this.cidrBlocks = Codegen.empty();
-        this.description = Codegen.empty();
-        this.fromPort = Codegen.empty();
-        this.ipv6CidrBlocks = Codegen.empty();
-        this.prefixListIds = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.self = Codegen.empty();
-        this.toPort = Codegen.empty();
+    private SecurityGroupIngressArgs(SecurityGroupIngressArgs $) {
+        this.cidrBlocks = $.cidrBlocks;
+        this.description = $.description;
+        this.fromPort = $.fromPort;
+        this.ipv6CidrBlocks = $.ipv6CidrBlocks;
+        this.prefixListIds = $.prefixListIds;
+        this.protocol = $.protocol;
+        this.securityGroups = $.securityGroups;
+        this.self = $.self;
+        this.toPort = $.toPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityGroupIngressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> cidrBlocks;
-        private @Nullable Output<String> description;
-        private Output<Integer> fromPort;
-        private @Nullable Output<List<String>> ipv6CidrBlocks;
-        private @Nullable Output<List<String>> prefixListIds;
-        private Output<String> protocol;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<Boolean> self;
-        private Output<Integer> toPort;
+        private SecurityGroupIngressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityGroupIngressArgs();
         }
 
         public Builder(SecurityGroupIngressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlocks = defaults.cidrBlocks;
-    	      this.description = defaults.description;
-    	      this.fromPort = defaults.fromPort;
-    	      this.ipv6CidrBlocks = defaults.ipv6CidrBlocks;
-    	      this.prefixListIds = defaults.prefixListIds;
-    	      this.protocol = defaults.protocol;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.self = defaults.self;
-    	      this.toPort = defaults.toPort;
+            $ = new SecurityGroupIngressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlocks(@Nullable Output<List<String>> cidrBlocks) {
-            this.cidrBlocks = cidrBlocks;
+            $.cidrBlocks = cidrBlocks;
             return this;
         }
-        public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
-            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
-            return this;
+
+        public Builder cidrBlocks(List<String> cidrBlocks) {
+            return cidrBlocks(Output.of(cidrBlocks));
         }
+
         public Builder cidrBlocks(String... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fromPort(Output<Integer> fromPort) {
-            this.fromPort = Objects.requireNonNull(fromPort);
+            $.fromPort = fromPort;
             return this;
         }
+
         public Builder fromPort(Integer fromPort) {
-            this.fromPort = Output.of(Objects.requireNonNull(fromPort));
-            return this;
+            return fromPort(Output.of(fromPort));
         }
+
         public Builder ipv6CidrBlocks(@Nullable Output<List<String>> ipv6CidrBlocks) {
-            this.ipv6CidrBlocks = ipv6CidrBlocks;
+            $.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
-        public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
-            this.ipv6CidrBlocks = Codegen.ofNullable(ipv6CidrBlocks);
-            return this;
+
+        public Builder ipv6CidrBlocks(List<String> ipv6CidrBlocks) {
+            return ipv6CidrBlocks(Output.of(ipv6CidrBlocks));
         }
+
         public Builder ipv6CidrBlocks(String... ipv6CidrBlocks) {
             return ipv6CidrBlocks(List.of(ipv6CidrBlocks));
         }
+
         public Builder prefixListIds(@Nullable Output<List<String>> prefixListIds) {
-            this.prefixListIds = prefixListIds;
+            $.prefixListIds = prefixListIds;
             return this;
         }
-        public Builder prefixListIds(@Nullable List<String> prefixListIds) {
-            this.prefixListIds = Codegen.ofNullable(prefixListIds);
-            return this;
+
+        public Builder prefixListIds(List<String> prefixListIds) {
+            return prefixListIds(Output.of(prefixListIds));
         }
+
         public Builder prefixListIds(String... prefixListIds) {
             return prefixListIds(List.of(prefixListIds));
         }
+
         public Builder protocol(Output<String> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder self(@Nullable Output<Boolean> self) {
-            this.self = self;
+            $.self = self;
             return this;
         }
-        public Builder self(@Nullable Boolean self) {
-            this.self = Codegen.ofNullable(self);
-            return this;
+
+        public Builder self(Boolean self) {
+            return self(Output.of(self));
         }
+
         public Builder toPort(Output<Integer> toPort) {
-            this.toPort = Objects.requireNonNull(toPort);
+            $.toPort = toPort;
             return this;
         }
+
         public Builder toPort(Integer toPort) {
-            this.toPort = Output.of(Objects.requireNonNull(toPort));
-            return this;
-        }        public SecurityGroupIngressArgs build() {
-            return new SecurityGroupIngressArgs(cidrBlocks, description, fromPort, ipv6CidrBlocks, prefixListIds, protocol, securityGroups, self, toPort);
+            return toPort(Output.of(toPort));
+        }
+
+        public SecurityGroupIngressArgs build() {
+            $.fromPort = Objects.requireNonNull($.fromPort, "expected parameter 'fromPort' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.toPort = Objects.requireNonNull($.toPort, "expected parameter 'toPort' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetConsoleWithLocationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="consoleName", required=true)
-      private final String consoleName;
+    private String consoleName;
 
     public String consoleName() {
         return this.consoleName;
@@ -28,55 +28,52 @@ public final class GetConsoleWithLocationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
-    public GetConsoleWithLocationArgs(
-        String consoleName,
-        String location) {
-        this.consoleName = Objects.requireNonNull(consoleName, "expected parameter 'consoleName' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private GetConsoleWithLocationArgs() {}
 
-    private GetConsoleWithLocationArgs() {
-        this.consoleName = null;
-        this.location = null;
+    private GetConsoleWithLocationArgs(GetConsoleWithLocationArgs $) {
+        this.consoleName = $.consoleName;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConsoleWithLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consoleName;
-        private String location;
+        private GetConsoleWithLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConsoleWithLocationArgs();
         }
 
         public Builder(GetConsoleWithLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consoleName = defaults.consoleName;
-    	      this.location = defaults.location;
+            $ = new GetConsoleWithLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consoleName(String consoleName) {
-            this.consoleName = Objects.requireNonNull(consoleName);
+            $.consoleName = consoleName;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
-        }        public GetConsoleWithLocationArgs build() {
-            return new GetConsoleWithLocationArgs(consoleName, location);
+        }
+
+        public GetConsoleWithLocationArgs build() {
+            $.consoleName = Objects.requireNonNull($.consoleName, "expected parameter 'consoleName' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

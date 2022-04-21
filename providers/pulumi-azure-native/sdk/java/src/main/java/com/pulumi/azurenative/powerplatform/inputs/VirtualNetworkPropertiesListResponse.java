@@ -25,10 +25,10 @@ public final class VirtualNetworkPropertiesListResponse extends com.pulumi.resou
      * 
      */
     @Import(name="nextLink")
-      private final @Nullable String nextLink;
+    private @Nullable String nextLink;
 
     public Optional<String> nextLink() {
-        return this.nextLink == null ? Optional.empty() : Optional.ofNullable(this.nextLink);
+        return Optional.ofNullable(this.nextLink);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class VirtualNetworkPropertiesListResponse extends com.pulumi.resou
      * 
      */
     @Import(name="value")
-      private final @Nullable List<VirtualNetworkPropertiesResponse> value;
+    private @Nullable List<VirtualNetworkPropertiesResponse> value;
 
-    public List<VirtualNetworkPropertiesResponse> value() {
-        return this.value == null ? List.of() : this.value;
+    public Optional<List<VirtualNetworkPropertiesResponse>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public VirtualNetworkPropertiesListResponse(
-        @Nullable String nextLink,
-        @Nullable List<VirtualNetworkPropertiesResponse> value) {
-        this.nextLink = nextLink;
-        this.value = value;
-    }
+    private VirtualNetworkPropertiesListResponse() {}
 
-    private VirtualNetworkPropertiesListResponse() {
-        this.nextLink = null;
-        this.value = List.of();
+    private VirtualNetworkPropertiesListResponse(VirtualNetworkPropertiesListResponse $) {
+        this.nextLink = $.nextLink;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkPropertiesListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String nextLink;
-        private @Nullable List<VirtualNetworkPropertiesResponse> value;
+        private VirtualNetworkPropertiesListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkPropertiesListResponse();
         }
 
         public Builder(VirtualNetworkPropertiesListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nextLink = defaults.nextLink;
-    	      this.value = defaults.value;
+            $ = new VirtualNetworkPropertiesListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nextLink(@Nullable String nextLink) {
-            this.nextLink = nextLink;
+            $.nextLink = nextLink;
             return this;
         }
+
         public Builder value(@Nullable List<VirtualNetworkPropertiesResponse> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
+
         public Builder value(VirtualNetworkPropertiesResponse... value) {
             return value(List.of(value));
-        }        public VirtualNetworkPropertiesListResponse build() {
-            return new VirtualNetworkPropertiesListResponse(nextLink, value);
+        }
+
+        public VirtualNetworkPropertiesListResponse build() {
+            return $;
         }
     }
+
 }

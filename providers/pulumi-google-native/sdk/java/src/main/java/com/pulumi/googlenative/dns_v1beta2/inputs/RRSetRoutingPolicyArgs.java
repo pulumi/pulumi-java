@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyGeoPolicyArgs;
 import com.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyWrrPolicyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,130 +22,116 @@ public final class RRSetRoutingPolicyArgs extends com.pulumi.resources.ResourceA
     public static final RRSetRoutingPolicyArgs Empty = new RRSetRoutingPolicyArgs();
 
     @Import(name="geo")
-      private final @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geo;
+    private @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geo;
 
-    public Output<RRSetRoutingPolicyGeoPolicyArgs> geo() {
-        return this.geo == null ? Codegen.empty() : this.geo;
+    public Optional<Output<RRSetRoutingPolicyGeoPolicyArgs>> geo() {
+        return Optional.ofNullable(this.geo);
     }
 
     @Import(name="geoPolicy")
-      private final @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy;
+    private @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy;
 
-    public Output<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy() {
-        return this.geoPolicy == null ? Codegen.empty() : this.geoPolicy;
+    public Optional<Output<RRSetRoutingPolicyGeoPolicyArgs>> geoPolicy() {
+        return Optional.ofNullable(this.geoPolicy);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     @Import(name="wrr")
-      private final @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr;
+    private @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr;
 
-    public Output<RRSetRoutingPolicyWrrPolicyArgs> wrr() {
-        return this.wrr == null ? Codegen.empty() : this.wrr;
+    public Optional<Output<RRSetRoutingPolicyWrrPolicyArgs>> wrr() {
+        return Optional.ofNullable(this.wrr);
     }
 
     @Import(name="wrrPolicy")
-      private final @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy;
+    private @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy;
 
-    public Output<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy() {
-        return this.wrrPolicy == null ? Codegen.empty() : this.wrrPolicy;
+    public Optional<Output<RRSetRoutingPolicyWrrPolicyArgs>> wrrPolicy() {
+        return Optional.ofNullable(this.wrrPolicy);
     }
 
-    public RRSetRoutingPolicyArgs(
-        @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geo,
-        @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy,
-        @Nullable Output<String> kind,
-        @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr,
-        @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy) {
-        this.geo = geo;
-        this.geoPolicy = geoPolicy;
-        this.kind = kind;
-        this.wrr = wrr;
-        this.wrrPolicy = wrrPolicy;
-    }
+    private RRSetRoutingPolicyArgs() {}
 
-    private RRSetRoutingPolicyArgs() {
-        this.geo = Codegen.empty();
-        this.geoPolicy = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.wrr = Codegen.empty();
-        this.wrrPolicy = Codegen.empty();
+    private RRSetRoutingPolicyArgs(RRSetRoutingPolicyArgs $) {
+        this.geo = $.geo;
+        this.geoPolicy = $.geoPolicy;
+        this.kind = $.kind;
+        this.wrr = $.wrr;
+        this.wrrPolicy = $.wrrPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RRSetRoutingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geo;
-        private @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr;
-        private @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy;
+        private RRSetRoutingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RRSetRoutingPolicyArgs();
         }
 
         public Builder(RRSetRoutingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.geo = defaults.geo;
-    	      this.geoPolicy = defaults.geoPolicy;
-    	      this.kind = defaults.kind;
-    	      this.wrr = defaults.wrr;
-    	      this.wrrPolicy = defaults.wrrPolicy;
+            $ = new RRSetRoutingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder geo(@Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geo) {
-            this.geo = geo;
+            $.geo = geo;
             return this;
         }
-        public Builder geo(@Nullable RRSetRoutingPolicyGeoPolicyArgs geo) {
-            this.geo = Codegen.ofNullable(geo);
-            return this;
+
+        public Builder geo(RRSetRoutingPolicyGeoPolicyArgs geo) {
+            return geo(Output.of(geo));
         }
+
         public Builder geoPolicy(@Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy) {
-            this.geoPolicy = geoPolicy;
+            $.geoPolicy = geoPolicy;
             return this;
         }
-        public Builder geoPolicy(@Nullable RRSetRoutingPolicyGeoPolicyArgs geoPolicy) {
-            this.geoPolicy = Codegen.ofNullable(geoPolicy);
-            return this;
+
+        public Builder geoPolicy(RRSetRoutingPolicyGeoPolicyArgs geoPolicy) {
+            return geoPolicy(Output.of(geoPolicy));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder wrr(@Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr) {
-            this.wrr = wrr;
+            $.wrr = wrr;
             return this;
         }
-        public Builder wrr(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrr) {
-            this.wrr = Codegen.ofNullable(wrr);
-            return this;
+
+        public Builder wrr(RRSetRoutingPolicyWrrPolicyArgs wrr) {
+            return wrr(Output.of(wrr));
         }
+
         public Builder wrrPolicy(@Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy) {
-            this.wrrPolicy = wrrPolicy;
+            $.wrrPolicy = wrrPolicy;
             return this;
         }
-        public Builder wrrPolicy(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrrPolicy) {
-            this.wrrPolicy = Codegen.ofNullable(wrrPolicy);
-            return this;
-        }        public RRSetRoutingPolicyArgs build() {
-            return new RRSetRoutingPolicyArgs(geo, geoPolicy, kind, wrr, wrrPolicy);
+
+        public Builder wrrPolicy(RRSetRoutingPolicyWrrPolicyArgs wrrPolicy) {
+            return wrrPolicy(Output.of(wrrPolicy));
+        }
+
+        public RRSetRoutingPolicyArgs build() {
+            return $;
         }
     }
+
 }

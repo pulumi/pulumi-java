@@ -7,10 +7,10 @@ import com.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionA
 import com.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DistributionConfigurationDistributionGetArgs extends com.pulu
      * 
      */
     @Import(name="amiDistributionConfiguration")
-      private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration;
+    private @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration;
 
-    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration() {
-        return this.amiDistributionConfiguration == null ? Codegen.empty() : this.amiDistributionConfiguration;
+    public Optional<Output<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs>> amiDistributionConfiguration() {
+        return Optional.ofNullable(this.amiDistributionConfiguration);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DistributionConfigurationDistributionGetArgs extends com.pulu
      * 
      */
     @Import(name="containerDistributionConfiguration")
-      private final @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration;
+    private @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration;
 
-    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration() {
-        return this.containerDistributionConfiguration == null ? Codegen.empty() : this.containerDistributionConfiguration;
+    public Optional<Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs>> containerDistributionConfiguration() {
+        return Optional.ofNullable(this.containerDistributionConfiguration);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DistributionConfigurationDistributionGetArgs extends com.pulu
      * 
      */
     @Import(name="licenseConfigurationArns")
-      private final @Nullable Output<List<String>> licenseConfigurationArns;
+    private @Nullable Output<List<String>> licenseConfigurationArns;
 
-    public Output<List<String>> licenseConfigurationArns() {
-        return this.licenseConfigurationArns == null ? Codegen.empty() : this.licenseConfigurationArns;
+    public Optional<Output<List<String>>> licenseConfigurationArns() {
+        return Optional.ofNullable(this.licenseConfigurationArns);
     }
 
     /**
@@ -56,92 +56,83 @@ public final class DistributionConfigurationDistributionGetArgs extends com.pulu
      * 
      */
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
-    public DistributionConfigurationDistributionGetArgs(
-        @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration,
-        @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration,
-        @Nullable Output<List<String>> licenseConfigurationArns,
-        Output<String> region) {
-        this.amiDistributionConfiguration = amiDistributionConfiguration;
-        this.containerDistributionConfiguration = containerDistributionConfiguration;
-        this.licenseConfigurationArns = licenseConfigurationArns;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private DistributionConfigurationDistributionGetArgs() {}
 
-    private DistributionConfigurationDistributionGetArgs() {
-        this.amiDistributionConfiguration = Codegen.empty();
-        this.containerDistributionConfiguration = Codegen.empty();
-        this.licenseConfigurationArns = Codegen.empty();
-        this.region = Codegen.empty();
+    private DistributionConfigurationDistributionGetArgs(DistributionConfigurationDistributionGetArgs $) {
+        this.amiDistributionConfiguration = $.amiDistributionConfiguration;
+        this.containerDistributionConfiguration = $.containerDistributionConfiguration;
+        this.licenseConfigurationArns = $.licenseConfigurationArns;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationDistributionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration;
-        private @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration;
-        private @Nullable Output<List<String>> licenseConfigurationArns;
-        private Output<String> region;
+        private DistributionConfigurationDistributionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationDistributionGetArgs();
         }
 
         public Builder(DistributionConfigurationDistributionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amiDistributionConfiguration = defaults.amiDistributionConfiguration;
-    	      this.containerDistributionConfiguration = defaults.containerDistributionConfiguration;
-    	      this.licenseConfigurationArns = defaults.licenseConfigurationArns;
-    	      this.region = defaults.region;
+            $ = new DistributionConfigurationDistributionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amiDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration) {
-            this.amiDistributionConfiguration = amiDistributionConfiguration;
+            $.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
-        public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs amiDistributionConfiguration) {
-            this.amiDistributionConfiguration = Codegen.ofNullable(amiDistributionConfiguration);
-            return this;
+
+        public Builder amiDistributionConfiguration(DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs amiDistributionConfiguration) {
+            return amiDistributionConfiguration(Output.of(amiDistributionConfiguration));
         }
+
         public Builder containerDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration) {
-            this.containerDistributionConfiguration = containerDistributionConfiguration;
+            $.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
-        public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs containerDistributionConfiguration) {
-            this.containerDistributionConfiguration = Codegen.ofNullable(containerDistributionConfiguration);
-            return this;
+
+        public Builder containerDistributionConfiguration(DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs containerDistributionConfiguration) {
+            return containerDistributionConfiguration(Output.of(containerDistributionConfiguration));
         }
+
         public Builder licenseConfigurationArns(@Nullable Output<List<String>> licenseConfigurationArns) {
-            this.licenseConfigurationArns = licenseConfigurationArns;
+            $.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
-        public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
-            this.licenseConfigurationArns = Codegen.ofNullable(licenseConfigurationArns);
-            return this;
+
+        public Builder licenseConfigurationArns(List<String> licenseConfigurationArns) {
+            return licenseConfigurationArns(Output.of(licenseConfigurationArns));
         }
+
         public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
             return licenseConfigurationArns(List.of(licenseConfigurationArns));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
-        }        public DistributionConfigurationDistributionGetArgs build() {
-            return new DistributionConfigurationDistributionGetArgs(amiDistributionConfiguration, containerDistributionConfiguration, licenseConfigurationArns, region);
+            return region(Output.of(region));
+        }
+
+        public DistributionConfigurationDistributionGetArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

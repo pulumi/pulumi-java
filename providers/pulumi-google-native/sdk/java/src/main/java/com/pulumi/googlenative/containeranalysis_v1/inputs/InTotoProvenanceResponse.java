@@ -21,7 +21,7 @@ public final class InTotoProvenanceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="builderConfig", required=true)
-      private final BuilderConfigResponse builderConfig;
+    private BuilderConfigResponse builderConfig;
 
     public BuilderConfigResponse builderConfig() {
         return this.builderConfig;
@@ -32,14 +32,14 @@ public final class InTotoProvenanceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="materials", required=true)
-      private final List<String> materials;
+    private List<String> materials;
 
     public List<String> materials() {
         return this.materials;
     }
 
     @Import(name="metadata", required=true)
-      private final MetadataResponse metadata;
+    private MetadataResponse metadata;
 
     public MetadataResponse metadata() {
         return this.metadata;
@@ -50,76 +50,70 @@ public final class InTotoProvenanceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="recipe", required=true)
-      private final RecipeResponse recipe;
+    private RecipeResponse recipe;
 
     public RecipeResponse recipe() {
         return this.recipe;
     }
 
-    public InTotoProvenanceResponse(
-        BuilderConfigResponse builderConfig,
-        List<String> materials,
-        MetadataResponse metadata,
-        RecipeResponse recipe) {
-        this.builderConfig = Objects.requireNonNull(builderConfig, "expected parameter 'builderConfig' to be non-null");
-        this.materials = Objects.requireNonNull(materials, "expected parameter 'materials' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.recipe = Objects.requireNonNull(recipe, "expected parameter 'recipe' to be non-null");
-    }
+    private InTotoProvenanceResponse() {}
 
-    private InTotoProvenanceResponse() {
-        this.builderConfig = null;
-        this.materials = List.of();
-        this.metadata = null;
-        this.recipe = null;
+    private InTotoProvenanceResponse(InTotoProvenanceResponse $) {
+        this.builderConfig = $.builderConfig;
+        this.materials = $.materials;
+        this.metadata = $.metadata;
+        this.recipe = $.recipe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InTotoProvenanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BuilderConfigResponse builderConfig;
-        private List<String> materials;
-        private MetadataResponse metadata;
-        private RecipeResponse recipe;
+        private InTotoProvenanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InTotoProvenanceResponse();
         }
 
         public Builder(InTotoProvenanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.builderConfig = defaults.builderConfig;
-    	      this.materials = defaults.materials;
-    	      this.metadata = defaults.metadata;
-    	      this.recipe = defaults.recipe;
+            $ = new InTotoProvenanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder builderConfig(BuilderConfigResponse builderConfig) {
-            this.builderConfig = Objects.requireNonNull(builderConfig);
+            $.builderConfig = builderConfig;
             return this;
         }
+
         public Builder materials(List<String> materials) {
-            this.materials = Objects.requireNonNull(materials);
+            $.materials = materials;
             return this;
         }
+
         public Builder materials(String... materials) {
             return materials(List.of(materials));
         }
+
         public Builder metadata(MetadataResponse metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder recipe(RecipeResponse recipe) {
-            this.recipe = Objects.requireNonNull(recipe);
+            $.recipe = recipe;
             return this;
-        }        public InTotoProvenanceResponse build() {
-            return new InTotoProvenanceResponse(builderConfig, materials, metadata, recipe);
+        }
+
+        public InTotoProvenanceResponse build() {
+            $.builderConfig = Objects.requireNonNull($.builderConfig, "expected parameter 'builderConfig' to be non-null");
+            $.materials = Objects.requireNonNull($.materials, "expected parameter 'materials' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.recipe = Objects.requireNonNull($.recipe, "expected parameter 'recipe' to be non-null");
+            return $;
         }
     }
+
 }

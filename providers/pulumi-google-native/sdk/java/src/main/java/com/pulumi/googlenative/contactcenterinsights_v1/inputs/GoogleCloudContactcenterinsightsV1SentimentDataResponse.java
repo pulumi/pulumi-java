@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
      * 
      */
     @Import(name="magnitude", required=true)
-      private final Double magnitude;
+    private Double magnitude;
 
     public Double magnitude() {
         return this.magnitude;
@@ -32,55 +32,52 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
      * 
      */
     @Import(name="score", required=true)
-      private final Double score;
+    private Double score;
 
     public Double score() {
         return this.score;
     }
 
-    public GoogleCloudContactcenterinsightsV1SentimentDataResponse(
-        Double magnitude,
-        Double score) {
-        this.magnitude = Objects.requireNonNull(magnitude, "expected parameter 'magnitude' to be non-null");
-        this.score = Objects.requireNonNull(score, "expected parameter 'score' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1SentimentDataResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1SentimentDataResponse() {
-        this.magnitude = null;
-        this.score = null;
+    private GoogleCloudContactcenterinsightsV1SentimentDataResponse(GoogleCloudContactcenterinsightsV1SentimentDataResponse $) {
+        this.magnitude = $.magnitude;
+        this.score = $.score;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1SentimentDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double magnitude;
-        private Double score;
+        private GoogleCloudContactcenterinsightsV1SentimentDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1SentimentDataResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1SentimentDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.magnitude = defaults.magnitude;
-    	      this.score = defaults.score;
+            $ = new GoogleCloudContactcenterinsightsV1SentimentDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder magnitude(Double magnitude) {
-            this.magnitude = Objects.requireNonNull(magnitude);
+            $.magnitude = magnitude;
             return this;
         }
+
         public Builder score(Double score) {
-            this.score = Objects.requireNonNull(score);
+            $.score = score;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1SentimentDataResponse build() {
-            return new GoogleCloudContactcenterinsightsV1SentimentDataResponse(magnitude, score);
+        }
+
+        public GoogleCloudContactcenterinsightsV1SentimentDataResponse build() {
+            $.magnitude = Objects.requireNonNull($.magnitude, "expected parameter 'magnitude' to be non-null");
+            $.score = Objects.requireNonNull($.score, "expected parameter 'score' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DeploymentConfigMinimumHealthyHostsGetArgs extends com.pulumi
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DeploymentConfigMinimumHealthyHostsGetArgs extends com.pulumi
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Integer> value;
+    private @Nullable Output<Integer> value;
 
-    public Output<Integer> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Integer>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public DeploymentConfigMinimumHealthyHostsGetArgs(
-        @Nullable Output<String> type,
-        @Nullable Output<Integer> value) {
-        this.type = type;
-        this.value = value;
-    }
+    private DeploymentConfigMinimumHealthyHostsGetArgs() {}
 
-    private DeploymentConfigMinimumHealthyHostsGetArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private DeploymentConfigMinimumHealthyHostsGetArgs(DeploymentConfigMinimumHealthyHostsGetArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentConfigMinimumHealthyHostsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> type;
-        private @Nullable Output<Integer> value;
+        private DeploymentConfigMinimumHealthyHostsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentConfigMinimumHealthyHostsGetArgs();
         }
 
         public Builder(DeploymentConfigMinimumHealthyHostsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new DeploymentConfigMinimumHealthyHostsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<Integer> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Integer value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public DeploymentConfigMinimumHealthyHostsGetArgs build() {
-            return new DeploymentConfigMinimumHealthyHostsGetArgs(type, value);
+
+        public Builder value(Integer value) {
+            return value(Output.of(value));
+        }
+
+        public DeploymentConfigMinimumHealthyHostsGetArgs build() {
+            return $;
         }
     }
+
 }

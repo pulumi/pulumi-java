@@ -23,10 +23,10 @@ public final class ResourceRangeResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="max")
-      private final @Nullable Integer max;
+    private @Nullable Integer max;
 
     public Optional<Integer> max() {
-        return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
+        return Optional.ofNullable(this.max);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ResourceRangeResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="min")
-      private final @Nullable Integer min;
+    private @Nullable Integer min;
 
     public Optional<Integer> min() {
-        return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
+        return Optional.ofNullable(this.min);
     }
 
-    public ResourceRangeResponse(
-        @Nullable Integer max,
-        @Nullable Integer min) {
-        this.max = max;
-        this.min = min;
-    }
+    private ResourceRangeResponse() {}
 
-    private ResourceRangeResponse() {
-        this.max = null;
-        this.min = null;
+    private ResourceRangeResponse(ResourceRangeResponse $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer max;
-        private @Nullable Integer min;
+        private ResourceRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRangeResponse();
         }
 
         public Builder(ResourceRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new ResourceRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Integer max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
+
         public Builder min(@Nullable Integer min) {
-            this.min = min;
+            $.min = min;
             return this;
-        }        public ResourceRangeResponse build() {
-            return new ResourceRangeResponse(max, min);
+        }
+
+        public ResourceRangeResponse build() {
+            return $;
         }
     }
+
 }

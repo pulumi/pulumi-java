@@ -5,9 +5,9 @@ package com.pulumi.aws.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cidr")
-      private final @Nullable Output<String> cidr;
+    private @Nullable Output<String> cidr;
 
-    public Output<String> cidr() {
-        return this.cidr == null ? Codegen.empty() : this.cidr;
+    public Optional<Output<String>> cidr() {
+        return Optional.ofNullable(this.cidr);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="securityGroupName")
-      private final @Nullable Output<String> securityGroupName;
+    private @Nullable Output<String> securityGroupName;
 
-    public Output<String> securityGroupName() {
-        return this.securityGroupName == null ? Codegen.empty() : this.securityGroupName;
+    public Optional<Output<String>> securityGroupName() {
+        return Optional.ofNullable(this.securityGroupName);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class SecurityGroupIngressArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="securityGroupOwnerId")
-      private final @Nullable Output<String> securityGroupOwnerId;
+    private @Nullable Output<String> securityGroupOwnerId;
 
-    public Output<String> securityGroupOwnerId() {
-        return this.securityGroupOwnerId == null ? Codegen.empty() : this.securityGroupOwnerId;
+    public Optional<Output<String>> securityGroupOwnerId() {
+        return Optional.ofNullable(this.securityGroupOwnerId);
     }
 
-    public SecurityGroupIngressArgs(
-        @Nullable Output<String> cidr,
-        @Nullable Output<String> securityGroupName,
-        @Nullable Output<String> securityGroupOwnerId) {
-        this.cidr = cidr;
-        this.securityGroupName = securityGroupName;
-        this.securityGroupOwnerId = securityGroupOwnerId;
-    }
+    private SecurityGroupIngressArgs() {}
 
-    private SecurityGroupIngressArgs() {
-        this.cidr = Codegen.empty();
-        this.securityGroupName = Codegen.empty();
-        this.securityGroupOwnerId = Codegen.empty();
+    private SecurityGroupIngressArgs(SecurityGroupIngressArgs $) {
+        this.cidr = $.cidr;
+        this.securityGroupName = $.securityGroupName;
+        this.securityGroupOwnerId = $.securityGroupOwnerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityGroupIngressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cidr;
-        private @Nullable Output<String> securityGroupName;
-        private @Nullable Output<String> securityGroupOwnerId;
+        private SecurityGroupIngressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityGroupIngressArgs();
         }
 
         public Builder(SecurityGroupIngressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.securityGroupName = defaults.securityGroupName;
-    	      this.securityGroupOwnerId = defaults.securityGroupOwnerId;
+            $ = new SecurityGroupIngressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(@Nullable Output<String> cidr) {
-            this.cidr = cidr;
+            $.cidr = cidr;
             return this;
         }
-        public Builder cidr(@Nullable String cidr) {
-            this.cidr = Codegen.ofNullable(cidr);
-            return this;
+
+        public Builder cidr(String cidr) {
+            return cidr(Output.of(cidr));
         }
+
         public Builder securityGroupName(@Nullable Output<String> securityGroupName) {
-            this.securityGroupName = securityGroupName;
+            $.securityGroupName = securityGroupName;
             return this;
         }
-        public Builder securityGroupName(@Nullable String securityGroupName) {
-            this.securityGroupName = Codegen.ofNullable(securityGroupName);
-            return this;
+
+        public Builder securityGroupName(String securityGroupName) {
+            return securityGroupName(Output.of(securityGroupName));
         }
+
         public Builder securityGroupOwnerId(@Nullable Output<String> securityGroupOwnerId) {
-            this.securityGroupOwnerId = securityGroupOwnerId;
+            $.securityGroupOwnerId = securityGroupOwnerId;
             return this;
         }
-        public Builder securityGroupOwnerId(@Nullable String securityGroupOwnerId) {
-            this.securityGroupOwnerId = Codegen.ofNullable(securityGroupOwnerId);
-            return this;
-        }        public SecurityGroupIngressArgs build() {
-            return new SecurityGroupIngressArgs(cidr, securityGroupName, securityGroupOwnerId);
+
+        public Builder securityGroupOwnerId(String securityGroupOwnerId) {
+            return securityGroupOwnerId(Output.of(securityGroupOwnerId));
+        }
+
+        public SecurityGroupIngressArgs build() {
+            return $;
         }
     }
+
 }

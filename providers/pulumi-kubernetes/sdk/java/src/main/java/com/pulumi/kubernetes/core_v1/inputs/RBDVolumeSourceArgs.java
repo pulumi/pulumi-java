@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class RBDVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="fsType")
-      private final @Nullable Output<String> fsType;
+    private @Nullable Output<String> fsType;
 
-    public Output<String> fsType() {
-        return this.fsType == null ? Codegen.empty() : this.fsType;
+    public Optional<Output<String>> fsType() {
+        return Optional.ofNullable(this.fsType);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class RBDVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
@@ -49,10 +49,10 @@ public final class RBDVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="keyring")
-      private final @Nullable Output<String> keyring;
+    private @Nullable Output<String> keyring;
 
-    public Output<String> keyring() {
-        return this.keyring == null ? Codegen.empty() : this.keyring;
+    public Optional<Output<String>> keyring() {
+        return Optional.ofNullable(this.keyring);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class RBDVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="monitors", required=true)
-      private final Output<List<String>> monitors;
+    private Output<List<String>> monitors;
 
     public Output<List<String>> monitors() {
         return this.monitors;
@@ -71,10 +71,10 @@ public final class RBDVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="pool")
-      private final @Nullable Output<String> pool;
+    private @Nullable Output<String> pool;
 
-    public Output<String> pool() {
-        return this.pool == null ? Codegen.empty() : this.pool;
+    public Optional<Output<String>> pool() {
+        return Optional.ofNullable(this.pool);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class RBDVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class RBDVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="secretRef")
-      private final @Nullable Output<LocalObjectReferenceArgs> secretRef;
+    private @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
-    public Output<LocalObjectReferenceArgs> secretRef() {
-        return this.secretRef == null ? Codegen.empty() : this.secretRef;
+    public Optional<Output<LocalObjectReferenceArgs>> secretRef() {
+        return Optional.ofNullable(this.secretRef);
     }
 
     /**
@@ -104,144 +104,124 @@ public final class RBDVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public RBDVolumeSourceArgs(
-        @Nullable Output<String> fsType,
-        Output<String> image,
-        @Nullable Output<String> keyring,
-        Output<List<String>> monitors,
-        @Nullable Output<String> pool,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<LocalObjectReferenceArgs> secretRef,
-        @Nullable Output<String> user) {
-        this.fsType = fsType;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.keyring = keyring;
-        this.monitors = Objects.requireNonNull(monitors, "expected parameter 'monitors' to be non-null");
-        this.pool = pool;
-        this.readOnly = readOnly;
-        this.secretRef = secretRef;
-        this.user = user;
-    }
+    private RBDVolumeSourceArgs() {}
 
-    private RBDVolumeSourceArgs() {
-        this.fsType = Codegen.empty();
-        this.image = Codegen.empty();
-        this.keyring = Codegen.empty();
-        this.monitors = Codegen.empty();
-        this.pool = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.secretRef = Codegen.empty();
-        this.user = Codegen.empty();
+    private RBDVolumeSourceArgs(RBDVolumeSourceArgs $) {
+        this.fsType = $.fsType;
+        this.image = $.image;
+        this.keyring = $.keyring;
+        this.monitors = $.monitors;
+        this.pool = $.pool;
+        this.readOnly = $.readOnly;
+        this.secretRef = $.secretRef;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RBDVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fsType;
-        private Output<String> image;
-        private @Nullable Output<String> keyring;
-        private Output<List<String>> monitors;
-        private @Nullable Output<String> pool;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<LocalObjectReferenceArgs> secretRef;
-        private @Nullable Output<String> user;
+        private RBDVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RBDVolumeSourceArgs();
         }
 
         public Builder(RBDVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fsType = defaults.fsType;
-    	      this.image = defaults.image;
-    	      this.keyring = defaults.keyring;
-    	      this.monitors = defaults.monitors;
-    	      this.pool = defaults.pool;
-    	      this.readOnly = defaults.readOnly;
-    	      this.secretRef = defaults.secretRef;
-    	      this.user = defaults.user;
+            $ = new RBDVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fsType(@Nullable Output<String> fsType) {
-            this.fsType = fsType;
+            $.fsType = fsType;
             return this;
         }
-        public Builder fsType(@Nullable String fsType) {
-            this.fsType = Codegen.ofNullable(fsType);
-            return this;
+
+        public Builder fsType(String fsType) {
+            return fsType(Output.of(fsType));
         }
+
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder keyring(@Nullable Output<String> keyring) {
-            this.keyring = keyring;
+            $.keyring = keyring;
             return this;
         }
-        public Builder keyring(@Nullable String keyring) {
-            this.keyring = Codegen.ofNullable(keyring);
-            return this;
+
+        public Builder keyring(String keyring) {
+            return keyring(Output.of(keyring));
         }
+
         public Builder monitors(Output<List<String>> monitors) {
-            this.monitors = Objects.requireNonNull(monitors);
+            $.monitors = monitors;
             return this;
         }
+
         public Builder monitors(List<String> monitors) {
-            this.monitors = Output.of(Objects.requireNonNull(monitors));
-            return this;
+            return monitors(Output.of(monitors));
         }
+
         public Builder monitors(String... monitors) {
             return monitors(List.of(monitors));
         }
+
         public Builder pool(@Nullable Output<String> pool) {
-            this.pool = pool;
+            $.pool = pool;
             return this;
         }
-        public Builder pool(@Nullable String pool) {
-            this.pool = Codegen.ofNullable(pool);
-            return this;
+
+        public Builder pool(String pool) {
+            return pool(Output.of(pool));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder secretRef(@Nullable Output<LocalObjectReferenceArgs> secretRef) {
-            this.secretRef = secretRef;
+            $.secretRef = secretRef;
             return this;
         }
-        public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
-            this.secretRef = Codegen.ofNullable(secretRef);
-            return this;
+
+        public Builder secretRef(LocalObjectReferenceArgs secretRef) {
+            return secretRef(Output.of(secretRef));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public RBDVolumeSourceArgs build() {
-            return new RBDVolumeSourceArgs(fsType, image, keyring, monitors, pool, readOnly, secretRef, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public RBDVolumeSourceArgs build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.monitors = Objects.requireNonNull($.monitors, "expected parameter 'monitors' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class RepositoryImageScanningConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="scanOnPush", required=true)
-      private final Output<Boolean> scanOnPush;
+    private Output<Boolean> scanOnPush;
 
     public Output<Boolean> scanOnPush() {
         return this.scanOnPush;
     }
 
-    public RepositoryImageScanningConfigurationGetArgs(Output<Boolean> scanOnPush) {
-        this.scanOnPush = Objects.requireNonNull(scanOnPush, "expected parameter 'scanOnPush' to be non-null");
-    }
+    private RepositoryImageScanningConfigurationGetArgs() {}
 
-    private RepositoryImageScanningConfigurationGetArgs() {
-        this.scanOnPush = Codegen.empty();
+    private RepositoryImageScanningConfigurationGetArgs(RepositoryImageScanningConfigurationGetArgs $) {
+        this.scanOnPush = $.scanOnPush;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryImageScanningConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> scanOnPush;
+        private RepositoryImageScanningConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryImageScanningConfigurationGetArgs();
         }
 
         public Builder(RepositoryImageScanningConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scanOnPush = defaults.scanOnPush;
+            $ = new RepositoryImageScanningConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scanOnPush(Output<Boolean> scanOnPush) {
-            this.scanOnPush = Objects.requireNonNull(scanOnPush);
+            $.scanOnPush = scanOnPush;
             return this;
         }
+
         public Builder scanOnPush(Boolean scanOnPush) {
-            this.scanOnPush = Output.of(Objects.requireNonNull(scanOnPush));
-            return this;
-        }        public RepositoryImageScanningConfigurationGetArgs build() {
-            return new RepositoryImageScanningConfigurationGetArgs(scanOnPush);
+            return scanOnPush(Output.of(scanOnPush));
+        }
+
+        public RepositoryImageScanningConfigurationGetArgs build() {
+            $.scanOnPush = Objects.requireNonNull($.scanOnPush, "expected parameter 'scanOnPush' to be non-null");
+            return $;
         }
     }
+
 }

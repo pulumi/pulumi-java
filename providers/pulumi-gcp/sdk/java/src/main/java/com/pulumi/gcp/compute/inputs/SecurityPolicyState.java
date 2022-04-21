@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigGetArgs;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="adaptiveProtectionConfig")
-      private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
+    private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
 
-    public Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig() {
-        return this.adaptiveProtectionConfig == null ? Codegen.empty() : this.adaptiveProtectionConfig;
+    public Optional<Output<SecurityPolicyAdaptiveProtectionConfigGetArgs>> adaptiveProtectionConfig() {
+        return Optional.ofNullable(this.adaptiveProtectionConfig);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="fingerprint")
-      private final @Nullable Output<String> fingerprint;
+    private @Nullable Output<String> fingerprint;
 
-    public Output<String> fingerprint() {
-        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
+    public Optional<Output<String>> fingerprint() {
+        return Optional.ofNullable(this.fingerprint);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<SecurityPolicyRuleGetArgs>> rules;
+    private @Nullable Output<List<SecurityPolicyRuleGetArgs>> rules;
 
-    public Output<List<SecurityPolicyRuleGetArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<SecurityPolicyRuleGetArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -92,131 +92,112 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public SecurityPolicyState(
-        @Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig,
-        @Nullable Output<String> description,
-        @Nullable Output<String> fingerprint,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<SecurityPolicyRuleGetArgs>> rules,
-        @Nullable Output<String> selfLink) {
-        this.adaptiveProtectionConfig = adaptiveProtectionConfig;
-        this.description = description;
-        this.fingerprint = fingerprint;
-        this.name = name;
-        this.project = project;
-        this.rules = rules;
-        this.selfLink = selfLink;
-    }
+    private SecurityPolicyState() {}
 
-    private SecurityPolicyState() {
-        this.adaptiveProtectionConfig = Codegen.empty();
-        this.description = Codegen.empty();
-        this.fingerprint = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private SecurityPolicyState(SecurityPolicyState $) {
+        this.adaptiveProtectionConfig = $.adaptiveProtectionConfig;
+        this.description = $.description;
+        this.fingerprint = $.fingerprint;
+        this.name = $.name;
+        this.project = $.project;
+        this.rules = $.rules;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> fingerprint;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<SecurityPolicyRuleGetArgs>> rules;
-        private @Nullable Output<String> selfLink;
+        private SecurityPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyState();
         }
 
         public Builder(SecurityPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adaptiveProtectionConfig = defaults.adaptiveProtectionConfig;
-    	      this.description = defaults.description;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rules = defaults.rules;
-    	      this.selfLink = defaults.selfLink;
+            $ = new SecurityPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder adaptiveProtectionConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = adaptiveProtectionConfig;
+            $.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
-        public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigGetArgs adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = Codegen.ofNullable(adaptiveProtectionConfig);
-            return this;
+
+        public Builder adaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfigGetArgs adaptiveProtectionConfig) {
+            return adaptiveProtectionConfig(Output.of(adaptiveProtectionConfig));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
-            this.fingerprint = fingerprint;
+            $.fingerprint = fingerprint;
             return this;
         }
-        public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Codegen.ofNullable(fingerprint);
-            return this;
+
+        public Builder fingerprint(String fingerprint) {
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleGetArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<SecurityPolicyRuleGetArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<SecurityPolicyRuleGetArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(SecurityPolicyRuleGetArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public SecurityPolicyState build() {
-            return new SecurityPolicyState(adaptiveProtectionConfig, description, fingerprint, name, project, rules, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public SecurityPolicyState build() {
+            return $;
         }
     }
+
 }

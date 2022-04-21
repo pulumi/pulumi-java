@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,70 +15,67 @@ public final class ResponseHeadersPolicyFrameOptionsArgs extends com.pulumi.reso
     public static final ResponseHeadersPolicyFrameOptionsArgs Empty = new ResponseHeadersPolicyFrameOptionsArgs();
 
     @Import(name="frameOption", required=true)
-      private final Output<String> frameOption;
+    private Output<String> frameOption;
 
     public Output<String> frameOption() {
         return this.frameOption;
     }
 
     @Import(name="override", required=true)
-      private final Output<Boolean> override;
+    private Output<Boolean> override;
 
     public Output<Boolean> override() {
         return this.override;
     }
 
-    public ResponseHeadersPolicyFrameOptionsArgs(
-        Output<String> frameOption,
-        Output<Boolean> override) {
-        this.frameOption = Objects.requireNonNull(frameOption, "expected parameter 'frameOption' to be non-null");
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-    }
+    private ResponseHeadersPolicyFrameOptionsArgs() {}
 
-    private ResponseHeadersPolicyFrameOptionsArgs() {
-        this.frameOption = Codegen.empty();
-        this.override = Codegen.empty();
+    private ResponseHeadersPolicyFrameOptionsArgs(ResponseHeadersPolicyFrameOptionsArgs $) {
+        this.frameOption = $.frameOption;
+        this.override = $.override;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyFrameOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> frameOption;
-        private Output<Boolean> override;
+        private ResponseHeadersPolicyFrameOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyFrameOptionsArgs();
         }
 
         public Builder(ResponseHeadersPolicyFrameOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frameOption = defaults.frameOption;
-    	      this.override = defaults.override;
+            $ = new ResponseHeadersPolicyFrameOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frameOption(Output<String> frameOption) {
-            this.frameOption = Objects.requireNonNull(frameOption);
+            $.frameOption = frameOption;
             return this;
         }
+
         public Builder frameOption(String frameOption) {
-            this.frameOption = Output.of(Objects.requireNonNull(frameOption));
-            return this;
+            return frameOption(Output.of(frameOption));
         }
+
         public Builder override(Output<Boolean> override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Output.of(Objects.requireNonNull(override));
-            return this;
-        }        public ResponseHeadersPolicyFrameOptionsArgs build() {
-            return new ResponseHeadersPolicyFrameOptionsArgs(frameOption, override);
+            return override(Output.of(override));
+        }
+
+        public ResponseHeadersPolicyFrameOptionsArgs build() {
+            $.frameOption = Objects.requireNonNull($.frameOption, "expected parameter 'frameOption' to be non-null");
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

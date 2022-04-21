@@ -15,78 +15,72 @@ public final class GetOsPolicyAssignmentArgs extends com.pulumi.resources.Invoke
     public static final GetOsPolicyAssignmentArgs Empty = new GetOsPolicyAssignmentArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="osPolicyAssignmentId", required=true)
-      private final String osPolicyAssignmentId;
+    private String osPolicyAssignmentId;
 
     public String osPolicyAssignmentId() {
         return this.osPolicyAssignmentId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetOsPolicyAssignmentArgs(
-        String location,
-        String osPolicyAssignmentId,
-        @Nullable String project) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.osPolicyAssignmentId = Objects.requireNonNull(osPolicyAssignmentId, "expected parameter 'osPolicyAssignmentId' to be non-null");
-        this.project = project;
-    }
+    private GetOsPolicyAssignmentArgs() {}
 
-    private GetOsPolicyAssignmentArgs() {
-        this.location = null;
-        this.osPolicyAssignmentId = null;
-        this.project = null;
+    private GetOsPolicyAssignmentArgs(GetOsPolicyAssignmentArgs $) {
+        this.location = $.location;
+        this.osPolicyAssignmentId = $.osPolicyAssignmentId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOsPolicyAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String osPolicyAssignmentId;
-        private @Nullable String project;
+        private GetOsPolicyAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOsPolicyAssignmentArgs();
         }
 
         public Builder(GetOsPolicyAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.osPolicyAssignmentId = defaults.osPolicyAssignmentId;
-    	      this.project = defaults.project;
+            $ = new GetOsPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder osPolicyAssignmentId(String osPolicyAssignmentId) {
-            this.osPolicyAssignmentId = Objects.requireNonNull(osPolicyAssignmentId);
+            $.osPolicyAssignmentId = osPolicyAssignmentId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetOsPolicyAssignmentArgs build() {
-            return new GetOsPolicyAssignmentArgs(location, osPolicyAssignmentId, project);
+        }
+
+        public GetOsPolicyAssignmentArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.osPolicyAssignmentId = Objects.requireNonNull($.osPolicyAssignmentId, "expected parameter 'osPolicyAssignmentId' to be non-null");
+            return $;
         }
     }
+
 }

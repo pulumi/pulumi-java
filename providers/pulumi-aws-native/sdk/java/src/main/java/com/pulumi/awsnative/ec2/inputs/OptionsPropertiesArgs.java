@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="applianceModeSupport")
-      private final @Nullable Output<String> applianceModeSupport;
+    private @Nullable Output<String> applianceModeSupport;
 
-    public Output<String> applianceModeSupport() {
-        return this.applianceModeSupport == null ? Codegen.empty() : this.applianceModeSupport;
+    public Optional<Output<String>> applianceModeSupport() {
+        return Optional.ofNullable(this.applianceModeSupport);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dnsSupport")
-      private final @Nullable Output<String> dnsSupport;
+    private @Nullable Output<String> dnsSupport;
 
-    public Output<String> dnsSupport() {
-        return this.dnsSupport == null ? Codegen.empty() : this.dnsSupport;
+    public Optional<Output<String>> dnsSupport() {
+        return Optional.ofNullable(this.dnsSupport);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="ipv6Support")
-      private final @Nullable Output<String> ipv6Support;
+    private @Nullable Output<String> ipv6Support;
 
-    public Output<String> ipv6Support() {
-        return this.ipv6Support == null ? Codegen.empty() : this.ipv6Support;
+    public Optional<Output<String>> ipv6Support() {
+        return Optional.ofNullable(this.ipv6Support);
     }
 
-    public OptionsPropertiesArgs(
-        @Nullable Output<String> applianceModeSupport,
-        @Nullable Output<String> dnsSupport,
-        @Nullable Output<String> ipv6Support) {
-        this.applianceModeSupport = applianceModeSupport;
-        this.dnsSupport = dnsSupport;
-        this.ipv6Support = ipv6Support;
-    }
+    private OptionsPropertiesArgs() {}
 
-    private OptionsPropertiesArgs() {
-        this.applianceModeSupport = Codegen.empty();
-        this.dnsSupport = Codegen.empty();
-        this.ipv6Support = Codegen.empty();
+    private OptionsPropertiesArgs(OptionsPropertiesArgs $) {
+        this.applianceModeSupport = $.applianceModeSupport;
+        this.dnsSupport = $.dnsSupport;
+        this.ipv6Support = $.ipv6Support;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OptionsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applianceModeSupport;
-        private @Nullable Output<String> dnsSupport;
-        private @Nullable Output<String> ipv6Support;
+        private OptionsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OptionsPropertiesArgs();
         }
 
         public Builder(OptionsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applianceModeSupport = defaults.applianceModeSupport;
-    	      this.dnsSupport = defaults.dnsSupport;
-    	      this.ipv6Support = defaults.ipv6Support;
+            $ = new OptionsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applianceModeSupport(@Nullable Output<String> applianceModeSupport) {
-            this.applianceModeSupport = applianceModeSupport;
+            $.applianceModeSupport = applianceModeSupport;
             return this;
         }
-        public Builder applianceModeSupport(@Nullable String applianceModeSupport) {
-            this.applianceModeSupport = Codegen.ofNullable(applianceModeSupport);
-            return this;
+
+        public Builder applianceModeSupport(String applianceModeSupport) {
+            return applianceModeSupport(Output.of(applianceModeSupport));
         }
+
         public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
-            this.dnsSupport = dnsSupport;
+            $.dnsSupport = dnsSupport;
             return this;
         }
-        public Builder dnsSupport(@Nullable String dnsSupport) {
-            this.dnsSupport = Codegen.ofNullable(dnsSupport);
-            return this;
+
+        public Builder dnsSupport(String dnsSupport) {
+            return dnsSupport(Output.of(dnsSupport));
         }
+
         public Builder ipv6Support(@Nullable Output<String> ipv6Support) {
-            this.ipv6Support = ipv6Support;
+            $.ipv6Support = ipv6Support;
             return this;
         }
-        public Builder ipv6Support(@Nullable String ipv6Support) {
-            this.ipv6Support = Codegen.ofNullable(ipv6Support);
-            return this;
-        }        public OptionsPropertiesArgs build() {
-            return new OptionsPropertiesArgs(applianceModeSupport, dnsSupport, ipv6Support);
+
+        public Builder ipv6Support(String ipv6Support) {
+            return ipv6Support(Output.of(ipv6Support));
+        }
+
+        public OptionsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

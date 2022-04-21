@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,17 +21,17 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="caPool", required=true)
-      private final Output<String> caPool;
+    private Output<String> caPool;
 
     public Output<String> caPool() {
         return this.caPool;
     }
 
     @Import(name="condition")
-      private final @Nullable Output<CaPoolIamMemberConditionArgs> condition;
+    private @Nullable Output<CaPoolIamMemberConditionArgs> condition;
 
-    public Output<CaPoolIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<CaPoolIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -41,14 +41,14 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -60,10 +60,10 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -73,115 +73,101 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public CaPoolIamMemberArgs(
-        Output<String> caPool,
-        @Nullable Output<CaPoolIamMemberConditionArgs> condition,
-        @Nullable Output<String> location,
-        Output<String> member,
-        @Nullable Output<String> project,
-        Output<String> role) {
-        this.caPool = Objects.requireNonNull(caPool, "expected parameter 'caPool' to be non-null");
-        this.condition = condition;
-        this.location = location;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private CaPoolIamMemberArgs() {}
 
-    private CaPoolIamMemberArgs() {
-        this.caPool = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.location = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
+    private CaPoolIamMemberArgs(CaPoolIamMemberArgs $) {
+        this.caPool = $.caPool;
+        this.condition = $.condition;
+        this.location = $.location;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> caPool;
-        private @Nullable Output<CaPoolIamMemberConditionArgs> condition;
-        private @Nullable Output<String> location;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private Output<String> role;
+        private CaPoolIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIamMemberArgs();
         }
 
         public Builder(CaPoolIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caPool = defaults.caPool;
-    	      this.condition = defaults.condition;
-    	      this.location = defaults.location;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
+            $ = new CaPoolIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caPool(Output<String> caPool) {
-            this.caPool = Objects.requireNonNull(caPool);
+            $.caPool = caPool;
             return this;
         }
+
         public Builder caPool(String caPool) {
-            this.caPool = Output.of(Objects.requireNonNull(caPool));
-            return this;
+            return caPool(Output.of(caPool));
         }
+
         public Builder condition(@Nullable Output<CaPoolIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable CaPoolIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(CaPoolIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public CaPoolIamMemberArgs build() {
-            return new CaPoolIamMemberArgs(caPool, condition, location, member, project, role);
+            return role(Output.of(role));
+        }
+
+        public CaPoolIamMemberArgs build() {
+            $.caPool = Objects.requireNonNull($.caPool, "expected parameter 'caPool' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

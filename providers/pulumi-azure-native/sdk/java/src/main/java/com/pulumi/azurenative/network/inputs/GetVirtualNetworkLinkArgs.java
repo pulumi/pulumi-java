@@ -17,7 +17,7 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="privateZoneName", required=true)
-      private final String privateZoneName;
+    private String privateZoneName;
 
     public String privateZoneName() {
         return this.privateZoneName;
@@ -28,7 +28,7 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="virtualNetworkLinkName", required=true)
-      private final String virtualNetworkLinkName;
+    private String virtualNetworkLinkName;
 
     public String virtualNetworkLinkName() {
         return this.virtualNetworkLinkName;
     }
 
-    public GetVirtualNetworkLinkArgs(
-        String privateZoneName,
-        String resourceGroupName,
-        String virtualNetworkLinkName) {
-        this.privateZoneName = Objects.requireNonNull(privateZoneName, "expected parameter 'privateZoneName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkLinkName = Objects.requireNonNull(virtualNetworkLinkName, "expected parameter 'virtualNetworkLinkName' to be non-null");
-    }
+    private GetVirtualNetworkLinkArgs() {}
 
-    private GetVirtualNetworkLinkArgs() {
-        this.privateZoneName = null;
-        this.resourceGroupName = null;
-        this.virtualNetworkLinkName = null;
+    private GetVirtualNetworkLinkArgs(GetVirtualNetworkLinkArgs $) {
+        this.privateZoneName = $.privateZoneName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkLinkName = $.virtualNetworkLinkName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualNetworkLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateZoneName;
-        private String resourceGroupName;
-        private String virtualNetworkLinkName;
+        private GetVirtualNetworkLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualNetworkLinkArgs();
         }
 
         public Builder(GetVirtualNetworkLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateZoneName = defaults.privateZoneName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkLinkName = defaults.virtualNetworkLinkName;
+            $ = new GetVirtualNetworkLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateZoneName(String privateZoneName) {
-            this.privateZoneName = Objects.requireNonNull(privateZoneName);
+            $.privateZoneName = privateZoneName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualNetworkLinkName(String virtualNetworkLinkName) {
-            this.virtualNetworkLinkName = Objects.requireNonNull(virtualNetworkLinkName);
+            $.virtualNetworkLinkName = virtualNetworkLinkName;
             return this;
-        }        public GetVirtualNetworkLinkArgs build() {
-            return new GetVirtualNetworkLinkArgs(privateZoneName, resourceGroupName, virtualNetworkLinkName);
+        }
+
+        public GetVirtualNetworkLinkArgs build() {
+            $.privateZoneName = Objects.requireNonNull($.privateZoneName, "expected parameter 'privateZoneName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkLinkName = Objects.requireNonNull($.virtualNetworkLinkName, "expected parameter 'virtualNetworkLinkName' to be non-null");
+            return $;
         }
     }
+
 }

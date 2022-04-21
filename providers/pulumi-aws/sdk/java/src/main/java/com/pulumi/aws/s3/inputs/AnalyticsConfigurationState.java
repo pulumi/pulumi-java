@@ -7,9 +7,9 @@ import com.pulumi.aws.s3.inputs.AnalyticsConfigurationFilterGetArgs;
 import com.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<AnalyticsConfigurationFilterGetArgs> filter;
+    private @Nullable Output<AnalyticsConfigurationFilterGetArgs> filter;
 
-    public Output<AnalyticsConfigurationFilterGetArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<AnalyticsConfigurationFilterGetArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="storageClassAnalysis")
-      private final @Nullable Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis;
+    private @Nullable Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis;
 
-    public Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis() {
-        return this.storageClassAnalysis == null ? Codegen.empty() : this.storageClassAnalysis;
+    public Optional<Output<AnalyticsConfigurationStorageClassAnalysisGetArgs>> storageClassAnalysis() {
+        return Optional.ofNullable(this.storageClassAnalysis);
     }
 
-    public AnalyticsConfigurationState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<AnalyticsConfigurationFilterGetArgs> filter,
-        @Nullable Output<String> name,
-        @Nullable Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis) {
-        this.bucket = bucket;
-        this.filter = filter;
-        this.name = name;
-        this.storageClassAnalysis = storageClassAnalysis;
-    }
+    private AnalyticsConfigurationState() {}
 
-    private AnalyticsConfigurationState() {
-        this.bucket = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.storageClassAnalysis = Codegen.empty();
+    private AnalyticsConfigurationState(AnalyticsConfigurationState $) {
+        this.bucket = $.bucket;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.storageClassAnalysis = $.storageClassAnalysis;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<AnalyticsConfigurationFilterGetArgs> filter;
-        private @Nullable Output<String> name;
-        private @Nullable Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis;
+        private AnalyticsConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsConfigurationState();
         }
 
         public Builder(AnalyticsConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.storageClassAnalysis = defaults.storageClassAnalysis;
+            $ = new AnalyticsConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder filter(@Nullable Output<AnalyticsConfigurationFilterGetArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable AnalyticsConfigurationFilterGetArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(AnalyticsConfigurationFilterGetArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder storageClassAnalysis(@Nullable Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis) {
-            this.storageClassAnalysis = storageClassAnalysis;
+            $.storageClassAnalysis = storageClassAnalysis;
             return this;
         }
-        public Builder storageClassAnalysis(@Nullable AnalyticsConfigurationStorageClassAnalysisGetArgs storageClassAnalysis) {
-            this.storageClassAnalysis = Codegen.ofNullable(storageClassAnalysis);
-            return this;
-        }        public AnalyticsConfigurationState build() {
-            return new AnalyticsConfigurationState(bucket, filter, name, storageClassAnalysis);
+
+        public Builder storageClassAnalysis(AnalyticsConfigurationStorageClassAnalysisGetArgs storageClassAnalysis) {
+            return storageClassAnalysis(Output.of(storageClassAnalysis));
+        }
+
+        public AnalyticsConfigurationState build() {
+            return $;
         }
     }
+
 }

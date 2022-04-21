@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerUpdatePolicyInstanceRedistributionType;
 import com.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerUpdatePolicyMinimalAction;
 import com.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction;
@@ -14,6 +13,7 @@ import com.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerUpdatePoli
 import com.pulumi.googlenative.compute_beta.inputs.FixedOrPercentArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="instanceRedistributionType")
-      private final @Nullable Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType;
+    private @Nullable Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType;
 
-    public Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType() {
-        return this.instanceRedistributionType == null ? Codegen.empty() : this.instanceRedistributionType;
+    public Optional<Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType>> instanceRedistributionType() {
+        return Optional.ofNullable(this.instanceRedistributionType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maxSurge")
-      private final @Nullable Output<FixedOrPercentArgs> maxSurge;
+    private @Nullable Output<FixedOrPercentArgs> maxSurge;
 
-    public Output<FixedOrPercentArgs> maxSurge() {
-        return this.maxSurge == null ? Codegen.empty() : this.maxSurge;
+    public Optional<Output<FixedOrPercentArgs>> maxSurge() {
+        return Optional.ofNullable(this.maxSurge);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maxUnavailable")
-      private final @Nullable Output<FixedOrPercentArgs> maxUnavailable;
+    private @Nullable Output<FixedOrPercentArgs> maxUnavailable;
 
-    public Output<FixedOrPercentArgs> maxUnavailable() {
-        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
+    public Optional<Output<FixedOrPercentArgs>> maxUnavailable() {
+        return Optional.ofNullable(this.maxUnavailable);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="minReadySec")
-      private final @Nullable Output<Integer> minReadySec;
+    private @Nullable Output<Integer> minReadySec;
 
-    public Output<Integer> minReadySec() {
-        return this.minReadySec == null ? Codegen.empty() : this.minReadySec;
+    public Optional<Output<Integer>> minReadySec() {
+        return Optional.ofNullable(this.minReadySec);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="minimalAction")
-      private final @Nullable Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction;
+    private @Nullable Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction;
 
-    public Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction() {
-        return this.minimalAction == null ? Codegen.empty() : this.minimalAction;
+    public Optional<Output<InstanceGroupManagerUpdatePolicyMinimalAction>> minimalAction() {
+        return Optional.ofNullable(this.minimalAction);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="mostDisruptiveAllowedAction")
-      private final @Nullable Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction;
+    private @Nullable Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction;
 
-    public Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction() {
-        return this.mostDisruptiveAllowedAction == null ? Codegen.empty() : this.mostDisruptiveAllowedAction;
+    public Optional<Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction>> mostDisruptiveAllowedAction() {
+        return Optional.ofNullable(this.mostDisruptiveAllowedAction);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="replacementMethod")
-      private final @Nullable Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod;
+    private @Nullable Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod;
 
-    public Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod() {
-        return this.replacementMethod == null ? Codegen.empty() : this.replacementMethod;
+    public Optional<Output<InstanceGroupManagerUpdatePolicyReplacementMethod>> replacementMethod() {
+        return Optional.ofNullable(this.replacementMethod);
     }
 
     /**
@@ -103,141 +103,118 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<InstanceGroupManagerUpdatePolicyType> type;
+    private @Nullable Output<InstanceGroupManagerUpdatePolicyType> type;
 
-    public Output<InstanceGroupManagerUpdatePolicyType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<InstanceGroupManagerUpdatePolicyType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public InstanceGroupManagerUpdatePolicyArgs(
-        @Nullable Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType,
-        @Nullable Output<FixedOrPercentArgs> maxSurge,
-        @Nullable Output<FixedOrPercentArgs> maxUnavailable,
-        @Nullable Output<Integer> minReadySec,
-        @Nullable Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction,
-        @Nullable Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction,
-        @Nullable Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod,
-        @Nullable Output<InstanceGroupManagerUpdatePolicyType> type) {
-        this.instanceRedistributionType = instanceRedistributionType;
-        this.maxSurge = maxSurge;
-        this.maxUnavailable = maxUnavailable;
-        this.minReadySec = minReadySec;
-        this.minimalAction = minimalAction;
-        this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
-        this.replacementMethod = replacementMethod;
-        this.type = type;
-    }
+    private InstanceGroupManagerUpdatePolicyArgs() {}
 
-    private InstanceGroupManagerUpdatePolicyArgs() {
-        this.instanceRedistributionType = Codegen.empty();
-        this.maxSurge = Codegen.empty();
-        this.maxUnavailable = Codegen.empty();
-        this.minReadySec = Codegen.empty();
-        this.minimalAction = Codegen.empty();
-        this.mostDisruptiveAllowedAction = Codegen.empty();
-        this.replacementMethod = Codegen.empty();
-        this.type = Codegen.empty();
+    private InstanceGroupManagerUpdatePolicyArgs(InstanceGroupManagerUpdatePolicyArgs $) {
+        this.instanceRedistributionType = $.instanceRedistributionType;
+        this.maxSurge = $.maxSurge;
+        this.maxUnavailable = $.maxUnavailable;
+        this.minReadySec = $.minReadySec;
+        this.minimalAction = $.minimalAction;
+        this.mostDisruptiveAllowedAction = $.mostDisruptiveAllowedAction;
+        this.replacementMethod = $.replacementMethod;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerUpdatePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType;
-        private @Nullable Output<FixedOrPercentArgs> maxSurge;
-        private @Nullable Output<FixedOrPercentArgs> maxUnavailable;
-        private @Nullable Output<Integer> minReadySec;
-        private @Nullable Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction;
-        private @Nullable Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction;
-        private @Nullable Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod;
-        private @Nullable Output<InstanceGroupManagerUpdatePolicyType> type;
+        private InstanceGroupManagerUpdatePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerUpdatePolicyArgs();
         }
 
         public Builder(InstanceGroupManagerUpdatePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceRedistributionType = defaults.instanceRedistributionType;
-    	      this.maxSurge = defaults.maxSurge;
-    	      this.maxUnavailable = defaults.maxUnavailable;
-    	      this.minReadySec = defaults.minReadySec;
-    	      this.minimalAction = defaults.minimalAction;
-    	      this.mostDisruptiveAllowedAction = defaults.mostDisruptiveAllowedAction;
-    	      this.replacementMethod = defaults.replacementMethod;
-    	      this.type = defaults.type;
+            $ = new InstanceGroupManagerUpdatePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceRedistributionType(@Nullable Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType) {
-            this.instanceRedistributionType = instanceRedistributionType;
+            $.instanceRedistributionType = instanceRedistributionType;
             return this;
         }
-        public Builder instanceRedistributionType(@Nullable InstanceGroupManagerUpdatePolicyInstanceRedistributionType instanceRedistributionType) {
-            this.instanceRedistributionType = Codegen.ofNullable(instanceRedistributionType);
-            return this;
+
+        public Builder instanceRedistributionType(InstanceGroupManagerUpdatePolicyInstanceRedistributionType instanceRedistributionType) {
+            return instanceRedistributionType(Output.of(instanceRedistributionType));
         }
+
         public Builder maxSurge(@Nullable Output<FixedOrPercentArgs> maxSurge) {
-            this.maxSurge = maxSurge;
+            $.maxSurge = maxSurge;
             return this;
         }
-        public Builder maxSurge(@Nullable FixedOrPercentArgs maxSurge) {
-            this.maxSurge = Codegen.ofNullable(maxSurge);
-            return this;
+
+        public Builder maxSurge(FixedOrPercentArgs maxSurge) {
+            return maxSurge(Output.of(maxSurge));
         }
+
         public Builder maxUnavailable(@Nullable Output<FixedOrPercentArgs> maxUnavailable) {
-            this.maxUnavailable = maxUnavailable;
+            $.maxUnavailable = maxUnavailable;
             return this;
         }
-        public Builder maxUnavailable(@Nullable FixedOrPercentArgs maxUnavailable) {
-            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
-            return this;
+
+        public Builder maxUnavailable(FixedOrPercentArgs maxUnavailable) {
+            return maxUnavailable(Output.of(maxUnavailable));
         }
+
         public Builder minReadySec(@Nullable Output<Integer> minReadySec) {
-            this.minReadySec = minReadySec;
+            $.minReadySec = minReadySec;
             return this;
         }
-        public Builder minReadySec(@Nullable Integer minReadySec) {
-            this.minReadySec = Codegen.ofNullable(minReadySec);
-            return this;
+
+        public Builder minReadySec(Integer minReadySec) {
+            return minReadySec(Output.of(minReadySec));
         }
+
         public Builder minimalAction(@Nullable Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction) {
-            this.minimalAction = minimalAction;
+            $.minimalAction = minimalAction;
             return this;
         }
-        public Builder minimalAction(@Nullable InstanceGroupManagerUpdatePolicyMinimalAction minimalAction) {
-            this.minimalAction = Codegen.ofNullable(minimalAction);
-            return this;
+
+        public Builder minimalAction(InstanceGroupManagerUpdatePolicyMinimalAction minimalAction) {
+            return minimalAction(Output.of(minimalAction));
         }
+
         public Builder mostDisruptiveAllowedAction(@Nullable Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction) {
-            this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
+            $.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
-        public Builder mostDisruptiveAllowedAction(@Nullable InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction mostDisruptiveAllowedAction) {
-            this.mostDisruptiveAllowedAction = Codegen.ofNullable(mostDisruptiveAllowedAction);
-            return this;
+
+        public Builder mostDisruptiveAllowedAction(InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction mostDisruptiveAllowedAction) {
+            return mostDisruptiveAllowedAction(Output.of(mostDisruptiveAllowedAction));
         }
+
         public Builder replacementMethod(@Nullable Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod) {
-            this.replacementMethod = replacementMethod;
+            $.replacementMethod = replacementMethod;
             return this;
         }
-        public Builder replacementMethod(@Nullable InstanceGroupManagerUpdatePolicyReplacementMethod replacementMethod) {
-            this.replacementMethod = Codegen.ofNullable(replacementMethod);
-            return this;
+
+        public Builder replacementMethod(InstanceGroupManagerUpdatePolicyReplacementMethod replacementMethod) {
+            return replacementMethod(Output.of(replacementMethod));
         }
+
         public Builder type(@Nullable Output<InstanceGroupManagerUpdatePolicyType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable InstanceGroupManagerUpdatePolicyType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public InstanceGroupManagerUpdatePolicyArgs build() {
-            return new InstanceGroupManagerUpdatePolicyArgs(instanceRedistributionType, maxSurge, maxUnavailable, minReadySec, minimalAction, mostDisruptiveAllowedAction, replacementMethod, type);
+
+        public Builder type(InstanceGroupManagerUpdatePolicyType type) {
+            return type(Output.of(type));
+        }
+
+        public InstanceGroupManagerUpdatePolicyArgs build() {
+            return $;
         }
     }
+
 }

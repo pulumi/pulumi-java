@@ -6,8 +6,8 @@ package com.pulumi.azurenative.appconfiguration.inputs;
 import com.pulumi.azurenative.appconfiguration.inputs.KeyVaultPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
+    private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
+    public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
-    public EncryptionPropertiesArgs(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
-        this.keyVaultProperties = keyVaultProperties;
-    }
+    private EncryptionPropertiesArgs() {}
 
-    private EncryptionPropertiesArgs() {
-        this.keyVaultProperties = Codegen.empty();
+    private EncryptionPropertiesArgs(EncryptionPropertiesArgs $) {
+        this.keyVaultProperties = $.keyVaultProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
+        private EncryptionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPropertiesArgs();
         }
 
         public Builder(EncryptionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
+            $ = new EncryptionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
-        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
-            return this;
-        }        public EncryptionPropertiesArgs build() {
-            return new EncryptionPropertiesArgs(keyVaultProperties);
+
+        public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
+            return keyVaultProperties(Output.of(keyVaultProperties));
+        }
+
+        public EncryptionPropertiesArgs build() {
+            return $;
         }
     }
+
 }

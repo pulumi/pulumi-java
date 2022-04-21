@@ -7,9 +7,9 @@ import com.pulumi.azurenative.machinelearning.enums.DiagnosticsLevel;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DiagnosticsConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="expiry")
-      private final @Nullable Output<String> expiry;
+    private @Nullable Output<String> expiry;
 
-    public Output<String> expiry() {
-        return this.expiry == null ? Codegen.empty() : this.expiry;
+    public Optional<Output<String>> expiry() {
+        return Optional.ofNullable(this.expiry);
     }
 
     /**
@@ -37,63 +37,59 @@ public final class DiagnosticsConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="level", required=true)
-      private final Output<Either<String,DiagnosticsLevel>> level;
+    private Output<Either<String,DiagnosticsLevel>> level;
 
     public Output<Either<String,DiagnosticsLevel>> level() {
         return this.level;
     }
 
-    public DiagnosticsConfigurationArgs(
-        @Nullable Output<String> expiry,
-        Output<Either<String,DiagnosticsLevel>> level) {
-        this.expiry = expiry;
-        this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
-    }
+    private DiagnosticsConfigurationArgs() {}
 
-    private DiagnosticsConfigurationArgs() {
-        this.expiry = Codegen.empty();
-        this.level = Codegen.empty();
+    private DiagnosticsConfigurationArgs(DiagnosticsConfigurationArgs $) {
+        this.expiry = $.expiry;
+        this.level = $.level;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expiry;
-        private Output<Either<String,DiagnosticsLevel>> level;
+        private DiagnosticsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticsConfigurationArgs();
         }
 
         public Builder(DiagnosticsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiry = defaults.expiry;
-    	      this.level = defaults.level;
+            $ = new DiagnosticsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expiry(@Nullable Output<String> expiry) {
-            this.expiry = expiry;
+            $.expiry = expiry;
             return this;
         }
-        public Builder expiry(@Nullable String expiry) {
-            this.expiry = Codegen.ofNullable(expiry);
-            return this;
+
+        public Builder expiry(String expiry) {
+            return expiry(Output.of(expiry));
         }
+
         public Builder level(Output<Either<String,DiagnosticsLevel>> level) {
-            this.level = Objects.requireNonNull(level);
+            $.level = level;
             return this;
         }
+
         public Builder level(Either<String,DiagnosticsLevel> level) {
-            this.level = Output.of(Objects.requireNonNull(level));
-            return this;
-        }        public DiagnosticsConfigurationArgs build() {
-            return new DiagnosticsConfigurationArgs(expiry, level);
+            return level(Output.of(level));
+        }
+
+        public DiagnosticsConfigurationArgs build() {
+            $.level = Objects.requireNonNull($.level, "expected parameter 'level' to be non-null");
+            return $;
         }
     }
+
 }

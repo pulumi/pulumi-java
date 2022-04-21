@@ -32,10 +32,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="allowHostNameCNMismatch")
-      private final @Nullable Object allowHostNameCNMismatch;
+    private @Nullable Object allowHostNameCNMismatch;
 
     public Optional<Object> allowHostNameCNMismatch() {
-        return this.allowHostNameCNMismatch == null ? Optional.empty() : Optional.ofNullable(this.allowHostNameCNMismatch);
+        return Optional.ofNullable(this.allowHostNameCNMismatch);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="allowSelfSignedServerCert")
-      private final @Nullable Object allowSelfSignedServerCert;
+    private @Nullable Object allowSelfSignedServerCert;
 
     public Optional<Object> allowSelfSignedServerCert() {
-        return this.allowSelfSignedServerCert == null ? Optional.empty() : Optional.ofNullable(this.allowSelfSignedServerCert);
+        return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final String authenticationType;
+    private String authenticationType;
 
     public String authenticationType() {
         return this.authenticationType;
@@ -76,10 +76,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enableSsl")
-      private final @Nullable Object enableSsl;
+    private @Nullable Object enableSsl;
 
     public Optional<Object> enableSsl() {
-        return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
+        return Optional.ofNullable(this.enableSsl);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -120,7 +120,7 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="host", required=true)
-      private final Object host;
+    private Object host;
 
     public Object host() {
         return this.host;
@@ -131,10 +131,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="httpPath")
-      private final @Nullable Object httpPath;
+    private @Nullable Object httpPath;
 
     public Optional<Object> httpPath() {
-        return this.httpPath == null ? Optional.empty() : Optional.ofNullable(this.httpPath);
+        return Optional.ofNullable(this.httpPath);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="port")
-      private final @Nullable Object port;
+    private @Nullable Object port;
 
     public Optional<Object> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serverType")
-      private final @Nullable String serverType;
+    private @Nullable String serverType;
 
     public Optional<String> serverType() {
-        return this.serverType == null ? Optional.empty() : Optional.ofNullable(this.serverType);
+        return Optional.ofNullable(this.serverType);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceDiscoveryMode")
-      private final @Nullable Object serviceDiscoveryMode;
+    private @Nullable Object serviceDiscoveryMode;
 
     public Optional<Object> serviceDiscoveryMode() {
-        return this.serviceDiscoveryMode == null ? Optional.empty() : Optional.ofNullable(this.serviceDiscoveryMode);
+        return Optional.ofNullable(this.serviceDiscoveryMode);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="thriftTransportProtocol")
-      private final @Nullable String thriftTransportProtocol;
+    private @Nullable String thriftTransportProtocol;
 
     public Optional<String> thriftTransportProtocol() {
-        return this.thriftTransportProtocol == null ? Optional.empty() : Optional.ofNullable(this.thriftTransportProtocol);
+        return Optional.ofNullable(this.thriftTransportProtocol);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="trustedCertPath")
-      private final @Nullable Object trustedCertPath;
+    private @Nullable Object trustedCertPath;
 
     public Optional<Object> trustedCertPath() {
-        return this.trustedCertPath == null ? Optional.empty() : Optional.ofNullable(this.trustedCertPath);
+        return Optional.ofNullable(this.trustedCertPath);
     }
 
     /**
@@ -220,7 +220,7 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -231,10 +231,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="useNativeQuery")
-      private final @Nullable Object useNativeQuery;
+    private @Nullable Object useNativeQuery;
 
     public Optional<Object> useNativeQuery() {
-        return this.useNativeQuery == null ? Optional.empty() : Optional.ofNullable(this.useNativeQuery);
+        return Optional.ofNullable(this.useNativeQuery);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="useSystemTrustStore")
-      private final @Nullable Object useSystemTrustStore;
+    private @Nullable Object useSystemTrustStore;
 
     public Optional<Object> useSystemTrustStore() {
-        return this.useSystemTrustStore == null ? Optional.empty() : Optional.ofNullable(this.useSystemTrustStore);
+        return Optional.ofNullable(this.useSystemTrustStore);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="username")
-      private final @Nullable Object username;
+    private @Nullable Object username;
 
     public Optional<Object> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
     /**
@@ -264,238 +264,177 @@ public final class HiveLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="zooKeeperNameSpace")
-      private final @Nullable Object zooKeeperNameSpace;
+    private @Nullable Object zooKeeperNameSpace;
 
     public Optional<Object> zooKeeperNameSpace() {
-        return this.zooKeeperNameSpace == null ? Optional.empty() : Optional.ofNullable(this.zooKeeperNameSpace);
+        return Optional.ofNullable(this.zooKeeperNameSpace);
     }
 
-    public HiveLinkedServiceResponse(
-        @Nullable Object allowHostNameCNMismatch,
-        @Nullable Object allowSelfSignedServerCert,
-        @Nullable List<Object> annotations,
-        String authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object enableSsl,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Object httpPath,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        @Nullable String serverType,
-        @Nullable Object serviceDiscoveryMode,
-        @Nullable String thriftTransportProtocol,
-        @Nullable Object trustedCertPath,
-        String type,
-        @Nullable Object useNativeQuery,
-        @Nullable Object useSystemTrustStore,
-        @Nullable Object username,
-        @Nullable Object zooKeeperNameSpace) {
-        this.allowHostNameCNMismatch = allowHostNameCNMismatch;
-        this.allowSelfSignedServerCert = allowSelfSignedServerCert;
-        this.annotations = annotations;
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-        this.connectVia = connectVia;
-        this.description = description;
-        this.enableSsl = enableSsl;
-        this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.httpPath = httpPath;
-        this.parameters = parameters;
-        this.password = password;
-        this.port = port;
-        this.serverType = serverType;
-        this.serviceDiscoveryMode = serviceDiscoveryMode;
-        this.thriftTransportProtocol = thriftTransportProtocol;
-        this.trustedCertPath = trustedCertPath;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.useNativeQuery = useNativeQuery;
-        this.useSystemTrustStore = useSystemTrustStore;
-        this.username = username;
-        this.zooKeeperNameSpace = zooKeeperNameSpace;
-    }
+    private HiveLinkedServiceResponse() {}
 
-    private HiveLinkedServiceResponse() {
-        this.allowHostNameCNMismatch = null;
-        this.allowSelfSignedServerCert = null;
-        this.annotations = List.of();
-        this.authenticationType = null;
-        this.connectVia = null;
-        this.description = null;
-        this.enableSsl = null;
-        this.encryptedCredential = null;
-        this.host = null;
-        this.httpPath = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.port = null;
-        this.serverType = null;
-        this.serviceDiscoveryMode = null;
-        this.thriftTransportProtocol = null;
-        this.trustedCertPath = null;
-        this.type = null;
-        this.useNativeQuery = null;
-        this.useSystemTrustStore = null;
-        this.username = null;
-        this.zooKeeperNameSpace = null;
+    private HiveLinkedServiceResponse(HiveLinkedServiceResponse $) {
+        this.allowHostNameCNMismatch = $.allowHostNameCNMismatch;
+        this.allowSelfSignedServerCert = $.allowSelfSignedServerCert;
+        this.annotations = $.annotations;
+        this.authenticationType = $.authenticationType;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.enableSsl = $.enableSsl;
+        this.encryptedCredential = $.encryptedCredential;
+        this.host = $.host;
+        this.httpPath = $.httpPath;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.port = $.port;
+        this.serverType = $.serverType;
+        this.serviceDiscoveryMode = $.serviceDiscoveryMode;
+        this.thriftTransportProtocol = $.thriftTransportProtocol;
+        this.trustedCertPath = $.trustedCertPath;
+        this.type = $.type;
+        this.useNativeQuery = $.useNativeQuery;
+        this.useSystemTrustStore = $.useSystemTrustStore;
+        this.username = $.username;
+        this.zooKeeperNameSpace = $.zooKeeperNameSpace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HiveLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object allowHostNameCNMismatch;
-        private @Nullable Object allowSelfSignedServerCert;
-        private @Nullable List<Object> annotations;
-        private String authenticationType;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object enableSsl;
-        private @Nullable Object encryptedCredential;
-        private Object host;
-        private @Nullable Object httpPath;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Object port;
-        private @Nullable String serverType;
-        private @Nullable Object serviceDiscoveryMode;
-        private @Nullable String thriftTransportProtocol;
-        private @Nullable Object trustedCertPath;
-        private String type;
-        private @Nullable Object useNativeQuery;
-        private @Nullable Object useSystemTrustStore;
-        private @Nullable Object username;
-        private @Nullable Object zooKeeperNameSpace;
+        private HiveLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HiveLinkedServiceResponse();
         }
 
         public Builder(HiveLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowHostNameCNMismatch = defaults.allowHostNameCNMismatch;
-    	      this.allowSelfSignedServerCert = defaults.allowSelfSignedServerCert;
-    	      this.annotations = defaults.annotations;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.enableSsl = defaults.enableSsl;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.host = defaults.host;
-    	      this.httpPath = defaults.httpPath;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.serverType = defaults.serverType;
-    	      this.serviceDiscoveryMode = defaults.serviceDiscoveryMode;
-    	      this.thriftTransportProtocol = defaults.thriftTransportProtocol;
-    	      this.trustedCertPath = defaults.trustedCertPath;
-    	      this.type = defaults.type;
-    	      this.useNativeQuery = defaults.useNativeQuery;
-    	      this.useSystemTrustStore = defaults.useSystemTrustStore;
-    	      this.username = defaults.username;
-    	      this.zooKeeperNameSpace = defaults.zooKeeperNameSpace;
+            $ = new HiveLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
-            this.allowHostNameCNMismatch = allowHostNameCNMismatch;
+            $.allowHostNameCNMismatch = allowHostNameCNMismatch;
             return this;
         }
+
         public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
-            this.allowSelfSignedServerCert = allowSelfSignedServerCert;
+            $.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder enableSsl(@Nullable Object enableSsl) {
-            this.enableSsl = enableSsl;
+            $.enableSsl = enableSsl;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder host(Object host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder httpPath(@Nullable Object httpPath) {
-            this.httpPath = httpPath;
+            $.httpPath = httpPath;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder port(@Nullable Object port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder serverType(@Nullable String serverType) {
-            this.serverType = serverType;
+            $.serverType = serverType;
             return this;
         }
+
         public Builder serviceDiscoveryMode(@Nullable Object serviceDiscoveryMode) {
-            this.serviceDiscoveryMode = serviceDiscoveryMode;
+            $.serviceDiscoveryMode = serviceDiscoveryMode;
             return this;
         }
+
         public Builder thriftTransportProtocol(@Nullable String thriftTransportProtocol) {
-            this.thriftTransportProtocol = thriftTransportProtocol;
+            $.thriftTransportProtocol = thriftTransportProtocol;
             return this;
         }
+
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
-            this.trustedCertPath = trustedCertPath;
+            $.trustedCertPath = trustedCertPath;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder useNativeQuery(@Nullable Object useNativeQuery) {
-            this.useNativeQuery = useNativeQuery;
+            $.useNativeQuery = useNativeQuery;
             return this;
         }
+
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
-            this.useSystemTrustStore = useSystemTrustStore;
+            $.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
+
         public Builder username(@Nullable Object username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
+
         public Builder zooKeeperNameSpace(@Nullable Object zooKeeperNameSpace) {
-            this.zooKeeperNameSpace = zooKeeperNameSpace;
+            $.zooKeeperNameSpace = zooKeeperNameSpace;
             return this;
-        }        public HiveLinkedServiceResponse build() {
-            return new HiveLinkedServiceResponse(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, httpPath, parameters, password, port, serverType, serviceDiscoveryMode, thriftTransportProtocol, trustedCertPath, type, useNativeQuery, useSystemTrustStore, username, zooKeeperNameSpace);
+        }
+
+        public HiveLinkedServiceResponse build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

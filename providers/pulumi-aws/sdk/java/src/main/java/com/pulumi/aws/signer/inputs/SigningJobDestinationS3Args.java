@@ -5,9 +5,9 @@ package com.pulumi.aws.signer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class SigningJobDestinationS3Args extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -31,63 +31,59 @@ public final class SigningJobDestinationS3Args extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public SigningJobDestinationS3Args(
-        Output<String> bucket,
-        @Nullable Output<String> prefix) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.prefix = prefix;
-    }
+    private SigningJobDestinationS3Args() {}
 
-    private SigningJobDestinationS3Args() {
-        this.bucket = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private SigningJobDestinationS3Args(SigningJobDestinationS3Args $) {
+        this.bucket = $.bucket;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningJobDestinationS3Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> prefix;
+        private SigningJobDestinationS3Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningJobDestinationS3Args();
         }
 
         public Builder(SigningJobDestinationS3Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.prefix = defaults.prefix;
+            $ = new SigningJobDestinationS3Args(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public SigningJobDestinationS3Args build() {
-            return new SigningJobDestinationS3Args(bucket, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public SigningJobDestinationS3Args build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

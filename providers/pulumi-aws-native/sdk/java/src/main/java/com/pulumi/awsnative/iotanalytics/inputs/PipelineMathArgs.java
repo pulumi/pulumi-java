@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,102 @@ public final class PipelineMathArgs extends com.pulumi.resources.ResourceArgs {
     public static final PipelineMathArgs Empty = new PipelineMathArgs();
 
     @Import(name="attribute", required=true)
-      private final Output<String> attribute;
+    private Output<String> attribute;
 
     public Output<String> attribute() {
         return this.attribute;
     }
 
     @Import(name="math", required=true)
-      private final Output<String> math;
+    private Output<String> math;
 
     public Output<String> math() {
         return this.math;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable Output<String> next;
+    private @Nullable Output<String> next;
 
-    public Output<String> next() {
-        return this.next == null ? Codegen.empty() : this.next;
+    public Optional<Output<String>> next() {
+        return Optional.ofNullable(this.next);
     }
 
-    public PipelineMathArgs(
-        Output<String> attribute,
-        Output<String> math,
-        Output<String> name,
-        @Nullable Output<String> next) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.math = Objects.requireNonNull(math, "expected parameter 'math' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-    }
+    private PipelineMathArgs() {}
 
-    private PipelineMathArgs() {
-        this.attribute = Codegen.empty();
-        this.math = Codegen.empty();
-        this.name = Codegen.empty();
-        this.next = Codegen.empty();
+    private PipelineMathArgs(PipelineMathArgs $) {
+        this.attribute = $.attribute;
+        this.math = $.math;
+        this.name = $.name;
+        this.next = $.next;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineMathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attribute;
-        private Output<String> math;
-        private Output<String> name;
-        private @Nullable Output<String> next;
+        private PipelineMathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineMathArgs();
         }
 
         public Builder(PipelineMathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.math = defaults.math;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
+            $ = new PipelineMathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(Output<String> attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder attribute(String attribute) {
-            this.attribute = Output.of(Objects.requireNonNull(attribute));
-            return this;
+            return attribute(Output.of(attribute));
         }
+
         public Builder math(Output<String> math) {
-            this.math = Objects.requireNonNull(math);
+            $.math = math;
             return this;
         }
+
         public Builder math(String math) {
-            this.math = Output.of(Objects.requireNonNull(math));
-            return this;
+            return math(Output.of(math));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder next(@Nullable Output<String> next) {
-            this.next = next;
+            $.next = next;
             return this;
         }
-        public Builder next(@Nullable String next) {
-            this.next = Codegen.ofNullable(next);
-            return this;
-        }        public PipelineMathArgs build() {
-            return new PipelineMathArgs(attribute, math, name, next);
+
+        public Builder next(String next) {
+            return next(Output.of(next));
+        }
+
+        public PipelineMathArgs build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.math = Objects.requireNonNull($.math, "expected parameter 'math' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

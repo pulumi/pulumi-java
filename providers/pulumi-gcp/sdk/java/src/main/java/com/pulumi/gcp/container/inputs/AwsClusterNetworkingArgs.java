@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="podAddressCidrBlocks", required=true)
-      private final Output<List<String>> podAddressCidrBlocks;
+    private Output<List<String>> podAddressCidrBlocks;
 
     public Output<List<String>> podAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
@@ -31,7 +30,7 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="serviceAddressCidrBlocks", required=true)
-      private final Output<List<String>> serviceAddressCidrBlocks;
+    private Output<List<String>> serviceAddressCidrBlocks;
 
     public Output<List<String>> serviceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
@@ -42,82 +41,79 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public AwsClusterNetworkingArgs(
-        Output<List<String>> podAddressCidrBlocks,
-        Output<List<String>> serviceAddressCidrBlocks,
-        Output<String> vpcId) {
-        this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks, "expected parameter 'podAddressCidrBlocks' to be non-null");
-        this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks, "expected parameter 'serviceAddressCidrBlocks' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private AwsClusterNetworkingArgs() {}
 
-    private AwsClusterNetworkingArgs() {
-        this.podAddressCidrBlocks = Codegen.empty();
-        this.serviceAddressCidrBlocks = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private AwsClusterNetworkingArgs(AwsClusterNetworkingArgs $) {
+        this.podAddressCidrBlocks = $.podAddressCidrBlocks;
+        this.serviceAddressCidrBlocks = $.serviceAddressCidrBlocks;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsClusterNetworkingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> podAddressCidrBlocks;
-        private Output<List<String>> serviceAddressCidrBlocks;
-        private Output<String> vpcId;
+        private AwsClusterNetworkingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsClusterNetworkingArgs();
         }
 
         public Builder(AwsClusterNetworkingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.podAddressCidrBlocks = defaults.podAddressCidrBlocks;
-    	      this.serviceAddressCidrBlocks = defaults.serviceAddressCidrBlocks;
-    	      this.vpcId = defaults.vpcId;
+            $ = new AwsClusterNetworkingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder podAddressCidrBlocks(Output<List<String>> podAddressCidrBlocks) {
-            this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
+            $.podAddressCidrBlocks = podAddressCidrBlocks;
             return this;
         }
+
         public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
-            this.podAddressCidrBlocks = Output.of(Objects.requireNonNull(podAddressCidrBlocks));
-            return this;
+            return podAddressCidrBlocks(Output.of(podAddressCidrBlocks));
         }
+
         public Builder podAddressCidrBlocks(String... podAddressCidrBlocks) {
             return podAddressCidrBlocks(List.of(podAddressCidrBlocks));
         }
+
         public Builder serviceAddressCidrBlocks(Output<List<String>> serviceAddressCidrBlocks) {
-            this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
+            $.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
             return this;
         }
+
         public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
-            this.serviceAddressCidrBlocks = Output.of(Objects.requireNonNull(serviceAddressCidrBlocks));
-            return this;
+            return serviceAddressCidrBlocks(Output.of(serviceAddressCidrBlocks));
         }
+
         public Builder serviceAddressCidrBlocks(String... serviceAddressCidrBlocks) {
             return serviceAddressCidrBlocks(List.of(serviceAddressCidrBlocks));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public AwsClusterNetworkingArgs build() {
-            return new AwsClusterNetworkingArgs(podAddressCidrBlocks, serviceAddressCidrBlocks, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public AwsClusterNetworkingArgs build() {
+            $.podAddressCidrBlocks = Objects.requireNonNull($.podAddressCidrBlocks, "expected parameter 'podAddressCidrBlocks' to be non-null");
+            $.serviceAddressCidrBlocks = Objects.requireNonNull($.serviceAddressCidrBlocks, "expected parameter 'serviceAddressCidrBlocks' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class ConnectionMonitorEndpointFilterResponse extends com.pulumi.re
      * 
      */
     @Import(name="items")
-      private final @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
+    private @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
 
-    public List<ConnectionMonitorEndpointFilterItemResponse> items() {
-        return this.items == null ? List.of() : this.items;
+    public Optional<List<ConnectionMonitorEndpointFilterItemResponse>> items() {
+        return Optional.ofNullable(this.items);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class ConnectionMonitorEndpointFilterResponse extends com.pulumi.re
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ConnectionMonitorEndpointFilterResponse(
-        @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items,
-        @Nullable String type) {
-        this.items = items;
-        this.type = type;
-    }
+    private ConnectionMonitorEndpointFilterResponse() {}
 
-    private ConnectionMonitorEndpointFilterResponse() {
-        this.items = List.of();
-        this.type = null;
+    private ConnectionMonitorEndpointFilterResponse(ConnectionMonitorEndpointFilterResponse $) {
+        this.items = $.items;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorEndpointFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
-        private @Nullable String type;
+        private ConnectionMonitorEndpointFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorEndpointFilterResponse();
         }
 
         public Builder(ConnectionMonitorEndpointFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
-    	      this.type = defaults.type;
+            $ = new ConnectionMonitorEndpointFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable List<ConnectionMonitorEndpointFilterItemResponse> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
+
         public Builder items(ConnectionMonitorEndpointFilterItemResponse... items) {
             return items(List.of(items));
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ConnectionMonitorEndpointFilterResponse build() {
-            return new ConnectionMonitorEndpointFilterResponse(items, type);
+        }
+
+        public ConnectionMonitorEndpointFilterResponse build() {
+            return $;
         }
     }
+
 }

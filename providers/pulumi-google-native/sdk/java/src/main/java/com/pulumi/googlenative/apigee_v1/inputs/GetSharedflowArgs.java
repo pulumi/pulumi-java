@@ -13,62 +13,59 @@ public final class GetSharedflowArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSharedflowArgs Empty = new GetSharedflowArgs();
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="sharedflowId", required=true)
-      private final String sharedflowId;
+    private String sharedflowId;
 
     public String sharedflowId() {
         return this.sharedflowId;
     }
 
-    public GetSharedflowArgs(
-        String organizationId,
-        String sharedflowId) {
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.sharedflowId = Objects.requireNonNull(sharedflowId, "expected parameter 'sharedflowId' to be non-null");
-    }
+    private GetSharedflowArgs() {}
 
-    private GetSharedflowArgs() {
-        this.organizationId = null;
-        this.sharedflowId = null;
+    private GetSharedflowArgs(GetSharedflowArgs $) {
+        this.organizationId = $.organizationId;
+        this.sharedflowId = $.sharedflowId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSharedflowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String organizationId;
-        private String sharedflowId;
+        private GetSharedflowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSharedflowArgs();
         }
 
         public Builder(GetSharedflowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationId = defaults.organizationId;
-    	      this.sharedflowId = defaults.sharedflowId;
+            $ = new GetSharedflowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder sharedflowId(String sharedflowId) {
-            this.sharedflowId = Objects.requireNonNull(sharedflowId);
+            $.sharedflowId = sharedflowId;
             return this;
-        }        public GetSharedflowArgs build() {
-            return new GetSharedflowArgs(organizationId, sharedflowId);
+        }
+
+        public GetSharedflowArgs build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.sharedflowId = Objects.requireNonNull($.sharedflowId, "expected parameter 'sharedflowId' to be non-null");
+            return $;
         }
     }
+
 }

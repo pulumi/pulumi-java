@@ -7,10 +7,10 @@ import com.pulumi.azurenative.documentdb.enums.RoleDefinitionType;
 import com.pulumi.azurenative.documentdb.inputs.PermissionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -34,10 +34,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="assignableScopes")
-      private final @Nullable Output<List<String>> assignableScopes;
+    private @Nullable Output<List<String>> assignableScopes;
 
-    public Output<List<String>> assignableScopes() {
-        return this.assignableScopes == null ? Codegen.empty() : this.assignableScopes;
+    public Optional<Output<List<String>>> assignableScopes() {
+        return Optional.ofNullable(this.assignableScopes);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<PermissionArgs>> permissions;
+    private @Nullable Output<List<PermissionArgs>> permissions;
 
-    public Output<List<PermissionArgs>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<PermissionArgs>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,10 +67,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="roleDefinitionId")
-      private final @Nullable Output<String> roleDefinitionId;
+    private @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> roleDefinitionId() {
-        return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
+    public Optional<Output<String>> roleDefinitionId() {
+        return Optional.ofNullable(this.roleDefinitionId);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="roleName")
-      private final @Nullable Output<String> roleName;
+    private @Nullable Output<String> roleName;
 
-    public Output<String> roleName() {
-        return this.roleName == null ? Codegen.empty() : this.roleName;
+    public Optional<Output<String>> roleName() {
+        return Optional.ofNullable(this.roleName);
     }
 
     /**
@@ -89,134 +89,118 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<RoleDefinitionType> type;
+    private @Nullable Output<RoleDefinitionType> type;
 
-    public Output<RoleDefinitionType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<RoleDefinitionType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SqlResourceSqlRoleDefinitionArgs(
-        Output<String> accountName,
-        @Nullable Output<List<String>> assignableScopes,
-        @Nullable Output<List<PermissionArgs>> permissions,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> roleDefinitionId,
-        @Nullable Output<String> roleName,
-        @Nullable Output<RoleDefinitionType> type) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.assignableScopes = assignableScopes;
-        this.permissions = permissions;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleDefinitionId = roleDefinitionId;
-        this.roleName = roleName;
-        this.type = type;
-    }
+    private SqlResourceSqlRoleDefinitionArgs() {}
 
-    private SqlResourceSqlRoleDefinitionArgs() {
-        this.accountName = Codegen.empty();
-        this.assignableScopes = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.roleDefinitionId = Codegen.empty();
-        this.roleName = Codegen.empty();
-        this.type = Codegen.empty();
+    private SqlResourceSqlRoleDefinitionArgs(SqlResourceSqlRoleDefinitionArgs $) {
+        this.accountName = $.accountName;
+        this.assignableScopes = $.assignableScopes;
+        this.permissions = $.permissions;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleDefinitionId = $.roleDefinitionId;
+        this.roleName = $.roleName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlResourceSqlRoleDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<List<String>> assignableScopes;
-        private @Nullable Output<List<PermissionArgs>> permissions;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> roleDefinitionId;
-        private @Nullable Output<String> roleName;
-        private @Nullable Output<RoleDefinitionType> type;
+        private SqlResourceSqlRoleDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlResourceSqlRoleDefinitionArgs();
         }
 
         public Builder(SqlResourceSqlRoleDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.assignableScopes = defaults.assignableScopes;
-    	      this.permissions = defaults.permissions;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
-    	      this.roleName = defaults.roleName;
-    	      this.type = defaults.type;
+            $ = new SqlResourceSqlRoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder assignableScopes(@Nullable Output<List<String>> assignableScopes) {
-            this.assignableScopes = assignableScopes;
+            $.assignableScopes = assignableScopes;
             return this;
         }
-        public Builder assignableScopes(@Nullable List<String> assignableScopes) {
-            this.assignableScopes = Codegen.ofNullable(assignableScopes);
-            return this;
+
+        public Builder assignableScopes(List<String> assignableScopes) {
+            return assignableScopes(Output.of(assignableScopes));
         }
+
         public Builder assignableScopes(String... assignableScopes) {
             return assignableScopes(List.of(assignableScopes));
         }
+
         public Builder permissions(@Nullable Output<List<PermissionArgs>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<PermissionArgs> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<PermissionArgs> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(PermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
-            this.roleDefinitionId = roleDefinitionId;
+            $.roleDefinitionId = roleDefinitionId;
             return this;
         }
-        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Codegen.ofNullable(roleDefinitionId);
-            return this;
+
+        public Builder roleDefinitionId(String roleDefinitionId) {
+            return roleDefinitionId(Output.of(roleDefinitionId));
         }
+
         public Builder roleName(@Nullable Output<String> roleName) {
-            this.roleName = roleName;
+            $.roleName = roleName;
             return this;
         }
-        public Builder roleName(@Nullable String roleName) {
-            this.roleName = Codegen.ofNullable(roleName);
-            return this;
+
+        public Builder roleName(String roleName) {
+            return roleName(Output.of(roleName));
         }
+
         public Builder type(@Nullable Output<RoleDefinitionType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable RoleDefinitionType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SqlResourceSqlRoleDefinitionArgs build() {
-            return new SqlResourceSqlRoleDefinitionArgs(accountName, assignableScopes, permissions, resourceGroupName, roleDefinitionId, roleName, type);
+
+        public Builder type(RoleDefinitionType type) {
+            return type(Output.of(type));
+        }
+
+        public SqlResourceSqlRoleDefinitionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

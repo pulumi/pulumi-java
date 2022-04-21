@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs.VolumeNodeResourcesArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CSINodeDriverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocatable")
-      private final @Nullable Output<VolumeNodeResourcesArgs> allocatable;
+    private @Nullable Output<VolumeNodeResourcesArgs> allocatable;
 
-    public Output<VolumeNodeResourcesArgs> allocatable() {
-        return this.allocatable == null ? Codegen.empty() : this.allocatable;
+    public Optional<Output<VolumeNodeResourcesArgs>> allocatable() {
+        return Optional.ofNullable(this.allocatable);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class CSINodeDriverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -48,7 +48,7 @@ public final class CSINodeDriverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeID", required=true)
-      private final Output<String> nodeID;
+    private Output<String> nodeID;
 
     public Output<String> nodeID() {
         return this.nodeID;
@@ -59,92 +59,84 @@ public final class CSINodeDriverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topologyKeys")
-      private final @Nullable Output<List<String>> topologyKeys;
+    private @Nullable Output<List<String>> topologyKeys;
 
-    public Output<List<String>> topologyKeys() {
-        return this.topologyKeys == null ? Codegen.empty() : this.topologyKeys;
+    public Optional<Output<List<String>>> topologyKeys() {
+        return Optional.ofNullable(this.topologyKeys);
     }
 
-    public CSINodeDriverArgs(
-        @Nullable Output<VolumeNodeResourcesArgs> allocatable,
-        Output<String> name,
-        Output<String> nodeID,
-        @Nullable Output<List<String>> topologyKeys) {
-        this.allocatable = allocatable;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.nodeID = Objects.requireNonNull(nodeID, "expected parameter 'nodeID' to be non-null");
-        this.topologyKeys = topologyKeys;
-    }
+    private CSINodeDriverArgs() {}
 
-    private CSINodeDriverArgs() {
-        this.allocatable = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nodeID = Codegen.empty();
-        this.topologyKeys = Codegen.empty();
+    private CSINodeDriverArgs(CSINodeDriverArgs $) {
+        this.allocatable = $.allocatable;
+        this.name = $.name;
+        this.nodeID = $.nodeID;
+        this.topologyKeys = $.topologyKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CSINodeDriverArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VolumeNodeResourcesArgs> allocatable;
-        private Output<String> name;
-        private Output<String> nodeID;
-        private @Nullable Output<List<String>> topologyKeys;
+        private CSINodeDriverArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CSINodeDriverArgs();
         }
 
         public Builder(CSINodeDriverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocatable = defaults.allocatable;
-    	      this.name = defaults.name;
-    	      this.nodeID = defaults.nodeID;
-    	      this.topologyKeys = defaults.topologyKeys;
+            $ = new CSINodeDriverArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocatable(@Nullable Output<VolumeNodeResourcesArgs> allocatable) {
-            this.allocatable = allocatable;
+            $.allocatable = allocatable;
             return this;
         }
-        public Builder allocatable(@Nullable VolumeNodeResourcesArgs allocatable) {
-            this.allocatable = Codegen.ofNullable(allocatable);
-            return this;
+
+        public Builder allocatable(VolumeNodeResourcesArgs allocatable) {
+            return allocatable(Output.of(allocatable));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder nodeID(Output<String> nodeID) {
-            this.nodeID = Objects.requireNonNull(nodeID);
+            $.nodeID = nodeID;
             return this;
         }
+
         public Builder nodeID(String nodeID) {
-            this.nodeID = Output.of(Objects.requireNonNull(nodeID));
-            return this;
+            return nodeID(Output.of(nodeID));
         }
+
         public Builder topologyKeys(@Nullable Output<List<String>> topologyKeys) {
-            this.topologyKeys = topologyKeys;
+            $.topologyKeys = topologyKeys;
             return this;
         }
-        public Builder topologyKeys(@Nullable List<String> topologyKeys) {
-            this.topologyKeys = Codegen.ofNullable(topologyKeys);
-            return this;
+
+        public Builder topologyKeys(List<String> topologyKeys) {
+            return topologyKeys(Output.of(topologyKeys));
         }
+
         public Builder topologyKeys(String... topologyKeys) {
             return topologyKeys(List.of(topologyKeys));
-        }        public CSINodeDriverArgs build() {
-            return new CSINodeDriverArgs(allocatable, name, nodeID, topologyKeys);
+        }
+
+        public CSINodeDriverArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.nodeID = Objects.requireNonNull($.nodeID, "expected parameter 'nodeID' to be non-null");
+            return $;
         }
     }
+
 }

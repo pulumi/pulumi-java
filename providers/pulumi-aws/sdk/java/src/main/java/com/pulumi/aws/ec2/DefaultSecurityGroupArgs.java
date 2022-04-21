@@ -7,12 +7,12 @@ import com.pulumi.aws.ec2.inputs.DefaultSecurityGroupEgressArgs;
 import com.pulumi.aws.ec2.inputs.DefaultSecurityGroupIngressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DefaultSecurityGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="egress")
-      private final @Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress;
+    private @Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress;
 
-    public Output<List<DefaultSecurityGroupEgressArgs>> egress() {
-        return this.egress == null ? Codegen.empty() : this.egress;
+    public Optional<Output<List<DefaultSecurityGroupEgressArgs>>> egress() {
+        return Optional.ofNullable(this.egress);
     }
 
     /**
@@ -36,17 +36,17 @@ public final class DefaultSecurityGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ingress")
-      private final @Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress;
+    private @Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress;
 
-    public Output<List<DefaultSecurityGroupIngressArgs>> ingress() {
-        return this.ingress == null ? Codegen.empty() : this.ingress;
+    public Optional<Output<List<DefaultSecurityGroupIngressArgs>>> ingress() {
+        return Optional.ofNullable(this.ingress);
     }
 
     @Import(name="revokeRulesOnDelete")
-      private final @Nullable Output<Boolean> revokeRulesOnDelete;
+    private @Nullable Output<Boolean> revokeRulesOnDelete;
 
-    public Output<Boolean> revokeRulesOnDelete() {
-        return this.revokeRulesOnDelete == null ? Codegen.empty() : this.revokeRulesOnDelete;
+    public Optional<Output<Boolean>> revokeRulesOnDelete() {
+        return Optional.ofNullable(this.revokeRulesOnDelete);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DefaultSecurityGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -65,108 +65,96 @@ public final class DefaultSecurityGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public DefaultSecurityGroupArgs(
-        @Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress,
-        @Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress,
-        @Nullable Output<Boolean> revokeRulesOnDelete,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vpcId) {
-        this.egress = egress;
-        this.ingress = ingress;
-        this.revokeRulesOnDelete = revokeRulesOnDelete;
-        this.tags = tags;
-        this.vpcId = vpcId;
-    }
+    private DefaultSecurityGroupArgs() {}
 
-    private DefaultSecurityGroupArgs() {
-        this.egress = Codegen.empty();
-        this.ingress = Codegen.empty();
-        this.revokeRulesOnDelete = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private DefaultSecurityGroupArgs(DefaultSecurityGroupArgs $) {
+        this.egress = $.egress;
+        this.ingress = $.ingress;
+        this.revokeRulesOnDelete = $.revokeRulesOnDelete;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultSecurityGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress;
-        private @Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress;
-        private @Nullable Output<Boolean> revokeRulesOnDelete;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vpcId;
+        private DefaultSecurityGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultSecurityGroupArgs();
         }
 
         public Builder(DefaultSecurityGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egress = defaults.egress;
-    	      this.ingress = defaults.ingress;
-    	      this.revokeRulesOnDelete = defaults.revokeRulesOnDelete;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new DefaultSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder egress(@Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress) {
-            this.egress = egress;
+            $.egress = egress;
             return this;
         }
-        public Builder egress(@Nullable List<DefaultSecurityGroupEgressArgs> egress) {
-            this.egress = Codegen.ofNullable(egress);
-            return this;
+
+        public Builder egress(List<DefaultSecurityGroupEgressArgs> egress) {
+            return egress(Output.of(egress));
         }
+
         public Builder egress(DefaultSecurityGroupEgressArgs... egress) {
             return egress(List.of(egress));
         }
+
         public Builder ingress(@Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress) {
-            this.ingress = ingress;
+            $.ingress = ingress;
             return this;
         }
-        public Builder ingress(@Nullable List<DefaultSecurityGroupIngressArgs> ingress) {
-            this.ingress = Codegen.ofNullable(ingress);
-            return this;
+
+        public Builder ingress(List<DefaultSecurityGroupIngressArgs> ingress) {
+            return ingress(Output.of(ingress));
         }
+
         public Builder ingress(DefaultSecurityGroupIngressArgs... ingress) {
             return ingress(List.of(ingress));
         }
+
         public Builder revokeRulesOnDelete(@Nullable Output<Boolean> revokeRulesOnDelete) {
-            this.revokeRulesOnDelete = revokeRulesOnDelete;
+            $.revokeRulesOnDelete = revokeRulesOnDelete;
             return this;
         }
-        public Builder revokeRulesOnDelete(@Nullable Boolean revokeRulesOnDelete) {
-            this.revokeRulesOnDelete = Codegen.ofNullable(revokeRulesOnDelete);
-            return this;
+
+        public Builder revokeRulesOnDelete(Boolean revokeRulesOnDelete) {
+            return revokeRulesOnDelete(Output.of(revokeRulesOnDelete));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public DefaultSecurityGroupArgs build() {
-            return new DefaultSecurityGroupArgs(egress, ingress, revokeRulesOnDelete, tags, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public DefaultSecurityGroupArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalHeaders")
-      private final @Nullable Object additionalHeaders;
+    private @Nullable Object additionalHeaders;
 
     public Optional<Object> additionalHeaders() {
-        return this.additionalHeaders == null ? Optional.empty() : Optional.ofNullable(this.additionalHeaders);
+        return Optional.ofNullable(this.additionalHeaders);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpCompressionType")
-      private final @Nullable Object httpCompressionType;
+    private @Nullable Object httpCompressionType;
 
     public Optional<Object> httpCompressionType() {
-        return this.httpCompressionType == null ? Optional.empty() : Optional.ofNullable(this.httpCompressionType);
+        return Optional.ofNullable(this.httpCompressionType);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpRequestTimeout")
-      private final @Nullable Object httpRequestTimeout;
+    private @Nullable Object httpRequestTimeout;
 
     public Optional<Object> httpRequestTimeout() {
-        return this.httpRequestTimeout == null ? Optional.empty() : Optional.ofNullable(this.httpRequestTimeout);
+        return Optional.ofNullable(this.httpRequestTimeout);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requestInterval")
-      private final @Nullable Object requestInterval;
+    private @Nullable Object requestInterval;
 
     public Optional<Object> requestInterval() {
-        return this.requestInterval == null ? Optional.empty() : Optional.ofNullable(this.requestInterval);
+        return Optional.ofNullable(this.requestInterval);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requestMethod")
-      private final @Nullable Object requestMethod;
+    private @Nullable Object requestMethod;
 
     public Optional<Object> requestMethod() {
-        return this.requestMethod == null ? Optional.empty() : Optional.ofNullable(this.requestMethod);
+        return Optional.ofNullable(this.requestMethod);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sinkRetryCount")
-      private final @Nullable Object sinkRetryCount;
+    private @Nullable Object sinkRetryCount;
 
     public Optional<Object> sinkRetryCount() {
-        return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
+        return Optional.ofNullable(this.sinkRetryCount);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sinkRetryWait")
-      private final @Nullable Object sinkRetryWait;
+    private @Nullable Object sinkRetryWait;
 
     public Optional<Object> sinkRetryWait() {
-        return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
+        return Optional.ofNullable(this.sinkRetryWait);
     }
 
     /**
@@ -125,7 +125,7 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -136,10 +136,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="writeBatchSize")
-      private final @Nullable Object writeBatchSize;
+    private @Nullable Object writeBatchSize;
 
     public Optional<Object> writeBatchSize() {
-        return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
+        return Optional.ofNullable(this.writeBatchSize);
     }
 
     /**
@@ -147,145 +147,111 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="writeBatchTimeout")
-      private final @Nullable Object writeBatchTimeout;
+    private @Nullable Object writeBatchTimeout;
 
     public Optional<Object> writeBatchTimeout() {
-        return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
+        return Optional.ofNullable(this.writeBatchTimeout);
     }
 
-    public RestSinkResponse(
-        @Nullable Object additionalHeaders,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object httpCompressionType,
-        @Nullable Object httpRequestTimeout,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object requestInterval,
-        @Nullable Object requestMethod,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
-        this.additionalHeaders = additionalHeaders;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.httpCompressionType = httpCompressionType;
-        this.httpRequestTimeout = httpRequestTimeout;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.requestInterval = requestInterval;
-        this.requestMethod = requestMethod;
-        this.sinkRetryCount = sinkRetryCount;
-        this.sinkRetryWait = sinkRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.writeBatchSize = writeBatchSize;
-        this.writeBatchTimeout = writeBatchTimeout;
-    }
+    private RestSinkResponse() {}
 
-    private RestSinkResponse() {
-        this.additionalHeaders = null;
-        this.disableMetricsCollection = null;
-        this.httpCompressionType = null;
-        this.httpRequestTimeout = null;
-        this.maxConcurrentConnections = null;
-        this.requestInterval = null;
-        this.requestMethod = null;
-        this.sinkRetryCount = null;
-        this.sinkRetryWait = null;
-        this.type = null;
-        this.writeBatchSize = null;
-        this.writeBatchTimeout = null;
+    private RestSinkResponse(RestSinkResponse $) {
+        this.additionalHeaders = $.additionalHeaders;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.httpCompressionType = $.httpCompressionType;
+        this.httpRequestTimeout = $.httpRequestTimeout;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.requestInterval = $.requestInterval;
+        this.requestMethod = $.requestMethod;
+        this.sinkRetryCount = $.sinkRetryCount;
+        this.sinkRetryWait = $.sinkRetryWait;
+        this.type = $.type;
+        this.writeBatchSize = $.writeBatchSize;
+        this.writeBatchTimeout = $.writeBatchTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestSinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object additionalHeaders;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object httpCompressionType;
-        private @Nullable Object httpRequestTimeout;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object requestInterval;
-        private @Nullable Object requestMethod;
-        private @Nullable Object sinkRetryCount;
-        private @Nullable Object sinkRetryWait;
-        private String type;
-        private @Nullable Object writeBatchSize;
-        private @Nullable Object writeBatchTimeout;
+        private RestSinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestSinkResponse();
         }
 
         public Builder(RestSinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalHeaders = defaults.additionalHeaders;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.httpCompressionType = defaults.httpCompressionType;
-    	      this.httpRequestTimeout = defaults.httpRequestTimeout;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.requestInterval = defaults.requestInterval;
-    	      this.requestMethod = defaults.requestMethod;
-    	      this.sinkRetryCount = defaults.sinkRetryCount;
-    	      this.sinkRetryWait = defaults.sinkRetryWait;
-    	      this.type = defaults.type;
-    	      this.writeBatchSize = defaults.writeBatchSize;
-    	      this.writeBatchTimeout = defaults.writeBatchTimeout;
+            $ = new RestSinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
-            this.additionalHeaders = additionalHeaders;
+            $.additionalHeaders = additionalHeaders;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder httpCompressionType(@Nullable Object httpCompressionType) {
-            this.httpCompressionType = httpCompressionType;
+            $.httpCompressionType = httpCompressionType;
             return this;
         }
+
         public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
-            this.httpRequestTimeout = httpRequestTimeout;
+            $.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder requestInterval(@Nullable Object requestInterval) {
-            this.requestInterval = requestInterval;
+            $.requestInterval = requestInterval;
             return this;
         }
+
         public Builder requestMethod(@Nullable Object requestMethod) {
-            this.requestMethod = requestMethod;
+            $.requestMethod = requestMethod;
             return this;
         }
+
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = sinkRetryCount;
+            $.sinkRetryCount = sinkRetryCount;
             return this;
         }
+
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = sinkRetryWait;
+            $.sinkRetryWait = sinkRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = writeBatchSize;
+            $.writeBatchSize = writeBatchSize;
             return this;
         }
+
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = writeBatchTimeout;
+            $.writeBatchTimeout = writeBatchTimeout;
             return this;
-        }        public RestSinkResponse build() {
-            return new RestSinkResponse(additionalHeaders, disableMetricsCollection, httpCompressionType, httpRequestTimeout, maxConcurrentConnections, requestInterval, requestMethod, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
+        }
+
+        public RestSinkResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

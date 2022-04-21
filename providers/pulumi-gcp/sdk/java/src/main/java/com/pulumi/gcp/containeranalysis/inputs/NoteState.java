@@ -5,12 +5,12 @@ package com.pulumi.gcp.containeranalysis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityGetArgs;
 import com.pulumi.gcp.containeranalysis.inputs.NoteRelatedUrlGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attestationAuthority")
-      private final @Nullable Output<NoteAttestationAuthorityGetArgs> attestationAuthority;
+    private @Nullable Output<NoteAttestationAuthorityGetArgs> attestationAuthority;
 
-    public Output<NoteAttestationAuthorityGetArgs> attestationAuthority() {
-        return this.attestationAuthority == null ? Codegen.empty() : this.attestationAuthority;
+    public Optional<Output<NoteAttestationAuthorityGetArgs>> attestationAuthority() {
+        return Optional.ofNullable(this.attestationAuthority);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="longDescription")
-      private final @Nullable Output<String> longDescription;
+    private @Nullable Output<String> longDescription;
 
-    public Output<String> longDescription() {
-        return this.longDescription == null ? Codegen.empty() : this.longDescription;
+    public Optional<Output<String>> longDescription() {
+        return Optional.ofNullable(this.longDescription);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relatedNoteNames")
-      private final @Nullable Output<List<String>> relatedNoteNames;
+    private @Nullable Output<List<String>> relatedNoteNames;
 
-    public Output<List<String>> relatedNoteNames() {
-        return this.relatedNoteNames == null ? Codegen.empty() : this.relatedNoteNames;
+    public Optional<Output<List<String>>> relatedNoteNames() {
+        return Optional.ofNullable(this.relatedNoteNames);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relatedUrls")
-      private final @Nullable Output<List<NoteRelatedUrlGetArgs>> relatedUrls;
+    private @Nullable Output<List<NoteRelatedUrlGetArgs>> relatedUrls;
 
-    public Output<List<NoteRelatedUrlGetArgs>> relatedUrls() {
-        return this.relatedUrls == null ? Codegen.empty() : this.relatedUrls;
+    public Optional<Output<List<NoteRelatedUrlGetArgs>>> relatedUrls() {
+        return Optional.ofNullable(this.relatedUrls);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shortDescription")
-      private final @Nullable Output<String> shortDescription;
+    private @Nullable Output<String> shortDescription;
 
-    public Output<String> shortDescription() {
-        return this.shortDescription == null ? Codegen.empty() : this.shortDescription;
+    public Optional<Output<String>> shortDescription() {
+        return Optional.ofNullable(this.shortDescription);
     }
 
     /**
@@ -144,186 +144,156 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public NoteState(
-        @Nullable Output<NoteAttestationAuthorityGetArgs> attestationAuthority,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> expirationTime,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> longDescription,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<String>> relatedNoteNames,
-        @Nullable Output<List<NoteRelatedUrlGetArgs>> relatedUrls,
-        @Nullable Output<String> shortDescription,
-        @Nullable Output<String> updateTime) {
-        this.attestationAuthority = attestationAuthority;
-        this.createTime = createTime;
-        this.expirationTime = expirationTime;
-        this.kind = kind;
-        this.longDescription = longDescription;
-        this.name = name;
-        this.project = project;
-        this.relatedNoteNames = relatedNoteNames;
-        this.relatedUrls = relatedUrls;
-        this.shortDescription = shortDescription;
-        this.updateTime = updateTime;
-    }
+    private NoteState() {}
 
-    private NoteState() {
-        this.attestationAuthority = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.expirationTime = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.longDescription = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.relatedNoteNames = Codegen.empty();
-        this.relatedUrls = Codegen.empty();
-        this.shortDescription = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private NoteState(NoteState $) {
+        this.attestationAuthority = $.attestationAuthority;
+        this.createTime = $.createTime;
+        this.expirationTime = $.expirationTime;
+        this.kind = $.kind;
+        this.longDescription = $.longDescription;
+        this.name = $.name;
+        this.project = $.project;
+        this.relatedNoteNames = $.relatedNoteNames;
+        this.relatedUrls = $.relatedUrls;
+        this.shortDescription = $.shortDescription;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NoteState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NoteAttestationAuthorityGetArgs> attestationAuthority;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> expirationTime;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> longDescription;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<String>> relatedNoteNames;
-        private @Nullable Output<List<NoteRelatedUrlGetArgs>> relatedUrls;
-        private @Nullable Output<String> shortDescription;
-        private @Nullable Output<String> updateTime;
+        private NoteState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NoteState();
         }
 
         public Builder(NoteState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestationAuthority = defaults.attestationAuthority;
-    	      this.createTime = defaults.createTime;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.kind = defaults.kind;
-    	      this.longDescription = defaults.longDescription;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.relatedNoteNames = defaults.relatedNoteNames;
-    	      this.relatedUrls = defaults.relatedUrls;
-    	      this.shortDescription = defaults.shortDescription;
-    	      this.updateTime = defaults.updateTime;
+            $ = new NoteState(Objects.requireNonNull(defaults));
         }
 
         public Builder attestationAuthority(@Nullable Output<NoteAttestationAuthorityGetArgs> attestationAuthority) {
-            this.attestationAuthority = attestationAuthority;
+            $.attestationAuthority = attestationAuthority;
             return this;
         }
-        public Builder attestationAuthority(@Nullable NoteAttestationAuthorityGetArgs attestationAuthority) {
-            this.attestationAuthority = Codegen.ofNullable(attestationAuthority);
-            return this;
+
+        public Builder attestationAuthority(NoteAttestationAuthorityGetArgs attestationAuthority) {
+            return attestationAuthority(Output.of(attestationAuthority));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder longDescription(@Nullable Output<String> longDescription) {
-            this.longDescription = longDescription;
+            $.longDescription = longDescription;
             return this;
         }
-        public Builder longDescription(@Nullable String longDescription) {
-            this.longDescription = Codegen.ofNullable(longDescription);
-            return this;
+
+        public Builder longDescription(String longDescription) {
+            return longDescription(Output.of(longDescription));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder relatedNoteNames(@Nullable Output<List<String>> relatedNoteNames) {
-            this.relatedNoteNames = relatedNoteNames;
+            $.relatedNoteNames = relatedNoteNames;
             return this;
         }
-        public Builder relatedNoteNames(@Nullable List<String> relatedNoteNames) {
-            this.relatedNoteNames = Codegen.ofNullable(relatedNoteNames);
-            return this;
+
+        public Builder relatedNoteNames(List<String> relatedNoteNames) {
+            return relatedNoteNames(Output.of(relatedNoteNames));
         }
+
         public Builder relatedNoteNames(String... relatedNoteNames) {
             return relatedNoteNames(List.of(relatedNoteNames));
         }
+
         public Builder relatedUrls(@Nullable Output<List<NoteRelatedUrlGetArgs>> relatedUrls) {
-            this.relatedUrls = relatedUrls;
+            $.relatedUrls = relatedUrls;
             return this;
         }
-        public Builder relatedUrls(@Nullable List<NoteRelatedUrlGetArgs> relatedUrls) {
-            this.relatedUrls = Codegen.ofNullable(relatedUrls);
-            return this;
+
+        public Builder relatedUrls(List<NoteRelatedUrlGetArgs> relatedUrls) {
+            return relatedUrls(Output.of(relatedUrls));
         }
+
         public Builder relatedUrls(NoteRelatedUrlGetArgs... relatedUrls) {
             return relatedUrls(List.of(relatedUrls));
         }
+
         public Builder shortDescription(@Nullable Output<String> shortDescription) {
-            this.shortDescription = shortDescription;
+            $.shortDescription = shortDescription;
             return this;
         }
-        public Builder shortDescription(@Nullable String shortDescription) {
-            this.shortDescription = Codegen.ofNullable(shortDescription);
-            return this;
+
+        public Builder shortDescription(String shortDescription) {
+            return shortDescription(Output.of(shortDescription));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public NoteState build() {
-            return new NoteState(attestationAuthority, createTime, expirationTime, kind, longDescription, name, project, relatedNoteNames, relatedUrls, shortDescription, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public NoteState build() {
+            return $;
         }
     }
+
 }

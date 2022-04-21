@@ -17,7 +17,7 @@ public final class GetWorkflowAccessKeyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accessKeyName", required=true)
-      private final String accessKeyName;
+    private String accessKeyName;
 
     public String accessKeyName() {
         return this.accessKeyName;
@@ -28,7 +28,7 @@ public final class GetWorkflowAccessKeyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetWorkflowAccessKeyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="workflowName", required=true)
-      private final String workflowName;
+    private String workflowName;
 
     public String workflowName() {
         return this.workflowName;
     }
 
-    public GetWorkflowAccessKeyArgs(
-        String accessKeyName,
-        String resourceGroupName,
-        String workflowName) {
-        this.accessKeyName = Objects.requireNonNull(accessKeyName, "expected parameter 'accessKeyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workflowName = Objects.requireNonNull(workflowName, "expected parameter 'workflowName' to be non-null");
-    }
+    private GetWorkflowAccessKeyArgs() {}
 
-    private GetWorkflowAccessKeyArgs() {
-        this.accessKeyName = null;
-        this.resourceGroupName = null;
-        this.workflowName = null;
+    private GetWorkflowAccessKeyArgs(GetWorkflowAccessKeyArgs $) {
+        this.accessKeyName = $.accessKeyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workflowName = $.workflowName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkflowAccessKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessKeyName;
-        private String resourceGroupName;
-        private String workflowName;
+        private GetWorkflowAccessKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkflowAccessKeyArgs();
         }
 
         public Builder(GetWorkflowAccessKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKeyName = defaults.accessKeyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workflowName = defaults.workflowName;
+            $ = new GetWorkflowAccessKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKeyName(String accessKeyName) {
-            this.accessKeyName = Objects.requireNonNull(accessKeyName);
+            $.accessKeyName = accessKeyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workflowName(String workflowName) {
-            this.workflowName = Objects.requireNonNull(workflowName);
+            $.workflowName = workflowName;
             return this;
-        }        public GetWorkflowAccessKeyArgs build() {
-            return new GetWorkflowAccessKeyArgs(accessKeyName, resourceGroupName, workflowName);
+        }
+
+        public GetWorkflowAccessKeyArgs build() {
+            $.accessKeyName = Objects.requireNonNull($.accessKeyName, "expected parameter 'accessKeyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workflowName = Objects.requireNonNull($.workflowName, "expected parameter 'workflowName' to be non-null");
+            return $;
         }
     }
+
 }

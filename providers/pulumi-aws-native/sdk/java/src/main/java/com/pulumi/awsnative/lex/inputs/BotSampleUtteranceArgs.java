@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BotSampleUtteranceArgs extends com.pulumi.resources.ResourceA
     public static final BotSampleUtteranceArgs Empty = new BotSampleUtteranceArgs();
 
     @Import(name="utterance", required=true)
-      private final Output<String> utterance;
+    private Output<String> utterance;
 
     public Output<String> utterance() {
         return this.utterance;
     }
 
-    public BotSampleUtteranceArgs(Output<String> utterance) {
-        this.utterance = Objects.requireNonNull(utterance, "expected parameter 'utterance' to be non-null");
-    }
+    private BotSampleUtteranceArgs() {}
 
-    private BotSampleUtteranceArgs() {
-        this.utterance = Codegen.empty();
+    private BotSampleUtteranceArgs(BotSampleUtteranceArgs $) {
+        this.utterance = $.utterance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotSampleUtteranceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> utterance;
+        private BotSampleUtteranceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotSampleUtteranceArgs();
         }
 
         public Builder(BotSampleUtteranceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.utterance = defaults.utterance;
+            $ = new BotSampleUtteranceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder utterance(Output<String> utterance) {
-            this.utterance = Objects.requireNonNull(utterance);
+            $.utterance = utterance;
             return this;
         }
+
         public Builder utterance(String utterance) {
-            this.utterance = Output.of(Objects.requireNonNull(utterance));
-            return this;
-        }        public BotSampleUtteranceArgs build() {
-            return new BotSampleUtteranceArgs(utterance);
+            return utterance(Output.of(utterance));
+        }
+
+        public BotSampleUtteranceArgs build() {
+            $.utterance = Objects.requireNonNull($.utterance, "expected parameter 'utterance' to be non-null");
+            return $;
         }
     }
+
 }

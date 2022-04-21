@@ -29,7 +29,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -40,10 +40,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="identity")
-      private final @Nullable IdentityResponse identity;
+    private @Nullable IdentityResponse identity;
 
     public Optional<IdentityResponse> identity() {
-        return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -73,10 +73,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable PrivateEndpointResponse privateEndpoint;
+    private @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> privateEndpoint() {
-        return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
-      private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    private PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -95,7 +95,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -106,10 +106,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sku")
-      private final @Nullable SkuResponse sku;
+    private @Nullable SkuResponse sku;
 
     public Optional<SkuResponse> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -117,7 +117,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="systemData", required=true)
-      private final SystemDataResponse systemData;
+    private SystemDataResponse systemData;
 
     public SystemDataResponse systemData() {
         return this.systemData;
@@ -128,10 +128,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -139,136 +139,110 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PrivateEndpointConnectionResponse(
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String location,
-        String name,
-        @Nullable PrivateEndpointResponse privateEndpoint,
-        PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState,
-        @Nullable SkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.identity = identity;
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.sku = sku;
-        this.systemData = Objects.requireNonNull(systemData, "expected parameter 'systemData' to be non-null");
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PrivateEndpointConnectionResponse() {}
 
-    private PrivateEndpointConnectionResponse() {
-        this.id = null;
-        this.identity = null;
-        this.location = null;
-        this.name = null;
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
-        this.provisioningState = null;
-        this.sku = null;
-        this.systemData = null;
-        this.tags = Map.of();
-        this.type = null;
+    private PrivateEndpointConnectionResponse(PrivateEndpointConnectionResponse $) {
+        this.id = $.id;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.name = $.name;
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
+        this.sku = $.sku;
+        this.systemData = $.systemData;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable IdentityResponse identity;
-        private @Nullable String location;
-        private String name;
-        private @Nullable PrivateEndpointResponse privateEndpoint;
-        private PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-        private String provisioningState;
-        private @Nullable SkuResponse sku;
-        private SystemDataResponse systemData;
-        private @Nullable Map<String,String> tags;
-        private String type;
+        private PrivateEndpointConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionResponse();
         }
 
         public Builder(PrivateEndpointConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.sku = defaults.sku;
-    	      this.systemData = defaults.systemData;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new PrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder identity(@Nullable IdentityResponse identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder sku(@Nullable SkuResponse sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder systemData(SystemDataResponse systemData) {
-            this.systemData = Objects.requireNonNull(systemData);
+            $.systemData = systemData;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PrivateEndpointConnectionResponse build() {
-            return new PrivateEndpointConnectionResponse(id, identity, location, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, sku, systemData, tags, type);
+        }
+
+        public PrivateEndpointConnectionResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.privateLinkServiceConnectionState = Objects.requireNonNull($.privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.systemData = Objects.requireNonNull($.systemData, "expected parameter 'systemData' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

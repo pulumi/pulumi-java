@@ -17,45 +17,45 @@ public final class GetRepositoryImageScanningConfiguration extends com.pulumi.re
      * 
      */
     @Import(name="scanOnPush", required=true)
-      private final Boolean scanOnPush;
+    private Boolean scanOnPush;
 
     public Boolean scanOnPush() {
         return this.scanOnPush;
     }
 
-    public GetRepositoryImageScanningConfiguration(Boolean scanOnPush) {
-        this.scanOnPush = Objects.requireNonNull(scanOnPush, "expected parameter 'scanOnPush' to be non-null");
-    }
+    private GetRepositoryImageScanningConfiguration() {}
 
-    private GetRepositoryImageScanningConfiguration() {
-        this.scanOnPush = null;
+    private GetRepositoryImageScanningConfiguration(GetRepositoryImageScanningConfiguration $) {
+        this.scanOnPush = $.scanOnPush;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRepositoryImageScanningConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean scanOnPush;
+        private GetRepositoryImageScanningConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRepositoryImageScanningConfiguration();
         }
 
         public Builder(GetRepositoryImageScanningConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scanOnPush = defaults.scanOnPush;
+            $ = new GetRepositoryImageScanningConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder scanOnPush(Boolean scanOnPush) {
-            this.scanOnPush = Objects.requireNonNull(scanOnPush);
+            $.scanOnPush = scanOnPush;
             return this;
-        }        public GetRepositoryImageScanningConfiguration build() {
-            return new GetRepositoryImageScanningConfiguration(scanOnPush);
+        }
+
+        public GetRepositoryImageScanningConfiguration build() {
+            $.scanOnPush = Objects.requireNonNull($.scanOnPush, "expected parameter 'scanOnPush' to be non-null");
+            return $;
         }
     }
+
 }

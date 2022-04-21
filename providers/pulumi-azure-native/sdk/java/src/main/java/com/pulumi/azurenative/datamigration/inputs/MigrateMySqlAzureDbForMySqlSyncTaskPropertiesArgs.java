@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends com
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input;
+    private @Nullable Output<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input;
 
-    public Output<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends com
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<String> taskType;
+    private Output<String> taskType;
 
     public Output<String> taskType() {
         return this.taskType;
     }
 
-    public MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs(
-        @Nullable Output<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input,
-        Output<String> taskType) {
-        this.input = input;
-        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
-    }
+    private MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs() {}
 
-    private MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs() {
-        this.input = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs(MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs $) {
+        this.input = $.input;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input;
-        private Output<String> taskType;
+        private MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs();
         }
 
         public Builder(MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.taskType = defaults.taskType;
+            $ = new MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable MigrateMySqlAzureDbForMySqlSyncTaskInputArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(MigrateMySqlAzureDbForMySqlSyncTaskInputArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder taskType(Output<String> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs build() {
-            return new MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs(input, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs build() {
+            $.taskType = Codegen.stringProp("taskType").output().arg($.taskType).require();
+            return $;
         }
     }
+
 }

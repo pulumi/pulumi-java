@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,90 +15,85 @@ public final class TaskDefinitionUlimitArgs extends com.pulumi.resources.Resourc
     public static final TaskDefinitionUlimitArgs Empty = new TaskDefinitionUlimitArgs();
 
     @Import(name="hardLimit", required=true)
-      private final Output<Integer> hardLimit;
+    private Output<Integer> hardLimit;
 
     public Output<Integer> hardLimit() {
         return this.hardLimit;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="softLimit", required=true)
-      private final Output<Integer> softLimit;
+    private Output<Integer> softLimit;
 
     public Output<Integer> softLimit() {
         return this.softLimit;
     }
 
-    public TaskDefinitionUlimitArgs(
-        Output<Integer> hardLimit,
-        Output<String> name,
-        Output<Integer> softLimit) {
-        this.hardLimit = Objects.requireNonNull(hardLimit, "expected parameter 'hardLimit' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.softLimit = Objects.requireNonNull(softLimit, "expected parameter 'softLimit' to be non-null");
-    }
+    private TaskDefinitionUlimitArgs() {}
 
-    private TaskDefinitionUlimitArgs() {
-        this.hardLimit = Codegen.empty();
-        this.name = Codegen.empty();
-        this.softLimit = Codegen.empty();
+    private TaskDefinitionUlimitArgs(TaskDefinitionUlimitArgs $) {
+        this.hardLimit = $.hardLimit;
+        this.name = $.name;
+        this.softLimit = $.softLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionUlimitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> hardLimit;
-        private Output<String> name;
-        private Output<Integer> softLimit;
+        private TaskDefinitionUlimitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionUlimitArgs();
         }
 
         public Builder(TaskDefinitionUlimitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hardLimit = defaults.hardLimit;
-    	      this.name = defaults.name;
-    	      this.softLimit = defaults.softLimit;
+            $ = new TaskDefinitionUlimitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hardLimit(Output<Integer> hardLimit) {
-            this.hardLimit = Objects.requireNonNull(hardLimit);
+            $.hardLimit = hardLimit;
             return this;
         }
+
         public Builder hardLimit(Integer hardLimit) {
-            this.hardLimit = Output.of(Objects.requireNonNull(hardLimit));
-            return this;
+            return hardLimit(Output.of(hardLimit));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder softLimit(Output<Integer> softLimit) {
-            this.softLimit = Objects.requireNonNull(softLimit);
+            $.softLimit = softLimit;
             return this;
         }
+
         public Builder softLimit(Integer softLimit) {
-            this.softLimit = Output.of(Objects.requireNonNull(softLimit));
-            return this;
-        }        public TaskDefinitionUlimitArgs build() {
-            return new TaskDefinitionUlimitArgs(hardLimit, name, softLimit);
+            return softLimit(Output.of(softLimit));
+        }
+
+        public TaskDefinitionUlimitArgs build() {
+            $.hardLimit = Objects.requireNonNull($.hardLimit, "expected parameter 'hardLimit' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.softLimit = Objects.requireNonNull($.softLimit, "expected parameter 'softLimit' to be non-null");
+            return $;
         }
     }
+
 }

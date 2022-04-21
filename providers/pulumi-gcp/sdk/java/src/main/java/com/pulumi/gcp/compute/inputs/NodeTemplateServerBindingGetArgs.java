@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,49 +29,49 @@ public final class NodeTemplateServerBindingGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public NodeTemplateServerBindingGetArgs(Output<String> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private NodeTemplateServerBindingGetArgs() {}
 
-    private NodeTemplateServerBindingGetArgs() {
-        this.type = Codegen.empty();
+    private NodeTemplateServerBindingGetArgs(NodeTemplateServerBindingGetArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeTemplateServerBindingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private NodeTemplateServerBindingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeTemplateServerBindingGetArgs();
         }
 
         public Builder(NodeTemplateServerBindingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new NodeTemplateServerBindingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public NodeTemplateServerBindingGetArgs build() {
-            return new NodeTemplateServerBindingGetArgs(type);
+            return type(Output.of(type));
+        }
+
+        public NodeTemplateServerBindingGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetCompanyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCompanyArgs Empty = new GetCompanyArgs();
 
     @Import(name="companyId", required=true)
-      private final String companyId;
+    private String companyId;
 
     public String companyId() {
         return this.companyId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
     }
 
-    public GetCompanyArgs(
-        String companyId,
-        @Nullable String project,
-        String tenantId) {
-        this.companyId = Objects.requireNonNull(companyId, "expected parameter 'companyId' to be non-null");
-        this.project = project;
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private GetCompanyArgs() {}
 
-    private GetCompanyArgs() {
-        this.companyId = null;
-        this.project = null;
-        this.tenantId = null;
+    private GetCompanyArgs(GetCompanyArgs $) {
+        this.companyId = $.companyId;
+        this.project = $.project;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCompanyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String companyId;
-        private @Nullable String project;
-        private String tenantId;
+        private GetCompanyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCompanyArgs();
         }
 
         public Builder(GetCompanyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.companyId = defaults.companyId;
-    	      this.project = defaults.project;
-    	      this.tenantId = defaults.tenantId;
+            $ = new GetCompanyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder companyId(String companyId) {
-            this.companyId = Objects.requireNonNull(companyId);
+            $.companyId = companyId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
-        }        public GetCompanyArgs build() {
-            return new GetCompanyArgs(companyId, project, tenantId);
+        }
+
+        public GetCompanyArgs build() {
+            $.companyId = Objects.requireNonNull($.companyId, "expected parameter 'companyId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

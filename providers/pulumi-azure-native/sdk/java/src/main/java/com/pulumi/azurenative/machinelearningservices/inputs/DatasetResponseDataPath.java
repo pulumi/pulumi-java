@@ -28,10 +28,10 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="additionalProperties")
-      private final @Nullable Map<String,Object> additionalProperties;
+    private @Nullable Map<String,Object> additionalProperties;
 
-    public Map<String,Object> additionalProperties() {
-        return this.additionalProperties == null ? Map.of() : this.additionalProperties;
+    public Optional<Map<String,Object>> additionalProperties() {
+        return Optional.ofNullable(this.additionalProperties);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="azureFilePath", required=true)
-      private final String azureFilePath;
+    private String azureFilePath;
 
     public String azureFilePath() {
         return this.azureFilePath;
@@ -50,7 +50,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="datastoreName", required=true)
-      private final String datastoreName;
+    private String datastoreName;
 
     public String datastoreName() {
         return this.datastoreName;
@@ -61,7 +61,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="httpUrl", required=true)
-      private final String httpUrl;
+    private String httpUrl;
 
     public String httpUrl() {
         return this.httpUrl;
@@ -72,7 +72,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="partitionFormat", required=true)
-      private final String partitionFormat;
+    private String partitionFormat;
 
     public String partitionFormat() {
         return this.partitionFormat;
@@ -83,7 +83,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="partitionFormatIgnoreError", required=true)
-      private final Boolean partitionFormatIgnoreError;
+    private Boolean partitionFormatIgnoreError;
 
     public Boolean partitionFormatIgnoreError() {
         return this.partitionFormatIgnoreError;
@@ -94,7 +94,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="paths", required=true)
-      private final List<String> paths;
+    private List<String> paths;
 
     public List<String> paths() {
         return this.paths;
@@ -105,7 +105,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="relativePath", required=true)
-      private final String relativePath;
+    private String relativePath;
 
     public String relativePath() {
         return this.relativePath;
@@ -116,121 +116,103 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sqlDataPath")
-      private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
+    private @Nullable DatasetResponseSqlDataPath sqlDataPath;
 
     public Optional<DatasetResponseSqlDataPath> sqlDataPath() {
-        return this.sqlDataPath == null ? Optional.empty() : Optional.ofNullable(this.sqlDataPath);
+        return Optional.ofNullable(this.sqlDataPath);
     }
 
-    public DatasetResponseDataPath(
-        @Nullable Map<String,Object> additionalProperties,
-        String azureFilePath,
-        String datastoreName,
-        String httpUrl,
-        String partitionFormat,
-        Boolean partitionFormatIgnoreError,
-        List<String> paths,
-        String relativePath,
-        @Nullable DatasetResponseSqlDataPath sqlDataPath) {
-        this.additionalProperties = additionalProperties;
-        this.azureFilePath = Objects.requireNonNull(azureFilePath, "expected parameter 'azureFilePath' to be non-null");
-        this.datastoreName = Objects.requireNonNull(datastoreName, "expected parameter 'datastoreName' to be non-null");
-        this.httpUrl = Objects.requireNonNull(httpUrl, "expected parameter 'httpUrl' to be non-null");
-        this.partitionFormat = Objects.requireNonNull(partitionFormat, "expected parameter 'partitionFormat' to be non-null");
-        this.partitionFormatIgnoreError = Objects.requireNonNull(partitionFormatIgnoreError, "expected parameter 'partitionFormatIgnoreError' to be non-null");
-        this.paths = Objects.requireNonNull(paths, "expected parameter 'paths' to be non-null");
-        this.relativePath = Objects.requireNonNull(relativePath, "expected parameter 'relativePath' to be non-null");
-        this.sqlDataPath = sqlDataPath;
-    }
+    private DatasetResponseDataPath() {}
 
-    private DatasetResponseDataPath() {
-        this.additionalProperties = Map.of();
-        this.azureFilePath = null;
-        this.datastoreName = null;
-        this.httpUrl = null;
-        this.partitionFormat = null;
-        this.partitionFormatIgnoreError = null;
-        this.paths = List.of();
-        this.relativePath = null;
-        this.sqlDataPath = null;
+    private DatasetResponseDataPath(DatasetResponseDataPath $) {
+        this.additionalProperties = $.additionalProperties;
+        this.azureFilePath = $.azureFilePath;
+        this.datastoreName = $.datastoreName;
+        this.httpUrl = $.httpUrl;
+        this.partitionFormat = $.partitionFormat;
+        this.partitionFormatIgnoreError = $.partitionFormatIgnoreError;
+        this.paths = $.paths;
+        this.relativePath = $.relativePath;
+        this.sqlDataPath = $.sqlDataPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetResponseDataPath defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,Object> additionalProperties;
-        private String azureFilePath;
-        private String datastoreName;
-        private String httpUrl;
-        private String partitionFormat;
-        private Boolean partitionFormatIgnoreError;
-        private List<String> paths;
-        private String relativePath;
-        private @Nullable DatasetResponseSqlDataPath sqlDataPath;
+        private DatasetResponseDataPath $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetResponseDataPath();
         }
 
         public Builder(DatasetResponseDataPath defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalProperties = defaults.additionalProperties;
-    	      this.azureFilePath = defaults.azureFilePath;
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.httpUrl = defaults.httpUrl;
-    	      this.partitionFormat = defaults.partitionFormat;
-    	      this.partitionFormatIgnoreError = defaults.partitionFormatIgnoreError;
-    	      this.paths = defaults.paths;
-    	      this.relativePath = defaults.relativePath;
-    	      this.sqlDataPath = defaults.sqlDataPath;
+            $ = new DatasetResponseDataPath(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalProperties(@Nullable Map<String,Object> additionalProperties) {
-            this.additionalProperties = additionalProperties;
+            $.additionalProperties = additionalProperties;
             return this;
         }
+
         public Builder azureFilePath(String azureFilePath) {
-            this.azureFilePath = Objects.requireNonNull(azureFilePath);
+            $.azureFilePath = azureFilePath;
             return this;
         }
+
         public Builder datastoreName(String datastoreName) {
-            this.datastoreName = Objects.requireNonNull(datastoreName);
+            $.datastoreName = datastoreName;
             return this;
         }
+
         public Builder httpUrl(String httpUrl) {
-            this.httpUrl = Objects.requireNonNull(httpUrl);
+            $.httpUrl = httpUrl;
             return this;
         }
+
         public Builder partitionFormat(String partitionFormat) {
-            this.partitionFormat = Objects.requireNonNull(partitionFormat);
+            $.partitionFormat = partitionFormat;
             return this;
         }
+
         public Builder partitionFormatIgnoreError(Boolean partitionFormatIgnoreError) {
-            this.partitionFormatIgnoreError = Objects.requireNonNull(partitionFormatIgnoreError);
+            $.partitionFormatIgnoreError = partitionFormatIgnoreError;
             return this;
         }
+
         public Builder paths(List<String> paths) {
-            this.paths = Objects.requireNonNull(paths);
+            $.paths = paths;
             return this;
         }
+
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
+
         public Builder relativePath(String relativePath) {
-            this.relativePath = Objects.requireNonNull(relativePath);
+            $.relativePath = relativePath;
             return this;
         }
+
         public Builder sqlDataPath(@Nullable DatasetResponseSqlDataPath sqlDataPath) {
-            this.sqlDataPath = sqlDataPath;
+            $.sqlDataPath = sqlDataPath;
             return this;
-        }        public DatasetResponseDataPath build() {
-            return new DatasetResponseDataPath(additionalProperties, azureFilePath, datastoreName, httpUrl, partitionFormat, partitionFormatIgnoreError, paths, relativePath, sqlDataPath);
+        }
+
+        public DatasetResponseDataPath build() {
+            $.azureFilePath = Objects.requireNonNull($.azureFilePath, "expected parameter 'azureFilePath' to be non-null");
+            $.datastoreName = Objects.requireNonNull($.datastoreName, "expected parameter 'datastoreName' to be non-null");
+            $.httpUrl = Objects.requireNonNull($.httpUrl, "expected parameter 'httpUrl' to be non-null");
+            $.partitionFormat = Objects.requireNonNull($.partitionFormat, "expected parameter 'partitionFormat' to be non-null");
+            $.partitionFormatIgnoreError = Objects.requireNonNull($.partitionFormatIgnoreError, "expected parameter 'partitionFormatIgnoreError' to be non-null");
+            $.paths = Objects.requireNonNull($.paths, "expected parameter 'paths' to be non-null");
+            $.relativePath = Objects.requireNonNull($.relativePath, "expected parameter 'relativePath' to be non-null");
+            return $;
         }
     }
+
 }

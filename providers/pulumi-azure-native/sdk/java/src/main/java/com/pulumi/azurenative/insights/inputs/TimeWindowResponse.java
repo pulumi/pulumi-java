@@ -23,7 +23,7 @@ public final class TimeWindowResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="end", required=true)
-      private final String end;
+    private String end;
 
     public String end() {
         return this.end;
@@ -34,7 +34,7 @@ public final class TimeWindowResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="start", required=true)
-      private final String start;
+    private String start;
 
     public String start() {
         return this.start;
@@ -45,64 +45,58 @@ public final class TimeWindowResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable String timeZone;
+    private @Nullable String timeZone;
 
     public Optional<String> timeZone() {
-        return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public TimeWindowResponse(
-        String end,
-        String start,
-        @Nullable String timeZone) {
-        this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
-        this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
-        this.timeZone = timeZone;
-    }
+    private TimeWindowResponse() {}
 
-    private TimeWindowResponse() {
-        this.end = null;
-        this.start = null;
-        this.timeZone = null;
+    private TimeWindowResponse(TimeWindowResponse $) {
+        this.end = $.end;
+        this.start = $.start;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String end;
-        private String start;
-        private @Nullable String timeZone;
+        private TimeWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeWindowResponse();
         }
 
         public Builder(TimeWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.start = defaults.start;
-    	      this.timeZone = defaults.timeZone;
+            $ = new TimeWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder end(String end) {
-            this.end = Objects.requireNonNull(end);
+            $.end = end;
             return this;
         }
+
         public Builder start(String start) {
-            this.start = Objects.requireNonNull(start);
+            $.start = start;
             return this;
         }
+
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
-        }        public TimeWindowResponse build() {
-            return new TimeWindowResponse(end, start, timeZone);
+        }
+
+        public TimeWindowResponse build() {
+            $.end = Objects.requireNonNull($.end, "expected parameter 'end' to be non-null");
+            $.start = Objects.requireNonNull($.start, "expected parameter 'start' to be non-null");
+            return $;
         }
     }
+
 }

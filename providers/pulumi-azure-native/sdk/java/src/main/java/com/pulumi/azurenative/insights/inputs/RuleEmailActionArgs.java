@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="customEmails")
-      private final @Nullable Output<List<String>> customEmails;
+    private @Nullable Output<List<String>> customEmails;
 
-    public Output<List<String>> customEmails() {
-        return this.customEmails == null ? Codegen.empty() : this.customEmails;
+    public Optional<Output<List<String>>> customEmails() {
+        return Optional.ofNullable(this.customEmails);
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -49,79 +50,73 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sendToServiceOwners")
-      private final @Nullable Output<Boolean> sendToServiceOwners;
+    private @Nullable Output<Boolean> sendToServiceOwners;
 
-    public Output<Boolean> sendToServiceOwners() {
-        return this.sendToServiceOwners == null ? Codegen.empty() : this.sendToServiceOwners;
+    public Optional<Output<Boolean>> sendToServiceOwners() {
+        return Optional.ofNullable(this.sendToServiceOwners);
     }
 
-    public RuleEmailActionArgs(
-        @Nullable Output<List<String>> customEmails,
-        Output<String> odataType,
-        @Nullable Output<Boolean> sendToServiceOwners) {
-        this.customEmails = customEmails;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.sendToServiceOwners = sendToServiceOwners;
-    }
+    private RuleEmailActionArgs() {}
 
-    private RuleEmailActionArgs() {
-        this.customEmails = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.sendToServiceOwners = Codegen.empty();
+    private RuleEmailActionArgs(RuleEmailActionArgs $) {
+        this.customEmails = $.customEmails;
+        this.odataType = $.odataType;
+        this.sendToServiceOwners = $.sendToServiceOwners;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleEmailActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> customEmails;
-        private Output<String> odataType;
-        private @Nullable Output<Boolean> sendToServiceOwners;
+        private RuleEmailActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleEmailActionArgs();
         }
 
         public Builder(RuleEmailActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customEmails = defaults.customEmails;
-    	      this.odataType = defaults.odataType;
-    	      this.sendToServiceOwners = defaults.sendToServiceOwners;
+            $ = new RuleEmailActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customEmails(@Nullable Output<List<String>> customEmails) {
-            this.customEmails = customEmails;
+            $.customEmails = customEmails;
             return this;
         }
-        public Builder customEmails(@Nullable List<String> customEmails) {
-            this.customEmails = Codegen.ofNullable(customEmails);
-            return this;
+
+        public Builder customEmails(List<String> customEmails) {
+            return customEmails(Output.of(customEmails));
         }
+
         public Builder customEmails(String... customEmails) {
             return customEmails(List.of(customEmails));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder sendToServiceOwners(@Nullable Output<Boolean> sendToServiceOwners) {
-            this.sendToServiceOwners = sendToServiceOwners;
+            $.sendToServiceOwners = sendToServiceOwners;
             return this;
         }
-        public Builder sendToServiceOwners(@Nullable Boolean sendToServiceOwners) {
-            this.sendToServiceOwners = Codegen.ofNullable(sendToServiceOwners);
-            return this;
-        }        public RuleEmailActionArgs build() {
-            return new RuleEmailActionArgs(customEmails, odataType, sendToServiceOwners);
+
+        public Builder sendToServiceOwners(Boolean sendToServiceOwners) {
+            return sendToServiceOwners(Output.of(sendToServiceOwners));
+        }
+
+        public RuleEmailActionArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

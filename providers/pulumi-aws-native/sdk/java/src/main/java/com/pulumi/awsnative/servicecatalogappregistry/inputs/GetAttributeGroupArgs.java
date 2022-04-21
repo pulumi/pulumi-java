@@ -13,45 +13,45 @@ public final class GetAttributeGroupArgs extends com.pulumi.resources.InvokeArgs
     public static final GetAttributeGroupArgs Empty = new GetAttributeGroupArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetAttributeGroupArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetAttributeGroupArgs() {}
 
-    private GetAttributeGroupArgs() {
-        this.id = null;
+    private GetAttributeGroupArgs(GetAttributeGroupArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAttributeGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetAttributeGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAttributeGroupArgs();
         }
 
         public Builder(GetAttributeGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetAttributeGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetAttributeGroupArgs build() {
-            return new GetAttributeGroupArgs(id);
+        }
+
+        public GetAttributeGroupArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

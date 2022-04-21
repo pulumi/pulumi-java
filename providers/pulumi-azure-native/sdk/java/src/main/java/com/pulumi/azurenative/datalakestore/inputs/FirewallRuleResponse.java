@@ -21,7 +21,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="endIpAddress", required=true)
-      private final String endIpAddress;
+    private String endIpAddress;
 
     public String endIpAddress() {
         return this.endIpAddress;
@@ -32,7 +32,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -43,7 +43,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -54,7 +54,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="startIpAddress", required=true)
-      private final String startIpAddress;
+    private String startIpAddress;
 
     public String startIpAddress() {
         return this.startIpAddress;
@@ -65,82 +65,73 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public FirewallRuleResponse(
-        String endIpAddress,
-        String id,
-        String name,
-        String startIpAddress,
-        String type) {
-        this.endIpAddress = Objects.requireNonNull(endIpAddress, "expected parameter 'endIpAddress' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.startIpAddress = Objects.requireNonNull(startIpAddress, "expected parameter 'startIpAddress' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FirewallRuleResponse() {}
 
-    private FirewallRuleResponse() {
-        this.endIpAddress = null;
-        this.id = null;
-        this.name = null;
-        this.startIpAddress = null;
-        this.type = null;
+    private FirewallRuleResponse(FirewallRuleResponse $) {
+        this.endIpAddress = $.endIpAddress;
+        this.id = $.id;
+        this.name = $.name;
+        this.startIpAddress = $.startIpAddress;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endIpAddress;
-        private String id;
-        private String name;
-        private String startIpAddress;
-        private String type;
+        private FirewallRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallRuleResponse();
         }
 
         public Builder(FirewallRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endIpAddress = defaults.endIpAddress;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.startIpAddress = defaults.startIpAddress;
-    	      this.type = defaults.type;
+            $ = new FirewallRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endIpAddress(String endIpAddress) {
-            this.endIpAddress = Objects.requireNonNull(endIpAddress);
+            $.endIpAddress = endIpAddress;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder startIpAddress(String startIpAddress) {
-            this.startIpAddress = Objects.requireNonNull(startIpAddress);
+            $.startIpAddress = startIpAddress;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public FirewallRuleResponse build() {
-            return new FirewallRuleResponse(endIpAddress, id, name, startIpAddress, type);
+        }
+
+        public FirewallRuleResponse build() {
+            $.endIpAddress = Objects.requireNonNull($.endIpAddress, "expected parameter 'endIpAddress' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.startIpAddress = Objects.requireNonNull($.startIpAddress, "expected parameter 'startIpAddress' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

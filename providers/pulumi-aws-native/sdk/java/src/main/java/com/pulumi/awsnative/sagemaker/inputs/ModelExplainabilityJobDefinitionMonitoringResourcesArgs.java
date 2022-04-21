@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionClusterConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ModelExplainabilityJobDefinitionMonitoringResourcesArgs exten
     public static final ModelExplainabilityJobDefinitionMonitoringResourcesArgs Empty = new ModelExplainabilityJobDefinitionMonitoringResourcesArgs();
 
     @Import(name="clusterConfig", required=true)
-      private final Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig;
+    private Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig;
 
     public Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig() {
         return this.clusterConfig;
     }
 
-    public ModelExplainabilityJobDefinitionMonitoringResourcesArgs(Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig) {
-        this.clusterConfig = Objects.requireNonNull(clusterConfig, "expected parameter 'clusterConfig' to be non-null");
-    }
+    private ModelExplainabilityJobDefinitionMonitoringResourcesArgs() {}
 
-    private ModelExplainabilityJobDefinitionMonitoringResourcesArgs() {
-        this.clusterConfig = Codegen.empty();
+    private ModelExplainabilityJobDefinitionMonitoringResourcesArgs(ModelExplainabilityJobDefinitionMonitoringResourcesArgs $) {
+        this.clusterConfig = $.clusterConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelExplainabilityJobDefinitionMonitoringResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig;
+        private ModelExplainabilityJobDefinitionMonitoringResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelExplainabilityJobDefinitionMonitoringResourcesArgs();
         }
 
         public Builder(ModelExplainabilityJobDefinitionMonitoringResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterConfig = defaults.clusterConfig;
+            $ = new ModelExplainabilityJobDefinitionMonitoringResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterConfig(Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig) {
-            this.clusterConfig = Objects.requireNonNull(clusterConfig);
+            $.clusterConfig = clusterConfig;
             return this;
         }
+
         public Builder clusterConfig(ModelExplainabilityJobDefinitionClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
-            return this;
-        }        public ModelExplainabilityJobDefinitionMonitoringResourcesArgs build() {
-            return new ModelExplainabilityJobDefinitionMonitoringResourcesArgs(clusterConfig);
+            return clusterConfig(Output.of(clusterConfig));
+        }
+
+        public ModelExplainabilityJobDefinitionMonitoringResourcesArgs build() {
+            $.clusterConfig = Objects.requireNonNull($.clusterConfig, "expected parameter 'clusterConfig' to be non-null");
+            return $;
         }
     }
+
 }

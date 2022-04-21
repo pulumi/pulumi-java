@@ -6,10 +6,10 @@ package com.pulumi.azurenative.securityinsights.inputs;
 import com.pulumi.azurenative.securityinsights.inputs.ContentPathMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="branch")
-      private final @Nullable Output<String> branch;
+    private @Nullable Output<String> branch;
 
-    public Output<String> branch() {
-        return this.branch == null ? Codegen.empty() : this.branch;
+    public Optional<Output<String>> branch() {
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentLogsUrl")
-      private final @Nullable Output<String> deploymentLogsUrl;
+    private @Nullable Output<String> deploymentLogsUrl;
 
-    public Output<String> deploymentLogsUrl() {
-        return this.deploymentLogsUrl == null ? Codegen.empty() : this.deploymentLogsUrl;
+    public Optional<Output<String>> deploymentLogsUrl() {
+        return Optional.ofNullable(this.deploymentLogsUrl);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayUrl")
-      private final @Nullable Output<String> displayUrl;
+    private @Nullable Output<String> displayUrl;
 
-    public Output<String> displayUrl() {
-        return this.displayUrl == null ? Codegen.empty() : this.displayUrl;
+    public Optional<Output<String>> displayUrl() {
+        return Optional.ofNullable(this.displayUrl);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pathMapping")
-      private final @Nullable Output<List<ContentPathMapArgs>> pathMapping;
+    private @Nullable Output<List<ContentPathMapArgs>> pathMapping;
 
-    public Output<List<ContentPathMapArgs>> pathMapping() {
-        return this.pathMapping == null ? Codegen.empty() : this.pathMapping;
+    public Optional<Output<List<ContentPathMapArgs>>> pathMapping() {
+        return Optional.ofNullable(this.pathMapping);
     }
 
     /**
@@ -70,105 +70,92 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public RepositoryArgs(
-        @Nullable Output<String> branch,
-        @Nullable Output<String> deploymentLogsUrl,
-        @Nullable Output<String> displayUrl,
-        @Nullable Output<List<ContentPathMapArgs>> pathMapping,
-        @Nullable Output<String> url) {
-        this.branch = branch;
-        this.deploymentLogsUrl = deploymentLogsUrl;
-        this.displayUrl = displayUrl;
-        this.pathMapping = pathMapping;
-        this.url = url;
-    }
+    private RepositoryArgs() {}
 
-    private RepositoryArgs() {
-        this.branch = Codegen.empty();
-        this.deploymentLogsUrl = Codegen.empty();
-        this.displayUrl = Codegen.empty();
-        this.pathMapping = Codegen.empty();
-        this.url = Codegen.empty();
+    private RepositoryArgs(RepositoryArgs $) {
+        this.branch = $.branch;
+        this.deploymentLogsUrl = $.deploymentLogsUrl;
+        this.displayUrl = $.displayUrl;
+        this.pathMapping = $.pathMapping;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branch;
-        private @Nullable Output<String> deploymentLogsUrl;
-        private @Nullable Output<String> displayUrl;
-        private @Nullable Output<List<ContentPathMapArgs>> pathMapping;
-        private @Nullable Output<String> url;
+        private RepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryArgs();
         }
 
         public Builder(RepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.deploymentLogsUrl = defaults.deploymentLogsUrl;
-    	      this.displayUrl = defaults.displayUrl;
-    	      this.pathMapping = defaults.pathMapping;
-    	      this.url = defaults.url;
+            $ = new RepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(@Nullable Output<String> branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
-        public Builder branch(@Nullable String branch) {
-            this.branch = Codegen.ofNullable(branch);
-            return this;
+
+        public Builder branch(String branch) {
+            return branch(Output.of(branch));
         }
+
         public Builder deploymentLogsUrl(@Nullable Output<String> deploymentLogsUrl) {
-            this.deploymentLogsUrl = deploymentLogsUrl;
+            $.deploymentLogsUrl = deploymentLogsUrl;
             return this;
         }
-        public Builder deploymentLogsUrl(@Nullable String deploymentLogsUrl) {
-            this.deploymentLogsUrl = Codegen.ofNullable(deploymentLogsUrl);
-            return this;
+
+        public Builder deploymentLogsUrl(String deploymentLogsUrl) {
+            return deploymentLogsUrl(Output.of(deploymentLogsUrl));
         }
+
         public Builder displayUrl(@Nullable Output<String> displayUrl) {
-            this.displayUrl = displayUrl;
+            $.displayUrl = displayUrl;
             return this;
         }
-        public Builder displayUrl(@Nullable String displayUrl) {
-            this.displayUrl = Codegen.ofNullable(displayUrl);
-            return this;
+
+        public Builder displayUrl(String displayUrl) {
+            return displayUrl(Output.of(displayUrl));
         }
+
         public Builder pathMapping(@Nullable Output<List<ContentPathMapArgs>> pathMapping) {
-            this.pathMapping = pathMapping;
+            $.pathMapping = pathMapping;
             return this;
         }
-        public Builder pathMapping(@Nullable List<ContentPathMapArgs> pathMapping) {
-            this.pathMapping = Codegen.ofNullable(pathMapping);
-            return this;
+
+        public Builder pathMapping(List<ContentPathMapArgs> pathMapping) {
+            return pathMapping(Output.of(pathMapping));
         }
+
         public Builder pathMapping(ContentPathMapArgs... pathMapping) {
             return pathMapping(List.of(pathMapping));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public RepositoryArgs build() {
-            return new RepositoryArgs(branch, deploymentLogsUrl, displayUrl, pathMapping, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public RepositoryArgs build() {
+            return $;
         }
     }
+
 }

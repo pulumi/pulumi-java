@@ -13,45 +13,45 @@ public final class GetCapacityReservationFleetArgs extends com.pulumi.resources.
     public static final GetCapacityReservationFleetArgs Empty = new GetCapacityReservationFleetArgs();
 
     @Import(name="capacityReservationFleetId", required=true)
-      private final String capacityReservationFleetId;
+    private String capacityReservationFleetId;
 
     public String capacityReservationFleetId() {
         return this.capacityReservationFleetId;
     }
 
-    public GetCapacityReservationFleetArgs(String capacityReservationFleetId) {
-        this.capacityReservationFleetId = Objects.requireNonNull(capacityReservationFleetId, "expected parameter 'capacityReservationFleetId' to be non-null");
-    }
+    private GetCapacityReservationFleetArgs() {}
 
-    private GetCapacityReservationFleetArgs() {
-        this.capacityReservationFleetId = null;
+    private GetCapacityReservationFleetArgs(GetCapacityReservationFleetArgs $) {
+        this.capacityReservationFleetId = $.capacityReservationFleetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCapacityReservationFleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String capacityReservationFleetId;
+        private GetCapacityReservationFleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCapacityReservationFleetArgs();
         }
 
         public Builder(GetCapacityReservationFleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityReservationFleetId = defaults.capacityReservationFleetId;
+            $ = new GetCapacityReservationFleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityReservationFleetId(String capacityReservationFleetId) {
-            this.capacityReservationFleetId = Objects.requireNonNull(capacityReservationFleetId);
+            $.capacityReservationFleetId = capacityReservationFleetId;
             return this;
-        }        public GetCapacityReservationFleetArgs build() {
-            return new GetCapacityReservationFleetArgs(capacityReservationFleetId);
+        }
+
+        public GetCapacityReservationFleetArgs build() {
+            $.capacityReservationFleetId = Objects.requireNonNull($.capacityReservationFleetId, "expected parameter 'capacityReservationFleetId' to be non-null");
+            return $;
         }
     }
+
 }

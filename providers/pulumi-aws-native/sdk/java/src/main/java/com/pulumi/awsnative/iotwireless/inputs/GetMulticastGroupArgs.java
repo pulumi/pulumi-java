@@ -17,45 +17,45 @@ public final class GetMulticastGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetMulticastGroupArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetMulticastGroupArgs() {}
 
-    private GetMulticastGroupArgs() {
-        this.id = null;
+    private GetMulticastGroupArgs(GetMulticastGroupArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMulticastGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetMulticastGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMulticastGroupArgs();
         }
 
         public Builder(GetMulticastGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetMulticastGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetMulticastGroupArgs build() {
-            return new GetMulticastGroupArgs(id);
+        }
+
+        public GetMulticastGroupArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

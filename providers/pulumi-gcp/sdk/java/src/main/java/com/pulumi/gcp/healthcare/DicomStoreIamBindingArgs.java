@@ -5,11 +5,11 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.DicomStoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class DicomStoreIamBindingArgs extends com.pulumi.resources.Resourc
     public static final DicomStoreIamBindingArgs Empty = new DicomStoreIamBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<DicomStoreIamBindingConditionArgs> condition;
+    private @Nullable Output<DicomStoreIamBindingConditionArgs> condition;
 
-    public Output<DicomStoreIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<DicomStoreIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -32,14 +32,14 @@ public final class DicomStoreIamBindingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="dicomStoreId", required=true)
-      private final Output<String> dicomStoreId;
+    private Output<String> dicomStoreId;
 
     public Output<String> dicomStoreId() {
         return this.dicomStoreId;
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -52,92 +52,85 @@ public final class DicomStoreIamBindingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public DicomStoreIamBindingArgs(
-        @Nullable Output<DicomStoreIamBindingConditionArgs> condition,
-        Output<String> dicomStoreId,
-        Output<List<String>> members,
-        Output<String> role) {
-        this.condition = condition;
-        this.dicomStoreId = Objects.requireNonNull(dicomStoreId, "expected parameter 'dicomStoreId' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private DicomStoreIamBindingArgs() {}
 
-    private DicomStoreIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.dicomStoreId = Codegen.empty();
-        this.members = Codegen.empty();
-        this.role = Codegen.empty();
+    private DicomStoreIamBindingArgs(DicomStoreIamBindingArgs $) {
+        this.condition = $.condition;
+        this.dicomStoreId = $.dicomStoreId;
+        this.members = $.members;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DicomStoreIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DicomStoreIamBindingConditionArgs> condition;
-        private Output<String> dicomStoreId;
-        private Output<List<String>> members;
-        private Output<String> role;
+        private DicomStoreIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DicomStoreIamBindingArgs();
         }
 
         public Builder(DicomStoreIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.dicomStoreId = defaults.dicomStoreId;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
+            $ = new DicomStoreIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<DicomStoreIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable DicomStoreIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(DicomStoreIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder dicomStoreId(Output<String> dicomStoreId) {
-            this.dicomStoreId = Objects.requireNonNull(dicomStoreId);
+            $.dicomStoreId = dicomStoreId;
             return this;
         }
+
         public Builder dicomStoreId(String dicomStoreId) {
-            this.dicomStoreId = Output.of(Objects.requireNonNull(dicomStoreId));
-            return this;
+            return dicomStoreId(Output.of(dicomStoreId));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public DicomStoreIamBindingArgs build() {
-            return new DicomStoreIamBindingArgs(condition, dicomStoreId, members, role);
+            return role(Output.of(role));
+        }
+
+        public DicomStoreIamBindingArgs build() {
+            $.dicomStoreId = Objects.requireNonNull($.dicomStoreId, "expected parameter 'dicomStoreId' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

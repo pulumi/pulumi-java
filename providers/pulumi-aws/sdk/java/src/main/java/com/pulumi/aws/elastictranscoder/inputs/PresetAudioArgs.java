@@ -5,9 +5,9 @@ package com.pulumi.aws.elastictranscoder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PresetAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audioPackingMode")
-      private final @Nullable Output<String> audioPackingMode;
+    private @Nullable Output<String> audioPackingMode;
 
-    public Output<String> audioPackingMode() {
-        return this.audioPackingMode == null ? Codegen.empty() : this.audioPackingMode;
+    public Optional<Output<String>> audioPackingMode() {
+        return Optional.ofNullable(this.audioPackingMode);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PresetAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bitRate")
-      private final @Nullable Output<String> bitRate;
+    private @Nullable Output<String> bitRate;
 
-    public Output<String> bitRate() {
-        return this.bitRate == null ? Codegen.empty() : this.bitRate;
+    public Optional<Output<String>> bitRate() {
+        return Optional.ofNullable(this.bitRate);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PresetAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="channels")
-      private final @Nullable Output<String> channels;
+    private @Nullable Output<String> channels;
 
-    public Output<String> channels() {
-        return this.channels == null ? Codegen.empty() : this.channels;
+    public Optional<Output<String>> channels() {
+        return Optional.ofNullable(this.channels);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PresetAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="codec")
-      private final @Nullable Output<String> codec;
+    private @Nullable Output<String> codec;
 
-    public Output<String> codec() {
-        return this.codec == null ? Codegen.empty() : this.codec;
+    public Optional<Output<String>> codec() {
+        return Optional.ofNullable(this.codec);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class PresetAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sampleRate")
-      private final @Nullable Output<String> sampleRate;
+    private @Nullable Output<String> sampleRate;
 
-    public Output<String> sampleRate() {
-        return this.sampleRate == null ? Codegen.empty() : this.sampleRate;
+    public Optional<Output<String>> sampleRate() {
+        return Optional.ofNullable(this.sampleRate);
     }
 
-    public PresetAudioArgs(
-        @Nullable Output<String> audioPackingMode,
-        @Nullable Output<String> bitRate,
-        @Nullable Output<String> channels,
-        @Nullable Output<String> codec,
-        @Nullable Output<String> sampleRate) {
-        this.audioPackingMode = audioPackingMode;
-        this.bitRate = bitRate;
-        this.channels = channels;
-        this.codec = codec;
-        this.sampleRate = sampleRate;
-    }
+    private PresetAudioArgs() {}
 
-    private PresetAudioArgs() {
-        this.audioPackingMode = Codegen.empty();
-        this.bitRate = Codegen.empty();
-        this.channels = Codegen.empty();
-        this.codec = Codegen.empty();
-        this.sampleRate = Codegen.empty();
+    private PresetAudioArgs(PresetAudioArgs $) {
+        this.audioPackingMode = $.audioPackingMode;
+        this.bitRate = $.bitRate;
+        this.channels = $.channels;
+        this.codec = $.codec;
+        this.sampleRate = $.sampleRate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PresetAudioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audioPackingMode;
-        private @Nullable Output<String> bitRate;
-        private @Nullable Output<String> channels;
-        private @Nullable Output<String> codec;
-        private @Nullable Output<String> sampleRate;
+        private PresetAudioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PresetAudioArgs();
         }
 
         public Builder(PresetAudioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioPackingMode = defaults.audioPackingMode;
-    	      this.bitRate = defaults.bitRate;
-    	      this.channels = defaults.channels;
-    	      this.codec = defaults.codec;
-    	      this.sampleRate = defaults.sampleRate;
+            $ = new PresetAudioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audioPackingMode(@Nullable Output<String> audioPackingMode) {
-            this.audioPackingMode = audioPackingMode;
+            $.audioPackingMode = audioPackingMode;
             return this;
         }
-        public Builder audioPackingMode(@Nullable String audioPackingMode) {
-            this.audioPackingMode = Codegen.ofNullable(audioPackingMode);
-            return this;
+
+        public Builder audioPackingMode(String audioPackingMode) {
+            return audioPackingMode(Output.of(audioPackingMode));
         }
+
         public Builder bitRate(@Nullable Output<String> bitRate) {
-            this.bitRate = bitRate;
+            $.bitRate = bitRate;
             return this;
         }
-        public Builder bitRate(@Nullable String bitRate) {
-            this.bitRate = Codegen.ofNullable(bitRate);
-            return this;
+
+        public Builder bitRate(String bitRate) {
+            return bitRate(Output.of(bitRate));
         }
+
         public Builder channels(@Nullable Output<String> channels) {
-            this.channels = channels;
+            $.channels = channels;
             return this;
         }
-        public Builder channels(@Nullable String channels) {
-            this.channels = Codegen.ofNullable(channels);
-            return this;
+
+        public Builder channels(String channels) {
+            return channels(Output.of(channels));
         }
+
         public Builder codec(@Nullable Output<String> codec) {
-            this.codec = codec;
+            $.codec = codec;
             return this;
         }
-        public Builder codec(@Nullable String codec) {
-            this.codec = Codegen.ofNullable(codec);
-            return this;
+
+        public Builder codec(String codec) {
+            return codec(Output.of(codec));
         }
+
         public Builder sampleRate(@Nullable Output<String> sampleRate) {
-            this.sampleRate = sampleRate;
+            $.sampleRate = sampleRate;
             return this;
         }
-        public Builder sampleRate(@Nullable String sampleRate) {
-            this.sampleRate = Codegen.ofNullable(sampleRate);
-            return this;
-        }        public PresetAudioArgs build() {
-            return new PresetAudioArgs(audioPackingMode, bitRate, channels, codec, sampleRate);
+
+        public Builder sampleRate(String sampleRate) {
+            return sampleRate(Output.of(sampleRate));
+        }
+
+        public PresetAudioArgs build() {
+            return $;
         }
     }
+
 }

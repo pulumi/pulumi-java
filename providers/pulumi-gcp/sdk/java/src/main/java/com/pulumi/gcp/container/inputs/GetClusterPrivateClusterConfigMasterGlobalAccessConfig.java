@@ -13,45 +13,45 @@ public final class GetClusterPrivateClusterConfigMasterGlobalAccessConfig extend
     public static final GetClusterPrivateClusterConfigMasterGlobalAccessConfig Empty = new GetClusterPrivateClusterConfigMasterGlobalAccessConfig();
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetClusterPrivateClusterConfigMasterGlobalAccessConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetClusterPrivateClusterConfigMasterGlobalAccessConfig() {}
 
-    private GetClusterPrivateClusterConfigMasterGlobalAccessConfig() {
-        this.enabled = null;
+    private GetClusterPrivateClusterConfigMasterGlobalAccessConfig(GetClusterPrivateClusterConfigMasterGlobalAccessConfig $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterPrivateClusterConfigMasterGlobalAccessConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private GetClusterPrivateClusterConfigMasterGlobalAccessConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterPrivateClusterConfigMasterGlobalAccessConfig();
         }
 
         public Builder(GetClusterPrivateClusterConfigMasterGlobalAccessConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GetClusterPrivateClusterConfigMasterGlobalAccessConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetClusterPrivateClusterConfigMasterGlobalAccessConfig build() {
-            return new GetClusterPrivateClusterConfigMasterGlobalAccessConfig(enabled);
+        }
+
+        public GetClusterPrivateClusterConfigMasterGlobalAccessConfig build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

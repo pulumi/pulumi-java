@@ -5,11 +5,11 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.HttpRuleArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class HttpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fullyDecodeReservedExpansion")
-      private final @Nullable Output<Boolean> fullyDecodeReservedExpansion;
+    private @Nullable Output<Boolean> fullyDecodeReservedExpansion;
 
-    public Output<Boolean> fullyDecodeReservedExpansion() {
-        return this.fullyDecodeReservedExpansion == null ? Codegen.empty() : this.fullyDecodeReservedExpansion;
+    public Optional<Output<Boolean>> fullyDecodeReservedExpansion() {
+        return Optional.ofNullable(this.fullyDecodeReservedExpansion);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class HttpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<HttpRuleArgs>> rules;
+    private @Nullable Output<List<HttpRuleArgs>> rules;
 
-    public Output<List<HttpRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<HttpRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public HttpArgs(
-        @Nullable Output<Boolean> fullyDecodeReservedExpansion,
-        @Nullable Output<List<HttpRuleArgs>> rules) {
-        this.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
-        this.rules = rules;
-    }
+    private HttpArgs() {}
 
-    private HttpArgs() {
-        this.fullyDecodeReservedExpansion = Codegen.empty();
-        this.rules = Codegen.empty();
+    private HttpArgs(HttpArgs $) {
+        this.fullyDecodeReservedExpansion = $.fullyDecodeReservedExpansion;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> fullyDecodeReservedExpansion;
-        private @Nullable Output<List<HttpRuleArgs>> rules;
+        private HttpArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpArgs();
         }
 
         public Builder(HttpArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fullyDecodeReservedExpansion = defaults.fullyDecodeReservedExpansion;
-    	      this.rules = defaults.rules;
+            $ = new HttpArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fullyDecodeReservedExpansion(@Nullable Output<Boolean> fullyDecodeReservedExpansion) {
-            this.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
+            $.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
             return this;
         }
-        public Builder fullyDecodeReservedExpansion(@Nullable Boolean fullyDecodeReservedExpansion) {
-            this.fullyDecodeReservedExpansion = Codegen.ofNullable(fullyDecodeReservedExpansion);
-            return this;
+
+        public Builder fullyDecodeReservedExpansion(Boolean fullyDecodeReservedExpansion) {
+            return fullyDecodeReservedExpansion(Output.of(fullyDecodeReservedExpansion));
         }
+
         public Builder rules(@Nullable Output<List<HttpRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<HttpRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<HttpRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(HttpRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public HttpArgs build() {
-            return new HttpArgs(fullyDecodeReservedExpansion, rules);
+        }
+
+        public HttpArgs build() {
+            return $;
         }
     }
+
 }

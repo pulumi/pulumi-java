@@ -21,45 +21,45 @@ public final class CertificateFingerprintResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sha256Hash", required=true)
-      private final String sha256Hash;
+    private String sha256Hash;
 
     public String sha256Hash() {
         return this.sha256Hash;
     }
 
-    public CertificateFingerprintResponse(String sha256Hash) {
-        this.sha256Hash = Objects.requireNonNull(sha256Hash, "expected parameter 'sha256Hash' to be non-null");
-    }
+    private CertificateFingerprintResponse() {}
 
-    private CertificateFingerprintResponse() {
-        this.sha256Hash = null;
+    private CertificateFingerprintResponse(CertificateFingerprintResponse $) {
+        this.sha256Hash = $.sha256Hash;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateFingerprintResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sha256Hash;
+        private CertificateFingerprintResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateFingerprintResponse();
         }
 
         public Builder(CertificateFingerprintResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sha256Hash = defaults.sha256Hash;
+            $ = new CertificateFingerprintResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sha256Hash(String sha256Hash) {
-            this.sha256Hash = Objects.requireNonNull(sha256Hash);
+            $.sha256Hash = sha256Hash;
             return this;
-        }        public CertificateFingerprintResponse build() {
-            return new CertificateFingerprintResponse(sha256Hash);
+        }
+
+        public CertificateFingerprintResponse build() {
+            $.sha256Hash = Objects.requireNonNull($.sha256Hash, "expected parameter 'sha256Hash' to be non-null");
+            return $;
         }
     }
+
 }

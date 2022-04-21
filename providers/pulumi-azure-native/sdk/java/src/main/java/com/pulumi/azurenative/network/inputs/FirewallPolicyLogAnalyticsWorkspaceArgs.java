@@ -6,9 +6,9 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends com.pulumi.re
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends com.pulumi.re
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable Output<SubResourceArgs> workspaceId;
+    private @Nullable Output<SubResourceArgs> workspaceId;
 
-    public Output<SubResourceArgs> workspaceId() {
-        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
+    public Optional<Output<SubResourceArgs>> workspaceId() {
+        return Optional.ofNullable(this.workspaceId);
     }
 
-    public FirewallPolicyLogAnalyticsWorkspaceArgs(
-        @Nullable Output<String> region,
-        @Nullable Output<SubResourceArgs> workspaceId) {
-        this.region = region;
-        this.workspaceId = workspaceId;
-    }
+    private FirewallPolicyLogAnalyticsWorkspaceArgs() {}
 
-    private FirewallPolicyLogAnalyticsWorkspaceArgs() {
-        this.region = Codegen.empty();
-        this.workspaceId = Codegen.empty();
+    private FirewallPolicyLogAnalyticsWorkspaceArgs(FirewallPolicyLogAnalyticsWorkspaceArgs $) {
+        this.region = $.region;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyLogAnalyticsWorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> region;
-        private @Nullable Output<SubResourceArgs> workspaceId;
+        private FirewallPolicyLogAnalyticsWorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyLogAnalyticsWorkspaceArgs();
         }
 
         public Builder(FirewallPolicyLogAnalyticsWorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new FirewallPolicyLogAnalyticsWorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder workspaceId(@Nullable Output<SubResourceArgs> workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
         }
-        public Builder workspaceId(@Nullable SubResourceArgs workspaceId) {
-            this.workspaceId = Codegen.ofNullable(workspaceId);
-            return this;
-        }        public FirewallPolicyLogAnalyticsWorkspaceArgs build() {
-            return new FirewallPolicyLogAnalyticsWorkspaceArgs(region, workspaceId);
+
+        public Builder workspaceId(SubResourceArgs workspaceId) {
+            return workspaceId(Output.of(workspaceId));
+        }
+
+        public FirewallPolicyLogAnalyticsWorkspaceArgs build() {
+            return $;
         }
     }
+
 }

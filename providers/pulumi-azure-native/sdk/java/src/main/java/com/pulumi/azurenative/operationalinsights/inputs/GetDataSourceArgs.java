@@ -17,7 +17,7 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataSourceName", required=true)
-      private final String dataSourceName;
+    private String dataSourceName;
 
     public String dataSourceName() {
         return this.dataSourceName;
@@ -28,7 +28,7 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetDataSourceArgs(
-        String dataSourceName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.dataSourceName = Objects.requireNonNull(dataSourceName, "expected parameter 'dataSourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetDataSourceArgs() {}
 
-    private GetDataSourceArgs() {
-        this.dataSourceName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetDataSourceArgs(GetDataSourceArgs $) {
+        this.dataSourceName = $.dataSourceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataSourceName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataSourceArgs();
         }
 
         public Builder(GetDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceName = defaults.dataSourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceName(String dataSourceName) {
-            this.dataSourceName = Objects.requireNonNull(dataSourceName);
+            $.dataSourceName = dataSourceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetDataSourceArgs build() {
-            return new GetDataSourceArgs(dataSourceName, resourceGroupName, workspaceName);
+        }
+
+        public GetDataSourceArgs build() {
+            $.dataSourceName = Objects.requireNonNull($.dataSourceName, "expected parameter 'dataSourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

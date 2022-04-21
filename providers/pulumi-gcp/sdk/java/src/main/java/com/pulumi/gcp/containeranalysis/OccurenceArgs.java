@@ -5,10 +5,10 @@ package com.pulumi.gcp.containeranalysis;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class OccurenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attestation", required=true)
-      private final Output<OccurenceAttestationArgs> attestation;
+    private Output<OccurenceAttestationArgs> attestation;
 
     public Output<OccurenceAttestationArgs> attestation() {
         return this.attestation;
@@ -42,7 +42,7 @@ public final class OccurenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="noteName", required=true)
-      private final Output<String> noteName;
+    private Output<String> noteName;
 
     public Output<String> noteName() {
         return this.noteName;
@@ -54,10 +54,10 @@ public final class OccurenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class OccurenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remediation")
-      private final @Nullable Output<String> remediation;
+    private @Nullable Output<String> remediation;
 
-    public Output<String> remediation() {
-        return this.remediation == null ? Codegen.empty() : this.remediation;
+    public Optional<Output<String>> remediation() {
+        return Optional.ofNullable(this.remediation);
     }
 
     /**
@@ -78,102 +78,91 @@ public final class OccurenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final Output<String> resourceUri;
+    private Output<String> resourceUri;
 
     public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
-    public OccurenceArgs(
-        Output<OccurenceAttestationArgs> attestation,
-        Output<String> noteName,
-        @Nullable Output<String> project,
-        @Nullable Output<String> remediation,
-        Output<String> resourceUri) {
-        this.attestation = Objects.requireNonNull(attestation, "expected parameter 'attestation' to be non-null");
-        this.noteName = Objects.requireNonNull(noteName, "expected parameter 'noteName' to be non-null");
-        this.project = project;
-        this.remediation = remediation;
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private OccurenceArgs() {}
 
-    private OccurenceArgs() {
-        this.attestation = Codegen.empty();
-        this.noteName = Codegen.empty();
-        this.project = Codegen.empty();
-        this.remediation = Codegen.empty();
-        this.resourceUri = Codegen.empty();
+    private OccurenceArgs(OccurenceArgs $) {
+        this.attestation = $.attestation;
+        this.noteName = $.noteName;
+        this.project = $.project;
+        this.remediation = $.remediation;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OccurenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<OccurenceAttestationArgs> attestation;
-        private Output<String> noteName;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> remediation;
-        private Output<String> resourceUri;
+        private OccurenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OccurenceArgs();
         }
 
         public Builder(OccurenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestation = defaults.attestation;
-    	      this.noteName = defaults.noteName;
-    	      this.project = defaults.project;
-    	      this.remediation = defaults.remediation;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new OccurenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestation(Output<OccurenceAttestationArgs> attestation) {
-            this.attestation = Objects.requireNonNull(attestation);
+            $.attestation = attestation;
             return this;
         }
+
         public Builder attestation(OccurenceAttestationArgs attestation) {
-            this.attestation = Output.of(Objects.requireNonNull(attestation));
-            return this;
+            return attestation(Output.of(attestation));
         }
+
         public Builder noteName(Output<String> noteName) {
-            this.noteName = Objects.requireNonNull(noteName);
+            $.noteName = noteName;
             return this;
         }
+
         public Builder noteName(String noteName) {
-            this.noteName = Output.of(Objects.requireNonNull(noteName));
-            return this;
+            return noteName(Output.of(noteName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder remediation(@Nullable Output<String> remediation) {
-            this.remediation = remediation;
+            $.remediation = remediation;
             return this;
         }
-        public Builder remediation(@Nullable String remediation) {
-            this.remediation = Codegen.ofNullable(remediation);
-            return this;
+
+        public Builder remediation(String remediation) {
+            return remediation(Output.of(remediation));
         }
+
         public Builder resourceUri(Output<String> resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
-            return this;
-        }        public OccurenceArgs build() {
-            return new OccurenceArgs(attestation, noteName, project, remediation, resourceUri);
+            return resourceUri(Output.of(resourceUri));
+        }
+
+        public OccurenceArgs build() {
+            $.attestation = Objects.requireNonNull($.attestation, "expected parameter 'attestation' to be non-null");
+            $.noteName = Objects.requireNonNull($.noteName, "expected parameter 'noteName' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

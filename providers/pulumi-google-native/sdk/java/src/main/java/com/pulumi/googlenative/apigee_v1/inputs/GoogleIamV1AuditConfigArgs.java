@@ -5,11 +5,11 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleIamV1AuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleIamV1AuditConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="auditLogConfigs")
-      private final @Nullable Output<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs;
+    private @Nullable Output<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs;
 
-    public Output<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs() {
-        return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
+    public Optional<Output<List<GoogleIamV1AuditLogConfigArgs>>> auditLogConfigs() {
+        return Optional.ofNullable(this.auditLogConfigs);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GoogleIamV1AuditConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public GoogleIamV1AuditConfigArgs(
-        @Nullable Output<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs,
-        @Nullable Output<String> service) {
-        this.auditLogConfigs = auditLogConfigs;
-        this.service = service;
-    }
+    private GoogleIamV1AuditConfigArgs() {}
 
-    private GoogleIamV1AuditConfigArgs() {
-        this.auditLogConfigs = Codegen.empty();
-        this.service = Codegen.empty();
+    private GoogleIamV1AuditConfigArgs(GoogleIamV1AuditConfigArgs $) {
+        this.auditLogConfigs = $.auditLogConfigs;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleIamV1AuditConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs;
-        private @Nullable Output<String> service;
+        private GoogleIamV1AuditConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleIamV1AuditConfigArgs();
         }
 
         public Builder(GoogleIamV1AuditConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.service = defaults.service;
+            $ = new GoogleIamV1AuditConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogConfigs(@Nullable Output<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs) {
-            this.auditLogConfigs = auditLogConfigs;
+            $.auditLogConfigs = auditLogConfigs;
             return this;
         }
-        public Builder auditLogConfigs(@Nullable List<GoogleIamV1AuditLogConfigArgs> auditLogConfigs) {
-            this.auditLogConfigs = Codegen.ofNullable(auditLogConfigs);
-            return this;
+
+        public Builder auditLogConfigs(List<GoogleIamV1AuditLogConfigArgs> auditLogConfigs) {
+            return auditLogConfigs(Output.of(auditLogConfigs));
         }
+
         public Builder auditLogConfigs(GoogleIamV1AuditLogConfigArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public GoogleIamV1AuditConfigArgs build() {
-            return new GoogleIamV1AuditConfigArgs(auditLogConfigs, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public GoogleIamV1AuditConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class BucketLoggingConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="destinationBucketName")
-      private final @Nullable Output<String> destinationBucketName;
+    private @Nullable Output<String> destinationBucketName;
 
-    public Output<String> destinationBucketName() {
-        return this.destinationBucketName == null ? Codegen.empty() : this.destinationBucketName;
+    public Optional<Output<String>> destinationBucketName() {
+        return Optional.ofNullable(this.destinationBucketName);
     }
 
     @Import(name="logFilePrefix")
-      private final @Nullable Output<String> logFilePrefix;
+    private @Nullable Output<String> logFilePrefix;
 
-    public Output<String> logFilePrefix() {
-        return this.logFilePrefix == null ? Codegen.empty() : this.logFilePrefix;
+    public Optional<Output<String>> logFilePrefix() {
+        return Optional.ofNullable(this.logFilePrefix);
     }
 
-    public BucketLoggingConfigurationArgs(
-        @Nullable Output<String> destinationBucketName,
-        @Nullable Output<String> logFilePrefix) {
-        this.destinationBucketName = destinationBucketName;
-        this.logFilePrefix = logFilePrefix;
-    }
+    private BucketLoggingConfigurationArgs() {}
 
-    private BucketLoggingConfigurationArgs() {
-        this.destinationBucketName = Codegen.empty();
-        this.logFilePrefix = Codegen.empty();
+    private BucketLoggingConfigurationArgs(BucketLoggingConfigurationArgs $) {
+        this.destinationBucketName = $.destinationBucketName;
+        this.logFilePrefix = $.logFilePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLoggingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destinationBucketName;
-        private @Nullable Output<String> logFilePrefix;
+        private BucketLoggingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLoggingConfigurationArgs();
         }
 
         public Builder(BucketLoggingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationBucketName = defaults.destinationBucketName;
-    	      this.logFilePrefix = defaults.logFilePrefix;
+            $ = new BucketLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationBucketName(@Nullable Output<String> destinationBucketName) {
-            this.destinationBucketName = destinationBucketName;
+            $.destinationBucketName = destinationBucketName;
             return this;
         }
-        public Builder destinationBucketName(@Nullable String destinationBucketName) {
-            this.destinationBucketName = Codegen.ofNullable(destinationBucketName);
-            return this;
+
+        public Builder destinationBucketName(String destinationBucketName) {
+            return destinationBucketName(Output.of(destinationBucketName));
         }
+
         public Builder logFilePrefix(@Nullable Output<String> logFilePrefix) {
-            this.logFilePrefix = logFilePrefix;
+            $.logFilePrefix = logFilePrefix;
             return this;
         }
-        public Builder logFilePrefix(@Nullable String logFilePrefix) {
-            this.logFilePrefix = Codegen.ofNullable(logFilePrefix);
-            return this;
-        }        public BucketLoggingConfigurationArgs build() {
-            return new BucketLoggingConfigurationArgs(destinationBucketName, logFilePrefix);
+
+        public Builder logFilePrefix(String logFilePrefix) {
+            return logFilePrefix(Output.of(logFilePrefix));
+        }
+
+        public BucketLoggingConfigurationArgs build() {
+            return $;
         }
     }
+
 }

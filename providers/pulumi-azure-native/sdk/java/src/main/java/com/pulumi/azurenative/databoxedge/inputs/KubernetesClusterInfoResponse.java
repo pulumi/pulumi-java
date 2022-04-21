@@ -24,7 +24,7 @@ public final class KubernetesClusterInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="etcdInfo", required=true)
-      private final EtcdInfoResponse etcdInfo;
+    private EtcdInfoResponse etcdInfo;
 
     public EtcdInfoResponse etcdInfo() {
         return this.etcdInfo;
@@ -35,7 +35,7 @@ public final class KubernetesClusterInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="nodes", required=true)
-      private final List<NodeInfoResponse> nodes;
+    private List<NodeInfoResponse> nodes;
 
     public List<NodeInfoResponse> nodes() {
         return this.nodes;
@@ -46,67 +46,63 @@ public final class KubernetesClusterInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public KubernetesClusterInfoResponse(
-        EtcdInfoResponse etcdInfo,
-        List<NodeInfoResponse> nodes,
-        String version) {
-        this.etcdInfo = Objects.requireNonNull(etcdInfo, "expected parameter 'etcdInfo' to be non-null");
-        this.nodes = Objects.requireNonNull(nodes, "expected parameter 'nodes' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private KubernetesClusterInfoResponse() {}
 
-    private KubernetesClusterInfoResponse() {
-        this.etcdInfo = null;
-        this.nodes = List.of();
-        this.version = null;
+    private KubernetesClusterInfoResponse(KubernetesClusterInfoResponse $) {
+        this.etcdInfo = $.etcdInfo;
+        this.nodes = $.nodes;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesClusterInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private EtcdInfoResponse etcdInfo;
-        private List<NodeInfoResponse> nodes;
-        private String version;
+        private KubernetesClusterInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesClusterInfoResponse();
         }
 
         public Builder(KubernetesClusterInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etcdInfo = defaults.etcdInfo;
-    	      this.nodes = defaults.nodes;
-    	      this.version = defaults.version;
+            $ = new KubernetesClusterInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etcdInfo(EtcdInfoResponse etcdInfo) {
-            this.etcdInfo = Objects.requireNonNull(etcdInfo);
+            $.etcdInfo = etcdInfo;
             return this;
         }
+
         public Builder nodes(List<NodeInfoResponse> nodes) {
-            this.nodes = Objects.requireNonNull(nodes);
+            $.nodes = nodes;
             return this;
         }
+
         public Builder nodes(NodeInfoResponse... nodes) {
             return nodes(List.of(nodes));
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public KubernetesClusterInfoResponse build() {
-            return new KubernetesClusterInfoResponse(etcdInfo, nodes, version);
+        }
+
+        public KubernetesClusterInfoResponse build() {
+            $.etcdInfo = Objects.requireNonNull($.etcdInfo, "expected parameter 'etcdInfo' to be non-null");
+            $.nodes = Objects.requireNonNull($.nodes, "expected parameter 'nodes' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

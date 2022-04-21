@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ManagedExecutionPropertiesArgs extends com.pulumi.resources.R
     public static final ManagedExecutionPropertiesArgs Empty = new ManagedExecutionPropertiesArgs();
 
     @Import(name="active")
-      private final @Nullable Output<Boolean> active;
+    private @Nullable Output<Boolean> active;
 
-    public Output<Boolean> active() {
-        return this.active == null ? Codegen.empty() : this.active;
+    public Optional<Output<Boolean>> active() {
+        return Optional.ofNullable(this.active);
     }
 
-    public ManagedExecutionPropertiesArgs(@Nullable Output<Boolean> active) {
-        this.active = active;
-    }
+    private ManagedExecutionPropertiesArgs() {}
 
-    private ManagedExecutionPropertiesArgs() {
-        this.active = Codegen.empty();
+    private ManagedExecutionPropertiesArgs(ManagedExecutionPropertiesArgs $) {
+        this.active = $.active;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedExecutionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> active;
+        private ManagedExecutionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedExecutionPropertiesArgs();
         }
 
         public Builder(ManagedExecutionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
+            $ = new ManagedExecutionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder active(@Nullable Output<Boolean> active) {
-            this.active = active;
+            $.active = active;
             return this;
         }
-        public Builder active(@Nullable Boolean active) {
-            this.active = Codegen.ofNullable(active);
-            return this;
-        }        public ManagedExecutionPropertiesArgs build() {
-            return new ManagedExecutionPropertiesArgs(active);
+
+        public Builder active(Boolean active) {
+            return active(Output.of(active));
+        }
+
+        public ManagedExecutionPropertiesArgs build() {
+            return $;
         }
     }
+
 }

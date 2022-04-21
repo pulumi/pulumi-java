@@ -6,11 +6,11 @@ package com.pulumi.awsnative.codeartifact;
 import com.pulumi.awsnative.codeartifact.inputs.DomainTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissionsPolicyDocument")
-      private final @Nullable Output<Object> permissionsPolicyDocument;
+    private @Nullable Output<Object> permissionsPolicyDocument;
 
-    public Output<Object> permissionsPolicyDocument() {
-        return this.permissionsPolicyDocument == null ? Codegen.empty() : this.permissionsPolicyDocument;
+    public Optional<Output<Object>> permissionsPolicyDocument() {
+        return Optional.ofNullable(this.permissionsPolicyDocument);
     }
 
     /**
@@ -45,79 +45,72 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DomainTagArgs>> tags;
+    private @Nullable Output<List<DomainTagArgs>> tags;
 
-    public Output<List<DomainTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DomainTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DomainArgs(
-        @Nullable Output<String> domainName,
-        @Nullable Output<Object> permissionsPolicyDocument,
-        @Nullable Output<List<DomainTagArgs>> tags) {
-        this.domainName = domainName;
-        this.permissionsPolicyDocument = permissionsPolicyDocument;
-        this.tags = tags;
-    }
+    private DomainArgs() {}
 
-    private DomainArgs() {
-        this.domainName = Codegen.empty();
-        this.permissionsPolicyDocument = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DomainArgs(DomainArgs $) {
+        this.domainName = $.domainName;
+        this.permissionsPolicyDocument = $.permissionsPolicyDocument;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<Object> permissionsPolicyDocument;
-        private @Nullable Output<List<DomainTagArgs>> tags;
+        private DomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainArgs();
         }
 
         public Builder(DomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.permissionsPolicyDocument = defaults.permissionsPolicyDocument;
-    	      this.tags = defaults.tags;
+            $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder permissionsPolicyDocument(@Nullable Output<Object> permissionsPolicyDocument) {
-            this.permissionsPolicyDocument = permissionsPolicyDocument;
+            $.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
-        public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
-            this.permissionsPolicyDocument = Codegen.ofNullable(permissionsPolicyDocument);
-            return this;
+
+        public Builder permissionsPolicyDocument(Object permissionsPolicyDocument) {
+            return permissionsPolicyDocument(Output.of(permissionsPolicyDocument));
         }
+
         public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DomainTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DomainTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DomainTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DomainArgs build() {
-            return new DomainArgs(domainName, permissionsPolicyDocument, tags);
+        }
+
+        public DomainArgs build() {
+            return $;
         }
     }
+
 }

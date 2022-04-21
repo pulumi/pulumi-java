@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SourceCrowdingConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="numResults")
-      private final @Nullable Output<Integer> numResults;
+    private @Nullable Output<Integer> numResults;
 
-    public Output<Integer> numResults() {
-        return this.numResults == null ? Codegen.empty() : this.numResults;
+    public Optional<Output<Integer>> numResults() {
+        return Optional.ofNullable(this.numResults);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SourceCrowdingConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="numSuggestions")
-      private final @Nullable Output<Integer> numSuggestions;
+    private @Nullable Output<Integer> numSuggestions;
 
-    public Output<Integer> numSuggestions() {
-        return this.numSuggestions == null ? Codegen.empty() : this.numSuggestions;
+    public Optional<Output<Integer>> numSuggestions() {
+        return Optional.ofNullable(this.numSuggestions);
     }
 
-    public SourceCrowdingConfigArgs(
-        @Nullable Output<Integer> numResults,
-        @Nullable Output<Integer> numSuggestions) {
-        this.numResults = numResults;
-        this.numSuggestions = numSuggestions;
-    }
+    private SourceCrowdingConfigArgs() {}
 
-    private SourceCrowdingConfigArgs() {
-        this.numResults = Codegen.empty();
-        this.numSuggestions = Codegen.empty();
+    private SourceCrowdingConfigArgs(SourceCrowdingConfigArgs $) {
+        this.numResults = $.numResults;
+        this.numSuggestions = $.numSuggestions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceCrowdingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> numResults;
-        private @Nullable Output<Integer> numSuggestions;
+        private SourceCrowdingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceCrowdingConfigArgs();
         }
 
         public Builder(SourceCrowdingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numResults = defaults.numResults;
-    	      this.numSuggestions = defaults.numSuggestions;
+            $ = new SourceCrowdingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numResults(@Nullable Output<Integer> numResults) {
-            this.numResults = numResults;
+            $.numResults = numResults;
             return this;
         }
-        public Builder numResults(@Nullable Integer numResults) {
-            this.numResults = Codegen.ofNullable(numResults);
-            return this;
+
+        public Builder numResults(Integer numResults) {
+            return numResults(Output.of(numResults));
         }
+
         public Builder numSuggestions(@Nullable Output<Integer> numSuggestions) {
-            this.numSuggestions = numSuggestions;
+            $.numSuggestions = numSuggestions;
             return this;
         }
-        public Builder numSuggestions(@Nullable Integer numSuggestions) {
-            this.numSuggestions = Codegen.ofNullable(numSuggestions);
-            return this;
-        }        public SourceCrowdingConfigArgs build() {
-            return new SourceCrowdingConfigArgs(numResults, numSuggestions);
+
+        public Builder numSuggestions(Integer numSuggestions) {
+            return numSuggestions(Output.of(numSuggestions));
+        }
+
+        public SourceCrowdingConfigArgs build() {
+            return $;
         }
     }
+
 }

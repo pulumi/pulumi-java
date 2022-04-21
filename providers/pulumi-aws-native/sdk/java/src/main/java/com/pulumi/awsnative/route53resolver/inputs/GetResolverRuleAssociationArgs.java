@@ -17,45 +17,45 @@ public final class GetResolverRuleAssociationArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resolverRuleAssociationId", required=true)
-      private final String resolverRuleAssociationId;
+    private String resolverRuleAssociationId;
 
     public String resolverRuleAssociationId() {
         return this.resolverRuleAssociationId;
     }
 
-    public GetResolverRuleAssociationArgs(String resolverRuleAssociationId) {
-        this.resolverRuleAssociationId = Objects.requireNonNull(resolverRuleAssociationId, "expected parameter 'resolverRuleAssociationId' to be non-null");
-    }
+    private GetResolverRuleAssociationArgs() {}
 
-    private GetResolverRuleAssociationArgs() {
-        this.resolverRuleAssociationId = null;
+    private GetResolverRuleAssociationArgs(GetResolverRuleAssociationArgs $) {
+        this.resolverRuleAssociationId = $.resolverRuleAssociationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResolverRuleAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resolverRuleAssociationId;
+        private GetResolverRuleAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResolverRuleAssociationArgs();
         }
 
         public Builder(GetResolverRuleAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resolverRuleAssociationId = defaults.resolverRuleAssociationId;
+            $ = new GetResolverRuleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resolverRuleAssociationId(String resolverRuleAssociationId) {
-            this.resolverRuleAssociationId = Objects.requireNonNull(resolverRuleAssociationId);
+            $.resolverRuleAssociationId = resolverRuleAssociationId;
             return this;
-        }        public GetResolverRuleAssociationArgs build() {
-            return new GetResolverRuleAssociationArgs(resolverRuleAssociationId);
+        }
+
+        public GetResolverRuleAssociationArgs build() {
+            $.resolverRuleAssociationId = Objects.requireNonNull($.resolverRuleAssociationId, "expected parameter 'resolverRuleAssociationId' to be non-null");
+            return $;
         }
     }
+
 }

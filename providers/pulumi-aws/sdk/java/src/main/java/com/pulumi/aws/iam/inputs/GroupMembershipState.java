@@ -5,10 +5,10 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="group")
-      private final @Nullable Output<String> group;
+    private @Nullable Output<String> group;
 
-    public Output<String> group() {
-        return this.group == null ? Codegen.empty() : this.group;
+    public Optional<Output<String>> group() {
+        return Optional.ofNullable(this.group);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,79 +43,72 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="users")
-      private final @Nullable Output<List<String>> users;
+    private @Nullable Output<List<String>> users;
 
-    public Output<List<String>> users() {
-        return this.users == null ? Codegen.empty() : this.users;
+    public Optional<Output<List<String>>> users() {
+        return Optional.ofNullable(this.users);
     }
 
-    public GroupMembershipState(
-        @Nullable Output<String> group,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> users) {
-        this.group = group;
-        this.name = name;
-        this.users = users;
-    }
+    private GroupMembershipState() {}
 
-    private GroupMembershipState() {
-        this.group = Codegen.empty();
-        this.name = Codegen.empty();
-        this.users = Codegen.empty();
+    private GroupMembershipState(GroupMembershipState $) {
+        this.group = $.group;
+        this.name = $.name;
+        this.users = $.users;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMembershipState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> group;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> users;
+        private GroupMembershipState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMembershipState();
         }
 
         public Builder(GroupMembershipState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.group = defaults.group;
-    	      this.name = defaults.name;
-    	      this.users = defaults.users;
+            $ = new GroupMembershipState(Objects.requireNonNull(defaults));
         }
 
         public Builder group(@Nullable Output<String> group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
-        public Builder group(@Nullable String group) {
-            this.group = Codegen.ofNullable(group);
-            return this;
+
+        public Builder group(String group) {
+            return group(Output.of(group));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder users(@Nullable Output<List<String>> users) {
-            this.users = users;
+            $.users = users;
             return this;
         }
-        public Builder users(@Nullable List<String> users) {
-            this.users = Codegen.ofNullable(users);
-            return this;
+
+        public Builder users(List<String> users) {
+            return users(Output.of(users));
         }
+
         public Builder users(String... users) {
             return users(List.of(users));
-        }        public GroupMembershipState build() {
-            return new GroupMembershipState(group, name, users);
+        }
+
+        public GroupMembershipState build() {
+            return $;
         }
     }
+
 }

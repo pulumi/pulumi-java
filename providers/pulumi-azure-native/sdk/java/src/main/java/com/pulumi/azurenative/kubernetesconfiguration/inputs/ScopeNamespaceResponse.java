@@ -23,45 +23,44 @@ public final class ScopeNamespaceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="targetNamespace")
-      private final @Nullable String targetNamespace;
+    private @Nullable String targetNamespace;
 
     public Optional<String> targetNamespace() {
-        return this.targetNamespace == null ? Optional.empty() : Optional.ofNullable(this.targetNamespace);
+        return Optional.ofNullable(this.targetNamespace);
     }
 
-    public ScopeNamespaceResponse(@Nullable String targetNamespace) {
-        this.targetNamespace = targetNamespace;
-    }
+    private ScopeNamespaceResponse() {}
 
-    private ScopeNamespaceResponse() {
-        this.targetNamespace = null;
+    private ScopeNamespaceResponse(ScopeNamespaceResponse $) {
+        this.targetNamespace = $.targetNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeNamespaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String targetNamespace;
+        private ScopeNamespaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeNamespaceResponse();
         }
 
         public Builder(ScopeNamespaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetNamespace = defaults.targetNamespace;
+            $ = new ScopeNamespaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = targetNamespace;
+            $.targetNamespace = targetNamespace;
             return this;
-        }        public ScopeNamespaceResponse build() {
-            return new ScopeNamespaceResponse(targetNamespace);
+        }
+
+        public ScopeNamespaceResponse build() {
+            return $;
         }
     }
+
 }

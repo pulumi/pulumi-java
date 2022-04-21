@@ -16,94 +16,85 @@ public final class ResponseHeadersPolicyXSSProtection extends com.pulumi.resourc
     public static final ResponseHeadersPolicyXSSProtection Empty = new ResponseHeadersPolicyXSSProtection();
 
     @Import(name="modeBlock")
-      private final @Nullable Boolean modeBlock;
+    private @Nullable Boolean modeBlock;
 
     public Optional<Boolean> modeBlock() {
-        return this.modeBlock == null ? Optional.empty() : Optional.ofNullable(this.modeBlock);
+        return Optional.ofNullable(this.modeBlock);
     }
 
     @Import(name="override", required=true)
-      private final Boolean override;
+    private Boolean override;
 
     public Boolean override() {
         return this.override;
     }
 
     @Import(name="protection", required=true)
-      private final Boolean protection;
+    private Boolean protection;
 
     public Boolean protection() {
         return this.protection;
     }
 
     @Import(name="reportUri")
-      private final @Nullable String reportUri;
+    private @Nullable String reportUri;
 
     public Optional<String> reportUri() {
-        return this.reportUri == null ? Optional.empty() : Optional.ofNullable(this.reportUri);
+        return Optional.ofNullable(this.reportUri);
     }
 
-    public ResponseHeadersPolicyXSSProtection(
-        @Nullable Boolean modeBlock,
-        Boolean override,
-        Boolean protection,
-        @Nullable String reportUri) {
-        this.modeBlock = modeBlock;
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-        this.protection = Objects.requireNonNull(protection, "expected parameter 'protection' to be non-null");
-        this.reportUri = reportUri;
-    }
+    private ResponseHeadersPolicyXSSProtection() {}
 
-    private ResponseHeadersPolicyXSSProtection() {
-        this.modeBlock = null;
-        this.override = null;
-        this.protection = null;
-        this.reportUri = null;
+    private ResponseHeadersPolicyXSSProtection(ResponseHeadersPolicyXSSProtection $) {
+        this.modeBlock = $.modeBlock;
+        this.override = $.override;
+        this.protection = $.protection;
+        this.reportUri = $.reportUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyXSSProtection defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean modeBlock;
-        private Boolean override;
-        private Boolean protection;
-        private @Nullable String reportUri;
+        private ResponseHeadersPolicyXSSProtection $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyXSSProtection();
         }
 
         public Builder(ResponseHeadersPolicyXSSProtection defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modeBlock = defaults.modeBlock;
-    	      this.override = defaults.override;
-    	      this.protection = defaults.protection;
-    	      this.reportUri = defaults.reportUri;
+            $ = new ResponseHeadersPolicyXSSProtection(Objects.requireNonNull(defaults));
         }
 
         public Builder modeBlock(@Nullable Boolean modeBlock) {
-            this.modeBlock = modeBlock;
+            $.modeBlock = modeBlock;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder protection(Boolean protection) {
-            this.protection = Objects.requireNonNull(protection);
+            $.protection = protection;
             return this;
         }
+
         public Builder reportUri(@Nullable String reportUri) {
-            this.reportUri = reportUri;
+            $.reportUri = reportUri;
             return this;
-        }        public ResponseHeadersPolicyXSSProtection build() {
-            return new ResponseHeadersPolicyXSSProtection(modeBlock, override, protection, reportUri);
+        }
+
+        public ResponseHeadersPolicyXSSProtection build() {
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            $.protection = Objects.requireNonNull($.protection, "expected parameter 'protection' to be non-null");
+            return $;
         }
     }
+
 }

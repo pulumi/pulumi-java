@@ -23,45 +23,44 @@ public final class ParameterValuesValueResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="value")
-      private final @Nullable Object value;
+    private @Nullable Object value;
 
     public Optional<Object> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ParameterValuesValueResponse(@Nullable Object value) {
-        this.value = value;
-    }
+    private ParameterValuesValueResponse() {}
 
-    private ParameterValuesValueResponse() {
-        this.value = null;
+    private ParameterValuesValueResponse(ParameterValuesValueResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterValuesValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object value;
+        private ParameterValuesValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterValuesValueResponse();
         }
 
         public Builder(ParameterValuesValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new ParameterValuesValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable Object value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ParameterValuesValueResponse build() {
-            return new ParameterValuesValueResponse(value);
+        }
+
+        public ParameterValuesValueResponse build() {
+            return $;
         }
     }
+
 }

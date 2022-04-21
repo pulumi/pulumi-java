@@ -5,9 +5,9 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ClusterIdentityOidcGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="issuer")
-      private final @Nullable Output<String> issuer;
+    private @Nullable Output<String> issuer;
 
-    public Output<String> issuer() {
-        return this.issuer == null ? Codegen.empty() : this.issuer;
+    public Optional<Output<String>> issuer() {
+        return Optional.ofNullable(this.issuer);
     }
 
-    public ClusterIdentityOidcGetArgs(@Nullable Output<String> issuer) {
-        this.issuer = issuer;
-    }
+    private ClusterIdentityOidcGetArgs() {}
 
-    private ClusterIdentityOidcGetArgs() {
-        this.issuer = Codegen.empty();
+    private ClusterIdentityOidcGetArgs(ClusterIdentityOidcGetArgs $) {
+        this.issuer = $.issuer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterIdentityOidcGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> issuer;
+        private ClusterIdentityOidcGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterIdentityOidcGetArgs();
         }
 
         public Builder(ClusterIdentityOidcGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issuer = defaults.issuer;
+            $ = new ClusterIdentityOidcGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder issuer(@Nullable Output<String> issuer) {
-            this.issuer = issuer;
+            $.issuer = issuer;
             return this;
         }
-        public Builder issuer(@Nullable String issuer) {
-            this.issuer = Codegen.ofNullable(issuer);
-            return this;
-        }        public ClusterIdentityOidcGetArgs build() {
-            return new ClusterIdentityOidcGetArgs(issuer);
+
+        public Builder issuer(String issuer) {
+            return issuer(Output.of(issuer));
+        }
+
+        public ClusterIdentityOidcGetArgs build() {
+            return $;
         }
     }
+
 }

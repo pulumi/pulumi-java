@@ -25,10 +25,10 @@ public final class DetectorModelTransitionEvent extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="actions")
-      private final @Nullable List<DetectorModelAction> actions;
+    private @Nullable List<DetectorModelAction> actions;
 
-    public List<DetectorModelAction> actions() {
-        return this.actions == null ? List.of() : this.actions;
+    public Optional<List<DetectorModelAction>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class DetectorModelTransitionEvent extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="condition", required=true)
-      private final String condition;
+    private String condition;
 
     public String condition() {
         return this.condition;
@@ -47,7 +47,7 @@ public final class DetectorModelTransitionEvent extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="eventName", required=true)
-      private final String eventName;
+    private String eventName;
 
     public String eventName() {
         return this.eventName;
@@ -58,76 +58,69 @@ public final class DetectorModelTransitionEvent extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="nextState", required=true)
-      private final String nextState;
+    private String nextState;
 
     public String nextState() {
         return this.nextState;
     }
 
-    public DetectorModelTransitionEvent(
-        @Nullable List<DetectorModelAction> actions,
-        String condition,
-        String eventName,
-        String nextState) {
-        this.actions = actions;
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.eventName = Objects.requireNonNull(eventName, "expected parameter 'eventName' to be non-null");
-        this.nextState = Objects.requireNonNull(nextState, "expected parameter 'nextState' to be non-null");
-    }
+    private DetectorModelTransitionEvent() {}
 
-    private DetectorModelTransitionEvent() {
-        this.actions = List.of();
-        this.condition = null;
-        this.eventName = null;
-        this.nextState = null;
+    private DetectorModelTransitionEvent(DetectorModelTransitionEvent $) {
+        this.actions = $.actions;
+        this.condition = $.condition;
+        this.eventName = $.eventName;
+        this.nextState = $.nextState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelTransitionEvent defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DetectorModelAction> actions;
-        private String condition;
-        private String eventName;
-        private String nextState;
+        private DetectorModelTransitionEvent $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelTransitionEvent();
         }
 
         public Builder(DetectorModelTransitionEvent defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.condition = defaults.condition;
-    	      this.eventName = defaults.eventName;
-    	      this.nextState = defaults.nextState;
+            $ = new DetectorModelTransitionEvent(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable List<DetectorModelAction> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(DetectorModelAction... actions) {
             return actions(List.of(actions));
         }
+
         public Builder condition(String condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder eventName(String eventName) {
-            this.eventName = Objects.requireNonNull(eventName);
+            $.eventName = eventName;
             return this;
         }
+
         public Builder nextState(String nextState) {
-            this.nextState = Objects.requireNonNull(nextState);
+            $.nextState = nextState;
             return this;
-        }        public DetectorModelTransitionEvent build() {
-            return new DetectorModelTransitionEvent(actions, condition, eventName, nextState);
+        }
+
+        public DetectorModelTransitionEvent build() {
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.eventName = Objects.requireNonNull($.eventName, "expected parameter 'eventName' to be non-null");
+            $.nextState = Objects.requireNonNull($.nextState, "expected parameter 'nextState' to be non-null");
+            return $;
         }
     }
+
 }

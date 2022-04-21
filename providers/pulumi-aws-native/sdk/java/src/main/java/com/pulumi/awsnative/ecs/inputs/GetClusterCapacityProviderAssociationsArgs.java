@@ -13,45 +13,45 @@ public final class GetClusterCapacityProviderAssociationsArgs extends com.pulumi
     public static final GetClusterCapacityProviderAssociationsArgs Empty = new GetClusterCapacityProviderAssociationsArgs();
 
     @Import(name="cluster", required=true)
-      private final String cluster;
+    private String cluster;
 
     public String cluster() {
         return this.cluster;
     }
 
-    public GetClusterCapacityProviderAssociationsArgs(String cluster) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-    }
+    private GetClusterCapacityProviderAssociationsArgs() {}
 
-    private GetClusterCapacityProviderAssociationsArgs() {
-        this.cluster = null;
+    private GetClusterCapacityProviderAssociationsArgs(GetClusterCapacityProviderAssociationsArgs $) {
+        this.cluster = $.cluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterCapacityProviderAssociationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cluster;
+        private GetClusterCapacityProviderAssociationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterCapacityProviderAssociationsArgs();
         }
 
         public Builder(GetClusterCapacityProviderAssociationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
+            $ = new GetClusterCapacityProviderAssociationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
-        }        public GetClusterCapacityProviderAssociationsArgs build() {
-            return new GetClusterCapacityProviderAssociationsArgs(cluster);
+        }
+
+        public GetClusterCapacityProviderAssociationsArgs build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            return $;
         }
     }
+
 }

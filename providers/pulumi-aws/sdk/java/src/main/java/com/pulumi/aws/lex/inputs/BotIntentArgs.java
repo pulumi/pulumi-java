@@ -5,7 +5,6 @@ package com.pulumi.aws.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class BotIntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="intentName", required=true)
-      private final Output<String> intentName;
+    private Output<String> intentName;
 
     public Output<String> intentName() {
         return this.intentName;
@@ -30,63 +29,60 @@ public final class BotIntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="intentVersion", required=true)
-      private final Output<String> intentVersion;
+    private Output<String> intentVersion;
 
     public Output<String> intentVersion() {
         return this.intentVersion;
     }
 
-    public BotIntentArgs(
-        Output<String> intentName,
-        Output<String> intentVersion) {
-        this.intentName = Objects.requireNonNull(intentName, "expected parameter 'intentName' to be non-null");
-        this.intentVersion = Objects.requireNonNull(intentVersion, "expected parameter 'intentVersion' to be non-null");
-    }
+    private BotIntentArgs() {}
 
-    private BotIntentArgs() {
-        this.intentName = Codegen.empty();
-        this.intentVersion = Codegen.empty();
+    private BotIntentArgs(BotIntentArgs $) {
+        this.intentName = $.intentName;
+        this.intentVersion = $.intentVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotIntentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> intentName;
-        private Output<String> intentVersion;
+        private BotIntentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotIntentArgs();
         }
 
         public Builder(BotIntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intentName = defaults.intentName;
-    	      this.intentVersion = defaults.intentVersion;
+            $ = new BotIntentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder intentName(Output<String> intentName) {
-            this.intentName = Objects.requireNonNull(intentName);
+            $.intentName = intentName;
             return this;
         }
+
         public Builder intentName(String intentName) {
-            this.intentName = Output.of(Objects.requireNonNull(intentName));
-            return this;
+            return intentName(Output.of(intentName));
         }
+
         public Builder intentVersion(Output<String> intentVersion) {
-            this.intentVersion = Objects.requireNonNull(intentVersion);
+            $.intentVersion = intentVersion;
             return this;
         }
+
         public Builder intentVersion(String intentVersion) {
-            this.intentVersion = Output.of(Objects.requireNonNull(intentVersion));
-            return this;
-        }        public BotIntentArgs build() {
-            return new BotIntentArgs(intentName, intentVersion);
+            return intentVersion(Output.of(intentVersion));
+        }
+
+        public BotIntentArgs build() {
+            $.intentName = Objects.requireNonNull($.intentName, "expected parameter 'intentName' to be non-null");
+            $.intentVersion = Objects.requireNonNull($.intentVersion, "expected parameter 'intentVersion' to be non-null");
+            return $;
         }
     }
+
 }

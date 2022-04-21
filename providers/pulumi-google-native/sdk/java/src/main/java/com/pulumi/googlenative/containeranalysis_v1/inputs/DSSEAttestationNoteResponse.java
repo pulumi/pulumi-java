@@ -17,45 +17,45 @@ public final class DSSEAttestationNoteResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="hint", required=true)
-      private final DSSEHintResponse hint;
+    private DSSEHintResponse hint;
 
     public DSSEHintResponse hint() {
         return this.hint;
     }
 
-    public DSSEAttestationNoteResponse(DSSEHintResponse hint) {
-        this.hint = Objects.requireNonNull(hint, "expected parameter 'hint' to be non-null");
-    }
+    private DSSEAttestationNoteResponse() {}
 
-    private DSSEAttestationNoteResponse() {
-        this.hint = null;
+    private DSSEAttestationNoteResponse(DSSEAttestationNoteResponse $) {
+        this.hint = $.hint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DSSEAttestationNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DSSEHintResponse hint;
+        private DSSEAttestationNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DSSEAttestationNoteResponse();
         }
 
         public Builder(DSSEAttestationNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hint = defaults.hint;
+            $ = new DSSEAttestationNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hint(DSSEHintResponse hint) {
-            this.hint = Objects.requireNonNull(hint);
+            $.hint = hint;
             return this;
-        }        public DSSEAttestationNoteResponse build() {
-            return new DSSEAttestationNoteResponse(hint);
+        }
+
+        public DSSEAttestationNoteResponse build() {
+            $.hint = Objects.requireNonNull($.hint, "expected parameter 'hint' to be non-null");
+            return $;
         }
     }
+
 }

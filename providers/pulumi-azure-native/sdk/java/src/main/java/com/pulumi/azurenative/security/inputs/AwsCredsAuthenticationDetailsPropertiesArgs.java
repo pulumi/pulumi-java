@@ -24,7 +24,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final Output<String> authenticationType;
+    private Output<String> authenticationType;
 
     public Output<String> authenticationType() {
         return this.authenticationType;
@@ -35,7 +35,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="awsAccessKeyId", required=true)
-      private final Output<String> awsAccessKeyId;
+    private Output<String> awsAccessKeyId;
 
     public Output<String> awsAccessKeyId() {
         return this.awsAccessKeyId;
@@ -46,76 +46,71 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="awsSecretAccessKey", required=true)
-      private final Output<String> awsSecretAccessKey;
+    private Output<String> awsSecretAccessKey;
 
     public Output<String> awsSecretAccessKey() {
         return this.awsSecretAccessKey;
     }
 
-    public AwsCredsAuthenticationDetailsPropertiesArgs(
-        Output<String> authenticationType,
-        Output<String> awsAccessKeyId,
-        Output<String> awsSecretAccessKey) {
-        this.authenticationType = Codegen.stringProp("authenticationType").output().arg(authenticationType).require();
-        this.awsAccessKeyId = Objects.requireNonNull(awsAccessKeyId, "expected parameter 'awsAccessKeyId' to be non-null");
-        this.awsSecretAccessKey = Objects.requireNonNull(awsSecretAccessKey, "expected parameter 'awsSecretAccessKey' to be non-null");
-    }
+    private AwsCredsAuthenticationDetailsPropertiesArgs() {}
 
-    private AwsCredsAuthenticationDetailsPropertiesArgs() {
-        this.authenticationType = Codegen.empty();
-        this.awsAccessKeyId = Codegen.empty();
-        this.awsSecretAccessKey = Codegen.empty();
+    private AwsCredsAuthenticationDetailsPropertiesArgs(AwsCredsAuthenticationDetailsPropertiesArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.awsAccessKeyId = $.awsAccessKeyId;
+        this.awsSecretAccessKey = $.awsSecretAccessKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsCredsAuthenticationDetailsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authenticationType;
-        private Output<String> awsAccessKeyId;
-        private Output<String> awsSecretAccessKey;
+        private AwsCredsAuthenticationDetailsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsCredsAuthenticationDetailsPropertiesArgs();
         }
 
         public Builder(AwsCredsAuthenticationDetailsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.awsAccessKeyId = defaults.awsAccessKeyId;
-    	      this.awsSecretAccessKey = defaults.awsSecretAccessKey;
+            $ = new AwsCredsAuthenticationDetailsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(Output<String> authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
-            return this;
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder awsAccessKeyId(Output<String> awsAccessKeyId) {
-            this.awsAccessKeyId = Objects.requireNonNull(awsAccessKeyId);
+            $.awsAccessKeyId = awsAccessKeyId;
             return this;
         }
+
         public Builder awsAccessKeyId(String awsAccessKeyId) {
-            this.awsAccessKeyId = Output.of(Objects.requireNonNull(awsAccessKeyId));
-            return this;
+            return awsAccessKeyId(Output.of(awsAccessKeyId));
         }
+
         public Builder awsSecretAccessKey(Output<String> awsSecretAccessKey) {
-            this.awsSecretAccessKey = Objects.requireNonNull(awsSecretAccessKey);
+            $.awsSecretAccessKey = awsSecretAccessKey;
             return this;
         }
+
         public Builder awsSecretAccessKey(String awsSecretAccessKey) {
-            this.awsSecretAccessKey = Output.of(Objects.requireNonNull(awsSecretAccessKey));
-            return this;
-        }        public AwsCredsAuthenticationDetailsPropertiesArgs build() {
-            return new AwsCredsAuthenticationDetailsPropertiesArgs(authenticationType, awsAccessKeyId, awsSecretAccessKey);
+            return awsSecretAccessKey(Output.of(awsSecretAccessKey));
+        }
+
+        public AwsCredsAuthenticationDetailsPropertiesArgs build() {
+            $.authenticationType = Codegen.stringProp("authenticationType").output().arg($.authenticationType).require();
+            $.awsAccessKeyId = Objects.requireNonNull($.awsAccessKeyId, "expected parameter 'awsAccessKeyId' to be non-null");
+            $.awsSecretAccessKey = Objects.requireNonNull($.awsSecretAccessKey, "expected parameter 'awsSecretAccessKey' to be non-null");
+            return $;
         }
     }
+
 }

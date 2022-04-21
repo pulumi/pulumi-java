@@ -10,9 +10,9 @@ import com.pulumi.azurenative.web.inputs.IdentityProvidersArgs;
 import com.pulumi.azurenative.web.inputs.LoginArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="globalValidation")
-      private final @Nullable Output<GlobalValidationArgs> globalValidation;
+    private @Nullable Output<GlobalValidationArgs> globalValidation;
 
-    public Output<GlobalValidationArgs> globalValidation() {
-        return this.globalValidation == null ? Codegen.empty() : this.globalValidation;
+    public Optional<Output<GlobalValidationArgs>> globalValidation() {
+        return Optional.ofNullable(this.globalValidation);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="httpSettings")
-      private final @Nullable Output<HttpSettingsArgs> httpSettings;
+    private @Nullable Output<HttpSettingsArgs> httpSettings;
 
-    public Output<HttpSettingsArgs> httpSettings() {
-        return this.httpSettings == null ? Codegen.empty() : this.httpSettings;
+    public Optional<Output<HttpSettingsArgs>> httpSettings() {
+        return Optional.ofNullable(this.httpSettings);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="identityProviders")
-      private final @Nullable Output<IdentityProvidersArgs> identityProviders;
+    private @Nullable Output<IdentityProvidersArgs> identityProviders;
 
-    public Output<IdentityProvidersArgs> identityProviders() {
-        return this.identityProviders == null ? Codegen.empty() : this.identityProviders;
+    public Optional<Output<IdentityProvidersArgs>> identityProviders() {
+        return Optional.ofNullable(this.identityProviders);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<LoginArgs> login;
+    private @Nullable Output<LoginArgs> login;
 
-    public Output<LoginArgs> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<LoginArgs>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -91,10 +91,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="platform")
-      private final @Nullable Output<AuthPlatformArgs> platform;
+    private @Nullable Output<AuthPlatformArgs> platform;
 
-    public Output<AuthPlatformArgs> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<AuthPlatformArgs>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -113,154 +113,131 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="slot", required=true)
-      private final Output<String> slot;
+    private Output<String> slot;
 
     public Output<String> slot() {
         return this.slot;
     }
 
-    public WebAppAuthSettingsV2SlotArgs(
-        @Nullable Output<GlobalValidationArgs> globalValidation,
-        @Nullable Output<HttpSettingsArgs> httpSettings,
-        @Nullable Output<IdentityProvidersArgs> identityProviders,
-        @Nullable Output<String> kind,
-        @Nullable Output<LoginArgs> login,
-        Output<String> name,
-        @Nullable Output<AuthPlatformArgs> platform,
-        Output<String> resourceGroupName,
-        Output<String> slot) {
-        this.globalValidation = globalValidation;
-        this.httpSettings = httpSettings;
-        this.identityProviders = identityProviders;
-        this.kind = kind;
-        this.login = login;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.platform = platform;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private WebAppAuthSettingsV2SlotArgs() {}
 
-    private WebAppAuthSettingsV2SlotArgs() {
-        this.globalValidation = Codegen.empty();
-        this.httpSettings = Codegen.empty();
-        this.identityProviders = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.login = Codegen.empty();
-        this.name = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.slot = Codegen.empty();
+    private WebAppAuthSettingsV2SlotArgs(WebAppAuthSettingsV2SlotArgs $) {
+        this.globalValidation = $.globalValidation;
+        this.httpSettings = $.httpSettings;
+        this.identityProviders = $.identityProviders;
+        this.kind = $.kind;
+        this.login = $.login;
+        this.name = $.name;
+        this.platform = $.platform;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppAuthSettingsV2SlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GlobalValidationArgs> globalValidation;
-        private @Nullable Output<HttpSettingsArgs> httpSettings;
-        private @Nullable Output<IdentityProvidersArgs> identityProviders;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<LoginArgs> login;
-        private Output<String> name;
-        private @Nullable Output<AuthPlatformArgs> platform;
-        private Output<String> resourceGroupName;
-        private Output<String> slot;
+        private WebAppAuthSettingsV2SlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppAuthSettingsV2SlotArgs();
         }
 
         public Builder(WebAppAuthSettingsV2SlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalValidation = defaults.globalValidation;
-    	      this.httpSettings = defaults.httpSettings;
-    	      this.identityProviders = defaults.identityProviders;
-    	      this.kind = defaults.kind;
-    	      this.login = defaults.login;
-    	      this.name = defaults.name;
-    	      this.platform = defaults.platform;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new WebAppAuthSettingsV2SlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder globalValidation(@Nullable Output<GlobalValidationArgs> globalValidation) {
-            this.globalValidation = globalValidation;
+            $.globalValidation = globalValidation;
             return this;
         }
-        public Builder globalValidation(@Nullable GlobalValidationArgs globalValidation) {
-            this.globalValidation = Codegen.ofNullable(globalValidation);
-            return this;
+
+        public Builder globalValidation(GlobalValidationArgs globalValidation) {
+            return globalValidation(Output.of(globalValidation));
         }
+
         public Builder httpSettings(@Nullable Output<HttpSettingsArgs> httpSettings) {
-            this.httpSettings = httpSettings;
+            $.httpSettings = httpSettings;
             return this;
         }
-        public Builder httpSettings(@Nullable HttpSettingsArgs httpSettings) {
-            this.httpSettings = Codegen.ofNullable(httpSettings);
-            return this;
+
+        public Builder httpSettings(HttpSettingsArgs httpSettings) {
+            return httpSettings(Output.of(httpSettings));
         }
+
         public Builder identityProviders(@Nullable Output<IdentityProvidersArgs> identityProviders) {
-            this.identityProviders = identityProviders;
+            $.identityProviders = identityProviders;
             return this;
         }
-        public Builder identityProviders(@Nullable IdentityProvidersArgs identityProviders) {
-            this.identityProviders = Codegen.ofNullable(identityProviders);
-            return this;
+
+        public Builder identityProviders(IdentityProvidersArgs identityProviders) {
+            return identityProviders(Output.of(identityProviders));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder login(@Nullable Output<LoginArgs> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable LoginArgs login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(LoginArgs login) {
+            return login(Output.of(login));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder platform(@Nullable Output<AuthPlatformArgs> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable AuthPlatformArgs platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(AuthPlatformArgs platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder slot(Output<String> slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Output.of(Objects.requireNonNull(slot));
-            return this;
-        }        public WebAppAuthSettingsV2SlotArgs build() {
-            return new WebAppAuthSettingsV2SlotArgs(globalValidation, httpSettings, identityProviders, kind, login, name, platform, resourceGroupName, slot);
+            return slot(Output.of(slot));
+        }
+
+        public WebAppAuthSettingsV2SlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

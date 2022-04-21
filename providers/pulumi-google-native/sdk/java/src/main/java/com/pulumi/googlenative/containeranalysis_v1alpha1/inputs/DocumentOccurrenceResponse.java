@@ -22,7 +22,7 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -33,7 +33,7 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="creatorComment", required=true)
-      private final String creatorComment;
+    private String creatorComment;
 
     public String creatorComment() {
         return this.creatorComment;
@@ -44,7 +44,7 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="creators", required=true)
-      private final List<String> creators;
+    private List<String> creators;
 
     public List<String> creators() {
         return this.creators;
@@ -55,7 +55,7 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="documentComment", required=true)
-      private final String documentComment;
+    private String documentComment;
 
     public String documentComment() {
         return this.documentComment;
@@ -66,7 +66,7 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="externalDocumentRefs", required=true)
-      private final List<String> externalDocumentRefs;
+    private List<String> externalDocumentRefs;
 
     public List<String> externalDocumentRefs() {
         return this.externalDocumentRefs;
@@ -77,7 +77,7 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="licenseListVersion", required=true)
-      private final String licenseListVersion;
+    private String licenseListVersion;
 
     public String licenseListVersion() {
         return this.licenseListVersion;
@@ -88,7 +88,7 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
@@ -99,115 +99,102 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public DocumentOccurrenceResponse(
-        String createTime,
-        String creatorComment,
-        List<String> creators,
-        String documentComment,
-        List<String> externalDocumentRefs,
-        String licenseListVersion,
-        String namespace,
-        String title) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.creatorComment = Objects.requireNonNull(creatorComment, "expected parameter 'creatorComment' to be non-null");
-        this.creators = Objects.requireNonNull(creators, "expected parameter 'creators' to be non-null");
-        this.documentComment = Objects.requireNonNull(documentComment, "expected parameter 'documentComment' to be non-null");
-        this.externalDocumentRefs = Objects.requireNonNull(externalDocumentRefs, "expected parameter 'externalDocumentRefs' to be non-null");
-        this.licenseListVersion = Objects.requireNonNull(licenseListVersion, "expected parameter 'licenseListVersion' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private DocumentOccurrenceResponse() {}
 
-    private DocumentOccurrenceResponse() {
-        this.createTime = null;
-        this.creatorComment = null;
-        this.creators = List.of();
-        this.documentComment = null;
-        this.externalDocumentRefs = List.of();
-        this.licenseListVersion = null;
-        this.namespace = null;
-        this.title = null;
+    private DocumentOccurrenceResponse(DocumentOccurrenceResponse $) {
+        this.createTime = $.createTime;
+        this.creatorComment = $.creatorComment;
+        this.creators = $.creators;
+        this.documentComment = $.documentComment;
+        this.externalDocumentRefs = $.externalDocumentRefs;
+        this.licenseListVersion = $.licenseListVersion;
+        this.namespace = $.namespace;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String creatorComment;
-        private List<String> creators;
-        private String documentComment;
-        private List<String> externalDocumentRefs;
-        private String licenseListVersion;
-        private String namespace;
-        private String title;
+        private DocumentOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentOccurrenceResponse();
         }
 
         public Builder(DocumentOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.creatorComment = defaults.creatorComment;
-    	      this.creators = defaults.creators;
-    	      this.documentComment = defaults.documentComment;
-    	      this.externalDocumentRefs = defaults.externalDocumentRefs;
-    	      this.licenseListVersion = defaults.licenseListVersion;
-    	      this.namespace = defaults.namespace;
-    	      this.title = defaults.title;
+            $ = new DocumentOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder creatorComment(String creatorComment) {
-            this.creatorComment = Objects.requireNonNull(creatorComment);
+            $.creatorComment = creatorComment;
             return this;
         }
+
         public Builder creators(List<String> creators) {
-            this.creators = Objects.requireNonNull(creators);
+            $.creators = creators;
             return this;
         }
+
         public Builder creators(String... creators) {
             return creators(List.of(creators));
         }
+
         public Builder documentComment(String documentComment) {
-            this.documentComment = Objects.requireNonNull(documentComment);
+            $.documentComment = documentComment;
             return this;
         }
+
         public Builder externalDocumentRefs(List<String> externalDocumentRefs) {
-            this.externalDocumentRefs = Objects.requireNonNull(externalDocumentRefs);
+            $.externalDocumentRefs = externalDocumentRefs;
             return this;
         }
+
         public Builder externalDocumentRefs(String... externalDocumentRefs) {
             return externalDocumentRefs(List.of(externalDocumentRefs));
         }
+
         public Builder licenseListVersion(String licenseListVersion) {
-            this.licenseListVersion = Objects.requireNonNull(licenseListVersion);
+            $.licenseListVersion = licenseListVersion;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public DocumentOccurrenceResponse build() {
-            return new DocumentOccurrenceResponse(createTime, creatorComment, creators, documentComment, externalDocumentRefs, licenseListVersion, namespace, title);
+        }
+
+        public DocumentOccurrenceResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.creatorComment = Objects.requireNonNull($.creatorComment, "expected parameter 'creatorComment' to be non-null");
+            $.creators = Objects.requireNonNull($.creators, "expected parameter 'creators' to be non-null");
+            $.documentComment = Objects.requireNonNull($.documentComment, "expected parameter 'documentComment' to be non-null");
+            $.externalDocumentRefs = Objects.requireNonNull($.externalDocumentRefs, "expected parameter 'externalDocumentRefs' to be non-null");
+            $.licenseListVersion = Objects.requireNonNull($.licenseListVersion, "expected parameter 'licenseListVersion' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

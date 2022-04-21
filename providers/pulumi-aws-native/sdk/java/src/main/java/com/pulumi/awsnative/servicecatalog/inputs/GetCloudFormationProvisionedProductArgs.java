@@ -13,45 +13,45 @@ public final class GetCloudFormationProvisionedProductArgs extends com.pulumi.re
     public static final GetCloudFormationProvisionedProductArgs Empty = new GetCloudFormationProvisionedProductArgs();
 
     @Import(name="provisionedProductId", required=true)
-      private final String provisionedProductId;
+    private String provisionedProductId;
 
     public String provisionedProductId() {
         return this.provisionedProductId;
     }
 
-    public GetCloudFormationProvisionedProductArgs(String provisionedProductId) {
-        this.provisionedProductId = Objects.requireNonNull(provisionedProductId, "expected parameter 'provisionedProductId' to be non-null");
-    }
+    private GetCloudFormationProvisionedProductArgs() {}
 
-    private GetCloudFormationProvisionedProductArgs() {
-        this.provisionedProductId = null;
+    private GetCloudFormationProvisionedProductArgs(GetCloudFormationProvisionedProductArgs $) {
+        this.provisionedProductId = $.provisionedProductId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCloudFormationProvisionedProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String provisionedProductId;
+        private GetCloudFormationProvisionedProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCloudFormationProvisionedProductArgs();
         }
 
         public Builder(GetCloudFormationProvisionedProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisionedProductId = defaults.provisionedProductId;
+            $ = new GetCloudFormationProvisionedProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provisionedProductId(String provisionedProductId) {
-            this.provisionedProductId = Objects.requireNonNull(provisionedProductId);
+            $.provisionedProductId = provisionedProductId;
             return this;
-        }        public GetCloudFormationProvisionedProductArgs build() {
-            return new GetCloudFormationProvisionedProductArgs(provisionedProductId);
+        }
+
+        public GetCloudFormationProvisionedProductArgs build() {
+            $.provisionedProductId = Objects.requireNonNull($.provisionedProductId, "expected parameter 'provisionedProductId' to be non-null");
+            return $;
         }
     }
+
 }

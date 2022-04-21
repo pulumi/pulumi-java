@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datalabeling_v1beta1.enums.GoogleCloudDatalabelingV1beta1InputConfigAnnotationType;
 import com.pulumi.googlenative.datalabeling_v1beta1.enums.GoogleCloudDatalabelingV1beta1InputConfigDataType;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BigQuerySourceArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabeli
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1GcsSourceArgs;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1TextMetadataArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends com.pul
      * 
      */
     @Import(name="annotationType")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
 
-    public Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType() {
-        return this.annotationType == null ? Codegen.empty() : this.annotationType;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType>> annotationType() {
+        return Optional.ofNullable(this.annotationType);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends com.pul
      * 
      */
     @Import(name="bigquerySource")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
 
-    public Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource() {
-        return this.bigquerySource == null ? Codegen.empty() : this.bigquerySource;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs>> bigquerySource() {
+        return Optional.ofNullable(this.bigquerySource);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends com.pul
      * 
      */
     @Import(name="classificationMetadata")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
 
-    public Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata() {
-        return this.classificationMetadata == null ? Codegen.empty() : this.classificationMetadata;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs>> classificationMetadata() {
+        return Optional.ofNullable(this.classificationMetadata);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends com.pul
      * 
      */
     @Import(name="dataType", required=true)
-      private final Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
+    private Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
 
     public Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType() {
         return this.dataType;
@@ -73,10 +73,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends com.pul
      * 
      */
     @Import(name="gcsSource")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
 
-    public Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource() {
-        return this.gcsSource == null ? Codegen.empty() : this.gcsSource;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs>> gcsSource() {
+        return Optional.ofNullable(this.gcsSource);
     }
 
     /**
@@ -84,115 +84,99 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends com.pul
      * 
      */
     @Import(name="textMetadata")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
 
-    public Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata() {
-        return this.textMetadata == null ? Codegen.empty() : this.textMetadata;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs>> textMetadata() {
+        return Optional.ofNullable(this.textMetadata);
     }
 
-    public GoogleCloudDatalabelingV1beta1InputConfigArgs(
-        @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata,
-        Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata) {
-        this.annotationType = annotationType;
-        this.bigquerySource = bigquerySource;
-        this.classificationMetadata = classificationMetadata;
-        this.dataType = Objects.requireNonNull(dataType, "expected parameter 'dataType' to be non-null");
-        this.gcsSource = gcsSource;
-        this.textMetadata = textMetadata;
-    }
+    private GoogleCloudDatalabelingV1beta1InputConfigArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1InputConfigArgs() {
-        this.annotationType = Codegen.empty();
-        this.bigquerySource = Codegen.empty();
-        this.classificationMetadata = Codegen.empty();
-        this.dataType = Codegen.empty();
-        this.gcsSource = Codegen.empty();
-        this.textMetadata = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1InputConfigArgs(GoogleCloudDatalabelingV1beta1InputConfigArgs $) {
+        this.annotationType = $.annotationType;
+        this.bigquerySource = $.bigquerySource;
+        this.classificationMetadata = $.classificationMetadata;
+        this.dataType = $.dataType;
+        this.gcsSource = $.gcsSource;
+        this.textMetadata = $.textMetadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1InputConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
-        private Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
+        private GoogleCloudDatalabelingV1beta1InputConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1InputConfigArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1InputConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationType = defaults.annotationType;
-    	      this.bigquerySource = defaults.bigquerySource;
-    	      this.classificationMetadata = defaults.classificationMetadata;
-    	      this.dataType = defaults.dataType;
-    	      this.gcsSource = defaults.gcsSource;
-    	      this.textMetadata = defaults.textMetadata;
+            $ = new GoogleCloudDatalabelingV1beta1InputConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationType(@Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType) {
-            this.annotationType = annotationType;
+            $.annotationType = annotationType;
             return this;
         }
-        public Builder annotationType(@Nullable GoogleCloudDatalabelingV1beta1InputConfigAnnotationType annotationType) {
-            this.annotationType = Codegen.ofNullable(annotationType);
-            return this;
+
+        public Builder annotationType(GoogleCloudDatalabelingV1beta1InputConfigAnnotationType annotationType) {
+            return annotationType(Output.of(annotationType));
         }
+
         public Builder bigquerySource(@Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource) {
-            this.bigquerySource = bigquerySource;
+            $.bigquerySource = bigquerySource;
             return this;
         }
-        public Builder bigquerySource(@Nullable GoogleCloudDatalabelingV1beta1BigQuerySourceArgs bigquerySource) {
-            this.bigquerySource = Codegen.ofNullable(bigquerySource);
-            return this;
+
+        public Builder bigquerySource(GoogleCloudDatalabelingV1beta1BigQuerySourceArgs bigquerySource) {
+            return bigquerySource(Output.of(bigquerySource));
         }
+
         public Builder classificationMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata) {
-            this.classificationMetadata = classificationMetadata;
+            $.classificationMetadata = classificationMetadata;
             return this;
         }
-        public Builder classificationMetadata(@Nullable GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs classificationMetadata) {
-            this.classificationMetadata = Codegen.ofNullable(classificationMetadata);
-            return this;
+
+        public Builder classificationMetadata(GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs classificationMetadata) {
+            return classificationMetadata(Output.of(classificationMetadata));
         }
+
         public Builder dataType(Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType) {
-            this.dataType = Objects.requireNonNull(dataType);
+            $.dataType = dataType;
             return this;
         }
+
         public Builder dataType(GoogleCloudDatalabelingV1beta1InputConfigDataType dataType) {
-            this.dataType = Output.of(Objects.requireNonNull(dataType));
-            return this;
+            return dataType(Output.of(dataType));
         }
+
         public Builder gcsSource(@Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource) {
-            this.gcsSource = gcsSource;
+            $.gcsSource = gcsSource;
             return this;
         }
-        public Builder gcsSource(@Nullable GoogleCloudDatalabelingV1beta1GcsSourceArgs gcsSource) {
-            this.gcsSource = Codegen.ofNullable(gcsSource);
-            return this;
+
+        public Builder gcsSource(GoogleCloudDatalabelingV1beta1GcsSourceArgs gcsSource) {
+            return gcsSource(Output.of(gcsSource));
         }
+
         public Builder textMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata) {
-            this.textMetadata = textMetadata;
+            $.textMetadata = textMetadata;
             return this;
         }
-        public Builder textMetadata(@Nullable GoogleCloudDatalabelingV1beta1TextMetadataArgs textMetadata) {
-            this.textMetadata = Codegen.ofNullable(textMetadata);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1InputConfigArgs build() {
-            return new GoogleCloudDatalabelingV1beta1InputConfigArgs(annotationType, bigquerySource, classificationMetadata, dataType, gcsSource, textMetadata);
+
+        public Builder textMetadata(GoogleCloudDatalabelingV1beta1TextMetadataArgs textMetadata) {
+            return textMetadata(Output.of(textMetadata));
+        }
+
+        public GoogleCloudDatalabelingV1beta1InputConfigArgs build() {
+            $.dataType = Objects.requireNonNull($.dataType, "expected parameter 'dataType' to be non-null");
+            return $;
         }
     }
+
 }

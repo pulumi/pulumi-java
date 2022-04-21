@@ -7,9 +7,9 @@ import com.pulumi.awsnative.sagemaker.inputs.DomainCustomImageArgs;
 import com.pulumi.awsnative.sagemaker.inputs.DomainResourceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DomainKernelGatewayAppSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="customImages")
-      private final @Nullable Output<List<DomainCustomImageArgs>> customImages;
+    private @Nullable Output<List<DomainCustomImageArgs>> customImages;
 
-    public Output<List<DomainCustomImageArgs>> customImages() {
-        return this.customImages == null ? Codegen.empty() : this.customImages;
+    public Optional<Output<List<DomainCustomImageArgs>>> customImages() {
+        return Optional.ofNullable(this.customImages);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class DomainKernelGatewayAppSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="defaultResourceSpec")
-      private final @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
+    private @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
 
-    public Output<DomainResourceSpecArgs> defaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
+    public Optional<Output<DomainResourceSpecArgs>> defaultResourceSpec() {
+        return Optional.ofNullable(this.defaultResourceSpec);
     }
 
-    public DomainKernelGatewayAppSettingsArgs(
-        @Nullable Output<List<DomainCustomImageArgs>> customImages,
-        @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec) {
-        this.customImages = customImages;
-        this.defaultResourceSpec = defaultResourceSpec;
-    }
+    private DomainKernelGatewayAppSettingsArgs() {}
 
-    private DomainKernelGatewayAppSettingsArgs() {
-        this.customImages = Codegen.empty();
-        this.defaultResourceSpec = Codegen.empty();
+    private DomainKernelGatewayAppSettingsArgs(DomainKernelGatewayAppSettingsArgs $) {
+        this.customImages = $.customImages;
+        this.defaultResourceSpec = $.defaultResourceSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainKernelGatewayAppSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DomainCustomImageArgs>> customImages;
-        private @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
+        private DomainKernelGatewayAppSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainKernelGatewayAppSettingsArgs();
         }
 
         public Builder(DomainKernelGatewayAppSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customImages = defaults.customImages;
-    	      this.defaultResourceSpec = defaults.defaultResourceSpec;
+            $ = new DomainKernelGatewayAppSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customImages(@Nullable Output<List<DomainCustomImageArgs>> customImages) {
-            this.customImages = customImages;
+            $.customImages = customImages;
             return this;
         }
-        public Builder customImages(@Nullable List<DomainCustomImageArgs> customImages) {
-            this.customImages = Codegen.ofNullable(customImages);
-            return this;
+
+        public Builder customImages(List<DomainCustomImageArgs> customImages) {
+            return customImages(Output.of(customImages));
         }
+
         public Builder customImages(DomainCustomImageArgs... customImages) {
             return customImages(List.of(customImages));
         }
+
         public Builder defaultResourceSpec(@Nullable Output<DomainResourceSpecArgs> defaultResourceSpec) {
-            this.defaultResourceSpec = defaultResourceSpec;
+            $.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-        public Builder defaultResourceSpec(@Nullable DomainResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
-            return this;
-        }        public DomainKernelGatewayAppSettingsArgs build() {
-            return new DomainKernelGatewayAppSettingsArgs(customImages, defaultResourceSpec);
+
+        public Builder defaultResourceSpec(DomainResourceSpecArgs defaultResourceSpec) {
+            return defaultResourceSpec(Output.of(defaultResourceSpec));
+        }
+
+        public DomainKernelGatewayAppSettingsArgs build() {
+            return $;
         }
     }
+
 }

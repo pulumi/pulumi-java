@@ -8,9 +8,9 @@ import com.pulumi.azurenative.web.inputs.AzureActiveDirectoryRegistrationArgs;
 import com.pulumi.azurenative.web.inputs.AzureActiveDirectoryValidationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isAutoProvisioned")
-      private final @Nullable Output<Boolean> isAutoProvisioned;
+    private @Nullable Output<Boolean> isAutoProvisioned;
 
-    public Output<Boolean> isAutoProvisioned() {
-        return this.isAutoProvisioned == null ? Codegen.empty() : this.isAutoProvisioned;
+    public Optional<Output<Boolean>> isAutoProvisioned() {
+        return Optional.ofNullable(this.isAutoProvisioned);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<AzureActiveDirectoryLoginArgs> login;
+    private @Nullable Output<AzureActiveDirectoryLoginArgs> login;
 
-    public Output<AzureActiveDirectoryLoginArgs> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<AzureActiveDirectoryLoginArgs>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="registration")
-      private final @Nullable Output<AzureActiveDirectoryRegistrationArgs> registration;
+    private @Nullable Output<AzureActiveDirectoryRegistrationArgs> registration;
 
-    public Output<AzureActiveDirectoryRegistrationArgs> registration() {
-        return this.registration == null ? Codegen.empty() : this.registration;
+    public Optional<Output<AzureActiveDirectoryRegistrationArgs>> registration() {
+        return Optional.ofNullable(this.registration);
     }
 
     /**
@@ -73,102 +73,88 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="validation")
-      private final @Nullable Output<AzureActiveDirectoryValidationArgs> validation;
+    private @Nullable Output<AzureActiveDirectoryValidationArgs> validation;
 
-    public Output<AzureActiveDirectoryValidationArgs> validation() {
-        return this.validation == null ? Codegen.empty() : this.validation;
+    public Optional<Output<AzureActiveDirectoryValidationArgs>> validation() {
+        return Optional.ofNullable(this.validation);
     }
 
-    public AzureActiveDirectoryArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Boolean> isAutoProvisioned,
-        @Nullable Output<AzureActiveDirectoryLoginArgs> login,
-        @Nullable Output<AzureActiveDirectoryRegistrationArgs> registration,
-        @Nullable Output<AzureActiveDirectoryValidationArgs> validation) {
-        this.enabled = enabled;
-        this.isAutoProvisioned = isAutoProvisioned;
-        this.login = login;
-        this.registration = registration;
-        this.validation = validation;
-    }
+    private AzureActiveDirectoryArgs() {}
 
-    private AzureActiveDirectoryArgs() {
-        this.enabled = Codegen.empty();
-        this.isAutoProvisioned = Codegen.empty();
-        this.login = Codegen.empty();
-        this.registration = Codegen.empty();
-        this.validation = Codegen.empty();
+    private AzureActiveDirectoryArgs(AzureActiveDirectoryArgs $) {
+        this.enabled = $.enabled;
+        this.isAutoProvisioned = $.isAutoProvisioned;
+        this.login = $.login;
+        this.registration = $.registration;
+        this.validation = $.validation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureActiveDirectoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Boolean> isAutoProvisioned;
-        private @Nullable Output<AzureActiveDirectoryLoginArgs> login;
-        private @Nullable Output<AzureActiveDirectoryRegistrationArgs> registration;
-        private @Nullable Output<AzureActiveDirectoryValidationArgs> validation;
+        private AzureActiveDirectoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureActiveDirectoryArgs();
         }
 
         public Builder(AzureActiveDirectoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.isAutoProvisioned = defaults.isAutoProvisioned;
-    	      this.login = defaults.login;
-    	      this.registration = defaults.registration;
-    	      this.validation = defaults.validation;
+            $ = new AzureActiveDirectoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder isAutoProvisioned(@Nullable Output<Boolean> isAutoProvisioned) {
-            this.isAutoProvisioned = isAutoProvisioned;
+            $.isAutoProvisioned = isAutoProvisioned;
             return this;
         }
-        public Builder isAutoProvisioned(@Nullable Boolean isAutoProvisioned) {
-            this.isAutoProvisioned = Codegen.ofNullable(isAutoProvisioned);
-            return this;
+
+        public Builder isAutoProvisioned(Boolean isAutoProvisioned) {
+            return isAutoProvisioned(Output.of(isAutoProvisioned));
         }
+
         public Builder login(@Nullable Output<AzureActiveDirectoryLoginArgs> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable AzureActiveDirectoryLoginArgs login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(AzureActiveDirectoryLoginArgs login) {
+            return login(Output.of(login));
         }
+
         public Builder registration(@Nullable Output<AzureActiveDirectoryRegistrationArgs> registration) {
-            this.registration = registration;
+            $.registration = registration;
             return this;
         }
-        public Builder registration(@Nullable AzureActiveDirectoryRegistrationArgs registration) {
-            this.registration = Codegen.ofNullable(registration);
-            return this;
+
+        public Builder registration(AzureActiveDirectoryRegistrationArgs registration) {
+            return registration(Output.of(registration));
         }
+
         public Builder validation(@Nullable Output<AzureActiveDirectoryValidationArgs> validation) {
-            this.validation = validation;
+            $.validation = validation;
             return this;
         }
-        public Builder validation(@Nullable AzureActiveDirectoryValidationArgs validation) {
-            this.validation = Codegen.ofNullable(validation);
-            return this;
-        }        public AzureActiveDirectoryArgs build() {
-            return new AzureActiveDirectoryArgs(enabled, isAutoProvisioned, login, registration, validation);
+
+        public Builder validation(AzureActiveDirectoryValidationArgs validation) {
+            return validation(Output.of(validation));
+        }
+
+        public AzureActiveDirectoryArgs build() {
+            return $;
         }
     }
+
 }

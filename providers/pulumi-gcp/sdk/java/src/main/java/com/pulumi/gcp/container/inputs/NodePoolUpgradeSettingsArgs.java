@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class NodePoolUpgradeSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maxSurge", required=true)
-      private final Output<Integer> maxSurge;
+    private Output<Integer> maxSurge;
 
     public Output<Integer> maxSurge() {
         return this.maxSurge;
@@ -34,63 +33,60 @@ public final class NodePoolUpgradeSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maxUnavailable", required=true)
-      private final Output<Integer> maxUnavailable;
+    private Output<Integer> maxUnavailable;
 
     public Output<Integer> maxUnavailable() {
         return this.maxUnavailable;
     }
 
-    public NodePoolUpgradeSettingsArgs(
-        Output<Integer> maxSurge,
-        Output<Integer> maxUnavailable) {
-        this.maxSurge = Objects.requireNonNull(maxSurge, "expected parameter 'maxSurge' to be non-null");
-        this.maxUnavailable = Objects.requireNonNull(maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
-    }
+    private NodePoolUpgradeSettingsArgs() {}
 
-    private NodePoolUpgradeSettingsArgs() {
-        this.maxSurge = Codegen.empty();
-        this.maxUnavailable = Codegen.empty();
+    private NodePoolUpgradeSettingsArgs(NodePoolUpgradeSettingsArgs $) {
+        this.maxSurge = $.maxSurge;
+        this.maxUnavailable = $.maxUnavailable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolUpgradeSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxSurge;
-        private Output<Integer> maxUnavailable;
+        private NodePoolUpgradeSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolUpgradeSettingsArgs();
         }
 
         public Builder(NodePoolUpgradeSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSurge = defaults.maxSurge;
-    	      this.maxUnavailable = defaults.maxUnavailable;
+            $ = new NodePoolUpgradeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSurge(Output<Integer> maxSurge) {
-            this.maxSurge = Objects.requireNonNull(maxSurge);
+            $.maxSurge = maxSurge;
             return this;
         }
+
         public Builder maxSurge(Integer maxSurge) {
-            this.maxSurge = Output.of(Objects.requireNonNull(maxSurge));
-            return this;
+            return maxSurge(Output.of(maxSurge));
         }
+
         public Builder maxUnavailable(Output<Integer> maxUnavailable) {
-            this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
+            $.maxUnavailable = maxUnavailable;
             return this;
         }
+
         public Builder maxUnavailable(Integer maxUnavailable) {
-            this.maxUnavailable = Output.of(Objects.requireNonNull(maxUnavailable));
-            return this;
-        }        public NodePoolUpgradeSettingsArgs build() {
-            return new NodePoolUpgradeSettingsArgs(maxSurge, maxUnavailable);
+            return maxUnavailable(Output.of(maxUnavailable));
+        }
+
+        public NodePoolUpgradeSettingsArgs build() {
+            $.maxSurge = Objects.requireNonNull($.maxSurge, "expected parameter 'maxSurge' to be non-null");
+            $.maxUnavailable = Objects.requireNonNull($.maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverId", required=true)
-      private final String serverId;
+    private String serverId;
 
     public String serverId() {
         return this.serverId;
     }
 
-    public GetServerArgs(String serverId) {
-        this.serverId = Objects.requireNonNull(serverId, "expected parameter 'serverId' to be non-null");
-    }
+    private GetServerArgs() {}
 
-    private GetServerArgs() {
-        this.serverId = null;
+    private GetServerArgs(GetServerArgs $) {
+        this.serverId = $.serverId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String serverId;
+        private GetServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerArgs();
         }
 
         public Builder(GetServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverId = defaults.serverId;
+            $ = new GetServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serverId(String serverId) {
-            this.serverId = Objects.requireNonNull(serverId);
+            $.serverId = serverId;
             return this;
-        }        public GetServerArgs build() {
-            return new GetServerArgs(serverId);
+        }
+
+        public GetServerArgs build() {
+            $.serverId = Objects.requireNonNull($.serverId, "expected parameter 'serverId' to be non-null");
+            return $;
         }
     }
+
 }

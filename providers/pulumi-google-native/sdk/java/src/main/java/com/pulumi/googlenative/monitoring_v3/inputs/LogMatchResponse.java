@@ -22,7 +22,7 @@ public final class LogMatchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -33,55 +33,52 @@ public final class LogMatchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labelExtractors", required=true)
-      private final Map<String,String> labelExtractors;
+    private Map<String,String> labelExtractors;
 
     public Map<String,String> labelExtractors() {
         return this.labelExtractors;
     }
 
-    public LogMatchResponse(
-        String filter,
-        Map<String,String> labelExtractors) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.labelExtractors = Objects.requireNonNull(labelExtractors, "expected parameter 'labelExtractors' to be non-null");
-    }
+    private LogMatchResponse() {}
 
-    private LogMatchResponse() {
-        this.filter = null;
-        this.labelExtractors = Map.of();
+    private LogMatchResponse(LogMatchResponse $) {
+        this.filter = $.filter;
+        this.labelExtractors = $.labelExtractors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogMatchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
-        private Map<String,String> labelExtractors;
+        private LogMatchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogMatchResponse();
         }
 
         public Builder(LogMatchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.labelExtractors = defaults.labelExtractors;
+            $ = new LogMatchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder labelExtractors(Map<String,String> labelExtractors) {
-            this.labelExtractors = Objects.requireNonNull(labelExtractors);
+            $.labelExtractors = labelExtractors;
             return this;
-        }        public LogMatchResponse build() {
-            return new LogMatchResponse(filter, labelExtractors);
+        }
+
+        public LogMatchResponse build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.labelExtractors = Objects.requireNonNull($.labelExtractors, "expected parameter 'labelExtractors' to be non-null");
+            return $;
         }
     }
+
 }

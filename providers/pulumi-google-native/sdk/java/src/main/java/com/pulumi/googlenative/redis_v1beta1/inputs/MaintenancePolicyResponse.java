@@ -23,7 +23,7 @@ public final class MaintenancePolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -34,7 +34,7 @@ public final class MaintenancePolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -45,7 +45,7 @@ public final class MaintenancePolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
@@ -56,76 +56,70 @@ public final class MaintenancePolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="weeklyMaintenanceWindow", required=true)
-      private final List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
+    private List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
 
     public List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow() {
         return this.weeklyMaintenanceWindow;
     }
 
-    public MaintenancePolicyResponse(
-        String createTime,
-        String description,
-        String updateTime,
-        List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-        this.weeklyMaintenanceWindow = Objects.requireNonNull(weeklyMaintenanceWindow, "expected parameter 'weeklyMaintenanceWindow' to be non-null");
-    }
+    private MaintenancePolicyResponse() {}
 
-    private MaintenancePolicyResponse() {
-        this.createTime = null;
-        this.description = null;
-        this.updateTime = null;
-        this.weeklyMaintenanceWindow = List.of();
+    private MaintenancePolicyResponse(MaintenancePolicyResponse $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.updateTime = $.updateTime;
+        this.weeklyMaintenanceWindow = $.weeklyMaintenanceWindow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenancePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String description;
-        private String updateTime;
-        private List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
+        private MaintenancePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenancePolicyResponse();
         }
 
         public Builder(MaintenancePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.updateTime = defaults.updateTime;
-    	      this.weeklyMaintenanceWindow = defaults.weeklyMaintenanceWindow;
+            $ = new MaintenancePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
         }
+
         public Builder weeklyMaintenanceWindow(List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
-            this.weeklyMaintenanceWindow = Objects.requireNonNull(weeklyMaintenanceWindow);
+            $.weeklyMaintenanceWindow = weeklyMaintenanceWindow;
             return this;
         }
+
         public Builder weeklyMaintenanceWindow(WeeklyMaintenanceWindowResponse... weeklyMaintenanceWindow) {
             return weeklyMaintenanceWindow(List.of(weeklyMaintenanceWindow));
-        }        public MaintenancePolicyResponse build() {
-            return new MaintenancePolicyResponse(createTime, description, updateTime, weeklyMaintenanceWindow);
+        }
+
+        public MaintenancePolicyResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            $.weeklyMaintenanceWindow = Objects.requireNonNull($.weeklyMaintenanceWindow, "expected parameter 'weeklyMaintenanceWindow' to be non-null");
+            return $;
         }
     }
+
 }

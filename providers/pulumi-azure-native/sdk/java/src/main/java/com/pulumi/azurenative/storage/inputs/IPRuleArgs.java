@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class IPRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<Action> action;
+    private @Nullable Output<Action> action;
 
-    public Output<Action> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<Action>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -36,63 +37,60 @@ public final class IPRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iPAddressOrRange", required=true)
-      private final Output<String> iPAddressOrRange;
+    private Output<String> iPAddressOrRange;
 
     public Output<String> iPAddressOrRange() {
         return this.iPAddressOrRange;
     }
 
-    public IPRuleArgs(
-        @Nullable Output<Action> action,
-        Output<String> iPAddressOrRange) {
-        this.action = Codegen.objectProp("action", Action.class).output().arg(action).def(Action.Allow).getNullable();
-        this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange, "expected parameter 'iPAddressOrRange' to be non-null");
-    }
+    private IPRuleArgs() {}
 
-    private IPRuleArgs() {
-        this.action = Codegen.empty();
-        this.iPAddressOrRange = Codegen.empty();
+    private IPRuleArgs(IPRuleArgs $) {
+        this.action = $.action;
+        this.iPAddressOrRange = $.iPAddressOrRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Action> action;
-        private Output<String> iPAddressOrRange;
+        private IPRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPRuleArgs();
         }
 
         public Builder(IPRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.iPAddressOrRange = defaults.iPAddressOrRange;
+            $ = new IPRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<Action> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable Action action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(Action action) {
+            return action(Output.of(action));
         }
+
         public Builder iPAddressOrRange(Output<String> iPAddressOrRange) {
-            this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange);
+            $.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
+
         public Builder iPAddressOrRange(String iPAddressOrRange) {
-            this.iPAddressOrRange = Output.of(Objects.requireNonNull(iPAddressOrRange));
-            return this;
-        }        public IPRuleArgs build() {
-            return new IPRuleArgs(action, iPAddressOrRange);
+            return iPAddressOrRange(Output.of(iPAddressOrRange));
+        }
+
+        public IPRuleArgs build() {
+            $.action = Codegen.objectProp("action", Action.class).output().arg($.action).def(Action.Allow).getNullable();
+            $.iPAddressOrRange = Objects.requireNonNull($.iPAddressOrRange, "expected parameter 'iPAddressOrRange' to be non-null");
+            return $;
         }
     }
+
 }

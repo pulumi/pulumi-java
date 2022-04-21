@@ -17,7 +17,7 @@ public final class GetUserRuleCollectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="configurationName", required=true)
-      private final String configurationName;
+    private String configurationName;
 
     public String configurationName() {
         return this.configurationName;
@@ -28,7 +28,7 @@ public final class GetUserRuleCollectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final String networkManagerName;
+    private String networkManagerName;
 
     public String networkManagerName() {
         return this.networkManagerName;
@@ -39,7 +39,7 @@ public final class GetUserRuleCollectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetUserRuleCollectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ruleCollectionName", required=true)
-      private final String ruleCollectionName;
+    private String ruleCollectionName;
 
     public String ruleCollectionName() {
         return this.ruleCollectionName;
     }
 
-    public GetUserRuleCollectionArgs(
-        String configurationName,
-        String networkManagerName,
-        String resourceGroupName,
-        String ruleCollectionName) {
-        this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName, "expected parameter 'ruleCollectionName' to be non-null");
-    }
+    private GetUserRuleCollectionArgs() {}
 
-    private GetUserRuleCollectionArgs() {
-        this.configurationName = null;
-        this.networkManagerName = null;
-        this.resourceGroupName = null;
-        this.ruleCollectionName = null;
+    private GetUserRuleCollectionArgs(GetUserRuleCollectionArgs $) {
+        this.configurationName = $.configurationName;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleCollectionName = $.ruleCollectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserRuleCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationName;
-        private String networkManagerName;
-        private String resourceGroupName;
-        private String ruleCollectionName;
+        private GetUserRuleCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserRuleCollectionArgs();
         }
 
         public Builder(GetUserRuleCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleCollectionName = defaults.ruleCollectionName;
+            $ = new GetUserRuleCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(String configurationName) {
-            this.configurationName = Objects.requireNonNull(configurationName);
+            $.configurationName = configurationName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleCollectionName(String ruleCollectionName) {
-            this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
+            $.ruleCollectionName = ruleCollectionName;
             return this;
-        }        public GetUserRuleCollectionArgs build() {
-            return new GetUserRuleCollectionArgs(configurationName, networkManagerName, resourceGroupName, ruleCollectionName);
+        }
+
+        public GetUserRuleCollectionArgs build() {
+            $.configurationName = Objects.requireNonNull($.configurationName, "expected parameter 'configurationName' to be non-null");
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleCollectionName = Objects.requireNonNull($.ruleCollectionName, "expected parameter 'ruleCollectionName' to be non-null");
+            return $;
         }
     }
+
 }

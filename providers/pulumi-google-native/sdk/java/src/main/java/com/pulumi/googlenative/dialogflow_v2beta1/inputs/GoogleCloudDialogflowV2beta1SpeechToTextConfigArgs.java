@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs extends co
      * 
      */
     @Import(name="speechModelVariant")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant;
 
-    public Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant() {
-        return this.speechModelVariant == null ? Codegen.empty() : this.speechModelVariant;
+    public Optional<Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant>> speechModelVariant() {
+        return Optional.ofNullable(this.speechModelVariant);
     }
 
-    public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs(@Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
-        this.speechModelVariant = speechModelVariant;
-    }
+    private GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs() {}
 
-    private GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs() {
-        this.speechModelVariant = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs(GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs $) {
+        this.speechModelVariant = $.speechModelVariant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant;
+        private GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.speechModelVariant = defaults.speechModelVariant;
+            $ = new GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder speechModelVariant(@Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
-            this.speechModelVariant = speechModelVariant;
+            $.speechModelVariant = speechModelVariant;
             return this;
         }
-        public Builder speechModelVariant(@Nullable GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant speechModelVariant) {
-            this.speechModelVariant = Codegen.ofNullable(speechModelVariant);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs build() {
-            return new GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs(speechModelVariant);
+
+        public Builder speechModelVariant(GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant speechModelVariant) {
+            return speechModelVariant(Output.of(speechModelVariant));
+        }
+
+        public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs build() {
+            return $;
         }
     }
+
 }

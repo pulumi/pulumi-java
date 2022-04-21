@@ -43,10 +43,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="columnDelimiter")
-      private final @Nullable Object columnDelimiter;
+    private @Nullable Object columnDelimiter;
 
     public Optional<Object> columnDelimiter() {
-        return this.columnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.columnDelimiter);
+        return Optional.ofNullable(this.columnDelimiter);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compressionCodec")
-      private final @Nullable Object compressionCodec;
+    private @Nullable Object compressionCodec;
 
     public Optional<Object> compressionCodec() {
-        return this.compressionCodec == null ? Optional.empty() : Optional.ofNullable(this.compressionCodec);
+        return Optional.ofNullable(this.compressionCodec);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compressionLevel")
-      private final @Nullable Object compressionLevel;
+    private @Nullable Object compressionLevel;
 
     public Optional<Object> compressionLevel() {
-        return this.compressionLevel == null ? Optional.empty() : Optional.ofNullable(this.compressionLevel);
+        return Optional.ofNullable(this.compressionLevel);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="encodingName")
-      private final @Nullable Object encodingName;
+    private @Nullable Object encodingName;
 
     public Optional<Object> encodingName() {
-        return this.encodingName == null ? Optional.empty() : Optional.ofNullable(this.encodingName);
+        return Optional.ofNullable(this.encodingName);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="escapeChar")
-      private final @Nullable Object escapeChar;
+    private @Nullable Object escapeChar;
 
     public Optional<Object> escapeChar() {
-        return this.escapeChar == null ? Optional.empty() : Optional.ofNullable(this.escapeChar);
+        return Optional.ofNullable(this.escapeChar);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="firstRowAsHeader")
-      private final @Nullable Object firstRowAsHeader;
+    private @Nullable Object firstRowAsHeader;
 
     public Optional<Object> firstRowAsHeader() {
-        return this.firstRowAsHeader == null ? Optional.empty() : Optional.ofNullable(this.firstRowAsHeader);
+        return Optional.ofNullable(this.firstRowAsHeader);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="folder")
-      private final @Nullable DatasetResponseFolder folder;
+    private @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> folder() {
-        return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -142,7 +142,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -153,7 +153,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="location", required=true)
-      private final Object location;
+    private Object location;
 
     public Object location() {
         return this.location;
@@ -164,10 +164,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="nullValue")
-      private final @Nullable Object nullValue;
+    private @Nullable Object nullValue;
 
     public Optional<Object> nullValue() {
-        return this.nullValue == null ? Optional.empty() : Optional.ofNullable(this.nullValue);
+        return Optional.ofNullable(this.nullValue);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="quoteChar")
-      private final @Nullable Object quoteChar;
+    private @Nullable Object quoteChar;
 
     public Optional<Object> quoteChar() {
-        return this.quoteChar == null ? Optional.empty() : Optional.ofNullable(this.quoteChar);
+        return Optional.ofNullable(this.quoteChar);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="rowDelimiter")
-      private final @Nullable Object rowDelimiter;
+    private @Nullable Object rowDelimiter;
 
     public Optional<Object> rowDelimiter() {
-        return this.rowDelimiter == null ? Optional.empty() : Optional.ofNullable(this.rowDelimiter);
+        return Optional.ofNullable(this.rowDelimiter);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="schema")
-      private final @Nullable Object schema;
+    private @Nullable Object schema;
 
     public Optional<Object> schema() {
-        return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="structure")
-      private final @Nullable Object structure;
+    private @Nullable Object structure;
 
     public Optional<Object> structure() {
-        return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
+        return Optional.ofNullable(this.structure);
     }
 
     /**
@@ -231,202 +231,153 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DelimitedTextDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object columnDelimiter,
-        @Nullable Object compressionCodec,
-        @Nullable Object compressionLevel,
-        @Nullable String description,
-        @Nullable Object encodingName,
-        @Nullable Object escapeChar,
-        @Nullable Object firstRowAsHeader,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        Object location,
-        @Nullable Object nullValue,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object quoteChar,
-        @Nullable Object rowDelimiter,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
-        this.annotations = annotations;
-        this.columnDelimiter = columnDelimiter;
-        this.compressionCodec = compressionCodec;
-        this.compressionLevel = compressionLevel;
-        this.description = description;
-        this.encodingName = encodingName;
-        this.escapeChar = escapeChar;
-        this.firstRowAsHeader = firstRowAsHeader;
-        this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.nullValue = nullValue;
-        this.parameters = parameters;
-        this.quoteChar = quoteChar;
-        this.rowDelimiter = rowDelimiter;
-        this.schema = schema;
-        this.structure = structure;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private DelimitedTextDatasetResponse() {}
 
-    private DelimitedTextDatasetResponse() {
-        this.annotations = List.of();
-        this.columnDelimiter = null;
-        this.compressionCodec = null;
-        this.compressionLevel = null;
-        this.description = null;
-        this.encodingName = null;
-        this.escapeChar = null;
-        this.firstRowAsHeader = null;
-        this.folder = null;
-        this.linkedServiceName = null;
-        this.location = null;
-        this.nullValue = null;
-        this.parameters = Map.of();
-        this.quoteChar = null;
-        this.rowDelimiter = null;
-        this.schema = null;
-        this.structure = null;
-        this.type = null;
+    private DelimitedTextDatasetResponse(DelimitedTextDatasetResponse $) {
+        this.annotations = $.annotations;
+        this.columnDelimiter = $.columnDelimiter;
+        this.compressionCodec = $.compressionCodec;
+        this.compressionLevel = $.compressionLevel;
+        this.description = $.description;
+        this.encodingName = $.encodingName;
+        this.escapeChar = $.escapeChar;
+        this.firstRowAsHeader = $.firstRowAsHeader;
+        this.folder = $.folder;
+        this.linkedServiceName = $.linkedServiceName;
+        this.location = $.location;
+        this.nullValue = $.nullValue;
+        this.parameters = $.parameters;
+        this.quoteChar = $.quoteChar;
+        this.rowDelimiter = $.rowDelimiter;
+        this.schema = $.schema;
+        this.structure = $.structure;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelimitedTextDatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable Object columnDelimiter;
-        private @Nullable Object compressionCodec;
-        private @Nullable Object compressionLevel;
-        private @Nullable String description;
-        private @Nullable Object encodingName;
-        private @Nullable Object escapeChar;
-        private @Nullable Object firstRowAsHeader;
-        private @Nullable DatasetResponseFolder folder;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private Object location;
-        private @Nullable Object nullValue;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object quoteChar;
-        private @Nullable Object rowDelimiter;
-        private @Nullable Object schema;
-        private @Nullable Object structure;
-        private String type;
+        private DelimitedTextDatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelimitedTextDatasetResponse();
         }
 
         public Builder(DelimitedTextDatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.columnDelimiter = defaults.columnDelimiter;
-    	      this.compressionCodec = defaults.compressionCodec;
-    	      this.compressionLevel = defaults.compressionLevel;
-    	      this.description = defaults.description;
-    	      this.encodingName = defaults.encodingName;
-    	      this.escapeChar = defaults.escapeChar;
-    	      this.firstRowAsHeader = defaults.firstRowAsHeader;
-    	      this.folder = defaults.folder;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.location = defaults.location;
-    	      this.nullValue = defaults.nullValue;
-    	      this.parameters = defaults.parameters;
-    	      this.quoteChar = defaults.quoteChar;
-    	      this.rowDelimiter = defaults.rowDelimiter;
-    	      this.schema = defaults.schema;
-    	      this.structure = defaults.structure;
-    	      this.type = defaults.type;
+            $ = new DelimitedTextDatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder columnDelimiter(@Nullable Object columnDelimiter) {
-            this.columnDelimiter = columnDelimiter;
+            $.columnDelimiter = columnDelimiter;
             return this;
         }
+
         public Builder compressionCodec(@Nullable Object compressionCodec) {
-            this.compressionCodec = compressionCodec;
+            $.compressionCodec = compressionCodec;
             return this;
         }
+
         public Builder compressionLevel(@Nullable Object compressionLevel) {
-            this.compressionLevel = compressionLevel;
+            $.compressionLevel = compressionLevel;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encodingName(@Nullable Object encodingName) {
-            this.encodingName = encodingName;
+            $.encodingName = encodingName;
             return this;
         }
+
         public Builder escapeChar(@Nullable Object escapeChar) {
-            this.escapeChar = escapeChar;
+            $.escapeChar = escapeChar;
             return this;
         }
+
         public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
-            this.firstRowAsHeader = firstRowAsHeader;
+            $.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
+
         public Builder folder(@Nullable DatasetResponseFolder folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder location(Object location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder nullValue(@Nullable Object nullValue) {
-            this.nullValue = nullValue;
+            $.nullValue = nullValue;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder quoteChar(@Nullable Object quoteChar) {
-            this.quoteChar = quoteChar;
+            $.quoteChar = quoteChar;
             return this;
         }
+
         public Builder rowDelimiter(@Nullable Object rowDelimiter) {
-            this.rowDelimiter = rowDelimiter;
+            $.rowDelimiter = rowDelimiter;
             return this;
         }
+
         public Builder schema(@Nullable Object schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
+
         public Builder structure(@Nullable Object structure) {
-            this.structure = structure;
+            $.structure = structure;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DelimitedTextDatasetResponse build() {
-            return new DelimitedTextDatasetResponse(annotations, columnDelimiter, compressionCodec, compressionLevel, description, encodingName, escapeChar, firstRowAsHeader, folder, linkedServiceName, location, nullValue, parameters, quoteChar, rowDelimiter, schema, structure, type);
+        }
+
+        public DelimitedTextDatasetResponse build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

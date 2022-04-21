@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class KeyEncryptionKeyInfoArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyIdentifier")
-      private final @Nullable Output<String> keyIdentifier;
+    private @Nullable Output<String> keyIdentifier;
 
-    public Output<String> keyIdentifier() {
-        return this.keyIdentifier == null ? Codegen.empty() : this.keyIdentifier;
+    public Optional<Output<String>> keyIdentifier() {
+        return Optional.ofNullable(this.keyIdentifier);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class KeyEncryptionKeyInfoArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyVaultResourceArmId")
-      private final @Nullable Output<String> keyVaultResourceArmId;
+    private @Nullable Output<String> keyVaultResourceArmId;
 
-    public Output<String> keyVaultResourceArmId() {
-        return this.keyVaultResourceArmId == null ? Codegen.empty() : this.keyVaultResourceArmId;
+    public Optional<Output<String>> keyVaultResourceArmId() {
+        return Optional.ofNullable(this.keyVaultResourceArmId);
     }
 
-    public KeyEncryptionKeyInfoArgs(
-        @Nullable Output<String> keyIdentifier,
-        @Nullable Output<String> keyVaultResourceArmId) {
-        this.keyIdentifier = keyIdentifier;
-        this.keyVaultResourceArmId = keyVaultResourceArmId;
-    }
+    private KeyEncryptionKeyInfoArgs() {}
 
-    private KeyEncryptionKeyInfoArgs() {
-        this.keyIdentifier = Codegen.empty();
-        this.keyVaultResourceArmId = Codegen.empty();
+    private KeyEncryptionKeyInfoArgs(KeyEncryptionKeyInfoArgs $) {
+        this.keyIdentifier = $.keyIdentifier;
+        this.keyVaultResourceArmId = $.keyVaultResourceArmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyEncryptionKeyInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyIdentifier;
-        private @Nullable Output<String> keyVaultResourceArmId;
+        private KeyEncryptionKeyInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyEncryptionKeyInfoArgs();
         }
 
         public Builder(KeyEncryptionKeyInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyIdentifier = defaults.keyIdentifier;
-    	      this.keyVaultResourceArmId = defaults.keyVaultResourceArmId;
+            $ = new KeyEncryptionKeyInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyIdentifier(@Nullable Output<String> keyIdentifier) {
-            this.keyIdentifier = keyIdentifier;
+            $.keyIdentifier = keyIdentifier;
             return this;
         }
-        public Builder keyIdentifier(@Nullable String keyIdentifier) {
-            this.keyIdentifier = Codegen.ofNullable(keyIdentifier);
-            return this;
+
+        public Builder keyIdentifier(String keyIdentifier) {
+            return keyIdentifier(Output.of(keyIdentifier));
         }
+
         public Builder keyVaultResourceArmId(@Nullable Output<String> keyVaultResourceArmId) {
-            this.keyVaultResourceArmId = keyVaultResourceArmId;
+            $.keyVaultResourceArmId = keyVaultResourceArmId;
             return this;
         }
-        public Builder keyVaultResourceArmId(@Nullable String keyVaultResourceArmId) {
-            this.keyVaultResourceArmId = Codegen.ofNullable(keyVaultResourceArmId);
-            return this;
-        }        public KeyEncryptionKeyInfoArgs build() {
-            return new KeyEncryptionKeyInfoArgs(keyIdentifier, keyVaultResourceArmId);
+
+        public Builder keyVaultResourceArmId(String keyVaultResourceArmId) {
+            return keyVaultResourceArmId(Output.of(keyVaultResourceArmId));
+        }
+
+        public KeyEncryptionKeyInfoArgs build() {
+            return $;
         }
     }
+
 }

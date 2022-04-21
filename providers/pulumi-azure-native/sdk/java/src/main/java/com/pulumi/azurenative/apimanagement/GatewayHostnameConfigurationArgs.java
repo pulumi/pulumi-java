@@ -5,10 +5,10 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="certificateId")
-      private final @Nullable Output<String> certificateId;
+    private @Nullable Output<String> certificateId;
 
-    public Output<String> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<String>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="gatewayId", required=true)
-      private final Output<String> gatewayId;
+    private Output<String> gatewayId;
 
     public Output<String> gatewayId() {
         return this.gatewayId;
@@ -43,10 +43,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="hcId")
-      private final @Nullable Output<String> hcId;
+    private @Nullable Output<String> hcId;
 
-    public Output<String> hcId() {
-        return this.hcId == null ? Codegen.empty() : this.hcId;
+    public Optional<Output<String>> hcId() {
+        return Optional.ofNullable(this.hcId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="http2Enabled")
-      private final @Nullable Output<Boolean> http2Enabled;
+    private @Nullable Output<Boolean> http2Enabled;
 
-    public Output<Boolean> http2Enabled() {
-        return this.http2Enabled == null ? Codegen.empty() : this.http2Enabled;
+    public Optional<Output<Boolean>> http2Enabled() {
+        return Optional.ofNullable(this.http2Enabled);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="negotiateClientCertificate")
-      private final @Nullable Output<Boolean> negotiateClientCertificate;
+    private @Nullable Output<Boolean> negotiateClientCertificate;
 
-    public Output<Boolean> negotiateClientCertificate() {
-        return this.negotiateClientCertificate == null ? Codegen.empty() : this.negotiateClientCertificate;
+    public Optional<Output<Boolean>> negotiateClientCertificate() {
+        return Optional.ofNullable(this.negotiateClientCertificate);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -109,10 +109,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="tls10Enabled")
-      private final @Nullable Output<Boolean> tls10Enabled;
+    private @Nullable Output<Boolean> tls10Enabled;
 
-    public Output<Boolean> tls10Enabled() {
-        return this.tls10Enabled == null ? Codegen.empty() : this.tls10Enabled;
+    public Optional<Output<Boolean>> tls10Enabled() {
+        return Optional.ofNullable(this.tls10Enabled);
     }
 
     /**
@@ -120,167 +120,141 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="tls11Enabled")
-      private final @Nullable Output<Boolean> tls11Enabled;
+    private @Nullable Output<Boolean> tls11Enabled;
 
-    public Output<Boolean> tls11Enabled() {
-        return this.tls11Enabled == null ? Codegen.empty() : this.tls11Enabled;
+    public Optional<Output<Boolean>> tls11Enabled() {
+        return Optional.ofNullable(this.tls11Enabled);
     }
 
-    public GatewayHostnameConfigurationArgs(
-        @Nullable Output<String> certificateId,
-        Output<String> gatewayId,
-        @Nullable Output<String> hcId,
-        @Nullable Output<String> hostname,
-        @Nullable Output<Boolean> http2Enabled,
-        @Nullable Output<Boolean> negotiateClientCertificate,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<Boolean> tls10Enabled,
-        @Nullable Output<Boolean> tls11Enabled) {
-        this.certificateId = certificateId;
-        this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
-        this.hcId = hcId;
-        this.hostname = hostname;
-        this.http2Enabled = http2Enabled;
-        this.negotiateClientCertificate = negotiateClientCertificate;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.tls10Enabled = tls10Enabled;
-        this.tls11Enabled = tls11Enabled;
-    }
+    private GatewayHostnameConfigurationArgs() {}
 
-    private GatewayHostnameConfigurationArgs() {
-        this.certificateId = Codegen.empty();
-        this.gatewayId = Codegen.empty();
-        this.hcId = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.http2Enabled = Codegen.empty();
-        this.negotiateClientCertificate = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.tls10Enabled = Codegen.empty();
-        this.tls11Enabled = Codegen.empty();
+    private GatewayHostnameConfigurationArgs(GatewayHostnameConfigurationArgs $) {
+        this.certificateId = $.certificateId;
+        this.gatewayId = $.gatewayId;
+        this.hcId = $.hcId;
+        this.hostname = $.hostname;
+        this.http2Enabled = $.http2Enabled;
+        this.negotiateClientCertificate = $.negotiateClientCertificate;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.tls10Enabled = $.tls10Enabled;
+        this.tls11Enabled = $.tls11Enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayHostnameConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateId;
-        private Output<String> gatewayId;
-        private @Nullable Output<String> hcId;
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<Boolean> http2Enabled;
-        private @Nullable Output<Boolean> negotiateClientCertificate;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<Boolean> tls10Enabled;
-        private @Nullable Output<Boolean> tls11Enabled;
+        private GatewayHostnameConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayHostnameConfigurationArgs();
         }
 
         public Builder(GatewayHostnameConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.hcId = defaults.hcId;
-    	      this.hostname = defaults.hostname;
-    	      this.http2Enabled = defaults.http2Enabled;
-    	      this.negotiateClientCertificate = defaults.negotiateClientCertificate;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.tls10Enabled = defaults.tls10Enabled;
-    	      this.tls11Enabled = defaults.tls11Enabled;
+            $ = new GatewayHostnameConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(@Nullable Output<String> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
+
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder gatewayId(Output<String> gatewayId) {
-            this.gatewayId = Objects.requireNonNull(gatewayId);
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
-            return this;
+            return gatewayId(Output.of(gatewayId));
         }
+
         public Builder hcId(@Nullable Output<String> hcId) {
-            this.hcId = hcId;
+            $.hcId = hcId;
             return this;
         }
-        public Builder hcId(@Nullable String hcId) {
-            this.hcId = Codegen.ofNullable(hcId);
-            return this;
+
+        public Builder hcId(String hcId) {
+            return hcId(Output.of(hcId));
         }
+
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder http2Enabled(@Nullable Output<Boolean> http2Enabled) {
-            this.http2Enabled = http2Enabled;
+            $.http2Enabled = http2Enabled;
             return this;
         }
-        public Builder http2Enabled(@Nullable Boolean http2Enabled) {
-            this.http2Enabled = Codegen.ofNullable(http2Enabled);
-            return this;
+
+        public Builder http2Enabled(Boolean http2Enabled) {
+            return http2Enabled(Output.of(http2Enabled));
         }
+
         public Builder negotiateClientCertificate(@Nullable Output<Boolean> negotiateClientCertificate) {
-            this.negotiateClientCertificate = negotiateClientCertificate;
+            $.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
-        public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
-            this.negotiateClientCertificate = Codegen.ofNullable(negotiateClientCertificate);
-            return this;
+
+        public Builder negotiateClientCertificate(Boolean negotiateClientCertificate) {
+            return negotiateClientCertificate(Output.of(negotiateClientCertificate));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder tls10Enabled(@Nullable Output<Boolean> tls10Enabled) {
-            this.tls10Enabled = tls10Enabled;
+            $.tls10Enabled = tls10Enabled;
             return this;
         }
-        public Builder tls10Enabled(@Nullable Boolean tls10Enabled) {
-            this.tls10Enabled = Codegen.ofNullable(tls10Enabled);
-            return this;
+
+        public Builder tls10Enabled(Boolean tls10Enabled) {
+            return tls10Enabled(Output.of(tls10Enabled));
         }
+
         public Builder tls11Enabled(@Nullable Output<Boolean> tls11Enabled) {
-            this.tls11Enabled = tls11Enabled;
+            $.tls11Enabled = tls11Enabled;
             return this;
         }
-        public Builder tls11Enabled(@Nullable Boolean tls11Enabled) {
-            this.tls11Enabled = Codegen.ofNullable(tls11Enabled);
-            return this;
-        }        public GatewayHostnameConfigurationArgs build() {
-            return new GatewayHostnameConfigurationArgs(certificateId, gatewayId, hcId, hostname, http2Enabled, negotiateClientCertificate, resourceGroupName, serviceName, tls10Enabled, tls11Enabled);
+
+        public Builder tls11Enabled(Boolean tls11Enabled) {
+            return tls11Enabled(Output.of(tls11Enabled));
+        }
+
+        public GatewayHostnameConfigurationArgs build() {
+            $.gatewayId = Objects.requireNonNull($.gatewayId, "expected parameter 'gatewayId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

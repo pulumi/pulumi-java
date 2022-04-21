@@ -21,7 +21,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hcxCloudManager", required=true)
-      private final String hcxCloudManager;
+    private String hcxCloudManager;
 
     public String hcxCloudManager() {
         return this.hcxCloudManager;
@@ -32,7 +32,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nsxtManager", required=true)
-      private final String nsxtManager;
+    private String nsxtManager;
 
     public String nsxtManager() {
         return this.nsxtManager;
@@ -43,64 +43,59 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vcsa", required=true)
-      private final String vcsa;
+    private String vcsa;
 
     public String vcsa() {
         return this.vcsa;
     }
 
-    public EndpointsResponse(
-        String hcxCloudManager,
-        String nsxtManager,
-        String vcsa) {
-        this.hcxCloudManager = Objects.requireNonNull(hcxCloudManager, "expected parameter 'hcxCloudManager' to be non-null");
-        this.nsxtManager = Objects.requireNonNull(nsxtManager, "expected parameter 'nsxtManager' to be non-null");
-        this.vcsa = Objects.requireNonNull(vcsa, "expected parameter 'vcsa' to be non-null");
-    }
+    private EndpointsResponse() {}
 
-    private EndpointsResponse() {
-        this.hcxCloudManager = null;
-        this.nsxtManager = null;
-        this.vcsa = null;
+    private EndpointsResponse(EndpointsResponse $) {
+        this.hcxCloudManager = $.hcxCloudManager;
+        this.nsxtManager = $.nsxtManager;
+        this.vcsa = $.vcsa;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hcxCloudManager;
-        private String nsxtManager;
-        private String vcsa;
+        private EndpointsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointsResponse();
         }
 
         public Builder(EndpointsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hcxCloudManager = defaults.hcxCloudManager;
-    	      this.nsxtManager = defaults.nsxtManager;
-    	      this.vcsa = defaults.vcsa;
+            $ = new EndpointsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hcxCloudManager(String hcxCloudManager) {
-            this.hcxCloudManager = Objects.requireNonNull(hcxCloudManager);
+            $.hcxCloudManager = hcxCloudManager;
             return this;
         }
+
         public Builder nsxtManager(String nsxtManager) {
-            this.nsxtManager = Objects.requireNonNull(nsxtManager);
+            $.nsxtManager = nsxtManager;
             return this;
         }
+
         public Builder vcsa(String vcsa) {
-            this.vcsa = Objects.requireNonNull(vcsa);
+            $.vcsa = vcsa;
             return this;
-        }        public EndpointsResponse build() {
-            return new EndpointsResponse(hcxCloudManager, nsxtManager, vcsa);
+        }
+
+        public EndpointsResponse build() {
+            $.hcxCloudManager = Objects.requireNonNull($.hcxCloudManager, "expected parameter 'hcxCloudManager' to be non-null");
+            $.nsxtManager = Objects.requireNonNull($.nsxtManager, "expected parameter 'nsxtManager' to be non-null");
+            $.vcsa = Objects.requireNonNull($.vcsa, "expected parameter 'vcsa' to be non-null");
+            return $;
         }
     }
+
 }

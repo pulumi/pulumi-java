@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketVersioningConfigurationStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class BucketVersioningConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="status", required=true)
-      private final Output<BucketVersioningConfigurationStatus> status;
+    private Output<BucketVersioningConfigurationStatus> status;
 
     public Output<BucketVersioningConfigurationStatus> status() {
         return this.status;
     }
 
-    public BucketVersioningConfigurationArgs(Output<BucketVersioningConfigurationStatus> status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketVersioningConfigurationArgs() {}
 
-    private BucketVersioningConfigurationArgs() {
-        this.status = Codegen.empty();
+    private BucketVersioningConfigurationArgs(BucketVersioningConfigurationArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketVersioningConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BucketVersioningConfigurationStatus> status;
+        private BucketVersioningConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketVersioningConfigurationArgs();
         }
 
         public Builder(BucketVersioningConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketVersioningConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<BucketVersioningConfigurationStatus> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(BucketVersioningConfigurationStatus status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public BucketVersioningConfigurationArgs build() {
-            return new BucketVersioningConfigurationArgs(status);
+            return status(Output.of(status));
+        }
+
+        public BucketVersioningConfigurationArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

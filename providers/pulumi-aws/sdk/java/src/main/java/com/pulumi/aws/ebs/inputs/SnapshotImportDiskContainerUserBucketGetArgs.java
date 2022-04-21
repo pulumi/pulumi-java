@@ -5,7 +5,6 @@ package com.pulumi.aws.ebs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SnapshotImportDiskContainerUserBucketGetArgs extends com.pulu
      * 
      */
     @Import(name="s3Bucket", required=true)
-      private final Output<String> s3Bucket;
+    private Output<String> s3Bucket;
 
     public Output<String> s3Bucket() {
         return this.s3Bucket;
@@ -30,63 +29,60 @@ public final class SnapshotImportDiskContainerUserBucketGetArgs extends com.pulu
      * 
      */
     @Import(name="s3Key", required=true)
-      private final Output<String> s3Key;
+    private Output<String> s3Key;
 
     public Output<String> s3Key() {
         return this.s3Key;
     }
 
-    public SnapshotImportDiskContainerUserBucketGetArgs(
-        Output<String> s3Bucket,
-        Output<String> s3Key) {
-        this.s3Bucket = Objects.requireNonNull(s3Bucket, "expected parameter 's3Bucket' to be non-null");
-        this.s3Key = Objects.requireNonNull(s3Key, "expected parameter 's3Key' to be non-null");
-    }
+    private SnapshotImportDiskContainerUserBucketGetArgs() {}
 
-    private SnapshotImportDiskContainerUserBucketGetArgs() {
-        this.s3Bucket = Codegen.empty();
-        this.s3Key = Codegen.empty();
+    private SnapshotImportDiskContainerUserBucketGetArgs(SnapshotImportDiskContainerUserBucketGetArgs $) {
+        this.s3Bucket = $.s3Bucket;
+        this.s3Key = $.s3Key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotImportDiskContainerUserBucketGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> s3Bucket;
-        private Output<String> s3Key;
+        private SnapshotImportDiskContainerUserBucketGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotImportDiskContainerUserBucketGetArgs();
         }
 
         public Builder(SnapshotImportDiskContainerUserBucketGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Bucket = defaults.s3Bucket;
-    	      this.s3Key = defaults.s3Key;
+            $ = new SnapshotImportDiskContainerUserBucketGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Bucket(Output<String> s3Bucket) {
-            this.s3Bucket = Objects.requireNonNull(s3Bucket);
+            $.s3Bucket = s3Bucket;
             return this;
         }
+
         public Builder s3Bucket(String s3Bucket) {
-            this.s3Bucket = Output.of(Objects.requireNonNull(s3Bucket));
-            return this;
+            return s3Bucket(Output.of(s3Bucket));
         }
+
         public Builder s3Key(Output<String> s3Key) {
-            this.s3Key = Objects.requireNonNull(s3Key);
+            $.s3Key = s3Key;
             return this;
         }
+
         public Builder s3Key(String s3Key) {
-            this.s3Key = Output.of(Objects.requireNonNull(s3Key));
-            return this;
-        }        public SnapshotImportDiskContainerUserBucketGetArgs build() {
-            return new SnapshotImportDiskContainerUserBucketGetArgs(s3Bucket, s3Key);
+            return s3Key(Output.of(s3Key));
+        }
+
+        public SnapshotImportDiskContainerUserBucketGetArgs build() {
+            $.s3Bucket = Objects.requireNonNull($.s3Bucket, "expected parameter 's3Bucket' to be non-null");
+            $.s3Key = Objects.requireNonNull($.s3Key, "expected parameter 's3Key' to be non-null");
+            return $;
         }
     }
+
 }

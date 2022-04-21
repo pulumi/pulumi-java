@@ -13,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="egress")
-      private final @Nullable Output<List<SecurityGroupEgressArgs>> egress;
+    private @Nullable Output<List<SecurityGroupEgressArgs>> egress;
 
-    public Output<List<SecurityGroupEgressArgs>> egress() {
-        return this.egress == null ? Codegen.empty() : this.egress;
+    public Optional<Output<List<SecurityGroupEgressArgs>>> egress() {
+        return Optional.ofNullable(this.egress);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingress")
-      private final @Nullable Output<List<SecurityGroupIngressArgs>> ingress;
+    private @Nullable Output<List<SecurityGroupIngressArgs>> ingress;
 
-    public Output<List<SecurityGroupIngressArgs>> ingress() {
-        return this.ingress == null ? Codegen.empty() : this.ingress;
+    public Optional<Output<List<SecurityGroupIngressArgs>>> ingress() {
+        return Optional.ofNullable(this.ingress);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revokeRulesOnDelete")
-      private final @Nullable Output<Boolean> revokeRulesOnDelete;
+    private @Nullable Output<Boolean> revokeRulesOnDelete;
 
-    public Output<Boolean> revokeRulesOnDelete() {
-        return this.revokeRulesOnDelete == null ? Codegen.empty() : this.revokeRulesOnDelete;
+    public Optional<Output<Boolean>> revokeRulesOnDelete() {
+        return Optional.ofNullable(this.revokeRulesOnDelete);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -102,147 +103,127 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public SecurityGroupArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<SecurityGroupEgressArgs>> egress,
-        @Nullable Output<List<SecurityGroupIngressArgs>> ingress,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<Boolean> revokeRulesOnDelete,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vpcId) {
-        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
-        this.egress = egress;
-        this.ingress = ingress;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.revokeRulesOnDelete = revokeRulesOnDelete;
-        this.tags = tags;
-        this.vpcId = vpcId;
-    }
+    private SecurityGroupArgs() {}
 
-    private SecurityGroupArgs() {
-        this.description = Codegen.empty();
-        this.egress = Codegen.empty();
-        this.ingress = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.revokeRulesOnDelete = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private SecurityGroupArgs(SecurityGroupArgs $) {
+        this.description = $.description;
+        this.egress = $.egress;
+        this.ingress = $.ingress;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.revokeRulesOnDelete = $.revokeRulesOnDelete;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<SecurityGroupEgressArgs>> egress;
-        private @Nullable Output<List<SecurityGroupIngressArgs>> ingress;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<Boolean> revokeRulesOnDelete;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vpcId;
+        private SecurityGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityGroupArgs();
         }
 
         public Builder(SecurityGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.egress = defaults.egress;
-    	      this.ingress = defaults.ingress;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.revokeRulesOnDelete = defaults.revokeRulesOnDelete;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new SecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder egress(@Nullable Output<List<SecurityGroupEgressArgs>> egress) {
-            this.egress = egress;
+            $.egress = egress;
             return this;
         }
-        public Builder egress(@Nullable List<SecurityGroupEgressArgs> egress) {
-            this.egress = Codegen.ofNullable(egress);
-            return this;
+
+        public Builder egress(List<SecurityGroupEgressArgs> egress) {
+            return egress(Output.of(egress));
         }
+
         public Builder egress(SecurityGroupEgressArgs... egress) {
             return egress(List.of(egress));
         }
+
         public Builder ingress(@Nullable Output<List<SecurityGroupIngressArgs>> ingress) {
-            this.ingress = ingress;
+            $.ingress = ingress;
             return this;
         }
-        public Builder ingress(@Nullable List<SecurityGroupIngressArgs> ingress) {
-            this.ingress = Codegen.ofNullable(ingress);
-            return this;
+
+        public Builder ingress(List<SecurityGroupIngressArgs> ingress) {
+            return ingress(Output.of(ingress));
         }
+
         public Builder ingress(SecurityGroupIngressArgs... ingress) {
             return ingress(List.of(ingress));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder revokeRulesOnDelete(@Nullable Output<Boolean> revokeRulesOnDelete) {
-            this.revokeRulesOnDelete = revokeRulesOnDelete;
+            $.revokeRulesOnDelete = revokeRulesOnDelete;
             return this;
         }
-        public Builder revokeRulesOnDelete(@Nullable Boolean revokeRulesOnDelete) {
-            this.revokeRulesOnDelete = Codegen.ofNullable(revokeRulesOnDelete);
-            return this;
+
+        public Builder revokeRulesOnDelete(Boolean revokeRulesOnDelete) {
+            return revokeRulesOnDelete(Output.of(revokeRulesOnDelete));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public SecurityGroupArgs build() {
-            return new SecurityGroupArgs(description, egress, ingress, name, namePrefix, revokeRulesOnDelete, tags, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public SecurityGroupArgs build() {
+            $.description = Codegen.stringProp("description").output().arg($.description).def("Managed by Pulumi").getNullable();
+            return $;
         }
     }
+
 }

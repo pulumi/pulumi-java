@@ -17,45 +17,45 @@ public final class GetLogProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logProfileName", required=true)
-      private final String logProfileName;
+    private String logProfileName;
 
     public String logProfileName() {
         return this.logProfileName;
     }
 
-    public GetLogProfileArgs(String logProfileName) {
-        this.logProfileName = Objects.requireNonNull(logProfileName, "expected parameter 'logProfileName' to be non-null");
-    }
+    private GetLogProfileArgs() {}
 
-    private GetLogProfileArgs() {
-        this.logProfileName = null;
+    private GetLogProfileArgs(GetLogProfileArgs $) {
+        this.logProfileName = $.logProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLogProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String logProfileName;
+        private GetLogProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLogProfileArgs();
         }
 
         public Builder(GetLogProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logProfileName = defaults.logProfileName;
+            $ = new GetLogProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logProfileName(String logProfileName) {
-            this.logProfileName = Objects.requireNonNull(logProfileName);
+            $.logProfileName = logProfileName;
             return this;
-        }        public GetLogProfileArgs build() {
-            return new GetLogProfileArgs(logProfileName);
+        }
+
+        public GetLogProfileArgs build() {
+            $.logProfileName = Objects.requireNonNull($.logProfileName, "expected parameter 'logProfileName' to be non-null");
+            return $;
         }
     }
+
 }

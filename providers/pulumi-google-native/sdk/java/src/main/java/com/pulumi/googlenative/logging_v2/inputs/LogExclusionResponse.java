@@ -22,7 +22,7 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -33,7 +33,7 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
@@ -55,7 +55,7 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -66,7 +66,7 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -77,91 +77,80 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public LogExclusionResponse(
-        String createTime,
-        String description,
-        Boolean disabled,
-        String filter,
-        String name,
-        String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private LogExclusionResponse() {}
 
-    private LogExclusionResponse() {
-        this.createTime = null;
-        this.description = null;
-        this.disabled = null;
-        this.filter = null;
-        this.name = null;
-        this.updateTime = null;
+    private LogExclusionResponse(LogExclusionResponse $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.disabled = $.disabled;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogExclusionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String description;
-        private Boolean disabled;
-        private String filter;
-        private String name;
-        private String updateTime;
+        private LogExclusionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogExclusionResponse();
         }
 
         public Builder(LogExclusionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.disabled = defaults.disabled;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.updateTime = defaults.updateTime;
+            $ = new LogExclusionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public LogExclusionResponse build() {
-            return new LogExclusionResponse(createTime, description, disabled, filter, name, updateTime);
+        }
+
+        public LogExclusionResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

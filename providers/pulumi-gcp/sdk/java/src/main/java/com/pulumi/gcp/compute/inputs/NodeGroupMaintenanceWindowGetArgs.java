@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class NodeGroupMaintenanceWindowGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="startTime", required=true)
-      private final Output<String> startTime;
+    private Output<String> startTime;
 
     public Output<String> startTime() {
         return this.startTime;
     }
 
-    public NodeGroupMaintenanceWindowGetArgs(Output<String> startTime) {
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private NodeGroupMaintenanceWindowGetArgs() {}
 
-    private NodeGroupMaintenanceWindowGetArgs() {
-        this.startTime = Codegen.empty();
+    private NodeGroupMaintenanceWindowGetArgs(NodeGroupMaintenanceWindowGetArgs $) {
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupMaintenanceWindowGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> startTime;
+        private NodeGroupMaintenanceWindowGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupMaintenanceWindowGetArgs();
         }
 
         public Builder(NodeGroupMaintenanceWindowGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startTime = defaults.startTime;
+            $ = new NodeGroupMaintenanceWindowGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder startTime(Output<String> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
-        }        public NodeGroupMaintenanceWindowGetArgs build() {
-            return new NodeGroupMaintenanceWindowGetArgs(startTime);
+            return startTime(Output.of(startTime));
+        }
+
+        public NodeGroupMaintenanceWindowGetArgs build() {
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

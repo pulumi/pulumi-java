@@ -6,10 +6,10 @@ package com.pulumi.awsnative.databrew;
 import com.pulumi.awsnative.databrew.inputs.ScheduleTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +22,17 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cronExpression", required=true)
-      private final Output<String> cronExpression;
+    private Output<String> cronExpression;
 
     public Output<String> cronExpression() {
         return this.cronExpression;
     }
 
     @Import(name="jobNames")
-      private final @Nullable Output<List<String>> jobNames;
+    private @Nullable Output<List<String>> jobNames;
 
-    public Output<List<String>> jobNames() {
-        return this.jobNames == null ? Codegen.empty() : this.jobNames;
+    public Optional<Output<List<String>>> jobNames() {
+        return Optional.ofNullable(this.jobNames);
     }
 
     /**
@@ -40,102 +40,94 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ScheduleTagArgs>> tags;
+    private @Nullable Output<List<ScheduleTagArgs>> tags;
 
-    public Output<List<ScheduleTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ScheduleTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ScheduleArgs(
-        Output<String> cronExpression,
-        @Nullable Output<List<String>> jobNames,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ScheduleTagArgs>> tags) {
-        this.cronExpression = Objects.requireNonNull(cronExpression, "expected parameter 'cronExpression' to be non-null");
-        this.jobNames = jobNames;
-        this.name = name;
-        this.tags = tags;
-    }
+    private ScheduleArgs() {}
 
-    private ScheduleArgs() {
-        this.cronExpression = Codegen.empty();
-        this.jobNames = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ScheduleArgs(ScheduleArgs $) {
+        this.cronExpression = $.cronExpression;
+        this.jobNames = $.jobNames;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cronExpression;
-        private @Nullable Output<List<String>> jobNames;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ScheduleTagArgs>> tags;
+        private ScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleArgs();
         }
 
         public Builder(ScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cronExpression = defaults.cronExpression;
-    	      this.jobNames = defaults.jobNames;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cronExpression(Output<String> cronExpression) {
-            this.cronExpression = Objects.requireNonNull(cronExpression);
+            $.cronExpression = cronExpression;
             return this;
         }
+
         public Builder cronExpression(String cronExpression) {
-            this.cronExpression = Output.of(Objects.requireNonNull(cronExpression));
-            return this;
+            return cronExpression(Output.of(cronExpression));
         }
+
         public Builder jobNames(@Nullable Output<List<String>> jobNames) {
-            this.jobNames = jobNames;
+            $.jobNames = jobNames;
             return this;
         }
-        public Builder jobNames(@Nullable List<String> jobNames) {
-            this.jobNames = Codegen.ofNullable(jobNames);
-            return this;
+
+        public Builder jobNames(List<String> jobNames) {
+            return jobNames(Output.of(jobNames));
         }
+
         public Builder jobNames(String... jobNames) {
             return jobNames(List.of(jobNames));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<ScheduleTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ScheduleTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ScheduleTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ScheduleTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ScheduleArgs build() {
-            return new ScheduleArgs(cronExpression, jobNames, name, tags);
+        }
+
+        public ScheduleArgs build() {
+            $.cronExpression = Objects.requireNonNull($.cronExpression, "expected parameter 'cronExpression' to be non-null");
+            return $;
         }
     }
+
 }

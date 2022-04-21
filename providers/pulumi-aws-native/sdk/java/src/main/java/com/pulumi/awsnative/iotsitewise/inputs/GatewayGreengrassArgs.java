@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GatewayGreengrassArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="groupArn", required=true)
-      private final Output<String> groupArn;
+    private Output<String> groupArn;
 
     public Output<String> groupArn() {
         return this.groupArn;
     }
 
-    public GatewayGreengrassArgs(Output<String> groupArn) {
-        this.groupArn = Objects.requireNonNull(groupArn, "expected parameter 'groupArn' to be non-null");
-    }
+    private GatewayGreengrassArgs() {}
 
-    private GatewayGreengrassArgs() {
-        this.groupArn = Codegen.empty();
+    private GatewayGreengrassArgs(GatewayGreengrassArgs $) {
+        this.groupArn = $.groupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayGreengrassArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> groupArn;
+        private GatewayGreengrassArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayGreengrassArgs();
         }
 
         public Builder(GatewayGreengrassArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupArn = defaults.groupArn;
+            $ = new GatewayGreengrassArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupArn(Output<String> groupArn) {
-            this.groupArn = Objects.requireNonNull(groupArn);
+            $.groupArn = groupArn;
             return this;
         }
+
         public Builder groupArn(String groupArn) {
-            this.groupArn = Output.of(Objects.requireNonNull(groupArn));
-            return this;
-        }        public GatewayGreengrassArgs build() {
-            return new GatewayGreengrassArgs(groupArn);
+            return groupArn(Output.of(groupArn));
+        }
+
+        public GatewayGreengrassArgs build() {
+            $.groupArn = Objects.requireNonNull($.groupArn, "expected parameter 'groupArn' to be non-null");
+            return $;
         }
     }
+
 }

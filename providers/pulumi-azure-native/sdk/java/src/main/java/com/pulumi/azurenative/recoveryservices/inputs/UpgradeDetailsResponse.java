@@ -21,7 +21,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="endTimeUtc", required=true)
-      private final String endTimeUtc;
+    private String endTimeUtc;
 
     public String endTimeUtc() {
         return this.endTimeUtc;
@@ -32,7 +32,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lastUpdatedTimeUtc", required=true)
-      private final String lastUpdatedTimeUtc;
+    private String lastUpdatedTimeUtc;
 
     public String lastUpdatedTimeUtc() {
         return this.lastUpdatedTimeUtc;
@@ -43,7 +43,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -54,7 +54,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="operationId", required=true)
-      private final String operationId;
+    private String operationId;
 
     public String operationId() {
         return this.operationId;
@@ -65,7 +65,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="previousResourceId", required=true)
-      private final String previousResourceId;
+    private String previousResourceId;
 
     public String previousResourceId() {
         return this.previousResourceId;
@@ -76,7 +76,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="startTimeUtc", required=true)
-      private final String startTimeUtc;
+    private String startTimeUtc;
 
     public String startTimeUtc() {
         return this.startTimeUtc;
@@ -87,7 +87,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -98,7 +98,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="triggerType", required=true)
-      private final String triggerType;
+    private String triggerType;
 
     public String triggerType() {
         return this.triggerType;
@@ -109,118 +109,101 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="upgradedResourceId", required=true)
-      private final String upgradedResourceId;
+    private String upgradedResourceId;
 
     public String upgradedResourceId() {
         return this.upgradedResourceId;
     }
 
-    public UpgradeDetailsResponse(
-        String endTimeUtc,
-        String lastUpdatedTimeUtc,
-        String message,
-        String operationId,
-        String previousResourceId,
-        String startTimeUtc,
-        String status,
-        String triggerType,
-        String upgradedResourceId) {
-        this.endTimeUtc = Objects.requireNonNull(endTimeUtc, "expected parameter 'endTimeUtc' to be non-null");
-        this.lastUpdatedTimeUtc = Objects.requireNonNull(lastUpdatedTimeUtc, "expected parameter 'lastUpdatedTimeUtc' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.operationId = Objects.requireNonNull(operationId, "expected parameter 'operationId' to be non-null");
-        this.previousResourceId = Objects.requireNonNull(previousResourceId, "expected parameter 'previousResourceId' to be non-null");
-        this.startTimeUtc = Objects.requireNonNull(startTimeUtc, "expected parameter 'startTimeUtc' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.triggerType = Objects.requireNonNull(triggerType, "expected parameter 'triggerType' to be non-null");
-        this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId, "expected parameter 'upgradedResourceId' to be non-null");
-    }
+    private UpgradeDetailsResponse() {}
 
-    private UpgradeDetailsResponse() {
-        this.endTimeUtc = null;
-        this.lastUpdatedTimeUtc = null;
-        this.message = null;
-        this.operationId = null;
-        this.previousResourceId = null;
-        this.startTimeUtc = null;
-        this.status = null;
-        this.triggerType = null;
-        this.upgradedResourceId = null;
+    private UpgradeDetailsResponse(UpgradeDetailsResponse $) {
+        this.endTimeUtc = $.endTimeUtc;
+        this.lastUpdatedTimeUtc = $.lastUpdatedTimeUtc;
+        this.message = $.message;
+        this.operationId = $.operationId;
+        this.previousResourceId = $.previousResourceId;
+        this.startTimeUtc = $.startTimeUtc;
+        this.status = $.status;
+        this.triggerType = $.triggerType;
+        this.upgradedResourceId = $.upgradedResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradeDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTimeUtc;
-        private String lastUpdatedTimeUtc;
-        private String message;
-        private String operationId;
-        private String previousResourceId;
-        private String startTimeUtc;
-        private String status;
-        private String triggerType;
-        private String upgradedResourceId;
+        private UpgradeDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradeDetailsResponse();
         }
 
         public Builder(UpgradeDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTimeUtc = defaults.endTimeUtc;
-    	      this.lastUpdatedTimeUtc = defaults.lastUpdatedTimeUtc;
-    	      this.message = defaults.message;
-    	      this.operationId = defaults.operationId;
-    	      this.previousResourceId = defaults.previousResourceId;
-    	      this.startTimeUtc = defaults.startTimeUtc;
-    	      this.status = defaults.status;
-    	      this.triggerType = defaults.triggerType;
-    	      this.upgradedResourceId = defaults.upgradedResourceId;
+            $ = new UpgradeDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTimeUtc(String endTimeUtc) {
-            this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
+            $.endTimeUtc = endTimeUtc;
             return this;
         }
+
         public Builder lastUpdatedTimeUtc(String lastUpdatedTimeUtc) {
-            this.lastUpdatedTimeUtc = Objects.requireNonNull(lastUpdatedTimeUtc);
+            $.lastUpdatedTimeUtc = lastUpdatedTimeUtc;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder operationId(String operationId) {
-            this.operationId = Objects.requireNonNull(operationId);
+            $.operationId = operationId;
             return this;
         }
+
         public Builder previousResourceId(String previousResourceId) {
-            this.previousResourceId = Objects.requireNonNull(previousResourceId);
+            $.previousResourceId = previousResourceId;
             return this;
         }
+
         public Builder startTimeUtc(String startTimeUtc) {
-            this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
+            $.startTimeUtc = startTimeUtc;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder triggerType(String triggerType) {
-            this.triggerType = Objects.requireNonNull(triggerType);
+            $.triggerType = triggerType;
             return this;
         }
+
         public Builder upgradedResourceId(String upgradedResourceId) {
-            this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId);
+            $.upgradedResourceId = upgradedResourceId;
             return this;
-        }        public UpgradeDetailsResponse build() {
-            return new UpgradeDetailsResponse(endTimeUtc, lastUpdatedTimeUtc, message, operationId, previousResourceId, startTimeUtc, status, triggerType, upgradedResourceId);
+        }
+
+        public UpgradeDetailsResponse build() {
+            $.endTimeUtc = Objects.requireNonNull($.endTimeUtc, "expected parameter 'endTimeUtc' to be non-null");
+            $.lastUpdatedTimeUtc = Objects.requireNonNull($.lastUpdatedTimeUtc, "expected parameter 'lastUpdatedTimeUtc' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.operationId = Objects.requireNonNull($.operationId, "expected parameter 'operationId' to be non-null");
+            $.previousResourceId = Objects.requireNonNull($.previousResourceId, "expected parameter 'previousResourceId' to be non-null");
+            $.startTimeUtc = Objects.requireNonNull($.startTimeUtc, "expected parameter 'startTimeUtc' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.triggerType = Objects.requireNonNull($.triggerType, "expected parameter 'triggerType' to be non-null");
+            $.upgradedResourceId = Objects.requireNonNull($.upgradedResourceId, "expected parameter 'upgradedResourceId' to be non-null");
+            return $;
         }
     }
+
 }

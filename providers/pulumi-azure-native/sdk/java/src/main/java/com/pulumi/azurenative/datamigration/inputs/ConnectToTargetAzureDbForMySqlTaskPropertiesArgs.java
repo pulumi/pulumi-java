@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskPropertiesArgs extends com.
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<ConnectToTargetAzureDbForMySqlTaskInputArgs> input;
+    private @Nullable Output<ConnectToTargetAzureDbForMySqlTaskInputArgs> input;
 
-    public Output<ConnectToTargetAzureDbForMySqlTaskInputArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<ConnectToTargetAzureDbForMySqlTaskInputArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class ConnectToTargetAzureDbForMySqlTaskPropertiesArgs extends com.
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<String> taskType;
+    private Output<String> taskType;
 
     public Output<String> taskType() {
         return this.taskType;
     }
 
-    public ConnectToTargetAzureDbForMySqlTaskPropertiesArgs(
-        @Nullable Output<ConnectToTargetAzureDbForMySqlTaskInputArgs> input,
-        Output<String> taskType) {
-        this.input = input;
-        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
-    }
+    private ConnectToTargetAzureDbForMySqlTaskPropertiesArgs() {}
 
-    private ConnectToTargetAzureDbForMySqlTaskPropertiesArgs() {
-        this.input = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private ConnectToTargetAzureDbForMySqlTaskPropertiesArgs(ConnectToTargetAzureDbForMySqlTaskPropertiesArgs $) {
+        this.input = $.input;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetAzureDbForMySqlTaskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectToTargetAzureDbForMySqlTaskInputArgs> input;
-        private Output<String> taskType;
+        private ConnectToTargetAzureDbForMySqlTaskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetAzureDbForMySqlTaskPropertiesArgs();
         }
 
         public Builder(ConnectToTargetAzureDbForMySqlTaskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.taskType = defaults.taskType;
+            $ = new ConnectToTargetAzureDbForMySqlTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<ConnectToTargetAzureDbForMySqlTaskInputArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable ConnectToTargetAzureDbForMySqlTaskInputArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(ConnectToTargetAzureDbForMySqlTaskInputArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder taskType(Output<String> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public ConnectToTargetAzureDbForMySqlTaskPropertiesArgs build() {
-            return new ConnectToTargetAzureDbForMySqlTaskPropertiesArgs(input, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public ConnectToTargetAzureDbForMySqlTaskPropertiesArgs build() {
+            $.taskType = Codegen.stringProp("taskType").output().arg($.taskType).require();
+            return $;
         }
     }
+
 }

@@ -11,10 +11,10 @@ import com.pulumi.azurenative.network.inputs.SubnetArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable Output<String> privateIPAddress;
+    private @Nullable Output<String> privateIPAddress;
 
-    public Output<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
+    public Optional<Output<String>> privateIPAddress() {
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="privateIPAddressVersion")
-      private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
+    private @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
 
-    public Output<Either<String,IPVersion>> privateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Codegen.empty() : this.privateIPAddressVersion;
+    public Optional<Output<Either<String,IPVersion>>> privateIPAddressVersion() {
+        return Optional.ofNullable(this.privateIPAddressVersion);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="privateIPAllocationMethod")
-      private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+    private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
+    public Optional<Output<Either<String,IPAllocationMethod>>> privateIPAllocationMethod() {
+        return Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="publicIPAddress")
-      private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
+    private @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
-    public Output<PublicIPAddressArgs> publicIPAddress() {
-        return this.publicIPAddress == null ? Codegen.empty() : this.publicIPAddress;
+    public Optional<Output<PublicIPAddressArgs>> publicIPAddress() {
+        return Optional.ofNullable(this.publicIPAddress);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="publicIPPrefix")
-      private final @Nullable Output<SubResourceArgs> publicIPPrefix;
+    private @Nullable Output<SubResourceArgs> publicIPPrefix;
 
-    public Output<SubResourceArgs> publicIPPrefix() {
-        return this.publicIPPrefix == null ? Codegen.empty() : this.publicIPPrefix;
+    public Optional<Output<SubResourceArgs>> publicIPPrefix() {
+        return Optional.ofNullable(this.publicIPPrefix);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<SubnetArgs> subnet;
+    private @Nullable Output<SubnetArgs> subnet;
 
-    public Output<SubnetArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<SubnetArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -119,157 +119,132 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public FrontendIPConfigurationArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<String> privateIPAddress,
-        @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion,
-        @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod,
-        @Nullable Output<PublicIPAddressArgs> publicIPAddress,
-        @Nullable Output<SubResourceArgs> publicIPPrefix,
-        @Nullable Output<SubnetArgs> subnet,
-        @Nullable Output<List<String>> zones) {
-        this.id = id;
-        this.name = name;
-        this.privateIPAddress = privateIPAddress;
-        this.privateIPAddressVersion = privateIPAddressVersion;
-        this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.publicIPAddress = publicIPAddress;
-        this.publicIPPrefix = publicIPPrefix;
-        this.subnet = subnet;
-        this.zones = zones;
-    }
+    private FrontendIPConfigurationArgs() {}
 
-    private FrontendIPConfigurationArgs() {
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.privateIPAddress = Codegen.empty();
-        this.privateIPAddressVersion = Codegen.empty();
-        this.privateIPAllocationMethod = Codegen.empty();
-        this.publicIPAddress = Codegen.empty();
-        this.publicIPPrefix = Codegen.empty();
-        this.subnet = Codegen.empty();
-        this.zones = Codegen.empty();
+    private FrontendIPConfigurationArgs(FrontendIPConfigurationArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.privateIPAddress = $.privateIPAddress;
+        this.privateIPAddressVersion = $.privateIPAddressVersion;
+        this.privateIPAllocationMethod = $.privateIPAllocationMethod;
+        this.publicIPAddress = $.publicIPAddress;
+        this.publicIPPrefix = $.publicIPPrefix;
+        this.subnet = $.subnet;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontendIPConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> privateIPAddress;
-        private @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
-        private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
-        private @Nullable Output<PublicIPAddressArgs> publicIPAddress;
-        private @Nullable Output<SubResourceArgs> publicIPPrefix;
-        private @Nullable Output<SubnetArgs> subnet;
-        private @Nullable Output<List<String>> zones;
+        private FrontendIPConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontendIPConfigurationArgs();
         }
 
         public Builder(FrontendIPConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.privateIPAddressVersion = defaults.privateIPAddressVersion;
-    	      this.privateIPAllocationMethod = defaults.privateIPAllocationMethod;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.publicIPPrefix = defaults.publicIPPrefix;
-    	      this.subnet = defaults.subnet;
-    	      this.zones = defaults.zones;
+            $ = new FrontendIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
-        public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
-            return this;
+
+        public Builder privateIPAddress(String privateIPAddress) {
+            return privateIPAddress(Output.of(privateIPAddress));
         }
+
         public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersion>> privateIPAddressVersion) {
-            this.privateIPAddressVersion = privateIPAddressVersion;
+            $.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
-        public Builder privateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
-            this.privateIPAddressVersion = Codegen.ofNullable(privateIPAddressVersion);
-            return this;
+
+        public Builder privateIPAddressVersion(Either<String,IPVersion> privateIPAddressVersion) {
+            return privateIPAddressVersion(Output.of(privateIPAddressVersion));
         }
+
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = privateIPAllocationMethod;
+            $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-        public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = Codegen.ofNullable(privateIPAllocationMethod);
-            return this;
+
+        public Builder privateIPAllocationMethod(Either<String,IPAllocationMethod> privateIPAllocationMethod) {
+            return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
         }
+
         public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
-            this.publicIPAddress = publicIPAddress;
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
-        public Builder publicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
-            this.publicIPAddress = Codegen.ofNullable(publicIPAddress);
-            return this;
+
+        public Builder publicIPAddress(PublicIPAddressArgs publicIPAddress) {
+            return publicIPAddress(Output.of(publicIPAddress));
         }
+
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {
-            this.publicIPPrefix = publicIPPrefix;
+            $.publicIPPrefix = publicIPPrefix;
             return this;
         }
-        public Builder publicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
-            this.publicIPPrefix = Codegen.ofNullable(publicIPPrefix);
-            return this;
+
+        public Builder publicIPPrefix(SubResourceArgs publicIPPrefix) {
+            return publicIPPrefix(Output.of(publicIPPrefix));
         }
+
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
+
+        public Builder subnet(SubnetArgs subnet) {
+            return subnet(Output.of(subnet));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public FrontendIPConfigurationArgs build() {
-            return new FrontendIPConfigurationArgs(id, name, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, publicIPAddress, publicIPPrefix, subnet, zones);
+        }
+
+        public FrontendIPConfigurationArgs build() {
+            return $;
         }
     }
+
 }

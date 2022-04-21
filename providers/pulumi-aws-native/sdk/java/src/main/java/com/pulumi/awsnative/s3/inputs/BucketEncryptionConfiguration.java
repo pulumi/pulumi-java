@@ -21,45 +21,45 @@ public final class BucketEncryptionConfiguration extends com.pulumi.resources.In
      * 
      */
     @Import(name="replicaKmsKeyID", required=true)
-      private final String replicaKmsKeyID;
+    private String replicaKmsKeyID;
 
     public String replicaKmsKeyID() {
         return this.replicaKmsKeyID;
     }
 
-    public BucketEncryptionConfiguration(String replicaKmsKeyID) {
-        this.replicaKmsKeyID = Objects.requireNonNull(replicaKmsKeyID, "expected parameter 'replicaKmsKeyID' to be non-null");
-    }
+    private BucketEncryptionConfiguration() {}
 
-    private BucketEncryptionConfiguration() {
-        this.replicaKmsKeyID = null;
+    private BucketEncryptionConfiguration(BucketEncryptionConfiguration $) {
+        this.replicaKmsKeyID = $.replicaKmsKeyID;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketEncryptionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String replicaKmsKeyID;
+        private BucketEncryptionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketEncryptionConfiguration();
         }
 
         public Builder(BucketEncryptionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicaKmsKeyID = defaults.replicaKmsKeyID;
+            $ = new BucketEncryptionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder replicaKmsKeyID(String replicaKmsKeyID) {
-            this.replicaKmsKeyID = Objects.requireNonNull(replicaKmsKeyID);
+            $.replicaKmsKeyID = replicaKmsKeyID;
             return this;
-        }        public BucketEncryptionConfiguration build() {
-            return new BucketEncryptionConfiguration(replicaKmsKeyID);
+        }
+
+        public BucketEncryptionConfiguration build() {
+            $.replicaKmsKeyID = Objects.requireNonNull($.replicaKmsKeyID, "expected parameter 'replicaKmsKeyID' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.tags;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.tags.inputs.TagKeyIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,14 +18,14 @@ public final class TagKeyIamBindingArgs extends com.pulumi.resources.ResourceArg
     public static final TagKeyIamBindingArgs Empty = new TagKeyIamBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<TagKeyIamBindingConditionArgs> condition;
+    private @Nullable Output<TagKeyIamBindingConditionArgs> condition;
 
-    public Output<TagKeyIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TagKeyIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -38,7 +38,7 @@ public final class TagKeyIamBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -49,92 +49,85 @@ public final class TagKeyIamBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tagKey", required=true)
-      private final Output<String> tagKey;
+    private Output<String> tagKey;
 
     public Output<String> tagKey() {
         return this.tagKey;
     }
 
-    public TagKeyIamBindingArgs(
-        @Nullable Output<TagKeyIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        Output<String> role,
-        Output<String> tagKey) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.tagKey = Objects.requireNonNull(tagKey, "expected parameter 'tagKey' to be non-null");
-    }
+    private TagKeyIamBindingArgs() {}
 
-    private TagKeyIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.role = Codegen.empty();
-        this.tagKey = Codegen.empty();
+    private TagKeyIamBindingArgs(TagKeyIamBindingArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.role = $.role;
+        this.tagKey = $.tagKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagKeyIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TagKeyIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private Output<String> role;
-        private Output<String> tagKey;
+        private TagKeyIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagKeyIamBindingArgs();
         }
 
         public Builder(TagKeyIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
-    	      this.tagKey = defaults.tagKey;
+            $ = new TagKeyIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TagKeyIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TagKeyIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TagKeyIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder tagKey(Output<String> tagKey) {
-            this.tagKey = Objects.requireNonNull(tagKey);
+            $.tagKey = tagKey;
             return this;
         }
+
         public Builder tagKey(String tagKey) {
-            this.tagKey = Output.of(Objects.requireNonNull(tagKey));
-            return this;
-        }        public TagKeyIamBindingArgs build() {
-            return new TagKeyIamBindingArgs(condition, members, role, tagKey);
+            return tagKey(Output.of(tagKey));
+        }
+
+        public TagKeyIamBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.tagKey = Objects.requireNonNull($.tagKey, "expected parameter 'tagKey' to be non-null");
+            return $;
         }
     }
+
 }

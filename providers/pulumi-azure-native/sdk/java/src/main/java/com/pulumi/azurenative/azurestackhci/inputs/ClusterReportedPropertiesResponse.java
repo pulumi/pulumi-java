@@ -23,7 +23,7 @@ public final class ClusterReportedPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="clusterId", required=true)
-      private final String clusterId;
+    private String clusterId;
 
     public String clusterId() {
         return this.clusterId;
@@ -34,7 +34,7 @@ public final class ClusterReportedPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -45,7 +45,7 @@ public final class ClusterReportedPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="clusterVersion", required=true)
-      private final String clusterVersion;
+    private String clusterVersion;
 
     public String clusterVersion() {
         return this.clusterVersion;
@@ -56,7 +56,7 @@ public final class ClusterReportedPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="lastUpdated", required=true)
-      private final String lastUpdated;
+    private String lastUpdated;
 
     public String lastUpdated() {
         return this.lastUpdated;
@@ -67,85 +67,77 @@ public final class ClusterReportedPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="nodes", required=true)
-      private final List<ClusterNodeResponse> nodes;
+    private List<ClusterNodeResponse> nodes;
 
     public List<ClusterNodeResponse> nodes() {
         return this.nodes;
     }
 
-    public ClusterReportedPropertiesResponse(
-        String clusterId,
-        String clusterName,
-        String clusterVersion,
-        String lastUpdated,
-        List<ClusterNodeResponse> nodes) {
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.clusterVersion = Objects.requireNonNull(clusterVersion, "expected parameter 'clusterVersion' to be non-null");
-        this.lastUpdated = Objects.requireNonNull(lastUpdated, "expected parameter 'lastUpdated' to be non-null");
-        this.nodes = Objects.requireNonNull(nodes, "expected parameter 'nodes' to be non-null");
-    }
+    private ClusterReportedPropertiesResponse() {}
 
-    private ClusterReportedPropertiesResponse() {
-        this.clusterId = null;
-        this.clusterName = null;
-        this.clusterVersion = null;
-        this.lastUpdated = null;
-        this.nodes = List.of();
+    private ClusterReportedPropertiesResponse(ClusterReportedPropertiesResponse $) {
+        this.clusterId = $.clusterId;
+        this.clusterName = $.clusterName;
+        this.clusterVersion = $.clusterVersion;
+        this.lastUpdated = $.lastUpdated;
+        this.nodes = $.nodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterReportedPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterId;
-        private String clusterName;
-        private String clusterVersion;
-        private String lastUpdated;
-        private List<ClusterNodeResponse> nodes;
+        private ClusterReportedPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterReportedPropertiesResponse();
         }
 
         public Builder(ClusterReportedPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterVersion = defaults.clusterVersion;
-    	      this.lastUpdated = defaults.lastUpdated;
-    	      this.nodes = defaults.nodes;
+            $ = new ClusterReportedPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterVersion(String clusterVersion) {
-            this.clusterVersion = Objects.requireNonNull(clusterVersion);
+            $.clusterVersion = clusterVersion;
             return this;
         }
+
         public Builder lastUpdated(String lastUpdated) {
-            this.lastUpdated = Objects.requireNonNull(lastUpdated);
+            $.lastUpdated = lastUpdated;
             return this;
         }
+
         public Builder nodes(List<ClusterNodeResponse> nodes) {
-            this.nodes = Objects.requireNonNull(nodes);
+            $.nodes = nodes;
             return this;
         }
+
         public Builder nodes(ClusterNodeResponse... nodes) {
             return nodes(List.of(nodes));
-        }        public ClusterReportedPropertiesResponse build() {
-            return new ClusterReportedPropertiesResponse(clusterId, clusterName, clusterVersion, lastUpdated, nodes);
+        }
+
+        public ClusterReportedPropertiesResponse build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.clusterVersion = Objects.requireNonNull($.clusterVersion, "expected parameter 'clusterVersion' to be non-null");
+            $.lastUpdated = Objects.requireNonNull($.lastUpdated, "expected parameter 'lastUpdated' to be non-null");
+            $.nodes = Objects.requireNonNull($.nodes, "expected parameter 'nodes' to be non-null");
+            return $;
         }
     }
+
 }

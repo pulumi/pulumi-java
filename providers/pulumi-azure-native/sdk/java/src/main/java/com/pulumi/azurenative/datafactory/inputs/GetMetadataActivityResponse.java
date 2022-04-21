@@ -48,7 +48,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dataset", required=true)
-      private final DatasetReferenceResponse dataset;
+    private DatasetReferenceResponse dataset;
 
     public DatasetReferenceResponse dataset() {
         return this.dataset;
@@ -59,10 +59,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="fieldList")
-      private final @Nullable List<Object> fieldList;
+    private @Nullable List<Object> fieldList;
 
-    public List<Object> fieldList() {
-        return this.fieldList == null ? List.of() : this.fieldList;
+    public Optional<List<Object>> fieldList() {
+        return Optional.ofNullable(this.fieldList);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="formatSettings")
-      private final @Nullable Object formatSettings;
+    private @Nullable Object formatSettings;
 
-    public Object formatSettings() {
-        return this.formatSettings == null ? null : this.formatSettings;
+    public Optional<Object> formatSettings() {
+        return Optional.ofNullable(this.formatSettings);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -114,7 +114,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -125,10 +125,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="storeSettings")
-      private final @Nullable Object storeSettings;
+    private @Nullable Object storeSettings;
 
-    public Object storeSettings() {
-        return this.storeSettings == null ? null : this.storeSettings;
+    public Optional<Object> storeSettings() {
+        return Optional.ofNullable(this.storeSettings);
     }
 
     /**
@@ -148,7 +148,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -159,145 +159,119 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public GetMetadataActivityResponse(
-        DatasetReferenceResponse dataset,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable List<Object> fieldList,
-        @Nullable Object formatSettings,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Object storeSettings,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.fieldList = fieldList;
-        this.formatSettings = formatSettings;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.storeSettings = storeSettings;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private GetMetadataActivityResponse() {}
 
-    private GetMetadataActivityResponse() {
-        this.dataset = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.fieldList = List.of();
-        this.formatSettings = null;
-        this.linkedServiceName = null;
-        this.name = null;
-        this.policy = null;
-        this.storeSettings = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private GetMetadataActivityResponse(GetMetadataActivityResponse $) {
+        this.dataset = $.dataset;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.fieldList = $.fieldList;
+        this.formatSettings = $.formatSettings;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.storeSettings = $.storeSettings;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMetadataActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DatasetReferenceResponse dataset;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable List<Object> fieldList;
-        private @Nullable Object formatSettings;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private @Nullable Object storeSettings;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private GetMetadataActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMetadataActivityResponse();
         }
 
         public Builder(GetMetadataActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.fieldList = defaults.fieldList;
-    	      this.formatSettings = defaults.formatSettings;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.storeSettings = defaults.storeSettings;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new GetMetadataActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(DatasetReferenceResponse dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder fieldList(@Nullable List<Object> fieldList) {
-            this.fieldList = fieldList;
+            $.fieldList = fieldList;
             return this;
         }
+
         public Builder fieldList(Object... fieldList) {
             return fieldList(List.of(fieldList));
         }
+
         public Builder formatSettings(@Nullable Object formatSettings) {
-            this.formatSettings = formatSettings;
+            $.formatSettings = formatSettings;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder storeSettings(@Nullable Object storeSettings) {
-            this.storeSettings = storeSettings;
+            $.storeSettings = storeSettings;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public GetMetadataActivityResponse build() {
-            return new GetMetadataActivityResponse(dataset, dependsOn, description, fieldList, formatSettings, linkedServiceName, name, policy, storeSettings, type, userProperties);
+        }
+
+        public GetMetadataActivityResponse build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.ClusterTelemetryType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ClusterTelemetryArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ClusterTelemetryType> type;
+    private @Nullable Output<ClusterTelemetryType> type;
 
-    public Output<ClusterTelemetryType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ClusterTelemetryType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ClusterTelemetryArgs(@Nullable Output<ClusterTelemetryType> type) {
-        this.type = type;
-    }
+    private ClusterTelemetryArgs() {}
 
-    private ClusterTelemetryArgs() {
-        this.type = Codegen.empty();
+    private ClusterTelemetryArgs(ClusterTelemetryArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterTelemetryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterTelemetryType> type;
+        private ClusterTelemetryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterTelemetryArgs();
         }
 
         public Builder(ClusterTelemetryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ClusterTelemetryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<ClusterTelemetryType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ClusterTelemetryType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ClusterTelemetryArgs build() {
-            return new ClusterTelemetryArgs(type);
+
+        public Builder type(ClusterTelemetryType type) {
+            return type(Output.of(type));
+        }
+
+        public ClusterTelemetryArgs build() {
+            return $;
         }
     }
+
 }

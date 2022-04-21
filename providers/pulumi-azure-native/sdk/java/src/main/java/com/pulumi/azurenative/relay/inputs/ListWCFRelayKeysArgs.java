@@ -17,7 +17,7 @@ public final class ListWCFRelayKeysArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="authorizationRuleName", required=true)
-      private final String authorizationRuleName;
+    private String authorizationRuleName;
 
     public String authorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class ListWCFRelayKeysArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class ListWCFRelayKeysArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="relayName", required=true)
-      private final String relayName;
+    private String relayName;
 
     public String relayName() {
         return this.relayName;
@@ -50,73 +50,66 @@ public final class ListWCFRelayKeysArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListWCFRelayKeysArgs(
-        String authorizationRuleName,
-        String namespaceName,
-        String relayName,
-        String resourceGroupName) {
-        this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.relayName = Objects.requireNonNull(relayName, "expected parameter 'relayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListWCFRelayKeysArgs() {}
 
-    private ListWCFRelayKeysArgs() {
-        this.authorizationRuleName = null;
-        this.namespaceName = null;
-        this.relayName = null;
-        this.resourceGroupName = null;
+    private ListWCFRelayKeysArgs(ListWCFRelayKeysArgs $) {
+        this.authorizationRuleName = $.authorizationRuleName;
+        this.namespaceName = $.namespaceName;
+        this.relayName = $.relayName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListWCFRelayKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationRuleName;
-        private String namespaceName;
-        private String relayName;
-        private String resourceGroupName;
+        private ListWCFRelayKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListWCFRelayKeysArgs();
         }
 
         public Builder(ListWCFRelayKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationRuleName = defaults.authorizationRuleName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.relayName = defaults.relayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListWCFRelayKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationRuleName(String authorizationRuleName) {
-            this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
+            $.authorizationRuleName = authorizationRuleName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder relayName(String relayName) {
-            this.relayName = Objects.requireNonNull(relayName);
+            $.relayName = relayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListWCFRelayKeysArgs build() {
-            return new ListWCFRelayKeysArgs(authorizationRuleName, namespaceName, relayName, resourceGroupName);
+        }
+
+        public ListWCFRelayKeysArgs build() {
+            $.authorizationRuleName = Objects.requireNonNull($.authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.relayName = Objects.requireNonNull($.relayName, "expected parameter 'relayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

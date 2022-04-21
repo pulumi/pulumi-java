@@ -7,10 +7,10 @@ import com.pulumi.awsnative.resiliencehub.inputs.AppResourceMappingArgs;
 import com.pulumi.awsnative.resiliencehub.inputs.AppTagMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appTemplateBody", required=true)
-      private final Output<String> appTemplateBody;
+    private Output<String> appTemplateBody;
 
     public Output<String> appTemplateBody() {
         return this.appTemplateBody;
@@ -34,10 +34,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resiliencyPolicyArn")
-      private final @Nullable Output<String> resiliencyPolicyArn;
+    private @Nullable Output<String> resiliencyPolicyArn;
 
-    public Output<String> resiliencyPolicyArn() {
-        return this.resiliencyPolicyArn == null ? Codegen.empty() : this.resiliencyPolicyArn;
+    public Optional<Output<String>> resiliencyPolicyArn() {
+        return Optional.ofNullable(this.resiliencyPolicyArn);
     }
 
     /**
@@ -67,125 +67,111 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceMappings", required=true)
-      private final Output<List<AppResourceMappingArgs>> resourceMappings;
+    private Output<List<AppResourceMappingArgs>> resourceMappings;
 
     public Output<List<AppResourceMappingArgs>> resourceMappings() {
         return this.resourceMappings;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<AppTagMapArgs> tags;
+    private @Nullable Output<AppTagMapArgs> tags;
 
-    public Output<AppTagMapArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<AppTagMapArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AppArgs(
-        Output<String> appTemplateBody,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> resiliencyPolicyArn,
-        Output<List<AppResourceMappingArgs>> resourceMappings,
-        @Nullable Output<AppTagMapArgs> tags) {
-        this.appTemplateBody = Objects.requireNonNull(appTemplateBody, "expected parameter 'appTemplateBody' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.resiliencyPolicyArn = resiliencyPolicyArn;
-        this.resourceMappings = Objects.requireNonNull(resourceMappings, "expected parameter 'resourceMappings' to be non-null");
-        this.tags = tags;
-    }
+    private AppArgs() {}
 
-    private AppArgs() {
-        this.appTemplateBody = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resiliencyPolicyArn = Codegen.empty();
-        this.resourceMappings = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AppArgs(AppArgs $) {
+        this.appTemplateBody = $.appTemplateBody;
+        this.description = $.description;
+        this.name = $.name;
+        this.resiliencyPolicyArn = $.resiliencyPolicyArn;
+        this.resourceMappings = $.resourceMappings;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appTemplateBody;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> resiliencyPolicyArn;
-        private Output<List<AppResourceMappingArgs>> resourceMappings;
-        private @Nullable Output<AppTagMapArgs> tags;
+        private AppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppArgs();
         }
 
         public Builder(AppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appTemplateBody = defaults.appTemplateBody;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.resiliencyPolicyArn = defaults.resiliencyPolicyArn;
-    	      this.resourceMappings = defaults.resourceMappings;
-    	      this.tags = defaults.tags;
+            $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appTemplateBody(Output<String> appTemplateBody) {
-            this.appTemplateBody = Objects.requireNonNull(appTemplateBody);
+            $.appTemplateBody = appTemplateBody;
             return this;
         }
+
         public Builder appTemplateBody(String appTemplateBody) {
-            this.appTemplateBody = Output.of(Objects.requireNonNull(appTemplateBody));
-            return this;
+            return appTemplateBody(Output.of(appTemplateBody));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resiliencyPolicyArn(@Nullable Output<String> resiliencyPolicyArn) {
-            this.resiliencyPolicyArn = resiliencyPolicyArn;
+            $.resiliencyPolicyArn = resiliencyPolicyArn;
             return this;
         }
-        public Builder resiliencyPolicyArn(@Nullable String resiliencyPolicyArn) {
-            this.resiliencyPolicyArn = Codegen.ofNullable(resiliencyPolicyArn);
-            return this;
+
+        public Builder resiliencyPolicyArn(String resiliencyPolicyArn) {
+            return resiliencyPolicyArn(Output.of(resiliencyPolicyArn));
         }
+
         public Builder resourceMappings(Output<List<AppResourceMappingArgs>> resourceMappings) {
-            this.resourceMappings = Objects.requireNonNull(resourceMappings);
+            $.resourceMappings = resourceMappings;
             return this;
         }
+
         public Builder resourceMappings(List<AppResourceMappingArgs> resourceMappings) {
-            this.resourceMappings = Output.of(Objects.requireNonNull(resourceMappings));
-            return this;
+            return resourceMappings(Output.of(resourceMappings));
         }
+
         public Builder resourceMappings(AppResourceMappingArgs... resourceMappings) {
             return resourceMappings(List.of(resourceMappings));
         }
+
         public Builder tags(@Nullable Output<AppTagMapArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable AppTagMapArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public AppArgs build() {
-            return new AppArgs(appTemplateBody, description, name, resiliencyPolicyArn, resourceMappings, tags);
+
+        public Builder tags(AppTagMapArgs tags) {
+            return tags(Output.of(tags));
+        }
+
+        public AppArgs build() {
+            $.appTemplateBody = Objects.requireNonNull($.appTemplateBody, "expected parameter 'appTemplateBody' to be non-null");
+            $.resourceMappings = Objects.requireNonNull($.resourceMappings, "expected parameter 'resourceMappings' to be non-null");
+            return $;
         }
     }
+
 }

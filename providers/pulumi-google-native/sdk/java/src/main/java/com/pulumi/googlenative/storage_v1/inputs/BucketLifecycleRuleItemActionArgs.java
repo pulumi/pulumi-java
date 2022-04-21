@@ -5,9 +5,9 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BucketLifecycleRuleItemActionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="storageClass")
-      private final @Nullable Output<String> storageClass;
+    private @Nullable Output<String> storageClass;
 
-    public Output<String> storageClass() {
-        return this.storageClass == null ? Codegen.empty() : this.storageClass;
+    public Optional<Output<String>> storageClass() {
+        return Optional.ofNullable(this.storageClass);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class BucketLifecycleRuleItemActionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public BucketLifecycleRuleItemActionArgs(
-        @Nullable Output<String> storageClass,
-        @Nullable Output<String> type) {
-        this.storageClass = storageClass;
-        this.type = type;
-    }
+    private BucketLifecycleRuleItemActionArgs() {}
 
-    private BucketLifecycleRuleItemActionArgs() {
-        this.storageClass = Codegen.empty();
-        this.type = Codegen.empty();
+    private BucketLifecycleRuleItemActionArgs(BucketLifecycleRuleItemActionArgs $) {
+        this.storageClass = $.storageClass;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleRuleItemActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> storageClass;
-        private @Nullable Output<String> type;
+        private BucketLifecycleRuleItemActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleRuleItemActionArgs();
         }
 
         public Builder(BucketLifecycleRuleItemActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageClass = defaults.storageClass;
-    	      this.type = defaults.type;
+            $ = new BucketLifecycleRuleItemActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder storageClass(@Nullable Output<String> storageClass) {
-            this.storageClass = storageClass;
+            $.storageClass = storageClass;
             return this;
         }
-        public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Codegen.ofNullable(storageClass);
-            return this;
+
+        public Builder storageClass(String storageClass) {
+            return storageClass(Output.of(storageClass));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public BucketLifecycleRuleItemActionArgs build() {
-            return new BucketLifecycleRuleItemActionArgs(storageClass, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public BucketLifecycleRuleItemActionArgs build() {
+            return $;
         }
     }
+
 }

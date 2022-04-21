@@ -5,9 +5,9 @@ package com.pulumi.azurenative.azurearcdata.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UploadWatermarkArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="logs")
-      private final @Nullable Output<String> logs;
+    private @Nullable Output<String> logs;
 
-    public Output<String> logs() {
-        return this.logs == null ? Codegen.empty() : this.logs;
+    public Optional<Output<String>> logs() {
+        return Optional.ofNullable(this.logs);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UploadWatermarkArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metrics")
-      private final @Nullable Output<String> metrics;
+    private @Nullable Output<String> metrics;
 
-    public Output<String> metrics() {
-        return this.metrics == null ? Codegen.empty() : this.metrics;
+    public Optional<Output<String>> metrics() {
+        return Optional.ofNullable(this.metrics);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class UploadWatermarkArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="usages")
-      private final @Nullable Output<String> usages;
+    private @Nullable Output<String> usages;
 
-    public Output<String> usages() {
-        return this.usages == null ? Codegen.empty() : this.usages;
+    public Optional<Output<String>> usages() {
+        return Optional.ofNullable(this.usages);
     }
 
-    public UploadWatermarkArgs(
-        @Nullable Output<String> logs,
-        @Nullable Output<String> metrics,
-        @Nullable Output<String> usages) {
-        this.logs = logs;
-        this.metrics = metrics;
-        this.usages = usages;
-    }
+    private UploadWatermarkArgs() {}
 
-    private UploadWatermarkArgs() {
-        this.logs = Codegen.empty();
-        this.metrics = Codegen.empty();
-        this.usages = Codegen.empty();
+    private UploadWatermarkArgs(UploadWatermarkArgs $) {
+        this.logs = $.logs;
+        this.metrics = $.metrics;
+        this.usages = $.usages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UploadWatermarkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> logs;
-        private @Nullable Output<String> metrics;
-        private @Nullable Output<String> usages;
+        private UploadWatermarkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UploadWatermarkArgs();
         }
 
         public Builder(UploadWatermarkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logs = defaults.logs;
-    	      this.metrics = defaults.metrics;
-    	      this.usages = defaults.usages;
+            $ = new UploadWatermarkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logs(@Nullable Output<String> logs) {
-            this.logs = logs;
+            $.logs = logs;
             return this;
         }
-        public Builder logs(@Nullable String logs) {
-            this.logs = Codegen.ofNullable(logs);
-            return this;
+
+        public Builder logs(String logs) {
+            return logs(Output.of(logs));
         }
+
         public Builder metrics(@Nullable Output<String> metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
-        public Builder metrics(@Nullable String metrics) {
-            this.metrics = Codegen.ofNullable(metrics);
-            return this;
+
+        public Builder metrics(String metrics) {
+            return metrics(Output.of(metrics));
         }
+
         public Builder usages(@Nullable Output<String> usages) {
-            this.usages = usages;
+            $.usages = usages;
             return this;
         }
-        public Builder usages(@Nullable String usages) {
-            this.usages = Codegen.ofNullable(usages);
-            return this;
-        }        public UploadWatermarkArgs build() {
-            return new UploadWatermarkArgs(logs, metrics, usages);
+
+        public Builder usages(String usages) {
+            return usages(Output.of(usages));
+        }
+
+        public UploadWatermarkArgs build() {
+            return $;
         }
     }
+
 }

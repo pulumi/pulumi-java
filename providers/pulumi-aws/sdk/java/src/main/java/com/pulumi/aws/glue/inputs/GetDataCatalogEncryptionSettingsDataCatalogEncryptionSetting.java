@@ -19,7 +19,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
      * 
      */
     @Import(name="connectionPasswordEncryptions", required=true)
-      private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions;
+    private List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions;
 
     public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions() {
         return this.connectionPasswordEncryptions;
@@ -30,61 +30,60 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
      * 
      */
     @Import(name="encryptionAtRests", required=true)
-      private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests;
+    private List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests;
 
     public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests() {
         return this.encryptionAtRests;
     }
 
-    public GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting(
-        List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions,
-        List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests) {
-        this.connectionPasswordEncryptions = Objects.requireNonNull(connectionPasswordEncryptions, "expected parameter 'connectionPasswordEncryptions' to be non-null");
-        this.encryptionAtRests = Objects.requireNonNull(encryptionAtRests, "expected parameter 'encryptionAtRests' to be non-null");
-    }
+    private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting() {}
 
-    private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting() {
-        this.connectionPasswordEncryptions = List.of();
-        this.encryptionAtRests = List.of();
+    private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting $) {
+        this.connectionPasswordEncryptions = $.connectionPasswordEncryptions;
+        this.encryptionAtRests = $.encryptionAtRests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions;
-        private List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests;
+        private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting();
         }
 
         public Builder(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionPasswordEncryptions = defaults.connectionPasswordEncryptions;
-    	      this.encryptionAtRests = defaults.encryptionAtRests;
+            $ = new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionPasswordEncryptions(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions) {
-            this.connectionPasswordEncryptions = Objects.requireNonNull(connectionPasswordEncryptions);
+            $.connectionPasswordEncryptions = connectionPasswordEncryptions;
             return this;
         }
+
         public Builder connectionPasswordEncryptions(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption... connectionPasswordEncryptions) {
             return connectionPasswordEncryptions(List.of(connectionPasswordEncryptions));
         }
+
         public Builder encryptionAtRests(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests) {
-            this.encryptionAtRests = Objects.requireNonNull(encryptionAtRests);
+            $.encryptionAtRests = encryptionAtRests;
             return this;
         }
+
         public Builder encryptionAtRests(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest... encryptionAtRests) {
             return encryptionAtRests(List.of(encryptionAtRests));
-        }        public GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting build() {
-            return new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting(connectionPasswordEncryptions, encryptionAtRests);
+        }
+
+        public GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting build() {
+            $.connectionPasswordEncryptions = Objects.requireNonNull($.connectionPasswordEncryptions, "expected parameter 'connectionPasswordEncryptions' to be non-null");
+            $.encryptionAtRests = Objects.requireNonNull($.encryptionAtRests, "expected parameter 'encryptionAtRests' to be non-null");
+            return $;
         }
     }
+
 }

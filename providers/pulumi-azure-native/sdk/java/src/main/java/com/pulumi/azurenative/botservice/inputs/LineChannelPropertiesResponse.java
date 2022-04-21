@@ -24,7 +24,7 @@ public final class LineChannelPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="callbackUrl", required=true)
-      private final String callbackUrl;
+    private String callbackUrl;
 
     public String callbackUrl() {
         return this.callbackUrl;
@@ -35,7 +35,7 @@ public final class LineChannelPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="isValidated", required=true)
-      private final Boolean isValidated;
+    private Boolean isValidated;
 
     public Boolean isValidated() {
         return this.isValidated;
@@ -46,67 +46,63 @@ public final class LineChannelPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="lineRegistrations", required=true)
-      private final List<LineRegistrationResponse> lineRegistrations;
+    private List<LineRegistrationResponse> lineRegistrations;
 
     public List<LineRegistrationResponse> lineRegistrations() {
         return this.lineRegistrations;
     }
 
-    public LineChannelPropertiesResponse(
-        String callbackUrl,
-        Boolean isValidated,
-        List<LineRegistrationResponse> lineRegistrations) {
-        this.callbackUrl = Objects.requireNonNull(callbackUrl, "expected parameter 'callbackUrl' to be non-null");
-        this.isValidated = Objects.requireNonNull(isValidated, "expected parameter 'isValidated' to be non-null");
-        this.lineRegistrations = Objects.requireNonNull(lineRegistrations, "expected parameter 'lineRegistrations' to be non-null");
-    }
+    private LineChannelPropertiesResponse() {}
 
-    private LineChannelPropertiesResponse() {
-        this.callbackUrl = null;
-        this.isValidated = null;
-        this.lineRegistrations = List.of();
+    private LineChannelPropertiesResponse(LineChannelPropertiesResponse $) {
+        this.callbackUrl = $.callbackUrl;
+        this.isValidated = $.isValidated;
+        this.lineRegistrations = $.lineRegistrations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LineChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String callbackUrl;
-        private Boolean isValidated;
-        private List<LineRegistrationResponse> lineRegistrations;
+        private LineChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LineChannelPropertiesResponse();
         }
 
         public Builder(LineChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callbackUrl = defaults.callbackUrl;
-    	      this.isValidated = defaults.isValidated;
-    	      this.lineRegistrations = defaults.lineRegistrations;
+            $ = new LineChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder callbackUrl(String callbackUrl) {
-            this.callbackUrl = Objects.requireNonNull(callbackUrl);
+            $.callbackUrl = callbackUrl;
             return this;
         }
+
         public Builder isValidated(Boolean isValidated) {
-            this.isValidated = Objects.requireNonNull(isValidated);
+            $.isValidated = isValidated;
             return this;
         }
+
         public Builder lineRegistrations(List<LineRegistrationResponse> lineRegistrations) {
-            this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
+            $.lineRegistrations = lineRegistrations;
             return this;
         }
+
         public Builder lineRegistrations(LineRegistrationResponse... lineRegistrations) {
             return lineRegistrations(List.of(lineRegistrations));
-        }        public LineChannelPropertiesResponse build() {
-            return new LineChannelPropertiesResponse(callbackUrl, isValidated, lineRegistrations);
+        }
+
+        public LineChannelPropertiesResponse build() {
+            $.callbackUrl = Objects.requireNonNull($.callbackUrl, "expected parameter 'callbackUrl' to be non-null");
+            $.isValidated = Objects.requireNonNull($.isValidated, "expected parameter 'isValidated' to be non-null");
+            $.lineRegistrations = Objects.requireNonNull($.lineRegistrations, "expected parameter 'lineRegistrations' to be non-null");
+            return $;
         }
     }
+
 }

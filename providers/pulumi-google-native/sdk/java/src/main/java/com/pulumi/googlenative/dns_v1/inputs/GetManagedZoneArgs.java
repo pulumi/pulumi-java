@@ -15,78 +15,71 @@ public final class GetManagedZoneArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetManagedZoneArgs Empty = new GetManagedZoneArgs();
 
     @Import(name="clientOperationId")
-      private final @Nullable String clientOperationId;
+    private @Nullable String clientOperationId;
 
     public Optional<String> clientOperationId() {
-        return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
+        return Optional.ofNullable(this.clientOperationId);
     }
 
     @Import(name="managedZone", required=true)
-      private final String managedZone;
+    private String managedZone;
 
     public String managedZone() {
         return this.managedZone;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetManagedZoneArgs(
-        @Nullable String clientOperationId,
-        String managedZone,
-        @Nullable String project) {
-        this.clientOperationId = clientOperationId;
-        this.managedZone = Objects.requireNonNull(managedZone, "expected parameter 'managedZone' to be non-null");
-        this.project = project;
-    }
+    private GetManagedZoneArgs() {}
 
-    private GetManagedZoneArgs() {
-        this.clientOperationId = null;
-        this.managedZone = null;
-        this.project = null;
+    private GetManagedZoneArgs(GetManagedZoneArgs $) {
+        this.clientOperationId = $.clientOperationId;
+        this.managedZone = $.managedZone;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientOperationId;
-        private String managedZone;
-        private @Nullable String project;
+        private GetManagedZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedZoneArgs();
         }
 
         public Builder(GetManagedZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientOperationId = defaults.clientOperationId;
-    	      this.managedZone = defaults.managedZone;
-    	      this.project = defaults.project;
+            $ = new GetManagedZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = clientOperationId;
+            $.clientOperationId = clientOperationId;
             return this;
         }
+
         public Builder managedZone(String managedZone) {
-            this.managedZone = Objects.requireNonNull(managedZone);
+            $.managedZone = managedZone;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetManagedZoneArgs build() {
-            return new GetManagedZoneArgs(clientOperationId, managedZone, project);
+        }
+
+        public GetManagedZoneArgs build() {
+            $.managedZone = Objects.requireNonNull($.managedZone, "expected parameter 'managedZone' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,12 +6,12 @@ package com.pulumi.aws.lambda.inputs;
 import com.pulumi.asset.Archive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<Archive> code;
+    private @Nullable Output<Archive> code;
 
-    public Output<Archive> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<Archive>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compatibleArchitectures")
-      private final @Nullable Output<List<String>> compatibleArchitectures;
+    private @Nullable Output<List<String>> compatibleArchitectures;
 
-    public Output<List<String>> compatibleArchitectures() {
-        return this.compatibleArchitectures == null ? Codegen.empty() : this.compatibleArchitectures;
+    public Optional<Output<List<String>>> compatibleArchitectures() {
+        return Optional.ofNullable(this.compatibleArchitectures);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compatibleRuntimes")
-      private final @Nullable Output<List<String>> compatibleRuntimes;
+    private @Nullable Output<List<String>> compatibleRuntimes;
 
-    public Output<List<String>> compatibleRuntimes() {
-        return this.compatibleRuntimes == null ? Codegen.empty() : this.compatibleRuntimes;
+    public Optional<Output<List<String>>> compatibleRuntimes() {
+        return Optional.ofNullable(this.compatibleRuntimes);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="layerArn")
-      private final @Nullable Output<String> layerArn;
+    private @Nullable Output<String> layerArn;
 
-    public Output<String> layerArn() {
-        return this.layerArn == null ? Codegen.empty() : this.layerArn;
+    public Optional<Output<String>> layerArn() {
+        return Optional.ofNullable(this.layerArn);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="layerName")
-      private final @Nullable Output<String> layerName;
+    private @Nullable Output<String> layerName;
 
-    public Output<String> layerName() {
-        return this.layerName == null ? Codegen.empty() : this.layerName;
+    public Optional<Output<String>> layerName() {
+        return Optional.ofNullable(this.layerName);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseInfo")
-      private final @Nullable Output<String> licenseInfo;
+    private @Nullable Output<String> licenseInfo;
 
-    public Output<String> licenseInfo() {
-        return this.licenseInfo == null ? Codegen.empty() : this.licenseInfo;
+    public Optional<Output<String>> licenseInfo() {
+        return Optional.ofNullable(this.licenseInfo);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Bucket")
-      private final @Nullable Output<String> s3Bucket;
+    private @Nullable Output<String> s3Bucket;
 
-    public Output<String> s3Bucket() {
-        return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
+    public Optional<Output<String>> s3Bucket() {
+        return Optional.ofNullable(this.s3Bucket);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Key")
-      private final @Nullable Output<String> s3Key;
+    private @Nullable Output<String> s3Key;
 
-    public Output<String> s3Key() {
-        return this.s3Key == null ? Codegen.empty() : this.s3Key;
+    public Optional<Output<String>> s3Key() {
+        return Optional.ofNullable(this.s3Key);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3ObjectVersion")
-      private final @Nullable Output<String> s3ObjectVersion;
+    private @Nullable Output<String> s3ObjectVersion;
 
-    public Output<String> s3ObjectVersion() {
-        return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
+    public Optional<Output<String>> s3ObjectVersion() {
+        return Optional.ofNullable(this.s3ObjectVersion);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="signingJobArn")
-      private final @Nullable Output<String> signingJobArn;
+    private @Nullable Output<String> signingJobArn;
 
-    public Output<String> signingJobArn() {
-        return this.signingJobArn == null ? Codegen.empty() : this.signingJobArn;
+    public Optional<Output<String>> signingJobArn() {
+        return Optional.ofNullable(this.signingJobArn);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="signingProfileVersionArn")
-      private final @Nullable Output<String> signingProfileVersionArn;
+    private @Nullable Output<String> signingProfileVersionArn;
 
-    public Output<String> signingProfileVersionArn() {
-        return this.signingProfileVersionArn == null ? Codegen.empty() : this.signingProfileVersionArn;
+    public Optional<Output<String>> signingProfileVersionArn() {
+        return Optional.ofNullable(this.signingProfileVersionArn);
     }
 
     /**
@@ -178,17 +178,17 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipDestroy")
-      private final @Nullable Output<Boolean> skipDestroy;
+    private @Nullable Output<Boolean> skipDestroy;
 
-    public Output<Boolean> skipDestroy() {
-        return this.skipDestroy == null ? Codegen.empty() : this.skipDestroy;
+    public Optional<Output<Boolean>> skipDestroy() {
+        return Optional.ofNullable(this.skipDestroy);
     }
 
     @Import(name="sourceCodeHash")
-      private final @Nullable Output<String> sourceCodeHash;
+    private @Nullable Output<String> sourceCodeHash;
 
-    public Output<String> sourceCodeHash() {
-        return this.sourceCodeHash == null ? Codegen.empty() : this.sourceCodeHash;
+    public Optional<Output<String>> sourceCodeHash() {
+        return Optional.ofNullable(this.sourceCodeHash);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceCodeSize")
-      private final @Nullable Output<Integer> sourceCodeSize;
+    private @Nullable Output<Integer> sourceCodeSize;
 
-    public Output<Integer> sourceCodeSize() {
-        return this.sourceCodeSize == null ? Codegen.empty() : this.sourceCodeSize;
+    public Optional<Output<Integer>> sourceCodeSize() {
+        return Optional.ofNullable(this.sourceCodeSize);
     }
 
     /**
@@ -207,277 +207,226 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public LayerVersionState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Archive> code,
-        @Nullable Output<List<String>> compatibleArchitectures,
-        @Nullable Output<List<String>> compatibleRuntimes,
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> description,
-        @Nullable Output<String> layerArn,
-        @Nullable Output<String> layerName,
-        @Nullable Output<String> licenseInfo,
-        @Nullable Output<String> s3Bucket,
-        @Nullable Output<String> s3Key,
-        @Nullable Output<String> s3ObjectVersion,
-        @Nullable Output<String> signingJobArn,
-        @Nullable Output<String> signingProfileVersionArn,
-        @Nullable Output<Boolean> skipDestroy,
-        @Nullable Output<String> sourceCodeHash,
-        @Nullable Output<Integer> sourceCodeSize,
-        @Nullable Output<String> version) {
-        this.arn = arn;
-        this.code = code;
-        this.compatibleArchitectures = compatibleArchitectures;
-        this.compatibleRuntimes = compatibleRuntimes;
-        this.createdDate = createdDate;
-        this.description = description;
-        this.layerArn = layerArn;
-        this.layerName = layerName;
-        this.licenseInfo = licenseInfo;
-        this.s3Bucket = s3Bucket;
-        this.s3Key = s3Key;
-        this.s3ObjectVersion = s3ObjectVersion;
-        this.signingJobArn = signingJobArn;
-        this.signingProfileVersionArn = signingProfileVersionArn;
-        this.skipDestroy = skipDestroy;
-        this.sourceCodeHash = sourceCodeHash;
-        this.sourceCodeSize = sourceCodeSize;
-        this.version = version;
-    }
+    private LayerVersionState() {}
 
-    private LayerVersionState() {
-        this.arn = Codegen.empty();
-        this.code = Codegen.empty();
-        this.compatibleArchitectures = Codegen.empty();
-        this.compatibleRuntimes = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.layerArn = Codegen.empty();
-        this.layerName = Codegen.empty();
-        this.licenseInfo = Codegen.empty();
-        this.s3Bucket = Codegen.empty();
-        this.s3Key = Codegen.empty();
-        this.s3ObjectVersion = Codegen.empty();
-        this.signingJobArn = Codegen.empty();
-        this.signingProfileVersionArn = Codegen.empty();
-        this.skipDestroy = Codegen.empty();
-        this.sourceCodeHash = Codegen.empty();
-        this.sourceCodeSize = Codegen.empty();
-        this.version = Codegen.empty();
+    private LayerVersionState(LayerVersionState $) {
+        this.arn = $.arn;
+        this.code = $.code;
+        this.compatibleArchitectures = $.compatibleArchitectures;
+        this.compatibleRuntimes = $.compatibleRuntimes;
+        this.createdDate = $.createdDate;
+        this.description = $.description;
+        this.layerArn = $.layerArn;
+        this.layerName = $.layerName;
+        this.licenseInfo = $.licenseInfo;
+        this.s3Bucket = $.s3Bucket;
+        this.s3Key = $.s3Key;
+        this.s3ObjectVersion = $.s3ObjectVersion;
+        this.signingJobArn = $.signingJobArn;
+        this.signingProfileVersionArn = $.signingProfileVersionArn;
+        this.skipDestroy = $.skipDestroy;
+        this.sourceCodeHash = $.sourceCodeHash;
+        this.sourceCodeSize = $.sourceCodeSize;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LayerVersionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Archive> code;
-        private @Nullable Output<List<String>> compatibleArchitectures;
-        private @Nullable Output<List<String>> compatibleRuntimes;
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> layerArn;
-        private @Nullable Output<String> layerName;
-        private @Nullable Output<String> licenseInfo;
-        private @Nullable Output<String> s3Bucket;
-        private @Nullable Output<String> s3Key;
-        private @Nullable Output<String> s3ObjectVersion;
-        private @Nullable Output<String> signingJobArn;
-        private @Nullable Output<String> signingProfileVersionArn;
-        private @Nullable Output<Boolean> skipDestroy;
-        private @Nullable Output<String> sourceCodeHash;
-        private @Nullable Output<Integer> sourceCodeSize;
-        private @Nullable Output<String> version;
+        private LayerVersionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LayerVersionState();
         }
 
         public Builder(LayerVersionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.code = defaults.code;
-    	      this.compatibleArchitectures = defaults.compatibleArchitectures;
-    	      this.compatibleRuntimes = defaults.compatibleRuntimes;
-    	      this.createdDate = defaults.createdDate;
-    	      this.description = defaults.description;
-    	      this.layerArn = defaults.layerArn;
-    	      this.layerName = defaults.layerName;
-    	      this.licenseInfo = defaults.licenseInfo;
-    	      this.s3Bucket = defaults.s3Bucket;
-    	      this.s3Key = defaults.s3Key;
-    	      this.s3ObjectVersion = defaults.s3ObjectVersion;
-    	      this.signingJobArn = defaults.signingJobArn;
-    	      this.signingProfileVersionArn = defaults.signingProfileVersionArn;
-    	      this.skipDestroy = defaults.skipDestroy;
-    	      this.sourceCodeHash = defaults.sourceCodeHash;
-    	      this.sourceCodeSize = defaults.sourceCodeSize;
-    	      this.version = defaults.version;
+            $ = new LayerVersionState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder code(@Nullable Output<Archive> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable Archive code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(Archive code) {
+            return code(Output.of(code));
         }
+
         public Builder compatibleArchitectures(@Nullable Output<List<String>> compatibleArchitectures) {
-            this.compatibleArchitectures = compatibleArchitectures;
+            $.compatibleArchitectures = compatibleArchitectures;
             return this;
         }
-        public Builder compatibleArchitectures(@Nullable List<String> compatibleArchitectures) {
-            this.compatibleArchitectures = Codegen.ofNullable(compatibleArchitectures);
-            return this;
+
+        public Builder compatibleArchitectures(List<String> compatibleArchitectures) {
+            return compatibleArchitectures(Output.of(compatibleArchitectures));
         }
+
         public Builder compatibleArchitectures(String... compatibleArchitectures) {
             return compatibleArchitectures(List.of(compatibleArchitectures));
         }
+
         public Builder compatibleRuntimes(@Nullable Output<List<String>> compatibleRuntimes) {
-            this.compatibleRuntimes = compatibleRuntimes;
+            $.compatibleRuntimes = compatibleRuntimes;
             return this;
         }
-        public Builder compatibleRuntimes(@Nullable List<String> compatibleRuntimes) {
-            this.compatibleRuntimes = Codegen.ofNullable(compatibleRuntimes);
-            return this;
+
+        public Builder compatibleRuntimes(List<String> compatibleRuntimes) {
+            return compatibleRuntimes(Output.of(compatibleRuntimes));
         }
+
         public Builder compatibleRuntimes(String... compatibleRuntimes) {
             return compatibleRuntimes(List.of(compatibleRuntimes));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder layerArn(@Nullable Output<String> layerArn) {
-            this.layerArn = layerArn;
+            $.layerArn = layerArn;
             return this;
         }
-        public Builder layerArn(@Nullable String layerArn) {
-            this.layerArn = Codegen.ofNullable(layerArn);
-            return this;
+
+        public Builder layerArn(String layerArn) {
+            return layerArn(Output.of(layerArn));
         }
+
         public Builder layerName(@Nullable Output<String> layerName) {
-            this.layerName = layerName;
+            $.layerName = layerName;
             return this;
         }
-        public Builder layerName(@Nullable String layerName) {
-            this.layerName = Codegen.ofNullable(layerName);
-            return this;
+
+        public Builder layerName(String layerName) {
+            return layerName(Output.of(layerName));
         }
+
         public Builder licenseInfo(@Nullable Output<String> licenseInfo) {
-            this.licenseInfo = licenseInfo;
+            $.licenseInfo = licenseInfo;
             return this;
         }
-        public Builder licenseInfo(@Nullable String licenseInfo) {
-            this.licenseInfo = Codegen.ofNullable(licenseInfo);
-            return this;
+
+        public Builder licenseInfo(String licenseInfo) {
+            return licenseInfo(Output.of(licenseInfo));
         }
+
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
-            this.s3Bucket = s3Bucket;
+            $.s3Bucket = s3Bucket;
             return this;
         }
-        public Builder s3Bucket(@Nullable String s3Bucket) {
-            this.s3Bucket = Codegen.ofNullable(s3Bucket);
-            return this;
+
+        public Builder s3Bucket(String s3Bucket) {
+            return s3Bucket(Output.of(s3Bucket));
         }
+
         public Builder s3Key(@Nullable Output<String> s3Key) {
-            this.s3Key = s3Key;
+            $.s3Key = s3Key;
             return this;
         }
-        public Builder s3Key(@Nullable String s3Key) {
-            this.s3Key = Codegen.ofNullable(s3Key);
-            return this;
+
+        public Builder s3Key(String s3Key) {
+            return s3Key(Output.of(s3Key));
         }
+
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
-            this.s3ObjectVersion = s3ObjectVersion;
+            $.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-        public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
-            this.s3ObjectVersion = Codegen.ofNullable(s3ObjectVersion);
-            return this;
+
+        public Builder s3ObjectVersion(String s3ObjectVersion) {
+            return s3ObjectVersion(Output.of(s3ObjectVersion));
         }
+
         public Builder signingJobArn(@Nullable Output<String> signingJobArn) {
-            this.signingJobArn = signingJobArn;
+            $.signingJobArn = signingJobArn;
             return this;
         }
-        public Builder signingJobArn(@Nullable String signingJobArn) {
-            this.signingJobArn = Codegen.ofNullable(signingJobArn);
-            return this;
+
+        public Builder signingJobArn(String signingJobArn) {
+            return signingJobArn(Output.of(signingJobArn));
         }
+
         public Builder signingProfileVersionArn(@Nullable Output<String> signingProfileVersionArn) {
-            this.signingProfileVersionArn = signingProfileVersionArn;
+            $.signingProfileVersionArn = signingProfileVersionArn;
             return this;
         }
-        public Builder signingProfileVersionArn(@Nullable String signingProfileVersionArn) {
-            this.signingProfileVersionArn = Codegen.ofNullable(signingProfileVersionArn);
-            return this;
+
+        public Builder signingProfileVersionArn(String signingProfileVersionArn) {
+            return signingProfileVersionArn(Output.of(signingProfileVersionArn));
         }
+
         public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
-            this.skipDestroy = skipDestroy;
+            $.skipDestroy = skipDestroy;
             return this;
         }
-        public Builder skipDestroy(@Nullable Boolean skipDestroy) {
-            this.skipDestroy = Codegen.ofNullable(skipDestroy);
-            return this;
+
+        public Builder skipDestroy(Boolean skipDestroy) {
+            return skipDestroy(Output.of(skipDestroy));
         }
+
         public Builder sourceCodeHash(@Nullable Output<String> sourceCodeHash) {
-            this.sourceCodeHash = sourceCodeHash;
+            $.sourceCodeHash = sourceCodeHash;
             return this;
         }
-        public Builder sourceCodeHash(@Nullable String sourceCodeHash) {
-            this.sourceCodeHash = Codegen.ofNullable(sourceCodeHash);
-            return this;
+
+        public Builder sourceCodeHash(String sourceCodeHash) {
+            return sourceCodeHash(Output.of(sourceCodeHash));
         }
+
         public Builder sourceCodeSize(@Nullable Output<Integer> sourceCodeSize) {
-            this.sourceCodeSize = sourceCodeSize;
+            $.sourceCodeSize = sourceCodeSize;
             return this;
         }
-        public Builder sourceCodeSize(@Nullable Integer sourceCodeSize) {
-            this.sourceCodeSize = Codegen.ofNullable(sourceCodeSize);
-            return this;
+
+        public Builder sourceCodeSize(Integer sourceCodeSize) {
+            return sourceCodeSize(Output.of(sourceCodeSize));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public LayerVersionState build() {
-            return new LayerVersionState(arn, code, compatibleArchitectures, compatibleRuntimes, createdDate, description, layerArn, layerName, licenseInfo, s3Bucket, s3Key, s3ObjectVersion, signingJobArn, signingProfileVersionArn, skipDestroy, sourceCodeHash, sourceCodeSize, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public LayerVersionState build() {
+            return $;
         }
     }
+
 }

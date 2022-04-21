@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="currentAverageUtilization")
-      private final @Nullable Output<Integer> currentAverageUtilization;
+    private @Nullable Output<Integer> currentAverageUtilization;
 
-    public Output<Integer> currentAverageUtilization() {
-        return this.currentAverageUtilization == null ? Codegen.empty() : this.currentAverageUtilization;
+    public Optional<Output<Integer>> currentAverageUtilization() {
+        return Optional.ofNullable(this.currentAverageUtilization);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ResourceMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="currentAverageValue", required=true)
-      private final Output<String> currentAverageValue;
+    private Output<String> currentAverageValue;
 
     public Output<String> currentAverageValue() {
         return this.currentAverageValue;
@@ -47,76 +47,70 @@ public final class ResourceMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public ResourceMetricStatusArgs(
-        @Nullable Output<Integer> currentAverageUtilization,
-        Output<String> currentAverageValue,
-        Output<String> name) {
-        this.currentAverageUtilization = currentAverageUtilization;
-        this.currentAverageValue = Objects.requireNonNull(currentAverageValue, "expected parameter 'currentAverageValue' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ResourceMetricStatusArgs() {}
 
-    private ResourceMetricStatusArgs() {
-        this.currentAverageUtilization = Codegen.empty();
-        this.currentAverageValue = Codegen.empty();
-        this.name = Codegen.empty();
+    private ResourceMetricStatusArgs(ResourceMetricStatusArgs $) {
+        this.currentAverageUtilization = $.currentAverageUtilization;
+        this.currentAverageValue = $.currentAverageValue;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceMetricStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> currentAverageUtilization;
-        private Output<String> currentAverageValue;
-        private Output<String> name;
+        private ResourceMetricStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceMetricStatusArgs();
         }
 
         public Builder(ResourceMetricStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentAverageUtilization = defaults.currentAverageUtilization;
-    	      this.currentAverageValue = defaults.currentAverageValue;
-    	      this.name = defaults.name;
+            $ = new ResourceMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder currentAverageUtilization(@Nullable Output<Integer> currentAverageUtilization) {
-            this.currentAverageUtilization = currentAverageUtilization;
+            $.currentAverageUtilization = currentAverageUtilization;
             return this;
         }
-        public Builder currentAverageUtilization(@Nullable Integer currentAverageUtilization) {
-            this.currentAverageUtilization = Codegen.ofNullable(currentAverageUtilization);
-            return this;
+
+        public Builder currentAverageUtilization(Integer currentAverageUtilization) {
+            return currentAverageUtilization(Output.of(currentAverageUtilization));
         }
+
         public Builder currentAverageValue(Output<String> currentAverageValue) {
-            this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
+            $.currentAverageValue = currentAverageValue;
             return this;
         }
+
         public Builder currentAverageValue(String currentAverageValue) {
-            this.currentAverageValue = Output.of(Objects.requireNonNull(currentAverageValue));
-            return this;
+            return currentAverageValue(Output.of(currentAverageValue));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ResourceMetricStatusArgs build() {
-            return new ResourceMetricStatusArgs(currentAverageUtilization, currentAverageValue, name);
+            return name(Output.of(name));
+        }
+
+        public ResourceMetricStatusArgs build() {
+            $.currentAverageValue = Objects.requireNonNull($.currentAverageValue, "expected parameter 'currentAverageValue' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

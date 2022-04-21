@@ -8,10 +8,10 @@ import com.pulumi.awsnative.databrew.inputs.DatasetDatetimeOptionsArgs;
 import com.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,28 +24,28 @@ public final class DatasetParameterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="createColumn")
-      private final @Nullable Output<Boolean> createColumn;
+    private @Nullable Output<Boolean> createColumn;
 
-    public Output<Boolean> createColumn() {
-        return this.createColumn == null ? Codegen.empty() : this.createColumn;
+    public Optional<Output<Boolean>> createColumn() {
+        return Optional.ofNullable(this.createColumn);
     }
 
     @Import(name="datetimeOptions")
-      private final @Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions;
+    private @Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions;
 
-    public Output<DatasetDatetimeOptionsArgs> datetimeOptions() {
-        return this.datetimeOptions == null ? Codegen.empty() : this.datetimeOptions;
+    public Optional<Output<DatasetDatetimeOptionsArgs>> datetimeOptions() {
+        return Optional.ofNullable(this.datetimeOptions);
     }
 
     @Import(name="filter")
-      private final @Nullable Output<DatasetFilterExpressionArgs> filter;
+    private @Nullable Output<DatasetFilterExpressionArgs> filter;
 
-    public Output<DatasetFilterExpressionArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<DatasetFilterExpressionArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -56,102 +56,90 @@ public final class DatasetParameterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<DatasetParameterType> type;
+    private Output<DatasetParameterType> type;
 
     public Output<DatasetParameterType> type() {
         return this.type;
     }
 
-    public DatasetParameterArgs(
-        @Nullable Output<Boolean> createColumn,
-        @Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions,
-        @Nullable Output<DatasetFilterExpressionArgs> filter,
-        Output<String> name,
-        Output<DatasetParameterType> type) {
-        this.createColumn = createColumn;
-        this.datetimeOptions = datetimeOptions;
-        this.filter = filter;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DatasetParameterArgs() {}
 
-    private DatasetParameterArgs() {
-        this.createColumn = Codegen.empty();
-        this.datetimeOptions = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private DatasetParameterArgs(DatasetParameterArgs $) {
+        this.createColumn = $.createColumn;
+        this.datetimeOptions = $.datetimeOptions;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> createColumn;
-        private @Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions;
-        private @Nullable Output<DatasetFilterExpressionArgs> filter;
-        private Output<String> name;
-        private Output<DatasetParameterType> type;
+        private DatasetParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetParameterArgs();
         }
 
         public Builder(DatasetParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createColumn = defaults.createColumn;
-    	      this.datetimeOptions = defaults.datetimeOptions;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new DatasetParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createColumn(@Nullable Output<Boolean> createColumn) {
-            this.createColumn = createColumn;
+            $.createColumn = createColumn;
             return this;
         }
-        public Builder createColumn(@Nullable Boolean createColumn) {
-            this.createColumn = Codegen.ofNullable(createColumn);
-            return this;
+
+        public Builder createColumn(Boolean createColumn) {
+            return createColumn(Output.of(createColumn));
         }
+
         public Builder datetimeOptions(@Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions) {
-            this.datetimeOptions = datetimeOptions;
+            $.datetimeOptions = datetimeOptions;
             return this;
         }
-        public Builder datetimeOptions(@Nullable DatasetDatetimeOptionsArgs datetimeOptions) {
-            this.datetimeOptions = Codegen.ofNullable(datetimeOptions);
-            return this;
+
+        public Builder datetimeOptions(DatasetDatetimeOptionsArgs datetimeOptions) {
+            return datetimeOptions(Output.of(datetimeOptions));
         }
+
         public Builder filter(@Nullable Output<DatasetFilterExpressionArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable DatasetFilterExpressionArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(DatasetFilterExpressionArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<DatasetParameterType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(DatasetParameterType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DatasetParameterArgs build() {
-            return new DatasetParameterArgs(createColumn, datetimeOptions, filter, name, type);
+            return type(Output.of(type));
+        }
+
+        public DatasetParameterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

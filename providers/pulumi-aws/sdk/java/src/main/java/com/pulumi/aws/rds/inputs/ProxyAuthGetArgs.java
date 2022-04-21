@@ -5,9 +5,9 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProxyAuthGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authScheme")
-      private final @Nullable Output<String> authScheme;
+    private @Nullable Output<String> authScheme;
 
-    public Output<String> authScheme() {
-        return this.authScheme == null ? Codegen.empty() : this.authScheme;
+    public Optional<Output<String>> authScheme() {
+        return Optional.ofNullable(this.authScheme);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProxyAuthGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProxyAuthGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamAuth")
-      private final @Nullable Output<String> iamAuth;
+    private @Nullable Output<String> iamAuth;
 
-    public Output<String> iamAuth() {
-        return this.iamAuth == null ? Codegen.empty() : this.iamAuth;
+    public Optional<Output<String>> iamAuth() {
+        return Optional.ofNullable(this.iamAuth);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class ProxyAuthGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretArn")
-      private final @Nullable Output<String> secretArn;
+    private @Nullable Output<String> secretArn;
 
-    public Output<String> secretArn() {
-        return this.secretArn == null ? Codegen.empty() : this.secretArn;
+    public Optional<Output<String>> secretArn() {
+        return Optional.ofNullable(this.secretArn);
     }
 
-    public ProxyAuthGetArgs(
-        @Nullable Output<String> authScheme,
-        @Nullable Output<String> description,
-        @Nullable Output<String> iamAuth,
-        @Nullable Output<String> secretArn) {
-        this.authScheme = authScheme;
-        this.description = description;
-        this.iamAuth = iamAuth;
-        this.secretArn = secretArn;
-    }
+    private ProxyAuthGetArgs() {}
 
-    private ProxyAuthGetArgs() {
-        this.authScheme = Codegen.empty();
-        this.description = Codegen.empty();
-        this.iamAuth = Codegen.empty();
-        this.secretArn = Codegen.empty();
+    private ProxyAuthGetArgs(ProxyAuthGetArgs $) {
+        this.authScheme = $.authScheme;
+        this.description = $.description;
+        this.iamAuth = $.iamAuth;
+        this.secretArn = $.secretArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProxyAuthGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authScheme;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> iamAuth;
-        private @Nullable Output<String> secretArn;
+        private ProxyAuthGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProxyAuthGetArgs();
         }
 
         public Builder(ProxyAuthGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authScheme = defaults.authScheme;
-    	      this.description = defaults.description;
-    	      this.iamAuth = defaults.iamAuth;
-    	      this.secretArn = defaults.secretArn;
+            $ = new ProxyAuthGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authScheme(@Nullable Output<String> authScheme) {
-            this.authScheme = authScheme;
+            $.authScheme = authScheme;
             return this;
         }
-        public Builder authScheme(@Nullable String authScheme) {
-            this.authScheme = Codegen.ofNullable(authScheme);
-            return this;
+
+        public Builder authScheme(String authScheme) {
+            return authScheme(Output.of(authScheme));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder iamAuth(@Nullable Output<String> iamAuth) {
-            this.iamAuth = iamAuth;
+            $.iamAuth = iamAuth;
             return this;
         }
-        public Builder iamAuth(@Nullable String iamAuth) {
-            this.iamAuth = Codegen.ofNullable(iamAuth);
-            return this;
+
+        public Builder iamAuth(String iamAuth) {
+            return iamAuth(Output.of(iamAuth));
         }
+
         public Builder secretArn(@Nullable Output<String> secretArn) {
-            this.secretArn = secretArn;
+            $.secretArn = secretArn;
             return this;
         }
-        public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Codegen.ofNullable(secretArn);
-            return this;
-        }        public ProxyAuthGetArgs build() {
-            return new ProxyAuthGetArgs(authScheme, description, iamAuth, secretArn);
+
+        public Builder secretArn(String secretArn) {
+            return secretArn(Output.of(secretArn));
+        }
+
+        public ProxyAuthGetArgs build() {
+            return $;
         }
     }
+
 }

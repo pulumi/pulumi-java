@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.HumanTaskUIUiTemplateGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class HumanTaskUIState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class HumanTaskUIState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="humanTaskUiName")
-      private final @Nullable Output<String> humanTaskUiName;
+    private @Nullable Output<String> humanTaskUiName;
 
-    public Output<String> humanTaskUiName() {
-        return this.humanTaskUiName == null ? Codegen.empty() : this.humanTaskUiName;
+    public Optional<Output<String>> humanTaskUiName() {
+        return Optional.ofNullable(this.humanTaskUiName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class HumanTaskUIState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class HumanTaskUIState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class HumanTaskUIState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uiTemplate")
-      private final @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate;
+    private @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate;
 
-    public Output<HumanTaskUIUiTemplateGetArgs> uiTemplate() {
-        return this.uiTemplate == null ? Codegen.empty() : this.uiTemplate;
+    public Optional<Output<HumanTaskUIUiTemplateGetArgs>> uiTemplate() {
+        return Optional.ofNullable(this.uiTemplate);
     }
 
-    public HumanTaskUIState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> humanTaskUiName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
-        this.arn = arn;
-        this.humanTaskUiName = humanTaskUiName;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.uiTemplate = uiTemplate;
-    }
+    private HumanTaskUIState() {}
 
-    private HumanTaskUIState() {
-        this.arn = Codegen.empty();
-        this.humanTaskUiName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.uiTemplate = Codegen.empty();
+    private HumanTaskUIState(HumanTaskUIState $) {
+        this.arn = $.arn;
+        this.humanTaskUiName = $.humanTaskUiName;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.uiTemplate = $.uiTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HumanTaskUIState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> humanTaskUiName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate;
+        private HumanTaskUIState $;
 
         public Builder() {
-    	      // Empty
+            $ = new HumanTaskUIState();
         }
 
         public Builder(HumanTaskUIState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.humanTaskUiName = defaults.humanTaskUiName;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.uiTemplate = defaults.uiTemplate;
+            $ = new HumanTaskUIState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder humanTaskUiName(@Nullable Output<String> humanTaskUiName) {
-            this.humanTaskUiName = humanTaskUiName;
+            $.humanTaskUiName = humanTaskUiName;
             return this;
         }
-        public Builder humanTaskUiName(@Nullable String humanTaskUiName) {
-            this.humanTaskUiName = Codegen.ofNullable(humanTaskUiName);
-            return this;
+
+        public Builder humanTaskUiName(String humanTaskUiName) {
+            return humanTaskUiName(Output.of(humanTaskUiName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder uiTemplate(@Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
-            this.uiTemplate = uiTemplate;
+            $.uiTemplate = uiTemplate;
             return this;
         }
-        public Builder uiTemplate(@Nullable HumanTaskUIUiTemplateGetArgs uiTemplate) {
-            this.uiTemplate = Codegen.ofNullable(uiTemplate);
-            return this;
-        }        public HumanTaskUIState build() {
-            return new HumanTaskUIState(arn, humanTaskUiName, tags, tagsAll, uiTemplate);
+
+        public Builder uiTemplate(HumanTaskUIUiTemplateGetArgs uiTemplate) {
+            return uiTemplate(Output.of(uiTemplate));
+        }
+
+        public HumanTaskUIState build() {
+            return $;
         }
     }
+
 }

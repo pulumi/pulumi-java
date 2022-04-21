@@ -5,10 +5,10 @@ package com.pulumi.aws.sns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SmsPreferencesState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="defaultSenderId")
-      private final @Nullable Output<String> defaultSenderId;
+    private @Nullable Output<String> defaultSenderId;
 
-    public Output<String> defaultSenderId() {
-        return this.defaultSenderId == null ? Codegen.empty() : this.defaultSenderId;
+    public Optional<Output<String>> defaultSenderId() {
+        return Optional.ofNullable(this.defaultSenderId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SmsPreferencesState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="defaultSmsType")
-      private final @Nullable Output<String> defaultSmsType;
+    private @Nullable Output<String> defaultSmsType;
 
-    public Output<String> defaultSmsType() {
-        return this.defaultSmsType == null ? Codegen.empty() : this.defaultSmsType;
+    public Optional<Output<String>> defaultSmsType() {
+        return Optional.ofNullable(this.defaultSmsType);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SmsPreferencesState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deliveryStatusIamRoleArn")
-      private final @Nullable Output<String> deliveryStatusIamRoleArn;
+    private @Nullable Output<String> deliveryStatusIamRoleArn;
 
-    public Output<String> deliveryStatusIamRoleArn() {
-        return this.deliveryStatusIamRoleArn == null ? Codegen.empty() : this.deliveryStatusIamRoleArn;
+    public Optional<Output<String>> deliveryStatusIamRoleArn() {
+        return Optional.ofNullable(this.deliveryStatusIamRoleArn);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SmsPreferencesState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deliveryStatusSuccessSamplingRate")
-      private final @Nullable Output<String> deliveryStatusSuccessSamplingRate;
+    private @Nullable Output<String> deliveryStatusSuccessSamplingRate;
 
-    public Output<String> deliveryStatusSuccessSamplingRate() {
-        return this.deliveryStatusSuccessSamplingRate == null ? Codegen.empty() : this.deliveryStatusSuccessSamplingRate;
+    public Optional<Output<String>> deliveryStatusSuccessSamplingRate() {
+        return Optional.ofNullable(this.deliveryStatusSuccessSamplingRate);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SmsPreferencesState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="monthlySpendLimit")
-      private final @Nullable Output<Integer> monthlySpendLimit;
+    private @Nullable Output<Integer> monthlySpendLimit;
 
-    public Output<Integer> monthlySpendLimit() {
-        return this.monthlySpendLimit == null ? Codegen.empty() : this.monthlySpendLimit;
+    public Optional<Output<Integer>> monthlySpendLimit() {
+        return Optional.ofNullable(this.monthlySpendLimit);
     }
 
     /**
@@ -76,115 +76,98 @@ public final class SmsPreferencesState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="usageReportS3Bucket")
-      private final @Nullable Output<String> usageReportS3Bucket;
+    private @Nullable Output<String> usageReportS3Bucket;
 
-    public Output<String> usageReportS3Bucket() {
-        return this.usageReportS3Bucket == null ? Codegen.empty() : this.usageReportS3Bucket;
+    public Optional<Output<String>> usageReportS3Bucket() {
+        return Optional.ofNullable(this.usageReportS3Bucket);
     }
 
-    public SmsPreferencesState(
-        @Nullable Output<String> defaultSenderId,
-        @Nullable Output<String> defaultSmsType,
-        @Nullable Output<String> deliveryStatusIamRoleArn,
-        @Nullable Output<String> deliveryStatusSuccessSamplingRate,
-        @Nullable Output<Integer> monthlySpendLimit,
-        @Nullable Output<String> usageReportS3Bucket) {
-        this.defaultSenderId = defaultSenderId;
-        this.defaultSmsType = defaultSmsType;
-        this.deliveryStatusIamRoleArn = deliveryStatusIamRoleArn;
-        this.deliveryStatusSuccessSamplingRate = deliveryStatusSuccessSamplingRate;
-        this.monthlySpendLimit = monthlySpendLimit;
-        this.usageReportS3Bucket = usageReportS3Bucket;
-    }
+    private SmsPreferencesState() {}
 
-    private SmsPreferencesState() {
-        this.defaultSenderId = Codegen.empty();
-        this.defaultSmsType = Codegen.empty();
-        this.deliveryStatusIamRoleArn = Codegen.empty();
-        this.deliveryStatusSuccessSamplingRate = Codegen.empty();
-        this.monthlySpendLimit = Codegen.empty();
-        this.usageReportS3Bucket = Codegen.empty();
+    private SmsPreferencesState(SmsPreferencesState $) {
+        this.defaultSenderId = $.defaultSenderId;
+        this.defaultSmsType = $.defaultSmsType;
+        this.deliveryStatusIamRoleArn = $.deliveryStatusIamRoleArn;
+        this.deliveryStatusSuccessSamplingRate = $.deliveryStatusSuccessSamplingRate;
+        this.monthlySpendLimit = $.monthlySpendLimit;
+        this.usageReportS3Bucket = $.usageReportS3Bucket;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SmsPreferencesState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultSenderId;
-        private @Nullable Output<String> defaultSmsType;
-        private @Nullable Output<String> deliveryStatusIamRoleArn;
-        private @Nullable Output<String> deliveryStatusSuccessSamplingRate;
-        private @Nullable Output<Integer> monthlySpendLimit;
-        private @Nullable Output<String> usageReportS3Bucket;
+        private SmsPreferencesState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SmsPreferencesState();
         }
 
         public Builder(SmsPreferencesState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultSenderId = defaults.defaultSenderId;
-    	      this.defaultSmsType = defaults.defaultSmsType;
-    	      this.deliveryStatusIamRoleArn = defaults.deliveryStatusIamRoleArn;
-    	      this.deliveryStatusSuccessSamplingRate = defaults.deliveryStatusSuccessSamplingRate;
-    	      this.monthlySpendLimit = defaults.monthlySpendLimit;
-    	      this.usageReportS3Bucket = defaults.usageReportS3Bucket;
+            $ = new SmsPreferencesState(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultSenderId(@Nullable Output<String> defaultSenderId) {
-            this.defaultSenderId = defaultSenderId;
+            $.defaultSenderId = defaultSenderId;
             return this;
         }
-        public Builder defaultSenderId(@Nullable String defaultSenderId) {
-            this.defaultSenderId = Codegen.ofNullable(defaultSenderId);
-            return this;
+
+        public Builder defaultSenderId(String defaultSenderId) {
+            return defaultSenderId(Output.of(defaultSenderId));
         }
+
         public Builder defaultSmsType(@Nullable Output<String> defaultSmsType) {
-            this.defaultSmsType = defaultSmsType;
+            $.defaultSmsType = defaultSmsType;
             return this;
         }
-        public Builder defaultSmsType(@Nullable String defaultSmsType) {
-            this.defaultSmsType = Codegen.ofNullable(defaultSmsType);
-            return this;
+
+        public Builder defaultSmsType(String defaultSmsType) {
+            return defaultSmsType(Output.of(defaultSmsType));
         }
+
         public Builder deliveryStatusIamRoleArn(@Nullable Output<String> deliveryStatusIamRoleArn) {
-            this.deliveryStatusIamRoleArn = deliveryStatusIamRoleArn;
+            $.deliveryStatusIamRoleArn = deliveryStatusIamRoleArn;
             return this;
         }
-        public Builder deliveryStatusIamRoleArn(@Nullable String deliveryStatusIamRoleArn) {
-            this.deliveryStatusIamRoleArn = Codegen.ofNullable(deliveryStatusIamRoleArn);
-            return this;
+
+        public Builder deliveryStatusIamRoleArn(String deliveryStatusIamRoleArn) {
+            return deliveryStatusIamRoleArn(Output.of(deliveryStatusIamRoleArn));
         }
+
         public Builder deliveryStatusSuccessSamplingRate(@Nullable Output<String> deliveryStatusSuccessSamplingRate) {
-            this.deliveryStatusSuccessSamplingRate = deliveryStatusSuccessSamplingRate;
+            $.deliveryStatusSuccessSamplingRate = deliveryStatusSuccessSamplingRate;
             return this;
         }
-        public Builder deliveryStatusSuccessSamplingRate(@Nullable String deliveryStatusSuccessSamplingRate) {
-            this.deliveryStatusSuccessSamplingRate = Codegen.ofNullable(deliveryStatusSuccessSamplingRate);
-            return this;
+
+        public Builder deliveryStatusSuccessSamplingRate(String deliveryStatusSuccessSamplingRate) {
+            return deliveryStatusSuccessSamplingRate(Output.of(deliveryStatusSuccessSamplingRate));
         }
+
         public Builder monthlySpendLimit(@Nullable Output<Integer> monthlySpendLimit) {
-            this.monthlySpendLimit = monthlySpendLimit;
+            $.monthlySpendLimit = monthlySpendLimit;
             return this;
         }
-        public Builder monthlySpendLimit(@Nullable Integer monthlySpendLimit) {
-            this.monthlySpendLimit = Codegen.ofNullable(monthlySpendLimit);
-            return this;
+
+        public Builder monthlySpendLimit(Integer monthlySpendLimit) {
+            return monthlySpendLimit(Output.of(monthlySpendLimit));
         }
+
         public Builder usageReportS3Bucket(@Nullable Output<String> usageReportS3Bucket) {
-            this.usageReportS3Bucket = usageReportS3Bucket;
+            $.usageReportS3Bucket = usageReportS3Bucket;
             return this;
         }
-        public Builder usageReportS3Bucket(@Nullable String usageReportS3Bucket) {
-            this.usageReportS3Bucket = Codegen.ofNullable(usageReportS3Bucket);
-            return this;
-        }        public SmsPreferencesState build() {
-            return new SmsPreferencesState(defaultSenderId, defaultSmsType, deliveryStatusIamRoleArn, deliveryStatusSuccessSamplingRate, monthlySpendLimit, usageReportS3Bucket);
+
+        public Builder usageReportS3Bucket(String usageReportS3Bucket) {
+            return usageReportS3Bucket(Output.of(usageReportS3Bucket));
+        }
+
+        public SmsPreferencesState build() {
+            return $;
         }
     }
+
 }

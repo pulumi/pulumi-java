@@ -14,48 +14,49 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControl extends com
     public static final GetEnvironmentConfigWebServerNetworkAccessControl Empty = new GetEnvironmentConfigWebServerNetworkAccessControl();
 
     @Import(name="allowedIpRanges", required=true)
-      private final List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges;
+    private List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges;
 
     public List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges() {
         return this.allowedIpRanges;
     }
 
-    public GetEnvironmentConfigWebServerNetworkAccessControl(List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
-        this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges, "expected parameter 'allowedIpRanges' to be non-null");
-    }
+    private GetEnvironmentConfigWebServerNetworkAccessControl() {}
 
-    private GetEnvironmentConfigWebServerNetworkAccessControl() {
-        this.allowedIpRanges = List.of();
+    private GetEnvironmentConfigWebServerNetworkAccessControl(GetEnvironmentConfigWebServerNetworkAccessControl $) {
+        this.allowedIpRanges = $.allowedIpRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigWebServerNetworkAccessControl defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges;
+        private GetEnvironmentConfigWebServerNetworkAccessControl $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigWebServerNetworkAccessControl();
         }
 
         public Builder(GetEnvironmentConfigWebServerNetworkAccessControl defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIpRanges = defaults.allowedIpRanges;
+            $ = new GetEnvironmentConfigWebServerNetworkAccessControl(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIpRanges(List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
-            this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
+            $.allowedIpRanges = allowedIpRanges;
             return this;
         }
+
         public Builder allowedIpRanges(GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange... allowedIpRanges) {
             return allowedIpRanges(List.of(allowedIpRanges));
-        }        public GetEnvironmentConfigWebServerNetworkAccessControl build() {
-            return new GetEnvironmentConfigWebServerNetworkAccessControl(allowedIpRanges);
+        }
+
+        public GetEnvironmentConfigWebServerNetworkAccessControl build() {
+            $.allowedIpRanges = Objects.requireNonNull($.allowedIpRanges, "expected parameter 'allowedIpRanges' to be non-null");
+            return $;
         }
     }
+
 }

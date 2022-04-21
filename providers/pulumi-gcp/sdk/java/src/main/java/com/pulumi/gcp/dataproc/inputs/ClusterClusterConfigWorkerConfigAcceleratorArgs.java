@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ClusterClusterConfigWorkerConfigAcceleratorArgs extends com.p
      * 
      */
     @Import(name="acceleratorCount", required=true)
-      private final Output<Integer> acceleratorCount;
+    private Output<Integer> acceleratorCount;
 
     public Output<Integer> acceleratorCount() {
         return this.acceleratorCount;
@@ -31,63 +30,60 @@ public final class ClusterClusterConfigWorkerConfigAcceleratorArgs extends com.p
      * 
      */
     @Import(name="acceleratorType", required=true)
-      private final Output<String> acceleratorType;
+    private Output<String> acceleratorType;
 
     public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
 
-    public ClusterClusterConfigWorkerConfigAcceleratorArgs(
-        Output<Integer> acceleratorCount,
-        Output<String> acceleratorType) {
-        this.acceleratorCount = Objects.requireNonNull(acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
-        this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
-    }
+    private ClusterClusterConfigWorkerConfigAcceleratorArgs() {}
 
-    private ClusterClusterConfigWorkerConfigAcceleratorArgs() {
-        this.acceleratorCount = Codegen.empty();
-        this.acceleratorType = Codegen.empty();
+    private ClusterClusterConfigWorkerConfigAcceleratorArgs(ClusterClusterConfigWorkerConfigAcceleratorArgs $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorType = $.acceleratorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigWorkerConfigAcceleratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> acceleratorCount;
-        private Output<String> acceleratorType;
+        private ClusterClusterConfigWorkerConfigAcceleratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigWorkerConfigAcceleratorArgs();
         }
 
         public Builder(ClusterClusterConfigWorkerConfigAcceleratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorType = defaults.acceleratorType;
+            $ = new ClusterClusterConfigWorkerConfigAcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(Output<Integer> acceleratorCount) {
-            this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
+
         public Builder acceleratorCount(Integer acceleratorCount) {
-            this.acceleratorCount = Output.of(Objects.requireNonNull(acceleratorCount));
-            return this;
+            return acceleratorCount(Output.of(acceleratorCount));
         }
+
         public Builder acceleratorType(Output<String> acceleratorType) {
-            this.acceleratorType = Objects.requireNonNull(acceleratorType);
+            $.acceleratorType = acceleratorType;
             return this;
         }
+
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Output.of(Objects.requireNonNull(acceleratorType));
-            return this;
-        }        public ClusterClusterConfigWorkerConfigAcceleratorArgs build() {
-            return new ClusterClusterConfigWorkerConfigAcceleratorArgs(acceleratorCount, acceleratorType);
+            return acceleratorType(Output.of(acceleratorType));
+        }
+
+        public ClusterClusterConfigWorkerConfigAcceleratorArgs build() {
+            $.acceleratorCount = Objects.requireNonNull($.acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
+            $.acceleratorType = Objects.requireNonNull($.acceleratorType, "expected parameter 'acceleratorType' to be non-null");
+            return $;
         }
     }
+
 }

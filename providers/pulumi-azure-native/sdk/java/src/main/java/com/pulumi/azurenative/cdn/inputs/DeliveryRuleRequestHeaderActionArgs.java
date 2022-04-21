@@ -25,7 +25,7 @@ public final class DeliveryRuleRequestHeaderActionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,60 @@ public final class DeliveryRuleRequestHeaderActionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<HeaderActionParametersArgs> parameters;
+    private Output<HeaderActionParametersArgs> parameters;
 
     public Output<HeaderActionParametersArgs> parameters() {
         return this.parameters;
     }
 
-    public DeliveryRuleRequestHeaderActionArgs(
-        Output<String> name,
-        Output<HeaderActionParametersArgs> parameters) {
-        this.name = Codegen.stringProp("name").output().arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private DeliveryRuleRequestHeaderActionArgs() {}
 
-    private DeliveryRuleRequestHeaderActionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private DeliveryRuleRequestHeaderActionArgs(DeliveryRuleRequestHeaderActionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleRequestHeaderActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<HeaderActionParametersArgs> parameters;
+        private DeliveryRuleRequestHeaderActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleRequestHeaderActionArgs();
         }
 
         public Builder(DeliveryRuleRequestHeaderActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new DeliveryRuleRequestHeaderActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<HeaderActionParametersArgs> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(HeaderActionParametersArgs parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
-        }        public DeliveryRuleRequestHeaderActionArgs build() {
-            return new DeliveryRuleRequestHeaderActionArgs(name, parameters);
+            return parameters(Output.of(parameters));
+        }
+
+        public DeliveryRuleRequestHeaderActionArgs build() {
+            $.name = Codegen.stringProp("name").output().arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

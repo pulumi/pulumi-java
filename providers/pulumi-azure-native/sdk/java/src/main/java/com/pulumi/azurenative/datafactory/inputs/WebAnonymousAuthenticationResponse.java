@@ -24,7 +24,7 @@ public final class WebAnonymousAuthenticationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final String authenticationType;
+    private String authenticationType;
 
     public String authenticationType() {
         return this.authenticationType;
@@ -35,55 +35,52 @@ public final class WebAnonymousAuthenticationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="url", required=true)
-      private final Object url;
+    private Object url;
 
     public Object url() {
         return this.url;
     }
 
-    public WebAnonymousAuthenticationResponse(
-        String authenticationType,
-        Object url) {
-        this.authenticationType = Codegen.stringProp("authenticationType").arg(authenticationType).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private WebAnonymousAuthenticationResponse() {}
 
-    private WebAnonymousAuthenticationResponse() {
-        this.authenticationType = null;
-        this.url = null;
+    private WebAnonymousAuthenticationResponse(WebAnonymousAuthenticationResponse $) {
+        this.authenticationType = $.authenticationType;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAnonymousAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authenticationType;
-        private Object url;
+        private WebAnonymousAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAnonymousAuthenticationResponse();
         }
 
         public Builder(WebAnonymousAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.url = defaults.url;
+            $ = new WebAnonymousAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public WebAnonymousAuthenticationResponse build() {
-            return new WebAnonymousAuthenticationResponse(authenticationType, url);
+        }
+
+        public WebAnonymousAuthenticationResponse build() {
+            $.authenticationType = Codegen.stringProp("authenticationType").arg($.authenticationType).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

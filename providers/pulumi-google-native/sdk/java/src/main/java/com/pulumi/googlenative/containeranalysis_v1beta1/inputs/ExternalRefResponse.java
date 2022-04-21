@@ -21,7 +21,7 @@ public final class ExternalRefResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="category", required=true)
-      private final String category;
+    private String category;
 
     public String category() {
         return this.category;
@@ -32,7 +32,7 @@ public final class ExternalRefResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="comment", required=true)
-      private final String comment;
+    private String comment;
 
     public String comment() {
         return this.comment;
@@ -43,7 +43,7 @@ public final class ExternalRefResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locator", required=true)
-      private final String locator;
+    private String locator;
 
     public String locator() {
         return this.locator;
@@ -54,73 +54,66 @@ public final class ExternalRefResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ExternalRefResponse(
-        String category,
-        String comment,
-        String locator,
-        String type) {
-        this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
-        this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
-        this.locator = Objects.requireNonNull(locator, "expected parameter 'locator' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ExternalRefResponse() {}
 
-    private ExternalRefResponse() {
-        this.category = null;
-        this.comment = null;
-        this.locator = null;
-        this.type = null;
+    private ExternalRefResponse(ExternalRefResponse $) {
+        this.category = $.category;
+        this.comment = $.comment;
+        this.locator = $.locator;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalRefResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String category;
-        private String comment;
-        private String locator;
-        private String type;
+        private ExternalRefResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalRefResponse();
         }
 
         public Builder(ExternalRefResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.comment = defaults.comment;
-    	      this.locator = defaults.locator;
-    	      this.type = defaults.type;
+            $ = new ExternalRefResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder category(String category) {
-            this.category = Objects.requireNonNull(category);
+            $.category = category;
             return this;
         }
+
         public Builder comment(String comment) {
-            this.comment = Objects.requireNonNull(comment);
+            $.comment = comment;
             return this;
         }
+
         public Builder locator(String locator) {
-            this.locator = Objects.requireNonNull(locator);
+            $.locator = locator;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ExternalRefResponse build() {
-            return new ExternalRefResponse(category, comment, locator, type);
+        }
+
+        public ExternalRefResponse build() {
+            $.category = Objects.requireNonNull($.category, "expected parameter 'category' to be non-null");
+            $.comment = Objects.requireNonNull($.comment, "expected parameter 'comment' to be non-null");
+            $.locator = Objects.requireNonNull($.locator, "expected parameter 'locator' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

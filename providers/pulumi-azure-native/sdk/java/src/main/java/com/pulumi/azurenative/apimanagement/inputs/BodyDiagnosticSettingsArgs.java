@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BodyDiagnosticSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="bytes")
-      private final @Nullable Output<Integer> bytes;
+    private @Nullable Output<Integer> bytes;
 
-    public Output<Integer> bytes() {
-        return this.bytes == null ? Codegen.empty() : this.bytes;
+    public Optional<Output<Integer>> bytes() {
+        return Optional.ofNullable(this.bytes);
     }
 
-    public BodyDiagnosticSettingsArgs(@Nullable Output<Integer> bytes) {
-        this.bytes = bytes;
-    }
+    private BodyDiagnosticSettingsArgs() {}
 
-    private BodyDiagnosticSettingsArgs() {
-        this.bytes = Codegen.empty();
+    private BodyDiagnosticSettingsArgs(BodyDiagnosticSettingsArgs $) {
+        this.bytes = $.bytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BodyDiagnosticSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> bytes;
+        private BodyDiagnosticSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BodyDiagnosticSettingsArgs();
         }
 
         public Builder(BodyDiagnosticSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bytes = defaults.bytes;
+            $ = new BodyDiagnosticSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bytes(@Nullable Output<Integer> bytes) {
-            this.bytes = bytes;
+            $.bytes = bytes;
             return this;
         }
-        public Builder bytes(@Nullable Integer bytes) {
-            this.bytes = Codegen.ofNullable(bytes);
-            return this;
-        }        public BodyDiagnosticSettingsArgs build() {
-            return new BodyDiagnosticSettingsArgs(bytes);
+
+        public Builder bytes(Integer bytes) {
+            return bytes(Output.of(bytes));
+        }
+
+        public BodyDiagnosticSettingsArgs build() {
+            return $;
         }
     }
+
 }

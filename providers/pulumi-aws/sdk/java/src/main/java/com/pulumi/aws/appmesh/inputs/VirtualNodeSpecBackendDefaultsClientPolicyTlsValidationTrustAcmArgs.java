@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
      * 
      */
     @Import(name="certificateAuthorityArns", required=true)
-      private final Output<List<String>> certificateAuthorityArns;
+    private Output<List<String>> certificateAuthorityArns;
 
     public Output<List<String>> certificateAuthorityArns() {
         return this.certificateAuthorityArns;
     }
 
-    public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs(Output<List<String>> certificateAuthorityArns) {
-        this.certificateAuthorityArns = Objects.requireNonNull(certificateAuthorityArns, "expected parameter 'certificateAuthorityArns' to be non-null");
-    }
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs() {}
 
-    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs() {
-        this.certificateAuthorityArns = Codegen.empty();
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs $) {
+        this.certificateAuthorityArns = $.certificateAuthorityArns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> certificateAuthorityArns;
+        private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs();
         }
 
         public Builder(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthorityArns = defaults.certificateAuthorityArns;
+            $ = new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthorityArns(Output<List<String>> certificateAuthorityArns) {
-            this.certificateAuthorityArns = Objects.requireNonNull(certificateAuthorityArns);
+            $.certificateAuthorityArns = certificateAuthorityArns;
             return this;
         }
+
         public Builder certificateAuthorityArns(List<String> certificateAuthorityArns) {
-            this.certificateAuthorityArns = Output.of(Objects.requireNonNull(certificateAuthorityArns));
-            return this;
+            return certificateAuthorityArns(Output.of(certificateAuthorityArns));
         }
+
         public Builder certificateAuthorityArns(String... certificateAuthorityArns) {
             return certificateAuthorityArns(List.of(certificateAuthorityArns));
-        }        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs build() {
-            return new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs(certificateAuthorityArns);
+        }
+
+        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs build() {
+            $.certificateAuthorityArns = Objects.requireNonNull($.certificateAuthorityArns, "expected parameter 'certificateAuthorityArns' to be non-null");
+            return $;
         }
     }
+
 }

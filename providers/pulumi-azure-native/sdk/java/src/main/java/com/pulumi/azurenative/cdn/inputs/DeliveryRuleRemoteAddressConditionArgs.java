@@ -25,7 +25,7 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,60 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends com.pulumi.res
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<RemoteAddressMatchConditionParametersArgs> parameters;
+    private Output<RemoteAddressMatchConditionParametersArgs> parameters;
 
     public Output<RemoteAddressMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 
-    public DeliveryRuleRemoteAddressConditionArgs(
-        Output<String> name,
-        Output<RemoteAddressMatchConditionParametersArgs> parameters) {
-        this.name = Codegen.stringProp("name").output().arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private DeliveryRuleRemoteAddressConditionArgs() {}
 
-    private DeliveryRuleRemoteAddressConditionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private DeliveryRuleRemoteAddressConditionArgs(DeliveryRuleRemoteAddressConditionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleRemoteAddressConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<RemoteAddressMatchConditionParametersArgs> parameters;
+        private DeliveryRuleRemoteAddressConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleRemoteAddressConditionArgs();
         }
 
         public Builder(DeliveryRuleRemoteAddressConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new DeliveryRuleRemoteAddressConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<RemoteAddressMatchConditionParametersArgs> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(RemoteAddressMatchConditionParametersArgs parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
-        }        public DeliveryRuleRemoteAddressConditionArgs build() {
-            return new DeliveryRuleRemoteAddressConditionArgs(name, parameters);
+            return parameters(Output.of(parameters));
+        }
+
+        public DeliveryRuleRemoteAddressConditionArgs build() {
+            $.name = Codegen.stringProp("name").output().arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

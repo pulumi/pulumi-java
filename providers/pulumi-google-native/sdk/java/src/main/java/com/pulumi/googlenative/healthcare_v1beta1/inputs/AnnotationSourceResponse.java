@@ -21,45 +21,45 @@ public final class AnnotationSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cloudHealthcareSource", required=true)
-      private final CloudHealthcareSourceResponse cloudHealthcareSource;
+    private CloudHealthcareSourceResponse cloudHealthcareSource;
 
     public CloudHealthcareSourceResponse cloudHealthcareSource() {
         return this.cloudHealthcareSource;
     }
 
-    public AnnotationSourceResponse(CloudHealthcareSourceResponse cloudHealthcareSource) {
-        this.cloudHealthcareSource = Objects.requireNonNull(cloudHealthcareSource, "expected parameter 'cloudHealthcareSource' to be non-null");
-    }
+    private AnnotationSourceResponse() {}
 
-    private AnnotationSourceResponse() {
-        this.cloudHealthcareSource = null;
+    private AnnotationSourceResponse(AnnotationSourceResponse $) {
+        this.cloudHealthcareSource = $.cloudHealthcareSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnnotationSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CloudHealthcareSourceResponse cloudHealthcareSource;
+        private AnnotationSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnnotationSourceResponse();
         }
 
         public Builder(AnnotationSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudHealthcareSource = defaults.cloudHealthcareSource;
+            $ = new AnnotationSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudHealthcareSource(CloudHealthcareSourceResponse cloudHealthcareSource) {
-            this.cloudHealthcareSource = Objects.requireNonNull(cloudHealthcareSource);
+            $.cloudHealthcareSource = cloudHealthcareSource;
             return this;
-        }        public AnnotationSourceResponse build() {
-            return new AnnotationSourceResponse(cloudHealthcareSource);
+        }
+
+        public AnnotationSourceResponse build() {
+            $.cloudHealthcareSource = Objects.requireNonNull($.cloudHealthcareSource, "expected parameter 'cloudHealthcareSource' to be non-null");
+            return $;
         }
     }
+
 }

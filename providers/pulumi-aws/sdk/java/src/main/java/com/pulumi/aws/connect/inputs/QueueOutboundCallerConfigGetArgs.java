@@ -5,9 +5,9 @@ package com.pulumi.aws.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class QueueOutboundCallerConfigGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="outboundCallerIdName")
-      private final @Nullable Output<String> outboundCallerIdName;
+    private @Nullable Output<String> outboundCallerIdName;
 
-    public Output<String> outboundCallerIdName() {
-        return this.outboundCallerIdName == null ? Codegen.empty() : this.outboundCallerIdName;
+    public Optional<Output<String>> outboundCallerIdName() {
+        return Optional.ofNullable(this.outboundCallerIdName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class QueueOutboundCallerConfigGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="outboundCallerIdNumberId")
-      private final @Nullable Output<String> outboundCallerIdNumberId;
+    private @Nullable Output<String> outboundCallerIdNumberId;
 
-    public Output<String> outboundCallerIdNumberId() {
-        return this.outboundCallerIdNumberId == null ? Codegen.empty() : this.outboundCallerIdNumberId;
+    public Optional<Output<String>> outboundCallerIdNumberId() {
+        return Optional.ofNullable(this.outboundCallerIdNumberId);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class QueueOutboundCallerConfigGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="outboundFlowId")
-      private final @Nullable Output<String> outboundFlowId;
+    private @Nullable Output<String> outboundFlowId;
 
-    public Output<String> outboundFlowId() {
-        return this.outboundFlowId == null ? Codegen.empty() : this.outboundFlowId;
+    public Optional<Output<String>> outboundFlowId() {
+        return Optional.ofNullable(this.outboundFlowId);
     }
 
-    public QueueOutboundCallerConfigGetArgs(
-        @Nullable Output<String> outboundCallerIdName,
-        @Nullable Output<String> outboundCallerIdNumberId,
-        @Nullable Output<String> outboundFlowId) {
-        this.outboundCallerIdName = outboundCallerIdName;
-        this.outboundCallerIdNumberId = outboundCallerIdNumberId;
-        this.outboundFlowId = outboundFlowId;
-    }
+    private QueueOutboundCallerConfigGetArgs() {}
 
-    private QueueOutboundCallerConfigGetArgs() {
-        this.outboundCallerIdName = Codegen.empty();
-        this.outboundCallerIdNumberId = Codegen.empty();
-        this.outboundFlowId = Codegen.empty();
+    private QueueOutboundCallerConfigGetArgs(QueueOutboundCallerConfigGetArgs $) {
+        this.outboundCallerIdName = $.outboundCallerIdName;
+        this.outboundCallerIdNumberId = $.outboundCallerIdNumberId;
+        this.outboundFlowId = $.outboundFlowId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueOutboundCallerConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> outboundCallerIdName;
-        private @Nullable Output<String> outboundCallerIdNumberId;
-        private @Nullable Output<String> outboundFlowId;
+        private QueueOutboundCallerConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueOutboundCallerConfigGetArgs();
         }
 
         public Builder(QueueOutboundCallerConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.outboundCallerIdName = defaults.outboundCallerIdName;
-    	      this.outboundCallerIdNumberId = defaults.outboundCallerIdNumberId;
-    	      this.outboundFlowId = defaults.outboundFlowId;
+            $ = new QueueOutboundCallerConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder outboundCallerIdName(@Nullable Output<String> outboundCallerIdName) {
-            this.outboundCallerIdName = outboundCallerIdName;
+            $.outboundCallerIdName = outboundCallerIdName;
             return this;
         }
-        public Builder outboundCallerIdName(@Nullable String outboundCallerIdName) {
-            this.outboundCallerIdName = Codegen.ofNullable(outboundCallerIdName);
-            return this;
+
+        public Builder outboundCallerIdName(String outboundCallerIdName) {
+            return outboundCallerIdName(Output.of(outboundCallerIdName));
         }
+
         public Builder outboundCallerIdNumberId(@Nullable Output<String> outboundCallerIdNumberId) {
-            this.outboundCallerIdNumberId = outboundCallerIdNumberId;
+            $.outboundCallerIdNumberId = outboundCallerIdNumberId;
             return this;
         }
-        public Builder outboundCallerIdNumberId(@Nullable String outboundCallerIdNumberId) {
-            this.outboundCallerIdNumberId = Codegen.ofNullable(outboundCallerIdNumberId);
-            return this;
+
+        public Builder outboundCallerIdNumberId(String outboundCallerIdNumberId) {
+            return outboundCallerIdNumberId(Output.of(outboundCallerIdNumberId));
         }
+
         public Builder outboundFlowId(@Nullable Output<String> outboundFlowId) {
-            this.outboundFlowId = outboundFlowId;
+            $.outboundFlowId = outboundFlowId;
             return this;
         }
-        public Builder outboundFlowId(@Nullable String outboundFlowId) {
-            this.outboundFlowId = Codegen.ofNullable(outboundFlowId);
-            return this;
-        }        public QueueOutboundCallerConfigGetArgs build() {
-            return new QueueOutboundCallerConfigGetArgs(outboundCallerIdName, outboundCallerIdNumberId, outboundFlowId);
+
+        public Builder outboundFlowId(String outboundFlowId) {
+            return outboundFlowId(Output.of(outboundFlowId));
+        }
+
+        public QueueOutboundCallerConfigGetArgs build() {
+            return $;
         }
     }
+
 }

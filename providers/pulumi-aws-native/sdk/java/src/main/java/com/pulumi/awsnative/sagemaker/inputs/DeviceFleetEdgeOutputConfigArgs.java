@@ -5,9 +5,9 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DeviceFleetEdgeOutputConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class DeviceFleetEdgeOutputConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="s3OutputLocation", required=true)
-      private final Output<String> s3OutputLocation;
+    private Output<String> s3OutputLocation;
 
     public Output<String> s3OutputLocation() {
         return this.s3OutputLocation;
     }
 
-    public DeviceFleetEdgeOutputConfigArgs(
-        @Nullable Output<String> kmsKeyId,
-        Output<String> s3OutputLocation) {
-        this.kmsKeyId = kmsKeyId;
-        this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation, "expected parameter 's3OutputLocation' to be non-null");
-    }
+    private DeviceFleetEdgeOutputConfigArgs() {}
 
-    private DeviceFleetEdgeOutputConfigArgs() {
-        this.kmsKeyId = Codegen.empty();
-        this.s3OutputLocation = Codegen.empty();
+    private DeviceFleetEdgeOutputConfigArgs(DeviceFleetEdgeOutputConfigArgs $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.s3OutputLocation = $.s3OutputLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceFleetEdgeOutputConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyId;
-        private Output<String> s3OutputLocation;
+        private DeviceFleetEdgeOutputConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceFleetEdgeOutputConfigArgs();
         }
 
         public Builder(DeviceFleetEdgeOutputConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.s3OutputLocation = defaults.s3OutputLocation;
+            $ = new DeviceFleetEdgeOutputConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder s3OutputLocation(Output<String> s3OutputLocation) {
-            this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
+            $.s3OutputLocation = s3OutputLocation;
             return this;
         }
+
         public Builder s3OutputLocation(String s3OutputLocation) {
-            this.s3OutputLocation = Output.of(Objects.requireNonNull(s3OutputLocation));
-            return this;
-        }        public DeviceFleetEdgeOutputConfigArgs build() {
-            return new DeviceFleetEdgeOutputConfigArgs(kmsKeyId, s3OutputLocation);
+            return s3OutputLocation(Output.of(s3OutputLocation));
+        }
+
+        public DeviceFleetEdgeOutputConfigArgs build() {
+            $.s3OutputLocation = Objects.requireNonNull($.s3OutputLocation, "expected parameter 's3OutputLocation' to be non-null");
+            return $;
         }
     }
+
 }

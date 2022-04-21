@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerSecrets")
-      private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
+    private @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
-    public Output<List<CustomerSecretArgs>> customerSecrets() {
-        return this.customerSecrets == null ? Codegen.empty() : this.customerSecrets;
+    public Optional<Output<List<CustomerSecretArgs>>> customerSecrets() {
+        return Optional.ofNullable(this.customerSecrets);
     }
 
     /**
@@ -38,7 +39,7 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataManagerName", required=true)
-      private final Output<String> dataManagerName;
+    private Output<String> dataManagerName;
 
     public Output<String> dataManagerName() {
         return this.dataManagerName;
@@ -49,10 +50,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataServiceInput")
-      private final @Nullable Output<Object> dataServiceInput;
+    private @Nullable Output<Object> dataServiceInput;
 
-    public Output<Object> dataServiceInput() {
-        return this.dataServiceInput == null ? Codegen.empty() : this.dataServiceInput;
+    public Optional<Output<Object>> dataServiceInput() {
+        return Optional.ofNullable(this.dataServiceInput);
     }
 
     /**
@@ -60,7 +61,7 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataServiceName", required=true)
-      private final Output<String> dataServiceName;
+    private Output<String> dataServiceName;
 
     public Output<String> dataServiceName() {
         return this.dataServiceName;
@@ -71,7 +72,7 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSinkId", required=true)
-      private final Output<String> dataSinkId;
+    private Output<String> dataSinkId;
 
     public Output<String> dataSinkId() {
         return this.dataSinkId;
@@ -82,7 +83,7 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSourceId", required=true)
-      private final Output<String> dataSourceId;
+    private Output<String> dataSourceId;
 
     public Output<String> dataSourceId() {
         return this.dataSourceId;
@@ -93,10 +94,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobDefinitionName")
-      private final @Nullable Output<String> jobDefinitionName;
+    private @Nullable Output<String> jobDefinitionName;
 
-    public Output<String> jobDefinitionName() {
-        return this.jobDefinitionName == null ? Codegen.empty() : this.jobDefinitionName;
+    public Optional<Output<String>> jobDefinitionName() {
+        return Optional.ofNullable(this.jobDefinitionName);
     }
 
     /**
@@ -104,10 +105,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedTime")
-      private final @Nullable Output<String> lastModifiedTime;
+    private @Nullable Output<String> lastModifiedTime;
 
-    public Output<String> lastModifiedTime() {
-        return this.lastModifiedTime == null ? Codegen.empty() : this.lastModifiedTime;
+    public Optional<Output<String>> lastModifiedTime() {
+        return Optional.ofNullable(this.lastModifiedTime);
     }
 
     /**
@@ -115,7 +116,7 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -126,10 +127,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runLocation")
-      private final @Nullable Output<RunLocation> runLocation;
+    private @Nullable Output<RunLocation> runLocation;
 
-    public Output<RunLocation> runLocation() {
-        return this.runLocation == null ? Codegen.empty() : this.runLocation;
+    public Optional<Output<RunLocation>> runLocation() {
+        return Optional.ofNullable(this.runLocation);
     }
 
     /**
@@ -137,10 +138,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedules")
-      private final @Nullable Output<List<ScheduleArgs>> schedules;
+    private @Nullable Output<List<ScheduleArgs>> schedules;
 
-    public Output<List<ScheduleArgs>> schedules() {
-        return this.schedules == null ? Codegen.empty() : this.schedules;
+    public Optional<Output<List<ScheduleArgs>>> schedules() {
+        return Optional.ofNullable(this.schedules);
     }
 
     /**
@@ -148,7 +149,7 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final Output<State> state;
+    private Output<State> state;
 
     public Output<State> state() {
         return this.state;
@@ -159,212 +160,183 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userConfirmation")
-      private final @Nullable Output<UserConfirmation> userConfirmation;
+    private @Nullable Output<UserConfirmation> userConfirmation;
 
-    public Output<UserConfirmation> userConfirmation() {
-        return this.userConfirmation == null ? Codegen.empty() : this.userConfirmation;
+    public Optional<Output<UserConfirmation>> userConfirmation() {
+        return Optional.ofNullable(this.userConfirmation);
     }
 
-    public JobDefinitionArgs(
-        @Nullable Output<List<CustomerSecretArgs>> customerSecrets,
-        Output<String> dataManagerName,
-        @Nullable Output<Object> dataServiceInput,
-        Output<String> dataServiceName,
-        Output<String> dataSinkId,
-        Output<String> dataSourceId,
-        @Nullable Output<String> jobDefinitionName,
-        @Nullable Output<String> lastModifiedTime,
-        Output<String> resourceGroupName,
-        @Nullable Output<RunLocation> runLocation,
-        @Nullable Output<List<ScheduleArgs>> schedules,
-        Output<State> state,
-        @Nullable Output<UserConfirmation> userConfirmation) {
-        this.customerSecrets = customerSecrets;
-        this.dataManagerName = Objects.requireNonNull(dataManagerName, "expected parameter 'dataManagerName' to be non-null");
-        this.dataServiceInput = dataServiceInput;
-        this.dataServiceName = Objects.requireNonNull(dataServiceName, "expected parameter 'dataServiceName' to be non-null");
-        this.dataSinkId = Objects.requireNonNull(dataSinkId, "expected parameter 'dataSinkId' to be non-null");
-        this.dataSourceId = Objects.requireNonNull(dataSourceId, "expected parameter 'dataSourceId' to be non-null");
-        this.jobDefinitionName = jobDefinitionName;
-        this.lastModifiedTime = lastModifiedTime;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.runLocation = runLocation;
-        this.schedules = schedules;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.userConfirmation = Codegen.objectProp("userConfirmation", UserConfirmation.class).output().arg(userConfirmation).def(UserConfirmation.NotRequired).getNullable();
-    }
+    private JobDefinitionArgs() {}
 
-    private JobDefinitionArgs() {
-        this.customerSecrets = Codegen.empty();
-        this.dataManagerName = Codegen.empty();
-        this.dataServiceInput = Codegen.empty();
-        this.dataServiceName = Codegen.empty();
-        this.dataSinkId = Codegen.empty();
-        this.dataSourceId = Codegen.empty();
-        this.jobDefinitionName = Codegen.empty();
-        this.lastModifiedTime = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.runLocation = Codegen.empty();
-        this.schedules = Codegen.empty();
-        this.state = Codegen.empty();
-        this.userConfirmation = Codegen.empty();
+    private JobDefinitionArgs(JobDefinitionArgs $) {
+        this.customerSecrets = $.customerSecrets;
+        this.dataManagerName = $.dataManagerName;
+        this.dataServiceInput = $.dataServiceInput;
+        this.dataServiceName = $.dataServiceName;
+        this.dataSinkId = $.dataSinkId;
+        this.dataSourceId = $.dataSourceId;
+        this.jobDefinitionName = $.jobDefinitionName;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.resourceGroupName = $.resourceGroupName;
+        this.runLocation = $.runLocation;
+        this.schedules = $.schedules;
+        this.state = $.state;
+        this.userConfirmation = $.userConfirmation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
-        private Output<String> dataManagerName;
-        private @Nullable Output<Object> dataServiceInput;
-        private Output<String> dataServiceName;
-        private Output<String> dataSinkId;
-        private Output<String> dataSourceId;
-        private @Nullable Output<String> jobDefinitionName;
-        private @Nullable Output<String> lastModifiedTime;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<RunLocation> runLocation;
-        private @Nullable Output<List<ScheduleArgs>> schedules;
-        private Output<State> state;
-        private @Nullable Output<UserConfirmation> userConfirmation;
+        private JobDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDefinitionArgs();
         }
 
         public Builder(JobDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerSecrets = defaults.customerSecrets;
-    	      this.dataManagerName = defaults.dataManagerName;
-    	      this.dataServiceInput = defaults.dataServiceInput;
-    	      this.dataServiceName = defaults.dataServiceName;
-    	      this.dataSinkId = defaults.dataSinkId;
-    	      this.dataSourceId = defaults.dataSourceId;
-    	      this.jobDefinitionName = defaults.jobDefinitionName;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.runLocation = defaults.runLocation;
-    	      this.schedules = defaults.schedules;
-    	      this.state = defaults.state;
-    	      this.userConfirmation = defaults.userConfirmation;
+            $ = new JobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerSecrets(@Nullable Output<List<CustomerSecretArgs>> customerSecrets) {
-            this.customerSecrets = customerSecrets;
+            $.customerSecrets = customerSecrets;
             return this;
         }
-        public Builder customerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
-            this.customerSecrets = Codegen.ofNullable(customerSecrets);
-            return this;
+
+        public Builder customerSecrets(List<CustomerSecretArgs> customerSecrets) {
+            return customerSecrets(Output.of(customerSecrets));
         }
+
         public Builder customerSecrets(CustomerSecretArgs... customerSecrets) {
             return customerSecrets(List.of(customerSecrets));
         }
+
         public Builder dataManagerName(Output<String> dataManagerName) {
-            this.dataManagerName = Objects.requireNonNull(dataManagerName);
+            $.dataManagerName = dataManagerName;
             return this;
         }
+
         public Builder dataManagerName(String dataManagerName) {
-            this.dataManagerName = Output.of(Objects.requireNonNull(dataManagerName));
-            return this;
+            return dataManagerName(Output.of(dataManagerName));
         }
+
         public Builder dataServiceInput(@Nullable Output<Object> dataServiceInput) {
-            this.dataServiceInput = dataServiceInput;
+            $.dataServiceInput = dataServiceInput;
             return this;
         }
-        public Builder dataServiceInput(@Nullable Object dataServiceInput) {
-            this.dataServiceInput = Codegen.ofNullable(dataServiceInput);
-            return this;
+
+        public Builder dataServiceInput(Object dataServiceInput) {
+            return dataServiceInput(Output.of(dataServiceInput));
         }
+
         public Builder dataServiceName(Output<String> dataServiceName) {
-            this.dataServiceName = Objects.requireNonNull(dataServiceName);
+            $.dataServiceName = dataServiceName;
             return this;
         }
+
         public Builder dataServiceName(String dataServiceName) {
-            this.dataServiceName = Output.of(Objects.requireNonNull(dataServiceName));
-            return this;
+            return dataServiceName(Output.of(dataServiceName));
         }
+
         public Builder dataSinkId(Output<String> dataSinkId) {
-            this.dataSinkId = Objects.requireNonNull(dataSinkId);
+            $.dataSinkId = dataSinkId;
             return this;
         }
+
         public Builder dataSinkId(String dataSinkId) {
-            this.dataSinkId = Output.of(Objects.requireNonNull(dataSinkId));
-            return this;
+            return dataSinkId(Output.of(dataSinkId));
         }
+
         public Builder dataSourceId(Output<String> dataSourceId) {
-            this.dataSourceId = Objects.requireNonNull(dataSourceId);
+            $.dataSourceId = dataSourceId;
             return this;
         }
+
         public Builder dataSourceId(String dataSourceId) {
-            this.dataSourceId = Output.of(Objects.requireNonNull(dataSourceId));
-            return this;
+            return dataSourceId(Output.of(dataSourceId));
         }
+
         public Builder jobDefinitionName(@Nullable Output<String> jobDefinitionName) {
-            this.jobDefinitionName = jobDefinitionName;
+            $.jobDefinitionName = jobDefinitionName;
             return this;
         }
-        public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
-            this.jobDefinitionName = Codegen.ofNullable(jobDefinitionName);
-            return this;
+
+        public Builder jobDefinitionName(String jobDefinitionName) {
+            return jobDefinitionName(Output.of(jobDefinitionName));
         }
+
         public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
-            this.lastModifiedTime = lastModifiedTime;
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
-        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
-            this.lastModifiedTime = Codegen.ofNullable(lastModifiedTime);
-            return this;
+
+        public Builder lastModifiedTime(String lastModifiedTime) {
+            return lastModifiedTime(Output.of(lastModifiedTime));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder runLocation(@Nullable Output<RunLocation> runLocation) {
-            this.runLocation = runLocation;
+            $.runLocation = runLocation;
             return this;
         }
-        public Builder runLocation(@Nullable RunLocation runLocation) {
-            this.runLocation = Codegen.ofNullable(runLocation);
-            return this;
+
+        public Builder runLocation(RunLocation runLocation) {
+            return runLocation(Output.of(runLocation));
         }
+
         public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
-            this.schedules = schedules;
+            $.schedules = schedules;
             return this;
         }
-        public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
-            this.schedules = Codegen.ofNullable(schedules);
-            return this;
+
+        public Builder schedules(List<ScheduleArgs> schedules) {
+            return schedules(Output.of(schedules));
         }
+
         public Builder schedules(ScheduleArgs... schedules) {
             return schedules(List.of(schedules));
         }
+
         public Builder state(Output<State> state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder state(State state) {
-            this.state = Output.of(Objects.requireNonNull(state));
-            return this;
+            return state(Output.of(state));
         }
+
         public Builder userConfirmation(@Nullable Output<UserConfirmation> userConfirmation) {
-            this.userConfirmation = userConfirmation;
+            $.userConfirmation = userConfirmation;
             return this;
         }
-        public Builder userConfirmation(@Nullable UserConfirmation userConfirmation) {
-            this.userConfirmation = Codegen.ofNullable(userConfirmation);
-            return this;
-        }        public JobDefinitionArgs build() {
-            return new JobDefinitionArgs(customerSecrets, dataManagerName, dataServiceInput, dataServiceName, dataSinkId, dataSourceId, jobDefinitionName, lastModifiedTime, resourceGroupName, runLocation, schedules, state, userConfirmation);
+
+        public Builder userConfirmation(UserConfirmation userConfirmation) {
+            return userConfirmation(Output.of(userConfirmation));
+        }
+
+        public JobDefinitionArgs build() {
+            $.dataManagerName = Objects.requireNonNull($.dataManagerName, "expected parameter 'dataManagerName' to be non-null");
+            $.dataServiceName = Objects.requireNonNull($.dataServiceName, "expected parameter 'dataServiceName' to be non-null");
+            $.dataSinkId = Objects.requireNonNull($.dataSinkId, "expected parameter 'dataSinkId' to be non-null");
+            $.dataSourceId = Objects.requireNonNull($.dataSourceId, "expected parameter 'dataSourceId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.userConfirmation = Codegen.objectProp("userConfirmation", UserConfirmation.class).output().arg($.userConfirmation).def(UserConfirmation.NotRequired).getNullable();
+            return $;
         }
     }
+
 }

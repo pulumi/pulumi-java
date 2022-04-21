@@ -23,10 +23,10 @@ public final class ContentHashResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="algorithm")
-      private final @Nullable String algorithm;
+    private @Nullable String algorithm;
 
     public Optional<String> algorithm() {
-        return this.algorithm == null ? Optional.empty() : Optional.ofNullable(this.algorithm);
+        return Optional.ofNullable(this.algorithm);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ContentHashResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ContentHashResponse(
-        @Nullable String algorithm,
-        @Nullable String value) {
-        this.algorithm = algorithm;
-        this.value = value;
-    }
+    private ContentHashResponse() {}
 
-    private ContentHashResponse() {
-        this.algorithm = null;
-        this.value = null;
+    private ContentHashResponse(ContentHashResponse $) {
+        this.algorithm = $.algorithm;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentHashResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String algorithm;
-        private @Nullable String value;
+        private ContentHashResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentHashResponse();
         }
 
         public Builder(ContentHashResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.value = defaults.value;
+            $ = new ContentHashResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(@Nullable String algorithm) {
-            this.algorithm = algorithm;
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ContentHashResponse build() {
-            return new ContentHashResponse(algorithm, value);
+        }
+
+        public ContentHashResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,49 +22,48 @@ public final class CustomServiceTelemetryArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
-    public CustomServiceTelemetryArgs(@Nullable Output<String> resourceName) {
-        this.resourceName = resourceName;
-    }
+    private CustomServiceTelemetryArgs() {}
 
-    private CustomServiceTelemetryArgs() {
-        this.resourceName = Codegen.empty();
+    private CustomServiceTelemetryArgs(CustomServiceTelemetryArgs $) {
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomServiceTelemetryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceName;
+        private CustomServiceTelemetryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomServiceTelemetryArgs();
         }
 
         public Builder(CustomServiceTelemetryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceName = defaults.resourceName;
+            $ = new CustomServiceTelemetryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
-        }        public CustomServiceTelemetryArgs build() {
-            return new CustomServiceTelemetryArgs(resourceName);
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
+        }
+
+        public CustomServiceTelemetryArgs build() {
+            return $;
         }
     }
+
 }

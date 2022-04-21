@@ -16,62 +16,57 @@ public final class IndexUserTokenConfiguration extends com.pulumi.resources.Invo
     public static final IndexUserTokenConfiguration Empty = new IndexUserTokenConfiguration();
 
     @Import(name="jsonTokenTypeConfiguration")
-      private final @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration;
+    private @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration;
 
     public Optional<IndexJsonTokenTypeConfiguration> jsonTokenTypeConfiguration() {
-        return this.jsonTokenTypeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.jsonTokenTypeConfiguration);
+        return Optional.ofNullable(this.jsonTokenTypeConfiguration);
     }
 
     @Import(name="jwtTokenTypeConfiguration")
-      private final @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration;
+    private @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration;
 
     public Optional<IndexJwtTokenTypeConfiguration> jwtTokenTypeConfiguration() {
-        return this.jwtTokenTypeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.jwtTokenTypeConfiguration);
+        return Optional.ofNullable(this.jwtTokenTypeConfiguration);
     }
 
-    public IndexUserTokenConfiguration(
-        @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration,
-        @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration) {
-        this.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
-        this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
-    }
+    private IndexUserTokenConfiguration() {}
 
-    private IndexUserTokenConfiguration() {
-        this.jsonTokenTypeConfiguration = null;
-        this.jwtTokenTypeConfiguration = null;
+    private IndexUserTokenConfiguration(IndexUserTokenConfiguration $) {
+        this.jsonTokenTypeConfiguration = $.jsonTokenTypeConfiguration;
+        this.jwtTokenTypeConfiguration = $.jwtTokenTypeConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexUserTokenConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration;
-        private @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration;
+        private IndexUserTokenConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexUserTokenConfiguration();
         }
 
         public Builder(IndexUserTokenConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jsonTokenTypeConfiguration = defaults.jsonTokenTypeConfiguration;
-    	      this.jwtTokenTypeConfiguration = defaults.jwtTokenTypeConfiguration;
+            $ = new IndexUserTokenConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder jsonTokenTypeConfiguration(@Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration) {
-            this.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
+            $.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
             return this;
         }
+
         public Builder jwtTokenTypeConfiguration(@Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration) {
-            this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
+            $.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
             return this;
-        }        public IndexUserTokenConfiguration build() {
-            return new IndexUserTokenConfiguration(jsonTokenTypeConfiguration, jwtTokenTypeConfiguration);
+        }
+
+        public IndexUserTokenConfiguration build() {
+            return $;
         }
     }
+
 }

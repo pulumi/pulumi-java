@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="args", required=true)
-      private final List<String> args;
+    private List<String> args;
 
     public List<String> args() {
         return this.args;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="command", required=true)
-      private final List<String> command;
+    private List<String> command;
 
     public List<String> command() {
         return this.command;
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="env", required=true)
-      private final List<GoogleCloudMlV1__EnvVarResponse> env;
+    private List<GoogleCloudMlV1__EnvVarResponse> env;
 
     public List<GoogleCloudMlV1__EnvVarResponse> env() {
         return this.env;
@@ -57,7 +57,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="image", required=true)
-      private final String image;
+    private String image;
 
     public String image() {
         return this.image;
@@ -68,94 +68,89 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="ports", required=true)
-      private final List<GoogleCloudMlV1__ContainerPortResponse> ports;
+    private List<GoogleCloudMlV1__ContainerPortResponse> ports;
 
     public List<GoogleCloudMlV1__ContainerPortResponse> ports() {
         return this.ports;
     }
 
-    public GoogleCloudMlV1__ContainerSpecResponse(
-        List<String> args,
-        List<String> command,
-        List<GoogleCloudMlV1__EnvVarResponse> env,
-        String image,
-        List<GoogleCloudMlV1__ContainerPortResponse> ports) {
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.env = Objects.requireNonNull(env, "expected parameter 'env' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-    }
+    private GoogleCloudMlV1__ContainerSpecResponse() {}
 
-    private GoogleCloudMlV1__ContainerSpecResponse() {
-        this.args = List.of();
-        this.command = List.of();
-        this.env = List.of();
-        this.image = null;
-        this.ports = List.of();
+    private GoogleCloudMlV1__ContainerSpecResponse(GoogleCloudMlV1__ContainerSpecResponse $) {
+        this.args = $.args;
+        this.command = $.command;
+        this.env = $.env;
+        this.image = $.image;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__ContainerSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> args;
-        private List<String> command;
-        private List<GoogleCloudMlV1__EnvVarResponse> env;
-        private String image;
-        private List<GoogleCloudMlV1__ContainerPortResponse> ports;
+        private GoogleCloudMlV1__ContainerSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__ContainerSpecResponse();
         }
 
         public Builder(GoogleCloudMlV1__ContainerSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.command = defaults.command;
-    	      this.env = defaults.env;
-    	      this.image = defaults.image;
-    	      this.ports = defaults.ports;
+            $ = new GoogleCloudMlV1__ContainerSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder args(List<String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder command(List<String> command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder env(List<GoogleCloudMlV1__EnvVarResponse> env) {
-            this.env = Objects.requireNonNull(env);
+            $.env = env;
             return this;
         }
+
         public Builder env(GoogleCloudMlV1__EnvVarResponse... env) {
             return env(List.of(env));
         }
+
         public Builder image(String image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder ports(List<GoogleCloudMlV1__ContainerPortResponse> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(GoogleCloudMlV1__ContainerPortResponse... ports) {
             return ports(List.of(ports));
-        }        public GoogleCloudMlV1__ContainerSpecResponse build() {
-            return new GoogleCloudMlV1__ContainerSpecResponse(args, command, env, image, ports);
+        }
+
+        public GoogleCloudMlV1__ContainerSpecResponse build() {
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            $.env = Objects.requireNonNull($.env, "expected parameter 'env' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

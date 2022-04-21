@@ -5,13 +5,13 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.AccessConfigNetworkTier;
 import com.pulumi.googlenative.compute_alpha.enums.AccessConfigType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalIpv6")
-      private final @Nullable Output<String> externalIpv6;
+    private @Nullable Output<String> externalIpv6;
 
-    public Output<String> externalIpv6() {
-        return this.externalIpv6 == null ? Codegen.empty() : this.externalIpv6;
+    public Optional<Output<String>> externalIpv6() {
+        return Optional.ofNullable(this.externalIpv6);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalIpv6PrefixLength")
-      private final @Nullable Output<Integer> externalIpv6PrefixLength;
+    private @Nullable Output<Integer> externalIpv6PrefixLength;
 
-    public Output<Integer> externalIpv6PrefixLength() {
-        return this.externalIpv6PrefixLength == null ? Codegen.empty() : this.externalIpv6PrefixLength;
+    public Optional<Output<Integer>> externalIpv6PrefixLength() {
+        return Optional.ofNullable(this.externalIpv6PrefixLength);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="natIP")
-      private final @Nullable Output<String> natIP;
+    private @Nullable Output<String> natIP;
 
-    public Output<String> natIP() {
-        return this.natIP == null ? Codegen.empty() : this.natIP;
+    public Optional<Output<String>> natIP() {
+        return Optional.ofNullable(this.natIP);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkTier")
-      private final @Nullable Output<AccessConfigNetworkTier> networkTier;
+    private @Nullable Output<AccessConfigNetworkTier> networkTier;
 
-    public Output<AccessConfigNetworkTier> networkTier() {
-        return this.networkTier == null ? Codegen.empty() : this.networkTier;
+    public Optional<Output<AccessConfigNetworkTier>> networkTier() {
+        return Optional.ofNullable(this.networkTier);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicPtrDomainName")
-      private final @Nullable Output<String> publicPtrDomainName;
+    private @Nullable Output<String> publicPtrDomainName;
 
-    public Output<String> publicPtrDomainName() {
-        return this.publicPtrDomainName == null ? Codegen.empty() : this.publicPtrDomainName;
+    public Optional<Output<String>> publicPtrDomainName() {
+        return Optional.ofNullable(this.publicPtrDomainName);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="setPublicDns")
-      private final @Nullable Output<Boolean> setPublicDns;
+    private @Nullable Output<Boolean> setPublicDns;
 
-    public Output<Boolean> setPublicDns() {
-        return this.setPublicDns == null ? Codegen.empty() : this.setPublicDns;
+    public Optional<Output<Boolean>> setPublicDns() {
+        return Optional.ofNullable(this.setPublicDns);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="setPublicPtr")
-      private final @Nullable Output<Boolean> setPublicPtr;
+    private @Nullable Output<Boolean> setPublicPtr;
 
-    public Output<Boolean> setPublicPtr() {
-        return this.setPublicPtr == null ? Codegen.empty() : this.setPublicPtr;
+    public Optional<Output<Boolean>> setPublicPtr() {
+        return Optional.ofNullable(this.setPublicPtr);
     }
 
     /**
@@ -116,154 +116,128 @@ public final class AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<AccessConfigType> type;
+    private @Nullable Output<AccessConfigType> type;
 
-    public Output<AccessConfigType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<AccessConfigType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AccessConfigArgs(
-        @Nullable Output<String> externalIpv6,
-        @Nullable Output<Integer> externalIpv6PrefixLength,
-        @Nullable Output<String> name,
-        @Nullable Output<String> natIP,
-        @Nullable Output<AccessConfigNetworkTier> networkTier,
-        @Nullable Output<String> publicPtrDomainName,
-        @Nullable Output<Boolean> setPublicDns,
-        @Nullable Output<Boolean> setPublicPtr,
-        @Nullable Output<AccessConfigType> type) {
-        this.externalIpv6 = externalIpv6;
-        this.externalIpv6PrefixLength = externalIpv6PrefixLength;
-        this.name = name;
-        this.natIP = natIP;
-        this.networkTier = networkTier;
-        this.publicPtrDomainName = publicPtrDomainName;
-        this.setPublicDns = setPublicDns;
-        this.setPublicPtr = setPublicPtr;
-        this.type = type;
-    }
+    private AccessConfigArgs() {}
 
-    private AccessConfigArgs() {
-        this.externalIpv6 = Codegen.empty();
-        this.externalIpv6PrefixLength = Codegen.empty();
-        this.name = Codegen.empty();
-        this.natIP = Codegen.empty();
-        this.networkTier = Codegen.empty();
-        this.publicPtrDomainName = Codegen.empty();
-        this.setPublicDns = Codegen.empty();
-        this.setPublicPtr = Codegen.empty();
-        this.type = Codegen.empty();
+    private AccessConfigArgs(AccessConfigArgs $) {
+        this.externalIpv6 = $.externalIpv6;
+        this.externalIpv6PrefixLength = $.externalIpv6PrefixLength;
+        this.name = $.name;
+        this.natIP = $.natIP;
+        this.networkTier = $.networkTier;
+        this.publicPtrDomainName = $.publicPtrDomainName;
+        this.setPublicDns = $.setPublicDns;
+        this.setPublicPtr = $.setPublicPtr;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> externalIpv6;
-        private @Nullable Output<Integer> externalIpv6PrefixLength;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> natIP;
-        private @Nullable Output<AccessConfigNetworkTier> networkTier;
-        private @Nullable Output<String> publicPtrDomainName;
-        private @Nullable Output<Boolean> setPublicDns;
-        private @Nullable Output<Boolean> setPublicPtr;
-        private @Nullable Output<AccessConfigType> type;
+        private AccessConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessConfigArgs();
         }
 
         public Builder(AccessConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalIpv6 = defaults.externalIpv6;
-    	      this.externalIpv6PrefixLength = defaults.externalIpv6PrefixLength;
-    	      this.name = defaults.name;
-    	      this.natIP = defaults.natIP;
-    	      this.networkTier = defaults.networkTier;
-    	      this.publicPtrDomainName = defaults.publicPtrDomainName;
-    	      this.setPublicDns = defaults.setPublicDns;
-    	      this.setPublicPtr = defaults.setPublicPtr;
-    	      this.type = defaults.type;
+            $ = new AccessConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder externalIpv6(@Nullable Output<String> externalIpv6) {
-            this.externalIpv6 = externalIpv6;
+            $.externalIpv6 = externalIpv6;
             return this;
         }
-        public Builder externalIpv6(@Nullable String externalIpv6) {
-            this.externalIpv6 = Codegen.ofNullable(externalIpv6);
-            return this;
+
+        public Builder externalIpv6(String externalIpv6) {
+            return externalIpv6(Output.of(externalIpv6));
         }
+
         public Builder externalIpv6PrefixLength(@Nullable Output<Integer> externalIpv6PrefixLength) {
-            this.externalIpv6PrefixLength = externalIpv6PrefixLength;
+            $.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
-        public Builder externalIpv6PrefixLength(@Nullable Integer externalIpv6PrefixLength) {
-            this.externalIpv6PrefixLength = Codegen.ofNullable(externalIpv6PrefixLength);
-            return this;
+
+        public Builder externalIpv6PrefixLength(Integer externalIpv6PrefixLength) {
+            return externalIpv6PrefixLength(Output.of(externalIpv6PrefixLength));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder natIP(@Nullable Output<String> natIP) {
-            this.natIP = natIP;
+            $.natIP = natIP;
             return this;
         }
-        public Builder natIP(@Nullable String natIP) {
-            this.natIP = Codegen.ofNullable(natIP);
-            return this;
+
+        public Builder natIP(String natIP) {
+            return natIP(Output.of(natIP));
         }
+
         public Builder networkTier(@Nullable Output<AccessConfigNetworkTier> networkTier) {
-            this.networkTier = networkTier;
+            $.networkTier = networkTier;
             return this;
         }
-        public Builder networkTier(@Nullable AccessConfigNetworkTier networkTier) {
-            this.networkTier = Codegen.ofNullable(networkTier);
-            return this;
+
+        public Builder networkTier(AccessConfigNetworkTier networkTier) {
+            return networkTier(Output.of(networkTier));
         }
+
         public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
-            this.publicPtrDomainName = publicPtrDomainName;
+            $.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-        public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
-            this.publicPtrDomainName = Codegen.ofNullable(publicPtrDomainName);
-            return this;
+
+        public Builder publicPtrDomainName(String publicPtrDomainName) {
+            return publicPtrDomainName(Output.of(publicPtrDomainName));
         }
+
         public Builder setPublicDns(@Nullable Output<Boolean> setPublicDns) {
-            this.setPublicDns = setPublicDns;
+            $.setPublicDns = setPublicDns;
             return this;
         }
-        public Builder setPublicDns(@Nullable Boolean setPublicDns) {
-            this.setPublicDns = Codegen.ofNullable(setPublicDns);
-            return this;
+
+        public Builder setPublicDns(Boolean setPublicDns) {
+            return setPublicDns(Output.of(setPublicDns));
         }
+
         public Builder setPublicPtr(@Nullable Output<Boolean> setPublicPtr) {
-            this.setPublicPtr = setPublicPtr;
+            $.setPublicPtr = setPublicPtr;
             return this;
         }
-        public Builder setPublicPtr(@Nullable Boolean setPublicPtr) {
-            this.setPublicPtr = Codegen.ofNullable(setPublicPtr);
-            return this;
+
+        public Builder setPublicPtr(Boolean setPublicPtr) {
+            return setPublicPtr(Output.of(setPublicPtr));
         }
+
         public Builder type(@Nullable Output<AccessConfigType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable AccessConfigType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AccessConfigArgs build() {
-            return new AccessConfigArgs(externalIpv6, externalIpv6PrefixLength, name, natIP, networkTier, publicPtrDomainName, setPublicDns, setPublicPtr, type);
+
+        public Builder type(AccessConfigType type) {
+            return type(Output.of(type));
+        }
+
+        public AccessConfigArgs build() {
+            return $;
         }
     }
+
 }

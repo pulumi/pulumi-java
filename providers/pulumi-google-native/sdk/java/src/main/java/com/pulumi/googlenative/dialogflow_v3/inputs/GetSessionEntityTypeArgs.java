@@ -15,126 +15,114 @@ public final class GetSessionEntityTypeArgs extends com.pulumi.resources.InvokeA
     public static final GetSessionEntityTypeArgs Empty = new GetSessionEntityTypeArgs();
 
     @Import(name="agentId", required=true)
-      private final String agentId;
+    private String agentId;
 
     public String agentId() {
         return this.agentId;
     }
 
     @Import(name="entityTypeId", required=true)
-      private final String entityTypeId;
+    private String entityTypeId;
 
     public String entityTypeId() {
         return this.entityTypeId;
     }
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="sessionId", required=true)
-      private final String sessionId;
+    private String sessionId;
 
     public String sessionId() {
         return this.sessionId;
     }
 
-    public GetSessionEntityTypeArgs(
-        String agentId,
-        String entityTypeId,
-        String environmentId,
-        String location,
-        @Nullable String project,
-        String sessionId) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.entityTypeId = Objects.requireNonNull(entityTypeId, "expected parameter 'entityTypeId' to be non-null");
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.sessionId = Objects.requireNonNull(sessionId, "expected parameter 'sessionId' to be non-null");
-    }
+    private GetSessionEntityTypeArgs() {}
 
-    private GetSessionEntityTypeArgs() {
-        this.agentId = null;
-        this.entityTypeId = null;
-        this.environmentId = null;
-        this.location = null;
-        this.project = null;
-        this.sessionId = null;
+    private GetSessionEntityTypeArgs(GetSessionEntityTypeArgs $) {
+        this.agentId = $.agentId;
+        this.entityTypeId = $.entityTypeId;
+        this.environmentId = $.environmentId;
+        this.location = $.location;
+        this.project = $.project;
+        this.sessionId = $.sessionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSessionEntityTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentId;
-        private String entityTypeId;
-        private String environmentId;
-        private String location;
-        private @Nullable String project;
-        private String sessionId;
+        private GetSessionEntityTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSessionEntityTypeArgs();
         }
 
         public Builder(GetSessionEntityTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.entityTypeId = defaults.entityTypeId;
-    	      this.environmentId = defaults.environmentId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.sessionId = defaults.sessionId;
+            $ = new GetSessionEntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(String agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder entityTypeId(String entityTypeId) {
-            this.entityTypeId = Objects.requireNonNull(entityTypeId);
+            $.entityTypeId = entityTypeId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder sessionId(String sessionId) {
-            this.sessionId = Objects.requireNonNull(sessionId);
+            $.sessionId = sessionId;
             return this;
-        }        public GetSessionEntityTypeArgs build() {
-            return new GetSessionEntityTypeArgs(agentId, entityTypeId, environmentId, location, project, sessionId);
+        }
+
+        public GetSessionEntityTypeArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.entityTypeId = Objects.requireNonNull($.entityTypeId, "expected parameter 'entityTypeId' to be non-null");
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.sessionId = Objects.requireNonNull($.sessionId, "expected parameter 'sessionId' to be non-null");
+            return $;
         }
     }
+
 }

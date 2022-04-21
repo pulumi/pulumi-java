@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class MetastoreServiceMaintenanceWindowArgs extends com.pulumi.reso
      * 
      */
     @Import(name="dayOfWeek", required=true)
-      private final Output<String> dayOfWeek;
+    private Output<String> dayOfWeek;
 
     public Output<String> dayOfWeek() {
         return this.dayOfWeek;
@@ -32,63 +31,60 @@ public final class MetastoreServiceMaintenanceWindowArgs extends com.pulumi.reso
      * 
      */
     @Import(name="hourOfDay", required=true)
-      private final Output<Integer> hourOfDay;
+    private Output<Integer> hourOfDay;
 
     public Output<Integer> hourOfDay() {
         return this.hourOfDay;
     }
 
-    public MetastoreServiceMaintenanceWindowArgs(
-        Output<String> dayOfWeek,
-        Output<Integer> hourOfDay) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
-        this.hourOfDay = Objects.requireNonNull(hourOfDay, "expected parameter 'hourOfDay' to be non-null");
-    }
+    private MetastoreServiceMaintenanceWindowArgs() {}
 
-    private MetastoreServiceMaintenanceWindowArgs() {
-        this.dayOfWeek = Codegen.empty();
-        this.hourOfDay = Codegen.empty();
+    private MetastoreServiceMaintenanceWindowArgs(MetastoreServiceMaintenanceWindowArgs $) {
+        this.dayOfWeek = $.dayOfWeek;
+        this.hourOfDay = $.hourOfDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetastoreServiceMaintenanceWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dayOfWeek;
-        private Output<Integer> hourOfDay;
+        private MetastoreServiceMaintenanceWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetastoreServiceMaintenanceWindowArgs();
         }
 
         public Builder(MetastoreServiceMaintenanceWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
-    	      this.hourOfDay = defaults.hourOfDay;
+            $ = new MetastoreServiceMaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(Output<String> dayOfWeek) {
-            this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
+
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
-            return this;
+            return dayOfWeek(Output.of(dayOfWeek));
         }
+
         public Builder hourOfDay(Output<Integer> hourOfDay) {
-            this.hourOfDay = Objects.requireNonNull(hourOfDay);
+            $.hourOfDay = hourOfDay;
             return this;
         }
+
         public Builder hourOfDay(Integer hourOfDay) {
-            this.hourOfDay = Output.of(Objects.requireNonNull(hourOfDay));
-            return this;
-        }        public MetastoreServiceMaintenanceWindowArgs build() {
-            return new MetastoreServiceMaintenanceWindowArgs(dayOfWeek, hourOfDay);
+            return hourOfDay(Output.of(hourOfDay));
+        }
+
+        public MetastoreServiceMaintenanceWindowArgs build() {
+            $.dayOfWeek = Objects.requireNonNull($.dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
+            $.hourOfDay = Objects.requireNonNull($.hourOfDay, "expected parameter 'hourOfDay' to be non-null");
+            return $;
         }
     }
+
 }

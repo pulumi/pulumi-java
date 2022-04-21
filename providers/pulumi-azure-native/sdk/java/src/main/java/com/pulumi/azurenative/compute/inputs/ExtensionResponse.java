@@ -24,10 +24,10 @@ public final class ExtensionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ExtensionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable CloudServiceExtensionPropertiesResponse properties;
+    private @Nullable CloudServiceExtensionPropertiesResponse properties;
 
     public Optional<CloudServiceExtensionPropertiesResponse> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
-    public ExtensionResponse(
-        @Nullable String name,
-        @Nullable CloudServiceExtensionPropertiesResponse properties) {
-        this.name = name;
-        this.properties = properties;
-    }
+    private ExtensionResponse() {}
 
-    private ExtensionResponse() {
-        this.name = null;
-        this.properties = null;
+    private ExtensionResponse(ExtensionResponse $) {
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable CloudServiceExtensionPropertiesResponse properties;
+        private ExtensionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionResponse();
         }
 
         public Builder(ExtensionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new ExtensionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder properties(@Nullable CloudServiceExtensionPropertiesResponse properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
-        }        public ExtensionResponse build() {
-            return new ExtensionResponse(name, properties);
+        }
+
+        public ExtensionResponse build() {
+            return $;
         }
     }
+
 }

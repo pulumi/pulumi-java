@@ -22,7 +22,7 @@ public final class AzureResourceDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -34,55 +34,52 @@ public final class AzureResourceDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
     }
 
-    public AzureResourceDetailsResponse(
-        String id,
-        String source) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.source = Codegen.stringProp("source").arg(source).require();
-    }
+    private AzureResourceDetailsResponse() {}
 
-    private AzureResourceDetailsResponse() {
-        this.id = null;
-        this.source = null;
+    private AzureResourceDetailsResponse(AzureResourceDetailsResponse $) {
+        this.id = $.id;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureResourceDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String source;
+        private AzureResourceDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureResourceDetailsResponse();
         }
 
         public Builder(AzureResourceDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.source = defaults.source;
+            $ = new AzureResourceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
-        }        public AzureResourceDetailsResponse build() {
-            return new AzureResourceDetailsResponse(id, source);
+        }
+
+        public AzureResourceDetailsResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.source = Codegen.stringProp("source").arg($.source).require();
+            return $;
         }
     }
+
 }

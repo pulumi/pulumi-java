@@ -7,10 +7,10 @@ import com.pulumi.aws.apigateway.inputs.DomainNameEndpointConfigurationArgs;
 import com.pulumi.aws.apigateway.inputs.DomainNameMutualTlsAuthenticationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateBody")
-      private final @Nullable Output<String> certificateBody;
+    private @Nullable Output<String> certificateBody;
 
-    public Output<String> certificateBody() {
-        return this.certificateBody == null ? Codegen.empty() : this.certificateBody;
+    public Optional<Output<String>> certificateBody() {
+        return Optional.ofNullable(this.certificateBody);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateChain")
-      private final @Nullable Output<String> certificateChain;
+    private @Nullable Output<String> certificateChain;
 
-    public Output<String> certificateChain() {
-        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
+    public Optional<Output<String>> certificateChain() {
+        return Optional.ofNullable(this.certificateChain);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateName")
-      private final @Nullable Output<String> certificateName;
+    private @Nullable Output<String> certificateName;
 
-    public Output<String> certificateName() {
-        return this.certificateName == null ? Codegen.empty() : this.certificateName;
+    public Optional<Output<String>> certificateName() {
+        return Optional.ofNullable(this.certificateName);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificatePrivateKey")
-      private final @Nullable Output<String> certificatePrivateKey;
+    private @Nullable Output<String> certificatePrivateKey;
 
-    public Output<String> certificatePrivateKey() {
-        return this.certificatePrivateKey == null ? Codegen.empty() : this.certificatePrivateKey;
+    public Optional<Output<String>> certificatePrivateKey() {
+        return Optional.ofNullable(this.certificatePrivateKey);
     }
 
     /**
@@ -86,7 +86,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -97,10 +97,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointConfiguration")
-      private final @Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration;
+    private @Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration;
 
-    public Output<DomainNameEndpointConfigurationArgs> endpointConfiguration() {
-        return this.endpointConfiguration == null ? Codegen.empty() : this.endpointConfiguration;
+    public Optional<Output<DomainNameEndpointConfigurationArgs>> endpointConfiguration() {
+        return Optional.ofNullable(this.endpointConfiguration);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mutualTlsAuthentication")
-      private final @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
+    private @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
-    public Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication() {
-        return this.mutualTlsAuthentication == null ? Codegen.empty() : this.mutualTlsAuthentication;
+    public Optional<Output<DomainNameMutualTlsAuthenticationArgs>> mutualTlsAuthentication() {
+        return Optional.ofNullable(this.mutualTlsAuthentication);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="regionalCertificateArn")
-      private final @Nullable Output<String> regionalCertificateArn;
+    private @Nullable Output<String> regionalCertificateArn;
 
-    public Output<String> regionalCertificateArn() {
-        return this.regionalCertificateArn == null ? Codegen.empty() : this.regionalCertificateArn;
+    public Optional<Output<String>> regionalCertificateArn() {
+        return Optional.ofNullable(this.regionalCertificateArn);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="regionalCertificateName")
-      private final @Nullable Output<String> regionalCertificateName;
+    private @Nullable Output<String> regionalCertificateName;
 
-    public Output<String> regionalCertificateName() {
-        return this.regionalCertificateName == null ? Codegen.empty() : this.regionalCertificateName;
+    public Optional<Output<String>> regionalCertificateName() {
+        return Optional.ofNullable(this.regionalCertificateName);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityPolicy")
-      private final @Nullable Output<String> securityPolicy;
+    private @Nullable Output<String> securityPolicy;
 
-    public Output<String> securityPolicy() {
-        return this.securityPolicy == null ? Codegen.empty() : this.securityPolicy;
+    public Optional<Output<String>> securityPolicy() {
+        return Optional.ofNullable(this.securityPolicy);
     }
 
     /**
@@ -153,193 +153,159 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DomainNameArgs(
-        @Nullable Output<String> certificateArn,
-        @Nullable Output<String> certificateBody,
-        @Nullable Output<String> certificateChain,
-        @Nullable Output<String> certificateName,
-        @Nullable Output<String> certificatePrivateKey,
-        Output<String> domainName,
-        @Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration,
-        @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication,
-        @Nullable Output<String> regionalCertificateArn,
-        @Nullable Output<String> regionalCertificateName,
-        @Nullable Output<String> securityPolicy,
-        @Nullable Output<Map<String,String>> tags) {
-        this.certificateArn = certificateArn;
-        this.certificateBody = certificateBody;
-        this.certificateChain = certificateChain;
-        this.certificateName = certificateName;
-        this.certificatePrivateKey = certificatePrivateKey;
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.endpointConfiguration = endpointConfiguration;
-        this.mutualTlsAuthentication = mutualTlsAuthentication;
-        this.regionalCertificateArn = regionalCertificateArn;
-        this.regionalCertificateName = regionalCertificateName;
-        this.securityPolicy = securityPolicy;
-        this.tags = tags;
-    }
+    private DomainNameArgs() {}
 
-    private DomainNameArgs() {
-        this.certificateArn = Codegen.empty();
-        this.certificateBody = Codegen.empty();
-        this.certificateChain = Codegen.empty();
-        this.certificateName = Codegen.empty();
-        this.certificatePrivateKey = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.endpointConfiguration = Codegen.empty();
-        this.mutualTlsAuthentication = Codegen.empty();
-        this.regionalCertificateArn = Codegen.empty();
-        this.regionalCertificateName = Codegen.empty();
-        this.securityPolicy = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DomainNameArgs(DomainNameArgs $) {
+        this.certificateArn = $.certificateArn;
+        this.certificateBody = $.certificateBody;
+        this.certificateChain = $.certificateChain;
+        this.certificateName = $.certificateName;
+        this.certificatePrivateKey = $.certificatePrivateKey;
+        this.domainName = $.domainName;
+        this.endpointConfiguration = $.endpointConfiguration;
+        this.mutualTlsAuthentication = $.mutualTlsAuthentication;
+        this.regionalCertificateArn = $.regionalCertificateArn;
+        this.regionalCertificateName = $.regionalCertificateName;
+        this.securityPolicy = $.securityPolicy;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateArn;
-        private @Nullable Output<String> certificateBody;
-        private @Nullable Output<String> certificateChain;
-        private @Nullable Output<String> certificateName;
-        private @Nullable Output<String> certificatePrivateKey;
-        private Output<String> domainName;
-        private @Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration;
-        private @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
-        private @Nullable Output<String> regionalCertificateArn;
-        private @Nullable Output<String> regionalCertificateName;
-        private @Nullable Output<String> securityPolicy;
-        private @Nullable Output<Map<String,String>> tags;
+        private DomainNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNameArgs();
         }
 
         public Builder(DomainNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.certificateBody = defaults.certificateBody;
-    	      this.certificateChain = defaults.certificateChain;
-    	      this.certificateName = defaults.certificateName;
-    	      this.certificatePrivateKey = defaults.certificatePrivateKey;
-    	      this.domainName = defaults.domainName;
-    	      this.endpointConfiguration = defaults.endpointConfiguration;
-    	      this.mutualTlsAuthentication = defaults.mutualTlsAuthentication;
-    	      this.regionalCertificateArn = defaults.regionalCertificateArn;
-    	      this.regionalCertificateName = defaults.regionalCertificateName;
-    	      this.securityPolicy = defaults.securityPolicy;
-    	      this.tags = defaults.tags;
+            $ = new DomainNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder certificateBody(@Nullable Output<String> certificateBody) {
-            this.certificateBody = certificateBody;
+            $.certificateBody = certificateBody;
             return this;
         }
-        public Builder certificateBody(@Nullable String certificateBody) {
-            this.certificateBody = Codegen.ofNullable(certificateBody);
-            return this;
+
+        public Builder certificateBody(String certificateBody) {
+            return certificateBody(Output.of(certificateBody));
         }
+
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
-            this.certificateChain = certificateChain;
+            $.certificateChain = certificateChain;
             return this;
         }
-        public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Codegen.ofNullable(certificateChain);
-            return this;
+
+        public Builder certificateChain(String certificateChain) {
+            return certificateChain(Output.of(certificateChain));
         }
+
         public Builder certificateName(@Nullable Output<String> certificateName) {
-            this.certificateName = certificateName;
+            $.certificateName = certificateName;
             return this;
         }
-        public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Codegen.ofNullable(certificateName);
-            return this;
+
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
         }
+
         public Builder certificatePrivateKey(@Nullable Output<String> certificatePrivateKey) {
-            this.certificatePrivateKey = certificatePrivateKey;
+            $.certificatePrivateKey = certificatePrivateKey;
             return this;
         }
-        public Builder certificatePrivateKey(@Nullable String certificatePrivateKey) {
-            this.certificatePrivateKey = Codegen.ofNullable(certificatePrivateKey);
-            return this;
+
+        public Builder certificatePrivateKey(String certificatePrivateKey) {
+            return certificatePrivateKey(Output.of(certificatePrivateKey));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder endpointConfiguration(@Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration) {
-            this.endpointConfiguration = endpointConfiguration;
+            $.endpointConfiguration = endpointConfiguration;
             return this;
         }
-        public Builder endpointConfiguration(@Nullable DomainNameEndpointConfigurationArgs endpointConfiguration) {
-            this.endpointConfiguration = Codegen.ofNullable(endpointConfiguration);
-            return this;
+
+        public Builder endpointConfiguration(DomainNameEndpointConfigurationArgs endpointConfiguration) {
+            return endpointConfiguration(Output.of(endpointConfiguration));
         }
+
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
-            this.mutualTlsAuthentication = mutualTlsAuthentication;
+            $.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
-        public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
-            this.mutualTlsAuthentication = Codegen.ofNullable(mutualTlsAuthentication);
-            return this;
+
+        public Builder mutualTlsAuthentication(DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
+            return mutualTlsAuthentication(Output.of(mutualTlsAuthentication));
         }
+
         public Builder regionalCertificateArn(@Nullable Output<String> regionalCertificateArn) {
-            this.regionalCertificateArn = regionalCertificateArn;
+            $.regionalCertificateArn = regionalCertificateArn;
             return this;
         }
-        public Builder regionalCertificateArn(@Nullable String regionalCertificateArn) {
-            this.regionalCertificateArn = Codegen.ofNullable(regionalCertificateArn);
-            return this;
+
+        public Builder regionalCertificateArn(String regionalCertificateArn) {
+            return regionalCertificateArn(Output.of(regionalCertificateArn));
         }
+
         public Builder regionalCertificateName(@Nullable Output<String> regionalCertificateName) {
-            this.regionalCertificateName = regionalCertificateName;
+            $.regionalCertificateName = regionalCertificateName;
             return this;
         }
-        public Builder regionalCertificateName(@Nullable String regionalCertificateName) {
-            this.regionalCertificateName = Codegen.ofNullable(regionalCertificateName);
-            return this;
+
+        public Builder regionalCertificateName(String regionalCertificateName) {
+            return regionalCertificateName(Output.of(regionalCertificateName));
         }
+
         public Builder securityPolicy(@Nullable Output<String> securityPolicy) {
-            this.securityPolicy = securityPolicy;
+            $.securityPolicy = securityPolicy;
             return this;
         }
-        public Builder securityPolicy(@Nullable String securityPolicy) {
-            this.securityPolicy = Codegen.ofNullable(securityPolicy);
-            return this;
+
+        public Builder securityPolicy(String securityPolicy) {
+            return securityPolicy(Output.of(securityPolicy));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DomainNameArgs build() {
-            return new DomainNameArgs(certificateArn, certificateBody, certificateChain, certificateName, certificatePrivateKey, domainName, endpointConfiguration, mutualTlsAuthentication, regionalCertificateArn, regionalCertificateName, securityPolicy, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DomainNameArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

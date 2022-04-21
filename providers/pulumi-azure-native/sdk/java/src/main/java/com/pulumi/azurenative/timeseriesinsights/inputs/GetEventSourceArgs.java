@@ -17,7 +17,7 @@ public final class GetEventSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentName", required=true)
-      private final String environmentName;
+    private String environmentName;
 
     public String environmentName() {
         return this.environmentName;
@@ -28,7 +28,7 @@ public final class GetEventSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventSourceName", required=true)
-      private final String eventSourceName;
+    private String eventSourceName;
 
     public String eventSourceName() {
         return this.eventSourceName;
@@ -39,64 +39,59 @@ public final class GetEventSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetEventSourceArgs(
-        String environmentName,
-        String eventSourceName,
-        String resourceGroupName) {
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.eventSourceName = Objects.requireNonNull(eventSourceName, "expected parameter 'eventSourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetEventSourceArgs() {}
 
-    private GetEventSourceArgs() {
-        this.environmentName = null;
-        this.eventSourceName = null;
-        this.resourceGroupName = null;
+    private GetEventSourceArgs(GetEventSourceArgs $) {
+        this.environmentName = $.environmentName;
+        this.eventSourceName = $.eventSourceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentName;
-        private String eventSourceName;
-        private String resourceGroupName;
+        private GetEventSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventSourceArgs();
         }
 
         public Builder(GetEventSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentName = defaults.environmentName;
-    	      this.eventSourceName = defaults.eventSourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetEventSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentName(String environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder eventSourceName(String eventSourceName) {
-            this.eventSourceName = Objects.requireNonNull(eventSourceName);
+            $.eventSourceName = eventSourceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetEventSourceArgs build() {
-            return new GetEventSourceArgs(environmentName, eventSourceName, resourceGroupName);
+        }
+
+        public GetEventSourceArgs build() {
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.eventSourceName = Objects.requireNonNull($.eventSourceName, "expected parameter 'eventSourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

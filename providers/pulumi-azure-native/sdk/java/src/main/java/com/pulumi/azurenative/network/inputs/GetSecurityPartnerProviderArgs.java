@@ -17,7 +17,7 @@ public final class GetSecurityPartnerProviderArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSecurityPartnerProviderArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="securityPartnerProviderName", required=true)
-      private final String securityPartnerProviderName;
+    private String securityPartnerProviderName;
 
     public String securityPartnerProviderName() {
         return this.securityPartnerProviderName;
     }
 
-    public GetSecurityPartnerProviderArgs(
-        String resourceGroupName,
-        String securityPartnerProviderName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityPartnerProviderName = Objects.requireNonNull(securityPartnerProviderName, "expected parameter 'securityPartnerProviderName' to be non-null");
-    }
+    private GetSecurityPartnerProviderArgs() {}
 
-    private GetSecurityPartnerProviderArgs() {
-        this.resourceGroupName = null;
-        this.securityPartnerProviderName = null;
+    private GetSecurityPartnerProviderArgs(GetSecurityPartnerProviderArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityPartnerProviderName = $.securityPartnerProviderName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecurityPartnerProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String securityPartnerProviderName;
+        private GetSecurityPartnerProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecurityPartnerProviderArgs();
         }
 
         public Builder(GetSecurityPartnerProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityPartnerProviderName = defaults.securityPartnerProviderName;
+            $ = new GetSecurityPartnerProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder securityPartnerProviderName(String securityPartnerProviderName) {
-            this.securityPartnerProviderName = Objects.requireNonNull(securityPartnerProviderName);
+            $.securityPartnerProviderName = securityPartnerProviderName;
             return this;
-        }        public GetSecurityPartnerProviderArgs build() {
-            return new GetSecurityPartnerProviderArgs(resourceGroupName, securityPartnerProviderName);
+        }
+
+        public GetSecurityPartnerProviderArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.securityPartnerProviderName = Objects.requireNonNull($.securityPartnerProviderName, "expected parameter 'securityPartnerProviderName' to be non-null");
+            return $;
         }
     }
+
 }

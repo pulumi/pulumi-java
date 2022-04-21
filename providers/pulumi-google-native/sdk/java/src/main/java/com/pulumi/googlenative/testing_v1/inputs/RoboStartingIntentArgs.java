@@ -5,11 +5,11 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.LauncherActivityIntentArgs;
 import com.pulumi.googlenative.testing_v1.inputs.StartActivityIntentArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RoboStartingIntentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="launcherActivity")
-      private final @Nullable Output<LauncherActivityIntentArgs> launcherActivity;
+    private @Nullable Output<LauncherActivityIntentArgs> launcherActivity;
 
-    public Output<LauncherActivityIntentArgs> launcherActivity() {
-        return this.launcherActivity == null ? Codegen.empty() : this.launcherActivity;
+    public Optional<Output<LauncherActivityIntentArgs>> launcherActivity() {
+        return Optional.ofNullable(this.launcherActivity);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RoboStartingIntentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="startActivity")
-      private final @Nullable Output<StartActivityIntentArgs> startActivity;
+    private @Nullable Output<StartActivityIntentArgs> startActivity;
 
-    public Output<StartActivityIntentArgs> startActivity() {
-        return this.startActivity == null ? Codegen.empty() : this.startActivity;
+    public Optional<Output<StartActivityIntentArgs>> startActivity() {
+        return Optional.ofNullable(this.startActivity);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class RoboStartingIntentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public RoboStartingIntentArgs(
-        @Nullable Output<LauncherActivityIntentArgs> launcherActivity,
-        @Nullable Output<StartActivityIntentArgs> startActivity,
-        @Nullable Output<String> timeout) {
-        this.launcherActivity = launcherActivity;
-        this.startActivity = startActivity;
-        this.timeout = timeout;
-    }
+    private RoboStartingIntentArgs() {}
 
-    private RoboStartingIntentArgs() {
-        this.launcherActivity = Codegen.empty();
-        this.startActivity = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private RoboStartingIntentArgs(RoboStartingIntentArgs $) {
+        this.launcherActivity = $.launcherActivity;
+        this.startActivity = $.startActivity;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoboStartingIntentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LauncherActivityIntentArgs> launcherActivity;
-        private @Nullable Output<StartActivityIntentArgs> startActivity;
-        private @Nullable Output<String> timeout;
+        private RoboStartingIntentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoboStartingIntentArgs();
         }
 
         public Builder(RoboStartingIntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launcherActivity = defaults.launcherActivity;
-    	      this.startActivity = defaults.startActivity;
-    	      this.timeout = defaults.timeout;
+            $ = new RoboStartingIntentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder launcherActivity(@Nullable Output<LauncherActivityIntentArgs> launcherActivity) {
-            this.launcherActivity = launcherActivity;
+            $.launcherActivity = launcherActivity;
             return this;
         }
-        public Builder launcherActivity(@Nullable LauncherActivityIntentArgs launcherActivity) {
-            this.launcherActivity = Codegen.ofNullable(launcherActivity);
-            return this;
+
+        public Builder launcherActivity(LauncherActivityIntentArgs launcherActivity) {
+            return launcherActivity(Output.of(launcherActivity));
         }
+
         public Builder startActivity(@Nullable Output<StartActivityIntentArgs> startActivity) {
-            this.startActivity = startActivity;
+            $.startActivity = startActivity;
             return this;
         }
-        public Builder startActivity(@Nullable StartActivityIntentArgs startActivity) {
-            this.startActivity = Codegen.ofNullable(startActivity);
-            return this;
+
+        public Builder startActivity(StartActivityIntentArgs startActivity) {
+            return startActivity(Output.of(startActivity));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public RoboStartingIntentArgs build() {
-            return new RoboStartingIntentArgs(launcherActivity, startActivity, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public RoboStartingIntentArgs build() {
+            return $;
         }
     }
+
 }

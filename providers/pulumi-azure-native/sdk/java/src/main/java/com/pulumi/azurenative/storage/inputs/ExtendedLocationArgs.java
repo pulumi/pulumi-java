@@ -7,9 +7,9 @@ import com.pulumi.azurenative.storage.enums.ExtendedLocationTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ExtendedLocationTypes>> type;
+    private @Nullable Output<Either<String,ExtendedLocationTypes>> type;
 
-    public Output<Either<String,ExtendedLocationTypes>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ExtendedLocationTypes>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ExtendedLocationArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,ExtendedLocationTypes>> type) {
-        this.name = name;
-        this.type = type;
-    }
+    private ExtendedLocationArgs() {}
 
-    private ExtendedLocationArgs() {
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private ExtendedLocationArgs(ExtendedLocationArgs $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtendedLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,ExtendedLocationTypes>> type;
+        private ExtendedLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtendedLocationArgs();
         }
 
         public Builder(ExtendedLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ExtendedLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder type(@Nullable Output<Either<String,ExtendedLocationTypes>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ExtendedLocationTypes> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ExtendedLocationArgs build() {
-            return new ExtendedLocationArgs(name, type);
+
+        public Builder type(Either<String,ExtendedLocationTypes> type) {
+            return type(Output.of(type));
+        }
+
+        public ExtendedLocationArgs build() {
+            return $;
         }
     }
+
 }

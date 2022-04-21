@@ -5,9 +5,9 @@ package com.pulumi.awsnative.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends com.pul
      * 
      */
     @Import(name="keyArn")
-      private final @Nullable Output<String> keyArn;
+    private @Nullable Output<String> keyArn;
 
-    public Output<String> keyArn() {
-        return this.keyArn == null ? Codegen.empty() : this.keyArn;
+    public Optional<Output<String>> keyArn() {
+        return Optional.ofNullable(this.keyArn);
     }
 
-    public ClusterEncryptionConfigProviderPropertiesArgs(@Nullable Output<String> keyArn) {
-        this.keyArn = keyArn;
-    }
+    private ClusterEncryptionConfigProviderPropertiesArgs() {}
 
-    private ClusterEncryptionConfigProviderPropertiesArgs() {
-        this.keyArn = Codegen.empty();
+    private ClusterEncryptionConfigProviderPropertiesArgs(ClusterEncryptionConfigProviderPropertiesArgs $) {
+        this.keyArn = $.keyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEncryptionConfigProviderPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyArn;
+        private ClusterEncryptionConfigProviderPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEncryptionConfigProviderPropertiesArgs();
         }
 
         public Builder(ClusterEncryptionConfigProviderPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyArn = defaults.keyArn;
+            $ = new ClusterEncryptionConfigProviderPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyArn(@Nullable Output<String> keyArn) {
-            this.keyArn = keyArn;
+            $.keyArn = keyArn;
             return this;
         }
-        public Builder keyArn(@Nullable String keyArn) {
-            this.keyArn = Codegen.ofNullable(keyArn);
-            return this;
-        }        public ClusterEncryptionConfigProviderPropertiesArgs build() {
-            return new ClusterEncryptionConfigProviderPropertiesArgs(keyArn);
+
+        public Builder keyArn(String keyArn) {
+            return keyArn(Output.of(keyArn));
+        }
+
+        public ClusterEncryptionConfigProviderPropertiesArgs build() {
+            return $;
         }
     }
+
 }

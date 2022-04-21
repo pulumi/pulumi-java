@@ -22,81 +22,74 @@ public final class DatasetPathOptions extends com.pulumi.resources.InvokeArgs {
     public static final DatasetPathOptions Empty = new DatasetPathOptions();
 
     @Import(name="filesLimit")
-      private final @Nullable DatasetFilesLimit filesLimit;
+    private @Nullable DatasetFilesLimit filesLimit;
 
     public Optional<DatasetFilesLimit> filesLimit() {
-        return this.filesLimit == null ? Optional.empty() : Optional.ofNullable(this.filesLimit);
+        return Optional.ofNullable(this.filesLimit);
     }
 
     @Import(name="lastModifiedDateCondition")
-      private final @Nullable DatasetFilterExpression lastModifiedDateCondition;
+    private @Nullable DatasetFilterExpression lastModifiedDateCondition;
 
     public Optional<DatasetFilterExpression> lastModifiedDateCondition() {
-        return this.lastModifiedDateCondition == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedDateCondition);
+        return Optional.ofNullable(this.lastModifiedDateCondition);
     }
 
     @Import(name="parameters")
-      private final @Nullable List<DatasetPathParameter> parameters;
+    private @Nullable List<DatasetPathParameter> parameters;
 
-    public List<DatasetPathParameter> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<DatasetPathParameter>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public DatasetPathOptions(
-        @Nullable DatasetFilesLimit filesLimit,
-        @Nullable DatasetFilterExpression lastModifiedDateCondition,
-        @Nullable List<DatasetPathParameter> parameters) {
-        this.filesLimit = filesLimit;
-        this.lastModifiedDateCondition = lastModifiedDateCondition;
-        this.parameters = parameters;
-    }
+    private DatasetPathOptions() {}
 
-    private DatasetPathOptions() {
-        this.filesLimit = null;
-        this.lastModifiedDateCondition = null;
-        this.parameters = List.of();
+    private DatasetPathOptions(DatasetPathOptions $) {
+        this.filesLimit = $.filesLimit;
+        this.lastModifiedDateCondition = $.lastModifiedDateCondition;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetPathOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatasetFilesLimit filesLimit;
-        private @Nullable DatasetFilterExpression lastModifiedDateCondition;
-        private @Nullable List<DatasetPathParameter> parameters;
+        private DatasetPathOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetPathOptions();
         }
 
         public Builder(DatasetPathOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filesLimit = defaults.filesLimit;
-    	      this.lastModifiedDateCondition = defaults.lastModifiedDateCondition;
-    	      this.parameters = defaults.parameters;
+            $ = new DatasetPathOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder filesLimit(@Nullable DatasetFilesLimit filesLimit) {
-            this.filesLimit = filesLimit;
+            $.filesLimit = filesLimit;
             return this;
         }
+
         public Builder lastModifiedDateCondition(@Nullable DatasetFilterExpression lastModifiedDateCondition) {
-            this.lastModifiedDateCondition = lastModifiedDateCondition;
+            $.lastModifiedDateCondition = lastModifiedDateCondition;
             return this;
         }
+
         public Builder parameters(@Nullable List<DatasetPathParameter> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(DatasetPathParameter... parameters) {
             return parameters(List.of(parameters));
-        }        public DatasetPathOptions build() {
-            return new DatasetPathOptions(filesLimit, lastModifiedDateCondition, parameters);
+        }
+
+        public DatasetPathOptions build() {
+            return $;
         }
     }
+
 }

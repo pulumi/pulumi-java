@@ -22,7 +22,7 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -33,7 +33,7 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="countryCodes", required=true)
-      private final List<String> countryCodes;
+    private List<String> countryCodes;
 
     public List<String> countryCodes() {
         return this.countryCodes;
@@ -44,67 +44,63 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="relativePath", required=true)
-      private final String relativePath;
+    private String relativePath;
 
     public String relativePath() {
         return this.relativePath;
     }
 
-    public GeoFilterResponse(
-        String action,
-        List<String> countryCodes,
-        String relativePath) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.countryCodes = Objects.requireNonNull(countryCodes, "expected parameter 'countryCodes' to be non-null");
-        this.relativePath = Objects.requireNonNull(relativePath, "expected parameter 'relativePath' to be non-null");
-    }
+    private GeoFilterResponse() {}
 
-    private GeoFilterResponse() {
-        this.action = null;
-        this.countryCodes = List.of();
-        this.relativePath = null;
+    private GeoFilterResponse(GeoFilterResponse $) {
+        this.action = $.action;
+        this.countryCodes = $.countryCodes;
+        this.relativePath = $.relativePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GeoFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private List<String> countryCodes;
-        private String relativePath;
+        private GeoFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GeoFilterResponse();
         }
 
         public Builder(GeoFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.countryCodes = defaults.countryCodes;
-    	      this.relativePath = defaults.relativePath;
+            $ = new GeoFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder countryCodes(List<String> countryCodes) {
-            this.countryCodes = Objects.requireNonNull(countryCodes);
+            $.countryCodes = countryCodes;
             return this;
         }
+
         public Builder countryCodes(String... countryCodes) {
             return countryCodes(List.of(countryCodes));
         }
+
         public Builder relativePath(String relativePath) {
-            this.relativePath = Objects.requireNonNull(relativePath);
+            $.relativePath = relativePath;
             return this;
-        }        public GeoFilterResponse build() {
-            return new GeoFilterResponse(action, countryCodes, relativePath);
+        }
+
+        public GeoFilterResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.countryCodes = Objects.requireNonNull($.countryCodes, "expected parameter 'countryCodes' to be non-null");
+            $.relativePath = Objects.requireNonNull($.relativePath, "expected parameter 'relativePath' to be non-null");
+            return $;
         }
     }
+
 }

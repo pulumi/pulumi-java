@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class WorkflowTemplatePlacementClusterSelectorArgs extends com.pulu
      * 
      */
     @Import(name="clusterLabels", required=true)
-      private final Output<Map<String,String>> clusterLabels;
+    private Output<Map<String,String>> clusterLabels;
 
     public Output<Map<String,String>> clusterLabels() {
         return this.clusterLabels;
@@ -32,63 +32,59 @@ public final class WorkflowTemplatePlacementClusterSelectorArgs extends com.pulu
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public WorkflowTemplatePlacementClusterSelectorArgs(
-        Output<Map<String,String>> clusterLabels,
-        @Nullable Output<String> zone) {
-        this.clusterLabels = Objects.requireNonNull(clusterLabels, "expected parameter 'clusterLabels' to be non-null");
-        this.zone = zone;
-    }
+    private WorkflowTemplatePlacementClusterSelectorArgs() {}
 
-    private WorkflowTemplatePlacementClusterSelectorArgs() {
-        this.clusterLabels = Codegen.empty();
-        this.zone = Codegen.empty();
+    private WorkflowTemplatePlacementClusterSelectorArgs(WorkflowTemplatePlacementClusterSelectorArgs $) {
+        this.clusterLabels = $.clusterLabels;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementClusterSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> clusterLabels;
-        private @Nullable Output<String> zone;
+        private WorkflowTemplatePlacementClusterSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementClusterSelectorArgs();
         }
 
         public Builder(WorkflowTemplatePlacementClusterSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterLabels = defaults.clusterLabels;
-    	      this.zone = defaults.zone;
+            $ = new WorkflowTemplatePlacementClusterSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterLabels(Output<Map<String,String>> clusterLabels) {
-            this.clusterLabels = Objects.requireNonNull(clusterLabels);
+            $.clusterLabels = clusterLabels;
             return this;
         }
+
         public Builder clusterLabels(Map<String,String> clusterLabels) {
-            this.clusterLabels = Output.of(Objects.requireNonNull(clusterLabels));
-            return this;
+            return clusterLabels(Output.of(clusterLabels));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public WorkflowTemplatePlacementClusterSelectorArgs build() {
-            return new WorkflowTemplatePlacementClusterSelectorArgs(clusterLabels, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public WorkflowTemplatePlacementClusterSelectorArgs build() {
+            $.clusterLabels = Objects.requireNonNull($.clusterLabels, "expected parameter 'clusterLabels' to be non-null");
+            return $;
         }
     }
+
 }

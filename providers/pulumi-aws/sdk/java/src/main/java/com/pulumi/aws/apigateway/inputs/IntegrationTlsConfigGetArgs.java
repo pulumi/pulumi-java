@@ -5,9 +5,9 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class IntegrationTlsConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="insecureSkipVerification")
-      private final @Nullable Output<Boolean> insecureSkipVerification;
+    private @Nullable Output<Boolean> insecureSkipVerification;
 
-    public Output<Boolean> insecureSkipVerification() {
-        return this.insecureSkipVerification == null ? Codegen.empty() : this.insecureSkipVerification;
+    public Optional<Output<Boolean>> insecureSkipVerification() {
+        return Optional.ofNullable(this.insecureSkipVerification);
     }
 
-    public IntegrationTlsConfigGetArgs(@Nullable Output<Boolean> insecureSkipVerification) {
-        this.insecureSkipVerification = insecureSkipVerification;
-    }
+    private IntegrationTlsConfigGetArgs() {}
 
-    private IntegrationTlsConfigGetArgs() {
-        this.insecureSkipVerification = Codegen.empty();
+    private IntegrationTlsConfigGetArgs(IntegrationTlsConfigGetArgs $) {
+        this.insecureSkipVerification = $.insecureSkipVerification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationTlsConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> insecureSkipVerification;
+        private IntegrationTlsConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationTlsConfigGetArgs();
         }
 
         public Builder(IntegrationTlsConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.insecureSkipVerification = defaults.insecureSkipVerification;
+            $ = new IntegrationTlsConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder insecureSkipVerification(@Nullable Output<Boolean> insecureSkipVerification) {
-            this.insecureSkipVerification = insecureSkipVerification;
+            $.insecureSkipVerification = insecureSkipVerification;
             return this;
         }
-        public Builder insecureSkipVerification(@Nullable Boolean insecureSkipVerification) {
-            this.insecureSkipVerification = Codegen.ofNullable(insecureSkipVerification);
-            return this;
-        }        public IntegrationTlsConfigGetArgs build() {
-            return new IntegrationTlsConfigGetArgs(insecureSkipVerification);
+
+        public Builder insecureSkipVerification(Boolean insecureSkipVerification) {
+            return insecureSkipVerification(Output.of(insecureSkipVerification));
+        }
+
+        public IntegrationTlsConfigGetArgs build() {
+            return $;
         }
     }
+
 }

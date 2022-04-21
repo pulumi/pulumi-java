@@ -6,10 +6,10 @@ package com.pulumi.aws.lambda.inputs;
 import com.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FunctionEventInvokeConfigState extends com.pulumi.resources.R
      * 
      */
     @Import(name="destinationConfig")
-      private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig;
+    private @Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig;
 
-    public Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig() {
-        return this.destinationConfig == null ? Codegen.empty() : this.destinationConfig;
+    public Optional<Output<FunctionEventInvokeConfigDestinationConfigGetArgs>> destinationConfig() {
+        return Optional.ofNullable(this.destinationConfig);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FunctionEventInvokeConfigState extends com.pulumi.resources.R
      * 
      */
     @Import(name="functionName")
-      private final @Nullable Output<String> functionName;
+    private @Nullable Output<String> functionName;
 
-    public Output<String> functionName() {
-        return this.functionName == null ? Codegen.empty() : this.functionName;
+    public Optional<Output<String>> functionName() {
+        return Optional.ofNullable(this.functionName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FunctionEventInvokeConfigState extends com.pulumi.resources.R
      * 
      */
     @Import(name="maximumEventAgeInSeconds")
-      private final @Nullable Output<Integer> maximumEventAgeInSeconds;
+    private @Nullable Output<Integer> maximumEventAgeInSeconds;
 
-    public Output<Integer> maximumEventAgeInSeconds() {
-        return this.maximumEventAgeInSeconds == null ? Codegen.empty() : this.maximumEventAgeInSeconds;
+    public Optional<Output<Integer>> maximumEventAgeInSeconds() {
+        return Optional.ofNullable(this.maximumEventAgeInSeconds);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FunctionEventInvokeConfigState extends com.pulumi.resources.R
      * 
      */
     @Import(name="maximumRetryAttempts")
-      private final @Nullable Output<Integer> maximumRetryAttempts;
+    private @Nullable Output<Integer> maximumRetryAttempts;
 
-    public Output<Integer> maximumRetryAttempts() {
-        return this.maximumRetryAttempts == null ? Codegen.empty() : this.maximumRetryAttempts;
+    public Optional<Output<Integer>> maximumRetryAttempts() {
+        return Optional.ofNullable(this.maximumRetryAttempts);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class FunctionEventInvokeConfigState extends com.pulumi.resources.R
      * 
      */
     @Import(name="qualifier")
-      private final @Nullable Output<String> qualifier;
+    private @Nullable Output<String> qualifier;
 
-    public Output<String> qualifier() {
-        return this.qualifier == null ? Codegen.empty() : this.qualifier;
+    public Optional<Output<String>> qualifier() {
+        return Optional.ofNullable(this.qualifier);
     }
 
-    public FunctionEventInvokeConfigState(
-        @Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig,
-        @Nullable Output<String> functionName,
-        @Nullable Output<Integer> maximumEventAgeInSeconds,
-        @Nullable Output<Integer> maximumRetryAttempts,
-        @Nullable Output<String> qualifier) {
-        this.destinationConfig = destinationConfig;
-        this.functionName = functionName;
-        this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
-        this.maximumRetryAttempts = maximumRetryAttempts;
-        this.qualifier = qualifier;
-    }
+    private FunctionEventInvokeConfigState() {}
 
-    private FunctionEventInvokeConfigState() {
-        this.destinationConfig = Codegen.empty();
-        this.functionName = Codegen.empty();
-        this.maximumEventAgeInSeconds = Codegen.empty();
-        this.maximumRetryAttempts = Codegen.empty();
-        this.qualifier = Codegen.empty();
+    private FunctionEventInvokeConfigState(FunctionEventInvokeConfigState $) {
+        this.destinationConfig = $.destinationConfig;
+        this.functionName = $.functionName;
+        this.maximumEventAgeInSeconds = $.maximumEventAgeInSeconds;
+        this.maximumRetryAttempts = $.maximumRetryAttempts;
+        this.qualifier = $.qualifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionEventInvokeConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig;
-        private @Nullable Output<String> functionName;
-        private @Nullable Output<Integer> maximumEventAgeInSeconds;
-        private @Nullable Output<Integer> maximumRetryAttempts;
-        private @Nullable Output<String> qualifier;
+        private FunctionEventInvokeConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionEventInvokeConfigState();
         }
 
         public Builder(FunctionEventInvokeConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationConfig = defaults.destinationConfig;
-    	      this.functionName = defaults.functionName;
-    	      this.maximumEventAgeInSeconds = defaults.maximumEventAgeInSeconds;
-    	      this.maximumRetryAttempts = defaults.maximumRetryAttempts;
-    	      this.qualifier = defaults.qualifier;
+            $ = new FunctionEventInvokeConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationConfig(@Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig) {
-            this.destinationConfig = destinationConfig;
+            $.destinationConfig = destinationConfig;
             return this;
         }
-        public Builder destinationConfig(@Nullable FunctionEventInvokeConfigDestinationConfigGetArgs destinationConfig) {
-            this.destinationConfig = Codegen.ofNullable(destinationConfig);
-            return this;
+
+        public Builder destinationConfig(FunctionEventInvokeConfigDestinationConfigGetArgs destinationConfig) {
+            return destinationConfig(Output.of(destinationConfig));
         }
+
         public Builder functionName(@Nullable Output<String> functionName) {
-            this.functionName = functionName;
+            $.functionName = functionName;
             return this;
         }
-        public Builder functionName(@Nullable String functionName) {
-            this.functionName = Codegen.ofNullable(functionName);
-            return this;
+
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
         }
+
         public Builder maximumEventAgeInSeconds(@Nullable Output<Integer> maximumEventAgeInSeconds) {
-            this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
+            $.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
             return this;
         }
-        public Builder maximumEventAgeInSeconds(@Nullable Integer maximumEventAgeInSeconds) {
-            this.maximumEventAgeInSeconds = Codegen.ofNullable(maximumEventAgeInSeconds);
-            return this;
+
+        public Builder maximumEventAgeInSeconds(Integer maximumEventAgeInSeconds) {
+            return maximumEventAgeInSeconds(Output.of(maximumEventAgeInSeconds));
         }
+
         public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
-            this.maximumRetryAttempts = maximumRetryAttempts;
+            $.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
-        public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
-            this.maximumRetryAttempts = Codegen.ofNullable(maximumRetryAttempts);
-            return this;
+
+        public Builder maximumRetryAttempts(Integer maximumRetryAttempts) {
+            return maximumRetryAttempts(Output.of(maximumRetryAttempts));
         }
+
         public Builder qualifier(@Nullable Output<String> qualifier) {
-            this.qualifier = qualifier;
+            $.qualifier = qualifier;
             return this;
         }
-        public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Codegen.ofNullable(qualifier);
-            return this;
-        }        public FunctionEventInvokeConfigState build() {
-            return new FunctionEventInvokeConfigState(destinationConfig, functionName, maximumEventAgeInSeconds, maximumRetryAttempts, qualifier);
+
+        public Builder qualifier(String qualifier) {
+            return qualifier(Output.of(qualifier));
+        }
+
+        public FunctionEventInvokeConfigState build() {
+            return $;
         }
     }
+
 }

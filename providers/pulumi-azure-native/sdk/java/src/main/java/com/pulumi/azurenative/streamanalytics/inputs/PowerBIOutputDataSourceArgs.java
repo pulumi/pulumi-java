@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<String> dataset;
+    private @Nullable Output<String> dataset;
 
-    public Output<String> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<String>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="groupId")
-      private final @Nullable Output<String> groupId;
+    private @Nullable Output<String> groupId;
 
-    public Output<String> groupId() {
-        return this.groupId == null ? Codegen.empty() : this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="groupName")
-      private final @Nullable Output<String> groupName;
+    private @Nullable Output<String> groupName;
 
-    public Output<String> groupName() {
-        return this.groupName == null ? Codegen.empty() : this.groupName;
+    public Optional<Output<String>> groupName() {
+        return Optional.ofNullable(this.groupName);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="refreshToken")
-      private final @Nullable Output<String> refreshToken;
+    private @Nullable Output<String> refreshToken;
 
-    public Output<String> refreshToken() {
-        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
+    public Optional<Output<String>> refreshToken() {
+        return Optional.ofNullable(this.refreshToken);
     }
 
     /**
@@ -68,10 +69,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="table")
-      private final @Nullable Output<String> table;
+    private @Nullable Output<String> table;
 
-    public Output<String> table() {
-        return this.table == null ? Codegen.empty() : this.table;
+    public Optional<Output<String>> table() {
+        return Optional.ofNullable(this.table);
     }
 
     /**
@@ -79,10 +80,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tokenUserDisplayName")
-      private final @Nullable Output<String> tokenUserDisplayName;
+    private @Nullable Output<String> tokenUserDisplayName;
 
-    public Output<String> tokenUserDisplayName() {
-        return this.tokenUserDisplayName == null ? Codegen.empty() : this.tokenUserDisplayName;
+    public Optional<Output<String>> tokenUserDisplayName() {
+        return Optional.ofNullable(this.tokenUserDisplayName);
     }
 
     /**
@@ -90,10 +91,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tokenUserPrincipalName")
-      private final @Nullable Output<String> tokenUserPrincipalName;
+    private @Nullable Output<String> tokenUserPrincipalName;
 
-    public Output<String> tokenUserPrincipalName() {
-        return this.tokenUserPrincipalName == null ? Codegen.empty() : this.tokenUserPrincipalName;
+    public Optional<Output<String>> tokenUserPrincipalName() {
+        return Optional.ofNullable(this.tokenUserPrincipalName);
     }
 
     /**
@@ -102,141 +103,119 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public PowerBIOutputDataSourceArgs(
-        @Nullable Output<String> dataset,
-        @Nullable Output<String> groupId,
-        @Nullable Output<String> groupName,
-        @Nullable Output<String> refreshToken,
-        @Nullable Output<String> table,
-        @Nullable Output<String> tokenUserDisplayName,
-        @Nullable Output<String> tokenUserPrincipalName,
-        Output<String> type) {
-        this.dataset = dataset;
-        this.groupId = groupId;
-        this.groupName = groupName;
-        this.refreshToken = refreshToken;
-        this.table = table;
-        this.tokenUserDisplayName = tokenUserDisplayName;
-        this.tokenUserPrincipalName = tokenUserPrincipalName;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private PowerBIOutputDataSourceArgs() {}
 
-    private PowerBIOutputDataSourceArgs() {
-        this.dataset = Codegen.empty();
-        this.groupId = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.refreshToken = Codegen.empty();
-        this.table = Codegen.empty();
-        this.tokenUserDisplayName = Codegen.empty();
-        this.tokenUserPrincipalName = Codegen.empty();
-        this.type = Codegen.empty();
+    private PowerBIOutputDataSourceArgs(PowerBIOutputDataSourceArgs $) {
+        this.dataset = $.dataset;
+        this.groupId = $.groupId;
+        this.groupName = $.groupName;
+        this.refreshToken = $.refreshToken;
+        this.table = $.table;
+        this.tokenUserDisplayName = $.tokenUserDisplayName;
+        this.tokenUserPrincipalName = $.tokenUserPrincipalName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PowerBIOutputDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataset;
-        private @Nullable Output<String> groupId;
-        private @Nullable Output<String> groupName;
-        private @Nullable Output<String> refreshToken;
-        private @Nullable Output<String> table;
-        private @Nullable Output<String> tokenUserDisplayName;
-        private @Nullable Output<String> tokenUserPrincipalName;
-        private Output<String> type;
+        private PowerBIOutputDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PowerBIOutputDataSourceArgs();
         }
 
         public Builder(PowerBIOutputDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.groupId = defaults.groupId;
-    	      this.groupName = defaults.groupName;
-    	      this.refreshToken = defaults.refreshToken;
-    	      this.table = defaults.table;
-    	      this.tokenUserDisplayName = defaults.tokenUserDisplayName;
-    	      this.tokenUserPrincipalName = defaults.tokenUserPrincipalName;
-    	      this.type = defaults.type;
+            $ = new PowerBIOutputDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable Output<String> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable String dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(String dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder groupId(@Nullable Output<String> groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
-        public Builder groupId(@Nullable String groupId) {
-            this.groupId = Codegen.ofNullable(groupId);
-            return this;
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
+
         public Builder groupName(@Nullable Output<String> groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
-        public Builder groupName(@Nullable String groupName) {
-            this.groupName = Codegen.ofNullable(groupName);
-            return this;
+
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
         }
+
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
-            this.refreshToken = refreshToken;
+            $.refreshToken = refreshToken;
             return this;
         }
-        public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Codegen.ofNullable(refreshToken);
-            return this;
+
+        public Builder refreshToken(String refreshToken) {
+            return refreshToken(Output.of(refreshToken));
         }
+
         public Builder table(@Nullable Output<String> table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
-        public Builder table(@Nullable String table) {
-            this.table = Codegen.ofNullable(table);
-            return this;
+
+        public Builder table(String table) {
+            return table(Output.of(table));
         }
+
         public Builder tokenUserDisplayName(@Nullable Output<String> tokenUserDisplayName) {
-            this.tokenUserDisplayName = tokenUserDisplayName;
+            $.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
-        public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
-            this.tokenUserDisplayName = Codegen.ofNullable(tokenUserDisplayName);
-            return this;
+
+        public Builder tokenUserDisplayName(String tokenUserDisplayName) {
+            return tokenUserDisplayName(Output.of(tokenUserDisplayName));
         }
+
         public Builder tokenUserPrincipalName(@Nullable Output<String> tokenUserPrincipalName) {
-            this.tokenUserPrincipalName = tokenUserPrincipalName;
+            $.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
-        public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
-            this.tokenUserPrincipalName = Codegen.ofNullable(tokenUserPrincipalName);
-            return this;
+
+        public Builder tokenUserPrincipalName(String tokenUserPrincipalName) {
+            return tokenUserPrincipalName(Output.of(tokenUserPrincipalName));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public PowerBIOutputDataSourceArgs build() {
-            return new PowerBIOutputDataSourceArgs(dataset, groupId, groupName, refreshToken, table, tokenUserDisplayName, tokenUserPrincipalName, type);
+            return type(Output.of(type));
+        }
+
+        public PowerBIOutputDataSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class SapHanaPartitionSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="partitionColumnName")
-      private final @Nullable Object partitionColumnName;
+    private @Nullable Object partitionColumnName;
 
     public Optional<Object> partitionColumnName() {
-        return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
+        return Optional.ofNullable(this.partitionColumnName);
     }
 
-    public SapHanaPartitionSettingsResponse(@Nullable Object partitionColumnName) {
-        this.partitionColumnName = partitionColumnName;
-    }
+    private SapHanaPartitionSettingsResponse() {}
 
-    private SapHanaPartitionSettingsResponse() {
-        this.partitionColumnName = null;
+    private SapHanaPartitionSettingsResponse(SapHanaPartitionSettingsResponse $) {
+        this.partitionColumnName = $.partitionColumnName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapHanaPartitionSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object partitionColumnName;
+        private SapHanaPartitionSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapHanaPartitionSettingsResponse();
         }
 
         public Builder(SapHanaPartitionSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionColumnName = defaults.partitionColumnName;
+            $ = new SapHanaPartitionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = partitionColumnName;
+            $.partitionColumnName = partitionColumnName;
             return this;
-        }        public SapHanaPartitionSettingsResponse build() {
-            return new SapHanaPartitionSettingsResponse(partitionColumnName);
+        }
+
+        public SapHanaPartitionSettingsResponse build() {
+            return $;
         }
     }
+
 }

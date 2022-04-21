@@ -15,190 +15,161 @@ public final class NetworkInsightsAnalysisAnalysisRouteTableRoute extends com.pu
     public static final NetworkInsightsAnalysisAnalysisRouteTableRoute Empty = new NetworkInsightsAnalysisAnalysisRouteTableRoute();
 
     @Import(name="destinationCidr")
-      private final @Nullable String destinationCidr;
+    private @Nullable String destinationCidr;
 
     public Optional<String> destinationCidr() {
-        return this.destinationCidr == null ? Optional.empty() : Optional.ofNullable(this.destinationCidr);
+        return Optional.ofNullable(this.destinationCidr);
     }
 
     @Import(name="destinationPrefixListId")
-      private final @Nullable String destinationPrefixListId;
+    private @Nullable String destinationPrefixListId;
 
     public Optional<String> destinationPrefixListId() {
-        return this.destinationPrefixListId == null ? Optional.empty() : Optional.ofNullable(this.destinationPrefixListId);
+        return Optional.ofNullable(this.destinationPrefixListId);
     }
 
     @Import(name="egressOnlyInternetGatewayId")
-      private final @Nullable String egressOnlyInternetGatewayId;
+    private @Nullable String egressOnlyInternetGatewayId;
 
     public Optional<String> egressOnlyInternetGatewayId() {
-        return this.egressOnlyInternetGatewayId == null ? Optional.empty() : Optional.ofNullable(this.egressOnlyInternetGatewayId);
+        return Optional.ofNullable(this.egressOnlyInternetGatewayId);
     }
 
     @Import(name="gatewayId")
-      private final @Nullable String gatewayId;
+    private @Nullable String gatewayId;
 
     public Optional<String> gatewayId() {
-        return this.gatewayId == null ? Optional.empty() : Optional.ofNullable(this.gatewayId);
+        return Optional.ofNullable(this.gatewayId);
     }
 
     @Import(name="instanceId")
-      private final @Nullable String instanceId;
+    private @Nullable String instanceId;
 
     public Optional<String> instanceId() {
-        return this.instanceId == null ? Optional.empty() : Optional.ofNullable(this.instanceId);
+        return Optional.ofNullable(this.instanceId);
     }
 
     @Import(name="natGatewayId")
-      private final @Nullable String natGatewayId;
+    private @Nullable String natGatewayId;
 
     public Optional<String> natGatewayId() {
-        return this.natGatewayId == null ? Optional.empty() : Optional.ofNullable(this.natGatewayId);
+        return Optional.ofNullable(this.natGatewayId);
     }
 
     @Import(name="networkInterfaceId")
-      private final @Nullable String networkInterfaceId;
+    private @Nullable String networkInterfaceId;
 
     public Optional<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     @Import(name="origin")
-      private final @Nullable String origin;
+    private @Nullable String origin;
 
     public Optional<String> origin() {
-        return this.origin == null ? Optional.empty() : Optional.ofNullable(this.origin);
+        return Optional.ofNullable(this.origin);
     }
 
     @Import(name="transitGatewayId")
-      private final @Nullable String transitGatewayId;
+    private @Nullable String transitGatewayId;
 
     public Optional<String> transitGatewayId() {
-        return this.transitGatewayId == null ? Optional.empty() : Optional.ofNullable(this.transitGatewayId);
+        return Optional.ofNullable(this.transitGatewayId);
     }
 
     @Import(name="vpcPeeringConnectionId")
-      private final @Nullable String vpcPeeringConnectionId;
+    private @Nullable String vpcPeeringConnectionId;
 
     public Optional<String> vpcPeeringConnectionId() {
-        return this.vpcPeeringConnectionId == null ? Optional.empty() : Optional.ofNullable(this.vpcPeeringConnectionId);
+        return Optional.ofNullable(this.vpcPeeringConnectionId);
     }
 
-    public NetworkInsightsAnalysisAnalysisRouteTableRoute(
-        @Nullable String destinationCidr,
-        @Nullable String destinationPrefixListId,
-        @Nullable String egressOnlyInternetGatewayId,
-        @Nullable String gatewayId,
-        @Nullable String instanceId,
-        @Nullable String natGatewayId,
-        @Nullable String networkInterfaceId,
-        @Nullable String origin,
-        @Nullable String transitGatewayId,
-        @Nullable String vpcPeeringConnectionId) {
-        this.destinationCidr = destinationCidr;
-        this.destinationPrefixListId = destinationPrefixListId;
-        this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
-        this.gatewayId = gatewayId;
-        this.instanceId = instanceId;
-        this.natGatewayId = natGatewayId;
-        this.networkInterfaceId = networkInterfaceId;
-        this.origin = origin;
-        this.transitGatewayId = transitGatewayId;
-        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
-    }
+    private NetworkInsightsAnalysisAnalysisRouteTableRoute() {}
 
-    private NetworkInsightsAnalysisAnalysisRouteTableRoute() {
-        this.destinationCidr = null;
-        this.destinationPrefixListId = null;
-        this.egressOnlyInternetGatewayId = null;
-        this.gatewayId = null;
-        this.instanceId = null;
-        this.natGatewayId = null;
-        this.networkInterfaceId = null;
-        this.origin = null;
-        this.transitGatewayId = null;
-        this.vpcPeeringConnectionId = null;
+    private NetworkInsightsAnalysisAnalysisRouteTableRoute(NetworkInsightsAnalysisAnalysisRouteTableRoute $) {
+        this.destinationCidr = $.destinationCidr;
+        this.destinationPrefixListId = $.destinationPrefixListId;
+        this.egressOnlyInternetGatewayId = $.egressOnlyInternetGatewayId;
+        this.gatewayId = $.gatewayId;
+        this.instanceId = $.instanceId;
+        this.natGatewayId = $.natGatewayId;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.origin = $.origin;
+        this.transitGatewayId = $.transitGatewayId;
+        this.vpcPeeringConnectionId = $.vpcPeeringConnectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAnalysisAnalysisRouteTableRoute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String destinationCidr;
-        private @Nullable String destinationPrefixListId;
-        private @Nullable String egressOnlyInternetGatewayId;
-        private @Nullable String gatewayId;
-        private @Nullable String instanceId;
-        private @Nullable String natGatewayId;
-        private @Nullable String networkInterfaceId;
-        private @Nullable String origin;
-        private @Nullable String transitGatewayId;
-        private @Nullable String vpcPeeringConnectionId;
+        private NetworkInsightsAnalysisAnalysisRouteTableRoute $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAnalysisAnalysisRouteTableRoute();
         }
 
         public Builder(NetworkInsightsAnalysisAnalysisRouteTableRoute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationCidr = defaults.destinationCidr;
-    	      this.destinationPrefixListId = defaults.destinationPrefixListId;
-    	      this.egressOnlyInternetGatewayId = defaults.egressOnlyInternetGatewayId;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.natGatewayId = defaults.natGatewayId;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.origin = defaults.origin;
-    	      this.transitGatewayId = defaults.transitGatewayId;
-    	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
+            $ = new NetworkInsightsAnalysisAnalysisRouteTableRoute(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationCidr(@Nullable String destinationCidr) {
-            this.destinationCidr = destinationCidr;
+            $.destinationCidr = destinationCidr;
             return this;
         }
+
         public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
-            this.destinationPrefixListId = destinationPrefixListId;
+            $.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
+
         public Builder egressOnlyInternetGatewayId(@Nullable String egressOnlyInternetGatewayId) {
-            this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
+            $.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
             return this;
         }
+
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = gatewayId;
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder natGatewayId(@Nullable String natGatewayId) {
-            this.natGatewayId = natGatewayId;
+            $.natGatewayId = natGatewayId;
             return this;
         }
+
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder origin(@Nullable String origin) {
-            this.origin = origin;
+            $.origin = origin;
             return this;
         }
+
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = transitGatewayId;
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
+
         public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = vpcPeeringConnectionId;
+            $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
-        }        public NetworkInsightsAnalysisAnalysisRouteTableRoute build() {
-            return new NetworkInsightsAnalysisAnalysisRouteTableRoute(destinationCidr, destinationPrefixListId, egressOnlyInternetGatewayId, gatewayId, instanceId, natGatewayId, networkInterfaceId, origin, transitGatewayId, vpcPeeringConnectionId);
+        }
+
+        public NetworkInsightsAnalysisAnalysisRouteTableRoute build() {
+            return $;
         }
     }
+
 }

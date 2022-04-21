@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="height")
-      private final @Nullable Output<String> height;
+    private @Nullable Output<String> height;
 
-    public Output<String> height() {
-        return this.height == null ? Codegen.empty() : this.height;
+    public Optional<Output<String>> height() {
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -48,7 +49,7 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -59,10 +60,10 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quality")
-      private final @Nullable Output<Integer> quality;
+    private @Nullable Output<Integer> quality;
 
-    public Output<Integer> quality() {
-        return this.quality == null ? Codegen.empty() : this.quality;
+    public Optional<Output<Integer>> quality() {
+        return Optional.ofNullable(this.quality);
     }
 
     /**
@@ -70,102 +71,89 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="width")
-      private final @Nullable Output<String> width;
+    private @Nullable Output<String> width;
 
-    public Output<String> width() {
-        return this.width == null ? Codegen.empty() : this.width;
+    public Optional<Output<String>> width() {
+        return Optional.ofNullable(this.width);
     }
 
-    public JpgLayerArgs(
-        @Nullable Output<String> height,
-        @Nullable Output<String> label,
-        Output<String> odataType,
-        @Nullable Output<Integer> quality,
-        @Nullable Output<String> width) {
-        this.height = height;
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.quality = quality;
-        this.width = width;
-    }
+    private JpgLayerArgs() {}
 
-    private JpgLayerArgs() {
-        this.height = Codegen.empty();
-        this.label = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.quality = Codegen.empty();
-        this.width = Codegen.empty();
+    private JpgLayerArgs(JpgLayerArgs $) {
+        this.height = $.height;
+        this.label = $.label;
+        this.odataType = $.odataType;
+        this.quality = $.quality;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JpgLayerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> height;
-        private @Nullable Output<String> label;
-        private Output<String> odataType;
-        private @Nullable Output<Integer> quality;
-        private @Nullable Output<String> width;
+        private JpgLayerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JpgLayerArgs();
         }
 
         public Builder(JpgLayerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
-    	      this.quality = defaults.quality;
-    	      this.width = defaults.width;
+            $ = new JpgLayerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder height(@Nullable Output<String> height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
-        public Builder height(@Nullable String height) {
-            this.height = Codegen.ofNullable(height);
-            return this;
+
+        public Builder height(String height) {
+            return height(Output.of(height));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder quality(@Nullable Output<Integer> quality) {
-            this.quality = quality;
+            $.quality = quality;
             return this;
         }
-        public Builder quality(@Nullable Integer quality) {
-            this.quality = Codegen.ofNullable(quality);
-            return this;
+
+        public Builder quality(Integer quality) {
+            return quality(Output.of(quality));
         }
+
         public Builder width(@Nullable Output<String> width) {
-            this.width = width;
+            $.width = width;
             return this;
         }
-        public Builder width(@Nullable String width) {
-            this.width = Codegen.ofNullable(width);
-            return this;
-        }        public JpgLayerArgs build() {
-            return new JpgLayerArgs(height, label, odataType, quality, width);
+
+        public Builder width(String width) {
+            return width(Output.of(width));
+        }
+
+        public JpgLayerArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

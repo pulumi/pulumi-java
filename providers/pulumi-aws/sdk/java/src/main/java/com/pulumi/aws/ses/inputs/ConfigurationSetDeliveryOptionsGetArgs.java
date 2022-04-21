@@ -5,9 +5,9 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ConfigurationSetDeliveryOptionsGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="tlsPolicy")
-      private final @Nullable Output<String> tlsPolicy;
+    private @Nullable Output<String> tlsPolicy;
 
-    public Output<String> tlsPolicy() {
-        return this.tlsPolicy == null ? Codegen.empty() : this.tlsPolicy;
+    public Optional<Output<String>> tlsPolicy() {
+        return Optional.ofNullable(this.tlsPolicy);
     }
 
-    public ConfigurationSetDeliveryOptionsGetArgs(@Nullable Output<String> tlsPolicy) {
-        this.tlsPolicy = tlsPolicy;
-    }
+    private ConfigurationSetDeliveryOptionsGetArgs() {}
 
-    private ConfigurationSetDeliveryOptionsGetArgs() {
-        this.tlsPolicy = Codegen.empty();
+    private ConfigurationSetDeliveryOptionsGetArgs(ConfigurationSetDeliveryOptionsGetArgs $) {
+        this.tlsPolicy = $.tlsPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationSetDeliveryOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> tlsPolicy;
+        private ConfigurationSetDeliveryOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationSetDeliveryOptionsGetArgs();
         }
 
         public Builder(ConfigurationSetDeliveryOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tlsPolicy = defaults.tlsPolicy;
+            $ = new ConfigurationSetDeliveryOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tlsPolicy(@Nullable Output<String> tlsPolicy) {
-            this.tlsPolicy = tlsPolicy;
+            $.tlsPolicy = tlsPolicy;
             return this;
         }
-        public Builder tlsPolicy(@Nullable String tlsPolicy) {
-            this.tlsPolicy = Codegen.ofNullable(tlsPolicy);
-            return this;
-        }        public ConfigurationSetDeliveryOptionsGetArgs build() {
-            return new ConfigurationSetDeliveryOptionsGetArgs(tlsPolicy);
+
+        public Builder tlsPolicy(String tlsPolicy) {
+            return tlsPolicy(Output.of(tlsPolicy));
+        }
+
+        public ConfigurationSetDeliveryOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

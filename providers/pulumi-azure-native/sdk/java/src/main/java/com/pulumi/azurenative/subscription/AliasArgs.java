@@ -6,9 +6,9 @@ package com.pulumi.azurenative.subscription;
 import com.pulumi.azurenative.subscription.inputs.PutAliasRequestPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aliasName")
-      private final @Nullable Output<String> aliasName;
+    private @Nullable Output<String> aliasName;
 
-    public Output<String> aliasName() {
-        return this.aliasName == null ? Codegen.empty() : this.aliasName;
+    public Optional<Output<String>> aliasName() {
+        return Optional.ofNullable(this.aliasName);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<PutAliasRequestPropertiesArgs> properties;
+    private Output<PutAliasRequestPropertiesArgs> properties;
 
     public Output<PutAliasRequestPropertiesArgs> properties() {
         return this.properties;
     }
 
-    public AliasArgs(
-        @Nullable Output<String> aliasName,
-        Output<PutAliasRequestPropertiesArgs> properties) {
-        this.aliasName = aliasName;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private AliasArgs() {}
 
-    private AliasArgs() {
-        this.aliasName = Codegen.empty();
-        this.properties = Codegen.empty();
+    private AliasArgs(AliasArgs $) {
+        this.aliasName = $.aliasName;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aliasName;
-        private Output<PutAliasRequestPropertiesArgs> properties;
+        private AliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasArgs();
         }
 
         public Builder(AliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasName = defaults.aliasName;
-    	      this.properties = defaults.properties;
+            $ = new AliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasName(@Nullable Output<String> aliasName) {
-            this.aliasName = aliasName;
+            $.aliasName = aliasName;
             return this;
         }
-        public Builder aliasName(@Nullable String aliasName) {
-            this.aliasName = Codegen.ofNullable(aliasName);
-            return this;
+
+        public Builder aliasName(String aliasName) {
+            return aliasName(Output.of(aliasName));
         }
+
         public Builder properties(Output<PutAliasRequestPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(PutAliasRequestPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
-        }        public AliasArgs build() {
-            return new AliasArgs(aliasName, properties);
+            return properties(Output.of(properties));
+        }
+
+        public AliasArgs build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

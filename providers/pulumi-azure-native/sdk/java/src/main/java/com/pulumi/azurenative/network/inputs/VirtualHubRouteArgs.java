@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VirtualHubRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="addressPrefixes")
-      private final @Nullable Output<List<String>> addressPrefixes;
+    private @Nullable Output<List<String>> addressPrefixes;
 
-    public Output<List<String>> addressPrefixes() {
-        return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
+    public Optional<Output<List<String>>> addressPrefixes() {
+        return Optional.ofNullable(this.addressPrefixes);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class VirtualHubRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="nextHopIpAddress")
-      private final @Nullable Output<String> nextHopIpAddress;
+    private @Nullable Output<String> nextHopIpAddress;
 
-    public Output<String> nextHopIpAddress() {
-        return this.nextHopIpAddress == null ? Codegen.empty() : this.nextHopIpAddress;
+    public Optional<Output<String>> nextHopIpAddress() {
+        return Optional.ofNullable(this.nextHopIpAddress);
     }
 
-    public VirtualHubRouteArgs(
-        @Nullable Output<List<String>> addressPrefixes,
-        @Nullable Output<String> nextHopIpAddress) {
-        this.addressPrefixes = addressPrefixes;
-        this.nextHopIpAddress = nextHopIpAddress;
-    }
+    private VirtualHubRouteArgs() {}
 
-    private VirtualHubRouteArgs() {
-        this.addressPrefixes = Codegen.empty();
-        this.nextHopIpAddress = Codegen.empty();
+    private VirtualHubRouteArgs(VirtualHubRouteArgs $) {
+        this.addressPrefixes = $.addressPrefixes;
+        this.nextHopIpAddress = $.nextHopIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> addressPrefixes;
-        private @Nullable Output<String> nextHopIpAddress;
+        private VirtualHubRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubRouteArgs();
         }
 
         public Builder(VirtualHubRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefixes = defaults.addressPrefixes;
-    	      this.nextHopIpAddress = defaults.nextHopIpAddress;
+            $ = new VirtualHubRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
-            this.addressPrefixes = addressPrefixes;
+            $.addressPrefixes = addressPrefixes;
             return this;
         }
-        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = Codegen.ofNullable(addressPrefixes);
-            return this;
+
+        public Builder addressPrefixes(List<String> addressPrefixes) {
+            return addressPrefixes(Output.of(addressPrefixes));
         }
+
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }
+
         public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
-            this.nextHopIpAddress = nextHopIpAddress;
+            $.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
-        public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
-            this.nextHopIpAddress = Codegen.ofNullable(nextHopIpAddress);
-            return this;
-        }        public VirtualHubRouteArgs build() {
-            return new VirtualHubRouteArgs(addressPrefixes, nextHopIpAddress);
+
+        public Builder nextHopIpAddress(String nextHopIpAddress) {
+            return nextHopIpAddress(Output.of(nextHopIpAddress));
+        }
+
+        public VirtualHubRouteArgs build() {
+            return $;
         }
     }
+
 }

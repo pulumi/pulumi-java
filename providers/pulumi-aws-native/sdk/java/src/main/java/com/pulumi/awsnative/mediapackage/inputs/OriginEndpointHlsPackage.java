@@ -31,10 +31,10 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="adMarkers")
-      private final @Nullable OriginEndpointHlsPackageAdMarkers adMarkers;
+    private @Nullable OriginEndpointHlsPackageAdMarkers adMarkers;
 
     public Optional<OriginEndpointHlsPackageAdMarkers> adMarkers() {
-        return this.adMarkers == null ? Optional.empty() : Optional.ofNullable(this.adMarkers);
+        return Optional.ofNullable(this.adMarkers);
     }
 
     /**
@@ -42,24 +42,24 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="adTriggers")
-      private final @Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers;
+    private @Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers;
 
-    public List<OriginEndpointHlsPackageAdTriggersItem> adTriggers() {
-        return this.adTriggers == null ? List.of() : this.adTriggers;
+    public Optional<List<OriginEndpointHlsPackageAdTriggersItem>> adTriggers() {
+        return Optional.ofNullable(this.adTriggers);
     }
 
     @Import(name="adsOnDeliveryRestrictions")
-      private final @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
+    private @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
 
     public Optional<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions() {
-        return this.adsOnDeliveryRestrictions == null ? Optional.empty() : Optional.ofNullable(this.adsOnDeliveryRestrictions);
+        return Optional.ofNullable(this.adsOnDeliveryRestrictions);
     }
 
     @Import(name="encryption")
-      private final @Nullable OriginEndpointHlsEncryption encryption;
+    private @Nullable OriginEndpointHlsEncryption encryption;
 
     public Optional<OriginEndpointHlsEncryption> encryption() {
-        return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="includeIframeOnlyStream")
-      private final @Nullable Boolean includeIframeOnlyStream;
+    private @Nullable Boolean includeIframeOnlyStream;
 
     public Optional<Boolean> includeIframeOnlyStream() {
-        return this.includeIframeOnlyStream == null ? Optional.empty() : Optional.ofNullable(this.includeIframeOnlyStream);
+        return Optional.ofNullable(this.includeIframeOnlyStream);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="playlistType")
-      private final @Nullable OriginEndpointHlsPackagePlaylistType playlistType;
+    private @Nullable OriginEndpointHlsPackagePlaylistType playlistType;
 
     public Optional<OriginEndpointHlsPackagePlaylistType> playlistType() {
-        return this.playlistType == null ? Optional.empty() : Optional.ofNullable(this.playlistType);
+        return Optional.ofNullable(this.playlistType);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="playlistWindowSeconds")
-      private final @Nullable Integer playlistWindowSeconds;
+    private @Nullable Integer playlistWindowSeconds;
 
     public Optional<Integer> playlistWindowSeconds() {
-        return this.playlistWindowSeconds == null ? Optional.empty() : Optional.ofNullable(this.playlistWindowSeconds);
+        return Optional.ofNullable(this.playlistWindowSeconds);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="programDateTimeIntervalSeconds")
-      private final @Nullable Integer programDateTimeIntervalSeconds;
+    private @Nullable Integer programDateTimeIntervalSeconds;
 
     public Optional<Integer> programDateTimeIntervalSeconds() {
-        return this.programDateTimeIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.programDateTimeIntervalSeconds);
+        return Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
 
     /**
@@ -111,17 +111,17 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="segmentDurationSeconds")
-      private final @Nullable Integer segmentDurationSeconds;
+    private @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> segmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
+        return Optional.ofNullable(this.segmentDurationSeconds);
     }
 
     @Import(name="streamSelection")
-      private final @Nullable OriginEndpointStreamSelection streamSelection;
+    private @Nullable OriginEndpointStreamSelection streamSelection;
 
     public Optional<OriginEndpointStreamSelection> streamSelection() {
-        return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
+        return Optional.ofNullable(this.streamSelection);
     }
 
     /**
@@ -129,139 +129,108 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="useAudioRenditionGroup")
-      private final @Nullable Boolean useAudioRenditionGroup;
+    private @Nullable Boolean useAudioRenditionGroup;
 
     public Optional<Boolean> useAudioRenditionGroup() {
-        return this.useAudioRenditionGroup == null ? Optional.empty() : Optional.ofNullable(this.useAudioRenditionGroup);
+        return Optional.ofNullable(this.useAudioRenditionGroup);
     }
 
-    public OriginEndpointHlsPackage(
-        @Nullable OriginEndpointHlsPackageAdMarkers adMarkers,
-        @Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers,
-        @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
-        @Nullable OriginEndpointHlsEncryption encryption,
-        @Nullable Boolean includeIframeOnlyStream,
-        @Nullable OriginEndpointHlsPackagePlaylistType playlistType,
-        @Nullable Integer playlistWindowSeconds,
-        @Nullable Integer programDateTimeIntervalSeconds,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable OriginEndpointStreamSelection streamSelection,
-        @Nullable Boolean useAudioRenditionGroup) {
-        this.adMarkers = adMarkers;
-        this.adTriggers = adTriggers;
-        this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
-        this.encryption = encryption;
-        this.includeIframeOnlyStream = includeIframeOnlyStream;
-        this.playlistType = playlistType;
-        this.playlistWindowSeconds = playlistWindowSeconds;
-        this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
-        this.segmentDurationSeconds = segmentDurationSeconds;
-        this.streamSelection = streamSelection;
-        this.useAudioRenditionGroup = useAudioRenditionGroup;
-    }
+    private OriginEndpointHlsPackage() {}
 
-    private OriginEndpointHlsPackage() {
-        this.adMarkers = null;
-        this.adTriggers = List.of();
-        this.adsOnDeliveryRestrictions = null;
-        this.encryption = null;
-        this.includeIframeOnlyStream = null;
-        this.playlistType = null;
-        this.playlistWindowSeconds = null;
-        this.programDateTimeIntervalSeconds = null;
-        this.segmentDurationSeconds = null;
-        this.streamSelection = null;
-        this.useAudioRenditionGroup = null;
+    private OriginEndpointHlsPackage(OriginEndpointHlsPackage $) {
+        this.adMarkers = $.adMarkers;
+        this.adTriggers = $.adTriggers;
+        this.adsOnDeliveryRestrictions = $.adsOnDeliveryRestrictions;
+        this.encryption = $.encryption;
+        this.includeIframeOnlyStream = $.includeIframeOnlyStream;
+        this.playlistType = $.playlistType;
+        this.playlistWindowSeconds = $.playlistWindowSeconds;
+        this.programDateTimeIntervalSeconds = $.programDateTimeIntervalSeconds;
+        this.segmentDurationSeconds = $.segmentDurationSeconds;
+        this.streamSelection = $.streamSelection;
+        this.useAudioRenditionGroup = $.useAudioRenditionGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointHlsPackage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable OriginEndpointHlsPackageAdMarkers adMarkers;
-        private @Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers;
-        private @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
-        private @Nullable OriginEndpointHlsEncryption encryption;
-        private @Nullable Boolean includeIframeOnlyStream;
-        private @Nullable OriginEndpointHlsPackagePlaylistType playlistType;
-        private @Nullable Integer playlistWindowSeconds;
-        private @Nullable Integer programDateTimeIntervalSeconds;
-        private @Nullable Integer segmentDurationSeconds;
-        private @Nullable OriginEndpointStreamSelection streamSelection;
-        private @Nullable Boolean useAudioRenditionGroup;
+        private OriginEndpointHlsPackage $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointHlsPackage();
         }
 
         public Builder(OriginEndpointHlsPackage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adMarkers = defaults.adMarkers;
-    	      this.adTriggers = defaults.adTriggers;
-    	      this.adsOnDeliveryRestrictions = defaults.adsOnDeliveryRestrictions;
-    	      this.encryption = defaults.encryption;
-    	      this.includeIframeOnlyStream = defaults.includeIframeOnlyStream;
-    	      this.playlistType = defaults.playlistType;
-    	      this.playlistWindowSeconds = defaults.playlistWindowSeconds;
-    	      this.programDateTimeIntervalSeconds = defaults.programDateTimeIntervalSeconds;
-    	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
-    	      this.streamSelection = defaults.streamSelection;
-    	      this.useAudioRenditionGroup = defaults.useAudioRenditionGroup;
+            $ = new OriginEndpointHlsPackage(Objects.requireNonNull(defaults));
         }
 
         public Builder adMarkers(@Nullable OriginEndpointHlsPackageAdMarkers adMarkers) {
-            this.adMarkers = adMarkers;
+            $.adMarkers = adMarkers;
             return this;
         }
+
         public Builder adTriggers(@Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers) {
-            this.adTriggers = adTriggers;
+            $.adTriggers = adTriggers;
             return this;
         }
+
         public Builder adTriggers(OriginEndpointHlsPackageAdTriggersItem... adTriggers) {
             return adTriggers(List.of(adTriggers));
         }
+
         public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
-            this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
+            $.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
+
         public Builder encryption(@Nullable OriginEndpointHlsEncryption encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
+
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
-            this.includeIframeOnlyStream = includeIframeOnlyStream;
+            $.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
+
         public Builder playlistType(@Nullable OriginEndpointHlsPackagePlaylistType playlistType) {
-            this.playlistType = playlistType;
+            $.playlistType = playlistType;
             return this;
         }
+
         public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
-            this.playlistWindowSeconds = playlistWindowSeconds;
+            $.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
+
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
-            this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
+            $.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
+
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = segmentDurationSeconds;
+            $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
+
         public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
-            this.streamSelection = streamSelection;
+            $.streamSelection = streamSelection;
             return this;
         }
+
         public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
-            this.useAudioRenditionGroup = useAudioRenditionGroup;
+            $.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
-        }        public OriginEndpointHlsPackage build() {
-            return new OriginEndpointHlsPackage(adMarkers, adTriggers, adsOnDeliveryRestrictions, encryption, includeIframeOnlyStream, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, segmentDurationSeconds, streamSelection, useAudioRenditionGroup);
+        }
+
+        public OriginEndpointHlsPackage build() {
+            return $;
         }
     }
+
 }

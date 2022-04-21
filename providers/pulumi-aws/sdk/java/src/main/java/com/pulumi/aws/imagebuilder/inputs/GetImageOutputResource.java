@@ -18,48 +18,49 @@ public final class GetImageOutputResource extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="amis", required=true)
-      private final List<GetImageOutputResourceAmi> amis;
+    private List<GetImageOutputResourceAmi> amis;
 
     public List<GetImageOutputResourceAmi> amis() {
         return this.amis;
     }
 
-    public GetImageOutputResource(List<GetImageOutputResourceAmi> amis) {
-        this.amis = Objects.requireNonNull(amis, "expected parameter 'amis' to be non-null");
-    }
+    private GetImageOutputResource() {}
 
-    private GetImageOutputResource() {
-        this.amis = List.of();
+    private GetImageOutputResource(GetImageOutputResource $) {
+        this.amis = $.amis;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageOutputResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetImageOutputResourceAmi> amis;
+        private GetImageOutputResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageOutputResource();
         }
 
         public Builder(GetImageOutputResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amis = defaults.amis;
+            $ = new GetImageOutputResource(Objects.requireNonNull(defaults));
         }
 
         public Builder amis(List<GetImageOutputResourceAmi> amis) {
-            this.amis = Objects.requireNonNull(amis);
+            $.amis = amis;
             return this;
         }
+
         public Builder amis(GetImageOutputResourceAmi... amis) {
             return amis(List.of(amis));
-        }        public GetImageOutputResource build() {
-            return new GetImageOutputResource(amis);
+        }
+
+        public GetImageOutputResource build() {
+            $.amis = Objects.requireNonNull($.amis, "expected parameter 'amis' to be non-null");
+            return $;
         }
     }
+
 }

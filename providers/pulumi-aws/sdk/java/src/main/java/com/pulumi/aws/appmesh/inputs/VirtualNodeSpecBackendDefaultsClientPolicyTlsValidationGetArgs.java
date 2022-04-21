@@ -7,8 +7,8 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyT
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArg
      * 
      */
     @Import(name="subjectAlternativeNames")
-      private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
+    private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
-    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
+    public Optional<Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs>> subjectAlternativeNames() {
+        return Optional.ofNullable(this.subjectAlternativeNames);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArg
      * 
      */
     @Import(name="trust", required=true)
-      private final Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust;
+    private Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust;
 
     public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust() {
         return this.trust;
     }
 
-    public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs(
-        @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames,
-        Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust) {
-        this.subjectAlternativeNames = subjectAlternativeNames;
-        this.trust = Objects.requireNonNull(trust, "expected parameter 'trust' to be non-null");
-    }
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs() {}
 
-    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs() {
-        this.subjectAlternativeNames = Codegen.empty();
-        this.trust = Codegen.empty();
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs $) {
+        this.subjectAlternativeNames = $.subjectAlternativeNames;
+        this.trust = $.trust;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
-        private Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust;
+        private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs();
         }
 
         public Builder(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
-    	      this.trust = defaults.trust;
+            $ = new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subjectAlternativeNames(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames) {
-            this.subjectAlternativeNames = subjectAlternativeNames;
+            $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-        public Builder subjectAlternativeNames(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
-            this.subjectAlternativeNames = Codegen.ofNullable(subjectAlternativeNames);
-            return this;
+
+        public Builder subjectAlternativeNames(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
+            return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
+
         public Builder trust(Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust) {
-            this.trust = Objects.requireNonNull(trust);
+            $.trust = trust;
             return this;
         }
+
         public Builder trust(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs trust) {
-            this.trust = Output.of(Objects.requireNonNull(trust));
-            return this;
-        }        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs build() {
-            return new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs(subjectAlternativeNames, trust);
+            return trust(Output.of(trust));
+        }
+
+        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs build() {
+            $.trust = Objects.requireNonNull($.trust, "expected parameter 'trust' to be non-null");
+            return $;
         }
     }
+
 }

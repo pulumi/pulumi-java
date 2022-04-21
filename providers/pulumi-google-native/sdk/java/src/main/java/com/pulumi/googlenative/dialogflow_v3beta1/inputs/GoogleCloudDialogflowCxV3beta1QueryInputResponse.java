@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends com.
      * 
      */
     @Import(name="audio", required=true)
-      private final GoogleCloudDialogflowCxV3beta1AudioInputResponse audio;
+    private GoogleCloudDialogflowCxV3beta1AudioInputResponse audio;
 
     public GoogleCloudDialogflowCxV3beta1AudioInputResponse audio() {
         return this.audio;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends com.
      * 
      */
     @Import(name="dtmf", required=true)
-      private final GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf;
+    private GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf;
 
     public GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf() {
         return this.dtmf;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends com.
      * 
      */
     @Import(name="event", required=true)
-      private final GoogleCloudDialogflowCxV3beta1EventInputResponse event;
+    private GoogleCloudDialogflowCxV3beta1EventInputResponse event;
 
     public GoogleCloudDialogflowCxV3beta1EventInputResponse event() {
         return this.event;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends com.
      * 
      */
     @Import(name="intent", required=true)
-      private final GoogleCloudDialogflowCxV3beta1IntentInputResponse intent;
+    private GoogleCloudDialogflowCxV3beta1IntentInputResponse intent;
 
     public GoogleCloudDialogflowCxV3beta1IntentInputResponse intent() {
         return this.intent;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends com.
      * 
      */
     @Import(name="languageCode", required=true)
-      private final String languageCode;
+    private String languageCode;
 
     public String languageCode() {
         return this.languageCode;
@@ -81,91 +81,80 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends com.
      * 
      */
     @Import(name="text", required=true)
-      private final GoogleCloudDialogflowCxV3beta1TextInputResponse text;
+    private GoogleCloudDialogflowCxV3beta1TextInputResponse text;
 
     public GoogleCloudDialogflowCxV3beta1TextInputResponse text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowCxV3beta1QueryInputResponse(
-        GoogleCloudDialogflowCxV3beta1AudioInputResponse audio,
-        GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf,
-        GoogleCloudDialogflowCxV3beta1EventInputResponse event,
-        GoogleCloudDialogflowCxV3beta1IntentInputResponse intent,
-        String languageCode,
-        GoogleCloudDialogflowCxV3beta1TextInputResponse text) {
-        this.audio = Objects.requireNonNull(audio, "expected parameter 'audio' to be non-null");
-        this.dtmf = Objects.requireNonNull(dtmf, "expected parameter 'dtmf' to be non-null");
-        this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
-        this.intent = Objects.requireNonNull(intent, "expected parameter 'intent' to be non-null");
-        this.languageCode = Objects.requireNonNull(languageCode, "expected parameter 'languageCode' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1QueryInputResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1QueryInputResponse() {
-        this.audio = null;
-        this.dtmf = null;
-        this.event = null;
-        this.intent = null;
-        this.languageCode = null;
-        this.text = null;
+    private GoogleCloudDialogflowCxV3beta1QueryInputResponse(GoogleCloudDialogflowCxV3beta1QueryInputResponse $) {
+        this.audio = $.audio;
+        this.dtmf = $.dtmf;
+        this.event = $.event;
+        this.intent = $.intent;
+        this.languageCode = $.languageCode;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1QueryInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowCxV3beta1AudioInputResponse audio;
-        private GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf;
-        private GoogleCloudDialogflowCxV3beta1EventInputResponse event;
-        private GoogleCloudDialogflowCxV3beta1IntentInputResponse intent;
-        private String languageCode;
-        private GoogleCloudDialogflowCxV3beta1TextInputResponse text;
+        private GoogleCloudDialogflowCxV3beta1QueryInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1QueryInputResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1QueryInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audio = defaults.audio;
-    	      this.dtmf = defaults.dtmf;
-    	      this.event = defaults.event;
-    	      this.intent = defaults.intent;
-    	      this.languageCode = defaults.languageCode;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowCxV3beta1QueryInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audio(GoogleCloudDialogflowCxV3beta1AudioInputResponse audio) {
-            this.audio = Objects.requireNonNull(audio);
+            $.audio = audio;
             return this;
         }
+
         public Builder dtmf(GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf) {
-            this.dtmf = Objects.requireNonNull(dtmf);
+            $.dtmf = dtmf;
             return this;
         }
+
         public Builder event(GoogleCloudDialogflowCxV3beta1EventInputResponse event) {
-            this.event = Objects.requireNonNull(event);
+            $.event = event;
             return this;
         }
+
         public Builder intent(GoogleCloudDialogflowCxV3beta1IntentInputResponse intent) {
-            this.intent = Objects.requireNonNull(intent);
+            $.intent = intent;
             return this;
         }
+
         public Builder languageCode(String languageCode) {
-            this.languageCode = Objects.requireNonNull(languageCode);
+            $.languageCode = languageCode;
             return this;
         }
+
         public Builder text(GoogleCloudDialogflowCxV3beta1TextInputResponse text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1QueryInputResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1QueryInputResponse(audio, dtmf, event, intent, languageCode, text);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1QueryInputResponse build() {
+            $.audio = Objects.requireNonNull($.audio, "expected parameter 'audio' to be non-null");
+            $.dtmf = Objects.requireNonNull($.dtmf, "expected parameter 'dtmf' to be non-null");
+            $.event = Objects.requireNonNull($.event, "expected parameter 'event' to be non-null");
+            $.intent = Objects.requireNonNull($.intent, "expected parameter 'intent' to be non-null");
+            $.languageCode = Objects.requireNonNull($.languageCode, "expected parameter 'languageCode' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

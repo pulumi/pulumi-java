@@ -23,45 +23,44 @@ public final class ImageRecipeSystemsManagerAgent extends com.pulumi.resources.I
      * 
      */
     @Import(name="uninstallAfterBuild")
-      private final @Nullable Boolean uninstallAfterBuild;
+    private @Nullable Boolean uninstallAfterBuild;
 
     public Optional<Boolean> uninstallAfterBuild() {
-        return this.uninstallAfterBuild == null ? Optional.empty() : Optional.ofNullable(this.uninstallAfterBuild);
+        return Optional.ofNullable(this.uninstallAfterBuild);
     }
 
-    public ImageRecipeSystemsManagerAgent(@Nullable Boolean uninstallAfterBuild) {
-        this.uninstallAfterBuild = uninstallAfterBuild;
-    }
+    private ImageRecipeSystemsManagerAgent() {}
 
-    private ImageRecipeSystemsManagerAgent() {
-        this.uninstallAfterBuild = null;
+    private ImageRecipeSystemsManagerAgent(ImageRecipeSystemsManagerAgent $) {
+        this.uninstallAfterBuild = $.uninstallAfterBuild;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRecipeSystemsManagerAgent defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean uninstallAfterBuild;
+        private ImageRecipeSystemsManagerAgent $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRecipeSystemsManagerAgent();
         }
 
         public Builder(ImageRecipeSystemsManagerAgent defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uninstallAfterBuild = defaults.uninstallAfterBuild;
+            $ = new ImageRecipeSystemsManagerAgent(Objects.requireNonNull(defaults));
         }
 
         public Builder uninstallAfterBuild(@Nullable Boolean uninstallAfterBuild) {
-            this.uninstallAfterBuild = uninstallAfterBuild;
+            $.uninstallAfterBuild = uninstallAfterBuild;
             return this;
-        }        public ImageRecipeSystemsManagerAgent build() {
-            return new ImageRecipeSystemsManagerAgent(uninstallAfterBuild);
+        }
+
+        public ImageRecipeSystemsManagerAgent build() {
+            return $;
         }
     }
+
 }

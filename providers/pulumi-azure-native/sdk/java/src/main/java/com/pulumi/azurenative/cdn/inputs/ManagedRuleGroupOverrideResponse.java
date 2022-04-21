@@ -25,7 +25,7 @@ public final class ManagedRuleGroupOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="ruleGroupName", required=true)
-      private final String ruleGroupName;
+    private String ruleGroupName;
 
     public String ruleGroupName() {
         return this.ruleGroupName;
@@ -36,58 +36,55 @@ public final class ManagedRuleGroupOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<ManagedRuleOverrideResponse> rules;
+    private @Nullable List<ManagedRuleOverrideResponse> rules;
 
-    public List<ManagedRuleOverrideResponse> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<ManagedRuleOverrideResponse>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public ManagedRuleGroupOverrideResponse(
-        String ruleGroupName,
-        @Nullable List<ManagedRuleOverrideResponse> rules) {
-        this.ruleGroupName = Objects.requireNonNull(ruleGroupName, "expected parameter 'ruleGroupName' to be non-null");
-        this.rules = rules;
-    }
+    private ManagedRuleGroupOverrideResponse() {}
 
-    private ManagedRuleGroupOverrideResponse() {
-        this.ruleGroupName = null;
-        this.rules = List.of();
+    private ManagedRuleGroupOverrideResponse(ManagedRuleGroupOverrideResponse $) {
+        this.ruleGroupName = $.ruleGroupName;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleGroupOverrideResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ruleGroupName;
-        private @Nullable List<ManagedRuleOverrideResponse> rules;
+        private ManagedRuleGroupOverrideResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleGroupOverrideResponse();
         }
 
         public Builder(ManagedRuleGroupOverrideResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleGroupName = defaults.ruleGroupName;
-    	      this.rules = defaults.rules;
+            $ = new ManagedRuleGroupOverrideResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleGroupName(String ruleGroupName) {
-            this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
+            $.ruleGroupName = ruleGroupName;
             return this;
         }
+
         public Builder rules(@Nullable List<ManagedRuleOverrideResponse> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(ManagedRuleOverrideResponse... rules) {
             return rules(List.of(rules));
-        }        public ManagedRuleGroupOverrideResponse build() {
-            return new ManagedRuleGroupOverrideResponse(ruleGroupName, rules);
+        }
+
+        public ManagedRuleGroupOverrideResponse build() {
+            $.ruleGroupName = Objects.requireNonNull($.ruleGroupName, "expected parameter 'ruleGroupName' to be non-null");
+            return $;
         }
     }
+
 }

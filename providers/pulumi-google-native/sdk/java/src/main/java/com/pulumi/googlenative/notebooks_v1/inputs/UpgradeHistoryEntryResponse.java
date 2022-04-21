@@ -21,7 +21,7 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -32,7 +32,7 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="containerImage", required=true)
-      private final String containerImage;
+    private String containerImage;
 
     public String containerImage() {
         return this.containerImage;
@@ -43,7 +43,7 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -54,7 +54,7 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="framework", required=true)
-      private final String framework;
+    private String framework;
 
     public String framework() {
         return this.framework;
@@ -65,7 +65,7 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="snapshot", required=true)
-      private final String snapshot;
+    private String snapshot;
 
     public String snapshot() {
         return this.snapshot;
@@ -76,7 +76,7 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -87,7 +87,7 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="targetImage", required=true)
-      private final String targetImage;
+    private String targetImage;
 
     public String targetImage() {
         return this.targetImage;
@@ -98,7 +98,7 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="targetVersion", required=true)
-      private final String targetVersion;
+    private String targetVersion;
 
     public String targetVersion() {
         return this.targetVersion;
@@ -109,7 +109,7 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
@@ -120,127 +120,108 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vmImage", required=true)
-      private final String vmImage;
+    private String vmImage;
 
     public String vmImage() {
         return this.vmImage;
     }
 
-    public UpgradeHistoryEntryResponse(
-        String action,
-        String containerImage,
-        String createTime,
-        String framework,
-        String snapshot,
-        String state,
-        String targetImage,
-        String targetVersion,
-        String version,
-        String vmImage) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.containerImage = Objects.requireNonNull(containerImage, "expected parameter 'containerImage' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.framework = Objects.requireNonNull(framework, "expected parameter 'framework' to be non-null");
-        this.snapshot = Objects.requireNonNull(snapshot, "expected parameter 'snapshot' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.targetImage = Objects.requireNonNull(targetImage, "expected parameter 'targetImage' to be non-null");
-        this.targetVersion = Objects.requireNonNull(targetVersion, "expected parameter 'targetVersion' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-        this.vmImage = Objects.requireNonNull(vmImage, "expected parameter 'vmImage' to be non-null");
-    }
+    private UpgradeHistoryEntryResponse() {}
 
-    private UpgradeHistoryEntryResponse() {
-        this.action = null;
-        this.containerImage = null;
-        this.createTime = null;
-        this.framework = null;
-        this.snapshot = null;
-        this.state = null;
-        this.targetImage = null;
-        this.targetVersion = null;
-        this.version = null;
-        this.vmImage = null;
+    private UpgradeHistoryEntryResponse(UpgradeHistoryEntryResponse $) {
+        this.action = $.action;
+        this.containerImage = $.containerImage;
+        this.createTime = $.createTime;
+        this.framework = $.framework;
+        this.snapshot = $.snapshot;
+        this.state = $.state;
+        this.targetImage = $.targetImage;
+        this.targetVersion = $.targetVersion;
+        this.version = $.version;
+        this.vmImage = $.vmImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradeHistoryEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private String containerImage;
-        private String createTime;
-        private String framework;
-        private String snapshot;
-        private String state;
-        private String targetImage;
-        private String targetVersion;
-        private String version;
-        private String vmImage;
+        private UpgradeHistoryEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradeHistoryEntryResponse();
         }
 
         public Builder(UpgradeHistoryEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.containerImage = defaults.containerImage;
-    	      this.createTime = defaults.createTime;
-    	      this.framework = defaults.framework;
-    	      this.snapshot = defaults.snapshot;
-    	      this.state = defaults.state;
-    	      this.targetImage = defaults.targetImage;
-    	      this.targetVersion = defaults.targetVersion;
-    	      this.version = defaults.version;
-    	      this.vmImage = defaults.vmImage;
+            $ = new UpgradeHistoryEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder containerImage(String containerImage) {
-            this.containerImage = Objects.requireNonNull(containerImage);
+            $.containerImage = containerImage;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder framework(String framework) {
-            this.framework = Objects.requireNonNull(framework);
+            $.framework = framework;
             return this;
         }
+
         public Builder snapshot(String snapshot) {
-            this.snapshot = Objects.requireNonNull(snapshot);
+            $.snapshot = snapshot;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder targetImage(String targetImage) {
-            this.targetImage = Objects.requireNonNull(targetImage);
+            $.targetImage = targetImage;
             return this;
         }
+
         public Builder targetVersion(String targetVersion) {
-            this.targetVersion = Objects.requireNonNull(targetVersion);
+            $.targetVersion = targetVersion;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder vmImage(String vmImage) {
-            this.vmImage = Objects.requireNonNull(vmImage);
+            $.vmImage = vmImage;
             return this;
-        }        public UpgradeHistoryEntryResponse build() {
-            return new UpgradeHistoryEntryResponse(action, containerImage, createTime, framework, snapshot, state, targetImage, targetVersion, version, vmImage);
+        }
+
+        public UpgradeHistoryEntryResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.containerImage = Objects.requireNonNull($.containerImage, "expected parameter 'containerImage' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.framework = Objects.requireNonNull($.framework, "expected parameter 'framework' to be non-null");
+            $.snapshot = Objects.requireNonNull($.snapshot, "expected parameter 'snapshot' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.targetImage = Objects.requireNonNull($.targetImage, "expected parameter 'targetImage' to be non-null");
+            $.targetVersion = Objects.requireNonNull($.targetVersion, "expected parameter 'targetVersion' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            $.vmImage = Objects.requireNonNull($.vmImage, "expected parameter 'vmImage' to be non-null");
+            return $;
         }
     }
+
 }

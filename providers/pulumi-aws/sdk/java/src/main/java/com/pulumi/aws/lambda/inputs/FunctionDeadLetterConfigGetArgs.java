@@ -5,7 +5,6 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FunctionDeadLetterConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="targetArn", required=true)
-      private final Output<String> targetArn;
+    private Output<String> targetArn;
 
     public Output<String> targetArn() {
         return this.targetArn;
     }
 
-    public FunctionDeadLetterConfigGetArgs(Output<String> targetArn) {
-        this.targetArn = Objects.requireNonNull(targetArn, "expected parameter 'targetArn' to be non-null");
-    }
+    private FunctionDeadLetterConfigGetArgs() {}
 
-    private FunctionDeadLetterConfigGetArgs() {
-        this.targetArn = Codegen.empty();
+    private FunctionDeadLetterConfigGetArgs(FunctionDeadLetterConfigGetArgs $) {
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionDeadLetterConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> targetArn;
+        private FunctionDeadLetterConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionDeadLetterConfigGetArgs();
         }
 
         public Builder(FunctionDeadLetterConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetArn = defaults.targetArn;
+            $ = new FunctionDeadLetterConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetArn(Output<String> targetArn) {
-            this.targetArn = Objects.requireNonNull(targetArn);
+            $.targetArn = targetArn;
             return this;
         }
+
         public Builder targetArn(String targetArn) {
-            this.targetArn = Output.of(Objects.requireNonNull(targetArn));
-            return this;
-        }        public FunctionDeadLetterConfigGetArgs build() {
-            return new FunctionDeadLetterConfigGetArgs(targetArn);
+            return targetArn(Output.of(targetArn));
+        }
+
+        public FunctionDeadLetterConfigGetArgs build() {
+            $.targetArn = Objects.requireNonNull($.targetArn, "expected parameter 'targetArn' to be non-null");
+            return $;
         }
     }
+
 }

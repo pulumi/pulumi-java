@@ -19,45 +19,44 @@ public final class JobCsvOutputOptions extends com.pulumi.resources.InvokeArgs {
     public static final JobCsvOutputOptions Empty = new JobCsvOutputOptions();
 
     @Import(name="delimiter")
-      private final @Nullable String delimiter;
+    private @Nullable String delimiter;
 
     public Optional<String> delimiter() {
-        return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
+        return Optional.ofNullable(this.delimiter);
     }
 
-    public JobCsvOutputOptions(@Nullable String delimiter) {
-        this.delimiter = delimiter;
-    }
+    private JobCsvOutputOptions() {}
 
-    private JobCsvOutputOptions() {
-        this.delimiter = null;
+    private JobCsvOutputOptions(JobCsvOutputOptions $) {
+        this.delimiter = $.delimiter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobCsvOutputOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String delimiter;
+        private JobCsvOutputOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobCsvOutputOptions();
         }
 
         public Builder(JobCsvOutputOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delimiter = defaults.delimiter;
+            $ = new JobCsvOutputOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = delimiter;
+            $.delimiter = delimiter;
             return this;
-        }        public JobCsvOutputOptions build() {
-            return new JobCsvOutputOptions(delimiter);
+        }
+
+        public JobCsvOutputOptions build() {
+            return $;
         }
     }
+
 }

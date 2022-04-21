@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.enums.SdkVersionSdkSupportStatus;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SdkVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sdkSupportStatus")
-      private final @Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus;
+    private @Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus;
 
-    public Output<SdkVersionSdkSupportStatus> sdkSupportStatus() {
-        return this.sdkSupportStatus == null ? Codegen.empty() : this.sdkSupportStatus;
+    public Optional<Output<SdkVersionSdkSupportStatus>> sdkSupportStatus() {
+        return Optional.ofNullable(this.sdkSupportStatus);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SdkVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class SdkVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionDisplayName")
-      private final @Nullable Output<String> versionDisplayName;
+    private @Nullable Output<String> versionDisplayName;
 
-    public Output<String> versionDisplayName() {
-        return this.versionDisplayName == null ? Codegen.empty() : this.versionDisplayName;
+    public Optional<Output<String>> versionDisplayName() {
+        return Optional.ofNullable(this.versionDisplayName);
     }
 
-    public SdkVersionArgs(
-        @Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus,
-        @Nullable Output<String> version,
-        @Nullable Output<String> versionDisplayName) {
-        this.sdkSupportStatus = sdkSupportStatus;
-        this.version = version;
-        this.versionDisplayName = versionDisplayName;
-    }
+    private SdkVersionArgs() {}
 
-    private SdkVersionArgs() {
-        this.sdkSupportStatus = Codegen.empty();
-        this.version = Codegen.empty();
-        this.versionDisplayName = Codegen.empty();
+    private SdkVersionArgs(SdkVersionArgs $) {
+        this.sdkSupportStatus = $.sdkSupportStatus;
+        this.version = $.version;
+        this.versionDisplayName = $.versionDisplayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SdkVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus;
-        private @Nullable Output<String> version;
-        private @Nullable Output<String> versionDisplayName;
+        private SdkVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SdkVersionArgs();
         }
 
         public Builder(SdkVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sdkSupportStatus = defaults.sdkSupportStatus;
-    	      this.version = defaults.version;
-    	      this.versionDisplayName = defaults.versionDisplayName;
+            $ = new SdkVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sdkSupportStatus(@Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus) {
-            this.sdkSupportStatus = sdkSupportStatus;
+            $.sdkSupportStatus = sdkSupportStatus;
             return this;
         }
-        public Builder sdkSupportStatus(@Nullable SdkVersionSdkSupportStatus sdkSupportStatus) {
-            this.sdkSupportStatus = Codegen.ofNullable(sdkSupportStatus);
-            return this;
+
+        public Builder sdkSupportStatus(SdkVersionSdkSupportStatus sdkSupportStatus) {
+            return sdkSupportStatus(Output.of(sdkSupportStatus));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder versionDisplayName(@Nullable Output<String> versionDisplayName) {
-            this.versionDisplayName = versionDisplayName;
+            $.versionDisplayName = versionDisplayName;
             return this;
         }
-        public Builder versionDisplayName(@Nullable String versionDisplayName) {
-            this.versionDisplayName = Codegen.ofNullable(versionDisplayName);
-            return this;
-        }        public SdkVersionArgs build() {
-            return new SdkVersionArgs(sdkSupportStatus, version, versionDisplayName);
+
+        public Builder versionDisplayName(String versionDisplayName) {
+            return versionDisplayName(Output.of(versionDisplayName));
+        }
+
+        public SdkVersionArgs build() {
+            return $;
         }
     }
+
 }

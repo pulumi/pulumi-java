@@ -30,10 +30,10 @@ public final class SubProtectionPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="policyType")
-      private final @Nullable String policyType;
+    private @Nullable String policyType;
 
     public Optional<String> policyType() {
-        return this.policyType == null ? Optional.empty() : Optional.ofNullable(this.policyType);
+        return Optional.ofNullable(this.policyType);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SubProtectionPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
+    private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy() {
-        return this.retentionPolicy == null ? null : this.retentionPolicy;
+    public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -52,64 +52,56 @@ public final class SubProtectionPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="schedulePolicy")
-      private final @Nullable Object schedulePolicy;
+    private @Nullable Object schedulePolicy;
 
-    public Object schedulePolicy() {
-        return this.schedulePolicy == null ? null : this.schedulePolicy;
+    public Optional<Object> schedulePolicy() {
+        return Optional.ofNullable(this.schedulePolicy);
     }
 
-    public SubProtectionPolicyResponse(
-        @Nullable String policyType,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @Nullable Object schedulePolicy) {
-        this.policyType = policyType;
-        this.retentionPolicy = retentionPolicy;
-        this.schedulePolicy = schedulePolicy;
-    }
+    private SubProtectionPolicyResponse() {}
 
-    private SubProtectionPolicyResponse() {
-        this.policyType = null;
-        this.retentionPolicy = null;
-        this.schedulePolicy = null;
+    private SubProtectionPolicyResponse(SubProtectionPolicyResponse $) {
+        this.policyType = $.policyType;
+        this.retentionPolicy = $.retentionPolicy;
+        this.schedulePolicy = $.schedulePolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubProtectionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String policyType;
-        private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
-        private @Nullable Object schedulePolicy;
+        private SubProtectionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubProtectionPolicyResponse();
         }
 
         public Builder(SubProtectionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyType = defaults.policyType;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.schedulePolicy = defaults.schedulePolicy;
+            $ = new SubProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder policyType(@Nullable String policyType) {
-            this.policyType = policyType;
+            $.policyType = policyType;
             return this;
         }
+
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
+
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = schedulePolicy;
+            $.schedulePolicy = schedulePolicy;
             return this;
-        }        public SubProtectionPolicyResponse build() {
-            return new SubProtectionPolicyResponse(policyType, retentionPolicy, schedulePolicy);
+        }
+
+        public SubProtectionPolicyResponse build() {
+            return $;
         }
     }
+
 }

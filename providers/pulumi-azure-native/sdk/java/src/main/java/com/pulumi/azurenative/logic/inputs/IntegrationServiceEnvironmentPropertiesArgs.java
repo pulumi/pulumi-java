@@ -11,9 +11,9 @@ import com.pulumi.azurenative.logic.inputs.NetworkConfigurationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="encryptionConfiguration")
-      private final @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
+    private @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
+    public Optional<Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs>> encryptionConfiguration() {
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="endpointsConfiguration")
-      private final @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
+    private @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
-    public Output<FlowEndpointsConfigurationArgs> endpointsConfiguration() {
-        return this.endpointsConfiguration == null ? Codegen.empty() : this.endpointsConfiguration;
+    public Optional<Output<FlowEndpointsConfigurationArgs>> endpointsConfiguration() {
+        return Optional.ofNullable(this.endpointsConfiguration);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="integrationServiceEnvironmentId")
-      private final @Nullable Output<String> integrationServiceEnvironmentId;
+    private @Nullable Output<String> integrationServiceEnvironmentId;
 
-    public Output<String> integrationServiceEnvironmentId() {
-        return this.integrationServiceEnvironmentId == null ? Codegen.empty() : this.integrationServiceEnvironmentId;
+    public Optional<Output<String>> integrationServiceEnvironmentId() {
+        return Optional.ofNullable(this.integrationServiceEnvironmentId);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="networkConfiguration")
-      private final @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
+    private @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
 
-    public Output<NetworkConfigurationArgs> networkConfiguration() {
-        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
+    public Optional<Output<NetworkConfigurationArgs>> networkConfiguration() {
+        return Optional.ofNullable(this.networkConfiguration);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState;
+    private @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState;
 
-    public Output<Either<String,WorkflowProvisioningState>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,WorkflowProvisioningState>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -85,115 +85,98 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,WorkflowState>> state;
+    private @Nullable Output<Either<String,WorkflowState>> state;
 
-    public Output<Either<String,WorkflowState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,WorkflowState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public IntegrationServiceEnvironmentPropertiesArgs(
-        @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration,
-        @Nullable Output<String> integrationServiceEnvironmentId,
-        @Nullable Output<NetworkConfigurationArgs> networkConfiguration,
-        @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState,
-        @Nullable Output<Either<String,WorkflowState>> state) {
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.endpointsConfiguration = endpointsConfiguration;
-        this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
-        this.networkConfiguration = networkConfiguration;
-        this.provisioningState = provisioningState;
-        this.state = state;
-    }
+    private IntegrationServiceEnvironmentPropertiesArgs() {}
 
-    private IntegrationServiceEnvironmentPropertiesArgs() {
-        this.encryptionConfiguration = Codegen.empty();
-        this.endpointsConfiguration = Codegen.empty();
-        this.integrationServiceEnvironmentId = Codegen.empty();
-        this.networkConfiguration = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.state = Codegen.empty();
+    private IntegrationServiceEnvironmentPropertiesArgs(IntegrationServiceEnvironmentPropertiesArgs $) {
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.endpointsConfiguration = $.endpointsConfiguration;
+        this.integrationServiceEnvironmentId = $.integrationServiceEnvironmentId;
+        this.networkConfiguration = $.networkConfiguration;
+        this.provisioningState = $.provisioningState;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationServiceEnvironmentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
-        private @Nullable Output<String> integrationServiceEnvironmentId;
-        private @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
-        private @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState;
-        private @Nullable Output<Either<String,WorkflowState>> state;
+        private IntegrationServiceEnvironmentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationServiceEnvironmentPropertiesArgs();
         }
 
         public Builder(IntegrationServiceEnvironmentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.endpointsConfiguration = defaults.endpointsConfiguration;
-    	      this.integrationServiceEnvironmentId = defaults.integrationServiceEnvironmentId;
-    	      this.networkConfiguration = defaults.networkConfiguration;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.state = defaults.state;
+            $ = new IntegrationServiceEnvironmentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionConfiguration(@Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-        public Builder encryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
-            return this;
+
+        public Builder encryptionConfiguration(IntegrationServiceEnvironmenEncryptionConfigurationArgs encryptionConfiguration) {
+            return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
+
         public Builder endpointsConfiguration(@Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
-            this.endpointsConfiguration = endpointsConfiguration;
+            $.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
-        public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
-            this.endpointsConfiguration = Codegen.ofNullable(endpointsConfiguration);
-            return this;
+
+        public Builder endpointsConfiguration(FlowEndpointsConfigurationArgs endpointsConfiguration) {
+            return endpointsConfiguration(Output.of(endpointsConfiguration));
         }
+
         public Builder integrationServiceEnvironmentId(@Nullable Output<String> integrationServiceEnvironmentId) {
-            this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
+            $.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
             return this;
         }
-        public Builder integrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
-            this.integrationServiceEnvironmentId = Codegen.ofNullable(integrationServiceEnvironmentId);
-            return this;
+
+        public Builder integrationServiceEnvironmentId(String integrationServiceEnvironmentId) {
+            return integrationServiceEnvironmentId(Output.of(integrationServiceEnvironmentId));
         }
+
         public Builder networkConfiguration(@Nullable Output<NetworkConfigurationArgs> networkConfiguration) {
-            this.networkConfiguration = networkConfiguration;
+            $.networkConfiguration = networkConfiguration;
             return this;
         }
-        public Builder networkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
-            return this;
+
+        public Builder networkConfiguration(NetworkConfigurationArgs networkConfiguration) {
+            return networkConfiguration(Output.of(networkConfiguration));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,WorkflowProvisioningState> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,WorkflowProvisioningState> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,WorkflowState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public IntegrationServiceEnvironmentPropertiesArgs build() {
-            return new IntegrationServiceEnvironmentPropertiesArgs(encryptionConfiguration, endpointsConfiguration, integrationServiceEnvironmentId, networkConfiguration, provisioningState, state);
+
+        public Builder state(Either<String,WorkflowState> state) {
+            return state(Output.of(state));
+        }
+
+        public IntegrationServiceEnvironmentPropertiesArgs build() {
+            return $;
         }
     }
+
 }

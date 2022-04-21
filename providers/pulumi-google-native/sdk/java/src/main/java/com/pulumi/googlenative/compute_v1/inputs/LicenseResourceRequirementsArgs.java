@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LicenseResourceRequirementsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="minGuestCpuCount")
-      private final @Nullable Output<Integer> minGuestCpuCount;
+    private @Nullable Output<Integer> minGuestCpuCount;
 
-    public Output<Integer> minGuestCpuCount() {
-        return this.minGuestCpuCount == null ? Codegen.empty() : this.minGuestCpuCount;
+    public Optional<Output<Integer>> minGuestCpuCount() {
+        return Optional.ofNullable(this.minGuestCpuCount);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class LicenseResourceRequirementsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="minMemoryMb")
-      private final @Nullable Output<Integer> minMemoryMb;
+    private @Nullable Output<Integer> minMemoryMb;
 
-    public Output<Integer> minMemoryMb() {
-        return this.minMemoryMb == null ? Codegen.empty() : this.minMemoryMb;
+    public Optional<Output<Integer>> minMemoryMb() {
+        return Optional.ofNullable(this.minMemoryMb);
     }
 
-    public LicenseResourceRequirementsArgs(
-        @Nullable Output<Integer> minGuestCpuCount,
-        @Nullable Output<Integer> minMemoryMb) {
-        this.minGuestCpuCount = minGuestCpuCount;
-        this.minMemoryMb = minMemoryMb;
-    }
+    private LicenseResourceRequirementsArgs() {}
 
-    private LicenseResourceRequirementsArgs() {
-        this.minGuestCpuCount = Codegen.empty();
-        this.minMemoryMb = Codegen.empty();
+    private LicenseResourceRequirementsArgs(LicenseResourceRequirementsArgs $) {
+        this.minGuestCpuCount = $.minGuestCpuCount;
+        this.minMemoryMb = $.minMemoryMb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseResourceRequirementsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> minGuestCpuCount;
-        private @Nullable Output<Integer> minMemoryMb;
+        private LicenseResourceRequirementsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseResourceRequirementsArgs();
         }
 
         public Builder(LicenseResourceRequirementsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minGuestCpuCount = defaults.minGuestCpuCount;
-    	      this.minMemoryMb = defaults.minMemoryMb;
+            $ = new LicenseResourceRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minGuestCpuCount(@Nullable Output<Integer> minGuestCpuCount) {
-            this.minGuestCpuCount = minGuestCpuCount;
+            $.minGuestCpuCount = minGuestCpuCount;
             return this;
         }
-        public Builder minGuestCpuCount(@Nullable Integer minGuestCpuCount) {
-            this.minGuestCpuCount = Codegen.ofNullable(minGuestCpuCount);
-            return this;
+
+        public Builder minGuestCpuCount(Integer minGuestCpuCount) {
+            return minGuestCpuCount(Output.of(minGuestCpuCount));
         }
+
         public Builder minMemoryMb(@Nullable Output<Integer> minMemoryMb) {
-            this.minMemoryMb = minMemoryMb;
+            $.minMemoryMb = minMemoryMb;
             return this;
         }
-        public Builder minMemoryMb(@Nullable Integer minMemoryMb) {
-            this.minMemoryMb = Codegen.ofNullable(minMemoryMb);
-            return this;
-        }        public LicenseResourceRequirementsArgs build() {
-            return new LicenseResourceRequirementsArgs(minGuestCpuCount, minMemoryMb);
+
+        public Builder minMemoryMb(Integer minMemoryMb) {
+            return minMemoryMb(Output.of(minMemoryMb));
+        }
+
+        public LicenseResourceRequirementsArgs build() {
+            return $;
         }
     }
+
 }

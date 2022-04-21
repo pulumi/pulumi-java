@@ -19,7 +19,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="factoryName", required=true)
-      private final String factoryName;
+    private String factoryName;
 
     public String factoryName() {
         return this.factoryName;
@@ -30,7 +30,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="integrationRuntimeName", required=true)
-      private final String integrationRuntimeName;
+    private String integrationRuntimeName;
 
     public String integrationRuntimeName() {
         return this.integrationRuntimeName;
@@ -41,10 +41,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="metadataPath")
-      private final @Nullable String metadataPath;
+    private @Nullable String metadataPath;
 
     public Optional<String> metadataPath() {
-        return this.metadataPath == null ? Optional.empty() : Optional.ofNullable(this.metadataPath);
+        return Optional.ofNullable(this.metadataPath);
     }
 
     /**
@@ -52,73 +52,65 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetIntegrationRuntimeObjectMetadatumArgs(
-        String factoryName,
-        String integrationRuntimeName,
-        @Nullable String metadataPath,
-        String resourceGroupName) {
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName, "expected parameter 'integrationRuntimeName' to be non-null");
-        this.metadataPath = metadataPath;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetIntegrationRuntimeObjectMetadatumArgs() {}
 
-    private GetIntegrationRuntimeObjectMetadatumArgs() {
-        this.factoryName = null;
-        this.integrationRuntimeName = null;
-        this.metadataPath = null;
-        this.resourceGroupName = null;
+    private GetIntegrationRuntimeObjectMetadatumArgs(GetIntegrationRuntimeObjectMetadatumArgs $) {
+        this.factoryName = $.factoryName;
+        this.integrationRuntimeName = $.integrationRuntimeName;
+        this.metadataPath = $.metadataPath;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationRuntimeObjectMetadatumArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String factoryName;
-        private String integrationRuntimeName;
-        private @Nullable String metadataPath;
-        private String resourceGroupName;
+        private GetIntegrationRuntimeObjectMetadatumArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationRuntimeObjectMetadatumArgs();
         }
 
         public Builder(GetIntegrationRuntimeObjectMetadatumArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.factoryName = defaults.factoryName;
-    	      this.integrationRuntimeName = defaults.integrationRuntimeName;
-    	      this.metadataPath = defaults.metadataPath;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetIntegrationRuntimeObjectMetadatumArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder integrationRuntimeName(String integrationRuntimeName) {
-            this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName);
+            $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
+
         public Builder metadataPath(@Nullable String metadataPath) {
-            this.metadataPath = metadataPath;
+            $.metadataPath = metadataPath;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetIntegrationRuntimeObjectMetadatumArgs build() {
-            return new GetIntegrationRuntimeObjectMetadatumArgs(factoryName, integrationRuntimeName, metadataPath, resourceGroupName);
+        }
+
+        public GetIntegrationRuntimeObjectMetadatumArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.integrationRuntimeName = Objects.requireNonNull($.integrationRuntimeName, "expected parameter 'integrationRuntimeName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

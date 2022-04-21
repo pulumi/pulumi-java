@@ -9,12 +9,12 @@ import com.pulumi.azurenative.sql.inputs.SkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elasticPoolName")
-      private final @Nullable Output<String> elasticPoolName;
+    private @Nullable Output<String> elasticPoolName;
 
-    public Output<String> elasticPoolName() {
-        return this.elasticPoolName == null ? Codegen.empty() : this.elasticPoolName;
+    public Optional<Output<String>> elasticPoolName() {
+        return Optional.ofNullable(this.elasticPoolName);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType;
+    private @Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType;
 
-    public Output<Either<String,ElasticPoolLicenseType>> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<Either<String,ElasticPoolLicenseType>>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceConfigurationId")
-      private final @Nullable Output<String> maintenanceConfigurationId;
+    private @Nullable Output<String> maintenanceConfigurationId;
 
-    public Output<String> maintenanceConfigurationId() {
-        return this.maintenanceConfigurationId == null ? Codegen.empty() : this.maintenanceConfigurationId;
+    public Optional<Output<String>> maintenanceConfigurationId() {
+        return Optional.ofNullable(this.maintenanceConfigurationId);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxSizeBytes")
-      private final @Nullable Output<Double> maxSizeBytes;
+    private @Nullable Output<Double> maxSizeBytes;
 
-    public Output<Double> maxSizeBytes() {
-        return this.maxSizeBytes == null ? Codegen.empty() : this.maxSizeBytes;
+    public Optional<Output<Double>> maxSizeBytes() {
+        return Optional.ofNullable(this.maxSizeBytes);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="perDatabaseSettings")
-      private final @Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
+    private @Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
 
-    public Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings() {
-        return this.perDatabaseSettings == null ? Codegen.empty() : this.perDatabaseSettings;
+    public Optional<Output<ElasticPoolPerDatabaseSettingsArgs>> perDatabaseSettings() {
+        return Optional.ofNullable(this.perDatabaseSettings);
     }
 
     /**
@@ -93,7 +93,7 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -104,7 +104,7 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -117,10 +117,10 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -139,180 +139,150 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zoneRedundant")
-      private final @Nullable Output<Boolean> zoneRedundant;
+    private @Nullable Output<Boolean> zoneRedundant;
 
-    public Output<Boolean> zoneRedundant() {
-        return this.zoneRedundant == null ? Codegen.empty() : this.zoneRedundant;
+    public Optional<Output<Boolean>> zoneRedundant() {
+        return Optional.ofNullable(this.zoneRedundant);
     }
 
-    public ElasticPoolArgs(
-        @Nullable Output<String> elasticPoolName,
-        @Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType,
-        @Nullable Output<String> location,
-        @Nullable Output<String> maintenanceConfigurationId,
-        @Nullable Output<Double> maxSizeBytes,
-        @Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings,
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Boolean> zoneRedundant) {
-        this.elasticPoolName = elasticPoolName;
-        this.licenseType = licenseType;
-        this.location = location;
-        this.maintenanceConfigurationId = maintenanceConfigurationId;
-        this.maxSizeBytes = maxSizeBytes;
-        this.perDatabaseSettings = perDatabaseSettings;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-        this.zoneRedundant = zoneRedundant;
-    }
+    private ElasticPoolArgs() {}
 
-    private ElasticPoolArgs() {
-        this.elasticPoolName = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maintenanceConfigurationId = Codegen.empty();
-        this.maxSizeBytes = Codegen.empty();
-        this.perDatabaseSettings = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.zoneRedundant = Codegen.empty();
+    private ElasticPoolArgs(ElasticPoolArgs $) {
+        this.elasticPoolName = $.elasticPoolName;
+        this.licenseType = $.licenseType;
+        this.location = $.location;
+        this.maintenanceConfigurationId = $.maintenanceConfigurationId;
+        this.maxSizeBytes = $.maxSizeBytes;
+        this.perDatabaseSettings = $.perDatabaseSettings;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.zoneRedundant = $.zoneRedundant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ElasticPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> elasticPoolName;
-        private @Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> maintenanceConfigurationId;
-        private @Nullable Output<Double> maxSizeBytes;
-        private @Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Boolean> zoneRedundant;
+        private ElasticPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ElasticPoolArgs();
         }
 
         public Builder(ElasticPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elasticPoolName = defaults.elasticPoolName;
-    	      this.licenseType = defaults.licenseType;
-    	      this.location = defaults.location;
-    	      this.maintenanceConfigurationId = defaults.maintenanceConfigurationId;
-    	      this.maxSizeBytes = defaults.maxSizeBytes;
-    	      this.perDatabaseSettings = defaults.perDatabaseSettings;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.zoneRedundant = defaults.zoneRedundant;
+            $ = new ElasticPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder elasticPoolName(@Nullable Output<String> elasticPoolName) {
-            this.elasticPoolName = elasticPoolName;
+            $.elasticPoolName = elasticPoolName;
             return this;
         }
-        public Builder elasticPoolName(@Nullable String elasticPoolName) {
-            this.elasticPoolName = Codegen.ofNullable(elasticPoolName);
-            return this;
+
+        public Builder elasticPoolName(String elasticPoolName) {
+            return elasticPoolName(Output.of(elasticPoolName));
         }
+
         public Builder licenseType(@Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable Either<String,ElasticPoolLicenseType> licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(Either<String,ElasticPoolLicenseType> licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = maintenanceConfigurationId;
+            $.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-        public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = Codegen.ofNullable(maintenanceConfigurationId);
-            return this;
+
+        public Builder maintenanceConfigurationId(String maintenanceConfigurationId) {
+            return maintenanceConfigurationId(Output.of(maintenanceConfigurationId));
         }
+
         public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
-            this.maxSizeBytes = maxSizeBytes;
+            $.maxSizeBytes = maxSizeBytes;
             return this;
         }
-        public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
-            this.maxSizeBytes = Codegen.ofNullable(maxSizeBytes);
-            return this;
+
+        public Builder maxSizeBytes(Double maxSizeBytes) {
+            return maxSizeBytes(Output.of(maxSizeBytes));
         }
+
         public Builder perDatabaseSettings(@Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings) {
-            this.perDatabaseSettings = perDatabaseSettings;
+            $.perDatabaseSettings = perDatabaseSettings;
             return this;
         }
-        public Builder perDatabaseSettings(@Nullable ElasticPoolPerDatabaseSettingsArgs perDatabaseSettings) {
-            this.perDatabaseSettings = Codegen.ofNullable(perDatabaseSettings);
-            return this;
+
+        public Builder perDatabaseSettings(ElasticPoolPerDatabaseSettingsArgs perDatabaseSettings) {
+            return perDatabaseSettings(Output.of(perDatabaseSettings));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder zoneRedundant(@Nullable Output<Boolean> zoneRedundant) {
-            this.zoneRedundant = zoneRedundant;
+            $.zoneRedundant = zoneRedundant;
             return this;
         }
-        public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
-            this.zoneRedundant = Codegen.ofNullable(zoneRedundant);
-            return this;
-        }        public ElasticPoolArgs build() {
-            return new ElasticPoolArgs(elasticPoolName, licenseType, location, maintenanceConfigurationId, maxSizeBytes, perDatabaseSettings, resourceGroupName, serverName, sku, tags, zoneRedundant);
+
+        public Builder zoneRedundant(Boolean zoneRedundant) {
+            return zoneRedundant(Output.of(zoneRedundant));
+        }
+
+        public ElasticPoolArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

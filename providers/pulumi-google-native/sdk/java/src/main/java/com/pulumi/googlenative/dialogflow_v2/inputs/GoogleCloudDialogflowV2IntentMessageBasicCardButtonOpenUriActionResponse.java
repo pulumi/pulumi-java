@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse(String uri) {
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse() {
-        this.uri = null;
+    private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String uri;
+        private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse(uri);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

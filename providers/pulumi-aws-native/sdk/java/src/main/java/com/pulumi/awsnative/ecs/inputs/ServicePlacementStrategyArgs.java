@@ -6,9 +6,9 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.enums.ServicePlacementStrategyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class ServicePlacementStrategyArgs extends com.pulumi.resources.Res
     public static final ServicePlacementStrategyArgs Empty = new ServicePlacementStrategyArgs();
 
     @Import(name="field")
-      private final @Nullable Output<String> field;
+    private @Nullable Output<String> field;
 
-    public Output<String> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<String>> field() {
+        return Optional.ofNullable(this.field);
     }
 
     @Import(name="type", required=true)
-      private final Output<ServicePlacementStrategyType> type;
+    private Output<ServicePlacementStrategyType> type;
 
     public Output<ServicePlacementStrategyType> type() {
         return this.type;
     }
 
-    public ServicePlacementStrategyArgs(
-        @Nullable Output<String> field,
-        Output<ServicePlacementStrategyType> type) {
-        this.field = field;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ServicePlacementStrategyArgs() {}
 
-    private ServicePlacementStrategyArgs() {
-        this.field = Codegen.empty();
-        this.type = Codegen.empty();
+    private ServicePlacementStrategyArgs(ServicePlacementStrategyArgs $) {
+        this.field = $.field;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePlacementStrategyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> field;
-        private Output<ServicePlacementStrategyType> type;
+        private ServicePlacementStrategyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePlacementStrategyArgs();
         }
 
         public Builder(ServicePlacementStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.type = defaults.type;
+            $ = new ServicePlacementStrategyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable Output<String> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable String field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
+
+        public Builder field(String field) {
+            return field(Output.of(field));
         }
+
         public Builder type(Output<ServicePlacementStrategyType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ServicePlacementStrategyType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ServicePlacementStrategyArgs build() {
-            return new ServicePlacementStrategyArgs(field, type);
+            return type(Output.of(type));
+        }
+
+        public ServicePlacementStrategyArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,65 +17,62 @@ public final class DeliveryStreamProcessor extends com.pulumi.resources.InvokeAr
     public static final DeliveryStreamProcessor Empty = new DeliveryStreamProcessor();
 
     @Import(name="parameters")
-      private final @Nullable List<DeliveryStreamProcessorParameter> parameters;
+    private @Nullable List<DeliveryStreamProcessorParameter> parameters;
 
-    public List<DeliveryStreamProcessorParameter> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<DeliveryStreamProcessorParameter>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     @Import(name="type", required=true)
-      private final DeliveryStreamProcessorType type;
+    private DeliveryStreamProcessorType type;
 
     public DeliveryStreamProcessorType type() {
         return this.type;
     }
 
-    public DeliveryStreamProcessor(
-        @Nullable List<DeliveryStreamProcessorParameter> parameters,
-        DeliveryStreamProcessorType type) {
-        this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DeliveryStreamProcessor() {}
 
-    private DeliveryStreamProcessor() {
-        this.parameters = List.of();
-        this.type = null;
+    private DeliveryStreamProcessor(DeliveryStreamProcessor $) {
+        this.parameters = $.parameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamProcessor defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DeliveryStreamProcessorParameter> parameters;
-        private DeliveryStreamProcessorType type;
+        private DeliveryStreamProcessor $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamProcessor();
         }
 
         public Builder(DeliveryStreamProcessor defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
+            $ = new DeliveryStreamProcessor(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable List<DeliveryStreamProcessorParameter> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(DeliveryStreamProcessorParameter... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder type(DeliveryStreamProcessorType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DeliveryStreamProcessor build() {
-            return new DeliveryStreamProcessor(parameters, type);
+        }
+
+        public DeliveryStreamProcessor build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

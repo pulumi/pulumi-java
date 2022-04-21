@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,17 +25,17 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
      * 
      */
     @Import(name="statusCodes")
-      private final @Nullable Output<String> statusCodes;
+    private @Nullable Output<String> statusCodes;
 
-    public Output<String> statusCodes() {
-        return this.statusCodes == null ? Codegen.empty() : this.statusCodes;
+    public Optional<Output<String>> statusCodes() {
+        return Optional.ofNullable(this.statusCodes);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
      * 
      */
     @Import(name="timeInterval")
-      private final @Nullable Output<String> timeInterval;
+    private @Nullable Output<String> timeInterval;
 
-    public Output<String> timeInterval() {
-        return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
+    public Optional<Output<String>> timeInterval() {
+        return Optional.ofNullable(this.timeInterval);
     }
 
-    public StatusCodesRangeBasedTriggerArgs(
-        @Nullable Output<Integer> count,
-        @Nullable Output<String> path,
-        @Nullable Output<String> statusCodes,
-        @Nullable Output<String> timeInterval) {
-        this.count = count;
-        this.path = path;
-        this.statusCodes = statusCodes;
-        this.timeInterval = timeInterval;
-    }
+    private StatusCodesRangeBasedTriggerArgs() {}
 
-    private StatusCodesRangeBasedTriggerArgs() {
-        this.count = Codegen.empty();
-        this.path = Codegen.empty();
-        this.statusCodes = Codegen.empty();
-        this.timeInterval = Codegen.empty();
+    private StatusCodesRangeBasedTriggerArgs(StatusCodesRangeBasedTriggerArgs $) {
+        this.count = $.count;
+        this.path = $.path;
+        this.statusCodes = $.statusCodes;
+        this.timeInterval = $.timeInterval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusCodesRangeBasedTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> statusCodes;
-        private @Nullable Output<String> timeInterval;
+        private StatusCodesRangeBasedTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusCodesRangeBasedTriggerArgs();
         }
 
         public Builder(StatusCodesRangeBasedTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.path = defaults.path;
-    	      this.statusCodes = defaults.statusCodes;
-    	      this.timeInterval = defaults.timeInterval;
+            $ = new StatusCodesRangeBasedTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder statusCodes(@Nullable Output<String> statusCodes) {
-            this.statusCodes = statusCodes;
+            $.statusCodes = statusCodes;
             return this;
         }
-        public Builder statusCodes(@Nullable String statusCodes) {
-            this.statusCodes = Codegen.ofNullable(statusCodes);
-            return this;
+
+        public Builder statusCodes(String statusCodes) {
+            return statusCodes(Output.of(statusCodes));
         }
+
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
-            this.timeInterval = timeInterval;
+            $.timeInterval = timeInterval;
             return this;
         }
-        public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = Codegen.ofNullable(timeInterval);
-            return this;
-        }        public StatusCodesRangeBasedTriggerArgs build() {
-            return new StatusCodesRangeBasedTriggerArgs(count, path, statusCodes, timeInterval);
+
+        public Builder timeInterval(String timeInterval) {
+            return timeInterval(Output.of(timeInterval));
+        }
+
+        public StatusCodesRangeBasedTriggerArgs build() {
+            return $;
         }
     }
+
 }

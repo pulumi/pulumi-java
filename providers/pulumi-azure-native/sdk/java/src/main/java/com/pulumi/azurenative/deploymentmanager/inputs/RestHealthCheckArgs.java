@@ -7,9 +7,9 @@ import com.pulumi.azurenative.deploymentmanager.inputs.RestRequestArgs;
 import com.pulumi.azurenative.deploymentmanager.inputs.RestResponseArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class RestHealthCheckArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -37,7 +37,7 @@ public final class RestHealthCheckArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="request", required=true)
-      private final Output<RestRequestArgs> request;
+    private Output<RestRequestArgs> request;
 
     public Output<RestRequestArgs> request() {
         return this.request;
@@ -48,76 +48,70 @@ public final class RestHealthCheckArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="response")
-      private final @Nullable Output<RestResponseArgs> response;
+    private @Nullable Output<RestResponseArgs> response;
 
-    public Output<RestResponseArgs> response() {
-        return this.response == null ? Codegen.empty() : this.response;
+    public Optional<Output<RestResponseArgs>> response() {
+        return Optional.ofNullable(this.response);
     }
 
-    public RestHealthCheckArgs(
-        Output<String> name,
-        Output<RestRequestArgs> request,
-        @Nullable Output<RestResponseArgs> response) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.request = Objects.requireNonNull(request, "expected parameter 'request' to be non-null");
-        this.response = response;
-    }
+    private RestHealthCheckArgs() {}
 
-    private RestHealthCheckArgs() {
-        this.name = Codegen.empty();
-        this.request = Codegen.empty();
-        this.response = Codegen.empty();
+    private RestHealthCheckArgs(RestHealthCheckArgs $) {
+        this.name = $.name;
+        this.request = $.request;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<RestRequestArgs> request;
-        private @Nullable Output<RestResponseArgs> response;
+        private RestHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestHealthCheckArgs();
         }
 
         public Builder(RestHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.request = defaults.request;
-    	      this.response = defaults.response;
+            $ = new RestHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder request(Output<RestRequestArgs> request) {
-            this.request = Objects.requireNonNull(request);
+            $.request = request;
             return this;
         }
+
         public Builder request(RestRequestArgs request) {
-            this.request = Output.of(Objects.requireNonNull(request));
-            return this;
+            return request(Output.of(request));
         }
+
         public Builder response(@Nullable Output<RestResponseArgs> response) {
-            this.response = response;
+            $.response = response;
             return this;
         }
-        public Builder response(@Nullable RestResponseArgs response) {
-            this.response = Codegen.ofNullable(response);
-            return this;
-        }        public RestHealthCheckArgs build() {
-            return new RestHealthCheckArgs(name, request, response);
+
+        public Builder response(RestResponseArgs response) {
+            return response(Output.of(response));
+        }
+
+        public RestHealthCheckArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.request = Objects.requireNonNull($.request, "expected parameter 'request' to be non-null");
+            return $;
         }
     }
+
 }

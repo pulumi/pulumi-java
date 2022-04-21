@@ -23,45 +23,44 @@ public final class SubResource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public SubResource(@Nullable String id) {
-        this.id = id;
-    }
+    private SubResource() {}
 
-    private SubResource() {
-        this.id = null;
+    private SubResource(SubResource $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private SubResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubResource();
         }
 
         public Builder(SubResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new SubResource(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public SubResource build() {
-            return new SubResource(id);
+        }
+
+        public SubResource build() {
+            return $;
         }
     }
+
 }

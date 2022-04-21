@@ -5,7 +5,6 @@ package com.pulumi.awsnative.servicecatalogappregistry;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AttributeGroupAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="application", required=true)
-      private final Output<String> application;
+    private Output<String> application;
 
     public Output<String> application() {
         return this.application;
@@ -30,63 +29,60 @@ public final class AttributeGroupAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="attributeGroup", required=true)
-      private final Output<String> attributeGroup;
+    private Output<String> attributeGroup;
 
     public Output<String> attributeGroup() {
         return this.attributeGroup;
     }
 
-    public AttributeGroupAssociationArgs(
-        Output<String> application,
-        Output<String> attributeGroup) {
-        this.application = Objects.requireNonNull(application, "expected parameter 'application' to be non-null");
-        this.attributeGroup = Objects.requireNonNull(attributeGroup, "expected parameter 'attributeGroup' to be non-null");
-    }
+    private AttributeGroupAssociationArgs() {}
 
-    private AttributeGroupAssociationArgs() {
-        this.application = Codegen.empty();
-        this.attributeGroup = Codegen.empty();
+    private AttributeGroupAssociationArgs(AttributeGroupAssociationArgs $) {
+        this.application = $.application;
+        this.attributeGroup = $.attributeGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttributeGroupAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> application;
-        private Output<String> attributeGroup;
+        private AttributeGroupAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttributeGroupAssociationArgs();
         }
 
         public Builder(AttributeGroupAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.application = defaults.application;
-    	      this.attributeGroup = defaults.attributeGroup;
+            $ = new AttributeGroupAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder application(Output<String> application) {
-            this.application = Objects.requireNonNull(application);
+            $.application = application;
             return this;
         }
+
         public Builder application(String application) {
-            this.application = Output.of(Objects.requireNonNull(application));
-            return this;
+            return application(Output.of(application));
         }
+
         public Builder attributeGroup(Output<String> attributeGroup) {
-            this.attributeGroup = Objects.requireNonNull(attributeGroup);
+            $.attributeGroup = attributeGroup;
             return this;
         }
+
         public Builder attributeGroup(String attributeGroup) {
-            this.attributeGroup = Output.of(Objects.requireNonNull(attributeGroup));
-            return this;
-        }        public AttributeGroupAssociationArgs build() {
-            return new AttributeGroupAssociationArgs(application, attributeGroup);
+            return attributeGroup(Output.of(attributeGroup));
+        }
+
+        public AttributeGroupAssociationArgs build() {
+            $.application = Objects.requireNonNull($.application, "expected parameter 'application' to be non-null");
+            $.attributeGroup = Objects.requireNonNull($.attributeGroup, "expected parameter 'attributeGroup' to be non-null");
+            return $;
         }
     }
+
 }

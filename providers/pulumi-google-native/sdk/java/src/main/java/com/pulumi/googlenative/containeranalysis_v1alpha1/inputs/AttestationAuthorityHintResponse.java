@@ -21,45 +21,45 @@ public final class AttestationAuthorityHintResponse extends com.pulumi.resources
      * 
      */
     @Import(name="humanReadableName", required=true)
-      private final String humanReadableName;
+    private String humanReadableName;
 
     public String humanReadableName() {
         return this.humanReadableName;
     }
 
-    public AttestationAuthorityHintResponse(String humanReadableName) {
-        this.humanReadableName = Objects.requireNonNull(humanReadableName, "expected parameter 'humanReadableName' to be non-null");
-    }
+    private AttestationAuthorityHintResponse() {}
 
-    private AttestationAuthorityHintResponse() {
-        this.humanReadableName = null;
+    private AttestationAuthorityHintResponse(AttestationAuthorityHintResponse $) {
+        this.humanReadableName = $.humanReadableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationAuthorityHintResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String humanReadableName;
+        private AttestationAuthorityHintResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationAuthorityHintResponse();
         }
 
         public Builder(AttestationAuthorityHintResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.humanReadableName = defaults.humanReadableName;
+            $ = new AttestationAuthorityHintResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder humanReadableName(String humanReadableName) {
-            this.humanReadableName = Objects.requireNonNull(humanReadableName);
+            $.humanReadableName = humanReadableName;
             return this;
-        }        public AttestationAuthorityHintResponse build() {
-            return new AttestationAuthorityHintResponse(humanReadableName);
+        }
+
+        public AttestationAuthorityHintResponse build() {
+            $.humanReadableName = Objects.requireNonNull($.humanReadableName, "expected parameter 'humanReadableName' to be non-null");
+            return $;
         }
     }
+
 }

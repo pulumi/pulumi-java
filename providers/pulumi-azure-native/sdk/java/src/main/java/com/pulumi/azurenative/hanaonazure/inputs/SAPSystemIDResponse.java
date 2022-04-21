@@ -23,10 +23,10 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gid")
-      private final @Nullable String gid;
+    private @Nullable String gid;
 
     public Optional<String> gid() {
-        return this.gid == null ? Optional.empty() : Optional.ofNullable(this.gid);
+        return Optional.ofNullable(this.gid);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="memoryAllocation", required=true)
-      private final String memoryAllocation;
+    private String memoryAllocation;
 
     public String memoryAllocation() {
         return this.memoryAllocation;
@@ -45,10 +45,10 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sid")
-      private final @Nullable String sid;
+    private @Nullable String sid;
 
     public Optional<String> sid() {
-        return this.sid == null ? Optional.empty() : Optional.ofNullable(this.sid);
+        return Optional.ofNullable(this.sid);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uid")
-      private final @Nullable String uid;
+    private @Nullable String uid;
 
     public Optional<String> uid() {
-        return this.uid == null ? Optional.empty() : Optional.ofNullable(this.uid);
+        return Optional.ofNullable(this.uid);
     }
 
     /**
@@ -67,82 +67,69 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public SAPSystemIDResponse(
-        @Nullable String gid,
-        String memoryAllocation,
-        @Nullable String sid,
-        @Nullable String uid,
-        @Nullable String username) {
-        this.gid = gid;
-        this.memoryAllocation = Objects.requireNonNull(memoryAllocation, "expected parameter 'memoryAllocation' to be non-null");
-        this.sid = sid;
-        this.uid = uid;
-        this.username = username;
-    }
+    private SAPSystemIDResponse() {}
 
-    private SAPSystemIDResponse() {
-        this.gid = null;
-        this.memoryAllocation = null;
-        this.sid = null;
-        this.uid = null;
-        this.username = null;
+    private SAPSystemIDResponse(SAPSystemIDResponse $) {
+        this.gid = $.gid;
+        this.memoryAllocation = $.memoryAllocation;
+        this.sid = $.sid;
+        this.uid = $.uid;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SAPSystemIDResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String gid;
-        private String memoryAllocation;
-        private @Nullable String sid;
-        private @Nullable String uid;
-        private @Nullable String username;
+        private SAPSystemIDResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SAPSystemIDResponse();
         }
 
         public Builder(SAPSystemIDResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gid = defaults.gid;
-    	      this.memoryAllocation = defaults.memoryAllocation;
-    	      this.sid = defaults.sid;
-    	      this.uid = defaults.uid;
-    	      this.username = defaults.username;
+            $ = new SAPSystemIDResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gid(@Nullable String gid) {
-            this.gid = gid;
+            $.gid = gid;
             return this;
         }
+
         public Builder memoryAllocation(String memoryAllocation) {
-            this.memoryAllocation = Objects.requireNonNull(memoryAllocation);
+            $.memoryAllocation = memoryAllocation;
             return this;
         }
+
         public Builder sid(@Nullable String sid) {
-            this.sid = sid;
+            $.sid = sid;
             return this;
         }
+
         public Builder uid(@Nullable String uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public SAPSystemIDResponse build() {
-            return new SAPSystemIDResponse(gid, memoryAllocation, sid, uid, username);
+        }
+
+        public SAPSystemIDResponse build() {
+            $.memoryAllocation = Objects.requireNonNull($.memoryAllocation, "expected parameter 'memoryAllocation' to be non-null");
+            return $;
         }
     }
+
 }

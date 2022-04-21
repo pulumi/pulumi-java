@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ValidationRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -59,63 +59,59 @@ public final class ValidationRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rule", required=true)
-      private final Output<String> rule;
+    private Output<String> rule;
 
     public Output<String> rule() {
         return this.rule;
     }
 
-    public ValidationRuleArgs(
-        @Nullable Output<String> message,
-        Output<String> rule) {
-        this.message = message;
-        this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
-    }
+    private ValidationRuleArgs() {}
 
-    private ValidationRuleArgs() {
-        this.message = Codegen.empty();
-        this.rule = Codegen.empty();
+    private ValidationRuleArgs(ValidationRuleArgs $) {
+        this.message = $.message;
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> message;
-        private Output<String> rule;
+        private ValidationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidationRuleArgs();
         }
 
         public Builder(ValidationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.rule = defaults.rule;
+            $ = new ValidationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder rule(Output<String> rule) {
-            this.rule = Objects.requireNonNull(rule);
+            $.rule = rule;
             return this;
         }
+
         public Builder rule(String rule) {
-            this.rule = Output.of(Objects.requireNonNull(rule));
-            return this;
-        }        public ValidationRuleArgs build() {
-            return new ValidationRuleArgs(message, rule);
+            return rule(Output.of(rule));
+        }
+
+        public ValidationRuleArgs build() {
+            $.rule = Objects.requireNonNull($.rule, "expected parameter 'rule' to be non-null");
+            return $;
         }
     }
+
 }

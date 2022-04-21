@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse extends com.
      * 
      */
     @Import(name="flow", required=true)
-      private final String flow;
+    private String flow;
 
     public String flow() {
         return this.flow;
@@ -33,58 +33,56 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse extends com.
      * 
      */
     @Import(name="trackingParameters", required=true)
-      private final List<String> trackingParameters;
+    private List<String> trackingParameters;
 
     public List<String> trackingParameters() {
         return this.trackingParameters;
     }
 
-    public GoogleCloudDialogflowCxV3beta1TestConfigResponse(
-        String flow,
-        List<String> trackingParameters) {
-        this.flow = Objects.requireNonNull(flow, "expected parameter 'flow' to be non-null");
-        this.trackingParameters = Objects.requireNonNull(trackingParameters, "expected parameter 'trackingParameters' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1TestConfigResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1TestConfigResponse() {
-        this.flow = null;
-        this.trackingParameters = List.of();
+    private GoogleCloudDialogflowCxV3beta1TestConfigResponse(GoogleCloudDialogflowCxV3beta1TestConfigResponse $) {
+        this.flow = $.flow;
+        this.trackingParameters = $.trackingParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1TestConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String flow;
-        private List<String> trackingParameters;
+        private GoogleCloudDialogflowCxV3beta1TestConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1TestConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1TestConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flow = defaults.flow;
-    	      this.trackingParameters = defaults.trackingParameters;
+            $ = new GoogleCloudDialogflowCxV3beta1TestConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder flow(String flow) {
-            this.flow = Objects.requireNonNull(flow);
+            $.flow = flow;
             return this;
         }
+
         public Builder trackingParameters(List<String> trackingParameters) {
-            this.trackingParameters = Objects.requireNonNull(trackingParameters);
+            $.trackingParameters = trackingParameters;
             return this;
         }
+
         public Builder trackingParameters(String... trackingParameters) {
             return trackingParameters(List.of(trackingParameters));
-        }        public GoogleCloudDialogflowCxV3beta1TestConfigResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1TestConfigResponse(flow, trackingParameters);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1TestConfigResponse build() {
+            $.flow = Objects.requireNonNull($.flow, "expected parameter 'flow' to be non-null");
+            $.trackingParameters = Objects.requireNonNull($.trackingParameters, "expected parameter 'trackingParameters' to be non-null");
+            return $;
         }
     }
+
 }

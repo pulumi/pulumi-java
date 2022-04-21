@@ -7,11 +7,11 @@ import com.pulumi.azurenative.cdn.enums.EnabledState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AFDEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable Output<Either<String,EnabledState>> enabledState;
+    private @Nullable Output<Either<String,EnabledState>> enabledState;
 
-    public Output<Either<String,EnabledState>> enabledState() {
-        return this.enabledState == null ? Codegen.empty() : this.enabledState;
+    public Optional<Output<Either<String,EnabledState>>> enabledState() {
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AFDEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointName")
-      private final @Nullable Output<String> endpointName;
+    private @Nullable Output<String> endpointName;
 
-    public Output<String> endpointName() {
-        return this.endpointName == null ? Codegen.empty() : this.endpointName;
+    public Optional<Output<String>> endpointName() {
+        return Optional.ofNullable(this.endpointName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AFDEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AFDEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="originResponseTimeoutSeconds")
-      private final @Nullable Output<Integer> originResponseTimeoutSeconds;
+    private @Nullable Output<Integer> originResponseTimeoutSeconds;
 
-    public Output<Integer> originResponseTimeoutSeconds() {
-        return this.originResponseTimeoutSeconds == null ? Codegen.empty() : this.originResponseTimeoutSeconds;
+    public Optional<Output<Integer>> originResponseTimeoutSeconds() {
+        return Optional.ofNullable(this.originResponseTimeoutSeconds);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class AFDEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -79,7 +79,7 @@ public final class AFDEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,128 +90,110 @@ public final class AFDEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AFDEndpointArgs(
-        @Nullable Output<Either<String,EnabledState>> enabledState,
-        @Nullable Output<String> endpointName,
-        @Nullable Output<String> location,
-        @Nullable Output<Integer> originResponseTimeoutSeconds,
-        Output<String> profileName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.enabledState = enabledState;
-        this.endpointName = endpointName;
-        this.location = location;
-        this.originResponseTimeoutSeconds = originResponseTimeoutSeconds;
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private AFDEndpointArgs() {}
 
-    private AFDEndpointArgs() {
-        this.enabledState = Codegen.empty();
-        this.endpointName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.originResponseTimeoutSeconds = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AFDEndpointArgs(AFDEndpointArgs $) {
+        this.enabledState = $.enabledState;
+        this.endpointName = $.endpointName;
+        this.location = $.location;
+        this.originResponseTimeoutSeconds = $.originResponseTimeoutSeconds;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AFDEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,EnabledState>> enabledState;
-        private @Nullable Output<String> endpointName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Integer> originResponseTimeoutSeconds;
-        private Output<String> profileName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private AFDEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AFDEndpointArgs();
         }
 
         public Builder(AFDEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabledState = defaults.enabledState;
-    	      this.endpointName = defaults.endpointName;
-    	      this.location = defaults.location;
-    	      this.originResponseTimeoutSeconds = defaults.originResponseTimeoutSeconds;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new AFDEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabledState(@Nullable Output<Either<String,EnabledState>> enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
-        public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
-            this.enabledState = Codegen.ofNullable(enabledState);
-            return this;
+
+        public Builder enabledState(Either<String,EnabledState> enabledState) {
+            return enabledState(Output.of(enabledState));
         }
+
         public Builder endpointName(@Nullable Output<String> endpointName) {
-            this.endpointName = endpointName;
+            $.endpointName = endpointName;
             return this;
         }
-        public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Codegen.ofNullable(endpointName);
-            return this;
+
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder originResponseTimeoutSeconds(@Nullable Output<Integer> originResponseTimeoutSeconds) {
-            this.originResponseTimeoutSeconds = originResponseTimeoutSeconds;
+            $.originResponseTimeoutSeconds = originResponseTimeoutSeconds;
             return this;
         }
-        public Builder originResponseTimeoutSeconds(@Nullable Integer originResponseTimeoutSeconds) {
-            this.originResponseTimeoutSeconds = Codegen.ofNullable(originResponseTimeoutSeconds);
-            return this;
+
+        public Builder originResponseTimeoutSeconds(Integer originResponseTimeoutSeconds) {
+            return originResponseTimeoutSeconds(Output.of(originResponseTimeoutSeconds));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public AFDEndpointArgs build() {
-            return new AFDEndpointArgs(enabledState, endpointName, location, originResponseTimeoutSeconds, profileName, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public AFDEndpointArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

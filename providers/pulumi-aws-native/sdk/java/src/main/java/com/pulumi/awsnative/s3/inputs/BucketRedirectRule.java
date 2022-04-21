@@ -24,10 +24,10 @@ public final class BucketRedirectRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostName")
-      private final @Nullable String hostName;
+    private @Nullable String hostName;
 
     public Optional<String> hostName() {
-        return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BucketRedirectRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpRedirectCode")
-      private final @Nullable String httpRedirectCode;
+    private @Nullable String httpRedirectCode;
 
     public Optional<String> httpRedirectCode() {
-        return this.httpRedirectCode == null ? Optional.empty() : Optional.ofNullable(this.httpRedirectCode);
+        return Optional.ofNullable(this.httpRedirectCode);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BucketRedirectRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable BucketRedirectRuleProtocol protocol;
+    private @Nullable BucketRedirectRuleProtocol protocol;
 
     public Optional<BucketRedirectRuleProtocol> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BucketRedirectRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="replaceKeyPrefixWith")
-      private final @Nullable String replaceKeyPrefixWith;
+    private @Nullable String replaceKeyPrefixWith;
 
     public Optional<String> replaceKeyPrefixWith() {
-        return this.replaceKeyPrefixWith == null ? Optional.empty() : Optional.ofNullable(this.replaceKeyPrefixWith);
+        return Optional.ofNullable(this.replaceKeyPrefixWith);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class BucketRedirectRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="replaceKeyWith")
-      private final @Nullable String replaceKeyWith;
+    private @Nullable String replaceKeyWith;
 
     public Optional<String> replaceKeyWith() {
-        return this.replaceKeyWith == null ? Optional.empty() : Optional.ofNullable(this.replaceKeyWith);
+        return Optional.ofNullable(this.replaceKeyWith);
     }
 
-    public BucketRedirectRule(
-        @Nullable String hostName,
-        @Nullable String httpRedirectCode,
-        @Nullable BucketRedirectRuleProtocol protocol,
-        @Nullable String replaceKeyPrefixWith,
-        @Nullable String replaceKeyWith) {
-        this.hostName = hostName;
-        this.httpRedirectCode = httpRedirectCode;
-        this.protocol = protocol;
-        this.replaceKeyPrefixWith = replaceKeyPrefixWith;
-        this.replaceKeyWith = replaceKeyWith;
-    }
+    private BucketRedirectRule() {}
 
-    private BucketRedirectRule() {
-        this.hostName = null;
-        this.httpRedirectCode = null;
-        this.protocol = null;
-        this.replaceKeyPrefixWith = null;
-        this.replaceKeyWith = null;
+    private BucketRedirectRule(BucketRedirectRule $) {
+        this.hostName = $.hostName;
+        this.httpRedirectCode = $.httpRedirectCode;
+        this.protocol = $.protocol;
+        this.replaceKeyPrefixWith = $.replaceKeyPrefixWith;
+        this.replaceKeyWith = $.replaceKeyWith;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRedirectRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String hostName;
-        private @Nullable String httpRedirectCode;
-        private @Nullable BucketRedirectRuleProtocol protocol;
-        private @Nullable String replaceKeyPrefixWith;
-        private @Nullable String replaceKeyWith;
+        private BucketRedirectRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRedirectRule();
         }
 
         public Builder(BucketRedirectRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostName = defaults.hostName;
-    	      this.httpRedirectCode = defaults.httpRedirectCode;
-    	      this.protocol = defaults.protocol;
-    	      this.replaceKeyPrefixWith = defaults.replaceKeyPrefixWith;
-    	      this.replaceKeyWith = defaults.replaceKeyWith;
+            $ = new BucketRedirectRule(Objects.requireNonNull(defaults));
         }
 
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
+
         public Builder httpRedirectCode(@Nullable String httpRedirectCode) {
-            this.httpRedirectCode = httpRedirectCode;
+            $.httpRedirectCode = httpRedirectCode;
             return this;
         }
+
         public Builder protocol(@Nullable BucketRedirectRuleProtocol protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder replaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
-            this.replaceKeyPrefixWith = replaceKeyPrefixWith;
+            $.replaceKeyPrefixWith = replaceKeyPrefixWith;
             return this;
         }
+
         public Builder replaceKeyWith(@Nullable String replaceKeyWith) {
-            this.replaceKeyWith = replaceKeyWith;
+            $.replaceKeyWith = replaceKeyWith;
             return this;
-        }        public BucketRedirectRule build() {
-            return new BucketRedirectRule(hostName, httpRedirectCode, protocol, replaceKeyPrefixWith, replaceKeyWith);
+        }
+
+        public BucketRedirectRule build() {
+            return $;
         }
     }
+
 }

@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclLoggingConfigurationRedactedFieldQueryStringArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclLoggingConfigurationRedactedFieldQueryStringArgs Empty = new WebAclLoggingConfigurationRedactedFieldQueryStringArgs();
 
-    public WebAclLoggingConfigurationRedactedFieldQueryStringArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclLoggingConfigurationRedactedFieldQueryStringArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclLoggingConfigurationRedactedFieldQueryStringArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclLoggingConfigurationRedactedFieldQueryStringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclLoggingConfigurationRedactedFieldQueryStringArgs();
         }
         public WebAclLoggingConfigurationRedactedFieldQueryStringArgs build() {
-            return new WebAclLoggingConfigurationRedactedFieldQueryStringArgs();
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetArcSettingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arcSettingName", required=true)
-      private final String arcSettingName;
+    private String arcSettingName;
 
     public String arcSettingName() {
         return this.arcSettingName;
@@ -28,7 +28,7 @@ public final class GetArcSettingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -39,64 +39,59 @@ public final class GetArcSettingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetArcSettingArgs(
-        String arcSettingName,
-        String clusterName,
-        String resourceGroupName) {
-        this.arcSettingName = Objects.requireNonNull(arcSettingName, "expected parameter 'arcSettingName' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetArcSettingArgs() {}
 
-    private GetArcSettingArgs() {
-        this.arcSettingName = null;
-        this.clusterName = null;
-        this.resourceGroupName = null;
+    private GetArcSettingArgs(GetArcSettingArgs $) {
+        this.arcSettingName = $.arcSettingName;
+        this.clusterName = $.clusterName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetArcSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arcSettingName;
-        private String clusterName;
-        private String resourceGroupName;
+        private GetArcSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetArcSettingArgs();
         }
 
         public Builder(GetArcSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arcSettingName = defaults.arcSettingName;
-    	      this.clusterName = defaults.clusterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetArcSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arcSettingName(String arcSettingName) {
-            this.arcSettingName = Objects.requireNonNull(arcSettingName);
+            $.arcSettingName = arcSettingName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetArcSettingArgs build() {
-            return new GetArcSettingArgs(arcSettingName, clusterName, resourceGroupName);
+        }
+
+        public GetArcSettingArgs build() {
+            $.arcSettingName = Objects.requireNonNull($.arcSettingName, "expected parameter 'arcSettingName' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

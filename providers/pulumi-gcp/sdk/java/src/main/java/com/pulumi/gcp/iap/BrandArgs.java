@@ -5,9 +5,9 @@ package com.pulumi.gcp.iap;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class BrandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationTitle", required=true)
-      private final Output<String> applicationTitle;
+    private Output<String> applicationTitle;
 
     public Output<String> applicationTitle() {
         return this.applicationTitle;
@@ -32,10 +32,10 @@ public final class BrandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class BrandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportEmail", required=true)
-      private final Output<String> supportEmail;
+    private Output<String> supportEmail;
 
     public Output<String> supportEmail() {
         return this.supportEmail;
     }
 
-    public BrandArgs(
-        Output<String> applicationTitle,
-        @Nullable Output<String> project,
-        Output<String> supportEmail) {
-        this.applicationTitle = Objects.requireNonNull(applicationTitle, "expected parameter 'applicationTitle' to be non-null");
-        this.project = project;
-        this.supportEmail = Objects.requireNonNull(supportEmail, "expected parameter 'supportEmail' to be non-null");
-    }
+    private BrandArgs() {}
 
-    private BrandArgs() {
-        this.applicationTitle = Codegen.empty();
-        this.project = Codegen.empty();
-        this.supportEmail = Codegen.empty();
+    private BrandArgs(BrandArgs $) {
+        this.applicationTitle = $.applicationTitle;
+        this.project = $.project;
+        this.supportEmail = $.supportEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BrandArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationTitle;
-        private @Nullable Output<String> project;
-        private Output<String> supportEmail;
+        private BrandArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BrandArgs();
         }
 
         public Builder(BrandArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationTitle = defaults.applicationTitle;
-    	      this.project = defaults.project;
-    	      this.supportEmail = defaults.supportEmail;
+            $ = new BrandArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationTitle(Output<String> applicationTitle) {
-            this.applicationTitle = Objects.requireNonNull(applicationTitle);
+            $.applicationTitle = applicationTitle;
             return this;
         }
+
         public Builder applicationTitle(String applicationTitle) {
-            this.applicationTitle = Output.of(Objects.requireNonNull(applicationTitle));
-            return this;
+            return applicationTitle(Output.of(applicationTitle));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder supportEmail(Output<String> supportEmail) {
-            this.supportEmail = Objects.requireNonNull(supportEmail);
+            $.supportEmail = supportEmail;
             return this;
         }
+
         public Builder supportEmail(String supportEmail) {
-            this.supportEmail = Output.of(Objects.requireNonNull(supportEmail));
-            return this;
-        }        public BrandArgs build() {
-            return new BrandArgs(applicationTitle, project, supportEmail);
+            return supportEmail(Output.of(supportEmail));
+        }
+
+        public BrandArgs build() {
+            $.applicationTitle = Objects.requireNonNull($.applicationTitle, "expected parameter 'applicationTitle' to be non-null");
+            $.supportEmail = Objects.requireNonNull($.supportEmail, "expected parameter 'supportEmail' to be non-null");
+            return $;
         }
     }
+
 }

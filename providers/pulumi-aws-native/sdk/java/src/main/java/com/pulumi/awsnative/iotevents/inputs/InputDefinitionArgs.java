@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.InputAttributeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class InputDefinitionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="attributes", required=true)
-      private final Output<List<InputAttributeArgs>> attributes;
+    private Output<List<InputAttributeArgs>> attributes;
 
     public Output<List<InputAttributeArgs>> attributes() {
         return this.attributes;
     }
 
-    public InputDefinitionArgs(Output<List<InputAttributeArgs>> attributes) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-    }
+    private InputDefinitionArgs() {}
 
-    private InputDefinitionArgs() {
-        this.attributes = Codegen.empty();
+    private InputDefinitionArgs(InputDefinitionArgs $) {
+        this.attributes = $.attributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<InputAttributeArgs>> attributes;
+        private InputDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputDefinitionArgs();
         }
 
         public Builder(InputDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
+            $ = new InputDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(Output<List<InputAttributeArgs>> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(List<InputAttributeArgs> attributes) {
-            this.attributes = Output.of(Objects.requireNonNull(attributes));
-            return this;
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(InputAttributeArgs... attributes) {
             return attributes(List.of(attributes));
-        }        public InputDefinitionArgs build() {
-            return new InputDefinitionArgs(attributes);
+        }
+
+        public InputDefinitionArgs build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            return $;
         }
     }
+
 }

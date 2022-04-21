@@ -5,10 +5,10 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AnimationStaticArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="startTimeOffset")
-      private final @Nullable Output<String> startTimeOffset;
+    private @Nullable Output<String> startTimeOffset;
 
-    public Output<String> startTimeOffset() {
-        return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
+    public Optional<Output<String>> startTimeOffset() {
+        return Optional.ofNullable(this.startTimeOffset);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AnimationStaticArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="xy")
-      private final @Nullable Output<NormalizedCoordinateArgs> xy;
+    private @Nullable Output<NormalizedCoordinateArgs> xy;
 
-    public Output<NormalizedCoordinateArgs> xy() {
-        return this.xy == null ? Codegen.empty() : this.xy;
+    public Optional<Output<NormalizedCoordinateArgs>> xy() {
+        return Optional.ofNullable(this.xy);
     }
 
-    public AnimationStaticArgs(
-        @Nullable Output<String> startTimeOffset,
-        @Nullable Output<NormalizedCoordinateArgs> xy) {
-        this.startTimeOffset = startTimeOffset;
-        this.xy = xy;
-    }
+    private AnimationStaticArgs() {}
 
-    private AnimationStaticArgs() {
-        this.startTimeOffset = Codegen.empty();
-        this.xy = Codegen.empty();
+    private AnimationStaticArgs(AnimationStaticArgs $) {
+        this.startTimeOffset = $.startTimeOffset;
+        this.xy = $.xy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnimationStaticArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> startTimeOffset;
-        private @Nullable Output<NormalizedCoordinateArgs> xy;
+        private AnimationStaticArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnimationStaticArgs();
         }
 
         public Builder(AnimationStaticArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startTimeOffset = defaults.startTimeOffset;
-    	      this.xy = defaults.xy;
+            $ = new AnimationStaticArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
-            this.startTimeOffset = startTimeOffset;
+            $.startTimeOffset = startTimeOffset;
             return this;
         }
-        public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Codegen.ofNullable(startTimeOffset);
-            return this;
+
+        public Builder startTimeOffset(String startTimeOffset) {
+            return startTimeOffset(Output.of(startTimeOffset));
         }
+
         public Builder xy(@Nullable Output<NormalizedCoordinateArgs> xy) {
-            this.xy = xy;
+            $.xy = xy;
             return this;
         }
-        public Builder xy(@Nullable NormalizedCoordinateArgs xy) {
-            this.xy = Codegen.ofNullable(xy);
-            return this;
-        }        public AnimationStaticArgs build() {
-            return new AnimationStaticArgs(startTimeOffset, xy);
+
+        public Builder xy(NormalizedCoordinateArgs xy) {
+            return xy(Output.of(xy));
+        }
+
+        public AnimationStaticArgs build() {
+            return $;
         }
     }
+
 }

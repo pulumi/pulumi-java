@@ -7,7 +7,6 @@ import com.pulumi.azurenative.containerinstance.enums.GpuSku;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class GpuResourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="count", required=true)
-      private final Output<Integer> count;
+    private Output<Integer> count;
 
     public Output<Integer> count() {
         return this.count;
@@ -37,63 +36,60 @@ public final class GpuResourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<Either<String,GpuSku>> sku;
+    private Output<Either<String,GpuSku>> sku;
 
     public Output<Either<String,GpuSku>> sku() {
         return this.sku;
     }
 
-    public GpuResourceArgs(
-        Output<Integer> count,
-        Output<Either<String,GpuSku>> sku) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-    }
+    private GpuResourceArgs() {}
 
-    private GpuResourceArgs() {
-        this.count = Codegen.empty();
-        this.sku = Codegen.empty();
+    private GpuResourceArgs(GpuResourceArgs $) {
+        this.count = $.count;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GpuResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> count;
-        private Output<Either<String,GpuSku>> sku;
+        private GpuResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GpuResourceArgs();
         }
 
         public Builder(GpuResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.sku = defaults.sku;
+            $ = new GpuResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Output<Integer> count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Output.of(Objects.requireNonNull(count));
-            return this;
+            return count(Output.of(count));
         }
+
         public Builder sku(Output<Either<String,GpuSku>> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(Either<String,GpuSku> sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
-        }        public GpuResourceArgs build() {
-            return new GpuResourceArgs(count, sku);
+            return sku(Output.of(sku));
+        }
+
+        public GpuResourceArgs build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

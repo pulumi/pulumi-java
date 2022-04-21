@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datadog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="apiKey")
-      private final @Nullable Output<String> apiKey;
+    private @Nullable Output<String> apiKey;
 
-    public Output<String> apiKey() {
-        return this.apiKey == null ? Codegen.empty() : this.apiKey;
+    public Optional<Output<String>> apiKey() {
+        return Optional.ofNullable(this.apiKey);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="applicationKey")
-      private final @Nullable Output<String> applicationKey;
+    private @Nullable Output<String> applicationKey;
 
-    public Output<String> applicationKey() {
-        return this.applicationKey == null ? Codegen.empty() : this.applicationKey;
+    public Optional<Output<String>> applicationKey() {
+        return Optional.ofNullable(this.applicationKey);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="enterpriseAppId")
-      private final @Nullable Output<String> enterpriseAppId;
+    private @Nullable Output<String> enterpriseAppId;
 
-    public Output<String> enterpriseAppId() {
-        return this.enterpriseAppId == null ? Codegen.empty() : this.enterpriseAppId;
+    public Optional<Output<String>> enterpriseAppId() {
+        return Optional.ofNullable(this.enterpriseAppId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="linkingAuthCode")
-      private final @Nullable Output<String> linkingAuthCode;
+    private @Nullable Output<String> linkingAuthCode;
 
-    public Output<String> linkingAuthCode() {
-        return this.linkingAuthCode == null ? Codegen.empty() : this.linkingAuthCode;
+    public Optional<Output<String>> linkingAuthCode() {
+        return Optional.ofNullable(this.linkingAuthCode);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="linkingClientId")
-      private final @Nullable Output<String> linkingClientId;
+    private @Nullable Output<String> linkingClientId;
 
-    public Output<String> linkingClientId() {
-        return this.linkingClientId == null ? Codegen.empty() : this.linkingClientId;
+    public Optional<Output<String>> linkingClientId() {
+        return Optional.ofNullable(this.linkingClientId);
     }
 
     /**
@@ -79,115 +79,98 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="redirectUri")
-      private final @Nullable Output<String> redirectUri;
+    private @Nullable Output<String> redirectUri;
 
-    public Output<String> redirectUri() {
-        return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
+    public Optional<Output<String>> redirectUri() {
+        return Optional.ofNullable(this.redirectUri);
     }
 
-    public DatadogOrganizationPropertiesArgs(
-        @Nullable Output<String> apiKey,
-        @Nullable Output<String> applicationKey,
-        @Nullable Output<String> enterpriseAppId,
-        @Nullable Output<String> linkingAuthCode,
-        @Nullable Output<String> linkingClientId,
-        @Nullable Output<String> redirectUri) {
-        this.apiKey = apiKey;
-        this.applicationKey = applicationKey;
-        this.enterpriseAppId = enterpriseAppId;
-        this.linkingAuthCode = linkingAuthCode;
-        this.linkingClientId = linkingClientId;
-        this.redirectUri = redirectUri;
-    }
+    private DatadogOrganizationPropertiesArgs() {}
 
-    private DatadogOrganizationPropertiesArgs() {
-        this.apiKey = Codegen.empty();
-        this.applicationKey = Codegen.empty();
-        this.enterpriseAppId = Codegen.empty();
-        this.linkingAuthCode = Codegen.empty();
-        this.linkingClientId = Codegen.empty();
-        this.redirectUri = Codegen.empty();
+    private DatadogOrganizationPropertiesArgs(DatadogOrganizationPropertiesArgs $) {
+        this.apiKey = $.apiKey;
+        this.applicationKey = $.applicationKey;
+        this.enterpriseAppId = $.enterpriseAppId;
+        this.linkingAuthCode = $.linkingAuthCode;
+        this.linkingClientId = $.linkingClientId;
+        this.redirectUri = $.redirectUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatadogOrganizationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiKey;
-        private @Nullable Output<String> applicationKey;
-        private @Nullable Output<String> enterpriseAppId;
-        private @Nullable Output<String> linkingAuthCode;
-        private @Nullable Output<String> linkingClientId;
-        private @Nullable Output<String> redirectUri;
+        private DatadogOrganizationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatadogOrganizationPropertiesArgs();
         }
 
         public Builder(DatadogOrganizationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKey = defaults.apiKey;
-    	      this.applicationKey = defaults.applicationKey;
-    	      this.enterpriseAppId = defaults.enterpriseAppId;
-    	      this.linkingAuthCode = defaults.linkingAuthCode;
-    	      this.linkingClientId = defaults.linkingClientId;
-    	      this.redirectUri = defaults.redirectUri;
+            $ = new DatadogOrganizationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKey(@Nullable Output<String> apiKey) {
-            this.apiKey = apiKey;
+            $.apiKey = apiKey;
             return this;
         }
-        public Builder apiKey(@Nullable String apiKey) {
-            this.apiKey = Codegen.ofNullable(apiKey);
-            return this;
+
+        public Builder apiKey(String apiKey) {
+            return apiKey(Output.of(apiKey));
         }
+
         public Builder applicationKey(@Nullable Output<String> applicationKey) {
-            this.applicationKey = applicationKey;
+            $.applicationKey = applicationKey;
             return this;
         }
-        public Builder applicationKey(@Nullable String applicationKey) {
-            this.applicationKey = Codegen.ofNullable(applicationKey);
-            return this;
+
+        public Builder applicationKey(String applicationKey) {
+            return applicationKey(Output.of(applicationKey));
         }
+
         public Builder enterpriseAppId(@Nullable Output<String> enterpriseAppId) {
-            this.enterpriseAppId = enterpriseAppId;
+            $.enterpriseAppId = enterpriseAppId;
             return this;
         }
-        public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
-            this.enterpriseAppId = Codegen.ofNullable(enterpriseAppId);
-            return this;
+
+        public Builder enterpriseAppId(String enterpriseAppId) {
+            return enterpriseAppId(Output.of(enterpriseAppId));
         }
+
         public Builder linkingAuthCode(@Nullable Output<String> linkingAuthCode) {
-            this.linkingAuthCode = linkingAuthCode;
+            $.linkingAuthCode = linkingAuthCode;
             return this;
         }
-        public Builder linkingAuthCode(@Nullable String linkingAuthCode) {
-            this.linkingAuthCode = Codegen.ofNullable(linkingAuthCode);
-            return this;
+
+        public Builder linkingAuthCode(String linkingAuthCode) {
+            return linkingAuthCode(Output.of(linkingAuthCode));
         }
+
         public Builder linkingClientId(@Nullable Output<String> linkingClientId) {
-            this.linkingClientId = linkingClientId;
+            $.linkingClientId = linkingClientId;
             return this;
         }
-        public Builder linkingClientId(@Nullable String linkingClientId) {
-            this.linkingClientId = Codegen.ofNullable(linkingClientId);
-            return this;
+
+        public Builder linkingClientId(String linkingClientId) {
+            return linkingClientId(Output.of(linkingClientId));
         }
+
         public Builder redirectUri(@Nullable Output<String> redirectUri) {
-            this.redirectUri = redirectUri;
+            $.redirectUri = redirectUri;
             return this;
         }
-        public Builder redirectUri(@Nullable String redirectUri) {
-            this.redirectUri = Codegen.ofNullable(redirectUri);
-            return this;
-        }        public DatadogOrganizationPropertiesArgs build() {
-            return new DatadogOrganizationPropertiesArgs(apiKey, applicationKey, enterpriseAppId, linkingAuthCode, linkingClientId, redirectUri);
+
+        public Builder redirectUri(String redirectUri) {
+            return redirectUri(Output.of(redirectUri));
+        }
+
+        public DatadogOrganizationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

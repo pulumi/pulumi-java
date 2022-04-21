@@ -13,78 +13,73 @@ public final class GetInstanceMaintenanceSchedule extends com.pulumi.resources.I
     public static final GetInstanceMaintenanceSchedule Empty = new GetInstanceMaintenanceSchedule();
 
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
     }
 
     @Import(name="scheduleDeadlineTime", required=true)
-      private final String scheduleDeadlineTime;
+    private String scheduleDeadlineTime;
 
     public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
 
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public GetInstanceMaintenanceSchedule(
-        String endTime,
-        String scheduleDeadlineTime,
-        String startTime) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime, "expected parameter 'scheduleDeadlineTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private GetInstanceMaintenanceSchedule() {}
 
-    private GetInstanceMaintenanceSchedule() {
-        this.endTime = null;
-        this.scheduleDeadlineTime = null;
-        this.startTime = null;
+    private GetInstanceMaintenanceSchedule(GetInstanceMaintenanceSchedule $) {
+        this.endTime = $.endTime;
+        this.scheduleDeadlineTime = $.scheduleDeadlineTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceMaintenanceSchedule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private String scheduleDeadlineTime;
-        private String startTime;
+        private GetInstanceMaintenanceSchedule $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceMaintenanceSchedule();
         }
 
         public Builder(GetInstanceMaintenanceSchedule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.scheduleDeadlineTime = defaults.scheduleDeadlineTime;
-    	      this.startTime = defaults.startTime;
+            $ = new GetInstanceMaintenanceSchedule(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
-            this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
+            $.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public GetInstanceMaintenanceSchedule build() {
-            return new GetInstanceMaintenanceSchedule(endTime, scheduleDeadlineTime, startTime);
+        }
+
+        public GetInstanceMaintenanceSchedule build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.scheduleDeadlineTime = Objects.requireNonNull($.scheduleDeadlineTime, "expected parameter 'scheduleDeadlineTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

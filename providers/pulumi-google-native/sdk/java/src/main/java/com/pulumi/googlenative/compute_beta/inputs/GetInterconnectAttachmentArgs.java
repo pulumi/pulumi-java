@@ -15,78 +15,72 @@ public final class GetInterconnectAttachmentArgs extends com.pulumi.resources.In
     public static final GetInterconnectAttachmentArgs Empty = new GetInterconnectAttachmentArgs();
 
     @Import(name="interconnectAttachment", required=true)
-      private final String interconnectAttachment;
+    private String interconnectAttachment;
 
     public String interconnectAttachment() {
         return this.interconnectAttachment;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetInterconnectAttachmentArgs(
-        String interconnectAttachment,
-        @Nullable String project,
-        String region) {
-        this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment, "expected parameter 'interconnectAttachment' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetInterconnectAttachmentArgs() {}
 
-    private GetInterconnectAttachmentArgs() {
-        this.interconnectAttachment = null;
-        this.project = null;
-        this.region = null;
+    private GetInterconnectAttachmentArgs(GetInterconnectAttachmentArgs $) {
+        this.interconnectAttachment = $.interconnectAttachment;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInterconnectAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String interconnectAttachment;
-        private @Nullable String project;
-        private String region;
+        private GetInterconnectAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInterconnectAttachmentArgs();
         }
 
         public Builder(GetInterconnectAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interconnectAttachment = defaults.interconnectAttachment;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetInterconnectAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interconnectAttachment(String interconnectAttachment) {
-            this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment);
+            $.interconnectAttachment = interconnectAttachment;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetInterconnectAttachmentArgs build() {
-            return new GetInterconnectAttachmentArgs(interconnectAttachment, project, region);
+        }
+
+        public GetInterconnectAttachmentArgs build() {
+            $.interconnectAttachment = Objects.requireNonNull($.interconnectAttachment, "expected parameter 'interconnectAttachment' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class PtrRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ptrdname")
-      private final @Nullable String ptrdname;
+    private @Nullable String ptrdname;
 
     public Optional<String> ptrdname() {
-        return this.ptrdname == null ? Optional.empty() : Optional.ofNullable(this.ptrdname);
+        return Optional.ofNullable(this.ptrdname);
     }
 
-    public PtrRecordResponse(@Nullable String ptrdname) {
-        this.ptrdname = ptrdname;
-    }
+    private PtrRecordResponse() {}
 
-    private PtrRecordResponse() {
-        this.ptrdname = null;
+    private PtrRecordResponse(PtrRecordResponse $) {
+        this.ptrdname = $.ptrdname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PtrRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ptrdname;
+        private PtrRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PtrRecordResponse();
         }
 
         public Builder(PtrRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ptrdname = defaults.ptrdname;
+            $ = new PtrRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ptrdname(@Nullable String ptrdname) {
-            this.ptrdname = ptrdname;
+            $.ptrdname = ptrdname;
             return this;
-        }        public PtrRecordResponse build() {
-            return new PtrRecordResponse(ptrdname);
+        }
+
+        public PtrRecordResponse build() {
+            return $;
         }
     }
+
 }

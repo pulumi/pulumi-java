@@ -5,9 +5,9 @@ package com.pulumi.aws.detective.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class InvitationAccepterState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="graphArn")
-      private final @Nullable Output<String> graphArn;
+    private @Nullable Output<String> graphArn;
 
-    public Output<String> graphArn() {
-        return this.graphArn == null ? Codegen.empty() : this.graphArn;
+    public Optional<Output<String>> graphArn() {
+        return Optional.ofNullable(this.graphArn);
     }
 
-    public InvitationAccepterState(@Nullable Output<String> graphArn) {
-        this.graphArn = graphArn;
-    }
+    private InvitationAccepterState() {}
 
-    private InvitationAccepterState() {
-        this.graphArn = Codegen.empty();
+    private InvitationAccepterState(InvitationAccepterState $) {
+        this.graphArn = $.graphArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InvitationAccepterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> graphArn;
+        private InvitationAccepterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InvitationAccepterState();
         }
 
         public Builder(InvitationAccepterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.graphArn = defaults.graphArn;
+            $ = new InvitationAccepterState(Objects.requireNonNull(defaults));
         }
 
         public Builder graphArn(@Nullable Output<String> graphArn) {
-            this.graphArn = graphArn;
+            $.graphArn = graphArn;
             return this;
         }
-        public Builder graphArn(@Nullable String graphArn) {
-            this.graphArn = Codegen.ofNullable(graphArn);
-            return this;
-        }        public InvitationAccepterState build() {
-            return new InvitationAccepterState(graphArn);
+
+        public Builder graphArn(String graphArn) {
+            return graphArn(Output.of(graphArn));
+        }
+
+        public InvitationAccepterState build() {
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class CassandraViewGetPropertiesResponseResource extends com.pulumi
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -29,7 +29,7 @@ public final class CassandraViewGetPropertiesResponseResource extends com.pulumi
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -40,7 +40,7 @@ public final class CassandraViewGetPropertiesResponseResource extends com.pulumi
      * 
      */
     @Import(name="rid", required=true)
-      private final String rid;
+    private String rid;
 
     public String rid() {
         return this.rid;
@@ -51,7 +51,7 @@ public final class CassandraViewGetPropertiesResponseResource extends com.pulumi
      * 
      */
     @Import(name="ts", required=true)
-      private final Double ts;
+    private Double ts;
 
     public Double ts() {
         return this.ts;
@@ -62,82 +62,73 @@ public final class CassandraViewGetPropertiesResponseResource extends com.pulumi
      * 
      */
     @Import(name="viewDefinition", required=true)
-      private final String viewDefinition;
+    private String viewDefinition;
 
     public String viewDefinition() {
         return this.viewDefinition;
     }
 
-    public CassandraViewGetPropertiesResponseResource(
-        String etag,
-        String id,
-        String rid,
-        Double ts,
-        String viewDefinition) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.rid = Objects.requireNonNull(rid, "expected parameter 'rid' to be non-null");
-        this.ts = Objects.requireNonNull(ts, "expected parameter 'ts' to be non-null");
-        this.viewDefinition = Objects.requireNonNull(viewDefinition, "expected parameter 'viewDefinition' to be non-null");
-    }
+    private CassandraViewGetPropertiesResponseResource() {}
 
-    private CassandraViewGetPropertiesResponseResource() {
-        this.etag = null;
-        this.id = null;
-        this.rid = null;
-        this.ts = null;
-        this.viewDefinition = null;
+    private CassandraViewGetPropertiesResponseResource(CassandraViewGetPropertiesResponseResource $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.rid = $.rid;
+        this.ts = $.ts;
+        this.viewDefinition = $.viewDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CassandraViewGetPropertiesResponseResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private String id;
-        private String rid;
-        private Double ts;
-        private String viewDefinition;
+        private CassandraViewGetPropertiesResponseResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new CassandraViewGetPropertiesResponseResource();
         }
 
         public Builder(CassandraViewGetPropertiesResponseResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.rid = defaults.rid;
-    	      this.ts = defaults.ts;
-    	      this.viewDefinition = defaults.viewDefinition;
+            $ = new CassandraViewGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder rid(String rid) {
-            this.rid = Objects.requireNonNull(rid);
+            $.rid = rid;
             return this;
         }
+
         public Builder ts(Double ts) {
-            this.ts = Objects.requireNonNull(ts);
+            $.ts = ts;
             return this;
         }
+
         public Builder viewDefinition(String viewDefinition) {
-            this.viewDefinition = Objects.requireNonNull(viewDefinition);
+            $.viewDefinition = viewDefinition;
             return this;
-        }        public CassandraViewGetPropertiesResponseResource build() {
-            return new CassandraViewGetPropertiesResponseResource(etag, id, rid, ts, viewDefinition);
+        }
+
+        public CassandraViewGetPropertiesResponseResource build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.rid = Objects.requireNonNull($.rid, "expected parameter 'rid' to be non-null");
+            $.ts = Objects.requireNonNull($.ts, "expected parameter 'ts' to be non-null");
+            $.viewDefinition = Objects.requireNonNull($.viewDefinition, "expected parameter 'viewDefinition' to be non-null");
+            return $;
         }
     }
+
 }

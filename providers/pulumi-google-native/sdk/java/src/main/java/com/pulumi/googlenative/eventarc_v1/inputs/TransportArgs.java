@@ -5,9 +5,9 @@ package com.pulumi.googlenative.eventarc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.eventarc_v1.inputs.PubsubArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class TransportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pubsub")
-      private final @Nullable Output<PubsubArgs> pubsub;
+    private @Nullable Output<PubsubArgs> pubsub;
 
-    public Output<PubsubArgs> pubsub() {
-        return this.pubsub == null ? Codegen.empty() : this.pubsub;
+    public Optional<Output<PubsubArgs>> pubsub() {
+        return Optional.ofNullable(this.pubsub);
     }
 
-    public TransportArgs(@Nullable Output<PubsubArgs> pubsub) {
-        this.pubsub = pubsub;
-    }
+    private TransportArgs() {}
 
-    private TransportArgs() {
-        this.pubsub = Codegen.empty();
+    private TransportArgs(TransportArgs $) {
+        this.pubsub = $.pubsub;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PubsubArgs> pubsub;
+        private TransportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransportArgs();
         }
 
         public Builder(TransportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsub = defaults.pubsub;
+            $ = new TransportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsub(@Nullable Output<PubsubArgs> pubsub) {
-            this.pubsub = pubsub;
+            $.pubsub = pubsub;
             return this;
         }
-        public Builder pubsub(@Nullable PubsubArgs pubsub) {
-            this.pubsub = Codegen.ofNullable(pubsub);
-            return this;
-        }        public TransportArgs build() {
-            return new TransportArgs(pubsub);
+
+        public Builder pubsub(PubsubArgs pubsub) {
+            return pubsub(Output.of(pubsub));
+        }
+
+        public TransportArgs build() {
+            return $;
         }
     }
+
 }

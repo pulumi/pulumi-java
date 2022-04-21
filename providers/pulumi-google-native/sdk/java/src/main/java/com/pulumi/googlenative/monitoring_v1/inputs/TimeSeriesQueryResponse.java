@@ -23,7 +23,7 @@ public final class TimeSeriesQueryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timeSeriesFilter", required=true)
-      private final TimeSeriesFilterResponse timeSeriesFilter;
+    private TimeSeriesFilterResponse timeSeriesFilter;
 
     public TimeSeriesFilterResponse timeSeriesFilter() {
         return this.timeSeriesFilter;
@@ -34,7 +34,7 @@ public final class TimeSeriesQueryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timeSeriesFilterRatio", required=true)
-      private final TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
+    private TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
 
     public TimeSeriesFilterRatioResponse timeSeriesFilterRatio() {
         return this.timeSeriesFilterRatio;
@@ -45,7 +45,7 @@ public final class TimeSeriesQueryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timeSeriesQueryLanguage", required=true)
-      private final String timeSeriesQueryLanguage;
+    private String timeSeriesQueryLanguage;
 
     public String timeSeriesQueryLanguage() {
         return this.timeSeriesQueryLanguage;
@@ -56,73 +56,66 @@ public final class TimeSeriesQueryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="unitOverride", required=true)
-      private final String unitOverride;
+    private String unitOverride;
 
     public String unitOverride() {
         return this.unitOverride;
     }
 
-    public TimeSeriesQueryResponse(
-        TimeSeriesFilterResponse timeSeriesFilter,
-        TimeSeriesFilterRatioResponse timeSeriesFilterRatio,
-        String timeSeriesQueryLanguage,
-        String unitOverride) {
-        this.timeSeriesFilter = Objects.requireNonNull(timeSeriesFilter, "expected parameter 'timeSeriesFilter' to be non-null");
-        this.timeSeriesFilterRatio = Objects.requireNonNull(timeSeriesFilterRatio, "expected parameter 'timeSeriesFilterRatio' to be non-null");
-        this.timeSeriesQueryLanguage = Objects.requireNonNull(timeSeriesQueryLanguage, "expected parameter 'timeSeriesQueryLanguage' to be non-null");
-        this.unitOverride = Objects.requireNonNull(unitOverride, "expected parameter 'unitOverride' to be non-null");
-    }
+    private TimeSeriesQueryResponse() {}
 
-    private TimeSeriesQueryResponse() {
-        this.timeSeriesFilter = null;
-        this.timeSeriesFilterRatio = null;
-        this.timeSeriesQueryLanguage = null;
-        this.unitOverride = null;
+    private TimeSeriesQueryResponse(TimeSeriesQueryResponse $) {
+        this.timeSeriesFilter = $.timeSeriesFilter;
+        this.timeSeriesFilterRatio = $.timeSeriesFilterRatio;
+        this.timeSeriesQueryLanguage = $.timeSeriesQueryLanguage;
+        this.unitOverride = $.unitOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesQueryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TimeSeriesFilterResponse timeSeriesFilter;
-        private TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
-        private String timeSeriesQueryLanguage;
-        private String unitOverride;
+        private TimeSeriesQueryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesQueryResponse();
         }
 
         public Builder(TimeSeriesQueryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timeSeriesFilter = defaults.timeSeriesFilter;
-    	      this.timeSeriesFilterRatio = defaults.timeSeriesFilterRatio;
-    	      this.timeSeriesQueryLanguage = defaults.timeSeriesQueryLanguage;
-    	      this.unitOverride = defaults.unitOverride;
+            $ = new TimeSeriesQueryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder timeSeriesFilter(TimeSeriesFilterResponse timeSeriesFilter) {
-            this.timeSeriesFilter = Objects.requireNonNull(timeSeriesFilter);
+            $.timeSeriesFilter = timeSeriesFilter;
             return this;
         }
+
         public Builder timeSeriesFilterRatio(TimeSeriesFilterRatioResponse timeSeriesFilterRatio) {
-            this.timeSeriesFilterRatio = Objects.requireNonNull(timeSeriesFilterRatio);
+            $.timeSeriesFilterRatio = timeSeriesFilterRatio;
             return this;
         }
+
         public Builder timeSeriesQueryLanguage(String timeSeriesQueryLanguage) {
-            this.timeSeriesQueryLanguage = Objects.requireNonNull(timeSeriesQueryLanguage);
+            $.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
             return this;
         }
+
         public Builder unitOverride(String unitOverride) {
-            this.unitOverride = Objects.requireNonNull(unitOverride);
+            $.unitOverride = unitOverride;
             return this;
-        }        public TimeSeriesQueryResponse build() {
-            return new TimeSeriesQueryResponse(timeSeriesFilter, timeSeriesFilterRatio, timeSeriesQueryLanguage, unitOverride);
+        }
+
+        public TimeSeriesQueryResponse build() {
+            $.timeSeriesFilter = Objects.requireNonNull($.timeSeriesFilter, "expected parameter 'timeSeriesFilter' to be non-null");
+            $.timeSeriesFilterRatio = Objects.requireNonNull($.timeSeriesFilterRatio, "expected parameter 'timeSeriesFilterRatio' to be non-null");
+            $.timeSeriesQueryLanguage = Objects.requireNonNull($.timeSeriesQueryLanguage, "expected parameter 'timeSeriesQueryLanguage' to be non-null");
+            $.unitOverride = Objects.requireNonNull($.unitOverride, "expected parameter 'unitOverride' to be non-null");
+            return $;
         }
     }
+
 }

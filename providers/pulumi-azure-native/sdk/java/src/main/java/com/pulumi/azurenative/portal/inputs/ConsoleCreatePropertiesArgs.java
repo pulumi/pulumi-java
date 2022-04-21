@@ -8,9 +8,9 @@ import com.pulumi.azurenative.portal.enums.ProvisioningState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class ConsoleCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="osType", required=true)
-      private final Output<Either<String,OsType>> osType;
+    private Output<Either<String,OsType>> osType;
 
     public Output<Either<String,OsType>> osType() {
         return this.osType;
@@ -38,10 +38,10 @@ public final class ConsoleCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+    private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ProvisioningState>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -49,76 +49,69 @@ public final class ConsoleCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public ConsoleCreatePropertiesArgs(
-        Output<Either<String,OsType>> osType,
-        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
-        @Nullable Output<String> uri) {
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.provisioningState = provisioningState;
-        this.uri = uri;
-    }
+    private ConsoleCreatePropertiesArgs() {}
 
-    private ConsoleCreatePropertiesArgs() {
-        this.osType = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ConsoleCreatePropertiesArgs(ConsoleCreatePropertiesArgs $) {
+        this.osType = $.osType;
+        this.provisioningState = $.provisioningState;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsoleCreatePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,OsType>> osType;
-        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
-        private @Nullable Output<String> uri;
+        private ConsoleCreatePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsoleCreatePropertiesArgs();
         }
 
         public Builder(ConsoleCreatePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osType = defaults.osType;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.uri = defaults.uri;
+            $ = new ConsoleCreatePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder osType(Output<Either<String,OsType>> osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder osType(Either<String,OsType> osType) {
-            this.osType = Output.of(Objects.requireNonNull(osType));
-            return this;
+            return osType(Output.of(osType));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public ConsoleCreatePropertiesArgs build() {
-            return new ConsoleCreatePropertiesArgs(osType, provisioningState, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public ConsoleCreatePropertiesArgs build() {
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dash", required=true)
-      private final Boolean dash;
+    private Boolean dash;
 
     public Boolean dash() {
         return this.dash;
@@ -32,7 +32,7 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="download", required=true)
-      private final Boolean download;
+    private Boolean download;
 
     public Boolean download() {
         return this.download;
@@ -43,7 +43,7 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="hls", required=true)
-      private final Boolean hls;
+    private Boolean hls;
 
     public Boolean hls() {
         return this.hls;
@@ -54,73 +54,66 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="smoothStreaming", required=true)
-      private final Boolean smoothStreaming;
+    private Boolean smoothStreaming;
 
     public Boolean smoothStreaming() {
         return this.smoothStreaming;
     }
 
-    public EnabledProtocolsResponse(
-        Boolean dash,
-        Boolean download,
-        Boolean hls,
-        Boolean smoothStreaming) {
-        this.dash = Objects.requireNonNull(dash, "expected parameter 'dash' to be non-null");
-        this.download = Objects.requireNonNull(download, "expected parameter 'download' to be non-null");
-        this.hls = Objects.requireNonNull(hls, "expected parameter 'hls' to be non-null");
-        this.smoothStreaming = Objects.requireNonNull(smoothStreaming, "expected parameter 'smoothStreaming' to be non-null");
-    }
+    private EnabledProtocolsResponse() {}
 
-    private EnabledProtocolsResponse() {
-        this.dash = null;
-        this.download = null;
-        this.hls = null;
-        this.smoothStreaming = null;
+    private EnabledProtocolsResponse(EnabledProtocolsResponse $) {
+        this.dash = $.dash;
+        this.download = $.download;
+        this.hls = $.hls;
+        this.smoothStreaming = $.smoothStreaming;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnabledProtocolsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean dash;
-        private Boolean download;
-        private Boolean hls;
-        private Boolean smoothStreaming;
+        private EnabledProtocolsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnabledProtocolsResponse();
         }
 
         public Builder(EnabledProtocolsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dash = defaults.dash;
-    	      this.download = defaults.download;
-    	      this.hls = defaults.hls;
-    	      this.smoothStreaming = defaults.smoothStreaming;
+            $ = new EnabledProtocolsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dash(Boolean dash) {
-            this.dash = Objects.requireNonNull(dash);
+            $.dash = dash;
             return this;
         }
+
         public Builder download(Boolean download) {
-            this.download = Objects.requireNonNull(download);
+            $.download = download;
             return this;
         }
+
         public Builder hls(Boolean hls) {
-            this.hls = Objects.requireNonNull(hls);
+            $.hls = hls;
             return this;
         }
+
         public Builder smoothStreaming(Boolean smoothStreaming) {
-            this.smoothStreaming = Objects.requireNonNull(smoothStreaming);
+            $.smoothStreaming = smoothStreaming;
             return this;
-        }        public EnabledProtocolsResponse build() {
-            return new EnabledProtocolsResponse(dash, download, hls, smoothStreaming);
+        }
+
+        public EnabledProtocolsResponse build() {
+            $.dash = Objects.requireNonNull($.dash, "expected parameter 'dash' to be non-null");
+            $.download = Objects.requireNonNull($.download, "expected parameter 'download' to be non-null");
+            $.hls = Objects.requireNonNull($.hls, "expected parameter 'hls' to be non-null");
+            $.smoothStreaming = Objects.requireNonNull($.smoothStreaming, "expected parameter 'smoothStreaming' to be non-null");
+            return $;
         }
     }
+
 }

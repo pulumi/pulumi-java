@@ -23,10 +23,10 @@ public final class ReferenceDataSetKeyPropertyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ReferenceDataSetKeyPropertyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ReferenceDataSetKeyPropertyResponse(
-        @Nullable String name,
-        @Nullable String type) {
-        this.name = name;
-        this.type = type;
-    }
+    private ReferenceDataSetKeyPropertyResponse() {}
 
-    private ReferenceDataSetKeyPropertyResponse() {
-        this.name = null;
-        this.type = null;
+    private ReferenceDataSetKeyPropertyResponse(ReferenceDataSetKeyPropertyResponse $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReferenceDataSetKeyPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String type;
+        private ReferenceDataSetKeyPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReferenceDataSetKeyPropertyResponse();
         }
 
         public Builder(ReferenceDataSetKeyPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ReferenceDataSetKeyPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ReferenceDataSetKeyPropertyResponse build() {
-            return new ReferenceDataSetKeyPropertyResponse(name, type);
+        }
+
+        public ReferenceDataSetKeyPropertyResponse build() {
+            return $;
         }
     }
+
 }

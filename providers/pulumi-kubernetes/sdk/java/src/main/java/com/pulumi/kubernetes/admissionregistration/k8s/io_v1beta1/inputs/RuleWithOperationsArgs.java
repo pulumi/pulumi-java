@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RuleWithOperationsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="apiGroups")
-      private final @Nullable Output<List<String>> apiGroups;
+    private @Nullable Output<List<String>> apiGroups;
 
-    public Output<List<String>> apiGroups() {
-        return this.apiGroups == null ? Codegen.empty() : this.apiGroups;
+    public Optional<Output<List<String>>> apiGroups() {
+        return Optional.ofNullable(this.apiGroups);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RuleWithOperationsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="apiVersions")
-      private final @Nullable Output<List<String>> apiVersions;
+    private @Nullable Output<List<String>> apiVersions;
 
-    public Output<List<String>> apiVersions() {
-        return this.apiVersions == null ? Codegen.empty() : this.apiVersions;
+    public Optional<Output<List<String>>> apiVersions() {
+        return Optional.ofNullable(this.apiVersions);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RuleWithOperationsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="operations")
-      private final @Nullable Output<List<String>> operations;
+    private @Nullable Output<List<String>> operations;
 
-    public Output<List<String>> operations() {
-        return this.operations == null ? Codegen.empty() : this.operations;
+    public Optional<Output<List<String>>> operations() {
+        return Optional.ofNullable(this.operations);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class RuleWithOperationsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<List<String>> resources;
+    private @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<List<String>>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     /**
@@ -75,114 +75,104 @@ public final class RuleWithOperationsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public RuleWithOperationsArgs(
-        @Nullable Output<List<String>> apiGroups,
-        @Nullable Output<List<String>> apiVersions,
-        @Nullable Output<List<String>> operations,
-        @Nullable Output<List<String>> resources,
-        @Nullable Output<String> scope) {
-        this.apiGroups = apiGroups;
-        this.apiVersions = apiVersions;
-        this.operations = operations;
-        this.resources = resources;
-        this.scope = scope;
-    }
+    private RuleWithOperationsArgs() {}
 
-    private RuleWithOperationsArgs() {
-        this.apiGroups = Codegen.empty();
-        this.apiVersions = Codegen.empty();
-        this.operations = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.scope = Codegen.empty();
+    private RuleWithOperationsArgs(RuleWithOperationsArgs $) {
+        this.apiGroups = $.apiGroups;
+        this.apiVersions = $.apiVersions;
+        this.operations = $.operations;
+        this.resources = $.resources;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleWithOperationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> apiGroups;
-        private @Nullable Output<List<String>> apiVersions;
-        private @Nullable Output<List<String>> operations;
-        private @Nullable Output<List<String>> resources;
-        private @Nullable Output<String> scope;
+        private RuleWithOperationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleWithOperationsArgs();
         }
 
         public Builder(RuleWithOperationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiGroups = defaults.apiGroups;
-    	      this.apiVersions = defaults.apiVersions;
-    	      this.operations = defaults.operations;
-    	      this.resources = defaults.resources;
-    	      this.scope = defaults.scope;
+            $ = new RuleWithOperationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiGroups(@Nullable Output<List<String>> apiGroups) {
-            this.apiGroups = apiGroups;
+            $.apiGroups = apiGroups;
             return this;
         }
-        public Builder apiGroups(@Nullable List<String> apiGroups) {
-            this.apiGroups = Codegen.ofNullable(apiGroups);
-            return this;
+
+        public Builder apiGroups(List<String> apiGroups) {
+            return apiGroups(Output.of(apiGroups));
         }
+
         public Builder apiGroups(String... apiGroups) {
             return apiGroups(List.of(apiGroups));
         }
+
         public Builder apiVersions(@Nullable Output<List<String>> apiVersions) {
-            this.apiVersions = apiVersions;
+            $.apiVersions = apiVersions;
             return this;
         }
-        public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = Codegen.ofNullable(apiVersions);
-            return this;
+
+        public Builder apiVersions(List<String> apiVersions) {
+            return apiVersions(Output.of(apiVersions));
         }
+
         public Builder apiVersions(String... apiVersions) {
             return apiVersions(List.of(apiVersions));
         }
+
         public Builder operations(@Nullable Output<List<String>> operations) {
-            this.operations = operations;
+            $.operations = operations;
             return this;
         }
-        public Builder operations(@Nullable List<String> operations) {
-            this.operations = Codegen.ofNullable(operations);
-            return this;
+
+        public Builder operations(List<String> operations) {
+            return operations(Output.of(operations));
         }
+
         public Builder operations(String... operations) {
             return operations(List.of(operations));
         }
+
         public Builder resources(@Nullable Output<List<String>> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable List<String> resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(List<String> resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
-        }        public RuleWithOperationsArgs build() {
-            return new RuleWithOperationsArgs(apiGroups, apiVersions, operations, resources, scope);
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
+        }
+
+        public RuleWithOperationsArgs build() {
+            return $;
         }
     }
+
 }

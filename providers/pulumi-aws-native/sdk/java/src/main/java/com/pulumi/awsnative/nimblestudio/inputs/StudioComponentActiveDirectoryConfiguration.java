@@ -25,10 +25,10 @@ public final class StudioComponentActiveDirectoryConfiguration extends com.pulum
      * 
      */
     @Import(name="computerAttributes")
-      private final @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes;
+    private @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes;
 
-    public List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes() {
-        return this.computerAttributes == null ? List.of() : this.computerAttributes;
+    public Optional<List<StudioComponentActiveDirectoryComputerAttribute>> computerAttributes() {
+        return Optional.ofNullable(this.computerAttributes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StudioComponentActiveDirectoryConfiguration extends com.pulum
      * 
      */
     @Import(name="directoryId")
-      private final @Nullable String directoryId;
+    private @Nullable String directoryId;
 
     public Optional<String> directoryId() {
-        return this.directoryId == null ? Optional.empty() : Optional.ofNullable(this.directoryId);
+        return Optional.ofNullable(this.directoryId);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class StudioComponentActiveDirectoryConfiguration extends com.pulum
      * 
      */
     @Import(name="organizationalUnitDistinguishedName")
-      private final @Nullable String organizationalUnitDistinguishedName;
+    private @Nullable String organizationalUnitDistinguishedName;
 
     public Optional<String> organizationalUnitDistinguishedName() {
-        return this.organizationalUnitDistinguishedName == null ? Optional.empty() : Optional.ofNullable(this.organizationalUnitDistinguishedName);
+        return Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }
 
-    public StudioComponentActiveDirectoryConfiguration(
-        @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes,
-        @Nullable String directoryId,
-        @Nullable String organizationalUnitDistinguishedName) {
-        this.computerAttributes = computerAttributes;
-        this.directoryId = directoryId;
-        this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
-    }
+    private StudioComponentActiveDirectoryConfiguration() {}
 
-    private StudioComponentActiveDirectoryConfiguration() {
-        this.computerAttributes = List.of();
-        this.directoryId = null;
-        this.organizationalUnitDistinguishedName = null;
+    private StudioComponentActiveDirectoryConfiguration(StudioComponentActiveDirectoryConfiguration $) {
+        this.computerAttributes = $.computerAttributes;
+        this.directoryId = $.directoryId;
+        this.organizationalUnitDistinguishedName = $.organizationalUnitDistinguishedName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentActiveDirectoryConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes;
-        private @Nullable String directoryId;
-        private @Nullable String organizationalUnitDistinguishedName;
+        private StudioComponentActiveDirectoryConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentActiveDirectoryConfiguration();
         }
 
         public Builder(StudioComponentActiveDirectoryConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computerAttributes = defaults.computerAttributes;
-    	      this.directoryId = defaults.directoryId;
-    	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
+            $ = new StudioComponentActiveDirectoryConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder computerAttributes(@Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes) {
-            this.computerAttributes = computerAttributes;
+            $.computerAttributes = computerAttributes;
             return this;
         }
+
         public Builder computerAttributes(StudioComponentActiveDirectoryComputerAttribute... computerAttributes) {
             return computerAttributes(List.of(computerAttributes));
         }
+
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = directoryId;
+            $.directoryId = directoryId;
             return this;
         }
+
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
+            $.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
-        }        public StudioComponentActiveDirectoryConfiguration build() {
-            return new StudioComponentActiveDirectoryConfiguration(computerAttributes, directoryId, organizationalUnitDistinguishedName);
+        }
+
+        public StudioComponentActiveDirectoryConfiguration build() {
+            return $;
         }
     }
+
 }

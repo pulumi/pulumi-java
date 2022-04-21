@@ -15,62 +15,58 @@ public final class GetTargetGrpcProxyArgs extends com.pulumi.resources.InvokeArg
     public static final GetTargetGrpcProxyArgs Empty = new GetTargetGrpcProxyArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="targetGrpcProxy", required=true)
-      private final String targetGrpcProxy;
+    private String targetGrpcProxy;
 
     public String targetGrpcProxy() {
         return this.targetGrpcProxy;
     }
 
-    public GetTargetGrpcProxyArgs(
-        @Nullable String project,
-        String targetGrpcProxy) {
-        this.project = project;
-        this.targetGrpcProxy = Objects.requireNonNull(targetGrpcProxy, "expected parameter 'targetGrpcProxy' to be non-null");
-    }
+    private GetTargetGrpcProxyArgs() {}
 
-    private GetTargetGrpcProxyArgs() {
-        this.project = null;
-        this.targetGrpcProxy = null;
+    private GetTargetGrpcProxyArgs(GetTargetGrpcProxyArgs $) {
+        this.project = $.project;
+        this.targetGrpcProxy = $.targetGrpcProxy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetGrpcProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String targetGrpcProxy;
+        private GetTargetGrpcProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetGrpcProxyArgs();
         }
 
         public Builder(GetTargetGrpcProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.targetGrpcProxy = defaults.targetGrpcProxy;
+            $ = new GetTargetGrpcProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder targetGrpcProxy(String targetGrpcProxy) {
-            this.targetGrpcProxy = Objects.requireNonNull(targetGrpcProxy);
+            $.targetGrpcProxy = targetGrpcProxy;
             return this;
-        }        public GetTargetGrpcProxyArgs build() {
-            return new GetTargetGrpcProxyArgs(project, targetGrpcProxy);
+        }
+
+        public GetTargetGrpcProxyArgs build() {
+            $.targetGrpcProxy = Objects.requireNonNull($.targetGrpcProxy, "expected parameter 'targetGrpcProxy' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class InstanceGuestAcceleratorArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="count", required=true)
-      private final Output<Integer> count;
+    private Output<Integer> count;
 
     public Output<Integer> count() {
         return this.count;
@@ -31,63 +30,60 @@ public final class InstanceGuestAcceleratorArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public InstanceGuestAcceleratorArgs(
-        Output<Integer> count,
-        Output<String> type) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private InstanceGuestAcceleratorArgs() {}
 
-    private InstanceGuestAcceleratorArgs() {
-        this.count = Codegen.empty();
-        this.type = Codegen.empty();
+    private InstanceGuestAcceleratorArgs(InstanceGuestAcceleratorArgs $) {
+        this.count = $.count;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGuestAcceleratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> count;
-        private Output<String> type;
+        private InstanceGuestAcceleratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGuestAcceleratorArgs();
         }
 
         public Builder(InstanceGuestAcceleratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.type = defaults.type;
+            $ = new InstanceGuestAcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Output<Integer> count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Output.of(Objects.requireNonNull(count));
-            return this;
+            return count(Output.of(count));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public InstanceGuestAcceleratorArgs build() {
-            return new InstanceGuestAcceleratorArgs(count, type);
+            return type(Output.of(type));
+        }
+
+        public InstanceGuestAcceleratorArgs build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

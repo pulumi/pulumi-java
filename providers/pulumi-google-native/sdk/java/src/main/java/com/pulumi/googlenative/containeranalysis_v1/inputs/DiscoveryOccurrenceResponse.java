@@ -22,7 +22,7 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="analysisStatus", required=true)
-      private final String analysisStatus;
+    private String analysisStatus;
 
     public String analysisStatus() {
         return this.analysisStatus;
@@ -33,7 +33,7 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="analysisStatusError", required=true)
-      private final StatusResponse analysisStatusError;
+    private StatusResponse analysisStatusError;
 
     public StatusResponse analysisStatusError() {
         return this.analysisStatusError;
@@ -44,7 +44,7 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="continuousAnalysis", required=true)
-      private final String continuousAnalysis;
+    private String continuousAnalysis;
 
     public String continuousAnalysis() {
         return this.continuousAnalysis;
@@ -55,7 +55,7 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="cpe", required=true)
-      private final String cpe;
+    private String cpe;
 
     public String cpe() {
         return this.cpe;
@@ -66,82 +66,73 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="lastScanTime", required=true)
-      private final String lastScanTime;
+    private String lastScanTime;
 
     public String lastScanTime() {
         return this.lastScanTime;
     }
 
-    public DiscoveryOccurrenceResponse(
-        String analysisStatus,
-        StatusResponse analysisStatusError,
-        String continuousAnalysis,
-        String cpe,
-        String lastScanTime) {
-        this.analysisStatus = Objects.requireNonNull(analysisStatus, "expected parameter 'analysisStatus' to be non-null");
-        this.analysisStatusError = Objects.requireNonNull(analysisStatusError, "expected parameter 'analysisStatusError' to be non-null");
-        this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis, "expected parameter 'continuousAnalysis' to be non-null");
-        this.cpe = Objects.requireNonNull(cpe, "expected parameter 'cpe' to be non-null");
-        this.lastScanTime = Objects.requireNonNull(lastScanTime, "expected parameter 'lastScanTime' to be non-null");
-    }
+    private DiscoveryOccurrenceResponse() {}
 
-    private DiscoveryOccurrenceResponse() {
-        this.analysisStatus = null;
-        this.analysisStatusError = null;
-        this.continuousAnalysis = null;
-        this.cpe = null;
-        this.lastScanTime = null;
+    private DiscoveryOccurrenceResponse(DiscoveryOccurrenceResponse $) {
+        this.analysisStatus = $.analysisStatus;
+        this.analysisStatusError = $.analysisStatusError;
+        this.continuousAnalysis = $.continuousAnalysis;
+        this.cpe = $.cpe;
+        this.lastScanTime = $.lastScanTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiscoveryOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String analysisStatus;
-        private StatusResponse analysisStatusError;
-        private String continuousAnalysis;
-        private String cpe;
-        private String lastScanTime;
+        private DiscoveryOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiscoveryOccurrenceResponse();
         }
 
         public Builder(DiscoveryOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisStatus = defaults.analysisStatus;
-    	      this.analysisStatusError = defaults.analysisStatusError;
-    	      this.continuousAnalysis = defaults.continuousAnalysis;
-    	      this.cpe = defaults.cpe;
-    	      this.lastScanTime = defaults.lastScanTime;
+            $ = new DiscoveryOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisStatus(String analysisStatus) {
-            this.analysisStatus = Objects.requireNonNull(analysisStatus);
+            $.analysisStatus = analysisStatus;
             return this;
         }
+
         public Builder analysisStatusError(StatusResponse analysisStatusError) {
-            this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
+            $.analysisStatusError = analysisStatusError;
             return this;
         }
+
         public Builder continuousAnalysis(String continuousAnalysis) {
-            this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
+            $.continuousAnalysis = continuousAnalysis;
             return this;
         }
+
         public Builder cpe(String cpe) {
-            this.cpe = Objects.requireNonNull(cpe);
+            $.cpe = cpe;
             return this;
         }
+
         public Builder lastScanTime(String lastScanTime) {
-            this.lastScanTime = Objects.requireNonNull(lastScanTime);
+            $.lastScanTime = lastScanTime;
             return this;
-        }        public DiscoveryOccurrenceResponse build() {
-            return new DiscoveryOccurrenceResponse(analysisStatus, analysisStatusError, continuousAnalysis, cpe, lastScanTime);
+        }
+
+        public DiscoveryOccurrenceResponse build() {
+            $.analysisStatus = Objects.requireNonNull($.analysisStatus, "expected parameter 'analysisStatus' to be non-null");
+            $.analysisStatusError = Objects.requireNonNull($.analysisStatusError, "expected parameter 'analysisStatusError' to be non-null");
+            $.continuousAnalysis = Objects.requireNonNull($.continuousAnalysis, "expected parameter 'continuousAnalysis' to be non-null");
+            $.cpe = Objects.requireNonNull($.cpe, "expected parameter 'cpe' to be non-null");
+            $.lastScanTime = Objects.requireNonNull($.lastScanTime, "expected parameter 'lastScanTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class SecretVolumeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="mountPath", required=true)
-      private final String mountPath;
+    private String mountPath;
 
     public String mountPath() {
         return this.mountPath;
@@ -34,7 +34,7 @@ public final class SecretVolumeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -45,7 +45,7 @@ public final class SecretVolumeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secret", required=true)
-      private final String secret;
+    private String secret;
 
     public String secret() {
         return this.secret;
@@ -56,76 +56,70 @@ public final class SecretVolumeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="versions", required=true)
-      private final List<SecretVersionResponse> versions;
+    private List<SecretVersionResponse> versions;
 
     public List<SecretVersionResponse> versions() {
         return this.versions;
     }
 
-    public SecretVolumeResponse(
-        String mountPath,
-        String project,
-        String secret,
-        List<SecretVersionResponse> versions) {
-        this.mountPath = Objects.requireNonNull(mountPath, "expected parameter 'mountPath' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-        this.versions = Objects.requireNonNull(versions, "expected parameter 'versions' to be non-null");
-    }
+    private SecretVolumeResponse() {}
 
-    private SecretVolumeResponse() {
-        this.mountPath = null;
-        this.project = null;
-        this.secret = null;
-        this.versions = List.of();
+    private SecretVolumeResponse(SecretVolumeResponse $) {
+        this.mountPath = $.mountPath;
+        this.project = $.project;
+        this.secret = $.secret;
+        this.versions = $.versions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretVolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mountPath;
-        private String project;
-        private String secret;
-        private List<SecretVersionResponse> versions;
+        private SecretVolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretVolumeResponse();
         }
 
         public Builder(SecretVolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.project = defaults.project;
-    	      this.secret = defaults.secret;
-    	      this.versions = defaults.versions;
+            $ = new SecretVolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(String mountPath) {
-            this.mountPath = Objects.requireNonNull(mountPath);
+            $.mountPath = mountPath;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder versions(List<SecretVersionResponse> versions) {
-            this.versions = Objects.requireNonNull(versions);
+            $.versions = versions;
             return this;
         }
+
         public Builder versions(SecretVersionResponse... versions) {
             return versions(List.of(versions));
-        }        public SecretVolumeResponse build() {
-            return new SecretVolumeResponse(mountPath, project, secret, versions);
+        }
+
+        public SecretVolumeResponse build() {
+            $.mountPath = Objects.requireNonNull($.mountPath, "expected parameter 'mountPath' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            $.versions = Objects.requireNonNull($.versions, "expected parameter 'versions' to be non-null");
+            return $;
         }
     }
+
 }

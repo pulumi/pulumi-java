@@ -12,10 +12,10 @@ import com.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @Import(name="classification")
-      private final @Nullable Output<Either<String,IncidentClassification>> classification;
+    private @Nullable Output<Either<String,IncidentClassification>> classification;
 
-    public Output<Either<String,IncidentClassification>> classification() {
-        return this.classification == null ? Codegen.empty() : this.classification;
+    public Optional<Output<Either<String,IncidentClassification>>> classification() {
+        return Optional.ofNullable(this.classification);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @Import(name="classificationComment")
-      private final @Nullable Output<String> classificationComment;
+    private @Nullable Output<String> classificationComment;
 
-    public Output<String> classificationComment() {
-        return this.classificationComment == null ? Codegen.empty() : this.classificationComment;
+    public Optional<Output<String>> classificationComment() {
+        return Optional.ofNullable(this.classificationComment);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @Import(name="classificationReason")
-      private final @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
+    private @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
 
-    public Output<Either<String,IncidentClassificationReason>> classificationReason() {
-        return this.classificationReason == null ? Codegen.empty() : this.classificationReason;
+    public Optional<Output<Either<String,IncidentClassificationReason>>> classificationReason() {
+        return Optional.ofNullable(this.classificationReason);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<IncidentLabelArgs>> labels;
+    private @Nullable Output<List<IncidentLabelArgs>> labels;
 
-    public Output<List<IncidentLabelArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<IncidentLabelArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<IncidentOwnerInfoArgs> owner;
+    private @Nullable Output<IncidentOwnerInfoArgs> owner;
 
-    public Output<IncidentOwnerInfoArgs> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<IncidentOwnerInfoArgs>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @Import(name="severity")
-      private final @Nullable Output<Either<String,IncidentSeverity>> severity;
+    private @Nullable Output<Either<String,IncidentSeverity>> severity;
 
-    public Output<Either<String,IncidentSeverity>> severity() {
-        return this.severity == null ? Codegen.empty() : this.severity;
+    public Optional<Output<Either<String,IncidentSeverity>>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -98,131 +98,112 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,IncidentStatus>> status;
+    private @Nullable Output<Either<String,IncidentStatus>> status;
 
-    public Output<Either<String,IncidentStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,IncidentStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public AutomationRuleModifyPropertiesActionActionConfigurationArgs(
-        @Nullable Output<Either<String,IncidentClassification>> classification,
-        @Nullable Output<String> classificationComment,
-        @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason,
-        @Nullable Output<List<IncidentLabelArgs>> labels,
-        @Nullable Output<IncidentOwnerInfoArgs> owner,
-        @Nullable Output<Either<String,IncidentSeverity>> severity,
-        @Nullable Output<Either<String,IncidentStatus>> status) {
-        this.classification = classification;
-        this.classificationComment = classificationComment;
-        this.classificationReason = classificationReason;
-        this.labels = labels;
-        this.owner = owner;
-        this.severity = severity;
-        this.status = status;
-    }
+    private AutomationRuleModifyPropertiesActionActionConfigurationArgs() {}
 
-    private AutomationRuleModifyPropertiesActionActionConfigurationArgs() {
-        this.classification = Codegen.empty();
-        this.classificationComment = Codegen.empty();
-        this.classificationReason = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.status = Codegen.empty();
+    private AutomationRuleModifyPropertiesActionActionConfigurationArgs(AutomationRuleModifyPropertiesActionActionConfigurationArgs $) {
+        this.classification = $.classification;
+        this.classificationComment = $.classificationComment;
+        this.classificationReason = $.classificationReason;
+        this.labels = $.labels;
+        this.owner = $.owner;
+        this.severity = $.severity;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRuleModifyPropertiesActionActionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,IncidentClassification>> classification;
-        private @Nullable Output<String> classificationComment;
-        private @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
-        private @Nullable Output<List<IncidentLabelArgs>> labels;
-        private @Nullable Output<IncidentOwnerInfoArgs> owner;
-        private @Nullable Output<Either<String,IncidentSeverity>> severity;
-        private @Nullable Output<Either<String,IncidentStatus>> status;
+        private AutomationRuleModifyPropertiesActionActionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRuleModifyPropertiesActionActionConfigurationArgs();
         }
 
         public Builder(AutomationRuleModifyPropertiesActionActionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classification = defaults.classification;
-    	      this.classificationComment = defaults.classificationComment;
-    	      this.classificationReason = defaults.classificationReason;
-    	      this.labels = defaults.labels;
-    	      this.owner = defaults.owner;
-    	      this.severity = defaults.severity;
-    	      this.status = defaults.status;
+            $ = new AutomationRuleModifyPropertiesActionActionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classification(@Nullable Output<Either<String,IncidentClassification>> classification) {
-            this.classification = classification;
+            $.classification = classification;
             return this;
         }
-        public Builder classification(@Nullable Either<String,IncidentClassification> classification) {
-            this.classification = Codegen.ofNullable(classification);
-            return this;
+
+        public Builder classification(Either<String,IncidentClassification> classification) {
+            return classification(Output.of(classification));
         }
+
         public Builder classificationComment(@Nullable Output<String> classificationComment) {
-            this.classificationComment = classificationComment;
+            $.classificationComment = classificationComment;
             return this;
         }
-        public Builder classificationComment(@Nullable String classificationComment) {
-            this.classificationComment = Codegen.ofNullable(classificationComment);
-            return this;
+
+        public Builder classificationComment(String classificationComment) {
+            return classificationComment(Output.of(classificationComment));
         }
+
         public Builder classificationReason(@Nullable Output<Either<String,IncidentClassificationReason>> classificationReason) {
-            this.classificationReason = classificationReason;
+            $.classificationReason = classificationReason;
             return this;
         }
-        public Builder classificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
-            this.classificationReason = Codegen.ofNullable(classificationReason);
-            return this;
+
+        public Builder classificationReason(Either<String,IncidentClassificationReason> classificationReason) {
+            return classificationReason(Output.of(classificationReason));
         }
+
         public Builder labels(@Nullable Output<List<IncidentLabelArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<IncidentLabelArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<IncidentLabelArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(IncidentLabelArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder owner(@Nullable Output<IncidentOwnerInfoArgs> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable IncidentOwnerInfoArgs owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(IncidentOwnerInfoArgs owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder severity(@Nullable Output<Either<String,IncidentSeverity>> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
-        public Builder severity(@Nullable Either<String,IncidentSeverity> severity) {
-            this.severity = Codegen.ofNullable(severity);
-            return this;
+
+        public Builder severity(Either<String,IncidentSeverity> severity) {
+            return severity(Output.of(severity));
         }
+
         public Builder status(@Nullable Output<Either<String,IncidentStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,IncidentStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public AutomationRuleModifyPropertiesActionActionConfigurationArgs build() {
-            return new AutomationRuleModifyPropertiesActionActionConfigurationArgs(classification, classificationComment, classificationReason, labels, owner, severity, status);
+
+        public Builder status(Either<String,IncidentStatus> status) {
+            return status(Output.of(status));
+        }
+
+        public AutomationRuleModifyPropertiesActionActionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

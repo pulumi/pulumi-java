@@ -21,45 +21,45 @@ public final class AssessmentLinksResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="azurePortalUri", required=true)
-      private final String azurePortalUri;
+    private String azurePortalUri;
 
     public String azurePortalUri() {
         return this.azurePortalUri;
     }
 
-    public AssessmentLinksResponse(String azurePortalUri) {
-        this.azurePortalUri = Objects.requireNonNull(azurePortalUri, "expected parameter 'azurePortalUri' to be non-null");
-    }
+    private AssessmentLinksResponse() {}
 
-    private AssessmentLinksResponse() {
-        this.azurePortalUri = null;
+    private AssessmentLinksResponse(AssessmentLinksResponse $) {
+        this.azurePortalUri = $.azurePortalUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentLinksResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String azurePortalUri;
+        private AssessmentLinksResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentLinksResponse();
         }
 
         public Builder(AssessmentLinksResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azurePortalUri = defaults.azurePortalUri;
+            $ = new AssessmentLinksResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azurePortalUri(String azurePortalUri) {
-            this.azurePortalUri = Objects.requireNonNull(azurePortalUri);
+            $.azurePortalUri = azurePortalUri;
             return this;
-        }        public AssessmentLinksResponse build() {
-            return new AssessmentLinksResponse(azurePortalUri);
+        }
+
+        public AssessmentLinksResponse build() {
+            $.azurePortalUri = Objects.requireNonNull($.azurePortalUri, "expected parameter 'azurePortalUri' to be non-null");
+            return $;
         }
     }
+
 }

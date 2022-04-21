@@ -5,9 +5,9 @@ package com.pulumi.azurenative.testbase.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Output<String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
-    public Output<String> subscriptionId() {
-        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subscriptionName")
-      private final @Nullable Output<String> subscriptionName;
+    private @Nullable Output<String> subscriptionName;
 
-    public Output<String> subscriptionName() {
-        return this.subscriptionName == null ? Codegen.empty() : this.subscriptionName;
+    public Optional<Output<String>> subscriptionName() {
+        return Optional.ofNullable(this.subscriptionName);
     }
 
-    public SubscriptionReceiverValueArgs(
-        @Nullable Output<String> role,
-        @Nullable Output<String> subscriptionId,
-        @Nullable Output<String> subscriptionName) {
-        this.role = role;
-        this.subscriptionId = subscriptionId;
-        this.subscriptionName = subscriptionName;
-    }
+    private SubscriptionReceiverValueArgs() {}
 
-    private SubscriptionReceiverValueArgs() {
-        this.role = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
-        this.subscriptionName = Codegen.empty();
+    private SubscriptionReceiverValueArgs(SubscriptionReceiverValueArgs $) {
+        this.role = $.role;
+        this.subscriptionId = $.subscriptionId;
+        this.subscriptionName = $.subscriptionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionReceiverValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> subscriptionId;
-        private @Nullable Output<String> subscriptionName;
+        private SubscriptionReceiverValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionReceiverValueArgs();
         }
 
         public Builder(SubscriptionReceiverValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.role = defaults.role;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.subscriptionName = defaults.subscriptionName;
+            $ = new SubscriptionReceiverValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Codegen.ofNullable(subscriptionId);
-            return this;
+
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
+
         public Builder subscriptionName(@Nullable Output<String> subscriptionName) {
-            this.subscriptionName = subscriptionName;
+            $.subscriptionName = subscriptionName;
             return this;
         }
-        public Builder subscriptionName(@Nullable String subscriptionName) {
-            this.subscriptionName = Codegen.ofNullable(subscriptionName);
-            return this;
-        }        public SubscriptionReceiverValueArgs build() {
-            return new SubscriptionReceiverValueArgs(role, subscriptionId, subscriptionName);
+
+        public Builder subscriptionName(String subscriptionName) {
+            return subscriptionName(Output.of(subscriptionName));
+        }
+
+        public SubscriptionReceiverValueArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetServiceIamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetServiceIamPolicyArgs Empty = new GetServiceIamPolicyArgs();
 
     @Import(name="serviceId", required=true)
-      private final String serviceId;
+    private String serviceId;
 
     public String serviceId() {
         return this.serviceId;
     }
 
-    public GetServiceIamPolicyArgs(String serviceId) {
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-    }
+    private GetServiceIamPolicyArgs() {}
 
-    private GetServiceIamPolicyArgs() {
-        this.serviceId = null;
+    private GetServiceIamPolicyArgs(GetServiceIamPolicyArgs $) {
+        this.serviceId = $.serviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String serviceId;
+        private GetServiceIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceIamPolicyArgs();
         }
 
         public Builder(GetServiceIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceId = defaults.serviceId;
+            $ = new GetServiceIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
-        }        public GetServiceIamPolicyArgs build() {
-            return new GetServiceIamPolicyArgs(serviceId);
+        }
+
+        public GetServiceIamPolicyArgs build() {
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            return $;
         }
     }
+
 }

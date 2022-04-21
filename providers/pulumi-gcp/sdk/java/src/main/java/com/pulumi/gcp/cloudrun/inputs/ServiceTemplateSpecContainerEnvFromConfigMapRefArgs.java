@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefArgs extends c
      * 
      */
     @Import(name="localObjectReference")
-      private final @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference;
+    private @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference;
 
-    public Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference() {
-        return this.localObjectReference == null ? Codegen.empty() : this.localObjectReference;
+    public Optional<Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs>> localObjectReference() {
+        return Optional.ofNullable(this.localObjectReference);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefArgs extends c
      * 
      */
     @Import(name="optional")
-      private final @Nullable Output<Boolean> optional;
+    private @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> optional() {
-        return this.optional == null ? Codegen.empty() : this.optional;
+    public Optional<Output<Boolean>> optional() {
+        return Optional.ofNullable(this.optional);
     }
 
-    public ServiceTemplateSpecContainerEnvFromConfigMapRefArgs(
-        @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference,
-        @Nullable Output<Boolean> optional) {
-        this.localObjectReference = localObjectReference;
-        this.optional = optional;
-    }
+    private ServiceTemplateSpecContainerEnvFromConfigMapRefArgs() {}
 
-    private ServiceTemplateSpecContainerEnvFromConfigMapRefArgs() {
-        this.localObjectReference = Codegen.empty();
-        this.optional = Codegen.empty();
+    private ServiceTemplateSpecContainerEnvFromConfigMapRefArgs(ServiceTemplateSpecContainerEnvFromConfigMapRefArgs $) {
+        this.localObjectReference = $.localObjectReference;
+        this.optional = $.optional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateSpecContainerEnvFromConfigMapRefArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference;
-        private @Nullable Output<Boolean> optional;
+        private ServiceTemplateSpecContainerEnvFromConfigMapRefArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateSpecContainerEnvFromConfigMapRefArgs();
         }
 
         public Builder(ServiceTemplateSpecContainerEnvFromConfigMapRefArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localObjectReference = defaults.localObjectReference;
-    	      this.optional = defaults.optional;
+            $ = new ServiceTemplateSpecContainerEnvFromConfigMapRefArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder localObjectReference(@Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference) {
-            this.localObjectReference = localObjectReference;
+            $.localObjectReference = localObjectReference;
             return this;
         }
-        public Builder localObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs localObjectReference) {
-            this.localObjectReference = Codegen.ofNullable(localObjectReference);
-            return this;
+
+        public Builder localObjectReference(ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs localObjectReference) {
+            return localObjectReference(Output.of(localObjectReference));
         }
+
         public Builder optional(@Nullable Output<Boolean> optional) {
-            this.optional = optional;
+            $.optional = optional;
             return this;
         }
-        public Builder optional(@Nullable Boolean optional) {
-            this.optional = Codegen.ofNullable(optional);
-            return this;
-        }        public ServiceTemplateSpecContainerEnvFromConfigMapRefArgs build() {
-            return new ServiceTemplateSpecContainerEnvFromConfigMapRefArgs(localObjectReference, optional);
+
+        public Builder optional(Boolean optional) {
+            return optional(Output.of(optional));
+        }
+
+        public ServiceTemplateSpecContainerEnvFromConfigMapRefArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class UserAssignedIdentityPropertyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -32,55 +32,52 @@ public final class UserAssignedIdentityPropertyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
     }
 
-    public UserAssignedIdentityPropertyResponse(
-        String clientId,
-        String principalId) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-    }
+    private UserAssignedIdentityPropertyResponse() {}
 
-    private UserAssignedIdentityPropertyResponse() {
-        this.clientId = null;
-        this.principalId = null;
+    private UserAssignedIdentityPropertyResponse(UserAssignedIdentityPropertyResponse $) {
+        this.clientId = $.clientId;
+        this.principalId = $.principalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAssignedIdentityPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientId;
-        private String principalId;
+        private UserAssignedIdentityPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAssignedIdentityPropertyResponse();
         }
 
         public Builder(UserAssignedIdentityPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.principalId = defaults.principalId;
+            $ = new UserAssignedIdentityPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
-        }        public UserAssignedIdentityPropertyResponse build() {
-            return new UserAssignedIdentityPropertyResponse(clientId, principalId);
+        }
+
+        public UserAssignedIdentityPropertyResponse build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            return $;
         }
     }
+
 }

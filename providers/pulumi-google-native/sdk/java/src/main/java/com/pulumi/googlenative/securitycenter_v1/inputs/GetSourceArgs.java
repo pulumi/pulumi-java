@@ -13,62 +13,59 @@ public final class GetSourceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSourceArgs Empty = new GetSourceArgs();
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="sourceId", required=true)
-      private final String sourceId;
+    private String sourceId;
 
     public String sourceId() {
         return this.sourceId;
     }
 
-    public GetSourceArgs(
-        String organizationId,
-        String sourceId) {
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.sourceId = Objects.requireNonNull(sourceId, "expected parameter 'sourceId' to be non-null");
-    }
+    private GetSourceArgs() {}
 
-    private GetSourceArgs() {
-        this.organizationId = null;
-        this.sourceId = null;
+    private GetSourceArgs(GetSourceArgs $) {
+        this.organizationId = $.organizationId;
+        this.sourceId = $.sourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String organizationId;
-        private String sourceId;
+        private GetSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSourceArgs();
         }
 
         public Builder(GetSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationId = defaults.organizationId;
-    	      this.sourceId = defaults.sourceId;
+            $ = new GetSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder sourceId(String sourceId) {
-            this.sourceId = Objects.requireNonNull(sourceId);
+            $.sourceId = sourceId;
             return this;
-        }        public GetSourceArgs build() {
-            return new GetSourceArgs(organizationId, sourceId);
+        }
+
+        public GetSourceArgs build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.sourceId = Objects.requireNonNull($.sourceId, "expected parameter 'sourceId' to be non-null");
+            return $;
         }
     }
+
 }

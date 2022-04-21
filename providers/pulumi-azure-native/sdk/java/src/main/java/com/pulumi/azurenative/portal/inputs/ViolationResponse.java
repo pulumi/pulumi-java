@@ -21,7 +21,7 @@ public final class ViolationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -32,7 +32,7 @@ public final class ViolationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -43,64 +43,59 @@ public final class ViolationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
     }
 
-    public ViolationResponse(
-        String errorMessage,
-        String id,
-        String userId) {
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private ViolationResponse() {}
 
-    private ViolationResponse() {
-        this.errorMessage = null;
-        this.id = null;
-        this.userId = null;
+    private ViolationResponse(ViolationResponse $) {
+        this.errorMessage = $.errorMessage;
+        this.id = $.id;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ViolationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String errorMessage;
-        private String id;
-        private String userId;
+        private ViolationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ViolationResponse();
         }
 
         public Builder(ViolationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.id = defaults.id;
-    	      this.userId = defaults.userId;
+            $ = new ViolationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
-        }        public ViolationResponse build() {
-            return new ViolationResponse(errorMessage, id, userId);
+        }
+
+        public ViolationResponse build() {
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

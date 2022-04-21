@@ -22,7 +22,7 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cpeUri", required=true)
-      private final String cpeUri;
+    private String cpeUri;
 
     public String cpeUri() {
         return this.cpeUri;
@@ -33,7 +33,7 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -44,64 +44,59 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final VersionResponse version;
+    private VersionResponse version;
 
     public VersionResponse version() {
         return this.version;
     }
 
-    public LocationResponse(
-        String cpeUri,
-        String path,
-        VersionResponse version) {
-        this.cpeUri = Objects.requireNonNull(cpeUri, "expected parameter 'cpeUri' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private LocationResponse() {}
 
-    private LocationResponse() {
-        this.cpeUri = null;
-        this.path = null;
-        this.version = null;
+    private LocationResponse(LocationResponse $) {
+        this.cpeUri = $.cpeUri;
+        this.path = $.path;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cpeUri;
-        private String path;
-        private VersionResponse version;
+        private LocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationResponse();
         }
 
         public Builder(LocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpeUri = defaults.cpeUri;
-    	      this.path = defaults.path;
-    	      this.version = defaults.version;
+            $ = new LocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpeUri(String cpeUri) {
-            this.cpeUri = Objects.requireNonNull(cpeUri);
+            $.cpeUri = cpeUri;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder version(VersionResponse version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public LocationResponse build() {
-            return new LocationResponse(cpeUri, path, version);
+        }
+
+        public LocationResponse build() {
+            $.cpeUri = Objects.requireNonNull($.cpeUri, "expected parameter 'cpeUri' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

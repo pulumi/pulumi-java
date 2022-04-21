@@ -5,12 +5,12 @@ package com.pulumi.googlenative.firebaseml_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.firebaseml_v1beta2.inputs.ModelStateArgs;
 import com.pulumi.googlenative.firebaseml_v1beta2.inputs.TfLiteModelArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -34,17 +34,17 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<ModelStateArgs> state;
+    private @Nullable Output<ModelStateArgs> state;
 
-    public Output<ModelStateArgs> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<ModelStateArgs>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -74,118 +74,103 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tfliteModel")
-      private final @Nullable Output<TfLiteModelArgs> tfliteModel;
+    private @Nullable Output<TfLiteModelArgs> tfliteModel;
 
-    public Output<TfLiteModelArgs> tfliteModel() {
-        return this.tfliteModel == null ? Codegen.empty() : this.tfliteModel;
+    public Optional<Output<TfLiteModelArgs>> tfliteModel() {
+        return Optional.ofNullable(this.tfliteModel);
     }
 
-    public ModelArgs(
-        Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<ModelStateArgs> state,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<TfLiteModelArgs> tfliteModel) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.state = state;
-        this.tags = tags;
-        this.tfliteModel = tfliteModel;
-    }
+    private ModelArgs() {}
 
-    private ModelArgs() {
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tfliteModel = Codegen.empty();
+    private ModelArgs(ModelArgs $) {
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.project = $.project;
+        this.state = $.state;
+        this.tags = $.tags;
+        this.tfliteModel = $.tfliteModel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<ModelStateArgs> state;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<TfLiteModelArgs> tfliteModel;
+        private ModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelArgs();
         }
 
         public Builder(ModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
-    	      this.tfliteModel = defaults.tfliteModel;
+            $ = new ModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder state(@Nullable Output<ModelStateArgs> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable ModelStateArgs state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(ModelStateArgs state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder tfliteModel(@Nullable Output<TfLiteModelArgs> tfliteModel) {
-            this.tfliteModel = tfliteModel;
+            $.tfliteModel = tfliteModel;
             return this;
         }
-        public Builder tfliteModel(@Nullable TfLiteModelArgs tfliteModel) {
-            this.tfliteModel = Codegen.ofNullable(tfliteModel);
-            return this;
-        }        public ModelArgs build() {
-            return new ModelArgs(displayName, name, project, state, tags, tfliteModel);
+
+        public Builder tfliteModel(TfLiteModelArgs tfliteModel) {
+            return tfliteModel(Output.of(tfliteModel));
+        }
+
+        public ModelArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

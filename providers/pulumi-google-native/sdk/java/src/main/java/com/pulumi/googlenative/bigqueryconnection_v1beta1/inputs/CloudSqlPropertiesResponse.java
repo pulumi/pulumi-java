@@ -22,7 +22,7 @@ public final class CloudSqlPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="credential", required=true)
-      private final CloudSqlCredentialResponse credential;
+    private CloudSqlCredentialResponse credential;
 
     public CloudSqlCredentialResponse credential() {
         return this.credential;
@@ -33,7 +33,7 @@ public final class CloudSqlPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="database", required=true)
-      private final String database;
+    private String database;
 
     public String database() {
         return this.database;
@@ -44,7 +44,7 @@ public final class CloudSqlPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -55,73 +55,66 @@ public final class CloudSqlPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public CloudSqlPropertiesResponse(
-        CloudSqlCredentialResponse credential,
-        String database,
-        String instanceId,
-        String type) {
-        this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private CloudSqlPropertiesResponse() {}
 
-    private CloudSqlPropertiesResponse() {
-        this.credential = null;
-        this.database = null;
-        this.instanceId = null;
-        this.type = null;
+    private CloudSqlPropertiesResponse(CloudSqlPropertiesResponse $) {
+        this.credential = $.credential;
+        this.database = $.database;
+        this.instanceId = $.instanceId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudSqlPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CloudSqlCredentialResponse credential;
-        private String database;
-        private String instanceId;
-        private String type;
+        private CloudSqlPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudSqlPropertiesResponse();
         }
 
         public Builder(CloudSqlPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credential = defaults.credential;
-    	      this.database = defaults.database;
-    	      this.instanceId = defaults.instanceId;
-    	      this.type = defaults.type;
+            $ = new CloudSqlPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder credential(CloudSqlCredentialResponse credential) {
-            this.credential = Objects.requireNonNull(credential);
+            $.credential = credential;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public CloudSqlPropertiesResponse build() {
-            return new CloudSqlPropertiesResponse(credential, database, instanceId, type);
+        }
+
+        public CloudSqlPropertiesResponse build() {
+            $.credential = Objects.requireNonNull($.credential, "expected parameter 'credential' to be non-null");
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class AcceleratorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceleratorType", required=true)
-      private final String acceleratorType;
+    private String acceleratorType;
 
     public String acceleratorType() {
         return this.acceleratorType;
     }
 
-    public AcceleratorResponse(String acceleratorType) {
-        this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
-    }
+    private AcceleratorResponse() {}
 
-    private AcceleratorResponse() {
-        this.acceleratorType = null;
+    private AcceleratorResponse(AcceleratorResponse $) {
+        this.acceleratorType = $.acceleratorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcceleratorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String acceleratorType;
+        private AcceleratorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcceleratorResponse();
         }
 
         public Builder(AcceleratorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorType = defaults.acceleratorType;
+            $ = new AcceleratorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Objects.requireNonNull(acceleratorType);
+            $.acceleratorType = acceleratorType;
             return this;
-        }        public AcceleratorResponse build() {
-            return new AcceleratorResponse(acceleratorType);
+        }
+
+        public AcceleratorResponse build() {
+            $.acceleratorType = Objects.requireNonNull($.acceleratorType, "expected parameter 'acceleratorType' to be non-null");
+            return $;
         }
     }
+
 }

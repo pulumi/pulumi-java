@@ -19,7 +19,7 @@ public final class BiEngineStatisticsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="biEngineMode", required=true)
-      private final String biEngineMode;
+    private String biEngineMode;
 
     public String biEngineMode() {
         return this.biEngineMode;
@@ -30,58 +30,56 @@ public final class BiEngineStatisticsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="biEngineReasons", required=true)
-      private final List<BiEngineReasonResponse> biEngineReasons;
+    private List<BiEngineReasonResponse> biEngineReasons;
 
     public List<BiEngineReasonResponse> biEngineReasons() {
         return this.biEngineReasons;
     }
 
-    public BiEngineStatisticsResponse(
-        String biEngineMode,
-        List<BiEngineReasonResponse> biEngineReasons) {
-        this.biEngineMode = Objects.requireNonNull(biEngineMode, "expected parameter 'biEngineMode' to be non-null");
-        this.biEngineReasons = Objects.requireNonNull(biEngineReasons, "expected parameter 'biEngineReasons' to be non-null");
-    }
+    private BiEngineStatisticsResponse() {}
 
-    private BiEngineStatisticsResponse() {
-        this.biEngineMode = null;
-        this.biEngineReasons = List.of();
+    private BiEngineStatisticsResponse(BiEngineStatisticsResponse $) {
+        this.biEngineMode = $.biEngineMode;
+        this.biEngineReasons = $.biEngineReasons;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BiEngineStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String biEngineMode;
-        private List<BiEngineReasonResponse> biEngineReasons;
+        private BiEngineStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BiEngineStatisticsResponse();
         }
 
         public Builder(BiEngineStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.biEngineMode = defaults.biEngineMode;
-    	      this.biEngineReasons = defaults.biEngineReasons;
+            $ = new BiEngineStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder biEngineMode(String biEngineMode) {
-            this.biEngineMode = Objects.requireNonNull(biEngineMode);
+            $.biEngineMode = biEngineMode;
             return this;
         }
+
         public Builder biEngineReasons(List<BiEngineReasonResponse> biEngineReasons) {
-            this.biEngineReasons = Objects.requireNonNull(biEngineReasons);
+            $.biEngineReasons = biEngineReasons;
             return this;
         }
+
         public Builder biEngineReasons(BiEngineReasonResponse... biEngineReasons) {
             return biEngineReasons(List.of(biEngineReasons));
-        }        public BiEngineStatisticsResponse build() {
-            return new BiEngineStatisticsResponse(biEngineMode, biEngineReasons);
+        }
+
+        public BiEngineStatisticsResponse build() {
+            $.biEngineMode = Objects.requireNonNull($.biEngineMode, "expected parameter 'biEngineMode' to be non-null");
+            $.biEngineReasons = Objects.requireNonNull($.biEngineReasons, "expected parameter 'biEngineReasons' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends com.pulumi.resour
     public static final NodeTemplateNodeTypeFlexibilityArgs Empty = new NodeTemplateNodeTypeFlexibilityArgs();
 
     @Import(name="cpus")
-      private final @Nullable Output<String> cpus;
+    private @Nullable Output<String> cpus;
 
-    public Output<String> cpus() {
-        return this.cpus == null ? Codegen.empty() : this.cpus;
+    public Optional<Output<String>> cpus() {
+        return Optional.ofNullable(this.cpus);
     }
 
     @Import(name="localSsd")
-      private final @Nullable Output<String> localSsd;
+    private @Nullable Output<String> localSsd;
 
-    public Output<String> localSsd() {
-        return this.localSsd == null ? Codegen.empty() : this.localSsd;
+    public Optional<Output<String>> localSsd() {
+        return Optional.ofNullable(this.localSsd);
     }
 
     @Import(name="memory")
-      private final @Nullable Output<String> memory;
+    private @Nullable Output<String> memory;
 
-    public Output<String> memory() {
-        return this.memory == null ? Codegen.empty() : this.memory;
+    public Optional<Output<String>> memory() {
+        return Optional.ofNullable(this.memory);
     }
 
-    public NodeTemplateNodeTypeFlexibilityArgs(
-        @Nullable Output<String> cpus,
-        @Nullable Output<String> localSsd,
-        @Nullable Output<String> memory) {
-        this.cpus = cpus;
-        this.localSsd = localSsd;
-        this.memory = memory;
-    }
+    private NodeTemplateNodeTypeFlexibilityArgs() {}
 
-    private NodeTemplateNodeTypeFlexibilityArgs() {
-        this.cpus = Codegen.empty();
-        this.localSsd = Codegen.empty();
-        this.memory = Codegen.empty();
+    private NodeTemplateNodeTypeFlexibilityArgs(NodeTemplateNodeTypeFlexibilityArgs $) {
+        this.cpus = $.cpus;
+        this.localSsd = $.localSsd;
+        this.memory = $.memory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeTemplateNodeTypeFlexibilityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cpus;
-        private @Nullable Output<String> localSsd;
-        private @Nullable Output<String> memory;
+        private NodeTemplateNodeTypeFlexibilityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeTemplateNodeTypeFlexibilityArgs();
         }
 
         public Builder(NodeTemplateNodeTypeFlexibilityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpus = defaults.cpus;
-    	      this.localSsd = defaults.localSsd;
-    	      this.memory = defaults.memory;
+            $ = new NodeTemplateNodeTypeFlexibilityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpus(@Nullable Output<String> cpus) {
-            this.cpus = cpus;
+            $.cpus = cpus;
             return this;
         }
-        public Builder cpus(@Nullable String cpus) {
-            this.cpus = Codegen.ofNullable(cpus);
-            return this;
+
+        public Builder cpus(String cpus) {
+            return cpus(Output.of(cpus));
         }
+
         public Builder localSsd(@Nullable Output<String> localSsd) {
-            this.localSsd = localSsd;
+            $.localSsd = localSsd;
             return this;
         }
-        public Builder localSsd(@Nullable String localSsd) {
-            this.localSsd = Codegen.ofNullable(localSsd);
-            return this;
+
+        public Builder localSsd(String localSsd) {
+            return localSsd(Output.of(localSsd));
         }
+
         public Builder memory(@Nullable Output<String> memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
         }
-        public Builder memory(@Nullable String memory) {
-            this.memory = Codegen.ofNullable(memory);
-            return this;
-        }        public NodeTemplateNodeTypeFlexibilityArgs build() {
-            return new NodeTemplateNodeTypeFlexibilityArgs(cpus, localSsd, memory);
+
+        public Builder memory(String memory) {
+            return memory(Output.of(memory));
+        }
+
+        public NodeTemplateNodeTypeFlexibilityArgs build() {
+            return $;
         }
     }
+
 }

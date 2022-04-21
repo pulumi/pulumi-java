@@ -23,45 +23,44 @@ public final class AdditionalCapabilitiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="ultraSSDEnabled")
-      private final @Nullable Boolean ultraSSDEnabled;
+    private @Nullable Boolean ultraSSDEnabled;
 
     public Optional<Boolean> ultraSSDEnabled() {
-        return this.ultraSSDEnabled == null ? Optional.empty() : Optional.ofNullable(this.ultraSSDEnabled);
+        return Optional.ofNullable(this.ultraSSDEnabled);
     }
 
-    public AdditionalCapabilitiesResponse(@Nullable Boolean ultraSSDEnabled) {
-        this.ultraSSDEnabled = ultraSSDEnabled;
-    }
+    private AdditionalCapabilitiesResponse() {}
 
-    private AdditionalCapabilitiesResponse() {
-        this.ultraSSDEnabled = null;
+    private AdditionalCapabilitiesResponse(AdditionalCapabilitiesResponse $) {
+        this.ultraSSDEnabled = $.ultraSSDEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalCapabilitiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean ultraSSDEnabled;
+        private AdditionalCapabilitiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalCapabilitiesResponse();
         }
 
         public Builder(AdditionalCapabilitiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ultraSSDEnabled = defaults.ultraSSDEnabled;
+            $ = new AdditionalCapabilitiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ultraSSDEnabled(@Nullable Boolean ultraSSDEnabled) {
-            this.ultraSSDEnabled = ultraSSDEnabled;
+            $.ultraSSDEnabled = ultraSSDEnabled;
             return this;
-        }        public AdditionalCapabilitiesResponse build() {
-            return new AdditionalCapabilitiesResponse(ultraSSDEnabled);
+        }
+
+        public AdditionalCapabilitiesResponse build() {
+            return $;
         }
     }
+
 }

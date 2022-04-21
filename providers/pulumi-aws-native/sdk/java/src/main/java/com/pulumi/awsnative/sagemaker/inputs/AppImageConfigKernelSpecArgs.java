@@ -5,9 +5,9 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AppImageConfigKernelSpecArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class AppImageConfigKernelSpecArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public AppImageConfigKernelSpecArgs(
-        @Nullable Output<String> displayName,
-        Output<String> name) {
-        this.displayName = displayName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private AppImageConfigKernelSpecArgs() {}
 
-    private AppImageConfigKernelSpecArgs() {
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
+    private AppImageConfigKernelSpecArgs(AppImageConfigKernelSpecArgs $) {
+        this.displayName = $.displayName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppImageConfigKernelSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private Output<String> name;
+        private AppImageConfigKernelSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppImageConfigKernelSpecArgs();
         }
 
         public Builder(AppImageConfigKernelSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
+            $ = new AppImageConfigKernelSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public AppImageConfigKernelSpecArgs build() {
-            return new AppImageConfigKernelSpecArgs(displayName, name);
+            return name(Output.of(name));
+        }
+
+        public AppImageConfigKernelSpecArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

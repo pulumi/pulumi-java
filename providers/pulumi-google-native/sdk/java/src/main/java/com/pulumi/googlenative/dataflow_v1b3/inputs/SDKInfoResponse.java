@@ -21,7 +21,7 @@ public final class SDKInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="language", required=true)
-      private final String language;
+    private String language;
 
     public String language() {
         return this.language;
@@ -32,55 +32,52 @@ public final class SDKInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public SDKInfoResponse(
-        String language,
-        String version) {
-        this.language = Objects.requireNonNull(language, "expected parameter 'language' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SDKInfoResponse() {}
 
-    private SDKInfoResponse() {
-        this.language = null;
-        this.version = null;
+    private SDKInfoResponse(SDKInfoResponse $) {
+        this.language = $.language;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SDKInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String language;
-        private String version;
+        private SDKInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SDKInfoResponse();
         }
 
         public Builder(SDKInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.language = defaults.language;
-    	      this.version = defaults.version;
+            $ = new SDKInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder language(String language) {
-            this.language = Objects.requireNonNull(language);
+            $.language = language;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public SDKInfoResponse build() {
-            return new SDKInfoResponse(language, version);
+        }
+
+        public SDKInfoResponse build() {
+            $.language = Objects.requireNonNull($.language, "expected parameter 'language' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

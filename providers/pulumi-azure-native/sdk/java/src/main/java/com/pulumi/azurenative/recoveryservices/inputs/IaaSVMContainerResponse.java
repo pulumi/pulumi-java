@@ -24,10 +24,10 @@ public final class IaaSVMContainerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable String backupManagementType;
+    private @Nullable String backupManagementType;
 
     public Optional<String> backupManagementType() {
-        return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class IaaSVMContainerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="containerType", required=true)
-      private final String containerType;
+    private String containerType;
 
     public String containerType() {
         return this.containerType;
@@ -50,10 +50,10 @@ public final class IaaSVMContainerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class IaaSVMContainerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable String healthStatus;
+    private @Nullable String healthStatus;
 
     public Optional<String> healthStatus() {
-        return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class IaaSVMContainerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="registrationStatus")
-      private final @Nullable String registrationStatus;
+    private @Nullable String registrationStatus;
 
     public Optional<String> registrationStatus() {
-        return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
+        return Optional.ofNullable(this.registrationStatus);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class IaaSVMContainerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable String resourceGroup;
+    private @Nullable String resourceGroup;
 
     public Optional<String> resourceGroup() {
-        return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class IaaSVMContainerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="virtualMachineId")
-      private final @Nullable String virtualMachineId;
+    private @Nullable String virtualMachineId;
 
     public Optional<String> virtualMachineId() {
-        return this.virtualMachineId == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineId);
+        return Optional.ofNullable(this.virtualMachineId);
     }
 
     /**
@@ -105,109 +105,87 @@ public final class IaaSVMContainerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="virtualMachineVersion")
-      private final @Nullable String virtualMachineVersion;
+    private @Nullable String virtualMachineVersion;
 
     public Optional<String> virtualMachineVersion() {
-        return this.virtualMachineVersion == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineVersion);
+        return Optional.ofNullable(this.virtualMachineVersion);
     }
 
-    public IaaSVMContainerResponse(
-        @Nullable String backupManagementType,
-        String containerType,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable String registrationStatus,
-        @Nullable String resourceGroup,
-        @Nullable String virtualMachineId,
-        @Nullable String virtualMachineVersion) {
-        this.backupManagementType = backupManagementType;
-        this.containerType = Codegen.stringProp("containerType").arg(containerType).require();
-        this.friendlyName = friendlyName;
-        this.healthStatus = healthStatus;
-        this.registrationStatus = registrationStatus;
-        this.resourceGroup = resourceGroup;
-        this.virtualMachineId = virtualMachineId;
-        this.virtualMachineVersion = virtualMachineVersion;
-    }
+    private IaaSVMContainerResponse() {}
 
-    private IaaSVMContainerResponse() {
-        this.backupManagementType = null;
-        this.containerType = null;
-        this.friendlyName = null;
-        this.healthStatus = null;
-        this.registrationStatus = null;
-        this.resourceGroup = null;
-        this.virtualMachineId = null;
-        this.virtualMachineVersion = null;
+    private IaaSVMContainerResponse(IaaSVMContainerResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.containerType = $.containerType;
+        this.friendlyName = $.friendlyName;
+        this.healthStatus = $.healthStatus;
+        this.registrationStatus = $.registrationStatus;
+        this.resourceGroup = $.resourceGroup;
+        this.virtualMachineId = $.virtualMachineId;
+        this.virtualMachineVersion = $.virtualMachineVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IaaSVMContainerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupManagementType;
-        private String containerType;
-        private @Nullable String friendlyName;
-        private @Nullable String healthStatus;
-        private @Nullable String registrationStatus;
-        private @Nullable String resourceGroup;
-        private @Nullable String virtualMachineId;
-        private @Nullable String virtualMachineVersion;
+        private IaaSVMContainerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IaaSVMContainerResponse();
         }
 
         public Builder(IaaSVMContainerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.containerType = defaults.containerType;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.registrationStatus = defaults.registrationStatus;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.virtualMachineId = defaults.virtualMachineId;
-    	      this.virtualMachineVersion = defaults.virtualMachineVersion;
+            $ = new IaaSVMContainerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable String backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder containerType(String containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
+
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = registrationStatus;
+            $.registrationStatus = registrationStatus;
             return this;
         }
+
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
-            this.virtualMachineId = virtualMachineId;
+            $.virtualMachineId = virtualMachineId;
             return this;
         }
+
         public Builder virtualMachineVersion(@Nullable String virtualMachineVersion) {
-            this.virtualMachineVersion = virtualMachineVersion;
+            $.virtualMachineVersion = virtualMachineVersion;
             return this;
-        }        public IaaSVMContainerResponse build() {
-            return new IaaSVMContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus, resourceGroup, virtualMachineId, virtualMachineVersion);
+        }
+
+        public IaaSVMContainerResponse build() {
+            $.containerType = Codegen.stringProp("containerType").arg($.containerType).require();
+            return $;
         }
     }
+
 }

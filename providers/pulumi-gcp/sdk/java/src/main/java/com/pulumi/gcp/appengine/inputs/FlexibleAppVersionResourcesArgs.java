@@ -5,12 +5,12 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionResourcesVolumeArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class FlexibleAppVersionResourcesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Output<Integer> cpu;
+    private @Nullable Output<Integer> cpu;
 
-    public Output<Integer> cpu() {
-        return this.cpu == null ? Codegen.empty() : this.cpu;
+    public Optional<Output<Integer>> cpu() {
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FlexibleAppVersionResourcesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="diskGb")
-      private final @Nullable Output<Integer> diskGb;
+    private @Nullable Output<Integer> diskGb;
 
-    public Output<Integer> diskGb() {
-        return this.diskGb == null ? Codegen.empty() : this.diskGb;
+    public Optional<Output<Integer>> diskGb() {
+        return Optional.ofNullable(this.diskGb);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FlexibleAppVersionResourcesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="memoryGb")
-      private final @Nullable Output<Double> memoryGb;
+    private @Nullable Output<Double> memoryGb;
 
-    public Output<Double> memoryGb() {
-        return this.memoryGb == null ? Codegen.empty() : this.memoryGb;
+    public Optional<Output<Double>> memoryGb() {
+        return Optional.ofNullable(this.memoryGb);
     }
 
     /**
@@ -57,92 +57,82 @@ public final class FlexibleAppVersionResourcesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes;
+    private @Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes;
 
-    public Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<FlexibleAppVersionResourcesVolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public FlexibleAppVersionResourcesArgs(
-        @Nullable Output<Integer> cpu,
-        @Nullable Output<Integer> diskGb,
-        @Nullable Output<Double> memoryGb,
-        @Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes) {
-        this.cpu = cpu;
-        this.diskGb = diskGb;
-        this.memoryGb = memoryGb;
-        this.volumes = volumes;
-    }
+    private FlexibleAppVersionResourcesArgs() {}
 
-    private FlexibleAppVersionResourcesArgs() {
-        this.cpu = Codegen.empty();
-        this.diskGb = Codegen.empty();
-        this.memoryGb = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private FlexibleAppVersionResourcesArgs(FlexibleAppVersionResourcesArgs $) {
+        this.cpu = $.cpu;
+        this.diskGb = $.diskGb;
+        this.memoryGb = $.memoryGb;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cpu;
-        private @Nullable Output<Integer> diskGb;
-        private @Nullable Output<Double> memoryGb;
-        private @Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes;
+        private FlexibleAppVersionResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionResourcesArgs();
         }
 
         public Builder(FlexibleAppVersionResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.diskGb = defaults.diskGb;
-    	      this.memoryGb = defaults.memoryGb;
-    	      this.volumes = defaults.volumes;
+            $ = new FlexibleAppVersionResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Output<Integer> cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
-        public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = Codegen.ofNullable(cpu);
-            return this;
+
+        public Builder cpu(Integer cpu) {
+            return cpu(Output.of(cpu));
         }
+
         public Builder diskGb(@Nullable Output<Integer> diskGb) {
-            this.diskGb = diskGb;
+            $.diskGb = diskGb;
             return this;
         }
-        public Builder diskGb(@Nullable Integer diskGb) {
-            this.diskGb = Codegen.ofNullable(diskGb);
-            return this;
+
+        public Builder diskGb(Integer diskGb) {
+            return diskGb(Output.of(diskGb));
         }
+
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
-            this.memoryGb = memoryGb;
+            $.memoryGb = memoryGb;
             return this;
         }
-        public Builder memoryGb(@Nullable Double memoryGb) {
-            this.memoryGb = Codegen.ofNullable(memoryGb);
-            return this;
+
+        public Builder memoryGb(Double memoryGb) {
+            return memoryGb(Output.of(memoryGb));
         }
+
         public Builder volumes(@Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<FlexibleAppVersionResourcesVolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<FlexibleAppVersionResourcesVolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(FlexibleAppVersionResourcesVolumeArgs... volumes) {
             return volumes(List.of(volumes));
-        }        public FlexibleAppVersionResourcesArgs build() {
-            return new FlexibleAppVersionResourcesArgs(cpu, diskGb, memoryGb, volumes);
+        }
+
+        public FlexibleAppVersionResourcesArgs build() {
+            return $;
         }
     }
+
 }

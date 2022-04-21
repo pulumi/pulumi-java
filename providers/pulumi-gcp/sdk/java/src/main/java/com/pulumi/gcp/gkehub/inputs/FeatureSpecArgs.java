@@ -5,9 +5,9 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.gkehub.inputs.FeatureSpecMulticlusteringressArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class FeatureSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="multiclusteringress")
-      private final @Nullable Output<FeatureSpecMulticlusteringressArgs> multiclusteringress;
+    private @Nullable Output<FeatureSpecMulticlusteringressArgs> multiclusteringress;
 
-    public Output<FeatureSpecMulticlusteringressArgs> multiclusteringress() {
-        return this.multiclusteringress == null ? Codegen.empty() : this.multiclusteringress;
+    public Optional<Output<FeatureSpecMulticlusteringressArgs>> multiclusteringress() {
+        return Optional.ofNullable(this.multiclusteringress);
     }
 
-    public FeatureSpecArgs(@Nullable Output<FeatureSpecMulticlusteringressArgs> multiclusteringress) {
-        this.multiclusteringress = multiclusteringress;
-    }
+    private FeatureSpecArgs() {}
 
-    private FeatureSpecArgs() {
-        this.multiclusteringress = Codegen.empty();
+    private FeatureSpecArgs(FeatureSpecArgs $) {
+        this.multiclusteringress = $.multiclusteringress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FeatureSpecMulticlusteringressArgs> multiclusteringress;
+        private FeatureSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureSpecArgs();
         }
 
         public Builder(FeatureSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.multiclusteringress = defaults.multiclusteringress;
+            $ = new FeatureSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder multiclusteringress(@Nullable Output<FeatureSpecMulticlusteringressArgs> multiclusteringress) {
-            this.multiclusteringress = multiclusteringress;
+            $.multiclusteringress = multiclusteringress;
             return this;
         }
-        public Builder multiclusteringress(@Nullable FeatureSpecMulticlusteringressArgs multiclusteringress) {
-            this.multiclusteringress = Codegen.ofNullable(multiclusteringress);
-            return this;
-        }        public FeatureSpecArgs build() {
-            return new FeatureSpecArgs(multiclusteringress);
+
+        public Builder multiclusteringress(FeatureSpecMulticlusteringressArgs multiclusteringress) {
+            return multiclusteringress(Output.of(multiclusteringress));
+        }
+
+        public FeatureSpecArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class NetworkPolicyConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public NetworkPolicyConfigResponse(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private NetworkPolicyConfigResponse() {}
 
-    private NetworkPolicyConfigResponse() {
-        this.disabled = null;
+    private NetworkPolicyConfigResponse(NetworkPolicyConfigResponse $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPolicyConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
+        private NetworkPolicyConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPolicyConfigResponse();
         }
 
         public Builder(NetworkPolicyConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new NetworkPolicyConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public NetworkPolicyConfigResponse build() {
-            return new NetworkPolicyConfigResponse(disabled);
+        }
+
+        public NetworkPolicyConfigResponse build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

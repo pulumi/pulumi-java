@@ -17,7 +17,7 @@ public final class GetJobAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobAgentName", required=true)
-      private final String jobAgentName;
+    private String jobAgentName;
 
     public String jobAgentName() {
         return this.jobAgentName;
@@ -28,7 +28,7 @@ public final class GetJobAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetJobAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetJobAgentArgs(
-        String jobAgentName,
-        String resourceGroupName,
-        String serverName) {
-        this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetJobAgentArgs() {}
 
-    private GetJobAgentArgs() {
-        this.jobAgentName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetJobAgentArgs(GetJobAgentArgs $) {
+        this.jobAgentName = $.jobAgentName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobAgentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobAgentName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetJobAgentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobAgentArgs();
         }
 
         public Builder(GetJobAgentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobAgentName = defaults.jobAgentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetJobAgentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Objects.requireNonNull(jobAgentName);
+            $.jobAgentName = jobAgentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetJobAgentArgs build() {
-            return new GetJobAgentArgs(jobAgentName, resourceGroupName, serverName);
+        }
+
+        public GetJobAgentArgs build() {
+            $.jobAgentName = Objects.requireNonNull($.jobAgentName, "expected parameter 'jobAgentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

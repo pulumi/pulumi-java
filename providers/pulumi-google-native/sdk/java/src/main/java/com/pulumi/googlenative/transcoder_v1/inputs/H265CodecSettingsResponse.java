@@ -24,7 +24,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="allowOpenGop", required=true)
-      private final Boolean allowOpenGop;
+    private Boolean allowOpenGop;
 
     public Boolean allowOpenGop() {
         return this.allowOpenGop;
@@ -35,7 +35,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="aqStrength", required=true)
-      private final Double aqStrength;
+    private Double aqStrength;
 
     public Double aqStrength() {
         return this.aqStrength;
@@ -46,7 +46,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="bFrameCount", required=true)
-      private final Integer bFrameCount;
+    private Integer bFrameCount;
 
     public Integer bFrameCount() {
         return this.bFrameCount;
@@ -57,7 +57,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="bPyramid", required=true)
-      private final Boolean bPyramid;
+    private Boolean bPyramid;
 
     public Boolean bPyramid() {
         return this.bPyramid;
@@ -68,7 +68,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="bitrateBps", required=true)
-      private final Integer bitrateBps;
+    private Integer bitrateBps;
 
     public Integer bitrateBps() {
         return this.bitrateBps;
@@ -79,7 +79,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="crfLevel", required=true)
-      private final Integer crfLevel;
+    private Integer crfLevel;
 
     public Integer crfLevel() {
         return this.crfLevel;
@@ -90,7 +90,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enableTwoPass", required=true)
-      private final Boolean enableTwoPass;
+    private Boolean enableTwoPass;
 
     public Boolean enableTwoPass() {
         return this.enableTwoPass;
@@ -101,7 +101,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="frameRate", required=true)
-      private final Double frameRate;
+    private Double frameRate;
 
     public Double frameRate() {
         return this.frameRate;
@@ -112,7 +112,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="gopDuration", required=true)
-      private final String gopDuration;
+    private String gopDuration;
 
     public String gopDuration() {
         return this.gopDuration;
@@ -123,7 +123,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="gopFrameCount", required=true)
-      private final Integer gopFrameCount;
+    private Integer gopFrameCount;
 
     public Integer gopFrameCount() {
         return this.gopFrameCount;
@@ -134,7 +134,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="heightPixels", required=true)
-      private final Integer heightPixels;
+    private Integer heightPixels;
 
     public Integer heightPixels() {
         return this.heightPixels;
@@ -145,7 +145,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pixelFormat", required=true)
-      private final String pixelFormat;
+    private String pixelFormat;
 
     public String pixelFormat() {
         return this.pixelFormat;
@@ -156,7 +156,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="preset", required=true)
-      private final String preset;
+    private String preset;
 
     public String preset() {
         return this.preset;
@@ -167,7 +167,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="profile", required=true)
-      private final String profile;
+    private String profile;
 
     public String profile() {
         return this.profile;
@@ -178,7 +178,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rateControlMode", required=true)
-      private final String rateControlMode;
+    private String rateControlMode;
 
     public String rateControlMode() {
         return this.rateControlMode;
@@ -189,7 +189,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tune", required=true)
-      private final String tune;
+    private String tune;
 
     public String tune() {
         return this.tune;
@@ -200,7 +200,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="vbvFullnessBits", required=true)
-      private final Integer vbvFullnessBits;
+    private Integer vbvFullnessBits;
 
     public Integer vbvFullnessBits() {
         return this.vbvFullnessBits;
@@ -211,7 +211,7 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="vbvSizeBits", required=true)
-      private final Integer vbvSizeBits;
+    private Integer vbvSizeBits;
 
     public Integer vbvSizeBits() {
         return this.vbvSizeBits;
@@ -222,208 +222,171 @@ public final class H265CodecSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="widthPixels", required=true)
-      private final Integer widthPixels;
+    private Integer widthPixels;
 
     public Integer widthPixels() {
         return this.widthPixels;
     }
 
-    public H265CodecSettingsResponse(
-        Boolean allowOpenGop,
-        Double aqStrength,
-        Integer bFrameCount,
-        Boolean bPyramid,
-        Integer bitrateBps,
-        Integer crfLevel,
-        Boolean enableTwoPass,
-        Double frameRate,
-        String gopDuration,
-        Integer gopFrameCount,
-        Integer heightPixels,
-        String pixelFormat,
-        String preset,
-        String profile,
-        String rateControlMode,
-        String tune,
-        Integer vbvFullnessBits,
-        Integer vbvSizeBits,
-        Integer widthPixels) {
-        this.allowOpenGop = Objects.requireNonNull(allowOpenGop, "expected parameter 'allowOpenGop' to be non-null");
-        this.aqStrength = Objects.requireNonNull(aqStrength, "expected parameter 'aqStrength' to be non-null");
-        this.bFrameCount = Objects.requireNonNull(bFrameCount, "expected parameter 'bFrameCount' to be non-null");
-        this.bPyramid = Objects.requireNonNull(bPyramid, "expected parameter 'bPyramid' to be non-null");
-        this.bitrateBps = Objects.requireNonNull(bitrateBps, "expected parameter 'bitrateBps' to be non-null");
-        this.crfLevel = Objects.requireNonNull(crfLevel, "expected parameter 'crfLevel' to be non-null");
-        this.enableTwoPass = Objects.requireNonNull(enableTwoPass, "expected parameter 'enableTwoPass' to be non-null");
-        this.frameRate = Objects.requireNonNull(frameRate, "expected parameter 'frameRate' to be non-null");
-        this.gopDuration = Objects.requireNonNull(gopDuration, "expected parameter 'gopDuration' to be non-null");
-        this.gopFrameCount = Objects.requireNonNull(gopFrameCount, "expected parameter 'gopFrameCount' to be non-null");
-        this.heightPixels = Objects.requireNonNull(heightPixels, "expected parameter 'heightPixels' to be non-null");
-        this.pixelFormat = Objects.requireNonNull(pixelFormat, "expected parameter 'pixelFormat' to be non-null");
-        this.preset = Objects.requireNonNull(preset, "expected parameter 'preset' to be non-null");
-        this.profile = Objects.requireNonNull(profile, "expected parameter 'profile' to be non-null");
-        this.rateControlMode = Objects.requireNonNull(rateControlMode, "expected parameter 'rateControlMode' to be non-null");
-        this.tune = Objects.requireNonNull(tune, "expected parameter 'tune' to be non-null");
-        this.vbvFullnessBits = Objects.requireNonNull(vbvFullnessBits, "expected parameter 'vbvFullnessBits' to be non-null");
-        this.vbvSizeBits = Objects.requireNonNull(vbvSizeBits, "expected parameter 'vbvSizeBits' to be non-null");
-        this.widthPixels = Objects.requireNonNull(widthPixels, "expected parameter 'widthPixels' to be non-null");
-    }
+    private H265CodecSettingsResponse() {}
 
-    private H265CodecSettingsResponse() {
-        this.allowOpenGop = null;
-        this.aqStrength = null;
-        this.bFrameCount = null;
-        this.bPyramid = null;
-        this.bitrateBps = null;
-        this.crfLevel = null;
-        this.enableTwoPass = null;
-        this.frameRate = null;
-        this.gopDuration = null;
-        this.gopFrameCount = null;
-        this.heightPixels = null;
-        this.pixelFormat = null;
-        this.preset = null;
-        this.profile = null;
-        this.rateControlMode = null;
-        this.tune = null;
-        this.vbvFullnessBits = null;
-        this.vbvSizeBits = null;
-        this.widthPixels = null;
+    private H265CodecSettingsResponse(H265CodecSettingsResponse $) {
+        this.allowOpenGop = $.allowOpenGop;
+        this.aqStrength = $.aqStrength;
+        this.bFrameCount = $.bFrameCount;
+        this.bPyramid = $.bPyramid;
+        this.bitrateBps = $.bitrateBps;
+        this.crfLevel = $.crfLevel;
+        this.enableTwoPass = $.enableTwoPass;
+        this.frameRate = $.frameRate;
+        this.gopDuration = $.gopDuration;
+        this.gopFrameCount = $.gopFrameCount;
+        this.heightPixels = $.heightPixels;
+        this.pixelFormat = $.pixelFormat;
+        this.preset = $.preset;
+        this.profile = $.profile;
+        this.rateControlMode = $.rateControlMode;
+        this.tune = $.tune;
+        this.vbvFullnessBits = $.vbvFullnessBits;
+        this.vbvSizeBits = $.vbvSizeBits;
+        this.widthPixels = $.widthPixels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(H265CodecSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowOpenGop;
-        private Double aqStrength;
-        private Integer bFrameCount;
-        private Boolean bPyramid;
-        private Integer bitrateBps;
-        private Integer crfLevel;
-        private Boolean enableTwoPass;
-        private Double frameRate;
-        private String gopDuration;
-        private Integer gopFrameCount;
-        private Integer heightPixels;
-        private String pixelFormat;
-        private String preset;
-        private String profile;
-        private String rateControlMode;
-        private String tune;
-        private Integer vbvFullnessBits;
-        private Integer vbvSizeBits;
-        private Integer widthPixels;
+        private H265CodecSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new H265CodecSettingsResponse();
         }
 
         public Builder(H265CodecSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowOpenGop = defaults.allowOpenGop;
-    	      this.aqStrength = defaults.aqStrength;
-    	      this.bFrameCount = defaults.bFrameCount;
-    	      this.bPyramid = defaults.bPyramid;
-    	      this.bitrateBps = defaults.bitrateBps;
-    	      this.crfLevel = defaults.crfLevel;
-    	      this.enableTwoPass = defaults.enableTwoPass;
-    	      this.frameRate = defaults.frameRate;
-    	      this.gopDuration = defaults.gopDuration;
-    	      this.gopFrameCount = defaults.gopFrameCount;
-    	      this.heightPixels = defaults.heightPixels;
-    	      this.pixelFormat = defaults.pixelFormat;
-    	      this.preset = defaults.preset;
-    	      this.profile = defaults.profile;
-    	      this.rateControlMode = defaults.rateControlMode;
-    	      this.tune = defaults.tune;
-    	      this.vbvFullnessBits = defaults.vbvFullnessBits;
-    	      this.vbvSizeBits = defaults.vbvSizeBits;
-    	      this.widthPixels = defaults.widthPixels;
+            $ = new H265CodecSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowOpenGop(Boolean allowOpenGop) {
-            this.allowOpenGop = Objects.requireNonNull(allowOpenGop);
+            $.allowOpenGop = allowOpenGop;
             return this;
         }
+
         public Builder aqStrength(Double aqStrength) {
-            this.aqStrength = Objects.requireNonNull(aqStrength);
+            $.aqStrength = aqStrength;
             return this;
         }
+
         public Builder bFrameCount(Integer bFrameCount) {
-            this.bFrameCount = Objects.requireNonNull(bFrameCount);
+            $.bFrameCount = bFrameCount;
             return this;
         }
+
         public Builder bPyramid(Boolean bPyramid) {
-            this.bPyramid = Objects.requireNonNull(bPyramid);
+            $.bPyramid = bPyramid;
             return this;
         }
+
         public Builder bitrateBps(Integer bitrateBps) {
-            this.bitrateBps = Objects.requireNonNull(bitrateBps);
+            $.bitrateBps = bitrateBps;
             return this;
         }
+
         public Builder crfLevel(Integer crfLevel) {
-            this.crfLevel = Objects.requireNonNull(crfLevel);
+            $.crfLevel = crfLevel;
             return this;
         }
+
         public Builder enableTwoPass(Boolean enableTwoPass) {
-            this.enableTwoPass = Objects.requireNonNull(enableTwoPass);
+            $.enableTwoPass = enableTwoPass;
             return this;
         }
+
         public Builder frameRate(Double frameRate) {
-            this.frameRate = Objects.requireNonNull(frameRate);
+            $.frameRate = frameRate;
             return this;
         }
+
         public Builder gopDuration(String gopDuration) {
-            this.gopDuration = Objects.requireNonNull(gopDuration);
+            $.gopDuration = gopDuration;
             return this;
         }
+
         public Builder gopFrameCount(Integer gopFrameCount) {
-            this.gopFrameCount = Objects.requireNonNull(gopFrameCount);
+            $.gopFrameCount = gopFrameCount;
             return this;
         }
+
         public Builder heightPixels(Integer heightPixels) {
-            this.heightPixels = Objects.requireNonNull(heightPixels);
+            $.heightPixels = heightPixels;
             return this;
         }
+
         public Builder pixelFormat(String pixelFormat) {
-            this.pixelFormat = Objects.requireNonNull(pixelFormat);
+            $.pixelFormat = pixelFormat;
             return this;
         }
+
         public Builder preset(String preset) {
-            this.preset = Objects.requireNonNull(preset);
+            $.preset = preset;
             return this;
         }
+
         public Builder profile(String profile) {
-            this.profile = Objects.requireNonNull(profile);
+            $.profile = profile;
             return this;
         }
+
         public Builder rateControlMode(String rateControlMode) {
-            this.rateControlMode = Objects.requireNonNull(rateControlMode);
+            $.rateControlMode = rateControlMode;
             return this;
         }
+
         public Builder tune(String tune) {
-            this.tune = Objects.requireNonNull(tune);
+            $.tune = tune;
             return this;
         }
+
         public Builder vbvFullnessBits(Integer vbvFullnessBits) {
-            this.vbvFullnessBits = Objects.requireNonNull(vbvFullnessBits);
+            $.vbvFullnessBits = vbvFullnessBits;
             return this;
         }
+
         public Builder vbvSizeBits(Integer vbvSizeBits) {
-            this.vbvSizeBits = Objects.requireNonNull(vbvSizeBits);
+            $.vbvSizeBits = vbvSizeBits;
             return this;
         }
+
         public Builder widthPixels(Integer widthPixels) {
-            this.widthPixels = Objects.requireNonNull(widthPixels);
+            $.widthPixels = widthPixels;
             return this;
-        }        public H265CodecSettingsResponse build() {
-            return new H265CodecSettingsResponse(allowOpenGop, aqStrength, bFrameCount, bPyramid, bitrateBps, crfLevel, enableTwoPass, frameRate, gopDuration, gopFrameCount, heightPixels, pixelFormat, preset, profile, rateControlMode, tune, vbvFullnessBits, vbvSizeBits, widthPixels);
+        }
+
+        public H265CodecSettingsResponse build() {
+            $.allowOpenGop = Objects.requireNonNull($.allowOpenGop, "expected parameter 'allowOpenGop' to be non-null");
+            $.aqStrength = Objects.requireNonNull($.aqStrength, "expected parameter 'aqStrength' to be non-null");
+            $.bFrameCount = Objects.requireNonNull($.bFrameCount, "expected parameter 'bFrameCount' to be non-null");
+            $.bPyramid = Objects.requireNonNull($.bPyramid, "expected parameter 'bPyramid' to be non-null");
+            $.bitrateBps = Objects.requireNonNull($.bitrateBps, "expected parameter 'bitrateBps' to be non-null");
+            $.crfLevel = Objects.requireNonNull($.crfLevel, "expected parameter 'crfLevel' to be non-null");
+            $.enableTwoPass = Objects.requireNonNull($.enableTwoPass, "expected parameter 'enableTwoPass' to be non-null");
+            $.frameRate = Objects.requireNonNull($.frameRate, "expected parameter 'frameRate' to be non-null");
+            $.gopDuration = Objects.requireNonNull($.gopDuration, "expected parameter 'gopDuration' to be non-null");
+            $.gopFrameCount = Objects.requireNonNull($.gopFrameCount, "expected parameter 'gopFrameCount' to be non-null");
+            $.heightPixels = Objects.requireNonNull($.heightPixels, "expected parameter 'heightPixels' to be non-null");
+            $.pixelFormat = Objects.requireNonNull($.pixelFormat, "expected parameter 'pixelFormat' to be non-null");
+            $.preset = Objects.requireNonNull($.preset, "expected parameter 'preset' to be non-null");
+            $.profile = Objects.requireNonNull($.profile, "expected parameter 'profile' to be non-null");
+            $.rateControlMode = Objects.requireNonNull($.rateControlMode, "expected parameter 'rateControlMode' to be non-null");
+            $.tune = Objects.requireNonNull($.tune, "expected parameter 'tune' to be non-null");
+            $.vbvFullnessBits = Objects.requireNonNull($.vbvFullnessBits, "expected parameter 'vbvFullnessBits' to be non-null");
+            $.vbvSizeBits = Objects.requireNonNull($.vbvSizeBits, "expected parameter 'vbvSizeBits' to be non-null");
+            $.widthPixels = Objects.requireNonNull($.widthPixels, "expected parameter 'widthPixels' to be non-null");
+            return $;
         }
     }
+
 }

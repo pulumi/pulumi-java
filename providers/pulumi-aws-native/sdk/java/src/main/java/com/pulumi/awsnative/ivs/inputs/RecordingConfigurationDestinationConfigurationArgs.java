@@ -6,7 +6,6 @@ package com.pulumi.awsnative.ivs.inputs;
 import com.pulumi.awsnative.ivs.inputs.RecordingConfigurationS3DestinationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class RecordingConfigurationDestinationConfigurationArgs extends co
     public static final RecordingConfigurationDestinationConfigurationArgs Empty = new RecordingConfigurationDestinationConfigurationArgs();
 
     @Import(name="s3", required=true)
-      private final Output<RecordingConfigurationS3DestinationConfigurationArgs> s3;
+    private Output<RecordingConfigurationS3DestinationConfigurationArgs> s3;
 
     public Output<RecordingConfigurationS3DestinationConfigurationArgs> s3() {
         return this.s3;
     }
 
-    public RecordingConfigurationDestinationConfigurationArgs(Output<RecordingConfigurationS3DestinationConfigurationArgs> s3) {
-        this.s3 = Objects.requireNonNull(s3, "expected parameter 's3' to be non-null");
-    }
+    private RecordingConfigurationDestinationConfigurationArgs() {}
 
-    private RecordingConfigurationDestinationConfigurationArgs() {
-        this.s3 = Codegen.empty();
+    private RecordingConfigurationDestinationConfigurationArgs(RecordingConfigurationDestinationConfigurationArgs $) {
+        this.s3 = $.s3;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordingConfigurationDestinationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RecordingConfigurationS3DestinationConfigurationArgs> s3;
+        private RecordingConfigurationDestinationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordingConfigurationDestinationConfigurationArgs();
         }
 
         public Builder(RecordingConfigurationDestinationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3 = defaults.s3;
+            $ = new RecordingConfigurationDestinationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3(Output<RecordingConfigurationS3DestinationConfigurationArgs> s3) {
-            this.s3 = Objects.requireNonNull(s3);
+            $.s3 = s3;
             return this;
         }
+
         public Builder s3(RecordingConfigurationS3DestinationConfigurationArgs s3) {
-            this.s3 = Output.of(Objects.requireNonNull(s3));
-            return this;
-        }        public RecordingConfigurationDestinationConfigurationArgs build() {
-            return new RecordingConfigurationDestinationConfigurationArgs(s3);
+            return s3(Output.of(s3));
+        }
+
+        public RecordingConfigurationDestinationConfigurationArgs build() {
+            $.s3 = Objects.requireNonNull($.s3, "expected parameter 's3' to be non-null");
+            return $;
         }
     }
+
 }

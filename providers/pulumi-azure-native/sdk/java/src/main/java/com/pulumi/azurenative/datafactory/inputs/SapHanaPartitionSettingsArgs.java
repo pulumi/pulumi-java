@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SapHanaPartitionSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="partitionColumnName")
-      private final @Nullable Output<Object> partitionColumnName;
+    private @Nullable Output<Object> partitionColumnName;
 
-    public Output<Object> partitionColumnName() {
-        return this.partitionColumnName == null ? Codegen.empty() : this.partitionColumnName;
+    public Optional<Output<Object>> partitionColumnName() {
+        return Optional.ofNullable(this.partitionColumnName);
     }
 
-    public SapHanaPartitionSettingsArgs(@Nullable Output<Object> partitionColumnName) {
-        this.partitionColumnName = partitionColumnName;
-    }
+    private SapHanaPartitionSettingsArgs() {}
 
-    private SapHanaPartitionSettingsArgs() {
-        this.partitionColumnName = Codegen.empty();
+    private SapHanaPartitionSettingsArgs(SapHanaPartitionSettingsArgs $) {
+        this.partitionColumnName = $.partitionColumnName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapHanaPartitionSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> partitionColumnName;
+        private SapHanaPartitionSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapHanaPartitionSettingsArgs();
         }
 
         public Builder(SapHanaPartitionSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionColumnName = defaults.partitionColumnName;
+            $ = new SapHanaPartitionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionColumnName(@Nullable Output<Object> partitionColumnName) {
-            this.partitionColumnName = partitionColumnName;
+            $.partitionColumnName = partitionColumnName;
             return this;
         }
-        public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = Codegen.ofNullable(partitionColumnName);
-            return this;
-        }        public SapHanaPartitionSettingsArgs build() {
-            return new SapHanaPartitionSettingsArgs(partitionColumnName);
+
+        public Builder partitionColumnName(Object partitionColumnName) {
+            return partitionColumnName(Output.of(partitionColumnName));
+        }
+
+        public SapHanaPartitionSettingsArgs build() {
+            return $;
         }
     }
+
 }

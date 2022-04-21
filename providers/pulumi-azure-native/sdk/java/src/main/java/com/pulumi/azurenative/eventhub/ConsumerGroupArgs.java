@@ -5,9 +5,9 @@ package com.pulumi.azurenative.eventhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="consumerGroupName")
-      private final @Nullable Output<String> consumerGroupName;
+    private @Nullable Output<String> consumerGroupName;
 
-    public Output<String> consumerGroupName() {
-        return this.consumerGroupName == null ? Codegen.empty() : this.consumerGroupName;
+    public Optional<Output<String>> consumerGroupName() {
+        return Optional.ofNullable(this.consumerGroupName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventHubName", required=true)
-      private final Output<String> eventHubName;
+    private Output<String> eventHubName;
 
     public Output<String> eventHubName() {
         return this.eventHubName;
@@ -42,7 +42,7 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -53,7 +53,7 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,102 +64,91 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userMetadata")
-      private final @Nullable Output<String> userMetadata;
+    private @Nullable Output<String> userMetadata;
 
-    public Output<String> userMetadata() {
-        return this.userMetadata == null ? Codegen.empty() : this.userMetadata;
+    public Optional<Output<String>> userMetadata() {
+        return Optional.ofNullable(this.userMetadata);
     }
 
-    public ConsumerGroupArgs(
-        @Nullable Output<String> consumerGroupName,
-        Output<String> eventHubName,
-        Output<String> namespaceName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> userMetadata) {
-        this.consumerGroupName = consumerGroupName;
-        this.eventHubName = Objects.requireNonNull(eventHubName, "expected parameter 'eventHubName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.userMetadata = userMetadata;
-    }
+    private ConsumerGroupArgs() {}
 
-    private ConsumerGroupArgs() {
-        this.consumerGroupName = Codegen.empty();
-        this.eventHubName = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.userMetadata = Codegen.empty();
+    private ConsumerGroupArgs(ConsumerGroupArgs $) {
+        this.consumerGroupName = $.consumerGroupName;
+        this.eventHubName = $.eventHubName;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.userMetadata = $.userMetadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsumerGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> consumerGroupName;
-        private Output<String> eventHubName;
-        private Output<String> namespaceName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> userMetadata;
+        private ConsumerGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsumerGroupArgs();
         }
 
         public Builder(ConsumerGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerGroupName = defaults.consumerGroupName;
-    	      this.eventHubName = defaults.eventHubName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.userMetadata = defaults.userMetadata;
+            $ = new ConsumerGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerGroupName(@Nullable Output<String> consumerGroupName) {
-            this.consumerGroupName = consumerGroupName;
+            $.consumerGroupName = consumerGroupName;
             return this;
         }
-        public Builder consumerGroupName(@Nullable String consumerGroupName) {
-            this.consumerGroupName = Codegen.ofNullable(consumerGroupName);
-            return this;
+
+        public Builder consumerGroupName(String consumerGroupName) {
+            return consumerGroupName(Output.of(consumerGroupName));
         }
+
         public Builder eventHubName(Output<String> eventHubName) {
-            this.eventHubName = Objects.requireNonNull(eventHubName);
+            $.eventHubName = eventHubName;
             return this;
         }
+
         public Builder eventHubName(String eventHubName) {
-            this.eventHubName = Output.of(Objects.requireNonNull(eventHubName));
-            return this;
+            return eventHubName(Output.of(eventHubName));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder userMetadata(@Nullable Output<String> userMetadata) {
-            this.userMetadata = userMetadata;
+            $.userMetadata = userMetadata;
             return this;
         }
-        public Builder userMetadata(@Nullable String userMetadata) {
-            this.userMetadata = Codegen.ofNullable(userMetadata);
-            return this;
-        }        public ConsumerGroupArgs build() {
-            return new ConsumerGroupArgs(consumerGroupName, eventHubName, namespaceName, resourceGroupName, userMetadata);
+
+        public Builder userMetadata(String userMetadata) {
+            return userMetadata(Output.of(userMetadata));
+        }
+
+        public ConsumerGroupArgs build() {
+            $.eventHubName = Objects.requireNonNull($.eventHubName, "expected parameter 'eventHubName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

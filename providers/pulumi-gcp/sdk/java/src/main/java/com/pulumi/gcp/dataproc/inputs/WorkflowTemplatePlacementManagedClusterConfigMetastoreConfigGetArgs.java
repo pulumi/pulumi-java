@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigG
      * 
      */
     @Import(name="dataprocMetastoreService", required=true)
-      private final Output<String> dataprocMetastoreService;
+    private Output<String> dataprocMetastoreService;
 
     public Output<String> dataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs(Output<String> dataprocMetastoreService) {
-        this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService, "expected parameter 'dataprocMetastoreService' to be non-null");
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs() {
-        this.dataprocMetastoreService = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs(WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs $) {
+        this.dataprocMetastoreService = $.dataprocMetastoreService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataprocMetastoreService;
+        private WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataprocMetastoreService = defaults.dataprocMetastoreService;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataprocMetastoreService(Output<String> dataprocMetastoreService) {
-            this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
+            $.dataprocMetastoreService = dataprocMetastoreService;
             return this;
         }
+
         public Builder dataprocMetastoreService(String dataprocMetastoreService) {
-            this.dataprocMetastoreService = Output.of(Objects.requireNonNull(dataprocMetastoreService));
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs(dataprocMetastoreService);
+            return dataprocMetastoreService(Output.of(dataprocMetastoreService));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs build() {
+            $.dataprocMetastoreService = Objects.requireNonNull($.dataprocMetastoreService, "expected parameter 'dataprocMetastoreService' to be non-null");
+            return $;
         }
     }
+
 }

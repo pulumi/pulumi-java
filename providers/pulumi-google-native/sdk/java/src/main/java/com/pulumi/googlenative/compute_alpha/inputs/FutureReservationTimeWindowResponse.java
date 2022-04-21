@@ -14,14 +14,14 @@ public final class FutureReservationTimeWindowResponse extends com.pulumi.resour
     public static final FutureReservationTimeWindowResponse Empty = new FutureReservationTimeWindowResponse();
 
     @Import(name="duration", required=true)
-      private final DurationResponse duration;
+    private DurationResponse duration;
 
     public DurationResponse duration() {
         return this.duration;
     }
 
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -32,64 +32,59 @@ public final class FutureReservationTimeWindowResponse extends com.pulumi.resour
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public FutureReservationTimeWindowResponse(
-        DurationResponse duration,
-        String endTime,
-        String startTime) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private FutureReservationTimeWindowResponse() {}
 
-    private FutureReservationTimeWindowResponse() {
-        this.duration = null;
-        this.endTime = null;
-        this.startTime = null;
+    private FutureReservationTimeWindowResponse(FutureReservationTimeWindowResponse $) {
+        this.duration = $.duration;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FutureReservationTimeWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DurationResponse duration;
-        private String endTime;
-        private String startTime;
+        private FutureReservationTimeWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FutureReservationTimeWindowResponse();
         }
 
         public Builder(FutureReservationTimeWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new FutureReservationTimeWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(DurationResponse duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public FutureReservationTimeWindowResponse build() {
-            return new FutureReservationTimeWindowResponse(duration, endTime, startTime);
+        }
+
+        public FutureReservationTimeWindowResponse build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

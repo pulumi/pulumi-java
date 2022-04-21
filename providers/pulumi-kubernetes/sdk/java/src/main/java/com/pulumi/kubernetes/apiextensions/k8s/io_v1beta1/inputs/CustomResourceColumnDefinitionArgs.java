@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="JSONPath", required=true)
-      private final Output<String> JSONPath;
+    private Output<String> JSONPath;
 
     public Output<String> JSONPath() {
         return this.JSONPath;
@@ -36,10 +36,10 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<String> format;
+    private @Nullable Output<String> format;
 
-    public Output<String> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<String>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -69,10 +69,10 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -80,115 +80,101 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public CustomResourceColumnDefinitionArgs(
-        Output<String> JSONPath,
-        @Nullable Output<String> description,
-        @Nullable Output<String> format,
-        Output<String> name,
-        @Nullable Output<Integer> priority,
-        Output<String> type) {
-        this.JSONPath = Objects.requireNonNull(JSONPath, "expected parameter 'JSONPath' to be non-null");
-        this.description = description;
-        this.format = format;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.priority = priority;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private CustomResourceColumnDefinitionArgs() {}
 
-    private CustomResourceColumnDefinitionArgs() {
-        this.JSONPath = Codegen.empty();
-        this.description = Codegen.empty();
-        this.format = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.type = Codegen.empty();
+    private CustomResourceColumnDefinitionArgs(CustomResourceColumnDefinitionArgs $) {
+        this.JSONPath = $.JSONPath;
+        this.description = $.description;
+        this.format = $.format;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomResourceColumnDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> JSONPath;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> format;
-        private Output<String> name;
-        private @Nullable Output<Integer> priority;
-        private Output<String> type;
+        private CustomResourceColumnDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomResourceColumnDefinitionArgs();
         }
 
         public Builder(CustomResourceColumnDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.JSONPath = defaults.JSONPath;
-    	      this.description = defaults.description;
-    	      this.format = defaults.format;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.type = defaults.type;
+            $ = new CustomResourceColumnDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder JSONPath(Output<String> JSONPath) {
-            this.JSONPath = Objects.requireNonNull(JSONPath);
+            $.JSONPath = JSONPath;
             return this;
         }
+
         public Builder JSONPath(String JSONPath) {
-            this.JSONPath = Output.of(Objects.requireNonNull(JSONPath));
-            return this;
+            return JSONPath(Output.of(JSONPath));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder format(@Nullable Output<String> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable String format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(String format) {
+            return format(Output.of(format));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public CustomResourceColumnDefinitionArgs build() {
-            return new CustomResourceColumnDefinitionArgs(JSONPath, description, format, name, priority, type);
+            return type(Output.of(type));
+        }
+
+        public CustomResourceColumnDefinitionArgs build() {
+            $.JSONPath = Objects.requireNonNull($.JSONPath, "expected parameter 'JSONPath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

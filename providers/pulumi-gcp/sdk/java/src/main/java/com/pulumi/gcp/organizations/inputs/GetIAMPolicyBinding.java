@@ -21,10 +21,10 @@ public final class GetIAMPolicyBinding extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="condition")
-      private final @Nullable GetIAMPolicyBindingCondition condition;
+    private @Nullable GetIAMPolicyBindingCondition condition;
 
     public Optional<GetIAMPolicyBindingCondition> condition() {
-        return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class GetIAMPolicyBinding extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="members", required=true)
-      private final List<String> members;
+    private List<String> members;
 
     public List<String> members() {
         return this.members;
@@ -52,67 +52,62 @@ public final class GetIAMPolicyBinding extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="role", required=true)
-      private final String role;
+    private String role;
 
     public String role() {
         return this.role;
     }
 
-    public GetIAMPolicyBinding(
-        @Nullable GetIAMPolicyBindingCondition condition,
-        List<String> members,
-        String role) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private GetIAMPolicyBinding() {}
 
-    private GetIAMPolicyBinding() {
-        this.condition = null;
-        this.members = List.of();
-        this.role = null;
+    private GetIAMPolicyBinding(GetIAMPolicyBinding $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIAMPolicyBinding defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable GetIAMPolicyBindingCondition condition;
-        private List<String> members;
-        private String role;
+        private GetIAMPolicyBinding $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIAMPolicyBinding();
         }
 
         public Builder(GetIAMPolicyBinding defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
+            $ = new GetIAMPolicyBinding(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable GetIAMPolicyBindingCondition condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(String role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
-        }        public GetIAMPolicyBinding build() {
-            return new GetIAMPolicyBinding(condition, members, role);
+        }
+
+        public GetIAMPolicyBinding build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

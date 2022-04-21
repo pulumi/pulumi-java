@@ -23,10 +23,10 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends co
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends co
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends co
      * 
      */
     @Import(name="timeStampUtc")
-      private final @Nullable String timeStampUtc;
+    private @Nullable String timeStampUtc;
 
     public Optional<String> timeStampUtc() {
-        return this.timeStampUtc == null ? Optional.empty() : Optional.ofNullable(this.timeStampUtc);
+        return Optional.ofNullable(this.timeStampUtc);
     }
 
-    public KeyVaultLastAccessStatusContractPropertiesResponse(
-        @Nullable String code,
-        @Nullable String message,
-        @Nullable String timeStampUtc) {
-        this.code = code;
-        this.message = message;
-        this.timeStampUtc = timeStampUtc;
-    }
+    private KeyVaultLastAccessStatusContractPropertiesResponse() {}
 
-    private KeyVaultLastAccessStatusContractPropertiesResponse() {
-        this.code = null;
-        this.message = null;
-        this.timeStampUtc = null;
+    private KeyVaultLastAccessStatusContractPropertiesResponse(KeyVaultLastAccessStatusContractPropertiesResponse $) {
+        this.code = $.code;
+        this.message = $.message;
+        this.timeStampUtc = $.timeStampUtc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultLastAccessStatusContractPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String code;
-        private @Nullable String message;
-        private @Nullable String timeStampUtc;
+        private KeyVaultLastAccessStatusContractPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultLastAccessStatusContractPropertiesResponse();
         }
 
         public Builder(KeyVaultLastAccessStatusContractPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.message = defaults.message;
-    	      this.timeStampUtc = defaults.timeStampUtc;
+            $ = new KeyVaultLastAccessStatusContractPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder timeStampUtc(@Nullable String timeStampUtc) {
-            this.timeStampUtc = timeStampUtc;
+            $.timeStampUtc = timeStampUtc;
             return this;
-        }        public KeyVaultLastAccessStatusContractPropertiesResponse build() {
-            return new KeyVaultLastAccessStatusContractPropertiesResponse(code, message, timeStampUtc);
+        }
+
+        public KeyVaultLastAccessStatusContractPropertiesResponse build() {
+            return $;
         }
     }
+
 }

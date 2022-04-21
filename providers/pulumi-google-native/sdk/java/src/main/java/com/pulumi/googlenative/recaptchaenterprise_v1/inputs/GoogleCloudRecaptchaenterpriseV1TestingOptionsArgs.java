@@ -5,10 +5,10 @@ package com.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends co
      * 
      */
     @Import(name="testingChallenge")
-      private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
+    private @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge() {
-        return this.testingChallenge == null ? Codegen.empty() : this.testingChallenge;
+    public Optional<Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge>> testingChallenge() {
+        return Optional.ofNullable(this.testingChallenge);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends co
      * 
      */
     @Import(name="testingScore")
-      private final @Nullable Output<Double> testingScore;
+    private @Nullable Output<Double> testingScore;
 
-    public Output<Double> testingScore() {
-        return this.testingScore == null ? Codegen.empty() : this.testingScore;
+    public Optional<Output<Double>> testingScore() {
+        return Optional.ofNullable(this.testingScore);
     }
 
-    public GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs(
-        @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge,
-        @Nullable Output<Double> testingScore) {
-        this.testingChallenge = testingChallenge;
-        this.testingScore = testingScore;
-    }
+    private GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs() {}
 
-    private GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs() {
-        this.testingChallenge = Codegen.empty();
-        this.testingScore = Codegen.empty();
+    private GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs(GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs $) {
+        this.testingChallenge = $.testingChallenge;
+        this.testingScore = $.testingScore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
-        private @Nullable Output<Double> testingScore;
+        private GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs();
         }
 
         public Builder(GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testingChallenge = defaults.testingChallenge;
-    	      this.testingScore = defaults.testingScore;
+            $ = new GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder testingChallenge(@Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge) {
-            this.testingChallenge = testingChallenge;
+            $.testingChallenge = testingChallenge;
             return this;
         }
-        public Builder testingChallenge(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge testingChallenge) {
-            this.testingChallenge = Codegen.ofNullable(testingChallenge);
-            return this;
+
+        public Builder testingChallenge(GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge testingChallenge) {
+            return testingChallenge(Output.of(testingChallenge));
         }
+
         public Builder testingScore(@Nullable Output<Double> testingScore) {
-            this.testingScore = testingScore;
+            $.testingScore = testingScore;
             return this;
         }
-        public Builder testingScore(@Nullable Double testingScore) {
-            this.testingScore = Codegen.ofNullable(testingScore);
-            return this;
-        }        public GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs build() {
-            return new GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs(testingChallenge, testingScore);
+
+        public Builder testingScore(Double testingScore) {
+            return testingScore(Output.of(testingScore));
+        }
+
+        public GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs build() {
+            return $;
         }
     }
+
 }

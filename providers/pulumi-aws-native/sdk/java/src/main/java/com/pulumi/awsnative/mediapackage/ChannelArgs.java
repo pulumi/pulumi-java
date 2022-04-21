@@ -7,10 +7,10 @@ import com.pulumi.awsnative.mediapackage.inputs.ChannelLogConfigurationArgs;
 import com.pulumi.awsnative.mediapackage.inputs.ChannelTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="egressAccessLogs")
-      private final @Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs;
+    private @Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs;
 
-    public Output<ChannelLogConfigurationArgs> egressAccessLogs() {
-        return this.egressAccessLogs == null ? Codegen.empty() : this.egressAccessLogs;
+    public Optional<Output<ChannelLogConfigurationArgs>> egressAccessLogs() {
+        return Optional.ofNullable(this.egressAccessLogs);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingressAccessLogs")
-      private final @Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs;
+    private @Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs;
 
-    public Output<ChannelLogConfigurationArgs> ingressAccessLogs() {
-        return this.ingressAccessLogs == null ? Codegen.empty() : this.ingressAccessLogs;
+    public Optional<Output<ChannelLogConfigurationArgs>> ingressAccessLogs() {
+        return Optional.ofNullable(this.ingressAccessLogs);
     }
 
     /**
@@ -56,92 +56,82 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ChannelTagArgs>> tags;
+    private @Nullable Output<List<ChannelTagArgs>> tags;
 
-    public Output<List<ChannelTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ChannelTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ChannelArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs,
-        @Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs,
-        @Nullable Output<List<ChannelTagArgs>> tags) {
-        this.description = description;
-        this.egressAccessLogs = egressAccessLogs;
-        this.ingressAccessLogs = ingressAccessLogs;
-        this.tags = tags;
-    }
+    private ChannelArgs() {}
 
-    private ChannelArgs() {
-        this.description = Codegen.empty();
-        this.egressAccessLogs = Codegen.empty();
-        this.ingressAccessLogs = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ChannelArgs(ChannelArgs $) {
+        this.description = $.description;
+        this.egressAccessLogs = $.egressAccessLogs;
+        this.ingressAccessLogs = $.ingressAccessLogs;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs;
-        private @Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs;
-        private @Nullable Output<List<ChannelTagArgs>> tags;
+        private ChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelArgs();
         }
 
         public Builder(ChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.egressAccessLogs = defaults.egressAccessLogs;
-    	      this.ingressAccessLogs = defaults.ingressAccessLogs;
-    	      this.tags = defaults.tags;
+            $ = new ChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder egressAccessLogs(@Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs) {
-            this.egressAccessLogs = egressAccessLogs;
+            $.egressAccessLogs = egressAccessLogs;
             return this;
         }
-        public Builder egressAccessLogs(@Nullable ChannelLogConfigurationArgs egressAccessLogs) {
-            this.egressAccessLogs = Codegen.ofNullable(egressAccessLogs);
-            return this;
+
+        public Builder egressAccessLogs(ChannelLogConfigurationArgs egressAccessLogs) {
+            return egressAccessLogs(Output.of(egressAccessLogs));
         }
+
         public Builder ingressAccessLogs(@Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs) {
-            this.ingressAccessLogs = ingressAccessLogs;
+            $.ingressAccessLogs = ingressAccessLogs;
             return this;
         }
-        public Builder ingressAccessLogs(@Nullable ChannelLogConfigurationArgs ingressAccessLogs) {
-            this.ingressAccessLogs = Codegen.ofNullable(ingressAccessLogs);
-            return this;
+
+        public Builder ingressAccessLogs(ChannelLogConfigurationArgs ingressAccessLogs) {
+            return ingressAccessLogs(Output.of(ingressAccessLogs));
         }
+
         public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ChannelTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ChannelTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ChannelTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ChannelArgs build() {
-            return new ChannelArgs(description, egressAccessLogs, ingressAccessLogs, tags);
+        }
+
+        public ChannelArgs build() {
+            return $;
         }
     }
+
 }

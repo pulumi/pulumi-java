@@ -6,7 +6,6 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 import com.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyActionDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,70 +15,67 @@ public final class FirewallPolicyCustomActionArgs extends com.pulumi.resources.R
     public static final FirewallPolicyCustomActionArgs Empty = new FirewallPolicyCustomActionArgs();
 
     @Import(name="actionDefinition", required=true)
-      private final Output<FirewallPolicyActionDefinitionArgs> actionDefinition;
+    private Output<FirewallPolicyActionDefinitionArgs> actionDefinition;
 
     public Output<FirewallPolicyActionDefinitionArgs> actionDefinition() {
         return this.actionDefinition;
     }
 
     @Import(name="actionName", required=true)
-      private final Output<String> actionName;
+    private Output<String> actionName;
 
     public Output<String> actionName() {
         return this.actionName;
     }
 
-    public FirewallPolicyCustomActionArgs(
-        Output<FirewallPolicyActionDefinitionArgs> actionDefinition,
-        Output<String> actionName) {
-        this.actionDefinition = Objects.requireNonNull(actionDefinition, "expected parameter 'actionDefinition' to be non-null");
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-    }
+    private FirewallPolicyCustomActionArgs() {}
 
-    private FirewallPolicyCustomActionArgs() {
-        this.actionDefinition = Codegen.empty();
-        this.actionName = Codegen.empty();
+    private FirewallPolicyCustomActionArgs(FirewallPolicyCustomActionArgs $) {
+        this.actionDefinition = $.actionDefinition;
+        this.actionName = $.actionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyCustomActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FirewallPolicyActionDefinitionArgs> actionDefinition;
-        private Output<String> actionName;
+        private FirewallPolicyCustomActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyCustomActionArgs();
         }
 
         public Builder(FirewallPolicyCustomActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionDefinition = defaults.actionDefinition;
-    	      this.actionName = defaults.actionName;
+            $ = new FirewallPolicyCustomActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionDefinition(Output<FirewallPolicyActionDefinitionArgs> actionDefinition) {
-            this.actionDefinition = Objects.requireNonNull(actionDefinition);
+            $.actionDefinition = actionDefinition;
             return this;
         }
+
         public Builder actionDefinition(FirewallPolicyActionDefinitionArgs actionDefinition) {
-            this.actionDefinition = Output.of(Objects.requireNonNull(actionDefinition));
-            return this;
+            return actionDefinition(Output.of(actionDefinition));
         }
+
         public Builder actionName(Output<String> actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
         }
+
         public Builder actionName(String actionName) {
-            this.actionName = Output.of(Objects.requireNonNull(actionName));
-            return this;
-        }        public FirewallPolicyCustomActionArgs build() {
-            return new FirewallPolicyCustomActionArgs(actionDefinition, actionName);
+            return actionName(Output.of(actionName));
+        }
+
+        public FirewallPolicyCustomActionArgs build() {
+            $.actionDefinition = Objects.requireNonNull($.actionDefinition, "expected parameter 'actionDefinition' to be non-null");
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            return $;
         }
     }
+
 }

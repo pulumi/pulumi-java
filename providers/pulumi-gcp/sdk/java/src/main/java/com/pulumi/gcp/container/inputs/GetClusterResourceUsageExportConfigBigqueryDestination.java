@@ -13,45 +13,45 @@ public final class GetClusterResourceUsageExportConfigBigqueryDestination extend
     public static final GetClusterResourceUsageExportConfigBigqueryDestination Empty = new GetClusterResourceUsageExportConfigBigqueryDestination();
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
-    public GetClusterResourceUsageExportConfigBigqueryDestination(String datasetId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-    }
+    private GetClusterResourceUsageExportConfigBigqueryDestination() {}
 
-    private GetClusterResourceUsageExportConfigBigqueryDestination() {
-        this.datasetId = null;
+    private GetClusterResourceUsageExportConfigBigqueryDestination(GetClusterResourceUsageExportConfigBigqueryDestination $) {
+        this.datasetId = $.datasetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterResourceUsageExportConfigBigqueryDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
+        private GetClusterResourceUsageExportConfigBigqueryDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterResourceUsageExportConfigBigqueryDestination();
         }
 
         public Builder(GetClusterResourceUsageExportConfigBigqueryDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
+            $ = new GetClusterResourceUsageExportConfigBigqueryDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
-        }        public GetClusterResourceUsageExportConfigBigqueryDestination build() {
-            return new GetClusterResourceUsageExportConfigBigqueryDestination(datasetId);
+        }
+
+        public GetClusterResourceUsageExportConfigBigqueryDestination build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
      * 
      */
     @Import(name="managementGroupId", required=true)
-      private final String managementGroupId;
+    private String managementGroupId;
 
     public String managementGroupId() {
         return this.managementGroupId;
@@ -28,55 +28,52 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetManagementGroupDiagnosticSettingArgs(
-        String managementGroupId,
-        String name) {
-        this.managementGroupId = Objects.requireNonNull(managementGroupId, "expected parameter 'managementGroupId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetManagementGroupDiagnosticSettingArgs() {}
 
-    private GetManagementGroupDiagnosticSettingArgs() {
-        this.managementGroupId = null;
-        this.name = null;
+    private GetManagementGroupDiagnosticSettingArgs(GetManagementGroupDiagnosticSettingArgs $) {
+        this.managementGroupId = $.managementGroupId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementGroupDiagnosticSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managementGroupId;
-        private String name;
+        private GetManagementGroupDiagnosticSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementGroupDiagnosticSettingArgs();
         }
 
         public Builder(GetManagementGroupDiagnosticSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managementGroupId = defaults.managementGroupId;
-    	      this.name = defaults.name;
+            $ = new GetManagementGroupDiagnosticSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managementGroupId(String managementGroupId) {
-            this.managementGroupId = Objects.requireNonNull(managementGroupId);
+            $.managementGroupId = managementGroupId;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetManagementGroupDiagnosticSettingArgs build() {
-            return new GetManagementGroupDiagnosticSettingArgs(managementGroupId, name);
+        }
+
+        public GetManagementGroupDiagnosticSettingArgs build() {
+            $.managementGroupId = Objects.requireNonNull($.managementGroupId, "expected parameter 'managementGroupId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

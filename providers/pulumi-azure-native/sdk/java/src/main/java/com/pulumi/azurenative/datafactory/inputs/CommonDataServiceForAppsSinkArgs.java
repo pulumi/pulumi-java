@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class CommonDataServiceForAppsSinkArgs extends com.pulumi.resources
      * 
      */
     @Import(name="alternateKeyName")
-      private final @Nullable Output<Object> alternateKeyName;
+    private @Nullable Output<Object> alternateKeyName;
 
-    public Output<Object> alternateKeyName() {
-        return this.alternateKeyName == null ? Codegen.empty() : this.alternateKeyName;
+    public Optional<Output<Object>> alternateKeyName() {
+        return Optional.ofNullable(this.alternateKeyName);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class CommonDataServiceForAppsSinkArgs extends com.pulumi.resources
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class CommonDataServiceForAppsSinkArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ignoreNullValues")
-      private final @Nullable Output<Object> ignoreNullValues;
+    private @Nullable Output<Object> ignoreNullValues;
 
-    public Output<Object> ignoreNullValues() {
-        return this.ignoreNullValues == null ? Codegen.empty() : this.ignoreNullValues;
+    public Optional<Output<Object>> ignoreNullValues() {
+        return Optional.ofNullable(this.ignoreNullValues);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class CommonDataServiceForAppsSinkArgs extends com.pulumi.resources
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -71,10 +72,10 @@ public final class CommonDataServiceForAppsSinkArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sinkRetryCount")
-      private final @Nullable Output<Object> sinkRetryCount;
+    private @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> sinkRetryCount() {
-        return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
+    public Optional<Output<Object>> sinkRetryCount() {
+        return Optional.ofNullable(this.sinkRetryCount);
     }
 
     /**
@@ -82,10 +83,10 @@ public final class CommonDataServiceForAppsSinkArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sinkRetryWait")
-      private final @Nullable Output<Object> sinkRetryWait;
+    private @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> sinkRetryWait() {
-        return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
+    public Optional<Output<Object>> sinkRetryWait() {
+        return Optional.ofNullable(this.sinkRetryWait);
     }
 
     /**
@@ -94,7 +95,7 @@ public final class CommonDataServiceForAppsSinkArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -105,10 +106,10 @@ public final class CommonDataServiceForAppsSinkArgs extends com.pulumi.resources
      * 
      */
     @Import(name="writeBatchSize")
-      private final @Nullable Output<Object> writeBatchSize;
+    private @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> writeBatchSize() {
-        return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
+    public Optional<Output<Object>> writeBatchSize() {
+        return Optional.ofNullable(this.writeBatchSize);
     }
 
     /**
@@ -116,10 +117,10 @@ public final class CommonDataServiceForAppsSinkArgs extends com.pulumi.resources
      * 
      */
     @Import(name="writeBatchTimeout")
-      private final @Nullable Output<Object> writeBatchTimeout;
+    private @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> writeBatchTimeout() {
-        return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
+    public Optional<Output<Object>> writeBatchTimeout() {
+        return Optional.ofNullable(this.writeBatchTimeout);
     }
 
     /**
@@ -127,167 +128,140 @@ public final class CommonDataServiceForAppsSinkArgs extends com.pulumi.resources
      * 
      */
     @Import(name="writeBehavior", required=true)
-      private final Output<Either<String,DynamicsSinkWriteBehavior>> writeBehavior;
+    private Output<Either<String,DynamicsSinkWriteBehavior>> writeBehavior;
 
     public Output<Either<String,DynamicsSinkWriteBehavior>> writeBehavior() {
         return this.writeBehavior;
     }
 
-    public CommonDataServiceForAppsSinkArgs(
-        @Nullable Output<Object> alternateKeyName,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> ignoreNullValues,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> sinkRetryCount,
-        @Nullable Output<Object> sinkRetryWait,
-        Output<String> type,
-        @Nullable Output<Object> writeBatchSize,
-        @Nullable Output<Object> writeBatchTimeout,
-        Output<Either<String,DynamicsSinkWriteBehavior>> writeBehavior) {
-        this.alternateKeyName = alternateKeyName;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.ignoreNullValues = ignoreNullValues;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.sinkRetryCount = sinkRetryCount;
-        this.sinkRetryWait = sinkRetryWait;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.writeBatchSize = writeBatchSize;
-        this.writeBatchTimeout = writeBatchTimeout;
-        this.writeBehavior = Objects.requireNonNull(writeBehavior, "expected parameter 'writeBehavior' to be non-null");
-    }
+    private CommonDataServiceForAppsSinkArgs() {}
 
-    private CommonDataServiceForAppsSinkArgs() {
-        this.alternateKeyName = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.ignoreNullValues = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.sinkRetryCount = Codegen.empty();
-        this.sinkRetryWait = Codegen.empty();
-        this.type = Codegen.empty();
-        this.writeBatchSize = Codegen.empty();
-        this.writeBatchTimeout = Codegen.empty();
-        this.writeBehavior = Codegen.empty();
+    private CommonDataServiceForAppsSinkArgs(CommonDataServiceForAppsSinkArgs $) {
+        this.alternateKeyName = $.alternateKeyName;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.ignoreNullValues = $.ignoreNullValues;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.sinkRetryCount = $.sinkRetryCount;
+        this.sinkRetryWait = $.sinkRetryWait;
+        this.type = $.type;
+        this.writeBatchSize = $.writeBatchSize;
+        this.writeBatchTimeout = $.writeBatchTimeout;
+        this.writeBehavior = $.writeBehavior;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommonDataServiceForAppsSinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> alternateKeyName;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> ignoreNullValues;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> sinkRetryCount;
-        private @Nullable Output<Object> sinkRetryWait;
-        private Output<String> type;
-        private @Nullable Output<Object> writeBatchSize;
-        private @Nullable Output<Object> writeBatchTimeout;
-        private Output<Either<String,DynamicsSinkWriteBehavior>> writeBehavior;
+        private CommonDataServiceForAppsSinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommonDataServiceForAppsSinkArgs();
         }
 
         public Builder(CommonDataServiceForAppsSinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alternateKeyName = defaults.alternateKeyName;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.ignoreNullValues = defaults.ignoreNullValues;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.sinkRetryCount = defaults.sinkRetryCount;
-    	      this.sinkRetryWait = defaults.sinkRetryWait;
-    	      this.type = defaults.type;
-    	      this.writeBatchSize = defaults.writeBatchSize;
-    	      this.writeBatchTimeout = defaults.writeBatchTimeout;
-    	      this.writeBehavior = defaults.writeBehavior;
+            $ = new CommonDataServiceForAppsSinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alternateKeyName(@Nullable Output<Object> alternateKeyName) {
-            this.alternateKeyName = alternateKeyName;
+            $.alternateKeyName = alternateKeyName;
             return this;
         }
-        public Builder alternateKeyName(@Nullable Object alternateKeyName) {
-            this.alternateKeyName = Codegen.ofNullable(alternateKeyName);
-            return this;
+
+        public Builder alternateKeyName(Object alternateKeyName) {
+            return alternateKeyName(Output.of(alternateKeyName));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder ignoreNullValues(@Nullable Output<Object> ignoreNullValues) {
-            this.ignoreNullValues = ignoreNullValues;
+            $.ignoreNullValues = ignoreNullValues;
             return this;
         }
-        public Builder ignoreNullValues(@Nullable Object ignoreNullValues) {
-            this.ignoreNullValues = Codegen.ofNullable(ignoreNullValues);
-            return this;
+
+        public Builder ignoreNullValues(Object ignoreNullValues) {
+            return ignoreNullValues(Output.of(ignoreNullValues));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
-            this.sinkRetryCount = sinkRetryCount;
+            $.sinkRetryCount = sinkRetryCount;
             return this;
         }
-        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Codegen.ofNullable(sinkRetryCount);
-            return this;
+
+        public Builder sinkRetryCount(Object sinkRetryCount) {
+            return sinkRetryCount(Output.of(sinkRetryCount));
         }
+
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
-            this.sinkRetryWait = sinkRetryWait;
+            $.sinkRetryWait = sinkRetryWait;
             return this;
         }
-        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Codegen.ofNullable(sinkRetryWait);
-            return this;
+
+        public Builder sinkRetryWait(Object sinkRetryWait) {
+            return sinkRetryWait(Output.of(sinkRetryWait));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
-            this.writeBatchSize = writeBatchSize;
+            $.writeBatchSize = writeBatchSize;
             return this;
         }
-        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Codegen.ofNullable(writeBatchSize);
-            return this;
+
+        public Builder writeBatchSize(Object writeBatchSize) {
+            return writeBatchSize(Output.of(writeBatchSize));
         }
+
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
-            this.writeBatchTimeout = writeBatchTimeout;
+            $.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Codegen.ofNullable(writeBatchTimeout);
-            return this;
+
+        public Builder writeBatchTimeout(Object writeBatchTimeout) {
+            return writeBatchTimeout(Output.of(writeBatchTimeout));
         }
+
         public Builder writeBehavior(Output<Either<String,DynamicsSinkWriteBehavior>> writeBehavior) {
-            this.writeBehavior = Objects.requireNonNull(writeBehavior);
+            $.writeBehavior = writeBehavior;
             return this;
         }
+
         public Builder writeBehavior(Either<String,DynamicsSinkWriteBehavior> writeBehavior) {
-            this.writeBehavior = Output.of(Objects.requireNonNull(writeBehavior));
-            return this;
-        }        public CommonDataServiceForAppsSinkArgs build() {
-            return new CommonDataServiceForAppsSinkArgs(alternateKeyName, disableMetricsCollection, ignoreNullValues, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
+            return writeBehavior(Output.of(writeBehavior));
+        }
+
+        public CommonDataServiceForAppsSinkArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.writeBehavior = Objects.requireNonNull($.writeBehavior, "expected parameter 'writeBehavior' to be non-null");
+            return $;
         }
     }
+
 }

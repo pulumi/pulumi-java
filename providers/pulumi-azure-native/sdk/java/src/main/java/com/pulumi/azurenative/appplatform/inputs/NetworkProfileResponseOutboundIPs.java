@@ -22,48 +22,49 @@ public final class NetworkProfileResponseOutboundIPs extends com.pulumi.resource
      * 
      */
     @Import(name="publicIPs", required=true)
-      private final List<String> publicIPs;
+    private List<String> publicIPs;
 
     public List<String> publicIPs() {
         return this.publicIPs;
     }
 
-    public NetworkProfileResponseOutboundIPs(List<String> publicIPs) {
-        this.publicIPs = Objects.requireNonNull(publicIPs, "expected parameter 'publicIPs' to be non-null");
-    }
+    private NetworkProfileResponseOutboundIPs() {}
 
-    private NetworkProfileResponseOutboundIPs() {
-        this.publicIPs = List.of();
+    private NetworkProfileResponseOutboundIPs(NetworkProfileResponseOutboundIPs $) {
+        this.publicIPs = $.publicIPs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileResponseOutboundIPs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> publicIPs;
+        private NetworkProfileResponseOutboundIPs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileResponseOutboundIPs();
         }
 
         public Builder(NetworkProfileResponseOutboundIPs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicIPs = defaults.publicIPs;
+            $ = new NetworkProfileResponseOutboundIPs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicIPs(List<String> publicIPs) {
-            this.publicIPs = Objects.requireNonNull(publicIPs);
+            $.publicIPs = publicIPs;
             return this;
         }
+
         public Builder publicIPs(String... publicIPs) {
             return publicIPs(List.of(publicIPs));
-        }        public NetworkProfileResponseOutboundIPs build() {
-            return new NetworkProfileResponseOutboundIPs(publicIPs);
+        }
+
+        public NetworkProfileResponseOutboundIPs build() {
+            $.publicIPs = Objects.requireNonNull($.publicIPs, "expected parameter 'publicIPs' to be non-null");
+            return $;
         }
     }
+
 }

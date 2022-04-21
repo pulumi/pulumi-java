@@ -23,7 +23,7 @@ public final class MultiStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="multistepNumber", required=true)
-      private final Integer multistepNumber;
+    private Integer multistepNumber;
 
     public Integer multistepNumber() {
         return this.multistepNumber;
@@ -34,7 +34,7 @@ public final class MultiStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="primaryStep", required=true)
-      private final PrimaryStepResponse primaryStep;
+    private PrimaryStepResponse primaryStep;
 
     public PrimaryStepResponse primaryStep() {
         return this.primaryStep;
@@ -45,64 +45,59 @@ public final class MultiStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="primaryStepId", required=true)
-      private final String primaryStepId;
+    private String primaryStepId;
 
     public String primaryStepId() {
         return this.primaryStepId;
     }
 
-    public MultiStepResponse(
-        Integer multistepNumber,
-        PrimaryStepResponse primaryStep,
-        String primaryStepId) {
-        this.multistepNumber = Objects.requireNonNull(multistepNumber, "expected parameter 'multistepNumber' to be non-null");
-        this.primaryStep = Objects.requireNonNull(primaryStep, "expected parameter 'primaryStep' to be non-null");
-        this.primaryStepId = Objects.requireNonNull(primaryStepId, "expected parameter 'primaryStepId' to be non-null");
-    }
+    private MultiStepResponse() {}
 
-    private MultiStepResponse() {
-        this.multistepNumber = null;
-        this.primaryStep = null;
-        this.primaryStepId = null;
+    private MultiStepResponse(MultiStepResponse $) {
+        this.multistepNumber = $.multistepNumber;
+        this.primaryStep = $.primaryStep;
+        this.primaryStepId = $.primaryStepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer multistepNumber;
-        private PrimaryStepResponse primaryStep;
-        private String primaryStepId;
+        private MultiStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiStepResponse();
         }
 
         public Builder(MultiStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.multistepNumber = defaults.multistepNumber;
-    	      this.primaryStep = defaults.primaryStep;
-    	      this.primaryStepId = defaults.primaryStepId;
+            $ = new MultiStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder multistepNumber(Integer multistepNumber) {
-            this.multistepNumber = Objects.requireNonNull(multistepNumber);
+            $.multistepNumber = multistepNumber;
             return this;
         }
+
         public Builder primaryStep(PrimaryStepResponse primaryStep) {
-            this.primaryStep = Objects.requireNonNull(primaryStep);
+            $.primaryStep = primaryStep;
             return this;
         }
+
         public Builder primaryStepId(String primaryStepId) {
-            this.primaryStepId = Objects.requireNonNull(primaryStepId);
+            $.primaryStepId = primaryStepId;
             return this;
-        }        public MultiStepResponse build() {
-            return new MultiStepResponse(multistepNumber, primaryStep, primaryStepId);
+        }
+
+        public MultiStepResponse build() {
+            $.multistepNumber = Objects.requireNonNull($.multistepNumber, "expected parameter 'multistepNumber' to be non-null");
+            $.primaryStep = Objects.requireNonNull($.primaryStep, "expected parameter 'primaryStep' to be non-null");
+            $.primaryStepId = Objects.requireNonNull($.primaryStepId, "expected parameter 'primaryStepId' to be non-null");
+            return $;
         }
     }
+
 }

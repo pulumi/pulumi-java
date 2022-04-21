@@ -5,10 +5,10 @@ package com.pulumi.aws.codestarconnections.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class HostVpcConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="securityGroupIds", required=true)
-      private final Output<List<String>> securityGroupIds;
+    private Output<List<String>> securityGroupIds;
 
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
@@ -32,7 +32,7 @@ public final class HostVpcConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
@@ -43,10 +43,10 @@ public final class HostVpcConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tlsCertificate")
-      private final @Nullable Output<String> tlsCertificate;
+    private @Nullable Output<String> tlsCertificate;
 
-    public Output<String> tlsCertificate() {
-        return this.tlsCertificate == null ? Codegen.empty() : this.tlsCertificate;
+    public Optional<Output<String>> tlsCertificate() {
+        return Optional.ofNullable(this.tlsCertificate);
     }
 
     /**
@@ -54,95 +54,89 @@ public final class HostVpcConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public HostVpcConfigurationArgs(
-        Output<List<String>> securityGroupIds,
-        Output<List<String>> subnetIds,
-        @Nullable Output<String> tlsCertificate,
-        Output<String> vpcId) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.tlsCertificate = tlsCertificate;
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private HostVpcConfigurationArgs() {}
 
-    private HostVpcConfigurationArgs() {
-        this.securityGroupIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tlsCertificate = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private HostVpcConfigurationArgs(HostVpcConfigurationArgs $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
+        this.tlsCertificate = $.tlsCertificate;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostVpcConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> securityGroupIds;
-        private Output<List<String>> subnetIds;
-        private @Nullable Output<String> tlsCertificate;
-        private Output<String> vpcId;
+        private HostVpcConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostVpcConfigurationArgs();
         }
 
         public Builder(HostVpcConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tlsCertificate = defaults.tlsCertificate;
-    	      this.vpcId = defaults.vpcId;
+            $ = new HostVpcConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
-            return this;
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tlsCertificate(@Nullable Output<String> tlsCertificate) {
-            this.tlsCertificate = tlsCertificate;
+            $.tlsCertificate = tlsCertificate;
             return this;
         }
-        public Builder tlsCertificate(@Nullable String tlsCertificate) {
-            this.tlsCertificate = Codegen.ofNullable(tlsCertificate);
-            return this;
+
+        public Builder tlsCertificate(String tlsCertificate) {
+            return tlsCertificate(Output.of(tlsCertificate));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public HostVpcConfigurationArgs build() {
-            return new HostVpcConfigurationArgs(securityGroupIds, subnetIds, tlsCertificate, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public HostVpcConfigurationArgs build() {
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

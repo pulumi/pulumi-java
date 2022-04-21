@@ -5,10 +5,10 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class EmailChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="emailAddress", required=true)
-      private final Output<String> emailAddress;
+    private Output<String> emailAddress;
 
     public Output<String> emailAddress() {
         return this.emailAddress;
@@ -36,7 +36,7 @@ public final class EmailChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -47,76 +47,70 @@ public final class EmailChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
-    public EmailChannelPropertiesArgs(
-        Output<String> emailAddress,
-        Output<Boolean> isEnabled,
-        @Nullable Output<String> password) {
-        this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.password = password;
-    }
+    private EmailChannelPropertiesArgs() {}
 
-    private EmailChannelPropertiesArgs() {
-        this.emailAddress = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.password = Codegen.empty();
+    private EmailChannelPropertiesArgs(EmailChannelPropertiesArgs $) {
+        this.emailAddress = $.emailAddress;
+        this.isEnabled = $.isEnabled;
+        this.password = $.password;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> emailAddress;
-        private Output<Boolean> isEnabled;
-        private @Nullable Output<String> password;
+        private EmailChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailChannelPropertiesArgs();
         }
 
         public Builder(EmailChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.password = defaults.password;
+            $ = new EmailChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(Output<String> emailAddress) {
-            this.emailAddress = Objects.requireNonNull(emailAddress);
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
-            return this;
+            return emailAddress(Output.of(emailAddress));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
-        }        public EmailChannelPropertiesArgs build() {
-            return new EmailChannelPropertiesArgs(emailAddress, isEnabled, password);
+
+        public Builder password(String password) {
+            return password(Output.of(password));
+        }
+
+        public EmailChannelPropertiesArgs build() {
+            $.emailAddress = Objects.requireNonNull($.emailAddress, "expected parameter 'emailAddress' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

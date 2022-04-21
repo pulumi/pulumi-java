@@ -7,9 +7,9 @@ import com.pulumi.azurenative.batch.enums.ContainerWorkingDirectory;
 import com.pulumi.azurenative.batch.inputs.ContainerRegistryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TaskContainerSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="containerRunOptions")
-      private final @Nullable Output<String> containerRunOptions;
+    private @Nullable Output<String> containerRunOptions;
 
-    public Output<String> containerRunOptions() {
-        return this.containerRunOptions == null ? Codegen.empty() : this.containerRunOptions;
+    public Optional<Output<String>> containerRunOptions() {
+        return Optional.ofNullable(this.containerRunOptions);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class TaskContainerSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="imageName", required=true)
-      private final Output<String> imageName;
+    private Output<String> imageName;
 
     public Output<String> imageName() {
         return this.imageName;
@@ -44,96 +44,86 @@ public final class TaskContainerSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="registry")
-      private final @Nullable Output<ContainerRegistryArgs> registry;
+    private @Nullable Output<ContainerRegistryArgs> registry;
 
-    public Output<ContainerRegistryArgs> registry() {
-        return this.registry == null ? Codegen.empty() : this.registry;
+    public Optional<Output<ContainerRegistryArgs>> registry() {
+        return Optional.ofNullable(this.registry);
     }
 
     @Import(name="workingDirectory")
-      private final @Nullable Output<ContainerWorkingDirectory> workingDirectory;
+    private @Nullable Output<ContainerWorkingDirectory> workingDirectory;
 
-    public Output<ContainerWorkingDirectory> workingDirectory() {
-        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
+    public Optional<Output<ContainerWorkingDirectory>> workingDirectory() {
+        return Optional.ofNullable(this.workingDirectory);
     }
 
-    public TaskContainerSettingsArgs(
-        @Nullable Output<String> containerRunOptions,
-        Output<String> imageName,
-        @Nullable Output<ContainerRegistryArgs> registry,
-        @Nullable Output<ContainerWorkingDirectory> workingDirectory) {
-        this.containerRunOptions = containerRunOptions;
-        this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
-        this.registry = registry;
-        this.workingDirectory = workingDirectory;
-    }
+    private TaskContainerSettingsArgs() {}
 
-    private TaskContainerSettingsArgs() {
-        this.containerRunOptions = Codegen.empty();
-        this.imageName = Codegen.empty();
-        this.registry = Codegen.empty();
-        this.workingDirectory = Codegen.empty();
+    private TaskContainerSettingsArgs(TaskContainerSettingsArgs $) {
+        this.containerRunOptions = $.containerRunOptions;
+        this.imageName = $.imageName;
+        this.registry = $.registry;
+        this.workingDirectory = $.workingDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskContainerSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerRunOptions;
-        private Output<String> imageName;
-        private @Nullable Output<ContainerRegistryArgs> registry;
-        private @Nullable Output<ContainerWorkingDirectory> workingDirectory;
+        private TaskContainerSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskContainerSettingsArgs();
         }
 
         public Builder(TaskContainerSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerRunOptions = defaults.containerRunOptions;
-    	      this.imageName = defaults.imageName;
-    	      this.registry = defaults.registry;
-    	      this.workingDirectory = defaults.workingDirectory;
+            $ = new TaskContainerSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerRunOptions(@Nullable Output<String> containerRunOptions) {
-            this.containerRunOptions = containerRunOptions;
+            $.containerRunOptions = containerRunOptions;
             return this;
         }
-        public Builder containerRunOptions(@Nullable String containerRunOptions) {
-            this.containerRunOptions = Codegen.ofNullable(containerRunOptions);
-            return this;
+
+        public Builder containerRunOptions(String containerRunOptions) {
+            return containerRunOptions(Output.of(containerRunOptions));
         }
+
         public Builder imageName(Output<String> imageName) {
-            this.imageName = Objects.requireNonNull(imageName);
+            $.imageName = imageName;
             return this;
         }
+
         public Builder imageName(String imageName) {
-            this.imageName = Output.of(Objects.requireNonNull(imageName));
-            return this;
+            return imageName(Output.of(imageName));
         }
+
         public Builder registry(@Nullable Output<ContainerRegistryArgs> registry) {
-            this.registry = registry;
+            $.registry = registry;
             return this;
         }
-        public Builder registry(@Nullable ContainerRegistryArgs registry) {
-            this.registry = Codegen.ofNullable(registry);
-            return this;
+
+        public Builder registry(ContainerRegistryArgs registry) {
+            return registry(Output.of(registry));
         }
+
         public Builder workingDirectory(@Nullable Output<ContainerWorkingDirectory> workingDirectory) {
-            this.workingDirectory = workingDirectory;
+            $.workingDirectory = workingDirectory;
             return this;
         }
-        public Builder workingDirectory(@Nullable ContainerWorkingDirectory workingDirectory) {
-            this.workingDirectory = Codegen.ofNullable(workingDirectory);
-            return this;
-        }        public TaskContainerSettingsArgs build() {
-            return new TaskContainerSettingsArgs(containerRunOptions, imageName, registry, workingDirectory);
+
+        public Builder workingDirectory(ContainerWorkingDirectory workingDirectory) {
+            return workingDirectory(Output.of(workingDirectory));
+        }
+
+        public TaskContainerSettingsArgs build() {
+            $.imageName = Objects.requireNonNull($.imageName, "expected parameter 'imageName' to be non-null");
+            return $;
         }
     }
+
 }

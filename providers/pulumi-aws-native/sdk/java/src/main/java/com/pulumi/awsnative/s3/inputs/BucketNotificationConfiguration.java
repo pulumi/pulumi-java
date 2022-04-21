@@ -23,103 +23,95 @@ public final class BucketNotificationConfiguration extends com.pulumi.resources.
     public static final BucketNotificationConfiguration Empty = new BucketNotificationConfiguration();
 
     @Import(name="eventBridgeConfiguration")
-      private final @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration;
+    private @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration;
 
     public Optional<BucketEventBridgeConfiguration> eventBridgeConfiguration() {
-        return this.eventBridgeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.eventBridgeConfiguration);
+        return Optional.ofNullable(this.eventBridgeConfiguration);
     }
 
     @Import(name="lambdaConfigurations")
-      private final @Nullable List<BucketLambdaConfiguration> lambdaConfigurations;
+    private @Nullable List<BucketLambdaConfiguration> lambdaConfigurations;
 
-    public List<BucketLambdaConfiguration> lambdaConfigurations() {
-        return this.lambdaConfigurations == null ? List.of() : this.lambdaConfigurations;
+    public Optional<List<BucketLambdaConfiguration>> lambdaConfigurations() {
+        return Optional.ofNullable(this.lambdaConfigurations);
     }
 
     @Import(name="queueConfigurations")
-      private final @Nullable List<BucketQueueConfiguration> queueConfigurations;
+    private @Nullable List<BucketQueueConfiguration> queueConfigurations;
 
-    public List<BucketQueueConfiguration> queueConfigurations() {
-        return this.queueConfigurations == null ? List.of() : this.queueConfigurations;
+    public Optional<List<BucketQueueConfiguration>> queueConfigurations() {
+        return Optional.ofNullable(this.queueConfigurations);
     }
 
     @Import(name="topicConfigurations")
-      private final @Nullable List<BucketTopicConfiguration> topicConfigurations;
+    private @Nullable List<BucketTopicConfiguration> topicConfigurations;
 
-    public List<BucketTopicConfiguration> topicConfigurations() {
-        return this.topicConfigurations == null ? List.of() : this.topicConfigurations;
+    public Optional<List<BucketTopicConfiguration>> topicConfigurations() {
+        return Optional.ofNullable(this.topicConfigurations);
     }
 
-    public BucketNotificationConfiguration(
-        @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration,
-        @Nullable List<BucketLambdaConfiguration> lambdaConfigurations,
-        @Nullable List<BucketQueueConfiguration> queueConfigurations,
-        @Nullable List<BucketTopicConfiguration> topicConfigurations) {
-        this.eventBridgeConfiguration = eventBridgeConfiguration;
-        this.lambdaConfigurations = lambdaConfigurations;
-        this.queueConfigurations = queueConfigurations;
-        this.topicConfigurations = topicConfigurations;
-    }
+    private BucketNotificationConfiguration() {}
 
-    private BucketNotificationConfiguration() {
-        this.eventBridgeConfiguration = null;
-        this.lambdaConfigurations = List.of();
-        this.queueConfigurations = List.of();
-        this.topicConfigurations = List.of();
+    private BucketNotificationConfiguration(BucketNotificationConfiguration $) {
+        this.eventBridgeConfiguration = $.eventBridgeConfiguration;
+        this.lambdaConfigurations = $.lambdaConfigurations;
+        this.queueConfigurations = $.queueConfigurations;
+        this.topicConfigurations = $.topicConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketNotificationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration;
-        private @Nullable List<BucketLambdaConfiguration> lambdaConfigurations;
-        private @Nullable List<BucketQueueConfiguration> queueConfigurations;
-        private @Nullable List<BucketTopicConfiguration> topicConfigurations;
+        private BucketNotificationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketNotificationConfiguration();
         }
 
         public Builder(BucketNotificationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventBridgeConfiguration = defaults.eventBridgeConfiguration;
-    	      this.lambdaConfigurations = defaults.lambdaConfigurations;
-    	      this.queueConfigurations = defaults.queueConfigurations;
-    	      this.topicConfigurations = defaults.topicConfigurations;
+            $ = new BucketNotificationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder eventBridgeConfiguration(@Nullable BucketEventBridgeConfiguration eventBridgeConfiguration) {
-            this.eventBridgeConfiguration = eventBridgeConfiguration;
+            $.eventBridgeConfiguration = eventBridgeConfiguration;
             return this;
         }
+
         public Builder lambdaConfigurations(@Nullable List<BucketLambdaConfiguration> lambdaConfigurations) {
-            this.lambdaConfigurations = lambdaConfigurations;
+            $.lambdaConfigurations = lambdaConfigurations;
             return this;
         }
+
         public Builder lambdaConfigurations(BucketLambdaConfiguration... lambdaConfigurations) {
             return lambdaConfigurations(List.of(lambdaConfigurations));
         }
+
         public Builder queueConfigurations(@Nullable List<BucketQueueConfiguration> queueConfigurations) {
-            this.queueConfigurations = queueConfigurations;
+            $.queueConfigurations = queueConfigurations;
             return this;
         }
+
         public Builder queueConfigurations(BucketQueueConfiguration... queueConfigurations) {
             return queueConfigurations(List.of(queueConfigurations));
         }
+
         public Builder topicConfigurations(@Nullable List<BucketTopicConfiguration> topicConfigurations) {
-            this.topicConfigurations = topicConfigurations;
+            $.topicConfigurations = topicConfigurations;
             return this;
         }
+
         public Builder topicConfigurations(BucketTopicConfiguration... topicConfigurations) {
             return topicConfigurations(List.of(topicConfigurations));
-        }        public BucketNotificationConfiguration build() {
-            return new BucketNotificationConfiguration(eventBridgeConfiguration, lambdaConfigurations, queueConfigurations, topicConfigurations);
+        }
+
+        public BucketNotificationConfiguration build() {
+            return $;
         }
     }
+
 }

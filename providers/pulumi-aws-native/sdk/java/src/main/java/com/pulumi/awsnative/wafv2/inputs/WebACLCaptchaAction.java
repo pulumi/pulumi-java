@@ -19,45 +19,44 @@ public final class WebACLCaptchaAction extends com.pulumi.resources.InvokeArgs {
     public static final WebACLCaptchaAction Empty = new WebACLCaptchaAction();
 
     @Import(name="customRequestHandling")
-      private final @Nullable WebACLCustomRequestHandling customRequestHandling;
+    private @Nullable WebACLCustomRequestHandling customRequestHandling;
 
     public Optional<WebACLCustomRequestHandling> customRequestHandling() {
-        return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public WebACLCaptchaAction(@Nullable WebACLCustomRequestHandling customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private WebACLCaptchaAction() {}
 
-    private WebACLCaptchaAction() {
-        this.customRequestHandling = null;
+    private WebACLCaptchaAction(WebACLCaptchaAction $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLCaptchaAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebACLCustomRequestHandling customRequestHandling;
+        private WebACLCaptchaAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLCaptchaAction();
         }
 
         public Builder(WebACLCaptchaAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new WebACLCaptchaAction(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
-        }        public WebACLCaptchaAction build() {
-            return new WebACLCaptchaAction(customRequestHandling);
+        }
+
+        public WebACLCaptchaAction build() {
+            return $;
         }
     }
+
 }
